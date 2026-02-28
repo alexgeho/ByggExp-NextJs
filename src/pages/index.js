@@ -4,10 +4,11 @@ import BlueBlock from '@/Components/BlueBlock/BlueBlock';
 import TitleAndSubtitle from '@/Components/TitleAndSubtitle/TitleAndSubtitle';
 import ContentBlocks from '@/Components/ContentBlocks/ContentBlocks';
 import FAQBlock from '@/Components/FAQBlock/FAQBlock';
-import phone2 from '@/assets/p2.png';
-import phone3 from '@/assets/p3.png';
-import phone4 from '@/assets/p4.png';
-import phone5 from '@/assets/p5.png';
+
+const phone2 = '/p2.png'
+const phone3 = '/p3.png'
+const phone4 = '/p4.png'
+const phone5 = '/p5.png'
 
 
 export default function HomePage() {

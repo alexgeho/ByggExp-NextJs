@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Card, Col, Row} from "react-bootstrap";
 import TitleAndSubtitle from "../TitleAndSubtitle/TitleAndSubtitle";
 import BlueButton from "../BlueButton/BlueButton";
-import checkMark from "../../assets/checkmark.svg";
+const checkMark = "/checkmark.svg";
 import { TitleBadge } from '../../widgets/TitleBadge/TitleBadge';
 
 export default class ContentBlocks extends Component {

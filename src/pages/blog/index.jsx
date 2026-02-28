@@ -32,8 +32,7 @@ export function ArticleCard({ slug, tag = 'Management', title, excerpt }) {
 // Fetch published posts from API at build time (SSG)
 export async function getStaticProps() {
   try {
-    const res = await fetch('https://publish-core.onrender.com/posts/published');
-    const posts = await res.json();
+    const res = await fetch('https://publish-core.onrender.com/posts/published?site=byggexp-next'); const posts = await res.json();
     return { props: { posts }, revalidate: 60 };
   } catch {
     return { props: { posts: [] }, revalidate: 60 };

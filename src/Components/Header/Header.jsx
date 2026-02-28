@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 import logo from '../../img/logo.svg';
 
 const Header = () => {

@@ -14,13 +14,19 @@ import '@/Components/PhoneBlock/PhoneBlock.css';
 import '@/Components/HeroBlock/HeroBlock.css';
 import '@/Components/Badge/Badge.css';
 import '@/widgets/TitleBadge/TitleBadge.css';
+import '@/pages/about/About.css';
+import '@/pages/faq/Faq.css';
+import '@/pages/contacts/Contacts.css';
+import '@/pages/blog/Blog.css';
 import Header from '@/Components/Header/Header';
+import Footer from '@/Components/Footer/Footer';
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

@@ -60,8 +60,8 @@ export default function BlogPage({ posts }) {
 
       <section className="BlogBody HemPageLight">
         <Container>
-          <div className="g-4 BlogRow">
-            <Col className="w-100 BlogColBox">
+          <Row className="g-4">
+            <Col lg={8} className="mx-auto">
               {posts.length > 0 ? (
                 posts.map(post => (
                   <ArticleCard
@@ -76,7 +76,7 @@ export default function BlogPage({ posts }) {
                 <p>Inga artiklar ännu.</p>
               )}
             </Col>
-          </div>
+          </Row>
         </Container>
       </section>
     </>

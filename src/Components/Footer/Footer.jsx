@@ -1,5 +1,6 @@
 import React from "react";
-import bgB from "../../assets/bgB.png";
+
+const bgB = '/bgB.png'
 
 const Footer = () => {
     return (

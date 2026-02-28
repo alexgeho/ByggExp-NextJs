@@ -1,4 +1,3 @@
-import './TitleBadge.css';
 
 export const TitleBadge = ({ text }) => {
   // Разбиваем текст на массив слов по пробелу

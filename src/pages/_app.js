@@ -13,6 +13,7 @@ import '@/Components/BlueButton/BlueButton.css';
 import '@/Components/PhoneBlock/PhoneBlock.css';
 import '@/Components/HeroBlock/HeroBlock.css';
 import '@/Components/Badge/Badge.css';
+import '@/widgets/TitleBadge/TitleBadge.css';
 import Header from '@/Components/Header/Header';
 
 export default function App({ Component, pageProps }) {

@@ -1,6 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
 import { marked } from 'marked';
+import styles from './Article.module.css';
 
 // Fetch all slugs at build time for static generation
 export async function getStaticPaths() {
@@ -41,7 +42,7 @@ export default function ArticlePage({ post }) {
 
   return (
     <>
-      <section className="ArticleHero HemPageDark">
+      <section className={`${styles.articleHero} HemPageDark`}>
         <Container>
           <Row className="justify-content-center text-center">
             <Col lg={9}>
@@ -53,10 +54,10 @@ export default function ArticlePage({ post }) {
         </Container>
       </section>
 
-      <section className="HemPageLightArticle">
+      <section className={`${styles.articleBody} HemPageLightArticle`}>
         <Container>
           <Row className="justify-content-center">
-            <Col lg={8}>
+            <Col lg={8} className={styles.content}>
               <div dangerouslySetInnerHTML={{ __html: html }} />
             </Col>
           </Row>

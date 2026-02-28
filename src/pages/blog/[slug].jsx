@@ -4,8 +4,7 @@ import Link from 'next/link';
 // Fetch all slugs at build time for static generation
 export async function getStaticPaths() {
   try {
-    const res = await fetch('https://byggexp.se/api/posts?status=published');
-    const posts = await res.json();
+const res = await fetch(`https://publish-core.onrender.com/posts/published`);    const posts = await res.json();
     const paths = posts.map(post => ({ params: { slug: post.slug } }));
     return { paths, fallback: 'blocking' };
   } catch {
@@ -16,7 +15,7 @@ export async function getStaticPaths() {
 // Fetch single post by slug
 export async function getStaticProps({ params }) {
   try {
-    const res = await fetch(`https://byggexp.se/api/posts/${params.slug}`);
+    const res = await fetch(`https://publish-core.onrender.com/posts/${params.slug}`);
     const post = await res.json();
     return { props: { post }, revalidate: 60 };
   } catch {

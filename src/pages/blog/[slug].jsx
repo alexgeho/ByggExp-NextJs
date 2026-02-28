@@ -1,5 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
+import { marked } from 'marked';
 
 // Fetch all slugs at build time for static generation
 export async function getStaticPaths() {
@@ -8,7 +9,7 @@ export async function getStaticPaths() {
       'https://publish-core.onrender.com/posts/published?site=byggexp-next'
     );
 
-    const posts = await res.json(); 
+    const posts = await res.json();
 
     const paths = posts.map(function (post) {
       return { params: { slug: post.slug } };
@@ -35,6 +36,9 @@ export async function getStaticProps({ params }) {
 export default function ArticlePage({ post }) {
   if (!post) return <p>Not found</p>;
 
+  const html = marked(post.content);
+
+
   return (
     <>
       <section className="ArticleHero HemPageDark">
@@ -53,7 +57,7 @@ export default function ArticlePage({ post }) {
         <Container>
           <Row className="justify-content-center">
             <Col lg={8}>
-              <div dangerouslySetInnerHTML={{ __html: post.content }} />
+              <div dangerouslySetInnerHTML={{ __html: html }} />
             </Col>
           </Row>
         </Container>

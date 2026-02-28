@@ -2,12 +2,14 @@ import React, {Component} from 'react';
 import {Col, Row} from "react-bootstrap";
 import TitleAndSubtitle from "../TitleAndSubtitle/TitleAndSubtitle";
 import BlueButton from "../BlueButton/BlueButton";
-import phone1 from "../../assets/p1.png";
 import Features from "../Features3/Features";
-import one from "../../assets/1.svg";
-import two from "../../assets/2.svg";
-import three from "../../assets/3.svg";
 import { TitleBadge } from '../../widgets/TitleBadge/TitleBadge';
+
+// Use public folder paths directly
+const phone1 = '/p1.png';
+const one = '/1.svg';
+const two = '/2.svg';
+const three = '/3.svg';
 
 export default class HeroBlock extends Component {
     render() {

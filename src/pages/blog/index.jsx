@@ -1,5 +1,6 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import Link from 'next/link';
+import { TitleBadge } from '@/widgets/TitleBadge/TitleBadge';
 
 // Card component without image
 export function ArticleCard({ slug, tag = 'Management', title, excerpt }) {
@@ -39,7 +40,7 @@ export default function BlogPage({ posts }) {
         <Container>
           <Row className="justify-content-center text-center">
             <Col lg={9}>
-              <span className="TitleBadge">Our blog</span>
+              <TitleBadge text="Our blog" />
               <h1 className="BlogTitle">Useful articles</h1>
               <p className="BlogSubtitle">
                 Tips, insights, and practical advice for builders and project managers who want

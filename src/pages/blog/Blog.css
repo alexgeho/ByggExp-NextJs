@@ -1,18 +1,62 @@
-.BlogThumb {
-  width: 120px;
-  min-width: 120px;
-  height: 120px;
-  overflow: hidden;
-  border-radius: 16px;
+.BlogHero {
+    padding: 140px 0;
+    background: linear-gradient(290deg, #ffffff 0%, #007bff 20%, #000509 65%);
+    color: #fff;
 }
 
-.BlogThumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.BlogTitle {
+    font-size: 52px;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.BlogSubtitle {
+    color: #aeb7c7;
+    margin: 0;
+}
+
+.BlogBody {
+    padding: 64px 0;
+    background: #E8F4FF;
+}
+
+.BlogRow {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0 20px;
+}
+
+.BlogColBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .BlogCard {
-  margin-bottom: 20px;
-  border-radius: 16px;
+    border: 0;
+    border-radius: 18px;
+    background: #fff;
+    padding: 24px;
+    box-shadow: 0 0 16px #00000010;
+    width: 49%;
+    margin-bottom: 20px;
+}
+
+.BlogCardBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.BlogBadge {
+    border-radius: 999px;
+    padding: 6px 12px;
+    margin-bottom: 8px;
+    border: 1px solid #007bff;
+    width: fit-content;
+}
+
+@media screen and (max-width: 1200px) {
+    .BlogCard {
+        width: 100%;
+    }
 }

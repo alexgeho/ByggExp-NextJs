@@ -45,6 +45,9 @@
 .BlogCardBody {
     display: flex;
     flex-direction: column;
+    color:#000509;
+
+
 }
 
 .BlogBadge {
@@ -53,6 +56,7 @@
     margin-bottom: 8px;
     border: 1px solid #007bff;
     width: fit-content;
+    color: #000509;
 }
 
 @media screen and (max-width: 1200px) {

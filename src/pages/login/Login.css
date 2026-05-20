@@ -1,3 +1,24 @@
 .loginPage {
     margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.formLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    justify-self: center;
+  
+}
+
+.input {
+    padding: 5 15;
+}
+
+.input::placeholder {
+    color: white;
 }

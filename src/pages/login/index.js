@@ -1,11 +1,14 @@
-
-
 export default function LoginPage() {
+  return (
+    <div className="loginPage">
+      <form>
+        <h1>Login</h1>
+        <label className="formLabel">
+          <input className="input" placeholder="email"></input>
 
-    return (
-        <div className="loginPage">
-            <h1>Login</h1>
-        </div>
-     )
-
+          <input className="input" placeholder="password"></input>
+        </label>
+      </form>
+    </div>
+  );
 }

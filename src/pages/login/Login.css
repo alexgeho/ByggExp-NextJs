@@ -1,24 +1,33 @@
+/* Login page container */
 .loginPage {
-    margin-top: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Login form */
 .formLabel {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 300px;
-    justify-self: center;
-  
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+  width: 300px;
 }
 
+/* Input styles */
 .input {
-    padding: 5 15;
+  padding: 12px 15px;
+
+  border: 1px solid #555;
+  border-radius: 8px;
+
+  background: #2f2f2f;
+  color: white;
 }
 
+/* Placeholder color */
 .input::placeholder {
-    color: white;
+  color: #bdbdbd;
 }

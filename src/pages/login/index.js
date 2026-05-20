@@ -1,12 +1,9 @@
 
 
-
-
-
 export default function LoginPage() {
 
     return (
-        <div>
+        <div className="loginPage">
             <h1>Login</h1>
         </div>
      )

@@ -24,27 +24,29 @@ export default function LoginPage() {
     localStorage.setItem("access_token", response.access_token);
 
     alert("Logged in");
-  } 
+  }
 
   return (
     <div className="loginPage">
-      <form onSubmit={handleLogin}>
+      <form className="LoginCard" onSubmit={handleLogin}>
         <h1>Login</h1>
-          <input
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-            required
-            className="input"
-            placeholder="email"
-          />
+        <input
+          type="email"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+          required
+          className="input"
+          placeholder="Email"
+        />
 
-          <input
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-            required
-            className="input"
-            placeholder="password"
-          />
+        <input
+          type="password"
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
+          required
+          className="input"
+          placeholder="Password"
+        />
 
         <Button type="submit">Login</Button>
       </form>

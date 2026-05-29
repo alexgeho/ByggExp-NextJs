@@ -17,6 +17,7 @@
   padding: 1.5rem;
   gap: 20px;
   border-radius: 0.375rem;
+  width: min(100%, 320px);
 }
 
 .LoginCard h1 {
@@ -40,6 +41,7 @@
 
 /* Input styles */
 .input {
+  width: 100%;
   padding: 7px 15px;
   border-radius: 8px;
   color: #000000;
@@ -51,4 +53,52 @@
 /* Placeholder color */
 .input::placeholder {
   color: #000000;
+}
+
+.LoginCardWide {
+  width: min(100%, 360px);
+}
+
+.authSubtitle {
+  margin: -10px 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.authError {
+  margin: 0;
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.authSwitch {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+}
+
+.authSwitch a {
+  color: #2394ff;
+  text-decoration: none;
+}
+
+.authSwitch a:hover {
+  text-decoration: underline;
+}
+
+.phoneRow {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.phoneCountryCode {
+  width: 72px;
+  flex-shrink: 0;
+}
+
+.phoneNumber {
+  flex: 1;
 }

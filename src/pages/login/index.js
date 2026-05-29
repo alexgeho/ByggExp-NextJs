@@ -1,35 +1,35 @@
 import React, { useState } from "react";
+import Link from "next/link";
 import { Button } from "react-bootstrap";
+import { login, redirectToAdmin } from "@/lib/auth";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   async function handleLogin(event) {
     event.preventDefault();
+    setError("");
+    setLoading(true);
 
-    const res = await fetch("https://api.byggexp.se/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
-
-    if (!res.ok) {
-      alert("Wrong email or password");
-      return;
+    try {
+      const data = await login(email, password);
+      redirectToAdmin(data);
+    } catch (err) {
+      setError(err.message || "Wrong email or password");
+      setLoading(false);
     }
-
-    const response = await res.json();
-
-    localStorage.setItem("access_token", response.access_token);
-
-    alert("Logged in");
   }
 
   return (
     <div className="loginPage">
       <form className="LoginCard" onSubmit={handleLogin}>
         <h1>Login</h1>
+
+        {error ? <p className="authError">{error}</p> : null}
+
         <input
           type="email"
           value={email}
@@ -37,6 +37,7 @@ export default function LoginPage() {
           required
           className="input"
           placeholder="Email"
+          autoComplete="email"
         />
 
         <input
@@ -46,9 +47,17 @@ export default function LoginPage() {
           required
           className="input"
           placeholder="Password"
+          autoComplete="current-password"
         />
 
-        <Button type="submit">Login</Button>
+        <Button type="submit" disabled={loading}>
+          {loading ? "Signing in..." : "Login"}
+        </Button>
+
+        <p className="authSwitch">
+          Don&apos;t have an account?{" "}
+          <Link href="/signup">Try for free</Link>
+        </p>
       </form>
     </div>
   );

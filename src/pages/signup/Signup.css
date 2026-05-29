@@ -1,0 +1,110 @@
+.signupPage {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  width: 100%;
+  padding: 2.5rem 1rem 3.5rem;
+  background: #000509;
+}
+
+.signupPageInner {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.signupHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.signupHeader h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.signupHeader p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.signupSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #0a0f1c;
+  border: 1px solid rgba(109, 109, 109, 0.4);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+  padding: 1.25rem;
+  border-radius: 0.375rem;
+}
+
+.signupSectionTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.signupForm .input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #000000;
+  background: #ffffff;
+  border: none;
+}
+
+.signupForm .input::placeholder {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.signupForm Button {
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.signupForm .authError {
+  margin: 0;
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.signupForm .authSwitch {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.signupForm .authSwitch a {
+  color: #2394ff;
+  text-decoration: none;
+}
+
+.signupForm .authSwitch a:hover {
+  text-decoration: underline;
+}
+
+.signupForm .phoneRow {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.signupForm .phoneCountryCode {
+  width: 72px;
+  flex-shrink: 0;
+}
+
+.signupForm .phoneNumber {
+  flex: 1;
+}

@@ -1,6 +1,7 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import Link from 'next/link';
 import { TitleBadge } from '@/widgets/TitleBadge/TitleBadge';
+import { PUBLISH_API_URL, PUBLISH_SITE_ID } from '@/lib/config';
 
 // Card component without image
 export function ArticleCard({ slug, tag = 'Management', title, excerpt }) {
@@ -24,7 +25,9 @@ export function ArticleCard({ slug, tag = 'Management', title, excerpt }) {
 // Fetch published posts from API at build time (SSG)
 export async function getStaticProps() {
   try {
-    const res = await fetch('https://publish-core.onrender.com/posts/published?site=byggexp-next');
+    const res = await fetch(
+      `${PUBLISH_API_URL}/posts/published?site=${PUBLISH_SITE_ID}`,
+    );
     const posts = await res.json();
     return { props: { posts }, revalidate: 60 };
   } catch {

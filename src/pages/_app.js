@@ -17,6 +17,7 @@ import "@/widgets/TitleBadge/TitleBadge.css";
 import "@/pages/about/About.css";
 import "@/pages/faq/Faq.css";
 import "@/pages/login/Login.css";
+import "@/pages/signup/Signup.css";
 import "@/pages/contacts/Contacts.css";
 import "@/pages/blog/Blog.css";
 import Header from "@/Components/Header/Header";

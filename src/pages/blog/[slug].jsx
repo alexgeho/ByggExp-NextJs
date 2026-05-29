@@ -2,12 +2,13 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
 import { marked } from 'marked';
 import styles from './Article.module.css';
+import { PUBLISH_API_URL, PUBLISH_SITE_ID } from '@/lib/config';
 
 // Fetch all slugs at build time for static generation
 export async function getStaticPaths() {
   try {
     const res = await fetch(
-      'https://publish-core.onrender.com/posts/published?site=byggexp-next'
+      `${PUBLISH_API_URL}/posts/published?site=${PUBLISH_SITE_ID}`,
     );
 
     const posts = await res.json();
@@ -25,7 +26,9 @@ export async function getStaticPaths() {
 // Fetch single post by slug
 export async function getStaticProps({ params }) {
   try {
-    const res = await fetch(`https://publish-core.onrender.com/posts/${params.slug}?site=byggexp-next`);
+    const res = await fetch(
+      `${PUBLISH_API_URL}/posts/${params.slug}?site=${PUBLISH_SITE_ID}`,
+    );
     const post = await res.json();
     return { props: { post }, revalidate: 60 };
   } catch {

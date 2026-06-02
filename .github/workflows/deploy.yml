@@ -1,14 +1,35 @@
-name: Deploy to Inleed
+name: Deploy to VPS
+
+# Deploys ByggExp-NextJs to the VPS (185.189.51.128) using SSH + tar + PM2.
+#
+# Build happens on the GitHub runner (fast, multi-core, Linux — matching the
+# VPS ABI for next's native SWC binaries). The build output + production
+# node_modules are streamed via `tar | ssh` into a fresh timestamped release
+# dir, then the `current` symlink is flipped atomically and PM2 reloads the
+# app with zero downtime. rsync is intentionally avoided (not installed on
+# the VPS); tar is universally available on both ends.
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch: {}
+
+concurrency:
+  group: deploy-vps
+  cancel-in-progress: false
+
+env:
+  APP_NAME: byggexp-next
+  APP_DIR: /opt/byggexp-next
+  APP_PORT: "3000"
+  DEPLOY_USER: deploy
+  DEPLOY_HOST: 185.189.51.128
+  DEPLOY_PORT: "22"
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -17,23 +38,122 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
-      - name: Install
-        run: npm install
+      - name: Install dependencies
+        run: npm ci
 
       - name: Build
         run: npm run build
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          server-dir: domains/byggexp.se/byggexp-next/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            .next/cache/**
+      - name: Prune dev dependencies
+        run: npm prune --omit=dev
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p "${DEPLOY_PORT}" -H "${DEPLOY_HOST}" >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Upload build to a new release
+        env:
+          SSH_KEY: ~/.ssh/deploy_key
+        run: |
+          set -euo pipefail
+          TS=$(date +%Y%m%d-%H%M%S)
+          echo "RELEASE_TS=${TS}" >> "$GITHUB_ENV"
+          REL="${APP_DIR}/releases/${TS}"
+          echo "Release: ${TS}"
+
+          # 1) Create the release dir on the VPS
+          ssh -i "$SSH_KEY" -p "${DEPLOY_PORT}" "${DEPLOY_USER}@${DEPLOY_HOST}" \
+            "mkdir -p '${REL}'"
+
+          # 2) Stream the build artifacts straight into the release dir via tar
+          tar -czf - \
+            .next public package.json package-lock.json next.config.mjs server.js node_modules \
+            | ssh -i "$SSH_KEY" -p "${DEPLOY_PORT}" "${DEPLOY_USER}@${DEPLOY_HOST}" \
+                "tar -xzf - -C '${REL}'"
+
+      - name: Activate release, health-check, auto-rollback on failure
+        env:
+          SSH_KEY: ~/.ssh/deploy_key
+        run: |
+          set -euo pipefail
+          # All deploy/health/rollback logic runs in ONE remote session so the
+          # previous release is captured before the flip and restored on failure.
+          ssh -i "$SSH_KEY" -p "${DEPLOY_PORT}" "${DEPLOY_USER}@${DEPLOY_HOST}" \
+            "APP_DIR='${APP_DIR}' APP_NAME='${APP_NAME}' APP_PORT='${APP_PORT}' TS='${RELEASE_TS}' bash -s" <<'EOF'
+          set -euo pipefail
+          REL="${APP_DIR}/releases/${TS}"
+          CURRENT_LINK="${APP_DIR}/current"
+
+          # Remember where 'current' pointed BEFORE we touch it (empty on first deploy)
+          PREV=""
+          if [ -L "${CURRENT_LINK}" ]; then
+            PREV="$(readlink -f "${CURRENT_LINK}")"
+          fi
+          echo "Previous release: ${PREV:-<none, first deploy>}"
+
+          # Link shared production env (survives deploys) and flip 'current' atomically
+          ln -sfn "${APP_DIR}/shared/.env" "${REL}/.env"
+          ln -sfn "${REL}" "${CURRENT_LINK}"
+          cd "${CURRENT_LINK}"
+
+          # Start or reload under PM2
+          if pm2 describe "${APP_NAME}" > /dev/null 2>&1; then
+            pm2 reload "${APP_NAME}" --update-env
+          else
+            PORT="${APP_PORT}" pm2 start server.js --name "${APP_NAME}" \
+              --max-memory-restart 400M --cwd "${CURRENT_LINK}"
+          fi
+
+          # Health check with retries (give the app time to warm up)
+          echo "Health-checking http://127.0.0.1:${APP_PORT}/ ..."
+          OK=0
+          for i in $(seq 1 10); do
+            CODE="$(curl -s -o /dev/null -w '%{http_code}' --max-time 5 "http://127.0.0.1:${APP_PORT}/" || true)"
+            if [ "${CODE}" = "200" ]; then
+              echo "Health OK (HTTP 200) on attempt ${i}"
+              OK=1
+              break
+            fi
+            echo "Attempt ${i}: HTTP ${CODE:-no-response} — retrying in 3s"
+            sleep 3
+          done
+
+          if [ "${OK}" = "1" ]; then
+            # Success: persist PM2 state and prune old releases (keep 5 newest)
+            pm2 save
+            cd "${APP_DIR}/releases"
+            ls -1dt */ | tail -n +6 | xargs -r rm -rf
+            echo "Deploy OK: ${TS}"
+            exit 0
+          fi
+
+          # ---- Health check FAILED → auto-rollback ----
+          echo "::error::Health check failed for release ${TS} — rolling back."
+          if [ -n "${PREV}" ] && [ -d "${PREV}" ]; then
+            ln -sfn "${PREV}" "${CURRENT_LINK}"
+            cd "${CURRENT_LINK}"
+            pm2 reload "${APP_NAME}" --update-env || \
+              PORT="${APP_PORT}" pm2 start server.js --name "${APP_NAME}" \
+                --max-memory-restart 400M --cwd "${CURRENT_LINK}"
+            pm2 save
+            # Re-check the restored release (give it a few seconds to warm up)
+            RB="000"
+            for j in $(seq 1 5); do
+              RB="$(curl -s -o /dev/null -w '%{http_code}' --max-time 5 "http://127.0.0.1:${APP_PORT}/" || true)"
+              [ "${RB}" = "200" ] && break
+              sleep 2
+            done
+            echo "Rolled back to: $(readlink -f "${CURRENT_LINK}") (HTTP ${RB})"
+            # Remove the broken release so it is not kept around
+            rm -rf "${REL}"
+          else
+            echo "::error::No previous release to roll back to (first deploy). App may be down."
+          fi
+          # Fail the job so the failure is visible (red) in GitHub Actions
+          exit 1
+          EOF

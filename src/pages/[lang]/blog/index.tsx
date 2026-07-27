@@ -1,0 +1,114 @@
+import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import Link from 'next/link';
+
+import Footer from '../../../components/Footer/Footer';
+import Header from '../../../components/Header/Header';
+import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
+import { blogPageTranslations } from '../../../locales/blog';
+import { footerTranslations } from '../../../locales/footer';
+import { headerTranslations } from '../../../locales/header';
+import {
+  landingLanguageCodes,
+  type LandingLanguageCode,
+} from '../../../locales/languages';
+import type { BlogPost } from '../../../types/blog';
+
+type BlogIndexPageProps = {
+  lang: LandingLanguageCode;
+  posts: BlogPost[];
+};
+
+export const getServerSideProps: GetServerSideProps<
+  BlogIndexPageProps
+> = async ({ params }) => {
+  const lang = params?.lang as LandingLanguageCode;
+
+  if (!landingLanguageCodes.includes(lang)) {
+    return { notFound: true };
+  }
+
+  try {
+    const posts = await fetchPublishedBlogPosts(lang);
+    return {
+      props: {
+        lang,
+        posts,
+      },
+    };
+  } catch {
+    return {
+      props: {
+        lang,
+        posts: [],
+      },
+    };
+  }
+};
+
+export default function BlogIndexPage({
+  lang,
+  posts,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const copy = blogPageTranslations[lang];
+  const headerT = headerTranslations[lang];
+  const footerT = footerTranslations[lang];
+
+  return (
+    <>
+      <Header headerT={headerT} />
+
+      <section className="blog-hero">
+        <div className="container container-narrow">
+          <span className="eyebrow">{copy.badge}</span>
+          <h1>{copy.title}</h1>
+          <p className="blog-hero-subtitle">{copy.subtitle}</p>
+        </div>
+      </section>
+
+      <section className="blog-list-section">
+        <div className="container">
+          {posts.length === 0 ? (
+            <div className="blog-empty-state">{copy.empty}</div>
+          ) : (
+            <div className="blog-grid">
+              {posts.map((post) => (
+                <Link
+                  key={post._id}
+                  href={`/${lang}/blog/${encodeURIComponent(post.slug)}`}
+                  className="blog-card"
+                >
+                  {post.coverImageUrl ? (
+                    <img
+                      src={post.coverImageUrl}
+                      alt={post.title}
+                      className="blog-card-image"
+                    />
+                  ) : null}
+                  <div className="blog-card-body">
+                    <div className="blog-card-meta">
+                      <span>{post.tag || copy.badge}</span>
+                      <span>{formatDate(post.publishedAt || post.createdAt, lang)}</span>
+                    </div>
+                    <h2>{post.title}</h2>
+                    <p>{post.excerpt}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      <Footer footerT={footerT} />
+    </>
+  );
+}
+
+function formatDate(value: string, lang: LandingLanguageCode) {
+  const locale = lang === 'sv' ? 'sv-SE' : lang === 'ru' ? 'ru-RU' : 'en-US';
+  return new Intl.DateTimeFormat(locale, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }).format(new Date(value));
+}

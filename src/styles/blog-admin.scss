@@ -1,0 +1,253 @@
+.blog-admin-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  background: #08101d;
+  color: #fff;
+}
+
+.blog-admin-sidebar {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 28px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.blog-admin-sidebar-top,
+.blog-admin-user,
+.blog-admin-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.blog-admin-sidebar-top {
+  align-items: flex-start;
+}
+
+.blog-admin-user {
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+}
+
+.blog-admin-user strong,
+.blog-admin-sidebar h1,
+.blog-admin-toolbar h2 {
+  display: block;
+}
+
+.blog-admin-user span,
+.blog-admin-empty,
+.blog-admin-login-card p,
+.blog-admin-toolbar p {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.blog-admin-user button,
+.blog-admin-secondary,
+.blog-admin-danger,
+.blog-admin-primary,
+.blog-admin-list-item,
+.blog-admin-form input,
+.blog-admin-form textarea,
+.blog-admin-form select,
+.blog-admin-grid input,
+.blog-admin-grid textarea,
+.blog-admin-grid select {
+  font: inherit;
+}
+
+.blog-admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: auto;
+}
+
+.blog-admin-list-item {
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.blog-admin-list-item.active {
+  border-color: rgba(35, 148, 255, 0.5);
+  background: rgba(35, 148, 255, 0.12);
+}
+
+.blog-admin-list-item strong {
+  display: block;
+  margin: 10px 0 8px;
+}
+
+.blog-admin-list-item p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.blog-admin-list-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #7ec2ff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.blog-admin-main {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-admin-toolbar {
+  align-items: flex-start;
+}
+
+.blog-admin-toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.blog-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.blog-admin-grid label,
+.blog-admin-form label,
+.blog-admin-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blog-admin-grid-wide {
+  grid-column: 1 / -1;
+}
+
+.blog-admin-grid input,
+.blog-admin-grid textarea,
+.blog-admin-grid select,
+.blog-admin-form input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  padding: 13px 14px;
+}
+
+.blog-admin-grid textarea {
+  resize: vertical;
+}
+
+.blog-admin-checkbox {
+  grid-column: 1 / -1;
+  flex-direction: row !important;
+  align-items: center;
+}
+
+.blog-admin-checkbox input {
+  width: auto;
+}
+
+.blog-admin-editor {
+  min-height: 420px;
+}
+
+.blog-admin-editor .ql-toolbar,
+.blog-admin-editor .ql-container {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: #fff;
+  color: #08101d;
+}
+
+.blog-admin-editor .ql-container {
+  min-height: 320px;
+}
+
+.blog-admin-primary,
+.blog-admin-secondary,
+.blog-admin-danger {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-admin-primary {
+  background: #2394ff;
+  color: #fff;
+}
+
+.blog-admin-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.blog-admin-danger {
+  background: rgba(229, 85, 106, 0.2);
+  color: #ff9fb0;
+}
+
+.blog-admin-error {
+  color: #ff9fb0;
+}
+
+.blog-admin-eyebrow {
+  color: #7ec2ff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.blog-admin-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top, rgba(35, 148, 255, 0.35), transparent 35%),
+    #08101d;
+}
+
+.blog-admin-login-card {
+  width: min(100%, 460px);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 28px;
+}
+
+.blog-admin-form {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width: 1100px) {
+  .blog-admin-page {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-admin-grid {
+    grid-template-columns: 1fr;
+  }
+}

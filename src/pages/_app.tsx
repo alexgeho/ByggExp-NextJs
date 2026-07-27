@@ -1,6 +1,9 @@
 import type { AppProps } from "next/app";
 
+import 'quill/dist/quill.snow.css';
 import "../styles/globals.scss";
+import "../styles/blog.scss";
+import "../styles/blog-admin.scss";
 import "../components/Header/Header.scss";
 import "../components/Hero/Hero.scss";
 import "../components/Pain/Pain.scss";

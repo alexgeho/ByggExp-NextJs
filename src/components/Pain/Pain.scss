@@ -1,0 +1,202 @@
+.pain {
+  background: var(--bg);
+  color: var(--white);
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.pain::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1400px;
+  height: 800px;
+  pointer-events: none;
+}
+
+.pain-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyebrowpain-desktop {
+  color: var(--danger);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.eyebrowpain-mobile {
+  display: none;
+}
+
+.stat-big {
+  display: flex;
+  align-self: center;
+
+  font-size: clamp(120px, 18vw, 220px);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  background: linear-gradient(180deg, #ffeef0 0%, #e5556a 50%, #ef1637 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat-big span {
+  font-size: 0.4em;
+  vertical-align: top;
+}
+
+.pain-header h2 {
+  color: var(--ink);
+  margin-top: 12px;
+  line-height: 1.4;
+}
+
+.pain-header h2 em {
+  font-weight: 600;
+  color: var(--danger);
+  font-style: normal;
+}
+
+.pain-list {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 64px;
+}
+
+.pain-item {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.dash {
+  flex-shrink: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--danger);
+}
+
+.pain-conclusion {
+  max-width: 700px;
+  margin: 40px auto 0;
+  padding: 24px 28px;
+  background: rgba(229, 85, 106, 0.08);
+  border-left: 3px solid var(--danger);
+  border-radius: 6px;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.pain-conclusion strong {
+  color: #e5556a;
+  font-weight: 600;
+
+  
+}
+
+@media (max-width: 900px) {
+  .pain-top {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .eyebrowpain-desktop {
+    font-size: 1rem;
+    font-style: normal;
+  }
+
+  .stat-big {
+    font-size: 8rem;
+    padding: 1px;
+    justify-content: center;
+  }
+
+  .pain-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pain-header h2 {
+    font-size: 1.2rem;
+  }
+
+  /* SUB */
+
+  .pain-item {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .dash {
+    flex-shrink: 0;
+    width: 14px;
+    height: 2px;
+    background: var(--danger);
+  }
+  .eyebrowpain-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .pain-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .eyebrowpain-desktop {
+    display: none;
+  }
+
+  .eyebrowpain-mobile {
+    color: var(--danger);
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .stat-big {
+    font-size: 9rem;
+    padding: 1px;
+  }
+
+  .stat-big span {
+    padding: 3px;
+  }
+
+  .pain-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pain-header h2 {
+    font-size: 1.4rem;
+  }
+
+  /* .pain-header .eyebrowpain{
+    display: none;
+  } */
+}

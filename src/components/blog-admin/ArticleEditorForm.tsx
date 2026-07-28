@@ -19,6 +19,11 @@ const EMPTY_POST: BlogPostInput = {
   tag: '',
   coverImageUrl: '',
   contentHtml: '',
+  seoTitle: '',
+  seoDescription: '',
+  seoImageUrl: '',
+  canonicalUrl: '',
+  noIndex: false,
   isPublished: false,
 };
 
@@ -38,6 +43,11 @@ export function ArticleEditorForm({ post }: ArticleEditorFormProps) {
           tag: post.tag,
           coverImageUrl: post.coverImageUrl,
           contentHtml: post.contentHtml,
+          seoTitle: post.seoTitle || '',
+          seoDescription: post.seoDescription || '',
+          seoImageUrl: post.seoImageUrl || '',
+          canonicalUrl: post.canonicalUrl || '',
+          noIndex: post.noIndex || false,
           isPublished: post.isPublished,
         }
       : EMPTY_POST,
@@ -176,6 +186,32 @@ export function ArticleEditorForm({ post }: ArticleEditorFormProps) {
           placeholder="Write the article here..."
         />
       </div>
+      <section className="blog-admin-seo">
+        <h2>SEO settings</h2>
+        <p>Leave title, description and image empty to use the article title, excerpt and cover image.</p>
+        <div className="blog-admin-grid">
+          <label>
+            SEO title
+            <input type="text" maxLength={180} value={form.seoTitle} onChange={(event) => setField('seoTitle', event.currentTarget.value)} />
+          </label>
+          <label>
+            Canonical URL
+            <input type="url" value={form.canonicalUrl} onChange={(event) => setField('canonicalUrl', event.currentTarget.value)} placeholder="https://..." />
+          </label>
+          <label className="blog-admin-grid-wide">
+            SEO description
+            <textarea rows={3} maxLength={320} value={form.seoDescription} onChange={(event) => setField('seoDescription', event.currentTarget.value)} />
+          </label>
+          <label className="blog-admin-grid-wide">
+            Social share image URL
+            <input type="url" value={form.seoImageUrl} onChange={(event) => setField('seoImageUrl', event.currentTarget.value)} placeholder="https://..." />
+          </label>
+          <label className="blog-admin-checkbox">
+            <input type="checkbox" checked={form.noIndex} onChange={(event) => setField('noIndex', event.currentTarget.checked)} />
+            Prevent search engines from indexing this article
+          </label>
+        </div>
+      </section>
     </main>
   );
 }

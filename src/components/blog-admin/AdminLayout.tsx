@@ -130,6 +130,14 @@ export function AdminLayout({ children }: AdminLayoutProps) {
             >
               Articles
             </Link>
+            <Link
+              href="/admin/seo"
+              className={router.pathname === '/admin/seo'
+                ? 'blog-admin-nav-link active'
+                : 'blog-admin-nav-link'}
+            >
+              SEO
+            </Link>
           </nav>
         </div>
         <div className="blog-admin-sidebar-footer">

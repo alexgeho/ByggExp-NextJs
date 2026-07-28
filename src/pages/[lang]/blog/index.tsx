@@ -1,4 +1,5 @@
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
 
 import Footer from '../../../components/Footer/Footer';
@@ -52,9 +53,20 @@ export default function BlogIndexPage({
   const copy = blogPageTranslations[lang];
   const headerT = headerTranslations[lang];
   const footerT = footerTranslations[lang];
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
+  const canonicalUrl = `${siteUrl}/${lang}/blog`;
 
   return (
     <>
+      <Head>
+        <title>{copy.title} | ByggExp</title>
+        <meta name="description" content={copy.subtitle} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${copy.title} | ByggExp`} />
+        <meta property="og:description" content={copy.subtitle} />
+        <meta property="og:url" content={canonicalUrl} />
+      </Head>
       <Header headerT={headerT} />
 
       <section className="blog-hero">

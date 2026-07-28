@@ -50,12 +50,43 @@ export default function BlogArticlePage({
   const copy = blogPageTranslations[lang];
   const headerT = headerTranslations[lang];
   const footerT = footerTranslations[lang];
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
+  const canonicalUrl = post.canonicalUrl || `${siteUrl}/${lang}/blog/${encodeURIComponent(post.slug)}`;
+  const title = post.seoTitle || `${post.title} | ByggExp`;
+  const description = post.seoDescription || post.excerpt;
+  const image = post.seoImageUrl || post.coverImageUrl;
 
   return (
     <>
       <Head>
-        <title>{post.title} | ByggExp</title>
-        <meta name="description" content={post.excerpt} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalUrl} />
+        {post.noIndex ? <meta name="robots" content="noindex, nofollow" /> : null}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonicalUrl} />
+        {image ? <meta property="og:image" content={image} /> : null}
+        <meta name="twitter:card" content={image ? "summary_large_image" : "summary"} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        {image ? <meta name="twitter:image" content={image} /> : null}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              headline: post.title,
+              description,
+              image: image || undefined,
+              datePublished: post.publishedAt || post.createdAt,
+              dateModified: post.updatedAt,
+              mainEntityOfPage: canonicalUrl,
+            }),
+          }}
+        />
       </Head>
 
       <Header headerT={headerT} />

@@ -1,5 +1,6 @@
-import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
+import type { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { useEffect } from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 
 import Benefits from "../../components/Benefits/Benefits";
@@ -23,25 +24,32 @@ import { heroTranslations } from "../../locales/hero";
 import { landingLanguageCodes, type LandingLanguageCode } from "../../locales/languages";
 import { painTranslations } from "../../locales/pain";
 import { pricingTranslations } from "../../locales/pricing";
+import { fetchSiteSeo } from "../../lib/blog-api";
+import type { SiteSeo } from "../../types/blog";
 
 type HomePageProps = {
   lang: LandingLanguageCode;
+  seo: SiteSeo | null;
 };
 
-export const getStaticPaths: GetStaticPaths<HomePageProps> = async () => ({
-  paths: landingLanguageCodes.map((lang) => ({ params: { lang } })),
-  fallback: false,
-});
+export const getServerSideProps: GetServerSideProps<HomePageProps> = async ({ params }) => {
+  const lang = params?.lang as LandingLanguageCode;
+  if (!landingLanguageCodes.includes(lang)) {
+    return { notFound: true };
+  }
 
-export const getStaticProps: GetStaticProps<HomePageProps> = async ({ params }) => ({
-  props: {
-    lang: params?.lang as LandingLanguageCode,
-  },
-});
+  return {
+    props: {
+      lang,
+      seo: await fetchSiteSeo(lang).catch(() => null),
+    },
+  };
+};
 
 export default function HomePage({
   lang,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+  seo,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const router = useRouter();
 
   useEffect(() => {
@@ -92,9 +100,24 @@ export default function HomePage({
   const pricingT = pricingTranslations[lang];
   const ctaT = ctaTranslations[lang];
   const footerT = footerTranslations[lang];
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://byggexp.se";
+  const canonicalUrl = seo?.canonicalUrl || `${siteUrl}/${lang}`;
+  const title = seo?.title || "ByggExp";
+  const description = seo?.description || "";
 
   return (
     <>
+      <Head>
+        <title>{title}</title>
+        {description ? <meta name="description" content={description} /> : null}
+        <link rel="canonical" href={canonicalUrl} />
+        {seo?.noIndex ? <meta name="robots" content="noindex, nofollow" /> : null}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        {description ? <meta property="og:description" content={description} /> : null}
+        <meta property="og:url" content={canonicalUrl} />
+        {seo?.imageUrl ? <meta property="og:image" content={seo.imageUrl} /> : null}
+      </Head>
       <Header headerT={headerT} />
       <Hero heroT={heroT} />
       <Pain painT={painT} />

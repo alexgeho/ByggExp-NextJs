@@ -5,6 +5,7 @@ import type {
   BlogPost,
   BlogPostInput,
   PaginatedBlogPosts,
+  SiteSeo,
 } from '../types/blog';
 
 const BLOG_API_BASE = API_URL.replace(/\/$/, '');
@@ -40,6 +41,37 @@ export async function fetchPublishedBlogPost(
     throw new Error('Failed to load blog post');
   }
 
+  return response.json();
+}
+
+export async function fetchSiteSeo(locale: BlogLocale): Promise<SiteSeo | null> {
+  const response = await fetch(
+    `${BLOG_API_BASE}/site-seo/public?locale=${encodeURIComponent(locale)}`,
+  );
+  if (!response.ok) {
+    return null;
+  }
+  return response.json();
+}
+
+export async function fetchAdminSiteSeo(
+  session: BlogAdminSession,
+  locale: BlogLocale,
+): Promise<SiteSeo | null> {
+  const response = await authorizedRequest(`/site-seo?locale=${locale}`, session, { method: 'GET' });
+  return response.json();
+}
+
+export async function updateAdminSiteSeo(
+  session: BlogAdminSession,
+  locale: BlogLocale,
+  payload: Omit<SiteSeo, 'locale'>,
+): Promise<SiteSeo> {
+  const response = await authorizedRequest(`/site-seo?locale=${locale}`, session, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
   return response.json();
 }
 

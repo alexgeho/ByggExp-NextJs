@@ -9,6 +9,11 @@ export type BlogPost = {
   tag: string;
   coverImageUrl: string;
   contentHtml: string;
+  seoTitle: string;
+  seoDescription: string;
+  seoImageUrl: string;
+  canonicalUrl: string;
+  noIndex: boolean;
   isPublished: boolean;
   publishedAt: string | null;
   createdAt: string;
@@ -37,6 +42,11 @@ export type BlogPostInput = {
   tag?: string;
   coverImageUrl?: string;
   contentHtml: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  seoImageUrl?: string;
+  canonicalUrl?: string;
+  noIndex?: boolean;
   isPublished: boolean;
 };
 
@@ -46,4 +56,13 @@ export type PaginatedBlogPosts = {
   page: number;
   limit: number;
   totalPages: number;
+};
+
+export type SiteSeo = {
+  locale: BlogLocale;
+  title: string;
+  description: string;
+  canonicalUrl: string;
+  imageUrl: string;
+  noIndex: boolean;
 };

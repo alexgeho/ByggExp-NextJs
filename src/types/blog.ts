@@ -39,3 +39,11 @@ export type BlogPostInput = {
   contentHtml: string;
   isPublished: boolean;
 };
+
+export type PaginatedBlogPosts = {
+  items: BlogPost[];
+  total: number;
+  page: number;
+  limit: number;
+  totalPages: number;
+};

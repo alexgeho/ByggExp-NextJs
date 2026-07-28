@@ -83,7 +83,8 @@ export default function BlogAdminPage() {
     setError('');
 
     try {
-      const nextPosts = await fetchAdminBlogPosts(activeSession);
+      const response = await fetchAdminBlogPosts(activeSession);
+      const nextPosts = response.items;
       setPosts(nextPosts);
 
       if (selectedId) {
@@ -233,16 +234,10 @@ export default function BlogAdminPage() {
           <title>Blog Admin | ByggExp</title>
         </Head>
 
-        <div className="blog-admin-page">
+        <div className="blog-admin-page blog-admin-page--login">
           <div className="blog-admin-login">
             <div className="blog-admin-login-card">
-              <span className="blog-admin-eyebrow">ByggExp Blog CMS</span>
-              <h1>Log in to publish articles</h1>
-              <p>
-                Use a superadmin or company admin account from the existing
-                ByggExp backend.
-              </p>
-
+              <h1>Login</h1>
               <form className="blog-admin-form" onSubmit={handleLogin}>
                 <label>
                   Email
@@ -281,7 +276,7 @@ export default function BlogAdminPage() {
 
   if (!ALLOWED_ROLES.has(session.user.role)) {
     return (
-      <div className="blog-admin-page">
+      <div className="blog-admin-page blog-admin-page--login">
         <div className="blog-admin-login">
           <div className="blog-admin-login-card">
             <h1>Access denied</h1>
@@ -488,4 +483,13 @@ function getErrorMessage(error: unknown): string {
   }
 
   return 'Something went wrong.';
+}
+
+export function getServerSideProps() {
+  return {
+    redirect: {
+      destination: '/admin',
+      permanent: false,
+    },
+  };
 }

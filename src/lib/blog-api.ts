@@ -1,5 +1,11 @@
 import { API_URL } from '../config/api';
-import type { BlogAdminSession, BlogLocale, BlogPost, BlogPostInput } from '../types/blog';
+import type {
+  BlogAdminSession,
+  BlogLocale,
+  BlogPost,
+  BlogPostInput,
+  PaginatedBlogPosts,
+} from '../types/blog';
 
 const BLOG_API_BASE = API_URL.replace(/\/$/, '');
 const BLOG_ADMIN_SESSION_KEY = 'byggexp-blog-admin-session';
@@ -58,8 +64,38 @@ export async function loginBlogAdmin(
 
 export async function fetchAdminBlogPosts(
   session: BlogAdminSession,
-): Promise<BlogPost[]> {
-  const response = await authorizedRequest('/blog-posts', session, {
+  page = 1,
+  limit = 10,
+): Promise<PaginatedBlogPosts> {
+  const response = await authorizedRequest(
+    `/blog-posts?page=${page}&limit=${limit}`,
+    session,
+    {
+      method: 'GET',
+    },
+  );
+
+  const payload = await response.json();
+
+  if (Array.isArray(payload)) {
+    const start = (page - 1) * limit;
+    return {
+      items: payload.slice(start, start + limit),
+      total: payload.length,
+      page,
+      limit,
+      totalPages: Math.max(1, Math.ceil(payload.length / limit)),
+    };
+  }
+
+  return payload;
+}
+
+export async function fetchAdminBlogPost(
+  session: BlogAdminSession,
+  id: string,
+): Promise<BlogPost> {
+  const response = await authorizedRequest(`/blog-posts/${id}`, session, {
     method: 'GET',
   });
 

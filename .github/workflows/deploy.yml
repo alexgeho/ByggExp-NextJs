@@ -100,12 +100,14 @@ jobs:
           ln -sfn "${APP_DIR}/shared/.env" "${REL}/.env"
           ln -sfn "${REL}" "${CURRENT_LINK}"
           cd "${CURRENT_LINK}"
+          export NODE_ENV=production
+          export PORT="${APP_PORT}"
 
           # Start or reload under PM2
           if pm2 describe "${APP_NAME}" > /dev/null 2>&1; then
             pm2 reload "${APP_NAME}" --update-env
           else
-            PORT="${APP_PORT}" pm2 start server.js --name "${APP_NAME}" \
+            pm2 start server.js --name "${APP_NAME}" \
               --max-memory-restart 400M --cwd "${CURRENT_LINK}"
           fi
 
@@ -138,7 +140,7 @@ jobs:
             ln -sfn "${PREV}" "${CURRENT_LINK}"
             cd "${CURRENT_LINK}"
             pm2 reload "${APP_NAME}" --update-env || \
-              PORT="${APP_PORT}" pm2 start server.js --name "${APP_NAME}" \
+              pm2 start server.js --name "${APP_NAME}" \
                 --max-memory-restart 400M --cwd "${CURRENT_LINK}"
             pm2 save
             # Re-check the restored release (give it a few seconds to warm up)

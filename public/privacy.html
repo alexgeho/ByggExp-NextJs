@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ByggExp – Integritetspolicy / Privacy Policy</title>
+    <meta
+      name="description"
+      content="Integritetspolicy för ByggExp – hur vi samlar in, använder och skyddar dina personuppgifter."
+    />
+    <style>
+      :root {
+        --bg: #f9fbfd;
+        --card: #ffffff;
+        --ink: #052d50;
+        --muted: #687898;
+        --border: #e7ecf0;
+        --brand: #2683f9;
+        --brand-ink: #0b57b8;
+        --accent-soft: #eaf2fe;
+        --shadow: 0 1px 2px rgba(5, 45, 80, 0.04),
+          0 8px 24px rgba(5, 45, 80, 0.06);
+        --radius: 16px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1622;
+          --card: #101f30;
+          --ink: #e8f0f8;
+          --muted: #93a6bd;
+          --border: #1e3247;
+          --brand: #4d9bff;
+          --brand-ink: #8dc0ff;
+          --accent-soft: #14273c;
+          --shadow: 0 1px 2px rgba(0, 0, 0, 0.3),
+            0 8px 24px rgba(0, 0, 0, 0.35);
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #0b1622;
+        --card: #101f30;
+        --ink: #e8f0f8;
+        --muted: #93a6bd;
+        --border: #1e3247;
+        --brand: #4d9bff;
+        --brand-ink: #8dc0ff;
+        --accent-soft: #14273c;
+        --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+      }
+      :root[data-theme="light"] {
+        --bg: #f9fbfd;
+        --card: #ffffff;
+        --ink: #052d50;
+        --muted: #687898;
+        --border: #e7ecf0;
+        --brand: #2683f9;
+        --brand-ink: #0b57b8;
+        --accent-soft: #eaf2fe;
+        --shadow: 0 1px 2px rgba(5, 45, 80, 0.04),
+          0 8px 24px rgba(5, 45, 80, 0.06);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        line-height: 1.65;
+        font-size: 17px;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px 22px 80px;
+      }
+      header.masthead {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 28px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: -0.01em;
+      }
+      .brand .mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        background: linear-gradient(135deg, var(--brand), var(--brand-ink));
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-size: 18px;
+        font-weight: 800;
+      }
+      .lang {
+        display: inline-flex;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        overflow: hidden;
+        background: var(--card);
+      }
+      .lang button {
+        appearance: none;
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        font: inherit;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 7px 16px;
+        cursor: pointer;
+      }
+      .lang button[aria-pressed="true"] {
+        background: var(--brand);
+        color: #fff;
+      }
+      .hero {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 28px 26px;
+        margin-bottom: 22px;
+      }
+      h1 {
+        font-size: clamp(26px, 5vw, 34px);
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        margin: 0 0 10px;
+        text-wrap: balance;
+      }
+      .lead {
+        color: var(--muted);
+        margin: 0;
+        font-size: 17px;
+      }
+      .updated {
+        display: inline-block;
+        margin-top: 16px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--brand-ink);
+        background: var(--accent-soft);
+        border-radius: 999px;
+        padding: 5px 12px;
+      }
+      section.block {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 22px 26px;
+        margin-bottom: 16px;
+      }
+      h2 {
+        font-size: 19px;
+        letter-spacing: -0.01em;
+        margin: 0 0 12px;
+      }
+      ul {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+      li {
+        position: relative;
+        padding-left: 26px;
+        color: var(--ink);
+      }
+      li::before {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 0.62em;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--brand);
+      }
+      .callout {
+        border-left: 3px solid var(--brand);
+        background: var(--accent-soft);
+        border-radius: 12px;
+        padding: 16px 18px;
+      }
+      .callout h2 {
+        margin-bottom: 6px;
+      }
+      .callout p {
+        margin: 0;
+      }
+      .contact a {
+        color: var(--brand-ink);
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .contact a:hover {
+        text-decoration: underline;
+      }
+      .contact .row {
+        display: grid;
+        gap: 4px;
+      }
+      footer.legal-foot {
+        margin-top: 28px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      [data-lang] {
+        display: none;
+      }
+      [data-lang].active {
+        display: block;
+      }
+      :focus-visible {
+        outline: 2px solid var(--brand);
+        outline-offset: 2px;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="masthead">
+        <div class="brand">
+          <span class="mark">B</span>
+          <span>ByggExp</span>
+        </div>
+        <div class="lang" role="group" aria-label="Language / Språk">
+          <button type="button" data-set="sv" aria-pressed="true">
+            Svenska
+          </button>
+          <button type="button" data-set="en" aria-pressed="false">
+            English
+          </button>
+        </div>
+      </header>
+
+      <!-- ============ SWEDISH ============ -->
+      <div data-lang="sv" class="active">
+        <div class="hero">
+          <h1>Integritetspolicy</h1>
+          <p class="lead">
+            Din integritet är viktig för oss. ByggExp arbetar för att skydda
+            dina personuppgifter och säkerställa transparens i hur din
+            information samlas in, används och lagras.
+          </p>
+          <span class="updated">Senast uppdaterad: 30 juli 2026</span>
+        </div>
+
+        <section class="block">
+          <h2>Vilka uppgifter samlar vi in?</h2>
+          <ul>
+            <li>
+              Personuppgifter som lämnas vid registrering (namn, telefonnummer,
+              e-post)
+            </li>
+            <li>
+              Arbetsrelaterade data såsom tidsloggar, projektuppgifter och
+              GPS-platser (endast under arbetstid, enligt din arbetsgivares
+              inställningar)
+            </li>
+            <li>Kommunikation och dokument som utbyts i appen</li>
+          </ul>
+        </section>
+
+        <section class="block">
+          <h2>Hur använder vi dina uppgifter?</h2>
+          <ul>
+            <li>För att tillhandahålla och förbättra våra tjänster</li>
+            <li>
+              För att underlätta kommunikation och projekthantering mellan
+              kontor, arbetsledare och arbetare
+            </li>
+            <li>För att uppfylla rättsliga skyldigheter och förbättra säkerheten</li>
+          </ul>
+        </section>
+
+        <section class="block">
+          <h2>Dataskydd</h2>
+          <ul>
+            <li>Dina uppgifter lagras säkert både lokalt och i molnet</li>
+            <li>
+              Åtkomst skyddas av inloggning/lösenord och andra säkra
+              autentiseringsmetoder
+            </li>
+            <li>
+              Vi delar inte dina personuppgifter med tredje part förutom när
+              lagen kräver det eller med ditt samtycke
+            </li>
+          </ul>
+        </section>
+
+        <section class="block">
+          <h2>Dina rättigheter</h2>
+          <ul>
+            <li>
+              Du kan när som helst begära åtkomst, rättelse eller radering av
+              dina personuppgifter
+            </li>
+            <li>
+              Du kan kontakta vårt supportteam angående integritetsfrågor eller
+              begäran om radering av data
+            </li>
+          </ul>
+        </section>
+
+        <section class="block callout">
+          <h2>Radera ditt konto</h2>
+          <p>
+            Du kan radera ditt konto direkt i appen: <strong>Profil →
+            Ta bort konto</strong>. Kontot och dina personuppgifter
+            avidentifieras då permanent. Du kan även begära radering via
+            e-post nedan.
+          </p>
+        </section>
+
+        <section class="block">
+          <h2>Juridiskt meddelande</h2>
+          <ul>
+            <li>
+              Genom att använda ByggExp godkänner du våra användarvillkor och
+              denna integritetspolicy
+            </li>
+            <li>
+              För mer information, läs de fullständiga dokumenten i appen eller
+              på vår webbplats
+            </li>
+          </ul>
+        </section>
+
+        <section class="block contact">
+          <h2>Kontakt</h2>
+          <div class="row">
+            <span>Vid frågor om integritet eller radering av data, kontakta oss:</span>
+            <span>ByggExp</span>
+            <span>E-post: <a href="mailto:support@byggexp.se">support@byggexp.se</a></span>
+            <span>Webb: <a href="https://byggexp.se">byggexp.se</a></span>
+          </div>
+        </section>
+      </div>
+
+      <!-- ============ ENGLISH ============ -->
+      <div data-lang="en">
+        <div class="hero">
+          <h1>Privacy Policy</h1>
+          <p class="lead">
+            Your privacy is important to us. ByggExp is committed to protecting
+            your personal data and ensuring transparency in how your information
+            is collected, used, and stored.
+          </p>
+          <span class="updated">Last updated: July 30, 2026</span>
+        </div>
+
+        <section class="block">
+          <h2>What data do we collect?</h2>
+          <ul>
+            <li>
+              Personal information provided during registration (name, phone
+              number, email)
+            </li>
+            <li>
+              Work-related data such as time logs, project details, and GPS
+              locations (only during working hours, as configured by your
+              employer)
+            </li>
+            <li>Communication and documents exchanged within the app</li>
+          </ul>
+        </section>
+
+        <section class="block">
+          <h2>How do we use your data?</h2>
+          <ul>
+            <li>To provide and improve our services</li>
+            <li>
+              To facilitate communication and project management between office,
+              foremen, and workers
+            </li>
+            <li>To comply with legal obligations and improve security</li>
+          </ul>
+        </section>
+
+        <section class="block">
+          <h2>Data protection</h2>
+          <ul>
+            <li>Your data is securely stored both locally and in the cloud</li>
+            <li>
+              Access is protected by login/password and other secure
+              authentication methods
+            </li>
+            <li>
+              We do not share your personal information with third parties except
+              as required by law or with your consent
+            </li>
+          </ul>
+        </section>
+
+        <section class="block">
+          <h2>Your rights</h2>
+          <ul>
+            <li>
+              You may request access, correction, or deletion of your personal
+              data at any time
+            </li>
+            <li>
+              You can contact our support team regarding privacy questions or
+              data removal requests
+            </li>
+          </ul>
+        </section>
+
+        <section class="block callout">
+          <h2>Delete your account</h2>
+          <p>
+            You can delete your account directly in the app:
+            <strong>Profile → Delete account</strong>. Your account and personal
+            data are then permanently de-identified. You may also request
+            deletion via the email below.
+          </p>
+        </section>
+
+        <section class="block">
+          <h2>Legal notice</h2>
+          <ul>
+            <li>
+              By using ByggExp, you agree to our Terms of Service and this
+              Privacy Policy
+            </li>
+            <li>
+              For more information, please review the full documents available in
+              the app or on our website
+            </li>
+          </ul>
+        </section>
+
+        <section class="block contact">
+          <h2>Contact</h2>
+          <div class="row">
+            <span>For any privacy-related questions or data removal requests, contact us:</span>
+            <span>ByggExp</span>
+            <span>Email: <a href="mailto:support@byggexp.se">support@byggexp.se</a></span>
+            <span>Web: <a href="https://byggexp.se">byggexp.se</a></span>
+          </div>
+        </section>
+      </div>
+
+      <footer class="legal-foot">© 2026 ByggExp. All rights reserved.</footer>
+    </div>
+
+    <script>
+      (function () {
+        var buttons = document.querySelectorAll(".lang button");
+        var panels = document.querySelectorAll("[data-lang]");
+        function setLang(lang) {
+          document.documentElement.lang = lang;
+          buttons.forEach(function (b) {
+            b.setAttribute("aria-pressed", String(b.dataset.set === lang));
+          });
+          panels.forEach(function (p) {
+            p.classList.toggle("active", p.dataset.lang === lang);
+          });
+        }
+        buttons.forEach(function (b) {
+          b.addEventListener("click", function () {
+            setLang(b.dataset.set);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

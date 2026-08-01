@@ -9,6 +9,14 @@ const nextConfig = {
   turbopack: {
     root: dirname,
   },
+  // Clean, extensionless URLs for the store-required legal pages that live as
+  // static HTML in /public.
+  async rewrites() {
+    return [
+      { source: "/privacy", destination: "/privacy.html" },
+      { source: "/terms", destination: "/terms.html" },
+    ];
+  },
 };
 
 export default nextConfig;

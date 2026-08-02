@@ -7,7 +7,7 @@ import { CalendlyInlineWidget } from "../CalendlyInlineWidget";
 const CALENDLY_URL = "https://calendly.com/870717ag/30min";
 
 const PHONE_1 = "+46 70 757 75 75";
-const PHONE_2 = "+46 81 212 76 76";
+const PHONE_2 = "+46 81 241 02 76";
 const WHATSAPP_NUMBER = "+46 70 757 75 75";
 const ADDRESS = "Byggmästarvägen 18, 168 32 Bromma, Sweden";
 
@@ -96,8 +96,8 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
             </span>
 
             <h3>{contactT.contactEmailLabel}</h3>
-            <a href="mailto:hello@byggexp.com" className="contact-email">
-              hello@byggexp.com
+            <a href="mailto:support@byggexp.se" className="contact-email">
+              support@byggexp.se
             </a>
             <p className="contact-note">{contactT.contactResponseTime}</p>
           </div>

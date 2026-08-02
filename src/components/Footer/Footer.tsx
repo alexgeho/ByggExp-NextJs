@@ -33,8 +33,8 @@ function Footer({ footerT }: FooterProps) {
             {footerT.footerTerms}
           </a>
 
-          <a href="mailto:hello@byggexp.com">
-            hello@byggexp.com
+          <a href="mailto:support@byggexp.se">
+            support@byggexp.se
           </a>
         </div>
       </div>

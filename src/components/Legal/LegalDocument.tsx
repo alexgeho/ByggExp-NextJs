@@ -8,12 +8,15 @@ import type { ReactNode } from "react";
 export default function LegalDocument({
   title,
   updated,
+  lang = "sv",
   children,
 }: {
   title: string;
   updated?: string;
+  lang?: string;
   children: ReactNode;
 }) {
+  const updatedLabel = lang === "sv" ? "Senast uppdaterad" : "Last updated";
   return (
     <>
       <Head>
@@ -27,7 +30,9 @@ export default function LegalDocument({
           </Link>
           <h1 className="legal-page__title">{title}</h1>
           {updated ? (
-            <p className="legal-page__updated">Senast uppdaterad: {updated}</p>
+            <p className="legal-page__updated">
+              {updatedLabel}: {updated}
+            </p>
           ) : null}
           <div className="legal-page__body">{children}</div>
         </div>

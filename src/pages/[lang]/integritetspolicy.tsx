@@ -39,7 +39,10 @@ export default function PrivacyPolicyPage({
             personalliggare.
           </li>
           <li>
-            Platsdata (GPS): position vid arbetspass för att styrka arbetad tid.
+            Platsdata (GPS): din position läses tillfälligt vid start av
+            arbetspass för att kontrollera närvaro på arbetsplatsen. Positionen
+            sparas inte som koordinater hos oss – endast projektets adress
+            sparas.
           </li>
           <li>
             Projekt: uppgifter, dagbok, foton, dokument. Ekonomi: fakturor,
@@ -77,9 +80,11 @@ export default function PrivacyPolicyPage({
 
         <h2>Lagringstider</h2>
         <p>
-          GPS-positioner raderas automatiskt efter 90 dagar. Personalliggare
-          sparas i minst 2 år, bokföring/fakturor i 7 år. Övriga uppgifter så
-          länge kund-/anställnings­relationen består, därefter gallring.
+          GPS-position används endast tillfälligt (When-In-Use) vid arbetspass
+          för närvarokontroll och sparas inte som koordinater hos oss – endast
+          projektets adress sparas. Personalliggare sparas i minst 2 år,
+          bokföring/fakturor i 7 år. Övriga uppgifter så länge
+          kund-/anställnings­relationen består, därefter gallring.
         </p>
 
         <h2>Mottagare och överföringar</h2>
@@ -128,8 +133,9 @@ export default function PrivacyPolicyPage({
           (personalliggare).
         </li>
         <li>
-          Location data (GPS): position during a shift to substantiate hours
-          worked.
+          Location data (GPS): your position is read momentarily when you start
+          a shift to verify you are at the job site. It is not stored as
+          coordinates on our servers — only the project’s address is saved.
         </li>
         <li>
           Projects: tasks, diary, photos, documents. Finance: invoices,
@@ -167,10 +173,11 @@ export default function PrivacyPolicyPage({
 
       <h2>Retention periods</h2>
       <p>
-        GPS positions are deleted automatically after 90 days. The staff ledger
-        is kept for at least 2 years and accounting/invoices for 7 years. Other
-        data is kept for as long as the customer/employment relationship lasts,
-        and is then erased.
+        GPS position is used only momentarily (When-In-Use) during a shift for
+        the on-site check and is not stored as coordinates on our servers — only
+        the project’s address is saved. The staff ledger is kept for at least 2
+        years and accounting/invoices for 7 years. Other data is kept for as
+        long as the customer/employment relationship lasts, and is then erased.
       </p>
 
       <h2>Recipients and transfers</h2>

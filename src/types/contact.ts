@@ -4,6 +4,9 @@ export type ContactProps = {
     contactTitle: string;
     contactLead: string;
     contactEmailLabel: string;
+    contactEmailSupport: string;
+    contactEmailConsult: string;
+    contactEmailPress: string;
     contactResponseTime: string;
     contactPhoneLabel: string;
     contactAddressLabel: string;

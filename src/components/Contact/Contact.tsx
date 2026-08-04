@@ -96,9 +96,36 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
             </span>
 
             <h3>{contactT.contactEmailLabel}</h3>
-            <a href="mailto:support@byggexp.se" className="contact-email">
-              support@byggexp.se
-            </a>
+
+            <div className="contact-email-list">
+              <div className="contact-email-item">
+                <span className="contact-email-purpose">
+                  {contactT.contactEmailSupport}
+                </span>
+                <a href="mailto:support@byggexp.se" className="contact-email">
+                  support@byggexp.se
+                </a>
+              </div>
+
+              <div className="contact-email-item">
+                <span className="contact-email-purpose">
+                  {contactT.contactEmailConsult}
+                </span>
+                <a href="mailto:sales@byggexp.se" className="contact-email">
+                  sales@byggexp.se
+                </a>
+              </div>
+
+              <div className="contact-email-item">
+                <span className="contact-email-purpose">
+                  {contactT.contactEmailPress}
+                </span>
+                <a href="mailto:press@byggexp.se" className="contact-email">
+                  press@byggexp.se
+                </a>
+              </div>
+            </div>
+
             <p className="contact-note">{contactT.contactResponseTime}</p>
           </div>
 

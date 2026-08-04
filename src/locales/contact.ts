@@ -6,6 +6,9 @@ export const contactTranslations = {
       "Есть вопросы по ByggExp или нужна помощь? Мы всегда на связи и рады помочь.",
 
     contactEmailLabel: "Email",
+    contactEmailSupport: "Техподдержка",
+    contactEmailConsult: "Консультации",
+    contactEmailPress: "Пресса",
     contactResponseTime: "Обычно отвечаем в течение одного рабочего дня.",
 
     contactPhoneLabel: "Телефон",
@@ -27,6 +30,9 @@ export const contactTranslations = {
       "Have questions about ByggExp or need help? We're always happy to assist.",
 
     contactEmailLabel: "Email",
+    contactEmailSupport: "Support",
+    contactEmailConsult: "Consulting",
+    contactEmailPress: "Press",
     contactResponseTime: "We usually reply within one business day.",
 
     contactPhoneLabel: "Phone",
@@ -48,6 +54,9 @@ export const contactTranslations = {
       "Har du frågor om ByggExp eller behöver du hjälp? Vi svarar gärna.",
 
     contactEmailLabel: "E-post",
+    contactEmailSupport: "Support",
+    contactEmailConsult: "Rådgivning",
+    contactEmailPress: "Press",
     contactResponseTime: "Vi svarar vanligtvis inom en arbetsdag.",
 
     contactPhoneLabel: "Telefon",

@@ -125,12 +125,38 @@
   margin-bottom: 24px;
 }
 
+.contact-email-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-email-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-email-purpose {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 4px;
+}
+
 .contact-email {
   font-size: 18px;
   font-weight: 600;
   color: #6bb6ff;
   margin-bottom: 10px;
   transition: color 0.2s;
+}
+
+.contact-email-item .contact-email {
+  margin-bottom: 0;
 }
 
 .contact-email:hover {

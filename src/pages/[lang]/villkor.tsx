@@ -1,4 +1,14 @@
+import type { GetStaticPaths, GetStaticProps } from "next";
+
 import LegalDocument from "../../components/Legal/LegalDocument";
+import { landingLanguageCodes } from "../../locales/languages";
+
+export const getStaticPaths: GetStaticPaths = async () => ({
+  paths: landingLanguageCodes.map((lang) => ({ params: { lang } })),
+  fallback: false,
+});
+
+export const getStaticProps: GetStaticProps = async () => ({ props: {} });
 
 export default function TermsPage() {
   return (

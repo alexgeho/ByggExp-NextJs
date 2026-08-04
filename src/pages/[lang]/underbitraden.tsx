@@ -1,4 +1,7 @@
+import type { GetStaticPaths, GetStaticProps } from "next";
+
 import LegalDocument from "../../components/Legal/LegalDocument";
+import { landingLanguageCodes } from "../../locales/languages";
 
 const ROWS: [string, string, string, string][] = [
   ["MongoDB Atlas", "Databas / hosting", "EU – AWS Stockholm", "Inom EES"],
@@ -10,6 +13,13 @@ const ROWS: [string, string, string, string][] = [
   ["Expo", "Push-notiser", "USA", "DPA / SCC"],
   ["Apple APNs / Google FCM", "Leverans av push", "USA", "SCC / EU-US DPF"],
 ];
+
+export const getStaticPaths: GetStaticPaths = async () => ({
+  paths: landingLanguageCodes.map((lang) => ({ params: { lang } })),
+  fallback: false,
+});
+
+export const getStaticProps: GetStaticProps = async () => ({ props: {} });
 
 export default function SubprocessorsPage() {
   return (

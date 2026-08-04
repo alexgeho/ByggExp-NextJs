@@ -1,12 +1,23 @@
+import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import Link from "next/link";
-import LegalDocument from "../../components/Legal/LegalDocument";
 
-export default function DpaPage() {
+import LegalDocument from "../../components/Legal/LegalDocument";
+import { landingLanguageCodes } from "../../locales/languages";
+
+export const getStaticPaths: GetStaticPaths = async () => ({
+  paths: landingLanguageCodes.map((lang) => ({ params: { lang } })),
+  fallback: false,
+});
+
+export const getStaticProps: GetStaticProps<{ lang: string }> = async ({ params }) => ({
+  props: { lang: (params?.lang as string) || "sv" },
+});
+
+export default function DpaPage({
+  lang,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <LegalDocument
-      title="Personuppgiftsbiträdesavtal (DPA)"
-      updated="2026-07-30"
-    >
+    <LegalDocument title="Personuppgiftsbiträdesavtal (DPA)" updated="2026-07-30">
       <p className="legal-page__note">
         Detta biträdesavtal gäller mellan RealMar AB och det kundföretag som tecknar
         ett konto. Det utgör bilaga till abonnemanget/huvudavtalet. Granskas av
@@ -51,9 +62,9 @@ export default function DpaPage() {
       <p>
         Ansvarig ger generellt förhandsgodkännande till de underbiträden som anges på
         sidan{" "}
-        <Link href="/legal/underbitraden">Underbiträden</Link>. Biträdet informerar om
-        planerade byten och Ansvarig kan invända. Underbiträden binds av motsvarande
-        skyldigheter.
+        <Link href={`/${lang}/underbitraden`}>Underbiträden</Link>. Biträdet
+        informerar om planerade byten och Ansvarig kan invända. Underbiträden binds
+        av motsvarande skyldigheter.
       </p>
 
       <h2>6. Tredjelandsöverföring</h2>

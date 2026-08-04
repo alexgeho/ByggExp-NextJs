@@ -25,13 +25,13 @@ function Footer({ footerT }: FooterProps) {
             {footerT.footerBlog}
           </Link>
 
-          <a href="#">
+          <Link href={`/${lang}/integritetspolicy`}>
             {footerT.footerPrivacy}
-          </a>
+          </Link>
 
-          <a href="#">
+          <Link href={`/${lang}/villkor`}>
             {footerT.footerTerms}
-          </a>
+          </Link>
 
           <a href="mailto:support@byggexp.se">
             support@byggexp.se

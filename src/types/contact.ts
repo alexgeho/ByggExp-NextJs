@@ -9,6 +9,10 @@ export type ContactProps = {
     contactEmailPress: string;
     contactResponseTime: string;
     contactPhoneLabel: string;
+    contactPhoneSupport: string;
+    contactPhoneOffice: string;
+    contactHoursLabel: string;
+    contactHours: string;
     contactAddressLabel: string;
     contactChatLabel: string;
     contactChatText: string;

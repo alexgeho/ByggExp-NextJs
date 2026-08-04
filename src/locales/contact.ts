@@ -12,6 +12,10 @@ export const contactTranslations = {
     contactResponseTime: "Обычно отвечаем в течение одного рабочего дня.",
 
     contactPhoneLabel: "Телефон",
+    contactPhoneSupport: "Поддержка",
+    contactPhoneOffice: "Офис",
+    contactHoursLabel: "Часы работы",
+    contactHours: "Пн–Пт, 08:00–17:00",
     contactAddressLabel: "Адрес",
 
     contactChatLabel: "Чат",
@@ -36,6 +40,10 @@ export const contactTranslations = {
     contactResponseTime: "We usually reply within one business day.",
 
     contactPhoneLabel: "Phone",
+    contactPhoneSupport: "Support",
+    contactPhoneOffice: "Office",
+    contactHoursLabel: "Office hours",
+    contactHours: "Mon–Fri, 08:00–17:00",
     contactAddressLabel: "Address",
 
     contactChatLabel: "Chat",
@@ -60,6 +68,10 @@ export const contactTranslations = {
     contactResponseTime: "Vi svarar vanligtvis inom en arbetsdag.",
 
     contactPhoneLabel: "Telefon",
+    contactPhoneSupport: "Support",
+    contactPhoneOffice: "Kontor",
+    contactHoursLabel: "Öppettider",
+    contactHours: "Mån–Fre, 08:00–17:00",
     contactAddressLabel: "Adress",
 
     contactChatLabel: "Chatt",

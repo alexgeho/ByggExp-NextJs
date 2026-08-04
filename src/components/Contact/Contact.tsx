@@ -145,18 +145,39 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
             </span>
 
             <h3>{contactT.contactPhoneLabel}</h3>
-            <a
-              href={`tel:${PHONE_1.replace(/\s/g, "")}`}
-              className="contact-email"
-            >
-              {PHONE_1}
-            </a>
-            <a
-              href={`tel:${PHONE_2.replace(/\s/g, "")}`}
-              className="contact-email"
-            >
-              {PHONE_2}
-            </a>
+
+            <div className="contact-email-list">
+              <div className="contact-email-item">
+                <span className="contact-email-purpose">
+                  {contactT.contactPhoneSupport}
+                </span>
+                <a
+                  href={`tel:${PHONE_1.replace(/\s/g, "")}`}
+                  className="contact-email"
+                >
+                  {PHONE_1}
+                </a>
+              </div>
+
+              <div className="contact-email-item">
+                <span className="contact-email-purpose">
+                  {contactT.contactPhoneOffice}
+                </span>
+                <a
+                  href={`tel:${PHONE_2.replace(/\s/g, "")}`}
+                  className="contact-email"
+                >
+                  {PHONE_2}
+                </a>
+              </div>
+
+              <div className="contact-email-item">
+                <span className="contact-email-purpose">
+                  {contactT.contactHoursLabel}
+                </span>
+                <span className="contact-hours">{contactT.contactHours}</span>
+              </div>
+            </div>
           </div>
 
           {/* CHAT CARD */}

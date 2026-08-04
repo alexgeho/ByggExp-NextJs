@@ -83,7 +83,7 @@ export default function TermsPage() {
       <h2>Kontakt</h2>
       <p>
         RealMar AB, Byggmästarvägen 18, c/o Hadjie Angela Hisoler Gepanaga, 168 32
-        Bromma. E-post: app@byggexp.se.
+        Bromma. E-post: support@byggexp.se.
       </p>
     </LegalDocument>
   );

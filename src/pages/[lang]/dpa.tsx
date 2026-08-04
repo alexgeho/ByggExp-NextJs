@@ -83,7 +83,7 @@ export default function DpaPage({
       </p>
 
       <h2>Kontakt</h2>
-      <p>RealMar AB, Byggmästarvägen 18, 168 32 Bromma. E-post: app@byggexp.se.</p>
+      <p>RealMar AB, Byggmästarvägen 18, 168 32 Bromma. E-post: support@byggexp.se.</p>
     </LegalDocument>
   );
 }

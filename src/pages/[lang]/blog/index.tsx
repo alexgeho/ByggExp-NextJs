@@ -71,7 +71,7 @@ export default function BlogIndexPage({
 
       <section className="blog-hero">
         <div className="container container-narrow">
-          <span className="eyebrow">{copy.badge}</span>
+          <span className="blog-badge">{copy.badge}</span>
           <h1>{copy.title}</h1>
           <p className="blog-hero-subtitle">{copy.subtitle}</p>
         </div>
@@ -97,10 +97,7 @@ export default function BlogIndexPage({
                     />
                   ) : null}
                   <div className="blog-card-body">
-                    <div className="blog-card-meta">
-                      <span>{post.tag || copy.badge}</span>
-                      <span>{formatDate(post.publishedAt || post.createdAt, lang)}</span>
-                    </div>
+                    <span className="blog-tag">{post.tag || copy.badge}</span>
                     <h2>{post.title}</h2>
                     <p>{post.excerpt}</p>
                   </div>
@@ -114,13 +111,4 @@ export default function BlogIndexPage({
       <Footer footerT={footerT} />
     </>
   );
-}
-
-function formatDate(value: string, lang: LandingLanguageCode) {
-  const locale = lang === 'sv' ? 'sv-SE' : lang === 'ru' ? 'ru-RU' : 'en-US';
-  return new Intl.DateTimeFormat(locale, {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  }).format(new Date(value));
 }

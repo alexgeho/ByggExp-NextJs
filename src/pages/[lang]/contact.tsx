@@ -35,7 +35,7 @@ export default function ContactPage({
   return (
     <>
       <Header headerT={headerT} />
-      <Contact contactT={contactT} ctaT={ctaT} />
+      <Contact contactT={contactT} ctaT={ctaT} lang={lang} />
       <Footer footerT={footerT} />
     </>
   );

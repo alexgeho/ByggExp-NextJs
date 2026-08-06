@@ -1,14 +1,15 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
-const noindex = process.env.SITE_NOINDEX === "true";
+// Default: block indexing. Set SITE_ALLOW_INDEX=true to allow search engines.
+const allowIndex = process.env.SITE_ALLOW_INDEX === "true";
 
 export default function Document() {
   return (
     <Html lang="sv">
       <Head>
-        {noindex ? (
+        {allowIndex ? null : (
           <meta name="robots" content="noindex, nofollow" />
-        ) : null}
+        )}
       </Head>
       <body>
         <Main />

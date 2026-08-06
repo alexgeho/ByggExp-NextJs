@@ -3,9 +3,9 @@ import { fileURLToPath } from "node:url";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// Set SITE_NOINDEX=true (e.g. while the site is in review) to keep the whole
-// site out of search engines. Remove it / set to false to allow indexing.
-const noindex = process.env.SITE_NOINDEX === "true";
+// The site is kept OUT of search engines by default (pre-launch review).
+// Set SITE_ALLOW_INDEX=true at build time to allow indexing.
+const allowIndex = process.env.SITE_ALLOW_INDEX === "true";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -22,7 +22,7 @@ const nextConfig = {
     ];
   },
   async headers() {
-    if (!noindex) return [];
+    if (allowIndex) return [];
     return [
       {
         source: "/:path*",

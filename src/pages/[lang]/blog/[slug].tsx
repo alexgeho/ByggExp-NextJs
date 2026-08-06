@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPost } from '../../../lib/blog-api';
+import { getMockBlogPost } from '../../../lib/blog-mock';
 import { blogPageTranslations } from '../../../locales/blog';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -39,6 +40,11 @@ export const getServerSideProps: GetServerSideProps<
       },
     };
   } catch {
+    // Fall back to a placeholder article if it matches a mock slug.
+    const mock = getMockBlogPost(lang, slug);
+    if (mock) {
+      return { props: { lang, post: mock } };
+    }
     return { notFound: true };
   }
 };

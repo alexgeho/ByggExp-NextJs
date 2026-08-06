@@ -218,11 +218,48 @@
   letter-spacing: -0.02em;
 }
 
+.blog-article-content h2 {
+  font-size: 1.55rem;
+  margin-top: 1.8em;
+}
+
+.blog-article-content h3 {
+  font-size: 1.2rem;
+  margin-top: 1.4em;
+}
+
+.blog-article-content ul,
+.blog-article-content ol {
+  padding-left: 1.4em;
+}
+
+.blog-article-content li + li {
+  margin-top: 0.5em;
+}
+
+.blog-article-content ol {
+  counter-reset: none;
+}
+
 .blog-article-content img {
   width: 100%;
   height: auto;
   border-radius: 20px;
   margin: 18px 0;
+}
+
+.blog-article-content figure {
+  margin: 22px 0;
+}
+
+.blog-article-content figure img {
+  margin: 0 0 8px;
+}
+
+.blog-article-content figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
 }
 
 .blog-article-content blockquote {

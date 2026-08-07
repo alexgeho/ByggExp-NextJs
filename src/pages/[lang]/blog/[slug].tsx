@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPost } from '../../../lib/blog-api';
+import { extractFaqFromHtml } from '../../../lib/faq';
 import { getMockBlogPost } from '../../../lib/blog-mock';
 import { buildHreflangAlternates } from '../../../lib/seo';
 import { blogPageTranslations } from '../../../locales/blog';
@@ -66,6 +67,7 @@ export default function BlogArticlePage({
   const title = post.seoTitle || `${post.title} | ByggExp`;
   const description = post.seoDescription || post.excerpt;
   const image = post.seoImageUrl || post.coverImageUrl;
+  const faq = extractFaqFromHtml(post.contentHtml, lang);
 
   return (
     <>
@@ -103,6 +105,25 @@ export default function BlogArticlePage({
             }),
           }}
         />
+        {!post.noIndex && faq.length > 0 ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: faq.map((item) => ({
+                  '@type': 'Question',
+                  name: item.question,
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: item.answer,
+                  },
+                })),
+              }),
+            }}
+          />
+        ) : null}
       </Head>
 
       <Header headerT={headerT} />

@@ -44,6 +44,12 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build
+        # SITE_ALLOW_INDEX is baked into the build here (controls the noindex
+        # <meta> in _document.tsx and the X-Robots-Tag header in next.config.mjs).
+        # Set the repo variable SITE_ALLOW_INDEX=true (Settings → Variables) to
+        # open the site to search engines; unset/anything-else keeps it blocked.
+        env:
+          SITE_ALLOW_INDEX: ${{ vars.SITE_ALLOW_INDEX }}
         run: yarn build
 
       - name: Prune dev dependencies
@@ -79,12 +85,15 @@ jobs:
       - name: Activate release, health-check, auto-rollback on failure
         env:
           SSH_KEY: ~/.ssh/deploy_key
+          # Passed through to the PM2 runtime so robots.txt.ts (getServerSideProps,
+          # read at request time) returns Allow/Disallow consistently with the build.
+          SITE_ALLOW_INDEX: ${{ vars.SITE_ALLOW_INDEX }}
         run: |
           set -euo pipefail
           # All deploy/health/rollback logic runs in ONE remote session so the
           # previous release is captured before the flip and restored on failure.
           ssh -i "$SSH_KEY" -p "${DEPLOY_PORT}" "${DEPLOY_USER}@${DEPLOY_HOST}" \
-            "APP_DIR='${APP_DIR}' APP_NAME='${APP_NAME}' APP_PORT='${APP_PORT}' TS='${RELEASE_TS}' bash -s" <<'EOF'
+            "APP_DIR='${APP_DIR}' APP_NAME='${APP_NAME}' APP_PORT='${APP_PORT}' TS='${RELEASE_TS}' SITE_ALLOW_INDEX='${SITE_ALLOW_INDEX}' bash -s" <<'EOF'
           set -euo pipefail
           REL="${APP_DIR}/releases/${TS}"
           CURRENT_LINK="${APP_DIR}/current"
@@ -102,6 +111,8 @@ jobs:
           cd "${CURRENT_LINK}"
           export NODE_ENV=production
           export PORT="${APP_PORT}"
+          # Make the indexing flag visible to the app process (PM2 --update-env picks it up)
+          export SITE_ALLOW_INDEX="${SITE_ALLOW_INDEX:-}"
 
           # Start or reload under PM2
           if pm2 describe "${APP_NAME}" > /dev/null 2>&1; then

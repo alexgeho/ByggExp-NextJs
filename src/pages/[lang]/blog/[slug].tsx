@@ -6,6 +6,7 @@ import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPost } from '../../../lib/blog-api';
 import { getMockBlogPost } from '../../../lib/blog-mock';
+import { buildHreflangAlternates } from '../../../lib/seo';
 import { blogPageTranslations } from '../../../locales/blog';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -58,6 +59,10 @@ export default function BlogArticlePage({
   const footerT = footerTranslations[lang];
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = post.canonicalUrl || `${siteUrl}/${lang}/blog/${encodeURIComponent(post.slug)}`;
+  // Slugs are shared across locales, so the same article path exists per language.
+  const hreflangAlternates = buildHreflangAlternates(
+    (code) => `${siteUrl}/${code}/blog/${encodeURIComponent(post.slug)}`,
+  );
   const title = post.seoTitle || `${post.title} | ByggExp`;
   const description = post.seoDescription || post.excerpt;
   const image = post.seoImageUrl || post.coverImageUrl;
@@ -68,6 +73,11 @@ export default function BlogArticlePage({
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={canonicalUrl} />
+        {post.noIndex
+          ? null
+          : hreflangAlternates.map((alt) => (
+              <link key={alt.hrefLang} rel="alternate" hrefLang={alt.hrefLang} href={alt.href} />
+            ))}
         {post.noIndex ? <meta name="robots" content="noindex, nofollow" /> : null}
         <meta property="og:type" content="article" />
         <meta property="og:title" content={title} />

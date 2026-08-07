@@ -11,6 +11,7 @@ import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero/Hero";
 import Pain from "../../components/Pain/Pain";
+import { buildHreflangAlternates } from "../../lib/seo";
 import Pricing from "../../components/Pricing/Pricing";
 import { benefitsTranslations } from "../../locales/benefits";
 import { ctaTranslations } from "../../locales/CTA";
@@ -102,6 +103,7 @@ export default function HomePage({
   const footerT = footerTranslations[lang];
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://byggexp.se";
   const canonicalUrl = seo?.canonicalUrl || `${siteUrl}/${lang}`;
+  const hreflangAlternates = buildHreflangAlternates((code) => `${siteUrl}/${code}`);
   const title = seo?.title || "ByggExp";
   const description = seo?.description || "";
 
@@ -111,6 +113,9 @@ export default function HomePage({
         <title>{title}</title>
         {description ? <meta name="description" content={description} /> : null}
         <link rel="canonical" href={canonicalUrl} />
+        {hreflangAlternates.map((alt) => (
+          <link key={alt.hrefLang} rel="alternate" hrefLang={alt.hrefLang} href={alt.href} />
+        ))}
         {seo?.noIndex ? <meta name="robots" content="noindex, nofollow" /> : null}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />

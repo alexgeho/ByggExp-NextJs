@@ -6,6 +6,7 @@ import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { getMockBlogPosts } from '../../../lib/blog-mock';
+import { buildHreflangAlternates } from '../../../lib/seo';
 import { blogPageTranslations } from '../../../locales/blog';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -57,6 +58,7 @@ export default function BlogIndexPage({
   const footerT = footerTranslations[lang];
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${lang}/blog`;
+  const hreflangAlternates = buildHreflangAlternates((code) => `${siteUrl}/${code}/blog`);
 
   return (
     <>
@@ -64,6 +66,9 @@ export default function BlogIndexPage({
         <title>{copy.title} | ByggExp</title>
         <meta name="description" content={copy.subtitle} />
         <link rel="canonical" href={canonicalUrl} />
+        {hreflangAlternates.map((alt) => (
+          <link key={alt.hrefLang} rel="alternate" hrefLang={alt.hrefLang} href={alt.href} />
+        ))}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`${copy.title} | ByggExp`} />
         <meta property="og:description" content={copy.subtitle} />

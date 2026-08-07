@@ -1,14 +1,17 @@
 import { useState } from 'react';
 
+import { EGENKONTROLL_PRESETS } from './egenkontrollPresets';
+
 // Free egenkontroll (self-inspection checklist) tool. Categories and result
 // states mirror the ByggExp KMA module (Kvalitet/Miljö/Arbetsmiljö, and
-// Godkänd/Anmärkning/Ej aktuellt). Fill the checklist and download a PDF.
-// sv-only by strategy.
+// Ej besvarad/Godkänd/Anmärkning/Ej aktuellt). Pick a ready-made template to
+// auto-fill professional control points, or fill your own — then download a
+// PDF. sv-only by strategy.
 
 type Row = { point: string; result: string; comment: string };
 
 const CATEGORIES = ['Kvalitet', 'Miljö', 'Arbetsmiljö', 'Övrigt'];
-const RESULTS = ['Godkänd', 'Anmärkning', 'Ej aktuellt'];
+const RESULTS = ['Ej besvarad', 'Godkänd', 'Anmärkning', 'Ej aktuellt'];
 
 const emptyRow = (): Row => ({ point: '', result: RESULTS[0], comment: '' });
 
@@ -24,6 +27,20 @@ export default function EgenkontrollTool() {
   const setRow = (index: number, patch: Partial<Row>) =>
     setRows((prev) => prev.map((row, i) => (i === index ? { ...row, ...patch } : row)));
   const addRow = () => setRows((prev) => [...prev, emptyRow()]);
+
+  const applyPreset = (presetId: string) => {
+    const preset = EGENKONTROLL_PRESETS.find((p) => p.id === presetId);
+    if (!preset) return;
+    setTitle(preset.name);
+    setCategory(preset.category);
+    setRows(
+      preset.items.map((item) => ({
+        point: item.point,
+        result: RESULTS[0],
+        comment: item.reference ? `Ref: ${item.reference}` : '',
+      })),
+    );
+  };
   const removeRow = (index: number) =>
     setRows((prev) => (prev.length > 1 ? prev.filter((_, i) => i !== index) : prev));
 
@@ -97,8 +114,24 @@ export default function EgenkontrollTool() {
       <div className="lm-tool-head">
         <h2 className="lm-tool-title">Fyll i och ladda ner din egenkontroll</h2>
         <p className="lm-tool-sub">
-          Fyll i kontrollpunkter och resultat och ladda ner en färdig egenkontroll som PDF att signera. Inget konto behövs.
+          Välj en färdig mall så fylls kontrollpunkterna i automatiskt – eller skriv egna. Ladda sedan ner en färdig egenkontroll som PDF att signera. Inget konto behövs.
         </p>
+      </div>
+
+      <div className="lm-tool-presets">
+        <span className="lm-tool-presets-label">Börja från en färdig mall:</span>
+        <div className="lm-tool-presets-buttons">
+          {EGENKONTROLL_PRESETS.map((preset) => (
+            <button
+              key={preset.id}
+              type="button"
+              className="lm-tool-preset"
+              onClick={() => applyPreset(preset.id)}
+            >
+              {preset.name}
+            </button>
+          ))}
+        </div>
       </div>
 
       <form

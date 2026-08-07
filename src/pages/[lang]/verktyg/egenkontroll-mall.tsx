@@ -29,6 +29,16 @@ const FAQ: LeadMagnetFaqItem[] = [
     answer:
       'Nej, men det underlättar. Du kan fylla i mallen ovan och spara som PDF, eller göra egenkontroller löpande i ByggExp med färdiga mallar för el, VVS, bygg och skyddsrond.',
   },
+  {
+    question: 'Vem ansvarar för att egenkontrollen görs?',
+    answer:
+      'Den som utför arbetet ansvarar för sin egenkontroll, och en ansvarig person signerar. I byggherrens kontrollplan enligt PBL pekas kontrollansvarig (KA) ut för de kontroller som krävs där.',
+  },
+  {
+    question: 'Vad menas med "Anmärkning" i en egenkontroll?',
+    answer:
+      'Anmärkning betyder att kontrollpunkten inte är godkänd och behöver åtgärdas. Notera avvikelsen i kommentaren, åtgärda och följ upp – dokumentationen visar att felet hanterats.',
+  },
 ];
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
@@ -103,6 +113,47 @@ export default function EgenkontrollMallPage() {
                 <li>Kontrollpunkter – vad som ska kontrolleras</li>
                 <li>Resultat: godkänd, anmärkning eller ej aktuellt</li>
                 <li>Kommentar och underskrift av ansvarig</li>
+              </ul>
+            ),
+          },
+          {
+            id: 'sa-fyller-du-i-egenkontroll',
+            heading: 'Så fyller du i egenkontrollen steg för steg',
+            body: (
+              <ol>
+                <li>
+                  Välj en färdig mall ovan (el, VVS, bygg/stomme eller skyddsrond) så fylls
+                  kontrollpunkterna i automatiskt – eller skriv egna punkter.
+                </li>
+                <li>Fyll i titel, projekt, ansvarig och datum.</li>
+                <li>Gå igenom varje kontrollpunkt och sätt resultat: godkänd, anmärkning eller ej aktuellt.</li>
+                <li>Skriv en kommentar där det behövs – särskilt vid anmärkningar och avvikelser.</li>
+                <li>Ladda ner egenkontrollen som PDF och signera.</li>
+                <li>Åtgärda eventuella anmärkningar och följ upp att de är avklarade.</li>
+              </ol>
+            ),
+          },
+          {
+            id: 'vanliga-misstag-egenkontroll',
+            heading: 'Vanliga misstag att undvika',
+            body: (
+              <ul>
+                <li>
+                  <strong>För generella punkter.</strong> Anpassa kontrollpunkterna efter projektets
+                  risker – fokusera på de kritiska momenten, inte en lång lista onödiga kontroller.
+                </li>
+                <li>
+                  <strong>Ingen koppling till norm.</strong> Ange referens (t.ex. BBR eller en
+                  SS-standard) där kontrollen görs mot ett krav.
+                </li>
+                <li>
+                  <strong>Anmärkningar utan uppföljning.</strong> En anmärkning som inte åtgärdas och
+                  följs upp är värdelös som bevis.
+                </li>
+                <li>
+                  <strong>Egenkontrollen görs i efterhand.</strong> Fyll i löpande medan arbetet pågår,
+                  inte veckor senare.
+                </li>
               </ul>
             ),
           },

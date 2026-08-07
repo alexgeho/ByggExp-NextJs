@@ -341,3 +341,44 @@
     margin-left: 0;
   }
 }
+
+// --- ready-made template presets (fishka) -----------------------------------
+.lm-tool-presets {
+  margin-bottom: 20px;
+  padding: 16px 18px;
+  border: 1px dashed var(--lm-field-border);
+  border-radius: 14px;
+  background: rgba(35, 148, 255, 0.04);
+}
+
+.lm-tool-presets-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.lm-tool-presets-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.lm-tool-preset {
+  border: 1px solid var(--lm-accent);
+  background: var(--lm-card-bg);
+  color: var(--lm-accent);
+  padding: 9px 16px;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.lm-tool-preset:hover {
+  background: var(--lm-accent);
+  color: #fff;
+}

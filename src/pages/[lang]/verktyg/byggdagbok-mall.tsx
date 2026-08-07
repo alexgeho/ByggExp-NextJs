@@ -152,11 +152,11 @@ export default function ByggdagbokMallPage() {
           buttonLabel: 'Boka demo',
           href: `/${LOCALE}/contact`,
         }}
-        relatedHeading="Fler guider"
+        relatedHeading="Fler guider och mallar"
         related={[
+          { href: `/${LOCALE}/verktyg/tidrapport-mall`, label: 'Tidrapport – gratis mall' },
+          { href: `/${LOCALE}/verktyg/egenkontroll-mall`, label: 'Egenkontroll – gratis mall' },
           { href: `/${LOCALE}/blog/dokumentera-med-foton-pa-bygget`, label: 'Dokumentera med foton på bygget' },
-          { href: `/${LOCALE}/blog/narvaro-och-incheckning-pa-bygget`, label: 'Närvaro och incheckning på bygget' },
-          { href: `/${LOCALE}/blog/automatisk-tidrapportering-och-export`, label: 'Automatisk tidrapportering' },
         ]}
       />
 

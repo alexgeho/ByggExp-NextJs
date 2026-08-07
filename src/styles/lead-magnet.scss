@@ -241,3 +241,103 @@
     grid-template-columns: 1fr;
   }
 }
+
+// --- repeatable row tables (tidrapport, egenkontroll) -----------------------
+.lm-tool-field select,
+.lm-tool-row select {
+  font: inherit;
+  padding: 11px 13px;
+  border: 1px solid var(--lm-field-border);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.lm-tool-rows {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lm-tool-row {
+  display: grid;
+  grid-template-columns: 160px 110px 1fr 34px;
+  gap: 10px;
+  align-items: center;
+}
+
+.lm-tool-row-egen {
+  grid-template-columns: 1.4fr 140px 1.4fr 34px;
+}
+
+.lm-tool-row input,
+.lm-tool-row select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--lm-field-border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+}
+
+.lm-tool-row-head {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.lm-tool-row-remove {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.lm-tool-row-remove:hover {
+  color: #d33;
+}
+
+.lm-tool-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.lm-tool-secondary {
+  border: 1px solid var(--lm-accent);
+  background: transparent;
+  color: var(--lm-accent);
+  padding: 11px 20px;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lm-tool-total {
+  font-weight: 700;
+  margin-left: auto;
+}
+
+@media (max-width: 700px) {
+  .lm-tool-row,
+  .lm-tool-row-egen {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lm-tool-row-head {
+    display: none;
+  }
+
+  .lm-tool-total {
+    margin-left: 0;
+  }
+}

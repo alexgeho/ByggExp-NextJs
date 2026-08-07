@@ -14,7 +14,11 @@ const LOCALE_STATIC_PATHS = [
 ];
 
 // Swedish-market-only pages (lead-magnet tools) — served on /sv only.
-const SV_ONLY_PATHS = ['verktyg/byggdagbok-mall'];
+const SV_ONLY_PATHS = [
+  'verktyg/byggdagbok-mall',
+  'verktyg/tidrapport-mall',
+  'verktyg/egenkontroll-mall',
+];
 
 type SitemapUrl = { loc: string; lastmod?: string };
 

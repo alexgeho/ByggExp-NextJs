@@ -38,6 +38,21 @@ export default function ByggdagbokTool() {
   const setField = (name: string, value: string) =>
     setValues((prev) => ({ ...prev, [name]: value }));
 
+  const fillExample = () =>
+    setValues({
+      project: 'Nybyggnad Ekgatan 4',
+      date: '',
+      weather: 'Molnigt, lätt regn',
+      temperature: '+12°C',
+      crewCount: '4',
+      personnel: 'Anna (lag), Erik, Johan, Sara',
+      workPerformed: 'Reglade innerväggar plan 2, drog el i kök.',
+      deviations: 'Materialleverans försenad 2 h.',
+      ata: 'Extra eluttag i kök enligt kundens önskemål.',
+      materials: 'Gips 40 skivor, reglar 60 st.',
+      notes: 'Skyddsrond utförd utan anmärkning.',
+    });
+
   async function downloadPdf() {
     setBusy(true);
     try {
@@ -94,6 +109,15 @@ export default function ByggdagbokTool() {
         <p className="lm-tool-sub">
           Fyll i dagens uppgifter nedan och ladda ner en färdig PDF att spara eller skriva ut. Inget konto behövs.
         </p>
+      </div>
+
+      <div className="lm-tool-presets">
+        <span className="lm-tool-presets-label">Se hur den fylls i:</span>
+        <div className="lm-tool-presets-buttons">
+          <button type="button" className="lm-tool-preset" onClick={fillExample}>
+            Fyll i exempel
+          </button>
+        </div>
       </div>
 
       <form

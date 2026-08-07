@@ -7,6 +7,7 @@ import EgenkontrollTool from '../../../components/LeadMagnet/EgenkontrollTool';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
+import TemplatePreview from '../../../components/LeadMagnet/TemplatePreview';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -91,16 +92,38 @@ export default function EgenkontrollMallPage() {
         title="Egenkontroll – gratis mall att fylla i online"
         intro="Med den här gratis egenkontroll-mallen dokumenterar du kontrollpunkter för kvalitet, miljö och arbetsmiljö och laddar ner en färdig PDF att signera. Fyll i online – eller gör egenkontroller löpande i ByggExp."
         tool={<EgenkontrollTool />}
+        preview={
+          <TemplatePreview
+            variant="checklist"
+            title="Egenkontroll"
+            caption="Förhandsvisning av egenkontroll-mall som PDF"
+            lines={[
+              'Jordfelsbrytare testad och fungerar',
+              'Isolationsmätning utförd (SS 436 40 00)',
+              'Brandtätning genomförd (BBR)',
+              'Fallskydd på plats där det behövs',
+              'Avvikelser dokumenterade',
+            ]}
+          />
+        }
         sections={[
           {
             id: 'vad-ar-egenkontroll',
             heading: 'Vad är en egenkontroll?',
             body: (
-              <p>
-                En egenkontroll är entreprenörens egen dokumenterade kontroll av att arbetet uppfyller
-                kraven – inom kvalitet, miljö och arbetsmiljö. Den visar vad som kontrollerats, av vem
-                och med vilket resultat, och blir ett bevis på utfört och godkänt arbete.
-              </p>
+              <>
+                <p>
+                  En egenkontroll är entreprenörens egen dokumenterade kontroll av att arbetet uppfyller
+                  kraven – inom kvalitet, miljö och arbetsmiljö. Den visar vad som kontrollerats, av vem
+                  och med vilket resultat, och blir ett bevis på utfört och godkänt arbete.
+                </p>
+                <p>
+                  Poängen är enkel: den som utför arbetet intygar själv, punkt för punkt, att momentet
+                  är rätt utfört. En elektriker bekräftar att jordfelsbrytaren fungerar, en snickare att
+                  måtten stämmer mot ritning. Blir något inte godkänt noteras en anmärkning som ska
+                  åtgärdas. På så sätt fångas fel tidigt – innan de byggs in och blir dyra att rätta.
+                </p>
+              </>
             ),
           },
           {
@@ -155,6 +178,60 @@ export default function EgenkontrollMallPage() {
                   inte veckor senare.
                 </li>
               </ul>
+            ),
+          },
+          {
+            id: 'exempel-egenkontroll-el',
+            heading: 'Exempel: egenkontroll för en elinstallation',
+            body: (
+              <>
+                <p>
+                  Säg att du precis dragit klart el i en lägenhet. En egenkontroll för elinstallation
+                  kan då innehålla punkter som:
+                </p>
+                <ul>
+                  <li>Jordfelsbrytare testad och fungerar – <em>Godkänd</em></li>
+                  <li>Märkning av gruppcentral komplett – <em>Godkänd</em></li>
+                  <li>Isolationsmätning utförd (SS 436 40 00) – <em>Godkänd</em></li>
+                  <li>Skyddsledare anslutna – <em>Anmärkning: saknas i dosa i hall, åtgärdas</em></li>
+                  <li>Dosor och uttag täta och fastsatta – <em>Godkänd</em></li>
+                </ul>
+                <p>
+                  Väljer du mallen «Egenkontroll El» ovan fylls just de här punkterna i automatiskt –
+                  du behöver bara sätta resultat och kommentar. Anmärkningen på skyddsledaren åtgärdas
+                  och följs upp, och den färdiga PDF:en signeras och sparas i projektet som bevis.
+                </p>
+              </>
+            ),
+          },
+          {
+            id: 'egenkontroll-olika-yrken',
+            heading: 'Egenkontroll för olika yrken',
+            body: (
+              <>
+                <p>
+                  Kontrollpunkterna skiljer sig mellan yrken. Med mallarna ovan får du en färdig
+                  utgångspunkt för de vanligaste:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Egenkontroll el</strong> – jordfelsbrytare, isolationsmätning, märkning av
+                    gruppcentral och skyddsledare, ofta mot SS 436 40 00.
+                  </li>
+                  <li>
+                    <strong>Egenkontroll VVS</strong> – täthetsprovning, avstängningsventiler, isolering
+                    av rör och kontroll av fall på avlopp.
+                  </li>
+                  <li>
+                    <strong>Egenkontroll bygg / stomme</strong> – måttkontroll mot ritning, infästningar,
+                    fuktkontroll och brandtätning enligt BBR.
+                  </li>
+                  <li>
+                    <strong>Skyddsrond (arbetsmiljö)</strong> – fallskydd, ordning och reda, skyddsutrustning
+                    och besiktigade ställningar.
+                  </li>
+                </ul>
+              </>
             ),
           },
           {

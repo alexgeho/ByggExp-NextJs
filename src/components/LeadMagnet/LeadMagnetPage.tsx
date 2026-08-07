@@ -30,6 +30,8 @@ export type LeadMagnetPageProps = {
   intro: string;
   /** Interactive tool slot (e.g. a form that generates a PDF). */
   tool?: ReactNode;
+  /** Visual preview of the template/result (e.g. a TemplatePreview). */
+  preview?: ReactNode;
   sections?: LeadMagnetSection[];
   faqHeading?: string;
   faq?: LeadMagnetFaqItem[];
@@ -43,6 +45,7 @@ export default function LeadMagnetPage({
   title,
   intro,
   tool,
+  preview,
   sections = [],
   faqHeading,
   faq = [],
@@ -60,6 +63,8 @@ export default function LeadMagnetPage({
         </header>
 
         {tool ? <div className="lead-magnet-tool">{tool}</div> : null}
+
+        {preview ? <div className="lead-magnet-preview">{preview}</div> : null}
 
         {sections.map((section) => (
           <section

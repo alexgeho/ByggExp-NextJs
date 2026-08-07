@@ -7,6 +7,7 @@ import ByggdagbokTool from '../../../components/LeadMagnet/ByggdagbokTool';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
+import TemplatePreview from '../../../components/LeadMagnet/TemplatePreview';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -83,6 +84,14 @@ export default function ByggdagbokMallPage() {
         title="Byggdagbok – gratis mall att fylla i online"
         intro="Med den här gratis byggdagbok-mallen dokumenterar du dagens arbete på några minuter: väder, bemanning, utfört arbete, avvikelser och ÄTA. Fyll i formuläret och ladda ner en färdig PDF – eller för byggdagbok digitalt i ByggExp."
         tool={<ByggdagbokTool />}
+        preview={
+          <TemplatePreview
+            variant="form"
+            title="Byggdagbok"
+            caption="Förhandsvisning av byggdagbok-mall som PDF"
+            lines={['Datum och projekt', 'Väder och temperatur', 'Utfört arbete', 'Avvikelser och ÄTA', 'Leveranser och material']}
+          />
+        }
         sections={[
           {
             id: 'vad-ar-byggdagbok',
@@ -116,6 +125,43 @@ export default function ByggdagbokMallPage() {
                   <li>Kontroller och övriga anteckningar</li>
                 </ul>
               </>
+            ),
+          },
+          {
+            id: 'sa-fyller-du-i-byggdagbok',
+            heading: 'Så fyller du i byggdagboken steg för steg',
+            body: (
+              <ol>
+                <li>Ange projekt och dagens datum.</li>
+                <li>Fyll i väder och temperatur – viktigt om tidplanen ifrågasätts.</li>
+                <li>Notera antal på plats och vilka som arbetade.</li>
+                <li>Beskriv utfört arbete och eventuella avvikelser eller hinder.</li>
+                <li>Registrera ÄTA, ändringar samt leveranser och material.</li>
+                <li>Ladda ner dagen som PDF – eller fyll i nästa dag och bygg en historik.</li>
+              </ol>
+            ),
+          },
+          {
+            id: 'vanliga-misstag-byggdagbok',
+            heading: 'Vanliga misstag att undvika',
+            body: (
+              <ul>
+                <li>
+                  <strong>Fylla i i efterhand.</strong> Skriv samma dag – detaljer om väder, bemanning
+                  och händelser glöms snabbt.
+                </li>
+                <li>
+                  <strong>Hoppa över avvikelser.</strong> Det är ofta just avvikelser och hinder du
+                  behöver kunna bevisa senare.
+                </li>
+                <li>
+                  <strong>Glömma ÄTA.</strong> Notera tilläggsarbeten direkt så att de kan faktureras.
+                </li>
+                <li>
+                  <strong>Foton utan koppling.</strong> Bilder som inte hör till rätt dag och projekt
+                  tappar sitt bevisvärde.
+                </li>
+              </ul>
             ),
           },
           {

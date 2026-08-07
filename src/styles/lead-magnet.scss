@@ -382,3 +382,27 @@
   background: var(--lm-accent);
   color: #fff;
 }
+
+// --- template preview image -------------------------------------------------
+.lead-magnet-preview {
+  margin-bottom: var(--lm-gap);
+}
+
+.lm-preview {
+  margin: 0;
+}
+
+.lm-preview-svg {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  filter: drop-shadow(0 16px 40px rgba(10, 40, 90, 0.12));
+}
+
+.lm-preview-caption {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}

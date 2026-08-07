@@ -6,6 +6,7 @@ import Header from '../../../components/Header/Header';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
+import TemplatePreview from '../../../components/LeadMagnet/TemplatePreview';
 import TidrapportTool from '../../../components/LeadMagnet/TidrapportTool';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -81,6 +82,14 @@ export default function TidrapportMallPage() {
         title="Tidrapport – gratis mall att fylla i online"
         intro="Med den här gratis tidrapport-mallen fyller du i arbetstimmar per dag och projekt och laddar ner en färdig PDF – summan räknas ut automatiskt. Perfekt som underlag för lön och fakturering."
         tool={<TidrapportTool />}
+        preview={
+          <TemplatePreview
+            variant="form"
+            title="Tidrapport"
+            caption="Förhandsvisning av tidrapport-mall som PDF"
+            lines={['Anställd och projekt', 'Datum per arbetspass', 'Timmar per dag', 'Anteckning', 'Totalt antal timmar']}
+          />
+        }
         sections={[
           {
             id: 'vad-ar-tidrapport',
@@ -104,6 +113,57 @@ export default function TidrapportMallPage() {
                 <li>Eventuell anteckning (t.ex. moment eller övertid)</li>
                 <li>Summering av totalt antal timmar</li>
               </ul>
+            ),
+          },
+          {
+            id: 'sa-fyller-du-i-tidrapport',
+            heading: 'Så fyller du i tidrapporten steg för steg',
+            body: (
+              <ol>
+                <li>Ange anställd och vilket projekt tiden gäller.</li>
+                <li>Lägg till en rad per arbetsdag med datum och antal timmar.</li>
+                <li>Skriv en kort anteckning vid behov, t.ex. moment eller övertid.</li>
+                <li>Se summan räknas ut automatiskt längst ner.</li>
+                <li>Ladda ner tidrapporten som PDF och signera.</li>
+              </ol>
+            ),
+          },
+          {
+            id: 'vanliga-misstag-tidrapport',
+            heading: 'Vanliga misstag att undvika',
+            body: (
+              <ul>
+                <li>
+                  <strong>Rapportera i klump i slutet av månaden.</strong> Fyll i löpande så blir
+                  timmarna rätt och inget glöms.
+                </li>
+                <li>
+                  <strong>Ingen koppling till projekt.</strong> Timmar utan projekt går inte att
+                  fakturera eller följa upp korrekt.
+                </li>
+                <li>
+                  <strong>Missa övertid och OB.</strong> Notera avvikande tider så att lönen blir rätt.
+                </li>
+              </ul>
+            ),
+          },
+          {
+            id: 'tidrapport-lon-fakturering',
+            heading: 'Tidrapport för lön och fakturering',
+            body: (
+              <>
+                <p>
+                  En tidrapport har två syften. Det första är <strong>lön</strong>: de rapporterade
+                  timmarna, inklusive övertid och OB, blir underlag för löneberäkningen. Det andra är{' '}
+                  <strong>fakturering</strong>: tid som lagts på ett projekt ska faktureras kunden, och
+                  då måste timmarna vara kopplade till rätt projekt.
+                </p>
+                <p>
+                  Därför är det viktigt att varje rad har både datum, antal timmar och vilket projekt
+                  tiden gäller. Med ett korrekt ifyllt underlag blir både lönekörningen och
+                  kundfakturan rätt – utan efterforskning i efterhand.
+                </p>
+              </>
             ),
           },
           {

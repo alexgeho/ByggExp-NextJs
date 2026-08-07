@@ -30,6 +30,16 @@ export default function TidrapportTool() {
   const removeRow = (index: number) =>
     setRows((prev) => (prev.length > 1 ? prev.filter((_, i) => i !== index) : prev));
 
+  const fillExample = () => {
+    setEmployee('Erik Andersson');
+    setProject('Nybyggnad Ekgatan 4');
+    setRows([
+      { date: '', hours: '8', note: 'Reglade innerväggar' },
+      { date: '', hours: '8', note: 'El i kök' },
+      { date: '', hours: '6', note: 'Städ och skyddsrond' },
+    ]);
+  };
+
   async function downloadPdf() {
     setBusy(true);
     try {
@@ -103,6 +113,15 @@ export default function TidrapportTool() {
         <p className="lm-tool-sub">
           Fyll i anställd, projekt och dagens timmar. Summan räknas ut automatiskt och du laddar ner en färdig PDF. Inget konto behövs.
         </p>
+      </div>
+
+      <div className="lm-tool-presets">
+        <span className="lm-tool-presets-label">Se hur den fylls i:</span>
+        <div className="lm-tool-presets-buttons">
+          <button type="button" className="lm-tool-preset" onClick={fillExample}>
+            Fyll i exempel
+          </button>
+        </div>
       </div>
 
       <form

@@ -13,6 +13,9 @@ const LOCALE_STATIC_PATHS = [
   'underbitraden',
 ];
 
+// Swedish-market-only pages (lead-magnet tools) — served on /sv only.
+const SV_ONLY_PATHS = ['verktyg/byggdagbok-mall'];
+
 type SitemapUrl = { loc: string; lastmod?: string };
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
@@ -24,6 +27,10 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     LOCALE_STATIC_PATHS.forEach((path) => {
       urls.push({ loc: `${siteUrl}/${lang}/${path}` });
     });
+  });
+
+  SV_ONLY_PATHS.forEach((path) => {
+    urls.push({ loc: `${siteUrl}/sv/${path}` });
   });
 
   const posts = await Promise.all(

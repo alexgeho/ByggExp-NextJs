@@ -1,0 +1,243 @@
+// Lead-magnet / tool article page styles.
+// All design knobs live in these CSS variables — change them (or the rules
+// below) to restyle every lead-magnet page at once after designer feedback.
+// The markup lives in src/components/LeadMagnet/*.
+.lead-magnet {
+  --lm-accent: var(--blue);
+  --lm-card-bg: var(--white);
+  --lm-card-border: rgba(10, 40, 90, 0.1);
+  --lm-card-shadow: 0 12px 34px rgba(10, 40, 90, 0.06);
+  --lm-radius: 18px;
+  --lm-gap: 44px;
+  --lm-field-border: rgba(10, 40, 90, 0.18);
+
+  background: var(--bg);
+  padding: 56px 0 84px;
+  color: var(--ink);
+}
+
+.lead-magnet-hero {
+  margin-bottom: var(--lm-gap);
+}
+
+.lead-magnet-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(35, 148, 255, 0.14);
+  color: var(--lm-accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.lead-magnet-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.06;
+  margin: 0 0 16px;
+}
+
+.lead-magnet-intro {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
+// --- interactive tool -------------------------------------------------------
+.lead-magnet-tool {
+  margin-bottom: var(--lm-gap);
+}
+
+.lm-tool {
+  background: var(--lm-card-bg);
+  border: 1px solid var(--lm-card-border);
+  border-radius: var(--lm-radius);
+  box-shadow: var(--lm-card-shadow);
+  padding: 30px;
+}
+
+.lm-tool-title {
+  font-size: 1.4rem;
+  margin: 0 0 6px;
+}
+
+.lm-tool-sub {
+  color: var(--muted);
+  margin: 0 0 22px;
+  line-height: 1.55;
+}
+
+.lm-tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.lm-tool-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.lm-tool-field-wide {
+  grid-column: 1 / -1;
+}
+
+.lm-tool-field input,
+.lm-tool-field textarea {
+  font: inherit;
+  font-weight: 400;
+  padding: 11px 13px;
+  border: 1px solid var(--lm-field-border);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--ink);
+  resize: vertical;
+}
+
+.lm-tool-field input:focus,
+.lm-tool-field textarea:focus {
+  outline: none;
+  border-color: var(--lm-accent);
+  box-shadow: 0 0 0 3px rgba(35, 148, 255, 0.18);
+}
+
+.lm-tool-actions {
+  margin-top: 22px;
+}
+
+.lm-tool-button,
+.lead-magnet-cta-button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: var(--lm-accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.lm-tool-button:hover,
+.lead-magnet-cta-button:hover {
+  transform: translateY(-2px);
+}
+
+.lm-tool-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+}
+
+// --- article sections -------------------------------------------------------
+.lead-magnet-section {
+  margin-bottom: var(--lm-gap);
+}
+
+.lead-magnet-section-heading {
+  font-size: 1.55rem;
+  margin: 0 0 16px;
+}
+
+.lead-magnet-section-body {
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.lead-magnet-section-body > * + * {
+  margin-top: 1.05em;
+}
+
+.lead-magnet-section-body ul,
+.lead-magnet-section-body ol {
+  padding-left: 1.4em;
+}
+
+.lead-magnet-section-body li + li {
+  margin-top: 0.5em;
+}
+
+// --- FAQ --------------------------------------------------------------------
+.lead-magnet-faq {
+  margin-bottom: var(--lm-gap);
+}
+
+.lead-magnet-faq-list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lead-magnet-faq-item {
+  background: var(--lm-card-bg);
+  border: 1px solid var(--lm-card-border);
+  border-radius: 14px;
+  padding: 20px 24px;
+}
+
+.lead-magnet-faq-item dt {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.lead-magnet-faq-item dd {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+// --- CTA + related ----------------------------------------------------------
+.lead-magnet-cta {
+  background: rgba(35, 148, 255, 0.08);
+  border: 1px solid rgba(35, 148, 255, 0.2);
+  border-radius: var(--lm-radius);
+  padding: 30px;
+  margin-bottom: var(--lm-gap);
+}
+
+.lead-magnet-cta-heading {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+}
+
+.lead-magnet-cta-text {
+  margin: 0 0 20px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.lead-magnet-related-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.lead-magnet-related-list a {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid var(--lm-card-border);
+  border-radius: 999px;
+  color: var(--lm-accent);
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .lm-tool,
+  .lead-magnet-cta {
+    padding: 22px;
+  }
+
+  .lm-tool-grid {
+    grid-template-columns: 1fr;
+  }
+}

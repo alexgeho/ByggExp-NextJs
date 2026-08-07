@@ -4,6 +4,7 @@ import 'quill/dist/quill.snow.css';
 import "../styles/globals.scss";
 import "../styles/blog.scss";
 import "../styles/blog-admin.scss";
+import "../styles/lead-magnet.scss";
 import "../components/Header/Header.scss";
 import "../components/Hero/Hero.scss";
 import "../components/Pain/Pain.scss";

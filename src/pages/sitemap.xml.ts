@@ -37,6 +37,10 @@ const SV_ONLY_PATHS = [
   'verktyg/tak-kalkylator',
   'verktyg/farg-kalkylator',
   'verktyg/kvadratmeter-kalkylator',
+  'verktyg/golv-kalkylator',
+  'verktyg/tapet-kalkylator',
+  'verktyg/reglar-kalkylator',
+  'verktyg/grus-kalkylator',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

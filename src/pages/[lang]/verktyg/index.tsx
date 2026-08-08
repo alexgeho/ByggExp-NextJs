@@ -29,6 +29,10 @@ const GROUPS: Group[] = [
       { slug: 'tak-kalkylator', title: 'Takberäknare', description: 'Takyta för sadeltak och antal takpannor.' },
       { slug: 'farg-kalkylator', title: 'Färgåtgång', description: 'Hur många liter färg du behöver.' },
       { slug: 'kvadratmeter-kalkylator', title: 'Kvadratmeter', description: 'Räkna ut ytan för ett eller flera rum.' },
+      { slug: 'golv-kalkylator', title: 'Golv & kakel', description: 'Material och antal förpackningar för golv och kakel.' },
+      { slug: 'tapet-kalkylator', title: 'Tapet', description: 'Hur många rullar tapet du behöver.' },
+      { slug: 'reglar-kalkylator', title: 'Reglar & virke', description: 'Antal reglar och löpmeter utifrån c/c.' },
+      { slug: 'grus-kalkylator', title: 'Grus & makadam', description: 'Volym i m³ och vikt i ton.' },
     ],
   },
   {

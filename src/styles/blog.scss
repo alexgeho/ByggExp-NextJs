@@ -308,3 +308,43 @@
     padding: 28px;
   }
 }
+
+.blog-tools {
+  margin-top: 48px;
+  padding: 28px 30px;
+  background: rgba(35, 148, 255, 0.06);
+  border: 1px solid rgba(35, 148, 255, 0.18);
+  border-radius: 18px;
+}
+
+.blog-tools h2 {
+  margin: 0 0 16px;
+  font-size: 1.3rem;
+}
+
+.blog-tools ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.blog-tools a {
+  display: inline-block;
+  padding: 10px 18px;
+  background: var(--white);
+  border: 1px solid rgba(10, 40, 90, 0.12);
+  border-radius: 999px;
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.blog-tools a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(10, 40, 90, 0.1);
+}

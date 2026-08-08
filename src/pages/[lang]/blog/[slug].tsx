@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPost } from '../../../lib/blog-api';
+import { getBlogTools } from '../../../content/blog-tools';
 import { extractFaqFromHtml } from '../../../lib/faq';
 import { getMockBlogPost } from '../../../lib/blog-mock';
 import { buildHreflangAlternates } from '../../../lib/seo';
@@ -153,6 +154,19 @@ export default function BlogArticlePage({
             className="blog-article-content"
             dangerouslySetInnerHTML={{ __html: post.contentHtml }}
           />
+
+          {lang === 'sv' ? (
+            <aside className="blog-tools" aria-label="Gratis verktyg">
+              <h2>Gratis verktyg</h2>
+              <ul>
+                {getBlogTools(post.slug).map((tool) => (
+                  <li key={tool.href}>
+                    <Link href={tool.href}>{tool.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          ) : null}
         </div>
       </article>
 

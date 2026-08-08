@@ -7,7 +7,7 @@ import EgenkontrollTool from '../../../components/LeadMagnet/EgenkontrollTool';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
-import TemplatePreview from '../../../components/LeadMagnet/TemplatePreview';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -98,17 +98,12 @@ export default function EgenkontrollMallPage() {
         intro="Med den här gratis egenkontroll-mallen dokumenterar du kontrollpunkter för kvalitet, miljö och arbetsmiljö och laddar ner en färdig PDF att signera. Fyll i online – eller gör egenkontroller löpande i ByggExp."
         tool={<EgenkontrollTool />}
         preview={
-          <TemplatePreview
-            variant="checklist"
-            title="Egenkontroll"
-            caption="Förhandsvisning av egenkontroll-mall som PDF"
-            lines={[
-              'Jordfelsbrytare testad och fungerar',
-              'Isolationsmätning utförd (SS 436 40 00)',
-              'Brandtätning genomförd (BBR)',
-              'Fallskydd på plats där det behövs',
-              'Avvikelser dokumenterade',
-            ]}
+          <PreviewImage
+            src="/landing/verktyg/egenkontroll-preview.webp"
+            alt="Förhandsvisning av ifylld egenkontroll-mall (el) som PDF"
+            caption="Så ser en ifylld egenkontroll ut som PDF"
+            width={1000}
+            height={548}
           />
         }
         sections={[

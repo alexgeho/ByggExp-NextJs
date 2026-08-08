@@ -6,7 +6,7 @@ import Header from '../../../components/Header/Header';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
-import TemplatePreview from '../../../components/LeadMagnet/TemplatePreview';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import TidrapportTool from '../../../components/LeadMagnet/TidrapportTool';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -109,17 +109,19 @@ export default function TidrapportMallPage() {
         tool={<TidrapportTool />}
         preview={
           <>
-            <TemplatePreview
-              variant="form"
-              title="Tidrapport"
-              caption="Förhandsvisning av tidrapport-mall som PDF"
-              lines={['Anställd och projekt', 'Datum per arbetspass', 'Timmar per dag', 'Anteckning', 'Totalt antal timmar']}
+            <PreviewImage
+              src="/landing/verktyg/tidrapport-preview.webp"
+              alt="Förhandsvisning av ifylld tidrapport-mall som PDF"
+              caption="Så ser en ifylld tidrapport ut som PDF"
+              width={1000}
+              height={482}
             />
-            <TemplatePreview
-              variant="form"
-              title="Veckotidrapport"
+            <PreviewImage
+              src="/landing/verktyg/tidrapport-vecka-preview.webp"
+              alt="Veckotidrapport-mall med en rad per dag måndag till söndag"
               caption="Veckomall: en rad per dag måndag–söndag"
-              lines={['Måndag – timmar', 'Tisdag – timmar', 'Onsdag – timmar', 'Torsdag – timmar', 'Fredag – timmar']}
+              width={1000}
+              height={650}
             />
           </>
         }

@@ -7,7 +7,7 @@ import ByggdagbokTool from '../../../components/LeadMagnet/ByggdagbokTool';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
-import TemplatePreview from '../../../components/LeadMagnet/TemplatePreview';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -95,11 +95,12 @@ export default function ByggdagbokMallPage() {
         intro="Med den här gratis byggdagbok-mallen dokumenterar du dagens arbete på några minuter: väder, bemanning, utfört arbete, avvikelser och ÄTA. Fyll i formuläret och ladda ner en färdig PDF – eller för byggdagbok digitalt i ByggExp."
         tool={<ByggdagbokTool />}
         preview={
-          <TemplatePreview
-            variant="form"
-            title="Byggdagbok"
-            caption="Förhandsvisning av byggdagbok-mall som PDF"
-            lines={['Datum och projekt', 'Väder och temperatur', 'Utfört arbete', 'Avvikelser och ÄTA', 'Leveranser och material']}
+          <PreviewImage
+            src="/landing/verktyg/byggdagbok-preview.webp"
+            alt="Förhandsvisning av ifylld byggdagbok-mall som PDF"
+            caption="Så ser en ifylld byggdagbok ut som PDF"
+            width={1000}
+            height={596}
           />
         }
         sections={[

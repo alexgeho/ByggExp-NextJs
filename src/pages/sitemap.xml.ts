@@ -23,6 +23,7 @@ const SV_ONLY_PATHS = [
   'verktyg/bild-till-pdf',
   'verktyg/rotera-pdf',
   'verktyg/ta-bort-sidor-pdf',
+  'verktyg/vattenstampel-pdf',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

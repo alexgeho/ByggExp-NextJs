@@ -7,6 +7,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import TaBortSidorTool from '../../../components/LeadMagnet/TaBortSidorTool';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -79,6 +80,15 @@ export default function TaBortSidorPdfPage() {
         title="Ta bort sidor ur en PDF"
         intro="Välj en PDF och ta bort de sidor du inte behöver – resten behålls som en ny fil. Allt sker lokalt i din webbläsare, filen laddas aldrig upp. Gratis och utan konto."
         tool={<TaBortSidorTool />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/ta-bort-sidor-preview.webp"
+            alt="Illustration: ta bort sidor ur PDF"
+            caption="Ta bort sidor ur en PDF"
+            width={1000}
+            height={360}
+          />
+        }
         sections={[
           {
             id: 'sa-gor-du',

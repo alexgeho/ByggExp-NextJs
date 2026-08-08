@@ -7,6 +7,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PdfTillJpgTool from '../../../components/LeadMagnet/PdfTillJpgTool';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -80,6 +81,15 @@ export default function PdfTillJpgPage() {
         title="PDF till JPG – gör bilder av dina PDF-sidor"
         intro="Konvertera en PDF till JPG-bilder, en bild per sida. Allt sker lokalt i din webbläsare – filen laddas aldrig upp. Gratis och utan konto."
         tool={<PdfTillJpgTool />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/pdf-till-jpg-preview.webp"
+            alt="Illustration: PDF till JPG"
+            caption="Konvertera PDF till bilder"
+            width={1000}
+            height={360}
+          />
+        }
         sections={[
           {
             id: 'sa-gor-du',

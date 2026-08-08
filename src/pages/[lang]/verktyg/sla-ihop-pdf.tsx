@@ -7,6 +7,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import MergePdfTool from '../../../components/LeadMagnet/MergePdfTool';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -85,6 +86,15 @@ export default function SlaIhopPdfPage() {
         title="Slå ihop PDF – gratis och direkt i webbläsaren"
         intro="Kombinera flera PDF-filer, eller PDF och bilder, till ett enda dokument. Allt sker lokalt i din webbläsare – filerna laddas aldrig upp någonstans. Gratis och utan konto."
         tool={<MergePdfTool />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/sla-ihop-preview.webp"
+            alt="Illustration: slå ihop flera PDF till en"
+            caption="Slå ihop flera PDF till en"
+            width={1000}
+            height={360}
+          />
+        }
         sections={[
           {
             id: 'sa-slar-du-ihop-pdf',

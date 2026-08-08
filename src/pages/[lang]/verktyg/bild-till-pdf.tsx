@@ -7,6 +7,7 @@ import BildTillPdfTool from '../../../components/LeadMagnet/BildTillPdfTool';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -79,6 +80,15 @@ export default function BildTillPdfPage() {
         title="Bild till PDF – gör en PDF av dina bilder"
         intro="Konvertera JPG- och PNG-bilder till en enda PDF, en bild per sida. Allt sker lokalt i din webbläsare – bilderna laddas aldrig upp. Gratis och utan konto."
         tool={<BildTillPdfTool />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/bild-till-pdf-preview.webp"
+            alt="Illustration: bild till PDF"
+            caption="Gör en PDF av dina bilder"
+            width={1000}
+            height={360}
+          />
+        }
         sections={[
           {
             id: 'sa-gor-du',

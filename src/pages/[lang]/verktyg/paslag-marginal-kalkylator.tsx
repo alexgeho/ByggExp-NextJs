@@ -7,6 +7,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PaslagKalkylatorTool from '../../../components/LeadMagnet/PaslagKalkylatorTool';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -81,6 +82,15 @@ export default function PaslagKalkylatorPage() {
         title="Påslag & marginal – räkna ut pris och vinst"
         intro="Fyll i din självkostnad och antingen ett påslag eller en önskad marginal. Se försäljningspriset, vinsten och skillnaden mellan påslag och marginal direkt."
         tool={<PaslagKalkylatorTool />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/paslag-preview.webp"
+            alt="Förhandsvisning av påslag- och marginalkalkylator"
+            caption="Så ser påslag- och marginalkalkylatorn ut"
+            width={1000}
+            height={474}
+          />
+        }
         sections={[
           {
             id: 'paslag-vs-marginal',

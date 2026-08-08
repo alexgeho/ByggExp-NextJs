@@ -7,6 +7,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import RoteraPdfTool from '../../../components/LeadMagnet/RoteraPdfTool';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -78,6 +79,15 @@ export default function RoteraPdfPage() {
         title="Rotera PDF – vrid sidorna rätt"
         intro="Vrid alla sidor i en PDF 90, 180 eller 270 grader. Allt sker lokalt i din webbläsare – filen laddas aldrig upp. Gratis och utan konto."
         tool={<RoteraPdfTool />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/rotera-preview.webp"
+            alt="Illustration: rotera PDF"
+            caption="Rotera sidorna i en PDF"
+            width={1000}
+            height={360}
+          />
+        }
         sections={[
           {
             id: 'sa-gor-du',

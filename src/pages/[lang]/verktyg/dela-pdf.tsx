@@ -7,6 +7,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import SplitPdfTool from '../../../components/LeadMagnet/SplitPdfTool';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -85,6 +86,15 @@ export default function DelaPdfPage() {
         title="Dela PDF – plocka ut de sidor du behöver"
         intro="Ladda upp en PDF och extrahera valfria sidor till en ny fil – t.ex. 1,3,5-7. Allt sker lokalt i din webbläsare, filen laddas aldrig upp någonstans. Gratis och utan konto."
         tool={<SplitPdfTool />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/dela-preview.webp"
+            alt="Illustration: dela PDF och plocka ut sidor"
+            caption="Plocka ut valfria sidor ur en PDF"
+            width={1000}
+            height={360}
+          />
+        }
         sections={[
           {
             id: 'sa-delar-du-pdf',

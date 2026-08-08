@@ -7,6 +7,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import SignPdfTool from '../../../components/LeadMagnet/SignPdfTool';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -80,6 +81,15 @@ export default function SigneraPdfPage() {
         title="Signera PDF – rita din signatur"
         intro="Ladda upp en PDF, rita din signatur och placera den på dokumentet. Allt sker lokalt i din webbläsare – filen laddas aldrig upp. Gratis och utan konto. (Visuell signatur, inte BankID.)"
         tool={<SignPdfTool />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/signera-preview.webp"
+            alt="Illustration: signera PDF"
+            caption="Signera en PDF med din namnteckning"
+            width={1000}
+            height={360}
+          />
+        }
         sections={[
           {
             id: 'sa-gor-du',

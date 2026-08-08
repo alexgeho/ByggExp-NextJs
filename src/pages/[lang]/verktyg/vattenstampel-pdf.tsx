@@ -7,6 +7,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import WatermarkPdfTool from '../../../components/LeadMagnet/WatermarkPdfTool';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -79,6 +80,15 @@ export default function VattenstampelPdfPage() {
         title="Vattenstämpel i PDF – gratis online"
         intro="Lägg en diagonal vattenstämpel som UTKAST eller KOPIA på alla sidor i en PDF. Allt sker lokalt i din webbläsare – filen laddas aldrig upp. Gratis och utan konto."
         tool={<WatermarkPdfTool />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/vattenstampel-preview.webp"
+            alt="Illustration: vattenstämpel i PDF"
+            caption="Lägg en vattenstämpel på en PDF"
+            width={1000}
+            height={360}
+          />
+        }
         sections={[
           {
             id: 'sa-gor-du',

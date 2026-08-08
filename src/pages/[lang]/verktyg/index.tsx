@@ -14,6 +14,12 @@ type Group = { heading: string; tools: Tool[] };
 
 const GROUPS: Group[] = [
   {
+    heading: 'Kalkylatorer',
+    tools: [
+      { slug: 'rot-avdrag-kalkylator', title: 'ROT-avdrag kalkylator', description: 'Räkna ut ROT-avdraget och vad kunden betalar (2026).' },
+    ],
+  },
+  {
     heading: 'Mallar',
     tools: [
       { slug: 'byggdagbok-mall', title: 'Byggdagbok', description: 'Fyll i dagens arbete och ladda ner som PDF.' },

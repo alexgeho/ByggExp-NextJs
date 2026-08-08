@@ -27,6 +27,7 @@ const SV_ONLY_PATHS = [
   'verktyg/vattenstampel-pdf',
   'verktyg/signera-pdf',
   'verktyg/pdf-till-jpg',
+  'verktyg/rot-avdrag-kalkylator',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

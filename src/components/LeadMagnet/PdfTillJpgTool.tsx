@@ -45,7 +45,7 @@ export default function PdfTillJpgTool() {
         canvas.height = Math.ceil(viewport.height);
         const context = canvas.getContext('2d');
         if (!context) throw new Error('no canvas context');
-        await page.render({ canvas, canvasContext: context, viewport }).promise;
+        await page.render({ canvasContext: context, viewport }).promise;
         const blob = await new Promise<Blob | null>((res) =>
           canvas.toBlob(res, 'image/jpeg', 0.92),
         );

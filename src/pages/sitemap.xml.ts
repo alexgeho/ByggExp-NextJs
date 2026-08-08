@@ -18,6 +18,8 @@ const SV_ONLY_PATHS = [
   'verktyg/byggdagbok-mall',
   'verktyg/tidrapport-mall',
   'verktyg/egenkontroll-mall',
+  'verktyg/sla-ihop-pdf',
+  'verktyg/dela-pdf',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

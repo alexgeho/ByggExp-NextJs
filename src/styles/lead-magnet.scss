@@ -412,3 +412,104 @@
   font-size: 0.9rem;
   color: var(--muted);
 }
+
+// --- PDF tools (merge / split) ----------------------------------------------
+.lm-pdf-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 28px;
+  border: 2px dashed var(--lm-field-border);
+  border-radius: 14px;
+  background: var(--bg);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.lm-pdf-drop:hover {
+  border-color: var(--lm-accent);
+  background: rgba(35, 148, 255, 0.04);
+}
+
+.lm-pdf-drop strong {
+  font-size: 1.05rem;
+}
+
+.lm-pdf-drop span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.lm-pdf-list {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  counter-reset: pdf;
+}
+
+.lm-pdf-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 1px solid var(--lm-card-border);
+  border-radius: 10px;
+  background: var(--lm-card-bg);
+}
+
+.lm-pdf-item::before {
+  counter-increment: pdf;
+  content: counter(pdf);
+  flex: 0 0 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(35, 148, 255, 0.14);
+  color: var(--lm-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lm-pdf-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lm-pdf-actions-inline {
+  display: flex;
+  gap: 4px;
+}
+
+.lm-pdf-actions-inline button {
+  border: 1px solid var(--lm-card-border);
+  background: var(--bg);
+  color: var(--ink);
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.lm-pdf-actions-inline button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.lm-tool-error {
+  margin: 14px 0 0;
+  color: #d64545;
+  font-size: 0.92rem;
+}

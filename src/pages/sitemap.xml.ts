@@ -41,6 +41,10 @@ const SV_ONLY_PATHS = [
   'verktyg/tapet-kalkylator',
   'verktyg/reglar-kalkylator',
   'verktyg/grus-kalkylator',
+  'verktyg/gips-kalkylator',
+  'verktyg/isolering-kalkylator',
+  'verktyg/trappa-kalkylator',
+  'verktyg/fall-kalkylator',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

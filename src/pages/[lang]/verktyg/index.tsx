@@ -33,6 +33,10 @@ const GROUPS: Group[] = [
       { slug: 'tapet-kalkylator', title: 'Tapet', description: 'Hur många rullar tapet du behöver.' },
       { slug: 'reglar-kalkylator', title: 'Reglar & virke', description: 'Antal reglar och löpmeter utifrån c/c.' },
       { slug: 'grus-kalkylator', title: 'Grus & makadam', description: 'Volym i m³ och vikt i ton.' },
+      { slug: 'gips-kalkylator', title: 'Gips', description: 'Antal gipsskivor utifrån väggyta och lager.' },
+      { slug: 'isolering-kalkylator', title: 'Isolering', description: 'Antal förpackningar isolering.' },
+      { slug: 'trappa-kalkylator', title: 'Trappa', description: 'Antal steg, steghöjd och stegdjup.' },
+      { slug: 'fall-kalkylator', title: 'Fall & lutning', description: 'Höjdskillnad, procent och 1:X.' },
     ],
   },
   {

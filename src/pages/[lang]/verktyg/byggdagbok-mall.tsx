@@ -32,6 +32,16 @@ const FAQ: LeadMagnetFaqItem[] = [
     answer:
       'Ja. Du kan fylla i mallen ovan och spara som PDF, eller föra byggdagbok löpande i ByggExp där varje inlägg kopplas till rätt projekt med foton.',
   },
+  {
+    question: 'Är byggdagbok samma sak som personalliggare?',
+    answer:
+      'Nej. Personalliggaren är en lagstadgad närvaroregistrering kopplad till ID06 och Skatteverket och visar vilka som är på plats. Byggdagboken dokumenterar vad som gjorts – arbete, väder, avvikelser och ÄTA. Du behöver oftast båda.',
+  },
+  {
+    question: 'Hur länge bör jag spara byggdagboken?',
+    answer:
+      'Spara den under hela ansvarstiden. Enligt AB 04 är garantitiden normalt fem år och ansvarstiden tio år från godkänd entreprenad, så dagboken bör sparas i minst tio år som bevisunderlag.',
+  },
 ];
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
@@ -128,6 +138,48 @@ export default function ByggdagbokMallPage() {
             ),
           },
           {
+            id: 'vem-for-byggdagbok',
+            heading: 'Vem för byggdagbok?',
+            body: (
+              <p>
+                I praktiken är det ofta arbetsledaren eller platschefen som ansvarar för byggdagboken,
+                men vem som helst i laget kan bidra med anteckningar och foton under dagen. Det viktiga
+                är att den förs kontinuerligt och av någon som var på plats – då blir innehållet
+                trovärdigt om det senare behöver användas som underlag. I entreprenader enligt AB 04 är
+                det entreprenören som ska föra dagbok och löpande delge beställaren innehållet.
+              </p>
+            ),
+          },
+          {
+            id: 'byggdagbok-vs-personalliggare',
+            heading: 'Byggdagbok, dagrapport och personalliggare – vad är skillnaden?',
+            body: (
+              <>
+                <p>
+                  Begreppen blandas ofta ihop, men de fyller olika syften:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Byggdagbok</strong> – dokumenterar vad som hände på bygget: arbete, väder,
+                    avvikelser, ÄTA och händelser dag för dag.
+                  </li>
+                  <li>
+                    <strong>Dagrapport</strong> – en enklare daglig rapport, ofta fokuserad på utfört
+                    arbete och timmar.
+                  </li>
+                  <li>
+                    <strong>Personalliggare</strong> – en lagstadgad närvaroregistrering (kopplad till
+                    ID06 och Skatteverket) som visar vilka som är på arbetsplatsen, inte vad som gjorts.
+                  </li>
+                </ul>
+                <p>
+                  Du behöver alltså oftast både en personalliggare för närvaron och en byggdagbok för
+                  själva arbetet – de ersätter inte varandra.
+                </p>
+              </>
+            ),
+          },
+          {
             id: 'sa-fyller-du-i-byggdagbok',
             heading: 'Så fyller du i byggdagboken steg för steg',
             body: (
@@ -179,13 +231,76 @@ export default function ByggdagbokMallPage() {
             ),
           },
           {
+            id: 'byggdagbok-bevis-ata-tvist',
+            heading: 'Byggdagboken som bevis vid ÄTA och tvist',
+            body: (
+              <>
+                <p>
+                  Det är oftast i efterhand som byggdagboken visar sitt värde. Blir det diskussion om en
+                  försening kan noteringar om väder och uteblivna leveranser förklara varför. Ifrågasätts
+                  ett tilläggsarbete visar dagbokens ÄTA-notering när och varför det utfördes. Och vid en
+                  tvist om ett fel kan dokumentationen visa exakt vad som gjordes, av vem och under vilka
+                  förutsättningar.
+                </p>
+                <p>
+                  Just därför är det värt att vara noggrann med avvikelser, hinder, ÄTA och foton medan
+                  arbetet pågår. En tom eller slarvigt förd dagbok hjälper ingen – en komplett dagbok kan
+                  vara skillnaden mellan att få betalt eller inte.
+                </p>
+              </>
+            ),
+          },
+          {
+            id: 'hur-lange-spara-byggdagbok',
+            heading: 'Hur länge ska du spara byggdagboken?',
+            body: (
+              <p>
+                Spara byggdagboken så länge du kan bli ansvarig för arbetet. Enligt AB 04 är
+                garantitiden normalt fem år för entreprenörens arbete, och ansvarstiden är tio år från
+                det att entreprenaden godkänts. Eftersom en tvist kan dyka upp flera år efter avslutat
+                jobb bör dagboken sparas under hela den perioden – det är då den blir värd mest som
+                bevis. En digital byggdagbok är enkel att arkivera och söka i även långt efteråt.
+              </p>
+            ),
+          },
+          {
+            id: 'digital-byggdagbok-eller-papper',
+            heading: 'Digital byggdagbok eller papper?',
+            body: (
+              <p>
+                En pappersdagbok fungerar, men tappas lätt bort, blir svår att läsa och saknar foton. En
+                digital byggdagbok fylls i på plats i mobilen, kopplar bilder till rätt dag och projekt
+                och sparas automatiskt. Du kan söka tillbaka, dela med beställaren och slipper tolka
+                blöta anteckningar från fickan. För de flesta byggföretag väger fördelarna med digitalt
+                tungt – särskilt när dokumentationen ska hålla i flera år.
+              </p>
+            ),
+          },
+          {
+            id: 'tips-byggdagbok',
+            heading: 'Tips för en byggdagbok som håller',
+            body: (
+              <ul>
+                <li>Skriv samma dag – korta, konkreta noteringar slår långa i efterhand.</li>
+                <li>Ta foton på både framsteg och problem och koppla dem till rätt dag.</li>
+                <li>Var extra noggrann med väder, avvikelser och ÄTA – det är dessa som ifrågasätts.</li>
+                <li>Håll en jämn nivå varje dag, även när det «inte hände något särskilt».</li>
+                <li>Spara dagboken samlat per projekt så att den är lätt att hitta år senare.</li>
+              </ul>
+            ),
+          },
+          {
             id: 'byggdagbok-i-byggexp',
             heading: 'Så för du byggdagbok i ByggExp',
             body: (
               <p>
                 Mallen ovan är gratis att använda. Vill du slippa lösa PDF:er kan du föra byggdagbok
                 löpande i ByggExp: varje inlägg kopplas till rätt projekt, du bifogar foton direkt
-                från mobilen och bygger en komplett historik dag för dag – utan papper.
+                från mobilen och bygger en komplett historik dag för dag – utan papper. Eftersom
+                dagboken ligger i samma app som tid, uppgifter och ekonomi hänger allt ihop: en
+                avvikelse eller ett ÄTA du noterar kan följas hela vägen till fakturan. Och när ett
+                projekt är klart finns hela historiken kvar, redo att tas fram om en fråga dyker upp
+                flera år senare.
               </p>
             ),
           },

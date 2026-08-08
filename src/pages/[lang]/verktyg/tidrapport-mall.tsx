@@ -30,6 +30,21 @@ const FAQ: LeadMagnetFaqItem[] = [
     answer:
       'Ja. I ByggExp kan tiden samlas automatiskt via GPS-incheckning per projekt, så att du slipper fylla i timmar för hand och kan exportera direkt.',
   },
+  {
+    question: 'Är arbetsgivaren skyldig att föra anteckningar om arbetstid?',
+    answer:
+      'Ja. Enligt arbetstidslagen (ATL) ska arbetsgivare föra anteckningar om jourtid, övertid och mertid. De ska sparas på arbetsstället under innevarande år och de två följande kalenderåren och kan vara på papper eller digitala.',
+  },
+  {
+    question: 'Vad är skillnaden mellan tidrapport och personalliggare?',
+    answer:
+      'Personalliggaren är en lagstadgad närvaroregistrering (ID06/Skatteverket) som visar vem som är på plats. Tidrapporten visar arbetade timmar per projekt och är underlag för lön och fakturering. Du behöver båda.',
+  },
+  {
+    question: 'Hur ofta bör man tidrapportera?',
+    answer:
+      'Helst dagligen, eller åtminstone i slutet av varje arbetspass medan timmarna är färska. Löpande rapportering ger korrekta underlag och gör att inget glöms bort till löne- eller faktureringstillfället.',
+  },
 ];
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
@@ -95,11 +110,20 @@ export default function TidrapportMallPage() {
             id: 'vad-ar-tidrapport',
             heading: 'Vad är en tidrapport?',
             body: (
-              <p>
-                En tidrapport är en sammanställning av arbetad tid – vem som jobbat, på vilket
-                projekt och hur många timmar per dag. Den är underlag för både löneberäkning och för
-                att fakturera kunden rätt antal timmar.
-              </p>
+              <>
+                <p>
+                  En tidrapport är en sammanställning av arbetad tid – vem som jobbat, på vilket
+                  projekt och hur många timmar per dag. Den är underlag för både löneberäkning och för
+                  att fakturera kunden rätt antal timmar.
+                </p>
+                <p>
+                  För ett byggföretag är tidrapporten ett av de viktigaste underlagen som finns. Den
+                  styr hur mycket personalen får i lön, hur mycket kunden faktureras och hur du ser om
+                  ett projekt faktiskt går med vinst. Är tiden fel eller ofullständig följer felen med
+                  hela vägen till lön och faktura – därför lönar det sig att rapportera löpande och
+                  korrekt.
+                </p>
+              </>
             ),
           },
           {
@@ -113,6 +137,19 @@ export default function TidrapportMallPage() {
                 <li>Eventuell anteckning (t.ex. moment eller övertid)</li>
                 <li>Summering av totalt antal timmar</li>
               </ul>
+            ),
+          },
+          {
+            id: 'vem-behover-tidrapportera',
+            heading: 'Vem behöver tidrapportera?',
+            body: (
+              <p>
+                Alla som utför arbete på ett projekt behöver rapportera sin tid – både anställda
+                hantverkare och du som driver företaget. För arbetsledaren är tidrapporterna underlag
+                för att följa hur mycket tid som lagts per projekt, och för ekonomifunktionen är de
+                grunden för både lön och kundfaktura. Även om du fakturerar fast pris är tiden viktig
+                för att veta om projektet är lönsamt.
+              </p>
             ),
           },
           {
@@ -167,13 +204,96 @@ export default function TidrapportMallPage() {
             ),
           },
           {
+            id: 'tidrapport-arbetstidslagen',
+            heading: 'Tidrapport och arbetstidslagen (ATL)',
+            body: (
+              <p>
+                Utöver lön och fakturering finns ett lagkrav i bakgrunden. Enligt arbetstidslagen (ATL)
+                ska arbetsgivare föra anteckningar om jourtid, övertid och mertid. Det finns inget krav
+                på exakt format – det kan vara på papper eller digitalt – men anteckningarna ska vara
+                tydliga och sparas på arbetsstället under innevarande år och de två följande
+                kalenderåren. En ordnad tidrapportering hjälper dig att uppfylla kravet och fungerar
+                som bevis om det uppstår en tvist om arbetstid.
+              </p>
+            ),
+          },
+          {
+            id: 'ob-overtid-mertid',
+            heading: 'OB, övertid och mertid i tidrapporten',
+            body: (
+              <p>
+                För byggföretag räcker det sällan med enbart antal timmar. Obekväm arbetstid (OB),
+                övertid och mertid ersätts olika enligt kollektivavtalet och behöver därför framgå av
+                tidrapporten. Notera avvikande tider i anteckningsfältet – till exempel arbete på
+                kvällar och helger – så att lönen blir rätt och rätt ersättning betalas ut. Tydliga
+                noteringar minskar också risken för efterhandsdiskussioner om vad som faktiskt
+                arbetades.
+              </p>
+            ),
+          },
+          {
+            id: 'tidrapport-vs-personalliggare',
+            heading: 'Tidrapport eller personalliggare?',
+            body: (
+              <p>
+                De två blandas ofta ihop men mäter olika saker. Personalliggaren är en lagstadgad
+                närvaroregistrering (kopplad till ID06 och Skatteverket) som visar vem som är på
+                arbetsplatsen just nu. Tidrapporten visar hur många timmar som arbetats per projekt och
+                är underlag för lön och fakturering. Du behöver alltså båda – närvaron för
+                personalliggaren och de arbetade timmarna i tidrapporten.
+              </p>
+            ),
+          },
+          {
+            id: 'tidrapport-excel-eller-app',
+            heading: 'Tidrapport i Excel eller app?',
+            body: (
+              <p>
+                Många byggföretag börjar med en tidrapport i Excel eller på papper. Det är gratis och
+                enkelt i början, men blir snabbt jobbigt: timmarna måste samlas in från alla, summeras
+                för hand och föras över till lön och faktura – med risk för fel i varje steg. Mallen
+                ovan ger dig en snygg PDF direkt, och vill du helt slippa det manuella samlar en app in
+                tiden per projekt automatiskt. Välj det som passar storleken på ditt företag.
+              </p>
+            ),
+          },
+          {
+            id: 'digital-tidrapport-fordelar',
+            heading: 'Digital tidrapportering – fördelar',
+            body: (
+              <p>
+                En tidrapport i Excel eller på papper fungerar, men blir snabbt tidskrävande att samla
+                in, summera och föra över till lön. Med digital tidrapportering registreras timmarna per
+                projekt direkt, summeras automatiskt och kan exporteras till lön och faktura utan
+                dubbelarbete. Risken för fel minskar och du får dessutom en aktuell bild av hur mycket
+                tid som lagts på varje projekt.
+              </p>
+            ),
+          },
+          {
+            id: 'tips-tidrapport',
+            heading: 'Tips för rätt tidrapport',
+            body: (
+              <ul>
+                <li>Rapportera löpande – helst dagligen – i stället för i klump i slutet av månaden.</li>
+                <li>Koppla alltid timmarna till rätt projekt så att fakturan blir rätt.</li>
+                <li>Notera OB, övertid och mertid separat så att lönen blir korrekt.</li>
+                <li>Var konsekvent med enheter – timmar och minuter, inte «en halv dag».</li>
+                <li>Stäm av summan innan du skickar underlaget till lön eller fakturering.</li>
+              </ul>
+            ),
+          },
+          {
             id: 'tidrapport-i-byggexp',
             heading: 'Så slipper du fylla i tidrapporten för hand',
             body: (
               <p>
                 Mallen ovan är gratis att använda. I ByggExp kan tidrapporteringen ske automatiskt:
                 med GPS-incheckning samlas timmarna per projekt, och du exporterar dem direkt som
-                underlag för lön och fakturering – utan dubbelarbete.
+                underlag för lön och fakturering – utan dubbelarbete. Eftersom tiden ligger i samma
+                app som projekt, offert och faktura ser du dessutom direkt hur många timmar som lagts
+                på varje jobb och om det är lönsamt. För dig som arbetsledare försvinner insamlandet av
+                lappar och Excel-filer, och risken för fel i överföringen till lön minskar.
               </p>
             ),
           },

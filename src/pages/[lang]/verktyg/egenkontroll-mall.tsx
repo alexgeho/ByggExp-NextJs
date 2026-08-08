@@ -40,6 +40,11 @@ const FAQ: LeadMagnetFaqItem[] = [
     answer:
       'Anmärkning betyder att kontrollpunkten inte är godkänd och behöver åtgärdas. Notera avvikelsen i kommentaren, åtgärda och följ upp – dokumentationen visar att felet hanterats.',
   },
+  {
+    question: 'Hur länge ska egenkontroller sparas?',
+    answer:
+      'Spara dem under ansvarstiden för arbetet. Enligt AB 04 är garantitiden normalt fem år och ansvarstiden tio år från godkänd entreprenad, så egenkontrollerna bör sparas i minst tio år som bevis.',
+  },
 ];
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
@@ -249,13 +254,71 @@ export default function EgenkontrollMallPage() {
             ),
           },
           {
+            id: 'egenkontroll-kontrollplan-ka',
+            heading: 'Egenkontroll, kontrollplan och kontrollansvarig',
+            body: (
+              <p>
+                Tre begrepp hänger ihop men är inte samma sak. <strong>Kontrollplanen</strong> enligt PBL
+                beskriver vad som ska kontrolleras i ett byggprojekt, av vem och mot vad. Den{' '}
+                <strong>kontrollansvarige (KA)</strong> är en certifierad person som hjälper byggherren
+                att se till att kontrollplanen följs. <strong>Egenkontrollen</strong> är det praktiska
+                verktyget – den enskilda hantverkarens eller entreprenörens dokumenterade kontroll av
+                att ett moment är rätt utfört. Egenkontrollerna blir ofta det underlag som visar att
+                punkterna i kontrollplanen faktiskt uppfyllts.
+              </p>
+            ),
+          },
+          {
+            id: 'hur-lange-spara-egenkontroll',
+            heading: 'Hur länge ska egenkontroller sparas?',
+            body: (
+              <p>
+                Spara egenkontrollerna under hela ansvarstiden för arbetet. Enligt AB 04 är garantitiden
+                normalt fem år och ansvarstiden tio år från godkänd entreprenad – och en egenkontroll är
+                just den typ av dokumentation som kan avgöra en tvist om ett fel upptäcks flera år
+                senare. En signerad PDF eller en digital egenkontroll är enkel att arkivera och hitta
+                tillbaka till.
+              </p>
+            ),
+          },
+          {
+            id: 'digital-egenkontroll-fordelar',
+            heading: 'Digital egenkontroll – fördelar',
+            body: (
+              <p>
+                Med papperslistor är det lätt att kontroller görs olika, tappas bort eller fylls i i
+                efterhand. Digitala egenkontroller med färdiga mallar gör att alla följer samma
+                punkter, att anmärkningar går att följa upp och att allt samlas per projekt. Du fyller i
+                på plats, markerar resultat och har dokumentationen redo när beställare eller besiktning
+                frågar.
+              </p>
+            ),
+          },
+          {
+            id: 'tips-egenkontroll',
+            heading: 'Tips för en effektiv egenkontroll',
+            body: (
+              <ul>
+                <li>Utgå från en färdig mall och anpassa punkterna efter projektets risker.</li>
+                <li>Ange referens (BBR eller relevant standard) där kontrollen görs mot ett krav.</li>
+                <li>Fyll i på plats direkt när momentet är klart – inte i efterhand.</li>
+                <li>Åtgärda anmärkningar och dokumentera uppföljningen, inte bara felet.</li>
+                <li>Signera och spara egenkontrollen samlat per projekt.</li>
+              </ul>
+            ),
+          },
+          {
             id: 'egenkontroll-i-byggexp',
             heading: 'Så gör du egenkontroller i ByggExp',
             body: (
               <p>
                 Mallen ovan är gratis att använda. I ByggExp finns färdiga egenkontroll-mallar för el,
                 VVS, bygg/stomme och skyddsrond – du fyller i på plats, markerar resultat och samlar
-                alla kontroller per projekt.
+                alla kontroller per projekt. Du kan skapa egna mallar för återkommande kontroller, se
+                vilka som är godkända och vilka som har anmärkning, och ha hela dokumentationen redo
+                när beställaren eller besiktningsmannen frågar. Eftersom egenkontrollerna ligger
+                tillsammans med byggdagbok, foton och tid får du en samlad bild av kvaliteten i
+                projektet – inte spridda listor i olika pärmar.
               </p>
             ),
           },

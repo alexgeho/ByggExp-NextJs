@@ -31,6 +31,7 @@ const SV_ONLY_PATHS = [
   'verktyg/moms-kalkylator',
   'verktyg/timpris-kalkylator',
   'verktyg/paslag-marginal-kalkylator',
+  'verktyg/offert-mall',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

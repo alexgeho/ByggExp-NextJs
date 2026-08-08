@@ -667,3 +667,33 @@
   color: var(--muted);
   font-size: 0.86rem;
 }
+
+// --- offert generator rows --------------------------------------------------
+.lm-offert-row {
+  grid-template-columns: 1fr 70px 90px 40px 34px;
+}
+
+.lm-offert-row input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  justify-self: center;
+}
+
+.lm-offert-rot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.lm-offert-rot input {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 640px) {
+  .lm-offert-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}

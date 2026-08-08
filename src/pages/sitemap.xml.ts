@@ -49,6 +49,10 @@ const SV_ONLY_PATHS = [
   'verktyg/skruv-kalkylator',
   'verktyg/armering-kalkylator',
   'verktyg/golvvarme-kalkylator',
+  'verktyg/trall-kalkylator',
+  'verktyg/staket-kalkylator',
+  'verktyg/takstolar-kalkylator',
+  'verktyg/kakelfix-kalkylator',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

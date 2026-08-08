@@ -40,6 +40,39 @@ export default function TidrapportTool() {
     ]);
   };
 
+  // Period templates — a daily, weekly or monthly timesheet, like the
+  // variants competitors offer. Weekly seeds weekday labels, monthly seeds
+  // one row per day of the month.
+  const WEEKDAYS = ['Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag', 'Söndag'];
+  const seedDay = () => setRows([emptyRow()]);
+  const seedWeek = () => setRows(WEEKDAYS.map((day) => ({ date: '', hours: '', note: day })));
+  const seedMonth = () =>
+    setRows(Array.from({ length: 31 }, (_, i) => ({ date: '', hours: '', note: `Dag ${i + 1}` })));
+
+  function downloadCsv() {
+    const rowsOut = [
+      ['Anställd', employee],
+      ['Projekt', project],
+      [],
+      ['Datum', 'Timmar', 'Anteckning'],
+      ...rows.map((r) => [r.date, r.hours, r.note]),
+      [],
+      ['Totalt', total.toLocaleString('sv-SE'), ''],
+    ];
+    const csv = rowsOut
+      .map((cols) => cols.map((c) => `"${String(c ?? '').replace(/"/g, '""')}"`).join(';'))
+      .join('\r\n');
+    const blob = new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `tidrapport-${(employee.trim() || 'anstalld').replace(/\s+/g, '-').toLowerCase()}.csv`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  }
+
   async function downloadPdf() {
     setBusy(true);
     try {
@@ -111,16 +144,17 @@ export default function TidrapportTool() {
       <div className="lm-tool-head">
         <h2 className="lm-tool-title">Fyll i och ladda ner din tidrapport</h2>
         <p className="lm-tool-sub">
-          Fyll i anställd, projekt och dagens timmar. Summan räknas ut automatiskt och du laddar ner en färdig PDF. Inget konto behövs.
+          Välj period (dag, vecka eller månad), fyll i timmarna och ladda ner som PDF eller Excel. Summan räknas ut automatiskt. Inget konto behövs.
         </p>
       </div>
 
       <div className="lm-tool-presets">
-        <span className="lm-tool-presets-label">Se hur den fylls i:</span>
+        <span className="lm-tool-presets-label">Välj period eller fyll i exempel:</span>
         <div className="lm-tool-presets-buttons">
-          <button type="button" className="lm-tool-preset" onClick={fillExample}>
-            Fyll i exempel
-          </button>
+          <button type="button" className="lm-tool-preset" onClick={seedDay}>Dagsmall</button>
+          <button type="button" className="lm-tool-preset" onClick={seedWeek}>Veckomall</button>
+          <button type="button" className="lm-tool-preset" onClick={seedMonth}>Månadsmall</button>
+          <button type="button" className="lm-tool-preset" onClick={fillExample}>Fyll i exempel</button>
         </div>
       </div>
 
@@ -166,6 +200,9 @@ export default function TidrapportTool() {
             + Lägg till rad
           </button>
           <span className="lm-tool-total">Totalt: {total.toLocaleString('sv-SE')} timmar</span>
+          <button type="button" className="lm-tool-secondary" onClick={downloadCsv}>
+            Ladda ner Excel
+          </button>
           <button type="submit" className="lm-tool-button" disabled={busy}>
             {busy ? 'Skapar PDF…' : 'Ladda ner PDF'}
           </button>

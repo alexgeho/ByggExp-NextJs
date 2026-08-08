@@ -45,6 +45,16 @@ const FAQ: LeadMagnetFaqItem[] = [
     answer:
       'Helst dagligen, eller åtminstone i slutet av varje arbetspass medan timmarna är färska. Löpande rapportering ger korrekta underlag och gör att inget glöms bort till löne- eller faktureringstillfället.',
   },
+  {
+    question: 'Ska jag välja dags-, vecko- eller månadsmall?',
+    answer:
+      'Veckomallen (en rad per dag måndag–söndag) passar de flesta hantverkare. Dagsmallen är bra när du vill fånga varje pass för sig, och månadsmallen fungerar som samlat underlag inför lön och månadsfakturering. Du byter period med ett klick i mallen ovan.',
+  },
+  {
+    question: 'Kan jag ladda ner tidrapporten i Excel?',
+    answer:
+      'Ja. Utöver PDF kan du ladda ner tidrapporten som Excel (CSV) direkt från mallen ovan och bearbeta den vidare eller föra in den i lönesystemet.',
+  },
 ];
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
@@ -60,9 +70,9 @@ export default function TidrapportMallPage() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/tidrapport-mall`;
 
-  const title = 'Tidrapport mall – gratis mall & guide | ByggExp';
+  const title = 'Tidrapport mall – gratis i PDF & Excel | ByggExp';
   const description =
-    'Ladda ner en gratis tidrapport-mall eller fyll i online och spara som PDF. Summera timmar per projekt automatiskt – för byggföretag och hantverkare.';
+    'Gratis tidrapport-mall för bygg – dag, vecka eller månad. Fyll i online och ladda ner som PDF eller Excel. Summera timmar per projekt automatiskt, underlag för lön och faktura.';
 
   return (
     <>
@@ -95,15 +105,23 @@ export default function TidrapportMallPage() {
       <LeadMagnetPage
         badge="Gratis mall"
         title="Tidrapport – gratis mall att fylla i online"
-        intro="Med den här gratis tidrapport-mallen fyller du i arbetstimmar per dag och projekt och laddar ner en färdig PDF – summan räknas ut automatiskt. Perfekt som underlag för lön och fakturering."
+        intro="Med den här gratis tidrapport-mallen fyller du i arbetstimmar per dag, vecka eller månad och laddar ner en färdig PDF eller Excel – summan räknas ut automatiskt. Perfekt som underlag för lön och fakturering i byggföretag."
         tool={<TidrapportTool />}
         preview={
-          <TemplatePreview
-            variant="form"
-            title="Tidrapport"
-            caption="Förhandsvisning av tidrapport-mall som PDF"
-            lines={['Anställd och projekt', 'Datum per arbetspass', 'Timmar per dag', 'Anteckning', 'Totalt antal timmar']}
-          />
+          <>
+            <TemplatePreview
+              variant="form"
+              title="Tidrapport"
+              caption="Förhandsvisning av tidrapport-mall som PDF"
+              lines={['Anställd och projekt', 'Datum per arbetspass', 'Timmar per dag', 'Anteckning', 'Totalt antal timmar']}
+            />
+            <TemplatePreview
+              variant="form"
+              title="Veckotidrapport"
+              caption="Veckomall: en rad per dag måndag–söndag"
+              lines={['Måndag – timmar', 'Tisdag – timmar', 'Onsdag – timmar', 'Torsdag – timmar', 'Fredag – timmar']}
+            />
+          </>
         }
         sections={[
           {
@@ -150,6 +168,36 @@ export default function TidrapportMallPage() {
                 grunden för både lön och kundfaktura. Även om du fakturerar fast pris är tiden viktig
                 för att veta om projektet är lönsamt.
               </p>
+            ),
+          },
+          {
+            id: 'daglig-vecko-manadstidrapport',
+            heading: 'Daglig, vecko- eller månadstidrapport?',
+            body: (
+              <>
+                <p>
+                  Hur ofta du sammanställer tiden beror på hur ni jobbar och hur ofta ni fakturerar och
+                  kör lön. Med mallen ovan väljer du period med ett klick:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Daglig tidrapport</strong> – en rad för dagens arbete. Bra när du vill fånga
+                    varje pass separat, t.ex. med olika moment eller projekt samma dag.
+                  </li>
+                  <li>
+                    <strong>Veckotidrapport</strong> – en rad per dag måndag–söndag. Den vanligaste
+                    formen för hantverkare, enkel att stämma av varje fredag.
+                  </li>
+                  <li>
+                    <strong>Månadstidrapport</strong> – en rad per dag i månaden, bra som samlat underlag
+                    inför lönekörning och månadsfakturering.
+                  </li>
+                </ul>
+                <p>
+                  Oavsett period räknas timmarna ihop automatiskt, och du laddar ner samma underlag som
+                  PDF eller Excel.
+                </p>
+              </>
             ),
           },
           {
@@ -218,6 +266,36 @@ export default function TidrapportMallPage() {
             ),
           },
           {
+            id: 'vad-raknas-som-arbetstid',
+            heading: 'Vad räknas som arbetstid?',
+            body: (
+              <>
+                <p>
+                  Innan du fyller i timmarna är det bra att veta vad som faktiskt ska räknas. Som
+                  huvudregel är arbetstid den tid du står till arbetsgivarens förfogande och utför
+                  arbete. Några vanliga gränsfall:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Raster</strong> räknas normalt inte som arbetstid och ska inte tas med i
+                    timmarna.
+                  </li>
+                  <li>
+                    <strong>Restid</strong> till och från arbetsplatsen hanteras olika beroende på avtal –
+                    stäm av vad som gäller hos er.
+                  </li>
+                  <li>
+                    <strong>Förberedelser och städning</strong> på arbetsplatsen är oftast arbetstid.
+                  </li>
+                </ul>
+                <p>
+                  Att vara konsekvent med vad som räknas gör att både lön och fakturering blir rättvis
+                  och att timmarna går att jämföra mellan projekt.
+                </p>
+              </>
+            ),
+          },
+          {
             id: 'ob-overtid-mertid',
             heading: 'OB, övertid och mertid i tidrapporten',
             body: (
@@ -245,15 +323,46 @@ export default function TidrapportMallPage() {
             ),
           },
           {
-            id: 'tidrapport-excel-eller-app',
-            heading: 'Tidrapport i Excel eller app?',
+            id: 'tidrapport-format-pdf-excel-papper',
+            heading: 'Tidrapport i PDF, Excel eller papper?',
+            body: (
+              <>
+                <p>Vilket format som passar beror på hur du vill arbeta vidare med underlaget:</p>
+                <ul>
+                  <li>
+                    <strong>PDF</strong> – en färdig, snygg tidrapport som är lätt att skriva ut,
+                    signera och skicka. Bra som slutligt underlag och för arkiv.
+                  </li>
+                  <li>
+                    <strong>Excel (CSV)</strong> – öppnas i Excel eller Google Sheets och är enkel att
+                    bearbeta vidare, summera och föra in i lönesystemet. Ladda ner den direkt från mallen
+                    ovan.
+                  </li>
+                  <li>
+                    <strong>Papper</strong> – skriv ut PDF:en och fyll i för hand om du hellre gör det på
+                    plats.
+                  </li>
+                </ul>
+                <p>
+                  Nackdelen med både Excel och papper är det manuella arbetet: timmarna måste samlas in
+                  från alla, summeras och föras över till lön och faktura – med risk för fel i varje steg.
+                  Vill du slippa det samlar en app in tiden per projekt automatiskt.
+                </p>
+              </>
+            ),
+          },
+          {
+            id: 'branschspecifik-tidrapport-bygg',
+            heading: 'Branschspecifik tidrapport för bygg',
             body: (
               <p>
-                Många byggföretag börjar med en tidrapport i Excel eller på papper. Det är gratis och
-                enkelt i början, men blir snabbt jobbigt: timmarna måste samlas in från alla, summeras
-                för hand och föras över till lön och faktura – med risk för fel i varje steg. Mallen
-                ovan ger dig en snygg PDF direkt, och vill du helt slippa det manuella samlar en app in
-                tiden per projekt automatiskt. Välj det som passar storleken på ditt företag.
+                En tidrapport för byggbranschen har några saker som skiljer den från en vanlig
+                timregistrering. Timmarna behöver kopplas till rätt <strong>projekt</strong> för att kunna
+                faktureras och för att du ska se lönsamheten. <strong>OB, övertid och mertid</strong> ska
+                framgå eftersom de ersätts enligt kollektivavtalet, och arbetar ni på{' '}
+                <strong>ackord</strong> behöver underlaget stämma med ackordsredovisningen. Dessutom finns
+                närvaron separat i <strong>personalliggaren</strong> kopplad till ID06. En bra
+                tidrapport för bygg tar höjd för allt detta – inte bara antal timmar.
               </p>
             ),
           },
@@ -267,6 +376,60 @@ export default function TidrapportMallPage() {
                 projekt direkt, summeras automatiskt och kan exporteras till lön och faktura utan
                 dubbelarbete. Risken för fel minskar och du får dessutom en aktuell bild av hur mycket
                 tid som lagts på varje projekt.
+              </p>
+            ),
+          },
+          {
+            id: 'fran-tidrapport-till-lon-faktura',
+            heading: 'Från tidrapport till lön och faktura',
+            body: (
+              <>
+                <p>
+                  Tidrapporten är sällan slutmålet – den är underlaget som driver två processer vidare:
+                </p>
+                <ol>
+                  <li>
+                    <strong>Lön:</strong> timmarna, med OB och övertid, blir löneunderlag. Med rätt
+                    ifylld rapport kan uppgifterna föras över eller exporteras till lönesystemet utan att
+                    någon räknar för hand.
+                  </li>
+                  <li>
+                    <strong>Faktura:</strong> tid som lagts på ett kundprojekt faktureras – ofta
+                    tillsammans med material och ÄTA. Är timmarna kopplade till rätt projekt blir
+                    fakturan korrekt direkt.
+                  </li>
+                </ol>
+                <p>
+                  Poängen med en strukturerad tidrapport är att samma uppgift bara behöver registreras
+                  en gång och sedan kan användas på båda ställena.
+                </p>
+              </>
+            ),
+          },
+          {
+            id: 'hur-lange-spara-tidrapport',
+            heading: 'Hur länge ska du spara tidrapporten?',
+            body: (
+              <p>
+                Det finns två skäl att spara tidrapporter. Enligt arbetstidslagen ska anteckningar om
+                jourtid, övertid och mertid sparas under innevarande år och de två följande
+                kalenderåren. Fungerar tidrapporten dessutom som underlag för fakturering eller lön blir
+                den räkenskapsinformation, och då gäller bokföringslagens krav på att bevara underlaget
+                i minst sju år. Spara därför tidrapporterna i minst sju år för att vara på den säkra
+                sidan – digitalt är det enkelt.
+              </p>
+            ),
+          },
+          {
+            id: 'tidrapport-underentreprenor',
+            heading: 'Tidrapport för underentreprenörer och inhyrd personal',
+            body: (
+              <p>
+                Anlitar du underentreprenörer (UE) eller inhyrd personal behöver deras tid ofta
+                rapporteras in till huvudentreprenören som underlag för fakturering mellan företagen. Då
+                är det extra viktigt att varje rad har datum, antal timmar och vilket projekt tiden
+                gäller, så att alla parter är överens om vad som utförts. En tydlig tidrapport per UE
+                minskar diskussioner och gör avstämningen mot fakturan enkel.
               </p>
             ),
           },

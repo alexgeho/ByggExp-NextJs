@@ -45,6 +45,10 @@ const SV_ONLY_PATHS = [
   'verktyg/isolering-kalkylator',
   'verktyg/trappa-kalkylator',
   'verktyg/fall-kalkylator',
+  'verktyg/murbruk-kalkylator',
+  'verktyg/skruv-kalkylator',
+  'verktyg/armering-kalkylator',
+  'verktyg/golvvarme-kalkylator',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

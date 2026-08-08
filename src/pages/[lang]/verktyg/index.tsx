@@ -37,6 +37,10 @@ const GROUPS: Group[] = [
       { slug: 'isolering-kalkylator', title: 'Isolering', description: 'Antal förpackningar isolering.' },
       { slug: 'trappa-kalkylator', title: 'Trappa', description: 'Antal steg, steghöjd och stegdjup.' },
       { slug: 'fall-kalkylator', title: 'Fall & lutning', description: 'Höjdskillnad, procent och 1:X.' },
+      { slug: 'murbruk-kalkylator', title: 'Murbruk & puts', description: 'Åtgång i kg och antal säckar.' },
+      { slug: 'skruv-kalkylator', title: 'Skruv & spik', description: 'Antal skruvar och askar per yta.' },
+      { slug: 'armering-kalkylator', title: 'Armeringsnät', description: 'Antal mattor med överlapp.' },
+      { slug: 'golvvarme-kalkylator', title: 'Golvvärme', description: 'Slinglängd och antal slingor.' },
     ],
   },
   {

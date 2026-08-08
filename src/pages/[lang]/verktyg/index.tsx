@@ -17,6 +17,7 @@ const GROUPS: Group[] = [
     heading: 'Kalkylatorer',
     tools: [
       { slug: 'rot-avdrag-kalkylator', title: 'ROT-avdrag kalkylator', description: 'Räkna ut ROT-avdraget och vad kunden betalar (2026).' },
+      { slug: 'moms-kalkylator', title: 'Momskalkylator', description: 'Lägg på eller räkna baklänges från moms (25/12/6 %).' },
     ],
   },
   {
@@ -52,9 +53,9 @@ export default function VerktygHubPage() {
   const footerT = footerTranslations[LOCALE];
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg`;
-  const title = 'Gratis verktyg för byggföretag – mallar & PDF | ByggExp';
+  const title = 'Gratis verktyg för byggföretag – mallar, PDF & kalkylatorer | ByggExp';
   const description =
-    'Gratis verktyg för byggföretag: byggdagbok, tidrapport och egenkontroll som mallar, samt PDF-verktyg (slå ihop, dela, bild till PDF, signera m.m.). Utan konto.';
+    'Gratis verktyg för byggföretag: ROT- och momskalkylator, mallar (byggdagbok, tidrapport, egenkontroll) och PDF-verktyg (slå ihop, dela, signera m.m.). Utan konto.';
 
   return (
     <>

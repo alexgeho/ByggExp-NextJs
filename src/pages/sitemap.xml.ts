@@ -28,6 +28,7 @@ const SV_ONLY_PATHS = [
   'verktyg/signera-pdf',
   'verktyg/pdf-till-jpg',
   'verktyg/rot-avdrag-kalkylator',
+  'verktyg/moms-kalkylator',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

@@ -32,6 +32,7 @@ const SV_ONLY_PATHS = [
   'verktyg/timpris-kalkylator',
   'verktyg/paslag-marginal-kalkylator',
   'verktyg/offert-mall',
+  'verktyg/faktura-mall',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

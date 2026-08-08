@@ -20,6 +20,9 @@ const SV_ONLY_PATHS = [
   'verktyg/egenkontroll-mall',
   'verktyg/sla-ihop-pdf',
   'verktyg/dela-pdf',
+  'verktyg/bild-till-pdf',
+  'verktyg/rotera-pdf',
+  'verktyg/ta-bort-sidor-pdf',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

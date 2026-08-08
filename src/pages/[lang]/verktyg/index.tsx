@@ -18,6 +18,8 @@ const GROUPS: Group[] = [
     tools: [
       { slug: 'rot-avdrag-kalkylator', title: 'ROT-avdrag kalkylator', description: 'Räkna ut ROT-avdraget och vad kunden betalar (2026).' },
       { slug: 'moms-kalkylator', title: 'Momskalkylator', description: 'Lägg på eller räkna baklänges från moms (25/12/6 %).' },
+      { slug: 'timpris-kalkylator', title: 'Timpris-kalkylator', description: 'Vad du behöver ta betalt per timme utifrån lön och kostnader.' },
+      { slug: 'paslag-marginal-kalkylator', title: 'Påslag & marginal', description: 'Räkna pris från självkostnad – påslag vs marginal.' },
     ],
   },
   {

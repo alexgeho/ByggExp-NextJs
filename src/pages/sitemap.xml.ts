@@ -29,6 +29,8 @@ const SV_ONLY_PATHS = [
   'verktyg/pdf-till-jpg',
   'verktyg/rot-avdrag-kalkylator',
   'verktyg/moms-kalkylator',
+  'verktyg/timpris-kalkylator',
+  'verktyg/paslag-marginal-kalkylator',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

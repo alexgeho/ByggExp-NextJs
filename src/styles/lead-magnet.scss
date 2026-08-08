@@ -513,3 +513,28 @@
   color: #d64545;
   font-size: 0.92rem;
 }
+
+// --- signature pad ----------------------------------------------------------
+.lm-sign-pad-wrap {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.lm-sign-label {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.lm-sign-pad {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 500 / 180;
+  background: #fff;
+  border: 2px dashed var(--lm-field-border);
+  border-radius: 12px;
+  touch-action: none;
+  cursor: crosshair;
+}

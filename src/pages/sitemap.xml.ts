@@ -24,6 +24,7 @@ const SV_ONLY_PATHS = [
   'verktyg/rotera-pdf',
   'verktyg/ta-bort-sidor-pdf',
   'verktyg/vattenstampel-pdf',
+  'verktyg/signera-pdf',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

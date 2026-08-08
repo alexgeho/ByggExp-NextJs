@@ -33,6 +33,10 @@ const SV_ONLY_PATHS = [
   'verktyg/paslag-marginal-kalkylator',
   'verktyg/offert-mall',
   'verktyg/faktura-mall',
+  'verktyg/betong-kalkylator',
+  'verktyg/tak-kalkylator',
+  'verktyg/farg-kalkylator',
+  'verktyg/kvadratmeter-kalkylator',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

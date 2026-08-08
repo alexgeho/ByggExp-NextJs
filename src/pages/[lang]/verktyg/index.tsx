@@ -23,6 +23,15 @@ const GROUPS: Group[] = [
     ],
   },
   {
+    heading: 'Byggkalkylatorer',
+    tools: [
+      { slug: 'betong-kalkylator', title: 'Betongberäknare', description: 'Volym och antal säckar för platta, grund och gjutning.' },
+      { slug: 'tak-kalkylator', title: 'Takberäknare', description: 'Takyta för sadeltak och antal takpannor.' },
+      { slug: 'farg-kalkylator', title: 'Färgåtgång', description: 'Hur många liter färg du behöver.' },
+      { slug: 'kvadratmeter-kalkylator', title: 'Kvadratmeter', description: 'Räkna ut ytan för ett eller flera rum.' },
+    ],
+  },
+  {
     heading: 'Mallar',
     tools: [
       { slug: 'offert-mall', title: 'Offertmall', description: 'Skapa offert med rader, moms och ROT – ladda ner som PDF.' },

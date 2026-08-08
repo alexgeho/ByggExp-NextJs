@@ -15,6 +15,18 @@ export function downloadBytes(
   URL.revokeObjectURL(url);
 }
 
+// Trigger a client-side download of a Blob.
+export function downloadBlob(blob: Blob, filename: string) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
 // Parse a page spec like "1,3,5-7" into 0-based indices within [0,total).
 export function parsePageSpec(input: string, total: number): number[] {
   const out: number[] = [];

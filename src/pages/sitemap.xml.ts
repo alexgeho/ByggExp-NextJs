@@ -15,6 +15,7 @@ const LOCALE_STATIC_PATHS = [
 
 // Swedish-market-only pages (lead-magnet tools) — served on /sv only.
 const SV_ONLY_PATHS = [
+  'verktyg',
   'verktyg/byggdagbok-mall',
   'verktyg/tidrapport-mall',
   'verktyg/egenkontroll-mall',
@@ -25,6 +26,7 @@ const SV_ONLY_PATHS = [
   'verktyg/ta-bort-sidor-pdf',
   'verktyg/vattenstampel-pdf',
   'verktyg/signera-pdf',
+  'verktyg/pdf-till-jpg',
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

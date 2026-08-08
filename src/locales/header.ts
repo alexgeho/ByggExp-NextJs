@@ -5,6 +5,7 @@ export const headerTranslations = {
     company: "О компании",
     contact: "Контакты",
     demo: "Записаться на демо",
+    verktyg: "Инструменты",
 
   },
 
@@ -14,6 +15,7 @@ export const headerTranslations = {
     company: "About us",
     contact: "Contact",
     demo: "Book a demo",
+    verktyg: "Tools",
   },
 
 
@@ -23,5 +25,6 @@ export const headerTranslations = {
     company: "Om oss",
     contact: "Kontakt",
     demo: "Boka demo",
+    verktyg: "Verktyg",
   },
 }

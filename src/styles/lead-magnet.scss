@@ -538,3 +538,78 @@
   touch-action: none;
   cursor: crosshair;
 }
+
+// --- verktyg hub ------------------------------------------------------------
+.verktyg-hub {
+  background: var(--bg);
+  padding: 56px 0 84px;
+  color: var(--ink);
+}
+
+.verktyg-hub-hero {
+  margin-bottom: 44px;
+}
+
+.verktyg-hub-hero h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.06;
+  margin: 14px 0 14px;
+}
+
+.verktyg-hub-hero p {
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
+.verktyg-hub-group {
+  margin-bottom: 40px;
+}
+
+.verktyg-hub-group h2 {
+  font-size: 1.4rem;
+  margin: 0 0 18px;
+}
+
+.verktyg-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.verktyg-hub-card {
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--lm-card-bg, var(--white));
+  border: 1px solid rgba(10, 40, 90, 0.1);
+  border-radius: 16px;
+  padding: 22px 24px;
+  box-shadow: 0 10px 30px rgba(10, 40, 90, 0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.verktyg-hub-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 44px rgba(10, 40, 90, 0.12);
+}
+
+.verktyg-hub-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  color: var(--blue);
+}
+
+.verktyg-hub-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 0.96rem;
+}
+
+@media (max-width: 640px) {
+  .verktyg-hub-grid {
+    grid-template-columns: 1fr;
+  }
+}

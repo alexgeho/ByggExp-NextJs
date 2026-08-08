@@ -82,6 +82,9 @@ function Header({ headerT }: HeaderProps) {
             <Link href={`/${lang}#features`} onClick={closeMenu}>{headerT.how}</Link>
             <Link href={`/${lang}#pricing`} onClick={closeMenu}>{headerT.pricing}</Link>
             <Link href={`/${lang}#cta`} onClick={closeMenu}>{headerT.company}</Link>
+            {lang === "sv" && (
+              <Link href="/sv/verktyg" onClick={closeMenu}>{headerT.verktyg}</Link>
+            )}
             <Link href={`/${lang}/contact`} onClick={closeMenu}>{headerT.contact}</Link>
 
             {/* MOBILET LANGUAGE */}

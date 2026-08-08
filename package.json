@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "jspdf": "4.2.1",
+    "jszip": "^3.10.1",
     "next": "^16.2.12",
     "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^5.5.207",
     "quill": "^2.0.3",
     "react": "^19.2.8",
     "react-calendly": "^4.4.0",

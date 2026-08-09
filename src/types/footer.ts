@@ -3,5 +3,6 @@ export type FooterProps = {
     footerBlog: string;
     footerPrivacy: string;
     footerTerms: string;
+    footerDeleteAccount: string;
   };
 };

@@ -33,6 +33,10 @@ function Footer({ footerT }: FooterProps) {
             {footerT.footerTerms}
           </Link>
 
+          <Link href={`/${lang}/radera-konto`}>
+            {footerT.footerDeleteAccount}
+          </Link>
+
           <a href="mailto:support@byggexp.se">
             support@byggexp.se
           </a>

@@ -352,6 +352,12 @@
   .features-arrow {
     display: none;
   }
+  /* Don't stretch every card to the tallest one: with the column-reverse
+     mobile layout that extra height collapses into empty space above the
+     mockup. Let each card size to its own content instead. */
+  .featuresOptions {
+    align-items: flex-start;
+  }
 
   .step-text-block {
     padding: 10px;

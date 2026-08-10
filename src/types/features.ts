@@ -66,4 +66,18 @@ export type FeaturesProps = {
     featuresCard9Step2: string;
     featuresCard9Step3: string;
   };
+
+  featuresT10_11: {
+    featuresCard10Title: string;
+    featuresCard10Text: string;
+    featuresCard10Step1: string;
+    featuresCard10Step2: string;
+    featuresCard10Step3: string;
+
+    featuresCard11Title: string;
+    featuresCard11Text: string;
+    featuresCard11Step1: string;
+    featuresCard11Step2: string;
+    featuresCard11Step3: string;
+  };
 };

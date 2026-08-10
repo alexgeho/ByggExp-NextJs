@@ -18,6 +18,7 @@ import { ctaTranslations } from "../../locales/CTA";
 import { featuresTranslations1_3 } from "../../locales/features1-3";
 import { featuresTranslations4_6 } from "../../locales/features4-6";
 import { featuresTranslations7_9 } from "../../locales/features7-9";
+import { featuresTranslations10_11 } from "../../locales/features10-11";
 import { finalBenefitsTranslations } from "../../locales/finalBenefits";
 import { footerTranslations } from "../../locales/footer";
 import { headerTranslations } from "../../locales/header";
@@ -97,6 +98,7 @@ export default function HomePage({
   const featuresT1_3 = featuresTranslations1_3[lang];
   const featuresT4_6 = featuresTranslations4_6[lang];
   const featuresT7_9 = featuresTranslations7_9[lang];
+  const featuresT10_11 = featuresTranslations10_11[lang];
   const finalBenefitsT = finalBenefitsTranslations[lang];
   const pricingT = pricingTranslations[lang];
   const ctaT = ctaTranslations[lang];
@@ -131,6 +133,7 @@ export default function HomePage({
         featuresT1_3={featuresT1_3}
         featuresT4_6={featuresT4_6}
         featuresT7_9={featuresT7_9}
+        featuresT10_11={featuresT10_11}
       />
       <FinalBenefits finalBenefitsT={finalBenefitsT} />
       <Pricing pricingT={pricingT} />

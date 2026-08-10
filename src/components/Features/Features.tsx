@@ -8,10 +8,17 @@ const tools = "/landing/features/6verktyg.webp";
 const offert = "/landing/features/7offerter.webp";
 const invoice = "/landing/features/8fakturor.webp";
 const project = "/landing/features/9ekonomi.webp";
+const costs = "/landing/features/11costs.webp";
+const salary = "/landing/features/12salary.webp";
 
 import type { FeaturesProps } from "../../types/features";
 
-function Features({ featuresT1_3, featuresT4_6, featuresT7_9 }: FeaturesProps) {
+function Features({
+  featuresT1_3,
+  featuresT4_6,
+  featuresT7_9,
+  featuresT10_11,
+}: FeaturesProps) {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   // The 9 cards live as flat keys across three translation objects; normalize
@@ -106,6 +113,26 @@ function Features({ featuresT1_3, featuresT4_6, featuresT7_9 }: FeaturesProps) {
         featuresT7_9.featuresCard9Step3,
       ],
       image: project,
+    },
+    {
+      title: featuresT10_11.featuresCard10Title,
+      text: featuresT10_11.featuresCard10Text,
+      steps: [
+        featuresT10_11.featuresCard10Step1,
+        featuresT10_11.featuresCard10Step2,
+        featuresT10_11.featuresCard10Step3,
+      ],
+      image: costs,
+    },
+    {
+      title: featuresT10_11.featuresCard11Title,
+      text: featuresT10_11.featuresCard11Text,
+      steps: [
+        featuresT10_11.featuresCard11Step1,
+        featuresT10_11.featuresCard11Step2,
+        featuresT10_11.featuresCard11Step3,
+      ],
+      image: salary,
     },
   ];
 

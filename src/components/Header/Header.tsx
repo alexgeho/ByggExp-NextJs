@@ -33,7 +33,11 @@ function Header({ headerT }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   function changeLanguage(language: string) {
-    void router.push(`/${language}`);
+    // Keep the user on the same page when switching language: swap only the
+    // leading /<lang> segment, preserving the rest of the path, query and hash.
+    const [path, hash] = router.asPath.split("#");
+    const newPath = path.replace(/^\/[^/]+/, `/${language}`);
+    void router.push(hash ? `${newPath}#${hash}` : newPath);
     setIsOpen(false);
     setIsMenuOpen(false);
   }

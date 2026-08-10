@@ -344,20 +344,13 @@
     width: 90%;
   }
 
-  /* arrows overlay the card edges on phones (same as the Pricing slider) */
+  /* On phones the card is tall (image + text), so overlay arrows would sit on
+     top of the copy. Hide them — users swipe, and the dots below still work. */
   .features-slider {
     padding: 0;
   }
   .features-arrow {
-    width: 44px;
-    height: 44px;
-    background: rgba(255, 255, 255, 0.6);
-  }
-  .features-arrow-left {
-    left: 5px;
-  }
-  .features-arrow-right {
-    right: 5px;
+    display: none;
   }
 
   .step-text-block {

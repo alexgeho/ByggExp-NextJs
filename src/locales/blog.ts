@@ -9,6 +9,7 @@ export const blogPageTranslations: Record<
     empty: string;
     home: string;
     back: string;
+    related: string;
   }
 > = {
   sv: {
@@ -19,6 +20,7 @@ export const blogPageTranslations: Record<
     empty: 'Inga artiklar publicerade än.',
     home: 'Hem',
     back: 'Tillbaka till bloggen',
+    related: 'Liknande artiklar',
   },
   en: {
     badge: 'Blog',
@@ -28,6 +30,7 @@ export const blogPageTranslations: Record<
     empty: 'No published articles yet.',
     home: 'Home',
     back: 'Back to blog',
+    related: 'Related articles',
   },
   ru: {
     badge: 'Блог',
@@ -37,5 +40,6 @@ export const blogPageTranslations: Record<
     empty: 'Пока нет опубликованных статей.',
     home: 'Главная',
     back: 'Назад к блогу',
+    related: 'Похожие статьи',
   },
 };

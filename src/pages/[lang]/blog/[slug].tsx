@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
-import { fetchPublishedBlogPost } from '../../../lib/blog-api';
+import { fetchPublishedBlogPost, fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { getBlogTools } from '../../../content/blog-tools';
 import { extractFaqFromHtml } from '../../../lib/faq';
 import { getMockBlogPost } from '../../../lib/blog-mock';
@@ -21,7 +21,22 @@ import type { BlogPost } from '../../../types/blog';
 type BlogArticlePageProps = {
   lang: LandingLanguageCode;
   post: BlogPost;
+  related: BlogPost[];
 };
+
+// Best-effort: fetch a few other published posts to suggest at the end of the
+// article. Never let this break the page — return [] on any failure.
+async function getRelatedPosts(
+  lang: LandingLanguageCode,
+  currentSlug: string,
+): Promise<BlogPost[]> {
+  try {
+    const posts = await fetchPublishedBlogPosts(lang);
+    return posts.filter((p) => p.slug !== currentSlug).slice(0, 3);
+  } catch {
+    return [];
+  }
+}
 
 export const getServerSideProps: GetServerSideProps<
   BlogArticlePageProps
@@ -35,18 +50,20 @@ export const getServerSideProps: GetServerSideProps<
 
   try {
     const post = await fetchPublishedBlogPost(lang, slug);
+    const related = await getRelatedPosts(lang, slug);
 
     return {
       props: {
         lang,
         post,
+        related,
       },
     };
   } catch {
     // Fall back to a placeholder article if it matches a mock slug.
     const mock = getMockBlogPost(lang, slug);
     if (mock) {
-      return { props: { lang, post: mock } };
+      return { props: { lang, post: mock, related: [] } };
     }
     return { notFound: true };
   }
@@ -55,6 +72,7 @@ export const getServerSideProps: GetServerSideProps<
 export default function BlogArticlePage({
   lang,
   post,
+  related,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const copy = blogPageTranslations[lang];
   const headerT = headerTranslations[lang];
@@ -169,6 +187,36 @@ export default function BlogArticlePage({
           ) : null}
         </div>
       </article>
+
+      {related.length > 0 ? (
+        <section className="blog-related">
+          <div className="container container-narrow">
+            <h2 className="blog-related-title">{copy.related}</h2>
+            <div className="blog-related-grid">
+              {related.map((item) => (
+                <Link
+                  key={item._id || item.slug}
+                  href={`/${lang}/blog/${encodeURIComponent(item.slug)}`}
+                  className="blog-card"
+                >
+                  {item.coverImageUrl ? (
+                    <img
+                      src={item.coverImageUrl}
+                      alt={item.title}
+                      className="blog-card-image"
+                    />
+                  ) : null}
+                  <div className="blog-card-body">
+                    <span className="blog-tag">{item.tag || copy.badge}</span>
+                    <h3>{item.title}</h3>
+                    <p>{item.excerpt}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <Footer footerT={footerT} />
     </>

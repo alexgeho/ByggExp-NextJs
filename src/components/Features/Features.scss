@@ -344,13 +344,24 @@
     width: 90%;
   }
 
-  /* On phones the card is tall (image + text), so overlay arrows would sit on
-     top of the copy. Hide them — users swipe, and the dots below still work. */
+  /* Same overlay arrows as the Pricing slider on phones. The card is
+     column-reverse (mockup on top, copy below), so anchor the arrows over
+     the mockup instead of the vertical middle — otherwise they'd cover the
+     body text. */
   .features-slider {
     padding: 0;
   }
   .features-arrow {
-    display: none;
+    top: 118px;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .features-arrow-left {
+    left: 5px;
+  }
+  .features-arrow-right {
+    right: 5px;
   }
   /* Don't stretch every card to the tallest one: with the column-reverse
      mobile layout that extra height collapses into empty space above the

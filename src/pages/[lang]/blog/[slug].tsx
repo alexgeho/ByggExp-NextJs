@@ -8,6 +8,7 @@ import { fetchPublishedBlogPost, fetchPublishedBlogPosts } from '../../../lib/bl
 import { getBlogTools } from '../../../content/blog-tools';
 import { extractFaqFromHtml } from '../../../lib/faq';
 import { getMockBlogPost } from '../../../lib/blog-mock';
+import { isSvOnlyArticle } from '../../../content/sv-only-articles';
 import { buildHreflangAlternates } from '../../../lib/seo';
 import { blogPageTranslations } from '../../../locales/blog';
 import { footerTranslations } from '../../../locales/footer';
@@ -79,10 +80,15 @@ export default function BlogArticlePage({
   const footerT = footerTranslations[lang];
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = post.canonicalUrl || `${siteUrl}/${lang}/blog/${encodeURIComponent(post.slug)}`;
-  // Slugs are shared across locales, so the same article path exists per language.
-  const hreflangAlternates = buildHreflangAlternates(
-    (code) => `${siteUrl}/${code}/blog/${encodeURIComponent(post.slug)}`,
-  );
+  // Most slugs are shared across locales, so the same article path exists per
+  // language. Market-specific articles are Swedish-only, though — for those we
+  // must not emit en/ru alternates (those URLs don't exist → hreflang-to-404).
+  const svOnly = isSvOnlyArticle(post.slug);
+  const hreflangAlternates = svOnly
+    ? []
+    : buildHreflangAlternates(
+        (code) => `${siteUrl}/${code}/blog/${encodeURIComponent(post.slug)}`,
+      );
   const title = post.seoTitle || `${post.title} | ByggExp`;
   const description = post.seoDescription || post.excerpt;
   const image = post.seoImageUrl || post.coverImageUrl;

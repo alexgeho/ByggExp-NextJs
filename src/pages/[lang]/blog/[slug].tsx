@@ -19,6 +19,15 @@ import {
 } from '../../../locales/languages';
 import type { BlogPost } from '../../../types/blog';
 
+// Slugs that get a composed "device" hero: laptop on top + phone overlapping
+// at the bottom, from /public/features-inner/<slug>-laptop.webp and -phone.webp.
+// Add a slug here once both files exist; otherwise it falls back to the single
+// cover below.
+const DEVICE_HERO_SLUGS = new Set<string>([
+  'automatisk-tidrapportering-och-export',
+  'paminnelser-uppgifter-och-deadlines',
+]);
+
 // Slugs whose hero comes from /public/features/<slug>.webp (one file per
 // feature, no shared-cover reuse). Keep in sync with the files in that folder.
 const FEATURE_ARTICLE_SLUGS = new Set<string>([
@@ -112,13 +121,21 @@ export default function BlogArticlePage({
   // each one shows the mockup that matches its feature (no shared-file reuse
   // like the CMS /landing/features covers). Falls back to the CMS cover for
   // any non-feature post.
+  const deviceHero = DEVICE_HERO_SLUGS.has(post.slug)
+    ? {
+        laptop: `/features-inner/${post.slug}-laptop.webp`,
+        phone: `/features-inner/${post.slug}-phone.webp`,
+      }
+    : null;
   const featureCover = FEATURE_ARTICLE_SLUGS.has(post.slug)
     ? `/features/${post.slug}.webp`
     : null;
   const coverImageUrl = featureCover || post.coverImageUrl;
-  const image = featureCover
-    ? `${siteUrl}${featureCover}`
-    : post.seoImageUrl || post.coverImageUrl;
+  const image = deviceHero
+    ? `${siteUrl}${deviceHero.laptop}`
+    : featureCover
+      ? `${siteUrl}${featureCover}`
+      : post.seoImageUrl || post.coverImageUrl;
   const faq = extractFaqFromHtml(post.contentHtml, lang);
 
   return (
@@ -197,7 +214,21 @@ export default function BlogArticlePage({
             </p>
           </div>
 
-          {coverImageUrl ? (
+          {deviceHero ? (
+            <div className="blog-article-hero">
+              <img
+                src={deviceHero.laptop}
+                alt={post.title}
+                className="blog-article-hero-laptop"
+              />
+              <img
+                src={deviceHero.phone}
+                alt=""
+                aria-hidden="true"
+                className="blog-article-hero-phone"
+              />
+            </div>
+          ) : coverImageUrl ? (
             <img src={coverImageUrl} alt={post.title} className="blog-article-cover" />
           ) : null}
 

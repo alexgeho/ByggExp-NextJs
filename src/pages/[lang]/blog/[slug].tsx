@@ -19,6 +19,23 @@ import {
 } from '../../../locales/languages';
 import type { BlogPost } from '../../../types/blog';
 
+// Slugs whose hero comes from /public/features/<slug>.webp (one file per
+// feature, no shared-cover reuse). Keep in sync with the files in that folder.
+const FEATURE_ARTICLE_SLUGS = new Set<string>([
+  'skapa-offert-i-byggexp',
+  'fakturera-fran-byggexp',
+  'loneunderlag-for-byggforetag',
+  'projektekonomi-och-lonsamhet',
+  'automatisk-tidrapportering-och-export',
+  'narvaro-och-incheckning-pa-bygget',
+  'hantera-uppgifter-i-byggprojekt',
+  'paminnelser-uppgifter-och-deadlines',
+  'dagsplanering-och-planeringsmoten',
+  'dokumentera-med-foton-pa-bygget',
+  'fota-kvitton-och-hantera-utlagg',
+  'hantera-verktyg-och-utrustning',
+]);
+
 type BlogArticlePageProps = {
   lang: LandingLanguageCode;
   post: BlogPost;
@@ -91,7 +108,17 @@ export default function BlogArticlePage({
       );
   const title = post.seoTitle || `${post.title} | ByggExp`;
   const description = post.seoDescription || post.excerpt;
-  const image = post.seoImageUrl || post.coverImageUrl;
+  // Feature articles get a dedicated, per-slug hero under /public/features so
+  // each one shows the mockup that matches its feature (no shared-file reuse
+  // like the CMS /landing/features covers). Falls back to the CMS cover for
+  // any non-feature post.
+  const featureCover = FEATURE_ARTICLE_SLUGS.has(post.slug)
+    ? `/features/${post.slug}.webp`
+    : null;
+  const coverImageUrl = featureCover || post.coverImageUrl;
+  const image = featureCover
+    ? `${siteUrl}${featureCover}`
+    : post.seoImageUrl || post.coverImageUrl;
   const faq = extractFaqFromHtml(post.contentHtml, lang);
 
   return (
@@ -170,8 +197,8 @@ export default function BlogArticlePage({
             </p>
           </div>
 
-          {post.coverImageUrl ? (
-            <img src={post.coverImageUrl} alt={post.title} className="blog-article-cover" />
+          {coverImageUrl ? (
+            <img src={coverImageUrl} alt={post.title} className="blog-article-cover" />
           ) : null}
 
           <div

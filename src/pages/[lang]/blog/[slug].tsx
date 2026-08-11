@@ -19,16 +19,14 @@ import {
 } from '../../../locales/languages';
 import type { BlogPost } from '../../../types/blog';
 
-// Two ways to give a feature article a custom hero from /public/features-inner:
-//  1. DEVICE_HERO_SLUGS — two separate mockups: <slug>-laptop.webp on top with
-//     <slug>-phone.webp overlapping the bottom-right (composed here in CSS).
-//  2. SINGLE_HERO_SLUGS — one already-composed image at <slug>.webp, rendered
-//     full width as-is (use this when the mockup already contains the phone).
-const DEVICE_HERO_SLUGS = new Set<string>([
+// Feature articles with custom mockups in /public/features-inner:
+//   <slug>-laptop.webp -> the hero (computer, full width, on top)
+//   <slug>-phone.webp  -> replaces the generic inline phone in the article body
+// Add a slug here once both files exist.
+const FEATURE_INNER_SLUGS = new Set<string>([
   'automatisk-tidrapportering-och-export',
   'paminnelser-uppgifter-och-deadlines',
 ]);
-const SINGLE_HERO_SLUGS = new Set<string>([]);
 
 // Slugs whose hero comes from /public/features/<slug>.webp (one file per
 // feature, no shared-cover reuse). Keep in sync with the files in that folder.
@@ -123,26 +121,27 @@ export default function BlogArticlePage({
   // each one shows the mockup that matches its feature (no shared-file reuse
   // like the CMS /landing/features covers). Falls back to the CMS cover for
   // any non-feature post.
-  const deviceHero = DEVICE_HERO_SLUGS.has(post.slug)
-    ? {
-        laptop: `/features-inner/${post.slug}-laptop.webp`,
-        phone: `/features-inner/${post.slug}-phone.webp`,
-      }
+  const hasInner = FEATURE_INNER_SLUGS.has(post.slug);
+  const heroLaptop = hasInner
+    ? `/features-inner/${post.slug}-laptop.webp`
     : null;
-  const singleHero = SINGLE_HERO_SLUGS.has(post.slug)
-    ? `/features-inner/${post.slug}.webp`
+  const bodyPhone = hasInner
+    ? `/features-inner/${post.slug}-phone.webp`
     : null;
   const featureCover = FEATURE_ARTICLE_SLUGS.has(post.slug)
     ? `/features/${post.slug}.webp`
     : null;
-  const coverImageUrl = singleHero || featureCover || post.coverImageUrl;
-  const image = deviceHero
-    ? `${siteUrl}${deviceHero.laptop}`
-    : singleHero
-      ? `${siteUrl}${singleHero}`
-      : featureCover
-        ? `${siteUrl}${featureCover}`
-        : post.seoImageUrl || post.coverImageUrl;
+  const coverImageUrl = heroLaptop || featureCover || post.coverImageUrl;
+  const image = heroLaptop
+    ? `${siteUrl}${heroLaptop}`
+    : featureCover
+      ? `${siteUrl}${featureCover}`
+      : post.seoImageUrl || post.coverImageUrl;
+  // Swap the generic inline phone mockup (/landing/screen-*.png) in the body
+  // for this feature's own phone, so the in-article screenshot is relevant.
+  const contentHtml = bodyPhone
+    ? post.contentHtml.replace(/\/landing\/screen-[a-z]+\.png/g, bodyPhone)
+    : post.contentHtml;
   const faq = extractFaqFromHtml(post.contentHtml, lang);
 
   return (
@@ -221,27 +220,13 @@ export default function BlogArticlePage({
             </p>
           </div>
 
-          {deviceHero ? (
-            <div className="blog-article-hero">
-              <img
-                src={deviceHero.laptop}
-                alt={post.title}
-                className="blog-article-hero-laptop"
-              />
-              <img
-                src={deviceHero.phone}
-                alt=""
-                aria-hidden="true"
-                className="blog-article-hero-phone"
-              />
-            </div>
-          ) : coverImageUrl ? (
+          {coverImageUrl ? (
             <img src={coverImageUrl} alt={post.title} className="blog-article-cover" />
           ) : null}
 
           <div
             className="blog-article-content"
-            dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
 
           {lang === 'sv' ? (

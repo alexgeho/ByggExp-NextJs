@@ -19,12 +19,15 @@ import {
 } from '../../../locales/languages';
 import type { BlogPost } from '../../../types/blog';
 
-// Slugs that get a composed "device" hero: laptop on top + phone overlapping
-// at the bottom, from /public/features-inner/<slug>-laptop.webp and -phone.webp.
-// Add a slug here once both files exist; otherwise it falls back to the single
-// cover below.
+// Two ways to give a feature article a custom hero from /public/features-inner:
+//  1. DEVICE_HERO_SLUGS — two separate mockups: <slug>-laptop.webp on top with
+//     <slug>-phone.webp overlapping the bottom-right (composed here in CSS).
+//  2. SINGLE_HERO_SLUGS — one already-composed image at <slug>.webp, rendered
+//     full width as-is (use this when the mockup already contains the phone).
 const DEVICE_HERO_SLUGS = new Set<string>([
   'automatisk-tidrapportering-och-export',
+]);
+const SINGLE_HERO_SLUGS = new Set<string>([
   'paminnelser-uppgifter-och-deadlines',
 ]);
 
@@ -127,15 +130,20 @@ export default function BlogArticlePage({
         phone: `/features-inner/${post.slug}-phone.webp`,
       }
     : null;
+  const singleHero = SINGLE_HERO_SLUGS.has(post.slug)
+    ? `/features-inner/${post.slug}.webp`
+    : null;
   const featureCover = FEATURE_ARTICLE_SLUGS.has(post.slug)
     ? `/features/${post.slug}.webp`
     : null;
-  const coverImageUrl = featureCover || post.coverImageUrl;
+  const coverImageUrl = singleHero || featureCover || post.coverImageUrl;
   const image = deviceHero
     ? `${siteUrl}${deviceHero.laptop}`
-    : featureCover
-      ? `${siteUrl}${featureCover}`
-      : post.seoImageUrl || post.coverImageUrl;
+    : singleHero
+      ? `${siteUrl}${singleHero}`
+      : featureCover
+        ? `${siteUrl}${featureCover}`
+        : post.seoImageUrl || post.coverImageUrl;
   const faq = extractFaqFromHtml(post.contentHtml, lang);
 
   return (

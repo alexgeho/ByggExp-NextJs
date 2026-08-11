@@ -247,13 +247,15 @@
   box-shadow: 0 24px 60px -24px rgba(15, 23, 42, 0.35);
 }
 
-/* Composed hero: laptop on top, phone overlapping at the bottom-right. Both
-   images are pre-framed mockups (device chrome baked in), so no extra frames. */
+/* Composed hero: laptop on top, phone below — stacked, each on its own row.
+   Both images are pre-framed mockups (device chrome baked in). */
 .blog-article-hero {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
   width: 100%;
   margin: 0 auto 48px;
-  padding-bottom: 3%; /* room for the phone to overhang the laptop's edge */
 }
 
 .blog-article-hero-laptop {
@@ -263,19 +265,16 @@
 }
 
 .blog-article-hero-phone {
-  position: absolute;
-  right: 6%;
-  bottom: 0;
-  width: 15%;
-  min-width: 96px;
+  display: block;
+  width: auto;
   height: auto;
+  max-height: 560px;
   filter: drop-shadow(0 22px 40px rgba(15, 23, 42, 0.35));
 }
 
 @media (max-width: 640px) {
   .blog-article-hero-phone {
-    right: 3%;
-    width: 22%;
+    max-height: 460px;
   }
 }
 

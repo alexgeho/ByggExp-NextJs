@@ -26,10 +26,9 @@ import type { BlogPost } from '../../../types/blog';
 //     full width as-is (use this when the mockup already contains the phone).
 const DEVICE_HERO_SLUGS = new Set<string>([
   'automatisk-tidrapportering-och-export',
-]);
-const SINGLE_HERO_SLUGS = new Set<string>([
   'paminnelser-uppgifter-och-deadlines',
 ]);
+const SINGLE_HERO_SLUGS = new Set<string>([]);
 
 // Slugs whose hero comes from /public/features/<slug>.webp (one file per
 // feature, no shared-cover reuse). Keep in sync with the files in that folder.

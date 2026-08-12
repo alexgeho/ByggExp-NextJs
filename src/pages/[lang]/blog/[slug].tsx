@@ -7,6 +7,7 @@ import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPost, fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { getBlogTools } from '../../../content/blog-tools';
+import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { extractFaqFromHtml } from '../../../lib/faq';
 import { getMockBlogPost } from '../../../lib/blog-mock';
 import { isSvOnlyArticle } from '../../../content/sv-only-articles';
@@ -27,23 +28,6 @@ import type { BlogPost } from '../../../types/blog';
 const FEATURE_INNER_SLUGS = new Set<string>([
   'automatisk-tidrapportering-och-export',
   'paminnelser-uppgifter-och-deadlines',
-]);
-
-// Slugs whose hero comes from /public/features/<slug>.webp (one file per
-// feature, no shared-cover reuse). Keep in sync with the files in that folder.
-const FEATURE_ARTICLE_SLUGS = new Set<string>([
-  'skapa-offert-i-byggexp',
-  'fakturera-fran-byggexp',
-  'loneunderlag-for-byggforetag',
-  'projektekonomi-och-lonsamhet',
-  'automatisk-tidrapportering-och-export',
-  'narvaro-och-incheckning-pa-bygget',
-  'hantera-uppgifter-i-byggprojekt',
-  'paminnelser-uppgifter-och-deadlines',
-  'dagsplanering-och-planeringsmoten',
-  'dokumentera-med-foton-pa-bygget',
-  'fota-kvitton-och-hantera-utlagg',
-  'hantera-verktyg-och-utrustning',
 ]);
 
 type BlogArticlePageProps = {

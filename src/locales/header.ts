@@ -6,7 +6,7 @@ export const headerTranslations = {
     contact: "Контакты",
     demo: "Записаться на демо",
     verktyg: "Инструменты",
-
+    funktioner: "Функции",
   },
 
   en: {
@@ -16,6 +16,7 @@ export const headerTranslations = {
     contact: "Contact",
     demo: "Book a demo",
     verktyg: "Tools",
+    funktioner: "Features",
   },
 
 
@@ -26,5 +27,6 @@ export const headerTranslations = {
     contact: "Kontakt",
     demo: "Boka demo",
     verktyg: "Verktyg",
+    funktioner: "Funktioner",
   },
 }

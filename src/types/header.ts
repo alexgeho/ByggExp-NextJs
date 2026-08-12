@@ -6,5 +6,6 @@ export type HeaderProps = {
     contact: string;
     demo: string;
     verktyg: string;
+    funktioner: string;
   };
 };

@@ -7,6 +7,7 @@ import { landingLanguageCodes } from '../locales/languages';
 // Static routes that exist under every landing locale (besides the home page).
 const LOCALE_STATIC_PATHS = [
   'blog',
+  'funktioner',
   'contact',
   'villkor',
   'integritetspolicy',

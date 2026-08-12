@@ -9,7 +9,7 @@ export const featuresTranslations10_11 = {
 
     featuresCard11Title: "Зарплата из тех же часов",
     featuresCard11Text:
-      "Отработанные часы автоматически становятся основой для зарплаты — без ручных корректировок.",
+      "Отработанные часы автоматически становятся основой для зарплаты — с минимальными ручными корректировками.",
     featuresCard11Step1: "Часы фиксируются автоматически",
     featuresCard11Step2: "Основа формируется для каждого сотрудника",
     featuresCard11Step3: "Выгрузите данные для зарплаты в один клик",
@@ -25,7 +25,7 @@ export const featuresTranslations10_11 = {
 
     featuresCard11Title: "Payroll from the same hours",
     featuresCard11Text:
-      "Recorded hours automatically become the basis for payroll — with no manual adjustments.",
+      "Recorded hours automatically become the basis for payroll — with minimal manual adjustments.",
     featuresCard11Step1: "Hours are recorded automatically",
     featuresCard11Step2: "A basis is created for each employee",
     featuresCard11Step3: "Export the payroll data in one click",
@@ -41,7 +41,7 @@ export const featuresTranslations10_11 = {
 
     featuresCard11Title: "Löner från samma timmar",
     featuresCard11Text:
-      "De registrerade timmarna blir automatiskt underlag för lön – utan manuella justeringar.",
+      "De registrerade timmarna blir automatiskt underlag för lön – med minimala manuella justeringar.",
     featuresCard11Step1: "Timmarna registreras automatiskt",
     featuresCard11Step2: "Underlaget skapas för varje anställd",
     featuresCard11Step3: "Exportera löneunderlaget med ett klick",

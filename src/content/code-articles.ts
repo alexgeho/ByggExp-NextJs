@@ -219,7 +219,7 @@ const EGENKONTROLL: BlogPost = {
 const ATA_HTML = `
 <p>ÄTA-arbeten är där byggföretag tappar mest pengar helt i onödan. Jobbet blir gjort – men utan rätt papper och rätt underrättelse i tid uteblir betalningen. Här går vi igenom vad ÄTA är, skillnaden mellan föreskriven och likställd ÄTA, vad AB 04 kräver för att du ska få betalt, och hur du dokumenterar det rätt.</p>
 
-<p><a href="/sv/verktyg/byggdagbok-mall">Logga ÄTA löpande med vår gratis byggdagbok-mall →</a></p>
+<p><a href="/sv/verktyg/ata-mall">Skapa en ÄTA gratis med vår ÄTA-mall (PDF/Excel) →</a></p>
 
 <h2>Vad är ÄTA-arbeten?</h2>
 <p>ÄTA står för <strong>Ändrings-, Tilläggs- och Avgående arbeten</strong> – arbeten som tillkommer, ändras eller utgår jämfört med det ursprungliga kontraktet. De regleras i <strong>AB 04 kap 2</strong> (och motsvarande i ABT 06). Eftersom ÄTA påverkar både pris och tid är det just här de flesta tvister uppstår.</p>
@@ -276,7 +276,7 @@ const ATA_HTML = `
 <li>För in det löpande i byggdagboken så du har en tidsstämplad historik.</li>
 <li>Ta med godkända ÄTA på fakturan som tydliga, separata rader.</li>
 </ol>
-<p>Vill du börja enkelt? <a href="/sv/verktyg/byggdagbok-mall">Logga ÄTA i byggdagbok-mallen</a> och håll allt samlat och daterat.</p>
+<p>Vill du börja enkelt? <a href="/sv/verktyg/ata-mall">Skapa en ÄTA med vår gratis ÄTA-mall</a> och ladda ner den som PDF eller Excel.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad betyder ÄTA?</h3>
@@ -289,9 +289,9 @@ const ATA_HTML = `
 <p>Ja. Vid likställd ÄTA kan utebliven underrättelse &quot;utan dröjsmål&quot; leda till att rätten till ersättning går förlorad – även om arbetet utförts.</p>
 
 <h2>Kom igång</h2>
-<p>Sluta jobba gratis. Dokumentera varje ÄTA skriftligt, underrätta i tid och ta med den på fakturan. <a href="/sv/verktyg/byggdagbok-mall">Ladda ner gratis byggdagbok-mall</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Sluta jobba gratis. Dokumentera varje ÄTA skriftligt, underrätta i tid och ta med den på fakturan. <a href="/sv/verktyg/ata-mall">Ladda ner gratis ÄTA-mall</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/byggdagbok">Guide: byggdagbok</a> · <a href="/sv/verktyg/offert-mall">Offert-mall</a> · <a href="/sv/verktyg/faktura-mall">Faktura-mall</a></p>
+<p>Relaterat: <a href="/sv/verktyg/ata-mall">ÄTA-mall</a> · <a href="/sv/blog/byggdagbok">Guide: byggdagbok</a> · <a href="/sv/verktyg/faktura-mall">Faktura-mall</a></p>
 `.trim();
 
 const ATA: BlogPost = {

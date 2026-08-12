@@ -52,9 +52,10 @@ const GROUPS: Group[] = [
     tools: [
       { slug: 'offert-mall', title: 'Offertmall', description: 'Skapa offert med rader, moms och ROT – ladda ner som PDF.' },
       { slug: 'faktura-mall', title: 'Fakturamall', description: 'Skapa faktura med nummer, datum, moms och ROT – som PDF.' },
-      { slug: 'byggdagbok-mall', title: 'Byggdagbok', description: 'Fyll i dagens arbete och ladda ner som PDF.' },
+      { slug: 'byggdagbok-mall', title: 'Byggdagbok', description: 'Fyll i dagens arbete och ladda ner som PDF eller Excel.' },
+      { slug: 'ata-mall', title: 'ÄTA-mall', description: 'Skapa en tydlig ÄTA-beställning enligt AB 04 – PDF eller Excel.' },
       { slug: 'tidrapport-mall', title: 'Tidrapport', description: 'Timmar per dag, vecka eller månad – PDF eller Excel.' },
-      { slug: 'egenkontroll-mall', title: 'Egenkontroll', description: 'Färdiga checklistor för el, VVS, bygg och skyddsrond.' },
+      { slug: 'egenkontroll-mall', title: 'Egenkontroll', description: 'Färdiga checklistor för el, VVS, bygg och skyddsrond – PDF eller Excel.' },
     ],
   },
   {

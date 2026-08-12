@@ -35,6 +35,7 @@ const SV_ONLY_PATHS = [
   'verktyg/paslag-marginal-kalkylator',
   'verktyg/offert-mall',
   'verktyg/faktura-mall',
+  'verktyg/ata-mall',
   'verktyg/betong-kalkylator',
   'verktyg/tak-kalkylator',
   'verktyg/farg-kalkylator',

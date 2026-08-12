@@ -1,6 +1,7 @@
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
@@ -139,9 +140,34 @@ export default function BlogArticlePage({
       : post.seoImageUrl || post.coverImageUrl;
   // Swap the generic inline phone mockup (/landing/screen-*.png) in the body
   // for this feature's own phone, so the in-article screenshot is relevant.
-  const contentHtml = bodyPhone
-    ? post.contentHtml.replace(/\/landing\/screen-[a-z]+\.png/g, bodyPhone)
-    : post.contentHtml;
+  // Body phone handling for feature articles:
+  //  - has a custom phone  -> swap the generic /landing/screen-*.png for it
+  //  - feature but no phone -> drop the generic (irrelevant) phone entirely
+  //  - other posts          -> leave untouched
+  let contentHtml = post.contentHtml;
+  if (bodyPhone) {
+    contentHtml = contentHtml.replace(/\/landing\/screen-[a-z]+\.png/g, bodyPhone);
+  } else if (FEATURE_ARTICLE_SLUGS.has(post.slug)) {
+    contentHtml = contentHtml.replace(
+      /<img[^>]*\/landing\/screen-[a-z]+\.png[^>]*>/g,
+      '',
+    );
+  }
+
+  // Click the hero to open it in a full-screen lightbox (Esc or click to close).
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  useEffect(() => {
+    if (!lightboxImage) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setLightboxImage(null);
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [lightboxImage]);
   const faq = extractFaqFromHtml(post.contentHtml, lang);
 
   return (
@@ -221,7 +247,12 @@ export default function BlogArticlePage({
           </div>
 
           {coverImageUrl ? (
-            <img src={coverImageUrl} alt={post.title} className="blog-article-cover" />
+            <img
+              src={coverImageUrl}
+              alt={post.title}
+              className="blog-article-cover"
+              onClick={() => setLightboxImage(coverImageUrl)}
+            />
           ) : null}
 
           <div
@@ -275,6 +306,32 @@ export default function BlogArticlePage({
       ) : null}
 
       <Footer footerT={footerT} />
+
+      {lightboxImage && (
+        <div className="image-lightbox" onClick={() => setLightboxImage(null)}>
+          <button
+            type="button"
+            className="image-lightbox-close"
+            onClick={() => setLightboxImage(null)}
+            aria-label="Stäng"
+          >
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                d="m5 5 14 14M19 5 5 19"
+              />
+            </svg>
+          </button>
+          <img
+            src={lightboxImage}
+            alt=""
+            className="image-lightbox-img"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </>
   );
 }

@@ -1,6 +1,7 @@
 import type { GetServerSideProps } from 'next';
 
 import { fetchPublishedBlogPosts } from '../lib/blog-api';
+import { getCodeArticles } from '../content/code-articles';
 import { landingLanguageCodes } from '../locales/languages';
 
 // Static routes that exist under every landing locale (besides the home page).
@@ -82,7 +83,9 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     }),
   );
 
-  posts.flat().forEach((post) => {
+  // CMS posts + code-published articles (real, indexable).
+  const codeArticles = landingLanguageCodes.flatMap((lang) => getCodeArticles(lang));
+  [...posts.flat(), ...codeArticles].forEach((post) => {
     if (post.noIndex) {
       return;
     }

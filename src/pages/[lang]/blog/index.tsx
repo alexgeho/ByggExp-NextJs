@@ -6,6 +6,7 @@ import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { getMockBlogPosts } from '../../../lib/blog-mock';
+import { getCodeArticles } from '../../../content/code-articles';
 import { buildHreflangAlternates } from '../../../lib/seo';
 import { blogPageTranslations } from '../../../locales/blog';
 import { footerTranslations } from '../../../locales/footer';
@@ -30,20 +31,28 @@ export const getServerSideProps: GetServerSideProps<
     return { notFound: true };
   }
 
+  // Code-published articles (real, indexable) always lead the list; CMS wins
+  // on slug collisions.
+  const codeArticles = getCodeArticles(lang);
+  const withCodeArticles = (base: BlogPost[]) => {
+    const slugs = new Set(base.map((post) => post.slug));
+    return [...codeArticles.filter((post) => !slugs.has(post.slug)), ...base];
+  };
+
   try {
     const posts = await fetchPublishedBlogPosts(lang);
     return {
       props: {
         lang,
         // Show placeholder articles only while the CMS has no published posts.
-        posts: posts.length > 0 ? posts : getMockBlogPosts(lang),
+        posts: withCodeArticles(posts.length > 0 ? posts : getMockBlogPosts(lang)),
       },
     };
   } catch {
     return {
       props: {
         lang,
-        posts: getMockBlogPosts(lang),
+        posts: withCodeArticles(getMockBlogPosts(lang)),
       },
     };
   }

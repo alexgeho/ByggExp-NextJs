@@ -10,6 +10,7 @@ import { getBlogTools } from '../../../content/blog-tools';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { extractFaqFromHtml } from '../../../lib/faq';
 import { getMockBlogPost } from '../../../lib/blog-mock';
+import { getCodeArticle } from '../../../content/code-articles';
 import { isSvOnlyArticle } from '../../../content/sv-only-articles';
 import { buildHreflangAlternates } from '../../../lib/seo';
 import { blogPageTranslations } from '../../../locales/blog';
@@ -72,7 +73,13 @@ export const getServerSideProps: GetServerSideProps<
       },
     };
   } catch {
-    // Fall back to a placeholder article if it matches a mock slug.
+    // Not in the CMS: serve a code-published article (real, indexable) if we
+    // have one for this slug, otherwise fall back to a placeholder mock.
+    const codeArticle = getCodeArticle(lang, slug);
+    if (codeArticle) {
+      const related = await getRelatedPosts(lang, slug);
+      return { props: { lang, post: codeArticle, related } };
+    }
     const mock = getMockBlogPost(lang, slug);
     if (mock) {
       return { props: { lang, post: mock, related: [] } };

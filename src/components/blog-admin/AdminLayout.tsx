@@ -116,25 +116,70 @@ export function AdminLayout({ children }: AdminLayoutProps) {
     );
   }
 
+  const activeType = typeof router.query.type === 'string' ? router.query.type : '';
+  const activeLang = typeof router.query.lang === 'string' ? router.query.lang : 'all';
+  const onArticles = router.pathname === '/admin';
+
+  // Keep the chosen language when navigating between content categories.
+  function articlesHref(type?: 'feature' | 'blog') {
+    const query: Record<string, string> = {};
+    if (type) query.type = type;
+    if (activeLang !== 'all') query.lang = activeLang;
+    return { pathname: '/admin', query };
+  }
+
+  function setLang(lang: string) {
+    const query: Record<string, string> = {};
+    if (activeType) query.type = activeType;
+    if (lang !== 'all') query.lang = lang;
+    void router.push({ pathname: '/admin', query });
+  }
+
+  const langTabs = [
+    { key: 'all', label: 'Alla språk' },
+    { key: 'sv', label: 'SV' },
+    { key: 'en', label: 'EN' },
+    { key: 'ru', label: 'RU' },
+  ];
+
   return (
     <div className="blog-admin-page">
       <aside className="blog-admin-sidebar">
         <div>
           <span className="blog-admin-eyebrow">Admin</span>
           <nav className="blog-admin-nav" aria-label="Admin navigation">
+            <span className="blog-admin-nav-section">Innehåll</span>
             <Link
-              href="/admin"
-              className={router.pathname.startsWith('/admin/articles') || router.pathname === '/admin'
-                ? 'blog-admin-nav-link active'
-                : 'blog-admin-nav-link'}
+              href={articlesHref()}
+              className={onArticles && !activeType ? 'blog-admin-nav-link active' : 'blog-admin-nav-link'}
             >
-              Articles
+              Alla artiklar
             </Link>
             <Link
+              href={articlesHref('feature')}
+              className={onArticles && activeType === 'feature' ? 'blog-admin-nav-link active' : 'blog-admin-nav-link'}
+            >
+              Funktioner
+            </Link>
+            <Link
+              href={articlesHref('blog')}
+              className={onArticles && activeType === 'blog' ? 'blog-admin-nav-link active' : 'blog-admin-nav-link'}
+            >
+              Blogg
+            </Link>
+
+            <span className="blog-admin-nav-section">Verktyg</span>
+            <Link
+              href="/admin/verktyg"
+              className={router.pathname === '/admin/verktyg' ? 'blog-admin-nav-link active' : 'blog-admin-nav-link'}
+            >
+              Verktyg
+            </Link>
+
+            <span className="blog-admin-nav-section">Övrigt</span>
+            <Link
               href="/admin/seo"
-              className={router.pathname === '/admin/seo'
-                ? 'blog-admin-nav-link active'
-                : 'blog-admin-nav-link'}
+              className={router.pathname === '/admin/seo' ? 'blog-admin-nav-link active' : 'blog-admin-nav-link'}
             >
               SEO
             </Link>
@@ -150,7 +195,26 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           </button>
         </div>
       </aside>
-      {children}
+      <div className="blog-admin-body">
+        {onArticles ? (
+          <header className="blog-admin-topbar-lang">
+            <span className="blog-admin-topbar-label">Språk</span>
+            <div className="blog-admin-tabs" role="group" aria-label="Filter by language">
+              {langTabs.map((tab) => (
+                <button
+                  key={tab.key}
+                  type="button"
+                  className={`blog-admin-tab${activeLang === tab.key ? ' is-active' : ''}`}
+                  onClick={() => setLang(tab.key)}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </header>
+        ) : null}
+        {children}
+      </div>
     </div>
   );
 }

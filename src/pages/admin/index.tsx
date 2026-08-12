@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import { AdminLayout } from '../../components/blog-admin/AdminLayout';
 import {
@@ -15,26 +16,18 @@ import type { BlogPost } from '../../types/blog';
 // the browser — no server-side locale/type params needed.
 const FETCH_LIMIT = 500;
 
-type LocaleFilter = 'all' | 'sv' | 'en' | 'ru';
-type TypeFilter = 'all' | 'feature' | 'blog';
-
-const LOCALE_TABS: { key: LocaleFilter; label: string }[] = [
-  { key: 'all', label: 'Alla språk' },
-  { key: 'sv', label: 'SV' },
-  { key: 'en', label: 'EN' },
-  { key: 'ru', label: 'RU' },
-];
-
-const TYPE_TABS: { key: TypeFilter; label: string }[] = [
-  { key: 'all', label: 'Alla' },
-  { key: 'feature', label: 'Funktioner' },
-  { key: 'blog', label: 'Blogg' },
-];
+const TYPE_HEADINGS: Record<string, string> = {
+  '': 'Alla artiklar',
+  feature: 'Funktioner',
+  blog: 'Blogg',
+};
 
 export default function AdminArticlesPage() {
+  const router = useRouter();
+  const typeFilter = typeof router.query.type === 'string' ? router.query.type : '';
+  const localeFilter = typeof router.query.lang === 'string' ? router.query.lang : 'all';
+
   const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [localeFilter, setLocaleFilter] = useState<LocaleFilter>('all');
-  const [typeFilter, setTypeFilter] = useState<TypeFilter>('all');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [deletingId, setDeletingId] = useState<string | null>(null);
@@ -62,48 +55,15 @@ export default function AdminArticlesPage() {
     void loadPosts();
   }, [loadPosts]);
 
-  const matchesType = useCallback(
-    (post: BlogPost) => {
-      if (typeFilter === 'all') return true;
-      const isFeature = isFeatureArticle(post.slug);
-      return typeFilter === 'feature' ? isFeature : !isFeature;
-    },
-    [typeFilter],
-  );
-
-  const matchesLocale = useCallback(
-    (post: BlogPost) =>
-      localeFilter === 'all' ? true : post.locale === localeFilter,
-    [localeFilter],
-  );
-
-  // Counts respect the *other* active filter so each tab shows how many rows
-  // it would reveal given the current selection.
-  const localeCounts = useMemo(() => {
-    const counts: Record<LocaleFilter, number> = { all: 0, sv: 0, en: 0, ru: 0 };
-    for (const post of posts) {
-      if (!matchesType(post)) continue;
-      counts.all += 1;
-      if (post.locale === 'sv' || post.locale === 'en' || post.locale === 'ru') {
-        counts[post.locale] += 1;
-      }
-    }
-    return counts;
-  }, [posts, matchesType]);
-
-  const typeCounts = useMemo(() => {
-    const counts: Record<TypeFilter, number> = { all: 0, feature: 0, blog: 0 };
-    for (const post of posts) {
-      if (!matchesLocale(post)) continue;
-      counts.all += 1;
-      counts[isFeatureArticle(post.slug) ? 'feature' : 'blog'] += 1;
-    }
-    return counts;
-  }, [posts, matchesLocale]);
-
   const visiblePosts = useMemo(
-    () => posts.filter((post) => matchesLocale(post) && matchesType(post)),
-    [posts, matchesLocale, matchesType],
+    () =>
+      posts.filter((post) => {
+        if (localeFilter !== 'all' && post.locale !== localeFilter) return false;
+        if (typeFilter === 'feature' && !isFeatureArticle(post.slug)) return false;
+        if (typeFilter === 'blog' && isFeatureArticle(post.slug)) return false;
+        return true;
+      }),
+    [posts, localeFilter, typeFilter],
   );
 
   function formatDate(post: BlogPost) {
@@ -130,54 +90,29 @@ export default function AdminArticlesPage() {
     }
   }
 
+  const heading = TYPE_HEADINGS[typeFilter] ?? 'Alla artiklar';
+
   return (
     <>
       <Head>
-        <title>Articles | ByggExp Admin</title>
+        <title>{heading} | ByggExp Admin</title>
       </Head>
       <AdminLayout>
         <main className="blog-admin-main">
           <div className="blog-admin-toolbar">
             <div>
-              <h1>Articles</h1>
+              <h1>{heading}</h1>
               <p>
                 {isLoading
-                  ? 'Manage blog articles'
-                  : `${visiblePosts.length} of ${posts.length} article${posts.length === 1 ? '' : 's'}`}
+                  ? 'Manage articles'
+                  : `${visiblePosts.length} article${visiblePosts.length === 1 ? '' : 's'}${
+                      localeFilter !== 'all' ? ` · ${localeFilter.toUpperCase()}` : ''
+                    }`}
               </p>
             </div>
             <Link href="/admin/articles/new" className="blog-admin-primary">
               New article
             </Link>
-          </div>
-
-          <div className="blog-admin-filters">
-            <div className="blog-admin-tabs" role="group" aria-label="Filter by type">
-              {TYPE_TABS.map((tab) => (
-                <button
-                  key={tab.key}
-                  type="button"
-                  className={`blog-admin-tab${typeFilter === tab.key ? ' is-active' : ''}`}
-                  onClick={() => setTypeFilter(tab.key)}
-                >
-                  {tab.label}
-                  <span className="blog-admin-tab-count">{typeCounts[tab.key]}</span>
-                </button>
-              ))}
-            </div>
-            <div className="blog-admin-tabs" role="group" aria-label="Filter by language">
-              {LOCALE_TABS.map((tab) => (
-                <button
-                  key={tab.key}
-                  type="button"
-                  className={`blog-admin-tab${localeFilter === tab.key ? ' is-active' : ''}`}
-                  onClick={() => setLocaleFilter(tab.key)}
-                >
-                  {tab.label}
-                  <span className="blog-admin-tab-count">{localeCounts[tab.key]}</span>
-                </button>
-              ))}
-            </div>
           </div>
 
           {error ? <p className="blog-admin-error">{error}</p> : null}

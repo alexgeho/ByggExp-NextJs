@@ -1,0 +1,72 @@
+// Read-only inventory of the public free-tools ("Verktyg") pages. These live in
+// code under src/pages/[lang]/verktyg/<slug>.tsx (sv-only), NOT in the CMS — so
+// the content admin lists them for visibility only; editing means a code change.
+// Keep in sync when tools are added/removed.
+
+export type VerktygItem = { slug: string; label: string };
+export type VerktygGroup = { title: string; items: VerktygItem[] };
+
+export const VERKTYG_GROUPS: VerktygGroup[] = [
+  {
+    title: 'Kalkylatorer – ekonomi',
+    items: [
+      { slug: 'rot-avdrag-kalkylator', label: 'ROT-avdrag' },
+      { slug: 'moms-kalkylator', label: 'Moms' },
+      { slug: 'timpris-kalkylator', label: 'Timpris' },
+      { slug: 'paslag-marginal-kalkylator', label: 'Påslag & marginal' },
+    ],
+  },
+  {
+    title: 'Byggkalkylatorer – material',
+    items: [
+      { slug: 'betong-kalkylator', label: 'Betong' },
+      { slug: 'tak-kalkylator', label: 'Tak' },
+      { slug: 'farg-kalkylator', label: 'Färg' },
+      { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeter' },
+      { slug: 'golv-kalkylator', label: 'Golv' },
+      { slug: 'tapet-kalkylator', label: 'Tapet' },
+      { slug: 'reglar-kalkylator', label: 'Reglar' },
+      { slug: 'grus-kalkylator', label: 'Grus' },
+      { slug: 'gips-kalkylator', label: 'Gips' },
+      { slug: 'isolering-kalkylator', label: 'Isolering' },
+      { slug: 'trappa-kalkylator', label: 'Trappa' },
+      { slug: 'fall-kalkylator', label: 'Fall' },
+      { slug: 'murbruk-kalkylator', label: 'Murbruk' },
+      { slug: 'skruv-kalkylator', label: 'Skruv' },
+      { slug: 'armering-kalkylator', label: 'Armering' },
+      { slug: 'golvvarme-kalkylator', label: 'Golvvärme' },
+      { slug: 'trall-kalkylator', label: 'Trall' },
+      { slug: 'staket-kalkylator', label: 'Staket' },
+      { slug: 'takstolar-kalkylator', label: 'Takstolar' },
+      { slug: 'kakelfix-kalkylator', label: 'Kakelfix' },
+    ],
+  },
+  {
+    title: 'Mallar → PDF',
+    items: [
+      { slug: 'offert-mall', label: 'Offert-mall' },
+      { slug: 'faktura-mall', label: 'Faktura-mall' },
+      { slug: 'byggdagbok-mall', label: 'Byggdagbok-mall' },
+      { slug: 'tidrapport-mall', label: 'Tidrapport-mall' },
+      { slug: 'egenkontroll-mall', label: 'Egenkontroll-mall' },
+    ],
+  },
+  {
+    title: 'PDF-verktyg',
+    items: [
+      { slug: 'sla-ihop-pdf', label: 'Slå ihop PDF' },
+      { slug: 'dela-pdf', label: 'Dela PDF' },
+      { slug: 'bild-till-pdf', label: 'Bild till PDF' },
+      { slug: 'pdf-till-jpg', label: 'PDF till JPG' },
+      { slug: 'rotera-pdf', label: 'Rotera PDF' },
+      { slug: 'ta-bort-sidor-pdf', label: 'Ta bort sidor' },
+      { slug: 'vattenstampel-pdf', label: 'Vattenstämpel' },
+      { slug: 'signera-pdf', label: 'Signera PDF' },
+    ],
+  },
+];
+
+export const VERKTYG_TOTAL = VERKTYG_GROUPS.reduce(
+  (sum, group) => sum + group.items.length,
+  0,
+);

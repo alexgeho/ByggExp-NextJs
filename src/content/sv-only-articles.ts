@@ -12,6 +12,9 @@ export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
   'rot-avdrag',
   'id06',
   'bemanning-och-personalplanering',
+  'ab-04-och-abt-06',
+  'arbetsmiljoplan',
+  'attestering',
 ]);
 
 export function isSvOnlyArticle(slug: string): boolean {

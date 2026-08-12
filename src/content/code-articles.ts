@@ -608,9 +608,234 @@ const BEMANNING: BlogPost = {
   updatedAt: '2026-08-12T14:00:00.000Z',
 };
 
+const AB04_HTML = `
+<p>AB 04 och ABT 06 är de standardavtal som styr de flesta byggprojekt i Sverige. Väljer du fel – eller missar hur ansvaret fördelas – kan det bli dyrt. Här är skillnaden mellan avtalen, vad de reglerar och det du behöver ha koll på om ÄTA, dagbok, garantitid och besiktning.</p>
+
+<h2>Vad är AB 04 och ABT 06?</h2>
+<p>Det är <strong>allmänna bestämmelser</strong> – färdiga avtalsvillkor framtagna av bygg- och installationsbranschen – som parterna hänvisar till i entreprenadkontraktet. De reglerar rättigheter och skyldigheter mellan beställare och entreprenör: pris, tid, ändringar (ÄTA), ansvar, besiktning och garantier.</p>
+
+<h2>Skillnaden mellan AB 04 och ABT 06</h2>
+<p>Den avgörande skillnaden är <strong>vem som ansvarar för projekteringen</strong>:</p>
+<ul>
+<li><strong>AB 04 – utförandeentreprenad.</strong> Beställaren projekterar och tar fram handlingarna; entreprenören utför enligt dem.</li>
+<li><strong>ABT 06 – totalentreprenad.</strong> Entreprenören ansvarar för både projektering och utförande. Beställaren sätter funktionskrav och entreprenören levererar en färdig lösning som uppfyller dem.</li>
+</ul>
+<p>Kort sagt: med AB 04 följer entreprenören beställarens ritningar, med ABT 06 tar entreprenören helhetsansvaret.</p>
+
+<h2>ÄTA-arbeten</h2>
+<p>Ändrings-, tilläggs- och avgående arbeten (ÄTA) regleras i kap 2. Det är här mest pengar tvistas om – rätt hantering och underrättelse i tid avgör om du får betalt. Läs mer i vår <a href="/sv/blog/ata-arbeten">guide om ÄTA-arbeten</a>.</p>
+
+<h2>Dagbok och dokumentation</h2>
+<p>Enligt AB 04 kap 3 §13 ska entreprenören föra dagbok och löpande delge beställaren innehållet. En väl förd <a href="/sv/blog/byggdagbok">byggdagbok</a> blir ett viktigt bevisunderlag om tidplan, ÄTA eller ansvar ifrågasätts.</p>
+
+<h2>Garantitid och ansvarstid</h2>
+<ul>
+<li><strong>AB 04:</strong> garantitid 5 år för entreprenörens arbetsprestation och 2 år för material och varor.</li>
+<li><strong>ABT 06:</strong> garantitid 5 år för entreprenaden.</li>
+<li><strong>Ansvarstid:</strong> 10 år från det att entreprenaden godkänts, och inleds med garantitiden. Under ansvarstiden kan entreprenören bli ansvarig för väsentliga fel som beror på vårdslöshet.</li>
+</ul>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Otydligt kontrakt.</strong> Hänvisa uttryckligen till AB 04 eller ABT 06 – annars gäller dispositiv rätt.</li>
+<li><strong>Slarv med ÄTA.</strong> Muntliga beställningar och utebliven underrättelse kostar pengar.</li>
+<li><strong>Ingen dagbok.</strong> Utan löpande dokumentation står du svagt vid en tvist.</li>
+<li><strong>Missa besiktning och tider.</strong> Håll koll på slutbesiktning och när garantitiden börjar löpa.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan AB 04 och ABT 06?</h3>
+<p>AB 04 gäller utförandeentreprenad där beställaren projekterar. ABT 06 gäller totalentreprenad där entreprenören ansvarar för både projektering och utförande.</p>
+<h3>Hur lång är garantitiden?</h3>
+<p>Fem år för entreprenörens arbete (två år för material enligt AB 04). Ansvarstiden är tio år från godkänd entreprenad.</p>
+<h3>Var regleras ÄTA?</h3>
+<p>I kap 2 i AB 04 och ABT 06. Se vår <a href="/sv/blog/ata-arbeten">ÄTA-guide</a> för hur du får betalt.</p>
+
+<h2>Kom igång</h2>
+<p>Håll koll på kontrakt, ÄTA, dagbok och ekonomi på ett ställe. <a href="/sv/blog/ata-arbeten">Läs om ÄTA</a>, skapa offert och faktura i ByggExp eller <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a> · <a href="/sv/blog/byggdagbok">Byggdagbok</a> · <a href="/sv/blog/egenkontroll">Egenkontroll</a></p>
+`.trim();
+
+const AB04: BlogPost = {
+  _id: 'code-ab-04-abt-06',
+  title: 'AB 04 och ABT 06 – skillnaden och vad du behöver veta',
+  slug: 'ab-04-och-abt-06',
+  locale: 'sv',
+  excerpt:
+    'Skillnaden mellan AB 04 (utförandeentreprenad) och ABT 06 (totalentreprenad), samt vad avtalen säger om ÄTA, dagbok, garantitid och ansvarstid.',
+  tag: 'Entreprenadjuridik',
+  coverImageUrl: '/landing/features/7offerter.webp',
+  contentHtml: AB04_HTML,
+  seoTitle: 'AB 04 och ABT 06 – skillnad, garantitid & ÄTA | ByggExp',
+  seoDescription:
+    'AB 04 vs ABT 06: utförande- eller totalentreprenad, vem projekterar, ÄTA (kap 2), dagbok (kap 3 §13), garantitid 5 år och ansvarstid 10 år. Komplett guide.',
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-12T15:00:00.000Z',
+  createdAt: '2026-08-12T15:00:00.000Z',
+  updatedAt: '2026-08-12T15:00:00.000Z',
+};
+
+const AMP_HTML = `
+<p>En arbetsmiljöplan (AMP) är inte bara en pärm som ska finnas – den är ofta ett lagkrav, och saknas den när Arbetsmiljöverket kommer på besök kan det bli sanktionsavgift. Här är när en AMP krävs, vad den ska innehålla och vem som ansvarar (byggherre, BAS-P och BAS-U).</p>
+
+<h2>Vad är en arbetsmiljöplan (AMP)?</h2>
+<p>En arbetsmiljöplan är ett dokument som beskriver hur arbetsmiljön ska hanteras på en byggarbetsplats: vilka risker som finns, vilka regler som gäller och vilka åtgärder som ska vidtas. Reglerna finns i Arbetsmiljöverkets föreskrifter <strong>AFS 2023:3</strong> (som ersatt den tidigare strukturen).</p>
+
+<h2>När krävs en arbetsmiljöplan?</h2>
+<p>En AMP krävs i två situationer:</p>
+<ul>
+<li><strong>Arbete med särskild risk</strong> enligt kap 11 §12 i AFS 2023:3 – till exempel risk för fall från höjd, arbete i schakt, rivning av bärande konstruktioner eller arbete med asbest. Då krävs en AMP <strong>från dag ett</strong>, oavsett projektets storlek.</li>
+<li><strong>När förhandsanmälan krävs</strong> – arbete som pågår längre än 30 arbetsdagar med fler än 20 personer samtidigt, eller mer än 500 persondagar totalt.</li>
+</ul>
+<p>Som tumregel bör en arbetsmiljöplan finnas på plats innan bygget startar.</p>
+
+<h2>Vem ansvarar – byggherre, BAS-P och BAS-U?</h2>
+<ul>
+<li><strong>Byggherren</strong> har det övergripande ansvaret och utser byggarbetsmiljösamordnare.</li>
+<li><strong>BAS-P</strong> (samordnare för planering och projektering) ansvarar för att upprätta arbetsmiljöplanen.</li>
+<li><strong>BAS-U</strong> (samordnare för utförande) ansvarar för att AMP:n hålls aktuell och uppdateras under byggets gång.</li>
+</ul>
+
+<h2>Vad ska en arbetsmiljöplan innehålla?</h2>
+<ul>
+<li>De regler som ska tillämpas på arbetsplatsen</li>
+<li>Beskrivning av arbeten med särskild risk och åtgärder för dem</li>
+<li>Hur arbetsmiljöarbetet organiseras (ansvar, rutiner)</li>
+<li>Gemensamma skyddsåtgärder, ordning och tillträde</li>
+<li>Uppdateras löpande när nya risker eller moment tillkommer</li>
+</ul>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Skapa AMP:n och glömma den.</strong> Den ska hållas aktuell under hela projektet – det är BAS-U:s ansvar.</li>
+<li><strong>Generisk mall utan projektets risker.</strong> Planen ska spegla de faktiska riskerna på just den arbetsplatsen.</li>
+<li><strong>Otydliga roller.</strong> BAS-P och BAS-U ska vara utsedda och kända.</li>
+<li><strong>Ingen koppling till egenkontroll.</strong> Kontroller och åtgärder bör dokumenteras löpande – se <a href="/sv/blog/egenkontroll">egenkontroll</a>.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>När måste man ha en arbetsmiljöplan?</h3>
+<p>Vid arbete med särskild risk (kap 11 §12 AFS 2023:3) krävs den från dag ett, och när förhandsanmälan krävs (över 30 dagar med fler än 20 personer, eller över 500 persondagar).</p>
+<h3>Vem upprättar arbetsmiljöplanen?</h3>
+<p>BAS-P upprättar planen; BAS-U håller den aktuell under utförandet. Byggherren har det övergripande ansvaret.</p>
+<h3>Vad är skillnaden mellan BAS-P och BAS-U?</h3>
+<p>BAS-P samordnar arbetsmiljön i planering och projektering; BAS-U samordnar under utförandet på plats.</p>
+
+<h2>Kom igång</h2>
+<p>Håll arbetsmiljön, kontroller och dokumentation samlat och aktuellt. <a href="/sv/blog/egenkontroll">Läs om egenkontroll och KMA</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll och KMA</a> · <a href="/sv/blog/personalliggare">Personalliggare</a></p>
+`.trim();
+
+const AMP: BlogPost = {
+  _id: 'code-arbetsmiljoplan',
+  title: 'Arbetsmiljöplan (AMP) – när krävs den och vem ansvarar',
+  slug: 'arbetsmiljoplan',
+  locale: 'sv',
+  excerpt:
+    'När krävs en arbetsmiljöplan, vad ska den innehålla och vem ansvarar (byggherre, BAS-P, BAS-U)? Guide enligt AFS 2023:3 – med särskild risk och förhandsanmälan.',
+  tag: 'Arbetsmiljö',
+  coverImageUrl: '/landing/features/3personal.webp',
+  contentHtml: AMP_HTML,
+  seoTitle: 'Arbetsmiljöplan (AMP) – krav, BAS-P & BAS-U | ByggExp',
+  seoDescription:
+    'När krävs en arbetsmiljöplan (AMP) enligt AFS 2023:3? Särskild risk, förhandsanmälan, vad den ska innehålla och ansvar för byggherre, BAS-P och BAS-U.',
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-12T15:30:00.000Z',
+  createdAt: '2026-08-12T15:30:00.000Z',
+  updatedAt: '2026-08-12T15:30:00.000Z',
+};
+
+const ATTESTERING_HTML = `
+<p>Attestering låter byråkratiskt, men det är i praktiken din kontroll över vad företaget betalar och betalar ut. Utan ett tydligt attestflöde smyger sig fel fakturor och felaktiga timmar igenom – rakt in i resultatet. Här är hur du sätter upp attestering för fakturor och tid i ett byggföretag.</p>
+
+<h2>Vad är attestering?</h2>
+<p>Attestering är att någon behörig <strong>godkänner</strong> en kostnad eller ett underlag innan det betalas eller förs vidare – till exempel en leverantörsfaktura innan betalning, eller rapporterade timmar innan de blir löneunderlag. Attesten är beviset på att någon kontrollerat att uppgiften stämmer och hör till rätt projekt.</p>
+
+<h2>Vad attesteras i ett byggföretag?</h2>
+<ul>
+<li><strong>Leverantörsfakturor</strong> – stämmer beloppet, är varan levererad, rätt projekt?</li>
+<li><strong>Rapporterad tid</strong> – innan den blir <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a>.</li>
+<li><strong>Utlägg och kvitton</strong> – rätt kostnad, rätt projekt.</li>
+<li><strong>ÄTA och tilläggsarbeten</strong> – godkända innan de faktureras vidare.</li>
+</ul>
+
+<h2>Så sätter du upp ett attestflöde</h2>
+<ol>
+<li>Bestäm <strong>attestordning</strong> – vem får godkänna vad och upp till vilka belopp.</li>
+<li>Koppla varje faktura och tidpost till <strong>rätt projekt</strong> så kostnaden hamnar rätt.</li>
+<li>Låt rätt person granska och attestera – gärna enligt tvåhandsprincipen för större belopp.</li>
+<li>Betala/för vidare först efter attest – och spara vem som godkände och när.</li>
+</ol>
+
+<h2>Varför det är värt besväret</h2>
+<p>Ett tydligt attestflöde ger <strong>kostnadskontroll per projekt</strong>, mindre risk för fel och dubbelbetalningar, och ett spårbart underlag om något ifrågasätts. Framför allt ser du marginalen i realtid i stället för först vid bokslutet – se <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomi och lönsamhet</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Ingen tydlig attestordning.</strong> Otydligt vem som får godkänna vad leder till flaskhalsar eller slarv.</li>
+<li><strong>Fakturor utan projekt.</strong> Kostnader som inte kopplas till projekt gör lönsamheten omöjlig att följa.</li>
+<li><strong>Attestera på autopilot.</strong> Poängen är kontrollen – granska innan du godkänner.</li>
+<li><strong>Papper och mejl.</strong> Spårbarheten försvinner; håll attesten digitalt och kopplad till underlaget.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad betyder att attestera en faktura?</h3>
+<p>Att en behörig person godkänner att fakturan är korrekt och hör till rätt projekt innan den betalas.</p>
+<h3>Vad är en attestordning?</h3>
+<p>En regel för vem som får godkänna vilka kostnader och upp till vilka belopp – grunden i ett attestflöde.</p>
+<h3>Varför koppla attest till projekt?</h3>
+<p>För att få kostnadskontroll och kunna följa lönsamheten per projekt i realtid.</p>
+
+<h2>Kom igång</h2>
+<p>Få kontroll på vad som betalas – och se marginalen medan projektet pågår. <a href="/sv/blog/projektekonomi-och-lonsamhet">Läs om projektekonomi</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/projektekonomi-och-lonsamhet">Projektekonomi och lönsamhet</a> · <a href="/sv/blog/fota-kvitton-och-hantera-utlagg">Fota kvitton och hantera utlägg</a> · <a href="/sv/blog/loneunderlag-for-byggforetag">Löneunderlag</a></p>
+`.trim();
+
+const ATTESTERING: BlogPost = {
+  _id: 'code-attestering',
+  title: 'Attestering i byggföretag – attestflöde för fakturor och tid',
+  slug: 'attestering',
+  locale: 'sv',
+  excerpt:
+    'Vad attestering är och hur du sätter upp ett attestflöde för leverantörsfakturor, tid och utlägg – med attestordning, projektkoppling och kostnadskontroll.',
+  tag: 'Ekonomi',
+  coverImageUrl: '/landing/features/11costs.webp',
+  contentHtml: ATTESTERING_HTML,
+  seoTitle: 'Attestering i byggföretag – attestflöde & kontroll | ByggExp',
+  seoDescription:
+    'Så sätter du upp attestering för leverantörsfakturor och tid i ett byggföretag: attestordning, projektkoppling, tvåhandsprincip och kostnadskontroll per projekt.',
+  seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-12T16:00:00.000Z',
+  createdAt: '2026-08-12T16:00:00.000Z',
+  updatedAt: '2026-08-12T16:00:00.000Z',
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
-  sv: [BYGGDAGBOK, EGENKONTROLL, ATA, PERSONALLIGGARE, ROT, ID06, BEMANNING],
+  sv: [
+    BYGGDAGBOK,
+    EGENKONTROLL,
+    ATA,
+    PERSONALLIGGARE,
+    ROT,
+    ID06,
+    BEMANNING,
+    AB04,
+    AMP,
+    ATTESTERING,
+  ],
   en: [],
   ru: [],
 };

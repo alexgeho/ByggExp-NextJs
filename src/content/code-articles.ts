@@ -395,9 +395,222 @@ const PERSONALLIGGARE: BlogPost = {
   updatedAt: '2026-08-12T12:00:00.000Z',
 };
 
+const ROT_HTML = `
+<p>ROT-avdraget är ett av de starkaste säljargumenten ett byggföretag har – kunden betalar mindre, du får jobbet. Men reglerna ändrades vid årsskiftet, och det är lätt att räkna fel. Här är vad som gäller för ROT-avdrag 2026, hur du räknar ut det och hur du fakturerar rätt.</p>
+
+<p><a href="/sv/verktyg/rot-avdrag-kalkylator">Räkna ut ROT-avdraget direkt i vår gratis kalkylator →</a></p>
+
+<h2>Vad är ROT-avdrag?</h2>
+<p>ROT-avdrag är en skattereduktion för privatpersoner som anlitar hjälp för <strong>reparation, underhåll, om- och tillbyggnad</strong> av sin bostad. Avdraget gäller bara <strong>arbetskostnaden</strong> – inte material, resor eller maskiner. I praktiken drar företaget av ROT direkt på fakturan och begär sedan resten från Skatteverket.</p>
+
+<h2>ROT-avdrag 2026 – procent och tak</h2>
+<ul>
+<li><strong>30 % av arbetskostnaden.</strong> Den tillfälliga höjningen till 50 % förlängdes inte – från 1 januari 2026 gäller åter 30 %.</li>
+<li><strong>Max 50 000 kr per person och år.</strong> Äger två personer bostaden kan de dela på avdraget.</li>
+<li><strong>Gemensamt tak med RUT: 75 000 kr per person och år</strong>, varav högst 50 000 kr får vara ROT.</li>
+</ul>
+
+<h2>Vem har rätt till ROT-avdrag?</h2>
+<p>Den som söker avdraget ska <strong>äga och bo i</strong> bostaden och ha betalat tillräckligt med skatt att räkna av mot. Avdraget gäller inte nybyggnation – ett nybyggt småhus medges ROT först efter fem år. Det är kundens avdrag, men det är du som utförare som administrerar det på fakturan.</p>
+
+<h2>Exempel: så räknas ROT ut</h2>
+<ul>
+<li><strong>Arbetskostnad:</strong> 40 000 kr</li>
+<li><strong>ROT-avdrag (30 %):</strong> 12 000 kr</li>
+<li><strong>Kunden betalar:</strong> arbetskostnad 28 000 kr + material</li>
+<li><strong>Du begär</strong> resterande 12 000 kr från Skatteverket</li>
+</ul>
+<p>Vill du testa dina egna siffror? <a href="/sv/verktyg/rot-avdrag-kalkylator">Använd ROT-kalkylatorn</a> – den visar avdrag och vad kunden betalar direkt.</p>
+
+<h2>Så fakturerar du med ROT</h2>
+<ol>
+<li>Dela upp fakturan i arbetskostnad och material – ROT gäller bara arbetet.</li>
+<li>Dra av 30 % av arbetskostnaden (upp till kundens tak) direkt på fakturan.</li>
+<li>Kunden betalar resten; du begär ROT-beloppet från Skatteverket.</li>
+<li>Ange kundens personnummer och fastighets-/lägenhetsuppgifter i begäran.</li>
+</ol>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Räkna ROT på hela fakturan.</strong> Endast arbetskostnaden ger avdrag – inte material.</li>
+<li><strong>Glömma kundens tak.</strong> Har kunden redan använt ROT i år kan utrymmet vara slut.</li>
+<li><strong>Blanda ihop ROT och RUT.</strong> De delar tak men gäller olika arbeten.</li>
+<li><strong>Otydlig faktura.</strong> Separera arbete och material tydligt så avdraget håller.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket är ROT-avdrag 2026?</h3>
+<p>30 % av arbetskostnaden, max 50 000 kr per person och år. ROT och RUT delar ett gemensamt tak på 75 000 kr, varav högst 50 000 kr får vara ROT.</p>
+<h3>Vad gäller ROT-avdraget för?</h3>
+<p>Reparation, underhåll, om- och tillbyggnad av bostad du äger och bor i. Endast arbetskostnaden – inte material, resor eller maskiner.</p>
+<h3>Gäller ROT vid nybyggnation?</h3>
+<p>Nej. ROT gäller inte nybyggnad; för ett nybyggt småhus medges avdrag först efter fem år.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna rätt varje gång och visa kunden vad de sparar. <a href="/sv/verktyg/rot-avdrag-kalkylator">Testa ROT-kalkylatorn</a>, skapa offert och faktura med ROT i ByggExp eller <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/verktyg/offert-mall">Offert-mall</a> · <a href="/sv/verktyg/faktura-mall">Faktura-mall</a> · <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylator</a></p>
+`.trim();
+
+const ROT: BlogPost = {
+  _id: 'code-rot-avdrag',
+  title: 'ROT-avdrag 2026 – regler, belopp och hur du räknar rätt',
+  slug: 'rot-avdrag',
+  locale: 'sv',
+  excerpt:
+    'ROT-avdrag 2026: 30 % av arbetskostnaden, max 50 000 kr och gemensamt tak med RUT. Så räknar du ut det, vem som har rätt och hur du fakturerar rätt – med gratis kalkylator.',
+  tag: 'ROT-avdrag',
+  coverImageUrl: '/landing/features/8fakturor.webp',
+  contentHtml: ROT_HTML,
+  seoTitle: 'ROT-avdrag 2026 – regler, belopp & kalkylator | ByggExp',
+  seoDescription:
+    'ROT-avdrag 2026: 30 % av arbetskostnaden, max 50 000 kr, gemensamt tak 75 000 kr med RUT. Räkna ut ROT, se vem som har rätt och hur du fakturerar – gratis kalkylator.',
+  seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-12T13:00:00.000Z',
+  createdAt: '2026-08-12T13:00:00.000Z',
+  updatedAt: '2026-08-12T13:00:00.000Z',
+};
+
+const ID06_HTML = `
+<p>Nästan alla på ett bygge har ett ID06-kort i fickan – men få vet exakt vad det är, vad det krävs för och om det ens är ett lagkrav. Här reder vi ut vad ID06 är, vad det används till och hur det hänger ihop med personalliggaren.</p>
+
+<h2>Vad är ID06?</h2>
+<p>ID06 är byggbranschens system för <strong>identifikation, närvaroregistrering och kompetens</strong>. Kortet knyter en person till rätt identitet och används bland annat för att registrera vem som är på arbetsplatsen och för att samla individens utbildningar och intyg i ID06 Kompetensdatabas. Syftet är en säkrare arbetsplats och sundare konkurrens – att alla som vistas på bygget är behöriga och identitetskontrollerade.</p>
+
+<h2>Vad används ID06 till?</h2>
+<ul>
+<li><strong>Identitetskontroll</strong> – säkerställer vem personen är.</li>
+<li><strong>Elektronisk personalliggare</strong> – registrerar närvaro (in- och utcheckning).</li>
+<li><strong>Access</strong> – styr in- och utpassering, ofta via kortläsare eller vändkors.</li>
+<li><strong>Kompetens</strong> – utbildningar och certifikat registreras på individen i ID06 Kompetensdatabas.</li>
+</ul>
+
+<h2>Är ID06 ett lagkrav?</h2>
+<p>Nej – inte i sig. Sedan den 1 januari 2016 är <strong>elektronisk personalliggare</strong> obligatorisk på de flesta byggarbetsplatser (där byggherren inte är en privatperson). Lagen kräver att liggaren är elektronisk och visar vem som är och har varit på plats – men den kräver inte specifikt ID06. ID06 är den vanligaste tekniska lösningen för att uppfylla kravet, och många beställare ställer krav på ID06 i sina avtal. Läs mer om <a href="/sv/blog/personalliggare">personalliggare och reglerna</a>.</p>
+
+<h2>ID06 och kompetensdatabasen</h2>
+<p>I ID06 Kompetensdatabas registreras utbildningar och intyg – som heta arbeten, arbete på väg eller säkerhetsutbildningar – kopplat till individen. Det gör att arbetsledaren snabbt kan verifiera att rätt person har rätt behörighet, och att intygen finns samlade på ett ställe i stället för i pärmar.</p>
+
+<h2>Så funkar det i praktiken</h2>
+<ol>
+<li>Medarbetaren har ett giltigt ID06-kort kopplat till sin identitet.</li>
+<li>Vid in- och utcheckning registreras närvaron i personalliggaren.</li>
+<li>Behörigheter och utbildningar finns tillgängliga via kompetensdatabasen.</li>
+<li>Byggherren/entreprenören kan visa en samlad, aktuell liggare för Skatteverket.</li>
+</ol>
+
+<h2>Vanliga frågor</h2>
+<h3>Är ID06 obligatoriskt?</h3>
+<p>ID06 i sig är inte lagstadgat, men elektronisk personalliggare är obligatorisk på de flesta byggarbetsplatser sedan 2016. Många beställare kräver dessutom ID06 i avtal.</p>
+<h3>Vad är skillnaden mellan ID06 och personalliggare?</h3>
+<p>Personalliggaren är själva närvaroregistret (lagkravet). ID06 är ett system som bland annat sköter identitet och närvaro och ofta används för att föra liggaren.</p>
+<h3>Vad är ID06 Kompetensdatabas?</h3>
+<p>En databas där individens utbildningar och intyg registreras, så att behörigheter enkelt kan verifieras på arbetsplatsen.</p>
+
+<h2>Kom igång</h2>
+<p>Oavsett kortlösning behöver du en elektronisk närvaroregistrering som håller. I ByggExp checkar laget in och ut kopplat till projektet – du ser vilka som är på plats och har liggaren redo. <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">Se hur närvaro fungerar</a> eller <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/personalliggare">Guide: personalliggare</a> · <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">Närvaro och incheckning</a></p>
+`.trim();
+
+const ID06: BlogPost = {
+  _id: 'code-id06',
+  title: 'ID06 – vad det är, vad det krävs för och lagkraven',
+  slug: 'id06',
+  locale: 'sv',
+  excerpt:
+    'Vad är ID06, vad används kortet till och är det ett lagkrav? Så hänger ID06 ihop med elektronisk personalliggare, kompetensdatabasen och närvaro på bygget.',
+  tag: 'ID06',
+  coverImageUrl: '/landing/features/3personal.webp',
+  contentHtml: ID06_HTML,
+  seoTitle: 'ID06 – vad det är, krav och personalliggare | ByggExp',
+  seoDescription:
+    'Vad är ID06 och är det ett lagkrav? Så används ID06 för identitet, elektronisk personalliggare, access och kompetens i byggbranschen – och skillnaden mot personalliggaren.',
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-12T13:30:00.000Z',
+  createdAt: '2026-08-12T13:30:00.000Z',
+  updatedAt: '2026-08-12T13:30:00.000Z',
+};
+
+const BEMANNING_HTML = `
+<p>Rätt person, på rätt plats, vid rätt tid – låter enkelt, men bemanning är ofta det som gör eller stjälper marginalen i ett byggföretag. En sjukanmälan på fel dag eller en dubbelbokad snickare kan välta hela veckans plan. Här går vi igenom hur du planerar bemanningen så att projekten flyter.</p>
+
+<h2>Vad är bemanning och personalplanering i bygg?</h2>
+<p>Bemanning handlar om att fördela rätt personal och kompetens över projekt och dagar. Personalplanering är den löpande pusslet: vem jobbar var, vilka pass gäller, vem är ledig eller sjuk, och räcker kompetensen för det som ska göras. Målet är hög beläggning utan att någon blir överbelastad – och utan luckor som kostar tid.</p>
+
+<h2>Varför bemanning är svårt</h2>
+<ul>
+<li><strong>Flera projekt samtidigt.</strong> Personal ska delas mellan arbetsplatser utan krockar.</li>
+<li><strong>Frånvaro dyker upp.</strong> Sjukdom, VAB och semester rubbar planen med kort varsel.</li>
+<li><strong>Rätt kompetens.</strong> Vissa moment kräver behörighet – fel person på plats stoppar jobbet.</li>
+<li><strong>Överblick saknas.</strong> Planeras det i huvudet eller i spridda kalkylark blir det lätt fel.</li>
+</ul>
+
+<h2>Så planerar du bemanningen steg för steg</h2>
+<ol>
+<li>Lägg in alla projekt och deras behov – antal personer och kompetens per period.</li>
+<li>Fördela personalen på pass och projekt med en tydlig, delad översikt.</li>
+<li>Markera frånvaro (sjuk, VAB, semester) så att luckor syns direkt.</li>
+<li>Justera löpande när något ändras – och låt laget se sitt schema.</li>
+<li>Följ upp beläggning mot plan för att hitta över- och underbeläggning.</li>
+</ol>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Planera i huvudet.</strong> Utan en delad plan uppstår dubbelbokningar och luckor.</li>
+<li><strong>Glömma kompetenskravet.</strong> Rätt antal personer räcker inte om behörigheten saknas.</li>
+<li><strong>Ingen frånvaroöversikt.</strong> Frånvaro som inte syns i planen ställer till det på plats.</li>
+<li><strong>Sena besked till laget.</strong> Oklara scheman skapar spilltid och irritation.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp planerar du bemanningen visuellt: fördela personal på projekt och pass, se frånvaro och beläggning i en delad vy, och låt medarbetarna se sitt schema i mobilen. Eftersom bemanning, närvaro, tid och ekonomi ligger i samma app hänger planen ihop med verkligheten – planerade timmar följer med hela vägen till <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlaget</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan bemanning och schemaläggning?</h3>
+<p>Bemanning handlar om att fördela rätt personal och kompetens över projekt; schemaläggning är att lägga de konkreta passen. I praktiken hänger de ihop.</p>
+<h3>Hur hanterar jag frånvaro i planeringen?</h3>
+<p>Markera sjuk, VAB och semester i planen så att luckor syns direkt och kan täckas i tid. Se även <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning</a>.</p>
+<h3>Behöver jag ett verktyg för bemanning?</h3>
+<p>Vid ett projekt går det i huvudet – vid flera blir en delad, digital plan snabbt nödvändig för att undvika krockar och spilltid.</p>
+
+<h2>Kom igång</h2>
+<p>Sluta pussla i huvudet. Planera bemanningen i en delad vy, se frånvaro direkt och koppla planen till tid och lön. <a href="/sv/blog/dagsplanering-och-planeringsmoten">Läs om dagsplanering</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/dagsplanering-och-planeringsmoten">Dagsplanering och planeringsmöten</a> · <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">Närvaro och incheckning</a></p>
+`.trim();
+
+const BEMANNING: BlogPost = {
+  _id: 'code-bemanning',
+  title: 'Bemanning och personalplanering i bygg – så gör du rätt',
+  slug: 'bemanning-och-personalplanering',
+  locale: 'sv',
+  excerpt:
+    'Rätt person på rätt plats vid rätt tid. Så planerar du bemanning över flera projekt, hanterar frånvaro och kompetens – steg för steg, med vanliga misstag att undvika.',
+  tag: 'Bemanning',
+  coverImageUrl: '/landing/features/5planering.webp',
+  contentHtml: BEMANNING_HTML,
+  seoTitle: 'Bemanning & personalplanering i bygg – guide | ByggExp',
+  seoDescription:
+    'Så planerar du bemanning och personal i byggföretag: fördela rätt kompetens över flera projekt, hantera frånvaro och undvik dubbelbokningar. Steg för steg.',
+  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-12T14:00:00.000Z',
+  createdAt: '2026-08-12T14:00:00.000Z',
+  updatedAt: '2026-08-12T14:00:00.000Z',
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
-  sv: [BYGGDAGBOK, EGENKONTROLL, ATA, PERSONALLIGGARE],
+  sv: [BYGGDAGBOK, EGENKONTROLL, ATA, PERSONALLIGGARE, ROT, ID06, BEMANNING],
   en: [],
   ru: [],
 };

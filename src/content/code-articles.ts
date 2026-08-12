@@ -822,6 +822,226 @@ const ATTESTERING: BlogPost = {
   updatedAt: '2026-08-12T16:00:00.000Z',
 };
 
+const FRANVARO_HTML = `
+<p>Frånvaro är oundvikligt – sjukdom, vård av barn och semester kommer alltid. Det som skiljer är hur snabbt du ser det och hur rätt det landar i planeringen och lönen. Här går vi igenom de vanligaste frånvarotyperna, vad som gäller kring sjuklön och karensavdrag, och hur du håller ordning på frånvaron i ett byggföretag.</p>
+
+<h2>Vanliga typer av frånvaro</h2>
+<ul>
+<li><strong>Sjukfrånvaro</strong> – den anställde är sjuk och kan inte arbeta.</li>
+<li><strong>VAB</strong> – vård av sjukt barn (tillfällig föräldrapenning).</li>
+<li><strong>Semester</strong> – betald ledighet enligt semesterlagen.</li>
+<li><strong>Föräldraledighet</strong> och annan lagstadgad ledighet.</li>
+</ul>
+
+<h2>Sjuklön och karensavdrag – så funkar det</h2>
+<ul>
+<li>Arbetsgivaren betalar <strong>sjuklön under de första 14 dagarna</strong> (sjuklöneperioden). Sjuklönen är 80 % av lönen.</li>
+<li>Ett <strong>karensavdrag</strong> görs – 20 % av en genomsnittlig veckolön – en gång per sjukperiod.</li>
+<li>Insjuknar den anställde igen inom <strong>fem kalenderdagar</strong> räknas det som samma sjukperiod, så inget nytt karensavdrag görs.</li>
+<li>Genom det allmänna högriskskyddet kan karensavdrag göras högst tio gånger under en tolvmånadersperiod.</li>
+<li><strong>Från dag 15</strong> anmäler arbetsgivaren sjukfallet till Försäkringskassan, som betalar sjukpenning.</li>
+</ul>
+
+<h2>VAB och semester</h2>
+<p>Vid <strong>VAB</strong> betalar Försäkringskassan tillfällig föräldrapenning efter anmälan från den anställde – det är alltså inte arbetsgivaren som betalar. <strong>Semester</strong> regleras av semesterlagen; det viktiga för dig som arbetsgivare är att planera uttaget så att det inte krockar med bemanningen i projekten.</p>
+
+<h2>Varför frånvaro måste synas direkt</h2>
+<p>På ett bygge får frånvaro omedelbara konsekvenser: en lucka i <a href="/sv/blog/bemanning-och-personalplanering">bemanningen</a> måste täckas, och timmarna ska bli rätt i <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlaget</a>. Om frånvaron rapporteras sent eller på lappar blir både planen och lönen fel.</p>
+
+<h2>Så håller du ordning på frånvaron i ByggExp</h2>
+<ol>
+<li>Medarbetaren anmäler frånvaro direkt i appen – sjuk, VAB eller ledig.</li>
+<li>Frånvaron syns direkt i planeringen så luckor kan täckas i tid.</li>
+<li>Rätt avdrag och ersättning följer med till löneunderlaget – utan handpåläggning.</li>
+<li>Du får överblick över frånvaro per person och projekt.</li>
+</ol>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Frånvaro på lappar och sms.</strong> Det försvinner och blir fel i lön och plan.</li>
+<li><strong>Fel karensavdrag.</strong> Missa inte femdagarsregeln vid återinsjuknande.</li>
+<li><strong>Ingen koppling till bemanning.</strong> Frånvaro som inte syns i planen ställer till det på plats.</li>
+<li><strong>Sen anmälan till Försäkringskassan.</strong> Håll koll på dag 15-gränsen vid längre sjukdom.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur länge betalar arbetsgivaren sjuklön?</h3>
+<p>Under de första 14 dagarna av sjukperioden (sjuklöneperioden), med 80 % av lönen efter ett karensavdrag. Från dag 15 tar Försäkringskassan över med sjukpenning.</p>
+<h3>Vem betalar vid VAB?</h3>
+<p>Försäkringskassan betalar tillfällig föräldrapenning vid VAB, efter anmälan från den anställde.</p>
+<h3>Hur stort är karensavdraget?</h3>
+<p>20 % av en genomsnittlig veckolön, och görs en gång per sjukperiod.</p>
+
+<h2>Kom igång</h2>
+<p>Håll frånvaron samlad, kopplad till plan och lön. <a href="/sv/blog/bemanning-och-personalplanering">Läs om bemanning</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a> · <a href="/sv/blog/loneunderlag-for-byggforetag">Löneunderlag</a></p>
+`.trim();
+
+const FRANVARO: BlogPost = {
+  _id: 'code-franvaro',
+  title: 'Frånvaro i byggföretag – sjuk, VAB, semester och sjuklön',
+  slug: 'franvaro-i-byggforetag',
+  locale: 'sv',
+  excerpt:
+    'Frånvarotyper, sjuklön och karensavdrag, VAB via Försäkringskassan och hur du håller ordning på frånvaron så att bemanning och löneunderlag blir rätt.',
+  tag: 'Personal',
+  coverImageUrl: '/landing/features/12salary.webp',
+  contentHtml: FRANVARO_HTML,
+  seoTitle: 'Frånvaro i byggföretag – sjuklön, karensavdrag & VAB | ByggExp',
+  seoDescription:
+    'Sjuklön dag 1–14, karensavdrag 20 %, femdagarsregeln, VAB via Försäkringskassan och semester. Så håller du ordning på frånvaron i ett byggföretag.',
+  seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-12T17:00:00.000Z',
+  createdAt: '2026-08-12T17:00:00.000Z',
+  updatedAt: '2026-08-12T17:00:00.000Z',
+};
+
+const HETA_ARBETEN_HTML = `
+<p>Heta arbeten är en av de vanligaste orsakerna till bränder på arbetsplatser – och ett moment där försäkringsbolagen ställer hårda krav. Saknas rätt certifikat eller brandvakt kan försäkringen sättas ur spel. Här är vad heta arbeten är, vilka roller som krävs och vad som gäller kring certifikat och tillstånd.</p>
+
+<h2>Vad är heta arbeten?</h2>
+<p>Heta arbeten är tillfälliga arbeten som utförs på en tillfällig arbetsplats och som medför brandfara – till exempel svetsning, skärning, lödning, arbete med rondell eller andra verktyg som alstrar värme eller gnistor. Eftersom risken för brand är påtaglig finns särskilda säkerhetsregler och krav på behörighet.</p>
+
+<h2>Certifikat och försäkringskrav</h2>
+<ul>
+<li>Ett certifikat <strong>Heta Arbeten®</strong> är giltigt i <strong>5 år</strong> från godkänd certifiering.</li>
+<li>Försäkringsbolagen kräver att den som utför heta arbeten, är brandvakt eller utfärdar tillstånd har <strong>giltigt certifikat</strong>.</li>
+<li>Certifikaten ska kunna styrkas <strong>innan arbetet påbörjas</strong>.</li>
+</ul>
+
+<h2>Rollerna: tillståndsansvarig, hetarbetare och brandvakt</h2>
+<ul>
+<li><strong>Tillståndsansvarig</strong> – utfärdar tillstånd, bedömer risken och ställer krav på skyddsåtgärder. Behöver utbildning och praktisk erfarenhet av brandskydd.</li>
+<li><strong>Hetarbetare (utförare)</strong> – den som utför det heta arbetet.</li>
+<li><strong>Brandvakt</strong> – bevakar brandrisken under och efter arbetet.</li>
+</ul>
+<p>Samtliga ska ha giltigt certifikat. Det finns ett undantag: den som är tillståndsansvarig vid högst tre tillfällen under en tolvmånadersperiod kan undantas från kravet på personcertifikat.</p>
+
+<h2>Så går det till i praktiken</h2>
+<ol>
+<li>Tillståndsansvarig bedömer risken och utfärdar ett skriftligt tillstånd med villkor.</li>
+<li>Skyddsåtgärder ordnas – släckutrustning, rensning av brännbart material, m.m.</li>
+<li>Hetarbetaren utför arbetet, brandvakten bevakar.</li>
+<li>Efterbevakning görs enligt tillståndet innan platsen lämnas.</li>
+</ol>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Ogiltigt certifikat.</strong> Kolla giltigheten (5 år) innan arbetet – annars kan försäkringen falla.</li>
+<li><strong>Ingen brandvakt.</strong> Bevakning under och efter arbetet är ett krav, inte en formalitet.</li>
+<li><strong>Muntligt tillstånd.</strong> Tillståndet ska vara skriftligt med tydliga villkor.</li>
+<li><strong>Ingen efterbevakning.</strong> Många bränder startar efter att arbetet avslutats.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur länge gäller ett Heta Arbeten-certifikat?</h3>
+<p>Fem år från godkänd certifiering. Därefter behöver det förnyas.</p>
+<h3>Vilka behöver certifikat?</h3>
+<p>Tillståndsansvarig, hetarbetare och brandvakt ska ha giltigt certifikat, och det ska kunna styrkas innan arbetet börjar.</p>
+<h3>Måste tillståndet vara skriftligt?</h3>
+<p>Ja. Tillståndsansvarig utfärdar ett skriftligt tillstånd med villkor och skyddsåtgärder.</p>
+
+<h2>Kom igång</h2>
+<p>Håll koll på behörigheter, tillstånd och arbetsmiljö på ett ställe. <a href="/sv/blog/arbetsmiljoplan">Läs om arbetsmiljöplan</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan (AMP)</a> · <a href="/sv/blog/egenkontroll">Egenkontroll och KMA</a></p>
+`.trim();
+
+const HETA_ARBETEN: BlogPost = {
+  _id: 'code-heta-arbeten',
+  title: 'Heta arbeten – certifikat, tillståndsansvarig och brandvakt',
+  slug: 'heta-arbeten',
+  locale: 'sv',
+  excerpt:
+    'Vad heta arbeten är, försäkringskraven, certifikatets giltighet (5 år) och rollerna tillståndsansvarig, hetarbetare och brandvakt – plus vanliga misstag.',
+  tag: 'Arbetsmiljö',
+  coverImageUrl: '/landing/features/6verktyg.webp',
+  contentHtml: HETA_ARBETEN_HTML,
+  seoTitle: 'Heta arbeten – certifikat, tillstånd & brandvakt | ByggExp',
+  seoDescription:
+    'Heta arbeten: certifikat Heta Arbeten® (5 år), försäkringskrav, rollerna tillståndsansvarig, hetarbetare och brandvakt, skriftligt tillstånd och efterbevakning.',
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-12T17:30:00.000Z',
+  createdAt: '2026-08-12T17:30:00.000Z',
+  updatedAt: '2026-08-12T17:30:00.000Z',
+};
+
+const SLUTBESIKTNING_HTML = `
+<p>Slutbesiktningen är målsnöret i ett byggprojekt – det är här entreprenaden godkänns, ansvaret går över och garantitiden börjar ticka. Går den fel kan betalning hållas inne och tvister uppstå. Här är hur en slutbesiktning enligt AB 04 går till och vad du behöver ha ordning på.</p>
+
+<h2>Vad är en slutbesiktning?</h2>
+<p>En slutbesiktning är en oberoende kontroll av att entreprenaden är utförd enligt kontraktet. Den utförs av en <strong>besiktningsman</strong> som ska vara oberoende i förhållande till båda parter och ha dokumenterad sakkunskap om entreprenadjuridik och byggteknik. Besiktningen regleras i <strong>AB 04 kap 7</strong> (och motsvarande i ABT 06).</p>
+
+<h2>Godkänd eller inte?</h2>
+<p>Enligt <strong>AB 04 kap 7 §12</strong> ska entreprenaden godkännas vid slutbesiktning om det inte föreligger fel. <strong>Fel av mindre betydelse som förekommer i begränsad omfattning hindrar dock inte godkännande</strong> – de noteras i stället för åtgärd. Vid slutsammanträdet meddelar besiktningsmannen om entreprenaden är godkänd eller inte.</p>
+
+<h2>Vad händer när entreprenaden godkänns?</h2>
+<ul>
+<li>Entreprenaden anses <strong>avlämnad</strong> och ansvaret går i huvudsak över till beställaren.</li>
+<li><strong>Garantitiden börjar löpa</strong> – fem år för entreprenörens arbetsprestation och två år för material och varor enligt AB 04.</li>
+<li><strong>Ansvarstiden</strong> är tio år från godkännandet och inleds med garantitiden.</li>
+<li>Noterade fel ska åtgärdas inom överenskommen tid.</li>
+</ul>
+
+<h2>Så förbereder du dig inför slutbesiktningen</h2>
+<ol>
+<li>Se till att egenkontroller är gjorda och dokumenterade – <a href="/sv/blog/egenkontroll">egenkontroll</a> är ofta det som styrker kvaliteten.</li>
+<li>Ha <a href="/sv/blog/byggdagbok">byggdagboken</a> och ÄTA-underlag i ordning.</li>
+<li>Åtgärda kända brister innan besiktningen.</li>
+<li>Samla ritningar, intyg och provningsprotokoll som ska visas.</li>
+</ol>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Bristfällig dokumentation.</strong> Utan egenkontroller och dagbok blir det svårt att styrka utförandet.</li>
+<li><strong>Oåtgärdade brister.</strong> Många små fel kan sänka intrycket även om de inte hindrar godkännande.</li>
+<li><strong>Otydligt om garantitiden.</strong> Ha koll på när den börjar och vad som gäller vid garantibesiktning.</li>
+<li><strong>Glömma ÄTA.</strong> Se till att godkända ÄTA är dokumenterade och fakturerade.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vem utför slutbesiktningen?</h3>
+<p>En oberoende besiktningsman med sakkunskap om entreprenadjuridik och byggteknik.</p>
+<h3>Vad händer om det finns fel?</h3>
+<p>Fel av mindre betydelse i begränsad omfattning hindrar inte godkännande – de noteras för åtgärd. Väsentliga fel kan leda till att entreprenaden inte godkänns.</p>
+<h3>När börjar garantitiden?</h3>
+<p>När entreprenaden godkänns vid slutbesiktningen. Enligt AB 04 är den fem år för arbetet och två år för material; ansvarstiden är tio år.</p>
+
+<h2>Kom igång</h2>
+<p>Gå in i slutbesiktningen med ordning på dokumentationen. <a href="/sv/blog/egenkontroll">Läs om egenkontroll</a>, för <a href="/sv/blog/byggdagbok">byggdagbok</a> i ByggExp eller <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06</a> · <a href="/sv/blog/egenkontroll">Egenkontroll</a> · <a href="/sv/blog/byggdagbok">Byggdagbok</a></p>
+`.trim();
+
+const SLUTBESIKTNING: BlogPost = {
+  _id: 'code-slutbesiktning',
+  title: 'Slutbesiktning enligt AB 04 – så går den till',
+  slug: 'slutbesiktning',
+  locale: 'sv',
+  excerpt:
+    'Hur en slutbesiktning enligt AB 04 kap 7 går till: besiktningsmannens roll, när entreprenaden godkänns, när garantitiden börjar och hur du förbereder dig.',
+  tag: 'Entreprenadjuridik',
+  coverImageUrl: '/landing/features/2uppgift.webp',
+  contentHtml: SLUTBESIKTNING_HTML,
+  seoTitle: 'Slutbesiktning enligt AB 04 – godkännande & garantitid | ByggExp',
+  seoDescription:
+    'Slutbesiktning enligt AB 04 kap 7: besiktningsman, godkännande (fel av mindre betydelse hindrar inte), när garantitiden börjar och hur du förbereder dig.',
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-12T18:00:00.000Z',
+  createdAt: '2026-08-12T18:00:00.000Z',
+  updatedAt: '2026-08-12T18:00:00.000Z',
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
@@ -835,6 +1055,9 @@ const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
     AB04,
     AMP,
     ATTESTERING,
+    FRANVARO,
+    HETA_ARBETEN,
+    SLUTBESIKTNING,
   ],
   en: [],
   ru: [],

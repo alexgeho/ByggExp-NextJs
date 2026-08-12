@@ -116,9 +116,109 @@ const BYGGDAGBOK: BlogPost = {
   updatedAt: '2026-08-12T09:00:00.000Z',
 };
 
+const EGENKONTROLL_HTML = `
+<p>Egenkontroll är det som styrker att jobbet är gjort rätt – och det som räddar dig när någon i efterhand ifrågasätter kvaliteten. Men ordet betyder faktiskt två olika saker, och det är här många går vilse. Här reder vi ut vad en egenkontroll är, vad den ska innehålla, hur den hänger ihop med KMA – och hur du gör den utan pappersstrul.</p>
+
+<p><a href="/sv/verktyg/egenkontroll-mall">Ladda ner en gratis egenkontroll-mall (PDF) →</a></p>
+
+<h2>Vad är en egenkontroll?</h2>
+<p>En egenkontroll är din egen dokumenterade kontroll av att arbetet uppfyller kraven – ritningar, Boverkets byggregler (BBR) och gällande branschregler. Den ska innehålla tillräckligt för att någon annan ska kunna följa <em>vad</em> som kontrollerades, <em>mot vilket krav</em> och <em>med vilket resultat</em>. Egenkontrollen är ofta det enda beviset på att ett dolt moment – till exempel tätskikt eller infästning – faktiskt utfördes korrekt.</p>
+
+<h2>Två olika &quot;egenkontroll&quot; – blanda inte ihop dem</h2>
+<p>Detta är den vanligaste förvirringen, och Boverket varnar själva för den:</p>
+<ul>
+<li><strong>Entreprenörens egenkontroll (avtalsrätt).</strong> Din kontroll av att det du bygger uppfyller kontraktshandlingar och regler. Det är den här du gör dagligen på bygget.</li>
+<li><strong>Byggherrens egenkontroll enligt PBL (offentlig rätt).</strong> En del av <strong>kontrollplanen enligt plan- och bygglagen (PBL) 10 kap</strong>. Ansvaret ligger på byggherren, med stöd av en <strong>kontrollansvarig (KA)</strong>, och handlar om att styrka kraven mot samhället i bygglovsprocessen.</li>
+</ul>
+<p>Samma ord, olika syfte. I praktiken används ofta entreprenörens egenkontroller som den metod som anges i kontrollplanen för att styrka att kraven är uppfyllda.</p>
+
+<h2>Vad ska en egenkontroll innehålla?</h2>
+<p>En användbar egenkontroll har alltid dessa delar per kontrollpunkt:</p>
+<ul>
+<li><strong>Kontrollpunkt</strong> – vad som kontrolleras (t.ex. infästning, fall mot brunn, fuktkvot)</li>
+<li><strong>Krav / mot vad</strong> – ritning, BBR, monteringsanvisning eller branschregel</li>
+<li><strong>Kontrollmetod</strong> – mätning, okulär kontroll, protokoll</li>
+<li><strong>Resultat</strong> – godkänd / ej godkänd (gärna med värde, t.ex. &quot;fuktkvot 8 %&quot;)</li>
+<li><strong>Avvikelse och åtgärd</strong> – om något inte höll måttet, vad gjordes</li>
+<li><strong>Datum och signatur</strong> – vem kontrollerade och när</li>
+<li><strong>Foto</strong> – särskilt viktigt för moment som byggs in och inte syns sedan</li>
+</ul>
+
+<h2>Exempel: en ifylld egenkontroll</h2>
+<p>Så här kan en rad i en egenkontroll se ut:</p>
+<ul>
+<li><strong>Kontrollpunkt:</strong> Tätskikt i våtrum, golv</li>
+<li><strong>Krav:</strong> BBR + tillverkarens monteringsanvisning, GVK</li>
+<li><strong>Metod:</strong> Okulär + kontroll av skikttjocklek och uppvik</li>
+<li><strong>Resultat:</strong> Godkänd – uppvik 150 mm, inga blåsor</li>
+<li><strong>Avvikelse:</strong> Ingen</li>
+<li><strong>Datum / sign:</strong> 2026-05-14 / A. Nilsson</li>
+<li><strong>Foto:</strong> 2 bilder på färdigt tätskikt före plattsättning</li>
+</ul>
+
+<h2>Egenkontroll och KMA</h2>
+<p><strong>KMA</strong> står för <strong>Kvalitet, Miljö och Arbetsmiljö</strong>. Egenkontrollen är kvalitetsdelen i praktiken – det är så du visar att arbetet håller måttet. Skilj på nivåerna: en <strong>KMA-handbok</strong> beskriver hur företaget arbetar med KMA övergripande, medan en <strong>KMA-plan</strong> beskriver hur KMA hanteras i ett specifikt projekt. Egenkontroller, riskbedömningar och avvikelsehantering är verktygen som fyller planen med innehåll.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Kryssa &quot;godkänd&quot; utan krav.</strong> En bock utan referens till ritning eller BBR bevisar ingenting.</li>
+<li><strong>Fylla i i efterhand.</strong> Egenkontroll som skrivs vid slutbesiktning tappar sitt värde – gör den när momentet utförs.</li>
+<li><strong>Inga foton på dolda moment.</strong> Tätskikt, armering och infästningar byggs in – utan bild finns inget bevis.</li>
+<li><strong>Blanda ihop med kontrollplanen enligt PBL.</strong> De hänger ihop men har olika ansvar och syfte.</li>
+<li><strong>Samma mall till allt.</strong> Kontrollpunkterna ska matcha det aktuella momentet, inte en generisk lista.</li>
+</ul>
+
+<h2>Så gör du egenkontroll i ByggExp</h2>
+<ol>
+<li>Välj projekt och lägg till en egenkontroll för aktuellt moment.</li>
+<li>Använd färdiga kontrollpunkter eller lägg till egna med krav och metod.</li>
+<li>Markera resultat, notera eventuell avvikelse och åtgärd.</li>
+<li>Lägg till foton direkt – särskilt på det som byggs in.</li>
+<li>Signera och spara – allt ligger tidsstämplat i projektet och kan exporteras som underlag.</li>
+</ol>
+<p>Vill du börja enkelt? <a href="/sv/verktyg/egenkontroll-mall">Ladda ner vår gratis egenkontroll-mall</a> och fyll i den online – du får en färdig PDF.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är egenkontroll ett lagkrav?</h3>
+<p>För åtgärder som kräver en kontrollplan enligt PBL är egenkontroll normalt den metod som anges för att styrka kraven. I entreprenader regleras egenkontroll dessutom ofta i kontraktshandlingarna. Oavsett är den din bästa försäkring om kvaliteten ifrågasätts.</p>
+<h3>Vad är skillnaden mellan egenkontroll och kontrollplan?</h3>
+<p>Kontrollplanen enligt PBL är byggherrens övergripande plan för vilka kontroller som ska göras i projektet. Egenkontrollerna är de faktiska, dokumenterade kontrollerna som ofta utförs av entreprenören och som styrker punkterna i planen.</p>
+<h3>Vem ska skriva egenkontrollen?</h3>
+<p>Den som utför arbetet ansvarar för sin egenkontroll. På bygget är det oftast hantverkaren eller arbetsledaren för respektive moment.</p>
+<h3>Vad är skillnaden mellan egenkontroll och KMA?</h3>
+<p>KMA är helheten – kvalitet, miljö och arbetsmiljö. Egenkontrollen är ett av verktygen inom kvalitetsdelen, det du använder för att dokumentera att kraven är uppfyllda.</p>
+
+<h2>Kom igång</h2>
+<p>Gör egenkontrollen där arbetet sker, med foto och signatur, kopplad till projektet. <a href="/sv/verktyg/egenkontroll-mall">Ladda ner gratis egenkontroll-mall (PDF)</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<p>Relaterade mallar: <a href="/sv/verktyg/byggdagbok-mall">Byggdagbok-mall</a> · <a href="/sv/blog/byggdagbok">Guide: byggdagbok</a></p>
+`.trim();
+
+const EGENKONTROLL: BlogPost = {
+  _id: 'code-egenkontroll',
+  title: 'Egenkontroll i bygg – vad den ska innehålla, mall och exempel',
+  slug: 'egenkontroll',
+  locale: 'sv',
+  excerpt:
+    'Vad en egenkontroll ska innehålla, de två betydelserna av ordet, kopplingen till KMA och kontrollplan enligt PBL – plus ifyllt exempel och gratis mall.',
+  tag: 'Egenkontroll',
+  coverImageUrl: '/landing/verktyg/egenkontroll-preview.webp',
+  contentHtml: EGENKONTROLL_HTML,
+  seoTitle: 'Egenkontroll bygg – innehåll, mall och exempel | ByggExp',
+  seoDescription:
+    'Vad ska en egenkontroll innehålla? Skillnaden mot kontrollplan enligt PBL och KMA, ett ifyllt exempel och en gratis egenkontroll-mall (PDF).',
+  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-12T10:00:00.000Z',
+  createdAt: '2026-08-12T10:00:00.000Z',
+  updatedAt: '2026-08-12T10:00:00.000Z',
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
-  sv: [BYGGDAGBOK],
+  sv: [BYGGDAGBOK, EGENKONTROLL],
   en: [],
   ru: [],
 };

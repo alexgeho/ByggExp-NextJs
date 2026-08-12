@@ -6,6 +6,7 @@
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
   'byggdagbok',
+  'egenkontroll',
 ]);
 
 export function isSvOnlyArticle(slug: string): boolean {

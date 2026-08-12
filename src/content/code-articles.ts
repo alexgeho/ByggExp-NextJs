@@ -216,9 +216,109 @@ const EGENKONTROLL: BlogPost = {
   updatedAt: '2026-08-12T10:00:00.000Z',
 };
 
+const ATA_HTML = `
+<p>ÄTA-arbeten är där byggföretag tappar mest pengar helt i onödan. Jobbet blir gjort – men utan rätt papper och rätt underrättelse i tid uteblir betalningen. Här går vi igenom vad ÄTA är, skillnaden mellan föreskriven och likställd ÄTA, vad AB 04 kräver för att du ska få betalt, och hur du dokumenterar det rätt.</p>
+
+<p><a href="/sv/verktyg/byggdagbok-mall">Logga ÄTA löpande med vår gratis byggdagbok-mall →</a></p>
+
+<h2>Vad är ÄTA-arbeten?</h2>
+<p>ÄTA står för <strong>Ändrings-, Tilläggs- och Avgående arbeten</strong> – arbeten som tillkommer, ändras eller utgår jämfört med det ursprungliga kontraktet. De regleras i <strong>AB 04 kap 2</strong> (och motsvarande i ABT 06). Eftersom ÄTA påverkar både pris och tid är det just här de flesta tvister uppstår.</p>
+
+<h2>Föreskriven och likställd ÄTA</h2>
+<ul>
+<li><strong>Föreskriven ÄTA (AB 04 kap 2 §3).</strong> Beställaren har rätt att beställa ändringar och tillägg. Det är en uttrycklig beställning – &quot;gör även detta&quot;.</li>
+<li><strong>Likställd ÄTA (AB 04 kap 2 §4).</strong> Arbete som inte beställts uttryckligen men som <em>jämställs</em> med ÄTA, till exempel för att förhållandena på arbetsplatsen avviker från vad handlingarna angav. Det är ofta här pengar går förlorade.</li>
+</ul>
+
+<h2>Så får du betalt – underrättelse i tid</h2>
+<p>Nyckeln till att få betalt för likställd ÄTA är att <strong>underrätta beställaren utan dröjsmål</strong>:</p>
+<ul>
+<li>Bedömer du att kostnaden överstiger <strong>gränsbeloppet</strong> (som utgångspunkt ett halvt prisbasbelopp om inget annat avtalats) ska du inhämta beställarens syn <em>innan</em> du utför arbetet.</li>
+<li>Ligger kostnaden under gränsbeloppet får du påbörja arbetet direkt, men måste underrätta beställaren utan dröjsmål efteråt.</li>
+<li><strong>Uteblir underrättelsen kan du förlora rätten till ersättning</strong> – även om arbetet faktiskt utförts.</li>
+</ul>
+<p>Viktigt: en signerad dagbok bevisar i sig inte att ett ÄTA-arbete är beställt och godkänt. Dagboken är ett bra stöd, men ÄTA behöver en tydlig underrättelse/beställning för sig.</p>
+
+<h2>Vad en ÄTA ska innehålla</h2>
+<ul>
+<li><strong>Projekt och datum</strong></li>
+<li><strong>Beskrivning</strong> av arbetet – vad, var och varför</li>
+<li><strong>Typ</strong> – ändring, tillägg eller avgående, föreskriven eller likställd</li>
+<li><strong>Mängd och à-pris</strong> eller uppskattad kostnad</li>
+<li><strong>Påverkan på tidplanen</strong> (begär tidsförlängning när det behövs)</li>
+<li><strong>Vem som beställt / underrättats</strong> och när</li>
+<li><strong>Foton</strong> som styrker behovet</li>
+</ul>
+
+<h2>Exempel: en ifylld ÄTA</h2>
+<ul>
+<li><strong>Projekt:</strong> Nybyggnad villa, Bäckvägen 12 · 2026-05-14</li>
+<li><strong>Typ:</strong> Tilläggsarbete (föreskriven ÄTA)</li>
+<li><strong>Beskrivning:</strong> Extra eluttag i garage, 3 st, på beställarens begäran</li>
+<li><strong>Mängd / à-pris:</strong> 3 st × 850 kr = 2 550 kr exkl. moms</li>
+<li><strong>Tid:</strong> Ingen påverkan på tidplan</li>
+<li><strong>Beställd av:</strong> beställaren via mejl 2026-05-14, ÄTA nr 4</li>
+</ul>
+
+<h2>Vanliga misstag som kostar pengar</h2>
+<ul>
+<li><strong>Muntliga beställningar.</strong> &quot;Fixa det där också&quot; räcker inte – få det skriftligt.</li>
+<li><strong>Ingen underrättelse i tid.</strong> Vid likställd ÄTA är det just den uteblivna underrättelsen som fäller dig.</li>
+<li><strong>Förlita sig på dagbokssignering.</strong> En signerad dagbok bevisar inte att ÄTA är godkänt.</li>
+<li><strong>Glömma tidsförlängning.</strong> Kräv tid samtidigt som pengar när arbetet påverkar tidplanen.</li>
+<li><strong>Fakturera ÄTA otydligt.</strong> Redovisa varje ÄTA som en egen, spårbar post.</li>
+</ul>
+
+<h2>Så hanterar du ÄTA i ByggExp</h2>
+<ol>
+<li>Notera ÄTA direkt i projektet när den uppstår – med beskrivning, mängd och pris.</li>
+<li>Koppla foton och beställarens mejl/underrättelse som underlag.</li>
+<li>För in det löpande i byggdagboken så du har en tidsstämplad historik.</li>
+<li>Ta med godkända ÄTA på fakturan som tydliga, separata rader.</li>
+</ol>
+<p>Vill du börja enkelt? <a href="/sv/verktyg/byggdagbok-mall">Logga ÄTA i byggdagbok-mallen</a> och håll allt samlat och daterat.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad betyder ÄTA?</h3>
+<p>Ändrings-, Tilläggs- och Avgående arbeten – arbeten som ändras, tillkommer eller utgår jämfört med kontraktet. De regleras i AB 04 kap 2.</p>
+<h3>Måste en ÄTA vara skriftlig?</h3>
+<p>För din egen säkerhet: ja. Även om arbete avtalas under resans gång bör beställningen och underrättelsen dokumenteras skriftligt, annars blir det svårt att få betalt vid en tvist.</p>
+<h3>Vad är skillnaden mellan föreskriven och likställd ÄTA?</h3>
+<p>Föreskriven ÄTA (kap 2 §3) är en uttrycklig beställning från beställaren. Likställd ÄTA (kap 2 §4) är arbete som jämställs med ÄTA på grund av avvikande förhållanden, utan uttrycklig beställning.</p>
+<h3>Kan jag förlora rätten till betalning för ÄTA?</h3>
+<p>Ja. Vid likställd ÄTA kan utebliven underrättelse &quot;utan dröjsmål&quot; leda till att rätten till ersättning går förlorad – även om arbetet utförts.</p>
+
+<h2>Kom igång</h2>
+<p>Sluta jobba gratis. Dokumentera varje ÄTA skriftligt, underrätta i tid och ta med den på fakturan. <a href="/sv/verktyg/byggdagbok-mall">Ladda ner gratis byggdagbok-mall</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/byggdagbok">Guide: byggdagbok</a> · <a href="/sv/verktyg/offert-mall">Offert-mall</a> · <a href="/sv/verktyg/faktura-mall">Faktura-mall</a></p>
+`.trim();
+
+const ATA: BlogPost = {
+  _id: 'code-ata-arbeten',
+  title: 'ÄTA-arbeten – regler, exempel och hur du får betalt',
+  slug: 'ata-arbeten',
+  locale: 'sv',
+  excerpt:
+    'Vad ÄTA-arbeten är, skillnaden mellan föreskriven och likställd ÄTA enligt AB 04, hur du underrättar i tid för att få betalt – plus ifyllt exempel och vanliga misstag.',
+  tag: 'ÄTA',
+  coverImageUrl: '/landing/features/9ekonomi.webp',
+  contentHtml: ATA_HTML,
+  seoTitle: 'ÄTA-arbeten enligt AB 04 – regler, exempel & mall | ByggExp',
+  seoDescription:
+    'ÄTA-arbeten enligt AB 04 kap 2: föreskriven vs likställd ÄTA, underrättelse utan dröjsmål och hur du får betalt. Ifyllt exempel och vanliga misstag.',
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-12T11:00:00.000Z',
+  createdAt: '2026-08-12T11:00:00.000Z',
+  updatedAt: '2026-08-12T11:00:00.000Z',
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
-  sv: [BYGGDAGBOK, EGENKONTROLL],
+  sv: [BYGGDAGBOK, EGENKONTROLL, ATA],
   en: [],
   ru: [],
 };

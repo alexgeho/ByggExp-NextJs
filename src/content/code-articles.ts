@@ -43,6 +43,30 @@ const BYGGDAGBOK_HTML = `
 </ul>
 <p>Du behöver inte fylla i allt varje dag – men det som är av betydelse för just den dagen ska med.</p>
 
+<h2>Exempel: en ifylld byggdagbok</h2>
+<p>Så här kan en tydlig notering se ut för en dag – kort, men med rätt saker:</p>
+<ul>
+<li><strong>Datum:</strong> 2026-05-14 · Projekt: Nybyggnad villa, Bäckvägen 12</li>
+<li><strong>Väder:</strong> Molnigt, 9 °C, uppehåll</li>
+<li><strong>Bemanning:</strong> 3 snickare + 1 lärling (kl 07–16)</li>
+<li><strong>Utfört arbete:</strong> Rest ytterväggar plan 2, monterat takstolar sektion A–C</li>
+<li><strong>Leveranser:</strong> Takstolar (28 st) kl 08:30 – 2 st skadade, reklamerade</li>
+<li><strong>Hinder:</strong> Kranbil försenad 2 h → takmontage flyttat till eftermiddag</li>
+<li><strong>ÄTA:</strong> Beställaren beställde extra eluttag i garage (ÄTA nr 4)</li>
+<li><strong>Kontroller:</strong> Egenkontroll infästning takstolar godkänd</li>
+<li><strong>Foton:</strong> 4 bilder på monterade takstolar</li>
+</ul>
+<p>Poängen är inte att skriva långt – utan att skriva rätt. En utomstående ska kunna förstå dagen i efterhand.</p>
+
+<h2>Vanliga misstag som gör dagboken svag</h2>
+<ul>
+<li><strong>Skriva i efterhand.</strong> En dagbok som förs veckor senare väger lätt vid en tvist – för den löpande, samma dag.</li>
+<li><strong>För vaga noteringar.</strong> &quot;Jobbat på taket&quot; säger inget. Skriv vad, var och hur mycket.</li>
+<li><strong>Glömma hinder och ÄTA.</strong> Det är förseningar, störningar och ändringar som kostar pengar – de måste med.</li>
+<li><strong>Lösa lappar.</strong> De försvinner. Håll allt samlat, tidsstämplat och kopplat till projektet.</li>
+<li><strong>Inga foton.</strong> En bild styrker läget bättre än en mening.</li>
+</ul>
+
 <h2>Så för du byggdagbok i ByggExp</h2>
 <p>I ByggExp för du dagboken direkt i mobilen, kopplad till rätt projekt, så att inget skrivs av på lappar i efterhand:</p>
 <ol>

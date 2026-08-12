@@ -57,9 +57,9 @@ export default function ByggdagbokMallPage() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/byggdagbok-mall`;
 
-  const title = 'Byggdagbok mall – gratis mall & guide | ByggExp';
+  const title = 'Byggdagbok mall – gratis PDF & Excel | ByggExp';
   const description =
-    'Ladda ner en gratis byggdagbok-mall eller fyll i direkt online och spara som PDF. Guide till vad en byggdagbok ska innehålla enligt AB 04 och AMA AF.';
+    'Ladda ner en gratis byggdagbok-mall som PDF eller Excel, eller fyll i direkt online. Guide till vad en byggdagbok ska innehålla enligt AB 04 och AMA AF.';
 
   return (
     <>
@@ -92,7 +92,7 @@ export default function ByggdagbokMallPage() {
       <LeadMagnetPage
         badge="Gratis mall"
         title="Byggdagbok – gratis mall att fylla i online"
-        intro="Med den här gratis byggdagbok-mallen dokumenterar du dagens arbete på några minuter: väder, bemanning, utfört arbete, avvikelser och ÄTA. Fyll i formuläret och ladda ner en färdig PDF – eller för byggdagbok digitalt i ByggExp."
+        intro="Med den här gratis byggdagbok-mallen dokumenterar du dagens arbete på några minuter: väder, bemanning, utfört arbete, avvikelser och ÄTA. Fyll i formuläret och ladda ner den som PDF eller Excel – eller för byggdagbok digitalt i ByggExp."
         tool={<ByggdagbokTool />}
         preview={
           <PreviewImage

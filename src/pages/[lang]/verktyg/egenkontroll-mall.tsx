@@ -60,9 +60,9 @@ export default function EgenkontrollMallPage() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/egenkontroll-mall`;
 
-  const title = 'Egenkontroll mall – gratis mall & guide | ByggExp';
+  const title = 'Egenkontroll mall – gratis PDF & Excel | ByggExp';
   const description =
-    'Ladda ner en gratis egenkontroll-mall för kvalitet, miljö och arbetsmiljö – eller fyll i online och spara som PDF. Guide till egenkontroll enligt PBL och BBR.';
+    'Ladda ner en gratis egenkontroll-mall för kvalitet, miljö och arbetsmiljö som PDF eller Excel – eller fyll i online. Guide till egenkontroll enligt PBL och BBR.';
 
   return (
     <>
@@ -95,7 +95,7 @@ export default function EgenkontrollMallPage() {
       <LeadMagnetPage
         badge="Gratis mall"
         title="Egenkontroll – gratis mall att fylla i online"
-        intro="Med den här gratis egenkontroll-mallen dokumenterar du kontrollpunkter för kvalitet, miljö och arbetsmiljö och laddar ner en färdig PDF att signera. Fyll i online – eller gör egenkontroller löpande i ByggExp."
+        intro="Med den här gratis egenkontroll-mallen dokumenterar du kontrollpunkter för kvalitet, miljö och arbetsmiljö och laddar ner den som PDF eller Excel. Fyll i online – eller gör egenkontroller löpande i ByggExp."
         tool={<EgenkontrollTool />}
         preview={
           <PreviewImage

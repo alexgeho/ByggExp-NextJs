@@ -109,12 +109,38 @@ export default function EgenkontrollTool() {
     }
   }
 
+  // CSV opens directly in Excel/Google Sheets (BOM keeps åäö correct).
+  function downloadCsv() {
+    const out: (string | number)[][] = [
+      ['Egenkontroll', title.trim() || ''],
+      ['Kategori', category],
+      ['Projekt', project.trim() || ''],
+      ['Ansvarig', responsible.trim() || ''],
+      ['Datum', date || ''],
+      [],
+      ['Kontrollpunkt', 'Resultat', 'Kommentar'],
+      ...rows.map((r) => [r.point || '', r.result, r.comment || '']),
+    ];
+    const csv = out
+      .map((cols) => cols.map((c) => `"${String(c ?? '').replace(/"/g, '""')}"`).join(';'))
+      .join('\r\n');
+    const blob = new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `egenkontroll-${(title.trim() || 'kontroll').replace(/\s+/g, '-').toLowerCase()}.csv`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  }
+
   return (
     <div className="lm-tool">
       <div className="lm-tool-head">
         <h2 className="lm-tool-title">Fyll i och ladda ner din egenkontroll</h2>
         <p className="lm-tool-sub">
-          Välj en färdig mall så fylls kontrollpunkterna i automatiskt – eller skriv egna. Ladda sedan ner en färdig egenkontroll som PDF att signera. Inget konto behövs.
+          Välj en färdig mall så fylls kontrollpunkterna i automatiskt – eller skriv egna. Ladda sedan ner din egenkontroll som PDF eller Excel. Inget konto behövs.
         </p>
       </div>
 
@@ -194,6 +220,9 @@ export default function EgenkontrollTool() {
         <div className="lm-tool-actions">
           <button type="button" className="lm-tool-secondary" onClick={addRow}>
             + Lägg till kontrollpunkt
+          </button>
+          <button type="button" className="lm-tool-secondary" onClick={downloadCsv}>
+            Ladda ner Excel
           </button>
           <button type="submit" className="lm-tool-button" disabled={busy}>
             {busy ? 'Skapar PDF…' : 'Ladda ner PDF'}

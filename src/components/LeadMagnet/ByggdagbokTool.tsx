@@ -102,12 +102,35 @@ export default function ByggdagbokTool() {
     }
   }
 
+  // CSV opens directly in Excel/Google Sheets (BOM keeps åäö correct).
+  function downloadCsv() {
+    const rows: (string | number)[][] = [
+      ['Byggdagbok', ''],
+      ['Skapad med', 'ByggExp – byggexp.se'],
+      [],
+      ...FIELDS.map((field) => [field.label, values[field.name]?.trim() || '']),
+    ];
+    const csv = rows
+      .map((cols) => cols.map((c) => `"${String(c ?? '').replace(/"/g, '""')}"`).join(';'))
+      .join('\r\n');
+    const blob = new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    const stamp = (values.date || '').replace(/[^0-9-]/g, '') || 'utan-datum';
+    link.href = url;
+    link.download = `byggdagbok-${stamp}.csv`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  }
+
   return (
     <div className="lm-tool">
       <div className="lm-tool-head">
         <h2 className="lm-tool-title">Fyll i och ladda ner din byggdagbok</h2>
         <p className="lm-tool-sub">
-          Fyll i dagens uppgifter nedan och ladda ner en färdig PDF att spara eller skriva ut. Inget konto behövs.
+          Fyll i dagens uppgifter nedan och ladda ner den som PDF eller Excel att spara, skriva ut eller redigera. Inget konto behövs.
         </p>
       </div>
 
@@ -156,6 +179,9 @@ export default function ByggdagbokTool() {
         <div className="lm-tool-actions">
           <button type="submit" className="lm-tool-button" disabled={busy}>
             {busy ? 'Skapar PDF…' : 'Ladda ner PDF'}
+          </button>
+          <button type="button" className="lm-tool-secondary" onClick={downloadCsv}>
+            Ladda ner Excel
           </button>
         </div>
       </form>

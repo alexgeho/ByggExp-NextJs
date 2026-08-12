@@ -316,9 +316,88 @@ const ATA: BlogPost = {
   updatedAt: '2026-08-12T11:00:00.000Z',
 };
 
+const PERSONALLIGGARE_HTML = `
+<p>Personalliggare är ett lagkrav i byggbranschen – och att sköta den slarvigt kan bli dyrt. Ett oanmält besök från Skatteverket där personer saknas i liggaren kostar direkt i kontrollavgift. Här går vi igenom vem som måste ha personalliggare, vad som ska registreras, vad ett misstag kostar och hur du sköter den digitalt utan krångel.</p>
+
+<h2>Vad är en personalliggare?</h2>
+<p>En personalliggare är en förteckning över vilka som är och har varit verksamma på arbetsplatsen, och när. I byggbranschen ska den vara <strong>elektronisk</strong> och kunna visas för Skatteverket vid ett besök. Syftet är att motverka svartarbete – liggaren visar vem som faktiskt var på plats en viss dag och tid.</p>
+
+<h2>Vem måste ha personalliggare?</h2>
+<p>Kravet gäller flera branscher (bygg, fordonsservice, skönhet/kroppsvård, restaurang, livsmedels- och tobaksgrossist samt tvätteri). I <strong>byggbranschen</strong> krävs elektronisk personalliggare när byggverksamheten bedrivs yrkesmässigt och den totala kostnaden på byggarbetsplatsen kan antas <strong>överstiga fyra prisbasbelopp</strong>. För 2026 är prisbasbeloppet 59 200 kr, vilket ger en gräns på <strong>236 800 kr</strong>.</p>
+
+<h2>Undantag</h2>
+<ul>
+<li>Bygge där den totala byggkostnaden på arbetsplatsen inte förväntas överstiga fyra prisbasbelopp.</li>
+<li>När byggherren är en privatperson som inte bedriver bygg-, rivnings- eller markarbete yrkesmässigt.</li>
+</ul>
+
+<h2>Vem ansvarar – byggherre eller entreprenör?</h2>
+<p><strong>Byggherren</strong> ansvarar för att anmäla till Skatteverket när och var byggarbetet påbörjas, att tillhandahålla utrustning så att en elektronisk personalliggare kan föras, och för att en samlad liggare finns på arbetsplatsen. <strong>Varje entreprenör</strong> ansvarar i sin tur för att föra och hålla sin del av liggaren tillgänglig – sina egna och sin inhyrda personal. Byggherren kan överlåta hela ansvaret till en självständig uppdragstagare, till exempel huvudentreprenören.</p>
+
+<h2>Måste man ha ID06?</h2>
+<p>Nej. Det finns inget lagkrav på att använda just ID06-kort. Kravet är att personalliggaren är elektronisk och visar vem som är och har varit på plats. ID06 är en vanlig teknisk lösning för att uppfylla kravet, men du kan använda andra system som gör samma sak.</p>
+
+<h2>Vad ska registreras?</h2>
+<ul>
+<li>Identitetsuppgifter för var och en som är verksam på arbetsplatsen (namn och personnummer/samordningsnummer)</li>
+<li>När varje person påbörjar och avslutar ett arbetspass</li>
+<li>Uppgifterna ska registreras löpande och kunna visas för Skatteverket direkt vid ett besök</li>
+</ul>
+
+<h2>Vad kostar det att missa personalliggaren?</h2>
+<p>Skatteverket får göra oannonserade kontrollbesök och ta ut <strong>kontrollavgift</strong>:</p>
+<ul>
+<li><strong>12 500 kr</strong> om personalliggare saknas eller inte kan visas.</li>
+<li><strong>+ 2 500 kr</strong> för varje person som är verksam men inte är antecknad i liggaren.</li>
+<li><strong>25 000 kr</strong> om byggherren inte har anmält byggstart och plats till Skatteverket.</li>
+</ul>
+<p>Avgifterna kan tas ut vid upprepade besök – slarv blir snabbt dyrt.</p>
+
+<h2>Personalliggare och byggdagbok – inte samma sak</h2>
+<p>Personalliggaren visar <em>vem</em> som var på plats (närvaro), medan <a href="/sv/blog/byggdagbok">byggdagboken</a> dokumenterar <em>vad</em> som gjordes (arbete, väder, avvikelser, ÄTA). Du behöver oftast båda – de fyller olika syften och ersätter inte varandra.</p>
+
+<h2>Så sköter du personalliggare digitalt i ByggExp</h2>
+<p>I ByggExp checkar medarbetarna in och ut på plats, kopplat till rätt projekt, så att närvaron registreras löpande och alltid kan visas upp. Du ser i realtid vilka som är på arbetsplatsen, slipper papperslistor och har underlaget redo om Skatteverket dyker upp. Eftersom närvaro, tid, dagbok och ekonomi ligger i samma app hänger allt ihop – <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">läs mer om närvaro och incheckning</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>När krävs personalliggare på ett bygge?</h3>
+<p>När byggverksamheten bedrivs yrkesmässigt och den totala byggkostnaden på arbetsplatsen kan antas överstiga fyra prisbasbelopp (236 800 kr för 2026).</p>
+<h3>Vem ansvarar för personalliggaren?</h3>
+<p>Byggherren ansvarar för anmälan, utrustning och en samlad liggare, medan varje entreprenör för sin egen del. Byggherren kan överlåta ansvaret till huvudentreprenören.</p>
+<h3>Måste jag använda ID06?</h3>
+<p>Nej. Kravet är en elektronisk personalliggare som visar närvaro – ID06 är en vanlig lösning men inte ett lagkrav.</p>
+<h3>Vad blir kontrollavgiften om liggaren saknas?</h3>
+<p>12 500 kr, plus 2 500 kr för varje person som är verksam men inte antecknad. Saknas anmälan om byggstart är avgiften 25 000 kr.</p>
+
+<h2>Kom igång</h2>
+<p>Slipp papperslistor och kontrollavgifter. Registrera närvaron digitalt, kopplad till projektet, och ha allt redo för Skatteverket. <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">Se hur närvaro fungerar i ByggExp</a> eller <a href="/sv/contact">boka en demo</a>.</p>
+`.trim();
+
+const PERSONALLIGGARE: BlogPost = {
+  _id: 'code-personalliggare',
+  title: 'Personalliggare i byggbranschen – krav, ansvar och avgifter',
+  slug: 'personalliggare',
+  locale: 'sv',
+  excerpt:
+    'Vem måste ha personalliggare, vad ska registreras, vad kostar en kontrollavgift och behövs ID06? Allt om personalliggare i byggbranschen 2026 – och hur du sköter den digitalt.',
+  tag: 'Personalliggare',
+  coverImageUrl: '/landing/features/3personal.webp',
+  contentHtml: PERSONALLIGGARE_HTML,
+  seoTitle: 'Personalliggare bygg – krav, ansvar & avgifter 2026 | ByggExp',
+  seoDescription:
+    'Personalliggare i byggbranschen: vem måste ha den, beloppsgränsen (4 prisbasbelopp), ansvar byggherre/entreprenör, ID06 och kontrollavgift. Guide för 2026.',
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-12T12:00:00.000Z',
+  createdAt: '2026-08-12T12:00:00.000Z',
+  updatedAt: '2026-08-12T12:00:00.000Z',
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
-  sv: [BYGGDAGBOK, EGENKONTROLL, ATA],
+  sv: [BYGGDAGBOK, EGENKONTROLL, ATA, PERSONALLIGGARE],
   en: [],
   ru: [],
 };

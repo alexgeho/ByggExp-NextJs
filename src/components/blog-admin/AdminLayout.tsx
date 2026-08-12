@@ -12,6 +12,23 @@ import type { BlogAdminSession } from '../../types/blog';
 
 const ALLOWED_ROLES = new Set(['superadmin', 'companyAdmin']);
 
+// Local development only: skip the login gate so the admin UI is fully
+// navigable without a password. Compiled out of production builds
+// (process.env.NODE_ENV is 'production' there). Live CMS data still needs a
+// real session — logging in once persists a token that overrides this.
+const DEV_ADMIN_BYPASS = process.env.NODE_ENV === 'development';
+const DEV_SESSION: BlogAdminSession = {
+  access_token: 'dev',
+  refresh_token: 'dev',
+  user: {
+    id: 'dev',
+    email: 'dev@localhost',
+    name: 'Dev (local)',
+    role: 'superadmin',
+    companyId: null,
+  },
+};
+
 type AdminLayoutProps = {
   children: ReactNode;
 };
@@ -26,7 +43,8 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setSession(readPersistedBlogAdminSession());
+    const existing = readPersistedBlogAdminSession();
+    setSession(existing ?? (DEV_ADMIN_BYPASS ? DEV_SESSION : null));
     setHydrated(true);
   }, []);
 

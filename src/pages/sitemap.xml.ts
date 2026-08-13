@@ -2,6 +2,7 @@ import type { GetServerSideProps } from 'next';
 
 import { fetchPublishedBlogPosts } from '../lib/blog-api';
 import { getCodeArticles } from '../content/code-articles';
+import { VERKTYG_GROUPS } from '../content/verktyg-list';
 import { landingLanguageCodes } from '../locales/languages';
 
 // Static routes that exist under every landing locale (besides the home page).
@@ -16,46 +17,13 @@ const LOCALE_STATIC_PATHS = [
 ];
 
 // Swedish-market-only pages (lead-magnet tools) — served on /sv only.
+// Derived from the single tool inventory (content/verktyg-list.ts) so adding a
+// tool there automatically adds it here; 'verktyg' is the hub page itself.
 const SV_ONLY_PATHS = [
   'verktyg',
-  'verktyg/byggdagbok-mall',
-  'verktyg/tidrapport-mall',
-  'verktyg/egenkontroll-mall',
-  'verktyg/sla-ihop-pdf',
-  'verktyg/dela-pdf',
-  'verktyg/bild-till-pdf',
-  'verktyg/rotera-pdf',
-  'verktyg/ta-bort-sidor-pdf',
-  'verktyg/vattenstampel-pdf',
-  'verktyg/signera-pdf',
-  'verktyg/pdf-till-jpg',
-  'verktyg/rot-avdrag-kalkylator',
-  'verktyg/moms-kalkylator',
-  'verktyg/timpris-kalkylator',
-  'verktyg/paslag-marginal-kalkylator',
-  'verktyg/offert-mall',
-  'verktyg/faktura-mall',
-  'verktyg/ata-mall',
-  'verktyg/betong-kalkylator',
-  'verktyg/tak-kalkylator',
-  'verktyg/farg-kalkylator',
-  'verktyg/kvadratmeter-kalkylator',
-  'verktyg/golv-kalkylator',
-  'verktyg/tapet-kalkylator',
-  'verktyg/reglar-kalkylator',
-  'verktyg/grus-kalkylator',
-  'verktyg/gips-kalkylator',
-  'verktyg/isolering-kalkylator',
-  'verktyg/trappa-kalkylator',
-  'verktyg/fall-kalkylator',
-  'verktyg/murbruk-kalkylator',
-  'verktyg/skruv-kalkylator',
-  'verktyg/armering-kalkylator',
-  'verktyg/golvvarme-kalkylator',
-  'verktyg/trall-kalkylator',
-  'verktyg/staket-kalkylator',
-  'verktyg/takstolar-kalkylator',
-  'verktyg/kakelfix-kalkylator',
+  ...VERKTYG_GROUPS.flatMap((group) =>
+    group.items.map((item) => `verktyg/${item.slug}`),
+  ),
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };

@@ -18,21 +18,22 @@ import "../components/CTA/CTA.scss";
 import "../components/Footer/Footer.scss";
 import "../components/Contact/Contact.scss";
 
-// GA4 Measurement ID for byggexp.se. Loaded only in production so local dev
-// traffic doesn't pollute the analytics data.
+// GA4 Measurement ID for byggexp.se. Rendered unconditionally (so SSR and the
+// client agree — a NODE_ENV gate broke on the VPS where runtime NODE_ENV isn't
+// "production"). Dev traffic is kept out by only calling gtag('config') on the
+// live host, and Consent Mode defaults to denied until the visitor accepts.
 const GA_ID = "G-551T40R4WV";
+const GA_HOST = "byggexp.se";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      {process.env.NODE_ENV === "production" ? (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script id="ga4" strategy="afterInteractive">
-            {`window.dataLayer = window.dataLayer || [];
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="ga4" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('consent', 'default', {
   ad_storage: 'denied',
@@ -42,10 +43,10 @@ gtag('consent', 'default', {
   wait_for_update: 500
 });
 gtag('js', new Date());
-gtag('config', '${GA_ID}');`}
-          </Script>
-        </>
-      ) : null}
+if (location.hostname === '${GA_HOST}') {
+  gtag('config', '${GA_ID}');
+}`}
+      </Script>
       <Component {...pageProps} />
       <CookieConsent />
     </>

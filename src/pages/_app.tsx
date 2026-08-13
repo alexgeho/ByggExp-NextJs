@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import Script from "next/script";
 
+import CookieConsent from "../components/CookieConsent/CookieConsent";
 import 'quill/dist/quill.snow.css';
 import "../styles/globals.scss";
 import "../styles/blog.scss";
@@ -33,12 +34,20 @@ export default function App({ Component, pageProps }: AppProps) {
           <Script id="ga4" strategy="afterInteractive">
             {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  analytics_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  wait_for_update: 500
+});
 gtag('js', new Date());
 gtag('config', '${GA_ID}');`}
           </Script>
         </>
       ) : null}
       <Component {...pageProps} />
+      <CookieConsent />
     </>
   );
 }

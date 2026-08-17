@@ -25,10 +25,10 @@ const nextConfig = {
   // old (indexed) URL with the target instead of hitting a 404.
   async redirects() {
     return [
-      { source: "/sv/verktyg/skruv-kalkylator", destination: "/sv/verktyg/gips-kalkylator", permanent: true },
-      { source: "/sv/verktyg/armering-kalkylator", destination: "/sv/verktyg/betong-kalkylator", permanent: true },
-      { source: "/sv/verktyg/kakelfix-kalkylator", destination: "/sv/verktyg/golv-kalkylator", permanent: true },
-      { source: "/sv/verktyg/murbruk-kalkylator", destination: "/sv/verktyg", permanent: true },
+      { source: "/sv/verktyg/skruv-kalkylator", destination: "/sv/verktyg/gips-kalkylator", statusCode: 301 },
+      { source: "/sv/verktyg/armering-kalkylator", destination: "/sv/verktyg/betong-kalkylator", statusCode: 301 },
+      { source: "/sv/verktyg/kakelfix-kalkylator", destination: "/sv/verktyg/golv-kalkylator", statusCode: 301 },
+      { source: "/sv/verktyg/murbruk-kalkylator", destination: "/sv/verktyg", statusCode: 301 },
     ];
   },
   async headers() {

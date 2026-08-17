@@ -14,9 +14,11 @@ import { headerTranslations } from '../../../locales/header';
 const LOCALE = 'sv';
 
 const FAQ: LeadMagnetFaqItem[] = [
-  { question: 'Hur många gipsskivor behöver jag?', answer: 'Räkna väggytan i m², multiplicera med antal lager och lägg på spill. Dela sedan på skivans m². En vanlig skiva (1200 × 2600 mm) är ca 3,1 m².' },
-  { question: 'Hur stor är en gipsskiva?', answer: 'Vanliga mått är 1200 × 2600 mm (ca 3,1 m²) och 1200 × 2500 mm (3,0 m²). Ange skivans m² i kalkylatorn.' },
-  { question: 'Ska jag ha ett eller två lager?', answer: 'Två lager gips ger bättre ljud och brandmotstånd och krävs ibland enligt konstruktion. Välj antal lager i kalkylatorn.' },
+  { question: 'Vilket c/c-avstånd ska reglarna ha?', answer: 'Det styrs av skivbredden. Är gipsskivan 1200 mm bred sätts reglarna c/c 600 mm, är skivan 900 mm bred gäller c/c 450 mm. Kalkylatorn väljer rätt c/c automatiskt när du anger skivbredden.' },
+  { question: 'Räknas gips på båda sidor av väggen?', answer: 'En regelvägg kläs normalt på båda sidor. Välj "Dubbelsidig" så dubblas gips- och skruvmängden, medan stommen (reglar, syll, hammarband) räknas en gång – den delas ju av båda sidorna.' },
+  { question: 'Hur många skruv går det åt?', answer: 'Räkna med ca 20 skruv per m² och gipslager. Gyproc anger tätare infästning i kanten (ca c200 mm) än i fält (ca c300 mm), och yttre lagret skruvas tätare än det inre.' },
+  { question: 'Ett eller två lager gips?', answer: 'Två lager ger bättre ljud- och brandmotstånd och krävs ibland enligt konstruktionen. Välj antal lager per sida i kalkylatorn så räknas skivor och skruv om.' },
+  { question: 'Hur stor är en gipsskiva?', answer: 'Vanliga mått är 1200 × 2600 mm (ca 3,1 m²) och 900 × 2600 mm (ca 2,3 m²). Välj skivbredd och skivlängd i kalkylatorn.' },
   { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
 ];
 
@@ -30,8 +32,8 @@ export default function Page() {
   const footerT = footerTranslations[LOCALE];
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/gips-kalkylator`;
-  const title = 'Gipsberäknare – antal gipsskivor gratis | ByggExp';
-  const description = 'Räkna ut hur många gipsskivor du behöver utifrån väggyta, antal lager och skivstorlek, inkl. spill. Gratis gipsberäknare, utan konto.';
+  const title = 'Gipskalkylator – gipsskivor, reglar & skruv 2026 | ByggExp';
+  const description = 'Räkna ut hela materiallistan för en gipsvägg: antal gipsskivor, reglar (rätt c/c), syll/hammarband, isolering och skruv – utifrån väggens mått. Gratis, utan konto.';
 
   return (
     <>
@@ -63,8 +65,8 @@ export default function Page() {
 
       <LeadMagnetPage
         badge='Gratis kalkylator'
-        title='Gipsberäknare'
-        intro='Fyll i väggytan, antal lager och skivans storlek så räknar vi ut hur många gipsskivor du behöver, inklusive spill.'
+        title='Gipskalkylator'
+        intro='Ange väggens mått så får du hela materiallistan för en regelvägg: gipsskivor, reglar, syll och hammarband, isolering och skruv. Skivbredden styr regelavståndet (c/c) enligt Gyprocs handbok.'
         tool={<GipsKalkylatorTool />}
         preview={
           <PreviewImage
@@ -76,8 +78,55 @@ export default function Page() {
           />
         }
         sections={[
-          { id: 'sa-raknar-du', heading: 'Så räknar du ut antal skivor', body: (<><ol><li>Räkna ut ytan som ska skivas (m²).</li><li>Välj antal lager.</li><li>Ange skivans yta.</li><li>Se behovet och antal gipsskivor.</li></ol></>) },
-          { id: 'info', heading: 'Tänk på', body: (<><p>Lägg på spill för kap runt fönster, dörrar och hörn. Köp gärna någon skiva extra – det går snabbt åt fler än man tror vid komplicerade väggar.</p></>) },
+          {
+            id: 'sa-raknar-du',
+            heading: 'Så räknar kalkylatorn',
+            body: (
+              <ul>
+                <li><strong>Gips:</strong> vägglängd × höjd × antal sidor × lager, plus spill, delat på skivans yta.</li>
+                <li><strong>Reglar:</strong> vägglängd ÷ c/c + 1. Stommen räknas en gång även när båda sidor kläs.</li>
+                <li><strong>Syll + hammarband:</strong> 2 × vägglängd i löpmeter (upp och ned).</li>
+                <li><strong>Skruv:</strong> ca 20 st per m² och gipslager.</li>
+                <li><strong>Isolering:</strong> väggytan en gång, eftersom den fyller stommen.</li>
+              </ul>
+            ),
+          },
+          {
+            id: 'skivbredd-cc',
+            heading: 'Skivbredd styr regelavståndet (c/c)',
+            body: (
+              <ul>
+                <li>Skiva <strong>1200 mm</strong> bred → reglar <strong>c/c 600 mm</strong>.</li>
+                <li>Skiva <strong>900 mm</strong> bred → reglar <strong>c/c 450 mm</strong>.</li>
+                <li>Skarven mellan två skivor ska alltid landa mitt på en regel – därför hänger måtten ihop.</li>
+              </ul>
+            ),
+          },
+          {
+            id: 'lager-skruv',
+            heading: 'Lager, skruv och isolering',
+            body: (
+              <p>
+                Ett lager räcker för de flesta innerväggar. Två lager ger bättre ljud-
+                och brandmotstånd och krävs ibland enligt konstruktionen. Skruva i kant
+                tätare (ca c200 mm) än i fält (ca c300 mm), och skruva det yttre lagret
+                tätare än det inre. Ska väggen ljud- eller värmeisoleras fyller du
+                stommen med isolering motsvarande väggytan.
+              </p>
+            ),
+          },
+          {
+            id: 'info',
+            heading: 'Tänk på',
+            body: (
+              <p>
+                Lägg på spill för kap runt fönster, dörrar och hörn – köp hellre någon
+                skiva extra. Måtten här följer Gyprocs monteringshandbok; kontrollera
+                alltid skiv- och regeltyp samt infästning mot leverantörens anvisning
+                för just din väggtyp (t.ex. våtrum, brand- eller ljudklassad vägg).
+              </p>
+            ),
+          },
         ]}
         faqHeading="Vanliga frågor"
         faq={FAQ}

@@ -140,6 +140,7 @@ export default function OffertMallPage() {
         }}
         relatedHeading="Fler gratis verktyg"
         related={[
+          { href: `/${LOCALE}/blog/skriva-offert`, label: 'Guide: så skriver du en offert' },
           { href: `/${LOCALE}/verktyg/rot-avdrag-kalkylator`, label: 'ROT-avdrag kalkylator' },
           { href: `/${LOCALE}/verktyg/moms-kalkylator`, label: 'Momskalkylator' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },

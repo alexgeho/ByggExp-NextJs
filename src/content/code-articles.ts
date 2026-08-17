@@ -1138,10 +1138,104 @@ const TIMPRIS: BlogPost = {
   updatedAt: '2026-08-17T09:00:00.000Z',
 };
 
+const OFFERT_HTML = `
+<p>Offerten är det första kunden ser av ditt hantverk – och det dokument som avgör vem som får jobbet och vad som gäller om något blir dyrare. En tydlig offert vinner fler affärer och skyddar dig när diskussionen kommer. Här går vi igenom vad en offert måste innehålla, skillnaden mellan fast pris och löpande räkning, hur du hanterar ändringar (ÄTA) – och hur du gör en proffsig offert på minuter.</p>
+
+<p><a href="/sv/verktyg/offert-mall">Skapa en gratis offert (PDF) direkt i vår offertmall →</a></p>
+
+<h2>Vad en offert ska innehålla</h2>
+<p>En offert är i praktiken ett anbud – accepterar kunden den blir den bindande. Ta därför med allt som behövs för att undvika oklarheter:</p>
+<ul>
+<li><strong>Ditt företag</strong> – namn, org.nr, kontakt och F-skatt</li>
+<li><strong>Kund</strong> – namn och adress där arbetet ska utföras</li>
+<li><strong>Vad som ingår</strong> – specificerade rader för arbete och material</li>
+<li><strong>Pris</strong> – belopp exkl. och inkl. moms, samt arbetskostnad separat (viktigt för ROT)</li>
+<li><strong>Pristyp</strong> – fast pris eller löpande räkning (à-pris)</li>
+<li><strong>Vad som INTE ingår</strong> – lika viktigt som det som ingår</li>
+<li><strong>Tidplan</strong> – ungefärlig start och tid för arbetet</li>
+<li><strong>Betalningsvillkor</strong> – delbetalningar, förskott, betaltid</li>
+<li><strong>Giltighetstid</strong> – hur länge offerten gäller</li>
+<li><strong>Villkor</strong> – vilket standardavtal som gäller (t.ex. Hantverkarformuläret 17 för konsument)</li>
+</ul>
+
+<h2>Fast pris eller löpande räkning?</h2>
+<p>De två vanligaste prismodellerna har olika risk:</p>
+<ul>
+<li><strong>Fast pris</strong> ger kunden trygghet men lägger risken på dig – blir jobbet krångligare än väntat får du stå för det. Kräver att du kan bedöma omfattningen väl, och att offerten tydligt anger vad som ingår.</li>
+<li><strong>Löpande räkning</strong> (à-pris per timme + material) flyttar risken till kunden och passar när omfattningen är svår att förutse. Ange då timpris, ungefärlig tidsåtgång och hur material debiteras.</li>
+</ul>
+<p>Osäker på ditt timpris? Läs <a href="/sv/blog/timpris-hantverkare">guiden om vad du ska ta betalt per timme</a> och räkna i <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a>.</p>
+
+<h2>ÄTA – skydda dig mot ändringar</h2>
+<p>Nästan alla projekt ändras under vägen. Ändrings- och tilläggsarbeten (ÄTA) som beställs muntligt men aldrig dokumenteras är en av de vanligaste orsakerna till tvist. Skriv i offerten att ändringar hanteras som skriftliga ÄTA, och bekräfta varje ÄTA innan du utför den. Läs mer i <a href="/sv/blog/ata-arbeten">guiden om ÄTA-arbeten</a> och använd en <a href="/sv/verktyg/ata-mall">ÄTA-mall</a>.</p>
+
+<h2>ROT på offerten</h2>
+<p>Ska privatkunden få ROT-avdrag måste <strong>arbetskostnaden vara tydligt specificerad</strong> – avdraget gäller bara arbete, inte material, resor eller maskiner. Visa gärna både pris före och efter ROT så att kunden ser vad hen faktiskt betalar. ROT är 30 % av arbetskostnaden 2026 (max 50 000 kr/person/år). Räkna i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdrag kalkylatorn</a>.</p>
+
+<h2>Så skriver du en offert som vinner</h2>
+<ul>
+<li><strong>Var snabb.</strong> Den som svarar först har ett övertag – många kunder tar den offert som kommer först och känns seriös.</li>
+<li><strong>Var konkret.</strong> Specificera arbete och material på egna rader i stället för en klumpsumma. Det bygger förtroende och gör ROT rätt.</li>
+<li><strong>Sätt en giltighetstid.</strong> Priser på material rör sig – bind dig inte för länge.</li>
+<li><strong>Gör den snygg.</strong> En ren, tydlig PDF med ditt företagsnamn signalerar proffs.</li>
+</ul>
+
+<h2>Skapa offert gratis</h2>
+<p>Med vår <a href="/sv/verktyg/offert-mall">offertmall</a> fyller du i rader, moms och ROT och laddar ner en färdig offert som PDF – direkt i webbläsaren, utan konto. Har du redan räknat material i någon av våra kalkylatorer kan du föra över raderna till offerten med ett klick.</p>
+
+<h2>Från offert till faktura i ByggExp</h2>
+<p>I ByggExp håller du ihop hela kedjan: offert, ÄTA, tidrapportering och faktura i samma system, kopplat till projektet.</p>
+<ol>
+<li>Skapa offerten med specificerat arbete och material, ROT uträknat automatiskt.</li>
+<li>Bekräftade ändringar läggs till som ÄTA – inget faller mellan stolarna.</li>
+<li>Nedlagd tid och material följer med från projektet till fakturan.</li>
+<li>Fakturera med rätt ROT och moms utan att räkna om för hand.</li>
+</ol>
+<p>Vill du testa på papper först? <a href="/sv/verktyg/offert-mall">Skapa en gratis offert</a> eller <a href="/sv/verktyg/faktura-mall">faktura</a> som PDF.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är en offert bindande?</h3>
+<p>Ja. En offert är ett anbud, och när kunden accepterar den inom giltighetstiden uppstår ett bindande avtal enligt avtalslagen. Därför är det viktigt att offerten tydligt anger vad som ingår, priset och villkoren.</p>
+<h3>Vad är skillnaden mellan offert och kostnadsförslag?</h3>
+<p>En offert med fast pris är bindande. Ett kostnadsförslag (ungefärligt pris) är en uppskattning som får överskridas – men enligt konsumenttjänstlagen normalt med högst 15 % om inget annat avtalats. Var tydlig med vilket du lämnar.</p>
+<h3>Måste arbetskostnaden specificeras för ROT?</h3>
+<p>Ja. ROT-avdraget gäller bara arbetskostnaden, så den måste vara tydligt angiven och skild från material. Annars kan kunden inte få avdraget och du riskerar en jobbig efterhandsdiskussion.</p>
+<h3>Hur länge ska en offert gälla?</h3>
+<p>Det bestämmer du, men 14–30 dagar är vanligt. Sätt alltid en giltighetstid så att du inte är bunden till ett pris när materialkostnaderna hunnit ändras.</p>
+
+<h2>Kom igång</h2>
+<p>En tydlig offert vinner jobbet och skyddar dig. <a href="/sv/verktyg/offert-mall">Skapa en gratis offert (PDF)</a>, eller <a href="/sv/contact">boka en demo av ByggExp</a> och håll ihop offert, ÄTA och faktura i ett flöde.</p>
+
+<p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a> · <a href="/sv/blog/timpris-hantverkare">Timpris</a> · <a href="/sv/verktyg/offert-mall">Offertmall</a> · <a href="/sv/verktyg/faktura-mall">Fakturamall</a></p>
+`.trim();
+
+const OFFERT: BlogPost = {
+  _id: 'code-offert',
+  title: 'Så skriver du en offert som hantverkare – krav, tips och gratis mall',
+  slug: 'skriva-offert',
+  locale: 'sv',
+  excerpt:
+    'Vad en offert måste innehålla, fast pris vs löpande räkning, ÄTA och ROT – plus en gratis offertmall som ger dig en färdig PDF.',
+  tag: 'Ekonomi',
+  coverImageUrl: '/landing/verktyg/offert-preview.webp',
+  contentHtml: OFFERT_HTML,
+  seoTitle: 'Skriva offert som hantverkare – krav, mall & tips 2026 | ByggExp',
+  seoDescription:
+    'Vad ska en offert innehålla? Fast pris vs löpande räkning, ÄTA, ROT och betalningsvillkor – plus en gratis offertmall (PDF). Guide för hantverkare.',
+  seoImageUrl: `${SITE_URL}/landing/verktyg/offert-preview.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-17T10:00:00.000Z',
+  createdAt: '2026-08-17T10:00:00.000Z',
+  updatedAt: '2026-08-17T10:00:00.000Z',
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
     TIMPRIS,
+    OFFERT,
     BYGGDAGBOK,
     EGENKONTROLL,
     ATA,

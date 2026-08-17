@@ -314,6 +314,7 @@
 }
 
 .lm-tool-secondary {
+  display: inline-block;
   border: 1px solid var(--lm-accent);
   background: transparent;
   color: var(--lm-accent);
@@ -322,6 +323,14 @@
   font: inherit;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.lm-tool-secondary:disabled,
+.lm-tool-secondary[aria-disabled='true'] {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
 }
 
 .lm-tool-total {

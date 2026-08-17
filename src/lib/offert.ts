@@ -9,12 +9,19 @@ export type OffertRow = { desc: string; qty: string; price: string; labour: bool
 // Compact shape kept short so the URL stays reasonable: d=desc, q=qty, l=labour.
 type Packed = { d: string; q: string; l: 0 | 1 };
 
-export function offertHref(rows: OffertSeedRow[]): string {
+function seedQuery(rows: OffertSeedRow[]): string {
   const packed: Packed[] = rows
     .filter((r) => r.desc && Number(r.qty) > 0)
     .map((r) => ({ d: r.desc, q: String(r.qty), l: r.labour ? 1 : 0 }));
-  const q = encodeURIComponent(JSON.stringify(packed));
-  return `/sv/verktyg/offert-mall?rows=${q}`;
+  return encodeURIComponent(JSON.stringify(packed));
+}
+
+export function offertHref(rows: OffertSeedRow[]): string {
+  return `/sv/verktyg/offert-mall?rows=${seedQuery(rows)}`;
+}
+
+export function fakturaHref(rows: OffertSeedRow[]): string {
+  return `/sv/verktyg/faktura-mall?rows=${seedQuery(rows)}`;
 }
 
 export function parseOffertRows(param: string | string[] | undefined): OffertRow[] | null {

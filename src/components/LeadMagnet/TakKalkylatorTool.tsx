@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
-import { offertHref } from '../../lib/offert';
+import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Professional roof calculator. Roof area for a pitched roof is the footprint
 // (incl. eaves overhang) divided by cos(pitch). From the area it estimates the
@@ -89,14 +89,16 @@ export default function TakKalkylatorTool() {
     downloadCsvRows(rows, 'tak-materiallista.csv');
   };
 
-  const offertUrl = offertHref([
+  const seedRows = [
     r.hasTiles
       ? { desc: `Takpannor (${coveringLabel[covering]})`, qty: r.tileCount }
       : { desc: `Taktäckning ${coveringLabel[covering]} (m²)`, qty: Math.round(r.feltM2) },
     ...(r.hasBatten ? [{ desc: 'Bärläkt (lpm)', qty: Math.round(r.battenM) }] : []),
     { desc: 'Underlagspapp (m²)', qty: Math.round(r.feltM2) },
     { desc: 'Arbete taktäckning', qty: 1, labour: true },
-  ]);
+  ];
+  const offertUrl = offertHref(seedRows);
+  const fakturaUrl = fakturaHref(seedRows);
 
   return (
     <div className="lm-tool">
@@ -193,6 +195,9 @@ export default function TakKalkylatorTool() {
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
           <a className="lm-tool-button" href={r.roofArea > 0 ? offertUrl : undefined} aria-disabled={r.roofArea <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'tak-kalkylator' })}>
             Skapa offert av det här
+          </a>
+          <a className="lm-tool-secondary" href={r.roofArea > 0 ? fakturaUrl : undefined} aria-disabled={r.roofArea <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'tak-kalkylator' })}>
+            Skapa faktura
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.roofArea <= 0}>
             Exportera till Excel

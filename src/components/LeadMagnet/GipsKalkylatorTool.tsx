@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
-import { offertHref } from '../../lib/offert';
+import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Professional drywall (gipsskivor) calculator for a stud wall.
 // Method follows Gyproc's Monteringshandbok: board width sets the stud c/c
@@ -86,14 +86,16 @@ export default function GipsKalkylatorTool() {
     downloadCsvRows(rows, 'gips-materiallista.csv');
   };
 
-  const offertUrl = offertHref([
+  const seedRows = [
     { desc: 'Gipsskivor', qty: r.sheets },
     { desc: `Reglar (c/c ${r.cc} mm)`, qty: r.studCount },
     { desc: `${railLabel} (lpm)`, qty: Math.round(r.railMeters) },
     { desc: 'Isolering (m²)', qty: Math.round(r.insulM2) },
     { desc: 'Gipsskruv', qty: r.screws },
     { desc: 'Arbete montering', qty: 1, labour: true },
-  ]);
+  ];
+  const offertUrl = offertHref(seedRows);
+  const fakturaUrl = fakturaHref(seedRows);
 
   return (
     <div className="lm-tool">
@@ -201,6 +203,9 @@ export default function GipsKalkylatorTool() {
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
           <a className="lm-tool-button" href={r.sheets > 0 ? offertUrl : undefined} aria-disabled={r.sheets <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'gips-kalkylator' })}>
             Skapa offert av det här
+          </a>
+          <a className="lm-tool-secondary" href={r.sheets > 0 ? fakturaUrl : undefined} aria-disabled={r.sheets <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'gips-kalkylator' })}>
+            Skapa faktura
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.sheets <= 0}>
             Exportera till Excel

@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
-import { offertHref } from '../../lib/offert';
+import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Free area calculator: sum the area (length × width) of one or more rectangles
 // (rooms/sections), with an optional waste margin for material planning.
@@ -49,10 +49,12 @@ export default function KvadratmeterKalkylatorTool() {
     downloadCsvRows(csvRows, 'ytor-kvadratmeter.csv');
   };
 
-  const offertUrl = offertHref([
+  const seedRows = [
     { desc: 'Yta (m²)', qty: Math.round(result.withSpill * 100) / 100 },
     { desc: 'Arbete', qty: 1, labour: true },
-  ]);
+  ];
+  const offertUrl = offertHref(seedRows);
+  const fakturaUrl = fakturaHref(seedRows);
 
   return (
     <div className="lm-tool">
@@ -110,6 +112,9 @@ export default function KvadratmeterKalkylatorTool() {
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
           <a className="lm-tool-button" href={result.base > 0 ? offertUrl : undefined} aria-disabled={result.base <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'kvadratmeter-kalkylator' })}>
             Skapa offert av det här
+          </a>
+          <a className="lm-tool-secondary" href={result.base > 0 ? fakturaUrl : undefined} aria-disabled={result.base <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'kvadratmeter-kalkylator' })}>
+            Skapa faktura
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={result.base <= 0}>
             Exportera till Excel

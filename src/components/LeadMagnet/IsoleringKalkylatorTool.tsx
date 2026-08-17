@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
-import { offertHref } from '../../lib/offert';
+import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Professional insulation calculator. From area and thickness it returns the
 // insulated area, the volume (m³), the number of packs and an approximate
@@ -50,10 +50,12 @@ export default function IsoleringKalkylatorTool() {
     downloadCsvRows(rows, 'isolering-materiallista.csv');
   };
 
-  const offertUrl = offertHref([
+  const seedRows = [
     { desc: `Isolering ${thickness} mm (förpackningar)`, qty: r.packs },
     { desc: 'Arbete isolering', qty: 1, labour: true },
-  ]);
+  ];
+  const offertUrl = offertHref(seedRows);
+  const fakturaUrl = fakturaHref(seedRows);
 
   return (
     <div className="lm-tool">
@@ -119,6 +121,9 @@ export default function IsoleringKalkylatorTool() {
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
           <a className="lm-tool-button" href={r.packs > 0 ? offertUrl : undefined} aria-disabled={r.packs <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'isolering-kalkylator' })}>
             Skapa offert av det här
+          </a>
+          <a className="lm-tool-secondary" href={r.packs > 0 ? fakturaUrl : undefined} aria-disabled={r.packs <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'isolering-kalkylator' })}>
+            Skapa faktura
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.packs <= 0}>
             Exportera till Excel

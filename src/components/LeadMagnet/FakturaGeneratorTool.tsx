@@ -1,4 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useMemo, useRef, useState } from 'react';
+
+import { parseOffertRows } from '../../lib/offert';
 
 // Free faktura (invoice) generator: company/customer, invoice number and dates,
 // line rows, VAT and optional ROT, live totals, and a professional PDF via
@@ -31,6 +34,22 @@ export default function FakturaGeneratorTool() {
   const [useRot, setUseRot] = useState(false);
   const [rows, setRows] = useState<Row[]>([emptyRow(), emptyRow()]);
   const [busy, setBusy] = useState(false);
+  const [seeded, setSeeded] = useState(false);
+
+  // Pre-fill rows when arriving from a calculator (…/faktura-mall?rows=…). After
+  // mount so server/client render the same empty form and hydration is stable.
+  const router = useRouter();
+  const seededOnce = useRef(false);
+  useEffect(() => {
+    if (!router.isReady || seededOnce.current) return;
+    seededOnce.current = true;
+    const seed = parseOffertRows(router.query.rows);
+    if (seed && seed.length > 0) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time sync from URL to editable state
+      setRows(seed);
+      setSeeded(true);
+    }
+  }, [router.isReady, router.query.rows]);
 
   const setRow = (i: number, patch: Partial<Row>) =>
     setRows((prev) => prev.map((r, idx) => (idx === i ? { ...r, ...patch } : r)));
@@ -148,6 +167,11 @@ export default function FakturaGeneratorTool() {
         <p className="lm-tool-sub">
           Fyll i uppgifter, rader, moms och eventuellt ROT så räknas summorna ut och du får en färdig faktura som PDF. Allt sker i din webbläsare. Inget konto behövs.
         </p>
+        {seeded ? (
+          <p className="lm-result-fine" style={{ marginTop: 4 }}>
+            Raderna är ifyllda från din kalkyl – lägg till à-priser och fakturauppgifter.
+          </p>
+        ) : null}
       </div>
 
       <div className="lm-tool-grid">

@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
-import { offertHref } from '../../lib/offert';
+import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Professional paint calculator. Litres = (area − openings) × coats ÷ coverage,
 // plus waste. Coverage (m²/litre) is preset per surface type (interior wall/
@@ -67,10 +67,12 @@ export default function FargKalkylatorTool() {
     downloadCsvRows(rows, 'farg-atgang.csv');
   };
 
-  const offertUrl = offertHref([
+  const seedRows = [
     { desc: `Färg – ${surfaceLabel[surface]} (liter)`, qty: r.buy },
     { desc: 'Arbete målning', qty: 1, labour: true },
-  ]);
+  ];
+  const offertUrl = offertHref(seedRows);
+  const fakturaUrl = fakturaHref(seedRows);
 
   return (
     <div className="lm-tool">
@@ -136,6 +138,9 @@ export default function FargKalkylatorTool() {
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
           <a className="lm-tool-button" href={r.liters > 0 ? offertUrl : undefined} aria-disabled={r.liters <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'farg-kalkylator' })}>
             Skapa offert av det här
+          </a>
+          <a className="lm-tool-secondary" href={r.liters > 0 ? fakturaUrl : undefined} aria-disabled={r.liters <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'farg-kalkylator' })}>
+            Skapa faktura
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.liters <= 0}>
             Exportera till Excel

@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
-import { offertHref } from '../../lib/offert';
+import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Professional concrete calculator. Concrete volume depends on the shape of
 // the pour, so the tool switches inputs by construction type:
@@ -96,11 +96,13 @@ export default function BetongKalkylatorTool() {
     downloadCsvRows(rows, 'betong-materiallista.csv');
   };
 
-  const offertUrl = offertHref([
+  const seedRows = [
     { desc: 'Betong, säck 25 kg', qty: r.bags },
     ...(shape === 'platta' && r.meshArea > 0 ? [{ desc: 'Armeringsnät (m²)', qty: Math.round(r.meshArea) }] : []),
     { desc: 'Arbete gjutning', qty: 1, labour: true },
-  ]);
+  ];
+  const offertUrl = offertHref(seedRows);
+  const fakturaUrl = fakturaHref(seedRows);
 
   return (
     <div className="lm-tool">
@@ -239,6 +241,9 @@ export default function BetongKalkylatorTool() {
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
           <a className="lm-tool-button" href={r.volume > 0 ? offertUrl : undefined} aria-disabled={r.volume <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'betong-kalkylator' })}>
             Skapa offert av det här
+          </a>
+          <a className="lm-tool-secondary" href={r.volume > 0 ? fakturaUrl : undefined} aria-disabled={r.volume <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'betong-kalkylator' })}>
+            Skapa faktura
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.volume <= 0}>
             Exportera till Excel

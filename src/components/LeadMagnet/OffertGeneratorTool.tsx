@@ -1,4 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useMemo, useRef, useState } from 'react';
+
+import { parseOffertRows } from '../../lib/offert';
 
 // Free offert (quote) generator: fill company/customer + line rows, optionally
 // apply ROT on labour rows, and download a professional PDF via jspdf. All in
@@ -20,6 +23,23 @@ export default function OffertGeneratorTool() {
   const [useRot, setUseRot] = useState(false);
   const [rows, setRows] = useState<Row[]>([emptyRow(), emptyRow()]);
   const [busy, setBusy] = useState(false);
+  const [seeded, setSeeded] = useState(false);
+
+  // Pre-fill rows when arriving from a calculator (…/offert-mall?rows=…). Done
+  // after mount (not in a lazy initial state) so server and client render the
+  // same empty form first and hydration stays consistent.
+  const router = useRouter();
+  const seededOnce = useRef(false);
+  useEffect(() => {
+    if (!router.isReady || seededOnce.current) return;
+    seededOnce.current = true;
+    const seed = parseOffertRows(router.query.rows);
+    if (seed && seed.length > 0) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time sync from URL to editable state
+      setRows(seed);
+      setSeeded(true);
+    }
+  }, [router.isReady, router.query.rows]);
 
   const setRow = (i: number, patch: Partial<Row>) =>
     setRows((prev) => prev.map((r, idx) => (idx === i ? { ...r, ...patch } : r)));
@@ -133,6 +153,12 @@ export default function OffertGeneratorTool() {
         <p className="lm-tool-sub">
           Fyll i rader, moms och eventuellt ROT så räknar vi ut summorna och gör en färdig offert som PDF. Allt sker i din webbläsare. Inget konto behövs.
         </p>
+        {seeded ? (
+          <p className="lm-result-fine" style={{ marginTop: 4 }}>
+            Materialraderna är ifyllda från din kalkyl – lägg till à-priser och en
+            arbetsrad så är offerten klar.
+          </p>
+        ) : null}
       </div>
 
       <div className="lm-tool-grid">

@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 
 import { downloadCsvRows } from '../../lib/download';
+import { offertHref } from '../../lib/offert';
 
 // Professional roof calculator. Roof area for a pitched roof is the footprint
 // (incl. eaves overhang) divided by cos(pitch). From the area it estimates the
@@ -85,6 +86,15 @@ export default function TakKalkylatorTool() {
     ];
     downloadCsvRows(rows, 'tak-materiallista.csv');
   };
+
+  const offertUrl = offertHref([
+    r.hasTiles
+      ? { desc: `Takpannor (${coveringLabel[covering]})`, qty: r.tileCount }
+      : { desc: `Taktäckning ${coveringLabel[covering]} (m²)`, qty: Math.round(r.feltM2) },
+    ...(r.hasBatten ? [{ desc: 'Bärläkt (lpm)', qty: Math.round(r.battenM) }] : []),
+    { desc: 'Underlagspapp (m²)', qty: Math.round(r.feltM2) },
+    { desc: 'Arbete taktäckning', qty: 1, labour: true },
+  ]);
 
   return (
     <div className="lm-tool">
@@ -179,6 +189,9 @@ export default function TakKalkylatorTool() {
           med överlapp.
         </p>
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
+          <a className="lm-tool-button" href={r.roofArea > 0 ? offertUrl : undefined} aria-disabled={r.roofArea <= 0}>
+            Skapa offert av det här
+          </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.roofArea <= 0}>
             Exportera till Excel
           </button>

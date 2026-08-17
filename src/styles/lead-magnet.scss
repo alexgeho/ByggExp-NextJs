@@ -129,9 +129,11 @@
   transform: translateY(-2px);
 }
 
-.lm-tool-button:disabled {
+.lm-tool-button:disabled,
+.lm-tool-button[aria-disabled='true'] {
   opacity: 0.6;
   cursor: default;
+  pointer-events: none;
   transform: none;
 }
 

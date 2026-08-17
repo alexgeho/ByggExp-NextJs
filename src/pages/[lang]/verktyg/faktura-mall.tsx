@@ -140,6 +140,7 @@ export default function FakturaMallPage() {
         }}
         relatedHeading="Fler gratis verktyg"
         related={[
+          { href: `/${LOCALE}/blog/fakturera-som-hantverkare`, label: 'Guide: fakturera som hantverkare' },
           { href: `/${LOCALE}/verktyg/offert-mall`, label: 'Offertmall' },
           { href: `/${LOCALE}/verktyg/rot-avdrag-kalkylator`, label: 'ROT-avdrag kalkylator' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },

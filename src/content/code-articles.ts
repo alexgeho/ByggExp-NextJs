@@ -1391,9 +1391,232 @@ const TIDRAPPORTERING: BlogPost = {
   updatedAt: '2026-08-17T12:00:00.000Z',
 };
 
+
+const FAKTURA_HTML = `
+<p>En slarvig faktura kostar mer än du tror. Saknas en obligatorisk uppgift kan Skatteverket underkänna din bokföring, och otydliga betalningsvillkor gör att pengarna dröjer långt efter att jobbet är klart. Som hantverkare eller byggföretag är fakturan både ditt betalningsanspråk och en bokföringsverifikation – den måste hålla på båda planen. Här går vi igenom exakt vad som krävs enligt lag 2026, och du får en checklista att bocka av före varje faktura.</p>
+
+<p>Vill du komma igång direkt kan du skapa en korrekt faktura med rätt uppgifter från start i vår <a href="/sv/verktyg/faktura-mall">gratis fakturamall</a>.</p>
+
+<h2>Vad en faktura MÅSTE innehålla enligt lag</h2>
+
+<p>Enligt mervärdesskattelagen ska en fullständig faktura (belopp över 4 000 kr inklusive moms) innehålla samtliga följande uppgifter:</p>
+
+<ul>
+<li><strong>Fakturanummer</strong> – unikt och hämtat ur en obruten nummerserie</li>
+<li><strong>Fakturadatum</strong></li>
+<li><strong>Säljarens namn och adress</strong> samt <strong>momsregistreringsnummer</strong></li>
+<li><strong>Köparens namn och adress</strong></li>
+<li><strong>Leveransdatum</strong> – när tjänsten utfördes eller varan levererades</li>
+<li><strong>Specificerad beskrivning</strong> av tjänsten eller varan med mängd och omfattning</li>
+<li><strong>Pris per rad exklusive moms</strong></li>
+<li><strong>Momssats och momsbelopp i kronor</strong>, samt beskattningsunderlaget per skattesats</li>
+</ul>
+
+<p>Var noga med beskrivningen. Att bara skriva <em>"byggtjänster"</em> räcker inte – fakturan ska vara detaljerad nog att fungera som bokföringsverifikation. Ange vad som gjorts, var och i vilken omfattning, till exempel "Rivning och montering av kök, arbete 24 tim" plus materialrader. En luddig faktura är den vanligaste orsaken till att både kund och revisor ställer frågor i efterhand.</p>
+
+<h3>Fullständig vs förenklad faktura</h3>
+
+<p>Ligger fakturabeloppet på högst 4 000 kr inklusive moms får du använda en <strong>förenklad faktura</strong>. Den behöver bara innehålla fakturadatum, säljarens namn och momsnummer, vad som sålts samt momsbeloppet (eller uppgifter för att räkna ut det). Över den gränsen gäller alltid den fullständiga listan ovan.</p>
+
+<p>Är ditt företag godkänt för F-skatt bör du ange <strong>"Godkänd för F-skatt"</strong> på fakturan. Uppgiften har rättslig verkan: köparen kan då lita på den och behöver inte göra skatteavdrag eller betala arbetsgivaravgifter för dig. Privatkunder och byggföretag förväntar sig att se den.</p>
+
+<h2>Omvänd byggmoms – när du INTE ska lägga på moms</h2>
+
+<p>Säljer du en byggtjänst i Sverige till ett annat företag som självt säljer eller vidareförsäljer byggtjänster gäller <strong>omvänd skattskyldighet</strong>. Då fakturerar du <strong>0 kr moms</strong> och köparen redovisar momsen i stället. Fakturan måste märkas tydligt, till exempel <em>"Omvänd skattskyldighet för byggtjänster gäller"</em>, och den <strong>måste innehålla köparens momsregistreringsnummer</strong>.</p>
+
+<p>Regeln gäller bara mellan byggföretag. Säljer du till en privatperson eller till ett företag som inte är verksamt inom byggsektorn lägger du på vanlig moms (25 % på byggtjänster). Är du osäker på beräkningen kan du dubbelkolla i vår <a href="/sv/verktyg/moms-kalkylator">moms-kalkylator</a> innan du skickar fakturan.</p>
+
+<h2>ROT-faktura 2026 – fakturamodellen steg för steg</h2>
+
+<p>Fakturerar du en privatperson kan kunden ha rätt till ROT-avdrag. För 2026 är avdraget <strong>30 % av arbetskostnaden</strong>, med ett tak på <strong>50 000 kr per person och år</strong>. Notera att nivån var tillfälligt höjd till 50 % under delar av 2025 men sänktes tillbaka till 30 % från 1 januari 2026 – räkna alltid på 30 %. Avdraget gäller <strong>enbart arbete</strong>, aldrig material, maskiner eller framkörning, och du som utförare måste vara godkänd för F-skatt.</p>
+
+<p>Så här fungerar fakturamodellen:</p>
+
+<ol>
+<li>Dela upp fakturan så att <strong>arbetskostnaden tydligt skiljs</strong> från material och övriga kostnader.</li>
+<li>Kunden betalar arbetskostnaden <strong>minus ROT-avdraget (30 %)</strong> plus fullt pris för material.</li>
+<li>Du begär sedan ut det återstående ROT-beloppet <strong>från Skatteverket</strong>.</li>
+</ol>
+
+<p>Exempel: arbetskostnad 20 000 kr, material 8 000 kr. ROT-avdraget blir 30 % av 20 000 = 6 000 kr. Kunden betalar 14 000 kr för arbetet plus 8 000 kr för material, alltså 22 000 kr, och du får de resterande 6 000 kr utbetalda från Skatteverket. Räkna snabbt på kundens avdrag i vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdrag-kalkylator</a>.</p>
+
+<h2>Betalningsvillkor och dröjsmålsränta</h2>
+
+<p>Om inget annat avtalas är betalningstiden <strong>30 dagar</strong> enligt räntelagen. Mellan företag är villkoren fritt förhandlingsbara, men en betalningstid som överstiger <strong>60 dagar</strong> gäller bara om borgenären uttryckligen godtagit den – längre tider kan annars anses oskäliga. Skriv därför alltid ut förfallodatumet på fakturan.</p>
+
+<p>Betalar kunden för sent har du rätt till <strong>dröjsmålsränta</strong>. Den är Riksbankens referensränta plus 8 procentenheter. För perioden 1 januari–30 juni 2026 är referensräntan 2 %, vilket ger en lagstadgad dröjsmålsränta på <strong>10 %</strong>. Rätten till dröjsmålsränta mellan företag följer direkt av räntelagen – du behöver inget särskilt avtal – och löper i regel från 30 dagar efter faktura eller påminnelse, om ni inte avtalat en tidigare förfallodag.</p>
+
+<h2>När kunden inte betalar – påminnelse och inkasso</h2>
+
+<p>Uteblir betalningen finns en tydlig trappa. Utöver dröjsmålsräntan får du ta ut lagstadgade avgifter:</p>
+
+<ul>
+<li><strong>Påminnelseavgift:</strong> 60 kr</li>
+<li><strong>Inkassoavgift:</strong> 180 kr</li>
+<li><strong>Förseningsersättning:</strong> 450 kr vid B2B- och offentliga fordringar – får tas ut direkt när fakturan förfaller, utan föregående påminnelse (och täcker in 60+180 kr om inte de faktiska indrivningskostnaderna är högre)</li>
+</ul>
+
+<p>Ordningen är: skicka en <strong>betalningspåminnelse</strong>, därefter ett <strong>inkassokrav</strong>, och om det inte hjälper ansöker du om <strong>betalningsföreläggande hos Kronofogden</strong>. Att fakturan från början uppfyller alla lagkrav är avgörande – en formellt korrekt faktura är mycket svårare att bestrida.</p>
+
+<h2>Spara fakturan i 7 år</h2>
+
+<p>Räkenskapsinformation – fakturor, kvitton, avtal med mera – ska enligt bokföringslagen arkiveras i <strong>7 år efter utgången av det kalenderår då räkenskapsåret avslutades</strong>, i ordnat och betryggande skick i Sverige. Sedan 1 juli 2024 får pappersunderlag <strong>slängas efter korrekt överföring till digital form</strong>; den tidigare regeln om att spara originalet i 3–4 år är borttagen. Digitalt fakturaflöde är alltså både tillåtet och praktiskt.</p>
+
+<h2>Så gör du i ByggExp</h2>
+
+<p>I ByggExp bygger du fakturan på jobbet i stället för att börja från ett tomt blad. Registrerad tid och material följer med in på fakturan, arbetskostnad och material hamnar på egna rader så att ROT-uppdelningen blir rätt, och fakturanumren löper i obruten serie automatiskt. Du kan märka fakturan för omvänd byggmoms när det behövs och lägga in förfallodatum och villkor från start. Underlagen sparas digitalt, vilket täcker arkiveringskravet. ByggExp lämnar däremot inte in din momsdeklaration eller ROT-ansökan åt dig – det gör du eller din redovisningskonsult, men underlaget blir korrekt och lätt att exportera.</p>
+
+<h2>Vanliga frågor</h2>
+
+<h3>Ska det framgå att jag har F-skatt?</h3>
+<p>Ja, ange "Godkänd för F-skatt" på fakturan om företaget är godkänt. Uppgiften har rättslig verkan – köparen kan lita på den och behöver då inte göra skatteavdrag eller betala sociala avgifter för det arbete du utför.</p>
+
+<h3>När ska jag använda omvänd byggmoms?</h3>
+<p>När du säljer en byggtjänst i Sverige till ett annat företag som självt säljer eller vidareförsäljer byggtjänster. Då fakturerar du 0 kr moms, märker fakturan "Omvänd skattskyldighet för byggtjänster gäller" och anger köparens momsnummer. Till privatpersoner och företag utanför byggsektorn lägger du på vanlig moms.</p>
+
+<h3>Hur mycket är ROT-avdraget 2026?</h3>
+<p>ROT-avdraget är 30 % av arbetskostnaden, med ett tak på 50 000 kr per person och år. Det gäller bara arbete – aldrig material, maskiner eller framkörning – och du måste vara godkänd för F-skatt. Nivån sänktes från de tillfälliga 50 % under 2025 till 30 % från 1 januari 2026.</p>
+
+<h3>Vad blir dröjsmålsräntan om kunden betalar sent?</h3>
+<p>Dröjsmålsräntan är Riksbankens referensränta plus 8 procentenheter. Med referensräntan 2 % för första halvåret 2026 blir den 10 %. Rätten gäller automatiskt mellan företag enligt räntelagen och löper normalt från 30 dagar efter faktura eller påminnelse.</p>
+
+<h2>Kom igång</h2>
+
+<p>Skapa din nästa faktura med rätt uppgifter från start i vår <a href="/sv/verktyg/faktura-mall">gratis fakturamall</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du fakturerar hela jobbet – tid, material och ROT – utan att missa en lagkrävd uppgift.</p>
+
+<p>Checklista före varje faktura: fakturanummer i obruten serie, faktura- och leveransdatum, säljarens momsnr, köparens uppgifter, specificerad tjänst, pris ex moms, rätt momssats (eller omvänd byggmoms-märkning), ROT-uppdelning vid privatkund, "Godkänd för F-skatt", samt förfallodatum och villkor.</p>
+
+<p>Relaterat: <a href="/sv/blog/skriva-offert">Skriva offert som hantverkare</a> och <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a>.</p>
+`.trim();
+
+const FAKTURA: BlogPost = {
+  _id: "code-fakturera-som-hantverkare",
+  title: "Fakturera som hantverkare – så gör du rätt enligt lag 2026",
+  slug: "fakturera-som-hantverkare",
+  locale: "sv",
+  excerpt: "En komplett guide till hur du som hantverkare fakturerar rätt enligt lag 2026 – fakturakrav, ROT, omvänd byggmoms, betalningsvillkor och arkivering.",
+  tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/faktura-preview.webp",
+  contentHtml: FAKTURA_HTML,
+  seoTitle: "Fakturera som hantverkare 2026 | ByggExp",
+  seoDescription: "Vad en faktura måste innehålla enligt lag, ROT-faktura, omvänd byggmoms, betalningsvillkor och dröjsmålsränta. Komplett checklista för hantverkare 2026.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/faktura-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false,
+  isPublished: true,
+  publishedAt: "2026-08-17T13:00:00.000Z",
+  createdAt: "2026-08-17T13:00:00.000Z",
+  updatedAt: "2026-08-17T13:00:00.000Z",
+};
+
+
+const MATERIALKALKYL_HTML = `
+<p>Materialsvinn och returresor äter marginalen på varje projekt. Köper du för lite blir det stopp, extra frakt och en färgnyans som inte matchar; köper du för mycket binder du likviditet och slänger virke. En sak är värd att slå fast direkt: materialkalkylen är helt separat från ROT. ROT-avdraget täcker bara arbetskostnaden (30 % från 1 januari 2026, max 50 000 kr per person och år; ROT och RUT delar ett gemensamt tak på 75 000 kr per person och år) – inte material, resor eller maskinhyra. All materialoptimering ligger alltså på dig, och den lönar sig alltid att räkna noggrant på. Här får du en praktisk metod, steg för steg.</p>
+
+<p>Vill du hoppa direkt till räknandet hittar du alla kalkylatorer samlade i <a href="/sv/verktyg">vår gratis verktygslåda -&gt;</a> – en per materialtyp, så du slipper göra tumregler i huvudet.</p>
+
+<h2>Steg 1 – Mät rätt och välj rätt enhet</h2>
+<p>Den vanligaste felkällan i en byggkalkyl är inte matematiken, utan att man blandar ihop enheter. Materialåtgång måste räknas i rätt enhet per materialtyp:</p>
+<ul>
+<li><strong>m² (kvadratmeter)</strong> för ytor: gips- och byggskivor, kakel, klinker, färg och isolering.</li>
+<li><strong>lpm (löpmeter)</strong> för längdgods: reglar, list, trall och golvsockel.</li>
+<li><strong>styck</strong> för enskilda enheter: skruv, fästen och enskilda plattor.</li>
+</ul>
+<p>Fällan är att tro att m² går att översätta direkt till löpmeter. Det gör det inte – du måste först känna till bredd och centrumavstånd. Exempel: ett trädäck på 20 m² lagt med 28×120 mm trall kräver cirka 8,0 löpmeter trall per m², alltså runt 160 lpm. Räknar du i m² rakt av köper du fel mängd. Mät därför ytan noga och bestäm enhet innan du går vidare.</p>
+
+<h2>Steg 2 – c/c avgör materialåtgången</h2>
+<p>Centrumavståndet (c/c) mellan reglar styr hur mycket virke och skruv som går åt, och det är inte fritt valt – det styrs av skivmåtten. För 900 mm breda gipsskivor används 450 mm c/c, för 1200 mm breda skivor 600 mm c/c. 600 mm ger en materialeffektiv vägg med mindre virke; 450 mm ger en styvare vägg som klarar tunga ytskikt som kakel.</p>
+<p>Skillnaden syns direkt i kalkylen: går du från 600 till 450 mm c/c ökar antalet stående reglar per meter vägg med ungefär en tredjedel – och därmed både virkeslängden och skruvåtgången. För trall är cc 60 (600 mm) ett vanligt utgångsläge för bärande reglar. Bestäm c/c först, räkna sedan antal reglar. Använd <a href="/sv/verktyg/gips-kalkylator">gips- och regelväggskalkylatorn</a> så får du både skivor och reglar i ett svep.</p>
+
+<h2>Steg 3 – Lägg på rätt spill (inte en schablon för allt)</h2>
+<p>Spill uppstår för att material säljs i fasta längder och format och måste rundas upp – du kan inte köpa en halv skiva. Men att slå på samma påslag på allt är fel. Här är riktvärden per materialtyp:</p>
+<ul>
+<li><strong>Virke och skivor:</strong> 5–10 % extra på de flesta jobb.</li>
+<li><strong>Kakel/klinker, rak läggning:</strong> cirka 10 %.</li>
+<li><strong>Kakel/klinker, diagonal eller mönsterlagt:</strong> 10–15 % (vissa fall upp mot 20 %).</li>
+<li><strong>Komplicerade rum</strong> med många hörn, rör och golvbrunn: lägg i övre delen av intervallet.</li>
+</ul>
+<p>Anledningen till att kakel drar mer är kapningen runt hörn, rör och brunn – varje kap ger en bit som ofta inte kan återanvändas. Räkna spillet på huvudmaterialet separat, inte som en klumpsumma på hela beställningen.</p>
+
+<h2>Steg 4 – Räkna tillbehör och förbrukning som glöms bort</h2>
+<p>Det är sällan huvudmaterialet som spräcker budgeten, utan de "osynliga" posterna. Missa inte:</p>
+<ul>
+<li><strong>Skruv och fästen:</strong> ett trädäck drar cirka 28–32 trallskruv per m² (två skruv per bräda och bärande regel).</li>
+<li><strong>Lim, fog och fästmassa</strong> vid kakel och klinker.</li>
+<li><strong>Spackel och primer</strong> före målning och plattsättning.</li>
+<li><strong>Färgåtgång per strykning</strong> – räkna minst två strykningar, inte en.</li>
+<li><strong>Golvbrunn, brunnsmanschett och kapmaterial</strong> i våtrum.</li>
+</ul>
+<p>Dessa poster är små var för sig men summerar snabbt, och de glöms oftast bort i en snabb offert. Ta med dem från början så håller kalkylen.</p>
+
+<h2>Steg 5 – Rätt mängd = rätt ekonomi</h2>
+<p>För lite material innebär arbetsstopp, en extra returresa, ny frakt och risken att efterbeställt kakel eller färg kommer från ett annat parti med avvikande nyans. För mycket innebär bundet kapital och svinn som du sällan får igen. Sikta på rätt mängd – och spara medvetet en referens: en hel extra platta eller en burk från samma parti gör att ett framtida byte matchar. Notera partinumret på materiallistan.</p>
+
+<h2>Materialkalkylatorer per materialtyp</h2>
+<p>Använd rätt kalkylator för rätt material – varje verktyg är gratis och räknar spill och enhet åt dig:</p>
+<ul>
+<li><a href="/sv/verktyg/gips-kalkylator">Gips- och regelväggskalkylator</a> – när du sätter innervägg och behöver skivor, reglar och skruv utifrån c/c.</li>
+<li><a href="/sv/verktyg/golv-kalkylator">Golvkalkylator</a> – när du lägger golv och behöver m² plus spill och list.</li>
+<li><a href="/sv/verktyg/tak-kalkylator">Takkalkylator</a> – när du beräknar takyta, material och åtgång.</li>
+<li><a href="/sv/verktyg/betong-kalkylator">Betongkalkylator</a> – när du ska gjuta platta eller plintar och behöver rätt kubikmeter.</li>
+<li><a href="/sv/verktyg">Alla verktyg</a> – för trall/altan, färg, isolering och övriga materialtyper.</li>
+</ul>
+
+<h2>Snabb checklista innan du beställer</h2>
+<ol>
+<li>Mät ytan två gånger.</li>
+<li>Välj rätt enhet – m², lpm eller styck.</li>
+<li>Sätt c/c efter skivmått eller bärverk.</li>
+<li>Addera materialspecifikt spill (inte en schablon för allt).</li>
+<li>Addera tillbehör: skruv, lim, fog, spackel, primer, färg.</li>
+<li>Avrunda upp till hela förpackningar och längder.</li>
+<li>Spara ett referensparti och notera partinummer.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp samlar du projektets materiallista, kalkyl och offert på ett ställe. Du räknar åtgången med verktygen, för in mängderna på projektet och kopplar dem till offerten – så att kunden ser en tydlig uppdelning mellan arbete (ROT-grundande) och material (inte ROT-grundande). När projektet är klart bokför du den faktiska åtgången mot den kalkylerade. Över tid bygger du på så vis upp dina egna åtgångstal per materialtyp, vilket gör nästa kalkyl mer träffsäker. ByggExp räknar inte jobbet åt dig, men det gör det enkelt att hålla ordning och att kalibrera dina egna schabloner projekt för projekt.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket spill ska jag räkna med?</h3>
+<p>Som tumregel 5–10 % extra på virke och skivor. För kakel och klinker cirka 10 % vid rak läggning och 10–15 % vid diagonal eller mönsterlagd läggning, mer i rum med många hörn, rör och golvbrunn. Lägg spillet på huvudmaterialet, inte som en klumpsumma på hela beställningen.</p>
+<h3>Kan jag räkna om kvadratmeter till löpmeter?</h3>
+<p>Inte direkt. m² blir löpmeter först när du känner till bredd och centrumavstånd. En trallyta på 20 m² med 28×120 mm trall motsvarar till exempel cirka 8,0 lpm per m². Bestäm alltid enhet och c/c innan du räknar.</p>
+<h3>Ingår material i ROT-avdraget?</h3>
+<p>Nej. ROT gäller endast arbetskostnaden, som 2026 ger 30 % avdrag, max 50 000 kr per person och år. Material, resor, maskin- och verktygshyra samt administrativa avgifter ger inte rätt till avdrag. Därför är materialkalkylen helt separat och något du behöver optimera själv.</p>
+<h3>Vilket c/c ska jag använda på en innervägg?</h3>
+<p>Det styrs av skivbredden: 450 mm c/c för 900 mm breda gipsskivor och 600 mm c/c för 1200 mm breda skivor. 600 mm ger en materialeffektiv vägg, medan 450 mm ger en styvare vägg som lämpar sig för tunga ytskikt som kakel.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att räkna ditt nästa projekt i <a href="/sv/verktyg">våra gratis kalkylatorer</a> – välj verktyget som matchar materialet så får du åtgång och spill direkt. Vill du se hur material, kalkyl och offert hänger ihop i ett flöde? <a href="/sv/contact">Boka en demo</a> så visar vi upplägget.</p>
+
+<p>Relaterat: <a href="/sv/blog/timpris-hantverkare">Timpris för hantverkare – så sätter du rätt pris</a>, <a href="/sv/verktyg/gips-kalkylator">Gips- och regelväggskalkylator</a>, <a href="/sv/verktyg/betong-kalkylator">Betongkalkylator</a>.</p>
+`.trim();
+
+const MATERIALKALKYL: BlogPost = {
+  _id: "code-rakna-material-till-bygget",
+  title: "Räkna material till bygget – byggkalkyl som håller",
+  slug: "rakna-material-till-bygget",
+  locale: "sv",
+  excerpt: "Praktisk metod för att kalkylera materialåtgång – rätt enhet, c/c, spill och tillbehör – så du slipper returresor och bundet kapital.",
+  tag: "Byggkalkyl",
+  coverImageUrl: "/landing/verktyg/gips-preview.webp",
+  contentHtml: MATERIALKALKYL_HTML,
+  seoTitle: "Räkna material till bygget | ByggExp",
+  seoDescription: "Så gör du en byggkalkyl som håller: rätt enhet (m² vs lpm), c/c, spillpåslag per materialtyp och glömda tillbehör. Gratis kalkylatorer per material.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/gips-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false,
+  isPublished: true,
+  publishedAt: "2026-08-17T14:00:00.000Z",
+  createdAt: "2026-08-17T14:00:00.000Z",
+  updatedAt: "2026-08-17T14:00:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    MATERIALKALKYL,
+    FAKTURA,
     TIDRAPPORTERING,
     MOMS,
     TIMPRIS,

@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -66,6 +67,7 @@ export default function Page() {
         title='Grus & makadam'
         intro='Fyll i yta och djup så räknar vi ut volymen i kubikmeter och vikten i ton. Fungerar för grus, makadam, matjord och sand – justera densiteten efter materialet.'
         tool={<GrusKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="grus-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/grus-preview.webp"

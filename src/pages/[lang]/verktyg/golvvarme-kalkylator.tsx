@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -66,6 +67,7 @@ export default function Page() {
         title='Golvvärme'
         intro='Fyll i ytan och centrumavståndet (c/c) mellan rören så räknar vi ut ungefärlig slinglängd och antal slingor.'
         tool={<GolvvarmeKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="golvvarme-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/golvvarme-preview.webp"

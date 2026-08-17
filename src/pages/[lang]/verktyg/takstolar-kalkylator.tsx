@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -66,6 +67,7 @@ export default function Page() {
         title='Takstolar'
         intro='Fyll i takets längd och centrumavstånd (c/c) så räknar vi ut antal takstolar.'
         tool={<TakstolarKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="takstolar-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/takstolar-preview.webp"

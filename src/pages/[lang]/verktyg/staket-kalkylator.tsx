@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -66,6 +67,7 @@ export default function Page() {
         title='Staketberäknare'
         intro='Fyll i staketets längd och avståndet mellan stolparna (c/c) så räknar vi ut antal stolpar och sektioner.'
         tool={<StaketKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="staket-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/staket-preview.webp"

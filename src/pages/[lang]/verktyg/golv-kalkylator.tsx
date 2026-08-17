@@ -8,14 +8,16 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
 const LOCALE = 'sv';
 
 const FAQ: LeadMagnetFaqItem[] = [
-  { question: 'Hur mycket golv ska jag köpa?', answer: 'Räkna ytan i m² och lägg på spill – ofta 5–10 %, mer vid diagonal läggning. Dela sedan på förpackningens m² för antal paket. Kalkylatorn gör det åt dig.' },
-  { question: 'Hur mycket spill för kakel?', answer: 'Vid rak läggning räcker ofta 5–10 %, vid diagonal eller mycket vinklar räkna med mer. Ha alltid några extra plattor för framtida behov.' },
+  { question: 'Hur mycket golv eller kakel ska jag köpa?', answer: 'Räkna ytan i m² och lägg på spill – rak läggning ofta 5–8 %, diagonal 10–15 %. Dela sedan på förpackningens m² för antal paket. Kalkylatorn väljer spill efter läggningssätt och räknar ut det åt dig.' },
+  { question: 'Hur mycket fästmassa går det åt till kakel?', answer: 'Räkna med ca 3–6 kg fästmassa per m² beroende på tandning och plattstorlek (ett vanligt riktvärde är 4 kg/m²). Välj "Kakel/klinker" i kalkylatorn så räknas kg och antal säckar (20 kg) ut. Fogbruk tillkommer och beror på fogbredd.' },
+  { question: 'Hur mycket spill vid diagonal läggning?', answer: 'Diagonal läggning och rum med många vinklar ger mer kap – räkna med 10–15 % i stället för 5–8 %. Ha alltid några plattor/brädor extra ur samma parti för framtida behov.' },
   { question: 'Hur många m² är en förpackning?', answer: 'Det varierar per produkt och står på förpackningen – ange värdet i kalkylatorn så räknas antal paket ut.' },
   { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
 ];
@@ -30,8 +32,8 @@ export default function Page() {
   const footerT = footerTranslations[LOCALE];
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/golv-kalkylator`;
-  const title = 'Golvberäknare – material till golv & kakel gratis | ByggExp';
-  const description = 'Räkna ut hur mycket golv, laminat eller kakel du behöver: kvadratmeter inkl. spill och antal förpackningar. Gratis kalkylator, utan konto.';
+  const title = 'Golv- & kakelkalkylator – förpackningar & fästmassa | ByggExp';
+  const description = 'Räkna ut golv, laminat och kakel: m² inkl. spill (rak/diagonal), antal förpackningar och – för kakel – fästmassa i kg och säckar. Gratis kalkylator, utan konto.';
 
   return (
     <>
@@ -63,9 +65,10 @@ export default function Page() {
 
       <LeadMagnetPage
         badge='Gratis kalkylator'
-        title='Golv- och kakelberäknare'
-        intro='Fyll i ytan, spill och förpackningsstorlek så räknar vi ut hur många kvadratmeter och förpackningar du behöver – för golv, laminat, klinker och kakel.'
+        title='Golv- och kakelkalkylator'
+        intro='Välj material och läggningssätt så räknar vi ut m² inkl. spill och antal förpackningar – för golv, laminat, klinker och kakel. För kakel får du även åtgången fästmassa i kg och säckar.'
         tool={<GolvKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="golv-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/golv-preview.webp"
@@ -76,8 +79,39 @@ export default function Page() {
           />
         }
         sections={[
-          { id: 'sa-raknar-du', heading: 'Så räknar du ut materialet', body: (<><ol><li>Räkna ut ytan i kvadratmeter.</li><li>Lägg på spill för kap och svinn.</li><li>Ange m² per förpackning.</li><li>Se behovet och antal förpackningar.</li></ol></>) },
-          { id: 'info', heading: 'Tänk på detta', body: (<><p>Köp gärna en förpackning extra – material ur samma parti kan vara svårt att få tag på senare, och du vill ha reserv om något går sönder.</p></>) },
+          {
+            id: 'sa-raknar-du',
+            heading: 'Så räknar kalkylatorn',
+            body: (
+              <ul>
+                <li><strong>Material:</strong> ytan × (1 + spill) ÷ m² per förpackning = antal paket.</li>
+                <li><strong>Spill:</strong> väljs efter läggning – rak ca 8 %, diagonal ca 12 %.</li>
+                <li><strong>Fästmassa (kakel):</strong> ytan × kg/m² → kg och säckar (20 kg).</li>
+              </ul>
+            ),
+          },
+          {
+            id: 'kakel-fastmassa',
+            heading: 'Kakel: fästmassa och fog',
+            body: (
+              <p>
+                Fästmassans åtgång beror på tandning och plattstorlek – räkna med ca 3–6 kg/m²
+                (riktvärde 4 kg/m²). Stora plattor och grov tandning drar mer. Utöver fästmassan
+                tillkommer fogbruk, som beror på fogbredd och plattstorlek – ha alltid lite extra.
+              </p>
+            ),
+          },
+          {
+            id: 'info',
+            heading: 'Tänk på detta',
+            body: (
+              <p>
+                Köp gärna en förpackning extra – material ur samma parti kan vara svårt att få tag på
+                senare, och du vill ha reserv om något går sönder. Kontrollera alltid m² per
+                förpackning och fästmassans åtgång på produkten.
+              </p>
+            ),
+          },
         ]}
         faqHeading='Vanliga frågor'
         faq={FAQ}

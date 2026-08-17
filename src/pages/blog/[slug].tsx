@@ -16,7 +16,7 @@ export const getServerSideProps: GetServerSideProps<
   return {
     redirect: {
       destination: `/sv/blog/${encodeURIComponent(slug)}`,
-      permanent: false,
+      permanent: true,
     },
   };
 };

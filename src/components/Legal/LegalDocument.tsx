@@ -1,9 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import type { ReactNode } from "react";
 
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import { buildHreflangAlternates } from "../../lib/seo";
 import { footerTranslations } from "../../locales/footer";
 import { headerTranslations } from "../../locales/header";
 import {
@@ -33,11 +35,30 @@ export default function LegalDocument({
   const updatedLabel = safeLang === "sv" ? "Senast uppdaterad" : "Last updated";
   const homeLabel = safeLang === "sv" ? "Hem" : "Home";
 
+  // Self-referencing canonical + reciprocal hreflang so Google doesn't treat the
+  // per-locale copies as "Duplicate without user-selected canonical". The route
+  // file is /[lang]/<path>, so pathname is stable and locale-agnostic.
+  const router = useRouter();
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://byggexp.se";
+  const urlFor = (code: string) =>
+    `${siteUrl}${router.pathname.replace("[lang]", code)}`;
+  const canonicalUrl = urlFor(safeLang);
+  const hreflangAlternates = buildHreflangAlternates(urlFor);
+
   return (
     <>
       <Head>
         <title>{`${title} · ByggExp`}</title>
         <meta name="description" content={`${title} – ByggExp`} />
+        <link rel="canonical" href={canonicalUrl} />
+        {hreflangAlternates.map((alt) => (
+          <link
+            key={alt.hrefLang}
+            rel="alternate"
+            hrefLang={alt.hrefLang}
+            href={alt.href}
+          />
+        ))}
       </Head>
 
       <Header headerT={headerTranslations[safeLang]} />

@@ -1,7 +1,7 @@
 import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 
 import LegalDocument from "../../components/Legal/LegalDocument";
-import { landingLanguageCodes } from "../../locales/languages";
+import { landingLanguageCodes, svEnLocales } from "../../locales/languages";
 
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: landingLanguageCodes.map((lang) => ({ params: { lang } })),
@@ -17,7 +17,7 @@ export default function TermsPage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   if (lang === "sv") {
     return (
-      <LegalDocument title="Användarvillkor" updated="2026-07-30" lang="sv">
+      <LegalDocument title="Användarvillkor" updated="2026-07-30" lang="sv" contentLocales={svEnLocales}>
         <p className="legal-page__note">
           Standardvillkor — justera pris och villkor efter behov. Granskas av
           jurist innan publicering.
@@ -99,7 +99,7 @@ export default function TermsPage({
   }
 
   return (
-    <LegalDocument title="Terms of Service" updated="2026-07-30" lang="en">
+    <LegalDocument title="Terms of Service" updated="2026-07-30" lang="en" contentLocales={svEnLocales}>
       <p className="legal-page__note">
         Standard terms — adjust pricing and conditions as needed. Have them
         reviewed by a lawyer before publishing.

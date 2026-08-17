@@ -1,7 +1,7 @@
 import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 
 import LegalDocument from "../../components/Legal/LegalDocument";
-import { landingLanguageCodes } from "../../locales/languages";
+import { landingLanguageCodes, svEnLocales } from "../../locales/languages";
 
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: landingLanguageCodes.map((lang) => ({ params: { lang } })),
@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage({
   // translation for convenience.
   if (lang === "sv") {
     return (
-      <LegalDocument title="Integritetspolicy" updated="2026-07-30" lang="sv">
+      <LegalDocument title="Integritetspolicy" updated="2026-07-30" lang="sv" contentLocales={svEnLocales}>
         <p>
           Denna policy beskriver hur RealMar AB (”vi”), org.nr 559474-9383,
           behandlar personuppgifter i ByggExp-plattformen. För anställdas
@@ -113,7 +113,7 @@ export default function PrivacyPolicyPage({
   }
 
   return (
-    <LegalDocument title="Privacy Policy" updated="2026-07-30" lang="en">
+    <LegalDocument title="Privacy Policy" updated="2026-07-30" lang="en" contentLocales={svEnLocales}>
       <p>
         This policy describes how RealMar AB (“we”), company reg. no.
         559474-9383, processes personal data in the ByggExp platform. For

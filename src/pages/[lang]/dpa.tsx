@@ -2,7 +2,7 @@ import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "ne
 import Link from "next/link";
 
 import LegalDocument from "../../components/Legal/LegalDocument";
-import { landingLanguageCodes } from "../../locales/languages";
+import { landingLanguageCodes, svEnLocales } from "../../locales/languages";
 
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: landingLanguageCodes.map((lang) => ({ params: { lang } })),
@@ -22,6 +22,7 @@ export default function DpaPage({
         title="Personuppgiftsbiträdesavtal (DPA)"
         updated="2026-07-30"
         lang="sv"
+        contentLocales={svEnLocales}
       >
         <p className="legal-page__note">
           Detta biträdesavtal gäller mellan RealMar AB och det kundföretag som
@@ -104,6 +105,7 @@ export default function DpaPage({
       title="Data Processing Agreement (DPA)"
       updated="2026-07-30"
       lang="en"
+      contentLocales={svEnLocales}
     >
       <p className="legal-page__note">
         This data processing agreement applies between RealMar AB and the

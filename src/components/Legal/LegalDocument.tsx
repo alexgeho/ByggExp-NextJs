@@ -20,11 +20,16 @@ export default function LegalDocument({
   title,
   updated,
   lang = "sv",
+  contentLocales = landingLanguageCodes,
   children,
 }: {
   title: string;
   updated?: string;
   lang?: string;
+  // Locales this document actually has distinct content for. Legal pages only
+  // written in sv + en pass ["sv","en"]; the /ru URL then canonicalises to /en
+  // instead of advertising a Russian alternate that is really English.
+  contentLocales?: readonly LandingLanguageCode[];
   children: ReactNode;
 }) {
   const safeLang: LandingLanguageCode = landingLanguageCodes.includes(
@@ -42,8 +47,12 @@ export default function LegalDocument({
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://byggexp.se";
   const urlFor = (code: string) =>
     `${siteUrl}${router.pathname.replace("[lang]", code)}`;
-  const canonicalUrl = urlFor(safeLang);
-  const hreflangAlternates = buildHreflangAlternates(urlFor);
+  // Canonicalise to a locale we actually have content for (a /ru legal page that
+  // only has en content points at /en), so Google folds it instead of flagging a
+  // duplicate.
+  const canonicalLang = contentLocales.includes(safeLang) ? safeLang : "en";
+  const canonicalUrl = urlFor(canonicalLang);
+  const hreflangAlternates = buildHreflangAlternates(urlFor, contentLocales);
 
   return (
     <>

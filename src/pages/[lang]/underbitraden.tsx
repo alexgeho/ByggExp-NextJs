@@ -1,7 +1,7 @@
 import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 
 import LegalDocument from "../../components/Legal/LegalDocument";
-import { landingLanguageCodes } from "../../locales/languages";
+import { landingLanguageCodes, svEnLocales } from "../../locales/languages";
 
 const ROWS_SV: [string, string, string, string][] = [
   ["MongoDB Atlas", "Databas / hosting", "EU – AWS Stockholm", "Inom EES"],
@@ -39,7 +39,7 @@ export default function SubprocessorsPage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   if (lang === "sv") {
     return (
-      <LegalDocument title="Underbiträden" updated="2026-07-30" lang="sv">
+      <LegalDocument title="Underbiträden" updated="2026-07-30" lang="sv" contentLocales={svEnLocales}>
         <p>
           RealMar AB (org.nr 559474-9383) anlitar följande underbiträden för att
           tillhandahålla ByggExp. Överföring till tredje land sker endast med
@@ -82,7 +82,7 @@ export default function SubprocessorsPage({
   }
 
   return (
-    <LegalDocument title="Sub-processors" updated="2026-07-30" lang="en">
+    <LegalDocument title="Sub-processors" updated="2026-07-30" lang="en" contentLocales={svEnLocales}>
       <p>
         RealMar AB (company reg. no. 559474-9383) uses the following
         sub-processors to provide ByggExp. Transfers to third countries take

@@ -21,6 +21,10 @@ export const languages = {
 export const landingLanguageCodes = ["ru", "sv", "en"] as const;
 export type LandingLanguageCode = (typeof landingLanguageCodes)[number];
 
+// Locales that actually have hand-written content on the sv/en-only legal pages.
+// The /ru URL for those pages serves the en copy and canonicalises to it.
+export const svEnLocales = ["sv", "en"] as const satisfies readonly LandingLanguageCode[];
+
 // Shown in the language switcher dropdown
 export const selectableLanguages = {
   sv: languages.sv,

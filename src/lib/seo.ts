@@ -15,11 +15,13 @@ export type HreflangAlternate = {
  */
 export function buildHreflangAlternates(
   buildHref: (lang: LandingLanguageCode) => string,
+  locales: readonly LandingLanguageCode[] = landingLanguageCodes,
 ): HreflangAlternate[] {
-  const alternates: HreflangAlternate[] = landingLanguageCodes.map((lang) => ({
+  const alternates: HreflangAlternate[] = locales.map((lang) => ({
     hrefLang: lang,
     href: buildHref(lang),
   }));
-  alternates.push({ hrefLang: 'x-default', href: buildHref(X_DEFAULT_LANG) });
+  const xDefault = locales.includes(X_DEFAULT_LANG) ? X_DEFAULT_LANG : locales[0];
+  alternates.push({ hrefLang: 'x-default', href: buildHref(xDefault) });
   return alternates;
 }

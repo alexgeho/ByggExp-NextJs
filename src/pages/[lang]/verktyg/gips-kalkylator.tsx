@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -68,6 +69,7 @@ export default function Page() {
         title='Gipskalkylator'
         intro='Ange väggens mått så får du hela materiallistan för en regelvägg: gipsskivor, reglar, syll och hammarband, isolering och skruv. Skivbredden styr regelavståndet (c/c) enligt Gyprocs handbok.'
         tool={<GipsKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="gips-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/gips-preview.webp"

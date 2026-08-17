@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 
+import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import { offertHref } from '../../lib/offert';
 
@@ -44,6 +45,7 @@ export default function KvadratmeterKalkylatorTool() {
       ['Inkl. spill', `${nf(result.withSpill)} m²`],
       ...(result.cost > 0 ? [['Uppskattad materialkostnad', `${Math.round(result.cost).toLocaleString('sv-SE')} kr`]] : []),
     ];
+    gaEvent('export_excel', { tool: 'kvadratmeter-kalkylator' });
     downloadCsvRows(csvRows, 'ytor-kvadratmeter.csv');
   };
 
@@ -106,7 +108,7 @@ export default function KvadratmeterKalkylatorTool() {
           </div>
         ) : null}
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-          <a className="lm-tool-button" href={result.base > 0 ? offertUrl : undefined} aria-disabled={result.base <= 0}>
+          <a className="lm-tool-button" href={result.base > 0 ? offertUrl : undefined} aria-disabled={result.base <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'kvadratmeter-kalkylator' })}>
             Skapa offert av det här
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={result.base <= 0}>

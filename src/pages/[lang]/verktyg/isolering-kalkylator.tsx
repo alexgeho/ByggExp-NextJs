@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -67,6 +68,7 @@ export default function Page() {
         title='Isoleringskalkylator'
         intro='Ange ytan och isoleringstjockleken så räknar vi ut antal förpackningar, volym i m³ och ett ungefärligt U-värde för isolerskiktet. Standard är mineralull med lambda 0,036 W/mK.'
         tool={<IsoleringKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="isolering-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/isolering-preview.webp"

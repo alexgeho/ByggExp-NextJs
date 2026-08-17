@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 
+import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import { offertHref } from '../../lib/offert';
 
@@ -81,6 +82,7 @@ export default function GipsKalkylatorTool() {
       ...(r.insulM2 > 0 ? [['Isolering', `${nf(r.insulM2, 1)} m²`]] : []),
       ['Gipsskruv', `${nf(r.screws)} st`],
     ];
+    gaEvent('export_excel', { tool: 'gips-kalkylator' });
     downloadCsvRows(rows, 'gips-materiallista.csv');
   };
 
@@ -197,7 +199,7 @@ export default function GipsKalkylatorTool() {
           leverantörens anvisning för din väggtyp.
         </p>
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-          <a className="lm-tool-button" href={r.sheets > 0 ? offertUrl : undefined} aria-disabled={r.sheets <= 0}>
+          <a className="lm-tool-button" href={r.sheets > 0 ? offertUrl : undefined} aria-disabled={r.sheets <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'gips-kalkylator' })}>
             Skapa offert av det här
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.sheets <= 0}>

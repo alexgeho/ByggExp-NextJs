@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 
+import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import { offertHref } from '../../lib/offert';
 
@@ -45,6 +46,7 @@ export default function IsoleringKalkylatorTool() {
       ['Volym isolering', `${nf(r.volume, 1)} m³`],
       ['U-värde, isolerskiktet (ca)', `${nf(r.uValue, 2)} W/m²K`],
     ];
+    gaEvent('export_excel', { tool: 'isolering-kalkylator' });
     downloadCsvRows(rows, 'isolering-materiallista.csv');
   };
 
@@ -115,7 +117,7 @@ export default function IsoleringKalkylatorTool() {
           köldbryggor. Skivor 560 mm breda passar reglar c/c 600 mm.
         </p>
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-          <a className="lm-tool-button" href={r.packs > 0 ? offertUrl : undefined} aria-disabled={r.packs <= 0}>
+          <a className="lm-tool-button" href={r.packs > 0 ? offertUrl : undefined} aria-disabled={r.packs <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'isolering-kalkylator' })}>
             Skapa offert av det här
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.packs <= 0}>

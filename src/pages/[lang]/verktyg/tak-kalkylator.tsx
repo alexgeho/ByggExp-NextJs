@@ -7,6 +7,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import TakKalkylatorTool from '../../../components/LeadMagnet/TakKalkylatorTool';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -87,6 +88,7 @@ export default function TakKalkylatorPage() {
         title="Takkalkylator"
         intro="Ange byggnadens mått, taklutning och taktäckning så räknar vi ut takytan och materialet: takpannor, bärläkt i löpmeter och underlagspapp. Takytan räknas per takfall – bra inför omläggning eller offert."
         tool={<TakKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="tak-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/tak-preview.webp"

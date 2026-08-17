@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 
+import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import { offertHref } from '../../lib/offert';
 
@@ -91,6 +92,7 @@ export default function BetongKalkylatorTool() {
       ['Blandningsvatten (ca)', `${nf(r.water)} liter`],
       ...(shape === 'platta' && r.meshArea > 0 ? [['Armeringsnät (ca)', `${nf(r.meshArea, 1)} m²`]] : []),
     ];
+    gaEvent('export_excel', { tool: 'betong-kalkylator' });
     downloadCsvRows(rows, 'betong-materiallista.csv');
   };
 
@@ -235,7 +237,7 @@ export default function BetongKalkylatorTool() {
           mattor (t.ex. 2,3 × 5 m) – räkna med överlapp.
         </p>
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-          <a className="lm-tool-button" href={r.volume > 0 ? offertUrl : undefined} aria-disabled={r.volume <= 0}>
+          <a className="lm-tool-button" href={r.volume > 0 ? offertUrl : undefined} aria-disabled={r.volume <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'betong-kalkylator' })}>
             Skapa offert av det här
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.volume <= 0}>

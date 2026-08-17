@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -87,6 +88,7 @@ export default function KvadratmeterKalkylatorPage() {
         title="Kvadratmeterberäknare – räkna ut ytan"
         intro="Fyll i längd och bredd för ett eller flera utrymmen så summeras ytan i kvadratmeter. Lägg till spill när du ska beställa golv, kakel, färg eller annat material – och ett pris per m² om du vill se materialkostnaden direkt."
         tool={<KvadratmeterKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="kvadratmeter-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/kvadratmeter-preview.webp"

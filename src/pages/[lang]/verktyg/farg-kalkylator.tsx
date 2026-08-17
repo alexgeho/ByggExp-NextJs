@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -87,6 +88,7 @@ export default function FargKalkylatorPage() {
         title="Färgkalkylator"
         intro="Välj färgtyp – innervägg, tak, träfasad eller puts – ange ytan och antal strykningar, så räknar vi ut hur många liter färg du behöver, med avdrag för fönster och dörrar. Täckförmågan sätts efter färgtyp och kan justeras."
         tool={<FargKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="farg-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/farg-preview.webp"

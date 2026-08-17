@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 
+import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import { offertHref } from '../../lib/offert';
 
@@ -84,6 +85,7 @@ export default function TakKalkylatorTool() {
       ...(r.hasBatten ? [['Bärläkt (ca)', `${nf(r.battenM)} lpm`]] : []),
       ['Underlagspapp (ca)', `${nf(r.feltM2, 1)} m²`],
     ];
+    gaEvent('export_excel', { tool: 'tak-kalkylator' });
     downloadCsvRows(rows, 'tak-materiallista.csv');
   };
 
@@ -189,7 +191,7 @@ export default function TakKalkylatorTool() {
           med överlapp.
         </p>
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-          <a className="lm-tool-button" href={r.roofArea > 0 ? offertUrl : undefined} aria-disabled={r.roofArea <= 0}>
+          <a className="lm-tool-button" href={r.roofArea > 0 ? offertUrl : undefined} aria-disabled={r.roofArea <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'tak-kalkylator' })}>
             Skapa offert av det här
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.roofArea <= 0}>

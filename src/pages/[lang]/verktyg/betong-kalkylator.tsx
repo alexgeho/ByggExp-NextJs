@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -92,6 +93,7 @@ export default function BetongKalkylatorPage() {
         title="Betongkalkylator"
         intro="Välj vad du gjuter – platta, grundbalk eller plintar – så räknar vi ut betongvolym i kubikmeter, antal säckar torrbetong, blandningsvatten och armeringsnät. En säck 25 kg ger ca 12,5 liter färdig betong."
         tool={<BetongKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="betong-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/betong-preview.webp"

@@ -79,9 +79,9 @@ export default function VerktygHubPage() {
   const footerT = footerTranslations[LOCALE];
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg`;
-  const title = 'Gratis verktyg för byggföretag – mallar, PDF & kalkylatorer | ByggExp';
+  const title = 'Byggkalkylatorer & gratis verktyg för byggföretag | ByggExp';
   const description =
-    'Gratis verktyg för byggföretag: ROT- och momskalkylator, mallar (byggdagbok, tidrapport, egenkontroll) och PDF-verktyg (slå ihop, dela, signera m.m.). Utan konto.';
+    'Gratis byggkalkylatorer och verktyg: ROT, moms och timpris, materialkalkylatorer (gips, betong, tak, golv), mallar (offert, tidrapport) och PDF-verktyg. Utan konto.';
 
   return (
     <>
@@ -101,10 +101,17 @@ export default function VerktygHubPage() {
         <div className="container container-narrow">
           <header className="verktyg-hub-hero">
             <span className="lead-magnet-badge">Gratis verktyg</span>
-            <h1>Gratis verktyg för byggföretag</h1>
+            <h1>Gratis byggkalkylatorer och verktyg för byggföretag</h1>
             <p>
-              Mallar och PDF-verktyg som gör vardagen enklare – gratis och utan konto. PDF-verktygen
-              körs i din webbläsare, filerna laddas aldrig upp.
+              Räkna ut material, priser och avdrag – och skapa offert, faktura och tidrapport
+              direkt. Allt gratis och utan konto. Populärast är{' '}
+              <Link href={`/${LOCALE}/verktyg/rot-avdrag-kalkylator`}>ROT-avdrag kalkylatorn</Link>,{' '}
+              <Link href={`/${LOCALE}/verktyg/timpris-kalkylator`}>timpris-kalkylatorn</Link> och våra
+              materialkalkylatorer för <Link href={`/${LOCALE}/verktyg/gips-kalkylator`}>gips</Link>,{' '}
+              <Link href={`/${LOCALE}/verktyg/betong-kalkylator`}>betong</Link> och{' '}
+              <Link href={`/${LOCALE}/verktyg/tak-kalkylator`}>tak</Link>. Från en materialkalkyl kan
+              du skapa en färdig offert med ett klick. PDF-verktygen körs i din webbläsare – filerna
+              laddas aldrig upp.
             </p>
           </header>
 

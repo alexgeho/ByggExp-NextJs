@@ -18,6 +18,7 @@ export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
   'franvaro-i-byggforetag',
   'heta-arbeten',
   'slutbesiktning',
+  'timpris-hantverkare',
 ]);
 
 export function isSvOnlyArticle(slug: string): boolean {

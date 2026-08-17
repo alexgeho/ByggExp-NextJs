@@ -130,6 +130,7 @@ export default function TimprisKalkylatorPage() {
         }}
         relatedHeading="Fler gratis verktyg"
         related={[
+          { href: `/${LOCALE}/blog/timpris-hantverkare`, label: 'Guide: vad ska du ta betalt per timme?' },
           { href: `/${LOCALE}/verktyg/paslag-marginal-kalkylator`, label: 'Påslag & marginal' },
           { href: `/${LOCALE}/verktyg/rot-avdrag-kalkylator`, label: 'ROT-avdrag kalkylator' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },

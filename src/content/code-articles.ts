@@ -1042,9 +1042,106 @@ const SLUTBESIKTNING: BlogPost = {
   updatedAt: '2026-08-12T18:00:00.000Z',
 };
 
+const TIMPRIS_HTML = `
+<p>&quot;Vad ska jag ta betalt i timmen?&quot; är en av de vanligaste – och dyraste – frågorna en hantverkare kan svara fel på. Sätter du priset för lågt jobbar du gratis åt kunden; sätter du det för högt utan att kunna motivera det tappar du jobb. Här går vi igenom marknadsläget 2026, hur du räknar fram <em>ditt</em> timpris utifrån dina egna kostnader, och varför debiteringsgraden ofta är det som avgör om det går ihop.</p>
+
+<p><a href="/sv/verktyg/timpris-kalkylator">Räkna ut ditt timpris direkt i vår gratis timpris-kalkylator →</a></p>
+
+<h2>Marknadspriser för hantverkare 2026</h2>
+<p>Timpriset varierar kraftigt mellan yrkesgrupper, erfarenhet och region. Som riktvärden ligger marknaden 2026 ungefär så här, <strong>inklusive moms och före ROT-avdrag</strong>:</p>
+<ul>
+<li><strong>Snickare:</strong> ca 450–850 kr/timme</li>
+<li><strong>Målare:</strong> ca 400–650 kr/timme</li>
+<li><strong>Elektriker:</strong> ca 550–1 100 kr/timme</li>
+<li><strong>Rörmokare (VVS):</strong> ca 550–1 100 kr/timme</li>
+<li><strong>Plattsättare:</strong> ca 500–800 kr/timme</li>
+</ul>
+<p>I Stockholm och övriga storstäder ligger priserna ofta 15–25 % över riksgenomsnittet. Men marknadspriset säger bara vad andra tar – inte vad <em>du</em> behöver ta för att gå med vinst.</p>
+
+<h2>Marknadspris ≠ ditt timpris</h2>
+<p>Det vanligaste misstaget är att sätta timpriset efter vad grannfirman tar. Problemet är att du inte känner deras kostnader, deras debiteringsgrad eller deras marginal. Ett timpris som fungerar för en enmansfirma med billig verkstad kan gå back för dig med anställda, bil och lokal. Räkna alltid nerifrån och upp – från dina egna kostnader.</p>
+
+<h2>Så räknar du fram ditt timpris</h2>
+<p>Grunden är enkel: alla dina kostnader ska täckas av de timmar du faktiskt kan fakturera, plus en vinst. Formeln ser ut så här:</p>
+<p><strong>Timpris (exkl. moms) = (arbetsgivarkostnad + omkostnader) ÷ debiterbara timmar × (1 + vinstpåslag)</strong></p>
+<p>De fyra delarna:</p>
+<ul>
+<li><strong>Arbetsgivarkostnad</strong> – inte bara lönen. Lägg på arbetsgivaravgifter (ca 31,42 %), semester, pension och försäkringar. En bruttolön på 35 000 kr/mån kostar dig ofta runt 52 000 kr/mån.</li>
+<li><strong>Omkostnader</strong> – bil och drivmedel, verktyg och maskiner, försäkringar, telefon, admin, bokföring, eventuell lokal och marknadsföring. Slå ut dem per debiterbar timme.</li>
+<li><strong>Debiterbara timmar</strong> – nyckeltalet de flesta missar. Av en 8-timmars dag blir sällan mer än 5–6 timmar fakturerbara. Restid, offerter, inköp, admin och ställtid går inte att debitera.</li>
+<li><strong>Vinstpåslag</strong> – företaget ska tjäna pengar utöver din lön. 10–20 % är vanligt.</li>
+</ul>
+
+<h2>Exempel: från lön till timpris</h2>
+<p>Säg att du har en anställd snickare:</p>
+<ul>
+<li>Arbetsgivarkostnad: <strong>52 000 kr/mån</strong></li>
+<li>Omkostnader (bil, verktyg, försäkring, admin): <strong>+ 14 000 kr/mån</strong> → 66 000 kr totalt</li>
+<li>Debiterbara timmar: 6 h/dag × 20 dagar = <strong>120 h/mån</strong> (debiteringsgrad 75 %)</li>
+<li>Självkostnad per timme: 66 000 ÷ 120 = <strong>550 kr</strong></li>
+<li>Vinstpåslag 15 %: 550 × 1,15 ≈ <strong>630 kr/timme exkl. moms</strong></li>
+<li>Med 25 % moms: ≈ <strong>790 kr/timme</strong> som kunden ser</li>
+</ul>
+<p>Sänker du debiteringsgraden till 60 % (bara 4,8 debiterbara timmar/dag) stiger självkostnaden till ca 690 kr – nästan 25 % högre för exakt samma lön. Det är därför debiteringsgraden är så avgörande. <a href="/sv/verktyg/timpris-kalkylator">Testa dina egna siffror i timpris-kalkylatorn</a>.</p>
+
+<h2>Glöm inte påslaget på material</h2>
+<p>Timpriset täcker arbetet – men hanterar du material åt kunden ska du ta betalt för inköp, spill, transport och risk. Ett påslag på 10–20 % på materialet är rimligt. <a href="/sv/verktyg/paslag-marginal-kalkylator">Räkna påslag vs marginal här</a> så att du inte blandar ihop de två (ett påslag på 20 % ger inte 20 % marginal).</p>
+
+<h2>ROT och moms – så påverkar de priset kunden ser</h2>
+<p>För privatkunder dras <strong>ROT-avdrag på 30 % av arbetskostnaden</strong> (2026, max 50 000 kr per person och år). Du fakturerar hela arbetskostnaden inkl. moms och drar av ROT direkt på fakturan – kunden betalar mindre på en gång och du begär tillbaka resten från Skatteverket. Momsen på hantverkartjänster är 25 %. Se hur det slår i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdrag kalkylatorn</a> och <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn</a>.</p>
+
+<h2>Så håller du koll på debiteringsgraden i ByggExp</h2>
+<p>Du kan bara prissätta rätt om du vet hur många timmar som faktiskt blir fakturerbara. I ByggExp registrerar teamet tid direkt i mobilen, kopplad till rätt projekt:</p>
+<ol>
+<li>Alla stämplar tid per projekt och moment – arbete, restid och ställtid.</li>
+<li>Du ser i efterhand hur stor andel av tiden som gick att debitera – din verkliga debiteringsgrad.</li>
+<li>Med rätt siffra kan du sätta ett timpris som håller, i stället för att gissa.</li>
+<li>Tiden blir direkt underlag för offert och faktura, med ROT uträknat automatiskt.</li>
+</ol>
+<p>Vill du börja enkelt? <a href="/sv/verktyg/tidrapport-mall">Ladda ner en gratis tidrapport-mall</a> och börja mät din tid redan i veckan.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är ett normalt timpris för en hantverkare 2026?</h3>
+<p>Som riktvärde ligger snickare på ca 450–850 kr/timme, målare 400–650 kr, och elektriker och rörmokare ofta 550–1 100 kr – allt inklusive moms och före ROT-avdrag. I storstäder är priserna 15–25 % högre. Ditt eget timpris bör dock alltid räknas fram från dina kostnader, inte från marknadsgenomsnittet.</p>
+<h3>Vad är debiteringsgrad och varför är den viktig?</h3>
+<p>Debiteringsgrad är andelen av arbetstiden som du faktiskt kan fakturera. Restid, offerter, inköp och admin är sällan debiterbara, så av en 8-timmars dag blir ofta bara 5–6 timmar fakturerbara. Ju lägre debiteringsgrad, desto högre måste timpriset vara för att täcka kostnaderna.</p>
+<h3>Hur mycket vinstpåslag ska jag lägga på?</h3>
+<p>Utöver att din lön ska täckas ska företaget gå med vinst. Ett vinstpåslag på 10–20 % på självkostnaden är vanligt. Under det riskerar företaget att inte klara oförutsedda kostnader eller investeringar.</p>
+<h3>Ska jag ta betalt för restid?</h3>
+<p>Restid är en kostnad oavsett om du debiterar den separat eller inte. Antingen fakturerar du restiden explicit, eller så måste den räknas in i timpriset via en lägre debiteringsgrad. Det viktiga är att den inte &quot;försvinner&quot;.</p>
+
+<h2>Kom igång</h2>
+<p>Sätt timpriset utifrån dina egna kostnader – inte grannens. <a href="/sv/verktyg/timpris-kalkylator">Räkna ut ditt timpris gratis</a>, eller <a href="/sv/contact">boka en demo av ByggExp</a> och se hur tidrapporteringen ger dig den debiteringsgrad du behöver för att prissätta rätt.</p>
+
+<p>Relaterade verktyg: <a href="/sv/verktyg/timpris-kalkylator">Timpris-kalkylator</a> · <a href="/sv/verktyg/paslag-marginal-kalkylator">Påslag &amp; marginal</a> · <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdrag</a> · <a href="/sv/verktyg/tidrapport-mall">Tidrapport-mall</a></p>
+`.trim();
+
+const TIMPRIS: BlogPost = {
+  _id: 'code-timpris',
+  title: 'Vad ska du ta betalt per timme? Räkna ut ditt timpris 2026',
+  slug: 'timpris-hantverkare',
+  locale: 'sv',
+  excerpt:
+    'Marknadspriser 2026 och hur du räknar fram ditt eget timpris utifrån arbetsgivarkostnad, omkostnader, debiteringsgrad och vinst – med ett räkneexempel och gratis kalkylator.',
+  tag: 'Ekonomi',
+  coverImageUrl: '/landing/features/2uppgift.webp',
+  contentHtml: TIMPRIS_HTML,
+  seoTitle: 'Timpris hantverkare 2026 – så räknar du ut vad du ska ta betalt | ByggExp',
+  seoDescription:
+    'Vad ska du ta betalt i timmen? Marknadspriser 2026 och hur du räknar fram ditt timpris från kostnader, debiteringsgrad och vinst. Gratis timpris-kalkylator.',
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-17T09:00:00.000Z',
+  createdAt: '2026-08-17T09:00:00.000Z',
+  updatedAt: '2026-08-17T09:00:00.000Z',
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    TIMPRIS,
     BYGGDAGBOK,
     EGENKONTROLL,
     ATA,

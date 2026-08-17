@@ -17,7 +17,7 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Hur mycket färg går det åt per kvadratmeter?',
     answer:
-      'Det beror på färgens täckförmåga, som ofta är 6–8 m² per liter och strykning. Med två strykningar går det alltså åt ungefär dubbelt så mycket. Täckförmågan står på burken.',
+      'Det beror på färgtypen. Inne ligger vägg- och takfärg ofta på ca 6–8 m² per liter och strykning, träfasad kring 5 m²/l och putsad fasad kring 4 m²/l. Kalkylatorn föreslår ett värde per färgtyp som du kan justera efter burken.',
   },
   {
     question: 'Hur många strykningar behöver jag?',
@@ -25,9 +25,14 @@ const FAQ: LeadMagnetFaqItem[] = [
       'Oftast två strykningar för ett jämnt resultat, ibland tre på sugande eller kraftigt kulört underlag. Kalkylatorn räknar med det antal du anger.',
   },
   {
+    question: 'Ska jag dra av fönster och dörrar?',
+    answer:
+      'Ja, för en mer exakt mängd. Ange den sammanlagda ytan för fönster och dörrar i fältet "Avdrag" så räknas de bort innan färgåtgången beräknas.',
+  },
+  {
     question: 'Varför går det åt mer färg än beräknat?',
     answer:
-      'Sugande, ojämna eller obehandlade underlag drar mer färg. Räkna gärna med lite marginal så att du inte får slut mitt i jobbet.',
+      'Sugande, grova eller obehandlade underlag drar mer, och ett mörkt-till-ljust kulörbyte kan kräva en extra strykning eller grundfärg. Räkna gärna med lite marginal.',
   },
   {
     question: 'Kostar det något?',
@@ -45,9 +50,9 @@ export default function FargKalkylatorPage() {
   const footerT = footerTranslations[LOCALE];
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/farg-kalkylator`;
-  const title = 'Färgåtgång kalkylator – hur mycket färg behöver du | ByggExp';
+  const title = 'Färgkalkylator – räkna färgåtgång (liter) | ByggExp';
   const description =
-    'Räkna ut färgåtgången: hur många liter färg du behöver utifrån yta, antal strykningar och täckförmåga. Gratis kalkylator för målning, utan konto.';
+    'Räkna ut färgåtgången i liter: yta, antal strykningar och täckförmåga per färgtyp (vägg, tak, träfasad, puts) – med avdrag för fönster och dörrar. Gratis, utan konto.';
 
   return (
     <>
@@ -79,8 +84,8 @@ export default function FargKalkylatorPage() {
 
       <LeadMagnetPage
         badge="Gratis kalkylator"
-        title="Färgåtgång – hur mycket färg behöver du?"
-        intro="Fyll i ytan, antal strykningar och färgens täckförmåga så räknar vi ut hur många liter färg du behöver. Bra inför både inomhus- och utomhusmålning."
+        title="Färgkalkylator"
+        intro="Välj färgtyp – innervägg, tak, träfasad eller puts – ange ytan och antal strykningar, så räknar vi ut hur många liter färg du behöver, med avdrag för fönster och dörrar. Täckförmågan sätts efter färgtyp och kan justeras."
         tool={<FargKalkylatorTool />}
         preview={
           <PreviewImage
@@ -94,14 +99,25 @@ export default function FargKalkylatorPage() {
         sections={[
           {
             id: 'sa-raknar-du',
-            heading: 'Så räknar du ut färgåtgången',
+            heading: 'Så räknas färgåtgången',
             body: (
-              <ol>
-                <li>Räkna ut ytan som ska målas i kvadratmeter.</li>
-                <li>Ange antal strykningar (oftast två).</li>
-                <li>Fyll i färgens täckförmåga (m² per liter) – står på burken.</li>
-                <li>Se hur många liter du behöver och köp med lite marginal.</li>
-              </ol>
+              <p>
+                Formeln är: (yta − fönster/dörrar) × antal strykningar ÷ täckförmåga (m²/l), plus spill.
+                En vägg på 40 m² med två strykningar och 7 m²/l ger 40 × 2 ÷ 7 ≈ 11,4 liter, plus
+                marginal – alltså ungefär 12 liter.
+              </p>
+            ),
+          },
+          {
+            id: 'tackformaga',
+            heading: 'Täckförmåga per färgtyp',
+            body: (
+              <ul>
+                <li><strong>Innervägg / tak:</strong> ca 6–8 m² per liter och strykning.</li>
+                <li><strong>Träfasad:</strong> ca 5 m² per liter – grövre, sugande underlag.</li>
+                <li><strong>Putsad fasad:</strong> ca 4 m² per liter.</li>
+                <li>Kalkylatorn föreslår ett värde per typ; exakt siffra står på burken.</li>
+              </ul>
             ),
           },
           {
@@ -109,9 +125,9 @@ export default function FargKalkylatorPage() {
             heading: 'Tips för rätt mängd',
             body: (
               <p>
-                Dra av stora fönster och dörrar från ytan om du vill vara exakt. Kom ihåg att grundfärg
-                kan behövas på nytt eller sugande underlag, och att en tredje strykning kan krävas vid
-                stora färgskillnader. Lite extra färg är billigare än ett extra inköp mitt i jobbet.
+                Grundfärg kan behövas på nytt eller sugande underlag, och en tredje strykning krävs
+                ibland vid stora kulörskillnader. Lite extra färg är billigare än ett extra inköp mitt
+                i jobbet – och samma bas/kulör kan skilja lite mellan batcher.
               </p>
             ),
           },

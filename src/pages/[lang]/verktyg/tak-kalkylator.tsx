@@ -17,17 +17,22 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Hur räknar jag ut takytan?',
     answer:
-      'För ett sadeltak är takytan grundytan delat med cosinus av taklutningen: takyta = (längd × bredd) ÷ cos(lutning). Ju brantare tak, desto större yta än grundytan. Kalkylatorn gör beräkningen åt dig.',
+      'Takytan är grundytan (inkl. takutsprång) delat med cosinus av taklutningen: takyta = grundyta ÷ cos(lutning). Ju brantare tak, desto större yta än grundytan – vid 45° är takytan ca 1,4 gånger grundytan. Kalkylatorn gör det åt dig för både sadel- och pulpettak.',
   },
   {
     question: 'Hur många takpannor går det per kvadratmeter?',
     answer:
-      'Det beror på pannmodellen – ofta runt 9–15 pannor per m². Ange pannor per m² från leverantören i kalkylatorn så får du en uppskattning av antalet.',
+      'En betongpanna ligger ofta på ca 9–11 st/m² och en tegelpanna på ca 12–15 st/m². Kalkylatorn föreslår ett standardvärde per pannetyp som du kan justera efter din modell – kontrollera alltid tillverkarens läggningsanvisning.',
   },
   {
-    question: 'Varför lägga på överhäng och spill?',
+    question: 'Hur mycket bärläkt behöver jag?',
     answer:
-      'Takfoten och gavelöverhäng ökar ytan jämfört med grundytan, och det blir alltid lite kap och spill. Ett påslag ger en säkrare materialmängd.',
+      'Bärläkten löper vågrätt med ett läktavstånd som beror på pannmodellen (ofta 320–345 mm). Löpmetern blir takytan delat med läktavståndet. Räkna även med ströläkt (stående) och en marginal för kap.',
+  },
+  {
+    question: 'Räknar den plåt- och papptak?',
+    answer:
+      'Ja. Väljer du plåt eller papp visar kalkylatorn takytan inkl. överlapp i m² i stället för antal pannor – dessa material säljs på rulle eller i skivor med överlapp.',
   },
   {
     question: 'Kostar det något?',
@@ -45,9 +50,9 @@ export default function TakKalkylatorPage() {
   const footerT = footerTranslations[LOCALE];
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/tak-kalkylator`;
-  const title = 'Takberäknare – räkna ut takyta och takpannor | ByggExp';
+  const title = 'Takkalkylator 2026 – takyta, takpannor & läkt | ByggExp';
   const description =
-    'Räkna ut takytan för ett sadeltak utifrån byggnadens mått och taklutning, plus antal takpannor. Gratis takberäknare, utan konto.';
+    'Räkna ut takytan för sadel- eller pulpettak och hela materialet: takpannor, bärläkt i löpmeter och underlagspapp. Gratis takkalkylator, utan konto.';
 
   return (
     <>
@@ -79,8 +84,8 @@ export default function TakKalkylatorPage() {
 
       <LeadMagnetPage
         badge="Gratis kalkylator"
-        title="Takberäknare – räkna ut takytan"
-        intro="Fyll i byggnadens mått och taklutning så räknar vi ut takytan för ett sadeltak och uppskattar antalet takpannor. Bra inför omläggning eller offert."
+        title="Takkalkylator"
+        intro="Ange byggnadens mått, taklutning och taktäckning så räknar vi ut takytan och materialet: takpannor, bärläkt i löpmeter och underlagspapp. Takytan räknas per takfall – bra inför omläggning eller offert."
         tool={<TakKalkylatorTool />}
         preview={
           <PreviewImage
@@ -94,24 +99,35 @@ export default function TakKalkylatorPage() {
         sections={[
           {
             id: 'sa-raknar-du',
-            heading: 'Så räknar du ut takytan',
+            heading: 'Det här räknar kalkylatorn ut',
             body: (
-              <ol>
-                <li>Mät byggnadens längd och bredd (grundytan).</li>
-                <li>Ange taklutningen i grader.</li>
-                <li>Lägg på ett påslag för överhäng och spill.</li>
-                <li>Se takytan och en uppskattning av antalet takpannor.</li>
-              </ol>
+              <ul>
+                <li><strong>Takyta:</strong> grundyta (inkl. utsprång) ÷ cos(taklutning), per takfall.</li>
+                <li><strong>Takpannor:</strong> takyta × pannor per m² + spill.</li>
+                <li><strong>Bärläkt:</strong> takyta ÷ läktavstånd (löpmeter).</li>
+                <li><strong>Underlagspapp:</strong> takyta + ca 10 % överlapp.</li>
+              </ul>
             ),
           },
           {
             id: 'formeln',
-            heading: 'Formeln bakom',
+            heading: 'Takyta = grundyta ÷ cos(taklutning)',
             body: (
               <p>
-                För ett symmetriskt sadeltak är takytan grundytan delat med cosinus av taklutningen.
-                Ett brantare tak ger större yta – vid 45° är takytan cirka 1,4 gånger grundytan. För
-                platta eller komplexa tak behöver du dela upp taket i delytor.
+                Ett brantare tak ger större yta än huset mäter på marken – vid 27° är takytan ca 1,12
+                gånger grundytan, vid 45° ca 1,4 gånger. Glöm inte takutsprånget vid takfot och gavel,
+                det ökar ytan ytterligare. För valmade eller komplexa tak delar du upp taket i delytor.
+              </p>
+            ),
+          },
+          {
+            id: 'pannor-lakt',
+            heading: 'Pannor och läkt beror på modellen',
+            body: (
+              <p>
+                Betongpannor ligger ofta på ca 9–11 st/m² och tegelpannor på ca 12–15 st/m². Läktavståndet
+                (ofta 320–345 mm) styrs av pannmodellens längd och takets lutning. Kalkylatorn använder
+                typvärden per pannetyp – kontrollera alltid tillverkarens läggningsanvisning innan köp.
               </p>
             ),
           },

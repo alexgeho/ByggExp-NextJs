@@ -13,6 +13,7 @@ function num(v: string): number {
 export default function KvadratmeterKalkylatorTool() {
   const [rows, setRows] = useState<Row[]>([emptyRow(), emptyRow()]);
   const [spill, setSpill] = useState('0');
+  const [price, setPrice] = useState('');
 
   const setRow = (i: number, patch: Partial<Row>) =>
     setRows((prev) => prev.map((r, idx) => (idx === i ? { ...r, ...patch } : r)));
@@ -23,8 +24,9 @@ export default function KvadratmeterKalkylatorTool() {
   const result = useMemo(() => {
     const base = rows.reduce((sum, r) => sum + num(r.l) * num(r.w), 0);
     const withSpill = base * (1 + num(spill) / 100);
-    return { base, withSpill };
-  }, [rows, spill]);
+    const cost = num(price) > 0 ? withSpill * num(price) : 0;
+    return { base, withSpill, cost };
+  }, [rows, spill, price]);
 
   return (
     <div className="lm-tool">
@@ -58,6 +60,10 @@ export default function KvadratmeterKalkylatorTool() {
           <span>Spill (%)</span>
           <input type="number" min="0" inputMode="decimal" value={spill} onChange={(e) => setSpill(e.currentTarget.value)} />
         </label>
+        <label className="lm-tool-field" style={{ maxWidth: 180 }}>
+          <span>Pris per m² (valfritt)</span>
+          <input type="number" min="0" inputMode="decimal" value={price} placeholder="kr/m²" onChange={(e) => setPrice(e.currentTarget.value)} />
+        </label>
       </div>
 
       <div className="lm-result">
@@ -69,6 +75,12 @@ export default function KvadratmeterKalkylatorTool() {
           <span>Inkl. spill – beställ minst</span>
           <strong>{result.withSpill.toLocaleString('sv-SE', { maximumFractionDigits: 2 })} m²</strong>
         </div>
+        {result.cost > 0 ? (
+          <div className="lm-result-row">
+            <span>Uppskattad materialkostnad</span>
+            <span>{Math.round(result.cost).toLocaleString('sv-SE')} kr</span>
+          </div>
+        ) : null}
       </div>
     </div>
   );

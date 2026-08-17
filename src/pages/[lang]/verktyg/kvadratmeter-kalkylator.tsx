@@ -30,6 +30,11 @@ const FAQ: LeadMagnetFaqItem[] = [
       'Ja. Lägg till en rad per rum eller yta – kalkylatorn summerar den totala kvadratmetern.',
   },
   {
+    question: 'Kan jag se materialkostnaden?',
+    answer:
+      'Ja. Fyll i pris per m² (valfritt) så räknar kalkylatorn ut en uppskattad materialkostnad på ytan inklusive spill – bra för en snabb budget eller offert.',
+  },
+  {
     question: 'Kostar det något?',
     answer: 'Nej, kalkylatorn är gratis och kräver inget konto.',
   },
@@ -80,7 +85,7 @@ export default function KvadratmeterKalkylatorPage() {
       <LeadMagnetPage
         badge="Gratis kalkylator"
         title="Kvadratmeterberäknare – räkna ut ytan"
-        intro="Fyll i längd och bredd för ett eller flera utrymmen så summeras ytan i kvadratmeter. Lägg till spill när du ska beställa golv, kakel, färg eller annat material."
+        intro="Fyll i längd och bredd för ett eller flera utrymmen så summeras ytan i kvadratmeter. Lägg till spill när du ska beställa golv, kakel, färg eller annat material – och ett pris per m² om du vill se materialkostnaden direkt."
         tool={<KvadratmeterKalkylatorTool />}
         preview={
           <PreviewImage

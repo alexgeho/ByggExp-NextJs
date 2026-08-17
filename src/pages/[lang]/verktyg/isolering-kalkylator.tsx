@@ -14,9 +14,10 @@ import { headerTranslations } from '../../../locales/header';
 const LOCALE = 'sv';
 
 const FAQ: LeadMagnetFaqItem[] = [
-  { question: 'Hur mycket isolering går det åt?', answer: 'Det beror på ytan och hur många m² en förpackning täcker vid vald tjocklek. Ju tjockare isolering, desto färre m² per förpackning.' },
-  { question: 'Hur många m² täcker en förpackning?', answer: 'Det står på förpackningen och beror på tjockleken. Ange värdet i kalkylatorn så räknas antalet ut.' },
-  { question: 'Ska jag räkna med spill?', answer: 'Ja, lite spill för kap mellan reglar och vid kanter är vanligt. Ett litet påslag ger marginal.' },
+  { question: 'Hur mycket isolering går det åt?', answer: 'Det beror på ytan och hur många m² en förpackning täcker vid vald tjocklek – ju tjockare isolering, desto färre m² per förpackning. Kalkylatorn räknar även ut volymen (m³) och antal förpackningar inkl. spill.' },
+  { question: 'Vad betyder lambda och U-värde?', answer: 'Lambda (W/mK) är materialets värmeledningsförmåga – mineralull ligger på ca 0,033–0,037. U-värdet beskriver hur mycket värme som släpps igenom: lägre är bättre. Kalkylatorn visar ett ungefärligt U-värde för enbart isolerskiktet (U ≈ lambda ÷ tjocklek).' },
+  { question: 'Vilket U-värde ger olika tjocklek?', answer: 'Grovt räknat ger ca 10 cm mineralull U ≈ 0,4, 20 cm ≈ 0,2 och 40 cm ≈ 0,1 W/m²K för isolerskiktet. Ett korrekt U-värde för hela väggen tar även hänsyn till reglar, skivor och köldbryggor.' },
+  { question: 'Vilket c/c ska reglarna ha?', answer: 'Skivor som är 560 mm breda passar reglar med c/c 600 mm (de kläms lätt ihop och sitter kvar av friktion). Lägg gärna isoleringen i två korsande skikt för att bryta köldbryggor.' },
   { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
 ];
 
@@ -30,8 +31,8 @@ export default function Page() {
   const footerT = footerTranslations[LOCALE];
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/isolering-kalkylator`;
-  const title = 'Isoleringsberäknare – antal förpackningar | ByggExp';
-  const description = 'Räkna ut hur många förpackningar isolering du behöver utifrån ytan och hur mycket en förpackning täcker. Gratis kalkylator för isolering, utan konto.';
+  const title = 'Isoleringskalkylator – förpackningar, m³ & U-värde | ByggExp';
+  const description = 'Räkna ut isolering: antal förpackningar, volym (m³) och ett ungefärligt U-värde utifrån yta, tjocklek och lambda. Gratis isoleringskalkylator, utan konto.';
 
   return (
     <>
@@ -63,8 +64,8 @@ export default function Page() {
 
       <LeadMagnetPage
         badge='Gratis kalkylator'
-        title='Isoleringsberäknare'
-        intro='Fyll i ytan som ska isoleras och hur många m² en förpackning täcker för vald tjocklek så räknar vi ut antalet förpackningar.'
+        title='Isoleringskalkylator'
+        intro='Ange ytan och isoleringstjockleken så räknar vi ut antal förpackningar, volym i m³ och ett ungefärligt U-värde för isolerskiktet. Standard är mineralull med lambda 0,036 W/mK.'
         tool={<IsoleringKalkylatorTool />}
         preview={
           <PreviewImage
@@ -76,8 +77,41 @@ export default function Page() {
           />
         }
         sections={[
-          { id: 'sa-raknar-du', heading: 'Så räknar du ut isoleringen', body: (<><ol><li>Räkna ut ytan som ska isoleras (m²).</li><li>Ange hur många m² en förpackning täcker.</li><li>Lägg på spill.</li><li>Se antal förpackningar.</li></ol></>) },
-          { id: 'info', heading: 'Tänk på tjockleken', body: (<><p>Samma förpackning täcker färre m² ju tjockare isolering du väljer. Kontrollera vilken tjocklek som krävs för din konstruktion (vind, vägg, golv) innan du beställer.</p></>) },
+          {
+            id: 'sa-raknar-du',
+            heading: 'Det här räknar kalkylatorn ut',
+            body: (
+              <ul>
+                <li><strong>Behov:</strong> ytan plus spill (m²).</li>
+                <li><strong>Förpackningar:</strong> behovet delat på m² per förpackning.</li>
+                <li><strong>Volym:</strong> yta × tjocklek (m³).</li>
+                <li><strong>U-värde (ca):</strong> lambda ÷ tjocklek – för enbart isolerskiktet.</li>
+              </ul>
+            ),
+          },
+          {
+            id: 'tjocklek-uvarde',
+            heading: 'Tjocklek, lambda och U-värde',
+            body: (
+              <p>
+                Samma förpackning täcker färre m² ju tjockare isolering du väljer. Tjockare skikt och
+                lägre lambda ger lägre U-värde (bättre). Grovt: 10 cm mineralull ≈ U 0,4, 20 cm ≈ 0,2
+                och 40 cm ≈ 0,1 W/m²K. Kontrollera vilken tjocklek din konstruktion (vind, vägg, golv)
+                kräver innan du beställer.
+              </p>
+            ),
+          },
+          {
+            id: 'reglar',
+            heading: 'Reglar, skivbredd och köldbryggor',
+            body: (
+              <p>
+                Isolerskivor på 560 mm passar reglar med c/c 600 mm. Lägg gärna isoleringen i två
+                korsande skikt så att reglarna inte bildar genomgående köldbryggor – det ger en märkbart
+                bättre vägg i praktiken än U-värdet för enbart isolerskiktet antyder.
+              </p>
+            ),
+          },
         ]}
         faqHeading="Vanliga frågor"
         faq={FAQ}

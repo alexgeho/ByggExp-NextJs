@@ -8,6 +8,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import TimprisKalkylatorTool from '../../../components/LeadMagnet/TimprisKalkylatorTool';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -83,6 +84,7 @@ export default function TimprisKalkylatorPage() {
         title="Timpris-kalkylator – vad ska du ta betalt?"
         intro="Räkna baklänges från vad du vill tjäna till vilket timpris du behöver ta betalt. Kalkylatorn lägger på sociala avgifter, dina omkostnader och en vinstmarginal och delar på dina debiterbara timmar."
         tool={<TimprisKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="timpris-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/timpris-preview.webp"

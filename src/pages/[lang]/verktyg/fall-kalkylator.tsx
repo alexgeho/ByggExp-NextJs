@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -66,6 +67,7 @@ export default function Page() {
         title='Fall & lutning'
         intro='Fyll i längden och fallet i mm per meter så räknar vi ut total höjdskillnad, lutning i procent och som förhållande (1:X). Bra för avlopp, mark och tak.'
         tool={<FallKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="fall-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/fall-preview.webp"

@@ -8,6 +8,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import MomsKalkylatorTool from '../../../components/LeadMagnet/MomsKalkylatorTool';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -82,6 +83,7 @@ export default function MomsKalkylatorPage() {
         title="Momskalkylator – räkna ut moms"
         intro="Lägg på moms eller räkna baklänges från ett pris. Välj 25, 12 eller 6 % så ser du beloppet exklusive moms, själva momsen och beloppet inklusive moms."
         tool={<MomsKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="moms-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/moms-preview.webp"

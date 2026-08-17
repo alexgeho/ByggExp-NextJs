@@ -8,6 +8,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import RotKalkylatorTool from '../../../components/LeadMagnet/RotKalkylatorTool';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -83,6 +84,7 @@ export default function RotKalkylatorPage() {
         title="ROT-avdrag kalkylator 2026"
         intro="Räkna ut ROT-avdraget och se vad kunden betalar efter avdrag. Enligt Skatteverkets regler 2026: 30 % av arbetskostnaden, max 50 000 kr per person och år."
         tool={<RotKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="rot-avdrag-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/rot-avdrag-preview.webp"

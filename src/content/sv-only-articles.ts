@@ -20,6 +20,8 @@ export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
   'slutbesiktning',
   'timpris-hantverkare',
   'skriva-offert',
+  'moms-hantverkare',
+  'tidrapportering',
 ]);
 
 export function isSvOnlyArticle(slug: string): boolean {

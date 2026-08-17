@@ -473,6 +473,7 @@ export default function TidrapportMallPage() {
         }}
         relatedHeading="Fler guider och mallar"
         related={[
+          { href: `/${LOCALE}/blog/tidrapportering`, label: 'Guide: tidrapportering i byggföretag' },
           { href: `/${LOCALE}/verktyg/byggdagbok-mall`, label: 'Byggdagbok – gratis mall' },
           { href: `/${LOCALE}/blog/automatisk-tidrapportering-och-export`, label: 'Automatisk tidrapportering' },
           { href: `/${LOCALE}/blog/loneunderlag-for-byggforetag`, label: 'Löneunderlag för byggföretag' },

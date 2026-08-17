@@ -1231,9 +1231,171 @@ const OFFERT: BlogPost = {
   updatedAt: '2026-08-17T10:00:00.000Z',
 };
 
+const MOMS_HTML = `
+<p>Moms är enkelt – ända tills du jobbar mellan byggföretag. Då gäller <strong>omvänd byggmoms</strong>, och plötsligt ska du fakturera utan moms och märka fakturan på rätt sätt. Fakturerar du fel riskerar du att stå för moms du aldrig fått betalt för. Här går vi igenom momssatsen för byggtjänster, hur omvänd skattskyldighet fungerar, moms på ROT-fakturor och vad du behöver ha koll på i redovisningen.</p>
+
+<p><a href="/sv/verktyg/moms-kalkylator">Räkna ut moms fram och baklänges i vår gratis moms-kalkylator →</a></p>
+
+<h2>Momssats på byggtjänster</h2>
+<p>På de flesta byggtjänster är momsen <strong>25 %</strong>. Några varor och tjänster har lägre sats (12 % eller 6 %), men för vanligt snickeri, måleri, el och VVS gäller 25 %. Ska du lägga på eller räkna baklänges från ett pris inklusive moms hjälper <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn</a> – vid 25 % multiplicerar du med 1,25 för att lägga på, och med 0,8 för att räkna bort.</p>
+
+<h2>Omvänd byggmoms – det här måste du kunna</h2>
+<p>Omvänd skattskyldighet (omvänd byggmoms) innebär att det är <strong>köparen, inte säljaren, som redovisar och betalar momsen</strong>. Det är alltså inte momsfri försäljning – ansvaret för momsredovisningen flyttas bara till köparen. Reglerna finns för att motverka momsfusk i byggkedjan.</p>
+<p><strong>När gäller det?</strong> Du ska använda omvänd byggmoms när du säljer <strong>byggtjänster i Sverige till ett annat företag som självt säljer byggtjänster</strong> (mer än tillfälligt). Är villkoren uppfyllda är det <strong>inte valfritt</strong> – du måste fakturera med omvänd moms.</p>
+<p><strong>När gäller det INTE?</strong> Säljer du till en privatperson eller till ett företag som inte är verksamt inom byggsektorn fakturerar du som vanligt, med 25 % moms.</p>
+
+<h2>Så fakturerar du med omvänd byggmoms</h2>
+<p>När omvänd skattskyldighet gäller ska du:</p>
+<ul>
+<li><strong>Inte lägga på någon moms</strong> på fakturan.</li>
+<li><strong>Märka fakturan</strong> tydligt med texten &quot;Omvänd skattskyldighet för byggtjänster gäller&quot;.</li>
+<li><strong>Ange köparens momsregistreringsnummer.</strong></li>
+</ul>
+<p>Det räcker alltså inte att bara låta bli att lägga på moms – märkningen måste finnas med. Köparen redovisar sedan både utgående och ingående moms i sin momsdeklaration.</p>
+
+<h2>Moms på ROT-fakturor</h2>
+<p>Vid arbete åt privatperson med ROT gäller vanlig moms på 25 %. ROT-avdraget (30 % av arbetskostnaden 2026, max 50 000 kr/person och år) räknas på arbetskostnaden <strong>inklusive moms</strong>, och dras av direkt på fakturan. Du fakturerar alltså full arbetskostnad med moms, drar av ROT och begär tillbaka det från Skatteverket. Se hur det slår i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdrag kalkylatorn</a>.</p>
+
+<h2>Redovisning och underlag</h2>
+<p>Moms redovisas månadsvis, kvartalsvis eller årsvis beroende på företagets omsättning och val. Enligt bokföringslagen ska du spara allt underlag – fakturor, avtal, tidrapporter och ROT-underlag – i <strong>sju år</strong>. Ordning i underlaget gör både momsredovisning och en eventuell kontroll enkel.</p>
+
+<h2>Så håller ByggExp koll på moms och ROT</h2>
+<p>I ByggExp skapar du offert och faktura där moms och ROT räknas ut automatiskt, och du markerar enkelt när omvänd byggmoms gäller:</p>
+<ol>
+<li>Lägg upp arbete och material på specificerade rader.</li>
+<li>Välj momssats – eller omvänd skattskyldighet för bygguppdrag mellan företag.</li>
+<li>Markera ROT på arbetsraderna så räknas kundens del ut automatiskt.</li>
+<li>Fakturan blir rätt märkt och underlaget stämmer mot Skatteverket.</li>
+</ol>
+<p>Vill du börja enkelt? <a href="/sv/verktyg/faktura-mall">Skapa en gratis faktura</a> eller <a href="/sv/verktyg/offert-mall">offert</a> som PDF.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är omvänd byggmoms?</h3>
+<p>Det är när köparen i stället för säljaren redovisar och betalar momsen. Det gäller när du säljer byggtjänster till ett annat företag som självt säljer byggtjänster. Säljaren fakturerar då utan moms men måste märka fakturan med &quot;Omvänd skattskyldighet för byggtjänster gäller&quot; och ange köparens momsnummer.</p>
+<h3>Är omvänd skattskyldighet valfri?</h3>
+<p>Nej. Om villkoren är uppfyllda – du säljer byggtjänster till ett byggföretag i Sverige – måste omvänd skattskyldighet användas. Det är inte något du kan välja bort.</p>
+<h3>Vilken momssats gäller för hantverkartjänster?</h3>
+<p>25 % för de flesta byggtjänster. Vissa varor och tjänster har 12 % eller 6 %, men det är ovanligt inom vanligt bygg- och hantverksarbete.</p>
+<h3>Hur länge ska jag spara momsunderlaget?</h3>
+<p>Sju år enligt bokföringslagen. Det gäller fakturor, avtal, tidrapporter och ROT-underlag.</p>
+
+<h2>Kom igång</h2>
+<p>Fakturera med rätt moms – varje gång. <a href="/sv/verktyg/moms-kalkylator">Räkna moms gratis</a>, eller <a href="/sv/contact">boka en demo av ByggExp</a> och låt systemet hålla koll på moms, omvänd byggmoms och ROT åt dig.</p>
+
+<p>Relaterat: <a href="/sv/blog/skriva-offert">Skriva offert</a> · <a href="/sv/verktyg/moms-kalkylator">Moms-kalkylator</a> · <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdrag</a> · <a href="/sv/verktyg/faktura-mall">Fakturamall</a></p>
+`.trim();
+
+const MOMS: BlogPost = {
+  _id: 'code-moms-hantverkare',
+  title: 'Moms för hantverkare – omvänd byggmoms, ROT och 25 %',
+  slug: 'moms-hantverkare',
+  locale: 'sv',
+  excerpt:
+    'Momssatsen på byggtjänster, hur omvänd byggmoms (omvänd skattskyldighet) fungerar och ska märkas, moms på ROT-fakturor och hur länge du sparar underlaget.',
+  tag: 'Ekonomi',
+  coverImageUrl: '/landing/verktyg/moms-preview.webp',
+  contentHtml: MOMS_HTML,
+  seoTitle: 'Moms för hantverkare 2026 – omvänd byggmoms & ROT | ByggExp',
+  seoDescription:
+    'Moms på byggtjänster: 25 %, omvänd byggmoms (när den gäller och hur fakturan märks), moms på ROT-fakturor och redovisning. Guide för hantverkare + gratis kalkylator.',
+  seoImageUrl: `${SITE_URL}/landing/verktyg/moms-preview.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-17T11:00:00.000Z',
+  createdAt: '2026-08-17T11:00:00.000Z',
+  updatedAt: '2026-08-17T11:00:00.000Z',
+};
+
+const TIDRAPPORTERING_HTML = `
+<p>Tidrapportering känns som en administrativ börda – men det är faktiskt en av de mest lönsamma vanorna ett byggföretag kan ha. Rätt förd tid ger korrekt lön, säkrare fakturor, färre tvister och svaret på den viktigaste frågan av alla: hur stor andel av arbetstiden kan du egentligen fakturera? Här går vi igenom vad en tidrapport ska innehålla, skillnaden mot personalliggare, och hur du för tid utan pappersstrul.</p>
+
+<p><a href="/sv/verktyg/tidrapport-mall">Ladda ner en gratis tidrapport-mall (PDF/Excel) →</a></p>
+
+<h2>Varför tidrapportera?</h2>
+<p>Tidrapporten är underlag för flera saker på en gång:</p>
+<ul>
+<li><strong>Lön</strong> – rätt timmar, OB, övertid och mertid till rätt person.</li>
+<li><strong>Fakturering</strong> – vid löpande räkning är tiden det du tar betalt för; oregistrerad tid är förlorad intäkt.</li>
+<li><strong>Debiteringsgrad</strong> – hur stor andel av tiden som faktiskt gick att fakturera. Nyckeltalet som avgör om ditt timpris håller (se <a href="/sv/blog/timpris-hantverkare">guiden om timpris</a>).</li>
+<li><strong>Projektuppföljning</strong> – lade ni fler timmar än ni tog betalt för? Då blödde projektet.</li>
+</ul>
+
+<h2>Vad en tidrapport ska innehålla</h2>
+<ul>
+<li><strong>Datum</strong> och vem tiden gäller</li>
+<li><strong>Projekt/arbetsplats</strong> – gärna även moment eller kostnadsställe</li>
+<li><strong>Start- och sluttid</strong> eller antal timmar</li>
+<li><strong>Rast</strong> som dras av</li>
+<li><strong>OB, övertid och mertid</strong> noterat separat så lönen blir rätt</li>
+<li><strong>Restid och ställtid</strong> – även om den inte debiteras påverkar den debiteringsgraden</li>
+</ul>
+<p>Registrera gärna varje pass för sig när samma person jobbar på flera projekt eller moment samma dag.</p>
+
+<h2>Tidrapport vs personalliggare – inte samma sak</h2>
+<p>Många blandar ihop dem, men de har olika syften:</p>
+<ul>
+<li><strong>Tidrapport</strong> är ditt <em>interna</em> underlag för lön och fakturering. Formen bestämmer du själv.</li>
+<li><strong>Personalliggare</strong> är ett <em>lagkrav</em> från Skatteverket på de flesta byggarbetsplatser: en löpande förteckning över vilka som är på plats, kopplad till ID06. Den handlar om närvaro för Skatteverkets kontroll – inte om hur många timmar du fakturerar.</li>
+</ul>
+<p>Du behöver alltså oftast <strong>båda</strong>. Läs mer om <a href="/sv/blog/personalliggare">personalliggare</a> och <a href="/sv/blog/id06">ID06</a>.</p>
+
+<h2>OB, övertid och mertid</h2>
+<p>För att lönen ska bli rätt behöver tidrapporten skilja på vanlig tid och tillägg. OB (obekväm arbetstid), övertid (utöver ordinarie tid för heltid) och mertid (för deltidsanställda) styrs av kollektivavtal – notera dem separat direkt när tiden registreras, annars blir det gissningar vid lönekörningen.</p>
+
+<h2>Så för du tid i ByggExp</h2>
+<p>I ByggExp stämplar teamet tid direkt i mobilen, kopplat till rätt projekt – så att inget skrivs av på lappar i efterhand:</p>
+<ol>
+<li>Varje medarbetare startar och stoppar tid per projekt och moment.</li>
+<li>OB, övertid och restid registreras med tiden – klart för lön.</li>
+<li>Du ser nedlagd tid per projekt och din verkliga debiteringsgrad.</li>
+<li>Tiden blir direkt underlag för fakturan, med ROT och moms uträknat.</li>
+</ol>
+<p>Vill du börja på papper eller i Excel? <a href="/sv/verktyg/tidrapport-mall">Ladda ner tidrapport-mallen</a> – den finns för dag, vecka och månad, med PDF- och Excel-export.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan tidrapport och personalliggare?</h3>
+<p>Tidrapporten är ditt interna underlag för lön och fakturering och formen bestämmer du själv. Personalliggaren är ett lagkrav från Skatteverket – en närvaroförteckning kopplad till ID06 på byggarbetsplatsen. Du behöver oftast båda.</p>
+<h3>Är tidrapportering ett lagkrav?</h3>
+<p>Själva tidrapporten är inget uttryckligt lagkrav, men du behöver den för korrekt lön, fakturering och som underlag i bokföringen (sparas i sju år). Personalliggare är däremot lagkrav på de flesta byggarbetsplatser.</p>
+<h3>Hur räknar jag ut debiteringsgraden?</h3>
+<p>Dela de fakturerbara timmarna med de totalt arbetade. Registrerar du all tid – även restid och admin – ser du hur stor andel som faktiskt gick att debitera, vilket är avgörande för att sätta rätt timpris.</p>
+<h3>Måste OB och övertid stå med?</h3>
+<p>Ja, om de ska betalas rätt. Notera OB, övertid och mertid separat direkt vid registreringen så att lönen blir korrekt enligt kollektivavtalet.</p>
+
+<h2>Kom igång</h2>
+<p>Gör tidrapporteringen till en vana som betalar sig. <a href="/sv/verktyg/tidrapport-mall">Ladda ner en gratis tidrapport-mall</a>, eller <a href="/sv/contact">boka en demo av ByggExp</a> och stämpla tid direkt i mobilen – kopplat till projekt, lön och faktura.</p>
+
+<p>Relaterat: <a href="/sv/blog/personalliggare">Personalliggare</a> · <a href="/sv/blog/id06">ID06</a> · <a href="/sv/blog/timpris-hantverkare">Timpris</a> · <a href="/sv/verktyg/tidrapport-mall">Tidrapport-mall</a></p>
+`.trim();
+
+const TIDRAPPORTERING: BlogPost = {
+  _id: 'code-tidrapportering',
+  title: 'Tidrapportering i byggföretag – så gör du rätt (och varför det lönar sig)',
+  slug: 'tidrapportering',
+  locale: 'sv',
+  excerpt:
+    'Vad en tidrapport ska innehålla, skillnaden mot personalliggare, OB/övertid och hur tiden ger dig debiteringsgraden – plus en gratis tidrapport-mall.',
+  tag: 'Tidrapportering',
+  coverImageUrl: '/landing/verktyg/tidrapport-preview.webp',
+  contentHtml: TIDRAPPORTERING_HTML,
+  seoTitle: 'Tidrapportering i byggföretag – guide, mall & debiteringsgrad | ByggExp',
+  seoDescription:
+    'Vad ska en tidrapport innehålla, hur skiljer den sig från personalliggare och hur ger tiden dig debiteringsgraden? Guide för byggföretag + gratis tidrapport-mall.',
+  seoImageUrl: `${SITE_URL}/landing/verktyg/tidrapport-preview.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-17T12:00:00.000Z',
+  createdAt: '2026-08-17T12:00:00.000Z',
+  updatedAt: '2026-08-17T12:00:00.000Z',
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    TIDRAPPORTERING,
+    MOMS,
     TIMPRIS,
     OFFERT,
     BYGGDAGBOK,

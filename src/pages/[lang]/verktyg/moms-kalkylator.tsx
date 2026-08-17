@@ -157,6 +157,7 @@ export default function MomsKalkylatorPage() {
         }}
         relatedHeading="Fler gratis verktyg"
         related={[
+          { href: `/${LOCALE}/blog/moms-hantverkare`, label: 'Guide: moms & omvänd byggmoms' },
           { href: `/${LOCALE}/verktyg/rot-avdrag-kalkylator`, label: 'ROT-avdrag kalkylator' },
           { href: `/${LOCALE}/verktyg/tidrapport-mall`, label: 'Tidrapport – gratis mall' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },

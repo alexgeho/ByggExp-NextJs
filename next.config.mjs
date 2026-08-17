@@ -21,6 +21,16 @@ const nextConfig = {
       { source: "/terms", destination: "/terms.html" },
     ];
   },
+  // Retired calculators merged into a flagship tool. 301 so Google replaces the
+  // old (indexed) URL with the target instead of hitting a 404.
+  async redirects() {
+    return [
+      { source: "/sv/verktyg/skruv-kalkylator", destination: "/sv/verktyg/gips-kalkylator", permanent: true },
+      { source: "/sv/verktyg/armering-kalkylator", destination: "/sv/verktyg/betong-kalkylator", permanent: true },
+      { source: "/sv/verktyg/kakelfix-kalkylator", destination: "/sv/verktyg/golv-kalkylator", permanent: true },
+      { source: "/sv/verktyg/murbruk-kalkylator", destination: "/sv/verktyg", permanent: true },
+    ];
+  },
   async headers() {
     if (allowIndex) return [];
     return [

@@ -93,14 +93,33 @@ export default function MomsKalkylatorPage() {
         }
         sections={[
           {
-            id: 'sa-raknar-du-moms',
-            heading: 'Så räknar du ut moms',
+            id: 'rakna-sjalv-pa-mobilen',
+            heading: 'Räkna ut moms själv på mobilen (25 %)',
             body: (
-              <ul>
-                <li><strong>Lägga på moms:</strong> belopp exkl. moms × momssats. 10 000 kr × 25 % = 2 500 kr moms, totalt 12 500 kr.</li>
-                <li><strong>Räkna baklänges:</strong> belopp inkl. moms ÷ 1,25 (vid 25 %) ger beloppet exkl. moms.</li>
-                <li>Momsen är alltid skillnaden mellan beloppet inkl. och exkl. moms.</li>
-              </ul>
+              <>
+                <p>
+                  Har du bara mobilens miniräknare räcker tre enkla knapptryck. Exemplen
+                  utgår från 25 % moms – den vanligaste satsen för byggtjänster.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Lägga på moms:</strong> pris exkl. moms <strong>× 1,25</strong> = pris inkl. moms.
+                    <br />Ex: 10 000 × 1,25 = <strong>12 500 kr</strong>.
+                  </li>
+                  <li>
+                    <strong>Ta bort moms (baklänges):</strong> pris inkl. moms <strong>× 0,8</strong> = pris exkl. moms.
+                    <br />Ex: 12 500 × 0,8 = <strong>10 000 kr</strong>. (Att dela med 1,25 ger samma svar.)
+                  </li>
+                  <li>
+                    <strong>Bara själva momsen:</strong> pris inkl. moms <strong>× 0,2</strong> = momsen.
+                    <br />Ex: 12 500 × 0,2 = <strong>2 500 kr</strong>.
+                  </li>
+                </ul>
+                <p>
+                  Genvägarna ×&nbsp;0,8 och ×&nbsp;0,2 gäller just 25 %. Vid 12 % delar du i stället
+                  med 1,12 för att ta bort momsen, och vid 6 % med 1,06.
+                </p>
+              </>
             ),
           },
           {

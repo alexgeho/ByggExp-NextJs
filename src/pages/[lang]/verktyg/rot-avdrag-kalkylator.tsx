@@ -119,6 +119,33 @@ export default function RotKalkylatorPage() {
             ),
           },
           {
+            id: 'rakna-sjalv-pa-mobilen',
+            heading: 'Räkna ut ROT själv på mobilen',
+            body: (
+              <>
+                <p>
+                  Du behöver bara arbetskostnaden (exkl. material) och mobilens miniräknare.
+                  Tre steg:
+                </p>
+                <ol>
+                  <li>
+                    <strong>ROT-avdraget:</strong> arbetskostnad <strong>× 0,30</strong>.
+                    <br />Ex: 60 000 × 0,30 = <strong>18 000 kr</strong>.
+                  </li>
+                  <li>
+                    <strong>Kolla taket:</strong> blir svaret mer än <strong>50 000 kr</strong> per person,
+                    räkna med 50 000 kr (100 000 kr om två ägare delar).
+                  </li>
+                  <li>
+                    <strong>Vad kunden betalar för arbetet:</strong> arbetskostnad <strong>× 0,70</strong>
+                    (samma sak som arbetskostnaden minus ROT).
+                    <br />Ex: 60 000 × 0,70 = <strong>42 000 kr</strong>. Lägg sedan till materialet – på det blir det ingen ROT.
+                  </li>
+                </ol>
+              </>
+            ),
+          },
+          {
             id: 'exempel',
             heading: 'Exempel',
             body: (

@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react';
 
+import { downloadCsvRows } from '../../lib/download';
+
 // Professional paint calculator. Litres = (area − openings) × coats ÷ coverage,
 // plus waste. Coverage (m²/litre) is preset per surface type (interior wall/
 // ceiling, wood façade, rendered façade) but editable, and door/window openings
@@ -39,6 +41,28 @@ export default function FargKalkylatorTool() {
     const liters = cov > 0 ? (paintedArea / cov) * (1 + num(spill) / 100) : 0;
     return { paintedArea, liters, buy: Math.ceil(liters) };
   }, [area, openings, coats, coverage, defCov, spill]);
+
+  const surfaceLabel: Record<Surface, string> = {
+    vagg: 'Innervägg',
+    tak: 'Innertak',
+    fasadtra: 'Fasad – trä',
+    fasadputs: 'Fasad – puts',
+  };
+
+  const exportCsv = () => {
+    const rows: (string | number)[][] = [
+      ['Färgkalkylator', 'byggexp.se'],
+      ['Yta / färgtyp', surfaceLabel[surface]],
+      ['Strykningar', coats],
+      ['Täckförmåga', `${num(coverage) || defCov} m²/l`],
+      [],
+      ['Post', 'Mängd'],
+      ['Yta att måla totalt', `${nf(r.paintedArea, 1)} m²`],
+      ['Färg som behövs', `${nf(r.liters, 1)} liter`],
+      ['Köp minst (avrundat)', `${nf(r.buy)} liter`],
+    ];
+    downloadCsvRows(rows, 'farg-atgang.csv');
+  };
 
   return (
     <div className="lm-tool">
@@ -101,6 +125,11 @@ export default function FargKalkylatorTool() {
           mörkt-till-ljust underlag drar mer och kan kräva en extra strykning eller
           grundfärg. Täckförmågan står på burken.
         </p>
+        <div className="lm-tool-actions" style={{ marginTop: 16 }}>
+          <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.liters <= 0}>
+            Exportera till Excel
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react';
 
+import { downloadCsvRows } from '../../lib/download';
+
 // Free area calculator: sum the area (length × width) of one or more rectangles
 // (rooms/sections), with an optional waste margin for material planning.
 
@@ -27,6 +29,22 @@ export default function KvadratmeterKalkylatorTool() {
     const cost = num(price) > 0 ? withSpill * num(price) : 0;
     return { base, withSpill, cost };
   }, [rows, spill, price]);
+
+  const nf = (v: number, d = 2) => v.toLocaleString('sv-SE', { maximumFractionDigits: d });
+
+  const exportCsv = () => {
+    const csvRows: (string | number)[][] = [
+      ['Kvadratmeterberäknare', 'byggexp.se'],
+      [],
+      ['Utrymme', 'Längd (m)', 'Bredd (m)', 'Yta (m²)'],
+      ...rows.map((row, i) => [`Yta ${i + 1}`, row.l || 0, row.w || 0, nf(num(row.l) * num(row.w))]),
+      [],
+      ['Total yta', `${nf(result.base)} m²`],
+      ['Inkl. spill', `${nf(result.withSpill)} m²`],
+      ...(result.cost > 0 ? [['Uppskattad materialkostnad', `${Math.round(result.cost).toLocaleString('sv-SE')} kr`]] : []),
+    ];
+    downloadCsvRows(csvRows, 'ytor-kvadratmeter.csv');
+  };
 
   return (
     <div className="lm-tool">
@@ -81,6 +99,11 @@ export default function KvadratmeterKalkylatorTool() {
             <span>{Math.round(result.cost).toLocaleString('sv-SE')} kr</span>
           </div>
         ) : null}
+        <div className="lm-tool-actions" style={{ marginTop: 16 }}>
+          <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={result.base <= 0}>
+            Exportera till Excel
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react';
 
+import { downloadCsvRows } from '../../lib/download';
+
 // Professional insulation calculator. From area and thickness it returns the
 // insulated area, the volume (m³), the number of packs and an approximate
 // U-value for the insulation layer (U ≈ lambda / thickness). Mineral wool
@@ -29,6 +31,21 @@ export default function IsoleringKalkylatorTool() {
     const uValue = t > 0 && lam > 0 ? lam / t : 0; // enbart isolerskiktet
     return { need, volume, packs, uValue };
   }, [area, thickness, lambda, perPack, spill]);
+
+  const exportCsv = () => {
+    const rows: (string | number)[][] = [
+      ['Isoleringskalkylator', 'byggexp.se'],
+      ['Tjocklek', `${thickness} mm`],
+      ['Lambda', `${lambda} W/mK`],
+      [],
+      ['Post', 'Mängd'],
+      ['Behov inkl. spill', `${nf(r.need, 1)} m²`],
+      ['Antal förpackningar', `${nf(r.packs)} st`],
+      ['Volym isolering', `${nf(r.volume, 1)} m³`],
+      ['U-värde, isolerskiktet (ca)', `${nf(r.uValue, 2)} W/m²K`],
+    ];
+    downloadCsvRows(rows, 'isolering-materiallista.csv');
+  };
 
   return (
     <div className="lm-tool">
@@ -91,6 +108,11 @@ export default function IsoleringKalkylatorTool() {
           korrekt U-värde för hela väggen tar även hänsyn till reglar, skivor och
           köldbryggor. Skivor 560 mm breda passar reglar c/c 600 mm.
         </p>
+        <div className="lm-tool-actions" style={{ marginTop: 16 }}>
+          <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.packs <= 0}>
+            Exportera till Excel
+          </button>
+        </div>
       </div>
     </div>
   );

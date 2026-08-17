@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react';
 
+import { downloadCsvRows } from '../../lib/download';
+
 // Professional concrete calculator. Concrete volume depends on the shape of
 // the pour, so the tool switches inputs by construction type:
 //  - Platta/golv: area × thickness, with an optional thickened edge beam
@@ -71,6 +73,25 @@ export default function BetongKalkylatorTool() {
 
     return { volume, liters, bags, bigBags, water, meshArea };
   }, [shape, length, width, thickness, edge, edgeW, edgeH, bLen, bWidth, bHeight, diam, depth, count, bagYield, spill]);
+
+  const shapeLabel =
+    shape === 'platta' ? 'Platta / golv' : shape === 'balk' ? 'Grundmur / balk' : 'Plintar / stolphål';
+
+  const exportCsv = () => {
+    const rows: (string | number)[][] = [
+      ['Betongkalkylator', 'byggexp.se'],
+      ['Gjutning', shapeLabel],
+      [],
+      ['Post', 'Mängd'],
+      ['Betongvolym inkl. spill', `${nf(r.volume, 2)} m³`],
+      ['Motsvarar', `${nf(r.liters)} liter`],
+      ['Säckar torrbetong (25 kg)', `${nf(r.bags)} st`],
+      ['Eller storsäck (1000 kg)', `${nf(r.bigBags, 1)} st`],
+      ['Blandningsvatten (ca)', `${nf(r.water)} liter`],
+      ...(shape === 'platta' && r.meshArea > 0 ? [['Armeringsnät (ca)', `${nf(r.meshArea, 1)} m²`]] : []),
+    ];
+    downloadCsvRows(rows, 'betong-materiallista.csv');
+  };
 
   return (
     <div className="lm-tool">
@@ -206,6 +227,11 @@ export default function BetongKalkylatorTool() {
           (kubik) oftast billigare och enklare än säck. Armeringsnät säljs i
           mattor (t.ex. 2,3 × 5 m) – räkna med överlapp.
         </p>
+        <div className="lm-tool-actions" style={{ marginTop: 16 }}>
+          <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.volume <= 0}>
+            Exportera till Excel
+          </button>
+        </div>
       </div>
     </div>
   );

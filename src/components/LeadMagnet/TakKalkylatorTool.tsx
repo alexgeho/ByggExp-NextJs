@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react';
 
+import { downloadCsvRows } from '../../lib/download';
+
 // Professional roof calculator. Roof area for a pitched roof is the footprint
 // (incl. eaves overhang) divided by cos(pitch). From the area it estimates the
 // full covering bill: tiles (per model), battens (bärläkt löpmeter from the
@@ -58,6 +60,31 @@ export default function TakKalkylatorTool() {
       hasBatten: def.gauge > 0,
     };
   }, [length, width, pitch, overhang, tiles, spill, def]);
+
+  const coveringLabel: Record<Covering, string> = {
+    betongpanna: 'Betongpanna',
+    tegelpanna: 'Tegelpanna',
+    plat: 'Plåt (profil)',
+    papp: 'Papp / duk',
+  };
+
+  const exportCsv = () => {
+    const rows: (string | number)[][] = [
+      ['Takkalkylator', 'byggexp.se'],
+      ['Takform', form === 'sadel' ? 'Sadeltak' : 'Pulpettak'],
+      ['Taktäckning', coveringLabel[covering]],
+      [],
+      ['Post', 'Mängd'],
+      ['Byggnadens grundyta', `${nf(r.footprint, 1)} m²`],
+      ['Takyta', `${nf(r.roofArea, 1)} m²`],
+      ...(r.hasTiles
+        ? [['Antal takpannor (ca)', `${nf(r.tileCount)} st`]]
+        : [['Taktäckning inkl. överlapp', `${nf(r.feltM2, 1)} m²`]]),
+      ...(r.hasBatten ? [['Bärläkt (ca)', `${nf(r.battenM)} lpm`]] : []),
+      ['Underlagspapp (ca)', `${nf(r.feltM2, 1)} m²`],
+    ];
+    downloadCsvRows(rows, 'tak-materiallista.csv');
+  };
 
   return (
     <div className="lm-tool">
@@ -151,6 +178,11 @@ export default function TakKalkylatorTool() {
           tillverkarens läggningsanvisning. Underlagspapp och plåt säljs på rulle
           med överlapp.
         </p>
+        <div className="lm-tool-actions" style={{ marginTop: 16 }}>
+          <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.roofArea <= 0}>
+            Exportera till Excel
+          </button>
+        </div>
       </div>
     </div>
   );

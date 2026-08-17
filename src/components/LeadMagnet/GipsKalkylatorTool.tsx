@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react';
 
+import { downloadCsvRows } from '../../lib/download';
+
 // Professional drywall (gipsskivor) calculator for a stud wall.
 // Method follows Gyproc's Monteringshandbok: board width sets the stud c/c
 // (900 mm -> c/c 450, 1200 mm -> c/c 600), a stud wall is clad on one or both
@@ -62,6 +64,24 @@ export default function GipsKalkylatorTool() {
   }, [length, height, sides, layers, boardWidth, boardLen, insulate, spill]);
 
   const railLabel = frame === 'stal' ? 'Skena (upp + ned)' : 'Syll + hammarband';
+
+  const exportCsv = () => {
+    const rows: (string | number)[][] = [
+      ['Gipskalkylator', 'byggexp.se'],
+      [],
+      ['Vägg', `${length || 0} × ${height || 0} m, ${sides === '2' ? 'dubbelsidig' : 'enkelsidig'}, ${layers} lager/sida`],
+      [],
+      ['Post', 'Mängd'],
+      ['Gipsskivor', `${nf(r.sheets)} st`],
+      ['Beklädd yta', `${nf(r.cladArea, 1)} m²`],
+      ['Gips inkl. spill', `${nf(r.gipsNeed, 1)} m²`],
+      [`Reglar (c/c ${r.cc} mm)`, `${nf(r.studCount)} st / ${nf(r.studMeters, 1)} lpm`],
+      [railLabel, `${nf(r.railMeters, 1)} lpm`],
+      ...(r.insulM2 > 0 ? [['Isolering', `${nf(r.insulM2, 1)} m²`]] : []),
+      ['Gipsskruv', `${nf(r.screws)} st`],
+    ];
+    downloadCsvRows(rows, 'gips-materiallista.csv');
+  };
 
   return (
     <div className="lm-tool">
@@ -166,6 +186,11 @@ export default function GipsKalkylatorTool() {
           fält c300). Kontrollera alltid skivmått, regeltyp och infästning mot
           leverantörens anvisning för din väggtyp.
         </p>
+        <div className="lm-tool-actions" style={{ marginTop: 16 }}>
+          <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.sheets <= 0}>
+            Exportera till Excel
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -66,6 +67,7 @@ export default function Page() {
         title='Trallberäknare'
         intro='Fyll i altanens yta, brädans bredd och springan mellan brädorna så räknar vi ut hur många löpmeter trall och antal brädor du behöver, inkl. spill.'
         tool={<TrallKalkylatorTool />}
+        leadForm={<ToolLeadForm tool="trall-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/trall-preview.webp"

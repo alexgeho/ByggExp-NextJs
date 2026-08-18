@@ -4646,9 +4646,643 @@ const A_TRAKTAMENTE_BYGGNADSARBETARE_2026: BlogPost = {
   publishedAt: "2026-08-18T18:48:00.000Z", createdAt: "2026-08-18T18:48:00.000Z", updatedAt: "2026-08-18T18:48:00.000Z",
 };
 
+const A_PERIODISERINGSFOND_BYGGBOLAG_HTML = `
+<p>Byggbranschen är konjunkturkänslig på ett sätt som få andra branscher är. Ett år med fulla orderböcker och stora projektvinster följs ofta av ett magrare år där anbuden dröjer och marginalerna krymper. Ändå betalar många byggaktiebolag full bolagsskatt på toppåret och sitter sedan med tömd kassa när det vänder. Med en <strong>periodiseringsfond</strong> kan ditt aktiebolag flytta upp till 25 % av vinsten framåt och jämna ut skatten över konjunkturcykeln. Det här är en av de mest konkreta skatteplaneringsåtgärderna för ett byggbolag – men den kostar numera lite att använda, och reglerna kring återföring är strikta.</p>
+
+<p>Vill du räkna på avsättning, återföring och schablonintäkt för ditt eget bolag hittar du fler kalkyler och underlag i <a href="/sv/verktyg">vår samling av gratis verktyg för byggföretag -&gt;</a>.</p>
+
+<h2>Vad är en periodiseringsfond – kort och konkret</h2>
+<p>En periodiseringsfond är skattemässig resultatutjämning. Du sätter av en del av årets vinst innan skatt och skjuter på beskattningen till ett senare år. I balansräkningen redovisas fonden som en <strong>obeskattad reserv</strong> och avsättningen bokas som en bokslutsdisposition i resultaträkningen. Det är viktigt att förstå vad det inte är: det är inte en avsättning i vanlig mening och det är inte skattefrihet. Det är <strong>uppskjuten skatt</strong>. Skatten på det avsatta beloppet betalas när fonden återförs. För aktiebolag och andra juridiska personer är maxbeloppet 25 % av den skattemässiga vinsten före avsättning. En vanlig förväxling är gränsen 30 % – den gäller enskild firma och delägare i handelsbolag, inte aktiebolag.</p>
+
+<h2>Reglerna 2026 i siffror</h2>
+<p>Så här ser ramverket ut för ett byggaktiebolag beskattningsåret 2026:</p>
+<ul>
+<li><strong>Avsättning:</strong> högst 25 % av den skattemässiga vinsten (resultatet före avsättning).</li>
+<li><strong>Återföring:</strong> varje års avsättning måste tas upp till beskattning senast det sjätte beskattningsåret efter avsättningsåret. Ett bolag kan därför ha upp till sex fonder samtidigt.</li>
+<li><strong>Bolagsskatt:</strong> 20,6 %. Avsättningen skjuter upp – inte eliminerar – skatt på 20,6 % av det avsatta beloppet.</li>
+<li><strong>Schablonintäkt:</strong> juridiska personer betalar en årlig schablonintäkt på fonderna. Den beräknas som statslåneräntan den 30 november året före beskattningsåret gånger summan av fonderna vid beskattningsårets ingång. Räntan anses vara lägst 0,5 %.</li>
+</ul>
+<p>Statslåneräntan den 30 november 2025 var 2,55 %. Det är den ränta som styr schablonintäkten för beskattningsår 2026, och eftersom 2,55 % ligger över golvet på 0,5 % är det den procentsatsen som gäller. <strong>Ett räkneexempel:</strong> har ditt bolag 1 000 000 kr i fonder vid årets ingång blir schablonintäkten 25 500 kr. Den läggs till den skattepliktiga inkomsten och beskattas med 20,6 %, vilket ger en faktisk skattekostnad på ungefär 5 253 kr – alltså cirka 0,53 % av fondbeloppet det året. Kontrollera alltid aktuell statslåneränta mot Skatteverket innan du räknar skarpt, den ändras varje år.</p>
+
+<h2>Så jämnar byggbolaget ut vinsten</h2>
+<p>Poängen blir tydligast i ett praktiskt scenario. Säg att ditt bolag har ett starkt 2026 med flera stora ROT-projekt och en skattemässig vinst på 2 000 000 kr. Du sätter av 25 %, alltså 500 000 kr, till periodiseringsfond. Skatten på det beloppet – drygt 103 000 kr – skjuts upp, och pengarna stannar i bolaget som likviditet.</p>
+<p>Kommer sedan ett mellanår där ett par upphandlingar går till konkurrenter och bolaget landar på nollresultat eller till och med förlust, kan du återföra fonden mot det svaga året. Återföringen höjer resultatet, men eftersom den möter en förlust eller ett lågt resultat blir skatten på den återförda fonden låg eller noll. Då har du inte bara skjutit upp skatten – du har jämnat ut den så att den totala skatten över de två åren blir lägre än om du betalat full skatt på toppåret. Det är i den här matchningen mellan ett fett år och ett magert år som den verkliga besparingen ligger.</p>
+<p>Utöver skatten finns en effekt som byggföretagare ofta underskattar: en jämnare resultatkurva. Banker som ska bevilja projektfinansiering och beställare som granskar din ekonomiska ställning i en upphandling ser hellre stabila siffror än ett bolag som svänger vilt mellan rekordvinst och förlust. Att hålla likviditet och ett jämnt resultat stärker din position både i kreditförhandlingar och i anbud. Vill du fördjupa dig i själva kassaflödet har vi skrivit mer i <a href="/sv/blog/likviditet-byggforetag">vår guide om likviditet för byggföretag</a>.</p>
+
+<h2>Kostnaden: schablonintäkten och räntemiljön</h2>
+<p>Under de år då statslåneräntan låg nära noll var periodiseringsfonden i praktiken en gratis skattekredit. Så är det inte längre. Med schablonräntan 2,55 % för 2026 kostar det ungefär 0,53 % av fondbeloppet per år i faktisk skatt att sitta på fonderna. På 1 000 000 kr är det drygt 5 000 kr per år – fortfarande billigt jämfört med den uppskjutna skatten på över 100 000 kr, men inte gratis.</p>
+<p>Riktningen är dessutom uppåt. Statslåneräntan hade den 14 augusti 2026 stigit till 2,87 %, vilket innebär att schablonintäkten för beskattningsår 2027 sannolikt blir högre än för 2026. Ju större fonder du håller och ju högre räntan blir, desto dyrare blir det att skjuta skatten framför sig. Tumregeln: fonden är lönsam när du har ett konkret återföringsår i sikte – en planerad investering eller ett förväntat svagt år – men blir en onödig löpande kostnad om du bara låter fonderna ligga utan plan.</p>
+
+<h2>Bokföring, deklaration och tvingande återföring</h2>
+<p>Periodiseringsfonden hanteras helt i bokslutet, inte hos Bolagsverket. Avsättningen bokförs som en bokslutsdisposition och fonden redovisas som obeskattad reserv i årsredovisningen. I inkomstdeklarationen (INK2) redovisas avsättningar och återföringar på avsedd bilaga. Det finns ingen registrering att göra externt – men det ställer krav på att bokslutet blir rätt och att du har koll på vilka fonder som närmar sig sexårsgränsen.</p>
+<p>En sak att verkligen planera för är <strong>tvingande återföring</strong>. Om bolaget upphör med näringsverksamheten, träder i likvidation, går i konkurs eller ingår i vissa ombildningar och fusioner måste samtliga fonder återföras på en gång. Då kan hela den uppskjutna vinsten tas upp till beskattning ett enda år, med en oväntat hög skattesmäll som följd. Det gör att periodiseringsfonder måste vägas in när du planerar ägarskiften, exit eller en omstrukturering av bolaget.</p>
+
+<h2>Checklista för byggföretagaren</h2>
+<ul>
+<li>Tajma avsättningarna till dina verkliga toppår – sätt av mest när vinsten är hög.</li>
+<li>Håll ordning på sexårsgränsen så att ingen fond återförs oplanerat och tvingar upp skatten.</li>
+<li>Matcha återföringar mot förlustår eller större investeringar för att maximera utjämningseffekten.</li>
+<li>Väg den löpande schablonkostnaden mot nyttan – låt inte fonder ligga kvar utan plan när räntan stiger.</li>
+<li>Ta höjd för tvingande återföring vid ägarskifte, likvidation eller ombildning.</li>
+<li>Stäm alltid av strategin och aktuell statslåneränta med din redovisningskonsult före bokslutet.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp är byggföretagets system för projekt, tid och fakturering – inte en skattedeklaration. Men ett välskött löpande underlag är förutsättningen för att kunna fatta rätt beslut om periodiseringsfond. När tidrapporter, projektkostnader och fakturor är samlade och uppdaterade får du en tydlig bild av årets resultat i god tid före bokslutet, i stället för en överraskning i mars. Det ger dig och din redovisningskonsult ett bättre beslutsunderlag för hur mycket som bör sättas av och vilka fonder som bör återföras. Underlagen från ByggExp ersätter inte rådgivningen, men de gör den snabbare och mer träffsäker.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får mitt aktiebolag sätta av 30 % till periodiseringsfond?</h3>
+<p>Nej. Aktiebolag och andra juridiska personer får sätta av högst 25 % av den skattemässiga vinsten. Gränsen 30 % gäller enskild firma och delägare i handelsbolag – det är en vanlig förväxling.</p>
+<h3>Måste jag betala schablonintäkt på fonderna?</h3>
+<p>Ja, som aktiebolag betalar du en årlig schablonintäkt. För beskattningsår 2026 är den 2,55 % av fondernas ingående saldo, vilket med bolagsskatt 20,6 % motsvarar ungefär 0,53 % av fondbeloppet i faktisk skatt. Enskild firma betalar däremot ingen schablonintäkt.</p>
+<h3>Vad händer om jag inte återför fonden i tid?</h3>
+<p>Varje avsättning måste återföras senast det sjätte beskattningsåret efter avsättningsåret. Sker det inte frivilligt återförs den äldsta fonden ändå automatiskt vid tidsgränsen och tas upp till beskattning. Håll därför koll på vilket år varje fond förfaller.</p>
+<h3>Kan jag lösa upp fonden i förtid?</h3>
+<p>Ja, du kan återföra en fond helt eller delvis tidigare än sexårsgränsen, till exempel för att möta en förlust eller en stor investering. Vid likvidation, konkurs eller att verksamheten upphör sker återföringen dock tvingande och all fond tas upp på en gång.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att skaffa dig en tydlig bild av bolagets resultat i god tid före bokslutet – då blir beslutet om periodiseringsfond en strategi och inte en gissning. Utforska <a href="/sv/verktyg">våra gratis verktyg för byggföretag</a> för att räkna på siffrorna, och <a href="/sv/contact">boka en demo av ByggExp</a> om du vill se hur samlade projekt- och ekonomiunderlag underlättar planeringen.</p>
+
+<p>Relaterat: <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a> och <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggverksamhet</a>.</p>
+`;
+
+const A_PERIODISERINGSFOND_BYGGBOLAG: BlogPost = {
+  _id: "code-"+"periodiseringsfond-byggbolag",
+  title: "Periodiseringsfond för byggbolag: jämna ut vinsten mellan goda och magra år", slug: "periodiseringsfond-byggbolag", locale: "sv",
+  excerpt: "Byggbranschen är cyklisk – periodiseringsfond låter ditt aktiebolag skjuta upp skatt på toppåren och möta de magra åren med jämnare resultat.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_PERIODISERINGSFOND_BYGGBOLAG_HTML,
+  seoTitle: "Periodiseringsfond aktiebolag | ByggExp", seoDescription: "Så använder byggaktiebolag periodiseringsfond för att jämna ut vinsten: 25 % avsättning, återföring inom 6 år och schablonintäkt på 2,55 % för 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:00:00.000Z", createdAt: "2026-08-18T19:00:00.000Z", updatedAt: "2026-08-18T19:00:00.000Z",
+};
+
+const A_BERAKNA_BETONGATGANG_PLATTA_HTML = `
+<p>En felräknad betongåtgång kostar dig antingen pengar i onödan – en halv pall torrbetong som blir stående – eller något värre: att bruket tar slut mitt i gjutningen och du får en kall fog rakt genom plattan. Bägge är onödiga. Med rätt formel och en rimlig spillmarginal räknar du fram exakt hur mycket betong platta, kantbalk och plintar drar innan du beställer en enda säck.</p>
+
+<p>Vill du hoppa över handräkningen tar <a href="/sv/verktyg/betong-kalkylator">vår gratis betongkalkylator</a> fram kubik, vikt, antal säckar och spill åt dig direkt – men det lönar sig att förstå vad den räknar på.</p>
+
+<h2>Grundformeln – volym i kubikmeter</h2>
+<p>All betongåtgång utgår från volym, och volym räknas i kubikmeter (m³). Formeln för en platta är enkel:</p>
+<p><strong>Längd × Bredd × Tjocklek = volym i m³</strong> – med alla tre måtten i meter.</p>
+<p>Exempel: en platta på 5,0 × 4,0 meter med 10 cm tjocklek. Tjockleken måste räknas om från centimeter till meter, alltså 10 cm = 0,10 m. Då blir det:</p>
+<p>5,0 × 4,0 × 0,10 = <strong>2,0 m³</strong>.</p>
+<p>Den vanligaste och dyraste tabben här är att blanda cm och meter. Skriver du in 10 istället för 0,10 blir svaret 100 gånger för stort. Kontrollera alltid att tjockleken står i meter innan du multiplicerar.</p>
+
+<h2>Räkna för platta, kantbalk och plint</h2>
+<p>De flesta grunder består av flera delar. Räkna varje del för sig och summera på slutet.</p>
+<ul>
+<li><strong>Platta:</strong> Längd × Bredd × Tjocklek. Typisk plattjocklek för garage, uterum och carport är 100 mm (0,10 m), armerad med armeringsnät.</li>
+<li><strong>Kantbalk:</strong> Bredd × Höjd × Längd, där längden är hela plattans omkrets. En kantbalk 0,20 × 0,30 m runt en platta med omkretsen 18 m ger 0,20 × 0,30 × 18 = 1,08 m³. Den volymen läggs till plattan.</li>
+<li><strong>Fyrkantig plint:</strong> Sida × Sida × Höjd. En plint 0,3 × 0,3 × 0,8 m = 0,072 m³.</li>
+<li><strong>Rund plint:</strong> π × radie² × höjd. En rund plint med diameter 0,3 m (radie 0,15 m) och höjd 0,8 m ger 3,14 × 0,15² × 0,8 ≈ 0,057 m³.</li>
+</ul>
+<p>Har du flera plintar multiplicerar du med antalet och lägger till summan. Slutresultatet är den totala betongvolymen innan spill.</p>
+
+<h2>Från kubik till vikt och hantering</h2>
+<p>Volym är en sak – vikt är en annan, och det är vikten som avgör hur du får betongen på plats. Normal armerad betong väger cirka 2 400 kg/m³ (intervallet ligger på 2 300–2 500). Alltså:</p>
+<ul>
+<li>1 m³ ≈ 2,4 ton</li>
+<li>Plattan på 2,0 m³ ovan väger runt 4,8 ton</li>
+</ul>
+<p>Det säger direkt att handbärning i hink är uteslutet vid större gjutningar. Det påverkar också bärighet: ska du gjuta på ett bjälklag måste konstruktionen klara lasten. Och det förklarar varför fabriksbetong pumpas eller töms med ränna – ingen orkar bära flera ton för hand.</p>
+
+<h2>Säck eller fabriksbetong?</h2>
+<p>En 25 kg-säck torrbetong ger ungefär 12–12,5 liter färdig betong. Det betyder att det går cirka <strong>80 säckar på 1 m³</strong> (1000 liter delat på 12,5). Exakt utbyte står på säcken och varierar mellan produkter, så kontrollera alltid mot tillverkarens datablad.</p>
+<p>Vid handblandning behövs cirka 2–2,5 liter vatten per 25 kg-säck (runt 2,25 liter). Här ligger en klassisk fälla: för mycket vatten känns lättare att jobba med men höjer vattencementtalet (vct) och sänker hållfastheten kraftigt. Blöt betong är svag betong.</p>
+<p>Brytpunkten går någonstans runt 0,5–1 m³. Under det är säck praktiskt. Över det blir fabriksbetong oftast både billigare och bättre – den levereras per m³ med jämn kvalitet. En betongbil rymmer normalt 7–8 m³, och små beställningar kan få småmängdstillägg, så väg in det i kalkylen. För plattan på 2,0 m³ i exemplet skulle det krävas cirka 160 säckar – då är betongbil nästan alltid rätt val.</p>
+
+<h2>Lägg alltid på spill – 10 %-regeln</h2>
+<p>Räkna aldrig på exakt teoretisk volym. Underlaget är sällan helt plant, formen kan läcka, och lite svinn är oundvikligt. Lägg på <strong>5–10 % spill</strong>; 10 % är en rimlig marginal för platta på mark.</p>
+<p>Plattan på 2,0 m³ blir alltså 2,0 × 1,10 = 2,2 m³ att beställa. Skälet är enkelt: om betongen tar slut och du måste gjuta i två omgångar får du en kall fog – en svaghetszon där de två gjutningarna aldrig binder ihop ordentligt. Hellre en skottkärra över än en fog mitt i plattan.</p>
+
+<h2>Rätt betongkvalitet och grundläggning</h2>
+<p>Mängden är bara halva jobbet – kvaliteten måste också stämma:</p>
+<ul>
+<li><strong>Standard:</strong> C25/30 är normalhållfasthet för platta på mark och grund.</li>
+<li><strong>Frostutsatta delar:</strong> Kantbalk och plintar utomhus kräver frostbeständig betong med luftinblandning, exponeringsklass XF3.</li>
+<li><strong>Grundläggning:</strong> Plintar och kantbalk ska grundläggas på tjälfritt djup eller frostskyddas med markisolering. Tjälfritt djup varierar geografiskt – cirka 0,4–0,6 m i södra Sverige, upp mot 1,5–2,0 m i norr.</li>
+<li><strong>Armering:</strong> En 100 mm platta armeras normalt med armeringsnät. Fribärande eller tyngre laster kräver tjockare platta och grövre armering – stäm alltid av med konstruktör för bärande konstruktioner.</li>
+</ul>
+<p>En sak att hålla isär i offerten: ROT-avdrag gäller enbart arbetskostnaden, inte betongen eller annat material. Hur många säckar det går åt påverkar alltså inte avdraget – bara din materialkostnad.</p>
+
+<h2>Snabb checklista och vanliga misstag</h2>
+<ul>
+<li>Räkna tjockleken i meter (10 cm = 0,10 m), inte cm.</li>
+<li>Summera platta, kantbalk och plintar var för sig.</li>
+<li>Lägg på 10 % spill innan du beställer.</li>
+<li>1 m³ ≈ 2,4 ton – planera transport och lyft.</li>
+<li>Cirka 80 säckar (25 kg) per m³; över 0,5–1 m³ – överväg fabriksbetong.</li>
+<li>Håll nere vattenmängden vid handblandning – för blött = svagt.</li>
+<li>Välj XF3 för frostutsatta delar, grundlägg på tjälfritt djup.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>Betongkalkylatorn i ByggExp låter dig mata in längd, bredd och tjocklek för platta, kantbalk och plint och räknar automatiskt fram total volym i m³, ungefärlig vikt, antal 25 kg-säckar och spillpåslag. Du slipper både omräkningen från cm till meter och risken att multiplicera fel. Resultatet ger dig ett konkret underlag för materialbeställning och för att avgöra om säck eller betongbil lönar sig. Kalkylatorn ersätter inte en konstruktörs dimensionering av bärande delar – den hjälper dig räkna rätt på mängden.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur många säckar betong går det på en kubikmeter?</h3>
+<p>Ungefär 80 säckar à 25 kg, eftersom en säck ger cirka 12–12,5 liter färdig betong och en kubikmeter är 1000 liter. Exakt utbyte står på säcken och varierar per produkt, så kontrollera datablad innan du beställer.</p>
+<h3>Hur mycket väger en betongplatta?</h3>
+<p>Normal armerad betong väger cirka 2 400 kg/m³, alltså runt 2,4 ton per kubikmeter. En platta på 2,0 m³ väger därmed omkring 4,8 ton. Det påverkar både transport och bärighet på bjälklag.</p>
+<h3>Hur mycket spill ska jag räkna med?</h3>
+<p>Lägg på 5–10 %, och 10 % är en rimlig marginal för platta på mark på grund av ojämnt underlag, läckande form och svinn. Underdimensionering tvingar fram en andra gjutning och därmed en kall fog, som är en svaghetszon.</p>
+<h3>Ska jag använda säck eller fabriksbetong?</h3>
+<p>Under cirka 0,5–1 m³ är säckblandning oftast praktiskt. Över det blir fabriksbetong per m³ vanligen både billigare och jämnare i kvalitet. En betongbil rymmer normalt 7–8 m³, men små beställningar kan få småmängdstillägg.</p>
+
+<h2>Kom igång</h2>
+<p>Mata in dina mått i <a href="/sv/verktyg/betong-kalkylator">betongkalkylatorn</a> så får du volym, vikt, antal säckar och spill på några sekunder. Vill du se hur materialberäkning och offert hänger ihop i ett flöde kan du <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget – så undviker du både brist och överbeställning</a>.</p>
+`;
+
+const A_BERAKNA_BETONGATGANG_PLATTA: BlogPost = {
+  _id: "code-"+"berakna-betongatgang-platta",
+  title: "Beräkna betongåtgång för platta, plint och kantbalk – så räknar du rätt", slug: "berakna-betongatgang-platta", locale: "sv",
+  excerpt: "Så räknar du fram rätt mängd betong för platta, kantbalk och plint – volym, vikt, antal säckar och spillmarginal utan gjutfog mitt i plattan.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/betong-preview.webp", contentHtml: A_BERAKNA_BETONGATGANG_PLATTA_HTML,
+  seoTitle: "Beräkna betongåtgång platta | ByggExp", seoDescription: "Räkna kubik, vikt och antal säckar för platta, plint och kantbalk – med 10 % spill. Formel, exempel och gratis betongkalkylator för hantverkare.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/betong-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:03:00.000Z", createdAt: "2026-08-18T19:03:00.000Z", updatedAt: "2026-08-18T19:03:00.000Z",
+};
+
+const A_GANTT_SCHEMA_MALL_BYGG_HTML = `
+<p>Tidsplanen är den handling som avgör om entreprenaden går med vinst eller förlust. En vecka för sent kan kosta i förseningsvite, tvinga fram övertid och binda likviditet i ett projekt som skulle ha varit fakturerat. Ett Gantt-schema visar projektets aktiviteter som staplar på en tidslinje, med start, längd och inbördes ordning – ett verktyg för att se hur momenten hänger ihop och var det inte finns någon marginal kvar.</p>
+
+<p>Vill du komma igång direkt planerar du hela projektet i etapper och uppgifter i <a href="/sv/funktioner">ByggExps funktioner för projektplanering -&gt;</a> i stället för i ett kalkylark som ingen på bygget håller uppdaterat.</p>
+
+<h2>Vad är ett Gantt-schema och när behövs det?</h2>
+<p>Ett Gantt-schema skiljer sig från en enkel att-göra-lista på en avgörande punkt: det visar tid och beroenden. En checklista säger <em>vad</em> som ska göras, men ett Gantt-schema säger <em>när</em> och i vilken ordning, och vad som händer med slutdatumet om ett moment glider. För minsta serviceuppdrag räcker en lista, men så fort flera yrkesgrupper ska samordnas på samma yta över flera veckor behövs en riktig tidsplan.</p>
+<p>I standardavtalen AB 04 och ABT 06 är tidplanen dessutom en central kontraktshandling. Förseningsvite utgår inte automatiskt – det måste avtalas enligt AB 04 kap 5 § 3, och en vanlig branschnivå är omkring 1 % av kontraktssumman per påbörjad förseningsvecka. Saknas avtalat vite kan beställaren i stället kräva skadestånd. Tidsplanen är alltså inte bara ett internt planeringsdokument utan en handling du kan bli bunden av.</p>
+
+<h2>Steg 1 – Bryt ner projektet i aktiviteter</h2>
+<p>Börja med en nedbrytning av arbetet, en enkel WBS. Lista de moment som faktiskt utförs på bygget, till exempel rivning, schakt och grund, stomme, tak, tätt hus, installationer (el, VS, ventilation), ytskikt och slutbesiktning. Gruppera dem sedan i etapper eller mål i stället för en lång platt lista på trettio rader. En etappindelning gör schemat läsbart och gör det möjligt att följa upp en avgränsad del av projektet i taget.</p>
+
+<h2>Steg 2 – Uppskatta tid och resurser per aktivitet</h2>
+<p>Sätt varaktighet på varje aktivitet utifrån erfarenhetsdata: mängd gånger tidsåtgång per enhet, justerat för hur många man du faktiskt kan sätta in. Glöm inte de tider som inte är arbete men ändå styr kalendern – torktid för betong och avjämningsmassa, härdning innan ytskikt, och leveranstider på beställningsvaror som fönster, kök och specialbeslag. Det är ofta torktider och leveranser, inte själva hantverket, som blir flaskhalsen.</p>
+
+<h2>Steg 3 – Lägg in beroenden mellan aktiviteter</h2>
+<p>Nu kopplar du ihop aktiviteterna. Den vanligaste kopplingen är färdigställande-start (FS): betongplattan måste ha härdat innan reglarna reses. Ibland behövs start-start (SS), där två moment kan löpa parallellt med viss förskjutning. Var sparsam med hårda kopplingar – varje onödigt beroende gör schemat stelare än verkligheten och skapar falska förseningar. Koppla bara det som fysiskt måste ske i en viss ordning.</p>
+
+<h2>Steg 4 – Identifiera den kritiska linjen</h2>
+<p>Den kritiska linjen är den längsta sammanhängande kedjan av beroende aktiviteter – den som styr projektets slutdatum. En försening på den kritiska linjen skjuter hela projektet framåt, medan en aktivitet med slack kan glida utan att det märks på slutdatum. När du vet var den kritiska linjen går vet du också var du ska lägga din uppmärksamhet, var förseningar är dyrast och var det är värt att sätta in extra resurser. Lägg in realistiska buffertar där osäkerheten är störst, hellre än en enda stor slutmarginal som frestar till att slösas bort tidigt.</p>
+
+<h2>Steg 5 – Lägg in milstolpar och lagkrav i schemat</h2>
+<p>Ett byggschema ska inte bara innehålla arbetsmoment utan även kontrollpunkter och regulatoriska krav. Lägg in dem som milstolpar så att de inte glöms bort i produktionsstressen:</p>
+<ul>
+<li><strong>Arbetsmiljöplan och BAS-U på plats.</strong> Byggherren ska utse byggarbetsmiljösamordnare för både planering (BAS-P) och utförande (BAS-U) i praktiskt taget alla bygg- och anläggningsprojekt, och en arbetsmiljöplan ska vara framtagen innan byggarbetsplatsen etableras när riskfyllt arbete förekommer.</li>
+<li><strong>Förhandsanmälan till Arbetsmiljöverket.</strong> Krävs när arbetet beräknas pågå längre än 30 arbetsdagar och mer än 20 personer sysselsätts samtidigt vid något tillfälle, eller om det totala antalet persondagar överstiger 500.</li>
+<li><strong>Elektronisk personalliggare igång.</strong> Skyldigheten inträder när byggherrens sammanlagda kostnad för byggverksamheten förväntas överstiga fyra prisbasbelopp. Med 2026 års prisbasbelopp på 59 200 kr innebär det 236 800 kr. Byggherren ansvarar för att anmäla arbetsplatsen och tillhandahålla utrustning, medan varje näringsidkare för in sin egen personal.</li>
+<li><strong>Tätt hus och besiktningar.</strong> Markera dem som milstolpar – de är naturliga avstämningspunkter både mot beställaren och internt.</li>
+</ul>
+<p>Att missa personalliggaren är dyrt: Skatteverkets kontrollavgift är 12 500 kr om liggare inte förs eller inte kan visas, plus 2 500 kr för varje person som är på plats men inte dokumenterad, och grundavgiften höjs till 25 000 kr vid upprepad förseelse inom ett år.</p>
+
+<h2>Steg 6 – Följ upp med % klart och revidera löpande</h2>
+<p>En tidsplan är en färskvara. Stäm av verkligt läge mot plan varje vecka och ange procent klart per aktivitet, så ser du tidigt om ett moment på den kritiska linjen börjar halka. Här kommer också ÄTA in i bilden: ändrings- och tilläggsarbeten ger entreprenören rätt till tidsförlängning enligt AB 04 kap 4. Den rätten är värd lite om du inte reviderar tidsplanen när ÄTA tillkommer – låt inte ursprungsschemat bli inaktuellt, för då tappar du både överblick och den dokumentation du behöver om vitesfrågan kommer upp.</p>
+
+<h2>Excel-arket kontra ett riktigt planeringsverktyg</h2>
+<p>Ett löst Excel-schema har två svagheter. Det blir snabbt inaktuellt eftersom uppdateringen ligger på en person, och det är osynligt för teamet ute på bygget som jobbar mot en utskrift från förra månaden. En genomtänkt kritisk linje är värdelös om ingen ser den aktuella versionen. Poängen med tidsplanen är att den är levande och delad – inte att den ser prydlig ut vid projektstart.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp planerar du projektet i etapper och mål med underliggande uppgifter, i stället för i ett fristående kalkylark. Varje uppgift har ansvarig och procent klart, och statusen är synlig för alla i projektet i realtid – inte inlåst i en fil på en dator. När du stämmer av veckovis uppdaterar du procent klart direkt där arbetet planeras, så att planen speglar verkligt läge. Vi lovar inte att verktyget räknar den kritiska linjen åt dig automatiskt, men det gör nedbrytningen i etapper, uppföljningen och synligheten till en naturlig del av hur projektet drivs – och det är där de flesta Excel-scheman fallerar. Underlaget kan du också knyta ihop med din <a href="/sv/verktyg/offert-mall">offert</a> så att kalkyl och tidsplan bygger på samma aktiviteter.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan ett Gantt-schema och en tidsplan?</h3>
+<p>Tidsplan är det övergripande begreppet för hur projektet fördelas över tid. Gantt-schemat är ett visuellt sätt att visa tidsplanen, där aktiviteterna ritas som staplar på en tidslinje med sina beroenden. I praktiken använder många orden synonymt.</p>
+
+<h3>Är tidsplanen bindande enligt AB 04?</h3>
+<p>Tidplanen är en central handling i AB 04 och ABT 06. Förseningsvite utgår dock inte automatiskt utan måste avtalas (AB 04 kap 5 § 3); en vanlig nivå är cirka 1 % av kontraktssumman per påbörjad förseningsvecka. Utan avtalat vite kan beställaren i stället kräva skadestånd.</p>
+
+<h3>Vad är den kritiska linjen?</h3>
+<p>Det är den längsta kedjan av beroende aktiviteter i projektet, den som styr slutdatumet. Blir en aktivitet på den kritiska linjen försenad förskjuts hela projektet, medan aktiviteter med slack kan glida utan att slutdatumet påverkas.</p>
+
+<h3>Hur ofta ska tidsplanen uppdateras?</h3>
+<p>Stäm av minst en gång i veckan och revidera vid varje ÄTA som påverkar tid. En plan som inte uppdateras tappar snabbt sitt värde både som styrverktyg och som underlag i en eventuell vitesdiskussion.</p>
+
+<h2>Kom igång</h2>
+<p>Bryt ner ditt nästa projekt i etapper och uppgifter i <a href="/sv/funktioner">ByggExps projektfunktioner</a> och lämna det lösa kalkylarket bakom dig. Vill du se hur planering, uppföljning och fakturering hänger ihop i praktiken? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a> och <a href="/sv/verktyg/offert-mall">gratis offertmall</a>.</p>
+`;
+
+const A_GANTT_SCHEMA_MALL_BYGG: BlogPost = {
+  _id: "code-"+"gantt-schema-mall-bygg",
+  title: "Gantt-schema och tidsplan för byggprojekt: aktiviteter, beroenden och kritisk linje", slug: "gantt-schema-mall-bygg", locale: "sv",
+  excerpt: "En genomtänkt tidsplan avgör lönsamheten i entreprenaden – så bryter du ner projektet i aktiviteter, lägger beroenden och följer den kritiska linjen.", tag: "Projektledning",
+  coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_GANTT_SCHEMA_MALL_BYGG_HTML,
+  seoTitle: "Gantt-schema mall bygg | ByggExp", seoDescription: "Så bygger du en tidsplan för byggprojektet: aktiviteter, beroenden, kritisk linje och lagkrav i schemat. Från löst Excel-ark till uppföljning i etapper.",
+  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:06:00.000Z", createdAt: "2026-08-18T19:06:00.000Z", updatedAt: "2026-08-18T19:06:00.000Z",
+};
+
+const A_ATA_HANTERING_MALL_HTML = `
+<p>Varje år tappar svenska byggföretag stora belopp på extraarbeten som aldrig blir fakturerade – eller som faktureras men underkänns för att underlaget saknas. Fråga dig själv: har du verkligen fått betalt för allt extra du gjort i dina senaste projekt? Om svaret är osäkert är det nästan alltid ÄTA-hanteringen som brister. Det handlar sällan om att kunden vägrar betala av illvilja, utan om att beställningen var muntlig, dokumentationen tunn eller fakturan kom för sent.</p>
+
+<p>Med en fast rutin och en enkel blankett stänger du de flesta läckorna. Använd gärna <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall -&gt;</a> som utgångspunkt så har du fälten på plats redan från början.</p>
+
+<h2>Vad är ÄTA-arbeten?</h2>
+<p>ÄTA står för Ändrings-, Tilläggs- och Avgående arbeten – alltså arbete som tillkommer, ändras eller faller bort jämfört med det ursprungliga kontraktet. I praktiken uppstår extra jobb i så gott som varje projekt: en vägg visar sig vara rutten, marken bär inte, beställaren vill flytta ett uttag. Poängen är inte att undvika ÄTA, utan att hantera det rätt.</p>
+<p>Man skiljer på två former. <strong>Beställd ÄTA</strong> är arbete som beställaren uttryckligen ber dig utföra. <strong>Likställd ÄTA</strong> är arbete som blir nödvändigt för att verkligheten avviker från kontraktshandlingarna – till exempel fel i beställarens uppgifter eller oförutsedda förhållanden. Båda ger i princip rätt till extra ersättning, men de kräver olika hantering, och det är just på den likställda ÄTA:n som flest pengar går förlorade.</p>
+
+<h2>Vilka regler gäller 2026?</h2>
+<p>Vilka regler som styr beror helt på vem beställaren är.</p>
+<p>Vid <strong>näringsjobb</strong>, alltså mellan företag, gäller standardavtalen AB 04 (utförandeentreprenad) och ABT 06 (totalentreprenad), båda i kapitel 2. Det är oförändrat gällande branschstandard 2026 – dessa avtal ändras inte löpande. Ersättningen regleras i kapitel 6.</p>
+<p>Vid <strong>konsumentjobb</strong>, där beställaren är privatperson, gäller i stället konsumenttjänstlagen (1985:716). Enligt 8 § måste du underrätta konsumenten och begära anvisningar innan du utför tilläggsarbete, med snäva undantag för arbete av mindre omfattning eller när det finns särskild anledning att anta att kunden vill ha det utfört. Har du lämnat en ungefärlig prisuppgift får den enligt 36 § inte överskridas med mer än 15 procent – den så kallade 15-procentsregeln – om inte annat avtalats. Att köra över takpriset utan att stämma av är en klassisk anledning till att hantverkare inte får betalt.</p>
+
+<h2>Kravet som får dig att förlora pengarna – underrättelseskyldigheten</h2>
+<p>Det här är den viktigaste punkten i hela artikeln. Vid likställd ÄTA måste du enligt AB 04/ABT 06 kap 2 <strong>utan dröjsmål</strong> underrätta beställaren så snart du inser, eller borde ha insett, att ett förhållande avviker från kontraktet. Missar du det kan rätten till ersättning gå helt förlorad – även om arbetet faktiskt var nödvändigt och korrekt utfört.</p>
+<p>Vänta alltså inte tills nästa byggmöte eller till slutfakturan. Ser du att marken avviker, att en ritning inte stämmer eller att något oförutsett dyker upp: hör av dig samma dag, skriftligt. På konsumentsidan är logiken densamma – informera kunden och begär anvisningar innan du kör, inte efteråt.</p>
+
+<h2>Skriftligt före utförande – varför muntliga ÄTA är en förlustaffär</h2>
+<p>AB 04/ABT 06 kap 2 säger att ÄTA-arbeten ska beställas skriftligen. I praktiken kan även muntliga och underförstådda beställningar bli bindande, men då ligger bevisbördan på dig som entreprenör. Står ord mot ord vid slutbesiktningen är det du som ska bevisa att arbetet beställdes och till vilket pris – och den bevisningen är svår att föra utan papper.</p>
+<p>Slutsatsen är enkel: skaffa beställarens skriftliga godkännande innan spaden går i marken. En signerad ÄTA-blankett eller ett bekräftande mejl räcker långt. Det tar fem minuter och är skillnaden mellan en betald ÄTA och en tvist.</p>
+
+<h2>Din ÄTA-rutin steg för steg</h2>
+<ol>
+<li><strong>Upptäck avvikelsen</strong> – notera direkt när något avviker från kontraktet eller när beställaren vill ändra.</li>
+<li><strong>Underrätta beställaren utan dröjsmål</strong> – skriftligt, samma dag.</li>
+<li><strong>Prissätt arbetet</strong> – enligt à-pris, fast pris eller löpande räkning.</li>
+<li><strong>Få skriftligt godkännande</strong> – innan du börjar utföra.</li>
+<li><strong>Utför arbetet</strong>.</li>
+<li><strong>Dokumentera löpande</strong> – i ÄTA-journal, dagbok och byggmötesprotokoll.</li>
+<li><strong>Fakturera löpande</strong> – med tidsedlar, materialkvitton och specifikationer som underlag.</li>
+</ol>
+
+<h2>Så bör ÄTA-mallen se ut</h2>
+<p>En användbar ÄTA-blankett behöver inte vara komplicerad, men följande fält bör alltid finnas med:</p>
+<ul>
+<li>Projekt/objekt och beställare</li>
+<li>ÄTA-nummer och datum</li>
+<li>Beskrivning av arbetet</li>
+<li>Orsak och hänvisning till kontraktshandling eller ritning</li>
+<li>Typ – beställd eller likställd ÄTA</li>
+<li>Pris och prismodell (à-pris/fast/löpande)</li>
+<li>Påverkan på tidplanen</li>
+<li>Beställarens underskrift och datum</li>
+</ul>
+<p>Med underskriften på plats före utförandet har du säkrat både beställningen, priset och den eventuella tidsförskjutningen i ett enda dokument.</p>
+
+<h2>Fakturera rätt</h2>
+<p>Har inget à-pris eller fast pris avtalats ersätts ÄTA på näringssidan enligt självkostnadsprincipen, det vill säga löpande räkning. Det kräver verifierbara underlag – tidsedlar, materialkvitton och specifikationer. Utan dem blir det svårt att stå fast vid beloppet om beställaren ifrågasätter.</p>
+<p>Lika viktigt: fakturera ÄTA löpande, inte i en klump vid projektets slut. Enligt AB 04/ABT 06 kap 6 ska ersättningskrav framställas i god tid, och krav som inte tagits med i slutfakturan efter godkänd slutbesiktning kan gå förlorade. Ta med alla ÄTA-krav <em>innan</em> slutbesiktning och slutfaktura. På konsumentjobb: håll dig inom prisuppgiften eller informera i tid om att den behöver överskridas.</p>
+
+<h2>Vanliga misstag och hur du undviker dem</h2>
+<ul>
+<li><strong>Muntliga överenskommelser</strong> – begär alltid skriftligt godkännande före utförande.</li>
+<li><strong>Sen underrättelse vid likställd ÄTA</strong> – hör av dig samma dag du upptäcker avvikelsen.</li>
+<li><strong>Tunt underlag</strong> – spara tidsedlar och kvitton löpande, inte i efterhand.</li>
+<li><strong>Allt faktureras vid slutet</strong> – fakturera ÄTA löpande så inget faller bort vid slutbesiktning.</li>
+<li><strong>Bortglömd 15-procentsregel</strong> på konsumentjobb – stäm av innan du passerar takpriset.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp skapar du en ÄTA direkt i projektet med alla fält ifyllda enligt mallen ovan – nummer, typ, orsak, pris och tidspåverkan. Underlaget samlas på projektet så att du snabbt kan skicka det för beställarens godkännande och sedan koppla tidsedlar och kvitton till just den ÄTA:n. När det är dags att fakturera har du underlaget samlat, vilket gör det lättare att fakturera löpande i stället för att jaga papper vid slutbesiktningen. Systemet ersätter inte det juridiska ansvaret enligt AB 04 eller konsumenttjänstlagen, men det gör rutinen enkel nog att faktiskt följa varje gång.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste en ÄTA vara skriftlig för att gälla?</h3>
+<p>Enligt AB 04/ABT 06 kap 2 ska ÄTA beställas skriftligen. Muntliga och underförstådda beställningar kan bli bindande, men då ligger bevisbördan på dig som entreprenör. Skriftligt godkännande före utförande är därför i praktiken avgörande.</p>
+<h3>Vad händer om jag inte underrättar beställaren i tid?</h3>
+<p>Vid likställd ÄTA gäller att du utan dröjsmål ska underrätta beställaren när du inser att verkligheten avviker från kontraktet. Underlåter du det kan rätten till ersättning gå helt förlorad, även om arbetet var nödvändigt.</p>
+<h3>Hur ersätts ÄTA om vi inte avtalat något pris?</h3>
+<p>På näringssidan ersätts ÄTA då enligt självkostnadsprincipen, alltså löpande räkning enligt AB 04/ABT 06 kap 6. Det kräver verifierbara underlag som tidsedlar, materialkvitton och specifikationer.</p>
+<h3>Vad gäller för extraarbete åt en privatperson?</h3>
+<p>Då styr konsumenttjänstlagen. Enligt 8 § ska du underrätta konsumenten och begära anvisningar innan tilläggsarbete utförs, och enligt 15-procentsregeln i 36 § får en ungefärlig prisuppgift inte överskridas med mer än 15 procent utan att annat avtalats.</p>
+
+<h2>Kom igång</h2>
+<p>Sätt en fast rutin och använd samma blankett i varje projekt. Ladda ner <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall</a> och börja dokumentera redan i nästa avvikelse. Vill du se hur ÄTA-hanteringen fungerar samlat i ett projekt kan du <a href="/sv/contact">boka en demo</a> så visar vi hur rutinen ser ut i praktiken.</p>
+
+<p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten – grunderna du behöver kunna</a> och <a href="/sv/blog/kunden-betalar-inte-fakturan">Kunden betalar inte fakturan – så gör du</a>.</p>
+`;
+
+const A_ATA_HANTERING_MALL: BlogPost = {
+  _id: "code-"+"ata-hantering-mall",
+  title: "ÄTA-hantering mall – så dokumenterar och fakturerar du ÄTA utan att förlora ersättningen", slug: "ata-hantering-mall", locale: "sv",
+  excerpt: "En konkret rutin och mall för att dokumentera och fakturera ÄTA-arbeten så att du får betalt för allt extra du gör – utan tvist vid slutbesiktningen.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/ata-mall-preview.webp", contentHtml: A_ATA_HANTERING_MALL_HTML,
+  seoTitle: "ÄTA-hantering mall & rutin | ByggExp", seoDescription: "Så dokumenterar och fakturerar du ÄTA i praktiken – rutin, mall och vanliga misstag som gör att hantverkare tappar ersättning. Ladda ner gratis ÄTA-mall.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/ata-mall-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:09:00.000Z", createdAt: "2026-08-18T19:09:00.000Z", updatedAt: "2026-08-18T19:09:00.000Z",
+};
+
+const A_INHYRD_PERSONAL_REGLER_HTML = `
+<p>Att hyra in personal är ett självklart verktyg för de flesta byggföretag. När ett stort projekt drar igång, en sjukskrivning slår hål i laget eller orderboken plötsligt svämmar över, är bemanning ofta snabbaste vägen till full kapacitet. Men inhyrning är inte samma sak som att köpa en tjänst i lösvikt – regelverket lägger ett tydligt ansvar på dig som kundföretag, och missar kan bli dyra i form av skadestånd eller en tillsvidareanställning du aldrig planerade för.</p>
+
+<p>Innan du skriver på nästa bemanningsavtal: kartlägg ditt personalbehov och håll ordning på tid och driftsenheter med <a href="/sv/verktyg">våra gratis verktyg för byggföretag -></a>. God dokumentation är själva grunden för att klara reglerna nedan.</p>
+
+<h2>Vad är Uthyrningslagen?</h2>
+<p>Reglerna för inhyrd personal styrs av Uthyrningslagen – <strong>Lag (2012:854) om uthyrning av arbetstagare</strong>. Den genomför EU:s bemanningsdirektiv (2008/104/EG) i svensk rätt och sätter ramarna för hela branschen.</p>
+<p>Lagen skiljer på två roller. <strong>Bemanningsföretaget</strong> är den som har arbetstagare anställda i syfte att hyra ut dem. <strong>Kundföretaget</strong> är den för vilken, och under vars kontroll och ledning, de uthyrda faktiskt arbetar (5 §). Det innebär en viktig sak i praktiken: även om den inhyrda snickaren har sin anställning hos bemanningsbolaget, är det du som kundföretag som har arbetsledningsansvaret på bygget. Du leder, fördelar och styr arbetet – och tar därmed också ett arbetsmiljöansvar för personen på plats.</p>
+
+<h2>Likabehandlingsprincipen – samma villkor som egen personal</h2>
+<p>Kärnan i lagen är likabehandlingsprincipen (6 §). En inhyrd arbetstagare ska ha minst de grundläggande arbets- och anställningsvillkor som skulle ha gällt om hen hade anställts direkt av dig för samma arbete. Det handlar inte bara om lön, utan om ett helt paket:</p>
+<ul>
+<li>arbetstidens längd och förläggning</li>
+<li>övertid, raster och vila</li>
+<li>nattarbete</li>
+<li>semester och helgdagar</li>
+<li>lön</li>
+</ul>
+<p>Tanken är att inhyrning inte ska bli ett sätt att pressa villkoren under det som gäller för din egen personal. En inhyrd yrkesarbetare ska alltså i grunden inte ha sämre villkor än den fast anställda som står bredvid och gör samma jobb.</p>
+
+<h2>Kollektivavtalets roll – varför bemanningsavtalet oftast styr lönen</h2>
+<p>Här finns ett viktigt undantag. Enligt 8 § får man göra avsteg från likabehandlingen – framför allt när det gäller lön – genom kollektivavtal, förutsatt att avtalet respekterar det övergripande skydd för arbetstagare som direktivet kräver. I praktiken innebär det att bemanningsbranschens kollektivavtal (till exempel Kompetensföretagens avtal med LO-förbunden) ersätter 6 §:s löneregel för uthyrd personal.</p>
+<p>Slutsatsen för dig som byggföretag: hyr in från <strong>seriösa, kollektivavtalsanslutna bemanningsföretag</strong>. Då vet du att lönen regleras enligt ett känt avtal, att villkoren är ordnade och att du minskar risken för tvister om vad den inhyrda egentligen skulle ha haft betalt. Auktoriserade leverantörer är regel, inte undantag, för en trygg inhyrning.</p>
+
+<h2>24-månadersregeln steg för steg</h2>
+<p>Sedan 1 oktober 2022 gäller den så kallade 24-månadersregeln (12 a §). Har en inhyrd varit placerad på <strong>en och samma driftsenhet</strong> hos dig i sammanlagt <strong>mer än 24 månader under en period om 36 månader</strong>, måste du som kundföretag agera. Du ska antingen:</p>
+<ol>
+<li>erbjuda arbetstagaren en tillsvidareanställning hos dig, eller</li>
+<li>betala en ersättning motsvarande <strong>två månadslöner</strong> till arbetstagaren.</li>
+</ol>
+<p>Oavsett vilket alternativ du väljer ska det ske inom <strong>en månad</strong> efter att gränsen passerats. Regeln finns för att inhyrning inte ska bli en permanent lösning som kringgår vanliga anställningsförhållanden.</p>
+<p><strong>Räkneexempel:</strong> Du hyr in en betongarbetare till din driftsenhet i Västerås. Personen jobbar hos dig 14 månader, är borta ett halvår på annat uppdrag, och kommer tillbaka i 11 månader – allt inom en och samma 36-månadersperiod. Totalt blir det 25 månader, alltså över gränsen. Nu har du en månad på dig att antingen erbjuda tillsvidareanställning eller betala två månadslöner. Poängen: det är den <em>sammanlagda</em> tiden på samma driftsenhet som räknas, inte en sammanhängande period.</p>
+<p>Notera att det finns undantag (12 b §). 24-månadersregeln gäller inte arbetstagare som är anställda med särskilt anställningsstöd, i skyddat arbete eller med lönebidrag för utveckling. Motsvarande undantag från likabehandling finns i 7–8 §§.</p>
+
+<h2>Förhandlingsskyldigheten enligt MBL 38 §</h2>
+<p>Innan du hyr in personal räcker det inte att skriva avtal med bemanningsbolaget. Enligt <strong>MBL 38 §</strong> måste du som arbetsgivare påkalla och genomföra primär förhandling med den kollektivavtalsbärande fackliga organisationen – på bygget oftast Byggnads – innan inhyrningen beslutas.</p>
+<p>Facket har dessutom en vetorätt (39 §). Under vissa förutsättningar kan de lägga in veto om den planerade inhyrningen skulle strida mot lag eller kollektivavtal, till exempel om leverantören saknar avtal eller inte sköter sina åtaganden. Att förhandla i god tid är alltså inte bara en formalitet – det är en förutsättning för att inhyrningen ska vara laglig.</p>
+
+<h2>På bygget – ID06, personalliggare och arbetsmiljö</h2>
+<p>På en byggarbetsplats tillkommer praktiska krav som gäller <em>all</em> personal, även inhyrda. Varje person ska vara <strong>ID06-registrerad</strong> och föras in i den elektroniska <strong>personalliggaren</strong>. Kravet på personalliggare i byggbranschen följer av skatteförfarandelagen och kontrolleras av Skatteverket vid oanmälda besök – saknas den inhyrda i liggaren riskerar du kontrollavgift.</p>
+<p>Eftersom du har arbetsledningen på plats bär du också ett arbetsmiljöansvar för den inhyrda under arbetet. Introduktion, skyddsutrustning och riskgenomgångar gäller lika mycket för bemanningspersonalen som för ditt eget lag.</p>
+
+<h2>Sanktioner om du gör fel</h2>
+<p>Regelverket har tänder. Enligt 13–14 §§ medför brott mot Uthyrningslagen skadeståndsskyldighet – både ersättning för den faktiska förlust arbetstagaren lidit och ersättning för den kränkning som skett. Till det kommer den ekonomiska risken i 24-månadersregeln: missar du att bevaka gränsen kan du plötsligt stå med en oplanerad tillsvidareanställning eller ett krav på två månadslöner. Det är kostnader som är fullt möjliga att undvika med ordning och framförhållning.</p>
+
+<h2>Checklista: så hyr du in personal rätt</h2>
+<ul>
+<li>Välj ett seriöst, kollektivavtalsanslutet (gärna auktoriserat) bemanningsföretag.</li>
+<li>Genomför primär förhandling enligt MBL 38 § med Byggnads innan inhyrningen.</li>
+<li>Säkerställ att den inhyrda är ID06-registrerad och förs in i personalliggaren.</li>
+<li>Dokumentera vilken driftsenhet personen jobbar på och exakt hur länge.</li>
+<li>Bevaka den sammanlagda tiden mot 24-månadersgränsen inom rullande 36 månader.</li>
+<li>Ge introduktion och skyddsutrustning – arbetsmiljöansvaret är ditt på plats.</li>
+<li>Spara underlag och avtal i minst 7 år.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte bemanningsavtalet eller den fackliga förhandlingen – men systemet ger dig kontrollen som gör att du klarar reglerna. Med tidrapportering per person och projekt ser du hur länge en inhyrd faktiskt har arbetat hos dig, vilket gör 24-månadersgränsen möjlig att bevaka innan den överraskar dig. Du håller ordning på vilka som är på vilken arbetsplats, samlar avtal och underlag på ett ställe och får spårbarhet som håller vid en granskning. Kort sagt: ByggExp gör det administrativa så pass enkelt att du hinner ta beslutet i tid i stället för i efterhand.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Räknas semester och frånvaro in i 24-månadersperioden?</h3>
+<p>Det är den tid arbetstagaren varit placerad på din driftsenhet som räknas mot gränsen mer än 24 månader under 36 månader. Kortare avbrott gör inte att räkningen nollställs – det är den sammanlagda placeringstiden som är avgörande. Är du osäker på hur en längre frånvaro ska bedömas, stäm av med bemanningsföretaget och er fackliga motpart.</p>
+<h3>Gäller reglerna vid entreprenad och underentreprenad?</h3>
+<p>Uthyrningslagen gäller just uthyrning av arbetstagare – att du leder och fördelar arbetet för personal som är anställd hos någon annan. En äkta entreprenad, där underentreprenören själv leder sitt arbete och ansvarar för resultatet, är något annat och omfattas inte på samma sätt. Gränsen kan i praktiken vara hårfin, och det avgörande är vem som faktiskt har arbetsledningen. Bygger upplägget på att du styr personerna dagligen talar mycket för att det är inhyrning.</p>
+<h3>Vem betalar de två månadslönerna om gränsen passeras?</h3>
+<p>Det är kundföretaget – alltså ditt byggföretag som hyr in – som ansvarar för att antingen erbjuda tillsvidareanställning eller betala ersättningen motsvarande två månadslöner, inom en månad. Skyldigheten ligger på dig som kundföretag, inte på bemanningsbolaget.</p>
+<h3>Måste vi verkligen förhandla med facket före varje inhyrning?</h3>
+<p>Ja, huvudregeln enligt MBL 38 § är att du ska påkalla primär förhandling med den kollektivavtalsbärande organisationen innan du beslutar om inhyrning. Rutiner för hur ofta och i vilken form kan regleras i ert kollektivavtal, men skyldigheten att förhandla går inte att hoppa över.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg upp rutiner som gör inhyrningen trygg – börja med att strukturera personal- och tidsuppgifter i <a href="/sv/verktyg">ByggExps gratis verktyg</a>. Vill du se hur systemet håller koll på inhyrd tid och driftsenheter i praktiken? <a href="/sv/contact">Boka en demo här</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering för byggföretag</a> och <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag – guide</a>.</p>
+`;
+
+const A_INHYRD_PERSONAL_REGLER: BlogPost = {
+  _id: "code-"+"inhyrd-personal-regler",
+  title: "Inhyrd personal – reglerna varje byggföretag måste ha koll på 2026", slug: "inhyrd-personal-regler", locale: "sv",
+  excerpt: "Bemanning löser toppar i produktionen – men fel hantering kan ge skadestånd och tvingade tillsvidareanställningar. Här är reglerna byggföretaget måste kunna.", tag: "Personal",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_INHYRD_PERSONAL_REGLER_HTML,
+  seoTitle: "Inhyrd personal regler 2026 | ByggExp", seoDescription: "Uthyrningslagen, likabehandlingsprincipen och 24-månadersregeln – så hyr ditt byggföretag in personal rätt och undviker skadestånd och tvingade anställningar.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:12:00.000Z", createdAt: "2026-08-18T19:12:00.000Z", updatedAt: "2026-08-18T19:12:00.000Z",
+};
+
+const A_UPPSAGNING_ARBETSBRIST_BYGG_HTML = `
+<p>Arbetsbrist är den vanligaste och juridiskt mest accepterade grunden för att säga upp anställda i ett byggföretag. Ändå är det just här flest arbetsgivare gör fel. Problemet är sällan själva beslutet att minska personalstyrkan — orderstopp, ett avslutat projekt eller ett tufft kostnadsläge är fullt giltiga skäl. Problemet är formalian. Missar du ett steg i processen blir uppsägningen utan sakliga skäl, och då riskerar företaget både ogiltigförklaring och skadestånd.</p>
+
+<p>Innan du fattar beslut: samla dokumentationen och checklistor på ett ställe med hjälp av <a href="/sv/verktyg">våra gratis verktyg för byggföretag -&gt;</a>. En strukturerad process är din bästa försäkring mot en tvist i Arbetsdomstolen.</p>
+
+<h2>Vad räknas som arbetsbrist?</h2>
+<p>Arbetsbrist är ett samlingsbegrepp för alla uppsägningsskäl som inte är hänförliga till den enskilde anställde personligen. Det handlar om organisatoriska eller ekonomiska skäl: färre projekt, dålig orderingång, omorganisation eller behov av att sänka kostnader. Du behöver alltså inte peka ut något fel hos individen — tvärtom, gör du det är det inte längre arbetsbrist utan personliga skäl, vilket är en helt annan och betydligt svårare process.</p>
+<p>Enligt 7 § LAS krävs sakliga skäl för uppsägning, och arbetsbrist utgör sakliga skäl. Men lagen ställer ett tydligt villkor: uppsägningen är bara sakligt grundad om arbetsgivaren först har fullgjort sin omplaceringsskyldighet. Det är den kopplingen många byggföretag underskattar.</p>
+
+<h2>Steg 1 — MBL-förhandling först</h2>
+<p>Innan du beslutar om arbetsbrist och innan turordningen fastställs har du primär förhandlingsskyldighet enligt 11 § MBL. Du måste förhandla med den kollektivavtalsbärande fackföreningen, i byggbranschen normalt Byggnads. Förhandlingen ska ske i god tid innan beslutet fattas — inte i efterhand som en formalitet.</p>
+<p>Ett beslut som fattas innan förhandlingen är avslutad kan angripas. Kalla till förhandling skriftligt, för protokoll och dokumentera vad parterna kommit fram till. Detta protokoll är ofta det första en motpart begär ut om det blir tvist.</p>
+
+<h2>Steg 2 — Omplaceringsutredning</h2>
+<p>Enligt 7 § LAS måste du utreda om den som riskerar uppsägning kan omplaceras till en annan ledig tjänst någonstans i hela företaget — inte bara på den aktuella arbetsplatsen. Kravet är att den anställde har tillräckliga kvalifikationer för tjänsten, alltså kan lära sig arbetet inom rimlig upplärningstid.</p>
+<p>Utredningen ska göras skriftligt och innan uppsägningen. Finns det en ledig tjänst som personen klarar, ska den erbjudas. Hoppar du över detta steg, eller kan du inte visa att det gjorts, blir uppsägningen utan sakliga skäl oavsett hur reell arbetsbristen är. Dokumentera vilka tjänster som fanns, vilka som var lediga och varför en omplacering inte var möjlig.</p>
+
+<h2>Steg 3 — Turordning per byggyrke</h2>
+<p>När omplacering inte är möjlig avgör turordningen vem som får gå. Huvudregeln i 22 § LAS är "sist in, först ut": längre sammanlagd anställningstid ger högre plats på listan. Listorna upprättas per driftsenhet — i praktiken per arbetsplats eller etablering — och per kollektivavtalsområde.</p>
+<p>Här blir yrkeskompetensen avgörande i byggbranschen. En lägre placerad arbetstagare får bara tränga undan (bumpa) en högre placerad om han eller hon har tillräckliga kvalifikationer för det jobb som blir kvar. En snickare kan alltså inte automatiskt tränga undan en plattsättare, murare eller betongarbetare — yrkena är inte utbytbara utan vidare. Det innebär att turordningen ofta måste hanteras separat per yrkeskategori.</p>
+<p>Observera att kollektivavtal, till exempel Byggavtalet mellan Byggföretagen och Byggnads, kan ersätta lagens turordningsregler genom en avtalsturlista. LAS turordning är semidispositiv, vilket betyder att kollektivavtalet gäller före lagens huvudregel. Kontrollera alltid vilket avtal som gäller för ert företag innan ni fastställer listan.</p>
+
+<h2>Steg 4 — Undantagsregeln: högst tre arbetstagare</h2>
+<p>Sedan LAS-reformen 2022 (i kraft 1 oktober 2022) får varje arbetsgivare, oavsett antal anställda, undanta högst tre arbetstagare från turordningen innan listan fastställs. Detta ersatte den gamla regeln där bara arbetsgivare med max tio anställda fick undanta två.</p>
+<p>Undantaget används strategiskt för att behålla nyckelpersoner som annars skulle åkt ut på "sist in, först ut". Men var uppmärksam: har du använt undantaget får du inte göra ett nytt undantag för samma driftsenhet inom tre månader. Planera därför alla neddragningar samlat i stället för att dra ned i omgångar.</p>
+
+<h2>Steg 5 — Varsel till Arbetsförmedlingen</h2>
+<p>Enligt främjandelagen (1974:13) måste du varsla Arbetsförmedlingen när minst fem arbetstagare berörs av driftsinskränkningen — eller minst 20 under en 90-dagarsperiod. Tidsfristerna beror på omfattningen:</p>
+<ul>
+<li>Minst 2 månader i förväg om högst 25 berörs.</li>
+<li>Minst 4 månader om 26–100 berörs.</li>
+<li>Minst 6 månader om fler än 100 berörs.</li>
+</ul>
+<p>Vid oförutsedda omständigheter ska varsel lämnas så snart som möjligt, dock senast en månad före. Slarvar du med varselplikten kan företaget påföras varselavgift.</p>
+
+<h2>Steg 6 — Uppsägningstider och lön</h2>
+<p>Uppsägningstiden regleras i 11 § LAS och är minst en månad för båda parter. Den anställde har rätt till längre tid utifrån anställningstid: 2 månader vid 2–4 år, 3 månader vid 4–6 år, 4 månader vid 6–8 år, 5 månader vid 8–10 år och 6 månader vid minst 10 års anställning.</p>
+<p>Under uppsägningstiden behåller den anställde full lön och förmåner även om det inte finns något arbete att utföra. Du kan arbetsbefria personen, men lönen löper på. Ta med den kostnaden i kalkylen redan när du planerar neddragningen.</p>
+
+<h2>Steg 7 — Företrädesrätt till återanställning</h2>
+<p>Enligt 25 § LAS har en anställd som sagts upp på grund av arbetsbrist företrädesrätt till återanställning om han eller hon varit anställd sammanlagt mer än tolv månader under de senaste tre åren. Företrädesrätten löper från uppsägningen och i nio månader efter att anställningen upphörde.</p>
+<p>Viktigt: den anställde måste själv anmäla anspråk på företrädesrätten för att behålla den. Och för dig som arbetsgivare gäller — behöver du åter arbetskraft inom den perioden och samma driftsenhet och avtalsområde, måste du erbjuda jobbet till den företrädesberättigade innan du nyanställer. Att i stället ta in bemanningspersonal eller underentreprenör för samma arbete kan i praktiken kringgå företrädesrätten och leda till tvist. Håll ordning på vilka som har företräde och hur länge.</p>
+
+<h2>Omställningsstöd och trygghet</h2>
+<p>Många kollektivavtal ger omställningsstöd via omställningsorganisationer, och sedan 2022 års omställningsreform finns även offentligt omställningsstudiestöd. Det är inte din uppgift att administrera det, men hänvisa gärna den uppsagde vidare — det underlättar processen och relationen, inte minst om ni senare vill återanställa via företrädesrätten.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte juridisk rådgivning, men verktygen hjälper dig att hålla ordning på det som avgör en arbetsbristprocess: dokumentation och tidslinjer. I <a href="/sv/verktyg">våra verktyg</a> samlar du underlag som anställningstider och projektstatus på ett ställe, så att du har fakta till hands inför MBL-förhandling, omplaceringsutredning och turordningslista. Ju bättre din dokumentation är innan besluten fattas, desto mindre är risken att en uppsägning kan angripas i efterhand.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Räcker det med att projektet är slut för att säga upp?</h3>
+<p>Ett avslutat projekt kan vara reell arbetsbrist, men det räcker inte i sig. Du måste först förhandla enligt MBL, göra en omplaceringsutredning och tillämpa turordningen. Utan de stegen saknar uppsägningen sakliga skäl.</p>
+
+<h3>Kan en snickare tränga undan en plattsättare i turordningen?</h3>
+<p>Bara om snickaren har tillräckliga kvalifikationer för plattsättarjobbet. Yrkena är inte automatiskt utbytbara, så i praktiken hanteras turordningen ofta separat per yrkeskategori inom driftsenheten.</p>
+
+<h3>Hur många får jag undanta från turordningen?</h3>
+<p>Sedan 2022 får varje arbetsgivare undanta högst tre arbetstagare, oavsett företagets storlek. Efter att du använt undantaget får du inte göra ett nytt för samma driftsenhet inom tre månader.</p>
+
+<h3>Måste jag varsla Arbetsförmedlingen?</h3>
+<p>Ja, om minst fem arbetstagare berörs av driftsinskränkningen. Tidsfristen är 2, 4 eller 6 månader beroende på antalet berörda. Uteblivet varsel kan ge varselavgift.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg en tydlig tidslinje och samla underlaget innan du fattar beslut. Börja i <a href="/sv/verktyg">våra gratis verktyg</a> och kontrollera alltid det kollektivavtal som gäller för ert företag innan turordningen fastställs. Vill du se hur ByggExp håller ordning på anställningsdata inför en neddragning? <a href="/sv/contact">Boka en demo -&gt;</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag — så gör du rätt från start</a>.</p>
+`;
+
+const A_UPPSAGNING_ARBETSBRIST_BYGG: BlogPost = {
+  _id: "code-"+"uppsagning-arbetsbrist-bygg",
+  title: "Uppsägning vid arbetsbrist i byggföretag — så följer du LAS rätt (2026)", slug: "uppsagning-arbetsbrist-bygg", locale: "sv",
+  excerpt: "Arbetsbrist är laglig grund för uppsägning — men det är den formella processen som fäller byggföretag. Här är stegen enligt LAS för 2026.", tag: "Juridik",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_UPPSAGNING_ARBETSBRIST_BYGG_HTML,
+  seoTitle: "Uppsägning arbetsbrist bygg | ByggExp", seoDescription: "Så säger du upp pga arbetsbrist i byggföretag utan att bli skadeståndsskyldig: MBL, omplacering, turordning per yrke, undantag och återanställning enligt LAS.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:15:00.000Z", createdAt: "2026-08-18T19:15:00.000Z", updatedAt: "2026-08-18T19:15:00.000Z",
+};
+
+const A_SJUKLON_KARENSAVDRAG_VAB_BYGGFORETAG_HTML = `
+<p>När en yrkesarbetare blir sjuk eller behöver vabba uppstår genast en praktisk fråga på kontoret: vem betalar vad, och vilken dag? Kort svar för dig som driver byggföretag – du som arbetsgivare betalar <strong>sjuklön under de första 14 kalenderdagarna</strong>, Försäkringskassan tar över med <strong>sjukpenning från dag 15</strong>, och <strong>VAB (vård av barn) betalas alltid av Försäkringskassan</strong>, aldrig av dig. Däremellan finns ett karensavdrag, ett par rapporteringskrav och en kostnadsersättning som många mindre byggföretag missar.</p>
+
+<p>Har du koll på frånvaron från dag ett blir både lönekörning och likviditetsplanering enklare – börja med att strukturera tid och frånvaro i vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall för byggföretag →</a>.</p>
+
+<h2>Sjuklöneperioden dag 1–14: arbetsgivarens ansvar</h2>
+<p>De första 14 kalenderdagarna av en sjukperiod kallas sjuklöneperioden. Under den betalar du som byggföretag <strong>sjuklön motsvarande 80 % av den lön och de anställningsförmåner</strong> som den anställde skulle ha fått om hen arbetat. Perioden räknas i kalenderdagar, inte arbetsdagar, men sjuklön betalas för de dagar den anställde faktiskt skulle ha jobbat. Den anställde ska sjukanmäla sig <strong>redan första dagen</strong> och lämna en skriftlig försäkran om att hen varit sjuk.</p>
+<p>Räkneexempel: en byggnadsarbetare med timlön 230 kr och 40-timmarsvecka har en veckolön på 9 200 kr. Sjuklönen för en full sjukvecka blir 80 % av 9 200 = <strong>7 360 kr</strong>. Per sjuk arbetsdag (8 timmar) betalar du 8 × 230 × 0,8 = <strong>1 472 kr</strong> i sjuklön, före karensavdrag.</p>
+
+<h2>Karensavdraget – inte längre en "karensdag"</h2>
+<p>Sedan 2019 har karensdagen ersatts av ett <strong>karensavdrag</strong>. Avdraget är <strong>20 % av en genomsnittlig veckas sjuklön</strong> och är ett fast belopp. Poängen med reformen är att avdraget blir lika stort oavsett när på dagen den anställde insjuknar. Blir yrkesarbetaren sjuk mitt i ett arbetspass och går hem, dras ändå hela karensavdraget – men aldrig mer än 20 % av en veckas sjuklön även om personen är borta flera dagar.</p>
+<p>Fortsätter vi exemplet ovan: veckans sjuklön är 7 360 kr, alltså blir karensavdraget 20 % × 7 360 = <strong>1 472 kr</strong>. Samma avdrag gäller vid deltidssjukskrivning. Ett vanligt lönekörningsfel är att dra ett helt dagsbelopp för varje ny sjukperiod utan att räkna på veckogenomsnittet, eller att ta karensavdrag två gånger vid återinsjuknande inom fem dagar (då ska ingen ny karens tas). Kontrollera alltid mot den anställdes faktiska schema.</p>
+
+<h2>Från dag 15: Försäkringskassans sjukpenning</h2>
+<p>Håller sjukskrivningen i sig tar Försäkringskassan över från och med dag 15 med <strong>sjukpenning</strong>. Den ligger på cirka 80 % av den sjukpenninggrundande inkomsten (SGI), men beräknas kalenderdagsvis med en faktor 0,97, vilket i praktiken ger runt <strong>77,6 % av SGI</strong>. Sjukpenning kan betalas på <strong>25, 50, 75 eller 100 procent</strong> beroende på hur mycket arbetsförmågan är nedsatt.</p>
+<p>Det finns ett tak: SGI för sjukpenning beräknas på högst <strong>8 prisbasbelopp</strong>. Prisbasbeloppet fastställs årligen (2025 var det 58 800 kr) – stäm av aktuellt belopp hos Försäkringskassan innan du räknar på en specifik lön. Efter 364 dagar kan sjukpenningen övergå till fortsättningsnivå på <strong>75 %</strong>. Din uppgift som arbetsgivare är att rapportera sjukfrånvaron och lämna uppgifter till Försäkringskassan, samt att redovisa sjuklönekostnaden (se nedan).</p>
+
+<h2>VAB: Försäkringskassan betalar – inte du</h2>
+<p>Vård av sjukt barn (VAB) är <strong>tillfällig föräldrapenning</strong> och betalas i sin helhet av Försäkringskassan. Som arbetsgivare betalar du varken ersättningen eller ansöker om den – den anställde anmäler VAB själv till Försäkringskassan och ansöker i efterhand. Din enda praktiska uppgift är att registrera frånvaron och dra av lön för de dagar personen vabbar.</p>
+<ul>
+<li>Ersättning cirka <strong>80 % av SGI</strong> (kalenderdagsberäknad, faktor 0,97), utan karens.</li>
+<li>Lägre inkomsttak än sjukpenning: SGI för VAB beräknas på högst <strong>7,5 prisbasbelopp</strong>.</li>
+<li>Gäller normalt barn mellan <strong>8 månader och 12 år</strong> (till dagen före 12-årsdagen), och upp till 16 år om barnet behöver mer tillsyn än normalt.</li>
+<li>Max <strong>120 dagar per barn och år</strong>.</li>
+</ul>
+
+<h2>Extra skydd via Byggavtalet och AGS</h2>
+<p>Lagen anger golvet, men de flesta byggföretag omfattas av kollektivavtal (Byggavtalet mellan Byggnads och Byggföretagen med flera). Avtalet ger normalt påslag utöver den lagstadgade ersättningen – dels <strong>kompletterande sjuklön</strong> för lönedelar över SGI-taket, dels <strong>AGS (Avtalsgruppsjukförsäkring via Afa Försäkring)</strong> som betalar en dagsersättning som toppar upp sjukpenningen från ungefär dag 15. Exakt startdag, procentsats och maxantal dagar styrs av ditt specifika avtal, så kontrollera villkoren i gällande Byggavtal och hos Afa Försäkring innan du lovar en anställd en viss nivå.</p>
+
+<h2>Så sänker byggföretaget sjuklönekostnaden</h2>
+<p>Ett skydd som särskilt gynnar mindre byggföretag är <strong>ersättning för höga sjuklönekostnader</strong>. Du rapporterar sjuklönekostnaden i arbetsgivardeklarationen (AGI) varje månad, och Försäkringskassan ersätter automatiskt den del av kostnaden som överstiger en viss andel av din totala lönekostnad. Tröskeln följer en glidande skala efter lönesummans storlek, och ersättningen är maximerad till <strong>250 000 kr per år</strong>. Har du få anställda och en tung sjukperiod kan det här betyda mycket för likviditeten – men du får bara ersättning för kostnader du faktiskt redovisat korrekt i AGI.</p>
+
+<h2>Vanliga misstag och en enkel checklista</h2>
+<ul>
+<li>Att räkna karensavdrag som en hel dag i stället för 20 % av en veckas sjuklön.</li>
+<li>Att ta nytt karensavdrag vid återinsjuknande inom fem kalenderdagar.</li>
+<li>Att glömma allmänt högriskskydd – en anställd kan få högst <strong>10 karensavdrag under en rullande tolvmånadersperiod</strong>, därefter tas inget nytt.</li>
+<li>Att missa att redovisa sjuklönekostnaden i AGI och därmed gå miste om ersättning.</li>
+<li>Att tro att arbetsgivaren betalar VAB – det gör Försäkringskassan.</li>
+</ul>
+<p>Steg för steg: <strong>Dag 1</strong> – den anställde sjukanmäler sig, du registrerar frånvaron och lägger karensavdraget. <strong>Dag 8</strong> – läkarintyg krävs normalt från och med den åttonde dagen; vid särskilda skäl kan du begära förstadagsintyg. <strong>Dag 15</strong> – sjuklöneperioden slutar, Försäkringskassan tar över och du redovisar sjuklönekostnaden i AGI.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp löser inte lönekörningen åt dig, men systemet ger dig underlaget som gör den rätt. Med digital tidrapportering ser du exakt vilka dagar och timmar varje anställd skulle ha jobbat – vilket är precis vad du behöver för att räkna korrekt sjuklön och karensavdrag i stället för att gissa. Frånvaro registreras per person och projekt, så att sjuk- och VAB-dagar inte råkar faktureras på ett bygge. När månaden är slut har du ett spårbart underlag för både lön och AGI-redovisning, sparat i sju år enligt bokföringskraven.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste arbetsgivaren betala något vid VAB?</h3>
+<p>Nej. VAB är tillfällig föräldrapenning och betalas helt av Försäkringskassan. Du registrerar frånvaron och drar av lön för de dagar den anställde vabbar, men du varken betalar eller ansöker om ersättningen – det gör den anställde själv.</p>
+<h3>Hur stort är karensavdraget?</h3>
+<p>Karensavdraget är 20 % av en genomsnittlig veckas sjuklön och är ett fast belopp oavsett när på dagen den anställde blir sjuk. Det görs på den första sjukdagen och blir aldrig större än så, även om sjukperioden pågår i flera dagar.</p>
+<h3>När tar Försäkringskassan över betalningen?</h3>
+<p>Från och med dag 15 i sjukperioden. Dag 1–14 är arbetsgivarens sjuklöneperiod, därefter kan Försäkringskassan betala sjukpenning på 25, 50, 75 eller 100 procent beroende på arbetsförmågans nedsättning.</p>
+<h3>Kan små byggföretag få tillbaka höga sjuklönekostnader?</h3>
+<p>Ja. Via ersättningen för höga sjuklönekostnader betalar Försäkringskassan automatiskt tillbaka den del av din sjuklönekostnad som överstiger en tröskel kopplad till din lönesumma, upp till 250 000 kr per år. Förutsättningen är att du redovisar kostnaden i arbetsgivardeklarationen varje månad.</p>
+
+<h2>Kom igång</h2>
+<p>Rätt sjuklön och karensavdrag börjar med rätt tidunderlag. Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och få ordning på arbetade timmar och frånvaro redan denna vecka. Vill du se hur digital tid- och frånvarohantering ser ut i praktiken? <a href="/sv/contact">Boka en demo →</a> så visar vi upplägget för ditt byggföretag.</p>
+
+<p>Relaterat: <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag – så håller du koll</a> och vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>.</p>
+`;
+
+const A_SJUKLON_KARENSAVDRAG_VAB_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"sjuklon-karensavdrag-vab-byggforetag",
+  title: "Vem betalar vid sjukdom och VAB? Guide för byggföretag", slug: "sjuklon-karensavdrag-vab-byggforetag", locale: "sv",
+  excerpt: "Byggföretaget betalar sjuklön dag 1–14, Försäkringskassan tar över från dag 15 och VAB betalas alltid av Försäkringskassan – här är hela kedjan med räkneexempel.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_SJUKLON_KARENSAVDRAG_VAB_BYGGFORETAG_HTML,
+  seoTitle: "Sjuklön, karensavdrag & VAB | ByggExp", seoDescription: "Vem betalar vid sjukdom och VAB i byggföretag? Sjuklön dag 1–14, karensavdrag, sjukpenning från dag 15 och VAB från Försäkringskassan – förklarat med exempel.",
+  seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:18:00.000Z", createdAt: "2026-08-18T19:18:00.000Z", updatedAt: "2026-08-18T19:18:00.000Z",
+};
+
+const A_STARTA_BYGGFORETAG_2026_HTML = `
+<p>Marknaden för bygg- och entreprenadtjänster fortsätter att efterfråga seriösa hantverkare, och tröskeln för att starta eget är låg – på pappret. I praktiken finns det däremot en enda sak som avgör om du överhuvudtaget kan ta ett entreprenaduppdrag: <strong>godkännande för F-skatt</strong>. Utan den kommer ingen professionell beställare eller generalentreprenör att anlita dig, oavsett hur skicklig du är. Den här guiden går igenom hela vägen från val av företagsform till fakturan på ditt första jobb, med fokus på de beslut som faktiskt kostar pengar om du gör fel.</p>
+
+<p>Ett bra första steg innan du ens har org.nr är att öva på att sätta ihop ett proffsigt anbud – testa vår gratis <a href="/sv/verktyg/offert-mall">offertmall</a> så att du kan lämna ett trovärdigt pris redan från dag ett.</p>
+
+<h2>Enskild firma eller aktiebolag för bygg?</h2>
+<p>Valet av företagsform handlar om ansvar, kapital och trovärdighet. I en <strong>enskild firma</strong> (enskild näringsverksamhet) finns ingen gräns mellan dig och företaget – du är personligen och obegränsat ansvarig för alla skulder. Det krävs inget startkapital, och namnskyddet gäller bara inom länet. Det passar dig som startar ensam med begränsad risk och vill komma igång snabbt.</p>
+<p>Ett <strong>aktiebolag</strong> kräver 25 000 kr i aktiekapital för privat AB, men begränsar ditt ansvar till det insatta kapitalet och ger namnskydd i hela landet. För bygg väger det tungt: entreprenaduppdrag innebär reklamationsrisk och garantiåtaganden i flera år, och ett fel kan bli dyrt. Många beställare uppfattar dessutom ett AB som mer stabilt, vilket underlättar när du konkurrerar om större jobb eller ska anställa.</p>
+<p>Tumregeln: väljer du att ta på dig entreprenadrisk eller planerar att anställa, är AB oftast rätt. Startar du solo med små jobb kan enskild firma fungera i början – och du kan alltid ombilda senare. Vill du gräva djupare i skatt och ansvar, läs vår genomgång av <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">enskild firma eller aktiebolag för bygg</a>.</p>
+
+<h2>F-skatt – i praktiken obligatoriskt för bygguppdrag</h2>
+<p>F-skatt är ett godkännande från Skatteverket som visar att du själv sköter din preliminärskatt och dina socialavgifter. Formellt är det inte ett lagkrav för att driva företag – men för byggbranschen är det i realiteten obligatoriskt. Anledningen ligger i reglerna för den som betalar dig: om en beställare anlitar någon som <em>saknar</em> godkänd F-skatt, måste beställaren dra av 30 % preliminärskatt på ersättningen och dessutom betala arbetsgivaravgifter (cirka 31,42 %) ovanpå.</p>
+<p>Ingen seriös byggkund eller generalentreprenör tar på sig det administrativa krånglet och den extra kostnaden. Konsekvensen är enkel: utan godkänd F-skatt får du inga entreprenaduppdrag. F-skatten är därför inte en formalitet du kan skjuta upp – den är förutsättningen för hela affären, och den krävs också för att du ska kunna erbjuda dina privatkunder ROT-avdrag.</p>
+<p>Du ansöker om F-skatt via verksamt.se i samband med att du registrerar företaget. Har du samtidigt en anställning vid sidan av företaget ansöker du om <strong>FA-skatt</strong>, som kombinerar A-skatt på lönen med F-skatt på näringsverksamheten. Räkna med att godkännandet inte är omedelbart – ansök i god tid innan du planerar att fakturera ditt första jobb.</p>
+
+<h2>Registrera företaget steg för steg</h2>
+<p>Registreringen görs i praktiken hos två myndigheter: Bolagsverket och Skatteverket, samlat via e-tjänsten på verksamt.se.</p>
+<ol>
+<li><strong>Välj företagsform</strong> och registrera företaget. För AB upprättar du stiftelseurkund och bolagsordning, betalar in aktiekapitalet, får bankintyg, upprättar aktiebok och ansöker hos Bolagsverket. Ansökan måste lämnas inom sex månader från stiftelseurkunden.</li>
+<li><strong>Ansök om F-skatt</strong> och registrera dig för <strong>moms</strong>. Standardmomsen är 25 %. Gränsen för momsbefrielse är 120 000 kr i omsättning per år, men de flesta byggföretag momsregistrerar sig ändå eftersom kunderna är företag.</li>
+<li><strong>Registrera dig som arbetsgivare</strong> hos Skatteverket om du ska anställa.</li>
+<li><strong>Anmäl verklig huvudman</strong> till Bolagsverket efter att AB:t fått organisationsnummer.</li>
+</ol>
+<p>Avgiften för att registrera ett nytt aktiebolag är 1 900 kr via e-tjänsten (2 200 kr på papper). Att registrera en enskild näringsidkares företagsnamn är frivilligt och kostar runt 1 200 kr. Kontrollera alltid aktuella avgifter hos Bolagsverket innan du betalar.</p>
+
+<h2>ID06, personalliggare och kollektivavtal</h2>
+<p><strong>ID06</strong> är byggbranschens system för legitimation och elektronisk närvaroregistrering. Kortet registrerar närvaro i den elektroniska personalliggaren, och nästan alla byggarbetsplatser och generalentreprenörer kräver ID06 av sina underentreprenörer. Du registrerar företaget via MittID06 genom en firmatecknare eller administratör och beställer sedan kort.</p>
+<p>Elektronisk personalliggare är ett lagkrav på byggarbetsplatser där den totala kostnaden överstiger fyra prisbasbelopp exklusive moms – cirka 235 000 kr (prisbasbeloppet 2025 var 58 800 kr). Byggherren ska anmäla byggarbetsplatsen till Skatteverket innan arbetet påbörjas. Saknas eller är personalliggaren felaktig kan Skatteverket ta ut en kontrollavgift på 12 500 kr plus 2 500 kr per person som inte är registrerad. Verifiera aktuella belopp och 2026 års prisbasbelopp hos Skatteverket.</p>
+<p><strong>Byggföretagen</strong> är branschens arbetsgivarorganisation med runt 4 000 medlemsföretag och part i Byggavtalet tillsammans med Byggnads. Kollektivavtal är inte lagstadgat, men krävs för medlemskap och efterfrågas ofta av stora offentliga och privata beställare. Medlemskapet ger dessutom juridisk rådgivning inom arbetsrätt, arbetsmiljö och entreprenadjuridik.</p>
+
+<h2>Försäkringar du inte kan hoppa över</h2>
+<p>Ingen generell företagsförsäkring är lagstadgad för ett litet byggföretag – men standardavtalen förutsätter att du har den. Kommersiella entreprenadavtal som <strong>AB 04</strong> och <strong>ABT 06</strong>, liksom konsumentavtalen <strong>ABS 18</strong> och hantverkarformuläret, utgår från att entreprenören håller en ansvars- och allriskförsäkring (entreprenadförsäkring). I praktiken kommer du inte igenom en avtalsförhandling utan den, och en oförsäkrad skada kan sänka hela företaget.</p>
+<p>Så fort du anställer tillkommer avtalsförsäkringar via kollektivavtalet. Då blir arbetsskadeförsäkringen TFA och tjänstepensionen Avtalspension SAF-LO obligatoriska och tecknas via Fora. Se försäkringarna som en del av offertkalkylen, inte en frivillig utgift – de är ett faktiskt krav från både beställare och avtal.</p>
+
+<h2>Ditt första uppdrag – offert, ROT och avtal</h2>
+<p>Ditt första jobb avgör ditt rykte. Lämna en tydlig, specificerad offert där arbete och material redovisas var för sig, med giltighetstid och betalningsvillkor. Välj rätt standardavtal för uppdraget – AB 04/ABT 06 mot företag, ABS 18 eller hantverkarformuläret mot privatpersoner. Har du privatkunder kan du erbjuda <strong>ROT-avdrag</strong>: kunden får dra av 30 % av arbetskostnaden (inte materialet), och det förutsätter att ditt företag är godkänt för F-skatt. Räkna enkelt ut kundens nettopris med vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylator</a> innan du skickar offerten. Kontrollera aktuellt maxbelopp per person hos Skatteverket, eftersom ROT-taket har ändrats de senaste åren.</p>
+
+<h2>Vanligaste misstagen när du startar byggföretag</h2>
+<ul>
+<li>Att börja fakturera innan F-skatten är godkänd – då tvingas beställaren dra 30 % preliminärskatt.</li>
+<li>Att välja enskild firma utan att förstå det personliga och obegränsade ansvaret för skulder.</li>
+<li>Att sakna ansvars-/entreprenadförsäkring som standardavtalen kräver.</li>
+<li>Att strunta i ID06 och personalliggare – med kontrollavgifter på 12 500 kr plus 2 500 kr per person som följd.</li>
+<li>Att lämna luddiga offerter utan specificerat arbete, material och betalningsvillkor.</li>
+<li>Att glömma momsregistrering trots att i princip alla kunder är företag.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp tar inte över myndighetsregistreringen – F-skatt, moms och Bolagsverket sköter du hos Skatteverket och verksamt.se. Det vi hjälper dig med är allt runt själva uppdragen: skapa specificerade offerter med korrekt uppdelning av arbete och material, räkna ut ROT-avdraget åt kunden och hålla ordning på fakturor och betalningsvillkor. När du väl har org.nr och godkänd F-skatt är det de dagliga rutinerna som avgör lönsamheten – och där sparar du tid genom att jobba i mallar och kalkyler istället för lösa kalkylark. Bokföring och personalliggare hanterar du i separata system, men underlaget du behöver för att prissätta rätt bygger du enkelt hos oss.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag ha F-skatt för att starta byggföretag?</h3>
+<p>Formellt är F-skatt inte ett lagkrav för att driva företag. I praktiken är det obligatoriskt för bygg: utan godkänd F-skatt måste din beställare dra 30 % preliminärskatt och betala arbetsgivaravgifter på din ersättning, vilket gör att ingen seriös kund anlitar dig.</p>
+<h3>Enskild firma eller aktiebolag – vad passar bäst för bygg?</h3>
+<p>AB begränsar ditt ansvar till aktiekapitalet på 25 000 kr och ger namnskydd i hela landet, vilket passar den som tar entreprenadrisk eller ska anställa. Enskild firma kräver inget kapital men innebär personligt och obegränsat ansvar för alla skulder.</p>
+<h3>Behöver jag ID06 och personalliggare?</h3>
+<p>ID06 krävs i praktiken av nästan alla byggarbetsplatser och generalentreprenörer. Elektronisk personalliggare är lagkrav när projektets totala kostnad överstiger cirka 235 000 kr, och saknad liggare ger kontrollavgift på 12 500 kr plus 2 500 kr per oregistrerad person.</p>
+<h3>Måste jag ha försäkring för att ta uppdrag?</h3>
+<p>Ingen försäkring är lagstadgad för ett litet byggföretag, men standardavtalen AB 04, ABT 06 och ABS 18 förutsätter att du har en ansvars- och entreprenadförsäkring. Har du anställda tillkommer avtalsförsäkringarna TFA och tjänstepension via Fora.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med det som ger effekt direkt: sätt upp en proffsig offert med vår <a href="/sv/verktyg/offert-mall">offertmall</a> och visa kunden nettopriset med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur ByggExp hänger ihop offert, ROT och fakturering i ett flöde, <a href="/sv/contact">boka en demo</a> så går vi igenom det tillsammans.</p>
+<p>Relaterat: <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för bygg</a>, <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a> och <a href="/sv/blog/skriva-offert">Så skriver du en offert som vinner jobbet</a>.</p>
+`;
+
+const A_STARTA_BYGGFORETAG_2026: BlogPost = {
+  _id: "code-"+"starta-byggforetag-2026",
+  title: "Starta byggföretag 2026 – kompletta guiden från företagsform till första uppdraget", slug: "starta-byggforetag-2026", locale: "sv",
+  excerpt: "Allt du behöver för att starta byggföretag 2026 – från val av företagsform och F-skatt till ID06, försäkring och ditt första entreprenaduppdrag.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_STARTA_BYGGFORETAG_2026_HTML,
+  seoTitle: "Starta byggföretag 2026 | ByggExp", seoDescription: "Så startar du byggföretag 2026: enskild firma eller AB, F-skatt, ID06, försäkring och första uppdraget. Konkret guide för hantverkare och byggföretag.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:21:00.000Z", createdAt: "2026-08-18T19:21:00.000Z", updatedAt: "2026-08-18T19:21:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_PERIODISERINGSFOND_BYGGBOLAG,
+    A_BERAKNA_BETONGATGANG_PLATTA,
+    A_GANTT_SCHEMA_MALL_BYGG,
+    A_ATA_HANTERING_MALL,
+    A_INHYRD_PERSONAL_REGLER,
+    A_UPPSAGNING_ARBETSBRIST_BYGG,
+    A_SJUKLON_KARENSAVDRAG_VAB_BYGGFORETAG,
+    A_STARTA_BYGGFORETAG_2026,
     A_ENTREPRENADKONTRAKT_MALL,
     A_KONTROLLPLAN_MALL_BYGGLOV,
     A_DROJSMALSRANTA_2026,

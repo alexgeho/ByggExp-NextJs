@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { gaConsentDeny, gaConsentGrant, gaEvent } from "../../lib/analytics";
+import { gaConsentDeny, gaConsentGrant, gaEvent, loadClarity } from "../../lib/analytics";
 
 const KEY = "byggexp-consent";
 
@@ -41,8 +41,10 @@ export default function CookieConsent() {
   // visitors who already accepted.
   useEffect(() => {
     const saved = localStorage.getItem(KEY);
-    if (saved === "granted") gaConsentGrant();
-    else if (!saved) setOpen(true);
+    if (saved === "granted") {
+      gaConsentGrant();
+      loadClarity();
+    } else if (!saved) setOpen(true);
   }, []);
 
   // Delegated click tracking — one listener for "Boka demo" and tool downloads,
@@ -69,8 +71,10 @@ export default function CookieConsent() {
 
   function choose(granted: boolean) {
     localStorage.setItem(KEY, granted ? "granted" : "denied");
-    if (granted) gaConsentGrant();
-    else gaConsentDeny();
+    if (granted) {
+      gaConsentGrant();
+      loadClarity();
+    } else gaConsentDeny();
     setOpen(false);
   }
 

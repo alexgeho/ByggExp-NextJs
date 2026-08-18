@@ -1,5 +1,6 @@
 import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
+import type { ReactNode } from 'react';
 
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
@@ -9,40 +10,122 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
+import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
-const LOCALE = 'sv';
+// sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
+// keyed by locale; the page renders whichever the [lang] segment asks for. nb is
+// gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
+type Locale = ToolLocale;
 
-const FAQ: LeadMagnetFaqItem[] = [
-  { question: 'Hur många m² täcker en tapetrulle?', answer: 'En standardrulle täcker ofta cirka 5 m², men det varierar – kontrollera på tapeten och ange värdet i kalkylatorn.' },
-  { question: 'Varför behöver jag extra för mönster?', answer: 'Tapeter med mönster kräver att mönstret passas mellan våderna, vilket ger mer spill. Ju större mönster, desto större påslag.' },
-  { question: 'Ska jag dra av fönster och dörrar?', answer: 'Vid små ytor kan du räkna bruttoväggytan för marginal. Vid stora öppningar kan du dra av dem, men ha alltid lite reserv.' },
-  { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
-];
-
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  if (params?.lang !== LOCALE) return { notFound: true };
-  return { props: {} };
+type ToolContent = {
+  metaTitle: string;
+  description: string;
+  badge: string;
+  h1: string;
+  intro: string;
+  previewAlt: string;
+  previewCaption: string;
+  sections: { id: string; heading: string; body: ReactNode }[];
+  faqHeading: string;
+  faq: LeadMagnetFaqItem[];
+  ctaHeading: string;
+  ctaText: string;
+  ctaButton: string;
+  relatedHeading: string;
+  related: { slug: string; label: string }[];
 };
 
-export default function Page() {
-  const headerT = headerTranslations[LOCALE];
-  const footerT = footerTranslations[LOCALE];
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
-  const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/tapet-kalkylator`;
-  const title = 'Tapetberäknare – hur många rullar tapet | ByggExp';
-  const description = 'Räkna ut hur många rullar tapet du behöver utifrån väggytan och rullens storlek, inkl. spill för mönsterpassning. Gratis kalkylator, utan konto.';
+const CONTENT: Record<Locale, ToolContent> = {
+  sv: {
+    metaTitle: 'Tapetberäknare – hur många rullar tapet | ByggExp',
+    description:
+      'Räkna ut hur många rullar tapet du behöver utifrån väggytan och rullens storlek, inkl. spill för mönsterpassning. Gratis kalkylator, utan konto.',
+    badge: 'Gratis kalkylator',
+    h1: 'Tapetberäknare',
+    intro:
+      'Fyll i väggytan och rullens yta så räknar vi ut hur många tapetrullar du behöver, med påslag för mönsterpassning och spill.',
+    previewAlt: 'Förhandsvisning av tapetberäknare',
+    previewCaption: 'Så ser tapetberäknare ut',
+    sections: [
+      { id: 'sa-raknar-du', heading: 'Så räknar du ut antal rullar', body: (<><ol><li>Räkna ut väggytan som ska tapetseras (m²).</li><li>Ange rullens yta (ofta ca 5 m²).</li><li>Lägg på spill för mönsterpassning.</li><li>Se hur många rullar du behöver.</li></ol></>) },
+      { id: 'info', heading: 'Tips', body: (<><p>Köp alla rullar ur samma parti (samma batchnummer) så att färgen stämmer, och ta gärna en rulle extra som reserv.</p></>) },
+    ],
+    faqHeading: 'Vanliga frågor',
+    faq: [
+      { question: 'Hur många m² täcker en tapetrulle?', answer: 'En standardrulle täcker ofta cirka 5 m², men det varierar – kontrollera på tapeten och ange värdet i kalkylatorn.' },
+      { question: 'Varför behöver jag extra för mönster?', answer: 'Tapeter med mönster kräver att mönstret passas mellan våderna, vilket ger mer spill. Ju större mönster, desto större påslag.' },
+      { question: 'Ska jag dra av fönster och dörrar?', answer: 'Vid små ytor kan du räkna bruttoväggytan för marginal. Vid stora öppningar kan du dra av dem, men ha alltid lite reserv.' },
+      { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
+    ],
+    ctaHeading: 'Räkna material och tid i ByggExp',
+    ctaText: 'Håll koll på material, tid och kostnader per projekt. Boka en demo.',
+    ctaButton: 'Boka demo',
+    relatedHeading: 'Fler byggkalkylatorer',
+    related: [
+      { slug: 'farg-kalkylator', label: 'Färgåtgång' },
+      { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeterberäknare' },
+      { slug: '', label: 'Alla gratis verktyg' },
+    ],
+  },
+  nb: {
+    metaTitle: 'Tapetberegner – hvor mange ruller tapet | ByggExp',
+    description:
+      'Regn ut hvor mange ruller tapet du trenger ut fra veggarealet og rullens størrelse, inkl. svinn for mønstertilpasning. Gratis kalkulator, uten konto.',
+    badge: 'Gratis kalkulator',
+    h1: 'Tapetberegner',
+    intro:
+      'Fyll inn veggarealet og rullens areal, så regner vi ut hvor mange tapetruller du trenger, med påslag for mønstertilpasning og svinn.',
+    previewAlt: 'Forhåndsvisning av tapetberegner',
+    previewCaption: 'Slik ser tapetberegneren ut',
+    sections: [
+      { id: 'sa-raknar-du', heading: 'Slik regner du ut antall ruller', body: (<><ol><li>Regn ut veggarealet som skal tapetseres (m²).</li><li>Angi rullens areal (ofte ca. 5 m²).</li><li>Legg på svinn for mønstertilpasning.</li><li>Se hvor mange ruller du trenger.</li></ol></>) },
+      { id: 'info', heading: 'Tips', body: (<><p>Kjøp alle rullene fra samme parti (samme batchnummer), så fargen stemmer, og ta gjerne en rull ekstra som reserve.</p></>) },
+    ],
+    faqHeading: 'Vanlige spørsmål',
+    faq: [
+      { question: 'Hvor mange m² dekker en tapetrull?', answer: 'En standardrull dekker ofte cirka 5 m², men det varierer – kontroller på tapeten og angi verdien i kalkulatoren.' },
+      { question: 'Hvorfor trenger jeg ekstra for mønster?', answer: 'Tapeter med mønster krever at mønsteret tilpasses mellom banene, noe som gir mer svinn. Jo større mønster, desto større påslag.' },
+      { question: 'Skal jeg trekke fra vinduer og dører?', answer: 'Ved små arealer kan du regne brutto veggareal for margin. Ved store åpninger kan du trekke dem fra, men ha alltid litt reserve.' },
+      { question: 'Koster det noe?', answer: 'Nei, kalkulatoren er gratis og krever ingen konto.' },
+    ],
+    ctaHeading: 'Regn ut materialer og tid i ByggExp',
+    ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en demo.',
+    ctaButton: 'Bestill demo',
+    relatedHeading: 'Flere byggkalkulatorer',
+    related: [
+      { slug: 'farg-kalkylator', label: 'Malingsforbruk' },
+      { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeterberegner' },
+      { slug: '', label: 'Alle gratis verktøy' },
+    ],
+  },
+};
+
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  const lang = params?.lang;
+  if (!toolLocaleEnabled(lang)) {
+    return { notFound: true };
+  }
+  return { props: { lang } };
+};
+
+export default function Page({ lang }: { lang: Locale }) {
+  const c = CONTENT[lang];
+  const headerT = headerTranslations[lang];
+  const footerT = footerTranslations[lang];
+  const canonicalUrl = `${localeOrigin(lang)}/${lang}/verktyg/tapet-kalkylator`;
 
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>{c.metaTitle}</title>
+        <meta name="description" content={c.description} />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        <meta property="og:title" content={c.metaTitle} />
+        <meta property="og:description" content={c.description} />
         <meta property="og:url" content={canonicalUrl} />
         <script
           type="application/ld+json"
@@ -50,7 +133,7 @@ export default function Page() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'FAQPage',
-              mainEntity: FAQ.map((item) => ({
+              mainEntity: c.faq.map((item) => ({
                 '@type': 'Question',
                 name: item.question,
                 acceptedAnswer: { '@type': 'Answer', text: item.answer },
@@ -63,40 +146,36 @@ export default function Page() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
-        badge='Gratis kalkylator'
-        title='Tapetberäknare'
-        intro='Fyll i väggytan och rullens yta så räknar vi ut hur många tapetrullar du behöver, med påslag för mönsterpassning och spill.'
+        badge={c.badge}
+        title={c.h1}
+        intro={c.intro}
         embedSlug="tapet-kalkylator"
-        embedTitle="Tapet"
+        embedTitle={c.h1}
         tool={<TapetKalkylatorTool />}
         leadForm={<ToolLeadForm tool="tapet-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/tapet-preview.webp"
-            alt='Förhandsvisning av tapetberäknare'
-            caption='Så ser tapetberäknare ut'
+            alt={c.previewAlt}
+            caption={c.previewCaption}
             width={1000}
             height={474}
           />
         }
-        sections={[
-          { id: 'sa-raknar-du', heading: 'Så räknar du ut antal rullar', body: (<><ol><li>Räkna ut väggytan som ska tapetseras (m²).</li><li>Ange rullens yta (ofta ca 5 m²).</li><li>Lägg på spill för mönsterpassning.</li><li>Se hur många rullar du behöver.</li></ol></>) },
-          { id: 'info', heading: 'Tips', body: (<><p>Köp alla rullar ur samma parti (samma batchnummer) så att färgen stämmer, och ta gärna en rulle extra som reserv.</p></>) },
-        ]}
-        faqHeading='Vanliga frågor'
-        faq={FAQ}
+        sections={c.sections}
+        faqHeading={c.faqHeading}
+        faq={c.faq}
         cta={{
-          heading: 'Räkna material och tid i ByggExp',
-          text: 'Håll koll på material, tid och kostnader per projekt. Boka en demo.',
-          buttonLabel: 'Boka demo',
-          href: `/${LOCALE}/contact`,
+          heading: c.ctaHeading,
+          text: c.ctaText,
+          buttonLabel: c.ctaButton,
+          href: `/${lang}/contact`,
         }}
-        relatedHeading="Fler byggkalkylatorer"
-        related={[
-          { href: `/${LOCALE}/verktyg/farg-kalkylator`, label: 'Färgåtgång' },
-          { href: `/${LOCALE}/verktyg/kvadratmeter-kalkylator`, label: 'Kvadratmeterberäknare' },
-          { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },
-        ]}
+        relatedHeading={c.relatedHeading}
+        related={c.related.map((r) => ({
+          href: `/${lang}/verktyg${r.slug ? `/${r.slug}` : ''}`,
+          label: r.label,
+        }))}
       />
 
       <Footer footerT={footerT} />

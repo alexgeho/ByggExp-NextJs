@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import TakstolarKalkylatorTool from '../../../components/LeadMagnet/TakstolarKalkylatorTool';
+import EmbedSnippet from '../../../components/LeadMagnet/EmbedSnippet';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
@@ -84,6 +85,7 @@ export default function Page() {
           { id: 'exempel', heading: 'Exempel på takstolsberäkning', body: (<><p>Ett tak som är 10 meter långt med c/c 1200 mm: 10 000 / 1200 = 8,33, avrundat uppåt till 9, plus 1 = <strong>10 takstolar</strong>. Med tätare c/c 600 mm blir det i stället cirka 18 takstolar för samma tak – centrumavståndet styr alltså både antal och materialåtgång.</p></>) },
           { id: 'cc-avstand', heading: 'Vilket c/c-avstånd ska takstolarna ha?', body: (<><p>Centrumavståndet (c/c) beror på taktäckning, underlagstak och snölast. Vanliga avstånd är 1200 mm för prefabricerade fackverkstakstolar, men tätare c/c (t.ex. 600–900 mm) förekommer vid tung taktäckning eller hög snölast. Använd alltid det c/c som konstruktören angett för ditt tak.</p></>) },
           { id: 'info', heading: 'Antal vs. dimensionering av takstolar', body: (<><p>Den här kalkylatorn gör en <strong>beräkning av antal takstolar</strong> – inte en hållfasthetsberäkning. <strong>Dimensionering av takstolar</strong> (val av virkesdimensioner, spännvidd och infästning utifrån snö- och vindlast) ska göras av en konstruktör enligt Eurokod. Använd antalet härifrån för material och offert, och följ alltid konstruktörens ritning för utförandet.</p></>) },
+          { id: 'badda-in', heading: 'Bädda in kalkylatorn gratis på din sajt', body: <EmbedSnippet slug="takstolar-kalkylator" title="Beräkna takstolar" /> },
         ]}
         faqHeading="Vanliga frågor"
         faq={FAQ}

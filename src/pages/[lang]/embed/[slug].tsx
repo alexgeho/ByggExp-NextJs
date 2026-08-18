@@ -4,6 +4,7 @@ import type { ComponentType } from 'react';
 
 import MomsKalkylatorTool from '../../../components/LeadMagnet/MomsKalkylatorTool';
 import RotKalkylatorTool from '../../../components/LeadMagnet/RotKalkylatorTool';
+import TakstolarKalkylatorTool from '../../../components/LeadMagnet/TakstolarKalkylatorTool';
 
 // Bare, embeddable calculator pages meant to be dropped into other sites via an
 // <iframe>. No site chrome, noindex, and a visible attribution link back to the
@@ -16,6 +17,7 @@ const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
 const TOOLS: Record<string, { Tool: ComponentType; title: string }> = {
   'rot-avdrag-kalkylator': { Tool: RotKalkylatorTool, title: 'ROT-avdrag kalkylator' },
   'moms-kalkylator': { Tool: MomsKalkylatorTool, title: 'Momskalkylator' },
+  'takstolar-kalkylator': { Tool: TakstolarKalkylatorTool, title: 'Beräkna takstolar' },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {

@@ -29,4 +29,14 @@ export const headerTranslations = {
     verktyg: "Verktyg",
     funktioner: "Funktioner",
   },
+
+  nb: {
+    how: "Slik fungerer det",
+    pricing: "Priser",
+    company: "Om oss",
+    contact: "Kontakt",
+    demo: "Bestill demo",
+    verktyg: "Verktøy",
+    funktioner: "Funksjoner",
+  },
 }

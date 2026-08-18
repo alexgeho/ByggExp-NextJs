@@ -19,4 +19,11 @@ export const footerTranslations = {
     footerTerms: "Användarvillkor",
     footerDeleteAccount: "Radera konto",
   },
+
+  nb: {
+    footerBlog: "Blogg",
+    footerPrivacy: "Personvernerklæring",
+    footerTerms: "Brukervilkår",
+    footerDeleteAccount: "Slett konto",
+  },
 } as const;

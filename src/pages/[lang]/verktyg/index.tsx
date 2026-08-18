@@ -40,7 +40,7 @@ const GROUPS: Group[] = [
       { slug: 'golvvarme-kalkylator', title: 'Golvvärme', description: 'Slinglängd och antal slingor.' },
       { slug: 'trall-kalkylator', title: 'Trall & altan', description: 'Löpmeter och antal trallbrädor.' },
       { slug: 'staket-kalkylator', title: 'Staket', description: 'Antal stolpar och sektioner.' },
-      { slug: 'takstolar-kalkylator', title: 'Takstolar', description: 'Antal takstolar utifrån c/c.' },
+      { slug: 'takstolar-kalkylator', title: 'Beräkna takstolar', description: 'Antal takstolar utifrån c/c.' },
     ],
   },
   {

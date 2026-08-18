@@ -144,6 +144,7 @@ export default function TakKalkylatorPage() {
         }}
         relatedHeading="Fler byggkalkylatorer"
         related={[
+          { href: `/${LOCALE}/verktyg/takstolar-kalkylator`, label: 'Beräkna takstolar' },
           { href: `/${LOCALE}/verktyg/betong-kalkylator`, label: 'Betongberäknare' },
           { href: `/${LOCALE}/verktyg/kvadratmeter-kalkylator`, label: 'Kvadratmeterberäknare' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },

@@ -66,6 +66,8 @@ export default function Page() {
         badge='Gratis kalkylator'
         title='Reglar & virke'
         intro='Fyll i väggens längd och centrumavstånd (c/c) så räknar vi ut antal reglar och totalt antal löpmeter virke.'
+        embedSlug="reglar-kalkylator"
+        embedTitle="Reglar & virke"
         tool={<ReglarKalkylatorTool />}
         leadForm={<ToolLeadForm tool="reglar-kalkylator" />}
         preview={

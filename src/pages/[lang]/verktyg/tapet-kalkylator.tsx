@@ -66,6 +66,8 @@ export default function Page() {
         badge='Gratis kalkylator'
         title='Tapetberäknare'
         intro='Fyll i väggytan och rullens yta så räknar vi ut hur många tapetrullar du behöver, med påslag för mönsterpassning och spill.'
+        embedSlug="tapet-kalkylator"
+        embedTitle="Tapet"
         tool={<TapetKalkylatorTool />}
         leadForm={<ToolLeadForm tool="tapet-kalkylator" />}
         preview={

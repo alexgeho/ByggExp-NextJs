@@ -67,6 +67,8 @@ export default function Page() {
         badge='Gratis kalkylator'
         title='Isoleringskalkylator'
         intro='Ange ytan och isoleringstjockleken så räknar vi ut antal förpackningar, volym i m³ och ett ungefärligt U-värde för isolerskiktet. Standard är mineralull med lambda 0,036 W/mK.'
+        embedSlug="isolering-kalkylator"
+        embedTitle="Isolering"
         tool={<IsoleringKalkylatorTool />}
         leadForm={<ToolLeadForm tool="isolering-kalkylator" />}
         preview={

@@ -87,6 +87,8 @@ export default function KvadratmeterKalkylatorPage() {
         badge="Gratis kalkylator"
         title="Kvadratmeterberäknare – räkna ut ytan"
         intro="Fyll i längd och bredd för ett eller flera utrymmen så summeras ytan i kvadratmeter. Lägg till spill när du ska beställa golv, kakel, färg eller annat material – och ett pris per m² om du vill se materialkostnaden direkt."
+        embedSlug="kvadratmeter-kalkylator"
+        embedTitle="Kvadratmeter"
         tool={<KvadratmeterKalkylatorTool />}
         leadForm={<ToolLeadForm tool="kvadratmeter-kalkylator" />}
         preview={

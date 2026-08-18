@@ -66,6 +66,8 @@ export default function Page() {
         badge="Gratis kalkylator"
         title='Golvvärme'
         intro='Fyll i ytan och centrumavståndet (c/c) mellan rören så räknar vi ut ungefärlig slinglängd och antal slingor.'
+        embedSlug="golvvarme-kalkylator"
+        embedTitle="Golvvärme"
         tool={<GolvvarmeKalkylatorTool />}
         leadForm={<ToolLeadForm tool="golvvarme-kalkylator" />}
         preview={

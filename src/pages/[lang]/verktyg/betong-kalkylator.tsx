@@ -92,6 +92,8 @@ export default function BetongKalkylatorPage() {
         badge="Gratis kalkylator"
         title="Betongkalkylator"
         intro="Välj vad du gjuter – platta, grundbalk eller plintar – så räknar vi ut betongvolym i kubikmeter, antal säckar torrbetong, blandningsvatten och armeringsnät. En säck 25 kg ger ca 12,5 liter färdig betong."
+        embedSlug="betong-kalkylator"
+        embedTitle="Betongberäknare"
         tool={<BetongKalkylatorTool />}
         leadForm={<ToolLeadForm tool="betong-kalkylator" />}
         preview={

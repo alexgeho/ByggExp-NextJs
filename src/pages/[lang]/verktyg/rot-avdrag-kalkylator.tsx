@@ -7,7 +7,6 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import RotKalkylatorTool from '../../../components/LeadMagnet/RotKalkylatorTool';
-import EmbedSnippet from '../../../components/LeadMagnet/EmbedSnippet';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
@@ -171,12 +170,9 @@ export default function RotKalkylatorPage() {
               </p>
             ),
           },
-          {
-            id: 'badda-in',
-            heading: 'Bädda in kalkylatorn gratis på din sajt',
-            body: <EmbedSnippet slug="rot-avdrag-kalkylator" title="ROT-avdrag kalkylator" />,
-          },
         ]}
+        embedSlug="rot-avdrag-kalkylator"
+        embedTitle="ROT-avdrag kalkylator"
         faqHeading="Vanliga frågor om ROT-avdrag"
         faq={FAQ}
         cta={{

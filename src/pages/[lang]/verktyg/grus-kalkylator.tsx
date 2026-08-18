@@ -66,6 +66,8 @@ export default function Page() {
         badge='Gratis kalkylator'
         title='Grus & makadam'
         intro='Fyll i yta och djup så räknar vi ut volymen i kubikmeter och vikten i ton. Fungerar för grus, makadam, matjord och sand – justera densiteten efter materialet.'
+        embedSlug="grus-kalkylator"
+        embedTitle="Grus & makadam"
         tool={<GrusKalkylatorTool />}
         leadForm={<ToolLeadForm tool="grus-kalkylator" />}
         preview={

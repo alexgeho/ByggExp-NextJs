@@ -66,6 +66,8 @@ export default function Page() {
         badge="Gratis kalkylator"
         title='Trallberäknare'
         intro='Fyll i altanens yta, brädans bredd och springan mellan brädorna så räknar vi ut hur många löpmeter trall och antal brädor du behöver, inkl. spill.'
+        embedSlug="trall-kalkylator"
+        embedTitle="Trall & altan"
         tool={<TrallKalkylatorTool />}
         leadForm={<ToolLeadForm tool="trall-kalkylator" />}
         preview={

@@ -67,6 +67,8 @@ export default function Page() {
         badge='Gratis kalkylator'
         title='Golv- och kakelkalkylator'
         intro='Välj material och läggningssätt så räknar vi ut m² inkl. spill och antal förpackningar – för golv, laminat, klinker och kakel. För kakel får du även åtgången fästmassa i kg och säckar.'
+        embedSlug="golv-kalkylator"
+        embedTitle="Golv & kakel"
         tool={<GolvKalkylatorTool />}
         leadForm={<ToolLeadForm tool="golv-kalkylator" />}
         preview={

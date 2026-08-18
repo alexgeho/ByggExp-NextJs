@@ -87,6 +87,8 @@ export default function TakKalkylatorPage() {
         badge="Gratis kalkylator"
         title="Takkalkylator"
         intro="Ange byggnadens mått, taklutning och taktäckning så räknar vi ut takytan och materialet: takpannor, bärläkt i löpmeter och underlagspapp. Takytan räknas per takfall – bra inför omläggning eller offert."
+        embedSlug="tak-kalkylator"
+        embedTitle="Takberäknare"
         tool={<TakKalkylatorTool />}
         leadForm={<ToolLeadForm tool="tak-kalkylator" />}
         preview={

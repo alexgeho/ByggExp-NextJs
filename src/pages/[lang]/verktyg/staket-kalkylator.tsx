@@ -66,6 +66,8 @@ export default function Page() {
         badge="Gratis kalkylator"
         title='Staketberäknare'
         intro='Fyll i staketets längd och avståndet mellan stolparna (c/c) så räknar vi ut antal stolpar och sektioner.'
+        embedSlug="staket-kalkylator"
+        embedTitle="Staket"
         tool={<StaketKalkylatorTool />}
         leadForm={<ToolLeadForm tool="staket-kalkylator" />}
         preview={

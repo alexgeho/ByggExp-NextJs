@@ -82,6 +82,8 @@ export default function PaslagKalkylatorPage() {
         badge="Gratis kalkylator"
         title="Påslag & marginal – räkna ut pris och vinst"
         intro="Fyll i din självkostnad och antingen ett påslag eller en önskad marginal. Se försäljningspriset, vinsten och skillnaden mellan påslag och marginal direkt."
+        embedSlug="paslag-marginal-kalkylator"
+        embedTitle="Påslag & marginal"
         tool={<PaslagKalkylatorTool />}
         leadForm={<ToolLeadForm tool="paslag-marginal-kalkylator" />}
         preview={

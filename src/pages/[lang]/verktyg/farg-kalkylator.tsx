@@ -87,6 +87,8 @@ export default function FargKalkylatorPage() {
         badge="Gratis kalkylator"
         title="Färgkalkylator"
         intro="Välj färgtyp – innervägg, tak, träfasad eller puts – ange ytan och antal strykningar, så räknar vi ut hur många liter färg du behöver, med avdrag för fönster och dörrar. Täckförmågan sätts efter färgtyp och kan justeras."
+        embedSlug="farg-kalkylator"
+        embedTitle="Färgåtgång"
         tool={<FargKalkylatorTool />}
         leadForm={<ToolLeadForm tool="farg-kalkylator" />}
         preview={

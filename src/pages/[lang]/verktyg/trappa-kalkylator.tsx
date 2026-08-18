@@ -66,6 +66,8 @@ export default function Page() {
         badge='Gratis kalkylator'
         title='Trappberäknare'
         intro='Fyll i den totala höjden så räknar vi ut antal steg, steghöjd och ett rekommenderat stegdjup enligt bekvämlighetsregeln 2 × steghöjd + stegdjup ≈ 630 mm.'
+        embedSlug="trappa-kalkylator"
+        embedTitle="Trappa"
         tool={<TrappaKalkylatorTool />}
         leadForm={<ToolLeadForm tool="trappa-kalkylator" />}
         preview={

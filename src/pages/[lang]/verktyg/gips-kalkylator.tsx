@@ -68,6 +68,8 @@ export default function Page() {
         badge='Gratis kalkylator'
         title='Gipskalkylator'
         intro='Ange väggens mått så får du hela materiallistan för en regelvägg: gipsskivor, reglar, syll och hammarband, isolering och skruv. Skivbredden styr regelavståndet (c/c) enligt Gyprocs handbok.'
+        embedSlug="gips-kalkylator"
+        embedTitle="Gips"
         tool={<GipsKalkylatorTool />}
         leadForm={<ToolLeadForm tool="gips-kalkylator" />}
         preview={

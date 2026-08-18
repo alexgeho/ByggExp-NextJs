@@ -83,6 +83,8 @@ export default function TimprisKalkylatorPage() {
         badge="Gratis kalkylator"
         title="Timpris-kalkylator – vad ska du ta betalt?"
         intro="Räkna baklänges från vad du vill tjäna till vilket timpris du behöver ta betalt. Kalkylatorn lägger på sociala avgifter, dina omkostnader och en vinstmarginal och delar på dina debiterbara timmar."
+        embedSlug="timpris-kalkylator"
+        embedTitle="Timpris-kalkylator"
         tool={<TimprisKalkylatorTool />}
         leadForm={<ToolLeadForm tool="timpris-kalkylator" />}
         preview={

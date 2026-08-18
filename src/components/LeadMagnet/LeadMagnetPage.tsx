@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react';
 
+import EmbedSnippet from './EmbedSnippet';
+
 // Reusable, presentation-only layout for a lead-magnet / tool article page.
 // Everything is prop-driven and every visual element carries a `lead-magnet-*`
 // class, so a designer can restyle the whole page from one SCSS file
@@ -40,6 +42,15 @@ export type LeadMagnetPageProps = {
   cta?: LeadMagnetCta;
   relatedHeading?: string;
   related?: LeadMagnetLink[];
+  /**
+   * When set, renders a "Bädda in gratis på din sajt" section with a copy-paste
+   * iframe snippet for /sv/embed/<embedSlug>. The snippet carries an attribution
+   * backlink to byggexp.se — see EmbedSnippet. The slug must also be registered
+   * in src/pages/[lang]/embed/[slug].tsx.
+   */
+  embedSlug?: string;
+  /** Title used inside the embed snippet; defaults to the page title. */
+  embedTitle?: string;
 };
 
 export default function LeadMagnetPage({
@@ -55,6 +66,8 @@ export default function LeadMagnetPage({
   cta,
   relatedHeading,
   related = [],
+  embedSlug,
+  embedTitle,
 }: LeadMagnetPageProps) {
   return (
     <article className="lead-magnet">
@@ -81,6 +94,17 @@ export default function LeadMagnetPage({
             <div className="lead-magnet-section-body">{section.body}</div>
           </section>
         ))}
+
+        {embedSlug ? (
+          <section id="badda-in" className="lead-magnet-section">
+            <h2 className="lead-magnet-section-heading">
+              Bädda in kalkylatorn gratis på din sajt
+            </h2>
+            <div className="lead-magnet-section-body">
+              <EmbedSnippet slug={embedSlug} title={embedTitle || title} />
+            </div>
+          </section>
+        ) : null}
 
         {faq.length > 0 ? (
           <section className="lead-magnet-faq" aria-labelledby="lead-magnet-faq-heading">

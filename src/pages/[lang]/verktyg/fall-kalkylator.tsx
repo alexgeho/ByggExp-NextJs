@@ -66,6 +66,8 @@ export default function Page() {
         badge='Gratis kalkylator'
         title='Fall & lutning'
         intro='Fyll i längden och fallet i mm per meter så räknar vi ut total höjdskillnad, lutning i procent och som förhållande (1:X). Bra för avlopp, mark och tak.'
+        embedSlug="fall-kalkylator"
+        embedTitle="Fall & lutning"
         tool={<FallKalkylatorTool />}
         leadForm={<ToolLeadForm tool="fall-kalkylator" />}
         preview={

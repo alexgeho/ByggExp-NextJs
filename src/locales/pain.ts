@@ -67,4 +67,29 @@ export const painTranslations = {
     painResultText:
       "kostnaderna ökar, fakturor skickas senare och betalningar försenas i veckor ...",
   },
+
+  nb: {
+    painTitle: "Grunnproblemet",
+    painHeading:
+      "Bedrifter taper penger fordi de gjør ",
+
+    painTitleAccent1: "manuelt",
+
+    painHeading2: " det som de vellykkede allerede har ",
+
+    painTitleAccent2: "automatisert",
+
+    painItem1:
+      "Timer sendes via SMS eller på papir — administrasjonen fører dem manuelt over i Excel",
+    painItem2:
+      "En medarbeider glemmer å rapportere timene sine — noen må ringe og minne på",
+    painItem3:
+      "Timene fra byggeplassen stemmer ikke med kundens tall — tid går med til å rydde opp i avvikene",
+    painItem4:
+      "Administrasjonen bruker titalls timer på manuell inntasting i Excel",
+
+    painResult: "Resultatet:",
+    painResultText:
+      "kostnadene øker, fakturaer sendes senere og betalinger forsinkes i uker ...",
+  },
 };

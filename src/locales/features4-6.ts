@@ -76,4 +76,30 @@ export const featuresTranslations4_6 = {
     featuresCard6Step2: "Koppla till projekt eller arbetare",
     featuresCard6Step3: "Följ plats och ansvar",
   },
+
+  nb: {
+    featuresCard4Title: "Fotodokumentasjon koblet til arbeidsøkt",
+    featuresCard4Text:
+      "Hvert bilde kobles automatisk til arbeidsøkten, prosjektet, tidspunktet, personen og GPS.",
+
+    featuresCard4Step1: "Ta bilder rett i appen",
+    featuresCard4Step2: "Bildene kobles til arbeidsøkten",
+    featuresCard4Step3: "Hele historikken er alltid tilgjengelig",
+
+    featuresCard5Title: "Prosjekt- og personalplanlegging",
+    featuresCard5Text:
+      "Planlegg prosjekter, fordel personalet og få full oversikt over bedriftens belegg. Alle prosjekter vises i en felles kalender.",
+
+    featuresCard5Step1: "Opprett et prosjekt og angi tidsplan",
+    featuresCard5Step2: "Tildel medarbeidere til prosjektet",
+    featuresCard5Step3: "Få kontroll over belegget",
+
+    featuresCard6Title: "Håndtering av verktøy og utstyr",
+    featuresCard6Text:
+      "Koble verktøy og utstyr til prosjekter eller medarbeidere. Se alltid hvor utstyret er og hvem som har ansvaret for det.",
+
+    featuresCard6Step1: "Legg til verktøy og utstyr",
+    featuresCard6Step2: "Koble til prosjekt eller arbeider",
+    featuresCard6Step3: "Følg plassering og ansvar",
+  },
 } as const;

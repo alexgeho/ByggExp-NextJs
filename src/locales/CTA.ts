@@ -125,4 +125,46 @@ export const ctaTranslations = {
       "Vill du kan du också boka en passande tid direkt nedan.",
     ctaCalendlyButton: "Välj en tid i kalendern",
   },
+
+  nb: {
+    ctaTitle: "Klar til å prøve?",
+
+    ctaHeading1: "Bestill en demo —",
+    ctaAccent: "15 minutter",
+    ctaHeading2: "via videosamtale",
+
+    ctaLead:
+      "Vi viser hvordan ByggExp fungerer på prosjektene deres, svarer på spørsmål og hjelper dere med å opprette den første gruppechatten.",
+
+    ctaItem1: "Vi hjelper deg med å sette opp ByggExp for deg og teamet ditt",
+    ctaItem2: "Du får prøve alle funksjonene",
+    ctaItem3: "Vi tilpasser ByggExp etter arbeidsmåten deres",
+
+    ctaFormTitle: "Bestill en demo",
+
+    ctaNameLabel: "Hva heter du?",
+    ctaNamePlaceholder: "Fornavn Etternavn",
+    ctaNameError: "Oppgi navnet ditt",
+
+    ctaEmailLabel: "E-post",
+    ctaEmailPlaceholder: "navn@firma.no",
+    ctaEmailError: "Oppgi en gyldig e-postadresse",
+
+    ctaPhoneLabel: "Telefon",
+    ctaPhonePlaceholder: "+47 400 00 000",
+    ctaPhoneError: "Oppgi telefonnummer",
+
+    ctaButton: "Bestill demo",
+    ctaButtonSending: "Sender...",
+    ctaSubmitError: "Det gikk ikke å sende søknaden. Prøv igjen.",
+
+    ctaPrivacy:
+      "Ved å sende inn skjemaet godtar du behandlingen av personopplysninger. Vi deler ikke opplysningene med tredjepart.",
+
+    ctaSuccessTitle: "Søknad sendt!",
+    ctaSuccessText: "Vi kontakter deg innen en time i arbeidstiden.",
+    ctaSuccessCalendlyHint:
+      "Vil du, kan du også bestille et passende tidspunkt direkte nedenfor.",
+    ctaCalendlyButton: "Velg et tidspunkt i kalenderen",
+  },
 } as const;

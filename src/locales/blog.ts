@@ -1,7 +1,7 @@
 import type { BlogLocale } from '../types/blog';
 
 export const blogPageTranslations: Record<
-  BlogLocale,
+  BlogLocale | 'nb',
   {
     badge: string;
     title: string;
@@ -21,6 +21,16 @@ export const blogPageTranslations: Record<
     home: 'Hem',
     back: 'Tillbaka till bloggen',
     related: 'Liknande artiklar',
+  },
+  nb: {
+    badge: 'Blogg',
+    title: 'Artikler og guider',
+    subtitle:
+      'Praktiske tips, innsikt og arbeidsflyter for byggefirmaer som vil jobbe smartere.',
+    empty: 'Ingen artikler publisert ennå.',
+    home: 'Hjem',
+    back: 'Tilbake til bloggen',
+    related: 'Lignende artikler',
   },
   en: {
     badge: 'Blog',

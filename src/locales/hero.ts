@@ -68,4 +68,27 @@ export const heroTranslations = {
     heroFeature2: "Kom igång på 15 minuter",
     heroFeature3: "Ingen bindningstid",
   },
+
+  nb: {
+    heroPill: "Byggeledelse",
+
+    heroTitle: "Automatisk timeregistrering og prosjektstyring",
+
+    heroTitleAccent: "for byggefirmaer",
+
+    heroSubtitle:
+      "Raskere fakturering og lønnshåndtering, automatiske påminnelser i oppgaver, kontroll av arbeidsøkter i sanntid, planlegging. ",
+    heroSubtitleShort:
+      "Raskere fakturering og lønnshåndtering, automatiske påminnelser ... ",
+
+    heroSubtitleBtnMore: "Mer ▼",
+    heroSubtitleBtnLess: "Mindre ▲",
+
+    heroDemo: "Bestill demo",
+    heroHow: "Slik fungerer det",
+
+    heroFeature1: "Første måneden gratis",
+    heroFeature2: "Kom i gang på 15 minutter",
+    heroFeature3: "Ingen bindingstid",
+  },
 } as const;

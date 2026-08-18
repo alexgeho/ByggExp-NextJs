@@ -112,4 +112,43 @@ export const featuresTranslations1_3 = {
     featuresCard3Step2: "Gå till fliken Live",
     featuresCard3Step3: "Frånvarande syns direkt",
   },
+
+  nb: {
+    featuresTitle: "Slik fungerer det",
+
+    featuresHeading1: "12 verktøy som",
+    featuresHeadingAccent: "eliminerer 60 %",
+    featuresHeading2: "av administrasjonens arbeid",
+
+    featuresSub:
+      "Ingen datamaskin trengs. Ingen sekretær trengs. Bare en smarttelefon som allerede ligger i lomma.",
+
+    featuresCard1Title: "Automatisk innsamling av arbeidstid",
+    featuresCard1Text:
+      "Medarbeideren velger prosjekt. ByggExp registrerer arbeidstiden automatisk via GPS.",
+
+    featuresCard1Step1: "Arbeideren kommer til stedet",
+    featuresCard1Step2: "GPS starter økten automatisk",
+    featuresCard1Step3:
+      "Timene ligger i systemet",
+
+    featuresCard2Title: "Oppgaver med automatisk oppfølging",
+    featuresCard2Text:
+      "Oppgaver kan tildeles hele prosjektet eller utvalgte medarbeidere. Blir ikke oppgaven fullført, sender appen påminnelser.",
+
+    featuresCard2Step1:
+      "Klikk på opprett oppgave",
+    featuresCard2Step2:
+      "Legg til mottaker",
+    featuresCard2Step3:
+      "Sett frist og påminnelse",
+
+    featuresCard3Title: "Live-oversikt over arbeidslagene",
+    featuresCard3Text:
+      "Følg medarbeidere og byggeplasser i sanntid. I adminpanelet ser du med en gang hvem som har startet økten sin, hvem som mangler og hvor alle jobber.",
+
+    featuresCard3Step1: "Åpne adminpanelet",
+    featuresCard3Step2: "Gå til fanen Live",
+    featuresCard3Step3: "Fraværende vises med en gang",
+  },
 } as const;

@@ -110,4 +110,41 @@ export const pricingTranslations = {
 
     pricingTrial: "Kom igång på 5 minuter.",
   },
+
+  nb: {
+    pricingTitle: "Hva koster det?",
+    pricingHeading: "Ett abonnement, alt inkludert",
+
+    pricingSub:
+      "Ingen skjulte avgifter. Ingen overraskelser. Ingen oppstartsavgift. Avslutt når du vil.",
+
+    pricingMonthly: "Per måned",
+    pricingYearly: "Per år",
+
+    pricingTag: "Første måneden gratis",
+
+    pricingPer: "SEK / måned",
+    pricingPer1: "Start",
+    pricingPer10: "Vekst",
+    pricingPer20: "Profesjonell",
+    pricingPer40: "Tilpasset",
+    pricingCustom: "La oss prate",
+
+    priceDescription1: "1-10 brukere",
+
+    priceDescription2: "10-20 brukere",
+
+    priceDescription3: "20-40 brukere",
+
+    priceDescription4: "40+ brukere",
+
+    pricingItem1: "Alle funksjoner inkludert",
+    pricingItem2: "Ubegrenset antall prosjekter",
+    pricingItem3: "Ingen bindingstid",
+    pricingItem4: "Mobilapp + Adminpanel",
+
+    pricingButton: "Bestill demo",
+
+    pricingTrial: "Kom i gang på 5 minutter.",
+  },
 } as const;

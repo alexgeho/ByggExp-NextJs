@@ -139,4 +139,52 @@ export const benefitsTranslations = {
         "Alla projektdeltagare eller valda personer får notifieringar samtidigt.",
     },
   },
+
+  nb: {
+    office: {
+      benefitsOfficeTitle: "Hva får dere ut av å jobbe med oss?",
+
+      benefitsOfficeHeading1: "Allerede fra første dag ",
+      benefitsOfficeAccent: "sparer dere tid ",
+      benefitsOfficeHeading2: "på alt som tidligere ble gjort manuelt.",
+
+      benefitsOfficeLead: "For arbeidsledelsen:",
+
+      benefitsOfficeCard1Title: "Timer rett inn i systemet",
+      benefitsOfficeCard1Text:
+        "Fakturaer kan sendes uten ventetid og påminnelser.",
+
+      benefitsOfficeCard2Title: "Eksport til Excel",
+      benefitsOfficeCard2Text:
+        "Ferdige timer for lønn og fakturaer med ett klikk.",
+
+      benefitsOfficeCard3Title: "Automatiske påminnelser",
+      benefitsOfficeCard3Text:
+        "Dere trenger ikke ringe og minne ansatte på manuelt.",
+
+      benefitsOfficeCard4Title: "Kontroll over byggeplassene",
+      benefitsOfficeCard4Text:
+        "Se i sanntid hvem som jobber, hvor de jobber og hvem som er fraværende.",
+    },
+
+    site: {
+      benefitsSiteLead: "For byggeteamet:",
+
+      benefitsSiteCard1Title: "Automatisk timeregistrering",
+      benefitsSiteCard1Text:
+        "Telefonen trenger bare være påslått og arbeidstakeren trenger bare komme til prosjektet",
+
+      benefitsSiteCard2Title: "Oppgaver uten telefonsamtaler",
+      benefitsSiteCard2Text:
+        "Oppgaver rett i appen sammen med automatiske påminnelser.",
+
+      benefitsSiteCard3Title: "Alt samlet på ett sted",
+      benefitsSiteCard3Text:
+        "Bilder og dokumenter kobles til arbeidsøkter og prosjekt.",
+
+      benefitsSiteCard4Title: "Umiddelbare varsler",
+      benefitsSiteCard4Text:
+        "Alle prosjektdeltakere eller utvalgte personer får varsler samtidig.",
+    },
+  },
 } as const;

@@ -70,4 +70,28 @@ export const translations = {
     whyResultText:
       "kostnaderna ökar, fakturor skickas senare och betalningar försenas i veckor ...",
   },
+
+  nb: {
+    how: "Slik fungerer det",
+    pricing: "Priser",
+    company: "Om oss",
+    demo: "Bestill demo",
+
+    whyTitle: "Grunnproblemet",
+    whyHeading:
+      "Bedrifter taper penger ikke på grunn av dårlige medarbeidere, men fordi de gjør manuelt det som vellykkede bedrifter allerede har automatisert",
+
+    whyItem1:
+      "Timer sendes via SMS eller på papir — administrasjonen fører dem manuelt over i Excel",
+    whyItem2:
+      "En medarbeider glemmer å rapportere timene sine — noen må ringe og minne på",
+    whyItem3:
+      "Timene fra byggeplassen stemmer ikke med kundens tall — tid går med til å rydde opp i avvikene",
+    whyItem4:
+      "Administrasjonen bruker titalls timer på manuell inntasting i Excel",
+
+    whyResult: "Resultatet:",
+    whyResultText:
+      "kostnadene øker, fakturaer sendes senere og betalinger forsinkes i uker ...",
+  },
 } as const;

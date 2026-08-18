@@ -46,4 +46,20 @@ export const featuresTranslations10_11 = {
     featuresCard11Step2: "Underlaget skapas för varje anställd",
     featuresCard11Step3: "Exportera löneunderlaget med ett klick",
   },
+
+  nb: {
+    featuresCard10Title: "Utlegg og kostnader",
+    featuresCard10Text:
+      "Hold oversikt over alle utlegg og kostnader per prosjekt. Ta bilde av kvitteringen, så havner den automatisk på riktig prosjekt.",
+    featuresCard10Step1: "Ta bilde av kvitteringen i appen",
+    featuresCard10Step2: "Koble til riktig prosjekt",
+    featuresCard10Step3: "Se kostnadene i sanntid",
+
+    featuresCard11Title: "Lønn fra de samme timene",
+    featuresCard11Text:
+      "De registrerte timene blir automatisk grunnlag for lønn – med minimale manuelle justeringer.",
+    featuresCard11Step1: "Timene registreres automatisk",
+    featuresCard11Step2: "Grunnlaget lages for hver ansatt",
+    featuresCard11Step3: "Eksporter lønnsgrunnlaget med ett klikk",
+  },
 } as const;

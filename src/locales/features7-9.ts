@@ -71,4 +71,28 @@ export const featuresTranslations7_9 = {
       "Lägg till foton från arbetsplats",
     featuresCard9Step3: "Hitta allt på ett ställe",
   },
+
+  nb: {
+    featuresCard7Title: "Lag tilbud",
+    featuresCard7Text:
+      "Firmainformasjon fylles inn automatisk. Tidligere tilbud lagres, slik at det er enklere å lage nye.",
+    featuresCard7Step1: "Lag et tilbud fra prosjektet",
+    featuresCard7Step2: "Prosjektdata fylles inn automatisk",
+    featuresCard7Step3: "Send tilbudet med noen få klikk",
+
+    featuresCard8Title: "Lag fakturaer",
+    featuresCard8Text:
+      "Gjør registrerte arbeidstimer om til ferdige fakturaer. Spar tid og få betalt raskere.",
+    featuresCard8Step1: "Velg prosjekt og periode",
+    featuresCard8Step2: "Timene hentes automatisk",
+    featuresCard8Step3: "Send fakturaen til kunden",
+
+    featuresCard9Title: "Alle prosjektdokumenter på ett sted",
+    featuresCard9Text:
+      "Bilder, tegninger og dokumenter kobles alltid til riktig prosjekt. All informasjon er samlet på ett sted.",
+    featuresCard9Step1: "Last opp dokumenter til prosjektet",
+    featuresCard9Step2:
+      "Legg til bilder fra byggeplassen",
+    featuresCard9Step3: "Finn alt på ett sted",
+  },
 } as const;

@@ -7,6 +7,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import MomsKalkylatorTool from '../../../components/LeadMagnet/MomsKalkylatorTool';
+import EmbedSnippet from '../../../components/LeadMagnet/EmbedSnippet';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
@@ -145,6 +146,11 @@ export default function MomsKalkylatorPage() {
                 vilket momsbelopp det handlar om.
               </p>
             ),
+          },
+          {
+            id: 'badda-in',
+            heading: 'Bädda in kalkylatorn gratis på din sajt',
+            body: <EmbedSnippet slug="moms-kalkylator" title="Momskalkylator" />,
           },
         ]}
         faqHeading="Vanliga frågor om moms"

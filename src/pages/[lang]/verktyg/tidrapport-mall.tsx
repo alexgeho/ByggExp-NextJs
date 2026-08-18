@@ -55,6 +55,11 @@ const FAQ: LeadMagnetFaqItem[] = [
     answer:
       'Ja. Utöver PDF kan du ladda ner tidrapporten som Excel (CSV) direkt från mallen ovan och bearbeta den vidare eller föra in den i lönesystemet.',
   },
+  {
+    question: 'Är tidredovisning och tidrapport samma sak?',
+    answer:
+      'I praktiken används orden synonymt. Tidredovisning betonar redovisningen av nedlagd tid per projekt, medan tidrapport ofta syftar på själva dokumentet. Mallen ovan fungerar för båda – du redovisar arbetade timmar per projekt och laddar ner som PDF eller Excel.',
+  },
 ];
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
@@ -132,9 +137,10 @@ export default function TidrapportMallPage() {
             body: (
               <>
                 <p>
-                  En tidrapport är en sammanställning av arbetad tid – vem som jobbat, på vilket
-                  projekt och hur många timmar per dag. Den är underlag för både löneberäkning och för
-                  att fakturera kunden rätt antal timmar.
+                  En tidrapport – eller <strong>tidredovisning</strong> som det också kallas – är en
+                  sammanställning av arbetad tid: vem som jobbat, på vilket projekt och hur många timmar
+                  per dag. Den är underlag för både löneberäkning och för att fakturera kunden rätt antal
+                  timmar.
                 </p>
                 <p>
                   För ett byggföretag är tidrapporten ett av de viktigaste underlagen som finns. Den

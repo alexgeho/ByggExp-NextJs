@@ -2787,9 +2787,374 @@ const ABS18: BlogPost = {
   publishedAt: "2026-08-18T15:00:00.000Z", createdAt: "2026-08-18T15:00:00.000Z", updatedAt: "2026-08-18T15:00:00.000Z",
 };
 
+
+const VADKOST_HTML = `
+<p>Vad kostar en anställd i ett byggföretag egentligen? Om du bara ser till månadslönen räknar du fel – och lägger anbud som äter upp din marginal. Den lön du betalar ut är toppen av ett isberg. Under ytan ligger arbetsgivaravgift, semester, tjänstepension, försäkringar och en rad byggspecifika kostnader som tillsammans kan mer än fördubbla siffran. Den här guiden visar hur du bygger upp den verkliga timkostnaden för en byggnadsarbetare 2026, så att du sätter rätt pris från början.</p>
+
+<p>Vill du testa dina egna siffror direkt? Räkna fram din faktiska kostnad med vår gratis <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator &rarr;</a></p>
+
+<h2>Lönen är bara startpunkten</h2>
+<p>En byggnads- eller anläggningsarbetare tjänar i snitt runt 38 000–40 000 kr i månaden, eller ungefär 215–235 kr i timmen (SCB:s lönestrukturstatistik). Använd alltid din egen faktiska lön i kalkylen, inte snittet – men som exempel utgår vi från en grundlön på 215 kr/h. Det är den siffran många instinktivt lägger till grund för anbud. Problemet är att den bara beskriver vad den anställde får, inte vad hen kostar. Skillnaden mellan lön och full arbetskraftskostnad är hela poängen i det här räknandet.</p>
+
+<h2>Arbetsgivaravgift 2026: 31,42 %</h2>
+<p>Ovanpå bruttolönen betalar du arbetsgivaravgift. För 2026 är den fulla avgiften <strong>31,42 %</strong> på lön och förmåner för anställda födda 1959 eller senare. Den består av flera delar:</p>
+<ul>
+<li>Ålderspensionsavgift 10,21 %</li>
+<li>Sjukförsäkringsavgift 3,55 %</li>
+<li>Föräldraförsäkringsavgift 2,00 %</li>
+<li>Efterlevandepensionsavgift 0,30 %</li>
+<li>Arbetsmarknadsavgift 2,64 %</li>
+<li>Arbetsskadeavgift 0,10 %</li>
+<li>Allmän löneavgift 12,62 %</li>
+</ul>
+<p>Det finns undantag. För unga 19–23 år (födda 2003–2007) gäller en tillfälligt sänkt avgift på <strong>20,81 %</strong> på månadslön upp till 25 000 kr, och full avgift på beloppet däröver – reglerna är tidsbegränsade – kontrollera aktuell period och belopp hos Skatteverket. Anställda som fyllt 67 (födda 1938–1958) betalar bara ålderspensionsavgiften 10,21 %, och för födda 1937 eller tidigare är avgiften 0 %.</p>
+<p>Räkneexempel på en månadslön om 40 000 kr: 40 000 &times; 31,42 % = <strong>12 568 kr</strong> i arbetsgivaravgift per månad. Redan här har du gått från 40 000 till 52 568 kr.</p>
+
+<h2>Semester och arbetstidsförkortning</h2>
+<p>Semesterlagen ger 25 semesterdagar per år. För arbetare tillämpas normalt procentregeln, där semesterlönen är minst 12 % av den intjänade lönen. Byggavtalet lägger historiskt på lite mer via semestertillägg, så att den effektiva kostnaden hamnar runt 12–13 % på den arbetade lönen.</p>
+<p>Utöver det innehåller Byggavtalet ett arbetstidskonto (arbetstidsförkortning, ATF), där en del av lönesumman avsätts varje år – motsvarande drygt en veckas betald ledighet, ofta angivet kring 35–40 timmar per år. Poängen är dubbel: dessa poster kostar pengar <em>och</em> minskar antalet timmar den anställde faktiskt är på plats och kan debiteras. Tillsammans lägger semester och ATF på i storleksordningen 12–14 %.</p>
+
+<h2>Tjänstepension och Fora-försäkringar</h2>
+<p>Kollektivavtalet kräver tjänstepension. Avtalspension SAF-LO betalas av arbetsgivaren med <strong>4,5 %</strong> av bruttolönen upp till 7,5 inkomstbasbelopp och 30 % på lönedelar över den gränsen, administrerat via Fora. Detta är inte frivilligt – det är ett avtalskrav.</p>
+<p>Ovanpå pensionen ingår Foras försäkringspaket för arbetare: AGS (sjukförsäkring), TFA (arbetsskada), TGL (livförsäkring), omställningsförsäkring, premiebefrielse och föräldrapenningtillägg. Dessa lägger på ungefär 1–1,5 % av lönesumman. Den totala Fora-kostnaden – pension plus försäkringar – landar vanligen kring <strong>6 %</strong> av lönesumman. Premierna sätts årsvis, så stäm av mot din aktuella Fora-faktura.</p>
+
+<h2>Byggspecifika påslag som ofta glöms bort</h2>
+<p>Här skiljer sig bygg från ett kontorsjobb. En hantverkare bär med sig utrustning och kringkostnader som måste in i timpriset:</p>
+<ul>
+<li>Verktyg och maskiner – inköp, slitage och underhåll</li>
+<li>Servicebil eller skåpbil, drivmedel, försäkring och service</li>
+<li>Arbetskläder och skyddsutrustning</li>
+<li>ID06 och administration kring det</li>
+<li>Yrkes- och ansvarsförsäkring</li>
+<li>Utbildning och certifikat: heta arbeten, ställning, lift, fallskydd</li>
+<li>Företagshälsovård och arbetsmiljöarbete</li>
+</ul>
+<p>Som tumregel motsvarar detta ofta <strong>40–80 kr per debiterbar timme</strong> eller mer, beroende på hur maskin- och fordonstung verksamheten är. Lägg också till sjuklön: du betalar cirka 80 % av lönen under sjuklöneperioden dag 1–14 (med karensavdrag), vilket både kostar och tar bort debiterbar tid.</p>
+
+<h2>Från lön till verklig timkostnad – räkneexempel</h2>
+<p>Nu bygger vi upp hela kedjan på vår exempellön 215 kr/h:</p>
+<ol>
+<li><strong>Grundlön:</strong> 215 kr/h</li>
+<li><strong>+ arbetsgivaravgift 31,42 %:</strong> +68 kr &rarr; 283 kr/h</li>
+<li><strong>+ semester och ATF ca 13 %:</strong> +28 kr &rarr; 311 kr/h</li>
+<li><strong>+ pension och Fora-försäkringar ca 6 %:</strong> +13 kr &rarr; 324 kr/h</li>
+<li><strong>+ byggpåslag ca 50 kr/h:</strong> +50 kr &rarr; <strong>374 kr/h laddad kostnad</strong></li>
+</ol>
+<p>Men 374 kr är din kostnad per <em>betald</em> timme, inte per <em>debiterbar</em> timme. En byggnadsarbetare har en debiteringsgrad på typiskt 60–75 % – resten av tiden går till semester, ATF, sjukdom, restid, väder, ställtid och administration. Den icke-debiterbara tiden måste bäras av de timmar du faktiskt fakturerar.</p>
+<p>Räknar vi med 70 % debiteringsgrad: 374 / 0,70 = <strong>534 kr/h</strong> i ren självkostnad att ta ut i anbud. Vid 60 % blir det över 620 kr/h. Så blir en lön på 215 kr/h till 400–500+ kr/h innan du ens lagt på vinst och risk. Ovanpå självkostnaden behöver du ett påslag för vinstmarginal och för att bära risken i fastprisjobb – annars arbetar du utan buffert.</p>
+
+<h2>2026: räkna om efter nytt avtal</h2>
+<p>En viktig varning: Byggavtalet är inne i en aktiv avtalsrörelse under 2026. Det nuvarande avtalet löper ut och nya löner och villkor förhandlas fram. Det betyder att lönenivåer och avsättningar kan ändras mitt under året. Lägg du långa anbud nu – räkna om självkostnaden när det nya avtalet är klart, så att du inte låser fast dig vid siffror som inte längre gäller.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp samlar du lön, arbetade timmar och projekttid på ett ställe, så att du ser skillnaden mellan betald och debiterbar tid i praktiken. Med tidrapporteringen får du fram din faktiska debiteringsgrad per person och projekt i stället för att gissa – och det är den siffran som avgör om ett anbud håller. Kombinerat med kalkylverktygen kan du bygga upp timpriset lager för lager och lägga anbud på verkliga tal, inte på magkänsla. ByggExp räknar inte åt Skatteverket eller Fora åt dig, men det ger dig underlaget du behöver för att sätta rätt pris.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket dyrare än lönen blir en anställd totalt?</h3>
+<p>Räkna med att den fulla arbetskraftskostnaden ligger kring 50–60 % över bruttolönen när du lagt på arbetsgivaravgift, semester, pension och försäkringar. Med byggspecifika påslag och låg debiteringsgrad kan den timme du fakturerar behöva vara mer än dubbelt så hög som grundlönen.</p>
+<h3>Vad är arbetsgivaravgiften för bygg 2026?</h3>
+<p>Den fulla arbetsgivaravgiften är 31,42 % för anställda födda 1959 eller senare. För unga 19–23 år gäller tillfälligt 20,81 % på månadslön upp till 25 000 kr under perioden april 2026 till september 2027, och för anställda som fyllt 67 är avgiften 10,21 %.</p>
+<h3>Måste jag betala tjänstepension till mina byggarbetare?</h3>
+<p>Ja, om du har kollektivavtal. Avtalspension SAF-LO med 4,5 % (30 % över 7,5 IBB) och Foras försäkringspaket är avtalskrav, inte frivilliga förmåner. Totalt landar Fora-kostnaden ofta kring 6 % av lönesumman.</p>
+<h3>Varför räcker det inte att fakturera lönen plus arbetsgivaravgift?</h3>
+<p>För att en byggnadsarbetare bara debiterar 60–75 % av sin arbetstid. All icke-fakturerbar tid samt fordon, verktyg, försäkringar och certifikat måste bäras av de timmar du faktiskt tar betalt för, vilket pressar upp anbudspriset rejält.</p>
+
+<h2>Kom igång</h2>
+<p>Sätt rätt siffra för ditt nästa anbud genom att räkna igenom din egen kostnad i vår <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator</a>. Vill du se hur ByggExp hjälper dig fånga verklig debiteringsgrad och kalkylera anbud på riktiga tal? <a href="/sv/contact">Boka en demo &rarr;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/timpris-hantverkare">Så sätter du rätt timpris som hantverkare</a>, <a href="/sv/blog/tidrapportering">Tidrapportering i byggföretaget</a> och <a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a>.</p>
+`.trim();
+
+const VADKOST: BlogPost = {
+  _id: "code-"+"vad-kostar-en-anstalld-byggforetag",
+  title: "Vad kostar en anställd i ett byggföretag? Verklig timkostnad 2026", slug: "vad-kostar-en-anstalld-byggforetag", locale: "sv",
+  excerpt: "Så räknar du ut den verkliga timkostnaden för en byggnadsarbetare 2026 – från grundlön till den siffra du måste ta betalt för i anbudet.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/timpris-preview.webp", contentHtml: VADKOST_HTML,
+  seoTitle: "Vad kostar en anställd? Bygg 2026 | ByggExp", seoDescription: "Lön är bara toppen. Se hur arbetsgivaravgift, semester, tjänstepension och byggpåslag gör 215 kr/h till 400–500+ kr/h i anbud. Räkneexempel för 2026.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/timpris-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T15:30:00.000Z", createdAt: "2026-08-18T15:30:00.000Z", updatedAt: "2026-08-18T15:30:00.000Z",
+};
+
+
+const LIKVID_HTML = `
+<p>Många byggföretag är lönsamma på pappret men får ändå slut på pengar på kontot. Orderboken är full, marginalen ser bra ut i bokslutet – men mitt i månaden räcker inte kassan till löner, skatt och materialinköp. Orsaken är sällan dålig lönsamhet. Det är timing. Pengarna kommer in för sent och betalas ut för tidigt. Tesen i den här artikeln är enkel: fakturera direkt vid avslut, håll korta betalningsvillkor och bevaka varje förfallodag.</p>
+
+<p>Ett vanligt likviditetshål börjar redan i offerten, för ett ROT-jobb delar kundens betalning i två strömmar. Räkna på din del innan du lämnar pris med <a href="/sv/verktyg/rot-avdrag-kalkylator">vår gratis ROT-avdragskalkylator -&gt;</a> så vet du exakt hur mycket kunden betalar direkt och hur mycket du måste vänta på från Skatteverket.</p>
+
+<h2>ROT-fällan för din kassa</h2>
+<p>ROT-avdrag ger kunden skattereduktion på 30 % av arbetskostnaden – aldrig på material, resor eller utrustning. Med fakturamodellen drar du av ROT-beloppet direkt på fakturan. Kunden betalar den reducerade summan, och först när kunden har betalat kan du begära resterande belopp från Skatteverket via e-tjänsten Rot och rut. Det innebär att ROT-delen i praktiken är en kredit du ger kunden – och en väntan på myndighet.</p>
+<p>Ett konkret exempel: ett badrumsjobb med 80 000 kr i arbetskostnad och 40 000 kr i material, plus 25 % moms.</p>
+<ul>
+<li>Arbetskostnad inkl. moms: 100 000 kr</li>
+<li>ROT-avdrag 30 % av arbetskostnaden: 30 000 kr</li>
+<li>Material inkl. moms: 50 000 kr</li>
+<li>Kunden betalar dig direkt: 120 000 kr</li>
+<li>Du begär från Skatteverket efteråt: 30 000 kr</li>
+</ul>
+<p>Trots att du redan lagt ut för allt material och betalat lön för arbetstimmarna sitter 30 000 kr fast tills kunden betalat och Skatteverket hunnit behandla din begäran. På flera parallella projekt växer det gapet snabbt. Kom också ihåg taket: ROT är max 50 000 kr per person och år, och ROT plus RUT ryms i ett gemensamt tak på 75 000 kr per person och år (2026). Är kundens utrymme redan förbrukat får du ingen utbetalning – då står du för hela beloppet.</p>
+
+<h2>Fakturera direkt vid avslut</h2>
+<p>Varje dag ett färdigt jobb ligger som osänd faktura är en dag längre till pengar. Gör en fast rutin: slutbesiktning eller avslut samma dag som fakturan går ut, senast inom 48 timmar. En vecka i fakturasläp plus 30 dagars betalningstid betyder att pengar du tjänade i mars inte når kontot förrän i maj.</p>
+<p>På längre projekt binder materialinköp och löner kassan i veckor innan du får betalt. Lösningen är delfakturering, a-conto. Fakturera etappvis mot uppnådda milstolpar i stället för allt på slutet. Då matchar inbetalningarna dina utlägg och du slipper finansiera bygget ur egen ficka. Skriv a-conto-planen redan i avtalet så kunden vet vad som kommer.</p>
+
+<h2>Begär ROT-utbetalning snabbt och rätt</h2>
+<p>När kunden har betalat: begär utbetalningen samma vecka i e-tjänsten Rot och rut. Skatteverket betalar normalt ut inom cirka en vecka när begäran är komplett och korrekt. Men utbetalning förutsätter att kunden har ROT-utrymme kvar och att person- och fastighetsuppgifter stämmer – annars avslås eller fördröjs den, och du står för hela beloppet.</p>
+<p>Minska risken med tre kontroller:</p>
+<ol>
+<li>Stäm av kundens ROT-utrymme <strong>innan</strong> du lämnar offert, inte efteråt.</li>
+<li>Säkra rätt personnummer och fastighetsbeteckning (eller lägenhetsnummer för bostadsrätt).</li>
+<li>Bekräfta att jobbet ger ROT: det gäller bara arbete på bostad kunden själv äger – nybyggnation och arbete åt annat företag eller en förenings gemensamma delar ger normalt inte ROT.</li>
+</ol>
+<p>Det datum kunden betalar styr dessutom vilket beskattningsår avdraget hör till, så håll koll på betaldatum nära årsskiftet.</p>
+
+<h2>Korta betalningsvillkor är din rätt</h2>
+<p>Mellan företag är den lagstadgade maximala betalningstiden 30 dagar. Längre kredit gäller bara om du som säljare uttryckligen har godkänt det – en beställare kan alltså inte ensidigt trycka på 60 dagar. Mot privatkund kan du sätta ännu kortare, förslagsvis 10–15 dagar. Skriv villkoren i avtalet och offerten, inte bara på fakturan, så finns de överenskomna innan jobbet ens börjat.</p>
+
+<h2>Bevaka förfallet</h2>
+<p>En faktura som passerar förfallodagen utan åtgärd är ränta du skänker bort. Vid sen betalning har du rätt till dröjsmålsränta enligt räntelagen – referensräntan plus 8 procentenheter – från förfallodagen. Är kunden ett företag har du dessutom laglig rätt till en förseningsersättning på 450 kr, utöver räntan och skäliga inkassokostnader. (Referensräntan sätts av Riksbanken 1 januari och 1 juli; kontrollera aktuellt värde på riksbanken.se.)</p>
+<p>Bygg en fast rutin: automatisk påminnelse dagen efter förfall, sedan inkasso efter en bestämd tidsgräns. Automatisera bevakningen så att ingen faktura faller mellan stolarna när det är fullt på bygget.</p>
+
+<h2>Glöm inte omvänd byggmoms</h2>
+<p>När du säljer en byggtjänst till en köpare som själv, mer än tillfälligt, säljer byggtjänster gäller omvänd skattskyldighet. Då fakturerar du <strong>utan</strong> moms, märker fakturan med att omvänd skattskyldighet för byggtjänster gäller och anger köparens momsnummer – köparen redovisar momsen. Det påverkar kassaflödet direkt: du har ingen kundmoms att tillfälligt förfoga över. Vanligt fel är att fakturera med moms ändå, vilket ger felaktiga fakturor, tvister och betalningsdröjsmål. Ha koll på om varje kund är byggföretag eller inte redan i offertskedet.</p>
+
+<h2>Bygg en buffert och enkla rutiner</h2>
+<ul>
+<li>Håll en rullande kassaprognos som visar in- och utbetalningar de kommande veckorna.</li>
+<li>Sikta på en buffert som täcker löner, skatt och material 1–2 månader framåt.</li>
+<li>Ge kunden kortare kredit än du själv får av dina leverantörer – då jobbar tiden för din kassa.</li>
+<li>Följ upp ROT-utrymme per kund och begär utbetalning direkt efter betalning.</li>
+<li>Spara underlag och fakturor i 7 år enligt bokföringsreglerna.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du offerten med rätt ROT-avdrag från början och gör om den till faktura när jobbet är klart – samma dag, utan att räkna om beloppen för hand. På längre projekt lägger du upp a-conto-fakturor mot etapper så inbetalningarna följer utläggen. Fakturorna får förfallodatum och betalningsstatus samlat, så du ser vilka som närmar sig förfall och vilka som passerat. Verktyget trollar inte fram pengar snabbare från Skatteverket eller kunden, men det tar bort fakturasläpet och gör att inget jobb blir liggande osänt.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Varför är mitt byggföretag lönsamt men har ändå tom kassa?</h3>
+<p>Nästan alltid handlar det om timing, inte marginal. Du betalar löner och material innan kunden betalar dig, och på ROT-jobb väntar du dessutom på ROT-delen från Skatteverket. Fakturera direkt vid avslut, korta betalningsvillkoren och delfakturera längre projekt så matchar inbetalningarna dina utgifter bättre.</p>
+<h3>När kan jag begära ROT-utbetalningen från Skatteverket?</h3>
+<p>Först efter att kunden har betalat sin del av fakturan. Då begär du resterande ROT-belopp i e-tjänsten Rot och rut. Är begäran komplett och korrekt betalar Skatteverket normalt ut inom cirka en vecka, förutsatt att kunden har ROT-utrymme kvar och att uppgifterna stämmer.</p>
+<h3>Hur långa betalningsvillkor får ett annat företag kräva?</h3>
+<p>Mellan företag är max 30 dagar enligt lag. Längre kredittid gäller bara om du som säljare uttryckligen godkänner den. Du behöver alltså inte acceptera 60 dagar bara för att beställaren skriver så i sin beställning.</p>
+<h3>Vad har jag rätt till om kunden betalar för sent?</h3>
+<p>Dröjsmålsränta enligt räntelagen (referensräntan plus 8 procentenheter) från förfallodagen. Är kunden ett företag har du dessutom rätt till 450 kr i förseningsersättning samt skäliga inkassokostnader, utöver räntan.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna ut ROT-delen och kundens faktiska betalning innan du lämnar pris med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>, och skapa en korrekt faktura med rätt villkor i <a href="/sv/verktyg/faktura-mall">vår fakturamall</a>. Vill du se hur offert, ROT och fakturabevakning hänger ihop i ett flöde? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/rot-avdrag">ROT-avdrag – så fungerar fakturamodellen</a>, <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a> och <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a>.</p>
+`.trim();
+
+const LIKVID: BlogPost = {
+  _id: "code-"+"likviditet-byggforetag",
+  title: "Likviditet i byggföretag: undvik att ROT och långa betalningsvillkor sänker kassan", slug: "likviditet-byggforetag", locale: "sv",
+  excerpt: "Så undviker du att ROT-förskott och långa betalningsvillkor tömmer kassan – fakturera direkt vid avslut, korta villkoren och bevaka förfallodagen.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/rot-avdrag-preview.webp", contentHtml: LIKVID_HTML,
+  seoTitle: "Likviditet byggföretag | ByggExp", seoDescription: "Lönsam på pappret men tom kassa? Så undviker du att ROT-förskott och långa betalningsvillkor sänker likviditeten – fakturera direkt och bevaka förfallet.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/rot-avdrag-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T16:00:00.000Z", createdAt: "2026-08-18T16:00:00.000Z", updatedAt: "2026-08-18T16:00:00.000Z",
+};
+
+
+const ANSTALLA_HTML = `
+<p>Orderböckerna är fulla men du hinner inte med själv. Att gå från ensam hantverkare till arbetsgivare är ett av de största stegen du tar som byggföretagare — men det är fullt hanterbart om du vet vad som gäller. Många drar sig för det första anställningsstället för att det känns dyrt och byråkratiskt. Sanningen är att kostnaden ofta är lägre än du tror tack vare Växa-stödet, förutsatt att formalian sitter rätt.</p>
+
+<p>Innan du landar en lönenivå bör du räkna hem vad medarbetaren faktiskt måste dra in per timme — testa <a href="/sv/verktyg/timpris-kalkylator">vår gratis timpris-kalkylator -&gt;</a> så ser du direkt hur lön, avgifter och overhead påverkar ditt pris ut mot kund.</p>
+
+<h2>Innan du anställer: räkna på den verkliga kostnaden</h2>
+
+<p>Bruttolönen är bara en del av kostnaden. Ovanpå lönen tillkommer arbetsgivaravgifter på 31,42 % (2026), semesterersättning (minst 12 %) samt tjänstepension och försäkringar om du har eller tecknar kollektivavtal. En medarbetare med 30 000 kr i månadslön kostar därför snabbt runt 40 000 kr per månad innan du ens räknat in verktyg, arbetskläder och overhead.</p>
+
+<p>Det är den här kalkylen som avgör vilket timpris du måste ta ut för att gå med vinst. Räkna igenom den innan du skriver under något avtal — annars äter den nya lönen upp din marginal i stället för att bygga den.</p>
+
+<h2>Växa-stödet 2026 — så halverar du avgiften på första anställningen</h2>
+
+<p>Växa-stödet är det viktigaste verktyget för dig som anställer för första gången. I stället för full arbetsgivaravgift på 31,42 % betalar du bara ålderspensionsavgiften 10,21 % på lönen — på den del som ligger under takbeloppet. Stödet gäller i upp till 24 sammanhängande kalendermånader.</p>
+
+<ul>
+<li><strong>Vem får det:</strong> enskild firma, aktiebolag eller handelsbolag med högst två delägare, som inte haft någon anställd (eller högst en) sedan årets ingång.</li>
+<li><strong>Vem du får anställa:</strong> personen får inte ha varit anställd hos dig eller närstående företag under kalenderåret eller de tre föregående kalenderåren.</li>
+<li><strong>Takbelopp:</strong> 35 000 kr/månad för anställda som tillträtt efter 30 april 2024 (25 000 kr för äldre anställningar). Lön över taket beläggs med full avgift.</li>
+<li><strong>Två anställda:</strong> sedan 1 maj 2024 kan stödet omfatta både en första och en andra anställd — den andra bara om den första fortfarande är kvar.</li>
+</ul>
+
+<p><strong>Viktig ändring 2026:</strong> från och med redovisningsperioden januari 2026 får du inte längre nedsättningen automatiskt i arbetsgivardeklarationen. Du måste själv <em>ansöka om återbetalning</em> av de överskjutande arbetsgivaravgifterna hos Skatteverket. Missar du det betalar du full avgift i onödan — bygg in ansökan i din månadsrutin.</p>
+
+<p><strong>Räkneexempel:</strong> på en lön om 35 000 kr är full arbetsgivaravgift cirka 11 000 kr/månad. Med Växa-stödet blir avgiften cirka 3 570 kr — en besparing på runt 7 400 kr i månaden, eller nära 180 000 kr över hela stödperioden på 24 månader.</p>
+
+<h2>Registrering och skatt hos Skatteverket</h2>
+
+<p>Innan första lönen betalas måste du registrera dig som arbetsgivare hos Skatteverket. Därefter gäller tre återkommande skyldigheter varje månad:</p>
+
+<ol>
+<li>Gör skatteavdrag (preliminärskatt) på lönen enligt rätt skattetabell.</li>
+<li>Lämna arbetsgivardeklaration på individnivå (AGI) — senast den 12:e månaden efter löneutbetalningen.</li>
+<li>Betala in avdragen skatt och arbetsgivaravgifter till Skatteverket.</li>
+</ol>
+
+<p>AGI-rapporteringen på individnivå betyder att varje anställds lön och skatt redovisas separat. Här lönar det sig att ha ordning på underlaget från start, så att löner och tidrapporter stämmer överens.</p>
+
+<h2>Anställningsavtalet — vad det måste innehålla</h2>
+
+<p>Enligt LAS är tillsvidareanställning (fast anställning) normen. Du kan inleda med provanställning i högst sex månader. Använder du särskild visstidsanställning övergår den till tillsvidareanställning efter sammanlagt tolv månader inom en femårsperiod.</p>
+
+<p>Du är skyldig att lämna skriftlig information om de väsentliga anställningsvillkoren — de viktigaste inom 7 dagar från anställningens start, resterande inom en månad. Se till att avtalet minst innehåller:</p>
+
+<ul>
+<li>Lön och när den betalas ut</li>
+<li>Arbetstid och eventuell övertidsersättning</li>
+<li>Anställningsform och uppsägningstid</li>
+<li>Arbetsuppgifter och arbetsort</li>
+<li>Semestervillkor och eventuellt kollektivavtal</li>
+</ul>
+
+<h2>Kollektivavtal och försäkringar i byggbranschen</h2>
+
+<p>Kollektivavtal är inte ett lagkrav, men det är mycket vanligt i bygg — Byggavtalet med Byggnads är branschstandard. Tecknar du avtalet binder du dig att betala avtalsenlig lön och att ordna de kopplade försäkringarna via Fora och AFA: tjänstepension (Avtalspension SAF-LO), arbetsskadeförsäkring (TFA), livförsäkring (TGL) samt AGB/AGS.</p>
+
+<p>Står du utanför kollektivavtal är dessa försäkringar inte automatiska. Då bör du teckna motsvarande tjänstepension och försäkringar frivilligt — både för att vara en attraktiv arbetsgivare och för att skydda dig själv om något händer på arbetsplatsen.</p>
+
+<h2>Bygg-specifika krav: ID06, personalliggare och arbetsmiljö</h2>
+
+<p>På byggarbetsplatser gäller extra regler. Elektronisk personalliggare är obligatorisk när den totala kostnaden för byggverksamheten väntas överstiga 4 prisbasbelopp — 4 × 59 200 = 236 800 kr under 2026. Byggherren anmäler normalt byggarbetsplatsen till Skatteverket, och varje företag loggar in sina egna arbetare.</p>
+
+<p>Sköts inte liggaren riskerar du kontrollavgift: 12 500 kr om liggaren saknas eller är bristfällig, plus 2 500 kr per person på plats som inte är registrerad. ID06 — registrerat ID-kort med elektronisk närvaroregistrering — är det verktyg branschen använder för att uppfylla kravet i praktiken. Ordna ID06-kort till din nya medarbetare innan hen går ut på jobb.</p>
+
+<p>Som arbetsgivare bär du dessutom arbetsmiljöansvaret enligt arbetsmiljölagen och ska bedriva systematiskt arbetsmiljöarbete (SAM, AFS 2023:1). På en byggarbetsplats är det inte pappersexercis — det handlar om att förebygga fall, tunga lyft och maskinolyckor.</p>
+
+<h2>Checklista: allt du måste ha på plats</h2>
+
+<ul>
+<li>Registrerad som arbetsgivare hos Skatteverket</li>
+<li>Skriftligt anställningsavtal med väsentliga villkor</li>
+<li>Ansökan om återbetalning via Växa-stödet inplanerad i månadsrutinen</li>
+<li>Tjänstepension och försäkringar (via kollektivavtal eller egna avtal)</li>
+<li>ID06-kort till medarbetaren</li>
+<li>Personalliggare på plats där bygget överstiger tröskeln</li>
+<li>Rutiner för systematiskt arbetsmiljöarbete</li>
+<li>Lönehantering och AGI-rapportering senast den 12:e varje månad</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+
+<p>ByggExp tar inte över din lönekörning eller din Skatteverket-rapportering, men samlar underlaget som gör den enkel. Med tidrapportering per medarbetare och projekt får du exakta timmar att lönesätta och fakturera vidare, och du ser direkt vad varje anställd kostar och drar in per projekt. Frånvaro och närvaro loggas löpande, så att du har ordning inför både lönekörning och personalliggare. Kort sagt: du får kontroll på kostnaden och timmarna, så att steget från ensam hantverkare till arbetsgivare blir ett räknat beslut i stället för en magkänsla.</p>
+
+<h2>Vanliga frågor</h2>
+
+<h3>Hur mycket sänker Växa-stödet kostnaden?</h3>
+<p>Du betalar 10,21 % i ålderspensionsavgift i stället för 31,42 % i full arbetsgivaravgift, på lön upp till takbeloppet 35 000 kr/månad. Det motsvarar en besparing på runt 7 400 kr per månad på en heltidslön, i upp till 24 månader.</p>
+
+<h3>Måste jag ha kollektivavtal för att anställa?</h3>
+<p>Nej, kollektivavtal är inte ett lagkrav. Det är dock vanligt i bygg och styr lön samt ger tjänstepension och försäkringar via Fora/AFA. Utan avtal måste du teckna motsvarande pension och försäkringar själv.</p>
+
+<h3>Vad är den stora ändringen för Växa-stödet 2026?</h3>
+<p>Från och med redovisningsperioden januari 2026 får du inte längre nedsättningen automatiskt i arbetsgivardeklarationen. Du måste aktivt ansöka om återbetalning av de överskjutande arbetsgivaravgifterna hos Skatteverket.</p>
+
+<h3>När krävs elektronisk personalliggare?</h3>
+<p>När den totala kostnaden för byggverksamheten väntas överstiga 4 prisbasbelopp, vilket 2026 är 236 800 kr. Byggherren anmäler arbetsplatsen och varje företag loggar in sina egna arbetare, i praktiken via ID06.</p>
+
+<h2>Kom igång</h2>
+
+<p>Kostnaden för din första medarbetare är lägre än många tror tack vare Växa-stödet — men formalian måste sitta. Börja med att räkna hem timpriset i <a href="/sv/verktyg/timpris-kalkylator">vår gratis timpris-kalkylator</a>, så vet du vilken lönenivå och beläggning som faktiskt går ihop. Vill du se hur tidrapportering och kostnadskontroll fungerar i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi hur du får ordning från första anställningen.</p>
+
+<p>Relaterat: <a href="/sv/blog/timpris-hantverkare">Sätta timpris som hantverkare</a>, <a href="/sv/blog/tidrapportering">Tidrapportering i byggföretag</a>, <a href="/sv/blog/franvaro-i-byggforetag">Hantera frånvaro i byggföretaget</a>.</p>
+`.trim();
+
+const ANSTALLA: BlogPost = {
+  _id: "code-"+"anstalla-personal-byggforetag",
+  title: "Anställa personal i byggföretaget: checklista för första medarbetaren 2026", slug: "anstalla-personal-byggforetag", locale: "sv",
+  excerpt: "En konkret checklista för din första anställning i byggföretaget: Växa-stödet som sänker avgiften, anställningsavtalet och de bygg-specifika kraven du inte får missa.", tag: "Personal",
+  coverImageUrl: "/landing/verktyg/timpris-preview.webp", contentHtml: ANSTALLA_HTML,
+  seoTitle: "Anställa personal byggföretag | ByggExp", seoDescription: "Ska du anställa din första medarbetare? Så funkar Växa-stödet 2026, anställningsavtalet, ID06 och allt du måste ha på plats. Konkret checklista.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/timpris-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T16:30:00.000Z", createdAt: "2026-08-18T16:30:00.000Z", updatedAt: "2026-08-18T16:30:00.000Z",
+};
+
+
+const ENSKILD_HTML = `
+<p>Att gå från anställd till eget är ett av de vanligaste stegen i byggbranschen — och en av de första frågorna som dyker upp är om du ska driva verksamheten som <strong>enskild firma</strong> eller <strong>aktiebolag</strong>. Valet handlar om tre saker: hur mycket personligt ansvar du tar, hur du beskattas och hur du får ut pengarna. För en hantverkare med dyra materialinköp, garantiåtaganden och kanske anställda får skillnaderna verkliga konsekvenser.</p>
+
+<p>Innan du bestämmer dig: räkna på hur mycket du faktiskt behöver ta betalt för att gå runt i respektive form med vår gratis <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator →</a>. Ett realistiskt timpris avgör mer än bolagsformen om verksamheten bär sig.</p>
+
+<h2>Snabbversionen</h2>
+<ul>
+<li><strong>Enskild firma:</strong> inget kapitalkrav, enkel att starta och sköta — men du är personligt ansvarig för alla skulder med din privata ekonomi.</li>
+<li><strong>Aktiebolag:</strong> kräver 25 000 kr i aktiekapital, ger i princip begränsat ansvar och mer flexibelt uttag (lön + utdelning) — men mer administration och krav.</li>
+<li><strong>Bytet lönar sig oftast</strong> när överskottet blir stabilt högt, när risken växer (större projekt, banklån, anställda) och när du vill kunna ta ut vinst som utdelning.</li>
+<li>Oavsett form: konsultera en revisor för just din situation — brytpunkter och 3:12-regler ändras.</li>
+</ul>
+
+<h2>Ansvar och risk i byggbranschen</h2>
+<p>Den största principiella skillnaden är juridisk. I en enskild firma finns ingen gräns mellan dig och företaget — du svarar personligt för alla företagets skulder med dina privata tillgångar. Går ett projekt snett, en kund inte betalar eller ett stort materialparti måste förskotteras, är det din privatekonomi som står som säkerhet.</p>
+<p>Ett aktiebolag är en egen juridisk person. Din ekonomiska risk är i princip begränsad till det aktiekapital du satt in. Just i byggbranschen väger det tungt: du hanterar stora inköp, dyra maskiner, garanti- och felansvar för utfört arbete och ofta anställda. Ett enda tvistigt projekt kan bli dyrt, och då är skillnaden mellan begränsat och personligt ansvar avgörande.</p>
+<p>Men skölden är inte total. Som företrädare för ett AB kan du drabbas av <strong>personligt betalningsansvar (företrädaransvar)</strong> för obetalda skatter och avgifter. Och när mer än halva det registrerade aktiekapitalet är förbrukat måste styrelsen agera på kapitalbrist och upprätta en kontrollbalansräkning — annars riskerar du personligt ansvar även i AB. Begränsat ansvar förutsätter alltså att du sköter bolaget korrekt.</p>
+
+<h2>Skatten — så beskattas de olika</h2>
+<p>Här skiljer sig formerna fundamentalt.</p>
+<p>I en <strong>enskild firma</strong> beskattas du på <em>hela överskottet</em> som inkomst av näringsverksamhet — oavsett om du tar ut pengarna eller låter dem stå kvar. Du betalar kommunal och eventuell statlig inkomstskatt plus <strong>egenavgifter på cirka 28,97 %</strong> av överskottet. Ett schablonavdrag på 25 % görs i deklarationen innan slutlig skatt och egenavgifter beräknas. Du kan jämna ut resultatet mellan år med periodiseringsfond och expansionsfond, och balansera lön mot vinst med räntefördelning.</p>
+<p>I ett <strong>aktiebolag</strong> betalar bolaget bolagsskatt på vinsten. Du som ägare tar ut en lön — på lönen betalar bolaget <strong>arbetsgivaravgifter på 31,42 % (2026, för anställda födda 1960 eller senare)</strong> — och/eller utdelning enligt 3:12-reglerna.</p>
+<p>Den statliga skatten sätter ofta gränsen. För 2026 är skiktgränsen 643 000 kr och <strong>brytpunkten 660 400 kr</strong> (för dig under 66). Över brytpunkten tas 20 % statlig skatt ut på den beskattningsbara förvärvsinkomsten. En enskild firma-ägare beskattas för hela överskottet som förvärvsinkomst — passerar överskottet brytpunkten slår den statliga skatten till på överskjutande del. En AB-ägare kan i stället lägga lönen nära brytpunkten och ta ut ytterligare vinst som lägre beskattad utdelning.</p>
+
+<h2>Uttag och 3:12 — så får du ut pengarna</h2>
+<p>I en enskild firma finns ingen lön och inget separat beskattat uttag. Du gör ett <em>eget uttag</em> när du flyttar pengar till dig själv, men det påverkar inte skatten — du är redan beskattad på hela överskottet.</p>
+<p>I ett AB är det här den stora fördelen vid högre vinster. Utdelning inom det årliga gränsbeloppet beskattas med <strong>20 %</strong> i kapital (2/3 av 30 %), medan belopp däröver beskattas som förvärvsinkomst. Med förenklingsregeln (schablonbeloppet) får du ett gränsbelopp motsvarande 2,75 × inkomstbasbeloppet året före — vilket för inkomståret 2026 landar på cirka <strong>221 650 kr</strong>. Det innebär att en betydande del av vinsten kan tas ut till 20 % skatt i stället för full förvärvsinkomstbeskattning.</p>
+<p>Observera att 3:12-reglerna har varit under reform. Kontrollera aktuellt schablonbelopp och regelverk med din revisor innan du planerar uttag — siffrorna kan ha ändrats.</p>
+
+<h2>När lönar det sig att byta från enskild firma till AB</h2>
+<p>Det finns ingen exakt gräns, men tumreglerna brukar knytas till dessa faktorer:</p>
+<ul>
+<li><strong>Vinstnivå:</strong> när överskottet blir stabilt högt — och särskilt när det passerar brytpunkten — börjar kombinationen lön + utdelning i AB slå full förvärvsinkomstbeskattning i enskild firma.</li>
+<li><strong>Riskexponering:</strong> tar du in anställda, större projekt eller banklån växer nyttan av begränsat ansvar snabbt.</li>
+<li><strong>Uttagsvilja:</strong> vill du kunna spara vinst i bolaget och ta ut den som utdelning över tid talar det för AB.</li>
+</ul>
+<p>Verksamheten kan överlåtas eller ombildas till AB, men det finns skatteregler kring hur inkråm och inventarier överförs — ta hjälp av revisor så att bytet inte utlöser onödig beskattning.</p>
+
+<h2>Så går bytet till i praktiken</h2>
+<ol>
+<li>Registrera aktiebolaget hos Bolagsverket och sätt in aktiekapitalet på 25 000 kr (e-tjänst via verksamt.se).</li>
+<li>Ansök om ny F-skatt och momsregistrering för bolaget hos Skatteverket.</li>
+<li>Se över och skriv om avtal, försäkringar och eventuella ramavtal så att de gäller bolaget.</li>
+<li>Överlåt inkråm, inventarier och pågående uppdrag enligt gällande skatteregler.</li>
+<li>Avregistrera den enskilda firman när allt är överfört.</li>
+</ol>
+<p>Har du anställda följer kollektivavtalsförpliktelser (Byggnads/Byggföretagen) av att du är arbetsgivare — de gäller oavsett bolagsform.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>Oavsett om du kör enskild firma eller AB samlar ByggExp tidrapportering, projekt och fakturaunderlag på ett ställe. Du fakturerar med rätt moms — inklusive omvänd byggmoms mot andra byggföretag, där fakturan ställs utan moms och märks med att omvänd skattskyldighet gäller — och du sparar underlagen i minst 7 år som lagen kräver. Timmarna dina anställda rapporterar blir direkt till fakturaunderlag, så att du får ut rätt intäkt oavsett bolagsform. ByggExp ger däremot inte skatterådgivning — själva val av bolagsform tar du med din revisor.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag ha aktiekapital för att starta byggföretag?</h3>
+<p>Nej, inte om du väljer enskild firma — där finns inget kapitalkrav. Vill du driva aktiebolag krävs minst 25 000 kr i aktiekapital för ett privat AB, en gräns som gällt sedan 2020.</p>
+<h3>Vilken form ger lägst skatt?</h3>
+<p>Det beror på vinstnivån. Vid lägre överskott är enskild firma ofta enklare och likvärdig, medan AB vid högre och stabila vinster kan sänka den samlade skatten genom lön upp mot brytpunkten och utdelning till 20 % inom gränsbeloppet. Räkna på ditt eget fall med en revisor.</p>
+<h3>Behöver jag F-skatt oavsett form?</h3>
+<p>Ja. Både enskild firma och AB behöver godkänd F-skatt för att fakturera som företag — i praktiken ett krav för att ta uppdrag som underentreprenör i bygg. Har du samtidigt anställning kan du som enskild näringsidkare ha FA-skatt.</p>
+<h3>Kan jag byta form senare?</h3>
+<p>Ja, du kan ombilda en enskild firma till aktiebolag när verksamheten växer. Det finns skatteregler för hur tillgångar överförs, så gör bytet tillsammans med revisor för att undvika onödig beskattning.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att räkna hem ekonomin oavsett form: testa vår <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator →</a> och kontrollera momsen med <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn →</a>. Vill du se hur tidrapportering och fakturering hänger ihop i praktiken, <a href="/sv/contact">boka en demo →</a> så visar vi upplägget för just ditt byggföretag.</p>
+
+<p>Relaterat: <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a> och <a href="/sv/blog/fakturera-som-hantverkare">Så fakturerar du som hantverkare</a>.</p>
+`.trim();
+
+const ENSKILD: BlogPost = {
+  _id: "code-"+"enskild-firma-eller-aktiebolag-bygg",
+  title: "Enskild firma eller aktiebolag för byggföretagaren? Så väljer du rätt 2026", slug: "enskild-firma-eller-aktiebolag-bygg", locale: "sv",
+  excerpt: "Ansvar, skatt och uttag skiljer sig helt mellan enskild firma och aktiebolag — här är vad byggföretagaren behöver väga in 2026.", tag: "Företagande",
+  coverImageUrl: "/landing/verktyg/moms-preview.webp", contentHtml: ENSKILD_HTML,
+  seoTitle: "Enskild firma eller AB för bygg | ByggExp", seoDescription: "Enskild firma eller aktiebolag för ditt byggföretag? Jämför ansvar, skatt, uttag och 3:12 — och se när det lönar sig att byta 2026.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/moms-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T17:00:00.000Z", createdAt: "2026-08-18T17:00:00.000Z", updatedAt: "2026-08-18T17:00:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    VADKOST,
+    LIKVID,
+    ANSTALLA,
+    ENSKILD,
     BETVILLK,
     KONTRAVG,
     BASPBASU,

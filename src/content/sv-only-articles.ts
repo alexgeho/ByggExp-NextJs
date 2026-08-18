@@ -37,6 +37,10 @@ export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
   'bas-p-bas-u',
   'garantitid-ansvarstid-ab-04',
   'abs-18-hantverkarformularet-17',
+  'vad-kostar-en-anstalld-byggforetag',
+  'likviditet-byggforetag',
+  'anstalla-personal-byggforetag',
+  'enskild-firma-eller-aktiebolag-bygg',
 ]);
 
 export function isSvOnlyArticle(slug: string): boolean {

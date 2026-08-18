@@ -5272,9 +5272,785 @@ const A_STARTA_BYGGFORETAG_2026: BlogPost = {
   publishedAt: "2026-08-18T19:21:00.000Z", createdAt: "2026-08-18T19:21:00.000Z", updatedAt: "2026-08-18T19:21:00.000Z",
 };
 
+const A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK_HTML = `
+<p>Många beställare hör av sig med samma önskemål: "jag vill anlita ett företag med våtrumscertifikat". Problemet är att något sådant enskilt certifikat inte existerar i Sverige. I stället driver tre olika branschorgan – BKR, GVK och Säker Vatten – varsitt parallellt behörighetssystem, uppdelat efter vilket hantverk du utför. Väljer du fel behörighet, eller ingen alls, riskerar din kund att bli utan försäkringsersättning efter en vattenskada. Den här artikeln vänder sig till dig som är hantverkare, VVS-företagare eller plattsättare och funderar på vilken behörighet som är värd att investera i – och hur du använder den som säljargument i offerten.</p>
+
+<p>Ett tydligt underlag börjar med en proffsig offert. Använd gärna <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a> för att lyfta fram företagets behörigheter redan i anbudet.</p>
+
+<h2>Varför det inte finns ETT våtrumscertifikat</h2>
+<p>Ett våtrum byggs av flera yrkesgrupper med helt olika ansvar. Rörinstallationen – tappvatten, avlopp och anslutningar – hanteras av VVS-montörer. Tätskiktet och ytskiktet – membran, plastmatta, kakel och klinker – hanteras av plattsättare och tätskiktsmontörer. Eftersom kraven skiljer sig åt mellan dessa moment finns tre skilda branschsystem: Säker Vatten för rörinstallationer, GVK för tätskikt och plastmatta, samt BKR (Byggkeramikrådet) för keramik. En central princip går igen i alla tre: <strong>auktorisationen ligger på företaget</strong>, medan den enskilde hantverkaren har en personlig behörighet eller branschlegitimation som är knuten till det auktoriserade företaget. Säker Vatten uttrycker det som att "en branschlegitimation är alltid kopplad till ett auktoriserat företag" – legitimationen gäller inte för arbete som utförs utanför en auktoriserad firma.</p>
+
+<h2>Säker Vatten – för VVS och rörinstallationer</h2>
+<p>Säker Vatten är systemet för dig som gör rörarbeten. För att företaget ska bli auktoriserat krävs en skriftlig förbindelse att följa branschreglerna Säker Vatteninstallation, giltig ansvarsförsäkring, registrering hos Bolagsverket samt svensk F-skatt och momsregistrering. Kraven ser olika ut för VVS-företag och konsultföretag.</p>
+<p>Varje VVS-montör och lärling på företaget måste dessutom ha en egen branschlegitimation. Den kräver att man genomgått utbildningen "Säker Vatteninstallation för VVS-företag" plus ett av följande: dokumenterad yrkesutbildning med branschcertifikat, godkänd validering eller en tidigare godkänd särskild prövning. Sedan 1 januari 2020 erbjuds inte längre särskild prövning till montörer som saknar svenskt branschcertifikat. Legitimationen är giltig i fem år efter godkänd utbildning och är numera digital – den nås via BankID i Säker Vattens app, medan äldre ID06-kombinerade bevis gäller tills de går ut.</p>
+<p>De aktuella reglerna är "Branschregler Säker Vatteninstallation 2026:1". Projekt som startats efter 1 januari 2026 ska utföras enligt 2026:1-versionen. När jobbet är klart lämnar det auktoriserade företaget ett "intyg om Säker Vatteninstallation" till kunden – beskrivet som en värdehandling vid försäljning eller vid reglering av en eventuell skada. I dag finns runt 2 234 auktoriserade VVS-företag och cirka 13 978 personer med branschlegitimation.</p>
+
+<h2>GVK – tätskikt, plastmatta och keramik</h2>
+<p>GVK (AB Svensk Våtrumskontroll) täcker tätskikt, plastmattebeläggning och även keramik. Systemet har tre separata behörigheter: Plastmatta, Keramik och Tätskikt under keramik. Montörer måste ha giltig GVK-behörighet för sitt område, och företaget ska ha minst en arbetsledare per tio anställda som klarat behörighetskursen Arbetsledare. Alla GVK-behörigheter gäller i fem år och kräver därefter fortbildning för förnyelse.</p>
+<p>De gällande branschreglerna heter "Säkra Våtrum 2026" och trädde i kraft 1 januari 2026. Reglerna används som måttstock av försäkringsbolag och beställare – de kan jämföra ett utfört arbete mot branschreglerna för att avgöra om det håller.</p>
+<p>Kostnadsmässigt (2026, exkl. moms) ligger registreringsavgiften på cirka 12 490 kr. Årsavgiften är 8 400 kr för Plast eller Keramik, 9 400 kr för båda, plus 0,27 promille av föregående års omsättning (minst 1 500 kr). Behörighetskurserna Plastmatta och Keramik kostar 3 800 kr styck, och Arbetsledarkursen 4 000 kr. Räkna alltså med både en engångskostnad och en löpande årlig utgift.</p>
+
+<h2>BKR / BBV – kakel och klinker</h2>
+<p>BKR är plattsättarnas system. Ett behörigt plattsättningsföretag måste ha minst en behörig arbetsledare och minst en behörig plattsättare. Utbildningspaketet består av en tvådagars tätskikts- och materialkurs (teori), en endags arbetsledarkurs som täcker auktorisation och entreprenadjuridik, en tre timmars praktisk tätskiktskurs, samt ett kunskapsprov i plattsättning om yrkesbevis saknas. En ensamföretagare måste gå samtliga kurser själv.</p>
+<p>De aktuella våtrumsreglerna är "BBV 26:1" (Byggkeramikrådets branschregler för våtrum). BKR har gett ut branschregler sedan slutet av 1980-talet. Ett behörigt företag ska lämna kunden ett kvalitetsdokument för det färdiga jobbet. Auktorisationen gäller tills vidare men kräver årlig förnyelse och en obligatorisk återkurs vart femte år.</p>
+<p>Årsavgiften är trappad efter antal anställda plattsättare och inkluderar PER-medlemskap: 5 100 kr för 1–2 plattsättare, 6 700 kr för 3–5, 10 000 kr för 6–10, 13 200 kr för 11–20 och 16 500 kr för 21 eller fler. Notera att GVK och BKR överlappar på keramik – en plattsättare väljer ett av systemen, inte båda.</p>
+
+<h2>Vem behöver vilket – och varför kunden kräver det</h2>
+<p>En enkel tumregel efter yrke: är du VVS-montör eller rörläggare behöver du Säker Vatten. Är du plattsättare eller tätskiktsmontör behöver du BKR eller GVK. En hel badrumsrenovering kräver i praktiken båda hantverken auktoriserade – en Säker Vatten-auktoriserad rörläggare plus en BKR- eller GVK-behörig plattsättare eller tätskiktsmontör.</p>
+<p>Den kommersiella drivkraften är tydlig. Försäkringsbolag villkorar ersättning vid vattenskada mot att installationen följt branschreglerna. Kan kunden inte visa upp kvalitetsdokumentet eller intyget efter en läcka riskerar hen nedsatt eller helt indragen ersättning. Våtrum och rörinstallationer är den ledande källan till kostsamma vattenskador i svenska bostäder, och därför screenar seriösa beställare, BRF:er och byggföretag aktivt efter behörighet redan i upphandlingen. Att synas i branschorganens "hitta företag"-register blir en direkt källa till förfrågningar. Behörigheten är alltså inte bara en kostnad – den är ett säljargument och en förutsättning för att komma med i seriösa upphandlingar.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li>Att tro att en behörighet täcker hela våtrummet – rör och tätskikt kräver olika system.</li>
+<li>Att låta legitimationen gälla för svartjobb eller uppdrag utanför det auktoriserade företaget – den är knuten till firman.</li>
+<li>Att missa femårsgränsen för förnyelse och plötsligt stå utan giltig behörighet mitt i en upphandling.</li>
+<li>Att glömma lämna kvalitetsdokument eller intyg till kunden – utan det tappar dokumentationen sitt värde vid en skada.</li>
+<li>Att inte räkna in årsavgifter och obligatoriska återkurser i kalkylen.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp utfärdar inga behörigheter – det gör branschorganen. Men vi hjälper dig att använda behörigheten i säljet och att sköta den dokumentation som kunden och försäkringsbolaget kräver. I <a href="/sv/verktyg/offert-mall">offertmallen</a> lyfter du fram vilka behörigheter företaget har direkt i anbudet, vilket sänker tröskeln för beställare som screenar. Med <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmallen</a> dokumenterar du utförandet löpande så att underlaget till kvalitetsdokument och intyg finns på plats när jobbet är klart. Målet är att göra det enkelt att bevisa att arbetet är fackmässigt – inte att ersätta branschreglerna.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Finns det ett gemensamt våtrumscertifikat i Sverige?</h3>
+<p>Nej. Det finns tre separata system: Säker Vatten för rörinstallationer, GVK för tätskikt och plastmatta, samt BKR för keramik. Ett företag behöver det eller de system som matchar de hantverk det utför.</p>
+<h3>Ligger behörigheten på företaget eller på personen?</h3>
+<p>Auktorisationen ligger på företaget. Den enskilde hantverkaren har en personlig behörighet eller branschlegitimation som är knuten till det auktoriserade företaget och inte gäller för arbete utanför det.</p>
+<h3>Hur länge gäller behörigheten?</h3>
+<p>GVK-behörigheter och Säker Vattens branschlegitimation gäller i fem år och kräver därefter förnyelse. BKR-auktorisationen gäller tills vidare men kräver årlig förnyelse plus en obligatorisk återkurs vart femte år.</p>
+<h3>Varför kräver kunden att jag är behörig?</h3>
+<p>Försäkringsbolag villkorar ofta ersättning vid vattenskada mot att installationen följt branschreglerna. Utan behörigt utförande och rätt dokumentation riskerar kunden nedsatt eller indragen ersättning efter en läcka.</p>
+
+<h2>Kom igång</h2>
+<p>Rätt behörighet är en tillgång i säljet, inte bara en post i budgeten. Börja med att visa den tydligt i anbudet med <a href="/sv/verktyg/offert-mall">offertmallen</a> och dokumentera utförandet i <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmallen</a>. Vill du se hur ByggExp kan effektivisera din dokumentation från offert till färdigt intyg? Boka en <a href="/sv/contact">demo</a>. Verifiera alltid aktuella avgifter och kursdatum direkt hos BKR, GVK och Säker Vatten innan du budgeterar.</p>
+
+<p>Relaterat: <a href="/sv/blog/nya-vatrumsregler-2026">Nya våtrumsregler 2026 – vad som ändras</a>.</p>
+`;
+
+const A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK: BlogPost = {
+  _id: "code-"+"vatrumscertifikat-behorighet-gvk",
+  title: "Våtrumscertifikat och behörighet: BKR, GVK eller Säker Vatten?", slug: "vatrumscertifikat-behorighet-gvk", locale: "sv",
+  excerpt: "Ingen myndighet utfärdar ett samlat våtrumscertifikat – här reder vi ut vad BKR, GVK och Säker Vatten faktiskt kräver och vilken behörighet ditt företag bör satsa på.", tag: "Behörighet",
+  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK_HTML,
+  seoTitle: "Våtrumscertifikat behörighet | ByggExp", seoDescription: "Det finns inget enda våtrumscertifikat. Så väljer ditt VVS- eller plattsättningsföretag rätt behörighet: BKR, GVK eller Säker Vatten – och varför kunden kräver det.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:30:00.000Z", createdAt: "2026-08-18T19:30:00.000Z", updatedAt: "2026-08-18T19:30:00.000Z",
+};
+
+const A_FACTORING_BYGGFORETAG_HTML = `
+<p>Byggbranschen betalar nästan alltid ut pengar innan de kommer in. Material köps och löner betalas veckovis, underentreprenörer ska ha sitt – men beställaren betalar först 30, ibland 60 dagar efter fakturadatum. Den glappet i kassan är inte ett tecken på dålig ekonomi, det är hur branschen fungerar. Factoring är ett av verktygen för att överbrygga glappet, men säljsidorna berättar sällan hela kostnadsbilden. Här går vi igenom hur det faktiskt fungerar, oberoende och konkret.</p>
+
+<p>Innan du ens funderar på factoring: se till att fakturorna är korrekta och går ut i tid. Fel förfallodatum, saknad momsmärkning eller otydliga rader gör att betalningen dröjer ännu längre. Använd gärna vår gratis <a href="/sv/verktyg/faktura-mall">fakturamall för byggföretag →</a> så att grunden sitter.</p>
+
+<h2>Vad är factoring – och vad är skillnaden mot ett lån?</h2>
+<p>Factoring betyder att du använder dina obetalda kundfakturor för att få loss pengar direkt istället för att vänta på förfallodagen. Det handlar inte om ett nytt banklån mot säkerhet i fastigheter eller maskiner, utan om att frigöra det kapital som redan är bundet i dina kundfordringar. För ett byggbolag i tillväxt, med stora materialutlägg och långa betaltider, är det ofta just kundfordringarna som binder mest pengar.</p>
+<p>Det finns två huvudvarianter, och de är viktiga att hålla isär:</p>
+<ul>
+<li><strong>Fakturaköp</strong> – du säljer fakturan till factoringbolaget, som tar över hela kreditrisken. Hos exempelvis Svea får du pengarna på kontot 1–2 dagar efter köpet. Avgiften beror på fakturans storlek, kundens kreditvärdighet, betalningsvillkor och om fakturan är internationell.</li>
+<li><strong>Fakturabelåning</strong> – du lånar mot fakturorna. Factoringbolaget betalar ut en förskottsandel direkt (Svea anger 80–85 %, andra källor omkring 70 %) och resten när kunden betalar. Du behåller kreditrisken tills betalningen kommit in.</li>
+</ul>
+
+<h2>Med regress eller utan regress – vem bär risken?</h2>
+<p>Den enskilt viktigaste frågan i ett factoringavtal är vem som står risken om beställaren inte betalar.</p>
+<ul>
+<li><strong>Med regress:</strong> obetalda fakturor återgår till dig efter en viss tid. Du bär alltså kreditrisken – factoringbolaget har bara förskotterat pengar. Detta är i praktiken samma sak som fakturabelåning.</li>
+<li><strong>Utan regress:</strong> factoringbolaget tar över hela kreditrisken. Om kunden inte betalar är det deras förlust, inte din. Detta motsvarar ett äkta fakturaköp.</li>
+</ul>
+<p>Haken är att factoring utan regress i praktiken bara erbjuds mot kreditvärdiga lågriskkunder. Har du en beställare med svag ekonomi eller en privatkund på ROT-jobb, kommer du sällan bli av med risken helt – och det är just då du hade behövt det mest.</p>
+
+<h2>Vad kostar factoring egentligen?</h2>
+<p>Här skiljer sig marknadsföringen från verkligheten. En typisk månadsavgift eller ränta ligger på 0,8–1,5 % av fakturabeloppet. Men uttryckt som effektiv årsränta – med alla avgifter inräknade – kan kostnaden spänna från runt 6 % upp mot 50 %. Utöver själva räntan tillkommer ofta:</p>
+<ul>
+<li>Uppläggningsavgift</li>
+<li>Aviavgift per faktura</li>
+<li>Minimiavgift eller krav på årsvolym</li>
+<li>Påminnelse- och inkassoavgifter</li>
+</ul>
+<p>Förskottsandelen ligger vanligen på 70–90 % och utbetalning sker inom 1–10 dagar.</p>
+<h3>Räkneexempel på en byggfaktura</h3>
+<p>Anta en faktura på 200 000 kr med 30 dagars kredittid, fakturabelåning med 85 % förskott och 1,2 % månadsavgift:</p>
+<ul>
+<li>Direkt utbetalt: 85 % × 200 000 = <strong>170 000 kr</strong></li>
+<li>Avgift för en månad: 1,2 % × 200 000 = <strong>2 400 kr</strong></li>
+<li>När kunden betalat får du resterande 30 000 kr minus eventuella avi- och tilläggsavgifter.</li>
+</ul>
+<p>2 400 kr för att få loss 170 000 kr en månad tidigare motsvarar en betydligt högre effektiv årsränta än siffran "1,2 %" antyder. Räkna alltid på hela året och alla avgifter, inte på månadssiffran isolerat.</p>
+
+<h2>För- och nackdelar för byggföretag</h2>
+<p><strong>Fördelar:</strong></p>
+<ul>
+<li>Snabb likviditet – pengar på kontot inom dagar istället för veckor.</li>
+<li>Vid factoring utan regress: minskad eller borttagen kreditrisk.</li>
+<li>Utlagd reskontra – factoringbolaget kan sköta påminnelser och inkasso.</li>
+<li>Frigör bundet kapital utan att belasta bolaget med nytt banklån.</li>
+</ul>
+<p><strong>Nackdelar:</strong></p>
+<ul>
+<li>Det kostar marginal – på projekt med redan tunn vinst kan avgiften äta upp lönsamheten.</li>
+<li>Bindningstider och volymkrav som gör det svårt att kliva av.</li>
+<li>Vid öppen factoring måste kunden notifieras om att fakturan överlåtits eller pantsatts, vilket kan påverka kundrelationen.</li>
+</ul>
+
+<h2>Factoring vs checkkredit och företagslån</h2>
+<p>Factoring är inte det enda sättet att hantera säsong och projekttoppar. En <strong>checkkredit</strong> ger en flexibel buffert du drar på vid behov och betalar ränta bara på utnyttjat belopp – bra för oregelbundna svackor. Ett <strong>företagslån</strong> passar större, planerade investeringar som en ny maskinpark. Factoring är starkast när problemet specifikt är att kapital fastnar i kundfordringar med långa betaltider, och när fakturavolymen är jämn nog att motivera avgifterna. Många byggbolag kombinerar en checkkredit för löpande svängningar med factoring på de största projektfakturorna.</p>
+
+<h2>Regler och bokföring att hålla koll på</h2>
+<p>Ett par saker är värda att känna till innan du skriver på:</p>
+<ul>
+<li><strong>Räntelagen (1975:635):</strong> en fordran mellan näringsidkare förfaller senast 30 dagar efter att du framställt krav. Längre betaltid B2B är tillåten bara om du uttryckligen godkänt den – det är därför byggföretag ofta lever med 30–60 dagars kredittid.</li>
+<li><strong>Dröjsmålsränta:</strong> vid sen betalning B2B är räntan referensräntan + 8 procentenheter (räntelagen 6 §). Referensräntan låg kring 2 % under 2025/2026, vilket ger cirka 10 % dröjsmålsränta. Avtalsvillkor som fråntar dig rätten till dröjsmålsränta är ogiltiga (4 a §).</li>
+<li><strong>Öppen vs dold factoring:</strong> fakturabelåning innebär vanligen öppen factoring – kunden notifieras och betalar till factoringbolaget, som sköter reskontra och påminnelser.</li>
+<li><strong>Överlåtelseförbud:</strong> vissa entreprenadavtal förbjuder överlåtelse av fordran. Kolla avtalet innan du säljer eller belånar fakturan.</li>
+<li><strong>ROT och moms:</strong> alla factoringbolag köper inte ROT-fakturor eller fakturor på löpande räkning. Momsen på factoringavgifterna ska bokföras korrekt, och grundreglerna gäller fortfarande – ROT-avdrag är 30 % av arbetskostnaden, max 50 000 kr per person och år, och mellan byggföretag gäller omvänd byggmoms.</li>
+</ul>
+
+<h2>Så väljer du factoringbolag – checklista</h2>
+<ol>
+<li>Be om <strong>effektiv årskostnad</strong> med alla avgifter, inte bara månadsräntan.</li>
+<li>Kontrollera bindningstid och eventuella volymkrav.</li>
+<li>Läs regressvillkoren noga – med eller utan regress avgör vem som bär risken.</li>
+<li>Fråga om de köper dina fakturatyper (ROT, löpande räkning, offentliga beställare).</li>
+<li>Räkna på om marginalen på dina projekt tål avgiften.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp är inget factoringbolag och ger ingen finansiell rådgivning. Men mycket av likviditetsproblemet börjar i fakturaflödet – fakturor som går ut sent, saknar rätt uppgifter eller inte följs upp. I ByggExp skapar du korrekta byggfakturor med rätt momsmärkning och ROT-uppgifter, håller koll på förfallodatum och ser vilka fakturor som är obetalda. Ju stramare ditt eget fakturaflöde är, desto mindre behöver du luta dig på dyr extern finansiering – och desto bättre underlag har du om du väljer factoring. Behöver du bara komma igång snabbt hittar du fler verktyg i vår <a href="/sv/verktyg">samling av gratis byggverktyg →</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan fakturaköp och fakturabelåning?</h3>
+<p>Vid fakturaköp säljer du fakturan och factoringbolaget tar över hela kreditrisken. Vid fakturabelåning lånar du mot fakturan, får ett förskott på 70–90 % och behåller kreditrisken tills kunden betalar.</p>
+<h3>Vad kostar factoring för ett byggföretag?</h3>
+<p>Månadsavgiften ligger typiskt på 0,8–1,5 % av fakturabeloppet, men effektiv årsränta med alla avgifter inräknade kan spänna från cirka 6 % till uppemot 50 %. Uppläggnings-, avi- och minimiavgifter tillkommer ofta.</p>
+<h3>Kan jag använda factoring på ROT-fakturor?</h3>
+<p>Ibland, men inte alla factoringbolag köper ROT-fakturor eller fakturor på löpande räkning. Fråga specifikt innan du tecknar avtal, och kontrollera att entreprenadavtalet inte förbjuder överlåtelse av fordran.</p>
+<h3>Är factoring bättre än en checkkredit?</h3>
+<p>Det beror på behovet. Factoring passar när kapital fastnar i kundfordringar med långa betaltider. En checkkredit är mer flexibel för oregelbundna svackor. Många byggbolag kombinerar båda.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att strama upp ditt eget fakturaflöde innan du betalar för extern finansiering. Skapa korrekta fakturor med vår <a href="/sv/verktyg/faktura-mall">gratis fakturamall →</a>, eller <a href="/sv/contact">boka en demo →</a> så visar vi hur ByggExp håller koll på förfallodatum och obetalda fakturor. Den här guiden är oberoende vägledning, inte finansiell rådgivning.</p>
+
+<p>Relaterat: <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a> och <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a>.</p>
+`;
+
+const A_FACTORING_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"factoring-byggforetag",
+  title: "Factoring för byggföretag – frigör kapital utan att vänta 30–60 dagar", slug: "factoring-byggforetag", locale: "sv",
+  excerpt: "En oberoende guide till factoring för byggföretag: skillnaden mellan fakturaköp och fakturabelåning, vad det faktiskt kostar och när det passar.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/8fakturor.webp", contentHtml: A_FACTORING_BYGGFORETAG_HTML,
+  seoTitle: "Factoring för byggföretag | ByggExp", seoDescription: "Oberoende guide till factoring för byggföretag 2026: fakturaköp vs belåning, för- och nackdelar, ungefärlig kostnad och räkneexempel.",
+  seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:33:00.000Z", createdAt: "2026-08-18T19:33:00.000Z", updatedAt: "2026-08-18T19:33:00.000Z",
+};
+
+const A_ROTAVDRAG_2026_NYA_REGLER_FORETAG_HTML = `
+<p>Den tillfälliga höjningen av rotavdraget till 50 % av arbetskostnaden gällde bara under 2025. Från och med 2026 är vi tillbaka på den ordinarie nivån: 30 % av arbetskostnaden. För dig som driver byggföretag betyder det att offerter, nettopriser och kassaflöde påverkas direkt – och att du inte får lova kunden fel siffra på ett jobb som betalas 2026.</p>
+
+<p>Behöver du snabbt räkna ut kundens nettopris och företagets begäran om utbetalning? Testa vår gratis <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylator -&gt;</a> innan du skickar offerten.</p>
+
+<h2>Det här gäller 2026 – siffrorna klart och tydligt</h2>
+<p>Utgå från dessa nivåer när du prissätter ett ROT-jobb under 2026:</p>
+<ul>
+<li><strong>ROT: 30 % av arbetskostnaden.</strong> Det är den ordinarie nivån, som gäller igen efter den tillfälliga höjningen 2025.</li>
+<li><strong>Endast arbete ger avdrag.</strong> Material, resekostnader och utrustning omfattas aldrig – de måste redovisas separat.</li>
+<li><strong>Tak: 50 000 kr per person och år för ROT.</strong> ROT och RUT räknas dessutom ihop till maximalt 75 000 kr per person och år, där ROT-delen alltså aldrig får överstiga 50 000 kr.</li>
+<li><strong>RUT: 50 % av arbetskostnaden</strong> (oförändrad ordinarie nivå). Skillnaden mot ROT gör att rätt kategorisering av arbetet påverkar kundens avdrag.</li>
+</ul>
+<p>Verifiera alltid det aktuella taket och gällande regler mot Skatteverket innan du binder dig i en offert.</p>
+
+<h2>2025 var ett undantag – 12 maj till 31 december</h2>
+<p>Under en avgränsad period 2025 höjdes ROT tillfälligt till 50 % av arbetskostnaden. Höjningen gällde enbart arbete som <strong>betalades mellan 12 maj och 31 december 2025</strong>. Den perioden är slut. Risken nu är att en kund minns "50 %" från förra året och förväntar sig samma avdrag på ett jobb du utför i år. Så är det inte – på arbete som betalas 2026 gäller 30 %. Var tydlig med det redan i offertskedet, annars sitter du med en missnöjd kund när slutfakturan inte ger det avdrag hen räknat med.</p>
+
+<h2>Betalningsdatumet styr allt</h2>
+<p>Det är inte fakturadatumet och inte när arbetet utfördes som avgör – det är <strong>datumet då kunden betalar fakturan</strong>. Betalningsdatumet bestämmer både vilket beskattningsår avdraget hamnar på och vilka procentregler som gäller.</p>
+<p>Det blir extra viktigt runt årsskiftet. Ett arbete som är utfört i december 2025 men där kunden betalar fakturan den 2 januari 2026 omfattas av 2026 års regler – alltså 30 %, inte 50 %. Utförandedatumet spelar ingen roll för procentsatsen. Planera därför fakturering och betalningspåminnelser med detta i åtanke, och skriv aldrig in en avdragsnivå i avtalet utan att koppla den till betalningstidpunkten.</p>
+
+<h2>Så räknar du och sätter priset rätt</h2>
+<p>Ett räkneexempel på ett badrumsjobb som betalas under 2026:</p>
+<ul>
+<li>Arbetskostnad: 80 000 kr inkl. moms</li>
+<li>Material: 40 000 kr inkl. moms (ger inget avdrag)</li>
+<li>ROT-avdrag: 30 % av 80 000 kr = <strong>24 000 kr</strong></li>
+<li>Kunden betalar: 80 000 − 24 000 + 40 000 = <strong>96 000 kr</strong></li>
+<li>Företaget begär utbetalning från Skatteverket: <strong>24 000 kr</strong></li>
+</ul>
+<p>Separera alltid arbete och material på fakturan – annars kan Skatteverket ifrågasätta hur du fördelat kostnaden. Kontrollera också att kundens 30 %-avdrag ryms under taket på 50 000 kr, särskilt om hen redan gjort andra ROT-jobb under året. En tydlig faktura där posterna är uppdelade skapar du enkelt med vår <a href="/sv/verktyg/faktura-mall">fakturamall</a>, och du lägger in avdraget redan i anbudet med vår <a href="/sv/verktyg/offert-mall">offertmall</a>.</p>
+
+<h2>Fakturamodellen steg för steg för utföraren</h2>
+<p>Fakturamodellen är det vanligaste sättet att hantera ROT, och det är du som utförare som sköter administrationen:</p>
+<ol>
+<li><strong>Ha F-skatt.</strong> Endast företag med godkänd F-skatt får tillämpa avdraget.</li>
+<li><strong>Dra av kundens preliminära ROT direkt på fakturan.</strong> Kunden betalar bara sin nettodel.</li>
+<li><strong>Se till att kunden betalar elektroniskt.</strong> Kort, BankID, Swish eller kontoöverföring krävs sedan 1 januari 2020 – kontant betalning godkänns inte.</li>
+<li><strong>Begär utbetalning från Skatteverket</strong> för resterande belopp. Du behöver kundens personnummer, fastighets- eller lägenhetsuppgifter samt arbetskostnaden.</li>
+</ol>
+<p>Kontrollera också grundkraven: kunden ska äga och bo i (eller ha nära anknytning till) bostaden som renoveras, ROT gäller inte hyresrätter, och arbetet får inte utföras av kundens eget företag eller någon närstående.</p>
+
+<h2>När Skatteverket nekar – och du sitter med Svarte Petter</h2>
+<p>ROT är en skattereduktion, inte ett kostnadsavdrag. Reduktionen kan aldrig överstiga kundens sammanlagda skatt (inkomstskatt, fastighetsskatt med mera). Skatteverket kan neka utbetalning om kundens tak redan är fullt, om kunden har för låg skatt, eller om arbetet kategoriserats fel. Då riskerar du att stå utan den del du redan dragit av på fakturan.</p>
+<p>Skydda dig genom att skriva in en klausul i avtalet: om ROT-avdraget helt eller delvis uteblir, oavsett orsak, betalar kunden mellanskillnaden. Det är en enkel mening som kan spara dig tusenlappar per jobb.</p>
+
+<h2>Checklista inför varje ROT-jobb 2026</h2>
+<ul>
+<li>Kontrollera att kundens ROT-tak (max 50 000 kr) inte redan är förbrukat.</li>
+<li>Räkna med 30 %, inte 50 % – och koppla nivån till betalningsdatumet.</li>
+<li>Dela upp arbete och material tydligt på fakturan.</li>
+<li>Se till att kunden betalar elektroniskt.</li>
+<li>Kontrollera bostadsform och ägande (inte hyresrätt, inte närstående).</li>
+<li>Lägg in avtalsklausulen om att kunden betalar mellanskillnaden om avdraget uteblir.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du offerten med separata poster för arbete och material, så att ROT-underlaget blir rätt från start. Du lägger in det preliminära avdraget på fakturan, håller koll på betalningsdatum och samlar de uppgifter du behöver för begäran om utbetalning – personnummer, fastighets- eller lägenhetsuppgifter och arbetskostnad. Verktygen hjälper dig att jobba strukturerat, men du ansvarar själv för att kontrollera aktuella belopp och regler mot Skatteverket för varje enskilt jobb.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är rotavdraget 30 % eller 50 % 2026?</h3>
+<p>30 % av arbetskostnaden. Den tillfälliga höjningen till 50 % gällde enbart arbete som betalades mellan 12 maj och 31 december 2025 och gäller inte längre.</p>
+<h3>Vilket datum avgör vilken ROT-nivå som gäller?</h3>
+<p>Betalningsdatumet på fakturan – inte fakturadatumet och inte när arbetet utfördes. Ett jobb som betalas 2 januari 2026 ger 30 %, även om arbetet utfördes 2025.</p>
+<h3>Hur mycket ROT kan en kund få per år?</h3>
+<p>Högst 50 000 kr per person och år för ROT. ROT och RUT räknas ihop till maximalt 75 000 kr per person och år, där ROT-delen aldrig får överstiga 50 000 kr.</p>
+<h3>Vad händer om Skatteverket nekar utbetalningen?</h3>
+<p>Då riskerar du att stå utan den avdragna delen. Skriv därför in i avtalet att kunden betalar mellanskillnaden om avdraget uteblir, exempelvis på grund av fullt tak eller för låg skatt.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna ut kundens nettopris och företagets utbetalning på sekunder med vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylator</a>. Vill du se hur ByggExp kan effektivisera hela flödet från offert till betald faktura? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/rot-avdrag">Rotavdrag – så fungerar det</a> och <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a>.</p>
+`;
+
+const A_ROTAVDRAG_2026_NYA_REGLER_FORETAG: BlogPost = {
+  _id: "code-"+"rotavdrag-2026-nya-regler-foretag",
+  title: "Rotavdrag 2026 för företag – så prissätter och fakturerar du rätt", slug: "rotavdrag-2026-nya-regler-foretag", locale: "sv",
+  excerpt: "Den tillfälliga 50 %-höjningen är slut – 2026 gäller 30 % ROT igen, och betalningsdatumet avgör allt när du offererar och fakturerar.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/rot-avdrag-preview.webp", contentHtml: A_ROTAVDRAG_2026_NYA_REGLER_FORETAG_HTML,
+  seoTitle: "Rotavdrag 2026 företag | ByggExp", seoDescription: "ROT är 30 % av arbetskostnaden 2026 – den tillfälliga 50 %-nivån gällde bara 2025. Så prissätter, fakturerar och begär du utbetalning rätt.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/rot-avdrag-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:36:00.000Z", createdAt: "2026-08-18T19:36:00.000Z", updatedAt: "2026-08-18T19:36:00.000Z",
+};
+
+const A_AVDRAG_ENSKILD_FIRMA_BYGG_HTML = `
+<p>Som hantverkare i enskild firma sänker rätt avdrag skatten direkt på ditt överskott – det är beloppet du redovisar på NE-bilagan som beskattas, så varje avdragsgill krona du missar blir dyrare skatt. Många byggare drar av för lite på sådant de faktiskt har rätt till, och drar samtidigt av sådant Skatteverket underkänner vid kontroll. Här går vi igenom de vanligaste missarna med 2026 års regler och belopp.</p>
+
+<p>Vill du räkna och dokumentera löpande i stället för att gissa i efterhand? Använd <a href="/sv/verktyg">våra gratis verktyg för byggföretagare -&gt;</a> för att hålla ordning på mil, offerter och underlag redan under året.</p>
+
+<h2>Arbetsrum hemma – schablonavdraget de flesta glömmer</h2>
+<p>Sköter du offerter, planering, beställningar och administration hemifrån kan du ha rätt till ett schablonavdrag för arbetsrum, även om rummet inte är särskilt inrättat. Beloppen för 2026 är:</p>
+<ul>
+<li><strong>2 000 kr/år</strong> om du bor i en fastighet som ägs av dig eller din make/maka, till exempel villa.</li>
+<li><strong>4 000 kr/år</strong> om du bor i hyresrätt eller bostadsrätt.</li>
+</ul>
+<p>Förutsättningen är att du arbetar <strong>minst 800 timmar per år</strong> i bostaden för verksamheten. Offert- och planeringstid, materialbeställningar, bokföring och kundkontakt räknas – inte bara ren skrivbordstid. För en byggare som lägger kvällar på anbud och fakturering är 800 timmar ofta lättare att nå än man tror.</p>
+<p>Är arbetsrummet i stället <em>särskilt inrättat</em> – klart avskilt och olämpligt för privat bruk – kan du i stället dra av faktisk merkostnad, som extra el, uppvärmning och städning. Kraven är dock stränga och uppfylls sällan i en vanlig bostad, så för de flesta är schablonen den realistiska vägen.</p>
+
+<h2>Milersättning och körjournal – 25 kr/mil med egen bil</h2>
+<p>Kör du din egen (eller privatleasade) bil i verksamheten får du ett schablonavdrag på <strong>25 kr/mil (2,50 kr/km)</strong> för både inkomstår 2025 och 2026. Det är ett schablonbelopp – du drar alltså inte av verkliga kostnader som drivmedel och service separat ovanpå det.</p>
+<ul>
+<li><strong>Egen/privatleasad bil:</strong> 25 kr/mil.</li>
+<li><strong>Förmånsbil (diesel, bensin, hybrid):</strong> 12 kr/mil.</li>
+<li><strong>Helt eldriven förmånsbil:</strong> 9,50 kr/mil.</li>
+</ul>
+<p>Den avgörande detaljen är <strong>körjournalen</strong>. Utan en löpande körjournal med datum, mätarställning, syfte och antal mil kan Skatteverket underkänna hela avdraget vid kontroll – och för byggare med många korta resor mellan hem, byggarbetsplatser och materialinköp blir det snabbt stora belopp. För journalen samma dag du kör, inte i efterhand vid deklarationen.</p>
+<p><strong>Exempel:</strong> 3 500 affärsmil på ett år med egen bil ger 3 500 × 25 kr = <strong>87 500 kr</strong> i avdrag. Med bristfällig körjournal riskerar du att inte få dra av någonting alls.</p>
+
+<h2>Verktyg och maskiner – direktavdrag eller avskrivning</h2>
+<p>Inventarier av mindre värde får du dra av direkt året du köper dem om anskaffningsvärdet är mindre än ett halvt prisbasbelopp exklusive moms – <strong>29 600 kr för 2026</strong> (29 400 kr för 2025). Även <strong>korttidsinventarier</strong> med förväntad livslängd på högst tre år får dras av direkt, oavsett belopp.</p>
+<p>Dyrare verktyg och maskiner över gränsen skrivs i stället av över tid genom värdeminskningsavdrag. För bygg innebär det i praktiken:</p>
+<ul>
+<li><strong>Direktavdrag:</strong> handverktyg, spikpistol, batteridrivna maskiner, mindre ställningsdelar och liknande som ligger under gränsen.</li>
+<li><strong>Avskrivning:</strong> dyrare maskiner, komplett ställningssystem eller bilinredning som överstiger 29 600 kr och har längre livslängd.</li>
+</ul>
+<p>Tänk på att beloppsgränsen räknas <strong>exklusive moms</strong> – momsen hanterar du separat som ingående moms.</p>
+
+<h2>Arbetskläder – skyddskläder ja, vanliga kläder nej</h2>
+<p>Här missar många åt båda hållen. <strong>Skyddskläder och skyddsutrustning är avdragsgilla</strong>: skyddsskor, hjälm, hörselskydd, arbetshandskar, varselkläder och liknande skyddsutrustning. Det är kläder som skyddar dig i arbetet.</p>
+<p>Däremot är <strong>vanliga kläder inte avdragsgilla</strong> – jeans, t-shirt, flanellskjorta, jacka eller byxor räknas som privat levnadskostnad även om du bara använder dem på jobbet. Gränsfallet är kläder med företagets logotyp: kan de rimligen inte bäras privat kan de vara avdragsgilla. En omärkt fritidsjacka du råkar ha på bygget är det alltså inte.</p>
+
+<h2>Utbildning och certifieringar – fortbildning kontra ny kompetens</h2>
+<p>Fortbildning som behåller eller uppdaterar kompetensen i din befintliga verksamhet är avdragsgill. För en byggare handlar det ofta om:</p>
+<ul>
+<li>Heta arbeten och certifikatförnyelser.</li>
+<li>Ställningsbyggnad och fallskydd.</li>
+<li>Lift- och truckkort.</li>
+<li>Säkerhets- och regelverksuppdateringar.</li>
+</ul>
+<p>Grundutbildning som ger dig ett <strong>helt nytt yrke eller ny kompetens</strong> räknas däremot som privat levnadskostnad och är inte avdragsgill. Ett viktigt undantag: utbildningskostnader du haft under startåret och året innan kan under vissa förutsättningar dras av när du startar din enskilda näringsverksamhet.</p>
+
+<h2>Snabb checklista – fler avdrag byggare ofta missar</h2>
+<ul>
+<li>Mobil och abonnemang – verksamhetsdelen.</li>
+<li>Facklitteratur och branschtidningar.</li>
+<li>Företagsförsäkringar.</li>
+<li>Hemsida, domän och annonsering.</li>
+<li>Ränta på företagslån.</li>
+<li>Ingående moms på avdragsgilla inköp av verktyg och skyddskläder.</li>
+</ul>
+
+<h2>Så bokför och dokumenterar du rätt</h2>
+<p>Avdragen står och faller med underlaget. Spara alla kvitton, för körjournalen löpande och håll en tydlig gräns mellan privat och verksamhet – blandar du ihop dem blir det svårt att styrka vid kontroll. Alla avdrag redovisas på NE-bilagan i deklarationen. Bokföring och underlag ska sparas i sju år. Är du osäker på om en kostnad är avdragsgill, stäm av mot Skatteverket eller din redovisningskonsult innan du drar av.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte din bokföring, men gör underlaget lättare att få rätt. Med offerter, tidrapporter och order samlade på ett ställe blir det enklare att skilja verksamhetens kostnader från privata och att ta fram siffror inför deklarationen. Våra <a href="/sv/verktyg">gratis verktyg</a> hjälper dig att räkna och dokumentera redan under året, så att avdragen är styrkta när det är dags att fylla i NE-bilagan – inte något du försöker rekonstruera i efterhand.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket är milersättningen i enskild firma 2026?</h3>
+<p>25 kr/mil (2,50 kr/km) för egen eller privatleasad bil, vilket gäller både inkomstår 2025 och 2026. För förmånsbil är avdraget 12 kr/mil, och 9,50 kr/mil för helt eldriven förmånsbil. Det är ett schablonavdrag, så du drar inte av verkliga bilkostnader separat.</p>
+<h3>Får jag dra av verktyg direkt eller måste jag skriva av dem?</h3>
+<p>Inventarier av mindre värde upp till 29 600 kr exklusive moms (2026) får du dra av direkt året du köper dem, liksom korttidsinventarier med livslängd på högst tre år oavsett belopp. Dyrare verktyg och maskiner över gränsen skrivs av över tid.</p>
+<h3>Är arbetskläder avdragsgilla för byggare?</h3>
+<p>Skyddskläder och skyddsutrustning som skyddsskor, hjälm, hörselskydd och varselkläder är avdragsgilla. Vanliga kläder som jeans, t-shirt och jacka är inte avdragsgilla, även om du bara använder dem på jobbet. Logotypkläder som inte rimligen kan bäras privat kan vara ett undantag.</p>
+<h3>Kan jag dra av arbetsrum hemma?</h3>
+<p>Ja, med ett schablonavdrag på 2 000 kr/år om du bor i egen villa/fastighet och 4 000 kr/år i hyres- eller bostadsrätt, förutsatt att du arbetar minst 800 timmar per år i bostaden för verksamheten. Offert-, planerings- och administrationstid räknas in.</p>
+
+<h2>Kom igång</h2>
+<p>Håll ordning på mil, verktyg och offerter redan under året med <a href="/sv/verktyg">våra gratis verktyg för byggföretagare</a>, så är underlaget klart när du ska deklarera. Vill du se hur ByggExp samlar order, tid och fakturaunderlag på ett ställe? <a href="/sv/contact">Boka en demo här</a>. Kom ihåg att beloppen ovan gäller inkomstår 2026 – dubbelkolla alltid aktuella schablonbelopp mot Skatteverket.</p>
+
+<p>Relaterat: <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggföretag</a> och <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a>.</p>
+`;
+
+const A_AVDRAG_ENSKILD_FIRMA_BYGG: BlogPost = {
+  _id: "code-"+"avdrag-enskild-firma-bygg",
+  title: "Avdrag i enskild firma för byggföretagare – de vanligaste missarna (2026)", slug: "avdrag-enskild-firma-bygg", locale: "sv",
+  excerpt: "Rätt avdrag sänker skatten direkt på ditt överskott – här är avdragen byggföretagare i enskild firma oftast missar, med 2026 års belopp.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_AVDRAG_ENSKILD_FIRMA_BYGG_HTML,
+  seoTitle: "Avdrag enskild firma bygg 2026 | ByggExp", seoDescription: "Avdragen byggare i enskild firma ofta missar: arbetsrum, milersättning, verktyg, arbetskläder och utbildning. 2026 års belopp och regler från Skatteverket.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:39:00.000Z", createdAt: "2026-08-18T19:39:00.000Z", updatedAt: "2026-08-18T19:39:00.000Z",
+};
+
+const A_AVDRAG_ARBETSKLADER_VERKTYG_HTML = `
+<p>En vanlig missuppfattning bland hantverkare och byggföretag är att allt man använder på jobbet automatiskt är avdragsgillt. Så är det inte. Skatteverket drar en skarp gräns mellan skyddskläder, profilkläder med logga och vanliga kläder – och för verktyg avgör pris och livslängd om du får dra av hela kostnaden direkt eller måste skriva av den över flera år. Tar du fel riskerar du både uteblivet avdrag och förmånsbeskattning som utlöser arbetsgivaravgifter.</p>
+
+<p>Vill du hålla ordning på inköp, kvitton och underlag för avdragen? Testa våra <a href="/sv/verktyg">gratis verktyg för byggföretag -></a> och samla dokumentationen på ett ställe.</p>
+
+<h2>Skyddskläder och skyddsutrustning = fullt avdrag, ingen förmånsbeskattning</h2>
+<p>Personlig skyddsutrustning är fullt avdragsgill för företaget och förmånsbeskattas inte hos den anställde. Skälet är enkelt: utrustningen är särskilt anpassad för arbetet och kan inte lämpligen användas privat. Hit hör bland annat:</p>
+<ul>
+<li>Hjälm och skyddsglasögon</li>
+<li>Skyddsskor med tåhätta och spiktrampskydd</li>
+<li>Hörselskydd och arbetshandskar</li>
+<li>Väder- och kylskydd för utomhusarbete</li>
+</ul>
+<p>Det finns dessutom ett tydligt verksamhetssyfte som stärker avdragsrätten: enligt arbetsmiljöreglerna är arbetsgivaren skyldig att kostnadsfritt tillhandahålla den personliga skyddsutrustning som arbetet kräver. Reglerna återfinns i Arbetsmiljöverkets nya föreskriftsstruktur (AFS 2023-serien), som gäller från 1 januari 2025. Att du <em>måste</em> förse dina anställda med utrustningen gör kostnaden till en självklar driftkostnad.</p>
+
+<h2>Profilkläder och uniform med logga – avdragsgillt om märkningen är tydlig och beständig</h2>
+<p>Arbetskläder med arbetsgivarens namn eller logga är avdragsgilla för företaget och skattefria för den anställde, förutsatt att de bärs i tjänsten. Loggan gör plagget olämpligt för privat bruk, och det är precis den poängen som gör avdraget möjligt.</p>
+<p>Två villkor måste vara uppfyllda:</p>
+<ul>
+<li>Företagsnamn eller logga ska vara <strong>tydligt och beständigt</strong> anbringat – tryckt, broderat eller på annat sätt fast på plagget.</li>
+<li>Märkningen får <strong>inte vara löstagbar</strong>. Ett kardborreband eller en knäppbar patch som lätt tas bort räcker inte.</li>
+</ul>
+<p>Praktiskt tips: placera loggan väl synligt, till exempel på bröst och rygg, och använd tryck eller brodyr snarare än pins. Ju tydligare kopplingen till företaget är, desto svårare är det att ifrågasätta avdraget.</p>
+
+<h2>Vanliga kläder = inget avdrag och risk för förmånsbeskattning</h2>
+<p>Jeans, t-tröjor, jackor, kostymer och vanliga skor är inte avdragsgilla som arbetskläder – även om plaggen bara används på jobbet. Skatteverket ser dem som privata levnadskostnader.</p>
+<p>Här skiljer sig konsekvensen mellan bolagsformerna:</p>
+<ul>
+<li><strong>Aktiebolag:</strong> betalar bolaget vanliga kläder åt en anställd uppstår en skattepliktig förmån. Det utlöser arbetsgivaravgifter och preliminärskatt – en dyr omväg.</li>
+<li><strong>Enskild firma:</strong> det blir helt enkelt en privat levnadskostnad utan avdrag.</li>
+</ul>
+<p>Vill du fördjupa dig i hur bolagsformen påverkar just din situation, läs vår guide om <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">enskild firma eller aktiebolag för byggverksamhet</a>.</p>
+
+<h2>Verktyg – direktavdrag eller inventarier?</h2>
+<p>För verktyg finns det två vägar till direktavdrag, alltså att dra av hela kostnaden på inköpsåret:</p>
+<ol>
+<li><strong>Inventarier av mindre värde:</strong> anskaffningsvärdet exklusive moms understiger ett halvt prisbasbelopp. Prisbasbeloppet för 2026 är 59 200 kr, så gränsen ligger på <strong>29 600 kr exkl. moms</strong>.</li>
+<li><strong>Korttidsinventarier:</strong> verktyg med en beräknad ekonomisk livslängd på högst 3 år får dras av direkt oavsett belopp. Detta är ett separat alternativ till mindre-värde-regeln.</li>
+</ol>
+<p>Uppfyller inköpet något av kriterierna bokför du det som förbrukningsinventarie och drar av hela summan direkt. De flesta handverktyg, mindre elverktyg och slitagedelar hamnar här.</p>
+
+<h2>Dyra maskiner och verktyg – aktivera och skriv av</h2>
+<p>Ett verktyg eller en maskin som både kostar över gränsen och har en nyttjandetid över 3 år ska aktiveras som inventarium och skrivas av över tid. Då fördelas kostnaden på flera år. Du har tre huvudmetoder:</p>
+<ul>
+<li><strong>Räkenskapsenlig avskrivning, huvudregeln:</strong> 30 % på restvärdet per år.</li>
+<li><strong>Räkenskapsenlig avskrivning, kompletteringsregeln:</strong> 20 % linjärt, vilket ger full avskrivning på 5 år.</li>
+<li><strong>Restvärdesavskrivning:</strong> 25 % per år – ett alternativ för enskild firma utan årsbokslut.</li>
+</ul>
+<p>Ett exempel: köper du en maskin för 60 000 kr och tillämpar huvudregeln drar du av 18 000 kr första året (30 % av 60 000), sedan 30 % av det kvarvarande restvärdet året därpå, och så vidare. Med kompletteringsregeln drar du istället av 12 000 kr per år i fem år.</p>
+
+<h2>Moms och beloppsgränsen</h2>
+<p>Momsregistrerade företag lyfter ingående moms på verktyg och skyddskläder separat. Därför bedöms beloppsgränsen för direktavdrag alltid mot beloppet <strong>exklusive moms</strong>. Ett verktyg som kostar 35 000 kr inkl. moms landar på 28 000 kr exkl. moms – alltså under 29 600 kr och därmed direktavdrag.</p>
+<p>Var uppmärksam på inköp som hör ihop. Köper du flera inventarier med ett naturligt samband, till exempel en verktygssats eller flera delar som köps och används tillsammans, bedöms de som <strong>en enhet</strong> mot beloppsgränsen. Du får inte stycka upp fakturan för att pressa varje del under halvt prisbasbelopp.</p>
+
+<h2>Snabb checklista för hantverksföretaget</h2>
+<ul>
+<li><strong>Dra av direkt:</strong> skyddsutrustning, profilkläder med fast logga, verktyg under 29 600 kr exkl. moms eller med livslängd högst 3 år.</li>
+<li><strong>Måste märkas:</strong> profil- och arbetskläder – tydlig, beständig och icke löstagbar logga.</li>
+<li><strong>Aldrig avdragsgillt:</strong> vanliga kläder utan logga (jeans, t-tröja, jacka, kostym, vanliga skor).</li>
+<li><strong>Aktivera och skriv av:</strong> maskiner och verktyg över gränsen med livslängd över 3 år.</li>
+<li><strong>Alltid:</strong> spara kvitton och dokumentera skyddsbehovet. Bokföring och underlag ska bevaras i 7 år.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig hålla ordning på underlagen så att avdragen blir enkla att styrka. Du samlar kvitton, inköp och projektkostnader digitalt och slipper leta i pappershögar när det är dags för bokslut eller en eventuell fråga från Skatteverket. Vi gör inte din bokföring och ersätter inte din redovisningskonsult – men vi ser till att dokumentationen kring verktyg, skyddskläder och projekt finns samlad och sökbar. Det gör klassificeringen direktavdrag kontra inventarier lättare att göra rätt, och underlaget lättare att spara i de sju år som krävs.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får jag dra av arbetsskor?</h3>
+<p>Ja, om det är skyddsskor med tåhätta eller spiktrampskydd. Då är de personlig skyddsutrustning och fullt avdragsgilla utan förmånsbeskattning. Vanliga skor utan skyddsfunktion är däremot inte avdragsgilla.</p>
+<h3>Räcker en liten logga för att kläderna ska bli avdragsgilla?</h3>
+<p>Det avgörande är att loggan är tydlig, beständig och fast anbringad, inte hur stor den är. En liten men väl synlig och icke löstagbar logga kan räcka. Använd tryck eller brodyr och placera märkningen synligt, exempelvis på bröst och rygg.</p>
+<h3>Kan jag dra av arbetsbyxor utan logga?</h3>
+<p>Nej. Vanliga arbetsbyxor utan skyddsfunktion och utan fast logga räknas som vanliga kläder och är inte avdragsgilla – även om de bara används på jobbet. Betalar bolaget dem blir det en skattepliktig förmån.</p>
+<h3>Vad gäller för underställ och regnkläder?</h3>
+<p>Väder- och kylskydd för utomhusarbete räknas som skyddsutrustning och är avdragsgilla när de behövs för arbetet. Regnkläder och funktionsunderställ som är avsedda för och används i utomhusarbetet faller normalt in under skyddskläder, medan plagg som lika gärna kan användas privat bedöms som vanliga kläder.</p>
+
+<h2>Kom igång</h2>
+<p>Samla kvitton, inköp och underlag för dina avdrag på ett ställe med våra <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur ByggExp fungerar i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi hur du håller ordning på dokumentationen.</p>
+
+<p>Relaterat: <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggverksamhet</a> · <a href="/sv/verktyg">Verktyg för byggföretag</a></p>
+`;
+
+const A_AVDRAG_ARBETSKLADER_VERKTYG: BlogPost = {
+  _id: "code-"+"avdrag-arbetsklader-verktyg",
+  title: "Avdrag för arbetskläder och verktyg 2026 – vad Skatteverket faktiskt godkänner", slug: "avdrag-arbetsklader-verktyg", locale: "sv",
+  excerpt: "Skatteverket skiljer skarpt på skyddskläder, profilkläder med logga och vanliga kläder – och på verktyg som direktavdrag kontra avskrivning. Så gör byggföretaget rätt 2026.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_AVDRAG_ARBETSKLADER_VERKTYG_HTML,
+  seoTitle: "Avdrag arbetskläder & verktyg | ByggExp", seoDescription: "Skyddskläder och profilkläder med logga = avdrag, vanliga kläder = inte. Verktyg: direktavdrag under 29 600 kr eller inventarier. Så gör byggföretaget rätt 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:42:00.000Z", createdAt: "2026-08-18T19:42:00.000Z", updatedAt: "2026-08-18T19:42:00.000Z",
+};
+
+const A_REPRESENTATIONSAVDRAG_2026_HTML = `
+<p>Representation är ett av de mest missförstådda avdragen i byggbranschen. Många tror fortfarande att en kundlunch är avdragsgill fullt ut, andra vågar inte dra av ens momsen av rädsla för Skatteverket. Sanningen ligger någonstans mittemellan: sedan 2017 ger själva maten inget inkomstskatteavdrag alls, men du får fortfarande dra momsen på ett underlag om högst 300 kr per person. Här går vi igenom exakt vilka belopp som gäller 2026 och hur du räknar rätt.</p>
+
+<p>Vill du hålla koll på avdrag, moms och kvitton löpande hittar du våra gratis verktyg samlade i <a href="/sv/verktyg">vår verktygslåda -&gt;</a>.</p>
+
+<h2>Vad räknas som representation?</h2>
+<p>Representation delas in i extern och intern. Extern representation riktas mot kunder, leverantörer eller andra affärskontakter, till exempel en lunch med beställaren för att inleda eller upprätthålla en affärsförbindelse. Intern representation riktas mot din egen personal, som en personalfest efter avslutat projekt eller ett internt planeringsmöte.</p>
+<p>Grundkravet är detsamma oavsett typ: representationen ska ha ett <strong>omedelbart samband med verksamheten</strong>. En kundlunch i anslutning till ett avtalsmöte på bygget godkänns. En middag som mer handlar om personlig gästfrihet eller allmän trevnad gör det inte. Sällskapsdryck och privat värdskap ger aldrig avdrag.</p>
+
+<h2>Måltidsavdraget som försvann 2017</h2>
+<p>Den 1 januari 2017 togs det inkomstskattemässiga avdraget för representationsmåltider bort helt, både för extern och intern representation. Det innebär att lunch, middag och supé ger <strong>0 kr i avdrag mot resultatet</strong>. Reglerna är oförändrade 2026 och inga nya beloppsändringar har införts.</p>
+<p>Det du fortfarande får göra är att dra av momsen. Avdragsunderlaget är högst 300 kr per person exklusive moms. På det beloppet drar du 12 % moms på mat och 25 % moms på alkohol som vin och sprit. Momsavdraget gäller oavsett hur mycket dyrare notan faktiskt blev, momsen beräknas bara på de första 300 kronorna per person, inte på hela beloppet.</p>
+
+<h2>När notan överstiger 300 kr: schablonen på 46 kr</h2>
+<p>Blir måltiden dyrare än 300 kr per person och innehåller både mat och alkohol får du använda ett schablonmässigt momsavdrag på <strong>högst 46 kr per person</strong>. Det är Skatteverkets schablon och den ligger fast 2026.</p>
+<p>Ett exempel: du bjuder beställaren på middag för 600 kr per person, inklusive vin. Du får inget inkomstskatteavdrag för maten. Momsavdraget blir schablonens 46 kr per person, inte momsen på hela 600-kronorsnotan. Bjuder du fyra personer landar det avdragsgilla momsbeloppet på 4 x 46 = 184 kr.</p>
+
+<h2>Enklare förtäring: 60 kr per person som faktiskt är avdragsgill</h2>
+<p>Det finns ett undantag som är värt att känna till. Enklare förtäring som inte utgör en måltid, till exempel kaffe, te, bulle, smörgås, frukt eller kaka, är avdragsgill både inkomstskattemässigt och momsmässigt med <strong>högst 60 kr per person och tillfälle</strong>.</p>
+<p>Det gör att fikat på byggmötet eller kaffet på uppstarten faktiskt ger fullt avdrag, till skillnad från lunchen. Gränsen går vid vad som är en måltid. Serverar du något som ersätter lunch eller middag räknas det som måltidsrepresentation igen, med bara momsavdrag på 300-kronorsunderlaget.</p>
+
+<h2>Personalfest 2026: 180 kr i kringkostnader plus moms på maten</h2>
+<p>Vid personalfest är kringkostnader som lokalhyra, musik, underhållning och transport avdragsgilla med <strong>högst 180 kr per person och tillfälle</strong>. Själva måltiden ger som vanligt bara momsavdrag på underlaget 300 kr per person. Avdrag medges normalt för högst två personalfester per år.</p>
+<p>Ta en byggfirma med tio anställda som ordnar en sommarfest. Lokalhyra, band och busstransport på 180 kr per person ger 10 x 180 = 1 800 kr i avdragsgilla kringkostnader. Maten ger inget resultatavdrag men momsen på upp till 300 kr per person är avdragsgill.</p>
+
+<h2>Representations- och reklamgåvor: 300 kr exklusive moms</h2>
+<p>Både representationsgåvor och reklamgåvor är avdragsgilla med <strong>högst 300 kr exklusive moms per person</strong>. En julklapp till en trogen kund är en representationsgåva, medan en enklare artikel med ditt firmanamn som du delar ut brett är en reklamgåva. Håll dig under 300 kr exklusive moms så är gränsdragningen enklare och avdraget tryggt.</p>
+
+<h2>Dokumentationskraven Skatteverket ställer</h2>
+<p>Den vanligaste orsaken till underkänt representationsavdrag är bristande underlag. Kvittot i sig räcker inte. Underlaget måste visa:</p>
+<ul>
+<li><strong>Syftet</strong> med representationen (till exempel avtalsmöte eller uppstart av projekt)</li>
+<li><strong>Datum</strong> för tillfället</li>
+<li><strong>Deltagarnas namn</strong> och vilket företag var och en representerar</li>
+</ul>
+<p>Ett digitalt kvitto fungerar lika bra som ett papperskvitto så länge uppgifterna finns med. Notera deltagare och syfte direkt när det händer, i efterhand är det lätt att glömma vem som var med. Spara underlaget i sju år enligt bokföringsreglerna.</p>
+
+<h2>Räkneexempel för en byggfirma</h2>
+<p>Så här kan ett år se ut för en mindre byggfirma:</p>
+<ul>
+<li><strong>Kundlunch 250 kr per person, 2 personer:</strong> under 300 kr. Inget resultatavdrag på maten, men momsen (12 %) på hela beloppet är avdragsgill.</li>
+<li><strong>Kundmiddag 600 kr per person med vin, 4 personer:</strong> över 300 kr med alkohol. Schablon 46 kr per person ger 184 kr i avdragsgill moms. Inget resultatavdrag.</li>
+<li><strong>Personalfest, 10 anställda:</strong> 180 kr per person i kringkostnader = 1 800 kr i avdrag, plus momsavdrag på maten upp till 300 kr per person.</li>
+<li><strong>Fika på byggmöte, 5 personer x 40 kr:</strong> enklare förtäring under 60 kr. Fullt avdrag både för resultat och moms.</li>
+</ul>
+
+<h2>Checklista och vanliga misstag att undvika</h2>
+<ol>
+<li>Räkna inte med resultatavdrag för lunch och middag, det försvann 2017.</li>
+<li>Dra bara moms på högst 300 kr per person, inte på hela notan.</li>
+<li>Använd schablonen 46 kr per person när dyra måltider innehåller alkohol.</li>
+<li>Skilj på fika (60 kr, fullt avdrag) och måltid (bara moms).</li>
+<li>Notera alltid syfte, datum och deltagare direkt på kvittot.</li>
+<li>Håll dig till max två personalfester per år.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte din bokföring, men gör förarbetet enklare. Med kvitton och underlag samlade digitalt är det lätt att notera syfte och deltagare direkt vid utgiften, så att din redovisningsbyrå kan bedöma avdragsrätten korrekt. Du slipper leta efter lösa kvitton i slutet av året och minskar risken för underkända avdrag på grund av bristande dokumentation.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får jag dra av kundlunchen 2026?</h3>
+<p>Inte inkomstskattemässigt. Sedan 2017 ger representationsmåltider inget resultatavdrag. Du får dock dra momsen på ett underlag om högst 300 kr per person exklusive moms.</p>
+<h3>Hur mycket moms får jag dra på en dyr middag med vin?</h3>
+<p>Om måltiden överstiger 300 kr per person och innehåller både mat och alkohol får du använda Skatteverkets schablon på högst 46 kr per person i momsavdrag.</p>
+<h3>Är fika på byggmötet avdragsgillt?</h3>
+<p>Ja. Enklare förtäring som kaffe, smörgås och bulle är avdragsgill både för resultat och moms med högst 60 kr per person och tillfälle, så länge det inte utgör en måltid.</p>
+<h3>Hur många personalfester får jag dra av per år?</h3>
+<p>Normalt medges avdrag för högst två personalfester per år, med 180 kr per person i kringkostnader plus momsavdrag på maten.</p>
+
+<h2>Kom igång</h2>
+<p>Samla kvitton, syfte och deltagare löpande så blir representationsavdraget rätt utan stress vid deklarationen. Utforska <a href="/sv/verktyg">våra gratis verktyg</a> eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller ordning på ekonomin i vardagen.</p>
+
+<p>Relaterat: <a href="/sv/blog/moms-hantverkare">Moms för hantverkare: så funkar 25 %, omvänd byggmoms och ROT</a></p>
+`;
+
+const A_REPRESENTATIONSAVDRAG_2026: BlogPost = {
+  _id: "code-"+"representationsavdrag-2026",
+  title: "Representationsavdrag 2026: kundlunch, personalfest och moms för byggföretag", slug: "representationsavdrag-2026", locale: "sv",
+  excerpt: "Så funkar representationsavdraget 2026 för byggföretag: vilka belopp som gäller för kundlunch, fika, personalfest och gåvor, och hur du räknar rätt momsavdrag.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_REPRESENTATIONSAVDRAG_2026_HTML,
+  seoTitle: "Representationsavdrag 2026 | ByggExp", seoDescription: "Kundlunch, personalfest och momsavdrag på representation 2026. Exakta belopp (300/60/180 kr) och räkneexempel för dig i byggbranschen.",
+  seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:45:00.000Z", createdAt: "2026-08-18T19:45:00.000Z", updatedAt: "2026-08-18T19:45:00.000Z",
+};
+
+const A_SERVICEBIL_ELLER_FORMANSBIL_HTML = `
+<p>Snickaren tar servicebilen hem efter jobbet, svänger förbi bygghandeln på lördagen och hämtar barnen på vägen. Harmlöst? I Skatteverkets ögon kan just de resorna förvandla en skattefri servicebil till en fullt beskattad förmånsbil – för hela året. Frågan <strong>servicebil eller förmånsbil</strong> avgörs inte av vad du kallar bilen, utan av hur den faktiskt används. Här får du det konkreta svaret, den avgörande gränsen på högst 10 tillfällen och 100 mil privat körning per år, och en checklista för att hålla bilen på rätt sida.</p>
+
+<p>Vill du räkna på vad valet betyder för just din firma? Använd <a href="/sv/verktyg">våra gratis verktyg för hantverkare och byggföretag -&gt;</a> som utgångspunkt innan du stämmer av de exakta 2026-talen med Skatteverket.</p>
+
+<h2>Servicebil vs förmånsbil – vad är skillnaden?</h2>
+<p>Juridiskt är detta två helt olika saker. En <strong>förmånsbil</strong> är en bil som företaget äger eller leasar och som den anställda får använda privat. Den privata dispositionen är en skattepliktig löneförmån. En <strong>tjänstebil eller servicebil</strong> används enbart i tjänsten – klassiska exempel är post-, polis- och ambulansfordon.</p>
+<p>Det viktiga: det är den faktiska – och även den <em>möjliga</em> – privata användningen som styr. Redan rätten att köra bilen privat (dispositionsrätten) kan utlösa bilförmån. En skåpbil full av verktyg blir alltså inte automatiskt en skattefri servicebil bara för att den är utrustad för arbete. Om du kan använda den privat och inte kan bevisa motsatsen, kan förmånen tas ut.</p>
+
+<h2>Skatteverkets gräns – ringa privat körning</h2>
+<p>Det finns en säkerhetsventil: privat körning i <strong>ringa omfattning</strong> utlöser ingen bilförmån. Men gränsen är snäv och består av två villkor som båda måste hållas samtidigt:</p>
+<ul>
+<li>Högst <strong>10 tillfällen</strong> privat körning per år, <em>och</em></li>
+<li>Högst <strong>100 mil</strong> (1 000 km) privat körning per år.</li>
+</ul>
+<p>Överskrids <em>något</em> av de två – till exempel 12 korta ärenden eller en enda längre semesterresa på 120 mil – beskattas hela förmånsvärdet för hela året. Det finns ingen proportionering. Regeln är väl etablerad praxis (med grund i RÅ 2001 ref. 22) och gäller oförändrat 2026. Kom ihåg att gränsen handlar om faktisk körning, men att själva dispositionsrätten är utgångspunkten – kan du inte visa att du håller dig under gränserna, presumerar Skatteverket förmån.</p>
+
+<h2>Körjournal – din enda bevisning</h2>
+<p>Bevisbördan ligger på dig och företaget, inte på Skatteverket. För att visa att den privata körningen stannade inom ringa omfattning – eller var noll – måste du föra en trovärdig <strong>körjournal</strong>. Den ska för varje resa ange:</p>
+<ul>
+<li>Datum</li>
+<li>Syfte (tjänst eller privat, och vilken kund/uppdrag)</li>
+<li>Från och till (adress eller plats)</li>
+<li>Mätarställning vid start och slut</li>
+</ul>
+<p>Utan en löpande och detaljerad körjournal kan Skatteverket påföra full bilförmån även för en bil som i praktiken bara använts i tjänsten – helt enkelt för att den privata användningen inte kan uteslutas. En digital körjournal som loggar automatiskt via GPS sparar tid och ger starkare bevisning än handskrivna anteckningar i efterhand.</p>
+
+<h2>Så räknas förmånsvärdet om bilen blir förmånsbil</h2>
+<p>Om bilen bedöms som förmånsbil beskattas du på ett schablonvärde – oavsett hur lite du faktiskt kört privat. För bilar registrerade från 1 juli 2021 byggs förmånsvärdet av fyra delar:</p>
+<ul>
+<li>Ett <strong>fast belopp</strong> (0,29 × prisbasbeloppet)</li>
+<li>Ett <strong>ränterelaterat belopp</strong> (statslåneräntan 30 november året innan plus en procentenhet, som lägst 0,5 %, gånger nybilspriset)</li>
+<li>Ett <strong>prisrelaterat belopp</strong> (13 % av nybilspriset)</li>
+<li>Ett <strong>lyxbilstillägg</strong> på 20 % för den del av nybilspriset som överstiger 7,5 prisbasbelopp</li>
+</ul>
+<p>Två justeringar är särskilt viktiga för hantverkare med hög körsträcka: körs bilen minst <strong>3 000 mil (30 000 km) i tjänsten</strong> under året sätts förmånsvärdet ned till 75 %. Betalar arbetsgivaren dessutom drivmedel för din privata körning beskattas det som <strong>drivmedelsförmån</strong> med 1,2 × marknadsvärdet av det privat förbrukade bränslet – ovanpå bilförmånen. Exakta koefficienter, prisbasbelopp och statslåneränta för 2026 hämtar du hos Skatteverket innan du räknar i kronor.</p>
+
+<h2>Vanlig fälla – resan hem räknas som privat</h2>
+<p>En klassisk missuppfattning: arbetsresor mellan bostad och arbetsplats är <strong>privat körning</strong>, inte tjänstekörning. Kör du firmabilen hem varje kväll räknas det alltså in i den privata omfattningen och äter snabbt upp både tillfällena och milen.</p>
+<p>Undantaget räddar många hantverkare: om din <strong>tjänsteställe är bostaden</strong> – vilket är vanligt när arbetsplatsen växlar dagligen mellan olika kunder och byggen – kan resan hemifrån till dagens första arbetsplats räknas som en tjänsteresa. Om bostaden verkligen är tjänsteställe avgörs från fall till fall, så dokumentera hur ditt arbete ser ut.</p>
+
+<h2>Servicebil eller förmånsbil – vad lönar sig?</h2>
+<p>Det finns tre huvudspår, och rätt val beror på hur mycket du kör privat kontra i tjänsten:</p>
+<ol>
+<li><strong>Ren servicebil / lätt lastbil.</strong> Ingen förmånsskatt så länge du håller dig inom ringa privat körning. Företaget drar av driftskostnader och – för lätt lastbil – momsen. Nackdel: du behöver en egen privatbil vid sidan om.</li>
+<li><strong>Förmånsbil.</strong> Alla bilkostnader samlas hos arbetsgivaren och du slipper äga privat. Nackdel: du inkomstbeskattas på hela förmånsvärdet (marginalskatt cirka 32–52 %) oavsett hur lite du kör privat. För en personbil får företaget dessutom inte lyfta momsen på inköpet.</li>
+<li><strong>Egen bil plus milersättning.</strong> Kör du bara ibland i tjänsten kan skattefri bilersättning för egen bil, 25 kr/mil (2,50 kr/km), vara både enklast och billigast. Ingen förmån att bevaka.</li>
+</ol>
+<p>Tumregeln: mycket tjänstekörning och lite privat talar för servicebil eller lätt lastbil; mycket blandad körning talar för förmånsbil; sällan i tjänsten talar för egen bil med milersättning.</p>
+
+<h2>Checklista – håll servicebilen skattefri</h2>
+<ul>
+<li>Skriv en tydlig policy om förbud mot eller starkt begränsat privat nyttjande.</li>
+<li>För körjournal varje dag – datum, syfte, från/till och mätarställning.</li>
+<li>Håll dig under både 10 tillfällen och 100 mil privat per år.</li>
+<li>Parkera bilen vid arbetsplatsen, inte hemma, när det går.</li>
+<li>Dokumentera om bostaden är ditt tjänsteställe.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte Skatteverkets bedömning, men gör underlaget enklare. När du registrerar var dagens jobb utförs och kopplar resor till rätt kund och projekt får du en tydlig historik över var bilen faktiskt varit – ett stöd när du ska visa att körningen var i tjänsten. Tid, uppdrag och adresser samlas på ett ställe, så att din redovisningskonsult snabbt kan bedöma om bilen håller sig inom ringa omfattning. Notera att appen inte är en godkänd körjournal i sig – för bevisning behöver du fortfarande en körjournal som loggar mätarställning per resa.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>När blir en servicebil en förmånsbil?</h3>
+<p>När den privata körningen överstiger ringa omfattning, alltså mer än 10 tillfällen eller mer än 100 mil per år. Redan möjligheten att köra privat kan utlösa förmån om du inte kan bevisa motsatsen med körjournal.</p>
+<h3>Räknas resan mellan hemmet och jobbet som privat?</h3>
+<p>Ja, arbetsresor bostad–arbetsplats är privat körning. Undantag gäller om bostaden är ditt tjänsteställe, vilket är vanligt för hantverkare med växlande arbetsplatser – då kan första resan bli en tjänsteresa.</p>
+<h3>Måste jag föra körjournal för en servicebil?</h3>
+<p>I praktiken ja. Bevisbördan ligger på dig, och utan trovärdig körjournal kan Skatteverket påföra full bilförmån även om bilen bara använts i tjänsten.</p>
+<h3>Sänks förmånsvärdet om jag kör mycket i tjänsten?</h3>
+<p>Ja. Kör du minst 3 000 mil i tjänsten under året sätts förmånsvärdet ned till 75 %. Det gör förmånsbil mer intressant för hantverkare med hög årlig körsträcka.</p>
+
+<h2>Kom igång</h2>
+<p>Bestäm dig utifrån din körning: mycket tjänst och lite privat pekar mot servicebil, blandat mot förmånsbil, sällan mot egen bil och milersättning. Räkna på alternativen med <a href="/sv/verktyg">våra gratis verktyg</a> och stäm av de exakta 2026-talen med Skatteverket eller din redovisningskonsult. Vill du se hur ByggExp håller ordning på tid, uppdrag och resor? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggföretag – vad ska du välja?</a></p>
+`;
+
+const A_SERVICEBIL_ELLER_FORMANSBIL: BlogPost = {
+  _id: "code-"+"servicebil-eller-formansbil",
+  title: "Servicebil eller förmånsbil? Så avgör du vad som lönar sig 2026", slug: "servicebil-eller-formansbil", locale: "sv",
+  excerpt: "Kör du firmabilen hem eller till bygghandeln kan servicebilen bli en skattepliktig förmånsbil – här är gränsen och vad som lönar sig 2026.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_SERVICEBIL_ELLER_FORMANSBIL_HTML,
+  seoTitle: "Servicebil eller förmånsbil 2026 | ByggExp", seoDescription: "Servicebil eller förmånsbil? Så håller du firmabilen skattefri – Skatteverkets gräns 10 tillfällen och 100 mil privat körning per år förklarad.",
+  seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:48:00.000Z", createdAt: "2026-08-18T19:48:00.000Z", updatedAt: "2026-08-18T19:48:00.000Z",
+};
+
+const A_DEBITERA_SERVICEBIL_ROT_HTML = `
+<p>Frågan dyker upp hos i stort sett varje servicebolag och hantverkare som jobbar med ROT-berättigade uppdrag: kan jag lägga in kostnaden för servicebilen, framkörningen och restiden i mitt ROT-timpris så att kunden får dra av mer? Lockelsen är förståelig – ju högre arbetskostnad, desto större ROT-avdrag för kunden och desto lättare att stänga affären. Men svaret är nej, och att göra fel kan bli dyrt för dig som utförare. Här går vi igenom regelverket 2026 och hur du särredovisar fordons- och materialkostnad korrekt på fakturan.</p>
+
+<p>Vill du snabbt räkna på hur mycket ROT som faktiskt landar på arbetskostnaden i ett uppdrag? Testa vår gratis <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylator -&gt;</a> innan du sätter ihop offerten.</p>
+
+<h2>Så funkar ROT-avdraget 2026 – snabbfakta</h2>
+<p>ROT-avdraget 2026 är 30 % av arbetskostnaden (inklusive moms), med ett tak på 50 000 kr per person och år. Den tillfälliga förstärkningen under 2025, då avdraget höjdes till 50 % från mitten av maj till årsskiftet 2025, har upphört. Från 2026 gäller alltså återigen den ordinarie nivån på 30 % – räkna aldrig med 50 % i dina offerter.</p>
+<p>Avdraget hanteras via fakturamodellen. Det innebär att du som utförare drar av kundens ROT-del direkt på fakturan och sedan begär utbetalning av mellanskillnaden från Skatteverket. Kunden betalar bara sin reducerade del. Det här är viktigt att förstå, för det är också du som bär ansvaret om något blir fel.</p>
+
+<h2>Grundregeln: ROT ges bara på arbetskostnaden</h2>
+<p>ROT-avdraget ges enbart på arbetskostnaden för arbete som utförs i eller i nära anslutning till bostaden. Allt annat faller utanför. Följande kostnader är uttryckligen <strong>inte</strong> ROT-grundande:</p>
+<ul>
+<li><strong>Material</strong> – virke, spik, färg, komponenter och förbrukningsvaror.</li>
+<li><strong>Maskinhyra och utrustning</strong> – hyrd lift, ställning, verktyg och maskiner.</li>
+<li><strong>Resor och transport</strong> – till och från arbetsplatsen.</li>
+<li><strong>Framkörning och leverans</strong> – utkörningsavgift, framkörningsavgift.</li>
+<li><strong>Restid och körtid</strong> – tid du tillbringar i bilen på väg till kunden.</li>
+<li><strong>Arkitektarbete</strong> – ritning och projektering.</li>
+</ul>
+<p>Eftersom bara faktiskt arbete på plats är avdragsgillt är det här listan du måste hålla i huvudet varje gång du prissätter ett ROT-uppdrag.</p>
+
+<h2>Därför kan du inte baka in servicebilen i ROT-timmen</h2>
+<p>ROT-timmen ska spegla verkligt arbete som utförts hos kunden – ingenting annat. När du lägger på ett dolt påslag för servicebil, framkörning eller material i timpriset blåser du artificiellt upp arbetskostnaden. Den delen av timpriset motsvarar inget faktiskt arbete på plats och är därmed inte avdragsgill. Konsekvensen blir att du redovisat ett för högt ROT-underlag, och Skatteverket granskar just den här typen av oproportionerlig fördelning mellan arbete och material. Att dölja bil- eller materialkostnad i timpriset för att öka avdraget accepteras inte.</p>
+<p>Det handlar alltså inte om en gråzon där man kan tänja lite. Fordons- och servicebilskostnad, framkörning och körtid till kunden ska särredovisas och är inte avdragsgilla för kunden – oavsett hur du väljer att formulera raden på fakturan.</p>
+
+<h2>Så särredovisar du rätt på fakturan</h2>
+<p>Lösningen är enkel: dela upp fakturan i tydliga rader så att ROT-grundande arbete står för sig självt. Så här kan en korrekt uppdelning se ut:</p>
+<ol>
+<li><strong>Arbetskostnad på plats</strong> – ROT-grundande. Endast tid som lagts på faktiskt arbete i bostaden.</li>
+<li><strong>Framkörning / körtid</strong> – egen rad, ej ROT.</li>
+<li><strong>Material</strong> – egen rad, ej ROT.</li>
+<li><strong>Maskinhyra</strong> – egen rad, ej ROT.</li>
+</ol>
+<p>Ett räkneexempel. Anta att du utfört 20 timmars arbete på plats à 700 kr inkl. moms, tagit ut en framkörningsavgift på 800 kr, förbrukat material för 4 000 kr och hyrt en maskin för 1 200 kr:</p>
+<ul>
+<li>Arbetskostnad på plats: 20 × 700 = 14 000 kr (ROT-grundande).</li>
+<li>ROT-avdrag: 30 % × 14 000 = 4 200 kr som dras av på fakturan.</li>
+<li>Framkörning 800 kr + material 4 000 kr + maskinhyra 1 200 kr = 6 000 kr utan avdrag.</li>
+</ul>
+<p>Kunden betalar då 14 000 − 4 200 + 6 000 = 15 800 kr, och du begär de 4 200 kronorna från Skatteverket. Hade du i stället gömt de 6 000 kronorna i timpriset hade underlaget blivit felaktigt uppblåst – och avdraget stått på lös grund.</p>
+
+<h2>Vem bär risken? Du som utförare</h2>
+<p>Det här är kärnan i varför frestelsen inte är värd det. Skatteverket betalar ut ROT-beloppet till dig som utförare, inte till kunden. Om villkoren inte är uppfyllda – till exempel för att arbetskostnaden blåsts upp med dolda bil- eller materialpåslag – återkräver Skatteverket beloppet av företaget. Kunden går fri, men du sitter med återbetalningskravet och den administrativa smällen. Ett par tusenlappar i extra ROT per uppdrag väger lätt mot risken att behöva betala tillbaka i efterhand.</p>
+
+<h2>Praktiska tips för servicebolag</h2>
+<ul>
+<li>Sätt ett korrekt timpris som speglar det faktiska arbetet på plats – inte dina fasta kostnader.</li>
+<li>Prissätt framkörning och utkörning separat och öppet, som en egen rad.</li>
+<li>Var transparent mot kunden om vad som är avdragsgillt och inte. Det bygger förtroende och undviker efterdiskussioner.</li>
+<li>Dokumentera arbetstiden på plats noggrant, så att du kan visa vad ROT-underlaget bygger på om det granskas.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp kan du bygga fakturor där arbetskostnad, material, framkörning och maskinhyra ligger på separata rader från start, så att bara det ROT-grundande arbetet räknas in i avdraget. ROT-delen beräknas på arbetsraderna och du slipper räkna manuellt. Vill du testa uppdelningen först kan du använda vår enkla <a href="/sv/verktyg/faktura-mall">fakturamall</a> och vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylator</a>. Verktygen ersätter inte din egen bedömning av vad som är avdragsgillt, men de gör det svårare att råka blanda ihop raderna.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får restid räknas som ROT-arbete?</h3>
+<p>Nej. Restid och körtid till och från kunden är inte arbete som utförts i bostaden och är därför inte ROT-grundande. Den tiden ska hållas utanför ROT-timmarna.</p>
+<h3>Får jag ta ut en framkörningsavgift?</h3>
+<p>Ja, du får självklart debitera framkörning. Men den ska ligga på en egen rad utan ROT-avdrag – den kan inte gömmas i arbetskostnaden.</p>
+<h3>Vad händer om jag redovisat ROT felaktigt?</h3>
+<p>Skatteverket återkräver det utbetalda beloppet av företaget, inte av kunden. Du som utförare bär hela risken, plus den administrativa hanteringen.</p>
+<h3>Räknas maskinhyra som ROT?</h3>
+<p>Nej. Maskinhyra och utrustning är uttryckligen undantaget och ska särredovisas som en egen rad utan avdrag.</p>
+
+<h2>Kom igång</h2>
+<p>Grundprincipen är enkel att följa när du väl har raderna på plats: särredovisa alltid arbete, material, framkörning och maskinhyra – och låt bara arbetet bära ROT. Räkna på ditt nästa uppdrag med vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylator</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du sätter upp korrekta ROT-fakturor från början.</p>
+
+<p>Relaterat: <a href="/sv/blog/rot-avdrag">Så fungerar ROT-avdraget för hantverkare</a> och <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare – guide</a>.</p>
+`;
+
+const A_DEBITERA_SERVICEBIL_ROT: BlogPost = {
+  _id: "code-"+"debitera-servicebil-rot",
+  title: "Får du baka in bilkostnaden i ROT-timdebiteringen?", slug: "debitera-servicebil-rot", locale: "sv",
+  excerpt: "Att gömma servicebil, framkörning och restid i ROT-timpriset lockar – men det är inte avdragsgillt och kan leda till återkrav. Så gör du rätt 2026.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/rot-avdrag-preview.webp", contentHtml: A_DEBITERA_SERVICEBIL_ROT_HTML,
+  seoTitle: "Debitera servicebil i ROT? | ByggExp", seoDescription: "Får du baka in servicebil, framkörning och restid i ROT-timpriset? Kort svar: nej. Så särredovisar du fordons- och materialkostnad rätt på ROT-fakturan 2026.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/rot-avdrag-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:51:00.000Z", createdAt: "2026-08-18T19:51:00.000Z", updatedAt: "2026-08-18T19:51:00.000Z",
+};
+
+const A_LEVERANTORSFAKTURA_BYGG_PROJEKT_HTML = `
+<p>De pengar ett byggföretag tappar syns sällan i bokslutet — de försvinner en leverantörsfaktura i taget. Ett materialinköp som aldrig knyts till ett projekt, en maskinhyra som ingen kommer ihåg att vidarefakturera, en underentreprenörsfaktura som bokförs på fel jobb. Var för sig är beloppen små. Sammantaget är det skillnaden mellan svart och rött på projektet. Lösningen är en enkel rutin utan luckor: faktura in → konteras per projekt → attesteras → kommer med på kundens faktura.</p>
+
+<p>Ett bra sätt att räkna hem varje inköp med rätt påslag är att använda <a href="/sv/verktyg/paslag-marginal-kalkylator">vår gratis påslags- och marginalkalkylator →</a> innan du sätter priset på kundfakturan.</p>
+
+<h2>Vad är en leverantörsfaktura i ett byggprojekt?</h2>
+<p>En leverantörsfaktura är en kostnad som kommer in till ditt företag: material från grossisten, en underentreprenör, maskinhyra, transport eller container. Det är motsatsen till kundfakturan, som är det du skickar ut. Poängen i projektredovisning är att varje krona som kommer in måste ha ett projekt-ID redan från beställningen. Utan projektmärkning vet du inte vad jobbet faktiskt kostade — och då kan du varken fakturera rätt på löpande räkning eller mäta täckningsgraden på ett fastprisjobb.</p>
+
+<h2>Obligatoriska uppgifter på fakturan du tar emot</h2>
+<p>Innan du bokför bör du kontrollera att leverantörsfakturan uppfyller kraven i 17 kap. mervärdesskattelagen (2023:200). En felaktig faktura kan sänka din avdragsrätt för moms. Kontrollera att den innehåller:</p>
+<ul>
+<li>Fakturadatum</li>
+<li>Ett unikt löpnummer</li>
+<li>Säljarens organisations-/momsregistreringsnummer</li>
+<li>Köparens momsnummer när omvänd betalningsskyldighet eller EU-handel gäller</li>
+<li>Säljarens och köparens namn och adress</li>
+<li>Mängd och art på varorna eller omfattningen av tjänsten</li>
+<li>Leveransdatum</li>
+<li>Beskattningsunderlaget per momssats</li>
+<li>Momssatsen och momsbeloppet</li>
+</ul>
+<p>För småbelopp upp till 4 000 kr inklusive moms räcker en förenklad faktura med färre uppgifter — bra att veta för kvitton på skruv och förbrukningsmaterial från bygghandeln.</p>
+
+<h2>Omvänd byggmoms — den vanligaste fällan på leverantörsfakturan</h2>
+<p>Omvänd betalningsskyldighet (omvänd byggmoms) betyder att det är du som köpare, inte säljaren, som redovisar momsen. Reglerna finns i 16 kap. mervärdesskattelagen. Det gäller när tjänsten är en byggtjänst och köparen är en näringsidkare som själv säljer byggtjänster mer än tillfälligt. Då fakturerar säljaren <strong>utan moms</strong>.</p>
+<p>En sådan faktura ska ange köparens momsnummer, texten <em>omvänd betalningsskyldighet</em> och 0 kr i moms. Kommer det in en faktura från en underentreprenör med 25 % moms påslagen fast omvänd moms borde gällt — då är den fel och du bör begära en rättad faktura. I bokföringen redovisar du själv både utgående och ingående moms på samma 25-procentiga underlag. När inköpet är fullt avdragsgillt nettar det till noll, men det måste ändå redovisas i momsdeklarationen. Att få projektets material- och underentreprenörskostnad rätt hänger alltså ihop med att bokföra den omvända momsen korrekt — inte bara nettobeloppet.</p>
+
+<h2>Kontering per projekt — koppla kostnaden dit den hör hemma</h2>
+<p>Att kontera betyder att du kodar kostnaden på rätt konto <strong>och</strong> rätt projekt eller kostnadsställe. Det andra ledet är det som avgör din vinst. På löpande räkning är projektkonteringen direkt grunden för vad du får fakturera vidare. På fast pris är den grunden för att mäta täckningsgraden — ligger de verkliga inköpen över kalkylen äter de upp marginalen utan att du ser det förrän jobbet är klart.</p>
+<p>I ByggExp konteras varje inköp direkt på projektet så det syns i projektets självkostnad medan jobbet pågår, inte i efterhand. Då kan du fånga en avvikelse medan du fortfarande kan göra något åt den.</p>
+
+<h2>Attest — vem godkänner vad, och varför det inte bara är byråkrati</h2>
+<p>Ett attestflöde delas ofta i två steg: sakattest (stämmer inköpet — har vi fått varan, är priset rätt?) och beslutsattest (får kostnaden belasta det här projektet?). Det handlar inte om pappersflytt. Bokföringslagen (1999:1078) kräver att varje affärshändelse stöds av en verifikation (5 kap.) och att det finns en verifieringskedja — en spårbar väg från faktura till bokföring. Ett attestflöde är den interna kontrollen som gör att inget bokförs på projektet utan att någon faktiskt sett och godkänt det. Digitalt går det på minuter; i pärm blir det den bunt som ligger kvar tills momsdeklarationen närmar sig.</p>
+
+<h2>Från leverantörsfaktura till kundfaktura — så kommer alla kostnader med</h2>
+<p>Hela poängen är att inget inköp ska falla mellan stolarna på vägen till kundfakturan. Rutinen ser ut så här:</p>
+<ol>
+<li>Inköpet märks med projekt redan vid beställningen.</li>
+<li>Fakturan konteras per projekt och attesteras.</li>
+<li>Kostnaden vidarefaktureras med påslag (löpande räkning) eller ingår i fastpriskalkylen.</li>
+<li>Utfallet stäms av mot budget.</li>
+</ol>
+<p>Ett exempel: du köper material för 40 000 kr netto till ett löpanderäkningsjobb. Med 15 % påslag blir det du fakturerar kunden 46 000 kr netto, och mellanskillnaden på 6 000 kr täcker hantering och risk. Missar du bara ett enda materialinköp på 8 000 kr i konteringen faktureras det aldrig vidare — du tappar både inköpet och påslaget, alltså 9 200 kr, rakt av. Det är därför projektmärkningen måste ske vid beställningen och inte när fakturan väl ligger i högen.</p>
+
+<h2>Digital hantering och arkivering (2026-reglerna)</h2>
+<p>Leverantörsfakturor är räkenskapsinformation och verifikationer. Enligt 7 kap. 2 § bokföringslagen ska de arkiveras till utgången av det sjunde året efter det kalenderår då räkenskapsåret avslutades. Nytt sedan 1 juli 2024 (SFS 2024:342) är att kravet på att spara pappersoriginalet i ursprungligt skick har tagits bort. Du får skanna eller fotografera en pappersfaktura och kasta originalet direkt — förutsatt att den digitala räkenskapsinformationen bevaras hela arkiveringstiden på sju år. Det är precis det som gör en app-baserad rutin ute på bygget möjlig: montören fotar kvittot, det konteras på projektet, papperet slängs.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp fångar du leverantörsfakturan digitalt, konterar den per projekt och skickar den vidare i attestflödet. Eftersom varje inköp ligger på sitt projekt syns den samlade självkostnaden löpande, och kostnaderna finns kvar att vidarefakturera när det är dags att skicka kundfakturan. Systemet ersätter inte din bokföring eller ditt ansvar för momsredovisningen — men det gör att inga inköp ramlar bort mellan bygget och kontoret, och att du ser täckningsgraden medan projektet pågår.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag spara pappersfakturan i original?</h3>
+<p>Nej. Sedan 1 juli 2024 (SFS 2024:342) får du digitalisera en pappersfaktura och slänga originalet direkt, så länge den digitala kopian bevaras hela arkiveringstiden på sju år enligt 7 kap. 2 § bokföringslagen.</p>
+<h3>När gäller omvänd byggmoms på en leverantörsfaktura?</h3>
+<p>När tjänsten är en byggtjänst och du som köpare själv säljer byggtjänster mer än tillfälligt. Då fakturerar leverantören utan moms, anger ditt momsnummer och texten omvänd betalningsskyldighet, och du redovisar momsen själv i deklarationen (16 kap. mervärdesskattelagen).</p>
+<h3>Hur vet jag att alla kostnader kommit med på kundfakturan?</h3>
+<p>Genom projektredovisning. När varje inköp är konterat på projektet kan du stämma av projektets samlade självkostnad mot det du fakturerat. Ligger något okonterat är det inte vidarefakturerat — och det är där pengarna läcker.</p>
+<h3>Hur länge måste jag spara leverantörsfakturorna?</h3>
+<p>Till utgången av det sjunde året efter det kalenderår då räkenskapsåret avslutades. De är verifikationer som ska ingå i en spårbar verifieringskedja enligt bokföringslagen.</p>
+
+<h2>Kom igång</h2>
+<p>Sätt rätt pris på det du vidarefakturerar med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn →</a>, och vill du se hur kontering och attest per projekt fungerar i praktiken kan du <a href="/sv/contact">boka en demo</a> så visar vi flödet på ett riktigt projekt.</p>
+
+<p>Relaterat: <a href="/sv/blog/attestering">Attestering av fakturor i byggföretag</a> och <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a>.</p>
+`;
+
+const A_LEVERANTORSFAKTURA_BYGG_PROJEKT: BlogPost = {
+  _id: "code-"+"leverantorsfaktura-bygg-projekt",
+  title: "Så kopplar du leverantörsfakturor och materialinköp till rätt byggprojekt", slug: "leverantorsfaktura-bygg-projekt", locale: "sv",
+  excerpt: "Okonterade leverantörsfakturor är där byggföretag läcker pengar — så bygger du en rutin där varje inköp märks med projekt, attesteras och kommer med på kundens faktura.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_LEVERANTORSFAKTURA_BYGG_PROJEKT_HTML,
+  seoTitle: "Leverantörsfaktura per projekt | ByggExp", seoDescription: "Kontera leverantörsfakturor och materialinköp per byggprojekt så alla kostnader kommer med på kundfakturan. Rutin, omvänd byggmoms och attest förklarat.",
+  seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T19:54:00.000Z", createdAt: "2026-08-18T19:54:00.000Z", updatedAt: "2026-08-18T19:54:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK,
+    A_FACTORING_BYGGFORETAG,
+    A_ROTAVDRAG_2026_NYA_REGLER_FORETAG,
+    A_AVDRAG_ENSKILD_FIRMA_BYGG,
+    A_AVDRAG_ARBETSKLADER_VERKTYG,
+    A_REPRESENTATIONSAVDRAG_2026,
+    A_SERVICEBIL_ELLER_FORMANSBIL,
+    A_DEBITERA_SERVICEBIL_ROT,
+    A_LEVERANTORSFAKTURA_BYGG_PROJEKT,
     A_PERIODISERINGSFOND_BYGGBOLAG,
     A_BERAKNA_BETONGATGANG_PLATTA,
     A_GANTT_SCHEMA_MALL_BYGG,

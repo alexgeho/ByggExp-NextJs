@@ -328,6 +328,7 @@ export default function EgenkontrollMallPage() {
         }}
         relatedHeading="Fler guider och mallar"
         related={[
+          { href: `/${LOCALE}/blog/nya-vatrumsregler-2026`, label: 'Nya våtrumsregler 2026 (BBV/GVK)' },
           { href: `/${LOCALE}/verktyg/byggdagbok-mall`, label: 'Byggdagbok – gratis mall' },
           { href: `/${LOCALE}/verktyg/tidrapport-mall`, label: 'Tidrapport – gratis mall' },
           { href: `/${LOCALE}/blog/dokumentera-med-foton-pa-bygget`, label: 'Dokumentera med foton på bygget' },

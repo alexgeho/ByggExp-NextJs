@@ -135,6 +135,7 @@ export default function PaslagKalkylatorPage() {
         }}
         relatedHeading="Fler gratis verktyg"
         related={[
+          { href: `/${LOCALE}/blog/paslag-pa-material`, label: 'Guide: materialpåslag för hantverkare' },
           { href: `/${LOCALE}/verktyg/timpris-kalkylator`, label: 'Timpris-kalkylator' },
           { href: `/${LOCALE}/verktyg/moms-kalkylator`, label: 'Momskalkylator' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },

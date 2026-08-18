@@ -24,6 +24,10 @@ export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
   'tidrapportering',
   'fakturera-som-hantverkare',
   'rakna-material-till-bygget',
+  'paslag-pa-material',
+  'nya-vatrumsregler-2026',
+  'e-faktura-obligatorisk-byggforetag',
+  'berakna-u-varde-isolering',
 ]);
 
 export function isSvOnlyArticle(slug: string): boolean {

@@ -1612,9 +1612,395 @@ const MATERIALKALKYL: BlogPost = {
   updatedAt: "2026-08-17T14:00:00.000Z",
 };
 
+
+const PASLAG_HTML = `
+<p>Att lägga påslag på materialet du köper in är inte fusk eller girighet — det är en av de viktigaste marginalerna du har som hantverkare, och det är fullt lagligt. Ändå tvekar många att ta betalt för det, delvis på grund av en seglivad myt om en påhittad &quot;15 %-regel&quot;. Efter den här artikeln vet du vilka påslagsnivåer som håller i praktiken, hur du räknar momsen rätt, vad ROT betyder för materialet och hur du dokumenterar påslaget så att en kund inte kan hålla inne pengarna i efterhand.</p>
+
+<p>Vill du snabbt räkna fram rätt utpris och se skillnaden mellan påslag och marginal? Testa <a href="/sv/verktyg/paslag-marginal-kalkylator">vår gratis påslags- och marginalkalkylator &rarr;</a> medan du läser.</p>
+
+<h2>Är materialpåslag ens lagligt?</h2>
+<p>Ja. Den som tillhandahåller materialet — alltså du som köper in det, bär det hem, garanterar funktionen och hanterar eventuella reklamationer — har rätt att ta ett procentpåslag på inköpspriset. Påslaget ska täcka hantering, administration, garanti- och funktionsansvar, spill, kapitalbindning och den prisrisk du tar när du ligger ute med pengarna.</p>
+<p>Det finns dock en nyans du måste ha koll på. Vid <strong>konsumentjobb</strong> är prissättningen inte helt fri: priset, inklusive påslaget, ska vara <em>skäligt</em> enligt konsumenttjänstlagen 36 §. Vid <strong>entreprenad mellan företag</strong> styr istället avtalet och eventuella standardvillkor som AB 04. Skälighetskravet betyder inte att du ska hålla igen — det betyder att du ska kunna motivera din nivå. Och det är enklare än många tror.</p>
+
+<h2>Myten om &quot;15 %-regeln&quot;</h2>
+<p>Här reder vi ut den vanligaste missuppfattningen i hela branschen. Många tror att materialpåslaget &quot;får vara max 15 %&quot; enligt konsumenttjänstlagen. Det är fel. 15 %-regeln i lagen handlar inte om påslag alls — den handlar om <strong>ungefärliga prisuppgifter</strong>.</p>
+<p>Regeln säger att om du lämnat en ungefärlig prisuppgift till en konsument, får slutpriset inte överstiga det uppgivna priset med mer än 15 % (om ni inte avtalat ett annat pristak). Ett exempel:</p>
+<ul>
+<li>Du lämnar ungefärligt pris: <strong>4 500 kr</strong></li>
+<li>Tak enligt 15 %-regeln: 4 500 &times; 1,15 = <strong>5 175 kr</strong></li>
+</ul>
+<p>Det här är alltså ett tak för hur mycket din <em>slutnota</em> får glida från en ungefärlig uppskattning — det säger ingenting om hur stort ditt materialpåslag får vara. Blanda inte ihop pristak med marginal. De är två helt olika saker.</p>
+
+<h2>Vilka nivåer håller?</h2>
+<p>Branschpraxis för materialpåslag ligger typiskt på <strong>5–20 % på inköpspriset</strong>. El- och VVS-installatörer ligger ofta högre, runt 20–30 %, eftersom deras material bär mer ansvar och risk. Så här kan du tänka kring nivåerna:</p>
+<ul>
+<li><strong>Självkostnad + 10–15 %:</strong> tryggt, vanligt och lätt att försvara i vilken diskussion som helst.</li>
+<li><strong>20–25 %:</strong> vanligt förekommande och sällan ifrågasatt, särskilt för installatörsjobb.</li>
+<li><strong>30–40 %:</strong> förekommer, men kräver en tydlig förklaring och helst ett skriftligt avtal med kunden.</li>
+</ul>
+<p>Koppla nivån till verkligheten: större risk, längre garanti och mer hantering motiverar högre påslag. Ett dyrt specialbeställt material du får ligga ute med i veckor och ansvara för i flera år tål ett annat påslag än en påse skruv. Linjen som installatörsbranschen själv driver är transparens — våga sätta din nivå, men var beredd att förklara den.</p>
+
+<h2>Räkna rätt — moms och marginal</h2>
+<p>Här tappar många pengar av ren slarv. Räkna alltid påslaget på <strong>nettopriset</strong>, alltså inköpspriset exklusive moms, och lägg på moms (25 %) allra sist. Så här ser rätt väg ut för ett material som kostar 1 000 kr exkl. moms med 15 % påslag:</p>
+<ul>
+<li>Nettopris: 1 000 kr</li>
+<li>Påslag 15 %: +150 kr &rarr; 1 150 kr</li>
+<li>Moms 25 %: +287,50 kr &rarr; <strong>1 437,50 kr att fakturera</strong></li>
+</ul>
+<p>Det vanligaste felet är att lägga moms på inköpet, sedan påslag, sedan moms igen — det blir dubbel moms och en faktura som inte håller. Rent matematiskt spelar ordningen ingen roll (1 000 &times; 1,15 &times; 1,25 blir samma som 1 000 &times; 1,25 &times; 1,15), men fakturan måste tydligt visa nettopris, påslag och moms var för sig.</p>
+<p>En annan sak att hålla isär: <strong>påslag</strong> räknas på inköpspriset, <strong>marginal</strong> räknas på utpriset. 20 % påslag är inte samma sak som 20 % marginal. Räknar du fel här luras du själv på lönsamhet. Kalkylatorn ovan visar båda samtidigt så du ser vad du faktiskt tjänar.</p>
+
+<h2>ROT 2026 och materialet — vad du MÅSTE veta</h2>
+<p>ROT-avdraget är 2026 tillbaka på <strong>30 % av arbetskostnaden</strong>. Den tillfälliga höjningen till 50 % gällde bara 12 maj–31 december 2025 och är borta. Taket är 50 000 kr per person och år, och ROT och RUT tillsammans max 75 000 kr per år. Avgörande är betalningsdatumet — betalas fakturan 2026 gäller 30 %, oavsett när jobbet utfördes.</p>
+<p>Det viktigaste för din prissättning: <strong>ROT gäller aldrig material</strong>, bara arbetskostnad. Ditt materialpåslag ger alltså aldrig något ROT-avdrag för kunden. På fakturan ska arbetskostnad och materialkostnad redovisas separat.</p>
+<p>Frestelsen att &quot;flytta&quot; arbetskostnad in i materialpriset — eller tvärtom — för att pynta ROT-underlaget är otillåten och felaktig. Håll de två posterna rena. Ditt materialpåslag lönar sig helt på din sida av kalkylen ändå; det behöver inte gömmas.</p>
+
+<h2>Skriftligt avtal = ditt viktigaste skydd</h2>
+<p>Om en konsument bestrider ditt påslag som oskäligt får hen betala den skäliga delen och hålla inne resten tills saken är utredd. Skäligheten bedöms då mot vad materialet och tjänsten normalt kostar — jämförelseofferter blir bevis. Det enskilt viktigaste skyddet mot att hamna i den situationen är att <strong>avtala påslagets storlek skriftligt innan arbetet startar</strong>. Utan avtal hamnar du i en skälighetsdiskussion; med avtal har ni redan kommit överens.</p>
+<p>Se till att din offert innehåller:</p>
+<ul>
+<li>Påslagets storlek i procent, tydligt angivet.</li>
+<li>Om priset är <strong>fast</strong> eller en <strong>ungefärlig uppgift</strong> (kom ihåg 15 %-taket på det senare).</li>
+<li>En prisjusteringsklausul om materialpriser stiger under jobbet — vid fast pris bär du annars risken själv och får inte ta mer betalt utan ett sådant förbehåll.</li>
+<li>Separata rader för arbete och material inför ROT.</li>
+</ul>
+<p>En genomarbetad offert löser det mesta i förväg. Läs mer i vår guide om att <a href="/sv/blog/skriva-offert">skriva offert</a>.</p>
+
+<h2>Entreprenad och B2B — kort om självkostnadsprincipen</h2>
+<p>Jobbar du mot andra företag på löpande räkning enligt självkostnadsprincipen (AB 04 / ABT 06 kap 6 § 9) fungerar det annorlunda. Då ersätts dina faktiska kostnader — material, arbete, underentreprenörsfakturor — plus ett <strong>entreprenörarvode</strong>, ett procentpåslag för central administration och vinst. Storleken är inte fastslagen i AB 04 utan ska avtalas mellan parterna, och både huvud- och underentreprenör får lägga sitt eget påslag. Principen är densamma som i konsumentledet: påslaget är legitimt, men skriv ner nivån.</p>
+
+<h2>Vanligaste misstagen</h2>
+<ul>
+<li>Att tro att påslaget &quot;måste vara 15 %&quot; — det är en myt.</li>
+<li>Att räkna påslag på bruttopris och råka dubbelmomsa fakturan.</li>
+<li>Att förväxla påslag med marginal och underprissätta sig själv.</li>
+<li>Att lämna fast pris utan prisjusteringsklausul när materialpriserna rör sig.</li>
+<li>Att inte skriva ner påslaget innan start — och sedan fastna i en skälighetstvist.</li>
+<li>Att blanda arbete och material på fakturan och krångla till ROT.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du offerten med separata rader för arbete och material, så att påslag, moms och ROT-underlag hamnar rätt från början. Du sätter din påslagsnivå en gång och återanvänder den, skriver in prisjusteringsklausulen som standardtext och tar med kundens godkännande skriftligt — precis det som skyddar dig om ett pris ifrågasätts senare. När jobbet är klart går offerten vidare till faktura utan att du behöver räkna om något. Verktyget sätter inte din prisstrategi åt dig, men det ser till att siffrorna du bestämt faktiskt hamnar rätt hela vägen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur stort materialpåslag får jag ta?</h3>
+<p>Det finns ingen fast lagstadgad gräns. Branschpraxis ligger på 5–20 %, installatörer ofta 20–30 %. Vid konsumentjobb ska priset vara skäligt, men påslag upp mot 20–25 % är i praktiken mycket svårt att få underkänt. Högre nivåer kräver tydlig motivering och helst avtal.</p>
+<h3>Betyder 15 %-regeln att påslaget måste vara max 15 %?</h3>
+<p>Nej. 15 %-regeln i konsumenttjänstlagen handlar om att ett slutpris inte får överstiga en <em>ungefärlig prisuppgift</em> med mer än 15 %. Den säger ingenting om hur stort materialpåslaget får vara.</p>
+<h3>Ger materialpåslaget kunden ROT-avdrag?</h3>
+<p>Nej. ROT gäller bara arbetskostnaden — 30 % 2026, max 50 000 kr per person och år. Material ger aldrig ROT, oavsett påslag. Redovisa alltid arbete och material separat på fakturan.</p>
+<h3>Kan kunden vägra betala mitt påslag?</h3>
+<p>En konsument kan hålla inne den del av priset som bedöms oskälig, men måste betala den skäliga delen. Har ni avtalat påslagets storlek skriftligt före start står du mycket starkare — då är nivån redan överenskommen.</p>
+
+<h2>Kom igång</h2>
+<p>Sätt rätt påslag och se din faktiska marginal med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn</a>, och skriv in nivån direkt i <a href="/sv/verktyg/offert-mall">vår offertmall</a>. Vill du se hur hela flödet från offert till faktura fungerar i praktiken? <a href="/sv/contact">Boka en demo &rarr;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a> &middot; <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a></p>
+`.trim();
+
+const PASLAG: BlogPost = {
+  _id: "code-paslag-pa-material",
+  title: "Materialpåslag för hantverkare — så sätter du ett lagligt och lönsamt påslag (2026)",
+  slug: "paslag-pa-material",
+  locale: "sv",
+  excerpt: "Materialpåslag är din rätt och en av dina viktigaste marginaler — här är nivåerna som håller, momsen rätt räknad och avtalet som skyddar dig.",
+  tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/paslag-preview.webp",
+  contentHtml: PASLAG_HTML,
+  seoTitle: "Materialpåslag hantverkare 2026 | ByggExp",
+  seoDescription: "Så sätter du ett lagligt och lönsamt materialpåslag som hantverkare: branschnivåer 5–20 %, momsen rätt, ROT-fällan och avtalet som skyddar dig.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/paslag-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false,
+  isPublished: true,
+  publishedAt: "2026-08-18T09:00:00.000Z",
+  createdAt: "2026-08-18T09:00:00.000Z",
+  updatedAt: "2026-08-18T09:00:00.000Z",
+};
+
+
+const VATRUM_HTML = `
+<p>Vid årsskiftet 2025/2026 uppdaterades tre samordnade regelverk för våtrum samtidigt: BBV 26:1 från Byggkeramikrådet, Säkra Våtrum 2026 från GVK och Säker Vatteninstallation 2026:1. Det är ingen revolution – men rörmått, falltoleranser och våtzoner har ändrats, och för dig som utför jobbet är detaljerna det som räknas. Vid en framtida vattenskada är det sällan själva plattsättningen som fäller entreprenören, utan avsaknaden av dokumentation som visar att arbetet gjorts enligt gällande branschregler. Här går vi igenom förändringarna ur utförarperspektiv och hur du säkrar bevisningen.</p>
+
+<p>Bygg din dokumentation från start i <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall –&gt;</a> så att varje kritiskt moment fångas medan du fortfarande står på plats.</p>
+
+<h2>Vad som faktiskt ändrats 2026 – kortversion för entreprenören</h2>
+<ul>
+<li>BBV 26:1 trädde i kraft <strong>1 januari 2026</strong> och ersätter BBV 21:1.</li>
+<li>GVK:s Säkra Våtrum uppdaterades till <strong>2026-versionen</strong> samma datum. Inga stora omkastningar, men flera viktiga förtydliganden.</li>
+<li>Reglerna är samordnade mellan BKR, GVK, Säker Vatten och MVK – de drar åt samma håll.</li>
+<li>De nya reglerna gäller <strong>arbeten och installationer som påbörjas efter 2026-01-01</strong>.</li>
+<li>Övergångsregel: projekt med <strong>bygglov beviljat före 1 januari 2026</strong> får tillämpa de äldre reglerna (BBV 21:1 / Säkra Våtrum 2021) även om arbetet startar efter årsskiftet.</li>
+</ul>
+<p>Första praktiska steget blir alltså administrativt: kontrollera bygglovsdatum innan du bestämmer vilken regelversion jobbet ska följa. Det avgör allt annat.</p>
+
+<h2>Nya rörmått – 60 mm är den nya normen</h2>
+<p>Den tydligaste hantverksmässiga förändringen sitter i rörgenomföringarna. Minsta avstånd mellan rörgenomföring och tak är nu <strong>60 mm</strong> – tidigare 100 mm. Samtliga mått mellan rör och vägg, golv respektive tak har harmoniserats till 60 mm.</p>
+<ul>
+<li>Rörgenomföringar med dimension <strong>≤ 32 mm</strong> ska ha minst <strong>60 mm centrumavstånd (c/c)</strong>.</li>
+<li>Rör större än 32 mm ska ha minst 60 mm <em>mellan</em> rören.</li>
+<li>Röret ska sticka ut <strong>cirka 60 mm</strong> från väggens tätskikt.</li>
+<li>Rörgenomföringen ska monteras <strong>vinkelrätt (90°)</strong> mot väggen.</li>
+</ul>
+<p>Konsekvensen märks mest i trånga schakt och vid tät blandarplacering. Med 60 mm som genomgående mått får du något mer marginal mot taket, men c/c-kravet gör att slarvig utsättning av två närliggande genomföringar snabbt blir ett underkännande. Planera rör-i-rör, fördelarskåp och blandarhöjder tidigt i projekteringen istället för att lösa det på väggen – ett felplacerat rör efter att tätskiktet sitter är ett dyrt misstag.</p>
+
+<h2>Nya falltoleranser för golvlutning</h2>
+<p>Det tillåtna intervallet för golvlutning i duschplats eller motsvarande är nu <strong>minst 7 mm/m och max 30 mm/m</strong>. Tidigare låg övre gränsen på 20 mm/m. Rekommenderat riktvärde vid projektering är cirka <strong>15 mm/m</strong> i själva duschplatsen.</p>
+<p>Höjningen av taket till 30 mm/m är gjord för att passa moderna produktlösningar – linjeavlopp och golvbrunnar som kräver mer fall för god avrinning. Det ger dig mer utrymme, men frihet innebär också ansvar: ett för brant fall blir besvärligt vid stora plattformat, som spjälkar eller vippar på en kraftig lutning, och kan skapa problem för tillgänglighet och rullstolsåtkomst. Sätt fallet medvetet mot brunnen, dokumentera det uppmätta värdet och håll dig inom 7–30 mm/m även när produkten skulle tillåta mer.</p>
+
+<h2>Våtzon 1 och våtzon 2 – hela dusch- och badutrymmet ska tätskiktas</h2>
+<p>Ett förtydligande som är lätt att missa: hela utrymmet med plats för bad eller dusch – <strong>både våtzon 1 och våtzon 2</strong> – ska bekläs med tätskikt på golv och väggar. Det står nu tydligare i både text och illustrationer.</p>
+<ul>
+<li><strong>Våtzon 1</strong> omfattar hela golvet, vägg inom cirka 1 meter från dusch- eller badplatsen samt väggen direkt ovanför badplatsen.</li>
+<li><strong>Våtzon 2</strong> är övriga väggytor – och kräver alltså också tätskikt.</li>
+</ul>
+<p>Behöver du snabbt räkna ut hur mycket tätskikt och plattor som går åt över hela ytan tar du måtten i <a href="/sv/verktyg/kvadratmeter-kalkylator">vår kvadratmeter-kalkylator</a> innan du beställer material. BBV 26:1 innehåller dessutom uppdaterade krav på klinkerramen – kanten mot vägg och golvbrunn – presenterade i ett tydligare format, samt förtydliganden om tätning vid genomföringar. Kontrollera de exakta produkt- och tätningskraven i den senaste utgåvan av BBV 26:1 innan du börjar. Gå igenom dina infästningar och genomföringar: allt som bryter tätskiktet ska tätas enligt anvisning.</p>
+
+<h2>Så dokumenterar du utförandet – egenkontroll och kvalitetsdokument</h2>
+<p>Egenkontroller kan idag göras direkt i en mobilapp och kvalitetsdokumentet signeras elektroniskt av ansvarig våtrumsledare, med namn på den behörige plattsättare som utfört tätskiktsarbetet. Det är den här kedjan – rätt utförande plus spårbar dokumentation – som håller vid en skadereglering.</p>
+<p>Kvalitetsdokumentet och våtrumsintyget bör innehålla:</p>
+<ul>
+<li>Intyg om att arbetet följer <strong>BBV 26:1 och Säkra Våtrum 2026</strong>.</li>
+<li>Genomförda egenkontroller för <strong>tätskikt, golvlutning och rörgenomföringar</strong>.</li>
+<li><strong>Fotodokumentation</strong> från kritiska moment – appliceringen av tätskikt, brunnsanslutning, rörgenomföringar och fall mot brunn.</li>
+<li>En <strong>produkt- och materialförteckning</strong>: tätskiktssystem, golvbrunn och blandare.</li>
+</ul>
+<p>Poängen med foto är att det är svårt att rekonstruera i efterhand. Ett tätskikt syns inte när klinkern sitter uppe, så bilden tagen i rätt ögonblick är ofta ditt enda bevis på att momentet är korrekt utfört.</p>
+
+<h2>Behörighet och ansvar – varför det lönar sig att göra rätt</h2>
+<p>Att jobba i behörigt företag och följa branschreglerna är inte byråkrati för dess egen skull. Både beställare och försäkringsbolag utgår från branschreglerna när ansvar och ersättning ska bedömas efter en skada. Ett komplett kvalitetsdokument är det som avgör om skadan hanteras som ett produktfel eller landar på entreprenören. För en privatkund med ROT-jobb är intyget dessutom en konkret trygghet – ett kvitto på att våtrummet är gjort fackmässigt av ett behörigt företag. Kort sagt: rätt utförande och rätt dokumentation är samma affär som lägre risk.</p>
+
+<h2>Checklista inför nästa våtrumsjobb 2026</h2>
+<ol>
+<li>Verifiera vilken regelversion som gäller mot <strong>bygglovsdatumet</strong>.</li>
+<li>Uppdatera dina mallar för egenkontroll så de refererar BBV 26:1 och Säkra Våtrum 2026.</li>
+<li>Kontrollera <strong>rörmått (60 mm, c/c 60 mm, 90°)</strong> redan vid projekteringen.</li>
+<li>Sätt fallet inom <strong>7–30 mm/m</strong>, med riktvärde cirka 15 mm/m i duschen.</li>
+<li>Säkerställ tätskikt över <strong>både våtzon 1 och 2</strong>, golv och vägg.</li>
+<li>Fota löpande vid kritiska moment.</li>
+<li>Signera kvalitetsdokumentet digitalt när jobbet är klart.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du egenkontrollen digitalt medan jobbet pågår: du bockar av tätskikt, golvlutning och rörgenomföringar, bifogar foton direkt från mobilen till rätt kontrollpunkt och samlar produkt- och materialförteckningen på ett ställe. När allt är ifyllt har du ett samlat underlag att bifoga kvalitetsdokumentet. ByggExp utfärdar inte det formella våtrumsintyget åt dig – det ansvaret ligger hos den behörige våtrumsledaren och plattsättaren – men verktyget ser till att ingen egenkontroll eller bild saknas när intyget ska skrivas.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>När börjar de nya våtrumsreglerna 2026 att gälla?</h3>
+<p>BBV 26:1 och Säkra Våtrum 2026 trädde i kraft 1 januari 2026 och gäller arbeten och installationer som påbörjas efter det datumet. De ersätter BBV 21:1 respektive Säkra Våtrum 2021.</p>
+<h3>Måste jag följa BBV 26:1 om bygglovet är från 2025?</h3>
+<p>Nej. Övergångsregeln innebär att projekt med bygglov beviljat före 1 januari 2026 får tillämpa de äldre reglerna, även om själva arbetet startar efter årsskiftet. Kontrollera bygglovsdatumet innan du väljer regelversion.</p>
+<h3>Vad är det nya rörmåttet i Säkra Våtrum 2026?</h3>
+<p>Minsta avstånd mellan rörgenomföring och tak är nu 60 mm istället för 100 mm. Alla mått mellan rör och vägg, golv och tak är 60 mm, rör ≤ 32 mm ska ha minst 60 mm centrumavstånd, och röret ska sticka ut cirka 60 mm ur tätskiktet och monteras vinkelrätt mot väggen.</p>
+<h3>Vad ska dokumentationen av ett våtrumsjobb innehålla?</h3>
+<p>Kvalitetsdokumentet bör innehålla intyg om att arbetet följer BBV 26:1 och Säkra Våtrum 2026, genomförda egenkontroller för tätskikt, golvlutning och rörgenomföringar, fotodokumentation från kritiska moment samt en produkt- och materialförteckning med tätskiktssystem, golvbrunn och blandare. Det signeras elektroniskt av ansvarig våtrumsledare.</p>
+
+<h2>Kom igång</h2>
+<p>Sätt upp dokumentationen innan spadtaget: börja i <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> och räkna material med <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a>. Vill du se hur egenkontroll, foton och kvalitetsdokument hänger ihop i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi flödet. Ladda även ner de fullständiga regelverken hos BKR, GVK och Säker Vatten – den här artikeln ersätter inte källtexterna.</p>
+
+<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/byggdagbok">Byggdagbok – så för du den rätt</a>.</p>
+`.trim();
+
+const VATRUM: BlogPost = {
+  _id: "code-nya-vatrumsregler-2026",
+  title: "Nya våtrumsregler 2026: så påverkas ditt jobb av BBV 26:1 och GVK Säkra Våtrum",
+  slug: "nya-vatrumsregler-2026",
+  locale: "sv",
+  excerpt: "Rörmått, falltoleranser och våtzoner ändrades vid årsskiftet – här är vad BBV 26:1 och Säkra Våtrum 2026 betyder för dig som utför våtrumsjobbet, och hur du dokumenterar rätt.",
+  tag: "Regler",
+  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp",
+  contentHtml: VATRUM_HTML,
+  seoTitle: "Nya våtrumsregler 2026 (BBV) | ByggExp",
+  seoDescription: "BBV 26:1 och GVK Säkra Våtrum 2026: nya rörmått (60 mm), falltoleranser 7–30 mm/m och våtzoner. Så dokumenterar du utförandet med egenkontroll.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false,
+  isPublished: true,
+  publishedAt: "2026-08-18T09:30:00.000Z",
+  createdAt: "2026-08-18T09:30:00.000Z",
+  updatedAt: "2026-08-18T09:30:00.000Z",
+};
+
+
+const EFAKTURA_HTML = `
+<p>Du har säkert läst rubriker om att e-faktura blir obligatorisk och undrar om det gäller ditt lilla byggföretag redan nu. Kort svar: för de flesta hantverkare är det <strong>inte</strong> ett krav idag att skicka e-faktura till andra företag eller privatpersoner. Men reglerna är på väg att förändras, och det finns ett viktigt undantag du redan måste följa. Den här guiden reder ut vad som faktiskt gäller, vad Peppol och ViDA betyder, och hur tidslinjen 2026-2030 ser ut för dig som är hantverkare eller driver byggföretag.</p>
+
+<p>Vill du bara ha ordning på faktureringen här och nu? Börja med vår gratis <a href="/sv/verktyg/faktura-mall">fakturamall för hantverkare -&gt;</a> så har du en korrekt faktura klar på minuter.</p>
+
+<h2>Vad gäller idag - måste jag skicka e-faktura?</h2>
+<p>Per augusti 2026 finns det <strong>ingen generell skyldighet</strong> för ett svenskt byggföretag att skicka e-faktura till andra företag (B2B) eller till privatkunder. Du kan alltså fortsätta fakturera precis som vanligt mot din vanliga kundkrets - inklusive med PDF eller papper - utan att bryta mot någon lag.</p>
+<p>Det enda existerande lagkravet på e-faktura riktar sig mot den offentliga sektorn. Sedan den 1 april 2019 måste alla leverantörer till stat, kommun och region skicka strukturerade e-fakturor enligt den europeiska standarden EN 16931 (lag 2018:1277 om elektroniska fakturor till följd av offentlig upphandling). Om du utför jobb åt en kommun, en region eller en statlig myndighet omfattas du alltså redan idag - oavsett hur litet ditt företag är.</p>
+
+<h2>En PDF är inte en e-faktura</h2>
+<p>Här faller många hantverkare i en fälla. En PDF som du mejlar är <em>inte</em> en e-faktura i lagens mening, även om den ser prydlig ut. En riktig e-faktura är strukturerad, maskinläsbar data - oftast XML - i ett standardiserat format som mottagarens system läser in och bokför automatiskt. En skannad bild eller ett PDF-dokument räknas inte, eftersom en människa fortfarande måste tolka det.</p>
+<p>Det format som rekommenderas i Sverige heter <strong>Peppol BIS Billing 3</strong>. Tekniskt är det en anpassning (CIUS) av EN 16931-standarden. Peppol är samtidigt själva nätverket - infrastrukturen med accesspunkter - som fakturorna skickas genom mellan olika affärssystem. SFTI (SKR) rekommenderar Peppol BIS Billing 3 för att uppfylla lagkravet mot offentlig sektor.</p>
+
+<h2>ViDA - EU-reformen som ändrar spelplanen</h2>
+<p>Det som driver på utvecklingen är EU:s momspaket ViDA (VAT in the Digital Age), som formellt antogs av EU:s ministerråd den 11 mars 2025. ViDA innebär att e-faktura successivt blir standard för handel inom EU. För dig som hantverkare är två datum värda att känna till:</p>
+<ul>
+<li><strong>1 juli 2030:</strong> Gränsöverskridande B2B-handel mellan företag i olika EU-länder måste ske med strukturerad e-faktura enligt EN 16931, och rapporteras digitalt i nära realtid av både köpare och säljare. Kravet gäller alla momsregistrerade företag oavsett storlek - men bara vid handel över landsgränserna inom EU.</li>
+<li><strong>1 januari 2035:</strong> De medlemsländer som redan har ett inhemskt realtidsrapporteringssystem måste harmonisera det med EU:s gränsöverskridande system. Den deadlinen låg ursprungligen på 2028 men har flyttats fram till 2035.</li>
+</ul>
+<p>Notera skillnaden: 2030-kravet handlar om <em>gränsöverskridande</em> handel. Om du bygger altaner i Skövde och aldrig fakturerar en utländsk kund berörs du inte automatiskt av 2030-datumet.</p>
+
+<h2>Vad händer med rent svenska affärer?</h2>
+<p>Frågan de flesta byggföretag ställer är: kommer jag tvingas skicka e-faktura även för helt inhemska jobb, hantverkare till hantverkare i Sverige? Det är ännu inte lag. Trycket började med en gemensam hemställan 2023 från Skatteverket, Bolagsverket och Digg till regeringen. Skatteverket är officiellt positivt till obligatorisk transaktionsbaserad rapportering mellan företag, med motiveringen att det motverkar momskarusellbedrägerier, organiserad brottslighet och penningtvätt.</p>
+<p>Den 5 februari 2026 tillsatte regeringen en särskild utredare som ska analysera dels hur ViDA ska införas i svensk lag, dels <strong>om</strong> obligatorisk e-faktura och digital rapportering också ska gälla rent inhemska B2B-affärer. Utredningen ska lämna sitt betänkande senast den 30 november 2027. Ett eventuellt inhemskt krav skulle alltså komma först efter det - realistiskt sett i slutet av 2020-talet eller senare.</p>
+
+<h2>Tidslinjen för en hantverkare - en snabböversikt</h2>
+<ol>
+<li><strong>Idag (2026):</strong> E-faktura krävs bara när du fakturerar offentlig sektor. Övrig fakturering är fri.</li>
+<li><strong>1 juli 2030:</strong> E-faktura blir obligatorisk vid gränsöverskridande B2B-handel inom EU.</li>
+<li><strong>Efter 2027 års utredning:</strong> Ett eventuellt krav på e-faktura även för rent svenska B2B-affärer - inte beslutat ännu.</li>
+<li><strong>1 januari 2035:</strong> Full harmonisering av inhemska realtidssystem mot EU-systemet.</li>
+</ol>
+<p>Slutsats för de flesta små byggföretag: du behöver inte agera i panik, men det är klokt att lägga grunden nu så att övergången blir smärtfri när kravet kommer.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att hålla faktureringen strukturerad och korrekt oavsett vilket format kunden vill ha. Du skapar fakturor med rätt uppgifter - moms, ROT-avdrag på arbetskostnaden och, vid B2B mellan byggföretag, texten om omvänd byggmoms - och samlar all fakturahistorik på ett ställe. Eftersom svensk bokföringslag kräver att du sparar underlaget i sju år lagras dina fakturor ordnat och sökbart, vilket gör det enkelt att både följa reglerna idag och ställa om när e-fakturakrav träder i kraft. Vi lovar inte att lösa framtidens Peppol-krav åt dig i förväg, men vi ser till att din grunddata är i ordning den dagen det blir skarpt.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste mitt lilla byggföretag skicka e-faktura 2026?</h3>
+<p>Nej, inte generellt. Det enda kravet idag är att du måste skicka strukturerad e-faktura när du fakturerar en kommun, region eller statlig myndighet. Fakturerar du bara andra företag och privatpersoner finns inget lagkrav i augusti 2026.</p>
+
+<h3>Räcker det att jag mejlar en PDF-faktura?</h3>
+<p>Mot vanliga privat- och företagskunder, ja. Men en PDF räknas inte som e-faktura enligt lagen. Fakturerar du offentlig sektor måste du använda ett strukturerat format som Peppol BIS Billing 3 - en mejlad PDF uppfyller inte kravet.</p>
+
+<h3>Vad betyder ViDA för mig som hantverkare?</h3>
+<p>ViDA är EU:s momsreform. Den viktigaste konsekvensen för dig kommer 1 juli 2030, då e-faktura blir obligatorisk vid gränsöverskridande B2B-handel inom EU. Gör du bara jobb åt svenska kunder berörs du inte direkt av det datumet.</p>
+
+<h3>När blir e-faktura obligatorisk för svenska B2B-affärer?</h3>
+<p>Det är inte beslutat. En statlig utredning ska lämna sitt förslag senast 30 november 2027, och först därefter kan ett inhemskt krav bli aktuellt. Räkna med slutet av 2020-talet som tidigast.</p>
+
+<h2>Kom igång</h2>
+<p>Vänta inte tills kravet är skarpt - se till att din fakturering är korrekt och strukturerad redan nu. Skapa en professionell faktura med vår gratis <a href="/sv/verktyg/faktura-mall">fakturamall</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur ByggExp håller ordning på hela fakturaflödet åt dig.</p>
+
+<p>Relaterat: <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare - komplett guide</a> och <a href="/sv/blog/moms-hantverkare">Moms för hantverkare: så gör du rätt</a>.</p>
+`.trim();
+
+const EFAKTURA: BlogPost = {
+  _id: "code-e-faktura-obligatorisk-byggforetag",
+  title: "E-faktura obligatorisk 2026? Så gäller reglerna för ditt byggföretag",
+  slug: "e-faktura-obligatorisk-byggforetag",
+  locale: "sv",
+  excerpt: "Rubrikerna säger att e-faktura blir obligatorisk, men vad gäller egentligen för en liten hantverkare 2026? Här är läget, tidslinjen och vad du bör göra nu.",
+  tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/faktura-preview.webp",
+  contentHtml: EFAKTURA_HTML,
+  seoTitle: "E-faktura obligatorisk 2026? | ByggExp",
+  seoDescription: "Måste ditt lilla byggföretag skicka e-faktura 2026? Vi reder ut Peppol, ViDA och tidslinjen 2026-2030 för hantverkare - och vad som faktiskt gäller idag.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/faktura-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false,
+  isPublished: true,
+  publishedAt: "2026-08-18T10:00:00.000Z",
+  createdAt: "2026-08-18T10:00:00.000Z",
+  updatedAt: "2026-08-18T10:00:00.000Z",
+};
+
+
+const UVARDE_HTML = `
+<p>U-värdet avgör två saker på en gång: om konstruktionen godkänns i bygglovet och hur mycket isolering du behöver lägga in. Offererar du för tunt underkänns bygget mot BBR – offererar du för tjockt äter du upp din egen marginal. Att kunna räkna U-värde och baklänges bestämma isolertjocklek är därför ren yrkeskunskap, inte teori.</p>
+
+<p>Vill du hoppa över handräkningen kan du testa dig fram direkt i <a href="/sv/verktyg/isolering-kalkylator">vår gratis isolerkalkylator –&gt;</a> och se hur tjockleken påverkar U-värdet innan du skriver offerten.</p>
+
+<h2>Vad U-värde och lambda faktiskt betyder</h2>
+<p>Tre storheter styr allt. <strong>Lambda (λ, W/mK)</strong> är materialets värmekonduktivitet – ju lägre, desto bättre isolerar det. Mineralull ligger på 0,033–0,037, EPS-cellplast 0,031–0,038, PIR/PUR så lågt som 0,022–0,024. En träregel leder däremot värme betydligt sämre bort, med λ runt 0,14, vilket är själva anledningen till att reglar blir köldbryggor.</p>
+<p><strong>R (värmemotstånd, m²K/W)</strong> är hur mycket ett skikt bromsar värmen: R = d / λ, alltså tjocklek i meter delat med lambda. <strong>U-värdet (W/m²K)</strong> är slutligen U = 1 / R_tot. Lägre U-värde betyder bättre isolering. Den enda regel du aldrig får bryta: du adderar värmemotstånd (R) för skikt i serie – aldrig lambda-värden och aldrig U-värden.</p>
+
+<h2>Formeln steg för steg</h2>
+<p>Det totala värmemotståndet är summan av det inre värmeövergångsmotståndet, alla materialskikt och det yttre värmeövergångsmotståndet:</p>
+<p><strong>R_tot = Rsi + ΣR_skikt + Rse</strong></p>
+<p>Övergångsmotstånden är standardiserade i SS-EN ISO 6946 och beror på byggnadsdelens läge:</p>
+<ul>
+<li><strong>Yttervägg:</strong> Rsi = 0,13 och Rse = 0,04</li>
+<li><strong>Tak:</strong> Rsi = 0,10 och Rse = 0,04</li>
+<li><strong>Golv:</strong> Rsi = 0,17 och Rse = 0,04</li>
+</ul>
+<p>En viktig detalj: vid en väl ventilerad luftspalt sätts Rse till 0,13, och luftspalten samt fasadskiktet utanför räknas inte med alls – luften bakom en ventilerad fasad hjälper inte till att isolera.</p>
+
+<h2>Räkneexempel från verkligheten</h2>
+<p>Ta ett tak med 400 mm mineralull, λ = 0,037. Skiktets värmemotstånd blir R = 0,40 / 0,037 ≈ 10,8. Lägg till övergångsmotstånden så blir R_tot ≈ 11,0, och U = 1 / 11,0 ≈ <strong>0,091 W/m²K</strong>. Det klarar med god marginal riktvärdet för tak.</p>
+<p>Oftast vill du räkna åt andra hållet: <em>hur tjock isolering krävs för att nå ett mål-U?</em> Då löser du ut tjockleken:</p>
+<p><strong>d = λ × (1/U_mål − R_övrigt)</strong></p>
+<p>Säg att du siktar på U = 0,13 för samma takkonstruktion, med λ = 0,037 och övriga motstånd (Rsi + Rse + tunna skikt) på ca 0,14. Då blir d = 0,037 × (1/0,13 − 0,14) = 0,037 × (7,69 − 0,14) ≈ 0,279 m, alltså cirka <strong>280 mm mineralull</strong>. Där har du siffran som ska stå i offerten – inte en gissning, utan en beräkning du kan försvara.</p>
+
+<h2>BBR-kraven du måste klara 2026</h2>
+<p>Energikraven ligger på tre nivåer som gäller parallellt. Du behöver klara alla tre.</p>
+<ol>
+<li><strong>Primärenergital (BBR 30, tabell 9:2a):</strong> högst 90 kWh/m² Atemp och år för småhus, 75 för flerbostadshus och 70 för lokaler.</li>
+<li><strong>Genomsnittlig värmegenomgångskoefficient Um:</strong> det viktade medelvärdet för hela klimatskärmen får som mest vara 0,30 W/m²K för småhus (golvyta över 50 m²), 0,40 för flerbostadshus och 0,60 för lokaler. Um är den formella isoleringsgränsen – inte enskilda delars U-värde.</li>
+<li><strong>Riktvärden per byggnadsdel:</strong> vanligt citerade högsta U-värden för bostäder är yttervägg ≤ 0,18, tak ≤ 0,13, golv ≤ 0,15 och fönster/dörrar/portar ≤ 1,2 W/m²K. Detta är riktvärden för att nå Um-kravet, inte separata tvingande gränser.</li>
+</ol>
+<p>Kravet på primärenergital ersätter alltså inte U-värdeskraven – de gäller vid sidan av varandra.</p>
+
+<h2>Nya reglerna 1 juli 2026 – vad gäller?</h2>
+<p>Boverkets nya bygg- och konstruktionsregler gäller sedan 1 juli 2025. Under en övergångsperiod fram till 30 juni 2026 får byggherren välja mellan gamla BBR/EKS och det nya regelverket – men du får inte blanda dem i samma projekt. Från 1 juli 2026 kan BBR/EKS inte längre tillämpas i nya ärenden.</p>
+<p>Här finns en nyans som är lätt att missa: Boverket har ännu <strong>inte</strong> gett ut nya energihushållningsföreskrifter. Kraven på primärenergital, Um och U-värden regleras därför fortsatt i BBR även efter 1 juli 2026, tills nya energiföreskrifter träder i kraft – ett datum som ännu inte är fastställt. De aviserade skärpningarna innebär cirka 15–25 % lägre primärenergital jämfört med BBR 30 plus krav på lokal förnybar energiproduktion, men exakta sifferkrav var inte publicerade i föreskriftsform när detta skrevs. Kort sagt: räkna mot BBR idag, men lägg in marginal om projektet ska stå färdigt en bit in i framtiden.</p>
+
+<h2>Från U-värde till offert</h2>
+<p>Så här går du från beräkning till en tjocklek du kan sälja:</p>
+<ul>
+<li><strong>Utgå från U-målet</strong>, inte från en tjocklek du är van vid. Välj konstruktion efter kravet, inte tvärtom.</li>
+<li><strong>Räkna in köldbryggorna.</strong> Reglar med λ ≈ 0,14 sänker prestandan i en regelvägg – ett U-värde räknat på enbart isoleringen blir för optimistiskt.</li>
+<li><strong>Ta höjd för marginal.</strong> Lägg dig tydligt under riktvärdet så att en detaljändring på plats inte välter godkännandet.</li>
+<li><strong>Skriv U-värdet i offerten.</strong> Ett dokumenterat U-värde är ett säljargument mot kunden och ett bevis mot kontrollansvarig – använd det.</li>
+</ul>
+
+<h2>Vanliga misstag (checklista)</h2>
+<ul>
+<li>Glömda övergångsmotstånd Rsi och Rse – ger ett för lågt (för bra) U-värde på pappret.</li>
+<li>Att räkna på deklarerat lambda i stället för dimensionerande värde för fukt och montage.</li>
+<li>Köldbryggor via reglar och infästningar som aldrig kommer med i kalkylen.</li>
+<li>Att förväxla Um (medelvärdet för hela klimatskärmen) med en enskild byggnadsdels U-värde.</li>
+<li>Att blanda gamla BBR/EKS och de nya reglerna i samma projekt under övergångsperioden.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp kan du räkna isolertjocklek och U-värde med isolerkalkylatorn och sedan ta beräkningen vidare in i offerten, där materialåtgången landar i samma underlag. Du får ett spårbart U-värde att bifoga och en materiallista som följer med prissättningen – i stället för att räkna i ett löst kalkylark vid sidan om. Verktyget hjälper dig att jämföra tjocklekar snabbt, men det ersätter inte en fullständig energiberäkning för bygglovet; den delen står fortfarande projektörens beräkning för.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är ett bra U-värde för yttervägg och tak?</h3>
+<p>Som riktvärden för bostäder brukar man sikta på yttervägg ≤ 0,18 och tak ≤ 0,13 W/m²K. Det är riktvärden för att klara BBR:s krav på genomsnittligt Um, inte enskilda tvingande gränser – det formella kravet gäller hela klimatskärmens medelvärde.</p>
+<h3>Hur räknar jag ut hur tjock isolering jag behöver?</h3>
+<p>Lös ut tjockleken ur formeln: d = λ × (1/U_mål − R_övrigt). Sätt in lambda för materialet, ditt mål-U och summan av övriga värmemotstånd (övergångsmotstånd och tunna skikt). Resultatet är tjockleken i meter.</p>
+<h3>Kan jag lägga ihop U-värden för olika skikt?</h3>
+<p>Nej. Du adderar alltid värmemotstånd (R) för skikt i serie och räknar sedan U = 1/R_tot på slutet. Att addera U-värden eller lambda-värden ger fel resultat.</p>
+<h3>Gäller BBR:s energikrav fortfarande 2026?</h3>
+<p>Ja. Även om Boverkets nya byggregler gäller sedan 1 juli 2025 har inga nya energihushållningsföreskrifter getts ut ännu. Krav på primärenergital, Um och U-värden regleras därför fortsatt i BBR tills nya energiföreskrifter träder i kraft.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna igenom din konstruktion i <a href="/sv/verktyg/isolering-kalkylator">isolerkalkylatorn</a> och ta fram en tjocklek du kan stå för. Vill du se hur beräkning, materiallista och offert hänger ihop i praktiken kan du <a href="/sv/contact">boka en demo</a> så visar vi flödet från U-värde till färdig offert.</p>
+
+<p>Relaterat: <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget – så får du åtgången rätt</a>.</p>
+`.trim();
+
+const UVARDE: BlogPost = {
+  _id: "code-berakna-u-varde-isolering",
+  title: "Beräkna U-värde och isolertjocklek – så klarar du BBR-kraven och offererar rätt",
+  slug: "berakna-u-varde-isolering",
+  locale: "sv",
+  excerpt: "Lär dig räkna U-värde och isolertjocklek steg för steg – så klarar konstruktionen BBR-kraven utan att du överisolerar bort marginalen i offerten.",
+  tag: "Byggkalkyl",
+  coverImageUrl: "/landing/verktyg/isolering-preview.webp",
+  contentHtml: UVARDE_HTML,
+  seoTitle: "Beräkna U-värde isolering | ByggExp",
+  seoDescription: "Så räknar du ut U-värde och isolertjocklek för att klara BBR-kraven. Formel, räkneexempel och riktvärden för vägg, tak och golv 2026.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/isolering-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false,
+  isPublished: true,
+  publishedAt: "2026-08-18T10:30:00.000Z",
+  createdAt: "2026-08-18T10:30:00.000Z",
+  updatedAt: "2026-08-18T10:30:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    PASLAG,
+    VATRUM,
+    EFAKTURA,
+    UVARDE,
     MATERIALKALKYL,
     FAKTURA,
     TIDRAPPORTERING,

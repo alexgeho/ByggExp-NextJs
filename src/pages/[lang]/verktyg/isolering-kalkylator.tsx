@@ -125,6 +125,7 @@ export default function Page() {
         }}
         relatedHeading="Fler byggkalkylatorer"
         related={[
+          { href: `/${LOCALE}/blog/berakna-u-varde-isolering`, label: 'Guide: beräkna U-värde' },
           { href: `/${LOCALE}/verktyg/reglar-kalkylator`, label: 'Reglar & virke' },
           { href: `/${LOCALE}/verktyg/gips-kalkylator`, label: 'Gipsberäknare' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },

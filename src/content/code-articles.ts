@@ -4027,9 +4027,635 @@ const A_KVARTSDAMM_REGLER_BYGG: BlogPost = {
   publishedAt: "2026-08-18T18:27:00.000Z", createdAt: "2026-08-18T18:27:00.000Z", updatedAt: "2026-08-18T18:27:00.000Z",
 };
 
+const A_ENTREPRENADKONTRAKT_MALL_HTML = `
+<p>Varje år förlorar byggföretag pengar på arbeten de faktiskt utfört – inte för att jobbet var dåligt, utan för att avtalet var svagt eller muntligt. När beställaren bestrider en faktura eller påstår att något var fel är det avtalstexten som avgör, inte vad ni kom överens om över telefon. Ett muntligt avtal är giltigt, men i praktiken näst intill omöjligt att bevisa. Den här guiden går igenom vad ett entreprenadkontrakt måste innehålla för att hålla vid tvist – och ger dig en <strong>entreprenadkontrakt mall gratis</strong> som du kan fylla i och skicka samma dag.</p>
+
+<p>Vill du komma igång direkt kan du bygga ett bindande avtal från offert till underskrift med <a href="/sv/verktyg/offert-mall">vår gratis offert- och avtalsmall -&gt;</a>.</p>
+
+<h2>Vad är ett entreprenadkontrakt – och varför räcker inte offerten?</h2>
+<p>Många hantverkare blandar ihop offert, beställning och kontrakt. En offert är ett anbud – ett erbjudande om pris och omfattning. Först när beställaren accepterar uppstår ett bindande avtal, men en accepterad offert reglerar sällan tidplan, betalning, ÄTA eller garanti. Det är där kontraktet kommer in: det samlar alla villkor på ett ställe och blir det dokument en domstol eller besiktningsman läser om det uppstår en konflikt.</p>
+<p>Ett skriftligt avtal är alltid att föredra av bevisskäl. Vid tvist är det avtalstexten och uppdragsbeskrivningen som avgör vad som räknas som fel eller avtalsbrott. Muntliga avtal gäller juridiskt, men ord mot ord vinner sällan i en förhandling. Skriv ner det, låt båda parter signera, och du har flyttat övertaget till din sida.</p>
+
+<h2>Utförandeentreprenad (AB 04) eller totalentreprenad (ABT 06)?</h2>
+<p>De svenska standardavtalen inom entreprenad ges ut av BKK, Byggandets Kontraktskommitté. De är väl förankrade och används i princip uteslutande mellan näringsidkare i både offentliga och privata projekt. Vilket avtal du hänvisar till i kontraktet styr vem som bär risken.</p>
+<p><strong>AB 04</strong> används vid utförandeentreprenad: beställaren står för projekteringen och du som entreprenör utför arbetet enligt beställarens handlingar. <strong>ABT 06</strong> används vid totalentreprenad: du ansvarar för både projektering – helt eller till väsentlig del – och utförande. Det ger beställaren en enda kontaktpunkt och ett samlat funktionsansvar, men lägger också mer risk på dig. Vid sidan av dessa finns ABK 09 för konsultuppdrag och ABM 07 för materialleveranser. Poängen: skriv uttryckligen i kontraktet vilket standardavtal som gäller, annars uppstår osäkerhet om vad som avtalats. Läs mer i vår guide om <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06</a>.</p>
+
+<h2>Konsument eller näringsidkare – helt olika spelregler</h2>
+<p>Innan du väljer mall måste du veta vem du bygger åt. Mellan näringsidkare råder avtalsfrihet, och AB 04 eller ABT 06 gäller det ni skriver. Men vid entreprenad åt konsument gäller konsumenttjänstlagen tvingande till konsumentens förmån. Avtalsvillkor som ger konsumenten sämre skydd än lagen är utan verkan – de blir helt enkelt ogiltiga, oavsett vad ni skrivit under.</p>
+<p>Använder du fel mall kan alltså dina klausuler bli verkningslösa i efterhand. För konsumententreprenad finns färdiga standardformulär framtagna gemensamt av bland andra Konsumentverket och byggbranschen: <strong>ABS 18</strong> för ny- och tillbyggnad av småhus, och <strong>Hantverkarformuläret 17</strong> för mindre arbeten och ombyggnad. Vi har en separat genomgång av <a href="/sv/blog/abs-18-hantverkarformularet-17">ABS 18 och Hantverkarformuläret 17</a>. Ta reda på vem motparten är först – det avgör vilket dokument som faktiskt håller.</p>
+
+<h2>Det här måste kontraktet innehålla för att hålla vid tvist</h2>
+<p>Ett giltigt skriftligt entreprenadkontrakt bör alltid täcka följande punkter. Saknas någon av dem är det oftast just den luckan motparten utnyttjar:</p>
+<ul>
+<li><strong>Parter och org.nr</strong> – vem beställer och vem utför, med fullständiga uppgifter.</li>
+<li><strong>Arbetsomfattning</strong> – vad som ingår och, minst lika viktigt, vad som uttryckligen exkluderas.</li>
+<li><strong>Prismodell</strong> – fast pris, löpande räkning eller takpris. Ange vilket, och vad som händer om ramen överskrids.</li>
+<li><strong>Betalplan</strong> – delbetalningar kopplade till avstämda etapper i stället för en klumpsumma på slutet.</li>
+<li><strong>Tidplan och vite</strong> – start- och sluttider samt vilket vite som utgår vid försening.</li>
+<li><strong>ÄTA-hantering</strong> – att ändrings-, tilläggs- och avgående arbeten ska beställas skriftligt innan de utförs.</li>
+<li><strong>Besiktning</strong> – hur och när slutbesiktning sker.</li>
+<li><strong>Garanti- och ansvarstid</strong> – vad som gäller efter godkänd besiktning.</li>
+<li><strong>Försäkring</strong> – att entreprenören har giltig ansvarsförsäkring.</li>
+<li><strong>Hävning</strong> – under vilka förutsättningar avtalet får hävas.</li>
+</ul>
+
+<h2>Garantitid, ansvarstid och besiktning – siffrorna du inte får missa</h2>
+<p>I AB 04 och ABT 06 är garantitiden 5 år för entreprenörens arbetsprestation och 2 år för material och varor som beställaren föreskrivit. Ansvarstiden är totalt 10 år från godkänd slutbesiktning (garantitiden ingår i den – den läggs inte till utöver de 10 åren) – under den tiden svarar du för väsentliga fel som orsakats av vårdslöshet. Slutbesiktningen är alltså startpunkten som räknar ner alla frister, vilket gör den till en av de viktigaste händelserna i projektet att dokumentera.</p>
+<p>För konsumententreprenader gäller andra frister. Reklamationstiden enligt konsumenttjänstlagen är skälig tid, dock senast 3 år efter att uppdraget avslutats – men hela 10 år för arbete på mark, byggnader eller andra fasta anläggningar. Ett kontrakt som inte speglar rätt frister för rätt motpart ger dig falsk trygghet.</p>
+
+<h2>ÄTA-arbeten: vanligaste orsaken till att du inte får betalt</h2>
+<p>ÄTA-arbeten – ändrings-, tilläggs- och avgående arbeten – är en av de absolut vanligaste tvistefrågorna i branschen. Enligt AB och ABT ska ÄTA beställas och regleras skriftligt. Gör du merarbete på muntlig begäran riskerar du att stå utan betalt när fakturan bestrids. Regeln är enkel: kräv skriftlig beställning innan du utför tilläggsarbetet, och dokumentera löpande. En rad i ett mejl räcker långt jämfört med ett handslag. Fördjupa dig i <a href="/sv/blog/ata-arbeten">ÄTA-arbeten och hur du säkrar betalt</a>.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du kontraktet direkt ur offerten så att omfattning, pris och villkor följer med hela vägen till underskrift – du behöver inte skriva av samma uppgifter tre gånger. Mallen är anpassad för svenska förhållanden 2026 och innehåller fälten för parter, prismodell, tidplan, ÄTA och garanti som guiden ovan går igenom. Du fyller i formuläret och får ut en färdig PDF att signera. ByggExp ger dig strukturen och dokumentet – vid en verklig tvist bör du alltid stämma av det specifika ärendet med en jurist.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är en muntlig entreprenad giltig?</h3>
+<p>Ja, ett muntligt avtal är juridiskt bindande. Problemet är bevisningen: vid tvist är det avtalstexten som avgör vad som gäller, och muntliga överenskommelser är mycket svåra att styrka. Skriv därför alltid ner avtalet.</p>
+<h3>Måste jag använda AB 04 eller ABT 06?</h3>
+<p>Nej, det finns ingen lag som tvingar fram dem, men mellan näringsidkare används de i princip uteslutande eftersom de är väl förankrade och förutsägbara. Ange tydligt i kontraktet vilket standardavtal som gäller. Åt konsument använder du i stället ABS 18 eller Hantverkarformuläret 17.</p>
+<h3>Vad kostar det att inte ha skriftligt avtal?</h3>
+<p>Ofta hela merarbetet. Utan skriftlig ÄTA-beställning eller tydlig omfattning riskerar du att inte få betalt för utfört arbete, och en tvist tar tid och resurser oavsett utgång. Ett par minuter på ett kontrakt är billig försäkring.</p>
+<h3>Vilken prismodell bör jag välja?</h3>
+<p>Det beror på projektet. Fast pris ger beställaren förutsägbarhet men lägger risken på dig, löpande räkning flyttar risken till beställaren, och takpris är en kompromiss. Oavsett vilket ska modellen framgå uttryckligen i kontraktet.</p>
+
+<h2>Kom igång</h2>
+<p>Skapa ett bindande entreprenadkontrakt på några minuter med <a href="/sv/verktyg/offert-mall">vår gratis offert- och avtalsmall</a>, eller utforska alla <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur kontrakt, offert och fakturering hänger ihop i ett flöde kan du <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06</a>, <a href="/sv/blog/abs-18-hantverkarformularet-17">ABS 18 och Hantverkarformuläret 17</a>, <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a>.</p>
+`;
+
+const A_ENTREPRENADKONTRAKT_MALL: BlogPost = {
+  _id: "code-"+"entreprenadkontrakt-mall",
+  title: "Entreprenadkontrakt mall gratis – så håller avtalet vid tvist", slug: "entreprenadkontrakt-mall", locale: "sv",
+  excerpt: "En färdig entreprenadkontrakt-mall och en genomgång av vad avtalet måste innehålla för att hålla vid tvist – från prismodell och ÄTA till garanti- och ansvarstid.", tag: "Juridik",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_ENTREPRENADKONTRAKT_MALL_HTML,
+  seoTitle: "Entreprenadkontrakt mall gratis | ByggExp", seoDescription: "Ladda ner en gratis entreprenadkontrakt-mall som håller vid tvist. Se skillnaden på AB 04 och ABT 06, garantitider och vad kontraktet måste innehålla 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:30:00.000Z", createdAt: "2026-08-18T18:30:00.000Z", updatedAt: "2026-08-18T18:30:00.000Z",
+};
+
+const A_KONTROLLPLAN_MALL_BYGGLOV_HTML = `
+<p>De flesta åtgärder som kräver bygglov eller anmälan kräver också en kontrollplan – nybyggnad, tillbyggnad, fasadändring, rivning och installation av eldstad, för att nämna några. Det är byggherren (fastighetsägaren) som enligt lag ansvarar för att en kontrollplan finns, inte kommunen. Den goda nyheten för dig som hantverkare: för enkla ärenden krävs ingen kontrollansvarig, och då kan du skriva kontrollplanen själv åt kunden. Det sparar KA-arvode och gör dig till en mer komplett leverantör. Utmaningen är att många mallar på nätet är gamla och vaga – och en generisk plan blir underkänd av byggnadsnämnden.</p>
+
+<p>Med <a href="/sv/verktyg/egenkontroll-mall">vår gratis mall för egenkontroll och kontrollplan →</a> fyller du i uppgifterna och får en PBL-korrekt kontrollplan som PDF på minuter – klar att lämna in med bygglovsansökan.</p>
+
+<h2>Vad är en kontrollplan – och vad kräver PBL?</h2>
+<p>En kontrollplan är en kvalitetssäkrings-checklista för bygget. Den beskriver vad som ska kontrolleras, hur det ska ske och vem som ansvarar. Enligt plan- och bygglagen (PBL 10 kap.) ska en kontrollplan innehålla fyra saker:</p>
+<ul>
+<li><strong>Vilka kontroller som ska göras</strong> och mot vilka krav de kontrolleras (till exempel Boverkets byggregler, Eurokoderna, det beviljade bygglovet och ritningarna).</li>
+<li><strong>Vem som utför varje kontroll och hur</strong> den genomförs.</li>
+<li><strong>Vilka anmälningar</strong> som ska göras till byggnadsnämnden under arbetets gång.</li>
+<li><strong>Vilka arbetsplatsbesök</strong> byggnadsnämnden bör göra och när.</li>
+</ul>
+<p>Varje kontroll ska dessutom dokumenteras och signeras. Godtagbar dokumentation är till exempel besiktningsprotokoll, kontrollintyg, provningsintyg, mätprotokoll och foton – och den ska verifieras med en signatur av den person som kontrollerat att kravet är uppfyllt. Kontrollplanen ska också ange i vilken omfattning varje kontroll görs som byggherrens dokumenterade egenkontroll eller av en sakkunnig.</p>
+
+<h2>När behöver du INTE en kontrollansvarig?</h2>
+<p>En kontrollansvarig (KA) krävs inte för enklare åtgärder. Det gäller exempelvis mindre tillbyggnader, attefallshus och byte av takbeklädnad. I dessa enkla ärenden skriver byggherren – eller den anlitade hantverkaren – kontrollplanen själv. Kommunerna kallar det ofta en <strong>enkel kontrollplan enligt PBL 10 kap. 6–8 §§</strong>.</p>
+<p>För dig som hantverkare betyder det en konkret möjlighet. I stället för att kunden ska anlita en KA för ett enkelt jobb kan du leverera en korrekt kontrollplan som en del av uppdraget. Det höjer värdet på din offert och gör hela processen smidigare mot kommunen. Kravet är att planen faktiskt är anpassad till projektet – inte en tom standardmall. Fyll i <a href="/sv/verktyg/egenkontroll-mall">mallen och ladda ner planen som PDF →</a> med kontrollpunkter som passar just den åtgärd du utför.</p>
+
+<h2>Nytt 2026: kontrollplan och avfallshanteringsplan är nu två dokument</h2>
+<p>Från och med 1 juli 2026 har reglerna ändrats på en viktig punkt. Den gamla kontrollplanen har delats upp i två separata dokument: en <strong>kontrollplan</strong> och en fristående <strong>avfallshanteringsplan</strong>. Avfallshantering är alltså inte längre en sektion inuti kontrollplanen, utan ett eget dokument.</p>
+<p>Reformen 2026 innebär också att vissa åtgärder får <strong>obligatorisk sakkunnigkontroll</strong>, och att byggnadsnämnden får ett nytt verktyg – <strong>kontrollföreläggande</strong> – för att kunna förelägga att kontroller genomförs. Det här är själva anledningen till att äldre mallar på nätet är föråldrade: de har fortfarande avfallshanteringen inbakad i kontrollplanen. Använd en uppdaterad mall så att du inte lämnar in en plan enligt gammalt regelverk.</p>
+
+<h2>Så fyller du i kontrollplanen steg för steg</h2>
+<p>En bra kontrollplan är byggd som en tabell med tydliga kolumner. För varje rad anger du:</p>
+<ol>
+<li><strong>Kontrollpunkt</strong> – vad som kontrolleras (till exempel grundläggning, fuktskydd, bärande konstruktion, brandskydd).</li>
+<li><strong>Hur kontrolleras</strong> – metod, exempelvis okulär kontroll, mätning eller provning.</li>
+<li><strong>Mot vilket krav</strong> – BBR, EKS/Eurokod, bygglovet eller ritningen.</li>
+<li><strong>Vem</strong> – egenkontroll av byggherren/entreprenören eller sakkunnigkontroll.</li>
+<li><strong>Resultat och signatur</strong> – utfallet och underskrift av den som kontrollerat.</li>
+</ol>
+<p>Så här kan några rader se ut för en typisk tillbyggnad:</p>
+<ul>
+<li><strong>Grundläggning</strong> – okulär kontroll och mätning mot konstruktionsritning (EKS) – egenkontroll – signatur.</li>
+<li><strong>Fuktskydd mot mark</strong> – okulär kontroll mot BBR och ritning – egenkontroll – signatur.</li>
+<li><strong>Bärande stomme</strong> – kontroll mot konstruktionsritning och EKS – egenkontroll eller sakkunnig beroende på risk – signatur.</li>
+<li><strong>Lufttäthet och isolering</strong> – kontroll mot BBR – egenkontroll – signatur.</li>
+</ul>
+<p>Riskbedömningen avgör om en punkt kräver sakkunnigkontroll i stället för egenkontroll. Särskild hänsyn tas till risken för allvarlig personskada eller störning för samhälle och miljö om kravet inte uppfylls. Ta bara med kontrollpunkter som är relevanta för det aktuella projektet – vaga och generiska planer är den vanligaste orsaken till kompletteringskrav.</p>
+
+<h2>Från ansökan till slutbesked – processen</h2>
+<p>Ett förslag till kontrollplan ska lämnas in redan tillsammans med bygglovsansökan eller anmälan. Byggnadsnämnden fastställer sedan kontrollplanen i startbeskedet. Arbetet får inte påbörjas innan startbesked har utfärdats – att börja bygga för tidigt kan utlösa en byggsanktionsavgift.</p>
+<p>När bygget är klart lämnar du in de dokumenterade och signerade kontrollerna till byggnadsnämnden. Slutbesked – tillståndet att ta byggnaden i bruk – förutsätter att den fastställda kontrollplanen har följts och att dokumentationen är komplett. Att flytta in eller ta byggnaden i bruk utan slutbesked kan också leda till sanktionsavgift.</p>
+
+<h2>Vanliga misstag hantverkare gör</h2>
+<ul>
+<li>Använder en generisk mall med kontrollpunkter som inte passar projektet.</li>
+<li>Skriver vaga punkter där det inte framgår vad, hur eller mot vilket krav.</li>
+<li>Glömmer att signera och dokumentera varje utförd kontroll.</li>
+<li>Lägger avfallshanteringen i kontrollplanen i stället för i den separata avfallshanteringsplanen (nytt krav 2026).</li>
+<li>Påbörjar arbetet innan startbesked – och riskerar byggsanktionsavgift.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp fyller du i uppgifterna om åtgärden och får en strukturerad kontrollplan med rätt kolumner – kontrollpunkt, metod, krav, ansvarig och signatur. Mallen är uppdaterad efter 2026 års regler, så avfallshanteringen hålls som ett eget dokument och du slipper föråldrade nätmallar. Resultatet blir en färdig PDF som du kan lämna till kunden eller kommunen. Verktyget ersätter inte en kontrollansvarig där en KA krävs, men för enkla ärenden ger det dig en korrekt grund att utgå från. Du hittar det tillsammans med våra övriga <a href="/sv/verktyg">gratis verktyg för hantverkare</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag anlita en kontrollansvarig?</h3>
+<p>Nej, inte för enkla åtgärder som mindre tillbyggnader, attefallshus och byte av takbeklädnad. Då kan byggherren eller den anlitade hantverkaren skriva en enkel kontrollplan själv enligt PBL 10 kap. 6–8 §§. För större och mer komplexa projekt krävs en KA.</p>
+<h3>När ska kontrollplanen lämnas in?</h3>
+<p>Ett förslag till kontrollplan ska lämnas in redan med bygglovsansökan eller anmälan. Byggnadsnämnden fastställer planen i startbeskedet, och arbetet får inte påbörjas innan startbesked har utfärdats.</p>
+<h3>Vad är skillnaden efter regeländringen 2026?</h3>
+<p>Sedan 1 juli 2026 delas den gamla kontrollplanen upp i två dokument: en kontrollplan och en separat avfallshanteringsplan. Dessutom införs obligatorisk sakkunnigkontroll för vissa åtgärder och ett nytt kontrollföreläggande för byggnadsnämnden.</p>
+<h3>Vad händer om jag saknar kontrollplan eller startbesked?</h3>
+<p>Slutbesked förutsätter att den fastställda kontrollplanen följts och att dokumenterade, signerade kontroller lämnats in. Att påbörja bygget utan startbesked eller ta byggnaden i bruk utan slutbesked kan utlösa en byggsanktionsavgift.</p>
+
+<h2>Kom igång</h2>
+<p>Skapa en PBL-korrekt kontrollplan direkt: den är anpassad efter 2026 års regler, kräver ingen kontrollansvarig för enkla ärenden och du får en färdig PDF att lämna till kommunen. Testa <a href="/sv/verktyg/egenkontroll-mall">vår mall för egenkontroll och kontrollplan →</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du får med kontrolldokumentationen i hela projektflödet.</p>
+
+<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt – så dokumenterar du rätt</a> och <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – när krävs den och vad ska ingå</a>.</p>
+`;
+
+const A_KONTROLLPLAN_MALL_BYGGLOV: BlogPost = {
+  _id: "code-"+"kontrollplan-mall-bygglov",
+  title: "Kontrollplan för bygglov – så gör du den själv (mall + PDF)", slug: "kontrollplan-mall-bygglov", locale: "sv",
+  excerpt: "De flesta bygglov och anmälningar kräver en kontrollplan enligt PBL – för enkla ärenden kan du som hantverkare skriva den själv och lämna en färdig PDF till kommunen.", tag: "Bygglov",
+  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_KONTROLLPLAN_MALL_BYGGLOV_HTML,
+  seoTitle: "Kontrollplan mall bygglov | ByggExp", seoDescription: "De flesta bygglov kräver en kontrollplan enligt PBL. För enkla ärenden skriver du den själv – utan kontrollansvarig. Mall som ger en klar PDF till kommunen.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:33:00.000Z", createdAt: "2026-08-18T18:33:00.000Z", updatedAt: "2026-08-18T18:33:00.000Z",
+};
+
+const A_DROJSMALSRANTA_2026_HTML = `
+<p>En obetald faktura är inget du bara ska vänta ut. Som byggföretag har du enligt räntelagen rätt att ta ut dröjsmålsränta på sena betalningar – och för 2026 är den lagstadgade räntan 10,00 % per år. Räknat på ett par större byggfakturor blir det snabbt tusenlappar som du har rätt till, plus fasta avgifter för besväret. Här går vi igenom exakt hur du räknar, när du får ta ut räntan och hur du driver in pengarna.</p>
+
+<p>Vill du komma igång direkt lägger du in korrekta betalningsvillkor och förfallodag redan när fakturan skapas – testa vår gratis <a href="/sv/verktyg/faktura-mall">fakturamall för byggföretag -&gt;</a> så att räntan börjar löpa automatiskt när kunden är sen.</p>
+
+<h2>Snabbsvar: dröjsmålsränta 2026</h2>
+<p><strong>Dröjsmålsräntan 2026 är 10,00 % per år.</strong> Den består av referensräntan 2,00 % plus 8 procentenheter enligt räntelagen (1975:635) 6 §. Siffran gäller hela 2026 – både första och andra halvåret – eftersom referensräntan ligger kvar på 2,00 % vid båda fastställelsetillfällena.</p>
+
+<h2>Vad är dröjsmålsränta och referensränta?</h2>
+<p>Dröjsmålsränta är den ränta du får ta ut när en kund betalar för sent. Grunden finns i räntelagen (1975:635). Enligt 6 § är den lagstadgade dröjsmålsräntan referensräntan enligt 9 § plus åtta procentenheter, om inget annat har avtalats.</p>
+<p>Referensräntan sätts av Riksbanken två gånger per år, den 1 januari och den 1 juli. Den motsvarar styrräntan vid utgången av föregående halvår, avrundad uppåt till närmast högre halva procentenhet. Just nu har styrräntan legat på 1,75 % sedan oktober 2025, vilket avrundas upp till en referensränta på 2,00 % för hela 2026.</p>
+<p>Blanda inte ihop dröjsmålsräntan med avkastningsränta. Avkastningsränta enligt 5 § (ränta innan en fordran förfallit) är referensräntan plus 2 procentenheter, alltså 4,00 % för 2026. Det är dröjsmålsräntan på 10,00 % du använder mot en sen kund.</p>
+
+<h2>Dröjsmålsränta 2026 – och de senaste årens siffror</h2>
+<p>Referensräntan har fallit de senaste åren, vilket också sänkt dröjsmålsräntan. Så här ser utvecklingen ut:</p>
+<ul>
+<li><strong>2024:</strong> referensränta 4,00 % → dröjsmålsränta 12,00 %</li>
+<li><strong>H1 2025:</strong> referensränta 3,00 % → dröjsmålsränta 11,00 %</li>
+<li><strong>H2 2025 och hela 2026:</strong> referensränta 2,00 % → dröjsmålsränta 10,00 %</li>
+</ul>
+<p>Att räntan är oförändrad båda halvåren 2026 gör din administration enklare: du använder samma räntesats, 10,00 %, oavsett om kunden blir sen i mars eller i november.</p>
+
+<h2>När får du som byggföretag ta ut dröjsmålsränta?</h2>
+<p>Mellan näringsidkare (B2B) gäller tydliga regler:</p>
+<ul>
+<li><strong>Avtalad förfallodag:</strong> har ni kommit överens om en förfallodag i förväg löper dröjsmålsräntan från den dagen (3 §).</li>
+<li><strong>Ingen avtalad förfallodag:</strong> då får du ta ut ränta från 30 dagar efter att fakturan eller kravet skickades (4 §).</li>
+<li><strong>Behöver inte stå på fakturan:</strong> mellan företag har du rätt till dröjsmålsränta även om det inte uttryckligen står angivet på fakturan att ränta tas ut.</li>
+</ul>
+<p>En vara eller tjänst ska enligt 2 a § betalas senast 30 dagar efter krav. Längre betalningstid mellan företag gäller bara om du som borgenär uttryckligen har godkänt det – avtalsvillkor som inskränker den rätten är utan verkan. Har du en myndighet eller offentlig aktör som kund gäller alltid 30 dagar.</p>
+
+<h2>Så räknar du ut dröjsmålsräntan</h2>
+<p>Formeln är enkel ränta, inte ränta-på-ränta:</p>
+<p><strong>Dröjsmålsränta (kr) = fakturabelopp × (räntesats / 100) × (förseningsdagar / 365)</strong></p>
+<p>Räntan beräknas på hela fakturabeloppet inklusive moms. Ett konkret exempel för 2026:</p>
+<ul>
+<li>Byggfaktura: 50 000 kr inkl. moms</li>
+<li>Försening: 30 dagar</li>
+<li>Räntesats: 10,00 %</li>
+<li>Beräkning: 50 000 × 0,10 × 30/365 ≈ <strong>411 kr</strong></li>
+</ul>
+<p>Till detta lägger du 450 kr i förseningsersättning (se nedan). Kunden ska alltså betala cirka 861 kr utöver själva fakturabeloppet – och räntan fortsätter att ticka för varje dag betalningen dröjer.</p>
+
+<h2>Utöver räntan – ta betalt för besväret</h2>
+<p>Vid B2B-dröjsmål har du enligt lagen om ersättning för inkassokostnader (1981:739) automatiskt rätt till ersättning, helt utan påminnelse:</p>
+<ul>
+<li><strong>Förseningsersättning: 450 kr</strong> – automatiskt vid näringsidkares dröjsmål, ingen påminnelse krävs.</li>
+<li>Betalningspåminnelse: högst 60 kr</li>
+<li>Inkassokrav: 180 kr</li>
+<li>Upprättande av amorteringsplan: 170 kr</li>
+</ul>
+<p>De 450 kronorna är särskilt värda att komma ihåg – många hantverkare missar dem helt trots att de utgår automatiskt.</p>
+
+<h2>Kan du avtala om en högre ränta?</h2>
+<p>Räntelagen är dispositiv mellan företag (1 §). Det betyder att du och din B2B-kund får avtala om en högre eller annan dröjsmålsränta än den lagstadgade. Standardavtal som AB 04 och ABT 06 hänvisar ofta till räntelagen och har egna betalningsvillkor – läs kontraktet innan du fakturerar så att du använder rätt sats.</p>
+<p>Mot en privatperson gäller andra regler. Mot konsument är räntelagen tvingande till konsumentens förmån (8 §), och villkor som är till konsumentens nackdel är utan verkan. Du kan alltså inte avtala bort konsumentens skydd på samma sätt som mellan företag.</p>
+
+<h2>Driva in en obetald faktura – steg för steg</h2>
+<p>När en kund inte betalar i tid följer du en tydlig trappa:</p>
+<ol>
+<li><strong>Tydlig faktura:</strong> se till att förfallodag, betalningsvillkor och att dröjsmålsränta tas ut framgår redan från början.</li>
+<li><strong>Betalningspåminnelse:</strong> skicka en påminnelse när förfallodagen passerats, med den upplupna räntan och påminnelseavgiften.</li>
+<li><strong>Inkassokrav:</strong> går det fortfarande inte att få betalt skickar du (eller ett inkassobolag) ett inkassokrav.</li>
+<li><strong>Betalningsföreläggande:</strong> som sista steg ansöker du om betalningsföreläggande hos Kronofogden.</li>
+</ol>
+<p>Tips: dokumentera allt. Med rätt underlag – avtal, faktura, förfallodag och tidsstämplade påminnelser – står du starkt hela vägen till Kronofogden.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li>Att glömma de 450 kronorna i förseningsersättning som utgår automatiskt.</li>
+<li>Att tro att räntan bara får tas ut om den står tryckt på fakturan – mellan företag gäller den ändå.</li>
+<li>Att räkna ränta-på-ränta – dröjsmålsränta är enkel ränta.</li>
+<li>Att räkna på beloppet exklusive moms – räntan beräknas på hela summan inkl. moms.</li>
+<li>Att acceptera 60 eller 90 dagars betalningstid utan att uttryckligen ha godkänt det.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du fakturan med förfallodag och betalningsvillkor direkt, så att underlaget för dröjsmålsränta finns på plats från dag ett. Du har koll på vilka fakturor som passerat förfallodagen och kan agera i tid i stället för att upptäcka det månader senare. Systemet ersätter inte ett inkassobolag eller juridisk rådgivning – men det ger dig ordning på fakturor, förfallodagar och dokumentation, vilket är precis det du behöver för att kunna kräva rätt ränta och driva in obetalda pengar.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är dröjsmålsräntan 2026?</h3>
+<p>Den lagstadgade dröjsmålsräntan för 2026 är 10,00 % per år. Den utgörs av referensräntan 2,00 % plus 8 procentenheter enligt räntelagen 6 §, och gäller hela året.</p>
+<h3>Måste dröjsmålsränta stå på fakturan?</h3>
+<p>Nej. Mellan företag (B2B) har du rätt till dröjsmålsränta även om det inte står angivet på fakturan att ränta tas ut. Räntan löper från avtalad förfallodag, eller annars 30 dagar efter att kravet skickats.</p>
+<h3>Hur räknar man ut dröjsmålsränta?</h3>
+<p>Använd formeln fakturabelopp × (räntesats / 100) × (förseningsdagar / 365). Det är enkel ränta och beräknas på hela beloppet inklusive moms. Exempel: 50 000 kr, 30 dagar sent, 10 % ≈ 411 kr.</p>
+<h3>Får jag ta ut 450 kr förseningsersättning?</h3>
+<p>Ja. Vid dröjsmål mellan företag har du automatiskt rätt till 450 kr i förseningsersättning enligt lagen om ersättning för inkassokostnader (1981:739), utan att först behöva skicka en påminnelse.</p>
+
+<h2>Kom igång</h2>
+<p>Skapa fakturor med rätt förfallodag och betalningsvillkor från start med vår <a href="/sv/verktyg/faktura-mall">gratis fakturamall</a>, och utforska fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur ByggExp hjälper dig hålla koll på förfallna fakturor? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a> och <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturor</a>.</p>
+`;
+
+const A_DROJSMALSRANTA_2026: BlogPost = {
+  _id: "code-"+"drojsmalsranta-2026",
+  title: "Dröjsmålsränta 2026 för byggföretag – räkna rätt och få betalt", slug: "drojsmalsranta-2026", locale: "sv",
+  excerpt: "Dröjsmålsräntan 2026 är 10,00 % – så räknar du rätt enligt räntelagen, lägger på förseningsersättning och driver in obetalda byggfakturor.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/8fakturor.webp", contentHtml: A_DROJSMALSRANTA_2026_HTML,
+  seoTitle: "Dröjsmålsränta 2026 för bygg | ByggExp", seoDescription: "Dröjsmålsränta 2026 är 10,00 % (referensränta 2,00 % + 8 p.e.). Så räknar byggföretag rätt, tar ut 450 kr förseningsersättning och driver in obetalda fakturor.",
+  seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:36:00.000Z", createdAt: "2026-08-18T18:36:00.000Z", updatedAt: "2026-08-18T18:36:00.000Z",
+};
+
+const A_SPILLPROCENT_BYGG_MATERIAL_HTML = `
+<p>En materialkalkyl som utgår från den nettomängd du mäter upp på ritningen blir nästan alltid för låg. Verkligheten kapar, spräcker och slösar — och glömmer du spillet i offerten ser jobbet billigare ut på papperet än det blir på bygget. Skillnaden hamnar rakt i din marginal, eller som en tråkig efterbeställning mitt i etappen. Rätt spillprocent per material är därför ingen gissning, utan en kalkylpost du ska ha koll på innan du prissätter.</p>
+
+<p>Vill du räkna snabbt och rätt kan du använda <a href="/sv/verktyg/betong-kalkylator">vår gratis betongkalkylator</a>, som redan har ett spillpåslag inbyggt så att du får inköpsmängden — inte bara den teoretiska nettovolymen.</p>
+
+<h2>Spillprocent och spillfaktor — grundformeln</h2>
+<p>Spillprocent är den mängd material du beställer <em>utöver</em> den uppmätta nettomängden för att täcka kapspill, kantspill, brott och rena misstag. Den uttrycks antingen som en procent (10 %) eller som en spillfaktor — en multiplikator (1,10). Grundformeln i all byggkalkyl är enkel:</p>
+<p><strong>nettomängd × spillfaktor = inköpsmängd</strong></p>
+<p>Ett konkret exempel: du ska skivbeklä 100 m² vägg med gips. Med ett spillpåslag på 12 % blir det 100 m² × 1,12 = 112 m² att beställa. Räknar du i stället med 5 % får du 105 m² — och de sju kvadratmeter som saknas blir en akut extraresa till grossisten när jobbet redan är i gång.</p>
+
+<h2>Vad är spillprocent — och varför är det inte "slöseri"?</h2>
+<p>Det är lätt att blanda ihop två helt olika saker. Å ena sidan finns det <em>oundvikliga</em> spillet: den bit gips du kapar bort runt ett fönster, kanten på kakelplattan som måste passas mot en nisch, resten i betongbilen. Det spillet uppstår oavsett hur skickligt du jobbar och ska vara med i kalkylen. Å andra sidan finns verkligt materialsvinn — skivor som lagras fel och böjer sig, plattor som tappas, felkap som kunde undvikits. Det är kostnader du kan pressa med planering.</p>
+<p>Poängen: rätt spillpåslag är en kalkylpost, inte en säkerhetsmarginal du chansar dig till. Ett för lågt påslag straffar dig ekonomiskt, ett för högt binder kapital och skapar avfall. Målet är att träffa rätt schablon för materialet och projektet.</p>
+
+<h2>Spillprocent per material — schablontabell</h2>
+<p>Följande är branschens tumregler för vanliga material. Se dem som utgångspunkt, inte facit — geometri och läggningsmönster kan flytta siffran rejält.</p>
+<ul>
+<li><strong>Konstruktionsvirke, reglar, syll:</strong> ca 5–10 %. Långa raka rundgångar ligger runt 5 %; korta bitar, många kap och komplex stommbyggnad drar mot 10–15 %.</li>
+<li><strong>Gipsskivor:</strong> ca 10–15 % — ett av de högsta spillen bland vanliga material, på grund av kap runt dörrar, fönster och installationer samt kantbrott.</li>
+<li><strong>Mineralull och isolering:</strong> ca 5–10 %. Materialet är komprimerbart vilket sänker spillet, men kap till c/c-avstånd och runt installationer adderar svinn.</li>
+<li><strong>Kakel och klinker:</strong> ca 10 % vid rak läggning, ca 15 % diagonalt och 15–20 % för mönster, små rum eller storformat. Nischer och fönster ökar ytterligare.</li>
+<li><strong>Golv (laminat, parkett, vinyl):</strong> ca 5 % rakt, 8–10 % diagonalt och mer för fiskben.</li>
+<li><strong>Platsgjuten betong:</strong> ca 5–8 % (överfyllnad av form, spill, rest i bil). Fabriksbetong beställs i hela m³, vilket förstärker effektivt spill på små gjutningar.</li>
+<li><strong>Fasad- och murtegel samt takpannor:</strong> ca 5 %.</li>
+<li><strong>Tapet:</strong> ca 10–15 % på grund av mönsterpassning.</li>
+<li><strong>Färg:</strong> räknas på täckförmåga (m²/liter) plus ca 5 %.</li>
+</ul>
+<p>Att gips och kakel ligger högt beror på samma sak: mycket kap per kvadratmeter. Varje öppning, hörn och installation tvingar fram en avkapad bit där resten ofta inte kan återanvändas, och sprött material ökar brottrisken vid hantering.</p>
+
+<h2>Vad styr spillet i det enskilda projektet?</h2>
+<p>Schablonen är en start — men fem faktorer avgör om du landar i nedre eller övre delen av intervallet:</p>
+<ul>
+<li><strong>Rummets geometri:</strong> många hörn, nischer och vinklar ger fler kap och mer spill.</li>
+<li><strong>Läggningsmönster:</strong> diagonalt och fiskben spiller markant mer än rak läggning.</li>
+<li><strong>Formatstorlek:</strong> storformatsplattor ger mer spill per kvadratmeter — en avkapad bit representerar en större yta.</li>
+<li><strong>Materialets sprödhet:</strong> ju ömtåligare material, desto mer kant- och transportbrott.</li>
+<li><strong>Leveransenhet:</strong> helpall virke eller hel m³ betong tvingar fram avrundning uppåt, särskilt på små volymer.</li>
+</ul>
+
+<h2>Schablonen 12 % och kopplingen till byggavfall</h2>
+<p>En vanlig generell spillfaktor som cirkulerar i branschen är 1,12, alltså 12 %. Använd den gärna som en rimlig medelnivå när du saknar bättre underlag för ett blandat material — men behandla den som just en schablon, inte som en officiell myndighetssiffra. Vill du ha en exakt regel per material bör du utgå från leverantörens monteringsanvisning.</p>
+<p>Att hålla nere spillet har mer än en ekonomisk sida. Bygg- och rivningsavfall är en av Sveriges största avfallsströmmar, och mindre materialspill betyder både lägre inköpskostnad och mindre avfall att hantera och dokumentera. Rätt kalkyl är alltså bra för både marginalen och miljöredovisningen.</p>
+
+<h2>Ekonomin — spill, offert och ROT</h2>
+<p>Vem som bär spill-risken avgörs av avtalsformen. Vid <strong>fast pris</strong> bär du som entreprenör risken: blir spillet större än du kalkylerat äter det din marginal. Vid <strong>löpande räkning</strong> bär kunden materialkostnaden, men en underspecad offert underskattar ändå slutnotan och skadar förtroendet.</p>
+<p>Och glöm inte skatten: ROT-avdraget gäller <strong>endast arbetskostnad, aldrig material</strong>. ROT ligger på 30 % av arbetskostnaden, max 50 000 kr per person och år — men överbeställt material subventioneras aldrig. Hela merkostnaden för spillet bärs av kund eller entreprenör.</p>
+<p>Räkneexempel: ett gipsjobb med 100 m² netto och ett gipspris på 60 kr/m². Räknar du 5 % spill beställer du för 6 300 kr. Det verkliga spillet blir 12 %, alltså 6 720 kr. De 420 kronorna som saknas i offerten är ren förlust på ett litet jobb — skala upp till ett flerbostadshus med tusentals kvadratmeter och ett par procents felräkning blir snabbt en betydande post.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp materialkalkylatorer räknar med spillpåslag redan inbyggt, så att du får inköpsmängden och inte bara den teoretiska nettomängden. Du mäter upp ytan eller volymen, väljer material och får en beställningsbar mängd direkt. Kalkylerna bygger på branschens schabloner — men eftersom geometri och läggningsmönster varierar bör du alltid dubbelkolla spillfaktorn mot det enskilda projektet innan du lägger den i offerten. Verktygen tar bort räknearbetet och risken för slarvfel; bedömningen av just ditt rum gör du fortfarande själv.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket spill ska jag räkna med på gips?</h3>
+<p>Räkna med cirka 10–15 % för gipsskivor. Det är ett av de högsta spillen bland vanliga material eftersom du kapar runt dörrar, fönster och installationer, och skivkanter är känsliga för brott. Många hörn och öppningar drar mot övre delen av intervallet.</p>
+<h3>Är spillprocent samma som svinn?</h3>
+<p>Inte riktigt. Spillprocent täcker det oundvikliga kap- och kantspillet som alltid uppstår när material anpassas till bygget. Svinn är den del som beror på misstag, brott vid hantering och felaktig lagring — den kan du minska med bättre planering, medan grundspillet alltid finns där.</p>
+<h3>Får jag ROT-avdrag på spillmaterialet?</h3>
+<p>Nej. ROT-avdraget gäller bara arbetskostnad, aldrig material — och alltså inte det material som blir spill. Överbeställt material subventioneras inte skattemässigt, så kostnaden bärs helt av kund eller entreprenör beroende på avtalsform.</p>
+<h3>Vilken spillfaktor ska jag använda om jag är osäker?</h3>
+<p>Saknar du bättre underlag är 1,12 (12 %) en rimlig generell schablon för ett blandat material. Men gå alltid till materialets specifika intervall när du kan — virke 5–10 %, gips 10–15 %, kakel upp till 15–20 % vid mönster — och justera för rummets geometri och läggningsmönster.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att lägga in dina mått i <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a> och räkna sedan skivmängd i <a href="/sv/verktyg/gips-kalkylator">gips-kalkylatorn</a> eller volym i <a href="/sv/verktyg/betong-kalkylator">betong-kalkylatorn</a> — alla med spillpåslag inbyggt. Vill du se hur ByggExp kan effektivisera hela din kalkyl- och offertprocess? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget — så gör du rätt från början</a>.</p>
+`;
+
+const A_SPILLPROCENT_BYGG_MATERIAL: BlogPost = {
+  _id: "code-"+"spillprocent-bygg-material",
+  title: "Spillprocent per material — så undviker du en underspecad byggkalkyl", slug: "spillprocent-bygg-material", locale: "sv",
+  excerpt: "En offert som glömmer spillet ser billig ut på papperet men äter marginalen på bygget — här är rätt spillprocent per material och hur du räknar med den.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/betong-preview.webp", contentHtml: A_SPILLPROCENT_BYGG_MATERIAL_HTML,
+  seoTitle: "Spillprocent bygg material | ByggExp", seoDescription: "Rätt spillprocent per material — virke, gips, kakel, betong. Så räknar du nettomängd × spillfaktor och slipper en underspecad offert. Guide för hantverkare.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/betong-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:39:00.000Z", createdAt: "2026-08-18T18:39:00.000Z", updatedAt: "2026-08-18T18:39:00.000Z",
+};
+
+const A_BOKFORING_ENSKILD_FIRMA_BYGG_HTML = `
+<p>Byggbranschen är en av de mest granskade av Skatteverket, och som hantverkare med enskild firma sitter du mitt i det: kontanthantering, personalliggare på arbetsplatsen och en momskedja där en enda felfakturerad byggtjänst kan dra igång en revision. Det handlar sällan om fusk – oftare om att omvänd byggmoms hamnat på fel faktura, eller att ROT-avdraget begärts trots att köparen inte ägde bostaden. Den här guiden går igenom grundkraven, momsen 2026 och den omvända byggmomsen så att du slipper strulet.</p>
+
+<p>Ett tips på vägen: räkna ut och stäm av moms rätt varje gång med <a href="/sv/verktyg/moms-kalkylator">vår gratis moms-kalkylator -&gt;</a> innan du skickar fakturan.</p>
+
+<h2>Grundkraven – från dag ett</h2>
+
+<p>Det finns ingen omsättningsgräns som befriar dig från bokföring. Enligt bokföringslagen är alla enskilda firmor bokföringsskyldiga från och med registreringsdagen. Missförstå inte momsgränsen (mer om den nedan) som en bokföringsgräns – de har inget med varandra att göra.</p>
+
+<ul>
+<li><strong>F-skatt innan första fakturan.</strong> Utan godkänd F-skatt (eller FA-skatt om du också är anställd) måste din kund dra 30 % preliminär A-skatt på arbetsdelen av fakturan. I praktiken blockerar det normalt entreprenadarbete.</li>
+<li><strong>Spara underlag i minst 7 år.</strong> Räknat från utgången av räkenskapsåret. Ett kvitto från januari 2026 ska alltså finnas kvar till och med 31 december 2033.</li>
+<li><strong>Förenklat årsbokslut (K1) under 3 miljoner kr.</strong> Har firman en nettoomsättning på högst 3 000 000 kr får du använda de förenklade K1-reglerna och upprätta ett förenklat årsbokslut. Det sparas tillsammans med bokföringen men lämnas inte in till någon myndighet. Över 3 miljoner kr krävs ett fullständigt årsbokslut (K2/K3).</li>
+</ul>
+
+<p>Vinsten i en enskild firma beskattas som din egen inkomst. Du betalar debiterad preliminärskatt (F-skatt) månadsvis och egenavgifter på runt 29 % av nettovinsten, som stäms av i NE-bilagan i inkomstdeklarationen.</p>
+
+<h2>Moms 101 för enskild firma 2026</h2>
+
+<p>Sedan 1 januari 2025 behöver du inte momsregistrera dig om årsomsättningen (exklusive moms) är högst 120 000 kr – förutsatt att du även höll dig under gränsen de två föregående åren och är etablerad i Sverige. Passerar du 120 000 kr måste du registrera dig och ta ut 25 % moms på byggtjänster.</p>
+
+<p>Hur ofta du deklarerar moms styrs av omsättningen:</p>
+
+<ul>
+<li><strong>Upp till 1 miljon kr:</strong> helår.</li>
+<li><strong>1–40 miljoner kr:</strong> kvartal.</li>
+<li><strong>Över 40 miljoner kr:</strong> månad.</li>
+</ul>
+
+<p>Du får frivilligt välja en kortare period. För många byggare är det smart att välja kvartal även med låg omsättning: ingående moms på material överstiger ofta utgående moms på fakturerad arbetstid, och då får du tillbaka pengar snabbare istället för att binda upp likviditet ett helt år. Helårsdeklarationen 2026 ska in senast 12 maj (utan EU-handel) eller 26 februari (med EU-handel); kvartalsdeklaration lämnas den 12:e i andra månaden efter kvartalets slut.</p>
+
+<h2>Omvänd byggmoms utan strul</h2>
+
+<p>Omvänd byggmoms (omvänd skattskyldighet) är inte momsfrihet – det är en förskjutning av <em>vem</em> som redovisar de 25 procenten, byggd för att stoppa momsfusk i entreprenadkedjor. Reglerna avgör om du som säljare ska fakturera med eller utan moms.</p>
+
+<p><strong>Omvänd byggmoms gäller</strong> när du säljer en byggtjänst (eller hyr ut arbetskraft för sådan) till en köpare som är ett företag som själv säljer eller säljer vidare byggtjänster mer än tillfälligt. Då fakturerar du <strong>utan moms</strong>, och köparen redovisar både utgående och ingående moms.</p>
+
+<p><strong>Omvänd byggmoms gäller INTE</strong> när du fakturerar en privatperson, eller en fastighetsägare/förvaltare som inte själv säljer byggtjänster vidare – då tar du ut normal 25 % moms. Den gäller inte heller ren varuförsäljning (till exempel att leverera och koppla in vitvaror) eller arbete på fordon och maskiner.</p>
+
+<p>Fakturachecklista vid omvänd byggmoms:</p>
+
+<ul>
+<li>Ingen moms angiven på fakturan.</li>
+<li>Köparens momsregistreringsnummer (VAT-nummer) ska finnas på fakturan.</li>
+<li>Texten <strong>&quot;Omvänd betalningsskyldighet&quot;</strong> (eller &quot;Omvänd skattskyldighet för byggtjänster gäller&quot;) ska stå med.</li>
+</ul>
+
+<h2>Så bokför du det praktiskt</h2>
+
+<p>Ett konkret exempel: du är underentreprenör och fakturerar en huvudentreprenör 40 000 kr för byggarbete med omvänd byggmoms.</p>
+
+<ul>
+<li><strong>Du som säljare</strong> bokför intäkten på konto 3231 (Försäljning byggsektorn, omvänd byggmoms) – ingen utgående moms.</li>
+<li><strong>Köparen</strong> bokför 40 000 kr på 4610 (Byggtjänster), och beräknar 25 % moms i två poster: 2614 (Utgående moms omvänd skattskyldighet) och 2644 (Ingående moms omvänd skattskyldighet), här 10 000 kr på vardera. Är momsen fullt avdragsgill tar 2614 och 2644 ut varandra och kassaflödeseffekten blir noll.</li>
+</ul>
+
+<p>Har du en mall med rätt uppgifter förhandsifyllda blir det svårt att glömma momsnummer eller märkningstext. Använd gärna <a href="/sv/verktyg/faktura-mall">vår faktura-mall</a> som utgångspunkt.</p>
+
+<h2>ROT-avdrag i praktiken</h2>
+
+<p>ROT-avdraget är 30 % av <strong>arbetskostnaden</strong> – aldrig på material eller resor. Köparen måste dessutom äga och bo i (eller använda) bostaden som arbetet utförs på. Du drar av köparens del direkt på fakturan och begär sedan utbetalning av mellanskillnaden från Skatteverket via deras e-tjänst.</p>
+
+<p>Takbeloppet per person och år har ändrats genom tillfälliga reformer under 2024–2025. <strong>Kontrollera aktuellt takbelopp direkt på skatteverket.se innan du utlovar en siffra till kunden</strong> – ett fel här ger avslag på utbetalningen och en missnöjd kund.</p>
+
+<p>Notera samspelet: ROT gäller bara mot privatperson. Och mot en privatperson är det aldrig omvänd byggmoms – du tar alltid ut 25 % moms och drar av ROT på arbetsdelen. Blandar du ihop dessa två uppstår exakt den typ av fel som Skatteverket letar efter.</p>
+
+<h2>Skatteverkets granskningsflaggor för bygg</h2>
+
+<p>Det som oftast utlöser en fördjupad granskning eller revision i byggbranschen:</p>
+
+<ul>
+<li>Fel momshantering i entreprenadkedjan – moms utan omvänd skattskyldighet där den skulle gällt, eller tvärtom.</li>
+<li>Saknad eller felaktig personalliggare på byggarbetsplatsen.</li>
+<li>Kontantförsäljning som inte stämmer med redovisad omsättning.</li>
+<li>Blandade privat- och företagsinköp där avdrag tagits för sådant som inte hör till verksamheten.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+
+<p>ByggExp hjälper dig hålla ordning på det löpande: du dokumenterar utfört arbete och timmar per projekt, skapar fakturaunderlag och skiljer arbetskostnad från material – vilket är precis den uppdelning både ROT och omvänd byggmoms bygger på. Det ersätter inte din bokföring eller en redovisningskonsult, men det gör att underlaget som går vidare till bokföringen redan är rätt uppdelat, så att momsen och ROT-avdraget blir enklare att få korrekt från början.</p>
+
+<h2>Vanliga frågor</h2>
+
+<h3>Måste jag momsregistrera min enskilda firma direkt?</h3>
+<p>Nej, inte om årsomsättningen exklusive moms är högst 120 000 kr och du höll dig under gränsen de två föregående åren. Bokföringsskyldig är du däremot från dag ett, oavsett omsättning.</p>
+
+<h3>När ska jag fakturera med omvänd byggmoms istället för 25 %?</h3>
+<p>När köparen är ett företag som själv säljer byggtjänster mer än tillfälligt. Då fakturerar du utan moms, anger köparens momsnummer och skriver &quot;Omvänd betalningsskyldighet&quot;. Fakturerar du en privatperson eller en fastighetsägare som inte säljer byggtjänster vidare tar du ut normal 25 % moms.</p>
+
+<h3>Kan jag använda ROT och omvänd byggmoms på samma faktura?</h3>
+<p>Nej. ROT gäller bara arbete åt privatpersoner, och mot privatpersoner är det aldrig omvänd byggmoms. De två utesluter alltså varandra på samma jobb.</p>
+
+<h3>Hur länge måste jag spara bokföringen?</h3>
+<p>I minst 7 år räknat från utgången av räkenskapsåret. Ett underlag från 2026 ska alltså finnas kvar till och med 2033.</p>
+
+<h2>Kom igång</h2>
+
+<p>Bygg in en enkel månadsrutin: fakturera med rätt moms varje gång, spara kvitton digitalt löpande och stäm av ingående mot utgående moms innan deklarationen. Räkna momsen rätt med <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn</a> och sätt upp fakturorna med <a href="/sv/verktyg/faktura-mall">faktura-mallen</a>. Vill du se hur ByggExp håller projekt, timmar och underlag på plats? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/moms-hantverkare">Moms för hantverkare – så gör du rätt</a> och <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggföretag?</a></p>
+`;
+
+const A_BOKFORING_ENSKILD_FIRMA_BYGG: BlogPost = {
+  _id: "code-"+"bokforing-enskild-firma-bygg",
+  title: "Bokföring för hantverkare med enskild firma: moms, ROT och omvänd byggmoms utan strul", slug: "bokforing-enskild-firma-bygg", locale: "sv",
+  excerpt: "En felfakturerad byggmoms kan räcka för att dra igång en granskning – så håller du bokföringen, momsen och ROT rätt i enskild firma.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/moms-preview.webp", contentHtml: A_BOKFORING_ENSKILD_FIRMA_BYGG_HTML,
+  seoTitle: "Bokföring enskild firma bygg | ByggExp", seoDescription: "Moms, ROT och omvänd byggmoms för hantverkare med enskild firma. Trösklar, fakturakrav och Skatteverkets granskningsflaggor – konkret guide för 2026.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/moms-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:42:00.000Z", createdAt: "2026-08-18T18:42:00.000Z", updatedAt: "2026-08-18T18:42:00.000Z",
+};
+
+const A_BYGGSTALLNING_REGLER_KRAV_HTML = `
+<p>Fall från höjd hör till de vanligaste orsakerna till dödsolyckor i byggbranschen, och ställningar är ett av de områden där Arbetsmiljöverket kan gå direkt på sanktionsavgift utan omväg via föreläggande. Saknar en av dina montörer giltigt utbildningsbevis för höjden ni bygger på kostar det pengar per anställd – oavsett om något faktiskt hänt. Sedan 1 januari 2025 gäller dessutom nya föreskrifter, och det är lätt att missa vad som ändrats.</p>
+
+<p>Innan ni tar en ställning i bruk bör den kontrolleras och dokumenteras – strukturera egenkontrollen enkelt med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall &rarr;</a> så att kontrolldokumentet finns signerat och tillgängligt vid en inspektion.</p>
+
+<h2>Vilka regler gäller 2026?</h2>
+<p>Uppförande, användning och utbildning kring ställningar styrs sedan 1 januari 2025 av <strong>AFS 2023:11, kapitel 8</strong>. Reglerna för produkt- och typkontroll av prefabricerade ställningar och komponenter ligger i en egen föreskrift, <strong>AFS 2023:9</strong> (Stegar, ställningar och viss annan utrustning för arbete på höjd). Båda ersatte den tidigare AFS 2013:4 &quot;Ställningar&quot;.</p>
+<p>Viktigt att veta: utbildningsbevis som utfärdats enligt de gamla reglerna gäller fortfarande. De hänvisar numera till den nya föreskriften i stället, men du behöver inte skicka om personal som redan har giltiga bevis. Själva kompetenskraven och nivåerna fördes över i sak.</p>
+
+<h2>Utbildningskraven – rätt nivå efter höjd</h2>
+<p>Kravet på utbildning trappas efter ställningens höjd upp till arbetsplanet. Fyra nivåer gäller:</p>
+<ul>
+<li><strong>Upp till 2 m</strong> – Särskild information om hantverkarställningar, för begränsat arbete enligt en generell monteringsinstruktion. <em>Inget utbildningsbevis krävs</em>, men informationen ska vara given.</li>
+<li><strong>Rull- och hantverkarställningar upp till 5 m</strong> – Särskild information om rullställningar. <strong>Bevis krävs.</strong></li>
+<li><strong>Upp till 9 m</strong> (fyra bomlagshöjder) – Allmän utbildning om ställningar. <strong>Bevis krävs.</strong></li>
+<li><strong>Över 9 m eller mer komplexa konstruktioner</strong> – Särskild utbildning om ställningar. <strong>Bevis krävs.</strong></li>
+</ul>
+<p>Utöver grundnivåerna finns tilläggsutbildningar: <strong>Tilläggsutbildning om väderskydd</strong> (bygger på Särskild utbildning) för väderskydd, och <strong>Tilläggsutbildning om speciella ställningskonstruktioner</strong> (bygger på Allmän utbildning). Tänk också på att en väsentlig ändring – att flytta ett plank eller ta bort en förankring – räknas som ställningsarbete och kräver dokumenterad kompetens enligt bilagan om utbildning. Det är inte bara den som reser ställningen från grunden som behöver rätt bevis.</p>
+<p>Genomförd ställningsutbildning registreras av STIB/Ställningsföretagen i ID06 kompetensdatabas. Det är där du som arbetsgivare eller beställare kan verifiera att en montörs bevis faktiskt gäller för höjden.</p>
+
+<h2>Sanktionsavgifter – vad det kostar att sakna bevis</h2>
+<p>Sanktionsavgiften tas ut <strong>per anställd</strong> som du inte kan visa giltig utbildningsdokumentation för. Beloppen är:</p>
+<ul>
+<li>Särskild information om rullställningar: <strong>5 000 kr</strong></li>
+<li>Allmän utbildning: <strong>10 000 kr</strong></li>
+<li>Särskild utbildning: <strong>20 000 kr</strong></li>
+<li>Tilläggsutbildning om väderskydd: <strong>10 000 kr</strong></li>
+<li>Tilläggsutbildning om speciella konstruktioner: <strong>10 000 kr</strong></li>
+</ul>
+<p>Krävs en tilläggsutbildning men varken grund- eller tilläggsbeviset kan visas upp, tas avgiften ut för <em>båda</em> bristerna. Med några montörer på plats blir det snabbt stora summor. Poängen med reglerna är enkel: dokumentationen måste kunna visas upp vid inspektion – ligger den hemma på kontoret hjälper det inte i stunden.</p>
+
+<h2>Skyddsräcke och fallskydd – tvåmetersgränsen</h2>
+<p>Ett skyddsräcke krävs där det finns risk att falla två meter eller mer. Vid lägre fallhöjd kan räcke ändå behövas om det finns en särskild risk. Räcket ska bestå av <strong>överledare, mellanledare och fotlist</strong>, normalt vara minst 1,00 m högt mätt vinkelrätt mot arbetsplanet, och sitta så att inget farligt mellanrum uppstår mellan plan och räcke (enligt SS-EN 12811-1).</p>
+<p>Under montage, ändring och demontering där fallhöjden är två meter eller mer gäller en tydlig åtgärdshierarki:</p>
+<ol>
+<li>Ha det ordinarie räcket på plats så långt det går innan du når den högre nivån.</li>
+<li>Använd ett temporärt räckessystem.</li>
+<li>Först som sista utväg – personlig fallskyddsutrustning (sele).</li>
+</ol>
+<p>Sele är alltså inte förstahandsvalet, utan det du faller tillbaka på när kollektivt skydd inte är möjligt.</p>
+
+<h2>Kontroll, besiktning och överlämning</h2>
+<p>Arbetsgivaren ska kontrollera ställningen eller väderskyddet <strong>innan det tas i bruk</strong> och <strong>fortlöpande</strong> medan den används. Har den brister av arbetsmiljöbetydelse får den inte användas förrän de är åtgärdade. Extra kontroll krävs efter hård vind och när en ställning stått oanvänd under lång tid.</p>
+<p>Kontrollen före ibruktagande ska dokumenteras i en särskild handling, helst signerad av både montör och användare – foton stärker dokumentationen. Vid överlämning ska montören lämna över underlagen: planen för uppförande, användning och nedmontering, dimensioneringsunderlag, kontrolldokumentation, väderskyddsinformation och prefab-monteringsinstruktioner.</p>
+<p>På arbetsplatser med flera arbetsgivare ska kopior av ställningsdokumentationen lämnas till byggarbetsmiljösamordnaren för utförandet (<strong>Bas-U</strong>) innan första användning. Bas-U har tillsyn över att dokumenten finns tillgängliga på plats under den löpande kontrollen.</p>
+
+<h2>Checklista innan du klättrar upp</h2>
+<ul>
+<li>Giltigt utbildningsbevis för den aktuella höjden – kontrollerat i ID06.</li>
+<li>Plan för uppförande, användning och nedmontering finns och är tillgänglig.</li>
+<li>Räcket är komplett: överledare, mellanledare <strong>och fotlist</strong>, minst 1,00 m.</li>
+<li>Förankring och underpallning är kontrollerade.</li>
+<li>Kontrolldokumentet är ifyllt och signerat före ibruktagande.</li>
+<li>Avgränsning och skyltning finns vid pågående montage.</li>
+<li>Inga lösa stegar på arbetsplanet, luckor stängda, ställningen inte använd som återledare vid svetsning.</li>
+</ul>
+
+<h2>Vanliga misstag som ger böter</h2>
+<p>De flesta anmärkningar handlar inte om att ställningen rasat, utan om formalia som saknas: montör med bevis för 5 m som jobbar på 7, fotlist som &quot;glömts&quot; på ett plan, kontrolldokument som aldrig signerats, eller kopior som aldrig nått Bas-U. Lös stege på arbetsplanet och öppna åtgärdsluckor är också klassiker – båda är uttryckligt förbjudna på fasad-, rull- och hantverkarställningar.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte utbildningsbeviset eller certifierad montör – kompetensen måste finnas hos personalen. Det vi hjälper till med är dokumentationen runt omkring, så att den faktiskt finns när inspektören frågar. Med egenkontroll-mallen strukturerar du kontrollen före ibruktagande och den fortlöpande kontrollen, samlar foton och signaturer digitalt, och håller kontrolldokumenten tillgängliga för både användare och Bas-U på fleraarbetsgivarplatser. Kort sagt: rätt kompetens gör jobbet lagligt, dokumentationen gör det bevisbart.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vilken utbildning krävs för en ställning på 6 meter?</h3>
+<p>Sex meter till arbetsplanet ligger över 5 m-gränsen för rull- och hantverkarställningar, så det krävs Allmän utbildning om ställningar (giltig upp till 9 m) med utbildningsbevis. Rullställningsinformation räcker inte.</p>
+
+<h3>Gäller mina gamla utbildningsbevis efter regeländringen 2025?</h3>
+<p>Ja. Bevis utfärdade enligt de tidigare reglerna gäller fortfarande och hänvisar numera till AFS 2023:11 kapitel 8. Kompetenskraven fördes över, så du behöver inte utbilda om personal som redan har giltiga bevis för rätt höjd.</p>
+
+<h3>Hur hög måste sanktionsavgiften bli?</h3>
+<p>Den tas ut per anställd utan giltig dokumentation: 5 000 kr för rullställningsinformation, 10 000 kr för Allmän utbildning och 20 000 kr för Särskild utbildning. Saknas både grund- och tilläggsutbildning debiteras båda bristerna.</p>
+
+<h3>När måste en ställning kontrolleras på nytt?</h3>
+<p>Alltid före ibruktagande och fortlöpande under användning. Extra kontroll krävs efter hård vind och när ställningen stått oanvänd länge. Har den brister av arbetsmiljöbetydelse får den inte användas förrän de åtgärdats.</p>
+
+<h2>Kom igång</h2>
+<p>Sätt rutinen på plats innan nästa ställning reses: strukturera kontrollen med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen &rarr;</a> så att dokumentationen finns signerad och sökbar när den behövs. Vill du se hur det fungerar i en skarp arbetsflöde? <a href="/sv/contact">Boka en demo &rarr;</a> så visar vi upplägget.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – när krävs den och vad ska ingå</a> och <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>.</p>
+`;
+
+const A_BYGGSTALLNING_REGLER_KRAV: BlogPost = {
+  _id: "code-"+"byggstallning-regler-krav",
+  title: "Byggställning 2026: regler, utbildningskrav och besiktning innan du klättrar upp", slug: "byggstallning-regler-krav", locale: "sv",
+  excerpt: "Ställningar är ett sanktionsbelagt område – här är utbildningskraven, skyddsräckesreglerna och kontrollen du måste ha på plats innan första bomlaget tas i bruk.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_BYGGSTALLNING_REGLER_KRAV_HTML,
+  seoTitle: "Byggställning regler & krav 2026 | ByggExp", seoDescription: "AFS 2023:11, utbildningsnivåer efter höjd, sanktionsavgifter, skyddsräcke och besiktning. Så klarar du inspektionen innan du klättrar upp på ställningen.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:45:00.000Z", createdAt: "2026-08-18T18:45:00.000Z", updatedAt: "2026-08-18T18:45:00.000Z",
+};
+
+const A_TRAKTAMENTE_BYGGNADSARBETARE_2026_HTML = `
+<p>Många byggföretag betalar ut traktamente varje månad utan att veta att en stor del av det faktiskt är skattepliktig lön. Kollektivavtalets traktamente och Skatteverkets skattefria schablon är två helt olika saker – och när de inte överlappar hamnar mellanskillnaden som lön med arbetsgivaravgifter. För inkomstår 2026 är de skattefria beloppen 300 kr för hel dag, 150 kr för halv dag och 150 kr för natt, förutsatt att två grundvillkor är uppfyllda.</p>
+
+<p>Ett korrekt traktamente bygger på korrekta underlag. Har du inte tidrapporter och reseuppgifter som visar övernattning och avstånd blir det omöjligt att styrka skattefriheten – börja därför med vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall -></a> för att få dokumentationen på plats.</p>
+
+<h2>Skatteverkets skattefria belopp 2026 (inrikes)</h2>
+<p>För tjänsteresor inom Sverige gäller följande schablonbelopp för inkomstår 2026, fastställda i Skatteverkets rättsliga vägledning:</p>
+<ul>
+<li><strong>Hel dag (helt maximibelopp): 300 kr.</strong></li>
+<li><strong>Halv dag (halvt maximibelopp): 150 kr.</strong> Gäller avresedag om resan börjar efter kl 12 och hemkomstdag om du kommer hem före kl 19.</li>
+<li><strong>Nattraktamente (schablon när arbetsgivaren inte betalar logi): 150 kr.</strong></li>
+</ul>
+<p>Vid längre förrättning på samma ort trappas det skattefria beloppet ned. Efter tre månader sänks det till <strong>210 kr per hel dag</strong> (70 % av maximibeloppet). Efter två år på samma ort sänks det ytterligare till <strong>150 kr per hel dag</strong> (50 % av maximibeloppet). Betalar företaget ut mer än så blir det överskjutande beloppet skattepliktigt.</p>
+
+<h2>De två grundvillkoren – övernattning och 50-kmregeln</h2>
+<p>För att traktamentet överhuvudtaget ska kunna betalas ut skattefritt måste båda dessa villkor vara uppfyllda:</p>
+<ol>
+<li><strong>Övernattning.</strong> Skatteverket är tydliga: "Du måste alltid övernatta minst en natt för att arbetsgivaren ska kunna betala ut ett skattefritt traktamente." En endagsförrättning kan alltså aldrig ge skattefritt traktamente.</li>
+<li><strong>50-kmregeln.</strong> Tjänsteresan måste gå till en plats som ligger mer än 50 km från både bostaden och den vanliga arbetsplatsen (tjänstestället). Ligger arbetsplatsen närmare än så är villkoret inte uppfyllt.</li>
+</ol>
+<p>Detta är exakt där byggbranschen ofta faller. Mycket arbete sker på dagpendlingsavstånd och utan övernattning – och då finns ingen skattefri traktamentesgrund, oavsett vad kollektivavtalet säger.</p>
+
+<h2>Vad är "tjänstestället" för en byggnadsarbetare?</h2>
+<p>Tjänstestället avgör var en tjänsteresa börjar. För många yrken är tjänstestället kontoret, men för en byggnadsarbetare är det ofta själva byggarbetsplatsen där man utför arbetet under en period. Det får två konsekvenser:</p>
+<ul>
+<li>Resor <em>till och från</em> den arbetsplats som är tjänsteställe räknas som vanliga arbetsresor, inte tjänsteresor – och ger inte traktamente.</li>
+<li>Först när arbetet sker på en annan plats, mer än 50 km bort och med övernattning, uppstår en tjänsteresa som kan ge skattefritt traktamente.</li>
+</ul>
+<p>Att fastställa tjänstestället rätt är alltså avgörande. Bedömer företaget det fel riskerar man att betala ut "skattefritt" traktamente som i själva verket är skattepliktigt.</p>
+
+<h2>Byggavtalet vs Skatteverket – varför avtalstraktamentet ofta beskattas</h2>
+<p>Byggnads kollektivavtal reglerar traktamente och reseersättning enligt avtalets egna villkor. De villkoren följer inte automatiskt Skatteverkets regler. Avtalet kan ge rätt till traktamente även vid endagsförrättning eller vid resor under 50 km – ersättningar som helt enkelt inte uppfyller Skatteverkets krav på övernattning och avstånd.</p>
+<p>Skattemekanismen är enkel: traktamente som betalas utan övernattning eller för resa under 50 km uppfyller inte villkoren för skattefrihet och är då <strong>skattepliktig lön</strong>. Företaget ska ta upp beloppet som ersättning, dra skatt och betala arbetsgivaravgifter. Att kalla utbetalningen "traktamente" i avtalet ändrar inte den skattemässiga hanteringen.</p>
+
+<h2>Räkneexempel: endagsförrättning respektive övernattning</h2>
+<p><strong>Fall A – endagsförrättning, 40 km bort.</strong> Byggföretaget betalar 200 kr i avtalstraktamente. Ingen övernattning och under 50 km betyder att inget villkor är uppfyllt. Hela beloppet är skattepliktig lön: den anställde betalar inkomstskatt på 200 kr och företaget betalar arbetsgivaravgifter ovanpå. Nettot i handen blir klart lägre än 200 kr.</p>
+<p><strong>Fall B – förrättning 90 km bort med övernattning.</strong> Företaget betalar 300 kr per hel dag. Båda villkoren är uppfyllda och betalar arbetsgivaren inte logi kan även 150 kr nattraktamente betalas skattefritt. Här går ersättningen ut skattefritt, utan skatteavdrag och utan arbetsgivaravgifter på schablonbeloppet – förutsatt att underlagen finns.</p>
+<p>Skillnaden mellan fallen är inte beloppet på pappret, utan om övernattning och avstånd är dokumenterade.</p>
+
+<h2>Måltidsavdrag och kostförmån</h2>
+<p>Det skattefria traktamentet förutsätter att arbetsgivaren inte redan har betalat måltiderna. Ingår fri frukost, lunch eller middag – till exempel på arbetsplatsen eller via hotellet – ska ett måltidsavdrag göras som minskar det skattefria beloppet, och den fria måltiden kan dessutom bli en kostförmån. Betalar företaget ut fullt traktamente <em>och</em> bjuder på måltider utan avdrag betalas för mycket ut skattefritt, vilket kan slå tillbaka vid en granskning.</p>
+
+<h2>Checklista för arbetsgivare och anställd 2026</h2>
+<ul>
+<li>Fastställ tjänstestället för varje anställd – är byggarbetsplatsen tjänsteställe eller inte?</li>
+<li>Kontrollera att resan går mer än 50 km från både bostad och tjänsteställe.</li>
+<li>Säkerställ och dokumentera minst en övernattning.</li>
+<li>Upprätta reseräkning med datum, tider, ort och syfte.</li>
+<li>Gör måltidsavdrag för fria måltider.</li>
+<li>Håll isär avtalstraktamente och skattefritt schablonbelopp – hantera mellanskillnaden som lön.</li>
+<li>Spara underlagen i sju år.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte lönesystemet, men ger dig underlagen som avgör om ett traktamente kan betalas skattefritt eller inte. Med tidrapporteringen registrerar dina medarbetare arbetsplats, dagar och tider, vilket gör det enkelt att se när en förrättning faktiskt innehåller övernattning och sträcker sig utanför tjänstestället. Underlagen samlas per anställd och projekt, så att du eller din redovisningskonsult snabbt kan avgöra vilken del av avtalstraktamentet som är skattefri och vilken del som ska hanteras som lön. Beloppen och den skattemässiga bedömningen måste du alltid stämma av mot Skatteverket och ditt kollektivavtal – ByggExp levererar spårbarheten, inte skatterådgivningen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är Byggnads avtalstraktamente alltid skattefritt?</h3>
+<p>Nej. Avtalstraktamente betalas enligt kollektivavtalet oavsett skattereglerna. Är det utbetalat utan övernattning eller för en resa under 50 km uppfyller det inte Skatteverkets villkor och är då skattepliktig lön med arbetsgivaravgifter.</p>
+<h3>Hur mycket är skattefritt traktamente 2026?</h3>
+<p>För inrikes tjänsteresor 2026 är hel dag 300 kr, halv dag 150 kr och natt 150 kr. Efter tre månader på samma ort sänks helt dagsbelopp till 210 kr och efter två år till 150 kr.</p>
+<h3>Kan jag få traktamente utan att övernatta?</h3>
+<p>Inte skattefritt. Skatteverket kräver minst en övernattning för att ett skattefritt traktamente ska kunna betalas ut. Endagsförrättningar ger inget skattefritt traktamente.</p>
+<h3>Vad händer om vi bjuder på lunch under resan?</h3>
+<p>Fria måltider ger ett måltidsavdrag som minskar det skattefria beloppet och kan innebära kostförmån. Betalar ni fullt traktamente utan avdrag blir för mycket utbetalt skattefritt.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg rätt underlag från början med vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, och se fler verktyg för byggföretag i vår <a href="/sv/verktyg">verktygslåda</a>. Vill du se hur spårbarheten fungerar i praktiken? <a href="/sv/contact">Boka en demo -></a></p>
+
+<p>Relaterat: <a href="/sv/blog/franvaro-i-byggforetag">Så hanterar du frånvaro i byggföretag</a> och fler <a href="/sv/verktyg">gratis verktyg för hantverkare</a>.</p>
+`;
+
+const A_TRAKTAMENTE_BYGGNADSARBETARE_2026: BlogPost = {
+  _id: "code-"+"traktamente-byggnadsarbetare-2026",
+  title: "Traktamente för byggnadsarbetare 2026 – så mycket är skattefritt (och varför avtalstraktamentet ofta beskattas)", slug: "traktamente-byggnadsarbetare-2026", locale: "sv",
+  excerpt: "Så mycket traktamente är skattefritt för byggnadsarbetare 2026 – och varför kollektivavtalets traktamente ofta blir skattepliktig lön.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_TRAKTAMENTE_BYGGNADSARBETARE_2026_HTML,
+  seoTitle: "Traktamente byggnadsarbetare 2026 | ByggExp", seoDescription: "Skattefria traktamentsbelopp 2026 för byggnadsarbetare: 300/150/150 kr, 50-kmregeln och varför Byggnads avtalstraktamente ofta beskattas.",
+  seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:48:00.000Z", createdAt: "2026-08-18T18:48:00.000Z", updatedAt: "2026-08-18T18:48:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_ENTREPRENADKONTRAKT_MALL,
+    A_KONTROLLPLAN_MALL_BYGGLOV,
+    A_DROJSMALSRANTA_2026,
+    A_SPILLPROCENT_BYGG_MATERIAL,
+    A_BOKFORING_ENSKILD_FIRMA_BYGG,
+    A_BYGGSTALLNING_REGLER_KRAV,
+    A_TRAKTAMENTE_BYGGNADSARBETARE_2026,
     A_ANLITA_UNDERENTREPRENOR,
     A_A_CONTO_FAKTURERING_BYGG,
     A_ENTREPRENORSANSVAR_LON,

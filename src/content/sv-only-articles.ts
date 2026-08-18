@@ -32,6 +32,11 @@ export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
   'mangdforteckning-bygg',
   'muntligt-avtal-sakra-bevis',
   'arbetsmiljoansvar-egenforetagare',
+  'betalningsvillkor-faktura-bygg',
+  'kontrollavgift-personalliggare',
+  'bas-p-bas-u',
+  'garantitid-ansvarstid-ab-04',
+  'abs-18-hantverkarformularet-17',
 ]);
 
 export function isSvOnlyArticle(slug: string): boolean {

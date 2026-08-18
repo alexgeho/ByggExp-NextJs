@@ -2339,9 +2339,462 @@ const ARBMILJO: BlogPost = {
   updatedAt: "2026-08-18T12:30:00.000Z",
 };
 
+
+const BETVILLK_HTML = `
+<p>De flesta byggföretag som får likviditetsproblem har inte för få jobb — de har för lång kredittid. Varje faktura med 30, 60 eller 90 dagars betalningstid är en räntefri lånefinansiering du ger din beställare, samtidigt som löner, material och underentreprenörer ska betalas i tid. Rätt betalningsvillkor är därför inte administrativt pyssel, det är kassaflödesskydd. Här går vi igenom vad lagen faktiskt kräver 2026 och hur du sätter villkor som håller pengarna i rörelse — mot både professionella beställare och privatpersoner.</p>
+
+<p>Ett tydligt underlag börjar med rätt uppsatt faktura. Sätt villkoren en gång i <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall &rarr;</a> så att förfallodatum, dröjsmålsränta och avgifter finns med på varje utskick.</p>
+
+<h2>Vad lagen faktiskt kräver 2026</h2>
+<p>Botten under alla avtal är räntelagen (1975:635). Den ger dig rätt till <strong>dröjsmålsränta</strong> även om du inte skrivit ett ord om det på fakturan. Räntan är <strong>referensräntan + 8 procentenheter</strong> per år och gäller lika mot företag som mot privatpersoner. Under 2026 ligger referensräntan runt 2 procent, vilket ger en dröjsmålsränta på ungefär 10 procent per år.</p>
+<p>När räntan börjar löpa beror på om ni avtalat ett förfallodatum. Har ni satt ett datum i förväg löper räntan automatiskt från förfallodagen — ingen påminnelse behövs (§ 3). Har ni inte avtalat något datum får du kräva ränta först 30 dagar efter att du skickat fakturan (§ 4), och gäldenären är inte skyldig ränta innan fakturan nått fram. Poängen: villkoren du glömmer skriva ut ger dig ändå lagens skydd — men de villkor du skriver ut ger dig kontrollen.</p>
+
+<h2>B2B: beställare, generalentreprenör och offentlig köpare</h2>
+<p>Mellan näringsidkare förfaller en faktura senast 30 dagar efter krav (§ 2 a). Det viktiga: en längre kredittid gäller bara om <strong>du som säljare uttryckligen har godkänt den</strong>. Villkor som ensidigt tvingar dig att vänta längre är ogiltiga. Det betyder att en generalentreprenör inte kan pressa in 60 eller 90 dagar i sina inköpsvillkor och göra det bindande utan att du aktivt accepterat — och du bör tänka två gånger innan du gör det.</p>
+<p>Mot offentlig beställare — kommun, region eller stat — är taket ännu hårdare: <strong>max 30 dagars betalningstid</strong>, och den går inte att förlänga genom avtal. Ränta löper efter 30 dagar oavsett vad som står i upphandlingsunderlaget.</p>
+<p>Långa kredittider är särskilt farliga i entreprenader där du ligger ute med material och lön i månader. Två motmedel: håll kredittiden kort (10–20 dagar där du kan) och fakturera löpande i stället för allt på slutet. <strong>A conto-fakturering eller delfakturering</strong> mot uppnådda etapper flyttar in pengarna i takt med att kostnaderna uppstår, i stället för att samla all risk i en slutfaktura.</p>
+
+<h2>Privatperson: konsumentjobbet</h2>
+<p>Jobb åt privatpersoner styrs av konsumenttjänstlagen (1985:716). Här finns ingen 30-dagarsspärr som i B2B — betalningsvillkoren är fritt avtalbara. Utnyttja det: sätt en <strong>kort kredittid på 10–15 dagar</strong>. Samma dröjsmålsränta (referensränta + 8 procentenheter) gäller mot konsument, men den lagstadgade <strong>förseningsersättningen på 450 kr kan du inte ta ut av en privatperson</strong> — den är bara för B2B och offentliga köpare.</p>
+<p>Tänk också på att ROT-avdraget bara påverkar arbetskostnaden. ROT-avdrag är 30 procent av arbetskostnaden, max 50 000 kr per person och år — men material och den andra halvan av arbetet ska in på ditt konto snabbt, oavsett hur länge Skatteverket dröjer med utbetalningen. Räkna ut kundens del rätt direkt med <a href="/sv/verktyg/rot-avdrag-kalkylator">vår ROT-avdragskalkylator &rarr;</a>. Fakturera dessutom <strong>direkt vid slutbesiktning eller godkänt arbete</strong> — inte en vecka senare när minnet av jobbet börjat blekna.</p>
+
+<h2>Avgifter du får ta ut när betalning uteblir</h2>
+<p>När kunden inte betalar finns flera lagstadgade avgifter att luta sig mot. Beloppen är tak — du kan inte avtala om högre, och klausuler som försöker ta bort gäldenärens ränteskyldighet eller höja avgifterna är ogiltiga i affärsförhållanden.</p>
+<ul>
+<li><strong>Förseningsersättning 450 kr</strong> — endast B2B och offentlig köpare. Får tas ut automatiskt, ingen påminnelse krävs. Gäller inte mot konsument.</li>
+<li><strong>Påminnelseavgift 60 kr</strong> — får bara tas ut om det avtalades när skulden uppstod. Skriv därför in villkoret på fakturan.</li>
+<li><strong>Inkassokrav 180 kr</strong> — den lagstadgade ersättningen för ett formellt inkassokrav.</li>
+<li><strong>Amorteringsplan 170 kr</strong> — om ni kommer överens om avbetalning.</li>
+</ul>
+
+<h2>Påminnelserutin som skyddar kassan</h2>
+<p>En förutsägbar rutin gör att du agerar innan skulden hinner bli gammal. Konkret tidslinje:</p>
+<ol>
+<li><strong>Dag 0:</strong> Faktura med tydligt förfallodatum, angiven kredittid och dröjsmålsränta.</li>
+<li><strong>Dag +1 efter förfallodag:</strong> Vänlig påminnelse. Ofta räcker det — många missar bara datumet.</li>
+<li><strong>Dag +8:</strong> Formellt inkassokrav med påminnelseavgift (60 kr om avtalat), inkassokostnad (180 kr) och upplupen dröjsmålsränta.</li>
+<li><strong>Dag +15:</strong> Skicka till inkasso eller ansök om betalningsföreläggande hos Kronofogden.</li>
+</ol>
+<p>Det avgörande är att rutinen körs automatiskt, inte när du råkar komma ihåg det. Automatisera påminnelserna i faktureringssystemet och skriv villkoren direkt på fakturan — då blir varje steg juridiskt vattentätt utan extra arbete. Läs mer om nästa steg i <a href="/sv/blog/kunden-betalar-inte-fakturan">kunden betalar inte fakturan</a>.</p>
+
+<h2>Checklista: villkor som hör hemma på varje faktura</h2>
+<ul>
+<li>Förfallodatum (ett faktiskt datum, inte bara "30 dagar")</li>
+<li>Kredittid i antal dagar</li>
+<li>Dröjsmålsränta: referensränta + 8 procentenheter</li>
+<li>Påminnelseavgift 60 kr — avtalad redan här</li>
+<li>Referens eller ordernummer från beställaren</li>
+<li>ROT-uppdelning: arbetskostnad, kundens del efter avdrag, material</li>
+<li>Organisationsnummer eller personnummer, momsnummer</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp sätter du upp dina standardvillkor en gång — kredittid, förfallodatum, dröjsmålsränta och påminnelseavgift — och de följer med på varje faktura du skapar. Systemet räknar ut ROT-uppdelningen åt dig och håller isär arbetskostnad och material så att kundens del blir rätt. Uteblir betalningen ligger påminnelserutinen redo att skickas i tur och ordning, och underlaget sparas i de sju år bokföringen kräver. Ingen magi — bara att villkoren blir konsekventa och att du slipper glömma stegen som faktiskt hämtar in pengarna.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur hög är dröjsmålsräntan 2026?</h3>
+<p>Dröjsmålsräntan är referensräntan plus 8 procentenheter per år. Referensräntan ligger runt 2 procent under 2026, vilket ger en dröjsmålsränta på ungefär 10 procent per år. Samma nivå gäller mot både företag och privatpersoner.</p>
+<h3>Kan en stor beställare tvinga på mig 60 dagars betalningstid?</h3>
+<p>Nej, inte utan ditt samtycke. Mellan näringsidkare förfaller fakturan senast 30 dagar efter krav, och en längre kredittid gäller bara om du som säljare uttryckligen godkänt den. Mot kommun, region och stat är taket 30 dagar och kan inte förlängas alls.</p>
+<h3>Får jag ta ut förseningsersättning av en privatperson?</h3>
+<p>Nej. Den lagstadgade förseningsersättningen på 450 kr gäller bara i affärsförhållanden och mot offentliga köpare. Mot en privatperson får du ta ut dröjsmålsränta och lagstadgade påminnelse- och inkassoavgifter, men inte de 450 kronorna.</p>
+<h3>Måste jag skicka en påminnelse innan räntan börjar löpa?</h3>
+<p>Inte om ni avtalat ett förfallodatum i förväg — då löper räntan automatiskt från förfallodagen. Har ni inte avtalat något datum får du kräva ränta först 30 dagar efter att fakturan skickats.</p>
+
+<h2>Kom igång</h2>
+<p>Standardisera dina betalningsvillkor en gång så sparar du dagar av kredittid på varje jobb. Bygg din faktura med rätt villkor i <a href="/sv/verktyg/faktura-mall">vår fakturamall</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur automatisk fakturering och påminnelserutin fungerar i praktiken.</p>
+
+<p>Relaterat: <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a> &middot; <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a></p>
+`.trim();
+
+const BETVILLK: BlogPost = {
+  _id: "code-"+"betalningsvillkor-faktura-bygg",
+  title: "Betalningsvillkor på fakturan: så skyddar du kassan mot beställare och privatperson",
+  slug: "betalningsvillkor-faktura-bygg",
+  locale: "sv",
+  excerpt: "Så sätter du betalningsvillkor som håller pengarna i rörelse — kredittid, dröjsmålsränta och en påminnelserutin som fungerar mot både B2B-beställare och privatkunder.",
+  tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/faktura-preview.webp",
+  contentHtml: BETVILLK_HTML,
+  seoTitle: "Betalningsvillkor faktura bygg | ByggExp",
+  seoDescription: "Rätt betalningsvillkor för hantverkare: kortare kredittid, dröjsmålsränta och påminnelserutin som skyddar likviditeten mot både beställare och privatperson.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/faktura-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T13:00:00.000Z", createdAt: "2026-08-18T13:00:00.000Z", updatedAt: "2026-08-18T13:00:00.000Z",
+};
+
+
+const KONTRAVG_HTML = `
+<p>Skatteverket gör oanmälda kontrollbesök på byggarbetsplatser, och de dyker upp utan förvarning. På några minuter jämför inspektören vilka som faktiskt arbetar på plats mot vad personalliggaren visar. Stämmer det inte – eller om liggaren inte ens finns tillgänglig – börjar avgifterna ticka direkt, per person. Det mesta av detta är fullt undvikbart. En digital liggare som alltid är uppdaterad och kan visas på sekunden gör skillnaden mellan en normal arbetsdag och en oväntad räkning på tiotusentals kronor. I den här artikeln går vi igenom exakt vad en miss kostar 2026 och hur du bygger bort risken.</p>
+
+<p>Ett smidigt sätt att komma igång är att först få ordning på tidregistreringen med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -&gt;</a> och sedan gå över till en digital liggare som loggar in- och utcheckning i realtid.</p>
+
+<h2>Vad är personalliggare i byggverksamhet – och vem ansvarar?</h2>
+<p>Personalliggare i byggbranschen regleras av skatteförfarandelagen (2011:1244). Reglerna som infördes 2016 gäller i sak oförändrat för 2026. Kravet är att alla verksamma på arbetsplatsen ska vara dokumenterade i realtid, och att liggaren omedelbart kan visas för Skatteverket vid ett kontrollbesök.</p>
+<p>Ansvaret är delat. <strong>Byggherren</strong> ska anmäla byggarbetsplatsen till Skatteverket innan arbetet påbörjas (7 kap. 2 a §) och tillhandahålla utrustning för den elektroniska liggaren. Det ansvaret kan genom skriftligt avtal föras över till en entreprenör som självständigt driver en avgränsad del av arbetsplatsen. Oavsett detta är varje arbetsgivare alltid skyldig att logga sin egen personal i realtid – även underentreprenörernas folk måste finnas i liggaren.</p>
+<p>ID06 är den marknadsstandard som i praktiken används och som ofta krävs enligt Byggföretagens standardavtal. Men det är viktigt att förstå: det juridiska kravet står i skatteförfarandelagen, inte i ID06. Vilken godkänd elektronisk lösning som helst duger enligt lagen – ID06-kravet är avtalsmässigt, inte lagstadgat.</p>
+
+<h2>När gäller kravet? Tröskeln på fyra prisbasbelopp</h2>
+<p>Skyldigheten att föra personalliggare inträder först när den sammanlagda kostnaden för byggverksamheten på arbetsplatsen kan antas överstiga fyra prisbasbelopp. Prisbasbeloppet för 2026 är 59 200 kr, vilket ger en tröskel på <strong>4 × 59 200 = 236 800 kr</strong>. Under den nivån gäller inte kravet, och en privatperson som bygger utanför näringsverksamhet omfattas aldrig.</p>
+<p>Notera att tröskeln flyttar sig varje år eftersom prisbasbeloppet räknas upp. Ett projekt som låg precis under gränsen ett år kan hamna över nästa. Räkna på hela projektet, inte på en enskild faktura – det är den totala byggkostnaden som avgör.</p>
+
+<h2>Så mycket kostar en miss – kontrollavgifterna 2026</h2>
+<p>Avgifterna framgår av 50 kap. 4 § skatteförfarandelagen. De är fasta belopp och adderas:</p>
+<ul>
+<li><strong>12 500 kr per kontrolltillfälle</strong> om personalliggaren inte förs, eller inte kan göras tillgänglig för Skatteverket i verksamhetslokalen eller på byggarbetsplatsen.</li>
+<li><strong>2 500 kr för varje person</strong> som är verksam vid kontrollen men inte är dokumenterad i en tillgänglig personalliggare.</li>
+<li><strong>25 000 kr</strong> om byggarbetsplatsen inte har anmälts till Skatteverket innan arbetet påbörjades (byggherrens anmälningsplikt).</li>
+</ul>
+<p>Ett konkret exempel: ett litet arbetslag på fyra personer arbetar på en plats där liggaren av misstag inte är tillgänglig när Skatteverket kommer. Grundavgiften blir 12 500 kr. Ovanpå det läggs 2 500 kr per odokumenterad person, alltså 4 × 2 500 = 10 000 kr. Totalt <strong>22 500 kr</strong> för ett enda besök. Var även platsen oanmäld tillkommer 25 000 kr – och notan landar på 47 500 kr. Per-person-avgiften gör att kostnaden skenar snabbt på en välbemannad plats.</p>
+
+<h2>Upprepning inom ett år: när 12 500 blir 25 000</h2>
+<p>Har Skatteverket redan tagit ut en kontrollavgift och en ny blir aktuell för en överträdelse inom ett år från det tidigare beslutet, höjs grundbeloppet från 12 500 kr till <strong>25 000 kr</strong> (50 kap. 4 § 2 st). Per-person-avgiften på 2 500 kr ligger kvar.</p>
+<p>Samtidigt finns en rättelseregel i 50 kap. 6 §: när en kontrollavgift väl beslutats ska bristen åtgärdas inom skälig tid, och ingen ny avgift får tas ut för <em>samma</em> brist under den perioden. Men en ny, separat brist vid ett senare kontrolltillfälle utlöser den nu högre upprepningsavgiften. Två kontroller nära varandra kan därför bli betydligt dyrare än summan av två fristående missar.</p>
+
+<h2>Den dolda kostnaden: avgiften är inte avdragsgill</h2>
+<p>En kontrollavgift är en sanktionsavgift, och sanktionsavgifter är inte avdragsgilla enligt inkomstskattelagen (9 kap. 9 §). Det betyder att bruttobeloppet är den verkliga kostnaden – ingen skattelättnad mildrar smällen. En avgift på 22 500 kr är alltså 22 500 kr rakt av, inte en avdragsgill kostnad.</p>
+<p>Lägg till de indirekta kostnaderna: avbrutet arbete under kontrollen, tid som går åt till att reda ut och överklaga, och en försämrad position vid upphandlingar där dokumenterad ordning på personalliggaren väger tungt. För en huvudentreprenör kan brister hos en underentreprenör dessutom bli ett problem för hela projektets rykte.</p>
+
+<h2>Vanliga misstag som utlöser avgift</h2>
+<ul>
+<li>Personal checkar inte in och ut i realtid – de gör det i efterhand eller glömmer bort det.</li>
+<li>Underentreprenörernas anställda saknas i liggaren, trots att alla verksamma ska registreras.</li>
+<li>Pappersliggaren ligger på kontoret i stället för på arbetsplatsen, och kan inte visas vid besöket.</li>
+<li>Tröskeln på fyra prisbasbelopp felbedöms så att kravet missas tills projektet redan passerat gränsen.</li>
+<li>Byggarbetsplatsen har inte anmälts till Skatteverket innan arbetet startade.</li>
+</ul>
+
+<h2>Så undviker digital personalliggare avgiften</h2>
+<p>En digital liggare tar bort de vanligaste orsakerna till avgift. In- och utcheckning sker i realtid direkt i mobilen, ofta med samma disciplin som ett ID06-kort ger. Lösningen fungerar även offline på platser med dålig täckning och synkar när uppkopplingen är tillbaka. Alla underentreprenörer samlas i en och samma liggare, så att ingen faller mellan stolarna.</p>
+<p>Vid ett kontrollbesök kan liggaren visas direkt på Skatteverkets läsplatta eller mobil – ingen letande efter en pärm på fel plats. Och eftersom varje in- och utcheckning tidsstämplas finns en spårbar logg som styrker att liggaren förts korrekt. Det är precis den bevisning som gör skillnaden när inspektören står på plats.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp registrerar personalen sin arbetstid löpande, vilket ger dig ett tidsstämplat underlag för vilka som varit verksamma på varje projekt. Underlaget håller ordning på arbetslaget och gör det enkelt att sammanställa vem som arbetat var och när – grunden för både korrekt fakturering och för att kunna redogöra för verksamma personer. ByggExp ersätter inte i sig en godkänd elektronisk personalliggare enligt skatteförfarandelagen, men det ger dig strukturen och realtidsvanan som gör att liggaren faktiskt blir förd rätt. Vill du börja i det lilla kan du testa flödet med vår kostnadsfria tidrapport-mall och därifrån ta steget till löpande digital registrering.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket är kontrollavgiften för personalliggare 2026?</h3>
+<p>12 500 kr per kontrolltillfälle om liggaren inte förs eller inte kan visas, plus 2 500 kr för varje verksam person som saknas i en tillgänglig liggare. Har platsen inte anmälts till Skatteverket tillkommer 25 000 kr. Vid upprepning inom ett år höjs grundbeloppet till 25 000 kr.</p>
+<h3>När måste jag föra personalliggare?</h3>
+<p>När den sammanlagda kostnaden för byggverksamheten på arbetsplatsen kan antas överstiga fyra prisbasbelopp. För 2026 motsvarar det 236 800 kr (4 × 59 200 kr). En privatperson som bygger utanför näringsverksamhet omfattas aldrig.</p>
+<h3>Vem ansvarar – byggherren eller entreprenören?</h3>
+<p>Byggherren ska anmäla arbetsplatsen och tillhandahålla utrustning för liggaren, men ansvaret kan skriftligen föras över till en entreprenör som självständigt driver en avgränsad del. Varje arbetsgivare är dock alltid skyldig att logga sin egen personal i realtid.</p>
+<h3>Är kontrollavgiften avdragsgill?</h3>
+<p>Nej. Kontrollavgiften är en sanktionsavgift och är inte avdragsgill enligt inkomstskattelagen 9 kap. 9 §. Bruttobeloppet är den faktiska kostnaden, utan skattelättnad.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att strama upp tidregistreringen med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -&gt;</a>, och utforska fler kostnadsfria hjälpmedel i <a href="/sv/verktyg">vår verktygslåda för hantverkare</a>. Vill du se hur löpande digital registrering fungerar i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi flödet från incheckning till färdigt underlag.</p>
+
+<p>Relaterat: <a href="/sv/blog/personalliggare">Personalliggare i byggbranschen – kraven i korthet</a> och <a href="/sv/blog/id06">ID06 – vad det är och hur det hänger ihop med personalliggaren</a>.</p>
+`.trim();
+
+const KONTRAVG: BlogPost = {
+  _id: "code-"+"kontrollavgift-personalliggare",
+  title: "Kontrollavgift för personalliggare – vad en miss vid Skatteverkets kontroll faktiskt kostar (2026)",
+  slug: "kontrollavgift-personalliggare",
+  locale: "sv",
+  excerpt: "Skatteverkets oanmälda kontrollbesök kan bli dyra – här är avgiftsnivåerna för 2026 och hur en alltid uppdaterad digital personalliggare stänger risken.",
+  tag: "Regler",
+  coverImageUrl: "/landing/verktyg/tidrapport-preview.webp",
+  contentHtml: KONTRAVG_HTML,
+  seoTitle: "Kontrollavgift personalliggare 2026 | ByggExp",
+  seoDescription: "Vad kostar en miss vid Skatteverkets kontroll av personalliggaren? Se avgifterna 2026 – 12 500 kr, 2 500 kr/person, 25 000 kr – och hur du undviker dem.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/tidrapport-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T13:30:00.000Z", createdAt: "2026-08-18T13:30:00.000Z", updatedAt: "2026-08-18T13:30:00.000Z",
+};
+
+
+const BASPBASU_HTML = `
+<p>Byggherren måste utse en BAS-P och en BAS-U för varje bygg- eller anläggningsarbete – men vad är egentligen skillnaden? Kort svar: BAS-P samordnar arbetsmiljön i projekteringen, BAS-U samordnar den i utförandet, och byggherren utser båda men blir aldrig helt av med sitt eget ansvar. För dig som driver ett mindre byggföretag är det just den sista meningen som gör att en till synes enkel underskrift kan bli dyr.</p>
+
+<p>Grunden i samordningen är dokumentation – att arbetsmiljöplanen lever och att egenkontrollerna faktiskt görs. Ett enkelt sätt att komma igång är med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a> som du kan använda direkt på arbetsplatsen.</p>
+
+<h2>Snabbsvaret – skillnaden mellan BAS-P och BAS-U</h2>
+<p>Bokstaven avslöjar var i projektet rollen sitter. BAS-P står för Byggarbetsmiljösamordnare för <strong>Planering och projektering</strong> – ritbordsfasen. BAS-U står för samordnare för <strong>Utförandet</strong> – den bemannade byggarbetsplatsen. Så här hänger kedjan ihop:</p>
+<ul>
+<li><strong>Byggherren</strong> – beställer arbetet, utser båda samordnarna, avsätter tid och resurser och följer upp.</li>
+<li><strong>BAS-P</strong> – samordnar projektörerna, bygger bort förutsebara risker och <strong>upprättar arbetsmiljöplanen</strong> innan bygget startar.</li>
+<li><strong>BAS-U</strong> – tar över på plats, håller arbetsmiljöplanen uppdaterad mot verkligheten och samordnar alla som arbetar samtidigt.</li>
+</ul>
+<p>BAS-P lämnar alltså över ett underlag; BAS-U förvaltar och uppdaterar det när grävmaskinen väl är på plats.</p>
+
+<h2>Byggherrens roll – kedjan börjar och slutar här</h2>
+<p>Enligt Arbetsmiljölagen 3 kap. 6 § är byggherren skyldig att utse en <em>lämplig</em> BAS-P och en <em>lämplig</em> BAS-U. Att peka ut en samordnare befriar dock inte byggherren från ansvar. Byggherren måste fortfarande organisera resurser, ge projektet tillräckligt med tid, klargöra vem som gör vad, följa upp samordnarnas arbete och se till att arbetsmiljöplanen lämnas över korrekt.</p>
+<p>Byggherren ansvarar också för <strong>förhandsanmälan</strong> till Arbetsmiljöverket. Den ska skickas innan arbetet påbörjas om antingen jobbet beräknas pågå mer än 30 arbetsdagar med fler än 20 personer sysselsatta samtidigt någon gång, eller om det totalt beräknas överstiga 500 persondagar.</p>
+
+<h2>BAS-P i projekteringen – bygga bort riskerna på ritbordet</h2>
+<p>BAS-P:s uppdrag regleras i AML 3 kap 7 a § och i 3 kap AFS 2023:3. Uppgifterna handlar om att förebygga innan spaden sätts i marken:</p>
+<ul>
+<li>Samordna projektörernas arbete så att arbetsmiljön i både bygg- och driftskedet vägs in.</li>
+<li>Se till att förutsebara risker konstrueras bort redan i projekteringen.</li>
+<li>Upprätta arbetsmiljöplanen och identifiera om något av de 13 <strong>särskilt farliga arbetena</strong> förekommer.</li>
+</ul>
+<p>Till de särskilt farliga arbetena hör bland annat fallrisk där höjdskillnaden är 2 meter eller mer, arbete nära högspänningsledningar, rivning av bärande konstruktioner, arbete med asbest eller andra farliga material, arbete i schakt och tunnlar, drunkningsrisk och arbete med sprängämnen. Förekommer något av dem måste en arbetsmiljöplan finnas innan arbetsplatsen etableras – oavsett projektets storlek.</p>
+
+<h2>BAS-U i utförandet – samordning på plats</h2>
+<p>BAS-U:s uppdrag regleras i AML 3 kap 7 b § och i 4 kap AFS 2023:3. Här handlar det om den levande arbetsplatsen:</p>
+<ul>
+<li>Hålla arbetsmiljöplanen uppdaterad mot de faktiska förhållandena.</li>
+<li>Förhindra farliga samtidiga arbeten – att en aktör inte utsätter en annan för risk.</li>
+<li>Organisera gemensamma skyddsanordningar som ställningar, hissar och trafikleder.</li>
+<li>Genomföra skyddsronder, arbetsmiljöintroduktioner och samverka med skyddsombud.</li>
+</ul>
+<p>Viktigt: BAS-U:s samordning tar inte över varje enskild entreprenörs eget arbetsmiljöansvar för sina egna anställda. Samordnarrollen och arbetsgivarrollen löper parallellt – som underentreprenör ansvarar du fortfarande för dina egna medarbetare.</p>
+
+<h2>Kompetenskrav – räcker en tvådagarskurs?</h2>
+<p>Det finns ingen lagstadgad, obligatorisk kurs för att bli BAS-P eller BAS-U. Däremot måste samordnaren ha den utbildning, kompetens och erfarenhet som krävs i förhållande till projektets storlek, komplexitet och risknivå – och byggherren ska kunna styrka det, till exempel med intyg. Det finns inget exakt lagkrav på utbildningens längd, men det är just vägledning och inte ett lagkrav. Ett litet renoveringsjobb och ett komplext anläggningsprojekt ställer helt olika krav.</p>
+
+<h2>Fällan för småföretag – när du tar samordnarrollen på pappret</h2>
+<p>Här sitter de flesta problemen för mindre byggföretag. Det finns två vanliga fällor:</p>
+<ol>
+<li><strong>Du skriver under fel avtal.</strong> Enligt AML 3 kap 7 c § kan byggherrens 6 §-skyldigheter överföras till en uppdragstagare – men bara om två villkor är uppfyllda: du har anlitats för att självständigt sköta projekteringen eller utförandet, <em>och</em> det avtalas skriftligt att ansvaret går över. Saknas det skriftliga avtalet, eller är du inte verkligt självständig, stannar ansvaret hos byggherren. Baksidan är att ett tydligt formulerat avtal kan flytta hela byggherreansvaret till dig utan att du fattat vidden av det.</li>
+<li><strong>Du står som BAS-U utan förutsättningar.</strong> Att ta samordnaransvaret utan tid, personal eller dokumenterad kompetens innebär att du bär ett ansvar du inte kan leva upp till – och det är på arbetsplatsen olyckorna sker.</li>
+</ol>
+
+<h2>Sanktionsavgifter och personligt ansvar</h2>
+<p>AFS 2023:3, som gäller sedan 1 januari 2025 , är förenad med konkreta sanktionsavgifter:</p>
+<ul>
+<li>Utebliven förhandsanmälan: <strong>5 000 kr</strong>.</li>
+<li>Utebliven arbetsmiljöplan: <strong>10 000 kr</strong> när förhandsanmälan inte krävs, och <strong>50 000 kr</strong> när den krävs.</li>
+</ul>
+<p>Avgiften för arbetsmiljöplanen kan tas ut <em>separat</em> på byggherren, på BAS-P och på BAS-U. Med andra ord kan du som samordnare drabbas personligen, parallellt med byggherren. Ingen avgift tas ut om hela arbetet pågår i högst två sammanhängande dagar. Vid en allvarlig olycka kan det dessutom bli fråga om straffansvar – sanktionsavgiften är bara golvet.</p>
+
+<h2>Checklista innan du tackar ja till BAS-P eller BAS-U</h2>
+<ul>
+<li>Har du ett skriftligt uppdrag som tydligt anger vilken roll du tar?</li>
+<li>Framgår gränsen för ditt ansvar – tar du samordnarrollen eller hela byggherreansvaret enligt 7 c §?</li>
+<li>Finns en arbetsmiljöplan, och vem har upprättat den?</li>
+<li>Är förhandsanmälan gjord om tröskeln passeras?</li>
+<li>Har du faktisk tid att vara på plats och samordna?</li>
+<li>Har du kompetens och intyg som står i proportion till projektets risknivå?</li>
+<li>Hur samordnas underentreprenörerna och deras samtidiga arbeten?</li>
+<li>Hur dokumenteras skyddsronder, introduktioner och avvikelser?</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>Samordnaransvaret står och faller med dokumentationen – att arbetsmiljöplanen är uppdaterad och att egenkontrollerna faktiskt utförs och sparas. I ByggExp håller du kontrollerna samlade och spårbara, så att du vid en skyddsrond eller en inspektion kan visa vad som gjorts, när och av vem. Det ersätter inte kompetensen som BAS-P eller BAS-U kräver, men det gör det lättare att leva upp till rollen i praktiken och att spara underlagen så länge du behöver dem.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan BAS-P och BAS-U?</h3>
+<p>BAS-P samordnar arbetsmiljön under planering och projektering och upprättar arbetsmiljöplanen. BAS-U samordnar arbetsmiljön under utförandet på den bemannade arbetsplatsen och håller planen uppdaterad. P sitter vid ritbordet, U på bygget.</p>
+<h3>Kan samma person vara både BAS-P och BAS-U?</h3>
+<p>Ja, lagen hindrar inte det, förutsatt att personen har den utbildning, kompetens och erfarenhet som krävs för båda faserna i förhållande till projektets storlek, komplexitet och risknivå. I mindre projekt är det vanligt att rollerna samlas hos en person.</p>
+<h3>Slipper byggherren ansvar genom att utse en BAS?</h3>
+<p>Nej. Byggherren måste fortfarande organisera resurser, ge tillräckligt med tid, klargöra vem som gör vad och följa upp samordnarnas arbete. Ansvaret kan bara flyttas till en uppdragstagare via ett skriftligt avtal enligt AML 3 kap 7 c §, och bara om denne självständigt sköter arbetet.</p>
+<h3>Vad kostar det att sakna arbetsmiljöplan?</h3>
+<p>Sanktionsavgiften är 10 000 kr när förhandsanmälan inte krävs och 50 000 kr när den krävs. Avgiften kan tas ut separat på byggherren, BAS-P och BAS-U. Saknad förhandsanmälan kostar 5 000 kr.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att få dokumentationen på plats. Använd <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> för att komma igång med kontrollerna redan idag, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller arbetsmiljöplan och samordning samlat i praktiken.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – när krävs den och vad ska ingå</a> och <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>.</p>
+`.trim();
+
+const BASPBASU: BlogPost = {
+  _id: "code-"+"bas-p-bas-u",
+  title: "BAS-P och BAS-U – vem ansvarar för vad?",
+  slug: "bas-p-bas-u",
+  locale: "sv",
+  excerpt: "Vem gör vad i kedjan byggherre, BAS-P och BAS-U – och varför du som småföretagare bör tänka efter innan du skriver under samordnaruppdraget.",
+  tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp",
+  contentHtml: BASPBASU_HTML,
+  seoTitle: "BAS-P och BAS-U – skillnaden | ByggExp",
+  seoDescription: "BAS-P samordnar arbetsmiljön i projekteringen, BAS-U i utförandet. Så skiljer sig rollerna – och riskerna när småföretag tar samordnaransvaret.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T14:00:00.000Z", createdAt: "2026-08-18T14:00:00.000Z", updatedAt: "2026-08-18T14:00:00.000Z",
+};
+
+
+const GARANTI_HTML = `
+<p>Många entreprenörer tror att ansvaret tar slut när garantitiden gått ut. Det är fel. AB 04 binder dig i tio år räknat från godkänd slutbesiktning, och det som ändras efter garantin är inte om du ansvarar - utan vad du ansvarar för och vem som ska bevisa vad. Här reder vi ut skillnaden mellan garantitid och ansvarstid, och vad väsentlighets- och vårdslöshetskravet betyder när garantin väl har löpt ut.</p>
+
+<p>Ordning och dokumentation är din bästa försäkring hela vägen - använd <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a> för att visa att arbetet utförts fackmässigt om ett fel skulle dyka upp flera år senare.</p>
+
+<h2>Två tidsbegrepp som blandas ihop - garantitid ligger inuti ansvarstiden</h2>
+<p>Det första du behöver ha klart för dig är att garantitid och ansvarstid inte är två alternativ. Garantitiden är den första delen av ansvarstiden.</p>
+<p>Ansvarstiden enligt AB 04 är tio år, räknat från entreprenadens godkännande vid slutbesiktningen. De tio åren motsvarar den allmänna preskriptionstiden. Ansvarstiden inleds med garantitiden och löper sedan vidare fram till år tio. När de tio åren har gått är du helt fri från ansvar - även för väsentliga fel som orsakats av vårdslöshet.</p>
+
+<h2>Garantitiden: 5 år för arbetet, 2 år för material</h2>
+<p>Som huvudregel är garantitiden i AB 04 fem år för entreprenörens arbetsprestation och två år för material och varor (kap. 4 § 7). Att materialet har kortare garanti beror på att leverantörernas garantier ofta är kortare - det är alltså en medveten uppdelning.</p>
+<p>Under garantitiden gäller ett så kallat presumtionsansvar med omvänd bevisbörda (kap. 5 § 5). Framträder ett fel förutsätts det bero på dig. Vill du slippa avhjälpa måste du bevisa att felet inte har orsakats av dig - exempelvis genom beställarens felaktiga skötsel, normalt slitage eller olyckshändelse. Det är en tung börda, och det är därför garantitiden är den period då du oftast får stå för avhjälpandet.</p>
+
+<h2>Efter garantin - men inom ansvarstiden</h2>
+<p>När garantitiden löpt ut vänder allt. Nu ansvarar du enligt kap. 5 § 6 bara för fel som är <strong>väsentliga</strong> och som dessutom visas ha sin grund i din <strong>vårdslöshet</strong>. Bevisbördan flyttas dessutom över till beställaren - det är alltså beställaren som måste visa både att felet är väsentligt och att det beror på att du varit vårdslös.</p>
+<p>Den kvarvarande ansvarstiden är resten av tioårsperioden: ytterligare fem år för arbetsprestationen (5 + 5 = 10) och ytterligare åtta år för material och varor (2 + 8 = 10). Ett materialfel som visar sig år sju kan alltså fortfarande vara ditt ansvar - men bara om det är väsentligt och beror på vårdslöshet.</p>
+
+<h2>När är felet "väsentligt"?</h2>
+<p>Begreppet väsentligt fel är inte definierat i själva kontraktstexten, men kommentaren till kap. 5 § 6 ger vägledning. Ett fel kan bedömas som väsentligt om det:</p>
+<ul>
+<li>medför stora kostnader att avhjälpa,</li>
+<li>hindrar den avsedda användningen av byggnaden,</li>
+<li>påverkar byggnadens goda bestånd,</li>
+<li>innebär avbrott i tekniska system - dock inte kortvariga eller återkommande avbrott,</li>
+<li>är av stor omfattning,</li>
+<li>utgörs av återkommande likartade smärre fel, eller</li>
+<li>medför fara för hälsa eller säkerhet.</li>
+</ul>
+<p>Motsatsvis faller smärre fel och rena utseendefel normalt utanför ansvaret efter garantitiden - särskilt sådant som kan åtgärdas med relativt enkla medel och utan att din fackkunskap krävs.</p>
+
+<h2>När är du "vårdslös"?</h2>
+<p>Vårdslöshet bedöms mot kravet på fackmässighet. Har du frångått beställarens anvisningar eller avvikit från vad som är fackmässigt utförande? Då måste du kunna visa godtagbara skäl för avvikelsen för att undgå ansvar. Kan du inte det, riskerar avvikelsen att bedömas som vårdslös.</p>
+<p>Vägledande praxis från Högsta domstolen är NJA 1992 s. 130 (ett nedrasat innertak) samt de uppmärksammade fallen om enstegstätade fasader, NJA 2015 s. 110 och NJA 2015 s. 1040. Fasadfallen visar hur en metod som var vanlig i branschen ändå kunde bedömas som ett fel när den ledde till fuktskador - en påminnelse om att "alla gjorde så" inte automatiskt friar dig.</p>
+
+<h2>AB 04 vs ABT 06 - kort jämförelse</h2>
+<p>Vid totalentreprenad enligt ABT 06 gäller samma tioåriga ansvarstid och samma väsentlighets- och vårdslöshetskrav i kap. 5 § 6. Skillnaden ligger i materialgarantin: här är garantitiden fem år för entreprenaden och två år för material eller vara som beställaren särskilt har föreskrivit, alltså ett bestämt fabrikat. Vill du gå djupare i skillnaderna mellan avtalen, läs <a href="/sv/blog/ab-04-och-abt-06">vår genomgång av AB 04 och ABT 06</a>.</p>
+
+<h2>Praktiska råd</h2>
+<ul>
+<li>Genomför garantibesiktningen i tid - det är där fel enklast fångas medan omvänd bevisbörda fortfarande gäller till beställarens fördel.</li>
+<li>Vid fel som beställaren påtalar efter garantitiden bör en särskild besiktning begäras, och du som entreprenör ska kallas så att du kan delta.</li>
+<li>Dokumentera fackmässighet och de anvisningar du fått löpande under projektet. Det är detta underlag som avgör vårdslöshetsfrågan år senare.</li>
+<li>Överväg att särreglera väsentlighetskravet i kontraktet - till exempel att ett fel anses väsentligt först om avhjälpandekostnaden överstiger ett bestämt belopp, och att flera likartade fel räknas som ett.</li>
+<li>Notera att beställaren i vissa fall kan hålla inne del av entreprenadsumman som säkerhet enligt kap. 6 § 16, med skriftligt redovisade skäl.</li>
+</ul>
+<p>Förväxla inte heller AB 04 med konsumentreglerna. Arbetar du mot en privatperson gäller konsumenttjänstlagen, inte den här ansvarstrappan.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp löser inte juridiken åt dig, men det ger dig underlaget du behöver den dag ett fel ifrågasätts. I plattformen samlar du egenkontroller och byggdagbok knutna till rätt projekt, så att dokumentationen finns kvar långt efter slutbesiktningen - hela ansvarstiden ut.</p>
+<p>Med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> visar du att arbetet utförts fackmässigt, och med <a href="/sv/verktyg/byggdagbok-mall">byggdagboks-mallen</a> fångar du löpande vilka anvisningar du fått och vilka val som gjordes på plats. Just den kombinationen - fackmässighet plus dokumenterade anvisningar - är avgörande om beställaren efter garantin försöker visa att ett fel beror på din vårdslöshet.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Slutar mitt ansvar när garantitiden gått ut?</h3>
+<p>Nej. Garantitiden är bara den första delen av ansvarstiden. Efter garantin ansvarar du fortfarande fram till år tio, men enbart för väsentliga fel som beror på din vårdslöshet - och då är det beställaren som har bevisbördan.</p>
+
+<h3>Vad är skillnaden i bevisbörda före och efter garantitiden?</h3>
+<p>Under garantitiden gäller omvänd bevisbörda: felet förutsätts bero på dig och du måste bevisa motsatsen för att slippa avhjälpa. Efter garantitiden vänder det - beställaren måste bevisa både att felet är väsentligt och att det orsakats av din vårdslöshet.</p>
+
+<h3>Varför har material bara två års garanti men arbetet fem?</h3>
+<p>Uppdelningen följer AB 04 kap. 4 § 7 och speglar att leverantörernas materialgarantier ofta är kortare. Men ansvarstiden är densamma - tio år totalt. Efter garantin kvarstår ansvaret i åtta år för material och fem år för arbetsprestationen, om felet är väsentligt och vårdslöst.</p>
+
+<h3>Kan vi bestämma själva vad som räknas som väsentligt fel?</h3>
+<p>Ja, parterna kan särreglera väsentlighetskravet i kontraktet. Ni kan till exempel avtala att ett fel anses väsentligt först när avhjälpandekostnaden överstiger ett visst belopp, och att flera likartade fel ska räknas som ett. Det ger tydligare spelregler för tiden efter garantin.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg upp dokumentationen som håller hela ansvarstiden ut - börja med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> och komplettera med <a href="/sv/verktyg/byggdagbok-mall">byggdagboks-mallen</a>. Vill du se hur allt hänger ihop projekt för projekt, <a href="/sv/contact">boka en demo</a> så visar vi dig.</p>
+
+<p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 - skillnaderna</a> och <a href="/sv/blog/slutbesiktning">slutbesiktning steg för steg</a>.</p>
+`.trim();
+
+const GARANTI: BlogPost = {
+  _id: "code-"+"garantitid-ansvarstid-ab-04",
+  title: "Garantitid och ansvarstid i AB 04 - vad du ansvarar för i 5 och 10 år",
+  slug: "garantitid-ansvarstid-ab-04",
+  locale: "sv",
+  excerpt: "Många tror att ansvaret slutar när garantin gått ut - men AB 04 binder dig i tio år. Så skiljer sig garantitid och ansvarstid i praktiken.",
+  tag: "Entreprenadjuridik",
+  coverImageUrl: "/landing/verktyg/byggdagbok-preview.webp",
+  contentHtml: GARANTI_HTML,
+  seoTitle: "Garantitid & ansvarstid AB 04 | ByggExp",
+  seoDescription: "Skillnaden mellan garantitid och ansvarstid i AB 04: 5 år arbete, 2 år material och 10 års ansvar. Så funkar väsentlighets- och vårdslöshetskravet.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/byggdagbok-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T14:30:00.000Z", createdAt: "2026-08-18T14:30:00.000Z", updatedAt: "2026-08-18T14:30:00.000Z",
+};
+
+
+const ABS18_HTML = `
+<p>ABS 18 och Hantverkarformuläret 17 är två standardavtal som ofta blandas ihop. Båda är framtagna gemensamt av Byggföretagen (tidigare Sveriges Byggindustrier), Villaägarnas Riksförbund och Konsumentverket, och båda används när du som näringsidkare arbetar åt en konsument. Men de täcker olika typer av jobb. Väljer du fel blankett riskerar du ett svagare bevisläge, sämre skydd och otydliga regler om besiktning och betalning. Tesen är enkel: det är <strong>arbetets art</strong> som avgör valet, inte jobbets storlek eller pris. En dyr köksrenovering är fortfarande en renovering, och en liten tillbyggnad är fortfarande en småhusentreprenad.</p>
+
+<p>Oavsett vilket avtal som gäller behöver du en tydlig offert som grund. Börja med <a href="/sv/verktyg/offert-mall">vår gratis offertmall -&gt;</a> och bygg vidare på rätt standardblankett därifrån.</p>
+
+<h2>Grundregeln på 30 sekunder</h2>
+<p>Ställ dig en enda fråga innan du skriver avtal: bygger jag nytt eller bygger jag om något som redan finns?</p>
+<ul>
+<li><strong>Uppför eller bygger till</strong> ett en- eller tvåbostadshus -&gt; ABS 18 tillsammans med Entreprenadkontrakt (ABS 18).</li>
+<li><strong>Reparerar eller bygger om</strong> något befintligt (badrum, kök, tak, fönster, dränering) -&gt; Hantverkarformuläret 17.</li>
+</ul>
+<p>Det är hela beslutsregeln. Allt annat i den här artikeln är förklaringar till varför gränsen ligger just där och vad den får för konsekvenser.</p>
+
+<h2>Konsumenttjänstlagen styr allt</h2>
+<p>Båda avtalen vilar på konsumenttjänstlagen (1985:716). Lagen är tvingande till konsumentens fördel. Enligt § 3 är avtalsvillkor som är sämre för konsumenten än lagen helt enkelt utan verkan. Varken ABS 18 eller Hantverkarformuläret 17 kan avtala bort detta, de bygger vidare på lagen och fyller ut den med praktiska rutiner.</p>
+<p>Skillnaden mellan avtalen speglar en skillnad i själva lagen. Paragraferna §§ 51–61 innehåller särskilda tvingande regler för <em>småhusentreprenad</em>, definierat som uppförande eller tillbyggnad av en- eller tvåbostadshus. Det är exakt det område ABS 18 täcker. Dessa extra regler gäller <strong>inte</strong> för rena reparations- och ombyggnadsjobb på ett befintligt hus. Därför behövs två olika avtal: ett för det tyngre regelverket, ett för det enklare.</p>
+
+<h2>När du ska använda ABS 18</h2>
+<p>Använd ABS 18 när du uppför ett nytt småhus eller bygger till ett befintligt en- eller tvåbostadshus. Avtalet fungerar tillsammans med blanketten Entreprenadkontrakt (ABS 18) och drar med sig hela småhusregimen i §§ 51–61. Det innebär bland annat:</p>
+<ul>
+<li><strong>Slutbesiktning.</strong> Regleras i §§ 53–57 och kan begäras av båda parter. Den är en formell del av entreprenaden, inte en frivillig kontroll.</li>
+<li><strong>Innehållen betalning.</strong> Konsumenten får hålla inne upp till 10 % av det avtalade priset tills en godkänd slutbesiktning har genomförts (§ 52). Planera din likviditet efter det.</li>
+<li><strong>Tvåårspresumtion.</strong> Ett fel som visar sig inom två år efter godkänd slutbesiktning presumeras vara ditt ansvar. Bevisbördan ligger alltså på dig som entreprenör.</li>
+<li><strong>Ändrings- och tilläggsarbeten.</strong> ABS 18 har en egen ÄTA-blankett. Dokumentera varje avvikelse skriftligt löpande, inte i efterhand.</li>
+</ul>
+
+<h2>När du ska använda Hantverkarformuläret 17</h2>
+<p>Använd Hantverkarformuläret 17 för reparations- och ombyggnadsarbeten på ett befintligt hus. Typiska exempel är badrumsrenovering, köksbyte, takomläggning, fönsterbyte, dränering och installation av värmepump. Formuläret är enklare än ABS 18: du kan avtala om löpande räkning eller fast pris, och det finns en separat ÄTA-blankett för tilläggen.</p>
+<p>Att avtalet är enklare betyder inte att skyddet försvinner. Det finns ingen obligatorisk slutbesiktning, men konsumenttjänstlagens allmänna regler gäller ändå fullt ut, inklusive reklamationsreglerna. Konsumenten måste reklamera inom skälig tid, alltid minst två månader efter att felet upptäckts. Den yttre gränsen är tre år, men för arbete på fast egendom (byggnader och anläggningar) gäller tio år. Spara därför din dokumentation länge, oavsett vilket avtal du använt.</p>
+
+<h2>Färdigställandeskydd – den missade pusselbiten</h2>
+<p>Vid ABS 18-jobb finns ett krav som lätt glöms bort: färdigställandeskydd enligt lag (2014:227). Det är en bankgaranti eller försäkring som är <strong>obligatorisk vid nybyggnad</strong> av ett en- eller tvåbostadshus åt en konsument. Vid tillbyggnad och andra bygglovs- eller anmälningspliktiga arbeten krävs det om byggnadsnämnden bedömer att det behövs. Är arbetet varken bygglovs- eller anmälningspliktigt krävs det normalt inte, vilket är fallet vid de flesta rena reparationer under Hantverkarformuläret 17.</p>
+<p>Skyddet ska täcka rimlig extra kostnad för att färdigställa arbetet om konsumenten häver på grund av din försening, plus kostnad för att avhjälpa fel som noterats vid slutbesiktning och skador av sådana fel. Beloppet uppgår vanligtvis till minst 10 % av kontraktssumman, och ingen orimlig självrisk får läggas på konsumenten. I praktiken krävs skyddet ofta för att få startbesked, så lös det tidigt.</p>
+
+<h2>Jämförelse: ABS 18 vs Hantverkarformuläret 17</h2>
+<ul>
+<li><strong>Arbetets art:</strong> ABS 18 = nybyggnad/tillbyggnad av småhus. Hantverkarformuläret 17 = reparation/ombyggnad av befintligt.</li>
+<li><strong>Lagstöd:</strong> ABS 18 = KtjL §§ 51–61 (småhusregler) utöver de allmänna reglerna. Hantverkarformuläret 17 = KtjL:s allmänna regler.</li>
+<li><strong>Kontraktsblankett:</strong> ABS 18 = Entreprenadkontrakt (ABS 18). Hantverkarformuläret 17 = formuläret självt.</li>
+<li><strong>Slutbesiktning:</strong> ABS 18 = reglerad, kan krävas av båda parter. Hantverkarformuläret 17 = ingen obligatorisk.</li>
+<li><strong>Innehållande av betalning:</strong> ABS 18 = upp till 10 % till godkänd slutbesiktning. Hantverkarformuläret 17 = allmänna regler om innehållande vid fel.</li>
+<li><strong>Färdigställandeskydd:</strong> ABS 18 = obligatoriskt vid nybyggnad, annars efter byggnadsnämndens bedömning. Hantverkarformuläret 17 = normalt inte.</li>
+<li><strong>ÄTA:</strong> Båda har egen ÄTA-blankett.</li>
+</ul>
+
+<h2>5 vanliga misstag och hur du undviker dem</h2>
+<ol>
+<li><strong>Väljer avtal efter pris i stället för arbetets art.</strong> En stor renovering är inte en småhusentreprenad. Följ beslutsregeln.</li>
+<li><strong>Glömmer Entreprenadkontrakt (ABS 18).</strong> ABS 18 är allmänna bestämmelser och ska kombineras med kontraktsblanketten.</li>
+<li><strong>Hoppar över färdigställandeskyddet.</strong> Det kan stoppa startbeskedet vid nybyggnad.</li>
+<li><strong>Muntliga ÄTA.</strong> Dokumentera alla ändrings- och tilläggsarbeten skriftligt på ÄTA-blanketten direkt.</li>
+<li><strong>Ignorerar slutbesiktningen.</strong> Vid ABS 18 startar tvåårspresumtionen först vid godkänd besiktning, och de sista 10 % kan hållas inne tills dess.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte standardblanketterna från Konsumentverket, Byggföretagen och Villaägarna, men gör underlaget runt dem enkelt och spårbart. Du bygger offerten i <a href="/sv/verktyg/offert-mall">offertmallen</a> och håller sedan ordning på alla ändrings- och tilläggsarbeten med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a>, så att varje avvikelse finns dokumenterad skriftligt när slutbesiktningen närmar sig. Allt samlas på ett ställe, vilket gör det lättare att visa vad som avtalats om en tvist skulle uppstå. Du fyller fortfarande i rätt standardavtal utifrån arbetets art, men slipper leta i lösa papper.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Kan jag använda Hantverkarformuläret 17 för en tillbyggnad?</h3>
+<p>Nej. Tillbyggnad av ett en- eller tvåbostadshus räknas som småhusentreprenad och ska hanteras med ABS 18 tillsammans med Entreprenadkontrakt (ABS 18). Då gäller reglerna i konsumenttjänstlagen §§ 51–61, som inte omfattas av Hantverkarformuläret 17.</p>
+<h3>Måste jag ha slutbesiktning vid en badrumsrenovering?</h3>
+<p>Nej, det finns ingen lagstadgad slutbesiktning för rena reparations- och ombyggnadsjobb under Hantverkarformuläret 17. Konsumenttjänstlagens allmänna regler om fel och reklamation gäller ändå, så en dokumenterad slutgenomgång med kunden är alltid klok.</p>
+<h3>Behöver jag färdigställandeskydd för en köksrenovering?</h3>
+<p>Normalt inte. Färdigställandeskydd är obligatoriskt vid nybyggnad av småhus och kan krävas vid tillbyggnad eller anmälningspliktiga arbeten om byggnadsnämnden bedömer det. En vanlig köksrenovering som varken är bygglovs- eller anmälningspliktig omfattas inte.</p>
+<h3>Kan avtalet ge kunden sämre villkor än lagen?</h3>
+<p>Nej. Konsumenttjänstlagen är tvingande till konsumentens fördel. Enligt § 3 är villkor som är sämre för konsumenten än lagen utan verkan. Både ABS 18 och Hantverkarformuläret 17 bygger på lagen och kan aldrig ge kunden ett svagare skydd än den.</p>
+
+<h2>Kom igång</h2>
+<p>Välj avtal efter arbetets art, hämta rätt standardblankett från Konsumentverket, Byggföretagen eller Villaägarna, och bygg ditt underlag i <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur offert, ÄTA och dokumentation hänger ihop i praktiken? <a href="/sv/contact">Boka en demo här -&gt;</a></p>
+<p>Relaterat: <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a> och <a href="/sv/blog/muntligt-avtal-sakra-bevis">Muntligt avtal – så säkrar du bevis</a>.</p>
+`.trim();
+
+const ABS18: BlogPost = {
+  _id: "code-"+"abs-18-hantverkarformularet-17",
+  title: "ABS 18 eller Hantverkarformuläret 17? Så väljer du rätt konsumentavtal",
+  slug: "abs-18-hantverkarformularet-17",
+  locale: "sv",
+  excerpt: "Fel konsumentavtal ger dig svagare bevisläge och sämre skydd. Så avgör arbetets art om du ska använda ABS 18 eller Hantverkarformuläret 17.",
+  tag: "Avtal",
+  coverImageUrl: "/landing/verktyg/offert-preview.webp",
+  contentHtml: ABS18_HTML,
+  seoTitle: "ABS 18 vs Hantverkarformuläret 17 | ByggExp",
+  seoDescription: "ABS 18 eller Hantverkarformuläret 17? Bygger du nytt eller reparerar befintligt avgör vilket konsumentavtal du ska använda mot privatkund. Så väljer du rätt.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/offert-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T15:00:00.000Z", createdAt: "2026-08-18T15:00:00.000Z", updatedAt: "2026-08-18T15:00:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    BETVILLK,
+    KONTRAVG,
+    BASPBASU,
+    GARANTI,
+    ABS18,
     KUNDEN,
     MANGD,
     MUNTLIGT,

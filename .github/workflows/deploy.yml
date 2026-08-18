@@ -50,6 +50,10 @@ jobs:
         # open the site to search engines; unset/anything-else keeps it blocked.
         env:
           SITE_ALLOW_INDEX: ${{ vars.SITE_ALLOW_INDEX }}
+          # Microsoft Clarity project id, inlined at build (NEXT_PUBLIC_*). Set the
+          # repo variable NEXT_PUBLIC_CLARITY_ID (Settings → Variables). Empty =
+          # Clarity stays off (loadClarity() no-ops).
+          NEXT_PUBLIC_CLARITY_ID: ${{ vars.NEXT_PUBLIC_CLARITY_ID }}
         run: yarn build
 
       - name: Prune dev dependencies

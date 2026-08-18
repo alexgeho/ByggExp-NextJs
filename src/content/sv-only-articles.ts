@@ -5,6 +5,9 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'berakna-materialatgang-tak',
+  'fonster-u-varde-2026',
+  'arbetsmiljoverket-nya-regler-2026-bygg',
   'vatrumscertifikat-behorighet-gvk',
   'factoring-byggforetag',
   'rotavdrag-2026-nya-regler-foretag',

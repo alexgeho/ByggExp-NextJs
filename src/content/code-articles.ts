@@ -6039,9 +6039,270 @@ const A_LEVERANTORSFAKTURA_BYGG_PROJEKT: BlogPost = {
   publishedAt: "2026-08-18T19:54:00.000Z", createdAt: "2026-08-18T19:54:00.000Z", updatedAt: "2026-08-18T19:54:00.000Z",
 };
 
+const A_BERAKNA_MATERIALATGANG_TAK_HTML = `
+<p>Fel materialåtgång på ett tak kostar alltid pengar. Underskattar du åtgången står laget stilla mitt i läggningen och väntar på en efterbeställning som kanske inte ens finns i samma bränning eller kulör. Överskattar du grovt binder du kapital i pannor som blir liggande. Den vanligaste tabben är enkel: man räknar på husets grundyta i stället för den faktiska takytan. Takyta är inte samma sak som byggnadens fotavtryck — den växer med lutningen. Ska du <strong>beräkna materialåtgång tak</strong> på ett sätt som håller ända fram till sista pannraden behöver du fyra steg: yta, åtgång per kvm, spillpåslag och kringmaterial.</p>
+
+<p>Vill du hoppa över trigonometrin? Slå in mått och lutning i vår gratis <a href="/sv/verktyg/tak-kalkylator">tak-kalkylator</a> så räknar den takyta, antal pannor och spill åt dig. Ska du samtidigt dimensionera bärverket har vi även en <a href="/sv/verktyg/takstolar-kalkylator">takstolskalkylator</a>.</p>
+
+<h2>Steg 1: Räkna ut takytan utifrån taklutning</h2>
+<p>Takytan är den horisontella projektionen (grundytan) multiplicerad med en lutningsfaktor. Faktorn är 1/cos(lutningsvinkeln) och den beskriver hur mycket taket "reser sig" jämfört med marken. Ett brant tak har betydligt mer yta att täcka än ett flackt, trots samma grundyta.</p>
+<ul>
+<li>14° lutning: faktor 1,03</li>
+<li>22° lutning: faktor 1,08</li>
+<li>27° (ca 1:2): faktor 1,12</li>
+<li>30° lutning: faktor 1,155</li>
+<li>35° lutning: faktor 1,22</li>
+<li>38° lutning: faktor 1,27</li>
+<li>45° lutning: faktor 1,414</li>
+</ul>
+<p>Exempel: ett sadeltak med grundyta 120 m² och 35° lutning ger 120 × 1,22 = 146 m² takyta — nästan 26 m² mer än vad ritningens grundyta antyder. I fält är den snabbaste metoden ändå att mäta direkt: <strong>takfallets längd (takfot till nock, längs lutningen) × takbredd × antal takfall</strong>. Då slipper du faktortabellen helt. Glöm inte takutsprånget vid takfot — normalt 0,3–0,5 m per sida — och räkna aldrig på planritningen.</p>
+
+<h2>Steg 2: Materialåtgång per kvm för takpannor</h2>
+<p>När ytan är klar översätter du den till antal pannor. Riktvärden per kvadratmeter:</p>
+<ul>
+<li>Betongpannor (falsade, t.ex. Palema, Carisma, Zanda): ca 9–10 st/m², ofta angivet runt 9,3 st/m².</li>
+<li>Tvåkupigt lertegel: ca 14–15 st/m².</li>
+<li>Falsat/enkupigt tegel: ca 12–14 st/m².</li>
+<li>Nockpannor: ca 2,5–3 st per löpmeter nock.</li>
+</ul>
+<p>Det exakta antalet styrs av läktavståndet (bärläkt c/c ca 340–375 mm) och pannans överlapp, så använd alltid den valda modellens läggningsanvisning som facit — riktvärdena ovan är för överslag, inte för beställning. Läktavståndet måste dessutom jämkas så att pannraderna går jämnt ut mot både takfot och nock. En viktig gräns: betong- och tegelpannor kräver normalt minst 14° lutning, ofta 22° utan extra tätande åtgärder. Under ca 14° ska du välja plåt, tätskikt eller papp — fel material på för låg lutning ger läckage.</p>
+
+<h2>Steg 3: Materialåtgång för plåttak</h2>
+<p>Plåt beställs i kapade längder efter takfallslängden, inte i kvadratmeter från hyllan. Skilj på profilplåt (trapets), pannplåt (pannmönstrad) och bandtäckning (falsad slätplåt). Den avgörande detaljen är att du räknar på <strong>täckbredden</strong> — den effektiva bredden efter överlapp — och inte totalbredden. En plåt på 1100 mm kan ha ca 1050 mm täckbredd, och räknar du på totalmåttet får du för få plåtar. Vid längdskarvar överlappar plåtarna ca 150–200 mm, vilket äter av den effektiva längden. Tänk också på att plåt med många skärningar mot valmar, kupor och skorstenar ger mer spill än pannor, eftersom en avkapad plåtlängd sällan går att återanvända.</p>
+
+<h2>Steg 4: Spill och skärningar — så mycket ska du lägga på</h2>
+<p>Ingen läggning går utan kap. Lägg på spill efter takets komplexitet:</p>
+<ul>
+<li>Enkelt rektangulärt sadeltak: ca 5%.</li>
+<li>Tak med kupor, valmar, takfönster eller skorsten: ca 10–15%.</li>
+<li>Komplext valmat tak eller plåt med många skärningar: upp till 15–20%.</li>
+</ul>
+<p>Runda alltid upp till hel panna respektive hel plåt, och hellre en pall för mycket än ett produktionsstopp. En efterbeställning kostar inte bara material utan även frakt, väntetid och risken att kulör eller bränning skiljer sig från första leveransen. På vårt exempeltak (146 m² takyta, betongpanna) blir det ca 146 × 9,3 = 1 358 pannor, plus 10% spill för en skorsten och ett takfönster = ca 1 494 pannor att beställa.</p>
+
+<h2>Glöm inte kringmaterialet</h2>
+<p>Pannorna eller plåten är bara en del av åtgången. Räkna in hela kedjan:</p>
+<ul>
+<li>Bärläkt och ströläkt — bärläkt-åtgången är ungefär 1/läktavstånd per m² (t.ex. 0,37 m gauge ger ca 2,7 lpm/m²), plus ströläkt i takfallets riktning.</li>
+<li>Underlagsduk med ca 10% överlapp.</li>
+<li>Nockpannor eller nockband, fotplåt, vindskivor, fågelband.</li>
+<li>Skruv eller klammer enligt anvisning.</li>
+<li>Lagstadgad taksäkerhet: snörasskydd, glidskydd/takstege, fästöglor och nock-/takbrygga är krav enligt Boverkets regler och arbetsmiljöreglerna — inte tillval. Bekräfta gällande regelverk 2026 på boverket.se, eftersom Boverkets nya bygg- och konstruktionsregler ersätter BBR med en övergångsperiod.</li>
+</ul>
+
+<h2>Kostnad, ROT och kalkyl</h2>
+<p>När materialåtgången är klar blir steget till offert kort: material + arbete, moms och eventuellt ROT-avdrag. Vid takomläggning på en befintlig byggnad äldre än fem år ger arbetskostnaden ROT — senast bekräftade nivå är 30% av arbetskostnaden, max 50 000 kr/person/år, där ROT och RUT räknas ihop till högst 75 000 kr per person och år (varav ROT högst 50 000 kr). Materialkostnaden ger aldrig ROT. Kontrollera årets procentsats och takbelopp på skatteverket.se innan du lämnar pris. På tjänsten gäller 25% byggmoms, och i B2B-led mellan byggföretag tillämpas ofta omvänd byggmoms — du fakturerar då utan moms, märker fakturan med att omvänd skattskyldighet för byggtjänster gäller och anger köparens momsnummer. Spara underlaget i sju år.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp matar du in takmått och lutning i <a href="/sv/verktyg/tak-kalkylator">tak-kalkylatorn</a> och får takyta, antal pannor eller plåtlängder och ett spillpåslag i ett svep — samma fyrastegsmetod som ovan, men utan handräkning. Behöver du dimensionera bärverket kompletterar du med <a href="/sv/verktyg/takstolar-kalkylator">takstolskalkylatorn</a>. Därifrån för du över materiallistan till en <a href="/sv/verktyg/offert-mall">offertmall</a> där du lägger på arbete, moms och ROT. Verktygen räknar åt dig, men de ersätter inte tillverkarens läggningsanvisning — stäm alltid av exakt antal per kvm och läktavstånd mot databladet för den panna eller plåt du valt.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Varför blir takytan större än husets grundyta?</h3>
+<p>För att taket lutar. Takytan är grundytan gånger en lutningsfaktor (1/cos av vinkeln). Vid 35° är faktorn 1,22, så ett tak med 120 m² grundyta har 146 m² faktisk yta att täcka. Räknar du på grundytan får du för lite material.</p>
+<h3>Hur många takpannor går det på en kvadratmeter?</h3>
+<p>Riktvärden: betongpanna ca 9–10 st/m², tvåkupigt tegel ca 14–15 st/m² och falsat tegel ca 12–14 st/m². Det exakta antalet beror på läktavstånd och överlapp, så följ alltid den valda modellens läggningsanvisning för beställning.</p>
+<h3>Hur mycket spill ska jag lägga på?</h3>
+<p>Ungefär 5% på ett enkelt rektangulärt sadeltak, 10–15% med kupor, valmar eller takfönster och upp till 20% på komplexa valmade tak eller plåt med många skärningar. Runda alltid upp till hela pannor eller plåtar.</p>
+<h3>Räknar man plåttak på total- eller täckbredd?</h3>
+<p>På täckbredden, alltså den effektiva bredden efter överlapp. En 1100 mm plåt kan ha ca 1050 mm täckbredd. Räknar du på totalbredden får du för få plåtar, och längdskarvar överlappar dessutom ca 150–200 mm.</p>
+
+<h2>Kom igång</h2>
+<p>Testa <a href="/sv/verktyg/tak-kalkylator">tak-kalkylatorn</a> och räkna kvm, antal pannor och spill på nästa jobb — och komplettera med <a href="/sv/verktyg/takstolar-kalkylator">takstolskalkylatorn</a> när bärverket ska dimensioneras. Vill du se hur materiallistan blir en färdig offert? <a href="/sv/contact">Boka en demo</a> så visar vi flödet från kalkyl till kund.</p>
+
+<p>Relaterat: <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a> och <a href="/sv/blog/skriva-offert">Skriva offert</a>.</p>
+`;
+
+const A_BERAKNA_MATERIALATGANG_TAK: BlogPost = {
+  _id: "code-"+"berakna-materialatgang-tak",
+  title: "Beräkna materialåtgång tak: takpannor och plåt per kvm", slug: "berakna-materialatgang-tak", locale: "sv",
+  excerpt: "En konkret fyrastegsmetod för att beräkna materialåtgång på tak — från takyta och lutningsfaktor till antal pannor, plåtlängder, spill och kringmaterial.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/tak-preview.webp", contentHtml: A_BERAKNA_MATERIALATGANG_TAK_HTML,
+  seoTitle: "Beräkna materialåtgång tak | ByggExp", seoDescription: "Räkna ut takyta, takpannor och plåt per kvm utifrån taklutning, spill och skärningar. Steg-för-steg-metod för korrekt materialåtgång på taket.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/tak-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T20:00:00.000Z", createdAt: "2026-08-18T20:00:00.000Z", updatedAt: "2026-08-18T20:00:00.000Z",
+};
+
+const A_FONSTER_U_VARDE_2026_HTML = `
+<p>Ett fönsterbyte står och faller med en enda siffra – u-värdet. Problemet är att de flesta offerter du får in jämför fel siffra, och att kunden ofta tror att det finns ett bestämt "BBR-krav för fönster" som avgör saken. Båda missförstånden kostar pengar och trovärdighet. Här går vi igenom Uw-mot-Ug-fällan, vad Boverket faktiskt kräver 2026 och hur du räknar hem ett fönsterbyte utan att lova orimlig återbetalningstid.</p>
+
+<p>Vill du snabbt uppskatta värmeförlust och besparing på ett projekt kan du börja i vår <a href="/sv/verktyg/isolering-kalkylator">gratis isolerings- och u-värdeskalkylator -&gt;</a> och sedan lägga siffrorna i en offert.</p>
+
+<h2>Uw vs Ug: vad siffran faktiskt mäter</h2>
+<p>Det finns två helt olika u-värden på ett fönster, och de mäter inte samma sak:</p>
+<ul>
+<li><strong>Ug</strong> (g = glas) mäter <em>bara</em> mitten av glaset – centre-of-glass. Det är den snällaste siffran.</li>
+<li><strong>Uw</strong> (w = window) mäter <em>hela fönstret</em>: glas + karm/båge + distanslist i glaskanten, enligt EN 14351-1 / EN ISO 10077.</li>
+</ul>
+<p>Uw är alltid lika med eller högre (sämre) än Ug. Anledningen är att karm, båge och glaskant isolerar sämre än själva glaspaketet – de blir köldbryggor. Ett fönster kan ha ett lysande Ug och ändå ett medelmåttigt Uw om karmen är klen. Regeln är enkel: <strong>jämför bara Uw mot Uw</strong>. Allt annat är att jämföra äpplen med päron.</p>
+
+<h2>Fällan i offerten: när säljaren visar Ug</h2>
+<p>En annons som skriker "U-värde 0,5" avser nästan alltid Ug – glaset, inte fönstret. Samma fönster kan mycket väl landa på ett Uw runt 1,0 W/m²K när karm och kant räknas in. Det är ingen bluff i teknisk mening, men det är den bättre siffran som marknadsförs medan det är den sämre siffran som styr värmeförlusten och energiberäkningen.</p>
+<p>Två saker att alltid begära av leverantören innan du prissätter:</p>
+<ul>
+<li><strong>Uw enligt EN 14351-1</strong> – uttryckligen hela fönstret, inte Ug.</li>
+<li><strong>Karmyttermått</strong> för den aktuella storleken. Uw varierar med fönsterstorlek: ett litet fönster har proportionellt mer karm och därmed ofta sämre Uw än ett stort med samma konstruktion.</li>
+</ul>
+
+<h2>Vad kräver BBR/Boverket egentligen 2026?</h2>
+<p>Här sitter myten djupt: det finns <strong>inget krav på ett visst Uw per fönster</strong> i de svenska byggreglerna. Den nationella regleringen ligger på hela byggnaden:</p>
+<ul>
+<li><strong>Primärenergital (EP_pet)</strong> – riktvärdet är cirka 90 kWh/m²·år för bostäder och 70 kWh/m²·år för lokaler, sedan justerat per kommun med en geografisk justeringsfaktor. Justerade småhusvärden hamnar i praktiken ofta runt 95–130 beroende på klimatzon.</li>
+<li><strong>Genomsnittligt Um</strong> för hela klimatskalet får inte överstiga 0,40 W/m²K för en ny bostad.</li>
+</ul>
+<p>Fönstren regleras alltså bara indirekt, via de här två talen. Um är det närmaste man kommer en fönstergräns – men det är ett medelvärde över hela skalet, inte en siffra per fönster. Vid ändring/renovering handlar det om vad som är skäligt att energieffektivisera, inte om ett fast Uw-tak. Boverket är dessutom på väg in i nya, funktionsbaserade byggregler, men energikravet uttrycks fortfarande som primärenergital och genomsnittligt Um – ingen föreskriven per-fönster-siffra tillkommer. Så när en kund frågar "klarar fönstret BBR?" är det korrekta svaret att räkna på hela huset, inte att peka på ett enskilt Uw.</p>
+
+<h2>U-värden i praktiken: gammalt vs nytt</h2>
+<p>Typiska Uw-intervall för hela fönstret:</p>
+<ul>
+<li><strong>Enkelglas:</strong> ca 4,5–5,8 W/m²K</li>
+<li><strong>Äldre kopplat 2-glas:</strong> ca 2,7–3,0</li>
+<li><strong>Äldre 3-glas:</strong> ca 1,8–2,0</li>
+<li><strong>Moderna energifönster (3-glas):</strong> ca 0,7–1,0</li>
+</ul>
+<p>Att byta ett 2,8-fönster mot ett på ca 0,9 tredubblar i grova drag fönstrets isolerförmåga. Den gamla frivilliga energiklassningen satte Uw ≤ 1,2 W/m²K som gräns för "energieffektivt" – men dagens bättre fönster når 0,7–0,9. Se därför 1,2 som en golvnivå för dugligt, inte som ett mål för en ny investering.</p>
+<p>Glöm inte andra halvan av ekvationen: <strong>g-värdet (solvärmefaktorn)</strong>. Ett mycket lågt g släpper in mindre gratis solvärme på vintern och kan höja uppvärmningsbehovet, medan ett högt g ökar risken för övertemperatur på sommaren. Paybackkalkyl enbart på Uw är ofullständig.</p>
+
+<h2>Räkna hem fönsterbytet: en enkel modell</h2>
+<p>Värmeförlusten genom ett fönster kan uppskattas som:</p>
+<p><strong>kWh/år ≈ U × area × gradtimmar / 1000</strong></p>
+<p>Gradtimmar (Kh/år) beror på ort och innetemperatur; ett riktvärde för svenskt klimat ligger runt 100 000 Kh/år. Exempel för 12 m² fönster:</p>
+<ul>
+<li>Före (Uw 2,8): 2,8 × 12 × 100 000 / 1000 ≈ <strong>3 360 kWh/år</strong></li>
+<li>Efter (Uw 0,9): 0,9 × 12 × 100 000 / 1000 ≈ <strong>1 080 kWh/år</strong></li>
+<li>Besparing: ca <strong>2 280 kWh/år</strong> → vid elpris 2 kr/kWh ungefär <strong>4 560 kr/år</strong></li>
+</ul>
+<p>Var ärlig i kalkylen: fönster står typiskt för 15–20 % av husets totala värmeförlust, och gradtimmarna varierar med ort. Sälj inte in en orimlig återbetalningstid – en trovärdig siffra bygger förtroende och skyddar dig mot missnöje i efterhand.</p>
+
+<h2>ROT-avdrag 2026 på fönsterbyte</h2>
+<p>För 2026 gäller ROT-avdrag på <strong>30 % av arbetskostnaden</strong>, max 50 000 kr/person/år, inom ett gemensamt ROT+RUT-tak på 75 000 kr/person/år. Viktigt: avdraget gäller <strong>endast montage/arbete</strong> – fönstren och glaset är inte avdragsgilla. Den tillfälliga höjningen till 50 % gällde bara betalningar 12 maj–31 december 2025 och upphörde vid årsskiftet. Att offerera 50 % på ett fönsterjobb 2026 är alltså fel.</p>
+<p>Dela därför upp fakturan korrekt: specificera arbetskostnad separat från material, så att ROT beräknas på rätt underlag och kunden inte överskattar avdraget. Ett tydligt underlag gör också att Skatteverkets begäran om ROT går smidigare.</p>
+
+<h2>Checklista innan du skriver på</h2>
+<ul>
+<li>Begär <strong>Uw enligt EN 14351-1</strong> för den faktiska storleken – inte Ug.</li>
+<li>Kontrollera <strong>karmyttermått</strong>, eftersom Uw varierar med format.</li>
+<li>Fråga efter <strong>g-värde (solvärmefaktor)</strong> – väg vinter mot sommar.</li>
+<li>Klargör <strong>montage/drevning</strong> och att köldbryggan vid infästning hanteras.</li>
+<li>Kontrollera <strong>emissivitet och kondensrisk</strong> på glaset.</li>
+<li>Läs <strong>garantivillkoren</strong> på både produkt och montage.</li>
+<li>Dela <strong>arbete och material</strong> rätt på fakturan för ROT 2026.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig ta siffrorna hela vägen från beräkning till kund. Med <a href="/sv/verktyg/isolering-kalkylator">u-värdeskalkylatorn</a> uppskattar du värmeförlust och besparing per fönsterparti, och i <a href="/sv/verktyg/offert-mall">offertmallen</a> lägger du in Uw, storlek och en korrekt uppdelning av arbete och material så att ROT-avdraget räknas på rätt underlag. Vi lovar ingen exakt payback – klimat, elpris och husets övriga skal påverkar – men du får ett tydligt, spårbart underlag som håller vid en kundfråga.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Finns det ett BBR-krav på u-värde för fönster 2026?</h3>
+<p>Nej. Byggreglerna ställer inget krav på ett visst Uw per fönster. Kravet ligger på hela byggnadens primärenergital (riktvärde ca 90 kWh/m²·år för bostäder, geografiskt justerat) och på ett genomsnittligt Um ≤ 0,40 W/m²K för klimatskalet. Fönstren regleras bara indirekt via de talen.</p>
+<h3>Vad är skillnaden mellan Uw och Ug?</h3>
+<p>Ug mäter bara mitten av glaset, medan Uw mäter hela fönstret – glas, karm/båge och glaskant enligt EN 14351-1. Uw är alltid lika med eller sämre än Ug. Det är Uw som styr värmeförlust och energiberäkning, så jämför alltid Uw mot Uw.</p>
+<h3>Hur mycket är ROT-avdraget på fönsterbyte 2026?</h3>
+<p>30 % av arbetskostnaden, max 50 000 kr per person och år, inom ett gemensamt ROT+RUT-tak på 75 000 kr. Bara montage/arbete är avdragsgillt – inte fönstren. Den tillfälliga 50 %-nivån gällde enbart 2025 och gäller inte längre.</p>
+<h3>Vilket u-värde bör jag sikta på vid nyinvestering?</h3>
+<p>Den gamla energiklassningens gräns på Uw ≤ 1,2 är idag ett golv för dugligt. Moderna energifönster når 0,7–1,0 W/m²K, så vid en ny investering är det rimligt att sikta lägre än 1,2. Väg samtidigt in g-värdet så att du inte tappar för mycket gratis solvärme på vintern.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna på ditt nästa fönsterbyte i <a href="/sv/verktyg/isolering-kalkylator">u-värdeskalkylatorn</a> och skapa ett tydligt underlag i <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur det fungerar i praktiken? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/berakna-u-varde-isolering">Beräkna u-värde för isolering</a></p>
+`;
+
+const A_FONSTER_U_VARDE_2026: BlogPost = {
+  _id: "code-"+"fonster-u-varde-2026",
+  title: "Fönster u-värde 2026: Uw eller Ug – siffran som avgör om bytet lönar sig", slug: "fonster-u-varde-2026", locale: "sv",
+  excerpt: "De flesta fönsteroffdter jämför fel siffra – så skiljer du Uw från Ug, tolkar BBR-kravet 2026 och räknar hem bytet på riktigt.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/isolering-preview.webp", contentHtml: A_FONSTER_U_VARDE_2026_HTML,
+  seoTitle: "Fönster u-värde 2026: Uw vs Ug | ByggExp", seoDescription: "Uw eller Ug? Så läser du fönsteroffertens u-värde rätt 2026, vad BBR faktiskt kräver och hur du räknar hem fönsterbytet med ROT.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/isolering-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T20:03:00.000Z", createdAt: "2026-08-18T20:03:00.000Z", updatedAt: "2026-08-18T20:03:00.000Z",
+};
+
+const A_ARBETSMILJOVERKET_NYA_REGLER_2026_BYGG_HTML = `
+<p>Sedan den 1 januari 2025 gäller Arbetsmiljöverkets omstrukturerade regelverk fullt ut. För byggföretag betyder det att i stort sett varje AFS-nummer du har hänvisat till i arbetsmiljöplaner, SAM-rutiner och egenkontroller är gammalt. Skyddskraven är desamma – men dokumenten pekar på föreskrifter som inte längre finns. Inför 2026 är det dags att städa i KMA-pärmen på riktigt.</p>
+
+<p>Ett strukturerat sätt att fånga upp vilka dokument som behöver uppdateras är att gå igenom dina rutiner med en checklista – använd gärna <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> som utgångspunkt för inventeringen.</p>
+
+<h2>Vad hände 1 januari 2025?</h2>
+<p>Arbetsmiljöverket samlade hela den tidigare spridda regelmassan i 15 nya föreskriftshäften med beteckningarna AFS 2023:1 till och med AFS 2023:15. Samtidigt upphörde de gamla föreskrifterna att gälla – bland annat AFS 2001:1 om systematiskt arbetsmiljöarbete och AFS 1999:3 om byggnads- och anläggningsarbete, som varit centrala för byggbranschen i decennier.</p>
+<p>Det är viktigt att förstå vad omstruktureringen <em>inte</em> var: den var inte en skärpning eller uppluckring av skyddsnivån. Syftet var att göra regelverket mer överskådligt. De materiella skyddskraven är i huvudsak oförändrade. Det som ändras för dig som byggföretag är hänvisningar, AFS-nummer och paragrafstruktur i dina egna dokument, mallar och rutiner. Innehållet i ryggmärgen sitter kvar – etiketterna på det gör inte det.</p>
+
+<h2>De AFS byggföretag måste kunna 2026</h2>
+<p>Det som förr rymdes i en enda föreskrift ligger nu fördelat på flera häften. Det innebär att du behöver läsa fler AFS för att täcka samma område. De centrala för bygg- och anläggningsföretag är:</p>
+<ul>
+<li><strong>AFS 2023:1</strong> – Systematiskt arbetsmiljöarbete, grundläggande skyldigheter för dig med arbetsgivaransvar. Ersätter gamla AFS 2001:1 (SAM) och styr grundstrukturen i din arbetsmiljödokumentation.</li>
+<li><strong>AFS 2023:2</strong> – Planering och organisering av arbetsmiljöarbete. Kompletterar 2023:1 och reglerar hur arbetet ska planeras och fördelas.</li>
+<li><strong>AFS 2023:3</strong> – Projektering och byggarbetsmiljösamordning, grundläggande skyldigheter. Här ligger byggherrens ansvar, projektörernas ansvar, rollerna Bas-P och Bas-U samt kraven på arbetsmiljöplan och förhandsanmälan.</li>
+<li><strong>AFS 2023:10</strong> – Risker i arbetsmiljön.</li>
+<li><strong>AFS 2023:11</strong> – Arbetsutrustning och personlig skyddsutrustning, säker användning.</li>
+<li><strong>AFS 2023:12</strong> – Utformning av arbetsplatser.</li>
+<li><strong>AFS 2023:13</strong> – Risker vid vissa typer av arbeten.</li>
+</ul>
+<p>Mycket av det som tidigare låg samlat i AFS 1999:3 hittar du numera i 2023:10–13. Den exakta paragrafmappningen bör du alltid dubbelkolla mot gällande AFS-text på av.se innan du skriver in nya hänvisningar i dina dokument.</p>
+
+<h2>Bas-P, Bas-U och arbetsmiljöplan i nya AFS 2023:3</h2>
+<p>För den som driver byggprojekt är AFS 2023:3 den viktigaste att ha koll på. Observera att den redan har ändrats en gång, genom AFS 2024:1 – så hänvisar dina mallar till 2023:3 måste du kontrollera att formuleringarna stämmer med den senaste lydelsen.</p>
+<p>Rollerna är oförändrade i sak:</p>
+<ul>
+<li><strong>Byggherren</strong> har det övergripande ansvaret och ska utse byggarbetsmiljösamordnare.</li>
+<li><strong>Bas-P</strong> (för planering och projektering) samordnar arbetsmiljöfrågor under projekteringen och ansvarar för att arbetsmiljöplanen upprättas.</li>
+<li><strong>Bas-U</strong> (för utförande) samordnar arbetsmiljöarbetet på byggarbetsplatsen och håller arbetsmiljöplanen aktuell under hela byggskedet.</li>
+</ul>
+<p>Formellt ska en arbetsmiljöplan finnas innan arbetet påbörjas när något av lagens kriterier är uppfyllt, och förhandsanmälan ska skickas till Arbetsmiljöverket för större eller längre projekt. Kraven på när planen behövs har inte ändrats av omstruktureringen – bara var i regelverket de står.</p>
+
+<h2>Checklista: så uppdaterar du KMA-dokumenten</h2>
+<p>Gå igenom dokumenten systematiskt istället för att skriva om allt på en gång. En rimlig arbetsordning:</p>
+<ol>
+<li><strong>Arbetsmiljöplanens mall</strong> – byt hänvisningar från AFS 1999:3 till AFS 2023:3 (med ändringen i AFS 2024:1) och kontrollera att rollbeskrivningarna för Bas-P och Bas-U stämmer.</li>
+<li><strong>SAM-rutiner och arbetsmiljöpolicy</strong> – ersätt AFS 2001:1 med AFS 2023:1 och 2023:2.</li>
+<li><strong>Riskbedömningsmallar</strong> – uppdatera hänvisningar till 2023:10 och 2023:13 för risker vid arbetet.</li>
+<li><strong>Egenkontroller och skyddsronder</strong> – kontrollera referenser till utrustning och skyddsutrustning (2023:11) och arbetsplatsens utformning (2023:12).</li>
+<li><strong>Underentreprenörsavtal och beställningsvillkor</strong> – där ni hänvisar till gällande arbetsmiljöföreskrifter, se till att texten pekar på rätt AFS.</li>
+<li><strong>Introduktions- och utbildningsmaterial</strong> – platschefer och skyddsombud behöver känna igen de nya numren.</li>
+</ol>
+
+<h2>Vanliga misstag och fallgropar</h2>
+<p>De vanligaste felen vi ser handlar mer om slarv än om okunskap:</p>
+<ul>
+<li><strong>Att tro att kraven ändrats.</strong> Många lägger tid på att tolka om skyddsnivåer som i praktiken är desamma. Fokusera på hänvisningarna, inte på att uppfinna nya rutiner.</li>
+<li><strong>Fel AFS-nummer i dokument.</strong> En arbetsmiljöplan som hänvisar till en upphävd föreskrift ser oseriös ut vid en inspektion – även om innehållet är korrekt.</li>
+<li><strong>Att glömma Bas-U och arbetsmiljöplan på mindre projekt.</strong> Kraven gäller även för mindre arbeten som uppfyller kriterierna; de försvinner inte för att projektet är litet.</li>
+<li><strong>Att uppdatera huvudmallen men missa kopior.</strong> Gamla versioner lever ofta kvar i pärmar och delade mappar. Ha en enda källa som är den gällande.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte det juridiska ansvaret – du måste fortfarande läsa gällande AFS-text – men verktygen hjälper dig hålla dokumentationen samlad och aktuell. Med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> får du en struktur som är enkel att uppdatera med rätt AFS-hänvisningar, och du slipper leta i lösa Word-filer. Med <a href="/sv/verktyg/byggdagbok-mall">byggdagboks-mallen</a> dokumenterar du löpande vad som skett på arbetsplatsen, vilket är underlag både för egenkontrollen och vid en eventuell inspektion. Poängen är att ha en gällande version på ett ställe – inte tio kopior med olika AFS-nummer.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Har skyddskraven skärpts i de nya reglerna?</h3>
+<p>Nej. Omstruktureringen som trädde i kraft 1 januari 2025 syftade till att göra regelverket mer överskådligt, inte att ändra skyddsnivån. De materiella kraven är i huvudsak oförändrade – det är AFS-numren och paragrafstrukturen som är nya.</p>
+<h3>Vilken föreskrift ersätter gamla AFS 1999:3 om byggnadsarbete?</h3>
+<p>Det finns inte längre en enda motsvarighet. Byggarbetsmiljösamordning och arbetsmiljöplan regleras i AFS 2023:3, medan de specifika reglerna om själva arbetet är fördelade på bland annat AFS 2023:10–13. Du behöver alltså läsa flera häften.</p>
+<h3>Måste jag skriva om hela KMA-pärmen?</h3>
+<p>Nej, men du behöver uppdatera hänvisningarna. Eftersom kraven i sak är desamma räcker det oftast att byta AFS-nummer och kontrollera rollbeskrivningarna, inte att bygga om rutinerna från grunden.</p>
+<h3>Gäller de nya reglerna även små byggprojekt?</h3>
+<p>Ja. Kraven på arbetsmiljöplan, Bas-P och Bas-U utgår från projektets art, inte enbart storleken. Uppfylls kriterierna gäller reglerna oavsett om projektet är stort eller litet.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att inventera dina dokument, byt ut AFS-hänvisningarna mot de nya numren och se till att platsledningen känner igen dem. Ladda ner <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> för att strukturera arbetet, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller arbetsmiljödokumentationen samlad. Läs alltid gällande AFS-text på Arbetsmiljöverket (av.se) innan du fastställer hänvisningar.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – krav och innehåll</a>, <a href="/sv/blog/bas-p-bas-u">Bas-P och Bas-U – roller och ansvar</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
+`;
+
+const A_ARBETSMILJOVERKET_NYA_REGLER_2026_BYGG: BlogPost = {
+  _id: "code-"+"arbetsmiljoverket-nya-regler-2026-bygg",
+  title: "Arbetsmiljöverkets nya regler 2026 för bygg – så uppdaterar du KMA-pärmen", slug: "arbetsmiljoverket-nya-regler-2026-bygg", locale: "sv",
+  excerpt: "Arbetsmiljöverket har samlat regelmassan i 15 nya föreskrifter – här är AFS-numren byggföretag måste byta ut i arbetsmiljöplan, SAM-rutiner och egenkontroller inför 2026.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_ARBETSMILJOVERKET_NYA_REGLER_2026_BYGG_HTML,
+  seoTitle: "Nya AFS-regler 2026 bygg | ByggExp", seoDescription: "Arbetsmiljöverkets omstrukturerade regelverk gäller sedan 2025. Se vilka AFS byggföretag måste kunna 2026 och hur du uppdaterar KMA-dokumenten rätt.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T20:06:00.000Z", createdAt: "2026-08-18T20:06:00.000Z", updatedAt: "2026-08-18T20:06:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_BERAKNA_MATERIALATGANG_TAK,
+    A_FONSTER_U_VARDE_2026,
+    A_ARBETSMILJOVERKET_NYA_REGLER_2026_BYGG,
     A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK,
     A_FACTORING_BYGGFORETAG,
     A_ROTAVDRAG_2026_NYA_REGLER_FORETAG,

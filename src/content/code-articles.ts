@@ -1994,9 +1994,358 @@ const UVARDE: BlogPost = {
   updatedAt: "2026-08-18T10:30:00.000Z",
 };
 
+
+const KUNDEN_HTML = `
+<p>Obetalda fakturor är ett av de vanligaste kassaflödesproblemen för hantverkare och byggföretag. Du har gjort jobbet, materialet är betalt – men pengarna kommer inte in. Den goda nyheten är att det finns en tydlig trappa att gå uppför: från en vänlig påminnelse, via dröjsmålsränta och förseningsersättning, till Kronofogden och i sista hand tingsrätt. Reglerna skiljer sig beroende på om kunden är privatperson (konsument) eller företag, och det påverkar både vilka avgifter du får ta ut och hur en tvist prövas.</p>
+
+<p>Grunden för att kunna driva in en fordran är att fakturan är rätt från början – med tydlig förfallodag, specifikation och korrekta uppgifter. Använd gärna <a href="/sv/verktyg/faktura-mall">vår gratis faktura-mall -&gt;</a> så att varje faktura innehåller det som krävs för att du ska kunna ta nästa steg om betalningen uteblir.</p>
+
+<h2>Steg 1 – Betalningspåminnelse och dröjsmålsränta</h2>
+<p>Första steget när förfallodagen passerat är en skriftlig betalningspåminnelse. Mot en konsument får du ta ut en lagstadgad påminnelseavgift på högst 60 kr per påminnelse – men bara om avgiften faktiskt uppstått och om det avtalats eller framgår tydligt. Avgiften är momsfri.</p>
+<p>Du har också rätt till dröjsmålsränta. Enligt räntelagen är den lagstadgade dröjsmålsräntan Riksbankens referensränta plus 8 procentenheter. För första halvåret 2026 är referensräntan 2 %, vilket ger en dröjsmålsränta på 10 % per år. Referensräntan sätts om av Riksbanken den 1 januari och 1 juli varje år, så räntesatsen kan ändras mitt under ett projekt.</p>
+<p>En viktig tidsregel: du får inte ta ut dröjsmålsränta förrän 30 dagar har gått från att fakturan skickades – om du inte har avtalat en förfallodag i förväg. Sätter du en tydlig förfallodag på fakturan börjar räntan löpa från den dagen. På fakturor till konsumenter måste det dessutom framgå tydligt att dröjsmålsränta tas ut. Passa på att sätta rätt betalvillkor redan i din <a href="/sv/verktyg/offert-mall">offert-mall</a>.</p>
+<p>Ett ofta förbisett skäl att skicka en skriftlig påminnelse: den bryter preskriptionen. Ett skriftligt krav till gäldenären är ett preskriptionsavbrott som startar om preskriptionstiden.</p>
+
+<h2>Steg 2 – Förseningsersättning och inkasso</h2>
+<p>Är kunden ett företag (näringsidkare till näringsidkare, eller mot myndighet) har du en automatisk rätt till förseningsersättning på 450 kr per faktura i samma sekund som den förfaller. Det krävs inget avtal, ingen påminnelse och inget separat krav – förutsatt att fakturan hade minst 30 dagars betalningsvillkor. De 450 kronorna täcker dina påminnelse- och indrivningskostnader upp till det beloppet.</p>
+<p>Hjälper inte påminnelserna kan du lämna ärendet till ett inkassobolag. Då tillkommer en lagstadgad inkassoavgift på 180 kr, och 170 kr om ni lägger upp en amorterings- eller avbetalningsplan. Även dessa avgifter är tak och momsfria – du får bara ta ut dem om de faktiskt uppstått. Inkasso lönar sig ofta eftersom ett inkassokrav har större tyngd än en vanlig påminnelse och signalerar att nästa steg är Kronofogden.</p>
+
+<h2>Steg 3 – Betalningsföreläggande hos Kronofogden</h2>
+<p>Betalar kunden fortfarande inte, och saknar en reell invändning, är betalningsföreläggande hos Kronofogden den enklaste vägen. Ansökningsavgiften är 300 kr och kan läggas på skulden. Om gäldenären inte bestrider inom fristen – vanligtvis omkring två veckor – meddelar Kronofogden ett utslag, som är ett verkställbart beslut du kan driva in med.</p>
+<p>Tänk på att Kronofogden inte är en domstol och inte prövar om ditt krav är riktigt. Myndigheten kontrollerar bara om kunden invänder eller inte. Betalningsföreläggande passar därför bäst när kunden inte har någon egentlig invändning utan helt enkelt inte betalar.</p>
+
+<h2>Steg 4 – När kunden bestrider fakturan</h2>
+<p>Bestrider kunden betalningsföreläggandet måste Kronofogden släppa ärendet – de kan inte avgöra vem som har rätt. Ärendet stängs, eller så begär du överlämnande till tingsrätt för en vanlig civilprocess. Så länge gäldenären bestrider hela kravet får hen ingen betalningsanmärkning från Kronofogdens process.</p>
+<p>Vanliga invändningar är fel i arbetet, att priset är för högt eller att arbetet inte var beställt – ofta gäller det tilläggsarbeten. Här avgör din dokumentation. En konsument har rätt att kräva en specificerad faktura som visar hur priset fördelar sig på timmar och material, vilket blir centralt när kunden bestrider på prisgrund. Löpande dokumentation, godkända ÄTA-arbeten och en tydlig specifikation är det som gör att du står stark i en tvist. Läs mer i vår guide om <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a>.</p>
+
+<h2>Steg 5 – ARN och tingsrätt</h2>
+<p>Här är en missuppfattning värd att räta ut: du som hantverkare kan inte anmäla en kund till ARN (Allmänna reklamationsnämnden) för att få betalt. ARN prövar bara ärenden där konsumenten är den som klagar mot ett företag. ARN är alltså kundens väg mot dig, inte tvärtom – och besluten är icke-bindande rekommendationer. Din väg är i stället domstol.</p>
+<p>Storleken på tvisten avgör kostnadsrisken. Är det omtvistade beloppet högst ett halvt prisbasbelopp – 29 600 kr år 2026 – hanteras det som ett förenklat tvistemål (FT-mål). Ansökningsavgiften vid tingsrätten är 900 kr och de ersättningsgilla rättegångskostnaderna är starkt begränsade, i praktiken avgiften plus ungefär en timmes juridisk rådgivning. Förlorarens kostnadsrisk är alltså liten.</p>
+<p>Överstiger beloppet 29 600 kr blir det ett ordinärt tvistemål med fullt rättegångskostnadsansvar – den som förlorar betalar motpartens rättegångskostnader, som kan bli betydligt större än själva fakturan. Det är huvudskälet att hålla omtvistade summor väl dokumenterade och att överväga en förlikning när risken är stor.</p>
+
+<h2>Förebygg problemet</h2>
+<ul>
+<li><strong>Tydligt avtal och offert.</strong> Skriftlig offert med pris, omfattning och betalvillkor minskar utrymmet för tvister.</li>
+<li><strong>Delfakturering och a conto.</strong> Fakturera i etapper så att du aldrig ligger ute med hela beloppet.</li>
+<li><strong>Kreditupplysning på nya kunder.</strong> Särskilt inför större jobb mot företag.</li>
+<li><strong>Korta betalvillkor och tydlig förfallodag.</strong> Då börjar dröjsmålsräntan löpa direkt.</li>
+<li><strong>Fakturera i tid.</strong> En fordran mot en konsument preskriberas efter 3 år, mot ett företag efter 10 år. Ett skriftligt krav bryter preskriptionen.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att bygga fakturaunderlaget som håller hela vägen. Tidrapportering och material knyts till projektet så att timmar och kostnader finns dokumenterade om kunden bestrider. Du skapar specificerade fakturor med förfallodag och betalvillkor direkt från underlaget, och ÄTA-arbeten kan godkännas löpande så att tilläggen inte blir en tvist i efterhand. ByggExp är inget inkasso- eller juristbolag – men ju bättre din dokumentation är, desto enklare blir varje steg i trappan ovan.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket dröjsmålsränta får jag ta ut?</h3>
+<p>Den lagstadgade dröjsmålsräntan är Riksbankens referensränta plus 8 procentenheter. Under första halvåret 2026 är referensräntan 2 %, alltså 10 % per år. Räntan får normalt tas ut först 30 dagar efter att fakturan skickats, om ingen förfallodag avtalats i förväg.</p>
+<h3>Kan jag anmäla en kund som inte betalar till ARN?</h3>
+<p>Nej. ARN prövar bara ärenden där en konsument klagar på ett företag. Som hantverkare kan du inte använda ARN för att få betalt – din väg är betalningsföreläggande hos Kronofogden och därefter tingsrätt om kunden bestrider.</p>
+<h3>Vad händer om kunden bestrider betalningsföreläggandet?</h3>
+<p>Då måste Kronofogden släppa ärendet, eftersom myndigheten inte prövar om kravet är riktigt. Vill du driva saken vidare begär du överlämnande till tingsrätt för en civilprocess. Så länge kunden bestrider hela kravet får hen ingen betalningsanmärkning från processen.</p>
+<h3>Har jag som företag rätt till ersättning direkt när fakturan förfaller?</h3>
+<p>Ja. Mot ett annat företag eller en myndighet har du automatisk rätt till 450 kr i förseningsersättning så snart fakturan förfaller, förutsatt att den hade minst 30 dagars betalningsvillkor. Det krävs varken avtal, påminnelse eller separat krav.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med grunden: en korrekt faktura med förfallodag och specifikation. Skapa din med <a href="/sv/verktyg/faktura-mall">vår gratis faktura-mall</a>, och sätt rätt betalvillkor redan i offerten med <a href="/sv/verktyg/offert-mall">offert-mallen</a>. Vill du se hur ByggExp knyter tid, material och ÄTA till ett fakturaunderlag som håller i en tvist? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Relaterat: <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a> och <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a>.</p>
+`.trim();
+
+const KUNDEN: BlogPost = {
+  _id: "code-"+"kunden-betalar-inte-fakturan",
+  title: "Kunden betalar inte fakturan – så driver du in pengarna som hantverkare",
+  slug: "kunden-betalar-inte-fakturan",
+  locale: "sv",
+  excerpt: "En steg-för-steg-trappa från vänlig påminnelse till betalningsföreläggande och tingsrätt när kunden inte betalar din faktura.",
+  tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/faktura-preview.webp",
+  contentHtml: KUNDEN_HTML,
+  seoTitle: "Kunden betalar inte fakturan | ByggExp",
+  seoDescription: "Obetald eller bestriden faktura? Så går du från påminnelse och dröjsmålsränta till Kronofogden och tingsrätt – konkret handlingsplan för hantverkare.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/faktura-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false,
+  isPublished: true,
+  publishedAt: "2026-08-18T11:00:00.000Z",
+  createdAt: "2026-08-18T11:00:00.000Z",
+  updatedAt: "2026-08-18T11:00:00.000Z",
+};
+
+
+const MANGD_HTML = `
+<p>Ett anbud vinns eller förloras på hur väl mängderna är beräknade och prissatta. En slarvig mängdförteckning gör att du antingen räknar bort dig och förlorar jobbet, eller vinner det men blöder pengar under hela projektet. En noggrann förteckning gör tvärtom: den ger dig kontroll på varje post, skyddar dig när mängderna ändras och gör anbudet jämförbart med konkurrenternas. Den här guiden går igenom vad en mängdförteckning är, skillnaden mellan oprissatt och prissatt, hur den byggs upp kolumn för kolumn och hur du tar den vidare till kalkyl och offert.</p>
+
+<p>Vill du komma igång direkt? Använd <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a> för att strukturera posterna och ta din prissatta mängdförteckning hela vägen till ett färdigt anbud.</p>
+
+<h2>Vad är en mängdförteckning?</h2>
+<p>En mängdförteckning (MF) är en handling där de arbeten som ingår i ett projekt förtecknas post för post, oftast med mängder och med hänvisning till AMA-koder eller teknisk beskrivning. Det är ett centralt anbuds- och kontraktsdokument som används av beställare, konsulter och entreprenörer genom hela byggprocessen. Poster refererar till standardiserade koder och rubriker i AMA (Allmän material- och arbetsbeskrivning), medan MER (Mät- och ersättningsregler, till exempel MER Anläggning) styr hur arbeten ska mätas och ersättas och hur parterna ska skriva i förteckningen.</p>
+<p>Metoden passar bäst för färdigprojekterade utförandeentreprenader enligt AB 04, där omfattningen är känd. Vid totalentreprenad enligt ABT 06 är den slutliga utformningen ofta oklar, och för ramavtal leder metoden lätt till fiktiva mängder och tvister.</p>
+
+<h2>Oprissatt vs prissatt mängdförteckning</h2>
+<p>Skillnaden avgör vem som räknar. Den <strong>oprissatta</strong> mängdförteckningen tas normalt fram av beställaren eller konsulten. Den innehåller poster och mängder men inga priser – det är ditt underlag. Den <strong>prissatta</strong> mängdförteckningen är exakt samma dokument, men med dina à-priser, delsummor och totalsumma ifyllda. Den utgör i praktiken ditt anbud.</p>
+<p>Lämna aldrig tomma poster. En post utan angiven prissättning betraktas i regel som en nollpost utan värde om den inte uttryckligen hanteras – vilket betyder att du bundit dig att utföra arbetet gratis. Möter du en post du inte kan prissätta säkert, ta upp det som en fråga under anbudstiden i stället för att gissa eller lämna den blank.</p>
+
+<h2>Så är en mängdförteckning uppbyggd</h2>
+<p>En korrekt mängdförteckning enligt MER byggs upp med minst fyra kolumner: enhet, mängd, à-pris och summa. Varje post kopplas till mät- och ersättningsregler på lägsta möjliga kodnivå – ersättning ska begäras på lägsta möjliga kodnivå. En praktisk radstruktur ser ut så här:</p>
+<ul>
+<li><strong>Post / AMA-kod</strong> – referens till teknisk beskrivning eller AMA-rubrik.</li>
+<li><strong>Beskrivning</strong> – kort text om vad posten omfattar.</li>
+<li><strong>Enhet</strong> – m, m², m³, st, kg, tim.</li>
+<li><strong>Mängd</strong> – uppmätt eller beräknad kvantitet.</li>
+<li><strong>À-pris</strong> – allt inkluderat: inköp, leverans, montage, arbete, påslag och vinst.</li>
+<li><strong>Summa</strong> – mängd × à-pris.</li>
+</ul>
+<p>Exempel: posten "Rivning innervägg, gips på regel" med enhet m², mängd 42, à-pris 185 kr ger summa 7 770 kr. Nästa post "Ny gipsvägg, dubbel skiva" med enhet m², mängd 42, à-pris 640 kr ger 26 880 kr. Delsummorna adderas till en totalsumma längst ner – det är den siffra beställaren jämför mot övriga anbud.</p>
+
+<h2>Från mängdförteckning till kalkyl och offert</h2>
+<p>Arbetsflödet är sig ganska likt oavsett projektstorlek:</p>
+<ol>
+<li>Ta fram mängder ur ritning, beskrivning eller BIM-modell. Behöver du snabbt räkna ytor för golv, väggar eller tak använder du <a href="/sv/verktyg/kvadratmeter-kalkylator">vår kvadratmeterkalkylator</a>.</li>
+<li>Sätt à-priser per post: material, arbetstimmar, underentreprenörer och påslag.</li>
+<li>Summera delsummor till totalsumma och kontrollera mot din interna kalkyl.</li>
+<li>Överför posterna till offert eller anbud i den form beställaren begärt.</li>
+</ol>
+<p>Poängen är att mängdförteckningen och kalkylen hänger ihop: samma poster som du räknar internt ska kunna spåras rakt igenom till det du lämnar in. Då blir efterkalkylen enkel och du ser var pengarna faktiskt hamnade.</p>
+
+<h2>Fast pris, löpande räkning, à-pris eller mängdkontrakt?</h2>
+<p>Ersättningsformen avgör vad mängdförteckningen betyder i praktiken:</p>
+<ul>
+<li><strong>Fast pris</strong> – en förutbestämd totalsumma. Mängdförteckningen ligger bakom priset men slutsumman ändras inte med mängden.</li>
+<li><strong>Löpande räkning</strong> – à-priser eller timpris utan förutbestämt totalpris.</li>
+<li><strong>Takpris</strong> – löpande räkning men med ett avtalat tak.</li>
+<li><strong>Mängdkontrakt</strong> – en mellanform med fasta à-priser men rörlig slutsumma efter uppmätt mängd. Här är mängdförteckningen kärnan i avtalet.</li>
+</ul>
+<p>Ett à-pris ska alltid räknas allt inkluderat: inköp, leverans, montage, arbete och vinst. Det är den formen som gör mängdkontraktet rättvist för båda parter.</p>
+
+<h2>Mängdreglering och ÄTA</h2>
+<p>Vad händer när mängderna ändras? Här är den avgörande skillnaden: ökning eller minskning av mängder inom förteckningens ramar räknas <strong>inte</strong> som ÄTA-arbete. Det regleras i stället som mängdreglering och ersätts efter faktiskt uppmätt mängd. Helt nytt, ej kontrakterat arbete beställs och ersätts däremot som ÄTA.</p>
+<p>À-priserna i mängdförteckningen gäller inom en mängdavvikelse på ±25 %, förutsatt att avvikelsen påverkar kontraktssumman med minst 0,5 %. Vid större avvikelse kan endera parten begära att à-priset omförhandlas utifrån jämförbara prestationer (AB 04 kap. 6 § 6). Det här skyddar dig: ett väl satt à-pris håller även om mängden justeras, så länge avvikelsen ligger inom ramen.</p>
+
+<h2>2026: AB 04/ABT 06 gäller fortfarande</h2>
+<p>AB 04 och ABT 06 är fortfarande gällande standardavtal 2026. De aviserade nya avtalen AB 25/ABPU 25 – som förtydligar och stärker mängdkontraktets ställning och ersätter ÄTA-begreppet med "ändring av entreprenaden" (inklusive avvikande eller utelämnad mängd) – är försenade. Per juni 2026 anger BKK preliminär lansering under senare delen av 2027, och namnen kan bli AB 27/ABPU 27. Slutsats: bygg din mängdförteckning på AB 04 i dag, men håll koll på hur mängdregleringen förändras när det nya regelverket väl kommer.</p>
+
+<h2>Vanliga misstag som kostar dig jobbet</h2>
+<ul>
+<li><strong>Streckposter på för hög kodnivå.</strong> Beställare som anger otillåtna streckposter (tre eller fyra streck) tvingar anbudsgivare till spekulativ prissättning. Begär förtydligande i stället för att chansa.</li>
+<li><strong>Tomma poster.</strong> Poster utan pris blir nollposter – du riskerar att utföra arbetet utan ersättning.</li>
+<li><strong>À-priser som inte täcker allt.</strong> Glömmer du leverans, montage eller påslag urholkas marginalen på varje enhet.</li>
+<li><strong>Ingen koppling mellan mängdförteckning och kalkyl.</strong> Utan spårbarhet vet du inte var jobbet gick plus eller minus.</li>
+<li><strong>Fel avtalsform.</strong> Mängdkontrakt på en totalentreprenad med oklar utformning skapar tvister om fiktiva mängder.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du din prissatta mängdförteckning post för post och tar den vidare till ett färdigt anbud utan att skriva om allt på nytt. Du sätter enhet, mängd, à-pris och summa per rad, och totalsumman räknas automatiskt. Ytor och mängder kan du ta fram med kalkylverktygen och föra in direkt, så att samma poster följer med hela vägen från kalkyl till offert. Det ersätter inte din branschkunskap om AMA och MER – men det tar bort dubbelarbetet och räknefelen mellan underlag, kalkyl och anbud.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad kostar det att göra en mängdförteckning?</h3>
+<p>Själva mallen kostar ingenting – du kan använda vår offertmall gratis. Kostnaden ligger i den tid det tar att mäta mängder och sätta korrekta à-priser. Ju bättre underlag och verktyg, desto snabbare går det och desto mindre risk för dyra räknefel.</p>
+<h3>Måste jag följa AMA och MER?</h3>
+<p>Det beror på förfrågan. När beställaren hänvisar till AMA och MER i handlingarna gäller de reglerna för hur poster kodas, mäts och ersätts, och då ska din prissatta förteckning följa samma struktur. Även utan formell koppling är AMA-rubriker en bra ordning att bygga posterna efter.</p>
+<h3>Vad är skillnaden mellan mängdförteckning och kalkyl?</h3>
+<p>Kalkylen är din interna beräkning av vad jobbet kostar dig – material, timmar, UE och påslag. Mängdförteckningen är det formaliserade dokumentet, ofta enligt beställarens mall, med poster och à-priser som lämnas in som anbud. De ska hänga ihop, men mängdförteckningen är den utåtriktade handlingen.</p>
+<h3>Vem ansvarar för felaktiga mängder?</h3>
+<p>I en oprissatt förteckning som beställaren tagit fram är det beställaren som svarar för de angivna mängderna, och avvikelser hanteras som mängdreglering efter faktiskt uppmätt mängd. Därför är à-priset så viktigt: det håller inom ±25 %-ramen även om den verkliga mängden skiljer sig från den angivna.</p>
+
+<h2>Kom igång</h2>
+<p>Sätt upp din prissatta mängdförteckning i <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a> och räkna fram ytorna med <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeterkalkylatorn</a>. Vill du se hela flödet från mängder till färdigt anbud i ett verktyg? <a href="/sv/contact">Boka en demo</a> så visar vi hur det fungerar för just din verksamhet.</p>
+<p>Relaterat: <a href="/sv/blog/skriva-offert">Skriva offert – så gör du</a> och <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>.</p>
+`.trim();
+
+const MANGD: BlogPost = {
+  _id: "code-"+"mangdforteckning-bygg",
+  title: "Mängdförteckning bygg – så gör du en mall som vinner jobbet",
+  slug: "mangdforteckning-bygg",
+  locale: "sv",
+  excerpt: "En praktisk genomgång av mängdförteckningen – från oprissatt underlag till prissatt anbud, med mall, kolumnstruktur och kopplingen till kalkyl och offert.",
+  tag: "Byggkalkyl",
+  coverImageUrl: "/landing/verktyg/offert-preview.webp",
+  contentHtml: MANGD_HTML,
+  seoTitle: "Mängdförteckning mall bygg | ByggExp",
+  seoDescription: "Så gör du en oprissatt och prissatt mängdförteckning post för post – med mall, kolumner, à-priser och kopplingen till kalkyl och offert.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/offert-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false,
+  isPublished: true,
+  publishedAt: "2026-08-18T11:30:00.000Z",
+  createdAt: "2026-08-18T11:30:00.000Z",
+  updatedAt: "2026-08-18T11:30:00.000Z",
+};
+
+
+const MUNTLIGT_HTML = `
+<p>Du tog jobbet på ett handslag, priset nickades igenom över en kaffe och ändringarna löste ni på plats. Allt fungerade – ända tills fakturan bestreds. Muntliga avtal är fullt bindande i Sverige, men den som litar på minnet i stället för på papper har oftast redan förlorat innan tvisten börjat. Problemet är sällan att avtalet inte gäller. Problemet är att du inte kan bevisa vad ni kom överens om.</p>
+
+<p>Den här artikeln ger dig en konkret metod för att göra dig till den part som faktiskt kan bevisa sin sak: en spårbar offert och en skriftlig ÄTA-hantering. Börja med att bygga jobbets grund i <a href="/sv/verktyg/offert-mall">vår gratis offertmall &rarr;</a>.</p>
+
+<h2>Vad lagen faktiskt säger om muntliga avtal</h2>
+<p>Avtalslagen (1915:218) 1 § ställer inget krav på skriftlig form. Ett avtal uppstår när ett anbud möter en accept – muntligt, skriftligt eller genom konkludent handlande, det vill säga att parterna agerar som om ett avtal finns. Formfrihet är huvudregel. Ett handslag på en byggarbetsplats är alltså lika juridiskt giltigt som ett femtiosidigt kontrakt.</p>
+<p>Det betyder att giltigheten nästan aldrig är stridsfrågan i en tvist. Ingen motpart kommer långt med att hävda att ett muntligt avtal "inte räknas". Slaget står om något helt annat: vad som faktiskt sades.</p>
+
+<h2>Bevisbördan – den verkliga fällan</h2>
+<p>Den part som påstår att ett avtal har ingåtts, eller att ett visst pris eller villkor gäller, har bevisbördan för det. Utan skriftlig dokumentation står ord mot ord, och då måste beviset byggas av vittnen, efterföljande sms och mejl, samt parternas faktiska agerande. Utgången i en tvist avgörs i praktiken av vad som kan bevisas – inte av vad som är sant.</p>
+<p>I B2B är läget kärvare än många tror. Mellan näringsidkare finns inget konsumentskydd att luta sig mot. Domstolen förutsätter att två företag har jämbördig kunskap och resurser, och tolkar därför inte automatiskt oklarheter till den svagares fördel så som sker i konsumentförhållanden. Är du hantverkare eller underentreprenör och tvistar mot en beställare får du ingen rabatt för att du hade bråttom och litade på ett muntligt löfte.</p>
+
+<h2>ÄTA-arbeten och skriftlighetskravet</h2>
+<p>Arbetar du under AB 04 eller ABT 06 skärps kraven ytterligare. Enligt kap 2 § 6 ska föreskrivna ÄTA-arbeten – ändrings-, tilläggs- och avgående arbeten – beställas skriftligen. Kravet anses uppfyllt om beställaren överlämnar en ritning eller annan handling som innefattar ÄTA-arbetet. Utan uppfyllt formkrav får du som entreprenör i princip ingen ersättning, oavsett hur uppenbart det är att arbetet utfördes och beställdes muntligt.</p>
+<p>Likställda ÄTA-arbeten regleras i kap 2 § 7. Här krävs ingen skriftlig förhandsbeställning, men du måste utan dröjsmål underrätta beställaren och inhämta dennes syn – annars riskerar du ersättningsrätten. Underrättelsen sker enligt avtal ofta skriftligen, vilket i praktiken återför dig till papperet.</p>
+<p>Det finns ett undantag: du förlorar inte rätten till betalt om påföljden skulle vara oskälig. Det kan gälla när beställaren gav muntlig order, deltog i planeringen eller lämnade synpunkter på utförandet, eller när ni över tid konsekvent hanterat ändringar informellt så att skriftkravet anses avtalat bort. Men detta är osäker mark. Att medvetet strunta i skriftlig ÄTA och hoppas på oskälighetsundantaget är en strategi för att förlora, inte för att få betalt. Läs mer i vår genomgång av <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a>.</p>
+
+<h2>Konsumentjobb kräver ännu mer</h2>
+<p>Utför du arbete åt en privatperson gäller konsumenttjänstlagen (1985:716). Tilläggsarbete regleras i 8 §: du måste underrätta konsumenten och begära anvisningar innan du utför tilläggsarbetet. Går kunden inte att nå inom rimlig tid ska arbetet i regel avbrytas. Har du lämnat ett ungefärligt pris får det överskridas med högst 15 %; är fast pris avtalat gäller det priset punkt.</p>
+<p>Vid småhusentreprenad – ny- och tillbyggnad – vänds dessutom bevisbördan de första två åren (fel som visar sig inom två år antas ha funnits från början). Uppstår fel är det du som entreprenör som måste visa att felet inte beror på dig. Konsumentverket rekommenderar skriftligt avtal som dokumenterar pris, arbetets omfattning och färdigställandetid, just för att undvika den situation där ord står mot ord.</p>
+
+<h2>Tidsgränsen du glömmer – preskription</h2>
+<p>En obetald fordran efter ett muntligt avtal preskriberas normalt tio år efter tillkomsten enligt preskriptionslagen (1981:130) 2 §. Mot en konsument är tiden tre år. Preskriptionen kan avbrytas genom att gäldenären erkänner skulden eller genom ett krav från dig som borgenär – men ett muntligt krav är svårt att bevisa i efterhand. Skickar du en betalningspåminnelse per mejl har du både avbrutit preskriptionen och skapat ett spårbart bevis på att du gjort det. Ännu en anledning att hålla allt skriftligt.</p>
+
+<h2>Så säkrar du skriftligt och spårbart bevis</h2>
+<p>Metoden är inte krånglig – den är en vana. Gör så här på varje jobb:</p>
+<ol>
+<li><strong>Skriftlig offert först.</strong> Ange omfattning, pris eller prismodell och tidplan innan arbetet börjar. En signerad offert är ditt grundbevis. Se vår guide för att <a href="/sv/blog/skriva-offert">skriva offert</a>.</li>
+<li><strong>Bekräfta muntliga överenskommelser direkt.</strong> Kom ni överens på plats? Skicka ett sms eller mejl samma dag: "Bekräftar att vi kom överens om X till priset Y." Tystnad från motparten blir då ett bevis i sig.</li>
+<li><strong>ÄTA alltid skriftligt innan arbetet påbörjas.</strong> Med tydlig benämning, mängd och á-pris. Bygg dem i <a href="/sv/verktyg/ata-mall">vår ÄTA-mall</a> så att inget faller mellan stolarna.</li>
+<li><strong>Tidsstämpla och spåra.</strong> Signerad offert, daterade ändringar och en löpande ändringslogg visar inte bara vad ni kom överens om, utan även när.</li>
+<li><strong>Spara all korrespondens.</strong> Mejl, sms och bilder samlade på ett ställe. Behåll underlaget i minst sju år.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp bygger den här disciplinen in i själva flödet. Du skapar en offert med omfattning, pris och tidplan, skickar den för digital signering och får en tidsstämplad bekräftelse på vad kunden godkänt. När ändringar dyker upp registrerar du dem som ÄTA innan arbetet startar, med benämning, mängd och á-pris kopplat till projektet. All korrespondens och alla versioner samlas på ett ställe, så att du vid en eventuell tvist inte behöver leta i mejlkorgen – beviset finns redan där, spårbart och daterat. Verktyget avgör förstås inte tvisten åt dig, men det gör dig till den part som faktiskt kan visa vad som avtalats.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är ett muntligt avtal bindande i Sverige?</h3>
+<p>Ja. Avtalslagen (1915:218) 1 § kräver ingen skriftlig form – ett avtal uppstår när anbud möter accept. Ett muntligt avtal är alltså lika bindande som ett skriftligt. Problemet är inte giltigheten utan att bevisa vad som avtalades om det blir tvist.</p>
+<h3>Vem har bevisbördan om vi bara kom överens muntligt?</h3>
+<p>Den som påstår att ett avtal eller ett visst villkor gäller måste bevisa det. Utan skriftlig dokumentation byggs beviset av vittnen, sms, mejl och parternas faktiska agerande. I B2B finns inget konsumentskydd som väger till din fördel, vilket gör dokumentationen avgörande.</p>
+<h3>Måste ÄTA-arbeten beställas skriftligt?</h3>
+<p>Under AB 04 och ABT 06 kap 2 § 6 ska föreskrivna ÄTA beställas skriftligen, annars får du i princip ingen ersättning. Likställda ÄTA enligt kap 2 § 7 kräver ingen förhandsbeställning, men du måste underrätta beställaren utan dröjsmål. Håll allt skriftligt för säkerhets skull.</p>
+<h3>Hur länge kan jag kräva betalt efter ett muntligt avtal?</h3>
+<p>En fordran preskriberas normalt tio år efter tillkomsten enligt preskriptionslagen (1981:130) 2 §, men mot en konsument är tiden tre år. Preskriptionen kan avbrytas med ett krav – skicka det skriftligt, eftersom ett muntligt krav är svårt att bevisa.</p>
+
+<h2>Kom igång</h2>
+<p>Sluta lita på minnet och börja bygga bevis. Skapa jobbets grund i <a href="/sv/verktyg/offert-mall">offertmallen</a> och håll ändringar i ordning med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a>. Vill du se hur hela flödet hänger ihop i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi hur du får spårbart bevis på köpet.</p>
+
+<p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten – så hanterar du ändringar rätt</a> och <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a>.</p>
+`.trim();
+
+const MUNTLIGT: BlogPost = {
+  _id: "code-"+"muntligt-avtal-sakra-bevis",
+  title: "Muntligt avtal gäller – men det kan bli din dyraste tvist",
+  slug: "muntligt-avtal-sakra-bevis",
+  locale: "sv",
+  excerpt: "Handslaget håller juridiskt, men i en tvist förlorar den som inte kan bevisa vad som sades – så säkrar du spårbart bevis med offert och ÄTA.",
+  tag: "Avtal",
+  coverImageUrl: "/landing/verktyg/offert-preview.webp",
+  contentHtml: MUNTLIGT_HTML,
+  seoTitle: "Muntligt avtal & tvist | ByggExp",
+  seoDescription: "Muntligt avtal med hantverkare är bindande – men bevisbördan sänker dig i tvist. Så säkrar du spårbart skriftligt bevis med offert och ÄTA.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/offert-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false,
+  isPublished: true,
+  publishedAt: "2026-08-18T12:00:00.000Z",
+  createdAt: "2026-08-18T12:00:00.000Z",
+  updatedAt: "2026-08-18T12:00:00.000Z",
+};
+
+
+const ARBMILJO_HTML = `
+<p>Det finns en seglivad missuppfattning i branschen: att du som ensamföretagare eller familjeföretagare utan anställda på något sätt <em>slipper</em> arbetsmiljöansvaret på bygget. Det stämmer inte. När du utför byggnads- och anläggningsarbete omfattas du av i praktiken samma byggregler som en arbetsgivare med hundra anställda. Sedan Arbetsmiljöverkets nya regelstruktur trädde i kraft den 1 januari 2025 har dessutom hänvisningarna ändrats – och gamla mallar kan peka på föreskrifter som inte längre gäller. Här går vi igenom vad du faktiskt ansvarar för som egenföretagare på bygget 2026, och hur du dokumenterar det så att det håller vid en olycka eller en kontroll.</p>
+
+<p>Ett bra första steg är att strukturera din egen dokumentation från start – ladda ner <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> och använd den som grund för varje uppdrag.</p>
+
+<h2>Kort om lagen – vad ändrades 1 januari 2025</h2>
+<p>Den 1 januari 2025 gick Arbetsmiljöverket över till en helt ny regelstruktur. 67 tidigare föreskrifter ersattes av 15 nya. För dig som arbetar på bygget är det främst två som gäller: <strong>AFS 2023:3</strong> om projektering och byggarbetsmiljösamordning, som innehåller de grundläggande skyldigheterna, samt <strong>AFS 2023:13</strong> om risker vid vissa typer av arbeten, där kapitlet om byggnads- och anläggningsarbete finns. Den gamla AFS 1999:3, som många i branschen känner till utantill, är upphävd. Innehållet lever i stort vidare, men paragrafhänvisningar och kapitelnummer är nya. Har du egna checklistor, riskbedömningsmallar eller arbetsmiljöplaner som hänvisar till gamla AFS-nummer bör du uppdatera dem – annars riskerar du att luta dig mot text som inte längre är giltig.</p>
+
+<h2>Har du som ensamföretagare arbetsmiljöansvar? Ja</h2>
+<p>Kärnan finns i arbetsmiljölagen 3 kap. 5 §: den som ensam eller tillsammans med familjemedlem driver verksamhet är skyldig att följa reglerna om tekniska anordningar och farliga ämnen, och att inte utsätta andra för risk på ett gemensamt arbetsställe. Reglerna om byggnads- och anläggningsarbete i AFS 2023:13 gäller för <strong>alla aktörer</strong> på bygget – även ensam- och familjeföretagare. I praktiken har du tre kärnplikter:</p>
+<ul>
+<li><strong>Riskbedöm ditt eget arbete</strong> innan du börjar.</li>
+<li><strong>Vidta förebyggande åtgärder</strong> mot de risker du identifierat.</li>
+<li><strong>Skada inte andra</strong> – ditt arbete får inte skapa olycksrisk för dem som rör sig på den gemensamma byggarbetsplatsen.</li>
+</ul>
+<p>En viktig nyansering: du behöver inte bedriva fullt systematiskt arbetsmiljöarbete (SAM) på samma sätt som en arbetsgivare, eftersom SAM-kraven riktar sig mot arbetsgivare med anställda. Men det betyder inte att du är fri från dokumentation – på bygget uppstår kraven ändå, via riskbedömning, arbetsmiljöplan och samordningen med Bas-U.</p>
+
+<h2>På den gemensamma byggarbetsplatsen – ditt ansvar mot Bas-U och andra</h2>
+<p>Så snart det finns fler entreprenörer på plats blir bygget ett gemensamt arbetsställe, och då tillkommer ett samordningsansvar. På en fast byggarbetsplats sköts det av Bas-U (byggarbetsmiljösamordnare för utförandet). Som egenföretagare och underentreprenör har du flera konkreta skyldigheter gentemot Bas-U och de andra på plats:</p>
+<ul>
+<li><strong>Samråda</strong> med övriga entreprenörer om arbetet.</li>
+<li><strong>Följa Bas-U:s anvisningar</strong> och de ordnings- och skyddsregler som gäller på arbetsplatsen.</li>
+<li><strong>Lämna information till Bas-U</strong> om de risker ditt arbete skapar för andra, och särskilt om du ska utföra något av arbetena med särskild risk.</li>
+<li><strong>Vänta på klartecken</strong> från Bas-U innan du startar ett riskfyllt moment.</li>
+</ul>
+<p>Här gör många fel: man tror att eftersom det finns en Bas-U så ligger allt arbetsmiljöansvar där. Så är det inte. Bas-U:s samordningsansvar <strong>fråntar inte</strong> dig ditt eget arbetsmiljöansvar för det arbete du själv utför. Samordningen lägger sig ovanpå ditt ansvar – den ersätter det inte.</p>
+
+<h2>När krävs arbetsmiljöplan – även för en enmansfirma</h2>
+<p>En arbetsmiljöplan (AMP) krävs nästan alltid, även i små projekt där bara en ensamföretagare är verksam. Kravet slår till om <strong>något</strong> av arbetena med särskild risk förekommer, <strong>eller</strong> om projektets storlek gör att förhandsanmälan krävs. Bland de arbeten med särskild risk (AFS 2023:3) som är vanligast för hantverkare finns:</p>
+<ul>
+<li>fall till lägre nivå där nivåskillnaden är två meter eller mer</li>
+<li>tunga byggelement som ska monteras eller demonteras</li>
+<li>risk att begravas under jordmassor eller rasrisk</li>
+<li>arbete med kemiska eller biologiska ämnen</li>
+<li>arbete nära passerande fordonstrafik</li>
+</ul>
+<p>Rollfördelningen är tydlig: Bas-P upprättar planen under projekteringen, Bas-U håller den uppdaterad under utförandet, och byggherren ansvarar för att den finns och är tillgänglig på arbetsplatsen. Din uppgift som egenföretagare är att läsa planen, följa den och kvittera att du tagit del av den.</p>
+
+<h2>Förhandsanmälan och sanktionsavgifter du bör känna till</h2>
+<p>Byggherren är skyldig att göra en förhandsanmälan till Arbetsmiljöverket när arbetet beräknas pågå längre än 30 arbetsdagar och mer än 20 personer sysselsätts samtidigt vid något tillfälle, <strong>eller</strong> när det totala antalet persondagar beräknas bli fler än 500. Även om detta är byggherrens ansvar påverkar det dig, eftersom förhandsanmälan i sin tur utlöser AMP-kravet. Sanktionsavgifterna är kännbara: utebliven förhandsanmälan kan leda till sanktionsavgift. Saknas arbetsmiljöplanen, eller är den inte tillgänglig, blir avgiften 50 000 kr i projekt som kräver förhandsanmälan och annars 10 000 kr. Ingen avgift tas ut om hela bygg- eller anläggningsarbetet pågår i högst två dagar i följd.</p>
+
+<h2>Personalliggare 2026 – gäller det dig?</h2>
+<p>Elektronisk personalliggare krävs när den sammanlagda bygg- och materialkostnaden överstiger 4 prisbasbelopp. Prisbasbeloppet för 2026 är fastställt till 59 200 kr, vilket ger gränsen <strong>236 800 kr</strong>. Undantag gäller när byggherren är privatperson och bygger för privat bruk. Uppgifterna – namn, personnummer samt in- och utcheckningstider – ska föras dagligen, sparas i 2 år och kunna visas vid en oanmäld kontroll från Skatteverket. Varje entreprenör för sin egen del av liggaren, så du för din. Notera att det inte finns något lagkrav på just ID06; lagen säger bara att uppgifterna ska vara elektroniska och korrekta – systemvalet är fritt. ID06 är dock den dominerande branschstandarden och det de flesta beställare förväntar sig.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att samla arbetsmiljödokumentationen på ett ställe i stället för i lösa papper och mobilbilder. Med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> bygger du en riskbedömning per uppdrag och sparar den som PDF, klar att visa upp för beställare, Bas-U eller vid en inspektion. Du kan dokumentera egenkontroll av utrustning, ställningar och fallskydd, kvittera att du tagit del av arbetsmiljöplanen, och lägga undan Bas-U:s anvisningar och klartecken kopplat till rätt projekt. Poängen är spårbarhet: när något händer eller någon frågar kan du visa vad du bedömde och vad du gjorde. ByggExp ersätter inte ditt omdöme på bygget, men gör det enkelt att få dokumentationen gjord och sparad.</p>
+
+<h2>Praktisk checklista – så dokumenterar du ditt ansvar</h2>
+<ol>
+<li>Gör en egen riskbedömning för varje uppdrag innan du börjar.</li>
+<li>Läs och kvittera arbetsmiljöplanen samt ordnings- och skyddsreglerna.</li>
+<li>Spara Bas-U:s anvisningar och klartecken för riskfyllda moment.</li>
+<li>Dokumentera egenkontroll av utrustning, ställningar och fallskydd.</li>
+<li>För personalliggare för din del om projektet omfattas.</li>
+<li>Rapportera tillbud och olyckor – och spara det du rapporterat.</li>
+</ol>
+
+<h2>Vanliga frågor</h2>
+<h3>Har en enmansfirma arbetsmiljöansvar på bygget?</h3>
+<p>Ja. När du utför byggnads- och anläggningsarbete gäller reglerna i AFS 2023:13 för alla aktörer, även ensam- och familjeföretagare. Enligt arbetsmiljölagen 3 kap. 5 § ska du riskbedöma ditt eget arbete, vidta åtgärder och inte utsätta andra på det gemensamma arbetsstället för risk.</p>
+<h3>Måste ensamföretagare ha arbetsmiljöplan?</h3>
+<p>En arbetsmiljöplan krävs om något av arbetena med särskild risk förekommer, eller om projektets storlek kräver förhandsanmälan – och det gäller även när bara en ensamföretagare är verksam. Bas-P upprättar planen, Bas-U uppdaterar den och byggherren ansvarar för att den finns tillgänglig.</p>
+<h3>Behöver jag personalliggare som egenföretagare 2026?</h3>
+<p>Ja, om den sammanlagda bygg- och materialkostnaden överstiger 4 prisbasbelopp, vilket 2026 motsvarar 236 800 kr. Undantag gäller när byggherren är privatperson som bygger för privat bruk. Uppgifterna ska föras dagligen, sparas i 2 år och kunna visas vid oanmäld kontroll.</p>
+<h3>Måste jag följa Bas-U om jag är underentreprenör?</h3>
+<p>Ja. Du ska samråda med övriga entreprenörer, följa Bas-U:s anvisningar, informera om risker ditt arbete skapar och invänta klartecken innan riskfyllda moment startar. Bas-U:s samordningsansvar tar däremot inte bort ditt eget arbetsmiljöansvar för det arbete du utför.</p>
+
+<h2>Kom igång</h2>
+<p>Du har fullt arbetsmiljöansvar även som soloföretagare – och rätt dokumentation skyddar dig både vid en olycka och vid en kontroll. Kom igång med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och bygg en riskbedömning för ditt nästa uppdrag. Vill du se hur du samlar all arbetsmiljödokumentation i ett system? <a href="/sv/contact">Boka en demo</a> så visar vi hur det fungerar i praktiken.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Så upprättar du en arbetsmiljöplan</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt – så gör du</a>.</p>
+`.trim();
+
+const ARBMILJO: BlogPost = {
+  _id: "code-"+"arbetsmiljoansvar-egenforetagare",
+  title: "Arbetsmiljöansvar för egenföretagare på bygget – vad gäller 2026",
+  slug: "arbetsmiljoansvar-egenforetagare",
+  locale: "sv",
+  excerpt: "Tror du att en enmansfirma slipper arbetsmiljöansvar på bygget? Så ser reglerna ut 2026 – och så dokumenterar du ditt ansvar rätt.",
+  tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp",
+  contentHtml: ARBMILJO_HTML,
+  seoTitle: "Arbetsmiljöansvar egenföretagare | ByggExp",
+  seoDescription: "Som ensamföretagare på bygget har du fullt arbetsmiljöansvar. Så gäller reglerna 2026 – riskbedömning, arbetsmiljöplan, Bas-U och dokumentation.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`,
+  canonicalUrl: "",
+  noIndex: false,
+  isPublished: true,
+  publishedAt: "2026-08-18T12:30:00.000Z",
+  createdAt: "2026-08-18T12:30:00.000Z",
+  updatedAt: "2026-08-18T12:30:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    KUNDEN,
+    MANGD,
+    MUNTLIGT,
+    ARBMILJO,
     PASLAG,
     VATRUM,
     EFAKTURA,

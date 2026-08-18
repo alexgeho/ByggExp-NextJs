@@ -32,15 +32,25 @@ const nextConfig = {
     ];
   },
   async headers() {
-    if (allowIndex) return [];
-    return [
+    const rules = [
+      // Embeddable calculator widgets must be framable by ANY site. The VPS
+      // nginx sends a global `X-Frame-Options: SAMEORIGIN`; CSP frame-ancestors
+      // obsoletes and overrides XFO in modern browsers. (If a browser still
+      // blocks, drop XFO for `location /sv/embed/` in the nginx config.)
       {
-        source: "/:path*",
+        source: "/:lang/embed/:slug*",
         headers: [
-          { key: "X-Robots-Tag", value: "noindex, nofollow" },
+          { key: "Content-Security-Policy", value: "frame-ancestors *" },
         ],
       },
     ];
+    if (!allowIndex) {
+      rules.push({
+        source: "/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      });
+    }
+    return rules;
   },
 };
 

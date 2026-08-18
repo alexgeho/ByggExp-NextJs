@@ -3148,9 +3148,898 @@ const ENSKILD: BlogPost = {
   publishedAt: "2026-08-18T17:00:00.000Z", createdAt: "2026-08-18T17:00:00.000Z", updatedAt: "2026-08-18T17:00:00.000Z",
 };
 
+const A_ANLITA_UNDERENTREPRENOR_HTML = `
+<p>Att anlita en underentreprenör (UE) är vardag för de flesta byggföretag, men det är också ett av de moment där mest pengar kan gå förlorade om du slarvar. Fel avtalstyp, en UE utan F-skatt eller en dåligt formulerad faktura kan snabbt bli din kostnad – och sedan 2019 kan du dessutom bli betalningsansvarig för UE:ns anställdas löner. Här går vi igenom hela kedjan: skillnaden mot bemanning, kontrollerna du måste göra, vad UE-avtalet ska innehålla, entreprenörsansvaret och skattereglerna som gäller 2026.</p>
+
+<p>Ett tydligt avtal är grunden för hela affären. Börja med ett komplett och strukturerat offertunderlag så att omfattning och pris är låsta redan innan arbetet startar – använd gärna vår gratis <a href="/sv/verktyg/offert-mall">offertmall &rarr;</a> som utgångspunkt.</p>
+
+<h2>UE eller bemanning – vad är skillnaden?</h2>
+<p>Skillnaden är avgörande och styr både arbetsmiljöansvar, moms och vilket avtal du ska skriva. En <strong>underentreprenör</strong> utför ett väl avskilt arbete med egen arbetsledning, eget material och egna maskiner – du köper ett resultat. <strong>Bemanning</strong> eller inhyrd personal är ren arbetskraft som hyrs in per timme, där du själv står för arbetsledning och utrustning – du köper arbetstid.</p>
+<p>Konsekvenserna är konkreta: vid inhyrd personal bär du som inhyrare i princip hela arbetsmiljöansvaret, medan en UE ansvarar för sina egna medarbetare. Beslutsguiden är enkel – leder och utrustar leverantören själv sitt arbete och levererar ett avgränsat resultat är det en UE. Sitter deras folk under din arbetsledning med din utrustning är det bemanning, oavsett vad avtalet kallas.</p>
+
+<h2>Kontrollera UE:n innan du skriver avtal</h2>
+<p>Seriositetskontrollen är inte en formalitet – den skyddar dig mot både ekonomisk risk och dålig publicitet. Gå igenom följande både vid avtalstecknandet och löpande under uppdraget:</p>
+<ul>
+<li><strong>Godkänd för F-skatt</strong> – kontrollera i Skatteverkets tjänst "Hämta företagsinformation".</li>
+<li><strong>Moms- och arbetsgivarregistrering</strong> samt beslutade arbetsgivaravgifter – visas i samma tjänst.</li>
+<li><strong>Skatteskulder</strong> – kontrollera hos Kronofogden.</li>
+<li><strong>Kollektivavtal eller hängavtal</strong> med Byggnads.</li>
+<li><strong>Försäkringar</strong>, ID06-anslutning och referenser från tidigare uppdrag.</li>
+</ul>
+<p>En UE som inte är godkänd för F-skatt eller som har skatteskulder är en tydlig varningssignal. Dokumentera kontrollerna så att du kan visa att du gjort din del om något ifrågasätts i efterhand.</p>
+
+<h2>UE-avtalet – vad ska stå i det?</h2>
+<p>För underentreprenader finns färdiga standardavtal som "back-to-backar" huvudavtalets villkor nedåt i kedjan: <strong>AB-U 07</strong> används tillsammans med AB 04 i utförandeentreprenad, och <strong>ABT-U 07</strong> tillsammans med ABT 06 i totalentreprenad. Poängen är att UE:n binds till samma krav som du själv har mot din beställare, så att inte ett glapp uppstår i mitten. Läs mer om skillnaden mellan huvudavtalen i vår guide om <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06</a>.</p>
+<p>Oavsett standardavtal ska följande vara reglerat i UE-kontraktet:</p>
+<ul>
+<li>Omfattning och tydlig gränsdragning mot andra entreprenörer.</li>
+<li>Pris eller à-pris, betalningsplan och fakturavillkor.</li>
+<li>Tider, delmål och eventuella viten vid försening.</li>
+<li>Hantering av ÄTA-arbeten (ändrings-, tilläggs- och avgående arbeten).</li>
+<li>Ansvar, försäkring och eventuell säkerhet.</li>
+<li>Villkor för hävning.</li>
+</ul>
+<p>ÄTA är en av de vanligaste källorna till tvist. Fastställ redan i avtalet hur ändringar ska beställas och prissättas skriftligt – vår <a href="/sv/verktyg/ata-mall">ÄTA-mall &rarr;</a> ger dig ett spårbart underlag som håller genom hela kedjan.</p>
+
+<h2>Entreprenörsansvar för lönefordringar – den dolda risken</h2>
+<p>Detta är den risk många missar. Enligt <strong>Lag (2018:1472) om entreprenörsansvar för lönefordringar</strong>, i kraft sedan 1 januari 2019, kan du tvingas betala en UE-anställds lön om UE:n inte gör det. Lagen gäller bygg- och anläggningsverksamhet (uppförande, ombyggnad, underhåll, rivning) och ansvaret är subsidiärt i kedjan: kravet riktas först mot uppdragsgivaren – den entreprenör som anlitat arbetsgivaren – och därefter mot huvudentreprenören.</p>
+<p>Fristerna är korta och värda att kunna:</p>
+<ul>
+<li>Betalningsansvaret inträder <strong>sju helgfria vardagar</strong> efter att entreprenören fått en skriftlig underrättelse om lönefordran (§10).</li>
+<li>Uppdragsgivaren har <strong>fjorton helgfria vardagar</strong> på sig att betala; betalar den inte eller kan inte nås träder huvudentreprenörens ansvar in (§7–8).</li>
+<li>Ansvaret omfattar inte fordringar som förfallit mer än <strong>tre månader</strong> före underrättelsen (§14).</li>
+<li>En huvudentreprenör som fått krav måste inom <strong>sju helgfria vardagar</strong> skriftligen underrätta uppdragsgivaren för att behålla sin regressrätt (§17).</li>
+</ul>
+<p>Den som betalat har regressrätt mot arbetsgivaren, alltså UE:n – men du får ligga ute med pengarna och driva in dem själv. Skydda dig genom noggrann seriositetskontroll, korta betalningskedjor och avtalsvillkor som ger dig rätt att hålla inne betalning eller kräva ersättning om entreprenörsansvaret utlöses.</p>
+
+<h2>Omvänd byggmoms mellan dig och UE:n</h2>
+<p>Vid försäljning av byggtjänster mellan två byggföretag i Sverige gäller <strong>omvänd byggmoms</strong> när köparen mer än tillfälligt säljer byggtjänster (eller är s.k. mellanman). Typfallet är just en UE som fakturerar en huvudentreprenör. Då ska fakturan <strong>sakna moms</strong> och tydligt ange att omvänd skattskyldighet gäller, till exempel "Omvänd betalningsskyldighet gäller". Köparen redovisar och betalar momsen: inköpet tas upp i ruta 24 och den beräknade utgående momsen i ruta 30 i momsdeklarationen (säljaren/UE:n redovisar sin försäljning i ruta 41).</p>
+<p>Vanliga fel är att UE:n felaktigt lägger på 25 % moms, eller att formuleringen om omvänd skattskyldighet saknas på fakturan. Kontrollera detta redan när du granskar UE:ns första faktura – rättar du det direkt slipper du krångliga korrigeringar senare.</p>
+
+<h2>Anmälningsskyldighet, kollektivavtal och personalliggare</h2>
+<p><strong>UE 2021</strong> är Byggföretagens och Byggnads avtalsvillkor för underentreprenörer och bemanningsföretag. Är UE:n bunden av Byggavtalet ska anlitandet anmälas till Byggnads via blankett UE2021. Är UE:n inte medlem i Byggföretagen, saknar hängavtal, inte är enmansföretag eller inte tillhör Maskinentreprenörerna, ska anlitandet i stället förhandlas med Byggnads enligt MBL §38–40.</p>
+<p>På byggarbetsplatser krävs dessutom <strong>elektronisk personalliggare (ID06)</strong>. Varje entreprenör för sin egen del – egna anställda och egen inhyrd personal. Bristerna kostar: kontrollavgiften är 12 500 kr i grundavgift plus 2 500 kr per person som är verksam men saknas i liggaren. Har byggherren inte anmält byggstart och plats till Skatteverket blir avgiften 25 000 kr, och 12 500 kr om byggherren inte tillhandahållit utrustning för personalliggaren.</p>
+
+<h2>Sammanfattning – 6 steg innan du anlitar en UE</h2>
+<ol>
+<li>Avgör om du behöver en UE eller bemanning – det styr avtal, moms och arbetsmiljöansvar.</li>
+<li>Kontrollera F-skatt, moms- och arbetsgivarregistrering, skatteskulder och kollektivavtal.</li>
+<li>Skriv UE-avtal (AB-U 07 eller ABT-U 07) som back-to-backar dina egna villkor.</li>
+<li>Reglera ÄTA, betalningsplan, viten, försäkring och hävning skriftligt.</li>
+<li>Ha koll på entreprenörsansvaret och bygg in skydd i avtalet.</li>
+<li>Säkra rätt fakturering med omvänd byggmoms och sköt personalliggaren.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att strukturera UE-affären från offert till slutfaktura. Du skapar tydliga offertunderlag och UE-kontrakt med rätt omfattning, priser och tider, och håller ÄTA-arbeten spårbara så att inget faller mellan stolarna i kedjan. Alla underlag samlas per projekt, vilket gör det enkelt att dokumentera dina seriositetskontroller och behålla ordning på fakturor och avtal i minst sju år. ByggExp fattar inga beslut åt dig om F-skatt eller entreprenörsansvar – men ger dig strukturen som gör att du hinner göra kontrollerna rätt.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste en underentreprenör vara godkänd för F-skatt?</h3>
+<p>Ja, du bör alltid kontrollera att UE:n är godkänd för F-skatt innan du skriver avtal. Det gör du i Skatteverkets tjänst "Hämta företagsinformation", som även visar moms- och arbetsgivarregistrering. Skatteskulder kontrollerar du hos Kronofogden. Gör kontrollen både vid start och löpande under uppdraget.</p>
+<h3>Kan jag bli betalningsskyldig för underentreprenörens anställdas löner?</h3>
+<p>Ja. Enligt Lag (2018:1472) om entreprenörsansvar för lönefordringar kan du som uppdragsgivare eller huvudentreprenör bli betalningsskyldig om UE:n inte betalar lön till sina anställda. Ansvaret inträder sju helgfria vardagar efter skriftlig underrättelse. Du har sedan regressrätt mot UE:n.</p>
+<h3>Ska underentreprenören fakturera med moms?</h3>
+<p>Nej, inte när omvänd byggmoms gäller. När en UE fakturerar en huvudentreprenör för byggtjänster och köparen mer än tillfälligt säljer byggtjänster ska fakturan sakna moms och ange att omvänd skattskyldighet gäller. Köparen redovisar inköpet i ruta 24 och den beräknade utgående momsen i ruta 30 (ruta 41 används av säljaren).</p>
+<h3>Vad är skillnaden mellan underentreprenör och bemanning?</h3>
+<p>En underentreprenör utför ett avgränsat arbete med egen arbetsledning, eget material och egna maskiner. Bemanning är inhyrd arbetskraft per timme där du själv leder arbetet och står för utrustningen. Vid inhyrd personal bär du i princip hela arbetsmiljöansvaret.</p>
+
+<h2>Kom igång</h2>
+<p>Lägg grunden för en trygg UE-affär redan i offertskedet med vår <a href="/sv/verktyg/offert-mall">offertmall &rarr;</a>, och håll ändringar spårbara med <a href="/sv/verktyg/ata-mall">ÄTA-mallen &rarr;</a>. Vill du se hur ByggExp håller ihop offerter, UE-avtal och fakturor per projekt? <a href="/sv/contact">Boka en demo &rarr;</a> så visar vi upplägget.</p>
+
+<p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaden mellan utförande- och totalentreprenad</a> och <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag – så gör du</a>.</p>
+`;
+
+const A_ANLITA_UNDERENTREPRENOR: BlogPost = {
+  _id: "code-"+"anlita-underentreprenor",
+  title: "Anlita underentreprenör – så gör du rätt (UE-avtal, entreprenörsansvar och skatteregler 2026)", slug: "anlita-underentreprenor", locale: "sv",
+  excerpt: "Komplett guide för byggföretag som ska anlita underentreprenör – avtal, kontroller, entreprenörsansvar för lönefordringar och skatteregler enligt 2026 års regelverk.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_ANLITA_UNDERENTREPRENOR_HTML,
+  seoTitle: "Anlita underentreprenör 2026 | ByggExp", seoDescription: "Så anlitar du underentreprenör rätt: UE-avtal, entreprenörsansvar för lönefordringar, omvänd byggmoms och skillnaden UE vs bemanning. Checklista 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:00:00.000Z", createdAt: "2026-08-18T18:00:00.000Z", updatedAt: "2026-08-18T18:00:00.000Z",
+};
+
+const A_A_CONTO_FAKTURERING_BYGG_HTML = `
+<p>Du betalar löner och material innan projektet ens är halvvägs, men din kund har 60 dagar på sig att betala en enda slutfaktura. Det är klassiska likviditetsfällan i entreprenad: pengarna ut i förskott, pengarna in långt senare. Lösningen heter à conto-fakturering — att fakturera löpande mot en betalningsplan under projektets gång i stället för att vänta på en stor slutfaktura. Rätt upplagd förvandlar den 60 dagars betaltid från ett kassaflödesproblem till ett förutsägbart intäktsflöde varje månad.</p>
+
+<p>Vill du komma igång direkt kan du använda <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall -&gt;</a> och sätta upp dina à conto-poster med separata rader för arbete och material.</p>
+
+<h2>Vad är à conto-fakturering?</h2>
+<p>À conto betyder att kontraktssumman betalas i delbetalningar allt eftersom arbetet fortskrider, fakturerat mot avtalade delmål, med en slutavräkning vid godkänd slutbesiktning. Det är inte samma sak som förskott, där kunden betalar för arbete som ännu inte utförts. Vid à conto fakturerar du en del av det redan utförda arbetet, och den sista avstämningen görs när projektet är klart och besiktat.</p>
+<p>Skillnaden mot en enda slutfaktura är enkel: i stället för att lägga ut hela kostnaden för arbete och material själv under hela byggtiden får du in betalning löpande. Det vanligaste upplägget i entreprenad är just en betalningsplan med delbetalning efter utförd del och slutavräkning vid godkänd slutbesiktning. À conto är alltså inte ett kryphål — det är standardpraxis i branschen.</p>
+
+<h2>Varför à conto frigör kapital vid 60 dagars betaltid</h2>
+<p>Ta ett projekt på tre månader. Med en enda slutfaktura plus 60 dagars betaltid får du in pengarna först ungefär fyra till fem månader efter att du började betala löner och leverantörer. Under hela den tiden binder du eget kapital — eller lånar dyrt — för att täcka kostnaderna.</p>
+<p>Fakturerar du i stället à conto varje månad kommer pengar in med jämna mellanrum genom hela projektet. Även med 60 dagars betaltid på varje delfaktura krymper glappet mellan utlägg och inbetalning dramatiskt, eftersom du hela tiden har fakturor på väg in. Mellan näringsidkare är den lagstadgade betaltiden max 60 dagar om inget annat uttryckligen avtalats och det inte är grovt oskäligt mot borgenären. Grundregeln i räntelagen är annars 30 dagar. Entreprenad kör ofta 60–90 dagars villkor, vilket gör den löpande faktureringen ännu viktigare — ju längre betaltid, desto mer tjänar du på att fakturera tidigt och ofta.</p>
+
+<h2>Reglerna i AB 04/ABT 06</h2>
+<p>AB 04 och ABT 06 är standardavtalen i byggsektorn, och kapitel 6 styr betalningarna. En grundprincip är att arbete som anges på en faktura ska ha utförts, och en faktura ska betalas inom 30 dagar om inget annat avtalats.</p>
+<p>Viktigt att känna till är reglerna om innehållen ersättning. Enligt AB 04 kap 6 §12 får beställaren hålla inne 10 % av värdet på utförda kontraktsarbeten som säkerhet — men bara när det <strong>inte</strong> finns någon betalningsplan. Det innehållna beloppet får aldrig överstiga 5 % av den totala kontraktssumman. Efter godkänd slutbesiktning får beställaren hålla inne 5 % av kontraktssumman till dess att fel är avhjälpta.</p>
+<p>Den praktiska slutsatsen: avtala en skriftlig betalningsplan. Då slipper du huvudregeln om 10 % innehållande, och båda parter vet exakt när varje delbetalning ska ske. Håller beställaren inne betalning utan att ange skäl är denne dessutom skyldig att betala ränta på det innehållna beloppet från den dag det rätteligen skulle ha betalats.</p>
+
+<h2>Moms: à conto vs fakturadatummetoden</h2>
+<p>Bygg- och installationstjänster använder normalt fakturadatummetoden: den utgående momsen redovisas i den period fakturan utfärdas. Har tjänsten betalats innan den fakturerats redovisas momsen när betalning skedde, och har den varken fakturerats eller betalats senast andra kalendermånaden efter att tjänsten utfördes redovisas den då. En tjänst räknas som utförd när kunden godkänner den, vanligtvis vid godkänd slutbesiktning.</p>
+<p>För à conto och förskott gäller en viktig avvikelse: säljaren ska redovisa utgående moms för den period då betalningen tas emot, även om à conto-fakturan utfärdats ett annat beskattningsår än när betalningen kommer in.</p>
+<p>Säljer du byggtjänster till ett annat företag i byggsektorn gäller omvänd byggmoms — du lägger <strong>ingen</strong> moms på fakturan, utan köparen redovisar och betalar momsen. Normal momssats för byggtjänster är annars 25 %. En vanlig miss är att felaktigt lägga på 25 % moms på en à conto-faktura som omfattas av omvänd skattskyldighet. Kontrollera alltid vem köparen är innan du fakturerar. Omvänd byggmoms gäller inte vid försäljning till privatperson eller icke momsregistrerad köpare.</p>
+
+<h2>ROT på à conto-fakturor för privatkunder</h2>
+<p>Fakturerar du privatpersoner à conto kan ROT-avdraget appliceras redan på delfakturorna. Från 1 januari 2026 är ROT-avdraget 30 % av arbetskostnaden inklusive moms, tillbaka på ordinarie nivå efter den tillfälliga höjningen i maj 2025. Bara arbete kvalificerar — inte material, resor eller maskiner. Taket är 50 000 kr ROT per person och år, och ROT och RUT tillsammans max 75 000 kr per person och år.</p>
+<p>På en ROT à conto-faktura måste kundens personnummer anges, och du begär ROT-utbetalningen från Skatteverket via e-tjänsten, normalt efter att fakturan är betald. Momsen beräknas på hela beloppet — själva skattereduktionen är en sak mellan kunden och staten, inte något du drar av på fakturans momsunderlag.</p>
+
+<h2>Praktiska tips för din betalningsplan</h2>
+<ul>
+<li>Sätt realistiska delmål som matchar när dina faktiska kostnader uppstår — inte jämna klumpsummor, utan poster kopplade till utförda moment.</li>
+<li>Skriv in betalningsplanen i avtalet, så att den ersätter huvudregeln om 10 % innehållande.</li>
+<li>Håll separata rader för arbete och material på fakturan — särskilt viktigt vid ROT, där bara arbetskostnaden ger avdrag.</li>
+<li>Fakturera direkt när ett delmål är klart. Varje dags fördröjning i din egen fakturering förlänger betaltiden i praktiken.</li>
+<li>Använd dröjsmålsränta som påtryckningsmedel mot sena betalare. Enligt räntelagen är den referensräntan plus 8 procentenheter. Referensräntan för andra halvåret 2026 är 2,00 %, vilket ger 10,00 % i dröjsmålsränta.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>Med ByggExp bygger du fakturaunderlagen från det arbete som faktiskt utförts. Vår <a href="/sv/verktyg/faktura-mall">fakturamall</a> hjälper dig att lägga upp à conto-poster med separata rader för arbete och material, ange personnummer för ROT-kunder och markera omvänd skattskyldighet vid B2B-försäljning i byggsektorn. Poängen är enkel: gör det snabbt och korrekt att fakturera löpande genom projektet, så att betalningsplanen faktiskt följs i stället för att glömmas bort. ByggExp beslutar inte om skatt eller ROT åt dig — det gör Skatteverket — men verktyget minskar risken för de vanliga felen på à conto-fakturor.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får man fakturera à conto i entreprenad?</h3>
+<p>Ja. Det vanligaste upplägget i entreprenad är en betalningsplan med delbetalning efter utfört arbete och slutavräkning vid godkänd slutbesiktning. Enligt AB 04/ABT 06 kap 6 ska arbete som anges på en faktura vara utfört, och betalning ska ske inom 30 dagar om inget annat avtalats. Finns en skriftlig betalningsplan slipper du dessutom huvudregeln om 10 % innehållen ersättning.</p>
+<h3>När redovisas momsen på à conto?</h3>
+<p>För à conto och förskott ska den utgående momsen redovisas för den period då betalningen tas emot — även om fakturan utfärdats ett annat beskattningsår. Det skiljer sig från fakturadatummetoden som annars gäller för byggtjänster. Säljer du till ett annat byggföretag gäller omvänd byggmoms, och då lägger du ingen moms alls på fakturan.</p>
+<h3>Kan man kombinera à conto med ROT-avdrag?</h3>
+<p>Ja. ROT-avdraget kan appliceras på à conto-fakturor till privatpersoner. 2026 är avdraget 30 % av arbetskostnaden, med tak på 50 000 kr per person och år. Ange kundens personnummer på fakturan och begär utbetalningen från Skatteverket, normalt efter att fakturan är betald. Bara arbetskostnaden ger avdrag — inte material.</p>
+
+<h2>Kom igång</h2>
+<p>À conto-fakturering vänder 60 dagars betaltid från en likviditetsrisk till ett förutsägbart kassaflöde — förutsatt att du sätter en genomtänkt betalningsplan och fakturerar löpande. Börja med <a href="/sv/verktyg/faktura-mall">vår fakturamall</a> och sätt upp dina delposter redan i dag. Vill du se hur ByggExp kan effektivisera hela flödet från tidrapport till faktura? <a href="/sv/contact">Boka en demo här.</a></p>
+
+<p>Relaterat: <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a>, <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på fakturor i bygg</a> och <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a>.</p>
+`;
+
+const A_A_CONTO_FAKTURERING_BYGG: BlogPost = {
+  _id: "code-"+"a-conto-fakturering-bygg",
+  title: "À conto-fakturering i bygg: så frigör du kapital när betaltiden är 60 dagar", slug: "a-conto-fakturering-bygg", locale: "sv",
+  excerpt: "À conto-fakturering vänder 60 dagars betaltid från en likviditetsrisk till förutsägbart kassaflöde — så gör du i praktiken med rätt betalningsplan, moms och ROT.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/8fakturor.webp", contentHtml: A_A_CONTO_FAKTURERING_BYGG_HTML,
+  seoTitle: "À conto-fakturering i bygg | ByggExp", seoDescription: "Så använder du à conto och betalningsplan för att frigöra kapital när B2B-betaltiden är 60 dagar. Regler i AB 04/ABT 06, moms och ROT förklarat.",
+  seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:03:00.000Z", createdAt: "2026-08-18T18:03:00.000Z", updatedAt: "2026-08-18T18:03:00.000Z",
+};
+
+const A_ENTREPRENORSANSVAR_LON_HTML = `
+<p>Du har handlat upp en underentreprenör i god tro, jobbet är utfört och fakturan betald. Sedan går UE:et i konkurs – eller struntar helt enkelt i att betala sina anställda. Plötsligt står montörernas löner obetalda, och kravet landar inte hos deras arbetsgivare utan hos <em>dig</em>, som anlitat kedjan. Det är kärnan i entreprenörsansvaret för lönefordringar. I den här guiden går vi igenom hur lagen fungerar, hur ansvaret vandrar uppåt i entreprenörskedjan och den avgörande 7-dagarsfristen som avgör om du blir betalningsskyldig.</p>
+
+<p>Har du ordning på avtal och ÄTA-hantering i UE-ledet står du starkare den dag ett krav dyker upp – börja med vår gratis <a href="/sv/verktyg/ata-mall">ÄTA-mall</a> för att hålla dokumentationen på plats.</p>
+
+<h2>Vad är entreprenörsansvar för lönefordringar?</h2>
+<p>Reglerna finns i <strong>Lag (2018:1472) om entreprenörsansvar för lönefordringar</strong>, som trädde i kraft den 1 januari 2019. Bakgrunden är EU:s utstationeringsdirektiv från 2014, som ålägger medlemsstaterna att skydda arbetstagare i byggsektorn mot oseriösa arbetsgivare längre ner i kedjan.</p>
+<p>Lagen gäller <strong>bygg- och anläggningsverksamhet</strong> i Sverige – uppförande, iståndsättning, underhåll, ombyggnad eller rivning. Poängen är enkel: en arbetstagare som inte får sin lön av sin egen arbetsgivare ska kunna vända sig uppåt i entreprenörskedjan och få betalt av någon som är solvent. För dig som huvudentreprenör betyder det att du kan tvingas betala för löner du aldrig avtalat om, till personer du kanske aldrig träffat.</p>
+
+<h2>Kedjan – vem ansvarar för vad?</h2>
+<p>Ansvaret är uppbyggt i två steg och följer entreprenörskedjan uppåt:</p>
+<ol>
+<li><strong>Arbetsgivaren</strong> – den som anställt arbetstagaren och i första hand ska betala lönen.</li>
+<li><strong>Uppdragsgivaren</strong> – den entreprenör som anlitat arbetsgivaren som underentreprenör (§3). Hit vänder sig arbetstagaren i första hand om lönen uteblir.</li>
+<li><strong>Huvudentreprenören</strong> – entreprenören närmast byggherren/beställaren. Denne har ett subsidiärt ansvar i andra hand om uppdragsgivaren inte betalar.</li>
+</ol>
+<p>Ett konkret exempel: Byggherren anlitar <strong>Huvud Bygg AB</strong> (huvudentreprenör). Huvud Bygg anlitar <strong>Mellan Montage AB</strong> (uppdragsgivare), som i sin tur anlitar <strong>Golv &amp; Spackel AB</strong> (arbetsgivare). Golvarna på Golv &amp; Spackel får ingen lön. De vänder sig först till Mellan Montage. Betalar inte Mellan Montage kan kravet gå vidare till Huvud Bygg – längst upp i kedjan. Ansvaret hoppar alltså inte över mellanledet direkt, men det landar till slut hos den som toppar kedjan.</p>
+
+<h2>7-dagarsfristen och de andra tidsgränserna</h2>
+<p>Hela systemet styrs av tidsfrister räknade i <strong>helgfria vardagar</strong> – inte kalenderdagar. Det är viktigt att hålla isär:</p>
+<ul>
+<li><strong>7 helgfria vardagar (§10):</strong> Uppdragsgivarens betalningsansvar inträder sju helgfria vardagar efter att uppdragsgivaren fått en skriftlig underrättelse om lönefordran. Detta är den centrala 7-dagarsfristen.</li>
+<li><strong>14 helgfria vardagar (§8):</strong> Huvudentreprenörens subsidiära ansvar inträder om uppdragsgivaren inte betalat inom fjorton helgfria vardagar från det att uppdragsgivaren fått underrättelsen.</li>
+<li><strong>5 helgfria vardagar (§18):</strong> Informationsplikten. En entreprenör måste senast fem helgfria vardagar efter en skriftlig begäran lämna ut kontaktuppgifter m.m. till en arbetstagare eller arbetstagarorganisation som efterfrågar dem.</li>
+<li><strong>Tremånadersgränsen (§14):</strong> Ansvaret omfattar inte lönefordringar som förfallit till betalning mer än tre månader före det att den ansvarige fick underrättelsen. Gamla lönekrav faller alltså utanför.</li>
+</ul>
+<p>Att fristerna räknas i helgfria vardagar gör att en verklig ledtid ofta blir längre än siffran antyder – men det innebär också att du måste agera direkt när en underrättelse dyker upp. Ligg inte på den.</p>
+
+<h2>Så går ett krav till i praktiken</h2>
+<p>Kravet inleds med en <strong>skriftlig underrättelse</strong> om lönefordran. Den ska enligt §11–12 innehålla:</p>
+<ul>
+<li>Arbetstagarens namn</li>
+<li>Lönebeloppet</li>
+<li>Arbetsperioden fordran avser</li>
+<li>Betalningsuppgifter</li>
+</ul>
+<p>Underrättelsens innehåll sätter ramen för vad du kan bli skyldig att betala – ansvaret styrs av vad som faktiskt står i den. Du är inte rättslös: du får framställa <strong>samma invändningar mot kravet som arbetsgivaren själv hade kunnat göra</strong>. Är lönen redan betald, är beloppet fel eller avser fordran en period utanför tremånadersgränsen, kan du invända mot det. Tvister prövas enligt reglerna om arbetstvister (lag 1974:371), §20.</p>
+
+<h2>Regressrätt – kan du få tillbaka pengarna?</h2>
+<p>Betalar du som huvudentreprenör en annans lön har du <strong>regressrätt</strong> mot både arbetsgivaren och uppdragsgivaren. Du kan alltså kräva tillbaka det utlagda beloppet. Problemet i praktiken är förstås att den som inte betalade lönen ofta är på obestånd – regressrätten är bara värd något om det finns pengar att hämta.</p>
+<p>Ett handgripligt råd: en huvudentreprenör som blivit underrättad bör inom <strong>sju helgfria vardagar</strong> skriftligen meddela uppdragsgivaren om kravet, för att behålla regressmöjligheten mot denne. Missar du det steget kan du gå miste om rätten att kräva tillbaka pengarna från mellanledet. Ha en fast rutin för det.</p>
+
+<h2>Byggavtalet gäller före lagen</h2>
+<p>Är ditt företag bundet av <strong>Byggavtalet</strong> (Byggföretagen–Byggnads) gäller kollektivavtalets huvudentreprenörsansvar enligt <strong>Bilaga D</strong> i stället för lagen. Byggavtalets modell fredades när lagen infördes, och kan sträcka sig längre eller vara striktare än lagens tvåstegsmodell. Med andra ord: för många seriösa byggföretag är det kollektivavtalet – inte lagen – som styr det faktiska ansvaret. Kontrollera därför alltid vilket regelverk som gäller för just ert projekt innan ni bedömer er exponering.</p>
+
+<h2>Så skyddar du dig som huvudentreprenör</h2>
+<p>Ansvaret går inte att avtala bort, men risken går att minska rejält genom kontroll i UE-ledet. Checklista innan och under uppdraget:</p>
+<ul>
+<li>Kontrollera underentreprenören <strong>innan avtal</strong>: kollektivavtal, giltig F-skatt, registrering för moms och arbetsgivaravgifter.</li>
+<li>Kräv <strong>ID06</strong> och håll koll på vilka som faktiskt jobbar på arbetsplatsen.</li>
+<li>Teckna <strong>skriftliga avtal</strong> med varje led och dokumentera hela kedjan – vem har anlitat vem.</li>
+<li>Håll <strong>kedjan kort</strong>. Ju fler led under dig, desto större risk att en oseriös aktör smyger in.</li>
+<li>Ha en <strong>rutin för underrättelser</strong> så att en inkommen skriftlig begäran hanteras inom fristen och inte blir liggande.</li>
+<li>Dokumentera ÄTA, tidrapporter och avtal löpande så att du snabbt kan bemöta ett krav med rätt underlag.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte juridisk rådgivning, men gör grundarbetet enklare. Med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a> håller du ordning på ändrings- och tilläggsarbeten mot varje UE, så att avtalskedjan är dokumenterad och spårbar. Samlad projekt- och tidrapporteringsdata gör att du snabbt kan ta fram underlag om ett lönekrav skulle dyka upp – och veta vilka som faktiskt arbetat, när och åt vem. Kort sagt: bättre dokumentation i UE-ledet gör dig snabbare och tryggare den dag en underrättelse landar på bordet.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag betala även om jag redan betalat UE:et fullt ut?</h3>
+<p>Ja, entreprenörsansvaret är fristående från din betalning till underentreprenören. Att du betalat fakturan skyddar dig inte mot arbetstagarens lönekrav. Däremot har du regressrätt och kan kräva tillbaka beloppet av arbetsgivaren och uppdragsgivaren – förutsatt att det finns pengar att hämta.</p>
+<h3>Vad räknas som helgfria vardagar?</h3>
+<p>Helgfria vardagar är måndag till fredag exklusive helgdagar. Lördagar, söndagar och röda dagar räknas inte in i fristerna på 5, 7 och 14 dagar. Det innebär att den faktiska kalendertiden ofta blir längre än siffran, men du bör ändå agera omgående när en underrättelse kommer in.</p>
+<h3>Kan jag bli ansvarig för gamla lönekrav?</h3>
+<p>Nej. Enligt tremånadersgränsen (§14) omfattar ansvaret inte lönefordringar som förfallit till betalning mer än tre månader innan du fick underrättelsen. Krav som avser äldre perioder faller utanför ditt ansvar.</p>
+<h3>Gäller lagen eller kollektivavtalet för mitt företag?</h3>
+<p>Är ni bundna av Byggavtalet gäller kollektivavtalets huvudentreprenörsansvar (Bilaga D) i stället för Lag (2018:1472), och det kan vara striktare. Är ni inte kollektivavtalsbundna gäller lagens tvåstegsmodell. Kontrollera vilket regelverk som styr innan ni bedömer er risk i ett projekt.</p>
+
+<h2>Kom igång</h2>
+<p>Ansvaret följer med den som toppar entreprenörskedjan – och koll på UE-ledet är alltid billigare än att betala andras löner. Börja med att strukturera avtal och ändringsarbeten med vår <a href="/sv/verktyg/ata-mall">ÄTA-mall</a>, och boka en <a href="/sv/contact">demo</a> så visar vi hur du får ordning på dokumentationen i hela kedjan.</p>
+
+<p>Relaterat: <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag</a> och <a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a>.</p>
+`;
+
+const A_ENTREPRENORSANSVAR_LON: BlogPost = {
+  _id: "code-"+"entreprenorsansvar-lon",
+  title: "Entreprenörsansvar för lön – när huvudentreprenören betalar UE:s löner", slug: "entreprenorsansvar-lon", locale: "sv",
+  excerpt: "När en underentreprenör struntar i lönerna kan kravet landa hos dig som toppar kedjan – så fungerar entreprenörsansvaret och den avgörande 7-dagarsfristen.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_ENTREPRENORSANSVAR_LON_HTML,
+  seoTitle: "Entreprenörsansvar lön | ByggExp", seoDescription: "Går din underentreprenör i konkurs kan lönekravet landa hos dig. Så fungerar kedjan, 7-dagarsfristen och hur du skyddar dig som huvudentreprenör.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:06:00.000Z", createdAt: "2026-08-18T18:06:00.000Z", updatedAt: "2026-08-18T18:06:00.000Z",
+};
+
+const A_FAST_PRIS_ELLER_LOPANDE_RAKNING_HTML = `
+<p>Valet mellan fast pris och löpande räkning är inte en fråga om smak – det avgör vem som bär risken när jobbet drar iväg, och hur lätt du får betalt för det som tillkommer. Väljer du fel modell för fel projekt sitter du antingen med en fördyring du inte får ersättning för, eller en faktura kunden bestrider. Den här guiden ger dig ett konkret sätt att välja, och en rutin för att fakturera ÄTA separat utan att hamna i tvist.</p>
+
+<p>Grunden i allt är ett tydligt avtal och en offert som anger prismodellen svart på vitt. Börja där – bygg din offert i <a href="/sv/verktyg/offert-mall">vår gratis offertmall →</a> så att ersättningsform, arvode och à-priser står skrivna redan innan spaden är i marken.</p>
+
+<h2>De två prismodellerna i praktiken</h2>
+
+<p><strong>Fast pris</strong> innebär att du lämnar ett förutbestämt totalbelopp för ett avtalat arbete. Blir det dyrare än du räknat bär du fördyringsrisken själv – kunden får förutsägbarhet, du får risken. Det passar när omfattningen är tydlig och du kan kalkylera mängder och tid med säkerhet.</p>
+
+<p><strong>Löpande räkning</strong> innebär att du får betalt för verifierade självkostnader plus ett avtalat entreprenörarvode – ett procentuellt påslag. Här bär beställaren mängd- och tidsrisken. Du får betalt för det arbete som faktiskt utförs, förutsatt att du kan styrka kostnaderna.</p>
+
+<p>Skillnaden i praktiken:</p>
+
+<ul>
+<li><strong>Risk:</strong> Fast pris – du bär fördyringen. Löpande räkning – kunden bär mängdrisken.</li>
+<li><strong>Kassaflöde:</strong> Fast pris ger ofta betalning mot betalplan/etapper. Löpande räkning faktureras efterhand mot redovisad tid och material.</li>
+<li><strong>Dokumentation:</strong> Fast pris kräver mindre löpande verifiering. Löpande räkning kräver att varje krona kan styrkas.</li>
+</ul>
+
+<h2>Självkostnadsprincipen som default</h2>
+
+<p>Vid osäker omfattning är löpande räkning nästan alltid tryggast för dig som utförare. Modellen vilar på självkostnadsprincipen enligt AB 04 kap 6 §9 (motsvarande i ABT 06): du ersätts för verifierade självkostnader plus ett entreprenörarvode enligt 6:9 p. 8. Vad du får betalt för är i huvudsak arbetstid, material, underentreprenörer och maskiner – och ovanpå det ett procentuellt arvode. Det finns ingen lagstadgad procentsats; nivån avtalas och varierar med projektets komplexitet och risk. Skriv den siffran i offerten.</p>
+
+<p>Baksidan av tryggheten är dokumentationsskyldigheten. Vid löpande räkning ska samtliga självkostnader kunna styrkas – tid, material och UE. Undantaget är det som täcks av det avtalade procentuella arvodet. Bristande redovisning är en av de vanligaste grunderna för att en beställare bestrider fakturan eller kräver pengar tillbaka. Regeln är enkel: ingen redovisning, ingen betalning. Logga tid löpande, spara underlag och specificera – varje dag, inte i efterhand.</p>
+
+<p>Behöver du sätta en trovärdig timkostnad som täcker dina verkliga kostnader kan du räkna baklänges i <a href="/sv/verktyg/timpris-kalkylator">vår timpris-kalkylator →</a> innan du avtalar arvode och à-priser.</p>
+
+<h2>Så väljer du prismodell – beslutsguide</h2>
+
+<ul>
+<li><strong>Välj fast pris</strong> när omfattningen är väl definierad, ritningar och mängder är klara, och kunden efterfrågar förutsägbarhet. Se bara till att din kalkyl har marginal – fördyringen är din.</li>
+<li><strong>Välj löpande räkning</strong> när omfattningen är osäker: rivning, äldre hus, badrum där du inte vet vad som göms bakom kaklet, eller arbeten där dolda fel är sannolika.</li>
+<li><strong>Mellanläge:</strong> takpris (löpande räkning med ett tak) eller en ungefärlig prisuppgift. Här lurar 15 %-fällan mot konsument – mer om den nedan.</li>
+</ul>
+
+<h2>Regelverket du inte får missa mot konsument</h2>
+
+<p>Jobbar du mot privatperson gäller konsumenttjänstlagen (1985:716), och den sätter ramar du måste känna till.</p>
+
+<p><strong>§36 – skäligt pris och 15 %-regeln.</strong> Har ni inte avtalat pris ska konsumenten betala vad som är skäligt med hänsyn till arbetets art och gängse pris. Har du lämnat en <em>ungefärlig prisuppgift</em> får den inte överskridas med mer än 15 %, om ni inte avtalat en annan gräns eller du har rätt till pristillägg enligt §38. Räkneexempel: en ungefärlig prisuppgift på 100 000 kr får sluta på högst 115 000 kr. Vill du ta mer måste merkostnaden ha stöd i tilläggsarbete eller ÄTA enligt §38.</p>
+
+<p><strong>§40 – specificerad räkning.</strong> På konsumentens begäran ska du ställa ut en specificerad, kostnadsfri räkning. Är arbetet inte utfört till fast pris <em>måste</em> räkningen visa hur priset beräknats – timmar, à-pris och material. Vid fast pris behöver du inte visa kalkylen, men kunden har ändå rätt att se att avtalat arbete utförts.</p>
+
+<p><strong>§8 och §38 – tilläggsarbete.</strong> Innan du utför tilläggsarbete ska du underrätta konsumenten och begära anvisningar. Utan kontakt får du utföra det bara om priset är obetydligt i förhållande till det avtalade, eller om särskilda skäl talar för att kunden ändå vill ha det gjort.</p>
+
+<p>För konsumententreprenader använder du i praktiken Hantverkarformuläret 17 för mindre arbeten och ABS 18 för ny- och tillbyggnad av småhus. Det är branschgemensamma standardavtal framtagna av bland andra Konsumentverket, Villaägarna och Byggföretagen, och de reglerar pris, ÄTA och betalning på ett sätt som minskar tvistrisken.</p>
+
+<h2>ÄTA – fakturera ändringar separat utan tvist</h2>
+
+<p>ÄTA-arbeten (ändrings-, tilläggs- och avgående arbeten) förekommer även vid löpande räkning. Ersättningsformen anger bara <em>hur</em> entreprenaden ersätts, inte dess <em>omfattning</em>. ÄTA är ett av de vanligaste tvisteämnena i svensk entreprenadjuridik – under AB 04/ABT 06 ska ÄTA anmälas skriftligen utan dröjsmål, annars riskerar rätten till ersättning att falla bort och beställaren att bestrida fakturan. En muntligt godkänd ÄTA som inte dokumenterats räknas i praktiken som tvistig.</p>
+
+<p>Checklista som håller ÄTA tvistfri:</p>
+
+<ol>
+<li>Anmäl skriftligt utan dröjsmål – innan arbetet startar.</li>
+<li>Få skriftligt godkännande av kunden innan du sätter igång.</li>
+<li>Fakturera ÄTA på egen orderrad eller separat faktura, med hänvisning till aktuell beställning.</li>
+<li>Ange ersättningsform för just den posten: à-pris, löpande räkning eller fast pris.</li>
+</ol>
+
+<h2>ROT och fakturering 2026</h2>
+
+<p>ROT-avdraget är 2026 tillbaka på 30 % av arbetskostnaden, max 50 000 kr per person och år. Den tillfälliga höjningen till 50 % gällde bara 12 maj–31 december 2025 och förlängdes inte. Rot och rut delar ett gemensamt tak på 75 000 kr per person och år, varav rot får utgöra högst 50 000 kr.</p>
+
+<p>Praktiskt betyder det: håll koll på kundens årstak, särskilt vid löpande räkning där slutsumman inte är känd på förhand. Separera alltid arbetskostnad från material på fakturan – ROT beräknas bara på arbetet. En separat ÄTA-faktura gör dessutom ROT-administrationen enklare eftersom arbetskostnaden hålls isär.</p>
+
+<h2>Så gör du i ByggExp</h2>
+
+<p>ByggExp hjälper dig sätta upp rutinen en gång och sedan följa den. Du skriver offert med vald prismodell, avtalat arvode och à-priser i <a href="/sv/verktyg/offert-mall">offertmallen</a>, räknar fram en hållbar timkostnad i <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a>, och dokumenterar varje ändring i <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a> så att godkännandet finns skriftligt innan arbetet börjar. Verktygen ersätter inte juridisk rådgivning eller standardavtalen, men de gör det enkelt att göra rätt: prismodell i avtalet, tid loggad löpande och ÄTA separerad från grunduppdraget.</p>
+
+<h2>Vanliga frågor</h2>
+
+<h3>Är löpande räkning dyrare för kunden?</h3>
+<p>Inte nödvändigtvis. Vid fast pris lägger du in en riskmarginal för att täcka fördyringar du inte kan förutse. Vid löpande räkning betalar kunden bara för det som faktiskt utförs plus ditt arvode. Vid osäker omfattning blir löpande ofta rättvisare för båda parter – men kräver att du redovisar varje kostnad.</p>
+
+<h3>Måste jag lämna fast pris om kunden kräver det?</h3>
+<p>Nej. Prismodellen är en avtalsfråga ni kommer överens om. Är omfattningen osäker kan du föreslå löpande räkning med ett takpris, så får kunden ett tak att förhålla sig till utan att du tvingas bära hela fördyringsrisken.</p>
+
+<h3>Vad händer om jag glömmer anmäla en ÄTA?</h3>
+<p>Under AB 04/ABT 06 ska ÄTA anmälas skriftligen utan dröjsmål. Anmäler du för sent riskerar rätten till ersättning att falla bort eller preskriberas, och beställaren kan bestrida fakturan. En muntlig överenskommelse som inte dokumenterats räknas i praktiken som tvistig – därför ska godkännandet alltid vara skriftligt före start.</p>
+
+<h3>Får jag överskrida offerten?</h3>
+<p>Mot konsument får en ungefärlig prisuppgift överskridas med högst 15 % om ni inte avtalat annat, enligt konsumenttjänstlagen §36. Utöver det krävs stöd i tilläggsarbete eller pristillägg enligt §38. Ett avtalat fast pris ligger fast om det inte handlar om godkänd ÄTA.</p>
+
+<h2>Kom igång</h2>
+
+<p>Sammanfattningen är enkel: välj löpande räkning som default när omfattningen är osäker, dokumentera allt löpande och håll ÄTA separat och skriftligt. Sätt upp rutinen med <a href="/sv/verktyg/offert-mall">offertmallen</a> och <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a>, eller <a href="/sv/contact">boka en demo →</a> så visar vi hur du får hela flödet från offert till ÄTA-faktura på plats.</p>
+
+<p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten – så anmäler och fakturerar du rätt</a> och <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a>.</p>
+`;
+
+const A_FAST_PRIS_ELLER_LOPANDE_RAKNING: BlogPost = {
+  _id: "code-"+"fast-pris-eller-lopande-rakning",
+  title: "Fast pris eller löpande räkning – så väljer du rätt prismodell (och slipper ÄTA-tvisten)", slug: "fast-pris-eller-lopande-rakning", locale: "sv",
+  excerpt: "Prismodellen avgör vem som bär risken och hur lätt du får betalt för ändringar – här är beslutsguiden och rutinen som håller ÄTA separat och tvistfri.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_FAST_PRIS_ELLER_LOPANDE_RAKNING_HTML,
+  seoTitle: "Fast pris eller löpande räkning | ByggExp", seoDescription: "Så väljer du prismodell, fakturerar ÄTA separat utan tvist och använder självkostnadsprincipen som default. Beslutsguide för hantverkare och byggföretag.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:09:00.000Z", createdAt: "2026-08-18T18:09:00.000Z", updatedAt: "2026-08-18T18:09:00.000Z",
+};
+
+const A_TACKNINGSBIDRAG_BYGGFORETAG_HTML = `
+<p>Du har fullbokat i veckor, säger nej till jobb och kör kvällar för att hinna klart. Ändå är det tunt på kontot när momsen och lönerna dragits. För de allra flesta byggföretag är det inte ett arbetsfel – det är ett prissättningsfel. Och nästan alltid handlar det om samma sak: att påslag och marginal blandas ihop. Två procenttal som mäter samma vinst, men mot helt olika baser.</p>
+
+<p>Vill du sluta gissa och se skillnaden i kronor på ditt eget jobb? Räkna om påslag till marginal och baklänges med <a href="/sv/verktyg/paslag-marginal-kalkylator">vår gratis påslag- och marginalkalkylator -></a></p>
+
+<h2>Två procenttal, en vinst – vad påslag och marginal faktiskt mäter</h2>
+<p>Påslag och marginal beskriver samma vinst, men de räknas mot olika tal. <strong>Påslag (pålägg)</strong> räknas på inköps- eller självkostnaden: vinst delat på kostnad. Det är hur mycket du lägger ovanpå det du betalade. <strong>Marginal</strong> räknas på försäljningspriset: vinst delat på priset. Det är hur stor andel av det kunden betalar som faktiskt blir vinst.</p>
+<p>Eftersom priset alltid är högre än kostnaden delar de två talen med olika stora nämnare. Följden är enkel men viktig: <strong>marginalprocenten är alltid lägre än påläggsprocenten</strong> för samma affär. Tror du att ett påslag på 25 procent betyder 25 procent i vinst av priset, har du redan räknat fel.</p>
+
+<h2>Exakt felet: att blanda ihop baserna</h2>
+<p>Ta ett konkret exempel. Du köper material för 400 kr och säljer det för 1 000 kr. Påslaget är 150 procent (600 kr vinst på 400 kr inköp), men marginalen är bara 60 procent (600 kr av 1 000 kr). Samma affär, två helt olika procenttal.</p>
+<p>Ett mindre men vanligare fall: du köper för 200 kr och \\"lägger på 50 procent\\". Priset blir 300 kr, vinsten 100 kr. Det är 50 procent i påslag – men bara 33,3 procent i marginal. Den som säger \\"jag lägger på 20 procent\\" och tror att 20 procent av fakturan är vinst har i själva verket cirka 17 procent marginal. På ett enskilt jobb känns skillnaden liten. På ett år, över hundratals fakturor, är det där pengarna försvinner.</p>
+
+<h2>Formlerna du behöver (och en snabbtabell)</h2>
+<p>Du behöver egentligen bara två formler för att aldrig råka fel igen:</p>
+<ul>
+<li><strong>Marginal = påslag ÷ (1 + påslag)</strong></li>
+<li><strong>Påslag = marginal ÷ (1 − marginal)</strong></li>
+</ul>
+<p>Och den viktigaste av alla när du sätter timpris: <strong>Timpris = självkostnad ÷ (1 − önskad marginal)</strong>. Att dividera med (1 − marginal) ger rätt pris. Att i stället multiplicera med (1 + marginal) ger ett för lågt pris – det är själva kärnfelet i tusentals offerter.</p>
+<p>En omvandlingstabell att fästa på väggen:</p>
+<ul>
+<li>15 % påslag = 13 % marginal</li>
+<li>20 % påslag = 17 % marginal</li>
+<li>25 % påslag = 20 % marginal</li>
+<li>30 % påslag = 23 % marginal</li>
+<li>50 % påslag = 33 % marginal</li>
+</ul>
+<p>Och åt andra hållet: vill du ha 40 procent marginal krävs 66,7 procent påslag. Marginalmålet är alltid brantare att nå än det ser ut.</p>
+
+<h2>Från påslag till täckningsbidrag – kopplingen som ger lönsamhet</h2>
+<p>Påslaget är verktyget. <strong>Täckningsbidraget (TB)</strong> är resultatet du är ute efter. TB är försäljningspriset minus de rörliga kostnaderna (särkostnaderna) för jobbet, uttryckt i kronor. <strong>Täckningsgraden (TG)</strong> är samma sak i procent: TB delat på försäljningspriset.</p>
+<p>Poängen är att TB inte är din vinst. Täckningsbidraget ska först betala företagets fasta, gemensamma kostnader – lokal, bil, försäkringar, admin, all icke debiterbar tid – och det som blir kvar därefter är vinst. Sätter du påslaget för lågt räcker TB inte ens till samkostnaderna, och då jobbar du med förlust på fullbokad kalender. Att räkna i marginal och TG i stället för i löst tyckta påslag är det som gör lönsamheten synlig innan du skickar offerten.</p>
+
+<h2>Byggföretagets självkostnad 2026 – räkna på rätt siffror</h2>
+<p>Rätt marginal på fel självkostnad ger ändå fel pris. Bygg självkostnaden underifrån med 2026 års siffror:</p>
+<ul>
+<li><strong>Grundlön yrkesarbetare:</strong> 203 kr/tim enligt Byggavtalet från 1 maj 2026, motsvarande 35 322 kr/månad. Det är golvet.</li>
+<li><strong>Arbetsgivaravgift:</strong> full avgift 31,42 procent ovanpå bruttolönen. Den är obligatorisk och måste ligga i självkostnaden innan du gör något påslag.</li>
+<li><strong>Övriga omkostnader:</strong> försäkring, verktyg, transport, arbetskläder, admin.</li>
+</ul>
+<p>Det avgörande steget är att dela på <strong>debiterbara timmar</strong>, inte alla arbetstimmar. Restid, offertskrivning, inköp och garantibesök betalar ingen kund direkt. Just därför landar ett rimligt timpris ofta på 3–4 gånger yrkesarbetarens bruttolön, och marknaden 2026 ligger runt 560–1 200 kr/tim beroende på yrke. Trots det höga timpriset är den verkliga vinstmarginalen i praktiken ofta bara 10–15 procent – vilket visar hur lite utrymme det finns att räkna slarvigt.</p>
+
+<h2>Material vs arbete – när påslag är rätt och när marginal är rätt</h2>
+<p>Här sker en av branschens vanligaste sammanblandningar. De två delarna av en offert ska prissättas mot olika baser:</p>
+<ul>
+<li><strong>Material:</strong> ett påslag på 10–15 procent på inköpspriset är branschstandard och rätt bas. Det ska täcka tid för inköp, logistik, lagerhållning och garantiansvar. Påslag på inköp är helt korrekt här.</li>
+<li><strong>Arbete:</strong> prissätts mot marginal av priset, eftersom timpriset ska bära en känd självkostnad plus vinst.</li>
+</ul>
+<p>Använder du samma logik rakt av på båda – till exempel \\"20 procent på allt\\" och tror det ger 20 procent vinst – underprissätter du systematiskt arbetet, som är den största posten i de flesta byggjobb.</p>
+
+<h2>Så sätter du priset baklänges från önskad marginal</h2>
+<p>Räkna alltid framåt från kostnaden och kontrollera i marginal. Ett exempel: självkostnaden för ett jobb är 60 000 kr (lön, avgifter, omkostnader, material). Du vill ha 25 procent marginal.</p>
+<ol>
+<li>Bestäm självkostnaden: 60 000 kr.</li>
+<li>Bestäm mål-marginalen: 25 procent.</li>
+<li>Dela med (1 − marginal): 60 000 ÷ 0,75 = <strong>80 000 kr</strong>.</li>
+</ol>
+<p>Hade du i stället multiplicerat 60 000 × 1,25 hade priset blivit 75 000 kr – och marginalen bara 20 procent, inte 25. En skillnad på 5 000 kr på ett enda jobb, i fel riktning. Kontrollräkna därför alltid den färdiga offerten i marginal (vinst ÷ pris), inte i påslag.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp tar inte bort räknandet – men gör det svårt att råka räkna fel. I offertmallen bygger du upp jobbet post för post med arbete och material var för sig, så att arbetet kan prissättas mot marginal och materialet mot påslag utan att baserna blandas ihop. Du ser täckningsbidraget i kronor och täckningsgraden i procent innan offerten går iväg, vilket gör det tydligt om ett jobb faktiskt bär sina kostnader. Kombinera det med kalkylatorn för att snabbt växla mellan påslag och marginal, så vet du att siffran i offerten betyder det du tror att den betyder.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan påslag och marginal?</h3>
+<p>Påslag räknas på inköps- eller självkostnaden (vinst ÷ kostnad) och marginal räknas på försäljningspriset (vinst ÷ pris). De beskriver samma vinst men mot olika baser, och eftersom priset alltid är högre än kostnaden är marginalen alltid lägre än påslaget. 25 procent påslag motsvarar till exempel 20 procent marginal.</p>
+<h3>Vad är täckningsbidrag för ett byggföretag?</h3>
+<p>Täckningsbidrag (TB) är försäljningspriset minus de rörliga kostnaderna för jobbet, uttryckt i kronor. TB ska först täcka företagets fasta kostnader – lokal, bil, försäkring, admin och icke debiterbar tid – och det som blir kvar därefter är vinst. Täckningsgrad (TG) är samma sak i procent av priset.</p>
+<h3>Hur räknar jag ut rätt timpris?</h3>
+<p>Bygg först självkostnaden: lön (203 kr/tim enligt Byggavtalet 2026), plus 31,42 procent arbetsgivaravgift, plus omkostnader, delat på antalet debiterbara timmar. Sätt sedan priset med formeln självkostnad ÷ (1 − önskad marginal). Dividera – multiplicera inte med (1 + marginal), då blir priset för lågt.</p>
+<h3>Vilket materialpåslag är rimligt?</h3>
+<p>Ett påslag på 10–15 procent på inköpspriset är branschstandard och ska täcka tid för inköp, logistik, lager och garantiansvar. Materialet prissätts alltså mot inköp (påslag), medan arbetet prissätts mot pris (marginal) – två olika baser som inte bör blandas ihop.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att räkna om dina egna påslag till verkliga marginaler i <a href="/sv/verktyg/paslag-marginal-kalkylator">påslag- och marginalkalkylatorn</a>, och bygg nästa jobb i <a href="/sv/verktyg/offert-mall">offertmallen</a> med arbete och material var för sig. Vill du se hur täckningsbidraget räknas ut automatiskt på dina offerter, <a href="/sv/contact">boka en demo</a> så visar vi.</p>
+<p>Relaterat: <a href="/sv/blog/timpris-hantverkare">Så sätter du rätt timpris som hantverkare</a> och <a href="/sv/blog/paslag-pa-material">Påslag på material – vad som är rimligt och varför</a>.</p>
+`;
+
+const A_TACKNINGSBIDRAG_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"tackningsbidrag-byggforetag",
+  title: "Täckningsbidrag för byggföretag: därför gör påslag/marginal-felet dig fattig på fullbokade dagar", slug: "tackningsbidrag-byggforetag", locale: "sv",
+  excerpt: "Hantverkaren med fullbokad kalender och tomt konto har nästan alltid ett prissättningsfel – inte ett arbetsfel – och det bottnar i skillnaden mellan påslag och marginal.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_TACKNINGSBIDRAG_BYGGFORETAG_HTML,
+  seoTitle: "Täckningsbidrag byggföretag | ByggExp", seoDescription: "Påslag på inköp, marginal på pris – blandar du ihop dem tappar du pengar på varje offert. Så räknar byggföretag rätt på täckningsbidrag 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:12:00.000Z", createdAt: "2026-08-18T18:12:00.000Z", updatedAt: "2026-08-18T18:12:00.000Z",
+};
+
+const A_REKLAMATION_HANTVERKSTJANST_FRISTER_HTML = `
+<p>Varje firma får förr eller senare en reklamation. Skillnaden mellan en billig eftermiddags omjobb och en dyr, utdragen tvist ligger nästan alltid i om du kan reglerna eller inte. En kund som ringer och är missnöjd är inte automatiskt ett förlorat ärende – tvärtom har du starkare rättigheter än de flesta hantverkare tror. Efter den här artikeln kan du de tre fristerna kunden är bunden av, och exakt hur du behåller rätten att själv rätta felet i stället för att betala för en annan firmas arbete.</p>
+
+<p>Ett tydligt underlag för det avtalade arbetet gör reklamationer lättare att bemöta – börja med <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall &rarr;</a> så att det alltid går att visa vad som faktiskt beställts och utförts.</p>
+
+<h2>Rätt lag: konsumenttjänstlagen, inte konsumentköplagen</h2>
+<p>För arbete åt privatpersoner är det <strong>konsumenttjänstlagen (1985:716)</strong>, KtjL, som gäller – inte den nya konsumentköplagen (2022:260). Många blandar ihop dem eftersom köplagen fick nya regler 2022, men den styr varor och köp. Reglerna för tjänster är oförändrade. Reklamerar en kund din snickeri-, måleri- eller installationstjänst är det alltså KtjL:s fristregler som avgör, precis som tidigare.</p>
+<p>Ett fel i lagens mening föreligger när arbetet inte är fackmässigt utfört, avviker från vad ni avtalat eller från vad kunden med fog kunnat förvänta sig. Först när ett sådant fel finns – och kunden reklamerar det i rätt tid – aktualiseras påföljder.</p>
+
+<h2>De tre fristerna kunden har på sig</h2>
+<p>Kunden är inte fri att klaga hur länge som helst. Tre frister styr, och de arbetar delvis parallellt:</p>
+<ul>
+<li><strong>Tvåmånadersregeln:</strong> reklamerar kunden inom två månader efter att hen <em>märkt</em> felet, ska reklamationen alltid anses ha skett i rätt tid. Observera att fristen räknas från upptäckt – inte från när arbetet utfördes.</li>
+<li><strong>Den absoluta treårsfristen:</strong> reklamation får inte ske senare än tre år efter att uppdraget avslutades, oavsett när felet upptäcks.</li>
+<li><strong>Tioårsfristen:</strong> för arbete på mark, byggnader eller annan fast egendom är den yttersta fristen i stället tio år efter avslutat uppdrag. Har du dessutom handlat grovt vårdslöst eller i strid mot tro och heder gäller tio år oavsett tjänsttyp.</li>
+</ul>
+<p>Alla ytterfrister räknas från <strong>avslutat uppdrag</strong>. Därför är det avgörande att du kan bevisa när arbetet faktiskt slutfördes och överlämnades. En dokumenterad slutbesiktning eller ett kvitterat överlämningsprotokoll är det som senare avgör om en reklamation kom in innan klockan gått ut eller inte.</p>
+
+<h2>18 §: din starkaste sköld är sen reklamation</h2>
+<p>Om kunden hör av sig efter att fristen löpt ut förlorar hen rätten att åberopa felet. Det kallas preklusion och regleras i 18 § KtjL. En reklamation som kommer fyra år efter ett avslutat badrumsjobb på fast egendom kan fortfarande gå igenom (tioårsfristen), men ett omålat staket som klagas på efter fyra år gör det inte (treårsfristen har passerat).</p>
+<p>Det här är firmans mest värdefulla försvar mot sena krav – men det står och faller med bevisning. Kan du inte visa när uppdraget avslutades kan du heller inte visa att fristen gått ut. Dokumentationen är alltså inte byråkrati, den är din rättssäkerhet.</p>
+
+<h2>Avhjälpanderätten: din rätt att själv rätta felet</h2>
+<p>Kommer reklamationen in i rätt tid är nästa fråga vem som ska åtgärda felet. Här ger 20 § KtjL dig en rättighet många missar: <strong>du har rätt att avhjälpa felet själv</strong>, även om kunden inte kräver det. Det är nästan alltid det billigaste alternativet – du använder eget arbete och egna material i stället för att betala en konkurrents faktura plus prisavdrag.</p>
+<p>Villkoret är att du, efter att reklamationen kommit fram, <strong>utan uppskov</strong> erbjuder dig att åtgärda felet – och att kunden inte har särskilt skäl att avvisa erbjudandet. &quot;Utan uppskov&quot; tolkas i praktiken som i princip genast. Du får en kort, skälig tid att undersöka vad klagomålet gäller, men ett par veckors tystnad eller ett vagt besked som &quot;vi kommer nog om tre veckor&quot; utan ett konkret erbjudande kan innebära att du tappar rätten att avhjälpa. Då står du plötsligt inför prisavdrag i stället.</p>
+
+<h2>Så skriver du erbjudandet så att det håller</h2>
+<p>Snabbhet och skriftlighet är allt. Gör så här när en reklamation kommer in:</p>
+<ol>
+<li>Bekräfta reklamationen skriftligt samma eller nästa dag – e-post eller sms räcker, men det ska finnas svart på vitt.</li>
+<li>Erbjud <strong>uttryckligen</strong> att åtgärda felet. Skriv rakt ut att ni vill komma och rätta det, inte bara att ni &quot;ska titta på det&quot;.</li>
+<li>Föreslå en konkret tid inom skälig tid. Avhjälpandet ska ske utan kostnad för kunden.</li>
+<li>Spara all korrespondens tillsammans med avtal, ÄTA och slutdokumentation.</li>
+</ol>
+<p>Undvik samtidigt sådant som ger kunden &quot;särskilt skäl&quot; att neka dig avhjälpandet. Har du visat allvarlig inkompetens, varit störande eller ohederlig, eller på annat sätt åsidosatt kundens intressen så att förtroendet rimligen brustit, kan kunden med rätta säga nej och anlita någon annan. Ett professionellt, snabbt och sakligt bemötande är alltså i sig en del av ditt rättsskydd.</p>
+
+<h2>Vad händer om du missar avhjälpandet – påföljdstrappan</h2>
+<p>Påföljderna i KtjL är hierarkiska och kommer i ordning. Kunden kan inte hoppa direkt till prisavdrag eller hävning om du har och utövar din avhjälpanderätt. Ordningen är:</p>
+<ol>
+<li><strong>Avhjälpande</strong> (20 §) – du rättar felet.</li>
+<li><strong>Prisavdrag</strong> (21 §) – om avhjälpande inte sker. Avdraget motsvarar vad det kostar kunden att få felet åtgärdat.</li>
+<li><strong>Hävning</strong> (21 § 2 st) – om syftet med tjänsten i huvudsak är förfelat och du insett eller bort inse det. Vid hävning har du inte rätt till betalning för tjänsten.</li>
+<li><strong>Skadestånd</strong> – för kundens övriga förluster.</li>
+</ol>
+<p>Räkna på skillnaden. Att åtgärda en felmonterad list på en timme med eget material kostar dig kanske några hundralappar. Missar du avhjälpandet betalar du i stället en annan firmas fullpris <em>plus</em> ett prisavdrag – lätt tio gånger mer för samma fel.</p>
+
+<h2>Om kunden anlitar någon annan direkt</h2>
+<p>Låter kunden en annan firma rätta felet innan du fått chansen, riskerar hen att förlora rätten till ersättning för den kostnaden. Men – och det är viktigt – detta skyddar bara dig om du faktiskt erbjöd avhjälpande utan uppskov. Sitter du tyst i tre veckor och kunden under tiden tröttnar och ringer en konkurrent, står du svagt. Vänd därför regeln till en fast rutin: svara snabbt, alltid, skriftligt. Då är det kunden som tar risken om hen går förbi dig.</p>
+
+<h2>ARN och tvist</h2>
+<p>Blir ni oense prövas ärendet i första hand av Allmänna reklamationsnämnden (ARN). Det är gratis för kunden, och besluten är rekommendationer. Seriösa företag följer dem – gör man inte det riskerar man publicering och renomméskada. I ARN, precis som i domstol, avgör dokumentationen. Den som kan visa avtal, avslutsdatum, reklamationsdatum och ett snabbt avhjälpandeerbjudande har övertaget.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att bygga just den dokumentationskedja som fristerna kräver. Du håller avtal, ÄTA-tillägg och överlämning samlade per projekt, med tidsstämplar som visar när uppdraget avslutades – underlaget du behöver för att räkna frister och bevisa preklusion. När en reklamation kommer in har du hela historiken på ett ställe i stället för utspridd i mejl och sms. ByggExp fattar inga juridiska beslut åt dig, men gör det enkelt att svara snabbt och underbyggt – vilket i praktiken är det som skyddar avhjälpanderätten.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Från vilken tidpunkt räknas tvåmånadersfristen?</h3>
+<p>Från när kunden märkte, alltså upptäckte, felet – inte från när arbetet utfördes. En reklamation inom två månader från upptäckten anses alltid ha skett i rätt tid, så länge den yttersta fristen (3 eller 10 år) inte passerats.</p>
+<h3>Kan kunden kräva prisavdrag direkt utan att låta mig åtgärda?</h3>
+<p>Nej, inte om du utnyttjar din avhjälpanderätt. Erbjuder du dig att rätta felet utan uppskov och kunden saknar särskilt skäl att neka, ska avhjälpande ske först. Prisavdrag blir aktuellt först om avhjälpande inte kommer till stånd.</p>
+<h3>Vad betyder &quot;utan uppskov&quot; i praktiken?</h3>
+<p>I princip genast. Du får en kort, skälig tid att undersöka klagomålet, men bör bekräfta och erbjuda avhjälpande inom dagar, inte veckor. Passivitet eller vaga besked kan göra att du förlorar rätten att själv rätta felet.</p>
+<h3>Hur länge kan en kund reklamera arbete på ett hus?</h3>
+<p>För arbete på mark, byggnader eller annan fast egendom gäller en yttersta frist på tio år efter avslutat uppdrag. Samma tioårsfrist gäller alla tjänster om du handlat grovt vårdslöst eller i strid mot tro och heder.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att säkra ditt underlag. Med <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall</a> dokumenterar du vad som beställts och utförts, vilket gör varje framtida reklamation lättare att bemöta. Vill du se hur ByggExp håller ihop avtal, ÄTA och avslut per projekt? <a href="/sv/contact">Boka en demo &rarr;</a> så visar vi upplägget.</p>
+
+<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så dokumenterar du avslutat uppdrag</a>, <a href="/sv/blog/abs-18-hantverkarformularet-17">ABS 18 och Hantverkarformuläret 17</a>, <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a>.</p>
+`;
+
+const A_REKLAMATION_HANTVERKSTJANST_FRISTER: BlogPost = {
+  _id: "code-"+"reklamation-hantverkstjanst-frister",
+  title: "Reklamation av hantverkstjänst: fristerna din firma måste kunna – och hur du skyddar avhjälpanderätten", slug: "reklamation-hantverkstjanst-frister", locale: "sv",
+  excerpt: "Så fungerar reklamationsfristerna i konsumenttjänstlagen och hur du säkrar din rätt att själv rätta felet innan kunden anlitar någon annan.", tag: "Juridik",
+  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_REKLAMATION_HANTVERKSTJANST_FRISTER_HTML,
+  seoTitle: "Reklamation hantverkstjänst | ByggExp", seoDescription: "Lär dig de tre reklamationsfristerna (2 mån/3 år/10 år) enligt konsumenttjänstlagen och hur du behåller rätten att själv avhjälpa felet.",
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:15:00.000Z", createdAt: "2026-08-18T18:15:00.000Z", updatedAt: "2026-08-18T18:15:00.000Z",
+};
+
+const A_KONTROLLANSVARIG_NAR_BEHOVS_HTML = `
+<p>En av de första frågorna som dyker upp när ett bygglovsprojekt drar igång är om det behövs en kontrollansvarig (KA) – och vad det i så fall landar på i kostnad. Kort svar: KA krävs vid de flesta lov- och anmälningspliktiga åtgärder, och att anlita en kostar oftast mellan 10 000 och 50 000 kr beroende på projektets storlek. Som hantverkare eller byggföretag är det du som får förklara detta för kunden, så det lönar sig att ha svaren klara redan i offertskedet.</p>
+
+<p>Ett bra sätt att lägga grunden är att strukturera kontrollerna tidigt. Använd gärna <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> för att dokumentera de kontroller som KA sedan ska följa upp mot kontrollplanen.</p>
+
+<h2>Vad är en kontrollansvarig (KA)?</h2>
+<p>En kontrollansvarig är en certifierad person som biträder byggherren under byggprocessen. Rollen regleras i plan- och bygglagen (PBL 10 kap. 9 §) och innebär att KA ska se till att bygget uppfyller gällande krav och att kontrollplanen följs. KA är alltså inte samma sak som en besiktningsman eller en projektledare – det är en oberoende funktion med lagstadgade uppgifter.</p>
+<p>Enligt PBL 10 kap. 11 § ska KA bland annat:</p>
+<ul>
+<li>biträda byggherren med förslag till kontrollplan,</li>
+<li>se till att kontrollplanen och gällande bestämmelser följs och att nödvändiga kontroller utförs,</li>
+<li>meddela byggherren, och vid behov byggnadsnämnden, om avvikelser upptäcks,</li>
+<li>närvara vid tekniskt samråd, besiktningar och slutsamråd,</li>
+<li>lämna ett utlåtande till byggherren och nämnden inför slutbeskedet.</li>
+</ul>
+<p>Ett krav som ofta missas: KA måste ha en <strong>självständig ställning</strong> i förhållande till den som utför åtgärden (PBL 10 kap. 9 §). En KA kan alltså inte vara anställd hos entreprenören som bygger. Bygger ditt företag huset kan ni inte samtidigt vara kontrollansvariga för det – kunden måste anlita en oberoende KA.</p>
+
+<h2>När behövs en kontrollansvarig?</h2>
+<p>Huvudregeln är enkel att komma ihåg: kräver åtgärden en kontrollplan, så krävs det en kontrollansvarig. I praktiken innebär det att KA behövs vid de flesta lov- och anmälningspliktiga åtgärder. Konkret handlar det ofta om:</p>
+<ul>
+<li>nybyggnad,</li>
+<li>större tillbyggnad,</li>
+<li>ändring av bärande konstruktion,</li>
+<li>väsentlig ändring av VA eller ventilation,</li>
+<li>installation av eldstad eller rökkanal (i vissa fall),</li>
+<li>rivning som kräver lov eller anmälan.</li>
+</ul>
+<p>Det är byggnadsnämnden i kommunen som avgör i varje enskilt fall om KA behövs. Utgångspunkten är dock tydlig: när ett projekt är så pass omfattande att det behöver följas upp mot en kontrollplan, ska en KA vara utsedd.</p>
+
+<h2>När behövs INGEN kontrollansvarig?</h2>
+<p>Det finns tydliga undantag. Grunden för dem finns i plan- och byggförordningen (PBF 2011:338, 7 kap. 5 §). KA krävs normalt inte för:</p>
+<ul>
+<li>åtgärder som varken kräver lov eller anmälan, till exempel en friggebod,</li>
+<li>små ändringar av en- eller tvåbostadshus, om byggnadsnämnden inte beslutar annat.</li>
+</ul>
+<p>En vanlig missuppfattning gäller Attefallsåtgärder, som ett komplementbostadshus på max 30 kvm. Dessa är <strong>inte automatiskt undantagna</strong> – byggnadsnämnden kan besluta att KA ändå krävs. Utgå därför aldrig från att en Attefallsåtgärd är befriad från KA-kravet utan att ha stämt av med kommunen. Betona för kunden att det alltid är nämnden som gör bedömningen i det enskilda fallet.</p>
+<p>Notera också att Boverkets nya byggregler gäller fullt ut från 1 juli 2026. Att lovplikten slopats för vissa åtgärder betyder inte att de tekniska kraven försvinner – även åtgärder utan bygglovsplikt måste uppfylla de nya reglerna, och ett eventuellt KA-krav påverkas inte av att lovplikten tagits bort.</p>
+
+<h2>Vad kostar en kontrollansvarig 2026?</h2>
+<p>Priset styrs framför allt av projektets komplexitet, antalet arbetsplatsbesök och restid. Som riktvärden för 2026 (exklusive moms) gäller:</p>
+<ul>
+<li><strong>Mindre projekt</strong> (garage, mindre tillbyggnad): ca 10 000–20 000 kr.</li>
+<li><strong>Villa / medelstort projekt:</strong> ca 15 000–30 000 kr.</li>
+<li><strong>Större eller kommersiella projekt:</strong> från ca 30 000 kr och uppåt – för riktigt stora byggen 50 000–200 000 kr eller mer.</li>
+</ul>
+<p>För en normal villa hamnar alltså kostnaden vanligen i intervallet 15 000–30 000 kr. Ett litet garagebygge kan klaras för runt 10 000–15 000 kr, medan ett flerbostadshus snabbt passerar 50 000 kr. Att KA behöver göra fler platsbesök, eller att objektet ligger långt bort, driver upp priset – be alltid om en offert som specificerar antal besök.</p>
+<p>En sak att inte blanda ihop: att <em>själv</em> bli certifierad KA kostar ca 8 500–14 500 kr för utbildning plus ca 8 000–15 000 kr i certifieringsavgift (beroende på organ och nivå), samt ca 495 kr exkl. moms för ID-kort. Det är kostnaden för att bli KA – inte för att anlita en.</p>
+
+<h2>N- eller K-behörighet – vilken KA behöver ditt projekt?</h2>
+<p>Certifierade kontrollansvariga finns i två behörighetsnivåer, och det spelar roll att välja rätt:</p>
+<ul>
+<li><strong>N – normal art:</strong> täcker ny-, till- och ombyggnad samt rivning av en- och tvåbostadshus, och mindre projekt i övrigt. Det räcker för de allra flesta villaprojekt.</li>
+<li><strong>K – komplicerad art:</strong> krävs för byggnader med fler än två våningar samt större och mer komplexa projekt.</li>
+</ul>
+<p>Att anlita en KA med fel behörighetsnivå kan försena bygglovet, eftersom nämnden inte godkänner en KA som saknar rätt behörighet för objektet. Kontrollera nivån innan avtal skrivs. Certifieringen utförs av ackrediterade certifieringsorgan – RISE, Kiwa och DNV – och gäller normalt i fem år. För förnyelse krävs dokumenterade KA-uppdrag och fortbildning, vilket är en indikation på att KA:n är aktiv i yrket.</p>
+
+<h2>KA i bygglovsflödet steg för steg</h2>
+<p>För att kunden ska förstå var KA kommer in, hjälper det att beskriva flödet:</p>
+<ol>
+<li>KA utses redan i samband med ansökan eller anmälan.</li>
+<li>Tekniskt samråd hålls med byggnadsnämnden, där KA närvarar.</li>
+<li>Nämnden ger startbesked – bygget får påbörjas.</li>
+<li>Kontroller utförs löpande under bygget enligt kontrollplanen.</li>
+<li>Slutsamråd hålls när bygget är klart.</li>
+<li>KA lämnar sitt utlåtande till byggherren och nämnden.</li>
+<li>Nämnden utfärdar slutbesked – då får byggnaden tas i bruk.</li>
+</ol>
+<p>KA:n är alltså med genom hela processen, från ansökan till slutbesked. Ju bättre de löpande kontrollerna dokumenteras, desto smidigare blir slutsamrådet.</p>
+
+<h2>Så väljer du rätt KA</h2>
+<ul>
+<li><strong>Certifiering:</strong> kontrollera att personen är certifierad – kommunen har ofta listor att stämma av mot.</li>
+<li><strong>Rätt behörighetsnivå:</strong> N eller K beroende på projektet.</li>
+<li><strong>Oberoende:</strong> KA får inte vara knuten till entreprenören som utför åtgärden.</li>
+<li><strong>Referenser:</strong> be om liknande genomförda projekt.</li>
+<li><strong>Tydlig offert:</strong> antal platsbesök, restid och vad som ingår ska framgå.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte den kontrollansvariga – KA är en lagstadgad, oberoende roll. Men verktygen hjälper dig och kunden att hålla ordning på det som KA sedan följer upp. Med en strukturerad egenkontroll dokumenteras varje moment löpande, vilket ger KA ett bättre underlag inför tekniskt samråd och slutsamråd. Du kan samla foton, checklistor och avvikelser på ett ställe, så att kontrollplanens punkter blir enkla att bocka av. Det minskar risken för att kontroller saknas när slutbeskedet ska utfärdas – och gör att projektet flyter på utan onödiga förseningar.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag som byggföretag anlita en egen kontrollansvarig?</h3>
+<p>Nej. Det är byggherren (oftast din kund) som ansvarar för att utse KA. Eftersom KA måste vara oberoende av den som utför bygget, kan ditt företag inte vara KA för ett projekt ni själva bygger. Däremot är det bra att kunna vägleda kunden om när KA behövs.</p>
+<h3>Vad kostar det att anlita en kontrollansvarig 2026?</h3>
+<p>För ett mindre projekt ca 10 000–20 000 kr, för en villa ca 15 000–30 000 kr och för större projekt från ca 30 000 kr och uppåt (exkl. moms). Priset styrs av antal arbetsplatsbesök och projektets komplexitet.</p>
+<h3>Behövs KA för en Attefallsåtgärd?</h3>
+<p>Inte automatiskt, men byggnadsnämnden kan besluta att KA ändå krävs. Attefallsåtgärder är inte undantagna på samma sätt som åtgärder helt utan lov eller anmälan. Stäm alltid av med kommunen i det enskilda fallet.</p>
+<h3>Vad är skillnaden mellan N- och K-behörighet?</h3>
+<p>N (normal art) täcker en- och tvåbostadshus samt mindre projekt. K (komplicerad art) krävs för byggnader med fler än två våningar och större, mer komplexa projekt. Fel behörighet kan försena bygglovet.</p>
+
+<h2>Kom igång</h2>
+<p>Lägg grunden för en smidig kontrollprocess redan från start. Använd <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> för att dokumentera kontrollerna löpande, så att KA har allt underlag som behövs inför slutbeskedet. Vill du se hur ByggExp kan hålla ihop dokumentationen i dina projekt? <a href="/sv/contact">Boka en demo</a> så visar vi hur det fungerar i praktiken.</p>
+
+<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – när och hur</a>.</p>
+`;
+
+const A_KONTROLLANSVARIG_NAR_BEHOVS: BlogPost = {
+  _id: "code-"+"kontrollansvarig-nar-behovs",
+  title: "Kontrollansvarig – när behövs det och vad kostar det?", slug: "kontrollansvarig-nar-behovs", locale: "sv",
+  excerpt: "En genomgång av när kontrollansvarig krävs, vad en KA kostar 2026 och skillnaden mellan N- och K-behörighet i bygglovsflödet.", tag: "Bygglov",
+  coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_KONTROLLANSVARIG_NAR_BEHOVS_HTML,
+  seoTitle: "Kontrollansvarig när & kostnad | ByggExp", seoDescription: "När krävs kontrollansvarig, vad kostar en KA 2026 (10 000–50 000 kr) och skillnaden mellan N- och K-behörighet. Guide för hantverkare och byggföretag.",
+  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:18:00.000Z", createdAt: "2026-08-18T18:18:00.000Z", updatedAt: "2026-08-18T18:18:00.000Z",
+};
+
+const A_BYGGMOTESPROTOKOLL_MALL_HTML = `
+<p>Ett byggmötesprotokoll ser vid första anblick ut som en enkel sammanfattning av vad som sades på mötet. I praktiken är det något helt annat: enligt branschstandardavtalen AB 04 och ABT 06 är protokollet ett dokument som kan avgöra en framtida tvist. En anteckning om en beställd ÄTA eller ett anmält hinder som hamnar i protokollet uppfyller avtalets skriftlighetskrav – och det som inte protokollförs riskerar att aldrig ha hänt när diskussionen om betalning kommer. Söker du en <strong>byggmötesprotokoll mall</strong> som håller juridiskt behöver du därför förstå både strukturen och rutinerna runt den.</p>
+
+<p>Den här guiden går igenom dagordning, mötesfrekvens och ansvar – och hur ni följer upp besluten efteråt. Vill du se hur projekt, uppgifter och etapper hänger ihop kan du utforska <a href="/sv/funktioner">våra funktioner för byggprojekt</a>.</p>
+
+<h2>Vad är ett byggmöte – och skillnaden mot startmöte och projektmöte</h2>
+
+<p>Ett byggmöte är ett återkommande möte under entreprenadtiden mellan beställare och en eller flera entreprenörer. Här behandlas ekonomi, förseningar mot tidsplanen, avvikelser i mark- och förhållanden, behov av ÄTA-arbeten och beställarens ställningstaganden. Det är projektets formella styrmöte.</p>
+
+<p>Det ska inte förväxlas med <strong>projektmötet</strong>, som är ett internt möte mellan nyckelpersoner och ofta hålls veckovis för att driva det dagliga arbetet framåt. Innan de reguljära byggmötena drar igång hålls ett <strong>startmöte</strong> – en kick-off där organisation, rutiner och kontaktvägar sätts. I en totalentreprenad enligt ABT 06 tillkommer dessutom <strong>projekteringsmöten</strong> för att styra själva projekteringen.</p>
+
+<p>Vilken avtalsform ni arbetar under påverkar mötesbilden. AB 04 gäller utförandeentreprenad, där beställaren står för handlingarna, medan ABT 06 gäller totalentreprenad, där entreprenören ansvarar för både projektering och utförande. Kapitel 3 (Organisation) i båda avtalen reglerar mötena, men det är branschstandard från Byggandets Kontraktskommitté – inte lag.</p>
+
+<h2>Hur ofta bör ni hålla byggmöte?</h2>
+
+<p>AB 04 och ABT 06 anger att möten ska hållas ”i den omfattning som erfordras”. Det finns alltså ingen lagstadgad eller avtalsfast frekvens – det är upp till parterna att bestämma vad projektet kräver.</p>
+
+<p>I praktiken sätts frekvensen i de administrativa föreskrifterna (AF), som upprättas enligt AMA AF. Vanligast är byggmöte en gång per månad. Större och mer komplexa projekt håller tätare möten, ibland varannan vecka, medan lugnare skeden kan klara sig med glesare intervall.</p>
+
+<p>För mindre hantverks- och byggföretag räcker ofta ett månadsvis byggmöte, kompletterat med korta interna avstämningar däremellan. Det viktiga är att intervallet är bestämt i förväg och att alla vet när nästa möte hålls – det är själva förutsättningen för att protokollen ska kunna justeras i tid.</p>
+
+<h2>Vem ansvarar för protokollet?</h2>
+
+<p>Enligt AB 04 och ABT 06 är det <strong>beställaren</strong> som ska föra protokollet. Beställaren ansvarar också för att protokollet skickas till entreprenören utan dröjsmål och i god tid före nästa möte, så att det hinner granskas.</p>
+
+<p>Entreprenören ska <strong>justera</strong> protokollet – alltså granska och godkänna det. Om något är felaktigt eller ofullständigt antecknat måste entreprenören invända utan dröjsmål, och senast innan nästa möte. Uteblir invändningen står protokollanteckningen kvar som parternas gemensamma bild av vad som beslutats, och den kan användas som bevis i en senare tvist.</p>
+
+<p>Den enkla men avgörande rutinen: börja varje byggmöte med att formellt godkänna föregående protokoll. Då tvingas eventuella oklarheter upp till ytan medan de fortfarande går att korrigera, i stället för att dyka upp som en obehaglig överraskning ett år senare.</p>
+
+<h2>Dagordning – vad ska med i ett byggmötesprotokoll</h2>
+
+<p>Ett tydligt protokoll ska innehålla mötesnummer och projektnamn, datum, tid och plats, samt vilka parter som närvarade – byggherre, entreprenör och projektledare. Numrera varje möte separat (BM1, BM2, BM3 …) så att det alltid går att hänvisa exakt till rätt protokoll. Använd samma dagordning varje gång, så att inget faller bort mellan mötena.</p>
+
+<ol>
+<li><strong>Formalia</strong> – mötesnummer, projekt, datum/tid/plats</li>
+<li><strong>Närvaro</strong> – vilka parter och roller som deltar</li>
+<li><strong>Godkännande av föregående protokoll</strong> – justering och eventuella invändningar</li>
+<li><strong>Ekonomi</strong> – fakturering, betalningar, prognos mot budget</li>
+<li><strong>Tidsplan</strong> – status, avvikelser och åtgärder</li>
+<li><strong>ÄTA-arbeten</strong> – beställda, pågående och begärda ändringar och tillägg</li>
+<li><strong>Hinder och förseningar</strong> – anmälda hinder och konsekvenser för tidplanen</li>
+<li><strong>Arbetsmiljö och KMA</strong> – kvalitet, miljö och arbetsmiljöfrågor</li>
+<li><strong>Kvalitet och besiktningar</strong> – egenkontroller, kommande besiktningar</li>
+<li><strong>Nästa möte</strong> – datum, tid och öppna punkter att bevaka</li>
+</ol>
+
+<p>Varje punkt bör dokumenteras med ett tydligt beslut och en ansvarig person – inte bara ett konstaterande. Ett protokoll där det står ”ansvarig: entreprenören, klart: nästa möte” är värt betydligt mer än ett som bara noterar att en fråga ”diskuterades”.</p>
+
+<h2>Protokollet som juridiskt bevis – skriftlighetskravet</h2>
+
+<p>Både AB 04 och ABT 06 ställer krav på skriftlig form för flera typer av meddelanden mellan parterna. En anteckning i byggmötesprotokollet uppfyller det kravet. Det gäller bland annat beställning av ÄTA-arbeten (AB 04 kap 2 § 6) och underrättelse om hinder och förseningar.</p>
+
+<p>Konsekvensen är konkret: om en ÄTA beställs muntligt på mötet men aldrig hamnar i protokollet, riskerar entreprenören att stå utan skriftligt underlag för sin ersättning. Samma sak med ett hinder som inte anmäls i tid – rätten till tidsförlängning kan gå förlorad. Därför ska varje ÄTA, hinder och förbehåll noteras i protokollet, och entreprenören ska kontrollera att de faktiskt kom med när protokollet justeras.</p>
+
+<p>Ett välfört byggmötesprotokoll är alltså inte byråkrati utan er starkaste dokumentation den dag ekonomin ifrågasätts.</p>
+
+<h2>Så följer ni upp mötesbesluten i ByggExp</h2>
+
+<p>Ett protokoll är bara så bra som uppföljningen. I ByggExp skapar ni ett projekt och lägger in besluten från protokollet som Uppgifter (Tasks) med ansvarig person och påminnelser, så att inget vilar enbart på minnet mellan mötena. ÄTA-arbeten och deadlines kopplas till Mål och etapper, vilket gör det lätt att se på nästa byggmöte vad som är avklarat och vad som släpar. På så vis blir varje protokollpunkt en spårbar åtgärd i stället för en bortglömd notering. Behöver ni en startpunkt kan ni ladda ner vår <a href="/sv/verktyg/byggdagbok-mall">byggdagboksmall</a> och koppla den dagliga dokumentationen till mötesbesluten.</p>
+
+<h2>Vanliga frågor</h2>
+
+<h3>Är byggmötesprotokoll lagstadgat?</h3>
+<p>Nej. Kravet kommer från branschstandardavtalen AB 04 och ABT 06, kapitel 3, inte från lag. Men om ni avtalat om AB 04 eller ABT 06 i entreprenaden är protokollföringen bindande mellan parterna, och protokollets bevisvärde är fullt reellt i en tvist.</p>
+
+<h3>Hur ofta ska man hålla byggmöte?</h3>
+<p>Avtalen säger ”i den omfattning som erfordras”, alltså ingen fast frekvens. I praktiken bestäms intervallet i de administrativa föreskrifterna och är vanligen en gång per månad. Större eller mer komplexa projekt håller tätare möten.</p>
+
+<h3>Vem skriver byggmötesprotokollet?</h3>
+<p>Beställaren för protokollet och skickar det i god tid före nästa möte. Entreprenören justerar det och måste invända utan dröjsmål om något är felaktigt antecknat, annars står anteckningen kvar som gemensam bild.</p>
+
+<h3>Vad händer om en ÄTA inte protokollförs?</h3>
+<p>Då saknas ofta det skriftliga underlag som avtalet kräver. Entreprenören riskerar att inte få ersättning för arbetet. Kontrollera därför alltid att beställda ÄTA och anmälda hinder finns med innan protokollet godkänns.</p>
+
+<h2>Kom igång</h2>
+
+<p>Sätt en fast dagordning, numrera protokollen och godkänn alltid föregående protokoll först på varje möte – då har ni ordning på både projektet och bevisningen. Ladda ner <a href="/sv/verktyg/byggdagbok-mall">byggdagboksmallen</a> och utforska <a href="/sv/funktioner">funktionerna i ByggExp</a> för att koppla mötesbesluten till uppgifter och etapper. Vill ni se det i ert eget projekt kan ni <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/byggdagbok">Byggdagbok – så dokumenterar ni rätt</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i bygg – mall och rutiner</a>.</p>
+`;
+
+const A_BYGGMOTESPROTOKOLL_MALL: BlogPost = {
+  _id: "code-"+"byggmotesprotokoll-mall",
+  title: "Byggmötesprotokoll – mall, dagordning och ansvar", slug: "byggmotesprotokoll-mall", locale: "sv",
+  excerpt: "Byggmötesprotokollet är mer än en anteckning – det är ett juridiskt dokument enligt AB 04 och ABT 06. Här är dagordning, ansvar och en färdig mallstruktur.", tag: "Projektledning",
+  coverImageUrl: "/landing/features/tasks.webp", contentHtml: A_BYGGMOTESPROTOKOLL_MALL_HTML,
+  seoTitle: "Byggmötesprotokoll mall | ByggExp", seoDescription: "Så skriver ni ett byggmötesprotokoll enligt AB 04 och ABT 06: dagordning, startmöte, hur ofta ni bör mötas och vem som ansvarar. Mall och rutiner.",
+  seoImageUrl: `${SITE_URL}/landing/features/tasks.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:21:00.000Z", createdAt: "2026-08-18T18:21:00.000Z", updatedAt: "2026-08-18T18:21:00.000Z",
+};
+
+const A_OVERLAMNING_RELATIONSHANDLINGAR_HTML = `
+<p>Projektet är i mål. Sista skruven är dragen, slutbesiktningen är avklarad och slutfakturan ligger klar. Men är projektet verkligen avslutat? Alltför ofta godkänns slutbesiktningen samtidigt som relationshandlingarna saknas, restpunkterna hänger löst i en oläslig anteckning och drift- och underhållsinstruktionerna aldrig blir levererade. Det är då problemen börjar – för det är just överlämningen som avgör om du får betalt i tid och hur du står dig under de tio år av ansvar som följer. En strukturerad överlämning med en tydlig <strong>överlämning relationshandlingar checklista</strong> är inte pappersexercis, utan ett affärsskydd. Här går vi igenom vad som gäller enligt AB 04 och ABT 06, och hur du håller ordning på restpunkter och procent klart genom hela slutfasen.</p>
+
+<p>Vill du samla handlingar, restpunkter och etappuppföljning på ett ställe? Se hur du strukturerar slutfasen med <a href="/sv/funktioner">funktionerna i ByggExp -&gt;</a>.</p>
+
+<h2>Vad är relationshandlingar – och varför är de din skyldighet?</h2>
+<p>Relationshandlingar är den dokumentation som beskriver byggnadsverket <em>som det faktiskt blev byggt</em> – inte som det ritades. Begreppet omfattar flera delar som byggherren och den framtida förvaltningen behöver:</p>
+<ul>
+<li><strong>Relationsritningar och relationsunderlag</strong> – uppdaterade ritningar som visar utfört arbete. Underlag som entreprenören lämnar märks "Relationsunderlag".</li>
+<li><strong>Drift- och underhållsinstruktioner (DoU)</strong> – hur installationer och byggdelar ska skötas.</li>
+<li><strong>Produkt- och materialdatablad</strong> för inbyggda produkter.</li>
+<li><strong>Egenkontroller och provningsprotokoll</strong> som styrker att arbetet utförts enligt kontrakt.</li>
+<li><strong>Utbildningsprotokoll</strong> när förvaltningen ska utbildas i systemen.</li>
+</ul>
+<p>Enligt AB 04 och ABT 06 ingår relationshandlingar, DoU-instruktioner och utbildning i kontraktsarbetena <strong>när de är föreskrivna</strong> – och de ska levereras till byggherren senast vid slutbesiktningen. Det är alltså inget frivilligt extra du gör om du hinner, utan en del av det du har åtagit dig att prestera.</p>
+
+<h2>AB 04 vs ABT 06 – vem ansvarar för handlingarna?</h2>
+<p>Ansvarsfördelningen skiljer sig beroende på entreprenadform, och det påverkar vem som tar fram vad:</p>
+<ul>
+<li><strong>ABT 06 (totalentreprenad):</strong> Entreprenören ansvarar för projekteringen och därmed ofta för att ta fram fullständiga relationshandlingar. Du äger både lösningen och dokumentationen av den.</li>
+<li><strong>AB 04 (utförandeentreprenad):</strong> Byggherren tillhandahåller projekteringen. Entreprenören levererar relationsunderlag för det arbete som faktiskt utförts – alltså avvikelser och justeringar jämfört med de ritningar du fick.</li>
+</ul>
+<p>Oavsett form är principen densamma: det du byggt ska gå att förstå, drifta och underhålla utifrån de handlingar du lämnar. Läs i kontraktshandlingarna exakt vad som är föreskrivet – där avgörs omfattningen.</p>
+
+<h2>Restlista och slutbesiktning – vad händer med restpunkterna?</h2>
+<p>Grundregeln i AB 04 och ABT 06 är att entreprenaden ska godkännas vid slutbesiktningen om den inte har väsentliga fel. Fel av mindre betydelse eller begränsad omfattning får inte hindra godkännande – de noteras i stället på en <strong>restlista</strong> i besiktningsutlåtandet och ska avhjälpas därefter.</p>
+<p>Saknade relationshandlingar hindrar därför normalt inte godkännandet i sig – de behandlas oftast som en restpunkt. Men det finns ett viktigt undantag: om de saknade handlingarna gör att byggherren inte kan få slutbesked från kommunen – till exempel handlingar som krävs enligt kontrollplanen och PBL – då kan besiktningsmannen vägra godkännande. Att slarva med dokumentationen kan alltså i värsta fall stoppa hela övertagandet.</p>
+<p>Godkänd slutbesiktning är den avgörande juridiska händelsen. Den markerar övertagandet, då byggherren tar över entreprenaden. Från den punkten startar garantitiden och ansvarstiden, din rätt till indexreglering och löpande ersättning upphör, och risken går över på byggherren. Ett godkännandeintyg med bifogad restpunktslista utfärdas.</p>
+
+<h2>Garantitid, ansvarstid och garantibesiktning – därför påverkar överlämningen tio år framåt</h2>
+<p>Överlämningen är inte slutet på ditt ansvar – den är starten på det. Med utgångspunkt från godkänd slutbesiktning gäller enligt AB 04 som standard:</p>
+<ul>
+<li><strong>Garantitid 5 år</strong> för entreprenörens arbetsprestation.</li>
+<li><strong>Garantitid 2 år</strong> för material och varor som entreprenören tillhandahållit. (I ABT 06 gäller som standard 5 år för hela entreprenaden inklusive material.)</li>
+<li><strong>Ansvarstid 10 år</strong> från godkänd slutbesiktning.</li>
+</ul>
+<p>Under garantitiden ansvarar du för fel som framträder, med omvänd bevisbörda – det är du som ska visa att felet inte är ditt. Efter garantitiden men inom ansvarstiden ansvarar du bara för väsentliga fel som beror på vårdslöshet, och då är det byggherren som ska bevisa det. En garantibesiktning ska verkställas före garantitidens utgång, alltså strax innan 2 respektive 5 år passerat, och begärs normalt av byggherren. Fel som noteras där ska du avhjälpa utan kostnad. Ordning i handlingarna vid överlämningen är din bästa försäkring i just dessa lägen.</p>
+
+<h2>Kopplingen till PBL och slutbesked</h2>
+<p>Byggherren får normalt inte ta byggnadsverket i bruk förrän byggnadsnämnden gett slutbesked. Slutbesked kräver att kontrollplanen följts och redovisats, och den kontrollansvarige (KA) lämnar ett utlåtande som underlag. Relationshandlingar och intyg efterfrågas ofta som del av detta underlag. Din leverans av dokumentation är därför inte bara en fråga mellan dig och byggherren – den är en förutsättning för att byggnaden lagligt ska kunna tas i bruk.</p>
+
+<h2>Checklista för överlämning av relationshandlingar</h2>
+<p>Gå igenom listan innan du kallar överlämningen klar. Komplettera den med de handlingar som är föreskrivna i just ditt kontrakt:</p>
+<ol>
+<li><strong>Relationsritningar / relationsunderlag</strong> – uppdaterade och märkta.</li>
+<li><strong>Drift- och underhållsinstruktioner (DoU)</strong> för installationer och byggdelar.</li>
+<li><strong>Produkt- och materialdatablad</strong> för inbyggda produkter.</li>
+<li><strong>Egenkontroller</strong> – ifyllda och signerade för respektive moment.</li>
+<li><strong>Provningsprotokoll</strong> – täthet, el, ventilation, tryck m.m.</li>
+<li><strong>Garantisedlar</strong> för material och produkter med separata garantier.</li>
+<li><strong>Utbildning av förvaltningen</strong> med utbildningsprotokoll.</li>
+<li><strong>Digital leverans</strong> – samlat i ett system som stöttar framtida förvaltning.</li>
+</ol>
+<p>Behöver du en mall för egenkontrollerna som ska ingå? Använd vår <a href="/sv/verktyg/egenkontroll-mall">gratis egenkontroll-mall</a> och bocka av momenten löpande under projektet i stället för i slutrusningen.</p>
+
+<h2>Så håller du ordning på restpunkter och % klart i ByggExp</h2>
+<p>Slutfasen faller ofta på att restpunkterna lever i mejl och lösa anteckningar. I ByggExp lägger du i stället upp varje restpunkt som en uppgift med ansvarig och status, så att inget faller mellan stolarna fram till avhjälpandet. Projektets Mål och etapper visar procent klart, vilket ger dig och byggherren en gemensam bild av vad som återstår inför övertagandet. Relationshandlingar, egenkontroller och protokoll kan samlas digitalt kopplat till projektet, så att hela överlämningspaketet finns på ett ställe när slutbesiktningen närmar sig. Målet är enkelt: färre lösa trådar, snabbare godkännande och en dokumentation som håller även vid garantibesiktningen om flera år.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Kan slutbesiktningen underkännas om relationshandlingarna saknas?</h3>
+<p>Oftast inte – saknade handlingar behandlas normalt som en restpunkt. Men om de saknade handlingarna gör att byggherren inte kan få slutbesked från kommunen kan besiktningsmannen vägra godkännande. Då blir dokumentationen ett hinder för hela övertagandet.</p>
+<h3>När ska relationshandlingarna senast levereras?</h3>
+<p>Enligt AB 04 och ABT 06 ska de levereras till byggherren senast vid slutbesiktningen, när de är föreskrivna i kontraktshandlingarna. Planera leveransen i god tid – inte som en sista åtgärd samma dag som besiktningen.</p>
+<h3>Vem tar fram relationshandlingarna – vi eller byggherren?</h3>
+<p>Det beror på entreprenadform. I ABT 06 (totalentreprenad) ansvarar entreprenören för projekteringen och tar därmed ofta fram handlingarna. I AB 04 (utförandeentreprenad) projekterar byggherren, och entreprenören levererar relationsunderlag för det arbete som faktiskt utförts.</p>
+<h3>Varför spelar överlämningen roll så långt efter avslutat projekt?</h3>
+<p>För att godkänd slutbesiktning startar garantitiden – 5 år för arbete och 2 år för material enligt AB 04 – och en ansvarstid på 10 år. Under garantitiden har du omvänd bevisbörda. Komplett dokumentation är då ditt bästa underlag om ett fel ifrågasätts vid garantibesiktningen.</p>
+
+<h2>Kom igång</h2>
+<p>En strukturerad överlämning betyder betalning i tid, godkänd besiktning och färre garantitvister. Börja med att lägga restpunkterna som uppgifter och följ procent klart via Mål och etapper i <a href="/sv/funktioner">ByggExps funktioner</a>, och komplettera med vår <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a> under projektets gång. Vill du se hur restlista, etappuppföljning och digital dokumentsamling hänger ihop i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi upplägget för din verksamhet.</p>
+
+<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så går den till</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
+`;
+
+const A_OVERLAMNING_RELATIONSHANDLINGAR: BlogPost = {
+  _id: "code-"+"overlamning-relationshandlingar",
+  title: "Överlämning och relationshandlingar – checklista för avslutade byggprojekt", slug: "overlamning-relationshandlingar", locale: "sv",
+  excerpt: "En strukturerad överlämning av relationshandlingar skyddar både din slutbetalning och de tio åren av ansvar som följer efter godkänd slutbesiktning.", tag: "Entreprenadjuridik",
+  coverImageUrl: "/landing/features/project.webp", contentHtml: A_OVERLAMNING_RELATIONSHANDLINGAR_HTML,
+  seoTitle: "Relationshandlingar checklista | ByggExp", seoDescription: "Checklista för överlämning av relationshandlingar vid avslutade byggprojekt. Restlista, slutbesiktning, garantitid och 10 års ansvar – enligt AB 04 och ABT 06.",
+  seoImageUrl: `${SITE_URL}/landing/features/project.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:24:00.000Z", createdAt: "2026-08-18T18:24:00.000Z", updatedAt: "2026-08-18T18:24:00.000Z",
+};
+
+const A_KVARTSDAMM_REGLER_BYGG_HTML = `
+<p>Kvartsdamm är byggbranschens tysta yrkessjukdom. Varje gång ni bilar, slipar, kapar eller borrar i betong, tegel eller puts frigörs respirabel kristallin kiseldioxid – partiklar så små att de når djupt ner i lungorna utan att synas. Med den skärpta regelstrukturen 2025–2026 är slarv inte längre bara en hälsorisk för montörerna, utan en direkt efterlevnadsrisk för firman. Den här guiden går igenom kvartsdamm, reglerna, kraven och byggbranschens praktiska compliance: gränsvärdet, den dokumenterade riskbedömningen, åtgärdstrappan och varför M-klassad dammsugare är minimikravet.</p>
+
+<p>Ett strukturerat sätt att fånga riskbedömning, kontroller och åtgärder är att dokumentera dem löpande – börja med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall &rarr;</a> och bygg vidare därifrån.</p>
+
+<h2>Vad är kvartsdamm och varför är det farligt</h2>
+<p>Kvarts finns i de flesta material ni arbetar i dagligen: betong, tegel, puts, murbruk och natursten. Så länge materialet är intakt är kvartsen bunden, men vid bearbetning frigörs den som damm. De moment som dammar mest är bilning, slipning, kapning, borrning och rivning – tänk en helt vanlig kök- eller badrumsrenovering där kakel kapas och betong bilas i ett trångt utrymme.</p>
+<p>Den farliga fraktionen är den respirabla, alltså de finaste partiklarna som andas ner i lungblåsorna. Långvarig inandning kan orsaka silikos (stendammlunga), KOL och lungcancer. Därför är respirabelt kvarts CMR-klassat, och Arbetsmiljöverket hanterar det med samma stränga logik som cancerframkallande kemikalier.</p>
+
+<h2>Gränsvärdet och regelverket 2026</h2>
+<p>Det hygieniska gränsvärdet (nivågränsvärdet) för respirabelt kvarts är <strong>0,1 mg/m³</strong>, mätt som medelvärde över en åttatimmars arbetsdag. Det framgår av AFS 2023:14 om gränsvärden för luftvägsexponering.</p>
+<p>Regelverket byggdes om från och med 1 januari 2025. Den gamla AFS 2015:2 om kvarts och stendamm är utfasad och ska inte längre refereras som gällande. Kvartskraven ligger nu utspridda i den nya strukturen: AFS 2023:10 (risker i arbetsmiljön, kemiska risker), AFS 2023:14 (gränsvärden) och AFS 2023:15 (medicinska kontroller).</p>
+<p>Skärpningen fortsatte med ändringsföreskriften AFS 2025:1 (ändring i AFS 2023:10), som trädde i kraft 9 april 2026. Den förtydligar en viktig princip: arbete där kvartsdamm bildas får inte utföras om det är tekniskt möjligt att ta bort orsaken till exponeringen. Kvarts ska alltså hanteras enligt substitutions- och åtgärdstrappan, precis som en cancerframkallande kemikalie. I praktiken betyder det att ni först måste fråga er om momentet kan göras på ett sätt som inte alls dammar.</p>
+
+<h2>Riskbedömning – firmans utgångspunkt</h2>
+<p>Arbetsgivaren ska göra en <strong>dokumenterad riskbedömning innan arbetet påbörjas</strong>. Det är inte en formalitet i efterhand utan grunden för hela hanteringen. Bedömningen ska besvara:</p>
+<ul>
+<li>Vilka moment i jobbet frigör kvartsdamm?</li>
+<li>Hur länge pågår de dammande momenten?</li>
+<li>Hur många personer exponeras, och vilka?</li>
+<li>Vilka skyddsåtgärder väljs, och räcker de för att hålla er under gränsvärdet?</li>
+</ul>
+<p>När det är oklart om exponeringen ligger under 0,1 mg/m³ kan en luftmätning behövas för att fastställa nivån. På gemensamma byggen med flera aktörer måste bedömningen dessutom samordnas med BAS-U, så att inte en firmas bilning dammar ner nästa firmas montörer. Ju konkretare ni är i riskbedömningen, desto enklare blir det att välja rätt utrustning och att visa efterlevnad vid en inspektion.</p>
+
+<h2>Åtgärdstrappan: begränsa dammet vid källan</h2>
+<p>Personlig skyddsutrustning kommer sist, inte först. Regelverket kräver att dammet begränsas vid källan innan ni faller tillbaka på andningsskydd. Den praktiska ordningen är:</p>
+<ol>
+<li>Välj en metod eller ett material som dammar mindre.</li>
+<li>Fånga dammet vid källan – integrerat utsug direkt på verktyget eller vattenbegjutning som binder dammet.</li>
+<li>Säkerställ god allmänventilation i utrymmet.</li>
+<li>Komplettera med personlig skyddsutrustning, i praktiken andningsskydd FFP3, när övriga åtgärder inte räcker.</li>
+</ol>
+<p>Städningen är ett eget riskmoment. Kvartshaltigt damm ska sugas upp med rätt klassad utrustning eller hanteras vått. Torrsopning och avblåsning med tryckluft är uttryckligen förbjudet – det virvlar bara upp de farligaste partiklarna igen. FFP3-masken är ett komplement, aldrig huvudlösningen.</p>
+
+<h2>Rätt dammsugarklass – M-klass i fokus</h2>
+<p>Dammsugare för byggdamm delas in i tre klasser efter filtreringsgrad:</p>
+<ul>
+<li><strong>L-klass</strong> – för lågfarligt damm. Räcker inte för kvarts.</li>
+<li><strong>M-klass</strong> – tätad maskin med minst 99,9 % filtrering, avsedd för hälsofarligt men icke-cancerogent byggdamm som betong, gips, sten och kvarts. Detta är branschstandard och minimikravet vid kvartsarbete.</li>
+<li><strong>H-klass</strong> – minst 99,995 % filtrering och högst 0,005 % genomsläpp. Krävs för asbest, bly och de farligaste cancerogena dammtyperna.</li>
+</ul>
+<p>Här finns en nyans värd att förstå: kvarts är visserligen cancerogent, men för byggkvarts accepteras M-klass. H-klass reserveras för asbest och bly. En vanlig verkstadssug eller L-klassad maskin uppfyller alltså inte kraven vid kvartsarbete. Praktiska tips: använd rätt filter, koppla verktyget direkt till utsuget, hantera dammpåse och säck så att inget virvlar upp vid tömning, och kontrollera funktionen. Utsug, ventilation och dammbegränsande utrustning ska nämligen kontrolleras och funktionen dokumenteras med <strong>högst sex månaders mellanrum</strong>.</p>
+
+<h2>Medicinska kontroller och tjänstbarhetsintyg</h2>
+<p>Enligt AFS 2023:15 krävs medicinska kontroller med bedömning för tjänstbarhetsintyg när en person exponeras för respirabelt kvarts vid halt som är minst halva gränsvärdet – alltså <strong>0,05 mg/m³</strong> – och samtidigt arbetar mer än 20 timmar per vecka i minst tre månader per år. Undersökningen ska göras innan arbetet påbörjas och därefter med högst tre års intervall, och omfattar bland annat lungor och hjärta. Tjänstbarhetsintyget är en förutsättning för fortsatt arbete i miljön. Det är arbetsgivaren som ansvarar för att kontrollerna genomförs och står för kostnaden. Arbetstagarna ska dessutom ha information och utbildning om riskerna och skyddsåtgärderna.</p>
+
+<h2>Compliance-checklista för firman</h2>
+<ul>
+<li>Dokumenterad riskbedömning klar innan arbetet startar.</li>
+<li>Damm fångat vid källan med utsug eller våthantering.</li>
+<li>Minst M-klassad dammsugare vid kvartsarbete och städning.</li>
+<li>FFP3-andningsskydd som komplement vid behov.</li>
+<li>Ingen torrsopning och ingen tryckluft.</li>
+<li>Funktionskontroll av utsug och utrustning var sjätte månad, dokumenterad.</li>
+<li>Utbildning och information till alla exponerade.</li>
+<li>Medicinska kontroller när tröskeln för exponering och arbetstid nås.</li>
+<li>Rutinerna uppdaterade mot AFS 2023:10 med ändringen AFS 2025:1.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>Kvartsdamm-efterlevnad står och faller med dokumentationen: riskbedömningen innan arbetet, den återkommande funktionskontrollen var sjätte månad och spårbarheten om Arbetsmiljöverket knackar på. I ByggExp samlar ni de kontrollerna på ett ställe i stället för i lösa papper och telefonbilder. Med egenkontroll-mallen skapar ni en återanvändbar rutin per projekt, och kontrollerna knyts till rätt jobb med datum och ansvarig. Verktyget ersätter inte en luftmätning eller en företagshälsovård, men det gör det enkelt att visa att rutinerna faktiskt följs – vilket ofta är just det som saknas vid en inspektion.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är gränsvärdet för kvartsdamm?</h3>
+<p>Nivågränsvärdet för respirabelt kvarts är 0,1 mg/m³ mätt som medelvärde över en åttatimmars arbetsdag, enligt AFS 2023:14. Medicinska kontroller kan bli aktuella redan vid halva det värdet, 0,05 mg/m³, i kombination med lång arbetstid.</p>
+<h3>Räcker en vanlig byggdammsugare för kvarts?</h3>
+<p>Nej, inte en L-klassad maskin eller en verkstadssug. Minimikravet vid kvartsarbete är en M-klassad dammsugare med minst 99,9 % filtrering. H-klass behövs bara för de farligaste dammtyperna som asbest och bly.</p>
+<h3>Gäller fortfarande AFS 2015:2 för kvarts?</h3>
+<p>Nej. Den gamla föreskriften om kvarts och stendamm är utfasad sedan 1 januari 2025. Kraven finns nu i AFS 2023:10, 2023:14 och 2023:15, med den skärpande ändringen AFS 2025:1 som trädde i kraft 9 april 2026.</p>
+<h3>Får vi sopa eller blåsa rent efter kvartsarbete?</h3>
+<p>Nej. Torrsopning och avblåsning med tryckluft är förbjudet eftersom det virvlar upp de farligaste partiklarna. Kvartshaltigt damm ska sugas upp med minst M-klassad utrustning eller hanteras vått.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att systematisera riskbedömning och funktionskontroller i <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>, så har ni dokumentationen på plats innan nästa dammande jobb. Vill ni se hur det fungerar för hela firman kan ni <a href="/sv/contact">boka en demo</a>. Detta är förenklad vägledning och inte juridisk rådgivning – kontrollera alltid gällande AFS för ert specifika arbete.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i bygg</a>.</p>
+`;
+
+const A_KVARTSDAMM_REGLER_BYGG: BlogPost = {
+  _id: "code-"+"kvartsdamm-regler-bygg",
+  title: "Kvartsdamm på bygget: regler, gränsvärde och rätt dammsugarklass 2026", slug: "kvartsdamm-regler-bygg", locale: "sv",
+  excerpt: "Så uppfyller din firma kvartsdamm-reglerna 2026: gränsvärde, dokumenterad riskbedömning, åtgärdstrappa och varför M-klass är minimikravet vid städning.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_KVARTSDAMM_REGLER_BYGG_HTML,
+  seoTitle: "Kvartsdamm regler och krav 2026 | ByggExp", seoDescription: "Gränsvärde 0,1 mg/m³, ny AFS-struktur 2025–2026, riskbedömning och M-klass. Praktisk guide till kvartsdamm-reglerna för byggfirmor.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-18T18:27:00.000Z", createdAt: "2026-08-18T18:27:00.000Z", updatedAt: "2026-08-18T18:27:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_ANLITA_UNDERENTREPRENOR,
+    A_A_CONTO_FAKTURERING_BYGG,
+    A_ENTREPRENORSANSVAR_LON,
+    A_FAST_PRIS_ELLER_LOPANDE_RAKNING,
+    A_TACKNINGSBIDRAG_BYGGFORETAG,
+    A_REKLAMATION_HANTVERKSTJANST_FRISTER,
+    A_KONTROLLANSVARIG_NAR_BEHOVS,
+    A_BYGGMOTESPROTOKOLL_MALL,
+    A_OVERLAMNING_RELATIONSHANDLINGAR,
+    A_KVARTSDAMM_REGLER_BYGG,
     VADKOST,
     LIKVID,
     ANSTALLA,

@@ -16,6 +16,13 @@
   color: var(--ink);
 }
 
+// The global `section { padding: 60px 0 }` (globals.scss) would otherwise add
+// 120px of dead vertical space to every lead-magnet <section> (section + FAQ).
+// Spacing here is controlled by the --lm-gap margins, so neutralise it.
+.lead-magnet section {
+  padding: 0;
+}
+
 .lead-magnet-hero {
   margin-bottom: var(--lm-gap);
 }

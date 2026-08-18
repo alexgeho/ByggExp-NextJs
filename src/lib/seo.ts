@@ -3,6 +3,14 @@ import { landingLanguageCodes, type LandingLanguageCode } from '../locales/langu
 // Locale Google expects x-default to point at. Swedish is the primary market.
 const X_DEFAULT_LANG: LandingLanguageCode = 'sv';
 
+// Each locale lives on its own ccTLD: Norwegian (nb) on byggexp.no, everything
+// else on byggexp.se. Used to build canonical + hreflang URLs so every locale
+// points at the right domain (Google's recommended ccTLD + hreflang setup).
+export function localeOrigin(lang: string): string {
+  const seOrigin = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
+  return lang === 'nb' ? 'https://byggexp.no' : seOrigin;
+}
+
 export type HreflangAlternate = {
   hrefLang: string;
   href: string;

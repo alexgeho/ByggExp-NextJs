@@ -12640,9 +12640,93 @@ const A_PUTS_MURBRUK_ATGANG_FASAD: BlogPost = {
   publishedAt: "2026-08-19T13:18:00.000Z", createdAt: "2026-08-19T13:18:00.000Z", updatedAt: "2026-08-19T13:18:00.000Z",
 };
 
+const A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG_HTML = `
+<p>Sedan 1 augusti 2020 måste alla som producerar bygg- och rivningsavfall sortera ut minst sex materialslag redan på arbetsplatsen. Kraven i avfallsförordningen (2020:614) gäller oförändrat 2026, och den kommunala tillsynen har skärpts. Blandar du fraktionerna utan giltigt undantag riskerar du föreläggande, vite och i grova fall åtal. Den här guiden går igenom vad som ska sorteras, hur du dokumenterar det och var ansvaret ligger.</p>
+
+<p>Bygg in avfallshanteringen i din egenkontroll från start – börja med vår <a href="/sv/verktyg/egenkontroll-mall">gratis mall för egenkontroll -&gt;</a> och lägg till sorteringspunkterna nedan i den.</p>
+
+<h2>De sex fraktionerna du måste sortera ut på plats</h2>
+<p>Enligt avfallsförordningen 3 kap. 10 § ska följande sex materialslag sorteras ut var för sig och förvaras åtskilda från varandra och från övrigt avfall:</p>
+<ul>
+<li><strong>Trä</strong> – rent virke, reglar, formmaterial (obehandlat).</li>
+<li><strong>Mineral</strong> – betong, tegel, klinker, keramik eller sten i en fraktion.</li>
+<li><strong>Metall</strong> – armering, plåt, rör, beslag.</li>
+<li><strong>Glas</strong> – planglas, rutor.</li>
+<li><strong>Plast</strong> – emballage, rör, profiler.</li>
+<li><strong>Gips</strong> – gipsskivor och gipsrester.</li>
+</ul>
+<p>Det avgörande är att sorteringen sker <strong>vid källan</strong> – på den plats där avfallet uppstår, alltså din bygg- eller rivningsplats. Du får alltså inte samla allt blandat i en container och skicka det vidare till en central sorteringsanläggning. Den som samlar in de utsorterade fraktionerna måste dessutom hålla dem åtskilda genom hela insamlingen så att materialet kan återanvändas eller materialåtervinnas (3 kap. 11 §). Syftet är kopplat till etappmålet att 70 viktprocent av det icke-farliga bygg- och rivningsavfallet ska förberedas för återanvändning eller materialåtervinnas.</p>
+
+<h2>Utöver de sex – farligt avfall och brännbart</h2>
+<p>Sex fraktioner är golvet, inte taket. Farligt avfall ska alltid sorteras ut och hållas separat (3 kap. 11a §), och olika slag av farligt avfall får aldrig blandas med varandra. I rivning handlar det typiskt om:</p>
+<ul>
+<li><strong>Asbest</strong> – eternit, rörisolering, mattlim.</li>
+<li><strong>PCB</strong> – fogmassor och isolerrutor i byggnader från 1956–1973.</li>
+<li><strong>Tryckimpregnerat trä</strong> och andra behandlade träslag.</li>
+<li><strong>Förorenade massor</strong> och avfall med farliga ämnen.</li>
+</ul>
+<p>Dessutom ska brännbart avfall sorteras ut (3 kap. 12 §). Ordningen är alltså: farligt avfall först, sedan de sex materialslagen, därefter brännbart – och först det som blir kvar kan hanteras som blandat restavfall.</p>
+
+<h2>Dokumentation och rapportering – vad tillsynen frågar efter</h2>
+<p>För farligt avfall gäller anteckningsskyldighet: du ska föra anteckningar om avfallets typ, mängd, ursprung och mottagare. Sedan 1 november 2020 ska uppgifterna också rapporteras till Naturvårdsverkets avfallsregister, senast två arbetsdagar efter att anteckningen ska göras (avfallsförordningen 6 kap. 11 §). Vilka uppgifter anteckningen ska innehålla regleras närmare i Naturvårdsverkets föreskrifter NFS 2020:5. Missad rapportering är en av de vanligaste bristerna vid tillsyn.</p>
+<p>En central fråga i rivning är <strong>vem som är avfallsproducent</strong> och därmed bär anteckning-och rapporteringsskyldigheten – rivningsentreprenören eller fastighetsägaren/beställaren. Naturvårdsverkets vägledning lutar åt att det vid större arbeten som underhåll, ROT, byggande och rivning är den anlitade entreprenören som är avfallsproducent, eftersom entreprenören har mest rådighet över avfallet. Undantaget är om avtalet fråntar underentreprenören rådigheten – då kan i stället byggherren eller huvudentreprenören vara producent. Reglera ansvaret tydligt i entreprenadavtalet så att ingen part utgår från att den andra rapporterar.</p>
+<p>Lutar du dig mot ett undantag från sorteringskravet ska du dokumentera din bedömning och kunna visa upp den för miljöförvaltningen på begäran. Det är i praktiken ditt bevis på att du följer reglerna.</p>
+
+<h2>Undantag och dispens – när får du blanda?</h2>
+<p>Det finns två generella undantag enligt Naturvårdsverkets föreskrifter NFS 2020:7, som inte kräver någon ansökan:</p>
+<ul>
+<li>Material är så sammanfogat i konstruktionen att det inte är tekniskt genomförbart att separera det.</li>
+<li>Avfallet är så förorenat att en separering skulle försämra kvaliteten på behandlingen eller återvinningen.</li>
+</ul>
+<p>Vill du samla avfallet blandat utan att omfattas av ett generellt undantag måste du söka <strong>dispens</strong> hos tillsynsmyndigheten – i praktiken oftast den kommunala miljönämnden – i förväg (3 kap. 15–17 §§). Dispens kan ges om separat insamling inte är tekniskt genomförbar, inte ger någon miljönytta som överväger nackdelarna, eller medför orimliga kostnader. Räkna med handläggningstid – planera dispensfrågan innan rivningen startar, inte när containern redan står full.</p>
+
+<h2>Sanktioner om du blandar – föreläggande, vite och miljöbrott</h2>
+<p>Tillsynen sköts av den kommunala miljönämnden. Vid brister kan nämnden utfärda ett föreläggande om rättelse, ofta förenat med vite – ett förutbestämt belopp du tvingas betala om du inte åtgärdar felet. Allvarliga överträdelser kan bedömas som otillåten avfallshantering eller nedskräpning enligt miljöbalken 29 kap., vilket är straffsanktionerat.</p>
+<p>En viktig nyansering: det finns <strong>ingen fast schablon-miljösanktionsavgift med ett bestämt kronbelopp</strong> specifikt för att låta bli att sortera de sex fraktionerna. Sprids påståenden om exakta bötesbelopp bör du vara skeptisk – kontrollera alltid mot avfallsförordningen och din lokala miljöförvaltning innan du citerar en siffra.</p>
+
+<h2>Checklista för din arbetsplats</h2>
+<ul>
+<li>En container eller behållare per fraktion – trä, mineral, metall, glas, plast, gips.</li>
+<li>Tydlig skyltning vid varje kärl så att alla på plats sorterar rätt.</li>
+<li>Materialinventering före rivning som identifierar farligt avfall.</li>
+<li>Kvitton och mottagningsbevis från godkänd mottagare, sparade i minst 7 år.</li>
+<li>Dokumenterad bedömning om du åberopar ett undantag.</li>
+<li>Registrering av farligt avfall i avfallsregistret inom två arbetsdagar.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte myndighetsrapporteringen till avfallsregistret, men gör det enkelt att bevisa att rutinen finns och följs. Du bygger in sorteringspunkterna i din egenkontroll så att varje projekt får en spårbar avstämning – vem som ansvarar, vilka fraktioner som hanteras och var mottagningsbevisen finns. Undantagsbedömningar och foton kan sparas på projektet, så att du snabbt kan visa upp underlaget om miljöförvaltningen gör tillsyn. Fler mallar och kalkylatorer hittar du samlat i <a href="/sv/verktyg">våra gratis verktyg</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vilka fraktioner måste sorteras ut på byggarbetsplatsen?</h3>
+<p>Minst sex: trä, mineral (betong, tegel, klinker, keramik eller sten), metall, glas, plast och gips. Dessutom ska farligt avfall och brännbart avfall sorteras ut separat enligt avfallsförordningen 3 kap.</p>
+<h3>Kan jag samla allt blandat och sortera på en central anläggning?</h3>
+<p>Nej. Sorteringen ska ske vid källan, alltså på platsen där avfallet uppstår. Undantag kräver antingen ett generellt undantag enligt NFS 2020:7 eller en dispens som du söker i förväg hos tillsynsmyndigheten, i praktiken oftast den kommunala miljönämnden.</p>
+<h3>Vem ansvarar för att rapportera farligt avfall vid rivning?</h3>
+<p>Ansvaret ligger på den som är avfallsproducent. Vid rivning lutar Naturvårdsverkets vägledning åt att det är den anlitade entreprenören som är avfallsproducent, eftersom entreprenören har mest rådighet över avfallet. Har avtalet fråntagit underentreprenören rådigheten kan i stället byggherren eller huvudentreprenören vara producent. Reglera ansvaret i avtalet och rapportera till avfallsregistret inom två arbetsdagar.</p>
+<h3>Hur stor blir böterna om jag inte sorterar?</h3>
+<p>Det finns ingen fast miljösanktionsavgift med ett bestämt belopp för själva sorteringsbrottet. Miljönämnden kan i stället utfärda föreläggande förenat med vite, och grova fall kan bli otillåten avfallshantering enligt miljöbalken 29 kap.</p>
+
+<h2>Kom igång</h2>
+<p>Lägg avfallssorteringen i din projektrutin redan idag med vår <a href="/sv/verktyg/egenkontroll-mall">mall för egenkontroll</a>, och stäm alltid av mot avfallsförordningen och din lokala miljöförvaltning. Vill du se hur ByggExp håller ihop egenkontroll och dokumentation i skarpa projekt? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler 2026 och kontrollplanen</a>, <a href="/sv/blog/kontrollplan-mall-bygglov">Kontrollplan-mall för bygglov</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
+`;
+
+const A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG: BlogPost = {
+  _id: "code-"+"rivningsavfall-sorteringskrav-bygg",
+  title: "Rivningsavfall: sorteringskrav på bygg- och rivningsplatsen 2026", slug: "rivningsavfall-sorteringskrav-bygg", locale: "sv",
+  excerpt: "Sex fraktioner ska sorteras vid källan. Guiden går igenom vad som gäller 2026 – farligt avfall, dokumentation, dispens och vem som är avfallsproducent vid rivning.", tag: "Regelverk",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG_HTML,
+  seoTitle: "Rivningsavfall: sorteringskrav 2026 | ByggExp", seoDescription: "Så sorterar du bygg- och rivningsavfall rätt 2026: sex fraktioner vid källan, farligt avfall, dokumentation, dispens och vem som är avfallsproducent.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T14:00:00.000Z", createdAt: "2026-08-19T14:00:00.000Z", updatedAt: "2026-08-19T14:00:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG,
     A_AVVIKELSEHANTERING_BYGG_MALL,
     A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG,
     A_ARBETSBEREDNING_MALL_BYGG,

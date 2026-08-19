@@ -5,6 +5,14 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'konsumenttjanstlagen-hantverkare-15-procent',
+  'korjournal-krav-skatteverket-bygg',
+  'sank-arbetsgivaravgift-unga-vaxa-stod-2026',
+  'entreprenadtvist-undvika-dokumentation',
+  'kostnadskontroll-byggprojekt-marginal',
+  'digitalisera-byggforetag-projektstyrning',
+  'momsavdrag-latt-lastbil-personbil-bygg',
+  'vilka-forsakringar-behover-byggforetag',
   'egenavgifter-enskild-firma-bygg',
   'startbesked-bygglov-process-2026',
   'ob-overtid-byggavtalet-rakna',

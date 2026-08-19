@@ -10180,9 +10180,652 @@ const A_EGENAVGIFTER_ENSKILD_FIRMA_BYGG: BlogPost = {
   publishedAt: "2026-08-19T09:46:00.000Z", createdAt: "2026-08-19T09:46:00.000Z", updatedAt: "2026-08-19T09:46:00.000Z",
 };
 
+const A_KONSUMENTTJANSTLAGEN_HANTVERKARE_15_PROCENT_HTML = `
+<p>Prisfrågan är den vanligaste tvistefrågan mellan hantverkare och privatkund. Jobbet drar ut på tiden, väggen visar sig vara rutten bakom kaklet, och slutfakturan landar långt över det pris du muntligt kastade fram vid första besöket. Kunden vägrar betala, och du står med en fordran du kanske inte kan driva in. Konsumenttjänstlagen (KtjL) styr exakt hur mycket du får överskrida ett lämnat pris — och det berömda 15 %-taket i 36 § är både snävare och mer villkorat än många i branschen tror. Här går vi igenom regelverket paragraf för paragraf, så att du kan avisera merkostnader på ett sätt som håller juridiskt.</p>
+
+<p>Grunden för allt är en tydlig offert där prismodellen framgår svart på vitt. Sätt upp den med <a href="/sv/verktyg/offert-mall">vår gratis offertmall &rarr;</a> så slipper du efterhandsdiskussioner om vad ni egentligen kom överens om.</p>
+
+<h2>Tre prismodeller — och bara en utlöser 15 %-regeln</h2>
+<p>KtjL är tvingande till konsumentens förmån: avtalsvillkor som är sämre för kunden än lagen är utan verkan. Det första du måste ha klart för dig är vilken prismodell du faktiskt har lämnat, för det avgör hur mycket utrymme du har.</p>
+<ul>
+<li><strong>Fast pris</strong> får inte ändras alls. Har du lämnat ett fast pris är du bunden vid det, punkt slut — merkostnader får du bära själv om inget annat följer av lagen.</li>
+<li><strong>Takpris (högsta pris)</strong> får inte överskridas. Du kan fakturera mindre om jobbet gick fortare, men aldrig mer än taket.</li>
+<li><strong>Ungefärligt pris</strong> är den enda modellen där 15 %-regeln i 36 § gäller: det uppgivna priset får inte överskridas med mer än 15 %.</li>
+</ul>
+<p>Har inget pris avtalats alls ska konsumenten betala ett <em>skäligt</em> pris enligt 36 §. Det låter fritt, men i praktiken hamnar du i en bevissituation där du måste kunna motivera varje krona — betydligt sämre läge än en tydlig offert.</p>
+
+<h2>Vad 15 %-taket i 36 § faktiskt innebär</h2>
+<p>Enligt 36 § konsumenttjänstlagen (1985:716) gäller: har näringsidkaren lämnat en ungefärlig prisuppgift får det uppgivna priset inte överskridas med mer än 15 procent — om inte annan prisgräns har avtalats eller näringsidkaren har rätt till pristillägg enligt 38 §. Allmänna reklamationsnämnden (ARN) tillämpar samma tröskel i sin praxis.</p>
+<p>Två saker missförstås ofta. För det första räknas taket på <strong>hela</strong> den ungefärliga prisuppgiften, inte per post. Lämnade du 100 000 kr ungefärligt får slutsumman bli högst 115 000 kr — även om en enskild delpost sprack med 40 %. För det andra måste priset verkligen ha lämnats som ungefärligt. Ett vagt formulerat "ca-pris" som kunden rimligen uppfattar som fast blir bindande som fast pris, och då finns inget 15 %-utrymme överhuvudtaget. Oklarhet tolkas till konsumentens fördel. Skriv därför uttryckligen "ungefärlig prisuppgift" i offerten — inte bara ett cirkatecken framför siffran.</p>
+
+<h2>De två lagliga vägarna över 15 % (38 §)</h2>
+<p>38 § KtjL anger uttömmande när du får ta betalt utöver det ungefärliga priset och dess 15 %-tak. Det finns exakt två vägar:</p>
+<ol>
+<li><strong>Tilläggsarbete enligt 8 §</strong> — arbete utöver det avtalade uppdraget som du och kunden kommit överens om att utföra.</li>
+<li><strong>Kostnadsökningar hänförliga till konsumenten</strong> som du inte bort förutse — exempelvis att kunden lämnat felaktiga uppgifter om underlaget eller vägrat ge dig tillträde så att arbetet fördröjts.</li>
+</ol>
+<p>Allt annat får du inte fakturera över taket. Blev virket dyrare på grund av allmänna prisökningar? Underskattade du din egen tidsåtgång? Sådant faller på dig, inte kunden. Det är just den här begränsningen som gör att ordet "oförutsett" måste kunna knytas till konsumentens förhållanden — inte till din egen kalkyl.</p>
+
+<h2>Aviseringsplikten steg för steg (8 § och 4 §)</h2>
+<p>4 § KtjL kräver att du utför tjänsten fackmässigt och med tillbörlig omsorg tar till vara kundens intressen samt <em>samråder</em> med kunden i den utsträckning som behövs. 8 § konkretiserar detta för tilläggsarbete: uppkommer behov av arbete som lämpligen bör utföras samtidigt ska du underrätta konsumenten och begära anvisningar. I praktiken innebär det en tydlig kedja:</p>
+<ol>
+<li>Upptäck avvikelsen — den rutna reglen, det extra skiktet, den felaktiga befintliga installationen.</li>
+<li>Stoppa och underrätta kunden innan du fortsätter.</li>
+<li>Begär anvisningar <strong>skriftligt</strong>, med beskrivning av arbetet och vad merkostnaden blir.</li>
+<li>Vänta på OK innan du utför tilläggsarbetet.</li>
+</ol>
+<p>Når du inte kunden får du enligt 8 § ändå utföra tilläggsarbetet om priset är obetydligt eller lågt i förhållande till avtalet, eller om det finns särskild anledning att anta att kunden vill ha det utfört. Men luta dig inte mot det undantaget i onödan — konsekvensen av utebliven avisering är att rätten att ta betalt för merkostnaden kan gå helt förlorad. Underlåter du att underrätta kunden riskerar du att inte kunna driva in beloppet alls.</p>
+
+<h2>Fackmässighet och avrådandeplikt (4 § och 6 §)</h2>
+<p>Merkostnader som beror på ditt eget slarv eller ofackmässigt utförande får aldrig vältras över på kunden — brister fackmässigheten anses tjänsten felaktig enligt 4 §. Om du måste göra om ett moment för att första försöket inte höll fackmässig standard är det din kostnad.</p>
+<p>6 § lägger till en avrådandeplikt: är tjänsten inte till rimlig nytta för konsumenten, eller blir priset oproportionerligt högt i förhållande till nyttan, ska du avråda. Upptäcker du halvvägs in att renoveringen blir dyrare än vad huset tål värdemässigt, säg det. Följer du inte avrådandeplikten kan din rätt till betalning begränsas — även för arbete du faktiskt utfört.</p>
+
+<h2>Reklamationsrätten du måste räkna med (17 §)</h2>
+<p>Prishanteringen slutar inte när fakturan är betald. Enligt 17 § KtjL får kunden reklamera fel inom skälig tid efter att felet märkts eller borde ha märkts — och en underrättelse inom <strong>två månader</strong> anses alltid ha skett i rätt tid. Den yttersta fristen är normalt tre år efter att uppdraget avslutades, men för arbete på mark, byggnader eller andra anläggningar på mark eller i vatten, samt fasta saker, gäller <strong>tio år</strong>. Har du handlat grovt vårdslöst eller i strid mot tro och heder gäller alltid tio år.</p>
+<p>För dig som bygg- eller anläggningsföretag betyder det i praktiken en tioårig exponering på merparten av dina jobb. Din dokumentation — offert, ÄTA-underlag, aviseringar och signaturer — måste därför kunna plockas fram långt efter avslutat uppdrag.</p>
+
+<h2>Praktisk checklista och mallformuleringar</h2>
+<ul>
+<li><strong>Ange prismodellen explicit i offerten.</strong> Skriv "fast pris", "takpris (högsta pris)" eller "ungefärlig prisuppgift" — inte ett ensamt cirkatecken som kan tolkas emot dig.</li>
+<li><strong>Använd en ÄTA-lapp med signatur.</strong> Varje tilläggs- och ändringsarbete dokumenteras, prissätts och signeras innan det utförs. Sätt upp den med <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall &rarr;</a>.</li>
+<li><strong>Avisera merkostnad skriftligt</strong> — sms, mejl eller signerad lapp — med belopp och orsak, och invänta OK.</li>
+<li><strong>Spara all dokumentation i tio år</strong> för arbete på byggnader, mark och fasta saker.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp bygger inte bort juridiken åt dig, men verktygen gör det enkelt att göra rätt. I offertmallen anger du prismodell direkt, så att "ungefärlig prisuppgift" står tydligt utskrivet och 15 %-utrymmet faktiskt gäller. ÄTA-mallen ger dig ett spårbart underlag för varje tilläggsarbete med plats för beskrivning, pris och kundens godkännande — precis det som 8 § kräver. Och eftersom offerter, ÄTA och godkännanden samlas per projekt har du kvar aviseringskedjan om en reklamation dyker upp flera år senare. Målet är att din merkostnad ska vara aviserad, godkänd och dokumenterad — inte en tvist i efterhand.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Gäller 15 %-taket alltid när jag lämnat ett pris?</h3>
+<p>Nej. 36 § KtjL:s 15 %-tak gäller enbart när du lämnat en <em>ungefärlig</em> prisuppgift. Fast pris får inte ändras alls och takpris får inte överskridas. Har du lämnat ett vagt "ca-pris" som kunden uppfattat som fast, kan det bli bindande som fast pris — då finns inget 15 %-utrymme.</p>
+<h3>Hur kan jag ta betalt mer än 15 % över det ungefärliga priset?</h3>
+<p>Bara på de två vägar som 38 § anger: tilläggsarbete enligt 8 § som du och kunden kommit överens om, eller kostnadsökningar som beror på omständigheter hänförliga till konsumenten och som du inte bort förutse. Allt annat, som egna felkalkyler eller allmänna prisökningar, får du inte lägga ovanpå taket.</p>
+<h3>Vad händer om jag glömmer avisera merkostnaden?</h3>
+<p>Underlåter du att underrätta kunden om förändrade förhållanden eller merkostnad kan din rätt att ta betalt för det beloppet gå förlorad. Merkostnaden riskerar då att inte kunna drivas in alls, även om arbetet var nödvändigt. Avisera därför alltid skriftligt och invänta kundens anvisning.</p>
+<h3>Hur länge kan kunden reklamera mitt arbete?</h3>
+<p>Kunden ska reklamera inom skälig tid, och en reklamation inom två månader räknas alltid som i rätt tid. Yttersta fristen är tre år, men tio år för arbete på byggnader, mark och andra anläggningar samt fasta saker — och alltid tio år vid grov vårdslöshet. Spara därför din dokumentation i minst tio år.</p>
+
+<h2>Kom igång</h2>
+<p>Rätt prishantering börjar i offerten och fortsätter i varje ÄTA. Ange prismodellen tydligt med <a href="/sv/verktyg/offert-mall">offertmallen</a>, dokumentera tilläggsarbeten med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a> och avisera merkostnader skriftligt innan du utför dem. Vill du se hur ByggExp samlar offerter, ÄTA och godkännanden per projekt så att aviseringskedjan finns kvar även efter tio år — <a href="/sv/contact">boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten — så hanterar du ändringar och tillägg</a>, <a href="/sv/blog/reklamation-hantverkstjanst-frister">Reklamation av hantverkstjänst — frister att hålla koll på</a> och <a href="/sv/blog/muntligt-avtal-sakra-bevis">Muntligt avtal — så säkrar du bevis</a>.</p>
+`;
+
+const A_KONSUMENTTJANSTLAGEN_HANTVERKARE_15_PROCENT: BlogPost = {
+  _id: "code-"+"konsumenttjanstlagen-hantverkare-15-procent",
+  title: "Konsumenttjänstlagens 15 %-tak: så aviserar du merkostnader utan att bryta mot KtjL", slug: "konsumenttjanstlagen-hantverkare-15-procent", locale: "sv",
+  excerpt: "Ungefärligt pris får enligt 36 § konsumenttjänstlagen överskridas med max 15 % — här är de två lagliga vägarna över taket och hur du aviserar merkostnader så att du behåller rätten att ta betalt.", tag: "Juridik",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_KONSUMENTTJANSTLAGEN_HANTVERKARE_15_PROCENT_HTML,
+  seoTitle: "15 %-taket i KtjL för hantverkare | ByggExp", seoDescription: "Ungefärligt pris får överskridas med max 15 % enligt 36 § KtjL. Så aviserar du tilläggsarbete och merkostnader korrekt — och behåller rätten att fakturera.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T10:00:00.000Z", createdAt: "2026-08-19T10:00:00.000Z", updatedAt: "2026-08-19T10:00:00.000Z",
+};
+
+const A_KORJOURNAL_KRAV_SKATTEVERKET_BYGG_HTML = `
+<p>För dig som driver byggföretag är körjournalen ofta det enda som står mellan firmabilen och en dyr efterbeskattning. Många hantverkare tror att en servicebil eller lätt lastbil automatiskt är fredad – men om du haft möjlighet att köra bilen privat är det <strong>du</strong>, inte Skatteverket, som måste kunna bevisa motsatsen. Och det beviset heter körjournal.</p>
+
+<p>Håll ordning på tjänsteresorna redan från början – planera och dokumentera dagens körningar tillsammans med arbetstiden i <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -></a> så att underlaget finns när deklarationen eller en granskning kommer.</p>
+
+<h2>Så funkar förmånsbeskattningen – 100 mil- och 10-tillfällensgränsen</h2>
+
+<p>Utgångspunkten är enkel: kör du firmabilen privat mer än i ringa omfattning ska du förmånsbeskattas. Skatteverket definierar ringa omfattning som privat körning på <strong>högst 100 mil OCH högst 10 tillfällen per år</strong>. Båda villkoren måste vara uppfyllda samtidigt. Överskrider du något av dem – till exempel 11 korta privatresor även om du bara kört 40 mil – beskattas hela bilförmånen.</p>
+
+<p>Vad kostar det då att missa gränsen? Förmånsvärdet för en bil tagen i trafik från och med 1 juli 2021 beräknas 2026 så här, med prisbasbeloppet 59 200 kr:</p>
+
+<ul>
+<li>Ett prisbasbeloppsrelaterat belopp: 0,29 × 59 200 kr = <strong>17 168 kr</strong></li>
+<li>En räntedel: 2,785 % av nybilspriset (baserat på statslåneräntan 2,55 %)</li>
+<li>13 % av nybilspriset</li>
+<li>Plus bilens fordonsskatt</li>
+</ul>
+
+<p>För en miljöbil sätts nybilspriset ned innan beräkningen: 350 000 kr för el- eller vätgasbil, 140 000 kr för laddhybrid och 100 000 kr för gasbil – dock högst 50 % av nybilspriset. Är bilen äldre än sex år får nybilspriset inte sättas lägre än fyra prisbasbelopp. Poängen är tydlig: ett fullt förmånsvärde kostar tiotusentals kronor per år i beskattad inkomst. En noggrant förd körjournal är billig i jämförelse.</p>
+
+<h2>Dispositionsrätten och bevisbördan</h2>
+
+<p>Här snubblar många byggföretagare. Det räcker att du haft <strong>möjlighet</strong> att använda bilen privat – dispositionsrätt – för att Skatteverket ska kunna presumera att förmån uppstått. Du behöver alltså inte ens ha kört privat; det räcker att du kunnat. Presumtionen bryts normalt bara med en mycket noggrant förd körjournal som visar att den privata körningen hållit sig under ringa omfattning.</p>
+
+<p>Detta gäller inte bara personbilar. Även servicebilar, lätta lastbilar och till synes otympliga arbetsfordon kan förmånsbeskattas om körjournalen är bristfällig och du haft privat dispositionsrätt. Det har prövats i praxis. Att bilen är full av verktyg och inte direkt lämpar sig för semesterresan är alltså inget säkert skydd – dokumentationen är det som avgör. Osäker på om ditt fordon räknas som service- eller förmånsbil? Vi går igenom skillnaden i <a href="/sv/blog/servicebil-eller-formansbil">servicebil eller förmånsbil</a>.</p>
+
+<h2>Vad en körjournal måste innehålla enligt Skatteverket</h2>
+
+<p>Det finns inga uttryckliga lagregler om exakt vad en körjournal ska innehålla – Skatteverket ger rekommendationer. Men kraven i praktiken är höga, och en godtagbar körjournal bör innehålla:</p>
+
+<ul>
+<li>Bilens registreringsnummer</li>
+<li>Aktuellt år</li>
+<li>Mätarställning vid årets början och vid årets slut</li>
+<li>För varje resa: datum</li>
+<li>Mätarställning vid start och vid slut</li>
+<li>Antal körda mil eller kilometer</li>
+<li>Startadress och slutadress</li>
+<li>Ärendets syfte</li>
+<li>Vilka platser, företag eller kontakter som besökts</li>
+</ul>
+
+<p>Det sista är särskilt viktigt för byggbranschen. En rad med bara ort och millantal räcker sällan – ange kunden, byggarbetsplatsen eller leverantören så att resan går att verifiera mot fakturor, arbetsordrar och tidrapporter.</p>
+
+<h2>Så för du den så att den håller vid granskning</h2>
+
+<p>Skatteverket vill att körjournalen förs löpande, i nära anslutning till resorna. Veckovis uppdatering accepteras, men daglig registrering rekommenderas – och är i praktiken det som väger tyngst om journalen ifrågasätts. Tänk på följande:</p>
+
+<ul>
+<li><strong>Notera även privatkörningen.</strong> Det är avsaknaden av privata poster som gör en journal otrovärdig. Redovisar du dina fåtal privatresor öppet ser Skatteverket att du har koll och håller dig under gränsen.</li>
+<li><strong>Anteckna tankningar.</strong> Skriv upp antal liter och pris vid tankning – det underlättar beräkningen av privat körning och styrker att förbrukningen matchar de redovisade milen.</li>
+<li><strong>Förklara det oregelbundna.</strong> Långa resor, körningar mellan flera byggarbetsplatser på en dag eller avstickare för materialhämtning bör ha en tydlig ärendebeskrivning så att de inte ser ut som privatresor.</li>
+</ul>
+
+<p>Ett kort exempel på en godtagbar rad: <em>2026-03-12, start 42 180 mil, slut 42 214 mil, 34 mil, Verkstan Kungälv → Villa Ekhagen, Partille, montage yttertak kund Nilsson.</em> Den raden går att verifiera – vagt formulerade poster gör det inte.</p>
+
+<h2>Drivmedel och milersättning 2026</h2>
+
+<p>Körjournalen påverkar även hur drivmedel beskattas. Betalar arbetsgivaren för privat bränsle värderas drivmedelsförmånen till marknadsvärdet av det privata bränslet × 1,2 vid inkomstbeskattningen (arbetsgivaravgifter beräknas dock på marknadsvärdet utan uppräkning). Kan du <strong>inte</strong> visa hur bilen använts – alltså ingen körjournal – beskattas du för allt drivmedel som förbrukats under året. Där blir avsaknaden av dokumentation direkt dyr.</p>
+
+<p>Åt andra hållet krävs körjournal för att du ska få ut skattefri milersättning. För 2026 gäller (oförändrat mot 2025) 25 kr/mil för egen privat bil i tjänsten, 12 kr/mil för förmånsbil som drivs med diesel, bensin, etanol eller hybrid inklusive laddhybrid, och 9,50 kr/mil för helt eldriven förmånsbil. Ersättning över dessa belopp beskattas som lön. Körjournalen är underlaget som styrker tjänstemilen. Vi går igenom nivåerna i detalj i <a href="/sv/blog/milersattning-2026">milersättning 2026</a>.</p>
+
+<p>Vill du dessutom visa att du kör mer än 3 000 mil i tjänsten per år med förmånsbil – vilket kan ge jämkning av förmånsvärdet – krävs också dokumentation via körjournal. Hur jämkningen räknas hem tar vi upp i <a href="/sv/blog/justerat-formansvarde-servicebil">justerat förmånsvärde för servicebil</a>.</p>
+
+<h2>Papper, app eller GPS?</h2>
+
+<p>En pappersjournal i handskfacket fungerar, men risken för luckor och efterhandskonstruktion är stor – och en journal som uppenbart fyllts i i efterhand tappar bevisvärde. En elektronisk körjournal, till exempel en app eller GPS-baserad lösning, registrerar resorna automatiskt och minskar risken för glömda poster. Bra att veta: en elektronisk körjournal påverkar inte bilens förmånsvärde – den räknas inte som extrautrustning. Du kan alltså installera den utan att förmånsvärdet höjs.</p>
+
+<h2>Checklista före deklarationen och vid en revision</h2>
+
+<ul>
+<li>Mätarställning vid årets ingång och utgång noterad</li>
+<li>Alla tjänsteresor med datum, adresser, mil och ärende</li>
+<li>Privatresorna redovisade – under 100 mil och 10 tillfällen?</li>
+<li>Tankningar med liter och pris antecknade</li>
+<li>Körjournalen stämmer mot fakturor, arbetsordrar och tidrapporter</li>
+<li>Sparad tillsammans med övrigt bokföringsunderlag i sju år</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+
+<p>ByggExp ersätter inte en dedikerad körjournalstjänst, men verktyget ger dig underlaget som gör körjournalen trovärdig. När du tidrapporterar per projekt och kund byggs det upp en spårbar logg över var dina montörer varit och vilka arbetsplatser som besökts – exakt den information som en granskad körjournal behöver kunna verifieras mot. Kopplar du ihop tidrapport, projekt och fakturaunderlag blir det svårt för Skatteverket att ifrågasätta att en resa var i tjänsten, eftersom arbetet på plats finns dokumenterat samma dag. Vår tidrapport-mall är en enkel start; för löpande drift finns projektöversikten i systemet.</p>
+
+<h2>Vanliga frågor</h2>
+
+<h3>Måste jag föra körjournal om jag har servicebil?</h3>
+<p>Ja, om du haft privat dispositionsrätt. Även servicebilar och lätta lastbilar kan förmånsbeskattas när körjournalen är bristfällig, vilket prövats i praxis. Att bilen är ett arbetsfordon ger inget automatiskt skydd – dokumentationen avgör.</p>
+
+<h3>Hur ofta måste körjournalen fyllas i?</h3>
+<p>Löpande, i nära anslutning till resorna. Veckovis uppdatering accepteras av Skatteverket, men daglig registrering rekommenderas och väger tyngst om journalen ifrågasätts. En journal som fyllts i långt i efterhand tappar bevisvärde.</p>
+
+<h3>Vad händer om jag kör 101 mil privat?</h3>
+<p>Då är gränsen för ringa omfattning överskriden och hela bilförmånen beskattas. Gränsen går vid högst 100 mil och högst 10 tillfällen per år – båda villkoren måste hållas samtidigt.</p>
+
+<h3>Räknas elektronisk körjournal som extrautrustning?</h3>
+<p>Nej. En elektronisk körjournal påverkar inte bilens förmånsvärde och räknas inte som extrautrustning. Den minskar dessutom risken för luckor och efterhandskonstruktion jämfört med en pappersjournal.</p>
+
+<h2>Kom igång</h2>
+
+<p>Börja med att strukturera dina tjänsteresor och arbetstider på ett spårbart sätt med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall</a>. Vill du se hur tidrapport, projekt och fakturaunderlag hänger ihop och stärker din körjournal? <a href="/sv/contact">Boka en demo här -></a></p>
+
+<p>Relaterat: <a href="/sv/blog/milersattning-2026">Milersättning 2026</a>, <a href="/sv/blog/servicebil-eller-formansbil">Servicebil eller förmånsbil?</a>, <a href="/sv/blog/justerat-formansvarde-servicebil">Justerat förmånsvärde för servicebil</a>.</p>
+`;
+
+const A_KORJOURNAL_KRAV_SKATTEVERKET_BYGG: BlogPost = {
+  _id: "code-"+"korjournal-krav-skatteverket-bygg",
+  title: "Körjournal: Skatteverkets krav och hur du slipper förmånsbeskattning på firmabilen", slug: "korjournal-krav-skatteverket-bygg", locale: "sv",
+  excerpt: "Bevisbördan för att firmabilen inte körts privat ligger på dig – inte på Skatteverket. Så för du en körjournal som håller vid granskning.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/tidrapport-preview.webp", contentHtml: A_KORJOURNAL_KRAV_SKATTEVERKET_BYGG_HTML,
+  seoTitle: "Körjournal – krav från Skatteverket | ByggExp", seoDescription: "Så för du en körjournal som håller vid Skatteverkets granskning. Innehållskrav, ringa omfattning och hur du undviker förmånsbeskattning på firmabilen 2026.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/tidrapport-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T10:03:00.000Z", createdAt: "2026-08-19T10:03:00.000Z", updatedAt: "2026-08-19T10:03:00.000Z",
+};
+
+const A_SANK_ARBETSGIVARAVGIFT_UNGA_VAXA_STOD_2026_HTML = `
+<p>Hur mycket billigare blir en lärling eller första anställd i ett byggföretag 2026? Frågan är högst konkret, för det finns just nu två parallella spår som båda handlar om <strong>sänkt arbetsgivaravgift för unga 2026 i bygg</strong>: den nya tillfälliga ungdomsnedsättningen på 20,81 % och det utvidgade Växa-stödet på 10,21 %. Båda mäts mot den fulla avgiften på 31,42 %, men de fungerar helt olika – och en av dem har fått en byråkratisk ändring 2026 som lurar många småföretagare. Nedan reder vi ut reglerna och räknar på kronor per månad och år för en typisk lärling.</p>
+
+<p>Vill du snabbt se vad en anställd kostar per debiterbar timme när avgiften ändras? Testa <a href="/sv/verktyg/timpris-kalkylator">vår gratis timpris-kalkylator</a> och lägg in olika avgiftssatser för att se hur marginalen påverkas.</p>
+
+<h2>Så ser arbetsgivaravgiften ut 2026 (baslinjen)</h2>
+<p>Den fulla arbetsgivaravgiften är oförändrad 2026 och ligger på <strong>31,42 %</strong> av bruttolönen. Av den utgör ålderspensionsavgiften 10,21 %, och resten är ett antal andra avgifter (sjukförsäkring, föräldraförsäkring, arbetsmarknadsavgift med flera). Det här är den siffra alla rabatter räknas ifrån – tänk på den som listpriset.</p>
+<ul>
+<li><strong>Full avgift:</strong> 31,42 % – standard för de flesta anställda.</li>
+<li><strong>Ungdomsnedsättning:</strong> 20,81 % – tillfällig, på lön upp till 25 000 kr/mån.</li>
+<li><strong>Växa-stöd:</strong> 10,21 % – endast ålderspensionsavgiften, på lön upp till 35 000 kr/mån.</li>
+</ul>
+
+<h2>Ungdomsnedsättningen 2026: vem, hur mycket och när</h2>
+<p>Från och med 2026 införs en tillfällig nedsättning för unga. För anställda som vid årets ingång har fyllt 18 men inte 23 – alltså födda 2003–2007 för 2026 – sänks arbetsgivaravgiften till <strong>20,81 %</strong> på månadslön upp till 25 000 kr. På den del av lönen som överstiger 25 000 kr betalar du full avgift, 31,42 %.</p>
+<p>Nedsättningen gäller ersättning som betalas ut under perioden <strong>1 april 2026–30 september 2027</strong> och tillämpas automatiskt i arbetsgivardeklarationen – du behöver inte ansöka. En viktig reservation: det här är en politiskt tidsbegränsad åtgärd, och både slutdatum och procentsats kan justeras. Kontrollera alltid aktuell sats hos Skatteverket innan du budgeterar långsiktigt.</p>
+
+<h2>Växa-stödet 2026: 10,21 % i upp till 24 månader</h2>
+<p>Växa-stödet är betydligt mer generöst. Det sänker arbetsgivaravgiften till bara ålderspensionsavgiften, <strong>10,21 %</strong>, på lön upp till 35 000 kr per kalendermånad, i upp till 24 sammanhängande månader. Sedan 1 januari 2025 kan stödet omfatta både den första och den andra anställde – tidigare bara en. För två anställda över två år kan besparingen bli 350 000 kr eller mer.</p>
+<p>Villkoren är dock strikta. I korthet gäller att:</p>
+<ul>
+<li>Företaget är en enskild firma eller ett aktiebolag utan anställda, eller med högst en anställd sedan 1 januari 2024 (handelsbolag: max två delägare).</li>
+<li>Anställningen har startat efter 30 april 2024 (den högre gränsen 35 000 kr gäller anställningar efter det datumet).</li>
+<li>Anställningen pågår minst tre sammanhängande månader och omfattar minst 20 timmar per vecka.</li>
+<li>Personen får inte ha varit anställd i verksamheten de senaste tre åren, och det finns begränsningar för att anställa nära familj.</li>
+</ul>
+<p>Bygg är faktiskt den enskilt största mottagaren av Växa-stöd – ungefär 15 % av utbetalningarna går till byggsektorn, just för att så många byggföretag startar som enmansbolag och sedan tar in sin första yrkesarbetare.</p>
+
+<h2>Nyheten som lurar många: från 2026 måste du ansöka om återbetalning</h2>
+<p>Här kommer den stora procedurändringen. Från och med redovisningsperioden januari 2026 markeras nedsättningen inte längre direkt på individuppgiften i arbetsgivardeklarationen. Istället måste du <strong>betala in full arbetsgivaravgift först</strong> och sedan ansöka om <strong>återbetalning</strong> av den nedsatta delen, senast ett år efter den månad du begär stöd för.</p>
+<p>Själva pengabeloppet är oförändrat – men kassaflödet och administrationen förändras. Du ligger ute med mellanskillnaden tills återbetalningen kommer, vilket för ett litet byggföretag med tight likviditet kan spela roll. Bakgrunden är att Växa-stödet nu formellt klassas som stöd av mindre betydelse (de minimis) enligt EU:s regler, med ett tak på 300 000 euro över en treårsperiod per företag.</p>
+
+<h2>Räkneexempel: vad kostar en lärling på 30 000 kr/mån 2026?</h2>
+<p>Ta en lärling eller första anställd med 30 000 kr i månadslön. Så här skiljer sig avgiften:</p>
+<ul>
+<li><strong>Full avgift (31,42 %):</strong> 9 426 kr/mån, ca 113 100 kr/år.</li>
+<li><strong>Växa-stöd (10,21 %):</strong> 3 063 kr/mån, ca 36 800 kr/år. Besparing ca <strong>6 363 kr/mån</strong> eller ca 76 400 kr/år.</li>
+<li><strong>Ungdomsnedsättning (20,81 % upp till 25 000 kr):</strong> 25 000 × 20,81 % = 5 203 kr plus 5 000 × 31,42 % = 1 571 kr, totalt ca 6 774 kr/mån. Besparing ca <strong>2 652 kr/mån</strong> eller ca 31 800 kr/år.</li>
+</ul>
+<p>Slutsatsen är tydlig: för en ung förstaanställd slår Växa-stödet ungdomsnedsättningen med bred marginal, eftersom 10,21 % är lägre än 20,81 % och gäller på högre lönetak. Vill du se hur besparingen slår igenom på ditt påslag och din marginal? Räkna vidare i <a href="/sv/verktyg/paslag-marginal-kalkylator">vår påslags- och marginalkalkylator</a>.</p>
+
+<h2>Ungdomsnedsättning eller Växa-stöd – vad ska byggföretaget välja?</h2>
+<p>Beslutslogiken är enklare än den ser ut:</p>
+<ol>
+<li>Är det din <strong>första eller andra anställd</strong> och uppfyller du Växa-stödets villkor? Använd Växa-stödet – det är mest generöst.</li>
+<li>Är den anställde ung men utöver de första två anställningarna, eller har de 24 Växa-månaderna tagit slut? Då blir <strong>ungdomsnedsättningen</strong> relevant, förutsatt att personen är född 2003–2007 och lönen ligger runt eller under 25 000 kr.</li>
+</ol>
+<p>De två nedsättningarna kan inte tillämpas på samma avgiftsbas samtidigt, så det handlar om att välja rätt spår per anställd – inte att stapla dem på samma lön.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li>Att tro att man fortfarande markerar stödet direkt i deklarationen – från 2026 krävs ansökan om återbetalning.</li>
+<li>Att missa ettårsgränsen för att söka återbetalning.</li>
+<li>Att räkna med Växa-stöd trots att man haft mer än en anställd sedan 1 januari 2024.</li>
+<li>Att anställa nära familj och sedan få avslag på Växa-stödet.</li>
+<li>Att budgetera ungdomsnedsättningen som permanent – den gäller bara 1 april 2026–30 september 2027.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp räknar inte åt Skatteverket, men verktyget hjälper dig att se konsekvensen av olika avgiftssatser i din egen prissättning. När du lägger in en anställds lön och avgift i timpris-kalkylatorn ser du direkt hur mycket den debiterbara timmen sjunker när Växa-stödet eller ungdomsnedsättningen slår till – och hur din marginal förändras. Det gör det enklare att sätta rätt timpris på en lärling som är billigare i avgift men mindre produktiv i början. Verktygen ersätter inte rådgivning från din redovisningskonsult, men de ger dig ett snabbt underlag att fatta beslut på.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Kan jag kombinera ungdomsnedsättningen och Växa-stödet?</h3>
+<p>Inte på samma avgiftsbas för samma lön. Du väljer det stöd som passar per anställd. Eftersom Växa-stödet ger 10,21 % mot ungdomsnedsättningens 20,81 % är Växa-stödet nästan alltid bättre för en förstaanställd som uppfyller villkoren.</p>
+<h3>Gäller stöden inhyrd personal eller underentreprenörer?</h3>
+<p>Nej. Båda nedsättningarna gäller din egen anställda personal där du betalar arbetsgivaravgift. Inhyrd personal och underentreprenörer fakturerar dig – där gäller i stället momsreglerna, ofta omvänd byggmoms mellan byggföretag.</p>
+<h3>Måste jag ansöka om stödet 2026?</h3>
+<p>Ungdomsnedsättningen tillämpas automatiskt i arbetsgivardeklarationen. Växa-stödet måste du däremot från januari 2026 ansöka om som återbetalning – du betalar full avgift först och begär tillbaka den nedsatta delen senast ett år efter aktuell månad.</p>
+<h3>Kan procentsatserna ändras under året?</h3>
+<p>Ungdomsnedsättningen är en tidsbegränsad politisk åtgärd, så både sats och slutdatum kan justeras. Kontrollera alltid aktuella satser och villkor hos Skatteverket innan du budgeterar eller lämnar anbud.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att räkna på vad din nästa lärling faktiskt kostar per timme med olika avgiftssatser i <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a>. Vill du se hur ByggExp kan hjälpa hela ditt byggföretag med tid, priser och underlag? <a href="/sv/contact">Boka en demo här</a> så visar vi hur det funkar i praktiken.</p>
+
+<p>Relaterat: <a href="/sv/blog/vad-kostar-en-anstalld-byggforetag">Vad kostar en anställd i ett byggföretag?</a> och <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag – så gör du steg för steg</a>.</p>
+`;
+
+const A_SANK_ARBETSGIVARAVGIFT_UNGA_VAXA_STOD_2026: BlogPost = {
+  _id: "code-"+"sank-arbetsgivaravgift-unga-vaxa-stod-2026",
+  title: "Sänkt arbetsgivaravgift för unga och Växa-stöd 2026 – så mycket billigare blir lärlingen", slug: "sank-arbetsgivaravgift-unga-vaxa-stod-2026", locale: "sv",
+  excerpt: "Två spår sänker arbetsgivaravgiften 2026 – den nya ungdomsnedsättningen och Växa-stödet. Vi räknar på vad en lärling faktiskt kostar och vilket stöd som lönar sig.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_SANK_ARBETSGIVARAVGIFT_UNGA_VAXA_STOD_2026_HTML,
+  seoTitle: "Sänkt arbetsgivaravgift unga 2026 | ByggExp", seoDescription: "Så mycket billigare blir en lärling eller första anställd 2026 med ungdomsnedsättningen (20,81 %) och Växa-stödet (10,21 %). Räkneexempel för byggföretag.",
+  seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T10:06:00.000Z", createdAt: "2026-08-19T10:06:00.000Z", updatedAt: "2026-08-19T10:06:00.000Z",
+};
+
+const A_ENTREPRENADTVIST_UNDVIKA_DOKUMENTATION_HTML = `
+<p>En entreprenadtvist kostar tid, pengar och kundrelationer – och de flesta går att undvika långt innan de hamnar hos en jurist eller i domstol. Det avgörande sker inte i efterhand, utan under projektets gång. Den hantverkare eller det byggföretag som dokumenterar löpande står med bevisen i handen när det väl blir oenigt, medan motparten sitter kvar med sina minnesbilder. De fyra vanligaste tvistorsakerna är fel i utförandet, försening, ÄTA-arbeten och utebliven betalning – och samtliga avgörs ytterst av vem som kan visa vad som faktiskt hände.</p>
+
+<p>Ett bra ställe att börja är en byggdagbok som förs samma dag som arbetet utförs – testa vår <a href="/sv/verktyg/byggdagbok-mall">gratis byggdagboksmall -&gt;</a> och gör den samtida dokumentationen till en rutin i stället för en efterhandskonstruktion.</p>
+
+<h2>De fyra vanligaste tvistorsakerna</h2>
+<p>Nästan alla entreprenadtvister kan sorteras under fyra rubriker, och gemensamt för dem alla är att de handlar om bevisning – vem sa vad, när, och till vilket pris.</p>
+<ul>
+<li><strong>Fel i utförandet.</strong> Beställaren menar att arbetet inte håller avtalad kvalitet. Frågan blir då vad som var avtalat och vad som faktiskt levererades.</li>
+<li><strong>Försening.</strong> Vem orsakade dröjsmålet? Beror det på entreprenören, på beställarens hinder, eller på tillkommande arbeten som förskjutit tidplanen?</li>
+<li><strong>ÄTA-arbeten.</strong> Oenighet om beställning, omfattning och pris. ÄTA lyfts genomgående fram som den enskilt vanligaste tvistefrågan i entreprenader.</li>
+<li><strong>Betalning.</strong> Obetalda fakturor och ÄTA där beställaren bestrider att arbetet var beställt eller att priset är rimligt.</li>
+</ul>
+<p>Poängen är enkel: den som har skriftliga spår vinner, den som förlitar sig på minnet förlorar.</p>
+
+<h2>ÄTA: den vanligaste fällan</h2>
+<p>ÄTA står för ändrings-, tilläggs- och avgående arbeten och regleras i AB 04 och ABT 06 kap 2 §§ 3–9. Skillnaden mellan avtalen är viktig. Enligt AB 04 (kap 2 § 6) ska en beställning av ÄTA ske skriftligen innan arbetet påbörjas – och en ritning eller ett PM räknas som skriftlig beställning. Enligt ABT 06, som gäller totalentreprenad där entreprenören själv projekterar, finns inget formellt krav på skriftlig beställning; muntligt räcker rent juridiskt.</p>
+<p>Låt dig inte luras av det. Även på en totalentreprenad ska du alltid dokumentera. En muntlig beställning som ingen kommer ihåg är värdelös när fakturan ifrågasätts sex månader senare.</p>
+<p>Glöm inte heller underrättelseskyldigheten: förhållanden som ger rätt till ÄTA – exempelvis likställda ÄTA – ska anmälas till beställaren <em>utan dröjsmål</em>. Utebliven eller för sen underrättelse kan innebära att du förlorar rätten till både ersättning och tidsförlängning. Praktiskt betyder det en ÄTA-lapp per ändring, med omfattning, tids- och kostnadspåverkan, koppling till rätt ritning eller version, samt kvittens från beställaren.</p>
+
+<h2>Byggdagboken som räddar dig</h2>
+<p>En byggdagbok eller platsdagbok är inte ett generellt lagkrav, men den blir ofta bindande genom AB 04/ABT 06. Den ska föras löpande och innehålla datum, väder och temperatur, närvarande personal och underentreprenörer, utfört arbete, materialleveranser, avvikelser, hinder, fattade beslut och utförda ÄTA.</p>
+<p>Kärnbudskapet är att en anteckning skriven samma dag väger betydligt tyngre som bevis än en minnesbild flera månader senare. Det är just samtidigheten som gör dagboken till ett så starkt verktyg vid tvist om försening och ansvar – den visar dag för dag vad som stod i vägen och vem som orsakade det. En dagbok som fylls i i efterhand, inför en tvist, har långt sämre bevisvärde.</p>
+
+<h2>Egenkontroll och kontrollplan – två system, inte ett</h2>
+<p>Här blandar många ihop två skilda saker. Byggherrens kontrollplan och egenkontroll enligt PBL är ett myndighetskrav vid lov- och anmälningspliktiga åtgärder. Entreprenörens avtalade egenkontroll enligt AB 04/ABT 06 är någonting annat. Kontrollplanen enligt PBL är normalt mindre omfattande än byggherrens samlade egenkontroll och ersätter den inte.</p>
+<p>För dig som utförare är den dokumenterade egenkontrollen – med foton och mätvärden – ditt främsta skydd mot felpåståenden. Kan du visa att du kontrollmätte fuktkvot, dokumenterade fallet i våtrummet eller fotograferade tätskiktet före kakelsättning, blir det svårt för beställaren att i efterhand hävda att arbetet inte höll måttet.</p>
+
+<h2>Fristerna som avgör om du får betalt</h2>
+<p>Många byggföretag förlorar pengar inte på grund av dåligt arbete, utan för att de missar en tidsfrist. I AB 04/ABT 06 gäller följande:</p>
+<ul>
+<li><strong>Entreprenörens fordringar</strong> – till exempel obetalda ÄTA – preskriberas 6 månader efter entreprenadens godkännande (kap 6 § 19).</li>
+<li><strong>Beställarens anspråk på förseningsvite</strong> preskriberas 3 månader efter godkännandet (kap 5 § 3).</li>
+</ul>
+<p>Missar du fristen förlorar du rätten att kräva betalning. Slutbesiktningen och godkännandet startar alltså klockan – slarva inte med den. Kom också ihåg garantiansvaret: garantitiden är som huvudregel 5 år för entreprenörens arbetsprestation och 2 år för material och varor, medan ansvarstiden är 10 år från godkännandet. Under garantitiden gäller omvänd bevisbörda – <strong>du</strong> måste bevisa att felet inte beror på dig. Efter garantitiden är det beställaren som måste bevisa att du orsakat felet, och då krävs ansvar bara för väsentliga fel som beror på vårdslöshet.</p>
+
+<h2>När kunden är konsument</h2>
+<p>Arbetar du mot privatpersoner gäller konsumenttjänstlagen (1985:716) i stället. Enligt 17 § ska reklamation ske inom skälig tid, och en reklamation inom 2 månader efter att felet upptäckts anses alltid ha skett i rätt tid. Den yttersta reklamationsfristen är 3 år, men 10 år för arbete på mark, byggnader och andra fasta anläggningar. Vid grov vårdslöshet eller handlande i strid mot tro och heder gäller alltid 10 år.</p>
+<p>Använd rätt standardavtal: ABS 18 för ny- och tillbyggnad av en- eller tvåbostadshus, och Hantverkarformuläret 17 för mindre projekt som målning, golv och snickeri. Båda är framtagna av Konsumentverket tillsammans med byggbranschen och är tvingande till konsumentens förmån där konsumenttjänstlagen ger starkare skydd. Skriv alltid tydligt avtal med pris och tidplan. Blir det ändå tvist kan konsumenten vända sig till ARN (Allmänna reklamationsnämnden), som lämnar en rekommendation till beslut. Sedan 1 augusti 2025 är lägsta värdegräns 3 000 kr för bostadstvister, anmälningsavgiften är 150 kr och handläggningstiden runt 6 månader.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp samlar den löpande dokumentationen på ett ställe, så att bevisningen byggs upp automatiskt medan projektet pågår – inte i panik efteråt. Du för byggdagbok samma dag från mobilen på bygget, registrerar varje ÄTA med omfattning, pris och kvittens kopplat till rätt projekt, och sparar egenkontroller med foton och mätvärden. Allt hamnar tidsstämplat och sökbart per projekt, vilket gör att du snabbt kan ta fram exakt vad som skedde ett visst datum om en fråga uppstår. Verktyget avgör inte en tvist åt dig, men det gör det enkelt att faktiskt ha den samtida dokumentation som väger tyngst när det gäller.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste ÄTA-arbeten alltid beställas skriftligt?</h3>
+<p>Enligt AB 04 (kap 2 § 6) ska beställning ske skriftligen innan arbetet påbörjas, och en ritning eller ett PM räknas som skriftlig beställning. I ABT 06 finns inget formellt skriftlighetskrav – muntligt räcker. Oavsett avtal bör du alltid dokumentera skriftligt, eftersom det är dokumentationen som avgör en eventuell tvist.</p>
+<h3>Hur länge kan jag kräva betalt för utförda ÄTA?</h3>
+<p>Enligt AB 04/ABT 06 kap 6 § 19 preskriberas entreprenörens fordringar 6 månader efter entreprenadens godkännande. Missar du den fristen förlorar du rätten att kräva betalning, så bevaka den noga efter slutbesiktning.</p>
+<h3>Är byggdagbok ett lagkrav?</h3>
+<p>Nej, det finns inget generellt lagkrav på byggdagbok. Men den blir ofta bindande genom AB 04/ABT 06, och framför allt är den ditt starkaste bevismedel. Anteckningar som skrivs samma dag väger betydligt tyngre än minnesbilder i efterhand.</p>
+<h3>Vad gäller för reklamation när kunden är privatperson?</h3>
+<p>Konsumenttjänstlagen (1985:716) gäller. Reklamation inom 2 månader efter att felet upptäckts anses alltid ha skett i rätt tid. Yttersta frist är 3 år, men 10 år för arbete på byggnader och andra fasta anläggningar.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg upp bevisningen medan projektet pågår. Börja med en samtida byggdagbok via vår <a href="/sv/verktyg/byggdagbok-mall">byggdagboksmall</a>, håll ordning på ändringar med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a> och dokumentera kvaliteten med <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmallen</a>. Vill du se hur allt hänger ihop i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi hur du får dokumentationen på plats utan extra pappersarbete.</p>
+
+<p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten – så hanterar du dem rätt</a>, <a href="/sv/blog/byggdagbok">Byggdagbok: krav, innehåll och rutiner</a>, <a href="/sv/blog/havning-av-entreprenad">Hävning av entreprenad</a>.</p>
+`;
+
+const A_ENTREPRENADTVIST_UNDVIKA_DOKUMENTATION: BlogPost = {
+  _id: "code-"+"entreprenadtvist-undvika-dokumentation",
+  title: "Undvik entreprenadtvist: dokumentationen som räddar dig i efterhand", slug: "entreprenadtvist-undvika-dokumentation", locale: "sv",
+  excerpt: "Nästan alla entreprenadtvister handlar ytterst om bevisning – den som dokumenterar löpande vinner i efterhand.", tag: "Entreprenadjuridik",
+  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_ENTREPRENADTVIST_UNDVIKA_DOKUMENTATION_HTML,
+  seoTitle: "Undvik entreprenadtvist | ByggExp", seoDescription: "De fyra vanligaste tvistorsakerna i entreprenader – och vilken dokumentation (dagbok, ÄTA, egenkontroll) som avgör tvisten i efterhand.",
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T10:09:00.000Z", createdAt: "2026-08-19T10:09:00.000Z", updatedAt: "2026-08-19T10:09:00.000Z",
+};
+
+const A_KOSTNADSKONTROLL_BYGGPROJEKT_MARGINAL_HTML = `
+<p>Marginalen fanns där när anbudet lämnades. Ändå är den borta när slutfakturan är skickad. Det är en av de vanligaste frustrationerna i byggföretag – och orsaken är sällan ett dåligt räknat anbud. Problemet är att leverantörsfakturor, material och ÄTA inte följs upp per projekt i realtid, utan först syns när bokslutet är klart och pengarna redan är spenderade. God <strong>kostnadskontroll i byggprojekt</strong> handlar därför inte om att räkna bättre en gång, utan om att mäta utfallet löpande mot kalkylen.</p>
+
+<p>Börja med att lägga en realistisk kalkyl med rätt påslag – testa vår gratis <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylator →</a> innan du sätter anbudspriset.</p>
+
+<h2>Varför marginalen urholkas – de fyra läckorna</h2>
+<p>Nästan all marginalförlust mellan anbud och slutfaktura går att härleda till fyra konkreta läckor:</p>
+<ul>
+<li><strong>Materialpriser stiger efter anbud.</strong> Ett fastprisanbud lämnat i mars byggs kanske i oktober. Utan indexreglering bär du hela prisökningen själv.</li>
+<li><strong>ÄTA görs men debiteras aldrig.</strong> Beställaren ber om en ändring, arbetet utförs – men det skrivs aldrig ned formellt och hamnar inte på fakturan. Ren gratistid.</li>
+<li><strong>Leverantörsfakturor konteras inte mot rätt projekt.</strong> Fakturan bokförs på ett samlingskonto, och ingen ser att just det här bygget redan sprängt materialbudgeten.</li>
+<li><strong>Löneökningar äter fastpriset.</strong> Byggavtalet mellan Byggnads och Byggföretagen löper 1 maj 2025–30 april 2027 och följer märket på 6,4 % över perioden (3,4 % år ett, 3,0 % år två), varav 0,1 procentenhet per år avser höjd pensionsavsättning. Lönekostnaden stiger alltså mitt under byggtiden – en direkt marginalrisk i fleråriga fastprisprojekt utan indexklausul.</li>
+</ul>
+
+<h2>Kontera varje inköp per projekt – grunden för realtidskontroll</h2>
+<p>Bokföringslagen kräver ändå att varje verifikation kan knytas till affärshändelsen (BFL 5 kap.). Ta det ett steg längre och kontera varje leverantörsfaktura och kvitto på ett projekt eller kostnadsställe. Då får du två saker samtidigt: lagenlig spårbarhet och realtidsuppföljning av projektets faktiska materialkostnad mot förkalkyl.</p>
+<p>Skillnaden är avgörande. Utan projektkontering ser du materialkostnaden först vid bokslut – då är projektet slut och felet är gjort. Med kontering per projekt ser du redan i vecka tre att spillet ligger 15 % över kalkyl och kan agera medan bygget pågår. Det är denna kontering per projekt som ByggExp bygger på.</p>
+
+<h2>ÄTA – den vanligaste marginalläckan</h2>
+<p>Ändrings-, tilläggs- och avgående arbeten (ÄTA) regleras i standardavtalen AB 04 och ABT 06, och här förloras mest pengar av ren formalia. Två regler måste sitta:</p>
+<ul>
+<li><strong>Skriftlighetskravet (AB 04 kap 2 § 6).</strong> ÄTA ska beställas skriftligen. Kravet anses uppfyllt även om beställaren lämnar en ritning eller handling som i sig innefattar en ändring – men muntliga tillrop i bodarna räcker inte.</li>
+<li><strong>Underrättelse utan dröjsmål (AB 04 kap 2 § 9).</strong> Entreprenören måste underrätta beställaren utan dröjsmål om att ett arbete är att betrakta som ÄTA. Görs det för sent riskerar du att helt förlora rätten till ersättning.</li>
+</ul>
+<p>ÄTA på löpande räkning ersätts enligt självkostnadsprincipen (AB 04 kap 6 §§ 9–10). Ersättningsgilla poster är bland annat material, arbetsledning, arbetare, hjälpmedel, underentreprenader, försäkringar och övriga kostnader – plus entreprenörarvode, som beräknas som ett procentpåslag på självkostnaden. Beställaren har rätt att granska originalverifikationer, och underlaget struktureras ofta via blankett LR06. Slutsatsen är enkel: koppla varje ÄTA till projektet direkt, med skriftlig beställning och underlag, annars försvinner både arbetet och betalningen.</p>
+
+<h2>Fakturera rätt – omvänd byggmoms 2026</h2>
+<p>Säljer du byggtjänster till ett annat företag inom byggsektorn – eller till någon som säljer tjänsten vidare – gäller omvänd betalningsskyldighet även 2026. Du lägger ingen moms på fakturan; köparen redovisar och betalar momsen själv. Fakturan måste innehålla en tydlig hänvisning till omvänd betalningsskyldighet samt köparens VAT-nummer.</p>
+<p>Fel här kostar inte marginal direkt, men det ger rättelser, försenad betalning och skadad trovärdighet – och likviditetstapp om du felaktigt fakturerat med 25 % moms som måste krediteras. Bygg fakturamallen rätt från början med vår <a href="/sv/verktyg/faktura-mall">fakturamall →</a>.</p>
+
+<h2>ROT 2026 – nya nivån påverkar arbetskostnaden du säljer</h2>
+<p>Från 1 januari 2026 är ROT-avdraget tillbaka på 30 % av arbetskostnaden. Den tillfälliga höjningen till 50 % gällde bara 12 maj–31 december 2025 och är nu borta. Taket ligger kvar på 50 000 kr per person och år, och det gemensamma ROT+RUT-taket är 75 000 kr per år. RUT är oförändrat 50 %.</p>
+<p>För dig som fakturerar privatkund betyder det att kundens nettopris stiger jämfört med 2025. Var därför tydlig i både offert och faktura om vad som är avdragsgill arbetskostnad kontra material – felaktig fördelning ger avslag på ROT och en missnöjd kund som får en oväntad restsumma att betala.</p>
+
+<h2>Förkalkyl mot efterkalkyl – stäng loopen</h2>
+<p>Marginalkontroll bygger på att förkalkylen (anbudskalkylen innan beslut) jämförs med efterkalkylen (verkligt utfall efter projektet). Nyckeltalen är täckningsbidrag (TB = särintäkt − särkostnad) och täckningsgrad (TB delat med särintäkt). Ett projekt utan efterkalkyl är ett projekt vars fel du upprepar – felprissättningen följer rakt in i nästa anbud.</p>
+<p>Gör det till rutin att efterkalkylera varje avslutat projekt och mata tillbaka lärdomen: låg täckningsgrad på badrum betyder att timpriset eller materialpåslaget behöver justeras nästa gång, inte att du bjuder samma anbud igen och hoppas.</p>
+
+<h2>Praktisk checklista</h2>
+<ol>
+<li>Stäm av leverantörsfakturor mot projekt varje vecka – inte varje kvartal.</li>
+<li>För en ÄTA-logg med skriftlig beställning och underlag för varje ändring.</li>
+<li>Uppdatera prognosen på slutkostnad löpande och jämför med anbudet.</li>
+<li>Kontrollera att fakturor till byggföretag har omvänd moms och köparens VAT-nummer.</li>
+<li>Efterkalkylera vid projektavslut och för in resultatet i nästa anbud.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp är byggt kring kontering per projekt. Varje inköp och leverantörsfaktura konteras mot rätt projekt, så att den faktiska materialkostnaden följs mot kalkylen medan bygget pågår – inte först vid bokslut. ÄTA och material knyts till projektet så att inget arbete försvinner mellan bodarna och fakturan, och du ser täckningsbidraget växa fram i realtid. Det ersätter inte ett skriftligt ÄTA-avtal eller din revisor, men det gör att marginalen blir synlig medan du fortfarande kan påverka den.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är kostnadskontroll i ett byggprojekt?</h3>
+<p>Det är att löpande mäta projektets faktiska kostnader – material, arbete, underentreprenader och ÄTA – mot förkalkylen medan bygget pågår, i stället för att upptäcka avvikelsen först i efterhand. Grunden är att kontera varje inköp per projekt.</p>
+<h3>Varför förlorar man rätten till betalt för ÄTA?</h3>
+<p>Enligt AB 04 kap 2 § 9 ska entreprenören underrätta beställaren utan dröjsmål om att ett arbete är ÄTA, och enligt kap 2 § 6 ska det beställas skriftligen. Missar du underrättelsen eller saknar skriftligt underlag riskerar du att helt förlora rätten till ersättning.</p>
+<h3>Ska jag lägga moms på fakturan till ett annat byggföretag?</h3>
+<p>Nej. Omvänd betalningsskyldighet gäller när du säljer byggtjänster till ett företag inom byggsektorn. Du fakturerar utan moms, hänvisar tydligt till omvänd betalningsskyldighet och anger köparens VAT-nummer. Köparen redovisar momsen.</p>
+<h3>Hur mycket är ROT-avdraget 2026?</h3>
+<p>30 % av arbetskostnaden, med tak på 50 000 kr per person och år. Det gemensamma ROT+RUT-taket är 75 000 kr per år. Den tillfälliga nivån på 50 % gällde endast delar av 2025.</p>
+
+<h2>Kom igång</h2>
+<p>Sätt rätt påslag redan i anbudet med vår <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylator →</a> och fakturera korrekt med rätt momshantering via vår <a href="/sv/verktyg/faktura-mall">fakturamall →</a>. Vill du se hur inköp konteras per projekt och marginalen följs i realtid? <a href="/sv/contact">Boka en demo →</a></p>
+
+<p>Relaterat: <a href="/sv/blog/leverantorsfaktura-bygg-projekt">Leverantörsfaktura per projekt i bygg</a>, <a href="/sv/blog/tackningsbidrag-byggforetag">Täckningsbidrag för byggföretag</a> och <a href="/sv/blog/attestering">Attestering av fakturor</a>.</p>
+`;
+
+const A_KOSTNADSKONTROLL_BYGGPROJEKT_MARGINAL: BlogPost = {
+  _id: "code-"+"kostnadskontroll-byggprojekt-marginal",
+  title: "Kostnadskontroll i byggprojekt – så håller du marginalen mellan anbud och slutfaktura", slug: "kostnadskontroll-byggprojekt-marginal", locale: "sv",
+  excerpt: "Marginalen i anbudet försvinner ofta innan slutfakturan – här är de fyra läckorna och hur du täpper till dem med kostnadskontroll per projekt.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_KOSTNADSKONTROLL_BYGGPROJEKT_MARGINAL_HTML,
+  seoTitle: "Kostnadskontroll byggprojekt | ByggExp", seoDescription: "Så håller du marginalen mellan anbud och slutfaktura: kontera inköp per projekt, debitera all ÄTA och stäng loopen med efterkalkyl. Praktisk guide för byggföretag.",
+  seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T10:12:00.000Z", createdAt: "2026-08-19T10:12:00.000Z", updatedAt: "2026-08-19T10:12:00.000Z",
+};
+
+const A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING_HTML = `
+<p>Sverige hade 123 741 byggföretag 2025, och 88 procent av dem har högst fyra anställda. I praktiken betyder det att ägaren själv sitter med kvällsadministrationen: kvitton i handskfacket, tider på papperslappar, offerter i Word och fakturor i ett Excelark som ingen riktigt litar på. Varje steg lever i sitt eget verktyg, och samma uppgifter matas in om och om igen. Det kostar timmar varje vecka – och ännu mer i glömd fakturering och fel som upptäcks för sent.</p>
+
+<p>Vill du se hur digital tidmätning ser ut i praktiken kan du börja med vår gratis tidrapport-mall -&gt; <a href="/sv/verktyg/tidrapport-mall">/sv/verktyg/tidrapport-mall</a>. Den här artikeln visar vad som faktiskt går att digitalisera i en liten byggfirma, och varför regelläget 2026 gör det digitala till minsta motståndets väg.</p>
+
+<h2>Var tiden faktiskt försvinner i en liten byggfirma</h2>
+<p>Adminkedjan i ett byggprojekt ser i grunden likadan ut oavsett storlek: projekt -&gt; tidrapport -&gt; offert -&gt; faktura -&gt; bokföring. Problemet är inte att varje enskilt steg tar lång tid. Problemet är dubbelarbetet som uppstår när stegen inte hänger ihop. Timmarna skrivs på papper, förs över till ett Excelark, sammanställs manuellt till en faktura och prickas sedan av mot bokföringen – samma siffror, fyra gånger.</p>
+<p>Varje överföring är en felkälla. En glömd papperslapp blir en icke-fakturerad arbetsdag. Ett kundnamn som stavas olika i offert och faktura blir en försenad betalning. Och den offert som skickades i februari återfinns i mejlkorgen först när kunden invänder mot fakturan i maj. Den största kostnaden är alltså inte tidsåtgången i sig, utan pengarna som aldrig faktureras och felen som ingen fångar.</p>
+
+<h2>2026 gör digitalt till standard, inte lyx</h2>
+<p>Flera regler pekar nu åt samma håll. Elektronisk personalliggare krävs på en byggarbetsplats när den totala byggkostnaden väntas överstiga fyra prisbasbelopp, vilket 2026 motsvarar 236 800 kr (prisbasbeloppet är fastställt till 59 200 kr). Kravet gäller från första arbetsdagen, och byggherren ska anmäla till Skatteverket var och när verksamheten påbörjas. Viktigt att veta: Skatteverket kräver inget specifikt system. ID06-kort är inte lagkrav – en app eller läsare som dokumenterar namn, personnummer och tider räcker.</p>
+<p>Samtidigt är e-faktura till offentlig sektor obligatorisk sedan 1 april 2019. Fakturerar din firma en kommun, region eller statlig myndighet måste fakturan skickas elektroniskt, till exempel via Peppol. Något generellt B2B-krav finns ännu inte 2026, men EU:s ViDA gör e-faktura obligatorisk för gränsöverskridande B2B inom EU från 2030. På bokföringssidan har det dessutom blivit enklare: sedan 1 juli 2024 får pappersunderlag kastas så snart informationen förts över korrekt till elektronisk form – det gamla kravet att spara originalet i minst tre år är borta. Fullt digital arkivering är alltså möjlig, så länge du sparar räkenskapsinformationen i sju år.</p>
+
+<h3>Tidrapport som håller för både Skatteverket och Byggavtalet</h3>
+<p>Personalliggare och intern tidrapport överlappar men är inte samma sak. Personalliggaren dokumenterar vem som är och har varit på plats. Tidrapporten är underlaget för lön och fakturering. När tiden registreras digitalt kan samma uppgift direkt bli underlag för både – och för korrekt löneberäkning enligt Byggavtalet, som gäller 2025-05-01 till 2027-04-30 och rymmer både prestationslön (ackord) och tidlön. Rätt ackord kräver rätt tidmätning. Slarv med personalliggaren är dessutom dyrt: Skatteverket kan ta ut kontrollavgift på 2 500, 12 500 eller 25 000 kr beroende på överträdelse, plus 2 500 kr per person som inte är antecknad vid kontroll.</p>
+
+<h2>Offert och faktura i samma flöde</h2>
+<p>En digital offert kan bli order och sedan faktura utan omtag – kunduppgifter, projekt och rader följer med hela vägen. Det är särskilt värdefullt eftersom en fullständig faktura enligt momslagen måste innehålla en rad obligatoriska uppgifter:</p>
+<ul>
+<li>Fakturadatum och ett unikt löpnummer</li>
+<li>Säljarens momsregistreringsnummer</li>
+<li>Säljarens och köparens namn och adress</li>
+<li>Tjänstens art och omfattning (eller varornas mängd och art)</li>
+<li>Leveransdatum</li>
+<li>Beloppet exklusive moms per momssats samt momssats och momsbelopp</li>
+</ul>
+<p>Ett system fyller de här fälten automatiskt från offerten, så att inget glöms. Förenklad faktura är bara tillåten när beloppet är högst 4 000 kr inklusive moms – för de flesta byggjobb krävs alltså den fullständiga varianten. Här hjälper våra mallar för <a href="/sv/verktyg/offert-mall">offert</a> och <a href="/sv/verktyg/faktura-mall">faktura</a> dig att få med allt från start.</p>
+<p>ROT-avdraget är från 1 januari 2026 tillbaka på 30 procent av arbetskostnaden, med tak på 50 000 kr per person och år (ROT och RUT tillsammans högst 75 000 kr). Företaget måste vara godkänt för F-skatt och begär avdraget via fakturamodellen hos Skatteverket. När fakturan hanteras digitalt blir uppdelningen av arbetskostnad och material – och ansökan mot Skatteverket – betydligt enklare att få rätt.</p>
+
+<h2>Allt i ett vs. lösa appar</h2>
+<p>Man kan digitalisera med en app för tid, en för offert och en för faktura. Vinsten blir dock större när de delar data. När tidrapport, offert och faktura bygger på samma kund, samma projekt och samma timmar minskar dubbelinmatningen, färre fakturor missas och spårbarheten blir sammanhängande – vilket är precis vad du behöver vid en tvist eller en kontroll. Frågan är alltså inte antalet verktyg, utan om de hänger ihop.</p>
+
+<h2>Så mycket admin kan en liten firma spara</h2>
+<p>Exakt hur mycket beror på hur firman jobbar idag, men storleksordningen är tydlig. Digitala flöden ger färre kvällar med pappersarbete, snabbare betalt eftersom fakturan kan gå iväg samma dag som jobbet är klart, och mindre risk för både räknefel och sanktionsavgifter. Rama in vinsten som timmar per vecka i sparad admin plus kortare tid från utfört arbete till pengar på kontot – två effekter som märks direkt i en fåmansfirma där ägaren är sin egen ekonomiavdelning.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp samlar tidrapport, offert och faktura i ett flöde som delar samma kund- och projektdata. Tid som registreras på ett jobb kan bli underlag för lön och för fakturan, offerten kan omvandlas till faktura utan att uppgifterna skrivs om, och de obligatoriska momsuppgifterna följer med automatiskt. Målet är att ta bort dubbelinmatningen mellan stegen. ByggExp ersätter inte din revisor eller ett dedikerat personalliggarsystem, men ger dig ett sammanhängande underlag – och du bör alltid stämma av personalliggare, ROT och arkiveringskrav mot Skatteverket och ditt kollektivavtal.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag ha ID06 för att uppfylla kravet på elektronisk personalliggare?</h3>
+<p>Nej. Skatteverket kräver inte ett specifikt system, och ID06-kort är inte lagkrav. Det som krävs är att liggaren är elektronisk och dokumenterar vem som är och har varit på plats, med namn, personnummer och tider. En app eller läsare som fångar de uppgifterna räcker.</p>
+<h3>När krävs elektronisk personalliggare på ett bygge?</h3>
+<p>När den totala byggkostnaden på arbetsplatsen väntas överstiga fyra prisbasbelopp, vilket 2026 motsvarar 236 800 kr. Kravet gäller från första arbetsdagen, och byggherren ska anmäla till Skatteverket var och när verksamheten påbörjas samt tillhandahålla utrustning för att föra liggaren.</p>
+<h3>Hur länge måste jag spara fakturor och underlag?</h3>
+<p>Räkenskapsinformation ska sparas i sju år efter utgången av det kalenderår då räkenskapsåret avslutades. Sedan 1 juli 2024 får du dock kasta pappersunderlaget så snart informationen förts över korrekt till elektronisk form – vilket gör helt digital arkivering möjlig.</p>
+<h3>Hur mycket är ROT-avdraget 2026?</h3>
+<p>Från 1 januari 2026 är ROT tillbaka på 30 procent av arbetskostnaden, med tak på 50 000 kr per person och år. Företaget måste vara godkänt för F-skatt och begär avdraget via fakturamodellen hos Skatteverket.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med det som blöder mest – oftast fakturering eller tidrapportering – och digitalisera ett flöde i taget. Testa vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för att se hur digital tid blir underlag för både lön och faktura. Vill du se hela kedjan samlad kan du boka en visning via <a href="/sv/contact">/sv/contact</a>. Regelverket 2026 belönar redan digitala firmor; den som fortfarande kör papper och Excel betalar med sin egen tid.</p>
+
+<p>Relaterat: <a href="/sv/blog/tidrapportering">Tidrapportering i byggbranschen</a>, <a href="/sv/blog/resursplanering-bygg">Resursplanering för byggföretag</a> och <a href="/sv/blog/offert-till-betald-faktura-flode">Från offert till betald faktura</a>.</p>
+`;
+
+const A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING: BlogPost = {
+  _id: "code-"+"digitalisera-byggforetag-projektstyrning",
+  title: "Från papperslappar och Excel till ett system – så mycket admin sparar en liten byggfirma", slug: "digitalisera-byggforetag-projektstyrning", locale: "sv",
+  excerpt: "Så digitaliserar en liten byggfirma kedjan projekt–tidrapport–offert–faktura och sparar timmar admin varje vecka, samtidigt som 2026 års regler gör digitalt till minsta motståndets väg.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING_HTML,
+  seoTitle: "Digitalisera byggföretag | ByggExp", seoDescription: "Tidrapport, offert och faktura i ett flöde. Så digitaliserar en liten byggfirma projektledningen och sparar timmar admin varje vecka – och möter 2026 års krav.",
+  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T10:15:00.000Z", createdAt: "2026-08-19T10:15:00.000Z", updatedAt: "2026-08-19T10:15:00.000Z",
+};
+
+const A_MOMSAVDRAG_LATT_LASTBIL_PERSONBIL_BYGG_HTML = `
+<p>Två skåpbilar står bredvid varandra hos återförsäljaren. Samma pris, samma totalvikt, båda registrerade som lätt lastbil. På den ena får du lyfta hela momsen vid köp – på den andra noll kronor. Skillnaden kan vara tiotusentals kronor, och den avgörs inte av registreringsbeviset utan av en luftspalt mellan förarhytt och lastutrymme. Det är den detaljen som skiljer en byggare som maxar momsavdraget från en som betalar full moms i onödan.</p>
+
+<p>Innan du bokar in bilköpet, räkna på momsen på köp, leasing och drift med vår gratis <a href="/sv/verktyg/moms-kalkylator">moms-kalkylator -&gt;</a> så ser du svart på vitt vad valet av fordon kostar dig.</p>
+
+<h2>Grundregeln: därför får du inte lyfta moms på personbilen</h2>
+<p>I mervärdesskattelagen finns ett rakt avdragsförbud: moms får inte dras av vid köp av personbil. Det spelar ingen roll att bilen används i din momspliktiga byggverksamhet – huvudregeln säger nej. Full avdragsrätt vid köp gäller bara i ett fåtal verksamheter: återförsäljning (bilhandel), uthyrning, taxitrafik, transport av avlidna och körkortsutbildning. Driver du inte någon av dessa är personbilsmomsen spärrad.</p>
+<p>Detta är utgångspunkten du måste ha klar för dig. Frågan för byggaren är därför inte <em>om</em> bilen används i jobbet, utan om fordonet momsmässigt räknas som personbil eller som en riktig lätt lastbil.</p>
+
+<h2>Full avdragsrätt på riktig lätt lastbil</h2>
+<p>Räknas fordonet som lätt lastbil i momslagen får du dra av hela momsen – både vid köp och vid leasing – så länge bilen används i momspliktig verksamhet. Två fordonstyper ger den fulla rätten:</p>
+<ul>
+<li>Pickup med öppet lastflak.</li>
+<li>Skåpbil där förarhytten är en separat karosserienhet, skild från lastutrymmet med en luftspalt.</li>
+</ul>
+<p>Räkneexempel: en skåpbil med separat hytt kostar 400 000 kr plus moms. Momsen på 25 % blir 100 000 kr. Uppfyller bilen kriterierna och används i din momspliktiga verksamhet lyfter du hela det beloppet. Samma bil utan separat hytt – noll i avdrag vid köp. Det är där skillnaden på tiotusentals kronor uppstår.</p>
+
+<h2>Fällan: skåpbilen som momsmässigt är en personbil</h2>
+<p>Här sitter den vanligaste och dyraste missuppfattningen. I momslagen räknas nämligen en lastbil med skåpkarosseri och totalvikt högst 3 500 kg som <strong>personbil</strong> – och omfattas därmed av avdragsförbudet – utom om förarhytten utgör en separat karosserienhet.</p>
+<p>Det avgörande tekniska kriteriet är luftspalten (luftspannet) mellan hytt och skåp. Finns en diagonal luftspalt som gör hytten till en egen enhet: full avdragsrätt. Saknas luftspalten och skåpet sitter ihop med hytten: personbilsreglerna gäller, oavsett att bilen står registrerad som lätt lastbil i trafikregistret.</p>
+<p>Konsekvensen är att en helt vanlig skåpbil under 3,5 ton utan separat hytt ger <strong>0 % momsavdrag vid köp och bara 50 % vid leasing</strong>. Som det uttryckts i pressen: ett pappersark avgör om företagaren kan köpa rätt bil. Kontrollera alltså konstruktionen fysiskt innan du skriver på – ta inte registreringen som bevis på momsstatus.</p>
+
+<h2>Leasing: 50 %-spärren på personbil och 100 mil-kravet</h2>
+<p>Väljer du att leasa i stället för att köpa gäller andra siffror. På en personbil – och alltså på skåpbilen utan separat hytt – får du dra av högst 50 % av momsen på leasingavgiften. Två villkor måste vara uppfyllda:</p>
+<ul>
+<li>Bilen används i mer än ringa omfattning i momspliktig verksamhet, vilket i praktiken betyder mer än 100 mil per år.</li>
+<li>100 mil-kravet måste vara uppfyllt <strong>varje beskattningsår</strong> – det räcker inte att det stämmer ett enstaka år.</li>
+</ul>
+<p>Kontrasten mot en riktig lätt lastbil är tydlig: där lyfter du hela momsen på leasingavgiften, inte halva. Skillnaden mellan 50 % och 100 % återkommer varje månad så länge kontraktet löper, vilket gör fordonsvalet ännu viktigare vid leasing än vid kontantköp.</p>
+
+<h2>Driftskostnader – här får alla lyfta hela momsen</h2>
+<p>En del av regelverket missas ofta, och den gäller till din fördel. På driftskostnader får du dra av <strong>hela momsen</strong> även för en personbil – förutsatt att bilen används, om än bara delvis, i momspliktig verksamhet. Det gäller alltså även skåpbilen som annars omfattas av avdragsförbudet vid köp. Till driftskostnaderna räknas bland annat:</p>
+<ul>
+<li>Drivmedel</li>
+<li>Service och reparation</li>
+<li>Underhåll</li>
+<li>Besiktning och test</li>
+</ul>
+<p>Många byggföretag drar bara halva driftsmomsen av gammal vana eller för att man blandar ihop reglerna med leasingavgiften. Spara alla kvitton och underlag – här finns pengar att hämta oavsett hur bilen är momsklassad.</p>
+
+<h2>På gång 2026: Förenklingsrådets förslag om alla lätta lastbilar</h2>
+<p>Regelläget kan komma att förändras. Förenklingsrådet lämnade den 11 mars 2025 förslaget FR 2025-7 om att slopa kravet på separat förarhytt, så att <em>alla</em> lätta lastbilar under 3 500 kg – inklusive vanliga skåpbilar utan luftspalt – skulle ge full avdragsrätt. Föreslaget ikraftträdande var 1 januari 2026 och den uppskattade besparingen för företagen cirka 1,4 miljarder kronor per år. Bygg, service, installation, städ, fastighet och skogsbruk pekades ut som särskilt gynnade branscher.</p>
+<p>Viktig brasklapp: detta är fortfarande ett <strong>förslag, inte beslutad lag</strong>. Per augusti 2026 finns inga verifierbara källor som bekräftar att förslaget antagits. Till dess att en proposition eller lagändring faktiskt trätt i kraft gäller personbilsreglerna för skåpbil utan separat hytt. Planerar du ett bilköp där utfallet hänger på den här reformen – kontrollera aktuellt läge direkt hos Skatteverket innan du bestämmer dig.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp fattar inga skattebeslut åt dig, men gör underlaget rätt från början. I moms-kalkylatorn räknar du snabbt fram momsbeloppet på köp, leasingavgift och drift så att du ser vad ett fordonsval faktiskt betyder i kronor innan du signerar. I den löpande faktureringen och bokföringen håller du isär in- och utgående moms, och du samlar kvitton på drivmedel, service och reparationer på ett ställe – redo när du ska lyfta hela driftsmomsen. Underlagen sparas strukturerat så att du klarar kravet på sju års arkivering utan pärmletande.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får jag lyfta momsen på en skåpbil under 3,5 ton?</h3>
+<p>Bara om förarhytten är en separat karosserienhet med luftspalt mot lastutrymmet. Saknas luftspalten räknas skåpbilen som personbil i momslagen och du får 0 % avdrag vid köp och 50 % vid leasing, trots att den är registrerad som lätt lastbil.</p>
+
+<h3>Räcker det att bilen står som lätt lastbil i registreringsbeviset?</h3>
+<p>Nej. Registreringen i trafikregistret styr inte momsen. Det är fordonets konstruktion – separat hytt och luftspalt – som avgör om momsreglerna för lätt lastbil eller personbil gäller. Kontrollera fysiskt eller fråga återförsäljaren innan köp.</p>
+
+<h3>Kan jag dra av momsen på bensin och service för en personbil?</h3>
+<p>Ja. Hela momsen på driftskostnader som drivmedel, service, reparation, underhåll och besiktning är avdragsgill så länge bilen används i din momspliktiga verksamhet – även om bilen omfattas av avdragsförbudet vid köp.</p>
+
+<h3>Betyder full momsavdragsrätt att bilen är skattefri privat?</h3>
+<p>Nej. Momskategoriseringen styr bara momsen. Förmånsvärde och inkomstbeskattning är ett separat regelverk, och en lätt lastbil som används privat kan förmånsbeskattas även om den ger full moms.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna på momsen innan du binder upp firman i ett bilköp eller leasingavtal med vår <a href="/sv/verktyg/moms-kalkylator">moms-kalkylator -&gt;</a>. Vill du se hur ByggExp hanterar moms, fakturering och kvittohantering i din vardag? <a href="/sv/contact">Boka en demo -&gt;</a> så visar vi upplägget för ditt byggföretag.</p>
+
+<p>Relaterat: <a href="/sv/blog/servicebil-eller-formansbil">Servicebil eller förmånsbil</a>, <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a>, <a href="/sv/blog/debitera-servicebil-rot">Debitera servicebil och ROT</a>.</p>
+`;
+
+const A_MOMSAVDRAG_LATT_LASTBIL_PERSONBIL_BYGG: BlogPost = {
+  _id: "code-"+"momsavdrag-latt-lastbil-personbil-bygg",
+  title: "Momsavdrag på firmabilen: lätt lastbil vs personbil (2026)", slug: "momsavdrag-latt-lastbil-personbil-bygg", locale: "sv",
+  excerpt: "Registreringen som lätt lastbil räcker inte – det är luftspalten mellan förarhytt och skåp som avgör om du lyfter hela momsen på firmabilen eller ingen alls.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/moms-preview.webp", contentHtml: A_MOMSAVDRAG_LATT_LASTBIL_PERSONBIL_BYGG_HTML,
+  seoTitle: "Momsavdrag firmabil 2026 | ByggExp", seoDescription: "Lätt lastbil eller personbil momsmässigt? Luftspalten mellan hytt och skåp avgör om du lyfter 100 % eller 0 % moms på bygg-firmabilen. Så maxar du avdraget.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/moms-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T10:18:00.000Z", createdAt: "2026-08-19T10:18:00.000Z", updatedAt: "2026-08-19T10:18:00.000Z",
+};
+
+const A_VILKA_FORSAKRINGAR_BEHOVER_BYGGFORETAG_HTML = `
+<p>Många byggföretagare tror att det finns <em>ett</em> lagkrav på företagsförsäkring. Det stämmer inte. I stället uppstår kraven från flera olika håll samtidigt: kollektivavtal, standardavtal som AB 04 och ABT 06, samt beställarnas egna upphandlingsvillkor. Resultatet blir att en byggfirma i praktiken måste ha flera försäkringar – men få kan rada upp exakt vilka. Den här artikeln ger dig en konkret checklista för 2026, med beloppen hållna generella så att den håller över tid.</p>
+
+<p>Ska du samtidigt se över hur du prissätter och villkorar dina jobb? Börja med <a href="/sv/verktyg/offert-mall">vår gratis offertmall -&gt;</a> så att försäkrings- och ansvarsvillkoren följer med redan i offerten.</p>
+
+<h2>Ansvarsförsäkring – grundskyddet mot skadeståndskrav</h2>
+<p>Ansvarsförsäkringen är det första en byggfirma bör ha. Den träder in när ditt företag blir skadeståndsskyldigt för person- eller sakskada mot tredje man – exempelvis om en granne får sin egendom skadad eller någon utomstående skadas på arbetsplatsen. Utan den kan ett enda krav bli existenshotande.</p>
+<p>När du arbetar enligt AB 04 eller ABT 06 räcker det inte med vilken nivå som helst. Standardavtalen kräver att ansvarsförsäkringen uppgår till minst 200 prisbasbelopp. Prisbasbeloppet för 2026 är fastställt till 59 200 kr, vilket innebär att kravet motsvarar cirka 11,8 MSEK. Försäkringen ska dessutom gälla i minst två år efter godkänd slutbesiktning. Notera att detta är ett avtalskrav och inte ett lagkrav – men i de flesta entreprenader är AB/ABT en förutsättning för att över huvud taget få uppdraget.</p>
+
+<h2>Entreprenad- och allriskförsäkring – skydd för själva bygget</h2>
+<p>Ansvarsförsäkringen skyddar mot krav utifrån. Entreprenad- eller allriskförsäkringen skyddar bygget i sig. Den täcker skador på arbeten, material, maskiner och verktyg under byggtiden – till exempel om en brand, storm eller vattenskada förstör det du redan uppfört. Skyddet gäller dessutom ytterligare två år efter godkänd besiktning för de skador du ansvarar för under garantitiden.</p>
+<p>Enligt AB 04 (kap 5 § 22) och ABT 06 (kap 5 § 23) är entreprenören skyldig att teckna både allrisk- och ansvarsförsäkring. Byggherren blir automatiskt medförsäkrad. BKK (Byggandets Kontraktskommitté) har fastställt en minimiomfattning för dessa försäkringar i en bilaga till AMA AF, och de minimikraven gäller om parterna hänvisar till AMA AF i de administrativa föreskrifterna. Läs alltså kontraktshandlingarna innan du tecknar – omfattningen kan vara bestämd åt dig.</p>
+
+<h2>Rättsskyddsförsäkring – hjälp vid tvister</h2>
+<p>Tvister hör tyvärr till branschen. En rättsskyddsförsäkring täcker ombuds- och rättegångskostnader när du hamnar i konflikt med en beställare, leverantör, kund eller anställd. Den ingår ofta som en del av företagets grundskydd, men nästan alltid med ett kostnadstak och en rad undantag – vissa typer av tvister omfattas inte alls. Kontrollera taket och undantagen mot storleken på de projekt du normalt driver, så att skyddet räcker till en verklig process och inte bara ett inledande brevväxlande.</p>
+
+<h2>Egendoms- och avbrottsförsäkring – skydda lokaler, lager och maskiner</h2>
+<p>Har du egen verkstad, förråd eller ett lager av material och maskiner behöver du en egendomsförsäkring. Den ersätter skador från brand, inbrott och vattenläckor på det du äger. Kopplat till den finns avbrottsförsäkringen, som täcker intäktsbortfall om verksamheten tvingas stå still efter en skada – exempelvis om verkstaden brinner och du inte kan ta nya jobb under återuppbyggnaden. För firmor med betydande eget kapital i lokaler och utrustning är detta en central del av skyddet, inte ett tillägg att skjuta på.</p>
+
+<h2>Krav via kollektivavtal – avtalsförsäkringar</h2>
+<p>Har ditt företag kollektivavtal, som Byggavtalet mellan Byggföretagen och Byggnads, är du som arbetsgivare skyldig att teckna avtalsförsäkringarna inom avtalsområdet. Dessa administreras av AFA Försäkring, som ägs av LO, Svenskt Näringsliv och PTK, och omfattar bland annat TFA (trygghetsförsäkring vid arbetsskada) samt sjuk- och tjänstepensionslösningar. Detta är obligatoriskt för arbetsgivare med kollektivavtal och något helt annat än företagsförsäkringen – de två ersätter inte varandra.</p>
+
+<h2>Lagkrav vid konsumententreprenad – färdigställandeskydd</h2>
+<p>Här finns ett faktiskt lagkrav. När en konsument anlitar dig för att bygga nytt småhus – eller för vissa till- och ombyggnader – krävs ett färdigställandeskydd enligt PBL. Det kan vara antingen en försäkring eller en bankgaranti och ska säkra att bygget kan färdigställas även om något går fel. Vid till- och ombyggnad är det byggnadsnämnden som avgör om skydd krävs. Skyddet behövs inte när byggherren utför arbetet själv. Den tidigare byggfelsförsäkringen med tio års skydd mot dolda fel är däremot inte längre obligatorisk sedan 2014 – den är frivillig och kan tecknas separat.</p>
+
+<h2>Checklista – så bör en byggfirma vara försäkrad 2026</h2>
+<ul>
+<li><strong>Ansvarsförsäkring</strong> – minst 200 prisbasbelopp och två års efterskydd om du jobbar enligt AB/ABT.</li>
+<li><strong>Entreprenad-/allriskförsäkring</strong> – avtalsplikt enligt AB 04 (5:22) och ABT 06 (5:23), byggherren medförsäkrad.</li>
+<li><strong>Rättsskyddsförsäkring</strong> – kontrollera tak och undantag mot dina projektstorlekar.</li>
+<li><strong>Egendoms- och avbrottsförsäkring</strong> – för lokaler, lager, maskiner och intäktsbortfall.</li>
+<li><strong>Avtalsförsäkringar hos AFA</strong> – obligatoriskt om du har kollektivavtal.</li>
+<li><strong>Färdigställandeskydd (enligt lagen om färdigställandeskydd)</strong> – lagkrav vid konsumentbygge av småhus.</li>
+<li><strong>Tillägg efter behov</strong> – maskin-, transport- och cyberförsäkring.</li>
+</ul>
+
+<h2>Vanliga misstag och råd</h2>
+<p>Det vanligaste felet är underförsäkring – att belopp och omfattning inte hängt med när företaget vuxit. Ett annat är att aldrig läsa villkoren förrän en skada inträffar, och då upptäcka undantag eller självrisker som gör ersättningen mager. Självrisknivåerna i entreprenad- och färdigställandesammanhang kan vara betydande och kopplas ofta till prisbasbeloppet, så håll koll på vad just ditt bolag har avtalat. Stäm alltid av beställarens försäkringskrav innan du skriver kontrakt, och gå igenom försäkringsbrevet minst en gång per år.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp tecknar inte dina försäkringar – det gör din mäklare eller ditt försäkringsbolag. Men ByggExp hjälper dig att få ordning på det som avgör vilket skydd du behöver: vilka avtal du jobbar under, vilka belopp dina projekt omfattar och vilka villkor du lovat beställaren. När offerter, avtal och underlag ligger samlat blir det enkelt att visa försäkringsgivaren rätt omsättning och riskbild, och att kontrollera att beställarens krav på ansvars- och entreprenadförsäkring faktiskt är uppfyllda innan du signerar. Du slipper leta i mejl när villkoren ska förnyas.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är företagsförsäkring ett lagkrav för byggföretag?</h3>
+<p>Nej, det finns inget generellt lagkrav på företagsförsäkring i Sverige. Kraven uppstår i stället via kollektivavtal, standardavtal som AB 04/ABT 06 och beställarnas upphandlingskrav. I praktiken kräver byggbranschen ändå ansvarsförsäkring för att du ska få uppdrag.</p>
+<h3>Hur hög måste ansvarsförsäkringen vara?</h3>
+<p>Enligt AB 04 och ABT 06 ska ansvarsförsäkringen uppgå till minst 200 prisbasbelopp, vilket för 2026 motsvarar cirka 11,8 MSEK, och gälla minst två år efter godkänd slutbesiktning. Exakta villkor varierar mellan bolag.</p>
+<h3>När krävs färdigställandeskydd?</h3>
+<p>Färdigställandeskydd är ett lagkrav enligt PBL när en konsument anlitar dig för nybyggnad av småhus, och för vissa till- och ombyggnader. Vid om- och tillbyggnad avgör byggnadsnämnden. Det krävs inte när byggherren bygger själv.</p>
+<h3>Måste jag teckna avtalsförsäkringar?</h3>
+<p>Om ditt företag har kollektivavtal, som Byggavtalet, är du skyldig att teckna avtalsförsäkringarna hos AFA Försäkring, däribland TFA vid arbetsskada. Detta gäller utöver den vanliga företagsförsäkringen.</p>
+
+<h2>Kom igång</h2>
+<p>Se till att försäkrings- och ansvarsvillkoren följer med redan när du lämnar pris – börja med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>. Vill du se hur ByggExp samlar avtal, offerter och projektunderlag på ett ställe? Boka en <a href="/sv/contact">demo</a> så visar vi upplägget.</p>
+
+<p>Relaterat: <a href="/sv/blog/ansvarsforsakring-byggforetag">Ansvarsförsäkring för byggföretag</a>, <a href="/sv/blog/kreditforsakring-byggforetag">Kreditförsäkring för byggföretag</a>, <a href="/sv/blog/starta-byggforetag-2026">Starta byggföretag 2026</a>.</p>
+`;
+
+const A_VILKA_FORSAKRINGAR_BEHOVER_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"vilka-forsakringar-behover-byggforetag",
+  title: "Vilka försäkringar behöver ett byggföretag? Komplett checklista för 2026", slug: "vilka-forsakringar-behover-byggforetag", locale: "sv",
+  excerpt: "En konkret checklista över de försäkringar en svensk byggfirma bör ha 2026 – från ansvars- och entreprenadförsäkring till avtalsförsäkringar och färdigställandeskydd.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_VILKA_FORSAKRINGAR_BEHOVER_BYGGFORETAG_HTML,
+  seoTitle: "Försäkringar byggföretag 2026 | ByggExp", seoDescription: "Vilka försäkringar behöver ett byggföretag? Komplett checklista 2026: ansvars-, entreprenad-, rättsskydds- och egendomsförsäkring – vad du faktiskt måste ha.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T10:21:00.000Z", createdAt: "2026-08-19T10:21:00.000Z", updatedAt: "2026-08-19T10:21:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_KONSUMENTTJANSTLAGEN_HANTVERKARE_15_PROCENT,
+    A_KORJOURNAL_KRAV_SKATTEVERKET_BYGG,
+    A_SANK_ARBETSGIVARAVGIFT_UNGA_VAXA_STOD_2026,
+    A_ENTREPRENADTVIST_UNDVIKA_DOKUMENTATION,
+    A_KOSTNADSKONTROLL_BYGGPROJEKT_MARGINAL,
+    A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING,
+    A_MOMSAVDRAG_LATT_LASTBIL_PERSONBIL_BYGG,
+    A_VILKA_FORSAKRINGAR_BEHOVER_BYGGFORETAG,
     A_EGENAVGIFTER_ENSKILD_FIRMA_BYGG,
     A_STARTBESKED_BYGGLOV_PROCESS_2026,
     A_OB_OVERTID_BYGGAVTALET_RAKNA,

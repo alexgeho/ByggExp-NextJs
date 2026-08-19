@@ -15398,9 +15398,494 @@ const A_ROT_FORDELA_MAKAR_TAK_2026: BlogPost = {
   publishedAt: "2026-08-19T21:00:00.000Z", createdAt: "2026-08-19T21:00:00.000Z", updatedAt: "2026-08-19T21:00:00.000Z",
 };
 
+const A_PRESKRIPTION_FAKTURA_BYGG_SLUTFAKTURA_HTML = `
+<p>Du har utfört jobbet, men slutfakturan blev liggande. Kunden hör inte av sig, projektet rullade vidare och plötsligt har det gått ett par år. Frågan är enkel men dyr: hur länge kan du egentligen vänta innan rätten till betalning försvinner? Svaret styrs av preskriptionslagen (1981:130) – tre år mot en privatperson och tio år mot ett företag – men entreprenadavtal som AB 04 och ABT 06 kan korta ner fristen dramatiskt.</p>
+
+<p>Ett rent underlag och rätt datum minskar risken att en faktura glöms bort. Bygg din slutfaktura i <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall -&gt;</a> så att beställning, ÄTA och belopp är dokumenterade från början.</p>
+
+<h2>Vad preskription betyder i praktiken</h2>
+<p>Preskription innebär att en fordran slutar vara indrivbar. När preskriptionstiden löpt ut utan avbrott förlorar du enligt 8 § preskriptionslagen rätten att kräva betalning – och rätten att använda fordran till kvittning. Arbetet är utfört, men pengarna är förlorade. Det finns ingen ångerknapp.</p>
+<p>En vanlig missuppfattning är att tiden börjar räknas från fakturadatum. Så är det inte. Preskriptionstiden räknas från fordringens tillkomst, alltså normalt när tjänsten är fullgjord. Du kan därför inte förlänga fristen bara genom att skjuta upp faktureringen – tvärtom bränner varje månad du väntar av den tid du har på dig.</p>
+
+<h2>Tre år mot privatperson (konsument)</h2>
+<p>Enligt 2 § andra stycket preskriberas en fordran på tre år när den avser en vara, tjänst eller annan nyttighet som en näringsidkare tillhandahållit en konsument för huvudsakligen enskilt bruk. Ett byggföretag som renoverat ett badrum åt en privatperson har alltså tre år på sig att få sitt betalningskrav framme.</p>
+<p>Konsumentverket är tydligt: det finns inget lagkrav på hur snabbt ett företag måste skicka fakturan efter utfört arbete. Men betalningskravet måste nå kunden inom treårsfristen för att vara giltigt. Väntar du för länge blir fakturan bara ett papper utan rättslig verkan.</p>
+
+<h2>Tio år mot företag (B2B)</h2>
+<p>Huvudregeln i 2 § första stycket säger att en fordran preskriberas tio år efter tillkomsten om preskriptionen inte avbryts. Denna längre frist gäller mellan företag – till exempel när du som underentreprenör fakturerar en beställare som är näringsidkare. Tio år är gott om tid, men se upp: den regeln gäller bara om inget annat avtalats. Och i byggbranschen är något annat mycket ofta avtalat.</p>
+
+<h2>Fällan: entreprenadavtalet krymper fristen</h2>
+<p>Arbetar du under AB 04 eller ABT 06 gäller inte tioårsregeln. Enligt 6 kap. 19 § preskriberas parternas fordringar som är hänförliga till entreprenaden om de inte framställs inom sex månader från entreprenadens godkännande (godkänd slutbesiktning). Undantaget är fordran som avser kontraktssumman eller mervärdesskatt – där gäller två år från godkänd slutbesiktning.</p>
+<p>Det är här pengar försvinner i praktiken. Sexmånadersfristen träffar särskilt ÄTA-arbeten och andra tilläggskrav. Har du utfört extraarbeten men inte framställt kravet inom sex månader efter slutbesiktningen kan ersättningen vara förlorad – även om själva kontraktssumman fortfarande kan krävas i två år.</p>
+<p>Lägg till att beställaren enligt 6 kap. 15 § har rätt att hålla inne fem procent av kontraktssumman (plus ett betryggande belopp för besiktningsanmärkningar) tills fel avhjälpts. Slutfakturan kan alltså vara giltig men ändå inte betalas ut i sin helhet direkt. Håll koll på både avtalade frister och innehållna belopp.</p>
+
+<h2>Preskriptionsavbrott – så håller du fordran vid liv</h2>
+<p>Preskriptionen är inte ödesbestämd. Enligt 5 § avbryts den på tre sätt:</p>
+<ul>
+<li>Gäldenären betalar, betalar ränta eller på annat sätt erkänner fordringen (till exempel en delbetalning eller ett skriftligt medgivande).</li>
+<li>Du som borgenär skickar ett skriftligt krav eller en skriftlig påminnelse.</li>
+<li>Du väcker talan – hos domstol, Kronofogden eller genom skiljeförfarande.</li>
+</ul>
+<p>Efter ett avbrott börjar enligt 6 § en helt ny preskriptionstid av samma längd löpa från dagen för avbrottet. En treårig konsumentfordran kan alltså hållas vid liv förbi tre år genom upprepade skriftliga påminnelser eller ett erkännande. Har avbrottet skett genom rättslig åtgärd räknas den nya fristen enligt 7 § istället från den dag dom eller slutligt beslut meddelas.</p>
+<p>Poängen: skriftlighet är allt. En muntlig påminnelse på bygget räknas i teorin men lämnar dig utan bevis. Skicka skriftligt och spara kopian.</p>
+
+<h2>Checklista: så undviker du att förlora betalning</h2>
+<ol>
+<li>Fakturera i tid – helst direkt efter avslutat arbete eller godkänd slutbesiktning.</li>
+<li>Dokumentera beställning och alla ÄTA skriftligt, med datum.</li>
+<li>Håll koll på AB 04/ABT 06-fristerna: sex månader för de flesta krav, två år för kontraktssumma och moms.</li>
+<li>Skicka skriftliga påminnelser i tid – varje påminnelse startar en ny frist.</li>
+<li>Spara bevis på att kravet skickats (utskick, e-post, mottagningskvitto).</li>
+<li>Ansök om betalningsföreläggande hos Kronofogden innan fristen löper ut om kunden inte betalar.</li>
+</ol>
+
+<h2>Vanliga missförstånd</h2>
+<p><strong>"Jag har tio år på mig."</strong> Bara mot företag. Mot en privatperson är fristen tre år, och under AB 04/ABT 06 ofta bara sex månader för ÄTA.</p>
+<p><strong>"Preskriptionen börjar när jag fakturerar."</strong> Nej – den börjar vid fordringens tillkomst, alltså när tjänsten fullgjordes. Att vänta med fakturan förlänger inget.</p>
+<p><strong>"En muntlig påminnelse räcker."</strong> Rättsligt kanske, men bevisläget är hopplöst. Skriftligt krav gäller.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig hålla ordning på tidslinjen från offert till slutfaktura. När du bygger anbudet i <a href="/sv/verktyg/offert-mall">offertmallen</a> och sedan fakturerar via <a href="/sv/verktyg/faktura-mall">fakturamallen</a> får varje post ett tydligt datum och en spårbar koppling till beställningen – underlag som är guld värt om ett krav senare ifrågasätts. Verktygen räknar inte åt Kronofogden och de ersätter inte juridisk rådgivning, men de gör det svårare för en faktura att bli liggande tills det är för sent. Behöver du bevisa när arbetet fullgjordes eller när ett krav framställdes har du dokumentationen samlad på ett ställe.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur länge kan ett byggföretag vänta med att skicka fakturan?</h3>
+<p>Det finns inget lagkrav på hur snabbt fakturan måste skickas. Men betalningskravet måste nå kunden inom preskriptionstiden – tre år mot en privatperson och tio år mot ett företag – annars förlorar du rätten till betalning. Under AB 04/ABT 06 gäller kortare avtalade frister.</p>
+<h3>Från vilket datum räknas preskriptionstiden?</h3>
+<p>Från fordringens tillkomst, alltså normalt när tjänsten är fullgjord – inte från fakturadatum. Du kan därför inte förlänga tiden genom att skjuta upp faktureringen.</p>
+<h3>Kan jag rädda en fordran som snart preskriberas?</h3>
+<p>Ja. Enligt 5 § avbryts preskriptionen genom ett skriftligt krav eller en påminnelse, genom att kunden erkänner skulden eller delbetalar, eller genom rättslig åtgärd. Efter avbrottet löper en ny preskriptionstid av samma längd (6 §).</p>
+<h3>Vad händer med ÄTA-arbeten i en entreprenad?</h3>
+<p>Under AB 04/ABT 06 preskriberas de flesta entreprenadfordringar, inklusive ÄTA, om de inte framställs inom sex månader från godkänd slutbesiktning. Kontraktssumman och momsen har två år. Framställ ÄTA-kraven skriftligt i god tid.</p>
+
+<h2>Kom igång</h2>
+<p>En fast rutin för slutfakturering skyddar kassaflödet bättre än någon påminnelseavgift. Sätt upp din nästa faktura i <a href="/sv/verktyg/faktura-mall">fakturamallen</a> med korrekta datum och dokumenterat underlag. Vill du se hur ByggExp håller ihop offert, ÄTA och slutfaktura i ett flöde? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a>, <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturor</a> och <a href="/sv/blog/fakturera-som-hantverkare">Så fakturerar du som hantverkare</a>.</p>
+`;
+
+const A_PRESKRIPTION_FAKTURA_BYGG_SLUTFAKTURA: BlogPost = {
+  _id: "code-"+"preskription-faktura-bygg-slutfaktura",
+  title: "Preskription av byggfakturor: så länge kan du vänta med slutfakturan", slug: "preskription-faktura-bygg-slutfaktura", locale: "sv",
+  excerpt: "En byggfordran preskriberas efter 3 år mot konsument och 10 år mot företag – men entreprenadavtal kan krympa fristen till 6 månader. Så undviker du att förlora betalningen.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_PRESKRIPTION_FAKTURA_BYGG_SLUTFAKTURA_HTML,
+  seoTitle: "Preskription byggfaktura & slutfaktura | ByggExp", seoDescription: "3 år mot privatperson, 10 år mot företag. Så länge kan du vänta med slutfakturan innan fordran preskriberas – och så håller du den vid liv.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T22:00:00.000Z", createdAt: "2026-08-19T22:00:00.000Z", updatedAt: "2026-08-19T22:00:00.000Z",
+};
+
+const A_FABRIKSBETONG_ELLER_BLANDA_SJALV_HTML = `
+<p>Kort svar först: för byggarens grund- och plattjobb är fabriksbetong nästan alltid rätt så snart volymen passerar ungefär 1–2 m³. Säck- och torrbetong lönar sig bara på riktigt små gjutningar, plintar och lagningar. Ändå tar diskussionen ny fart på varje bygge, för säck känns billigt i butiken – tills man räknar in antalet säckar och mantimmarna. Den här guiden ger dig mängd- och kostnadsräkningen som avgör valet, riktad till hantverkare och byggföretag, inte gör-det-självaren.</p>
+
+<p>Vill du snabbt översätta area och tjocklek till kubik, antal säckar och kronor? Räkna direkt i vår gratis <a href="/sv/verktyg/betong-kalkylator">betongkalkylator -></a> innan du bestämmer dig.</p>
+
+<h2>De två alternativen i korthet</h2>
+<p>Fabriksbetong (färdigbetong) levereras med roterbil och gjuts direkt eller via pump. Du beställer hållfasthetsklass, till exempel C25/30, och får en dokumenterad produkt. Minsta leverans är oftast 4–6 m³ – beställer du mindre betalar du ändå för minimivolymen. Kapaciteten styr framkomligheten: en 3-axlad bil lastar 5,5–6 m³, en 4-axlad upp till 7,5 m³ och en trailerbil upp till 11 m³. Betong väger cirka 2 400 kg/m³, så bilen blir tung på mjuk mark.</p>
+<p>Säck- eller torrbetong köps som 25 kg-säckar. En säck ger cirka 12,5 liter färdig massa, vilket innebär runt 80 säckar per kubikmeter (72–88 beroende på packning). Byggmax Grovbetong Basic är C20/25 och Finja Grovbetong C32/40 enligt EN 206. Massan blandas för hand, med tombola eller tvångsblandare – och det är där arbetstiden gömmer sig.</p>
+
+<h2>Så räknar du mängden</h2>
+<p>Grundformeln är enkel: volym = area × tjocklek. Lägg på 5–10 % för spill och ojämn undergrund.</p>
+<ul>
+<li><strong>Exempel 1:</strong> 20 m² platta × 0,10 m = 2 m³.</li>
+<li><strong>Exempel 2:</strong> 40 m² platta × 0,10 m = 4 m³.</li>
+</ul>
+<p>Ska du översätta till säck multiplicerar du kubiken med 80. Alltså: 2 m³ = cirka 160 säckar och 4 m³ = cirka 320 säckar. Redan här börjar bilden klarna – 320 säckar är fyra pallar som ska bäras, öppnas, blandas och tömmas innan betongen börjar binda. Mer om spillpåslag finns i vår guide om <a href="/sv/blog/spillprocent-bygg-material">spillprocent för byggmaterial</a>.</p>
+
+<h2>Kostnadsjämförelse per m³</h2>
+<p>Råvarupriset ab fabrik för C25/30 ligger på cirka 900–1 100 kr/m³ exkl. moms, C30/37 eller starkare på 1 000–1 300 kr/m³ och special (fiber, lätt) på 1 100–1 800 kr/m³. Levererat och beställt via betongbil hamnar totalpriset ofta på 1 500–3 500 kr/m³ inkl. transport, och en minorder på 4–6 m³ landar på cirka 10 000–25 000 kr totalt.</p>
+<p>Pump är ett tillägg på 5 000–15 000 kr: standardräckvidd upp till cirka 20 m kostar 5 000–10 000 kr, längre räckvidd 10 000–15 000 kr. Räkna även med prispåslag för snabbhårdnande (+500–1 500 kr/m³), fiber (+300–800 kr/m³) och frostbeständig (+500–1 000 kr/m³). Kväll och helg ger +10–30 %.</p>
+<p>Säckbetong ser billig ut per säck men inte per kubik: 80 säckar × 33–45 kr = cirka 2 600–3 600 kr/m³ i enbart material. Det är alltså klart dyrare per kubik än fabriksbetongens råvara – och då har vi inte lagt till en enda arbetstimme. Poängen är tydlig: så snart volymen blir märkbar är säck dyrare i både material och arbete.</p>
+
+<h2>Räkneexempel byggaren känner igen</h2>
+<p><strong>(a) 15 m² garageplatta, 0,10 m ≈ 1,5 m³.</strong> Med säck: cirka 120 säckar × 40 kr = 4 800 kr i material. Med fabriksbetong slår minimivolymen och eventuell etablering till, vilket kan äta upp fördelen. Här kan säck försvaras, särskilt om åtkomsten är dålig och du ändå har folk på plats.</p>
+<p><strong>(b) 40 m² husgrund, 0,10 m ≈ 4–5 m³.</strong> Med säck: 320–400 säckar. Bara att blanda och tömma det för hand är flera fulla arbetsdagar för ett lag, och kvaliteten blir svår att hålla jämn. Med fabriksbetong plus pump är gjutningen klar på några timmar. Räknar du yrkeslön på 380–520 kr/tim blir mantimmarna dyrare än hela pumpkostnaden. Fabriksbetong vinner klart på både kronor och tid.</p>
+
+<h2>Brytpunkten och tidsfaktorn</h2>
+<p>Yrkesfolk sätter den praktiska gränsen för handblandning vid cirka 1–2 m³. En 9 m²-platta krävde 64 säckar och var mycket tung för en person. Över ungefär 1 m³ hinner betongen börja binda medan du blandar nästa sats, jämn vct och ordentlig vibrering blir svårt att hålla, och du behöver realistiskt tre man. Arbetstiden är den dolda kostnaden – räkna alltid in den när du jämför, precis som du gör i din efterkalkyl. Vill du säkra att marginalen håller när du prissätter jobbet? Testa vår <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylator -></a>.</p>
+
+<h2>Kvalitet, hållfasthet och dokumentation</h2>
+<p>Fabriksbetong levereras med deklarerad hållfasthets- och exponeringsklass enligt EN 206 samt följesedel. Det är avgörande för bärande grund och när jobbet ska besiktigas eller omfattas av garanti. Säckbetong (C20/25–C32/40) räcker gott till plintar och enkla plattor, men jämnheten hänger helt på din blandning – fel vattenmängd sänker hållfastheten snabbt. Vid bärande konstruktion väger dokumentationen ofta tyngre än några tusenlappar i prisskillnad.</p>
+
+<h2>Regler, moms och ROT</h2>
+<p>Momsen är 25 % på både material och arbete. ROT-avdraget 2026 är 30 % av arbetskostnaden med tak på 50 000 kr per person och år (gemensamt ROT- och RUT-tak 75 000 kr). Viktigt: ROT gäller inte nybyggnation eller ny grund, bara renovering och ombyggnad av befintlig bostad äldre än cirka fem år – och aldrig B2B-jobb mot företag. Gjuter du en ny platta kan kunden alltså sällan dra av. Arbetsmiljön väger också in: våt betong är starkt frätande (pH cirka 13) och klassas som hälsofarlig, EU kräver kromreducerad cement enligt REACH, och Arbetsmiljöverket varnar för upprepade tunga lyft – 25 kg-säckar överstiger riktvärdena för återkommande manuell hantering.</p>
+
+<h2>Checklista och beslutsträd</h2>
+<ul>
+<li><strong>Under 1 m³ eller svår framkomlighet:</strong> säck, blanda på plats.</li>
+<li><strong>1–4 m³:</strong> räkna – ofta fabriksbetong utan pump.</li>
+<li><strong>Över 4 m³ eller bärande grund:</strong> fabriksbetong, boka pump vid dålig åtkomst, beställ rätt klass.</li>
+<li><strong>Alltid vid gjutning över 1–2 m³:</strong> planera minst tre man oavsett metod.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte betongleverantören, men tar bort gissningarna före beställning. I betongkalkylatorn matar du in area och tjocklek och får ut kubik, antal säckar och en materialkostnad du kan lägga rakt in i offerten. Kombinerar du det med påslags- och marginalkalkylatorn ser du direkt hur pump, spill och mantimmar påverkar täckningsbidraget innan du lämnar pris. Underlaget blir spårbart, så att efterkalkyl och nästa anbud bygger på verkliga siffror i stället för magkänsla.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>När lönar sig fabriksbetong framför säck?</h3>
+<p>Grovt över 1–2 m³. Då blir säckbetongens materialkostnad (cirka 2 600–3 600 kr/m³) plus arbetstiden dyrare än en betongbil, och kvaliteten blir dessutom lättare att hålla jämn med fabriksbetong.</p>
+<h3>Hur många säckar går det åt per kubikmeter?</h3>
+<p>Cirka 80 säckar à 25 kg per m³, eftersom en säck ger runt 12,5 liter färdig massa. Spannet ligger på 72–88 säckar beroende på packning. En 40 m²-platta på 0,10 m kräver alltså omkring 320 säckar.</p>
+<h3>Måste jag beställa en minimivolym fabriksbetong?</h3>
+<p>Ja, oftast 4–6 m³. Beställer du mindre får du ändå betala för minimivolymen genom småmängds- eller underlasttillägg. Det är en av anledningarna till att riktigt små jobb kan vara billigare med säck.</p>
+<h3>Kan kunden få ROT-avdrag på gjutning?</h3>
+<p>Bara på arbetskostnaden och bara vid renovering eller ombyggnad av befintlig bostad äldre än cirka fem år – 30 % upp till 50 000 kr per person och år. Ny grund, nybyggnation och alla B2B-jobb faller utanför.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna igenom ditt nästa jobb i <a href="/sv/verktyg/betong-kalkylator">betongkalkylatorn</a> och lägg resultatet i offerten på minuter. Vill du se hur ByggExp knyter ihop mängd, kostnad och marginal i din verksamhet? Boka en <a href="/sv/contact">demo</a> så visar vi upplägget.</p>
+
+<p>Relaterat: <a href="/sv/blog/berakna-betongatgang-platta">Beräkna betongåtgång för platta</a>, <a href="/sv/blog/spillprocent-bygg-material">Spillprocent på byggmaterial</a>, <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">Kostnadskontroll och marginal i byggprojekt</a>.</p>
+`;
+
+const A_FABRIKSBETONG_ELLER_BLANDA_SJALV: BlogPost = {
+  _id: "code-"+"fabriksbetong-eller-blanda-sjalv",
+  title: "Fabriksbetong eller blanda själv? Beslutsguide för grund- och plattjobb", slug: "fabriksbetong-eller-blanda-sjalv", locale: "sv",
+  excerpt: "Praktisk brytpunkt, mängdräkning och kostnadsjämförelse som visar när betongbil slår säck på både kronor och mantimmar.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/betong-preview.webp", contentHtml: A_FABRIKSBETONG_ELLER_BLANDA_SJALV_HTML,
+  seoTitle: "Fabriksbetong eller blanda själv | ByggExp", seoDescription: "Beslutsguide för byggare: när lönar sig fabriksbetong med pump vs säckbetong på grund- och plattjobb? Mängd- och kostnadsräkning med tydlig brytpunkt.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/betong-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T22:03:00.000Z", createdAt: "2026-08-19T22:03:00.000Z", updatedAt: "2026-08-19T22:03:00.000Z",
+};
+
+const A_LEASA_ELLER_KOPA_MASKINER_BYGGFORETAG_HTML = `
+<p>Ska ni binda kapital i en ny grävmaskin eller sprida ut kostnaden på en leasingavgift? Frågan avgör inte bara kassaflödet den närmaste månaden – den påverkar låneutrymme, avdrag och den totala kostnaden över maskinens hela livslängd. Rätt svar beror på tre saker: hur ert kassaflöde ser ut, hur länge ni tänker använda maskinen och vilket redovisningsregelverk (K2 eller K3) ni tillämpar. Den här guiden går igenom besluten steg för steg med 2026 års siffror.</p>
+
+<p>Räkna på marginal och kapitalbindning innan du bestämmer dig – använd <a href="/sv/verktyg">våra gratis kalkylverktyg för byggföretag →</a> för att testa hur olika upplägg slår på likviditeten.</p>
+
+<h2>Snabbguiden – när passar leasing och när passar köp?</h2>
+<p>Innan detaljerna, en tumregel att utgå från:</p>
+<ul>
+<li><strong>Leasing passar</strong> när du vill bevara likviditet och låneutrymme, vill ha en jämn och förutsägbar månadskostnad, byter maskiner ofta för att ha senaste tekniken, eller driver ett växande företag där kapitalet gör mer nytta i pågående projekt.</li>
+<li><strong>Köp passar</strong> när du använder maskinen länge (5 år eller mer), vill ha lägst total kostnad, vill äga en tillgång du kan sälja vidare, och har kassaflöde nog att bära anskaffningen utan att strypa driften.</li>
+</ul>
+
+<h2>Så påverkar valet likviditeten och låneutrymmet</h2>
+<p>Vid köp binder du kapital direkt. En maskin för 400 000 kr tar 400 000 kr ur kassan (momsen får du visserligen tillbaka, men själva kostnaden ligger kvar som bunden tillgång). Finansierar du köpet med lån minskar du i stället ditt låneutrymme och belastar balansräkningen med en skuld.</p>
+<p>Vid leasing sprids kostnaden ut på en löpande avgift, ofta över 3–5 år. Du binder inte kapital och sparar checkkrediten och låneutrymmet till andra projekt – ett tungt vägande argument för entreprenörer som ofta ligger ute med pengar innan slutfakturan betalas. Baksidan är att leasing är ett bindande avtal och att maskinen förblir leasegivarens egendom under hela perioden. Vill du läsa mer om hur kassaflödet styr besluten har vi en separat guide om <a href="/sv/blog/likviditet-byggforetag">likviditet i byggföretag</a>.</p>
+
+<h2>Skatt och avdrag vid köp</h2>
+<p>Hur ett köp behandlas skattemässigt beror på maskinens värde och livslängd.</p>
+<ul>
+<li><strong>Inventarier av mindre värde</strong> får kostnadsföras direkt samma år om anskaffningsvärdet är under ett halvt prisbasbelopp. För 2026 är prisbasbeloppet 59 200 kr, vilket ger en gräns på <strong>29 600 kr exklusive moms</strong>. Handverktyg och mindre maskiner hamnar ofta här.</li>
+<li><strong>Korttidsinventarier</strong> – inventarier med en ekonomisk livslängd på högst 3 år – får alltid dras av direkt, oavsett pris.</li>
+<li><strong>Dyrare maskiner</strong> som ska aktiveras skrivs av över tid. Vid räkenskapsenlig avskrivning kombinerar du huvudregeln (30-procentsregeln), där restvärdet får tas upp till lägst 70 % av föregående restvärde plus årets inköp minus försäljningar, med kompletteringsregeln (20-procentsregeln), som ger linjär avskrivning på 20 % per år och full avskrivning på 5 år. Du får välja den mest fördelaktiga metoden per år.</li>
+</ul>
+<p>Räkenskapsenlig avskrivning kräver ordnad bokföring som avslutas med årsbokslut, och att de skattemässiga avskrivningarna stämmer med bokföringen. Uppfylls inte det hänvisas du till restvärdesavskrivning på 25 %. Momsen på maskiner och verktyg (ej personbil) är normalt fullt avdragsgill och lyfts direkt vid köpet, och ränta på finansieringen är avdragsgill. Gränsdragningen mellan direktavdrag och avskrivning går vi igenom i detalj i guiden om <a href="/sv/blog/verktyg-direktavdrag-eller-avskrivning">direktavdrag eller avskrivning på verktyg</a>.</p>
+
+<h2>Skatt och avdrag vid leasing</h2>
+<p>Vid leasing gör du inga avskrivningar. Hela leasingavgiften kostnadsförs löpande och är i sin helhet avdragsgill enligt huvudregeln i 16 kap. 1 § inkomstskattelagen – utgifter för att förvärva och bibehålla inkomster. Momsen dras löpande på varje avgift; vid finansiell leasing, som Skatteverket ser som ett slags kreditköp, faktureras momsen ofta redan vid avtalets start.</p>
+<p>Redovisningsmässigt är skillnaden viktig. Företag som tillämpar <strong>K2</strong> (och K1) ska alltid redovisa leasing som operationell leasing – tillgången hamnar aldrig i balansräkningen utan avgiften bokförs som en kostnad, i BAS-kontogrupp 52 (hyra av anläggningstillgångar). Företag som tillämpar <strong>K3</strong> kan, och för finansiella leasingavtal ska, redovisa avtalet som om maskinen vore köpt, med både tillgång och leasingskuld i balansräkningen. Vilket regelverk ni följer avgör alltså om leasingen syns på eller utanför balansräkningen.</p>
+
+<h2>Totalkostnad över tid – ett räkneexempel</h2>
+<p>Tänk dig en verktygspark eller mindre maskin med ett listpris på 300 000 kr och en användningstid på 5 år:</p>
+<ul>
+<li><strong>Köp:</strong> lägst total kostnad. Du betalar priset plus eventuell ränta på finansiering, och äger sedan en tillgång med ett restvärde du kan sälja.</li>
+<li><strong>Finansiell leasing:</strong> dyrare totalt, eftersom finansiärens ränta, påslag och vinst ligger inbakade i avgiften.</li>
+<li><strong>Operationell leasing med serviceavtal:</strong> normalt dyrast, men ger en jämn och förutsägbar månadskostnad där service ingår.</li>
+</ul>
+<p>Poängen: över maskinens hela livslängd är köp och leasing skattemässigt neutrala – det totala avdraget blir detsamma. Leasing blir alltså sällan billigare, utan du betalar en premie för förutsägbarhet och bevarad likviditet. När du prissätter jobb där maskinkostnaden ska bäras, testa hur avgiften slår på marginalen med vår <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylator</a>.</p>
+
+<h2>Beslutsmatris – fem frågor att ställa</h2>
+<ol>
+<li><strong>Hur länge ska maskinen användas?</strong> Länge (5 år+) talar för köp; korta bytescykler för leasing.</li>
+<li><strong>Hur ser kassaflödet ut?</strong> Ansträngt kassaflöde talar för leasing; god likviditet gör köp möjligt.</li>
+<li><strong>Behöver ni senaste tekniken?</strong> Ja talar för leasing med regelbundna byten.</li>
+<li><strong>Vilket K-regelverk tillämpar ni?</strong> K2 håller leasing utanför balansräkningen; K3 kan tvinga in finansiell leasing i balansräkningen.</li>
+<li><strong>Ingår service?</strong> Behöver ni driftsäkerhet utan egna verkstadskostnader kan operationell leasing med serviceavtal löna sig trots högre pris.</li>
+</ol>
+
+<h2>Vanliga misstag att undvika</h2>
+<ul>
+<li>Att bara jämföra månadskostnad mot inköpspris utan att räkna på hela livslängden.</li>
+<li>Att glömma att leasingavtalet är bindande i 3–5 år även om projekten sinar.</li>
+<li>Att missa direktavdraget för maskiner under 29 600 kr och i onödan aktivera dem.</li>
+<li>Att blanda ihop maskinbeslutet med rena förbrukningsavdrag – se hur <a href="/sv/blog/avdrag-arbetsklader-verktyg">avdrag för arbetskläder och verktyg</a> fungerar separat.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte din redovisningskonsult, men ger dig underlaget för att fatta beslutet. Med kalkylverktygen räknar du på hur en maskinkostnad – köpt eller leasad – påverkar marginalen på de jobb där den ska bäras, och du får ett grepp om kapitalbindning innan du binder dig. Du samlar kostnader och prissättning på ett ställe, så att beslutet vilar på siffror från din egen verksamhet i stället för känsla. Den skattemässiga bedömningen stämmer du av med din redovisningskonsult.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är det alltid billigare att köpa än att leasa?</h3>
+<p>Över hela livslängden är köp normalt billigast, eftersom leasegivarens ränta, påslag och vinst ligger inbakade i avgiften. Skattemässigt är alternativen dock neutrala – det totala avdraget blir detsamma. Du betalar alltså en premie för leasingens förutsägbarhet och bevarade likviditet.</p>
+<h3>Vad är gränsen för att dra av en maskin direkt 2026?</h3>
+<p>Inventarier av mindre värde får dras av direkt om anskaffningsvärdet är under ett halvt prisbasbelopp, vilket för 2026 är 29 600 kr exklusive moms. Dessutom får korttidsinventarier med en livslängd på högst 3 år alltid dras av direkt, oavsett pris.</p>
+<h3>Hamnar leasade maskiner i balansräkningen?</h3>
+<p>Det beror på regelverket. Tillämpar ni K2 redovisas all leasing som operationell och tillgången hamnar aldrig i balansräkningen. Tillämpar ni K3 ska finansiella leasingavtal redovisas som om maskinen vore köpt, med både tillgång och leasingskuld i balansen.</p>
+<h3>Får jag dra av momsen på en leasad maskin?</h3>
+<p>Ja, momsen på maskiner och verktyg (ej personbil) är normalt fullt avdragsgill. Vid köp lyfts hela ingående momsen direkt, och vid leasing dras momsen löpande på varje avgift – vid finansiell leasing faktureras den dock ofta redan vid avtalets start.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna på ditt eget upplägg innan du bestämmer dig – testa <a href="/sv/verktyg">ByggExps gratis kalkylverktyg</a> och se hur maskinkostnaden slår på marginalen med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn</a>. Vill du se hur ByggExp samlar kalkyl och kostnader för hela verksamheten, <a href="/sv/contact">boka en demo</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/verktyg-direktavdrag-eller-avskrivning">Verktyg – direktavdrag eller avskrivning?</a>, <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a>, <a href="/sv/blog/avdrag-arbetsklader-verktyg">Avdrag för arbetskläder och verktyg</a>.</p>
+`;
+
+const A_LEASA_ELLER_KOPA_MASKINER_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"leasa-eller-kopa-maskiner-byggforetag",
+  title: "Leasa eller köpa maskiner i byggföretaget? Beslutsguide 2026", slug: "leasa-eller-kopa-maskiner-byggforetag", locale: "sv",
+  excerpt: "En konkret beslutsguide för byggföretag som ska välja mellan att leasa eller köpa maskiner och verktyg – med fokus på likviditet, avdrag och totalkostnad.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_LEASA_ELLER_KOPA_MASKINER_BYGGFORETAG_HTML,
+  seoTitle: "Leasa eller köpa maskiner? Guide | ByggExp", seoDescription: "Leasa eller köpa byggmaskiner 2026? Beslutsguide om likviditet, avskrivning, moms och totalkostnad för byggföretag. Med räkneexempel och beslutsmatris.",
+  seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T22:06:00.000Z", createdAt: "2026-08-19T22:06:00.000Z", updatedAt: "2026-08-19T22:06:00.000Z",
+};
+
+const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
+<p>Fyra ersättningar blandas ihop varje månad på byggföretagens lönebesked: restidsersättning, reskostnadsersättning, milersättning och traktamente. De styrs av olika logiker och delvis av olika regelverk - kollektivavtalet styr vad du <em>betalar ut</em>, Skatteverket styr vad som är <em>skattefritt</em>. Räknar du fel blir det antingen dyrt (för mycket utbetalt, eller skatteplikt du missat) eller en tvist med Byggnads (för lite utbetalt). Den här guiden reder ut vad varje post faktiskt ersätter och var skattegränsen går 2026.</p>
+
+<p>För att hålla ordning på restid, resväg och arbetstimmar per projekt kan du använda <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -&gt;</a> som underlag till reseräkning och lönekörning.</p>
+
+<h2>Fyra begrepp, fyra logiker</h2>
+<p>Det första steget är att sluta behandla posterna som samma sak. De ersätter olika saker:</p>
+<ul>
+<li><strong>Restidsersättning</strong> - betalning för själva <em>tiden</em> den anställde lägger på att resa till och från arbetsplatsen eller förrättningen. Det är en tidsersättning, inte en kostnadsersättning.</li>
+<li><strong>Reskostnadsersättning</strong> - ersättning för <em>resvägen/kostnaden</em> mellan bostad och arbetsplats. Här ligger körningen med egen bil, samåkning och kollektivtrafik.</li>
+<li><strong>Milersättning</strong> - inte en egen post, utan <em>km-satsen inuti</em> reskostnadsersättningen när den anställde kör egen bil.</li>
+<li><strong>Traktamente</strong> - ersättning för <em>mat och logi</em> vid tjänsteresa med övernattning. En helt separat värld med egna skatteregler.</li>
+</ul>
+<p>Ihopblandning är dyr åt båda hållen: betalar du traktamente som om det vore skattefri milersättning missar du arbetsgivaravgifter, och betalar du bara reskostnad när avtalet också kräver restidsersättning ligger du under kollektivavtalet.</p>
+
+<h2>Reskostnadsersättning för daglig resa hem&harr;arbetsplats</h2>
+<p>Detta är den vanligaste posten - den dagliga resan mellan bostad och arbetsplats. Enligt Byggavtalet gäller följande huvudlinjer:</p>
+<ul>
+<li>Ersättning utgår när <strong>enkel resväg överstiger 2 km</strong>.</li>
+<li><strong>Egen bil: 2,50 kr/km (25 kr/mil).</strong></li>
+<li><strong>Samåkning:</strong> föraren får 2,50 kr/km plus 0,85 kr/km per passagerare; passageraren får 0,85 kr/km.</li>
+<li><strong>Kollektivtrafik</strong> ersätts mot uppvisat kvitto.</li>
+<li>Ersättningen betalas <strong>per arbetsdag</strong> och är <strong>capad vid avtalets traktamentesnivå</strong> - den dagliga reskostnaden kan alltså inte överstiga dagsbeloppet för traktamente.</li>
+</ul>
+<p>Notera att detta är avtalssatser som revideras 1 maj varje avtalsår. Kontrollera alltid gällande belopp mot Byggavtalet innan lönekörning - satserna ovan speglar 2025-utgåvan.</p>
+
+<h2>Restidsersättning - betalning för själva restiden</h2>
+<p>Restidsersättning träder in när resan går utanför den fria zonen eller till en förrättning, och den ersätter den <em>tid</em> den anställde reser - inte kilometrarna. Det innebär två saker i praktiken:</p>
+<ul>
+<li>Restidsersättning och reskostnadsersättning <strong>kan kombineras</strong> för samma resa: den ena betalar timmarna, den andra bilen.</li>
+<li>Beloppet är en tidsbaserad avtalssats som är <strong>avtalsberoende och revideras</strong> - kontrollera aktuell restidssats i gällande avtalstext innan du lägger in den i lönesystemet.</li>
+</ul>
+<p>En vanlig felkälla är att blanda restidsersättning med milsatser från andra avtal. Det förekommer siffror i omlopp (exempelvis restidsersättning uttryckt i kr/mil) som i själva verket hör hemma i plåt-, ventilations- eller VVS-avtalen - inte i Byggavtalet. Använd aldrig en sats du inte kunnat verifiera mot Byggavtalets egen text.</p>
+
+<h2>Traktamente och förrättningstillägg vid övernattning</h2>
+<p>Vid tjänsteresa med övernattning tillkommer traktamente. Här möts två regelverk som inte är samma sak:</p>
+<ul>
+<li><strong>Byggavtalets traktamente</strong> ligger i 2025-utgåvan på cirka 435 kr/dygn - alltså <em>över</em> Skatteverkets skattefria gräns. Mellanskillnaden är skattepliktig lön. Beloppet reduceras med 55% om arbetsgivaren står för maten och 35% om arbetsgivaren står för boendet. Exakt kronbelopp är avtalsberoende och revideras.</li>
+<li><strong>Skatteverkets skattefria traktamente inrikes 2026:</strong> helt maximibelopp 300 kr/heldag (halvdag 150 kr, natt 150 kr). Efter tre månader på samma ort sänks skattefritt belopp till 210 kr, efter två år till 150 kr. Från 2026 gäller nya, striktare allmänna råd.</li>
+<li><strong>50-km- och övernattningskravet:</strong> skattefritt traktamente förutsätter tjänsteresa med övernattning mer än 50 km från både bostad och den vanliga verksamhetsorten.</li>
+</ul>
+<p>Utöver traktamentet finns <strong>förrättningstillägg</strong> vid eget boende på annan ort: 35% av traktamentesbeloppet de första 90 dagarna, därefter 20%. Detta tillägg är <strong>helt skattepliktigt</strong>, till skillnad från den skattefria delen av traktamentet.</p>
+
+<h2>Skatt - skiljelinjen som ställer till det</h2>
+<p>Den avgörande insikten: <strong>kollektivavtalet styr utbetalningen, Skatteverket styr skatten.</strong> De sammanfaller inte.</p>
+<ul>
+<li>Skattefri milersättning för egen bil är <strong>25 kr/mil (2,50 kr/km)</strong> enligt Skatteverket 2026 - oförändrat sedan 2024. Det är ett tak för skattefrihet, inte en avtalsnivå.</li>
+<li>Allt avtalet betalar <em>över</em> den skattefria nivån blir <strong>skattepliktig lön med arbetsgivaravgifter</strong>. Det gäller traktamentets överskjutande del och hela förrättningstillägget.</li>
+<li>Byggnadsarbetares reseersättning styrs av kollektivavtalet, inte av reseavdraget i deklarationen, eftersom de typiskt saknar fast arbetsplats. Att blanda ihop avtalets reseersättning med deklarationens reseavdrag är en klassisk felkälla.</li>
+</ul>
+
+<h2>Räkneexempel (B2B)</h2>
+<p>En montör kör egen bil 6 mil tur och retur till ett projekt utanför fri zon och övernattar en vecka. Så här bör posterna redovisas <em>separat</em> på lönebeskedet (använd aktuella avtalssatser - beloppen nedan är ca-värden för att visa strukturen):</p>
+<ol>
+<li><strong>Reskostnadsersättning:</strong> 6 mil &times; 25 kr/mil = ca 150 kr för resdagen. Skattefri upp till Skatteverkets milgräns.</li>
+<li><strong>Restidsersättning:</strong> antal restimmar &times; gällande avtalssats. Ersätter tiden, redovisas som egen rad. Skattepliktig som lön.</li>
+<li><strong>Traktamente:</strong> avtalets dygnsbelopp (ca 435 kr) - varav 300 kr skattefritt och resterande del skattepliktig. Reduceras om arbetsgivaren står för mat eller boende.</li>
+</ol>
+<p>Poängen är inte kronorna utan uppdelningen: tre olika rader, med rätt skattefri/skattepliktig hantering på varje. Hänvisa alltid till aktuell avtalstext för de exakta beloppen.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp löser inte lönekörningen åt dig, men det ger dig underlaget som gör den korrekt. Med tidrapportering per projekt får du timmar, restid och resväg registrerade på rätt kostnadsställe redan när jobbet utförs - istället för att rekonstruera dem i efterhand ur minnet. Det ger dig ett spårbart underlag till reseräkning, lönesystem och eventuell granskning från Byggnads, och gör det enklare att hålla restidsersättning, reskostnad och traktamente på separata rader. Beloppen och avtalssatserna lägger du in enligt gällande Byggavtal - ByggExp håller ordning på tiden och platsen, du håller ordning på satserna.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är restidsersättning och reskostnadsersättning samma sak?</h3>
+<p>Nej. Restidsersättning betalar för den tid resan tar, reskostnadsersättning betalar för resvägen/kostnaden (bil, samåkning eller kollektivtrafik). De kan utgå samtidigt för samma resa - den ena för timmarna, den andra för kilometrarna.</p>
+<h3>Vilken milersättning gäller för byggnadsarbetare 2026?</h3>
+<p>Reskostnaden vid egen bil enligt Byggavtalet är 2,50 kr/km (25 kr/mil) i 2025-utgåvan. Skatteverkets skattefria milersättning är också 25 kr/mil 2026. Betalar arbetsgivaren mer än den skattefria nivån blir överskjutande del skattepliktig lön. Kontrollera aktuell avtalssats, som revideras 1 maj.</p>
+<h3>Måste traktamentet över 300 kr beskattas?</h3>
+<p>Ja. Skatteverkets skattefria maximibelopp inrikes 2026 är 300 kr/heldag. Byggavtalets traktamente ligger över det, och mellanskillnaden är skattepliktig lön med arbetsgivaravgifter. Efter tre månader på samma ort sänks den skattefria gränsen till 210 kr, efter två år till 150 kr.</p>
+<h3>Gäller Skatteverkets reseavdrag för byggnadsarbetare?</h3>
+<p>Nej, inte automatiskt. Byggnadsarbetares reseersättning styrs av kollektivavtalet eftersom de typiskt saknar fast arbetsplats - inte av reseavdraget i deklarationen. Att blanda ihop de två är en vanlig felkälla.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg ett spårbart reseunderlag redan när jobbet utförs med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall</a>, och håll restid, reskostnad och traktamente på separata rader. Vill du se hur tidrapportering per projekt kan koppla ihop tid, resväg och lönesunderlag i din verksamhet? <a href="/sv/contact">Boka en demo</a>. Använd Byggavtalet 2025-2027 och Skatteverkets belopp för 2026 som dina primärkällor för de exakta satserna.</p>
+
+<p>Relaterat: <a href="/sv/blog/traktamente-byggnadsarbetare-2026">Traktamente för byggnadsarbetare 2026</a>, <a href="/sv/blog/ob-overtid-byggavtalet-rakna">OB och övertid enligt Byggavtalet - så räknar du</a>, <a href="/sv/blog/byggnads-kollektivavtal-2026">Byggnads kollektivavtal 2026</a>.</p>
+`;
+
+const A_RESTIDSERSATTNING_BYGGAVTALET: BlogPost = {
+  _id: "code-"+"restidsersattning-byggavtalet",
+  title: "Restidsersättning och reskostnad enligt Byggavtalet - så räknar arbetsgivaren rätt 2026", slug: "restidsersattning-byggavtalet", locale: "sv",
+  excerpt: "Restid, reskostnad, milersättning och traktamente blandas ihop dagligen - här är den tydliga uppdelningen enligt Byggavtalet, med skattegränsen som ställer till det.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_RESTIDSERSATTNING_BYGGAVTALET_HTML,
+  seoTitle: "Restidsersättning Byggavtalet 2026 | ByggExp", seoDescription: "Så skiljer arbetsgivaren restidsersättning, reskostnad, milersättning och traktamente enligt Byggavtalet 2026 - med skatteperspektiv och räkneexempel.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T22:09:00.000Z", createdAt: "2026-08-19T22:09:00.000Z", updatedAt: "2026-08-19T22:09:00.000Z",
+};
+
+const A_KONTROLLERA_KUNDENS_ROTUTRYMME_HTML = `
+<p>Som byggföretag lägger du ut ROT-rabatten först och får den tillbaka sist. Under fakturamodellen ger du kunden 30 % avdrag på arbetskostnaden direkt på fakturan, och begär sedan utbetalningen från Skatteverket efter att kunden betalat sin del. Godkänner Skatteverket inte avdraget är det du – inte kunden – som står för förlusten. Två saker avgör om du faktiskt får betalt: att kundens avdragsutrymme räcker, och att avtalet innehåller ett förbehåll som gör kunden betalningsskyldig om det inte gör det.</p>
+
+<p>Innan du lämnar offert kan du räkna ut exakt hur mycket ROT som gäller på jobbet med <a href="/sv/verktyg/rot-avdrag-kalkylator">vår gratis ROT-avdragskalkylator</a> – den delar upp arbetskostnad och material så du ser avdraget och kundens nettopris direkt.</p>
+
+<h2>Så fungerar ROT 2026 i korthet</h2>
+<p>Från och med 1 januari 2026 är ROT-avdraget tillbaka på 30 % av arbetskostnaden. Kunden betalar 70 % och avdraget täcker 30 %. Material, resor, utrustning och administrativa avgifter ger aldrig avdrag – bara själva arbetet.</p>
+<p>Taken 2026 ser ut så här:</p>
+<ul>
+<li>ROT och RUT delar ett gemensamt tak på 75 000 kr per person och år.</li>
+<li>ROT har dessutom ett eget innertak på 50 000 kr per person och år.</li>
+<li>En kund kan alltså aldrig få mer än 50 000 kr i ROT, även om RUT är helt oanvänt.</li>
+</ul>
+<p>Eftersom utrymmet räknas per person har ett par som båda äger bostaden två separata tak på 50 000 kr. Det kan vara skillnaden mellan att ett större jobb ryms eller inte – men bara om båda står som ägare och båda har tillräckligt med skatt att reducera.</p>
+
+<h2>Varför du kan fastna med ROT-delen</h2>
+<p>Det finns i praktiken tre sätt att bli utan utbetalningen:</p>
+<ol>
+<li><strong>Utrymmet är förbrukat.</strong> Kunden har redan använt ROT hos andra utförare under året och nått innertaket på 50 000 kr.</li>
+<li><strong>Kunden har för lite skatt.</strong> ROT är en skattereduktion – finns det inte tillräckligt med svensk skatt att reducera under året, kortas avdraget ned eller uteblir.</li>
+<li><strong>Kunden eller objektet är inte avdragsberättigat.</strong> Fel typ av bostad, kunden äger eller bor inte i den, är under 18, eller huset är nybyggt (ROT gäller normalt inte på bostäder yngre än cirka fem år).</li>
+</ol>
+<p>Ett extra riskmoment 2026 är eftersläpningen från 2025. Den tillfälliga 50-procentssatsen gällde bara fakturor som kunden <em>betalade</em> mellan 12 maj och 31 december 2025 – betaldatumet, inte jobbdatumet, avgjorde satsen. Kunder som maxade ut sitt utrymme under den perioden kan ha mindre kvar än de tror när de bokar in nästa jobb hos dig.</p>
+
+<h2>Kontrollera kundens avdragsutrymme INNAN jobbet</h2>
+<p>Gissa aldrig på utrymmet – kontrollera det. Det finns två vägar:</p>
+<ul>
+<li>Du som utförare använder Skatteverkets e-tjänst <strong>"Mina skattereduktioner för rot, rut och grön teknik"</strong>.</li>
+<li>Kunden loggar in på Mina sidor under "Rot och rut – mina avdrag" och visar sitt saldo för dig.</li>
+</ul>
+<p>Vyn visar tre siffror du behöver förstå:</p>
+<ul>
+<li><strong>Preliminärt</strong> – begärt men ännu inte utbetalt till andra företag.</li>
+<li><strong>Beviljat</strong> – redan utbetalt.</li>
+<li><strong>Kvarvarande</strong> – det som finns kvar att använda.</li>
+</ul>
+<p>Både preliminärt och beviljat räknas mot taket. Ett vanligt misstag är att bara titta på beviljat och missa att ett annat pågående jobb redan lagt beslag på utrymmet. Är kunden ett par – kontrollera båda personerna var för sig. Och kontrollera på nytt strax innan du sätter igång stora eller sena höstjobb, eftersom saldot ändras löpande under året.</p>
+
+<h2>Skriv rätt förbehåll i avtalet</h2>
+<p>Kontrollen minskar risken men eliminerar den inte. Nekar eller återkräver Skatteverket avdraget i efterhand kan du bara kräva mellanskillnaden av kunden om det skriftliga avtalet innehåller ett tydligt förbehåll om det. Domstolar har prövat detta: i ett fall förlorade entreprenören för att klausulen var för vagt formulerad, i ett annat vann entreprenören för att avtalet uttryckligen angav att fullt pris gällde om ROT inte godkändes.</p>
+<p>Slutsatsen är enkel. Formuleringar i stil med "ROT tillkommer" eller "vid ev. avslag" räcker inte. Skriv i stället en klar mening om att kunden är skyldig att betala den återstående arbetskostnaden – till fullt pris – om Skatteverket nekar eller senare återkräver avdraget. Samma logik gäller vid återkrav: passa på att låta förbehållet uttryckligen täcka både avslag och återkrav.</p>
+<p>Använd ett skriftligt avtal – Hantverkarformuläret eller Byggföretagens standardavtal – och lägg in förbehållet där, inte muntligt vid sidan av. Fakturan ska sedan spegla avtalet: dela upp arbete och material tydligt, för bara det ROT ska räknas på är arbetskostnaden. Med <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall</a> får du en uppställning som redan skiljer arbete från material och gör ROT-raden spårbar.</p>
+
+<h2>Praktisk checklista före, under och efter jobbet</h2>
+<ul>
+<li><strong>Före:</strong> kontrollera kvarvarande utrymme (per person), bekräfta ägande, ålder på bostaden och att kunden har skatt att reducera.</li>
+<li><strong>Före:</strong> teckna skriftligt avtal med tydligt förbehåll om fullt pris vid avslag eller återkrav.</li>
+<li><strong>Under:</strong> dokumentera faktiska arbetade timmar löpande – det är underlaget om avdraget ifrågasätts.</li>
+<li><strong>Faktura:</strong> dela arbete och material, sätt ROT bara på arbetskostnaden och håll dig inom takens ram.</li>
+<li><strong>Efter:</strong> begär utbetalning från Skatteverket direkt när kunden betalat, och håll koll på betaltidpunkten vid årsskiften.</li>
+</ul>
+<p>Att överskrida det gemensamma taket på 75 000 kr utlöser dessutom ett skattetillägg på 40 % för kunden och återbetalningskrav – ännu ett skäl att kontrollera utrymmet innan du fakturerar, inte efteråt.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att göra ROT-hanteringen till rutin i stället för en risk. Du räknar arbetskostnad och avdrag redan i offerten, för över samma uppdelning till avtal och faktura, och tidrapporterar timmarna som blir ditt underlag om Skatteverket ställer frågor. Förbehållet kan ligga som standardtext i din avtalsmall så att det aldrig glöms bort. ByggExp gör inte kontrollen mot Skatteverket åt dig – den gör du fortfarande i deras e-tjänst – men allt underlag samlas på ett ställe så att arbete och material alltid är åtskilda och spårbara.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vem betalar om Skatteverket nekar ROT-avdraget?</h3>
+<p>Risken ligger på dig som utförare. Du har redan gett rabatten och Skatteverket betalar inte ut den. Du kan bara kräva mellanskillnaden av kunden om ert skriftliga avtal har ett tydligt förbehåll om det.</p>
+<h3>Hur mycket ROT kan en kund få 2026?</h3>
+<p>Högst 50 000 kr per person och år i ROT, inom ett gemensamt ROT- och RUT-tak på 75 000 kr per person och år. Avdraget är 30 % av arbetskostnaden. Ett par som båda äger bostaden har två separata tak.</p>
+<h3>Hur ser jag hur mycket avdragsutrymme kunden har kvar?</h3>
+<p>Använd Skatteverkets e-tjänst "Mina skattereduktioner för rot, rut och grön teknik", eller be kunden visa saldot på Mina sidor. Titta på kvarvarande utrymme och kom ihåg att både preliminärt begärda och redan beviljade belopp räknas mot taket.</p>
+<h3>Räcker det att skriva "ROT tillkommer" i offerten?</h3>
+<p>Nej. Domstolar har underkänt vaga formuleringar. Skriv uttryckligen att kunden ska betala full arbetskostnad om Skatteverket nekar eller återkräver avdraget, i ett skriftligt avtal.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att räkna avdrag och nettopris redan i offertläget med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>, och bygg fakturan på <a href="/sv/verktyg/faktura-mall">fakturamallen</a> som skiljer arbete från material. Vill du se hur offert, avtal med förbehåll och tidrapport hänger ihop i ett flöde? <a href="/sv/contact">Boka en demo av ByggExp</a>.</p>
+<p>Relaterat: <a href="/sv/blog/skatteverket-nekar-rotavdrag-forbehall">Skatteverket nekar ROT – så skyddar förbehållet dig</a>, <a href="/sv/blog/rotavdrag-2026-nya-regler-foretag">ROT-avdrag 2026: nya regler för företag</a>, <a href="/sv/blog/byggfaktura-checklista-rot">Byggfaktura med ROT – checklista</a>.</p>
+`;
+
+const A_KONTROLLERA_KUNDENS_ROTUTRYMME: BlogPost = {
+  _id: "code-"+"kontrollera-kundens-rotutrymme",
+  title: "Kontrollera kundens ROT-utrymme innan jobbet – så slipper du fastna med avdraget", slug: "kontrollera-kundens-rotutrymme", locale: "sv",
+  excerpt: "Du ligger ute med 30 % av arbetskostnaden tills Skatteverket godkänner – här är hur du kontrollerar kundens ROT-utrymme och skriver förbehållet som gör dig betald.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_KONTROLLERA_KUNDENS_ROTUTRYMME_HTML,
+  seoTitle: "Kontrollera kundens ROT-utrymme | ByggExp", seoDescription: "Så minskar byggföretaget risken med ROT 2026: kolla kundens avdragsutrymme och skriv rätt förbehåll i avtalet innan jobbet startar. Konkret checklista.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T22:12:00.000Z", createdAt: "2026-08-19T22:12:00.000Z", updatedAt: "2026-08-19T22:12:00.000Z",
+};
+
+const A_OVERBESIKTNING_ENTREPRENAD_HTML = `
+<p>Slutbesiktningen underkände entreprenaden — trots att du anser den fullbordad. Eller så antecknade besiktningsmannen fel som du bestrider, eller lade ansvaret för ett fel på dig utan grund. Ett besiktningsutlåtande är inte sista ordet. AB 04 har ett inbyggt verktyg för att få en felaktig besiktning omprövad: överbesiktning enligt kapitel 7. Den här guiden riktar sig till entreprenörer och underentreprenörer och går igenom när du kan påkalla överbesiktning, hur processen ser ut och — det som avgör om det är värt risken — vem som betalar.</p>
+
+<p>Samla dokumentationen som styrker din uppfattning innan du agerar. I <a href="/sv/verktyg">vår verktygslåda med gratis mallar och kalkylatorer för byggföretag →</a> hittar du underlag som håller ordning på egenkontroller och besiktningsunderlag inför en tvist.</p>
+
+<h2>Vad är överbesiktning?</h2>
+<p>Överbesiktning är en formell omprövning av en tidigare besiktning — typiskt en slutbesiktning eller garantibesiktning — enligt AB 04 kap 7 § 6. Det är inte en helt ny besiktning från grunden, utan en prövning av just de frågor som föranlett den. I praktiken handlar det om tre saker: frågan om entreprenadens godkännande, förekomsten av ett visst fel och ansvaret för det felet.</p>
+<p>Poängen är att överbesiktningen ersätter den ursprungliga besiktningen i de delar den avser. Kommer överbesiktningen fram till en annan slutsats är det den som gäller — den tidigare bedömningen omprövas. Både beställaren och entreprenören har lika rätt att påkalla överbesiktning av varje form av besiktning.</p>
+
+<h2>När kan entreprenören begära överbesiktning?</h2>
+<p>Tre situationer är vanligast i entreprenörsledet:</p>
+<ul>
+<li><strong>Entreprenaden underkändes.</strong> Besiktningsmannen godkände inte entreprenaden trots att du anser den kontraktsenligt fullbordad.</li>
+<li><strong>Fel du bestrider.</strong> Utlåtandet noterar anmärkningar som du menar inte är fel — utförandet är avtalsenligt, eller så ligger avvikelsen utanför ditt åtagande.</li>
+<li><strong>Tvist om ansvar.</strong> Felet finns, men frågan är vem som bär ansvaret och kostnaden för att åtgärda det.</li>
+</ul>
+<p>Rätten är symmetrisk: beställaren kan påkalla överbesiktning på precis samma grunder. Att du som entreprenör har verktyget betyder alltså också att motparten har det.</p>
+
+<h2>Fristen — tre veckor, med viktiga avvikelser</h2>
+<p>Överbesiktning ska påkallas <strong>skriftligen</strong>. Enligt AB 04 gäller tre (3) veckor från det att parten fått del av besiktningsutlåtandet. Missar du fristen är rätten till överbesiktning förlorad — då återstår domstol eller skiljeförfarande, som är dyrare och långsammare.</p>
+<p>Två fallgropar att känna till:</p>
+<ul>
+<li><strong>Underentreprenad (AB-U 04) har andra frister.</strong> Där ska entreprenören påkalla inom två (2) veckor och beställaren inom fyra (4) veckor — inte den symmetriska treveckorsregeln. Arbetar du som UE måste du alltså agera snabbare än i ett AB 04-förhållande.</li>
+<li><strong>"Fått del av" är avgörande.</strong> Fristen börjar löpa när parten fått del av utlåtandet, och just den tidpunkten är en vanlig tvistefråga som prövats rättsligt. Notera och spara datum för när utlåtandet faktiskt nådde dig.</li>
+</ul>
+<p>Motsvarande bestämmelser finns i ABT 06 kap 7 för totalentreprenad, med samma systematik för påkallande och kostnad. Kontrollera alltid vilket standardavtal som gäller i just ditt kontrakt innan du räknar dagar.</p>
+
+<h2>Så går processen till — steg för steg</h2>
+<ol>
+<li><strong>Skriftligt påkallande</strong> inom fristen, med angivande av vilka frågor du vill ompröva.</li>
+<li><strong>Utse besiktningsman.</strong> Parterna kan gemensamt utse en ensam överbesiktningsman. Alternativt bildas en överbesiktningsnämnd: vardera parten utser var sin besiktningsman, och dessa två utser i sin tur en ordförande.</li>
+<li><strong>Vid oenighet</strong> kan en branschorganisation, till exempel Byggföretagen, utse besiktningsmannen så att processen inte fastnar.</li>
+<li><strong>Förrättning</strong> där de omtvistade frågorna prövas.</li>
+<li><strong>Nytt utlåtande</strong> som omprövar den tidigare besiktningen i de aktuella delarna.</li>
+</ol>
+
+<h2>Vad kostar det och vem betalar?</h2>
+<p>Det här är kärnfrågan, och den avgör om det är värt att påkalla. Överbesiktning har ingen fast taxa i standardvillkoren — kostnaden varierar med projektets omfattning och besiktningsmannens arvode och ligger generellt i samma storleksordning som den ursprungliga slutbesiktningen, ibland högre (fler förrättare i en nämnd, mer omtvistade frågor). Några fasta kronbelopp anges inte i AB 04.</p>
+<p>Partsfördelningen regleras i AB 04 kap 7 § 16, och huvudregeln är enkel: <strong>den part vars uppfattning inte vinner betalar</strong> för överbesiktningen.</p>
+<ul>
+<li><strong>Entreprenören vinner</strong> (överbesiktningen ger dig rätt) → beställaren bär kostnaden.</li>
+<li><strong>Entreprenören förlorar</strong> (den ursprungliga besiktningen står sig) → du som påkallade och förlorade betalar.</li>
+</ul>
+<p>Lägg märke till att detta är ett undantag från hur vanlig besiktning bekostas. Vid en ordinär besiktning betalar beställaren besiktningsmannens arvode om beställaren utsett honom, eller så delas kostnaden om parterna utsett honom gemensamt. Överbesiktningens "förlorar-betalar"-regel bryter mot det mönstret — det är därför du måste väga risken innan du påkallar.</p>
+<p>Parterna kan avtala om en annan fördelning, och det görs lämpligen redan i entreprenadavtalet. Att i förväg reglera kostnadsansvaret vid överbesiktning tar bort en osäkerhet i ett läge där tonläget ofta redan är högt.</p>
+
+<h2>Är utlåtandet bindande?</h2>
+<p>Nej — inte slutligt. Varken en slutbesiktning eller en överbesiktning binder parterna definitivt. Frågan om godkännande och fel kan prövas vidare i domstol eller skiljeförfarande även efter en överbesiktning. Skillnaden ligger i bevisvärdet: ett utlåtande från en gemensamt utsedd besiktningsman eller en överbesiktningsnämnd väger tyngre än ett från en ensidigt utsedd besiktningsman. I praktiken är överbesiktning därför ofta både billigare och snabbare än en full process — och kan lösa tvisten innan den blir en rättssak.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp avgör inte en besiktningstvist åt dig, men systemet ger dig underlaget som avgör den. Löpande egenkontroller, dokumenterat utförande och spårbara underlag är exakt det som styrker din uppfattning när en anmärkning ska omprövas. Med <a href="/sv/verktyg/egenkontroll-mall">vår mall för egenkontroll →</a> bygger du dokumentationen redan under projektets gång, så att du inte står tomhänt när slutbesiktningen kommer. Har du ordning på egenkontroller, datum och kommunikation blir bedömningen av om det är värt att påkalla överbesiktning — och risken enligt § 16 — betydligt lättare att göra.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur lång tid har jag på mig att påkalla överbesiktning?</h3>
+<p>Enligt AB 04 tre veckor från att du fått del av besiktningsutlåtandet, och påkallandet ska vara skriftligt. Vid underentreprenad enligt AB-U 04 gäller två veckor för entreprenören och fyra veckor för beställaren. Missad frist innebär att rätten går förlorad.</p>
+<h3>Vem betalar om jag förlorar överbesiktningen?</h3>
+<p>Då gör du det. Huvudregeln i AB 04 kap 7 § 16 är att den part vars uppfattning inte vinner bär kostnaden. Vinner du betalar beställaren; står den ursprungliga besiktningen sig betalar du som påkallade. Parterna kan avtala om annan fördelning i förväg.</p>
+<h3>Vad kostar en överbesiktning?</h3>
+<p>Det finns inget fast belopp i AB 04. Kostnaden följer projektets omfattning och besiktningsmannens taxa och ligger generellt i nivå med den ursprungliga slutbesiktningen, ibland högre om en nämnd med flera förrättare krävs.</p>
+<h3>Kan jag driva frågan vidare om jag inte är nöjd med överbesiktningen?</h3>
+<p>Ja. Utlåtandet är inte slutligt bindande — frågan kan prövas i domstol eller skiljeförfarande. Ett utlåtande från en gemensamt utsedd besiktningsman eller nämnd har dock högre bevisvärde än ett ensidigt.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg dokumentationen som håller i en tvist redan under projektet. Börja med <a href="/sv/verktyg/egenkontroll-mall">mallen för egenkontroll →</a> och utforska fler underlag i <a href="/sv/verktyg">verktygslådan</a>. Vill du se hur ByggExp samlar egenkontroller, besiktningsunderlag och projektdokumentation på ett ställe? <a href="/sv/contact">Boka en demo →</a>. Vid större belopp — ta alltid juridisk hjälp innan du påkallar.</p>
+
+<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning entreprenad — så fungerar den</a>, <a href="/sv/blog/efterbesiktning-vem-betalar-entreprenad">Efterbesiktning — vem betalar?</a> och <a href="/sv/blog/besiktningsanmarkning-atgarda-bemota">Besiktningsanmärkning — åtgärda eller bemöta</a>.</p>
+`;
+
+const A_OVERBESIKTNING_ENTREPRENAD: BlogPost = {
+  _id: "code-"+"overbesiktning-entreprenad",
+  title: "Överbesiktning i entreprenad — så begär entreprenören omprövning av slutbesiktningen (AB 04 kap 7)", slug: "overbesiktning-entreprenad", locale: "sv",
+  excerpt: "Anser du som entreprenör att slutbesiktningen underkänt entreprenaden eller antecknat fel felaktigt? Överbesiktning enligt AB 04 kap 7 är verktyget för att få utlåtandet omprövat.", tag: "Juridik",
+  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_OVERBESIKTNING_ENTREPRENAD_HTML,
+  seoTitle: "Överbesiktning entreprenad | ByggExp", seoDescription: "Så begär entreprenören överbesiktning enligt AB 04 kap 7 — frist på 3 veckor, process steg för steg och vem som betalar enligt § 16.",
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T22:15:00.000Z", createdAt: "2026-08-19T22:15:00.000Z", updatedAt: "2026-08-19T22:15:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_PRESKRIPTION_FAKTURA_BYGG_SLUTFAKTURA,
+    A_FABRIKSBETONG_ELLER_BLANDA_SJALV,
+    A_LEASA_ELLER_KOPA_MASKINER_BYGGFORETAG,
+    A_RESTIDSERSATTNING_BYGGAVTALET,
+    A_KONTROLLERA_KUNDENS_ROTUTRYMME,
+    A_OVERBESIKTNING_ENTREPRENAD,
     A_ROT_FORDELA_MAKAR_TAK_2026,
     A_MATERIALATGANG_INNERVAGG_REGLAR_GIPS,
     A_FARGATGANG_MALNING_M2,

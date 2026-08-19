@@ -1900,6 +1900,7 @@ const EFAKTURA: BlogPost = {
 
 const UVARDE_HTML = `
 <p>U-värdet avgör två saker på en gång: om konstruktionen godkänns i bygglovet och hur mycket isolering du behöver lägga in. Offererar du för tunt underkänns bygget mot BBR – offererar du för tjockt äter du upp din egen marginal. Att kunna räkna U-värde och baklänges bestämma isolertjocklek är därför ren yrkeskunskap, inte teori.</p>
+<p><a href="/sv/verktyg/u-varde-kalkylator">Räkna ut U-värdet för din konstruktion med vår gratis kalkylator -&gt;</a></p>
 
 <p>Vill du hoppa över handräkningen kan du testa dig fram direkt i <a href="/sv/verktyg/isolering-kalkylator">vår gratis isolerkalkylator –&gt;</a> och se hur tjockleken påverkar U-värdet innan du skriver offerten.</p>
 
@@ -6130,6 +6131,7 @@ const A_BERAKNA_MATERIALATGANG_TAK: BlogPost = {
 
 const A_FONSTER_U_VARDE_2026_HTML = `
 <p>Ett fönsterbyte står och faller med en enda siffra – u-värdet. Problemet är att de flesta offerter du får in jämför fel siffra, och att kunden ofta tror att det finns ett bestämt "BBR-krav för fönster" som avgör saken. Båda missförstånden kostar pengar och trovärdighet. Här går vi igenom Uw-mot-Ug-fällan, vad Boverket faktiskt kräver 2026 och hur du räknar hem ett fönsterbyte utan att lova orimlig återbetalningstid.</p>
+<p><a href="/sv/verktyg/u-varde-kalkylator">Räkna ut U-värdet för din konstruktion med vår gratis kalkylator -&gt;</a></p>
 
 <p>Vill du snabbt uppskatta värmeförlust och besparing på ett projekt kan du börja i vår <a href="/sv/verktyg/isolering-kalkylator">gratis isolerings- och u-värdeskalkylator -&gt;</a> och sedan lägga siffrorna i en offert.</p>
 

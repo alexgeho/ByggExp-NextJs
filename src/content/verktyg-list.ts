@@ -39,6 +39,7 @@ export const VERKTYG_GROUPS: VerktygGroup[] = [
       { slug: 'staket-kalkylator', label: 'Staket' },
       { slug: 'takstolar-kalkylator', label: 'Takstolar' },
       { slug: 'spillprocent-kalkylator', label: 'Spillprocent' },
+      { slug: 'u-varde-kalkylator', label: 'U-värde' },
     ],
   },
   {

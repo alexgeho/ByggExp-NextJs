@@ -21,6 +21,7 @@ import ReglarKalkylatorTool from '../../../components/LeadMagnet/ReglarKalkylato
 import RotKalkylatorTool from '../../../components/LeadMagnet/RotKalkylatorTool';
 import StaketKalkylatorTool from '../../../components/LeadMagnet/StaketKalkylatorTool';
 import TakKalkylatorTool from '../../../components/LeadMagnet/TakKalkylatorTool';
+import UvardeKalkylatorTool from '../../../components/LeadMagnet/UvardeKalkylatorTool';
 import TakstolarKalkylatorTool from '../../../components/LeadMagnet/TakstolarKalkylatorTool';
 import TapetKalkylatorTool from '../../../components/LeadMagnet/TapetKalkylatorTool';
 import TimprisKalkylatorTool from '../../../components/LeadMagnet/TimprisKalkylatorTool';
@@ -60,6 +61,7 @@ const TOOLS: Record<string, { Tool: ComponentType; title: string }> = {
   'forseningsvite-kalkylator': { Tool: ForseningsviteKalkylatorTool, title: 'Förseningsvite-kalkylator' },
   'spillprocent-kalkylator': { Tool: SpillprocentKalkylatorTool, title: 'Spillprocent-kalkylator' },
   'anstalld-kostnad-kalkylator': { Tool: AnstalldKostnadKalkylatorTool, title: 'Vad kostar en anställd' },
+  'u-varde-kalkylator': { Tool: UvardeKalkylatorTool, title: 'U-värde-kalkylator' },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {

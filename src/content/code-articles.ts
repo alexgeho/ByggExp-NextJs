@@ -1999,6 +1999,7 @@ const UVARDE: BlogPost = {
 
 const KUNDEN_HTML = `
 <p>Obetalda fakturor är ett av de vanligaste kassaflödesproblemen för hantverkare och byggföretag. Du har gjort jobbet, materialet är betalt – men pengarna kommer inte in. Den goda nyheten är att det finns en tydlig trappa att gå uppför: från en vänlig påminnelse, via dröjsmålsränta och förseningsersättning, till Kronofogden och i sista hand tingsrätt. Reglerna skiljer sig beroende på om kunden är privatperson (konsument) eller företag, och det påverkar både vilka avgifter du får ta ut och hur en tvist prövas.</p>
+<p><a href="/sv/verktyg/betalningspaminnelse-mall">Skapa en betalningspåminnelse med vår gratis mall (PDF & Excel) -&gt;</a></p>
 
 <p>Grunden för att kunna driva in en fordran är att fakturan är rätt från början – med tydlig förfallodag, specifikation och korrekta uppgifter. Använd gärna <a href="/sv/verktyg/faktura-mall">vår gratis faktura-mall -&gt;</a> så att varje faktura innehåller det som krävs för att du ska kunna ta nästa steg om betalningen uteblir.</p>
 
@@ -7242,6 +7243,7 @@ const A_JUSTERAT_FORMANSVARDE_SERVICEBIL: BlogPost = {
 
 const A_KMA_PLAN_MALL_HTML = `
 <p>KMA står för <strong>Kvalitet, Miljö och Arbetsmiljö</strong> – de tre områden en KMA-plan (ibland kallad kvalitetsplan) binder ihop till ett dokument. För många mindre byggföretag dyker kravet upp först när en beställare begär en KMA-plan i upphandlingen, och då gäller det att ha något att visa. Den goda nyheten: planen behöver inte vara tjock. Den ska vara konkret, spegla hur ni faktiskt jobbar och gå att uppdatera per projekt. Här går vi igenom vad den måste innehålla enligt PBL, Miljöbalken och Arbetsmiljölagen – och hur du bygger en nedbantad variant som håller.</p>
+<p><a href="/sv/verktyg/kvalitetsplan-mall">Ladda ner en färdig kvalitetsplan-mall (PDF & Excel) -&gt;</a></p>
 <p><a href="/sv/verktyg/avvikelserapport-mall">Dokumentera avvikelser med vår gratis avvikelserapport-mall (PDF & Excel) -&gt;</a></p>
 
 <p>Grunden i kvalitetsbenet är egenkontrollen. Börja med att ladda ner <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> och bygg vidare därifrån.</p>

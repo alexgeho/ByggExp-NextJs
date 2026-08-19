@@ -13193,9 +13193,296 @@ const A_KLIMATDEKLARATION_BYGGNAD_KRAV: BlogPost = {
   publishedAt: "2026-08-19T16:03:00.000Z", createdAt: "2026-08-19T16:03:00.000Z", updatedAt: "2026-08-19T16:03:00.000Z",
 };
 
+const A_HEMMAKONTOR_AVDRAG_ENSKILD_FIRMA_BYGG_HTML = `
+<p>Du har jobbet ute hos kund, men offerterna skrivs vid köksbordet, fakturorna skickas från hemmakontoret och en del verktyg och material ligger i garaget. Det är verklighet för de flesta hantverkare med enskild firma – och det finns pengar att spara på det arbete du gör hemma. Problemet är att reglerna för avdrag för arbetsrum är bland de snårigaste Skatteverket har, och många drar antingen för lite eller för mycket.</p>
+
+<p>Vill du samtidigt räkna på vad din tid faktiskt är värd innan du sätter priset på nästa jobb? Testa <a href="/sv/verktyg">våra gratis verktyg för hantverkare -&gt;</a> och koll särskilt på timpris-kalkylatorn.</p>
+
+<h2>Två helt olika spår – schablon eller verklig kostnad</h2>
+<p>Det första du måste förstå är att det finns två skilda spår, och du väljer <strong>ett</strong> av dem. Antingen tar du ett fast schablonavdrag för merkostnaden av att arbeta hemma, eller så drar du av en del av dina verkliga bostadskostnader. Vilket spår du får använda avgörs helt av en enda fråga: har du ett <strong>särskilt inrättat arbetsrum</strong> eller inte?</p>
+<p>Har du inget separat rum – du sitter i vardagsrummet eller vid köksbordet – är schablonen din enda väg. Har du ett rum som verkligen bara används för verksamheten öppnar sig möjligheten till verklig kostnad. Blanda aldrig ihop spåren, och kombinera dem inte.</p>
+
+<h2>Schablonavdraget – enkelt men litet</h2>
+<p>Schablonen är merkostnadsavdraget för dig som arbetar hemma utan särskilt inrättat arbetsrum. Beloppen enligt Skatteverket, oförändrade in i 2026, är:</p>
+<ul>
+<li><strong>2 000 kr/år</strong> om du arbetar i en bostad som du eller din maka/make äger – alltså villa eller radhus.</li>
+<li><strong>4 000 kr/år</strong> om du bor i hyresrätt eller bostadsrätt (lägenhet).</li>
+</ul>
+<p>För att få avdraget gäller <strong>800-timmarsregeln</strong>: du ska ha arbetat i bostaden minst 800 timmar under året i näringsverksamheten. Det motsvarar ungefär fyra timmar per arbetsdag och är inte alltid självklart för en hantverkare som mest är ute på uppdrag – räkna ärligt. Dessutom ska hemarbetet vara motiverat, det vill säga det ska finnas ett faktiskt behov, till exempel att du inte har tillgång till någon annan lokal för administrationen.</p>
+<p>Fördelen med schablonen är att den inte kräver eget rum, inte kräver kvitton och inte kräver någon proportionering. Den täcker just den extra kostnaden för el, värme och vatten som hemarbetet drar. Den är låg, men riskfri – och för de allra flesta hantverkare med enskild firma är den rätt val.</p>
+
+<h2>Verklig kostnad – kräver särskilt inrättat arbetsrum</h2>
+<p>Vill du dra av mer än schablonen måste rummet vara <strong>särskilt inrättat</strong>. Kravet är hårt: rummet ska med hänsyn till läge, inredning eller användning inte gå att använda som bostad. Ett rum med säng, tv eller privata prylar diskvalificerar sig direkt – används rummet också som gästrum, hobbyrum eller förvaring av privata saker räknas det inte.</p>
+<p>Uppfyller du kravet får du dra av en skälig del av dina verkliga kostnader, proportionellt mot ytan. Räkneexempel: har du ett arbetsrum på 10 kvm i en bostad på 100 kvm, kan du dra av <strong>10 %</strong> av uppvärmnings- och vattenkostnaden.</p>
+<p>El behandlas i två steg. Är rummet särskilt inrättat <strong>och</strong> det finns en separat elmätare för verksamheten får du dra av den el som faktiskt förbrukas i näringen. Saknas egen mätare förlorar du inte avdraget – då gör du i stället en <strong>skälig proportionering utifrån bostadens totala elkostnad</strong>, på samma sätt som för värme och vatten. Kravet på egen mätare gäller alltså bara det verkliga, uppmätta förbrukningsspåret, inte rätten till elavdrag i sig.</p>
+<p>En separat ingång är inget lagkrav, men den stärker din bevisning om att rummet är särskilt inrättat och inte kan användas som bostad. Vid en kontroll är det den typen av konkreta omständigheter som avgör.</p>
+
+<h2>Villafällan – räntan dras i kapital, inte i firman</h2>
+<p>Här går många villaägare vilse. Bor du i villa får du <strong>inte</strong> dra av ränteutgifter i näringsverksamheten – räntan drar du i inkomstslaget kapital, precis som vanligt. Företagsavdraget begränsas därför till övriga driftskostnader som vatten, el och värme.</p>
+<p>Konsekvensen är att den stora posten, räntan, redan ligger utanför firman. Kvar blir bara en liten andel av driftskostnaderna. Det är därför villaägaren nästan alltid landar på schablonens 2 000 kr – den verkliga kostnaden efter proportionering blir sällan högre, och den är dessutom betydligt krångligare att belägga.</p>
+
+<h2>Förrådet – att förvara verktyg och material hemma</h2>
+<p>För hantverkaren är förrådet ofta mer relevant än skrivbordet. Ett garage eller förråd som <strong>enbart</strong> används för verksamheten – verktyg, material, maskiner – kan behandlas som en särskilt inrättad yta på samma grund som arbetsrummet, med proportionellt avdrag för de kostnader som hör till.</p>
+<p>Men samma fälla gäller: blandad användning slår ut avdraget. Står bilen, gräsklipparen och julpyntet i samma garage är det inte längre särskilt inrättat. Ska du hävda förrådsavdrag behöver du kunna visa att ytan är avgränsad och att den bara används i näringen. Dokumentera – foton, en skiss över ytan och en notering om vad som förvaras där gör stor skillnad om Skatteverket frågar.</p>
+
+<h2>Enskild firma vs aktiebolag – blanda inte ihop reglerna</h2>
+<p>Allt ovan gäller enskild firma. Har du aktiebolag fungerar det på ett helt annat sätt: då hyr du i stället ut ett arbetsrum eller en lokal i din privatbostad till bolaget mot marknadsmässig hyra, och hyresintäkten beskattas i inkomstslaget kapital. Den modellen har egna krav och egna beloppsgränser och ska inte förväxlas med den enskilde näringsidkarens avdrag. Kör du enskild firma – håll dig till schablonen eller den verkliga kostnaden.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp gör inte din deklaration åt dig, men hjälper dig med underlaget som avgör vilket spår som lönar sig. I systemet tidrapporterar du löpande på jobb och administration, vilket ger dig en faktisk logg att luta dig mot när du ska bedöma om du når 800-timmarsregeln – i stället för att gissa i efterhand. Kalkyl- och prisunderlaget hjälper dig samtidigt att se hur mycket administrativ tid företaget faktiskt binder hemma. Sedan lämnar du siffrorna vidare till din bokföring och deklaration som vanligt.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket får jag dra av för hemmakontor i enskild firma?</h3>
+<p>Utan särskilt inrättat arbetsrum är schablonen 2 000 kr/år om du äger din villa eller radhus, och 4 000 kr/år om du bor i hyresrätt eller bostadsrätt. Med ett genuint särskilt inrättat rum kan du i stället dra av en proportionell del av de verkliga driftskostnaderna.</p>
+<h3>Måste jobbet vara mitt enda och rummet mitt enda arbetsställe?</h3>
+<p>Nej, men hemarbetet ska vara motiverat – det ska finnas ett faktiskt behov, exempelvis att du inte har tillgång till annan lokal för administrationen. För schablonen krävs dessutom minst 800 arbetade timmar i bostaden under året.</p>
+<h3>Kan jag dra av elen för verktyg och laddning hemma?</h3>
+<p>Ja, om rummet är särskilt inrättat. Finns en separat elmätare för verksamheten drar du av den el som faktiskt förbrukas i näringen. Saknas egen mätare får du i stället göra en skälig proportionering av bostadens totala elkostnad efter arbetsrummets andel av ytan – avdraget försvinner alltså inte utan mätare. Har du inget särskilt inrättat rum täcker schablonen i stället merkostnaden schablonmässigt.</p>
+<h3>Jag bor i villa – lönar sig verklig kostnad?</h3>
+<p>Sällan. Räntan drar du i kapital och ingår inte i näringsavdraget, så bara en liten andel av driftskostnaderna återstår att proportionera. För de flesta villaägande hantverkare blir schablonens 2 000 kr både enklare och minst lika bra.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att räkna på din tid och ditt pris i <a href="/sv/verktyg/timpris-kalkylator">vår gratis timpris-kalkylator</a>, och för in din administrativa tid löpande så att du vet var du landar mot 800-timmarsregeln. Vill du se hur tidrapportering och kalkyl hänger ihop i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi upplägget för just din firma.</p>
+
+<p>Relaterat: <a href="/sv/blog/avdrag-enskild-firma-bygg">Avdrag i enskild firma för byggföretag</a>, <a href="/sv/blog/egenavgifter-enskild-firma-bygg">Egenavgifter i enskild firma</a> och <a href="/sv/blog/bokforing-enskild-firma-bygg">Bokföring för enskild firma i bygg</a>.</p>
+`;
+
+const A_HEMMAKONTOR_AVDRAG_ENSKILD_FIRMA_BYGG: BlogPost = {
+  _id: "code-"+"hemmakontor-avdrag-enskild-firma-bygg",
+  title: "Hemmakontor och arbetsrum – avdrag i enskild firma för hantverkare", slug: "hemmakontor-avdrag-enskild-firma-bygg", locale: "sv",
+  excerpt: "Schablon eller verklig kostnad för hemmakontoret? Så drar du av rätt för arbetsrum, förråd och el i enskild firma – utan att dra för lite eller för mycket.", tag: "Skatt & avdrag",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_HEMMAKONTOR_AVDRAG_ENSKILD_FIRMA_BYGG_HTML,
+  seoTitle: "Avdrag hemmakontor enskild firma | ByggExp", seoDescription: "Schablon eller verklig kostnad för arbetsrum hemma? Så drar du av rätt i enskild firma som hantverkare – regler, elavdrag, 800-timmarsregeln och villafällan.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T17:00:00.000Z", createdAt: "2026-08-19T17:00:00.000Z", updatedAt: "2026-08-19T17:00:00.000Z",
+};
+
+const A_JAMKA_PRELIMINARSKATT_F_SKATT_BYGGFORETAG_HTML = `
+<p>Bygg är projektdrivet, och den debiterade F-skatten är satt i förväg. Ett stort projekt som kommer in i tredje kvartalet, eller en order som glider över till nästa år, svänger resultatet snabbt — men skatten fortsätter dras med samma belopp varje månad. Antingen byggs det upp en kvarskatt som slår till efter årsskiftet, eller så binds likviditet hos Skatteverket helt i onödan. Lösningen heter jämkning, och den kan göras flera gånger per år.</p>
+
+<p>I den här guiden går vi igenom exakt hur och när du justerar preliminärskatten så att den följer projektåret. Räkna på marginalerna i dina projekt med <a href="/sv/verktyg">våra gratis kalkyl- och mallverktyg för byggföretag -&gt;</a> innan du sätter din resultatprognos.</p>
+
+<h2>Vad är debiterad preliminärskatt (F-skatt) och hur sätts den?</h2>
+<p>Ett aktiebolag betalar F-skatt löpande på sitt <strong>beräknade överskott</strong> — inte på det faktiska resultatet, utan på en prognos. Beloppet delas upp i lika stora månadsbetalningar till skattekontot, normalt med förfall den 12:e varje månad (januari och augusti avviker). När bolaget är nytt sätts skatten utifrån den registrerade prognosen; därefter räknar Skatteverket normalt fram nästa års F-skatt på fjolårets resultat plus ett schablonpåslag.</p>
+<p>Problemet är uppenbart för en byggfirma: fjolårets resultat säger inte mycket om ett år där orderboken kan fördubblas eller halveras på ett kvartal. För 2026 är bolagsskatten <strong>20,6 %</strong> (oförändrad sedan 2021). En framförd motion om att sänka den till 20 % är <em>inte</em> genomförd för beskattningsåret 2026 — planera preliminärskatten runt 20,6 %.</p>
+<p>I en enskild firma fungerar det annorlunda. Där beskattas överskottet hos ägaren (kommunal och eventuell statlig inkomstskatt plus egenavgifter), så jämkningen ändrar ägarens debiterade F- eller FA-skatt. Jämkar du för lågt i en enskild firma landar det som privat kvarskatt hos dig själv.</p>
+
+<h2>Vad betyder att "jämka" F-skatten — och den vanliga begreppsförvirringen</h2>
+<p>För ett företag är jämkning inte en särskild "jämkningsansökan". Du lämnar helt enkelt en <strong>ny preliminär inkomstdeklaration</strong> (PID) till Skatteverket — via e-tjänsten eller blankett SKV 4313 för aktiebolag (SKV 4314 för enskild firma). Den nya PID:en <em>är</em> justeringsmekanismen. Du anger en uppdaterad resultatprognos, och Skatteverket räknar om den debiterade F-skatten.</p>
+<p>Den får lämnas <strong>flera gånger per år</strong>, ända fram till sex månader efter beskattningsårets slut. Det finns ingen låsning till en gång om året — en byggfirma kan jämka om varje gång pipelinen ändras.</p>
+<p>Här görs ett vanligt misstag: datumet <strong>9 november</strong> gäller jämkning av <em>lön</em> (A-skatt/avdragen skatt), så att ändringen ska gälla från januari. Det har inget med bolagets F-skatt att göra. Företagets F-skatt ändras via PID när som helst, upp till sex månader efter årets slut. Blanda inte ihop dem.</p>
+
+<h2>När projektåret svänger uppåt: undvik kvarskatt och kostnadsränta</h2>
+<p>Vinner du ett stort projekt mitt under året stiger det förväntade överskottet — och den F-skatt som redan dragits räcker inte. Lämna en ny PID så snart prognosen ändras. Viktigt: en jämkning gäller från <strong>månaden efter</strong> Skatteverkets beslut. Redan debiterade månader räknas inte om retroaktivt; bara de återstående månaderna justeras. Ju senare på året du jämkar, desto färre månader ska absorbera hela korrigeringen — och desto större blir den enskilda månadssmällen.</p>
+<p><strong>Räkneexempel:</strong> Ett byggbolag budgeterade 600 000 kr i överskott, vilket ger cirka 123 600 kr i årlig F-skatt (10 300 kr/månad). I augusti tecknas ett projekt som lyfter det förväntade överskottet till 1 200 000 kr — skatten borde vara cirka 247 200 kr. Jämkar bolaget så att beslutet gäller från september finns fyra månader kvar. De extra 123 600 kr fördelas på fyra månader, alltså drygt 30 900 kr utöver ordinarie 10 300 kr — cirka 41 200 kr per månad resten av året. Väntar bolaget till november är det bara två månader kvar att fördela på, och månadsbeloppet nästan fördubblas igen. Slutsatsen: jämka tidigt när det svänger uppåt, så blir kassaflödet jämnare och du slipper kvarskatt.</p>
+
+<h2>När projektåret svänger nedåt: bind inte likviditet i onödan</h2>
+<p>Motsatsen är lika viktig. Viker orderboken, eller glider ett projekt över till nästa år, är den debiterade F-skatten satt för högt. Då betalar du in mer skatt varje månad än vad resultatet motiverar — och binder rörelsekapital som byggföretaget behöver för löner, material och maskiner.</p>
+<p>Sänk F-skatten via en ny PID i stället för att vänta på återbäringen efter deklarationen. Intäktsräntan på skattekontot är låg — <strong>1,125 % för 2026</strong> (45 % av basräntan) — så pengarna gör mer nytta i rörelsen än parkerade hos Skatteverket. Skattekontot är ingen sparbössa.</p>
+
+<h2>Skattekontots räntor 2026 — de exakta siffrorna</h2>
+<p>För 2026 är <strong>basräntan 2,5 %</strong> (kopplad till Riksbankens styrränta). Det ger:</p>
+<ul>
+<li><strong>Låg kostnadsränta:</strong> 2,5 % (= basräntan).</li>
+<li><strong>Hög kostnadsränta:</strong> 17,5 % (basräntan + 15 procentenheter).</li>
+<li><strong>Intäktsränta:</strong> 1,125 % (45 % av basräntan) och skattefri — låg, men inte noll.</li>
+</ul>
+<p>Om jämkningen ändå inte räcker och du får ett underskott finns gränsen på <strong>30 000 kr</strong>. Är underskottet <em>större</em> än 30 000 kr måste en extra inbetalning vara bokförd på skattekontot senast den <strong>12 februari 2026</strong> (för kalenderåret 2025) för att undvika kostnadsränta — låg kostnadsränta löper annars från 13 februari. Är underskottet <strong>30 000 kr eller mindre</strong> räcker det att betala så att det är bokfört senast den <strong>4 maj 2026</strong>; kostnadsränta löper annars från 5 maj. Räkna med bankdagar och helger, eftersom pengarna måste vara registrerade på Skatteverkets bankgiro i tid. Extra inbetalning är ett bra komplement till jämkning när du upptäcker svängningen sent på året.</p>
+
+<h2>Bygg-specifika fallgropar</h2>
+<ul>
+<li><strong>Omvänd byggmoms döljer läget.</strong> B2B-byggtjänster faktureras utan utgående moms (omvänd skattskyldighet), samtidigt som du drar ingående moms på inköp. Många byggföretag sitter därför i ett återkommande momsöverskott på skattekontot — det kan maskera hur den verkliga F-skatteställningen ser ut. Läs av F-skatten separat, inte som ett saldo klumpat med momsen.</li>
+<li><strong>Retention och ROT förskjuter kassaflödet.</strong> Innehållna medel och ROT-avdrag (30 % av arbetskostnaden, max 50 000 kr per person och år) betalas ut senare än fakturan bokförs — resultatet kan se starkt ut medan kassan är tunn.</li>
+<li><strong>Säsong och väder.</strong> Ett tappat kvartal på grund av tjäle eller vinter ändrar årsprognosen — fånga det i en ny PID.</li>
+<li><strong>Blanda inte bolagets resultat med ägarlön och utdelning.</strong> F-skatten avser bolagets vinst; din privata skatt på lön och utdelning (3:12) är en separat kalkyl.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig hålla resultatprognosen uppdaterad så att jämkningen bygger på rätt siffror. När du kalkylerar projekt med <a href="/sv/verktyg/paslag-marginal-kalkylator">vår kalkylator för påslag och marginal</a> ser du vilket överskott varje projekt faktiskt bidrar med — underlaget du behöver för att avgöra om F-skatten ska upp eller ner. Vi lämnar inte in deklarationen åt dig och ger inte skatterådgivning, men vi gör det enkelt att se när prognosen har glidit ifrån den debiterade skatten så att du kan agera i tid.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur ofta får jag jämka F-skatten?</h3>
+<p>Så ofta det behövs. Du kan lämna en ny preliminär inkomstdeklaration flera gånger per år, ända fram till sex månader efter beskattningsårets slut. Det finns ingen årlig låsning — jämka om varje gång orderboken svänger.</p>
+<h3>Gäller den 9 november även för mitt byggbolags F-skatt?</h3>
+<p>Nej. Den 9 november är deadline för jämkning av <em>lön</em> (A-skatt) så att den ska gälla från januari. Bolagets F-skatt ändras via en ny PID när som helst under året, upp till sex månader efter årets slut.</p>
+<h3>Från när gäller en jämkning?</h3>
+<p>Från månaden efter Skatteverkets beslut. Redan debiterade månader räknas inte om — bara de återstående. Därför blir månadsbeloppet större ju senare på året du jämkar, eftersom färre månader delar på korrigeringen.</p>
+<h3>Vad kostar det att ha kvarskatt över 30 000 kr?</h3>
+<p>Är underskottet över 30 000 kr måste en extra inbetalning vara bokförd senast 12 februari 2026 för att undvika kostnadsränta. Låg kostnadsränta är 2,5 % för 2026; ligger skulden kvar längre tillkommer hög kostnadsränta på 17,5 %.</p>
+
+<h2>Kom igång</h2>
+<p>Stäm av prognosen mot den debiterade F-skatten varje kvartal, jämka proaktivt via en ny PID, håll en buffert på högst 30 000 kr och lägg in kalenderpåminnelser för februari- och maj-datumen. Börja med att räkna hem marginalen i dina projekt med <a href="/sv/verktyg/paslag-marginal-kalkylator">kalkylatorn för påslag och marginal</a>, eller utforska hela <a href="/sv/verktyg">verktygslådan för byggföretag</a>. Vill du se hur ByggExp håller din resultatprognos aktuell? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/f-skatt-hantverkare-ansokan">F-skatt för hantverkare — så ansöker du</a>, <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a> och <a href="/sv/blog/periodiseringsfond-byggbolag">Periodiseringsfond för byggbolag</a>.</p>
+`;
+
+const A_JAMKA_PRELIMINARSKATT_F_SKATT_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"jamka-preliminarskatt-f-skatt-byggforetag",
+  title: "Jämka preliminärskatten (F-skatt) i byggföretag", slug: "jamka-preliminarskatt-f-skatt-byggforetag", locale: "sv",
+  excerpt: "Bygg är projektdrivet och F-skatten är satt i förväg. Så jämkar du preliminärskatten via en ny PID när orderboken svänger — med rätt blanketter, datum och räntor för 2026.", tag: "Skatt",
+  coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_JAMKA_PRELIMINARSKATT_F_SKATT_BYGGFORETAG_HTML,
+  seoTitle: "Jämka F-skatt i byggföretag 2026 | ByggExp", seoDescription: "Så jämkar du den debiterade F-skatten när projektåret svänger — undvik kvarskatt och bind inte likviditet i onödan. PID, datum och räntor för 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T17:03:00.000Z", createdAt: "2026-08-19T17:03:00.000Z", updatedAt: "2026-08-19T17:03:00.000Z",
+};
+
+const A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA_HTML = `
+<p>En kund i grannkvarteret behöver byta ett tak, laga en läcka eller bygga altan. Hon skriver "snickare Enköping" eller "byggfirma nära mig" i mobilen. Google svarar inte med din hemsida — den svarar med tre företag i en kartruta högst upp. Det där är Local Pack, och det är där de flesta lokala jobb faktiskt avgörs. Kunden ringer ett av de tre företagen innan hon ens scrollar vidare. Den här synligheten är gratis. Ändå gör de flesta byggfirmor sin Google Företagsprofil halvdant: fyller i namn och telefon, glömmer kategori, samlar aldrig recensioner och undrar sedan varför konkurrenten ligger överst. Den här guiden går igenom hur du tar plats i kartrutan, steg för steg.</p>
+
+<p>Innan du börjar: samla dina företagsuppgifter och en genomtänkt offertrutin på ett ställe med <a href="/sv/verktyg">våra gratis verktyg för byggföretag &rarr;</a>. En proffsig första kundkontakt är det som gör en recension till fem stjärnor.</p>
+
+<h2>De tre sakerna Google faktiskt rankar på</h2>
+<p>Google är öppen med sina lokala rankingfaktorer. Det finns tre: <strong>relevans</strong> (hur väl din profil matchar det kunden söker), <strong>avstånd</strong> (hur nära du är den som söker) och <strong>prominens</strong> (hur känt och aktivt ditt företag är). Avståndet kan du inte styra, och det väger tungt — för lokala sökningar utan varumärkesnamn placerar Google ofta det närmaste relevanta företaget högst, gata för gata. Ett företag några kvarter bort slår regelmässigt ett som ligger flera kilometer längre bort. Men relevans och prominens bygger du själv.</p>
+<p>Bland det du faktiskt kan påverka rankar branschstudierna (som Whitesparks Local Search Ranking Factors) signalerna ungefär i den här ordningen: själva Google Företagsprofilen är den tyngsta gruppen, följt av on-page-innehåll och citeringar (omnämnanden av ditt företag på andra sajter), och därefter recensionssignaler — vars betydelse dessutom har ökat de senaste åren. Slutsatsen är enkel — profilen är din viktigaste enskilda tillgång, och den kostar ingenting att optimera.</p>
+
+<h2>Steg 1 — Skapa och verifiera profilen (annars är du osynlig)</h2>
+<p>En overifierad profil hamnar aldrig i kartrutan. Verifiering är obligatoriskt, och 2026 sker den ofta via <strong>videoverifiering</strong>: du filmar lokalen, skylten, en bil med logga eller dina verktyg för att bevisa att företaget är på riktigt. Vykort och telefon förekommer fortfarande. Räkna med några dagar innan verifieringen går igenom — men utan den är resten bortkastad tid.</p>
+<p>Vanligt problem: någon, ofta Google själv eller en tidigare ägare, har redan skapat en profil på din adress. Sök upp den, gör anspråk på ("claim") och verifiera i stället för att skapa en dubblett. Två profiler för samma företag förvirrar Google och splittrar dina recensioner.</p>
+
+<h2>Steg 2 — Rätt kategori = rätt sökord</h2>
+<p>Den <strong>primära kategorin</strong> är enligt 2026 års Local Search Ranking Factors-undersökning den enskilt viktigaste lokala rankingfaktorn. Den avgör vilka sökningar du ens är med och tävlar om. Välj den mest specifika kategori som stämmer: "Snickare", "Rörmokare", "Takläggare", "Elektriker" — inte den luddiga "Hantverkare". När kunden söker "snickare + ort" är det din primära kategori som matchar ordet "snickare".</p>
+<p>Du kan lägga till upp till 10 kategorier totalt. Använd dem för sidotjänster du faktiskt utför — men låt den primära vara ditt kärnyrke. En byggfirma som gör allt kan till exempel ha "Byggföretag" som primär och "Snickare", "Takläggare" och "Renoveringsföretag" som sekundära.</p>
+
+<h2>Steg 3 — Serviceområde och NAP som stämmer överallt</h2>
+<p>Åker du ut till kund i stället för att ta emot besök? Då är du ett <strong>tjänsteområdesföretag</strong>. Dölj gatuadressen och ange i stället de kommuner och orter du täcker — det är de orterna Google kopplar dig till i lokala sökningar. Lista de faktiska områden du jobbar i, inte hela Sverige.</p>
+<p>Sedan kommer detaljen som förvånansvärt många missar: <strong>NAP</strong> — Namn, Adress, Telefonnummer — måste vara identiskt tecken för tecken överallt. På Google-profilen, hemsidan, Hitta.se, Eniro och sociala medier. Samma förkortningar, samma skiljetecken, samma format på telefonnumret. "Byggfirman AB, Storgatan 3B" på ett ställe och "Byggfirman Aktiebolag, Storg. 3 B" på ett annat skapar "NAP-brus" som gör Google osäker på om det är samma företag — och sänker din ranking.</p>
+
+<h2>Steg 4 — Recensioner: mängd och färskhet slår femma i betyg</h2>
+<p>Det här är där de flesta byggfirmor tappar. En profil med 4,8 i betyg och 200 recensioner rankar i regel före en med 5,0 och 5 recensioner. <strong>Volym och färskhet väger tyngre än ett perfekt snitt.</strong> I svenska mellanstora städer tenderar företag med 40+ recensioner och 4,5+ i betyg att dominera Local Pack. Ett par gamla femmor räcker inte.</p>
+<p>Lösningen är en rutin: be alltid om en recension direkt efter avslutat jobb, medan kunden är nöjd och minnet är färskt. Google har ett eget verktyg som skapar en recensionslänk och QR-kod — skicka den via SMS eller mejl, eller sätt QR-koden på fakturan. Svara sedan på <strong>alla</strong> recensioner, både beröm och kritik. Ett sakligt svar på en sur recension imponerar ofta mer på nästa kund än de positiva.</p>
+<p><strong>Viktigt — det här får du aldrig göra:</strong> att erbjuda rabatt, pengar, presenter eller gratis tjänster i utbyte mot en recension räknas som "falskt engagemang" och är strikt förbjudet. Samma sak gäller att muta någon för att ändra eller ta bort ett negativt omdöme. Googles automatiska system upptäcker misstänkta recensioner, tar bort dem och kan stänga av hela profilen. Du får be om en recension — men aldrig styra betyget eller innehållet.</p>
+
+<h2>Steg 5 — Håll profilen levande (foton, inlägg, Frågor &amp; svar)</h2>
+<p>Aktivitet är en prominenssignal. Profiler med bilder får ungefär 42 % fler förfrågningar om vägbeskrivning. Ladda upp riktiga bilder på dina jobb — före/efter, teamet, bilar och skyltar. Omslagsbild 1080×608 px, logga 250×250 px. Google gynnar nyligen uppladdade bilder, så byt ut och fyll på regelbundet i stället för att lägga upp allt en gång och glömma bort det.</p>
+<p>Publicera dessutom <strong>Google-inlägg minst en gång i veckan</strong> — ett avslutat projekt, en säsongstjänst, en kort nyhet. Svara på frågor i Frågor &amp; svar innan kunderna svarar åt dig med felaktig information. Den här veckorutinen — nya bilder, ett inlägg, svar på recensioner — är precis den aktivitet som bygger prominens över tid.</p>
+
+<h2>Vad du realistiskt kan förvänta dig</h2>
+<p>Var ärlig mot dig själv om tidslinjen. Grundläggande optimering — verifiering, rätt kategori, ifylld profil, första bilderna — ger ofta mätbart fler visningar och klick inom <strong>4–8 veckor</strong>. Att bygga verklig prominens via recensioner och kontinuerlig aktivitet tar <strong>3–6 månader</strong> på konkurrensutsatta orter. Följ upp i profilens Insikter: visningar, samtal, vägbeskrivningar, och skillnaden mellan kategorisökningar (nya kunder som hittar dig) och direktsökningar (folk som redan känner till dig). Det är kategorisökningarna du vill se växa.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp sköter inte din Google-profil åt dig — men vi gör allt runt omkring så proffsigt att recensionerna kommer av sig själva. En tydlig <a href="/sv/verktyg/offert-mall">offertmall</a> ger kunden ett gott första intryck, och en organiserad hantering av jobb, tider och fakturor gör att du hinner med veckorutinen på profilen i stället för att drunkna i pappersarbete. Nöjda kunder som fått snygga offerter och korrekta fakturor är de som gladast klickar fem stjärnor när du skickar recensionslänken.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Kostar Google Företagsprofil något?</h3>
+<p>Nej. Att skapa, verifiera och optimera profilen är helt gratis. Det är just därför den är så kraftfull — lokalt slår en välskött gratisprofil ofta betald annonsering, eftersom kunder litar mer på kartrutan och recensionerna än på annonser.</p>
+<h3>Får jag bjuda kunden på rabatt om de lämnar en recension?</h3>
+<p>Nej. Att erbjuda rabatt, pengar eller presenter för recensioner är förbjudet och kan leda till att recensionerna tas bort eller att profilen stängs av. Du får däremot alltid be om en recension och skicka en länk eller QR-kod efter avslutat jobb — så länge du inte styr betyget.</p>
+<h3>Kan jag synas i flera orter än där jag har adress?</h3>
+<p>Ja. Ställ in profilen som tjänsteområdesföretag, dölj gatuadressen och lägg in de kommuner och orter du faktiskt jobbar i. Då kopplas du till lokala sökningar i hela ditt serviceområde, inte bara på hemadressen.</p>
+<h3>Varför syns inte min profil i kartrutan?</h3>
+<p>Vanligaste orsakerna är att profilen inte är verifierad, saknar primär kategori, eller har för få och för gamla recensioner. Kontrollera verifieringen först — en overifierad profil är i praktiken osynlig i Local Pack.</p>
+
+<h2>Kom igång</h2>
+<p>Sätt av en timme den här veckan: verifiera profilen, sätt rätt primär kategori, lägg in serviceområdet och skicka recensionslänken till dina tre senaste kunder. Bygg sedan en fast veckorutin. Börja med en proffsig kundkontakt via <a href="/sv/verktyg">våra gratis byggverktyg</a>, och vill du se hur ByggExp kan avlasta administrationen så du hinner sköta synligheten — <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/hitta-kunder-byggfirma">Hitta kunder till byggfirman</a> och <a href="/sv/blog/starta-byggforetag-2026">Starta byggföretag 2026</a>.</p>
+`;
+
+const A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA: BlogPost = {
+  _id: "code-"+"google-foretagsprofil-lokal-seo-byggfirma",
+  title: "Google Företagsprofil: lokal SEO för byggfirmor", slug: "google-foretagsprofil-lokal-seo-byggfirma", locale: "sv",
+  excerpt: "De flesta lokala byggjobb avgörs i Googles kartruta. Här är steg-för-steg-guiden till att ranka i Local Pack — verifiering, kategori, serviceområde och recensioner.", tag: "Lokal SEO",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA_HTML,
+  seoTitle: "Google Företagsprofil för byggfirmor | ByggExp", seoDescription: "Så tar din byggfirma plats i Googles kartruta (Local Pack): verifiering, rätt kategori, NAP och recensioner — steg för steg, gratis och för 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T17:06:00.000Z", createdAt: "2026-08-19T17:06:00.000Z", updatedAt: "2026-08-19T17:06:00.000Z",
+};
+
+const A_KREDITUPPLYSNING_KOLLA_KUND_INNAN_JOBB_BYGG_HTML = `
+<p>En obetald slutfaktura kan äta upp hela marginalen på ett projekt du redan lagt veckor på. I bygg ligger du dessutom ute med material och löner långt innan pengarna kommer in — du är i praktiken kreditgivare åt din kund, oavsett om du tänker på det så eller inte. Den billigaste försäkringen mot det är en kreditkontroll på 20 minuter innan du skriver under. Här går vi igenom hur du gör den rätt, vad reglerna säger, och var många byggföretag trampar fel.</p>
+
+<p>Bygg din kontroll till en fast rutin i säljprocessen med hjälp av <a href="/sv/verktyg">våra gratis verktyg för byggföretag -&gt;</a> — så blir kollen ett standardsteg före varje avtal i stället för något du gör i efterhand när det redan skavit.</p>
+
+<h2>Varför kreditrisken är särskilt hög i bygg</h2>
+<p>Byggprojekt har flera egenskaper som gör dem känsligare än de flesta andra branscher:</p>
+<ul>
+<li><strong>Långa projekt.</strong> Från avtal till slutfaktura kan det gå månader. Kundens ekonomi hinner förändras under tiden.</li>
+<li><strong>Stora materialinköp.</strong> Du köper in och ligger ute med kapital innan du får betalt, ofta med korta leverantörskrediter i ryggen.</li>
+<li><strong>À-conto- och slutfakturamodellen.</strong> Den sista fakturan — där hela din vinst ofta ligger — är den som betalas sist och bestrids oftast.</li>
+<li><strong>UE-ledet.</strong> Anlitar du underentreprenörer blir din kunds betalningsproblem snabbt ditt problem, eftersom du ska betala dina UE oavsett om du själv fått betalt.</li>
+</ul>
+<p>Poängen är enkel: du lämnar kredit varje gång du påbörjar ett jobb. Då bör du bedöma kredittagaren precis som en bank skulle göra.</p>
+
+<h2>Företag eller privatperson — reglerna skiljer sig</h2>
+<p>Vilka regler som gäller beror helt på vem kunden är juridiskt.</p>
+<p>På ett <strong>aktiebolag</strong> (en juridisk person) krävs inget särskilt skäl. Du får ta en företagsupplysning fritt, och ingen omfrågekopia skickas till bolaget — de får aldrig veta att du kollat.</p>
+<p>På en <strong>privatperson</strong> gäller kreditupplysningslagen (1973:1173). Enligt 9 § krävs ett <strong>legitimt behov</strong>: du måste ha ingått eller stå i begrepp att ingå ett kreditavtal med personen, eller på annat sätt ha anledning att göra en ekonomisk riskbedömning. Dessutom skickas alltid en omfrågekopia till den du kollat — i första hand via e-post, annars SMS eller brev.</p>
+<p>Det viktiga för bygg: en <strong>enskild firma</strong> (samt handels- och kommanditbolag) behandlas som en privatperson i det här avseendet. Samma krav på legitimt behov, och en omfrågekopia skickas varje gång. Eftersom väldigt många småkunder och UE i branschen är enskilda firmor gäller alltså privatpersonsreglerna oftare än man tror.</p>
+
+<h2>Vad räknas som legitimt behov — och vad du inte får göra</h2>
+<p>Du har legitimt behov när du faktiskt står i begrepp att ingå avtal eller lämna kredit — till exempel när en privatkund har begärt offert och ni är på väg att skriva kontrakt. Då är kontrollen tillåten.</p>
+<p>Vad du <strong>inte</strong> får göra är att rutinmässigt fiska upplysningar på alla som hör av sig, eller kolla någon av ren nyfikenhet. Att ta upplysningar utan legitimt behov är ett brott mot kreditupplysningslagen och kan ge böter eller fängelse i upp till ett år, skadestånd, samt anmälan till Integritetsskyddsmyndigheten (IMY). Formellt är det kreditupplysningsföretaget som ansvarar för att behov finns — men det är du som beställare som pekas ut i en anmälan. Ta därför bara upplysning på privatpersoner och enskilda firmor när en affär är på gång.</p>
+
+<h2>Vad du faktiskt läser av i en kreditupplysning</h2>
+<p>En företagsupplysning innehåller betydligt mer än ett betyg. Det här är de uppgifter du vill titta på:</p>
+<ul>
+<li><strong>Riskklass 1–5.</strong> Hos UC betyder 1 högst risk och 5 lägst risk att företaget blir insolvent eller går i konkurs inom tolv månader. Prognosen bygger på officiella källor: Kronofogden, Bolagsverket och Skatteverket.</li>
+<li><strong>Betalningsanmärkningar.</strong> Antal och storlek säger mycket om betalningsviljan.</li>
+<li><strong>Skulder hos Kronofogden.</strong> En tydlig varningsflagga.</li>
+<li><strong>Bokslut och omsättning.</strong> Matchar storleken det projekt kunden vill beställa?</li>
+</ul>
+<p>Tänk på gallringstiderna: en betalningsanmärkning tas bort efter <strong>3 år</strong> för privatpersoner <em>och enskilda firmor</em> — anmärkningen ligger på ägarens personnummer och gallras enligt privatpersonsregeln. För <strong>aktiebolag och andra juridiska personer</strong> finns ingen lagstadgad gallringstid, men i praktiken tas anmärkningen bort först efter omkring 5 år. En anmärkning kan alltså synas betydligt längre på ett aktiebolag än på en privatperson eller enskild firma — läs därför också hur gammal den är.</p>
+<p>Upplysningar levereras av bland andra UC, Creditsafe och Dun &amp; Bradstreet. Styckpris ligger typiskt runt 39–159 kr per upplysning exkl. moms, eller som fastpris via abonnemang om du kollar många. En struken slutfaktura kostar tusenfalt mer.</p>
+
+<h2>Extra kontroller när kunden eller UE är ett företag</h2>
+<p>Kreditbetyget är en pusselbit, men gör också en gratis koll hos Skatteverket. Via e-tjänsten <strong>Hämta företagsinformation</strong> anger du organisationsnummer (eller personnummer för enskild firma) och din egen e-postadress, så skickas uppgifterna till dig. Du ser om företaget är godkänt för F-skatt samt registrerat för moms och som arbetsgivare. Skatteverket är enda instansen med realtidsdata över svenska bolags skattestatus.</p>
+<p>F-skattekontrollen är inte en formalitet. Anlitar du som företag någon som <strong>inte</strong> är godkänd för F-skatt är du som köpare skyldig att göra skatteavdrag på 30 % och redovisa det till Skatteverket — och är leverantören en fysisk person (till exempel en enskild firma) ska du dessutom betala arbetsgivaravgifter. För dig som driver näringsverksamhet gäller det här redan från 1 000 kr i ersättning för arbete under året; tiotusenkronorsgränsen som ofta nämns gäller bara när det är en privatperson som betalar ut. Att missa kollen kan alltså bli oväntat dyrt — och den tar två minuter.</p>
+
+<h2>Riskbedöm din UE som Skatteverket rekommenderar</h2>
+<p>Skatteverkets vägledning (2026) för att riskbedöma en leverantör bygger på fem kontroller:</p>
+<ol>
+<li><strong>Registreringar</strong> — F-skatt, moms och arbetsgivare.</li>
+<li><strong>Arbetsgivaravgifter mot rimliga löner</strong> — multiplicera de beslutade avgifterna med cirka 3 för att uppskatta bruttolönerna. Stämmer det med antalet arbetare de säger sig ha?</li>
+<li><strong>Skulder hos Kronofogden.</strong></li>
+<li><strong>Årsredovisning utan anmärkning</strong> från revisorn.</li>
+<li><strong>Stabil styrelse, företagsnamn och adress.</strong></li>
+</ol>
+<p>Tumregeln: 0 avvikelser innebär låg risk, medan 1–4 avvikelser betyder att du bör utreda djupare innan avtal. Varningssignaler som Skatteverket och Ekobrottsmyndigheten lyfter fram är täta byten av styrelse, namn eller adress, dolda underentreprenörer eller bemanningsföretag, arbetsgivaravgifter som inte matchar antalet arbetare, och övertagna så kallade historikbolag. Byggföretagen har dessutom en egen vägledning, Råd och tips vid anlitande av underentreprenör, som är värd att läsa igenom.</p>
+
+<h2>Så bygger du in kontrollen i säljprocessen</h2>
+<p>Det som skiljer företag som drabbas av kreditförluster från dem som slipper är sällan tur — det är rutin. Gör kollen till ett fast steg:</p>
+<ul>
+<li>Kör kreditupplysning och Skatteverkskoll innan offert övergår i avtal.</li>
+<li>Vid svag kreditvärdighet: skriv in <strong>förskott eller tätare delbetalningar</strong>, <strong>äganderättsförbehåll</strong> på material och <strong>stopprätt</strong> i avtalet.</li>
+<li>Dokumentera offert och faktura ordentligt så att kravet håller om det går till inkasso. Spara underlaget i sju år.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp tar inte kreditupplysningar åt dig — det gör UC, Creditsafe eller Skatteverkets e-tjänst. Men ByggExp hjälper dig att göra resultatet av kontrollen till en affärsrutin. Du samlar offert, avtal och fakturor på samma kund, kan skriva in förskott och delbetalningar direkt i underlaget, och håller ordning på vilka kunder och UE du redan kontrollerat. När du väl bestämt villkoren skapar du en korrekt faktura — med rätt momshantering och tydligt betalningsvillkor — så att kravet står stadigt om betalningen dröjer. Behöver du fakturera en annan byggfirma hanterar du omvänd byggmoms direkt i mallen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får jag ta en kreditupplysning på min privatkund?</h3>
+<p>Ja, men bara när du har legitimt behov — det vill säga när ni är på väg att ingå avtal eller du ska lämna kredit. Kunden får alltid en omfrågekopia. Att kolla utan att en affär är på gång är ett brott mot kreditupplysningslagen.</p>
+<h3>Skickas det en kopia till kunden när jag kollar?</h3>
+<p>På privatpersoner och enskilda firmor: ja, alltid — i första hand via e-post, annars SMS eller brev. På aktiebolag skickas ingen omfrågekopia, så bolaget får aldrig veta att du gjort kontrollen.</p>
+<h3>Varför spelar F-skatt så stor roll?</h3>
+<p>Anlitar du som företag någon utan godkänd F-skatt ska du göra skatteavdrag på 30 % och redovisa det till Skatteverket — och om leverantören är en fysisk person även betala arbetsgivaravgifter. För en näringsidkare gäller det redan från 1 000 kr i ersättning för arbete under året (10 000-kronorsgränsen gäller bara privatpersoner som betalar ut). Kontrollen är gratis hos Skatteverket och tar ett par minuter.</p>
+<h3>Vad betyder riskklass 1 respektive 5?</h3>
+<p>Hos UC är 1 högst risk och 5 lägst risk att företaget går i konkurs inom tolv månader. Prognosen bygger på uppgifter från Kronofogden, Bolagsverket och Skatteverket. Ju lägre siffra, desto större skäl att kräva förskott eller avstå.</p>
+
+<h2>Kom igång</h2>
+<p>Gör kreditkollen till ett standardsteg och fånga upp villkoren i underlaget direkt. Börja med <a href="/sv/verktyg">våra gratis byggverktyg</a> och skapa ett korrekt kravunderlag i vår <a href="/sv/verktyg/faktura-mall">fakturamall</a>. Vill du se hur hela flödet — från offert och kreditvillkor till betald faktura — hänger ihop i ett system? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a>, <a href="/sv/blog/kreditforsakring-byggforetag">Kreditförsäkring för byggföretag</a> och <a href="/sv/blog/likviditet-byggforetag">Så stärker du likviditeten i byggföretaget</a>.</p>
+`;
+
+const A_KREDITUPPLYSNING_KOLLA_KUND_INNAN_JOBB_BYGG: BlogPost = {
+  _id: "code-"+"kreditupplysning-kolla-kund-innan-jobb-bygg",
+  title: "Kreditupplysning: kolla kunden innan du tar bygguppdraget", slug: "kreditupplysning-kolla-kund-innan-jobb-bygg", locale: "sv",
+  excerpt: "En kreditkontroll på 20 minuter är den billigaste försäkringen mot obetalda slutfakturor. Så gör du den rätt — regler, F-skattekoll och gallringstider.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_KREDITUPPLYSNING_KOLLA_KUND_INNAN_JOBB_BYGG_HTML,
+  seoTitle: "Kreditupplysning på kund i bygg | ByggExp", seoDescription: "Så gör du en korrekt kreditupplysning på kund och UE innan du skriver avtal — regler, F-skattekoll, gallringstider och riskbedömning för byggföretag.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T17:09:00.000Z", createdAt: "2026-08-19T17:09:00.000Z", updatedAt: "2026-08-19T17:09:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_HEMMAKONTOR_AVDRAG_ENSKILD_FIRMA_BYGG,
+    A_JAMKA_PRELIMINARSKATT_F_SKATT_BYGGFORETAG,
+    A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA,
+    A_KREDITUPPLYSNING_KOLLA_KUND_INNAN_JOBB_BYGG,
     A_RESTLISTA_OVERLAMNING_BYGG_MALL,
     A_KLIMATDEKLARATION_BYGGNAD_KRAV,
     A_SPACKEL_ATGANG_VAGG_TAK,

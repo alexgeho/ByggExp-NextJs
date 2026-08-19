@@ -5,6 +5,10 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'hemmakontor-avdrag-enskild-firma-bygg',
+  'jamka-preliminarskatt-f-skatt-byggforetag',
+  'google-foretagsprofil-lokal-seo-byggfirma',
+  'kreditupplysning-kolla-kund-innan-jobb-bygg',
   'restlista-overlamning-bygg-mall',
   'klimatdeklaration-byggnad-krav',
   'spackel-atgang-vagg-tak',

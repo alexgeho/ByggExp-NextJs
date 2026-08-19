@@ -17114,9 +17114,470 @@ const A_BULLER_VIBRATIONER_BYGG_GRANSVARDE: BlogPost = {
   publishedAt: "2026-08-20T08:27:00.000Z", createdAt: "2026-08-20T08:27:00.000Z", updatedAt: "2026-08-20T08:27:00.000Z",
 };
 
+const A_GDPR_KUNDREGISTER_BYGGFORETAG_HTML = `
+<p>Ett byggföretag sitter på tre register fyllda med personuppgifter: kunder med namn och kontaktuppgifter, personal med personnummer, och leverantörskontakter. GDPR gäller alla tre - oavsett om du är ensam hantverkare eller har trettio anställda. Poängen är inte att sluta samla data, utan att ha rätt rättslig grund, rätt lagringstid och rätt dokumentation. Sköter du det slarvigt kan en allvarlig överträdelse kosta upp till 20 miljoner euro eller 4 % av årsomsättningen. Sköter du det rätt är det en eftermiddags jobb en gång per år.</p>
+
+<p>Behöver du mallar och underlag för att komma igång? Utgå från <a href="/sv/verktyg">våra gratis verktyg och mallar för byggföretag -&gt;</a></p>
+
+<h2>Börja med rättslig grund - inte samtycke</h2>
+<p>GDPR vilar på sex rättsliga grunder (Art. 6): samtycke, avtal, rättslig förpliktelse, skydd av grundläggande intressen, allmänt intresse och berättigat intresse. Ett register är fullt lagligt så länge du har en av dessa grunder, följer principerna och informerar de registrerade. Missförståndet är att man alltid måste be om samtycke - det stämmer sällan.</p>
+<p>För ett byggföretags <strong>kundregister</strong> är grunden nästan alltid <strong>avtal</strong> (att fullgöra offert eller entreprenad) eller <strong>berättigat intresse</strong>. <strong>Personalregistret</strong> vilar på avtal (anställningen) plus rättslig förpliktelse (skatt och arbetsmiljö). <strong>Leverantörskontakter</strong> hanteras oftast på berättigat intresse. Samtycke är faktiskt den svagaste grunden - den kan återkallas när som helst - och behövs sällan i en B2B-relation. Spara samtycket till renodlad marknadsföring, som nyhetsbrev och utskick.</p>
+
+<h2>Personalliggaren - ett lagkrav som också är GDPR-data</h2>
+<p>Elektronisk personalliggare krävs på byggarbetsplatsen när den samlade kostnaden för byggverksamheten förväntas överstiga fyra prisbasbelopp. Prisbasbeloppet för 2026 är fastställt till 59 200 kr, vilket ger en gräns på <strong>236 800 kr</strong>. I byggbranschen måste liggaren vara elektronisk - papper godtas inte.</p>
+<p>Liggaren innehåller namn och personnummer på alla som är verksamma på platsen, alltså tydlig personuppgiftshantering. Den rättsliga grunden är rättslig förpliktelse enligt skatteförfarandelagen (SFL 39 kap). Här finns en nyckelpoäng som många missar: uppgifterna får <strong>endast</strong> användas för Skatteverkets kontroll. Det är olagligt att återanvända liggardatan till lön, tidrapportering eller schemaläggning - även om det vore praktiskt. Vill du ha tidrapportering behöver du samla den datan separat, på egen grund.</p>
+<p>Uppgifterna ska bevaras i två år efter utgången av det kalenderår då räkenskapsåret eller byggverksamheten avslutades. Saknas eller brister liggaren vid Skatteverkets besök blir kontrollavgiften 12 500 kr, plus 2 500 kr per person som inte är dokumenterad. Och eftersom liggaren oftast är en molntjänst behöver du ett personuppgiftsbiträdesavtal (PUB-avtal) med leverantören.</p>
+
+<h2>Hur länge får du spara? Lagringstider som krockar</h2>
+<p>GDPR:s princip om lagringsminimering säger att data ska raderas när ändamålet upphört. Men den principen vägs mot rättslig förpliktelse - och flera lagar tvingar fram längre lagring än du kanske vill.</p>
+<p><strong>Bokföringslagen</strong> kräver att räkenskapsinformation - fakturor, verifikationer och avtal med bokföringsvärde - bevaras i <strong>7 år</strong> efter utgången av det kalenderår då räkenskapsåret avslutades. Sedan 1 juli 2024 behöver materialet inte längre sparas i fysisk form, så länge det kan tillgängliggöras elektroniskt under hela arkiveringstiden. <strong>Personalliggaren</strong>: 2 år. <strong>Marknadsföringssamtycke</strong>: radera när kunden tackar nej.</p>
+<p>Det praktiska knepet är att <strong>separera ändamål</strong>. Att du måste spara en faktura i 7 år betyder inte att hela CRM-posten med säljanteckningar, telefonlogg och gamla offertutkast ska ligga kvar lika länge. Fakturan sparas för bokföringsändamålet; resten gallras när kundrelationen är avslutad. Sätt en gallringsrutin per registertyp - inte en gemensam "vi sparar allt i sju år".</p>
+
+<h2>Dokumentationen IMY faktiskt frågar efter</h2>
+<p>Vid en granskning är det första dokumentet Integritetsskyddsmyndigheten (IMY) oftast begär din <strong>registerförteckning</strong> - ett internt register över behandlingar. Där listar du vilka personuppgifter du behandlar, för vilket ändamål, hur länge och med vilken rättslig grund. Har du inget att visa upp ser det illa ut från start.</p>
+<p>Utöver den behöver du:</p>
+<ul>
+<li><strong>Integritetspolicy</strong> - informationen till de registrerade om hur du hanterar deras uppgifter.</li>
+<li><strong>PUB-avtal</strong> med alla leverantörer som behandlar personuppgifter åt dig: bokföringsbyrå, CRM eller molntjänst, lönesystem och leverantör av digital personalliggare.</li>
+<li><strong>Rutin för registerutdrag och radering</strong> - vem svarar och hur.</li>
+<li><strong>Tekniska och organisatoriska skyddsåtgärder</strong> - åtkomststyrning så att inte alla ser allt, och kryptering.</li>
+</ul>
+
+<h2>Kamerabevakning på byggarbetsplatsen</h2>
+<p>Sedan april 2025 krävs inget tillstånd från IMY för företagets kameror. Men det betyder inte fritt fram: du måste själv ha en dokumenterad <strong>intresseavvägning</strong> (berättigat intresse, Art. 6.1 f) som visar att behovet av bevakning väger tyngre än de bevakades integritet. Motivera med stöld- och skadegörelseskydd, rikta kamerorna så att du minimerar att fånga förbipasserande, och skylta tydligt. Intresseavvägningen och en förteckning över pågående bevakning ska bevaras i minst fem år.</p>
+
+<h2>De registrerades rättigheter</h2>
+<p>Kunder, anställda och leverantörskontakter har rätt till information, registerutdrag (tillgång), rättelse och radering. Uppgifter ska raderas när ändamålet och den rättsliga grunden upphört. Ha en utpekad person eller rutin som kan hantera en sådan begäran och svara inom en månad - det är inget du vill improvisera fram när en tidigare anställd hör av sig.</p>
+
+<h2>Checklista - kom igång på en eftermiddag</h2>
+<ol>
+<li>Inventera alla register - kund, personal, leverantör, liggare, kamera.</li>
+<li>Sätt rättslig grund per register (avtal, rättslig förpliktelse eller berättigat intresse).</li>
+<li>Skriv registerförteckningen.</li>
+<li>Sätt lagringstider och en gallringsrutin per registertyp.</li>
+<li>Teckna PUB-avtal med bokföringsbyrå, CRM, lönesystem och liggarleverantör.</li>
+<li>Publicera integritetspolicyn.</li>
+<li>Säkra åtkomst och kryptering.</li>
+<li>Dokumentera eventuell kamerabevakning med intresseavvägning.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig samla kund-, projekt- och leverantörsuppgifter på ett ställe med tydlig åtkomststyrning, så att inte alla anställda kommer åt allt. Du får en struktur där tidrapportering hålls skild från personalliggarens Skatteverksdata, och där avtal och underlag kan arkiveras elektroniskt genom hela bokföringens sjuårsperiod. Verktyget ersätter inte ditt juridiska ansvar - registerförteckning, integritetspolicy och PUB-avtal måste du fortfarande upprätta - men det gör det enklare att hålla data ordnad, gallringsbar och spårbar.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag be kunderna om samtycke för att spara deras uppgifter?</h3>
+<p>Nej, oftast inte. För kundregister är den rättsliga grunden nästan alltid avtal (att fullgöra offert eller entreprenad) eller berättigat intresse. Samtycke behövs främst för renodlad marknadsföring, som nyhetsbrev, och är dessutom den svagaste grunden eftersom det kan återkallas när som helst.</p>
+<h3>Får jag använda personalliggaren till tidrapportering?</h3>
+<p>Nej. Uppgifterna i personalliggaren får enligt lag endast användas för Skatteverkets kontroll. Att återanvända dem till lön, tidrapportering eller schemaläggning är olagligt. Vill du ha tidrapportering måste du samla in den datan separat, på en egen rättslig grund.</p>
+<h3>Hur länge ska jag spara kunduppgifter?</h3>
+<p>Det beror på ändamålet. Fakturor och avtal med bokföringsvärde ska sparas i 7 år enligt bokföringslagen. Övriga uppgifter, som säljanteckningar och kontaktlogg, ska gallras när ändamålet upphört - alltså när kundrelationen är avslutad. Separera ändamålen istället för att spara allt lika länge.</p>
+<h3>Vad är en registerförteckning och behöver mitt lilla byggföretag en?</h3>
+<p>Ja. Registerförteckningen är intern dokumentation över vilka personuppgifter du behandlar, för vilket ändamål, hur länge och med vilken rättslig grund. Den gäller oavsett företagsstorlek och är oftast det första dokument IMY begär vid en granskning.</p>
+
+<h2>Kom igång</h2>
+<p>GDPR är fullt hanterbart för ett byggföretag när du bryter ner det i tre delar: rätt grund, rätt lagringstid och rätt dokumentation. Börja med mallar och underlag bland <a href="/sv/verktyg">våra gratis verktyg</a>, och vill du se hur du håller registren ordnade i praktiken kan du <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/digitalisera-byggforetag-projektstyrning">Digitalisera byggföretaget med projektstyrning</a>, <a href="/sv/blog/hitta-kunder-byggfirma">Hitta kunder till byggfirman</a>, <a href="/sv/blog/starta-byggforetag-2026">Starta byggföretag 2026</a>.</p>
+`;
+
+const A_GDPR_KUNDREGISTER_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"gdpr-kundregister-byggforetag",
+  title: "GDPR för byggföretag: så håller du kund-, personal- och leverantörsregistret lagligt (2026)", slug: "gdpr-kundregister-byggforetag", locale: "sv",
+  excerpt: "Så sätter du rätt rättslig grund, rätt lagringstid och rätt dokumentation för byggföretagets tre register - och undviker sanktionsavgifter enligt GDPR.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_GDPR_KUNDREGISTER_BYGGFORETAG_HTML,
+  seoTitle: "GDPR kundregister byggföretag | ByggExp", seoDescription: "Rättslig grund, lagringstider och dokumentation som gör byggföretagets kund-, personal- och leverantörsregister lagligt enligt GDPR 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T09:00:00.000Z", createdAt: "2026-08-20T09:00:00.000Z", updatedAt: "2026-08-20T09:00:00.000Z",
+};
+
+const A_LEADPLATTFORMAR_OFFERTA_SERVICEFINDER_BYGGFIRMA_HTML = `
+<p>Dyra förfrågningar, delade leads som fem andra firmor också får och en vinstfrekvens som känns lägre än utlovat – många byggföretag är osäkra på om leadplattformar som Offerta och Servicefinder verkligen betalar sig. Frågan är berättigad, men svaret är inte ett enkelt ja eller nej. Det handlar om att räkna på kostnad per <em>vunnet jobb</em> i stället för per lead, och att veta vad du kan påverka. Exakta priser sätts individuellt och varierar kraftigt med bransch, geografi och konkurrens, så räkna alltid på din egen situation.</p>
+
+<p>Innan du köper en enda lead: se till att du kan skicka en snygg, komplett offert på minuten. Använd <a href="/sv/verktyg/offert-mall">vår gratis offertmall -&gt;</a> så att svaret är redo när förfrågan trillar in – snabbhet är en av de starkaste konverteringsdrivarna.</p>
+
+<h2>Så fungerar plattformarna – matchning kontra kreditmodell</h2>
+<p>Plattformarna tar betalt på olika sätt, och det påverkar din kalkyl direkt.</p>
+<ul>
+<li><strong>Offerta</strong> använder en kreditbaserad modell utan fast månadsavgift. Du köper kreditpaket och betalar per uppdrag du väljer att svara på. Offerta anger själva en kostnad på ungefär 300–2 500 kr per uppdrag beroende på bransch.</li>
+<li><strong>Servicefinder</strong> bygger på matchning: kunden beskriver projektet och matchas med upp till tre verifierade företag. Du betalar per lead, och leaden kan vara delad (flera firmor får samma) eller exklusiv.</li>
+<li><strong>BraByggare</strong> och <strong>BYGG.se</strong> är ytterligare alternativ som är värda att jämföra innan du binder dig till en kanal.</li>
+</ul>
+<p>En vanlig missuppfattning: Byggmentor är inte en leadsäljare utan en konsumentupplysningssajt med guider, till exempel om konsumenttjänstlagen när en privatperson anlitar hantverkare. Den skickar alltså inga betalförfrågningar till din firma.</p>
+
+<h2>Vad kostar en lead 2026?</h2>
+<p>För vanliga bygg- och renoveringsjobb ligger leadkostnaden typiskt på <strong>600–1 600 kr per förfrågan</strong>. För mer specialiserade tjänster som el och ventilation kan en enskild lead nå upp mot cirka 2 200 kr. Offertas spann på 300–2 500 kr per uppdrag ligger i linje med detta.</p>
+<p>Priset varierar mest med tre faktorer: bransch, geografi (dyrast i storstad, särskilt Stockholm) och hur många firmor som konkurrerar om samma jobbtyp. Be alltid om en aktuell prislista för just din kategori och ditt område innan du skriver på – det pris en kollega i en annan region nämner säger lite om vad du kommer att betala.</p>
+
+<h2>Räkna hem det – kostnad per vunnet jobb, inte per lead</h2>
+<p>Leadpriset i sig säger ingenting om lönsamheten. Det som avgör är hur många leads du behöver för att vinna ett jobb. Använd en enkel formel:</p>
+<p><strong>Kostnad per vunnet jobb = leadkostnad ÷ vinstfrekvens</strong></p>
+<p>Offerta uppger en vinstfrekvens på ungefär 10 procent av lämnade offerter första året, ofta stigande år 2–3. Vid 10 procent krävs alltså cirka tio leads per vunnet jobb. Ett räkneexempel (dina siffror kan avvika):</p>
+<ul>
+<li>10 leads × 1 000 kr = 10 000 kr i leadkostnad per vunnet jobb.</li>
+<li>Klarar jobbet ett täckningsbidrag på 25 000 kr täcker det leadkostnaden med god marginal.</li>
+<li>Ligger täckningsbidraget på 8 000 kr går affären back innan du ens har hållit i verktygen.</li>
+</ul>
+<p>Sätt exemplet i relation till timpriset. Snickare ligger 2026 ofta på 560–850 kr i timmen och el/VVS på 750–1 100 kr. Ett litet jobb på några timmar bär sällan en leadkostnad på 10 000 kr, medan ett större projekt gör det med marginal. Slutsats: leadplattformar lönar sig främst på jobb med tillräckligt täckningsbidrag – räkna innan du svarar.</p>
+
+<h2>Delade kontra exklusiva leads – frågor att ställa</h2>
+<p>Detaljerna i avtalet avgör din verkliga vinstfrekvens. Ställ minst dessa frågor innan du skriver på:</p>
+<ol>
+<li>Vad kostar en lead i min kategori och mitt område – aktuell prislista?</li>
+<li>Är leaden delad eller exklusiv, och med hur många firmor delas den?</li>
+<li>Hur snävt kan jag styra kategori och geografi så jag slipper irrelevanta förfrågningar?</li>
+<li>Hur krediteras felaktiga eller döda leads (fel nummer, redan bokat, utanför mitt område)?</li>
+<li>Finns bindningstid, och vad kostar det att pausa eller säga upp?</li>
+</ol>
+<p>En exklusiv lead är dyrare men konverterar normalt bättre eftersom du inte tävlar mot tre andra offerter i kundens inkorg. Räkna på båda alternativen med formeln ovan innan du bestämmer dig.</p>
+
+<h2>Så vinner du fler jobb från dina leads</h2>
+<p>Vinstfrekvensen är inte ödesbestämd – den går att höja. Det som skiljer firmor som tjänar pengar på leads från dem som inte gör det:</p>
+<ul>
+<li><strong>Svara snabbt.</strong> Den som ringer eller mejlar först ligger ofta bäst till. Ha en mall redo så att du kan svara inom minuter, inte dagar.</li>
+<li><strong>Skicka en komplett offert</strong> med tydlig specifikation, ROT-beräkning där det är relevant och möjlighet att signera med BankID. Ett proffsigt intryck väger tungt mot ett hastigt sms.</li>
+<li><strong>Visa upp recensioner och en genomarbetad profil.</strong> Social bevisning sänker kundens risk och höjer din hit rate.</li>
+<li><strong>Följ upp.</strong> Många affärer vinns på det andra samtalet, inte det första.</li>
+</ul>
+
+<h2>ROT-avdraget 2026 – ha koll i offerten</h2>
+<p>Från 1 januari 2026 är ROT-avdraget tillbaka på ordinarie nivå: <strong>30 procent av arbetskostnaden</strong>. Den tillfälliga höjningen till 50 procent gällde bara 12 maj–31 december 2025 och är borta. Det påverkar kundens betalningsvilja, så räkna på rätt nivå i offerten.</p>
+<ul>
+<li>Maxbeloppet för ROT är 50 000 kr per person och år.</li>
+<li>Nytt 2026: ett gemensamt tak för ROT + RUT på totalt 75 000 kr per person och år.</li>
+<li>ROT gäller endast arbetskostnad – material, resekostnad/framkörning, maskinhyra och administrativa avgifter ger inget avdrag.</li>
+<li>Företaget som utför arbetet måste vara godkänt för F-skatt, och betalning ska ske elektroniskt (kort/BankID) för att avdraget ska godkännas.</li>
+</ul>
+<p>Separera alltid arbete och material tydligt i offerten så att kunden ser sin verkliga kostnad efter avdrag – det gör ja-beslutet enklare och höjer din konvertering.</p>
+
+<h2>När lönar sig leadplattformar – och när inte</h2>
+<p>Leadköp passar bäst för nystartade firmor som behöver bygga upp ett flöde, för att fylla luckor i kalendern och för volymjobb med rimligt täckningsbidrag. Det lönar sig sämre när leadpriset är högt samtidigt som marginalen är låg, eller på smala nischjobb där få förfrågningar matchar.</p>
+<p>Se plattformarna som en kanal bland flera, inte som hela din marknadsföring. På sikt är egen synlighet ofta billigare per jobb: en stark Google-företagsprofil, lokal SEO och ett stadigt flöde av recensioner ger leads du inte betalar styckepris för.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte leadplattformarna, men gör att varje köpt lead konverterar bättre och blir mer lönsam. Med <a href="/sv/verktyg/offert-mall">offertmallen</a> skickar du en komplett, professionell offert direkt när förfrågan kommer in – med arbete och material uppdelat och ROT tydligt beräknat. Snabbt svar och proffsigt intryck är precis det som lyfter din vinstfrekvens, och därmed sänker din kostnad per vunnet jobb. I <a href="/sv/verktyg">verktygslådan</a> hittar du fler kalkyler och mallar för att räkna på marginal och pris innan du svarar på ett uppdrag.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad kostar en bygglead 2026?</h3>
+<p>För vanliga bygg- och renoveringsjobb typiskt 600–1 600 kr per förfrågan, och upp mot cirka 2 200 kr för specialiserade tjänster som el och ventilation. Offerta anger 300–2 500 kr per uppdrag. Priset varierar med bransch, geografi och konkurrens – begär alltid aktuell prislista för din kategori.</p>
+<h3>Hur räknar jag ut om en lead lönar sig?</h3>
+<p>Dela leadkostnaden med din vinstfrekvens för att få kostnad per vunnet jobb. Vid cirka 10 procents vinstfrekvens och 1 000 kr per lead blir det ungefär 10 000 kr per vunnet jobb. Jämför den summan med jobbets täckningsbidrag – lönsamt främst när marginalen är tillräckligt stor.</p>
+<h3>Är delade eller exklusiva leads bäst?</h3>
+<p>Exklusiva leads kostar mer men konverterar normalt bättre eftersom du inte tävlar mot flera andra offerter samtidigt. Delade leads är billigare men kräver högre svarstempo. Räkna på båda med kostnad per vunnet jobb innan du väljer.</p>
+<h3>Hur mycket är ROT-avdraget 2026?</h3>
+<p>30 procent av arbetskostnaden, max 50 000 kr per person och år, med ett nytt gemensamt tak för ROT och RUT på 75 000 kr per person och år. Avdraget gäller bara arbete, kräver att företaget är godkänt för F-skatt och att kunden betalar elektroniskt.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna på din egen kostnad per vunnet jobb innan du köper nästa lead, och se till att svaret går ut snabbt och komplett. Börja med <a href="/sv/verktyg/offert-mall">offertmallen</a> och de övriga <a href="/sv/verktyg">gratisverktygen</a>. Vill du se hur ByggExp knyter ihop offert, ROT och uppföljning i ett flöde? <a href="/sv/contact">Boka en demo</a> så visar vi konkret.</p>
+
+<p>Relaterat: <a href="/sv/blog/hitta-kunder-byggfirma">Hitta kunder till byggfirman</a>, <a href="/sv/blog/google-foretagsprofil-lokal-seo-byggfirma">Google-företagsprofil och lokal SEO för byggfirmor</a>, <a href="/sv/blog/skaffa-recensioner-omdomen-byggfirma">Så skaffar du fler recensioner och omdömen</a>.</p>
+`;
+
+const A_LEADPLATTFORMAR_OFFERTA_SERVICEFINDER_BYGGFIRMA: BlogPost = {
+  _id: "code-"+"leadplattformar-offerta-servicefinder-byggfirma",
+  title: "Lönar sig leadplattformar för byggfirman 2026? Kostnad per lead och ROI", slug: "leadplattformar-offerta-servicefinder-byggfirma", locale: "sv",
+  excerpt: "Vad en byggförfrågan faktiskt kostar 2026, hur du räknar kostnad per vunnet jobb och vad som avgör om Offerta, Servicefinder och liknande plattformar lönar sig.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_LEADPLATTFORMAR_OFFERTA_SERVICEFINDER_BYGGFIRMA_HTML,
+  seoTitle: "Leadplattformar byggfirma 2026 | ByggExp", seoDescription: "Lönar sig Offerta och Servicefinder för byggfirman? Vad en lead kostar 2026, hur du räknar ROI och vinner fler jobb. Konkret guide för hantverkare.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T09:03:00.000Z", createdAt: "2026-08-20T09:03:00.000Z", updatedAt: "2026-08-20T09:03:00.000Z",
+};
+
+const A_DOU_PARM_DRIFT_UNDERHALL_BYGG_HTML = `
+<p>En drift- och underhållsinstruktion i bygg är inte pappersarbete du kastar ihop kvällen före överlämningen — det är en del av den färdiga byggnaden. DoU-pärmen samlar allt kunden och förvaltaren behöver för att sköta och underhålla huset så att det fortsätter uppfylla kraven under hela driftskedet. Är pärmen ofullständig kan slutbesiktningen dra ut på tiden, slutbeskedet hållas tillbaka och garantitiden skjutas fram. Är den komplett och välstrukturerad blir överlämningen ett kvitto på ett proffsigt utfört jobb — och en tydlig startpunkt för dina garantiåtaganden.</p>
+
+<p>Behöver du ett strukturerat underlag att bygga vidare på? Samla flikar, egenkontroller och protokoll i ett dokument med hjälp av <a href="/sv/verktyg">våra gratis verktyg för bygg och överlämning →</a></p>
+
+<h2>Vad kräver lagen 2026?</h2>
+<p>Under 2025–2026 bytte det svenska byggregelverket skepnad. Boverkets nya funktionsbaserade byggregler ersatte BBR och EKS. Under övergångsperioden 1 juli 2025–30 juni 2026 fick byggherren välja mellan de gamla reglerna (BBR/EKS) och de nya — men inte blanda dem i samma projekt. Från 1 juli 2026 gäller enbart de nya reglerna för nya ärenden. En viktig detalj: om bygglovsbeslutet fattades före 1 juli 2026 enligt de gamla reglerna, så gäller de gamla reglerna även om startbeskedet kommer senare.</p>
+<p>De nya brandskyddsreglerna (BFS 2024:7), som trädde i kraft 1 juli 2025, ställer ett uttryckligt krav: drift- och underhållsinstruktioner ska tas fram så att byggnaden kan fortsätta uppfylla brandskyddskraven under drift. Det handlar om instruktioner för återkommande kontroller i driftskedet och för hur och när underhåll utförs. Brandskyddsdokumentationen ses som en del av den färdiga byggnaden, och kommunen bör redan i byggprocessen kräva att relevanta, tydliga drift- och underhållsinstruktioner följer med.</p>
+<p>Kopplingen till slutbeskedet är direkt. För slutbesked måste byggherren visa att alla krav enligt lovet, kontrollplanen, startbeskedet och eventuella kompletterande villkor är uppfyllda. Saknas DoU- eller brandskyddsdokumentation kan slutbeskedet hållas tillbaka — och då kan byggnaden inte tas i bruk.</p>
+
+<h2>DoU kontra avtalet — vad AB 04 och ABT 06 säger</h2>
+<p>Det är normalt entreprenören som tillhandahåller materialet till drift- och underhållsinstruktionerna. Du vidarebefordrar dokumentation från dina leverantörer och lägger till skötselscheman för de produkter du själv installerat. Relationshandlingar och DoU-instruktioner ska överlämnas till beställaren senast i samband med att slutbesiktningen påbörjas — inte veckor efteråt.</p>
+<p>Timingen har avtalsrättslig tyngd. Enligt AB 04 kap 4 § 7 är garantitiden normalt fem år för entreprenörens arbetsprestation och två år för material och varor. Enligt ABT 06 kap 4 § 7 gäller normalt fem år för entreprenaden och två år för material eller fabrikat som beställaren särskilt föreskrivit. Den totala ansvarstiden är tio år räknat från godkänd entreprenad, och den inleds med garantitiden.</p>
+<p>Poängen: garantitiden börjar löpa från den godkända slutbesiktningen — inte från när du fysiskt lade sista handen vid jobbet. En ofullständig DoU-pärm som försenar godkännandet försenar alltså också starten på din garantitid och därmed slutpunkten för ditt tioåriga ansvar. Vid totalentreprenad enligt ABT 06 väger detta extra tungt, eftersom egenkontroller, provningsprogram och samordnade funktionsprov utgör underlag för slutbesiktningen som avgör om entreprenaden godkänns.</p>
+
+<h2>Vad ska in i pärmen? Checklista med flikar</h2>
+<p>Strukturera pärmen med tydliga flikar så att förvaltaren hittar rätt. En fungerande grunduppsättning:</p>
+<ul>
+<li><strong>Relationshandlingar</strong> — ritningar och beskrivningar som visar byggnaden som den faktiskt utfördes.</li>
+<li><strong>Brandskyddsdokumentation</strong> — byggnadens verkliga brandskydd plus DoU-instruktioner för återkommande kontroll och underhåll av brandskyddet.</li>
+<li><strong>Produkt- och fabrikatblad</strong> — datablad för installerade produkter, med tillverkare och typbeteckning.</li>
+<li><strong>Skötsel- och serviceintervall</strong> — hur och när varje system ska skötas, servas och bytas.</li>
+<li><strong>Egenkontroller och provningsprotokoll</strong> — dokumenterat underlag från egenkontroller, provningar och driftgenomgångar.</li>
+<li><strong>Garantibevis</strong> — garantihandlingar från dig och dina underleverantörer.</li>
+<li><strong>Kontakt- och leverantörslista</strong> — vem förvaltaren ringer för varje system.</li>
+<li><strong>Driftgenomgång och utbildningsprotokoll</strong> — bevis på att kunden fått genomgång av anläggningen.</li>
+</ul>
+<p>Fliken för egenkontroller är ofta den som saknar poster vid överlämning. Har du löpande dokumenterat under projektets gång blir sammanställningen enkel — se <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall →</a> för en struktur du kan återanvända projekt efter projekt.</p>
+
+<h2>Digitalt är standard 2026 — format, struktur och namngivning</h2>
+<p>Om inget annat avtalats ska DoU-instruktioner, relationshandlingar och övrig dokumentation numera levereras digitalt. Det höjer kraven på filernas format, kvalitet och struktur. Vanlig praxis är att samla PDF-utskrifter i en indexerad PDF namngiven efter pärmen — till exempel "DU-Bygg" — och att också leverera originalen.</p>
+<p>Byggsektorn har en gemensam standard för hur DoU-leveranser struktureras och upphandlas. Offentliga beställare som Göteborgs Stad, Stockholms fastighetskontor och Luleå publicerar detaljerade kravspecifikationer och mallar för hur DU-pärmen ska indexeras och levereras. Även för en privat överlämning är dessa kravspecifikationer en användbar, återanvändbar checklista — de talar om exakt vilken metadata, mappstruktur och namngivning som förväntas. Strukturera per system, inte per leverantör, så att förvaltaren kan gå direkt till "ventilation" eller "el" utan att veta vilken underentreprenör som utförde arbetet.</p>
+
+<h2>Så gör du överlämningen rätt</h2>
+<p>Håll en driftgenomgång med kunden på plats — visa var avstängningar sitter, hur styr och regler fungerar och vilka intervall som gäller. Låt kunden kvittera mottagandet av pärmen skriftligt; det knyter samman leveransen med slutbesiktningens godkännande och därmed garantitidens start. Boka redan nu in en påminnelse för tvåårsbesiktningen, då materialgarantin på två år löper ut.</p>
+<p>För dig som mindre entreprenör: börja bygga pärmen tidigt, samla leverantörsdokumentation löpande i stället för i en sista panikrunda, och återanvänd samma flikstruktur för varje projekt. Då blir varje överlämning snabbare än den förra.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig samla underlaget till DoU-pärmen medan projektet pågår i stället för på slutet. Du dokumenterar egenkontroller och avvikelser löpande, samlar produkt- och garantihandlingar per projekt och exporterar en strukturerad sammanställning som PDF att lägga in under rätt flik. Vi gör inte brandprojekteringen åt dig och ersätter inte beställarens kravspecifikation — men vi ser till att egenkontroller, protokoll och kontaktuppgifter finns samlade och sökbara när slutbesiktningen börjar, så att inget saknas när garantitiden ska starta.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vem ansvarar för att ta fram drift- och underhållsinstruktionerna?</h3>
+<p>Normalt entreprenören. Du vidarebefordrar dokumentation från dina leverantörer och lägger till skötselscheman för de produkter du själv installerat. Materialet ska överlämnas till beställaren senast i samband med att slutbesiktningen påbörjas.</p>
+<h3>När börjar garantitiden löpa?</h3>
+<p>Från den godkända slutbesiktningen, inte från när arbetet fysiskt avslutades. Enligt AB 04/ABT 06 kap 4 § 7 är garantitiden normalt fem år för arbetet och två år för material, och den inleder den totala ansvarstiden på tio år.</p>
+<h3>Kan en ofullständig DoU-pärm stoppa slutbeskedet?</h3>
+<p>Ja. För slutbesked måste byggherren visa att alla krav enligt lov, kontrollplan och startbesked är uppfyllda. Saknas DoU- eller brandskyddsdokumentation kan slutbeskedet hållas tillbaka, och byggnaden får då inte tas i bruk.</p>
+<h3>Måste DoU-pärmen levereras digitalt?</h3>
+<p>Om inget annat avtalats, ja. Dokumentationen levereras digitalt, i praktiken ofta som en indexerad PDF namngiven efter pärmen (till exempel "DU-Bygg") plus original. Följ beställarens eller branschens kravspecifikation för format och struktur.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg din DoU-pärm på en struktur du kan återanvända. Börja med <a href="/sv/verktyg">våra gratis byggverktyg →</a> och <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen →</a>, eller <a href="/sv/contact">boka en demo →</a> så visar vi hur du samlar underlaget löpande fram till överlämningen.</p>
+
+<p>Relaterat: <a href="/sv/blog/overlamning-relationshandlingar">Relationshandlingar vid överlämning</a>, <a href="/sv/blog/restlista-overlamning-bygg-mall">Restlista och mall för överlämning</a>, <a href="/sv/blog/slutbesiktning">Slutbesiktning steg för steg</a>.</p>
+`;
+
+const A_DOU_PARM_DRIFT_UNDERHALL_BYGG: BlogPost = {
+  _id: "code-"+"dou-parm-drift-underhall-bygg",
+  title: "Så sätter du ihop DoU-pärmen — entreprenörens guide till drift- och underhållsinstruktioner vid överlämning", slug: "dou-parm-drift-underhall-bygg", locale: "sv",
+  excerpt: "En genomtänkt DoU-pärm avgör om slutbesiktningen godkänns, när garantitiden startar och om kunden blir nöjd — här är hela arbetsgången för entreprenören.", tag: "Överlämning",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_DOU_PARM_DRIFT_UNDERHALL_BYGG_HTML,
+  seoTitle: "DoU-pärm drift & underhåll bygg | ByggExp", seoDescription: "Så bygger entreprenören en komplett DoU-pärm med drift- och underhållsinstruktioner. Checklista, lagkrav 2026, digital leverans och överlämning till kund.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T09:06:00.000Z", createdAt: "2026-08-20T09:06:00.000Z", updatedAt: "2026-08-20T09:06:00.000Z",
+};
+
+const A_OPPEN_BOK_RIKTKOSTNAD_ENTREPRENAD_HTML = `
+<p>I större byggprojekt räcker inte alltid valet mellan fast pris och löpande räkning. Fast pris lägger hela osäkerheten på entreprenören och driver upp riskpåslag, medan ren löpande räkning ger beställaren dålig kostnadskontroll. Öppen bok kombinerat med riktkostnad och incitament är svaret många beställare och entreprenörer landar i när omfattningen är osäker men båda parter vill ha kontroll på ekonomin. Modellen är kärnan i samverkansentreprenad och partnering, och den hör hemma i B2B-sammanhang — inte mot konsument.</p>
+
+<p>Innan du räknar på ett incitamentsupplägg, bygg upp din kalkyl och dina underlag i <a href="/sv/verktyg">våra gratis verktyg för bygg -&gt;</a> så att siffrorna tål granskning från första mötet.</p>
+
+<h2>Vad betyder öppen bok?</h2>
+<p>Öppen bok (open book) innebär att beställaren har rätt att granska samtliga kalkyler, fakturor och underlag som entreprenören bygger sin riktkostnad och sina avräkningar på. Det är den fulla kostnadstransparensen som gör att självkostnadsdebitering och incitamentsdelning över huvud taget går att revidera och lita på. Utan öppna böcker blir en riktkostnad bara en siffra utan förankring.</p>
+<p>Grunden är självkostnadsprincipen i AB 04 och ABT 06 kap 6 §§ 9–10. Enligt 6:9 ersätts entreprenören för sina faktiska kostnader inom de uppräknade kostnadsslagen, plus ett entreprenörarvode som täcker vinst och centrala omkostnader. Öppen bok är den praktiska mekanismen som gör den principen transparent — beställaren ser vad som faktiskt debiteras och kan stämma av det mot avtalet och mot Byggherrarnas vägledning om tillämpning av självkostnadsprincipen.</p>
+
+<h2>Riktkostnad, målpris och entreprenörarvode</h2>
+<p>Det är lätt att förväxla riktkostnad med fast pris. Det är det inte. Riktkostnaden är en gemensamt framtagen uppskattning — en budget — av vad projektet väntas kosta. Den är varken ett tak eller en garanti. Under riktkostnaden ligger löpande räkning som verklig ersättningsform, och riktkostnaden läggs ovanpå som referenspunkt för incitamenten.</p>
+<p>Begreppen används lite olika i branschen. Riktkostnad och riktpris syftar oftast på den beräknade självkostnaden, medan målpris ibland används om samma referensnivå inklusive arvode. Oavsett ordval är poängen densamma: det är baslinjen som utfallet mäts mot.</p>
+<p>Entreprenörarvodet — där vinsten ligger — kan hanteras på två sätt. Antingen som ett procentpåslag på kostnaderna enligt 6:9 punkt 8, ofta runt 10 procent, eller som ett fast belopp. Den vanliga och kloka konstruktionen är att låsa arvodet till ett fast belopp. Då kan entreprenören inte höja sin egen vinst genom att driva upp kostnaderna, och intressena mellan parterna hålls raka. Var kostnadsgränserna går är dessutom rättsligt omtvistat — exempelvis om påslag får läggas på underentreprenörers påslag — vilket gör en tydlig definition av kostnadsslagen i öppna boken helt avgörande.</p>
+
+<h2>Incitament — delning av över- och underskott</h2>
+<p>Här sitter kärnmekaniken. Blir självkostnaden lägre än riktkostnaden uppstår ett överskott (vinst), blir den högre uppstår ett underskott (förlust). Parterna delar på mellanskillnaden enligt en förhandlad fördelningsnyckel. Därmed tjänar båda på att hålla kostnaderna nere och båda bär en del av risken om det spricker.</p>
+<p>Fördelningen är fri att avtala. En 50/50-delning är en vanlig utgångspunkt men inget lagkrav. Nyckeln kan också vara asymmetrisk — beställaren tar en större andel av överskottet, eller entreprenörens andel av förlusten begränsas med ett tak. Många avtal sätter både ett golv och ett tak på entreprenörens risk så att en enskild avvikelse inte blir förödande.</p>
+<p>Ett räkneexempel med 50/50-delning:</p>
+<ul>
+<li>Riktkostnad: 20 000 000 kr</li>
+<li>Faktisk självkostnad (utfall): 18 800 000 kr</li>
+<li>Överskott: 1 200 000 kr</li>
+<li>Delning 50/50: 600 000 kr vardera till beställare och entreprenör</li>
+</ul>
+<p>Blev utfallet i stället 21 000 000 kr uppstår ett underskott på 1 000 000 kr, och parterna bär 500 000 kr var — om inte ett avtalat tak begränsar entreprenörens del. Entreprenörarvodet ligger vid sidan av denna delning och påverkas inte om det är låst till fast belopp.</p>
+
+<h2>Kopplingen till samverkansentreprenad och partnering</h2>
+<p>Samverkansentreprenad och partnering är ingen egen juridisk kontraktsform. Upplägget byggs på de vanliga standardavtalen — AB 04 eller ABT 06 — kompletterade med ett samverkansavtal som reglerar arbetssätt, organisation och just den ekonomiska modellen med öppen bok och riktkostnad.</p>
+<p>Projekten körs typiskt i två faser. Fas 1 är tidig samverkan där projektering, kalkyl och riktkostnad tas fram gemensamt, ofta under konsultvillkoren i ABK 09. Fas 2 är utförandet, som i praktiken ofta läggs som en totalentreprenad under ABT 06. Öppen bok och riktkostnad är den ekonomiska motorn som håller ihop de två faserna: det som räknas fram i fas 1 blir baslinjen som incitamenten i fas 2 mäts mot. Modellen förutsätter alltså att båda parter kan och vill arbeta transparent redan från projekteringen.</p>
+
+<h2>När kan riktkostnaden justeras? ÄTA och programändringar</h2>
+<p>Riktkostnaden är reglerbar. Eftersom den är en uppskattning och inte ett tak är det vanligt — och klokt — att avtala om att den får revideras vid större programändringar och vid mer omfattande ÄTA-arbeten (ändrings-, tilläggs- och avgående arbeten). Annars mäts utfallet mot en baslinje som inte längre motsvarar uppdraget.</p>
+<p>En seglivad missuppfattning är att ÄTA inte existerar i partnering. Det stämmer inte. ÄTA-arbeten finns och tillämpas även i samverkansentreprenad — skillnaden är att de hanteras inom den gemensamma ekonomiska ramen och kan utlösa en justering av riktkostnaden i stället för att bara faktureras löpande vid sidan om. Det avgörande är tydliga spelregler: vad som räknas som en programändring, vilken storlek på ÄTA som flyttar baslinjen och hur den nya riktkostnaden räknas fram. Utan det underminerar första större ändringen hela incitamentslogiken.</p>
+
+<h2>När passar modellen — och när inte</h2>
+<p>Öppen bok och riktkostnad lämpar sig för stora, komplexa projekt med osäker omfattning, där ett fast pris antingen blir orimligt dyrt av riskpåslag eller helt enkelt inte går att sätta. Incitamentsavtal rekommenderas för större projekt och kräver att parterna har förtroende och mognad att arbeta transparent.</p>
+<p>Modellen rekommenderas inte mot konsument. Konsumentuppdrag styrs av konsumenttjänstlagen och inte av AB eller ABT, så öppen bok och riktkostnad med incitament hör hemma i den professionella, entreprenadrättsliga kontexten mellan byggföretag och beställare.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att bygga upp och hålla ordning på det underlag som en öppen bok kräver. Du kan strukturera din kalkyl per kostnadsslag så att den går att granska mot självkostnadsprincipen, och koppla den till en tydlig offert eller avtalsbilaga där riktkostnad, arvode och fördelningsnyckel framgår. Använd <a href="/sv/verktyg/offert-mall">vår offertmall</a> som utgångspunkt för att beskriva ersättningsformen och incitamentsupplägget skriftligt redan i anbudsskedet. ByggExp fattar inga juridiska beslut åt dig och ersätter inte en genomgången avtalsjurist — verktygen ger dig strukturen och spårbarheten så att siffrorna tål den granskning som öppna böcker innebär.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är riktkostnad samma sak som fast pris?</h3>
+<p>Nej. Riktkostnaden är en gemensamt uppskattad budget, inte ett fast pris och inte ett tak. Den verkliga ersättningsformen är löpande räkning enligt självkostnadsprincipen, och riktkostnaden fungerar som referenspunkt för att dela på över- eller underskott.</p>
+<h3>Måste incitamenten delas 50/50?</h3>
+<p>Nej. Fördelningsnyckeln förhandlas fritt per projekt. 50/50 är en vanlig utgångspunkt men inget lagkrav — den kan vara asymmetrisk, och entreprenörens risk kan begränsas med tak och golv.</p>
+<h3>Finns ÄTA-arbeten i partnering?</h3>
+<p>Ja. ÄTA existerar och tillämpas även i samverkansentreprenad. Riktkostnaden är dessutom reglerbar och justeras ofta vid större programändringar och omfattande ÄTA, förutsatt att avtalet anger tydliga regler för när baslinjen flyttas.</p>
+<h3>Passar modellen för privatpersoner?</h3>
+<p>Nej. Incitamentsavtal rekommenderas inte gentemot konsument. Konsumentuppdrag regleras av konsumenttjänstlagen, medan öppen bok och riktkostnad hör hemma i B2B-projekt under AB 04 eller ABT 06.</p>
+
+<h2>Kom igång</h2>
+<p>Öppen bok och riktkostnad flyttar fokus från lägsta pris till gemensam kostnadskontroll — men modellen är bara så bra som avtalet och underlaget bakom den. Börja med att räkna och dokumentera i <a href="/sv/verktyg">våra gratis byggverktyg</a> och sätt ord på ersättningsformen med <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur ByggExp kan hålla ihop kalkyl, offert och kostnadsuppföljning i ett flöde? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/fast-pris-eller-lopande-rakning">Fast pris eller löpande räkning</a>, <a href="/sv/blog/anbudskalkyl-bygg">Anbudskalkyl för bygg</a>, <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">Kostnadskontroll och marginal i byggprojekt</a>.</p>
+`;
+
+const A_OPPEN_BOK_RIKTKOSTNAD_ENTREPRENAD: BlogPost = {
+  _id: "code-"+"oppen-bok-riktkostnad-entreprenad",
+  title: "Öppen bok och riktkostnad i entreprenad — så fungerar incitamentsmodellen", slug: "oppen-bok-riktkostnad-entreprenad", locale: "sv",
+  excerpt: "En genomgång av hur öppen bok och riktkostnad med incitament fungerar i entreprenad — och när modellen passar ditt byggföretag.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_OPPEN_BOK_RIKTKOSTNAD_ENTREPRENAD_HTML,
+  seoTitle: "Öppen bok & riktkostnad | ByggExp", seoDescription: "Så fungerar öppen bok och riktkostnad med incitament i entreprenad: målpris, delning av över-/underskott och kopplingen till partnering. Guide för byggföretag 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T09:09:00.000Z", createdAt: "2026-08-20T09:09:00.000Z", updatedAt: "2026-08-20T09:09:00.000Z",
+};
+
+const A_SKATTEFRI_LADDEL_ARBETSPLATS_2026_HTML = `
+<p>Har byggföretaget elbilar eller laddhybrider i bilparken finns en regel du vill ha koll på: den tillfälliga skattefriheten för förmån av laddel på arbetsplatsen blir <strong>permanent från och med 1 juli 2026</strong>. Det betyder att du kan ladda firmans service- och förmånsbilar på gården, vid lagret eller utanför kontoret utan att det utlöser en skattepliktig förmån för föraren. Men villkoren är snäva, och gränsdragningen mot hemmaladdning fäller många.</p>
+
+<p>Ska du samtidigt få ordning på bilkostnader, milersättning och underlag inför lönekörningen? Börja i <a href="/sv/verktyg">vår samling av gratis verktyg för byggföretag -></a> och läs vidare för vad de nya reglerna faktiskt innebär i praktiken.</p>
+
+<h2>Vad ändras 1 juli 2026?</h2>
+<p>Skattefriheten för laddel på arbetsplatsen infördes som en <em>tillfällig</em> regel och gällde 1 juli 2023–30 juni 2026. Nu görs den permanent och gäller tills vidare, utan någon övergångsperiod. Den som laddar på jobbet 30 juni respektive 1 juli 2026 möter alltså samma regel – skillnaden är att den inte längre har något slutdatum.</p>
+<p>Beslutet bygger på regeringens proposition 2025/26:80, "Permanent skattefrihet för förmån av laddel på arbetsplatsen och utvidgad rätt till avdrag för drivmedelsutgifter", som lämnades i december 2025 och antogs av riksdagen. Syftet är att gynna omställningen till en fossilfri fordonsflotta och göra det mer attraktivt att köra arbetsresor med laddbara fordon. Statsfinansiellt beräknas skattefriheten minska skatteintäkterna med 130 miljoner kronor 2026 och 260 miljoner kronor per år från och med 2027.</p>
+
+<h2>Villkoren – laddningen måste ske "i anslutning till arbetsplatsen"</h2>
+<p>Kärnan i regeln är enkel men avgörande: laddningen ska ske vid en <strong>laddningspunkt eller ett eluttag som arbetsgivaren tillhandahåller i anslutning till arbetsplatsen</strong>. Är det uppfyllt är laddelen skattefri – oavsett om det handlar om en förmånsbil, en ren tjänstebil eller den anställdes privata elbil.</p>
+<p>Skattefriheten omfattar el för att ladda ett brett spann av fordon:</p>
+<ul>
+<li>Personbil klass I</li>
+<li>Lätt lastbil</li>
+<li>Motorcykel och moped</li>
+<li>Cykel och elsparkcykel/elcykel</li>
+</ul>
+<p>För ett byggföretag betyder det att laddstolpen vid lagret täcker både servicebilarna och montörens elcykel utan skattekonsekvenser. Viktigt att komma ihåg: skattefriheten gäller bara <em>elen</em>. Själva bilförmånen beräknas separat och påverkas inte av att laddningen är gratis.</p>
+
+<h2>Gränsdragningen som fäller många – hemmaladdning är inte skattefri</h2>
+<p>Här går den skarpaste linjen. <strong>Hemmaladdning omfattas inte</strong> av skattefriheten. Betalar arbetsgivaren för laddning i den anställdes bostad är det en skattepliktig drivmedelsförmån. Privat körning värderas då till marknadsvärdet av elförbrukningen multiplicerat med 1,2. Skatteverket godtar en genomsnittlig kostnad för laddning i den anställdes privatbostad som marknadsvärde.</p>
+<p>Alternativet till att betala hemmaladdning som förmån är att hålla isär det: föraren står för sin egen hemmaladdning och får i stället skattefri milersättning för tjänsteresor. Schablonen 2026 är <strong>9,50 kr per mil för helt elbil</strong> och 12 kr per mil (120 öre/km) för övriga drivmedel. Läs mer om nivåerna i vår genomgång av <a href="/sv/blog/milersattning-2026">milersättning 2026</a>.</p>
+
+<h2>Nyheten för laddhybrider som förmånsbil</h2>
+<p>Propositionen innehåller även en utvidgad rätt till drivmedelsavdrag som är särskilt relevant för firmor med laddhybrider. Tidigare gick det inte att betala skattefri drivmedelsersättning för tjänsteresor när bilen laddats kostnadsfritt med arbetsgivarens el på arbetsplatsen. Från 1 juli 2026 får en anställd med laddhybrid som förmånsbil rätt till skattefri ersättning för tjänsteresor <strong>även när bilen har laddats gratis på jobbet</strong> – 12 kr per mil för bränsledelen. Den utvidgade avdragsrätten bedöms inte påverka skatteintäkterna.</p>
+
+<h2>Så här gör byggföretaget rätt – checklista</h2>
+<ol>
+<li>Installera laddpunkt eller eluttag vid kontor, lager eller arbetsplats så att laddningen faktiskt sker "i anslutning till arbetsplatsen".</li>
+<li>Dokumentera var laddning sker – jobbladdning (skattefri) respektive hemmaladdning (skattepliktig) måste kunna skiljas åt.</li>
+<li>Bestäm rutin för hemmaladdning: antingen som drivmedelsförmån (marknadsvärde × 1,2) eller att föraren själv bekostar den och tar skattefri milersättning.</li>
+<li>Håll körjournal för tjänsteresor så att underlaget för milersättning håller vid en granskning.</li>
+<li>Stäm av upplägget med redovisningskonsulten innan lönekörning – reglerna skiljer sig mellan elbil och laddhybrid.</li>
+</ol>
+
+<h2>Räkneexempel – snickarfirma med tre servicebilar</h2>
+<p>En snickarfirma har tre servicebilar: två elbilar och en laddhybrid. Firman sätter upp en laddstolpe på gården vid verkstaden.</p>
+<ul>
+<li><strong>Laddning på gården:</strong> All el för de tre bilarna är skattefri för förarna – oavsett förmånsbil eller tjänstebil. Ingen förmån att beskatta.</li>
+<li><strong>Montören som laddar hemma:</strong> Betalar firman elräkningen för hemmaladdningen blir det en drivmedelsförmån värderad till marknadsvärdet av elen × 1,2. Låter firman i stället montören stå för hemmaelen kan tjänsteresorna ersättas skattefritt med 9,50 kr/mil (elbil).</li>
+<li><strong>Laddhybriden:</strong> Efter 1 juli 2026 kan föraren ladda gratis på gården och ändå få 12 kr/mil skattefritt för bränsledelen vid tjänsteresor.</li>
+</ul>
+<p>Poängen: samma bil kan ge helt olika skatteutfall beroende på var den laddas. Att styra laddningen till arbetsplatsen är oftast den enklaste vägen till en ren hantering.</p>
+
+<h2>Vanliga misstag och kontrollrisker</h2>
+<p>De vanligaste felen är att blanda ihop jobb- och hemmaladdning, att betala hemmaladdning utan att förmånsbeskatta den, och att tro att skattefri laddel sänker själva bilförmånen (det gör den inte). Ett annat vanligt fel är att inte skilja på ren tjänstebil och förmånsbil – gränsdragningen påverkar hur ersättningar och förmåner ska hanteras. Se vår genomgång av <a href="/sv/blog/servicebil-eller-formansbil">servicebil eller förmånsbil</a> och hur du kan sänka värdet i <a href="/sv/blog/justerat-formansvarde-servicebil">justerat förmånsvärde för servicebil</a>.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte din redovisningskonsult, men vi hjälper dig samla underlaget som gör hanteringen enkel. I plattformen kan du dokumentera körningar och tjänsteresor, hålla ordning på fordon och koppla kostnader till rätt projekt – så att milersättning och förmånsunderlag finns samlat när det är dags för lön och bokslut. Verktygen på <a href="/sv/verktyg">/sv/verktyg</a> ger dig snabba beräkningar utan inloggning.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>När blir skattefriheten för laddel på arbetsplatsen permanent?</h3>
+<p>Från och med 1 juli 2026. Den tidigare tillfälliga regeln gällde 1 juli 2023–30 juni 2026 och görs nu permanent utan övergångsperiod, med stöd av proposition 2025/26:80.</p>
+<h3>Gäller skattefriheten även den anställdes privata elbil?</h3>
+<p>Ja. Villkoret är att laddningen sker vid en laddpunkt eller ett eluttag som arbetsgivaren tillhandahåller i anslutning till arbetsplatsen. Det gäller oavsett om det är förmånsbil, tjänstebil eller den anställdes privata fordon.</p>
+<h3>Är hemmaladdning som firman betalar skattefri?</h3>
+<p>Nej. Hemmaladdning omfattas inte. Betalar arbetsgivaren för laddning i den anställdes bostad blir det en skattepliktig drivmedelsförmån där privat körning värderas till marknadsvärdet av elförbrukningen × 1,2.</p>
+<h3>Påverkar skattefri laddel förmånsvärdet för bilen?</h3>
+<p>Nej. Bilförmånen beräknas separat. Skattefriheten gäller bara elen/drivmedlet, inte värdet av själva förmånsbilen.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna på firmans bilkostnader och milersättning direkt i <a href="/sv/verktyg">våra gratis verktyg</a>, och boka en <a href="/sv/contact">demo</a> om du vill se hur ByggExp samlar underlaget för fordon, körningar och projekt på ett ställe.</p>
+
+<p>Relaterat: <a href="/sv/blog/servicebil-eller-formansbil">Servicebil eller förmånsbil</a>, <a href="/sv/blog/justerat-formansvarde-servicebil">Justerat förmånsvärde för servicebil</a> och <a href="/sv/blog/milersattning-2026">Milersättning 2026</a>.</p>
+`;
+
+const A_SKATTEFRI_LADDEL_ARBETSPLATS_2026: BlogPost = {
+  _id: "code-"+"skattefri-laddel-arbetsplats-2026",
+  title: "Skattefri laddel på arbetsplatsen 2026 – vad gäller för firmans service- och förmånsbilar", slug: "skattefri-laddel-arbetsplats-2026", locale: "sv",
+  excerpt: "Från 1 juli 2026 blir skattefriheten för elbilsladdning på arbetsplatsen permanent – här är villkoren och fällorna för byggföretag med service- och förmånsbilar.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_SKATTEFRI_LADDEL_ARBETSPLATS_2026_HTML,
+  seoTitle: "Skattefri laddel arbetsplats 2026 | ByggExp", seoDescription: "Den tillfälliga skattefriheten för laddel på jobbet blir permanent 1 juli 2026. Så gäller reglerna för byggföretagets service- och förmånsbilar.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T09:12:00.000Z", createdAt: "2026-08-20T09:12:00.000Z", updatedAt: "2026-08-20T09:12:00.000Z",
+};
+
+const A_NYA_AB_04_ABT_06_REVIDERING_2027_HTML = `
+<p>Revideringen av AB 04 och ABT 06 pågår - men inget är beslutat. Om du söker efter status på den <strong>nya AB 04 ABT 06 revidering</strong> som Byggandets Kontraktskommitté (BKK) driver, är den korta versionen att nya standardavtal väntas tidigast under senare delen av 2027, och att den här texten är en lägesrapport, inte en regelbok. Fram tills nya avtal är formellt antagna gäller fortfarande AB 04 och ABT 06 fullt ut.</p>
+
+<p>Behöver du hålla ordning på offerter, ÄTA och dokumentation redan idag - oavsett vilket standardavtal som gäller - hittar du praktiska verktyg i <a href="/sv/verktyg">vår gratis verktygslåda -&gt;</a>.</p>
+
+<h2>Vad är AB 04 och ABT 06?</h2>
+<p>AB 04 och ABT 06 är de två dominerande standardavtalen (Allmänna Bestämmelser) för svenska byggentreprenader. AB 04 reglerar utförandeentreprenader, där beställaren står för projekteringen och entreprenören utför arbetet. ABT 06 reglerar totalentreprenader, där entreprenören ansvarar för både projektering och utförande.</p>
+<p>Namnen speglar årtalen de kom - 2004 respektive 2006. De ligger till grund för en mycket stor del av alla byggavtal i Sverige och åberopas rutinmässigt i allt från AF-delar till underentreprenörskontrakt. Att de nu ses över är knappast förvånande: mycket har hänt inom digitalisering, arbetsmiljö och hållbarhet sedan mitten av 2000-talet, och en modernisering har efterlysts länge. Vill du repetera grunderna har vi en separat genomgång av <a href="/sv/blog/ab-04-och-abt-06">skillnaderna mellan AB 04 och ABT 06</a>.</p>
+
+<h2>Vad är på gång? AB 25 och ABPU 25</h2>
+<p>BKK genomför en omfattande revidering av båda avtalen. Enligt förslaget ska AB 04 ersättas av <strong>AB 25</strong> (utförandeentreprenader) och ABT 06 av <strong>ABPU 25</strong> (projekterings- och utförandeentreprenader, alltså det vi idag kallar totalentreprenad).</p>
+<p>Observera att detta är föreslagna arbetsnamn. Ingenting är ännu antaget, och både namn och innehåll kan komma att ändras innan avtalen publiceras. Det är BKK som äger och driver processen, och det är också BKK:s besked du bör följa - inte enskilda spekulationer i branschen.</p>
+
+<h2>Tidslinje och nuvarande status</h2>
+<p>Förslagen skickades ut på remiss den 15 oktober 2024, med remisstiden löpande till den 28 februari 2025. När remissen stängde hade BKK fått in ungefär 4 000 synpunkter från cirka 200 remissinstanser. Det materialet bearbetar BKK fortfarande.</p>
+<p>Den nuvarande officiella uppskattningen är att de nya avtalen kommer tidigast under senare delen av 2027. Nästa formella besked väntas från BKK under hösten 2026. En viktig sak att notera: tidplanen har glidit flera gånger - tidigare talades det om sommaren 2025, sedan 2026, och nu 2027. Planera därför inte din verksamhet kring ett fast datum. Betrakta 2027 som en tidigast-uppskattning, inte ett löfte.</p>
+
+<h2>Vad väntas ändras?</h2>
+<p>Revideringen omarbetar avtalens grundstruktur och utökar flera områden. Formulera det för dig själv som "föreslås" och "förväntas" - inte "kommer att" - eftersom slutresultatet inte är fastställt. Bland de flaggade fokusområdena finns:</p>
+<ul>
+<li><strong>Större tydlighet och färre tvister</strong> - det uttalade övergripande målet är att minska antalet onödiga konflikter genom klarare regler.</li>
+<li><strong>Digitalisering</strong> - anpassning till digitala arbetssätt och dokumentation.</li>
+<li><strong>Miljö- och arbetsmiljöfrågor</strong> - utökad reglering av hållbarhet och säkerhet.</li>
+<li><strong>Kvalitetsstyrning och löpande dokumentation</strong> - tydligare krav under projektets gång.</li>
+<li><strong>Kalkylregler</strong> - översyn av reglerna för kalkyl och ersättning.</li>
+<li><strong>Tvistelösning</strong> - moderniserade regler för hur oenigheter hanteras.</li>
+<li><strong>Borttagna paragrafkommentarer</strong> - AB 25 väntas inte innehålla de paragrafvisa kommentarer som AB 04 har idag. Istället planerar BKK att publicera separata motiv och förarbeten utanför själva avtalstexten.</li>
+</ul>
+<p>Den sista punkten är värd att stanna vid. De kommentarer som många idag använder för att tolka enskilda paragrafer väntas alltså flyttas ut ur avtalet. Om det blir så, kommer tolkningen framöver att bygga på ett separat motivmaterial - något som byggföretag och deras jurister behöver vänja sig vid.</p>
+
+<h2>Vad väntas inte förändras</h2>
+<p>Det är lika viktigt att dämpa överdrivna förväntningar. BKK behåller det befintliga ramverket snarare än att uppfinna nya avtalstyper. Uppdelningen mellan utförandeentreprenad (AB) och totalentreprenad (ABT/ABPU) finns kvar. Det skapas inte heller något separat, dedikerat standardavtal för partnering eller samverkan. Den som hoppats på en helt ny avtalsstruktur för samverkansentreprenader lär bli besviken - grundlogiken består.</p>
+
+<h2>Vad bör byggföretag göra nu?</h2>
+<p>Även om avtalen dröjer finns det konkreta saker att göra i god tid:</p>
+<ol>
+<li><strong>Fortsätt använda AB 04 och ABT 06.</strong> De är fortfarande de gällande standardavtalen. Skriv dina kontrakt på dem som vanligt.</li>
+<li><strong>Följ BKK:s besked.</strong> Håll koll på nästa uppdatering hösten 2026 istället för att agera på rykten.</li>
+<li><strong>Planera intern kompetensutveckling.</strong> När nya avtal väl kommer behöver projektledare, kalkylatorer och inköp uppdatera sina kunskaper. Lägg in det i utbildningsplanen tidigt.</li>
+<li><strong>Se över mallar och rutiner.</strong> Gå igenom offertmallar, AF-delar och rutiner för dokumentation och digitalisering, så att övergången blir mindre av en chock.</li>
+<li><strong>Budgetera för följdändringar.</strong> När avtalen publiceras väntas Svensk Byggtjänst revidera AMA AF, som är knuten till standardavtalen. Även dina underlagsdokument kommer alltså att påverkas.</li>
+<li><strong>Skriv inte in "framtida AB 25" i dagens kontrakt.</strong> Att åberopa ett avtal som inte finns skapar bara osäkerhet. Håll dig till gällande versioner.</li>
+</ol>
+<p>Ett bra ställe att börja är att strama upp dina egna underlag redan nu. Testa till exempel <a href="/sv/verktyg/offert-mall">vår offertmall -&gt;</a> för att få struktur på det som gäller oavsett vilket standardavtal som ligger i botten.</p>
+
+<h2>Vanliga missförstånd</h2>
+<p>Ett par felaktiga föreställningar är värda att rätta. Det första är tron att AB 25 eller ABPU 25 redan gäller - det gör de inte, och de kan tidigast komma senare delen av 2027. Det andra är att förväxla ABPU 25 med dagens ABT 06; ABPU 25 är det föreslagna namnet på efterföljaren, inget separat parallellt avtal. Det tredje är att låsa sin planering vid ett bestämt lanseringsdatum, trots att tidplanen redan glidit från 2025 till 2026 till 2027.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp löser inte entreprenadjuridiken åt dig - och lovar inte heller att göra det. Men mycket av det revideringen vill komma åt handlar om struktur, dokumentation och digitalisering, och där gör verktyget skillnad redan idag. Du kan skapa offerter och kontraktsunderlag från mallar, dokumentera ÄTA-arbeten löpande och samla projektunderlag på ett ställe. Oavsett om ditt projekt vilar på AB 04, ABT 06 eller framtidens AB 25 är ordning och reda på papperen samma vinst - och en förutsättning för att slippa onödiga tvister, precis det revideringen säger sig vilja minska. Läs gärna mer om hur du hanterar <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a> i praktiken.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>När kommer AB 25?</h3>
+<p>Den nuvarande uppskattningen från BKK är tidigast under senare delen av 2027. Något exakt datum är inte bekräftat, och tidplanen har skjutits fram flera gånger. Nästa besked väntas hösten 2026.</p>
+<h3>Ersätter AB 25 AB 04?</h3>
+<p>Enligt förslaget ska AB 25 ersätta AB 04 för utförandeentreprenader. Namnet är dock ett arbetsnamn och inget är formellt antaget ännu.</p>
+<h3>Gäller AB 04 fortfarande?</h3>
+<p>Ja. AB 04 och ABT 06 är fortfarande de gällande standardavtalen och bör användas i dagens kontrakt tills nya avtal är antagna och publicerade.</p>
+<h3>Vad är ABPU 25?</h3>
+<p>ABPU 25 är det föreslagna namnet på efterföljaren till ABT 06, det vill säga standardavtalet för projekterings- och utförandeentreprenader (totalentreprenader). Även detta är ett förslag som inte är beslutat.</p>
+
+<h2>Kom igång</h2>
+<p>Revideringen är en process att följa, inte att agera på ännu. Under tiden kan du stärka den struktur och dokumentation som lönar sig oavsett avtal - börja med <a href="/sv/verktyg">våra gratis verktyg</a> eller <a href="/sv/contact">boka en demo</a> så visar vi hur ByggExp håller ordning på offerter, ÄTA och underlag i dina projekt.</p>
+
+<p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 - skillnaderna</a>, <a href="/sv/blog/ata-arbeten">Så hanterar du ÄTA-arbeten</a>, <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid i AB 04</a>.</p>
+`;
+
+const A_NYA_AB_04_ABT_06_REVIDERING_2027: BlogPost = {
+  _id: "code-"+"nya-ab-04-abt-06-revidering-2027",
+  title: "Nya AB 04 och ABT 06: status för revideringen mot AB 25 och ABPU 25", slug: "nya-ab-04-abt-06-revidering-2027", locale: "sv",
+  excerpt: "En statusuppdatering om BKK:s revidering av AB 04 och ABT 06 - vad som föreslås ändras, den osäkra tidslinjen och vad ditt byggföretag bör göra i väntan på nya standardavtal.", tag: "Entreprenadjuridik",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_NYA_AB_04_ABT_06_REVIDERING_2027_HTML,
+  seoTitle: "Nya AB 04 ABT 06 revidering | ByggExp", seoDescription: "Lägesrapport om revideringen av AB 04 och ABT 06 mot AB 25 och ABPU 25 - vad som föreslås ändras, tidslinjen och vad byggföretag bör förbereda nu.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T09:15:00.000Z", createdAt: "2026-08-20T09:15:00.000Z", updatedAt: "2026-08-20T09:15:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_GDPR_KUNDREGISTER_BYGGFORETAG,
+    A_LEADPLATTFORMAR_OFFERTA_SERVICEFINDER_BYGGFIRMA,
+    A_DOU_PARM_DRIFT_UNDERHALL_BYGG,
+    A_OPPEN_BOK_RIKTKOSTNAD_ENTREPRENAD,
+    A_SKATTEFRI_LADDEL_ARBETSPLATS_2026,
+    A_NYA_AB_04_ABT_06_REVIDERING_2027,
     A_AB_U_UNDERENTREPRENOR_AVTAL,
     A_FOTODOKUMENTATION_BYGGPROJEKT_BEVIS,
     A_ENTREPRENADGARANTI_SAKERHET_AB04,

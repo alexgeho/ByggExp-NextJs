@@ -5,6 +5,12 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'gdpr-kundregister-byggforetag',
+  'leadplattformar-offerta-servicefinder-byggfirma',
+  'dou-parm-drift-underhall-bygg',
+  'oppen-bok-riktkostnad-entreprenad',
+  'skattefri-laddel-arbetsplats-2026',
+  'nya-ab-04-abt-06-revidering-2027',
   'ab-u-underentreprenor-avtal',
   'fotodokumentation-byggprojekt-bevis',
   'entreprenadgaranti-sakerhet-ab04',

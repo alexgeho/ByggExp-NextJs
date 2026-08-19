@@ -681,6 +681,7 @@ const AB04: BlogPost = {
 
 const AMP_HTML = `
 <p>En arbetsmiljöplan (AMP) är inte bara en pärm som ska finnas – den är ofta ett lagkrav, och saknas den när Arbetsmiljöverket kommer på besök kan det bli sanktionsavgift. Här är när en AMP krävs, vad den ska innehålla och vem som ansvarar (byggherre, BAS-P och BAS-U).</p>
+<p><a href="/sv/verktyg/skyddsrond-mall">Skapa ett skyddsrondsprotokoll med vår gratis mall (PDF & Excel) -&gt;</a></p>
 
 <h2>Vad är en arbetsmiljöplan (AMP)?</h2>
 <p>En arbetsmiljöplan är ett dokument som beskriver hur arbetsmiljön ska hanteras på en byggarbetsplats: vilka risker som finns, vilka regler som gäller och vilka åtgärder som ska vidtas. Reglerna finns i Arbetsmiljöverkets föreskrifter <strong>AFS 2023:3</strong> (som ersatt den tidigare strukturen).</p>
@@ -10263,6 +10264,7 @@ const A_KONSUMENTTJANSTLAGEN_HANTVERKARE_15_PROCENT: BlogPost = {
 
 const A_KORJOURNAL_KRAV_SKATTEVERKET_BYGG_HTML = `
 <p>För dig som driver byggföretag är körjournalen ofta det enda som står mellan firmabilen och en dyr efterbeskattning. Många hantverkare tror att en servicebil eller lätt lastbil automatiskt är fredad – men om du haft möjlighet att köra bilen privat är det <strong>du</strong>, inte Skatteverket, som måste kunna bevisa motsatsen. Och det beviset heter körjournal.</p>
+<p><a href="/sv/verktyg/korjournal-mall">Ladda ner en färdig körjournal med vår gratis mall (PDF & Excel) -&gt;</a></p>
 
 <p>Håll ordning på tjänsteresorna redan från början – planera och dokumentera dagens körningar tillsammans med arbetstiden i <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -></a> så att underlaget finns när deklarationen eller en granskning kommer.</p>
 

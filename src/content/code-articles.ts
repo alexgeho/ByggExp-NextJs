@@ -13476,9 +13476,438 @@ const A_KREDITUPPLYSNING_KOLLA_KUND_INNAN_JOBB_BYGG: BlogPost = {
   publishedAt: "2026-08-19T17:09:00.000Z", createdAt: "2026-08-19T17:09:00.000Z", updatedAt: "2026-08-19T17:09:00.000Z",
 };
 
+const A_DRANERING_GRUS_MATERIAL_BERAKNING_HTML = `
+<p>Fel materialmängd till dräneringen kostar antingen en extra transport mitt i schaktet eller en hög makadam som ligger kvar och tar plats när jobbet är klart. Båda äter marginal. Problemet är sällan matematiken – det är att man beställer på känsla i stället för att räkna tvärsnittet, glömmer spillpåslaget och blandar ihop m³ med ton när offerten ska jämföras. Här får du en metod som ger rätt beställning första gången, oavsett om det är 40 löpmeter runt en villa eller en längre kringfyllning.</p>
+
+<p>Vill du hoppa över handräkningen på plats? Använd <a href="/sv/verktyg/grus-kalkylator">vår gratis grus-kalkylator</a> för att räkna volym och ton direkt i mobilen ute vid schaktet.</p>
+
+<h2>Grundprincipen – tvärsnitt gånger längd</h2>
+<p>En dränering är i praktiken ett långt tråg med makadam. Därför räknar du inte hela schaktet som en kloss, utan tar tvärsnittsarean kring röret och multiplicerar med längden. Grundformeln är enkel:</p>
+<p><strong>Volym (m³) = tvärsnittsarea (m²) × längd (m)</strong>, där area = bredd × höjd på makadambädden.</p>
+<p>Exempel på 40 lpm: en makadambädd som är 0,40 m bred och 0,45 m hög ger en area på 0,18 m². Över 40 löpmeter blir det 0,18 × 40 = 7,2 m³ makadam – innan spill. Det stämmer väl med fältet, där en smal metod på cirka 40 lpm landade på 6–7 m³, medan en bred fyrkantig bädd på 60 cm kring röret drog runt 15 m³ på 44 lpm. Åtgången styrs alltså helt av tvärsnittet – mät bredd och höjd noggrant, för varje centimeter multipliceras med hela längden.</p>
+
+<h2>Rätt material och fraktion</h2>
+<p>Skilj på de två materialen innan du räknar. <strong>Dräneringsgrus</strong> är naturgrus, rundkornigt och filtrerande – används ibland som filter direkt mot rör eller vägg. <strong>Makadam</strong> är krossad sten, kantig, med bättre bärighet och genomsläpplighet. Standard för husgrundsdränering är tvättad makadam 8–16 mm (alternativt 16–32 mm).</p>
+<p>Läggningen styr höjden på bädden du räknar: 100–150 mm makadam under röret, 200–300 mm över röret och minst 10–15 cm runt om i alla riktningar. Själva röret är normalt ett slitsat dräneringsrör 100–110 mm i PE eller PP, gärna ringstyvhet SN8 vid markförlagd eller körbar yta.</p>
+
+<h2>Densitet – från m³ till ton</h2>
+<p>Leverantörer prissätter ibland per ton, ibland per m³. Kan du inte konvertera kan du inte jämföra offerterna. Makadam och krossgrus väger cirka 1,6–1,7 ton/m³ löst mått. Tvättad makadam 8–16 mm anges ofta till 1,60 ton/m³ (motsvarar 0,6 m³/ton), men vissa leverantörer uppger 1,4–1,45 ton/m³ för grå/svart 8–16. Använd 1,6 ton/m³ som referens, men fråga alltid efter leverantörens angivna densitet innan du beställer i ton.</p>
+<p><strong>Vikt (ton) = volym (m³) × densitet (ton/m³).</strong> Våra 7,2 m³ blir alltså 7,2 × 1,6 = 11,5 ton. Skulle leverantören räkna 1,45 ton/m³ blir samma volym 10,4 ton – en skillnad på över ett ton som du vill upptäcka innan fakturan, inte efter.</p>
+
+<h2>Spill, sättning och komprimering – påslaget du inte får glömma</h2>
+<p>Den geometriska volymen blir alltid för lite. Kanterna på schakten är sällan raka, schaktbotten är ojämn, och makadamen packar sig när den belastas. Packningsgraden styrs av vad ytan ska bära: 85–90 % Proctor för gångar och gräsytor, 92–95 % för uppfart och gårdsplan, 95–98 % under asfalt eller betongplatta. Den komprimeringen minskar volymen – och är en av flera anledningar till att du lägger på spill.</p>
+<p>Räkna in cirka 10 % påslag på den geometriska volymen, och gå upp mot 20–25 % vid ojämn schaktbotten eller lös mark. <strong>Beställningsmängd = volym × (1 + spill%).</strong> Med 10 % blir 7,2 m³ till 7,9 m³. Beställ aldrig exakt geometrisk volym.</p>
+
+<h2>Geotextil – räkna i m², inte löpmeter</h2>
+<p>Geotextilen (fiberduken) omsluter makadamen som ett filterpaket och hindrar finjord från att vandra in och sätta igen skiktet. Den räknas i kvadratmeter, inte löpmeter, för duken viks upp längs bäddens båda sidor och skarvarna ska överlappas.</p>
+<p>Bredd att räkna per löpmeter = bäddbredd + uppvik på båda sidor. Lägg dessutom till skarvöverlapp: minst 300 mm (30 cm) på stabil mark, 40–75 cm på mjuk mark, i slänt eller vid biltrafik. För klassval räcker N2 (~140 g/m², draghållfasthet ~10 kN/m) i normal husgrunds- och trädgårdsmiljö; välj N3 (~190 g/m², ~15 kN/m) vid uppfart, körbar yta eller mjuk mark.</p>
+<p>Räkneexempel för 40 lpm: bäddbredd 0,40 m plus uppvik 0,45 m på varje sida ger 0,40 + 0,90 = 1,30 m dukbredd per meter. Över 40 m blir det 52 m². Lägg på överlapp för skarvar och en marginal, säg 10 %, och du landar runt 57 m² – beställ närmaste hela rulle över det.</p>
+
+<h2>Fall, djup och läggning som påverkar mängden</h2>
+<p>Dräneringsledningens fall ska vara 5–10 ‰, alltså 5–10 mm per löpmeter mot brunn eller utlopp. 10 ‰ ger robust självrensning, minst 5 ‰ i en väl utförd makadambädd. Röret läggs i höjd med eller strax under underkant grundsula. Konsekvensen för materialet: när fallet gör att schaktet blir djupare i ena änden växer makadamvolymen där. Räknar du med samma tvärsnitt hela vägen underskattar du åtgången i den djupa änden – dela långa sträckor i sektioner och räkna varje för sig.</p>
+
+<h2>Komplett räkneexempel – villa 40 lpm</h2>
+<ol>
+<li><strong>Makadam, volym:</strong> area 0,40 × 0,45 = 0,18 m² × 40 m = 7,2 m³.</li>
+<li><strong>Plus spill 10 %:</strong> 7,2 × 1,10 = 7,9 m³ att beställa.</li>
+<li><strong>Omvandlat till ton (1,6 ton/m³):</strong> 7,9 × 1,6 ≈ 12,6 ton.</li>
+<li><strong>Dräneringsrör:</strong> 40 lpm slitsat 110 mm PP, SN8 (plus kopplingar och en brunn).</li>
+<li><strong>Geotextil:</strong> 1,30 m × 40 m = 52 m² + överlapp/marginal ≈ 57 m², klass N2.</li>
+</ol>
+<p>Nu har du en materiallista redo att skicka till leverantören – och siffror att stämma av offerten mot, oavsett om den kommer per ton eller per m³.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp lägger du in måtten – längd, bäddbredd och höjd – och får volym, spillpåslag och tonomvandling räknat direkt, så du slipper göra om kalkylen för hand varje jobb. Materiallistan kan sparas på projektet och återanvändas som mall när nästa dränering ser likadan ut. Verktyget räknar; du bestämmer fortfarande fraktion, densitet och spillprocent utifrån marken på plats – det är fältkunskap ingen kalkyl ersätter.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket makadam går åt per meter dränering?</h3>
+<p>Det beror helt på tvärsnittet. En smal bädd på cirka 0,18 m² drar runt 0,18 m³ per meter, medan en bred fyrkantig bädd på 60 cm kan dra 0,3 m³ eller mer per meter. Mät bredd och höjd på din bädd och multiplicera med längden.</p>
+<h3>Hur mycket spill ska jag räkna med?</h3>
+<p>Cirka 10 % på den geometriska volymen på normal, jämn botten. Gå upp mot 20–25 % vid ojämn schaktbotten, lös mark eller när mycket komprimering krävs. Beställ aldrig exakt geometrisk volym.</p>
+<h3>Vad väger en kubikmeter makadam?</h3>
+<p>Cirka 1,6–1,7 ton/m³ löst mått. Tvättad makadam 8–16 mm anges ofta till 1,6 ton/m³, men vissa leverantörer räknar 1,4–1,45. Fråga efter deras densitet innan du beställer i ton.</p>
+<h3>Räknas geotextil i löpmeter eller kvadratmeter?</h3>
+<p>I kvadratmeter. Räkna bäddbredd plus uppvik på båda sidor, gånger längden, och lägg till skarvöverlapp – minst 30 cm på stabil mark, 40–75 cm på mjuk mark eller vid trafik.</p>
+
+<h2>Kom igång</h2>
+<p>Mät bädden på plats, mata in måtten i <a href="/sv/verktyg/grus-kalkylator">grus-kalkylatorn</a> och få volym, ton och spill på några sekunder. Vill du se hur materiallistor och mallar fungerar i skarpt projekt? <a href="/sv/contact">Boka en demo</a> så visar vi upplägget för din verksamhet.</p>
+
+<p>Relaterat: <a href="/sv/blog/spillprocent-bygg-material">Spillprocent i byggmaterial</a>, <a href="/sv/blog/berakna-betongatgang-platta">Beräkna betongåtgång till platta</a> och <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>.</p>
+`;
+
+const A_DRANERING_GRUS_MATERIAL_BERAKNING: BlogPost = {
+  _id: "code-"+"dranering-grus-material-berakning",
+  title: "Dräneringsgrus åtgång – så beräknar du grus, makadam och geotextil i m³", slug: "dranering-grus-material-berakning", locale: "sv",
+  excerpt: "En repeterbar metod för att räkna makadam, rör och geotextil till husgrundsdräneringen – tvärsnitt gånger längd, plus spill och överlapp så beställningen blir rätt första gången.", tag: "Materialberäkning",
+  coverImageUrl: "/landing/verktyg/grus-preview.webp", contentHtml: A_DRANERING_GRUS_MATERIAL_BERAKNING_HTML,
+  seoTitle: "Dräneringsgrus åtgång m³ | ByggExp", seoDescription: "Räkna makadam, dräneringsgrus och geotextil till dräneringen i m³ – med rätt spillpåslag, densitet och överlapp. Steg-för-steg och färdigt räkneexempel.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/grus-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T18:00:00.000Z", createdAt: "2026-08-19T18:00:00.000Z", updatedAt: "2026-08-19T18:00:00.000Z",
+};
+
+const A_OMBILDA_ENSKILD_FIRMA_TILL_AB_BYGG_HTML = `
+<p>Allt fler hantverkare byter från enskild firma till aktiebolag när omsättningen växer. Skälen är begränsat personligt ansvar, bättre kreditvärdighet mot leverantörer och beställare, och från 2026 en ny 3:12-modell som ändrar spelplanen för lågbeskattad utdelning. Men en ombildning är inte en ommärkning av samma firma: du startar ett <strong>nytt</strong> aktiebolag med nytt organisationsnummer och flyttar över verksamheten dit. Gör du det i rätt ordning slipper du uttagsbeskattning, återförda fonder och en oväntad momsräkning. Gör du fel blir det dyrt. Här är de sex praktiska stegen för byggföretagaren.</p>
+
+<p>Innan du börjar räkna på om bytet lönar sig – testa dina täckningsbidrag i <a href="/sv/verktyg">våra gratis byggverktyg</a> och räkna på marginalen så du vet vilken vinstnivå du faktiskt ligger på.</p>
+
+<h2>Steg 1 – Bilda och registrera aktiebolaget först</h2>
+<p>Aktiebolaget måste finnas och vara registrerat hos Bolagsverket innan något flyttas över. Minsta aktiekapital för ett privat AB är <strong>25 000 kr</strong> (aktiebolagslagen 2005:551). Du kan skjuta in kapitalet kontant, men du kan också bilda bolaget med <strong>apportegendom</strong> – till exempel maskiner, ställningar eller servicebil. Apporten måste vara till nytta för bolaget, värderas till minst 25 000 kr, beskrivas i stiftelseurkunden och granskas i ett yttrande av auktoriserad eller godkänd revisor. För en byggare med dyr utrustning kan apport vara ett smidigt sätt att kapitalisera bolaget utan att låsa upp likvida medel.</p>
+
+<h2>Steg 2 – Underprisöverlåtelse: flytta inventarier till skattemässigt värde</h2>
+<p>När bolaget finns kan du föra över inventarierna. Normalt skulle en överlåtelse under marknadsvärde utlösa <strong>uttagsbeskattning</strong>, men reglerna om <strong>underprisöverlåtelse</strong> låter dig överföra tillgångarna till skattemässigt restvärde utan sådan beskattning. Fyra villkor måste vara uppfyllda:</p>
+<ul>
+<li>Hela verksamheten eller en hel verksamhetsgren övergår.</li>
+<li>Aktiebolaget är skattskyldigt i Sverige.</li>
+<li>Andelarna i bolaget är kvalificerade.</li>
+<li>Bolaget har inte underskott från tidigare år.</li>
+</ul>
+<p>Konkret för byggaren: verktyg, byggställningar och servicebilen som står bokförda till exempelvis 180 000 kr i restvärde förs över för just det värdet – inte till vad de skulle kosta på begagnatmarknaden. Ingen vinst tas upp till beskattning i firman, och bolaget skriver av vidare på restvärdet.</p>
+
+<h2>Steg 3 – Periodiseringsfond och expansionsfond utan beskattning</h2>
+<p>Har du avsatt till fonder i firman kan de följa med – men bara på rätt villkor.</p>
+<p><strong>Periodiseringsfond</strong> kan föras över utan återföring och beskattning om du (a) tar över hela näringsverksamheten och (b) tillskjuter ett belopp till bolaget lika stort som den överförda fonden. Tillskottet får <strong>inte</strong> räknas som anskaffningsutgift för aktierna. Bolaget lämnar blankett N7.</p>
+<p><strong>Expansionsfond</strong> upphör utan beskattning om alla reala tillgångar förs över. Kravet är att du tillskjuter <strong>79,4 %</strong> av expansionsfonden till bolaget (100 % minus bolagsskatten 20,6 %). Även här gäller att beloppet inte får räknas som anskaffningsutgift för aktierna, och begäran om att fonden inte ska återföras lämnas i inkomstdeklarationen.</p>
+
+<h2>Steg 4 – Moms, jämkning och F-skatt</h2>
+<p>Själva ombildningen är en verksamhetsöverlåtelse och utlöser <strong>ingen moms</strong>. Men bolaget övertar <strong>jämkningsskyldigheten</strong> för moms som firman dragit av. Det gäller inventarier och anläggningstillgångar köpta de senaste 5 åren (från 50 000 kr) och byggkostnader de senaste 10 åren (minst 100 000 kr per år). För en byggare med nyinköpta maskiner eller en nyrenoverad verkstadslokal kan detta röra stora belopp – kartlägg det innan överlåtelsen.</p>
+<p>Tänk också på att <strong>F-skatt och moms inte följer med automatiskt</strong>. Aktiebolaget måste registreras på nytt på verksamt.se för F-skatt, moms och eventuellt som arbetsgivare. Den enskilda firman avregistreras från F-skatt, moms och arbetsgivare när verksamheten är överförd. Missar du detta kan du stå utan giltig F-skatt när du fakturerar från det nya bolaget.</p>
+
+<h2>Steg 5 – Avtal, kunder och ROT</h2>
+<p>Avtal övergår inte automatiskt. Kund-, leverantörs-, leasing-, försäkrings- och hyresavtal måste hanteras aktivt. Vissa räcker det att meddela motparten om, andra kräver motpartens <strong>godkännande</strong> – särskilt ramavtal, leasing av maskiner och hyra av lokal. Upprätta ett skriftligt överlåtelseavtal mellan firman och aktiebolaget som listar vad som förs över och till vilka värden.</p>
+<p>För ROT-jobb gäller att avdraget alltid är <strong>30 % av arbetskostnaden</strong>, max 50 000 kr per kund och år – det påverkas inte av bolagsformen, men ansökningar till Skatteverket ska gå på det nya organisationsnumret. Se också över byggarbetsplats-ID och personalliggare: de knyts till rätt org.nr så att du inte råkar registrera personal på en firma som håller på att avvecklas.</p>
+
+<h2>Steg 6 – Anställda och kollektivavtal</h2>
+<p>Har du anställda övergår de enligt reglerna om <strong>verksamhetsövergång</strong> (LAS 6 b §) med bibehållna anställningsvillkor. Men kollektivavtalet – Byggavtalet via Byggföretagen/Byggnads eller ett hängavtal – följer inte automatiskt med. Aktiebolaget är en ny arbetsgivare och kan behöva teckna nytt avtal. Samma sak gäller tjänstepension och avtalsförsäkringar, som måste flyttas till det nya bolaget.</p>
+
+<h2>Nya 3:12-reglerna 2026 – vad byggaren tjänar</h2>
+<p>Från 1 januari 2026 slås förenklingsregeln och huvudregeln ihop till en modell (påverkar inkomståret 2026, deklaration 2027). Det viktigaste:</p>
+<ul>
+<li>Nytt <strong>grundbelopp</strong> = 4 inkomstbasbelopp = <strong>322 400 kr</strong> per bolag, upp från tidigare cirka 221 650 kr.</li>
+<li>Lönebaserat utrymme: (total kontant lönesumma × ägarandel − 8 IBB) × 50 %, där 8 IBB = 644 800 kr. Både kravet på eget löneuttag (spärrlön) och 4 %-spärren är slopade.</li>
+<li>Uppräkning av sparat utdelningsutrymme med ränta är borttagen, och karenstiden är kortad från 5 till 4 år.</li>
+</ul>
+<p>Enkelt räkneexempel: en enmansbyggare utan anställda får schablonmässigt utrymme upp till grundbeloppet 322 400 kr att ta ut som lågbeskattad utdelning – oavsett hur mycket lön som tagits ut. Det gör bolagsformen mer attraktiv för den som bygger upp vinst i bolaget.</p>
+
+<h2>Vanliga fallgropar</h2>
+<ul>
+<li>Att flytta över tillgångar innan bolaget är registrerat.</li>
+<li>Att glömma att tillskott för fonder inte får bli anskaffningsutgift för aktierna.</li>
+<li>Att missa jämkningsansvaret för moms på maskiner och lokal.</li>
+<li>Att fakturera med F-skatt innan bolaget är registrerat för det.</li>
+<li>Att anta att leasing-, hyres- och ramavtal automatiskt gäller för AB:t.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte din redovisningskonsult, men verktygen hjälper dig fatta beslutet på rätt underlag. Med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn</a> räknar du ut din faktiska vinstnivå per jobb, så du ser om du närmar dig den nivå där ett AB börjar löna sig. I <a href="/sv/verktyg">verktygslådan</a> hittar du fler kalkyler för offert, timpris och ROT. När bolaget väl är på plats håller du offert, tidrapportering och fakturering samlat på det nya organisationsnumret.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Behåller jag samma organisationsnummer när jag ombildar?</h3>
+<p>Nej. Aktiebolaget är en ny juridisk person med ett nytt organisationsnummer. Den enskilda firmans nummer försvinner när firman avregistreras. Allt – F-skatt, moms, avtal, personalliggare – knyts till det nya numret.</p>
+<h3>Vid vilken vinstnivå lönar det sig att byta till AB?</h3>
+<p>En tumregel som branschen använder är en vinst kring 500 000–600 000 kr per år, eftersom bolagsskatt på 20,6 % och möjligheten till lågbeskattad utdelning då kan väga upp mot egenavgifterna i en enskild firma. Det är dock ingen lagregel utan beror på din situation – stäm av med en redovisningskonsult.</p>
+<h3>Måste jag skjuta in 25 000 kr i kontanter?</h3>
+<p>Nej. Du kan bilda bolaget med apportegendom, till exempel maskiner eller bil, om egendomen är till nytta för bolaget, värderas till minst 25 000 kr, beskrivs i stiftelseurkunden och granskas av en revisor i ett särskilt yttrande.</p>
+<h3>Följer mina anställdas kollektivavtal med automatiskt?</h3>
+<p>Anställningarna övergår enligt reglerna om verksamhetsövergång (LAS 6 b §), men kollektivavtalet gör det inte per automatik. Aktiebolaget är en ny arbetsgivare och kan behöva teckna nytt avtal med Byggnads/Byggföretagen samt flytta över tjänstepension och försäkringar.</p>
+
+<h2>Kom igång</h2>
+<p>Kartlägg dina inventarier, fonder och avtal, bilda bolaget först och flytta sedan över i rätt ordning – och räkna på din vinstnivå med <a href="/sv/verktyg/paslag-marginal-kalkylator">marginalkalkylatorn</a> innan du bestämmer dig. Vill du se hur ByggExp håller ihop offert, tid och fakturering i det nya bolaget? <a href="/sv/contact">Boka en demo</a> så visar vi upplägget.</p>
+
+<p>Relaterat: <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggföretag</a>, <a href="/sv/blog/starta-byggforetag-2026">Starta byggföretag 2026</a>, <a href="/sv/blog/f-skatt-hantverkare-ansokan">F-skatt för hantverkare – så ansöker du</a>.</p>
+`;
+
+const A_OMBILDA_ENSKILD_FIRMA_TILL_AB_BYGG: BlogPost = {
+  _id: "code-"+"ombilda-enskild-firma-till-ab-bygg",
+  title: "Ombilda enskild firma till aktiebolag – så flyttar du byggverksamheten utan skattesmäll (2026)", slug: "ombilda-enskild-firma-till-ab-bygg", locale: "sv",
+  excerpt: "Praktisk steg-för-steg-guide för hantverkaren som byter från enskild firma till AB 2026 – utan att utlösa uttagsbeskattning eller momssmäll.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_OMBILDA_ENSKILD_FIRMA_TILL_AB_BYGG_HTML,
+  seoTitle: "Ombilda enskild firma till AB bygg | ByggExp", seoDescription: "Så flyttar hantverkaren verksamhet, maskiner och avtal från enskild firma till aktiebolag 2026 – underprisöverlåtelse, fonder, moms och nya 3:12.",
+  seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T18:03:00.000Z", createdAt: "2026-08-19T18:03:00.000Z", updatedAt: "2026-08-19T18:03:00.000Z",
+};
+
+const A_PERSONLIG_SKYDDSUTRUSTNING_KRAV_BYGG_HTML = `
+<p>Den 1 januari 2025 byttes hela AFS-strukturen ut: 67 gamla föreskrifter ersattes av 15 nya häften. För dig som driver byggföretag eller är arbetsledare betyder det bland annat att de gamla reglerna om personlig skyddsutrustning i AFS 2001:3 är upphävda och att kraven nu ligger i två nya föreskrifter. Men huvudbudskapet är oförändrat och lika absolut som förr: arbetsgivaren ska tillhandahålla den skyddsutrustning som arbetet kräver, och den ska vara kostnadsfri för arbetstagaren. Här går vi igenom vad som gäller på bygget 2026 — vilken PPE som är obligatorisk, vem som betalar och var den vanligaste förväxlingen uppstår.</p>
+
+<p>Vill du bygga in PPE-kontrollen i det löpande arbetet direkt? Använd <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> för att dokumentera att rätt skyddsutrustning finns på plats och används.</p>
+
+<h2>Vad säger lagen 2026?</h2>
+<p>Regelverket hänger ihop i tre delar, och det är lätt att blanda ihop dem:</p>
+<ul>
+<li><strong>Arbetsmiljölagen 2 kap. 7 §</strong> — grunden. Arbetsgivaren ska tillhandahålla den personliga skyddsutrustning som behövs, och det ska ske utan kostnad för arbetstagaren. Att "tillhandahålla" innebär att arbetsgivaren betalar.</li>
+<li><strong>AFS 2023:11 kapitel 15</strong> (Arbetsutrustning och personlig skyddsutrustning — säker användning). Här finns reglerna om <em>val</em>, <em>användning</em> och <em>underhåll</em> av PPE. Det är denna föreskrift som ersatte AFS 2001:3.</li>
+<li><strong>AFS 2023:13</strong> (Risker vid vissa typer av arbeten), kapitlet om byggnads- och anläggningsarbete. Här står de <em>konkreta</em> PPE-kraven för just bygg. Observera att kraven inte ligger i AFS 2023:11 eller i AFS 2023:3 — den sistnämnda gäller projektering och byggarbetsmiljösamordning.</li>
+</ul>
+<p>Med andra ord: AML säger <em>att</em> och <em>att det ska vara gratis</em>, AFS 2023:11 säger <em>hur</em> utrustningen väljs och sköts, och AFS 2023:13 säger <em>vad</em> som krävs på just en byggarbetsplats.</p>
+
+<h2>Obligatorisk PPE på bygget</h2>
+<p>På ett bygge ska arbetsgivaren se till att följande används — om inte riskbedömningen visar att det är uppenbart onödigt:</p>
+<ul>
+<li><strong>Skyddshjälm med hakrem.</strong></li>
+<li><strong>Skyddsskor med skyddståhätta och spiktrampskydd.</strong></li>
+<li><strong>Varselklädsel (hi-vis).</strong></li>
+</ul>
+<p>Utöver dessa tre ska annan skyddsutrustning användas <em>i den utsträckning arbetsförhållandena kräver</em>. Det handlar om:</p>
+<ul>
+<li><strong>Hörselskydd</strong> vid buller.</li>
+<li><strong>Ögon- och ansiktsskydd</strong> vid kapning, slipning, svetsning.</li>
+<li><strong>Andningsskydd</strong> vid damm — se vår guide om <a href="/sv/blog/kvartsdamm-regler-bygg">reglerna kring kvartsdamm</a>.</li>
+<li><strong>Fallskydd</strong> vid arbete på höjd — läs mer om <a href="/sv/blog/fallskydd-krav-bygg">fallskyddskraven på bygget</a>.</li>
+<li><strong>Skyddshandskar</strong> vid hantering av kemikalier, vassa material eller kyla.</li>
+</ul>
+<p>Vad som krävs styrs av riskbedömningen på just din arbetsplats. Ett rivningsjobb, ett takarbete och en inomhusetapp har helt olika behov, och det är arbetsgivaren som ska göra bedömningen och dokumentera den.</p>
+
+<h2>Vem betalar?</h2>
+<p>Kärnfrågan har ett kort svar: <strong>arbetsgivaren, alltid.</strong> Enligt 2 kap. 7 § AML ska den personliga skyddsutrustningen tillhandahållas kostnadsfritt. Du kan inte dra av kostnaden på lönen, kräva att den anställde köper sina egna skyddsskor eller villkora anställningen mot att hjälmen bekostas privat.</p>
+<p>På en byggarbetsplats med flera aktörer aktualiseras dessutom samordningsansvaret: den som ansvarar för samordningen ska se till att alla på plats — även inhyrd personal och underentreprenörer — har och använder rätt skydd. Varje arbetsgivare svarar dock för sina egna anställdas utrustning. Är du <strong>egenföretagare utan anställda</strong> bekostar du din egen PPE, men kravet på att använda den gäller lika fullt.</p>
+
+<h2>Skyddsutrustning vs arbetskläder — den vanliga förväxlingen</h2>
+<p>Här går många fel. Det finns en juridisk skillnad mellan <em>skyddsutrustning</em> och <em>vanliga arbetskläder</em>:</p>
+<ul>
+<li><strong>Personlig skyddsutrustning (PPE)</strong> — hjälm, skyddsskor, hi-vis, hörselskydd, ögonskydd, andningsskydd, fallskydd, skyddshandskar. Detta <strong>måste</strong> arbetsgivaren tillhandahålla gratis enligt AML.</li>
+<li><strong>Vanliga arbetskläder</strong> — byxor, jacka, t-shirt utan skyddsfunktion. Här finns <strong>inget lagkrav</strong> på att arbetsgivaren betalar. Det regleras i stället ofta i kollektivavtal, till exempel Byggavtalet mellan parterna på Byggnads område.</li>
+</ul>
+<p>Kort sagt: skyddsfunktionen avgör. En varseljacka som är godkänd skyddsklädsel är PPE och ska vara gratis. En vanlig arbetsbyxa utan skyddsklassning är arbetskläder och styrs av avtal, inte av arbetsmiljölagen.</p>
+
+<h2>Skatt och bokföring</h2>
+<p>Skattemässigt är fri skydds- och säkerhetsutrustning enkel: den <strong>förmånsbeskattas inte</strong>, utan jämställs med arbetsredskap. Den anställde beskattas alltså aldrig för att få hjälm, skyddsskor eller hörselskydd.</p>
+<p>För <em>arbetskläder</em> är det mer nyanserat. De är skattefria om de är särskilt anpassade för arbetet och olämpliga för privat bruk. Skatteverket lyfter dessutom fram att yrkesgrupper med hårt slitage och kraftig nedsmutsning — som betongarbetare, murare och svetsare — inte beskattas för fria arbetskläder. Vanliga "fria kläder" utan den kopplingen är däremot en skattepliktig förmån. Bokför utrustningen korrekt och spara underlagen; räkenskapsinformation ska bevaras i sju år.</p>
+
+<h2>Arbetstagarens och arbetsgivarens ansvar</h2>
+<p>Ansvaret är delat men inte jämnt fördelat:</p>
+<ul>
+<li><strong>Arbetsgivaren</strong> ska göra riskbedömningen som styr valet av PPE, tillhandahålla utrustningen kostnadsfritt, se till att den underhålls och byts vid behov, samt instruera och utöva tillsyn över att den faktiskt används.</li>
+<li><strong>Arbetstagaren</strong> är skyldig att använda den skyddsutrustning som tillhandahålls och att vårda den så att den fortsätter fungera.</li>
+</ul>
+<p>Saknas PPE, eller ser arbetsgivaren mellan fingrarna på att den inte används, kan Arbetsmiljöverket ingripa vid inspektion. Dokumentation — riskbedömning, utkvittering och egenkontroll — är det som visar att du har gjort rätt.</p>
+
+<h2>PPE-checklista för byggarbetsplatsen 2026</h2>
+<ol>
+<li>Skyddshjälm med hakrem finns till alla på plats.</li>
+<li>Skyddsskor med tåhätta och spiktrampskydd är utdelade.</li>
+<li>Godkänd varselklädsel (hi-vis) används av alla i arbetsområdet.</li>
+<li>Hörsel-, ögon-, andnings- och fallskydd finns tillgängligt utifrån riskbedömningen.</li>
+<li>Riskbedömningen är dokumenterad och uppdaterad för aktuell etapp.</li>
+<li>All PPE är kostnadsfri för de anställda — inga avdrag på lön.</li>
+<li>Rutin för underhåll, kontroll och byte av utrustning finns.</li>
+<li>Inhyrd personal och underentreprenörer omfattas via samordningsansvaret.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte skyddsutrustningen, men hjälper dig hålla ordning på att den finns och används. Med egenkontroll- och dokumentationsmallar kan du bygga in PPE-punkterna i den löpande kontrollen på varje projekt, så att utkvittering, kontroller och avvikelser samlas på ett ställe i stället för i lösa papper. Det gör det enkelt att visa vid en inspektion att kraven i AFS 2023:11 och 2023:13 är uppfyllda. Verktygen ger inte juridisk rådgivning — de ger dig strukturen att dokumentera det arbete du redan är skyldig att göra.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste arbetsgivaren betala för skyddsskorna?</h3>
+<p>Ja. Skyddsskor med tåhätta och spiktrampskydd är personlig skyddsutrustning, och enligt 2 kap. 7 § arbetsmiljölagen ska sådan tillhandahållas kostnadsfritt av arbetsgivaren. Du får inte dra kostnaden från lönen.</p>
+<h3>Gäller fortfarande AFS 2001:3?</h3>
+<p>Nej. AFS 2001:3 upphörde att gälla den 1 januari 2025. Reglerna om val och användning av PPE finns nu i kapitel 15 i AFS 2023:11, och de konkreta byggkraven i AFS 2023:13. Uppdatera dina arbetsmiljödokument mot de nya numren.</p>
+<h3>Måste arbetsgivaren betala vanliga arbetskläder också?</h3>
+<p>Nej, inte enligt lag. Vanliga arbetskläder utan skyddsfunktion omfattas inte av AML utan regleras oftast i kollektivavtal, till exempel Byggavtalet. Det är skyddsfunktionen som avgör om plagget är gratis-pliktig PPE eller inte.</p>
+<h3>Vad gäller för mig som är egenföretagare utan anställda?</h3>
+<p>Du bekostar din egen skyddsutrustning, men kravet på att faktiskt använda hjälm, skyddsskor och hi-vis på bygget gäller lika fullt. Har du inhyrd eller egen personal blir du arbetsgivare och ska då tillhandahålla PPE kostnadsfritt.</p>
+
+<h2>Kom igång</h2>
+<p>Se över att din PPE-rutin och dina arbetsmiljödokument pekar mot de nya AFS-numren, och lägg in kontrollpunkterna i den löpande egenkontrollen. Börja med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> eller bläddra bland <a href="/sv/verktyg">alla gratis verktyg för byggföretag</a>. Vill du se hur dokumentationen fungerar i praktiken för dina projekt kan du <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/fallskydd-krav-bygg">Fallskydd på bygget — krav och regler</a>, <a href="/sv/blog/kvartsdamm-regler-bygg">Kvartsdamm — regler och gränsvärden</a>, <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan — så gör du</a>.</p>
+`;
+
+const A_PERSONLIG_SKYDDSUTRUSTNING_KRAV_BYGG: BlogPost = {
+  _id: "code-"+"personlig-skyddsutrustning-krav-bygg",
+  title: "Personlig skyddsutrustning på bygget 2026 — vad arbetsgivaren måste hålla med och vem som betalar", slug: "personlig-skyddsutrustning-krav-bygg", locale: "sv",
+  excerpt: "Guide för byggföretag om vilken PPE arbetsgivaren måste tillhandahålla kostnadsfritt enligt AML och nya AFS 2023:11 och 2023:13 — och skillnaden mot vanliga arbetskläder.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_PERSONLIG_SKYDDSUTRUSTNING_KRAV_BYGG_HTML,
+  seoTitle: "PPE-krav på bygget 2026 | ByggExp", seoDescription: "Vilken personlig skyddsutrustning måste du som arbetsgivare hålla med på bygget — hjälm, skyddsskor, hi-vis — och vem betalar? Uppdaterat mot nya AFS 2023.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T18:06:00.000Z", createdAt: "2026-08-19T18:06:00.000Z", updatedAt: "2026-08-19T18:06:00.000Z",
+};
+
+const A_TILLBUD_ARBETSSKADA_ANMALAN_BYGG_HTML = `
+<p>Bygg är fortsatt en av de mest olycksdrabbade branscherna. Under 2024 registrerades runt 2 051 arbetsolyckor med frånvaro i byggindustrin, olycksfrekvensen låg på 10,5 per 1 000 sysselsatta och åtta personer omkom i privat bygg- och anläggning – över tioårssnittet trots att olyckorna totalt minskade. När något händer på arbetsplatsen är rätt anmälan både ett lagkrav och grunden för att slippa nästa olycka. Problemet är att många byggföretag anmäler till fel myndighet, för sent, eller struntar i uppföljningen. Här får du en konkret steg-för-steg-guide.</p>
+
+<p>Underlaget för utredning och uppföljning börjar redan innan olyckan – med en tillbudsrapport och en dokumenterad riskbedömning. Använd gärna <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll- och checklistemall -></a> som stomme för att fånga tillbud direkt på arbetsplatsen.</p>
+
+<h2>Tillbud vs. arbetsskada – vad är skillnaden?</h2>
+<p>Begreppen blandas ofta ihop, men de styr helt olika anmälningsvägar. Håll isär dem:</p>
+<ul>
+<li><strong>Tillbud</strong> – en händelse som <em>kunnat</em> leda till personskada, men där ingen skadades. Exempel: ett verktyg faller från en ställning utan att träffa någon.</li>
+<li><strong>Allvarligt tillbud</strong> – ett tillbud som inneburit allvarlig fara för liv eller hälsa. Bara allvarliga tillbud anmäls till Arbetsmiljöverket.</li>
+<li><strong>Arbetsolycka</strong> – en plötslig händelse som gav en fysisk skada, till exempel fall från höjd eller klämskada.</li>
+<li><strong>Arbetssjukdom</strong> – skada som utvecklats över tid av arbetet, som belastningsskador, vibrationsskador eller hörselnedsättning.</li>
+<li><strong>Färdolycka</strong> – olycka på väg till eller från arbetet, som normalt inte räknas som arbetsolycka men ändå kan anmälas.</li>
+</ul>
+<p>Bedömningen av vad som är allvarligt gör du som arbetsgivare själv. Vid tveksamhet är regeln enkel: hellre anmäla en gång för mycket än en gång för lite.</p>
+
+<h2>Vart anmäler du – två myndigheter, en portal</h2>
+<p>Det finns två mottagare men bara en gemensam e-tjänst. Allvarliga olyckor och tillbud går till <strong>Arbetsmiljöverket</strong>, medan arbetsskador som ger sjukfrånvaro anmäls till <strong>Försäkringskassan</strong>. Båda anmälningarna görs via portalen anmalarbetsskada.se, som de två myndigheterna driver tillsammans.</p>
+<p>Utöver myndighetsanmälan finns ett tredje, kollektivavtalat spår: <strong>TFA hos AFA Försäkring</strong>. Det är en separat anmälan som den skadade behöver för att få ersättning. Missar du den kan den anställde gå miste om pengar även om myndighetsanmälan är korrekt gjord.</p>
+
+<h2>Anmälan till Arbetsmiljöverket enligt 3 kap. 3 a § AML</h2>
+<p>Enligt 3 kap. 3 a § arbetsmiljölagen ska du som arbetsgivare <strong>utan dröjsmål</strong> anmäla till Arbetsmiljöverket vid:</p>
+<ul>
+<li>dödsfall</li>
+<li>svårare personskada</li>
+<li>skador som drabbat flera arbetstagare samtidigt</li>
+<li>allvarligt tillbud som inneburit allvarlig fara för liv eller hälsa</li>
+</ul>
+<p>"Utan dröjsmål" betyder att anmälan helst ska ske samma dag som händelsen inträffade. Att underlåta att anmäla i tid är straffbelagt – arbetsgivaren kan dömas till <strong>böter</strong> enligt 8 kap. 2 § AML. Till skillnad från sanktionsavgifter har böter inget förutbestämt belopp, utan bestäms av åklagare eller domstol efter begäran från Arbetsmiljöverket. Det är alltså inte en avgift du kan räkna hem – det är en brottspåföljd.</p>
+
+<h2>Anmälan till Försäkringskassan – arbetsskada</h2>
+<p>En arbetsskada som leder till sjukfrånvaro utöver den dag skadan inträffade ska anmälas till Försäkringskassan <strong>senast en månad</strong> efter att du som arbetsgivare fick kännedom om skadan. Anmälan ska göras i samråd med skyddsombud och den drabbade, och den skadade ska få en kopia.</p>
+<p>Det här är lätt att slarva med när skadan verkar liten från början men sedan drar ut på tiden. Räkna en månad från kännedom, inte från när sjukskrivningen råkar bli lång.</p>
+
+<h2>Glöm inte TFA hos AFA Försäkring</h2>
+<p>TFA (Trygghetsförsäkring vid arbetsskada) är kollektivavtalad och hanteras av AFA Försäkring. Har företaget kollektivavtal – till exempel Byggavtalet – omfattas den anställde. TFA bygger på en no-fault-princip, alltså att ersättning kan betalas ut oavsett vem som orsakade skadan. Det är en egen anmälan, skild från myndighetsanmälan.</p>
+<p>Preskriptionstiderna är generösa men inte oändliga: en arbetsolycka ska anmälas till AFA inom <strong>10 år</strong> från skadedagen (arbetssjukdom inom 10 år från Försäkringskassans beslut om godkänd arbetsskada), och ansökan om ersättning för inkomstförlust med mera ska göras inom <strong>6 år</strong>. Påminn den skadade om att göra sin anmälan – det är den som ger pengar tillbaka i plånboken.</p>
+
+<h2>Dokumentera och följ upp – SAM enligt AFS 2023:1</h2>
+<p>Sedan 1 januari 2025 gäller den nya regelstrukturen där AFS 2023:1 om systematiskt arbetsmiljöarbete ersatte gamla AFS 2001:1. Kravet är tydligt: tillbud och olyckor ska utredas, och riskbedömningar ska alltid <strong>dokumenteras skriftligt</strong> som underlag för åtgärder och uppföljning.</p>
+<p>I praktiken innebär det att du efter en händelse ska utreda orsaken, göra en skriftlig riskbedömning, ta fram en åtgärdsplan, återkoppla till skyddsombudet och spara underlaget. Detta är både ett lagkrav och ditt bästa skydd mot att samma olycka upprepas. En muntlig genomgång på fikarasten räcker inte vid en inspektion.</p>
+
+<h2>Steg-för-steg checklista vid en händelse på arbetsplatsen</h2>
+<ol>
+<li><strong>Säkra platsen</strong> – ge första hjälpen, larma 112 vid behov och avspärra så att ingen mer skadas.</li>
+<li><strong>Bedöm allvaret</strong> – dödsfall, svårare skada, flera drabbade eller allvarlig fara? Då gäller anmälan till Arbetsmiljöverket.</li>
+<li><strong>Anmäl till Arbetsmiljöverket samma dag</strong> om händelsen är allvarlig, via anmalarbetsskada.se.</li>
+<li><strong>Anmäl till Försäkringskassan inom en månad</strong> om skadan gett frånvaro, i samråd med skyddsombud och den drabbade.</li>
+<li><strong>Anmäl TFA till AFA Försäkring</strong> om företaget har kollektivavtal.</li>
+<li><strong>Utred och dokumentera</strong> orsak, riskbedömning och åtgärder skriftligt enligt AFS 2023:1.</li>
+<li><strong>Följ upp</strong> att åtgärderna genomförts och återkoppla till berörda.</li>
+</ol>
+
+<h2>Vanliga misstag som kostar</h2>
+<ul>
+<li>Att bara anmäla till Försäkringskassan och missa den skyndsamma anmälan till Arbetsmiljöverket vid allvarliga händelser.</li>
+<li>Att vänta med anmälan och passera "utan dröjsmål" – risk för böter.</li>
+<li>Att glömma TFA så att den skadade går miste om ersättning.</li>
+<li>Att utreda muntligt utan skriftlig dokumentation – kravet i AFS 2023:1 uppfylls inte.</li>
+<li>Att aldrig fånga tillbuden innan de blir olyckor.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att fånga och dokumentera tillbud och egenkontroller direkt ute på arbetsplatsen, med mallar som blir sökbara underlag i stället för lösa papperslappar. Du samlar riskbedömningar, checklistor och åtgärder på ett ställe så att uppföljningen enligt AFS 2023:1 finns dokumenterad när Arbetsmiljöverket frågar. Själva myndighetsanmälan gör du fortfarande via anmalarbetsskada.se och TFA-anmälan hos AFA – ByggExp ersätter inte myndigheternas e-tjänster, men ser till att din interna dokumentation och uppföljning håller.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag anmäla alla tillbud till Arbetsmiljöverket?</h3>
+<p>Nej. Bara allvarliga tillbud – händelser som inneburit allvarlig fara för liv eller hälsa – ska anmälas till Arbetsmiljöverket. Vanliga tillbud ska du ändå utreda och dokumentera internt, men de anmäls inte. Bedömningen gör du själv, och vid tveksamhet är det bättre att anmäla.</p>
+<h3>Hur snabbt måste jag anmäla en allvarlig olycka?</h3>
+<p>Enligt 3 kap. 3 a § arbetsmiljölagen ska det ske utan dröjsmål, vilket i praktiken betyder samma dag. Att anmäla för sent är straffbelagt och kan leda till böter enligt 8 kap. 2 § AML.</p>
+<h3>Vad är skillnaden mellan anmälan till Försäkringskassan och TFA hos AFA?</h3>
+<p>Anmälan till Försäkringskassan är en myndighetsanmälan av arbetsskadan och ska göras senast en månad efter kännedom vid frånvaro. TFA hos AFA Försäkring är en separat, kollektivavtalad försäkringsanmälan som ger den skadade ersättning enligt en no-fault-princip. Du behöver oftast göra båda.</p>
+<h3>Hur länge ska dokumentationen sparas?</h3>
+<p>Riskbedömningar, utredningar och åtgärdsplaner ska dokumenteras skriftligt enligt AFS 2023:1 och bevaras som underlag för uppföljning. TFA-anmälan har långa preskriptionstider – upp till 10 år för en arbetsolycka – så spara underlagen med god marginal.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att strukturera hur ni fångar tillbud och gör egenkontroller på arbetsplatsen med <a href="/sv/verktyg/egenkontroll-mall">vår kostnadsfria egenkontroll-mall</a>, och se fler verktyg i <a href="/sv/verktyg">verktygslådan</a>. Vill du se hur dokumentation och uppföljning fungerar i praktiken? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>, <a href="/sv/blog/arbetsmiljoplan">Så skriver du en arbetsmiljöplan</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
+`;
+
+const A_TILLBUD_ARBETSSKADA_ANMALAN_BYGG: BlogPost = {
+  _id: "code-"+"tillbud-arbetsskada-anmalan-bygg",
+  title: "Så anmäler du tillbud och arbetsskador rätt på bygget (2026)", slug: "tillbud-arbetsskada-anmalan-bygg", locale: "sv",
+  excerpt: "En konkret guide för byggföretag: vart och när du anmäler tillbud och arbetsskador, vilka tidsfrister som gäller och hur du dokumenterar för uppföljning.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_TILLBUD_ARBETSSKADA_ANMALAN_BYGG_HTML,
+  seoTitle: "Anmäla arbetsskada och tillbud bygg | ByggExp", seoDescription: "Steg-för-steg: så anmäler du tillbud och arbetsskador till Arbetsmiljöverket, Försäkringskassan och AFA – med rätt tidsfrister och dokumentation enligt AFS 2023:1.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T18:09:00.000Z", createdAt: "2026-08-19T18:09:00.000Z", updatedAt: "2026-08-19T18:09:00.000Z",
+};
+
+const A_KORTTIDSARBETE_PERMITTERING_BYGGFORETAG_HTML = `
+<p>När orderstocken tunnas ut vill de flesta byggföretag undvika det dyraste av allt: att säga upp erfaren personal och sedan tvingas rekrytera och lära upp nytt folk när konjunkturen vänder. Två verktyg gör det möjligt att sänka personalkostnaden tillfälligt utan uppsägning – <strong>korttidsarbete</strong> och <strong>permittering</strong>. De blandas ständigt ihop, men de bygger på helt olika regelverk, kostar olika mycket och kräver olika beslutsvägar. Den här guiden reder ut skillnaden och ger dig en handlingsordning för orderbristen.</p>
+
+<p>När du väl har valt spår behöver du dessutom hålla koll på arbetad tid, minskad tid och löneunderlag per anställd. Ladda ner <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -&gt;</a> och använd den som underlag både för avstämningen mot Skatteverket och för dialogen med Byggnads.</p>
+
+<h2>Korttidsarbete vs permittering – två helt olika verktyg</h2>
+<p>Det första du måste göra är att sluta använda orden som synonymer. Skillnaden avgör vem som betalar och vem som beslutar.</p>
+<ul>
+<li><strong>Korttidsarbete</strong> vilar på lag (2013:948) om stöd vid korttidsarbete. Staten subventionerar en del av arbetstidsminskningen, stödet handläggs av Skatteverket och det krävs ett <strong>lokalt kollektivavtal med Byggnads</strong> om vilka som ska korttidsarbeta.</li>
+<li><strong>Permittering</strong> är en kollektivavtalsreglerad åtgärd enligt Byggavtalet. Här finns <strong>inget statligt stöd</strong>. Arbetsgivaren beslutar själv efter varsel till facket och betalar en lägre grundlön enligt avtalet under permitteringstiden.</li>
+</ul>
+<p>Kort sagt: korttidsarbete delar kostnaden med staten men kräver att du förhandlar fram ett lokalt avtal, medan permittering är ett internt arbetsgivarbeslut utan subvention. Vilket som passar beror på hur djup och tillfällig svackan är.</p>
+
+<h2>Så fungerar korttidsarbete (statligt stöd)</h2>
+<p>I det ordinarie systemet minskas arbetstiden i tre fasta nivåer, med en betydligt mindre lönesänkning för den anställde:</p>
+<ul>
+<li>20 % kortare arbetstid ger 12 % lägre lön</li>
+<li>40 % kortare arbetstid ger 16 % lägre lön</li>
+<li>60 % kortare arbetstid ger 20 % lägre lön</li>
+</ul>
+<p>Staten bär ungefär en tredjedel av kostnaden för arbetstidsminskningen, medan arbetsgivare och anställd delar på resten. Stödet beräknas på ordinarie lön <strong>upp till ett lönetak på 44 000 kr per månad</strong> – lön över taket bekostar du helt själv.</p>
+<p>En varning som är lätt att gå på: de generösare siffror många minns från pandemin (lönesänkning på 4, 6 och 7,5 procent, en 80-procentsnivå och en statlig andel på runt 75 procent) gäller <strong>inte</strong> 2026. Det stödet administrerades av Tillväxtverket 2020–2021. Sedan 1 april 2022 handläggs det ordinarie stödet av Skatteverket, och räkna med nivåerna 12/16/20 ovan. Läs på hos Skatteverket och lita inte blint på äldre FAQ-texter som fortfarande refererar till pandemireglerna.</p>
+
+<h2>När får du stöd – och när får du inte det</h2>
+<p>Här faller många ansökningar. Ordinarie korttidsstöd beviljas bara vid <strong>tillfälliga och allvarliga ekonomiska svårigheter</strong> som ligger utanför arbetsgivarens kontroll och som inte rimligen kunnat förutses eller undvikas. En vanlig, planerbar konjunktursvängning eller normal orderbrist som du borde ha kunnat räkna med kvalificerar alltså inte automatiskt. Du behöver kunna visa att svårigheten är akut och yttre.</p>
+<p>Tidsgränserna är också viktiga att planera efter:</p>
+<ul>
+<li>Stöd lämnas i upp till <strong>6 kalendermånader</strong>, med möjlig förlängning i 3 månader.</li>
+<li>Högst <strong>24 månaders stöd under en 36-månadersperiod</strong>, därefter karens.</li>
+</ul>
+<p>Du ansöker och gör därefter avstämning hos Skatteverket, och där behöver du ha ordning på faktiskt arbetad och minskad tid per anställd – ett skäl till att ha tidrapporteringen på plats från dag ett.</p>
+
+<h2>Förhandlingen med Byggnads steg för steg</h2>
+<p>Korttidsarbete går inte att införa ensidigt. Det krävs ett <strong>lokalt kollektivavtal med Byggnads</strong> om vilka arbetstagare som ska korttidsarbeta. Gör så här:</p>
+<ol>
+<li>Kalla till lokal förhandling och lägg fram det ekonomiska underlaget som visar de tillfälliga svårigheterna.</li>
+<li>Använd <strong>Byggföretagens och Byggnads särskilda mall/blankett</strong> i Arbetsgivarguiden – den ska användas, egna varianter håller inte.</li>
+<li>Kom överens om vilka som omfattas och på vilken nivå (20/40/60 %). Observera att de vanliga turordningsreglerna <strong>inte</strong> styr korttidsavtalet – urvalet bestäms i den lokala överenskommelsen.</li>
+<li>Dokumentera avtalet noggrant; det är grunden både för Byggnads och för Skatteverkets avstämning.</li>
+</ol>
+<p>Gällande avtal är Byggavtalet mellan Byggföretagen och Byggnads med avtalsperiod 2025-05-01 till 2027-04-30. Centrala korttidsöverenskommelser finns även med Seko och tjänstemannafacken (Unionen, Ledarna, Sveriges Ingenjörer), så glöm inte tjänstemännen om de berörs.</p>
+
+<h2>Permittering enligt Byggavtalet – när korttidsstöd inte är aktuellt</h2>
+<p>Kvalificerar inte svackan för statligt stöd, eller behöver du agera snabbt? Då är permittering enligt Byggavtalet alternativet. Här beslutar arbetsgivaren – efter att ha varslat/underrättat facket genom det förenklade förfarandet – vilka som permitteras. Under permitteringstiden betalar du en <strong>lägre grundlön enligt avtalet</strong>, men <strong>pension och semesterförmåner ska fortsätta att betalas</strong>. Något statligt stöd utgår inte.</p>
+<p>Varsel om permittering ska normalt lämnas i god tid, med riktmärket <strong>minst två veckor i förväg</strong> enligt kollektivavtalets ordning. Planera alltså med marginal – du kan inte permittera med verkan från imorgon.</p>
+
+<h2>När det ändå blir arbetsbrist och uppsägning</h2>
+<p>Korttidsarbete och permittering är avsedda för tillfälliga svackor där anställningen består. Är nedgången varaktig handlar det istället om arbetsbrist och uppsägning – en annan process. Då krävs <strong>MBL 11 §-förhandling med Byggnads före beslut</strong>. Förhandlingen ska omfatta arbetsbristens omfattning, antal berörda och möjligheten till omplacering, och uppsägningen ska vara skriftlig. Arbetsbrist utgör saklig grund, men bara om omplacering inte är möjlig. Vi går igenom det i detalj i vår guide om <a href="/sv/blog/uppsagning-arbetsbrist-bygg">uppsägning vid arbetsbrist i byggbranschen</a>.</p>
+
+<h2>Håll kvar personalen – praktisk checklista</h2>
+<p>Grundtanken bakom korttidsarbete är att slippa säga upp folk och behålla kompetensen genom en tillfällig svacka – anställningen består och den anställde återgår till full tid när stödet upphör. Så maxar du chansen att lyckas:</p>
+<ul>
+<li><strong>Kommunicera tidigt.</strong> Ta dialogen med både anställda och fack innan besluten är fattade, inte efteråt.</li>
+<li><strong>Välj verktyg efter hur tillfällig svackan är.</strong> Kort och yttre orsak – pröva korttidsstöd. Behöver du agera snabbt eller kvalificerar inte stödet – permittering. Varaktig nedgång – då är det arbetsbrist.</li>
+<li><strong>Kombinera med kompetensutveckling.</strong> Ledig tid kan användas till utbildning och certifieringar som stärker laget inför uppgången.</li>
+<li><strong>Undvik fusk-fällorna.</strong> Låt ingen jobba mer än den avtalade minskningen medger, håll tidrapporteringen exakt och spara underlagen – felaktiga uppgifter kan leda till återbetalning.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte den juridiska förhandlingen, men löser den del som ofta blir rörig i praktiken: att hålla reda på arbetad och minskad tid per anställd under korttidsarbete eller permittering. Med tidrapportering per person och projekt får du ett underlag som du kan använda både i den lokala förhandlingen med Byggnads och i avstämningen mot Skatteverket. Vill du ha en enkel start använder du <a href="/sv/verktyg/tidrapport-mall">tidrapport-mallen</a>, och behöver du löpande koll hittar du fler verktyg i <a href="/sv/verktyg">verktygslådan</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan korttidsarbete och permittering?</h3>
+<p>Korttidsarbete är statligt subventionerad arbetstidsminskning enligt lag (2013:948), handläggs av Skatteverket och kräver lokalt kollektivavtal med Byggnads. Permittering är en avtalsreglerad åtgärd enligt Byggavtalet utan statligt stöd, där arbetsgivaren beslutar efter varsel och betalar en lägre grundlön.</p>
+<h3>Hur mycket sänks lönen vid korttidsarbete 2026?</h3>
+<p>I det ordinarie systemet är arbetstidsminskningen 20, 40 eller 60 procent och lönesänkningen 12, 16 respektive 20 procent. Pandemins lägre siffror (4/6/7,5 procent) gäller inte. Staten bär ungefär en tredjedel av kostnaden, och stödet beräknas på lön upp till 44 000 kr per månad.</p>
+<h3>Räcker vanlig orderbrist för att få korttidsstöd?</h3>
+<p>Inte automatiskt. Stödet kräver tillfälliga och allvarliga ekonomiska svårigheter utanför arbetsgivarens kontroll som inte rimligen kunnat förutses. En planerbar konjunktursvängning kvalificerar oftast inte – du måste kunna visa att svårigheten är akut och yttre.</p>
+<h3>Måste jag varsla facket före permittering?</h3>
+<p>Ja. Varsel om permittering ska normalt lämnas i god tid, med riktmärket minst två veckor i förväg enligt kollektivavtalets ordning. Du kan alltså inte permittera med omedelbar verkan.</p>
+
+<h2>Kom igång</h2>
+<p>Bestäm om svackan är tillfällig eller varaktig, kontrollera aktiveringskravet hos Skatteverket, ta stöd av Byggföretagens Arbetsgivarguide och Byggnads – och ta juridisk eller avtalsmässig hjälp innan du fattar beslut. Håll samtidigt underlaget i ordning med <a href="/sv/verktyg/tidrapport-mall">tidrapport-mallen</a>. Vill du se hur ByggExp håller ihop tid, projekt och personal? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/uppsagning-arbetsbrist-bygg">Uppsägning vid arbetsbrist i bygg</a>, <a href="/sv/blog/byggnads-kollektivavtal-2026">Byggnads kollektivavtal 2026</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>.</p>
+`;
+
+const A_KORTTIDSARBETE_PERMITTERING_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"korttidsarbete-permittering-byggforetag",
+  title: "Korttidsarbete eller permittering vid orderbrist – så behåller byggföretaget personalen", slug: "korttidsarbete-permittering-byggforetag", locale: "sv",
+  excerpt: "Reder ut skillnaden mellan statligt korttidsarbete och avtalsreglerad permittering – och ger dig en handlingsordning för att behålla personalen under en svacka.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_KORTTIDSARBETE_PERMITTERING_BYGGFORETAG_HTML,
+  seoTitle: "Korttidsarbete & permittering | ByggExp", seoDescription: "Korttidsarbete eller permittering i byggföretaget? Skillnaden, det statliga stödet, förhandling med Byggnads och hur du håller kvar kompetensen.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T18:12:00.000Z", createdAt: "2026-08-19T18:12:00.000Z", updatedAt: "2026-08-19T18:12:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_DRANERING_GRUS_MATERIAL_BERAKNING,
+    A_OMBILDA_ENSKILD_FIRMA_TILL_AB_BYGG,
+    A_PERSONLIG_SKYDDSUTRUSTNING_KRAV_BYGG,
+    A_TILLBUD_ARBETSSKADA_ANMALAN_BYGG,
+    A_KORTTIDSARBETE_PERMITTERING_BYGGFORETAG,
     A_HEMMAKONTOR_AVDRAG_ENSKILD_FIRMA_BYGG,
     A_JAMKA_PRELIMINARSKATT_F_SKATT_BYGGFORETAG,
     A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA,

@@ -5,6 +5,16 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'materialatgang-innervagg-reglar-gips',
+  'fargatgang-malning-m2',
+  'golvmaterial-atgang-spill',
+  'virkesatgang-altan-tralldack',
+  'betong-plintar-stolpfundament',
+  'arbetsmiljoverket-inspektion-bygg-2026',
+  'id06-nya-krav-2026-legitimering',
+  'staket-material-stolpar-atgang',
+  'golvvarme-berakning-effekt',
+  'fardigstallandeskydd-smahus',
   'garantibesiktning-2-ar-entreprenad',
   'semesterlon-semesterersattning-byggavtalet',
   'rivningsavfall-sorteringskrav-bygg',

@@ -14418,9 +14418,912 @@ const A_EFTERBESIKTNING_VEM_BETALAR_ENTREPRENAD: BlogPost = {
   publishedAt: "2026-08-19T19:15:00.000Z", createdAt: "2026-08-19T19:15:00.000Z", updatedAt: "2026-08-19T19:15:00.000Z",
 };
 
+const A_MATERIALATGANG_INNERVAGG_REGLAR_GIPS_HTML = `
+<p>Slarviga schabloner på innerväggar äter marginal. En regel för lite här, en halv gipspall för mycket där – och plötsligt skiljer inköpet flera hundralappar från det du prissatte i offerten. Materialåtgång på innervägg är inte svårt att räkna, men det kräver att du börjar i rätt ände: c/c-måttet på reglarna styr allt annat, och det är där de flesta felkalkyler börjar.</p>
+
+<p>Vill du hoppa direkt till räkningen? Testa vår gratis <a href="/sv/verktyg/reglar-kalkylator">reglar-kalkylator</a> – ange vägglängd och c/c så får du antal stående reglar plus syll och hammarband på sekunder.</p>
+
+<h2>Börja med c/c-måttet – det styr allt</h2>
+<p>Centrumavståndet mellan reglarna bestäms inte av tycke och smak, utan av gipsskivans bredd. Skivkanten ska alltid landa mitt på en regel, annars går det inte att skruva fast kanten ordentligt.</p>
+<ul>
+<li><strong>900 mm breda skivor</strong> kräver c/c 450 mm.</li>
+<li><strong>1200 mm breda skivor</strong> kräver c/c 600 mm.</li>
+</ul>
+<p>Regeldimensionen hänger ihop med isoleringen. Standard för en icke bärande innervägg är trä 45x70 eller 45x95 mm (ibland 45x45). Regeltjockleken bestämmer isoleringstjockleken – en 70 mm regel tar 70 mm mineralull, en 95 mm regel tar 95 mm. Bestäm dimensionen först, så följer isoleringsvalet automatiskt.</p>
+
+<h2>Räkna reglarna rätt</h2>
+<p>Grundformeln för antal stående reglar är enkel:</p>
+<p><strong>Antal reglar ≈ (vägglängd / c/c) + 1</strong></p>
+<p>Som löpmeter-schablon ger det ca 1,67 reglar per meter vid c/c 600 och ca 2,22 reglar per meter vid c/c 450. Utöver de stående reglarna tillkommer <strong>alltid</strong> syll och hammarband – bottenregel och toppregel som löper hela väggens längd.</p>
+<p>Här ligger den vanligaste underskattningen: extrareglarna. En ren löpmeter-schablon missar dem varje gång. Du behöver extra reglar vid:</p>
+<ul>
+<li>varje ytterkant och innerhörn (dubbla reglar för att kunna skruva gips på båda anslutande väggar),</li>
+<li>var sida om varje dörröppning,</li>
+<li>kortlingar (kortstycken) som monteras vågrätt över dörröppningar.</li>
+</ul>
+<p>Räknar du bara löpmeter och glömmer hörn och dörrar hamnar du systematiskt för lågt – och det är dyra minuter att åka och komplettera mitt i jobbet.</p>
+
+<h2>Gipsåtgång utan svinn</h2>
+<p>Gips räknas på väggytan, inte på reglarna. Normalgips (standardgips) är 12,5–13 mm tjockt och finns i två vanliga format:</p>
+<ul>
+<li><strong>900 x 2500 mm</strong> = 2,25 m² per skiva,</li>
+<li><strong>1200 x 2600 mm</strong> = 3,12 m² per skiva.</li>
+</ul>
+<p>Åtgången är väggytan delat med skivarean, plus spill. Tänk på tre saker som lätt dubblar din siffra:</p>
+<ol>
+<li><strong>Enkel- eller dubbelsidig vägg</strong> – en dubbelsidig vägg beklär du på båda sidor, alltså dubbla gipsytan.</li>
+<li><strong>Enkel- eller dubbellag</strong> – dubbla lag (för ljud eller brand) fördubblar gipset på den sidan. Vid dubbla lag förskjuts skivorna en halv skivbredd så att skarvarna inte hamnar över varandra.</li>
+<li><strong>Skruvåtgång</strong> – skruv c/c ca 200 mm längs skivkanter och ca 300 mm mot mellanreglar vid enkellag. Första skruven max 100 mm från hörn eller kant. Det blir snabbt flera hundra skruv per vägg – räkna in dem, de nollställer inte kalkylen men de tar slut.</li>
+</ol>
+<p>Behöver du hjälp med skiv- och skruvantalet, kör siffrorna i vår <a href="/sv/verktyg/gips-kalkylator">gips-kalkylator</a>.</p>
+
+<h2>Isolering per fack</h2>
+<p>Isoleringen ska fylla facket utan att komprimeras – den ska inte bukta ut eller pressas ihop, för då tappar den både ljud- och värmefunktion. Matcha tjockleken mot regeln (45/70/95 mm) och räkna åtgången i m² väggyta.</p>
+<p>Materialvalet i innervägg styrs primärt av <strong>ljudkrav</strong>, inte U-värde. Stenull har högre densitet än glasull och ger bättre ljud- och brandprestanda – välj efter vad väggen ska klara, inte bara efter pris per m². Snabb siffra på behovet får du i <a href="/sv/verktyg/isolering-kalkylator">isolerings-kalkylatorn</a>.</p>
+
+<h2>När kraven höjer åtgången</h2>
+<p>Två situationer spränger schablonen och måste synas i offerten:</p>
+<ul>
+<li><strong>Lägenhetsskiljande vägg (ljudklass C):</strong> kravet R'w + C50-3150 ≥ 53 dB löses normalt med dubbel stomme (två skilda regelrader) och minst ca 120 mm mineralull. Det är väsentligt mer material än en enkel innervägg – räkna aldrig en sådan vägg med löpmeter-schablonen för en vanlig rumsavdelare.</li>
+<li><strong>Brandcellsgräns eller utrymningsväg:</strong> icke bärande innerväggar i bostad är normalt inte brandklassade, men vid brandcellsgräns eller i utrymningsväg krävs ofta EI 30 eller högre. Det påverkar gipsvalet (t.ex. brandgips) och kan innebära extra lag – både på gips och på arbetstid.</li>
+</ul>
+
+<h2>Från åtgång till offert</h2>
+<p>När mängderna är räknade återstår tre saker innan de blir en offert som håller:</p>
+<ul>
+<li><strong>Lägg på realistiskt spill</strong> – ca 10 % på gips och isolering täcker kap, kanter och det som blir fel. Räkna hellre in det än att stå utan.</li>
+<li><strong>Särredovisa material och arbete</strong> – material har 25 % moms och ingår aldrig i ROT-underlaget. ROT gäller enbart arbete.</li>
+<li><strong>Räkna ROT rätt för 2026</strong> – ROT-avdraget är 30 % av arbetskostnaden, max 50 000 kr per person och år. Den tillfälliga höjningen till 50 % gällde bara 12 maj–31 december 2025 och förlängdes inte. Prissätter du fortfarande med 50 % lovar du kunden fel.</li>
+</ul>
+<p>När inköpslistan bygger på samma mängder som offerten slipper du glappet mellan kalkyl och verklighet.</p>
+
+<h2>Räkneexempel: en 4 m enkelsidig innervägg, c/c 600</h2>
+<p>Vägg 4,0 m lång, 2,5 m hög, enkelsidig, c/c 600, 1200 mm gips:</p>
+<ul>
+<li><strong>Reglar:</strong> (4,0 / 0,6) + 1 ≈ 7,7 → 8 stående reglar. Plus syll och hammarband (2 x 4,0 m). Tillkommer extrareglar vid hörn – lägg till 2–4 st beroende på anslutningar.</li>
+<li><strong>Gips:</strong> väggyta 4,0 x 2,5 = 10 m² på en sida. 10 / 3,12 ≈ 3,2 skivor → 4 skivor med spill.</li>
+<li><strong>Isolering:</strong> 10 m² i tjocklek som matchar regeln (t.ex. 70 mm), plus ca 10 % spill.</li>
+<li><strong>Skruv:</strong> räkna c/c 200 kant / 300 mitt – i storleksordningen 100–150 skruv för denna vägg.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp lägger du in väggens mått och c/c en gång, och samma mängder följer med från kalkyl till inköpslista och offert. Reglar, gips, isolering och spillpålägg räknas ihop, och material särredovisas från arbete så att ROT-underlaget blir rätt direkt. Du slipper föra över siffror manuellt mellan kalkylatorn, inköpet och fakturan – där felen annars smyger sig in. Verktyget räknar mängder och pris; hur många extrareglar just din vägg kräver vid hörn och dörrar avgör du fortfarande som byggare, men underlaget finns på ett ställe.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vilket c/c ska jag använda – 450 eller 600?</h3>
+<p>Det avgörs av gipsbredden. 900 mm breda skivor kräver c/c 450 mm, 1200 mm breda kräver c/c 600 mm. Skivkanten måste landa mitt på en regel. c/c 600 ger färre reglar och mindre material; c/c 450 ger en styvare vägg men mer virke.</p>
+<h3>Hur mycket spill ska jag räkna på gips och isolering?</h3>
+<p>Ca 10 % är en realistisk schablon för kap, kanter och fel. På komplicerade väggar med många öppningar kan det bli mer. Bättre att räkna in spillet i offerten än att stå utan material mitt i jobbet.</p>
+<h3>Räknas isolering och gips in i ROT-avdraget?</h3>
+<p>Nej. ROT-avdraget 2026 gäller enbart arbetskostnaden – 30 % av arbetet, max 50 000 kr per person och år. Allt material har 25 % moms och måste särredovisas i offert och faktura.</p>
+<h3>Varför blir mina reglar alltid för få?</h3>
+<p>För att löpmeter-schablonen bara räknar de stående reglarna i väggens längd. Den missar syll och hammarband, dubbla reglar i hörn och kanter, reglar på var sida om dörrar och kortlingar över öppningar. Lägg alltid till dessa manuellt.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna din nästa innervägg direkt i vår <a href="/sv/verktyg/reglar-kalkylator">reglar-kalkylator</a> och komplettera med <a href="/sv/verktyg/gips-kalkylator">gips-kalkylatorn</a> för skiv- och skruvantal. Vill du se hur mängderna flödar hela vägen till offert och faktura? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/spackel-atgang-vagg-tak">Spackelåtgång på vägg och tak</a>, <a href="/sv/blog/rakna-material-till-bygget">Så räknar du material till bygget</a> och <a href="/sv/blog/mangdforteckning-bygg">Mängdförteckning i byggprojekt</a>.</p>
+`;
+
+const A_MATERIALATGANG_INNERVAGG_REGLAR_GIPS: BlogPost = {
+  _id: "code-"+"materialatgang-innervagg-reglar-gips",
+  title: "Materialåtgång innervägg – så räknar byggaren reglar, gips och isolering", slug: "materialatgang-innervagg-reglar-gips", locale: "sv",
+  excerpt: "Så räknar du reglar, gips och isolering per innervägg med rätt c/c-mått och realistiskt spill – så att inköpslistan matchar det du prissatt i offerten.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/reglar-preview.webp", contentHtml: A_MATERIALATGANG_INNERVAGG_REGLAR_GIPS_HTML,
+  seoTitle: "Materialåtgång innervägg | ByggExp", seoDescription: "Räkna reglar (c/c 450/600), gips och isolering per innervägg så inköpet matchar offerten. Formler, spill 10 % och räkneexempel för hantverkare.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/reglar-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T20:00:00.000Z", createdAt: "2026-08-19T20:00:00.000Z", updatedAt: "2026-08-19T20:00:00.000Z",
+};
+
+const A_FARGATGANG_MALNING_M2_HTML = `
+<p>Färgåtgången avgör din marginal på varje målningsjobb. Räknar du för snålt står du med tomma burkar mitt i andra strykningen och kör en extra vända till färghandeln – räknar du för brett bjuder du kunden på färg du redan har betalat 25 % moms på. Skillnaden mellan en hållbar offert och ett förlustjobb är ofta bara ett par liter, och de literna går att räkna ut innan du sätter foten på arbetsplatsen.</p>
+
+<p>Behöver du bara ett snabbt svar på hur många burkar ett rum eller en fasad kräver, använd <a href="/sv/verktyg/farg-kalkylator">vår gratis färgåtgångskalkylator –&gt;</a> så får du åtgången utifrån yta, strykningar och täckförmåga direkt.</p>
+
+<h2>Grundformeln alla målare bör kunna utantill</h2>
+
+<p>All färgåtgång bygger på en enda formel:</p>
+
+<p><strong>Liter = (målad yta i m² × antal strykningar) ÷ täckförmåga (m²/l)</strong></p>
+
+<p>Ska du måla 60 m² vägg i två strykningar med en färg som täcker 9 m²/l blir det (60 × 2) ÷ 9 ≈ 13,3 liter. Enkelt – så länge du är ärlig med täckförmågan.</p>
+
+<p>Inför offert är det ofta den omvända versionen du behöver: du vet hur mycket färg som får plats i en förpackning och vill veta hur långt den räcker.</p>
+
+<p><strong>Max målbar yta = (antal liter × täckförmåga) ÷ antal strykningar</strong></p>
+
+<p>En 10-litersburk med 9 m²/l räcker alltså till (10 × 9) ÷ 2 = 45 m² i två strykningar. Den siffran är guld värd när du ska prissätta per burk och inte vill räkna om från början varje gång.</p>
+
+<h2>Täckförmåga i verkligheten – burkens siffra är bästa fall</h2>
+
+<p>Talet på burken är uppmätt på ett slätt, förbehandlat labbunderlag. Verkligheten suger mer. Räkna med dessa typiska spann per strykning:</p>
+
+<ul>
+<li><strong>Slät, tidigare målad vägg/tak:</strong> 8–10 m²/l (Flügger anger 8 m²/l som standard för väggfärg per lager).</li>
+<li><strong>Nyspacklad, grundad yta:</strong> 7–9 m²/l.</li>
+<li><strong>Sugande, grov eller rå gips/puts, ogrundat:</strong> 4–6 m²/l.</li>
+<li><strong>Fasad, trä – akrylat nymålning:</strong> 4–6 m²/l.</li>
+<li><strong>Fasad, trä – akrylat ommålning:</strong> 6–8 m²/l.</li>
+<li><strong>Grundolja på trä:</strong> 6–10 m²/l beroende på träets sugförmåga.</li>
+</ul>
+
+<p>Det praktiska spannet för inomhusarbete landar därför oftast på 6–10 m²/l. Ju sugande och grövre underlag, desto lägre siffra – och desto större risk att burkens optimistiska tal spränger din kalkyl. Räknar du efter labbvärdet på ett nyspacklat tak har du garanterat räknat fel.</p>
+
+<h2>Antal strykningar – när räcker två och när behövs grund plus två?</h2>
+
+<p>Standard för täckfärg är minst två strykningar. En enda stryknig ger sällan jämn täckning och håller inte över tid. Räkna alltid med två som utgångsläge.</p>
+
+<p>Tre lager – grundning plus två täckstrykningar – behövs när:</p>
+
+<ul>
+<li>Du byter kulör kraftigt, särskilt mörkt över ljust eller stark kulör över vit.</li>
+<li>Underlaget är ogrundat, nyspacklat eller starkt sugande.</li>
+<li>Du målar på fläckigt eller reparerat underlag där genomslag är en risk.</li>
+</ul>
+
+<p>Kvaliteten på färgen spelar in: en billig färg med lägre pigmenthalt kräver oftare ett extra lager, vilket äter upp den lägre literkostnaden. Väg in det redan i offerten – ett bortglömt tredje lager är en av de vanligaste orsakerna till att timmarna och literna spricker.</p>
+
+<h2>Spill, struktur och bättring – lägg på 10 %</h2>
+
+<p>Ingen färg hamnar till hundra procent på väggen. Roller och pensel suger, strukturytor kräver mer, kapp och bättringar drar sitt, och du vill ha lite kvar för retuscher efter slutstädning. Lägg därför på <strong>10 % som standard</strong> (praktiskt 5–15 % beroende på struktur och jobbets art). Flügger rekommenderar just +10 % som buffert.</p>
+
+<p>En vanlig fälla är att dra bort varje fönster och dörr från väggytan. Gör det inte för öppningar under cirka 3 m² – de små avdragen kompenserar i praktiken för spillet och kanterna runt karmarna, som tar extra färg. Dra bara bort riktigt stora ytor, som en hel skjutdörrsvägg eller ett stort fönsterparti.</p>
+
+<h2>Räkneexempel steg för steg</h2>
+
+<p><strong>Rum:</strong> Vardagsrum, 40 m² golv, takhöjd 2,5 m. Omkretsen är ungefär 26 m, vilket ger en bruttoväggyta på 26 × 2,5 = 65 m². Två strykningar med en väggfärg på 9 m²/l: (65 × 2) ÷ 9 ≈ 14,4 liter. Plus 10 % ≈ 16 liter. Runda upp till hel eller halv förpackning – här en 10-liters plus en 5-liters, eller nästa hela storlek uppåt.</p>
+
+<p><strong>Fasad:</strong> 90 m² träpanel som ska ommålas med akrylatfärg, 7 m²/l, två strykningar: (90 × 2) ÷ 7 ≈ 25,7 liter. Plus 10 % ≈ 28 liter. Behöver panelen grundolja först räknar du det som ett eget lager: 90 ÷ 8 ≈ 11 liter grundolja plus 10 % ≈ 12 liter. Håll grund och täckfärg som separata poster i kalkylen.</p>
+
+<p>Behöver du snabbt få fram själva ytan innan du räknar liter, ta <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a> och mata sedan in resultatet i färgkalkylatorn.</p>
+
+<h2>Prissätt materialet rätt – moms, ROT och varför färg aldrig ger ROT</h2>
+
+<p>Färg och material beläggs med <strong>25 % moms</strong>. Materialet ska särredovisas på fakturan och prissättas separat i offerten, av en viktig anledning: <strong>ROT-avdraget gäller bara arbetskostnaden – aldrig färg, tapet, penslar eller täckmaterial.</strong></p>
+
+<p>Från 1 januari 2026 är ROT-avdraget tillbaka på <strong>30 % av arbetskostnaden</strong>. Den tillfälliga höjningen till 50 % (för arbete utfört 12 maj–31 december 2025) upphörde vid årsskiftet, och det är betalningsdatumet som styr vilken nivå som gäller. Taket är 50 000 kr per person och år, men 2026 finns ett gemensamt tak för ROT och RUT på 75 000 kr per person och år. Räknar du fortfarande med 50 % på ett 2026-jobb offererar du fel.</p>
+
+<h2>Vanligaste räknemissarna som äter din marginal</h2>
+
+<ul>
+<li>Använder burkens labbvärde på ett sugande eller nyspacklat underlag.</li>
+<li>Glömmer det tredje lagret vid kulörbyte eller ogrundad yta.</li>
+<li>Struntar i spillpålägget – 10 % låter lite men blir flera liter på en fasad.</li>
+<li>Drar bort varje litet fönster och hamnar under verklig åtgång.</li>
+<li>Rundar inte upp till hel förpackning och får slut mitt i jobbet.</li>
+<li>Lägger färg i ROT-underlaget – Skatteverket underkänner det direkt.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+
+<p>I ByggExp bygger du offerten med separata rader för arbete och material, så att arbetskostnaden – och därmed ROT-underlaget – hålls isär från färgen automatiskt. Åtgången du räknat fram i färgkalkylatorn för du in som materialpost med rätt momssats, och du kan återanvända dina egna täckförmågetal och spillpålägg mellan jobb så att kalkylen blir konsekvent. Systemet räknar inte målningen åt dig, men det ser till att din uträkning hamnar rätt i offert och faktura utan manuellt merjobb.</p>
+
+<h2>Vanliga frågor</h2>
+
+<h3>Hur många m² räcker en liter färg till?</h3>
+<p>Det beror på underlaget. På slät, tidigare målad vägg räknar du med 8–10 m²/l per strykning, på nyspacklat och grundat 7–9 m²/l, och på sugande eller rå gips och puts ner mot 4–6 m²/l. Fasadfärg på trä ligger på 4–6 m²/l vid nymålning. Burkens siffra är alltid ett bästa-fall-värde.</p>
+
+<h3>Hur många strykningar ska jag räkna med?</h3>
+<p>Minst två strykningar med täckfärg är standard. Vid kraftigt kulörbyte, mörkt över ljust eller ogrundat och nyspacklat underlag behöver du ofta grundning plus två strykningar, alltså tre lager totalt.</p>
+
+<h3>Ska jag dra bort fönster och dörrar från ytan?</h3>
+<p>Inte de små. Öppningar under cirka 3 m² låter du vara – avdraget kompenserar för spillet och den extra färgen runt karmar och kanter. Dra bara bort riktigt stora ytor.</p>
+
+<h3>Ger färgen ROT-avdrag?</h3>
+<p>Nej. ROT-avdraget gäller enbart arbetskostnaden, som 2026 är 30 % med ett tak på 50 000 kr per person och år (gemensamt ROT+RUT-tak 75 000 kr). Färg och övrigt material ligger utanför och beläggs med 25 % moms – redovisa det som en egen post.</p>
+
+<h2>Kom igång</h2>
+
+<p>Räkna ut åtgången på nästa jobb med <a href="/sv/verktyg/farg-kalkylator">färgåtgångskalkylatorn</a>, för in resultatet som separat materialpost och håll arbetskostnaden ren för ROT. Vill du se hur offert och faktura hänger ihop i praktiken, <a href="/sv/contact">boka en demo</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>, <a href="/sv/blog/spackel-atgang-vagg-tak">Spackelåtgång på vägg och tak</a>, <a href="/sv/blog/spillprocent-bygg-material">Spillprocent på byggmaterial</a>.</p>
+`;
+
+const A_FARGATGANG_MALNING_M2: BlogPost = {
+  _id: "code-"+"fargatgang-malning-m2",
+  title: "Färgåtgång per m² – så räknar proffsmålaren rätt inför offerten", slug: "fargatgang-malning-m2", locale: "sv",
+  excerpt: "Felräknad färgåtgång blir antingen tappad marginal eller en returresa till färghandeln – så räknar du m²/liter, strykningar och spill rätt redan i offerten.", tag: "Kalkylering",
+  coverImageUrl: "/landing/verktyg/farg-preview.webp", contentHtml: A_FARGATGANG_MALNING_M2_HTML,
+  seoTitle: "Färgåtgång per m² – räkna rätt | ByggExp", seoDescription: "Så räknar målaren färgåtgång per m²: täckförmåga, antal strykningar och spill. Verifierade åtgångstal och räkneexempel för att offerera rätt.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/farg-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T20:03:00.000Z", createdAt: "2026-08-19T20:03:00.000Z", updatedAt: "2026-08-19T20:03:00.000Z",
+};
+
+const A_GOLVMATERIAL_ATGANG_SPILL_HTML = `
+<p>Beställer du för lite golv får du vänta på ett nytt parti – ofta med en avvikande nyans som syns tvärs över rummet. Beställer du för mycket binder du kapital i paket som blir liggande. För dig som lägger klick-, laminat- eller parkettgolv i yrket är marginalen mellan rätt och fel några procent spillpåslag och en genomtänkt startförskjutning. Här går vi igenom hur du kommer från uppmätt yta till rätt antal paket, från rätt batchnummer.</p>
+
+<p>Vill du snabbt få fram antal paket utifrån yta, mönster och paketstorlek? Använd vår gratis <a href="/sv/verktyg/golv-kalkylator">golv-kalkylator &rarr;</a> så slipper du räkna för hand på plats hos kund.</p>
+
+<h2>Börja med nettoytan – mät rätt</h2>
+<p>All beräkning utgår från nettoytan, det vill säga den yta golvet faktiskt ska täcka. Mät varje rum för sig, längd gånger bredd, och dra av fasta ytor som inte ska golvläggas – köksö med sockel, murad öppen spis, inbyggda garderober som står på undergolvet. Addera sedan rummen till en total. Ett vanligt fel är att mäta hela stommen eller ta ytan från ritningens bruttoarea, vilket ger en yta som är för stor. Runda aldrig av förrän spillet är pålagt – avrundning innan påslaget äter upp den marginal du behöver. Behöver du hjälp att summera flera rum eller ytor med udda form, ta vår <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylator</a>.</p>
+
+<h2>Så mycket spill ska du lägga på</h2>
+<p>Spill uppstår när plankor kapas mot väggar, dörrar och fasta föremål, och när radbredder inte går jämnt upp. Lägg alltid spillet ovanpå den uppmätta nettoytan innan du räknar paket. Som grund gäller:</p>
+<ul>
+<li><strong>Raka rum, enkelt mönster:</strong> 5–8 %. Kährs rekommenderar cirka 5 % vid enkla rum.</li>
+<li><strong>Rum med vinklar, burspråk, trappa eller flera dörrar:</strong> 8–10 %. Bauhaus anger cirka 10 % som tumregel.</li>
+<li><strong>Fiskben, chevron eller diagonalläggning:</strong> 10–15 %, och i praktiken 15–25 % beroende på rummets form. Ett rum på 60 m&sup2; i fiskben kan kräva material för 70–75 m&sup2;.</li>
+</ul>
+<p>Ju mer diagonala kap och mönsteranpassning, desto mer material blir restbitar. Bestäm mönstret innan du väljer spillprocent – det är den enskilt största faktorn.</p>
+
+<h2>Startförskjutning och radbredd – varför de påverkar åtgången</h2>
+<p>Kortändsfogarna, alltså skarvarna mellan plankor, ska förskjutas mellan raderna. De flesta anvisningar anger minst 300 mm, gärna cirka en tredjedel av plankans längd; Kährs anger minst 500 mm för ökad stabilitet. Denna startförskjutning styr hur mycket avkap som blir och kan återanvändas.</p>
+<p>Sista radens bräddbredd bör vara minst 50 mm. Blir sista raden smalare kapas första raden så att bredden fördelas jämnt över rummet – det påverkar hur många plankor och därmed paket som verkligen går åt. Det goda med genomtänkt förskjutning: från och med tredje raden kan du starta raden med avkapet från föregående rad om biten är minst cirka 300 mm. Smart förskjutningsplanering sänker alltså det faktiska spillet, medan slarv driver upp det.</p>
+
+<h2>Rörelsefog och stora ytor</h2>
+<p>Flytande golv rör sig med fukt och temperatur och behöver plats. Lägg en rörelsefog på minst 8–12 mm mot väggar och fasta föremål – Kährs anger minst 10 mm – räknat på ungefär 1,5 mm rörelse per breddmeter golv. En obruten flytande yta får inte vara hur stor som helst: tumregeln är cirka 8 m bredd och 12 m längd för lås- och flytande golv innan rörelsefog krävs. Expansionsfog läggs alltid i dörröppningar och täcks av tröskel eller nivålist. Måste du dela upp en stor yta ökar antalet kap och därmed spillet – planera in det i påslaget i stället för att upptäcka det halvvägs.</p>
+
+<h2>Från m&sup2; till antal paket – räkneexempel</h2>
+<p>Golv säljs i hela paket, vanligen cirka 1,5–3,5 m&sup2; per paket. Formeln är enkel:</p>
+<p><strong>Antal paket = tak( nettoyta &times; (1 + spill%) &divide; paketets m&sup2; )</strong></p>
+<p>Exempel: ett raklagt rum med 24 m&sup2; nettoyta, enkelt mönster, 8 % spill.</p>
+<ol>
+<li>24 m&sup2; &times; 1,08 = 25,9 m&sup2;</li>
+<li>25,9 &divide; 2,4 m&sup2;/paket = 10,8 paket</li>
+<li>Avrunda alltid uppåt: <strong>11 paket</strong></li>
+</ol>
+<p>Beställ samtliga paket från samma parti- och batchnummer så att kulören stämmer, och lägg gärna till 1 extra paket i reserv för framtida reparationer. Runda alltid uppåt – ett halvt paket för lite betyder ett stopp mitt i jobbet.</p>
+
+<h2>Acklimatisering och leverans</h2>
+<p>Golvet ska acklimatiseras i oöppnad förpackning i rumsmiljö i minst 24 timmar, ofta 48 timmar, före läggning. Det betyder att du måste beställa i tid – materialet ska hinna stå på plats innan första raden läggs. Kontrollera parti och kulör innan läggningen börjar, inte efter att halva golvet ligger. En felaktig batch upptäckt sent innebär rivning och ombeställning.</p>
+
+<h2>ROT och offert 2026 – materialberäkningens affärsvärde</h2>
+<p>ROT-avdraget är 30 % av arbetskostnaden 2026, med tak 50 000 kr per person och år. De tillfälliga 50 % gällde bara slutet av 2025. Endast arbetskostnaden är avdragsgill – material och spill ger aldrig ROT. Det gör materialberäkningen direkt kopplad till kundens totalkostnad: felräknat spill hamnar helt på kundens faktura utan avdrag. En tydlig, separat spillpost i offerten gör kalkylen transparent och förebygger tvist om slutsumman.</p>
+
+<h2>Checklista före beställning</h2>
+<ol>
+<li>Nettoyta uppmätt per rum, fasta ytor avdragna.</li>
+<li>Spillprocent vald efter mönster (5–8 / 8–10 / 10–15+ %).</li>
+<li>Läggningsmönster bestämt (rakt, diagonal, fiskben).</li>
+<li>Startförskjutning planerad (minst 300 mm, Kährs 500 mm).</li>
+<li>Rörelsefog och eventuell ytuppdelning inräknad.</li>
+<li>Paketstorlek i m&sup2; kontrollerad.</li>
+<li>Samma batchnummer på hela beställningen.</li>
+<li>Ett reservpaket tillagt.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp lägger du in rummens mått, väljer spillpåslag efter mönster och paketstorlek, och får antal paket uträknat med avrundning uppåt. Beräkningen kan följa med in i offerten till kunden, där arbetskostnad och material hålls isär så att ROT-underlaget blir tydligt. Verktyget ersätter inte golvläggarens omdöme om förskjutning och radbredd på plats – men det tar bort handräkningen och risken för avrundningsfel innan beställning läggs.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket spill ska jag lägga på golv?</h3>
+<p>För raklagt klick-, laminat- eller parkettgolv i enkla rum räcker 5–8 %. I rum med vinklar och flera dörrar räkna 8–10 %. Vid fiskben, chevron eller diagonalläggning gäller 10–15 %, och upp till 15–25 % beroende på rummets form. Lägg alltid spillet ovanpå nettoytan innan du räknar paket.</p>
+<h3>Hur räknar jag om från kvadratmeter till antal paket?</h3>
+<p>Multiplicera nettoytan med spillpåslaget, dela med paketets m&sup2; och avrunda alltid uppåt: antal paket = tak(nettoyta &times; (1 + spill%) &divide; paket-m&sup2;). Beställ dessutom gärna 1 extra paket i reserv från samma batch.</p>
+<h3>Varför ska allt golv komma från samma batchnummer?</h3>
+<p>Nyansen kan skilja mellan olika tillverkningspartier. Beställer du för lite och kompletterar senare riskerar du ett synligt färghopp mitt i golvet. Beställ hela mängden inklusive spill och reserv från samma parti på en gång.</p>
+<h3>Ger material och spill ROT-avdrag?</h3>
+<p>Nej. ROT-avdraget 2026 är 30 % av enbart arbetskostnaden, med tak 50 000 kr per person och år. Material och spill är aldrig avdragsgillt, vilket gör en korrekt materialberäkning viktig för kundens totalkostnad.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna fram rätt antal paket direkt med vår <a href="/sv/verktyg/golv-kalkylator">golv-kalkylator</a>, eller summera flera ytor först i <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a>. Vill du se hur beräkningen kopplas ihop med offert och ROT-underlag, <a href="/sv/contact">boka en demo</a>.</p>
+<p>Relaterat: <a href="/sv/blog/spillprocent-bygg-material">Spillprocent för byggmaterial</a>, <a href="/sv/blog/kakel-klinker-atgang-vatrum">Kakel- och klinkeråtgång i våtrum</a>, <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>.</p>
+`;
+
+const A_GOLVMATERIAL_ATGANG_SPILL: BlogPost = {
+  _id: "code-"+"golvmaterial-atgang-spill",
+  title: "Golv – materialåtgång och spill: så beställer du rätt antal paket", slug: "golvmaterial-atgang-spill", locale: "sv",
+  excerpt: "Räkna ut nettoyta, spillpåslag och startförskjutning så golvläggaren beställer rätt antal paket – från samma parti och utan bundet kapital.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/golv-preview.webp", contentHtml: A_GOLVMATERIAL_ATGANG_SPILL_HTML,
+  seoTitle: "Golv materialåtgång & spill | ByggExp", seoDescription: "Så räknar du klick-, laminat- och parkettgolv inkl. spill (5–10 %) och startförskjutning – och beställer rätt antal paket från rätt batch.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/golv-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T20:06:00.000Z", createdAt: "2026-08-19T20:06:00.000Z", updatedAt: "2026-08-19T20:06:00.000Z",
+};
+
+const A_VIRKESATGANG_ALTAN_TRALLDACK_HTML = `
+<p>Inför säsongens altanjobb sitter marginalen i beräkningen. Räknar du för snålt får du hämta virke mitt i monteringen och äter upp vinsten på restid. Räknar du för brett binder du kapital i en trave som blir liggande. Den som kan sin virkesåtgång per m² – trall, reglar och bärlinor – lägger en offert som håller och slipper obehagliga överraskningar när brädorna väl ligger på plintarna.</p>
+
+<p>Vill du hoppa direkt till siffrorna? Mata in altanens mått i <a href="/sv/verktyg/trall-kalkylator">vår gratis trall-kalkylator -&gt;</a> så får du löpmeter trall, spillpåslag och antal brädor på sekunder.</p>
+
+<h2>Stommen på 30 sekunder</h2>
+<p>En altan byggs i tydliga lager, och varje lager har sin egen åtgångslogik:</p>
+<ul>
+<li><strong>Plintar</strong> i mark bär hela konstruktionen.</li>
+<li><strong>Bärlinor</strong> (ofta 45x170 mm) vilar på plintarna och tar upp lasten tvärs altanen.</li>
+<li><strong>Reglar</strong> (ofta 45x145 mm) läggs vinkelrätt mot bärlinorna och bär trallen.</li>
+<li><strong>Trall</strong> (standard 28x120 mm) skruvas på reglarna – det synliga golvet.</li>
+</ul>
+<p>Dimensionerna ovan är en beprövad stomme för en fristående altan i normal höjd. Grövre spännvidder eller tak över altanen kräver egen dimensionering, men för de flesta uterum är 45x145 reglar och 45x170 bärlina en trygg utgångspunkt.</p>
+
+<h2>cc-avståndet styr allt</h2>
+<p>Centrumavståndet mellan reglarna (cc) avgör både hur mycket virke som går åt och hur golvet känns att gå på. Svenskt Trä och TräGuiden anger maximalt cc utifrån trallens tjocklek:</p>
+<ul>
+<li><strong>22 mm trä:</strong> cc högst 400 mm</li>
+<li><strong>26 mm värmebehandlat:</strong> cc högst 450 mm</li>
+<li><strong>28 mm (standardtrall):</strong> cc högst 600 mm</li>
+<li><strong>34 mm:</strong> cc högst 800 mm</li>
+</ul>
+<p>Standardtrallen 28x120 mm klarar alltså cc 600. Men många proffs väljer ändå cc 400 – golvet blir styvare, fjädrar mindre och känns påtagligt gediget under foten. Skillnaden kostar mer regelvirke men höjer den upplevda kvaliteten, vilket ofta är värt det på synliga uterum. Bygger du i komposit gäller alltid tillverkarens anvisning framför trätabellen.</p>
+
+<h2>Räkna trall i löpmeter per m²</h2>
+<p>Trallåtgången beror på brädans bredd plus monteringsspalten. Grundformeln är enkel:</p>
+<p><strong>Löpmeter trall per m² = 1000 / (brädbredd + spalt)</strong></p>
+<p>Räkneexempel för 120 mm bräda med 6 mm spalt: modulen blir 126 mm, och 1000 / 126 = cirka 7,94 lm/m². En rak altan på 40 m² kräver då cirka 318 lm trall – före spillpåslag. Byter du brädbredd ändras åtgången direkt:</p>
+<ul>
+<li><strong>95 mm bräda + 6 mm spalt:</strong> ca 9,9 lm/m²</li>
+<li><strong>120 mm bräda + 6 mm spalt:</strong> ca 7,94 lm/m²</li>
+<li><strong>145 mm bräda + 6 mm spalt:</strong> ca 6,62 lm/m²</li>
+</ul>
+<p>När du har löpmetern, anpassa mot lagerlängderna (3,6–5,4 m). Rita altanen i skala och lägg brädlängderna så att kapet minimeras – det är här du sparar både virke och tid.</p>
+
+<h2>Räkna reglar och bärlinor</h2>
+<p>Reglarna räknas per m² golvyta med formeln <strong>1 / cc</strong>:</p>
+<ul>
+<li><strong>cc 400 mm:</strong> 2,5 lm regel/m²</li>
+<li><strong>cc 600 mm:</strong> 1,67 lm regel/m²</li>
+</ul>
+<p>Lägg till kantreglar runt ytterkanten samt eventuella extra reglar vid skarvar. För 40 m² med cc 400 blir det 100 lm regelvirke plus kantreglar. Bärlinorna räknas i stället efter hur många linor som behövs tvärs altanen: spännvidden mellan plintar hålls typiskt 1,5–2,0 m beroende på last och dimension. Antalet bärlinor gånger altanens bredd ger löpmetern, och antalet plintar följer av spännvidden längs varje lina. Behöver du snabbt slå fast regelåtgång och plintantal, ta <a href="/sv/verktyg/reglar-kalkylator">reglar-kalkylatorn</a> till hjälp.</p>
+
+<h2>Spill, kap och spalt – de tre som spräcker kalkylen</h2>
+<p>Tre detaljer avgör om din materiallista håller:</p>
+<ol>
+<li><strong>Spill:</strong> räkna 10–15 % påslag på trallen som branschtumregel. Rak, enkel altan klarar sig på 5–10 %; vinklar, mönster och diagonalläggning kräver mer.</li>
+<li><strong>Spalt:</strong> trall får aldrig monteras utan springa. Använd 4–6 mm monteringsspalt för ny tryckimpregnerad trall som rör sig och krymper. I det färdiga golvet bör fogsprånget inte överstiga 3 mm.</li>
+<li><strong>Infästning och skydd:</strong> brädor bredare än 70 mm ska dubbelskruvas med 30 mm kantavstånd, smalare brädor (45–70 mm) får en centrerad skruv. Utomhus krävs korrosionsskydd lägst klass C4 – varmförzinkat eller rostfritt A2/A4 – och C5 vid kust.</li>
+</ol>
+<p>Skruvhuvudet ska ligga exakt i nivå med träytan, aldrig försänkt, så att vatten inte samlas i skallen.</p>
+
+<h2>Skruv- och infästningsåtgång</h2>
+<p>På breda brädor sätts två skruv per regelkorsning. Antalet korsningar per m² beror på både brädbredd och cc, så åtgången varierar – men på en standardaltan med 120 mm trall och cc 400 landar du grovt kring 30–40 skruv per m². Använd skruv med minst 4,2 mm ytterdiameter; längden anpassas efter trallen: cirka 45 mm för 22 mm trall, 55 mm för 28 mm och 75 mm för 34 mm. Köp med marginal – tappade och feldragna skruv är oundvikligt på ett altangolv.</p>
+
+<h2>Offert och ROT 2026 – dela material och arbete rätt</h2>
+<p>Bygger du en altan eller ett trädäck sammanbyggt med ett småhus ger ROT-avdrag på <strong>arbetet</strong> – aldrig på material, maskinhyra eller resor. ROT 2026 är 30 % av arbetskostnaden med tak 50 000 kr per person och år (gemensamt tak med RUT på 75 000 kr). För dig som hantverkare betyder det att offerten måste särredovisa arbete och material tydligt, annars tappar kunden avdraget och du får diskussionen efteråt. Sätt en ärlig arbetsandel, håll materiallistan separat och spara underlaget – bokföring och underlag ska bevaras i sju år.</p>
+
+<h2>Snabb checklista + kalkylexempel för 40 m² altan</h2>
+<p>En rak altan på 40 m², trall 28x120 mm med 6 mm spalt, reglar cc 400:</p>
+<ul>
+<li><strong>Trall:</strong> 40 × 7,94 = ca 318 lm, plus 12 % spill = ca 356 lm</li>
+<li><strong>Reglar 45x145:</strong> 40 × 2,5 = 100 lm plus kantreglar</li>
+<li><strong>Bärlina 45x170:</strong> efter spännvidd 1,5–2,0 m och antal linor tvärs ytan</li>
+<li><strong>Skruv:</strong> ca 30–40 st/m², dvs 1200–1600 st, C4-skydd, längd 55 mm</li>
+<li><strong>Plintar:</strong> enligt bärlinans spännvidd</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp lägger du upp altanjobbet som ett projekt och bygger materiallistan från kalkylatorernas siffror direkt i offerten. Du separerar arbete och material så att ROT-underlaget blir rätt från början, och samlar mängder, spillpåslag och skruvåtgång på ett ställe. När kunden godkänner har du en mängdförteckning att beställa virke efter – och en offert som stämmer med det du faktiskt bygger. Verktyget räknar inte åt dig i fält, men det håller kalkyl, offert och underlag i ordning så att marginalen inte läcker mellan Excel-ark.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket trall går åt per m²?</h3>
+<p>Använd formeln 1000 / (brädbredd + spalt). En 120 mm bräda med 6 mm spalt ger cirka 7,94 lm/m². Lägg sedan på 10–15 % spill för kap och anpassning mot lagerlängder.</p>
+
+<h3>Vilket cc-avstånd ska reglarna ha?</h3>
+<p>Standardtrall på 28 mm klarar max cc 600 mm enligt TräGuiden, men många väljer cc 400 för ett styvare golv. Tunnare trall kräver tätare cc: 22 mm högst 400 mm.</p>
+
+<h3>Hur stor spalt ska jag ha mellan trallbrädorna?</h3>
+<p>Trall ska alltid monteras med springa. Använd 4–6 mm monteringsspalt för ny tryckimpregnerad trall som krymper. I det färdiga golvet bör fogsprånget inte överstiga 3 mm.</p>
+
+<h3>Får kunden ROT-avdrag på altanbygget?</h3>
+<p>Ja, om altanen byggs samman med ett småhus ger ROT 30 % på arbetskostnaden, tak 50 000 kr per person 2026. Avdraget gäller bara arbetet – aldrig material, maskinhyra eller resor.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna fram hela materiallistan för nästa altan i <a href="/sv/verktyg/trall-kalkylator">trall-kalkylatorn</a> och komplettera med <a href="/sv/verktyg/reglar-kalkylator">reglar-kalkylatorn</a>. Vill du se hur kalkyl, offert och ROT-uppdelning hänger ihop i ett projekt? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>, <a href="/sv/blog/spillprocent-bygg-material">Spillprocent på byggmaterial</a> och <a href="/sv/blog/mangdforteckning-bygg">Mängdförteckning i bygget</a>.</p>
+`;
+
+const A_VIRKESATGANG_ALTAN_TRALLDACK: BlogPost = {
+  _id: "code-"+"virkesatgang-altan-tralldack",
+  title: "Virkesåtgång för altan: räkna trall, reglar och bärlinor per m²", slug: "virkesatgang-altan-tralldack", locale: "sv",
+  excerpt: "Så räknar du exakt virkesåtgång för altanen – trall, reglar, bärlinor och skruv per m² med rätt cc-avstånd och spillpåslag.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/trall-preview.webp", contentHtml: A_VIRKESATGANG_ALTAN_TRALLDACK_HTML,
+  seoTitle: "Virkesåtgång altan trall per m² | ByggExp", seoDescription: "Räkna trall, reglar och bärlinor per m² altan. Formler för löpmeter, cc-avstånd, spill och skruv – plus ROT 2026 för din offert.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/trall-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T20:09:00.000Z", createdAt: "2026-08-19T20:09:00.000Z", updatedAt: "2026-08-19T20:09:00.000Z",
+};
+
+const A_BETONG_PLINTAR_STOLPFUNDAMENT_HTML = `
+<p>Fel mängd betong till plintarna kostar alltid – antingen står du med halvtomma säckar och stelnande rester, eller får springa till bygghandeln mitt i gjutningen medan den första satsen redan börjar dra. För en altan på nio plintar är skillnaden mellan gissning och kalkyl bara några minuters räknande, men den avgör både materialkostnad och att fundamenten faktiskt bär. Här går vi igenom hur du räknar kubik betong per plint, hur frostfritt djup styr åtgången och hur mycket spill du bör lägga på.</p>
+
+<p>Vill du hoppa direkt till siffrorna? Slå in diameter och djup i <a href="/sv/verktyg/betong-kalkylator">vår gratis betongkalkylator</a> så får du volym i liter och m³ samt ungefärlig säckåtgång per plint innan du beställer.</p>
+
+<h2>Så räknar du volym per plint</h2>
+<p>En rund plint eller ett stolpfundament är en cylinder, och volymen räknas med formeln <strong>V = π × r² × djup</strong>, där r är radien (halva diametern). Räkna i meter så får du kubikmeter direkt, och multiplicera med 1000 för liter.</p>
+<p>Konkreta exempel på hela plintar gjutna till fullt djup:</p>
+<ul>
+<li><strong>Ø200 mm × 0,9 m</strong> = ca 28 liter (0,028 m³) per plint</li>
+<li><strong>Ø250 mm × 1,0 m</strong> = ca 49 liter (0,049 m³) per plint</li>
+<li><strong>Ø300 mm × 1,1 m</strong> = ca 78 liter (0,078 m³) per plint</li>
+</ul>
+<p>Lägg märke till hur snabbt volymen växer med diametern: när du går från 200 till 300 mm nästan tredubblas åtgången även om djupet bara ökar något. Radien går i kvadrat i formeln, så diametern är den enskilt viktigaste faktorn för materialkostnaden.</p>
+
+<h2>Frostfritt djup styr djupet – och åtgången</h2>
+<p>Plinten måste bottna under frostfritt djup, annars lyfter tjälen den och hela konstruktionen rör sig med årstiderna. Det djupet varierar kraftigt över landet:</p>
+<ul>
+<li><strong>Södra Sverige</strong> (Skåne): ca 0,9–1,1 m</li>
+<li><strong>Mälardalen</strong>: ca 1,2 m</li>
+<li><strong>Norra inlandet</strong>: 1,6 m och mer</li>
+<li><strong>Övre Norrland</strong>: upp mot 2,5 m</li>
+</ul>
+<p>Eftersom djupet går rakt in i volymformeln betyder ett gjutjobb i Norrland betydligt fler liter per plint än samma altan i Skåne. Lägg alltid dränerande grus eller makadam i botten på hålet – det leder bort vatten och minskar tjällyftningen. Gräv med jordborr eller spade och kontrollera att du verkligen är under frostfritt djup för just din kommun.</p>
+
+<h2>Åtgång per användningsområde</h2>
+<p>Vilken plint du behöver styrs av lasten:</p>
+<ul>
+<li><strong>Staket och plank:</strong> klena plintar räcker, ofta i storleksordningen Ø150–200 mm. Ungefärliga prefabmått för staket är 500/130/200 mm (höjd/topp/botten) och för plank 900/130/240 mm. Räkna med ungefär 2 säckar torrbetong per plint vid egen gjutning.</li>
+<li><strong>Altan och trädäck:</strong> bärande plintar med större diameter (Ø200–300 mm) till frostfritt djup. Här ligger tyngdpunkten på både djup och dimension.</li>
+<li><strong>Attefall och komplementbyggnad:</strong> dimensionerande last avgör – en byggnad ställer högre krav än ett däck och kräver oftast grövre plintar och genomtänkt lastfördelning.</li>
+</ul>
+<p>Använd betongklass C25/30 (eller motsvarande) för bärande plintgjutning, och glöm inte stolpsko eller armering där lasten kräver det.</p>
+
+<h2>Säck eller betongbil?</h2>
+<p>En 25 kg säck torrbetong eller grovbetong ger ungefär <strong>12,5–13 liter</strong> färdig betongmassa och blandas med cirka 3,0 liter vatten per säck. Tumregeln blir ungefär <strong>2 säckar per 25 liter</strong> plintvolym. Maskinblanda fin- eller grovbetongen i ungefär 5 minuter för jämn massa.</p>
+<p>Räkna på totalvolymen innan du väljer metod. Några få plintar för ett staket sköts enkelt med säck. När du kommer upp i många plintar med stor diameter blir säckhanteringen både tung och dyr per liter – då kan lösvikt eller betongbil löna sig. Slå ihop volymen för alla plintar i kalkylatorn och jämför.</p>
+
+<h2>Räkna in spill</h2>
+<p>Hålen blir sällan perfekta cylindrar. Urborrad eller urrasad botten, ojämna väggar, kladd på blandaren och lite påfyllning gör att verklig åtgång alltid överstiger den teoretiska. Lägg på <strong>10–15 % marginal</strong>.</p>
+<p><strong>Räkneexempel, 9-plints altan:</strong> Ø250 mm × 1,0 m ger 49 liter per plint. Nio plintar = 441 liter teoretiskt. Med 12 % spill: cirka 494 liter. Delat på 12,5 liter per säck blir det ungefär 40 säckar torrbetong. Utan spillmarginalen hade du beställt 36 säckar – och stått fyra säckar kort mitt i jobbet.</p>
+
+<h2>Regler och ekonomi 2026</h2>
+<p>Bygglov och anmälan skiljer sig åt för staket, altan och Attefall, och nya PBL (från december 2025) sätter ramarna för komplementbyggnader: max 30 kvm per byggnad inom detaljplan, max 50 kvm utanför, nockhöjd max 4,0 respektive 4,5 m, och 4,5 m till tomtgräns utan grannens skriftliga medgivande. Källorna är motstridiga om anmälningsplikten – stäm alltid av mot kommunen innan du gräver.</p>
+<p>På ekonomisidan är ROT-avdraget från 1 januari 2026 tillbaka på ordinarie <strong>30 % av arbetskostnaden</strong>, max 50 000 kr per person och år inom ett gemensamt ROT+RUT-tak på 75 000 kr. Avdraget gäller bara arbetet – betong, plintar och grus ger inget avdrag. Altan, trädäck och uteplats på småhus ger normalt ROT på arbetet, men inte på nybygge och inte för balkong eller altan i bostadsrätt. Notera också att grävkostnaden för plintgrund kan bli 800–2 000 kr per plint på svår mark, så en 30 m² altan kan dra 8 000–15 000 kr extra bara i grundarbete beroende på landsdel.</p>
+
+<h2>Vanliga misstag och proffstips</h2>
+<ul>
+<li><strong>För grunt djup:</strong> bottna alltid under frostfritt djup för din ort.</li>
+<li><strong>För klen plint:</strong> matcha diametern mot lasten, inte mot vad som råkar finnas i lager.</li>
+<li><strong>Ingen dränering:</strong> makadam i botten är billig försäkring mot tjällyft.</li>
+<li><strong>Glömd armering eller stolpsko:</strong> bärande plintar behöver rätt infästning.</li>
+<li><strong>Felräknad säckåtgång:</strong> räkna total volym plus spill, inte per plint på höft.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp lägger du in plintarnas diameter och djup så räknar betongkalkylatorn ut volymen per plint och totalt för hela jobbet, i både liter och m³, plus ungefärlig säckåtgång. Du får ett underlag att beställa på och att lägga in i offerten till kunden – med spillmarginalen redan pålagd. Kalkylatorn ersätter inte en konstruktörs dimensionering av bärande fundament, men den tar bort gissningen ur materialberäkningen och gör att du beställer rätt mängd första gången.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket betong går åt per plint?</h3>
+<p>Det beror på diameter och djup. En Ø200 mm plint till 0,9 m ger ca 28 liter, Ø250 mm till 1,0 m ca 49 liter och Ø300 mm till 1,1 m ca 78 liter. Räkna med formeln V = π × r² × djup eller använd kalkylatorn.</p>
+<h3>Hur många säckar torrbetong per plint?</h3>
+<p>En 25 kg säck ger ungefär 12,5–13 liter färdig massa. Tumregeln är cirka 2 säckar per 25 liter plintvolym. En Ø250 mm plint på 49 liter kräver alltså runt 4 säckar.</p>
+<h3>Hur djupt måste en plint gå?</h3>
+<p>Under frostfritt djup, som varierar från ca 0,9–1,2 m i södra Sverige till upp mot 2,5 m i övre Norrland. Bottnar plinten ovanför tjälen lyfter marken den. Kontrollera djupet mot din kommun.</p>
+<h3>Ger plintgrund ROT-avdrag?</h3>
+<p>Arbetet med altan eller uteplats på småhus ger normalt ROT på 30 % av arbetskostnaden 2026, men inte på nybygge. Material som betong och plintar ger aldrig avdrag – bara arbetet.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna ut exakt betongåtgång och säckantal för dina plintar i <a href="/sv/verktyg/betong-kalkylator">betongkalkylatorn</a> innan du beställer. Vill du se hur ByggExp kan samla kalkyl, offert och materialunderlag i ett flöde? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/berakna-betongatgang-platta">Beräkna betongåtgång för platta</a>, <a href="/sv/blog/armering-berakning-platta-grund">Armeringsberäkning för platta på mark</a> och <a href="/sv/blog/spillprocent-bygg-material">Så räknar du spillprocent på byggmaterial</a>.</p>
+`;
+
+const A_BETONG_PLINTAR_STOLPFUNDAMENT: BlogPost = {
+  _id: "code-"+"betong-plintar-stolpfundament",
+  title: "Betong till plintar och stolpfundament – så räknar du åtgång per plint", slug: "betong-plintar-stolpfundament", locale: "sv",
+  excerpt: "Så räknar du exakt betongåtgång per plint för altan, staket och Attefall – med volymtabell, säckåtgång och rätt spillmarginal.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/betong-preview.webp", contentHtml: A_BETONG_PLINTAR_STOLPFUNDAMENT_HTML,
+  seoTitle: "Betong per plint – åtgång | ByggExp", seoDescription: "Räkna kubik betong per plint och stolpfundament för altan, staket och Attefall. Tabell i liter, säckåtgång och spillmarginal – för hantverkare 2026.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/betong-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T20:12:00.000Z", createdAt: "2026-08-19T20:12:00.000Z", updatedAt: "2026-08-19T20:12:00.000Z",
+};
+
+const A_ARBETSMILJOVERKET_INSPEKTION_BYGG_2026_HTML = `
+<p>April till december 2026 driver Arbetsmiljöverket en riktad, nationell inspektionsinsats mot byggprojekt och granskar cirka 600 företag och organisationer över hela landet. Fokus ligger på tidiga skeden – hur arbetsmiljörisker hanteras redan under planering och projektering – och insatsen riktas i första hand mot byggherrar, byggarbetsmiljösamordnare för planering (Bas-P) och projektörer. Blir ni granskade är det dokumentationen som avgör hur det går, inte hur välstädad arbetsplatsen ser ut den dagen inspektören kommer.</p>
+
+<p>Den enklaste förberedelsen är att gå igenom era rutiner mot en strukturerad mall innan Arbetsmiljöverket hör av sig – använd gärna <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> som utgångspunkt och komplettera med checklistan längre ner.</p>
+
+<h2>Vad är den riktade insatsen 2026 – och varför nu?</h2>
+<p>Granskningen bygger på de nya reglerna AFS 2023:3 (Projektering och byggarbetsmiljösamordning – grundläggande skyldigheter) som trädde i kraft 1 januari 2025. Reglerna förtydligar roller och ansvar för byggherrar, projektörer, byggarbetsmiljösamordnare och tillverkare av monteringsfärdiga byggnader. Bakgrunden är dyster: byggbranschen står för ungefär tio dödsolyckor per år och omkring 4 500 arbetsskador med sjukfrånvaro årligen i Sverige.</p>
+<p>Insatsen är väl förberedd. Under november och december 2025 genomförde Arbetsmiljöverket en pilotverksamhet för att testa nytt inspektionsstöd och ny metodik, riktad mot större byggherrar som löpande driver byggprojekt. Med andra ord är inspektörerna 2026 tränade på ett standardiserat sätt att läsa er dokumentation.</p>
+<p>Parallellt pågår två andra nationella insatser som byggföretag berörs av: en tillsyn av fallrisker kopplat till ställningar, hissar och arbetsutrustning där 1 400 arbetsställen ska inspekteras, samt en insats med fokus på belastningsergonomi mellan maj 2026 och april 2027. Belastningsskador är en av de vanligaste orsakerna till sjukskrivning i landet.</p>
+
+<h2>Vem granskas och vad tittar inspektören på?</h2>
+<p>Till skillnad från en klassisk skyddsrond ute på bygget riktar 2026 års insats blicken uppåt i kedjan – mot dem som fattar besluten tidigt. De centrala rollerna är:</p>
+<ul>
+<li><strong>Byggherren</strong> – har det yttersta ansvaret för att lagen följs. En ställföreträdare kan utses för vissa uppgifter, men ansvaret stannar alltid hos byggherren.</li>
+<li><strong>Bas-P</strong> – byggarbetsmiljösamordnare för planering och projektering, ansvarar bland annat för att arbetsmiljöplanen upprättas.</li>
+<li><strong>Bas-U</strong> – byggarbetsmiljösamordnare för utförandet på plats.</li>
+<li><strong>Projektörer och konstruktörer</strong> – ska bygga in säkerhet i lösningarna redan på ritbordet.</li>
+</ul>
+<p>Inspektören vill se att det systematiska arbetsmiljöarbetet (SAM) faktiskt fungerar och att samverkan sker tidigt. Samma juridiska eller fysiska person kan vara både Bas-P och Bas-U, men det måste alltid vara tydligt utpekat vem som är vilken – och utpekandet ska vara dokumenterat, inte muntligt.</p>
+
+<h2>Dokumentationen som ska finnas på plats</h2>
+<p>Det här är kärnan i granskningen. Följande handlingar bör finnas framme och vara aktuella:</p>
+<ul>
+<li><strong>Skriftlig arbetsmiljöplan (AMP)</strong> – ska upprättas innan det första byggnads- eller anläggningsarbetet påbörjas. Bas-P ansvarar för att ta fram den under planering och projektering; byggherren ansvarar för att den finns, är tillgänglig på arbetsplatsen och uppdateras vid förändringar.</li>
+<li><strong>Förhandsanmälan till Arbetsmiljöverket</strong> – ska lämnas av byggherren innan arbetet startar när arbetet beräknas pågå längre än 30 arbetsdagar och mer än 20 personer sysselsätts samtidigt vid något tillfälle, eller när det totala antalet persondagar beräknas bli fler än 500.</li>
+<li><strong>Skriftliga utnämningar</strong> av Bas-P och Bas-U.</li>
+<li><strong>Riskbedömningar</strong> för arbeten med särskild risk.</li>
+<li><strong>SAM-rutiner</strong> – hur ni undersöker, riskbedömer, åtgärdar och följer upp.</li>
+<li><strong>Uppdateringslogg för AMP</strong> som visar att planen är ett levande dokument.</li>
+</ul>
+
+<h2>Checklista – 10 punkter före inspektionen</h2>
+<p>Gå igenom listan projekt för projekt och bocka av det som är på plats:</p>
+<ol>
+<li>Arbetsmiljöplanen är upprättad, aktuell och fysiskt eller digitalt tillgänglig på arbetsplatsen.</li>
+<li>Förhandsanmälan är inskickad och uppdaterad om förutsättningarna ändrats.</li>
+<li>Bas-P och Bas-U är skriftligt utsedda och kända för alla på bygget.</li>
+<li>Riskbedömningar för arbeten med särskild risk är dokumenterade och kopplade till åtgärder.</li>
+<li>Fallskydd och ställningar är kontrollerade och besiktade – detta granskas dessutom i den parallella fallrisk-tillsynen.</li>
+<li>Personlig skyddsutrustning finns och används enligt AFS 2023:11.</li>
+<li>Introduktion och instruktion av personal är genomförd och kan styrkas.</li>
+<li>Rutin för tillbuds- och olycksrapportering finns och används.</li>
+<li>Samordningsansvaret på gemensamt arbetsställe är tydligt utpekat.</li>
+<li>Egenkontroll av belastningsergonomi görs – i linje med insatsen som pågår maj 2026 till april 2027.</li>
+</ol>
+
+<h2>Vanliga brister Arbetsmiljöverket hittar (och sanktioner)</h2>
+<p>De återkommande bristerna handlar ofta om fallskydd och ställningar som inte är korrekt monterade eller besiktade, och om tunga, ergonomiskt olämpliga arbetsmoment som aldrig riskbedömts. Lika vanligt är rent formella luckor: en arbetsmiljöplan som aldrig uppdaterats sedan projektstart, eller roller som utsetts muntligt men inte skriftligt.</p>
+<p>Konsekvenserna varierar. Arbetsmiljöverket kan ställa krav på åtgärder, meddela förbud mot fortsatt arbete, förena beslut med vite och i vissa fall ta ut en sanktionsavgift direkt. Att ha ordning på dokumentationen är därför inte bara en formsak – det är det som skiljer ett påpekande från ett kostsamt ingripande.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp samlar ni egenkontroller, riskbedömningar och rutiner på ett ställe så att de blir sökbara när inspektören frågar. Ni kan använda mallar som utgångspunkt, dokumentera vem som är ansvarig och när något senast uppdaterades, och undvika att viktiga handlingar bara ligger som lösa pdf:er i en mejlkedja. Verktyget ersätter inte byggherrens eller Bas-P:s ansvar enligt AFS 2023:3, men det gör det enklare att visa att arbetet faktiskt utförs och följs upp löpande.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>När pågår Arbetsmiljöverkets riktade bygginspektion 2026?</h3>
+<p>Den nationella insatsen mot byggprojekt pågår april till december 2026 och omfattar cirka 600 företag och organisationer. Parallellt löper en fallrisk-tillsyn av 1 400 arbetsställen och en insats om belastningsergonomi som sträcker sig till april 2027.</p>
+<h3>Vem har ansvaret om vi anlitar en byggarbetsmiljösamordnare?</h3>
+<p>Byggherren kan utse en ställföreträdare och en Bas-P eller Bas-U tar över vissa uppgifter, men det yttersta ansvaret för att lagen följs stannar alltid hos byggherren. Rollerna måste vara tydligt och skriftligt utpekade.</p>
+<h3>När måste förhandsanmälan lämnas in?</h3>
+<p>Byggherren ska lämna förhandsanmälan innan arbetet startar när arbetet beräknas pågå längre än 30 arbetsdagar och mer än 20 personer sysselsätts samtidigt vid något tillfälle, eller när det totala antalet persondagar beräknas bli fler än 500.</p>
+<h3>Måste arbetsmiljöplanen finnas innan bygget börjar?</h3>
+<p>Ja. En skriftlig arbetsmiljöplan ska upprättas innan det första byggnads- eller anläggningsarbetet påbörjas. Bas-P tar fram den under projekteringen, och byggherren ansvarar för att den finns, är tillgänglig på plats och uppdateras vid förändringar.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att gå igenom era projekt mot checklistan ovan och säkra att arbetsmiljöplanen är ett levande dokument. Utgå från <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> eller bläddra bland fler <a href="/sv/verktyg">gratis byggverktyg</a>. Vill ni se hur ByggExp håller dokumentationen samlad inför en inspektion, <a href="/sv/contact">boka en kort demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/skyddsrond-bygg-checklista">Skyddsrond på bygget – checklista</a>, <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Riskbedömning på byggarbetsplats – mall</a> och <a href="/sv/blog/systematiskt-arbetsmiljoarbete-litet-byggforetag">Systematiskt arbetsmiljöarbete för det lilla byggföretaget</a>.</p>
+`;
+
+const A_ARBETSMILJOVERKET_INSPEKTION_BYGG_2026: BlogPost = {
+  _id: "code-"+"arbetsmiljoverket-inspektion-bygg-2026",
+  title: "Arbetsmiljöverkets riktade bygginspektioner 2026 – checklista och dokumentationskrav", slug: "arbetsmiljoverket-inspektion-bygg-2026", locale: "sv",
+  excerpt: "Arbetsmiljöverket driver en nationell insats mot byggprojekt 2026 – här är vad de granskar och dokumentationen ni behöver ha på plats.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_ARBETSMILJOVERKET_INSPEKTION_BYGG_2026_HTML,
+  seoTitle: "Bygginspektion 2026: checklista | ByggExp", seoDescription: "Arbetsmiljöverket granskar ca 600 byggprojekt april–december 2026. Se vad de tittar på, vilken dokumentation som krävs och gå igenom vår checklista.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T20:15:00.000Z", createdAt: "2026-08-19T20:15:00.000Z", updatedAt: "2026-08-19T20:15:00.000Z",
+};
+
+const A_ID06_NYA_KRAV_2026_LEGITIMERING_HTML = `
+<p>Den 28 januari 2026 skärps kraven för att beställa och förnya ID06-kort. Från den dagen räcker det inte längre med BankID eller körkort – den som ska ha ett kort måste styrka både sin identitet och sitt medborgarskap med pass eller nationellt ID-kort. För varje byggföretag som håller elektronisk personalliggare betyder det en konkret sak: personal utan giltigt ID06-kort kan inte checka in, och då riskerar ni kontrollavgift vid Skatteverkets oanmälda besök. Verifiera alltid det senaste mot ID06.se, men här är vad som gäller och hur ni förbereder er.</p>
+
+<p>Rätt rutiner för in- och utcheckning börjar med rätt underlag. I <a href="/sv/verktyg">vår samling av gratis verktyg för byggföretag</a> hittar du bland annat en tidrapportmall som hjälper dig hålla ordning på arbetad tid parallellt med den lagstadgade personalliggaren.</p>
+
+<h2>Vad ändras den 28 januari 2026?</h2>
+<p>Kärnan i förändringen är att ID06 inför ett nytt säkerhetskrav vid kortbeställning och förnyelse. Den som beställer ett kort måste identifiera sig och godkänna beställningen med ett pass eller ett nationellt ID-kort som gäller som resehandling inom EU/EES. Syftet är att verifiera varje persons identitet <strong>och</strong> medborgarskap, så att rätt person kopplas till kortet och så att den som saknar rätt att arbeta i Sverige inte kan få ett.</p>
+<p>Det innebär att BankID, körkort och e-legitimation inte längre godtas vid beställning eller förnyelse, eftersom de inte styrker medborgarskap. Bakgrunden är omfattande: det finns cirka 700 000 aktiva ID06-kort, 1 500–2 000 nya beställs varje dag och korten innehas av personer från 129 länder. Skärpningen ska göra det svårare att missbruka systemet.</p>
+
+<h2>Så identifierar sig personalen</h2>
+<p>Identifieringen kan göras på två sätt. Det kostnadsfria alternativet är den nya mobilappen ID06 Identify, där personen skannar sitt pass eller nationella ID-kort direkt i telefonen. Alternativt görs identifieringen manuellt på ett skanningscenter mot en avgift.</p>
+<p>Vid en ny beställning eller förnyelse blir flödet i praktiken:</p>
+<ol>
+<li>Ladda ner ID06 Identify och skanna pass eller nationellt ID-kort i appen – eller boka tid på ett skanningscenter.</li>
+<li>Godkänn kortbeställningen med den verifierade identiteten.</li>
+<li>Arbetsgivaren kopplar kortet till anställningen som vanligt i ID06-portalen.</li>
+</ol>
+<p>Eftersom appen är gratis och görs på telefonen är den det snabbaste sättet för de flesta. Planera ändå för att en del i personalen behöver hjälp första gången.</p>
+
+<h2>Olika regler för olika grupper</h2>
+<p>Kraven slår lite olika beroende på personens status:</p>
+<ul>
+<li><strong>Svenska medborgare och EU/EES-medborgare</strong> identifierar sig med pass eller nationellt ID-kort som gäller som resehandling. EU-medborgare med svenskt personnummer kan få kort med fem års giltighet.</li>
+<li><strong>Tredjelandsmedborgare</strong> (utanför EU/EES) ska dessutom skanna sitt EU-uppehållstillståndskort på samma sätt som tidigare, utöver identitetshandlingen.</li>
+</ul>
+<p>Poängen är densamma för alla grupper: både vem personen är och rätten att arbeta ska kunna verifieras innan kortet utfärdas.</p>
+
+<h2>Vad händer med befintliga kort?</h2>
+<p>Redan giltiga ID06-kort fortsätter att gälla. Det nya kravet slår till först när kortet ska förnyas efter att giltighetstiden löpt ut. Ni behöver alltså inte förnya allt på en gång den 28 januari – men ni bör ha koll på när korten går ut. Ett kort som löper ut mitt i ett projekt kan i värsta fall lämna en medarbetare utan möjlighet att checka in tills det nya kortet är på plats. Planera förnyelser i god tid för att undvika sådana glapp.</p>
+
+<h2>Kopplingen till personalliggaren</h2>
+<p>Elektronisk personalliggare krävs enligt skatteförfarandelagen på byggarbetsplatser där den sammanlagda byggkostnaden överstiger fyra prisbasbelopp. Prisbasbeloppet 2026 är 59 200 kr, vilket ger en gräns på 236 800 kr. Privatpersoner som bygger för eget bruk omfattas inte.</p>
+<p>Byggherren ska anmäla till Skatteverket när och var byggverksamheten påbörjas, samt tillhandahålla utrustning för elektronisk personalliggare. Uppgifterna – namn, personnummer och tider för in- och utcheckning – ska registreras dagligen, kunna visas vid oanmält kontrollbesök och sparas i två år. Värt att veta: Skatteverket kräver elektronisk registrering, men kräver inte ID06 specifikt – även andra system som uppfyller lagkraven godtas. I praktiken bygger dock de flesta byggarbetsplatser sin incheckning på just ID06-kort, och därför blir de nya identifieringskraven direkt relevanta för att liggaren ska fungera.</p>
+
+<h2>Kontrollavgifter och risker</h2>
+<p>Brister i personalliggaren kostar. Kontrollavgiften är 12 500 kr i grundavgift plus 2 500 kr per person som påträffas arbetande men inte finns i liggaren. Har byggherren inte anmält byggstart och plats till Skatteverket är avgiften 25 000 kr. Kopplingen till de nya ID06-reglerna är tydlig: om en medarbetare inte hinner förnya sitt kort och därför inte kan checka in, men ändå arbetar på platsen, är risken att personen saknas i liggaren vid ett kontrollbesök – med avgift som följd.</p>
+
+<h2>Checklista – så förbereder firman sig före 28 januari 2026</h2>
+<ul>
+<li>Inventera samtliga ID06-korts giltighetstid och notera vilka som löper ut de närmaste månaderna.</li>
+<li>Informera personalen om de nya kraven i god tid – att BankID och körkort inte längre räcker.</li>
+<li>Säkerställ att alla har ett giltigt pass eller nationellt ID-kort; tredjelandsmedborgare även EU-uppehållstillståndskort.</li>
+<li>Be personalen ladda ner ID06 Identify och testa skanningen innan de behöver förnya.</li>
+<li>Boka skanningscenter för dem som inte kan använda appen.</li>
+<li>Kontrollera att er rutin för anmälan till Skatteverket och daglig incheckning är på plats.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp håller ordning på tid och underlag runt personalliggaren – inte på själva ID06-beställningen, som sköts hos ID06. Med ByggExp samlar du arbetad tid per medarbetare och projekt, så att uppgifterna är enkla att stämma av mot liggaren och spara i föreskrivna två år. När ni har koll på vilka som är på plats och hur länge blir det både lättare att fakturera rätt och tryggare att möta ett oanmält kontrollbesök. Vill du komma igång med tidsdelen kan du börja med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapportmall</a> och sedan digitalisera flödet.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste alla förnya sina ID06-kort den 28 januari 2026?</h3>
+<p>Nej. Redan giltiga kort fortsätter att gälla. De nya kraven med pass eller nationellt ID gäller vid ny beställning och vid förnyelse efter att kortets giltighetstid har löpt ut. Ha ändå koll på utgångsdatum så att ingen blir utan kort mitt i ett projekt.</p>
+<h3>Duger BankID eller körkort för att beställa ID06-kort efter 28 januari 2026?</h3>
+<p>Nej. Från och med den 28 januari 2026 godtas inte längre BankID, körkort eller e-legitimation vid beställning eller förnyelse, eftersom de inte styrker medborgarskap. Det krävs pass eller nationellt ID-kort som gäller som resehandling inom EU/EES.</p>
+<h3>Kostar den nya identifieringen något?</h3>
+<p>Identifieringen är kostnadsfri om den görs i mobilappen ID06 Identify, där man skannar sitt pass eller nationella ID direkt i telefonen. Görs identifieringen i stället manuellt på ett skanningscenter tillkommer en avgift.</p>
+<h3>Vad gäller för anställda som inte är EU-medborgare?</h3>
+<p>Tredjelandsmedborgare, alltså personer från länder utanför EU/EES, ska utöver pass eller nationellt ID även skanna sitt EU-uppehållstillståndskort på samma sätt som tidigare. Både identitet och rätten att arbeta i Sverige verifieras.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att inventera kortens giltighet och trimma rutinen kring personalliggaren. Ladda ner <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapportmall</a> eller utforska <a href="/sv/verktyg">alla verktyg för byggföretag</a>. Vill du se hur ByggExp håller ihop tid, projekt och underlag? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/id06">ID06 – vad det är och varför det krävs</a>, <a href="/sv/blog/id06-bestalla-kort-steg-for-steg">Beställa ID06-kort steg för steg</a> och <a href="/sv/blog/personalliggare">Personalliggare på byggarbetsplatsen</a>.</p>
+`;
+
+const A_ID06_NYA_KRAV_2026_LEGITIMERING: BlogPost = {
+  _id: "code-"+"id06-nya-krav-2026-legitimering",
+  title: "ID06 – nya krav 2026: pass och medborgarskapsverifiering vid kortbeställning", slug: "id06-nya-krav-2026-legitimering", locale: "sv",
+  excerpt: "Från 28 januari 2026 måste den som beställer eller förnyar ett ID06-kort styrka både identitet och medborgarskap med pass eller nationellt ID – så förbereder firman personalliggaren.", tag: "Personalliggare",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_ID06_NYA_KRAV_2026_LEGITIMERING_HTML,
+  seoTitle: "ID06 nya krav 2026: legitimering | ByggExp", seoDescription: "Från 28 januari 2026 krävs pass eller nationellt ID vid ID06-beställning. Så förbereder du firman och personalliggaren – checklista och regler per grupp.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T20:18:00.000Z", createdAt: "2026-08-19T20:18:00.000Z", updatedAt: "2026-08-19T20:18:00.000Z",
+};
+
+const A_STAKET_MATERIAL_STOLPAR_ATGANG_HTML = `
+<p>Ett staketjobb ser enkelt ut i offertskedet: några stolpar, lite reglar och panel. Men slarvig materialberäkning äter marginalen snabbare än på de flesta andra jobb. Räknar du fel på stolpavstånd, glömmer hörnstolpar eller underskattar betongåtgången per hål, så är det du som betalar mellanskillnaden. Det här är en genomgång av hur du räknar stolpar, reglar, brädor och betong per löpmeter — så att offerten stämmer med verkligheten.</p>
+
+<p>Vill du gå snabbare fram kan du mata in längd, höjd och c/c-avstånd i vår gratis <a href="/sv/verktyg/staket-kalkylator">staket-kalkylator -&gt;</a> och få en materiallista direkt.</p>
+
+<h2>Staket, plank eller mur? Definitionen som styr både pris och bygglov</h2>
+<p>Innan du räknar en enda bräda måste du veta vad kunden faktiskt vill bygga, för det avgör både virkesåtgång och lovplikt. Boverket skiljer på tre saker: ett <strong>staket</strong> är lågt och glest med god genomsiktlighet och skyddar varken mot insyn eller buller; ett <strong>plank</strong> är tätare och högre och skymmer sikten; en <strong>mur</strong> är murad eller gjuten. Det finns ingen exakt lagdefinition — kommunen bedömer på höjd, längd, genomsiktlighet och omgivningspåverkan.</p>
+<p>Skillnaden är inte akademisk. Ett tätt plank drar mer än dubbelt så mycket panel per löpmeter som ett glest spjälstaket, och gör du planket dubbelsidigt fördubblas brädåtgången igen. Klargör alltså konstruktionen med kunden innan du sätter pris.</p>
+
+<h2>Steg 1 – Stolpar och c/c-avstånd</h2>
+<p>Stolpavståndet (centrum till centrum, c/c) ligger normalt på 1500–2000 mm, med 2000 mm som praktiskt maximum. Grundformeln är enkel:</p>
+<p><strong>Antal stolpar = (staketlängd ÷ c/c) + 1</strong>, avrundat uppåt.</p>
+<ul>
+<li>20 lpm med c/c 2,0 m = 10 sektioner + 1 = <strong>11 stolpar</strong></li>
+<li>20 lpm med c/c 1,8 m = 12 sektioner (avrundat) + 1 = <strong>13 stolpar</strong></li>
+<li>20 lpm med c/c 1,5 m = 14 sektioner (avrundat) + 1 = <strong>15 stolpar</strong></li>
+</ul>
+<p>Lägg alltid till extra stolpar för hörn och grindar — de kommer inte med i den räta formeln. Dimensionen styrs av höjden: upp till cirka 800 mm räcker 70×95 mm, medan 900–1800 mm kräver 95×95 mm. Använd NTR/A-impregnerat virke för stolpar som står i mark.</p>
+
+<h2>Steg 2 – Reglar per löpmeter</h2>
+<p>Standard är <strong>två horisontella spikreglar</strong> i dimension 45×70–120 mm. Vid höjder över 1600 mm krävs en tredje regel för att panelen ska sitta stabilt. Löpmetern regel räknar du så här:</p>
+<p><strong>Löpmeter regel = antal reglar × total staketlängd.</strong></p>
+<p>Två reglar på 20 lpm blir alltså 40 lpm regelvirke, tre reglar blir 60 lpm. Det är lätt att missa den tredje regeln i offerten på högre plank — och den kostar både virke och arbetstid.</p>
+
+<h2>Steg 3 – Brädor: glest staket vs tätt plank</h2>
+<p>Brädbredden och springan avgör antalet brädor. Formeln är:</p>
+<p><strong>Brädor per meter = 1000 ÷ (brädbredd + mellanrum)</strong> (mått i mm).</p>
+<ul>
+<li>Glest staket/spjälor: bräddim 22×70–95 mm.</li>
+<li>Tätt plank/panel: bräddim 22×120–145 mm.</li>
+</ul>
+<p>Räkneexempel för tät panel 22×120 med 20 mm springa: 1000 ÷ (120 + 20) = 1000 ÷ 140 ≈ <strong>7,1 brädor/lpm</strong>. En 145 mm bräda kant-i-kant ger 1000 ÷ 145 ≈ 6,9 brädor/lpm. På 20 lpm blir det runt 142 respektive 138 brädor. Bygger du ett dubbelsidigt plank dubblas åtgången.</p>
+
+<h2>Steg 4 – Betong och grund per stolpe</h2>
+<p>Stolphålen ska grävas till frostfritt djup — i praktiken cirka 90 cm i Sverige (Svenskt Trä anger 600–800 mm som minimum). Lägg 10–15 cm dränerande singel eller grus 8–16 mm i botten mot tjällyft och röta.</p>
+<p>Betongåtgången styrs av hålvolymen, <strong>V = π · r² · djup</strong>. Torr- eller grovbetong säljs i 25 kg-säck som ger cirka 10 liter härdad betong. Ett hål på Ø30 cm × 60 cm blir cirka 42 liter, alltså 4–5 säckar per stolpe. Ett smalare eller kortare hål landar på 1,5–2 säckar. Räkna säckar per hål × antal stolpar — på 11 stolpar med breda hål talar vi om 45–55 säckar, en post som är dyr att glömma.</p>
+
+<h2>Spill, beslag och en materiallista per 20 lpm</h2>
+<p>Lägg alltid på <strong>10–15 % spill/kap</strong> på virke (brädor och reglar) i offertkalkylen. Beslag och infästning ska vara rostfritt eller varmförzinkat i utomhusmiljö, och virket NTR-klass — A för stolpar i mark, AB för virke ovan mark.</p>
+<p>Så här kan en materiallista se ut för ett 20 lpm tätt plank, höjd 1,6 m, c/c 1,8 m:</p>
+<ul>
+<li>Stolpar 95×95 NTR/A: 13 st + hörn/grind</li>
+<li>Reglar 45×95: 2 st × 20 lpm = 40 lpm + 10–15 % spill</li>
+<li>Panel 22×120, 20 mm springa: ca 142 brädor + 10–15 % spill</li>
+<li>Betong 25 kg torrbetong: säckar per hål × 13 stolpar</li>
+<li>Singel 8–16 mm till dränering i varje hål</li>
+<li>Varmförzinkad skruv/beslag</li>
+</ul>
+<p>Betongvolymen kan du kontrollräkna med vår <a href="/sv/verktyg/betong-kalkylator">betong-kalkylator</a> så att du köper rätt antal säckar.</p>
+
+<h2>Bygglov 2026 och grannmedgivande — vad kunden måste veta</h2>
+<p>Efter PBL-reformen (Lag 2025:974, nya 9 kap PBL, i kraft 1 dec 2025) gäller att plank och murar utan lov får vara upp till 1,8 m inom 3,6 m från byggnaden, och upp till 1,2 m längre bort. Ett glest staket med god genomsiktlighet är i regel lovbefriat. Placeras konstruktionen närmare än 4,5 m från tomtgräns krävs berörda grannars medgivande — annars kan bygglov krävas. Ta upp det tidigt, för ett stopp mitt i bygget drabbar din planering.</p>
+
+<h2>ROT-fällan: därför får kunden oftast inget avdrag för staketet</h2>
+<p>ROT-avdraget är 2026 tillbaka på <strong>30 % av arbetskostnaden</strong>, max 50 000 kr per person och år, och gäller enbart arbete — inte material, resor eller avgifter. Men här är fällan: <strong>fristående staket, plank och murar på tomten ger inte rätt till ROT-avdrag</strong>, varken vid nybyggnad, reparation eller byte. Endast räcke som sitter fast i eller på byggnaden, till exempel ett altan- eller balkongräcke i direkt anslutning, kan vara ROT-berättigat. Lova aldrig kunden avdrag för ett fristående staket. Skriv offerten med rätt förväntan från början så slipper du diskussionen vid slutfakturan.</p>
+
+<h2>Snabb checklista för korrekt offert</h2>
+<ol>
+<li>Mät exakt löpmeter och bestäm höjd.</li>
+<li>Välj c/c-avstånd och räkna stolpar = (längd ÷ c/c) + 1, plus hörn/grind.</li>
+<li>Välj stolpdimension efter höjd (70×95 eller 95×95).</li>
+<li>Summera reglar (2 st, 3 vid &gt;1,6 m) och panel med rätt springa.</li>
+<li>Räkna betongsäckar per hål × antal stolpar.</li>
+<li>Lägg på 10–15 % spill på virke.</li>
+<li>Klargör bygglov, grannmedgivande och att ROT inte gäller.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du offerten på en materiallista i stället för en gissning. Du lägger in längd, höjd och c/c, och kalkylatorn räknar fram stolpar, reglar, brädor och betong med spillpåslag — posterna följer sedan med när du skapar offert och faktura. Du får en tydlig uppdelning mellan material och arbete, vilket gör det enkelt att formulera ROT-frågan rätt mot kunden. Verktyget ersätter inte din yrkesbedömning av mark och konstruktion, men det tar bort räknefel och glömda poster som annars äter marginalen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur många stolpar går det åt per löpmeter staket?</h3>
+<p>Det beror på c/c-avståndet. Använd formeln antal stolpar = (staketlängd ÷ c/c) + 1, avrundat uppåt. På 20 lpm blir det 11 stolpar med c/c 2,0 m och 13 stolpar med c/c 1,8 m — plus extra för hörn och grindar.</p>
+<h3>Hur mycket betong går åt per stolpe?</h3>
+<p>Åtgången styrs av hålvolymen (V = π·r²·djup). En 25 kg-säck torrbetong ger cirka 10 liter härdad betong. Ett hål på Ø30 cm × 60 cm rymmer ungefär 42 liter, alltså 4–5 säckar; ett smalare eller kortare hål 1,5–2 säckar.</p>
+<h3>Får kunden ROT-avdrag för ett nytt staket?</h3>
+<p>Nej. Fristående staket, plank och murar på tomten ger inte rätt till ROT-avdrag. Endast räcke som sitter fast i eller på byggnaden kan vara ROT-berättigat, till exempel altan- eller balkongräcke.</p>
+<h3>Hur mycket spill ska jag räkna med?</h3>
+<p>Lägg på 10–15 % på virke (brädor och reglar) för kap och spill i offertkalkylen. Betong och stolpar räknas exakt per hål, men avrunda alltid antalet säckar uppåt.</p>
+
+<h2>Kom igång</h2>
+<p>Testa vår <a href="/sv/verktyg/staket-kalkylator">staket-kalkylator</a> och kontrollräkna grunden med <a href="/sv/verktyg/betong-kalkylator">betong-kalkylatorn</a> inför nästa offert. Vill du se hur material, offert och faktura hänger ihop i ByggExp? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>, <a href="/sv/blog/spillprocent-bygg-material">Spillprocent på byggmaterial</a> och <a href="/sv/blog/mangdforteckning-bygg">Mängdförteckning för bygg</a>.</p>
+`;
+
+const A_STAKET_MATERIAL_STOLPAR_ATGANG: BlogPost = {
+  _id: "code-"+"staket-material-stolpar-atgang",
+  title: "Räkna material för staket och plank per löpmeter — så prissätter du rätt", slug: "staket-material-stolpar-atgang", locale: "sv",
+  excerpt: "Så räknar du stolpar, reglar, brädor och betong per löpmeter staket eller plank för en offert som håller marginalen.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/staket-preview.webp", contentHtml: A_STAKET_MATERIAL_STOLPAR_ATGANG_HTML,
+  seoTitle: "Staket materialåtgång stolpar | ByggExp", seoDescription: "Räkna stolpar (c/c), reglar, brädor och betong per löpmeter staket och plank. Formler, räkneexempel och offertchecklista för hantverkare 2026.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/staket-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T20:21:00.000Z", createdAt: "2026-08-19T20:21:00.000Z", updatedAt: "2026-08-19T20:21:00.000Z",
+};
+
+const A_GOLVVARME_BERAKNING_EFFEKT_HTML = `
+<p>Rätt dimensionerad golvvärme avgör både komforten i det färdiga rummet och driftkostnaden i decennier framåt. Räknar du för lågt blir golvet aldrig varmt nog; räknar du för högt slösar du material och energi. För elgolvvärme tillkommer dessutom hårda behörighetskrav som avgör vem som ens får utföra jobbet. Den här guiden går igenom hur du som installatör eller beställare räknar effektbehov, slinglängd och c/c-avstånd för både vattenburen och elektrisk golvvärme.</p>
+
+<p>Vill du snabbt få fram effektbehov, kabellängd och c/c för ett rum? Testa vår gratis <a href="/sv/verktyg/golvvarme-kalkylator">golvvärmekalkylator -&gt;</a> och mata in yta och isoleringsstandard.</p>
+
+<h2>Steg 1 – Beräkna effektbehovet (W/m²)</h2>
+<p>All dimensionering börjar med effektbehovet, angivet i watt per kvadratmeter. Behovet styrs av husets klimatskal. Tumreglerna ser ut så här:</p>
+<ul>
+<li><strong>Välisolerat modernt hus:</strong> cirka 40–70 W/m²</li>
+<li><strong>Äldre hus med sämre klimatskal:</strong> 80–120 W/m²</li>
+<li><strong>Badrum:</strong> ofta 100 W/m² för komfort, upp mot 120–150 W/m² om golvet ska värma snabbt och torka effektivt</li>
+</ul>
+<p>Schablonerna duger för en första grov bedömning, men de säger inget om det enskilda rummets fönsterandel, takhöjd eller köldbryggor. Utgå därför alltid från en förenklad värmeförlustberäkning där du väger in isoleringens U-värde och rummets omslutande ytor. En vägg med dåligt U-värde drar upp effektbehovet snabbt — läs mer om hur du <a href="/sv/blog/berakna-u-varde-isolering">beräknar U-värde för isolering</a> innan du låser dimensioneringen.</p>
+
+<h2>Vattenburen golvvärme – dimensionering</h2>
+<p>Vattenburen golvvärme arbetar med låg framledningstemperatur, typiskt 30–40 °C och sällan över cirka 45 °C. Temperaturen blandas ned via en shuntgrupp med blandningsventil som spär framledningen med returvatten, så att golvytan håller jämn värme utan att bli obehagligt varm.</p>
+<p>C/C-avståndet mellan rören anpassas efter effektbehovet:</p>
+<ul>
+<li><strong>Badrum och kalla zoner:</strong> c/c 100–150 mm</li>
+<li><strong>Övriga rum:</strong> c/c 150–200 mm</li>
+</ul>
+<p>Rörvalet styr hur lång varje slinga får vara innan tryckfallet blir för högt. Med 16 mm rör håller du slingan under 80–100 m (konservativt 60–70 m), och med 20 mm rör klarar du cirka 80–90 m. För långa slingor ger så högt tryckfall att du tvingas till en kraftfullare cirkulationspump — därför gör man alltid en tryckfallsberäkning vid dimensioneringen. Slingorna samlas i en fördelare (manifold) och injusteras rum för rum så att varje slinga får rätt flöde.</p>
+
+<h2>Elgolvvärme – dimensionering och materialberäkning</h2>
+<p>Elgolvvärme dimensioneras efter den fria, värmbara golvytan. Dra av ytan under badkar, toalettstol och fast inredning — där ska ingen kabel ligga. När du vet ytan och önskad yteffekt räknar du fram c/c ur kabelns lineära effekt:</p>
+<p><strong>c/c = kabelns lineära effekt (W/m) ÷ önskad yteffekt (W/m²)</strong></p>
+<p>Exempel: en kabel på 12 W/m vid önskade 125 W/m² ger 12 ÷ 125 = 0,096 m, alltså cirka 10 cm c/c. En annan tumregel: vid 100 W/m² går det åt ungefär 10 m kabel per m². På 6 m² värmbar yta betyder det runt 60 m kabel.</p>
+<p>Behöver du snabbt räkna fram den värmbara ytan efter avdrag, använd vår <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylator</a>. Väljer du värmematta eller värmefolie i stället för lös kabel är c/c redan bestämt av produkten, och du väljer i stället effektklass. Glöm inte termostat med golvgivare. En sak är avgörande: <strong>värmekabel får aldrig kapas</strong> — kabelns längd och effekt hänger ihop, och en kortad kabel överhettar. Köp därför rätt kabellängd från början utifrån din beräkning.</p>
+
+<h2>Behörighetskrav för elgolvvärme</h2>
+<p>Det här är den punkt som oftast missas. Elgolvvärme — värmekablar och värmefolier — räknas som en del av den fasta starkströmsanläggningen. Den ska installeras av ett <strong>registrerat elinstallationsföretag</strong>. En privatperson får inte utföra jobbet själv.</p>
+<p>Företaget måste vara registrerat hos Elsäkerhetsverket, ha ett egenkontrollprogram och ha minst en auktoriserad elinstallatör för regelefterlevnad knuten till verksamheten. Beställaren kan verifiera detta i Elsäkerhetsverkets tjänst "Kolla elföretaget". Viktigt för tidsplanen: elinstallatören måste dessutom göra sin del av kontrollen — inklusive mätning — <strong>innan golvläggaren spacklar eller lägger golvet</strong>, eftersom kabeln annars byggs in oåtkomlig.</p>
+<p>Det finns en praktisk gråzon. Kunden får ofta förbereda underlaget, spackla och lägga ut kabeln enligt anvisning, medan elföretaget gör kontrollmätning och inkoppling. Detta är en tolkningsfråga, och ansvaret för slutresultatet ligger alltid hos elföretaget — så dialog krävs. Reglerna är oförändrade 2026.</p>
+
+<h2>Våtrum och GVK</h2>
+<p>I våtrum styr GVK:s branschregler Säkra Våtrum. Golvvärmen ska ligga <strong>under tätskiktet</strong>. Rörgenomföringar genom golvets tätskikt ska undvikas — undantaget är spillvatten och golvbrunn. Där genomföringar ändå behövs gäller minst 100 mm mellan genomföringar och minst 60 mm till vägg. De uppdaterade branschreglerna Säkra Våtrum 2026 inför dessutom ett nytt avståndskrav mellan rörgenomföring och tak, så kontrollera senaste versionen innan du börjar. Ska du dessutom lägga kakel och klinker ovanpå, se guiden om <a href="/sv/blog/kakel-klinker-atgang-vatrum">åtgång av kakel och klinker i våtrum</a>.</p>
+
+<h2>ROT-avdrag 2026 som säljargument</h2>
+<p>Golvvärmeinstallation omfattas av ROT-avdraget, vilket är ett konkret säljargument mot beställaren. Reglerna 2026:</p>
+<ul>
+<li>Skattereduktion på <strong>30 % av arbetskostnaden</strong></li>
+<li>Tak på 50 000 kr per person och år, med gemensamt tak för ROT och RUT på 75 000 kr/år</li>
+<li>Beställaren äger eller bor i bostaden, företaget har F-skatt och betalning sker elektroniskt</li>
+</ul>
+<p>Notera att avdraget bara gäller arbetskostnaden, inte materialet — så en tydlig uppdelning i offerten hjälper kunden att räkna hem investeringen.</p>
+
+<h2>Snabb checklista före offert</h2>
+<ol>
+<li>Mät den värmbara golvytan och dra av fast inredning</li>
+<li>Bestäm effektbehov (W/m²) utifrån isoleringsstandard och rumstyp</li>
+<li>Välj system: vattenburet eller el</li>
+<li>Beräkna slinglängd, c/c och materialåtgång (rör eller kabel)</li>
+<li>Säkerställ behörighet — registrerat elinstallationsföretag för elgolvvärme</li>
+<li>Kontrollera våtrumsreglerna: golvvärme under tätskikt, genomföringsavstånd</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp samlar du dimensioneringen och materialkalkylen på ett ställe. Du matar in rumsytor och effektbehov, får fram slinglängd, c/c och ungefärlig materialåtgång, och kan föra över posterna direkt till en offert med separat rad för arbetskostnad — vilket gör ROT-underlaget tydligt för kunden. Systemet räknar åt dig, men ansvaret för behörighet, tryckfallsberäkning och våtrumsregler ligger fortfarande hos dig och ditt anlitade elinstallationsföretag. ByggExp ersätter alltså inte fackmässig kontroll — det snabbar upp kalkylen och håller ihop underlaget.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur många watt per kvadratmeter behöver golvvärmen?</h3>
+<p>Ett välisolerat modernt hus klarar sig ofta med 40–70 W/m², medan äldre hus med sämre klimatskal behöver 80–120 W/m². Badrum dimensioneras vanligen till 100 W/m², och upp mot 120–150 W/m² om golvet ska värma upp och torka snabbt. Utgå alltid från en värmeförlustberäkning, inte bara schablonen.</p>
+<h3>Hur långt får c/c-avståndet vara?</h3>
+<p>För vattenburen värme används typiskt c/c 100–150 mm i badrum och kalla zoner och 150–200 mm i övriga rum. För elgolvvärme räknas c/c ut som kabelns lineära effekt delat på önskad yteffekt — till exempel 12 W/m ÷ 125 W/m² ≈ 10 cm.</p>
+<h3>Får jag installera elgolvvärme själv?</h3>
+<p>Nej. Elgolvvärme är en del av den fasta starkströmsanläggningen och ska installeras av ett registrerat elinstallationsföretag med auktoriserad elinstallatör. Du får ofta förbereda underlaget och lägga ut kabeln enligt anvisning, men kontrollmätning och inkoppling måste elföretaget göra — och kontrollen ska ske innan golvet spacklas.</p>
+<h3>Hur lång får en golvvärmeslinga vara?</h3>
+<p>Slinglängden begränsas av tryckfallet. Med 16 mm rör hålls slingan under 80–100 m (konservativt 60–70 m) och med 20 mm rör runt 80–90 m. För långa slingor kräver en kraftfullare cirkulationspump, så gör alltid en tryckfallsberäkning vid dimensioneringen.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna fram effektbehov, slinglängd och c/c på minuter med vår <a href="/sv/verktyg/golvvarme-kalkylator">golvvärmekalkylator</a>, och lyft in resultatet i din offert. Vill du se hela flödet från kalkyl till offert och ROT-underlag? <a href="/sv/contact">Boka en demo</a> så visar vi hur ByggExp håller ihop dina projekt.</p>
+
+<p>Relaterat: <a href="/sv/blog/berakna-u-varde-isolering">Beräkna U-värde för isolering</a> · <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a> · <a href="/sv/blog/kakel-klinker-atgang-vatrum">Åtgång av kakel och klinker i våtrum</a></p>
+`;
+
+const A_GOLVVARME_BERAKNING_EFFEKT: BlogPost = {
+  _id: "code-"+"golvvarme-berakning-effekt",
+  title: "Golvvärme: så beräknar du effekt, slinglängd och c/c", slug: "golvvarme-berakning-effekt", locale: "sv",
+  excerpt: "En praktisk guide för installatören: räkna effektbehov, slinglängd och c/c för både vattenburen och elgolvvärme, och håll dig inom regelverket.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/golvvarme-preview.webp", contentHtml: A_GOLVVARME_BERAKNING_EFFEKT_HTML,
+  seoTitle: "Golvvärme beräkning effekt & slinga | ByggExp", seoDescription: "Dimensionera vattenburen och elgolvvärme rätt: W/m², slinglängd, c/c och materialåtgång. Plus behörighetskrav och GVK-regler för våtrum.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/golvvarme-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T20:24:00.000Z", createdAt: "2026-08-19T20:24:00.000Z", updatedAt: "2026-08-19T20:24:00.000Z",
+};
+
+const A_FARDIGSTALLANDESKYDD_SMAHUS_HTML = `
+<p>Du har fått bygglovet, kunden är taggad och byggstart är inbokad. Men utan bevis om färdigställandeskydd får byggnadsnämnden inte lämna startbesked — och då står projektet stilla oavsett hur redo ni är. För entreprenörer som bygger småhus åt konsumenter är det här en av de vanligaste anledningarna till att en byggstart skjuts upp, ofta för att skyddet ordnas för sent eller missförstås som något man visar upp först vid bygglovet.</p>
+
+<p>Ta höjd för färdigställandeskyddets kostnad redan i anbudsläget och skriv in det tydligt i offerten med <a href="/sv/verktyg/offert-mall">vår gratis offertmall &rarr;</a> så slipper du diskussioner med kunden om vem som betalar.</p>
+
+<h2>Vad är färdigställandeskydd?</h2>
+<p>Färdigställandeskydd regleras av lagen (2014:227) om färdigställandeskydd. Det är antingen en försäkring eller en bankgaranti som skyddar byggherren om entreprenören går i konkurs eller på annat sätt inte kan fullgöra sina åtaganden. Skyddet gäller när en näringsidkare utför arbete åt en konsument på ett en- eller tvåbostadshus — alltså i den klassiska konsument-hantverkarrelationen, inte mellan två byggföretag.</p>
+<p>Det är lätt att blanda ihop färdigställandeskyddet med den gamla byggfelsförsäkringen. Kravet på obligatorisk byggfelsförsäkring togs bort den 1 juni 2014, samma dag som färdigställandeskyddet infördes. En separat nybyggnads- eller dolda-fel-försäkring finns fortfarande men är helt frivillig. Färdigställandeskyddet handlar om att bygget faktiskt blir klart och att fel avhjälps — inte om dolda fel som dyker upp flera år senare.</p>
+
+<h2>När krävs det?</h2>
+<p>Huvudregeln är enkel: vid nybyggnad av ett småhus åt en konsument krävs alltid färdigställandeskydd. Vid tillbyggnad eller anmälningspliktig åtgärd gör byggnadsnämnden i stället en behovsprövning i varje enskilt fall.</p>
+<ul>
+<li><strong>Nybyggnad:</strong> skydd krävs som huvudregel.</li>
+<li><strong>Tillbyggnad och anmälningspliktig åtgärd:</strong> skydd krävs om byggnadsnämnden bedömer att behov finns. Nämnden ska särskilt väga de beräknade kostnaderna för entreprenörens åtaganden mot vad själva skyddet kostar.</li>
+<li><strong>Undantag:</strong> skydd krävs inte om åtgärden inte omfattas av krav på bygglov enligt plan- och bygglagen. Nämnden kan också besluta att skydd inte behövs, till exempel för en byggnad som inte ska användas för permanent bruk, som ett fritidshus.</li>
+</ul>
+<p>Att kravet bara gäller konsumentförhållanden är värt att understryka. Bygger ni åt ett annat byggföretag eller en fastighetsutvecklare gäller andra regler, och där hanteras riskerna i entreprenadkontraktet i stället.</p>
+
+<h2>Bygglov eller startbesked — den kritiska tidpunkten</h2>
+<p>Den vanligaste missuppfattningen är att beviset ska visas upp när bygglovet söks. Så är det inte. Bevis om färdigställandeskydd ska visas för byggnadsnämnden innan startbesked lämnas. Enligt PBL 10 kap. 23 § får nämnden inte ge startbesked om skydd krävs men saknas — och utan startbesked får arbetet inte lagligen påbörjas.</p>
+<p>I praktiken betyder det att du kan ha ett godkänt bygglov men ändå inte få börja bygga. Glappet mellan lov och startbesked är precis där projekt fastnar. Behandla därför färdigställandeskyddet som en del av det tekniska samrådet och startbeskedsansökan, inte som något du ordnar "sen". Läs gärna mer om hur hela kedjan hänger ihop i vår genomgång av <a href="/sv/blog/startbesked-bygglov-process-2026">startbesked och bygglovsprocessen 2026</a>.</p>
+
+<h2>Vad skyddet måste omfatta</h2>
+<p>Lagen ställer krav på vad skyddet ska täcka. Ersättningen ska omfatta skälig ersättning för:</p>
+<ol>
+<li>Extra kostnader för att slutföra arbetena om entreprenören inte kan fullfölja.</li>
+<li>Kostnader för att avhjälpa fel som en besiktningsman anmärkt på vid slutbesiktningen.</li>
+<li>Kostnader för att avhjälpa skador på byggnaden som orsakats av fel.</li>
+</ol>
+<p>Ersättningen ska uppgå till minst tio procent av det avtalade priset. På ett nybygge med ett avtalat pris på 3 000 000 kr innebär det ett skydd på minst 300 000 kr. Den nivån speglar vad det typiskt kostar en konsument att ta in en ny entreprenör och slutföra ett halvfärdigt hus, och det är därför konsumentskyddet inte får urholkas av villkor som i praktiken gör beloppet oåtkomligt.</p>
+
+<h2>Vem ansvarar och vem betalar?</h2>
+<p>Formellt är det konsumenten, alltså byggherren, som ansvarar för att skyddet finns. I praktiken är det nästan alltid entreprenören som tecknar det, av en enkel anledning: det är entreprenörens ekonomi och konkursrisk som prövas av försäkringsgivaren eller banken. Kostnaden bärs däremot oftast av konsumenten, via entreprenadpriset.</p>
+<p>Just därför bör kostnaden aldrig ligga dold. Skriv in färdigställandeskyddet som en egen post eller en tydligt angiven del av priset i offerten, och referera till det i entreprenadkontraktet. Använder ni ABS 18 eller Hantverkarformuläret 17 är det naturligt att koppla skyddet till avtalets bestämmelser om säkerhet och betalning — se vår genomgång av <a href="/sv/blog/abs-18-hantverkarformularet-17">ABS 18 och Hantverkarformuläret 17</a> för hur det hänger ihop.</p>
+
+<h2>Vad det kostar 2026</h2>
+<p>Premien ligger typiskt runt 1–1,5 % av entreprenadsumman, och vissa aktörer anger ett spann på 0,5–1,5 %. Det finns oftast ett golv på ungefär 5 000 kr. På en entreprenad om 3 000 000 kr landar du alltså grovt räknat på 15 000–45 000 kr.</p>
+<p>Priset är dock inte statiskt. För mindre företag med svag ekonomi eller förhöjd konkursrisk kan premien bli väsentligt högre, ibland över 20 000 kr även på mindre projekt, och i vissa fall kan bolaget nekas skydd helt. Eftersom det bygger på en kreditprövning tar ansökan tid — räkna med ledtid, särskilt om din senaste årsredovisning inte är stark. Att lämna in ansökan i samma veva som du bokar byggstart är att be om problem.</p>
+
+<h2>Så ordnar entreprenören det rätt</h2>
+<ul>
+<li><strong>Teckna tidigt.</strong> Starta ansökan så snart bygglovet är på gång, inte när startbeskedet ska sökas.</li>
+<li><strong>Säkra kreditvärdigheten.</strong> Ha aktuell årsredovisning och kontroll på likviditeten redo — det är den som avgör premien och om du överhuvudtaget får skydd.</li>
+<li><strong>Bifoga beviset till startbeskedsansökan.</strong> Se till att intyget finns hos byggnadsnämnden i god tid före tekniskt samråd.</li>
+<li><strong>Kommunicera kostnaden till kunden.</strong> Lyft posten i offerten så att den inte kommer som en överraskning i slutfakturan.</li>
+<li><strong>Dokumentera.</strong> Spara intyg, offert och avtal ihop — bevaringstiden för underlag är sju år.</li>
+</ul>
+
+<h2>Nyheter från 1 juli 2026</h2>
+<p>Den 1 juli 2026 träder en större PBL-reform i kraft (prop. 2025/26:172, "Effektiv och säker byggprocess"). Reformen inför bland annat rollen byggbedömare och ändrar byggnadsnämndens prövning i lov, startbesked och slutbesked. För dig som bygger småhus är huvudbudskapet lugnande: reglerna om färdigställandeskydd och behovsprövningen finns kvar. Däremot går det inte att tillämpa äldre regler efter den 1 juli 2026, så håll koll på hur din kommun hanterar övergången i pågående ärenden.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp tecknar inte färdigställandeskyddet åt dig — det är alltid försäkringsgivaren eller banken som prövar din ekonomi. Men verktygen hjälper dig att få in kostnaden och kravet på rätt ställe i affären. I offertmallen lägger du in färdigställandeskyddet som en tydlig post, kopplar den till entreprenadkontraktet och håller ihop underlaget så att du snabbt kan visa vad som ingår. Då blir det enkelt att förklara för kunden varför posten finns, och du har dokumentationen samlad när startbeskedet ska sökas och när bevaringstiden på sju år räknas.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste färdigställandeskyddet finnas innan bygglovet?</h3>
+<p>Nej. Beviset ska visas för byggnadsnämnden innan startbesked lämnas, inte innan bygglov. Du kan alltså ha bygglov men ändå inte få börja bygga förrän skyddet är på plats, eftersom nämnden enligt PBL 10 kap. 23 § inte får ge startbesked utan det.</p>
+<h3>Krävs skydd vid tillbyggnad?</h3>
+<p>Inte automatiskt. Vid tillbyggnad och anmälningspliktiga åtgärder gör byggnadsnämnden en behovsprövning och väger kostnaden för dina åtaganden mot kostnaden för själva skyddet. Nämnden kan besluta att skydd inte behövs, exempelvis för byggnader som inte ska användas permanent, som fritidshus. Krävs inte bygglov alls krävs heller inget färdigställandeskydd.</p>
+<h3>Vad kostar färdigställandeskydd 2026?</h3>
+<p>Typiskt runt 1–1,5 % av entreprenadsumman, med ett golv på ungefär 5 000 kr. För bolag med svag ekonomi eller konkursrisk kan premien bli klart högre, ibland över 20 000 kr, och i vissa fall kan företaget nekas skydd. Eftersom det bygger på en kreditprövning bör du räkna med ledtid.</p>
+<h3>Är färdigställandeskydd samma sak som byggfelsförsäkring?</h3>
+<p>Nej. Kravet på obligatorisk byggfelsförsäkring togs bort den 1 juni 2014, samtidigt som färdigställandeskyddet infördes. Skyddet säkrar att bygget blir färdigt och att fel avhjälps om entreprenören inte kan fullfölja. En separat nybyggnads- eller dolda-fel-försäkring är frivillig och något annat.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg in färdigställandeskyddet i affären från början. Sätt upp priset och posten i <a href="/sv/verktyg/offert-mall">vår offertmall</a>, eller bläddra bland fler kalkyler och mallar i <a href="/sv/verktyg">verktygslådan</a>. Vill du se hur ByggExp håller ihop offert, avtal och dokumentation i samma flöde — <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/startbesked-bygglov-process-2026">Startbesked och bygglovsprocessen 2026</a>, <a href="/sv/blog/abs-18-hantverkarformularet-17">ABS 18 och Hantverkarformuläret 17</a>, <a href="/sv/blog/entreprenadkontrakt-mall">Entreprenadkontrakt — mall och guide</a>.</p>
+`;
+
+const A_FARDIGSTALLANDESKYDD_SMAHUS: BlogPost = {
+  _id: "code-"+"fardigstallandeskydd-smahus",
+  title: "Färdigställandeskydd för småhus: vad entreprenören måste ordna innan bygget får starta", slug: "fardigstallandeskydd-smahus", locale: "sv",
+  excerpt: "Utan bevis om färdigställandeskydd får byggnadsnämnden inte ge startbesked — här är reglerna, kostnaden 2026 och checklistan för entreprenören.", tag: "Juridik",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_FARDIGSTALLANDESKYDD_SMAHUS_HTML,
+  seoTitle: "Färdigställandeskydd småhus | ByggExp", seoDescription: "Färdigställandeskydd för småhus krävs innan startbesked, inte bygglov. Så fungerar lag 2014:227, vad det kostar 2026 och hur du ordnar det rätt.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T20:27:00.000Z", createdAt: "2026-08-19T20:27:00.000Z", updatedAt: "2026-08-19T20:27:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_MATERIALATGANG_INNERVAGG_REGLAR_GIPS,
+    A_FARGATGANG_MALNING_M2,
+    A_GOLVMATERIAL_ATGANG_SPILL,
+    A_VIRKESATGANG_ALTAN_TRALLDACK,
+    A_BETONG_PLINTAR_STOLPFUNDAMENT,
+    A_ARBETSMILJOVERKET_INSPEKTION_BYGG_2026,
+    A_ID06_NYA_KRAV_2026_LEGITIMERING,
+    A_STAKET_MATERIAL_STOLPAR_ATGANG,
+    A_GOLVVARME_BERAKNING_EFFEKT,
+    A_FARDIGSTALLANDESKYDD_SMAHUS,
     A_GARANTIBESIKTNING_2_AR_ENTREPRENAD,
     A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET,
     A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG,

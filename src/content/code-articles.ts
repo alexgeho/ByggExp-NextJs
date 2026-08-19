@@ -3860,6 +3860,7 @@ const A_BYGGMOTESPROTOKOLL_MALL: BlogPost = {
 
 const A_OVERLAMNING_RELATIONSHANDLINGAR_HTML = `
 <p>Projektet är i mål. Sista skruven är dragen, slutbesiktningen är avklarad och slutfakturan ligger klar. Men är projektet verkligen avslutat? Alltför ofta godkänns slutbesiktningen samtidigt som relationshandlingarna saknas, restpunkterna hänger löst i en oläslig anteckning och drift- och underhållsinstruktionerna aldrig blir levererade. Det är då problemen börjar – för det är just överlämningen som avgör om du får betalt i tid och hur du står dig under de tio år av ansvar som följer. En strukturerad överlämning med en tydlig <strong>överlämning relationshandlingar checklista</strong> är inte pappersexercis, utan ett affärsskydd. Här går vi igenom vad som gäller enligt AB 04 och ABT 06, och hur du håller ordning på restpunkter och procent klart genom hela slutfasen.</p>
+<p><a href="/sv/verktyg/restlista-mall">Skapa en restlista/punchlista med vår gratis mall (PDF & Excel) -&gt;</a></p>
 
 <p>Vill du samla handlingar, restpunkter och etappuppföljning på ett ställe? Se hur du strukturerar slutfasen med <a href="/sv/funktioner">funktionerna i ByggExp -&gt;</a>.</p>
 
@@ -7239,6 +7240,7 @@ const A_JUSTERAT_FORMANSVARDE_SERVICEBIL: BlogPost = {
 
 const A_KMA_PLAN_MALL_HTML = `
 <p>KMA står för <strong>Kvalitet, Miljö och Arbetsmiljö</strong> – de tre områden en KMA-plan (ibland kallad kvalitetsplan) binder ihop till ett dokument. För många mindre byggföretag dyker kravet upp först när en beställare begär en KMA-plan i upphandlingen, och då gäller det att ha något att visa. Den goda nyheten: planen behöver inte vara tjock. Den ska vara konkret, spegla hur ni faktiskt jobbar och gå att uppdatera per projekt. Här går vi igenom vad den måste innehålla enligt PBL, Miljöbalken och Arbetsmiljölagen – och hur du bygger en nedbantad variant som håller.</p>
+<p><a href="/sv/verktyg/avvikelserapport-mall">Dokumentera avvikelser med vår gratis avvikelserapport-mall (PDF & Excel) -&gt;</a></p>
 
 <p>Grunden i kvalitetsbenet är egenkontrollen. Börja med att ladda ner <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> och bygg vidare därifrån.</p>
 

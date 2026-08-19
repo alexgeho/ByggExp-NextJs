@@ -7546,7 +7546,7 @@ const A_NYA_BYGGREGLER_2026_ENTREPRENAD: BlogPost = {
 };
 
 const A_NYA_3_12_REGLER_2026_HTML = `
-<p>En ny, gemensam 3:12-modell för dig som äger ett byggföretag i aktiebolagsform har utretts och föreslagits. Reformen är dock <strong>ännu inte beslutad av riksdagen</strong> och föreslås träda i kraft 1 januari 2026, men är ännu inte beslutad av riksdagen. Enligt förslaget höjs grundbeloppet kraftigt, det tidigare kravet på eget löneuttag slopas och den så kallade 4-procentsspärren försvinner – men det tillkommer också nya begränsningar. Nedan går vi igenom de föreslagna beloppen och räknar på vad de skulle betyda för en typisk byggfirma. Observera att parametrarna kan ändras innan reformen antas.</p>
+<p>En ny, gemensam 3:12-modell för dig som äger ett byggföretag i aktiebolagsform är nu <strong>beslutad och gällande lag</strong>. Riksdagen beslutade den 26 november 2025 (SFS 2025:1361) och reglerna trädde i kraft <strong>1 januari 2026</strong>. Grundbeloppet höjs kraftigt, det tidigare kravet på eget löneuttag slopas och den så kallade 4-procentsspärren försvinner – men det tillkommer också nya begränsningar. Nedan går vi igenom beloppen och räknar på vad de betyder för en typisk byggfirma.</p>
 
 <p>Vill du snabbt kalkylera lön och utdelning för ditt bolag? Använd verktygen i <a href="/sv/verktyg">vår kostnadsfria verktygslåda för byggföretag -&gt;</a> som stöd innan du stämmer av med din redovisningskonsult.</p>
 
@@ -7554,82 +7554,82 @@ const A_NYA_3_12_REGLER_2026_HTML = `
 <p>3:12-reglerna styr hur du som delägare i ett fåmansföretag beskattas när du tar utdelning eller säljer dina aktier. Kärnan är ett <strong>gränsbelopp</strong>: den del av utdelningen som ryms inom gränsbeloppet beskattas med 20 procent i inkomstslaget kapital, medan överskjutande belopp beskattas som lön (tjänst) upp till ett tak. Skillnaden är stor – tjänstebeskattning kan landa på över 50 procent på marginalen. För en byggfirma som gått med bra vinst är det därför helt centralt att veta hur stort gränsbelopp du kan bygga upp varje år.</p>
 
 <h2>Det stora skiftet – en modell istället för två</h2>
-<p>I dag får du välja mellan förenklingsregeln (ett schablonbelopp) och huvudregeln (löneunderlagsberäkning). Enligt förslaget slås dessa ihop till <strong>en gemensam beräkning</strong>: gränsbeloppet skulle bestå av ett grundbelopp plus ett lönebaserat utrymme. Du skulle alltså inte längre behöva välja metod – alla räknar på samma sätt.</p>
-<p>Reformen är ännu inte antagen. Den planeras träda i kraft 1 januari 2026 och gälla för beskattningsår som påbörjas efter den 31 december 2025. Det innebär att de nya reglerna – om de antas – skulle synas första gången på den K10 du lämnar våren 2027, tillsammans med inkomstdeklarationen 2027.</p>
+<p>Tidigare fick du välja mellan förenklingsregeln (ett schablonbelopp) och huvudregeln (löneunderlagsberäkning). Nu slås dessa ihop till <strong>en gemensam beräkning</strong>: gränsbeloppet består av ett grundbelopp plus ett lönebaserat utrymme. Du behöver alltså inte längre välja metod – alla räknar på samma sätt.</p>
+<p>Reglerna gäller för beskattningsår som påbörjas efter den 31 december 2025. Det innebär att de nya reglerna syns första gången på den K10 du lämnar våren 2027, tillsammans med inkomstdeklarationen 2027.</p>
 
-<h2>Höjt grundbelopp – cirka 333 600 kr (4 IBB)</h2>
-<p>Grundbeloppet föreslås höjas från 2,75 till 4 inkomstbasbelopp. Med inkomstbasbeloppet (IBB) för 2026 på 83 400 kr motsvarar det <strong>cirka 333 600 kr</strong> (4 × 83 400). Exakt belopp beror på vilket inkomstbasbelopp som gäller det år reglerna börjar tillämpas.</p>
-<p>Viktigt att förstå: beloppet gäller <em>samtliga aktier i företaget</em> och fördelas efter ägarandel. Är du ensam ägare får du hela grundbeloppet. Äger du och en kompanjon 50 procent var får ni cirka 166 800 kr var. Detta är en tydlig förändring jämfört med dagens schablon och skulle gynna särskilt ensamägare och mindre byggbolag.</p>
+<h2>Höjt grundbelopp – 322 400 kr (4 IBB)</h2>
+<p>Grundbeloppet höjs från 2,75 till 4 inkomstbasbelopp. Gränsbeloppet för utdelning 2026 beräknas på inkomstbasbeloppet (IBB) för 2025, som är 80 600 kr. Det motsvarar <strong>322 400 kr</strong> (4 × 80 600). Notera att IBB för 2026 (83 400 kr) styr först gränsbeloppet för 2027.</p>
+<p>Viktigt att förstå: beloppet gäller <em>samtliga aktier i företaget</em> och fördelas efter ägarandel. Är du ensam ägare får du hela grundbeloppet. Äger du och en kompanjon 50 procent var får ni 161 200 kr var. Detta är en tydlig förändring jämfört med den tidigare schablonen och gynnar särskilt ensamägare och mindre byggbolag.</p>
 
 <h2>Slopat löneuttagskrav och slopad 4-procentsspärr</h2>
-<p>Det nuvarande kravet på eget löneuttag (6 IBB plus 5 procent av totala löner, alternativt 9,6 IBB) föreslås slopas. Du skulle alltså inte längre behöva ta ut en viss minimilön för att få räkna med det lönebaserade utrymmet. Även 4-procentsspärren – kravet att äga minst 4 procent av kapitalet – föreslås försvinna.</p>
-<p>För hantverkaren som historiskt tagit låg lön låter detta som en ren förenkling. Men som vi ser nedan skulle det fortfarande finnas starka skäl att köra lön genom bolaget.</p>
+<p>Det tidigare kravet på eget löneuttag (6 IBB plus 5 procent av totala löner, alternativt 9,6 IBB) slopas. Du behöver alltså inte längre ta ut en viss minimilön för att få räkna med det lönebaserade utrymmet. Även 4-procentsspärren – kravet att äga minst 4 procent av kapitalet – försvinner.</p>
+<p>För hantverkaren som historiskt tagit låg lön låter detta som en ren förenkling. Men som vi ser nedan finns det fortfarande starka skäl att köra lön genom bolaget.</p>
 
 <h2>Nytt lönebaserat utrymme – 50 % över 8 IBB</h2>
-<p>Det lönebaserade utrymmet föreslås beräknas som <strong>50 procent av den del av din andel av lönesumman som överstiger 8 IBB</strong> (8 × 83 400 = 667 200 kr räknat på IBB för 2026). Formeln blir:</p>
+<p>Det lönebaserade utrymmet beräknas som <strong>50 procent av den del av din andel av lönesumman som överstiger 8 IBB</strong> (8 × 80 600 = 644 800 kr för 2026). Detta schablonavdrag om 8 IBB ersätter det gamla löneuttagskravet. Formeln blir:</p>
 <ul>
-<li>Lönebaserat utrymme = 50 % × (din andel av bolagets kontanta löner − 667 200 kr)</li>
+<li>Lönebaserat utrymme = 50 % × (din andel av bolagets kontanta löner − 644 800 kr)</li>
 </ul>
-<p>Ett tak kvarstår i förslaget: det lönebaserade utrymmet får aldrig överstiga <strong>50 gånger din egen (eller en närståendes) kontanta lön</strong>. Tar du själv ut för låg lön begränsar det alltså hur mycket löneutrymme du kan bygga, oavsett hur stora de totala lönerna är.</p>
+<p>Ett tak kvarstår: det lönebaserade utrymmet får aldrig överstiga <strong>50 gånger din egen (eller en närståendes) kontanta lön</strong>. Tar du själv ut för låg lön begränsar det alltså hur mycket löneutrymme du kan bygga, oavsett hur stora de totala lönerna är.</p>
 
-<h2>Räkneexempel: så mycket skulle en byggföretagare kunna ta i lågbeskattad utdelning</h2>
-<p><strong>Exempel 1 – enmansföretag utan anställda.</strong> Du äger 100 procent och har inga anställda utöver dig själv. Ditt gränsbelopp blir grundbeloppet: cirka 333 600 kr. Utdelning upp till det beloppet beskattas med 20 procent, det vill säga 66 720 kr i skatt. Enkelt och förutsägbart.</p>
-<p><strong>Exempel 2 – byggbolag med anställda.</strong> Du äger 100 procent av ett bolag med fem anställda och en total kontant lönesumma på 3 500 000 kr. Lönebaserat utrymme = 50 % × (3 500 000 − 667 200) = 50 % × 2 832 800 = <strong>1 416 400 kr</strong>. Lägg till grundbeloppet cirka 333 600 kr så blir det totala gränsbeloppet omkring <strong>1 750 000 kr</strong>.</p>
-<p>Kontrollera bara 50×-taket: tar du själv ut exempelvis 700 000 kr i lön är taket 35 000 000 kr, alltså inget hinder här. Tar du däremot bara 20 000 kr i lön blir taket 1 000 000 kr och begränsar då ditt lönebaserade utrymme. Det är just därför lönenivån fortfarande skulle spela roll.</p>
+<h2>Räkneexempel: så mycket kan en byggföretagare ta i lågbeskattad utdelning</h2>
+<p><strong>Exempel 1 – enmansföretag utan anställda.</strong> Du äger 100 procent och har inga anställda utöver dig själv. Ditt gränsbelopp blir grundbeloppet: 322 400 kr. Utdelning upp till det beloppet beskattas med 20 procent, det vill säga 64 480 kr i skatt. Enkelt och förutsägbart.</p>
+<p><strong>Exempel 2 – byggbolag med anställda.</strong> Du äger 100 procent av ett bolag med fem anställda och en total kontant lönesumma på 3 500 000 kr. Lönebaserat utrymme = 50 % × (3 500 000 − 644 800) = 50 % × 2 855 200 = <strong>1 427 600 kr</strong>. Lägg till grundbeloppet 322 400 kr så blir det totala gränsbeloppet omkring <strong>1 750 000 kr</strong>.</p>
+<p>Kontrollera bara 50×-taket: tar du själv ut exempelvis 700 000 kr i lön är taket 35 000 000 kr, alltså inget hinder här. Tar du däremot bara 20 000 kr i lön blir taket 1 000 000 kr och begränsar då ditt lönebaserade utrymme. Det är just därför lönenivån fortfarande spelar roll.</p>
 
 <h2>Skattenivåerna: 20 %, tjänst och 30 % över taket</h2>
-<p>Utdelning eller kapitalvinst inom gränsbeloppet beskattas med 20 procent (tekniskt sett tas två tredjedelar upp och beskattas med 30 procent i kapital). Belopp <em>över</em> gränsbeloppet beskattas som tjänst upp till ett takbelopp. Enligt förslaget skulle takbeloppet vara 90 IBB för utdelning och 100 IBB för kapitalvinst – överstigande belopp beskattas med platt 30 procent i kapital i stället för som tjänst. Dessa parametrar kan ändras innan reformen är beslutad.</p>
-<p>Har du sedan tidigare ett sparat utdelningsutrymme är avsikten att det ska följa med in i det nya systemet och fortsätta att räknas upp. Du skulle alltså inte förlora tidigare uppbyggt utrymme vid övergången.</p>
+<p>Utdelning eller kapitalvinst inom gränsbeloppet beskattas med 20 procent (tekniskt sett tas två tredjedelar upp och beskattas med 30 procent i kapital). Belopp <em>över</em> gränsbeloppet beskattas som tjänst upp till ett takbelopp. Takbeloppet är 90 IBB för utdelning och 100 IBB för kapitalvinst – överstigande belopp beskattas med platt 30 procent i kapital i stället för som tjänst.</p>
+<p>Har du sedan tidigare ett sparat utdelningsutrymme följer det med in i det nya systemet. Observera dock en viktig förändring: den årliga <strong>ränteuppräkningen av det sparade utrymmet slopas</strong>. Du förlorar alltså inte tidigare uppbyggt utrymme vid övergången, men det växer inte längre med ränta.</p>
 
-<h2>Detta bör du hålla koll på inför en möjlig reform</h2>
+<h2>Detta bör du hålla koll på</h2>
 <ul>
-<li>Se över din egen lönenivå – 8 IBB-avdraget i formeln och 50×-taket gör att lön fortfarande skulle vara relevant trots slopat löneuttagskrav.</li>
+<li>Se över din egen lönenivå – 8 IBB-avdraget i formeln och 50×-taket gör att lön fortfarande är relevant trots slopat löneuttagskrav.</li>
 <li>Planera utdelningen utifrån bolagets resultat och ditt totala gränsbelopp.</li>
-<li>Håll underlaget till din K10 uppdaterat så att du har rätt siffror när reglerna väl börjar gälla.</li>
-<li>Följ riksdagens beslut – reformen är ännu inte antagen och beloppen kan justeras.</li>
+<li>Håll underlaget till din K10 uppdaterat så att du har rätt siffror när du deklarerar våren 2027.</li>
+<li>Kom ihåg att karenstiden vid bedömning av kvalificerade andelar förkortas från fem till fyra år, med verkan för beskattningsår som börjar efter den 31 december 2026.</li>
 <li>Stäm av med din redovisningskonsult innan du fastställer lön och utdelning.</li>
 </ul>
 
 <h2>Vanliga misstag att undvika</h2>
 <ul>
-<li>Att tro att lön blivit ointressant. Löneuttagskravet föreslås slopas, men 50×-taket och 8 IBB-avdraget gör att en rimlig egen lön ofta lönar sig ändå.</li>
-<li>Att räkna grundbeloppet per person i stället för per bolag – grundbeloppet (cirka 333 600 kr) fördelas efter ägarandel.</li>
-<li>Att utgå från att reglerna redan gäller – reformen är ännu inte beslutad och föreslås träda i kraft 1 januari 2026.</li>
-<li>Att glömma bort sparat utdelningsutrymme från tidigare år.</li>
+<li>Att tro att lön blivit ointressant. Löneuttagskravet slopas, men 50×-taket och 8 IBB-avdraget gör att en rimlig egen lön ofta lönar sig ändå.</li>
+<li>Att räkna grundbeloppet per person i stället för per bolag – grundbeloppet (322 400 kr) fördelas efter ägarandel.</li>
+<li>Att tro att det sparade utdelningsutrymmet fortsätter räknas upp med ränta – den uppräkningen är slopad.</li>
+<li>Att glömma bort sparat utdelningsutrymme från tidigare år vid övergången.</li>
 <li>Att fatta stora utdelningsbeslut utan att först kontrollera bolagets utdelningsbara medel och likviditet.</li>
 </ul>
 
 <h2>Så gör du i ByggExp</h2>
-<p>ByggExp ersätter inte din redovisningskonsult, men ger dig ordning på underlaget som besluten vilar på. I verktygslådan kan du räkna på lön kontra utdelning, och genom att hålla tidrapportering, projekt och fakturering samlade får du ett tydligare grepp om lönesumma och resultat – de siffror som direkt påverkar ditt gränsbelopp, både enligt dagens 3:12-regler och enligt de föreslagna. Bättre löpande koll gör det enklare att planera uttag i tid i stället för i efterhand.</p>
+<p>ByggExp ersätter inte din redovisningskonsult, men ger dig ordning på underlaget som besluten vilar på. I verktygslådan kan du räkna på lön kontra utdelning, och genom att hålla tidrapportering, projekt och fakturering samlade får du ett tydligare grepp om lönesumma och resultat – de siffror som direkt påverkar ditt gränsbelopp enligt de nya 3:12-reglerna. Bättre löpande koll gör det enklare att planera uttag i tid i stället för i efterhand.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad blir grundbeloppet enligt de nya 3:12-reglerna?</h3>
-<p>Grundbeloppet föreslås höjas till 4 inkomstbasbelopp, vilket med IBB för 2026 (83 400 kr) motsvarar cirka 333 600 kr. Beloppet gäller samtliga aktier i bolaget och fördelas efter ägarandel. Exakt belopp beror på vilket år reglerna börjar tillämpas och vilket inkomstbasbelopp som då används.</p>
+<p>Grundbeloppet höjs till 4 inkomstbasbelopp. Gränsbeloppet för 2026 beräknas på IBB för 2025 (80 600 kr), vilket ger 322 400 kr. Beloppet gäller samtliga aktier i bolaget och fördelas efter ägarandel. IBB för 2026 (83 400 kr) styr först gränsbeloppet för 2027.</p>
 <h3>Måste jag ta ut lön för att använda det lönebaserade utrymmet?</h3>
-<p>Nej, det formella löneuttagskravet föreslås slopas. Men eftersom det lönebaserade utrymmet enligt förslaget begränsas till 50 gånger din egen lön finns det i praktiken fortfarande skäl att ta ut en rimlig lön.</p>
-<h3>När börjar de nya 3:12-reglerna gälla?</h3>
-<p>Reformen är ännu inte beslutad av riksdagen. Den planeras träda i kraft 1 januari 2026 och gälla beskattningsår som påbörjas efter 31 december 2025, vilket innebär att den – om den antas – skulle synas första gången på K10 våren 2027. Fram till dess gäller nuvarande 3:12-regler.</p>
+<p>Nej, det formella löneuttagskravet är slopat. Men eftersom det lönebaserade utrymmet begränsas till 50 gånger din egen lön finns det i praktiken fortfarande skäl att ta ut en rimlig lön.</p>
+<h3>När började de nya 3:12-reglerna gälla?</h3>
+<p>Reglerna beslutades av riksdagen den 26 november 2025 (SFS 2025:1361) och trädde i kraft den 1 januari 2026. De gäller beskattningsår som påbörjas efter den 31 december 2025, vilket innebär att de syns första gången på K10 våren 2027.</p>
 <h3>Vilken skatt betalar jag på utdelning inom gränsbeloppet?</h3>
 <p>Utdelning inom gränsbeloppet beskattas med 20 procent. Belopp över gränsbeloppet beskattas som tjänst upp till takbeloppet, och däröver med 30 procent i kapital.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att räkna på lön och utdelning i <a href="/sv/verktyg">ByggExps kostnadsfria verktygslåda</a>, och <a href="/sv/contact">boka en demo</a> om du vill se hur du får bättre koll på lönesumma och resultat i ett samlat system. Observera att detta är generell information om ett ännu ej beslutat förslag och inte skatterådgivning – stäm alltid av dina egna siffror med en redovisningskonsult.</p>
+<p>Börja med att räkna på lön och utdelning i <a href="/sv/verktyg">ByggExps kostnadsfria verktygslåda</a>, och <a href="/sv/contact">boka en demo</a> om du vill se hur du får bättre koll på lönesumma och resultat i ett samlat system. Observera att detta är generell information om de nya 3:12-reglerna och inte skatterådgivning – stäm alltid av dina egna siffror med en redovisningskonsult.</p>
 
 <p>Relaterat: <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggföretag – vad lönar sig?</a></p>
 `;
 
 const A_NYA_3_12_REGLER_2026: BlogPost = {
   _id: "code-"+"nya-3-12-regler-2026",
-  title: "Nya 3:12-reglerna för byggföretag – förslaget inför 2026", slug: "nya-3-12-regler-2026", locale: "sv",
-  excerpt: "En gemensam 3:12-modell har föreslagits men är ännu inte beslutad av riksdagen. Reformen planeras träda i kraft 1 januari 2027. Så skulle de föreslagna reglerna påverka en byggfirma.", tag: "Ekonomi",
+  title: "Nya 3:12-reglerna 2026 för byggföretag – så påverkas din utdelning", slug: "nya-3-12-regler-2026", locale: "sv",
+  excerpt: "De nya 3:12-reglerna är beslutade och gäller från 1 januari 2026. Här är grundbeloppet på 322 400 kr, det slopade löneuttagskravet och det nya lönebaserade utrymmet – med räkneexempel för byggföretag.", tag: "Ekonomi",
   coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_NYA_3_12_REGLER_2026_HTML,
-  seoTitle: "Nya 3:12-reglerna för byggföretag | ByggExp", seoDescription: "De nya 3:12-reglerna för fåmansföretag är ännu inte beslutade och planeras träda i kraft 2027. Så skulle det föreslagna grundbeloppet och löneutrymmet påverka din byggfirma.",
+  seoTitle: "Nya 3:12-reglerna 2026 för byggföretag | ByggExp", seoDescription: "De nya 3:12-reglerna gäller från 1 januari 2026 (SFS 2025:1361). Grundbelopp 322 400 kr, slopat löneuttagskrav och nytt lönebaserat utrymme – så räknar byggföretaget.",
   seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T06:00:00.000Z", createdAt: "2026-08-19T06:00:00.000Z", updatedAt: "2026-08-19T06:00:00.000Z",
 };
 
 const A_K10_BLANKETT_2026_HTML = `
-<p>Driver du bygg genom ett eget aktiebolag är K10 en av de viktigaste blanketterna du lämnar – det är här du räknar ut hur mycket du kan ta ut som lågbeskattad utdelning. En sak förvirrar många direkt: <strong>K10-blanketten som lämnas i inkomstdeklarationen 2026 avser utdelning under inkomstår 2025</strong>. Planerar du i stället utdelning under 2026 kan helt nya 3:12-regler gälla – en reform har föreslagits träda i kraft 1 januari 2026 – och den K10:an lämnar du våren 2027. Den här guiden reder ut begreppen och tar dig igenom blanketten steg för steg.</p>
+<p>Driver du bygg genom ett eget aktiebolag är K10 en av de viktigaste blanketterna du lämnar – det är här du räknar ut hur mycket du kan ta ut som lågbeskattad utdelning. En sak förvirrar många direkt: <strong>K10-blanketten som lämnas i inkomstdeklarationen 2026 avser utdelning under inkomstår 2025</strong>. Planerar du i stället utdelning under 2026 gäller helt nya 3:12-regler – riksdagen beslutade om reformen den 26 november 2025 (SFS 2025:1361) och den trädde i kraft 1 januari 2026 – och den K10:an lämnar du våren 2027. Den här guiden reder ut begreppen och tar dig igenom blanketten steg för steg.</p>
 
 <p>Vill du snabbt räkna på lön, moms och marginaler i bolaget hittar du fler kalkylatorer och mallar i <a href="/sv/verktyg">vår gratis verktygslåda för byggföretag →</a>.</p>
 
@@ -7644,7 +7644,7 @@ const A_K10_BLANKETT_2026_HTML = `
 
 <h2>Förenklingsregeln steg för steg</h2>
 <p>Förenklingsregeln ger ett schablonbelopp på <strong>2,75 × inkomstbasbeloppet för året före beskattningsåret</strong>. För den K10 du lämnar 2026 – alltså utdelning under inkomstår 2025 – blir schablonbeloppet <strong>209 550 kr</strong> (2,75 × inkomstbasbeloppet för 2024).</p>
-<p><strong>Viktigt inför 2026:</strong> Regeringen har i en lagrådsremiss (22 maj 2025) föreslagit helt nya 3:12-regler som föreslås träda i kraft 1 januari 2026. Förslaget slopar uppdelningen i förenklings- och huvudregel och ersätter schablonen med en enhetlig grundnivå på cirka fyra inkomstbasbelopp. Är reformen i kraft för inkomstår 2026 gäller andra belopp och en annan modell än beskrivningen nedan – kontrollera därför alltid vad som faktiskt gäller för ditt utdelningsår direkt hos Skatteverket innan du räknar på 2026.</p>
+<p><strong>Viktigt inför 2026:</strong> De nya 3:12-reglerna (SFS 2025:1361) gäller sedan 1 januari 2026 och ändrar både modell och belopp för utdelning under inkomstår 2026 och framåt – se avsnittet längre ner. För den K10 du lämnar 2026 (utdelning inkomstår 2025) gäller dock fortfarande förenklings- och huvudregeln som beskrivs här.</p>
 <p>Två regler är avgörande: du får bara använda förenklingsregeln i <strong>ett</strong> bolag per år, och beloppet fördelas efter din ägda andel av aktierna. Äger du halva bolaget får du halva schablonbeloppet. Regeln passar särskilt soloföretagaren med låg lön, eftersom du får ett rejält gränsbelopp utan att behöva uppfylla något löneuttagskrav.</p>
 
 <h2>Huvudregeln steg för steg</h2>
@@ -7657,7 +7657,7 @@ const A_K10_BLANKETT_2026_HTML = `
 <ul>
 <li><strong>Utdelning inkomstår 2025</strong> (löner 2024): lägst av 457 200 kr + 5 % av totala kontanta löner, eller 731 520 kr.</li>
 </ul>
-<p>Missar du kravlönen med en enda krona faller hela det lönebaserade utrymmet – kolla därför ditt eget löneuttag i god tid före årsskiftet. Planerar du utdelning för inkomstår 2026 kan den aviserade reformen ändra både kravlönen och det lönebaserade utrymmet – utgå inte från siffrorna ovan för 2026 utan att stämma av med Skatteverket.</p>
+<p>Missar du kravlönen med en enda krona faller hela det lönebaserade utrymmet – kolla därför ditt eget löneuttag i god tid före årsskiftet. Observera att detta löneuttagskrav bara gäller de äldre reglerna. För utdelning inkomstår 2026 och framåt är löneuttagskravet slopat – se avsnittet om de nya reglerna nedan.</p>
 
 <h2>Förenkling vs huvudregel – vilken väljer du?</h2>
 <p>Du får inte kombinera reglerna samma år för samma bolag – du väljer den som ger högst gränsbelopp. En enkel tumregel:</p>
@@ -7665,10 +7665,21 @@ const A_K10_BLANKETT_2026_HTML = `
 <li><strong>Ensam hantverkare med låg lön</strong> → förenklingsregeln ger oftast mest.</li>
 <li><strong>Bolag med anställda där du tar ut kravlön</strong> → huvudregeln lönar sig ofta, eftersom det lönebaserade utrymmet kan bli stort.</li>
 </ul>
-<p><strong>Räkneexempel (inkomstår 2025):</strong> Ett hantverkar-AB betalade under 2024 ut totalt 2 000 000 kr i kontanta löner. Ägaren tog själv ut 700 000 kr och klarar därmed kravlönen (lägst av 457 200 + 5 % av 2 000 000 = 557 200 kr, eller 731 520 kr → kravet är 557 200 kr). Det lönebaserade utrymmet blir 50 % × 2 000 000 = 1 000 000 kr, långt över förenklingsregelns 209 550 kr. Här vinner huvudregeln stort. En ensam ägare utan anställda och med 300 000 kr i lön klarar inte kravlönen alls – då är förenklingsregeln rätt val. Observera att denna två-regel-modell kan ersättas av en enhetlig beräkning om den aviserade 3:12-reformen är i kraft för ditt utdelningsår.</p>
+<p><strong>Räkneexempel (inkomstår 2025):</strong> Ett hantverkar-AB betalade under 2024 ut totalt 2 000 000 kr i kontanta löner. Ägaren tog själv ut 700 000 kr och klarar därmed kravlönen (lägst av 457 200 + 5 % av 2 000 000 = 557 200 kr, eller 731 520 kr → kravet är 557 200 kr). Det lönebaserade utrymmet blir 50 % × 2 000 000 = 1 000 000 kr, långt över förenklingsregelns 209 550 kr. Här vinner huvudregeln stort. En ensam ägare utan anställda och med 300 000 kr i lön klarar inte kravlönen alls – då är förenklingsregeln rätt val. Observera att denna två-regel-modell bara gäller till och med inkomstår 2025. För utdelning inkomstår 2026 och framåt har uppdelningen ersatts av en enhetlig beräkning – ett grundbelopp på fyra inkomstbasbelopp plus ett lönebaserat utrymme utan löneuttagskrav.</p>
+
+<h2>Nya 3:12-regler från inkomstår 2026</h2>
+<p>Riksdagen beslutade den 26 november 2025 om en genomgripande reform av 3:12-reglerna (SFS 2025:1361). Reglerna trädde i kraft 1 januari 2026 och tillämpas första gången för beskattningsår som börjar efter den 31 december 2025 – alltså utdelning under inkomstår 2026, som du deklarerar våren 2027. Det här ändras:</p>
+<ul>
+<li><strong>Ett enhetligt grundbelopp</strong> på fyra inkomstbasbelopp ersätter uppdelningen i förenklings- och huvudregel – <strong>322 400 kr för 2026</strong> (baserat på inkomstbasbeloppet för 2025, 80 600 kr; inkomstbasbeloppet för 2026, 83 400 kr, styr först 2027). Beloppet fördelas efter ägarandel och du får sammanlagt högst fyra inkomstbasbelopp även om du äger flera bolag.</li>
+<li><strong>Löneuttagskravet (spärrlönen) slopas</strong> – du behöver inte längre ta ut en viss egen lön för att få räkna lönebaserat utrymme.</li>
+<li><strong>Lönebaserat utrymme</strong> beräknas som 50 % av din andel av löneunderlaget minus ett schablonavdrag på 8 inkomstbasbelopp (644 800 kr för 2026). Taket på 50 gånger din egen (eller närståendes) kontanta årslön står kvar.</li>
+<li><strong>4 %-kapitalandelskravet slopas</strong> – även den som äger under 4 % får tillgodoräkna sig lönebaserat utrymme.</li>
+<li><strong>Ränteuppräkningen av sparat utdelningsutrymme slopas.</strong></li>
+<li><strong>Karenstiden kortas från fem till fyra år</strong>, med tillämpning första beskattningsåret som börjar efter den 31 december 2026.</li>
+</ul>
 
 <h2>Sparat utdelningsutrymme</h2>
-<p>Utnyttjar du inte hela gränsbeloppet ett år sparas resten som <strong>sparat utdelningsutrymme</strong>. Det rullar vidare och räknas årligen upp med statslåneräntan (30 nov året före) + 3 procentenheter. Utrymmet är knutet till aktierna och följer med vid till exempel arv eller gåva. Det är precis därför du ska lämna K10 varje år, även utan utdelning – annars byggs inget utrymme upp och du kan gå miste om lågbeskattad utdelning längre fram.</p>
+<p>Utnyttjar du inte hela gränsbeloppet ett år sparas resten som <strong>sparat utdelningsutrymme</strong>. Det rullar vidare och räknas för inkomstår 2025 årligen upp med statslåneräntan (30 nov året före) + 3 procentenheter. Utrymmet är knutet till aktierna och följer med vid till exempel arv eller gåva. Det är precis därför du ska lämna K10 varje år, även utan utdelning – annars byggs inget utrymme upp och du kan gå miste om lågbeskattad utdelning längre fram. Notera att ränteuppräkningen slopas i de nya reglerna: från och med beskattningsår 2026 räknas det sparade utrymmet inte längre upp med ränta.</p>
 
 <h2>Vanliga fallgropar och checklista</h2>
 <ul>
@@ -7677,34 +7688,34 @@ const A_K10_BLANKETT_2026_HTML = `
 <li>Missa kravlönen och tappa hela det lönebaserade utrymmet.</li>
 <li>Ta med förmåner i löneunderlaget – bara kontant lön räknas.</li>
 <li>Hoppa över K10 ett år utan utdelning och därmed slarva bort sparat utrymme.</li>
-<li>Utgå från 2025 års regler och belopp för utdelning under 2026 – nya 3:12-regler har föreslagits träda i kraft 1 januari 2026.</li>
+<li>Utgå från 2025 års regler och belopp för utdelning under 2026 – nya 3:12-regler gäller sedan 1 januari 2026 (SFS 2025:1361).</li>
 </ul>
 <p><strong>Checklista innan du fyller i:</strong> fastställ ägarandel per 1 januari, samla ihop bolagets kontanta löner året före, kontrollera ditt eget löneuttag mot kravlönen, hämta rätt statslåneränta och räkna båda reglerna – välj sedan den som ger högst gränsbelopp.</p>
 
 <h2>Så gör du i ByggExp</h2>
-<p>ByggExp är byggd för att hålla ordning på det underlag K10 vilar på: bolagets löneutbetalningar, ditt eget uttag och resultatet över tid. När du fakturerar, tidrapporterar och följer marginalerna löpande i systemet har du siffrorna framme när det är dags att räkna gränsbelopp och stämma av kravlönen – i stället för att leta i pärmar vid deklarationen. Vår <a href="/sv/verktyg">verktygslåda</a> hjälper dig räkna på lön och moms, men själva K10-blanketten fyller du i via Skatteverket och tar din revisor eller redovisningskonsult till hjälp när det behövs.</p>
+<p>ByggExp är byggd för att hålla ordning på det underlag K10 vilar på: bolagets löneutbetalningar, ditt eget uttag och resultatet över tid. När du fakturerar, tidrapporterar och följer marginalerna löpande i systemet har du siffrorna framme när det är dags att räkna gränsbelopp och stämma av löneunderlaget – i stället för att leta i pärmar vid deklarationen. Vår <a href="/sv/verktyg">verktygslåda</a> hjälper dig räkna på lön och moms, men själva K10-blanketten fyller du i via Skatteverket och tar din revisor eller redovisningskonsult till hjälp när det behövs.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Avser K10 blankett 2026 utdelning 2025 eller 2026?</h3>
-<p>K10 som lämnas i inkomstdeklarationen 2026 avser utdelning under inkomstår 2025, med ett schablonbelopp på 209 550 kr enligt förenklingsregeln. Utdelning som beslutas under 2026 redovisas i stället på K10 våren 2027 – men observera att nya 3:12-regler har föreslagits träda i kraft 1 januari 2026 och kan ändra beräkningen. Verifiera alltid vad som gäller för 2026 hos Skatteverket.</p>
+<p>K10 som lämnas i inkomstdeklarationen 2026 avser utdelning under inkomstår 2025, med ett schablonbelopp på 209 550 kr enligt förenklingsregeln. Utdelning som beslutas under 2026 redovisas i stället på K10 våren 2027 och omfattas då av de nya 3:12-reglerna, som riksdagen beslutade den 26 november 2025 (SFS 2025:1361) och som trädde i kraft 1 januari 2026.</p>
 <h3>Måste jag lämna K10 om jag inte tar någon utdelning?</h3>
-<p>Ja, det bör du. Lämnar du K10 även utan utdelning byggs och bevaras ditt sparade utdelningsutrymme, som räknas upp varje år. Hoppar du över blanketten riskerar du att förlora lågbeskattat utrymme som du kunnat använda senare.</p>
+<p>Ja, det bör du. Lämnar du K10 även utan utdelning byggs och bevaras ditt sparade utdelningsutrymme. Hoppar du över blanketten riskerar du att förlora lågbeskattat utrymme som du kunnat använda senare. Tänk på att ränteuppräkningen av det sparade utrymmet slopas från och med beskattningsår 2026.</p>
 <h3>Vilken regel ger högst gränsbelopp – förenkling eller huvudregeln?</h3>
-<p>Under nuvarande regler beror det på bolaget. En ensam hantverkare med låg lön får oftast mest genom förenklingsregeln. Har bolaget anställda och du tar ut kravlön kan huvudregelns lönebaserade utrymme (50 % av kontanta löner) ge betydligt mer. Räkna alltid båda och välj den högre. Tänk på att uppdelningen i två regler kan ersättas av en enhetlig beräkning om den aviserade 3:12-reformen är i kraft för ditt utdelningsår.</p>
+<p>För inkomstår 2025 beror det på bolaget. En ensam hantverkare med låg lön får oftast mest genom förenklingsregeln. Har bolaget anställda och du tar ut kravlön kan huvudregelns lönebaserade utrymme (50 % av kontanta löner) ge betydligt mer. Räkna alltid båda och välj den högre. Från inkomstår 2026 har de nya 3:12-reglerna ersatt uppdelningen med en enhetlig beräkning – ett grundbelopp på fyra inkomstbasbelopp plus ett lönebaserat utrymme utan löneuttagskrav.</p>
 <h3>Vad händer med utdelning över gränsbeloppet?</h3>
 <p>Inom gränsbeloppet beskattas utdelningen med 20 %. Belopp däröver beskattas i tjänst upp till takbeloppet på 90 inkomstbasbelopp, och därutöver som kapital med 30 %.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att samla underlaget och räkna igenom båda reglerna – och verifiera alltid årets exakta belopp och statslåneränta direkt hos Skatteverket. Håll särskilt koll på den aviserade 3:12-reformen, som regeringen föreslagit ska träda i kraft 1 januari 2026 och som slopar uppdelningen i förenklings- och huvudregel till förmån för en enhetlig grundnivå. Räkna på lön och marginaler i <a href="/sv/verktyg">vår verktygslåda</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller bolagets siffror i ordning inför deklarationen.</p>
+<p>Börja med att samla underlaget och räkna igenom reglerna som gäller ditt utdelningsår – och verifiera alltid årets exakta belopp och statslåneränta direkt hos Skatteverket. Håll särskilt koll på de nya 3:12-reglerna (SFS 2025:1361) som trädde i kraft 1 januari 2026 och som slopar uppdelningen i förenklings- och huvudregel till förmån för ett enhetligt grundbelopp på fyra inkomstbasbelopp. De tillämpas första gången för utdelning under inkomstår 2026, som du deklarerar våren 2027. Räkna på lön och marginaler i <a href="/sv/verktyg">vår verktygslåda</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller bolagets siffror i ordning inför deklarationen.</p>
 <p>Relaterat: <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggföretag?</a></p>
 `;
 
 const A_K10_BLANKETT_2026: BlogPost = {
   _id: "code-"+"k10-blankett-2026",
-  title: "K10-blanketten 2026 – gränsbelopp och utdelning i byggbolaget", slug: "k10-blankett-2026", locale: "sv",
-  excerpt: "K10-blanketten 2026 avser utdelning under inkomstår 2025. Så räknar du gränsbeloppet med förenklings- och huvudregeln – plus den aviserade 3:12-reformen.", tag: "Ekonomi",
+  title: "K10-blankett 2026: gränsbelopp och nya 3:12-regler", slug: "k10-blankett-2026", locale: "sv",
+  excerpt: "K10 avgör din lågbeskattade utdelning. Guiden tar dig genom gränsbelopp, förenklings- och huvudregel för inkomstår 2025 och de nya 3:12-regler som trädde i kraft 1 januari 2026.", tag: "Ekonomi",
   coverImageUrl: "/landing/verktyg/moms-preview.webp", contentHtml: A_K10_BLANKETT_2026_HTML,
-  seoTitle: "K10 blankett 2026 – gränsbelopp för byggföretag | ByggExp", seoDescription: "Så fyller du i K10-blanketten 2026 (inkomstår 2025): gränsbelopp, förenklingsregeln 209 550 kr, huvudregeln och kravlön – guide för byggföretagare.",
+  seoTitle: "K10-blankett 2026 | ByggExp", seoDescription: "Så fyller du i K10 för bygg-AB: gränsbelopp, förenklings- och huvudregel för inkomstår 2025 – plus de nya 3:12-reglerna (SFS 2025:1361) som gäller från 2026.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/moms-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T06:03:00.000Z", createdAt: "2026-08-19T06:03:00.000Z", updatedAt: "2026-08-19T06:03:00.000Z",
 };

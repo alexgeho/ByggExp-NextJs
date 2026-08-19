@@ -293,16 +293,21 @@
     min-height: calc(100vh - 72px);
   }
 
-  /* Resources dropdown flows inline inside the mobile burger menu. */
+  /* Resources dropdown flows inline inside the mobile burger menu,
+     left-aligned and full-width to match the other nav rows. */
   .nav-links.open .nav-dropdown {
     width: 100%;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
   .nav-links.open .nav-dropdown-btn {
-    justify-content: center;
-    font-size: inherit;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    text-align: left;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .nav-links.open .nav-dropdown-menu {
@@ -310,12 +315,18 @@
     transform: none;
     margin-top: 12px;
     width: 100%;
-    align-items: center;
-    gap: 12px;
+    align-items: stretch;
+    gap: 4px;
 
     background: transparent;
     border: none;
-    padding: 0;
+    padding: 0 0 0 12px;
+  }
+
+  /* Submenu links (Gratis verktyg, Blogg) sit slightly indented, no divider. */
+  .nav-links.open .nav-dropdown-menu a {
+    border-bottom: none;
+    padding-bottom: 10px;
   }
 
   .nav-links.open::before {

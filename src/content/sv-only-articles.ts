@@ -5,6 +5,21 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'havning-av-entreprenad',
+  'arbetstidslagen-bygg',
+  'forseningsvite-entreprenad',
+  'nya-asbestregler-2026',
+  'fallskydd-krav-bygg',
+  'anstallningsavtal-mall-bygg',
+  'milersattning-2026',
+  'yrkesbevis-bygg-larling',
+  'hitta-kunder-byggfirma',
+  'byggfaktura-checklista-rot',
+  'justerat-formansvarde-servicebil',
+  'kma-plan-mall',
+  'nya-gransvarden-2026-diisocyanater',
+  'boverkets-nya-byggregler-2026-kontrollplan',
+  'nya-byggregler-2026-entreprenad',
   'berakna-materialatgang-tak',
   'fonster-u-varde-2026',
   'arbetsmiljoverket-nya-regler-2026-bygg',

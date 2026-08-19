@@ -6297,9 +6297,1255 @@ const A_ARBETSMILJOVERKET_NYA_REGLER_2026_BYGG: BlogPost = {
   publishedAt: "2026-08-18T20:06:00.000Z", createdAt: "2026-08-18T20:06:00.000Z", updatedAt: "2026-08-18T20:06:00.000Z",
 };
 
+const A_HAVNING_AV_ENTREPRENAD_HTML = `
+<p>Beställaren betalar inte. Fakturorna växer, likviditeten tryggnar och du står inför frestelsen att bara lägga ner verktygen och lämna bygget. Men hävning av entreprenad är ett av de skarpaste vapnen du har – och drar du i nödbromsen på fel grund blir din hävning i stället ett väsentligt avtalsbrott som du själv får betala för. Här går vi igenom när du som entreprenör faktiskt får häva vid utebliven betalning, vilka steg som måste komma först, och varför en obefogad hävning kan bli din dyraste faktura någonsin.</p>
+
+<p>Innan det går så långt: dokumentera dina ändringar och tilläggsarbeten löpande, så att det underliggande betalningskravet är solklart. Använd gärna <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall för att dokumentera arbetet -&gt;</a> så att du har ordning på vad som faktiskt är beställt och obetalt.</p>
+
+<h2>Två spår: AB 04/ABT 06 eller konsumenttjänstlagen</h2>
+<p>Det första du måste veta är vilket regelverk som gäller för jobbet, för svaret på om och hur du får häva skiljer sig helt beroende på vem beställaren är.</p>
+<ul>
+<li><strong>Näringsidkare som beställare</strong> – är motparten ett byggföretag, en fastighetsägare eller annan näringsidkare, och ni har avtalat om AB 04 (utförandeentreprenad) eller ABT 06 (totalentreprenad), gäller standardavtalets regler om hävning. Det är detta spår artikeln främst handlar om.</li>
+<li><strong>Privatperson som beställare</strong> – är beställaren konsument gäller i stället konsumenttjänstlagen (1985:716), som är tvingande till konsumentens fördel. AB 04 gäller då inte, och du har inte samma fria rätt att lägga ner arbetet. Mer om det längre ner.</li>
+</ul>
+
+<h2>Entreprenörens hävningsrätt vid utebliven betalning</h2>
+<p>Under AB 04 och ABT 06 regleras din rätt att häva vid utebliven betalning i kapitel 8 § 2 punkt 1. Tre rekvisit måste vara uppfyllda samtidigt – det räcker inte att ett av dem stämmer.</p>
+<ol>
+<li><strong>Beställaren har inte betalat i rätt tid.</strong> Det ska föreligga ett faktiskt betalningsdröjsmål enligt kontraktets betalningsvillkor.</li>
+<li><strong>Rättelse sker inte utan dröjsmål efter erinran.</strong> Du måste först skicka en påminnelse (erinran) och ge beställaren en möjlighet att betala. Häver du utan att ha påmint är hävningen formellt fel.</li>
+<li><strong>Underlåtenheten är av väsentlig betydelse.</strong> Detta är den avgörande tröskeln. Ett litet obetalt belopp i förhållande till entreprenadens totala värde räcker inte – din fordran får inte vara alltför obetydlig till beloppet.</li>
+</ol>
+<p>Väsentlighetskravet är den vanligaste fällan. Om beställaren har betalat 95 procent av en stor entreprenad och tvistar om en enstaka mindre ÄTA, så är den obetalda delen sannolikt inte väsentlig – och då har du ingen hävningsrätt. Att göra en nykter bedömning av <em>proportionen</em> mellan det obetalda beloppet och kontraktssumman är helt centralt innan du går vidare.</p>
+
+<h2>Trappan innan hävning: stoppningsrätten</h2>
+<p>Hävning ska nästan alltid vara sista utvägen. AB 04/ABT 06 kap 8 § 3 ger dig ett mildare påtryckningsmedel: stoppningsrätten, det vill säga rätten att tillfälligt avbryta arbetet för att pressa fram betalning. Det är ofta ett klokare första steg än den definitiva hävningen.</p>
+<p>Men avbrytandet är tidsbegränsat. Det får pågå i <strong>högst en månad</strong>. Därefter måste du välja: antingen återuppta arbetet eller häva entreprenaden. Väljer du att återuppta har du rätt till tidsförlängning för den tid stoppet varat, och rätt till ersättning för de kostnader som avbrytandet orsakat. Stoppningsrätten är alltså ett verktyg som ofta löser problemet utan att relationen och kontraktet sprängs.</p>
+
+<h2>Så häver du formellt rätt</h2>
+<p>Bestämmer du dig ändå för att häva – gör det formellt korrekt. En slarvig hävning kan bli ogiltig även om du hade sakligt fog.</p>
+<ul>
+<li><strong>Skriftlig hävningsförklaring.</strong> Det är själva hävningsförklaringen som måste vara skriftlig. Muntligt eller "underförstått" duger inte.</li>
+<li><strong>Ange grunden tydligt.</strong> Hänvisa till kap 8 § 2 p.1 och den obetalda, väsentliga fordran. Notera att hävningsgrunderna i kap 8 inte är uttömmande – även allmänna kontraktsrättsliga grunder kan åberopas, men de kräver på samma sätt väsentlighet.</li>
+<li><strong>Säkra bevisningen.</strong> Samla fakturor, den skriftliga påminnelsen, mejlkorrespondens och dagboksanteckningar. Vid en tvist är det du som måste kunna visa att rekvisiten var uppfyllda.</li>
+</ul>
+<p>Vid en befogad hävning görs en ekonomisk slutavräkning enligt kap 8 § 5, och garantitiden räknas från dagen för hävningen enligt reglerna i AB 04 kap 8. Att ha ett tydligt underlag för utfört och obetalt arbete – inklusive ÄTA – är avgörande för att slutavräkningen ska landa rätt.</p>
+
+<h2>Risken vid obefogad hävning</h2>
+<p>Här ligger den verkliga faran. Om du häver utan att alla tre rekvisiten är uppfyllda är hävningen <strong>obefogad</strong> – och en obefogad hävning betraktas i sig som ett väsentligt avtalsbrott från din sida. Rollerna kastas då om: beställaren kan häva mot <em>dig</em> och kräva skadestånd för sina merkostnader, till exempel vad det kostar att ta in en annan entreprenör för att färdigställa jobbet, plus förseningsskador.</p>
+<p>Två saker är värda att förstå om skadeståndet. För det första klassas ersättningskravet efter en obefogad hävning som ett skadeståndskrav – slutavräkningsregeln i kap 8 § 5 är inte direkt tillämplig. För det andra har den skadelidande parten bevisbördan för sin påstådda skada. Kan skadan inte styrkas utgår ingen ersättning, oavsett att hävningen var obefogad. Det skär åt båda håll: kan du inte bevisa din skada får du inget, och kan motparten inte bevisa sin slipper du betala. Poängen är att en felaktig hävning är en dyr och osäker historia – väg alltid in den risken innan du agerar.</p>
+
+<h2>Konsumentjobb: särskilda regler</h2>
+<p>Är beställaren privatperson gäller konsumenttjänstlagen. Du får inställa (avbryta) arbetet vid utebliven betalning, och du får även häva den återstående delen av tjänsten när du redan på förhand har starka skäl att tro att kunden inte kommer att betala. Men villkoren är strängare:</p>
+<ul>
+<li>Att bara <strong>inställa (avbryta) arbetet</strong> vid utebliven betalning kräver ingen lagstadgad skriftlig förhandsvarning (45 §). Men vill du <strong>häva</strong> den återstående delen av tjänsten måste du först påminna kunden om att betala och ge skälig tid för rättelse (46 §). Skicka den påminnelsen skriftligt – det är starkt att rekommendera för bevisningens skull, även om lagen inte kräver en viss form.</li>
+<li>Du är ändå skyldig att utföra arbete som inte kan skjutas upp utan risk för allvarlig skada för konsumenten.</li>
+<li>På den obetalda fakturan får du ta ut dröjsmålsränta enligt räntelagen: referensränta plus 8 procentenheter. Riksbankens referensränta är fastställd till 2,00 procent för både första och andra halvåret 2026, vilket ger en dröjsmålsränta på <strong>10,00 procent</strong> under 2026.</li>
+</ul>
+
+<h2>Checklista innan du häver</h2>
+<ol>
+<li>Skicka alltid en påminnelse (erinran) först, och gör det skriftligt för bevisningens skull. Utan att beställaren fått en chans att rätta dröjsmålet efter erinran saknar du hävningsgrund.</li>
+<li>Bedöm väsentligheten: hur stort är det obetalda beloppet i förhållande till kontraktssumman?</li>
+<li>Överväg stoppningsrätten (kap 8 § 3) som ett mildare steg – max en månad.</li>
+<li>Gör allt skriftligt: både påminnelse, avbrytande och en eventuell hävningsförklaring. Den skriftliga formen är ett krav för själva hävningsförklaringen.</li>
+<li>Säkra bevisningen: fakturor, ÄTA-underlag, dagbok och korrespondens.</li>
+<li>Ta juridisk hjälp innan du häver – risken vid en obefogad hävning är för stor för att gissa.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>Hävning står och faller med underlaget. ByggExp hjälper dig att hålla ordning på det som ofta blir tvistigt: vilka ÄTA-arbeten som är beställda, vad som är fakturerat och vad som är obetalt. Med tydlig dokumentation av tilläggsarbeten och offerter blir det enklare att visa att din fordran är verklig och väsentlig – och att påminnelser faktiskt har skickats. ByggExp ersätter inte juridisk rådgivning, men ger dig det spårbara underlag du behöver för att stå stadigt om en betalningstvist eskalerar.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag skicka påminnelse innan jag häver?</h3>
+<p>Ja. Enligt AB 04/ABT 06 kap 8 § 2 p.1 förutsätter hävningsrätten att du har skickat en erinran (påminnelse) och att beställaren inte rättat dröjsmålet utan dröjsmål efter den. Häver du utan påminnelse är hävningen formellt felaktig.</p>
+<h3>Hur stort måste det obetalda beloppet vara?</h3>
+<p>Det finns ingen fast gräns, men underlåtenheten måste vara av väsentlig betydelse. Ett litet belopp i förhållande till entreprenadens totala värde räcker inte. Bedöm alltid proportionen mellan det obetalda och kontraktssumman innan du agerar.</p>
+<h3>Vad händer om jag häver på fel grund?</h3>
+<p>Då blir din hävning obefogad och betraktas som ett väsentligt avtalsbrott. Beställaren kan häva mot dig och kräva skadestånd, till exempel merkostnaden för att färdigställa med en annan entreprenör. Ersättningen behandlas som ett skadeståndskrav, och den som kräver skadestånd måste kunna bevisa sin skada.</p>
+<h3>Gäller samma regler mot en privatperson?</h3>
+<p>Nej. Mot konsument gäller konsumenttjänstlagen, inte AB 04. Du får inställa (avbryta) arbetet vid utebliven betalning utan något lagstadgat krav på skriftlig förhandsvarning. Vill du däremot häva den återstående delen av tjänsten måste du först påminna kunden och ge skälig tid för rättelse (46 §). Oavsett vilket är du skyldig att utföra arbete som inte kan skjutas upp utan risk för allvarlig skada för kunden.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg ett vattentätt underlag redan från start. Dokumentera tilläggen med <a href="/sv/verktyg/ata-mall">vår ÄTA-mall</a> och håll offerterna spårbara med <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur ByggExp håller ihop beställningar, ÄTA och fakturaunderlag i ett flöde? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaderna förklarade</a> och <a href="/sv/blog/ata-arbeten">ÄTA-arbeten: så dokumenterar du rätt</a>.</p>
+`;
+
+const A_HAVNING_AV_ENTREPRENAD: BlogPost = {
+  _id: "code-"+"havning-av-entreprenad",
+  title: "Hävning av entreprenad vid utebliven betalning", slug: "havning-av-entreprenad", locale: "sv",
+  excerpt: "När får du som entreprenör häva vid utebliven betalning – och varför blir en obefogad hävning din dyraste faktura? Rekvisiten i AB 04/ABT 06, stoppningsrätten och reglerna mot konsument.", tag: "Entreprenadjuridik",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_HAVNING_AV_ENTREPRENAD_HTML,
+  seoTitle: "Hävning av entreprenad | ByggExp", seoDescription: "När får du som entreprenör häva vid utebliven betalning? Så uppfyller du rekvisiten i AB 04/ABT 06, använder stoppningsrätten rätt och undviker en dyr, obefogad hävning.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:00:00.000Z", createdAt: "2026-08-19T05:00:00.000Z", updatedAt: "2026-08-19T05:00:00.000Z",
+};
+
+const A_ARBETSTIDSLAGEN_BYGG_HTML = `
+<p>En missad dygnsvila eller ett överskridet övertidstak kan kosta ditt byggföretag en sanktionsavgift – även om medarbetaren själv ville jobba de extra timmarna. Arbetstidslagen (1982:673) lägger ansvaret för att reglerna hålls på arbetsgivaren, inte på den anställde. I byggbranschen med tidiga starter, resor, jourutryckningar och intensiva projektfaser är det lätt att tappa kontrollen på dygns- och veckovila om ingen dokumenterar timmarna löpande.</p>
+
+<p>Grunden för att klara detta är ordning i tiderna. Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och börja registrera arbetad tid, övertid och vila per medarbetare redan idag.</p>
+
+<h2>Så mycket får man jobba – ordinarie arbetstid</h2>
+<p>Ordinarie arbetstid enligt arbetstidslagens 5 § är högst 40 timmar per vecka. Går verksamheten inte att lägga jämnt – vilket sällan är fallet i bygg – får snittet på 40 timmar räknas ut över en period på högst fyra veckor. Det här är grundnivån innan någon övertid alls kommer in i bilden, och det är utifrån den du mäter allt annat. Om en anställd jobbar 45 timmar en vecka måste det balanseras av kortare veckor så att fyraveckorssnittet landar på 40.</p>
+
+<h2>Dygnsvila: 11 timmar sammanhängande</h2>
+<p>Varje arbetstagare ska ha minst 11 timmars sammanhängande ledighet under varje 24-timmarsperiod (13 §). Perioden mellan klockan 00.00 och 05.00 ska normalt ingå i dygnsvilan – nattvilan. Avvikelser är bara tillåtna vid tillfälliga och oförutsedda händelser, inte som en planerad del av schemat.</p>
+<p>Räkna på ett vanligt byggexempel: en snickare slutar klockan 19.00 efter en lång dag. Då får nästa arbetspass tidigast börja klockan 06.00 morgonen efter för att de 11 timmarna ska hållas. Planeras en tidig start klockan 05.30 samma vecka måste kvällen innan avslutas senast 18.30. Det låter enkelt men brister ofta vid restid till avlägsna arbetsplatser, jour och akuta insatser.</p>
+
+<h2>Veckovila: 36 timmar per sjudagarsperiod</h2>
+<p>Utöver dygnsvilan ska varje arbetstagare ha minst 36 timmars sammanhängande ledighet under varje sjudagarsperiod (14 §). Veckovilan ska så långt det är möjligt förläggas till veckoslut. Fallgropen dyker upp i intensiva slutspurter och vid helgarbete: tar man in personal en lördag utan att säkra en sammanhängande ledig period om 36 timmar någon annan gång under sjudagarsperioden, bryter man mot lagen. Här räcker det inte att titta på enskilda dygn – du måste se hela veckans mönster.</p>
+
+<h2>Övertidstaket du måste hålla</h2>
+<p>Övertid är tillåten, men bara inom tydliga ramar. Håll koll på samtliga dessa tak samtidigt:</p>
+<ul>
+<li><strong>Allmän övertid:</strong> högst 200 timmar per kalenderår och medarbetare.</li>
+<li><strong>Kortperiodtaket:</strong> högst 48 timmars övertid under en period om fyra veckor, alternativt högst 50 timmar per kalendermånad.</li>
+<li><strong>Extra övertid:</strong> ytterligare 150 timmar per kalenderår får tas ut om det finns särskilda skäl och situationen inte gått att lösa på annat rimligt sätt. Den totala övertiden (allmän plus extra) får ändå aldrig överstiga 48 timmar per fyra veckor eller 50 timmar per kalendermånad.</li>
+<li><strong>Totaltaket:</strong> ordinarie arbetstid plus övertid får i genomsnitt vara högst 48 timmar per vecka under en beräkningsperiod på fyra månader (EU:s arbetstidsdirektiv).</li>
+</ul>
+<p>Det sista taket är det som oftast förbises. Även om varje enskild månad ser rimlig ut kan snittet över fyra månader krypa över 48 timmar per vecka, och då är gränsen passerad oavsett hur timmarna fördelats.</p>
+
+<h2>Byggavtalet slår igenom</h2>
+<p>Ett kollektivavtal kan ersätta arbetstidslagens regler helt eller delvis, så länge EU:s miniminivå hålls. Har ditt företag Byggavtalet 2025–2027 (Byggföretagen–Byggnads, gäller 1 maj 2025 till 30 april 2027) är det avtalet du ska läsa, inte bara lagtexten. Byggavtalet bygger på minst 11 timmars dygnsvila och har egna regler för när och hur extra övertid får tas ut, ofta efter överenskommelse med facket. Exakta ramar, villkor och eventuella gränser per dygn står i avtalstexten – kontrollera den innan du planerar extra övertid eller avvikande arbetstid.</p>
+<p>Avtalet innehåller också arbetstidsförkortning: vid 40-timmarsvecka finns 6 dagars arbetstidsförkortning per intjänandeår från och med 31 mars 2026. Slutsatsen är enkel – kolla ditt avtal, inte bara lagen, innan du planerar övertid och skift.</p>
+
+<h2>Tidregistrering är arbetsgivarens ansvar</h2>
+<p>Arbetsgivaren är skyldig att föra anteckningar (journal) över jourtid, övertid och mertid för varje arbetstagare enligt 11 § arbetstidslagen. Hur anteckningarna ska föras regleras närmare i Arbetsmiljöverkets gällande föreskrifter. Anteckningarna ska vara tydliga, hållas tillgängliga på arbetsstället och bevaras så länge de gällande föreskrifterna kräver. Arbetstagaren och facket har rätt att ta del av dem. Det här är en lagstadgad skyldighet som ligger helt på företaget.</p>
+<p>Blanda inte ihop detta med den elektroniska personalliggaren, men koppla ihop rutinerna. Personalliggare krävs på byggarbetsplats där byggverksamhet bedrivs och den sammanlagda kostnaden överstiger fyra prisbasbelopp exklusive moms. Prisbasbeloppet 2026 är 59 200 kr, vilket ger gränsen 236 800 kr. Alla som är verksamma på platsen ska registreras dagligen med namn, personnummer och tider för in- och utcheckning. Uppgifterna ska vara elektroniska, kunna visas vid oanmäld kontroll och sparas i två år. Notera att ID06 inte är ett lagkrav – Skatteverket kräver elektronisk registrering av namn, personnummer och tider, inte ett specifikt system.</p>
+
+<h2>Vad det kostar att göra fel</h2>
+<p>Den gamla övertidsavgiften i arbetstidslagen ersattes den 1 juli 2014 av sanktionsavgifter. Arbetsmiljöverket utövar tillsyn, kan göra inspektioner och besluta om förelägganden, förbud och sanktions- eller straffavgifter vid brott mot exempelvis övertidstaket och anteckningsskyldigheten. På personalliggarsidan kan Skatteverket ta ut kontrollavgifter om liggaren saknas eller är bristfällig. Ansvaret ligger genomgående hos arbetsgivaren – att en medarbetare frivilligt jobbade över friar inte företaget.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp samlar tidregistreringen på ett ställe så att du slipper räkna dygns- och veckovila i huvudet. Medarbetarna rapporterar arbetad tid per dag och projekt, och du får underlaget som krävs för journalen över övertid och mertid enligt 11 §. Timmarna blir sökbara och sparbara under de år lagen kräver, och samma data ligger till grund för lön och fakturering. ByggExp är inget juridiskt kontrollsystem som automatiskt godkänner ditt schema mot avtalet – men med löpande och korrekt dokumenterade tider är det enkelt att se när en medarbetare närmar sig ett tak och att visa upp underlaget vid en kontroll. Börja med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och gå vidare till digital rapportering när flödet sitter.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur många timmars dygnsvila måste jag ge?</h3>
+<p>Minst 11 timmars sammanhängande ledighet under varje 24-timmarsperiod, och nattvilan mellan 00.00 och 05.00 ska normalt ingå. Avvikelser är bara tillåtna vid tillfälliga, oförutsedda händelser. Har ni Byggavtalet gäller samma minimum om 11 timmar.</p>
+<h3>Hur mycket övertid är tillåten per år?</h3>
+<p>Allmän övertid är högst 200 timmar per kalenderår. Vid särskilda skäl kan ytterligare 150 timmar extra övertid tas ut. Oavsett detta får övertiden aldrig överstiga 48 timmar under fyra veckor eller 50 timmar per kalendermånad, och den totala arbetstiden får i snitt vara högst 48 timmar per vecka över fyra månader.</p>
+<h3>Är ID06 ett lagkrav?</h3>
+<p>Nej. Lagen kräver elektronisk personalliggare med registrering av namn, personnummer och in- och utcheckningstider på byggarbetsplatser över 236 800 kr (2026). Skatteverket kräver inte ett specifikt system, så lösningar utan ID06-kort kan uppfylla lagkravet.</p>
+<h3>Vem ansvarar för tidregistreringen?</h3>
+<p>Arbetsgivaren. Skyldigheten att föra journal över jour-, över- och mertid ligger på företaget enligt 11 § arbetstidslagen, med de närmare reglerna i Arbetsmiljöverkets gällande föreskrifter. Anteckningarna ska hållas tillgängliga och bevaras enligt föreskrifterna. Att en anställd själv ville jobba mer ändrar inte ansvaret.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg en rutin där varje timme registreras löpande, så att dygnsvila, veckovila och övertidstak blir synliga innan de bryts. Starta med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, och vill du se hur digital tidregistrering fungerar för ditt byggföretag – <a href="/sv/contact">boka en demo</a> så visar vi upplägget.</p>
+
+<p>Relaterat: <a href="/sv/blog/tidrapportering">Tidrapportering i byggföretag</a> och <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>.</p>
+`;
+
+const A_ARBETSTIDSLAGEN_BYGG: BlogPost = {
+  _id: "code-"+"arbetstidslagen-bygg",
+  title: "Arbetstidslagen i byggbranschen: dygnsvila, övertid och tidregistrering", slug: "arbetstidslagen-bygg", locale: "sv",
+  excerpt: "Dygnsvila, veckovila, övertidstak och tidregistrering enligt arbetstidslagen – en praktisk genomgång för byggföretag, med Byggavtalets regler och sanktionsavgifterna du vill undvika.", tag: "Arbetsrätt",
+  coverImageUrl: "/landing/verktyg/tidrapport-preview.webp", contentHtml: A_ARBETSTIDSLAGEN_BYGG_HTML,
+  seoTitle: "Arbetstidslagen i bygg: vila & övertid | ByggExp", seoDescription: "Dygnsvila 11 h, veckovila 36 h och övertidstaken – så håller ditt byggföretag arbetstidslagen och sköter tidregistreringen rätt enligt 11 §.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/tidrapport-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:03:00.000Z", createdAt: "2026-08-19T05:03:00.000Z", updatedAt: "2026-08-19T05:03:00.000Z",
+};
+
+const A_FORSENINGSVITE_ENTREPRENAD_HTML = `
+<p>När ett bygge drar över sluttiden är den avgörande frågan enkel: vem betalar för förseningen? Svaret står i kontraktet. Förseningsvite är den avtalade summa entreprenören betalar per vecka som färdigställandet blir försenat, och den bestämmer i praktiken vem som bär kostnaden. Ett räkneexempel gör poängen tydlig: på en kontraktssumma om 4 Mkr innebär ett vite på 1 % att det kostar 40 000 kr för varje påbörjad vecka. Löper förseningen över fem veckor blir det 200 000 kr. Vite finns dock inte automatiskt i lagen — det gäller bara om det är inskrivet i avtalet, och bara om klausulen är skriven på rätt sätt.</p>
+
+<p>Vitesbeloppet regleras i ÄTA- och kontraktshandlingarna, så börja med att strukturera ändringar och tillägg korrekt med <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall -&gt;</a> så att sluttiden och rätten till tidsförlängning är dokumenterad från dag ett.</p>
+
+<h2>Så räknar du ut förseningsvitet</h2>
+<p>Formeln är rak: <strong>vite = avtalad procentsats × kontraktssumman, per påbörjad vecka</strong>. Ta en kontraktssumma på 4 000 000 kr och jämför tre vanliga nivåer:</p>
+<ul>
+<li><strong>0,5 %</strong> per vecka = 20 000 kr/vecka</li>
+<li><strong>1 %</strong> per vecka (branschpraxis) = 40 000 kr/vecka</li>
+<li><strong>2 %</strong> per vecka = 80 000 kr/vecka</li>
+</ul>
+<p>Det viktigaste räknetekniska draget är att vitet tas ut per <em>påbörjad</em> vecka. Det innebär att en enda dag in i en ny vecka utlöser en full veckas vite — det avrundas alltid uppåt, aldrig proportionellt per dag. Är entreprenören åtta dagar sen blir det alltså två veckors vite, inte en vecka plus en dag. På exemplet ovan med 1 % betyder det 80 000 kr, inte 45 000 kr. Skriv därför alltid ut om beräkningsbasen är kontraktssumman exklusive eller inklusive moms; i kommersiella avtal räknas den normalt på beloppet exklusive moms.</p>
+
+<h2>AB 04, ABT 06 och konsumentfallet</h2>
+<p>I kommersiella entreprenader regleras förseningsvite i standardavtalen AB 04 (utförandeentreprenad) och ABT 06 (totalentreprenad), båda i <strong>kap 5 § 3</strong>. En central detalj: standardformulären lämnar själva vitesbeloppet <strong>blankt</strong>. Parterna måste fylla i procentsats eller krontal i kontraktsformuläret. Är rutan tom finns inget <em>vite</em> att kräva — men det betyder inte att förseningen är påföljdsfri. Enligt kap 5 § 3 har beställaren då i stället rätt till ersättning för den skada som förseningen medför, alltså allmänt skadestånd. Skillnaden är att beställaren måste bevisa sin faktiska förlust i stället för att luta sig mot ett avtalat schablonbelopp. Branschkutymen är 1 % av kontraktssumman per påbörjad vecka, medan avtal i praktiken rör sig mellan cirka 0,5 och 2 % per vecka.</p>
+<p>För privatkund gäller andra regler. Konsumenttjänstlagen (1985:716) innehåller <strong>ingen lagstadgad vitesnivå</strong>. Vid dröjsmål kan konsumenten hålla inne betalning, kräva att tjänsten utförs, häva om dröjsmålet är av väsentlig betydelse och kräva skadestånd under kontrollansvar — men skadestånd förutsätter att en faktisk förlust bevisas, det finns ingen fast procentsats. Standardavtalen för konsument, <strong>ABS 18</strong> (nybyggnad av småhus) och <strong>Hantverkarformuläret 17</strong> (om- och tillbyggnad), lägger ändå till en vitesklausul, typiskt runt 1 % per påbörjad vecka med ett tak. Kontrollera alltid aktuell nivå och tak i den gällande blanketten innan du citerar den.</p>
+
+<h2>Så måste klausulen skrivas för att gälla</h2>
+<p>En vitesklausul biter bara om fyra saker är på plats. Saknas någon av dem riskerar hela vitet att falla:</p>
+<ol>
+<li><strong>Tydlig, bindande färdigställandetid.</strong> Det måste finnas ett bestämt datum eller en definierad kontraktstid att mäta förseningen mot. Formuleringar som "arbetet ska utföras skyndsamt" räcker inte.</li>
+<li><strong>Ifyllt vitesbelopp och beräkningsbas.</strong> Ange procentsats eller krontal, per påbörjad vecka, samt om det räknas på kontraktssumman exklusive moms.</li>
+<li><strong>Exklusivitet.</strong> Skriv ut att vitet är den enda påföljden för förseningen. När vite är avtalat är det som huvudregel den enda påföljden — beställaren har normalt inte rätt till ytterligare skadestånd (t.ex. förlorad hyra) för samma försening utöver vitet. Undantag kan förekomma, bland annat vid grov vårdslöshet enligt allmänna avtalsrättsliga principer.</li>
+<li><strong>Eventuellt tak.</strong> Ett takbelopp (ofta uttryckt som ett maximalt antal veckor) ger båda parter förutsägbarhet och minskar risken för jämkning.</li>
+</ol>
+<p>Ett orimligt högt vite kan jämkas nedåt av domstol enligt avtalslagen 36 § (generalklausulen). Ett mycket lågt avtalat vite fungerar däremot i regel som ett tak för vad beställaren över huvud taget kan få ut för förseningen — vilket kan slå åt bägge håll beroende på vilken sida du står.</p>
+
+<h2>När entreprenören slipper vite</h2>
+<p>Vite löper bara om förseningen beror på entreprenören. Enligt AB 04 och ABT 06 kap 4 §§ 2–3 har entreprenören rätt till <strong>tidsförlängning</strong> — och alltså en framflyttad sluttid — vid hinder utanför sin kontroll:</p>
+<ul>
+<li>ÄTA-arbeten som beställaren beställt</li>
+<li>Beställarens egna förhållanden (t.ex. försenat underlag eller sen tillgång till arbetsplatsen)</li>
+<li>Hinder som entreprenören inte råder över</li>
+<li>Exceptionellt väder utöver det normala</li>
+</ul>
+<p>Vitet börjar löpa först efter den förlängda färdigställandetiden. Men rätten till tidsförlängning är inte gratis: entreprenören måste <strong>anmäla hindret och ÄTA-arbetena i tid</strong>. Missas anmälan står den ursprungliga sluttiden kvar — och då träffar vitet fullt ut. Här är dokumentationen avgörande, för det är den som visar att förseningen inte var entreprenörens fel.</p>
+
+<h2>Vanliga misstag som gör vitesklausulen värdelös</h2>
+<ul>
+<li><strong>Blank vitesruta.</strong> Standardformuläret lämnas ofta ifyllt i övrigt men med tom vitesrad — resultatet är noll vite (beställaren är då hänvisad till att bevisa faktisk skada i stället).</li>
+<li><strong>Vag sluttid.</strong> Utan ett bindande datum finns inget att räkna försening från.</li>
+<li><strong>Stapling av vite och skadestånd.</strong> Att kräva både vite och ytterligare skadestånd för samma försening håller normalt inte; vitet är exklusivt.</li>
+<li><strong>Missad reklamationsfrist.</strong> Vite dras inte av automatiskt — beställaren måste aktivt göra kravet gällande inom avtalets frist (se reklamations- och preskriptionsreglerna i kap 6). Görs det för sent kan rätten till vite gå förlorad.</li>
+<li><strong>Orimligt högt vite.</strong> Ett vite som ligger långt över branschpraxis riskerar att jämkas enligt avtalslagen 36 §.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte det juridiska kontraktet, men gör det du behöver för att kunna hävda — eller freda dig mot — ett vite: hålla ordning på tider och underlag. I plattformen dokumenterar du ÄTA-arbeten, hinder och tidsförlängningar löpande, med datum och koppling till rätt projekt. När en diskussion om försening uppstår har du då en spårbar historik som visar när hinder anmäldes och vilka ändringar som påverkade sluttiden. Det är precis den bevisning som avgör om vitet löper eller inte. Du får också struktur på kontraktssumma och projektstatus, så att en eventuell vitesberäkning bygger på rätt siffror från början.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket är förseningsvite normalt?</h3>
+<p>Branschpraxis i kommersiell entreprenad är 1 % av kontraktssumman per påbörjad vecka. I praktiken varierar avtalen mellan ungefär 0,5 och 2 % per vecka. Nivån är alltid en förhandlingsfråga och måste fyllas in manuellt i kontraktsformuläret enligt AB 04 eller ABT 06 kap 5 § 3.</p>
+<h3>Kan beställaren kräva skadestånd utöver vitet?</h3>
+<p>Normalt inte. När förseningsvite är avtalat är det som huvudregel den exklusiva påföljden för förseningen, och beställaren har inte rätt till ytterligare skadestånd för samma dröjsmål — undantag kan gälla bland annat vid grov vårdslöshet. Det är därför exklusiviteten bör skrivas ut tydligt i klausulen. Har vite däremot inte avtalats har beställaren i stället rätt till ersättning för den skada förseningen bevisligen medför.</p>
+<h3>Räknas vite på summan med eller utan moms?</h3>
+<p>Vitet räknas på kontraktssumman, i kommersiella avtal normalt exklusive moms. Själva vitet är i regel utanför momsens tillämpningsområde eftersom det är en ersättning och inte betalning för en levererad tjänst. Bekräfta momsbehandlingen mot Skatteverkets aktuella vägledning innan du fakturerar.</p>
+<h3>Vad händer om jag glömmer att kräva vitet i tid?</h3>
+<p>Vite dras inte av automatiskt. Beställaren måste aktivt göra kravet gällande inom avtalets reklamationsfrist enligt kap 6. Görs det för sent kan rätten till vite förfalla helt, även om förseningen är obestridd.</p>
+
+<h2>Kom igång</h2>
+<p>Se till att sluttid, ÄTA-arbeten och tidsförlängningar är dokumenterade innan förseningen blir en tvist. Börja med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a> och de övriga gratisverktygen på <a href="/sv/verktyg">/sv/verktyg</a>. Vill du se hur ByggExp håller ihop tider, ÄTA och kontraktssummor i skarpa projekt? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 — vad skiljer standardavtalen</a> och <a href="/sv/blog/ata-arbeten">ÄTA-arbeten: så hanterar du ändringar och tillägg</a>.</p>
+`;
+
+const A_FORSENINGSVITE_ENTREPRENAD: BlogPost = {
+  _id: "code-"+"forseningsvite-entreprenad",
+  title: "Förseningsvite i entreprenad: så räknar och skriver du klausulen", slug: "forseningsvite-entreprenad", locale: "sv",
+  excerpt: "Förseningsvite avgör vem som betalar när bygget drar över sluttiden. Så räknar du ut det, så skriver du klausulen rätt och så gäller kap 5 § 3 i AB 04 och ABT 06.", tag: "Entreprenadjuridik",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_FORSENINGSVITE_ENTREPRENAD_HTML,
+  seoTitle: "Förseningsvite i entreprenad | ByggExp", seoDescription: "Så fungerar förseningsvite i AB 04 och ABT 06: räkna ut vitet per påbörjad vecka, skriv klausulen rätt och vet vad som gäller om vitesrutan är tom.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:06:00.000Z", createdAt: "2026-08-19T05:06:00.000Z", updatedAt: "2026-08-19T05:06:00.000Z",
+};
+
+const A_NYA_ASBESTREGLER_2026_HTML = `
+<p>Om du driver ett byggföretag eller jobbar som hantverkare är de nya asbestreglerna något du behöver ha koll på under 2026. Reglerna trädde formellt i kraft redan 19 december 2025, men det är i vardagen ute på jobben de börjar märkas nu. Två förändringar sticker ut: det hygieniska gränsvärdet sänks tiofaldigt, från 0,1 till 0,01 fiber per kubikcentimeter luft, och utbildningskravet utökas så att det nu träffar även målare, elektriker och VVS-tekniker — inte bara den som river asbest.</p>
+
+<p>Ett bra första steg är att strukturera hur du dokumenterar risker och skyddsåtgärder på varje projekt. Använd gärna <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a> för att fånga upp asbestrisker redan i riskbedömningen.</p>
+
+<h2>Det nya gränsvärdet — 0,01 fiber/cm³</h2>
+<p>Det hygieniska gränsvärdet anger den högsta genomsnittliga halten asbestfibrer i luften som en arbetstagare får utsättas för. Att värdet sänks tiofaldigt, från 0,1 till 0,01 fiber/cm³, är ingen kosmetisk justering. Det innebär i praktiken att arbetsmetoder, dammkontroll och andningsskydd som tidigare klarade gränsen inte längre gör det med samma marginal.</p>
+<p>Konsekvensen blir hårdare krav på inkapsling, undertrycksventilation och punktutsug, samt på att andningsskyddet har rätt skyddsfaktor för den aktuella exponeringen. Sänkningen följer skärpta krav på EU-nivå och speglar den samlade kunskapen om att det inte finns någon säker nivå av asbestexponering. För dig som arbetsgivare betyder det att gamla arbetsberedningar behöver granskas mot det nya värdet.</p>
+
+<h2>Vilka AFS-föreskrifter styr?</h2>
+<p>De hygieniska gränsvärdena för luftvägsexponering regleras i AFS 2023:14. Reglerna om risker vid asbestarbete och om medicinska kontroller finns i Arbetsmiljöverkets övriga föreskrifter i 2023 års regelstruktur. Kraven på asbest har skärpts genom ändringsföreskrifter som beslutats under 2025 — däribland AFS 2025:6 — och som tillsammans genomför det sänkta gränsvärdet, de utökade utbildningskraven och de skärpta medicinska kontrollerna. Kontrollera alltid de exakta föreskriftsnumren och senaste lydelsen direkt hos Arbetsmiljöverket innan du bygger dina rutiner på dem.</p>
+<p>En vanlig missuppfattning är att reglerna gäller från 1 januari 2026. Det stämmer inte — de trädde i kraft 19 december 2025, och det finns ingen övergångsperiod. Kraven gäller alltså fullt ut redan nu. Att de ofta kallas "2026-reglerna" beror på att det är under 2026 de får fullt genomslag i det dagliga arbetet.</p>
+
+<h2>Utökade utbildningskrav — nu berörs målare, el och VVS</h2>
+<p>Här ligger kärnan i förändringen. Tidigare krävdes formell asbestutbildning i huvudsak av dem som direkt hanterade asbest. Nu måste även den som riskerar att exponeras för asbesthaltigt damm ha utbildning — även om personen aldrig aktivt river asbest. Arbetsmiljöverket pekar uttryckligen ut målare, elektriker, VVS-tekniker, byggnadsarbetare och fastighetsskötare.</p>
+<p>Tänk på de konkreta situationerna i äldre byggnader:</p>
+<ul>
+<li><strong>Målaren</strong> som slipar gammalt spackel eller fönsterkitt som kan innehålla asbest.</li>
+<li><strong>Elektrikern</strong> som drar kabel genom äldre bjälklag, väggar eller kanaler med asbesthaltigt material.</li>
+<li><strong>VVS-teknikern</strong> som kapar eller demonterar rör med asbesthaltig isolering.</li>
+</ul>
+<p>Utbildningen ska vara anpassad till arbetsuppgiften, innehålla både teori och praktik och avslutas med ett kunskapsprov. Omfattningen styrs av arbetsuppgiften snarare än av ett fast antal timmar — teoridelen kombineras med arbetsgivarledd praktisk instruktion. Utbildningsintyget ska nu också innehålla utökad information.</p>
+
+<h2>Skärpta medicinska kontroller</h2>
+<p>Tidigare fanns ett undantag som innebar att arbetstagare med mindre än 50 timmars asbestexponering per år slapp medicinsk kontroll. Det undantaget är nu borttaget. Alla som omfattas av ett asbesttillstånd, samt de som utför "annat arbete" med exponering för asbesthaltigt damm, ska genomgå medicinsk kontroll och tjänstbarhetsbedömning.</p>
+<p>För dig som arbetsgivare betyder det att kontrollprogrammet måste uppdateras så att fler medarbetare fångas upp — inte bara rivningspersonal utan även de yrkesgrupper som nu omfattas av utbildningskravet. Se till att bokningarna och intygen dokumenteras och följs upp löpande.</p>
+
+<h2>Tillstånd och intyg — behåller du dem?</h2>
+<p>En positiv nyhet: tillstånd som utfärdats före 19 december 2025 gäller fortfarande. Du behöver alltså inte ansöka på nytt enbart på grund av regeländringen, och tidigare genomförd asbestutbildning accepteras även framöver. Det är ingen automatisk omansökan.</p>
+<p>Men — och det är viktigt — verksamheten måste ändå leva upp till de nya kraven. Det innebär att du behöver säkerställa dammkontroll, andningsskydd, riskbedömningar och medicinska program enligt de skärpta reglerna, även om själva tillståndet ligger fast.</p>
+
+<h2>Checklista för arbetsgivare 2026</h2>
+<p>Asbest förbjöds i byggmaterial i Sverige 1982. Allt som byggdes eller renoverades före dess är potentiellt riskabelt. Så här kommer du i gång:</p>
+<ol>
+<li>Inventera byggnader uppförda före 1982 innan arbetet startar.</li>
+<li>Uppdatera riskbedömningar och arbetsberedningar mot det nya gränsvärdet 0,01 fiber/cm³.</li>
+<li>Boka utbildning även för indirekt exponerad personal — målare, el, VVS.</li>
+<li>Se över andningsskydd och övrig personlig skyddsutrustning så skyddsfaktorn räcker.</li>
+<li>Uppdatera det medicinska kontrollprogrammet nu när 50-timmarsundantaget är borta.</li>
+<li>Dokumentera allt — inventering, riskbedömning, utbildningsintyg och kontroller.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte utbildning eller mätningar — men verktyget hjälper dig att hålla ihop dokumentationen som de nya reglerna kräver. Med egenkontroll- och riskbedömningsmallar kan du fånga upp asbestrisker per projekt, notera vilka byggår som gäller och koppla åtgärder till rätt medarbetare. Du samlar egenkontroller, riskbedömningar och intyg på ett ställe, vilket gör det enklare att visa upp underlag vid en inspektion. Tänk på att sparkraven skiljer sig åt: allmän bokföring och affärsunderlag ska sparas i minst sju år, men register över asbestexponerade arbetstagare och resultaten från de medicinska kontrollerna ska bevaras betydligt längre — minst 40 år efter att exponeringen upphört.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Gäller reglerna även småföretag och enmansfirmor?</h3>
+<p>Ja. Kraven på gränsvärde, utbildning och medicinska kontroller gäller oavsett företagets storlek. Även den som driver enmansfirma och riskerar exponeras för asbesthaltigt damm omfattas av utbildnings- och kontrollkraven.</p>
+<h3>Måste ROT-jobb i äldre villor riskbedömas?</h3>
+<p>Om villan är byggd eller renoverad före asbestförbudet 1982 finns en reell risk för asbesthaltigt material i exempelvis kitt, spackel, isolering och golv. Sådana jobb ska riskbedömas innan arbetet påbörjas, och åtgärder vidtas om asbest kan förekomma.</p>
+<h3>Hur länge måste vi spara underlagen om asbestexponering?</h3>
+<p>Register över vilka arbetstagare som exponerats för asbest och resultaten från de medicinska kontrollerna ska bevaras länge — minst 40 år efter att exponeringen upphört. Det är väsentligt längre än de sju år som gäller för vanlig bokföring, eftersom asbestrelaterad sjukdom kan visa sig först efter många decennier.</p>
+<h3>Vad händer vid en inspektion från Arbetsmiljöverket?</h3>
+<p>Brister i utbildning, riskbedömning, skyddsutrustning eller medicinska kontroller kan leda till krav på åtgärder och i vissa fall sanktionsavgifter. Dokumenterade rutiner och intyg är din bästa försäkring — de visar att verksamheten uppfyller kraven.</p>
+
+<h2>Kom igång</h2>
+<p>2026 är året kraven märks i vardagen. Boka utbildning för berörd personal, inventera dina äldre projekt och uppdatera riskbedömningarna redan nu. Kom i gång med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a> för att strukturera dokumentationen, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller ihop arbetsmiljöunderlaget per projekt.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar som egenföretagare</a> och <a href="/sv/blog/heta-arbeten">Heta arbeten — regler och tillstånd</a>.</p>
+`;
+
+const A_NYA_ASBESTREGLER_2026: BlogPost = {
+  _id: "code-"+"nya-asbestregler-2026",
+  title: "Nya asbestregler 2026 – det här gäller för byggföretag", slug: "nya-asbestregler-2026", locale: "sv",
+  excerpt: "De skärpta asbestreglerna märks i vardagen 2026: sänkt gränsvärde, utbildningskrav för fler yrken och tuffare medicinska kontroller. Så förbereder du företaget.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_NYA_ASBESTREGLER_2026_HTML,
+  seoTitle: "Nya asbestregler 2026: guide för bygg | ByggExp", seoDescription: "Asbestreglerna skärptes dec 2025: gränsvärdet sänks till 0,01 fiber/cm³, fler yrken kräver utbildning och medicinska kontroller. Guide för byggföretag 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:09:00.000Z", createdAt: "2026-08-19T05:09:00.000Z", updatedAt: "2026-08-19T05:09:00.000Z",
+};
+
+const A_FALLSKYDD_KRAV_BYGG_HTML = `
+<p>Fall från höjd är den enskilt vanligaste dödsorsaken på svenska byggarbetsplatser, och saknat fallskydd är också något Arbetsmiljöverket kan slå ner på direkt i plånboken. Utförs arbete med en fallhöjd på 2 meter eller mer utan föreskrivet fallskydd kan bolaget påföras en <strong>sanktionsavgift på mellan 40 000 och 400 000 kronor</strong> – utan domstol, utan diskussion. Reglerna byttes dessutom ut vid årsskiftet, så många hantverkare googlar fortfarande paragrafer som inte längre gäller. Här får du de konkreta 2026-kraven: 2-metersregeln, varför kollektivt fallskydd alltid går före selen, och exakt hur avgiften räknas ut.</p>
+
+<p>Bygg in fallskyddskontrollen i ditt löpande arbetsmiljöarbete med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall &rarr;</a> så att räcken, hål och förankringspunkter dokumenteras innan arbetet på höjd påbörjas.</p>
+
+<h2>Nya regler 2025/2026 – gamla paragrafer gäller inte längre</h2>
+<p>Den 1 januari 2025 upphävdes den gamla <em>AFS 1999:3 Byggnads- och anläggningsarbete</em>. Fallskyddskraven för bygg- och anläggningsarbete finns nu i <strong>AFS 2023:13 &quot;Risker vid vissa typer av arbeten&quot;</strong>, i kapitlet om bygg- och anläggningsarbete (kapitel 5). Föreskriften har redan hunnit ändras två gånger, genom AFS 2025:6 och AFS 2025:8.</p>
+<p>Det praktiska problemet är att en stor del av det material som ligger högt i sökresultaten – checklistor, mallar, gamla utbildningsunderlag – fortfarande hänvisar till AFS 1999:3. Refererar din arbetsmiljöplan eller dina rutiner till upphävda paragrafer signalerar det bristande koll om Arbetsmiljöverket gör ett besök. Se till att interna dokument pekar på rätt föreskrift innan du bygger vidare på dem.</p>
+
+<h2>2-metersregeln förklarad</h2>
+<p>Huvudregeln är enkel att formulera men lätt att slarva med: <strong>när fallhöjden är 2 meter eller mer ska fallrisken normalt förebyggas</strong> med gemensamma (kollektiva) fallskyddsanordningar. Det är vid den gränsen sanktionsavgiften slår till.</p>
+<p>Men 2-metersgränsen är inte en frikort-nivå under sig. Föreskriften slår också fast att <strong>risk för fall till lägre nivå alltid ska förebyggas – även under 2 meter</strong>. Ett fall på en dryg meter ner mot utstickande armeringsjärn, ner i ett schakt eller mot en betongkant kan vara minst lika allvarligt som ett högre fall mot plan mark. Bedöm konsekvensen, inte bara höjden. Den som mekaniskt tänker &quot;under två meter, alltså inget skydd&quot; missar både lagkravet och den faktiska risken.</p>
+
+<h2>Kollektivt före personligt – prioritetsordningen</h2>
+<p>Det här är den vanligaste feltolkningen på svenska byggen. Föreskriften ställer en tydlig prioritetsordning. Fallrisken ska i första hand förebyggas med <strong>gemensamma fallskyddsanordningar</strong>:</p>
+<ul>
+<li>Skyddsräcken</li>
+<li>Mobila eller fasta arbetsplattformar</li>
+<li>Arbetskorgar</li>
+<li>Ställningar med skyddsräcken</li>
+<li>Fallskyddsnät</li>
+</ul>
+<p>Personligt fallskydd i form av sele är <strong>inte ett likvärdigt alternativ</strong>. Personligt fallskydd får användas bara &quot;om gemensamma fallskyddsanordningar inte kan användas på grund av arbetets art&quot;. Selen är alltså sista utvägen, inte en genväg du får välja för att det går snabbare att spänna på sig en sele än att resa ett räcke.</p>
+<p>Just den genvägen är det klassiska felet: laget börjar i selen för att komma igång, trots att ett skyddsräcke eller en plattform hade fungerat utmärkt. Det är en överträdelse även om ingen faller. Kom också ihåg att stegar och ställningar regleras separat, i <strong>AFS 2023:9</strong> (stegar, ställningar och viss annan utrustning för arbete på höjd).</p>
+
+<h2>Så ska skyddsräcket se ut</h2>
+<p>Ett skyddsräcke som inte uppfyller kraven räknas i praktiken inte som fallskydd. Föreskriften anger att skyddsräcken ska vara <strong>hållfasta och minst 1 meter höga</strong>, och ha <strong>fotlist, mellanledare och överledare</strong> – eller ge motsvarande skydd. Ett enkelt snöre eller en ensam överledare duger alltså inte.</p>
+<p>Vid takarbete krävs skyddsräcke <strong>även på takkanten vid gavel</strong>, inte bara längs takfoten. Öppningar och hål ska förses med skyddstäckning eller skyddsräcken, och ytor med genomtrampningsrisk ska spärras av. Föreskriften anger även att arbete med transport upp och ner från plan som ligger mer än 2 meter över markplanet ska ordnas så att skyddsräcke eller annan skyddsanordning <strong>inte behöver tas bort</strong> – ett tillfälligt borttaget räcke &quot;bara en stund&quot; är precis det scenario reglerna vill stoppa.</p>
+
+<h2>Takarbete: när selen faktiskt är tillåten</h2>
+<p>Tak är det tydligaste undantaget, men det är villkorat. Personligt fallskydd får väljas framför kollektivt bara efter en dokumenterad <strong>rimlighetsbedömning</strong> som väger tre saker mot varandra:</p>
+<ul>
+<li>Tiden för hela takarbetet</li>
+<li>Riskerna med att välja personligt fallskydd</li>
+<li>Tiden det tar att montera skyddsräcke eller motsvarande utrustning</li>
+</ul>
+<p>Bedrivs takarbetet på en begränsad yta räcker det med fallskydd inom den ytan, förutsatt att resten av taket är <strong>tydligt och hållbart avspärrat</strong>. Väljer du sele ställs krav på själva utrustningen: den ska bestå av en sele kopplad till lämpliga fallskyddskomponenter och vara förankrad i en säker förankringspunkt, så att ett fall antingen förhindras eller stoppas och bromsas. En sele som hänger i en osäker infästning ger falsk trygghet, inte skydd.</p>
+
+<h2>Böteshotet: så räknas sanktionsavgiften</h2>
+<p>Det är sanktionsavgiftsbestämmelsen i kapitel 5 som gör fallskydd till en ekonomisk fråga, inte bara en säkerhetsfråga. Utförs arbete med fallhöjd 2 meter eller mer och föreskrivet fallskydd saknas, <strong>ska sanktionsavgift betalas</strong>. Lägsta avgift är 40 000 kr, högsta 400 000 kr.</p>
+<p>Så räknas beloppet (nivåer enligt ändringen i AFS 2025:6):</p>
+<ul>
+<li><strong>500 eller fler sysselsatta:</strong> 400 000 kr.</li>
+<li><strong>Färre än 500 sysselsatta:</strong> 40 000 kr + (antal sysselsatta − 1) × 721 kr, avrundat nedåt till närmaste hundratal.</li>
+</ul>
+<p>Den avgörande detaljen: antalet sysselsatta räknas över <strong>verksamhetens samtliga arbetsställen</strong> – inte bara laget som står på det aktuella bygget – och avser läget dagen för överträdelsen. Både anställda och inhyrd arbetskraft räknas in. Ett litet företag på plats kan alltså få en avgift baserad på hela bolagets storlek. Överträder man dessutom flera bestämmelser för samma arbete kan avgift påföras för var och en.</p>
+<p><strong>Räkneexempel:</strong> ett byggföretag med 12 sysselsatta totalt, där en snickare arbetar utan räcke på 3 meters höjd. Avgiften blir 40 000 + (12 − 1) × 721 = 40 000 + 7 931 = 47 931, avrundat nedåt till <strong>47 900 kr</strong>. För ett räcke som hade tagit en halvtimme att montera.</p>
+
+<h2>Checklista: undvik avgiften</h2>
+<ul>
+<li>Projektera kollektivt fallskydd redan i arbetsmiljöplanen – inte i efterhand.</li>
+<li>Res räcken kompletta (minst 1 m, fotlist + mellanledare + överledare) <strong>innan</strong> arbete på höjd påbörjas.</li>
+<li>Sätt gavelräcke vid takarbete, inte bara vid takfoten.</li>
+<li>Täck eller räcka in alla hål och öppningar; spärra av genomtrampningsytor.</li>
+<li>Använd sele endast efter en dokumenterad rimlighetsbedömning.</li>
+<li>Kontrollera förankringspunkter innan selen kopplas in.</li>
+<li>Ordna transporter så att räcken inte behöver demonteras tillfälligt.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte räcket – men det hjälper dig bevisa att kontrollen faktiskt gjordes. Med egenkontroll-mallen bygger du en återkommande rutin där räcken, hål, avspärrningar och förankringspunkter kryssas av innan arbetet startar, med datum och ansvarig. Underlaget kopplas till projektets arbetsmiljöplan, så att prioritetsordningen kollektivt-före-personligt och eventuella takbedömningar finns dokumenterade om Arbetsmiljöverket frågar. Du får inget automatiskt skydd mot avgifter, men du får ordning och spårbarhet – vilket är precis det som skiljer ett skött bygge från ett som chansar.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vid vilken höjd krävs fallskydd på bygget?</h3>
+<p>Fallskydd med gemensamma anordningar krävs normalt när fallhöjden är 2 meter eller mer. Men risk för fall till lägre nivå ska alltid förebyggas, även under 2 meter, om konsekvensen kan bli allvarlig – till exempel fall mot armeringsjärn eller ner i ett schakt.</p>
+<h3>Får jag använda sele istället för räcke?</h3>
+<p>Bara som sista utväg. Personligt fallskydd får användas när gemensamma fallskyddsanordningar inte kan användas på grund av arbetets art. Vid takarbete krävs dessutom en dokumenterad rimlighetsbedömning. Att välja selen för att det går snabbare är inte tillåtet.</p>
+<h3>Hur mycket blir sanktionsavgiften om fallskydd saknas?</h3>
+<p>Lägst 40 000 kr och högst 400 000 kr. För företag med färre än 500 sysselsatta räknas 40 000 kr + (antal sysselsatta − 1) × 721 kr, avrundat nedåt till närmaste hundratal. Antalet räknas över alla arbetsställen och inkluderar inhyrd personal.</p>
+<h3>Vilken föreskrift gäller för fallskydd 2026?</h3>
+<p>AFS 2023:13 &quot;Risker vid vissa typer av arbeten&quot;, kapitel 5 om byggnads- och anläggningsarbete. Den ersatte AFS 1999:3 den 1 januari 2025 och har ändrats genom AFS 2025:6 och AFS 2025:8. Stegar och ställningar regleras separat i AFS 2023:9.</p>
+
+<h2>Kom igång</h2>
+<p>Kollektivt fallskydd är nästan alltid både billigare och juridiskt säkrare än att chansa på selen – ett räcke kostar timmar, en sanktionsavgift kostar tiotusentals kronor. Sätt upp en fallskyddskontroll som rutin med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du kopplar kontrollen till arbetsmiljöplanen för hela projektet.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – krav och innehåll</a> och <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>.</p>
+`;
+
+const A_FALLSKYDD_KRAV_BYGG: BlogPost = {
+  _id: "code-"+"fallskydd-krav-bygg",
+  title: "Fallskydd på bygget 2026 – krav, regler och sanktionsavgift", slug: "fallskydd-krav-bygg", locale: "sv",
+  excerpt: "Saknat fallskydd kan kosta 40 000–400 000 kr i sanktionsavgift utan domstol. Här är 2026-kraven: 2-metersregeln, kollektivt före sele och hur avgiften räknas.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_FALLSKYDD_KRAV_BYGG_HTML,
+  seoTitle: "Fallskydd på bygget 2026 – krav | ByggExp", seoDescription: "Fallskyddskrav på bygget 2026: 2-metersregeln, kollektivt fallskydd före sele och sanktionsavgift 40 000–400 000 kr enligt AFS 2023:13. Så undviker du boten.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:12:00.000Z", createdAt: "2026-08-19T05:12:00.000Z", updatedAt: "2026-08-19T05:12:00.000Z",
+};
+
+const A_ANSTALLNINGSAVTAL_MALL_BYGG_HTML = `
+<p>Ett slarvigt anställningsavtal är en av de dyraste genvägar ett byggföretag kan ta. Fel anställningsform, en glömd deadline eller en missad punkt i den lagstadgade informationen kan innebära att en tänkt visstidsanställd plötsligt är fast anställd — eller att företaget blir skadeståndsskyldigt. Efter LAS-reformen 2022 är kraven dessutom hårdare och deadlinerna kortare än många byggchefer tror. Den här guiden går igenom vilka anställningsformer som gäller i bygg, vad avtalet måste innehålla och var företag oftast snubblar.</p>
+
+<p>Vill du komma igång direkt hittar du en ifyllbar anställningsavtal-mall för bygg bland <a href="/sv/verktyg">våra gratis verktyg och mallar -&gt;</a>.</p>
+
+<h2>Tillsvidare är huvudregeln — välj anställningsform medvetet</h2>
+<p>Enligt LAS §4 gäller en anställning tills vidare om inget annat har avtalats. Det betyder att om ni tar in en yrkesarbetare utan att aktivt komma överens om en annan form, så är personen fast anställd från dag ett. Fast anställning är alltså inte något ni behöver skriva ett särskilt avtal om — det är det ni får om ni inte gör något annat.</p>
+<p>För byggföretag är tre tidsbegränsade former relevanta att känna till, utöver tillsvidareanställningen:</p>
+<ul>
+<li><strong>Provanställning</strong> — för att pröva en ny yrkesarbetare, max sex månader.</li>
+<li><strong>Särskild visstidsanställning (SÄVA)</strong> — för arbetstopp och projektbehov.</li>
+<li><strong>Vikariat</strong> — när någon ersätter en frånvarande anställd.</li>
+</ul>
+<p>Väljer ni en tidsbegränsad form måste det framgå tydligt av avtalet. Otydlighet tolkas nästan alltid till arbetstagarens fördel.</p>
+
+<h2>Provanställning i byggbranschen — max 6 månader</h2>
+<p>Provanställning regleras i LAS §6 och får vara i högst sex månader. Syftet är att pröva om yrkesarbetaren fungerar i verksamheten. Avslutas provanställningen inte i tid övergår den <strong>automatiskt</strong> till en tillsvidareanställning — det är exakt så oplanerade fastanställningar uppstår.</p>
+<p>Vill arbetsgivaren avbryta provanställningen i förtid eller inte låta den övergå i fast anställning, ska besked lämnas till den anställde minst två veckor (14 dagar) i förväg. Är arbetsplatsen kollektivansluten ska även den berörda fackliga organisationen varslas enligt LAS §31. Det vanliga upplägget i bygg är därför: sex månaders prov, med ett bevakat beslutsdatum runt vecka 22–23, och därefter övergång till tillsvidare.</p>
+
+<h2>SÄVA — de nya reglerna du måste räkna dagar på</h2>
+<p>Särskild visstidsanställning (SÄVA) ersatte den gamla allmänna visstidsanställningen (ALVA) den 1 oktober 2022 och reglerna skärptes rejält. Enligt LAS §5a övergår en SÄVA till tillsvidareanställning när den anställde varit anställd i SÄVA i sammanlagt mer än <strong>tolv månader under en femårsperiod</strong>. Tidigare gick gränsen vid 24 månader — nu är den halverad.</p>
+<p>Dessutom inträder företrädesrätt till återanställning tidigare för SÄVA: redan efter sammanlagt mer än nio månader, mot tolv månader för andra visstidsformer. För projektdrivna byggföretag som återkommande tar in samma personer mellan projekt är detta en fälla. Varje SÄVA-dag räknas in i femårsfönstret, och när tröskeln passeras sker övergången automatiskt — utan att någon behöver skriva under något nytt.</p>
+<p>Ett vikariat har en egen gräns: det övergår till tillsvidareanställning när den anställde varit vikarie i sammanlagt mer än två år under en femårsperiod (LAS §5a). Håll SÄVA-dagar och vikariatsdagar isär i era register.</p>
+
+<h2>Vad avtalet MÅSTE innehålla enligt LAS §6c</h2>
+<p>Sedan LAS-reformen 2022, som genomför EU:s arbetsvillkorsdirektiv (2019/1152), är arbetsgivaren skyldig att lämna skriftlig information om alla villkor av väsentlig betydelse. Detta gäller <strong>alla</strong> anställningar, oavsett form. De centrala uppgifterna ska lämnas senast den sjunde kalenderdagen efter att anställningen påbörjats, resten senast en månad efter. Informationskravet omfattar omkring 13 punkter:</p>
+<ul>
+<li>Arbetsgivarens och arbetstagarens namn och adress</li>
+<li>Tillträdesdag</li>
+<li>Anställningsform (och vid visstid: slutdag eller villkor för att den upphör)</li>
+<li>Arbetsuppgifter, yrkesbenämning eller titel</li>
+<li>Lön, förmåner och hur lönen betalas ut</li>
+<li>Arbetstidens längd — normal arbetsdag eller arbetsvecka</li>
+<li>Regler för övertid och mertid samt ersättning för dessa</li>
+<li>Betald semester</li>
+<li>Uppsägningstider eller reglerna för hur anställningen upphör</li>
+<li>Eventuell provanställnings längd och villkor</li>
+<li>Tillämpligt kollektivavtal</li>
+<li>Rätt till kompetensutveckling som arbetsgivaren erbjuder</li>
+<li>Uppgifter om arbetsgivaravgifter och socialt skydd (i tillämpliga fall)</li>
+</ul>
+<p>Ett anställningsavtal är i sig giltigt även muntligt — det finns inget formkrav för själva avtalet. Men den skriftliga informationen enligt §6c är obligatorisk oavsett, och att strunta i den kan medföra skadestånd. I praktiken samlar de flesta byggföretag därför allt i ett och samma skriftliga avtal.</p>
+
+<h2>Kollektivavtalet styr — Byggavtalet</h2>
+<p>Är byggföretaget bundet av kollektivavtal måste anställningsavtalet hänvisa till rätt avtal. För byggnadsarbetare — yrkesarbetare, lärlingar med flera — är Byggavtalet mellan Byggföretagen och Byggnads det centrala. Avtalet styr bland annat lönebestämmelser (utgångslön och prestationslön, samt lärlingslön i procent av yrkesarbetarlönen), arbetstidsregler och avtalsförsäkringar.</p>
+<p>Det räcker alltså inte att skriva en lön ni tycker känns rimlig: en lärlings lön följer en procentsats, och avtalets försäkringar och tillägg gäller vare sig de står i det enskilda avtalet eller inte. Referera rätt kollektivavtal i anställningsavtalet så att villkoren blir spårbara.</p>
+
+<h2>Praktiskt — registrering, skatt och arbetsgivaransvar</h2>
+<p>Innan första lönen betalas ut måste byggföretaget registrera sig som arbetsgivare hos Skatteverket. Därefter gäller:</p>
+<ul>
+<li>Göra skatteavdrag på lönen enligt den anställdes skattetabell.</li>
+<li>Betala arbetsgivaravgifter på <strong>31,42 %</strong> av bruttolönen (fullt uttag, 2026).</li>
+<li>Rapportera skatt och avgifter månadsvis via arbetsgivardeklaration på individnivå (AGI).</li>
+<li>Ta arbetsmiljöansvar på byggarbetsplatsen — introduktion, skyddsutrustning och säkra arbetssätt.</li>
+</ul>
+<p>Vill du räkna på vad en anställd faktiskt kostar utöver bruttolönen, se den relaterade artikeln längst ned.</p>
+
+<h2>6 vanliga misstag byggföretag gör (och hur mallen undviker dem)</h2>
+<ol>
+<li><strong>Ingen skriven form alls</strong> — personen blir fast anställd enligt §4. Mallen tvingar er att kryssa i anställningsform.</li>
+<li><strong>Missad provanställningsdeadline</strong> — glömt 14-dagarsbesked, prov övergår automatiskt i tillsvidare. Mallen påminner om beslutsdatum.</li>
+<li><strong>Tappar räkningen på SÄVA-dagar</strong> — passerar tolvmånadersgränsen oavsiktligt. Notera datum och dokumentera i systemet.</li>
+<li><strong>Ofullständig §6c-information</strong> — någon av de 13 punkterna saknas, risk för skadestånd. Mallen har alla fält.</li>
+<li><strong>Fel eller inget kollektivavtal angivet</strong> — otydlighet om lön och försäkringar. Mallen har fält för Byggavtalet.</li>
+<li><strong>Ingen dokumentation sparad</strong> — inget att luta sig mot vid tvist. Spara avtal och besked strukturerat.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp fyller du i anställningsavtal-mallen för bygg direkt på skärmen och laddar ner den som färdig PDF. Mallen är byggd kring LAS §6c-punkterna och har fält för anställningsform, provanställningens längd, tillämpligt kollektivavtal och lön — så att du inte missar något obligatoriskt. Du anpassar den efter form och Byggavtalet, skriver ut eller signerar, och sparar dokumentationen tillsammans med företagets övriga underlag. ByggExp ersätter inte juridisk rådgivning, men ger dig en korrekt struktur att utgå från och en samlad plats för avtalen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste ett anställningsavtal för byggföretag vara skriftligt?</h3>
+<p>Själva avtalet är giltigt även muntligt — det finns inget formkrav. Men den skriftliga informationen om anställningsvillkoren enligt LAS §6c är obligatorisk oavsett, och att inte lämna den kan ge skadestånd. I praktiken bör allt därför skrivas ned i ett avtal.</p>
+<h3>Hur länge får en provanställning i bygg vara?</h3>
+<p>Högst sex månader enligt LAS §6. Avslutas den inte i tid övergår den automatiskt till en tillsvidareanställning. Vill ni avbryta ska besked lämnas minst 14 dagar i förväg, och facket varslas om arbetsplatsen är kollektivansluten.</p>
+<h3>När blir en SÄVA en fast anställning?</h3>
+<p>När den anställde varit anställd i särskild visstidsanställning i sammanlagt mer än tolv månader under en femårsperiod (LAS §5a). Företrädesrätt till återanställning inträder redan efter mer än nio månader för SÄVA.</p>
+<h3>Vilket kollektivavtal ska anställningsavtalet hänvisa till?</h3>
+<p>För byggnadsarbetare är det Byggavtalet mellan Byggföretagen och Byggnads. Avtalet styr lönebestämmelser, arbetstid och avtalsförsäkringar, och ska anges i anställningsavtalet om företaget är bundet av kollektivavtal.</p>
+
+<h2>Kom igång</h2>
+<p>Ladda ner den ifyllbara anställningsavtal-mallen för bygg bland <a href="/sv/verktyg">våra gratis verktyg</a>, anpassa den efter anställningsform och Byggavtalet och spara dokumentationen. Vill du se hur ByggExp samlar avtal, tidrapportering och fakturering på ett ställe kan du <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag</a> och <a href="/sv/blog/vad-kostar-en-anstalld-byggforetag">Vad kostar en anställd i ett byggföretag?</a></p>
+`;
+
+const A_ANSTALLNINGSAVTAL_MALL_BYGG: BlogPost = {
+  _id: "code-"+"anstallningsavtal-mall-bygg",
+  title: "Anställningsavtal mall för bygg — så gör du rätt enligt LAS", slug: "anstallningsavtal-mall-bygg", locale: "sv",
+  excerpt: "Guide till anställningsavtal i bygg: anställningsformer, provanställning, SÄVA-reglerna och vad avtalet måste innehålla enligt LAS §6c — plus gratis mall.", tag: "Anställning",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_ANSTALLNINGSAVTAL_MALL_BYGG_HTML,
+  seoTitle: "Anställningsavtal mall bygg | ByggExp", seoDescription: "Anställningsavtal-mall för byggföretag: anställningsformer, provanställning, SÄVA och LAS §6c-kraven efter 2022 års reform. Ladda ner gratis mall.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:15:00.000Z", createdAt: "2026-08-19T05:15:00.000Z", updatedAt: "2026-08-19T05:15:00.000Z",
+};
+
+const A_MILERSATTNING_2026_HTML = `
+<p>Hantverkare kör ofta flera mil om dagen mellan byggen, materialleverantörer och kontoret – men många byggföretag tar inte ut den milersättning de har rätt till, eller betalar ut den på ett sätt som utlöser onödig skatt. Rätt hanterad är milersättningen skattefri för både företag och anställd. Fel hanterad blir den skattepliktig lön med arbetsgivaravgifter ovanpå. Här går vi igenom vad som gäller för 2026, inklusive reglerna för reseavdrag och beloppsgränsen (golvet).</p>
+
+<p>För att räkna på ersättning, avstånd och underlag samlat kan du använda <a href="/sv/verktyg">våra gratis verktyg för byggföretag -&gt;</a> och slippa räkna för hand vid varje löneutbetalning.</p>
+
+<h2>Skattefri milersättning 2026 – beloppen du ska hålla dig till</h2>
+<p>Schablonbeloppen för skattefri bilersättning är oförändrade 2026 jämfört med de senaste åren – de höjdes senast 2023 från 18,50 kr/mil till dagens nivå. Betalar du ut inom schablonen redovisas ersättningen inte som lön, det utgår ingen moms och inga arbetsgivaravgifter.</p>
+<ul>
+<li><strong>Egen bil i tjänsten:</strong> 25 kr/mil (2,50 kr/km).</li>
+<li><strong>Förmånsbil, diesel/bensin/laddhybrid:</strong> 12 kr/mil.</li>
+<li><strong>Förmånsbil som drivs helt på el:</strong> 9,50 kr/mil.</li>
+</ul>
+<p>Skillnaden beror på att den som kör egen bil själv står för slitage och löpande kostnader, medan förmånsbilsföraren bara ersätts för drivmedlet – bilen betalas ju redan av arbetsgivaren.</p>
+
+<h2>Tjänsteresa eller arbetsresa? Skillnaden som avgör vad du får ersättning för</h2>
+<p>Det här är den vanligaste källan till fel i byggbranschen. Reglerna skiljer på två typer av resor:</p>
+<ul>
+<li><strong>Tjänsteresa:</strong> resor mellan olika arbetsplatser under arbetsdagen – till exempel från ett bygge till nästa. Här får den anställde skattefri milersättning.</li>
+<li><strong>Arbetsresa:</strong> resan hemifrån till den första eller fasta arbetsplatsen och tillbaka hem. Det hanteras som reseavdrag i deklarationen, med ett golv (se nedan), inte som milersättning från arbetsgivaren.</li>
+</ul>
+<p>Typexempel: en snickare kör hemifrån direkt till bygge A på morgonen. Den resan är en arbetsresa. Mitt på dagen kör hen vidare till bygge B och senare till materialbutiken – de resorna är tjänsteresor med skattefri milersättning. Har företaget ingen fast arbetsplats och den anställde åker till växlande byggen kan även den första resan räknas som tjänsteresa, men bedömningen görs från fall till fall.</p>
+
+<h2>Vad händer om företaget betalar mer än 25 kr/mil?</h2>
+<p>Ni får betala mer internt – till exempel om ett kollektivavtal reglerar en högre ersättning – men allt över schablonbeloppet är skattepliktigt. Den överskjutande delen behandlas som lön: den anställde betalar inkomstskatt och företaget betalar arbetsgivaravgifter på den.</p>
+<p>Räkneexempel: en anställd kör 200 mil i tjänsten på ett år och får 30 kr/mil, alltså 6 000 kr. Av det är 25 kr/mil (5 000 kr) skattefritt. De återstående 5 kr/mil, totalt 1 000 kr, är skattepliktig lön som ska tas upp och beläggas med arbetsgivaravgifter. Att betala mer är alltså inte olagligt – men det ökar kostnaden och kräver att lönesystemet hanterar delningen rätt.</p>
+
+<h2>Körjournalen – ditt viktigaste bevis vid en granskning</h2>
+<p>Det finns inget lagstadgat krav på körjournal, men den är det starkaste bevismedlet du har om Skatteverket ifrågasätter tjänstekörningen eller förmånsbilen. Vid bristande dokumentation är det vanligt att utbetald ersättning underkänns och beskattas i efterhand. En användbar körjournal bör innehålla:</p>
+<ul>
+<li>Datum för resan.</li>
+<li>Mätarställning vid start och slut.</li>
+<li>Antal kilometer/mil.</li>
+<li>Resans syfte.</li>
+<li>Start- och slutdestination.</li>
+<li>Markering om resan var privat eller i tjänsten.</li>
+</ul>
+<p>En digital körjournal som loggar automatiskt sparar tid och gör underlaget svårare att ifrågasätta än handskrivna lappar. Poängen är att varje utbetald mil ska kunna kopplas till en dokumenterad resa.</p>
+
+<h2>Förmånsbil och &quot;ringa omfattning&quot; – så undviker du att beskattas för privat körning</h2>
+<p>Har en anställd tillgång till företagets bil uppstår bilförmån om bilen används privat i mer än ringa omfattning. Ringa omfattning är definierat som <strong>högst 10 tillfällen och högst 100 mil (1 000 km) privat körning per år</strong>. Överskrids någon av gränserna beskattas full bilförmån – det räcker alltså inte att hålla sig under milgränsen om antalet tillfällen blir för många.</p>
+<p>Här är körjournalen avgörande: den är beviset för att den privata körningen håller sig inom gränserna och att resten är tjänstekörning. Utan journal blir det svårt att freda sig mot en förmånsbeskattning.</p>
+
+<h2>Reseavdrag 2026 – beloppsgränsen (golvet) du måste komma över</h2>
+<p>För pendlande byggarbetare finns en beloppsgräns att hålla koll på. Reseavdraget för resor till och från arbetet med egen bil är 25 kr/mil, men bara den del av kostnaderna som överstiger en beloppsgräns (ett golv) är avdragsgill. Golvet har sedan länge legat på 11 000 kr, och någon höjning för inkomstår 2026 är inte bekräftad – utgå därför från 11 000 kr tills Skatteverket meddelar annat. I praktiken innebär golvet att det främst är den som pendlar långt som kommer över gränsen och får avdrag.</p>
+<p>Dessutom krävs för bilavdraget att avståndet mellan bostad och arbetsplats är <strong>minst 5 km</strong> och att bilen ger en tidsvinst på <strong>minst 2 timmar per dag</strong> jämfört med kollektivtrafik. Reseavdraget är den anställdes avdrag i deklarationen och ska inte blandas ihop med milersättning som företaget betalar för tjänstekörning.</p>
+
+<h2>Egenföretagare och enskild firma: så drar du av bilkörningen</h2>
+<p>Driver du enskild näringsverksamhet gäller egna regler. Kör du i verksamheten med en privatägd bil får du göra avdrag med 25 kr/mil – samma schablon som anställda. Är bilen däremot en tillgång i firman drar du i stället av de faktiska kostnaderna för bilen. Oavsett vilket krävs dokumentation, och en körjournal som skiljer närings- från privatkörning är även här det underlag som håller vid en granskning.</p>
+
+<h2>Checklista: så gör du milersättningen rätt 2026</h2>
+<ul>
+<li>Betala ut inom schablonen: 25 kr/mil för egen bil, 12 respektive 9,50 kr/mil för förmånsbil.</li>
+<li>För körjournal för varje resa – datum, mätarställning, mil, syfte och destination.</li>
+<li>Separera tjänsteresor från arbetsresor och privat körning.</li>
+<li>Spara underlag i minst 7 år.</li>
+<li>Betalar ni över schablon: se till att lönesystemet hanterar den skattepliktiga delen.</li>
+<li>Stäm av er interna policy mot eventuellt kollektivavtal.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp registrerar dina medarbetare tid och resor kopplat till rätt projekt, så att underlaget för milersättning byggs upp löpande i stället för att pusslas ihop i efterhand. Du får en samlad bild av vem som kört vad, på vilket bygge och när – vilket gör lönehanteringen enklare och underlaget lättare att stå för vid en granskning. ByggExp ersätter inte en juridisk bedömning av vad som är tjänste- respektive arbetsresa, men det ger dig ett spårbart underlag att grunda besluten på.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Höjs milersättningen 2026?</h3>
+<p>Nej. Den skattefria milersättningen för egen bil ligger kvar på 25 kr/mil 2026, oförändrad sedan höjningen 2023. Reseavdraget har fortsatt sin beloppsgräns (golv) på 11 000 kr, där bara kostnader däröver är avdragsgilla.</p>
+<h3>Måste jag ha körjournal?</h3>
+<p>Det finns inget lagkrav på körjournal, men den är det starkaste beviset vid tjänstekörning och förmånsbil. Utan journal riskerar utbetald ersättning att underkännas och beskattas i efterhand, så i praktiken bör du alltid föra en.</p>
+<h3>Får jag milersättning hemifrån till bygget?</h3>
+<p>Resan hemifrån till den första eller fasta arbetsplatsen räknas normalt som en arbetsresa, som hanteras med reseavdrag och golv – inte som skattefri milersättning. Resor mellan olika arbetsplatser under dagen är däremot tjänsteresor med skattefri milersättning.</p>
+<h3>Kan företaget betala 30 kr/mil?</h3>
+<p>Ja, men bara 25 kr/mil är skattefritt. De 5 kr/mil som överstiger schablonen blir skattepliktig lön, med inkomstskatt för den anställde och arbetsgivaravgifter för företaget.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att samla resor och underlag på ett ställe med <a href="/sv/verktyg">våra gratis verktyg för byggföretag</a>. Vill du se hur tid, projekt och reseunderlag hänger ihop i praktiken kan du <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag – så håller du koll på tid och ledighet</a>.</p>
+`;
+
+const A_MILERSATTNING_2026: BlogPost = {
+  _id: "code-"+"milersattning-2026",
+  title: "Milersättning 2026: skattefri bilersättning, körjournal och reseavdrag", slug: "milersattning-2026", locale: "sv",
+  excerpt: "Betala ut milersättning rätt 2026 – skattefria schablonbelopp, körjournal, skillnaden mellan tjänste- och arbetsresa samt reseavdragets golv.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_MILERSATTNING_2026_HTML,
+  seoTitle: "Milersättning 2026 – skattefritt & reseavdrag | ByggExp", seoDescription: "Så håller du milersättningen skattefri 2026: 25 kr/mil för egen bil, körjournal, tjänste- vs arbetsresa och reseavdragets beloppsgräns för byggföretag.",
+  seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:18:00.000Z", createdAt: "2026-08-19T05:18:00.000Z", updatedAt: "2026-08-19T05:18:00.000Z",
+};
+
+const A_YRKESBEVIS_BYGG_LARLING_HTML = `
+<p>Kompetensbristen i byggbranschen löser sig inte med annonser – den löser sig genom att företag utbildar sina egna. Att handleda en lärling fram till yrkesbevis ger dig en fullärd yrkesarbetare med bekräftad kompetens i ID06 kompetensdatabas, och samtidigt en person som redan kan era rutiner, kunder och arbetsplatser. Men reglerna för vägen dit har ändrats, och många företag jobbar fortfarande efter en gammal modell. Här går vi igenom vad som faktiskt gäller 2026, styrt av Byggbranschens Yrkesnämnd (BYN) och Yrkesutbildningsavtalet YUA 2020.</p>
+
+<p>Under lärlingstiden behöver du dokumentera arbetad tid och uppföljning löpande – ladda ner vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a> för att hålla ordning på lärlingens timmar och arbetsmoment från dag ett.</p>
+
+<h2>Timmar eller månader? Så fungerar kravet idag</h2>
+<p>Först en viktig korrigering av en vanlig missuppfattning: den gamla pappersbaserade utbildningsboken där lärlingen loggade utbildningstimmar är utbytt. I dagens YUA 2020-modell mäts lärlingstiden som <strong>kvalificeringstid i månader</strong>, inte i antal loggade utbildningstimmar. Godkännandet sker på uppnådda praktiska läranderesultat – alltså vad lärlingen faktiskt kan – och rapporteringen görs digitalt i BYN:s Mina sidor (e-boken).</p>
+<p>Notera också att BYN har bytt webbadress. Den gamla adressen byn.se leder numera vidare via en permanent omdirigering (301) – rätt sida är <strong>byggbranschensyrkesnamnd.se</strong>. Verifiera alltid aktuella krav och regler direkt hos BYN innan ni registrerar en lärling, eftersom detaljerna kan skilja mellan yrken.</p>
+
+<h2>Kvalificeringstid per yrke</h2>
+<p>Kvalificeringstiden varierar beroende på yrke. Huvudspåren ser ut så här:</p>
+<ul>
+<li><strong>36 månader:</strong> Bergarbetare, Beläggningsarbetare, Betongarbetare, Golvläggare, Murare, Träarbetare samt Väg- &amp; anläggningsarbetare.</li>
+<li><strong>30 månader:</strong> Håltagare, Plattsättare, Takmontör, Undertaksmontör, Ställningsbyggare och Stenmontör.</li>
+<li><strong>24 månader:</strong> Maskinförare – Anläggningsmaskiner, Grundläggning och Kranar.</li>
+</ul>
+<p>Kvalificeringstiden kan kortas beroende på tidigare skolgång eller validerad kompetens. Har lärlingen redan gått gymnasiets bygg- och anläggningsprogram eller genomfört vuxenutbildning hos en BYN-godkänd anordnare, räknas det av. Ett par yrken behåller fortfarande timkrav som undantag – anläggningsdykare har till exempel totalt 5 800 timmars utbildning, varav 3 200 timmar grundutbildning och minst 800 loggade dyktimmar, plus godkänd läkarundersökning enligt <strong>AFS 2023:15</strong> (Arbetsmiljöverkets föreskrifter om medicinska kontroller, gällande sedan 1 januari 2025). Det visar att enstaka specialyrken avviker även om huvudmodellen är månadsbaserad.</p>
+
+<h2>Grundutbildning och distansutbildning</h2>
+<p>Innan lärlingen går över i kvalificeringstid ska grundutbildningen – både teori och praktik – vara klar. Som företagslärling måste den delen vara avklarad inom <strong>max 12 månader</strong> (6 månader för maskinförare). Det är företaget som beställer och betalar den yrkesteoretiska distansutbildningen.</p>
+<p>För en träarbetare kombineras den yrkesteoretiska distansutbildningen med en kvalificeringstid på 36 månader hos ett företag med kollektivavtal innan yrkesbeviset utfärdas. Kontrollera det exakta antalet teoritimmar och aktuell kursanordnare direkt hos BYN. Planera in distansstudierna tidigt – ligger teorin efter blir hela vägen till yrkesbevis försenad.</p>
+
+<h2>Krav på företaget</h2>
+<p>För att ni överhuvudtaget ska få utbilda lärlingar mot byggbranschens yrkesbevis krävs följande:</p>
+<ul>
+<li><strong>Kollektivavtal</strong> för bygg/anläggning är ett absolut krav – utan det kan företaget inte registrera lärlingar hos BYN.</li>
+<li>Lärlingen är normalt <strong>minst 18 år</strong>. Dispens kan sökas hos BYN.</li>
+<li>Ett <strong>skriftligt anställningsavtal</strong> (provanställning eller tillsvidare) måste finnas.</li>
+<li>Registrering sker i <strong>Mina sidor</strong> med företagets organisationsnummer.</li>
+</ul>
+<p>Vid registreringen anger ni handledare, bifogar anställningsavtalet och dokumenterar lärlingens tidigare kvalifikationer med betyg, intyg eller valideringsintyg. Handledaren bekräftar handledarinstruktionerna i systemet.</p>
+
+<h2>Handledarens roll</h2>
+<p>Handledaren är den som gör att lärlingssystemet fungerar i praktiken. Kraven är tydliga:</p>
+<ul>
+<li>Handledaren måste ha <strong>yrkesbevis i samma yrke</strong> som lärlingen, eller motsvarande dokumenterad kompetens.</li>
+<li>En handledare får ha <strong>högst tre lärlingar</strong> totalt. För ställningsbyggare gäller särskild regel: 1 lärling under grundutbildning och 3 under kvalificeringstid.</li>
+<li>Handledaren godkänner och bekräftar läranderesultat och rapporter i e-boken (Mina sidor).</li>
+</ul>
+<p>Handledarutbildning rekommenderas starkt – det gör att bedömningen av läranderesultaten blir korrekt och att godkännandena i systemet inte fastnar. En handledare som förstår kraven undviker att lärlingen når slutet av kvalificeringstiden med luckor som borde ha åtgärdats i tid.</p>
+
+<h2>Steg för steg – från anställning till yrkesbevis</h2>
+<ol>
+<li>Kontrollera att företaget har kollektivavtal och teckna skriftligt anställningsavtal med lärlingen.</li>
+<li>Registrera lärlingen i Mina sidor med org.nr och tilldela en behörig handledare.</li>
+<li>Dokumentera tidigare kvalifikationer så att eventuell avkortning av kvalificeringstiden räknas av.</li>
+<li>Beställ och betala den yrkesteoretiska distansutbildningen – klar inom 12 månader (maskinförare 6).</li>
+<li>Följ upp arbetsmoment och godkänn läranderesultat löpande i e-boken under kvalificeringstiden.</li>
+<li>När kvalificeringstiden är genomförd och godkänd utfärdas yrkesbeviset digitalt via Mina sidor, registreras i ID06 kompetensdatabas och lärlingen får ett fysiskt plastkort plus certifieringsdokument.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp utfärdar inte yrkesbevis – det gör bara BYN. Men den löpande dokumentationen som handledningen kräver kan du sköta i ByggExp. Lägg upp lärlingens arbetade tid per projekt och arbetsmoment, så har du underlag när handledaren ska bekräfta läranderesultat i Mina sidor och överblick över hur kvalificeringstiden fortskrider. Samma tidrapportering ger dig dessutom korrekt underlag för lön och fakturering. Kort sagt: BYN äger vägen till yrkesbeviset, ByggExp håller ordning på timmarna och uppföljningen längs vägen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Behöver lärlingen fortfarande fylla i en lärlingsbok med utbildningstimmar?</h3>
+<p>Nej. Den gamla pappersbaserade utbildningsboken med timloggar är utbytt. I YUA 2020-modellen mäts tiden som kvalificeringstid i månader och godkännandet sker på uppnådda praktiska läranderesultat, som dokumenteras digitalt i BYN:s Mina sidor.</p>
+<h3>Kan vårt företag utbilda lärlingar utan kollektivavtal?</h3>
+<p>Nej. Kollektivavtal för bygg/anläggning är ett krav för att företaget ska få registrera och utbilda lärlingar mot byggbranschens yrkesbevis. Utan avtal kan ni inte gå vidare med registrering hos BYN.</p>
+<h3>Hur lång är kvalificeringstiden?</h3>
+<p>Den beror på yrket: 36 månader för bland annat träarbetare, betong, murare och golv, 30 månader för exempelvis platt-, sten-, tak- och undertaksmontör samt ställningsbyggare, och 24 månader för maskinförare. Tidigare skolgång eller validerad kompetens kan korta tiden.</p>
+<h3>Hur många lärlingar får en handledare ha?</h3>
+<p>Maximalt tre lärlingar totalt. För ställningsbyggare gäller en särskild regel med 1 lärling under grundutbildning och 3 under kvalificeringstid. Handledaren måste ha yrkesbevis i samma yrke som lärlingen.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att sätta rutinen för tidsdokumentation – ladda ner vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och koppla lärlingens timmar till rätt projekt och arbetsmoment. Vill du se hur ByggExp håller ihop tidrapportering, uppföljning och fakturering i ett flöde? <a href="/sv/contact">Boka en demo</a> så visar vi upplägget för ditt företag.</p>
+
+<p>Relaterat: <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag</a> och <a href="/sv/blog/tidrapportering">Tidrapportering för byggföretag</a>.</p>
+`;
+
+const A_YRKESBEVIS_BYGG_LARLING: BlogPost = {
+  _id: "code-"+"yrkesbevis-bygg-larling",
+  title: "Yrkesbevis i bygg: så handleder du en lärling 2026", slug: "yrkesbevis-bygg-larling", locale: "sv",
+  excerpt: "Vad som faktiskt gäller 2026 när du utbildar en lärling till yrkesbevis – kvalificeringstid i månader, krav på företag och handledare, och vägen via BYN:s Mina sidor.", tag: "Kompetens",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_YRKESBEVIS_BYGG_LARLING_HTML,
+  seoTitle: "Yrkesbevis och lärling i bygg 2026 | ByggExp", seoDescription: "Så handleder du en lärling till yrkesbevis 2026 enligt BYN och YUA 2020: kvalificeringstid i månader, krav på företag och handledare, steg för steg.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:21:00.000Z", createdAt: "2026-08-19T05:21:00.000Z", updatedAt: "2026-08-19T05:21:00.000Z",
+};
+
+const A_HITTA_KUNDER_BYGGFIRMA_HTML = `
+<p>Tomma luckor i orderboken beror sällan på att du är för dyr. Oftare handlar det om synlighet och förtroende: kunden hittar inte din firma när hon söker, eller hon vågar inte välja er framför en konkurrent hon vet mer om. Den goda nyheten är att kundanskaffning för en byggfirma inte kräver stor marknadsföringsbudget – det kräver ett par kanaler som sköts systematiskt. Den här guiden ger dig en konkret plan, kanal för kanal, som du kan börja jobba efter redan i veckan.</p>
+
+<p>Ett bra första steg är att göra det enkelt för intresserade kunder att få pris snabbt. Använd gärna <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a> så att du kan skicka ett proffsigt, tydligt underlag samma dag som förfrågan kommer in – snabb respons vinner ofta jobbet.</p>
+
+<h2>Börja med Google Företagsprofil – din viktigaste gratiskanal</h2>
+<p>När någon söker "snickare i [ort]" eller "takläggare nära mig" är det Google Företagsprofil (Google Business Profile) som avgör om din firma syns i kartan och de lokala träffarna. Profilen är kostnadsfri och är den enskilt viktigaste kanalen för lokal synlighet. Se till att den är komplett:</p>
+<ul>
+<li>Verifiera företaget och välj rätt kategori (t.ex. byggföretag, snickare, takläggare).</li>
+<li>Ange tjänsteområde – de orter du faktiskt tar jobb i.</li>
+<li>Fyll i öppettider, telefon och länk till webbplatsen.</li>
+<li>Ladda upp riktiga bilder på färdiga jobb, inte stockbilder. Före/efter fungerar bäst.</li>
+<li>Svara på meddelanden och frågor snabbt – svarstiden syns för kunden.</li>
+</ul>
+<p>En profil som ligger och skräpar halvfärdig kostar dig jobb varje vecka utan att du märker det. Sätt av en timme och gör den klar.</p>
+
+<h2>Recensioner som säljverktyg</h2>
+<p>Stjärnbetyg och omdömen påverkar både hur högt du rankas i lokala sökresultat och om kunden väljer just dig. Skillnaden mellan 3,8 och 4,6 i snitt är många förlorade förfrågningar. Bygg därför in en recensionsrutin i varje avslutat jobb:</p>
+<ul>
+<li>Be alltid om ett omdöme direkt när kunden är nöjd – vid slutbesiktning eller när du tar farväl på plats.</li>
+<li>Gör det friktionsfritt: lägg en direktlänk eller QR-kod till din Google-profil på slutfakturan eller i ett uppföljningssms.</li>
+<li>Svara professionellt på alla recensioner, även de sura. Ett sakligt, lösningsinriktat svar på ett dåligt omdöme övertygar nästa läsare mer än fem femmor.</li>
+<li>Sikta på ett snitt runt 4,5 eller högre och ett jämnt inflöde – tjugo färska omdömen väger tyngre än hundra tre år gamla.</li>
+</ul>
+
+<h2>Sälj in ROT-avdraget rätt – och gör det till ett säljargument</h2>
+<p>Många privatkunder underskattar hur mycket ROT drar ner nettopriset. Räkna åt dem, så blir avdraget ditt säljargument i stället för en administrativ fotnot. Fakta att luta dig mot:</p>
+<ul>
+<li>ROT ger skattereduktion på <strong>30 % av arbetskostnaden</strong>. Endast arbetet är avdragsgillt – material, resekostnader och övriga kostnader ger inget avdrag.</li>
+<li>Avdraget är max <strong>50 000 kr per person och år</strong>. Tillsammans med RUT (som ger 50 %) är taket 75 000 kr per person och år.</li>
+<li>Två makar eller sambor kan dela på avdraget. Ett hushåll kan alltså ha upp till 100 000 kr i ROT-utrymme per år – värt att lyfta vid större renoveringar.</li>
+<li>Kunden får bara ROT om din firma har godkänd F-skatt (eller FA-skatt). Du drar av avdraget direkt på fakturan och begär resten från Skatteverket via fakturamodellen.</li>
+</ul>
+<p>Exempel: ett badrumsjobb med 80 000 kr i arbetskostnad. ROT ger 30 % = 24 000 kr i reduktion. Kunden betalar 56 000 kr för arbetet i stället för 80 000 kr. Skriv ut den siffran i offerten – "ditt pris efter ROT" – så konkurrerar du på netto, inte på brutto.</p>
+
+<h2>Leads och plattformar</h2>
+<p>Tjänster som Offerta, Servicefinder och Byggstart matchar dig med förfrågningar mot betalning – antingen per lead eller per abonnemang. De kan fylla orderboken snabbt när du är ny eller har en glugg, men räkna alltid på kostnad per faktiskt vunnet jobb, inte per lead. Du delar ofta samma förfrågan med flera firmor, och marginalen äts upp om konverteringen är låg. Använd plattformarna som komplement medan du bygger ditt eget varumärke – en egen kanal (Google-profil, recensioner, rekommendationer) kostar inget per lead och blir starkare över tid.</p>
+
+<h2>Bygg förtroende och synliggör seriositet</h2>
+<p>Privat- och företagskunder sållar bort osäkra alternativ innan de ens ringer. Gör det lätt att lita på dig genom att visa upp seriositetssignalerna öppet på webben och i offerten:</p>
+<ul>
+<li>Medlemskap i Byggföretagen (branschorganisationen har cirka 4 000 medlemsföretag och beskriver dem som seriösa bygg-, anläggnings- och specialföretag) och kollektivavtal.</li>
+<li>ID06 – branschens system för legitimation och närvaroregistrering är i praktiken ett krav från många beställare och en tydlig seriositetsmarkör.</li>
+<li>Godkänd F-skatt, ansvarsförsäkring och tydliga garantivillkor.</li>
+</ul>
+<p>Registrering sker via verksamt.se – Bolagsverkets, Skatteverkets och Tillväxtverkets gemensamma tjänst – där du också ansöker om F-skatt innan du kan fakturera med ROT.</p>
+
+<h2>Egen webbplats och lokal SEO</h2>
+<p>Din webbplats behöver inte vara stor, men den ska vara mobilanpassad och snabb. Skapa ortsspecifika sidor för dina viktigaste tjänster och områden ("takläggare + ort", "badrumsrenovering + ort"), bädda in dina Google-recensioner och gör kontaktvägen glasklar. Ett enkelt offertformulär direkt på sidan fångar förfrågningar dygnet runt – varje klick som inte leder någonstans är en förlorad kund.</p>
+
+<h2>Nöjda kunder ger nya kunder</h2>
+<p>Rekommendationer är fortfarande byggbranschens starkaste kanal. Be aktivt om vidarehänvisning när ett jobb är klart, dokumentera referensjobb med bild (med kundens tillåtelse) och håll kontakten för återkommande underhåll. En kund som är nöjd och blir ihågkommen ringer dig först nästa gång – och tipsar grannen.</p>
+
+<h2>Mät och prioritera</h2>
+<p>Fråga varje ny kund kort: "Hur hittade du oss?" Efter några månader ser du varifrån jobben faktiskt kommer och vad varje kanal kostar per vunnen kund. Dubbla ner på det som fungerar och lägg ner det som inte gör det – de flesta byggfirmor slösar tid på tre kanaler i stället för att bli riktigt bra på en.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att omvandla förfrågningar till vunna jobb. Med offertmallen skickar du ett tydligt, professionellt underlag snabbt – med separerad arbets- och materialkostnad så att ROT-avdraget och nettopriset syns direkt för kunden. Ett snyggt, begripligt offertunderlag är i sig en förtroendesignal och gör att fler tackar ja. Verktyget ersätter inte din marknadsföring, men det ser till att de leads du redan får inte rinner ut i sanden på grund av sen eller rörig respons.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är den billigaste kanalen för att hitta kunder till byggfirman?</h3>
+<p>En komplett Google Företagsprofil är gratis och ger mest tillbaka för lokal synlighet. Kombinera den med en systematisk recensionsrutin, så har du en stark grund utan kostnad per lead.</p>
+
+<h3>Hur mycket sänker ROT-avdraget kundens pris?</h3>
+<p>ROT ger 30 % rabatt på arbetskostnaden, max 50 000 kr per person och år. Bara arbetet är avdragsgillt – inte material eller resor. Visa alltid nettopriset efter ROT i offerten.</p>
+
+<h3>Krävs F-skatt för att kunden ska få ROT?</h3>
+<p>Ja. Din firma måste ha godkänd F-skatt (eller FA-skatt) för att kunden ska kunna utnyttja ROT. Du drar av avdraget på fakturan och begär resten från Skatteverket via fakturamodellen.</p>
+
+<h3>Lönar sig betalda lead-plattformar?</h3>
+<p>De kan fylla luckor snabbt, men räkna på kostnad per vunnet jobb, inte per lead. Använd dem som komplement medan du bygger egna kanaler som Google-profil och rekommendationer.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med tre steg den här veckan: gör Google-profilen komplett, sätt en fast rutin för att be om recensioner efter varje jobb, och skriv ut nettopriset efter ROT i varje offert. Skapa ett proffsigt underlag på minuter med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du får fler förfrågningar att bli vunna jobb.</p>
+
+<p>Relaterat: <a href="/sv/blog/skriva-offert">Så skriver du en offert som vinner jobbet</a>.</p>
+`;
+
+const A_HITTA_KUNDER_BYGGFIRMA: BlogPost = {
+  _id: "code-"+"hitta-kunder-byggfirma",
+  title: "Hitta kunder till byggfirman: en konkret kanalplan", slug: "hitta-kunder-byggfirma", locale: "sv",
+  excerpt: "En konkret kanalplan för att hitta fler kunder till byggfirman – Google Företagsprofil, recensioner, ROT som säljargument och lokal SEO, utan stor budget.", tag: "Marknadsföring",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_HITTA_KUNDER_BYGGFIRMA_HTML,
+  seoTitle: "Hitta kunder till byggfirma | ByggExp", seoDescription: "Konkret plan för hur din byggfirma hittar fler kunder: Google-profil, recensioner, ROT som säljargument, lead-plattformar och lokal SEO. Börja i veckan.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:24:00.000Z", createdAt: "2026-08-19T05:24:00.000Z", updatedAt: "2026-08-19T05:24:00.000Z",
+};
+
+const A_BYGGFAKTURA_CHECKLISTA_ROT_HTML = `
+<p>Fel på ROT-fakturan kostar dig pengar direkt. Om arbetskostnaden inte är särskild, personnumret saknas eller fastighetsbeteckningen är fel, stoppas utbetalningen från Skatteverket – och du sitter med en kund som redan bara betalat 70 procent. Den här artikeln ger dig en komplett checklista för vad en faktura ska innehålla för att ge ROT enligt 2026 års regler, så att du får rätt betalt utan att jaga någon.</p>
+
+<p>Vill du slippa hålla ordning på alla obligatoriska fält själv? Skapa korrekta underlag direkt i <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall &rarr;</a> som redan har fälten för ROT på plats.</p>
+
+<h2>ROT-avdraget 2026 i korthet</h2>
+<p>För 2026 gäller åter standardnivån: ROT-avdraget är 30 procent av arbetskostnaden (inklusive moms), med ett tak på 50 000 kr per person och år. Den tillfälligt förhöjda ROT-nivån (50 procent) som gällde under delar av 2025 löpte ut vid årsskiftet och förlängdes inte. ROT tillämpas via fakturamodellen – du drar av 30 procent direkt på fakturan, kunden betalar 70 procent av arbetskostnaden, och du begär resten som utbetalning från Skatteverket när arbetet är klart och betalt.</p>
+<p>ROT och RUT delar ett gemensamt tak på 75 000 kr per person och år. ROT-delen kan vara högst 50 000 kr av detta.</p>
+<ul>
+<li><strong>ROT:</strong> 30 % av arbetskostnaden, max 50 000 kr/person/år.</li>
+<li><strong>RUT:</strong> 50 % av arbetskostnaden, kan ensamt nå upp till 75 000 kr/person/år.</li>
+<li><strong>Gemensamt tak:</strong> 75 000 kr – du kan alltså inte få 50 000 kr ROT och 75 000 kr RUT samtidigt.</li>
+</ul>
+
+<h2>Grundläggande fakturauppgifter</h2>
+<p>Innan vi kommer till det ROT-specifika måste fakturan uppfylla de vanliga kraven i bokförings- och mervärdesskattelagen. Utan dessa är fakturan inte giltig oavsett ROT:</p>
+<ul>
+<li>Unikt fakturanummer och fakturadatum.</li>
+<li>Ditt företagsnamn, adress och organisationsnummer.</li>
+<li>Uppgift om att du är godkänd för <strong>F-skatt</strong> – ett grundkrav för att arbetet överhuvudtaget ska ge ROT.</li>
+<li>Köparens namn och adress.</li>
+<li>Momsuppgifter: momssats (25 % för byggtjänster till privatperson) och momsbelopp.</li>
+</ul>
+<p>Observera att omvänd byggmoms bara gäller mellan byggföretag (B2B). En ROT-faktura går till en privatperson, så här debiterar du vanlig moms. Spara fakturaunderlaget i minst sju år.</p>
+
+<h2>Separera arbetskostnad från material</h2>
+<p>Detta är den vanligaste felkällan. Endast arbetskostnaden ger ROT-avdrag. Följande poster är inte avdragsgilla och måste redovisas separat på fakturan:</p>
+<ul>
+<li>Material och förbrukningsvaror</li>
+<li>Rese- och transportkostnader</li>
+<li>Maskin- och utrustningshyra</li>
+<li>Frakt</li>
+<li>Administration och projektering</li>
+</ul>
+<p>Ange antal arbetstimmar och timpris så att arbetskostnaden går att följa. Skatteverket kan begära underlag, och en klumpsumma där arbete och material blandas ihop riskerar att underkännas.</p>
+
+<h2>Rätt identitetsuppgifter</h2>
+<p>För att kunna begära utbetalning måste du redovisa köparens personnummer till Skatteverket. Utnyttjar flera delägare avdraget – till exempel två makar som äger bostaden tillsammans – ska personnumret för var och en som tar del av avdraget framgå, tillsammans med hur beloppet fördelas. Arbetet får inte utföras av köparen själv eller närstående, och en kund kan inte köpa ROT-arbete av sitt eget bolag.</p>
+
+<h2>Villa eller bostadsrätt – olika krav</h2>
+<p>Vilka fastighetsuppgifter du behöver beror på bostadstypen:</p>
+<ul>
+<li><strong>Villa/småhus:</strong> ange <strong>fastighetsbeteckningen</strong> (t.ex. Kommun Del 1:23).</li>
+<li><strong>Bostadsrätt:</strong> ange i stället bostadsrättsföreningens <strong>organisationsnummer</strong> samt lägenhetens beteckning (lägenhetsnummer).</li>
+</ul>
+<p>ROT gäller bara reparation, underhåll samt om- och tillbyggnad av befintlig bostad som köparen äger och bor i eller använder som fritidsbostad. Nyproduktion och hyresrätt ger inte ROT – kontrollera detta innan du lämnar offert.</p>
+
+<h2>Så räknar du ut ROT-beloppet på fakturan</h2>
+<p>Ett konkret exempel. Arbetskostnaden är 20 000 kr inklusive moms:</p>
+<ol>
+<li>ROT-avdrag: 30 % av 20 000 kr = <strong>6 000 kr</strong>.</li>
+<li>Kunden betalar: 20 000 − 6 000 = <strong>14 000 kr</strong> för arbetet.</li>
+<li>Lägg till material (ej ROT), t.ex. 8 000 kr inkl. moms.</li>
+<li>Kundens totala fakturabelopp: 14 000 + 8 000 = <strong>22 000 kr</strong>.</li>
+<li>Du begär de resterande <strong>6 000 kr</strong> från Skatteverket.</li>
+</ol>
+<p>Vill du testa siffrorna för ett specifikt jobb, använd <a href="/sv/verktyg/rot-avdrag-kalkylator">vår ROT-avdragskalkylator &rarr;</a> så ser du direkt vad kunden ska betala och vad du får tillbaka.</p>
+
+<h2>Betalning och begäran om utbetalning</h2>
+<p>Betalningen måste ske elektroniskt och spårbart – kort, banköverföring, BankID eller Swish. Sedan 1 januari 2020 ger kontant betalning inte rätt till ROT. Du kan först begära utbetalning från Skatteverket när arbetet är klart och kunden har betalat sin del. Skattereduktionen är preliminär och stäms slutligen av i kundens deklaration, så kontrollera att kunden faktiskt har avdragsutrymme kvar innan du gör avdrag på fakturan.</p>
+
+<h2>Färdig checklista att bocka av</h2>
+<ul>
+<li>Fakturanummer, datum och dina företagsuppgifter</li>
+<li>Uppgift om godkänd F-skatt</li>
+<li>Köparens namn, adress och personnummer (alla som utnyttjar avdraget)</li>
+<li>Arbetskostnad separerad från material och övriga poster</li>
+<li>Antal timmar och timpris</li>
+<li>ROT-avdrag angivet (30 %, max 50 000 kr/person)</li>
+<li>Fastighetsbeteckning (villa) eller BRF-org.nr + lägenhetsnummer (bostadsrätt)</li>
+<li>Momssats och momsbelopp</li>
+<li>Belopp kunden ska betala efter ROT-avdrag</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du ROT-fakturan från tidrapporterna, så att arbetstimmarna följer med automatiskt och hålls åtskilda från material. Mallen har färdiga fält för personnummer, fastighetsbeteckning respektive BRF-organisationsnummer, och ROT-avdraget räknas ut på arbetskostnaden. Du får ett komplett underlag att stämma av mot checklistan ovan – men den slutliga kontrollen av kundens avdragsutrymme och att uppgifterna stämmer ligger alltid hos dig.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad ska en faktura innehålla för att ge ROT?</h3>
+<p>Utöver de vanliga fakturauppgifterna krävs: köparens personnummer, en särskild redovisad arbetskostnad, ROT-avdragets storlek (30 %) samt fastighetsbeteckning för villa eller BRF-organisationsnummer och lägenhetsnummer för bostadsrätt.</p>
+<h3>Hur mycket är ROT-avdraget 2026?</h3>
+<p>30 procent av arbetskostnaden inklusive moms, med ett tak på 50 000 kr per person och år. ROT delar ett gemensamt tak på 75 000 kr per person och år med RUT.</p>
+<h3>Vad händer om kundens ROT-utrymme är slut?</h3>
+<p>Då nekar Skatteverket utbetalningen och kunden blir betalningsskyldig för hela arbetskostnaden. Eftersom reduktionen är preliminär bör du be kunden bekräfta att utrymme finns innan du drar av ROT på fakturan.</p>
+<h3>Kan två personer dela på samma ROT-faktura?</h3>
+<p>Ja, om flera äger bostaden kan avdraget fördelas mellan dem. Ange då varje persons personnummer och hur beloppet fördelas – var och en har sitt eget tak på 50 000 kr per år.</p>
+
+<h2>Kom igång</h2>
+<p>Skapa en korrekt ROT-faktura direkt i <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall &rarr;</a>, eller räkna på avdraget med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur hela flödet från tidrapport till ROT-faktura fungerar i praktiken? <a href="/sv/contact">Boka en demo &rarr;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a>, <a href="/sv/blog/rot-avdrag">Allt om ROT-avdraget</a> och <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a>.</p>
+`;
+
+const A_BYGGFAKTURA_CHECKLISTA_ROT: BlogPost = {
+  _id: "code-"+"byggfaktura-checklista-rot",
+  title: "Byggfaktura med ROT: komplett checklista för 2026", slug: "byggfaktura-checklista-rot", locale: "sv",
+  excerpt: "En komplett checklista för vad en faktura måste innehålla för att ge ROT enligt 2026 års regler – så att utbetalningen från Skatteverket inte stoppas.", tag: "ROT-avdrag",
+  coverImageUrl: "/landing/verktyg/faktura-preview.webp", contentHtml: A_BYGGFAKTURA_CHECKLISTA_ROT_HTML,
+  seoTitle: "ROT-faktura checklista 2026 | ByggExp", seoDescription: "Så skriver du en korrekt ROT-faktura 2026: alla obligatoriska fält, hur du separerar arbetskostnad och räknar ut avdraget. Färdig checklista att bocka av.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/faktura-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:27:00.000Z", createdAt: "2026-08-19T05:27:00.000Z", updatedAt: "2026-08-19T05:27:00.000Z",
+};
+
+const A_JUSTERAT_FORMANSVARDE_SERVICEBIL_HTML = `
+<p>Har du en fast inredd skåpbil som står på firman men beskattas som en vanlig förmånsbil? Då betalar du och företaget nästan säkert mer i skatt och arbetsgivaravgifter än ni behöver. Schablonvärdet är byggt för en personbil, inte för en lätt lastbil full av verkstadsinredning – och för den typiska servicebilen finns det tre separata, lagliga vägar att sänka värdet eller slippa förmånen helt.</p>
+
+<p>I den här guiden reder vi ut begreppen och visar hur du räknar. Behöver du hålla ordning på körjournal, tjänstekörning och underlag inför en jämkning använder du <a href="/sv/verktyg">våra gratis verktyg för byggföretag -&gt;</a>.</p>
+
+<h2>Servicebil, förmånsbil eller arbetsredskap? Reda ut begreppen</h2>
+<p>Först det viktigaste: <strong>"servicebil" är inget skattebegrepp</strong>. Skatteverket bryr sig inte om att bilen är registrerad som lätt lastbil (totalvikt högst 3 500 kg). En lätt lastbil beskattas som bilförmån så snart den är <em>tillgänglig för privat bruk</em> – oavsett skåp, dekaler eller att det står "service" på dörren. Att bilen är en lastbil sänker alltså inte automatiskt något.</p>
+<p>Det som faktiskt påverkar skatten är bilens lämplighet för privat körning och hur den faktiskt används. Bedömningen görs i tre steg, i tur och ordning:</p>
+<ul>
+<li><strong>Test 1 – Finns en förmån alls?</strong> Är bilen tillgänglig för privat bruk uppstår förmån (61 kap. inkomstskattelagen).</li>
+<li><strong>Test 2 – Är den ett arbetsredskap?</strong> Är bilen så inredd att privat användning är olämplig kan värdet jämkas eller falla bort.</li>
+<li><strong>Test 3 – Körs den minst 3 000 mil i tjänsten?</strong> Då sätts värdet till 75 procent.</li>
+</ul>
+<p>Vägarna kan staplas. En arbetsredskaps-jämkning behöver till exempel inte vila på 3 000-mil-regeln.</p>
+
+<h2>Väg 1 – Slipp förmånen helt: ringa omfattning</h2>
+<p>Den starkaste vägen är att ingen förmån alls beskattas. Det gäller om bilen körs privat bara "vid ett fåtal tillfällen och i ringa omfattning". Skatteverkets etablerade tolkning sätter två gränser:</p>
+<ul>
+<li>Högst <strong>10 tillfällen</strong> per år, <strong>och</strong></li>
+<li>Högst <strong>100 mil</strong> (1 000 km) privat körning per år.</li>
+</ul>
+<p>Observera ordet <strong>och</strong>. Båda gränserna måste hållas samtidigt. Kör du privat vid 8 tillfällen men sammanlagt 120 mil är undantaget borta – då beskattas <em>hela årets</em> fulla förmånsvärde, inte bara det som ligger över gränsen. En enda längre privattur kan alltså välta hela året.</p>
+<p>Detta är en smal nålsögon och passar företag där servicebilen i praktiken bara används i jobbet. För att över huvud taget kunna åberopa undantaget krävs en <strong>körjournal</strong> som visar att både antal tillfällen och antal mil ligger under gränserna. Utan dokumentation faller invändningen direkt vid en granskning.</p>
+
+<h2>Väg 2 – Arbetsredskap: nedsatt förmånsvärde för fast inredning</h2>
+<p>Den vanligaste vägen för en hantverkare är att bilen är ett <em>arbetsredskap</em>. Skatteverket får enligt lagen "under synnerliga skäl" sätta ett annat värde än schablonen (61 kap. 18–19 §§ inkomstskattelagen). Är lastutrymmet fyllt av fast inredning som gör privat användning opraktisk, kan förmånsvärdet jämkas nedåt.</p>
+<p>Det finns ingen fast procentsats här – nedsättningen bedöms individuellt utifrån hur mycket den privata nyttan faktiskt är begränsad. Följande stärker ditt fall:</p>
+<ul>
+<li><strong>Fast monterad hyll- och verkstadsinredning</strong> som upptar lastutrymmet och inte enkelt kan tas bort.</li>
+<li><strong>Smutsig eller skrymmande utrustning</strong> permanent i bilen – ställningsdelar, kablar, oljor, maskiner.</li>
+<li><strong>Avsaknad av baksäte</strong> och att bilen bara har plats för föraren och en passagerare.</li>
+<li><strong>Dekaler och firmalogotyp</strong> – stödjande, men aldrig ensamt avgörande.</li>
+</ul>
+<p>Ju mer bilen liknar en rullande verkstad och ju sämre den lämpar sig för familjeutflykter, desto större blir nedsättningen. Fotografera inredningen och spara kvitton på ombyggnaden – det är den bevisningen Skatteverket vill se.</p>
+
+<h2>Väg 3 – 3 000-mil-regeln: 25 procent lägre värde</h2>
+<p>Den här vägen står tydligt i lagen och kräver ingen skönsmässig bedömning. Körs bilen minst <strong>3 000 mil (30 000 km) i tjänsten</strong> under beskattningsåret sätts förmånsvärdet till 75 procent av det värde som annars skulle gälla – en säker rabatt på 25 procent (61 kap. 18–19 §§ inkomstskattelagen).</p>
+<p>Viktigt: det är <em>tjänstekörning</em> som räknas, inte pendling mellan hem och den vanliga arbetsplatsen. Kör du mellan arbetsplatser, till kunder och byggen under dagen räknas det – men den dagliga rutten hemifrån till fasta kontoret gör det normalt inte. För en montör eller servicetekniker som är ute på uppdrag hela dagarna är 3 000 mil ofta lätt att nå.</p>
+<p>Beviset är återigen <strong>körjournalen</strong>. Kan du inte visa att minst 3 000 mil kördes i tjänsten faller rabatten. Skatteverket underkänner rutinmässigt nedsättningar där tjänste- och privatkörning inte kan styrkas.</p>
+
+<h2>Så ansöker du om jämkning hos Skatteverket</h2>
+<p>Nedsättningen sker inte automatiskt. För att det lägre värdet ska slå igenom redan under året ansöker <strong>arbetsgivaren</strong> om justering (jämkning) hos Skatteverket. Då beräknas arbetsgivaravgifter och preliminärskatt på det lägre värdet direkt i lönekörningen.</p>
+<p>Rutinen ser ut så här:</p>
+<ol>
+<li>Arbetsgivaren fyller i Skatteverkets blankett/e-tjänst för justering av förmånsvärde.</li>
+<li>Bifoga underlag: körjournal, bilder på inredningen, beskrivning av användningen.</li>
+<li>Vänta på <strong>beslut</strong> – utan ett beslut måste arbetsgivaren rapportera det ordinarie schablonvärdet.</li>
+</ol>
+<p>Missar ni att ansöka i tid kan den anställde i stället yrka justeringen i efterhand i sin inkomstdeklaration, men då har för mycket redan dragits under året. Ansök alltså före lönekörningen. Kontrollera aktuellt blankettnummer och e-tjänst på skatteverket.se innan ni skickar in – Skatteverket uppdaterar formulären löpande.</p>
+
+<h2>Räkneexempel: skåpbil med verkstadsinredning</h2>
+<p>Tänk dig en dieseldriven skåpbil med fast hyllinredning som en snickare kör i tjänsten hela året. Anta att schablonens förmånsvärde landar på 60 000 kr för året (den exakta siffran byggs av en ränterelaterad del knuten till statslåneräntan, en prisrelaterad del av nybilspriset, ett prisbasbeloppsbelopp och full fordonsskatt – hämta 2026 års tal från Skatteverkets kalkyl).</p>
+<ul>
+<li><strong>3 000-mil-regeln:</strong> värdet sätts till 75 procent, alltså 45 000 kr. Det är 15 000 kr lägre beskattat värde.</li>
+<li><strong>Arbetsredskaps-jämkning:</strong> antas Skatteverket sätta ned värdet med exempelvis hälften blir det beskattade värdet 30 000 kr.</li>
+</ul>
+<p>På 30 000 kr lägre förmånsvärde sparar företaget arbetsgivaravgifter och den anställde inkomstskatt på hela mellanskillnaden – flera tusenlappar per år. Notera att en miljöbilsnedsättning är en helt annan regel och inte gäller en diesel- eller bensinskåpbil; för den typiska servicebilen är det 3 000-mil-regeln och arbetsredskaps-jämkningen som är hävstängerna. Räkna alltid på det faktiska schablonvärdet med Skatteverkets verktyg "Räkna ut bilförmånsvärde".</p>
+
+<h2>Vanliga misstag som kostar hantverkare pengar</h2>
+<p>Det dyraste felet är att <strong>anta att en lastbil är skattefri</strong> – den är den inte. Det näst dyraste är att köra utan körjournal och sedan hävda nedsättning i efterhand; utan underlag underkänns yrkandet. Andra klassiker: att blanda ihop pendling med tjänstekörning i 3 000-milsräkningen, att tro att ringa omfattning gäller trots en enda längre privattur (den välter hela året), och att skjuta upp jämkningsansökan så att fullt värde dras under hela året. Att inte fotografera inredningen innan bilen byggs om gör dessutom arbetsredskapsargumentet svagare.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp löser inte din skattedeklaration åt dig, men verktygen ger dig underlaget som en jämkning står och faller med. Du håller ordning på tjänstekörning och kan följa dina mil mot 3 000-milsgränsen, samla dokumentation om servicebilen och hålla kvitton och underlag samlade i sju år som bokföringen kräver. Med spårbara uppgifter blir det enkelt att fylla i Skatteverkets blankett och att stå stadigt om en granskning kommer. Själva beslutet om nedsatt förmånsvärde fattar dock alltid Skatteverket.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är en lätt lastbil automatiskt befriad från förmånsvärde?</h3>
+<p>Nej. En lätt lastbil (totalvikt högst 3 500 kg) beskattas som bilförmån om den är tillgänglig för privat bruk. Det som sänker eller tar bort värdet är att bilen är olämplig för privat användning eller körmönstret – inte att den är registrerad som lastbil.</p>
+<h3>Hur mycket sänks förmånsvärdet för en inredd servicebil?</h3>
+<p>3 000-mil-regeln ger en fast nedsättning till 75 procent av värdet. Arbetsredskaps-jämkningen har ingen fast procentsats utan bedöms individuellt av Skatteverket utifrån hur mycket den fasta inredningen begränsar privat nytta.</p>
+<h3>Måste jag ha körjournal?</h3>
+<p>I praktiken ja. För att åberopa ringa omfattning, styrka 3 000 mil i tjänsten eller försvara en arbetsredskaps-jämkning behöver du en körjournal. Skatteverket underkänner rutinmässigt nedsättningar där körningen inte kan dokumenteras.</p>
+<h3>Vem ansöker om jämkningen – jag eller arbetsgivaren?</h3>
+<p>Arbetsgivaren ansöker hos Skatteverket så att avgifter och preliminärskatt beräknas på det lägre värdet redan under året. Saknas beslut måste ordinarie schablonvärde rapporteras, och den anställde får i stället begära justeringen i sin inkomstdeklaration.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att föra körjournal och samla underlag redan i dag – det avgör vad du kan få igenom. Använd <a href="/sv/verktyg">våra gratis verktyg för byggföretag</a> för att hålla ordning på tjänstekörning och dokumentation, och kontrollera alltid aktuella siffror och blanketter på skatteverket.se. Vill du se hur ByggExp stöttar hela ekonomiflödet i firman? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p><em>Relaterat:</em> <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggföretag?</a></p>
+`;
+
+const A_JUSTERAT_FORMANSVARDE_SERVICEBIL: BlogPost = {
+  _id: "code-"+"justerat-formansvarde-servicebil",
+  title: "Justerat förmånsvärde för servicebil: tre lagliga vägar att sänka skatten", slug: "justerat-formansvarde-servicebil", locale: "sv",
+  excerpt: "En fast inredd skåpbil beskattas ofta som en vanlig förmånsbil. Här är de tre lagliga vägarna att sänka förmånsvärdet – och hur du ansöker om jämkning hos Skatteverket.", tag: "Skatt",
+  coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_JUSTERAT_FORMANSVARDE_SERVICEBIL_HTML,
+  seoTitle: "Justerat förmånsvärde servicebil | ByggExp", seoDescription: "Din inredda servicebil beskattas ofta som personbil. Så sänker du förmånsvärdet lagligt via ringa omfattning, arbetsredskap och 3 000-mil-regeln.",
+  seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:30:00.000Z", createdAt: "2026-08-19T05:30:00.000Z", updatedAt: "2026-08-19T05:30:00.000Z",
+};
+
+const A_KMA_PLAN_MALL_HTML = `
+<p>KMA står för <strong>Kvalitet, Miljö och Arbetsmiljö</strong> – de tre områden en KMA-plan (ibland kallad kvalitetsplan) binder ihop till ett dokument. För många mindre byggföretag dyker kravet upp först när en beställare begär en KMA-plan i upphandlingen, och då gäller det att ha något att visa. Den goda nyheten: planen behöver inte vara tjock. Den ska vara konkret, spegla hur ni faktiskt jobbar och gå att uppdatera per projekt. Här går vi igenom vad den måste innehålla enligt PBL, Miljöbalken och Arbetsmiljölagen – och hur du bygger en nedbantad variant som håller.</p>
+
+<p>Grunden i kvalitetsbenet är egenkontrollen. Börja med att ladda ner <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> och bygg vidare därifrån.</p>
+
+<h2>Vad är en KMA-plan – och måste du ha en?</h2>
+<p>KMA är inget eget lagbegrepp. Det finns ingen paragraf som säger att du ska ha ett dokument som heter "KMA-plan". Kravet uppstår i stället när du lägger ihop tre regelverk: <strong>PBL</strong> (Plan- och bygglagen) för kvalitet och kontroll, <strong>Miljöbalken</strong> för miljö och avfall, och <strong>Arbetsmiljölagen med tillhörande AFS-föreskrifter</strong> för arbetsmiljön. En KMA-plan är helt enkelt ett samlat sätt att visa att du har koll på alla tre.</p>
+<p>Det innebär två sorters krav. Vissa delar är <strong>lagkrav</strong> oavsett vad kunden tycker – till exempel dokumenterade riskbedömningar och en arbetsmiljöplan när ett projekt är tillräckligt stort eller innehåller riskfyllt arbete. Andra delar är <strong>beställarkrav</strong>: byggherren eller huvudentreprenören kräver en samlad KMA-plan som villkor för att anlita dig. Skilj på de två så vet du vad som är förhandlingsbart och vad som inte är det.</p>
+
+<h2>De tre benen din KMA-plan måste täcka</h2>
+
+<h3>Kvalitet</h3>
+<p>Kvalitetsbenet vilar på PBL (2010:900, 10 kap.) och kontrollplanen. Byggherren ansvarar för att alla krav uppfylls, och i lov- och anmälningspliktiga projekt krävs normalt en <strong>kontrollansvarig (KA)</strong>. Den kontrollmetod som anges i kontrollplanen är oftast <strong>egenkontroll</strong> – att du som entreprenör kontrollerar och dokumenterar att arbetet uppfyller kraven. Egenkontrollen är därför det naturliga kvalitetsbenet i din KMA-plan.</p>
+
+<h3>Miljö</h3>
+<p>Miljöbenet styrs av Miljöbalken (1998:808) och Avfallsförordningen (2020:614). Sedan <strong>1 augusti 2020</strong> gäller skärpta krav på utsortering av bygg- och rivningsavfall: minst fraktionerna <strong>trä, mineral (betong, tegel, klinker, keramik, sten), metall, glas, plast och gips</strong> ska sorteras var för sig direkt vid källan. Till miljödelen hör också hantering av farligt avfall och kemikalier. En kort avfalls- och miljöplan per projekt räcker långt.</p>
+
+<h3>Arbetsmiljö</h3>
+<p>Arbetsmiljöbenet har två delar. Det löpande <strong>systematiska arbetsmiljöarbetet (SAM)</strong> – att undersöka, riskbedöma, åtgärda och följa upp – regleras sedan 1 januari 2025 i AFS 2023:1. Riskbedömningar, handlingsplaner och den årliga uppföljningen ska dokumenteras skriftligt oavsett företagets storlek; en skriftlig arbetsmiljöpolicy och skriftliga rutiner krävs vid 10 eller fler arbetstagare.</p>
+<p>Den projektspecifika delen är <strong>arbetsmiljöplanen</strong>, som numera regleras av AFS 2023:3 (ersatte AFS 1999:3). En arbetsmiljöplan är obligatorisk i förväg om arbetet pågår mer än <strong>30 arbetsdagar med fler än 20 personer</strong> samtidigt vid något tillfälle, eller om det totalt överstiger <strong>500 persondagar</strong>. Den krävs dessutom <strong>alltid</strong> – oavsett storlek, även för en ensam hantverkare – om något av de 13 särskilt riskfyllda arbetena förekommer, till exempel fallrisk på två meter eller mer, risk att begravas i schakt eller arbete med tunga byggelement. Byggherren ansvarar för att planen finns; BAS-P upprättar den under projekteringen och BAS-U håller den uppdaterad på plats.</p>
+
+<h2>Vad en nedbantad KMA-plan ska innehålla</h2>
+<p>För ett mindre företag räcker en checklista som denna, uppdelad i företagsnivå och projektnivå:</p>
+<ul>
+<li><strong>Policyer</strong> – korta kvalitets-, miljö- och arbetsmiljöpolicyer på företagsnivå.</li>
+<li><strong>Ansvarsfördelning</strong> – vem som är BAS-U, kontrollansvarig, miljöansvarig och vem som beslutar om åtgärder.</li>
+<li><strong>Rutiner</strong> – hur ni gör riskbedömning, egenkontroll, avvikelsehantering och avfallssortering.</li>
+<li><strong>Projektspecifik arbetsmiljöplan</strong> – ordnings- och skyddsregler, organisation och åtgärder för de riskfyllda arbeten som förekommer.</li>
+<li><strong>Egenkontrollmallar</strong> – kontrollpunkter kopplade till kontrollplanen.</li>
+<li><strong>Avfalls- och miljöplan</strong> – fraktioner, hämtning och hantering av farligt avfall.</li>
+</ul>
+
+<h2>Så bygger du KMA-planen steg för steg</h2>
+<ol>
+<li><strong>Företagsövergripande ledningssystem.</strong> Samla policyer och rutiner på ett ställe. För byggbranschen finns <strong>BF9K</strong> från Byggföretagen, ett certifierbart ledningssystem som integrerar kvalitet, miljö och arbetsmiljö och som kartlägger mot PBL – ett lättare alternativ än att köra separata ISO 9001, ISO 14001 och ISO 45001.</li>
+<li><strong>Ta fram mallar.</strong> Skapa återanvändbara mallar för egenkontroll, riskbedömning och avfallsplan så du slipper börja om vid varje projekt.</li>
+<li><strong>Bygg den projektspecifika delen.</strong> Fyll i arbetsmiljöplan och kontrollpunkter utifrån det aktuella projektets risker.</li>
+<li><strong>Genomför egenkontrollerna.</strong> Dokumentera löpande under produktionen, inte i efterhand.</li>
+<li><strong>Följ upp och revidera.</strong> Gör den årliga uppföljningen av SAM och uppdatera mallarna med det ni lärt er.</li>
+</ol>
+
+<h2>Företagsnivå vs projektnivå</h2>
+<p>Nyckeln till en KMA-plan som faktiskt används är att skilja på det som gäller hela företaget och det som är unikt för varje projekt. Policyer och rutiner skriver du en gång. Arbetsmiljöplan, egenkontroller och avfallsplan skapas per projekt utifrån de gemensamma mallarna. Då blir varje ny plan en ifyllnadsövning i stället för ett skrivarbete från noll – och du kan bevisa spårbarhet mot beställaren.</p>
+
+<h2>Vanliga misstag att undvika</h2>
+<ul>
+<li>Skriva en tjock plan som ingen läser i stället för korta, konkreta rutiner.</li>
+<li>Tro att en liten firma slipper arbetsmiljöplan – de 13 riskfyllda arbetena gäller även soloföretagare.</li>
+<li>Dokumentera egenkontroller i efterhand i stället för löpande.</li>
+<li>Glömma avfallssorteringens sex fraktioner och farligt avfall i miljödelen.</li>
+<li>Blanda ihop företagsnivå och projektnivå så planen måste skrivas om varje gång.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp lägger du upp dina egenkontroller som mallar en gång och kopplar dem sedan till varje projekt. Uppgifter och kontrollpunkter fördelas per projekt så att rätt person ansvarar för rätt kontroll, och dokumentationen samlas där arbetet utförs i stället för i lösa pappersblanketter. Det gör att kvalitetsbenet i din KMA-plan blir spårbart och lätt att visa upp för beställaren. ByggExp ersätter inte det juridiska ansvaret enligt PBL, Miljöbalken eller Arbetsmiljölagen – men det gör det enklare att hålla ordning på egenkontroller och uppgifter projekt för projekt.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är en KMA-plan ett lagkrav?</h3>
+<p>Nej, KMA-plan är inget eget lagbegrepp och ingen enskild lag kräver just det dokumentet. Kravet uppstår genom att kombinera PBL, Miljöbalken och Arbetsmiljölagen, och en samlad KMA-plan begärs ofta av beställaren i upphandlingen snarare än direkt av lagstiftaren.</p>
+<h3>Måste ett litet företag ha en arbetsmiljöplan?</h3>
+<p>Ja, i vissa fall. Arbetsmiljöplan krävs alltid – oavsett storlek, även för en ensam hantverkare – om något av de 13 särskilt riskfyllda arbetena förekommer, till exempel fallrisk på två meter eller mer. Annars krävs den när arbetet överstiger 30 arbetsdagar med fler än 20 personer samtidigt, eller totalt 500 persondagar.</p>
+<h3>Vad är skillnaden mellan egenkontroll och kontrollplan?</h3>
+<p>Kontrollplanen enligt PBL beskriver vilka kontroller som ska göras i projektet och beslutas i bygglovsprocessen. Egenkontrollen är den metod du som entreprenör använder för att kontrollera och dokumentera att arbetet uppfyller de kraven. Egenkontrollen är därmed kvalitetsbenet i KMA-planen.</p>
+<h3>Räcker det med mallar, eller behöver jag ett ledningssystem?</h3>
+<p>Mallar räcker för att komma igång, men ett företagsövergripande ledningssystem gör arbetet mer hållbart. För mindre byggföretag är Byggföretagens BF9K ett smidigt alternativ som integrerar kvalitet, miljö och arbetsmiljö utan att du behöver tre separata ISO-system.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och bygg vidare med fler mallar i vår <a href="/sv/verktyg">verktygssamling</a>. Vill du se hur egenkontroller och uppgifter kopplas per projekt i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi hur du får KMA-planen att leva i vardagen i stället för i en pärm.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – när krävs den och vad ska den innehålla</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/bas-p-bas-u">BAS-P och BAS-U – roller och ansvar</a>.</p>
+`;
+
+const A_KMA_PLAN_MALL: BlogPost = {
+  _id: "code-"+"kma-plan-mall",
+  title: "KMA-plan mall: så bygger du en nedbantad plan som håller", slug: "kma-plan-mall", locale: "sv",
+  excerpt: "KMA-plan behöver inte vara tjock. Så täcker du kvalitet, miljö och arbetsmiljö med korta rutiner och återanvändbara mallar per projekt.", tag: "Kvalitet & arbetsmiljö",
+  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_KMA_PLAN_MALL_HTML,
+  seoTitle: "KMA-plan mall för byggföretag | ByggExp", seoDescription: "Så bygger du en nedbantad KMA-plan som täcker kvalitet, miljö och arbetsmiljö enligt PBL, Miljöbalken och Arbetsmiljölagen – med mallar per projekt.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:33:00.000Z", createdAt: "2026-08-19T05:33:00.000Z", updatedAt: "2026-08-19T05:33:00.000Z",
+};
+
+const A_NYA_GRANSVARDEN_2026_DIISOCYANATER_HTML = `
+<p>Från och med senast 9 april 2026 gäller skärpta hygieniska gränsvärden för diisocyanater i svensk arbetsmiljö. Det berör i praktiken alla som jobbar med PU-skum, härdplastfärg, tvåkomponentslim och golvbeläggningar – alltså en stor del av landets målare, golvläggare, isolerare och snickare. De nya värdena kommer från EU-direktivet (EU) 2024/869 och genomförs i den svenska föreskriften AFS 2023:14. Här går vi igenom de exakta siffrorna, datumen och vad ditt företag konkret måste göra.</p>
+
+<p>Ett strukturerat sätt att fånga upp de här kraven i det dagliga arbetet är att bygga in dem i egenkontrollen – börja gärna med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a> och komplettera den med kemikalie- och exponeringsrutinerna nedan.</p>
+
+<h2>Vad är diisocyanater och var i bygget möter du dem?</h2>
+<p>Diisocyanater är en grupp reaktiva kemikalier som används för att härda polyuretan. De vanligaste är MDI, TDI, HDI och IPDI. Du möter dem i fler produkter än du kanske tror:</p>
+<ul>
+<li>Fogskum och isolerskum (PU-skum) på burk eller i tvåkomponentssystem.</li>
+<li>Tvåkomponents PU-lim och PU-lack.</li>
+<li>Härdplastfärg och rostskyddsfärg.</li>
+<li>Golvbeläggningar, tätskikt och gjuthartser.</li>
+</ul>
+<p>Problemet är hälsorisken. Diisocyanater är kraftigt luftvägssensibiliserande och räknas som en av de vanligaste orsakerna till arbetsrelaterad astma i byggbranschen. Den som en gång blivit allergisk kan reagera på mycket låga halter – det finns ingen säker tröskel för en redan sensibiliserad person. Därför är hela regelverket byggt kring att minska exponeringen så långt det går.</p>
+
+<h2>De nya gränsvärdena 2026 – exakta siffror</h2>
+<p>Direktiv (EU) 2024/869 inför ett bindande yrkeshygieniskt gränsvärde för diisocyanater, mätt som NCO-grupper i luft. Det är viktigt att skilja på övergångsvärdet och slutvärdet:</p>
+<ul>
+<li><strong>Övergångsvärde (gäller till 31 december 2028):</strong> nivågränsvärde 10 µg NCO/m³ (8 timmar) och korttidsgränsvärde 20 µg NCO/m³ (15 minuter).</li>
+<li><strong>Slutvärde (bindande från 1 januari 2029):</strong> nivågränsvärde 6 µg NCO/m³ (8 timmar) och korttidsgränsvärde 12 µg NCO/m³ (15 minuter).</li>
+</ul>
+<p>Sverige, liksom övriga medlemsstater, ska ha genomfört direktivet i nationell rätt senast <strong>9 april 2026</strong> (artikel 3). Det är det centrala 2026-datumet. Gränsvärdena implementeras i AFS 2023:14 &quot;Gränsvärden för luftvägsexponering i arbetsmiljön&quot; – den föreskrift som ersatte tidigare AFS 2018:1 i den nya regelstrukturen som gäller från 1 januari 2025.</p>
+<p>Samma direktiv skärper även gränsvärdena för bly (0,03 mg/m³ över 8 timmar och biologiskt gränsvärde 30 µg Pb/100 ml blod fram till 31 december 2028, därefter 15 µg Pb/100 ml från 2029). Direktiv (EU) 2024/869 omfattar enligt sin titel enbart bly och diisocyanater – gränsvärdet för krom (VI) har fastställts i tidigare EU-direktiv och berörs alltså inte av den här ändringen. Arbetar du med rivning, blästring eller heta arbeten på gamla ytor kan även bly-värdena beröra dig.</p>
+
+<h2>Varför sänks värdena?</h2>
+<p>Bakgrunden är EU:s arbete med att minska exponeringen för cancerframkallande, mutagena och reproduktionsstörande ämnen samt sensibiliserande kemikalier. Diisocyanaternas dokumenterade hälsorisk – astma, kontaktallergi och luftvägsbesvär – tillsammans med att skyddet ska vara likvärdigt i hela unionen ligger bakom skärpningen. Gränsvärdena för bly och diisocyanater sänks som en direkt följd av EU-direktivet (EU) 2024/869.</p>
+
+<h2>Utbildningskravet enligt REACH – redan i kraft</h2>
+<p>Många glömmer att ett hårt krav redan gäller. Sedan 24 augusti 2023 kräver REACH-restriktionen (post 74 i bilaga XVII, förordning (EU) 2020/1149) dokumenterad utbildning för <strong>all</strong> industriell och yrkesmässig användning av produkter som innehåller mer än 0,1 viktprocent diisocyanater. Utbildningen ska förnyas minst vart femte år.</p>
+<p>Det gäller alltså redan idag för de flesta fogskum, PU-lim och härdplastprodukter – och det omfattar även proffs och egenföretagare, inte bara stora företag. Utbildningen ska ge kunskap om riskerna, säker hantering, rätt skyddsutrustning och hur man agerar vid exponering. Kan du inte visa upp giltigt utbildningsbevis får produkten formellt inte användas.</p>
+
+<h2>Vad måste ditt företag göra konkret?</h2>
+<p>De nya gränsvärdena betyder att din riskbedömning måste räknas om mot lägre tal. Gör så här:</p>
+<ul>
+<li>Uppdatera riskbedömningen enligt AFS och stäm av exponeringen mot övergångsvärdet 10/20 µg NCO/m³ redan nu.</li>
+<li>Planera exponeringsmätningar där arbetet kan ligga nära gränsvärdet, exempelvis vid större skumnings- eller lackeringsjobb i slutna utrymmen.</li>
+<li>Prioritera tekniska åtgärder: punktutsug och god ventilation kommer alltid före personligt skydd.</li>
+<li>Använd rätt andningsskydd när halten inte kan sänkas tillräckligt – kombinationsfilter A mot organiska gaser plus partikelfilter, eller friskluftsmatat skydd vid sprutning.</li>
+<li>Överväg substitution: finns det ett vattenbaserat eller diisocyanatfritt alternativ för uppgiften?</li>
+<li>Hantera fogskum med särskild försiktighet – skydda hud och andningsvägar även vid små punktinsatser, eftersom sensibilisering kan ske vid låga halter.</li>
+<li>Dokumentera allt: produkter, säkerhetsdatablad, mätningar, utbildningsbevis och vidtagna åtgärder. Handlingar ska kunna visas upp vid tillsyn.</li>
+</ul>
+
+<h2>Medicinska kontroller och härdplastutbildning</h2>
+<p>Utöver REACH-utbildningen gäller svenska regler om medicinska kontroller vid arbete med härdplaster. För arbete som innebär exponering för diisocyanater krävs som regel läkarundersökning och en bedömning av tjänstbarhet innan arbetet påbörjas, och därefter periodiska kontroller. Den som har eller utvecklar astma eller luftvägsallergi kan behöva omplaceras. Se till att intyg och kontrolldatum finns dokumenterade och bevakas – här passar det bra att koppla in samma egenkontrollrutin som du använder för övrig kvalitets- och arbetsmiljödokumentation. Kom ihåg att resultat av medicinska kontroller och tjänstbarhetsbedömningar ska sparas så länge Arbetsmiljöverkets föreskrifter kräver – för den här typen av exponering handlar det om betydligt längre tid än vanlig bokföring, så förvara intygen säkert och långsiktigt.</p>
+
+<h2>Checklista inför 9 april 2026</h2>
+<ol>
+<li>Inventera alla produkter som kan innehålla diisocyanater (skum, lim, lack, färg, tätskikt).</li>
+<li>Läs säkerhetsdatabladen och notera halt av diisocyanater samt rekommenderat skydd.</li>
+<li>Säkra att alla som hanterar produkterna har giltiga REACH-utbildningsbevis.</li>
+<li>Uppdatera riskbedömningen mot de nya gränsvärdena.</li>
+<li>Planera in exponeringsmätningar där det behövs.</li>
+<li>Se över ventilation, punktutsug och andningsskydd.</li>
+<li>Kontrollera att medicinska kontroller och tjänstbarhetsbedömningar är aktuella.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp löser inte kemikaliemätningarna åt dig, men verktyget hjälper dig att hålla ihop dokumentationen som tillsynen efterfrågar. Med egenkontroll-mallen bygger du återkommande punkter för kemikaliehantering, skyddsutrustning och utbildningsbevis, och du kan koppla riskbedömning och kontrollpunkter till rätt projekt. På så sätt ligger inte utbildningsdatum och mätningar i en pärm som ingen tittar i, utan blir en naturlig del av jobbrutinen som är lätt att visa upp om Arbetsmiljöverket knackar på.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>När börjar de nya gränsvärdena gälla?</h3>
+<p>Sverige ska ha genomfört direktivet senast 9 april 2026. Övergångsvärdet 10/20 µg NCO/m³ gäller till 31 december 2028, och de strängare värdena 6/12 µg NCO/m³ blir fullt bindande från 1 januari 2029.</p>
+<h3>Räcker det att jobba som förr utan andningsskydd vid små fogskumsjobb?</h3>
+<p>Nej. Diisocyanater kan orsaka sensibilisering även vid låga halter och små insatser. Riskbedömningen avgör skyddsnivån, men försiktighet och rätt skydd krävs även vid punktinsatser.</p>
+<h3>Omfattas enmansföretag av kraven?</h3>
+<p>Ja. REACH-utbildningskravet gäller all yrkesmässig användning, även egenföretagare. Har du inget giltigt utbildningsbevis får produkter med mer än 0,1 viktprocent diisocyanater formellt inte användas.</p>
+<h3>Vad är skillnaden mellan övergångsvärde och slutvärde?</h3>
+<p>Övergångsvärdet (10/20 µg NCO/m³) är en högre, tillfällig nivå som gäller fram till 31 december 2028. Slutvärdet (6/12 µg NCO/m³) är den strängare nivå som blir bindande från 1 januari 2029.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att inventera dina produkter och samla utbildningsbevisen – och lägg in kemikalie- och skyddskontrollerna i <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a>. Vill du se hur riskbedömning och dokumentation kan hänga ihop i ett flöde är du välkommen att <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a> och <a href="/sv/blog/arbetsmiljoplan">Så skriver du en arbetsmiljöplan</a>.</p>
+`;
+
+const A_NYA_GRANSVARDEN_2026_DIISOCYANATER: BlogPost = {
+  _id: "code-"+"nya-gransvarden-2026-diisocyanater",
+  title: "Nya gränsvärden 2026 för diisocyanater – vad byggföretag måste göra", slug: "nya-gransvarden-2026-diisocyanater", locale: "sv",
+  excerpt: "Från senast 9 april 2026 gäller skärpta gränsvärden för diisocyanater. Här är de exakta siffrorna, datumen och vad ditt byggföretag konkret måste göra.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_NYA_GRANSVARDEN_2026_DIISOCYANATER_HTML,
+  seoTitle: "Nya gränsvärden 2026: diisocyanater | ByggExp", seoDescription: "Skärpta gränsvärden för diisocyanater gäller senast 9 april 2026. Exakta siffror, datum, REACH-utbildning och checklista för hantverkare och byggföretag.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:36:00.000Z", createdAt: "2026-08-19T05:36:00.000Z", updatedAt: "2026-08-19T05:36:00.000Z",
+};
+
+const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN_HTML = `
+<p>Den 1 juli 2025 ersatte Boverkets nya bygg- och konstruktionsregler de gamla byggreglerna (BBR) och konstruktionsreglerna (EKS). Reformen beskrivs ofta som den största förändringen av regelverket på 30 år. För dig som är entreprenör eller driver byggföretag är det inte bara ett nytt regelverk att läsa – det är en övergångsperiod som stängs 30 juni 2026, och en förskjutning av ansvar som direkt träffar hur du dokumenterar din egenkontroll.</p>
+
+<p>Vill du komma igång direkt med att uppdatera dina rutiner mot funktionskraven? Börja i vår gratis egenkontrollmall -&gt; <a href="/sv/verktyg/egenkontroll-mall">/sv/verktyg/egenkontroll-mall</a>.</p>
+
+<h2>Vad har egentligen ändrats?</h2>
+<p>De gamla reglerna var detaljstyrda: BBR angav ofta konkreta värden och hänvisade till standarder som du kunde följa rakt av. De nya reglerna är i stället funktions- och kravbaserade. Boverket anger vilka funktioner och egenskaper en byggnad ska uppnå – men inte längre hur du ska uppfylla dem. Stora delar av de allmänna råden och hänvisningarna till standarder har tagits bort.</p>
+<p>I praktiken flyttar det ansvaret nedåt i kedjan. Byggherren och entreprenören måste själva välja en lösning och kunna visa att den uppfyller funktionskravet. Det gäller att kunna verifiera och dokumentera varje val, i stället för att luta sig mot en tabell i en föreskrift. Reformen är dessutom uppdelad i flera separata författningar i BFS 2024-serien i stället för det gamla samlade BBR/EKS – kontrollera de exakta BFS-numren direkt i Boverkets författningssamling innan du hänvisar till dem i ett projekt.</p>
+
+<h2>Övergångsperioden och slutdatumet 30 juni 2026</h2>
+<p>Mellan 1 juli 2025 och 30 juni 2026 gäller en ettårig övergångsperiod. Under den får byggherren välja att följa antingen de gamla reglerna (BBR/EKS) i sin helhet eller de nya reglerna i sin helhet. Det du absolut inte får göra är att blanda regelverken i samma projekt – välj ett spår och håll dig till det hela vägen.</p>
+<p>Det avgörande för vilket regelverk som gäller är i praktiken vilket datum ansökan om lov eller anmälan kom in (inkom) till byggnadsnämnden. Kort sammanfattat:</p>
+<ul>
+<li><strong>Inkom före 1 juli 2025:</strong> gamla BBR/EKS gäller.</li>
+<li><strong>Inkom 1 juli 2025–30 juni 2026:</strong> byggherren väljer gammalt eller nytt – men inte en blandning.</li>
+<li><strong>Inkom efter 30 juni 2026:</strong> enbart Boverkets nya bygg- och konstruktionsregler gäller.</li>
+</ul>
+<p>Pågående projekt som startats under övergångsperioden enligt äldre regler kan omfattas av övergångsbestämmelser. Den exakta lydelsen bör du dubbelkolla mot Boverkets övergångsbestämmelser för just ditt ärende. En separat tidpunkt som rapporterats är att energikraven flyttas ut ur BBR till en egen energiregel, uppgivet omkring 1 oktober 2026 – det datumet är ännu obekräftat och bör verifieras separat mot Boverket.</p>
+
+<h2>Myten om en ny kontrollplan – så ligger det till</h2>
+<p>En vanlig missuppfattning är att den nya regelreformen tvingar fram en helt ny sorts kontrollplan. Det stämmer inte. Kontrollplan och egenkontroll regleras av plan- och bygglagen (PBL, 10 kap.), inte av BBR eller byggreglerna. Själva reformen ändrar alltså inte de formella PBL-kraven på kontrollplanen.</p>
+<p>Kraven i sig står kvar: en kontrollplan krävs för de flesta lov- och anmälningspliktiga bygg-, rivnings- och markåtgärder, och för de flesta sådana projekt krävs en certifierad kontrollansvarig (KA). Byggherren är fortsatt ansvarig för att kraven uppfylls och för att det finns en kontrollplan. Kontrollerna kan utföras som byggherrens egenkontroll eller av certifierad sakkunnig. Det som ändras är inte formen – utan innehållet du måste fylla den med.</p>
+
+<h2>Så påverkas din egenkontroll i praktiken</h2>
+<p>När detaljvärden och standardhänvisningar försvinner räcker det inte längre att bocka av att en kontroll är utförd. Din egenkontroll måste tydligare visa <em>hur</em> den valda lösningen uppfyller funktionskravet – alltså själva verifieringen. Det höjer i praktiken kraven på dokumentation som knyts till kontrollplanen, även om kontrollplanens PBL-krav i sig är oförändrade.</p>
+<p>Konkret betyder det att varje kontrollpunkt bör kopplas till tre saker: vilket funktionskrav den svarar mot, vilken metod eller lösning du valt, och vilket underlag som styrker att kravet är uppfyllt (mätning, provning, produktdokumentation eller motsvarande). Kopplingen mellan egenkontroll, kontrollplan och startbesked blir viktigare – kontrollansvarig ska kunna följa hur du kommit fram till att ett krav är uppfyllt, inte bara att någon skrivit sina initialer i en ruta.</p>
+<p>Rollfördelningen är densamma men skärps i praktiken: byggherren äger ansvaret, KA granskar och följer kontrollplanen, och du som entreprenör levererar verifieringen. Ju svagare din dokumentation är, desto mer sårbar blir hela kedjan vid slutbesked.</p>
+
+<h2>Checklista: förbered dig innan 30 juni 2026</h2>
+<ul>
+<li><strong>Bestäm regelval per projekt.</strong> Avgör tidigt om projektet ska följa gamla eller nya reglerna, och notera datumet då ansökan/anmälan inkom.</li>
+<li><strong>Uppdatera egenkontrollmallarna mot funktionskraven.</strong> Byt ut avbockningar mot punkter som beskriver vald lösning och verifiering.</li>
+<li><strong>Dokumentera verifieringsmetoden.</strong> Bestäm i förväg hur varje funktionskrav ska styrkas – mätning, provning eller produktunderlag.</li>
+<li><strong>Stäm av med kontrollansvarig.</strong> Säkerställ att kontrollplan och egenkontroll hänger ihop mot startbesked.</li>
+<li><strong>Bevaka energiregeln.</strong> Håll koll på den separata energiregelns ikraftträdande och kontrollera BFS-numren mot Boverkets författningssamling.</li>
+<li><strong>Spara underlagen under hela ansvarstiden.</strong> Verifieringsdokumentationen är ditt skydd om ett projekt ifrågasätts i efterhand – för arbete på byggnader kan fel enligt konsumenttjänstlagen reklameras i upp till tio år, och entreprenadavtalens ansvarstid enligt AB 04/ABT 06 är normalt tio år.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att strukturera egenkontrollen så att den håller för det funktionsbaserade regelverket. I stället för lösa pappersblanketter samlar du kontrollpunkter, valda lösningar och verifieringsunderlag på ett ställe – med foton och noteringar kopplade till rätt moment. Det gör det enklare att visa <em>hur</em> ett krav uppfyllts och att ta fram dokumentationen när kontrollansvarig eller byggnadsnämnden frågar. ByggExp ersätter inte kontrollansvarig eller kontrollplanen enligt PBL, och tar inte över byggherrens ansvar – men det gör det betydligt lättare att hålla ordning på underlaget och att spara det under den tid det kan behövas, till exempel under den tioåriga reklamations- och ansvarstiden.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag använda de nya reglerna redan nu?</h3>
+<p>Nej. Under övergångsperioden 1 juli 2025–30 juni 2026 får byggherren välja gamla eller nya reglerna, så länge du inte blandar dem i samma projekt. För ärenden där ansökan eller anmälan inkommer efter 30 juni 2026 gäller enbart de nya reglerna.</p>
+<h3>Vad händer med pågående bygglov?</h3>
+<p>Vilket regelverk som gäller styrs i praktiken av datumet då ansökan eller anmälan inkom till byggnadsnämnden. Projekt som startats under övergångsperioden enligt äldre regler kan omfattas av övergångsbestämmelser – kontrollera lydelsen för ditt specifika ärende mot Boverket.</p>
+<h3>Ändras kontrollplanen av de nya byggreglerna?</h3>
+<p>De formella kraven på kontrollplan och egenkontroll styrs av PBL (10 kap.) och ändras inte av regelreformen. Men eftersom funktionskrav ersätter detaljvärden behöver innehållet i din egenkontroll bli mer verifierande och bättre dokumenterat.</p>
+<h3>Hur länge bör jag spara egenkontroll och verifieringsunderlag?</h3>
+<p>Det finns ingen särskild lagstadgad arkiveringstid för egenkontroll i PBL, men underlaget kan behövas långt efter slutbesked. Fel i arbete på byggnader kan enligt konsumenttjänstlagen reklameras i upp till tio år, och ansvarstiden i AB 04/ABT 06 är normalt tio år efter godkänd slutbesiktning – spara därför verifieringsdokumentationen så länge den kan bli aktuell.</p>
+<h3>Vad gäller efter 30 juni 2026?</h3>
+<p>Då är valfriheten borta. Ärenden som påbörjas eller ansöks efter det datumet ska följa Boverkets nya bygg- och konstruktionsregler fullt ut. Se därför över mallar och rutiner i god tid före sommaren 2026.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att se över dina egenkontrollrutiner mot funktionskraven med vår gratis <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmall</a>. Vill du se hur ByggExp samlar egenkontroll och verifieringsunderlag i ett flöde? Boka en demo via <a href="/sv/contact">/sv/contact</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/nya-vatrumsregler-2026">Nya våtrumsregler 2026</a>.</p>
+`;
+
+const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN: BlogPost = {
+  _id: "code-"+"boverkets-nya-byggregler-2026-kontrollplan",
+  title: "Boverkets nya byggregler 2026: så påverkas din kontrollplan och egenkontroll", slug: "boverkets-nya-byggregler-2026-kontrollplan", locale: "sv",
+  excerpt: "Boverkets funktionsbaserade byggregler flyttar ansvaret till dig som entreprenör. Så påverkas egenkontroll och kontrollplan – och så förbereder du dig före 30 juni 2026.", tag: "Regelverk",
+  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN_HTML,
+  seoTitle: "Nya byggregler 2026: kontrollplan | ByggExp", seoDescription: "Boverkets nya bygg- och konstruktionsregler ändrar hur du dokumenterar egenkontroll. Så förbereder du dig och kontrollplanen före 30 juni 2026.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:39:00.000Z", createdAt: "2026-08-19T05:39:00.000Z", updatedAt: "2026-08-19T05:39:00.000Z",
+};
+
+const A_NYA_BYGGREGLER_2026_ENTREPRENAD_HTML = `
+<p>2026 är ett skarpt år för dig som driver byggföretag eller arbetar som hantverkare. Boverkets nya byggregler blir det enda gällande regelverket för nya projekt, konstruktionsreglerna har helt ersatt EKS, och Arbetsmiljöverkets nya struktur har satt sig. Samtidigt ligger fokus i PBL på att tillämpa kontrollsystemet rätt. Den här artikeln ger dig överblicken – men den ersätter inte primärkällorna. Kontrollera alltid exakta datum och paragrafer hos Boverket och Arbetsmiljöverket innan du binder dig i avtal eller kontrollplan.</p>
+
+<p>Ett konkret första steg är att se över de dokument du skickar ut i varje projekt. Uppdatera dina avtalsmallar så att de hänvisar till rätt regelverk – börja med <a href="/sv/verktyg/offert-mall">vår gratis offertmall -&gt;</a> och byt ut föråldrade referenser till BBR och EKS.</p>
+
+<h2>Boverkets nya bygg- och konstruktionsregler – övergångsperioden är slut</h2>
+<p>Boverkets nya byggregler är inte en enda författning, utan nio nya grundförfattningar: BFS 2024:4 (aktsamhet vid bygg-, rivnings- och markåtgärder), 2024:6 (bärförmåga, stadga och beständighet – konstruktionsreglerna), 2024:7 (brand), 2024:8 (hygien, hälsa och miljö), 2024:9 (säkerhet vid användning), 2024:10 (buller), 2024:11 (bostäders lämplighet), 2024:12 (tillgänglighet) och 2024:13 (tomter). De har ersatt motsvarande regler i BBR och EKS.</p>
+<p>Författningarna trädde i kraft under 2025. Under en övergångsperiod gick det att fortsätta tillämpa de äldre reglerna i BBR och EKS, men den möjligheten upphörde den 1 juli 2026. Från och med då gäller de nya reglerna för nya projekt. EKS (BFS 2011:10, eurokoderna) är upphävt i sin helhet genom BFS 2024:6, eftersom konstruktionsreglerna fullt ut ersatte EKS.</p>
+<p>En viktig nyansering: BBR (BFS 2011:6) är inte helt upphävt ännu. Reglerna om energihushållning ligger kvar i BBR 31 (senaste ändring BFS 2024:14). En ny grundförfattning om energihushållning, samordnad med EU:s direktiv om byggnaders energiprestanda (EPBD), träder i kraft den 1 oktober 2026. Först då är samtliga BBR-regler ersatta.</p>
+
+<h2>Från detaljregler till funktionskrav – vad det betyder i praktiken</h2>
+<p>Den största principiella förändringen är att de nya reglerna bygger på funktionskrav. De innehåller i huvudsak inte längre några allmänna råd eller hänvisningar till specifika standarder. Boverket anger vad som ska uppnås, inte hur. Byggherren väljer lösning, men ska på vetenskaplig grund kunna visa att kraven uppfylls – med fackmässighet i projektering, utförande och kontroll.</p>
+<p>För dig som entreprenör innebär det större frihet men också ett tydligare ansvar. Du kan inte längre luta dig mot att en viss standard automatiskt uppfyller kraven. Dokumentation, kompetens och spårbarhet blir avgörande. Kan du inte visa hur och varför en lösning uppfyller funktionskravet, står du svagt om något ifrågasätts.</p>
+
+<h2>Kontroll enligt de nya reglerna</h2>
+<p>Konstruktionsreglerna (BFS 2024:6) skärper synen på kontroll. Kontroll får inte göras i färdig byggnad – den måste ske under projektering och utförande. För byggnader i säkerhetsklass 2 eller 3 krävs dimensioneringskontroll: någon annan än den som gjort dimensioneringen ska kontrollera den, för att eliminera grova fel.</p>
+<p>Det här hänger ihop med PBL-nivån. Kontrollplanen ska bygga på en projektspecifik riskbedömning med tydliga riskmoment – inte en lång lista generella kontrollpunkter som klickas av på slutet. Egenkontroller och kontrollplan behöver alltså vara riskbaserade och kopplade till det enskilda projektet.</p>
+
+<h2>PBL, kontrollplan och kontrollansvarig – vad gäller 2026</h2>
+<p>På PBL-nivå ligger tyngdpunkten 2025–2026 på korrekt tillämpning av det befintliga kontrollsystemet. Boverket driver stödet ”Förebygg fel, brister och skador / Korrekt tillämpning av kontrollsystemet i PBL” (publicerat 10 oktober 2025). Budskapet är att kontrollplanen ska vara riskbaserad och projektspecifik, och att kontrollansvarig (KA) faktiskt ska fylla sin roll.</p>
+<p>En bredare reform av byggkontrollen och kontrollansvarig-rollen – samt arbetet mot en ny plan- och bygglag – pågår. Men den saknar bekräftat ikraftträdande 2026. Slå inte fast osäkra datum i offerter eller planering. Bevaka status hos Boverket och regeringen.</p>
+
+<h2>Arbetsmiljöverkets nya regelstruktur</h2>
+<p>Arbetsmiljöverket har omstrukturerat hela sitt regelverk. Cirka 2 700 regler har omarbetats och samlats i en ny struktur med ett femtontal nya föreskriftshäften i AFS 2023-serien. Den nya regelstrukturen trädde i kraft den 1 januari 2025 – kontrollera exakt tillämpning hos Arbetsmiljöverket.</p>
+<p>För bygg är den centrala nya föreskriften AFS 2023:3 Projektering och byggarbetsmiljösamordning – grundläggande skyldigheter, som reglerar byggherrens, projektörernas och byggarbetsmiljösamordnarnas (Bas-P och Bas-U) ansvar. Angränsande föreskrifter är AFS 2023:1 (systematiskt arbetsmiljöarbete), 2023:2 (planering och organisering) och 2023:12 (utformning av arbetsplatser). Innehållskraven är i stort desamma som tidigare, men numrering, struktur och hänvisningar är nya. Uppdatera därför interna rutiner och mallar så att de pekar på rätt AFS-nummer.</p>
+
+<h2>Checklista: så förbereder sig entreprenören 2026</h2>
+<ul>
+<li>Uppdatera mallar och egenkontroller mot rätt BFS- och AFS-nummer.</li>
+<li>Säkerställ dokumentation och fackmässighet – kunna visa hur funktionskrav uppfylls.</li>
+<li>Se över behovet av dimensioneringskontroll i säkerhetsklass 2 och 3.</li>
+<li>Gör om kontrollplansmallar till ett riskbaserat, projektspecifikt upplägg.</li>
+<li>Utbilda personal i den nya strukturen och principskiftet till funktionskrav.</li>
+<li>Byt ut referenser i avtal och AMA-hänvisningar från BBR/EKS till nya författningar.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ändrar inte reglerna åt dig, men verktygen gör det enklare att hålla dokumentationen aktuell och konsekvent. Med våra mallar för offert och ÄTA får du ett gemensamt underlag där du själv styr vilka regelhänvisningar och kontrollpunkter som ska med. När du uppdaterar en formulering behöver du bara göra det på ett ställe, i stället för i lösa Word-dokument per projekt. Se <a href="/sv/verktyg/ata-mall">vår ÄTA-mall</a> för att hålla ordning på ändrings- och tilläggsarbeten, och samla alla verktyg via <a href="/sv/verktyg">våra gratis verktyg</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Gäller gamla BBR fortfarande?</h3>
+<p>Möjligheten att tillämpa äldre BBR och EKS på nya projekt upphörde den 1 juli 2026. Reglerna om energihushållning ligger dock kvar i BBR 31 tills den nya energiförfattningen träder i kraft den 1 oktober 2026. Kontrollera aktuellt läge hos Boverket.</p>
+<h3>Måste jag följa svensk standard?</h3>
+<p>De nya reglerna är funktionskrav och innehåller i huvudsak inte längre hänvisningar till specifika standarder. Du väljer lösning, men ska på vetenskaplig grund kunna visa att kraven uppfylls. En standard kan fortfarande vara ett bra sätt att visa det.</p>
+<h3>Vad hände med EKS?</h3>
+<p>EKS (BFS 2011:10) är upphävt i sin helhet genom de nya konstruktionsreglerna i BFS 2024:6, som fullt ut ersätter EKS.</p>
+<h3>När kommer de nya energireglerna?</h3>
+<p>En ny grundförfattning om energihushållning, samordnad med EU:s EPBD-direktiv, träder i kraft den 1 oktober 2026. Först då är samtliga BBR-regler ersatta. Bekräfta datum hos Boverket.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att uppdatera dina projektdokument så att de speglar 2026 års regelverk. Skapa ett rent underlag med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>, och boka en <a href="/sv/contact">demo</a> om du vill se hur ByggExp kan hålla mallar och dokumentation samlade. Kom ihåg: exakta datum och paragrafer kan ändras – bevaka alltid Boverkets och Arbetsmiljöverkets sidor.</p>
+
+<p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – så väljer du rätt standardavtal</a> och <a href="/sv/blog/ata-arbeten">ÄTA-arbeten – så hanterar du ändringar och tillägg</a>.</p>
+`;
+
+const A_NYA_BYGGREGLER_2026_ENTREPRENAD: BlogPost = {
+  _id: "code-"+"nya-byggregler-2026-entreprenad",
+  title: "Nya byggregler 2026 för entreprenörer – detta ändras och vad du bör göra nu", slug: "nya-byggregler-2026-entreprenad", locale: "sv",
+  excerpt: "En översikt av vad som ändras för entreprenörer 2026: Boverkets nya byggregler, riskbaserade kontrollplaner och Arbetsmiljöverkets omstrukturerade föreskrifter.", tag: "Regelverk",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_NYA_BYGGREGLER_2026_ENTREPRENAD_HTML,
+  seoTitle: "Nya byggregler 2026 entreprenad | ByggExp", seoDescription: "Boverkets nya byggregler, PBL-kontrollplan och Arbetsmiljöverkets nya AFS 2023-serie – en översikt för entreprenörer 2026, med checklista och primärkällor.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:42:00.000Z", createdAt: "2026-08-19T05:42:00.000Z", updatedAt: "2026-08-19T05:42:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_HAVNING_AV_ENTREPRENAD,
+    A_ARBETSTIDSLAGEN_BYGG,
+    A_FORSENINGSVITE_ENTREPRENAD,
+    A_NYA_ASBESTREGLER_2026,
+    A_FALLSKYDD_KRAV_BYGG,
+    A_ANSTALLNINGSAVTAL_MALL_BYGG,
+    A_MILERSATTNING_2026,
+    A_YRKESBEVIS_BYGG_LARLING,
+    A_HITTA_KUNDER_BYGGFIRMA,
+    A_BYGGFAKTURA_CHECKLISTA_ROT,
+    A_JUSTERAT_FORMANSVARDE_SERVICEBIL,
+    A_KMA_PLAN_MALL,
+    A_NYA_GRANSVARDEN_2026_DIISOCYANATER,
+    A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN,
+    A_NYA_BYGGREGLER_2026_ENTREPRENAD,
     A_BERAKNA_MATERIALATGANG_TAK,
     A_FONSTER_U_VARDE_2026,
     A_ARBETSMILJOVERKET_NYA_REGLER_2026_BYGG,

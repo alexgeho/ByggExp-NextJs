@@ -16,6 +16,7 @@ export const VERKTYG_GROUPS: VerktygGroup[] = [
       { slug: 'paslag-marginal-kalkylator', label: 'Påslag & marginal' },
       { slug: 'drojsmalsranta-kalkylator', label: 'Dröjsmålsränta' },
       { slug: 'forseningsvite-kalkylator', label: 'Förseningsvite' },
+      { slug: 'anstalld-kostnad-kalkylator', label: 'Vad kostar en anställd' },
     ],
   },
   {
@@ -53,6 +54,7 @@ export const VERKTYG_GROUPS: VerktygGroup[] = [
       { slug: 'kontrollplan-mall', label: 'Kontrollplan-mall' },
       { slug: 'gantt-schema-mall', label: 'Gantt-schema / tidsplan' },
       { slug: 'anstallningsavtal-mall', label: 'Anställningsavtal-mall' },
+      { slug: 'mangdforteckning-mall', label: 'Mängdförteckning-mall' },
     ],
   },
   {

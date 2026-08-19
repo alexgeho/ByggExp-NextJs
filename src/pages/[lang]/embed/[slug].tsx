@@ -2,6 +2,7 @@ import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import type { ComponentType } from 'react';
 
+import AnstalldKostnadKalkylatorTool from '../../../components/LeadMagnet/AnstalldKostnadKalkylatorTool';
 import BetongKalkylatorTool from '../../../components/LeadMagnet/BetongKalkylatorTool';
 import DrojsmalsrantaKalkylatorTool from '../../../components/LeadMagnet/DrojsmalsrantaKalkylatorTool';
 import ForseningsviteKalkylatorTool from '../../../components/LeadMagnet/ForseningsviteKalkylatorTool';
@@ -58,6 +59,7 @@ const TOOLS: Record<string, { Tool: ComponentType; title: string }> = {
   'drojsmalsranta-kalkylator': { Tool: DrojsmalsrantaKalkylatorTool, title: 'Dröjsmålsränta-kalkylator' },
   'forseningsvite-kalkylator': { Tool: ForseningsviteKalkylatorTool, title: 'Förseningsvite-kalkylator' },
   'spillprocent-kalkylator': { Tool: SpillprocentKalkylatorTool, title: 'Spillprocent-kalkylator' },
+  'anstalld-kostnad-kalkylator': { Tool: AnstalldKostnadKalkylatorTool, title: 'Vad kostar en anställd' },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {

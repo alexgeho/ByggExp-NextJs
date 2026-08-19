@@ -2073,6 +2073,7 @@ const KUNDEN: BlogPost = {
 
 const MANGD_HTML = `
 <p>Ett anbud vinns eller förloras på hur väl mängderna är beräknade och prissatta. En slarvig mängdförteckning gör att du antingen räknar bort dig och förlorar jobbet, eller vinner det men blöder pengar under hela projektet. En noggrann förteckning gör tvärtom: den ger dig kontroll på varje post, skyddar dig när mängderna ändras och gör anbudet jämförbart med konkurrenternas. Den här guiden går igenom vad en mängdförteckning är, skillnaden mellan oprissatt och prissatt, hur den byggs upp kolumn för kolumn och hur du tar den vidare till kalkyl och offert.</p>
+<p><a href="/sv/verktyg/mangdforteckning-mall">Skapa en mängdförteckning med vår gratis mall (PDF & Excel) -&gt;</a></p>
 
 <p>Vill du komma igång direkt? Använd <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a> för att strukturera posterna och ta din prissatta mängdförteckning hela vägen till ett färdigt anbud.</p>
 
@@ -2790,6 +2791,7 @@ const ABS18: BlogPost = {
 
 const VADKOST_HTML = `
 <p>Vad kostar en anställd i ett byggföretag egentligen? Om du bara ser till månadslönen räknar du fel – och lägger anbud som äter upp din marginal. Den lön du betalar ut är toppen av ett isberg. Under ytan ligger arbetsgivaravgift, semester, tjänstepension, försäkringar och en rad byggspecifika kostnader som tillsammans kan mer än fördubbla siffran. Den här guiden visar hur du bygger upp den verkliga timkostnaden för en byggnadsarbetare 2026, så att du sätter rätt pris från början.</p>
+<p><a href="/sv/verktyg/anstalld-kostnad-kalkylator">Räkna ut vad en anställd kostar med vår gratis kalkylator -&gt;</a></p>
 
 <p>Vill du testa dina egna siffror direkt? Räkna fram din faktiska kostnad med vår gratis <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator &rarr;</a></p>
 

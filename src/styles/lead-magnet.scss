@@ -94,7 +94,8 @@
 }
 
 .lm-tool-field input,
-.lm-tool-field textarea {
+.lm-tool-field textarea,
+.lm-tool-field select {
   font: inherit;
   font-weight: 400;
   padding: 11px 13px;
@@ -106,10 +107,32 @@
 }
 
 .lm-tool-field input:focus,
-.lm-tool-field textarea:focus {
+.lm-tool-field textarea:focus,
+.lm-tool-field select:focus {
   outline: none;
   border-color: var(--lm-accent);
   box-shadow: 0 0 0 3px rgba(35, 148, 255, 0.18);
+}
+
+// Checkbox row (e.g. optional fees in the dröjsmålsränta calculator).
+.lm-tool-check {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.lm-tool-check input {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+// Small muted note under a tool's result.
+.lm-tool-note {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--muted, #667085);
 }
 
 .lm-tool-actions {

@@ -4182,6 +4182,7 @@ const A_DROJSMALSRANTA_2026_HTML = `
 <p>En obetald faktura är inget du bara ska vänta ut. Som byggföretag har du enligt räntelagen rätt att ta ut dröjsmålsränta på sena betalningar – och för 2026 är den lagstadgade räntan 10,00 % per år. Räknat på ett par större byggfakturor blir det snabbt tusenlappar som du har rätt till, plus fasta avgifter för besväret. Här går vi igenom exakt hur du räknar, när du får ta ut räntan och hur du driver in pengarna.</p>
 
 <p>Vill du komma igång direkt lägger du in korrekta betalningsvillkor och förfallodag redan när fakturan skapas – testa vår gratis <a href="/sv/verktyg/faktura-mall">fakturamall för byggföretag -&gt;</a> så att räntan börjar löpa automatiskt när kunden är sen.</p>
+<p><a href="/sv/verktyg/drojsmalsranta-kalkylator">Räkna ut exakt dröjsmålsränta på en obetald faktura med vår gratis kalkylator -&gt;</a></p>
 
 <h2>Snabbsvar: dröjsmålsränta 2026</h2>
 <p><strong>Dröjsmålsräntan 2026 är 10,00 % per år.</strong> Den består av referensräntan 2,00 % plus 8 procentenheter enligt räntelagen (1975:635) 6 §. Siffran gäller hela 2026 – både första och andra halvåret – eftersom referensräntan ligger kvar på 2,00 % vid båda fastställelsetillfällena.</p>
@@ -4287,6 +4288,7 @@ const A_SPILLPROCENT_BYGG_MATERIAL_HTML = `
 <p>En materialkalkyl som utgår från den nettomängd du mäter upp på ritningen blir nästan alltid för låg. Verkligheten kapar, spräcker och slösar — och glömmer du spillet i offerten ser jobbet billigare ut på papperet än det blir på bygget. Skillnaden hamnar rakt i din marginal, eller som en tråkig efterbeställning mitt i etappen. Rätt spillprocent per material är därför ingen gissning, utan en kalkylpost du ska ha koll på innan du prissätter.</p>
 
 <p>Vill du räkna snabbt och rätt kan du använda <a href="/sv/verktyg/betong-kalkylator">vår gratis betongkalkylator</a>, som redan har ett spillpåslag inbyggt så att du får inköpsmängden — inte bara den teoretiska nettovolymen.</p>
+<p><a href="/sv/verktyg/spillprocent-kalkylator">Räkna ut materialåtgång med spill i vår gratis spillkalkylator -&gt;</a></p>
 
 <h2>Spillprocent och spillfaktor — grundformeln</h2>
 <p>Spillprocent är den mängd material du beställer <em>utöver</em> den uppmätta nettomängden för att täcka kapspill, kantspill, brott och rena misstag. Den uttrycks antingen som en procent (10 %) eller som en spillfaktor — en multiplikator (1,10). Grundformeln i all byggkalkyl är enkel:</p>
@@ -6451,6 +6453,7 @@ const A_FORSENINGSVITE_ENTREPRENAD_HTML = `
 <p>När ett bygge drar över sluttiden är den avgörande frågan enkel: vem betalar för förseningen? Svaret står i kontraktet. Förseningsvite är den avtalade summa entreprenören betalar per vecka som färdigställandet blir försenat, och den bestämmer i praktiken vem som bär kostnaden. Ett räkneexempel gör poängen tydlig: på en kontraktssumma om 4 Mkr innebär ett vite på 1 % att det kostar 40 000 kr för varje påbörjad vecka. Löper förseningen över fem veckor blir det 200 000 kr. Vite finns dock inte automatiskt i lagen — det gäller bara om det är inskrivet i avtalet, och bara om klausulen är skriven på rätt sätt.</p>
 
 <p>Vitesbeloppet regleras i ÄTA- och kontraktshandlingarna, så börja med att strukturera ändringar och tillägg korrekt med <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall -&gt;</a> så att sluttiden och rätten till tidsförlängning är dokumenterad från dag ett.</p>
+<p><a href="/sv/verktyg/forseningsvite-kalkylator">Räkna ut förseningsvitet med vår gratis kalkylator -&gt;</a></p>
 
 <h2>Så räknar du ut förseningsvitet</h2>
 <p>Formeln är rak: <strong>vite = avtalad procentsats × kontraktssumman, per påbörjad vecka</strong>. Ta en kontraktssumma på 4 000 000 kr och jämför tre vanliga nivåer:</p>

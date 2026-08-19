@@ -3,6 +3,9 @@ import Head from 'next/head';
 import type { ComponentType } from 'react';
 
 import BetongKalkylatorTool from '../../../components/LeadMagnet/BetongKalkylatorTool';
+import DrojsmalsrantaKalkylatorTool from '../../../components/LeadMagnet/DrojsmalsrantaKalkylatorTool';
+import ForseningsviteKalkylatorTool from '../../../components/LeadMagnet/ForseningsviteKalkylatorTool';
+import SpillprocentKalkylatorTool from '../../../components/LeadMagnet/SpillprocentKalkylatorTool';
 import FallKalkylatorTool from '../../../components/LeadMagnet/FallKalkylatorTool';
 import FargKalkylatorTool from '../../../components/LeadMagnet/FargKalkylatorTool';
 import GipsKalkylatorTool from '../../../components/LeadMagnet/GipsKalkylatorTool';
@@ -52,6 +55,9 @@ const TOOLS: Record<string, { Tool: ComponentType; title: string }> = {
   'staket-kalkylator': { Tool: StaketKalkylatorTool, title: 'Staket' },
   'timpris-kalkylator': { Tool: TimprisKalkylatorTool, title: 'Timpris-kalkylator' },
   'paslag-marginal-kalkylator': { Tool: PaslagKalkylatorTool, title: 'Påslag & marginal' },
+  'drojsmalsranta-kalkylator': { Tool: DrojsmalsrantaKalkylatorTool, title: 'Dröjsmålsränta-kalkylator' },
+  'forseningsvite-kalkylator': { Tool: ForseningsviteKalkylatorTool, title: 'Förseningsvite-kalkylator' },
+  'spillprocent-kalkylator': { Tool: SpillprocentKalkylatorTool, title: 'Spillprocent-kalkylator' },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {

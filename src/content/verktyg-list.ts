@@ -14,6 +14,8 @@ export const VERKTYG_GROUPS: VerktygGroup[] = [
       { slug: 'moms-kalkylator', label: 'Moms' },
       { slug: 'timpris-kalkylator', label: 'Timpris' },
       { slug: 'paslag-marginal-kalkylator', label: 'Påslag & marginal' },
+      { slug: 'drojsmalsranta-kalkylator', label: 'Dröjsmålsränta' },
+      { slug: 'forseningsvite-kalkylator', label: 'Förseningsvite' },
     ],
   },
   {
@@ -35,6 +37,7 @@ export const VERKTYG_GROUPS: VerktygGroup[] = [
       { slug: 'trall-kalkylator', label: 'Trall' },
       { slug: 'staket-kalkylator', label: 'Staket' },
       { slug: 'takstolar-kalkylator', label: 'Takstolar' },
+      { slug: 'spillprocent-kalkylator', label: 'Spillprocent' },
     ],
   },
   {

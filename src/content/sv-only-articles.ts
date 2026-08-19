@@ -5,6 +5,12 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'garantibesiktning-2-ar-entreprenad',
+  'semesterlon-semesterersattning-byggavtalet',
+  'rivningsavfall-sorteringskrav-bygg',
+  'tjanstepension-byggavtalet-bao',
+  'friskvardsbidrag-byggforetag-avdrag',
+  'efterbesiktning-vem-betalar-entreprenad',
   'dranering-grus-material-berakning',
   'ombilda-enskild-firma-till-ab-bygg',
   'personlig-skyddsutrustning-krav-bygg',

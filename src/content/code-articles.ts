@@ -13900,9 +13900,533 @@ const A_KORTTIDSARBETE_PERMITTERING_BYGGFORETAG: BlogPost = {
   publishedAt: "2026-08-19T18:12:00.000Z", createdAt: "2026-08-19T18:12:00.000Z", updatedAt: "2026-08-19T18:12:00.000Z",
 };
 
+const A_GARANTIBESIKTNING_2_AR_ENTREPRENAD_HTML = `
+<p>Garantibesiktningen efter 2 år är inte en formalitet — det är den punkt där ansvaret för fel avgörs. Under garantitiden gäller omvänd bevisbörda: framträder ett fel presumeras det vara entreprenörens och ni får avhjälpa det på egen bekostnad. Missar beställaren att påkalla besiktningen i tid, eller släpper ni fel förbi 2-årsgränsen, ändras hela läget. Den här artikeln reder ut vad som kontrolleras, vem som kallar och vilka fel som faktiskt hamnar på beställaren.</p>
+
+<p>Dokumentera egenkontrollerna löpande under garantitiden så att du kan bemöta anmärkningar med underlag — använd <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -></a> för att hålla ordning på vad som utförts och när.</p>
+
+<h2>Garantitid enligt AB 04 — 5 år och 2 år</h2>
+<p>Grunden finns i AB 04 kap 4 § 7. Garantitiden är <strong>5 år för entreprenörens arbetsprestation</strong> och <strong>2 år för material och varor</strong>. Det är den så kallade 5/2-regeln: den längre tiden träffar själva utförandet, medan material och varor bär den kortare tvåårstiden. Båda tiderna räknas från godkänd slutbesiktning, inte från när arbetet fysiskt avslutades.</p>
+<p>I totalentreprenad enligt ABT 06 ser det annorlunda ut. Där gäller <strong>5 år för hela entreprenaden — både arbete och material</strong>, eftersom entreprenören själv projekterar och väljer material. Undantaget är av <strong>beställaren föreskrivet särskilt material eller fabrikat</strong>, där garantitiden i stället är 2 år. Skillnaden mellan entreprenadformerna är alltså kopplad till vem som bär ansvaret för materialvalet.</p>
+
+<h2>Varför just 2 år? Materialgarantin och 2-årsbesiktningen</h2>
+<p>Den korta 2-åriga garantitiden för material och varor är själva anledningen till att en tidig garantibesiktning behövs. Fel i en vara — en pump, ett tätskikt, en beslagning — måste fångas innan tvåårsgränsen passeras, annars försvinner den korta materialgarantin. I praktiken görs därför ofta <strong>två garantibesiktningar</strong>:</p>
+<ul>
+<li>En <strong>2-årsbesiktning</strong> strax innan tvåårsgränsen, som fångar fel i material och varor med kort garantitid.</li>
+<li>En <strong>5-årsbesiktning</strong> innan femårsgränsen, som tar sikte på entreprenörens arbetsprestation.</li>
+</ul>
+<p>Poängen är att inte klumpa ihop allt till en enda besiktning år fem. Då är den korta materialgarantin redan borta.</p>
+
+<h2>Vem kallar till garantibesiktning — och tidsfristen som avgör allt</h2>
+<p>Garantibesiktningen påkallas och verkställs av <strong>beställaren</strong>, och den måste ske <strong>före garantitidens utgång</strong>. Det är här många snubblar. Missar beställaren att påkalla besiktningen i tid går rätten till felet inte automatiskt förlorad — fel kan fortfarande reklameras skriftligen under garantitiden enligt AB 04 kap 5 § 15 — men beställaren förlorar det praktiska bevisläge som ett besiktningsprotokoll ger.</p>
+<p>Enligt AB 04 kap 7 § 12 ska besiktningen påkallas <strong>senast tre månader före garantitidens utgång</strong>, så att den hinner genomföras och protokollföras innan gränsen passeras. Det är alltså en regel, inte bara en tumregel. För dig som entreprenör är det värt att hålla koll på dina egna garantitider även om ansvaret att kalla ligger på beställaren, eftersom det påverkar vilka anmärkningar du behöver hantera.</p>
+
+<h2>Vad kontrolleras vid besiktningen</h2>
+<p>Garantibesiktningen omfattar fel som har <strong>framträtt sedan slutbesiktningen</strong>. Det handlar alltså inte om att göra om slutbesiktningen, utan om att fånga sådant som visat sig under garantitidens gång — sättningar, sprickor, otätheter, funktionsfel i material.</p>
+<p>Besiktningsmannen upprättar ett protokoll där varje anmärkning noteras. Skillnaden mellan besiktningarna ligger i vad som är i fokus: 2-årsbesiktningen riktar in sig på material och varor, medan 5-årsbesiktningen tar sikte på arbetsprestationen. Anmärkningar som förs in i protokollet är det som entreprenören ska ta ställning till och i förekommande fall avhjälpa.</p>
+
+<h2>Vem betalar? Omvänd bevisbörda under garantitiden</h2>
+<p>Under garantitiden gäller en presumtion till beställarens fördel enligt AB 04 kap 5 § 5. Ett fel som framträder under garantitiden <strong>antas vara entreprenörens ansvar</strong>. Det är entreprenören som har bevisbördan och som måste göra sannolikt att felet i stället beror på beställaren — exempelvis normalt slitage eller felaktig skötsel — för att slippa ansvar.</p>
+<p>Är felet ett garantifel ska det avhjälpas av entreprenören <strong>på egen bekostnad</strong>. Avhjälpandet ska ske utan dröjsmål och i rätt tid enligt reglerna om avhjälpande i AB 04 kap 5 §§ 17–20. Att dra ut på tiden är i sig ett avtalsbrott, oavsett att grundfelet ska rättas kostnadsfritt.</p>
+
+<h2>Fel du inte ansvarar för – beställarens sak</h2>
+<p>Presumtionen är inte total. Entreprenören ansvarar <strong>inte</strong> för allt som dyker upp under garantitiden — vissa fel står beställaren själv för. Det gäller:</p>
+<ul>
+<li><strong>Normalt och onormalt slitage</strong> — förslitning som följer av brukandet, inte av ett utförandefel.</li>
+<li><strong>Bristande underhåll och skötsel</strong> — komponenter som inte servats eller underhållits enligt anvisning.</li>
+<li><strong>Felaktig användning och hantering</strong> från beställarens sida.</li>
+</ul>
+<p>Det är just dessa punkter entreprenören åberopar för att bryta presumtionen. Kan du visa att en skada beror på utebliven skötsel eller felaktig användning, flyttas kostnaden tillbaka till beställaren. Här blir din löpande dokumentation avgörande.</p>
+
+<h2>Efter garantitiden — ansvarstiden på 10 år</h2>
+<p>Att garantitiden löper ut betyder inte att ansvaret upphör. <strong>Ansvarstiden är 10 år</strong> från godkänd slutbesiktning i både AB 04 och ABT 06. Men läget vänder helt. Efter garantitidens utgång ansvarar entreprenören endast för <strong>väsentligt fel</strong> som visas ha sin grund i entreprenörens vårdslöshet, enligt AB 04 kap 5 § 6 — och nu är det <strong>beställaren som har bevisbördan</strong>.</p>
+<p>Det är därför garantibesiktningen är så viktig för beställaren: den är sista chansen att fånga fel medan bevisbördan fortfarande ligger på entreprenören. Efter garantitiden krävs både väsentlighet och bevisad vårdslöshet.</p>
+
+<h2>Checklista inför garantibesiktningen</h2>
+<ol>
+<li>Håll reda på datum för godkänd slutbesiktning — hela 5/2-räkningen utgår därifrån.</li>
+<li>Bevaka 2-årsgränsen separat så att fel i material och varor inte faller mellan stolarna.</li>
+<li>Beställaren påkallar besiktningen senast tre månader före utgång enligt AB 04 kap 7 § 12.</li>
+<li>Samla underlag: slutbesiktningsprotokoll, egenkontroller, drift- och skötselanvisningar.</li>
+<li>Gå igenom kända anmärkningar innan besiktningsmannen kommer.</li>
+<li>Notera vad som kan hänföras till slitage, skötsel eller användning — det avgör vem som betalar.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig hålla ordning på det som avgör en garantibesiktning: dokumentationen. Med egenkontroller kopplade till projektet får du en löpande logg över vad som utförts, av vem och när — underlag som gör det möjligt att bemöta anmärkningar och peka på skötsel eller slitage när det är berättigat. Handlingar och protokoll samlas på ett ställe så att slutbesiktningsdatum och garantitider går att spåra utan att leta i pärmar. ByggExp avgör inte juridiken åt dig, men gör att du har rätt underlag framme när frågan om vem som betalar ställs.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vem kallar till garantibesiktning enligt AB 04?</h3>
+<p>Beställaren påkallar och verkställer garantibesiktningen, och den ska enligt AB 04 kap 7 § 12 påkallas senast tre månader före garantitidens utgång. Missar beställaren att kalla i tid går rätten till felet inte automatiskt förlorad — fel kan även reklameras skriftligen under garantitiden — men besiktningsprotokollet ger ett starkare bevisläge.</p>
+<h3>Vad är skillnaden mellan 2 år och 5 år i garantitiden?</h3>
+<p>Enligt AB 04 kap 4 § 7 är garantitiden 5 år för entreprenörens arbetsprestation och 2 år för material och varor. Därför görs ofta en tidig 2-årsbesiktning som fångar fel i material och varor, och en senare 5-årsbesiktning som tar sikte på arbetsprestationen. I ABT 06 gäller i stället 5 år för både arbete och material, med undantag för sådant särskilt material eller fabrikat som beställaren föreskrivit, där 2 år tillämpas.</p>
+<h3>Vem betalar för att åtgärda ett garantifel?</h3>
+<p>Garantifel avhjälps av entreprenören på egen bekostnad, utan dröjsmål. Under garantitiden presumeras felet vara entreprenörens och entreprenören har bevisbördan för att felet i stället beror på beställaren.</p>
+<h3>Vilka fel står beställaren själv för?</h3>
+<p>Beställaren står för normalt och onormalt slitage, bristande underhåll och skötsel samt fel som beror på felaktig användning eller hantering. Kan entreprenören göra en sådan orsak sannolik bryts presumtionen.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att sätta system på egenkontrollerna så att du har underlag inför garantibesiktningen — utgå från <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>. Vill du se hur dokumentation, protokoll och garantitidsbevakning hänger ihop i ett projekt? <a href="/sv/contact">Boka en demo av ByggExp</a> så visar vi upplägget.</p>
+
+<p>Relaterat: <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid i AB 04</a>, <a href="/sv/blog/slutbesiktning">Slutbesiktning — så fungerar den</a>, <a href="/sv/blog/reklamation-hantverkstjanst-frister">Reklamation av hantverkstjänst och frister</a>.</p>
+`;
+
+const A_GARANTIBESIKTNING_2_AR_ENTREPRENAD: BlogPost = {
+  _id: "code-"+"garantibesiktning-2-ar-entreprenad",
+  title: "Garantibesiktning efter 2 år — AB 04 och entreprenörens ansvar", slug: "garantibesiktning-2-ar-entreprenad", locale: "sv",
+  excerpt: "Garantitiden i AB 04 är 5 år för arbetsprestationen och 2 år för material och varor. Så fungerar 2-årsbesiktningen, omvänd bevisbörda och ansvarstiden.", tag: "Entreprenadjuridik",
+  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_GARANTIBESIKTNING_2_AR_ENTREPRENAD_HTML,
+  seoTitle: "Garantibesiktning 2 år i AB 04 | ByggExp", seoDescription: "Garantibesiktningen efter 2 år avgör vem som betalar för fel. Så fungerar 5/2-regeln i AB 04, omvänd bevisbörda och tidsfristerna — för dig som entreprenör.",
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T19:00:00.000Z", createdAt: "2026-08-19T19:00:00.000Z", updatedAt: "2026-08-19T19:00:00.000Z",
+};
+
+const A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET_HTML = `
+<p>Ett byggföretag som räknar semesterlön efter semesterlagens 12 procent räknar fel. Byggavtalet ger en högre semesterlön – 13,0 procent av den intjänade lönen – och bygger på procentregeln, inte på semesterlagens sammalöneregel. Skillnaden märks särskilt när dina anställda har ackord, ob, övertid och oregelbunden arbetstid. Missar du procentsatsen eller väljer fel beräkningsmetod blir det både reklamationer och rättelser i efterhand. Här går vi igenom hur du som arbetsgivare räknar rätt på semesterlön och semesterersättning enligt Byggavtalet 2025–2027.</p>
+
+<p>Ett bra underlag är förutsättningen för rätt semesterlön, eftersom procenten läggs på hela den intjänade bruttolönen. Har du ordning på timmar, ackord och tillägg blir semesterkörningen enkel – börja med vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall -&gt;</a>.</p>
+
+<h2>Semesterlagen som golv – sammalöneregeln vs procentregeln</h2>
+<p>Semesterlagen ger varje anställd rätt till 25 semesterdagar per semesterår. Semesteråret och intjänandeåret löper 1 april–31 mars. De betalda dagarna tjänas in året innan. Antalet räknas ut som antal anställningsdagar under intjänandeåret, minus de dagar den anställde haft frånvaro som inte är semesterlönegrundande, gånger 25 delat med 365 – och resultatet avrundas alltid uppåt. Minst 20 betalda dagar ska tas ut varje år och upp till 5 får sparas.</p>
+<p>Lagen anger två sätt att räkna semesterlön:</p>
+<ul>
+<li><strong>Sammalöneregeln</strong> – den anställde behåller sin månadslön under ledigheten och får dessutom ett semestertillägg på 0,43 procent av månadslönen per betald semesterdag. Detta är huvudregeln för fast månadslön.</li>
+<li><strong>Procentregeln</strong> – semesterlönen är 12 procent av den lön som tjänats in under intjänandeåret.</li>
+</ul>
+<p>Semesterlagens 12 procent och 0,43 procent är minimiregler – ett golv. Kollektivavtal får ge mer, och det är precis vad Byggavtalet gör.</p>
+
+<h2>Så avviker Byggavtalet – 13 % enligt procentregeln</h2>
+<p>Byggnadsarbetare har sällan en jämn, fast månadslön. Ackord, ob-tillägg, övertid och varierande timmar gör att sammalöneregeln inte speglar den faktiska intjäningen. Därför tillämpar Byggavtalet procentregeln, men med en högre sats än lagens 12 procent.</p>
+<p>Procentsatsen skiljer sig mellan avtalsområdena, och du måste använda rätt sats för ditt – stäm alltid av mot ditt avtalsområdes aktuella procentsats:</p>
+<ul>
+<li><strong>Byggavtalet: 13,0 procent</strong> av intjänad lön.</li>
+<li><strong>Entreprenadmaskinavtalet: 13,1 procent</strong>.</li>
+<li><strong>Plåt- och ventilationsavtalet: 13,2 procent</strong>.</li>
+</ul>
+<p>Procenten beräknas på hela den intjänade bruttolönen under intjänandeåret – alltså inte bara grundlönen, utan även ackord, ob, övertid och vissa tillägg. Det är en vanlig felkälla: lägger du bara 13 procent på grundlönen underbetalar du semesterlönen på alla rörliga delar.</p>
+<p>För en renodlat timavlönad eller ackordsavlönad arbetare läggs hela semesterlönen på med procentregeln. För en månadsavlönad byggnadsarbetare betalas månadslönen jämte semestertillägg, och därutöver läggs 13 procent på de rörliga lönedelarna och övertiden som tjänats in under året. Gällande avtalstext är Byggavtalet 2025–2027 (avtalsperiod 1 maj 2025–30 april 2027) – det är det avtal du ska tillämpa 2026.</p>
+
+<h2>Räkneexempel – timavlönad och månadsavlönad</h2>
+<p><strong>Timavlönad byggnadsarbetare.</strong> Anta att den intjänade bruttolönen under intjänandeåret (grundlön + ackord + ob + övertid) uppgår till 420 000 kr. Med Byggavtalets 13,0 procent blir semesterlönen då:</p>
+<ul>
+<li>420 000 kr × 13,0 % = <strong>54 600 kr</strong> i total semesterlön för 25 dagar.</li>
+<li>Per betald semesterdag: 54 600 / 25 = <strong>2 184 kr</strong>.</li>
+</ul>
+<p>Med semesterlagens 12 procent hade beloppet stannat på 50 400 kr – en skillnad på 4 200 kr som den anställde har rätt till enligt avtalet.</p>
+<p><strong>Månadsavlönad byggnadsarbetare.</strong> Anta en fast månadslön på 34 000 kr och rörliga lönedelar (ob och övertid) på 60 000 kr under intjänandeåret. Vid uttag av semester:</p>
+<ul>
+<li>Månadslönen betalas som vanligt under ledigheten.</li>
+<li>Semestertillägg enligt avtal läggs på den fasta lönen.</li>
+<li>På de rörliga 60 000 kr läggs 13,0 %: 60 000 × 0,13 = <strong>7 800 kr</strong> i semesterlön på rörliga delar.</li>
+</ul>
+<p>Den exakta mekaniken för hur semestertillägget på den fasta lönen ska beräknas per betald dag framgår av Byggavtalets semesterkapitel – kontrollera den mot din avtalstext. Poängen är att de rörliga delarna aldrig får glömmas bort: kontrollera att lönesystemet verkligen samlar ackord, ob och övertid i det semesterlönegrundande underlaget – inte bara grundlönen.</p>
+
+<h2>Semesterersättning vid avslutad anställning</h2>
+<p>Semesterersättning är den intjänade men inte uttagna semesterlönen som betalas ut när anställningen upphör. För byggnadsarbetare beräknas den med samma procentsats som semesterlönen, alltså 13,0 procent (respektive 13,1 eller 13,2 procent beroende på avtalsområde) av den intjänade lönen.</p>
+<p>Enligt semesterlagen ska semesterersättningen betalas ut senast en månad efter att anställningen har upphört. Det är särskilt viktigt att ha koll på i byggbranschen, där projektanställningar och säsongsvariation gör att anställningar ofta avslutas. En felaktig eller sen utbetalning kan snabbt bli en tvistefråga.</p>
+<p>Räkna alltså ut all intjänad, ej uttagen semesterlön på hela bruttolönen fram till sista anställningsdagen, multiplicera med rätt procentsats och betala ut inom en månad. Har den anställde sparade dagar från tidigare år ska även dessa lösas ut.</p>
+
+<h2>När sammalöneregeln inte får användas</h2>
+<p>Även utanför bygg finns en viktig tvingande regel: sammalöneregeln får inte användas om den anställde under intjänandeåret haft frånvaro som inte är semesterlönegrundande, eller ändrat sysselsättningsgrad. Då är arbetsgivaren skyldig att gå över till procentregeln.</p>
+<p>Just dessa situationer är extra vanliga i byggföretag – permittering, sjukfrånvaro utöver de semesterlönegrundande dagarna och varierande tjänstgöringsgrad. Har en anställd exempelvis varit permitterad eller gått från heltid till deltid under året, ska semesterlönen räknas med procentregeln oavsett vad du normalt använder. Eftersom Byggavtalet redan bygger på procentregeln blir detta sällan ett problem för kollektivanställda, men det är centralt för tjänstemän och månadsavlönade med semesterlön enligt sammalöneregeln.</p>
+
+<h2>Vanliga fel och checklista</h2>
+<ul>
+<li>Använd 13,0 % (Byggavtalet), 13,1 % (Entreprenadmaskin) eller 13,2 % (Plåt &amp; vent) – aldrig lagens 12 % för kollektivanställda.</li>
+<li>Räkna procenten på hela den intjänade bruttolönen, inte bara grundlönen.</li>
+<li>Kontrollera att ackord, ob och övertid ligger i det semesterlönegrundande underlaget.</li>
+<li>Betala semesterersättning senast en månad efter avslutad anställning.</li>
+<li>Byt till procentregeln vid ej semesterlönegrundande frånvaro eller ändrad sysselsättningsgrad.</li>
+<li>Håll koll på intjänandeåret 1 april–31 mars och antalet betalda dagar.</li>
+<li>Spara lönespecifikationer och underlag i 7 år.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att få ordning på underlaget som semesterlönen vilar på. Tidrapporteringen samlar timmar, ob och övertid per anställd och projekt, så att du har ett komplett och kontrollerbart underlag när det är dags för löne- och semesterkörning. Det gör det enklare att se hela den intjänade bruttolönen i stället för att jaga siffror i efterhand.</p>
+<p>ByggExp räknar inte automatiskt ut din semesterlön eller ersätter ditt lönesystem – men ett städat, spårbart tidsunderlag är förutsättningen för att procentregeln ska bli rätt. Du hittar tidrapporteringen och våra övriga <a href="/sv/verktyg">gratis verktyg för byggföretag</a> samlade på ett ställe.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är semesterlönen 12 eller 13 procent i bygg?</h3>
+<p>Semesterlagens minimum är 12 procent, men Byggavtalet ger en högre semesterlön på 13,0 procent av den intjänade lönen. Näraliggande avtal ligger något högre: Entreprenadmaskinavtalet 13,1 procent och Plåt- och ventilationsavtalet 13,2 procent. Stäm alltid av mot ditt avtalsområdes aktuella procentsats.</p>
+<h3>Räknas ob och övertid med i semesterlönen?</h3>
+<p>Ja. Procenten läggs på hela den intjänade bruttolönen under intjänandeåret, inklusive ackord, ob, övertid och vissa tillägg – inte bara grundlönen. Missar du de rörliga delarna underbetalar du semesterlönen.</p>
+<h3>När ska semesterersättning betalas ut?</h3>
+<p>Semesterersättningen – intjänad men inte uttagen semesterlön – ska enligt semesterlagen betalas ut senast en månad efter att anställningen upphört. Den beräknas med samma procentsats som semesterlönen, alltså 13 procent för byggnadsarbetare på Byggavtalet.</p>
+<h3>När måste jag använda procentregeln i stället för sammalöneregeln?</h3>
+<p>När den anställde under intjänandeåret haft frånvaro som inte är semesterlönegrundande eller ändrat sysselsättningsgrad. Då är procentregeln tvingande. I bygg är detta vanligt vid permittering, sjukfrånvaro och varierande tjänstgöringsgrad.</p>
+
+<h2>Kom igång</h2>
+<p>Rätt semesterlön börjar med rätt underlag. Samla timmar, ob och övertid löpande med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och stäm alltid av procentsats och beräkningsmetod mot gällande Byggavtal 2025–2027 och Byggnads egen semesterbroschyr. Vill du se hur ByggExp kan strukturera tidrapportering och löneunderlag för ditt företag, <a href="/sv/contact">boka en demo</a>.</p>
+<p>Relaterat: <a href="/sv/blog/byggnads-kollektivavtal-2026">Byggnads kollektivavtal 2026</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>, <a href="/sv/blog/ob-overtid-byggavtalet-rakna">Räkna ob och övertid i Byggavtalet</a>.</p>
+`;
+
+const A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET: BlogPost = {
+  _id: "code-"+"semesterlon-semesterersattning-byggavtalet",
+  title: "Semesterlön och semesterersättning enligt Byggavtalet 2025–2027", slug: "semesterlon-semesterersattning-byggavtalet", locale: "sv",
+  excerpt: "Byggavtalet ger 13 % semesterlön enligt procentregeln – inte lagens 12 %. Så räknar du rätt på hela den intjänade bruttolönen, med ob, ackord och övertid.", tag: "Lön & avtal",
+  coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET_HTML,
+  seoTitle: "Semesterlön Byggavtalet 2026 | ByggExp", seoDescription: "Så räknar du rätt på semesterlön och semesterersättning enligt Byggavtalet 2025–2027: 13 % procentregel, ob, ackord och övertid – med räkneexempel för byggföretag.",
+  seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T19:03:00.000Z", createdAt: "2026-08-19T19:03:00.000Z", updatedAt: "2026-08-19T19:03:00.000Z",
+};
+
+const A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG_HTML = `
+<p>Sedan 1 augusti 2020 måste alla som producerar bygg- och rivningsavfall sortera ut minst sex materialslag redan på arbetsplatsen. Kraven i avfallsförordningen (2020:614) gäller 2026, och den kommunala tillsynen har skärpts. Observera att 3 kap. i förordningen omnumrerades den 1 oktober 2025 – paragrafhänvisningarna nedan följer den gällande lydelsen. Blandar du fraktionerna utan giltigt undantag riskerar du föreläggande, vite och i grova fall åtal. Den här guiden går igenom vad som ska sorteras, hur du dokumenterar det och var ansvaret ligger.</p>
+
+<p>Bygg in avfallshanteringen i din egenkontroll från start – börja med vår <a href="/sv/verktyg/egenkontroll-mall">gratis mall för egenkontroll -&gt;</a> och lägg till sorteringspunkterna nedan i den.</p>
+
+<h2>De sex fraktionerna du måste sortera ut på plats</h2>
+<p>Enligt avfallsförordningen 3 kap. 19 § ska följande sex materialslag sorteras ut var för sig och förvaras åtskilda från varandra och från övrigt avfall:</p>
+<ul>
+<li><strong>Trä</strong> – rent virke, reglar, formmaterial (obehandlat).</li>
+<li><strong>Mineral</strong> – betong, tegel, klinker, keramik eller sten i en fraktion.</li>
+<li><strong>Metall</strong> – armering, plåt, rör, beslag.</li>
+<li><strong>Glas</strong> – planglas, rutor.</li>
+<li><strong>Plast</strong> – emballage, rör, profiler.</li>
+<li><strong>Gips</strong> – gipsskivor och gipsrester.</li>
+</ul>
+<p>Det avgörande är att sorteringen sker <strong>vid källan</strong> – på den plats där avfallet uppstår, alltså din bygg- eller rivningsplats. Du får alltså inte samla allt blandat i en container och skicka det vidare till en central sorteringsanläggning. Den som samlar in de utsorterade fraktionerna måste dessutom hålla dem åtskilda genom hela insamlingen så att materialet kan återanvändas eller materialåtervinnas (3 kap. 25 §). Syftet är kopplat till etappmålet att 70 viktprocent av det icke-farliga bygg- och rivningsavfallet ska förberedas för återanvändning eller materialåtervinnas.</p>
+
+<h2>Utöver de sex – farligt avfall och brännbart</h2>
+<p>Sex fraktioner är golvet, inte taket. Farligt avfall ska alltid sorteras ut och hållas separat (3 kap. 2 §), och olika slag av farligt avfall får aldrig blandas med varandra. I rivning handlar det typiskt om:</p>
+<ul>
+<li><strong>Asbest</strong> – eternit, rörisolering, mattlim.</li>
+<li><strong>PCB</strong> – fogmassor och isolerrutor i byggnader från 1956–1973.</li>
+<li><strong>Tryckimpregnerat trä</strong> och andra behandlade träslag.</li>
+<li><strong>Förorenade massor</strong> och avfall med farliga ämnen.</li>
+</ul>
+<p>Dessutom ska brännbart avfall sorteras ut enligt avfallsförordningen 3 kap. Ordningen är alltså: farligt avfall först, sedan de sex materialslagen, därefter brännbart – och först det som blir kvar kan hanteras som blandat restavfall.</p>
+
+<h2>Dokumentation och rapportering – vad tillsynen frågar efter</h2>
+<p>För farligt avfall gäller anteckningsskyldighet: du ska föra anteckningar om avfallets typ, mängd, ursprung och mottagare. Sedan 1 november 2020 ska uppgifterna också rapporteras till Naturvårdsverkets avfallsregister, senast två arbetsdagar efter att anteckningen ska göras (enligt avfallsförordningen). Själva anteckningsskyldighetens innehåll regleras i Naturvårdsverkets föreskrifter NFS 2020:5. Missad rapportering är en av de vanligaste bristerna vid tillsyn.</p>
+<p>En central fråga i rivning är <strong>vem som är avfallsproducent</strong> och därmed bär anteckning- och rapporteringsskyldigheten – rivningsentreprenören eller fastighetsägaren/beställaren. Enligt Naturvårdsverkets vägledning är det vid större arbeten som underhåll, ROT, byggande och rivning normalt den anlitade entreprenören som betraktas som avfallsproducent, eftersom entreprenören har mest rådighet över avfallet. Ett undantag är om avtalet fråntar entreprenören rådigheten över avfallet – då kan byggherren eller huvudentreprenören i stället vara producent. Reglera ansvaret tydligt i entreprenadavtalet så att ingen part utgår från att den andra rapporterar.</p>
+<p>Lutar du dig mot ett undantag från sorteringskravet ska du dokumentera din bedömning och kunna visa upp den för miljöförvaltningen på begäran. Det är i praktiken ditt bevis på att du följer reglerna.</p>
+
+<h2>Undantag och dispens – när får du blanda?</h2>
+<p>Det finns två generella undantag som inte kräver någon ansökan. Sedan omregleringen den 1 oktober 2025 finns de direkt i avfallsförordningen 3 kap. 19 § (tidigare i Naturvårdsverkets föreskrifter NFS 2020:7, som upphävts):</p>
+<ul>
+<li>Material är så sammanfogat i konstruktionen att det inte är tekniskt genomförbart att separera det.</li>
+<li>Avfallet är så förorenat att en separering skulle försämra kvaliteten på behandlingen eller återvinningen.</li>
+</ul>
+<p>Vill du samla avfallet blandat utan att omfattas av ett generellt undantag måste du söka <strong>dispens</strong> hos tillsynsmyndigheten i förväg (3 kap. 33 §) – i praktiken oftast den kommunala miljönämnden. Dispens kan ges om separat insamling inte är tekniskt genomförbar, inte ger någon miljönytta som överväger nackdelarna, eller medför orimliga kostnader. Räkna med handläggningstid – planera dispensfrågan innan rivningen startar, inte när containern redan står full.</p>
+
+<h2>Sanktioner om du blandar – föreläggande, vite och miljöbrott</h2>
+<p>Tillsynen sköts av den kommunala miljönämnden. Vid brister kan nämnden utfärda ett föreläggande om rättelse, ofta förenat med vite – ett förutbestämt belopp du tvingas betala om du inte åtgärdar felet. Allvarliga överträdelser kan bedömas som otillåten avfallshantering eller nedskräpning enligt miljöbalken 29 kap., vilket är straffsanktionerat.</p>
+<p>En viktig nyansering: det finns <strong>ingen fast schablon-miljösanktionsavgift med ett bestämt kronbelopp</strong> specifikt för att låta bli att sortera de sex fraktionerna. Sprids påståenden om exakta bötesbelopp bör du vara skeptisk – kontrollera alltid mot avfallsförordningen och din lokala miljöförvaltning innan du citerar en siffra.</p>
+
+<h2>Checklista för din arbetsplats</h2>
+<ul>
+<li>En container eller behållare per fraktion – trä, mineral, metall, glas, plast, gips.</li>
+<li>Tydlig skyltning vid varje kärl så att alla på plats sorterar rätt.</li>
+<li>Materialinventering före rivning som identifierar farligt avfall.</li>
+<li>Kvitton och mottagningsbevis från godkänd mottagare. Anteckningar om farligt avfall ska enligt NFS 2020:5 sparas i minst 3 år (transportörer minst 12 månader); tänk på att bokföringslagen kräver 7 år för kvitton och verifikationer.</li>
+<li>Dokumenterad bedömning om du åberopar ett undantag.</li>
+<li>Registrering av farligt avfall i avfallsregistret inom två arbetsdagar.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte myndighetsrapporteringen till avfallsregistret, men gör det enkelt att bevisa att rutinen finns och följs. Du bygger in sorteringspunkterna i din egenkontroll så att varje projekt får en spårbar avstämning – vem som ansvarar, vilka fraktioner som hanteras och var mottagningsbevisen finns. Undantagsbedömningar och foton kan sparas på projektet, så att du snabbt kan visa upp underlaget om miljöförvaltningen gör tillsyn. Fler mallar och kalkylatorer hittar du samlat i <a href="/sv/verktyg">våra gratis verktyg</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vilka fraktioner måste sorteras ut på byggarbetsplatsen?</h3>
+<p>Minst sex: trä, mineral (betong, tegel, klinker, keramik eller sten), metall, glas, plast och gips. Dessutom ska farligt avfall och brännbart avfall sorteras ut separat enligt avfallsförordningen 3 kap.</p>
+<h3>Kan jag samla allt blandat och sortera på en central anläggning?</h3>
+<p>Nej. Sorteringen ska ske vid källan, alltså på platsen där avfallet uppstår. Undantag kräver antingen ett av de två generella undantagen i avfallsförordningen 3 kap. 19 § eller en dispens som du söker i förväg hos tillsynsmyndigheten – i praktiken oftast den kommunala miljönämnden.</p>
+<h3>Vem ansvarar för att rapportera farligt avfall vid rivning?</h3>
+<p>Ansvaret ligger på den som är avfallsproducent. Vid större arbeten som underhåll, ROT, byggande och rivning betraktar Naturvårdsverket normalt den anlitade entreprenören som avfallsproducent, eftersom entreprenören har mest rådighet över avfallet. Om avtalet fråntar entreprenören rådigheten kan byggherren eller huvudentreprenören i stället vara producent. Reglera ansvaret i avtalet och rapportera till avfallsregistret inom två arbetsdagar.</p>
+<h3>Hur stor blir böterna om jag inte sorterar?</h3>
+<p>Det finns ingen fast miljösanktionsavgift med ett bestämt belopp för själva sorteringsbrottet. Miljönämnden kan i stället utfärda föreläggande förenat med vite, och grova fall kan bli otillåten avfallshantering enligt miljöbalken 29 kap.</p>
+
+<h2>Kom igång</h2>
+<p>Lägg avfallssorteringen i din projektrutin redan idag med vår <a href="/sv/verktyg/egenkontroll-mall">mall för egenkontroll</a>, och stäm alltid av mot avfallsförordningen och din lokala miljöförvaltning. Vill du se hur ByggExp håller ihop egenkontroll och dokumentation i skarpa projekt? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler 2026 och kontrollplanen</a>, <a href="/sv/blog/kontrollplan-mall-bygglov">Kontrollplan-mall för bygglov</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
+`;
+
+const A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG: BlogPost = {
+  _id: "code-"+"rivningsavfall-sorteringskrav-bygg",
+  title: "Sorteringskrav för bygg- och rivningsavfall 2026", slug: "rivningsavfall-sorteringskrav-bygg", locale: "sv",
+  excerpt: "Sedan 2020 måste bygg- och rivningsavfall sorteras i minst sex fraktioner vid källan. Guiden går igenom kraven i avfallsförordningen 2026, dokumentation, undantag och sanktioner.", tag: "Regelverk",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG_HTML,
+  seoTitle: "Sorteringskrav rivningsavfall 2026 | ByggExp", seoDescription: "Så sorterar du bygg- och rivningsavfall i sex fraktioner enligt avfallsförordningen 2026: dokumentation, farligt avfall, undantag, dispens och sanktioner.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T19:06:00.000Z", createdAt: "2026-08-19T19:06:00.000Z", updatedAt: "2026-08-19T19:06:00.000Z",
+};
+
+const A_TJANSTEPENSION_BYGGAVTALET_BAO_HTML = `
+<p>Har du anställda på Byggavtalet är tjänstepensionen inte något du väljer själv – den följer av kollektivavtalet. Byggnadsarbetare omfattas av <strong>Avtalspension SAF-LO</strong>, med en grundavsättning på 4,5 % av lönen upp till en brytpunkt och 30 % på lönedelar däröver. För 2026 finns dessutom en tillfälligt sänkt premie som är lätt att missförstå. Den här guiden reder ut vad pensionen kostar dig som arbetsgivare, vem som omfattas och hur den skiljer sig från en egen tjänstepensionslösning.</p>
+
+<p>Innan du bygger in pensionskostnaden i dina anbud och timpriser: lägg in rätt påslag från början med <a href="/sv/verktyg/timpris-kalkylator">vår gratis timpris-kalkylator –&gt;</a> så att pension, sociala avgifter och särskild löneskatt syns i debiteringsgraden.</p>
+
+<h2>Vad är Avtalspension SAF-LO och vem omfattas?</h2>
+<p>Avtalspension SAF-LO är den kollektivavtalade tjänstepensionen för privatanställda arbetare. Den förhandlas fram gemensamt av Svenskt Näringsliv och LO och gäller alltså för hela LO-området, inte bara bygg. För dina medarbetare på Byggavtalet mellan Byggnads och Byggföretagen är den obligatorisk – du kan inte välja bort den och du behöver inte förhandla fram den.</p>
+<p>Inbetalningarna börjar den månad den anställde fyller 22 år och upphör vid 65 år. Intjänandeåldern sänktes stegvis av Svenskt Näringsliv och LO – från 25 till 24 år 2021, till 23 år 2022 och till 22 år 2023. <strong>Fora</strong> är valcentral och administratör: du som arbetsgivare betalar in premien till Fora varje månad, och Fora fördelar pengarna till den anställdes pensionskonto. Den anställde väljer själv förvaltare – traditionell försäkring eller fondförsäkring – och kan lägga till återbetalningsskydd eller familjeskydd via valblanketten.</p>
+
+<h2>Vad kostar den 2026 – avsättningsnivåerna i kronor och procent</h2>
+<p>Grundavsättningen är <strong>4,5 % av den pensionsmedförande lönen upp till 7,5 inkomstbasbelopp och 30 % på lönedelar däröver</strong>. Inkomstbasbeloppet för 2026 är 83 400 kr, vilket gör att brytpunkten 7,5 IBB motsvarar 625 500 kr per år eller <strong>52 125 kr per månad</strong>. De flesta byggnadsarbetare ligger under den gränsen, så i praktiken handlar det om 4,5 % på hela månadslönen.</p>
+<p>Räkneexempel på en snittlön på 39 775 kr per månad:</p>
+<ul>
+<li>Månadslön: 39 775 kr</li>
+<li>Grundavsättning 4,5 %: cirka <strong>1 790 kr per månad</strong></li>
+<li>På årsbasis: cirka 21 480 kr till pensionen</li>
+</ul>
+<p><strong>Nytt för 2026:</strong> premien är tillfälligt sänkt. Du som arbetsgivare betalar in 4,400 % på lönedelar under 7,5 IBB, men den anställdes pensionskonto tillförs ändå fulla 4,5 %. Mellanskillnaden tas från överskott i kapitalet för den äldre STP-lösningen. Sänkningen gäller från 1 januari 2026 och beslutades av Svenskt Näringsliv och LO gemensamt. Med andra ord: din faktiska inbetalning blir något lägre 2026, medan den anställde inte förlorar något.</p>
+
+<h2>Det nya Byggavtalet 2025–2027 – höjd pensionsavsättning</h2>
+<p>Byggavtalet 2025–2027 gäller från 1 maj 2025 till 30 april 2027 och följer märket på totalt 6,4 %: löneökning med 3,4 % från 1 maj 2025 och 3,0 % från 1 maj 2026. Utöver det höjs pensionsavsättningen:</p>
+<ul>
+<li>+0,1 procentenhet år ett</li>
+<li>+0,1 procentenhet år två</li>
+</ul>
+<p>Det är en kompletterande avsättning utöver grundpremien – samma princip som deltids- och livsarbetstidspension i andra branscher. På en snittlön på 39 775 kr per månad motsvarar de två stegen tillsammans en ökad pensionsavsättning på cirka <strong>40 kr per månad år ett och cirka 80 kr per månad</strong> när båda stegen slagit igenom. (Blanda inte ihop det med den totala lönehöjningen från märket, cirka 2 504 kr per månad över perioden – den handlar om lönen, inte pensionsavsättningen.) Det låter marginellt per anställd, men multiplicerat med hela arbetsstyrkan blir det en post du bör räkna in i kostnadskalkylen.</p>
+
+<h2>Deltidspension och livsarbetstidspension – den extra pusselbiten</h2>
+<p>Deltidspension (även kallad livsarbetstidspension, flexpension eller arbetstidspension) är extra inbetalningar till Avtalspension SAF-LO som avtalats i vissa branscher. Den finns främst i andra avtalsområden – bland annat på tjänstemannasidan – och ingår inte tydligt i Byggavtalet, så utgå inte från att den är en självklar bygg-kostnad. Den viktiga skillnaden mot grundpremien i de avtal där den finns: dessa inbetalningar görs <strong>oavsett ålder</strong>. Det betyder att avsättning kan ske även på lön för anställda som ännu inte fyllt 22 år – till skillnad från grundpremien som startar först vid 22.</p>
+<p>Har du unga medarbetare eller lärlingar i staben är det här lätt att missa i de avtal som omfattas. Grundpremien syns inte för dem förrän de fyllt 22, men kompletterande avsättningar kan i vissa fall ändå gälla. Kontrollera hur ditt avtal är formulerat innan du antar något – åt något håll.</p>
+
+<h2>Byggavtalets pension vs. egen tjänstepensionslösning</h2>
+<p>En vanlig fråga är om man kan ersätta den kollektivavtalade pensionen med en egen, kanske billigare eller mer flexibel, lösning. För arbetare på Byggavtalet är svaret nej. Avtalspension SAF-LO är obligatorisk och standardiserad – du kan inte förhandla bort den eller byta ut den mot en egen försäkring. En egen lösning ersätter alltså inte SAF-LO för dina kollektivanställda arbetare.</p>
+<p>Egna tjänstepensionslösningar hör hemma i andra sammanhang, till exempel för tjänstemän eller för dig som ägare. Skattemässigt får en arbetsgivare dra av pensionspremier med upp till <strong>35 % av den anställdes lön, dock högst 10 prisbasbelopp = 592 000 kr år 2026</strong> (prisbasbeloppet 2026 är 59 200 kr). Observera att detta är gränsen för avdragsrätt – inte vad kollektivavtalet kräver. Kollektivavtalets nivå (4,5 %/30 %) ligger långt under avdragstaket.</p>
+<ul>
+<li><strong>Kollektivavtalad (SAF-LO):</strong> obligatorisk, standardiserad, ingen förhandling, administreras via Fora.</li>
+<li><strong>Egen lösning:</strong> mer flexibel, avdrag upp till 35 %/10 PBB – men företaget måste ändå leva upp till kollektivavtalet för arbetarna.</li>
+</ul>
+
+<h2>Skatt och avdrag – särskild löneskatt 24,26 %</h2>
+<p>På pensionskostnader betalar du inte vanliga arbetsgivaravgifter utan <strong>särskild löneskatt på 24,26 %</strong>. Den gäller lika oavsett om pensionen kommer via Byggavtalet och Fora eller via en egen lösning. Räknar du på den fulla kostnaden för en anställd måste löneskatten in – annars underskattar du priset.</p>
+<p>Kort kostnadsbild för grundavsättningen på snittlönen 39 775 kr/mån:</p>
+<ul>
+<li>Pensionsavsättning 4,5 %: cirka 1 790 kr/mån</li>
+<li>Särskild löneskatt 24,26 % på avsättningen: cirka 434 kr/mån</li>
+<li>Total pensionsrelaterad kostnad: cirka <strong>2 224 kr/mån</strong> utöver bruttolön och sociala avgifter</li>
+</ul>
+<p>Vill du se hela kostnadsbilden per anställd har vi räknat igenom den i <a href="/sv/blog/vad-kostar-en-anstalld-byggforetag">vad en anställd kostar i ett byggföretag</a>.</p>
+
+<h2>Vanliga misstag och hur du gör rätt</h2>
+<ul>
+<li><strong>Glömmer löneskatten.</strong> Pensionen är billigare i procent än sociala avgifter, men särskild löneskatt 24,26 % tillkommer alltid.</li>
+<li><strong>Tror att egen lösning ersätter SAF-LO.</strong> För arbetare gör den inte det – du måste följa kollektivavtalet.</li>
+<li><strong>Missar 22-årsgränsen.</strong> Grundpremien startar vid 22; i avtal med kompletterande avsättningar kan sådana i vissa fall gälla oavsett ålder.</li>
+<li><strong>Rapporterar fel lönebelopp till Fora.</strong> Pensionsmedförande lön styr avsättningen – felaktig rapportering ger fel premie.</li>
+<li><strong>Räknar inte in Foras avgift.</strong> Fora tar ut en förmedlingsavgift på cirka 1,5 % inkl. moms per år, som dras från premien. Själva kapitalförvaltningen ligger utanför – den avgiften tar den förvaltare den anställde valt (ofta cirka 0,03–0,25 %).</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp betalar inte in dina Fora-premier – det gör du via Fora – men vi hjälper dig att få kostnaden rätt från början. I timpris- och kalkylverktygen kan du lägga in pensionsavsättning och särskild löneskatt som påslag, så att debiteringsgraden speglar den verkliga kostnaden per anställd. Med korrekt tidrapportering får du dessutom ett tydligt underlag för vilken pensionsmedförande lön varje medarbetare tjänat in, vilket gör det enklare att stämma av mot det du rapporterar till Fora. Vi gör inte pensionsberäkningen åt dig, men vi ser till att den inte försvinner i kalkylen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är Avtalspension SAF-LO obligatorisk för byggföretag?</h3>
+<p>Ja. För arbetare på Byggavtalet mellan Byggnads och Byggföretagen är Avtalspension SAF-LO en del av kollektivavtalet. Den är inte något företaget väljer själv, och den kan inte ersättas med en egen lösning för de kollektivanställda arbetarna.</p>
+<h3>Hur mycket ska jag betala in 2026?</h3>
+<p>Grundavsättningen är 4,5 % av lönen upp till 52 125 kr/mån (7,5 IBB) och 30 % på lönedelar däröver. För 2026 gäller en tillfälligt sänkt premie: du betalar 4,400 % under brytpunkten, men den anställdes konto tillförs ändå 4,5 % – mellanskillnaden tas från överskott i den äldre STP-lösningen.</p>
+<h3>Vad kostar pensionen mig utöver själva avsättningen?</h3>
+<p>På pensionskostnaden betalar du särskild löneskatt på 24,26 % i stället för vanliga arbetsgivaravgifter. Dessutom tar Fora ut en förmedlingsavgift på cirka 1,5 % inkl. moms per år, som dras från premien. Kapitalförvaltningen ingår inte i den avgiften – den debiteras separat av den förvaltare den anställde valt.</p>
+<h3>Kan jag byta ut kollektivavtalspensionen mot en egen lösning?</h3>
+<p>Inte för arbetare på Byggavtalet. En egen tjänstepension kan komplettera i andra sammanhang, och avdragsrätten går upp till 35 % av lönen (max 10 PBB = 592 000 kr år 2026), men den ersätter inte SAF-LO för dina kollektivanställda.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg in pensionskostnaden i dina priser innan nästa anbud går ut. Testa <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a> eller bläddra bland alla <a href="/sv/verktyg">gratis byggverktyg</a>. Vill du se hur ByggExp håller ihop tidrapportering, kalkyl och kostnadsuppföljning – <a href="/sv/contact">boka en demo</a>.</p>
+<p>Relaterat: <a href="/sv/blog/byggnads-kollektivavtal-2026">Byggnads kollektivavtal 2026</a>, <a href="/sv/blog/vad-kostar-en-anstalld-byggforetag">vad kostar en anställd i ett byggföretag</a>, <a href="/sv/blog/anstalla-personal-byggforetag">anställa personal i byggföretag</a>.</p>
+`;
+
+const A_TJANSTEPENSION_BYGGAVTALET_BAO: BlogPost = {
+  _id: "code-"+"tjanstepension-byggavtalet-bao",
+  title: "Tjänstepension på Byggavtalet – vad den kostar dig 2026", slug: "tjanstepension-byggavtalet-bao", locale: "sv",
+  excerpt: "Tjänstepensionen på Byggavtalet följer av kollektivavtalet. Guiden reder ut vad Avtalspension SAF-LO kostar dig som arbetsgivare 2026, vem som omfattas och hur den skiljer sig från en egen lösning.", tag: "Lön & avtal",
+  coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_TJANSTEPENSION_BYGGAVTALET_BAO_HTML,
+  seoTitle: "Tjänstepension Byggavtalet 2026 | ByggExp", seoDescription: "Så fungerar Avtalspension SAF-LO på Byggavtalet: avsättning 4,5 %/30 %, tillfälligt sänkt premie 2026, särskild löneskatt och Foras förmedlingsavgift.",
+  seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T19:09:00.000Z", createdAt: "2026-08-19T19:09:00.000Z", updatedAt: "2026-08-19T19:09:00.000Z",
+};
+
+const A_FRISKVARDSBIDRAG_BYGGFORETAG_AVDRAG_HTML = `
+<p>Bygg är ett fysiskt tungt yrke. Tunga lyft, monotona rörelser och arbete i utsatta ställningar gör att belastningsskador och sjukfrånvaro kostar byggföretag stora pengar varje år. Friskvårdsbidrag är en av de billigaste personalförmånerna du kan erbjuda för att motverka detta – och rätt hanterat är det helt skatte- och avgiftsfritt både för dig som arbetsgivare och för dina anställda.</p>
+
+<p>Innan vi går in på reglerna: räkna gärna på vad en förmån faktiskt kostar och vad du fakturerar per timme med <a href="/sv/verktyg">våra gratis verktyg för byggföretag -&gt;</a>. En frisk montör som slipper sjukskrivas tjänar in bidraget många gånger om.</p>
+
+<h2>Så mycket är skattefritt 2026 – 5 000 kr-gränsen och cliff-regeln</h2>
+<p>Det skattefria maxbeloppet för friskvårdsbidrag 2026 är <strong>5 000 kr per anställd och år, inklusive moms</strong>. Beloppet är oförändrat sedan tidigare år. Du bestämmer själv om du vill erbjuda hela beloppet eller en lägre summa.</p>
+<p>Här finns en viktig fälla. Skatteverkets gräns fungerar som en så kallad cliff-regel: om du betalar ut <em>mer</em> än 5 000 kr blir <strong>hela beloppet</strong> en skattepliktig förmån – inte bara den överskjutande delen. Betalar du ut 5 200 kr förmånsbeskattas alltså den anställde för alla 5 200 kr, och du får betala arbetsgivaravgifter på summan. Håll dig därför strikt inom taket och ha koll på om den anställde redan fått bidrag tidigare under året.</p>
+
+<h2>Motion vs. övrig friskvård – 1 000 kr-taket per tillfälle</h2>
+<p>Reglerna skiljer på ren motion och annan friskvård:</p>
+<ul>
+<li><strong>Ren motion</strong> (gym, styrketräning, simning, motionslopp) kan kosta mer per tillfälle, så länge du inte överskrider årsbeloppet på 5 000 kr. Ett dyrare årskort på gymmet är alltså inget problem i sig.</li>
+<li><strong>Aktiviteter utan inslag av motion</strong> – till exempel massage, akupunktur eller kostrådgivning – får inte kosta mer än <strong>1 000 kr per tillfälle</strong> för att vara skattefria. En massage för 850 kr är okej; en behandling för 1 200 kr är det inte.</li>
+</ul>
+<p>För byggpersonal är massage inom 1 000 kr-taket ofta det mest uppskattade – det avlastar rygg, axlar och nacke som sliter hårt på arbetsplatsen.</p>
+
+<h2>Vad byggpersonal får använda bidraget till – och vad som inte är godkänt</h2>
+<p>Sedan årsskiftet 2021/2022 publicerar Skatteverket inte längre någon lista över godkända aktiviteter. Det är numera <strong>du som arbetsgivare</strong> som avgör vilka aktiviteter som godkänns. Kravet är att aktiviteten är av enklare slag och mindre värde med inslag av motion eller annan friskvård.</p>
+<p><strong>Vanligtvis godkänt:</strong></p>
+<ul>
+<li>Gymkort, styrketräning och funktionell träning</li>
+<li>Simning och simhallskort</li>
+<li>Anmälningsavgift till motionslopp och gruppträning</li>
+<li>Massage, akupressur och liknande inom 1 000 kr per tillfälle</li>
+</ul>
+<p><strong>Inte godkänt / inte skattefritt:</strong></p>
+<ul>
+<li>Köp eller hyra av utrustning – skor, cykel, träningskläder</li>
+<li>Medlemsavgifter, licenser och anmälningsavgift till en klubb</li>
+<li>Hälsovård, sjukvård och skönhetsvård – exempelvis kiropraktor som ren sjukvård</li>
+</ul>
+<p>Tänk på att arbetskläder och skyddsskor är en helt annan post – de hanteras som arbetskläder och verktyg, inte som friskvård. Läs mer i vår guide om <a href="/sv/blog/avdrag-arbetsklader-verktyg">avdrag för arbetskläder och verktyg</a>.</p>
+
+<h2>Kravet på lika villkor – alla anställda, inklusive lärlingar och deltid</h2>
+<p>Friskvårdsbidrag är en <strong>personalvårdsförmån</strong>. För att vara skattefri måste förmånen rikta sig till <strong>alla anställda på lika villkor och med samma belopp</strong>. Erbjuder du bidraget bara till vissa – till exempel snickarna men inte kontorspersonalen – blir det skattepliktigt för alla.</p>
+<p>Det innebär att även lärlingar, visstidsanställda och deltidsanställda ska omfattas. För deltid och visstid får du dock <strong>proportionera (jämka) beloppet</strong> efter anställningstid eller arbetstid utan att skattefriheten går förlorad. En halvtidsanställd kan alltså erbjudas halva bidraget.</p>
+
+<h2>Ägarens situation – aktiebolag vs enskild firma</h2>
+<p>Hur du som ägare kan ta del av bidraget beror på företagsformen:</p>
+<ul>
+<li><strong>Aktiebolag:</strong> ägaren räknas som anställd och kan själv ta emot skattefritt friskvårdsbidrag på samma villkor som övriga anställda.</li>
+<li><strong>Enskild firma:</strong> en egenföretagare är inte anställd i juridisk mening och kan därför <strong>inte</strong> ge sig själv skattefritt friskvårdsbidrag. Har du anställda i den enskilda firman kan du däremot erbjuda dem bidraget skattefritt.</li>
+</ul>
+
+<h2>Så bokför du friskvårdsbidrag skattefritt</h2>
+<p>Friskvårdsbidraget är skatte- och avgiftsfritt för dig som arbetsgivare – inga arbetsgivaravgifter och ingen förmånsbeskattning på den anställde, förutsatt att villkoren uppfylls.</p>
+<p>Bokföringen är enkel:</p>
+<ul>
+<li>Kostnaden bokförs normalt på konto <strong>7699 Övriga personalkostnader</strong> (alternativt 7690).</li>
+<li>Betalar du ut mot den anställdes kvitto krediteras <strong>1930 Företagskonto</strong>. Går ersättningen via lönen används i stället 2890.</li>
+</ul>
+<p><strong>Viktigt om momsen:</strong> vid friskvårdsbidrag mot den anställdes kvitto är kvittot ställt till den anställde – inte till företaget. Då är momsen normalt <strong>inte avdragsgill</strong>, och hela beloppet inklusive moms kostnadsförs på 7699. Ingående moms får du bara lyfta när fakturan är ställd till företaget, till exempel vid ett företagsabonnemang på gymmet.</p>
+
+<h2>Praktisk checklista för byggföretaget</h2>
+<ol>
+<li>Skriv en enkel, skriftlig friskvårdspolicy som gäller alla anställda.</li>
+<li>Sätt ett årsbelopp per person, max 5 000 kr, och informera hela personalen.</li>
+<li>Kräv originalkvitto för varje ersättning och spara underlaget.</li>
+<li>Kontrollera 1 000 kr-taket per tillfälle för massage och liknande.</li>
+<li>Jämka beloppet för deltid och visstid vid behov.</li>
+<li>Bokför löpande på 7699 och hantera utbetalning via bank eller lönesystem.</li>
+<li>Spara all dokumentation i minst 7 år enligt bokföringsreglerna.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp är byggt för att hålla ordning på personal, tid och kostnader på byggföretaget. Friskvårdsbidraget bokför du i ditt vanliga ekonomisystem, men ByggExp hjälper dig att se helheten: du samlar personaluppgifter, håller koll på anställningsformer och får underlag för vad varje anställd faktiskt kostar – förmåner inräknat. Det gör det lättare att avgöra vilken nivå på friskvårdsbidrag ditt företag har råd med och att sätta ett hållbart timpris som täcker de verkliga personalkostnaderna.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket friskvårdsbidrag är skattefritt 2026?</h3>
+<p>Maxbeloppet är 5 000 kr per anställd och år, inklusive moms. Betalar arbetsgivaren ut mer blir hela beloppet en skattepliktig förmån.</p>
+<h3>Kan jag ge friskvårdsbidrag bara till byggarbetarna?</h3>
+<p>Nej. Förmånen måste erbjudas alla anställda på lika villkor och med samma belopp för att vara skattefri. Riktas den bara till vissa blir den skattepliktig. Deltid och visstid får dock proportioneras.</p>
+<h3>Får montören köpa träningsskor för bidraget?</h3>
+<p>Nej. Köp eller hyra av utrustning som skor, cykel och träningskläder är inte godkänt. Bidraget ska gå till själva aktiviteten, till exempel gymkort eller massage.</p>
+<h3>Kan jag som ägare av enskild firma ta friskvårdsbidrag?</h3>
+<p>Nej, inte skattefritt till dig själv, eftersom du inte räknas som anställd. I aktiebolag räknas ägaren som anställd och kan ta del av bidraget. Anställda i den enskilda firman kan däremot få det skattefritt.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att räkna på vad din personal kostar och vad du behöver ta betalt med vår <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator</a>, och utforska fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur ByggExp håller ihop personal och kostnader i vardagen? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/vad-kostar-en-anstalld-byggforetag">Vad kostar en anställd i byggföretag?</a> och <a href="/sv/blog/avdrag-arbetsklader-verktyg">Avdrag för arbetskläder och verktyg</a>.</p>
+`;
+
+const A_FRISKVARDSBIDRAG_BYGGFORETAG_AVDRAG: BlogPost = {
+  _id: "code-"+"friskvardsbidrag-byggforetag-avdrag",
+  title: "Friskvårdsbidrag i byggföretag – så drar du av rätt 2026", slug: "friskvardsbidrag-byggforetag-avdrag", locale: "sv",
+  excerpt: "Skattefritt friskvårdsbidrag är en billig personalförmån som motverkar belastningsskador i bygg. Här är reglerna för 2026 – belopp, villkor och bokföring.", tag: "Ekonomi &amp; skatt",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_FRISKVARDSBIDRAG_BYGGFORETAG_AVDRAG_HTML,
+  seoTitle: "Friskvårdsbidrag byggföretag 2026 | ByggExp", seoDescription: "Så fungerar skattefritt friskvårdsbidrag i byggföretag 2026: 5 000 kr-gränsen, 1 000 kr-taket, lika villkor, ägarens situation och bokföring. Praktisk guide.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T19:12:00.000Z", createdAt: "2026-08-19T19:12:00.000Z", updatedAt: "2026-08-19T19:12:00.000Z",
+};
+
+const A_EFTERBESIKTNING_VEM_BETALAR_ENTREPRENAD_HTML = `
+<p>När fel har antecknats vid en slutbesiktning uppstår snabbt frågan om vem som ska betala för att kontrollera att felen faktiskt är åtgärdade. Kort svar enligt AB 04 kap 7 § 15 andra stycket: vid en efterbesiktning är det normalt <strong>entreprenören</strong> som betalar arvodet till besiktningsmannen – även om det är beställaren som utsett honom. Men huvudregeln har viktiga undantag, och kostnadsansvaret är partsberoende. Här reder vi ut när efterbesiktning krävs, vem som kallar och hur notan fördelas.</p>
+
+<p>Grunden för en kontrollerad avhjälpandeprocess läggs redan under produktionen. Med löpande, dokumenterade egenkontroller minskar du både antalet antecknade fel och risken för dyra efterbesiktningar – ladda ner <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall &rarr;</a> och bygg in kontrollen i arbetsflödet från start.</p>
+
+<h2>Vad är en efterbesiktning?</h2>
+<p>Efterbesiktning definieras i AB 04 (och likalydande ABT 06) kap 7 § 5. Den verkställs för att konstatera om fel som antecknats vid en tidigare besiktning – oftast slutbesiktningen – har avhjälpts. Det är alltså en uppföljande kontroll av redan noterade fel, inte en ny fullständig genomgång av hela entreprenaden.</p>
+<p>Blanda inte ihop efterbesiktningen med andra besiktningsformer:</p>
+<ul>
+<li><strong>Slutbesiktning</strong> – den fullständiga besiktningen vid entreprenadtidens slut, där fel antecknas.</li>
+<li><strong>Särskild besiktning</strong> – riktad kontroll av en avgränsad fråga som någon part påkallar.</li>
+<li><strong>Garantibesiktning</strong> – utförs mot slutet av garantitiden för att fånga fel som visat sig under tiden.</li>
+<li><strong>Överbesiktning</strong> – en omprövning av ett besiktningsutlåtande, med egna kostnadsregler. Här bärs kostnaden normalt av den part vars ståndpunkt inte vinner gehör. Detta är inte samma sak som efterbesiktning.</li>
+</ul>
+<p>Vill du fördjupa dig i slutbesiktningens roll och vad som gäller kring garanti- och ansvarstider, se våra artiklar om <a href="/sv/blog/slutbesiktning">slutbesiktning</a> och <a href="/sv/blog/garantitid-ansvarstid-ab-04">garantitid och ansvarstid enligt AB 04</a>.</p>
+
+<h2>När krävs efterbesiktning?</h2>
+<p>Efterbesiktning är inte obligatorisk, men blir i praktiken vanlig så snart fel antecknats vid slutbesiktningen. Behovet uppstår typiskt när:</p>
+<ul>
+<li>entreprenören meddelat att de antecknade felen är åtgärdade och vill få det bekräftat, eller</li>
+<li>beställaren vill få avhjälpandet kontrollerat innan slutlikvid betalas ut.</li>
+</ul>
+<p>Poängen är att någon av parterna behöver ett neutralt konstaterande av att felen verkligen är borta – det är den bekräftelsen som frigör innehållna belopp och avslutar ärendet.</p>
+
+<h2>Vem kallar eller påkallar efterbesiktningen?</h2>
+<p>Både beställare och entreprenör kan påkalla en efterbesiktning. I det typiska förloppet anmäler entreprenören att antecknade fel är avhjälpta, varefter beställaren (eller en gemensamt utsedd besiktningsman) verkställer kontrollen.</p>
+<p>En praktisk regel är värd att känna till: har <strong>entreprenören</strong> påkallat efterbesiktning och den inte kommer till stånd på grund av beställarens förhållande, ska de fel som besiktningen skulle ha avsett anses avhjälpta. Beställaren kan alltså inte fördröja kontrollen och samtidigt hålla kvar felansvaret – underlåtenheten går ut över beställaren.</p>
+
+<h2>Vem betalar? Huvudregeln och efterbesiktningsundantaget</h2>
+<p>Utgångspunkten för besiktningsarvode framgår av AB 04 kap 7 § 15 första stycket: <strong>den part som utsett besiktningsmannen betalar arvodet</strong>. Har parterna utsett besiktningsmannen gemensamt delar de kostnaden.</p>
+<p>För efterbesiktning gäller ett uttryckligt undantag i andra stycket. Där ska <strong>entreprenören</strong> betala ersättningen till besiktningsmannen – även om det är beställaren som anlitat och utsett honom. Logiken är enkel: entreprenören har lämnat ifrån sig en entreprenad behäftad med fel och har därigenom gjort efterbesiktningen nödvändig. Den som orsakat behovet av kontrollen får också stå för den.</p>
+
+<h2>Partsberoendet – när hamnar kostnaden på beställaren?</h2>
+<p>Att entreprenören betalar förutsätter att efterbesiktningen avsåg fel som entreprenören faktiskt ansvarar för. Här ligger den viktiga nyansen som ofta missförstås.</p>
+<p>Besiktningsmannen kan bestämma att kostnaden för bland annat efterbesiktning, fortsatt eller avbruten slutbesiktning och särskild besiktning helt eller delvis ska bäras av entreprenören &quot;om det finns skäl till det&quot;. Visar efterbesiktningen däremot inget fel som entreprenören svarar för – exempelvis att det påstådda felet inte förelåg, eller att det inte är entreprenörens ansvar – finns skäl att kostnaden i stället bärs av <strong>beställaren</strong>, som påkallade kontrollen.</p>
+<p>Rättspraxis skiljer på kostnad som orsakats av ett fel och kostnad som bara följer av avtalets föreskrivna besiktningsordning. Bedömningen är alltså skälighetsbaserad och beror på utfallet: konstateras ett verkligt entreprenörsfel bär entreprenören notan, uteblir felet lutar det mot beställaren.</p>
+
+<h2>Efterbesiktning, reklamation och innehållen betalning</h2>
+<p>Fel som antecknats i slutbesiktnings- respektive efterbesiktningsutlåtande får göras gällande utan särskild reklamation utöver själva anteckningen. Övriga fel måste däremot reklameras skriftligen inom sex månader – eller 18 månader för väsentliga fel – från entreprenadtidens utgång.</p>
+<p>Beställaren får hålla inne ett &quot;betryggande belopp&quot; som väl täcker de förväntade avhjälpandekostnaderna tills felet är åtgärdat och efterbesiktigat. Beloppet får dock inte vara högre än skäligt och nödvändigt, och det ska kunna dokumenteras. Ett godtyckligt eller överdrivet innehållande kan i sig utgöra avtalsbrott. Om du står på entreprenörssidan och behöver bemöta ett felkrav, se vår genomgång av <a href="/sv/blog/reklamation-bemota-felkrav-entreprenad">hur du bemöter reklamation och felkrav i entreprenad</a>.</p>
+
+<h2>Så skriver du in det i kontraktet</h2>
+<p>De flesta tvister om efterbesiktning bottnar i otydliga förutsättningar. Reglera därför uttryckligen i avtalet:</p>
+<ul>
+<li>vem som utser besiktningsman, och om det ska ske gemensamt,</li>
+<li>tidsfrister för entreprenörens anmälan om avhjälpande,</li>
+<li>hur kostnadsansvaret fördelas när efterbesiktningen inte visar entreprenörsfel,</li>
+<li>rutin för innehållen betalning och när beloppet frigörs.</li>
+</ul>
+<p>Ju mer som är nedskrivet innan felen uppstår, desto mindre utrymme för diskussion när de gör det.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte AB 04:s regler, men gör det enklare att stå stark när kostnadsfrågan ska avgöras. Med strukturerade egenkontroller och samlad dokumentation kan du visa vad som utförts, när och av vem – underlag som väger tungt både vid slutbesiktning och när en besiktningsman ska bedöma vem som ska bära efterbesiktningens kostnad.</p>
+<ul>
+<li>Dokumentera egenkontroller löpande med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> så att avhjälpandet är spårbart.</li>
+<li>Samla foto, noteringar och tidpunkter kopplade till varje åtgärdat fel.</li>
+<li>Håll ordning på reklamationsfrister och innehållna belopp per projekt.</li>
+</ul>
+<p>Målet är enkelt: när efterbesiktningen väl äger rum ska det redan vara dokumenterat att felen är åtgärdade.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vem betalar efterbesiktningen enligt AB 04?</h3>
+<p>Huvudregeln är att den part som utsett besiktningsmannen betalar arvodet. Vid efterbesiktning gäller dock ett undantag i kap 7 § 15 andra stycket: entreprenören betalar normalt, eftersom felet gjort besiktningen nödvändig – även om beställaren utsett besiktningsmannen.</p>
+<h3>Kan beställaren tvingas betala efterbesiktningen?</h3>
+<p>Ja. Om efterbesiktningen inte visar något fel som entreprenören svarar för – felet förelåg inte eller är inte entreprenörens ansvar – finns skäl att kostnaden i stället bärs av beställaren som påkallade kontrollen. Besiktningsmannen gör en skälighetsbedömning utifrån utfallet.</p>
+<h3>Vad händer om efterbesiktningen uteblir på grund av beställaren?</h3>
+<p>Har entreprenören påkallat efterbesiktning och den inte kommer till stånd på grund av beställarens förhållande, ska de fel som besiktningen skulle ha avsett anses avhjälpta. Beställaren kan alltså inte fördröja kontrollen och samtidigt behålla felansvaret.</p>
+<h3>Är efterbesiktning samma sak som överbesiktning?</h3>
+<p>Nej. Efterbesiktning enligt kap 7 § 5 är en uppföljande kontroll av om antecknade fel avhjälpts. Överbesiktning är en omprövning av ett besiktningsutlåtande och har egna kostnadsregler, där den part vars ståndpunkt inte vinner gehör normalt bär kostnaden.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg in kontrollen där felen faktiskt uppstår – på arbetsplatsen. Börja med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och utforska fler kostnadsfria hjälpmedel bland <a href="/sv/verktyg">våra verktyg</a>. Vill du se hur dokumentationen hänger ihop över hela projektet? <a href="/sv/contact">Boka en demo &rarr;</a></p>
+<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så fungerar den</a>, <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a>, <a href="/sv/blog/reklamation-bemota-felkrav-entreprenad">Bemöta reklamation och felkrav i entreprenad</a>.</p>
+`;
+
+const A_EFTERBESIKTNING_VEM_BETALAR_ENTREPRENAD: BlogPost = {
+  _id: "code-"+"efterbesiktning-vem-betalar-entreprenad",
+  title: "Efterbesiktning – vem betalar enligt AB 04?", slug: "efterbesiktning-vem-betalar-entreprenad", locale: "sv",
+  excerpt: "Vid efterbesiktning betalar normalt entreprenören besiktningsarvodet – men huvudregeln har undantag. Så fördelas notan enligt AB 04.", tag: "Entreprenadjuridik",
+  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_EFTERBESIKTNING_VEM_BETALAR_ENTREPRENAD_HTML,
+  seoTitle: "Efterbesiktning: vem betalar? | ByggExp", seoDescription: "Vem betalar efterbesiktningen enligt AB 04? Huvudregeln, undantaget i kap 7 § 15, partsberoendet och när kostnaden hamnar på beställaren. Praktisk guide för byggföretag.",
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T19:15:00.000Z", createdAt: "2026-08-19T19:15:00.000Z", updatedAt: "2026-08-19T19:15:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_GARANTIBESIKTNING_2_AR_ENTREPRENAD,
+    A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET,
+    A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG,
+    A_TJANSTEPENSION_BYGGAVTALET_BAO,
+    A_FRISKVARDSBIDRAG_BYGGFORETAG_AVDRAG,
+    A_EFTERBESIKTNING_VEM_BETALAR_ENTREPRENAD,
     A_DRANERING_GRUS_MATERIAL_BERAKNING,
     A_OMBILDA_ENSKILD_FIRMA_TILL_AB_BYGG,
     A_PERSONLIG_SKYDDSUTRUSTNING_KRAV_BYGG,

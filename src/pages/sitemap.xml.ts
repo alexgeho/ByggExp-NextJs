@@ -48,9 +48,11 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
     });
   });
 
-  // Free tools: sv-market only, listed under /sv on byggexp.se. (Norwegian
-  // tools are reached via the /nb/verktyg hub for now.)
-  if (!isNo) {
+  // Free tools. byggexp.se lists the full sv inventory; byggexp.no lists the
+  // nb tools hub (individual nb calculators are crawled via the hub's links).
+  if (isNo) {
+    urls.push({ loc: `${localeOrigin('nb')}/nb/verktyg` });
+  } else {
     SV_ONLY_PATHS.forEach((path) => {
       urls.push({ loc: `${localeOrigin('sv')}/sv/${path}` });
     });

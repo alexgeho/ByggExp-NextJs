@@ -105,9 +105,9 @@ function Header({ headerT }: HeaderProps) {
                 />
               </button>
               <div className={resOpen ? "nav-dropdown-menu open" : "nav-dropdown-menu"}>
-                {lang === "sv" && (
+                {(lang === "sv" || lang === "nb") && (
                   <Link
-                    href="/sv/verktyg"
+                    href={`/${lang}/verktyg`}
                     onClick={() => {
                       setResOpen(false);
                       closeMenu();

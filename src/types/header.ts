@@ -7,5 +7,8 @@ export type HeaderProps = {
     demo: string;
     verktyg: string;
     funktioner: string;
+    resources: string;
+    blog: string;
+    freeTools: string;
   };
 };

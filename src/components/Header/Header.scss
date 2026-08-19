@@ -118,6 +118,64 @@
   opacity: 1;
 }
 
+/* Resources dropdown (free tools + blog), styled to match the language menu. */
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+}
+
+.nav-dropdown-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  color: var(--white);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.nav-dropdown-btn:hover {
+  opacity: 0.7;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+
+  background: #08101d;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 8px;
+  z-index: 201;
+}
+
+.nav-dropdown-menu.open {
+  display: flex;
+}
+
+.nav-dropdown-menu a {
+  padding: 9px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.nav-dropdown-menu a:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.08);
+}
+
 .nav-cta {
   padding: 10px 20px;
 
@@ -233,6 +291,31 @@
     z-index: 100;
 
     min-height: calc(100vh - 72px);
+  }
+
+  /* Resources dropdown flows inline inside the mobile burger menu. */
+  .nav-links.open .nav-dropdown {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links.open .nav-dropdown-btn {
+    justify-content: center;
+    font-size: inherit;
+  }
+
+  .nav-links.open .nav-dropdown-menu {
+    position: static;
+    transform: none;
+    margin-top: 12px;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+
+    background: transparent;
+    border: none;
+    padding: 0;
   }
 
   .nav-links.open::before {

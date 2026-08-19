@@ -7,6 +7,9 @@ export const headerTranslations = {
     demo: "Записаться на демо",
     verktyg: "Инструменты",
     funktioner: "Функции",
+    resources: "Ресурсы",
+    blog: "Блог",
+    freeTools: "Бесплатные инструменты",
   },
 
   en: {
@@ -17,6 +20,9 @@ export const headerTranslations = {
     demo: "Book a demo",
     verktyg: "Tools",
     funktioner: "Features",
+    resources: "Resources",
+    blog: "Blog",
+    freeTools: "Free tools",
   },
 
 
@@ -28,6 +34,9 @@ export const headerTranslations = {
     demo: "Boka demo",
     verktyg: "Verktyg",
     funktioner: "Funktioner",
+    resources: "Resurser",
+    blog: "Blogg",
+    freeTools: "Gratis verktyg",
   },
 
   nb: {
@@ -38,5 +47,8 @@ export const headerTranslations = {
     demo: "Bestill demo",
     verktyg: "Verktøy",
     funktioner: "Funksjoner",
+    resources: "Ressurser",
+    blog: "Blogg",
+    freeTools: "Gratis verktøy",
   },
 }

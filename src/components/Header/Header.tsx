@@ -31,6 +31,8 @@ function Header({ headerT }: HeaderProps) {
   const currentLanguage = languages[lang as keyof typeof languages];
 
   const [isOpen, setIsOpen] = useState(false);
+  /* RESOURCES DROPDOWN (free stuff: tools + blog, kept apart from the paid product) */
+  const [resOpen, setResOpen] = useState(false);
 
   function changeLanguage(language: string) {
     // Keep the user on the same page when switching language: swap only the
@@ -84,7 +86,49 @@ function Header({ headerT }: HeaderProps) {
           {/* NAV LINKS */}
           <div className={isMenuOpen ? "nav-links open" : "nav-links"}>
             <Link href={`/${lang}#features`} onClick={closeMenu}>{headerT.how}</Link>
+            <Link href={`/${lang}/funktioner`} onClick={closeMenu}>{headerT.funktioner}</Link>
             <Link href={`/${lang}#pricing`} onClick={closeMenu}>{headerT.pricing}</Link>
+
+            {/* RESOURCES — free tools + blog, grouped so visitors don't mistake
+                them for the paid product (standard B2B-SaaS pattern). */}
+            <div className="nav-dropdown">
+              <button
+                type="button"
+                className="nav-dropdown-btn"
+                onClick={() => setResOpen(!resOpen)}
+                aria-expanded={resOpen}
+              >
+                <span>{headerT.resources}</span>
+                <img
+                  src={down}
+                  alt=""
+                  className={resOpen ? "language-arrow open" : "language-arrow"}
+                />
+              </button>
+              <div className={resOpen ? "nav-dropdown-menu open" : "nav-dropdown-menu"}>
+                {lang === "sv" && (
+                  <Link
+                    href="/sv/verktyg"
+                    onClick={() => {
+                      setResOpen(false);
+                      closeMenu();
+                    }}
+                  >
+                    {headerT.freeTools}
+                  </Link>
+                )}
+                <Link
+                  href={`/${lang}/blog`}
+                  onClick={() => {
+                    setResOpen(false);
+                    closeMenu();
+                  }}
+                >
+                  {headerT.blog}
+                </Link>
+              </div>
+            </div>
+
             <Link href={`/${lang}#cta`} onClick={closeMenu}>{headerT.company}</Link>
             <Link href={`/${lang}/contact`} onClick={closeMenu}>{headerT.contact}</Link>
 

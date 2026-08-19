@@ -11886,9 +11886,180 @@ const A_RISKBEDOMNING_BYGGARBETSPLATS_MALL: BlogPost = {
   publishedAt: "2026-08-19T11:24:00.000Z", createdAt: "2026-08-19T11:24:00.000Z", updatedAt: "2026-08-19T11:24:00.000Z",
 };
 
+const A_SYSTEMATISKT_ARBETSMILJOARBETE_LITET_BYGGFORETAG_HTML = `
+<p>Många små byggföretag tror att systematiskt arbetsmiljöarbete (SAM) är något för de stora aktörerna med HR-avdelning och pärmar i hyllmeter. Det stämmer inte. SAM gäller <strong>alla</strong> arbetsgivare enligt AFS 2023:1 – även enmansföretag med en enda anställd. Den goda nyheten är att kraven på hur mycket ni faktiskt måste skriva ner skiljer sig beroende på hur många ni är. Under tio anställda slipper ni en hel del papper, om ni bara vet var gränsen går.</p>
+
+<p>Den här artikeln reder ut exakt vad ett byggföretag med två, tre eller fem anställda måste dokumentera – och vad som räcker att ha muntligt. Ett effektivt sätt att komma igång med den skriftliga delen är att utgå från en färdig struktur: testa <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll- och riskbedömningsmall &rarr;</a> och slipp bygga allt från noll.</p>
+
+<h2>Vad är SAM och vad ändrades 2025?</h2>
+<p>Den 1 januari 2025 trädde AFS 2023:1 – &quot;Systematiskt arbetsmiljöarbete – grundläggande skyldigheter för dig med arbetsgivaransvar&quot; – i kraft och ersatte den gamla AFS 2001:1. Samtidigt sorterade Arbetsmiljöverket om cirka 2 300 paragrafer i de tidigare föreskrifterna till 15 nya, tydligare strukturerade regelverk (AFS 2023:1–15).</p>
+<p>Det viktiga att förstå: <strong>grundkraven är i sak oförändrade</strong>. Det har alltså inte tillkommit någon ny administrativ börda – det är främst paragrafnumrering och struktur som är ny. SAM-metoden är densamma cykliska som tidigare:</p>
+<ul>
+<li><strong>Undersöka</strong> arbetsmiljön löpande</li>
+<li><strong>Riskbedöma</strong> det ni hittar</li>
+<li><strong>Åtgärda</strong> riskerna – omgående eller via en handlingsplan</li>
+<li><strong>Kontrollera och följa upp</strong> att åtgärderna fungerar, minst en gång per år</li>
+</ul>
+<p>Kärnan är att arbetsmiljöarbetet ska vara en naturlig del av den dagliga driften, inte en engångsövning inför en inspektion.</p>
+
+<h2>10-anställdagränsen: vad måste vara skriftligt – och vad räcker muntligt?</h2>
+<p>Här ligger själva poängen för det lilla byggföretaget. Fyra saker behöver bara dokumenteras <strong>skriftligt om ni har tio eller fler anställda</strong>:</p>
+<ul>
+<li><strong>Arbetsmiljöpolicy</strong> (7 §)</li>
+<li><strong>Rutiner</strong> för arbetsmiljöarbetet (8 §)</li>
+<li><strong>Fördelning av arbetsmiljöuppgifter</strong> – vem som ansvarar för vad (9 §)</li>
+<li><strong>Resultatet av den årliga uppföljningen</strong> (14 §)</li>
+</ul>
+<p>Har ni färre än tio anställda får dessa fyra vara muntliga. Men läs den här meningen en gång till: undantaget gäller <strong>formen</strong>, inte skyldigheten. Ni måste fortfarande <em>ha</em> en arbetsmiljöpolicy, <em>ha</em> rutiner, faktiskt <em>fördela</em> arbetsmiljöuppgifterna och <em>göra</em> en årlig uppföljning – det behöver bara inte vara nedskrivet. I praktiken är det ofta ändå enklast att skriva några rader, eftersom en muntlig uppgiftsfördelning är svår att bevisa om Arbetsmiljöverket eller en skadad medarbetare frågar.</p>
+
+<h2>Detta måste ALLTID dokumenteras – även med 2–3 anställda</h2>
+<p>Oavsett hur få ni är finns det tre saker som alltid måste finnas skriftligt:</p>
+<ul>
+<li><strong>Riskbedömningar</strong> (11 §) – det ni kommer fram till när ni undersöker arbetsmiljön</li>
+<li><strong>Handlingsplan</strong> (13 §) för åtgärder som inte genomförs omgående, med <strong>vad</strong> som ska göras, <strong>vem</strong> som ansvarar och <strong>när</strong> det ska vara klart</li>
+<li><strong>Instruktioner</strong> (10 §) för arbete med allvarliga risker</li>
+</ul>
+<p>Det här gäller alltså även ett byggföretag med två eller tre anställda. Några konkreta byggexempel:</p>
+<ul>
+<li><strong>Takarbete:</strong> skriftlig riskbedömning av fallrisk, plus en instruktion för hur fallskydd och förankring ska användas.</li>
+<li><strong>Rivning:</strong> riskbedömning av damm, asbestmisstanke och rasrisk, med instruktion om andningsskydd och avspärrning.</li>
+<li><strong>Ställningsmontage:</strong> riskbedömning och instruktion om vem som får montera, kontrollera och märka ställningen.</li>
+</ul>
+<p>Kan ni fixa risken direkt? Gör det och notera att den är åtgärdad. Kan ni inte det – till exempel för att ni väntar på material eller utbildning – då ska det in i handlingsplanen med datum och ansvarig.</p>
+
+<h2>Byggspecifika krav ovanpå SAM: arbetsmiljöplan, BAS-P/BAS-U och förhandsanmälan</h2>
+<p>SAM enligt AFS 2023:1 är basen, men på en byggarbetsplats tillkommer AFS 2023:3 (Projektering och byggarbetsmiljösamordning), som från 1 januari 2025 ersatte AFS 1999:3. Den kräver att ni utser <strong>byggarbetsmiljösamordnare</strong> – BAS-P för planering och projektering och BAS-U för utförandet – och att det finns en <strong>arbetsmiljöplan (AMP)</strong>.</p>
+<p>Arbetsmiljöplanen ska vara framtagen <strong>innan</strong> byggarbetsplatsen etableras och hållas uppdaterad under hela byggtiden. Den krävs bland annat när arbete med särskild risk förekommer – till exempel fallrisk över två meter, arbete nära högspänning eller rasrisk – eller när förhandsanmälan behövs.</p>
+<p><strong>Förhandsanmälan</strong> till Arbetsmiljöverket krävs innan byggstart när arbetet beräknas pågå längre än 30 arbetsdagar och mer än 20 personer sysselsätts samtidigt, <strong>eller</strong> när det totala antalet persondagar överstiger 500.</p>
+<p>Ta det här på allvar: sanktionsavgiften för en saknad arbetsmiljöplan är <strong>50 000 kr</strong> vid projekt som kräver förhandsanmälan och <strong>10 000 kr</strong> vid övriga projekt som omfattas av kravet. Avgiften tas ut vid tillsyn oavsett om en olycka har skett. Det enda undantaget är om hela bygg- eller anläggningsarbetet pågår i högst två dagar i följd.</p>
+
+<h2>Glöm inte OSA och arbetsanpassning (AFS 2023:2)</h2>
+<p>Många missar att den organisatoriska och sociala arbetsmiljön (OSA) numera ligger i AFS 2023:2 (Planering och organisering av arbetsmiljöarbete), som också gäller från 1 januari 2025 och ska integreras i ert SAM. Där hamnade även arbetsanpassning, första hjälpen, våld och hot samt ensamarbete.</p>
+<p>OSA – stress, arbetsbelastning, arbetstid och kränkande särbehandling – är alltså en <strong>obligatorisk</strong> del även för små byggföretag. Ensamarbete är särskilt relevant i branschen: en snickare som ensam gör ett takjobb eller en servicetekniker ute på uppdrag omfattas. Ta med det när ni riskbedömer.</p>
+
+<h2>Så bygger ni ett SAM utan pappersberg – 6 steg</h2>
+<ol>
+<li><strong>Skriv en enkel policy.</strong> Några meningar om att ni prioriterar en säker arbetsplats räcker långt – även om ni formellt slipper skriva den under tio anställda.</li>
+<li><strong>Fördela uppgifterna.</strong> Bestäm vem som ansvarar för vad och skriv ner det på en halv sida.</li>
+<li><strong>Gör en skriftlig riskbedömning per projekt eller riskfyllt moment.</strong> Detta är obligatoriskt oavsett storlek – återanvänd en mall.</li>
+<li><strong>Upprätta en handlingsplan</strong> för det som inte fixas direkt, med vad, vem och när.</li>
+<li><strong>Ha en rutin för tillbud och olyckor</strong> så alla vet hur de rapporterar och vad som händer sen.</li>
+<li><strong>Boka in den årliga uppföljningen i kalendern.</strong> En timme en gång om året där ni går igenom vad som hänt och vad som ska förbättras.</li>
+</ol>
+<p>Tricket är att återanvända samma mallar projekt efter projekt och samla allt digitalt i stället för i lösa papper.</p>
+
+<h2>Vanliga misstag och hur ni undviker dem</h2>
+<ul>
+<li><strong>Att tro att SAM inte gäller små företag.</strong> Det gör det – från första anställd.</li>
+<li><strong>Att strunta i skriftlig riskbedömning</strong> med argumentet &quot;vi är för få&quot;. Den är alltid obligatorisk.</li>
+<li><strong>Att sakna arbetsmiljöplan på bygget.</strong> Sanktionsavgiften kommer oavsett om något gått fel.</li>
+<li><strong>Att glömma OSA och ensamarbete.</strong> Stress och ensamjobb ska riskbedömas som vilken risk som helst.</li>
+<li><strong>Att göra allt en gång och sedan lägga det i byrålådan.</strong> SAM är cykliskt – uppföljningen varje år är själva poängen.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper er att hålla ordning på den dokumentation som faktiskt är obligatorisk – riskbedömningar, handlingsplaner och instruktioner – utan att bygga ett eget system från grunden. Med färdiga mallar för egenkontroll och riskbedömning fyller ni i vad, vem och när, sparar dokumentet digitalt per projekt och återanvänder samma struktur nästa gång i stället för att börja om. Ni får ett samlat ställe att lägga arbetsmiljöplanen och de skriftliga riskbedömningarna, så att allt finns framme om Arbetsmiljöverket frågar. ByggExp fattar inga beslut åt er om vilka risker som gäller på just ert bygge – men verktyget gör det enkelt att dokumentera det ni kommer fram till och att spara det digitalt så länge ni behöver ha det tillgängligt.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste ett byggföretag med bara två anställda ha systematiskt arbetsmiljöarbete?</h3>
+<p>Ja. SAM enligt AFS 2023:1 gäller alla arbetsgivare oavsett storlek, även ett företag med en enda anställd. Skillnaden för små företag är att fyra saker – policy, rutiner, uppgiftsfördelning och resultatet av den årliga uppföljningen – får vara muntliga under tio anställda. Riskbedömningar, handlingsplan och instruktioner för allvarliga risker måste dock alltid vara skriftliga.</p>
+<h3>Vad måste alltid dokumenteras skriftligt även under 10 anställda?</h3>
+<p>Tre saker: riskbedömningar (11 §), handlingsplan för åtgärder som inte genomförs omgående med vad, vem och när (13 §), samt instruktioner för arbete med allvarliga risker (10 §). Detta gäller oavsett hur få ni är.</p>
+<h3>När krävs en arbetsmiljöplan och vad kostar det att sakna den?</h3>
+<p>En arbetsmiljöplan krävs bland annat när arbete med särskild risk förekommer eller när förhandsanmälan behövs. Saknas den blir sanktionsavgiften 50 000 kr vid projekt som kräver förhandsanmälan och 10 000 kr vid övriga projekt som omfattas av kravet. Undantag gäller bara om hela arbetet pågår i högst två dagar i följd.</p>
+<h3>Behöver små byggföretag jobba med OSA och stress?</h3>
+<p>Ja. Organisatorisk och social arbetsmiljö ligger i AFS 2023:2 och ska integreras i ert SAM. Stress, arbetsbelastning, kränkande särbehandling och ensamarbete ska hanteras även i det lilla byggföretaget.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med det som alltid är obligatoriskt: en skriftlig riskbedömning per projekt. Utgå från <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll- och riskbedömningsmall &rarr;</a> så har ni en struktur att fylla i direkt. Vill ni se hur ni samlar arbetsmiljödokumentationen digitalt per projekt, <a href="/sv/contact">boka en demo av ByggExp här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>, <a href="/sv/blog/arbetsmiljoplan">Så skriver du en arbetsmiljöplan</a> och <a href="/sv/blog/arbetsmiljoverket-nya-regler-2026-bygg">Arbetsmiljöverkets nya regler 2026 för bygg</a>.</p>
+`;
+
+const A_SYSTEMATISKT_ARBETSMILJOARBETE_LITET_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"systematiskt-arbetsmiljoarbete-litet-byggforetag",
+  title: "Systematiskt arbetsmiljöarbete för litet byggföretag – så mycket måste du dokumentera", slug: "systematiskt-arbetsmiljoarbete-litet-byggforetag", locale: "sv",
+  excerpt: "SAM gäller alla arbetsgivare enligt AFS 2023:1 – även enmansföretag. Så vet ett litet byggföretag vad som måste dokumenteras skriftligt och vad som får vara muntligt.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_SYSTEMATISKT_ARBETSMILJOARBETE_LITET_BYGGFORETAG_HTML,
+  seoTitle: "SAM för litet byggföretag – vad måste dokumenteras | ByggExp", seoDescription: "SAM enligt AFS 2023:1 gäller alla byggföretag – även med två anställda. Så vet du vad som måste vara skriftligt och vad som räcker muntligt under tio anställda.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T12:30:00.000Z", createdAt: "2026-08-19T12:30:00.000Z", updatedAt: "2026-08-19T12:30:00.000Z",
+};
+
+const A_RETENTIONSRATT_HANTVERKARE_INNEHALLA_ARBETE_HTML = `
+<p>Kunden hämtar inte prylen, svarar inte på fakturan och du sitter med hans egendom i verkstaden. Får du hålla kvar den tills du fått betalt? Ofta ja, men bara om tre villkor är uppfyllda, och om du gör fel kan du själv bli anmäld för självtäkt. Här går vi igenom hur du använder retentionsrätten lagligt, var gränsen mot brott går och varför den inte fungerar på ett husbygge.</p>
+
+<p>När det väl gått så här långt är grunden alltid en tydlig faktura och en dokumenterad påminnelsekedja. Bygg din faktura med <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall</a> så att förfallodag, belopp och betalningsvillkor är svart på vitt, det är den fordran retentionsrätten vilar på.</p>
+
+<h2>Vad retentionsrätt faktiskt är</h2>
+<p>Retentionsrätt är rätten att hålla kvar (behålla besittningen av) någon annans lösa egendom som säkerhet tills en förfallen fordran betalats. Den är inte samlad i en enda lag utan erkänd i rättspraxis och i vissa speciallagar. Viktigast av allt: rätten ger dig bara rätt att <strong>hålla kvar</strong> saken, inte att sälja eller förfoga över den. Kvarhållandet är ett påtryckningsmedel, inte en betalning i sig.</p>
+<p>Blanda inte ihop retentionsrätt med detentionsrätt. Detentionsrätt är rätten att hålla inne din egen prestation tills motparten presterar, alltså att inte lämna ifrån dig arbetet förrän du fått betalt. Retentionsrätt gäller att hålla kvar någon annans sak. Det är olika rättsfigurer, och som du ser längre ner är detentionsrätten framför allt kundens verktyg.</p>
+
+<h2>De tre kraven som måste vara uppfyllda</h2>
+<p>Innan du håller kvar något måste samtliga tre grundkrav vara på plats:</p>
+<ul>
+<li><strong>Laglig besittning.</strong> Du ska ha fått saken i din vård på laglig väg, till exempel att kunden lämnat in den för reparation. Har du tagit den med list eller våld gäller ingen retentionsrätt.</li>
+<li><strong>Konnexitet.</strong> Fordran måste ha samband med just den sak du håller kvar. Du får hålla kvar bilen för den obetalda reparationen av just den bilen, inte för en gammal orelaterad skuld kunden har hos dig.</li>
+<li><strong>Klar och förfallen fordran.</strong> Kravet ska vara ostridigt och ha passerat förfallodagen. En fordran kunden bestrider på goda grunder räknas inte som klar.</li>
+</ul>
+<p>Exempel: en kund lämnar in en maskin för service. Arbetet är utfört, fakturan har förfallit och kunden vägrar betala. Då har du laglig besittning, konnexitet mellan skulden och maskinen och en förfallen fordran, och du får hålla kvar maskinen tills betalning sker.</p>
+
+<h2>Den stora begränsningen: bara lös egendom</h2>
+<p>Retentionsrätt förutsätter att du har besittning av lös egendom. Vid byggnadsentreprenad arbetar du på kundens fasta egendom, huset eller tomten, och den kan du inte hålla kvar. Entreprenören har ingen retentionsrätt eller motsvarande förmånsrätt i den uppförda byggnaden. Du kan inte hålla huset som gisslan för en obetald slutfaktura.</p>
+<p>Det du har i stället vid entreprenad är avtalsmässiga verktyg: betalningsplan med tydliga betalningsstationer, à conto-fakturering under arbetets gång och rätten att ställa in fortsatt arbete vid utebliven betalning. Poängen är att inte ligga ute med hela din prestation, utan att fakturera i takt med att jobbet fortskrider så att din exponering aldrig blir större än nödvändigt.</p>
+
+<h2>Du får hålla, men inte sälja hur som helst</h2>
+<p>Att du får hålla kvar saken betyder inte att du får sälja den för att få betalt. Försäljning kräver stöd i Lag (1985:982) om näringsidkares rätt att sälja saker som inte har hämtats. Processen ser ut så här:</p>
+<ol>
+<li>Arbetet ska vara slutfört eller avtalet ha upphört.</li>
+<li>Kunden ska anmanas att hämta saken genom rekommenderat brev, där du anger skulden och upplyser om att saken får säljas om den inte hämtas.</li>
+<li>Minst <strong>tre månader</strong> ska ha förflutit efter anmaningen innan försäljning får ske.</li>
+</ol>
+<p>Det finns ett snabbspår: om sakens försäljningsvärde uppenbart understiger en hundradel av prisbasbeloppet får du sälja eller kassera den efter ett år utan anmaning. Prisbasbeloppet 2026 är 59 200 kr, så tröskeln ligger på cirka 592 kr. Överskott efter avdrag för dina kostnader ska betalas till kunden, utom belopp under 50 kr. Är fordran tvistig får försäljning inte ske förrän tvisten är slutligt avgjord.</p>
+
+<h2>Gränsen mot brott, här går det snett</h2>
+<p>Två straffbestämmelser är centrala. Om kunden med våld eller hot tar tillbaka den sak du lagligt håller kvar begår <strong>kunden</strong> egenmäktigt förfarande enligt Brottsbalken 8 kap. 8 §, med böter eller fängelse i högst ett år (grovt brott upp till fyra år). Bestämmelsen träffar uttryckligen den som med våld eller hot hindrar någon att utöva sin rätt att kvarhålla något.</p>
+<p>Men risken går åt båda håll. Tar du dig rätt på egen hand kan <strong>du</strong> dömas för självtäkt enligt Brottsbalken 8 kap. 9 §, böter eller fängelse i högst sex månader. Det gäller den som med olovligt tillgrepp tar sig rätt fastän han tror sig ha rätt till saken. Att bryta dig in och ta tillbaka en pryl, eller att behålla eller sälja utöver din faktiska rätt, riskerar självtäkt eller olovligt förfogande. Att på egen hand ta tillbaka egendom är lagligt bara på färsk gärning, alltså i princip direkt i stunden, inte flera dagar senare.</p>
+
+<h2>När kunden håller inne mot dig</h2>
+<p>Är kunden en konsument har hen ett eget lagligt motvapen. Enligt konsumenttjänstlagen (1985:716) 19 § får konsumenten hålla inne så mycket av betalningen att det ger säkerhet för hans krav på grund av fel i tjänsten, och 27 § ger samma rätt vid dröjsmål. Detta är kundens detentionsrätt.</p>
+<p>Det viktiga för dig: innehållet ska motsvara felets eller kravets värde, inte mer. Men om kunden håller inne på en rimlig grund blir din fordran inte längre klar, och då vacklar själva förutsättningen för din retentionsrätt. Därför lönar det sig att först reda ut en eventuell reklamation, gärna med besiktning, innan du lutar dig mot rätten att hålla kvar.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>Retentionsrätten hänger på att fordran är klar, förfallen och dokumenterad. I ByggExp skapar du fakturor med tydlig förfallodag och betalningsvillkor, och du ser direkt vilka fakturor som passerat förfallodagen. Behöver du trappa upp trycket innan du håller kvar något skickar du strukturerade betalningspåminnelser med <a href="/sv/verktyg/betalningspaminnelse-mall">vår mall för betalningspåminnelse</a>, så att du har en spårbar kedja att hänvisa till om ärendet går vidare till Kronofogden.</p>
+<p>ByggExp ger dig inte juridisk rådgivning och avgör inte om ett enskilt kvarhållande är lagligt, det beror på omständigheterna. Men verktyget ger dig underlaget: avtal, fakturor, förfallodatum och påminnelsehistorik samlat, vilket är precis den dokumentation du behöver för att visa att fordran är klar och förfallen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får jag hålla inne kundens grej tills fakturan är betald?</h3>
+<p>Ja, om du har den lösa egendomen i laglig besittning, fordran hör ihop med just den saken och fordran är klar och förfallen. Då får du hålla kvar den som säkerhet. Du får däremot inte sälja den utan att följa Lag (1985:982).</p>
+<h3>Kan jag hålla inne ett husbygge tills jag fått betalt?</h3>
+<p>Nej. Retentionsrätt gäller bara lös egendom i din besittning. På fast egendom, som kundens hus eller tomt, har du ingen retentionsrätt. Vid entreprenad använder du i stället betalningsplan, à conto-fakturering och rätten att ställa in fortsatt arbete.</p>
+<h3>Får jag åka hem till kunden och ta tillbaka det jag levererat?</h3>
+<p>Var mycket försiktig. Att på egen hand ta tillbaka egendom är lagligt bara på färsk gärning, alltså i stunden. Bryter du dig in eller tar saken i efterhand riskerar du att dömas för självtäkt enligt Brottsbalken 8 kap. 9 §. Använd hellre betalningsföreläggande hos Kronofogden.</p>
+<h3>Vad händer om kunden med våld tar tillbaka saken jag håller kvar?</h3>
+<p>Då är det kunden som begår brott, egenmäktigt förfarande enligt Brottsbalken 8 kap. 8 §, som ger böter eller fängelse i högst ett år. Bestämmelsen skyddar uttryckligen din rätt att kvarhålla saken.</p>
+
+<h2>Kom igång</h2>
+<p>Retentionsrätten är ett verkligt påtryckningsmedel, men bara på lös egendom, bara vid en konnex och förfallen fordran, och aldrig med våld eller egenmäktig försäljning. Se till att grunden är i ordning: skapa tydliga fakturor med <a href="/sv/verktyg/faktura-mall">fakturamallen</a> och trappa upp med <a href="/sv/verktyg/betalningspaminnelse-mall">betalningspåminnelser</a> innan du håller något kvar. Vill du se hur ByggExp samlar avtal, fakturor och påminnelser på ett ställe, <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a>, <a href="/sv/blog/drojsmalsranta-2026">Dröjsmålsränta 2026</a> och <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturor</a>.</p>
+`;
+
+const A_RETENTIONSRATT_HANTVERKARE_INNEHALLA_ARBETE: BlogPost = {
+  _id: "code-"+"retentionsratt-hantverkare-innehalla-arbete",
+  title: "Retentionsrätt för hantverkare: när får du hålla inne arbetet tills kunden betalat?", slug: "retentionsratt-hantverkare-innehalla-arbete", locale: "sv",
+  excerpt: "Retentionsrätten låter dig hålla kvar kundens lösa egendom som säkerhet för en förfallen faktura, men bara under tre villkor och aldrig med våld eller egenmäktig försäljning.", tag: "Juridik",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_RETENTIONSRATT_HANTVERKARE_INNEHALLA_ARBETE_HTML,
+  seoTitle: "Retentionsrätt hantverkare | ByggExp", seoDescription: "Får du hålla kvar kundens sak tills fakturan är betald? Så använder du retentionsrätten lagligt och undviker att själv anmälas för självtäkt.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T12:33:00.000Z", createdAt: "2026-08-19T12:33:00.000Z", updatedAt: "2026-08-19T12:33:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_SYSTEMATISKT_ARBETSMILJOARBETE_LITET_BYGGFORETAG,
+    A_RETENTIONSRATT_HANTVERKARE_INNEHALLA_ARBETE,
     A_SKYDDSROND_BYGG_CHECKLISTA,
     A_KAKEL_KLINKER_ATGANG_VATRUM,
     A_ARMERING_BERAKNING_PLATTA_GRUND,

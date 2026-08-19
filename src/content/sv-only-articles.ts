@@ -5,6 +5,8 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'systematiskt-arbetsmiljoarbete-litet-byggforetag',
+  'retentionsratt-hantverkare-innehalla-arbete',
   'skyddsrond-bygg-checklista',
   'kakel-klinker-atgang-vatrum',
   'armering-berakning-platta-grund',

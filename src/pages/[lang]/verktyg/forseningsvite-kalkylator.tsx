@@ -8,6 +8,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import ForseningsviteKalkylatorTool from '../../../components/LeadMagnet/ForseningsviteKalkylatorTool';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -84,6 +85,15 @@ export default function ForseningsviteKalkylatorPage() {
         intro="Ange kontraktssumman, den avtalade vitessatsen per vecka och antal veckors försening. Kalkylatorn räknar ut förseningsvitet enligt AB 04/ABT 06 och tar hänsyn till ett eventuellt takbelopp."
         tool={<ForseningsviteKalkylatorTool />}
         leadForm={<ToolLeadForm tool="forseningsvite-kalkylator" />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/forseningsvite-preview.webp"
+            alt="Förhandsvisning av förseningsvite-kalkylatorn"
+            caption="Så ser förseningsvite-kalkylatorn ut"
+            width={1000}
+            height={474}
+          />
+        }
         sections={[
           {
             id: 'sa-fungerar-forseningsvite',

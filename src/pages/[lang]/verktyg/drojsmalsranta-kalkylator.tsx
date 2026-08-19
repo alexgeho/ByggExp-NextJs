@@ -8,6 +8,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import DrojsmalsrantaKalkylatorTool from '../../../components/LeadMagnet/DrojsmalsrantaKalkylatorTool';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -83,6 +84,15 @@ export default function DrojsmalsrantaKalkylatorPage() {
         intro="Kunden betalar sent? Fyll i fakturabeloppet, förfallodatum och betaldatum så räknar kalkylatorn ut dröjsmålsräntan enligt räntelagen (referensränta + 8 procentenheter) plus eventuella avgifter."
         tool={<DrojsmalsrantaKalkylatorTool />}
         leadForm={<ToolLeadForm tool="drojsmalsranta-kalkylator" />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/drojsmalsranta-preview.webp"
+            alt="Förhandsvisning av dröjsmålsränta-kalkylatorn"
+            caption="Så ser dröjsmålsränta-kalkylatorn ut"
+            width={1000}
+            height={474}
+          />
+        }
         sections={[
           {
             id: 'sa-raknas-drojsmalsranta',

@@ -8,6 +8,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import SpillprocentKalkylatorTool from '../../../components/LeadMagnet/SpillprocentKalkylatorTool';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -83,6 +84,15 @@ export default function SpillprocentKalkylatorPage() {
         intro="Ange nettoåtgången och välj material eller ett eget spillpåslag. Kalkylatorn räknar ut hur mycket du behöver beställa när kapspill och kassation räknats in."
         tool={<SpillprocentKalkylatorTool />}
         leadForm={<ToolLeadForm tool="spillprocent-kalkylator" />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/spillprocent-preview.webp"
+            alt="Förhandsvisning av spillprocent-kalkylatorn"
+            caption="Så ser spillprocent-kalkylatorn ut"
+            width={1000}
+            height={474}
+          />
+        }
         sections={[
           {
             id: 'riktvarden-spill',

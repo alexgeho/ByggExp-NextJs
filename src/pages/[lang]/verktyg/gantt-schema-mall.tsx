@@ -8,6 +8,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import GanttSchemaMallTool from '../../../components/LeadMagnet/GanttSchemaMallTool';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -83,6 +84,15 @@ export default function GanttSchemaMallPage() {
         intro="Fyll i projektets aktiviteter med ansvarig, start och slut och ladda ner en färdig tidsplan som PDF eller Excel. Ett enkelt sätt att planera bygget och se vilka moment som styr slutdatumet."
         tool={<GanttSchemaMallTool />}
         leadForm={<ToolLeadForm tool="gantt-schema-mall" />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/gantt-schema-preview.webp"
+            alt="Förhandsvisning av Gantt-/tidsplan-mallen"
+            caption="Så ser Gantt-/tidsplan-mallen ut"
+            width={1000}
+            height={474}
+          />
+        }
         sections={[
           {
             id: 'sa-gor-du-tidsplan',

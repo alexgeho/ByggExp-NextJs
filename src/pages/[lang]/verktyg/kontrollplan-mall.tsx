@@ -8,6 +8,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import KontrollplanMallTool from '../../../components/LeadMagnet/KontrollplanMallTool';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -83,6 +84,15 @@ export default function KontrollplanMallPage() {
         intro="Fyll i projektuppgifter och kontrollpunkter och ladda ner en färdig kontrollplan som PDF eller Excel. Passar enklare bygglov och anmälningsärenden – för större projekt krävs en kontrollansvarig."
         tool={<KontrollplanMallTool />}
         leadForm={<ToolLeadForm tool="kontrollplan-mall" />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/kontrollplan-preview.webp"
+            alt="Förhandsvisning av kontrollplan-mallen"
+            caption="Så ser kontrollplan-mallen ut"
+            width={1000}
+            height={474}
+          />
+        }
         sections={[
           {
             id: 'vad-ska-med',

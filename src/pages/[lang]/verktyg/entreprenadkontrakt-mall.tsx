@@ -8,6 +8,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import EntreprenadkontraktMallTool from '../../../components/LeadMagnet/EntreprenadkontraktMallTool';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -83,6 +84,15 @@ export default function EntreprenadkontraktMallPage() {
         intro="Fyll i uppgifterna och ladda ner ett färdigt entreprenadkontrakt som PDF eller Excel. Mallen täcker parter, prismodell, tider, vite, ÄTA, garanti och hävning – de punkter som avgör vid en tvist."
         tool={<EntreprenadkontraktMallTool />}
         leadForm={<ToolLeadForm tool="entreprenadkontrakt-mall" />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/entreprenadkontrakt-preview.webp"
+            alt="Förhandsvisning av entreprenadkontrakt-mallen"
+            caption="Så ser entreprenadkontrakt-mallen ut"
+            width={1000}
+            height={474}
+          />
+        }
         sections={[
           {
             id: 'sa-haller-kontraktet',

@@ -8,6 +8,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import AnstallningsavtalMallTool from '../../../components/LeadMagnet/AnstallningsavtalMallTool';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
+import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -83,6 +84,15 @@ export default function AnstallningsavtalMallPage() {
         intro="Fyll i uppgifterna och ladda ner ett färdigt anställningsavtal som PDF eller Excel. Mallen täcker den skriftliga information du som arbetsgivare måste lämna enligt LAS – anpassa alltid till ert kollektivavtal."
         tool={<AnstallningsavtalMallTool />}
         leadForm={<ToolLeadForm tool="anstallningsavtal-mall" />}
+        preview={
+          <PreviewImage
+            src="/landing/verktyg/anstallningsavtal-preview.webp"
+            alt="Förhandsvisning av anställningsavtal-mallen"
+            caption="Så ser anställningsavtal-mallen ut"
+            width={1000}
+            height={474}
+          />
+        }
         sections={[
           {
             id: 'vad-ska-med',

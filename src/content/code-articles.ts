@@ -16294,9 +16294,828 @@ const A_RIVNINGSLOV_RIVNINGSANMALAN_BYGG: BlogPost = {
   publishedAt: "2026-08-19T23:12:00.000Z", createdAt: "2026-08-19T23:12:00.000Z", updatedAt: "2026-08-19T23:12:00.000Z",
 };
 
+const A_AB_U_UNDERENTREPRENOR_AVTAL_HTML = `
+<p>Som general- eller totalentreprenör sitter du med hela risken mot din beställare – tider, viten, garantitider och besiktning. Ändå glömmer många att föra ner exakt samma villkor till sina underentreprenörer. Blir din UE försenad, men du inte har speglat vitesbestämmelsen nedåt, fastnar kostnaden hos dig. Standardavtalen för <strong>AB-U ABT-U underentreprenör avtal</strong> är byggda just för att lösa detta: de speglar (back-to-back) huvudavtalet så att risken vandrar vidare i entreprenadkedjan i stället för att stanna på ditt bord.</p>
+
+<p>Innan du skriver nästa UE-kontrakt – samla dina underlag och mallar i <a href="/sv/verktyg">vår kostnadsfria verktygssamling för byggföretag &rarr;</a> så att avtal, offert och kalkyl hänger ihop.</p>
+
+<h2>Vad är AB-U 07 och ABT-U 07?</h2>
+<p>Både AB-U 07 och ABT-U 07 är Byggföretagens (dåvarande Sveriges Byggindustriers) standardavtal för underentreprenad, antagna i maj 2007. De är fortfarande de gällande versionerna 2026 – ingen ny revidering har ersatt dem, även om huvudavtalet AB 04 diskuteras för revidering.</p>
+<p><strong>AB-U 07</strong> används vid utförandeunderentreprenad, alltså när hela eller en väsentlig del av projekteringen ligger hos beställaren eller dennes uppdragsgivare. Uppåt i kedjan gäller AB 04, och UE bär utförandeansvar mot beställarens handlingar. <strong>ABT-U 07</strong> används vid totalunderentreprenad, där UE svarar för både projektering och utförande och där ABT 06 gäller mellan totalentreprenören och dennes beställare. Här bär UE funktionsansvar – ansvar för att avtalad funktion faktiskt uppnås. Båda avtalen gäller enbart näring till näring och får aldrig användas mot konsument; då gäller i stället konsumenttjänstlagen och exempelvis Hantverkarformuläret.</p>
+
+<h2>Back-to-back-principen – varför avtalen finns</h2>
+<p>AB-U 07 och ABT-U 07 är inte fristående avtal. De bygger på AB 04 respektive ABT 06 med ett antal <em>ändringar</em> och <em>tillägg</em>: en ändring ersätter en bestämmelse i huvudavtalet, ett tillägg kompletterar den. Poängen är att tider, garantitider, viten, betalning, besiktning och hävning ska matcha huvudavtalet uppåt. Uppnår du inte den speglingen riskerar du att sitta emellan – bunden hårt mot din beställare men löst mot din UE. Det är precis den glipan som äter marginalen.</p>
+
+<h2>De viktigaste speglingsklausulerna</h2>
+<p>Det här är de bestämmelser som gör AB-U 07 till ett back-to-back-avtal. Kontrollera dem mot ditt huvudavtal innan du signerar:</p>
+<ul>
+<li><strong>Garantitid (punkt 6, tillägg till AB 04 kap 4 §7):</strong> UE:s garantitid får aldrig vara längre än den som avtalats mellan dig och din uppdragsgivare. Huvudavtalets garantitid speglas nedåt.</li>
+<li><strong>Förseningsvite (punkt 7, ändring av kap 5 §3):</strong> vite utgår med 1 % av kontraktssumman, dock lägst 5 000 kr, för varje påbörjad vecka som kontraktstiden överskrids – om inget annat avtalats.</li>
+<li><strong>Betalning och preskription (punkt 11–12):</strong> UE har rätt till betalning i den mån du har rätt till betalning av din uppdragsgivare. Preskriptionstiderna kortas till 4 månader respektive 22 månader (punkt 11) och 8 månader (punkt 12).</li>
+<li><strong>Säkerhet (punkt 13, ändring av kap 6 §21):</strong> din säkerhet mot UE ska gälla 10 % av kontraktssumman och begränsas fortlöpande till obetald del av kontraktssumman.</li>
+<li><strong>Besiktning och godkännande (punkt 14, 19, 20):</strong> slutbesiktning av UE-entreprenaden verkställs genom motsvarande besiktning av din entreprenad, och godkännandet följer godkännandet uppåt. Du får åberopa fel som din uppdragsgivare påtalat, men måste påtala felet mot UE inom 2 månader från mottaget krav.</li>
+<li><strong>Hävning (punkt 23, 25):</strong> du får häva mot UE om du avtalsenligt hävt kontraktet med din uppdragsgivare, och om UE inte betalar skatter eller sociala avgifter enligt lag eller kollektivavtal. Vid uppdragsgivarens kontraktsbrott får du beordra UE att avbryta arbeten under motsvarande tid, dock längst sammanlagt en månad.</li>
+</ul>
+<p>Exempel: ditt kontrakt mot beställaren har 5 års garantitid och ett förseningsvite på 1 % per vecka. Skriver du AB-U 07 utan avvikelser får UE samma tak på garantitiden och samma viteskonstruktion – risken speglas automatiskt. Hade du i stället skrivit ett eget kortavtal utan speglingsklausuler hade du fått förhandla varje punkt manuellt, med risk för luckor.</p>
+
+<h2>Dokumentrangordning vid motstridiga uppgifter</h2>
+<p>Punkt 2 (ändring av AB 04 kap 1 §3) sätter tolkningsordningen när handlingarna säger emot varandra: 1) kontrakt, 2) ändringar i AB 04/AB-U 07 som tagits upp i de administrativa föreskrifterna (AF), 3) AB-U 07, 4) AB 04, därefter beställning, anbud och så vidare. AB-U 07 går alltså före AB 04 men efter kontraktet och avtalade AF-ändringar. Den praktiska slutsatsen: vill du avvika från standardtexten måste avvikelsen skrivas in i kontraktet eller AF – annars vinner standardtexten. Att muntligt "komma överens om något annat" håller inte om det inte står i rätt handling.</p>
+
+<h2>2026-reglerna du inte får missa</h2>
+<p>Utöver själva speglingen finns regler som avgör om affären hanteras korrekt skattemässigt och arbetsrättsligt:</p>
+<ul>
+<li><strong>Omvänd byggmoms:</strong> säljer du eller din UE byggtjänster till en köpare som bedriver byggverksamhet mer än tillfälligt gäller omvänd skattskyldighet. UE fakturerar utan moms och köparen redovisar momsen. Fakturan ska ange köparens momsregistreringsnummer och att omvänd skattskyldighet gäller för byggtjänster. AB-U 07 punkt 10 reglerar korrigering om momsen hanterats fel.</li>
+<li><strong>Legitimation och namnbricka:</strong> alla på arbetsplatsen ska bära namnbricka med namn och arbetsgivare samt ha giltig legitimation tillgänglig (punkt 5). Bryts det utgår vite om 500 kr per person och dag (punkt 8). Detta hänger ihop med kravet på elektronisk personalliggare, som är lagkrav när projektets sammanlagda kostnad överstiger 4 prisbasbelopp – med prisbasbeloppet 59 200 kr för 2026 innebär det en gräns runt 236 800 kr. Byggherren ansvarar, men ansvaret kan skriftligen överlåtas till entreprenör.</li>
+<li><strong>Entreprenörsansvar för lönefordringar (lag i kraft 1 januari 2019):</strong> kan en UE inte betala sin arbetstagares lön blir UE:s uppdragsgivare betalningsansvarig och i sista hand huvudentreprenören. Lagen gäller inte för entreprenörer som är bundna av kollektivavtal med likvärdigt skydd – vilket förklarar varför punkt 23 ger hävningsrätt vid UE:s obetalda skatter och avgifter.</li>
+</ul>
+
+<h2>Checklista innan du skriver på</h2>
+<ol>
+<li>Välj rätt avtal – AB-U 07 vid utförande, ABT-U 07 när UE också projekterar.</li>
+<li>Bifoga rätt huvudavtal (AB 04 eller ABT 06) och relevanta handlingar.</li>
+<li>Spegla tider, förseningsvite och garantitid mot ditt kontrakt uppåt.</li>
+<li>Skriv in alla avvikelser i kontraktet eller AF – inte i lösa mejl.</li>
+<li>Kontrollera momshanteringen (omvänd byggmoms) och köparens momsnummer.</li>
+<li>Ta kreditupplysning och kontrollera UE:s kollektivavtalstillhörighet.</li>
+<li>Reglera personalliggare och legitimationskrav skriftligt.</li>
+<li>Använd aldrig AB-U/ABT-U mot konsument.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte standardavtalen – AB-U 07 och ABT-U 07 hämtar du hos Byggföretagen – men vi hjälper dig hålla ihop dokumentationen runt dem. I <a href="/sv/verktyg/offert-mall">vår offertmall</a> bygger du ett tydligt underlag där kontraktssumma, omfattning och villkor framgår, vilket blir grunden när du sätter UE-kontraktets belopp och speglar viten och säkerhet. Samlar du offert, kalkyl och avtalsunderlag på ett ställe blir det enklare att kontrollera att villkoren stämmer uppåt och nedåt i kedjan – och att du kan visa vad som avtalats om en tvist uppstår.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan AB-U 07 och ABT-U 07?</h3>
+<p>AB-U 07 används vid utförandeunderentreprenad, där projekteringen ligger hos beställaren och AB 04 gäller uppåt – UE har utförandeansvar. ABT-U 07 används vid totalunderentreprenad, där UE både projekterar och utför, ABT 06 gäller uppåt och UE bär funktionsansvar.</p>
+<h3>Är AB-U 07 fortfarande giltigt 2026?</h3>
+<p>Ja. AB-U 07 och ABT-U 07 antogs i maj 2007 och är fortfarande de gällande versionerna 2026. Ingen ny revidering har ersatt dem, även om huvudavtalet AB 04 diskuteras för revidering.</p>
+<h3>Kan jag använda AB-U 07 mot en privatperson?</h3>
+<p>Nej. Varken AB-U 07 eller ABT-U 07 får användas för arbeten åt konsument – de gäller enbart näring till näring. För konsumententreprenad gäller konsumenttjänstlagen och exempelvis Hantverkarformuläret eller ABS.</p>
+<h3>Hur speglas förseningsvitet mot min UE?</h3>
+<p>Enligt punkt 7 utgår vite med 1 % av kontraktssumman, dock lägst 5 000 kr, för varje påbörjad vecka som kontraktstiden överskrids – om inget annat avtalats. Vill du ha ett annat vite måste du skriva in det i kontraktet eller AF.</p>
+
+<h2>Kom igång</h2>
+<p>Ett korrekt speglat UE-avtal är det som skyddar din marginal när tider och besiktningar väl sätts på prov. Börja med att bygga ett tydligt underlag i <a href="/sv/verktyg/offert-mall">offertmallen</a> och utforska fler verktyg i <a href="/sv/verktyg">verktygssamlingen</a>. Vill du se hur ByggExp håller ihop offert, kalkyl och dokumentation? <a href="/sv/contact">Boka en demo &rarr;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/anlita-underentreprenor">Anlita underentreprenör – vad du måste kontrollera</a>, <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaderna förklarade</a>, <a href="/sv/blog/entreprenadtvist-undvika-dokumentation">Undvik entreprenadtvist med rätt dokumentation</a>.</p>
+`;
+
+const A_AB_U_UNDERENTREPRENOR_AVTAL: BlogPost = {
+  _id: "code-"+"ab-u-underentreprenor-avtal",
+  title: "AB-U 07 och ABT-U 07 – så speglar du huvudavtalet mot din underentreprenör", slug: "ab-u-underentreprenor-avtal", locale: "sv",
+  excerpt: "Praktisk genomgång av hur AB-U 07 och ABT-U 07 speglar huvudavtalet mot din underentreprenör – klausul för klausul.", tag: "Avtal",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_AB_U_UNDERENTREPRENOR_AVTAL_HTML,
+  seoTitle: "AB-U 07 & ABT-U 07 underentreprenör | ByggExp", seoDescription: "Så använder du AB-U 07 och ABT-U 07 för att spegla huvudavtalets villkor mot din UE: garantitid, viten, betalning, besiktning och hävning back-to-back.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T08:00:00.000Z", createdAt: "2026-08-20T08:00:00.000Z", updatedAt: "2026-08-20T08:00:00.000Z",
+};
+
+const A_FOTODOKUMENTATION_BYGGPROJEKT_BEVIS_HTML = `
+<p>När en entreprenad går i tvist avgör sällan minnet vem som hade rätt – det gör dokumentationen. Var beställningen skriftlig? Fanns felet i underlaget redan när ni tog över? Blev den inbyggda konstruktionen utförd fackmässigt innan den täcktes över? Svaren finns i det som fotograferades på plats, när det begav sig. Svensk rätt bygger på fri bevisprövning (rättegångsbalken 35:1): ingen bevistyp väger per automatik tyngre än en annan. Det betyder att ett foto väger exakt så mycket som dess trovärdighet – och trovärdigheten byggs medan projektet pågår, inte i efterhand.</p>
+
+<p>Grunden för ett hållbart fotoflöde är en löpande, daterad dokumentation. Enklast bygger du den kring en strukturerad byggdagbok – använd gärna <a href="/sv/verktyg/byggdagbok-mall">vår gratis byggdagbok-mall -&gt;</a> som nav för bilder, händelser och avvikelser.</p>
+
+<h2>Varför foton är avgörande – men bara om de görs rätt</h2>
+<p>Fri bevisprövning innebär att domstolen värderar bevisningen fritt. För digital bevisning som foton bedöms äkthet och manipulationsrisk i det enskilda fallet. Ett löst mobilfoto utan sammanhang är svagt; ett foto med bevarad metadata, tidsstämpel, plats och koppling till dagbok och andra handlingar är starkt. Poängen är enkel: bevisvärdet står och faller med att bilden går att knyta till en tidpunkt, en plats och ett händelseförlopp.</p>
+<p>Därför ska dokumentation tas löpande – inte rekonstrueras. Bilder som plötsligt dyker upp inför en förhandling, utan spårbarhet, inbjuder motparten att ifrågasätta äktheten. Bilder som tagits systematiskt varje dag, sparade i ett system med intakt historik, gör tvärtom motpartens invändningar tandlösa.</p>
+
+<h2>ÄTA: fotot som backar upp den skriftliga underrättelsen</h2>
+<p>ÄTA-arbeten enligt AB 04 (kap 2 §6) omfattas av ett skriftlighetskrav – beställarens beställning ska vara skriftlig. Entreprenören ska dessutom underrätta beställaren utan dröjsmål, i praktiken inom några dagar, om att ett arbete betraktas som ÄTA. Missas det riskeras rätten till ersättning. Är parterna oense om något överhuvudtaget är ÄTA avgörs frågan på bevisning.</p>
+<p>Här är fotots roll tydlig: det ersätter aldrig skriftligheten, det kompletterar den. Ett foto på det avvikande underlaget eller den ändrade konstruktionen, taget samma dag som du skickar din skriftliga ÄTA-anmälan, binder ihop det du gör med det du säger. Tillsammans styrker bild och skriftlig anmälan att arbetet faktiskt var ändrat eller tillkommande – och att du underrättade i tid.</p>
+
+<h2>Förseningar och hinder: dokumentera orsaken i realtid</h2>
+<p>Vid hinder och försening (AB 04 och ABT 06 kap 4 §4) ska den part som inser att en omständighet kan rubba tidplanen underrätta motparten utan dröjsmål. Underlåts det får parten inte åberopa omständigheten. För entreprenören är konsekvensen kännbar: du förlorar rätten till tidsförlängning och riskerar att betala förseningsvite i stället för att slippa det.</p>
+<p>Realtidsdokumentation av orsaken är din försäkring. Fotografera väderförhållanden som stoppar arbetet, uteblivna leveranser vid avtalad tidpunkt, felaktigt eller försenat underlag från beställaren – varje bild daterad på plats och noterad i dagboken samma dag. En serie daterade foton som visar när hindret uppstod och hur det påverkade framdriften är svårt att argumentera bort.</p>
+
+<h2>Garanti- och ansvarstid: bilder som skyddar i upp till 10 år</h2>
+<p>Garantitiden enligt AB 04 är normalt 5 år för entreprenörens arbetsprestation och 2 år för material och varor; enligt ABT 06 normalt 5 år för entreprenaden och 2 år för särskilt föreskrivet material. Garantitiden räknas från godkänd slutbesiktning. Utöver det löper entreprenörens ansvarstid i 10 år från godkännandet.</p>
+<p>Skillnaden är avgörande för bevisbördan. Under garantitiden presumeras entreprenören ansvarig för fel. Efter garantitidens utgång, men inom ansvarstiden, svarar entreprenören bara för väsentliga fel som beror på vårdslöshet – och då är det beställaren som har bevisbördan. Din dokumentation av hur arbetet faktiskt utfördes är alltså det som avgör om du blir betalningsskyldig eller inte, i upp till tio år.</p>
+<p>Fotografera därför alltid dolda och inbyggda konstruktioner innan de täcks över: armering före gjutning, tätskikt före plattsättning, installationer före inklädnad. När väggen är stängd finns bara bilden kvar. Kom också ihåg fristen: beställaren ska påkalla garantibesiktning senast 3 månader före garantitidens utgång enligt AB 04/ABT 06. Missas fristen finns risk att felansvaret förändras.</p>
+
+<h2>Konsumentjobb – längre exponering</h2>
+<p>Jobbar ni mot konsument gäller konsumenttjänstlagen. Reklamationstiden för arbete på fast egendom är 10 år från det att arbetet avslutades (3 år för övriga tjänster), och en reklamation inom 2 månader efter att felet upptäcktes anses alltid ha skett i rätt tid. Lagen ger ingen lagstadgad garanti utom vid småhusentreprenad – övrig garanti är frivillig, men reklamationsansvaret finns där ändå.</p>
+<p>Konsekvensen är praktisk: dokumentationen behöver arkiveras lika länge som du kan bli reklamerad, alltså upp till tio år. En privat mobil som byts vartannat år är inget arkiv.</p>
+
+<h2>Så bygger du ett fotoflöde som håller</h2>
+<ul>
+<li><strong>Tidsstämpel och plats.</strong> Se till att bilderna har intakt tidsstämpel och gärna GPS. Det är metadatan som gör bilden trovärdig.</li>
+<li><strong>Koppla varje bild till ett sammanhang.</strong> Länka fotot till projekt, till specifik ÄTA och till dagboksnotering samma dag – en bild utan sammanhang är halv bevisning.</li>
+<li><strong>Spara i systemet, inte i chattappen.</strong> Många meddelandeappar komprimerar bilder och stryper EXIF-metadata. Ladda upp originalen i ert projektsystem.</li>
+<li><strong>Signera och lås historiken.</strong> Enligt PBL räknas fotografier uttryckligen upp som exempel på verifiering i kontrollplanen, och dokumentationen ska styrkas med underskrift av den som utfört kontrollen. Notera dock att kontrollplanen enligt PBL inte är samma sak som entreprenörens egenkontroll – det är två skilda kontrollsystem.</li>
+<li><strong>Fotografera det som försvinner först.</strong> Inbyggda konstruktioner, underlag vid övertagande och skador ni inte orsakat.</li>
+</ul>
+<p>Bygg gärna in bilderna i er egenkontroll så att kontrollpunkt och foto hör ihop – <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> ger en struktur att utgå från.</p>
+
+<h2>GDPR och integritet på arbetsplatsen</h2>
+<p>Att fotografera på arbetsplatsen är i huvudsak tillåtet, men lagring och spridning av bilder på identifierbara personer kräver laglig grund enligt GDPR – till exempel berättigat intresse eller samtycke. Samtycke måste vara dokumenterat, frivilligt och lika lätt att återkalla som att lämna. För intern byggdokumentation är berättigat intresse eller avtal därför ofta en stabilare grund än samtycke, som kan dras tillbaka när som helst. Rikta kameran mot arbetet, inte mot personerna, så långt det går, och ha en tydlig rutin för bilder där personal syns.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp samlar dagbok, egenkontroll och foton på ett ställe, kopplat till rätt projekt. När du lägger en bild i dagboken eller på en kontrollpunkt behåller systemet tidpunkt och koppling – bilden hamnar inte i en privat mobil utan i ett projektarkiv som ligger kvar. Du kan knyta foton till en ÄTA-anmälan och till en hinderanteckning, så att bild och skriftlig underrättelse hänger ihop den dag de skapas. Vi trollar inte bort juridiken – skriftlighetskravet och fristerna måste du fortfarande uppfylla – men vi gör det enkelt att bygga en spårbar, daterad dokumentation som håller när den behövs.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Räcker ett foto som bevis vid en entreprenadtvist?</h3>
+<p>Sällan ensamt. Tack vare fri bevisprövning värderas foton fritt, och de blir starka först i kombination med tidsstämpel, metadata och koppling till dagbok, skriftlig ÄTA-anmälan eller besiktningsprotokoll. Ett foto styrker – det avgör tillsammans med annan bevisning.</p>
+<h3>Ersätter foton den skriftliga ÄTA-anmälan?</h3>
+<p>Nej. Skriftlighetskravet i AB 04 kap 2 §6 innebär att beställningen ska vara skriftlig, och du ska underrätta utan dröjsmål. Fotot kompletterar den skriftliga anmälan men kan aldrig ersätta den.</p>
+<h3>Hur länge behöver jag spara byggfoton?</h3>
+<p>Utgå från de längsta ansvarstiderna. I entreprenad löper ansvarstiden 10 år från godkännandet, och i konsumentjobb på fast egendom är reklamationstiden 10 år. Spara dokumentationen i minst tio år i ett system som överlever mobilbyten.</p>
+<h3>Får jag fotografera personal på bygget?</h3>
+<p>Att fotografera är i huvudsak tillåtet, men att lagra och sprida bilder på identifierbara personer kräver laglig grund enligt GDPR. För intern dokumentation är berättigat intresse ofta en stabilare grund än samtycke, eftersom samtycke fritt kan återkallas.</p>
+
+<h2>Kom igång</h2>
+<p>En enkel, konsekvent fotorutin är billig försäkring mot dyra tvister. Börja med att strukturera dokumentationen kring <a href="/sv/verktyg/byggdagbok-mall">byggdagbok-mallen</a> och koppla in <a href="/sv/verktyg/egenkontroll-mall">egenkontrollen</a>. Vill du se hur det fungerar i ett riktigt projekt? <a href="/sv/contact">Boka en demo -&gt;</a> så visar vi hur foton, dagbok och ÄTA hänger ihop.</p>
+
+<p>Relaterat: <a href="/sv/blog/byggdagbok">Byggdagbok – så för du den rätt</a>, <a href="/sv/blog/entreprenadtvist-undvika-dokumentation">Undvik entreprenadtvist med rätt dokumentation</a>, <a href="/sv/blog/ata-hantering-mall">ÄTA-hantering med mall</a>.</p>
+`;
+
+const A_FOTODOKUMENTATION_BYGGPROJEKT_BEVIS: BlogPost = {
+  _id: "code-"+"fotodokumentation-byggprojekt-bevis",
+  title: "Fotodokumentation i byggprojekt – så bygger platschefen bevis som håller vid ÄTA, förseningar och garantitvister", slug: "fotodokumentation-byggprojekt-bevis", locale: "sv",
+  excerpt: "När parterna är oense avgör dokumentationen – inte minnet. Så bygger du ett fotoflöde som håller hela vägen från ÄTA till garantitidens slut.", tag: "Dokumentation",
+  coverImageUrl: "/landing/features/4foto.webp", contentHtml: A_FOTODOKUMENTATION_BYGGPROJEKT_BEVIS_HTML,
+  seoTitle: "Fotodokumentation byggprojekt | ByggExp", seoDescription: "Så bygger platschefen en fotodokumentation som håller som bevis vid ÄTA-, försenings- och garantitvister. Checklista, metadata, GDPR och arkivering.",
+  seoImageUrl: `${SITE_URL}/landing/features/4foto.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T08:03:00.000Z", createdAt: "2026-08-20T08:03:00.000Z", updatedAt: "2026-08-20T08:03:00.000Z",
+};
+
+const A_ENTREPRENADGARANTI_SAKERHET_AB04_HTML = `
+<p>När en beställare handlar upp en utförandeentreprenad står ofta stora belopp på spel, och risken att motparten går i konkurs mitt i projektet är verklig. Därför ger AB 04 beställaren rätt att kräva en <strong>säkerhet</strong> av entreprenören – ett ekonomiskt skydd som täcker extrakostnader vid konkurs, fel som inte avhjälps och avbrott i produktionen. Reglerna finns i kapitel 6 §§ 21–23, och två nyckeltal styr det hela: säkerheten uppgår som huvudregel till <strong>10 % av kontraktssumman under entreprenadtiden</strong> och <strong>5 % under garantitiden</strong>. Förstår du hur de här nivåerna fungerar – och skillnaden mellan säkerhetstid och garantitid – slipper du både obehagliga överraskningar och felprissatta anbud.</p>
+
+<p>Ska du räkna hem säkerhetskostnaden i ditt nästa anbud? Använd <a href="/sv/verktyg">våra gratis verktyg för byggföretag -></a> för kalkyler, mallar och checklistor.</p>
+
+<h2>Vad säger AB 04 kap 6 om säkerhet?</h2>
+<p>AB 04 är standardavtalet för utförandeentreprenad, framtaget av Byggandets Kontraktskommitté (BKK). Säkerhetsreglerna gäller bara när AB 04 faktiskt är inarbetat i kontraktshandlingarna – annars finns ingen automatisk rätt till säkerhet. I §§ 21–23 slås default-nivåerna fast: <strong>10 % av kontraktssumman under entreprenadtiden</strong> och <strong>5 % under garantitiden</strong>. Säkerheten ställs av entreprenören till förmån för beställaren.</p>
+<p>En viktig detalj: nivåerna gäller "om inte annat föreskrivits". Både procentsatserna och tiderna är alltså förhandlingsbara och kan ändras i kontraktshandlingarna – till exempel i de administrativa föreskrifterna (AF-delen). Läser du inte AF-delen noga vet du inte vilken säkerhet som faktiskt är avtalad.</p>
+
+<h2>Fullgörandesäkerhet och garantitidssäkerhet – två faser</h2>
+<p>Säkerheten löper i två faser med olika belopp. Under byggets gång – entreprenadtiden – gäller den högre nivån på 10 %. Det kallas ibland fullgörandesäkerhet och ska täcka beställarens merkostnad om entreprenören inte fullgör sitt åtagande, exempelvis att ta in en ersättningsentreprenör.</p>
+<p>Vid godkänd slutbesiktning sker en <strong>nedtrappning</strong> från 10 % till 5 %. Här ligger en klassisk fälla: enligt kap 6 § 21 löper 5 %-säkerheten som default bara i <strong>2 år efter godkännande</strong> – eller, om ett fel noterats vid besiktning inom den tiden, tills felet är avhjälpt. Garantitiden i AB 04 är däremot <strong>5 år för entreprenörens arbetsprestation</strong> och 2 år för material och varor. Säkerhetstiden och garantitiden är alltså två olika klockor. Vill beställaren ha säkerhet under hela den femåriga garantitiden måste det avtalas särskilt – det sker inte automatiskt.</p>
+
+<h2>Bankgaranti eller fullgörandeförsäkring?</h2>
+<p>Säkerheten kan ställas på två sätt, och båda är accepterade former enligt AB 04: en <strong>bankgaranti</strong> från entreprenörens bank, eller en <strong>fullgörandeförsäkring</strong> (garantiförsäkring) från ett försäkringsbolag eller garantibolag. Skillnaden i kostnad och likviditetspåverkan är betydande:</p>
+<ul>
+<li><strong>Kostnad:</strong> En fullgörandeförsäkring kostar grovt räknat runt 1 % av kontraktsvärdet. En bankgaranti kostar typiskt 2–3 % i avgifter och ränta.</li>
+<li><strong>Motsäkerhet:</strong> Banken kräver normalt motsäkerhet, medan försäkringen oftast inte gör det.</li>
+<li><strong>Likviditet:</strong> Bankgarantin låser företagets kreditutrymme och rörelsekapital under hela projektet inklusive garantitiden. Försäkringen binder inte kreditlinan och lämnar likviditeten fri.</li>
+</ul>
+<p>För mindre entreprenörer, som behöver varje krona av kreditutrymmet till löner och material, är fullgörandeförsäkringen ofta det billigare och smidigare valet. Räkna igenom vad som passar just din likviditetssituation – valet påverkar hur mycket du binder upp under projektets gång.</p>
+
+<h2>Så ordnar du säkerheten i praktiken</h2>
+<ol>
+<li><strong>Läs kontraktshandlingarna och AF-delen</strong> – kontrollera vilken säkerhet, vilka nivåer och vilken varaktighet som faktiskt är avtalade. Utgå aldrig från att default gäller.</li>
+<li><strong>Kontakta bank eller försäkringsförmedlare/garantibolag i god tid.</strong> Både bankgaranti och försäkring kräver kreditprövning och har ledtid – börja innan kontraktet ska undertecknas.</li>
+<li><strong>Räkna in kostnaden i anbudet.</strong> 1–3 % av kontraktssumman är en reell kostnad som ska ligga i priset, inte ätas ur marginalen.</li>
+<li><strong>Se till att säkerheten är på plats innan entreprenaden startar.</strong> Beställaren förväntas verifiera att avtalad säkerhet faktiskt är ställd före byggstart.</li>
+</ol>
+
+<h2>Vad kan beställaren kräva om säkerhet saknas?</h2>
+<p>Beställaren bör kontrollera att säkerheten är ställd <em>innan</em> arbetet påbörjas – inte i efterhand. Ställer en part inte den avtalade säkerheten kan det, beroende på omständigheterna, ge grund för att <strong>innehålla betalning</strong> eller till och med <strong>häva avtalet</strong>. Säkerheten skyddar beställaren mot att entreprenören inte fullgör sina åtaganden, exempelvis vid insolvens och konkurs, och kan tas i anspråk för merkostnaden att anlita en ersättningsentreprenör, avhjälpa fel och täcka kostnader för stillestånd och försening.</p>
+<p>Kopplingen till besiktning är central: noteras ett fel vid besiktning inom säkerhetstiden förlängs säkerheten tills felet är avhjälpt. Efter garantitiden övergår ansvaret i entreprenörens <strong>ansvarstid</strong>, som löper i 10 år från godkännande och inleds med garantitiden. Efter garantitidens utgång måste beställaren i regel bevisa väsentligt fel orsakat av entreprenörens vårdslöshet.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li>Att tro att 5 %-säkerheten automatiskt täcker hela garantitiden på 5 år – den löper som default bara 2 år.</li>
+<li>Att blanda ihop säkerhetstid, garantitid och ansvarstid – tre olika klockor.</li>
+<li>Att glömma säkerhetskostnaden i anbudskalkylen och tappa marginal.</li>
+<li>Att inte verifiera att säkerheten faktiskt är ställd innan byggstart.</li>
+<li>Att låsa bankkrediten i onödan när en försäkringslösning hade varit billigare.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig hålla ordning på de ekonomiska villkoren i entreprenaden. I <a href="/sv/verktyg/offert-mall">vår offertmall</a> kan du strukturera anbudet så att säkerhetskostnaden och de avtalade villkoren blir tydliga redan från början – vilket minskar risken för missförstånd om vad som gäller kring säkerhet, garantitid och ansvarstid. Vi ger dig verktyg och underlag, men ersätter inte juridisk rådgivning: vid komplexa entreprenader bör du alltid stämma av kontraktshandlingarna med en jurist.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur stor säkerhet kan beställaren kräva enligt AB 04?</h3>
+<p>Som huvudregel 10 % av kontraktssumman under entreprenadtiden och 5 % under garantitiden. Nivåerna gäller "om inte annat föreskrivits" och kan ändras i kontraktshandlingarna.</p>
+<h3>Hur länge löper säkerheten?</h3>
+<p>Den lägre säkerheten på 5 % löper som default i 2 år efter godkänd slutbesiktning – eller tills ett fel som noterats vid besiktning inom den tiden är avhjälpt. Det är kortare än garantitiden på 5 år för arbetsprestation, om parterna inte avtalat annat.</p>
+<h3>Bankgaranti eller fullgörandeförsäkring – vad är billigast?</h3>
+<p>En fullgörandeförsäkring kostar grovt runt 1 % av kontraktsvärdet och binder normalt inte kreditlinan. En bankgaranti kostar typiskt 2–3 % och låser företagets kreditutrymme, ofta mot motsäkerhet.</p>
+<h3>Vad händer om entreprenören inte ställer avtalad säkerhet?</h3>
+<p>Beställaren bör verifiera att säkerheten är ställd innan byggstart. Uteblir den kan det beroende på omständigheterna ge grund för att innehålla betalning eller häva avtalet.</p>
+
+<h2>Kom igång</h2>
+<p>Sammanfattat: 10 % under entreprenadtiden, 5 % under garantitiden, 2 år default säkerhetstid – och garantitid respektive ansvarstid som separata klockor. Kom igång med <a href="/sv/verktyg/offert-mall">vår offertmall</a> och räkna in säkerhetskostnaden i ditt nästa anbud. Vill du se hur ByggExp fungerar i din verksamhet? <a href="/sv/contact">Boka en demo här -></a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a>, <a href="/sv/blog/ab-04-och-abt-06">Skillnaden mellan AB 04 och ABT 06</a> och <a href="/sv/blog/entreprenadforsakring-allrisk-vad-tacker">Entreprenadförsäkring och allrisk – vad täcker den?</a>.</p>
+`;
+
+const A_ENTREPRENADGARANTI_SAKERHET_AB04: BlogPost = {
+  _id: "code-"+"entreprenadgaranti-sakerhet-ab04",
+  title: "Entreprenadgaranti och säkerhet enligt AB 04 – vad beställaren kan kräva", slug: "entreprenadgaranti-sakerhet-ab04", locale: "sv",
+  excerpt: "AB 04 kap 6 ger beställaren rätt till säkerhet – 10 % under entreprenadtiden och 5 % under garantitiden. Här reder vi ut reglerna och valet mellan bankgaranti och försäkring.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_ENTREPRENADGARANTI_SAKERHET_AB04_HTML,
+  seoTitle: "Säkerhet enligt AB 04 kap 6 | ByggExp", seoDescription: "Så fungerar entreprenadgaranti och säkerhet enligt AB 04 kap 6: 10 % under entreprenadtiden, 5 % under garantitiden, bankgaranti eller fullgörandeförsäkring.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T08:06:00.000Z", createdAt: "2026-08-20T08:06:00.000Z", updatedAt: "2026-08-20T08:06:00.000Z",
+};
+
+const A_FAKTURERINGSAVGIFT_HANTVERKARE_TILLATEN_HTML = `
+<p>Frågan dyker upp i varje byggföretag förr eller senare: får vi lägga på en faktureringsavgift, och vad får vi ta betalt när kunden inte betalar i tid? Svaret handlar om att skilja på två helt olika saker. Dels avgifter du själv hittar på och lägger på fakturan (faktura- eller expeditionsavgift), dels de lagstadgade avgifterna som utlöses vid sen betalning (påminnelse, inkasso, dröjsmålsränta och förseningsersättning). En regel avgör allt i den första kategorin: avtal plus skälighet. Utan avtal, ingen rätt att ta betalt.</p>
+
+<p>Vill du ha villkoren och beloppen på plats i själva underlaget kan du använda <a href="/sv/verktyg/faktura-mall">vår gratis faktura-mall -&gt;</a> där förfallodag, dröjsmålsränta och avgifter redan har en given plats.</p>
+
+<h2>Faktureringsavgift: bara om den är avtalad i förväg</h2>
+<p>En faktureringsavgift är ingen lagstadgad rättighet. Det finns ingen paragraf som ger dig rätt att ta ut den. Den vilar helt på avtalet mellan dig och kunden enligt avtalslagen (1915:218). Har ni kommit överens om avgiften står den sig - annars inte.</p>
+<p>Den praktiska konsekvensen är enkel: avgiften måste finnas med i offert, avtal eller dina allmänna villkor <strong>innan</strong> jobbet börjar. En avgift som dyker upp först på fakturan, utan att kunden accepterat den i förväg, är inte något kunden är skyldig att betala. Det gäller oavsett om kunden är ett företag eller en privatperson. Mot företag är utrymmet större - två näringsidkare får i princip avtala fritt - men avtalskravet är detsamma. Skriv det, annars gäller det inte.</p>
+
+<h2>Extra skydd när kunden är konsument</h2>
+<p>Mot en privatperson räcker det inte att avgiften är avtalad. Den måste dessutom vara <strong>skälig</strong> och spegla din faktiska administrativa kostnad. En oskälig avgift kan angripas som ett otillbörligt villkor enligt avtalsvillkorslagen (1994:1512).</p>
+<p>Här finns en fälla många missar: om fakturering är ditt enda eller normala betalsätt kan avgiften inte läggas på separat. Kostnaden anses då redan ingå i priset. Att bara erbjuda en faktura-med-avgift till en kund som saknar avgiftsfritt alternativ kan bedömas som oskäligt. Dessutom är konsumenttjänstlagen (1985:716) tvingande till konsumentens fördel vid bygg- och hantverkstjänster - du kan inte avtala bort skyddet till kundens nackdel.</p>
+<p>Det praktiska rådet: baka in administrationskostnaden i timpriset eller materialpåslaget i stället för att ta ut en synlig faktureringsavgift mot privatpersoner. Vill du ändå ha en avgift, erbjud alltid en avgiftsfri betalväg vid sidan om.</p>
+
+<h2>Vid sen betalning: de lagstadgade avgifterna</h2>
+<p>När kunden inte betalar i tid öppnar sig ett annat regelverk. Här är beloppen fasta och styrda av lag (1981:739) om ersättning för inkassokostnader m.m., med belopp i förordning (1981:1057):</p>
+<ul>
+<li><strong>Påminnelseavgift - max 60 kr.</strong> Kräver att en påminnelseavgift avtalats med kunden i förväg. Endast <strong>en</strong> avgift per fordran, oavsett hur många påminnelser du skickar.</li>
+<li><strong>Inkassoavgift (inkassokrav) - max 180 kr.</strong> Kräver inget föregående avtal - den är en lagstadgad rätt så snart skulden är förfallen, förutsatt att inkassokravet uppfyller inkassolagens (1974:182) formkrav. Max en per fordran.</li>
+<li><strong>Avgift för amorteringsplan - max 170 kr.</strong> Om ni upprättar en betalningsplan.</li>
+</ul>
+<p>Notera skillnaden: påminnelseavgiften kräver avtal, inkassoavgiften gör det inte. Just därför är det extra viktigt att skriva in påminnelseavgiften i dina villkor - annars förlorar du den.</p>
+
+<h2>Dröjsmålsränta enligt räntelagen</h2>
+<p>Utöver avgifterna får du ta ut dröjsmålsränta enligt räntelagen (1975:635). Räntan är Riksbankens referensränta plus 8 procentenheter. För första halvåret 2026 (1 januari-30 juni) är referensräntan 2 procent, vilket ger en dröjsmålsränta på <strong>10 procent</strong>. Referensräntan sätts om av Riksbanken den 1 januari och 1 juli varje år, så kontrollera aktuell nivå inför varje halvår.</p>
+<p>Räntan börjar löpa från den avtalade förfallodagen om ni satt en sådan. Har ni ingen avtalad förfallodag löper räntan först 30 dagar efter att du skickat fakturan eller kravet (räntelagen 4 §). Mot konsument är 30-dagarsregeln i praktiken tvingande. Dröjsmålsräntan måste framgå på fakturan eller påminnelsen för att fungera smidigt i praktiken.</p>
+
+<h2>B2B-bonusen: förseningsersättning 450 kr</h2>
+<p>Är kunden ett företag - även enskild firma - eller en myndighet får du dessutom ta ut en fast förseningsersättning på <strong>450 kr</strong>. Den gäller inte mot konsument. Det fina är att den inte kräver vare sig avtal eller påminnelse. Den blir tillämplig så snart fakturan är förfallen och ersätter påminnelse- och inkassoavgift upp till beloppet 450 kr (du staplar alltså inte 60 + 180 ovanpå).</p>
+<p>Kom också ihåg förfalloreglerna mellan företag: en fordran mellan näringsidkare förfaller senast 30 dagar efter att fakturan skickats. En längre betalningstid gäller bara om du som säljare uttryckligen accepterat den. Offentliga beställare måste alltid betala inom 30 dagar och den tiden går inte att avtala bort (prop. 2012/13:36 Snabbare betalningar).</p>
+
+<h2>Så villkorar du det rätt - checklista</h2>
+<ol>
+<li>Skriv in faktureringsavgift och påminnelseavgift i offert och allmänna villkor - innan jobbet startar.</li>
+<li>Ange förfallodag och dröjsmålsränta på varje faktura.</li>
+<li>Separera villkoren för konsument respektive företag - de har olika golv och tak.</li>
+<li>Mot konsument: baka hellre in administrationen i priset, eller erbjud en avgiftsfri betalväg.</li>
+<li>En påminnelse räcker - avgiften är max 60 kr per fordran oavsett antal utskick.</li>
+<li>Mot företag: glöm inte de 450 kr i förseningsersättning som inte kräver avtal.</li>
+<li>Dokumentera överenskommelsen så du kan visa att avgiften var avtalad.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du fakturor och underlag där förfallodag, dröjsmålsränta och avtalade avgifter finns med från start, så att inget läggs på i efterhand. Du kan hålla isär villkorsuppsättningar för konsument- och företagskunder och återanvända dem i offert och faktura, vilket gör det enklare att uppfylla avtalskravet. ByggExp ger däremot inte individuell juridisk rådgivning - verktyget hjälper dig strukturera underlagen korrekt, men ansvaret för vilka avgifter du tar ut är ditt.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är en faktureringsavgift laglig mot hantverkarens kund?</h3>
+<p>Ja, om den avtalats i förväg. Faktureringsavgiften är ingen lagstadgad avgift utan vilar på avtalslagen. Mot konsument måste den dessutom vara skälig och spegla faktisk kostnad, och den får inte tas ut om fakturering är ditt enda betalsätt.</p>
+<h3>Måste vi ha avtal för att ta ut påminnelseavgift?</h3>
+<p>Ja. Påminnelseavgiften på max 60 kr kräver att den avtalats med kunden i förväg, och du får bara ta en per fordran. Inkassoavgiften på 180 kr kräver däremot inget avtal - den är en lagstadgad rätt när skulden är förfallen och inkassokravet uppfyller formkraven.</p>
+<h3>Hur hög är dröjsmålsräntan 2026?</h3>
+<p>Första halvåret 2026 är dröjsmålsräntan 10 procent, eftersom Riksbankens referensränta är 2 procent och räntelagen lägger till 8 procentenheter. Referensräntan justeras 1 januari och 1 juli, så kontrollera nivån varje halvår.</p>
+<h3>Får vi ta ut de 450 kronorna även mot privatpersoner?</h3>
+<p>Nej. Förseningsersättningen på 450 kr gäller bara när kunden är ett företag eller en myndighet. Mot konsument får du använda påminnelseavgift (om avtalad), inkassoavgift, avgift för amorteringsplan och dröjsmålsränta.</p>
+
+<h2>Kom igång</h2>
+<p>Lägg avgifter, förfallodag och dröjsmålsränta på rätt plats direkt i <a href="/sv/verktyg/faktura-mall">faktura-mallen</a>, eller utforska fler underlag bland <a href="/sv/verktyg">våra gratis verktyg</a>. Vill du se hur det fungerar i praktiken, <a href="/sv/contact">boka en demo</a>. Detta är allmän information och inte individuell juridisk rådgivning.</p>
+
+<p>Relaterat: <a href="/sv/blog/vad-ska-faktura-innehalla-bygg">Vad ska en byggfaktura innehålla?</a>, <a href="/sv/blog/paminnelse-inkasso-avgift-bygg">Påminnelse och inkassoavgift i byggbranschen</a>, <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturan</a>.</p>
+`;
+
+const A_FAKTURERINGSAVGIFT_HANTVERKARE_TILLATEN: BlogPost = {
+  _id: "code-"+"faktureringsavgift-hantverkare-tillaten",
+  title: "Får byggföretaget ta ut faktureringsavgift och påminnelseavgift? Så gör du det lagligt (2026)", slug: "faktureringsavgift-hantverkare-tillaten", locale: "sv",
+  excerpt: "Så avgör avtal och skälighet vilka avgifter ditt byggföretag lagligt får lägga på fakturan - och vad som gäller mot konsument respektive företag 2026.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/8fakturor.webp", contentHtml: A_FAKTURERINGSAVGIFT_HANTVERKARE_TILLATEN_HTML,
+  seoTitle: "Faktureringsavgift hantverkare tillåten? | ByggExp", seoDescription: "Får du som byggföretag ta ut faktura-, påminnelse- och inkassoavgift? Så villkorar du avgifterna lagligt 2026 - mot både konsument och företag.",
+  seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T08:09:00.000Z", createdAt: "2026-08-20T08:09:00.000Z", updatedAt: "2026-08-20T08:09:00.000Z",
+};
+
+const A_BESTRIDEN_FAKTURA_BYGG_TVIST_HTML = `
+<p>Att en kund bestrider fakturan är vanligt i byggbranschen – ofta handlar det om ÄTA-arbeten som ingen skrev ner, eller en slutsumma som blev högre än kunden väntade sig. Det farliga är inte bestridandet i sig, utan hur många byggföretag reagerar. Skickar du en tvistig faktura till inkasso eller Kronofogden kan du både bryta mot god inkassosed och försämra ditt eget läge när saken väl prövas. Här går vi igenom hur du som byggföretag agerar rätt från första invändningen.</p>
+
+<p>Grunden i allt är att kravet vilar på ett tydligt underlag. Har du en specificerad faktura med avtalsreferens och tydliga poster står du starkare redan från start – bygg dina fakturor med <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall -&gt;</a> så att varje krav går att försvara.</p>
+
+<h2>Steg 1 – Ta emot bestridandet rätt</h2>
+<p>Be alltid om ett skriftligt bestridande. Kunden ska ange exakt vad hen invänder mot och varför: är det priset, en påstådd brist, ett ÄTA-arbete som inte beställts, eller att arbetet inte anses utfört? Ett vagt "jag tänker inte betala" är inte samma sak som ett sakligt bestridande – och du behöver veta skillnaden för att kunna svara.</p>
+<p>Avgör också vilket regelverk som gäller, för det styr hela din strategi:</p>
+<ul>
+<li><strong>Konsument:</strong> tvingande konsumenttjänstlagen gäller, ofta i kombination med standardavtal som ABS 18 eller Hantverkarformuläret 17. Kunden kan vända sig till ARN.</li>
+<li><strong>Företagskund (B2B):</strong> dispositiva köplagen och normalt entreprenadstandardavtalen AB 04 eller ABT 06 gäller. Här styr avtalet i högre grad vad som krävs för att kravet ska hålla.</li>
+</ul>
+
+<h2>Steg 2 – Dokumentationen avgör tvisten</h2>
+<p>Bevisbördan ligger på den som påstår att en fordran finns – alltså på dig. Det är byggföretaget som måste kunna visa att det finns ett avtal, att arbetet är utfört och att beloppet är rätt beräknat. Kan du inte det, spelar det ingen roll hur rimligt kravet känns.</p>
+<p>Samla därför ihop allt underlag direkt när bestridandet kommer:</p>
+<ul>
+<li>Avtal, offert eller orderbekräftelse med prisform</li>
+<li>Skriftliga ÄTA-beställningar</li>
+<li>Byggdagbok med löpande anteckningar</li>
+<li>Tidsedlar och materialåtgång</li>
+<li>Foton före, under och efter</li>
+<li>Egenkontroller och besiktningsunderlag</li>
+<li>Mejl, sms och annan kommunikation</li>
+</ul>
+<p>Den absolut vanligaste svagheten är muntliga tilläggsbeställningar. "Kan du fixa det här också medan du ändå är här" känns självklart på plats – men utan en skriftlig ÄTA blir det ord mot ord i en tvist. En löpande <a href="/sv/verktyg/byggdagbok-mall">byggdagbok</a> där ändringar noteras med datum är ofta det som fäller avgörandet.</p>
+
+<h2>Steg 3 – Gör INTE detta</h2>
+<p>Lämna aldrig en bestriden faktura till inkasso, och driv den inte vidare mot en betalningsanmärkning. En tvistig fordran får enligt god inkassosed inte drivas via inkasso – inkassolagen övervakas av IMY, och invänder gäldenären på sakliga grunder ska du i stället väcka talan i domstol, inte pressa fram betalning.</p>
+<p>Samma sak gäller Kronofogden. Kronofogden är ingen dömande instans. Bestrider kunden ett betalningsföreläggande i tid kan Kronofogden inte pröva kravet – de lämnar helt enkelt tillbaka ärendet, och du står med valet att begära överlämnande till tingsrätten eller återkalla. Så länge kunden bestrider i tid får hen dessutom ingen betalningsanmärkning. Att köra på med betalningsföreläggande vid en genuin tvist är alltså både verkningslöst och tidsödande.</p>
+
+<h2>Steg 4 – Säkra delbetalning av det ostridiga beloppet</h2>
+<p>Sällan är hela fakturan omtvistad. Kanske ifrågasätts två ÄTA-poster medan grundentreprenaden är oomtvistad. Uppmana då kunden att betala den ostridiga delen och bara bestrida resten. Det är den korrekta hanteringen vid en delvis tvist – och den skyddar din likviditet samtidigt som du isolerar konflikten till den faktiska stridsfrågan.</p>
+<p>Vid småhusentreprenad mot konsument är kunden enligt konsumenttjänstlagen 52 § inte skyldig att betala för mer än den del av arbetet som faktiskt utförts. Var därför tydlig i din begäran: specificera vad som är avslutat och ostridigt, och be om betalning av just det beloppet nu.</p>
+
+<h2>Steg 5 – Ränta, påminnelse och prisregler</h2>
+<p>Du har rätt att ta ut dröjsmålsränta enligt räntelagen: Riksbankens referensränta plus 8 procentenheter. Med referensräntan fastställd till 2,00 % för andra halvåret 2026 blir den lagstadgade dröjsmålsräntan <strong>10,00 %</strong>. Räntan löper från förfallodagen om en sådan angetts på fakturan, annars 30 dagar efter att kravet framställts skriftligen. En påminnelseavgift får läggas på – men kom ihåg att detta bara gäller den ostridiga delen. På det belopp som är genuint tvistigt driver du inte in ränta via påtryckning, utan får det prövat.</p>
+<p>Mot konsument tillkommer prisreglerna. Har du lämnat en <em>ungefärlig</em> prisuppgift får slutpriset överstiga den med högst 15 % enligt konsumenttjänstlagen 36 §, om inte annan prisgräns avtalats eller du har rätt till pristillägg. Ett fast pris eller en bindande offert håller. Och tilläggsarbeten kräver att du först samråder med konsumenten – ÄTA utan samråd är svårt att få betalt för.</p>
+
+<h2>Steg 6 – Vägen framåt när dialogen inte räcker</h2>
+<p>Börja alltid med förhandling och försök till förlikning. En saklig genomgång av dokumentationen löser många tvister, och en förlikning där ni möts på halva vägen är ofta billigare än en process.</p>
+<p>Räcker inte det står valet mellan betalningsföreläggande och stämning. Vid en verklig tvist är betalningsföreläggande meningslöst – Kronofogden lämnar tillbaka det så fort kunden bestrider. Då är stämning i tingsrätten rätt väg. Mot konsument kan ärendet också hamna hos ARN. Håll koll på preskriptionstiden: 3 år mot konsument och 10 år mot företagskund. Preskriptionsavbrott sker bland annat genom en skriftlig påminnelse eller genom att kunden erkänner skulden – då börjar en ny preskriptionstid löpa.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig bygga underlaget innan tvisten uppstår. Du skapar specificerade fakturor med tydlig prisform och avtalsreferens, och du för byggdagbok där ÄTA-arbeten, avvikelser och beslut noteras löpande med datum. När ett bestridande kommer har du historiken samlad i stället för utspridd i mejl och sms. ByggExp fattar inga juridiska beslut åt dig och ersätter inte ett juridiskt ombud – men verktyget gör att du kan ta fram avtal, dagbok, tidsedlar och fakturaspecifikation snabbt och sammanhängande när det verkligen gäller.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får jag skicka en bestriden faktura till inkasso?</h3>
+<p>Nej. En tvistig fordran får enligt god inkassosed inte drivas via inkasso. Har kunden invänt på sakliga grunder ska kravet i stället prövas i tingsrätten. Att ändå gå till inkasso kan strida mot inkassolagen, som övervakas av IMY.</p>
+<h3>Får kunden en betalningsanmärkning om jag går till Kronofogden?</h3>
+<p>Inte så länge kunden bestrider betalningsföreläggandet i tid. Då kan Kronofogden inte pröva kravet utan lämnar tillbaka det, och du får välja mellan att begära överlämnande till tingsrätten eller återkalla. Bestridandet i sig ger ingen anmärkning.</p>
+<h3>Vad gör jag om bara en del av fakturan är omtvistad?</h3>
+<p>Be kunden betala den ostridiga delen omgående och bestrida enbart resten. Det skyddar din likviditet och isolerar tvisten. Vid småhusentreprenad mot konsument gäller dessutom att kunden bara behöver betala för arbete som faktiskt utförts.</p>
+<h3>Vem har bevisbördan i en fakturatvist?</h3>
+<p>Du som byggföretag. Det är den som påstår att en fordran finns som måste visa att avtal finns, att arbetet är utfört och att beloppet är rätt. Därför är avtal, skriftliga ÄTA, dagbok, tidsedlar och foton avgörande.</p>
+
+<h2>Kom igång</h2>
+<p>Förebygg nästa tvist med tydliga underlag: skriftliga avtal med rätt prisform, skriftlig ÄTA-hantering, delfakturering mot avstämda etapper och specificerade fakturor. Skapa en tydlig faktura med <a href="/sv/verktyg/faktura-mall">vår fakturamall</a>, för löpande <a href="/sv/verktyg/byggdagbok-mall">byggdagbok</a> – och vill du se hur ByggExp samlar allt på ett ställe, boka en <a href="/sv/contact">demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a>, <a href="/sv/blog/paminnelse-inkasso-avgift-bygg">Påminnelse, inkasso och avgifter i bygg</a>, <a href="/sv/blog/entreprenadtvist-undvika-dokumentation">Undvik entreprenadtvist med rätt dokumentation</a>.</p>
+`;
+
+const A_BESTRIDEN_FAKTURA_BYGG_TVIST: BlogPost = {
+  _id: "code-"+"bestriden-faktura-bygg-tvist",
+  title: "Kunden bestrider fakturan – så agerar byggföretaget rätt", slug: "bestriden-faktura-bygg-tvist", locale: "sv",
+  excerpt: "En steg-för-steg-guide för byggföretag när kunden bestrider fakturan – dokumentation, delbetalning och vägen förbi Kronofogden till tingsrätt.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/8fakturor.webp", contentHtml: A_BESTRIDEN_FAKTURA_BYGG_TVIST_HTML,
+  seoTitle: "Bestriden faktura bygg | ByggExp", seoDescription: "Kunden bestrider fakturan? Så säkrar byggföretaget dokumentationen, kräver delbetalning av ostridigt belopp och tar tvisten rätt väg – inte till inkasso.",
+  seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T08:12:00.000Z", createdAt: "2026-08-20T08:12:00.000Z", updatedAt: "2026-08-20T08:12:00.000Z",
+};
+
+const A_FARLIGT_AVFALL_ANTECKNINGSSKYLDIGHET_BYGG_HTML = `
+<p>En målare river ut en gammal fasadpanel, kapar impregnerat virke och slänger färgburkar i en container. Ingen stor rivning, ingen fabrik – bara ett vanligt jobb. Ändå har firman i samma stund blivit skyldig att anteckna det farliga avfallet och rapportera det till Naturvårdsverkets avfallsregister. Anteckningsskyldigheten har ingen nedre gräns, och det är just den detaljen som gör att många hantverksfirmor missar den.</p>
+
+<p>Ett strukturerat sätt att fånga de farliga fraktionerna redan på plats är att lägga in dem i din löpande dokumentation – använd gärna <a href="/sv/verktyg/egenkontroll-mall">vår gratis mall för egenkontroll -&gt;</a> för att koppla varje hämtning till rätt avfallskod och rapport.</p>
+
+<h2>Vad är anteckningsskyldighet – och vem omfattas?</h2>
+
+<p>Anteckningsskyldigheten gäller alla som yrkesmässigt producerar, transporterar, samlar in, mäklar, handlar med eller behandlar farligt avfall. Det finns ingen nedre gräns i mängd eller omsättning. En enmansfirma som byter ut ett tryckimpregnerat trädäck likställs juridiskt med en stor totalentreprenör – båda producerar farligt avfall och båda ska anteckna det.</p>
+
+<p>På byggarbetsplatsen är det ofta fler fraktioner än man tror. Mineraliskt bygg- och rivningsavfall är en av de största farligt-avfall-strömmarna i Sverige, cirka 261 000 ton per år. Typiska farliga fraktioner du stöter på:</p>
+
+<ul>
+<li><strong>Asbest</strong> – i eternitplattor, kitt, isolering och äldre golvmattor.</li>
+<li><strong>Impregnerat och tryckimpregnerat virke</strong> – altaner, syllar, staket.</li>
+<li><strong>Färg-, lack- och oljerester</strong> – burkar, trasor, spillolja.</li>
+<li><strong>PCB-haltigt material</strong> – fogmassor och isolerrutor i hus byggda ca 1956–1973.</li>
+<li><strong>Förorenade massor</strong> – jord och fyllnadsmaterial vid mark- och saneringsarbete.</li>
+</ul>
+
+<p>Var och en av dessa har sin egen avfallskod och ska hanteras var för sig – det går inte att slå ihop dem i en post.</p>
+
+<h2>Anteckna innan avfallet lämnar bygget</h2>
+
+<p>Tidpunkten är avgörande. Anteckningen ska föras <em>innan</em> avfallet transporteras bort eller behandlas – alltså i god tid före hämtning, inte i efterhand när containern redan är körd. Det tvingar dig att klassificera avfallet medan det fortfarande finns på plats.</p>
+
+<p>För varje typ av farligt avfall ska en avfallsproducent anteckna:</p>
+
+<ul>
+<li><strong>Avfallskod</strong> – den sexställiga EWC-koden enligt klassificeringen i avfallsförordningens bilaga.</li>
+<li><strong>Var avfallet producerats</strong> – adress eller plats, till exempel byggarbetsplatsens CFAR-nummer.</li>
+<li><strong>Vikt i kilogram.</strong></li>
+<li><strong>Datum</strong> för transporten.</li>
+<li><strong>Transportsätt</strong> och <strong>vem som ska transportera</strong> avfallet.</li>
+<li><strong>Mottagare</strong> och den plats där avfallet ska hanteras.</li>
+</ul>
+
+<p>De detaljerade kraven finns i avfallsförordningen (2020:614) och i Naturvårdsverkets föreskrifter NFS 2020:5. En viktig varning: avfallsförordningen ändrades den 1 oktober 2025, då bland annat 3 och 4 kap. ersattes och paragrafer numrerades om. Slå därför inte fast exakta paragrafnummer i era rutiner – hänvisa hellre till förordningen och NFS 2020:5 som helhet, så slipper ni bygga in hänvisningar som redan är inaktuella.</p>
+
+<h2>Rapportera till Naturvårdsverkets avfallsregister</h2>
+
+<p>Är avfallet farligt räcker det inte att anteckna internt – uppgifterna ska även rapporteras elektroniskt till Naturvårdsverkets nationella avfallsregister. Registret är en del av Sveriges spårbarhetssystem och underlag för tillsyn, statistik och EU-rapportering.</p>
+
+<p>Fristen är snäv: rapporteringen ska ske <strong>senast två arbetsdagar</strong> från det datum då anteckningen ska vara förd. Rapporteringen görs i Naturvårdsverkets e-tjänst med inloggning via e-legitimation (BankID eller eIDAS-ansluten lösning). Verksamheter som rapporterar ofta kan i stället ansluta sina administrativa system till Naturvårdsverkets API och slippa manuell inmatning vid varje hämtning.</p>
+
+<p>Anteckningarna ska sparas i minst tre år. För den som antecknar i egenskap av transportör är kravet ett år.</p>
+
+<h2>Vem gör vad i kedjan – producent, transportör, mottagare</h2>
+
+<p>Varje aktör i avfallskedjan har sin egen antecknings- och rapporteringsskyldighet. Ta ett konkret fall: en byggfirma river asbest, anlitar en åkare som kör materialet till en godkänd mottagningsanläggning.</p>
+
+<ol>
+<li><strong>Byggfirman (producent)</strong> antecknar och rapporterar att avfallet uppstått, med kod, vikt och plats.</li>
+<li><strong>Åkaren (transportör)</strong> rapporterar sin del av transporten.</li>
+<li><strong>Mottagningsanläggningen</strong> rapporterar mottagandet.</li>
+</ol>
+
+<p>Alla tre rapporterar var för sig sina egna uppgifter. Att en underentreprenör eller åkare ordnar bortforslingen befriar alltså inte byggfirman från sin egen producentrapportering. Se också till att transporten utförs av en transportör med rätt tillstånd och att transportdokumentet stämmer med det ni antecknat.</p>
+
+<h2>Vad kostar det att missa?</h2>
+
+<p>Att lämna uppgifter för sent till avfallsregistret ger en miljösanktionsavgift på 5 000 kr, enligt förordningen (2012:259) om miljösanktionsavgifter. Avgiften har gällt sedan 1 januari 2022 och tas ut per försummelse, oavsett om förseningen var avsiktlig eller inte.</p>
+
+<p>Utöver avgiften ökar kostnaden på andra sätt: kommunernas miljötillsyn genomför riktade tillsynskampanjer mot just farligt avfall, och bristande avfallsdokumentation kan slå igenom vid entreprenadbesiktning och i upphandlingar där beställaren ställer spårbarhetskrav. En obruten dokumentationskedja är alltså både en regelfråga och ett konkurrensargument.</p>
+
+<h2>Så bygger du en rutin som håller</h2>
+
+<ol>
+<li><strong>Identifiera</strong> de farliga fraktionerna tidigt – i rivnings- eller miljöinventeringen, innan arbetet startar.</li>
+<li><strong>Tilldela avfallskod</strong> (EWC) per fraktion redan i planeringen.</li>
+<li><strong>Väg och dokumentera</strong> vid varje hämtning – kod, vikt, plats, datum, transportör, mottagare.</li>
+<li><strong>Rapportera inom två arbetsdagar</strong> i avfallsregistret.</li>
+<li><strong>Arkivera</strong> anteckningarna i minst tre år.</li>
+<li><strong>Utse en ansvarig</strong> per projekt så att inget faller mellan stolarna.</li>
+<li><strong>Överväg API- eller systemstöd</strong> om ni har många hämtningar.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+
+<p>ByggExp ersätter inte Naturvårdsverkets e-tjänst – rapporteringen sker fortfarande där. Men verktygen hjälper dig att ha ordning på underlaget som rapporteringen bygger på. Med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> kopplar du varje hämtning till projekt, avfallskod och ansvarig person, så att uppgifterna finns samlade när tvådagarsfristen börjar ticka. Fler stöd för byggdokumentation hittar du bland <a href="/sv/verktyg">våra gratis verktyg</a>.</p>
+
+<h2>Vanliga frågor</h2>
+
+<h3>Gäller anteckningsplikten även små jobb?</h3>
+<p>Ja. Det finns ingen nedre gräns. Så snart din firma yrkesmässigt producerar farligt avfall – oavsett mängd – gäller både anteckningsskyldighet och rapportering till avfallsregistret.</p>
+
+<h3>Räcker transportdokumentet som dokumentation?</h3>
+<p>Nej. Transportdokumentet är en del av kedjan, men det ersätter varken din egen anteckning eller den elektroniska rapporteringen till avfallsregistret. De är separata krav.</p>
+
+<h3>Vem rapporterar om entreprenören ordnar allt?</h3>
+<p>Varje aktör rapporterar sina egna uppgifter. Att en entreprenör eller åkare sköter bortforslingen tar inte bort din skyldighet som producent att anteckna och rapportera att avfallet uppstått hos dig.</p>
+
+<h3>Vad ändrades den 1 oktober 2025?</h3>
+<p>Avfallsförordningen ändrades då bland annat 3 och 4 kap. ersattes och paragrafer numrerades om. Själva skyldigheten att anteckna och rapportera farligt avfall består – men undvik att låsa era rutiner till gamla paragrafnummer.</p>
+
+<h2>Kom igång</h2>
+
+<p>Börja med att lägga in de farliga fraktionerna i <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> och bygg en rutin som håller hela vägen till avfallsregistret. Vill du se hur det fungerar i ett skarpt projekt? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/rivningsavfall-sorteringskrav-bygg">Rivningsavfall och sorteringskrav</a>, <a href="/sv/blog/nya-asbestregler-2026">Nya asbestregler 2026</a>, <a href="/sv/blog/klimatdeklaration-byggnad-krav">Klimatdeklaration för byggnad – krav</a>.</p>
+`;
+
+const A_FARLIGT_AVFALL_ANTECKNINGSSKYLDIGHET_BYGG: BlogPost = {
+  _id: "code-"+"farligt-avfall-anteckningsskyldighet-bygg",
+  title: "Farligt avfall och anteckningsskyldighet – vad byggföretaget måste göra 2026", slug: "farligt-avfall-anteckningsskyldighet-bygg", locale: "sv",
+  excerpt: "Så uppfyller byggföretaget anteckningsplikten och rapporteringen av farligt avfall till Naturvårdsverkets avfallsregister – från EWC-kod till tvådagarsfristen.", tag: "Regelverk",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_FARLIGT_AVFALL_ANTECKNINGSSKYLDIGHET_BYGG_HTML,
+  seoTitle: "Farligt avfall: anteckningsplikt | ByggExp", seoDescription: "Anteckna och rapportera farligt avfall till avfallsregistret – krav, tidsfrister och rutin för byggföretag 2026. Undvik miljösanktionsavgift på 5 000 kr.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T08:15:00.000Z", createdAt: "2026-08-20T08:15:00.000Z", updatedAt: "2026-08-20T08:15:00.000Z",
+};
+
+const A_ENSAMARBETE_BYGG_REGLER_HTML = `
+<p>Många hantverkare och små byggfirmor jobbar ensamma stora delar av arbetsdagen – ensam i källaren, ensam på ett tak, ensam ute på ett servicejobb. Ensamarbete är inte förbjudet, men det är villkorat: du får ordna det bara om risken kan hanteras. Från 1 januari 2025 bytte dessutom reglerna hem. Den gamla föreskriften AFS 1982:3 om ensamarbete är upphävd, och kraven finns nu i AFS 2023:2, 6 kap. Skriver du eller din arbetsledare rutiner för 2026 är det den nya föreskriften som gäller.</p>
+
+<p>Vill du komma igång direkt med dokumentationen kan du använda vår gratis <a href="/sv/verktyg/egenkontroll-mall">egenkontroll- och checklistmall</a> för att skriva ned vilka moment som får utföras ensam och hur snabb hjälp ska nås.</p>
+
+<h2>Vad räknas som ensamarbete?</h2>
+<p>Enligt AFS 2023:2, 6 kap. 1 § är ensamarbete arbete i fysisk eller social isolering. Skillnaden är viktig eftersom båda formerna omfattas.</p>
+<ul>
+<li><strong>Fysisk isolering</strong> innebär att den som arbetar behöver teknisk kommunikationsutrustning, till exempel en telefon, för att nå andra människor. Ett klassiskt byggexempel är arbete ensam i en källare, ett kryputrymme eller ett schakt där ingen finns inom syn- eller hörhåll.</li>
+<li><strong>Social isolering</strong> innebär att det finns människor i närheten, men att den som arbetar inte kan vara säker på att få hjälp i en kritisk situation. Det gäller till exempel den som jobbar ensam i en avlägsen del av en stor arbetsplats, där en olycka inte skulle uppmärksammas i tid.</li>
+</ul>
+<p>Poängen är att ensamarbete inte bara handlar om att vara helt själv på plats. Även den som har kollegor på samma bygge kan i praktiken utföra ensamarbete om ingen skulle märka att något hänt.</p>
+
+<h2>Vad säger reglerna om ensamarbete på bygget 2026?</h2>
+<p>Reglerna kring ensamarbete och bygg hänger ihop med en större regelreform. Arbetsmiljöverkets cirka 67 äldre föreskrifter slogs 1 januari 2025 samman till 15 nya AFS i 2023-serien. AFS 2023:2 ersatte åtta gamla föreskrifter, däribland ensamarbete, OSA samt våld och hot. Grundregeln i 6 kap. 4 § är enkel att komma ihåg: arbetet ska ordnas så att den som jobbar ensam inte löper större risk att skadas än om flera hade utfört arbetet tillsammans.</p>
+<p>De byggspecifika kraven ligger dock i andra föreskrifter. Byggnads- och anläggningsarbete regleras i AFS 2023:13, kap 5, och projektering samt byggarbetsmiljösamordning i AFS 2023:3. AFS 2023:13 har redan ändrats en gång genom AFS 2025:6, så kontrollera alltid den senaste konsoliderade versionen innan du fastställer en rutin.</p>
+
+<h2>När är ensamarbete tillåtet – och när inte?</h2>
+<p>Utgångspunkten är att ensamarbete är tillåtet om inte en särskild regel begränsar det. Men det finns tydliga gränser:</p>
+<ul>
+<li><strong>Tillåtet</strong> när risken har bedömts och kan hanteras med rimliga åtgärder.</li>
+<li><strong>Direktkontakt ska eftersträvas</strong> (6 kap. 5 §) om arbetet innebär stark psykisk påfrestning – arbetstagaren ska då kunna nå kollegor eller andra.</li>
+<li><strong>Snabb hjälp krävs</strong> (6 kap. 6 §) om det finns påtaglig risk för kroppsskada genom olycksfall.</li>
+<li><strong>Inte tillåtet som ensamarbete</strong> (6 kap. 7 §) om påtaglig skaderisk finns och tillräcklig säkerhet, alltså snabb hjälp, inte kan ordnas. Då måste momentet utföras med fler personer.</li>
+<li><strong>Förbjudet</strong> när arbetet innebär påtaglig risk för våld eller hot om våld.</li>
+<li><strong>Minderåriga</strong> får inte utföra ensamarbete som innebär psykisk påfrestning, skaderisk eller risk för våld.</li>
+</ul>
+<p>Konkreta byggmoment där ensamarbete ofta faller bort är takarbete med fallhöjd, arbete i djupa schakt med rasrisk, arbete i slutna utrymmen och heta arbeten – där en skada snabbt blir livshotande om ingen kan ingripa. Du är också skyldig att informera skyddsombudet när du ordnar ensamarbete som omfattas av bestämmelserna om psykisk påfrestning och skaderisk.</p>
+
+<h2>Riskbedömning steg för steg</h2>
+<p>Innan ensamarbete ordnas måste du undersöka arbetsmiljön, bedöma riskerna och vidta åtgärder – det följer av det systematiska arbetsmiljöarbetet (SAM) i AFS 2023:1. En praktisk gång för byggmoment:</p>
+<ol>
+<li><strong>Undersök</strong> momentet: fallhöjd, ras- och schaktrisk, avskilt läge, mobiltäckning, tid på dygnet och den enskilda personens förutsättningar och erfarenhet.</li>
+<li><strong>Bedöm</strong> hur allvarlig en skada kan bli och hur snabbt hjälp faktiskt skulle nå fram.</li>
+<li><strong>Åtgärda</strong> genom att antingen ordna snabb hjälp eller besluta att momentet inte får utföras ensam.</li>
+<li><strong>Följ upp</strong> och dokumentera bedömningen, och informera skyddsombudet.</li>
+</ol>
+<p>En strukturerad mall gör det enklare att göra bedömningen likadant varje gång. Se även vår guide till <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">riskbedömning på byggarbetsplatsen</a>.</p>
+
+<h2>Larmrutiner och snabb hjälp i praktiken</h2>
+<p>Kravet på snabb hjälp i 6 kap. 6 § kan lösas på flera sätt. Accepterade lösningar är bland annat:</p>
+<ul>
+<li><strong>Personlarm</strong>, ofta med GPS-positionering, som larmar automatiskt eller manuellt.</li>
+<li><strong>Regelbundna avstämningar</strong> och incheckningar med en utsedd kontaktperson vid överenskomna tider.</li>
+<li><strong>Mans-down- eller dödmansgrepp</strong> och rörelsesensorer som larmar om personen blir liggande stilla.</li>
+<li><strong>Övervakningskamera</strong> i tydliga riskzoner.</li>
+</ul>
+<p>En viktig sak att förstå: en mobiltelefon i fickan räcker inte som larmrutin. Om personen blir skadad och inte kan använda telefonen ger den ingen hjälp. Larmet måste fungera även när den som arbetar inte själv kan larma.</p>
+
+<h2>Särskilda regler för enmans- och familjeföretag</h2>
+<p>AFS 2023:13 innehåller egna skyldigheter för ensamföretagare och familjeföretagare på bygget. Att du driver ett enmansföretag befriar dig alltså inte från kraven. När du hyrs in på någon annans byggarbetsplats gäller dessutom samordningsansvaret, och du ska följa de rutiner som byggarbetsmiljösamordnaren satt upp. Vid arbete i inneslutningar med luftsluss ställs särskilda krav på den ensamarbetandes beredskap för nödsituationer.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte en juridisk bedömning, men gör det praktiska arbetet enklare. I ByggExp kan du samla dina egenkontroller, checklistor och riskbedömningar på ett ställe, koppla dem till rätt projekt och exportera dem som PDF när en beställare eller Arbetsmiljöverket frågar. En återkommande ensamarbetsrutin blir en mall du fyller i på plats i mobilen i stället för lösa papper. Du bestämmer själv innehållet – verktyget hjälper dig att dokumentera och hålla ordning, inte att avgöra vad som är säkert.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är ensamarbete förbjudet på bygget?</h3>
+<p>Nej. Ensamarbete är tillåtet så länge risken kan hanteras. Det blir otillåtet enligt AFS 2023:2, 6 kap. 7 § om det finns påtaglig risk för kroppsskada och snabb hjälp inte kan ordnas, och det är förbjudet vid påtaglig risk för våld eller hot.</p>
+<h3>Vilken AFS gäller för ensamarbete 2026?</h3>
+<p>Den gamla AFS 1982:3 är upphävd sedan 1 januari 2025. Reglerna finns nu i AFS 2023:2, 6 kap. Byggspecifika krav ligger i AFS 2023:13 och AFS 2023:3.</p>
+<h3>Måste jag ha personlarm?</h3>
+<p>Inte alltid. Personlarm är en av flera accepterade lösningar för att uppfylla kravet på snabb hjälp. Regelbundna avstämningar, mans-down-funktion eller kamera i riskzon kan också fungera. Kravet är att hjälp ska nå fram snabbt även om personen inte själv kan larma.</p>
+<h3>Gäller reglerna för enmansföretag?</h3>
+<p>Ja. AFS 2023:13 innehåller särskilda skyldigheter för ensam- och familjeföretagare, och samordningsansvaret gäller när du hyrs in på annans byggarbetsplats.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att lista vilka moment som får respektive inte får utföras ensam, utse en kontaktperson och sätt ett incheckningsintervall. Dokumentera bedömningen med vår <a href="/sv/verktyg/egenkontroll-mall">egenkontroll- och checklistmall</a>, eller utforska fler gratisverktyg i <a href="/sv/verktyg">ByggExp verktygslåda</a>. Vill du se hur rutinerna fungerar samlat i ett system? <a href="/sv/contact">Boka en demo</a> så visar vi dig.</p>
+
+<p>Relaterat: <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Riskbedömning på byggarbetsplats – mall</a>, <a href="/sv/blog/systematiskt-arbetsmiljoarbete-litet-byggforetag">Systematiskt arbetsmiljöarbete i litet byggföretag</a>, <a href="/sv/blog/skyddsrond-bygg-checklista">Skyddsrond på bygget – checklista</a>.</p>
+`;
+
+const A_ENSAMARBETE_BYGG_REGLER: BlogPost = {
+  _id: "code-"+"ensamarbete-bygg-regler",
+  title: "Ensamarbete på bygget – reglerna 2026: när det är tillåtet, riskbedömning och larmrutiner", slug: "ensamarbete-bygg-regler", locale: "sv",
+  excerpt: "Ensamarbete är tillåtet på bygget – men bara om risken kan hanteras. Här är reglerna 2026, riskbedömningen och larmrutinerna du behöver.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_ENSAMARBETE_BYGG_REGLER_HTML,
+  seoTitle: "Ensamarbete bygg – regler 2026 | ByggExp", seoDescription: "Ensamarbete på bygget är inte förbjudet men villkorat. Så gäller reglerna 2026 (AFS 2023:2), riskbedömning och larmrutiner för små byggfirmor.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T08:18:00.000Z", createdAt: "2026-08-20T08:18:00.000Z", updatedAt: "2026-08-20T08:18:00.000Z",
+};
+
+const A_MASKINFORARBEVIS_HJULLASTARE_BYGG_HTML = `
+<p>Frågan "vilket maskinförarbevis behövs för hjullastare?" har inget enkelt svar – och det beror på att många blandar ihop två helt skilda regelsystem. Det ena är tvingande lag och gäller alla arbetsgivare. Det andra är ett branschkrav som bara gäller om arbetsplatsen omfattas av kollektivavtal. Att förväxla dem kostar antingen pengar i onödan eller innebär att ni saknar behörighet ni faktiskt är skyldiga att ha. Oavsett vilket är det arbetsgivaren – inte föraren – som bär ansvaret.</p>
+
+<p>Behöver ni ordning på kompetens, riskbedömningar och kontroller? Börja med <a href="/sv/verktyg">våra gratis verktyg för byggföretag →</a> och bygg in behörighetskontrollen i era rutiner.</p>
+
+<h2>Två skilda regelsystem – lag och kollektivavtal</h2>
+<p>Svensk rätt kring maskinförare har två lager som ofta förväxlas:</p>
+<ul>
+<li><strong>Lagkravet</strong> kommer från Arbetsmiljöverkets föreskrifter. Arbetsgivaren måste säkerställa att föraren har tillräckliga, dokumenterade teoretiska och praktiska kunskaper – och ge ett skriftligt tillstånd att köra maskinen (körtillstånd). Detta gäller alla, oavsett avtal.</li>
+<li><strong>Branschkravet</strong> kommer från kollektivavtalen. Här handlar det om yrkesbevis, ofta kallat "gult kort". Yrkesbevis är alltså <strong>inte</strong> ett lagkrav utan ett avtalskrav.</li>
+</ul>
+<p>Det ena kan gälla utan det andra. Ett litet företag utan bindande bygg- eller anläggningsavtal måste ändå uppfylla lagkravet på dokumenterad kunskap och körtillstånd – men behöver inte nödvändigtvis yrkesbevis. Ett företag på en avtalsbunden byggarbetsplats måste uppfylla båda.</p>
+
+<h2>Vad lagen kräver – arbetsgivarens ansvar enligt AFS 2023:11</h2>
+<p>Sedan 1 januari 2025 gäller den nya samlingsföreskriften AFS 2023:11 "Arbetsutrustning och personlig skyddsutrustning – säker användning". Den ersätter bland annat de äldre föreskrifterna om truckar (AFS 2006:5) och arbetsutrustning (AFS 2006:4), men själva grundprincipen lever kvar.</p>
+<p>Arbetsgivaren ska:</p>
+<ul>
+<li>riskbedöma hur maskinen används i den aktuella verksamheten,</li>
+<li>säkerställa att föraren har dokumenterade teoretiska och praktiska kunskaper för just den maskintypen,</li>
+<li>ge ett skriftligt tillstånd (körtillstånd) som anger vad och var föraren får köra.</li>
+</ul>
+<p>Notera att "dokumenterad kunskap" inte är samma sak som ett externt kursintyg. Det är arbetsgivarens ansvar att kunna visa att kunskapen finns och att tillståndet är utfärdat – ett muntligt "du kan väl köra?" räcker inte om Arbetsmiljöverket frågar.</p>
+
+<h2>Truck vs maskin – var lagkravet på bevis är hårdast</h2>
+<p>Här skiljer sig reglerna åt beroende på maskintyp, och det är värt att förstå nyansen.</p>
+<p>För <strong>truck</strong> är kravet på dokumenterade kunskaper plus skriftligt tillstånd ett uttryckligt lagkrav. Utbildningsbeviset – exempelvis en TLP10-baserad truckutbildning – ska inte förväxlas med arbetsgivarens tillstånd. Beviset visar att föraren har kompetens; tillståndet ger tillåtelse och anger godsslag samt vilka lokaler eller områden som gäller. Man behöver båda.</p>
+<p>För <strong>hjullastare och grävmaskin</strong> är lagen mer generell: kravet gäller "tillräckliga kunskaper" och skriftligt körtillstånd, men det finns inget lagstadgat specifikt bevis av trucktyp. Det betyder inte att kravet är mildare i praktiken – dokumentationskravet gäller fullt ut – men lagen pekar inte ut ett bestämt kort.</p>
+
+<h2>Vad kollektivavtalet kräver – yrkesbevis och 1 500 kg / 10 tonmeter</h2>
+<p>På arbetsplatser som omfattas av bygg- eller anläggningsavtal skärps kraven. Där krävs utbildning och behörighet – yrkesbevis – för förare som framför maskin med <strong>totalvikt över 1 500 kg</strong> eller <strong>lyftkapacitet över 10 tonmeter</strong>. En vanlig hjullastare på ett bygge ligger normalt över den gränsen. Kollektivavtalen berör bland annat Byggnads, Seko och Transport.</p>
+<p>Det är alltså här yrkesbeviset blir obligatoriskt – inte via arbetsmiljölagen, utan via avtalet. Omfattas ni av ett sådant avtal och saknar yrkesbevis för en förare över tröskeln är ni i praktiken avtalsbrutna, även om ni uppfyllt lagens kunskaps- och tillståndskrav.</p>
+
+<h2>Utbildningsbevis, yrkesbevis och körtillstånd – tre olika dokument</h2>
+<p>Tre dokument som ständigt förväxlas:</p>
+<ul>
+<li><strong>Utbildningsbevis ("svart kort")</strong> – utfärdas efter godkänd maskinförarutbildning och kompetensprov. Visar grundläggande kompetens. Utfärdas inom branschsystemet.</li>
+<li><strong>Yrkesbevis ("gult kort")</strong> – kräver omfattande praktik: minst 30 månader eller 4 000 timmar med maskinen. Svart kort växlas upp till gult när tillräcklig erfarenhet uppnåtts. ME anger en kvalificeringsperiod på cirka 24 månader under lärlingstiden. Yrkesbevis för bygg och anläggning utfärdas av BYN (Byggbranschens yrkesnämnd); truck- och maskinbevis inom transportsektorn hanteras av TYA.</li>
+<li><strong>Körtillstånd</strong> – arbetsgivarens egna skriftliga tillstånd enligt AFS 2023:11. Det är detta dokument som ger föraren tillåtelse att köra en viss maskin på just er arbetsplats.</li>
+</ul>
+<p>Har en förare yrkesbevis för en maskintyp – säg grävmaskin – och vill lägga till hjullastare, görs det via kompetensprov eller kompletterande utbildning. Man börjar alltså inte om från noll.</p>
+
+<h2>Körkort på allmän väg – motorredskap klass I och II</h2>
+<p>En hjullastare räknas som motorredskap. Körkortskravet på allmän väg beror på registreringen:</p>
+<ul>
+<li><strong>Motorredskap klass II</strong> (max 30 km/h) får köras med traktorkort eller valfritt bilkörkort (B).</li>
+<li><strong>Motorredskap klass I</strong> (byggd för över 30 km/h, får framföras i högst 50 km/h) kräver minst B-körkort – oavsett om den körs på eller vid vägen.</li>
+</ul>
+<p>På en <strong>inhägnad eller avstängd byggarbetsplats</strong> som inte är allmän väg krävs inget körkort för själva framförandet. Där styr arbetsmiljöreglerna – dokumenterad kunskap och körtillstånd – samt eventuellt kollektivavtalets yrkesbeviskrav. Körkort eller traktorkort blir relevant först vid färd på allmän väg. Tänk också på åldersgränsen: minderåriga under 18 år får som huvudregel inte självständigt framföra motordrivna arbetsmaskiner, enligt Arbetsmiljöverkets föreskrifter om minderårigas arbetsmiljö.</p>
+
+<h2>Glöm inte beställarkraven</h2>
+<p>Utöver lag och kollektivavtal ställer enskilda beställare egna krav som gäller oavsett vad arbetsmiljölagen eller avtalet säger. Trafikverket kräver "Arbete på väg", elsektorn kräver ofta EBR. Kontrollera alltid upphandlings- och kontraktsvillkoren innan ni sätter en förare på uppdraget.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte utbildningar eller yrkesbevis – men systemet hjälper er att hålla ordning på det arbetsgivaren faktiskt måste kunna visa. Ni kan samla riskbedömningar, dokumentera kunskap och koppla körtillstånd till rätt person och maskin, så att underlaget finns när en beställare eller Arbetsmiljöverket frågar. Använd gärna <a href="/sv/verktyg/egenkontroll-mall">vår mall för egenkontroll</a> som en enkel startpunkt för att strukturera behörighets- och kompetenskontrollen på arbetsplatsen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Räcker ett truckkort eller maskinförarutbildning som körtillstånd?</h3>
+<p>Nej. Ett utbildnings- eller truckbevis visar kompetens, men körtillståndet är arbetsgivarens eget skriftliga beslut som anger vad och var föraren får köra. Ni behöver båda delarna.</p>
+
+<h3>Måste alla hjullastarförare ha yrkesbevis?</h3>
+<p>Bara om arbetsplatsen omfattas av bygg- eller anläggningsavtal och maskinen har totalvikt över 1 500 kg eller lyftkapacitet över 10 tonmeter. Yrkesbevis är ett avtalskrav, inte ett lagkrav.</p>
+
+<h3>Behöver föraren körkort på byggarbetsplatsen?</h3>
+<p>Inte för att framföra maskinen på en inhägnad, avstängd arbetsplats. Körkort eller traktorkort krävs först vid färd på allmän väg, och då styr motorredskapets klass vilken behörighet som behövs.</p>
+
+<h3>Vem har ansvaret om en förare saknar rätt behörighet?</h3>
+<p>Arbetsgivaren. Det är arbetsgivaren som ska riskbedöma, säkerställa dokumenterad kunskap och utfärda skriftligt körtillstånd – och som kan hållas ansvarig om det brister.</p>
+
+<h2>Kom igång</h2>
+<p>Samla behörigheter, kompetensintyg och körtillstånd på ett ställe och slipp leta i pärmar. Testa <a href="/sv/verktyg">våra gratis verktyg</a> eller <a href="/sv/contact">boka en demo</a> så visar vi hur ni bygger in behörighetskontrollen i era rutiner.</p>
+
+<p>Relaterat: <a href="/sv/blog/byggstallning-regler-krav">Byggställning – regler och krav</a>, <a href="/sv/blog/personlig-skyddsutrustning-krav-bygg">Krav på personlig skyddsutrustning på bygget</a> och <a href="/sv/blog/systematiskt-arbetsmiljoarbete-litet-byggforetag">Systematiskt arbetsmiljöarbete i det lilla byggföretaget</a>.</p>
+`;
+
+const A_MASKINFORARBEVIS_HJULLASTARE_BYGG: BlogPost = {
+  _id: "code-"+"maskinforarbevis-hjullastare-bygg",
+  title: "Maskinförarbevis för hjullastare på bygget – vad krävs egentligen 2026?", slug: "maskinforarbevis-hjullastare-bygg", locale: "sv",
+  excerpt: "En genomgång av skillnaden mellan lagstadgat körtillstånd, yrkesbevis enligt kollektivavtal och körkort på allmän väg – och vad arbetsgivaren faktiskt måste dokumentera.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_MASKINFORARBEVIS_HJULLASTARE_BYGG_HTML,
+  seoTitle: "Maskinförarbevis hjullastare | ByggExp", seoDescription: "Vilka förarbevis krävs för hjullastare, grävmaskin och truck på bygget? Skilj lagkrav från kollektivavtal – och se arbetsgivarens ansvar 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T08:21:00.000Z", createdAt: "2026-08-20T08:21:00.000Z", updatedAt: "2026-08-20T08:21:00.000Z",
+};
+
+const A_LIFTUTBILDNING_KRAV_BYGG_HTML = `
+<p>Mobila arbetsplattformar hör till de mest reglerade maskinerna på en byggarbetsplats – och samtidigt de där missförstånden är som störst. Många tror att ett giltigt liftkort räcker för att köra, andra tror att småliftar är undantagna. Båda har fel. Sedan 1 januari 2025 gäller dessutom ett nytt regelverk, AFS 2023:11, som ersatte den gamla AFS 2006:6. Kraven i sak är i stort desamma, men om du inte kan visa dokumenterad kompetens och ett skriftligt körtillstånd vid en inspektion riskerar företaget en sanktionsavgift. Efter den här genomgången vet du exakt vad du behöver kunna bevisa för varje liftförare på bygget.</p>
+
+<p>Behöver du samla dokumentationen på ett ställe hittar du våra gratis mallar och verktyg för byggföretag här: <a href="/sv/verktyg">vår verktygslåda för hantverkare och byggföretag -&gt;</a></p>
+
+<h2>Vad säger lagen 2026? Från AFS 2006:6 till AFS 2023:11</h2>
+<p>Fram till årsskiftet 2024/2025 reglerades liftanvändning av AFS 2006:6 om användning av lyftanordningar. Från 1 januari 2025 gäller i stället AFS 2023:11 "Arbetsutrustning och personlig skyddsutrustning – säker användning". Regelverket är nytt, men substansen kring liftar är oförändrad: en mobil arbetsplattform får bara användas av någon som är väl förtrogen med arbetet och har <strong>dokumenterad teoretisk och praktisk kunskap</strong> för säker användning.</p>
+<p>Det nya är tydligheten kring bevisbördan. Kompetensen ska kunna styrkas med ett utbildningsbevis, och det är arbetsgivaren som ansvarar för att föraren både har kunskapen och att den finns dokumenterad. Kravet riktar sig alltså mot två parter: föraren, som ska ha kompetensen, och arbetsgivaren, som ska säkerställa och dokumentera den. Skriver du "AFS 2006:6" i era rutiner eller egenkontroller är det dags att uppdatera – hänvisa till AFS 2023:11 i allt som gäller från 2025 och framåt.</p>
+
+<h2>Liftkort vs körtillstånd: två olika saker</h2>
+<p>Detta är den enskilt vanligaste missuppfattningen. Utbildningsbeviset – "liftkortet" – och körtillståndet är två separata dokument med olika funktion.</p>
+<p>Utbildningsbeviset visar att föraren har genomgått en godkänd utbildning och har den teoretiska och praktiska kompetensen. Men det ger <strong>inte i sig rätten att köra</strong>. För att föraren faktiskt ska få använda en lift på bygget krävs dessutom ett skriftligt <strong>körtillstånd</strong> från arbetsgivaren. Körtillståndet är arbetsplats- och maskinspecifikt: det namnger föraren och vilka typer av liftar hen får framföra.</p>
+<p>Den som utfärdar körtillståndet – oftast arbetsledaren eller platschefen – måste själv kunna visa att hen har tillräcklig utbildning för att bedöma förarens kompetens. Ett vanligt fel vid inspektion är att liftkortet finns, men körtillståndet saknas eller aldrig har skrivits ut. Då är ni inte compliant, oavsett hur gedigen utbildningen var. Rutinen bör vara: giltigt utbildningsbevis in, körtillstånd ut – innan föraren rör spakarna.</p>
+
+<h2>Lift-kategorierna A1, A3, B1, B3 – vad du faktiskt får köra</h2>
+<p>Utbildning och certifiering följer standarden SS-ISO 18878:2013 och delar in liftar i kompetenskategorier. Logiken är enkel när man kan koden:</p>
+<ul>
+<li><strong>A</strong> = plattformen håller sig inom chassits stödyta (vertikallyft: pelarlift, saxlift).</li>
+<li><strong>B</strong> = plattformen sträcker sig utanför chassit (bomlift).</li>
+<li><strong>Typ 1</strong> = statisk, ingen förflyttning med upphöjd plattform.</li>
+<li><strong>Typ 3</strong> = mobil, kan köras med upphöjd plattform.</li>
+</ul>
+<p>Det ger de fyra vanliga kategorierna: <strong>A1</strong> statisk vertikallift, <strong>A3</strong> mobil vertikallift (saxlift), <strong>B1</strong> statisk bomlift och <strong>B3</strong> självgående bomlift. Kortet gäller bara de kategorier föraren har utbildats och examinerats på. Har någon bara A3 får hen inte hoppa in i en bomlift för att "det bara är en liten grej". Kontrollera därför alltid att förarens kategorier matchar de maskiner som faktiskt finns på arbetsplatsen innan körtillståndet skrivs.</p>
+
+<h2>Giltighet, repetition och SS-ISO 18878</h2>
+<p>Utbildningen bygger på den branschgemensamma Liftläroplanen (LLP) som förvaltas av Liftutbildningsrådet (LUR), och på ISO-standarden ovan. Ett utbildningsbevis har en <strong>rekommenderad giltighet på 5 år</strong>. Därefter rekommenderas en kortare repetitionsutbildning för att hålla kunskapen aktuell. Observera att femårsgränsen är en branschrekommendation och standard – inte ett hårt lagstadgat utgångsdatum. Kravet i AFS 2023:11 är att kunskapen ska vara aktuell och dokumenterad, och en förnyad utbildning är det enklaste sättet att styrka det. Ett giltigt utbildningsbevis ska visa förarens namn, vilka kategorier som omfattas, utfärdare och datum, så att både innehåll och aktualitet går att kontrollera.</p>
+
+<h2>Fallskydd i lift: när krävs helkroppssele?</h2>
+<p>Om helkroppssele krävs avgörs av en <strong>riskbedömning</strong>, inte av en tumregel. I praktiken:</p>
+<ul>
+<li><strong>Bomlift (B-typ):</strong> personligt fallskydd krävs normalt, eftersom det finns risk att slungas ur korgen vid ryck eller stötar.</li>
+<li><strong>Saxlift (A3):</strong> sele krävs ofta inte om skyddsräcket är helt och används rätt.</li>
+</ul>
+<p>När fallskydd används ska det alltid vara en <strong>helkroppssele</strong> kopplad till avsedd förankringspunkt i korgen – aldrig ett midjebälte. Dokumentera riskbedömningen så att valet går att motivera. Vill du läsa mer om regelverket kring personligt fallskydd finns en fördjupning i vår artikel om <a href="/sv/blog/fallskydd-krav-bygg">fallskydd och krav på bygget</a>.</p>
+
+<h2>Arbetsgivarens ansvar och sanktionsavgifter</h2>
+<p>Arbetsgivaren bär ansvaret för att föraren har rätt kunskap och för att dokumentationen på den teoretiska och praktiska kompetensen finns bevarad. Vid en inspektion kontrolleras typiskt: giltigt utbildningsbevis per kategori, skriftligt körtillstånd på plats, och att den som utfärdat tillståndet själv är utbildad.</p>
+<p>Brister kan leda till en <strong>sanktionsavgift</strong> – en direkt avgift utan domstolsprövning. Modellen i 2023 års regelverk för arbetsgivare med färre än 500 anställda är: 15 000 kr + (antal anställda − 1) × 271 kr, avrundat nedåt till närmaste hundratal, med lägst 15 000 kr och högst 150 000 kr. Från 500 anställda är avgiften 150 000 kr. Kontrollera dock alltid vilka specifika bestämmelser som är sanktionsbelagda kontra vad som "bara" ger ett inspektionskrav innan du utgår från exakta belopp. Utöver avgiften finns en försäkrings- och ansvarsrisk: sker en olycka med en förare utan körtillstånd står företaget svagt.</p>
+
+<h2>Checklista: så är du compliant på bygget 2026</h2>
+<ul>
+<li>Giltigt utbildningsbevis för varje förare – och för rätt kategorier (A1/A3/B1/B3).</li>
+<li>Skriftligt, namngivet körtillstånd på plats för varje förare och maskintyp.</li>
+<li>Den som utfärdar körtillstånd är själv utbildad.</li>
+<li>Daglig kontroll av liften före användning.</li>
+<li>Dokumenterad riskbedömning som avgör om helkroppssele krävs.</li>
+<li>All dokumentation bevarad och tillgänglig vid inspektion.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>Kraven faller ofta på just dokumentationen – inte på att kompetensen saknas, utan på att den inte går att visa upp. I ByggExp kan du samla utbildningsbevis, körtillstånd och riskbedömningar per projekt och medarbetare, så att rätt underlag finns framme när Arbetsmiljöverket eller beställaren frågar. Du kan bygga en återkommande egenkontroll för liftanvändning med vår <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a> och koppla den till varje arbetsplats. Verktyget ersätter inte utbildningen eller din juridiska bedömning – men det gör det enklare att hålla ordning på bevisen och att fånga ett utgående liftkort innan det blir ett problem på bygget.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur länge gäller liftkortet?</h3>
+<p>Utbildningsbeviset har en rekommenderad giltighet på 5 år. Därefter rekommenderas en repetitionsutbildning. Det är en branschstandard snarare än ett hårt lagstadgat utgångsdatum, men kunskapen ska enligt AFS 2023:11 alltid vara aktuell och dokumenterad.</p>
+<h3>Måste jag ha körtillstånd även med giltigt liftkort?</h3>
+<p>Ja. Liftkortet visar kompetens, men ger inte rätten att köra. Arbetsgivaren måste dessutom utfärda ett skriftligt, arbetsplats- och maskinspecifikt körtillstånd som namnger föraren. Utan det är ni inte compliant.</p>
+<h3>Krävs sele i saxlift?</h3>
+<p>Det avgörs av riskbedömningen. I saxlift (A3) krävs ofta ingen sele om räcket är helt, medan bomlift normalt kräver personligt fallskydd. Används fallskydd ska det alltid vara en helkroppssele.</p>
+<h3>Gäller kravet små liftar?</h3>
+<p>Ja. Kravet på dokumenterad utbildning gäller alla mobila arbetsplattformar oavsett höjd eller storlek. Det finns inget undantag för små saxliftar eller korta jobb.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att inventera vilka förare, kategorier och maskiner ni har – och stäm av mot checklistan ovan. Bygg sedan en rutin för utbildningsbevis, körtillstånd och egenkontroll i <a href="/sv/verktyg">vår verktygslåda</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du samlar all liftdokumentation per projekt i ByggExp.</p>
+
+<p>Relaterat: <a href="/sv/blog/fallskydd-krav-bygg">Fallskydd – krav på bygget</a>, <a href="/sv/blog/byggstallning-regler-krav">Byggställning: regler och krav</a>, <a href="/sv/blog/personlig-skyddsutrustning-krav-bygg">Personlig skyddsutrustning – krav på bygget</a>.</p>
+`;
+
+const A_LIFTUTBILDNING_KRAV_BYGG: BlogPost = {
+  _id: "code-"+"liftutbildning-krav-bygg",
+  title: "Liftutbildning – krav på bygget 2026: liftkort, körtillstånd och AFS 2023:11", slug: "liftutbildning-krav-bygg", locale: "sv",
+  excerpt: "Så uppfyller ditt byggföretag kraven på liftutbildning 2026 – skillnaden mellan liftkort och körtillstånd, lift-kategorierna och arbetsgivarens dokumentationsansvar enligt AFS 2023:11.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_LIFTUTBILDNING_KRAV_BYGG_HTML,
+  seoTitle: "Liftutbildning krav bygg 2026 | ByggExp", seoDescription: "Liftkort, körtillstånd och AFS 2023:11 förklarat för byggföretag 2026 – kategorierna A1, A3, B1, B3, giltighet, fallskydd och sanktionsavgifter.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T08:24:00.000Z", createdAt: "2026-08-20T08:24:00.000Z", updatedAt: "2026-08-20T08:24:00.000Z",
+};
+
+const A_BULLER_VIBRATIONER_BYGG_GRANSVARDE_HTML = `
+<p>Buller vibrationer bygg gränsvärde är inte bara en juridisk detalj – det är två av de vanligaste dolda arbetsmiljöriskerna på en byggarbetsplats, och de ger skador som märks först efter åratal: hörselnedsättning, tinnitus och vita fingrar (HAVS). Sedan 1 januari 2025 finns reglerna samlade i AFS 2023:10 "Risker i arbetsmiljön", inte längre i de gamla föreskrifterna AFS 2005:15 och 2005:16. Här går vi igenom exakta gränsvärden, mät- och kontrollkrav som gäller 2026.</p>
+
+<p>Bygg in kontrollpunkterna i ditt systematiska arbetsmiljöarbete med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall &rarr;</a> så att buller- och vibrationsbedömningen blir en rutin, inte en efterhandskonstruktion.</p>
+
+<h2>Vilka regler gäller 2026?</h2>
+<p>Buller och vibrationer i arbetslivet regleras i AFS 2023:10 "Risker i arbetsmiljön": kapitel 2 tar upp buller och kapitel 3 vibrationer. De medicinska kontrollerna ligger i en egen föreskrift, AFS 2023:15 "Medicinska kontroller i arbetslivet", kapitel 3. De gamla AFS 2005:16 (buller) och AFS 2005:15 (vibrationer) är upphävda. Praktiskt innebär det att alla mallar, checklistor och rutiner som fortfarande hänvisar till 2005-numren måste uppdateras – både för att de pekar på fel författning och för att en granskare snabbt ser att dokumentationen inte är underhållen.</p>
+
+<h2>Gränsvärden för buller: 80, 85 och 135 dB</h2>
+<p>Buller regleras på två nivåer: <strong>insatsvärden</strong> som bedöms utan hänsyn till hörselskydd, och <strong>gränsvärden</strong> som bedöms med hörselskyddens dämpning inräknad. Det är en viktig skillnad – insatsvärdet mäter den faktiska ljudmiljön, gränsvärdet mäter vad örat faktiskt utsätts för.</p>
+<ul>
+<li><strong>Undre insatsvärde:</strong> LEX,8h = 80 dB. Arbetsgivaren ska informera och tillhandahålla hörselskydd (tillgång).</li>
+<li><strong>Övre insatsvärde:</strong> LEX,8h = 85 dB och LpAFmax = 115 dB. Hörselskydd ska användas – obligatoriskt – och arbetstagaren är skyldig att bära dem. Krav på påbudsskylt "Hörselskydd måste användas" och att området om möjligt avgränsas.</li>
+<li><strong>Toppvärde:</strong> LpCpeak = 135 dB (gäller både som insats- och gränsvärde).</li>
+<li><strong>Gränsvärde:</strong> LEX,8h = 85 dB, LpAFmax = 115 dB, LpCpeak = 135 dB – med hörselskydd inräknat.</li>
+</ul>
+<p>Observera att det svenska gränsvärdet är 85 dB, inte EU-minimidirektivets 87 dB, och toppvärdet 135 dB, inte 140 dB. Det är ett vanligt faktafel. Vid övre insatsvärdet ska arbetsgivaren utreda orsaken och sänka exponeringen. Gränsvärdet 85 dB får aldrig överskridas – händer det ändå krävs omedelbara åtgärder, orsaksutredning och åtgärder mot upprepning.</p>
+
+<h2>Gränsvärden för hand- och armvibrationer (och helkropp)</h2>
+<p>Vibrationer bedöms som daglig exponering A(8) – dosen normerad till åtta timmar. Gränsvärdena i AFS 2023:10 Bilaga 4 är:</p>
+<ul>
+<li><strong>Hand- och armvibrationer:</strong> insatsvärde 2,5 m/s², gränsvärde 5,0 m/s².</li>
+<li><strong>Helkroppsvibrationer:</strong> insatsvärde 0,5 m/s², gränsvärde 1,1 m/s².</li>
+</ul>
+<p>Tiden är avgörande. Ett verktyg som deklareras till cirka 5 m/s² passerar insatsvärdet 2,5 m/s² redan efter ungefär 2 timmars användning, och gränsvärdet 5,0 m/s² efter cirka 8 timmar. Ett dubbelt så högt vibrationsvärde fjärdedelar tiden till samma dos. På bygget handlar det om bilningshammare, tigersåg, vinkelslip och vibroplatta. Tänk också på att vibrationsskador kan uppstå redan under insatsvärdet på grund av individuell känslighet, och att kyla och fukt förvärrar hand-armvibrationsskador – vita fingrar (HAVS) drabbar oftare den som jobbar utomhus vintertid.</p>
+
+<h2>Mätning och riskbedömning – så gör du rätt</h2>
+<p>Exponeringen ska bedömas och vid behov mätas för att klarlägga om insats- eller gränsvärdena nås. Börja med en bedömning; mät när du är osäker eller nära en nivå. Standarderna att luta sig mot är:</p>
+<ul>
+<li>Buller: SS-EN ISO 9612.</li>
+<li>Hand- och armvibrationer: SS-EN ISO 5349-1.</li>
+<li>Helkroppsvibrationer: SS-ISO 2631-1.</li>
+</ul>
+<p>Vibrationsexponering får uppskattas utifrån tillverkarens deklarerade vibrationsvärden, men de är typiskt lägre än den faktiska exponeringen – slitna verktyg, hårt underlag och fel teknik driver upp värdet. Ligger du nära insatsvärdet bör du mäta. Riskbedömningen ska särskilt beakta samverkanseffekter: buller tillsammans med ototoxiska ämnen (vissa lösningsmedel) och buller tillsammans med vibrationer förstärker skaderisken. Dokumentera bedömning, mätvärden och slutsatser i det systematiska arbetsmiljöarbetet.</p>
+
+<h2>Medicinska kontroller och hörselundersökning</h2>
+<p>Hörselundersökning ska <strong>erbjudas</strong> arbetstagare som exponeras för ljud lika med eller över övre insatsvärdet 85 dB, och även vid undre insatsvärdet 80 dB om riskbedömningen visar risk för hörselskada. Undersökningen görs av läkare eller kvalificerad person på läkares ansvar, och intervallet anpassas efter exponeringen.</p>
+<p>För vibrationer är medicinsk kontroll <strong>obligatorisk att anordna</strong> när exponeringen överstiger insatsvärdet för hand- och armvibrationer 2,5 m/s², eller vid misstanke om ohälsa. Enligt AFS 2023:15 kap. 3 ska den genomföras:</p>
+<ol>
+<li>Innan arbetstagaren börjar arbetet.</li>
+<li>Återkommande med högst 3 års mellanrum.</li>
+<li>Inom 1 månad efter att en ny eller förvärrad vibrationsskada blivit känd.</li>
+</ol>
+<p>Glöm inte handintensivt arbete – repetitivt hand- och fingerkraftsarbete som armering, plattsättning och arbete med spikpistol. Det har egna krav på medicinsk kontroll i AFS 2023:15: inom 3 år efter start, därefter högst vart 3:e år, och inom 1 månad vid tecken på besvär. Det gäller även när den rena vibrationsexponeringen är låg.</p>
+
+<h2>Åtgärdstrappan: sänk exponeringen vid källan</h2>
+<p>Både buller och vibrationer följer åtgärdstrappan – källan före skyddet. Prioritera i denna ordning:</p>
+<ul>
+<li>Eliminera momentet eller tysta/dämpa vid källan (annan metod, förborrning, kapa på verkstad).</li>
+<li>Välj lågvibrerande och tystare maskiner – jämför deklarerade värden vid inköp.</li>
+<li>Tekniska åtgärder: dämpade handtag, vibrationsdämpade säten på maskiner, underhåll och skarpa verktyg.</li>
+<li>Organisatoriska åtgärder: rotera arbetsuppgifter, planera in pauser, begränsa sammanhängande exponeringstid.</li>
+<li>Utbildning i teknik och risker.</li>
+</ul>
+<p>Hörselskydd och andra personliga skydd är sista utvägen, inte första åtgärden – de skyddar bäraren men löser inte grundproblemet.</p>
+
+<h2>Checklista för arbetsgivaren</h2>
+<ul>
+<li>Inventera verktyg och notera deklarerade vibrationsvärden.</li>
+<li>Beräkna A(8) för de mest exponerade momenten.</li>
+<li>Mät buller vid tvekan enligt SS-EN ISO 9612.</li>
+<li>Sätt upp påbudsskylt och avgränsa vid 85 dB.</li>
+<li>Boka hörsel- och vibrationskontroller för dem som når insatsvärdena.</li>
+<li>Dokumentera i det systematiska arbetsmiljöarbetet.</li>
+<li>Följ upp och upprepa – vibrationskontroller minst vart 3:e år.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte en bullermätning eller en läkarundersökning, men det håller ihop dokumentationen som visar att du gjort rätt. I <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> lägger du in buller- och vibrationsbedömningen som återkommande kontrollpunkter, kopplar dem till rätt verktyg och moment och sparar underlaget så att det finns tillgängligt vid en granskning. Fler stöd för arbetsmiljö och kalkyl hittar du bland <a href="/sv/verktyg">våra gratis verktyg</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är gränsvärdet för buller 85 eller 87 dB?</h3>
+<p>Det svenska gränsvärdet är LEX,8h = 85 dB, bedömt med hörselskyddens dämpning inräknad. EU:s minimidirektiv anger 87 dB, men Sverige har en strängare nivå. Toppvärdet är LpCpeak = 135 dB, inte 140 dB.</p>
+<h3>När måste vi ordna medicinsk kontroll för vibrationer?</h3>
+<p>När den dagliga exponeringen A(8) överstiger insatsvärdet 2,5 m/s² för hand- och armvibrationer, eller vid misstanke om skada. Kontrollen görs innan arbetet börjar, sedan med högst 3 års mellanrum, och inom 1 månad efter att en ny eller förvärrad vibrationsskada blivit känd.</p>
+<h3>Räcker tillverkarens deklarerade vibrationsvärden?</h3>
+<p>De får användas för att uppskatta exponeringen, men de underskattar ofta den verkliga nivån eftersom slitage, underlag och teknik påverkar. Ligger du nära insats- eller gränsvärdet bör du komplettera med mätning enligt SS-EN ISO 5349-1.</p>
+<h3>Gäller fortfarande AFS 2005:15 och 2005:16?</h3>
+<p>Nej. Sedan 1 januari 2025 är de upphävda och ersatta av AFS 2023:10 "Risker i arbetsmiljön". Uppdatera alla rutiner och mallar som fortfarande hänvisar till de gamla numren.</p>
+
+<h2>Kom igång</h2>
+<p>Lägg buller- och vibrationskontrollen på plats innan nästa projekt drar igång. Bygg in kontrollpunkterna med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och utforska övriga <a href="/sv/verktyg">verktyg</a>. Vill du se hur det fungerar i praktiken, boka en <a href="/sv/contact">demo</a> så visar vi hur du håller ihop dokumentationen.</p>
+
+<p>Relaterat: <a href="/sv/blog/kvartsdamm-regler-bygg">Kvartsdamm – regler på bygget</a>, <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Riskbedömning på byggarbetsplats (mall)</a>, <a href="/sv/blog/personlig-skyddsutrustning-krav-bygg">Personlig skyddsutrustning – krav på bygget</a>.</p>
+`;
+
+const A_BULLER_VIBRATIONER_BYGG_GRANSVARDE: BlogPost = {
+  _id: "code-"+"buller-vibrationer-bygg-gransvarde",
+  title: "Buller och vibrationer på bygget: gränsvärden 2026, mätning och medicinska kontroller", slug: "buller-vibrationer-bygg-gransvarde", locale: "sv",
+  excerpt: "Så tolkar du buller- och vibrationsgränsvärdena i AFS 2023:10, mäter rätt och håller koll på hörsel- och vibrationskontrollerna på bygget 2026.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_BULLER_VIBRATIONER_BYGG_GRANSVARDE_HTML,
+  seoTitle: "Buller & vibrationer bygg: gränsvärde | ByggExp", seoDescription: "Gränsvärden för buller och hand-armvibrationer på bygget enligt AFS 2023:10 – 80, 85 och 135 dB, 2,5/5,0 m/s², mätning och medicinska kontroller 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T08:27:00.000Z", createdAt: "2026-08-20T08:27:00.000Z", updatedAt: "2026-08-20T08:27:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_AB_U_UNDERENTREPRENOR_AVTAL,
+    A_FOTODOKUMENTATION_BYGGPROJEKT_BEVIS,
+    A_ENTREPRENADGARANTI_SAKERHET_AB04,
+    A_FAKTURERINGSAVGIFT_HANTVERKARE_TILLATEN,
+    A_BESTRIDEN_FAKTURA_BYGG_TVIST,
+    A_FARLIGT_AVFALL_ANTECKNINGSSKYLDIGHET_BYGG,
+    A_ENSAMARBETE_BYGG_REGLER,
+    A_MASKINFORARBEVIS_HJULLASTARE_BYGG,
+    A_LIFTUTBILDNING_KRAV_BYGG,
+    A_BULLER_VIBRATIONER_BYGG_GRANSVARDE,
     A_LON_ELLER_UTDELNING_BYGGBOLAG_2026,
     A_TAPET_ATGANG_RULLAR,
     A_SERVICEAVTAL_UNDERHALLSAVTAL_BYGGFORETAG,

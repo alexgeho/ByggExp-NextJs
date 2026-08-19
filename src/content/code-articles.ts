@@ -17569,9 +17569,194 @@ const A_NYA_AB_04_ABT_06_REVIDERING_2027: BlogPost = {
   publishedAt: "2026-08-20T09:15:00.000Z", createdAt: "2026-08-20T09:15:00.000Z", updatedAt: "2026-08-20T09:15:00.000Z",
 };
 
+const A_TAKPANNOR_ANTAL_PER_M2_HTML = `
+<p>Fel pannantal ger fel offert. Det vanligaste misstaget är att räkna på husets grundyta i stället för takfallens faktiska area – eller att glömma spillet. Resultatet blir antingen materialbrist mitt i läggningen eller onödigt svinn du får betala för. Här får du utgångsvärden för pannor per m² för betong, enkupigt och tvåkupigt tegel, hur läktavståndet styr antalet och hur du lägger på rätt spillmarginal.</p>
+
+<p>Vill du gå snabbaste vägen kan du mata in takfallens mått och panntyp i <a href="/sv/verktyg/tak-kalkylator">vår gratis tak-kalkylator</a> och få materialåtgången direkt – men förstå gärna räkningen bakom först.</p>
+
+<h2>Snabbtabell: pannor per m²</h2>
+<p>Följande är utgångsvärden för takarea, inte facit. Den faktiska åtgången avgörs av panntypens byggmått, taklutningen och därmed läktavståndet.</p>
+<ul>
+<li><strong>Betong tvåkupig</strong> (t.ex. Benders Palema): ca 9 pannor/m² nominellt (8,9 vid max läktavstånd 375 mm och lutning ≥ ca 26°). Praktiskt räknar man 9–11/m² eftersom flackare lutning kräver kortare läktavstånd.</li>
+<li><strong>Betong falsad/stor modell</strong>: ca 8–9 pannor/m². Färre pannor sänker både materialkostnad och läggningstid.</li>
+<li><strong>Enkupigt tegel</strong> (T-format, t.ex. Vittinge): nominellt 13,3 pannor/m². Tumregel 13–15/m².</li>
+<li><strong>Tvåkupigt tegel</strong> (t.ex. Vittinge T11): nominellt 11,1 pannor/m² vid 375 mm läktavstånd. Tumregel 11–13/m².</li>
+</ul>
+
+<h2>Vad läktavstånd är – och varför det styr antalet</h2>
+<p>Läktavstånd är måttet från ovansida bärläkt till ovansida nästa bärläkt – alltså inte den öppna springan mellan läkten. Det bestäms av två saker samtidigt: panntypen och taklutningen.</p>
+<p>Ju flackare tak, desto kortare läktavstånd krävs. Ett flackt fall behöver större överlapp mellan pannorna för att hålla tätt, och kortare läktavstånd betyder fler rader – alltså fler pannor per m². Varje panna har ett min- och ett max-läktavstånd angivet i monteringsanvisningen. För tvåkupig betong ligger max typiskt runt 375 mm, men vid flack lutning ska du använda ett kortare mått och då stiger åtgången. Läs alltid produktbladet för exakt den panna kunden valt och den lutning taket har. <a href="/sv/blog/lakt-avstand-tak-berakning">Så beräknar du läktavstånd steg för steg</a>.</p>
+
+<h2>Räkna area rätt – aldrig på husets footprint</h2>
+<p>Mät varje takfall för sig: längd från nock till takfot gånger bredd från gavel till gavel. Summera alla fall och lägg till eventuella valmytor och kupor. Husets grundyta är alltid mindre än takytan och ger för lågt pannantal.</p>
+<p>Exempel: ett rakt sadeltak med två lika fall på 10 × 5 m ger 2 × 50 = <strong>100 m² takyta</strong>. Det är den siffran du räknar pannor på, inte husets 80–90 m² grundyta.</p>
+
+<h2>Räkneexempel: 100 m² tak</h2>
+<p>Formeln är enkel: <strong>takarea (m²) × pannor/m² + spill</strong>. Med 100 m² takyta:</p>
+<ul>
+<li><strong>Betong tvåkupig:</strong> 100 × 9–11 = 900–1 100 pannor</li>
+<li><strong>Enkupigt tegel:</strong> 100 × 13,3–15 = 1 330–1 500 pannor</li>
+<li><strong>Tvåkupigt tegel:</strong> 100 × 11,1–13 = 1 110–1 300 pannor</li>
+</ul>
+<p>Lägg spillet ovanpå detta, inte i stället för. Ett komplett underlag för hela taket – inklusive underlagstäckning och läkt – hittar du i guiden <a href="/sv/blog/berakna-materialatgang-tak">beräkna materialåtgång för tak</a>.</p>
+
+<h2>Spill: 5 eller 10 %?</h2>
+<p>Standardformeln är takyta × pannor/m² + 5–10 % spill. Så väljer du:</p>
+<ul>
+<li><strong>5 %</strong> – enkelt sadeltak utan genomföringar.</li>
+<li><strong>8–10 %</strong> – komplext tak med skorstenar, takfönster, kupor, valmning och vinkelrännor där pannor måste kapas.</li>
+</ul>
+<p>Tänk på att kapade pannor sällan går att återanvända på andra sidan taket, så ju fler kap desto högre marginal. Mer om hur du sätter rätt påslag finns i <a href="/sv/blog/spillprocent-bygg-material">spillprocent för byggmaterial</a>.</p>
+
+<h2>Glöm inte tillbehören</h2>
+<p>Pannor per m² täcker bara takfallets yta. Följande offereras separat, per löpmeter eller styck:</p>
+<ul>
+<li>Nockpannor och nockband</li>
+<li>Valmpannor</li>
+<li>Gavel- och vindskivepannor</li>
+<li>Ventilations- och genomföringspannor</li>
+<li>Klammer, fästen och stormsäkring</li>
+<li>Bärläkt och ströläkt</li>
+</ul>
+
+<h2>Dimensionera bort kapningen</h2>
+<p>Vill du minska både svinn och läggningstid ska takfallets bredd innanför vindskivorna helst vara en multipel av byggbredden plus 30 mm – alltså multipel av 200 + 30 mm för enkupigt och 240 + 30 mm för tvåkupigt tegel (Vittinge T11 har byggbredd 240 mm). Då slipper du kapa sidopannor och får hela pannor i sidled. Detta är enklast att styra vid nybyggnad eller när läkt och vindskivor sätts; behöver du samtidigt dimensionera bärverket är <a href="/sv/verktyg/takstolar-kalkylator">takstols-kalkylatorn</a> ett bra komplement.</p>
+
+<h2>Vanliga fel i offerten</h2>
+<ul>
+<li>Räknar på husets grundyta i stället för takfallens area.</li>
+<li>Använder nominella pannor/m² utan att korrigera för flack lutning.</li>
+<li>Glömmer spillet – eller sätter 5 % på ett komplext valmtak.</li>
+<li>Missar tillbehören (nock, valm, gavel) som prissätts separat.</li>
+<li>Läser inte monteringsanvisningen för just den panna kunden valt.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp lägger du in takfallens mått och panntyp och får åtgången i antal pannor plus spillmarginal, klart att lyfta in i offerten. Du kan spara olika panntyper som alternativ och jämföra material- och läggningskostnad mellan en stor betongpanna och en liten tvåkupig. Kalkylen följer med projektet, så när du gör avvikelser eller efterbeställer syns det på samma underlag. ByggExp ersätter inte tillverkarens monteringsanvisning – verifiera alltid min/max läktavstånd för vald panna och lutning – men det tar bort handräkningen och risken för att glömma spillet.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur många takpannor går det på en kvadratmeter?</h3>
+<p>Det beror på typ: tvåkupig betong ca 9–11/m², stora falsade betongpannor 8–9/m², enkupigt tegel 13–15/m² och tvåkupigt tegel 11–13/m². De nominella värdena (8,9, 13,3 respektive 11,1) gäller vid max läktavstånd; flackare tak ger fler pannor.</p>
+<h3>Räknar jag pannor på husets yta eller takytan?</h3>
+<p>Alltid på takfallens area – längd nock till takfot gånger bredd gavel till gavel per fall, summerat och med valmytor tillagda. Husets grundyta är mindre och ger för få pannor.</p>
+<h3>Hur mycket spill ska jag lägga på?</h3>
+<p>5 % för enkla sadeltak och 8–10 % för tak med skorstenar, takfönster, kupor, valmning och vinkelrännor där pannor måste kapas. Kapade pannor kan sällan återanvändas.</p>
+<h3>Varför ger ett flackt tak fler pannor per m²?</h3>
+<p>Ett flackare tak kräver kortare läktavstånd så att pannorna överlappar mer och håller tätt. Kortare läktavstånd betyder fler pannrader, alltså fler pannor per kvadratmeter.</p>
+
+<h2>Kom igång</h2>
+<p>Mata in takfallen och panntypen i <a href="/sv/verktyg/tak-kalkylator">tak-kalkylatorn</a> så får du antal pannor med spill direkt i offerten. Vill du se hur hela kalkyl- och offertflödet fungerar i ByggExp kan du <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/berakna-materialatgang-tak">Beräkna materialåtgång för tak</a>, <a href="/sv/blog/lakt-avstand-tak-berakning">Läktavstånd på tak – så beräknar du</a>, <a href="/sv/blog/spillprocent-bygg-material">Spillprocent för byggmaterial</a>.</p>
+`;
+
+const A_TAKPANNOR_ANTAL_PER_M2: BlogPost = {
+  _id: "code-"+"takpannor-antal-per-m2",
+  title: "Takpannor per m² – så räknar du rätt antal till offerten", slug: "takpannor-antal-per-m2", locale: "sv",
+  excerpt: "Utgångsvärden för pannor per m² för betong, enkupigt och tvåkupigt tegel, hur läktavståndet styr antalet och hur du lägger på rätt spillmarginal.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/tak-preview.webp", contentHtml: A_TAKPANNOR_ANTAL_PER_M2_HTML,
+  seoTitle: "Takpannor per m² – räkna rätt antal | ByggExp", seoDescription: "Utgångsvärden för pannor per m² för betong och tegel, hur läktavståndet styr antalet och hur du lägger på rätt spillmarginal i offerten.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/tak-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T10:00:00.000Z", createdAt: "2026-08-20T10:00:00.000Z", updatedAt: "2026-08-20T10:00:00.000Z",
+};
+
+const A_VADERSTOPP_PERMITTERING_BYGGAVTALET_HTML = `
+<p>Vinteravbrott är en normal del av svensk bygg. Kyla, blåst, is och snö gör att arbeten på tak, ställning och betong ibland måste avbrytas. Frågan som skapar mest osäkerhet är inte <em>om</em> arbetet stoppas — utan vem som bär kostnaden. Svaret är avtalsberoende: Byggavtalet reglerar väderstopp, men exakt hur lönen påverkas beror på situationen och på formuleringarna i ditt gällande avtal och eventuella lokala överenskommelser.</p>
+
+<p>Ett bra sätt att hålla ordning på timmar, avbrott och ersättningsgrunder är att logga arbetstiden noggrant redan från start. Använd gärna vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall -&gt;</a> för att dokumentera väderavbrott, omfördelad tid och inomhusarbete på ett spårbart sätt.</p>
+
+<h2>Väderstopp vs. permittering — två olika saker</h2>
+<p>Det första du behöver skilja på är tre begrepp som ofta blandas ihop:</p>
+<ul>
+<li><strong>Väderstopp (väderstillestånd)</strong> — ett kortare avbrott när arbetet inte kan utföras på grund av otjänligt väder. Regleras i Byggavtalets avsnitt 5.3.1. Det här är vad de allra flesta "vinterstopp" handlar om.</li>
+<li><strong>Permittering</strong> — en formell åtgärd enligt LAS och avtal där arbetsgivaren tillfälligt tar arbetstagaren ur arbete. Betydligt tyngre process än en kall dag.</li>
+<li><strong>Korttidsarbete</strong> — statligt stöttat korttidsarbete som kräver lokalt avtal med facket. Ett verktyg för längre nedgångar, inte för en enskild snödag.</li>
+</ul>
+<p>En vanlig missuppfattning är att en dålig väderdag automatiskt innebär permittering eller obetald ledighet. Så är det sällan.</p>
+
+<h2>Vad Byggavtalet 5.3.1 säger om otjänligt väder</h2>
+<p>Enligt Byggavtalet 5.3.1 ska arbetet avbrytas när det inte kan utföras på grund av otjänligt väder. En arbetstagare som vill avbryta för otjänligt väder eller annat hinder ska anmäla det till arbetsgivaren — men det är <strong>arbetsgivaren som beslutar</strong> om arbetet ska stoppas.</p>
+<p>Det finns ingen fast lagstadgad temperaturgräns som tvingar fram ett stopp. Varken arbetsmiljölagen eller AFS anger en lägsta temperatur. I praktiken brukar minus 20°C nämnas som en pratpunkt, men det är en riskbedömning och en bedömningsfråga — inte en hård regel. Bedömningen görs lämpligen tillsammans med skyddsombudet.</p>
+<p>Vid oenighet om faran har skyddsombudet dessutom rätt att lägga ett <strong>skyddsombudsstopp</strong> i väntan på beslut från Arbetsmiljöverket. Det är en separat rättslig hävstång, skild från arbetsgivarens väderbeslut enligt 5.3.1.</p>
+
+<h2>Behåller man lönen vid väderstopp?</h2>
+<p>Här ligger den avgörande nyansen. Att arbetet stoppas betyder inte per automatik att arbetstagaren går hem obetalt. Närvaroskyldigheten kvarstår: om inte arbetsgivaren uttryckligen släpper hem arbetstagaren ska personen stanna kvar på arbetsplatsen. Därför är "stoppa arbetet" inte samma sak som "gå hem utan lön".</p>
+<p>Rätten till lön vid permittering följer av en uttrycklig lagregel. Enligt <strong>LAS 21 §</strong> har en arbetstagare som har permitterats rätt till samma lön och andra anställningsförmåner som om arbetstagaren hade fått behålla sina arbetsuppgifter. Samma paragraf innehåller dock ett viktigt undantag: rätten gäller <em>inte</em> om permitteringen är en följd av att arbetet är säsongbetonat eller till sin natur inte sammanhängande. Just den karaktären kan aktualiseras vid väderberoende byggmoment, så undantaget är inte enbart teoretiskt — men det tillämpas restriktivt. LAS 21 § är dessutom semidispositiv: kollektivavtalet kan justera vad som gäller, dock inte fritt sätta principen ur spel. En arbetsgivare kan därför normalt inte bara sluta betala för att det snöar — men bedömningen måste väga in både lagens säsongsundantag och det egna avtalet.</p>
+<p><strong>Friskrivning om belopp:</strong> exakt hur mycket lön som behålls, och vilken grundlönsnivå eller procentsats som gäller vid en formell permittering, är avtalsberoende. Innan du förlitar dig på en viss ersättningsnivå måste du kontrollera den faktiska avtalstexten i det Byggavtal som gäller (nuvarande utgåva löper 2025-05-01 till 2027-04-30) samt eventuell lokal överenskommelse. Gissa inte på kronor eller procent.</p>
+
+<h2>När permittering eller korttidsarbete blir aktuellt</h2>
+<p>Vid längre avbrott kan de tyngre verktygen bli aktuella — men de skiljer sig åt:</p>
+<ul>
+<li><strong>Permittering:</strong> arbetsgivaren beslutar ensidigt vilka som permitteras efter att ha underrättat facket via det förenklade förfarandet. Under permitteringen utgår en reducerad avtalslön (grundlönsnivå), inte full lön. I praktiken är permittering ovanligt i bygg — den ger arbetsgivaren liten reell besparing eftersom utgångspunkten enligt LAS 21 § är att lön och förmåner behålls och avtalet bara delvis kan justera det.</li>
+<li><strong>Korttidsarbete:</strong> kräver lokalt avtal med facket och ger delvis statlig ersättning för lönekostnaderna, med ett lönetak på 44 000 kr/månad. Det är åtgärden för en utdragen nedgång — inte för en enskild väderdag.</li>
+</ul>
+<p>För ett kort vinterstopp är alltså väderstopp enligt 5.3.1 den normala ramen, medan permittering och korttidsarbete hör hemma vid mer långvariga situationer.</p>
+
+<h2>Arbetsgivarens ansvar i kylan</h2>
+<p>Reglerna för utomhus- och kylarbete finns numera i Arbetsmiljöverkets föreskrifter om utformning av arbetsplatser (AFS 2023:12), det samlade regelpaketet som gäller från 2025-01-01 och som kräver att utomhusarbetsplatser skyddar arbetstagarna mot väder och vind. Reglerna fanns tidigare i AFS 2009:2 §29 och därefter i AFS 2020:1 (Arbetsplatsens utformning) innan de fördes in i 2023:12 — de äldre lydelserna citeras fortfarande i många artiklar. Konkret innebär arbetsgivarens ansvar i kyla:</p>
+<ul>
+<li>Tillhandahålla varma ytterkläder och isolerade skor som skyddar mot kyla.</li>
+<li>Ordna uppvärmd rast-/värmelokal där personalen kan värma sig, med möjlighet att torka kläder.</li>
+<li>Genomföra en riskbedömning tillsammans med skyddsombudet.</li>
+</ul>
+<p>Personlig skyddsutrustning mot kyla — varma ytterkläder, fodrade byxor och isolerade skor — ska arbetsgivaren tillhandahålla utan kostnad för arbetstagaren. Underställ och strumpor räknas i regel som den anställdes eget ansvar, men om de skyddskläder arbetsgivaren tillhandahåller saknar foder kan arbetsgivaren behöva bekosta även underställ så att kläderna kan användas utan risk för ohälsa.</p>
+
+<h2>Så hanterar du avbrottet praktiskt som arbetsgivare</h2>
+<ol>
+<li>Dokumentera väderbeslutet — vem beslutade, när och på vilken grund.</li>
+<li>Kommunicera tydligt om personalen ska gå hem eller stanna kvar och omfördelas.</li>
+<li>Planera inomhusarbete i förväg så att stopptid inte automatiskt blir förlorad lön.</li>
+<li>Logga timmarna löpande, inklusive avbrott och omfördelad tid.</li>
+<li>Ta kontakt med facket tidigt om ett längre stopp närmar sig.</li>
+<li>Läs din specifika avtalstext om permitteringslön <em>innan</em> du förlitar dig på den.</li>
+</ol>
+<p>Kom också ihåg att ta sig till arbetet i snö och trafikstörningar är arbetstagarens ansvar. En arbetsgivare kan i princip göra löneavdrag för sen ankomst som orsakats av väder eller kollektivtrafik — det är något helt annat än ett arbetsgivarinitierat väderstopp på plats.</p>
+
+<h2>Vanliga misstag att undvika</h2>
+<ul>
+<li>Att anta att ett väderstopp automatiskt betyder obetald ledighet.</li>
+<li>Att skicka hem folk utan att beslutet är tydligt och dokumenterat.</li>
+<li>Att tro på en fast temperaturgräns — det finns ingen i lag.</li>
+<li>Att blanda ihop permittering med korttidsarbete.</li>
+<li>Att luta sig mot en viss permitteringslön utan att ha läst det egna avtalet.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig hålla ordning på timmarna när vädret ställer till det. I tidrapporteringen loggar dina anställda arbetad tid, avbrott och omfördelat inomhusarbete på projekt- och personnivå, så att du har ett spårbart underlag när du ska bedöma lön, fakturera kund eller diskutera ett avbrott med facket. ByggExp fattar inga avtalsbeslut åt dig och räknar inte ut permitteringslön — den delen kräver din avtalstext — men systemet ger dig den dokumentation och de timunderlag som besluten vilar på.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får arbetstagaren behålla lönen vid väderstopp?</h3>
+<p>Ofta ja, eftersom närvaroskyldigheten kvarstår tills arbetsgivaren uttryckligen släpper hem personen, och utgångspunkten enligt LAS 21 § är att lön och förmåner behålls vid permittering. Ett undantag finns för säsongbetonat eller icke sammanhängande arbete. Exakt utfall beror på situationen och ditt gällande avtal — kontrollera avtalstexten.</p>
+<h3>Finns det en temperaturgräns när bygg måste stoppas?</h3>
+<p>Nej. Varken arbetsmiljölagen eller AFS anger en lägsta temperatur. Minus 20°C nämns ibland som pratpunkt, men beslutet är en riskbedömning enligt Byggavtalet 5.3.1, inte en fast gräns.</p>
+<h3>Kan jag permittera personal på grund av en kall dag?</h3>
+<p>I praktiken sällan. Permittering ger liten besparing eftersom lön och förmåner enligt LAS 21 § till stor del behålls, och ett enskilt väderstopp hanteras normalt via 5.3.1 — inte via formell permittering eller korttidsarbete.</p>
+<h3>Vem betalar för vinterkläderna?</h3>
+<p>Arbetsgivaren ska utan kostnad tillhandahålla varma ytterkläder och isolerade skor som skyddar mot kyla, samt en uppvärmd värmelokal. Underställ och strumpor är i regel den anställdes eget ansvar — men saknar de tillhandahållna skyddskläderna foder kan arbetsgivaren behöva bekosta även understället så att de kan användas utan risk för ohälsa.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att göra dokumentationen enkel och spårbar. Ladda ner vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för att logga avbrott och omfördelad tid, eller <a href="/sv/contact">boka en demo</a> så visar vi hur ByggExp ger dig timunderlagen du behöver när vädret ställer till det.</p>
+
+<p><em>Detta är allmän vägledning, inte juridisk rådgivning. Väderstopp regleras i Byggavtalet 5.3.1, men löneutfallet beror på ditt exakta avtal och den konkreta situationen — verifiera alltid aktuell avtalstext och stäm av med Byggföretagen eller facket.</em></p>
+
+<p>Relaterat: <a href="/sv/blog/korttidsarbete-permittering-byggforetag">Korttidsarbete och permittering i byggföretag</a>, <a href="/sv/blog/byggnads-kollektivavtal-2026">Byggnads kollektivavtal 2026</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>.</p>
+`;
+
+const A_VADERSTOPP_PERMITTERING_BYGGAVTALET: BlogPost = {
+  _id: "code-"+"vaderstopp-permittering-byggavtalet",
+  title: "Väderstopp och permittering enligt Byggavtalet", slug: "vaderstopp-permittering-byggavtalet", locale: "sv",
+  excerpt: "Kyla, is och snö stoppar bygget – men vem bär kostnaden? Så skiljer du väderstopp, permittering och korttidsarbete, och vad lagen säger om lönen.", tag: "Arbetsrätt",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_VADERSTOPP_PERMITTERING_BYGGAVTALET_HTML,
+  seoTitle: "Väderstopp och permittering i bygg | ByggExp", seoDescription: "Vem betalar vid väderstopp i bygg? Så funkar Byggavtalet 5.3.1, lönerätt enligt LAS 21 § och skillnaden mot permittering och korttidsarbete.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T10:03:00.000Z", createdAt: "2026-08-20T10:03:00.000Z", updatedAt: "2026-08-20T10:03:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_TAKPANNOR_ANTAL_PER_M2,
+    A_VADERSTOPP_PERMITTERING_BYGGAVTALET,
     A_GDPR_KUNDREGISTER_BYGGFORETAG,
     A_LEADPLATTFORMAR_OFFERTA_SERVICEFINDER_BYGGFIRMA,
     A_DOU_PARM_DRIFT_UNDERHALL_BYGG,

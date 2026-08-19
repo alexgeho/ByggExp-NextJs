@@ -15877,9 +15877,431 @@ const A_OVERBESIKTNING_ENTREPRENAD: BlogPost = {
   publishedAt: "2026-08-19T22:15:00.000Z", createdAt: "2026-08-19T22:15:00.000Z", updatedAt: "2026-08-19T22:15:00.000Z",
 };
 
+const A_LON_ELLER_UTDELNING_BYGGBOLAG_2026_HTML = `
+<p>Driver du ett fåmansbygg-AB och undrar hur mycket lön du ska ta ut kontra hur mycket du kan plocka som lågbeskattad utdelning? Från och med 2026 gäller helt nya 3:12-regler – och de vänder upp och ner på den gamla tumregeln. Riksdagen beslutade reglerna den 26 november 2025 (SFS 2025:1361) och de trädde i kraft 1 januari 2026. Det här är alltså gällande lag, inte något förslag. Den viktigaste nyheten för dig: det gamla kravet på att ta ut en hög spärrlön är slopat – men det betyder inte att du ska sluta ta ut lön.</p>
+
+<p>Vill du snabbt räkna på din egen situation? Använd <a href="/sv/verktyg">våra gratis kalkylatorer för byggföretag -&gt;</a> och stäm sedan av utfallet mot din redovisningskonsult.</p>
+
+<h2>Det här är nytt 2026 för dig med bygg-AB</h2>
+<p>Reformen ersätter både den gamla huvudregeln och förenklingsregeln med en enda gemensam beräkningsregel. I korthet:</p>
+<ul>
+<li><strong>Gränsbeloppet för 2026 räknas på inkomstbasbeloppet (IBB) för 2025 = 80 600 kr.</strong> Precis som tidigare bygger årets gränsbelopp på föregående års IBB. (IBB för 2026 är 83 400 kr och styr först gränsbeloppet för 2027.)</li>
+<li><strong>Grundbelopp: 4 IBB = 322 400 kr</strong> (höjt från tidigare 2,75 IBB), fördelat lika på andelarna.</li>
+<li><strong>Lönebaserat utrymme: 50 %</strong> av din andel av löneunderlaget minus ett schabloniserat löneavdrag på <strong>8 IBB = 644 800 kr</strong>.</li>
+<li><strong>Löneuttagskravet är slopat.</strong> Du behöver inte längre ta ut en viss spärrlön för att få tillgodoräkna lönebaserat utrymme.</li>
+<li><strong>4 %-spärren (kapitalandelskravet) är slopad</strong> – även ägare med under 4 % får lönebaserat utrymme.</li>
+<li><strong>Karenstiden för trädabolag sänks från 5 till 4 kalenderår</strong> – men den förändringen tillämpas först för beskattningsår som börjar efter 31 december 2026, det vill säga i praktiken från 2027.</li>
+<li><strong>Ränteuppräkningen av sparat utdelningsutrymme slopas</strong> – sparat utrymme växer inte längre av sig självt.</li>
+</ul>
+
+<h2>Så beräknas ditt gränsbelopp nu – en formel istället för två regler</h2>
+<p>Gränsbeloppet är det belopp du kan ta ut som lågbeskattad utdelning (20 %). Den nya beräkningen är enkel att ställa upp:</p>
+<p><strong>Gränsbelopp = grundbelopp (322 400 kr) + 50 % × (din andel av löneunderlaget − 644 800 kr)</strong></p>
+<p>Löneunderlaget är samtliga kontanta bruttolöner i bolaget under föregående år – lönerna till dina anställda hantverkare <em>och</em> din egen lön räknas in. Ju större lönesumma bolaget har, desto större lönebaserat utrymme. För dig som har flera anställda på plats är det här ofta den stora hävstången.</p>
+
+<h2>Måste du fortfarande ta ut lön? Ja – men av andra skäl</h2>
+<p>Eftersom spärrlönen är borta kan man frestas att skruva ned den egna lönen till noll. Det är oftast ett misstag, av två skäl.</p>
+<p>För det första kvarstår <strong>50-gånger-taket</strong>: det lönebaserade utrymmet kan aldrig bli större än 50 gånger din egen (eller en närståendes) kontanta <em>årslön</em>. Nollar du lönen faller utrymmet till noll. I praktiken är taket dock en låg tröskel för ett bolag med stor lönesumma (se räkneexemplet nedan) – men någon lön måste ändå tas ut.</p>
+<p>För det andra ger personlig lön <strong>pension, sjukpenning (SGI) och föräldrapenning</strong>. Det gör utdelning aldrig. Att nolla lönen kan därför kosta mer i förlorad trygghet än det ger i skatt.</p>
+
+<h2>Räkneexempel: bygg-AB med fyra anställda hantverkare</h2>
+<p>Anta att du är ensam ägare och att bolaget har en total lönesumma på <strong>3 000 000 kr</strong> under 2025 (dina fyra hantverkare plus din egen lön). Utdelning som du tar under 2026 beräknas med de nya reglerna men på 2025 års löneunderlag.</p>
+<ul>
+<li>Lönebaserat utrymme = 50 % × (3 000 000 − 644 800) = <strong>1 177 600 kr</strong></li>
+<li>Grundbelopp = <strong>322 400 kr</strong></li>
+<li>Totalt gränsbelopp ≈ <strong>1 500 000 kr</strong> lågbeskattat utrymme</li>
+</ul>
+<p>Men 50x-taket sätter en undre gräns för lönen, och det räknas på <em>årslön</em>: det lönebaserade utrymmet får vara högst 50 gånger din egen kontanta årslön. För att inte kapa utrymmet på 1 177 600 kr behöver din årslön alltså vara minst 1 177 600 / 50 = <strong>23 552 kr/år</strong>, det vill säga runt <strong>1 960 kr/mån</strong>. Det är en låg tröskel som nästan varje ägare passerar. Den verkliga frågan är därför inte hur lite lön du kan komma undan med, utan hur mycket du <em>bör</em> ta ut för pension, SGI och för att optimera skatten mot brytpunkten.</p>
+
+<h2>Lön eller utdelning – var går brytpunkten 2026?</h2>
+<p>Jämför den effektiva skatten. Utdelning inom gränsbeloppet beskattas totalt med cirka <strong>36,5 %</strong> (bolagsskatt 20,6 % plus 20 % på det som delas ut). Lön belastas med arbetsgivaravgift 31,42 % plus marginalskatt – men under den statliga brytpunkten sänker jobbskatteavdraget din faktiska skatt rejält, och du tjänar in pension.</p>
+<p>Skiktgränsen för statlig skatt 2026 är 643 000 kr och brytpunkten (efter grundavdrag) 660 400 kr, motsvarande cirka <strong>55 000 kr/mån</strong>. Över den nivån tillkommer 20 % statlig skatt på lönen, och då blir lågbeskattad utdelning nästan alltid billigare.</p>
+<p><strong>Tumregel:</strong> ta ut lön upp till den statliga brytpunkten (cirka 55 000 kr/mån) och lyft överskottet som utdelning inom gränsbeloppet. Vill du sätta rätt debiteringsgrad så att bolaget faktiskt bär den lönen kan du räkna baklänges med vår <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator</a>.</p>
+
+<h2>Vanliga tankefel i byggbranschen</h2>
+<ul>
+<li><strong>Att tro att 2025 års spärrlön fortfarande gäller.</strong> Kravet på 6 IBB + 5 % (eller 9,6 IBB) är borta. Sikta i stället på pension, SGI och brytpunkten – och håll koll på 50x-taket.</li>
+<li><strong>Att blanda ihop vilket års regler som styr.</strong> Utdelning tagen under 2025 följer de gamla reglerna (K10 i vår 2026). Utdelning under 2026 följer de nya (K10 våren 2027).</li>
+<li><strong>Att vänta med sparat utrymme.</strong> Ränteuppräkningen är slopad – sparat utdelningsutrymme växer inte längre av sig självt.</li>
+</ul>
+
+<h2>Checklista inför årsskiftet 2026/2027</h2>
+<ol>
+<li>Stäm av din egen årslön mot 50x-taket så att du inte kapar det lönebaserade utrymmet.</li>
+<li>Kontrollera att lönen minst når den statliga brytpunkten om skatteutfallet pekar dit – annars väg mot pension och SGI.</li>
+<li>Säkerställ att bolaget har utdelningsbara medel och att försiktighetsregeln i ABL är uppfylld.</li>
+<li>Äg andelarna den 1 januari – gränsbeloppet bestäms vid ingången av året.</li>
+<li>Fatta formellt beslut om utdelning på bolagsstämma.</li>
+<li>Se över sparat utdelningsutrymme och planera uttag – ingen ränteuppräkning längre.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp är byggt för hantverkare och byggföretag, inte för skattekonsulter – men rätt underlag gör lön-mot-utdelning-beslutet enklare. I ByggExp håller du ordning på tidrapporter, fakturor och projektekonomi så att du snabbt ser bolagets faktiska lönesumma och resultat, vilket är exakt de siffror gränsbeloppet vilar på. Med korrekt bokförd arbetskostnad och löneunderlag blir avstämningen med din redovisningskonsult en kontroll i stället för ett detektivarbete. Vi ger inte skatterådgivning – men vi ger dig siffrorna som beslutet bygger på.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är de nya 3:12-reglerna verkligen beslutade?</h3>
+<p>Ja. Riksdagen beslutade dem 26 november 2025 (SFS 2025:1361) och de gäller från 1 januari 2026. De tillämpas första gången för beskattningsår som börjar efter 31 december 2025, det vill säga för utdelning under 2026 som deklareras på K10 våren 2027. Den kortare karenstiden (4 år) är ett undantag – den tillämpas först för beskattningsår som börjar efter 31 december 2026.</p>
+<h3>Måste jag ta ut lön nu när löneuttagskravet är slopat?</h3>
+<p>Du är inte tvingad, men det lönar sig oftast. 50x-taket innebär att det lönebaserade utrymmet aldrig kan bli större än 50 gånger din egen kontanta årslön – i praktiken en låg tröskel, men noll lön ger noll utrymme. Framför allt ger lön pension, sjukpenning och föräldrapenning som utdelning aldrig ger, och du kan optimera skatten mot brytpunkten.</p>
+<h3>Vilket års löner styr min utdelning 2026?</h3>
+<p>Gränsbeloppet för utdelning under 2026 beräknas med de nya reglerna men på löneunderlaget från 2025. Du måste också äga andelarna vid ingången av 2026 för att få tillgodoräkna årets gränsbelopp.</p>
+<h3>Hur mycket lön ska jag ta ut om jag vill optimera skatten?</h3>
+<p>En vanlig tumregel 2026 är lön upp till den statliga brytpunkten, cirka 55 000 kr/mån, och överskottet som lågbeskattad utdelning inom gränsbeloppet. Kontrollera samtidigt att årslönen räcker för att inte kapa det lönebaserade utrymmet via 50x-taket. Exakt nivå beror på din lönesumma – stäm av med din konsult.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att räkna på ditt bolags siffror i <a href="/sv/verktyg">våra gratis verktyg för byggföretag</a>, och sätt rätt timpris för att bära den lön du planerar att ta ut. Vill du se hur ByggExp ger dig underlagen för lön- och utdelningsbeslutet i praktiken? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/nya-3-12-regler-2026">Nya 3:12-reglerna 2026 – så påverkas ditt bygg-AB</a>, <a href="/sv/blog/k10-blankett-2026">K10-blanketten 2026 steg för steg</a> och <a href="/sv/blog/periodiseringsfond-byggbolag">Periodiseringsfond för byggbolag</a>.</p>
+
+<p><em>Den här artikeln är generell information och inte skatterådgivning. Stäm alltid av din situation med din redovisningskonsult eller skatterådgivare.</em></p>
+`;
+
+const A_LON_ELLER_UTDELNING_BYGGBOLAG_2026: BlogPost = {
+  _id: "code-"+"lon-eller-utdelning-byggbolag-2026",
+  title: "Lön eller utdelning i bygg-AB 2026 – nya 3:12-reglerna", slug: "lon-eller-utdelning-byggbolag-2026", locale: "sv",
+  excerpt: "De nya 3:12-reglerna 2026 slopar löneuttagskravet – men lön lönar sig fortfarande. Så beräknas gränsbeloppet, så fungerar 50x-taket och här går brytpunkten.", tag: "Skatt",
+  coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_LON_ELLER_UTDELNING_BYGGBOLAG_2026_HTML,
+  seoTitle: "Lön eller utdelning bygg-AB 2026 | ByggExp", seoDescription: "Nya 3:12-reglerna 2026 för fåmans-bygg-AB: så beräknas gränsbeloppet, hur 50x-taket räknas på årslön och var brytpunkten mellan lön och utdelning går.",
+  seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T23:00:00.000Z", createdAt: "2026-08-19T23:00:00.000Z", updatedAt: "2026-08-19T23:00:00.000Z",
+};
+
+const A_TAPET_ATGANG_RULLAR_HTML = `
+<p>Fel rullantal äter marginalen från båda hållen. Köper du för många rullar sitter du med osäljbart lager i ett unikt mönster; köper du för få stannar jobbet mitt i väggen medan du väntar på en efterbeställning som dessutom riskerar fel färgparti. För dig som tapetserar eller målar på uppdrag handlar rätt <strong>tapet åtgång rullar beräkna</strong> därför inte om hobbymatematik, utan om att offerera en yta du faktiskt kan leverera på utsatt tid.</p>
+
+<p>Vill du räkna snabbt inför en offert kan du mata in mått och mönsterrapport i vår gratis <a href="/sv/verktyg/tapet-kalkylator">tapetkalkylator</a> – men förstår du logiken bakom siffrorna kan du också försvara dem för kunden. Här går vi igenom hela beräkningen steg för steg.</p>
+
+<h2>Standardmåtten du utgår från</h2>
+<p>En svensk standardtapetrulle mäter 10,05 m på längden och 0,53 m på bredden, vilket ger cirka 5,3 m² per rulle. Det är en bra tumregel, men aldrig en sanning du blint förlitar dig på i offert. Non-woven-tapeter (vlies) är ofta 0,68 m eller 1,06 m breda, och då förändras både antalet våder per vägg och hur du kapar. Kontrollera alltid produktbladet för det specifika mönstret innan du räknar – bredd, längd och mönsterrapport står där.</p>
+
+<h2>Mönsterrapport och passningstyp avgör allt</h2>
+<p>Mönsterrapporten är avståndet innan mönstret upprepar sig, till exempel 53 cm. Ju större rapport, desto mer material kapar du bort för att få våderna att matcha. Etikettsymbolerna talar om hur mönstret ska passas:</p>
+<ul>
+<li><strong>Fri passning</strong> – mönstret kan kapas var som helst. Minst spill, räkna nästan som enfärgat.</li>
+<li><strong>Rak passning</strong> – alla våder kapas lika och möts på samma höjd. Måttligt spill.</li>
+<li><strong>Förskjuten passning</strong> – anges som till exempel <em>64/32</em> (64 cm rapport, 32 cm förskjutning i varannan våd). Ger mest spill, och åtgången ökar med rapportens storlek – räkna med i storleksordningen 30–50 % högre materialåtgång än enfärgat, och ännu mer vid riktigt stora rapporter.</li>
+</ul>
+<p>Passningstypen är alltså det som skiljer en billig vägg från en dyr, även när ytan är exakt densamma. Missar du det i kalkylen bränner den förskjutna rapporten din marginal.</p>
+
+<h2>Steg-för-steg-formeln</h2>
+<ol>
+<li><strong>Mät väggbredden i löpmeter</strong> och dela med vådbredden (0,53 m för standard). Det ger antalet våder du behöver. Runda alltid upp.</li>
+<li><strong>Räkna vådlängden</strong> = vägghöjd + passningsmån, avrundat uppåt till närmaste hela mönsterrapport. Vid 2,4 m takhöjd och 53 cm rapport blir det fem hela rapporter, alltså en vådlängd på 2,65 m (inte 2,4 m).</li>
+<li><strong>Våder per rulle</strong> = rullängden 10,05 m ÷ vådlängden. 10,05 ÷ 2,65 = 3 hela våder per rulle (2,10 m blir över på rullen – för kort för en fjärde hel våd).</li>
+<li><strong>Antal rullar</strong> = totalt antal våder ÷ våder per rulle, avrundat uppåt.</li>
+</ol>
+<p>Behöver du bara ytan snabbt för att stämma av mot ett produktblad kan du använda vår <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylator</a> och räkna om till rullar därifrån.</p>
+
+<h2>Räkneexempel för offert</h2>
+<p>Ta ett rum med 2,4 m takhöjd. Samma vägg ger olika rullantal beroende på tapeten:</p>
+<ul>
+<li><strong>Enfärgat / fri passning:</strong> cirka 4 våder per rulle (vådlängd nära 2,4 m).</li>
+<li><strong>Rak passning</strong> (rapport 53 cm): cirka 3 våder per rulle (vådlängd 2,65 m).</li>
+<li><strong>Förskjuten passning:</strong> oftast också cirka 3 våder per rulle, men du lägger på en extra rapport för att förskjuta mönstret (vådlängd upp mot 3,18 m) vilket ökar spillet per våd – och vid stora rapporter kan du tappa till 2 våder per rulle.</li>
+</ul>
+<p>Säg att väggarna kräver 12 våder. Enfärgat blir det 3 rullar (12 ÷ 4). Vid rak passning 4 rullar (12 ÷ 3). Vid förskjuten passning oftast också 4 rullar, men eftersom spillet växer med rapporten kan en stor rapport dra ner till 2 våder per rulle och kräva upp mot 6 rullar – alltså i storleksordningen 30–50 % mer material än enfärgat, och upp mot det dubbla i värsta fallet, på exakt samma yta. Det är den här skillnaden som måste synas i din offert, inte upptäckas när tapeten redan är beställd.</p>
+
+<h2>Spill, partinummer och säkerhetsmarginal</h2>
+<p>Lägg alltid på 1–2 extra rullar utöver den teoretiska åtgången, särskilt vid förskjuten passning. Två skäl: kap och feltryck händer, och du vill säkra samma <strong>partinummer</strong> (färgparti/batch) på hela leveransen. En efterbeställning kan komma från ett annat parti med synlig nyansskillnad – och då syns skarven mitt på väggen. Spara dessutom en restrulle åt kunden för framtida lagning eller reklamation.</p>
+
+<h2>Prissätt jobbet rätt</h2>
+<p>Tapetsering prissätts via ackordsprislistan och mätningsavtalet (MTK). Måleriavtalet mellan Byggnads och Måleriföretagen gäller 1 maj 2025–30 apr 2027, och från och med år 2 (1 maj 2026) höjs ackordsprislistan med 2,88 %, samtidigt som lägstalönen är 211,45 kr/tim. Poängen med ackordet är att en effektiv målare får betalt för utfört och uppmätt arbete i stället för gissad tid – basera därför offerten på mätbar yta och passningstyp, inte på magkänsla.</p>
+<p>Normal momssats på måleri- och byggtjänster är 25 %. Fakturerar du ett annat byggföretag gäller omvänd byggmoms – du fakturerar utan moms, märker fakturan med "Omvänd skattskyldighet för byggtjänster gäller" och anger köparens momsnummer. Köparen redovisar då momsen själv.</p>
+
+<h2>ROT-avdraget 2026 i offerten</h2>
+<p>Tapetsering och målning räknas som renovering och är godkända ROT-arbeten. Från 2026 är ROT-avdraget 30 % av <strong>arbetskostnaden</strong> – den tillfälliga höjningen till 50 % upphörde 31 december 2025. Taket är 50 000 kr per person och år, med ett gemensamt tak för ROT och RUT på 75 000 kr per person. De 30 procenten ges på arbetskostnad upp till 166 667 kr. Material och resor ger inget ROT. Avdraget gäller per person, inte per fastighet, så två delägare kan utnyttja var sitt tak. Separera därför arbete och material tydligt i offerten så att kunden ser sitt korrekta avdrag.</p>
+
+<h2>Checklista före du skickar offert</h2>
+<ul>
+<li>Uppmätt vägghöjd och total väggbredd i löpmeter.</li>
+<li>Mönsterrapport och passningstyp (fri / rak / förskjuten) från produktbladet.</li>
+<li>Rullbredd kontrollerad (0,53 m standard eller 0,68/1,06 m non-woven).</li>
+<li>Beräknade våder per rulle och totalt antal rullar, avrundat uppåt.</li>
+<li>Spillmarginal 1–2 rullar och samma partinummer bokat.</li>
+<li>Arbete och material separerat, ROT 30 % redovisat per person.</li>
+<li>Rätt moms – 25 % eller omvänd byggmoms mot byggföretag.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp lägger du in mått, mönsterrapport och passningstyp och får ut både uppskattad yta och antal rullar med spillmarginal, så att kalkylen bygger på mätbara tal i stället för magkänsla. Därifrån bygger du offerten med arbete och material på separata rader, rätt momshantering och ROT-avdraget uträknat per person. Verktyget ersätter inte din yrkesbedömning av väggen – men det gör att samma siffror följer med från kalkyl till faktura utan att du räknar om dem tre gånger.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur många kvadratmeter är en tapetrulle?</h3>
+<p>En svensk standardrulle på 10,05 × 0,53 m motsvarar cirka 5,3 m². Non-woven-tapeter är bredare (0,68 eller 1,06 m) och täcker mer per rulle, så kontrollera alltid produktbladet innan du räknar.</p>
+<h3>Hur mycket extra tapet ska jag räkna för mönsterpassning?</h3>
+<p>Vid rak passning tappar du ofta en våd per rulle jämfört med enfärgat. Vid förskjuten passning ökar åtgången med rapportens storlek – räkna med i storleksordningen 30–50 % mer, och upp mot det dubbla vid stora rapporter, eftersom du kapar bort en extra rapport för att förskjuta mönstret i varannan våd.</p>
+<h3>Ger tapetsering ROT-avdrag 2026?</h3>
+<p>Ja. Tapetsering och målning är godkända ROT-arbeten. Avdraget är 30 % av arbetskostnaden, max 50 000 kr per person och år. Material och resor ger inte ROT, så de kostnaderna måste redovisas separat.</p>
+<h3>Varför är partinummer viktigt när jag beställer tapet?</h3>
+<p>Tapet i samma mönster men olika färgparti kan skilja sig något i nyans. Beställer du för lite och måste fylla på från ett annat parti kan skarven synas. Köp därför allt på en gång, med 1–2 rullars marginal.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna åtgången på ditt nästa tapetjobb i vår <a href="/sv/verktyg/tapet-kalkylator">tapetkalkylator</a> och bygg vidare till en färdig offert i ByggExp. Vill du se hur kalkyl, ROT och fakturering hänger ihop i praktiken – <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/spillprocent-bygg-material">Spillprocent för byggmaterial</a>, <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a> och <a href="/sv/blog/spackel-atgang-vagg-tak">Spackelåtgång på vägg och tak</a>.</p>
+`;
+
+const A_TAPET_ATGANG_RULLAR: BlogPost = {
+  _id: "code-"+"tapet-atgang-rullar",
+  title: "Tapet åtgång: räkna rullar rätt inför offerten", slug: "tapet-atgang-rullar", locale: "sv",
+  excerpt: "Räkna rätt antal tapetrullar inför offerten – mönsterrapport, passningstyp, spill och ROT 2026, steg för steg.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/tapet-preview.webp", contentHtml: A_TAPET_ATGANG_RULLAR_HTML,
+  seoTitle: "Tapet åtgång – räkna rullar rätt | ByggExp", seoDescription: "Så räknar du tapetåtgång i rullar inför offert: mönsterrapport, passningstyp, spill och ROT-avdrag 2026. Steg för steg för hantverkare och byggföretag.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/tapet-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T23:03:00.000Z", createdAt: "2026-08-19T23:03:00.000Z", updatedAt: "2026-08-19T23:03:00.000Z",
+};
+
+const A_SERVICEAVTAL_UNDERHALLSAVTAL_BYGGFORETAG_HTML = `
+<p>De flesta byggföretag lever på projekt: en topp när ordern rullar in, ett hål när den är klar. Löpande service- och underhållsavtal löser precis det problemet. De ger återkommande intäkter (recurring revenue), jämnare beläggning mellan de stora jobben och en kundrelation som återkommer år efter år i stället för att ta slut vid slutbesiktning. Men ett serviceavtal som är slarvigt prissatt eller vagt skrivet blir snabbt en förlustaffär som binder resurser utan att ge marginal.</p>
+
+<p>Grunden i ett bra serviceavtal är samma sak som i ett bra projekt: en tydlig offert. Börja i <a href="/sv/verktyg/offert-mall">vår gratis offertmall -&gt;</a> och bygg vidare med de avtalspunkter och prismodeller vi går igenom nedan.</p>
+
+<h2>Vad ett serviceavtal faktiskt är — och inte är</h2>
+<p>Ett enstaka reparationsuppdrag löser ett problem en gång. Ett serviceavtal förbinder dig i stället att upprätthålla en funktion över tid genom återkommande arbete: planerade underhållsronder, tillsyn, akuta åtgärder inom en viss inställelsetid. Kunden köper trygghet och tillgänglighet, inte en enskild insats.</p>
+<p>Typiska motparter är bostadsrättsföreningar, fastighetsägare, förvaltningsbolag och företag med egna lokaler — men även villaägare som vill ha ett fast underhållsprogram. Skillnaden i avtalet är att omfattningen definieras framåt i tiden, inte som ett avgränsat leveransobjekt.</p>
+
+<h2>Rätt avtalsgrund: ABFF och Aff-konceptet</h2>
+<p>För projekt använder branschen AB, ABT och ABK. Motsvarigheten för återkommande drift, underhåll och service är <strong>ABFF</strong> (Allmänna bestämmelser för entreprenader inom fastighetsförvaltning och service) inom Aff-konceptet. Det är standardavtalsstrukturen för just den här typen av löpande tjänster.</p>
+<p>Viktigt: ABFF gäller inte automatiskt som lag. Det måste <strong>åberopas uttryckligen</strong> i avtalet för att bli en del av det. Oavsett vilken avtalsgrund du väljer ska du reglera:</p>
+<ul>
+<li><strong>Omfattning</strong> — vad ingår i det fasta åtagandet och vad är tilläggsarbete.</li>
+<li><strong>SLA och inställelsetider</strong> — hur snabbt du ska vara på plats vid fel, och när.</li>
+<li><strong>Gränsdragning</strong> — planerat underhåll vs. akuta åtgärder, material vs. arbete.</li>
+<li><strong>Uppsägning och avtalstid</strong> — löptid, förnyelse och uppsägningsvillkor.</li>
+</ul>
+
+<h2>Prismodeller för återkommande intäkter</h2>
+<p>Vanliga ersättningsformer är fast pris, löpande räkning, takpris och budgetpris. För serviceavtal fungerar sällan en enda modell. Den vanligaste och mest robusta lösningen är en kombination:</p>
+<ul>
+<li><strong>Fast abonnemang</strong> (månads-, kvartals- eller årsretainer) som täcker beredskap och planerat underhåll — det är detta som ger dig den förutsägbara intäkten.</li>
+<li><strong>Löpande räkning</strong> för akuta åtgärder och tillkommande arbete utanför programmet. Löpande räkning är den mer riskneutrala formen: du får betalt för nedlagt arbete och havda kostnader.</li>
+<li><strong>Takpris</strong> där kunden vill ha ett kostnadstak men du ändå debiterar faktisk tid upp till taket.</li>
+</ul>
+<p>Glöm inte att kalkylera in <strong>restid och beredskap</strong> i det fasta abonnemanget. Ett åtagande om två timmars inställelsetid har ett värde även de månader inget händer — det är kapacitet du reserverar.</p>
+
+<h2>Så sätter du priset</h2>
+<p>Utgå från din verkliga timkostnad plus påslag. Räkna ut vad en debiterbar timme faktiskt måste ge med <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a>, lägg ovanpå det ett underhållsprogram fördelat över året, och sätt marginal och riskpåslag utifrån hur bunden du blir.</p>
+<p>Ett förenklat räkneexempel för en BRF-kund:</p>
+<ol>
+<li>Planerat underhåll: 4 ronder/år á 6 timmar = 24 timmar.</li>
+<li>Beredskap och akutåtgärder (uppskattat snitt): 12 timmar/år.</li>
+<li>Totalt ca 36 timmar/år á debiterbart timpris + påslag för restid.</li>
+<li>Dela på 12 månader → en fast månadsavgift som täcker programmet, plus löpande räkning för allt utöver.</li>
+</ol>
+<p>För avtal som löper längre än 12 månader ska du <strong>bygga in indexreglering</strong> så att inflation och stigande lönekostnad inte äter upp marginalen. Använd KPI, byggkostnadsindex (BKI) eller entreprenadindex. En prisjusteringsklausul anger grundpriset (anbudspriset) och det slutliga priset (grundpris plus indexpåslag). Utan indexklausul är ett treårigt fastprisavtal en tickande förlust.</p>
+
+<h2>Moms och skatt du måste ha rätt</h2>
+<p>Här gör många fel — och fel i momsen på ett löpande avtal upprepas varje faktura.</p>
+<ul>
+<li><strong>Omvänd byggmoms är tvingande.</strong> Säljer du byggtjänster — inklusive reparation och underhåll av fastighet — till en köpare som själv säljer byggtjänster, ska du fakturera utan moms, ange köparens momsnummer och märka fakturan &quot;Omvänd skattskyldighet för byggtjänster gäller&quot;. Regeln är inte valfri. Vid uppdrag med flera tjänster styr huvudtjänsten: omfattas den av omvänd moms gäller det hela uppdraget. Ordinarie byggmoms är annars 25 %.</li>
+<li><strong>ROT-avdrag gäller bara privatbostäder.</strong> Från 1 januari 2026 är ROT 30 % av arbetskostnaden med tak 50 000 kr per person och år. Avdraget gäller endast arbetskostnad — aldrig material, resor eller utrustning — och hanteras via fakturamodellen. Företaget måste vara godkänt för F-skatt, och ansökan om utbetalning ska ha kommit in till Skatteverket senast 31 januari året efter att kunden betalade.</li>
+<li><strong>ROT och RUT delar ett gemensamt tak.</strong> Rot och rut räknas ihop och är tillsammans högst 75 000 kr per person och år, varav rot får uppgå till högst 50 000 kr (rut ger 50 % av arbetskostnaden). Det är alltså inte två separata tak: har kunden redan använt t.ex. 40 000 kr i rut återstår bara 35 000 kr för rot samma år. Dubbelkolla kundens kvarvarande utrymme mot Skatteverket innan du utlovar något.</li>
+</ul>
+
+<h2>Kassaflöde och betalningsvillkor</h2>
+<p>Ett återkommande avtal är en kassaflödesmaskin — om du sätter villkoren rätt. <strong>Fakturera abonnemanget i förskott</strong>, håll korta betalningsvillkor och reglera dröjsmålsräntan. Enligt räntelagen är dröjsmålsräntan referensräntan plus 8 procentenheter om inget annat avtalats. Riksbankens referensränta är 2,00 % för första halvåret 2026, vilket ger 10 % dröjsmålsränta. Vid B2B får du dessutom ta ut en förseningsersättning på 450 kr utan särskilt krav.</p>
+<p>För de löpande delarna av avtalet kan pågående arbeten intäktsföras genom successiv vinstavräkning, så att intäkten matchar nedlagt arbete över tid.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig hålla ihop hela serviceavtalskedjan: du bygger offerten och avtalsunderlaget från mallen, kalkylerar timpriset så att det fasta abonnemanget faktiskt bär sina kostnader, och håller koll på nedlagd tid per kund så att gränsen mellan fast åtagande och löpande tilläggsarbete blir spårbar. Underlagen sparas samlat, vilket underlättar när du ska fakturera återkommande, tillämpa rätt momshantering och behålla dokumentation. Kom ihåg att räkenskapsinformation ska sparas i 7 år. Verktyget skriver inte avtalet åt dig och ersätter inte juridisk rådgivning — det ger dig struktur och siffror som håller.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Ska serviceavtal med ett annat byggföretag faktureras med eller utan moms?</h3>
+<p>Utan moms. Säljer du underhålls- eller reparationstjänster på fastighet till en köpare som själv säljer byggtjänster gäller omvänd skattskyldighet. Fakturera utan moms, ange köparens momsnummer och märk fakturan med att omvänd skattskyldighet gäller. Regeln är tvingande.</p>
+<h3>Kan en BRF-kund använda ROT-avdrag på ett serviceavtal?</h3>
+<p>Nej. ROT gäller arbete i privatbostäder för fysiska personer. En bostadsrättsförening är en juridisk person och får inte ROT-avdrag. Enskilda medlemmar kan ha rätt till ROT för arbete inne i den egna lägenheten under vissa förutsättningar, men inte föreningen för gemensamma ytor.</p>
+<h3>Hur hindrar jag att inflationen äter upp marginalen på ett flerårigt avtal?</h3>
+<p>Skriv in en indexklausul. För avtal längre än 12 månader kopplar du priset till KPI, byggkostnadsindex eller entreprenadindex. Klausulen anger grundpris och slutligt pris (grundpris plus indexpåslag) så att kostnadsökningen fördelas mellan dig och kunden.</p>
+<h3>Fast pris eller löpande räkning för serviceavtal?</h3>
+<p>Kombinera. Lägg det planerbara underhållet och beredskapen som ett fast abonnemang — det ger den återkommande intäkten — och fakturera akuta åtgärder på löpande räkning. Då slipper du ta risken för oförutsägbara insatser samtidigt som kunden får ett förutsägbart baspris.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att bygga ditt serviceavtalsunderlag i <a href="/sv/verktyg/offert-mall">offertmallen</a> och kontrollera att timpriset bär abonnemanget med <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a>. Vill du se hur ByggExp håller ihop återkommande fakturering och tidsuppföljning? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a>, <a href="/sv/blog/timpris-hantverkare">Rätt timpris för hantverkare</a> och <a href="/sv/blog/tackningsbidrag-byggforetag">Täckningsbidrag för byggföretag</a>.</p>
+`;
+
+const A_SERVICEAVTAL_UNDERHALLSAVTAL_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"serviceavtal-underhallsavtal-byggforetag",
+  title: "Serviceavtal och underhållsavtal för byggföretag", slug: "serviceavtal-underhallsavtal-byggforetag", locale: "sv",
+  excerpt: "Löpande service- och underhållsavtal ger byggföretag återkommande intäkter och jämnare beläggning. Så sätter du pris, avtalsgrund och moms rätt.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_SERVICEAVTAL_UNDERHALLSAVTAL_BYGGFORETAG_HTML,
+  seoTitle: "Serviceavtal för byggföretag | ByggExp", seoDescription: "Så bygger du lönsamma service- och underhållsavtal: rätt avtalsgrund (ABFF), prismodeller, indexklausul, omvänd byggmoms och korrekt rot-hantering 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T23:06:00.000Z", createdAt: "2026-08-19T23:06:00.000Z", updatedAt: "2026-08-19T23:06:00.000Z",
+};
+
+const A_ARBETSRESA_TJANSTERESA_BYGG_AVDRAG_HTML = `
+<p>En resa till bygget kan vara två helt olika saker i skattelagens ögon. Är den en <strong>arbetsresa</strong> är den en privatresa som firman inte får betala skattefritt. Är den en <strong>tjänsteresa</strong> öppnar sig avdragen: milersättning och traktamente utan skatt. Skillnaden avgörs av ett enda begrepp – tjänstestället – och just på växlande byggarbetsplatser gör många fel som kan sluta i förmånsbeskattning och skattetillägg.</p>
+
+<p>Vill du räkna på mil, traktamente och restid för ett faktiskt jobb? Använd <a href="/sv/verktyg">våra gratis kalkylatorer och mallar för bygg -&gt;</a> för att få siffrorna rätt innan du fakturerar eller lönekör.</p>
+
+<h2>Nyckelbegreppet: tjänstestället</h2>
+<p>Allt hänger på var den anställdas tjänsteställe ligger. Skatteverket har tre regler i tur och ordning. <strong>Huvudregeln</strong> säger att tjänstestället är platsen där man utför huvuddelen av arbetet. Det passar dåligt för bygg, där arbetet flyttar mellan objekt. Då gäller <strong>alternativregeln</strong>: tjänstestället blir den plats där den anställda hämtar och lämnar material, verktyg eller förbereder och avslutar arbetet – typiskt en depå, verkstad eller ett kontor. Först om ingen av dessa passar träder <strong>undantagsregeln</strong> in, och då blir bostaden tjänsteställe. Det gäller när arbetsplatserna är spridda och den anställda sällan besöker arbetsgivarens lokal. För byggföretag hamnar bedömningen därför nästan alltid i alternativ- eller undantagsregeln – sällan i huvudregeln.</p>
+
+<h2>Var ligger byggarbetarens tjänsteställe?</h2>
+<p>Skatteverket har en tydlig tumregel. Besöker den anställda arbetsgivarens lokal, depå eller kontor i genomsnitt <strong>mer än en gång per vecka</strong>, blir den platsen tjänsteställe. Sker besöken bara 2–3 gånger i månaden trots att byggarbetsplatserna växlar, blir <strong>bostaden</strong> tjänsteställe enligt undantagsregeln. Bedömningen görs över en längre period – ungefär två år vid tillsvidareanställning – så en enstaka avvikande vecka ändrar inget.</p>
+<p>Det är arbetsgivaren som ansvarar för bedömningen, och den styr hela lönehanteringen. Har snickaren sitt tjänsteställe i firmans depå är resan hemifrån dit en arbetsresa, medan resan från depån ut till objektet är en tjänsteresa. Är bostaden tjänsteställe blir i stället resan hemifrån direkt till bygget en tjänsteresa från första metern. Två anställda på samma firma kan alltså ha olika utfall beroende på hur ofta de faktiskt kör in till depån.</p>
+
+<h2>Arbetsresa = privatresa</h2>
+<p>En resa mellan bostad och tjänsteställe är en arbetsresa och räknas skattemässigt som en privatresa. Betalar firman den – kontant, med drivmedelskort eller genom att bekosta pendlingen – uppstår en <strong>skattepliktig förmån</strong> värderad till marknadsvärdet. Arbetsgivaren ska då göra skatteavdrag och betala arbetsgivaravgifter på beloppet. Det finns med andra ord ingen skattefri väg att betala den anställdas väg hemifrån till tjänstestället. Den anställda kan i sin tur göra reseavdrag i deklarationen, men bara för den del av kostnaden som överstiger 15 000 kr per år (inkomstår 2026), och bil kräver normalt minst 5 km avstånd och minst 2 timmars tidsvinst mot kollektivtrafik.</p>
+
+<h2>Tjänsteresa: nu öppnar avdragen</h2>
+<p>En tjänsteresa är en resa från tjänstestället till en tillfällig arbetsplats. Först då får firman betala ut ersättning skattefritt. <strong>Skattefri milersättning 2026</strong> är oförändrad: 25 kr/mil (2,50 kr/km) med egen bil, 12 kr/mil för förmånsbil som drivs med bensin, diesel eller etanol, och 9,50 kr/mil för elförmånsbil. Betalar firman mer än schablonen beskattas den överskjutande delen som lön. Vid tjänsteresa med övernattning kan dessutom traktamente betalas ut skattefritt. Det är hela poängen med gränsdragningen: samma bilresa kan vara en icke avdragsgill privatresa eller en skattefri tjänsteresa, beroende på var tjänstestället placerats.</p>
+
+<h2>Traktamente 2026 i praktiken</h2>
+<p>De skattefria schablonbeloppen inrikes höjdes 2026. Ett <strong>helt dygn ger 450 kr</strong> när firman inte betalar för boendet – heldagstraktamentet är 300 kr, halvdag 150 kr och nattraktamente 150 kr (upp från 290/145/145 kr året innan). Två villkor måste vara uppfyllda: tjänsteresan ska innebära <strong>minst en övernattning</strong>, och resmålet ska ligga <strong>minst 50 km från både bostaden och tjänstestället</strong>. Bjuds den anställda på fria måltider reduceras traktamentet – för en inrikes heldag med minus 60 kr för frukost, minus 105 kr för lunch och minus 105 kr för middag. Är alla tre måltiderna fria reduceras traktamentet med 270 kr, det vill säga cirka 90 procent av maximibeloppet – bara knappt 10 procent (30 kr) återstår skattefritt för småutgifter. En dagsresa utan övernattning ger alltså inget skattefritt traktamente alls, oavsett hur långt bort bygget ligger.</p>
+
+<h2>Tremånadersregeln och de nya 2026-reglerna</h2>
+<p>Drar en tjänsteresa ut på tiden trappas det skattefria traktamentet ner. Efter <strong>tre månader</strong> på samma ort sänks det till 70 procent, alltså 210 kr per heldag. Efter <strong>två år</strong> sänks det till 50 procent, 150 kr per heldag. Ett viktigt undantag gäller den som arbetar under ständig förflyttning med rörlig arbetsplats – då börjar treperioden aldrig löpa.</p>
+<p>Genom Skatteverkets allmänna råd SKV A 2025:5 skärptes reglerna. Avbrott kortare än fyra veckor samt semester och sjukdom <strong>förlänger</strong> treperioden i stället för att bryta den, men förlängning sker bara under tid den anställda skulle ha arbetat – helger räknas inte för den som jobbar måndag till fredag. Samtidigt höjdes dokumentationskraven: datum, syfte, avrese- och hemkomsttid samt resmål måste framgå för varje resa. Slarv med underlaget är den vanligaste orsaken till att skattefriheten ifrågasätts i efterhand.</p>
+
+<h2>Kollektivavtalet vs skattereglerna</h2>
+<p>Byggavtalet mellan Byggföretagen och Byggnads (2025-05-01 till 2027-04-30) har egna ersättningar som inte alltid matchar skattereglerna. Resekostnadsersättningen med egen bil är <strong>2,50 kr/km, alltså 25 kr/mil</strong> – samma nivå som den skattefria schablonen, vilket innebär att avtalets milersättning ryms inom det skattefria beloppet. Avtalstraktamentet är enligt Byggnads 390 kr per dygn och förutsätter mer än 70 km mellan bostad och arbetsplats samt övernattning; betalar arbetsgivaren för boendet reduceras beloppet med 35 procent. Poängen är ändå principiell: en ersättning kan vara avtalsenlig utan att vara skattefri. Betalar firman mer än de skattefria schablonerna – 25 kr/mil för milersättning eller maximibeloppet för traktamente – ska den <strong>överskjutande delen alltid lönebeskattas</strong>, även om den följer kollektivavtal. Avtalsenligt är inte samma sak som skattefritt.</p>
+
+<h2>Checklista</h2>
+<ul>
+<li>Fastställ varje anställds tjänsteställe enligt huvud-, alternativ- eller undantagsregeln – och dokumentera bedömningen.</li>
+<li>Räkna besöken i depån: mer än en gång per vecka i snitt = depån är tjänsteställe; annars ofta bostaden.</li>
+<li>Behandla resa bostad–tjänsteställe som arbetsresa (privat) och betala den aldrig skattefritt.</li>
+<li>Betala mil och traktamente skattefritt endast för tjänsteresor från tjänstestället till tillfälliga objekt.</li>
+<li>Kontrollera 50-km-gränsen och övernattningskravet innan du betalar traktamente.</li>
+<li>Bevaka tremånadersregeln och notera avbrott – kortare än fyra veckor förlänger perioden.</li>
+<li>Skilj på avtalsersättning och skattefri schablon; lönebeskatta den överskjutande delen.</li>
+<li>Spara reseunderlag med datum, syfte, tider och resmål i 7 år.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper firman att hålla ordning på underlaget som skattereglerna kräver. Tidrapporteringen kopplar restid och körningar till rätt projekt, så att du i efterhand kan visa vilka resor som var tjänsteresor och vilka som var arbetsresor. Uppgifterna – datum, projekt och sträckor – samlas per anställd och blir ett spårbart underlag för lön och deklaration. ByggExp gör inte den skattemässiga bedömningen av tjänsteställe åt dig, men systemet ger dig den dokumentation som behövs för att bedömningen ska hålla vid en granskning, och som är enkel att spara de sju år du är skyldig att bevara den.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är resan till bygget avdragsgill för firman?</h3>
+<p>Det beror på var tjänstestället ligger. Är resan en tjänsteresa från tjänstestället till en tillfällig arbetsplats får firman betala milersättning och traktamente skattefritt. Är den en arbetsresa mellan bostad och tjänsteställe är den en privatresa som blir en skattepliktig förmån om firman betalar den.</p>
+<h3>Vad innebär 50-kilometersgränsen?</h3>
+<p>För skattefritt traktamente måste resmålet ligga minst 50 km från både bostaden och tjänstestället, och resan måste omfatta minst en övernattning. Uppfylls inte båda villkoren får inget skattefritt traktamente betalas ut.</p>
+<h3>Räknas restiden till bygget som arbetstid?</h3>
+<p>Skattereglerna avgör vad som är skattefritt, inte om restiden är betald. Byggavtalet har egna regler om restids- och reseersättning för längre resor, men de följer inte automatiskt skattereglerna för mil och traktamente. En ersättning kan alltså vara avtalsenlig och ändå skattepliktig om den överstiger de skattefria schablonerna.</p>
+<h3>Kan bostaden vara tjänsteställe för en byggarbetare?</h3>
+<p>Ja, enligt undantagsregeln. Om arbetsplatserna är spridda och den anställda bara besöker arbetsgivarens depå eller kontor 2–3 gånger i månaden blir bostaden tjänsteställe. Då blir resan hemifrån direkt till bygget en tjänsteresa.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att räkna på ett faktiskt jobb i <a href="/sv/verktyg">våra gratis bygg-kalkylatorer</a> och sätt rätt siffror på mil, traktamente och restid. Vill du se hur ByggExp samlar reseunderlaget automatiskt per projekt och anställd? <a href="/sv/contact">Boka en demo -&gt;</a> så visar vi upplägget för din firma.</p>
+
+<p>Relaterat: <a href="/sv/blog/milersattning-2026">Milersättning 2026</a>, <a href="/sv/blog/traktamente-byggnadsarbetare-2026">Traktamente för byggnadsarbetare 2026</a> och <a href="/sv/blog/korjournal-krav-skatteverket-bygg">Körjournal – Skatteverkets krav för bygg</a>.</p>
+`;
+
+const A_ARBETSRESA_TJANSTERESA_BYGG_AVDRAG: BlogPost = {
+  _id: "code-"+"arbetsresa-tjansteresa-bygg-avdrag",
+  title: "Arbetsresa eller tjänsteresa – avdrag för byggföretag", slug: "arbetsresa-tjansteresa-bygg-avdrag", locale: "sv",
+  excerpt: "Tjänstestället avgör om resan till bygget är en privat arbetsresa eller en avdragsgill tjänsteresa. Så sätter du milersättning och traktamente rätt 2026.", tag: "Skatt",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_ARBETSRESA_TJANSTERESA_BYGG_AVDRAG_HTML,
+  seoTitle: "Arbetsresa vs tjänsteresa i bygg | ByggExp", seoDescription: "Arbetsresa eller tjänsteresa? Tjänstestället avgör om byggfirman får betala milersättning och traktamente skattefritt. 2026 års belopp och regler.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T23:09:00.000Z", createdAt: "2026-08-19T23:09:00.000Z", updatedAt: "2026-08-19T23:09:00.000Z",
+};
+
+const A_RIVNINGSLOV_RIVNINGSANMALAN_BYGG_HTML = `
+<p>Rivning är sällan &quot;bara att köra igång&quot;. I nästan alla fall krävs antingen rivningslov eller rivningsanmälan – och oavsett vilket får spaden inte sättas i väggen förrän byggnadsnämnden har gett startbesked. Ovanpå det skärptes asbestreglerna den 19 december 2025, vilket flyttar ännu mer ansvar på det byggföretag som utför rivningen. Missar du ett steg riskerar du byggsanktionsavgift och stoppad arbetsplats. Här går vi igenom vad som faktiskt gäller innan rivningen påbörjas.</p>
+
+<p>Grunden för en trygg rivning är dokumentation – kontrollplan, materialinventering och egenkontroll. Bygg upp den strukturerat med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontrollmall -&gt;</a>.</p>
+
+<h2>Rivningslov – när det krävs (PBL 9 kap. 10 §)</h2>
+<p>Inom detaljplan krävs som huvudregel rivningslov för att riva en byggnad eller en del av en byggnad. Det gäller även anläggningar och byggnader som omfattas av rivningsförbud i detaljplanen, samt sådant som är särskilt värdefullt.</p>
+<p>Utanför detaljplan är utgångspunkten den motsatta: rivningslov krävs bara i särskilda fall.</p>
+<ul>
+<li>Inom detaljplan: rivningslov för byggnad eller del av byggnad, samt vid rivningsförbud.</li>
+<li>Utanför detaljplan: endast om områdesbestämmelser kräver det.</li>
+<li>Alltid extra försiktighet vid byggnader med historiskt, kulturhistoriskt, miljömässigt eller konstnärligt värde, eller i särskilt värdefulla bebyggelseområden.</li>
+</ul>
+<p>Är du osäker på vilken kategori objektet hamnar i, kontrollera detaljplan och eventuella områdesbestämmelser hos kommunen innan du lämnar anbud – det påverkar både tidplan och kostnad.</p>
+
+<h2>Rivningsanmälan – gränsen vid 50 m² (PBF 6 kap.)</h2>
+<p>Även när rivningslov inte krävs kan du behöva göra en rivningsanmälan till byggnadsnämnden. Anmälningsplikt gäller när du river en byggnad eller byggnadsdel med en byggnadsarea över 50,0 m². Anmälningsplikten följer av plan- och bygglagen 9 kap. 16 §, och åtgärderna räknas upp i plan- och byggförordningen 6 kap. 1 §.</p>
+<p>Vissa åtgärder är undantagna, exempelvis rivning av vissa komplementbyggnader och ekonomibyggnader för jord- och skogsbruk. Skillnaden mellan lov och anmälan i praktiken är att lovet innebär en formell prövning mot planbestämmelser, medan anmälan i första hand handlar om att nämnden ska kunna säkra att rivningen sker kontrollerat och att avfallet tas om hand rätt. Oavsett vilket spår gäller samma sak i nästa steg: du behöver startbesked.</p>
+
+<h2>Ingen rivning utan startbesked (PBL 10 kap.)</h2>
+<p>Rivning får inte påbörjas förrän byggnadsnämnden har gett startbesked. I startbeskedet fastställs kontrollplanen. Det gäller både lovpliktig och anmälningspliktig rivning – att lov eller anmälan är inlämnad räcker alltså inte.</p>
+<p>Byggnadsnämnden har enligt PBL 9 kap. 27 § tio veckor på sig att handlägga rivningslov. Överskrids tiden ska avgiften reduceras med en femtedel per påbörjad vecka. Tänk också på att avgifterna för lov och anmälan sätts av varje kommun i en egen bygglovstaxa som revideras vid olika tidpunkter – kontrollera därför aktuell taxa hos berörd kommun innan du lämnar anbud. Kontrollansvarig krävs normalt inte vid anmälningspliktig rivning, men nämnden kan besluta att KA behövs om åtgärden är komplicerad (PBL 10 kap. 9–10 §).</p>
+
+<h2>Rivningsplan och kontrollplan – vad dokumentet måste innehålla</h2>
+<p>Kontrollplanen är navet i rivningen. Den ska bland annat redovisa hur farligt avfall och övrigt rivningsavfall tas om hand. En genomtänkt plan innehåller:</p>
+<ul>
+<li>Kontrollpunkter kopplade till varje kritiskt moment i rivningen.</li>
+<li>Vem som är ansvarig för respektive kontroll.</li>
+<li>Hur farligt avfall identifieras, separeras och transporteras.</li>
+<li>Principer för selektiv rivning så att material kan sorteras för återbruk och återvinning.</li>
+<li>Materialinventeringen som bilaga, som underlag för avfallsflödena.</li>
+</ul>
+<p>Selektiv rivning är inte bara en miljöfråga utan direkt kopplad till <a href="/sv/blog/rivningsavfall-sorteringskrav-bygg">sorteringskraven för rivningsavfall</a> – planera för det redan i kontrollplanen.</p>
+
+<h2>Materialinventering och miljöinventering före rivning</h2>
+<p>Innan rivning bör en material- och miljöinventering göras. Syftet är att kartlägga farliga ämnen med mängd och läge så att de kan hanteras rätt. Typiska poster:</p>
+<ul>
+<li>Asbest (isolering, eternit, fix och fog, ventilationskanaler).</li>
+<li>PCB (fogmassor, isolerglas, golv).</li>
+<li>Bly och kvicksilver.</li>
+<li>Impregnerat trä.</li>
+<li>Elavfall och andra farliga fraktioner.</li>
+</ul>
+<p>Inventeringen är särskilt viktig i byggnader uppförda före 1982, eftersom asbestförbudet infördes i Sverige det året. Själva inventeringen och kontrollplanen bör bevaras i minst fem år som underlag för avfallsflödena. Observera dock att register över asbestexponerade arbetstagare och tillhörande medicinska kontroller omfattas av särskilda regler och ska sparas betydligt längre – minst 40 år efter att exponeringen upphört enligt Arbetsmiljöverkets föreskrifter. Blanda alltså inte ihop dessa arkiveringstider. En slarvig inventering är den vanligaste orsaken till dyra stopp mitt i rivningen.</p>
+
+<h2>Nya asbestregler från 19 december 2025 – detta gäller byggföretaget</h2>
+<p>Den 19 december 2025 trädde skärpta, EU-drivna asbestregler i kraft. Det hygieniska gränsvärdet sänktes från 0,1 till 0,01 fibrer per kubikcentimeter luft – en tiofaldig skärpning. Reglerna finns numera i Arbetsmiljöverkets omstrukturerade regelverk (AFS 2023-serien i kraft 1 januari 2025), ändrade genom bland annat AFS 2025:6.</p>
+<p>Utbildningskravet har utökats till fler yrkesgrupper som kan exponeras, exempelvis fastighetsskötare, rörläggare, elektriker, byggarbetare och arbetsledare. Undantaget från läkarundersökning under viss exponeringstid har tagits bort. Rivning och sanering av asbest kräver tillstånd från Arbetsmiljöverket och får bara utföras av behöriga – och asbestarbete ska anmälas till Arbetsmiljöverket i förväg. Tillstånd som beslutats före 19 december 2025 fortsätter gälla. Läs mer i vår genomgång av <a href="/sv/blog/nya-asbestregler-2026">de nya asbestreglerna 2026</a>.</p>
+
+<h2>Vad kostar det att strunta i reglerna</h2>
+<p>Att påbörja rivning utan startbesked eller lov ger byggsanktionsavgift. Som exempel landar rivning av ett enbostadshus på 160 m² BTA utan startbesked på ungefär 76 368 kr, räknat på 2026 års prisbasbelopp om 59 200 kr. Maxtaket för en byggsanktionsavgift är 50 prisbasbelopp, vilket för 2026 motsvarar 2 960 000 kr. Utöver det kan nämnden besluta om rivningsföreläggande. Ansvaret ligger på byggherren och entreprenören – det är alltså sällan lönt att chansa.</p>
+
+<h2>Checklista innan byggföretaget river</h2>
+<ol>
+<li>Kontrollera detaljplan, områdesbestämmelser och eventuellt kulturvärde.</li>
+<li>Sök rivningslov eller lämna rivningsanmälan (gränsen 50 m²).</li>
+<li>Gör material- och miljöinventering, särskilt för hus byggda före 1982.</li>
+<li>Utred asbest och beställ tillstånd/förhandsanmälan till Arbetsmiljöverket vid behov.</li>
+<li>Upprätta kontrollplan med avfallshantering och selektiv rivning.</li>
+<li>Invänta startbesked innan rivningen påbörjas.</li>
+<li>Anlita behörig, utbildad personal för asbestsanering.</li>
+<li>Hantera avfall och farligt avfall enligt sorteringskraven.</li>
+<li>Begär slutbesked när rivningen är klar.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig hålla ihop rivningens dokumentation. Med egenkontrollmallen bygger du kontrollpunkter för varje moment, kopplar ansvarig person och dokumenterar avvikelser – underlag som passar rakt in i kontrollplanen och som du enkelt kan arkivera i minst fem år. Material- och miljöinventeringen kan struktureras på samma sätt, med mängd och läge per fraktion. ByggExp fattar inga myndighetsbeslut och ersätter inte kommunens prövning eller Arbetsmiljöverkets tillstånd – men verktyget ser till att din egen dokumentation är komplett, spårbar och lätt att visa upp vid tillsyn.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Krävs alltid rivningslov för att riva en byggnad?</h3>
+<p>Nej. Inom detaljplan krävs oftast rivningslov, men utanför detaljplan krävs det bara om områdesbestämmelser säger det eller om byggnaden är särskilt värdefull. När lov inte krävs kan rivningsanmälan ändå behövas om byggnadsarean överstiger 50 m².</p>
+<h3>Kan vi börja riva så snart anmälan är inlämnad?</h3>
+<p>Nej. Rivning får inte påbörjas förrän byggnadsnämnden har gett startbesked, oavsett om åtgärden är lov- eller anmälningspliktig. I startbeskedet fastställs kontrollplanen.</p>
+<h3>Behövs kontrollansvarig vid rivning?</h3>
+<p>Vid anmälningspliktig rivning krävs normalt ingen kontrollansvarig. Byggnadsnämnden kan dock besluta att KA behövs om åtgärden bedöms som komplicerad (PBL 10 kap. 9–10 §).</p>
+<h3>Vad innebär de nya asbestreglerna för rivningen?</h3>
+<p>Från 19 december 2025 är det hygieniska gränsvärdet sänkt till 0,01 fibrer per kubikcentimeter, utbildningskravet omfattar fler yrkesgrupper och undantaget från läkarundersökning har tagits bort. Asbestsanering kräver tillstånd och förhandsanmälan till Arbetsmiljöverket.</p>
+
+<h2>Kom igång</h2>
+<p>Planera lov eller anmälan och inventeringen tidigt – det är där tid och pengar vinns. Sätt upp din dokumentation med <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmallen</a> eller utforska fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur ByggExp fungerar i skarpt läge? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/rivningsavfall-sorteringskrav-bygg">Sorteringskrav för rivningsavfall</a>, <a href="/sv/blog/nya-asbestregler-2026">Nya asbestregler 2026</a>, <a href="/sv/blog/startbesked-bygglov-process-2026">Startbesked och bygglovsprocessen 2026</a>.</p>
+`;
+
+const A_RIVNINGSLOV_RIVNINGSANMALAN_BYGG: BlogPost = {
+  _id: "code-"+"rivningslov-rivningsanmalan-bygg",
+  title: "Rivningslov och rivningsanmälan – så gör byggföretaget rätt", slug: "rivningslov-rivningsanmalan-bygg", locale: "sv",
+  excerpt: "Rivningslov eller rivningsanmälan – och alltid startbesked innan spaden sätts i väggen. Så håller byggföretaget ihop lov, kontrollplan och asbestkrav.", tag: "Regelverk",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_RIVNINGSLOV_RIVNINGSANMALAN_BYGG_HTML,
+  seoTitle: "Rivningslov och rivningsanmälan | ByggExp", seoDescription: "Rivningslov eller rivningsanmälan? Så vet byggföretaget vad som gäller vid 50 m²-gränsen, startbesked, kontrollplan och de nya asbestreglerna 2025/2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T23:12:00.000Z", createdAt: "2026-08-19T23:12:00.000Z", updatedAt: "2026-08-19T23:12:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_LON_ELLER_UTDELNING_BYGGBOLAG_2026,
+    A_TAPET_ATGANG_RULLAR,
+    A_SERVICEAVTAL_UNDERHALLSAVTAL_BYGGFORETAG,
+    A_ARBETSRESA_TJANSTERESA_BYGG_AVDRAG,
+    A_RIVNINGSLOV_RIVNINGSANMALAN_BYGG,
     A_PRESKRIPTION_FAKTURA_BYGG_SLUTFAKTURA,
     A_FABRIKSBETONG_ELLER_BLANDA_SJALV,
     A_LEASA_ELLER_KOPA_MASKINER_BYGGFORETAG,

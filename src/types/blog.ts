@@ -1,4 +1,4 @@
-export type BlogLocale = 'sv' | 'en' | 'ru';
+export type BlogLocale = 'sv' | 'en' | 'ru' | 'nb';
 
 export type BlogPost = {
   _id: string;

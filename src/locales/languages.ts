@@ -28,15 +28,17 @@ export const languages = {
 // getStaticPaths across the landing/legal pages and the sitemap, so adding `nb`
 // here before every locale file has an `nb` key would break the build. Add "nb"
 // here once the translations below are complete (Norway expansion, phase 1).
-export const landingLanguageCodes = ["ru", "sv", "en"] as const;
+export const landingLanguageCodes = ["ru", "sv", "en", "nb"] as const;
 export type LandingLanguageCode = (typeof landingLanguageCodes)[number];
 
 // Locales that actually have hand-written content on the sv/en-only legal pages.
 // The /ru URL for those pages serves the en copy and canonicalises to it.
 export const svEnLocales = ["sv", "en"] as const satisfies readonly LandingLanguageCode[];
 
-// Shown in the language switcher dropdown
+// Shown in the language switcher dropdown. `nb` jumps to byggexp.no (handled by
+// the Host→locale middleware); sv/en stay on byggexp.se.
 export const selectableLanguages = {
   sv: languages.sv,
   en: languages.en,
+  nb: languages.nb,
 };

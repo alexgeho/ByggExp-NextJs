@@ -7,7 +7,10 @@ import type { BlogLocale, BlogPost } from '../types/blog';
  * to the database.
  */
 
-type Localized = Record<BlogLocale, string>;
+// Mock demo content exists for the byggexp.se locales only; nb (byggexp.no) has
+// its own real content and never falls back to these placeholders.
+type MockLocale = Exclude<BlogLocale, 'nb'>;
+type Localized = Record<MockLocale, string>;
 
 type Seed = {
   slug: string;
@@ -16,7 +19,7 @@ type Seed = {
   tag: Localized;
   title: Localized;
   excerpt: Localized;
-  body: Record<BlogLocale, string[]>;
+  body: Record<MockLocale, string[]>;
 };
 
 const SEEDS: Seed[] = [
@@ -358,7 +361,7 @@ function buildHtml(paras: string[]): string {
     .join('');
 }
 
-function toPost(seed: Seed, locale: BlogLocale): BlogPost {
+function toPost(seed: Seed, locale: MockLocale): BlogPost {
   const title = seed.title[locale];
   const excerpt = seed.excerpt[locale];
   return {
@@ -384,6 +387,7 @@ function toPost(seed: Seed, locale: BlogLocale): BlogPost {
 }
 
 export function getMockBlogPosts(locale: BlogLocale): BlogPost[] {
+  if (locale === 'nb') return [];
   return SEEDS.map((seed) => toPost(seed, locale));
 }
 
@@ -391,6 +395,7 @@ export function getMockBlogPost(
   locale: BlogLocale,
   slug: string,
 ): BlogPost | null {
+  if (locale === 'nb') return null;
   const seed = SEEDS.find((s) => s.slug === slug);
   return seed ? toPost(seed, locale) : null;
 }

@@ -9656,6 +9656,7 @@ const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   ],
   en: [],
   ru: [],
+  nb: [],
 };
 
 export function getCodeArticles(locale: BlogLocale): BlogPost[] {

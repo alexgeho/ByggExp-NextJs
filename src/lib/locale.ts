@@ -5,7 +5,7 @@
 // own DNS + nginx + hreflang — otherwise Google would index Norwegian content on
 // the byggexp.se domain (wrong ccTLD) or see canonicals pointing at a domain that
 // doesn't resolve yet. Flip NB_LIVE to true in this one place at go-live.
-export const NB_LIVE = false;
+export const NB_LIVE = true;
 
 export const TOOL_LOCALES = ['sv', 'nb'] as const;
 export type ToolLocale = (typeof TOOL_LOCALES)[number];

@@ -4031,6 +4031,7 @@ const A_ENTREPRENADKONTRAKT_MALL_HTML = `
 <p>Varje år förlorar byggföretag pengar på arbeten de faktiskt utfört – inte för att jobbet var dåligt, utan för att avtalet var svagt eller muntligt. När beställaren bestrider en faktura eller påstår att något var fel är det avtalstexten som avgör, inte vad ni kom överens om över telefon. Ett muntligt avtal är giltigt, men i praktiken näst intill omöjligt att bevisa. Den här guiden går igenom vad ett entreprenadkontrakt måste innehålla för att hålla vid tvist – och ger dig en <strong>entreprenadkontrakt mall gratis</strong> som du kan fylla i och skicka samma dag.</p>
 
 <p>Vill du komma igång direkt kan du bygga ett bindande avtal från offert till underskrift med <a href="/sv/verktyg/offert-mall">vår gratis offert- och avtalsmall -&gt;</a>.</p>
+<p><a href="/sv/verktyg/entreprenadkontrakt-mall">Fyll i och ladda ner ett färdigt entreprenadkontrakt (PDF & Excel) med vår gratis mall -&gt;</a></p>
 
 <h2>Vad är ett entreprenadkontrakt – och varför räcker inte offerten?</h2>
 <p>Många hantverkare blandar ihop offert, beställning och kontrakt. En offert är ett anbud – ett erbjudande om pris och omfattning. Först när beställaren accepterar uppstår ett bindande avtal, men en accepterad offert reglerar sällan tidplan, betalning, ÄTA eller garanti. Det är där kontraktet kommer in: det samlar alla villkor på ett ställe och blir det dokument en domstol eller besiktningsman läser om det uppstår en konflikt.</p>
@@ -4099,6 +4100,7 @@ const A_KONTROLLPLAN_MALL_BYGGLOV_HTML = `
 <p>De flesta åtgärder som kräver bygglov eller anmälan kräver också en kontrollplan – nybyggnad, tillbyggnad, fasadändring, rivning och installation av eldstad, för att nämna några. Det är byggherren (fastighetsägaren) som enligt lag ansvarar för att en kontrollplan finns, inte kommunen. Den goda nyheten för dig som hantverkare: för enkla ärenden krävs ingen kontrollansvarig, och då kan du skriva kontrollplanen själv åt kunden. Det sparar KA-arvode och gör dig till en mer komplett leverantör. Utmaningen är att många mallar på nätet är gamla och vaga – och en generisk plan blir underkänd av byggnadsnämnden.</p>
 
 <p>Med <a href="/sv/verktyg/egenkontroll-mall">vår gratis mall för egenkontroll och kontrollplan →</a> fyller du i uppgifterna och får en PBL-korrekt kontrollplan som PDF på minuter – klar att lämna in med bygglovsansökan.</p>
+<p><a href="/sv/verktyg/kontrollplan-mall">Skapa en kontrollplan enligt PBL med vår gratis mall (PDF & Excel) -&gt;</a></p>
 
 <h2>Vad är en kontrollplan – och vad kräver PBL?</h2>
 <p>En kontrollplan är en kvalitetssäkrings-checklista för bygget. Den beskriver vad som ska kontrolleras, hur det ska ske och vem som ansvarar. Enligt plan- och bygglagen (PBL 10 kap.) ska en kontrollplan innehålla fyra saker:</p>
@@ -4846,6 +4848,7 @@ const A_GANTT_SCHEMA_MALL_BYGG_HTML = `
 
 <h2>Så gör du i ByggExp</h2>
 <p>I ByggExp planerar du projektet i etapper och mål med underliggande uppgifter, i stället för i ett fristående kalkylark. Varje uppgift har ansvarig och procent klart, och statusen är synlig för alla i projektet i realtid – inte inlåst i en fil på en dator. När du stämmer av veckovis uppdaterar du procent klart direkt där arbetet planeras, så att planen speglar verkligt läge. Vi lovar inte att verktyget räknar den kritiska linjen åt dig automatiskt, men det gör nedbrytningen i etapper, uppföljningen och synligheten till en naturlig del av hur projektet drivs – och det är där de flesta Excel-scheman fallerar. Underlaget kan du också knyta ihop med din <a href="/sv/verktyg/offert-mall">offert</a> så att kalkyl och tidsplan bygger på samma aktiviteter.</p>
+<p><a href="/sv/verktyg/gantt-schema-mall">Gör en tidsplan/Gantt-schema för bygget med vår gratis mall (PDF & Excel) -&gt;</a></p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är skillnaden mellan ett Gantt-schema och en tidsplan?</h3>
@@ -6688,6 +6691,7 @@ const A_ANSTALLNINGSAVTAL_MALL_BYGG_HTML = `
 <p>Ett slarvigt anställningsavtal är en av de dyraste genvägar ett byggföretag kan ta. Fel anställningsform, en glömd deadline eller en missad punkt i den lagstadgade informationen kan innebära att en tänkt visstidsanställd plötsligt är fast anställd — eller att företaget blir skadeståndsskyldigt. Efter LAS-reformen 2022 är kraven dessutom hårdare och deadlinerna kortare än många byggchefer tror. Den här guiden går igenom vilka anställningsformer som gäller i bygg, vad avtalet måste innehålla och var företag oftast snubblar.</p>
 
 <p>Vill du komma igång direkt hittar du en ifyllbar anställningsavtal-mall för bygg bland <a href="/sv/verktyg">våra gratis verktyg och mallar -&gt;</a>.</p>
+<p><a href="/sv/verktyg/anstallningsavtal-mall">Fyll i och ladda ner ett anställningsavtal för byggföretag (PDF & Excel) -&gt;</a></p>
 
 <h2>Tillsvidare är huvudregeln — välj anställningsform medvetet</h2>
 <p>Enligt LAS §4 gäller en anställning tills vidare om inget annat har avtalats. Det betyder att om ni tar in en yrkesarbetare utan att aktivt komma överens om en annan form, så är personen fast anställd från dag ett. Fast anställning är alltså inte något ni behöver skriva ett särskilt avtal om — det är det ni får om ni inte gör något annat.</p>

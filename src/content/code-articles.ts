@@ -6607,6 +6607,7 @@ const A_NYA_ASBESTREGLER_2026: BlogPost = {
 
 const A_FALLSKYDD_KRAV_BYGG_HTML = `
 <p>Fall från höjd är den enskilt vanligaste dödsorsaken på svenska byggarbetsplatser, och saknat fallskydd är också något Arbetsmiljöverket kan slå ner på direkt i plånboken. Utförs arbete med en fallhöjd på 2 meter eller mer utan föreskrivet fallskydd kan bolaget påföras en <strong>sanktionsavgift på mellan 40 000 och 400 000 kronor</strong> – utan domstol, utan diskussion. Reglerna byttes dessutom ut vid årsskiftet, så många hantverkare googlar fortfarande paragrafer som inte längre gäller. Här får du de konkreta 2026-kraven: 2-metersregeln, varför kollektivt fallskydd alltid går före selen, och exakt hur avgiften räknas ut.</p>
+<p><a href="/sv/verktyg/riskbedomning-mall">Gör en skriftlig riskbedömning med vår gratis mall (PDF & Excel) -&gt;</a></p>
 
 <p>Bygg in fallskyddskontrollen i ditt löpande arbetsmiljöarbete med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall &rarr;</a> så att räcken, hål och förankringspunkter dokumenteras innan arbetet på höjd påbörjas.</p>
 
@@ -10891,6 +10892,7 @@ const A_SKATTEVERKET_NEKAR_ROTAVDRAG_FORBEHALL: BlogPost = {
 
 const A_EFTERKALKYL_BYGG_KALKYLUPPFOLJNING_HTML = `
 <p>I en bransch med rörelsemarginaler på bara några få procent avgörs vinsten inte i anbudet — utan i uppföljningen. Under 2025 gick 1 719 byggföretag i konkurs enligt Creditsafe, en minskning med cirka 5 procent mot 2024, och trenden pekar mot fortsatt färre konkurser under 2026. Men för de flesta som ändå går omkull handlar det inte om för få jobb utan om jobb som räknades fel. Efterkalkylen är verktyget som visar var pengarna faktiskt tog vägen, så att nästa anbud bygger på verkligt utfall i stället för optimistiska antaganden.</p>
+<p><a href="/sv/verktyg/efterkalkyl-mall">Ladda ner en färdig efterkalkyl-mall (PDF & Excel) -&gt;</a></p>
 
 <p>Grunden i all uppföljning är en korrekt kostnad per timme och ett tydligt påslag. Börja med <a href="/sv/verktyg/paslag-marginal-kalkylator">vår gratis påslags- och marginalkalkylator -></a> för att lägga fast självkostnad och marginal innan du jämför mot utfallet.</p>
 

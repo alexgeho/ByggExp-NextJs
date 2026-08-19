@@ -60,6 +60,8 @@ export const VERKTYG_GROUPS: VerktygGroup[] = [
       { slug: 'avvikelserapport-mall', label: 'Avvikelserapport-mall' },
       { slug: 'korjournal-mall', label: 'Körjournal-mall' },
       { slug: 'skyddsrond-mall', label: 'Skyddsrond-mall' },
+      { slug: 'riskbedomning-mall', label: 'Riskbedömning-mall' },
+      { slug: 'efterkalkyl-mall', label: 'Efterkalkyl-mall' },
     ],
   },
   {

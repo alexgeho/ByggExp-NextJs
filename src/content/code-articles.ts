@@ -12055,9 +12055,601 @@ const A_RETENTIONSRATT_HANTVERKARE_INNEHALLA_ARBETE: BlogPost = {
   publishedAt: "2026-08-19T12:33:00.000Z", createdAt: "2026-08-19T12:33:00.000Z", updatedAt: "2026-08-19T12:33:00.000Z",
 };
 
+const A_AVVIKELSEHANTERING_BYGG_MALL_HTML = `
+<p>Ett fel som fångas när gipset sitter uppe är billigt att rätta. Samma fel som upptäcks vid besiktning eller av kunden efter inflytt är dyrt – och skadar förtroendet. En avvikelse i ett byggprojekt är arbete som inte stämmer med ritning, beskrivning, kontrollplan, avtal eller gällande krav. Skillnaden mellan ett projekt som blöder pengar och ett som går i mål ligger ofta i hur systematiskt ni fångar och hanterar dessa avvikelser.</p>
+
+<p>Den här artikeln ger dig en färdig rutin i fem steg och en rapportmall du kan börja använda i nästa vecka. Bygg den på strukturen i <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a> så hänger avvikelsehanteringen ihop med kontrollplanen redan från start.</p>
+
+<h2>Vad räknas som en avvikelse?</h2>
+<p>Grundprincipen är enkel: ingen avvikelse är för liten för att noteras. Det som känns obetydligt idag kan vara mönstret ni behöver se om ett halvår. Avvikelser brukar delas in i sex typer:</p>
+<ul>
+<li><strong>Tekniska</strong> – utförande som avviker från ritning, konstruktion eller monteringsanvisning.</li>
+<li><strong>Tidsavvikelser</strong> – aktiviteter som ligger efter tidplan och påverkar efterföljande moment.</li>
+<li><strong>Kostnadsavvikelser</strong> – budgetöverskridande, ÄTA-arbeten som inte hanterats.</li>
+<li><strong>Kvalitetsavvikelser</strong> – utförande som inte når avtalad eller föreskriven kvalitet.</li>
+<li><strong>Arbetsmiljö och miljö</strong> – risker, tillbud, hantering av farligt avfall.</li>
+<li><strong>Administrativa</strong> – saknad dokumentation, uteblivna intyg, felaktig märkning.</li>
+</ul>
+<p>Att kategorisera redan vid rapporteringen gör att ni senare kan trenda vad som faktiskt går fel – och var pengarna läcker.</p>
+
+<h2>Vad lagen och standarderna kräver 2026</h2>
+<p>Enligt PBL 10 kap. ska byggherren se till att det finns en kontrollplan för de flesta lov- och anmälningspliktiga åtgärder. Kontrollplanen anger vilka kontroller som ska göras, vad de avser, vem som utför dem och hur. Kontrollen sker huvudsakligen genom byggherrens dokumenterade egenkontroll – och avvikelsehanteringen är en central del av det interna kvalitetssystemet.</p>
+<p>Den certifierade kontrollansvarige (KA) ska dokumentera sina iakttagelser och notera avvikelser från kontrollplanen eller gällande regler, informera byggherren och – om en avvikelse inte rättas – anmäla den till byggnadsnämnden. Före slutbesked lämnar KA ett skriftligt utlåtande om att kontrollplanen följts och att eventuella avvikelser är åtgärdade.</p>
+<p>Sedan 1 juli 2026 gäller Boverkets nya byggregler fullt ut. Övergångsperioden, då byggherren fick välja gamla eller nya regler, avslutades 30 juni 2026. Det nya regelverket är uppdelat i flera separata grundförfattningar och bygger i högre grad på funktionskrav. I praktiken betyder det att byggherren måste kunna <strong>visa</strong> att valda lösningar uppfyller föreskrifterna genom projektering, verifiering och dokumentation. Kontrollansvaret förtydligas och kontroller ska utföras fackmässigt och dokumenteras. Utan spårbar avvikelsehantering blir det svårt att belägga.</p>
+<p>Är företaget certifierat enligt ISO 9001:2015 finns kraven svart på vitt. Klausul 8.7 styr att avvikande produkt eller tjänst identifieras och åtgärdas så att den inte oavsiktligt levereras. Klausul 10.2 kräver att ni reagerar, korrigerar, fastställer grundorsaken och inför korrigerande åtgärd för att förhindra att felet återkommer.</p>
+
+<h2>Skillnaden mellan korrigering och korrigerande åtgärd</h2>
+<p>Här faller många projekt. ISO 9001:2015 skiljer på två saker som låter lika men inte är det:</p>
+<ul>
+<li><strong>Korrigering (correction)</strong> – du åtgärdar symptomet nu. Fönstret sitter fel, du monterar om det.</li>
+<li><strong>Korrigerande åtgärd (corrective action)</strong> – du eliminerar grundorsaken så att felet inte återkommer. Varför satt fönstret fel? Fel mått på ritningen som gick ut till hela laget – rätta ritningen och informera alla.</li>
+</ul>
+<p>Om ni bara lagar symptomet dyker samma fel upp på nästa fönster, nästa våning, nästa projekt. Båda ska dokumenteras, men det är den korrigerande åtgärden som betalar sig över tid.</p>
+
+<h2>Rutinen i fem steg</h2>
+<ol>
+<li><strong>Rapportera direkt och blame-free.</strong> Den som ser felet noterar det med en gång, oavsett vem som orsakade det. Rädsla för skäll gör att avvikelser göms – och gömda fel är dyrast.</li>
+<li><strong>Bedöm allvarlighetsgrad och stoppa vid behov.</strong> En kosmetisk skavank hanteras löpande. En bärande konstruktion som avviker kan kräva omedelbart stopp tills den är utredd.</li>
+<li><strong>Grundorsaksanalys.</strong> Ställ &quot;fem varför&quot; tills ni når orsaken, inte symptomet. Var det materialet, rutinen, tidsbristen eller informationen som brast?</li>
+<li><strong>Korrigerande och förebyggande åtgärd.</strong> Skriv ner vad som ska göras, vem som är ansvarig och vilken deadline som gäller. Utan namn och datum händer ingenting.</li>
+<li><strong>Följ upp och stäng.</strong> Kontrollera att åtgärden är genomförd och verifierad innan avvikelsen stängs. En öppen avvikelse är en tickande post inför slutbesiktningen.</li>
+</ol>
+
+<h2>Rapportmallen – fälten du inte får hoppa över</h2>
+<p>En avvikelse som inte går att söka fram är nästan värdelös vid en tvist eller besiktning. En användbar avvikelserapport innehåller:</p>
+<ul>
+<li>Unikt avvikelsenummer och datum</li>
+<li>Projekt och plats</li>
+<li>Rapportör</li>
+<li>Beskrivning av avvikelsen</li>
+<li>Kategori och allvarlighetsgrad</li>
+<li>Omedelbar korrigering</li>
+<li>Grundorsak</li>
+<li>Korrigerande och förebyggande åtgärd</li>
+<li>Ansvarig och deadline</li>
+<li>Status och uppföljning (öppen/stängd)</li>
+</ul>
+<p>Papper fungerar, men digital rapportering vinner så fort projektet växer – då kan flera personer rapportera från plats, och avvikelserna går att filtrera och trenda. Koppla ihop rapporten med <a href="/sv/verktyg/byggdagbok-mall">byggdagboken</a> så att händelsen finns i den löpande dokumentationen samma dag den inträffar.</p>
+
+<h2>Från avvikelse till slutbesked</h2>
+<p>Avvikelser lever inte i ett eget stuprör – de hänger direkt ihop med kontrollplanen. Åtgärdade och stängda avvikelser är en förutsättning för att KA ska kunna lämna sitt utlåtande och för byggnadsnämndens slutbesked. Kan ni visa en komplett kedja – avvikelse noterad, orsak utredd, åtgärd genomförd, uppföljning klar – står ni starkt både vid besiktning och vid en eventuell tvist. Spårbarheten är er försäkring.</p>
+
+<h2>Erfarenhetsåterföring – bär lärdomen till nästa projekt</h2>
+<p>Det mest underskattade steget är att lyfta blicken. Håll regelbundna avvikelsemöten där rapporterade händelser granskas och kategoriseras. Ser ni samma typ av fel återkomma – fuktskador i samma detalj, fel material levererat från samma leverantör, samma moment som spricker i tidplanen – då har ni hittat en trend som är värd att stoppa vid källan.</p>
+<p>Använd trenderna till att uppdatera checklistor, egenkontroller och inköpsrutiner. Det är precis den ständiga förbättring som ISO 9001 efterfrågar, och den skiljer ett företag som lär av sina projekt från ett som gör om samma misstag varje gång.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp samlar du kontrollplan, egenkontroll och avvikelser på ett ställe så att kedjan hänger ihop. Du rapporterar en avvikelse med nummer, kategori, ansvarig och deadline, kopplar den till rätt projekt och kontrollpunkt, och följer den till stängning. Eftersom allt ligger digitalt kan du filtrera på kategori och plocka fram återkommande fel mellan projekt – underlaget du behöver för avvikelsemötet och för KA:s utlåtande finns redan samlat. Verktyget ersätter inte ert omdöme eller er kontrollansvarige, men det tar bort pappersletandet och gör att inga avvikelser tappas på vägen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan en avvikelse och ett ÄTA-arbete?</h3>
+<p>En avvikelse är arbete som inte stämmer med ritning, beskrivning, kontrollplan, avtal eller krav – något som bör rättas. Ett ÄTA-arbete är en ändring, tilläggs- eller avgående arbete som beställaren begär eller godkänner. Ibland leder en avvikelse till en ÄTA, men de hanteras och dokumenteras var för sig.</p>
+<h3>Måste vi ha en avvikelserutin även utan ISO-certifiering?</h3>
+<p>Ja, i praktiken. PBL kräver dokumenterad egenkontroll och att avvikelser från kontrollplanen noteras och åtgärdas, och de nya byggreglerna från 1 juli 2026 kräver att ni kan verifiera och dokumentera att lösningarna uppfyller kraven. ISO 9001 formaliserar rutinen, men behovet finns oavsett certifiering.</p>
+<h3>Vem får rapportera en avvikelse?</h3>
+<p>Alla på arbetsplatsen bör kunna rapportera, och rutinen ska vara blame-free. Ju lägre tröskel, desto tidigare fångas felen. Utredning, beslut om åtgärd och stängning styrs sedan av arbetsledning, kontrollant eller KA beroende på allvarlighetsgrad.</p>
+<h3>Hur länge ska vi spara avvikelserapporterna?</h3>
+<p>Behandla dem som en del av projektets dokumentation och spara dem tillsammans med kontrollplan och egenkontroller. Bokförings- och underlagshandlingar ska bevaras i sju år, och avvikelsehistoriken är dessutom ovärderlig om en garantibesiktning eller tvist dyker upp senare.</p>
+
+<h2>Kom igång</h2>
+<p>Inför rutinen i tre steg: (1) ladda ner och anpassa <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> med ett avsnitt för avvikelser, (2) bestäm vem som äger avvikelsemötet och hur ofta det hålls, (3) börja rapportera varje avvikelse med nummer, ansvarig och deadline. Vill du se hur kontrollplan, egenkontroll och avvikelser hänger ihop digitalt? <a href="/sv/contact">Boka en demo av ByggExp -&gt;</a> så visar vi flödet på ett verkligt projekt.</p>
+
+<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll enligt PBL</a>, <a href="/sv/blog/kma-plan-mall">KMA-plan mall</a> och <a href="/sv/blog/mottagningskontroll-material-bygg">Mottagningskontroll av material</a>.</p>
+`;
+
+const A_AVVIKELSEHANTERING_BYGG_MALL: BlogPost = {
+  _id: "code-"+"avvikelsehantering-bygg-mall",
+  title: "Avvikelsehantering på bygget – rutin och mall som fångar fel tidigt", slug: "avvikelsehantering-bygg-mall", locale: "sv",
+  excerpt: "En färdig rutin i fem steg och en rapportmall för avvikelser på bygget – fånga fel innan de når slutbesked och för erfarenheten vidare.", tag: "Kvalitet",
+  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_AVVIKELSEHANTERING_BYGG_MALL_HTML,
+  seoTitle: "Avvikelsehantering bygg – rutin & mall | ByggExp", seoDescription: "Så bygger du en avvikelserutin i fem steg och en rapportmall som fångar fel tidigt, klarar PBL och för lärdomen vidare till nästa projekt.",
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T13:00:00.000Z", createdAt: "2026-08-19T13:00:00.000Z", updatedAt: "2026-08-19T13:00:00.000Z",
+};
+
+const A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG_HTML = `
+<p>En dåligt planerad byggarbetsplats kostar timmar varje dag: material som flyttas fram och tillbaka, lastbilar som blockerar varandra, kranlyft som stoppas för att en gångväg ligger fel. En genomtänkt <strong>APD-plan</strong> är verktyget som förhindrar det. För dig som driver ett litet eller medelstort byggföretag, är platschef eller entreprenör är arbetsplatsdispositionen ofta skillnaden mellan ett bygge som flyter och ett som ständigt hackar. Här går vi igenom vad en APD-plan bygg-mässigt ska innehålla, vad reglerna kräver 2026 och hur du ritar upp den steg för steg.</p>
+
+<p>Vill du komma igång direkt hittar du underlag och checklistor bland <a href="/sv/verktyg">våra gratis byggverktyg -&gt;</a> som du kan använda som stomme när du planerar etableringen.</p>
+
+<h2>Vad är en APD-plan och är den lagkrav?</h2>
+<p>APD-plan står för arbetsplatsdispositionsplan och är en ritning eller karta över byggarbetsplatsen. Den visar var etablering (bodar, containrar, parkering), materialupplag, transportvägar, kranpositioner, in- och utfarter, personalutrymmen, materialintag, brandredskap och första hjälpen samt el- och VA-ledningar är placerade. Det är inte en fri konstform utan ett produktions- och arbetsmiljöverktyg – varje placering ska ha ett syfte.</p>
+<p>APD-planen är inte i sig ett i lag namngivet dokument. Men Arbetsmiljöverket anger att det på större byggarbetsplatser bör finnas en översiktsplan över området vid infarten, som vägleder leverantörer och tillfälliga besökare så att de inte utsätter sig själva eller de som arbetar för risker. I praktiken fungerar APD-planen som ett naturligt underlag och en bilaga till arbetsmiljöplanen (AMP). Den är ett levande dokument som uppdateras allteftersom bygget fortskrider.</p>
+
+<h2>Regelläget 2026: AFS 2023:3, AMP och roller</h2>
+<p>Sedan 1 januari 2025 gäller <strong>AFS 2023:3</strong> (Projektering och byggarbetsmiljösamordning – grundläggande skyldigheter). Den ersatte gamla AFS 1999:3 och delar av AFS 2020:1. Det är en ny föreskrift med ny struktur, inte bara en uppdatering, och det är den regelbas som styr byggarbetsplatsens planering 2026.</p>
+<p>Ansvaret är fördelat så här:</p>
+<ul>
+<li><strong>Byggherren</strong> har det övergripande ansvaret och uppfyller det genom att utse kompetenta samordnare.</li>
+<li><strong>Bas-P</strong> upprättar den skriftliga arbetsmiljöplanen innan det första byggnads- eller anläggningsarbetet påbörjas och lämnar över den till Bas-U.</li>
+<li><strong>Bas-U</strong> ansvarar för att uppdatera AMP:n under produktion – och därmed hålla APD-planen aktuell.</li>
+</ul>
+<p>AMP:n ska finnas tillgänglig på arbetsplatsen. Kom också ihåg <strong>förhandsanmälan</strong> till Arbetsmiljöverket: den krävs när arbetet beräknas pågå längre än 30 arbetsdagar och mer än 20 personer vid något tillfälle arbetar samtidigt, eller när det totala antalet persondagar beräknas överstiga 500. Kopian ska anslås väl synligt på arbetsplatsen och hållas uppdaterad. Saknas förhandsanmälan blir det en sanktionsavgift på 5 000 kr.</p>
+
+<h2>Så ritar du upp planen, steg för steg</h2>
+<p>Utgå från platsens förutsättningar – tomtgränser, in- och utfarter, befintliga ledningar och grannförhållanden – och bygg upp planen i lager.</p>
+<h3>Etablering</h3>
+<p>Placera bodar, kontor och personalutrymmen så att de stödjer produktionen utan att blockera det bästa åtkomstläget för material och lyft. En bod på fel plats låser hela logistiken i månader.</p>
+<h3>Upplag och materialintag</h3>
+<p>Avsätt tillräcklig yta för att ta emot och lagra byggprodukter utan onödig omflyttning och med bibehållen ordning. Lägg upplagen nära intaget för respektive byggskede så att material inte behöver bäras kors och tvärs.</p>
+<h3>Transportvägar</h3>
+<p>Rita in vägar för in- och utfart samt lossning så att lastbilar inte blockerar produktionsflödet eller varandra. Planera för att minimera backning – backande fordon är en av de vanligaste påkörningsriskerna.</p>
+<h3>Kran och lyft</h3>
+<p>Ange kranens placering på APD-planen. Säkra markens bärighet och bedöm lyftets riskområde så att lyftet inte skapar risker för andra. Nära luftburna kraftledningar styr Elsäkerhetsverket (ELSÄK-FS 2022:1) skyddsavstånden: riktvärdet för horisontellt avstånd till ledning på högst 55 kV är minst 5 meter, och för spänning över 55 kV gäller större avstånd (till exempel minst 10 meter inom detaljplan). Vid arbete nära ledning ska du alltid kontakta ledningsägaren.</p>
+<h3>Skyddsavstånd och separation fordon/gående</h3>
+<p>Fordonstrafik ska skiljas från gång- och cykelstråk. Anpassa skyddsavståndet mellan körvägar och gångvägar till fordonens faktiska hastighet, och inför interna hastighetsgränser där det behövs. Varje arbetsplats ska ha en säker tillträdesled; vid nivåskillnader över 10 meter med frekvent trapptrafik bör hiss övervägas.</p>
+
+<h2>Ledningar, avgränsning och skyltning</h2>
+<p>Alla el-, gas-, vatten- och avloppsledningar ska identifieras och märkas ut innan arbetet påbörjas. Använd den kostnadsfria tjänsten Ledningskollen för att få ledningsinformation innan du gräver. Kablar ska skyddas mot skador från fordonstrafik och får inte utgöra snubbelrisk – detta ska framgå av APD-planen.</p>
+<p>Byggarbetsplatsen ska dessutom vara tydligt avgränsad och skyltad enligt arbetsmiljöregler och lokala ordningsföreskrifter, med en robusthet anpassad till omgivningen och mängden allmänhet i närheten. Ju mer folk i rörelse runt bygget, desto stabilare inhägnad.</p>
+
+<h2>APD-planen är ett levande dokument</h2>
+<p>Etableringen ser inte likadan ut under grundläggning som under stomresning, takarbete eller invändig fas. Revidera planen per byggskede: när kranen flyttas, när upplagen byter plats eller när en ny in-/utfart öppnas ska ritningen följa med. Kommunicera ändringarna vid morgonmöten och i introduktionen av ny personal och nya underentreprenörer, och uppdatera AMP:n parallellt. En APD-plan som hänger kvar från byggstart och aldrig ändras är i praktiken felaktig.</p>
+
+<h2>Vanliga misstag att undvika</h2>
+<ul>
+<li>Boden placeras där den passar just nu, inte där produktionen behöver den under hela bygget.</li>
+<li>Transportvägar ritas utan att tänka på backning och möten mellan fordon och gående.</li>
+<li>Ledningskollen glöms bort innan grävning – med skador och stopp som följd.</li>
+<li>Kranens riskområde och skyddsavstånd till kraftledning kontrolleras inte mot ELSÄK-FS 2022:1.</li>
+<li>Planen uppdateras aldrig efter byggstart, trots att förutsättningarna ändras för varje skede.</li>
+<li>Förhandsanmälan missas vid trösklarna – onödig sanktionsavgift på 5 000 kr.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte ett CAD-program för själva ritningen, men samlar det som ska hänga ihop med APD-planen på ett ställe. Du kopplar planen till arbetsmiljöplanen och egenkontrollen, håller versioner uppdaterade per byggskede och gör dem tillgängliga för alla på plats. Med vår <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a> dokumenterar du att skyddsåtgärder, avgränsning och utmärkning faktiskt är på plats – så att planen inte bara är en ritning utan något som följs upp i produktion.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är en APD-plan lagkrav?</h3>
+<p>Nej, APD-plan är inte ett i lag namngivet dokument. Men Arbetsmiljöverket anger att det på större byggarbetsplatser bör finnas en översiktsplan vid infarten, och i praktiken fungerar APD-planen som underlag och bilaga till arbetsmiljöplanen som är obligatorisk.</p>
+<h3>Vad är skillnaden mellan APD-plan och arbetsmiljöplan?</h3>
+<p>Arbetsmiljöplanen (AMP) är det skriftliga dokument som ska upprättas innan första byggarbetet påbörjas och som beskriver risker och åtgärder. APD-planen är den ritning som visar var etablering, upplag, transportvägar och skyddsåtgärder är placerade, och den utgör ett naturligt underlag och bilaga till AMP:n.</p>
+<h3>Vem ansvarar för APD-planen?</h3>
+<p>Bas-P upprättar arbetsmiljöplanen före byggstart och Bas-U ansvarar för att uppdatera den under produktion. Byggherren har det övergripande ansvaret genom att utse kompetenta samordnare. APD-planen följer samma logik och hålls levande av Bas-U.</p>
+<h3>När krävs förhandsanmälan till Arbetsmiljöverket?</h3>
+<p>När arbetet beräknas pågå längre än 30 arbetsdagar och mer än 20 personer vid något tillfälle arbetar samtidigt, eller när det totala antalet persondagar överstiger 500. Kopian ska anslås väl synligt på arbetsplatsen. Saknas den blir sanktionsavgiften 5 000 kr.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med en tydlig APD-plan och håll den uppdaterad genom hela bygget. Minimikraven att bocka av: AMP klar före byggstart, förhandsanmälan gjord vid trösklarna, och en aktuell APD-plan synlig på plats. Använd <a href="/sv/verktyg">våra gratis byggverktyg</a> som stomme, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du kopplar plan, arbetsmiljö och egenkontroll i ett flöde.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan (AMP) – så gör du</a>, <a href="/sv/blog/startmote-byggprojekt-checklista">Startmöte i byggprojekt: checklista</a>, <a href="/sv/blog/bas-p-bas-u">Bas-P och Bas-U: roller och ansvar</a>.</p>
+`;
+
+const A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG: BlogPost = {
+  _id: "code-"+"apd-plan-arbetsplatsdisposition-bygg",
+  title: "APD-plan: så ritar du upp etablering, upplag och transportvägar på bygget", slug: "apd-plan-arbetsplatsdisposition-bygg", locale: "sv",
+  excerpt: "En genomtänkt APD-plan avgör om bygget flyter eller kaosar – så ritar du upp etablering, upplag, transportvägar och skyddsavstånd rätt.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG_HTML,
+  seoTitle: "APD-plan för bygget | ByggExp", seoDescription: "APD-plan bygg: så planerar du etablering, upplag, transportvägar, kran och skyddsavstånd. Regelläget 2026 (AFS 2023:3), roller och en färdig checklista.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T13:03:00.000Z", createdAt: "2026-08-19T13:03:00.000Z", updatedAt: "2026-08-19T13:03:00.000Z",
+};
+
+const A_ARBETSBEREDNING_MALL_BYGG_HTML = `
+<p>De flesta allvarliga olyckorna på en byggarbetsplats sker inte i rutinarbetet – de sker i moment som aldrig planerades i detalj. Schakten som skulle gå snabbt, det tunga elementet som lyftes utan riktig rigg, rivningen av en bärande vägg där ingen visste vad som satt bakom. Arbetsberedningen är bryggan mellan den övergripande arbetsmiljöplanen och det faktiska handgreppet: en konkret plan för <em>ett</em> kritiskt moment, gjord innan spaden går i marken.</p>
+
+<p>Vill du komma igång direkt kan du använda <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll- och beredningsmall →</a> och anpassa den för det moment du står inför.</p>
+
+<h2>Vad är en arbetsberedning – och skillnaden mot arbetsmiljöplanen (AMP)</h2>
+<p>En arbetsberedning är en detaljerad, stegvis plan för ett specifikt arbetsmoment. Den beskriver metoden, bryter ner momentet i delsteg, identifierar risken i varje steg och sätter konkreta skyddsåtgärder – allt <strong>innan</strong> arbetet startar. Det är alltså inte samma sak som en arbetsmiljöplan (AMP), som är projektets övergripande plan. AMP:n svarar på hur hela arbetsplatsen ska fungera säkert; arbetsberedningen zoomar in på det enskilda kritiska handgreppet.</p>
+<p>Kopplingen till lagen går via det systematiska arbetsmiljöarbetet. AFS 2023:1 (SAM) ställer krav på att arbete med allvarliga risker ska ha skriftliga instruktioner för hur det utförs säkert. Arbetsberedningen är det praktiska sättet att uppfylla det kravet – dokumentet som gör den abstrakta instruktionen konkret för laget som ska stå där och jobba.</p>
+
+<h2>Måste man ha arbetsberedning? Vad 2025 års regler säger</h2>
+<p>Vid årsskiftet 2025 trädde ett omarbetat regelverk i kraft. Arbetsmiljöverket slog ihop och slimmade sina föreskrifter från 67 till 15. De tre som är mest relevanta här är AFS 2023:1 (systematiskt arbetsmiljöarbete), AFS 2023:3 (projektering och byggarbetsmiljösamordning, som ersatte gamla AFS 1999:3) och AFS 2023:13 (risker vid vissa typer av arbeten).</p>
+<p>Ordet arbetsberedning står inte utpekat som en egen lagstadgad skyldighet. Men <strong>riskbedömning före arbete eller ändring, och skriftlig dokumentation av den, är lagkrav</strong> enligt AFS 2023:1. Arbetsberedningen är det verktyg som gör att du faktiskt lever upp till kravet i praktiken. Dessutom har Bas-U ett samordningsansvar enligt AFS 2023:3: att se till att arbetsberedningar finns för riskfyllda moment och att de stämmer med andra entreprenörers arbete på platsen.</p>
+
+<h2>När ska du göra en arbetsberedning?</h2>
+<p>Tänk i två spår. Det första spåret är de lagstadgade särskilda riskerna. En arbetsmiljöplan är obligatorisk från dag ett – oavsett projektets storlek, antal arbetare eller längd – så snart något av de 13 arbetena med särskild risk förekommer. Just de momenten är också de självklara kandidaterna för en skriftlig arbetsberedning. De vanligaste är:</p>
+<ul>
+<li>Fallrisk där höjdskillnaden är 2 meter eller mer.</li>
+<li>Risk att begravas i jordmassor eller sjunka ner i lös mark – schakt är ett klassiskt exempel.</li>
+<li>Arbete nära högspänningsledningar.</li>
+<li>Arbete där fordonstrafik passerar.</li>
+<li>Arbete med sprängämnen.</li>
+<li>Arbete i brunnar, tunnlar eller under jord.</li>
+<li>Rivning av bärande konstruktioner eller hälsofarliga material.</li>
+</ul>
+<p>En praktisk tumregel för schaktning: schakt djupare än 1 meter ska släntas eller stämpas/stöttas på grund av ras- och begravningsrisken. Det är en typisk utlösare för en skriftlig arbetsberedning.</p>
+<p>Det andra spåret är omdöme. Även utanför de 13 punkterna bör du göra en arbetsberedning för moment som är <strong>nya, riskfyllda, tidspressade eller komplicerade och otypiska</strong>. Det behöver inte vara livsfarligt för att förtjäna tio minuters strukturerad planering – det räcker att laget gör något de inte gjort förut.</p>
+
+<h2>Så här ser en komplett arbetsberedning ut – innehåll och mall</h2>
+<p>En fullständig arbetsberedning dokumenterar normalt:</p>
+<ol>
+<li><strong>Moment och omfattning</strong> – vad ska göras, var och när.</li>
+<li><strong>Metodbeskrivning steg för steg</strong> – hur momentet faktiskt utförs.</li>
+<li><strong>Resurser</strong> – personal, maskiner och material.</li>
+<li><strong>APD-plan och etablering</strong> – hur ytan disponeras, avspärrningar, transportvägar.</li>
+<li><strong>Risk per steg med åtgärd</strong> – bedömd via en riskmatris, sannolikhet gånger konsekvens.</li>
+<li><strong>Behörighet och kompetens</strong> – vilka certifikat och utbildningar som krävs.</li>
+<li><strong>Kontroll och kvalitetskrav</strong> – vad som ska kontrolleras och godkännas.</li>
+<li><strong>Kommunikation</strong> – vem informerar vem, och vilka avstämningar som gäller.</li>
+</ol>
+<p>När du sätter åtgärder, följ åtgärdshierarkin: försök först eliminera risken helt. Går det inte, minimera den – tekniska åtgärder före personliga och organisatoriska, och personlig skyddsutrustning som sista led, inte första.</p>
+<p><strong>Exempel – schakt 1,8 m för ledningsdragning.</strong> Steg: etablering och utsättning, grävning, arbete i schakt, återfyllning. Risk i grävsteget: ras (sannolikhet medel, konsekvens allvarlig). Åtgärd: slänta enligt jordart eller stämpa; ingen får vistas i schakt under grävning; avspärrning mot fordonstrafik. Risk i schaktsteget: fall från kant över 2 m samt påkörning – åtgärd: skyddsräcke vid kant, stege var tionde meter, vakt vid trafik. Behörighet: maskinförare med rätt utbildning. Kontroll: schaktbotten och släntlutning kontrolleras innan någon går ner.</p>
+
+<h2>Vem gör den – och varför yrkesarbetaren måste vara med</h2>
+<p>Ansvaret för att ta fram arbetsberedningen ligger på arbetsgivaren – entreprenören – och i praktiken på arbetsledare eller platschef. Men den ska göras <strong>tillsammans med yrkesarbetarna</strong> som ska utföra jobbet. Deras handfasta erfarenhet är avgörande för att upptäcka riskerna och välja rätt metod; en beredning som skrivs ensam bakom ett skrivbord missar det som bara den som stått i schakten vet.</p>
+<p>Beredningen gås igenom med laget precis före start, ofta som en kort skyddsrond eller genomgång. Och den är ett levande dokument: ändras förutsättningarna – ny jordart, väderomslag, en maskin som inte dök upp – uppdateras beredningen innan arbetet fortsätter.</p>
+
+<h2>Vanliga misstag att undvika</h2>
+<ul>
+<li>Att kopiera en gammal beredning rakt av utan att anpassa den till dagens moment och plats.</li>
+<li>Att skriva den utan yrkesarbetarna och tappa den praktiska riskkännedomen.</li>
+<li>Att sätta PPE som första åtgärd i stället för att först försöka bygga bort risken.</li>
+<li>Att låta den ligga orörd när förhållandena ändras.</li>
+<li>Att glömma samordningen med andra entreprenörer – Bas-U:s ansvar.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp arbetar du med beredning och egenkontroll i samma flöde som resten av projektet. Du utgår från en mall, bryter ner momentet i steg och kopplar risker och åtgärder direkt till arbetet – i stället för lösa Word-filer som ingen hittar. Dokumentationen sparas digitalt så att du kan visa upp riskbedömning och skriftliga instruktioner om Arbetsmiljöverket frågar, och laget når genomgången i mobilen ute på plats. Verktyget ersätter inte ditt omdöme eller Bas-U:s ansvar – men det gör att inget kritiskt moment glider igenom oplanerat.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är arbetsberedning ett lagkrav?</h3>
+<p>Ordet arbetsberedning står inte utpekat i föreskrifterna. Men riskbedömning före arbete och skriftlig dokumentation av den är lagkrav enligt AFS 2023:1, och arbetsberedningen är det praktiska sättet att uppfylla kravet på skriftliga instruktioner för arbete med allvarliga risker.</p>
+<h3>Vad är skillnaden mellan arbetsberedning och arbetsmiljöplan?</h3>
+<p>Arbetsmiljöplanen (AMP) är projektets övergripande plan. Arbetsberedningen är en detaljerad, stegvis plan för ett enskilt kritiskt moment – metod, resurser och skyddsåtgärder steg för steg.</p>
+<h3>När krävs förhandsanmälan till Arbetsmiljöverket?</h3>
+<p>Förhandsanmälan krävs när arbetet väntas pågå i mer än 30 arbetsdagar med fler än 20 personer sysselsatta samtidigt, eller när det omfattar mer än 500 persondagar. Behövs förhandsanmälan krävs alltid även en arbetsmiljöplan.</p>
+<h3>Vem ansvarar för att arbetsberedningen görs?</h3>
+<p>Arbetsgivaren, i praktiken arbetsledare eller platschef, men den ska tas fram tillsammans med yrkesarbetarna. Bas-U har samordningsansvaret för att beredningar finns för riskfyllda moment och stämmer med andra entreprenörers arbete.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att ladda ner och anpassa <a href="/sv/verktyg/egenkontroll-mall">vår kostnadsfria beredningsmall</a>, eller bläddra bland fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur beredning, egenkontroll och projektdokumentation hänger ihop i ett flöde? <a href="/sv/contact">Boka en demo →</a></p>
+
+<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>, <a href="/sv/blog/kma-plan-mall">KMA-plan mall</a> och <a href="/sv/blog/startmote-byggprojekt-checklista">Checklista för startmöte i byggprojekt</a>.</p>
+`;
+
+const A_ARBETSBEREDNING_MALL_BYGG: BlogPost = {
+  _id: "code-"+"arbetsberedning-mall-bygg",
+  title: "Arbetsberedning mall bygg – så planerar du riskfyllda moment innan spaden i marken", slug: "arbetsberedning-mall-bygg", locale: "sv",
+  excerpt: "En praktisk guide till arbetsberedning för hantverkare och byggföretag – planera metod, resurser och säkerhet innan det kritiska momentet startar.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_ARBETSBEREDNING_MALL_BYGG_HTML,
+  seoTitle: "Arbetsberedning mall bygg | ByggExp", seoDescription: "Så gör du en arbetsberedning för riskfyllda moment: metod, resurser och säkerhet steg för steg. Mall, innehåll och krav enligt AFS 2023.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T13:06:00.000Z", createdAt: "2026-08-19T13:06:00.000Z", updatedAt: "2026-08-19T13:06:00.000Z",
+};
+
+const A_REPARATION_VS_FORBATTRING_AVDRAG_BYGG_HTML = `
+<p>För ett fastighetsägande byggbolag är gränsen mellan reparation och förbättring en av de största skattefrågorna på hela året. Landar en åtgärd i "reparation" får du dra av hela kostnaden direkt, samma beskattningsår. Landar den i "ombyggnad" ska den i stället aktiveras och skrivas av med kanske 2–4 procent per år — i praktiken över 25 till 50 år. Ett direktavdrag i år är alltid värt mer än samma avdrag utspritt på decennier, både för skatten och för likviditeten. Här går vi igenom hur du drar gränsen rätt och delar upp en blandad renovering så att årets avdrag blir så stort som lagen tillåter.</p>
+
+<p>Behöver du snabbt räkna på moms, avdrag och nettokostnad per åtgärd hittar du våra kostnadsfria räknesnurror i <a href="/sv/verktyg">vår verktygslåda för byggföretag →</a>.</p>
+
+<h2>Grundregeln: direktavdrag eller avskrivning</h2>
+<p>Utgångspunkten finns i 19 kap. 2 § inkomstskattelagen (IL). Utgifter för <strong>reparation och underhåll</strong> av en byggnad får dras av omedelbart — direktavdrag samma år. Utgifter för <strong>ny-, till- och ombyggnad</strong> ska däremot aktiveras, läggas till byggnadens avskrivningsunderlag och dras av över tid genom värdeminskningsavdrag.</p>
+<p>En viktig poäng som många missar: den skattemässiga hanteringen får skilja sig från bokföringen. Även om du i redovisningen fördelar en reparationsutgift över flera år genom avskrivning, får du enligt IL ändå yrka hela direktavdraget skattemässigt. Bokföring och beskattning är två olika spår, och det är det skattemässiga som avgör årets avdrag.</p>
+
+<h2>Vad räknas som reparation och underhåll?</h2>
+<p>Med reparation och underhåll avses arbeten som <strong>återställer byggnaden till dess ursprungliga skick</strong>, eller det skick byggnaden hade vid den senaste om- eller tillbyggnaden. Byte till motsvarande standard ger direktavdrag. Nyckelordet är samma standard som tidigare.</p>
+<ul>
+<li>Måla om fasad eller väggar i samma utförande.</li>
+<li>Byta trasiga fönster mot likvärdiga fönster.</li>
+<li>Lägga nytt tak av samma typ som det gamla.</li>
+<li>Byta ut slitna golv, tätningar och installationer mot motsvarande.</li>
+</ul>
+<p>Så länge du återställer och inte höjer standarden är hela utgiften direktavdragsgill det år arbetet utförs.</p>
+
+<h2>Fällan: värdehöjande standardförbättring</h2>
+<p>Byter du upp till dyrare material eller högre standard i samband med en reparation delas kostnaden. Endast den del som motsvarar ett tänkt utbyte till <strong>ursprungsstandard</strong> är direktavdragsgill. Mellanskillnaden — själva standardhöjningen — räknas som förbättring och ska aktiveras och skrivas av.</p>
+<p>Ett konkret exempel: du river ett slitet plastmattegolv och lägger in ekparkett i stället. Ett likvärdigt nytt plastmattegolv hade kostat 60 000 kr. Parketten kostar 150 000 kr. Då får du direktavdrag för 60 000 kr (återställande till ursprungsstandard) medan de 90 000 kr som utgör standardhöjningen ska aktiveras och skrivas av. Att göra den här uppdelningen medvetet och dokumenterat är helt avgörande — gör du det inte riskerar du att hela beloppet aktiveras.</p>
+
+<h2>Det utvidgade reparationsbegreppet — byggbolagets bästa vän</h2>
+<p>Här ligger den största avdragspotentialen. Enligt 19 kap. 2 § andra stycket IL finns det <strong>utvidgade reparationsbegreppet</strong>: ändringsarbeten som kan anses <em>normala i den skattskyldiges näringsverksamhet</em> behandlas som reparation och får direktavdras — trots att de rent tekniskt har ombyggnadskaraktär.</p>
+<p>Skatteverket ger konkreta exempel på vad som omfattas:</p>
+<ul>
+<li>Flytta och omdisponera innerväggar för att anpassa en lokal till en ny hyresgäst.</li>
+<li>Ta upp eller sätta igen fönster och dörrar vid en verksamhetsanpassning.</li>
+<li>Anpassa lokalen till nya rutiner eller ny utrustning och maskiner.</li>
+</ul>
+<p>Villkoret är dubbelt: åtgärden ska vara normal i verksamheten <strong>och</strong> den får inte innebära en väsentlig förändring av byggnaden. Är båda uppfyllda får du direktavdrag även för det som annars hade varit ombyggnad.</p>
+
+<h2>Var går gränsen — väsentlig förändring</h2>
+<p>Undantaget från det utvidgade reparationsbegreppet är åtgärder som innebär en <strong>väsentlig förändring</strong> av byggnaden. De omfattas inte och får inte direktavdras. Det tydligaste exemplet är att byta byggnadens användningsområde — att göra om en industrilokal till kontor eller bostäder.</p>
+<p>Bedömningen görs utifrån verksamhetens art samt arbetets karaktär och omfattning. Ändrad användning, större omdisponeringar och nybyggnadsliknande projekt faller utanför och måste aktiveras. Är fallet osäkert är det värt att stämma av mot Skatteverkets rättsliga vägledning och praxis innan du bokför — gränsdragningen är beloppsmässigt stor och prövas regelbundet.</p>
+
+<h2>Glöm inte byggnadsinventarier</h2>
+<p>Ett tredje spår som ofta glöms bort: <strong>byggnadsinventarier</strong>. Det är installationer och utrustning som direkt tjänar den verksamhet som bedrivs, inte byggnaden som sådan. De dras av som inventarier — räkenskapsenlig avskrivning med huvudregeln 30 procent eller kompletteringsregeln 20 procent linjärt — vilket är väsentligt snabbare än byggnadens 2–4 procent.</p>
+<p>Att korrekt bryta ut byggnadsinventarier ur ett ombyggnadsprojekt tidigarelägger alltså avdragen rejält. En del av ett projekt som annars hade skrivits av över 25–50 år kan i stället skrivas av på några få år. Det förutsätter att du redan i projektet identifierar och särredovisar dessa poster.</p>
+
+<h2>Avskrivningssatser och primäravdrag i korthet</h2>
+<p>För den del som ändå ska aktiveras beräknas värdeminskningsavdrag enligt en avskrivningsplan med en procentsats per år, bestämd efter byggnadens ekonomiska livslängd. Enligt Skatteverkets allmänna råd SKV A 2005:5 är riktvärdet ungefär:</p>
+<ul>
+<li>Industribyggnad: cirka 4 procent per år.</li>
+<li>Bostäder och småhus: cirka 2 procent per år.</li>
+<li>Kontors-, förvaltnings- och liknande byggnader: normalt lägre än industri, runt 2 procent.</li>
+</ul>
+<p>För hyreshus finns dessutom <strong>primäravdrag</strong>: ett extra värdeminskningsavdrag på 2 procent per år under de första sex åren på utgifter för ny-, till- eller ombyggnad. Reglerna infördes den 1 januari 2019 och gäller utgifter för hyreshus som färdigställs från och med den 1 januari 2017.</p>
+
+<h2>Så bokför du för att maxa avdraget i år</h2>
+<p>Nyckeln vid en blandad renovering är att dela upp kostnaden per åtgärd. Praktisk checklista:</p>
+<ol>
+<li>Be entreprenören specificera fakturan per åtgärd i stället för en klumpsumma.</li>
+<li>Dokumentera skicket före och efter — foton och beskrivning styrker att det rör återställande till ursprungsstandard.</li>
+<li>Fördela varje post: reparation och underhåll samt ändringsarbeten enligt utvidgade reparationsbegreppet = direktavdrag; standardhöjning och till-/ombyggnad = aktiveras; installationer som tjänar verksamheten = byggnadsinventarier.</li>
+<li>Bokför konsekvent — reparation av lokal på ett kostnadskonto (BAS 5170-serien) mot aktivering på anläggningstillgång (BAS 111x).</li>
+<li>Spara underlagen. Räkenskapsinformation ska bevaras i 7 år.</li>
+</ol>
+<p>Det är den genomarbetade fördelningen per åtgärd — inte en efterhandsgissning — som maximerar årets avdrag och håller vid en granskning. Observera att de säljningsrelaterade reglerna om reparationer (femårsregeln) gäller privat bostadsförsäljning i inkomstslaget kapital och inte löpande näringsverksamhet, där reparationer dras av det beskattningsår utgiften uppkommer. Blanda inte ihop dem.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig hålla ordning på underlaget medan projektet pågår. Du samlar kostnader, fakturaunderlag och foton per projekt och åtgärd, så att uppdelningen mellan direktavdrag, aktivering och byggnadsinventarier bygger på verklig dokumentation i stället för minne. När du sedan sätter momsen rätt på fakturan använder du <a href="/sv/verktyg/moms-kalkylator">vår moms-kalkylator</a> — särskilt viktigt vid omvänd byggmoms mellan byggföretag, där fakturan ställs ut utan moms och märks "Omvänd skattskyldighet för byggtjänster gäller" tillsammans med köparens momsnummer. ByggExp ersätter inte din redovisningskonsult, men gör att underlaget finns på plats när avdraget ska yrkas.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får jag direktavdrag om jag byter till bättre material?</h3>
+<p>Bara delvis. Du får direktavdrag för den del som motsvarar ett tänkt utbyte till ursprungsstandard. Mellanskillnaden upp till den högre standarden räknas som värdehöjande förbättring och ska aktiveras och skrivas av. Dela därför upp kostnaden i fakturan.</p>
+
+<h3>Vad menas med det utvidgade reparationsbegreppet?</h3>
+<p>Enligt 19 kap. 2 § andra stycket IL får ändringsarbeten som är normala i din verksamhet — som att flytta innerväggar eller anpassa en lokal till ny hyresgäst — direktavdras trots att de har ombyggnadskaraktär. Undantaget är åtgärder som innebär en väsentlig förändring, till exempel att ändra byggnadens användningsområde.</p>
+
+<h3>Kan skatt och bokföring skilja sig åt?</h3>
+<p>Ja. Även om du i redovisningen skriver av en reparationsutgift över flera år får du enligt IL ändå yrka hela direktavdraget skattemässigt. Det är beskattningen som styr årets avdrag, inte hur posten hanteras i bokföringen.</p>
+
+<h3>Varför lönar det sig att bryta ut byggnadsinventarier?</h3>
+<p>Byggnadsinventarier skrivs av som inventarier, med huvudregeln 30 procent eller kompletteringsregeln 20 procent linjärt, i stället för byggnadens 2–4 procent. Att identifiera dem i projektet tidigarelägger avdragen rejält.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att specificera nästa renoveringsprojekt per åtgärd och räkna på moms och nettokostnad i <a href="/sv/verktyg">vår verktygslåda</a> och <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn</a>. Vill du se hur ByggExp håller ihop projektunderlag, kostnader och avdrag i praktiken? <a href="/sv/contact">Boka en demo →</a>. Den här artikeln är en översikt och ersätter inte Skatteverkets rättsliga vägledning eller individuell skatterådgivning — stäm alltid av osäkra gränsfall.</p>
+
+<p>Relaterat: <a href="/sv/blog/verktyg-direktavdrag-eller-avskrivning">Direktavdrag eller avskrivning på verktyg och inventarier</a>, <a href="/sv/blog/avdrag-enskild-firma-bygg">Avdrag i enskild firma för byggföretag</a> och <a href="/sv/blog/bokforing-enskild-firma-bygg">Bokföring för enskild firma i byggbranschen</a>.</p>
+`;
+
+const A_REPARATION_VS_FORBATTRING_AVDRAG_BYGG: BlogPost = {
+  _id: "code-"+"reparation-vs-forbattring-avdrag-bygg",
+  title: "Reparation eller förbättring? Så maxar byggbolaget avdraget i år", slug: "reparation-vs-forbattring-avdrag-bygg", locale: "sv",
+  excerpt: "Gränsen mellan reparation och förbättring avgör om byggbolaget får direktavdrag i år eller skriver av över decennier — så gör du fördelningen rätt.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_REPARATION_VS_FORBATTRING_AVDRAG_BYGG_HTML,
+  seoTitle: "Reparation vs förbättring avdrag | ByggExp", seoDescription: "Direktavdrag för reparation eller avskrivning på förbättring? Så bokför byggbolaget rätt, utnyttjar utvidgade reparationsbegreppet och maxar årets avdrag.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T13:09:00.000Z", createdAt: "2026-08-19T13:09:00.000Z", updatedAt: "2026-08-19T13:09:00.000Z",
+};
+
+const A_PAMINNELSE_INKASSO_AVGIFT_BYGG_HTML = `
+<p>Sena betalningar är vardag för hantverkare och byggföretag — och det kostar dig i både likviditet och tid. Det du inte alltid vet är att du <strong>har rätt till ersättning</strong> när kunden betalar för sent. Men beloppen är lagreglerade, och de skiljer sig beroende på om kunden är en privatperson (konsument) eller ett annat företag. Tre nyckelbelopp är värda att lära sig utantill: 60 kr, 180 kr och 450 kr. Här går vi igenom exakt vad du får ta ut 2026, i vilken ordning, och vad som krävs för att avgifterna ska hålla juridiskt.</p>
+
+<p>Grunden för att kunna ta ut avgifterna är en korrekt faktura med tydliga betalningsvillkor och förfallodag — bygg en sådan med <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall &rarr;</a>.</p>
+
+<h2>De lagstadgade beloppen i klartext</h2>
+<p>Rätten till ersättning för indrivningskostnader regleras i <strong>Lag (1981:739) om ersättning för inkassokostnader m.m.</strong> De exakta kronbeloppen fastställs däremot i <strong>Förordning (1981:1057)</strong>, inte i lagen själv. För 2026 gäller:</p>
+<ul>
+<li><strong>Påminnelseavgift: 60 kr per fordran.</strong> Endast <em>en</em> avgift per fordran — oavsett hur många påminnelser du skickar.</li>
+<li><strong>Inkassokrav: 180 kr.</strong> Får tas ut när ett formellt skriftligt inkassokrav enligt inkassolagen skickats.</li>
+<li><strong>Avbetalningsplan: 170 kr</strong> om gäldenären beviljas en uppgjord avbetalningsplan.</li>
+<li><strong>Förseningsersättning (endast B2B): 450 kr</strong> enligt 4 a § — en schablon mot företag och myndigheter.</li>
+</ul>
+
+<h2>Privatperson (konsument): avgiften måste vara avtalad</h2>
+<p>Mot en privatkund gäller strikta villkor. Du får bara ta ut <strong>påminnelseavgiften på 60 kr om den avtalats i förväg</strong> — kunden måste ha informerats om avgiften innan avtalet ingicks, till exempel i offerten, i dina allmänna villkor eller på fakturan före förfallodagen. Har du inte informerat om avgiften får du inte ta ut den.</p>
+<p>Dessutom måste kravet faktiskt ha skickats. En <strong>skriftlig påminnelse respektive ett skriftligt inkassokrav måste ha gått iväg till kunden</strong> — du kan inte ta ut avgift för ett krav som aldrig sänts. Inkassokravet ska innehålla uppgift om borgenär, skuldbelopp och grunden för fordran.</p>
+<p>Dröjsmålsränta mot konsument får tas ut <strong>tidigast 30 dagar efter att fakturan eller betalningskravet skickats</strong> (4 § räntelagen), om ni inte avtalat en förfallodag i förväg.</p>
+
+<h2>Företag (B2B): förseningsersättning 450 kr</h2>
+<p>Mellan näringsidkare — till exempel en underentreprenad-faktura mellan två byggföretag — gäller enklare regler till din fördel. Du har rätt till en <strong>förseningsersättning på 450 kr enligt 4 a § Lag (1981:739)</strong>. Den kräver <em>ingen</em> föravtalad avgift och <em>ingen</em> skickad påminnelse. Villkoret är att du har rätt till dröjsmålsränta, vilket du har när minst 30 dagars förfallotid passerat.</p>
+<p>Viktigt är <strong>avräkningsregeln</strong>: tar du ut 450 kr i förseningsersättning kan du inte samtidigt ta ut 60 kr påminnelse + 180 kr inkasso + 170 kr avbetalningsplan för samma försening. Schablonen på 450 kr täcker indrivningskostnaderna upp till det beloppet. Överstiger dina <em>faktiska</em> kostnader 450 kr kan du dock kräva det överskjutande utöver schablonen.</p>
+
+<h2>Dröjsmålsränta 2026</h2>
+<p>Utöver avgifterna löper dröjsmålsränta. Enligt <strong>6 § räntelagen (1975:635)</strong> är räntan <strong>referensränta + 8 procentenheter</strong> om inget annat avtalats. Riksbankens referensränta för både första och andra halvåret 2026 är <strong>2,00 %</strong>, vilket ger en <strong>dröjsmålsränta på 10,00 % per år</strong>. Referensräntan fastställs två gånger per år, den 1 januari och den 1 juli, så satsen kan ändras varje halvår.</p>
+<p><strong>Räkneexempel:</strong> En byggfaktura på 50 000 kr betalas 45 dagar för sent. Räntan blir 50 000 &times; 0,10 &times; (45/365) &asymp; <strong>616 kr</strong>. Är kunden ett företag lägger du dessutom till 450 kr i förseningsersättning. Räntan slutar inte löpa vid inkasso — den fortsätter genom inkassoärendet och vidare hos Kronofogden tills skulden är betald.</p>
+
+<h2>Rätt ordning i praktiken</h2>
+<p>För att avgifterna ska hålla — särskilt mot privatpersoner — behöver du följa en tydlig ordning:</p>
+<ol>
+<li>Skriv in betalningsvillkor, förfallotid och eventuell påminnelseavgift redan i <strong>offert och avtal</strong>.</li>
+<li>Skicka en korrekt <strong>faktura med förfallodag</strong>.</li>
+<li>Skicka en <strong>skriftlig påminnelse</strong> (60 kr om avgiften är avtalad med en konsument).</li>
+<li>Skicka <strong>inkassokrav</strong> (180 kr) eller lämna ärendet till inkasso.</li>
+<li>Ansök om <strong>betalningsföreläggande hos Kronofogden</strong> om kravet fortfarande inte betalas.</li>
+</ol>
+<p>Notera att ett <strong>ROT-jobb inte ändrar dessa regler</strong> — avgifter och ränta beräknas på den obetalda fordran precis som vid andra fakturor.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att lägga grunden så att avgifterna faktiskt håller. I <a href="/sv/verktyg/faktura-mall">fakturamallen</a> får du med förfallodag och betalningsvillkor från start, och du kan skriva in dina avgiftsvillkor så att kunden informerats i förväg — kravet för att en påminnelseavgift ska gälla mot en privatperson. Med tydliga underlag blir det enkelt att belägga när fordran förfallit, vilket du behöver om ärendet går vidare till inkasso eller Kronofogden. ByggExp driver inte in dina skulder åt dig, men ger dig dokumentationen som gör indrivningen möjlig. Fler mallar och kalkylatorer för din administration hittar du i <a href="/sv/verktyg">verktygslådan</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket får jag ta ut i påminnelseavgift 2026?</h3>
+<p>Max 60 kr per fordran mot en konsument, och endast en avgift oavsett hur många påminnelser du skickar. Beloppet fastställs i Förordning (1981:1057). Avgiften får bara tas ut om den avtalats i förväg och en skriftlig påminnelse faktiskt skickats.</p>
+<h3>Vad är skillnaden mellan påminnelseavgift och förseningsersättning?</h3>
+<p>Påminnelseavgiften (60 kr) och inkassoavgiften (180 kr) används i första hand mot konsumenter och kräver att avgiften avtalats och att kravet skickats. Förseningsersättningen (450 kr) gäller mellan företag, kräver varken föravtal eller påminnelse, men kan inte kombineras med de itemiserade avgifterna för samma försening.</p>
+<h3>Vad är dröjsmålsräntan för byggföretag 2026?</h3>
+<p>10,00 % per år. Den beräknas som referensräntan (2,00 % under 2026) plus 8 procentenheter enligt 6 § räntelagen, om ni inte avtalat en annan sats. Riksbanken sätter referensräntan den 1 januari och den 1 juli varje år.</p>
+<h3>Kan jag ta ut både 450 kr och inkassoavgift mot ett företag?</h3>
+<p>Nej, inte för samma försening. Förseningsersättningen på 450 kr är en schablon som täcker indrivningskostnaderna upp till det beloppet. Överstiger dina faktiska kostnader 450 kr kan du dock kräva det som ligger utöver.</p>
+
+<h2>Kom igång</h2>
+<p>Skriv in avgiftsvillkor och förfallodag i avtalet redan från början — det är där rätten till ersättning avgörs. Kom igång med <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall</a> eller boka en <a href="/sv/contact">demo</a> så visar vi hur du får ordning på underlagen inför inkasso.</p>
+
+<p>Relaterat: <a href="/sv/blog/drojsmalsranta-2026">Dröjsmålsränta 2026</a>, <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a>, <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturor</a>.</p>
+`;
+
+const A_PAMINNELSE_INKASSO_AVGIFT_BYGG: BlogPost = {
+  _id: "code-"+"paminnelse-inkasso-avgift-bygg",
+  title: "Påminnelseavgift, inkassoavgift och dröjsmålsränta i byggbranschen — vad får du ta ut 2026?", slug: "paminnelse-inkasso-avgift-bygg", locale: "sv",
+  excerpt: "Exakta lagstadgade belopp för påminnelseavgift, inkassokrav och dröjsmålsränta 2026 — och när de gäller mot privatperson respektive företag.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_PAMINNELSE_INKASSO_AVGIFT_BYGG_HTML,
+  seoTitle: "Påminnelseavgift & inkasso bygg 2026 | ByggExp", seoDescription: "Sen betalning? Så mycket får du ta ut 2026: påminnelseavgift 60 kr, inkasso 180 kr och förseningsersättning 450 kr — med skillnaden företag vs privatperson.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T13:12:00.000Z", createdAt: "2026-08-19T13:12:00.000Z", updatedAt: "2026-08-19T13:12:00.000Z",
+};
+
+const A_VISSTIDSANSTALLNING_SAVA_BYGG_HTML = `
+<p>Det som gör visstidsanställningar riskabla i ett byggföretag är inte att någon säger upp sig – det är att en anställd du trodde var tillfällig plötsligt är fast anställd, utan att du fattat ett enda beslut om det. En särskild visstidsanställning (SÄVA) omvandlas nämligen automatiskt till en tillsvidareanställning när personen har jobbat i SÄVA i mer än 12 månader inom en femårsperiod. Klockan tickar i bakgrunden, och den kan inte avtalas bort. Missar du dagarna har du en fast anställd du kanske inte planerat för – med allt vad det innebär vid nästa svacka i orderboken.</p>
+
+<p>Det enklaste sättet att inte tappa räkningen är att logga varje anställningsperiod per person från dag ett. Använd <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall →</a> som utgångspunkt och för in start- och slutdatum för varje visstid, så har du underlaget när du behöver räkna dagarna.</p>
+
+<h2>Vad är SÄVA?</h2>
+<p>Särskild visstidsanställning ersatte den gamla allmänna visstidsanställningen (ALVA) den 1 oktober 2022 som en del av "nya LAS". Anställningsformen fungerar i grunden likadant: du kan tidsbegränsa en anställning utan att ange något särskilt skäl – till skillnad från vikariat eller säsongsarbete behöver du ingen förklaring. Det passar bra när du tar in extra folk för ett projekt eller för att täcka en tillfällig belastning. Men SÄVA har en inbyggd klocka, och det största som förändrades 2022 var just hur snabbt den klockan går innan anställningen blir permanent.</p>
+
+<h2>12-månadersregeln: när SÄVA blir fast anställning</h2>
+<p>Huvudregeln finns i LAS 5 a §. En SÄVA övergår automatiskt till en tillsvidareanställning när arbetstagaren har varit anställd i SÄVA hos dig i mer än 12 månader under en femårsperiod. Omvandlingen sker av sig själv, kräver inget beslut och kan inte avtalas bort mellan dig och den anställde.</p>
+<p>Har du lärt dig den gamla regeln behöver du uppdatera din mentala modell: ALVA krävde 24 månader (två år) inom fem år innan omvandling. SÄVA halverade det till 12 månader. Det är den enskilt viktigaste praktiska förändringen för dig som arbetsgivare att hålla reda på – gränsen slår över dubbelt så fort som förr.</p>
+
+<h2>Så räknas dagarna – det som ställer till det</h2>
+<p>Hur de tolv månaderna räknas beror på om anställningen är sammanhängande eller inte, och det är här de flesta går vilse. Det finns tre sätt:</p>
+<ul>
+<li><strong>Sammanhängande anställning som börjar den 1:a i en månad</strong> – då räknas hela kalendermånader.</li>
+<li><strong>Sammanhängande anställning som börjar mitt i en månad</strong> – då används lagens tidsberäkning: månaden löper ut samma datum påföljande månad.</li>
+<li><strong>Ej sammanhängande anställning (flera perioder med glapp)</strong> – då räknas 360 dagar totalt, där varje månad räknas som 30 dagar (12 × 30 = 360). Omvandlingen inträffar på dag 361.</li>
+</ul>
+<p>Ett konkret exempel: du tar in en snickare på flera korta SÄVA under ett par år. När hans sammanlagda SÄVA-tid passerar 360 dagar är han fast anställd från och med dag 361 – oavsett att ingen enskild period varit lång, och oavsett att du aldrig skrev något om tillsvidare. Det är summan av dagarna över femårsfönstret som avgör, inte den enskilda kontraktslängden.</p>
+
+<h2>Kedjeregeln och glappen</h2>
+<p>Ett vanligt missförstånd är att man kan "nollställa" klockan genom att stapla korta kontrakt med luckor emellan. Det stämmer inte. Har en arbetstagare haft tre eller fler SÄVA som börjat eller slutat inom samma kalendermånad, räknas även tiden i glappen mellan anställningarna som SÄVA-tid. Glapptiden räknas dessutom med om personen under mellanperioden varit anställd hos dig i en annan tidsbegränsad form, till exempel vikariat eller säsong.</p>
+<p>Med andra ord: att korta ned kontrakten och lägga in luckor skyddar dig inte. Räknar du bara de "aktiva" dagarna och glömmer glappen och vikariaten kan du ligga långt närmare gränsen än du tror.</p>
+
+<h2>Företrädesrätt redan vid 9 månader</h2>
+<p>Innan omvandlingen slår till finns en tidigare fälla. Företrädesrätt till återanställning inträder enligt LAS 25 § när arbetstagaren varit anställd hos dig i mer än 9 månader (270 dagar) under en treårsperiod. Det ligger alltså före 12-månadersgränsen och är lätt att missa.</p>
+<p>Konsekvensen: har en tidigare SÄVA-anställd passerat 270 dagar och du sedan nyanställer till en likvärdig tjänst, kan han ha förtur framför en extern kandidat. Håll koll på 9-månadersgränsen separat – den påverkar hur du får rekrytera, inte bara om en anställning omvandlas.</p>
+
+<h2>Kollektivavtalet slår igenom</h2>
+<p>Här kommer den viktigaste varningen: förlita dig inte blint på LAS-siffran. Kollektivavtal får avvika från LAS när det gäller tidsbegränsade anställningar, och byggavtalen gör det.</p>
+<ul>
+<li>Under Byggnadsämnesförbundets avtal tillåts tidsbegränsad anställning (allmän visstid) i upp till 2 år inom en femårsperiod innan omvandling.</li>
+<li>Byggföretagens tjänstemannaavtal övergår till tillsvidare efter mer än 3 års fri visstid plus vikariat inom fem år.</li>
+<li>Provanställning i byggbranschen får vara i högst 6 månader. Ger ingen part besked innan prövotiden löper ut övergår den automatiskt till en tillsvidareanställning.</li>
+</ul>
+<p>Det gällande Byggavtalet mellan Byggföretagen och Byggnads löper 2025-05-01 till 2027-04-30 och är alltså det styrande avtalet under 2026. Kolla vilket avtal ditt företag är bundet av innan du planerar en visstidsanställning – tidsgränsen som gäller för just dig kan vara en annan än de 12 månaderna i LAS.</p>
+
+<h2>Så håller du koll i praktiken</h2>
+<p>Poängen är att fatta ett aktivt beslut i god tid – förlänga, avsluta i tid eller fast anställa – i stället för att drabbas av en automatisk omvandling. En enkel rutin:</p>
+<ol>
+<li>Dokumentera start- och slutdatum för varje visstid, per person.</li>
+<li>Logga <strong>alla</strong> anställningsformer, även vikariat och säsong, eftersom de kan räknas in i glappen.</li>
+<li>Summera dagarna löpande mot både 360-dagarsgränsen och 270-dagarsgränsen.</li>
+<li>Sätt en påminnelse i god tid före dag 361 och före 9-månadersgränsen, inte veckan innan.</li>
+<li>Stäm av mot ditt kollektivavtal om annan tidsgräns gäller.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig hålla ordning på tiden per anställd och projekt, så att underlaget för hur länge någon jobbat inte ligger utspritt i olika kalkylblad. När du samlar tidrapporter och anställningsperioder på ett ställe blir det enkelt att se hur många dagar en visstidsanställd faktiskt loggat och när du behöver fatta beslut. ByggExp ger dig inte juridisk rådgivning och räknar inte automatiskt LAS-gränserna åt dig – men verktyget ger dig det samlade underlaget du behöver för att göra det själv, eller för att stämma av med din arbetsgivarorganisation innan en gräns passeras.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>När omvandlas en SÄVA till fast anställning?</h3>
+<p>När arbetstagaren har varit anställd i särskild visstidsanställning i mer än 12 månader inom en femårsperiod, enligt LAS 5 a §. Vid ej sammanhängande anställning räknas det som 360 dagar (12 × 30), och omvandlingen sker på dag 361. Övergången är automatisk och kan inte avtalas bort.</p>
+<h3>Vad är skillnaden mot den gamla ALVA-regeln?</h3>
+<p>ALVA (allmän visstidsanställning) krävde 24 månader inom fem år innan omvandling. SÄVA ersatte ALVA den 1 oktober 2022 och halverade gränsen till 12 månader. Många utgår fortfarande från den gamla tvåårsgränsen, vilket är en vanlig och kostsam felkälla.</p>
+<h3>Räknas glappen mellan korta kontrakt in?</h3>
+<p>Ja, i vissa fall. Har personen haft tre eller fler SÄVA som börjat eller slutat inom samma kalendermånad räknas mellantiden med. Glapptiden räknas också in om personen under glappet varit anställd i en annan tidsbegränsad form, som vikariat eller säsong. Att stapla korta kontrakt nollställer alltså inte klockan.</p>
+<h3>Gäller LAS-gränsen alltid, eller kan kollektivavtalet ändra den?</h3>
+<p>Kollektivavtal får avvika från LAS om tidsbegränsade anställningar, och byggavtalen gör det. Under Byggnadsämnesförbundets avtal tillåts till exempel upp till 2 år innan omvandling. Kolla alltid vilket avtal ditt företag är bundet av – LAS-siffran är utgångspunkten, inte hela svaret.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att samla anställningsperioderna på ett ställe. Ladda ner <a href="/sv/verktyg/tidrapport-mall">tidrapport-mallen</a> eller titta i vår samling av <a href="/sv/verktyg">gratis verktyg för byggföretag</a>, och <a href="/sv/contact">boka en demo</a> om du vill se hur ByggExp samlar tid och personaluppgifter i ett flöde.</p>
+
+<p>Relaterat: <a href="/sv/blog/anstallningsavtal-mall-bygg">Anställningsavtal – mall för byggföretag</a>, <a href="/sv/blog/anstalla-personal-byggforetag">Så anställer du personal i byggföretaget</a> och <a href="/sv/blog/uppsagning-arbetsbrist-bygg">Uppsägning på grund av arbetsbrist i byggbranschen</a>.</p>
+`;
+
+const A_VISSTIDSANSTALLNING_SAVA_BYGG: BlogPost = {
+  _id: "code-"+"visstidsanstallning-sava-bygg",
+  title: "Visstidsanställning i byggföretaget: så håller du koll på SÄVA-dagarna", slug: "visstidsanstallning-sava-bygg", locale: "sv",
+  excerpt: "En särskild visstidsanställning kan bli en tillsvidareanställning bakom ryggen på dig – här är reglerna som avgör när klockan slår över, och hur du håller koll på dagarna.", tag: "Personal",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_VISSTIDSANSTALLNING_SAVA_BYGG_HTML,
+  seoTitle: "Visstidsanställning bygg: SÄVA-regler | ByggExp", seoDescription: "SÄVA blir fast anställning efter mer än 12 månader inom 5 år. Så räknas dagarna, kedjeregeln och företrädesrätten – och hur du undviker automatisk omvandling.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T13:15:00.000Z", createdAt: "2026-08-19T13:15:00.000Z", updatedAt: "2026-08-19T13:15:00.000Z",
+};
+
+const A_PUTS_MURBRUK_ATGANG_FASAD_HTML = `
+<p>Materialåtgången per m² avgör marginalen i ett putsanbud. Bruk är billigt per säck men tungt i volym, och skillnaden mellan 25 och 40 kg torrbruk per m² fasad blir snabbt tusenlappar på ett par hundra kvadratmeter. Räknar du för lågt äter du upp vinsten när pallarna tar slut mitt i jobbet. Räknar du för högt lägger du ett anbud som konkurrenten slår. Nyckeln till en korrekt <strong>putsåtgång fasad beräkning</strong> är att bygga upp åtgången skikt för skikt, ta rätt siffra från produktbladet och lägga på realistiskt spill.</p>
+
+<p>Börja med att mäta upp fasadytan exakt – dra av öppningar men lägg till laibningar och smygar – med vår gratis <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylator -&gt;</a> innan du räknar åtgången per m².</p>
+
+<h2>Grundformeln: kg torrbruk per mm och m²</h2>
+<p>Putsbruk har en bulkdensitet på ungefär 1600–1800 kg/m³. Det ger en tumregel på cirka <strong>1,8 kg torrbruk per mm skikttjocklek och m²</strong> – alltså runt 18–20 kg/m² per centimeter. Finja grundningsbruk A anges till just ~1,8 kg/mm/m².</p>
+<p>Men tumregeln är bara en utgångspunkt. Lätt- och fiberbaserade produkter kan ligga så lågt som 0,9–1,4 kg/mm/m². Ta därför alltid den exakta åtgången från produktbladet för det bruk du faktiskt lägger i anbudet. Formeln är enkel: <em>skikttjocklek (mm) × åtgång (kg/mm/m²) = kg/m² för det skiktet</em>.</p>
+
+<h2>Skikt för skikt i ett tjockputssystem</h2>
+<p>Ett fullständigt tjockputssystem består av tre skikt, och du måste summera åtgången för vart och ett:</p>
+<ul>
+<li><strong>Grundning/slamning</strong> (t.ex. Grundningsbruk A) för vidhäftning mellan underlag och puts: cirka <strong>5 kg/m²</strong> i slamkonsistens, oftast 3–4 mm.</li>
+<li><strong>Utstockning/grovputs</strong> (Puts- &amp; Murbruk C) läggs 10–15 mm, i vissa system upp till ~20 mm närmast isolering. Vid ~1,8 kg/mm/m² blir det <strong>≈18–27 kg/m²</strong> bara för detta skikt.</li>
+<li><strong>Ytputs/ädelputs/stänkputs</strong> varierar kraftigt: <strong>4–25 kg/m²</strong> beroende på kornstorlek och ytstruktur. Grövre struktur och större korn drar mer material.</li>
+</ul>
+<p>Summerar du skikten landar en typisk tjockputsfasad på ungefär <strong>25–40 kg/m²</strong> totalt, beroende på valda tjocklekar och finish.</p>
+
+<h2>Tunnputs eller tjockputs – stor skillnad i åtgång</h2>
+<p>Åtgången hänger helt på systemvalet. <strong>Tjockputs</strong> läggs på murverk (tegel, block, betong) och drar mest bruk – de 25–40 kg/m² ovan. <strong>Tunnputs</strong> läggs på EPS eller mineralull i ett putsat fasadisoleringssystem och använder betydligt mindre material per m², eftersom armering och tunna skikt ersätter den tjocka utstockningen. När du prisar ett jobb måste du veta vilket system som gäller innan du sätter en kg-siffra – de går inte att jämföra rakt av.</p>
+
+<h2>Murbruksåtgång vid tegel- och blockfasad</h2>
+<p>Murar du i stället för att putsa gäller andra tal. För en standardtegelvägg (tegel 250×120×65 mm) går det åt cirka <strong>0,04 m³ murbruk per m²</strong> vägg, vilket motsvarar ungefär <strong>64–72 kg/m²</strong> i vikt. Fogtjockleken styr: tunnare fogar ger fler tegel och mindre bruk, tjockare fogar tvärtom.</p>
+<p>För tegelmängden räknar standardfasadtegel (228×108×54 mm, 12 mm fog) till <strong>63 st/m²</strong> – men lägg anbudet på <strong>66 st/m²</strong> för att täcka kap och hanteringsspill. Samma logik för bruket: lägg på 10–15 % marginal.</p>
+
+<h2>Räkna spill rätt</h2>
+<p>Teoretisk åtgång är aldrig verklig åtgång. Lägg på <strong>10–15 % spill</strong> på både bruk och tegel, och tänk på att spillet uppstår på flera ställen:</p>
+<ul>
+<li>Pump- och blandningssvinn – bruk som stannar i slang, blandare och hink.</li>
+<li>Kallgränser och stopp där material härdar innan det används.</li>
+<li>Spill vid kap, hörn och komplicerad geometri.</li>
+<li>Säck- och pallavrundning – torrbruk säljs i 25 kg-säck och per pall, så du betalar för hela pallar oavsett vad du förbrukar.</li>
+</ul>
+<p>Vill du sätta en genomtänkt spillfaktor för olika material har vi en genomgång i artikeln om <a href="/sv/blog/spillprocent-bygg-material">spillprocent i byggmaterial</a>.</p>
+
+<h2>Från åtgång till säckar och kronor</h2>
+<p>När du har åtgången per m² är säckantalet ren aritmetik: <em>area × kg/m² × spillfaktor ÷ 25</em>, avrundat uppåt per pall.</p>
+<p>Räkneexempel för en <strong>150 m² tjockputsfasad</strong> med total åtgång 30 kg/m²:</p>
+<ol>
+<li>150 m² × 30 kg/m² = 4 500 kg teoretisk åtgång.</li>
+<li>Spillpåslag 12 %: 4 500 × 1,12 = 5 040 kg.</li>
+<li>5 040 ÷ 25 = 201,6 säckar → avrunda till <strong>202 säckar</strong>, sedan uppåt till hel pall.</li>
+</ol>
+<p>Tillverkarnas mängdberäknare (Finja Produktväljare, Weber, XL-Bygg) gör samma sak från area och tjocklek och ger säckar och pallar direkt. Ska du även prisa fasadfärg efter putsen räknar du åtgången per liter med vår <a href="/sv/verktyg/farg-kalkylator">färg-kalkylator</a>.</p>
+
+<h2>Rätt bruk mot underlaget</h2>
+<p>Åtgången är meningslös om bruket är fel. <strong>Cementbruk (A)</strong> är starkt och snabbt men styvt och spricker på tegel och trä. <strong>KC-bruk/kalkcementbruk (B)</strong> är det vanligaste valet idag. <strong>Ren kalkbruk (K/E)</strong> är mjukt och rörligt. Grundregeln: lägg aldrig ett starkare bruk över ett svagare original – KC över ren kalk spricker. Detta påverkar både vilken produkt du prisar och hur mycket du behöver av den.</p>
+
+<h2>Moms och ROT i anbudet</h2>
+<p>Åtgången ger materialkostnaden, men anbudets slutsiffra beror på momsupplägget:</p>
+<ul>
+<li><strong>B2B mot annat byggföretag:</strong> omvänd skattskyldighet gäller för byggtjänster inklusive putsarbeten. Fakturan bär <strong>ingen moms</strong>, måste märkas &quot;Omvänd skattskyldighet för byggtjänster gäller&quot; och innehålla köparens momsregistreringsnummer. Köparen redovisar momsen.</li>
+<li><strong>Privatkund:</strong> putsarbete som del av fasadrenovering är ROT-godkänt. ROT-avdraget 2026 är <strong>30 % av arbetskostnaden</strong> – aldrig material, resa eller admin – med tak 50 000 kr per person och år. Från 2026 gäller ett gemensamt ROT+RUT-tak på <strong>75 000 kr</strong> per person och år. Arbete och material ska specificeras var för sig på fakturan, och du måste ha F-skatt.</li>
+</ul>
+<p>Standardmomsen är annars 25 %. Spara underlagen i minst 7 år.</p>
+
+<h2>Checklista innan du lämnar anbud</h2>
+<ul>
+<li>Rätt bruk mot underlaget – inget starkare över svagare.</li>
+<li>Kontrollmätt area inklusive laibningar och avdrag för öppningar.</li>
+<li>Åtgång per m² hämtad från produktbladet, skikt för skikt.</li>
+<li>Spillpåslag 10–15 % samt säck- och pallavrundning.</li>
+<li>Momsupplägg fastställt: omvänd byggmoms eller ROT.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp samlar underlaget så att åtgången inte blir en gissning. Du mäter fasadytan, för in åtgång per m² och spillfaktor och får materialmängden i säckar och kronor – samma logik som en mängdförteckning, kopplad till anbudet. Verktygen räknar, men den slutliga åtgången ska alltid stämmas av mot produktbladet för det bruk du valt; ByggExp ersätter inte tillverkarens datablad utan gör det snabbare att omsätta det till ett anbud.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket putsbruk går det åt per m² fasad?</h3>
+<p>Tumregeln är cirka 1,8 kg torrbruk per mm skikt och m². Ett fullständigt tjockputssystem landar totalt på ungefär 25–40 kg/m² beroende på tjocklek och finish. Ta alltid exakt åtgång från produktbladet.</p>
+<h3>Hur mycket murbruk behövs för en tegelvägg?</h3>
+<p>För standardtegel går det åt cirka 0,04 m³ per m² vägg, ungefär 64–72 kg/m² i vikt. Fogtjockleken avgör – tunnare fogar ger mindre bruk och fler tegel.</p>
+<h3>Hur mycket spill ska jag räkna med?</h3>
+<p>Lägg på 10–15 % på både bruk och tegel för pump- och blandningssvinn, kap och hantering. Räkna dessutom uppåt till hel säck och pall, eftersom torrbruk säljs i 25 kg-säck.</p>
+<h3>Får jag ROT-avdrag på putsarbete?</h3>
+<p>Ja, putsarbete som del av fasadrenovering är ROT-godkänt när kunden är privatperson på en befintlig bostad och du har F-skatt. Avdraget är 30 % av arbetskostnaden, max 50 000 kr per person och år. Material ger aldrig ROT.</p>
+
+<h2>Kom igång</h2>
+<p>Mät fasaden och räkna åtgången med vår <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylator</a>, och sätt ett anbud där marginalen håller. Vill du se hur åtgång, spill och moms hänger ihop i ett komplett anbud – <a href="/sv/contact">boka en demo</a> så visar vi upplägget.</p>
+
+<p>Relaterat: <a href="/sv/blog/spillprocent-bygg-material">Spillprocent i byggmaterial</a>, <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>, <a href="/sv/blog/mangdforteckning-bygg">Mängdförteckning i bygg</a>.</p>
+`;
+
+const A_PUTS_MURBRUK_ATGANG_FASAD: BlogPost = {
+  _id: "code-"+"puts-murbruk-atgang-fasad",
+  title: "Putsåtgång fasad – räkna puts- och murbruksåtgång per m² för anbudet", slug: "puts-murbruk-atgang-fasad", locale: "sv",
+  excerpt: "Räkna puts- och murbruksåtgång per m² fasad inklusive spill så att marginalen håller hela vägen till färdigt anbud.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/betong-preview.webp", contentHtml: A_PUTS_MURBRUK_ATGANG_FASAD_HTML,
+  seoTitle: "Putsåtgång fasad – beräkning | ByggExp", seoDescription: "Så beräknar du putsåtgång per m² fasad inklusive spill – grundformeln, skikt för skikt, murbruk vid tegel, säckantal och moms i anbudet.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/betong-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T13:18:00.000Z", createdAt: "2026-08-19T13:18:00.000Z", updatedAt: "2026-08-19T13:18:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_AVVIKELSEHANTERING_BYGG_MALL,
+    A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG,
+    A_ARBETSBEREDNING_MALL_BYGG,
+    A_REPARATION_VS_FORBATTRING_AVDRAG_BYGG,
+    A_PAMINNELSE_INKASSO_AVGIFT_BYGG,
+    A_VISSTIDSANSTALLNING_SAVA_BYGG,
+    A_PUTS_MURBRUK_ATGANG_FASAD,
     A_SYSTEMATISKT_ARBETSMILJOARBETE_LITET_BYGGFORETAG,
     A_RETENTIONSRATT_HANTVERKARE_INNEHALLA_ARBETE,
     A_SKYDDSROND_BYGG_CHECKLISTA,

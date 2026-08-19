@@ -10815,9 +10815,330 @@ const A_VILKA_FORSAKRINGAR_BEHOVER_BYGGFORETAG: BlogPost = {
   publishedAt: "2026-08-19T10:21:00.000Z", createdAt: "2026-08-19T10:21:00.000Z", updatedAt: "2026-08-19T10:21:00.000Z",
 };
 
+const A_SKATTEVERKET_NEKAR_ROTAVDRAG_FORBEHALL_HTML = `
+<p>Du har utfört jobbet, dragit av 30 % ROT direkt på fakturan och fått betalt av kunden för dennes del. Sedan kommer beskedet: Skatteverket nekar utbetalningen. Pengarna du redan räknat med kommer aldrig. Frågan blir plötsligt brännande – kan du kräva kunden på mellanskillnaden, eller får du stå för hela förlusten själv? Svaret avgörs nästan alltid av en enda sak: vad som står i ditt avtal. Är avtalet tyst om detta blir det du som utförare som förlorar pengarna, oavsett hur oskyldig du är i sammanhanget.</p>
+
+<p>Innan du skriver nästa offert – räkna ut kundens verkliga arbetskostnad och ROT-belopp med <a href="/sv/verktyg/rot-avdrag-kalkylator">vår gratis ROT-avdragskalkylator -&gt;</a> så att både underlag och förbehåll blir rätt från början.</p>
+
+<h2>Så fungerar fakturamodellen 2026</h2>
+<p>Från 1 januari 2026 är ROT-avdraget åter 30 % av arbetskostnaden (inklusive moms), med ett tak på 50 000 kr per person och år. Den tillfälliga höjningen till 50 % gällde bara 12 maj–31 december 2025 och förlängdes inte i budgeten för 2026. Räknar du fortfarande med 50 % bygger du hela offerten på en felaktig siffra.</p>
+<p>ROT och RUT delar på ett gemensamt tak 2026: sammanlagt högst 75 000 kr i skattereduktion per person och år, varav ROT får utgöra högst 50 000 kr. RUT beräknas som 50 % av arbetskostnaden. Använder kunden en del av utrymmet på RUT-arbeten minskar det som finns kvar för ROT – det finns alltså inget separat RUT-tak ovanpå ROT, utan posterna räknas ihop mot samma 75 000 kr.</p>
+<p>I fakturamodellen drar ditt företag – som ska ha F-skatt – av ROT-beloppet direkt på fakturan mot kunden. Resten begär du från Skatteverket via e-tjänsten "Rot och rut – företag". Arbetet måste vara utfört och betalt av kunden, och betalningen ska vara elektronisk och spårbar, innan du ansöker. Ansökan om utbetalning ska lämnas senast 31 januari året efter att kunden betalade. Kom ihåg att endast arbetskostnaden är avdragsgill – material och resor räknas aldrig in.</p>
+
+<h2>Huvudregeln: risken ligger på dig som utförare</h2>
+<p>Det här är kärnan i hela problemet. Risken för att en ansökan om skattereduktion inte beviljas ligger enligt lagstiftaren på utföraren av arbetet. Det framgår av förarbetena och är en uttrycklig vilja – motiverat av att det är du som kontrollerar underlaget för avdraget. Du ansvarar för att förutsättningarna är uppfyllda.</p>
+<p>Konsekvensen är obehaglig: om ditt avtal är tyst om vad som händer när ROT nekas, kan du inte i efterhand kräva kunden på det belopp som Skatteverket vägrade betala. För att över huvud taget ha rätt att fakturera mellanskillnaden måste du <strong>genom avtal förbehålla dig rätten</strong> att kräva köparen på ytterligare betalning om skattereduktionen uteblir. Och förbehållet måste finnas på plats redan vid avtalets ingående – text som du lägger till ensidigt på fakturan i efterhand binder inte en konsument.</p>
+
+<h2>Därför nekar Skatteverket utbetalning</h2>
+<p>Nekade utbetalningar beror sällan på slarv från din sida – oftast handlar det om kundens situation. De vanligaste orsakerna:</p>
+<ul>
+<li>Kunden äger inte bostaden när arbetet utförs.</li>
+<li>Kunden har redan förbrukat sitt ROT-tak för året.</li>
+<li>Kunden har för lågt skatteutrymme att reducera mot.</li>
+<li>Betalningen skedde inte elektroniskt och spårbart.</li>
+<li>Underlaget är felaktigt eller ofullständigt.</li>
+</ul>
+<p>Kunden ser själv sitt kvarvarande utrymme och saldo på "Mina sidor" hos Skatteverket. Problemet är att du sällan har insyn i kundens övriga ROT-jobb under året – någon annan hantverkare kan redan ha ätit upp taket.</p>
+
+<h2>Rättsfallet som borde skrämma dig</h2>
+<p>Ett mål i Svea hovrätt illustrerar vad som står på spel. En utförare hade räknat med att ROT-subventionen skulle täcka en del av entreprenaden och dragit av beloppet direkt på fakturan. Skatteverket återkrävde subventionen, och när utföraren vände sig till kunden för mellanskillnaden fann domstolen att avtalstexten var för otydlig om utförarens rätt till tilläggsbetalning. Resultatet: utföraren blev utan pengarna – en betydande del av entreprenaden, förlorad på ett par meningar i avtalet.</p>
+
+<h2>Så skriver du en ROT-förbehållsklausul som håller</h2>
+<p>En hållbar klausul uppfyller tre krav. Den ska finnas i avtalet vid avtalets ingående, den ska vara tydlig med att kunden betalar fullt pris om skattereduktionen nekas, och den ska koppla mellanskillnaden till dina ordinarie betalningsvillkor och förfallodag.</p>
+<p>Ett exempel på formulering du kan utgå från:</p>
+<p><em>"Det avtalade priset förutsätter att köparen beviljas skattereduktion (ROT) för arbetskostnaden. Om Skatteverket helt eller delvis nekar utbetalning av ROT-beloppet, oavsett orsak, förbinder sig köparen att betala motsvarande belopp direkt till utföraren. Sådan tilläggsbetalning förfaller 30 dagar efter fakturadatum enligt avtalets ordinarie betalningsvillkor."</em></p>
+<p>Lägg in klausulen i offerten och entreprenadavtalet – inte först på slutfakturan. Det är vid avtalets ingående kunden ska förstå och acceptera risken.</p>
+
+<h2>Checklista innan du drar ROT på fakturan</h2>
+<ol>
+<li>Stäm av kundens kvarvarande ROT-utrymme – be kunden kontrollera saldot på Mina sidor.</li>
+<li>Verifiera att kunden äger bostaden där arbetet utförs – folkbokföring krävs inte, även ett fritidshus som kunden äger ger rätt till ROT.</li>
+<li>Dokumentera arbetskostnaden separat från material och resor.</li>
+<li>Säkerställ att kunden betalar elektroniskt och spårbart.</li>
+<li>Skriv skriftligt avtal med ROT-förbehåll innan arbetet startar.</li>
+</ol>
+<p>Byggföretagen tillhandahåller dessutom en checklista, "Inför ett ROT-arbete", som stöd för att säkra förutsättningar och avtalsvillkor innan du sätter spaden i marken.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du offert och entreprenadavtal där ROT-förbehållet finns med redan från start, så att villkoret följer med hela vägen till fakturan i stället för att dyka upp för sent. Med <a href="/sv/verktyg/offert-mall">offertmallen</a> lägger du in förbehållsklausulen i det underlag kunden faktiskt godkänner, och med <a href="/sv/verktyg/faktura-mall">fakturamallen</a> håller du isär arbetskostnad och material så att ROT-underlaget blir korrekt. ROT-kalkylatorn räknar ut avdraget på rätt procentsats för 2026. ByggExp fattar inga beslut åt Skatteverket – men verktygen gör det svårare att missa förbehållet och underlaget som avgör om du får betalt.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Kan jag lägga till förbehållet på fakturan i efterhand?</h3>
+<p>Nej. Ett förbehåll som du ensidigt lägger till på fakturan efter att avtalet ingåtts binder inte en konsument. Klausulen måste finnas i avtalet vid avtalets ingående, alltså i offert eller entreprenadavtal som kunden godkänner innan arbetet börjar.</p>
+<h3>Vad händer om kunden vägrar betala mellanskillnaden?</h3>
+<p>Har du ett tydligt förbehåll i avtalet har du en avtalsrättslig grund att kräva beloppet, ytterst via inkasso eller Kronofogden. Saknas förbehållet, eller är det otydligt, står du själv för förlusten – precis som i Svea hovrätt-målet.</p>
+<h3>Gäller detta även RUT?</h3>
+<p>Ja, samma riskfördelning gäller RUT-arbeten. Skillnaden är procentsatsen: RUT är 50 % av arbetskostnaden. ROT och RUT delar dessutom på samma gemensamma tak, sammanlagt 75 000 kr per person och år (varav ROT högst 50 000 kr) – RUT har alltså inget eget tak ovanpå ROT. Förbehållsklausulen bör täcka både ROT och RUT.</p>
+<h3>Måste jag kolla kundens skatteutrymme?</h3>
+<p>Du kan inte se det själv, men du bör be kunden kontrollera sitt kvarvarande utrymme och saldo på Mina sidor innan du drar av ROT. Förbehållsklausulen är din försäkring för de fall där utrymmet ändå inte räcker.</p>
+
+<h2>Kom igång</h2>
+<p>Skriv aldrig ett ROT-jobb utan förbehållsklausul. Börja med att räkna rätt i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a> och lägg in förbehållet i din <a href="/sv/verktyg/offert-mall">offertmall</a>. Vill du se hur ByggExp binder ihop offert, avtal och faktura med ROT-underlaget? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Relaterat: <a href="/sv/blog/rotavdrag-2026-nya-regler-foretag">ROT-avdraget 2026 – nya regler för företag</a>, <a href="/sv/blog/entreprenadkontrakt-mall">Entreprenadkontrakt – mall och guide</a>, <a href="/sv/blog/byggfaktura-checklista-rot">Byggfaktura med ROT – checklista</a>.</p>
+`;
+
+const A_SKATTEVERKET_NEKAR_ROTAVDRAG_FORBEHALL: BlogPost = {
+  _id: "code-"+"skatteverket-nekar-rotavdrag-forbehall",
+  title: "Skatteverket nekar rotavdraget – så skyddar du dig med förbehåll", slug: "skatteverket-nekar-rotavdrag-forbehall", locale: "sv",
+  excerpt: "Nekar Skatteverket ROT-utbetalningen står utföraren för förlusten om avtalet är tyst. Så skriver du en förbehållsklausul som håller – plus reglerna för 2026.", tag: "ROT-avdrag",
+  coverImageUrl: "/landing/verktyg/rot-avdrag-preview.webp", contentHtml: A_SKATTEVERKET_NEKAR_ROTAVDRAG_FORBEHALL_HTML,
+  seoTitle: "Skatteverket nekar ROT? Skydda dig med förbehåll | ByggExp", seoDescription: "Nekar Skatteverket ROT-utbetalningen står du för förlusten – om avtalet är tyst. Så skriver du en förbehållsklausul som håller. Reglerna för 2026.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/rot-avdrag-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T10:30:00.000Z", createdAt: "2026-08-19T10:30:00.000Z", updatedAt: "2026-08-19T10:30:00.000Z",
+};
+
+const A_EFTERKALKYL_BYGG_KALKYLUPPFOLJNING_HTML = `
+<p>I en bransch med rörelsemarginaler på bara några få procent avgörs vinsten inte i anbudet — utan i uppföljningen. Under 2025 gick 1 719 byggföretag i konkurs enligt Creditsafe, en minskning med cirka 5 procent mot 2024, och trenden pekar mot fortsatt färre konkurser under 2026. Men för de flesta som ändå går omkull handlar det inte om för få jobb utan om jobb som räknades fel. Efterkalkylen är verktyget som visar var pengarna faktiskt tog vägen, så att nästa anbud bygger på verkligt utfall i stället för optimistiska antaganden.</p>
+
+<p>Grunden i all uppföljning är en korrekt kostnad per timme och ett tydligt påslag. Börja med <a href="/sv/verktyg/paslag-marginal-kalkylator">vår gratis påslags- och marginalkalkylator -></a> för att lägga fast självkostnad och marginal innan du jämför mot utfallet.</p>
+
+<h2>Vad är efterkalkyl — och skillnaden mot förkalkyl?</h2>
+<p>Förkalkylen är den kalkyl du bygger anbudet på: uppskattade timmar, material, underentreprenörer och omkostnader. Efterkalkylen är samma poster fast med de siffror som verkligheten levererade. Kalkyluppföljning är att lägga dessa två bredvid varandra — inte som en engångsavstämning vid årsbokslutet, utan löpande under projektet så att du hinner reagera.</p>
+<p>Fyra jämförelsevariabler bär hela analysen:</p>
+<ul>
+<li><strong>Timmar</strong> — budgeterade mot registrerade.</li>
+<li><strong>Material</strong> — kalkylpris mot fakturerat.</li>
+<li><strong>ÄTA</strong> — fakturerat mot ofakturerat.</li>
+<li><strong>Självkostnad per timme</strong> — den timkostnad du faktiskt hade, inte den du antog.</li>
+</ul>
+
+<h2>Räkna rätt på timkostnaden först</h2>
+<p>Den vanligaste feltänken är att räkna med en "ren" timlön. En verklig kostnad per arbetad timme byggs i lager. Utgå från avtalslönen — snittlönen i bygg ligger runt 39 775 kr/månad, och från löneperioden efter 30 april 2026 höjs lönerna med 6,85 kr/timme (cirka 1 192 kr/månad) enligt Byggavtalet. Ett anbud som prissatts på fjolårets lön underskattar kostnaden så snart jobbet löper förbi 1 maj.</p>
+<p>Ovanpå lönen lägger du:</p>
+<ul>
+<li><strong>Arbetsgivaravgifter 31,42 %</strong> (full nivå 2026). Detta är det största dolda påslaget när en timlön ska bli en riktig timkostnad.</li>
+<li><strong>Semesterlön minst 12 %</strong> enligt lag — men 13–13,2 % enligt Byggnads kollektivavtal.</li>
+<li><strong>Verktyg, kringtid och restid</strong> som inte är fakturerbar men ändå kostar.</li>
+</ul>
+<p>Först när alla lager ligger på plats vet du vad en debiterad timme faktiskt måste täcka. Det är den siffran efterkalkylen ska jämföra mot — inte lönebeskedet.</p>
+
+<h2>Datakällorna du redan har</h2>
+<p>Du behöver sällan samla in ny data; du behöver koppla den du redan producerar till rätt projekt.</p>
+<ul>
+<li><strong>Personalliggaren</strong> är lagkrav när projektets totalkostnad överstiger 4 prisbasbelopp. Med prisbasbeloppet 59 200 kr för 2026 går gränsen vid 236 800 kr. Utöver att undvika Skatteverkets kontrollavgifter (2 500 / 12 500 / 25 000 kr) är in- och uttiderna en pålitlig källa till faktiska timmar per person och projekt.</li>
+<li><strong>Leverantörsfakturor</strong> ger det verkliga materialutfallet — förutsatt att varje faktura konteras mot rätt projekt.</li>
+<li><strong>ÄTA-loggen</strong> ger tilläggen som annars försvinner i marginalen.</li>
+</ul>
+
+<h2>Metoden steg för steg</h2>
+<ol>
+<li><strong>Lås förkalkylen.</strong> Spara anbudets antaganden oförändrade — den blir din mätsticka.</li>
+<li><strong>Tidsregistrera per projekt och moment.</strong> Timmar utan moment går inte att analysera.</li>
+<li><strong>Stäm av löpande.</strong> Vänta inte till slutbesiktning; en avvikelse i vecka tre är fortfarande möjlig att styra.</li>
+<li><strong>Räkna avvikelsen i både kronor och procent</strong> per post. Procent visar var det svider mest relativt, kronor visar var det svider mest i plånboken.</li>
+<li><strong>Dokumentera orsaken.</strong> En siffra utan förklaring hjälper inte nästa anbud.</li>
+<li><strong>Mata tillbaka nyckeltalen</strong> — kr/kvm, timmar/moment, påslag — in i nästa förkalkyl.</li>
+</ol>
+
+<h2>Skilj marginal från kassaflöde</h2>
+<p>Två saker förväxlas ofta med vinst i efterkalkylen, men rör bara likviditet och fakturaflöde:</p>
+<p><strong>Omvänd byggmoms.</strong> När du säljer byggtjänster B2B till ett annat företag i byggsektorn är det köparen, inte du, som redovisar och betalar momsen. Fakturan bär ingen moms och ska hänvisa till omvänd skattskyldighet (markera "Omvänd skattskyldighet för byggtjänster gäller" samt köparens momsnummer). Det påverkar din kassa — inte din marginal.</p>
+<p><strong>ROT-avdrag.</strong> Sedan 1 januari 2026 är ROT åter 30 % av arbetskostnaden (den tillfälliga höjningen till 50 % gällde bara 12 maj–31 december 2025). Maxbeloppet är 50 000 kr per person och år, inom ett gemensamt ROT+RUT-tak på 75 000 kr. ROT täcker enbart arbete — inte material, resor eller administration — och betalningsdatumet avgör vilket år som gäller. Även detta är en flödes- och fakturafråga, inte en post i den verkliga vinsten. Blanda inte ihop dem i efterkalkylen.</p>
+
+<h2>ÄTA — det vanligaste marginalläckaget</h2>
+<p>Ofakturerade ändrings- och tilläggsarbeten är oftast den enskilt största posten som efterkalkylen avslöjar. ÄTA regleras av standardavtalen AB 04 och ABT 06 och kräver skriftlig beställning samt separat ekonomisk reglering. Entreprenörens krav på ersättning ska framställas "utan oskäligt dröjsmål", med slutlig reglering vid slutbesiktning. Arbete som utförs på muntlig begäran och aldrig faktureras är ren förlust — och den syns tydligt först när du lägger utfört mot fakturerat i uppföljningen.</p>
+
+<h2>Bygg en kalkyldatabas över tid</h2>
+<p>Ett enskilt projekt visar var det gick fel en gång. Tio projekt visar mönster. Räkenskapsinformation ska bevaras i 7 år efter utgången av det kalenderår då räkenskapsåret avslutades, och sedan moderniseringen 2024 får den sparas i annat format än originalet (till exempel digitaliserade kvitton). Spara både för- och efterkalkyl systematiskt och använd de historiska nyckeltalen för att kalibrera påslag och timåtgång inför nästa anbud.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp samlar tid, leverantörsfakturor och ÄTA per projekt så att förkalkyl och utfall står bredvid varandra utan manuell hopsamling i kalkylark. Du registrerar timmar per moment, konterar fakturor mot rätt projekt och ser avvikelsen löpande — inte först vid bokslut. Verktyget räknar inte jobbet åt dig, men det gör datan du redan producerar användbar, så att nästa anbud vilar på egna nyckeltal i stället för magkänsla.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan förkalkyl och efterkalkyl?</h3>
+<p>Förkalkylen är den beräkning du prissätter anbudet på — uppskattade timmar, material och omkostnader. Efterkalkylen är samma poster med verkligt utfall. Jämförelsen mellan dem, kalkyluppföljning, visar var marginalen läckte och vad du behöver justera nästa gång.</p>
+<h3>Varför räcker det inte att titta på timlönen?</h3>
+<p>En timlön blir en verklig timkostnad först när du lägger på arbetsgivaravgifter (31,42 % 2026), semesterlön (13–13,2 % enligt Byggavtalet) samt verktyg och kringtid. Räknar du på ren lön underskattar du kostnaden med ungefär hälften och tappar marginalen redan i anbudet.</p>
+<h3>Påverkar ROT och omvänd byggmoms vinsten i efterkalkylen?</h3>
+<p>Nej. Både ROT-avdraget (30 % av arbetskostnaden 2026) och omvänd byggmoms rör likviditet och fakturaflöde, inte den verkliga vinsten. De ska hanteras separat och inte blandas in i marginalanalysen.</p>
+<h3>Var hittar jag de faktiska timmarna för uppföljningen?</h3>
+<p>Personalliggaren, som är lagkrav över 236 800 kr (4 prisbasbelopp 2026), loggar in- och uttider per person och dag och är en pålitlig källa till verklig arbetstid på plats. Kombinerat med tidsregistrering per moment ger den underlaget du behöver.</p>
+
+<h2>Kom igång</h2>
+<p>Börja enkelt: lås förkalkylen på nästa jobb, registrera timmar per moment och räkna ut din verkliga självkostnad med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn</a>. Vill du se hur för- och efterkalkyl kan följas löpande i ett verktyg, <a href="/sv/contact">boka en demo</a> så visar vi upplägget på ett riktigt projekt.</p>
+
+<p>Relaterat: <a href="/sv/blog/tackningsbidrag-byggforetag">Täckningsbidrag för byggföretag</a> och <a href="/sv/blog/leverantorsfaktura-bygg-projekt">Leverantörsfakturor i byggprojekt</a>.</p>
+`;
+
+const A_EFTERKALKYL_BYGG_KALKYLUPPFOLJNING: BlogPost = {
+  _id: "code-"+"efterkalkyl-bygg-kalkyluppfoljning",
+  title: "Efterkalkyl i bygg: så följer du upp kalkylen och räddar marginalen", slug: "efterkalkyl-bygg-kalkyluppfoljning", locale: "sv",
+  excerpt: "Vinsten avgörs i uppföljningen, inte i anbudet. Så bygger du en efterkalkyl som jämför förkalkyl mot verkligt utfall på timmar, material och ÄTA — och kalibrerar nästa anbud.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_EFTERKALKYL_BYGG_KALKYLUPPFOLJNING_HTML,
+  seoTitle: "Efterkalkyl bygg: kalkyluppföljning | ByggExp", seoDescription: "Så gör du efterkalkyl och kalkyluppföljning i byggföretaget: jämför förkalkyl mot utfall på timmar, material och ÄTA — och räkna rätt på timkostnaden.",
+  seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T10:33:00.000Z", createdAt: "2026-08-19T10:33:00.000Z", updatedAt: "2026-08-19T10:33:00.000Z",
+};
+
+const A_INDEXREGLERING_ENTREPRENAD_KOSTNADSOKNING_HTML = `
+<p>Du lämnar en offert idag, men bygget startar om åtta månader och pågår i ett år. Under tiden rör sig materialpriserna – trä, stål, isolering, VVS. Har du satt ett fast pris utan skydd är det du som byggföretag, inte beställaren, som tar hela smällen när fakturorna landar högre än kalkylen. En indexklausul löser det: den flyttar en del av prisrisken till beställaren på ett förutsägbart sätt, redan i offerten.</p>
+
+<p>Enklast bygger du in klausulen direkt när du skriver anbudet – använd gärna vår gratis <a href="/sv/verktyg/offert-mall">offertmall</a> som utgångspunkt så att index, littera och regleringsvillkor kommer med från början.</p>
+
+<h2>Fast pris utan skydd = din risk</h2>
+<p>Ett fast pris är en prognos om framtiden. På ett kort projekt på några veckor är risken hanterbar – dina inköpspriser hinner sällan röra sig dramatiskt. Men ju längre projektet är, desto mer glider verkligheten från kalkylen. En prisuppgång på några procent på materialdelen kan äta upp hela marginalen, och eftersom materialet ofta köps in i skarven mellan projektstart och slutfas slår det direkt på både resultat och kassaflöde.</p>
+<p>Utan klausul finns bara två utfall: antingen har du lagt på en rejäl riskpremie (och riskerar att förlora affären på pris), eller så har du tagit risken själv och hoppas att priserna står stilla. Indexreglering ger ett tredje, mer professionellt alternativ – du prissätter tight men lägger in en mekanism som justerar automatiskt om priserna faktiskt rör sig.</p>
+
+<h2>Två vägar att ta betalt – kap 6 § 3 vs indexklausul</h2>
+<p>Har du inte skrivit in någon indexklausul är du hänvisad till AB 04/ABT 06 kap 6 § 3. Den regeln tillåter att avtalat pris ändras endast i tre fall: (1) myndighets åtgärd, (2) krig eller krisförhållande med liknande effekt, eller (3) onormala prisförändringar på material som ingår i entreprenaden. Och det räcker inte med att ett av fallen inträffar – kostnadsändringen måste dessutom ha varit <strong>oförutsebar</strong> och <strong>väsentligt</strong> påverka hela entreprenadens kostnad.</p>
+<p>Vad som är "väsentligt" har ingen fast procentgräns i regeln. I praxis har kostnadsändringar på omkring 3,6 % respektive 4,8 % av kontraktssumman bedömts som väsentliga, och branschvägledning brukar peka på cirka 3 % som riktmärke – men med osäkerhet. Dessutom måste du som entreprenör bevisa kostnadsökningen med underlag, till exempel leverantörsfakturor eller prisindex. I praktiken betyder det tröskel, bevisbörda och ofta tvist. Kap 6 § 3 är en undantagsregel för extremfall, inte en pålitlig huvudplan för vardagens prisrörelser.</p>
+<p>Indexklausulen fungerar tvärtom: den justerar automatiskt och förutsägbart utan att du behöver bevisa oförutsebarhet eller nå någon väsentlighetströskel. Därför rekommenderar Byggföretagen index som det primära verktyget mot materialprisökningar – skriv in redan i offerten vilket index som gäller, hur ofta det regleras och hur beloppet räknas.</p>
+
+<h2>Så fungerar Entreprenadindex 2026</h2>
+<p>Från 1 januari 2026 har Entreprenadindex bytt producent. SCB producerade indexet till och med december 2025, därefter tog SBI Svenska Branschindex AB över (helägt av Sydsvenska Industri- och Handelskammaren). Indexet publiceras numera den 20:e varje månad, med data för föregående månad.</p>
+<p>Viktigt att förstå: Entreprenadindex är inte ett enda tal. Det innehåller drygt 200 olika indexserier – så kallade littera – för olika entreprenadtyper. Ni <strong>måste</strong> ange i kontraktet eller offerten exakt vilket eller vilka littera som ska gälla. Saknas den uppgiften blir klausulen svår, ibland omöjlig, att tillämpa i efterhand.</p>
+<p>Regleringen omfattar inte heller hela summan. Vid huvud- och undergruppsreglering reduceras enligt tillämpningsföreskrifterna värdet av utfört arbete en viss månad till 90 % (faktor 0,9) innan det multipliceras med indexförändringen mot bastidpunkten. De återstående 10 % är en icke-reglerbar baskostnad som medvetet lämnas oindexerad, för att dämpa inflationsdrivande helindexering. I den vanliga tillämpningen indexreglerar du alltså inte hela kontraktssumman – räkna med 90 %.</p>
+
+<h2>Så skriver du in indexklausulen i offerten</h2>
+<p>Checklista för en klausul som håller:</p>
+<ol>
+<li><strong>Index och exakt littera</strong> – ange "Entreprenadindex" samt vilken littera/serie som gäller för din entreprenadtyp.</li>
+<li><strong>Bastidpunkt</strong> – vilken basmånad indexförändringen ska räknas mot (ofta anbudsmånaden).</li>
+<li><strong>Regleringsfrekvens</strong> – vanligen månadsvis på värdet av det arbete som utförts respektive månad.</li>
+<li><strong>Beräkningsmetod</strong> – hänvisa till Entreprenadindex tillämpningsföreskrifter inklusive 0,9-faktorn.</li>
+<li><strong>Ev. materialspecifik referens</strong> – för enskilda material kan du hänvisa till SCB:s Byggkostnadsindex (BKI), som tidigare hette Faktorprisindex för byggnader (FPI) och mäter prisutveckling på produktionsfaktorer som byggmaterial, VVS, el, löner, maskiner och transport.</li>
+<li><strong>En tydlig mening i offerten</strong> – skriv rakt ut att priset indexregleras, så att beställaren inte blir överraskad av tillägg senare.</li>
+</ol>
+
+<h2>Exempel: räkna på regleringen</h2>
+<p>Anta att du under en månad utför arbete och material till ett värde av 500 000 kr som omfattas av det valda litterat. Indexet har stigit 2,3 % sedan bastidpunkten (samma storleksordning som BKI för flerbostadshus rörde sig maj 2026 mot maj 2025).</p>
+<ul>
+<li>Reglerbar del: 500 000 × 0,9 = <strong>450 000 kr</strong></li>
+<li>Indextillägg: 450 000 × 2,3 % = <strong>10 350 kr</strong></li>
+<li>De 10 % baskostnad (50 000 kr) lämnas oindexerad.</li>
+</ul>
+<p>Du fakturerar alltså 10 350 kr extra för den månaden – automatiskt, transparent och utan att behöva bevisa att prisuppgången var "oförutsebar". Över ett långt projekt med stigande priser blir summan snabbt skillnaden mellan planerad och urholkad marginal. Vill du se hur ett sådant tillägg påverkar täckningsbidraget kan du testa i vår <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylator</a>.</p>
+
+<h2>Vanliga fallgropar</h2>
+<ul>
+<li><strong>Glömt att ange littera</strong> – "index gäller" utan serie är i praktiken oanvändbart.</li>
+<li><strong>Ingen bastidpunkt</strong> – utan basmånad finns inget att mäta förändringen mot.</li>
+<li><strong>Tro att hela summan regleras</strong> – vid huvud-/undergruppsreglering lämnas 10 % som oindexerad baskostnad.</li>
+<li><strong>Fel publiceringsdatum i rutinen</strong> – kom ihåg att indexet numera kommer den 20:e, inte den 15:e.</li>
+<li><strong>Klausulen kommer först i kontraktet</strong> – ta med den redan i offerten så priset inte förhandlas ner utan skyddet.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du offerten från en mall där du kan lägga in en fast textrad om indexreglering, valt littera och bastidpunkt – så att den följer med på varje anbud automatiskt och du slipper glömma den under tidspress. Rader och belopp räknas ihop åt dig, och när projektet fortlöper har du underlaget samlat för att fakturera indextillägg månad för månad. ByggExp räknar inte fram indextalet åt dig – de hämtar du från Entreprenadindex – men verktyget ser till att klausulen finns med, att kalkylen hänger ihop och att dokumentationen bevaras i den ordning som gör efterfaktureringen enkel.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag ha en indexklausul, eller räcker kap 6 § 3?</h3>
+<p>Kap 6 § 3 gäller alltid som en sista utväg, men den kräver att prisändringen var oförutsebar och väsentlig (i praxis runt 3,6–4,8 % av kontraktssumman) och att du bevisar den med underlag. Det leder ofta till tvist. En indexklausul justerar automatiskt och förutsägbart och rekommenderas som huvudverktyg.</p>
+<h3>Kan jag indexreglera hela kontraktssumman?</h3>
+<p>Nej. Vid huvud- och undergruppsreglering regleras enligt tillämpningsföreskrifterna bara 90 % av värdet av utfört arbete; de återstående 10 % är en icke-reglerbar baskostnad som medvetet lämnas oindexerad.</p>
+<h3>Vilket littera ska jag välja?</h3>
+<p>Entreprenadindex innehåller drygt 200 littera för olika entreprenadtyper. Du väljer den serie som motsvarar din entreprenad och anger den uttryckligen i offerten. Utan angivet littera är klausulen svår att tillämpa.</p>
+<h3>Vad är skillnaden mellan Entreprenadindex och BKI?</h3>
+<p>Entreprenadindex (från 2026 producerat av SBI) används för att reglera entreprenadpriser via littera. BKI – SCB:s Byggkostnadsindex, som tidigare hette Faktorprisindex för byggnader (FPI) – mäter prisutvecklingen på produktionsfaktorer och kan användas som referens för enskilda material.</p>
+
+<h2>Kom igång</h2>
+<p>Lägg in indexklausulen redan i nästa anbud. Börja i vår <a href="/sv/verktyg/offert-mall">offertmall</a>, testa marginaleffekten i <a href="/sv/verktyg/paslag-marginal-kalkylator">påslagskalkylatorn</a>, och vill du se hela flödet i ByggExp – boka en <a href="/sv/contact">demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/fast-pris-eller-lopande-rakning">Fast pris eller löpande räkning</a>, <a href="/sv/blog/entreprenadkontrakt-mall">Entreprenadkontrakt – mall</a>, <a href="/sv/blog/skriva-offert">Så skriver du en offert</a>.</p>
+`;
+
+const A_INDEXREGLERING_ENTREPRENAD_KOSTNADSOKNING: BlogPost = {
+  _id: "code-"+"indexreglering-entreprenad-kostnadsokning",
+  title: "Indexreglering i entreprenad – skydda din marginal", slug: "indexreglering-entreprenad-kostnadsokning", locale: "sv",
+  excerpt: "Ett fast pris utan skydd lägger hela prisrisken på dig. Så skriver du in en indexklausul med Entreprenadindex och littera redan i offerten.", tag: "Entreprenad",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_INDEXREGLERING_ENTREPRENAD_KOSTNADSOKNING_HTML,
+  seoTitle: "Indexreglering entreprenad | ByggExp", seoDescription: "Så bygger du in en indexklausul i offerten med Entreprenadindex 2026, rätt littera och 0,9-faktorn – och skyddar marginalen mot stigande materialpriser.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T10:36:00.000Z", createdAt: "2026-08-19T10:36:00.000Z", updatedAt: "2026-08-19T10:36:00.000Z",
+};
+
+const A_RANTEFORDELNING_ENSKILD_FIRMA_BYGG_HTML = `
+<p>Du driver en enskild byggfirma med hyggligt eget kapital i verksamheten – verktyg, en skåpbil, lite lager och pengar på kontot. Vinsten rullar in och du betalar egenavgifter på nästan 29 % plus kommunal skatt, kanske statlig skatt ovanpå det. Samtidigt finns en regel som varje år låter dig flytta en schablonmässig ränta på ditt egna kapital till kapitalbeskattning på platta 30 %. Den heter räntefördelning, och den är en av de mest bortglömda skattevinsterna för hantverkare med enskild firma.</p>
+
+<p>Innan du sätter dig i deklarationen: räkna på hur mycket din vinst faktiskt tål. Testa vår gratis <a href="/sv/verktyg/paslag-marginal-kalkylator">påslag- och marginalkalkylator -&gt;</a> för att se vad som blir kvar efter kostnader – det är den vinsten räntefördelningen sedan hjälper dig beskatta smartare.</p>
+
+<h2>Vad räntefördelning är – kort</h2>
+<p>Räntefördelning är ett sätt att låta en del av näringsinkomsten beskattas som inkomst av kapital i stället för näring. Tanken är att du ska likställas med någon som i stället lagt sitt kapital i banken eller i aktier och fått avkastning beskattad med 30 %. Systemet har två sidor:</p>
+<ul>
+<li><strong>Positiv räntefördelning</strong> – frivillig. Har du positivt eget kapital i firman får du flytta en schablonränta på det kapitalet från näring (egenavgifter + progressiv skatt) till kapital (platt 30 %).</li>
+<li><strong>Negativ räntefördelning</strong> – tvingande. Har du kraftigt negativt kapital, till exempel för att du tagit ut mer än du satt in, måste en del i stället beskattas hårdare.</li>
+</ul>
+<p>För de flesta byggare med ordning på ekonomin är det den positiva sidan som är intressant.</p>
+
+<h2>Siffrorna för 2026 (verifierat mot Skatteverket och Riksgälden)</h2>
+<p>Fördelningssatsen bygger på statslåneräntan den 30 november året före beskattningsåret. Riksgälden fastställde statslåneräntan den 30 november 2025 till <strong>2,55 %</strong>. Det ger för beskattningsåret 2026 (deklareras 2027):</p>
+<ul>
+<li><strong>Positiv räntefördelning: 8,55 %</strong> (statslåneräntan 2,55 % + 6 procentenheter).</li>
+<li><strong>Negativ räntefördelning: 3,55 %</strong> (statslåneräntan 2,55 % + 1 procentenhet).</li>
+</ul>
+<p>Det finns golvregler: vid positiv räntefördelning anses statslåneräntan vara lägst 0 % (lägsta möjliga sats blir därmed 6 %), och vid negativ lägst 0,5 %. Som jämförelse var satserna för 2025 lägre – 7,96 % positiv och 2,96 % negativ – eftersom statslåneräntan då var 1,96 %. Kontrollera alltid aktuell sats mot Skatteverket innan du fyller i deklarationen, eftersom den ändras varje år.</p>
+
+<h2>Nyheterna 2025 som gör det mer värt för hantverkare</h2>
+<p>Från och med 1 januari 2025 blev reglerna märkbart mer generösa:</p>
+<ul>
+<li><strong>Beloppsgränsen på 50 000 kr för positiv räntefördelning är slopad.</strong> Tidigare fick du bara göra positiv räntefördelning om fördelningsbeloppet översteg 50 000 kr. Nu får du göra det så snart kapitalunderlaget är noll eller positivt – från första kronan.</li>
+<li><strong>Gränsen för tvingande negativ räntefördelning höjdes från −50 000 kr till −500 000 kr.</strong> Det skyddar dig som lånefinansierat maskiner, bil eller större inköp och därför tillfälligt har lågt eller negativt bokfört kapital.</li>
+</ul>
+<p>Sammantaget betyder det att betydligt fler enskilda byggfirmor kan – och bör – använda positiv räntefördelning.</p>
+
+<h2>Så räknas kapitalunderlaget i en byggverksamhet</h2>
+<p>Fördelningsbeloppet är kapitalunderlaget gånger fördelningssatsen. Kapitalunderlaget är det justerade egna kapitalet i näringsverksamheten vid utgången av föregående räkenskapsår. Förenklat:</p>
+<ul>
+<li><strong>Plus:</strong> tillgångar som verktyg, maskiner, inventarier, lager, kassa och kundfordringar.</li>
+<li><strong>Minus:</strong> skulder som banklån, billån och leverantörsskulder.</li>
+<li><strong>Skattemässiga justeringar:</strong> återläggning av outnyttjat underskott, avdrag för tillfälliga kapitaltillskott, tillägg av sparat fördelningsbelopp och eventuell övergångspost (från 1995).</li>
+</ul>
+<p>En viktig poäng för byggare: ett lånefinansierat inventarie höjer inte underlaget netto. Köper du en grävmaskin för 300 000 kr på lån ökar både tillgångar och skulder lika mycket – det egna kapitalet står still. Det är kapital du själv skjutit till, eller vinst du låtit stå kvar i firman, som bygger underlaget.</p>
+
+<h2>Konkret räkneexempel – bygg-egenföretagare</h2>
+<p>Säg att du gjort en vinst på 500 000 kr och har ett justerat eget kapital på 350 000 kr vid förra bokslutet. Positiv räntefördelning för 2026:</p>
+<ul>
+<li>350 000 kr × 8,55 % = <strong>29 925 kr</strong> som flyttas från näring till kapital.</li>
+<li>På den delen betalar du 30 % kapitalskatt = cirka 8 978 kr.</li>
+<li>Hade samma 29 925 kr i stället beskattats som näring hade du betalat fulla egenavgifter (28,97 % för 2026) plus kommunal skatt – en marginal på ungefär 45–48 % vid den här inkomstnivån. Passerar din beskattningsbara förvärvsinkomst dessutom skiktgränsen på 643 000 kr (inkomstår 2026) tillkommer 20 % statlig skatt, och då landar marginalen en bit över 50 %.</li>
+</ul>
+<p>Skillnaden mellan runt 45–48 % marginal (eller över 50 % om du passerar skiktgränsen) och platta 30 % på nästan 30 000 kr blir flera tusen kronor i sänkt skatt – varje år, för ett par minuters extra arbete i deklarationen. Vill du se hur din timdebitering och vinst påverkar underlaget kan du testa vår <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator -&gt;</a>.</p>
+
+<h2>Sparat fördelningsbelopp – vänta till bättre år</h2>
+<p>Positiv räntefördelning är frivillig, och det du inte utnyttjar ett år får sparas som sparat fördelningsbelopp och användas senare. Det är guld värt i byggbranschen med ojämna år. Gör du ett förlustår eller ett lågår med låg marginalskatt finns det liten poäng att flytta inkomst till kapital – spara i stället beloppet och plocka fram det ett år när vinsten och marginalskatten är höga. Då blir varje krona du flyttar mer värd.</p>
+
+<h2>Baksidan – vad du förlorar</h2>
+<p>Det finns en avvägning. Inkomst som kapitalbeskattas via räntefördelning är <strong>inte pensions- eller sjukpenninggrundande</strong>. Den räknas alltså inte in i din PGI eller SGI. För en äldre företagare med redan intjänad pension spelar det liten roll. För dig som är ung, bygger pension och vill ha ett skydd vid sjukdom kan det vara värt att flytta mindre – eller inget alls vissa år. Väg den kortsiktiga skattevinsten mot det långsiktiga sociala skyddet.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp är inte ett deklarationsprogram och räknar inte ut ditt kapitalunderlag åt dig – det gör din bokföring och din revisor. Men verktyget hjälper dig med det som avgör hur stor vinsten faktiskt blir: rätt priser, kontroll på marginalen och underlag som är lätta att stämma av. Med korrekt prissättning och tydlig uppföljning av vinst per projekt får du ett rättvisande resultat att bygga räntefördelningen på. Ju bättre koll på siffrorna under året, desto enklare blir det att fatta rätt beslut om positiv räntefördelning när deklarationen väl ska göras.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag använda positiv räntefördelning?</h3>
+<p>Nej. Positiv räntefördelning är frivillig. Du kan välja att inte använda den ett visst år och i stället spara fördelningsbeloppet till ett år med högre vinst och marginalskatt. Negativ räntefördelning är däremot tvingande om ditt kapital är tillräckligt negativt.</p>
+
+<h3>Vad är fördelningssatsen för 2026?</h3>
+<p>Positiv räntefördelning är 8,55 % (statslåneräntan 2,55 % den 30 november 2025 plus 6 procentenheter). Negativ är 3,55 % (2,55 % plus 1 procentenhet). Satsen ändras varje år – kontrollera alltid aktuell sats mot Skatteverket.</p>
+
+<h3>Lönar det sig alltid?</h3>
+<p>Nästan alltid rent skattemässigt om du har positivt kapital och en vinst som beskattas högre än 30 % på marginalen. Men eftersom den kapitalbeskattade delen inte är pensions- eller sjukpenninggrundande kan yngre företagare vilja begränsa hur mycket de flyttar.</p>
+
+<h3>Var i deklarationen gör jag räntefördelningen?</h3>
+<p>Beräkningen görs i anslutning till NE-bilagan, och underlaget hanteras på räntefördelningsblanketten. De flesta bokföringsprogram och revisorer räknar fram kapitalunderlaget automatiskt – din uppgift är att kontrollera att det stämmer och att jämföra vinsten mot egenavgifterna.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att få rätt på vinsten – det är den räntefördelningen sedan optimerar. Räkna på dina priser i vår <a href="/sv/verktyg/paslag-marginal-kalkylator">påslag- och marginalkalkylator</a> och stäm av din timdebitering. Vill du se hur ByggExp kan ge dig löpande koll på vinst per projekt så att deklarationen blir enkel? <a href="/sv/contact">Boka en demo -&gt;</a> så visar vi hur det fungerar.</p>
+
+<p>Relaterat: <a href="/sv/blog/egenavgifter-enskild-firma-bygg">Egenavgifter i enskild byggfirma</a>, <a href="/sv/blog/avdrag-enskild-firma-bygg">Avdrag i enskild firma för byggare</a> och <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggverksamhet?</a></p>
+`;
+
+const A_RANTEFORDELNING_ENSKILD_FIRMA_BYGG: BlogPost = {
+  _id: "code-"+"rantefordelning-enskild-firma-bygg",
+  title: "Räntefördelning i enskild byggfirma – sänk skatten 2026", slug: "rantefordelning-enskild-firma-bygg", locale: "sv",
+  excerpt: "Räntefördelning är en av de mest bortglömda skattevinsterna för enskild byggfirma. Så funkar positiv räntefördelning 2026 – med sats, kapitalunderlag och räkneexempel.", tag: "Skatt",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_RANTEFORDELNING_ENSKILD_FIRMA_BYGG_HTML,
+  seoTitle: "Räntefördelning enskild byggfirma 2026 | ByggExp", seoDescription: "Positiv räntefördelning låter dig beskatta en del av byggvinsten till 30 % i stället för egenavgifter. Se satsen 8,55 % för 2026 och ett räkneexempel.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T10:39:00.000Z", createdAt: "2026-08-19T10:39:00.000Z", updatedAt: "2026-08-19T10:39:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_SKATTEVERKET_NEKAR_ROTAVDRAG_FORBEHALL,
+    A_EFTERKALKYL_BYGG_KALKYLUPPFOLJNING,
+    A_INDEXREGLERING_ENTREPRENAD_KOSTNADSOKNING,
+    A_RANTEFORDELNING_ENSKILD_FIRMA_BYGG,
     A_KONSUMENTTJANSTLAGEN_HANTVERKARE_15_PROCENT,
     A_KORJOURNAL_KRAV_SKATTEVERKET_BYGG,
     A_SANK_ARBETSGIVARAVGIFT_UNGA_VAXA_STOD_2026,

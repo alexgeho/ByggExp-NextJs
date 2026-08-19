@@ -5,6 +5,10 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'skatteverket-nekar-rotavdrag-forbehall',
+  'efterkalkyl-bygg-kalkyluppfoljning',
+  'indexreglering-entreprenad-kostnadsokning',
+  'rantefordelning-enskild-firma-bygg',
   'konsumenttjanstlagen-hantverkare-15-procent',
   'korjournal-krav-skatteverket-bygg',
   'sank-arbetsgivaravgift-unga-vaxa-stod-2026',

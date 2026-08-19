@@ -15311,9 +15311,97 @@ const A_FARDIGSTALLANDESKYDD_SMAHUS: BlogPost = {
   publishedAt: "2026-08-19T20:27:00.000Z", createdAt: "2026-08-19T20:27:00.000Z", updatedAt: "2026-08-19T20:27:00.000Z",
 };
 
+const A_ROT_FORDELA_MAKAR_TAK_2026_HTML = `
+<p>ROT-taket ser ut som ett kundproblem, men i fakturamodellen är det ni som bär risken. Ni drar av kundens skattereduktion direkt på fakturan, kunden betalar bara sin del, och sedan begär ni resten från Skatteverket. Om kundens tak redan är fyllt – eller om två makar delar ett hushåll och bara den ena står på beställningen – kan Skatteverket neka utbetalningen. Då står byggföretaget med ett hål i kassan för ett arbete som redan är utfört och betalat i material. Att förstå hur taket fördelas mellan flera ägare och flera hantverkare är därför en likviditetsfråga, inte en detalj i deklarationen.</p>
+
+<p>Räkna igenom kundens utrymme innan ni fakturerar med <a href="/sv/verktyg/rot-avdrag-kalkylator">vår gratis ROT-avdragskalkylator -&gt;</a> så ser ni direkt hur mycket avdrag arbetskostnaden faktiskt ger per person.</p>
+
+<h2>ROT-reglerna 2026 i korthet</h2>
+<p>Från 1 januari 2026 är ROT-avdraget tillbaka på ordinarie <strong>30 % av arbetskostnaden</strong>. Den tillfälligt höjda nivån på 50 % gällde bara mellan 12 maj och 31 december 2025 – räkna aldrig med 50 % på arbeten som betalas under 2026.</p>
+<ul>
+<li><strong>Takets storlek:</strong> högst 50 000 kr i ROT-avdrag per person och år.</li>
+<li><strong>Gemensamt tak:</strong> ROT och RUT delar ett tak på 75 000 kr per person och år. Av dessa 75 000 kr får högst 50 000 kr vara ROT. RUT kan ensamt fylla hela 75 000 kr, med 50 % avdrag.</li>
+<li><strong>Bara arbetskostnad:</strong> avdraget gäller enbart arbetet – aldrig material, maskiner, resor eller administrationsavgifter. Fakturan måste specificera arbetskostnaden separat.</li>
+</ul>
+<p>Ett samboende par kan alltså som mest nå <strong>150 000 kr i sammanlagd skattereduktion</strong> samma år: 2 × 75 000 kr i gemensamt ROT- och RUT-tak. Av det får ROT-delen vara högst 2 × 50 000 = 100 000 kr; resten upp till taket kan fyllas med RUT. Men det förutsätter att båda personerna kan utnyttja sitt utrymme – och det är där fördelningen avgör om ni får betalt.</p>
+
+<h2>Flera ägare, dubbelt tak</h2>
+<p>För att två personer ska få var sitt tak räcker det inte att de bor tillsammans. Tre krav måste vara uppfyllda:</p>
+<ol>
+<li>Båda ska <strong>äga bostaden</strong>.</li>
+<li>Båda ska stå på <strong>avtalet/beställningen</strong>.</li>
+<li>Kostnaden ska <strong>fördelas formellt</strong> – separata fakturor eller en delad faktura med tydlig andel per person.</li>
+</ol>
+<p>Räkneexempel: en köksrenovering med 300 000 kr i ren arbetskostnad, beställd av två makar som äger bostaden 50/50. Fördelas kostnaden lika blir det 150 000 kr arbetskostnad per person. ROT ger 30 % = 45 000 kr per person, alltså under takets 50 000 kr. Båda ryms med marginal och företaget kan begära totalt 90 000 kr i utbetalning. Hade hela fakturan ställts till en person hade avdraget kapats vid 50 000 kr – och mellanskillnaden fått betalas av kunden eller fastnat hos er.</p>
+
+<h2>Så fördelar hantverkaren fakturan rätt</h2>
+<p>Fördelningen görs i fakturan, och den behöver innehålla köparuppgifter per person. Se till att ha med:</p>
+<ul>
+<li>Personnummer och andel (procent eller belopp) för varje köpare.</li>
+<li>Arbetskostnaden specificerad separat från material och övrigt.</li>
+<li>Fastighetsbeteckning, eller lägenhetsnummer och BRF:ens organisationsnummer vid bostadsrätt.</li>
+<li>Begärt ROT-belopp per person, avdraget direkt på fakturan.</li>
+</ul>
+<p>Använd gärna en mall som redan har fälten på plats – <a href="/sv/verktyg/faktura-mall">vår fakturamall</a> gör det enklare att hålla arbetskostnad och köparandelar åtskilda så att inget faller bort i granskningen.</p>
+
+<h2>När flera hantverkare jobbar hos samma kund</h2>
+<p>Varje företag begär sin del mot <strong>samma gemensamma tak</strong>. Om kunden anlitar en snickare, en elektriker och en golvläggare under samma år konkurrerar ni alla om samma 50 000 kr per person. Den som hinner begära utbetalning först fyller utrymmet – och nästa aktör kan få avslag när taket tagit slut, trots att ni inte i förväg kunde se hur mycket de andra redan begärt.</p>
+<p>Praktisk konsekvens: fråga kunden om andra ROT-arbeten är på gång under året, och begär utbetalning så snart kunden betalat sin del. Vänta inte till årsskiftet.</p>
+
+<h2>Fakturamodellen steg för steg</h2>
+<ol>
+<li>Företaget måste vara godkänt för <strong>F-skatt</strong>.</li>
+<li>Skattereduktionen dras av direkt på fakturan – kunden betalar sin del.</li>
+<li>Företaget begär resten från Skatteverket via e-tjänsten <em>Rot och rut</em>.</li>
+<li>Begäran om utbetalning ska vara inne <strong>senast 31 januari året efter</strong> att kunden betalat.</li>
+</ol>
+
+<h2>Skydda kassaflödet</h2>
+<p>Företaget bär risken. Om kundens tak redan är fyllt eller kundens slutliga skatt inte räcker, kan Skatteverket avslå eller kräva tillbaka utbetalt belopp. Skydda er med några enkla rutiner:</p>
+<ul>
+<li>Be kunden kontrollera sitt utrymme på Skatteverkets <strong>Mina sidor</strong>. Där syns preliminärt utnyttjat (begärt av entreprenör, ej utbetalt), beviljat (utbetalt) och kvarvarande utrymme. Summan av preliminärt plus beviljat räknas mot taket.</li>
+<li>Begär en kopia av kundens uppgift om utnyttjat ROT-utrymme innan ni sätter avdraget.</li>
+<li>Skriv in en klausul i avtalet om att kunden betalar hela beloppet om Skatteverket säger nej.</li>
+<li>Håll likviditet för väntetiden mellan fakturering och utbetalning.</li>
+</ul>
+<p>Kom ihåg att kraven ligger på köparen: personen ska äga och bo i den bostad där ROT-arbetet utförs, ha fyllt 18 år, vara obegränsat skattskyldig i Sverige och ha betalat tillräckligt med slutlig skatt samma år. Överskrids taket kan Skatteverket kräva tillbaka beloppet och, om felaktiga uppgifter lämnats, dessutom ta ut skattetillägg (upp till 40 %).</p>
+
+<h2>Omfördelning mellan makar i deklarationen</h2>
+<p>Om det visar sig att den enes slutliga skatt inte räcker kan avdraget ofta räddas. Makar och sambor med gemensamt hushåll får omfördela ROT- och RUT-avdrag mellan sig i deklarationen: via e-tjänsten under <em>Ändra</em> -&gt; <em>Skattereduktioner rotarbete eller rutarbete</em> (ange belopp och personnummer), eller på pappersblankett under <em>Övriga upplysningar</em> med kryss för omfördelning. Den som tar över avdraget måste själv uppfylla villkoren. Det här är kundens åtgärd, men det är bra att kunna tipsa om den när en utbetalning riskerar att fastna.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du fakturan med arbetskostnaden specificerad för sig och köparandelar per person, så att underlaget till Skatteverket blir rätt från start. Du kan dela en beställning på flera ägare och hålla reda på vilka arbeten som fakturerats vilken kund under året – ett stöd när flera hantverkare rör sig mot samma tak. ByggExp kan inte se kundens kvarvarande utrymme åt dig (den uppgiften ligger hos Skatteverket), men systemet gör det svårare att missa fälten som annars leder till avslag.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är ROT-avdraget 30 eller 50 procent 2026?</h3>
+<p>30 % av arbetskostnaden. De 50 % som gällde under 2025 var tillfälliga och slutade den 31 december 2025.</p>
+<h3>Hur mycket kan ett par sammanlagt få i ROT och RUT samma år?</h3>
+<p>Som mest 150 000 kr i sammanlagd skattereduktion: 2 × 75 000 kr i det gemensamma ROT- och RUT-taket, varav ROT-delen får vara högst 2 × 50 000 = 100 000 kr. Det förutsätter att båda äger bostaden, står på beställningen och har tillräcklig slutlig skatt.</p>
+<h3>Vad händer om kundens tak redan är fyllt när vi begär utbetalning?</h3>
+<p>Skatteverket kan avslå eller kräva tillbaka beloppet. I fakturamodellen är det företaget som bär risken, därför bör ni kontrollera kundens utrymme och avtala om att kunden betalar fullt vid avslag.</p>
+<h3>Kan makar flytta ROT-avdraget mellan sig efteråt?</h3>
+<p>Ja. Makar och sambor med gemensamt hushåll kan omfördela avdraget i deklarationen via <em>Ändra</em> -&gt; <em>Skattereduktioner rotarbete eller rutarbete</em>. Den som tar över måste själv uppfylla villkoren.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna ut avdraget per person innan ni fakturerar med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a> och ställ fakturan i <a href="/sv/verktyg/faktura-mall">fakturamallen</a> med arbetskostnad och andelar rätt uppdelade. Vill ni se hur ByggExp hanterar delade beställningar i praktiken? <a href="/sv/contact">Boka en demo här -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/rotavdrag-2026-nya-regler-foretag">ROT-avdrag 2026 – nya regler för företag</a>, <a href="/sv/blog/rot-avdrag">Så fungerar ROT-avdraget för byggföretag</a>, <a href="/sv/blog/skatteverket-nekar-rotavdrag-forbehall">När Skatteverket nekar ROT-avdrag – skydda er med förbehåll</a>.</p>
+`;
+
+const A_ROT_FORDELA_MAKAR_TAK_2026: BlogPost = {
+  _id: "code-"+"rot-fordela-makar-tak-2026",
+  title: "ROT-taket 2026: så fördelar ni avdraget mellan makar och hantverkare", slug: "rot-fordela-makar-tak-2026", locale: "sv",
+  excerpt: "I fakturamodellen bär byggföretaget risken när ROT-taket är fyllt. Så fördelar ni avdraget rätt mellan makar och flera hantverkare 2026 – och skyddar kassaflödet.", tag: "ROT-avdrag",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_ROT_FORDELA_MAKAR_TAK_2026_HTML,
+  seoTitle: "ROT-taket 2026: fördela avdrag rätt | ByggExp", seoDescription: "Så fördelar byggföretag ROT-avdraget mellan makar och flera hantverkare 2026 – gemensamt tak 75 000 kr/person, ROT max 50 000 kr. Skydda kassaflödet.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T21:00:00.000Z", createdAt: "2026-08-19T21:00:00.000Z", updatedAt: "2026-08-19T21:00:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_ROT_FORDELA_MAKAR_TAK_2026,
     A_MATERIALATGANG_INNERVAGG_REGLAR_GIPS,
     A_FARGATGANG_MALNING_M2,
     A_GOLVMATERIAL_ATGANG_SPILL,

@@ -9896,9 +9896,296 @@ const A_NYA_BYGGREGLER_2026_ENERGI_ISOLERING: BlogPost = {
   publishedAt: "2026-08-19T09:23:00.000Z", createdAt: "2026-08-19T09:23:00.000Z", updatedAt: "2026-08-19T09:23:00.000Z",
 };
 
+const A_STARTBESKED_BYGGLOV_PROCESS_2026_HTML = `
+<p>Att ha bygglovet i handen är inte samma sak som att få börja bygga. Den missuppfattningen är dyr: startar du byggnadsarbetet utan ett separat <strong>startbesked</strong> väntar en byggsanktionsavgift som kan landa på miljonbelopp. Bygglov och startbesked är två helt olika beslut – och som byggföretag, entreprenör eller byggherre behöver du hålla ordningen på plats innan spaden går i marken. Här går vi igenom den lagstadgade processen enligt plan- och bygglagen (PBL), steg för steg, med de regler som gäller under 2026.</p>
+
+<p>En fastställd kontrollplan är en av grundstenarna för att över huvud taget få startbesked – börja med att strukturera din i vår <a href="/sv/verktyg/kontrollplan-mall">gratis kontrollplansmall -></a>.</p>
+
+<h2>Den lagstadgade ordningen steg för steg</h2>
+<p>Byggprocessen enligt PBL följer en fast ordning som byggnadsnämnden håller i. Den ser ut så här:</p>
+<ol>
+<li>Ansökan om bygglov</li>
+<li>Beslut om bygglov</li>
+<li>Tekniskt samråd (vid behov)</li>
+<li>Startbesked</li>
+<li>Byggstart</li>
+<li>Arbetsplatsbesök</li>
+<li>Slutsamråd</li>
+<li>Slutbesked</li>
+</ol>
+<p>Notera att <strong>bygglov (steg 2)</strong> och <strong>startbesked (steg 4)</strong> är två separata beslut med olika syften. Det ena avgör om du får bygga något över huvud taget; det andra avgör om du får börja bygga just nu. Att förväxla dem är det vanligaste – och kostsammaste – felet i hela processen.</p>
+
+<h2>Bygglov ≠ startbesked – den dyra missuppfattningen</h2>
+<p>Bygglovet prövar <em>lokaliseringen och utformningen</em>: passar byggnaden på tomten, stämmer den med detaljplanen, är den lämplig för sitt ändamål? Startbeskedet prövar i stället de <em>tekniska egenskapskraven</em> – konstruktion, brand, energi, fukt – och ger själva klartecknet att sätta i gång.</p>
+<p>Lagen är uttrycklig: enligt 10 kap. 3 § PBL får en åtgärd som kräver bygglov, rivningslov, marklov eller anmälan inte påbörjas innan byggnadsnämnden har gett startbesked. Ett bygglov är alltså inte grönt ljus. Först när startbeskedet ligger på bordet – och lovet har börjat gälla, mer om det nedan – får arbetet börja.</p>
+
+<h2>Tekniskt samråd – vad händer på mötet</h2>
+<p>Om ärendet kräver en kontrollansvarig (KA) ska byggnadsnämnden utan dröjsmål kalla till tekniskt samråd, om det inte är uppenbart obehövligt eller byggherren själv begär det. Detta regleras i 10 kap. 14 § PBL. Kravet på KA gäller i ärenden som kräver lov eller anmälan och där tekniskt samråd ska hållas (10 kap. 9 §).</p>
+<p>På samrådet går nämnden, byggherren och den kontrollansvarige tillsammans igenom bland annat:</p>
+<ul>
+<li>kontrollplanen och hur kontrollerna ska genomföras</li>
+<li>den kontrollansvariges roll och uppgifter</li>
+<li>arbetets planering och organisation</li>
+<li>behovet av eventuell riskbedömning och tekniskt underlag</li>
+</ul>
+<p>Behövs inget tekniskt samråd ska nämnden i stället ge startbesked i samband med lovbeslutet eller snarast därefter. Osäker på om ditt projekt kräver en KA? Läs vår genomgång av <a href="/sv/blog/kontrollansvarig-nar-behovs">när kontrollansvarig behövs</a>.</p>
+
+<h2>Vad krävs för att få startbesked</h2>
+<p>För att få startbesked måste byggherren visa att åtgärden kan antas uppfylla kraven i PBL med föreskrifter (10 kap. 23 §). I praktiken handlar det om:</p>
+<ul>
+<li>en fastställd kontrollplan</li>
+<li>utsedd kontrollansvarig där sådan krävs</li>
+<li>tekniskt underlag – konstruktionshandlingar, brandskydd, energiberäkning där det är relevant</li>
+</ul>
+<p>Innan startbeskedet får du göra vissa förberedelser: sätta upp byggstängsel, ansöka om schakttillstånd, göra enklare markmätning. Men själva byggnadsarbetet får inte påbörjas. Gränsen går vid det som faktiskt förändrar byggnaden eller marken enligt lovet. En tydlig egenkontroll underlättar dokumentationen – strukturera den i vår <a href="/sv/verktyg/egenkontroll-mall">egenkontrollsmall</a>.</p>
+
+<h2>När lovet börjar gälla och den nya kungörelsen från 1 december 2025</h2>
+<p>Här kommer den stora nyheten för 2026. Genom Lag 2025:974, som trädde i kraft den 1 december 2025, gäller ett nytt regelverk för bygglov. För ärenden som kommit in från och med den 1 december 2025 gäller ett beslut om bygglov, rivningslov eller marklov <strong>omedelbart</strong>, även om det inte har fått laga kraft (9 kap. 114 § PBL). Den tidigare regeln – att bygget normalt inte fick påbörjas förrän fyra veckor efter att lovbeslutet kungjorts – är alltså borttagen för nya ärenden.</p>
+<p>Det finns ett viktigt undantag: byggnadsnämnden ska bestämma att lovet gäller först när det har fått laga kraft om det finns risk för att åtgärden medför skador som inte kan återställas på natur- eller kulturvärden, eller på totalförsvarets intressen. I de fallen måste du vänta på laga kraft innan bygget får starta – även om du har startbesked. För äldre ärenden, inkomna före den 1 december 2025, gäller fortfarande de tidigare bestämmelserna.</p>
+<p>Samtidigt har kravet att kungöra lovbeslut i Post- och Inrikes Tidningar (PoIT) tagits bort. För ärenden som kommit in från 1 december 2025 kungörs grannehörande och lovbeslut i stället på kommunens digitala anslagstavla. Det är där lovet tillkännages, vilket styr när överklagandetiden löper och när beslutet kan få laga kraft. Äldre ärenden kungörs fortfarande via PoIT. Praktisk konsekvens: håll koll på kommunens anslagstavla, inte PoIT.</p>
+
+<h2>Vad det kostar att börja för tidigt – byggsanktionsavgift 2026</h2>
+<p>Startar du byggnadsarbete utan startbesked tar nämnden ut en byggsanktionsavgift. Avgifterna beräknas som andelar av prisbasbeloppet utifrån åtgärdens art och area (formeln finns i plan- och byggförordningen, PBF 9 kap.) och kan maximalt uppgå till 50 prisbasbelopp.</p>
+<p>Prisbasbeloppet för 2026 är fastställt till <strong>59 200 kr</strong> (en höjning med 0,7 % jämfört med 2025). Taket blir därmed 50 × 59 200 = <strong>2 960 000 kr</strong>. Avgiften tas ut även om felet var oavsiktligt, och nämnden har begränsat utrymme att sätta ned den. Att "bara gräva lite" innan pappren är klara kan alltså bli mycket dyrt.</p>
+
+<h2>Tidslinje och avgiftsreduktion – vad du kan kräva av kommunen</h2>
+<p>Processen är inte enkelriktad – nämnden har tidsfrister att hålla. Byggnadsnämnden ska handlägga bygglov skyndsamt och besluta inom tio veckor från komplett ansökan (9 kap. 99 § PBL), med möjlighet till förlängning en gång med högst tio veckor (9 kap. 99 § andra stycket).</p>
+<p>Överskrids fristen reduceras handläggningsavgiften med en femtedel per påbörjad vecka. Avgiftsreduktionen finns i 12 kap. 8 a § PBL; genom Lag 2025:974 uppdaterades bestämmelsens hänvisning så att den nu utgår från tidsfristen i 9 kap. 99 §. Tänk också på giltighetstiden: bygglovet upphör att gälla om åtgärden inte påbörjats inom två år och avslutats inom fem år från det att beslutet vann laga kraft (9 kap. 115 §). Ett startbesked för en anmälningspliktig åtgärd gäller i två år.</p>
+
+<h2>Vanliga misstag som stoppar bygget</h2>
+<ul>
+<li>Att tolka bygglovet som klartecken och börja bygga innan startbesked getts.</li>
+<li>Att börja bygga trots att nämnden bestämt att lovet gäller först vid laga kraft (undantaget för natur-, kultur- eller totalförsvarsvärden).</li>
+<li>Att leta kungörelse i PoIT för nya ärenden i stället för på kommunens digitala anslagstavla.</li>
+<li>Att komma till tekniskt samråd utan fastställd kontrollplan – vilket försenar startbeskedet.</li>
+<li>Att låta lovet förfalla genom att inte påbörja inom två år.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte byggnadsnämnden, men vi hjälper dig att komma dit med rätt underlag. I plattformen bygger du kontrollplaner och egenkontroller efter mall, samlar dokumentationen per projekt och håller den tillgänglig för den kontrollansvarige inför tekniskt samråd. Med allt strukturerat på ett ställe minskar risken att startbeskedet fastnar på en ofullständig kontrollplan – och du har ordning på handlingarna om nämnden gör arbetsplatsbesök. All dokumentation håller du samlad enligt kravet att spara underlag i sju år.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får jag börja bygga så fort jag fått bygglov?</h3>
+<p>Nej. Bygglov och startbesked är två separata beslut. Enligt 10 kap. 3 § PBL får du inte påbörja en lov- eller anmälningspliktig åtgärd innan byggnadsnämnden gett startbesked. Bygglovet prövar lokalisering och utformning; startbeskedet ger klartecknet att börja bygga.</p>
+<h3>Måste jag alltid ha ett tekniskt samråd innan startbesked?</h3>
+<p>Nej. Tekniskt samråd hålls om ärendet kräver kontrollansvarig, om det inte är uppenbart obehövligt eller om byggherren begär det (10 kap. 14 § PBL). Behövs inget samråd ska nämnden ge startbesked i samband med lovbeslutet eller snarast därefter.</p>
+<h3>Vad händer om jag börjar bygga utan startbesked?</h3>
+<p>Då tas en byggsanktionsavgift ut. Den beräknas som andelar av prisbasbeloppet utifrån åtgärd och area och kan för 2026 maximalt uppgå till 50 prisbasbelopp, det vill säga 2 960 000 kr. Avgiften tas ut även om överträdelsen var oavsiktlig.</p>
+<h3>Räcker startbeskedet, eller måste jag vänta ytterligare?</h3>
+<p>För ärenden inkomna från 1 december 2025 gäller lovet omedelbart, även utan laga kraft (9 kap. 114 § PBL) – den tidigare fyraveckorsfristen efter kungörelse är borttagen. Har nämnden däremot bedömt att åtgärden kan medföra skador som inte kan återställas på natur-, kultur- eller totalförsvarsvärden, ska den bestämma att lovet gäller först vid laga kraft, och då måste du vänta. Kungörelsen sker numera på kommunens digitala anslagstavla.</p>
+
+<h2>Kom igång</h2>
+<p>Lägg grunden för ett smidigt startbesked genom att ha kontrollplanen klar i god tid inför det tekniska samrådet. Kom i gång direkt med vår <a href="/sv/verktyg/kontrollplan-mall">kontrollplansmall</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller dokumentationen samlad genom hela byggprocessen.</p>
+
+<p>Relaterat: <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler 2026 och kontrollplanen</a>, <a href="/sv/blog/kontrollplan-mall-bygglov">Kontrollplan och mall för bygglov</a>, <a href="/sv/blog/kontrollansvarig-nar-behovs">Kontrollansvarig – när behövs det?</a></p>
+`;
+
+const A_STARTBESKED_BYGGLOV_PROCESS_2026: BlogPost = {
+  _id: "code-"+"startbesked-bygglov-process-2026",
+  title: "Startbesked och bygglov: PBL-processen steg för steg 2026", slug: "startbesked-bygglov-process-2026", locale: "sv",
+  excerpt: "Bygglov och startbesked är två olika beslut. Här är hela PBL-processen 2026 – med de nya reglerna om när ett lov börjar gälla efter Lag 2025:974.", tag: "Bygglov",
+  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_STARTBESKED_BYGGLOV_PROCESS_2026_HTML,
+  seoTitle: "Startbesked & bygglov 2026 | ByggExp", seoDescription: "Bygglov är inte startbesked. Så fungerar PBL-processen 2026: startbesked, tekniskt samråd, nya verkställbarhetsregler (Lag 2025:974) och byggsanktionsavgifter.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T09:40:00.000Z", createdAt: "2026-08-19T09:40:00.000Z", updatedAt: "2026-08-19T09:40:00.000Z",
+};
+
+const A_OB_OVERTID_BYGGAVTALET_RAKNA_HTML = `
+<p>Fel på OB och övertid blir dyrt. Ett systematiskt räknefel som ligger kvar månad efter månad ger efterkrav, retroaktiva lönejusteringar och i värsta fall en tvist med MB-gruppen eller Byggnads region. Den här guiden går igenom hur OB-tillägg och övertidsersättning faktiskt fungerar i Byggavtalet mellan Byggföretagen och Byggnads, som löper 1 maj 2025 till 30 april 2027.</p>
+
+<p>Vill du ha ett strukturerat sätt att logga arbetad tid, OB och övertid direkt på arbetsplatsen? Testa vår gratis tidrapport-mall -&gt; <a href="/sv/verktyg/tidrapport-mall">/sv/verktyg/tidrapport-mall</a>.</p>
+
+<h2>OB och övertid är två helt olika saker</h2>
+<p>Den vanligaste källan till fel är att blanda ihop begreppen. Principen är enkel när man väl slagit fast den:</p>
+<ul>
+<li><strong>OB-ersättning</strong> handlar om <strong>när</strong> du jobbar. Den utgår när ordinarie arbetstid ligger på obekväm tid – tidig morgon, kväll, natt eller helg.</li>
+<li><strong>Övertidsersättning</strong> handlar om att du jobbar <strong>utöver</strong> ditt ordinarie veckoarbetstidsmått. Det är själva merarbetet som ersätts, inte klockslaget i sig.</li>
+</ul>
+<p>Båda regleras i § 2 Arbetstid i Byggavtalet: OB i punkt 5 och övertid i punkt 6. Att hålla isär dem är förutsättningen för att räkna rätt.</p>
+
+<h2>Nyckelregeln de flesta missar: aldrig samtidigt</h2>
+<p>Detta är den enskilt viktigaste regeln, och den som oftast leder till felaktiga löneutbetalningar. Byggavtalet är uttryckligt: <em>OB-ersättning utges inte vid övertidsarbete</em>, och <em>när övertidsersättning utges ska inte OB-ersättning utges</em>.</p>
+<p>Med andra ord: OB och övertid betalas <strong>aldrig samtidigt</strong>. Jobbar den anställde övertid en lördagkväll är det övertidsprocenten som gäller – inte övertid <em>plus</em> OB ovanpå. Det är antingen eller. Bygger man sitt lönesystem på att lägga OB och övertid på varandra betalar man ut för mycket, och gör man tvärtom betalar man ut för lite. Båda skapar problem.</p>
+
+<h2>OB-ersättningens tre nivåer (§ 2 p5)</h2>
+<p>OB räknas som en procentsats på den anställdes utgående lön (se nedan om vad det innebär). Byggavtalet har tre nivåer:</p>
+<ul>
+<li><strong>OB 1 = 20 %</strong></li>
+<li><strong>OB 2 = 40 %</strong></li>
+<li><strong>OB 3 = 70 %</strong></li>
+</ul>
+<p>Vilken nivå som gäller styrs av klockslag och veckodag. Tidig morgon kl 05–06 ligger på den lägsta nivån (<strong>OB 1 = 20 %</strong>), medan kväll kl 18–22 ligger på mellannivån (<strong>OB 2 = 40 %</strong>). Natt kl 22–05 samt hela lördag, söndag och helgdag ger den högsta satsen (<strong>OB 3 = 70 %</strong>). Vardagstid kl 06–18 är ordinarie tid utan OB. Stäm alltid av mot avtalstexten i § 2 p5 innan du bygger in gränserna i lönerutinen, eftersom det är just klockslagen som avgör vilken procent som ska användas.</p>
+
+<h2>Övertidens fyra nivåer (§ 2 p6.1)</h2>
+<p>Övertid har fyra nivåer, också beräknade i procent på utgående lön. Man skiljer på enkel och kvalificerad övertid:</p>
+<ul>
+<li><strong>Övertid A = 30 %</strong> – enkel övertid, vardag ungefär kl 06–17</li>
+<li><strong>Övertid B = 50 %</strong> – kl 05–06 och 17–19</li>
+<li><strong>Övertid C = 70 %</strong> – kl 19–22</li>
+<li><strong>Övertid D = 100 %</strong> – kvalificerad övertid: natt kl 22–05 samt hela lördag, söndag och helgdag</li>
+</ul>
+<p>Det är tidpunkten för arbetet som avgör nivån. Ett övertidspass som sträcker sig över flera intervall kan alltså träffa flera satser under samma kväll.</p>
+
+<h2>Vad är "utgående lön" – räkna på rätt underlag (§ 3 p6.2)</h2>
+<p>Både OB och övertid är procent på <strong>utgående lön</strong>, inte på grundtimlönen. Det är en viktig skillnad. Utgående lön är den anställdes fastställda tim- eller månadslön <strong>inklusive</strong> utfall av rörlig lönedel, alltså prestationslön eller tidlön. Det är bruttolön exklusive sociala avgifter och exklusive tillägg enligt lag och avtal.</p>
+<p>Räknar du OB och övertid enbart på grundtimlönen, och den anställde har rörlig lönedel, blir underlaget för lågt och ersättningen fel.</p>
+<p>För månadsavlönade måste månadslönen först räknas om till timlön. Byggavtalet anger en specifik formel för både OB och övertid – inte den generiska divisorn 173,3:</p>
+<p><strong>(månadslönen × 12) / (52 × genomsnittlig veckoarbetstid)</strong></p>
+
+<h2>Räkneexempel steg för steg</h2>
+<p>Satserna nedan är procent enligt avtalet. Kronorna beror helt på den anställdes egen utgående lön – här använder vi en påhittad timlön på <strong>220 kr/tim</strong> enbart för att visa metoden.</p>
+<p><strong>Exempel 1 – enkel övertid (A, 30 %):</strong> Två timmar övertid en vardag på dagtid.<br>Övertidstillägg: 220 × 0,30 = 66 kr/tim. Utöver detta utgår ersättning för själva den arbetade tiden enligt avtalets systematik. Tillägget för två timmar blir 2 × 66 = 132 kr.</p>
+<p><strong>Exempel 2 – kvalificerad övertid (D, 100 %):</strong> Tre timmars arbete en söndag.<br>Övertidstillägg: 220 × 1,00 = 220 kr/tim. För tre timmar blir tillägget 3 × 220 = 660 kr. Notera att här gäller <strong>inte</strong> något OB ovanpå – det är övertid D som är hela ersättningen för det obekväma läget.</p>
+<p>Behöver du ett grepp om vad timmen faktiskt kostar företaget när tillägg räknas in, testa vår <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator</a>.</p>
+
+<h2>Kompensationsledighet istället för pengar</h2>
+<p>Övertid kan ersättas med ledig tid istället för kontanter, om arbetsgivare och arbetstagare kommer överens. Omräkningen följer nivåerna:</p>
+<ul>
+<li><strong>Övertid A → 1,3 tim</strong> kompledigt per övertidstimme</li>
+<li><strong>Övertid B → 1,5 tim</strong></li>
+<li><strong>Övertid C → 1,7 tim</strong></li>
+<li><strong>Övertid D → 2,0 tim</strong></li>
+</ul>
+<p>De timmar som kompenseras med ledighet återförs till övertidsutrymmet – det vill säga de belastar inte det årliga övertidstaket på samma sätt som utbetald övertid.</p>
+
+<h2>Övertidstak och övertidsjournal (§ 2 p6.2–6.3)</h2>
+<p>Allmän övertid är begränsad: högst 48 timmar per fyra veckor eller 50 timmar per kalendermånad, dock högst 200 timmar per år. Arbetsgivaren och Byggnads region kan avtala om ytterligare högst 150 timmar per år, förutsatt max 13 timmars arbetstid per dygn och minst 11 timmars dygnsvila.</p>
+<p>Arbetsgivaren är skyldig att föra <strong>övertidsjournal</strong> där varje arbetstagares övertidsutrymme framgår. Huvudregeln är att övertidsperioden löper 1 januari–31 december, alltså kalenderåret. Om arbetsgivaren istället vill tillämpa perioden 1 april–31 mars (semesteråret) ska MB-gruppen, facklig förtroendeman eller – om sådan saknas – berörd Byggnads region informeras. Övertid förutsätter dessutom att en överenskommelse träffas mellan arbetsledning och arbetstagare innan arbetet utförs – undantaget är kortvarigt övertidsarbete av tillfällig natur på arbetsgivarens begäran.</p>
+
+<h2>Vanliga fel som kostar pengar</h2>
+<ul>
+<li>Lägga OB och övertid på varandra – de utgår aldrig samtidigt.</li>
+<li>Räkna på grundtimlön istället för utgående lön inklusive rörlig lönedel.</li>
+<li>Använda 173,3 som divisor för månadsavlönade istället för avtalets formel.</li>
+<li>Missa att övertid kräver överenskommelse innan arbetet påbörjas.</li>
+<li>Sakna övertidsjournal och tappa kontrollen på det årliga taket.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att fånga rätt underlag från början. I tidrapporten loggar den anställde faktiska start- och sluttider, vilket gör att OB-läge och övertid går att härleda till klockslag och veckodag i efterhand – inte gissas fram vid lönekörningen. Du får ett spårbart tidsunderlag per person och projekt som förenklar avstämning mot övertidsjournalen och underlättar dialogen med MB-grupp och lönekontor.</p>
+<p>ByggExp räknar inte automatiskt ut kollektivavtalets exakta OB- och övertidsprocent åt dig – de satserna och tidsgränserna måste alltid verifieras mot Byggavtalet § 2 (och definitionen av utgående lön i § 3 p6.2). Verktyget ser till att grunddatat är korrekt och komplett, så att själva beräkningen vilar på rätt siffror.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Kan OB och övertid betalas ut samtidigt?</h3>
+<p>Nej. Byggavtalet är tydligt: OB-ersättning utges inte vid övertidsarbete, och när övertidsersättning utges ska inte OB utges. Vid övertid gäller övertidsprocenten som hela ersättningen för det obekväma läget.</p>
+<h3>Räknas OB och övertid på grundlönen eller på utgående lön?</h3>
+<p>På utgående lön, som är den fastställda tim- eller månadslönen inklusive utfall av rörlig lönedel (prestationslön/tidlön). Grundtimlön ensam ger fel underlag om den anställde har rörlig lönedel.</p>
+<h3>Hur räknar jag om månadslön till timlön för OB och övertid?</h3>
+<p>Enligt Byggavtalets formel: (månadslönen × 12) / (52 × genomsnittlig veckoarbetstid). Använd inte den generiska divisorn 173,3 – avtalet anvisar den här beräkningen för både OB och övertid.</p>
+<h3>Hur mycket övertid får en anställd arbeta?</h3>
+<p>Allmän övertid är högst 48 timmar per fyra veckor eller 50 timmar per kalendermånad, dock högst 200 timmar per år. Efter överenskommelse med Byggnads region kan ytterligare högst 150 timmar per år tillkomma, med max 13 timmars dygn och minst 11 timmars dygnsvila.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg rutinen på ett korrekt tidsunderlag. Kom igång med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och boka en demo via <a href="/sv/contact">/sv/contact</a> om du vill se hur ByggExp håller ordning på tid, OB och övertid per projekt. Stäm alltid av satser och gränser mot Byggavtalet § 2 och kontrollera med MB-grupp eller Byggnads region vid minsta tvekan.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetstidslagen-bygg">Arbetstidslagen i byggbranschen</a> och <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag</a>.</p>
+`;
+
+const A_OB_OVERTID_BYGGAVTALET_RAKNA: BlogPost = {
+  _id: "code-"+"ob-overtid-byggavtalet-rakna",
+  title: "OB och övertid i Byggavtalet – så räknar du rätt", slug: "ob-overtid-byggavtalet-rakna", locale: "sv",
+  excerpt: "OB och övertid betalas aldrig samtidigt och räknas på utgående lön, inte grundtimlön. Så fungerar nivåerna, taket och journalen i Byggavtalet § 2.", tag: "Lön & avtal",
+  coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_OB_OVERTID_BYGGAVTALET_RAKNA_HTML,
+  seoTitle: "OB och övertid i Byggavtalet | ByggExp", seoDescription: "Så räknar du OB-tillägg och övertidsersättning rätt enligt Byggavtalet § 2: nivåer, utgående lön, övertidstak och de vanligaste felen som kostar pengar.",
+  seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T09:43:00.000Z", createdAt: "2026-08-19T09:43:00.000Z", updatedAt: "2026-08-19T09:43:00.000Z",
+};
+
+const A_EGENAVGIFTER_ENSKILD_FIRMA_BYGG_HTML = `
+<p>Du fakturerar 500 000 kr på ett år, drar av material, verktyg och bilen – men hur mycket har du egentligen kvar när egenavgifter och skatt är betalda? För dig som driver enskild firma på bygget är egenavgifterna en av de största posterna, och de missförstås ofta. De tas inte ut på det du fakturerar och inte på det du plockar ut privat, utan på överskottet. Här går vi igenom 2026 års procentsatser, schablonavdraget och ett konkret räkneexempel så att du kan planera likviditeten i stället för att bli överraskad av slutskatten.</p>
+
+<p>Vill du snabbt se hur moms och omvänd byggmoms slår på fakturan medan du läser? Testa <a href="/sv/verktyg/moms-kalkylator">vår gratis moms-kalkylator -&gt;</a> så får du siffrorna svart på vitt.</p>
+
+<h2>Vad egenavgifter är – och vad de inte är</h2>
+<p>Egenavgifter är din motsvarighet till de arbetsgivaravgifter en anställd betalas in för. Skillnaden är att du betalar dem själv på företagets överskott. Avgifterna finansierar din pension, sjukförsäkring och föräldrapenning – de är alltså inte bortkastade pengar, utan bygger upp ditt sociala skydd som egenföretagare.</p>
+<p>Två saker är viktiga att ha klart för sig. Egenavgifterna beräknas på <strong>överskottet</strong>, det vill säga intäkter minus avdragsgilla kostnader, inte på omsättningen och inte på hur mycket du tar ut privat. Dessutom är egenavgifterna själva avdragsgilla och sänker underlaget för både kommunal och statlig inkomstskatt. Understiger överskottet 1 000 kr tas inga egenavgifter eller särskild löneskatt ut alls.</p>
+
+<h2>2026 års procentsatser (verifierat mot Skatteverket)</h2>
+<p>Full egenavgift för aktiv näringsverksamhet är <strong>28,97 %</strong> av överskottet 2026. Totalnivån är oförändrad jämfört med 2025, men Skatteverket har justerat de interna delposterna. Med standardvalet 7 karensdagar ser uppställningen ut så här:</p>
+<ul>
+<li>Ålderspensionsavgift: 10,21 %</li>
+<li>Sjukförsäkringsavgift: 3,64 %</li>
+<li>Föräldraförsäkringsavgift: 2,00 % (sänkt från 2,60)</li>
+<li>Efterlevandepensionsavgift: 0,30 % (sänkt från 0,60)</li>
+<li>Arbetsmarknadsavgift: 0,10 %</li>
+<li>Arbetsskadeavgift: 0,10 % (sänkt från 0,20)</li>
+<li>Allmän löneavgift: 12,62 % (höjd från 11,62)</li>
+</ul>
+<p>Summan blir 28,97 %. En förändring att känna till: från och med 1 januari 2026 höjs åldersgränsen för sänkta egenavgifter. Du måste ha fyllt 67 år vid årets ingång (utöver de äldre årskullarna födda 1938–1958) för att bara betala ålderspensionsavgiften 10,21 %. Är du född 1959 eller senare och under gränsen gäller full avgift.</p>
+
+<h2>Schablonavdraget – varför avgiften inte blir hela 28,97 % direkt</h2>
+<p>I deklarationen får du göra ett schablonavdrag för beräknade egenavgifter innan skatten räknas fram. För aktiv näringsverksamhet är avdraget <strong>högst 25 %</strong> av underlaget. Året efter stäms schablonen av mot de faktiska egenavgifterna, och en eventuell differens rättas då. Det gör att den effektiva belastningen av just egenavgifterna landar lägre än 28,97 % räknat på det ursprungliga överskottet.</p>
+<p>Bedriver du verksamhet du aktivt arbetar i – vilket byggarbete så gott som alltid är – räknas den som aktiv. Passiv näringsverksamhet betalar i stället särskild löneskatt 24,26 % och får bara 20 % i schablonavdrag, men det är sällan aktuellt för en byggare som är ute på jobb.</p>
+
+<h2>Karensval och sjukförsäkring</h2>
+<p>Sjukförsäkringsavgiftens storlek beror på hur många karensdagar du valt. Gör du inget aktivt val gäller 7 karensdagar. Du kan välja 1, 14, 30, 60 eller 90 dagar – fler karensdagar ger lägre avgift men innebär att du står utan sjukpenning längre om du blir skadad eller sjuk. För en soloföretagare på bygget, där kroppen är verktyget, är det en reell avvägning mellan lägre avgift och snabbare skydd. Tänk också på att du efter fyllda 55 år inte längre kan byta till en kortare karenstid.</p>
+
+<h2>Allmän nedsättning – 7,5 %, max 15 000 kr</h2>
+<p>Det finns kvar en allmän nedsättning (särskilt avdrag) på egenavgifterna även 2026: 7,5 % av avgiftsunderlaget, dock högst 15 000 kr per år. För att få den krävs att du betalar full egenavgift och har ett överskott av aktiv näringsverksamhet över 40 000 kr. För många byggare med en solid firma är det här en avdragspost som ger full effekt.</p>
+
+<h2>Räkneexempel: så mycket blir kvar netto</h2>
+<p>Siffrorna nedan är avrundade och ska ses som en ungefärlig illustration – din egen kommunalskatt och dina avdrag avgör utfallet.</p>
+<ul>
+<li>Fakturerat under året (exkl. moms): 500 000 kr</li>
+<li>Avdrag för material, verktyg, bil, försäkring och telefon: cirka 150 000 kr</li>
+<li>Överskott före schablonavdrag: cirka 350 000 kr</li>
+<li>Schablonavdrag 25 %: cirka 87 500 kr → underlag cirka 262 500 kr</li>
+<li>Egenavgifter 28,97 % på underlaget, minus allmän nedsättning på 15 000 kr: grovt räknat cirka 61 000 kr</li>
+<li>Kvar för inkomstskatt (kommunal, ca 32 %): skatt cirka 84 000 kr</li>
+</ul>
+<p>Med de här antagandena hamnar den totala belastningen – egenavgifter plus inkomstskatt – på grovt 40–50 % av överskottet. Ligger din beskattningsbara förvärvsinkomst över skiktgränsen tillkommer statlig inkomstskatt på 20 % på den överskjutande delen (skiktgränsen var 625 800 kr för 2025 – kontrollera 2026 års nivå separat). Poängen: räkna aldrig med att fakturerad summa är samma som lön.</p>
+
+<h2>Momsen du måste ha koll på</h2>
+<p>Momsregistreringsgränsen är 120 000 kr i årsomsättning (gäller sedan 2025). Under gränsen är registrering frivillig, men inom bygg är det oftast ändå fördelaktigt att momsregistrera eftersom du då kan lyfta ingående moms på material och verktyg.</p>
+<p>Extra viktigt för byggare är <strong>omvänd byggmoms</strong>. Säljer du byggtjänster till ett företag som självt säljer byggtjänster fakturerar du utan moms – köparen redovisar då den utgående momsen. Fakturan ska innehålla köparens momsregistreringsnummer och texten &quot;Omvänd betalningsskyldighet&quot;. Ingår material i byggtjänsten räknas allt som byggtjänst. Reglerna gäller inte försäljning till privatperson eller till en köpare som inte är momsregistrerad. Omvänd byggmoms påverkar din likviditet – du får inte in momsen att röra dig med – men inte ditt nettoresultat.</p>
+
+<h2>Sätt av rätt varje månad</h2>
+<p>Egenavgifter och slutskatt betalas inte automatiskt i takt med att pengarna kommer in. Du betalar preliminär F-skatt varje månad, och en tumregel är att lägga undan runt 40–50 % av varje faktura (exklusive moms) på ett separat konto tills du vet ditt faktiska överskott. Då slipper du bli tagen på sängen av slutskatten. Ligger din preliminärskatt fel jämfört med verkligt resultat kan du begära jämkning hos Skatteverket.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li>Att tro att egenavgifterna tas ut på fakturerad summa i stället för på överskottet.</li>
+<li>Att glömma bort schablonavdraget och överskatta hur mycket avgifter man faktiskt betalar.</li>
+<li>Att inte sätta av pengar löpande och stå utan buffert när slutskatten kommer.</li>
+<li>Att fakturera med moms till ett annat byggföretag där omvänd byggmoms egentligen gäller.</li>
+<li>Att missa den allmänna nedsättningen på max 15 000 kr trots att kraven är uppfyllda.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig hålla ordning på det underlag som avgör din skatt. Genom att fakturera, tidrapportera och samla dina projektkostnader på ett ställe får du en tydlig bild av överskottet löpande – inte först i bokslutet. Med moms-kalkylatorn räknar du snabbt ut både vanlig moms och hur omvänd byggmoms slår på en faktura mot ett annat byggföretag. ByggExp beräknar inte dina egenavgifter åt dig och ersätter inte din bokföring eller revisor, men ett strukturerat underlag gör att du och din redovisningskonsult kan planera skatten i stället för att gissa.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket är egenavgifterna 2026?</h3>
+<p>Full egenavgift för aktiv näringsverksamhet är 28,97 % av överskottet 2026. Totalnivån är oförändrad mot 2025, men delposterna har justerats. Inga avgifter tas ut om överskottet understiger 1 000 kr.</p>
+<h3>Betalar jag egenavgifter på det jag tar ut privat?</h3>
+<p>Nej. Egenavgifterna beräknas på företagets överskott – intäkter minus avdragsgilla kostnader – oavsett hur mycket du plockar ut privat. Privata uttag ur en enskild firma påverkar inte underlaget.</p>
+<h3>Vad är schablonavdraget för egenavgifter?</h3>
+<p>Det är ett avdrag i deklarationen på högst 25 % av underlaget för aktiv näringsverksamhet, avsett att täcka de beräknade egenavgifterna. Året efter stäms schablonen av mot de faktiska avgifterna.</p>
+<h3>Måste jag momsregistrera min byggfirma?</h3>
+<p>Först vid en årsomsättning över 120 000 kr är det obligatoriskt. Under gränsen är det frivilligt, men inom bygg är det ofta ändå fördelaktigt eftersom du då kan lyfta ingående moms på material och verktyg.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att räkna på dina fakturor och din moms i <a href="/sv/verktyg/moms-kalkylator">vår gratis moms-kalkylator</a>, så ser du direkt hur omvänd byggmoms och likviditet hänger ihop. Vill du se hur ByggExp samlar fakturor, tid och kostnader så att skatteunderlaget blir enkelt att följa? Boka en <a href="/sv/contact">demo</a> så visar vi upplägget. Kom ihåg att alltid kontrollera aktuella procentsatser och gränsvärden hos Skatteverket – den här artikeln ger vägledning men ersätter inte skatterådgivning.</p>
+
+<p>Relaterat: <a href="/sv/blog/avdrag-enskild-firma-bygg">Avdrag i enskild firma för byggare</a>, <a href="/sv/blog/bokforing-enskild-firma-bygg">Bokföring i enskild firma för byggare</a> och <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggverksamhet?</a></p>
+`;
+
+const A_EGENAVGIFTER_ENSKILD_FIRMA_BYGG: BlogPost = {
+  _id: "code-"+"egenavgifter-enskild-firma-bygg",
+  title: "Egenavgifter i enskild firma för byggare 2026 – så räknar du ut vad som blir kvar netto", slug: "egenavgifter-enskild-firma-bygg", locale: "sv",
+  excerpt: "Så fungerar egenavgifter, schablonavdrag och skattekilen 2026 för dig som driver enskild firma i byggbranschen – med ett konkret räkneexempel.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_EGENAVGIFTER_ENSKILD_FIRMA_BYGG_HTML,
+  seoTitle: "Egenavgifter enskild firma bygg 2026 | ByggExp", seoDescription: "Egenavgifter enskild firma bygg 2026: full avgift 28,97 %, schablonavdrag 25 % och ett räkneexempel som visar vad som faktiskt blir kvar netto.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T09:46:00.000Z", createdAt: "2026-08-19T09:46:00.000Z", updatedAt: "2026-08-19T09:46:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_EGENAVGIFTER_ENSKILD_FIRMA_BYGG,
+    A_STARTBESKED_BYGGLOV_PROCESS_2026,
+    A_OB_OVERTID_BYGGAVTALET_RAKNA,
     A_VAD_SKA_FAKTURA_INNEHALLA_BYGG,
     A_NYA_BYGGREGLER_2026_ENERGI_ISOLERING,
     A_KREDITFORSAKRING_BYGGFORETAG,

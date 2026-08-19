@@ -5,6 +5,8 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'nya-3-12-regler-2026',
+  'k10-blankett-2026',
   'havning-av-entreprenad',
   'arbetstidslagen-bygg',
   'forseningsvite-entreprenad',

@@ -85,7 +85,6 @@ function Header({ headerT }: HeaderProps) {
 
           {/* NAV LINKS */}
           <div className={isMenuOpen ? "nav-links open" : "nav-links"}>
-            <Link href={`/${lang}#features`} onClick={closeMenu}>{headerT.how}</Link>
             <Link href={`/${lang}/funktioner`} onClick={closeMenu}>{headerT.funktioner}</Link>
             <Link href={`/${lang}#pricing`} onClick={closeMenu}>{headerT.pricing}</Link>
 

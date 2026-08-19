@@ -12723,9 +12723,405 @@ const A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG: BlogPost = {
   publishedAt: "2026-08-19T14:00:00.000Z", createdAt: "2026-08-19T14:00:00.000Z", updatedAt: "2026-08-19T14:00:00.000Z",
 };
 
+const A_SPACKEL_ATGANG_VAGG_TAK_HTML = `
+<p>Materialkalkylen avgör marginalen på ett spacklings- och måleriuppdrag. ROT-avdraget täcker aldrig spacklet – bara arbetet – så varje kilo du köper för mycket, eller varje säck du glömmer i offerten, går rakt in i din vinst. Räknar du spackelåtgången rätt redan innan du åker till grossisten slipper du både onödiga extraturer och överblivna, halvtorra hinkar.</p>
+
+<p>Snabbaste vägen till ett underlag är att räkna ytan och materialet direkt i <a href="/sv/verktyg/farg-kalkylator">vår gratis färg- och spackelkalkylator -&gt;</a> och sedan lägga siffrorna i offerten.</p>
+
+<h2>Grundvärdet – åtgångstalet per m² och mm</h2>
+<p>All spackelberäkning bygger på ett enda schablonvärde: <strong>cirka 1 liter spackel per m² och per millimeter skikttjocklek</strong>. Ett skikt på 1 mm över en kvadratmeter går alltså åt ungefär 1 liter färdigblandat spackel. Det är grundtalet du utgår från oavsett om det gäller vägg eller tak.</p>
+<p>I vikt skiljer det sig beroende på produkt. Pulver- och finspackel ligger på ungefär <strong>1,1–1,5 kg per m² och mm</strong> – exempelvis Knauf Fill &amp; Finish runt 1,1 kg/m²/mm och Weber 3100 Fint spackel runt 1,5 kg/m²/mm. Lättspackel (lättviktsfiller) väger mindre per liter än tungt pulverspackel, så samma volym motsvarar olika vikt. Det spelar roll när du översätter åtgången till antal säckar eller hinkar, eftersom produkterna säljs i vikt.</p>
+
+<h2>Beräkningsformeln steg för steg</h2>
+<p>Formeln är enkel och samma för både liter och kilo:</p>
+<p><strong>Åtgång = yta (m²) × antal skikt × skikttjocklek (mm) × åtgångstal × spillfaktor</strong></p>
+<p>Räkneexempel för en vägg på 40 m² som bredspacklas i 2 tunna skikt à 0,5 mm, med pulverspackel på 1,3 kg/m²/mm och 15 % spill:</p>
+<ul>
+<li>Yta: 40 m²</li>
+<li>Skikt: 2 st à 0,5 mm = 1 mm total tjocklek</li>
+<li>Grundåtgång: 40 × 1 × 1,3 = 52 kg</li>
+<li>Med spillfaktor 1,15: 52 × 1,15 ≈ <strong>60 kg</strong></li>
+</ul>
+<p>Ett typiskt bredspacklat väggjobb med två tunna skikt landar alltså på ungefär 1–2 kg (eller liter) per m² totalt. Behöver du bara ta fram ytan snabbt kan du använda <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeterkalkylatorn</a> och föra över arean direkt i formeln.</p>
+
+<h2>Antal skikt styr allt</h2>
+<p>Det som avgör åtgången mest är hur många skikt du lägger och hur tjocka de är. Här skiljer man på produkttyper och rekommenderad skikttjocklek per lager:</p>
+<ul>
+<li><strong>Grund- och grovspackel:</strong> upp till cirka 10–15 mm per lager, för att fylla större ojämnheter och skarvar.</li>
+<li><strong>Medium- och finspackel:</strong> max cirka 3–6 mm per lager, för utjämning och ytfinish inför målning.</li>
+</ul>
+<p>Grundregeln är att lägga <strong>flera tunna lager i stället för ett tjockt</strong>. Tjocka lager krymper, spricker och torkar ojämnt. För tunna inomhusskikt är torktiden ofta 1–4 timmar, men det beror på skikttjocklek, temperatur och ventilation – nästa lager får inte läggas förrän ytan är helt genomtorr. Fler skikt betyder mer material och mer arbetstid, vilket är exakt varför skiktantalet måste vara bestämt innan du räknar.</p>
+
+<h2>Vägg vs tak – samma material, mer arbetstid</h2>
+<p>Materialåtgången per m² är densamma i tak som på vägg – åtgångstalet ändras inte av att du spacklar över huvudhöjd. Det som skiljer är arbetstiden. Takspackling går långsammare och är tyngre, vilket driver upp arbetskostnaden per m² men inte materialkostnaden. Kalkylera därför tak och vägg med samma materialåtgång men separata timpriser i offerten, så att den högre arbetsinsatsen syns där den hör hemma.</p>
+
+<h2>Spill, svinn och säkerhetsmarginal</h2>
+<p>Lägg alltid på en marginal på <strong>10–20 %</strong> för spill, svinn och kladd på verktyg. Öppnad vara torkar snabbt, så räkna hela säckar och hinkar – inte exakt uträknade gram. Det är billigare att ha en oöppnad säck kvar än att stanna mitt i ett jobb för att spacklet tog slut. Vill du sätta rätt marginal för olika material har vi en genomgång i artikeln om <a href="/sv/blog/spillprocent-bygg-material">spillprocent för byggmaterial</a>.</p>
+
+<h2>Från åtgång till inköpslista</h2>
+<p>När åtgången är räknad översätter du den till konkreta förpackningar. Fortsätter vi exemplet med 60 kg och säckar på 25 kg:</p>
+<ul>
+<li>60 kg ÷ 25 kg = 2,4 säckar → köp <strong>3 säckar</strong> (75 kg)</li>
+<li>Slippapper: P120–P150 för mellanslipning, P180–P220 för slutfinish inför målning</li>
+<li>Verktyg: bredspackel, spackelspade, blandningsvisp, hink och dammskydd</li>
+</ul>
+<p>Behöver du räkna hela materiallistan för uppdraget – inte bara spacklet – finns en bredare metod i guiden om att <a href="/sv/blog/rakna-material-till-bygget">räkna material till bygget</a>.</p>
+
+<h2>ROT och materialet</h2>
+<p>Från och med 1 januari 2026 är ROT-avdraget <strong>30 % av arbetskostnaden inkl. moms</strong> (den tillfälliga höjningen till 50 % gällde bara 12 maj–31 december 2025). Takbeloppet är max 50 000 kr per person och år, och ROT + RUT tillsammans max 75 000 kr per person och år – två delägare i en bostad kan alltså nyttja upp till 100 000 kr ROT.</p>
+<p>Målning, tapetsering och spackling är godkända ROT-arbeten, men avdraget gäller <strong>enbart arbetskostnaden</strong>. Spackel, färg, maskinhyra och resor är aldrig avdragsgilla. Därför är materialåtgången en ren kostnadspost du själv måste kalkylera rätt – och på fakturan ska du tydligt dela upp arbete och material, så att kunden ser vad ROT faktiskt räknas på.</p>
+
+<h2>Vanliga misstag som spräcker kalkylen</h2>
+<ul>
+<li>Räknar på ett skikt när jobbet i praktiken kräver två eller tre.</li>
+<li>Blandar ihop liter och kilo – lättspackel och pulverspackel väger olika per liter.</li>
+<li>Glömmer spillmarginalen och står utan material sista dagen.</li>
+<li>Lägger materialet i ROT-underlaget i tron att kunden får avdrag på det.</li>
+<li>Använder väggens timpris på taket och tappar marginal på den tyngre arbetsinsatsen.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp lägger du in ytan, antal skikt och åtgångstal en gång och får materialåtgången i både liter och kilo. Därifrån bygger du en offert där arbete och material är separerade, så att ROT-underlaget blir rätt från start och kunden ser exakt vad avdraget gäller. Du slipper räkna om formeln för hand på varje nytt jobb, och samma underlag följer med hela vägen till faktura. Verktyget ersätter inte din yrkesbedömning av skikt och skikttjocklek – men det ser till att den bedömningen räknas rätt hela vägen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket spackel går åt per kvadratmeter vägg?</h3>
+<p>Grundschablonen är cirka 1 liter per m² och mm skikttjocklek, eller ungefär 1,1–1,5 kg per m² och mm för pulver- och finspackel. Ett bredspacklat väggjobb i två tunna skikt landar oftast på ungefär 1–2 kg eller liter per m² totalt, spill inräknat.</p>
+<h3>Går det åt mer spackel i taket än på väggen?</h3>
+<p>Nej, materialåtgången per m² är densamma. Skillnaden är arbetstiden – takspackling går långsammare och kräver mer arbete, vilket påverkar arbetskostnaden i offerten men inte hur mycket material du köper.</p>
+<h3>Ingår spacklet i ROT-avdraget?</h3>
+<p>Nej. ROT gäller från 2026 endast 30 % av arbetskostnaden. Spackel, färg och annat material är aldrig avdragsgillt, så materialåtgången är en kostnad du själv måste kalkylera och ta betalt för.</p>
+<h3>Hur mycket spillmarginal ska jag räkna med?</h3>
+<p>Lägg på 10–20 % för spill och svinn, och räkna alltid upp till hela säckar eller hinkar. Öppnad vara torkar och kan inte sparas, så en liten överkapacitet är billigare än att stå utan material mitt i jobbet.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna spackelåtgången för ditt nästa uppdrag direkt i <a href="/sv/verktyg/farg-kalkylator">färg- och spackelkalkylatorn</a> och för siffrorna vidare till offerten. Vill du se hur material- och arbetsuppdelningen fungerar i praktiken kan du <a href="/sv/contact">boka en demo</a> så visar vi hela flödet från kalkyl till faktura.</p>
+
+<p>Relaterat: <a href="/sv/blog/spillprocent-bygg-material">Spillprocent för byggmaterial</a>, <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>, <a href="/sv/verktyg/kvadratmeter-kalkylator">Kvadratmeterkalkylator</a>.</p>
+`;
+
+const A_SPACKEL_ATGANG_VAGG_TAK: BlogPost = {
+  _id: "code-"+"spackel-atgang-vagg-tak",
+  title: "Så räknar du spackelåtgång per m² vägg och tak – rätt inköp inför målning", slug: "spackel-atgang-vagg-tak", locale: "sv",
+  excerpt: "Så beräknar du spackelåtgång per m² vägg och tak utifrån antal skikt – med formel, räkneexempel och inköpslista så materialet inte äter din marginal.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/farg-preview.webp", contentHtml: A_SPACKEL_ATGANG_VAGG_TAK_HTML,
+  seoTitle: "Spackelåtgång per m² vägg & tak | ByggExp", seoDescription: "Räkna spackelåtgång per m² vägg och tak beroende på antal skikt och skikttjocklek. Formel, räkneexempel och inköpslista för rätt material inför målning.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/farg-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T15:00:00.000Z", createdAt: "2026-08-19T15:00:00.000Z", updatedAt: "2026-08-19T15:00:00.000Z",
+};
+
+const A_LAKT_AVSTAND_TAK_BERAKNING_HTML = `
+<p>Ett par millimeter fel i läktavståndet märks inte på första raden — men efter trettio rader har felet vuxit till en hel panna för mycket eller för lite, och då sitter du med en snedställd nockrad eller pannor som inte når hängrännan. Läktavståndet är därför en av de beräkningar där det lönar sig att räkna innan spiken sätts, inte efteråt.</p>
+
+<p>Den här guiden kompletterar din materialkalkyl för taket. Har du inte redan räknat pann- och läktåtgång kan du börja i <a href="/sv/verktyg/tak-kalkylator">vår gratis tak-kalkylator -></a> och sedan använda siffrorna härifrån för att lägga ut läkten rätt.</p>
+
+<h2>Vad är bärläkt, ströläkt och läktavstånd?</h2>
+<p>Ett korrekt uppbyggt tak har flera lager, och ordningen spelar roll för både bärighet och ventilation. Underifrån och upp ser det ut så här:</p>
+<ul>
+<li><strong>Underlagstak/underlagsduk</strong> — det vattenavvisande skiktet som fångar upp läckvatten och kondens.</li>
+<li><strong>Ströläkt</strong> — läggs i takfallets riktning (lodrätt, uppför taket) ovanpå underlaget. Den bär ingen pannlast utan skapar en dränerad, ventilerad luftspalt så att fukt och vatten kan rinna av.</li>
+<li><strong>Bärläkt</strong> — spikas horisontellt tvärs över ströläkten. Det är på bärläkten pannorna hängs och hela taklasten vilar.</li>
+</ul>
+<p>Med <strong>läktavstånd</strong> menas avståndet mellan två intilliggande bärläkt, och det mäts alltid <strong>från överkant till överkant</strong> — inte mellan mitten eller underkanterna. Det är den detaljen som avgör hur mycket varje panna hakar över nästa.</p>
+
+<h2>Vad styr läktavståndet?</h2>
+<p>Läktavståndet är inte en fast siffra. Det bestäms av två saker samtidigt: pannans effektiva täckande längd (bygglängd) och takets lutning. Därför anger tillverkaren ett <strong>intervall</strong> med ett min- och ett maxvärde, kopplat till en lutningstabell.</p>
+<p>Principen är enkel: <strong>lägre taklutning kräver kortare läktavstånd</strong>, eftersom pannorna då måste överlappa mer för att hålla tätt. Brantare tak släpper undan vattnet snabbare och tillåter ett längre avstånd. För en vanlig 2-kupig betongpanna (t.ex. Benders Palema med bruttolängd 420 mm) ligger läktavståndet grovt i intervallet <strong>315–375 mm</strong>, med tillverkarens angivna max på 375 mm. Det exakta värdet för just din lutning hittar du i pannans läggningsanvisning.</p>
+
+<h2>Så beräknar du läktavståndet steg för steg</h2>
+<ol>
+<li><strong>Mät effektiv taklängd</strong> från takfot till nock längs takfallet.</li>
+<li><strong>Sätt takfot-offset.</strong> Avståndet från takfotens underkant till överkant på den <em>första</em> bärläkten får inte överstiga ca 340 mm för standard 2-kupiga betongpannor. Det placerar bottenraden så att de nedersta pannorna hänger korrekt över hängrännan.</li>
+<li><strong>Dela resterande längd i ett jämnt antal rader</strong> så att varje läktavstånd blir lika stort och hamnar inom tillverkarens min–max-intervall.</li>
+<li><strong>Justera antal rader — inte lutningen — tills avståndet passar.</strong> Översta raden ska sitta strax under nockläkten/nockpannan.</li>
+</ol>
+<p><strong>Räkneexempel:</strong> Effektiv taklängd 6 000 mm. Dra bort takfot-offset 340 mm och lämna 200 mm ner till nockläkten: 6 000 − 340 − 200 = 5 460 mm kvar att fördela. Med 15 mellanrum blir läktavståndet 5 460 / 15 = 364 mm — inom intervallet 315–375 mm, alltså godkänt. Testar du 14 mellanrum blir det 390 mm, vilket är för mycket. Svaret blir 15 rader. Behöver du samtidigt kontrollera läkt- och reglingsåtgång i löpmeter kan <a href="/sv/verktyg/reglar-kalkylator">reglar-kalkylatorn</a> ta fram virkesmängden.</p>
+
+<h2>Dimensioner och kvalitet på läkten</h2>
+<p>Rätt dimension på virket är lika viktig som rätt avstånd — särskilt i snötunga zoner eller vid stort centrumavstånd på takstolarna.</p>
+<ul>
+<li><strong>Bärläkt:</strong> standard 25×48 mm sågat virke (kvalitet G4-2 / C-sorterat). Den nedersta fotläkten sätts ofta som 25×38 mm på högkant medan resten ligger plant.</li>
+<li><strong>Ströläkt:</strong> typiskt 25×25 mm eller 25×48 mm, c/c högst 600 mm och som mest 100 mm in från vindskivan vid gaveln.</li>
+<li><strong>Uppgradera</strong> till 34×45 mm eller C24 vid snözon eller långa spännvidder mellan takstolarna.</li>
+<li><strong>Infästning:</strong> ströläkt spikas med varmförzinkad trådspik 2,8×75 mm, bärläkt med 3,4×100 mm.</li>
+<li><strong>Skarvar:</strong> bärläktens skarvar måste alltid landa på en ströläkt eller en stödklots — aldrig fritt spännande.</li>
+</ul>
+
+<h2>Läktavstånd för plåttak — helt andra regler</h2>
+<p>För profilerad plåt gäller inte pannans bygglängd. Här styrs läktavståndet av profil, plåttjocklek, snözon och lutning, och läkten dimensioneras efter <strong>bärighet</strong>, inte täckande längd:</p>
+<ul>
+<li><strong>TRP/pannplåt:</strong> normalt c/c 400–600 mm; TP20 upp till ca 600 mm.</li>
+<li><strong>Tegelprofilerad plåt:</strong> läktas i takt med att profilen "trappar", oftast 350 eller 400 mm.</li>
+<li><strong>Klickfals/bandtäckning:</strong> tätare, högst c/c 300 mm.</li>
+</ul>
+<p>Kontrollera alltid mot plåtprofilens monteringsanvisning — värdena varierar mellan tillverkare och profiler.</p>
+
+<h2>Följ alltid tillverkarens monteringsanvisning</h2>
+<p>Läktavstånd är ett bygg­tekniskt ämne, inte ett regulatoriskt. Det finns inga Skatteverkets- eller branschregler som sätter avståndet. Det bindande dokumentet för en fackmässig läggning är <strong>tillverkarens läggnings-/monteringsanvisning</strong>. Boverkets konstruktionsregler (EKS/BBR) styr snö- och vindlaster på takkonstruktionen generellt — alltså dimension och infästning — men inte själva läktavståndet.</p>
+<p>Tänk också på minsta taklutning: för betong- och tegelpannor är den satt av tillverkaren och ligger typiskt vid minst 14° på ett hel­täckt, vattentätt underlagstak. Under den angivna minimigränsen blir pannorna inte täta oavsett hur kort läktavstånd du väljer. Verifiera det exakta värdet mot vald pannas datablad.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp kopplar ihop takberäkningen med resten av jobbet. Du lägger in takets mått och lutning i tak-kalkylatorn, får fram pann- och läktåtgång, och kan föra över materiallistan direkt till offert och inköp utan att skriva om siffrorna. Själva läktavståndet räknar du enligt stegen ovan mot vald pannas intervall — verktyget hjälper dig med mängderna och att hålla ihop kalkylen, men ersätter inte tillverkarens anvisning. Allt sparas på projektet så att kalkyl, offert och underlag finns samlat om något ska styrkas i efterhand.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mäts läktavståndet — mitt på läkten eller på kanten?</h3>
+<p>Alltid från överkant på en bärläkt till överkant på nästa. Mäter du från mitten eller underkanten blir raderna successivt fel eftersom läktens tjocklek då räknas fel varje rad.</p>
+<h3>Varför får jag ett intervall och inte en exakt siffra från tillverkaren?</h3>
+<p>Därför att rätt läktavstånd beror på takets lutning. Lägre lutning kräver kortare avstånd och mer överlapp för att hålla tätt, brantare tak tillåter längre avstånd. Intervallet, t.ex. 315–375 mm för en 2-kupig betongpanna, hör ihop med en lutningstabell i läggningsanvisningen.</p>
+<h3>Kan jag använda samma läktavstånd på ett plåttak?</h3>
+<p>Nej. Plåt läktas efter bärighet — profil, plåttjocklek och snözon — inte efter pannlängd. Profilerad plåt ligger normalt på c/c 400–600 mm, medan klickfals kräver högst 300 mm. Följ plåtprofilens egen anvisning.</p>
+<h3>Vad händer om läktavståndet blir några millimeter fel?</h3>
+<p>Felet ackumuleras rad för rad. Efter hela takfallet kan det motsvara en hel panna för mycket eller för lite, vilket ger en sned nockrad eller pannor som inte överlappar rätt. Därför delar man taklängden i ett jämnt antal lika rader från början.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna fram takets material och läktåtgång i <a href="/sv/verktyg/tak-kalkylator">tak-kalkylatorn</a>, och kontrollera virkesmängden med <a href="/sv/verktyg/reglar-kalkylator">reglar-kalkylatorn</a>. Vill du se hur kalkyl, offert och materiallista hänger ihop i ett projekt? <a href="/sv/contact">Boka en demo här -></a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/berakna-materialatgang-tak">Beräkna materialåtgång för tak</a> och <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>.</p>
+`;
+
+const A_LAKT_AVSTAND_TAK_BERAKNING: BlogPost = {
+  _id: "code-"+"lakt-avstand-tak-berakning",
+  title: "Läktavstånd för takpannor och plåt — så räknar du rätt", slug: "lakt-avstand-tak-berakning", locale: "sv",
+  excerpt: "En guide för hantverkare: så beräknar du läktavstånd, bär- och ströläkt för takpannor eller plåt utan att hamna på en halv rad fel.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/tak-preview.webp", contentHtml: A_LAKT_AVSTAND_TAK_BERAKNING_HTML,
+  seoTitle: "Läktavstånd tak: så beräknar du | ByggExp", seoDescription: "Beräkna läktavstånd för takpannor och plåt steg för steg. Bärläkt, ströläkt, dimensioner och tillverkarens intervall — komplettera takkalkylen rätt.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/tak-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T15:03:00.000Z", createdAt: "2026-08-19T15:03:00.000Z", updatedAt: "2026-08-19T15:03:00.000Z",
+};
+
+const A_SKAFFA_RECENSIONER_OMDOMEN_BYGGFIRMA_HTML = `
+<p>Ett bra omdöme från en nöjd kund är en av de billigaste marknadsföringskanaler en byggfirma har. När nästa kund söker efter en hantverkare i området är det stjärnorna på Google och de verifierade recensionerna på Reco som avgör om de hör av sig till dig eller till konkurrenten. Men 2026 räcker det inte att bara be alla kunder om en femma – både marknadsföringslagen och Google har skärpt reglerna, och ett felsteg kan i värsta fall kosta dig hela profilen eller en dyr avgift.</p>
+
+<p>Ett proffsigt intryck börjar redan i offertskedet – kunder som får en tydlig och förtroendeingivande offert är också de som gärna lämnar ett gott omdöme efteråt. Använd gärna <a href="/sv/verktyg/offert-mall">vår gratis offertmall -&gt;</a> för att lägga grunden till ett projekt som slutar med en nöjd kund.</p>
+
+<h2>Vad lagen faktiskt kräver av dig</h2>
+<p>Sedan Omnibus-direktivet införlivades i marknadsföringslagen (i kraft sedan 1 september 2022) är det uttryckligen förbjudet att lägga ut falska eller manipulerade konsumentrecensioner. Om du visar omdömen på din egen hemsida måste du dessutom informera om, och hur, du kontrollerar att recensionerna kommer från verkliga kunder – samt upplysa om enbart positiva omdömen publiceras eller om någon recension är sponsrad.</p>
+<p>Kravet på dig som företag är att vidta "rimliga och proportionerliga åtgärder" för att säkerställa att omdömena är äkta, till exempel genom att verifiera att personen faktiskt varit kund. Du ansvarar däremot inte för äktheten hos recensioner på tredjepartsplattformar som du inte kontrollerar, som Google eller Reco. Men bevisbördan för dina egna kontrollrutiner ligger på dig.</p>
+<p>Ta det här på allvar. Sanktionen skärptes samtidigt: marknadsstörningsavgiften kan numera bestämmas till upp till 4 % av företagets globala årsomsättning – det tidigare taket på 10 miljoner kronor är borttaget. Redan oaktsamhet räcker för avgift, det behövs alltså inget uppsåt, och det är Patent- och marknadsdomstolen som beslutar på talan av Konsumentombudsmannen.</p>
+
+<h2>Google 2026: det här får du inte göra längre</h2>
+<p>Googles reviewpolicy uppdaterades den 16–17 april 2026 och förbjuder nu uttryckligen flera saker som många byggfirmor tidigare tog för givna. Se det som en checklista över vad du ska sluta med direkt:</p>
+<ul>
+<li><strong>Inga incitament.</strong> Du får inte erbjuda rabatt, gratistjänst, present eller lotteri i utbyte mot en recension – oavsett om omdömet blir positivt eller negativt.</li>
+<li><strong>Ingen "review gating".</strong> Du får inte selektivt be bara nöjda kunder om ett Google-omdöme. Frågan måste ställas likadant till alla.</li>
+<li><strong>Fråga inte på plats.</strong> Att be om ett omdöme medan kunden står framför dig – muntligt, via surfplatta eller kiosk – är inte längre tillåtet.</li>
+<li><strong>Inga kvoter eller namn.</strong> Du får inte sätta recensionskvoter för personalen eller uppmana kunder att nämna en specifik anställd vid namn.</li>
+</ul>
+<p>Underskatta inte efterlevnaden. Enforcement är automatiserad och AI-baserad: Google blockerade eller tog bort 292 miljoner policybrytande recensioner under 2025, och de nya klausulerna tillämpas retroaktivt på befintliga profiler. Det kan innebära borttagna omdömen, nollställt stjärnbetyg eller begränsningar på din profil – även för sådant du gjorde innan reglerna ändrades.</p>
+
+<h2>Så ber du ändå – utan att verka påträngande</h2>
+<p>Det finns fortfarande gott om utrymme att be om omdömen, så länge du gör det systematiskt och neutralt. Nyckeln är timing och enkelhet:</p>
+<ol>
+<li><strong>Fråga vid rätt tillfälle.</strong> Skicka förfrågan efter godkänd slutbesiktning eller när projektet är avslutat och kunden är nöjd – inte mitt i jobbet när det fortfarande kan gå snett.</li>
+<li><strong>Fråga alla likadant.</strong> Använd samma formulering till varje kund, oavsett hur du tror att omdömet blir. Det håller dig inom Googles regler och ger en mer rättvisande bild.</li>
+<li><strong>Gör länken enkel.</strong> Lägg en kort direktlänk eller QR-kod i ett uppföljande mejl eller sms – aldrig på plats. Ju färre klick, desto fler svar.</li>
+<li><strong>En vänlig påminnelse.</strong> Skicka på sin höjd en enda neutral påminnelse. Mer än så blir påträngande.</li>
+</ol>
+<p>En enkel formulering som fungerar: "Hej [namn], tack för att vi fick utföra [projekt] åt dig. Om du är nöjd med resultatet uppskattar vi om du vill dela din upplevelse – det hjälper oss och andra som letar hantverkare. Här är länken: [länk]. Tack på förhand!"</p>
+
+<h2>Reco vs Google: bygg på båda, men olika</h2>
+<p>De två plattformarna fyller olika funktioner. Reco.se bygger sin verifiering på integration med företagets ekonomi- och faktureringssystem: förfrågningar skickas bara till personer som faktiskt är kunder, vilket gör att omdömena kan äkthetsmärkas som "verifierat företag". Det ger tyngre bevisvärde än fritt inkomna omdömen – något som väger extra tungt i byggbranschen. Google, å andra sidan, syns i lokalt sök och på Maps där kunderna faktiskt letar.</p>
+<p>Ett bra upplägg är att välja en primär plattform per kund så att du inte splittrar omdömena för tunt, och samtidigt bygga upp egna case och referenser på din hemsida. Tänk på att om du använder en kunds namn, foto eller projekt i din egen marknadsföring kräver GDPR ett dokumenterat, aktivt och frivilligt samtycke – till exempel en signering eller en ibockad ruta – och du måste kunna visa att samtycket finns.</p>
+
+<h2>Hantera negativa omdömen rätt</h2>
+<p>Ett negativt omdöme är inte världens undergång – hur du svarar säger ofta mer om ditt företag än själva klagomålet. Svara alltid sakligt och snabbt, håll det professionellt offentligt och ta detaljerna i dialogen privat. Erbjud aldrig pengar eller rabatt för att få kunden att ändra eller ta bort ett omdöme; det bryter mot Googles regler och riskerar att räknas som otillbörlig marknadsföring enligt MFL. Är ett omdöme uppenbart falskt eller regelstridigt – till exempel från någon som aldrig varit kund – kan du flagga det för granskning i stället för att ge dig in i en offentlig strid.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att bygga den rutin som gör recensioner till en naturlig del av varje projektavslut i stället för något du glömmer bort. Med en tydlig offert- och projektstruktur vet du exakt när ett jobb är godkänt och avslutat – rätt tillfälle att skicka din förfrågan. Du samlar kunduppgifter på ett ställe, vilket gör det enkelt att skicka samma neutrala förfrågan till alla och att hålla ordning på vilka referenser du har dokumenterat samtycke för. ByggExp skickar inte omdömena åt dig och kan inte garantera att kunder svarar, men verktyget ger dig den ordning och de mallar som krävs för att göra det rätt, konsekvent och inom reglerna.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får jag ge rabatt till kunder som lämnar en recension?</h3>
+<p>Nej. Googles policy från april 2026 förbjuder uttryckligen alla former av incitament – rabatt, gratistjänst, present eller lotteri – i utbyte mot en recension, oavsett om omdömet blir positivt eller negativt. Det kan leda till att omdömen tas bort och att din profil begränsas.</p>
+<h3>Får jag bara be nöjda kunder om ett Google-omdöme?</h3>
+<p>Nej. Så kallad "review gating", där du selektivt frågar bara nöjda kunder, är förbjudet enligt Googles uppdaterade policy. Ställ samma fråga till alla kunder på samma sätt.</p>
+<h3>Ansvarar jag för att recensionerna på min Google-profil är äkta?</h3>
+<p>Du ansvarar inte för äktheten hos omdömen på plattformar du inte kontrollerar, som Google och Reco. Men om du visar omdömen på din egen hemsida måste du kunna redogöra för hur du kontrollerar att de kommer från verkliga kunder, och bevisbördan för dina rutiner ligger på dig.</p>
+<h3>Måste jag ha tillstånd för att använda en kund som referens på min hemsida?</h3>
+<p>Ja. Att använda en kunds namn, foto eller projekt i din egen marknadsföring kräver enligt GDPR ett dokumenterat, aktivt och frivilligt samtycke, och du måste kunna visa att samtycket finns.</p>
+
+<h2>Kom igång</h2>
+<p>Ärlighet och rutin slår genvägar varje gång. Börja med att lägga grunden för ett proffsigt projekt med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>, och utforska fler verktyg för din byggfirma bland <a href="/sv/verktyg">alla våra gratisverktyg</a>. Vill du se hur ByggExp kan bygga in recensionsrutinen i ditt arbetsflöde? <a href="/sv/contact">Boka en demo</a> så visar vi hur det fungerar.</p>
+
+<p>Relaterat: <a href="/sv/blog/hitta-kunder-byggfirma">Så hittar du fler kunder till din byggfirma</a></p>
+`;
+
+const A_SKAFFA_RECENSIONER_OMDOMEN_BYGGFIRMA: BlogPost = {
+  _id: "code-"+"skaffa-recensioner-omdomen-byggfirma",
+  title: "Så får din byggfirma fler recensioner på Google och Reco – utan att bryta reglerna", slug: "skaffa-recensioner-omdomen-byggfirma", locale: "sv",
+  excerpt: "Referenser vinner nästa jobb – men att be om recensioner 2026 kräver mer eftertanke än förr, efter att både lagen och Google skärpt reglerna.", tag: "Marknadsföring",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_SKAFFA_RECENSIONER_OMDOMEN_BYGGFIRMA_HTML,
+  seoTitle: "Få recensioner byggfirma | ByggExp", seoDescription: "Så ber du kunder om omdömen på Google och Reco utan att verka påträngande – och håller dig inom lagen efter Googles skärpta regler 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T15:06:00.000Z", createdAt: "2026-08-19T15:06:00.000Z", updatedAt: "2026-08-19T15:06:00.000Z",
+};
+
+const A_MOMSREGISTRERING_ARBETSGIVARREGISTRERING_BYGGFORETAG_HTML = `
+<p>Innan din byggfirma kan skicka första fakturan eller betala ut första lönen måste ett antal anmälningar vara på plats hos Skatteverket. Fel eller försening här får konkreta följder: fakturan fastnar för att F-skatten inte är klar, momsen redovisas fel, eller så saknas arbetsgivarregistreringen den dag du betalar ut lön. Den här guiden går igenom registreringarna i rätt ordning – med de siffror och gränser som gäller 2026.</p>
+
+<p>Innan du börjar kan det vara värt att räkna på moms och priser i lugn och ro med <a href="/sv/verktyg">våra gratis verktyg för byggföretag –&gt;</a> så att du vet hur omvänd byggmoms och ingående moms påverkar dina kalkyler.</p>
+
+<h2>Grundregistreringen – F-skatt och företagsregistrering</h2>
+<p>F-skatt, moms och arbetsgivarregistrering söker du i samma e-tjänst, "Registrera företag", på verksamt.se med BankID. Har du inte möjlighet att använda e-tjänsten går det också att skicka in blankett SKV 4620 (Skatte- och avgiftsanmälan) på papper. Det är alltså en enda anmälan där du kryssar i vilka delar som gäller dig.</p>
+<p>Räkna med att Skatteverkets handläggning av F-skatt normalt tar 2–6 veckor, ofta 2–3 veckor för ett nystartat aktiebolag utan komplikationer. Skatteverkets registrering är avgiftsfri. Registrerar du aktiebolag hos Bolagsverket via e-tjänst kostar det däremot 1 900 kr (oförändrat 2026). Poängen är enkel: ansök i god tid före första uppdraget, så att F-skatten finns på plats när det är dags att fakturera. Vill du ha hela startprocessen i ordning har vi en separat guide om <a href="/sv/blog/starta-byggforetag-2026">att starta byggföretag 2026</a> och en om <a href="/sv/blog/f-skatt-hantverkare-ansokan">F-skatt och ansökan för hantverkare</a>.</p>
+
+<h2>Ska byggfirman momsregistrera sig?</h2>
+<p>Momsregistrering är obligatorisk först när den momspliktiga årsomsättningen överstiger 120 000 kr. Gränsen höjdes från 80 000 till 120 000 kr den 1 januari 2025 och gäller oförändrad 2026. Undantaget kräver dessutom att omsättningen inte har passerat 120 000 kr något av de två föregående kalenderåren.</p>
+<p>I praktiken är detta sällan relevant för en byggfirma. Säljer du till andra företag väljer du normalt frivillig momsregistrering direkt från start – annars får du inte dra av ingående moms på verktyg, material, bil och andra inköp. Den avdragsrätten väger tungt i en verksamhet med stora materialkostnader. Behöver du snabbt kontrollera hur mycket moms som ligger på ett belopp använder du <a href="/sv/verktyg/moms-kalkylator">vår moms-kalkylator</a>.</p>
+<p>Hur ofta du redovisar moms styrs av omsättningen: årsvis är tillåtet upp till 1 mkr, kvartalsvis vid 1–40 mkr, och månadsvis är obligatoriskt över 40 mkr. Byggföretag som ofta har överskott av ingående moms (se omvänd byggmoms nedan) kan medvetet välja kortare period för att få tillbaka momsen snabbare.</p>
+
+<h2>Omvänd byggmoms – det som gör byggbranschen speciell</h2>
+<p>Omvänd betalningsskyldighet, "omvänd byggmoms", är den regel som skiljer byggsektorn från de flesta andra branscher. Den är tvingande – inte valfri – när du säljer angivna byggtjänster, byggstädning eller uthyrning av arbetskraft i Sverige till en köpare som själv (mer än tillfälligt) säljer sådana byggtjänster. Då är det köparen, inte du, som redovisar och betalar momsen.</p>
+<p>På fakturan anger du köparens momsregistreringsnummer plus texten "omvänd betalningsskyldighet". Det vanligaste missförståndet är att du därför inte behöver momsregistrera dig – fel. Du måste ändå vara momsregistrerad, både för att redovisa den omvända momsen korrekt och för att dra av din egen ingående moms på inköp.</p>
+
+<h2>Arbetsgivarregistrering – innan första lönen</h2>
+<p>Arbetsgivarregistrering krävs innan du betalar ut ersättning för arbete till någon som inte har godkänd F-skatt. Det gäller inte bara anställda utan även underentreprenörer och inhyrd arbetskraft som saknar F-skatt – anlitar du en sådan är du skyldig att göra skatteavdrag och betala arbetsgivaravgifter, vilket i praktiken förutsätter att du är registrerad som arbetsgivare. Kontrollera därför alltid motpartens F-skatt innan du skriver avtal.</p>
+<p>Efter registrering ska du lämna arbetsgivardeklaration (AGI) varje månad, på individnivå, med redovisad lön, avdragen skatt och arbetsgivaravgifter. Full arbetsgivaravgift 2026 är 31,42 % (för personer födda 1959 eller senare).</p>
+<p>Det finns två nedsättningar värda att känna till:</p>
+<ul>
+<li><strong>Ungdomsnedsättning:</strong> En tillfällig sänkning gäller från 1 april 2026 till 30 september 2027. För anställda som fyllt 18 men inte 23 år vid årets ingång (födda 2003–2007 under 2026) är avgiften 20,81 % på lön upp till 25 000 kr/mån; på belopp däröver gäller full avgift 31,42 %.</li>
+<li><strong>Växa-stöd:</strong> Sänker avgiften till 10,21 % (endast ålderspensionsavgift) på lön upp till 35 000 kr/mån, i upp till 24 sammanhängande månader, för upp till två anställda vars anställning påbörjats efter 30 april 2024. Nytt från januari 2026: stödet rapporteras inte längre i lönekörningen/AGI utan söks retroaktivt – du betalar full avgift först och ansöker sedan om återbetalning hos Skatteverket. Stödet gäller inte den förste anställde i eget aktiebolag, det vill säga ägaren själv.</li>
+</ul>
+<p>Behöver du en bredare genomgång av vad det innebär att bli arbetsgivare har vi en separat artikel om <a href="/sv/blog/anstalla-personal-byggforetag">att anställa personal i byggföretag</a>.</p>
+
+<h2>Personalliggare och ID06 – kraven på byggarbetsplatsen</h2>
+<p>Elektronisk personalliggare krävs på byggarbetsplatser där byggverksamhetens totala kostnad överstiger 4 prisbasbelopp. Prisbasbeloppet 2026 är 59 200 kr, vilket ger gränsen 236 800 kr. Över den ska liggaren föras elektroniskt från första arbetsdagen. Byggherren anmäler byggarbetsplatsen till Skatteverket och ansvarar för utrustningen, medan entreprenören ansvarar för att liggaren förs.</p>
+<p>Skatteverket får göra oanmälda kontrollbesök, och bristerna är dyra:</p>
+<ul>
+<li>12 500 kr i grundavgift plus 2 500 kr per person som är verksam men inte antecknad i liggaren.</li>
+<li>25 000 kr om byggherren inte anmält att och var byggverksamheten ska bedrivas.</li>
+<li>12 500 kr om byggherren inte tillhandahållit utrustning för att föra elektronisk personalliggare.</li>
+</ul>
+<p>ID06 är vanligt förekommande som system för identifiering och närvaroregistrering, men det är en branschstandard – inte ett lagkrav i sig. Lagkravet gäller själva personalliggaren.</p>
+
+<h2>Kollektivavtal och försäkringar – inte Skatteverket, men lika viktigt</h2>
+<p>Kollektivavtal är inte ett lagkrav men en stark branschnorm, och krävs ofta i upphandlingar. Byggavtalet mellan Byggföretagen och Byggnads gäller 2025–2027 med löneökningar på 6,4 % över perioden. Från 1 januari 2026 är traktamentet 450 kr/dag, och arbetstidsförkortningen ökar från 5 till 6 dagar per år efter 1 april 2026. Avtal tecknas antingen genom medlemskap i Byggföretagen eller via hängavtal direkt med Byggnads, och medför avtalsförsäkringar via Fora.</p>
+
+<h2>Checklista i rätt ordning</h2>
+<ol>
+<li>Registrera bolaget eller den enskilda firman (aktiebolag via Bolagsverket, 1 900 kr).</li>
+<li>Ansök om F-skatt och momsregistrering i e-tjänsten "Registrera företag" på verksamt.se.</li>
+<li>Arbetsgivarregistrera dig innan första lönen – och innan du anlitar UE utan F-skatt.</li>
+<li>Sätt upp rutin för momsredovisning och månatlig AGI.</li>
+<li>Teckna kollektivavtal och avtalsförsäkringar (Byggföretagen eller hängavtal + Fora).</li>
+<li>Ordna personalliggare och eventuellt ID06 före byggstart på arbetsplatser över 236 800 kr.</li>
+</ol>
+<p>De vanligaste misstagen är att fakturera innan F-skatten är klar, att tro att omvänd byggmoms gör momsregistrering onödig, och att betala ut ersättning till någon utan F-skatt utan att vara arbetsgivarregistrerad. Är du osäker på gränsdragningarna – ta en tidig kontakt med en redovisningskonsult, det är billigare än en kontrollavgift.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp sköter inte själva registreringen hos Skatteverket åt dig – det gör du i verksamt.e-tjänsten. Men när registreringarna är på plats hjälper ByggExp dig att hålla ordning på det som följer av dem: fakturor med korrekt momshantering och rätt text vid omvänd byggmoms, samlade underlag för moms- och arbetsgivardeklaration, och tidrapporter per projekt som ger dig kontroll på arbetskostnaden. Verktygen under <a href="/sv/verktyg">/sv/verktyg</a> är gratis att använda direkt, utan konto, så att du kan räkna på moms och priser redan innan bolaget är registrerat.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag momsregistrera mig om jag bara fakturerar andra byggföretag med omvänd byggmoms?</h3>
+<p>Ja. Även när köparen redovisar momsen enligt omvänd betalningsskyldighet måste du som säljare vara momsregistrerad – dels för att redovisa korrekt, dels för att kunna dra av ingående moms på dina egna inköp av material, verktyg och bil.</p>
+<h3>När måste byggfirman arbetsgivarregistrera sig?</h3>
+<p>Innan du betalar ut ersättning för arbete till någon som saknar godkänd F-skatt. Det gäller både anställda och underentreprenörer eller inhyrd personal utan F-skatt. Efter registrering lämnar du arbetsgivardeklaration (AGI) på individnivå varje månad.</p>
+<h3>Vad är arbetsgivaravgiften för byggföretag 2026?</h3>
+<p>Full avgift är 31,42 % för personer födda 1959 eller senare. För anställda 18–22 år gäller 20,81 % på lön upp till 25 000 kr/mån från 1 april 2026, och Växa-stödet sänker avgiften till 10,21 % upp till 35 000 kr/mån i högst 24 månader för upp till två anställda – men söks retroaktivt från 2026 och gäller inte ägaren i eget AB.</p>
+<h3>När krävs elektronisk personalliggare på bygget?</h3>
+<p>När byggverksamhetens totala kostnad överstiger 4 prisbasbelopp, vilket 2026 är 236 800 kr. Då ska liggaren föras elektroniskt från första arbetsdagen. Byggherren anmäler arbetsplatsen och ansvarar för utrustningen; entreprenören för själva liggaren.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att räkna igenom din moms och prissättning i <a href="/sv/verktyg">våra gratis byggverktyg</a> och testa <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn</a> innan du sätter upp fakturarutinerna. Vill du se hur ByggExp kan hålla ihop fakturor, moms och tidrapporter för din firma? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/starta-byggforetag-2026">Starta byggföretag 2026</a>, <a href="/sv/blog/f-skatt-hantverkare-ansokan">F-skatt för hantverkare – så ansöker du</a>, <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag</a>.</p>
+`;
+
+const A_MOMSREGISTRERING_ARBETSGIVARREGISTRERING_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"momsregistrering-arbetsgivarregistrering-byggforetag",
+  title: "Momsregistrering och arbetsgivarregistrering för byggföretag – steg för steg 2026", slug: "momsregistrering-arbetsgivarregistrering-byggforetag", locale: "sv",
+  excerpt: "En konkret genomgång av vilka registreringar byggfirman måste ha på plats hos Skatteverket innan första jobbet och första anställningen – i rätt ordning.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_MOMSREGISTRERING_ARBETSGIVARREGISTRERING_BYGGFORETAG_HTML,
+  seoTitle: "Moms & arbetsgivare byggföretag | ByggExp", seoDescription: "Så registrerar byggfirman moms, F-skatt och arbetsgivare hos Skatteverket – checklista, omvänd byggmoms, arbetsgivaravgift 2026 och personalliggare.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T15:09:00.000Z", createdAt: "2026-08-19T15:09:00.000Z", updatedAt: "2026-08-19T15:09:00.000Z",
+};
+
+const A_FARDIGSTALLANDEGRAD_VINSTAVRAKNING_BYGGPROJEKT_HTML = `
+<p>Ett byggbolag som drar igång ett fastprisuppdrag i november och slutför det i mars måste bestämma sig: ska hela vinsten redovisas det år projektet blir klart, eller ska den fördelas över de månader arbetet faktiskt pågår? Valet mellan successiv vinstavräkning och färdigställandemetoden avgör om resultatet hoppar kraftigt mellan åren eller jämnas ut. Fel metod – eller rätt metod fel tillämpad – ger en missvisande årsredovisning, fel periodiserad skatt och obekväma frågor vid revision och bankfinansiering. Reglerna styrs av K2 och K3 från Bokföringsnämnden, och en viktig nyhet gäller för räkenskapsår som inleds efter den 31 december 2025.</p>
+
+<p>Innan du väljer metod behöver du ha ordning på kalkylen för varje projekt – testa vår gratis <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylator</a> för att sätta rätt totalpris och beräknad totalkostnad, som är själva grunden i färdigställandegraden.</p>
+
+<h2>Två metoder för pågående arbeten till fast pris</h2>
+<p>För uppdrag till fast pris finns två vägar. <strong>Huvudregeln</strong> är successiv vinstavräkning (percentage-of-completion): intäkter och kostnader redovisas löpande i takt med färdigställandegraden på balansdagen. <strong>Alternativregeln</strong> är färdigställandemetoden (completed-contract): hela vinsten tas först när uppdraget är väsentligen färdigt.</p>
+<ul>
+<li><strong>När intäkten redovisas:</strong> Successiv vinstavräkning – löpande under projektet. Färdigställandemetoden – först vid färdigställandet.</li>
+<li><strong>Resultateffekt:</strong> Successiv vinstavräkning jämnar ut resultatet mellan åren. Färdigställandemetoden ger hopp – noll under arbetet, hela vinsten på slutåret.</li>
+<li><strong>Komplexitet:</strong> Successiv vinstavräkning kräver löpande projektuppföljning och tillförlitliga kalkyler. Färdigställandemetoden är enklare att administrera.</li>
+</ul>
+<p>Uppdrag på <strong>löpande räkning</strong> är en annan sak – de redovisas alltid enligt huvudregeln i takt med utfört arbete, inklusive ofakturerad upparbetad tid på balansdagen. Det förutsätter ett avtalat pris per tidsenhet. Den gamla fakturametoden för löpande räkning är sedan tidigare borttagen ur K2 och K3.</p>
+
+<h2>Så räknar du färdigställandegrad</h2>
+<p>Färdigställandegraden beräknas normalt som nedlagda utgifter på balansdagen dividerat med totalt beräknade utgifter för hela uppdraget. Andelen multipliceras sedan med avtalad total intäkt för att få periodens redovisade intäkt.</p>
+<p>Ett konkret exempel: ett projekt har ett avtalspris på 5 mkr och en beräknad total kostnad på 4 mkr. På balansdagen har du lagt ned 3 mkr i faktiska kostnader.</p>
+<ul>
+<li>Färdigställandegrad: 3 mkr / 4 mkr = <strong>75 %</strong></li>
+<li>Redovisad intäkt: 75 % × 5 mkr = <strong>3,75 mkr</strong></li>
+<li>Redovisat resultat hittills: 3,75 mkr − 3 mkr = <strong>0,75 mkr</strong></li>
+</ul>
+<p>En vanlig och kostsam felkälla: bara <strong>faktiskt förbrukade resurser</strong> ska räknas in i nedlagda utgifter. Material som köpts in och ligger kvar ostört på bygget hör inte hit – att räkna med det blåser upp färdigställandegraden och tidigarelägger intäkt som ännu inte är intjänad.</p>
+
+<h2>Villkoret &quot;tillförlitligt sätt&quot;</h2>
+<p>Successiv vinstavräkning får bara tillämpas om uppdragets ekonomiska utfall kan beräknas på ett tillförlitligt sätt. Det kräver intern ekonomisk rapportering, budgetering och en fungerande projektuppföljning – du måste kunna svara på vad projektet kostar totalt och hur mycket som är kvar.</p>
+<p>Kan utfallet inte beräknas tillförlitligt ska intäkten redovisas motsvarande nedlagda utgifter, alltså med <strong>nollresultat</strong>, tills tillförlitlighet uppnås. Det skyddar mot att du redovisar en vinst som senare visar sig vara luft.</p>
+
+<h2>K2 eller K3 – vad får ditt byggbolag välja?</h2>
+<p>Vilket regelverk du hamnar i beror på storlek. Ett <strong>mindre företag</strong> överskrider högst ett av dessa kriterier två år i rad: fler än 50 anställda, mer än 40 mkr i balansomslutning eller mer än 80 mkr i nettoomsättning. Överskrids fler blir företaget större och ska tillämpa K3.</p>
+<ul>
+<li><strong>K2:</strong> Fastprisuppdrag får redovisas enligt huvudregeln eller alternativregeln i juridisk person – men alternativregeln får inte användas i koncernredovisning.</li>
+<li><strong>K3:</strong> I juridisk person får du välja metod, men i <strong>koncernredovisning är endast successiv vinstavräkning tillåten</strong>. Färdigställandemetoden är inte tillåten där.</li>
+</ul>
+<p>Två 2026-begränsningar är viktiga för bygg- och fastighetsbolag: företag där en byggnad genererar minst 75 % av nettoomsättningen får inte längre tillämpa K2, och bostadsrättsföreningar får oavsett storlek inte använda K2 utan ska tillämpa K3 med komponentavskrivning.</p>
+
+<h2>Nyheten 2026 – slut på nettoredovisning under alternativregeln</h2>
+<p>De uppdaterade K2- och K3-regelverken (beslut 16 juni 2025) tillämpas på räkenskapsår som inleds efter den 31 december 2025. En central förändring: fastprisuppdrag som redovisas enligt alternativregeln med både positiva och negativa saldon får <strong>inte längre nettoredovisas</strong> i balansräkningen. De ska bruttoredovisas – positiva saldon som tillgång och negativa saldon som skuld, var för sig.</p>
+<p>Praktiskt betyder det att balansomslutningen ofta blir högre än tidigare, vilket kan påverka nyckeltal, mallar och till och med gränsvärdena för mindre/större företag. Se över dina bokslutsmallar innan det första berörda årets bokslut.</p>
+
+<h2>Befarad förlust ska tas direkt</h2>
+<p>En vanlig miss: så snart du <strong>förväntar</strong> dig en förlust på ett uppdrag ska hela den befarade förlusten kostnadsföras omedelbart. Det gäller oavsett vilken metod du använder och oavsett om arbetet är påbörjat eller inte. Ett projekt som kalkylmässigt redan är underbudgeterat får alltså inte skjuta förlusten framför sig till färdigställandet.</p>
+
+<h2>Skatten följer redovisningen – med undantag</h2>
+<p>Är räkenskaperna upprättade enligt god redovisningssed ska den metod du använder i bokföringen även följas vid beskattningen. Väljer du frivilligt successiv vinstavräkning tidigarelägger du därmed skatten, eftersom vinsten beskattas löpande i stället för på slutåret.</p>
+<p>Vid färdigställandemetoden gäller att pågående arbete till fast pris inte får tas upp lägre än det lägsta av anskaffningsvärde och nettoförsäljningsvärde (lägsta värdets princip). Alternativt får det värderas till <strong>97 % av anskaffningsvärdet</strong> – den så kallade 97 %-regeln, som ger en liten skattekredit. Observera att 97 %-regeln inte gäller konsultverksamhet.</p>
+
+<h2>Bokföring i praktiken</h2>
+<p>Nedlagda kostnader för ej avslutade projekt samlas bokföringsmässigt på konto <strong>1470 Pågående arbeten</strong>, med konto <strong>4970 Förändring av pågående arbeten</strong> som motkonto vid bokslutsperiodiseringen. Dokumentera vilket metodval du gjort och tillämpa det konsekvent mellan åren – att byta metod fram och tillbaka mellan projekt och år försämrar jämförbarheten och väcker frågor vid revision.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte din redovisning eller revisor, men ger dig underlaget metoderna vilar på. Med löpande projektkalkyler håller du reda på avtalat pris och beräknad totalkostnad per projekt – de två talen som färdigställandegraden bygger på. Genom att samla nedlagda timmar, material och leverantörsfakturor på rätt projekt får du fram de faktiska nedlagda utgifterna på balansdagen, så att din redovisningskonsult kan räkna färdigställandegrad på verkliga siffror i stället för uppskattningar. Ju bättre projektuppföljning, desto lättare uppfyller du kravet på tillförlitligt utfall.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste byggbolaget använda successiv vinstavräkning?</h3>
+<p>Nej. I juridisk person får både K2- och K3-företag välja mellan huvudregeln (successiv vinstavräkning) och alternativregeln (färdigställandemetoden) för fastprisuppdrag. Undantaget är koncernredovisning enligt K2 och K3, där endast successiv vinstavräkning är tillåten.</p>
+<h3>Hur beräknas färdigställandegraden?</h3>
+<p>Normalt som nedlagda utgifter på balansdagen dividerat med totalt beräknade utgifter för hela uppdraget. Andelen multipliceras med avtalad total intäkt. Har du lagt ned 3 mkr av 4 mkr beräknade kostnader är graden 75 %, vilket på ett avtalspris på 5 mkr ger 3,75 mkr redovisad intäkt.</p>
+<h3>Vad händer om jag inte kan beräkna projektets utfall tillförlitligt?</h3>
+<p>Då får du inte tillämpa successiv vinstavräkning fullt ut. I stället redovisas intäkt motsvarande nedlagda utgifter, alltså med nollresultat, tills utfallet kan beräknas på ett tillförlitligt sätt. Det kräver att du har budget och löpande ekonomisk rapportering på plats.</p>
+<h3>Vad är nyheten om bruttoredovisning från 2026?</h3>
+<p>För räkenskapsår som inleds efter den 31 december 2025 får fastprisuppdrag under alternativregeln inte längre nettoredovisas i balansräkningen. Positiva saldon redovisas som tillgång och negativa som skuld var för sig, vilket ofta höjer balansomslutningen och kan påverka nyckeltal.</p>
+
+<h2>Kom igång</h2>
+<p>Successiv vinstavräkning ger en mer rättvisande bild och jämnar ut resultatet mellan åren, men den kräver att du har ordning på kalkyler och projektuppföljning – annars faller kravet på tillförlitligt utfall. Sätt rätt total- och marginaltal per projekt med vår <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylator</a>, utforska fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a> och stäm alltid av metodvalet med din revisor eller redovisningskonsult. Vill du se hur projektuppföljningen fungerar i praktiken, <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/tackningsbidrag-byggforetag">Täckningsbidrag för byggföretag</a>, <a href="/sv/blog/leverantorsfaktura-bygg-projekt">Leverantörsfakturor per byggprojekt</a> och <a href="/sv/blog/bokforing-enskild-firma-bygg">Bokföring för enskild firma i bygg</a>.</p>
+`;
+
+const A_FARDIGSTALLANDEGRAD_VINSTAVRAKNING_BYGGPROJEKT: BlogPost = {
+  _id: "code-"+"fardigstallandegrad-vinstavrakning-byggprojekt",
+  title: "Färdigställandegrad och successiv vinstavräkning – så redovisar byggbolaget pågående projekt rätt 2026", slug: "fardigstallandegrad-vinstavrakning-byggprojekt", locale: "sv",
+  excerpt: "Metodvalet avgör om resultatet hoppar mellan åren eller jämnas ut – så räknar du färdigställandegrad och redovisar pågående fastprisprojekt rätt enligt K2 och K3.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_FARDIGSTALLANDEGRAD_VINSTAVRAKNING_BYGGPROJEKT_HTML,
+  seoTitle: "Successiv vinstavräkning bygg | ByggExp", seoDescription: "Successiv vinstavräkning eller färdigställandemetoden? Så räknar byggbolaget färdigställandegrad, jämnar ut resultatet och redovisar pågående projekt rätt enligt K2/K3 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T15:12:00.000Z", createdAt: "2026-08-19T15:12:00.000Z", updatedAt: "2026-08-19T15:12:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_SPACKEL_ATGANG_VAGG_TAK,
+    A_LAKT_AVSTAND_TAK_BERAKNING,
+    A_SKAFFA_RECENSIONER_OMDOMEN_BYGGFIRMA,
+    A_MOMSREGISTRERING_ARBETSGIVARREGISTRERING_BYGGFORETAG,
+    A_FARDIGSTALLANDEGRAD_VINSTAVRAKNING_BYGGPROJEKT,
     A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG,
     A_AVVIKELSEHANTERING_BYGG_MALL,
     A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG,

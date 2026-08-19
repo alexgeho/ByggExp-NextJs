@@ -5,6 +5,15 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'skyddsrond-bygg-checklista',
+  'kakel-klinker-atgang-vatrum',
+  'armering-berakning-platta-grund',
+  'besiktningsanmarkning-atgarda-bemota',
+  'entreprenadforsakring-allrisk-vad-tacker',
+  'provanstallning-bygg-regler',
+  'utstationering-utlandsk-arbetskraft-bygg',
+  'kollektivavtalade-forsakringar-bygg',
+  'riskbedomning-byggarbetsplats-mall',
   'skatteverket-nekar-rotavdrag-forbehall',
   'efterkalkyl-bygg-kalkyluppfoljning',
   'indexreglering-entreprenad-kostnadsokning',

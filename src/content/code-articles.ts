@@ -11138,9 +11138,766 @@ const A_RANTEFORDELNING_ENSKILD_FIRMA_BYGG: BlogPost = {
   publishedAt: "2026-08-19T10:39:00.000Z", createdAt: "2026-08-19T10:39:00.000Z", updatedAt: "2026-08-19T10:39:00.000Z",
 };
 
+const A_SKYDDSROND_BYGG_CHECKLISTA_HTML = `
+<p>Skyddsronden är navet i det systematiska arbetsmiljöarbetet på byggarbetsplatsen. Det är på ronden ni fångar riskerna innan de blir tillbud – lösa räcken, en ställning som inte är komplett, dammspridning eller el som dragits provisoriskt. Från 1 januari 2025 moderniserades regelverket: AFS 2001:1 ersattes av <strong>AFS 2023:1</strong> (systematiskt arbetsmiljöarbete) och bygg fick dessutom nya <strong>AFS 2023:3</strong> om projektering och byggarbetsmiljösamordning. Om du söker en tydlig <em>skyddsrond bygg checklista</em> och vill veta hur ofta ni ska gå, vem som deltar och vad som ska protokollföras – här är den praktiska genomgången.</p>
+
+<p>Vill du komma igång direkt kan du ladda ner och fylla i <a href="/sv/verktyg/skyddsrond-mall">vår gratis mall för skyddsrondsprotokoll –&gt;</a> och ha den med på nästa rond.</p>
+
+<h2>Vad är en skyddsrond – och vad säger lagen 2026?</h2>
+<p>Ordet "skyddsrond" står faktiskt inte i lagtexten. Det är däremot den etablerade metoden för att uppfylla det lagkrav som finns: arbetsgivaren ska <strong>regelbundet undersöka arbetsmiljön och bedöma riskerna</strong>. I AFS 2023:1 nämns planerade skyddsronder, dagliga kontroller, mätningar och intervjuer som exempel på hur den undersökningen kan gå till.</p>
+<p>Det centrala kravet är att riskbedömningen alltid ska <strong>dokumenteras skriftligt</strong>. Dokumentationen ska visa vilka riskerna är och om de är allvarliga. På bygg- och anläggningsprojekt gäller dessutom AFS 2023:3, som reglerar ansvaret för byggherre, projektörer och de två samordnarrollerna Bas-P (planering och projektering) och Bas-U (utförandet). Skyddsronden är alltså inte en formalitet – den är själva beviset på att ni undersöker och åtgärdar arbetsmiljön löpande.</p>
+
+<h2>Hur ofta ska ni gå skyddsrond?</h2>
+<p>Lagen sätter inget universellt intervall. Frekvensen är <strong>riskbaserad</strong> – ju högre risk, desto oftare. För byggverksamhet, som hör till de mer riskfyllda branscherna, innebär det i praktiken täta ronder: ofta månadsvis, och gärna vid varje ny fas eller etapp där förutsättningarna på platsen ändras. En lågriskarbetsplats kan klara sig med glesare ronder, ner mot en gång per år.</p>
+<p>Poängen är att <strong>ni bestämmer intervallet själva – men valet måste kunna motiveras och dokumenteras</strong>. Ett rimligt upplägg på ett bygge: planerad skyddsrond varje månad, kompletterad med skyddsmöten och dagliga koll av det arbetsledaren och yrkesarbetarna ser på plats. När ni går över från stomme till stomkomplettering, eller drar igång rivning, bör en extra rond läggas in eftersom riskbilden blir en annan.</p>
+
+<h2>Vem deltar?</h2>
+<p>Skyddsronden går sällan ensam. På ett normalt bygge är följande roller inblandade:</p>
+<ul>
+<li><strong>Arbetsledare eller chef</strong> – bär arbetsgivaransvaret och är den som beslutar om åtgärder och resurser.</li>
+<li><strong>Skyddsombud</strong> – ska utses på arbetsplatser med minst 5 anställda och går normalt ronden tillsammans med arbetsledaren.</li>
+<li><strong>Bas-U</strong> – på en arbetsplats med flera entreprenörer samordnar Bas-U det löpande skyddsarbetet, inklusive skyddsronder, stickprov och skyddsmöten. Bas-U ger klartecken innan arbete startar, ser till att alla får introduktion och håller arbetsmiljöplanen uppdaterad.</li>
+<li><strong>Skyddskommitté</strong> – vid 50 eller fler anställda ska en skyddskommitté finnas utöver skyddsombud. Där blir rondens resultat och handlingsplanen naturliga punkter på dagordningen.</li>
+</ul>
+<p>En viktig befogenhet att känna till: Bas-U får <strong>stoppa arbetet vid omedelbar och allvarlig fara</strong>. Det är inte en förhandlingsfråga på plats – det är ett verktyg för att skydda liv och hälsa direkt.</p>
+
+<h2>Vad ska protokollföras?</h2>
+<p>Skyddsronden dokumenteras i ett protokoll, och det är här den blir juridiskt hållbar. Varje observation ska kopplas till tre saker:</p>
+<ol>
+<li><strong>Bristen</strong> – vad är fel eller riskabelt?</li>
+<li><strong>Ansvarig person</strong> – vem ska åtgärda det?</li>
+<li><strong>Åtgärd och deadline</strong> – vad ska göras och när ska det vara klart?</li>
+</ol>
+<p>Tillsammans bildar det en <strong>handlingsplan</strong> som är en del av det systematiska arbetsmiljöarbetet. En vanlig mallmodell använder ja/nej-svar per kontrollpunkt och en kolumn som automatiskt genererar åtgärdslistan för de punkter som fått "nej". Protokollet ska <strong>undertecknas av arbetsgivarrepresentant och skyddsombud</strong> och delges deltagarna. På nästa rond eller skyddsmöte följer ni upp att åtgärderna faktiskt är utförda – annars fyller dokumentationen ingen funktion.</p>
+
+<h2>Praktisk skyddsrond-checklista för byggarbetsplatsen</h2>
+<p>Använd den här listan som stomme och anpassa efter projektets fas. Branschspecifika checklistor finns också fritt hos Byggnads och Prevent:</p>
+<ul>
+<li><strong>Fallskydd och räcken</strong> – kompletta räcken vid kanter, håltäckningar, säkra öppningar.</li>
+<li><strong>Ställningar</strong> – godkänd och komplett montering, spirakort/skyltning, säker tillträdesväg.</li>
+<li><strong>Maskiner och lyft</strong> – besiktning, säkerhetsanordningar, lyftredskap och kättinglängor.</li>
+<li><strong>El och tillfälliga installationer</strong> – jordfelsbrytare, hela kablar, provisorisk belysning.</li>
+<li><strong>Ordning och städning</strong> – fria transportvägar, hantering av spill och avfall.</li>
+<li><strong>Personlig skyddsutrustning</strong> – hjälm, skyddsskor, ögonskydd, används den?</li>
+<li><strong>Damm och kvarts</strong> – utsug, vattenbegjutning, andningsskydd vid slipning och kapning.</li>
+<li><strong>Buller</strong> – bullrande moment, hörselskydd tillgängliga.</li>
+<li><strong>Kemiska produkter</strong> – förvaring, märkning och säkerhetsdatablad (SDB) på plats.</li>
+<li><strong>Brand och utrymning</strong> – släckutrustning, heta arbeten-rutiner, fria utrymningsvägar.</li>
+<li><strong>Första hjälpen</strong> – utrustning, uppmärkning, utsedd person.</li>
+<li><strong>Väder och kyla</strong> – halka, värmestugor, anpassning vid kyla och blåst.</li>
+</ul>
+
+<h2>5 vanliga misstag att undvika</h2>
+<ul>
+<li><strong>Rond utan uppföljning</strong> – åtgärder noteras men kollas aldrig av på nästa rond.</li>
+<li><strong>Otydligt ansvar</strong> – en brist utan namngiven ansvarig blir sällan åtgärdad.</li>
+<li><strong>Ingen skriftlig riskbedömning</strong> – muntliga överenskommelser räcker inte enligt AFS 2023:1.</li>
+<li><strong>Fast intervall utan motivering</strong> – samma frekvens oavsett fas, trots att riskbilden ändras.</li>
+<li><strong>Skyddsombudet utanför</strong> – ronden går utan den som ska företräda arbetstagarna.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp fyller ni i skyddsrondsprotokollet digitalt direkt på plats, med ja/nej per kontrollpunkt. De punkter som får "nej" blir automatiskt en handlingsplan med ansvarig och deadline, så inget faller mellan stolarna. Protokollet sparas med datum och kan delges deltagarna, och kompletterar er löpande <a href="/sv/verktyg/egenkontroll-mall">egenkontroll</a>. Dokumentationen ligger samlad så att den finns tillgänglig om Arbetsmiljöverket frågar – ni behöver inte leta i pärmar eller mejltrådar. ByggExp ersätter inte skyddsombudets bedömning eller Bas-U:s ansvar, men gör själva dokumentationen och uppföljningen snabb och spårbar.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är skyddsrond lagstadgat?</h3>
+<p>Själva ordet står inte i lagen, men kravet gör det. Enligt AFS 2023:1 ska arbetsgivaren regelbundet undersöka arbetsmiljön och bedöma riskerna skriftligt, och skyddsronden är den etablerade metoden för att uppfylla det.</p>
+<h3>Hur ofta ska skyddsrond göras på ett bygge?</h3>
+<p>Intervallet är riskbaserat och något ni bestämmer själva, men det måste kunna motiveras. På byggarbetsplatser innebär det ofta månadsvis, plus en extra rond vid varje ny fas eller etapp när riskbilden förändras.</p>
+<h3>Vem ska skriva under skyddsrondsprotokollet?</h3>
+<p>Protokollet undertecknas av en arbetsgivarrepresentant och skyddsombudet, och delges sedan deltagarna. Varje brist ska kopplas till ansvarig person, åtgärd och deadline – det blir en handlingsplan som följs upp på nästa rond.</p>
+<h3>Vad är skillnaden mot Bas-U:s ansvar?</h3>
+<p>Bas-U samordnar det löpande skyddsarbetet på en arbetsplats med flera entreprenörer, inklusive att organisera skyddsronder och skyddsmöten, och får stoppa arbete vid omedelbar allvarlig fara. Skyddsronden är ett av verktygen Bas-U använder för att fullgöra den samordningen.</p>
+
+<h2>Kom igång</h2>
+<p>Ladda ner <a href="/sv/verktyg/skyddsrond-mall">vår mall för skyddsrondsprotokoll</a> och ta med den på nästa rond, eller boka en <a href="/sv/contact">demo</a> så visar vi hur ni får handlingsplanen och uppföljningen på plats digitalt.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan på bygget</a>, <a href="/sv/blog/bas-p-bas-u">Bas-P och Bas-U – roller och ansvar</a>, <a href="/sv/blog/fallskydd-krav-bygg">Fallskydd – krav på bygget</a>.</p>
+`;
+
+const A_SKYDDSROND_BYGG_CHECKLISTA: BlogPost = {
+  _id: "code-"+"skyddsrond-bygg-checklista",
+  title: "Skyddsrond på bygget – checklista, intervall och protokoll (2026)", slug: "skyddsrond-bygg-checklista", locale: "sv",
+  excerpt: "Praktisk guide till skyddsronden på bygget: riskbaserat intervall, roller, protokoll och en färdig checklista enligt de nya reglerna 2025–2026.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_SKYDDSROND_BYGG_CHECKLISTA_HTML,
+  seoTitle: "Skyddsrond bygg: checklista 2026 | ByggExp", seoDescription: "Hur ofta ska ni gå skyddsrond, vem deltar och vad ska protokollföras? Praktisk checklista för byggarbetsplatsen enligt AFS 2023:1 och 2023:3.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T11:00:00.000Z", createdAt: "2026-08-19T11:00:00.000Z", updatedAt: "2026-08-19T11:00:00.000Z",
+};
+
+const A_KAKEL_KLINKER_ATGANG_VATRUM_HTML = `
+<p>Att köpa för lite kakel är ett dyrare misstag än att köpa lite för mycket. Stillestånd på bygget medan du väntar på efterleverans, extra frakt och – värst av allt – en ny batch med synlig nyansskillnad kan äta upp hela marginalen på ett badrumsjobb. För dig som lämnar anbud handlar rätt materialåtgång inte om att gissa, utan om att räkna nettoyta, lägga på rätt spill och avrunda till hel kartong innan du sätter pris.</p>
+
+<p>Räkna ytorna snabbt och rätt med <a href="/sv/verktyg/kvadratmeter-kalkylator">vår gratis kvadratmeter-kalkylator -&gt;</a> så har du nettoytan klar innan du börjar lägga på spill.</p>
+
+<h2>Börja med nettoytan – mät varje vägg och golv för sig</h2>
+<p>Nettoytan är den yta som faktiskt ska kaklas eller klinkras. Räkna varje vägg för sig som höjd × bredd och dra av dörr, fönster och ytor som inte ska kaklas. Golvet räknar du som längd × bredd. Har rummet en oregelbunden form delar du upp det i rektanglar och summerar – det ger ett säkrare underlag än att uppskatta hela ytan på en gång.</p>
+<p>Separera alltid vägg och golv i beräkningen. Kaklet på väggen och klinkern på golvet har oftast olika format, och därmed olika spill. Ett storformat på golvet och ett mindre kakel på väggen kan inte slås ihop till en klumpsumma utan att du tappar precision där det kostar mest.</p>
+
+<h2>Lägg på rätt spill – 10–15 % som standard, upp mot 20 %</h2>
+<p>Spillet läggs på <strong>ovanpå nettoytan</strong>, aldrig på bruttoytan. Standardpåslaget för kakel och klinker i badrum är 10–15 %, och absolut minimum bör vara 10 %. Vid storformat, diagonalsättning eller mycket mönster ökar spillet mot 20 %.</p>
+<p>Spillet uppstår framför allt vid:</p>
+<ul>
+<li>Kapning i hörn och vid övergångar mellan vägg och golv.</li>
+<li>Håltagning för rör, blandare och avstängningsventiler.</li>
+<li>Anpassning runt nischer, bänkar och golvbrunn.</li>
+</ul>
+<p>Formatet styr valet. Små plattor ger mindre spill per kap, men fler kap runt rör och hörn. Storformat ger färre kap men kasserar mer yta för varje snitt – därför behöver stora plattor och diagonalsättning en större marginal. Väljer du storformat på ett litet badrum med många genomföringar bör du lägga dig i det övre spannet direkt.</p>
+
+<h2>Batch och nyans – därför beställer du allt på en gång</h2>
+<p>Färgton och exakt mått avgörs av bränningen, alltså batchen. Beställer du hela mängden inklusive spill i samma order får du plattor från samma batch. En efterbeställning kommer nästan alltid från en annan bränning, med nyansskillnad och små måttavvikelser som syns i en färdig vägg.</p>
+<p>Därför ska du alltid ha reservplattor kvar när jobbet är klart – kunden behöver dem för framtida reparationer, och de ska matcha resten av väggen. Ta med reservplattorna i anbudet så att de inte blir en kostnad du får bära själv i efterhand. Att räkna för snålt sparar inget; det flyttar bara risken till slutfasen där den blir dyrast.</p>
+
+<h2>Åtgången påverkas av 2026 års våtrumsregler</h2>
+<p>Branschreglerna inom Säkra Våtrum (BBV och GVK) uppdaterades 2026 och tillämpas på installationer som <strong>påbörjas efter 1 januari 2026</strong>. Reglerna påverkar direkt hur mycket golvklinker du behöver kapa och passa.</p>
+<ul>
+<li>Golvfall mot golvbrunn i duschplats och våtzon ska vara mellan 7 mm/m och 30 mm/m – det gäller både underlag och färdigt ytskikt. Övrigt golv ska ha minst 2 mm/m fall mot brunnen.</li>
+<li>Avståndet mellan rörgenomföring och tak, vägg eller golv (tätskikt) ska vara minst 60 mm, och centrumavståndet minst 60 mm för rör upp till 32 mm.</li>
+<li>Hela golvytan räknas som våtzon 1, och vägg inom 1 meter från dusch eller bad är våtzon 1.</li>
+</ul>
+<p>Fallet gör att fler golvplattor måste kapas och passas in mot brunnen, särskilt med storformat där en stor platta inte följer fallet lika lätt. Planera plattlayout och kap efter fallet – inte tvärtom – och lägg på spill därefter. Vill du fördjupa dig i regelverket, läs vår genomgång av <a href="/sv/blog/bbv-eller-gvk-vatrum">BBV eller GVK i våtrum</a>.</p>
+
+<h2>Så bygger du materialposten i anbudet</h2>
+<p>Ta ett konkret exempel: ett badrum med 6 m² golv och 20 m² vägg.</p>
+<ul>
+<li><strong>Golv:</strong> 6 m² netto + 15 % spill (storformat, fall mot brunn) = 6,9 m². Avrunda uppåt till hel kartong.</li>
+<li><strong>Vägg:</strong> 20 m² netto + 10 % spill (mindre kakel, färre svåra kap) = 22 m². Avrunda uppåt till hel kartong.</li>
+</ul>
+<p>Avrundningen till hel kartong sker alltid uppåt – du kan inte köpa en halv kartong, och överskottet blir dina reservplattor. Ange spillprocenten öppet mot kund i anbudet så att materialposten är transparent, och separera alltid material och arbete. Behöver du dubbelkolla golvytan och kartongantalet använder du <a href="/sv/verktyg/golv-kalkylator">golv-kalkylatorn</a>. Vill du förstå spillpåslag mer i detalj finns en fördjupning i <a href="/sv/blog/spillprocent-bygg-material">spillprocent för byggmaterial</a>.</p>
+
+<h2>ROT påverkar bara arbetet – inte kaklet</h2>
+<p>ROT-avdraget 2026 är 30 % av arbetskostnaden, med tak på 50 000 kr per person och år. ROT och RUT delar ett gemensamt tak på 75 000 kr per person och år. Den tillfälliga höjningen till 50 % gällde bara 12 maj–31 december 2025 och är avslutad.</p>
+<p>Viktigast för materialposten: ROT gäller <strong>enbart arbetskostnaden</strong>. Kakel, klinker, fix, tätskikt och fog är aldrig ROT-grundande utan betalas fullt av kunden. Ett fel i materialåtgången subventioneras alltså inte av något avdrag – det slår direkt mot kundens plånbok eller mot din marginal. Just därför är precisionen i kakelberäkningen en ren lönsamhetsfråga, inte en detalj.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du materialposten som separata rader – kakel, klinker, fix, tätskikt och fog – med kvantitet och pris, tydligt åtskilda från arbetskostnaden. Det gör att ROT-underlaget bara räknas på arbetet och att kunden ser materialkostnaden öppet. Du kan spara badrumsjobbet som mall och återanvända samma poststruktur nästa gång, så att spillpåslag och reservplattor aldrig glöms bort i stressen. Beräkningen av ytorna gör du i verktygen; ByggExp håller ihop anbudet, offerten och underlaget så att siffrorna följer med hela vägen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket spill ska jag räkna på kakel och klinker i badrum?</h3>
+<p>Standard är 10–15 % ovanpå nettoytan, med 10 % som absolut minimum. Vid storformat, diagonalsättning eller mycket mönster och kapning ökar du mot 20 %.</p>
+<h3>Varför ska jag beställa allt kakel på en gång?</h3>
+<p>Färgton och mått bestäms av bränningen, alltså batchen. En efterbeställning kommer nästan alltid från en annan batch och ger synlig nyansskillnad. Beställ hela mängden inklusive spill i samma order och behåll reservplattor åt kunden.</p>
+<h3>Är kakel och klinker ROT-grundande?</h3>
+<p>Nej. ROT gäller enbart arbetskostnaden, 30 % med tak 50 000 kr per person och år 2026. Material som kakel, klinker, fix och tätskikt betalas fullt av kunden.</p>
+<h3>Hur påverkar golvfallet materialåtgången?</h3>
+<p>Fallet på 7–30 mm/m mot brunnen i duschzonen gör att fler golvplattor måste kapas och passas, särskilt med storformat. Planera layout och kap efter fallet och lägg spillpåslaget därefter.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna nettoytan i <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a>, lägg på 10–20 % spill, avrunda till hel kartong och separera material från arbete i anbudet. Vill du se hur materialposten och ROT-underlaget hänger ihop i ett skarpt badrumsanbud? <a href="/sv/contact">Boka en demo</a> så visar vi upplägget.</p>
+
+<p>Relaterat: <a href="/sv/blog/spillprocent-bygg-material">Spillprocent för byggmaterial</a>, <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>, <a href="/sv/blog/bbv-eller-gvk-vatrum">BBV eller GVK i våtrum</a>.</p>
+`;
+
+const A_KAKEL_KLINKER_ATGANG_VATRUM: BlogPost = {
+  _id: "code-"+"kakel-klinker-atgang-vatrum",
+  title: "Räkna rätt på kakel och klinker per m² – så prickar du badrumsanbudet", slug: "kakel-klinker-atgang-vatrum", locale: "sv",
+  excerpt: "Så räknar du åtgång av kakel och klinker per m² med rätt spillpåslag, batchtänk och 2026 års våtrumsregler – utan att köpa för lite.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/golv-preview.webp", contentHtml: A_KAKEL_KLINKER_ATGANG_VATRUM_HTML,
+  seoTitle: "Kakel & klinker åtgång i våtrum | ByggExp", seoDescription: "Räkna kakel och klinker per m² inklusive spill och kapning för badrumsanbudet. Undvik att köpa för lite – och tappa marginal på fel batch.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/golv-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T11:03:00.000Z", createdAt: "2026-08-19T11:03:00.000Z", updatedAt: "2026-08-19T11:03:00.000Z",
+};
+
+const A_ARMERING_BERAKNING_PLATTA_GRUND_HTML = `
+<p>När du väl vet hur många kubikmeter betong plattan drar återstår nästa fråga i kalkylen: hur mycket armering går det åt? Nät, kamstål, distanser och bindtråd är en egen materialpost som lätt glöms bort tills leveransen ska bokas. Den här guiden ger dig en praktisk metod för att mängda armeringen till en platta på mark – med nyckeltal du kan räkna på direkt. En sak måste sägas först: de exakta dimensionerna och mängderna styrs alltid av K-ritningen, inte av tumregler. Artikeln handlar om hur du översätter ritningens armeringsspecifikation till en beställning och en offert.</p>
+
+<p>Beräkna betongvolymen först i <a href="/sv/verktyg/betong-kalkylator">vår gratis betongkalkylator -&gt;</a> så har du grunden klar när du lägger på armeringen ovanpå.</p>
+
+<h2>Vad K-ritningen bestämmer – och vad du får uppskatta själv</h2>
+
+<p>Dimensionering av armerad betong görs av konstruktör enligt Boverkets konstruktionsregler (EKS), som ger de svenska nationella valen till Eurokod 2 (EN 1992) för betongkonstruktioner. Det är konstruktören som bestämmer dimension, centrumavstånd, kvalitet och placering utifrån laster och grundförhållanden. Din uppgift som yrkesperson är att <em>mängda</em> av armeringsspecifikationen på ritningen – inte att gissa dimensionen.</p>
+
+<p>På en armeringsritning ritas normalt överkantsarmering med heldragen linje och underkantsarmering med streckad linje. Till ritningen hör en armeringsspecifikation, alltså en järnförteckning med typbeteckning, dimension och antal för varje järn. Det är den listan du utgår från.</p>
+
+<p>Ett läge att känna till 2026: övergångsreglerna där de äldre EKS-reglerna för betong får väljas gäller till och med 30 juni 2026. Andra generationens Eurokod 2, publicerad i Sverige som SS-EN 1992-1-1:2023, är på väg in och ersätter första generationens Eurokoder mellan 2026 och 2028. För dig som mängdar spelar det sällan roll i vardagen, men be alltid om en aktuell K-ritning inför gjutning – reglerna bakom den kan vara nya.</p>
+
+<h2>Nät eller stång – två sätt att armera plattan</h2>
+
+<p>De flesta plattor på mark armeras med svetsat armeringsnät i botten, ofta kompletterat med stångarmering (kamstål) i kantbalkar och där extra bärighet krävs.</p>
+
+<p><strong>Armeringsnät</strong> har en beteckning som är enkel att läsa när du kan systemet: första siffran/siffrorna är trådtjockleken i mm, de tre sista siffrorna är rutmåttet i mm. Ett nät <strong>5150</strong> har alltså 5 mm tråd och rutor på 150×150 mm; <strong>8150</strong> har 8 mm tråd och samma rutmått. Vanlig kvalitet är B500B / K500 (svetsbart kamstål med 500 MPa sträckgräns).</p>
+
+<p><strong>Stångarmering</strong> (kamstål) används där nät inte räcker – i kantbalkar, förstyvningar och vid större punktlaster. Vanlig lagerkvalitet i dag är K500C-T, som är svetsbart kamstål med 500 MPa sträckgräns och motsvarar/ersätter den äldre beteckningen B500B.</p>
+
+<p>Oavsett metod gäller: täckskikt (betong runt järnet) normalt 40–50 mm, och i en platta på mark ska armeringen sitta i plattans övre tredjedel för att ta upp krympsprickor. Det påverkar var du placerar distanserna, inte mängden – men det är avgörande att få rätt.</p>
+
+<h2>Räkna åtgång av armeringsnät</h2>
+
+<p>Grundprincipen är plattans yta delat med nettoytan per skiva, plus spill för överlapp och kap. En hel standardskiva 5150 mäter 5,0×2,3 m ≈ 11,5 m² och väger ca 24,4 kg (drygt 2 kg/m²). Den grövre 8150-skivan har samma format, 11,5 m², men väger ca 63,4 kg (ca 5,5 kg/m²). Nät säljs i hela skivor och kvartsskivor (t.ex. 2,35×1,25 m).</p>
+
+<p>Skarvning (överlapp) mellan skivor ska praktiskt vara minst ca 450 mm – ungefär tre 150 mm-rutor – och grövre järn eller tyngre laster kräver mer. Skivorna binds var 300–400 mm i skarven. Eftersom överlappen "äter" av ytan lägger du på spill.</p>
+
+<p><strong>Räkneexempel – nät till en platta 10×8 m (80 m²):</strong></p>
+<ul>
+<li>Bruttoyta: 80 m² ÷ 11,5 m² per skiva = 6,96 skivor.</li>
+<li>Påslag för överlapp och kap, ca 15 %: 6,96 × 1,15 ≈ 8 skivor.</li>
+<li>Beställ: 8 hela skivor 5150 (justera kvaliteten efter K-ritningen – kanske 8150).</li>
+</ul>
+
+<p>Tumregeln 10–15 % påslag fungerar bra på rektangulära plattor. Har du många vinklar, ursparningar eller smala partier stiger spillet, så räkna hellre upp än ner.</p>
+
+<h2>Räkna åtgång av stångarmering (kantbalk och extra järn)</h2>
+
+<p>För stång räknar du total längd och därefter vikt. Total stånglängd = antal järn × längd per järn. Vikten får du ur längden gånger kilo per meter. Nyckeltal för kamstål:</p>
+
+<ul>
+<li>Ø8 = 0,395 kg/m</li>
+<li>Ø10 = 0,617 kg/m</li>
+<li>Ø12 = 0,888 kg/m</li>
+<li>Ø16 = 1,578 kg/m</li>
+</ul>
+
+<p>Behöver du en dimension som inte står i listan använder du formeln <strong>vikt (kg/m) = 0,00617 × d²</strong>, där d är diametern i mm. Standardlängd på stång är 6 m.</p>
+
+<p><strong>Räkneexempel – kantbalk runt samma platta 10×8 m:</strong></p>
+<ul>
+<li>Omkrets: 2 × (10 + 8) = 36 m.</li>
+<li>Anta 2 längsgående Ø12 i kantbalken enligt ritning: 2 × 36 = 72 m stång.</li>
+<li>Vikt: 72 m × 0,888 kg/m ≈ 64 kg kamstål Ø12.</li>
+<li>Antal 6-metersstänger: 72 ÷ 6 = 12 stänger (lägg på skarvöverlapp enligt ritning innan du rundar).</li>
+</ul>
+
+<p>Byglar, förankringsjärn och överlapp tillkommer – ta alltid antalet ur armeringsspecifikationen. Exemplet visar bara metoden.</p>
+
+<h2>Från mängd till beställning och kostnad</h2>
+
+<p>När mängderna är klara översätter du dem till hela beställningsenheter. Nät säljs i hel- och kvartsskivor, stång i 6 m längder – runda alltid upp till hela enheter. Glöm inte kringmaterialet som sällan står på K-ritningen: distanser (avståndsklossar/stolar), bindtråd och eventuella nätstolar för överkantsarmering.</p>
+
+<p>Poängen med att räkna armeringen i samma svep som betongen är att du kan offerera hela grunden på en gång: kubik betong, kvadratmeter nät, kilo stång och kringmaterial i en post. Då blir kalkylen komplett och du slipper efterbeställningar mitt i gjutförberedelserna.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li>Att glömma spillpåslaget för överlapp – 80 m² platta behöver mer än 80 m² nät.</li>
+<li>För kort skarv; under ca 400 mm överlapp håller inte kraftöverföringen.</li>
+<li>Armeringen hamnar i botten i stället för övre tredjedelen på platta på mark – fel distanshöjd ger krympsprickor.</li>
+<li>Att räkna på en tumregeldimension i stället för K-ritningens – dimensionen är konstruktörens ansvar.</li>
+<li>Distanser, stolar och bindtråd glöms i offerten och äter marginalen.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+
+<p>I ByggExp räknar du betongvolymen i betongkalkylatorn och lägger armeringen som egna materialrader i samma kalkyl – nät i m² eller skivor, stång i kilo eller antal 6-metersstänger, plus distanser och bindtråd. Du får en samlad materiallista och en offert för hela grunden i stället för att hoppa mellan appar och lappar. Verktyget dimensionerar inte åt dig och ersätter inte konstruktören; det hjälper dig att mängda snabbt och offerera rätt utifrån den K-ritning du fått. Kalkylen sparas så att du kan återanvända den på nästa liknande grund.</p>
+
+<h2>Vanliga frågor</h2>
+
+<h3>Hur mycket armeringsnät går det åt per kvadratmeter platta?</h3>
+<p>Räkna plattans yta delat med nettoytan per skiva och lägg på 10–15 % för överlapp och kap. En hel skiva är 5,0×2,3 m ≈ 11,5 m². På en rektangulär platta blir det i praktiken drygt en skiva per 10 m². Exakt nättyp och dimension står på K-ritningen.</p>
+
+<h3>Vad betyder siffrorna i ett armeringsnät, till exempel 5150?</h3>
+<p>Första siffran är trådtjockleken i mm, de tre sista är rutmåttet i mm. 5150 betyder alltså 5 mm tråd och rutor på 150×150 mm. 8150 har grövre 8 mm tråd med samma rutmått och väger betydligt mer per kvadratmeter.</p>
+
+<h3>Hur räknar jag vikten på kamstål?</h3>
+<p>Använd kilo per meter gånger längd. Ø8 väger 0,395, Ø10 0,617, Ø12 0,888 och Ø16 1,578 kg/m. För andra dimensioner: vikt (kg/m) = 0,00617 × d² där d är diametern i mm. Standardlängden är 6 m.</p>
+
+<h3>Kan jag bestämma armeringsdimensionen själv med en tumregel?</h3>
+<p>Nej. Dimensionering görs av konstruktör enligt Boverkets konstruktionsregler (EKS) och Eurokod 2, och redovisas i K-ritningens armeringsspecifikation. Tumreglerna i den här guiden är till för att mängda och beställa – inte för att välja dimension.</p>
+
+<h2>Kom igång</h2>
+
+<p>Räkna betongvolymen i <a href="/sv/verktyg/betong-kalkylator">betongkalkylatorn</a> och lägg armeringen – nät och stång – som materialrader så får du hela grunden i en offert. Vill du se hur mängdning och offert hänger ihop i praktiken, <a href="/sv/contact">boka en demo</a> så visar vi upplägget. Be alltid om aktuell K-ritning innan gjutning.</p>
+
+<p>Relaterat: <a href="/sv/blog/berakna-betongatgang-platta">Beräkna betongåtgång till plattan</a> och <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>.</p>
+`;
+
+const A_ARMERING_BERAKNING_PLATTA_GRUND: BlogPost = {
+  _id: "code-"+"armering-berakning-platta-grund",
+  title: "Armering betongplatta – så beräknar du åtgången (nät + stång)", slug: "armering-berakning-platta-grund", locale: "sv",
+  excerpt: "Så mängdar du armeringsnät och stångarmering till betongplattan – nyckeltal, spillpåslag och räkneexempel som kompletterar betongkalkylen.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/betong-preview.webp", contentHtml: A_ARMERING_BERAKNING_PLATTA_GRUND_HTML,
+  seoTitle: "Armering betongplatta beräkning | ByggExp", seoDescription: "Räkna armeringsmängd till plattan – näts- och stångåtgång, nyckeltal för nät 5150/8150 och kamstål Ø8–Ø16. Metod, räkneexempel och koppling till K-ritning.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/betong-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T11:06:00.000Z", createdAt: "2026-08-19T11:06:00.000Z", updatedAt: "2026-08-19T11:06:00.000Z",
+};
+
+const A_BESIKTNINGSANMARKNING_ATGARDA_BEMOTA_HTML = `
+<p>Slutbesiktningen är dagen då allt avgörs. Här bestäms om entreprenaden godkänns eller inte, garantitiden börjar löpa och felansvaret ritas om. En rad anmärkningar i protokollet betyder inte att jobbet är underkänt – men om du bemöter dem fel kan det kosta dig både pengar och slutbetalning. Den här artikeln går igenom, enligt AB 04 kap 7, hur du som entreprenör bemöter, prioriterar och åtgärdar en besiktningsanmärkning på rätt sätt.</p>
+
+<p>Ett strukturerat besiktnings- och åtgärdsarbete börjar redan under produktionen. Dokumentera arbetet löpande med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a> så står du starkare när besiktningsmannen kommer.</p>
+
+<h2>Vad godkänd slutbesiktning faktiskt betyder</h2>
+<p>Godkänd slutbesiktning är den centrala rättshändelsen i ett AB 04-kontrakt. När besiktningsmannen godkänner entreprenaden inträffar flera saker samtidigt: entreprenaden anses avlämnad, kontraktstiden upphör, garantitiden börjar löpa, ditt ansvar för vård av och skada på entreprenaden upphör och du kan kräva slutbetalning.</p>
+<p>Slutbesiktning ska normalt ske vid kontraktstidens utgång eller utan dröjsmål efter att entreprenaden anmälts färdigställd. Poängen som många missar: en anmärkning i utlåtandet innebär inte automatiskt att jobbet underkänns. Tvärtom kan entreprenaden godkännas trots antecknade fel. Skillnaden mellan att bli godkänd med anmärkningar och att bli underkänd är avgörande – i det ena fallet startar garantitiden och du får betalt, i det andra rullar kontraktstiden vidare med allt vad det innebär av kostnader och risk.</p>
+
+<h2>Fel av väsentlig betydelse vs. fel av mindre betydelse</h2>
+<p>Huvudregeln i AB 04 är tydlig: entreprenaden ska godkännas vid slutbesiktning om den inte innehåller fel av väsentlig betydelse. Fel av mindre betydelse som förekommer i begränsad omfattning hindrar alltså inte godkännande – de antecknas som anmärkningar, men entreprenaden godkänns ändå. Det är först när felen begränsar beställarens möjlighet att använda entreprenaden för avsett ändamål, eller äventyrar säkerheten, som besiktningsmannen ska underkänna.</p>
+<p>Så skiljer du grovt:</p>
+<ul>
+<li><strong>Godkänns (med anmärkning):</strong> mindre ytfel, enstaka justeringar, kompletteringar som inte hindrar användning – rättas men stoppar inte godkännandet.</li>
+<li><strong>Godkänns inte:</strong> fel som gör att lokalen inte kan användas som avsett, brister som äventyrar säkerheten eller väsentliga fel i stor omfattning.</li>
+</ul>
+<p>Oavsett vilket kvarstår din skyldighet att avhjälpa de antecknade felen. Godkännande betyder att garantitiden startar – inte att anmärkningarna försvinner. De ska ändå rättas.</p>
+
+<h2>Fel eller bara estetik?</h2>
+<p>En vanlig konflikt vid besiktning gäller estetik. Här är det viktigt att hålla isär två saker. Ett fel i AB 04:s mening föreligger när resultatet avviker från kontraktshandlingarna, från fackmässig standard eller från avtalad kvalitet. Besiktningsmannen ska bedöma avvikelse mot avtalet – inte personlig smak.</p>
+<p>Att beställaren tycker att en kulör eller en fog ser tråkig ut är inte per automatik ett fel. Är utförandet fackmässigt och i enlighet med handlingarna har du levererat rätt, även om resultatet inte matchar beställarens subjektiva förväntan. När du bemöter en estetisk anmärkning: be besiktningsmannen ange exakt vilken kontraktshandling eller vilket toleranskrav utförandet avviker från. Kan ingen sådan avvikelse pekas ut är det svårt att hävda fel.</p>
+<p>Den bästa försäkringen tar du dock i förväg. Oklara estetiska krav bör preciseras i beskrivning och toleranskrav redan i kontraktshandlingarna. Då slipper du diskutera smak vid besiktningen och kan hänvisa till svart på vitt vad som är avtalat.</p>
+
+<h2>Så bemöter du anmärkningarna på plats och i protokollet</h2>
+<p>Var alltid med vid besiktningen. Det är din enda chans att i realtid bemöta bedömningar och få dina invändningar antecknade. Accepterar du inte en anmärkning – begär att din avvikande mening förs in i utlåtandet, och be besiktningsmannen precisera vilken avvikelse mot avtalet felet grundas på.</p>
+<p>Delar du inte besiktningsmannens bedömning finns ett formellt verktyg: <strong>överbesiktning</strong>. Både entreprenör och beställare kan påkalla överbesiktning, men det måste ske skriftligen inom tre veckor efter att parten fått del av utlåtandet. En överbesiktningsnämnd består av tre personer – parterna utser var sin ledamot, och dessa två utser tillsammans ordföranden. Överbesiktningen ersätter det ordinarie utlåtandet. Missar du treveckorsfristen står den ursprungliga bedömningen fast, så ha koll på datumet från den dag du fick handlingen.</p>
+
+<h2>Åtgärda i rätt tid – och efterbesiktning</h2>
+<p>Antecknade fel ska du avhjälpa på egen bekostnad. Gör du inte det inom rätt tid har beställaren rätt att låta någon annan utföra arbetet – på din räkning. Det är en dyr väg att hamna på, både i kronor och i förtroende, så prioritera avhjälpandet direkt efter besiktningen.</p>
+<p>När felen är åtgärdade sker en efterbesiktning för att kontrollera och stänga anmärkningarna. Dokumentera avhjälpandet skriftligt – vad som gjordes, när och av vem – så att du kan visa att felet är rättat. Rör det sig om ändrings- eller tilläggsarbeten som uppstår i samband med avhjälpandet, håll ordning på det ekonomiska underlaget med <a href="/sv/verktyg/ata-mall">vår ÄTA-mall</a> så att inget arbete utförs oreglerat.</p>
+
+<h2>Garantitid och felansvar – tidslinjen du måste hålla koll på</h2>
+<p>Efter godkänd slutbesiktning löper garantitiden. Enligt AB 04 kap 4 § 7 är den som huvudregel fem år för din arbetsprestation och två år för material och varor. Får du längre garanti av din leverantör gäller den längre tiden även mot beställaren.</p>
+<p>Mot slutet av garantitiden ska beställaren påkalla garantibesiktning – i praktiken senast omkring tre månader före garantitidens utgång. Under garantitiden gäller omvänd bevisbörda: fel som antecknas presumeras vara ditt ansvar, och det är du som får visa att felet beror på något annat. Efter garantitidens utgång vänder det – då bär beställaren bevisbördan, och du ansvarar bara för väsentliga fel som visas ha sin grund i din vårdslöshet. Den totala ansvarstiden är tio år från godkännandet.</p>
+<p>Kom också ihåg reklamationsfristerna: beställaren får som huvudregel bara åberopa fel som antecknats i utlåtandet, men kan skriftligen påtala fel inom sex månader efter entreprenadtidens utgång – eller inom arton månader för väsentliga fel. Läs mer i vår artikel om <a href="/sv/blog/garantitid-ansvarstid-ab-04">garantitid och ansvarstid enligt AB 04</a>.</p>
+
+<h2>Checklista: från anmärkning till stängt ärende</h2>
+<ol>
+<li>Var med vid besiktningen och läs utlåtandet noga.</li>
+<li>Skilj väsentliga fel från mindre – och fel från subjektiv estetik.</li>
+<li>Begär att avvikande mening antecknas direkt.</li>
+<li>Överväg överbesiktning inom tre veckor om du inte accepterar bedömningen.</li>
+<li>Avhjälp antecknade fel på egen bekostnad, i tid.</li>
+<li>Dokumentera avhjälpandet skriftligt och kalla till efterbesiktning.</li>
+<li>Bevaka garantibesiktningen inför garantitidens slut.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig hålla ihop hela kedjan från produktion till stängd anmärkning. Med egenkontroller kopplade till projektet bygger du löpande upp den dokumentation som visar fackmässigt utförande – underlaget du behöver om en anmärkning eller ett estetikkrav ifrågasätts. När fel ska åtgärdas samlar du beslut, ÄTA och skriftlig bekräftelse på avhjälpandet på ett ställe, så att inget faller mellan stolarna inför efterbesiktningen. Vi hävdar inte att systemet ersätter juridisk rådgivning i en tvist, men det gör det enkelt att ha rätt papper på rätt plats när det gäller.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag åtgärda anmärkningar även om entreprenaden godkändes?</h3>
+<p>Ja. Att entreprenaden godkänns betyder att garantitiden startar och att du kan kräva slutbetalning – men de fel som antecknats i utlåtandet ska ändå avhjälpas på din bekostnad.</p>
+<h3>När startar garantitiden efter slutbesiktning?</h3>
+<p>Garantitiden börjar löpa vid godkänd slutbesiktning. Enligt AB 04 är den som huvudregel fem år för arbetsprestationen och två år för material och varor.</p>
+<h3>Vad gör jag om jag inte håller med besiktningsmannen?</h3>
+<p>Begär att din avvikande mening antecknas i utlåtandet. Accepterar du ändå inte bedömningen kan du påkalla överbesiktning skriftligen inom tre veckor efter att du fått del av utlåtandet.</p>
+<h3>Räknas en estetisk anmärkning som fel?</h3>
+<p>Inte automatiskt. Ett fel föreligger när resultatet avviker från kontraktshandlingar, fackmässig standard eller avtalad kvalitet. Ren smak är inte ett fel – be besiktningsmannen peka ut avvikelsen mot avtalet.</p>
+
+<h2>Kom igång</h2>
+<p>Bygg upp dokumentationen redan under produktionen med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>, och håll ordning på tillkommande arbeten med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a>. Vill du se hur ByggExp knyter ihop egenkontroll, ÄTA och åtgärder i ett flöde? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så förbereder du dig</a>, <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a> och <a href="/sv/blog/reklamation-bemota-felkrav-entreprenad">Så bemöter du reklamationer och felkrav i entreprenad</a>.</p>
+`;
+
+const A_BESIKTNINGSANMARKNING_ATGARDA_BEMOTA: BlogPost = {
+  _id: "code-"+"besiktningsanmarkning-atgarda-bemota",
+  title: "Besiktningsanmärkning efter slutbesiktning – så bemöter och åtgärdar du felen utan att förlora pengar", slug: "besiktningsanmarkning-atgarda-bemota", locale: "sv",
+  excerpt: "En praktisk genomgång enligt AB 04 kap 7 av hur du som entreprenör bemöter, prioriterar och åtgärdar besiktningsanmärkningar rätt.", tag: "Entreprenadjuridik",
+  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_BESIKTNINGSANMARKNING_ATGARDA_BEMOTA_HTML,
+  seoTitle: "Besiktningsanmärkning åtgärda | ByggExp", seoDescription: "Så bemöter och åtgärdar du besiktningsanmärkningar efter slutbesiktning enligt AB 04 kap 7 – fel vs estetik, efterbesiktning och när garantitiden startar.",
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T11:09:00.000Z", createdAt: "2026-08-19T11:09:00.000Z", updatedAt: "2026-08-19T11:09:00.000Z",
+};
+
+const A_ENTREPRENADFORSAKRING_ALLRISK_VAD_TACKER_HTML = `
+<p>"Jag har ju en företagsförsäkring." Det är den vanligaste missuppfattningen bland svenska hantverkare och byggföretag – och den kan bli dyr. En ansvarsförsäkring ensam skyddar inte själva bygget om det brinner, blåser omkull eller blir bestulet. Två helt olika försäkringar behövs: en <strong>allriskförsäkring</strong> som skyddar entreprenaden, och en <strong>ansvarsförsäkring</strong> som skyddar er mot skadeståndskrav. Och enligt de vanligaste standardavtalen, AB 04 och ABT 06, är ni skyldiga att ha båda. Den här guiden reder ut vad entreprenadförsäkringen faktiskt täcker under pågående bygge, var luckorna sitter och vad kontraktet kräver 2026.</p>
+
+<p>Ska du lämna anbud och vill ha ordning på försäkringsvillkoren redan i offerten? Börja med <a href="/sv/verktyg/offert-mall">vår gratis offertmall -></a> så att rätt förutsättningar står svart på vitt från start.</p>
+
+<h2>Entreprenadförsäkring vs ansvarsförsäkring – den avgörande skillnaden</h2>
+<p>Skillnaden handlar om vad som skadas och vem som drabbas. Allriskförsäkringen är en <strong>egendomsförsäkring</strong>: den ersätter plötslig och oförutsedd fysisk skada på själva bygget, det monterade materialet och era hjälpmedel under byggtiden – oavsett vem som vållat skadan. Ansvarsförsäkringen är en <strong>skadeståndsförsäkring</strong>: den täcker person- och sakskada som drabbar tredje man, alltså utomstående, och som ni blir skadeståndsskyldiga för.</p>
+<ul>
+<li><strong>Allrisk (egendom):</strong> skada på det ni bygger och det ni bygger med. Exempel: en storm river ner en halvfärdig takstomme.</li>
+<li><strong>Ansvar (skadestånd):</strong> skada ni orsakar utomstående. Exempel: en byggställning faller och skadar en parkerad bil på gatan.</li>
+</ul>
+<p>Gränsen går alltså vid vems egendom som skadas. Blir bygget självt förstört är det allrisken som gäller. Skadar ni någon annans person eller egendom är det ansvarsförsäkringen. Därför räcker inte den ena utan den andra – och en ren ansvarsförsäkring uppfyller inte försäkringsplikten enligt standardavtalen, eftersom den inte täcker bygget i sig.</p>
+
+<h2>Vad täcker allriskförsäkringen under pågående bygge?</h2>
+<p>Allriskförsäkringen skyddar entreprenaden mot plötsliga och oförutsedda händelser under byggtiden. Typiskt omfattas:</p>
+<ul>
+<li>Brand, storm, vatten och översvämning</li>
+<li>Stöld och vandalism på arbetsområdet</li>
+<li>Ras och sättningar</li>
+<li>Handhavandefel och olyckshändelser under montage</li>
+</ul>
+<p>Skyddet gäller det monterade arbetet, byggmaterial som finns på arbetsområdet samt hjälpmedel och verktyg. Försäkringsbeloppet ska motsvara entreprenadens <strong>återanskaffningsvärde</strong> plus det arbete och material som beställaren tillhandahåller – underskatta inte den summan, för är beloppet för lågt riskerar ni underförsäkring vid en storskada.</p>
+<p>Lika viktigt är att känna till undantagen. Allrisken ersätter normalt <em>inte</em> rena felaktigheter i det utförda arbetet eller kostnaden för att göra om ett felaktigt moment (omgörning), gradvis fukt- och mögelskada, eller förslitning. Den täcker den plötsliga, oförutsedda händelsen – inte konsekvensen av bristande utförande. Det är en viktig distinktion när ni bedömer om en skada verkligen är försäkringsbar eller om det handlar om ett kvalitetsfel ni själva ansvarar för.</p>
+
+<h2>Ansvarsförsäkring – skyddet mot skadeståndskrav</h2>
+<p>Ansvarsförsäkringen träder in när ert arbete orsakar person- eller sakskada på tredje man och ni blir skadeståndsskyldiga. Två klassiska exempel:</p>
+<ul>
+<li>Ett tappat verktyg från ett tak skadar en förbipasserande.</li>
+<li>En vattenläcka under arbetet sprider sig till grannens lägenhet.</li>
+</ul>
+<p>Enligt AB 04 och ABT 06 får ansvarsförsäkringen inte understiga <strong>200 prisbasbelopp</strong> och ska gälla i minst två år efter godkänd entreprenad. Observera att ansvarsförsäkringen skiljer sig från skyddet för beställarens befintliga egendom – det är en vanlig men kostsam förväxling, som vi tar upp härnäst.</p>
+
+<h2>Befintlig egendom / ROT-försäkring – den vanligaste luckan</h2>
+<p>Här sitter den lucka som fäller flest byggföretag vid renovering och ombyggnad. Skada på den del av beställarens hus som <em>inte</em> ingår i ert jobb – till exempel resten av villan när ni bara byter ett badrum – täcks <strong>inte</strong> automatiskt av grundallrisken. Det kräver ett särskilt moment: "befintlig egendom" eller ROT-försäkring.</p>
+<p>Flera bolags villkor går ett steg längre: de kräver att ni <strong>skriftligen i kontraktet</strong> åtagit er att försäkra beställarens befintliga egendom för att momentet överhuvudtaget ska gälla för projektet. Bakgrunden är att entreprenörens skadeståndsansvar för befintlig egendom enligt standardavtalen är begränsat till en schablon på 15 % av kontraktssumman, om inte högre försäkringsbelopp finns. Just därför behöver momentet tecknas separat och skrivas in i kontraktet. Extra kritiskt är detta vid ROT-arbeten i bebodda fastigheter, där en vattenskada snabbt kan spridas långt utanför själva arbetsområdet.</p>
+
+<h2>När krävs försäkringen i kontraktet? AB 04 och ABT 06</h2>
+<p>Försäkringsplikten är inte frivillig – den följer direkt av kap. 5 § 22 i både AB 04 och ABT 06. Där framgår att entreprenören <strong>ska</strong> ha både allriskförsäkring och ansvarsförsäkring. Det gör försäkringen till ett kontraktskrav i de vanligaste svenska standardavtalen.</p>
+<ul>
+<li><strong>Giltighetstid:</strong> Allrisken ska gälla under hela entreprenadtiden och i minst två år efter att entreprenaden godkänts. Ansvarsförsäkringen ska gälla i minst två år efter godkänd entreprenad.</li>
+<li><strong>Belopp:</strong> Ansvarsförsäkringen får inte understiga minst 200 prisbasbelopp. Med 2026 års prisbasbelopp på 59 200 kr motsvarar det drygt 11,8 miljoner kronor – men skriv gärna "minst 200 prisbasbelopp" i era handlingar så att beloppet inte blir inaktuellt nästa år.</li>
+<li><strong>Självrisk:</strong> Självrisken får inte överstiga 3 prisbasbelopp, vilket 2026 innebär ett tak på 177 600 kr, för vare sig allrisk eller ansvar. Marknadens standardsjälvrisker ligger ofta lägre, men avtalet sätter taket.</li>
+<li><strong>Medförsäkring:</strong> Beställaren och huvudentreprenören är normalt automatiskt medförsäkrade i entreprenörens allrisk. Underentreprenörer omfattas endast om det uttryckligen åtagits skriftligt – annars måste varje UE ha egen försäkring.</li>
+</ul>
+<p>Beställare begär dessutom ofta in försäkringsbevis före byggstart. Kan ni visa upp rätt belopp och rätt moment redan vid anbud stärker det er trovärdighet.</p>
+
+<h2>Vanliga misstag – och en snabb checklista</h2>
+<p>De dyraste felen vi ser återkommer:</p>
+<ul>
+<li>Att tro att en ansvarsförsäkring täcker bygget – det gör den inte.</li>
+<li>För lågt allriskbelopp, vilket ger underförsäkring vid storskada.</li>
+<li>Att glömma momentet för befintlig egendom vid ROT – och att inte skriva in åtagandet i kontraktet.</li>
+<li>Att förutsätta att UE är medförsäkrade när de inte är det skriftligt.</li>
+<li>Att missa att skyddet ska gälla i två år efter godkänd entreprenad.</li>
+</ul>
+<p>Checklista inför nästa projekt: kontrollera (1) försäkringsbeloppen, (2) självrisken mot avtalets tak, (3) att momentet befintlig egendom finns och är inskrivet i kontraktet, (4) UE-täckningen, och (5) att giltigheten sträcker sig minst två år efter godkännande.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp tecknar inte försäkringar – men vi hjälper er få ordning på handlingarna där försäkringskraven ska synas. I offerten kan ni tydligt ange vilka avtalsvillkor och försäkringskrav som gäller, och i kontraktet skriva in åtagandet om befintlig egendom så att momentet faktiskt gäller för projektet. Med samlade offerter, kontrakt och projekt på ett ställe blir det enkelt att visa upp rätt underlag för beställaren före byggstart. Läs alltid det specifika försäkringsbeviset – ByggExp strukturerar dokumenten, försäkringsbolaget avgör villkoren.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Räcker min företagsförsäkring för att uppfylla AB 04/ABT 06?</h3>
+<p>Inte nödvändigtvis. Standardavtalen kräver både allrisk- och ansvarsförsäkring med bestämda belopp och giltighetstider. En grundläggande företagsförsäkring innehåller inte alltid allrisk på entreprenaden. Kontrollera försäkringsbeviset mot avtalets krav.</p>
+<h3>Vad är skillnaden mellan allrisk och ansvarsförsäkring?</h3>
+<p>Allrisken är en egendomsförsäkring som ersätter fysisk skada på själva bygget och materialet under byggtiden. Ansvarsförsäkringen är en skadeståndsförsäkring som täcker skador ni orsakar tredje man. Ni behöver båda.</p>
+<h3>Täcks skador på beställarens befintliga hus?</h3>
+<p>Inte automatiskt. Skada på den del av fastigheten som inte ingår i jobbet kräver ett särskilt moment – befintlig egendom eller ROT-försäkring – och flera bolag kräver att åtagandet skrivits in skriftligt i kontraktet.</p>
+<h3>Hur länge måste försäkringen gälla?</h3>
+<p>Allrisken ska gälla under hela entreprenadtiden och minst två år efter godkännande. Ansvarsförsäkringen ska gälla i minst två år efter godkänd entreprenad enligt AB 04 och ABT 06.</p>
+
+<h2>Kom igång</h2>
+<p>Rätt försäkring är både ett kontraktskrav och en konkurrensfördel när ni lämnar anbud. Se till att belopp, självrisk och moment stämmer redan i offerten med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>, och boka en <a href="/sv/contact">demo</a> om ni vill se hur ByggExp håller ihop offert, kontrakt och projektdokumentation. Villkoren skiljer sig mellan bolag – läs alltid försäkringsbeviset och det specifika kontraktet innan ni skriver på.</p>
+
+<p>Relaterat: <a href="/sv/blog/ansvarsforsakring-byggforetag">Ansvarsförsäkring för byggföretag</a>, <a href="/sv/blog/kreditforsakring-byggforetag">Kreditförsäkring för byggföretag</a> och <a href="/sv/blog/entreprenadkontrakt-mall">Entreprenadkontrakt – mall och guide</a>.</p>
+`;
+
+const A_ENTREPRENADFORSAKRING_ALLRISK_VAD_TACKER: BlogPost = {
+  _id: "code-"+"entreprenadforsakring-allrisk-vad-tacker",
+  title: "Entreprenadförsäkring – vad täcker den egentligen? Guide 2026 för byggföretag", slug: "entreprenadforsakring-allrisk-vad-tacker", locale: "sv",
+  excerpt: "Många hantverkare tror att företagsförsäkringen räcker – men allrisk och ansvar är två olika skydd, och standardavtalen kräver båda.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_ENTREPRENADFORSAKRING_ALLRISK_VAD_TACKER_HTML,
+  seoTitle: "Entreprenadförsäkring vad täcker | ByggExp", seoDescription: "Allrisk skyddar bygget, ansvar skyddar mot skadestånd – och AB 04/ABT 06 kräver båda. Så vet du vad din entreprenadförsäkring täcker 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T11:12:00.000Z", createdAt: "2026-08-19T11:12:00.000Z", updatedAt: "2026-08-19T11:12:00.000Z",
+};
+
+const A_PROVANSTALLNING_BYGG_REGLER_HTML = `
+<p>Provanställning är byggföretagets vanligaste sätt att testa en ny yrkesarbetare innan den fasta anställningen. Men reglerna missförstås ofta – särskilt efter LAS-reformen 2022, där många tror att kravet på "sakliga skäl" plötsligt gäller även provanställda. Det gör det inte. Här reder vi ut vad Byggavtalet och LAS faktiskt säger om längd, avbrytande och varsel, så att du inte råkar binda upp dig fel.</p>
+
+<p>Ett tydligt underlag för arbetade timmar gör det enklare att bedöma en provanställd och att dokumentera perioden korrekt – använd gärna vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall -&gt;</a> från dag ett.</p>
+
+<h2>Vad är en provanställning – och varför den skiljer sig från tillsvidare</h2>
+<p>Syftet med en provanställning är enkelt: både arbetsgivare och arbetstagare ska kunna pröva samarbetet under en begränsad tid utan att binda sig långsiktigt. Det är själva poängen med anställningsformen att den ska vara lätt att avsluta. Varken du som arbetsgivare eller den anställde behöver ange något skäl för att avbryta – till skillnad från en tillsvidareanställning, där det krävs sakliga skäl för uppsägning.</p>
+<p>Det viktiga att komma ihåg är att en provanställning inte tar slut av sig själv på ett tomt sätt. Om ingen part agerar övergår den automatiskt i en tillsvidareanställning dagen efter att prövotiden löpt ut. Passivitet leder alltså till fast anställning, inte till att anställningen upphör.</p>
+
+<h2>Hur lång får provanställningen vara?</h2>
+<p>Enligt LAS 6 § får en provanställning pågå i högst sex månader. Den tiden är ett tak, inte en rekommendation, och den kan inte förlängas i efterhand. Du kan alltså inte i månad fem bestämma att provperioden ska pågå ytterligare en tid för att du är osäker.</p>
+<p>Två saker är dessutom uttryckligen otillåtna:</p>
+<ul>
+<li>Att förlänga en pågående provanställning utöver sex månader genom att i efterhand komma överens om mer prövotid.</li>
+<li>Att lägga en ny provanställning ovanpå en gammal hos samma arbetsgivare för i huvudsak samma arbetsuppgifter – så kallad dubbel provanställning.</li>
+</ul>
+<p>För vanliga yrkesarbetare följer Byggavtalet LAS här: sex månaders provanställning som kan avbrytas med minst två veckors underrättelse, utan angiven grund. Vissa kollektivavtal tillåter att provperioden räknas om vid längre frånvaro, till exempel föräldraledighet eller sjukdom över 30 dagar, men om det gäller i Byggavtalet måste du kontrollera mot den aktuella avtalstexten – det är ingen generell rätt du kan förutsätta.</p>
+
+<h3>Särregel för lärlingar</h3>
+<p>Via Yrkesutbildningsavtalet (YUA) gäller andra tidsgränser för lärlingar. En lärlings provanställning kan pågå upp till tolv månader. För en provanställning som pågår mellan sex och tolv månader måste arbetsgivaren skriftligen underrätta lärlingen och informera BYN-regionen två månader i förväg om att den ska avbrytas. Blanda alltså inte ihop lärlingsreglerna med reglerna för ordinarie yrkesarbetare.</p>
+
+<h2>Att avbryta i förtid – varsel, besked och tidsfrister</h2>
+<p>Vill du avbryta provanställningen i förtid, eller avsluta den så att den inte övergår i tillsvidareanställning, ska den anställde enligt LAS 31 § underrättas minst två veckor i förväg. Är personen fackligt organiserad ska du samtidigt varsla den lokala arbetstagarorganisationen. Både den anställde och facket har rätt till överläggning.</p>
+<p>Beskedet om att provanställningen upphör ska vara skriftligt och lämnas senast vid prövotidens utgång. Missar du den fristen övergår anställningen automatiskt i tillsvidare. Notera skillnaden mellan parterna: arbetstagaren är inte bunden av någon varseltid. Lagen reglerar inte den anställdes förtida avslut, så en provanställd kan i princip sluta samma dag om ni inte avtalat något annat.</p>
+<p>En avtalad uppsägningstid under provanställningen tar som huvudregel inte bort rätten att avbryta i förtid. Rätten att avbryta kvarstår om ni inte uttryckligen har avtalat bort den – något du sällan tjänar på att göra.</p>
+
+<h2>"Sakliga skäl" och LAS – vad gäller egentligen?</h2>
+<p>Här sitter det största missförståndet. LAS-reformen som trädde i kraft 1 oktober 2022 bytte formuleringen "saklig grund" mot "sakliga skäl" vid uppsägning av tillsvidareanställda. Den ändringen rörde inte provanställningen. En provanställning kunde aldrig avbrytas mot ett krav på sakliga skäl, och gör det fortfarande inte.</p>
+<p>Med andra ord: kravet på sakliga skäl gäller uppsägning av fast anställda, inte avbrytande av en provanställning. Det finns ändå gränser. Avbrytandet får inte vara diskriminerande enligt diskrimineringslagen och det får inte kränka föreningsrätten. Du behöver inte motivera ett avbrytande, men beslutet får inte bottna i ett förbjudet skäl.</p>
+
+<h2>Vad automatisk övergång till tillsvidare innebär</h2>
+<p>Glömmer du att lämna skriftligt besked i tid blir den provanställde tillsvidareanställd dagen efter prövotidens slut. Då gäller full uppsägningsrätt: nu krävs sakliga skäl, längre uppsägningstider och eventuellt omplaceringsutredning innan du kan avsluta anställningen. Skillnaden mellan att agera i vecka 24 och att missa den är alltså mycket stor rent juridiskt.</p>
+<p>Därför är en kalenderpåminnelse några veckor före prövotidens slut det enskilt viktigaste administrativa greppet. Det ger dig marginal att hinna med både underrättelse och eventuell överläggning innan tiden går ut.</p>
+
+<h2>Checklista för byggföretaget</h2>
+<ol>
+<li>Skriv ett tydligt anställningsavtal som anger att det är en provanställning och när prövotiden börjar och slutar.</li>
+<li>Sätt en påminnelse tre till fyra veckor före prövotidens slut.</li>
+<li>Dokumentera löpande – arbetade timmar, närvaro och hur samarbetet fungerar.</li>
+<li>Lämna skriftligt besked senast vid prövotidens utgång om anställningen inte ska fortsätta.</li>
+<li>Varsla facket samtidigt om den anställde är organiserad, och erbjud överläggning.</li>
+<li>Kontrollera Byggavtalets och YUA:s särregler – särskilt om det gäller en lärling.</li>
+</ol>
+<p>Kom ihåg att en provanställd har rätt till samma lön och villkor som en tillsvidareanställd i motsvarande roll från dag ett. Kollektivavtalets minimilöner gäller fullt ut under hela prövotiden.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte ditt anställningsavtal eller din juridiska rådgivning, men verktyget gör dokumentationen kring en provanställning enklare. Med tidrapporteringen samlar du arbetade timmar per medarbetare och projekt, vilket ger ett konkret underlag när du ska bedöma om en provanställd ska gå vidare till fast anställning. Du får ordning på närvaro och arbetad tid utan lösa papper, och underlaget finns kvar om du senare behöver visa hur perioden sett ut. Själva besluten om avbrytande, varsel och besked hanterar du enligt LAS och Byggavtalet – ByggExp håller ihop faktaunderlaget.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Kan man förlänga en provanställning?</h3>
+<p>Nej, inte utöver sex månader och inte i efterhand. LAS 6 § sätter taket till sex månader och du kan inte komma överens om mer prövotid när perioden väl löper. För lärlingar gäller en särregel via YUA där provanställningen kan pågå upp till tolv månader.</p>
+<h3>Måste man ange skäl för att avbryta?</h3>
+<p>Nej. Varken arbetsgivare eller arbetstagare behöver ange något skäl för att avbryta en provanställning. Kravet på sakliga skäl gäller bara uppsägning av tillsvidareanställda. Avbrytandet får dock inte vara diskriminerande eller föreningsrättskränkande.</p>
+<h3>Vad händer om jag glömmer att lämna besked?</h3>
+<p>Då övergår provanställningen automatiskt i en tillsvidareanställning dagen efter prövotidens slut. Därefter krävs sakliga skäl och full uppsägningstid för att avsluta anställningen. Skriftligt besked ska lämnas senast vid prövotidens utgång, med underrättelse minst två veckor i förväg.</p>
+<h3>Gäller andra regler för lärlingar?</h3>
+<p>Ja. Enligt YUA kan en lärlings provanställning pågå upp till tolv månader. Ska den avbrytas när den pågått mellan sex och tolv månader måste arbetsgivaren skriftligen underrätta lärlingen och informera BYN-regionen två månader i förväg.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att sätta upp ordning på arbetad tid från första dagen med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, och verifiera alltid detaljerna mot den aktuella avtalstexten i Byggavtalet 2025–2027 innan du fattar beslut om avbrytande. Vill du se hur ByggExp håller ihop tidrapporter och underlag för hela laget? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/anstallningsavtal-mall-bygg">Anställningsavtal för byggföretag – mall och regler</a> och <a href="/sv/blog/anstalla-personal-byggforetag">Så anställer du personal i ditt byggföretag</a>.</p>
+`;
+
+const A_PROVANSTALLNING_BYGG_REGLER: BlogPost = {
+  _id: "code-"+"provanstallning-bygg-regler",
+  title: "Provanställning i byggbranschen – så använder du den rätt enligt Byggavtalet och LAS (2026)", slug: "provanstallning-bygg-regler", locale: "sv",
+  excerpt: "En rak guide till hur byggföretag använder provanställning enligt Byggavtalet och LAS – längd, avbrytande, varsel och vad som faktiskt gäller mot kravet på sakliga skäl.", tag: "Arbetsrätt",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_PROVANSTALLNING_BYGG_REGLER_HTML,
+  seoTitle: "Provanställning byggavtalet regler | ByggExp", seoDescription: "Provanställning enligt Byggavtalet och LAS: längd, avbrytande, varsel och myten om sakliga skäl. Konkret guide för byggföretag 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T11:15:00.000Z", createdAt: "2026-08-19T11:15:00.000Z", updatedAt: "2026-08-19T11:15:00.000Z",
+};
+
+const A_UTSTATIONERING_UTLANDSK_ARBETSKRAFT_BYGG_HTML = `
+<p>Bristen på yrkesarbetare gör det frestande att ta in utländsk arbetskraft eller en utländsk underentreprenör när kalendern är full. Problemet är att utstationering hör till det hårdast reglerade i branschen, och missar kostar snabbt tiotusentals kronor i sanktionsavgifter – utöver risken att åka ur en offentlig upphandling. Den här guiden är en konkret B2B-checklista för att göra det lagligt under 2026. Redan i inledningen är det viktigt att skilja på tre olika vägar: (a) utstationering från ett EU/EES-företag som skickar sin egen personal hit, (b) att anställa en enskild tredjelandsmedborgare på arbetstillstånd, och (c) att köpa en tjänst av en utländsk underentreprenör. Reglerna skiljer sig mellan spåren, och att blanda ihop dem är själva grundfelet.</p>
+
+<p>Ett bra sätt att hålla ordning på arbetsmiljö- och kontrolldokumentationen är att strukturera den från start med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a>, så att anmälningsbevis, A1-intyg och ID06-loggning samlas på ett ställe.</p>
+
+<h2>Vad räknas som utstationering?</h2>
+<p>Utstationering innebär att en utländsk arbetsgivare tillfälligt skickar sina egna anställda för att arbeta i Sverige, medan anställningen fortsatt ligger kvar i hemlandet. Det är alltså inte samma sak som att du själv anställer en person, och inte heller samma sak som att du köper en färdig tjänst av ett utländskt bolag. För arbetstagare från EU/EES gäller fri rörlighet – de behöver inget arbetstillstånd. För tredjelandsmedborgare krävs däremot arbetstillstånd från Migrationsverket, oavsett om de kommer via utstationering eller anställs direkt. Att avgöra vilken kategori arbetet faller in under är avgörande, eftersom det styr vilka anmälningar, intyg och skatteregler som blir aktuella. Fastnar du i fel spår riskerar du både fel dokumentation och fel skattehantering.</p>
+
+<h2>Utstationeringsanmälan till Arbetsmiljöverket</h2>
+<p>Kärnplikten ligger hos den utländska arbetsgivaren. Företaget måste registrera utstationeringen och en kontaktperson i Sverige i Arbetsmiljöverkets e-tjänst "Anmäl utstationering" senast den dag arbetet påbörjas i Sverige. Missas det är sanktionsavgiften 20 000 kr, plus upp till ytterligare 20 000 kr om obligatoriska uppgifter saknas. Anmälan ska uppdateras vid tolv månader, och arbetsgivaren kan förlänga tröskeln till 18 månader genom att anmäla en motivering till Arbetsmiljöverket före tolvmånadersgränsen.</p>
+<p>Men glöm inte din egen spegelplikt som tjänstemottagare. Du ska ha fått dokumentation på att anmälan gjorts senast den dag arbetet börjar. Får du inte det måste du själv anmäla till Arbetsmiljöverket inom tre dagar från arbetsstart – annars riskerar du en egen sanktionsavgift på 20 000 kr. Undantaget gäller bara privatpersoner som anlitar för eget bruk, inte företag. Praktiskt tips: skriv in att anmälningsbeviset ska lämnas som villkor för första betalningen i kontraktet, så tvingar du fram dokumentationen i rätt tid.</p>
+
+<h2>A1-intyg och socialförsäkring</h2>
+<p>A1-intyget avgör vilket lands sociala avgifter som ska betalas. Ett giltigt A1 visar att den utstationerade arbetstagaren fortsatt omfattas av – och betalar avgifter i – hemlandets socialförsäkringssystem, så att avgifterna inte ska betalas två gånger. Intyget utfärdas av hemlandets socialförsäkringsmyndighet, motsvarigheten till Försäkringskassan. Saknas ett giltigt A1 kan svenska arbetsgivaravgifter komma att krävas. Samla därför alltid in ett A1 för varje utstationerad arbetstagare innan arbetet startar, och kontrollera att intygets giltighetstid täcker hela utstationeringsperioden. Ett intyg som löper ut mitt i projektet är en risk du inte vill upptäcka i efterhand.</p>
+
+<h2>Skatt: ekonomisk arbetsgivare, F-skatt och omvänd byggmoms</h2>
+<p>Här finns tre skattefällor som lätt förbises. Den första är reglerna om ekonomisk arbetsgivare, som gäller sedan 1 januari 2021. Vid uthyrning av personal gäller inte längre 183-dagarsregeln: en utländsk arbetstagare som hyrs ut till en svensk uppdragsgivare som leder arbetet beskattas i Sverige från dag ett. Det finns ett smalt undantag för arbete på högst 15 sammanhängande dagar och högst 45 dagar totalt per kalenderår – räkna med beskattningen i din kalkyl.</p>
+<p>Den andra fällan är F-skatt. Kontrollera att en utländsk underentreprenör har svensk F-skatt och är momsregistrerad där det krävs. Ett utländskt bolag utan F-skatt kan göra dig som betalare skyldig att innehålla preliminärskatt på fakturan. Den tredje är omvänd byggmoms: mellan byggföretag är det du som köpare som redovisar och betalar momsen. Fakturan ska ställas ut utan moms, ange ditt momsnummer och en text i stil med "Omvänd skattskyldighet för byggtjänster gäller". Regeln förutsätter att du som köpare är momsregistrerad.</p>
+
+<h2>Arbetsmiljöansvar och personalliggare på bygget</h2>
+<p>Oavsett vem som är formell arbetsgivare behåller det svenska arbetsstället – via byggarbetsmiljösamordnaren och arbetsgivaren på plats – arbetsmiljöansvaret för alla som arbetar på bygget. Det ställer krav på att skyddsinstruktioner faktiskt förstås, vilket i praktiken betyder att språkfrågan måste hanteras aktivt när personalen kommer utifrån.</p>
+<p>Elektronisk personalliggare via ID06 är obligatorisk på byggarbetsplatser, och varje person ska loggas – inklusive utländska underentreprenörers anställda. Skatteverkets kontrollavgift är 12 500 kr plus 2 500 kr per person som är på plats men inte registrerad, och 25 000 kr om byggherren inte har anmält byggstart och plats. Från och med första kvartalet 2026 skärps dessutom ID06: den som godkänner en kortbeställning måste legitimera sig med pass eller ett EU-godkänt nationellt id-kort. Se till att era rutiner klarar det innan korten ska förnyas.</p>
+
+<h2>Entreprenörsansvar – din risk för underleverantörens löner</h2>
+<p>Sedan 1 januari 2019 finns ett entreprenörsansvar för lönefordringar i bygg- och anläggningsbranschen. Det innebär att du kan bli ansvarig för en underleverantörs obetalda löner. Arbetstagarens direkta uppdragsgivare är ansvarig i första hand; betalar den inte inom 14 helgfria vardagar eller inte går att nå, kan huvudentreprenören hållas ansvarig. Arbetstagaren måste anmäla sitt krav inom sex månader, och ansvaret omfattar även utstationerade arbetstagare. Skydda dig med skriftliga garantier om lön på kollektivavtalsnivå, innehållandeklausuler och löpande dokumentation av att UE faktiskt betalar sina anställda.</p>
+
+<h2>Tredjelandsmedborgare: arbetstillstånd 2026</h2>
+<p>Är arbetstagaren medborgare utanför EU/EES krävs arbetstillstånd från Migrationsverket. Från 1 juni 2026 måste lönen vara minst 90 procent av svensk medianlön (75 procent för vissa undantagna grupper), och lönen ska dessutom motsvara kollektivavtal eller praxis i branschen. En sexmånaders övergång fram till 1 december 2026 håller kvar den tidigare nivån på 80 procent av medianlönen för förlängningar som beviljas enligt gamla regler. Att anlita personal utan giltigt tillstånd kan leda till sanktioner mot arbetsgivaren – kontrollera tillståndet innan arbetet börjar.</p>
+
+<h2>Checklista: så gör du lagligt</h2>
+<ul>
+<li>Verifiera att utstationeringsanmälan är gjord – begär in beviset.</li>
+<li>Samla in giltigt A1-intyg för varje arbetstagare, med rätt giltighetstid.</li>
+<li>Kontrollera UE:s F-skatt och momsregistrering.</li>
+<li>Logga alla på bygget i ID06 – även UE:s personal.</li>
+<li>Säkra entreprenörsansvaret med löne- och innehållandeklausuler.</li>
+<li>Bekräfta arbetstillstånd om arbetstagaren är tredjelandsmedborgare.</li>
+<li>Kontrollera att lönen ligger på kollektivavtalsnivå.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte en anmälan till Arbetsmiljöverket eller ett A1-intyg, men vi hjälper dig att hålla ordning på dokumentationen som gör kontrollerna smärtfria. Samla anmälningsbevis, A1-intyg, F-skattekontroll och kollektivavtalsvillkor per projekt och underentreprenör, så att allt går att ta fram vid en granskning. Med strukturerad egenkontroll och tydliga rutiner för vilka handlingar som ska finnas innan arbetet startar minskar du risken för sanktionsavgifter och för att fastna på entreprenörsansvaret. Verktygen ger dig spårbarhet – inte juridisk rådgivning – men det är ofta just spårbarheten som saknas när det brister.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vem ansvarar för utstationeringsanmälan?</h3>
+<p>Den utländska arbetsgivaren gör själva anmälan senast den dag arbetet börjar. Du som svensk tjänstemottagare ska ta emot dokumentation på att den gjorts, och om du inte får det måste du själv anmäla till Arbetsmiljöverket inom tre dagar för att undvika en egen sanktionsavgift på 20 000 kr.</p>
+<h3>Måste alla utstationerade ha A1-intyg?</h3>
+<p>Ja. A1-intyget visar att arbetstagaren omfattas av hemlandets socialförsäkring, så att sociala avgifter inte betalas dubbelt. Utan ett giltigt A1 kan svenska arbetsgivaravgifter krävas, så samla in intyget innan arbetet startar och kontrollera att giltighetstiden täcker hela perioden.</p>
+<h3>Kan jag bli ansvarig för en utländsk UE:s obetalda löner?</h3>
+<p>Ja. Entreprenörsansvaret för lönefordringar omfattar även utstationerade arbetstagare. Uppdragsgivaren är ansvarig först, men betalar den inte inom 14 helgfria vardagar kan huvudentreprenören hållas ansvarig. Arbetstagaren har sex månader på sig att anmäla kravet.</p>
+<h3>Gäller 183-dagarsregeln för inhyrd utländsk personal?</h3>
+<p>Nej. Sedan reglerna om ekonomisk arbetsgivare infördes 2021 beskattas uthyrd personal i Sverige från dag ett när den svenska uppdragsgivaren leder arbetet. Undantaget gäller bara arbete på högst 15 sammanhängande dagar och högst 45 dagar totalt per kalenderår.</p>
+
+<h2>Kom igång</h2>
+<p>Att göra rätt skyddar dig mot sanktionsavgifter, löneansvar och att svartlistas i offentlig upphandling. Börja med att strukturera dokumentationen i <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>, och vill du se hur ByggExp samlar projekt, UE-handlingar och kontroller på ett ställe kan du <a href="/sv/contact">boka en demo här</a>. Reglerna ändras – stäm alltid av aktuella krav med Arbetsmiljöverket, Skatteverket och Migrationsverket innan du sätter igång.</p>
+
+<p>Relaterat: <a href="/sv/blog/inhyrd-personal-regler">Regler för inhyrd personal</a>, <a href="/sv/blog/anlita-underentreprenor">Anlita underentreprenör – så gör du rätt</a>, <a href="/sv/blog/entreprenorsansvar-lon">Entreprenörsansvar för löner</a>.</p>
+`;
+
+const A_UTSTATIONERING_UTLANDSK_ARBETSKRAFT_BYGG: BlogPost = {
+  _id: "code-"+"utstationering-utlandsk-arbetskraft-bygg",
+  title: "Utstationering och utländsk arbetskraft i bygg – så anlitar du lagligt 2026", slug: "utstationering-utlandsk-arbetskraft-bygg", locale: "sv",
+  excerpt: "En steg-för-steg-guide för byggföretag som anlitar utstationerad eller utländsk arbetskraft lagligt – från anmälan och A1-intyg till skatt, personalliggare och entreprenörsansvar.", tag: "Regelverk",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_UTSTATIONERING_UTLANDSK_ARBETSKRAFT_BYGG_HTML,
+  seoTitle: "Utstationering utländsk arbetskraft | ByggExp", seoDescription: "Anlita utländsk arbetskraft eller UE lagligt: utstationeringsanmälan, A1-intyg, F-skatt, personalliggare och entreprenörsansvar. B2B-checklista för 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T11:18:00.000Z", createdAt: "2026-08-19T11:18:00.000Z", updatedAt: "2026-08-19T11:18:00.000Z",
+};
+
+const A_KOLLEKTIVAVTALADE_FORSAKRINGAR_BYGG_HTML = `
+<p>När ditt byggföretag tecknar kollektivavtal får du inte bara reglerad lön och arbetstid – du utlöser samtidigt ett helt paket av försäkringar och en tjänstepension för dina anställda. Många byggföretagare vet att de betalar in till Fora varje månad, men få kan svara på vad de faktiskt betalar för, vad medarbetarna får ut och var det går snett. Här går vi igenom systemet bakom Byggavtalet 2026: AFA Försäkring, Fora och de sex delar som följer med avtalet.</p>
+
+<p>Vill du räkna på vad försäkringarna och pensionen lägger ovanpå lönen i din totala arbetsgivarkostnad? Använd <a href="/sv/verktyg/timpris-kalkylator">vår gratis timpris-kalkylator -&gt;</a> för att se hur påslagen slår per fakturerad timme.</p>
+
+<h2>Systemet i korthet – AFA, Fora och Byggavtalet</h2>
+<p>Det är lätt att blanda ihop aktörerna. Försäkringarna är tecknade av arbetsmarknadens parter – LO, Svenskt Näringsliv och PTK – som tillsammans äger <strong>AFA Försäkring</strong>, bolaget som står för själva försäkringsutbetalningarna. <strong>Fora</strong> är administratören och förmedlaren: det är hos Fora du som arbetsgivare tecknar ett enda försäkringsavtal, och det avtalet utlöser i sin tur samtliga försäkringar plus tjänstepensionen. Du behöver alltså inte teckna varje del för sig.</p>
+<p>Ett byggföretag blir bundet på ett av två sätt: antingen genom medlemskap i Byggföretagen, som binder dig till Byggavtalet, eller genom att teckna ett <em>hängavtal</em> direkt med Byggnads. I båda fallen registreras försäkringsavtalet hos Fora, och du blir skyldig att varje år rapportera de faktiska lönerna (lönerapportering) så att premierna beräknas rätt.</p>
+
+<h2>De sex delarna som ingår</h2>
+<p>För arbetare omfattar paketet under Byggavtalet följande:</p>
+<ul>
+<li><strong>Avtalspension SAF-LO</strong> – tjänstepensionen, den enskilt största posten. Byggs upp under hela arbetslivet och betalas ut som pension.</li>
+<li><strong>TFA</strong> – Trygghetsförsäkring vid arbetsskada. Ersätter personskada som inträffar på jobbet eller på resan till och från arbetet, och kan betala utöver den lagstadgade arbetsskadeförsäkringen.</li>
+<li><strong>TGL</strong> – Tjänstegrupplivförsäkring. Ett skattefritt engångsbelopp till efterlevande om den anställde avlider före pension.</li>
+<li><strong>AGS</strong> – Avtalsgruppsjukförsäkring. Fyller på sjukpenningen vid längre sjukdom.</li>
+<li><strong>AGB</strong> – Avgångsbidrag vid uppsägning på grund av arbetsbrist.</li>
+<li><strong>FPT</strong> – Föräldrapenningtillägg vid föräldraledighet, samt omställningsstöd via Trygghetsfonden (TSL) om anställningen upphör.</li>
+</ul>
+
+<h2>Vad det kostar dig 2026</h2>
+<p>För 2026 är den totala premien för arbetare <strong>4,85 % av lönesumman</strong> på lön upp till 52 125 kr/månad. Så här fördelar den sig:</p>
+<ul>
+<li>Avtalspension SAF-LO: 4,50 %</li>
+<li>Omställningsstöd (Trygghetsfonden): 0,34 %</li>
+<li>TGL: 0,10 %</li>
+<li>TFA: 0,01 %</li>
+<li>Premiereduktion: -0,10 %</li>
+<li>AGS, AGB, FPT och premiebefrielseförsäkring: 0 %</li>
+</ul>
+<p>Att flera AFA-premier står på 0 % beror på att AFA Försäkring har stark ekonomi – <strong>försäkringarna gäller fortfarande fullt ut</strong>, det är bara premien som är nollställd det här året. Det är ett återkommande mönster, inte ett permanent slopande, så räkna inte med noll för all framtid.</p>
+<p>Brytpunkten går vid 7,5 inkomstbasbelopp, det vill säga 625 500 kr/år (inkomstbasbelopp 2026 = 83 400 kr), ungefär 52 125 kr/månad. På lönedelen <em>över</em> den nivån hoppar pensionspremien upp till 30 %, så totalpremien blir 30,01 % på den överskjutande delen. Två saker till att lägga på kalkylen: Fora drar en <strong>förmedlingsavgift på 1,5 %</strong> (inkl. moms) från pensionspremien, och på tjänstepensionen betalar du dessutom <strong>särskild löneskatt på 24,26 %</strong> ovanpå själva premien.</p>
+
+<h2>Vad dina anställda faktiskt får</h2>
+<p>Premierna blir mer begripliga när man ser vad de köper. Konkret för 2026:</p>
+<ul>
+<li><strong>TGL</strong>: ett skattefritt grundbelopp på 6 prisbasbelopp = 355 200 kr till efterlevande om den anställde avlider före pension, plus begravningshjälp på ca 0,5 prisbasbelopp (29 600 kr). Fullt skydd kräver minst 16 timmar/vecka; reducerat skydd gäller från 8 timmar/vecka.</li>
+<li><strong>AGS</strong>: från dag 15 i sjukskrivningen läggs ungefär 10 % ovanpå Försäkringskassans sjukpenning (ca 80 %), på inkomst upp till 10 prisbasbelopp (592 000 kr). Observera – den anställde måste själv ansöka hos AFA, den betalas inte ut automatiskt.</li>
+<li><strong>TFA</strong>: ersättning vid personskada i arbetet eller på resan till och från jobbet. Även här måste den skadade själv göra en anmälan till AFA.</li>
+</ul>
+<p>En viktig förändring: från 1 januari 2026 höjdes åldersgränsen i flera av avtalsförsäkringarna från 66 till 67 år, i takt med de höjda pensions- och LAS-åldrarna.</p>
+
+<h2>Vanliga misstag byggföretag gör</h2>
+<ul>
+<li><strong>Slarv med lönerapporteringen</strong> – rapporterar du inte faktiska löner till Fora varje år blir premierna fel och pensionen underbetald.</li>
+<li><strong>Tro att ersättning kommer automatiskt</strong> – AGS och TFA kräver att den anställde själv anmäler sjukdom respektive skada till AFA. Informerar du inte dem går de miste om pengar de har rätt till.</li>
+<li><strong>Blanda ihop kollektiv</strong> – arbetare har SAF-LO via Fora, medan tjänstemän har ITP via Collectum. Det är två olika system som måste tecknas var för sig.</li>
+<li><strong>Glömma sig själv som ägare</strong> – driver du som egenföretagare utan kollektivavtal omfattas du inte, och står helt utan detta skydd om du inte tecknar egna försäkringar.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp tecknar inte dina försäkringar åt dig – det gör du hos Fora – men vi hjälper dig att få kontroll på kostnaden. I <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a> kan du lägga in lön och sociala påslag och se hur avtalsförsäkringar, tjänstepension och särskild löneskatt påverkar vad varje timme faktiskt måste kosta för att gå ihop. Det gör det enklare att sätta rätt timpris och offert, i stället för att gissa på påslaget. Med korrekt löneunderlag i systemet blir det också lättare att stämma av mot den lönerapportering du ändå ska lämna till Fora.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vilka försäkringar ingår i Byggavtalet?</h3>
+<p>För arbetare ingår Avtalspension SAF-LO, TFA (arbetsskada), TGL (grupplivförsäkring), AGS (sjukförsäkring), AGB (avgångsbidrag) och FPT (föräldrapenningtillägg), plus omställningsstöd via Trygghetsfonden. Alla utlöses av ett enda försäkringsavtal hos Fora.</p>
+<h3>Vad kostar de kollektivavtalade försäkringarna 2026?</h3>
+<p>Totalt 4,85 % av lönesumman upp till 52 125 kr/månad, varav pensionen står för 4,50 %. På lönedelen över den nivån är pensionspremien 30 %. Utöver premien tillkommer särskild löneskatt på 24,26 % på pensionen och en förmedlingsavgift på 1,5 % till Fora.</p>
+<h3>Varför står flera premier på 0 % 2026?</h3>
+<p>AGS, AGB, FPT och premiebefrielseförsäkringen har premie 0 % för 2026 eftersom AFA Försäkring har stark ekonomi. Försäkringarna gäller fullt ut ändå – det är bara premien som är tillfälligt nollställd, och det kan ändras kommande år.</p>
+<h3>Måste den anställde själv ansöka om ersättning?</h3>
+<p>Ja. Både AGS vid sjukdom och TFA vid arbetsskada kräver att den anställde själv gör en anmälan till AFA Försäkring. Pengarna betalas inte ut automatiskt, så informera dina medarbetare om att anmäla i tid.</p>
+
+<h2>Kom igång</h2>
+<p>Se till att ditt försäkringsavtal med Fora är på plats, att du lönerapporterar varje år och att dina anställda vet att de själva anmäler skada och sjukdom till AFA. Räkna sedan igenom vad påslagen betyder för din prissättning i <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a>. Vill du se hur ByggExp håller ihop löneunderlag, tid och offert? <a href="/sv/contact">Boka en demo -&gt;</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Måste man ha kollektivavtal i byggbranschen?</a> och <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag – så gör du rätt</a>.</p>
+`;
+
+const A_KOLLEKTIVAVTALADE_FORSAKRINGAR_BYGG: BlogPost = {
+  _id: "code-"+"kollektivavtalade-forsakringar-bygg",
+  title: "Kollektivavtalade försäkringar i bygg – vad följer med Byggavtalet 2026", slug: "kollektivavtalade-forsakringar-bygg", locale: "sv",
+  excerpt: "Byggavtalet utlöser ett helt försäkrings- och pensionspaket via AFA och Fora – här är de sex delarna, vad de kostar dig 2026 och de misstag som kostar mest.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_KOLLEKTIVAVTALADE_FORSAKRINGAR_BYGG_HTML,
+  seoTitle: "Kollektivavtalade försäkringar bygg | ByggExp", seoDescription: "AFA, TFA, TGL och avtalspension via Byggavtalet 2026: vilka försäkringar ingår, vad de kostar (4,85 %) och vad dina anställda faktiskt får.",
+  seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T11:21:00.000Z", createdAt: "2026-08-19T11:21:00.000Z", updatedAt: "2026-08-19T11:21:00.000Z",
+};
+
+const A_RISKBEDOMNING_BYGGARBETSPLATS_MALL_HTML = `
+<p>En skriftlig riskbedömning innan varje riskfyllt moment är inte en rekommendation – det är ett lagkrav som gäller alla arbetsgivare, oavsett om du har trettio anställda eller är en enmansfirma med en lärling. Många firmor kör fortfarande på gamla mallar som hänvisar till föreskrifter som inte längre finns, och det blir ett problem den dag Arbetsmiljöverket eller en byggherre granskar dokumentationen.</p>
+
+<p>Vill du komma igång direkt kan du utgå från vår gratis riskbedömningsmall &rarr; <a href="/sv/verktyg/riskbedomning-mall">/sv/verktyg/riskbedomning-mall</a> och anpassa den efter de moment du faktiskt utför.</p>
+
+<h2>Vad säger lagen 2026?</h2>
+<p>Sedan 1 januari 2025 gäller Arbetsmiljöverkets nya regelstruktur. De tidigare cirka 67 föreskrifterna (AFS) är omgrupperade till 15 nya, mer omfattande föreskrifter. Det innebär bland annat att gamla AFS 2001:1 om systematiskt arbetsmiljöarbete och AFS 1999:3 om byggnads- och anläggningsarbete inte längre gäller. Om din mall eller pärm hänvisar till de numren är den föråldrad.</p>
+<p>Kravet på riskbedömning finns nu i <strong>AFS 2023:1</strong> (systematiskt arbetsmiljöarbete). Riskbedömningen ska <strong>alltid vara skriftlig</strong> och gäller alla arbetsgivare oavsett antal anställda. Det skiljer sig från exempelvis skriftlig fördelning av arbetsmiljöuppgifter, som bara krävs vid tio eller fler anställda. Skriftlighetskravet för riskbedömning är alltså universellt – även den lilla firman med en anställd träffas.</p>
+
+<h2>Riskbedömning vs. arbetsmiljöplan – reda ut begreppen</h2>
+<p>Två dokument blandas ofta ihop, men de har olika hemvist och olika syfte:</p>
+<ul>
+<li><strong>Riskbedömning</strong> är din interna genomgång av riskerna per arbetsmoment, enligt AFS 2023:1. Den ägs av dig som arbetsgivare och beskriver hur just ditt arbete ska utföras säkert.</li>
+<li><strong>Arbetsmiljöplan (AMP)</strong> är byggarbetsplatsens gemensamma dokument enligt <strong>AFS 2023:3</strong> (projektering och byggarbetsmiljösamordning). Byggherren ansvarar för att den upprättas.</li>
+</ul>
+<p>De hänger ihop – dina riskbedömningar är ofta underlag till AMP:n – men de är inte samma sak. En AMP ersätter inte kravet på att du gör egna riskbedömningar för dina moment, och en riskbedömning ersätter inte AMP:n.</p>
+
+<h2>När krävs skriftlig riskbedömning – och när krävs AMP?</h2>
+<p>Skriftlig riskbedömning krävs alltid, innan arbetet påbörjas och innan varje förändring: nytt moment, ny maskin, ny metod eller ny bemanning.</p>
+<p>För bygg- och anläggningsarbete ska byggherren dessutom se till att en skriftlig arbetsmiljöplan upprättas <em>innan</em> första byggnads- eller anläggningsarbetet påbörjas, om minst ett villkor är uppfyllt: något av de tretton arbetena med särskild risk förekommer, eller förhandsanmälan krävs.</p>
+<p>Tretton-punktslistan omfattar bland annat:</p>
+<ul>
+<li>fallrisk med nivåskillnad på 2 meter eller mer</li>
+<li>risk för ras eller att begravas i jordmassor</li>
+<li>montering och demontering av tunga byggelement</li>
+<li>arbete med hälsofarliga kemiska eller biologiska ämnen</li>
+<li>rivning av bärande konstruktioner</li>
+<li>arbete nära högspänningsledningar</li>
+<li>arbete där passerande fordonstrafik förekommer</li>
+<li>sprängning, dykeriarbete, arbete i brunnar och tunnlar, samt drunkningsrisk</li>
+</ul>
+<p>Eftersom fallrisk över 2 meter förekommer i nästan varje takarbete, ställningsarbete eller fasadjobb behöver en AMP i praktiken nästan alltid upprättas – även när bara en ensamföretagare arbetar. Ett litet projekt befriar alltså inte från AMP-kravet om ett moment på listan förekommer.</p>
+<p>Förhandsanmälan till Arbetsmiljöverket krävs när arbetet beräknas pågå längre än 30 arbetsdagar <strong>och</strong> mer än 20 personer sysselsätts samtidigt vid något tillfälle, eller när det totala antalet persondagar beräknas överstiga 500.</p>
+
+<h2>Så gör du riskbedömningen steg för steg</h2>
+<p>Gör bedömningen innan momentet startar, inte efteråt. Processen enligt Arbetsmiljöverket är fem steg:</p>
+<ol>
+<li><strong>Identifiera riskerna</strong> per arbetsmoment – gå igenom vad som faktiskt ska göras och var det kan gå fel.</li>
+<li><strong>Bedöm allvarligheten</strong> med sannolikhet gånger konsekvens, ofta med en enkel riskmatris (låg/medel/hög).</li>
+<li><strong>Åtgärda allvarliga risker omedelbart.</strong> Vid riskfyllt arbete ska det finnas skriftliga instruktioner för hur arbetet utförs säkert.</li>
+<li><strong>Handlingsplan</strong> för det som inte åtgärdas direkt: vad ska göras, vem ansvarar och när ska det vara klart. Den ska vara skriftlig.</li>
+<li><strong>Kontrollera och följ upp</strong> att åtgärderna fungerar och att riskerna faktiskt minskat.</li>
+</ol>
+
+<h2>Vad en enkel mall för liten firma bör innehålla</h2>
+<p>AFS 2023:3 upprepar att kraven ska motsvara byggprojektets storlek, komplexitet och risknivå. Det innebär proportionalitet: en liten firma kan hålla riskbedömning och AMP kortfattade, men de måste finnas, vara skriftliga och vara aktuella för de moment som faktiskt utförs. En användbar mall innehåller:</p>
+<ul>
+<li>Projekt och plats, datum, och vem som är ansvarig</li>
+<li>Arbetsmoment (rad för rad)</li>
+<li>Identifierad risk per moment</li>
+<li>Bedömd allvarlighet (sannolikhet x konsekvens)</li>
+<li>Åtgärd samt ansvarig och klardatum</li>
+<li>Signatur</li>
+</ul>
+<p>Exempel på en rad: momentet <em>takarbete på 4 meters höjd</em> &rarr; risk <em>fall från hög höjd</em> &rarr; allvarlighet <em>hög</em> &rarr; åtgärd <em>ställning med skyddsräcke, personlig fallskyddsutrustning, skriftlig arbetsinstruktion</em> &rarr; ansvarig <em>arbetsledare</em> &rarr; klart <em>innan momentet startar</em>.</p>
+
+<h2>Vanliga misstag och vad de kostar</h2>
+<p>De dyraste felen handlar sällan om ont uppsåt utan om att dokumentet aldrig upprättades. Sanktionsavgifterna är fasta:</p>
+<ul>
+<li>Saknad arbetsmiljöplan: <strong>50 000 kr</strong> om projektet är så stort att förhandsanmälan krävs, och <strong>10 000 kr</strong> om projektet är mindre.</li>
+<li>Saknad förhandsanmälan: <strong>5 000 kr</strong> för byggherren.</li>
+</ul>
+<p>Ett konkret exempel: hösten 2025 beslutade Arbetsmiljöverket om 10 000 kr för saknad AMP vid ett hotellbygge i Södertälje. Utöver avgiften finns arbetsgivaransvaret vid en olycka – där en dokumenterad, uppföljd riskbedömning är skillnaden mellan att ha gjort sitt jobb och att stå utan skydd.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp utgår du från en färdig riskbedömningsmall som är byggd på den nuvarande AFS-strukturen, så att du slipper hänvisningar till upphävda föreskrifter. Du fyller i moment, risk, allvarlighet och åtgärd, och får ut ett skriftligt dokument med datum och signatur som du kan visa upp vid granskning. Riskbedömningen kopplas naturligt ihop med din löpande <a href="/sv/verktyg/egenkontroll-mall">egenkontroll</a>, så att undersökning, åtgärd och uppföljning hänger samman i stället för att ligga i lösa papper. Verktygen tar inte över ansvaret – bedömningen måste alltid göras av dig som känner arbetet – men de gör att dokumentationen faktiskt blir gjord och sparad.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste även en enmansfirma göra skriftlig riskbedömning?</h3>
+<p>Ja, om du har minst en anställd. Skriftlighetskravet i AFS 2023:1 gäller alla arbetsgivare oavsett storlek. Det är en av få saker där den lilla firman behandlas exakt som den stora.</p>
+<h3>Behöver jag arbetsmiljöplan för ett litet takjobb?</h3>
+<p>Oftast ja. Fallrisk med nivåskillnad på 2 meter eller mer finns på tretton-punktslistan över arbeten med särskild risk, och då ska en AMP upprättas innan arbetet påbörjas – även vid små projekt och även när bara en ensamföretagare arbetar.</p>
+<h3>När måste jag göra förhandsanmälan till Arbetsmiljöverket?</h3>
+<p>När arbetet beräknas pågå längre än 30 arbetsdagar och mer än 20 personer sysselsätts samtidigt vid något tillfälle, eller när det totala antalet persondagar överstiger 500. Ansvaret ligger på byggherren.</p>
+<h3>Duger våra gamla mallar från 2001:1 och 1999:3?</h3>
+<p>Nej. De föreskrifterna gäller inte längre sedan 1 januari 2025. Innehållet finns nu i AFS 2023:1 och AFS 2023:3, och en mall som hänvisar till de gamla numren är föråldrad och bör bytas ut.</p>
+
+<h2>Kom igång</h2>
+<p>Ladda ner och anpassa vår <a href="/sv/verktyg/riskbedomning-mall">gratis riskbedömningsmall</a> och koppla den till din <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmall</a> för en komplett rutin. Vill du se hur riskbedömning, egenkontroll och dokumentation hänger ihop i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan (AMP) – krav och innehåll</a>, <a href="/sv/blog/fallskydd-krav-bygg">Fallskydd – krav på bygget</a>, <a href="/sv/blog/heta-arbeten">Heta arbeten – regler och tillstånd</a>.</p>
+`;
+
+const A_RISKBEDOMNING_BYGGARBETSPLATS_MALL: BlogPost = {
+  _id: "code-"+"riskbedomning-byggarbetsplats-mall",
+  title: "Riskbedömning på byggarbetsplats – mall och krav enligt AFS (2026)", slug: "riskbedomning-byggarbetsplats-mall", locale: "sv",
+  excerpt: "Skriftlig riskbedömning innan riskfyllda moment är lagkrav för alla arbetsgivare – så gör du den rätt enligt den nya AFS-strukturen, även som liten firma.", tag: "Arbetsmiljö",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_RISKBEDOMNING_BYGGARBETSPLATS_MALL_HTML,
+  seoTitle: "Riskbedömning byggarbetsplats mall | ByggExp", seoDescription: "Skriftlig riskbedömning innan varje riskfyllt moment är lagkrav – även för småfirmor. Så gör du enligt AFS 2023:1 och 2023:3. Ladda ner gratis mall.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T11:24:00.000Z", createdAt: "2026-08-19T11:24:00.000Z", updatedAt: "2026-08-19T11:24:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_SKYDDSROND_BYGG_CHECKLISTA,
+    A_KAKEL_KLINKER_ATGANG_VATRUM,
+    A_ARMERING_BERAKNING_PLATTA_GRUND,
+    A_BESIKTNINGSANMARKNING_ATGARDA_BEMOTA,
+    A_ENTREPRENADFORSAKRING_ALLRISK_VAD_TACKER,
+    A_PROVANSTALLNING_BYGG_REGLER,
+    A_UTSTATIONERING_UTLANDSK_ARBETSKRAFT_BYGG,
+    A_KOLLEKTIVAVTALADE_FORSAKRINGAR_BYGG,
+    A_RISKBEDOMNING_BYGGARBETSPLATS_MALL,
     A_SKATTEVERKET_NEKAR_ROTAVDRAG_FORBEHALL,
     A_EFTERKALKYL_BYGG_KALKYLUPPFOLJNING,
     A_INDEXREGLERING_ENTREPRENAD_KOSTNADSOKNING,

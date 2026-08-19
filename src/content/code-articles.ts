@@ -12640,89 +12640,6 @@ const A_PUTS_MURBRUK_ATGANG_FASAD: BlogPost = {
   publishedAt: "2026-08-19T13:18:00.000Z", createdAt: "2026-08-19T13:18:00.000Z", updatedAt: "2026-08-19T13:18:00.000Z",
 };
 
-const A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG_HTML = `
-<p>Sedan 1 augusti 2020 måste alla som producerar bygg- och rivningsavfall sortera ut minst sex materialslag redan på arbetsplatsen. Kraven i avfallsförordningen (2020:614) gäller oförändrat 2026, och den kommunala tillsynen har skärpts. Blandar du fraktionerna utan giltigt undantag riskerar du föreläggande, vite och i grova fall åtal. Den här guiden går igenom vad som ska sorteras, hur du dokumenterar det och var ansvaret ligger.</p>
-
-<p>Bygg in avfallshanteringen i din egenkontroll från start – börja med vår <a href="/sv/verktyg/egenkontroll-mall">gratis mall för egenkontroll -&gt;</a> och lägg till sorteringspunkterna nedan i den.</p>
-
-<h2>De sex fraktionerna du måste sortera ut på plats</h2>
-<p>Enligt avfallsförordningen 3 kap. 10 § ska följande sex materialslag sorteras ut var för sig och förvaras åtskilda från varandra och från övrigt avfall:</p>
-<ul>
-<li><strong>Trä</strong> – rent virke, reglar, formmaterial (obehandlat).</li>
-<li><strong>Mineral</strong> – betong, tegel, klinker, keramik eller sten i en fraktion.</li>
-<li><strong>Metall</strong> – armering, plåt, rör, beslag.</li>
-<li><strong>Glas</strong> – planglas, rutor.</li>
-<li><strong>Plast</strong> – emballage, rör, profiler.</li>
-<li><strong>Gips</strong> – gipsskivor och gipsrester.</li>
-</ul>
-<p>Det avgörande är att sorteringen sker <strong>vid källan</strong> – på den plats där avfallet uppstår, alltså din bygg- eller rivningsplats. Du får alltså inte samla allt blandat i en container och skicka det vidare till en central sorteringsanläggning. Den som samlar in de utsorterade fraktionerna måste dessutom hålla dem åtskilda genom hela insamlingen så att materialet kan återanvändas eller materialåtervinnas (3 kap. 11 §). Syftet är kopplat till etappmålet att 70 viktprocent av det icke-farliga bygg- och rivningsavfallet ska förberedas för återanvändning eller materialåtervinnas.</p>
-
-<h2>Utöver de sex – farligt avfall och brännbart</h2>
-<p>Sex fraktioner är golvet, inte taket. Farligt avfall ska alltid sorteras ut och hållas separat (3 kap. 11a §), och olika slag av farligt avfall får aldrig blandas med varandra. I rivning handlar det typiskt om:</p>
-<ul>
-<li><strong>Asbest</strong> – eternit, rörisolering, mattlim.</li>
-<li><strong>PCB</strong> – fogmassor och isolerrutor i byggnader från 1956–1973.</li>
-<li><strong>Tryckimpregnerat trä</strong> och andra behandlade träslag.</li>
-<li><strong>Förorenade massor</strong> och avfall med farliga ämnen.</li>
-</ul>
-<p>Dessutom ska brännbart avfall sorteras ut (3 kap. 12 §). Ordningen är alltså: farligt avfall först, sedan de sex materialslagen, därefter brännbart – och först det som blir kvar kan hanteras som blandat restavfall.</p>
-
-<h2>Dokumentation och rapportering – vad tillsynen frågar efter</h2>
-<p>För farligt avfall gäller anteckningsskyldighet: du ska föra anteckningar om avfallets typ, mängd, ursprung och mottagare. Sedan 1 november 2020 ska uppgifterna också rapporteras till Naturvårdsverkets avfallsregister, senast två arbetsdagar efter att anteckningen ska göras (avfallsförordningen 6 kap. 11 §). Vilka uppgifter anteckningen ska innehålla regleras närmare i Naturvårdsverkets föreskrifter NFS 2020:5. Missad rapportering är en av de vanligaste bristerna vid tillsyn.</p>
-<p>En central fråga i rivning är <strong>vem som är avfallsproducent</strong> och därmed bär anteckning-och rapporteringsskyldigheten – rivningsentreprenören eller fastighetsägaren/beställaren. Naturvårdsverkets vägledning lutar åt att det vid större arbeten som underhåll, ROT, byggande och rivning är den anlitade entreprenören som är avfallsproducent, eftersom entreprenören har mest rådighet över avfallet. Undantaget är om avtalet fråntar underentreprenören rådigheten – då kan i stället byggherren eller huvudentreprenören vara producent. Reglera ansvaret tydligt i entreprenadavtalet så att ingen part utgår från att den andra rapporterar.</p>
-<p>Lutar du dig mot ett undantag från sorteringskravet ska du dokumentera din bedömning och kunna visa upp den för miljöförvaltningen på begäran. Det är i praktiken ditt bevis på att du följer reglerna.</p>
-
-<h2>Undantag och dispens – när får du blanda?</h2>
-<p>Det finns två generella undantag enligt Naturvårdsverkets föreskrifter NFS 2020:7, som inte kräver någon ansökan:</p>
-<ul>
-<li>Material är så sammanfogat i konstruktionen att det inte är tekniskt genomförbart att separera det.</li>
-<li>Avfallet är så förorenat att en separering skulle försämra kvaliteten på behandlingen eller återvinningen.</li>
-</ul>
-<p>Vill du samla avfallet blandat utan att omfattas av ett generellt undantag måste du söka <strong>dispens</strong> hos tillsynsmyndigheten – i praktiken oftast den kommunala miljönämnden – i förväg (3 kap. 15–17 §§). Dispens kan ges om separat insamling inte är tekniskt genomförbar, inte ger någon miljönytta som överväger nackdelarna, eller medför orimliga kostnader. Räkna med handläggningstid – planera dispensfrågan innan rivningen startar, inte när containern redan står full.</p>
-
-<h2>Sanktioner om du blandar – föreläggande, vite och miljöbrott</h2>
-<p>Tillsynen sköts av den kommunala miljönämnden. Vid brister kan nämnden utfärda ett föreläggande om rättelse, ofta förenat med vite – ett förutbestämt belopp du tvingas betala om du inte åtgärdar felet. Allvarliga överträdelser kan bedömas som otillåten avfallshantering eller nedskräpning enligt miljöbalken 29 kap., vilket är straffsanktionerat.</p>
-<p>En viktig nyansering: det finns <strong>ingen fast schablon-miljösanktionsavgift med ett bestämt kronbelopp</strong> specifikt för att låta bli att sortera de sex fraktionerna. Sprids påståenden om exakta bötesbelopp bör du vara skeptisk – kontrollera alltid mot avfallsförordningen och din lokala miljöförvaltning innan du citerar en siffra.</p>
-
-<h2>Checklista för din arbetsplats</h2>
-<ul>
-<li>En container eller behållare per fraktion – trä, mineral, metall, glas, plast, gips.</li>
-<li>Tydlig skyltning vid varje kärl så att alla på plats sorterar rätt.</li>
-<li>Materialinventering före rivning som identifierar farligt avfall.</li>
-<li>Kvitton och mottagningsbevis från godkänd mottagare, sparade i minst 7 år.</li>
-<li>Dokumenterad bedömning om du åberopar ett undantag.</li>
-<li>Registrering av farligt avfall i avfallsregistret inom två arbetsdagar.</li>
-</ul>
-
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp ersätter inte myndighetsrapporteringen till avfallsregistret, men gör det enkelt att bevisa att rutinen finns och följs. Du bygger in sorteringspunkterna i din egenkontroll så att varje projekt får en spårbar avstämning – vem som ansvarar, vilka fraktioner som hanteras och var mottagningsbevisen finns. Undantagsbedömningar och foton kan sparas på projektet, så att du snabbt kan visa upp underlaget om miljöförvaltningen gör tillsyn. Fler mallar och kalkylatorer hittar du samlat i <a href="/sv/verktyg">våra gratis verktyg</a>.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Vilka fraktioner måste sorteras ut på byggarbetsplatsen?</h3>
-<p>Minst sex: trä, mineral (betong, tegel, klinker, keramik eller sten), metall, glas, plast och gips. Dessutom ska farligt avfall och brännbart avfall sorteras ut separat enligt avfallsförordningen 3 kap.</p>
-<h3>Kan jag samla allt blandat och sortera på en central anläggning?</h3>
-<p>Nej. Sorteringen ska ske vid källan, alltså på platsen där avfallet uppstår. Undantag kräver antingen ett generellt undantag enligt NFS 2020:7 eller en dispens som du söker i förväg hos tillsynsmyndigheten, i praktiken oftast den kommunala miljönämnden.</p>
-<h3>Vem ansvarar för att rapportera farligt avfall vid rivning?</h3>
-<p>Ansvaret ligger på den som är avfallsproducent. Vid rivning lutar Naturvårdsverkets vägledning åt att det är den anlitade entreprenören som är avfallsproducent, eftersom entreprenören har mest rådighet över avfallet. Har avtalet fråntagit underentreprenören rådigheten kan i stället byggherren eller huvudentreprenören vara producent. Reglera ansvaret i avtalet och rapportera till avfallsregistret inom två arbetsdagar.</p>
-<h3>Hur stor blir böterna om jag inte sorterar?</h3>
-<p>Det finns ingen fast miljösanktionsavgift med ett bestämt belopp för själva sorteringsbrottet. Miljönämnden kan i stället utfärda föreläggande förenat med vite, och grova fall kan bli otillåten avfallshantering enligt miljöbalken 29 kap.</p>
-
-<h2>Kom igång</h2>
-<p>Lägg avfallssorteringen i din projektrutin redan idag med vår <a href="/sv/verktyg/egenkontroll-mall">mall för egenkontroll</a>, och stäm alltid av mot avfallsförordningen och din lokala miljöförvaltning. Vill du se hur ByggExp håller ihop egenkontroll och dokumentation i skarpa projekt? <a href="/sv/contact">Boka en demo -&gt;</a></p>
-
-<p>Relaterat: <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler 2026 och kontrollplanen</a>, <a href="/sv/blog/kontrollplan-mall-bygglov">Kontrollplan-mall för bygglov</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
-`;
-
-const A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG: BlogPost = {
-  _id: "code-"+"rivningsavfall-sorteringskrav-bygg",
-  title: "Rivningsavfall: sorteringskrav på bygg- och rivningsplatsen 2026", slug: "rivningsavfall-sorteringskrav-bygg", locale: "sv",
-  excerpt: "Sex fraktioner ska sorteras vid källan. Guiden går igenom vad som gäller 2026 – farligt avfall, dokumentation, dispens och vem som är avfallsproducent vid rivning.", tag: "Regelverk",
-  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG_HTML,
-  seoTitle: "Rivningsavfall: sorteringskrav 2026 | ByggExp", seoDescription: "Så sorterar du bygg- och rivningsavfall rätt 2026: sex fraktioner vid källan, farligt avfall, dokumentation, dispens och vem som är avfallsproducent.",
-  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T14:00:00.000Z", createdAt: "2026-08-19T14:00:00.000Z", updatedAt: "2026-08-19T14:00:00.000Z",
-};
-
 const A_SPACKEL_ATGANG_VAGG_TAK_HTML = `
 <p>Materialkalkylen avgör marginalen på ett spacklings- och måleriuppdrag. ROT-avdraget täcker aldrig spacklet – bara arbetet – så varje kilo du köper för mycket, eller varje säck du glömmer i offerten, går rakt in i din vinst. Räknar du spackelåtgången rätt redan innan du åker till grossisten slipper du både onödiga extraturer och överblivna, halvtorra hinkar.</p>
 
@@ -13114,15 +13031,178 @@ const A_FARDIGSTALLANDEGRAD_VINSTAVRAKNING_BYGGPROJEKT: BlogPost = {
   publishedAt: "2026-08-19T15:12:00.000Z", createdAt: "2026-08-19T15:12:00.000Z", updatedAt: "2026-08-19T15:12:00.000Z",
 };
 
+const A_RESTLISTA_OVERLAMNING_BYGG_MALL_HTML = `
+<p>Slutbesiktningen är sällan slutet. Nästan alltid finns kvarstående arbeten och anmärkningar kvar när besiktningsmannen lämnar platsen, och det är här projekt antingen stängs snyggt eller drar ut i veckor av mejl, oklara ansvar och innehållna pengar. En strukturerad <strong>restlista</strong> — punchlist — är det praktiska verktyget som håller ordning på varje anmärkning tills den är åtgärdad och kvitterad. Den här artikeln ger dig en färdig <strong>restlista bygg mall</strong>, de obligatoriska kolumnerna och en rutin som säkrar att listan faktiskt stängs före godkänd överlämning.</p>
+
+<p>Vill du börja direkt? Bygg din restlista och koppla den till egenkontrollen med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a>.</p>
+
+<h2>Vad är en restlista — och hur skiljer den sig från besiktningsutlåtandet?</h2>
+<p>Vid slutbesiktningen dokumenterar besiktningsmannen resultatet i ett <strong>besiktningsutlåtande</strong>. Det är den juridiska handlingen: den listar fel, brister och kvarstående arbeten, anger vem som ansvarar för att åtgärda varje punkt och sätter frister för åtgärd. Utlåtandet är facit för vad som gäller mellan parterna.</p>
+<p>Restlistan är något annat — ditt praktiska arbetsverktyg. Den speglar anmärkningarna i utlåtandet men är byggd för att arbetas i: tilldela ansvarig, sätta datum, bocka av och bifoga foto. Kort sagt är utlåtandet vad som ska göras, och restlistan hur du får det gjort. Håller du dem synkroniserade — varje rad på restlistan pekar tillbaka på en punkt i utlåtandet — undviker du diskussioner om vad som egentligen påtalats.</p>
+<p>Det är värt att skilja på begreppen: <strong>fel</strong> är avvikelser från kontraktet, <strong>brister</strong> är kvalitetsavvikelser och <strong>kvarstående arbeten</strong> är moment som helt enkelt inte hunnit färdigställas. Alla tre hör hemma på restlistan, men de hanteras olika och bör kategoriseras därefter.</p>
+
+<h2>Från slutbesiktning till godkänt — det juridiska ramverket kort</h2>
+<p>En viktig sak att förstå: en entreprenad kan bli <strong>godkänd trots att anmärkningar kvarstår</strong>. Besiktningsmannen får bara underkänna om entreprenaden innehåller fel eller brister av väsentlig betydelse — sådant som orsakar stora kostnader, hindrar avsedd användning, påverkar sammankopplade tekniska system som el och VA, eller är omfattande i sin natur. Mindre restlistepunkter blockerar alltså inte godkännandet enligt AB 04 kap 7.</p>
+<p>Godkännandet är däremot en juridisk vändpunkt. Vid godkänd slutbesiktning inträffar tre saker samtidigt: <strong>garantitiden börjar löpa</strong>, ansvaret för skador och risk på entreprenaden går över från entreprenören till beställaren, och den <strong>ekonomiska regleringen</strong> aktualiseras — slutfakturan kan ställas ut. Enligt AB 04 kap 4 §7 är garantitiden 5 år för entreprenörens arbetsprestation och 2 år för material och varor. Därutöver löper en ansvarstid på 10 år från godkänd slutbesiktning, och för dolda fel — sådant som varken beställaren eller besiktningsmannen rimligen kunnat upptäcka — ansvarar entreprenören hela ansvarstiden ut. Att stänga restlistan handlar därför inte bara om kvalitet, utan om när klockan börjar ticka på ditt ansvar och när du får betalt.</p>
+
+<h2>Konsument vs kommersiell entreprenad — olika spelregler</h2>
+<p>Reglerna för restlista och besiktning skiljer sig åt beroende på avtal. I kommersiella entreprenader gäller normalt AB 04 eller ABT 06. Betalar entreprenören inte åtgärd inom skälig tid har beställaren rätt att låta åtgärda på entreprenörens bekostnad och bör innehålla tillräckligt av betalningen för att täcka det tills alla anmärkningar är stängda (AB 04 kap 5 och 7). Notera också att det är beställaren som betalar besiktningsmannens arvode vid slutbesiktningen, medan entreprenören betalar efterbesiktningen enligt AB 04 kap 7 §15 andra stycket.</p>
+<p>För konsument gäller andra standardavtal. <strong>ABS 18</strong> är standardavtalet för småhusentreprenad, framtaget av bland andra Konsumentverket, Villaägarnas Riksförbund, Byggföretagen, Gar-Bo och TMF. För mindre jobb används det enklare <strong>Hantverkarformuläret 17</strong>, kompletterat av konsumenttjänstlagen. Enligt KtjL 53 § har vardera parten rätt till slutbesiktning på begäran, och enligt 52 § andra stycket får konsumenten innehålla 10 % av priset tills entreprenaden godkänts vid slutbesiktning — ett starkt incitament för dig som entreprenör att rensa restlistan snabbt.</p>
+<p>Efter godkänd småhusentreprenad får konsumenten som regel bara åberopa fel som antecknats i besiktningsutlåtandet. Undantagen är fel konsumenten påtalat men besiktningsmannen avvisat, dolda fel, samt fel som konsumenten skriftligen reklamerar till entreprenören inom 6 månader från slutbesiktningen. Den allmänna reklamationsrätten sträcker sig upp till 10 år från godkänd slutbesiktning. Slutsatsen är enkel: en noggrant förd restlista och ett korrekt utlåtande avgör vad som över huvud taget kan krävas senare.</p>
+
+<h2>Så bygger du en restlista-mall som håller — de obligatoriska kolumnerna</h2>
+<p>En restlista som spricker beror nästan alltid på att den saknar en kolumn. Dessa fält bör alltid finnas med:</p>
+<ul>
+<li><strong>Löpnummer</strong> — unik referens per punkt, så inget faller mellan stolarna.</li>
+<li><strong>Plats/rum</strong> — var anmärkningen finns, gärna med planritningsreferens.</li>
+<li><strong>Beskrivning</strong> — konkret vad som är fel eller kvarstår.</li>
+<li><strong>Kategori</strong> — fel, brist, kvarstående arbete eller garantiärende.</li>
+<li><strong>Ansvarig</strong> — entreprenör eller namngiven underentreprenör (UE).</li>
+<li><strong>Åtgärdsfrist</strong> — datum, hämtat från fristen i utlåtandet.</li>
+<li><strong>Status</strong> — öppen, pågår, åtgärdad, kvitterad.</li>
+<li><strong>Foto/bilaga</strong> — bild före och efter åtgärd.</li>
+<li><strong>Referens</strong> — punktnummer i besiktningsutlåtandet.</li>
+</ul>
+
+<h3>Tabellexempel</h3>
+<ul>
+<li><strong>1</strong> | Kök | Fog vid diskbänk ofullständig | Brist | UE Rör AB | 2026-09-05 | Öppen | foto_1.jpg | Utl. p. 4</li>
+<li><strong>2</strong> | Hall | Dörrfoder saknas monterat | Kvarstående | Entreprenör | 2026-09-01 | Pågår | foto_2.jpg | Utl. p. 7</li>
+<li><strong>3</strong> | Bad | Golvbrunn ej fastsatt enligt monteringsanvisning | Fel | UE Plattsättning | 2026-09-08 | Öppen | foto_3.jpg | Utl. p. 11</li>
+</ul>
+
+<h2>Rutinen som stänger listan i tid</h2>
+<p>Mallen är bara halva jobbet — rutinen runt den avgör om listan stängs. Så här ser en fungerande process ut:</p>
+<ol>
+<li>Kör <strong>egenkontroll före besiktningen</strong> så att de flesta punkter redan är åtgärdade när besiktningsmannen kommer — det minskar restlistan och risken för underkänt.</li>
+<li>Koppla varje anmärkning i utlåtandet till en rad, en ansvarig och en frist.</li>
+<li>Åtgärda inom skälig tid. Dröjer entreprenören har beställaren rätt att åtgärda på entreprenörens bekostnad.</li>
+<li>Kalla till <strong>efterbesiktning</strong> när punkterna är klara. Den prövar bara om de specifikt antecknade felen är tillräckligt avhjälpta — inga nya fel tas upp där.</li>
+<li>Innehåll betalning tills allt är kvitterat, och dokumentera stängningen skriftligt.</li>
+</ol>
+
+<h2>Vanliga misstag som gör att listan spricker</h2>
+<ul>
+<li><strong>Ingen referens till utlåtandet</strong> — då uppstår tvist om vad som egentligen påtalats.</li>
+<li><strong>Otydlig ansvarig</strong> — "byggaren" räcker inte när tre UE varit på plats.</li>
+<li><strong>Frist saknas</strong> — utan datum blir "snart" aldrig.</li>
+<li><strong>Ingen fotodokumentation</strong> — svårt att bevisa att en punkt faktiskt är åtgärdad.</li>
+<li><strong>Muntliga kvittenser</strong> — stängningen måste vara skriftlig för att hålla juridiskt.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du restlistan digitalt och kopplar den direkt till projektets egenkontroll, så att punkter du redan checkat av inte hamnar på besiktningen i onödan. Varje anmärkning får ansvarig, frist och status, och du kan bifoga foto före och efter åtgärd på raden. När en punkt kvitteras syns det i projektet, och du får en samlad överblick över vad som återstår innan överlämning. Det ersätter inte besiktningsutlåtandet — den juridiska handlingen kommer alltid från besiktningsmannen — men det ger dig arbetsverktyget som säkrar att inget faller mellan stolarna fram till godkänt.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Kan en entreprenad godkännas trots att restlistan inte är tom?</h3>
+<p>Ja. Besiktningsmannen får bara underkänna vid fel eller brister av väsentlig betydelse — sådant som hindrar avsedd användning eller påverkar tekniska system. Mindre restlistepunkter blockerar inte godkännandet enligt AB 04 kap 7, men de ska ändå åtgärdas inom satt frist.</p>
+<h3>Vem betalar efterbesiktningen?</h3>
+<p>Enligt AB 04 kap 7 §15 andra stycket betalar entreprenören besiktningsmannens arvode vid efterbesiktningen. Efterbesiktningen prövar om de antecknade felen är avhjälpta. Åtgärdar entreprenören inte inom skälig tid får beställaren låta åtgärda på entreprenörens bekostnad.</p>
+<h3>Hur länge kan fel åberopas efter godkänd besiktning?</h3>
+<p>Nya fel som inte antecknats kan reklameras skriftligen inom 6 månader från slutbesiktningen. Den allmänna reklamationsrätten löper upp till 10 år från godkänd slutbesiktning, och för dolda fel ansvarar entreprenören hela ansvarstiden ut.</p>
+<h3>Får konsumenten hålla inne pengar tills restlistan är klar?</h3>
+<p>Vid småhusentreprenad får konsumenten enligt konsumenttjänstlagen 52 § andra stycket innehålla 10 % av priset tills entreprenaden godkänts vid slutbesiktning. Det är ett starkt skäl att stänga restlistan snabbt.</p>
+
+<h2>Kom igång</h2>
+<p>Sätt upp restlistan innan besiktningen, inte efter. Börja med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> för att rensa listan i förväg, eller utforska fler verktyg i <a href="/sv/verktyg">ByggExps verktygslåda</a>. Vill du se hur restlista, egenkontroll och överlämning hänger ihop digitalt, <a href="/sv/contact">boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning steg för steg</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i bygg</a> och <a href="/sv/blog/overlamning-relationshandlingar">Överlämning och relationshandlingar</a>.</p>
+`;
+
+const A_RESTLISTA_OVERLAMNING_BYGG_MALL: BlogPost = {
+  _id: "code-"+"restlista-overlamning-bygg-mall",
+  title: "Restlista bygg: mall och rutin för snygg överlämning", slug: "restlista-overlamning-bygg-mall", locale: "sv",
+  excerpt: "Slutbesiktningen är sällan slutet. En strukturerad restlista håller ordning på varje anmärkning tills den är åtgärdad och kvitterad. Här är mallen, kolumnerna och rutinen.", tag: "Besiktning",
+  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_RESTLISTA_OVERLAMNING_BYGG_MALL_HTML,
+  seoTitle: "Restlista bygg – mall och rutin | ByggExp", seoDescription: "Färdig restlista bygg-mall med obligatoriska kolumner och en rutin som stänger anmärkningarna före godkänd överlämning. Plus det juridiska ramverket kort.",
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T16:00:00.000Z", createdAt: "2026-08-19T16:00:00.000Z", updatedAt: "2026-08-19T16:00:00.000Z",
+};
+
+const A_KLIMATDEKLARATION_BYGGNAD_KRAV_HTML = `
+<p>Sedan 2022 måste de flesta nya byggnader i Sverige klimatdeklareras innan projektet kan avslutas. För byggföretag är detta inte en frivillig hållbarhetsövning utan ett hårt myndighetskrav som är kopplat direkt till slutbesked. Och kraven skärps: fram mot 2028 och 2030 breddas deklarationen till hela livscykeln och binds till gränsvärden som avgör vad du över huvud taget får bygga. Här går vi igenom vad som gäller idag och hur du förbereder företaget för det som kommer.</p>
+
+<p>Bygg in klimatdeklarationen som en rutin i varje projekt redan från bygglov. Samla dina mallar och checklistor bland <a href="/sv/verktyg">våra gratis verktyg för byggföretag →</a> så att inget faller mellan stolarna när slutbeskedet ska ut.</p>
+
+<h2>Vad är en klimatdeklaration och varför den finns</h2>
+<p>En klimatdeklaration redovisar en byggnads klimatpåverkan från byggskedet. Kravet är obligatoriskt sedan den 1 januari 2022 enligt Lag (2021:787) om klimatdeklaration för byggnader och gäller byggnader där bygglovsansökan lämnades in till byggnadsnämnden den 1 januari 2022 eller senare. Syftet är att synliggöra byggandets utsläpp och skapa ett underlag för att styra branschen mot lägre klimatpåverkan.</p>
+<p>Poängen att ta med sig är att detta är ett compliance-krav, inte en marknadsföringsfråga. Klimatdeklarationen lämnas till Boverket, som också är tillsynsmyndighet, och den knyter ihop bygglovet med slutbeskedet.</p>
+
+<h2>Vem ansvarar? Byggherrens ansvar i praktiken</h2>
+<p>Det är byggherren som enligt lag ansvarar för att ta fram och lämna in klimatdeklarationen. Byggherren registrerar och skickar in deklarationen till Boverket, och det är också Boverket som utövar tillsyn.</p>
+<p>I praktiken utför ofta en entreprenör eller konsult själva LCA-beräkningen, men det juridiska ansvaret stannar hos byggherren. Är du totalentreprenör och samtidigt byggherre bär du hela ansvaret. Är du underentreprenör bör du ändå säkra att materialdata och produktinformation levereras i tid, eftersom byggherren är beroende av dina underlag för att kunna deklarera korrekt.</p>
+
+<h2>Vilka byggnader omfattas – och undantagen</h2>
+<p>Huvudregeln är enkel: omfattas gör nya byggnader där bygglov söktes den 1 januari 2022 eller senare. Men ett antal byggnadstyper är undantagna. Kontrollera alltid mot Boverkets aktuella lista, men i korthet slipper följande krav idag:</p>
+<ul>
+<li>Byggnader med högst 100 m² bruttoarea (BTA).</li>
+<li>Tillfälliga byggnader som ska användas i högst 2 år.</li>
+<li>Byggnader som inte kräver bygglov.</li>
+<li>Byggnader för industri- eller verkstadsändamål.</li>
+<li>Ekonomibyggnader för jord- och skogsbruk.</li>
+<li>Byggnader för försvar och nationell säkerhet.</li>
+<li>Privatpersoner som bygger utanför näringsverksamhet.</li>
+</ul>
+<p>För dig som bygger åt privatperson är detta viktigt: bygger denne utanför näringsverksamhet finns inget krav, men i de allra flesta yrkesmässiga nybyggnadsprojekt gäller kravet fullt ut.</p>
+
+<h2>Vad ska redovisas idag</h2>
+<p>Dagens klimatdeklaration omfattar enbart byggskedet, det vill säga modulerna A1–A5 enligt EN 15978. A1–A3 är produktskedet (råvaror, transport och tillverkning), A4 är transport till byggarbetsplatsen och A5 är själva bygg- och installationsprocessen.</p>
+<p>De byggdelar som ska redovisas är bärande konstruktion, klimatskärm och innerväggar. Tillsammans fångar de ungefär 80–90 procent av klimatpåverkan i A1–A3, vilket är skälet till att just dessa delar valts ut. Byggnadens driftenergi under användningstiden ingår däremot inte i dagens krav.</p>
+<p>Som dataunderlag används miljövarudeklarationer (EPD) för produkterna samt Boverkets klimatdatabas med generiska värden när specifik produktdata saknas. Ju mer specifik EPD-data du samlar in tidigt, desto mer rättvisande blir resultatet.</p>
+
+<h2>Kopplingen till slutbesked och påföljder</h2>
+<p>Här ligger den skarpa spärren. Byggnadsnämnden får inte utfärda slutbesked förrän byggherren har visat att en klimatdeklaration har lämnats in, eller gjort sannolikt att någon skyldighet att deklarera inte finns. Det är den primära kontrollmekanismen.</p>
+<p>Någon direkt byggsanktionsavgift för en utebliven eller försenad klimatdeklaration finns däremot inte i dagens regelverk – den sanktionsavgift som klimatdeklarationslagen innehåller träffar enbart oriktiga uppgifter i en redan inlämnad deklaration. En byggsanktionsavgift enligt plan- och bygglagen kan dock bli aktuell indirekt, om byggnaden tas i bruk utan slutbesked. Den praktiska risken är minst lika allvarlig: projektet kan helt enkelt inte avslutas. Ett saknat eller försenat underlag betyder utebliven slutbesiktning, försenad inflyttning och bundet kapital. Behandla klimatdeklarationen som en leverabel med samma dignitet som kontrollplanen, inte som en efterhandsformalitet.</p>
+
+<h2>Det stora skiftet: EPBD, utökad deklaration och gränsvärden 2028–2030</h2>
+<p>Nu kommer förändringen. En EU-delegerad förordning som ändrar bilaga III i det omarbetade energiprestandadirektivet (EPBD) antogs av EU-kommissionen den 16 december 2025 och väntas träda i kraft under 2026 efter granskningsperioden i rådet och Europaparlamentet. Den anger hur en byggnads livscykel-GWP ska beräknas.</p>
+<p>Enligt det omarbetade EPBD ska livscykel-GWP beräknas och redovisas i byggnadens energideklaration från den 1 januari 2028 för alla nya byggnader större än 1 000 m², och från den 1 januari 2030 för samtliga nya byggnader. Efter ett regeringsuppdrag från december 2024 levererade Boverket sina lagförslag i Rapport 2026:16 till deadline den 1 juni 2026. Förslaget innebär en utökad klimatdeklaration i kraft från januari 2028 och bindande gränsvärden från januari 2030.</p>
+<p>Regelverket föreslås flyttas in i plan- och bygglagen. Den nuvarande fristående Lag (2021:787) om klimatdeklaration föreslås upphävas i slutet av mars 2027, då de nya PBL-baserade reglerna är tänkta att träda i kraft den 1 april 2027, och ersättas av det EPBD-baserade systemet. Den utökade deklarationen breddar dessutom omfattningen till hela livscykeln, med både användnings- och slutskede samt fler byggdelar som installationer och tekniska system, jämfört med dagens byggskede A1–A5.</p>
+
+<h2>Gränsvärdena som skärps – vad byggföretaget bör räkna med</h2>
+<p>Det som verkligen förändrar spelplanen är att gränsvärden blir bindande. Boverkets rapport 2026 föreslår gränsvärden på ungefär 150–250 kg CO2e/m² BTA för byggnadskategorier som har referensvärden, och omkring 295 kg CO2e/m² BTA för kategorin övriga byggnader utan referensvärden. Detta är förslag, ännu inte antagen lag.</p>
+<p>Som jämförelse föreslog det tidigare, nu pausade, 2023-förslaget ett gränsvärde på 375 kg CO2e/m² BTA (modulerna A1–A5) för flerbostadshus, med start 2025/2027 och successiva skärpningar mot Sveriges nettonollmål 2045. Den tidplanen sköts upp och har ersatts av EPBD-schemat 2028/2030. Referensvärdena som Boverket publicerar är den grund som de kommande gränsvärdena kalibreras mot, och de används redan i klimatkriterier vid offentlig upphandling. Bygger du åt offentlig beställare möter du alltså klimatkraven redan idag i anbudsskedet.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte en LCA-beräkning eller Boverkets inlämningstjänst, men verktyget hjälper dig att inte tappa kravet på vägen. I ByggExp bygger du in klimatdeklarationen som ett obligatoriskt steg i projektets gång, från bygglov till slutbesked, med ansvarig person och deadline kopplad till varje projekt.</p>
+<p>Du samlar EPD:er, produktdata och underlag på ett ställe så att den som gör beräkningen har allt tillgängligt, och du dokumenterar egenkontrollen med en tydlig struktur. Använd <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> för att koppla klimatdeklarationens moment till din övriga kvalitetsdokumentation, så att inget krav hamnar mellan bygglov och slutbesiktning.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vem ansvarar för klimatdeklarationen?</h3>
+<p>Byggherren ansvarar enligt lag för att ta fram och lämna in klimatdeklarationen till Boverket. En entreprenör eller konsult kan utföra beräkningen, men det juridiska ansvaret stannar hos byggherren.</p>
+<h3>Vad händer om klimatdeklarationen inte lämnas in?</h3>
+<p>Byggnadsnämnden får inte utfärda slutbesked förrän byggherren visat att deklarationen är inlämnad, eller gjort sannolikt att skyldighet saknas. Det är den huvudsakliga påföljden – någon direkt byggsanktionsavgift för en utebliven deklaration finns inte, men en sådan kan bli aktuell indirekt om byggnaden tas i bruk utan slutbesked.</p>
+<h3>Vad ska redovisas i dagens klimatdeklaration?</h3>
+<p>Idag redovisas byggskedet, modulerna A1–A5, för bärande konstruktion, klimatskärm och innerväggar. Driftenergi under användningstiden ingår inte. Underlaget bygger på EPD-data och Boverkets klimatdatabas.</p>
+<h3>När börjar gränsvärden och livscykel-GWP gälla?</h3>
+<p>Enligt EPBD ska livscykel-GWP redovisas från 1 januari 2028 för byggnader över 1 000 m² och från 1 januari 2030 för alla nya byggnader. Boverket föreslår bindande gränsvärden från 2030. Beloppen är fortfarande förslag.</p>
+
+<h2>Kom igång</h2>
+<p>Kravet på klimatdeklaration gäller redan idag och spärrar slutbeskedet om det missas, samtidigt som skiftet mot livscykel-GWP och gränsvärden 2028–2030 kräver att du börjar planera för låg klimatpåverkan nu. Bygg in rutinen i varje projekt, samla underlagen tidigt och följ remissarbetet genom 2026–2027. Börja med <a href="/sv/verktyg">våra gratis verktyg</a> eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller ordning på kravet från bygglov till slutbesked.</p>
+
+<p>Relaterat: <a href="/sv/blog/nya-byggregler-2026-energi-isolering">Nya byggregler 2026 – energi och isolering</a>, <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler 2026 och kontrollplanen</a>, <a href="/sv/blog/startbesked-bygglov-process-2026">Startbesked och bygglovsprocessen 2026</a>.</p>
+`;
+
+const A_KLIMATDEKLARATION_BYGGNAD_KRAV: BlogPost = {
+  _id: "code-"+"klimatdeklaration-byggnad-krav",
+  title: "Klimatdeklaration för byggnader – krav och regler 2026", slug: "klimatdeklaration-byggnad-krav", locale: "sv",
+  excerpt: "Klimatdeklarationen är kopplad direkt till slutbeskedet – och kraven breddas mot livscykel-GWP och bindande gränsvärden 2028–2030. Så förbereder du företaget.", tag: "Regelverk",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_KLIMATDEKLARATION_BYGGNAD_KRAV_HTML,
+  seoTitle: "Klimatdeklaration byggnad – krav 2026 | ByggExp", seoDescription: "Klimatdeklaration är obligatorisk för nya byggnader och spärrar slutbeskedet. Se vem som ansvarar, vad som redovisas och hur kraven skärps mot 2028–2030.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T16:03:00.000Z", createdAt: "2026-08-19T16:03:00.000Z", updatedAt: "2026-08-19T16:03:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_RESTLISTA_OVERLAMNING_BYGG_MALL,
+    A_KLIMATDEKLARATION_BYGGNAD_KRAV,
     A_SPACKEL_ATGANG_VAGG_TAK,
     A_LAKT_AVSTAND_TAK_BERAKNING,
     A_SKAFFA_RECENSIONER_OMDOMEN_BYGGFIRMA,
     A_MOMSREGISTRERING_ARBETSGIVARREGISTRERING_BYGGFORETAG,
     A_FARDIGSTALLANDEGRAD_VINSTAVRAKNING_BYGGPROJEKT,
-    A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG,
     A_AVVIKELSEHANTERING_BYGG_MALL,
     A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG,
     A_ARBETSBEREDNING_MALL_BYGG,

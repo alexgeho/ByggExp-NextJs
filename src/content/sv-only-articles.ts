@@ -5,12 +5,13 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'restlista-overlamning-bygg-mall',
+  'klimatdeklaration-byggnad-krav',
   'spackel-atgang-vagg-tak',
   'lakt-avstand-tak-berakning',
   'skaffa-recensioner-omdomen-byggfirma',
   'momsregistrering-arbetsgivarregistrering-byggforetag',
   'fardigstallandegrad-vinstavrakning-byggprojekt',
-  'rivningsavfall-sorteringskrav-bygg',
   'avvikelsehantering-bygg-mall',
   'apd-plan-arbetsplatsdisposition-bygg',
   'arbetsberedning-mall-bygg',

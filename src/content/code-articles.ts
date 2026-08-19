@@ -9538,9 +9538,182 @@ const A_KALKYLERA_FONSTERBYTE_OFFERT: BlogPost = {
   publishedAt: "2026-08-19T08:30:00.000Z", createdAt: "2026-08-19T08:30:00.000Z", updatedAt: "2026-08-19T08:30:00.000Z",
 };
 
+const A_KREDITFORSAKRING_BYGGFORETAG_HTML = `
+<p>En enda obetald storfaktura i en entreprenad kan slå ut marginalen från flera lyckade projekt. När kunden går i konkurs mitt i bygget står du kvar med nedlagt material, betalda underentreprenörer och löner – men ingen betalning. Byggbranschen toppar dessutom konkursstatistiken i Sverige: 2025 gick cirka 1 700 byggbolag i konkurs, vilket motsvarar runt 16 procent av alla företagskonkurser, och sektorn ligger fortsatt högt under 2026. Kundförlust är alltså inte en osannolik otur, utan en risk du bör prissätta och skydda dig mot innan du skriver på det stora kontraktet.</p>
+
+<p>Innan du lämnar anbud – räkna hem jobbet och sätt tydliga betalningsvillkor redan i offerten med <a href="/sv/verktyg/offert-mall">vår gratis offertmall -&gt;</a>. En proffsig offert med rätt villkor är första steget i att skydda din likviditet.</p>
+
+<h2>Varför byggföretag är extra utsatta för kundförluster</h2>
+<p>Bygg skiljer sig från de flesta branscher på flera sätt som var för sig ökar kreditrisken – och tillsammans gör den betydande:</p>
+<ul>
+<li><strong>Långa projekt.</strong> En entreprenad löper ofta över många månader. Din kunds ekonomi kan förändras helt från kontraktsdag till slutfaktura.</li>
+<li><strong>Långa UE-kedjor.</strong> Som underentreprenör är du beroende av att generalentreprenören får betalt av beställaren. En konkurs högt upp i kedjan drar med sig alla under.</li>
+<li><strong>Stora enskilda fakturor.</strong> Ett fåtal kunder kan stå för en stor del av omsättningen. Faller en av dem faller mycket på en gång.</li>
+<li><strong>Låga marginaler.</strong> När nettomarginalen ligger på några få procent krävs det enormt många lyckade projekt för att täcka en enda större kreditförlust.</li>
+</ul>
+<p>Konkursvågen 2024–2026 har pressat hela sektorn. Under 2026 har det totala antalet företagskonkurser visserligen minskat (runt 6 procent), men byggbranschen går mot strömmen: byggkonkurserna har ökat igen (kring 6–7 procent i juni och juli jämfört med året innan) och bygg toppar fortfarande konkurslistan. Månadssiffrorna är volatila och det ekonomiska läget fortsatt tufft. Att lita på att just din kund klarar sig är ingen strategi.</p>
+
+<h2>Kreditkoll först – innan du tar det stora jobbet</h2>
+<p>Det billigaste skyddet mot kundförlust är att göra en kreditupplysning innan du binder upp dig. De ledande aktörerna för kreditkoll på företag i Sverige är UC, Creditsafe och Dun &amp; Bradstreet (tidigare Bisnode). De hämtar data från Skatteverket, Bolagsverket och andra offentliga register.</p>
+<p>I en företagsupplysning läser du bland annat:</p>
+<ul>
+<li><strong>Rating/kreditvärdighet</strong> och rekommenderad kreditlimit.</li>
+<li><strong>Betalningsanmärkningar</strong> och eventuella skuldsaldon hos Kronofogden.</li>
+<li><strong>Årsredovisning</strong> – omsättning, resultat och soliditet över tid.</li>
+<li><strong>Styrelse, firmateckning och moderbolag</strong> – vem tecknar avtalet och vem står bakom?</li>
+</ul>
+<p>En praktisk detalj: UC-förfrågningar registreras och kan i sig påverka omdömet om ett bolag får många på kort tid, medan Creditsafe-upplysningar normalt inte registreras på samma sätt. Komplettera alltid med att kontrollera <strong>F-skatt och momsregistrering</strong> via Skatteverket samt <strong>bolagsstatus och firmateckning</strong> via Bolagsverket. Är kunden ett nystartat AB utan historik – behandla det därefter, begär förskott eller garanti.</p>
+
+<h2>Sätt rätt betalningsvillkor och a-conto-plan</h2>
+<p>Huvudregeln mellan företag enligt räntelagen är att en faktura förfaller senast 30 dagar efter att den skickats eller mottagits. Längre betalningstid som 60 eller 90 dagar gäller bara om du som säljare uttryckligen har godkänt det – en beställare kan inte ensidigt förlänga fristen. Dröjsmålsränta får du ta ut från 30 dagar även om ingen förfallodag avtalats.</p>
+<p>I entreprenad ligger den stora poängen i att inte ligga ute med hela beloppet:</p>
+<ul>
+<li><strong>A conto / delfakturering</strong> enligt en betalningsplan kopplad till färdigställda moment.</li>
+<li><strong>Förskott</strong> vid materialtunga jobb eller osäkra kunder.</li>
+<li><strong>Stopprätt</strong> enligt AB/ABT – rätten att hålla inne prestation vid utebliven betalning.</li>
+<li><strong>Bankgaranti eller förskottsgaranti</strong> vid större kontrakt.</li>
+</ul>
+<p>Ju mindre av totalen du har ute som obetald fordran vid varje given tidpunkt, desto mindre blir smällen om kunden fallerar.</p>
+
+<h2>När kunden ändå inte betalar – lagens verktyg 2026</h2>
+<p>Betalar företagskunden för sent har du flera lagstadgade verktyg. För andra halvåret 2026 är dröjsmålsräntan mellan företag <strong>10 procent per år</strong> (Riksbankens referensränta 2,00 procent plus 8 procentenheter). Utöver räntan har du mot en företagskund alltid rätt till en lagstadgad <strong>förseningsersättning på 450 kr</strong> enligt lagen om ersättning för inkassokostnader.</p>
+<p>Viktigt att veta: de 450 kronorna är en schablon som täcker – och ersätter – rätten till separat påminnelseavgift (60 kr) och inkassokostnad (180 kr). Du kan alltså inte stapla 450 + 60 + 180 kr på varandra; förseningsersättningen konsumerar de avgifterna. Bara om dina faktiska indrivningskostnader överstiger 450 kr kan du kräva det överskjutande beloppet. Går ärendet vidare skickar du ett inkassokrav, som normalt ger 8–14 dagars betalningsfrist. Betalar kunden ändå inte kan du ansöka om betalningsföreläggande hos Kronofogden.</p>
+<p>Men här är den obekväma sanningen: allt detta hjälper föga om kunden är på obestånd. Du kan ha rätt, dröjsmålsränta och ett utslag från Kronofogden – och ändå aldrig se pengarna om bolaget saknar tillgångar och går i konkurs. Det är precis den situationen en kreditförsäkring är byggd för.</p>
+
+<h2>Så fungerar en kreditförsäkring för byggföretag</h2>
+<p>En kreditförsäkring (kundkreditförsäkring) täcker den förlust som uppstår när en kund inte kan betala på grund av insolvens eller långvarigt dröjsmål. Typiskt ersätter försäkringen upp till omkring <strong>90 procent</strong> av förlusten, och inkassohantering av både svenska och utländska fordringar ingår ofta. Försäkringsbolaget sätter en kreditlimit per kund och bevakar kundstocken löpande – en tidig varningssignal du själv sällan hinner fånga.</p>
+<p>Premien anges av marknadsaktörer ofta ligga i storleksordningen <strong>0,1–0,5 procent av den försäkrade omsättningen</strong>. Det är en indikativ branschsiffra – faktisk premie sätts individuellt utifrån bransch, kundstock och riskexponering, så begär alltid en egen offert. Ledande aktörer på den svenska marknaden är Allianz Trade (tidigare Euler Hermes), Atradius och Coface, samt breda försäkringsbolag som Trygg-Hansa.</p>
+
+<h2>Kreditförsäkring vs factoring vs bankgaranti</h2>
+<p>De tre vanligaste skydden löser olika problem och fungerar bäst tillsammans:</p>
+<ul>
+<li><strong>Factoring/fakturaköp</strong> ger dig <em>likviditet</em> – du får betalt direkt i stället för att vänta på förfallodagen. Men köpet sker ibland med regress, vilket innebär att du bär kreditrisken om kunden inte betalar.</li>
+<li><strong>Bankgaranti/förskottsgaranti</strong> säkrar <em>fullgörande</em> – att åtagandet i kontraktet fullföljs.</li>
+<li><strong>Kreditförsäkring</strong> täcker själva <em>förlusten</em> när kunden blir insolvent.</li>
+</ul>
+<p>Vill du ta bort kreditrisken helt kombinerar du gärna factoring utan regress med en kreditförsäkring.</p>
+
+<h2>Checklista innan du skriver på det stora kontraktet</h2>
+<ol>
+<li>Gör en kreditupplysning via UC, Creditsafe eller Dun &amp; Bradstreet.</li>
+<li>Kontrollera F-skatt och moms via Skatteverket.</li>
+<li>Kontrollera bolagsstatus och firmateckning via Bolagsverket.</li>
+<li>Sätt en rimlig kreditlimit per kund utifrån ratingen.</li>
+<li>Skriv alltid avtal med tydliga betalningsvillkor och a-conto-plan.</li>
+<li>Begär förskott eller garanti vid osäker kund eller materialtungt jobb.</li>
+<li>Använd stopprätten enligt AB/ABT om betalning uteblir.</li>
+<li>Bevaka kundens ekonomi löpande under hela projektet.</li>
+<li>Överväg kreditförsäkring för dina största exponeringar.</li>
+<li>Agera dag 1 vid dröjsmål – påminnelse, dröjsmålsränta och förseningsersättning direkt.</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att bygga in kreditskyddet i själva affärsflödet i stället för att hantera det i efterhand. Du sätter tydliga betalningsvillkor och a-conto-planer redan i offerten, så att villkoren följer med hela vägen till faktura. Du får samlad koll på vilka kunder som har utestående belopp och hur mycket du ligger ute med per projekt, vilket gör det lättare att sätta rimliga limiter och agera tidigt vid dröjsmål. Själva kreditupplysningen och kreditförsäkringen tecknar du hos UC, Creditsafe respektive försäkringsbolagen – ByggExp ersätter inte dem, men ger dig underlaget och strukturen som gör riskbedömningen enkel att göra varje gång.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad kostar en kreditförsäkring för ett byggföretag?</h3>
+<p>Marknadsaktörer anger ofta en indikativ premie på 0,1–0,5 procent av den försäkrade omsättningen. Den faktiska premien sätts individuellt utifrån bransch, kundstock och riskexponering, så begär alltid en egen offert från exempelvis Allianz Trade, Atradius, Coface eller Trygg-Hansa.</p>
+<h3>Hur mycket ersätter försäkringen om kunden går i konkurs?</h3>
+<p>En kundkreditförsäkring ersätter typiskt upp till omkring 90 procent av förlusten vid kundens insolvens eller utebliven betalning. Inkassohantering av svenska och utländska fordringar ingår ofta, och en självrisk tillämpas.</p>
+<h3>Vilken dröjsmålsränta får jag ta ut mot en företagskund 2026?</h3>
+<p>För andra halvåret 2026 är den lagstadgade dröjsmålsräntan mellan företag 10 procent per år, baserat på Riksbankens referensränta på 2,00 procent plus 8 procentenheter. Ni kan avtala om högre ränta, men aldrig lägre än lagens nivå mellan näringsidkare.</p>
+<h3>Kan jag lägga påminnelseavgift och inkassokostnad ovanpå förseningsersättningen på 450 kr?</h3>
+<p>Nej. Mot en företagskund är de 450 kronorna en schablon som täcker och ersätter både påminnelseavgiften (60 kr) och inkassokostnaden (180 kr). Du kan alltså inte kräva 450 + 60 + 180 kr – bara faktiska indrivningskostnader som överstiger 450 kr kan läggas till.</p>
+<h3>Räcker det inte med kreditkoll i stället för försäkring?</h3>
+<p>Kreditkoll minskar risken men eliminerar den inte – ett bolag med god rating kan förändras under ett långt entreprenadprojekt. Kreditkoll och kreditförsäkring kompletterar varandra: kollen sållar bort de uppenbara riskerna, försäkringen fångar upp de förluster du inte kunde förutse.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med grunden: sätt tydliga betalningsvillkor och en a-conto-plan redan i anbudet med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>. Vill du se hur ByggExp hjälper dig hålla koll på utestående belopp och kreditrisk per kund? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a>, <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a> och <a href="/sv/blog/factoring-byggforetag">Factoring för byggföretag</a>.</p>
+`;
+
+const A_KREDITFORSAKRING_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"kreditforsakring-byggforetag",
+  title: "Kreditförsäkring för byggföretag – skydda dig mot kundförluster", slug: "kreditforsakring-byggforetag", locale: "sv",
+  excerpt: "En obetald storfaktura kan slå ut marginalen från flera projekt. Så skyddar du byggföretaget mot kundförluster 2026 – kreditkoll, betalningsvillkor och kreditförsäkring.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/8fakturor.webp", contentHtml: A_KREDITFORSAKRING_BYGGFORETAG_HTML,
+  seoTitle: "Kreditförsäkring byggföretag | ByggExp", seoDescription: "Så skyddar du ditt byggföretag mot kundförluster 2026: kreditkoll, betalningsvillkor, lagens verktyg och kreditförsäkring. Praktisk guide för hantverkare och entreprenörer.",
+  seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T09:00:00.000Z", createdAt: "2026-08-19T09:00:00.000Z", updatedAt: "2026-08-19T09:00:00.000Z",
+};
+
+const A_MASTE_HA_KOLLEKTIVAVTAL_BYGG_HTML = `
+<p>Ska du anställa din första yrkesarbetare och undrar om du måste teckna kollektivavtal med Byggnads? Kort svar: nej, det finns inget lagkrav i Sverige på att ett byggföretag ska ha kollektivavtal. Du får anställa och driva verksamhet helt utan – det är juridiskt tillåtet. Men frånvaron av lagkrav betyder inte att frågan är ointressant, för det finns flera praktiska och kommersiella skäl att teckna ändå.</p>
+
+<p>Innan du anställer bör du ha ordning på grunderna. Skriv ett korrekt anställningsavtal med <a href="/sv/verktyg/anstallningsavtal-mall">vår gratis anställningsavtal-mall -&gt;</a> så att villkoren är dokumenterade oavsett om du har kollektivavtal eller inte.</p>
+
+<h2>Kort svar: lagen kräver inget – men verkligheten kan göra det</h2>
+<p>Att inget lagkrav finns är utgångspunkten. Men tre saker gör att många byggföretag ändå tecknar avtal:</p>
+<ul>
+<li><strong>Facket kan agera.</strong> Har du anställda utan kollektivavtal kan Byggnads vidta stridsåtgärder – ta ut personal i strejk eller sätta företaget i blockad – för att tvinga fram ett avtal. Det är fackets huvudsakliga påtryckningsmedel just eftersom lag saknas.</li>
+<li><strong>Beställare kräver det ofta.</strong> Som underentreprenör kan huvudentreprenören eller beställaren avtalsvägen kräva att du har kollektivavtal, även om lagen inte gör det. Vid större entreprenader och offentlig upphandling är det ofta ett inträdeskrav.</li>
+<li><strong>Avtalsförsäkringar följer inte automatiskt.</strong> Utan kollektivavtal saknar du avtalspension och avtalsförsäkringar – något som kan påverka din förmåga att rekrytera och behålla folk.</li>
+</ul>
+
+<h2>Vad är ett kollektivavtal – och skillnaden mot hängavtal?</h2>
+<p>Ett kollektivavtal är ett avtal mellan arbetsgivarsidan och facket som reglerar löner, försäkringar, arbetstider och yrkesregler för en hel bransch. Det finns två vägar att bindas av ett sådant avtal:</p>
+<ol>
+<li><strong>Medlemskap i en arbetsgivarorganisation.</strong> Går du med i exempelvis Byggföretagen blir du automatiskt bunden av branschavtalet.</li>
+<li><strong>Hängavtal direkt med Byggnads.</strong> Du tecknar ett hängavtal med Byggnads lokala region och förbinder dig att följa samma kollektivavtal – utan att vara medlem i någon arbetsgivarorganisation.</li>
+</ol>
+<p>Byggavtalet är Byggnads största kollektivavtal och omfattar cirka 100 000 yrkesarbetare. Men det finns fler avtal beroende på vad ditt företag gör: Glasmästeriavtalet, Entreprenadmaskinavtalet, Plåt- och Ventilationsavtalet, Teknikinstallationsavtalet VVS &amp; Kyl, Måleriavtalet, Månadslöneavtalet (Fastigo) och Bemanningsavtalet. Rätt avtal beror på vilket yrke och vilken verksamhet du bedriver – en målerifirma och en VVS-installatör hamnar inte under samma avtal.</p>
+
+<h2>Kan du anställa utan kollektivavtal?</h2>
+<p>Ja. Det är fullt lagligt att ha anställda utan att teckna kollektivavtal. Men du behöver känna till vad som ändå gäller:</p>
+<ul>
+<li><strong>Facket kan sätta press.</strong> Som nämnts kan Byggnads ta till strejk eller blockad för att förmå dig att teckna avtal.</li>
+<li><strong>MBL gäller ändå.</strong> Även utan kollektivavtal måste du förhandla med facket enligt medbestämmandelagen om en anställd är fackligt ansluten och frågor uppstår om anställningen.</li>
+<li><strong>Grundskyddet finns kvar.</strong> Lagstadgat skydd via Försäkringskassan – sjukdom, arbetsskada, föräldraledighet – gäller alla som bor, arbetar och betalar skatt i Sverige, oavsett kollektivavtal.</li>
+<li><strong>Inga avtalsförsäkringar.</strong> Du har ingen skyldighet att teckna tjänstepension eller avtalsförsäkringar – men de uppstår inte heller automatiskt.</li>
+</ul>
+
+<h2>Vad innebär det att teckna kollektivavtal eller hängavtal?</h2>
+<p>Tecknar du avtal binder du dig till en rad skyldigheter. Lönerna följer Byggavtalet 2025–2027, som gäller 1 maj 2025 till 30 april 2027 och tecknades i maj 2025 mellan Byggnads och Byggföretagen. Avtalet följer märket med totalt 6,4 % löneökning över två år – 3,4 % första året och 3,0 % andra året – och pensionsavsättningen höjs med 0,1 procentenheter per år. Genomsnittslönen anges till 39 775 kr per månad och ökar med cirka 2 504 kr över perioden.</p>
+<p>Utöver lön blir du skyldig att teckna avtalsförsäkringar och avtalspension – Avtalspension SAF-LO samt AFA-försäkringar – via Fora. Du betalar premien till Fora, som förmedlar den vidare till AFA Försäkring. Detta är obligatoriskt så snart kollektivavtal eller hängavtal finns. Du binder dig också till avtalets ordnings- och yrkesregler. För att teckna hängavtal kontaktar du Byggnads region där verksamheten finns.</p>
+
+<h2>Utan kollektivavtal – vad gäller för försäkringar och pension?</h2>
+<p>Ett företag utan kollektivavtal har ingen lagstadgad skyldighet att teckna tjänstepension eller avtalsförsäkringar. Du kan dock frivilligt teckna ett försäkringsavtal med Fora – men då utan omställningsstöd och omställningsförsäkring, som ingår för den som har kollektivavtal.</p>
+<p>Tänk på att förmåner du erbjuder frivilligt är ensidiga utfästelser. De kan ändras eller dras in, till skillnad från kollektivavtalade villkor. Många byggföretag väljer ändå att teckna Fora-avtal frivilligt just för att kunna erbjuda konkurrenskraftig pension och attrahera personal i en bransch där kompetens är svår att hitta.</p>
+
+<h2>Egenföretagare och underentreprenörer</h2>
+<p>Är du egenföretagare utan egna anställda omfattas du inte av något krav på kollektivavtal. Men när en byggherre eller huvudentreprenör anlitar dig som UE gäller andra regler på arbetsplatsen. Alla som är fysiskt verksamma på bygget ska registreras i den elektroniska personalliggaren – ett krav från Skatteverket enligt skatteförfarandelagen som hanteras via ID06 och avser individer, inte företag. Huvudentreprenören för dessutom en egen förteckning över anlitade underentreprenörer (UE-lista). Inget av detta anmäls till Byggnads – det är skatte- och entreprenadregler, inte fackliga krav.</p>
+<p>Och som underentreprenör kan beställaren kräva att du har kollektivavtal via avtalet, för att slippa egna arbetskonflikter på arbetsplatsen. Vid stora projekt och offentlig upphandling är det därför ofta i praktiken en förutsättning för att över huvud taget få uppdraget – oavsett vad lagen säger.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp tar inte ställning för dig i avtalsfrågan – men vi ser till att din arbetsgivardokumentation är i ordning oavsett hur du väljer. I ByggExp samlar du anställningsavtal, tidrapporter och personaluppgifter på ett ställe, så att du snabbt kan visa villkor och arbetad tid om Byggnads, en beställare eller Skatteverket frågar. Har du kollektivavtal blir det enklare att hålla koll på att rapporterad tid och lön stämmer mot avtalets nivåer. Har du inte det, får du ändå ordning på det lagstadgade – korrekta avtal och spårbar tidredovisning – som gäller alla arbetsgivare i byggbranschen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag ha kollektivavtal för att anställa i byggbranschen?</h3>
+<p>Nej. Det finns inget lagkrav på kollektivavtal i Sverige. Du får anställa och driva byggföretag helt utan – men Byggnads kan vidta stridsåtgärder och beställare kräver ofta avtal vid större uppdrag.</p>
+<h3>Vad är skillnaden mellan kollektivavtal och hängavtal?</h3>
+<p>Blir du medlem i en arbetsgivarorganisation som Byggföretagen binds du automatiskt av branschavtalet. Ett hängavtal tecknar du direkt med Byggnads region och förbinder dig då att följa samma kollektivavtal utan att vara medlem i arbetsgivarorganisationen.</p>
+<h3>Kan Byggnads tvinga mig att teckna avtal?</h3>
+<p>Byggnads kan inte tvinga fram ett avtal via lag, men kan använda stridsåtgärder som strejk eller blockad som påtryckning om du har anställda. Det är fackets huvudsakliga verktyg just eftersom lagkrav saknas.</p>
+<h3>Måste jag betala tjänstepension utan kollektivavtal?</h3>
+<p>Nej, det finns ingen lagstadgad skyldighet. Du kan frivilligt teckna försäkringsavtal med Fora, men då utan omställningsstöd. Det lagstadgade grundskyddet via Försäkringskassan gäller dina anställda oavsett.</p>
+
+<h2>Kom igång</h2>
+<p>Oavsett om du tecknar kollektivavtal eller inte behöver varje anställning ett tydligt avtal. Börja med <a href="/sv/verktyg/anstallningsavtal-mall">vår gratis anställningsavtal-mall</a> och få villkoren på plats direkt. Vill du se hur ByggExp håller ordning på avtal, tid och personal? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag</a>, <a href="/sv/blog/anstallningsavtal-mall-bygg">Anställningsavtal mall för bygg</a>, <a href="/sv/blog/arbetstidslagen-bygg">Arbetstidslagen i byggbranschen</a>.</p>
+`;
+
+const A_MASTE_HA_KOLLEKTIVAVTAL_BYGG: BlogPost = {
+  _id: "code-"+"maste-ha-kollektivavtal-bygg",
+  title: "Måste man ha kollektivavtal i byggbranschen?", slug: "maste-ha-kollektivavtal-bygg", locale: "sv",
+  excerpt: "Det finns inget lagkrav på kollektivavtal i byggbranschen. Men facket kan vidta stridsåtgärder och beställare kräver ofta avtal – här är vad som faktiskt gäller.", tag: "Arbetsgivare",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_MASTE_HA_KOLLEKTIVAVTAL_BYGG_HTML,
+  seoTitle: "Måste bygg ha kollektivavtal? | ByggExp", seoDescription: "Finns det lagkrav på kollektivavtal för byggföretag? Nej – men Byggnads kan agera och beställare kräver det ofta. Så fungerar kollektivavtal, hängavtal och Fora.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T09:03:00.000Z", createdAt: "2026-08-19T09:03:00.000Z", updatedAt: "2026-08-19T09:03:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_KREDITFORSAKRING_BYGGFORETAG,
+    A_MASTE_HA_KOLLEKTIVAVTAL_BYGG,
     A_ACKORDSLON_BYGG,
     A_BEHORIGHETER_CERTIFIERINGAR_LONAR_SIG,
     A_REKLAMATION_BEMOTA_FELKRAV_ENTREPRENAD,

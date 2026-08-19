@@ -5,6 +5,17 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'ackordslon-bygg',
+  'behorigheter-certifieringar-lonar-sig',
+  'reklamation-bemota-felkrav-entreprenad',
+  'offentlig-upphandling-bygg-lou',
+  'saga-upp-anstalld-personliga-skal-bygg',
+  'omvand-byggmoms-bokfora',
+  'resursplanering-bygg',
+  'verktyg-direktavdrag-eller-avskrivning',
+  'id06-bestalla-kort-steg-for-steg',
+  'fuktsakerhetsplan-byggaf',
+  'kalkylera-fonsterbyte-offert',
   'debiteringsgrad-bygg',
   'omvand-byggmoms-underentreprenor',
   'offert-till-betald-faktura-flode',

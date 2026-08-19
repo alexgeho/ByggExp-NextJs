@@ -8650,9 +8650,908 @@ const A_A_PRISER_BYGG: BlogPost = {
   publishedAt: "2026-08-19T07:30:00.000Z", createdAt: "2026-08-19T07:30:00.000Z", updatedAt: "2026-08-19T07:30:00.000Z",
 };
 
+const A_ACKORDSLON_BYGG_HTML = `
+<p>Ackord är byggbranschens klassiska prestationslön: laget får betalt för utfört arbete i stället för nedlagd tid, och tar samtidigt större ansvar för planering och produktionsflöde. Rätt använt driver det produktivitet och ger en förutsägbar styckkostnad – men Byggavtalet ställer formella krav på överenskommelse, redovisning och granskning som du som arbetsgivare måste hålla ordning på.</p>
+
+<p>Grunden i allt ackord är dokumenterade mängder och tydliga underlag. Håll koll på arbetade timmar och utförda moment redan från start med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -&gt;</a> så att slutavräkningen bygger på fakta, inte minnesbilder.</p>
+
+<h2>Vad är ackordslön?</h2>
+<p>Vid ackord (prestationslön) följer lönen produktionen, inte klockan. Skillnaden mot tim- och månadslön är att arbetslaget får betalt för de mängder de faktiskt utför, och därmed också delar ansvaret för att planera arbetet och hålla flödet uppe. Ackord ger normalt högre lön än tim- eller resultatlön, just eftersom laget bär mer av risken och styrningen.</p>
+<p>Reglerna finns i Byggavtalet, sektorns kollektivavtal mellan Byggnads och Byggföretagen. Den aktuella avtalsperioden löper 1 maj 2025–30 april 2027 och omfattar runt 100 000 yrkesarbetare. Som arbetsgivare är det Byggavtalets mätnings- och ackordsregler du har att förhålla dig till – ackord är inte en fri intern lönemodell utan ett reglerat system.</p>
+
+<h2>Lönegolvet du måste hålla</h2>
+<p>Ackord fritar dig inte från avtalade lägstanivåer. Grundlönen för yrkesarbetare angavs vid 2025 års revision till 196 kr/tim, alternativt 34 104 kr/mån. Den utgående (individuella) lönen räknades då upp med 7,54 kr/tim, motsvarande 1 312 kr/mån.</p>
+<p>Löneökningen är totalt 6,4 % över två år: 3,4 % från 1 maj 2025 och 3,0 % från 1 maj 2026. Vid andra årets revision höjs utgående lön med 6,85 kr/tim, ungefär 1 192 kr/mån. Poängen för dig som räknar ackord: överenskommelsen måste utformas så att lönen aldrig underskrider avtalad lägstanivå, oavsett hur mängderna faller ut.</p>
+
+<h2>Ackordssedeln och ackordsöverenskommelsen</h2>
+<p>Ackord ska regleras <strong>före</strong> arbetet påbörjas. Ackordsöverenskommelsen (ackordssedeln) är det dokument som binder parterna, och den bör innehålla åtminstone:</p>
+<ul>
+<li>Vilken prislista/ackordslista som gäller – den ska båda parter vara överens om.</li>
+<li>Arbetets omfattning och avgränsning – vad som ingår i ackordet.</li>
+<li>Nivå för löpande förskott under arbetets gång.</li>
+<li>Hur mängder ska mätas och dokumenteras.</li>
+</ul>
+<p>Byggnads rekommenderar att ackordslönen räknas fram med en ackordslista/prislista som båda parter godkänt, så att resultatet blir rättvist och transparent för både laget och företaget. En skriftlig överenskommelse skyddar dig mot tvist när slutsedeln ska stämmas av – utan godkänd prislista blir slutavräkningen en förhandling i efterhand.</p>
+
+<h2>Så räknas ackordet – prislista, förskott och slutavräkning</h2>
+<p>Processen följer ett fast mönster:</p>
+<ol>
+<li><strong>Ackordssedel tecknas</strong> innan arbetet startar.</li>
+<li><strong>Förskott betalas löpande</strong> via förskottssedlar medan arbetet pågår.</li>
+<li><strong>Slutavräkning görs vid avslut</strong> (slutsedel): ackordssumman räknas fram utifrån utförda mängder och prislistan, tidigare utbetalda förskott dras av, och ackordsöverskottet fördelas i laget via en fördelningslista.</li>
+</ol>
+<p>Ett förenklat exempel: laget utför mängder som enligt prislistan ger en ackordssumma på 900 000 kr. Under perioden har 780 000 kr betalats ut i förskott. Vid slutavräkning återstår då 120 000 kr att fördela som ackordsöverskott enligt fördelningslistan. Byggnads tillhandahåller en ackordsberäknare för lagbasar som räknar ackordet enligt de överenskomna listorna – ett stöd som gör det lättare att stämma av era egna siffror mot lagets.</p>
+
+<h2>Granskning och granskningsarvode</h2>
+<p>Vid ackord anses granskning ha skett genom att lokalavdelningen tar del av löneunderlaget – ackordsöverenskommelse, ackordslöneuppgifter, fördelningslistor med mera. Som arbetsgivare är du skyldig att lämna ackordsunderlaget i tid; det är en avtalsförpliktelse, inte något frivilligt. Om underlaget dröjer kan facket driva på med sanktion/strafflön för att skynda på redovisningen.</p>
+<p>Granskningsarvodet är 1,5 % av arbetarens ackordssumma vid ackord (och 1,5 % av lönen vid timlön). På byggavtalets område dras arvodet från arbetarens lön, medan arbetsgivaren betalar det på anläggningsavtalet. Oavsett vilket är det du som håller inne beloppet och redovisar det till fackets mätningskontor. Sammantaget kan mätnings- och granskningsarvode uppgå till som mest omkring 2 % av lönesummorna, räknat på både fasta och rörliga delar i ackordet.</p>
+
+<h2>Ackord ur arbetsgivarperspektiv – fördelar och risker</h2>
+<p>Fördelarna är tydliga: högre produktivitet, ett lag som själv driver flödet och en styckkostnad du kan kalkylera mot i anbud. Riskerna ligger i baksidan av samma mynt. Hög produktionstakt får inte gå ut över kvalitet eller arbetsmiljö, och underlaget måste vara korrekt och likabehandlande i hela laget – felaktiga eller sena fördelningslistor blir snabbt en tvist. Ackord kräver alltså mer administration och dokumentation än vanlig timlön, inte mindre.</p>
+
+<h2>Checklista innan ni sätter ackord</h2>
+<ul>
+<li>Skriftlig ackordsöverenskommelse tecknad före start.</li>
+<li>Prislista/ackordslista som båda parter godkänt.</li>
+<li>Överenskommen förskottsnivå och rutin för förskottssedlar.</li>
+<li>Dokumenterade mängder och timmar under hela arbetet.</li>
+<li>Rutin för att lämna ackordsunderlag till lokalavdelningen i tid.</li>
+<li>Kontroll att ackordsutfallet inte underskrider avtalad lägstalön.</li>
+<li>Hantering av granskningsarvode (avdrag på bygg, arbetsgivaren betalar på anläggning) och redovisning till mätningskontoret.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte ackordsberäkning eller fackets mätningskontor, men vi hjälper dig med underlaget som allt ackord vilar på. Med strukturerad tidrapportering och mängddokumentation samlar du timmar och utförda moment löpande, så att slutsedeln och fördelningslistan bygger på spårbara siffror. Det gör det enklare att lämna korrekt ackordsunderlag i tid och att undvika efterhandsdiskussioner om vad som faktiskt utförts. Sätt ackordsvillkoren i överenskommelsen som vanligt – använd ByggExp för att hålla ordning på det som ligger till grund för avräkningen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får ackordslönen bli lägre än avtalad lägstalön?</h3>
+<p>Nej. Ackord är en prestationslön ovanpå de avtalade nivåerna, och utfallet får inte underskrida Byggavtalets lägstanivå. Utforma överenskommelsen så att lönegolvet alltid hålls.</p>
+<h3>Vem betalar granskningsarvodet?</h3>
+<p>Arvodet är 1,5 % av ackordssumman. På byggavtalets område dras det från arbetarens lön, på anläggningsavtalet betalar arbetsgivaren det. I båda fallen är det arbetsgivaren som håller inne beloppet och redovisar det till fackets mätningskontor.</p>
+<h3>Vad händer om vi lämnar ackordsunderlaget för sent?</h3>
+<p>Att ta fram ackordsunderlag är en avtalsförpliktelse. Om underlaget dröjer kan facket driva på med sanktion eller strafflön för att skynda på redovisningen, så rutinen bör vara på plats innan arbetet startar.</p>
+<h3>Behöver ackordsöverenskommelsen vara skriftlig?</h3>
+<p>Ackord ska regleras före arbetet påbörjas, och en skriftlig ackordssedel med godkänd prislista skyddar båda parter när slutsedeln ska stämmas av. Muntliga upplägg gör slutavräkningen till en förhandling i efterhand.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att få ordning på timmar och mängder från dag ett – det är underlaget som avgör hur smidig slutavräkningen blir. Testa <a href="/sv/verktyg/tidrapport-mall">vår tidrapport-mall</a> och boka en <a href="/sv/contact">demo</a> så visar vi hur du samlar spårbara underlag för ackord och granskning.</p>
+
+<p>Relaterat: <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag</a>, <a href="/sv/blog/arbetstidslagen-bygg">Arbetstidslagen i bygg</a>, <a href="/sv/blog/yrkesbevis-bygg-larling">Yrkesbevis och lärling i bygg</a>.</p>
+`;
+
+const A_ACKORDSLON_BYGG: BlogPost = {
+  _id: "code-"+"ackordslon-bygg",
+  title: "Ackordslön i bygg – så fungerar det (arbetsgivarens guide 2026)", slug: "ackordslon-bygg", locale: "sv",
+  excerpt: "En konkret genomgång av ackordslön, ackordssedel och granskningsarvode ur arbetsgivarens perspektiv, i linje med Byggavtalet 2025–2027.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_ACKORDSLON_BYGG_HTML,
+  seoTitle: "Ackordslön i bygg – så fungerar det | ByggExp", seoDescription: "Så fungerar ackord, ackordssedel, slutavräkning och granskningsarvode enligt Byggavtalet – en praktisk guide för byggföretag som arbetsgivare 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T08:00:00.000Z", createdAt: "2026-08-19T08:00:00.000Z", updatedAt: "2026-08-19T08:00:00.000Z",
+};
+
+const A_BEHORIGHETER_CERTIFIERINGAR_LONAR_SIG_HTML = `
+<p>I Sverige är förvånansvärt få hantverksbehörigheter faktiskt lagkrav. Det betyder inte att de är valfria. Beställare, försäkringsbolag och offentlig upphandling avgör i praktiken vilka behörigheter som krävs för att du ens ska få lämna anbud – och utan rätt dokumentation kan ett vattenskadejobb sluta med att försäkringen inte betalar en krona. Den här artikeln är en checklista över de behörigheter som faktiskt vinner jobb 2026, och vilka du kan lägga mindre krut på.</p>
+
+<p>Oavsett behörighet är dokumenterad egenkontroll det som knyter ihop kvalitet och försäkringsersättning – ladda ner <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a> och koppla den till varje uppdrag.</p>
+
+<h2>Våtrumsbehörighet – GVK, BKR, Säker Vatten och MVK</h2>
+<p>Till skillnad från el och VVS finns det inget lagkrav på att vara certifierad för att renovera ett våtrum. I praktiken är det ändå avgörande. GVK, Byggkeramikrådet (BKR) och Säker Vatten har blivit de facto-standard, och det är just dessa branschregler som försäkringsbolag och beställare kräver. Utan behörigt utfört tätskikt och tillhörande kvalitetsdokument kan försäkringsersättningen vid en vattenskada helt utebli.</p>
+<p>Behörigheterna delar upp arbetet efter moment:</p>
+<ul>
+<li><strong>GVK</strong> – tätskikt, golv och plastmatta.</li>
+<li><strong>BKR</strong> – kakel och klinker (byggkeramik).</li>
+<li><strong>Säker Vatten</strong> – rör och VVS-installationer.</li>
+<li><strong>MVK</strong> – måleri i våtrum.</li>
+</ul>
+<p>Poängen: ett vanligt badrumsjobb kräver ofta flera behörigheter samtidigt. En komplett badrumsrenovering rör tätskikt, kakel och rör – tre olika regelverk. En sak som ofta blandas ihop: auktorisationerna (GVK, BKR, Säker Vatten) gäller företaget, medan branschlegitimation och personcertifikat gäller den enskilde montören. Du behöver alltså både ett auktoriserat företag och behörig personal på plats.</p>
+<p>BKR-behörighet kräver till exempel att företaget alltid har minst en behörig arbetsledare och en behörig plattsättare anställd, klarar en kreditkontroll och omcertifierar vart femte år. Saknar plattsättaren yrkesbevis måste kompetensen valideras via ett anvisat utbildningsföretag.</p>
+
+<h2>Nyheterna 2026 – Säkra Våtrum 2026 och Säker Vatten 2026:1</h2>
+<p>De uppdaterade branschreglerna <strong>Säkra Våtrum 2026</strong> är samordnade mellan GVK, BKR, MVK och Säker Vatten och tillämpas på installationer som startar efter 1 januari 2026. Övergångsregel: tätskikt får utföras enligt de äldre reglerna (2021:1) om bygglov beviljats före 1 januari 2026.</p>
+<p>Konkreta ändringar att ha koll på:</p>
+<ul>
+<li>Tillåten golvlutning mot golvbrunn i duschplats ändras till <strong>minst 7 mm/m och max 30 mm/m</strong> (tidigare 7–20 mm/m).</li>
+<li>Minsta avstånd mellan rörgenomföring och tak sänks från 100 mm till <strong>60 mm</strong>.</li>
+<li>Förtydliganden kring dörröppning och våtzoner.</li>
+</ul>
+<p>Parallellt gäller <strong>Säker Vatteninstallation 2026:1</strong> från 1 januari 2026. Ett auktoriserat VVS-företag ska ha minst en heltidsanställd montör med certifikat eller validering, personalen ska ha branschlegitimation, och ett digitalt intyg ska lämnas till beställaren inom fyra veckor efter avslutat arbete. Det digitala intyget är inte byråkrati för sakens skull – det är beviset beställaren behöver om något går fel.</p>
+
+<h2>Heta Arbeten – behörigheten som avgör om försäkringen betalar</h2>
+<p>Heta Arbeten är inte ett lagkrav, utan ett försäkringskrav – och det gör den minst lika viktig. Försäkringsbolagens villkor kräver giltigt certifikat för alla som utför brandfarliga heta arbeten på tillfällig arbetsplats: svetsning, skärande bearbetning, lödning, torkning, uppvärmning och rondellarbete. Kravet gäller även brandvakten och den tillståndsansvarige.</p>
+<p>Utbildningen är en endagsutbildning i Brandskyddsföreningens säkerhetsregler och kostar typiskt runt 2 500–2 900 kr per person. Certifikatet är giltigt i 5 år och går ut sista dagen i angiven månad. Saknas giltigt certifikat vid en brand minskas försäkringsersättningen markant. Med tanke på kostnaden – runt 2 500 kr mot potentiellt hela ersättningen vid en brand – är detta en av de mest lönsamma behörigheterna att hålla aktuell.</p>
+
+<h2>Kontrollansvarig (KA) enligt PBL – N och K</h2>
+<p>Kontrollansvarig krävs enligt plan- och bygglagen för de flesta åtgärder som kräver bygglov, rivningslov, marklov eller anmälan. Byggnadsnämnden kan göra undantag för enklare projekt. En KA måste vara certifierad av ett ackrediterat organ – RISE eller Kiwa, båda ackrediterade av Swedac – och certifieringen är giltig i 5 år förutsatt att en årlig rapport lämnas in.</p>
+<p>Det finns två behörighetsnivåer:</p>
+<ul>
+<li><strong>N (normal art)</strong> – bland annat en- och tvåbostadshus och byggnader med högst två våningar. Kräver minst 3 års erfarenhet av projektering, arbetsledning eller besiktning samt teknisk utbildning, till exempel högskoleingenjörsexamen (120 hp) eller motsvarande äldre utbildning.</li>
+<li><strong>K (komplicerad art)</strong> – flerbostadshus, industri och avancerade tekniska lösningar.</li>
+</ul>
+<p>Viktigt: en KA ska vara självständig gentemot den som utför arbetet. Du kan alltså inte vara kontrollansvarig för ditt eget bygge – rollen bygger på oberoende.</p>
+
+<h2>Checklista – välj rätt behörighet för uppdraget</h2>
+<p>Matcha behörighet mot uppdragstyp:</p>
+<ol>
+<li><strong>Badrumsrenovering</strong> – GVK och/eller BKR för tätskikt och kakel, Säker Vatten för rör.</li>
+<li><strong>Stambyte / VVS</strong> – Säker Vatten (företag) plus branschlegitimation (montör).</li>
+<li><strong>Svets, tak eller tätskikt med låga</strong> – Heta Arbeten för utförare, brandvakt och tillståndsansvarig.</li>
+<li><strong>Nybyggnad / tillbyggnad med bygglov</strong> – kontrollansvarig, nivå N eller K beroende på projekt.</li>
+<li><strong>Grundkrav på i princip varje bygge</strong> – ID06 och F-skatt. Utan dem kommer du varken in på arbetsplatsen eller vinner offentliga anbud.</li>
+</ol>
+
+<h2>Vanliga misstag som kostar jobb och pengar</h2>
+<p>Tre återkommande misstag är värda att undvika. Det första är att blanda ihop företagsauktorisation och personcertifikat – du behöver båda, inte det ena eller det andra. Det andra är att missa 5-årscyklerna: både Heta Arbeten, KA-certifiering och BKR-omcertifiering löper ut efter fem år, och ett utgånget certifikat är lika illa som inget alls den dag försäkringsbolaget frågar. Det tredje är att utföra tätskikt utan att dokumentera egenkontrollen – arbetet kan vara korrekt utfört, men utan papper på det står du svag när ersättningen ska prövas.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte själva behörigheten – den utfärdas alltid av branschorganet eller certifieringsorganet. Det ByggExp gör är att hålla ihop dokumentationen som behörigheten kräver. Du kopplar egenkontroll till varje uppdrag, samlar foton och intyg på ett ställe och kan visa beställaren och försäkringsbolaget att arbetet är utfört enligt gällande branschregler. På så sätt blir behörigheten värd något även efteråt, när ersättningsfrågan avgörs, i stället för att kvitton och kontrollpunkter ligger utspridda i telefonen och mejlkorgen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag vara certifierad för att renovera våtrum?</h3>
+<p>Nej, det finns inget lagkrav – till skillnad från el och VVS. Men GVK, BKR och Säker Vatten är de facto-standard som försäkringsbolag och beställare kräver. Utan behörigt utfört och dokumenterat tätskikt kan ersättningen vid vattenskada helt utebli.</p>
+<h3>Hur länge gäller ett Heta Arbeten-certifikat?</h3>
+<p>Certifikatet är giltigt i 5 år från godkänd certifiering och går ut sista dagen i angiven månad. Utbildningen är en endagskurs i Brandskyddsföreningens säkerhetsregler och kostar typiskt runt 2 500–2 900 kr per person.</p>
+<h3>Vad är skillnaden mellan behörighet N och K för kontrollansvarig?</h3>
+<p>N (normal art) gäller bland annat en- och tvåbostadshus och byggnader med högst två våningar och kräver minst 3 års erfarenhet plus teknisk utbildning. K (komplicerad art) gäller flerbostadshus, industri och avancerade tekniska lösningar. Certifieringen görs av RISE eller Kiwa och gäller i 5 år.</p>
+<h3>Gäller behörigheten företaget eller personen?</h3>
+<p>Båda delar finns. Auktorisationerna GVK, BKR och Säker Vatten gäller företaget, medan branschlegitimation och personcertifikat gäller den enskilde montören. Det är två separata saker som ofta blandas ihop – och du behöver oftast båda.</p>
+
+<h2>Kom igång</h2>
+<p>Behörighet är både en konkurrensfördel och en förutsättning för att försäkringen ska betala. Håll koll på 5-årscyklerna och se till att dokumentationen finns när den efterfrågas. Börja med att strukturera din egenkontroll i <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a>, eller boka en <a href="/sv/contact">demo</a> så visar vi hur du kopplar behörighet och dokumentation till varje uppdrag.</p>
+<p>Relaterat: <a href="/sv/blog/vatrumscertifikat-behorighet-gvk">Våtrumscertifikat och GVK-behörighet</a>, <a href="/sv/blog/heta-arbeten">Heta Arbeten – så funkar det</a>, <a href="/sv/blog/kontrollansvarig-nar-behovs">Kontrollansvarig – när behövs det?</a></p>
+`;
+
+const A_BEHORIGHETER_CERTIFIERINGAR_LONAR_SIG: BlogPost = {
+  _id: "code-"+"behorigheter-certifieringar-lonar-sig",
+  title: "Behörigheter och certifieringar som faktiskt vinner jobb 2026 – och vilka du kan skippa", slug: "behorigheter-certifieringar-lonar-sig", locale: "sv",
+  excerpt: "Få hantverksbehörigheter är lagkrav i Sverige – men beställare och försäkringsbolag styr vilka som vinner anbud. Här är checklistan för 2026.", tag: "Behörigheter",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_BEHORIGHETER_CERTIFIERINGAR_LONAR_SIG_HTML,
+  seoTitle: "Behörigheter som vinner jobb 2026 | ByggExp", seoDescription: "Våtrumsbehörighet, Heta Arbeten och kontrollansvarig – vilka behörigheter beställare och försäkringsbolag faktiskt kräver 2026. Checklista för hantverkare.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T08:03:00.000Z", createdAt: "2026-08-19T08:03:00.000Z", updatedAt: "2026-08-19T08:03:00.000Z",
+};
+
+const A_REKLAMATION_BEMOTA_FELKRAV_ENTREPRENAD_HTML = `
+<p>En kund hör av sig och påstår att jobbet är felaktigt. Kanske sprickor i putsen, en dörr som kärvar eller ett golv som knarrar. Hur du som byggföretag bemöter det första felkravet avgör ofta både ekonomin och relationen. Ett hastigt medgivande kan kosta dig en dyr faktura från en annan entreprenör, medan tystnad eller en muntlig undanmanöver kan förvandla en småsak till en tvist. Den goda nyheten: lagen ger dig fler verktyg än du tror. Men de ser olika ut beroende på om kunden är privatperson eller näringsidkare. Första steget är därför alltid att slå fast vilket regelverk som gäller – innan du tar ställning i sak.</p>
+
+<p>Dokumentation är din bästa vän när ett felkrav dyker upp. Har du fört löpande kvalitetskontroll står du starkare direkt – använd gärna <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a> för att fånga upp underlaget redan under projektet.</p>
+
+<h2>Steg 1: Vilket regelverk gäller?</h2>
+<p>Två regelverk styr felkrav i byggbranschen, och de behandlar felansvaret på helt olika sätt.</p>
+<p><strong>Konsumenttjänstlagen (KtjL, 1985:716)</strong> gäller när kunden är privatperson. Lagen är tvingande – du kan inte avtala bort den till kundens nackdel, oavsett vad som står i din offert. För småhusentreprenader kompletteras KtjL ofta av standardavtalen ABS 18 och hantverkarformuläret, men lagens miniminivå gäller alltid.</p>
+<p><strong>AB 04 och ABT 06</strong> är branschens standardavtal mellan näringsidkare (B2B). De gäller bara om ert kontrakt uttryckligen hänvisar till dem. Gör det inte det, faller ni tillbaka på köplagens och avtalsrättens allmänna regler i stället.</p>
+<p>Poängen är enkel: svaret på ett felkrav ser olika ut beroende på regelverk. Frister, bevisbörda och påföljder skiljer sig åt. Reder du inte ut detta först riskerar du att åberopa fel argument.</p>
+
+<h2>Vad räknas egentligen som ett fel?</h2>
+<p>Alla klagomål är inte fel i juridisk mening. Under KtjL (§§9–12) är tjänsten felaktig om resultatet avviker från <strong>fackmässigt utförande</strong>, från vad ni avtalat, från gällande säkerhetsföreskrifter eller från information du lämnat i marknadsföringen. Även utebliven upplysning om väsentliga förhållanden kan vara fel. Avgörande är hur arbetet såg ut när uppdraget avslutades (§12) – ett fel som fanns då men visar sig först senare räknas ändå.</p>
+<p>Under AB 04 är fel en avvikelse från kontraktshandlingarna, och felet fastställs normalt genom besiktning. Det som noteras i ett besiktningsutlåtande är etablerat; det som inte noterats kan du ofta bestrida.</p>
+<p>Lika viktigt är vad som <em>inte</em> är fel, och detta är ofta din bästa grund för att bemöta kravet:</p>
+<ul>
+<li>Normalt slitage och åldrande av material.</li>
+<li>Skador orsakade av kundens egen felaktiga användning eller bristande skötsel.</li>
+<li>Ändrade önskemål efter beställning – det är en ÄTA-fråga, inte ett fel.</li>
+<li>Estetiska detaljer inom ramen för fackmässigt utförande.</li>
+</ul>
+
+<h2>Reklamationsfristen – kom kravet i tid?</h2>
+<p>Det första du bör kontrollera är datum. En för sen reklamation kan innebära att kunden helt förlorar rätten att åberopa felet.</p>
+<p><strong>Under KtjL (§17)</strong> ska konsumenten reklamera inom skälig tid efter att felet upptäckts. En reklamation inom två månader från upptäckten är alltid i rätt tid. Den yttersta reklamationsfristen är tre år från att uppdraget avslutades – men hela <strong>tio år</strong> för arbete på byggnad eller fast egendom. Missar konsumenten fristen förlorar hen enligt §18 rätten att åberopa felet. Det är en central invändning mot ett sent felkrav.</p>
+<p><strong>Under AB 04</strong> ska reklamation ske <strong>skriftligt och utan dröjsmål</strong> efter att felet upptäckts. Muntliga klagomål behöver du inte beakta. Garantitiden är fem år för entreprenadens utförande och normalt två år för material och varor, räknat från godkänd slutbesiktning. Ansvarstiden är tio år. Under ABT 06 är garantitiden fem år för båda delarna. Kommer reklamationen för sent kan beställaren bli ansvarig för de merkostnader dröjsmålet orsakat – och vid orimligt sen reklamation förta kravet helt. I kommersiella entreprenader kan även ett par månaders dröjsmål vara för sent – bedömningen görs från fall till fall.</p>
+
+<h2>Bevisbördan under och efter garantitiden (AB 04)</h2>
+<p>Var i tiden kravet ligger avgör vem som måste bevisa vad – ett argument du bör använda aktivt i ditt svar.</p>
+<p><strong>Under garantitiden</strong> presumeras entreprenören ansvara för fel som visar sig. I praktiken är bevisbördan omvänd: det är du som byggföretag som måste visa att felet beror på beställarens användning eller bristande skötsel, inte på ditt arbete. Ligger kravet här bör du snabbt samla underlag som pekar mot kundens hantering.</p>
+<p><strong>Efter garantitiden</strong>, det vill säga år sex till tio inom ansvarstiden, vänder det. Nu måste beställaren bevisa både att felet är <strong>väsentligt</strong> och att det beror på din <strong>vårdslöshet</strong>. Det är en betydligt tyngre börda för kunden, och ofta din starkaste position i ett sent krav.</p>
+
+<h2>Din starkaste rättighet: avhjälpanderätten</h2>
+<p>Detta är den enskilt viktigaste rättigheten att känna till. Både KtjL (§20) och AB 04 ger dig rätt att <strong>själv åtgärda felet</strong>, på egen bekostnad, i stället för att betala prisavdrag eller skadestånd.</p>
+<p>Under KtjL har du rätt att avhjälpa felet inom skälig tid efter reklamationen, förutsatt att det inte medför oskälig kostnad eller olägenhet för kunden. Avhjälpande är den primära påföljden i lagens trappa – den kommer före prisavdrag och hävning. Under AB 04 ska felet avhjälpas utan dröjsmål och senast <strong>två månader</strong> från det att beställarens skriftliga underrättelse skickades.</p>
+<p>Varför är detta så värdefullt? Åtgärdar du själv slipper du betala en annan entreprenörs faktura, som nästan alltid är dyrare än din egen kostnad, och du undviker ett prisavdrag som du inte kontrollerar. Erbjud därför alltid avhjälpande skriftligt och boka in en tid snabbt. Vägrar kunden ta emot avhjälpande och anlitar någon annan, kan hen förlora rätten till ersättning.</p>
+
+<h2>Så skriver du svaret på felkravet</h2>
+<p>Ett bra svar är sakligt, snabbt och skriftligt. Följ den här checklistan:</p>
+<ol>
+<li>Bekräfta att du mottagit klagomålet och tacka för informationen.</li>
+<li>Be om en skriftlig felbeskrivning med bilder och uppgift om när felet upptäcktes.</li>
+<li>Hänvisa till rätt regelverk (KtjL eller AB 04) och relevant frist.</li>
+<li>Ta ställning i sak: medge, bestrid eller medge delvis – med kort motivering.</li>
+<li>Åberopa uttryckligen din avhjälpanderätt och föreslå en konkret tid eller besiktning.</li>
+<li>Håll en professionell ton och spara all korrespondens.</li>
+</ol>
+
+<h2>Vanliga misstag att undvika</h2>
+<ul>
+<li>Att ignorera kravet – tystnad kan tolkas som medgivande och driver kunden till annan entreprenör.</li>
+<li>Att medge fel för snabbt innan du utrett orsak och frist.</li>
+<li>Att missa att åberopa avhjälpanderätten och i stället gå direkt på prisavdrag.</li>
+<li>Att nöja sig med muntliga överenskommelser – utan skriftlig dokumentation står du svagt om det blir tvist.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att stå starkt när ett felkrav kommer, framför allt genom dokumentation. Med en genomförd egenkontroll och en löpande byggdagbok kan du visa vad som faktiskt utfördes, när och hur – underlag som ofta avgör bevisfrågan under garantitiden. Fyll i <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> vid varje moment och för projektets historik i <a href="/sv/verktyg/byggdagbok-mall">byggdagbok-mallen</a>. Då har du datum, åtgärder och avvikelser samlade den dag du behöver bemöta ett krav. ByggExp fattar inga juridiska beslut åt dig, men gör det enkelt att ha ordning på bevisen och att svara sakligt i tid.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste kunden reklamera skriftligt?</h3>
+<p>Under AB 04 ja – reklamation ska ske skriftligt och utan dröjsmål, och muntliga klagomål behöver du inte beakta. Under Konsumenttjänstlagen finns inget formkrav, men en skriftlig reklamation underlättar för båda parter att visa när och hur felet påtalades.</p>
+<h3>Kan kunden anlita en annan firma och skicka mig fakturan?</h3>
+<p>Normalt inte, om du erbjudit avhjälpande. Både KtjL §20 och AB 04 ger dig rätt att åtgärda felet själv inom fristen. Anlitar kunden någon annan utan att ge dig den möjligheten kan hen förlora rätten till ersättning. Erbjud därför alltid avhjälpande skriftligt och snabbt.</p>
+<h3>Hur länge kan en privatkund reklamera arbete på ett hus?</h3>
+<p>För arbete på byggnad eller fast egendom gäller en yttre frist på tio år från att uppdraget avslutades. Kunden måste ändå reklamera inom skälig tid efter upptäckt – två månader är alltid i rätt tid. För sent innebär enligt §18 att rätten att åberopa felet går förlorad.</p>
+<h3>Vad gäller om felet dyker upp efter garantitiden i AB 04?</h3>
+<p>Då förskjuts bevisbördan till beställaren. Under år sex till tio inom ansvarstiden måste beställaren bevisa både att felet är väsentligt och att det orsakats av din vårdslöshet. Det är en tung börda och ofta din starkaste invändning mot ett sent krav.</p>
+
+<h2>Kom igång</h2>
+<p>Rätt bemött blir ett felkrav sällan en tvist. Nyckeln är att avgöra regelverket, kontrollera fristen och åberopa din avhjälpanderätt – med dokumentationen i ordning. Börja med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> och för löpande anteckningar i <a href="/sv/verktyg/byggdagbok-mall">byggdagbok-mallen</a>. Vill du se hur ByggExp samlar egenkontroll, dagbok och projekthistorik på ett ställe? <a href="/sv/contact">Boka en demo här -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/reklamation-hantverkstjanst-frister">Reklamation av hantverkstjänst – frister och regler</a>, <a href="/sv/blog/slutbesiktning">Slutbesiktning steg för steg</a> och <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a>.</p>
+`;
+
+const A_REKLAMATION_BEMOTA_FELKRAV_ENTREPRENAD: BlogPost = {
+  _id: "code-"+"reklamation-bemota-felkrav-entreprenad",
+  title: "Så bemöter byggföretaget ett felkrav – reklamationsfrist och avhjälpanderätt", slug: "reklamation-bemota-felkrav-entreprenad", locale: "sv",
+  excerpt: "En steg-för-steg-guide för hantverkare och små byggföretag som fått ett felkrav – från reklamationsfrist och bevisbörda till din starkaste rättighet: avhjälpanderätten.", tag: "Juridik",
+  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_REKLAMATION_BEMOTA_FELKRAV_ENTREPRENAD_HTML,
+  seoTitle: "Bemöta felkrav i entreprenad | ByggExp", seoDescription: "Så svarar byggföretaget rätt på ett felkrav: vilket regelverk gäller, reklamationsfristen, bevisbördan och din rätt att åtgärda felet själv.",
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T08:06:00.000Z", createdAt: "2026-08-19T08:06:00.000Z", updatedAt: "2026-08-19T08:06:00.000Z",
+};
+
+const A_OFFENTLIG_UPPHANDLING_BYGG_LOU_HTML = `
+<p>Offentlig sektor är byggbranschens största enskilda beställare, och myten att upphandlingar bara är till för de stora koncernerna stämmer inte. En stor andel av de vinnande anbuden lämnas av små och medelstora företag. Men det kräver att du förstår spelreglerna – vilken typ av upphandling du står inför, hur du tar dig förbi kvalificeringskraven och hur du prissätter utan att jobba med förlust. Den här guiden är skriven för dig som driver en mindre byggfirma utan egen upphandlingsavdelning.</p>
+
+<p>Ett anbud börjar alltid med en tydlig, kalkylerad offert. Sätt upp en professionell mall en gång och återanvänd den – börja med <a href="/sv/verktyg/offert-mall">vår gratis offertmall -&gt;</a> och anpassa den efter varje förfrågningsunderlag.</p>
+
+<h2>Vilken typ av upphandling gäller?</h2>
+<p>Reglerna i lagen om offentlig upphandling (LOU) skiljer sig kraftigt beroende på hur stort kontraktet är. Det är helt avgörande att veta vilken nivå du befinner dig på, eftersom byråkratin ser helt olika ut. För byggentreprenader 2026 gäller tre nivåer:</p>
+<ul>
+<li><strong>Direktupphandling – under 700 000 kr (exkl. moms).</strong> Understiger upphandlingens totala värde direktupphandlingsgränsen får myndigheten handla direkt utan annonsering. Överstiger värdet 100 000 kr måste upphandlingen dokumenteras, men under det finns ingen formell dokumentationsplikt. Gränsen på 700 000 kr står i lagen, gäller lika för varor, tjänster och byggentreprenader och ändras inte med tröskelvärdena.</li>
+<li><strong>Annonspliktig upphandling enligt 19 kap. – mellan 700 000 kr och tröskelvärdet.</strong> Här måste myndigheten annonsera, men reglerna är förenklade. Sedan 1 februari 2022 regleras dessa upphandlingar i egna kapitel i LOU (19 kap. och 19 a kap. för direktupphandling), och kravet på ett specifikt förfarande är borttaget. Myndigheten utformar processen fritt så länge de grundläggande principerna – icke-diskriminering, likabehandling, proportionalitet, öppenhet (transparens) och ömsesidigt erkännande – följs.</li>
+<li><strong>EU-direktivstyrd upphandling – över 61 340 804 kr (exkl. moms).</strong> Först över detta tröskelvärde gäller de fulla EU-reglerna med ESPD, fasta tidsfrister och obligatoriska uteslutningsgrunder.</li>
+</ul>
+<p>Poängen: nästan alla byggjobb ett litet företag lämnar anbud på ligger i det icke-direktivstyrda spannet mellan 700 000 kr och 61,3 mkr. Det är alltså det förenklade regelverket du oftast möter – betydligt mindre krångel än många tror.</p>
+
+<h2>Var hittar du jobben – och kom igång</h2>
+<p>Jobben annonseras på upphandlingsdatabaser och annonsplattformar. Registrera dig och lägg upp bevakningar på dina byggkategorier och ditt geografiska område. Bevaka särskilt din egen kommun, regionen och de kommunala bostadsbolagen – de handlar upp entreprenader och ramavtal löpande.</p>
+<p>Börja litet. Ett ramavtal för mindre reparationer, en avgränsad entreprenad eller en roll som underleverantör till en större aktör är enklare att vinna och bygger den meritlista du behöver för nästa upphandling. Läs alltid <strong>hela</strong> förfrågningsunderlaget innan du börjar räkna, och utnyttja frågeportalen: är något oklart i kravställningen kan du ställa frågor före sista anbudsdag, och svaren går ut till alla anbudsgivare.</p>
+
+<h2>Kvalificeringskraven – så tar du dig förbi trösklarna</h2>
+<p>Kraven du måste passera delas upp i tre delar, och det är viktigt att hålla isär dem:</p>
+<ul>
+<li><strong>Uteslutningsgrunder.</strong> Obetalda skatter och socialförsäkringsavgifter kan leda till att du utesluts, och över tröskelvärdet är myndigheten skyldig att utesluta leverantörer som dömts för allvarliga brott som mutbrott eller organiserad brottslighet. Sedan mars 2019 lämnar Skatteverket inte längre ut uppgift om skatteskuld via den gamla blanketten – myndigheten hämtar bevis på annat sätt. Praktisk konsekvens: håll skattekontot rent och se till att F-skatt, moms och arbetsgivaravgifter är à jour innan du lämnar anbud.</li>
+<li><strong>Ekonomisk ställning.</strong> Krav på minsta omsättning eller kreditvärdighet. Här faller mindre och nystartade företag lätt ifrån om de bedöms enbart på egen historik.</li>
+<li><strong>Teknisk och yrkesmässig kapacitet.</strong> Referensuppdrag, kompetens och resurser för att klara jobbet.</li>
+</ul>
+<p>Nyckelknepet för små företag: du får uppfylla kvalificeringskraven genom att åberopa ett annat företags kapacitet – en underleverantör eller samarbetspartner – förutsatt att den aktören faktiskt utför den del av kontraktet som kapaciteten avser. Klarar du inte omsättnings- eller referenskravet ensam kan du alltså gå ihop med en partner. Är du dessutom nystartad kan du uppfylla krav på tidigare uppdrag genom att visa projekt där dina företrädare eller din nyckelpersonal hade en viktig roll – det är inte bara bolagets historik som räknas. Referenskraven ska vara proportionerliga; oskäligt hårda krav på antal år eller uppdrag kritiseras just för att de stänger ute småföretag.</p>
+
+<h2>Referenser som håller</h2>
+<p>Referenser är ofta det som avgör om ett litet företag kvalificerar sig. Bygg en referensbank medvetet:</p>
+<ol>
+<li>Dokumentera varje avslutat projekt löpande – typ av entreprenad, omfattning, kontraktsvärde och årtal.</li>
+<li>Fråga nöjda beställare direkt efter slutfört jobb om de vill stå som referens, medan intrycket är färskt.</li>
+<li>Matcha referenserna mot exakt det som efterfrågas. Söker de en referens på ombyggnad av flerbostadshus av viss volym senaste tre åren, plocka fram just det – inte ditt största jobb i största allmänhet.</li>
+<li>Säkra att kontaktpersonerna faktiskt svarar när beställaren ringer. En referens som inte går att nå är ingen referens.</li>
+</ol>
+
+<h2>Prissättning – vinn utan att förlora pengar</h2>
+<p>Lägsta pris är inte alltid tilldelningsgrunden. Andelen som tycker att det läggs för mycket fokus på lägsta pris har minskat, och bara omkring 16 procent upplever prisfokus vid tilldelning som för stort. Allt oftare avgörs upphandlingen på pris och kvalitet tillsammans. Det gynnar seriösa småföretag.</p>
+<p>Räkna på dina faktiska självkostnader plus ett rimligt påslag – inte på vad du tror krävs för att "ta jobbet". Ett anbud vunnet på förlust är ingen vinst. Läs utvärderingsmodellen noga: en mervärdesmodell eller ett prisavdrag för kvalitet kan betyda att ett något högre pris ändå vinner om du levererar mervärde. Ta också höjd för de arbetsrättsliga villkoren. I upphandlingar över tröskelvärdet ska myndigheten enligt 17 kap. LOU ställa krav på lön, arbetstid och semester enligt tillämpligt centralt kollektivavtal om det finns risk för oskäliga villkor. Du måste kunna visa att du lever upp till sådana villkor även utan eget avtal – myndigheten får dock inte kräva att du har tecknat kollektivavtal. Se till att dessa kostnader ligger i kalkylen.</p>
+
+<h2>Vanliga anbudsmissar</h2>
+<ul>
+<li>Att missa ett obligatoriskt "ska-krav" – då förkastas anbudet oavsett hur bra priset är.</li>
+<li>Att inte svara på precis det som efterfrågas, i det format och den struktur underlaget kräver.</li>
+<li>Att lämna in för sent eller på fel plattform. Tidsfristen är absolut.</li>
+<li>Att prissätta för lågt för att vinna och sedan tappa pengar under kontraktstiden.</li>
+<li>Att slarva med skattekonto och F-skatt så att du fastnar på uteslutningsgrunderna.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig i det praktiska arbetet runt anbudet. Med offertmallen bygger du ett prydligt, kalkylerat prisunderlag som du kan återanvända och anpassa per upphandling, så att du snabbt får fram ett anbud med konsekvent struktur. När du kör dina projekt i ByggExp samlas uppgifter om utförda jobb på ett ställe – underlag som du senare kan använda för att bygga din referensbank och visa relevant erfarenhet. Verktyget lämnar inte in anbudet åt dig och ersätter inte en juridisk granskning av förfrågningsunderlaget, men det tar bort mycket av det manuella pappersarbetet så att du kan lägga tiden på själva innehållet.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag ha kollektivavtal för att vinna en offentlig upphandling?</h3>
+<p>Nej. Myndigheten får inte ställa ett generellt krav på att du ska ha tecknat kollektivavtal. Däremot kan den i upphandlingar över tröskelvärdet kräva att du erbjuder lön, arbetstid och semester i nivå med tillämpligt centralt kollektivavtal. Du måste alltså kunna visa att dina villkor motsvarar det – men inte att du har ett eget avtal.</p>
+<h3>Kan ett nystartat byggföretag utan referenser lämna anbud?</h3>
+<p>Ja. Du kan uppfylla krav på tidigare uppdrag genom att visa projekt där dina företrädare eller din nyckelpersonal hade en viktig roll. Du får också åberopa ett annat företags kapacitet, till exempel en samarbetspartner eller underleverantör, förutsatt att den aktören faktiskt utför den aktuella delen av kontraktet.</p>
+<h3>Vad gör jag om jag förlorar en upphandling jag borde ha vunnit?</h3>
+<p>Begär tilldelningsbeslutet och utvärderingen och be om återkoppling för att lära inför nästa gång. Anser du att något gått formellt fel kan du ansöka om överprövning i förvaltningsrätt inom avtalsspärren – som vid elektronisk kommunikation normalt är minst tio dagar från tilldelningsbeslutet. Överklaga dock inte i onödan; antalet överprövningsmål minskar och de flesta förluster beror på affärsmässiga skäl, inte formfel.</p>
+<h3>Hur stort får ett jobb vara innan de fulla EU-reglerna slår till?</h3>
+<p>För byggentreprenader ligger tröskelvärdet 2026 på 61 340 804 kr exklusive moms. Först över det beloppet gäller de EU-direktivstyrda reglerna med ESPD och obligatoriska uteslutningsgrunder. Nästan alla anbud ett litet byggföretag lämnar hamnar i det förenklade spannet under den nivån.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med ett litet, avgränsat anbud, leverera väl, bygg din referensbank och återkom med större jobb. Sätt upp ett tydligt prisunderlag med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>, och vill du se hur ByggExp kan förenkla offerter, projekt och underlag i din firma? <a href="/sv/contact">Boka en demo här</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/skriva-offert">Så skriver du en offert som vinner jobbet</a>, <a href="/sv/blog/hitta-kunder-byggfirma">Hitta kunder till din byggfirma</a> och <a href="/sv/blog/starta-byggforetag-2026">Starta byggföretag 2026</a>.</p>
+`;
+
+const A_OFFENTLIG_UPPHANDLING_BYGG_LOU: BlogPost = {
+  _id: "code-"+"offentlig-upphandling-bygg-lou",
+  title: "Så vinner du offentliga byggjobb som litet företag – anbud enligt LOU 2026", slug: "offentlig-upphandling-bygg-lou", locale: "sv",
+  excerpt: "Offentlig sektor är byggbranschens största beställare – så tar sig ett litet byggföretag förbi kvalificeringskraven och skriver ett anbud som håller enligt LOU 2026.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_OFFENTLIG_UPPHANDLING_BYGG_LOU_HTML,
+  seoTitle: "Offentlig upphandling bygg (LOU) | ByggExp", seoDescription: "Så skriver ditt lilla byggföretag ett vinnande anbud enligt LOU 2026: kvalificeringskrav, referenser och prissättning. 3 av 4 vinnande anbud kommer från SMF.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T08:09:00.000Z", createdAt: "2026-08-19T08:09:00.000Z", updatedAt: "2026-08-19T08:09:00.000Z",
+};
+
+const A_SAGA_UPP_ANSTALLD_PERSONLIGA_SKAL_BYGG_HTML = `
+<p>Att säga upp en anställd är en av de vanligaste juridiska fallgroparna för mindre byggföretag. Gör du fel — dokumenterar för dåligt, missar ett varsel eller kallar en person för arbetsbrist när det egentligen handlar om misskötsamhet — kan en enda felaktig uppsägning sluta i skadestånd på hundratusentals kronor. Sedan LAS ändrades den 1 oktober 2022 har dessutom flera av spelreglerna skrivits om, och det är lätt att gå på gammal information. Den här guiden går igenom vad som gäller 2026 för dig som driver byggverksamhet.</p>
+
+<p>Ett korrekt och tydligt anställningsavtal är grunden i varje uppsägningsärende. Börja med att skapa ett med vår gratis <a href="/sv/verktyg/anstallningsavtal-mall">anställningsavtal-mall för bygg -&gt;</a>.</p>
+
+<h2>Två skilda grunder — arbetsbrist och personliga skäl</h2>
+<p>LAS känner två lagliga grunder för att säga upp en tillsvidareanställd. <strong>Arbetsbrist</strong> är verksamhetsskäl: order minskar, ett projekt tar slut, företaget omorganiserar. Det har ingenting med individen att göra och är den vanligaste grunden. <strong>Personliga skäl</strong> är kopplat till den enskilde arbetstagaren — misskötsamhet, samarbetsproblem, olovlig frånvaro eller upprepad arbetsvägran.</p>
+<p>Utöver dessa finns <strong>avsked</strong> enligt 18 § LAS, en tredje och betydligt striktare väg som kräver att den anställde grovt åsidosatt sina skyldigheter, till exempel stöld eller allvarlig arbetsmiljöfara. Ett avsked ger ingen uppsägningstid och anställningen upphör omedelbart.</p>
+<p>En avgörande princip: du får aldrig maskera personliga skäl som arbetsbrist för att slippa den strängare processen. Det kallas <em>fingerad arbetsbrist</em>, och om en domstol ser igenom det blir uppsägningen ogiltig. Vill du fördjupa dig i den andra grunden, läs vår guide om <a href="/sv/blog/uppsagning-arbetsbrist-bygg">uppsägning på grund av arbetsbrist</a>.</p>
+
+<h2>Vad reformen 2022 ändrade — "saklig grund" blev "sakliga skäl"</h2>
+<p>Den 1 oktober 2022 byttes begreppet i 7 § LAS från "saklig grund" till <strong>"sakliga skäl"</strong>. Det är mer än en språklig detalj. Reglerna gäller uppsägningsärenden som inletts från detta datum och innebär i praktiken:</p>
+<ul>
+<li>Arbetsgivaren ska <strong>inte längre göra en framtidsprognos</strong> om den anställdes beteende. Bedömningen fokuserar på om skälen i sig är sakliga.</li>
+<li>Ingen <strong>intresseavvägning</strong> mot den anställdes intresse av att behålla jobbet ska göras.</li>
+<li>Omplaceringsskyldigheten är begränsad — som huvudregel räcker <strong>en</strong> omplaceringsutredning per process, inte upprepade erbjudanden.</li>
+<li>Under en pågående tvist om uppsägningens giltighet <strong>kvarstår anställningen inte längre</strong>. Den upphör vid uppsägningstidens slut även om beslutet bestrids. Tidigare fick den anställde vara kvar med lön tills tvisten var avgjord.</li>
+</ul>
+<p>Syftet var ökad förutsägbarhet för arbetsgivaren. Notera samtidigt att 7 § numera är semidispositiv på central nivå — parterna kan i centrala kollektivavtal, som Byggavtalet, komma överens om vad som utgör sakliga skäl på ett sätt som avviker från lagens huvudregler.</p>
+
+<h2>Uppsägningstid enligt 11 § LAS</h2>
+<p>Grundregeln i 11 § LAS är att den minsta uppsägningstiden är <strong>en månad</strong> för både arbetsgivare och arbetstagare. När det är <strong>arbetsgivaren som säger upp</strong> förlängs tiden efter sammanlagd anställningstid enligt en trappa:</p>
+<ul>
+<li>Mindre än 2 år: <strong>1 månad</strong></li>
+<li>2 till under 4 år: <strong>2 månader</strong></li>
+<li>4 till under 6 år: <strong>3 månader</strong></li>
+<li>6 till under 8 år: <strong>4 månader</strong></li>
+<li>8 till under 10 år: <strong>5 månader</strong></li>
+<li>Minst 10 år: <strong>6 månader</strong></li>
+</ul>
+<p>Byggavtalet kan ge längre eller andra uppsägningstider, men ett kollektivavtal får aldrig inskränka de rättigheter LAS ger den anställde. Kontrollera alltid vad ert avtal säger innan du lämnar besked.</p>
+
+<h2>Rätt process vid personliga skäl — steg för steg</h2>
+<p>Det är processen, inte känslan av att någon "borde sluta", som avgör om uppsägningen håller. Följ ordningen:</p>
+<ol>
+<li><strong>Dokumentera misskötsamheten.</strong> Datum, händelse, konsekvens. Utan dokumentation står ord mot ord.</li>
+<li><strong>Ge en skriftlig erinran (varning).</strong> Detta är inte en disciplinär bestraffning utan en påpekan om att beteendet inte accepteras och vad som händer om det upprepas. Som huvudregel krävs att du först tydliggjort misskötsamheten innan uppsägning blir aktuell.</li>
+<li><strong>Gör en omplaceringsutredning.</strong> Finns annat ledigt arbete den anställde kan omplaceras till? En utredning räcker efter reformen.</li>
+<li><strong>Underrätta den anställde och varsla facket.</strong> Enligt 30 § LAS ska skriftlig underrättelse lämnas till arbetstagaren minst två veckor i förväg, och samtidigt ska den lokala fackliga organisationen varslas om den anställde är organiserad.</li>
+<li><strong>Ge rätt till överläggning.</strong> Den anställde eller facket kan begära överläggning inom en vecka. Uppsägningsbeskedet får inte lämnas förrän överläggningen är avslutad.</li>
+<li><strong>Lämna en skriftlig uppsägning.</strong> Den ska innehålla besvärshänvisning — information om hur den anställde bestrider eller väcker talan — och överlämnas personligen.</li>
+</ol>
+
+<h2>Turordning vid arbetsbrist — och byggbranschens särregel</h2>
+<p>Handlar det om arbetsbrist styr turordningen vem som får gå. Huvudprincipen i 22 § LAS är "sist in, först ut" inom turordningskretsen, baserat på sammanlagd anställningstid hos arbetsgivaren. Vid lika anställningstid går den yngre först.</p>
+<p>Sedan 1 oktober 2022 får <strong>alla</strong> arbetsgivare, oavsett storlek, undanta upp till <strong>tre</strong> anställda från turordningen om de har särskild betydelse för verksamheten. Undantaget får bara göras en gång var sjätte månad.</p>
+<p>Men här kommer den viktigaste bygg-specifika poängen: <strong>företag som är bundna av Byggavtalet får inte använda LAS tre-undantag.</strong> Arbetsdomstolen har slagit fast att undantagsrätten i stället följer en bilaga i kollektivavtalet — endast arbetsgivare med högst tio anställda får undanta högst två personer. Använder du fel regel riskerar hela turordningen att kullkastas. Byggavtalet, som gäller mellan Byggföretagen och Byggnads, löper i avtalsperioden 2025-05-01 till 2027-04-30 och är alltså i kraft under hela 2026.</p>
+
+<h2>Vanliga misstag som kostar pengar</h2>
+<ul>
+<li>Att kalla personliga skäl för arbetsbrist (fingerad arbetsbrist).</li>
+<li>Att säga upp utan att först ha gett en skriftlig erinran och dokumenterat misskötsamheten.</li>
+<li>Att glömma varsla facket eller att lämna beskedet innan överläggningen avslutats.</li>
+<li>En uppsägning utan besvärshänvisning eller som inte överlämnats skriftligt och personligen.</li>
+<li>Att som byggföretag använda LAS tre-undantag i stället för Byggavtalets två-regel.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte juridisk rådgivning, men ger dig strukturen som gör att en uppsägning håller. Med vår <a href="/sv/verktyg/anstallningsavtal-mall">anställningsavtal-mall</a> lägger du grunden med tydliga villkor från dag ett — vilket underlättar hela vägen om ett ärende senare uppstår. I plattformen samlar du tidrapporter, närvaro och avvikelser per anställd, vilket ger dig den löpande dokumentation som en erinran och en eventuell uppsägning måste vila på. När allt finns samlat på ett ställe slipper du leta i mejl och sms den dag det verkligen gäller.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan sakliga skäl och saklig grund?</h3>
+<p>"Saklig grund" var det gamla begreppet i 7 § LAS. Sedan 1 oktober 2022 heter det "sakliga skäl". Skillnaden är inte bara språklig: arbetsgivaren gör inte längre någon framtidsprognos eller intresseavvägning, och bedömningen fokuserar på om själva skälen är sakliga.</p>
+<h3>Hur lång uppsägningstid har en anställd i byggbranschen?</h3>
+<p>Minst en månad enligt 11 § LAS. När arbetsgivaren säger upp förlängs tiden stegvis efter anställningstid upp till sex månader vid minst tio års anställning. Byggavtalet kan ge längre tider — kontrollera ert kollektivavtal.</p>
+<h3>Kan jag som byggföretag undanta tre personer från turordningen?</h3>
+<p>Nej, inte om ni är bundna av Byggavtalet. Då gäller kollektivavtalets bilaga i stället för LAS tre-undantag: endast arbetsgivare med högst tio anställda får undanta högst två personer.</p>
+<h3>Måste den anställde vara kvar med lön under en tvist?</h3>
+<p>Nej, inte längre. Efter reformen 2022 upphör anställningen vid uppsägningstidens slut även om uppsägningen bestrids. Tidigare fick den anställde vara kvar med lön tills tvisten var avgjord.</p>
+
+<h2>Kom igång</h2>
+<p>Dokumentera tidigt, kontrollera alltid vad ert kollektivavtal säger och ta juridisk hjälp vid minsta tveksamhet — kostnaden för rådgivning är liten jämfört med ett skadestånd. Börja med att sätta villkoren rätt med vår <a href="/sv/verktyg/anstallningsavtal-mall">anställningsavtal-mall för bygg</a>, och vill du se hur ByggExp samlar tidrapporter och dokumentation per anställd kan du <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/uppsagning-arbetsbrist-bygg">Uppsägning på grund av arbetsbrist i byggbranschen</a>, <a href="/sv/blog/anstallningsavtal-mall-bygg">Anställningsavtal-mall för byggföretag</a>, <a href="/sv/blog/arbetstidslagen-bygg">Arbetstidslagen i byggbranschen</a>.</p>
+`;
+
+const A_SAGA_UPP_ANSTALLD_PERSONLIGA_SKAL_BYGG: BlogPost = {
+  _id: "code-"+"saga-upp-anstalld-personliga-skal-bygg",
+  title: "Säga upp en anställd av personliga skäl i byggbranschen — så gör du rätt enligt LAS (2026)", slug: "saga-upp-anstalld-personliga-skal-bygg", locale: "sv",
+  excerpt: "Så säger du upp en anställd av personliga skäl korrekt enligt LAS — uppsägningstid, rätt process steg för steg och byggbranschens särregel vid turordning.", tag: "Juridik",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_SAGA_UPP_ANSTALLD_PERSONLIGA_SKAL_BYGG_HTML,
+  seoTitle: "Säga upp anställd personliga skäl | ByggExp", seoDescription: "Uppsägningstid, sakliga skäl och skillnaden mot arbetsbrist enligt LAS efter reformen 2022 — plus byggbranschens egen turordningsregel. Guide för byggföretag.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T08:12:00.000Z", createdAt: "2026-08-19T08:12:00.000Z", updatedAt: "2026-08-19T08:12:00.000Z",
+};
+
+const A_OMVAND_BYGGMOMS_BOKFORA_HTML = `
+<p>Omvänd byggmoms är en av de vanligaste källorna till fel i byggföretags momsdeklarationer. Grundprincipen låter enkel: köparen redovisar och betalar momsen, säljaren fakturerar utan moms. Men i praktiken hamnar beloppen i fel ruta, momskonton berörs som inte ska beröras, och plötsligt stämmer inte deklarationen mot bokföringen. Den här guiden går igenom exakt vilka rutor och konton som gäller – för både säljaren och köparen.</p>
+
+<p>Behöver du snabbt räkna ut moms fram och tillbaka på ett belopp? Använd <a href="/sv/verktyg/moms-kalkylator">vår gratis moms-kalkylator -&gt;</a> så slipper du slarvfel innan du bokför.</p>
+
+<h2>Vad är omvänd byggmoms?</h2>
+<p>Omvänd byggmoms – formellt <strong>omvänd betalningsskyldighet</strong> – innebär att det är köparen, inte säljaren, som redovisar och betalar utgående moms till staten. Säljaren ställer ut fakturan helt utan moms, och köparen räknar själv fram momsen och redovisar den i sin egen momsdeklaration.</p>
+<p>Sedan den nya mervärdesskattelagen (2023:200) trädde i kraft den 1 juli 2023 använder Skatteverket termen "omvänd betalningsskyldighet" i stället för "omvänd skattskyldighet". Innebörden är exakt densamma – "omvänd byggmoms" är bara vardagsnamnet. Många kontoplaner och fakturamallar använder fortfarande den äldre formuleringen, vilket är helt i sin ordning så länge hänvisningen finns med.</p>
+
+<h2>När gäller reglerna?</h2>
+<p>Två villkor måste vara uppfyllda samtidigt för att omvänd byggmoms ska tillämpas:</p>
+<ol>
+<li>Du säljer en <strong>särskilt angiven bygg- eller anläggningstjänst</strong>, byggstädning eller hyr ut arbetskraft för sådana tjänster i Sverige.</li>
+<li>Köparen är en <strong>beskattningsbar person</strong> som (under vissa förutsättningar) själv säljer byggtjänster – alltså ett annat byggföretag, även vid ren vidareförsäljning.</li>
+</ol>
+<p>Är bara det ena villkoret uppfyllt gäller vanlig moms med 25 procent. Säljer du direkt till en slutkund eller beställare som inte själv säljer byggtjänster – till exempel en privatperson, en bostadsrättsförening eller en fastighetsägare som bara förvaltar – ska du fakturera med vanlig utgående moms. Det är kombinationen av rätt tjänst och rätt typ av köpare som avgör.</p>
+
+<h2>Så deklarerar säljaren – ruta 41</h2>
+<p>Som säljare får du <strong>inte debitera någon moms</strong> på fakturan. Försäljningsbeloppet redovisar du i <strong>ruta 41</strong> (Försäljning när köparen är skattskyldig i Sverige). Du redovisar ingen utgående moms alls på den här försäljningen.</p>
+<p>Fakturan måste, utöver vanliga fakturauppgifter, innehålla:</p>
+<ul>
+<li>Köparens momsregistreringsnummer.</li>
+<li>Hänvisningen "Omvänd betalningsskyldighet" (tidigare "Omvänd skattskyldighet").</li>
+<li>Inget momsbelopp – bara nettobeloppet.</li>
+</ul>
+<p>I bokföringen bokför du intäkten på konto <strong>3231</strong> "Försäljning inom byggsektorn, omvänd skattskyldighet, Sverige". Inget momskonto berörs på säljarsidan.</p>
+
+<h2>Så deklarerar köparen – ruta 24, 30 och 48</h2>
+<p>Köparen gör det tunga jobbet. Du som köper tjänsten ska:</p>
+<ul>
+<li>Redovisa inköpet i <strong>ruta 24</strong> (Inköp av tjänster i Sverige).</li>
+<li>Beräkna 25 procent utgående moms på fakturabeloppet och redovisa den i <strong>ruta 30</strong>.</li>
+<li>Dra av samma belopp som ingående moms i <strong>ruta 48</strong> – helt eller delvis beroende på din avdragsrätt.</li>
+</ul>
+<p>Vid full avdragsrätt tar den utgående momsen (ruta 30) och den ingående momsen (ruta 48) ut varandra. Nettoeffekten på momsen blir noll – du betalar alltså ingenting extra, men momsen måste ändå redovisas i rätt rutor. Att hoppa över redovisningen "eftersom det ändå blir noll" är ett vanligt och onödigt fel.</p>
+
+<h2>Konteringsexempel steg för steg</h2>
+<p>Anta att du som byggföretag köper en byggtjänst för <strong>20 000 kr</strong> med 25 procent moms (5 000 kr) under omvänd betalningsskyldighet.</p>
+<h3>Köparens bokföring</h3>
+<ul>
+<li><strong>Debet 4425</strong> Inköpta tjänster i Sverige, omvänd skattskyldighet: 20 000 kr</li>
+<li><strong>Debet 2645</strong> Ingående moms omvänd: 5 000 kr</li>
+<li><strong>Kredit 2614</strong> Utgående moms omvänd byggtjänster 25 %: 5 000 kr</li>
+<li><strong>Kredit 2440</strong> Leverantörsskuld: 20 000 kr</li>
+</ul>
+<p>Lägg märke till att både 2614 och 2645 bokförs med 5 000 kr – de speglar varandra, precis som ruta 30 och ruta 48 gör i deklarationen.</p>
+<h3>Säljarens bokföring</h3>
+<ul>
+<li><strong>Debet 1510</strong> Kundfordran: 20 000 kr</li>
+<li><strong>Kredit 3231</strong> Försäljning inom byggsektorn, omvänd skattskyldighet, Sverige: 20 000 kr</li>
+</ul>
+<p>Inget momskonto berörs hos säljaren – hela poängen med regeln är att momsen flyttas över till köparen.</p>
+
+<h2>Redovisningstidpunkt – fakturametoden vs bokslutsmetoden</h2>
+<p>När momsen ska tas upp beror på vilken metod du använder. Med <strong>fakturametoden</strong> redovisar du i den period fakturan utfärdas, oavsett när betalningen sker. Med <strong>bokslutsmetoden</strong> redovisar du vid betalning, men obetalda fakturor tas med i den sista redovisningsperioden på räkenskapsåret. Kontrollera att köparens och säljarens redovisning hamnar i jämförbara perioder – annars kan Skatteverkets avstämningar flagga avvikelser.</p>
+
+<h2>Vanliga fel att undvika</h2>
+<ul>
+<li>Säljaren debiterar moms trots att omvänd byggmoms gäller.</li>
+<li>Köparen glömmer redovisa i ruta 30 och 48 "eftersom det blir noll".</li>
+<li>Momsregistreringsnummer eller hänvisningstexten saknas på fakturan.</li>
+<li>Fakturabeloppet hamnar i ruta 20 (unionsinternt) i stället för ruta 24.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp kan du sätta upp fakturor för omvänd byggmoms så att rätt uppgifter kommer med automatiskt: köparens momsregistreringsnummer, hänvisningstexten "Omvänd betalningsskyldighet" och ett nettobelopp utan momsrad. Det minskar risken för att en faktura går ut med felaktigt debiterad moms. Själva momsdeklarationen och konteringen sköter du i ditt bokföringsprogram – ByggExp hjälper dig få underlaget rätt från början, men ersätter inte din revisor eller bokföringssystemet. Är du osäker på hur en enskild affär ska hanteras, stäm alltid av mot Skatteverket och BAS-kontoplanen.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad gör jag om säljaren felaktigt debiterat moms?</h3>
+<p>Be säljaren utfärda en kreditfaktura och en ny, korrekt faktura utan moms och med hänvisningen "Omvänd betalningsskyldighet". Du har som köpare inte avdragsrätt för moms som felaktigt debiterats – du måste ändå redovisa inköpet enligt reglerna för omvänd byggmoms.</p>
+<h3>Gäller omvänd byggmoms även material?</h3>
+<p>Reglerna gäller själva byggtjänsten, byggstädning eller uthyrd arbetskraft. Material som ingår som en del i en byggtjänst följer tjänsten. Ren försäljning av enbart material, utan att en byggtjänst utförs, omfattas normalt inte utan faktureras med vanlig moms.</p>
+<h3>Hur länge ska jag spara underlagen?</h3>
+<p>Bokföring och fakturor ska sparas i minst sju år. Det gäller både säljarens fakturakopior och köparens underlag för den redovisade momsen.</p>
+<h3>Blir det någon momskostnad för köparen vid full avdragsrätt?</h3>
+<p>Nej. Vid full avdragsrätt tar utgående moms i ruta 30 och ingående moms i ruta 48 ut varandra, så nettoeffekten blir noll. Momsen måste ändå redovisas i rätt rutor.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna ut moms snabbt och säkert med <a href="/sv/verktyg/moms-kalkylator">vår moms-kalkylator</a>, och skapa korrekta fakturor med rätt hänvisning i <a href="/sv/verktyg/faktura-mall">vår faktura-mall</a>. Vill du se hur ByggExp kan effektivisera fakturering och underlag för hela byggföretaget? <a href="/sv/contact">Boka en demo här -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a>, <a href="/sv/blog/bokforing-enskild-firma-bygg">Bokföring för enskild firma inom bygg</a> och <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a>.</p>
+`;
+
+const A_OMVAND_BYGGMOMS_BOKFORA: BlogPost = {
+  _id: "code-"+"omvand-byggmoms-bokfora",
+  title: "Omvänd byggmoms – så bokför och momsdeklarerar du rätt", slug: "omvand-byggmoms-bokfora", locale: "sv",
+  excerpt: "Guide för hantverkare och byggföretag: rätt momsrutor och BAS-konton för omvänd byggmoms – hos både säljaren och köparen.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/moms-preview.webp", contentHtml: A_OMVAND_BYGGMOMS_BOKFORA_HTML,
+  seoTitle: "Omvänd byggmoms bokföra | ByggExp", seoDescription: "Bokför och momsdeklarera omvänd byggmoms rätt: ruta 41 för säljaren, ruta 24, 30 och 48 för köparen, plus konteringsexempel med BAS-konton.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/moms-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T08:15:00.000Z", createdAt: "2026-08-19T08:15:00.000Z", updatedAt: "2026-08-19T08:15:00.000Z",
+};
+
+const A_RESURSPLANERING_BYGG_HTML = `
+<p>Så länge firman kör ett eller två projekt bor resursplaneringen i huvudet på arbetsledaren eller i ett Excel-ark. Det fungerar — tills det inte gör det. När ni växer till en portfölj av samtidiga projekt blir det manuella schemat den vanligaste källan till dubbelbokning: samma lag utlovas till två projektledare, kranföraren står inbokad på två adresser samma morgon och plötsligt är resursplaneringen i bygget det som bromsar hela företaget. Det här är en genomgång av hur du får kontroll med resurshistogram och resursutjämning — och var lagen sätter gränserna.</p>
+
+<p>Vill du börja i det konkreta kan du lägga upp projektens aktiviteter i vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a> och sedan lägga resurserna ovanpå tidplanen.</p>
+
+<h2>Skillnaden mellan projektplanering och resursplanering</h2>
+<p>Projektplanering svarar på <em>vad</em> som ska göras och <em>när</em>: aktiviteter, beroenden och slutdatum i en tidplan. Resursplanering svarar på en annan fråga — <em>vem eller vilken maskin</em> som utför varje aktivitet. De två hänger ihop men är inte samma sak, och det är i glappet mellan dem dubbelbokningarna uppstår.</p>
+<p>En resurs är allt som har begränsad kapacitet: yrkesarbetare, hela lag, underentreprenörer, maskiner, kranar och ställningar. Så länge varje projekt planeras för sig ser tidplanen fin ut — men ingen ser att samma resurs är intecknad på tre håll samtidigt. Poängen med riktig resursplanering är att beläggningen blir synlig tvärs över hela projektportföljen, inte bara inom ett projekt i taget.</p>
+
+<h2>Resurshistogram — se beläggningen mot kapaciteten</h2>
+<p>Ett resurshistogram är en stapelvy som summerar beläggningen per resurs eller lag över tid och ställer den mot tillgänglig kapacitet. Varje stapel visar hur många timmar som är inbokade en given vecka; en vågrät linje visar kapacitetstaket. Stiger stapeln över linjen har du överbeläggning — ni har lovat bort mer arbete än laget hinner med.</p>
+<p>Kapacitetstaket är inte en gissning, det går att räkna. Enligt Byggavtalet (i kraft 2025-05-01 till 2027-04-30) är ordinarie arbetstid 40 timmar i veckan, vilket ger 160 timmar per fyraveckorsperiod, förlagd flexibelt mellan 06.00 och 18.00 måndag till fredag. Från slutet av mars 2026 tillkommer 6 dagars arbetstidsförkortning för den som jobbar 40-timmarsvecka, där arbetsgivaren ensidigt får lägga ut en av dagarna i anslutning till en helg. Räkna även bort semester och andra frånvaron. Det som återstår är den faktiska kapaciteten histogrammet ska mätas mot — inte en teoretisk maxsiffra.</p>
+
+<h2>Resursutjämning: smoothing och leveling</h2>
+<p>När histogrammet visar en topp finns det två sätt att jämna ut den. Resursutjämning handlar om att flytta aktiviteter som inte ligger på kritiska linjen inom sitt slack — det tidsutrymme de kan förskjutas utan att påverka annat.</p>
+<ul>
+<li><strong>Resource smoothing</strong> — du jämnar ut belastningen utan att flytta projektets slutdatum. Du utnyttjar bara det slack som redan finns i icke-kritiska aktiviteter.</li>
+<li><strong>Resource leveling</strong> — kapaciteten räcker helt enkelt inte, och du accepterar att slutdatumet flyttas för att inte överbelägga laget.</li>
+</ul>
+<p>Praktiskt börjar du med att skydda kritiska linjen, fördela om lag mellan projekt och tidigare- eller senarelägga moment som tål det. Målet är att kapa toppen innan den blir övertid — inte att lösa den med övertid.</p>
+
+<h2>Lagen sätter taket för hur långt du får tänja</h2>
+<p>Det är frestande att se övertid som ventilen som löser all överbeläggning. Det är den inte. Arbetstidslagen (1982:673) sätter hårda tak som ett resursschema aldrig får bryta mot:</p>
+<ul>
+<li>Allmän övertid: högst <strong>200 timmar per anställd och kalenderår</strong>, med ytterligare 150 timmar extra övertid.</li>
+<li>Högst <strong>48 timmar övertid per fyraveckorsperiod</strong>, eller 50 timmar per kalendermånad.</li>
+<li><strong>Dygnsvila</strong>: minst 11 sammanhängande timmars vila per 24-timmarsperiod.</li>
+<li><strong>Veckovila</strong>: minst 36 sammanhängande timmar per sjudagarsperiod.</li>
+</ul>
+<p>Vilotiderna är särskilt lömska när firman växer. Att köra ett lag rakt från ett projekt in i nästa, eller dubbelboka en besättning över två arbetsplatser, kan bryta mot dygns- eller veckovilan även när veckans totala timmar ser rimliga ut. Histogrammet måste alltså hålla sig under både kapacitetstaket och lagtaket samtidigt.</p>
+
+<h2>Dubbelbokning tvärs projekt — det klassiska växtvärkproblemet</h2>
+<p>Det verkliga tillväxtproblemet är inte överbeläggning inom ett projekt, utan dubbelbokning mellan projekt: samma lag, kranförare eller maskin lovad till två projektledare som var för sig inte ser den andres plan. Här är det värt att reda ut vad personalliggaren gör och inte gör.</p>
+<p>Elektronisk personalliggare är obligatorisk på byggarbetsplatser. Kravet gäller inte när beställaren är en privatperson som bygger för privat bruk, eller när den beräknade byggkostnaden på platsen understiger 4 prisbasbelopp. För 2026 är prisbasbeloppet 59 200 kr, vilket ger en gräns på 4 × 59 200 = 236 800 kr, alltså cirka 237 000 kr. Byggherren ska anmäla till Skatteverket innan arbetet startar. Notera att lagen inte kräver ID06 specifikt — kravet är bara att liggaren är elektronisk och visar vem som varit på plats och när. ID06 är marknadsstandard, inte ett lagkrav.</p>
+<p>Men personalliggaren visar vem som <em>faktiskt</em> var på plats i efterhand — den hindrar ingen dubbelbokning i förväg. Därför räcker inte liggaren som planeringsverktyg. Du behöver en central resursvy <em>före</em> arbetet, inte bara en liggare <em>efter</em>.</p>
+
+<h2>Så bygger du processen i praktiken</h2>
+<ol>
+<li>Inventera kapaciteten per lag och maskin — faktiska tillgängliga timmar, inte teoretiska.</li>
+<li>Lägg alla projekt i EN delad resursvy, inte separata scheman per projektledare.</li>
+<li>Läs av histogrammet varje vecka och leta efter staplar över kapacitetslinjen.</li>
+<li>Utjämna topparna med smoothing eller leveling innan de blir övertid.</li>
+<li>Hantera underentreprenörer och maskiner som egna resurser med egen kapacitet.</li>
+</ol>
+
+<h2>Varför just nu — marknaden 2026</h2>
+<p>Byggföretagens prognos pekar på att bygginvesteringarna vänder uppåt med runt 4 procent under 2026 och att bostadsstarterna stiger till omkring 30 500 från bottenåret 2024. Samtidigt rapporterar branschen brist på ungefär 700 yrkesarbetare med rätt kompetens, och kompetensbristen flaggas som en risk som kan bromsa återhämtningen. Slutsatsen är enkel: när varje yrkesarbetare är en bristvara kostar dålig resursplanering dubbelt — en böjd tidplan och bränd personal på samma gång.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp planeras resurser per projekt, men beläggningen syns aggregerat tvärs över hela portföljen. Det betyder att när ett lag redan är intecknat på ett projekt fångas överbeläggningen upp tidigt i stället för att upptäckas när två arbetsledare bråkar om samma besättning på måndag morgon. Du kopplar tidrapporterna till planen så att utfall och plan lever i samma system — börja gärna med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för att fånga faktiska timmar per lag. ByggExp trollar inte bort kapacitetsbrist, men det gör den synlig i tid så att du hinner utjämna innan det blir övertid eller dubbelbokning.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan resurshistogram och Gantt-schema?</h3>
+<p>Gantt-schemat visar aktiviteter över tid — vad som görs när. Resurshistogrammet visar summerad beläggning per resurs mot kapacitet — om laget faktiskt räcker till för alla aktiviteter samtidigt. Du behöver båda: tidplanen för sekvensen, histogrammet för att se överbeläggning.</p>
+<h3>Kan jag lösa överbeläggning med övertid?</h3>
+<p>Bara till en gräns. Arbetstidslagen tillåter högst 200 timmars allmän övertid per anställd och år, max 48 timmar per fyraveckorsperiod, samt kräver 11 timmars dygnsvila och 36 timmars veckovila. Övertid är en ventil, inte en lösning på strukturell överbeläggning.</p>
+<h3>Räcker personalliggaren för att undvika dubbelbokning?</h3>
+<p>Nej. Personalliggaren är elektronisk och visar vem som varit på plats i efterhand — den är obligatorisk över 4 prisbasbelopp (cirka 237 000 kr 2026). Men den planerar ingenting framåt. För att undvika dubbelbokning behöver du en central resursvy före arbetet.</p>
+<h3>Vad är skillnaden mellan resource smoothing och leveling?</h3>
+<p>Smoothing jämnar ut belastningen utan att flytta slutdatumet, genom att utnyttja slack i icke-kritiska aktiviteter. Leveling tillåter att slutdatumet flyttas när kapaciteten helt enkelt inte räcker till.</p>
+
+<h2>Kom igång</h2>
+<p>Gå från Excel och huvudräkning till en delad resursvy per projekt. Lägg upp tidplanen i vår <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>, koppla på timmarna via <a href="/sv/verktyg/tidrapport-mall">tidrapport-mallen</a> — och vill du se hur resursplaneringen fungerar över hela portföljen i praktiken, <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a>, <a href="/sv/blog/gantt-schema-mall-bygg">Gantt-schema för bygge</a>, <a href="/sv/blog/tidrapportering">Tidrapportering i byggprojekt</a>.</p>
+`;
+
+const A_RESURSPLANERING_BYGG: BlogPost = {
+  _id: "code-"+"resursplanering-bygg",
+  title: "Resursplanering i bygg — så undviker du överbeläggning och dubbelbokade lag", slug: "resursplanering-bygg", locale: "sv",
+  excerpt: "Så använder du resurshistogram och resursutjämning för att undvika överbeläggning och dubbelbokade lag och maskiner när byggfirman växer från några projekt till en hel portfölj.", tag: "Planering",
+  coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_RESURSPLANERING_BYGG_HTML,
+  seoTitle: "Resursplanering bygg: undvik dubbelbokning | ByggExp", seoDescription: "Resursplanering i bygg med resurshistogram och resursutjämning — så slipper firman överbeläggning, dubbelbokade lag och maskiner när ni växer.",
+  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T08:18:00.000Z", createdAt: "2026-08-19T08:18:00.000Z", updatedAt: "2026-08-19T08:18:00.000Z",
+};
+
+const A_VERKTYG_DIREKTAVDRAG_ELLER_AVSKRIVNING_HTML = `
+<p>En borrmaskin på 4 000 kr och en minidumper på 180 000 kr behandlas helt olika i bokföringen. Borrmaskinen kostnadsför du direkt året du köper den. Minidumpern måste du ta upp som anläggningstillgång och skriva av över flera år. Väljer du fel drar du antingen av för mycket för tidigt – med risk vid en granskning – eller binder upp likviditet i avskrivningar som du hade fått ta direkt. För inkomståret 2026 går den avgörande gränsen vid 29 600 kr exkl. moms.</p>
+
+<p>Eftersom momsen avgör om du hamnar över eller under gränsen är det värt att räkna rätt på beloppen från början – testa <a href="/sv/verktyg/moms-kalkylator">vår gratis moms-kalkylator -&gt;</a> när du ska skilja pris exkl. och inkl. moms på ett verktygsinköp.</p>
+
+<h2>Två sätt att dra av verktyg – direktavdrag vs värdeminskningsavdrag</h2>
+<p>Skattereglerna ger dig två vägar att dra av kostnaden för verktyg och maskiner. Med <strong>direktavdrag</strong> kostnadsför du hela beloppet det år du anskaffar inventariet – det syns direkt som en kostnad i resultaträkningen och sänker årets skattemässiga resultat med hela summan. Med <strong>värdeminskningsavdrag</strong> (avskrivning) fördelar du kostnaden över flera år eftersom tillgången beräknas ge nytta under lång tid.</p>
+<p>Vilken väg som gäller styrs inte av vad som är bekvämt utan av två saker: inventariets värde och dess ekonomiska livslängd i företaget. Det finns två skattemässiga regler som öppnar för direktavdrag – beloppsgränsen och 3-årsregeln. Uppfyller inköpet ingen av dem ska det skrivas av.</p>
+
+<h2>Regel 1 – Inventarier av mindre värde</h2>
+<p>Så kallade <strong>inventarier av mindre värde</strong> får du dra av direkt anskaffningsåret. Gränsen är ett halvt prisbasbelopp. Prisbasbeloppet för 2026 är 59 200 kr (höjt från 58 800 kr för 2025), vilket ger en gräns på <strong>29 600 kr exkl. moms</strong> (59 200 / 2). Motsvarande gräns för 2025 var 29 400 kr. Understiger anskaffningsvärdet gränsen får du direktavdrag.</p>
+<p>Att beloppet ändras varje år är själva poängen att hålla koll på – ett inköp på 29 500 kr som var ett gränsfall 2025 ligger tryggt under gränsen 2026. Kontrollera alltid aktuellt prisbasbelopp mot Skatteverket innan du avgör hur en dyrare post ska bokföras.</p>
+
+<h2>Regel 2 – Korttidsinventarier (3-årsregeln)</h2>
+<p>Den andra vägen till direktavdrag handlar om livslängd, inte pris. <strong>Korttidsinventarier</strong> – inventarier med en beräknad ekonomisk livslängd i företaget på högst 3 år – får dras av direkt <em>oavsett</em> anskaffningsvärde. Även ett dyrt verktyg får alltså direktavdrag om du kan visa att det inte håller längre än tre år i din verksamhet.</p>
+<p>För ett byggföretag kan det handla om utrustning med hög förslitning eller viss elektronik och mätutrustning som i praktiken byts ut inom ett par år. Det är den verkliga användningstiden i just ditt företag som räknas, och du bör kunna motivera bedömningen om Skatteverket frågar.</p>
+
+<h2>Momsen och den vanliga fällan att dela upp inköp</h2>
+<p>Gränsen på 29 600 kr räknas normalt på beloppet <strong>exkl. moms</strong>. Har du rätt att lyfta ingående moms är det nettobeloppet du jämför med gränsen. Bara om företaget varken har rätt att lyfta moms eller rätt till återbetalning får du höja beloppsgränsen med momsbeloppet – för de flesta byggföretag med momspliktig verksamhet gäller alltså beloppet exkl. moms.</p>
+<p>Den vanligaste fällan är att försöka dela upp ett dyrt köp i flera små fakturor för att komma under gränsen. Det stoppas av <strong>naturligt-samband-regeln</strong>: om flera inventarier har ett naturligt samband, eller köps som ett led i en större anskaffning, är det det <em>sammanlagda</em> anskaffningsvärdet som ska understiga ett halvt prisbasbelopp. Köper du ett verktygsset eller en maskin med tillbehör som hör ihop bedöms hela köpet som en enhet – du kan inte splittra det i småposter för att tvinga fram direktavdrag.</p>
+
+<h2>Så skrivs dyrare maskiner av</h2>
+<p>Ligger inköpet över gränsen och har en livslängd över tre år ska det tas upp som anläggningstillgång och skrivas av över tid. Skattemässigt görs det oftast med <strong>räkenskapsenlig avskrivning</strong>, som har två regler du får kombinera och byta mellan år för att ta ut störst avdrag:</p>
+<ul>
+<li><strong>Huvudregeln (30-regeln):</strong> avdrag med högst 30 % av avskrivningsunderlaget, det vill säga bokfört värde vid årets ingång plus årets anskaffningar.</li>
+<li><strong>Kompletteringsregeln (20-regeln):</strong> 20 % per år på anskaffningsvärdet, vilket ger full avskrivning på exakt 5 år.</li>
+</ul>
+<p>Ett villkor gäller: det skattemässiga värdet måste stämma överens med det bokförda – bokföringen ska följa den skattemässiga avskrivningen. Är det kravet inte uppfyllt får du i stället använda <strong>restvärdesavskrivning</strong>, max 25 % per år av restvärdet. Där får bokfört och skattemässigt värde skilja sig åt, men det ger ett lägre årligt avdrag än 30-regeln.</p>
+
+<h3>Räkneexempel: minidumper 180 000 kr</h3>
+<p>Med huvudregeln får du år ett skriva av 30 % av 180 000 kr = 54 000 kr, kvar 126 000 kr. År två 30 % av 126 000 kr = 37 800 kr, och så vidare – avdraget minskar varje år men tar aldrig helt slut. Med kompletteringsregeln skriver du av 36 000 kr per år (20 % av 180 000 kr) i fem år och når då noll. Ett vanligt upplägg är att köra huvudregeln i början när avdraget är störst och byta till kompletteringsregeln mot slutet.</p>
+
+<h2>Förbrukningsinventarier i bokföringen</h2>
+<p>För dig som bokför själv motsvaras skattereglerna av två olika kontogrupper. Ett verktyg som får direktavdrag bokförs som <strong>förbrukningsinventarie</strong> på konto 5410 och blir en kostnad direkt i resultaträkningen. Ett inventarium som ska skrivas av bokförs i stället som anläggningstillgång på konto 1220 och kostnadsförs successivt via avskrivningar. Bokföringsvalet är alltså den praktiska motsvarigheten till skattereglernas direktavdrag kontra avskrivning – de hänger ihop.</p>
+
+<h2>Checklista: 4 frågor innan du bokför verktyget</h2>
+<ol>
+<li>Kostar det <strong>under 29 600 kr exkl. moms</strong> (gränsen 2026)? Om ja – direktavdrag.</li>
+<li>Har det en ekonomisk livslängd på <strong>högst 3 år</strong> i företaget? Om ja – direktavdrag oavsett pris.</li>
+<li>Är det <strong>en del av ett större köp</strong> med naturligt samband? Räkna då på det sammanlagda beloppet.</li>
+<li>Har företaget <strong>momsavdrag</strong>? Om ja – jämför beloppet exkl. moms mot gränsen.</li>
+</ol>
+<p>Svarar du nej på fråga 1 och 2 är det en anläggningstillgång som ska skrivas av.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte din bokföring, men hjälper dig fånga rätt underlag redan när verktyget köps in. Fota och lägg kvittot direkt på rätt projekt, så har du anskaffningsvärde och datum samlat när det är dags att avgöra direktavdrag eller avskrivning – och när du märker en faktura med omvänd byggmoms mot en annan byggfirma. Med moms-kalkylatorn räknar du snabbt om mellan pris exkl. och inkl. moms så att du jämför rätt belopp mot gränsen. Själva avdraget och avskrivningsplanen sätter du och din redovisningskonsult, men underlaget finns redo.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är gränsen för direktavdrag på verktyg 2026?</h3>
+<p>Ett halvt prisbasbelopp, vilket för inkomståret 2026 är 29 600 kr exkl. moms (prisbasbeloppet är 59 200 kr). Understiger anskaffningsvärdet gränsen får du dra av hela beloppet direkt. För 2025 var gränsen 29 400 kr, så kontrollera alltid aktuellt belopp mot Skatteverket.</p>
+<h3>Kan jag dela upp ett dyrt maskinköp för att komma under gränsen?</h3>
+<p>Nej. Har flera inventarier ett naturligt samband, eller köps som ett led i en större anskaffning, är det det sammanlagda anskaffningsvärdet som ska understiga ett halvt prisbasbelopp. Ett verktygsset eller en maskin med tillhörande delar bedöms som en enhet.</p>
+<h3>Får dyra verktyg någonsin direktavdrag?</h3>
+<p>Ja, om den ekonomiska livslängden i företaget är högst tre år. Sådana korttidsinventarier får dras av direkt oavsett pris. Du bör kunna motivera den korta livslängden om Skatteverket frågar.</p>
+<h3>Vad är skillnaden mellan huvudregeln och kompletteringsregeln?</h3>
+<p>Huvudregeln (30-regeln) ger avdrag med högst 30 % av avskrivningsunderlaget per år. Kompletteringsregeln (20-regeln) ger 20 % av anskaffningsvärdet per år och full avskrivning på fem år. Du får kombinera dem och välja den som ger störst avdrag.</p>
+
+<h2>Kom igång</h2>
+<p>Räkna rätt på belopp exkl. och inkl. moms innan du avgör hur verktyget ska bokföras med <a href="/sv/verktyg/moms-kalkylator">vår moms-kalkylator</a>. Vill du se hur ByggExp samlar kvitton och projektunderlag åt hela laget? <a href="/sv/contact">Boka en demo -&gt;</a> så visar vi upplägget. Kom ihåg att beloppsgränsen ändras varje år – stäm av mot Skatteverket.</p>
+
+<p>Relaterat: <a href="/sv/blog/avdrag-arbetsklader-verktyg">Avdrag för arbetskläder och verktyg</a>, <a href="/sv/blog/avdrag-enskild-firma-bygg">Avdrag i enskild firma för byggföretag</a>, <a href="/sv/blog/periodiseringsfond-byggbolag">Periodiseringsfond för byggbolag</a>.</p>
+`;
+
+const A_VERKTYG_DIREKTAVDRAG_ELLER_AVSKRIVNING: BlogPost = {
+  _id: "code-"+"verktyg-direktavdrag-eller-avskrivning",
+  title: "Verktyg och maskiner – direktavdrag eller avskrivning? Så gör byggföretaget rätt 2026", slug: "verktyg-direktavdrag-eller-avskrivning", locale: "sv",
+  excerpt: "Gränsen för direktavdrag på verktyg är 29 600 kr exkl. moms 2026 – så skiljer du på inventarier av mindre värde, korttidsinventarier och maskiner som ska skrivas av.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_VERKTYG_DIREKTAVDRAG_ELLER_AVSKRIVNING_HTML,
+  seoTitle: "Direktavdrag eller avskrivning verktyg | ByggExp", seoDescription: "Borrmaskinen dras av direkt, minidumpern skrivs av. Gränsen 2026 är 29 600 kr exkl. moms. Så väljer byggföretaget rätt mellan direktavdrag och avskrivning.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T08:21:00.000Z", createdAt: "2026-08-19T08:21:00.000Z", updatedAt: "2026-08-19T08:21:00.000Z",
+};
+
+const A_ID06_BESTALLA_KORT_STEG_FOR_STEG_HTML = `
+<p>Ska ditt företag ta sitt första uppdrag som underentreprenör hos en generalentreprenör (GE)? Då kommer ID06-kort och giltig arbetsmiljöutbildning att vara en förutsättning för att du och dina anställda överhuvudtaget ska släppas in på arbetsplatsen. GE:n behöver kunna registrera alla som arbetar på plats i den elektroniska personalliggaren, och ID06-kortet är det praktiska verktyget för det. Den här guiden går igenom hela flödet steg för steg – förutsättningarna för företaget, det viktiga nya identifieringskravet som gäller från 28 januari 2026, hur du beställer och validerar kortet, samt vad kompetensdatabasen faktiskt kräver.</p>
+
+<p>Innan ni är igång med kort och närvaroregistrering underlättar det att ha rutiner för tid och närvaro på plats – ladda ner vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall -&gt;</a> och koppla ihop den med personalliggaren från dag ett.</p>
+
+<h2>Vad är ID06 och varför krävs det på byggarbetsplatsen</h2>
+<p>ID06 är ett branschgemensamt system för att styrka identitet och närvaro på byggarbetsplatser. Kravet hänger ihop med den elektroniska personalliggaren, som är obligatorisk på de flesta byggarbetsplatser sedan 1 januari 2016 enligt skatteförfarandelagen. För 2026 är prisbasbeloppet 59 200 kr, vilket ger tröskeln 4 × pbb = 236 800 kr i sammanlagd byggkostnad. Överstiger projektet det beloppet krävs personalliggare redan från första arbetsdagen.</p>
+<p>Skatteverket gör oanmälda kontroller och tar ut kontrollavgifter om liggaren inte sköts. Avgiften är 12 500 kr om personalliggaren inte förs korrekt, plus 2 500 kr per person som är på plats men inte registrerad. Har byggherren dessutom missat att anmäla till Skatteverket var och när byggarbetet startar blir avgiften 25 000 kr. Det handlar alltså inte bara om formalia – utan om sund konkurrens och om att undvika kännbara avgifter som ofta hamnar hos GE:n och därmed på deras krav mot dig.</p>
+
+<h2>Innan du beställer – förutsättningar för företaget</h2>
+<p>Kort beställs alltid via företaget, inte av privatpersonen. Innan du kan ansluta och beställa behöver ditt bolag uppfylla följande:</p>
+<ul>
+<li>Företaget har <strong>F-skatt</strong>.</li>
+<li>Företaget är <strong>registrerat som arbetsgivare</strong> hos Skatteverket.</li>
+<li>Företaget är <strong>inte på obestånd</strong> (ekonomiska svårigheter).</li>
+<li>Företaget är <strong>anslutet till ID06-systemet</strong> via en kortutgivare.</li>
+</ul>
+<p>En viktig begränsning: du får bara beställa och registrera ID06-kort till <strong>egen lönesatt personal</strong> – anställda som företaget betalar lön och lagstadgade arbetsgivaravgifter för. Det är så systemet verifierar anställningsförhållandet. Du kan alltså inte lösa kort åt en inhyrd konsult eller en annan UE:s personal.</p>
+
+<h2>Nya identifieringskravet från 28 januari 2026</h2>
+<p>Detta är den enskilt viktigaste förändringen att känna till just nu. Från och med 28 januari 2026 gäller ett skärpt säkerhetskrav: kortinnehavaren måste identifiera sig och godkänna beställningen med ett <strong>giltigt pass eller nationellt ID-kort</strong> som godtas som resehandling inom EU.</p>
+<p>Det innebär att <strong>BankID/e-legitimation, körkort och personbevis inte längre räcker</strong> för att godkänna en kortbeställning. Identiteten valideras genom att pass eller nationellt ID-kort skannas via ID06:s mobilapp eller hos en auktoriserad skanningspartner. Tredjelandsmedborgare (utanför EU/EES) ska dessutom, precis som tidigare, skanna sitt <strong>uppehållstillståndskort</strong>.</p>
+<p>Rådet från ID06 är att inventera de anställdas ID-handlingar i god tid. Även omregistreringar och förnyelser kommer att omfattas, så säkerställ att varje medarbetare – både ny och befintlig – har en giltig handling innan ni behöver beställa eller förnya kort.</p>
+
+<h2>Beställa ID06-kort steg för steg</h2>
+<ol>
+<li><strong>Anslut företaget till ID06.</strong> Administratören tecknar anslutning via en kortutgivare. Anslutningen förutsätter F-skatt, arbetsgivarregistrering och att bolaget inte är på obestånd.</li>
+<li><strong>Skapa kortbeställningen.</strong> Företagets administratör lägger en beställning för den anställde hos kortutgivaren.</li>
+<li><strong>Validera identiteten.</strong> Den anställde skannar sitt pass eller nationella ID-kort i ID06-appen eller hos en skanningspartner. Tredjelandsmedborgare skannar även uppehållstillståndskortet.</li>
+<li><strong>Godkänn beställningen.</strong> Innehavaren godkänner ordern i samband med skanningen – från 28 januari 2026 med pass/nationellt ID, inte BankID.</li>
+<li><strong>Kortet tillverkas och skickas.</strong> Kortet produceras och skickas till angiven adress (inrikes frakt ingår).</li>
+<li><strong>Aktivera kortet.</strong> När kortet kommit aktiveras det med tillhörande PIN-kod, varefter det kan användas för in- och utcheckning i personalliggaren.</li>
+</ol>
+
+<h2>Kompetensdatabasen och Safe Construction Training</h2>
+<p>Ett giltigt kort är sällan tillräckligt – de flesta svenska generalentreprenörer kräver att UE:ns personal har genomfört <strong>Safe Construction Training</strong>, Byggföretagens obligatoriska och kostnadsfria arbetsmiljöutbildning som krävts på medlemmarnas arbetsplatser sedan 1 juli 2021. Ett godkänt resultat är giltigt i 5 år och registreras gratis i <strong>ID06 Kompetensdatabas</strong>.</p>
+<p>Sedan 30 september 2025 hanteras kompetensdatabasen utan individens samtycke – den rättsliga grunden är numera en intresseavvägning, och utbildningsleverantörer registrerar intyg utan samtyckeshantering. Undantag gäller för utbildningar kopplade till fackligt uppdrag eller skyddsombud, där individens godkännande fortfarande krävs för att intyget ska visas för arbetsgivare. Utöver Safe Construction Training kan uppdraget kräva andra behörigheter som Heta arbeten eller ställningsbyggnad – kontrollera GE:ns leverantörskrav i förväg.</p>
+
+<h2>Kostnader och giltighetstid</h2>
+<ul>
+<li><strong>Kortpris:</strong> 280 kr/st vid köp, vilket inkluderar anslutningsavgiften och inrikes frakt. Från år två tillkommer en årlig kortavgift på 80 kr/st så länge kortet är aktivt.</li>
+<li><strong>Anslutningsavgift (företag):</strong> trappas efter antal kort per år – 500 kr (0–10 kort), 1 000 kr (11–50), 2 000 kr (51–100), 3 000 kr (101–250), 5 000 kr (251–1 000) och 10 000 kr (fler än 1 000).</li>
+<li><strong>Giltighetstid:</strong> max 5 år, anpassad till personens rätt att arbeta i Sverige. Svenska medborgare får som regel upp till 5 år, EU/EES-medborgare som betalar skatt i hemlandet ofta 6 månader, och tredjelandsmedborgare typiskt 3 månader kopplat till uppehålls- och arbetstillstånd.</li>
+</ul>
+
+<h2>Vanliga misstag att undvika</h2>
+<ul>
+<li>Att vänta med att kontrollera pass/nationellt ID – utan giltig handling går beställningen inte igenom efter 28 januari 2026.</li>
+<li>Att tro att BankID räcker för att godkänna ordern. Det gör det inte längre.</li>
+<li>Att beställa kort till personal du inte betalar lön och arbetsgivaravgifter för.</li>
+<li>Att missa Safe Construction Training – kortet i sig öppnar inte grinden om utbildningen saknas i kompetensdatabasen.</li>
+<li>Att inte planera för korta giltighetstider för utländsk arbetskraft, vilket kan stoppa personal mitt i ett projekt.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp beställer inte ID06-kort åt dig – det gör du via en kortutgivare. Men när korten väl finns på plats hjälper ByggExp dig att hålla ordning på det som händer runt kortet: tidrapportering, närvaro och underlag som stämmer överens med personalliggaren. Med strukturerad tidrapportering blir det enklare att stämma av att alla som varit på plats också är registrerade, vilket minskar risken för kontrollavgifter och missförstånd med generalentreprenören. Du samlar timmar, projekt och personal på ett ställe och får ett rent underlag för fakturering och uppföljning.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad kostar ett ID06-kort?</h3>
+<p>Ett kort kostar 280 kr/st vid köp, inklusive anslutningsavgift och inrikes frakt. Från och med år två tillkommer en årlig avgift på 80 kr/st så länge kortet är aktivt. Företaget betalar dessutom en anslutningsavgift som trappas efter antal beställda kort per år, från 500 kr till 10 000 kr.</p>
+<h3>Räcker BankID för att beställa ID06 2026?</h3>
+<p>Nej. Från 28 januari 2026 måste innehavaren identifiera sig och godkänna beställningen med giltigt pass eller nationellt ID-kort som godtas som resehandling inom EU. BankID, körkort och personbevis accepteras inte längre för att godkänna ordern.</p>
+<h3>Hur lång giltighetstid har kortet?</h3>
+<p>Högst 5 år, men tiden anpassas efter personens rätt att arbeta i Sverige. Svenska medborgare får ofta upp till 5 år, EU/EES-medborgare som betalar skatt i hemlandet typiskt 6 månader och tredjelandsmedborgare omkring 3 månader, kopplat till uppehålls- och arbetstillstånd.</p>
+<h3>Måste jag ha Safe Construction Training?</h3>
+<p>De flesta generalentreprenörer kräver det. Utbildningen är gratis, giltig i 5 år och registreras kostnadsfritt i ID06 Kompetensdatabas. Kontrollera alltid GE:ns leverantörskrav i förväg, eftersom även andra behörigheter kan krävas.</p>
+
+<h2>Kom igång</h2>
+<p>Beställ ID06-kort via din kortutgivare, säkerställ att alla har giltigt pass eller nationellt ID och att Safe Construction Training finns registrerad i kompetensdatabasen. När korten är på plats håller du enkelt ordning på tid och närvaro med vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a>. Vill du se hur ByggExp knyter ihop tidrapportering med personalliggaren inför uppdraget? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+
+<p>Relaterat: <a href="/sv/blog/id06">ID06 – så fungerar systemet</a>, <a href="/sv/blog/personalliggare">Personalliggare i byggbranschen</a> och <a href="/sv/blog/kontrollavgift-personalliggare">Kontrollavgift för personalliggare</a>.</p>
+`;
+
+const A_ID06_BESTALLA_KORT_STEG_FOR_STEG: BlogPost = {
+  _id: "code-"+"id06-bestalla-kort-steg-for-steg",
+  title: "Så beställer du ID06-kort steg för steg inför ditt första uppdrag hos en generalentreprenör", slug: "id06-bestalla-kort-steg-for-steg", locale: "sv",
+  excerpt: "Komplett guide för hantverkare och byggföretag: från företagets förutsättningar och det nya identifieringskravet 2026 till validering, kostnader och Safe Construction Training.", tag: "Personalliggare",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_ID06_BESTALLA_KORT_STEG_FOR_STEG_HTML,
+  seoTitle: "ID06 beställa kort steg för steg | ByggExp", seoDescription: "Så beställer du ID06-kort steg för steg 2026: krav på företaget, nya pass-kravet från 28 januari, Safe Construction Training och kompetensdatabasen.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T08:24:00.000Z", createdAt: "2026-08-19T08:24:00.000Z", updatedAt: "2026-08-19T08:24:00.000Z",
+};
+
+const A_FUKTSAKERHETSPLAN_BYGGAF_HTML = `
+<p>Fuktskador hör till de dyraste och vanligaste orsakerna till reklamationer i svenskt byggande. En felaktigt uttorkad betongplatta, ett tätskikt som lagts på för fuktig grund eller en obruten köldbrygga kan bli en tvist som kostar långt mer än själva åtgärden. ByggaF är branschens etablerade svar – en metod för att säkra, dokumentera och kommunicera fuktsäkerhet genom hela byggprocessen, och den kravställs allt oftare i avtal och offentlig upphandling.</p>
+
+<p>Kärnan i ByggaF är kontroll och spårbar dokumentation. Ett bra sätt att komma igång med de löpande kontrollerna på bygget är <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall &rarr;</a>, som du kan använda som underlag för fuktronder och avvikelsehantering.</p>
+
+<h2>Vad är ByggaF?</h2>
+<p>ByggaF är en branschstandard och metod som utvecklats och förvaltas av Fuktcentrum vid Lunds tekniska högskola (LTH). Metoden säkrar, dokumenterar och kommunicerar fuktsäkerheten genom hela byggprocessen – från planering och projektering till produktion och förvaltning. Den är inte lag i sig, utan en frivillig branschstandard. Men i praktiken har den blivit de facto-standard eftersom den är det etablerade sättet att uppfylla myndigheternas fuktkrav.</p>
+<p>Den ursprungliga branschstandarden publicerades i version 2013-05-08, med senare uppdaterade checklistor och mallar. Metoden förvaltas fortlöpande av Fuktcentrum. Sedan 1 juli 2025 gäller dessutom nya byggregler som ersätter BBR och EKS. Övergångsperioden, då byggherren kunde välja gamla eller nya regler, löpte ut 30 juni 2026 – nu gäller Boverkets nya regler. De nya reglerna är funktionsbaserade – de anger vilket resultat som ska uppnås, inte vilken lösning du ska välja.</p>
+
+<h2>Regelkravet bakom planen – vad reglerna faktiskt kräver</h2>
+<p>Även om ByggaF är frivilligt är det underliggande fuktkravet det inte. Byggreglerna ställer krav på att fukttillståndet i byggnaden inte får överskrida materialens högsta tillåtna fukttillstånd, och kräver fuktsäkerhetsprojektering. ByggaF är den etablerade metoden för att visa att du uppfyller detta.</p>
+<p>En viktig regel att känna till: om det kritiska fukttillståndet för ett material inte är väl undersökt och dokumenterat ska relativ fuktighet (RF) 75 % användas som kritiskt fukttillstånd. Hänsyn ska dessutom tas till osäkerhet i beräkningsmodell, ingångsparametrar och mätmetoder. Det innebär att du inte kan gissa dig till marginaler – de ska räknas hem och dokumenteras.</p>
+
+<h2>Rollerna i ByggaF – vem gör vad</h2>
+<p>ByggaF definierar tre nyckelroller, och en vanlig orsak till att fuktarbetet havererar är att rollerna aldrig utses tydligt:</p>
+<ul>
+<li><strong>Fuktsakkunnig</strong> – oftast beställarens eller byggherrens roll, med i hela processen och den som ska kallas till samtliga fuktronder.</li>
+<li><strong>Fuktsäkerhetsansvarig projektering</strong> – varje projektör utser sin egen, ansvarig för fuktriskvärderingen i sin del.</li>
+<li><strong>Fuktsäkerhetsansvarig produktion</strong> – entreprenörens roll, den som upprättar och driver fuktsäkerhetsplanen på bygget.</li>
+</ul>
+<p>Fuktcentrum LTH håller certifieringskurser, till exempel Fuktsäkerhetsansvarig Produktion, med kursomgång 2026. För dig som byggföretag som ofta möter fuktkrav i upphandling kan certifiering vara en konkret konkurrensfördel.</p>
+
+<h2>Dokumentkedjan steg för steg</h2>
+<p>ByggaF bygger på en sammanhängande kedja av dokument. Ett steg som saknas bryter spårbarheten:</p>
+<ol>
+<li><strong>Fuktsäkerhetsbeskrivning</strong> – byggherrens krav, formuleras i tidigt skede.</li>
+<li><strong>Fuktsäkerhetsprojektering</strong> med fuktriskvärdering – projektörerna identifierar kritiska konstruktioner.</li>
+<li><strong>Fuktsäkerhetsplan produktion</strong> – entreprenörens styrande dokument för utförandet.</li>
+<li><strong>Fuktrondsprotokoll och avvikelserapporter</strong> – den löpande kontrollen under bygget.</li>
+<li><strong>Samlad fuktsäkerhetsdokumentation</strong> – överlämnas vid slutet och följer med in i förvaltningen.</li>
+</ol>
+
+<h2>Fuktsäkerhetsplanen i produktion – vad den ska innehålla</h2>
+<p>Fuktsäkerhetsplanen är ett styrande dokument som upprättas av fuktsäkerhetsansvarig produktion. Den beskriver de aktiviteter och kontroller som ska utföras i produktion för att uppfylla kraven i fuktsäkerhetsbeskrivningen och fuktsäkerhetsprojekteringen. En användbar plan konkretiserar minst följande:</p>
+<ul>
+<li><strong>Kritiska konstruktioner</strong> – vilka konstruktionsdelar som har störst fuktrisk.</li>
+<li><strong>Uttorkningskrav och mätning</strong> – till exempel betongens RF-krav innan tätskikt och golv får läggas, och hur mätningen ska gå till.</li>
+<li><strong>Väderskydd</strong> – hur stommen och materialet skyddas mot nederbörd under byggtiden.</li>
+<li><strong>Materialhantering och lagring</strong> – hur fuktkänsligt material tas emot och förvaras torrt.</li>
+<li><strong>Kontrollpunkter, ansvar och tidpunkter</strong> – vem som kontrollerar vad, och när.</li>
+</ul>
+
+<h2>Fuktronden – den praktiska kontrollen på bygget</h2>
+<p>En fuktrond är en systematisk, återkommande inspektion av byggarbetsplatsen för att identifiera och åtgärda fuktrisker innan de byggs in. Beställarens fuktsakkunnig ska kallas till samtliga fuktronder. Ronderna dokumenteras i fuktrondsprotokoll med tydlig avvikelsehantering: vad som noterats, vem som ansvarar för åtgärd och när uppföljning sker. Det är just den här löpande, daterade dokumentationen som senare blir ditt bevis om en fuktfråga ifrågasätts.</p>
+
+<h2>Så minskar ByggaF dina reklamationer</h2>
+<p>Fördelen är både teknisk och juridisk. Tidig riskidentifiering är nästan alltid billigare än efterlagning – att torka ut en platta rätt kostar en bråkdel av att riva upp ett färdigt golv. Samtidigt ger dokumentkedjan en spårbar historik som fungerar som bevis vid tvist om vem som gjorde vad och när. Och eftersom fuktsäkerhetsarbetet ofta kravställs i AF/AMA och i offentlig upphandling – Upphandlingsmyndighetens hållbarhetskriterier ställer krav på fuktsäkerhetsansvar i produktion, vilket i praktiken gör ByggaF-arbetssättet obligatoriskt i många offentliga projekt – blir en fungerande fuktprocess också en förutsättning för att över huvud taget få uppdragen.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte ByggaF-metoden, men vi gör den löpande kontrollen och dokumentationen enklare att hålla i ordning. Med en digital egenkontroll- och kontrollmall samlar du fuktrondens noteringar, avvikelser och åtgärder på ett ställe, med datum och ansvarig. Det gör det enkelt att kalla rätt person, följa upp öppna punkter och plocka fram underlaget vid överlämning eller om en fråga skulle uppstå. Du bygger själva fuktsäkerhetsplanen enligt ByggaF – vi hjälper dig att hålla protokollen samlade och spårbara.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är ByggaF ett lagkrav?</h3>
+<p>Nej, ByggaF är en frivillig branschstandard. Men byggreglerna kräver fuktsäkerhetsprojektering och att materialens högsta tillåtna fukttillstånd inte överskrids, och ByggaF är den etablerade metoden för att uppfylla det. Dessutom kravställs metoden ofta i avtal och offentlig upphandling.</p>
+<h3>Vem betalar för fuktsakkunnig?</h3>
+<p>Fuktsakkunnig är oftast beställarens eller byggherrens roll och bekostas normalt av dem. Entreprenören ansvarar i stället för fuktsäkerhetsansvarig produktion. Fördelningen bör regleras tydligt i avtalet så att ingen roll faller mellan stolarna.</p>
+<h3>Räcker det med en fuktrond?</h3>
+<p>Nej. En fuktrond är en återkommande inspektion, inte en engångskontroll. Ronderna ska genomföras systematiskt under hela produktionen så att fuktrisker fångas innan de byggs in, och fuktsakkunnig ska kallas till samtliga ronder.</p>
+<h3>Vad gäller efter 30 juni 2026?</h3>
+<p>Den ettåriga övergångsperioden löper ut 30 juni 2026. Fram till dess kan byggherren välja att tillämpa de gamla reglerna (BBR/EKS) eller de nya, funktionsbaserade reglerna. Därefter gäller de nya reglerna. Kontrollera alltid vilket regelverk som är avtalat för just ditt projekt.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att utse rollerna tidigt, skriv in ByggaF i avtalet, boka in fuktronder i tidplanen, säkra betonguttorkning innan tätskikt och golv, och arkivera dokumentationen. Ett enkelt första steg är att sätta upp en löpande kontroll med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>. Vill du se hur ByggExp samlar fuktronder och avvikelser i ett flöde? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/nya-vatrumsregler-2026">Nya våtrumsregler 2026</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i bygg</a>, <a href="/sv/blog/kontrollplan-mall-bygglov">Kontrollplan och mall för bygglov</a>.</p>
+`;
+
+const A_FUKTSAKERHETSPLAN_BYGGAF: BlogPost = {
+  _id: "code-"+"fuktsakerhetsplan-byggaf",
+  title: "Fuktsäkerhetsplan och fuktrond enligt ByggaF – så slipper du fuktreklamationer", slug: "fuktsakerhetsplan-byggaf", locale: "sv",
+  excerpt: "En praktisk genomgång av ByggaF-metoden: fuktsäkerhetsplan, fuktrond och dokumentkedjan som skyddar dig mot fuktskador och reklamationer.", tag: "Kvalitet",
+  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_FUKTSAKERHETSPLAN_BYGGAF_HTML,
+  seoTitle: "Fuktsäkerhetsplan ByggaF | ByggExp", seoDescription: "Så bygger du en fuktsäkerhetsplan och genomför fuktronder enligt ByggaF-metoden – dokumentkedjan, rollerna och BBR-kraven som stoppar fuktreklamationer.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T08:27:00.000Z", createdAt: "2026-08-19T08:27:00.000Z", updatedAt: "2026-08-19T08:27:00.000Z",
+};
+
+const A_KALKYLERA_FONSTERBYTE_OFFERT_HTML = `
+<p>Fönsterbyte-offerter läcker sällan pengar på materialet – det prissätts oftast korrekt mot leverantörens lista. Marginalen försvinner i montagetiden, ställtiden och den slarviga ROT-hanteringen. Räknar du timmarna för lågt och slår ihop arbete och material i en klumpsumma, blir det du själv som betalar mellanskillnaden. Här är en räknemodell för att kalkylera fönsterbyte som håller hela vägen från avtalslön till kundpris 2026.</p>
+
+<p>Enklaste sättet att bygga en offert som separerar arbete och material korrekt är att utgå från en färdig struktur – testa vår gratis <a href="/sv/verktyg/offert-mall">offertmall för hantverkare -&gt;</a> och fyll i posterna nedan.</p>
+
+<h2>Bryt ner priset i tre delar – material, arbete, påslag</h2>
+<p>Både Skatteverket och kunden vill se arbetskostnaden separat. Skatteverket, eftersom ROT-avdraget <strong>bara</strong> gäller arbetet – material, resor, maskiner, frakt och administrativ avgift ger inget avdrag. Kunden, eftersom det är arbetskostnaden ROT räknas på och alltså det som avgör hur stort avdraget blir. En offert med bara ett totalpris tvingar dig att i efterhand bevisa hur mycket som var arbete.</p>
+<p>Rikttal 2026: ett fönsterbyte ligger typiskt på 5 000–18 000 kr per fönster inklusive material och montage, och upp mot ~21 500 kr för större eller specialanpassade fönster. En villa med 12–14 fönster landar därmed på ungefär 95 000–175 000 kr före ROT. Använd de siffrorna som rimlighetskontroll – inte som prislista. Ditt pris ska byggas underifrån, från timmar och självkostnad.</p>
+
+<h2>Räkna rätt på montagetiden</h2>
+<p>Ett standardfönster tar cirka 1,5–2,5 timmar att byta när karmen är hel och kan återanvändas. Så fort det tillkommer moment stiger tiden snabbt:</p>
+<ul>
+<li>Karmbyte i stället för enbart bågbyte</li>
+<li>Rivning och bortforsling av gammalt fönster</li>
+<li>Drev, tätning och fuktspärr</li>
+<li>Invändig och utvändig list samt plåtavtäckning</li>
+<li>Ställning eller skylift vid övervåning</li>
+</ul>
+<p>Lägg dessutom in etableringstid, ställtid och resor som egna rader. De är verklig arbetstid du betalar lön för, men de är <strong>inte</strong> ROT-grundande arbete och ska därför ligga utanför arbetskostnaden i offerten. Missar du den uppdelningen riskerar du antingen att rapportera fel ROT-underlag eller att bjuda på timmarna.</p>
+
+<h2>Lönekostnad, inte timlön – bygg upp självkostnaden</h2>
+<p>Timlönen är bara startpunkten. Byggavtalet (Byggnads) löper 1 maj 2025–30 april 2027 med ett totalt avtalsvärde på 6,4 % över två år. Grundlönen för yrkesarbetare är omkring 203 kr/tim (lägstalönen är högre, ca 1,24× grundlönen), och avtalshöjningen 2026 är cirka 6,85 kr/tim (~1 192 kr/mån) från 1 maj 2026. På den lönen tillkommer sociala avgifter på omkring 42 %. Kalkylkedjan ser ut ungefär så här:</p>
+<ol>
+<li>Avtalslön ~203 kr/tim</li>
+<li>+ lönekostnadspåslag ~42 % (varav lagstadgad arbetsgivaravgift 31,42 %) → ca 288 kr/tim ren lönekostnad</li>
+<li>+ oproduktiv tid, semester, sjukfrånvaro, verktyg och garanti</li>
+<li>+ omkostnadspåslag och vinst</li>
+</ol>
+<p>Resultatet blir ett kundtimpris på ungefär 550–750 kr/tim (inklusive moms, exklusive ROT) beroende på ort. Sätter du kundpriset direkt utifrån timlönen 203 kr utan att bygga upp självkostnaden är offerten olönsam redan innan första fönstret är lyft.</p>
+
+<h2>U-värdeskravet påverkar både pris och produktval</h2>
+<p>Energikraven styr vilka fönster du får montera – och därmed materialkostnaden. Sikta på ett U-värde på högst 1,2 W/m²K vid utbyte; moderna 3-glasfönster når ofta 0,9–1,0 W/m²K. Boverkets nya funktionsbaserade byggregler gäller från 1 juli 2025. Under övergångsperioden till och med 30 juni 2026 får byggherren välja mellan gamla BBR/EKS och de nya reglerna – men inte blanda dem i samma ärende. Från 1 juli 2026 kan bara de nya reglerna tillämpas i nya ärenden.</p>
+<p>Dokumentera valt fönstersystem och dess U-värde i offerten. Det skyddar dig om kunden i efterhand ifrågasätter produktvalet, och du kan snabbt kontrollräkna med vår <a href="/sv/verktyg/u-varde-kalkylator">U-värdeskalkylator -&gt;</a>. Läs mer i <a href="/sv/blog/fonster-u-varde-2026">Fönster och U-värde 2026</a>.</p>
+
+<h2>ROT 30 % 2026 – så hanterar du det i offerten</h2>
+<p>Från 1 januari 2026 är ROT-avdraget tillbaka på <strong>30 % av arbetskostnaden</strong>. Den tillfälliga höjningen till 50 % gällde bara 12 maj–31 december 2025 och är slut. Bygg alltså offerten på 30 %.</p>
+<p>Takbeloppet 2026 är max 50 000 kr ROT per person och år, men ROT och RUT delar nu ett gemensamt tak på 75 000 kr per person och år (varav högst 50 000 kr får vara ROT). Äger två personer bostaden kan taket dubblas. Vid ett fast paketpris där fönster och montage ingår godtar Skatteverket branschschablonen att arbetskostnaden får beräknas till 35 % av totalpriset – är den högre måste du kunna visa hur den räknats fram.</p>
+<p>Specificera arbetskostnad och ROT-belopp tydligt på fakturan. Vill du kontrollera avdraget innan du skickar offerten, använd vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylator -&gt;</a>. Detaljerna om regeländringen finns i <a href="/sv/blog/rotavdrag-2026-nya-regler-foretag">Rotavdrag 2026 – nya regler för företag</a>.</p>
+
+<h2>Vanliga fel som äter din marginal</h2>
+<ul>
+<li><strong>BRF-fönster utan avdragsrätt.</strong> För bostadsrätt ger fönsterbyte oftast inte ROT, eftersom fönster och yttre skal är föreningens ansvar. Varna BRF-boende kunder redan i offerten.</li>
+<li><strong>Taket redan förbrukat.</strong> Kunden måste äga bostaden och ha tillräcklig skatt att kvitta mot. Är ROT-utrymmet slut för året betalar kunden hela beloppet.</li>
+<li><strong>Kontantbetalning.</strong> Betalningen måste vara spårbar. Kontant eller felrapportering kan göra att avdraget nekas – och då blir det du som står utan de 30 %.</li>
+<li><strong>Glömd etableringstid.</strong> Ställning, rivning och transport bjuds ofta bort av misstag när de inte finns med som egna rader.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I ByggExp bygger du offerten med separata rader för material, ROT-grundande arbetskostnad och övrigt (ej ROT) redan från start, så uppdelningen finns på plats innan du skickar. Du kan lägga in ditt kundtimpris och montagetiden per fönster, låta systemet räkna ut ROT-avdraget på arbetsdelen och visa "att betala" för kunden. När jobbet är klart följer offerten med som underlag för faktura och ROT-rapportering, så att arbetskostnaden du offererade är samma siffra du begär utbetalning på. ByggExp beräknar inte åt Skatteverket – du ansvarar fortfarande för att uppgifterna stämmer – men strukturen gör det svårare att missa en post.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket är ROT-avdraget för fönsterbyte 2026?</h3>
+<p>30 % av arbetskostnaden, med tak på 50 000 kr ROT per person och år inom ett gemensamt ROT+RUT-tak på 75 000 kr per person och år. Vid fast paketpris får arbetskostnaden schablonmässigt sättas till 35 % av totalpriset.</p>
+<h3>Hur räknar jag arbetskostnaden vid ett fast paketpris?</h3>
+<p>Skatteverket godtar att du beräknar arbetskostnaden till 35 % av totalpriset vid fasta paketpriser där fönster och montage ingår. Sätter du den högre måste du kunna visa hur beräkningen gjorts.</p>
+<h3>Får en kund i bostadsrätt ROT för fönsterbyte?</h3>
+<p>Oftast inte. Fönster och byggnadens yttre skal är normalt föreningens ansvar, och då saknas avdragsrätt för den enskilde bostadsrättshavaren. Ta upp detta i offerten till BRF-boende innan du räknar med avdrag.</p>
+<h3>Vilket U-värde ska nya fönster ha?</h3>
+<p>Sikta på högst 1,2 W/m²K vid utbyte. Moderna 3-glasfönster når ofta 0,9–1,0 W/m²K. Under övergången till och med 30 juni 2026 får du välja gamla BBR/EKS eller de nya funktionsbaserade reglerna, men inte blanda dem.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med en tydlig struktur och räkna arbetet separat från materialet. Skapa din nästa offert med vår <a href="/sv/verktyg/offert-mall">offertmall</a> och kontrollräkna avdraget i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur hela flödet från offert till ROT-rapportering fungerar i praktiken? <a href="/sv/contact">Boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/fonster-u-varde-2026">Fönster och U-värde 2026</a>, <a href="/sv/blog/rotavdrag-2026-nya-regler-foretag">Rotavdrag 2026 – nya regler för företag</a>, <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a>.</p>
+`;
+
+const A_KALKYLERA_FONSTERBYTE_OFFERT: BlogPost = {
+  _id: "code-"+"kalkylera-fonsterbyte-offert",
+  title: "Kalkylera fönsterbyte – så prissätter du offerten rätt 2026", slug: "kalkylera-fonsterbyte-offert", locale: "sv",
+  excerpt: "En konkret räknemodell för fönsterbyte-offerter 2026 – montagetid, självkostnad och ROT 30 % separerat så du inte tappar marginal.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/isolering-preview.webp", contentHtml: A_KALKYLERA_FONSTERBYTE_OFFERT_HTML,
+  seoTitle: "Kalkylera fönsterbyte 2026 | ByggExp", seoDescription: "Så prissätter du ett fönsterbyte 2026: montagetid, U-värdeskrav och ROT 30 % rätt i offerten. Räknemodell från avtalslön till kundpris.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/isolering-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T08:30:00.000Z", createdAt: "2026-08-19T08:30:00.000Z", updatedAt: "2026-08-19T08:30:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_ACKORDSLON_BYGG,
+    A_BEHORIGHETER_CERTIFIERINGAR_LONAR_SIG,
+    A_REKLAMATION_BEMOTA_FELKRAV_ENTREPRENAD,
+    A_OFFENTLIG_UPPHANDLING_BYGG_LOU,
+    A_SAGA_UPP_ANSTALLD_PERSONLIGA_SKAL_BYGG,
+    A_OMVAND_BYGGMOMS_BOKFORA,
+    A_RESURSPLANERING_BYGG,
+    A_VERKTYG_DIREKTAVDRAG_ELLER_AVSKRIVNING,
+    A_ID06_BESTALLA_KORT_STEG_FOR_STEG,
+    A_FUKTSAKERHETSPLAN_BYGGAF,
+    A_KALKYLERA_FONSTERBYTE_OFFERT,
     A_DEBITERINGSGRAD_BYGG,
     A_OMVAND_BYGGMOMS_UNDERENTREPRENOR,
     A_OFFERT_TILL_BETALD_FAKTURA_FLODE,

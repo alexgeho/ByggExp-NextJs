@@ -9709,9 +9709,198 @@ const A_MASTE_HA_KOLLEKTIVAVTAL_BYGG: BlogPost = {
   publishedAt: "2026-08-19T09:03:00.000Z", createdAt: "2026-08-19T09:03:00.000Z", updatedAt: "2026-08-19T09:03:00.000Z",
 };
 
+const A_VAD_SKA_FAKTURA_INNEHALLA_BYGG_HTML = `
+<p>En faktura som saknar rätt uppgifter är inte bara ett skönhetsfel. Skatteverket kan underkänna den som underlag för momsavdrag, ROT-utbetalningen kan stoppas och köparen kan hålla inne betalningen tills du rättar. För byggföretag med omvänd byggmoms och ROT-jobb är riskerna extra stora eftersom det finns fler obligatoriska fält än i vanliga branscher.</p>
+
+<p>Vill du ha ett underlag som redan har alla lagkravsfält på plats? Använd <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall &rarr;</a> och bocka av checklistan nedan innan du skickar.</p>
+
+<h2>Lagen bakom fakturan</h2>
+<p>Reglerna för vad en faktura ska innehålla finns i mervärdesskattelagen (2023:200), kapitel 17. Den nya lagen trädde i kraft 1 juli 2023 och ersatte den gamla ML (1994:200). För dig som byggföretagare betyder det två saker: kraven på innehåll är i praktiken desamma som tidigare, men laghänvisningarna och de fasta textformuleringarna på din fakturamall behöver uppdateras till den nya lagen. Har du en mall som fortfarande hänvisar till 1994 års lag eller använder gamla momstexter bör du se över den.</p>
+<p>Poängen är enkel: om ett obligatoriskt fält saknas kan Skatteverket vägra köparen avdrag för den ingående momsen. Då blir din faktura en belastning för kunden i stället för ett korrekt underlag – och det är sällan bra för affärsrelationen.</p>
+
+<h2>Obligatoriska fält på en fullständig faktura</h2>
+<p>En fullständig faktura (fullständig faktura) måste enligt momslagen innehålla minst följande uppgifter:</p>
+<ul>
+<li><strong>Fakturadatum</strong> – det datum fakturan utfärdas.</li>
+<li><strong>Ett unikt fakturanummer</strong> – ett löpnummer i en obruten nummerserie, så att varje faktura kan identifieras entydigt.</li>
+<li><strong>Säljarens momsregistreringsnummer</strong> – ditt momsreg.nr (och i praktiken även organisationsnummer).</li>
+<li><strong>Säljarens och köparens namn och adress</strong>.</li>
+<li><strong>Mängd och omfattning</strong> av de varor eller tjänster som sålts – vad du faktiskt levererat.</li>
+<li><strong>Leverans- eller utförandedatum</strong> – när tjänsten utfördes eller varorna levererades, om det skiljer sig från fakturadatumet.</li>
+<li><strong>Beskattningsunderlag per momssats</strong> – belopp exklusive moms, uppdelat om du har flera momssatser.</li>
+<li><strong>Momssatsen</strong> – för byggtjänster normalt 25 %.</li>
+<li><strong>Momsbeloppet</strong> som ska betalas.</li>
+</ul>
+<p>Saknas något av dessa fält är fakturan formellt bristfällig. Det är värt att kontrollera varje gång, eftersom det är billigare att rätta innan utskick än att hantera en underkänd faktura i efterhand.</p>
+
+<h2>Förenklad faktura – när räcker den?</h2>
+<p>En förenklad faktura (förenklad faktura) får bara användas när totalbeloppet inklusive moms inte överstiger 4 000 kr. Då räcker det med fakturadatum, säljarens namn och momsnummer, vad som sålts, samt momsbeloppet eller uppgifter för att räkna ut det. Detaljreglerna finns i Skatteverkets föreskrifter SKVFS 2024:16.</p>
+<p>Fällan är beloppsgränsen. Är fakturan över 4 000 kr inklusive moms krävs en fullständig faktura – annars förlorar köparen rätten att dra av den ingående momsen. För de flesta byggjobb ligger beloppen långt över gränsen, så förenklad faktura passar mest för mindre tillägg eller enstaka materialposter.</p>
+
+<h2>Omvänd byggmoms på fakturan</h2>
+<p>Säljer du byggtjänster till ett annat företag som i sin tur säljer byggtjänster gäller omvänd byggmoms. Då lägger du <strong>ingen moms</strong> på fakturan – i stället redovisar köparen både utgående och ingående moms. Två saker är avgörande för att fakturan ska bli korrekt:</p>
+<ul>
+<li><strong>Köparens momsregistreringsnummer</strong> måste anges på fakturan.</li>
+<li>Fakturan måste uttryckligen ange att omvänd betalningsskyldighet gäller. Den nya momslagen bytte formuleringen från &quot;omvänd skattskyldighet&quot; till <strong>&quot;omvänd betalningsskyldighet&quot;</strong>. Även engelskans &quot;reverse charge&quot; godtas. Att bara utelämna momsen utan text räcker inte.</li>
+</ul>
+<p>Tänk också på materialregeln: om en tjänst innehåller material räknas hela leveransen som en byggtjänst, och omvänd betalningsskyldighet gäller för hela beloppet – inte bara arbetsdelen.</p>
+
+<h2>ROT-avdrag på fakturan 2026</h2>
+<p>Från 1 januari 2026 är ROT-avdraget 30 % av arbetskostnaden, efter att den tillfälliga nivån på 50 % som gällde i slutet av 2025 tagits bort. Taket är 50 000 kr per person och år, och ROT och RUT delar på ett gemensamt tak på 75 000 kr per person och år.</p>
+<p>För att en ROT-faktura ska gå igenom hos Skatteverket måste du samla in och ange:</p>
+<ul>
+<li><strong>Kundens fullständiga personnummer</strong> (ÅÅÅÅMMDD-XXXX).</li>
+<li><strong>Fastighetsbeteckningen</strong> för villa/hus, eller bostadsrättsföreningens <strong>organisationsnummer plus lägenhetsnummer</strong> för en bostadsrätt.</li>
+<li><strong>Arbetskostnad och materialkostnad tydligt separerade</strong> som egna radsummor, eftersom bara arbetskostnaden ger ROT.</li>
+</ul>
+<p>Blandar du ihop arbete och material i en klumpsumma kan hela avdraget stoppas. Separera alltid posterna redan när du skriver fakturan.</p>
+
+<h2>Betalningsvillkor, förfallodatum och dröjsmålsränta</h2>
+<p>I näringsverksamhet mellan företag är huvudregeln enligt räntelagen att en fordran förfaller senast 30 dagar efter att fakturan skickats. Längre kredittid kräver att köparen uttryckligen går med på det. Sätt därför ut ett tydligt förfallodatum på fakturan.</p>
+<p>Betalar kunden för sent har du rätt till dröjsmålsränta motsvarande Riksbankens referensränta plus 8 procentenheter. För perioden 1 januari–30 juni 2026 blir det 2 % + 8 % = <strong>10 %</strong>. Det räcker att skriva &quot;dröjsmålsränta enligt räntelagen&quot; på fakturan. Vid sen betalning mellan företag får du dessutom ta ut en lagstadgad förseningsersättning på <strong>450 kr</strong> direkt när fakturan förfaller, utan påminnelse eller föregående avtal. Den ersätter påminnelse- och inkassoavgifter upp till det beloppet.</p>
+
+<h2>Komplett fakturachecklista för byggföretag</h2>
+<p>Bocka av innan du skickar:</p>
+<ul>
+<li>Fakturadatum och unikt fakturanummer</li>
+<li>Säljarens namn, adress, org.nr och momsreg.nr</li>
+<li>Köparens namn och adress (och momsreg.nr vid omvänd byggmoms)</li>
+<li>Mängd/omfattning och utförandedatum</li>
+<li>Beskattningsunderlag, momssats och momsbelopp per rad</li>
+<li>Vid omvänd byggmoms: texten &quot;omvänd betalningsskyldighet&quot; och ingen moms</li>
+<li>Vid ROT: personnummer, fastighetsbeteckning eller BRF-org.nr + lägenhetsnummer, samt separerad arbets- och materialkostnad</li>
+<li>Förfallodatum, betalningsuppgifter och hänvisning till dröjsmålsränta enligt räntelagen</li>
+</ul>
+
+<h2>Vanliga misstag och hur du undviker dem</h2>
+<p>De återkommande felen är få men dyra: gammal laghänvisning på mallen, moms som utelämnas vid omvänd byggmoms utan rätt text, klumpad arbets- och materialkostnad på ROT-jobb, och hoppande fakturanummer som bryter nummerserien. Alla går att bygga bort med en mall som tvingar fram rätt fält.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att få med rätt uppgifter från början. Fakturamallen har fält för momsreg.nr, fakturanummer och förfallodatum, och stödjer uppdelning av arbets- och materialkostnad så att ROT-underlaget blir korrekt. Du väljer själv om fakturan ska sättas upp för omvänd byggmoms med rätt text. Målet är att du ska slippa efterrätta fakturor – men det formella ansvaret för att uppgifterna stämmer ligger alltid hos dig som utfärdar fakturan, så stäm av mot checklistan ovan.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad ska en faktura minst innehålla enligt lag?</h3>
+<p>En fullständig faktura ska innehålla fakturadatum, unikt fakturanummer, säljarens momsreg.nr, säljarens och köparens namn och adress, mängd/omfattning, utförandedatum, beskattningsunderlag per momssats, momssatsen och momsbeloppet. Saknas ett fält kan Skatteverket underkänna fakturan som underlag för momsavdrag.</p>
+<h3>När får jag använda en förenklad faktura?</h3>
+<p>När totalbeloppet inklusive moms är högst 4 000 kr. Då räcker fakturadatum, säljarens namn och momsnummer, vad som sålts och momsbeloppet. Över 4 000 kr krävs en fullständig faktura, annars kan köparen förlora sitt momsavdrag.</p>
+<h3>Vilken text ska stå på fakturan vid omvänd byggmoms?</h3>
+<p>Du lägger ingen moms på fakturan och skriver &quot;omvänd betalningsskyldighet&quot; enligt nya momslagen (även &quot;reverse charge&quot; godtas). Köparens momsregistreringsnummer måste också anges. Att bara utelämna momsen utan text räcker inte.</p>
+<h3>Vad krävs på en ROT-faktura 2026?</h3>
+<p>Kundens personnummer, fastighetsbeteckning för hus eller BRF:ens org.nr plus lägenhetsnummer för bostadsrätt, samt tydligt separerad arbets- och materialkostnad. Avdraget är 30 % av arbetskostnaden, max 50 000 kr per person och år.</p>
+
+<h2>Kom igång</h2>
+<p>Skapa en korrekt faktura direkt med <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall &rarr;</a>, eller <a href="/sv/contact">boka en demo</a> om du vill se hur ByggExp håller ordning på fakturor, ROT-underlag och betalningsvillkor i ett flöde.</p>
+
+<p>Relaterat: <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare – så gör du rätt</a> och <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturor</a>.</p>
+`;
+
+const A_VAD_SKA_FAKTURA_INNEHALLA_BYGG: BlogPost = {
+  _id: "code-"+"vad-ska-faktura-innehalla-bygg",
+  title: "Vad ska en faktura innehålla? Fakturakrav för byggföretag 2026", slug: "vad-ska-faktura-innehalla-bygg", locale: "sv",
+  excerpt: "En felaktig faktura kan underkännas av Skatteverket, stoppa ROT-utbetalningen och kosta dig momsavdraget – här är alla lagkrav i en checklista.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/faktura-preview.webp", contentHtml: A_VAD_SKA_FAKTURA_INNEHALLA_BYGG_HTML,
+  seoTitle: "Vad ska en faktura innehålla? | ByggExp", seoDescription: "Komplett checklista över fakturakrav för byggföretag 2026: momsreg.nr, fakturanummer, förfallodatum, ROT och omvänd byggmoms enligt mervärdesskattelagen.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/faktura-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T09:20:00.000Z", createdAt: "2026-08-19T09:20:00.000Z", updatedAt: "2026-08-19T09:20:00.000Z",
+};
+
+const A_NYA_BYGGREGLER_2026_ENERGI_ISOLERING_HTML = `
+<p>Få frågor skapar lika mycket förvirring på byggmötena just nu som Boverkets nya energiregler. Det cirkulerar flera datum, ett EU-direktiv och en remiss med preliminära siffror – och som hantverkare eller byggföretag behöver du veta en enda sak: vad gäller för <em>just det här</em> projektet? Huvuddatumet att hålla fast vid är att Boverkets nya föreskrifter om energihushållning och värmeisolering planeras träda i kraft 1 oktober 2026. Från det datumet är samtliga äldre BBR-regler ersatta av det nya regelverket.</p>
+
+<p>Innan du projekterar klimatskalet lönar det sig att räkna på isoleringen tidigt – testa vår gratis <a href="/sv/verktyg/isolering-kalkylator">isolering-kalkylator</a> för att se hur vägguppbyggnaden står sig mot skärpta krav.</p>
+
+<h2>Tidslinjen du behöver hålla isär</h2>
+<p>Mycket av oredan beror på att flera regeländringar landar tätt inpå varandra under 2025 och 2026. Energidelen är den sista pusselbiten i det som kallas Möjligheternas byggregler. Så här ser de viktigaste hållpunkterna ut:</p>
+<ul>
+<li><strong>1 juli 2025</strong> – första etappen av Boverkets nya byggregler träder i kraft, med egen övergångstid.</li>
+<li><strong>25 maj 2026</strong> – ändringar i föreskrifterna om energideklaration (BED) träder i kraft. Detta är ett separat datum från energihushållningsföreskrifterna.</li>
+<li><strong>29 maj 2026</strong> – EU:s tidsfrist för att införliva energidelen i det omarbetade direktivet om byggnaders energiprestanda (EPBD). Från denna dag gäller även kravet på solklara byggnader vid nya bygglov.</li>
+<li><strong>1 oktober 2026</strong> – de nya energihushållningsföreskrifterna träder i kraft. Detta är det svenska ikraftträdandet, som ofta förväxlas med EU-datumet 29 maj.</li>
+<li><strong>30 september 2027</strong> – övergångstiden löper ut. Efter detta datum gäller enbart de nya reglerna.</li>
+</ul>
+<p>Poängen: EU-fristen 29 maj och det svenska ikraftträdandet 1 oktober är två olika saker. Blanda inte ihop dem när du planerar projektet.</p>
+
+<h2>Övergångsregeln avgör vilket regelverk som gäller</h2>
+<p>Det här är den viktigaste praktiska detaljen. Fram till och med 30 september 2027 gäller en övergångstid där byggherren får välja att tillämpa antingen de nya energireglerna eller de upphävda reglerna i BBR och BEN. Vilket regelverk som styr ett projekt avgörs alltså av byggherrens val – inte automatiskt av när bygglovet söktes.</p>
+<p>Det betyder att du som entreprenör måste stämma av valet med byggherren tidigt, för det påverkar dimensionering, energiberäkning och kostnad. Ett pågående projekt som redan är projekterat mot dagens BBR-nivå kan i regel fortsätta på de upphävda reglerna under övergångstiden. Ett projekt som ändå siktar högt energimässigt kan lika gärna gå direkt på de nya reglerna. Oavsett vad ni väljer: dokumentera valet i projektet så att det inte blir en diskussion vid slutbesked.</p>
+
+<h2>Vad skärps för energin</h2>
+<p>De nya reglerna innebär en generell åtstramning. I Boverkets förslag, som var på remiss under februari till 17 april 2026, skärps energikraven med cirka 10 procent jämfört med dagens nivåer. Observera att den siffran var ett remissförslag – den slutliga nivån kan avvika, så verifiera alltid mot Boverket innan projektering.</p>
+<p>Utöver skärpta tal förändras även begreppen och klassningen:</p>
+<ul>
+<li>Begreppet <strong>primärenergital (EPpet)</strong> föreslås ersättas av <strong>energiprestandatal</strong>.</li>
+<li>Klassningen läggs om så att <strong>energiklass A föreslås bli ny byggnadsstandard</strong>, i stället för dagens klass C.</li>
+<li>En ny klass <strong>A0 för nollemissionsbyggnader</strong> införs. En A0-byggnad ska ha energiprestanda i klass A, får inte till någon del värmas av fossila bränslen på plats, och installationssystemen ska kunna svara på externa styrsignaler och anpassa energianvändningen.</li>
+</ul>
+
+<h2>Dagens kravnivåer som referens</h2>
+<p>För att förstå hur mycket det stramas åt är det bra att ha utgångsläget klart för sig. Dagens krav på högsta primärenergital (BBR tabell 9:2a) ligger på ungefär:</p>
+<ul>
+<li><strong>Ca 90 kWh/m² Atemp och år</strong> för småhus större än 130 m².</li>
+<li><strong>75 kWh/m²</strong> för flerbostadshus.</li>
+<li><strong>70 kWh/m²</strong> för lokaler.</li>
+</ul>
+<p>Kravet justeras dessutom för geografiskt läge med en geografisk justeringsfaktor (Fgeo, tabell 9:2c). Vid sidan av energitalet finns krav på installerad eleffekt för uppvärmning, genomsnittlig värmegenomgångskoefficient (Um) och luftläckning i tabell 9:2a och 9:2b. Se de här talen som utgångsläget som nu skärps – och räkna med att de nya talen ännu kan justeras innan de slutgiltigt fastställs.</p>
+
+<h2>Isolering, klimatskal och fukt</h2>
+<p>När energiprestandatalet skärps blir klimatskalet det som avgör om projektet klarar kraven. Värmeisoleringen (Um), lufttätheten och köldbryggorna får större betydelse, samtidigt som de nya reglerna även skärper fuktkraven. I praktiken innebär det:</p>
+<ul>
+<li>Tjockare eller mer högpresterande isolering i vägg, tak och grund för att pressa ned Um.</li>
+<li>Noggrannare detaljlösningar vid anslutningar, syllar och fönstersmygar för att minska köldbryggor.</li>
+<li>Fönster och dörrar med lägre U-värde, eftersom de ofta är den svaga länken i klimatskalet.</li>
+<li>Tätare klimatskal – men balanserat mot fuktkraven, så att en tätare konstruktion inte ger fuktproblem.</li>
+</ul>
+<p>Här blir energiberäkningen och U-värdesberäkningen en integrerad del av projekteringen, inte en efterhandskontroll.</p>
+
+<h2>Solceller och byggnaden som del av energisystemet</h2>
+<p>De nya reglerna ser byggnaden som en aktiv del av energisystemet. Kravet på <strong>solklara byggnader</strong> – rätt taklutning, bärighet och förberedda dragningar för solceller – gäller nya byggnader där bygglov söks efter 29 maj 2026. Faktisk solcellsinstallation krävs på nya offentliga byggnader och kommersiella fastigheter större än 250 m² senast 31 december 2026, medan solkraven för nya bostadshus gäller först från 2029.</p>
+<p>För lokaler skärps även kraven på fastighetsautomation och styrsystem. Gränsen för krav på byggnadsautomation sänks från nominell effekt på ca 290 kW mot 70 kW inom några år, och FX/FTX-ventilation samt värmeåtervinning betonas.</p>
+
+<h2>Checklista: vad gäller för mitt projekt nu?</h2>
+<ol>
+<li>När söks bygglov – före eller efter 29 maj 2026?</li>
+<li>Vilket regelverk väljer byggherren under övergångstiden (nya reglerna eller upphävda BBR/BEN)?</li>
+<li>Är energiberäkningen gjord mot rätt kravnivå för det valda regelverket?</li>
+<li>Är byggnaden solklar om bygglov söks efter 29 maj 2026?</li>
+<li>Gäller solcellskrav (offentlig eller kommersiell byggnad över 250 m²)?</li>
+<li>Är valet av regelverk dokumenterat i projekthandlingarna?</li>
+<li>Har ni verifierat den slutliga kravnivån mot Boverket och kommunen innan projektering?</li>
+</ol>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp ersätter inte Boverkets föreskrifter, men vi hjälper dig hålla ordning på underlaget. Med våra kalkylverktyg räknar du snabbt på isolering och U-värden i ett tidigt skede, så att du ser om klimatskalet står sig mot skärpta krav innan du binder upp dig i en offert. Kalkyler och projektunderlag samlas per projekt, vilket gör det enklare att dokumentera vilket regelverk byggherren valt och att ha beräkningarna tillgängliga vid kontrollplan och slutbesked. De exakta kravtalen kontrollerar du alltid mot Boverket – ByggExp gör räknandet och dokumentationen runt omkring smidigare.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>När träder de nya energireglerna i kraft?</h3>
+<p>Boverkets nya föreskrifter om energihushållning och värmeisolering planeras träda i kraft 1 oktober 2026. Från det datumet är de äldre BBR-reglerna ersatta av det nya regelverket.</p>
+<h3>Måste jag använda de nya reglerna direkt?</h3>
+<p>Nej. En övergångstid gäller till och med 30 september 2027. Under den perioden får byggherren välja att tillämpa antingen de nya energireglerna eller de upphävda reglerna i BBR och BEN. Valet ska dokumenteras i projektet.</p>
+<h3>Stämmer det att kraven skärps med 10 procent?</h3>
+<p>Cirka 10 procent var nivån i Boverkets remissförslag under våren 2026. Det är ett förslag – den slutliga skärpningen kan avvika, så kontrollera alltid det fastställda kravtalet mot Boverket innan du projekterar.</p>
+<h3>Vad är skillnaden mellan 29 maj och 1 oktober 2026?</h3>
+<p>29 maj 2026 är EU:s tidsfrist för att införliva energidelen i EPBD-direktivet, och datumet då kravet på solklara byggnader börjar gälla vid nya bygglov. 1 oktober 2026 är det svenska ikraftträdandet av energihushållningsföreskrifterna. De två datumen förväxlas ofta.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med att stämma av tidigt med kommun och energiberäknare, och sätt regelverksvalet på pränt redan i projekteringsstarten. Räkna på klimatskalet med vår <a href="/sv/verktyg/isolering-kalkylator">isolering-kalkylator</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du samlar kalkyler och underlag per projekt. Kom ihåg att reglernas exakta kravtal kan ändras – kontrollera alltid mot Boverket.</p>
+
+<p>Relaterat: <a href="/sv/blog/berakna-u-varde-isolering">Beräkna U-värde för isolering</a>, <a href="/sv/blog/nya-byggregler-2026-entreprenad">Nya byggregler 2026 och entreprenaden</a>, <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler 2026 och kontrollplanen</a>.</p>
+`;
+
+const A_NYA_BYGGREGLER_2026_ENERGI_ISOLERING: BlogPost = {
+  _id: "code-"+"nya-byggregler-2026-energi-isolering",
+  title: "Nya byggregler 2026: vad ändras för energi och isolering – och vad gäller för ditt projekt?", slug: "nya-byggregler-2026-energi-isolering", locale: "sv",
+  excerpt: "En genomgång av Boverkets nya energi- och isoleringsregler 2026 – datumen du måste hålla isär, övergångsregeln som avgör vilket regelverk som gäller, och vad som skärps.", tag: "Regler",
+  coverImageUrl: "/landing/verktyg/isolering-preview.webp", contentHtml: A_NYA_BYGGREGLER_2026_ENERGI_ISOLERING_HTML,
+  seoTitle: "Nya byggregler 2026 energi | ByggExp", seoDescription: "Energiföreskrifterna träder i kraft 1 okt 2026. Så reder du ut datumen, övergångsregeln och vad som skärps för energi och isolering i ditt projekt.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/isolering-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T09:23:00.000Z", createdAt: "2026-08-19T09:23:00.000Z", updatedAt: "2026-08-19T09:23:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_VAD_SKA_FAKTURA_INNEHALLA_BYGG,
+    A_NYA_BYGGREGLER_2026_ENERGI_ISOLERING,
     A_KREDITFORSAKRING_BYGGFORETAG,
     A_MASTE_HA_KOLLEKTIVAVTAL_BYGG,
     A_ACKORDSLON_BYGG,

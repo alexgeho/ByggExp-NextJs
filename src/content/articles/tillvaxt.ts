@@ -1,0 +1,411 @@
+import type { BlogPost } from '../../types/blog';
+import { SITE_URL } from './site-url';
+
+const A_HITTA_KUNDER_BYGGFIRMA_HTML = `
+<p>Tomma luckor i orderboken beror sällan på att du är för dyr. Oftare handlar det om synlighet och förtroende: kunden hittar inte din firma när hon söker, eller hon vågar inte välja er framför en konkurrent hon vet mer om. Den goda nyheten är att kundanskaffning för en byggfirma inte kräver stor marknadsföringsbudget – det kräver ett par kanaler som sköts systematiskt. Den här guiden ger dig en konkret plan, kanal för kanal, som du kan börja jobba efter redan i veckan.</p>
+
+<p>Ett bra första steg är att göra det enkelt för intresserade kunder att få pris snabbt. Använd gärna <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a> så att du kan skicka ett proffsigt, tydligt underlag samma dag som förfrågan kommer in – snabb respons vinner ofta jobbet.</p>
+
+<h2>Börja med Google Företagsprofil – din viktigaste gratiskanal</h2>
+<p>När någon söker "snickare i [ort]" eller "takläggare nära mig" är det Google Företagsprofil (Google Business Profile) som avgör om din firma syns i kartan och de lokala träffarna. Profilen är kostnadsfri och är den enskilt viktigaste kanalen för lokal synlighet. Se till att den är komplett:</p>
+<ul>
+<li>Verifiera företaget och välj rätt kategori (t.ex. byggföretag, snickare, takläggare).</li>
+<li>Ange tjänsteområde – de orter du faktiskt tar jobb i.</li>
+<li>Fyll i öppettider, telefon och länk till webbplatsen.</li>
+<li>Ladda upp riktiga bilder på färdiga jobb, inte stockbilder. Före/efter fungerar bäst.</li>
+<li>Svara på meddelanden och frågor snabbt – svarstiden syns för kunden.</li>
+</ul>
+<p>En profil som ligger och skräpar halvfärdig kostar dig jobb varje vecka utan att du märker det. Sätt av en timme och gör den klar.</p>
+
+<h2>Recensioner som säljverktyg</h2>
+<p>Stjärnbetyg och omdömen påverkar både hur högt du rankas i lokala sökresultat och om kunden väljer just dig. Skillnaden mellan 3,8 och 4,6 i snitt är många förlorade förfrågningar. Bygg därför in en recensionsrutin i varje avslutat jobb:</p>
+<ul>
+<li>Be alltid om ett omdöme direkt när kunden är nöjd – vid slutbesiktning eller när du tar farväl på plats.</li>
+<li>Gör det friktionsfritt: lägg en direktlänk eller QR-kod till din Google-profil på slutfakturan eller i ett uppföljningssms.</li>
+<li>Svara professionellt på alla recensioner, även de sura. Ett sakligt, lösningsinriktat svar på ett dåligt omdöme övertygar nästa läsare mer än fem femmor.</li>
+<li>Sikta på ett snitt runt 4,5 eller högre och ett jämnt inflöde – tjugo färska omdömen väger tyngre än hundra tre år gamla.</li>
+</ul>
+
+<h2>Sälj in ROT-avdraget rätt – och gör det till ett säljargument</h2>
+<p>Många privatkunder underskattar hur mycket ROT drar ner nettopriset. Räkna åt dem, så blir avdraget ditt säljargument i stället för en administrativ fotnot. Fakta att luta dig mot:</p>
+<ul>
+<li>ROT ger skattereduktion på <strong>30 % av arbetskostnaden</strong>. Endast arbetet är avdragsgillt – material, resekostnader och övriga kostnader ger inget avdrag.</li>
+<li>Avdraget är max <strong>50 000 kr per person och år</strong>. Tillsammans med RUT (som ger 50 %) är taket 75 000 kr per person och år.</li>
+<li>Två makar eller sambor kan dela på avdraget. Ett hushåll kan alltså ha upp till 100 000 kr i ROT-utrymme per år – värt att lyfta vid större renoveringar.</li>
+<li>Kunden får bara ROT om din firma har godkänd F-skatt (eller FA-skatt). Du drar av avdraget direkt på fakturan och begär resten från Skatteverket via fakturamodellen.</li>
+</ul>
+<p>Exempel: ett badrumsjobb med 80 000 kr i arbetskostnad. ROT ger 30 % = 24 000 kr i reduktion. Kunden betalar 56 000 kr för arbetet i stället för 80 000 kr. Skriv ut den siffran i offerten – "ditt pris efter ROT" – så konkurrerar du på netto, inte på brutto.</p>
+
+<h2>Leads och plattformar</h2>
+<p>Tjänster som Offerta, Servicefinder och Byggstart matchar dig med förfrågningar mot betalning – antingen per lead eller per abonnemang. De kan fylla orderboken snabbt när du är ny eller har en glugg, men räkna alltid på kostnad per faktiskt vunnet jobb, inte per lead. Du delar ofta samma förfrågan med flera firmor, och marginalen äts upp om konverteringen är låg. Använd plattformarna som komplement medan du bygger ditt eget varumärke – en egen kanal (Google-profil, recensioner, rekommendationer) kostar inget per lead och blir starkare över tid.</p>
+
+<h2>Bygg förtroende och synliggör seriositet</h2>
+<p>Privat- och företagskunder sållar bort osäkra alternativ innan de ens ringer. Gör det lätt att lita på dig genom att visa upp seriositetssignalerna öppet på webben och i offerten:</p>
+<ul>
+<li>Medlemskap i Byggföretagen (branschorganisationen har cirka 4 000 medlemsföretag och beskriver dem som seriösa bygg-, anläggnings- och specialföretag) och kollektivavtal.</li>
+<li>ID06 – branschens system för legitimation och närvaroregistrering är i praktiken ett krav från många beställare och en tydlig seriositetsmarkör.</li>
+<li>Godkänd F-skatt, ansvarsförsäkring och tydliga garantivillkor.</li>
+</ul>
+<p>Registrering sker via verksamt.se – Bolagsverkets, Skatteverkets och Tillväxtverkets gemensamma tjänst – där du också ansöker om F-skatt innan du kan fakturera med ROT.</p>
+
+<h2>Egen webbplats och lokal SEO</h2>
+<p>Din webbplats behöver inte vara stor, men den ska vara mobilanpassad och snabb. Skapa ortsspecifika sidor för dina viktigaste tjänster och områden ("takläggare + ort", "badrumsrenovering + ort"), bädda in dina Google-recensioner och gör kontaktvägen glasklar. Ett enkelt offertformulär direkt på sidan fångar förfrågningar dygnet runt – varje klick som inte leder någonstans är en förlorad kund.</p>
+
+<h2>Nöjda kunder ger nya kunder</h2>
+<p>Rekommendationer är fortfarande byggbranschens starkaste kanal. Be aktivt om vidarehänvisning när ett jobb är klart, dokumentera referensjobb med bild (med kundens tillåtelse) och håll kontakten för återkommande underhåll. En kund som är nöjd och blir ihågkommen ringer dig först nästa gång – och tipsar grannen.</p>
+
+<h2>Mät och prioritera</h2>
+<p>Fråga varje ny kund kort: "Hur hittade du oss?" Efter några månader ser du varifrån jobben faktiskt kommer och vad varje kanal kostar per vunnen kund. Dubbla ner på det som fungerar och lägg ner det som inte gör det – de flesta byggfirmor slösar tid på tre kanaler i stället för att bli riktigt bra på en.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att omvandla förfrågningar till vunna jobb. Med offertmallen skickar du ett tydligt, professionellt underlag snabbt – med separerad arbets- och materialkostnad så att ROT-avdraget och nettopriset syns direkt för kunden. Ett snyggt, begripligt offertunderlag är i sig en förtroendesignal och gör att fler tackar ja. Verktyget ersätter inte din marknadsföring, men det ser till att de leads du redan får inte rinner ut i sanden på grund av sen eller rörig respons.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är den billigaste kanalen för att hitta kunder till byggfirman?</h3>
+<p>En komplett Google Företagsprofil är gratis och ger mest tillbaka för lokal synlighet. Kombinera den med en systematisk recensionsrutin, så har du en stark grund utan kostnad per lead.</p>
+
+<h3>Hur mycket sänker ROT-avdraget kundens pris?</h3>
+<p>ROT ger 30 % rabatt på arbetskostnaden, max 50 000 kr per person och år. Bara arbetet är avdragsgillt – inte material eller resor. Visa alltid nettopriset efter ROT i offerten.</p>
+
+<h3>Krävs F-skatt för att kunden ska få ROT?</h3>
+<p>Ja. Din firma måste ha godkänd F-skatt (eller FA-skatt) för att kunden ska kunna utnyttja ROT. Du drar av avdraget på fakturan och begär resten från Skatteverket via fakturamodellen.</p>
+
+<h3>Lönar sig betalda lead-plattformar?</h3>
+<p>De kan fylla luckor snabbt, men räkna på kostnad per vunnet jobb, inte per lead. Använd dem som komplement medan du bygger egna kanaler som Google-profil och rekommendationer.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med tre steg den här veckan: gör Google-profilen komplett, sätt en fast rutin för att be om recensioner efter varje jobb, och skriv ut nettopriset efter ROT i varje offert. Skapa ett proffsigt underlag på minuter med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du får fler förfrågningar att bli vunna jobb.</p>
+
+<p>Relaterat: <a href="/sv/blog/skriva-offert">Så skriver du en offert som vinner jobbet</a>.</p>
+`;
+
+const A_HITTA_KUNDER_BYGGFIRMA: BlogPost = {
+  _id: "code-"+"hitta-kunder-byggfirma",
+  title: "Hitta kunder till byggfirman: en konkret kanalplan", slug: "hitta-kunder-byggfirma", locale: "sv",
+  excerpt: "En konkret kanalplan för att hitta fler kunder till byggfirman – Google Företagsprofil, recensioner, ROT som säljargument och lokal SEO, utan stor budget.", tag: "Marknadsföring",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_HITTA_KUNDER_BYGGFIRMA_HTML,
+  seoTitle: "Hitta kunder till byggfirma | ByggExp", seoDescription: "Konkret plan för hur din byggfirma hittar fler kunder: Google-profil, recensioner, ROT som säljargument, lead-plattformar och lokal SEO. Börja i veckan.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T05:24:00.000Z", createdAt: "2026-08-19T05:24:00.000Z", updatedAt: "2026-08-19T05:24:00.000Z",
+};
+
+const A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING_HTML = `
+<p>Sverige hade 123 741 byggföretag 2025, och 88 procent av dem har högst fyra anställda. I praktiken betyder det att ägaren själv sitter med kvällsadministrationen: kvitton i handskfacket, tider på papperslappar, offerter i Word och fakturor i ett Excelark som ingen riktigt litar på. Varje steg lever i sitt eget verktyg, och samma uppgifter matas in om och om igen. Det kostar timmar varje vecka – och ännu mer i glömd fakturering och fel som upptäcks för sent.</p>
+
+<p>Vill du se hur digital tidmätning ser ut i praktiken kan du börja med vår gratis tidrapport-mall -&gt; <a href="/sv/verktyg/tidrapport-mall">/sv/verktyg/tidrapport-mall</a>. Den här artikeln visar vad som faktiskt går att digitalisera i en liten byggfirma, och varför regelläget 2026 gör det digitala till minsta motståndets väg.</p>
+
+<h2>Var tiden faktiskt försvinner i en liten byggfirma</h2>
+<p>Adminkedjan i ett byggprojekt ser i grunden likadan ut oavsett storlek: projekt -&gt; tidrapport -&gt; offert -&gt; faktura -&gt; bokföring. Problemet är inte att varje enskilt steg tar lång tid. Problemet är dubbelarbetet som uppstår när stegen inte hänger ihop. Timmarna skrivs på papper, förs över till ett Excelark, sammanställs manuellt till en faktura och prickas sedan av mot bokföringen – samma siffror, fyra gånger.</p>
+<p>Varje överföring är en felkälla. En glömd papperslapp blir en icke-fakturerad arbetsdag. Ett kundnamn som stavas olika i offert och faktura blir en försenad betalning. Och den offert som skickades i februari återfinns i mejlkorgen först när kunden invänder mot fakturan i maj. Den största kostnaden är alltså inte tidsåtgången i sig, utan pengarna som aldrig faktureras och felen som ingen fångar.</p>
+
+<h2>2026 gör digitalt till standard, inte lyx</h2>
+<p>Flera regler pekar nu åt samma håll. Elektronisk personalliggare krävs på en byggarbetsplats när den totala byggkostnaden väntas överstiga fyra prisbasbelopp, vilket 2026 motsvarar 236 800 kr (prisbasbeloppet är fastställt till 59 200 kr). Kravet gäller från första arbetsdagen, och byggherren ska anmäla till Skatteverket var och när verksamheten påbörjas. Viktigt att veta: Skatteverket kräver inget specifikt system. ID06-kort är inte lagkrav – en app eller läsare som dokumenterar namn, personnummer och tider räcker.</p>
+<p>Samtidigt är e-faktura till offentlig sektor obligatorisk sedan 1 april 2019. Fakturerar din firma en kommun, region eller statlig myndighet måste fakturan skickas elektroniskt, till exempel via Peppol. Något generellt B2B-krav finns ännu inte 2026, men EU:s ViDA gör e-faktura obligatorisk för gränsöverskridande B2B inom EU från 2030. På bokföringssidan har det dessutom blivit enklare: sedan 1 juli 2024 får pappersunderlag kastas så snart informationen förts över korrekt till elektronisk form – det gamla kravet att spara originalet i minst tre år är borta. Fullt digital arkivering är alltså möjlig, så länge du sparar räkenskapsinformationen i sju år.</p>
+
+<h3>Tidrapport som håller för både Skatteverket och Byggavtalet</h3>
+<p>Personalliggare och intern tidrapport överlappar men är inte samma sak. Personalliggaren dokumenterar vem som är och har varit på plats. Tidrapporten är underlaget för lön och fakturering. När tiden registreras digitalt kan samma uppgift direkt bli underlag för både – och för korrekt löneberäkning enligt Byggavtalet, som gäller 2025-05-01 till 2027-04-30 och rymmer både prestationslön (ackord) och tidlön. Rätt ackord kräver rätt tidmätning. Slarv med personalliggaren är dessutom dyrt: Skatteverket kan ta ut kontrollavgift på 2 500, 12 500 eller 25 000 kr beroende på överträdelse, plus 2 500 kr per person som inte är antecknad vid kontroll.</p>
+
+<h2>Offert och faktura i samma flöde</h2>
+<p>En digital offert kan bli order och sedan faktura utan omtag – kunduppgifter, projekt och rader följer med hela vägen. Det är särskilt värdefullt eftersom en fullständig faktura enligt momslagen måste innehålla en rad obligatoriska uppgifter:</p>
+<ul>
+<li>Fakturadatum och ett unikt löpnummer</li>
+<li>Säljarens momsregistreringsnummer</li>
+<li>Säljarens och köparens namn och adress</li>
+<li>Tjänstens art och omfattning (eller varornas mängd och art)</li>
+<li>Leveransdatum</li>
+<li>Beloppet exklusive moms per momssats samt momssats och momsbelopp</li>
+</ul>
+<p>Ett system fyller de här fälten automatiskt från offerten, så att inget glöms. Förenklad faktura är bara tillåten när beloppet är högst 4 000 kr inklusive moms – för de flesta byggjobb krävs alltså den fullständiga varianten. Här hjälper våra mallar för <a href="/sv/verktyg/offert-mall">offert</a> och <a href="/sv/verktyg/faktura-mall">faktura</a> dig att få med allt från start.</p>
+<p>ROT-avdraget är från 1 januari 2026 tillbaka på 30 procent av arbetskostnaden, med tak på 50 000 kr per person och år (ROT och RUT tillsammans högst 75 000 kr). Företaget måste vara godkänt för F-skatt och begär avdraget via fakturamodellen hos Skatteverket. När fakturan hanteras digitalt blir uppdelningen av arbetskostnad och material – och ansökan mot Skatteverket – betydligt enklare att få rätt.</p>
+
+<h2>Allt i ett vs. lösa appar</h2>
+<p>Man kan digitalisera med en app för tid, en för offert och en för faktura. Vinsten blir dock större när de delar data. När tidrapport, offert och faktura bygger på samma kund, samma projekt och samma timmar minskar dubbelinmatningen, färre fakturor missas och spårbarheten blir sammanhängande – vilket är precis vad du behöver vid en tvist eller en kontroll. Frågan är alltså inte antalet verktyg, utan om de hänger ihop.</p>
+
+<h2>Så mycket admin kan en liten firma spara</h2>
+<p>Exakt hur mycket beror på hur firman jobbar idag, men storleksordningen är tydlig. Digitala flöden ger färre kvällar med pappersarbete, snabbare betalt eftersom fakturan kan gå iväg samma dag som jobbet är klart, och mindre risk för både räknefel och sanktionsavgifter. Rama in vinsten som timmar per vecka i sparad admin plus kortare tid från utfört arbete till pengar på kontot – två effekter som märks direkt i en fåmansfirma där ägaren är sin egen ekonomiavdelning.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp samlar tidrapport, offert och faktura i ett flöde som delar samma kund- och projektdata. Tid som registreras på ett jobb kan bli underlag för lön och för fakturan, offerten kan omvandlas till faktura utan att uppgifterna skrivs om, och de obligatoriska momsuppgifterna följer med automatiskt. Målet är att ta bort dubbelinmatningen mellan stegen. ByggExp ersätter inte din revisor eller ett dedikerat personalliggarsystem, men ger dig ett sammanhängande underlag – och du bör alltid stämma av personalliggare, ROT och arkiveringskrav mot Skatteverket och ditt kollektivavtal.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste jag ha ID06 för att uppfylla kravet på elektronisk personalliggare?</h3>
+<p>Nej. Skatteverket kräver inte ett specifikt system, och ID06-kort är inte lagkrav. Det som krävs är att liggaren är elektronisk och dokumenterar vem som är och har varit på plats, med namn, personnummer och tider. En app eller läsare som fångar de uppgifterna räcker.</p>
+<h3>När krävs elektronisk personalliggare på ett bygge?</h3>
+<p>När den totala byggkostnaden på arbetsplatsen väntas överstiga fyra prisbasbelopp, vilket 2026 motsvarar 236 800 kr. Kravet gäller från första arbetsdagen, och byggherren ska anmäla till Skatteverket var och när verksamheten påbörjas samt tillhandahålla utrustning för att föra liggaren.</p>
+<h3>Hur länge måste jag spara fakturor och underlag?</h3>
+<p>Räkenskapsinformation ska sparas i sju år efter utgången av det kalenderår då räkenskapsåret avslutades. Sedan 1 juli 2024 får du dock kasta pappersunderlaget så snart informationen förts över korrekt till elektronisk form – vilket gör helt digital arkivering möjlig.</p>
+<h3>Hur mycket är ROT-avdraget 2026?</h3>
+<p>Från 1 januari 2026 är ROT tillbaka på 30 procent av arbetskostnaden, med tak på 50 000 kr per person och år. Företaget måste vara godkänt för F-skatt och begär avdraget via fakturamodellen hos Skatteverket.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med det som blöder mest – oftast fakturering eller tidrapportering – och digitalisera ett flöde i taget. Testa vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för att se hur digital tid blir underlag för både lön och faktura. Vill du se hela kedjan samlad kan du boka en visning via <a href="/sv/contact">/sv/contact</a>. Regelverket 2026 belönar redan digitala firmor; den som fortfarande kör papper och Excel betalar med sin egen tid.</p>
+
+<p>Relaterat: <a href="/sv/blog/tidrapportering">Tidrapportering i byggbranschen</a>, <a href="/sv/blog/resursplanering-bygg">Resursplanering för byggföretag</a> och <a href="/sv/blog/offert-till-betald-faktura-flode">Från offert till betald faktura</a>.</p>
+`;
+
+const A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING: BlogPost = {
+  _id: "code-"+"digitalisera-byggforetag-projektstyrning",
+  title: "Från papperslappar och Excel till ett system – så mycket admin sparar en liten byggfirma", slug: "digitalisera-byggforetag-projektstyrning", locale: "sv",
+  excerpt: "Så digitaliserar en liten byggfirma kedjan projekt–tidrapport–offert–faktura och sparar timmar admin varje vecka, samtidigt som 2026 års regler gör digitalt till minsta motståndets väg.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING_HTML,
+  seoTitle: "Digitalisera byggföretag | ByggExp", seoDescription: "Tidrapport, offert och faktura i ett flöde. Så digitaliserar en liten byggfirma projektledningen och sparar timmar admin varje vecka – och möter 2026 års krav.",
+  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T10:15:00.000Z", createdAt: "2026-08-19T10:15:00.000Z", updatedAt: "2026-08-19T10:15:00.000Z",
+};
+
+const A_SKAFFA_RECENSIONER_OMDOMEN_BYGGFIRMA_HTML = `
+<p>Ett bra omdöme från en nöjd kund är en av de billigaste marknadsföringskanaler en byggfirma har. När nästa kund söker efter en hantverkare i området är det stjärnorna på Google och de verifierade recensionerna på Reco som avgör om de hör av sig till dig eller till konkurrenten. Men 2026 räcker det inte att bara be alla kunder om en femma – både marknadsföringslagen och Google har skärpt reglerna, och ett felsteg kan i värsta fall kosta dig hela profilen eller en dyr avgift.</p>
+
+<p>Ett proffsigt intryck börjar redan i offertskedet – kunder som får en tydlig och förtroendeingivande offert är också de som gärna lämnar ett gott omdöme efteråt. Använd gärna <a href="/sv/verktyg/offert-mall">vår gratis offertmall -&gt;</a> för att lägga grunden till ett projekt som slutar med en nöjd kund.</p>
+
+<h2>Vad lagen faktiskt kräver av dig</h2>
+<p>Sedan Omnibus-direktivet införlivades i marknadsföringslagen (i kraft sedan 1 september 2022) är det uttryckligen förbjudet att lägga ut falska eller manipulerade konsumentrecensioner. Om du visar omdömen på din egen hemsida måste du dessutom informera om, och hur, du kontrollerar att recensionerna kommer från verkliga kunder – samt upplysa om enbart positiva omdömen publiceras eller om någon recension är sponsrad.</p>
+<p>Kravet på dig som företag är att vidta "rimliga och proportionerliga åtgärder" för att säkerställa att omdömena är äkta, till exempel genom att verifiera att personen faktiskt varit kund. Du ansvarar däremot inte för äktheten hos recensioner på tredjepartsplattformar som du inte kontrollerar, som Google eller Reco. Men bevisbördan för dina egna kontrollrutiner ligger på dig.</p>
+<p>Ta det här på allvar. Sanktionen skärptes samtidigt: marknadsstörningsavgiften kan numera bestämmas till upp till 4 % av företagets globala årsomsättning – det tidigare taket på 10 miljoner kronor är borttaget. Redan oaktsamhet räcker för avgift, det behövs alltså inget uppsåt, och det är Patent- och marknadsdomstolen som beslutar på talan av Konsumentombudsmannen.</p>
+
+<h2>Google 2026: det här får du inte göra längre</h2>
+<p>Googles reviewpolicy uppdaterades den 16–17 april 2026 och förbjuder nu uttryckligen flera saker som många byggfirmor tidigare tog för givna. Se det som en checklista över vad du ska sluta med direkt:</p>
+<ul>
+<li><strong>Inga incitament.</strong> Du får inte erbjuda rabatt, gratistjänst, present eller lotteri i utbyte mot en recension – oavsett om omdömet blir positivt eller negativt.</li>
+<li><strong>Ingen "review gating".</strong> Du får inte selektivt be bara nöjda kunder om ett Google-omdöme. Frågan måste ställas likadant till alla.</li>
+<li><strong>Fråga inte på plats.</strong> Att be om ett omdöme medan kunden står framför dig – muntligt, via surfplatta eller kiosk – är inte längre tillåtet.</li>
+<li><strong>Inga kvoter eller namn.</strong> Du får inte sätta recensionskvoter för personalen eller uppmana kunder att nämna en specifik anställd vid namn.</li>
+</ul>
+<p>Underskatta inte efterlevnaden. Enforcement är automatiserad och AI-baserad: Google blockerade eller tog bort 292 miljoner policybrytande recensioner under 2025, och de nya klausulerna tillämpas retroaktivt på befintliga profiler. Det kan innebära borttagna omdömen, nollställt stjärnbetyg eller begränsningar på din profil – även för sådant du gjorde innan reglerna ändrades.</p>
+
+<h2>Så ber du ändå – utan att verka påträngande</h2>
+<p>Det finns fortfarande gott om utrymme att be om omdömen, så länge du gör det systematiskt och neutralt. Nyckeln är timing och enkelhet:</p>
+<ol>
+<li><strong>Fråga vid rätt tillfälle.</strong> Skicka förfrågan efter godkänd slutbesiktning eller när projektet är avslutat och kunden är nöjd – inte mitt i jobbet när det fortfarande kan gå snett.</li>
+<li><strong>Fråga alla likadant.</strong> Använd samma formulering till varje kund, oavsett hur du tror att omdömet blir. Det håller dig inom Googles regler och ger en mer rättvisande bild.</li>
+<li><strong>Gör länken enkel.</strong> Lägg en kort direktlänk eller QR-kod i ett uppföljande mejl eller sms – aldrig på plats. Ju färre klick, desto fler svar.</li>
+<li><strong>En vänlig påminnelse.</strong> Skicka på sin höjd en enda neutral påminnelse. Mer än så blir påträngande.</li>
+</ol>
+<p>En enkel formulering som fungerar: "Hej [namn], tack för att vi fick utföra [projekt] åt dig. Om du är nöjd med resultatet uppskattar vi om du vill dela din upplevelse – det hjälper oss och andra som letar hantverkare. Här är länken: [länk]. Tack på förhand!"</p>
+
+<h2>Reco vs Google: bygg på båda, men olika</h2>
+<p>De två plattformarna fyller olika funktioner. Reco.se bygger sin verifiering på integration med företagets ekonomi- och faktureringssystem: förfrågningar skickas bara till personer som faktiskt är kunder, vilket gör att omdömena kan äkthetsmärkas som "verifierat företag". Det ger tyngre bevisvärde än fritt inkomna omdömen – något som väger extra tungt i byggbranschen. Google, å andra sidan, syns i lokalt sök och på Maps där kunderna faktiskt letar.</p>
+<p>Ett bra upplägg är att välja en primär plattform per kund så att du inte splittrar omdömena för tunt, och samtidigt bygga upp egna case och referenser på din hemsida. Tänk på att om du använder en kunds namn, foto eller projekt i din egen marknadsföring kräver GDPR ett dokumenterat, aktivt och frivilligt samtycke – till exempel en signering eller en ibockad ruta – och du måste kunna visa att samtycket finns.</p>
+
+<h2>Hantera negativa omdömen rätt</h2>
+<p>Ett negativt omdöme är inte världens undergång – hur du svarar säger ofta mer om ditt företag än själva klagomålet. Svara alltid sakligt och snabbt, håll det professionellt offentligt och ta detaljerna i dialogen privat. Erbjud aldrig pengar eller rabatt för att få kunden att ändra eller ta bort ett omdöme; det bryter mot Googles regler och riskerar att räknas som otillbörlig marknadsföring enligt MFL. Är ett omdöme uppenbart falskt eller regelstridigt – till exempel från någon som aldrig varit kund – kan du flagga det för granskning i stället för att ge dig in i en offentlig strid.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp hjälper dig att bygga den rutin som gör recensioner till en naturlig del av varje projektavslut i stället för något du glömmer bort. Med en tydlig offert- och projektstruktur vet du exakt när ett jobb är godkänt och avslutat – rätt tillfälle att skicka din förfrågan. Du samlar kunduppgifter på ett ställe, vilket gör det enkelt att skicka samma neutrala förfrågan till alla och att hålla ordning på vilka referenser du har dokumenterat samtycke för. ByggExp skickar inte omdömena åt dig och kan inte garantera att kunder svarar, men verktyget ger dig den ordning och de mallar som krävs för att göra det rätt, konsekvent och inom reglerna.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får jag ge rabatt till kunder som lämnar en recension?</h3>
+<p>Nej. Googles policy från april 2026 förbjuder uttryckligen alla former av incitament – rabatt, gratistjänst, present eller lotteri – i utbyte mot en recension, oavsett om omdömet blir positivt eller negativt. Det kan leda till att omdömen tas bort och att din profil begränsas.</p>
+<h3>Får jag bara be nöjda kunder om ett Google-omdöme?</h3>
+<p>Nej. Så kallad "review gating", där du selektivt frågar bara nöjda kunder, är förbjudet enligt Googles uppdaterade policy. Ställ samma fråga till alla kunder på samma sätt.</p>
+<h3>Ansvarar jag för att recensionerna på min Google-profil är äkta?</h3>
+<p>Du ansvarar inte för äktheten hos omdömen på plattformar du inte kontrollerar, som Google och Reco. Men om du visar omdömen på din egen hemsida måste du kunna redogöra för hur du kontrollerar att de kommer från verkliga kunder, och bevisbördan för dina rutiner ligger på dig.</p>
+<h3>Måste jag ha tillstånd för att använda en kund som referens på min hemsida?</h3>
+<p>Ja. Att använda en kunds namn, foto eller projekt i din egen marknadsföring kräver enligt GDPR ett dokumenterat, aktivt och frivilligt samtycke, och du måste kunna visa att samtycket finns.</p>
+
+<h2>Kom igång</h2>
+<p>Ärlighet och rutin slår genvägar varje gång. Börja med att lägga grunden för ett proffsigt projekt med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>, och utforska fler verktyg för din byggfirma bland <a href="/sv/verktyg">alla våra gratisverktyg</a>. Vill du se hur ByggExp kan bygga in recensionsrutinen i ditt arbetsflöde? <a href="/sv/contact">Boka en demo</a> så visar vi hur det fungerar.</p>
+
+<p>Relaterat: <a href="/sv/blog/hitta-kunder-byggfirma">Så hittar du fler kunder till din byggfirma</a></p>
+`;
+
+const A_SKAFFA_RECENSIONER_OMDOMEN_BYGGFIRMA: BlogPost = {
+  _id: "code-"+"skaffa-recensioner-omdomen-byggfirma",
+  title: "Så får din byggfirma fler recensioner på Google och Reco – utan att bryta reglerna", slug: "skaffa-recensioner-omdomen-byggfirma", locale: "sv",
+  excerpt: "Referenser vinner nästa jobb – men att be om recensioner 2026 kräver mer eftertanke än förr, efter att både lagen och Google skärpt reglerna.", tag: "Marknadsföring",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_SKAFFA_RECENSIONER_OMDOMEN_BYGGFIRMA_HTML,
+  seoTitle: "Få recensioner byggfirma | ByggExp", seoDescription: "Så ber du kunder om omdömen på Google och Reco utan att verka påträngande – och håller dig inom lagen efter Googles skärpta regler 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T15:06:00.000Z", createdAt: "2026-08-19T15:06:00.000Z", updatedAt: "2026-08-19T15:06:00.000Z",
+};
+
+const A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA_HTML = `
+<p>En kund i grannkvarteret behöver byta ett tak, laga en läcka eller bygga altan. Hon skriver "snickare Enköping" eller "byggfirma nära mig" i mobilen. Google svarar inte med din hemsida — den svarar med tre företag i en kartruta högst upp. Det där är Local Pack, och det är där de flesta lokala jobb faktiskt avgörs. Kunden ringer ett av de tre företagen innan hon ens scrollar vidare. Den här synligheten är gratis. Ändå gör de flesta byggfirmor sin Google Företagsprofil halvdant: fyller i namn och telefon, glömmer kategori, samlar aldrig recensioner och undrar sedan varför konkurrenten ligger överst. Den här guiden går igenom hur du tar plats i kartrutan, steg för steg.</p>
+
+<p>Innan du börjar: samla dina företagsuppgifter och en genomtänkt offertrutin på ett ställe med <a href="/sv/verktyg">våra gratis verktyg för byggföretag &rarr;</a>. En proffsig första kundkontakt är det som gör en recension till fem stjärnor.</p>
+
+<h2>De tre sakerna Google faktiskt rankar på</h2>
+<p>Google är öppen med sina lokala rankingfaktorer. Det finns tre: <strong>relevans</strong> (hur väl din profil matchar det kunden söker), <strong>avstånd</strong> (hur nära du är den som söker) och <strong>prominens</strong> (hur känt och aktivt ditt företag är). Avståndet kan du inte styra, och det väger tungt — för lokala sökningar utan varumärkesnamn placerar Google ofta det närmaste relevanta företaget högst, gata för gata. Ett företag några kvarter bort slår regelmässigt ett som ligger flera kilometer längre bort. Men relevans och prominens bygger du själv.</p>
+<p>Bland det du faktiskt kan påverka rankar branschstudierna (som Whitesparks Local Search Ranking Factors) signalerna ungefär i den här ordningen: själva Google Företagsprofilen är den tyngsta gruppen, följt av on-page-innehåll och citeringar (omnämnanden av ditt företag på andra sajter), och därefter recensionssignaler — vars betydelse dessutom har ökat de senaste åren. Slutsatsen är enkel — profilen är din viktigaste enskilda tillgång, och den kostar ingenting att optimera.</p>
+
+<h2>Steg 1 — Skapa och verifiera profilen (annars är du osynlig)</h2>
+<p>En overifierad profil hamnar aldrig i kartrutan. Verifiering är obligatoriskt, och 2026 sker den ofta via <strong>videoverifiering</strong>: du filmar lokalen, skylten, en bil med logga eller dina verktyg för att bevisa att företaget är på riktigt. Vykort och telefon förekommer fortfarande. Räkna med några dagar innan verifieringen går igenom — men utan den är resten bortkastad tid.</p>
+<p>Vanligt problem: någon, ofta Google själv eller en tidigare ägare, har redan skapat en profil på din adress. Sök upp den, gör anspråk på ("claim") och verifiera i stället för att skapa en dubblett. Två profiler för samma företag förvirrar Google och splittrar dina recensioner.</p>
+
+<h2>Steg 2 — Rätt kategori = rätt sökord</h2>
+<p>Den <strong>primära kategorin</strong> är enligt 2026 års Local Search Ranking Factors-undersökning den enskilt viktigaste lokala rankingfaktorn. Den avgör vilka sökningar du ens är med och tävlar om. Välj den mest specifika kategori som stämmer: "Snickare", "Rörmokare", "Takläggare", "Elektriker" — inte den luddiga "Hantverkare". När kunden söker "snickare + ort" är det din primära kategori som matchar ordet "snickare".</p>
+<p>Du kan lägga till upp till 10 kategorier totalt. Använd dem för sidotjänster du faktiskt utför — men låt den primära vara ditt kärnyrke. En byggfirma som gör allt kan till exempel ha "Byggföretag" som primär och "Snickare", "Takläggare" och "Renoveringsföretag" som sekundära.</p>
+
+<h2>Steg 3 — Serviceområde och NAP som stämmer överallt</h2>
+<p>Åker du ut till kund i stället för att ta emot besök? Då är du ett <strong>tjänsteområdesföretag</strong>. Dölj gatuadressen och ange i stället de kommuner och orter du täcker — det är de orterna Google kopplar dig till i lokala sökningar. Lista de faktiska områden du jobbar i, inte hela Sverige.</p>
+<p>Sedan kommer detaljen som förvånansvärt många missar: <strong>NAP</strong> — Namn, Adress, Telefonnummer — måste vara identiskt tecken för tecken överallt. På Google-profilen, hemsidan, Hitta.se, Eniro och sociala medier. Samma förkortningar, samma skiljetecken, samma format på telefonnumret. "Byggfirman AB, Storgatan 3B" på ett ställe och "Byggfirman Aktiebolag, Storg. 3 B" på ett annat skapar "NAP-brus" som gör Google osäker på om det är samma företag — och sänker din ranking.</p>
+
+<h2>Steg 4 — Recensioner: mängd och färskhet slår femma i betyg</h2>
+<p>Det här är där de flesta byggfirmor tappar. En profil med 4,8 i betyg och 200 recensioner rankar i regel före en med 5,0 och 5 recensioner. <strong>Volym och färskhet väger tyngre än ett perfekt snitt.</strong> I svenska mellanstora städer tenderar företag med 40+ recensioner och 4,5+ i betyg att dominera Local Pack. Ett par gamla femmor räcker inte.</p>
+<p>Lösningen är en rutin: be alltid om en recension direkt efter avslutat jobb, medan kunden är nöjd och minnet är färskt. Google har ett eget verktyg som skapar en recensionslänk och QR-kod — skicka den via SMS eller mejl, eller sätt QR-koden på fakturan. Svara sedan på <strong>alla</strong> recensioner, både beröm och kritik. Ett sakligt svar på en sur recension imponerar ofta mer på nästa kund än de positiva.</p>
+<p><strong>Viktigt — det här får du aldrig göra:</strong> att erbjuda rabatt, pengar, presenter eller gratis tjänster i utbyte mot en recension räknas som "falskt engagemang" och är strikt förbjudet. Samma sak gäller att muta någon för att ändra eller ta bort ett negativt omdöme. Googles automatiska system upptäcker misstänkta recensioner, tar bort dem och kan stänga av hela profilen. Du får be om en recension — men aldrig styra betyget eller innehållet.</p>
+
+<h2>Steg 5 — Håll profilen levande (foton, inlägg, Frågor &amp; svar)</h2>
+<p>Aktivitet är en prominenssignal. Profiler med bilder får ungefär 42 % fler förfrågningar om vägbeskrivning. Ladda upp riktiga bilder på dina jobb — före/efter, teamet, bilar och skyltar. Omslagsbild 1080×608 px, logga 250×250 px. Google gynnar nyligen uppladdade bilder, så byt ut och fyll på regelbundet i stället för att lägga upp allt en gång och glömma bort det.</p>
+<p>Publicera dessutom <strong>Google-inlägg minst en gång i veckan</strong> — ett avslutat projekt, en säsongstjänst, en kort nyhet. Svara på frågor i Frågor &amp; svar innan kunderna svarar åt dig med felaktig information. Den här veckorutinen — nya bilder, ett inlägg, svar på recensioner — är precis den aktivitet som bygger prominens över tid.</p>
+
+<h2>Vad du realistiskt kan förvänta dig</h2>
+<p>Var ärlig mot dig själv om tidslinjen. Grundläggande optimering — verifiering, rätt kategori, ifylld profil, första bilderna — ger ofta mätbart fler visningar och klick inom <strong>4–8 veckor</strong>. Att bygga verklig prominens via recensioner och kontinuerlig aktivitet tar <strong>3–6 månader</strong> på konkurrensutsatta orter. Följ upp i profilens Insikter: visningar, samtal, vägbeskrivningar, och skillnaden mellan kategorisökningar (nya kunder som hittar dig) och direktsökningar (folk som redan känner till dig). Det är kategorisökningarna du vill se växa.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp sköter inte din Google-profil åt dig — men vi gör allt runt omkring så proffsigt att recensionerna kommer av sig själva. En tydlig <a href="/sv/verktyg/offert-mall">offertmall</a> ger kunden ett gott första intryck, och en organiserad hantering av jobb, tider och fakturor gör att du hinner med veckorutinen på profilen i stället för att drunkna i pappersarbete. Nöjda kunder som fått snygga offerter och korrekta fakturor är de som gladast klickar fem stjärnor när du skickar recensionslänken.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Kostar Google Företagsprofil något?</h3>
+<p>Nej. Att skapa, verifiera och optimera profilen är helt gratis. Det är just därför den är så kraftfull — lokalt slår en välskött gratisprofil ofta betald annonsering, eftersom kunder litar mer på kartrutan och recensionerna än på annonser.</p>
+<h3>Får jag bjuda kunden på rabatt om de lämnar en recension?</h3>
+<p>Nej. Att erbjuda rabatt, pengar eller presenter för recensioner är förbjudet och kan leda till att recensionerna tas bort eller att profilen stängs av. Du får däremot alltid be om en recension och skicka en länk eller QR-kod efter avslutat jobb — så länge du inte styr betyget.</p>
+<h3>Kan jag synas i flera orter än där jag har adress?</h3>
+<p>Ja. Ställ in profilen som tjänsteområdesföretag, dölj gatuadressen och lägg in de kommuner och orter du faktiskt jobbar i. Då kopplas du till lokala sökningar i hela ditt serviceområde, inte bara på hemadressen.</p>
+<h3>Varför syns inte min profil i kartrutan?</h3>
+<p>Vanligaste orsakerna är att profilen inte är verifierad, saknar primär kategori, eller har för få och för gamla recensioner. Kontrollera verifieringen först — en overifierad profil är i praktiken osynlig i Local Pack.</p>
+
+<h2>Kom igång</h2>
+<p>Sätt av en timme den här veckan: verifiera profilen, sätt rätt primär kategori, lägg in serviceområdet och skicka recensionslänken till dina tre senaste kunder. Bygg sedan en fast veckorutin. Börja med en proffsig kundkontakt via <a href="/sv/verktyg">våra gratis byggverktyg</a>, och vill du se hur ByggExp kan avlasta administrationen så du hinner sköta synligheten — <a href="/sv/contact">boka en demo</a>.</p>
+
+<p>Relaterat: <a href="/sv/blog/hitta-kunder-byggfirma">Hitta kunder till byggfirman</a> och <a href="/sv/blog/starta-byggforetag-2026">Starta byggföretag 2026</a>.</p>
+`;
+
+const A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA: BlogPost = {
+  _id: "code-"+"google-foretagsprofil-lokal-seo-byggfirma",
+  title: "Google Företagsprofil: lokal SEO för byggfirmor", slug: "google-foretagsprofil-lokal-seo-byggfirma", locale: "sv",
+  excerpt: "De flesta lokala byggjobb avgörs i Googles kartruta. Här är steg-för-steg-guiden till att ranka i Local Pack — verifiering, kategori, serviceområde och recensioner.", tag: "Lokal SEO",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA_HTML,
+  seoTitle: "Google Företagsprofil för byggfirmor | ByggExp", seoDescription: "Så tar din byggfirma plats i Googles kartruta (Local Pack): verifiering, rätt kategori, NAP och recensioner — steg för steg, gratis och för 2026.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-19T17:06:00.000Z", createdAt: "2026-08-19T17:06:00.000Z", updatedAt: "2026-08-19T17:06:00.000Z",
+};
+
+const A_FAKTURERINGSPROGRAM_BYGG_HTML = `
+<p>Ett faktureringsprogram för bygg ska göra mer än att skapa en PDF – det ska ta dig från nedlagda timmar till betald faktura utan dubbelarbete, och hantera ROT-avdraget rätt. Här går vi igenom vad ett faktureringsprogram för byggföretag bör klara, vad du ska titta på när du väljer, och hur ByggExp löser hela kedjan.</p>
+
+<h2>Vad ska ett faktureringsprogram för bygg klara?</h2>
+<ul>
+<li><strong>ROT-fakturering</strong> – räkna och redovisa <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdraget</a> automatiskt så att kunden ser vad hen betalar och du får rätt underlag till Skatteverket.</li>
+<li><strong>Från offert till faktura</strong> – en accepterad offert ska bli faktura med ett klick, inte skrivas om. Se <a href="/sv/blog/offert-till-betald-faktura-flode">hela flödet offert → faktura</a>.</li>
+<li><strong>Timmar → faktura</strong> – vid löpande räkning ska registrerade timmar bli fakturarader utan att någon räknar för hand.</li>
+<li><strong>Rätt fakturainnehåll</strong> – allt som en <a href="/sv/blog/vad-ska-faktura-innehalla-bygg">byggfaktura ska innehålla</a> enligt lag, med logga och betalningsvillkor.</li>
+<li><strong>Påminnelser</strong> – automatisk påminnelse när kunden inte betalar i tid.</li>
+</ul>
+
+<h2>Faktureringsprogram, mall eller Excel?</h2>
+<ul>
+<li><strong>Enstaka fakturor</strong> – en <a href="/sv/verktyg/faktura-mall">faktura-mall</a> räcker och är gratis att börja med.</li>
+<li><strong>Fakturor varje vecka</strong> – ett program sparar tid genom ROT-hantering, koppling offert→faktura→timmar och automatiska påminnelser, och minskar fel.</li>
+</ul>
+
+<h2>Så gör ByggExp det</h2>
+<p>I ByggExp hänger offert, tid och faktura ihop: du <strong>skapar offerter</strong>, förvandlar dem till <strong>fakturor</strong>, och de timmar som teamet registrerar i mobilen blir fakturaunderlag automatiskt. ROT hanteras i flödet, och samma timmar används även till <a href="/sv/blog/tidrapportering">tidrapportering</a> och löneunderlag – du registrerar en gång och använder datan flera gånger.</p>
+<p><a href="/sv/contact">Boka en demo av ByggExp</a> så visar vi hela kedjan från offert till betald faktura, eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Fint fakturaprogram, men frånkopplat.</strong> Om fakturan inte hämtar offert och timmar skriver du allt två gånger.</li>
+<li><strong>ROT för hand.</strong> Manuell ROT-beräkning ger fel och nekade avdrag – låt systemet räkna.</li>
+<li><strong>Ingen påminnelserutin.</strong> Obetalda fakturor som ingen bevakar blir dyra – se <a href="/sv/blog/kunden-betalar-inte-fakturan">vad du gör när kunden inte betalar</a>.</li>
+</ul>
+
+<p>Rätt faktureringsprogram sparar tid och pengar – men värdet ligger i att offert, tid och faktura sitter ihop och att ROT sköts automatiskt. Testa gratis med mallen, väx in i ett system när volymen kräver det.</p>
+`;
+
+const A_FAKTURERINGSPROGRAM_BYGG: BlogPost = {
+  _id: "code-"+"faktureringsprogram-bygg",
+  title: "Faktureringsprogram för bygg – ROT, offert och timmar i ett flöde", slug: "faktureringsprogram-bygg", locale: "sv",
+  excerpt: "Vad ett faktureringsprogram för byggföretag bör klara – ROT-fakturering, offert→faktura, timmar→faktura och påminnelser – och hur ByggExp löser hela kedjan.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/8fakturor.webp", contentHtml: A_FAKTURERINGSPROGRAM_BYGG_HTML,
+  seoTitle: "Faktureringsprogram för bygg – ROT & offert i ett | ByggExp", seoDescription: "Faktureringsprogram för byggföretag: ROT-fakturering, offert→faktura, timmar→faktura och automatiska påminnelser. Så väljer du – och så gör ByggExp det i ett flöde.",
+  seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T17:00:00.000Z", createdAt: "2026-08-20T17:00:00.000Z", updatedAt: "2026-08-20T17:00:00.000Z",
+};
+
+const A_TIDRAPPORTERING_APP_BYGGFORETAG_HTML = `
+<p>En tidrapporterings-app för byggföretag ska ta bort papperslapparna och Excel-krånglet: teamet stämplar tid i mobilen där jobbet sker, och timmarna blir direkt underlag för lön och faktura. Här går vi igenom vad en bra tidrapporterings-app ska klara och hur ByggExp gör det.</p>
+
+<h2>Vad ska en tidrapporterings-app för bygg klara?</h2>
+<ul>
+<li><strong>Registrering i mobilen</strong> – på plats, i realtid, kopplat till rätt projekt – inte i efterhand.</li>
+<li><strong>Projektkoppling</strong> – varje timme bokförs på rätt projekt så du kan följa marginalen och fakturera rätt.</li>
+<li><strong>OB, övertid och restid</strong> – <a href="/sv/blog/ob-overtid-byggavtalet-rakna">OB och övertid</a> och <a href="/sv/blog/restidsersattning-byggavtalet">restid</a> ska hanteras enligt Byggavtalet.</li>
+<li><strong>Export till lön</strong> – timmarna ska bli löneunderlag och kunna exporteras (t.ex. Excel) utan handpåläggning.</li>
+<li><strong>Underlag för faktura</strong> – vid löpande räkning blir samma timmar fakturarader.</li>
+</ul>
+<p>Läs mer om grunderna i guiden om <a href="/sv/blog/tidredovisning-byggforetag">tidredovisning i byggföretag</a> (och skillnaden mot <a href="/sv/blog/personalliggare">personalliggare</a>, som är ett separat lagkrav).</p>
+
+<h2>Så gör ByggExp det</h2>
+<p>ByggExp samlar in arbetstid automatiskt i mobilen och exporterar timmarna till Excel – och samma timmar blir både <strong>löneunderlag</strong> och <strong>fakturaunderlag</strong>. Du ser dessutom arbetslagen i en live-översikt och kan koppla foto och uppgifter till arbetspasset. Registrera en gång, använd datan till lön, faktura och uppföljning.</p>
+<p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Vill du börja enkelt finns en gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Rapportering i efterhand.</strong> Tid som fylls i en vecka senare blir gissningar.</li>
+<li><strong>Ingen projektkod.</strong> Utan koppling till projekt går det inte att följa marginal eller fakturera rätt.</li>
+<li><strong>Dubbelarbete mot lönen.</strong> Om timmarna inte blir löneunderlag räknar någon om allt manuellt.</li>
+</ul>
+
+<p>En tidrapporterings-app tjänar in sig snabbt: rätt lön, rätt faktura och koll på lönsamheten – utan papperslappar och utan pusslet vid varje lönekörning.</p>
+`;
+
+const A_TIDRAPPORTERING_APP_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"tidrapportering-app-byggforetag",
+  title: "Tidrapportering-app för byggföretag – timmar till lön och faktura", slug: "tidrapportering-app-byggforetag", locale: "sv",
+  excerpt: "Vad en tidrapporterings-app för bygg bör klara: registrering i mobilen, projektkoppling, OB/övertid/restid och export till lön och faktura. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: A_TIDRAPPORTERING_APP_BYGGFORETAG_HTML,
+  seoTitle: "Tidrapportering-app för byggföretag – lön & faktura | ByggExp", seoDescription: "Tidrapportering-app för bygg: stämpla tid i mobilen, koppla till projekt, hantera OB/övertid/restid och exportera timmarna till lön och faktura. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T17:05:00.000Z", createdAt: "2026-08-20T17:05:00.000Z", updatedAt: "2026-08-20T17:05:00.000Z",
+};
+
+const A_BYGGPROGRAM_FOR_BYGGFORETAG_HTML = `
+<p>Ett byggprogram (program för byggföretag) ska samla det som annars ligger utspritt i papper, Excel och sms: tid, projekt, offert, faktura, foto och dokument – på ett ställe. Här går vi igenom vad ett bra byggprogram ska klara och hur ByggExp täcker hela kedjan.</p>
+
+<h2>Vad ska ett byggprogram klara?</h2>
+<ul>
+<li><strong>Tid och lön</strong> – <a href="/sv/blog/tidrapportering-app-byggforetag">tidrapportering i mobilen</a> som blir löneunderlag automatiskt.</li>
+<li><strong>Offert och faktura</strong> – <a href="/sv/blog/offertprogram-byggforetag">offerter</a> och <a href="/sv/blog/faktureringsprogram-bygg">fakturor med ROT</a> i samma flöde.</li>
+<li><strong>Projekt- och personalplanering</strong> – vem gör vad, var och när.</li>
+<li><strong>Fotodokumentation</strong> kopplad till arbetspass och projekt – bevis om något ifrågasätts.</li>
+<li><strong>Dokument och kostnader</strong> – alla projektdokument, utlägg och kostnader samlade.</li>
+<li><strong>Verktyg och utrustning</strong> – koll på var maskinerna är.</li>
+</ul>
+
+<h2>Byggprogram, appar eller lösa verktyg?</h2>
+<p>Många börjar med lösa <a href="/sv/verktyg">gratis verktyg</a> (kalkyler, mallar) och växer in i ett samlat system när flera personer och projekt ska hänga ihop. Poängen med ett byggprogram är att du <strong>registrerar en gång</strong> – tid, foto, kostnad – och använder samma data till lön, faktura och uppföljning, i stället för att mata in allt flera gånger.</p>
+
+<h2>Så gör ByggExp det</h2>
+<p>ByggExp är byggt för byggföretag och hantverkare: automatisk arbetstid, uppgifter med uppföljning, live-översikt över arbetslagen, fotodokumentation per arbetspass, projekt- och personalplanering, verktygshantering, offert, faktura, projektdokument, utlägg och löner – ur samma timmar. Allt hänger ihop så att kontoret och bygget jobbar mot samma bild.</p>
+<p><a href="/sv/contact">Boka en demo av ByggExp</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+
+<h2>Vad du ska titta på när du väljer</h2>
+<ul>
+<li><strong>Hänger delarna ihop?</strong> Tid, offert, faktura och lön ska dela data – annars blir det öar.</li>
+<li><strong>Funkar det i mobilen på bygget?</strong> Om det bara funkar på kontoret används det inte.</li>
+<li><strong>ROT och svenska regler.</strong> Ett byggprogram ska hantera ROT och svensk fakturastandard.</li>
+</ul>
+
+<p>Rätt byggprogram gör att en registrering räcker – och att kontoret slipper jaga papper. Börja med gratis verktyg, väx in i ett samlat system när volymen kräver det.</p>
+`;
+
+const A_BYGGPROGRAM_FOR_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"byggprogram-for-byggforetag",
+  title: "Byggprogram för byggföretag – allt från tid till faktura i ett", slug: "byggprogram-for-byggforetag", locale: "sv",
+  excerpt: "Vad ett byggprogram (program för byggföretag) bör klara: tid, lön, offert, faktura med ROT, projekt- och personalplanering, foto och dokument – i ett system. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_BYGGPROGRAM_FOR_BYGGFORETAG_HTML,
+  seoTitle: "Byggprogram för byggföretag – tid, offert & faktura | ByggExp", seoDescription: "Byggprogram för byggföretag: samla tid, lön, offert, faktura med ROT, projekt- och personalplanering, fotodokumentation och dokument i ett system. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T17:10:00.000Z", createdAt: "2026-08-20T17:10:00.000Z", updatedAt: "2026-08-20T17:10:00.000Z",
+};
+
+export const TILLVAXT_ARTICLES: BlogPost[] = [
+  A_HITTA_KUNDER_BYGGFIRMA,
+  A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING,
+  A_SKAFFA_RECENSIONER_OMDOMEN_BYGGFIRMA,
+  A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA,
+  A_FAKTURERINGSPROGRAM_BYGG,
+  A_TIDRAPPORTERING_APP_BYGGFORETAG,
+  A_BYGGPROGRAM_FOR_BYGGFORETAG,
+];

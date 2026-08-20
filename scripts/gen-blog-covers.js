@@ -16,22 +16,29 @@ const path = require('path');
 const sharp = require('sharp');
 
 const ROOT = path.resolve(__dirname, '..');
-const SRC = path.join(ROOT, 'src/content/code-articles.ts');
+// Articles live in per-cluster files under src/content/articles/ (code-articles.ts
+// is now just the orchestrator). Parse every cluster file.
+const ARTICLES_DIR = path.join(ROOT, 'src/content/articles');
 const OUT = path.join(ROOT, 'public/landing/blog');
 const MANIFEST = path.join(ROOT, 'src/content/generated-blog-covers.ts');
 
 function parseArticles() {
-  const src = fs.readFileSync(SRC, 'utf8');
-  const blocks = src.split(/: BlogPost = \{/);
+  const files = fs
+    .readdirSync(ARTICLES_DIR)
+    .filter((f) => f.endsWith('.ts') && f !== 'site-url.ts');
   const arts = [];
-  for (let i = 1; i < blocks.length; i++) {
-    const b = blocks[i].split(/\n\};/)[0];
-    const g = (re) => { const m = b.match(re); return m ? m[1] : null; };
-    const slug = g(/slug:\s*["']([^"']+)["']/);
-    const tag = g(/tag:\s*["']([^"']+)["']/);
-    const cover = g(/coverImageUrl:\s*["']([^"']+)["']/);
-    const title = g(/title:\s*["']([^"']+)["']/);
-    if (slug && title) arts.push({ slug, tag, cover, title });
+  for (const file of files) {
+    const src = fs.readFileSync(path.join(ARTICLES_DIR, file), 'utf8');
+    const blocks = src.split(/: BlogPost = \{/);
+    for (let i = 1; i < blocks.length; i++) {
+      const b = blocks[i].split(/\n\};/)[0];
+      const g = (re) => { const m = b.match(re); return m ? m[1] : null; };
+      const slug = g(/slug:\s*["']([^"']+)["']/);
+      const tag = g(/tag:\s*["']([^"']+)["']/);
+      const cover = g(/coverImageUrl:\s*["']([^"']+)["']/);
+      const title = g(/title:\s*["']([^"']+)["']/);
+      if (slug && title) arts.push({ slug, tag, cover, title });
+    }
   }
   return arts;
 }

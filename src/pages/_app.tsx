@@ -1,6 +1,9 @@
 import type { AppProps } from "next/app";
 
-import ChatAssistant from "../components/ChatAssistant/ChatAssistant";
+// ChatAssistant (AI chat) is temporarily disabled — re-enable by uncommenting
+// the import and the <ChatAssistant /> render below once ANTHROPIC_API_KEY is
+// live on the VPS (see memory/ai-assistant.md for activation steps).
+// import ChatAssistant from "../components/ChatAssistant/ChatAssistant";
 import CookieConsent from "../components/CookieConsent/CookieConsent";
 import 'quill/dist/quill.snow.css';
 import "../styles/globals.scss";
@@ -27,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Component {...pageProps} />
       <CookieConsent />
-      <ChatAssistant />
+      {/* <ChatAssistant /> temporarily disabled — see import note above */}
     </>
   );
 }

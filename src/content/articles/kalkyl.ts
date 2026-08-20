@@ -1726,6 +1726,8 @@ const A_FALL_LUTNING_BERAKNA_AVLOPP_MARK_TAK_HTML = `
 
 <p><a href="/sv/verktyg/fall-kalkylator">Räkna ut fall och höjdskillnad direkt i vår gratis fall-kalkylator →</a></p>
 
+<figure class="article-diagram"><img src="/landing/diagrams/fall.webp" alt="Diagram: fall som längd, höjdskillnad och förhållande 1:X" width="720" height="380" loading="lazy"><figcaption>Fall uttrycks som mm/m, procent och 1:X – höjdskillnad = längd × fall.</figcaption></figure>
+
 <h2>Vad är fall – och hur uttrycks det?</h2>
 <p>Fall är höjdskillnaden per längdenhet, alltså hur mycket en yta eller ett rör lutar. Samma lutning kan skrivas på tre sätt som betyder exakt samma sak:</p>
 <ul>
@@ -1745,6 +1747,8 @@ const A_FALL_LUTNING_BERAKNA_AVLOPP_MARK_TAK_HTML = `
 <p>Även "platta" tak och altaner behöver fall för att inte bli till dammar. Riktvärdet beror helt på taktäckning och konstruktion, så här måste du utgå från tillverkarens och branschens anvisningar för det aktuella materialet. Principen är densamma: bestäm önskat fall i mm/m, mät längden och räkna ut höjdskillnaden så att du vet hur mycket reglar, läkt eller lutningsskikt behöver byggas upp i den ena änden.</p>
 
 <h2>Fall mot golvbrunn i våtrum</h2>
+
+<figure class="article-diagram"><img src="/landing/diagrams/golvbrunn.webp" alt="Diagram: golv som lutar mot golvbrunn i våtrum" width="720" height="380" loading="lazy"><figcaption>Vid duschplats: fall 1:150 (7 mm/m) till 1:50 (20 mm/m) mot brunnen – inget bakfall.</figcaption></figure>
 <p>I våtrum är fallet reglerat i detalj i branschreglerna (bland annat GVK:s Säkra Våtrum och Byggkeramikrådets BBV). Vid duschplats eller motsvarande gäller normalt att golvet ska luta mot golvbrunnen <strong>minst 1:150 (cirka 7 mm/m) och högst 1:50 (20 mm/m)</strong>. Lutningen mellan golvbrunnen och angränsande vägg får vara högst 1:25 (40 mm/m), och på övrigt golv i rummet gäller ofta minst 1:500 och högst 1:100. En helt central regel är att det inte får finnas något <strong>bakfall</strong> – ingen del av golvet får luta bort från brunnen. Kontrollera alltid den aktuella versionen av branschreglerna innan du börjar, eftersom värdena kan uppdateras.</p>
 
 <h2>Så räknar du – steg för steg</h2>
@@ -1780,6 +1784,8 @@ const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING_HTML = `
 <p>En trappa som känns obekväm är nästan alltid felräknad – stegen är för höga, för grunda eller ojämna. Med rätt beräkning från början får du en trappa som är både bekväm och säker att gå i. Här går vi igenom trappformeln, Boverkets riktvärden för steghöjd och stegdjup, och hur du räknar ut antal steg utifrån den totala höjden.</p>
 
 <p><a href="/sv/verktyg/trappa-kalkylator">Räkna ut antal steg och stegmått direkt i vår gratis trappberäknare →</a></p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/trappa.webp" alt="Diagram: steghöjd och stegdjup i en trappa enligt trappformeln" width="720" height="380" loading="lazy"><figcaption>Steghöjd, stegdjup och bekvämlighetsregeln 2 × steghöjd + stegdjup ≈ 630 mm.</figcaption></figure>
 
 <h2>Grundbegreppen: steghöjd och stegdjup</h2>
 <p>Två mått avgör hur en trappa känns:</p>
@@ -1838,6 +1844,8 @@ const A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND_HTML = `
 
 <p><a href="/sv/verktyg/takstolar-kalkylator">Räkna ut antal takstolar direkt i vår gratis kalkylator →</a></p>
 
+<figure class="article-diagram"><img src="/landing/diagrams/takstolar.webp" alt="Diagram: takstolar med centrumavstånd c/c längs taket" width="720" height="380" loading="lazy"><figcaption>Antal takstolar = taklängd ÷ c/c + 1. Standard c/c är 1200 mm.</figcaption></figure>
+
 <h2>Så räknar du ut antal takstolar</h2>
 <p>Antalet takstolar styrs av takets längd (längs nocken) och centrumavståndet mellan takstolarna. Grundformeln är:</p>
 <p><strong>Antal takstolar = taklängd / c-avstånd + 1</strong></p>
@@ -1887,6 +1895,8 @@ const A_REGLAR_DIMENSIONER_C_AVSTAND_VAGG_HTML = `
 <p>Rätt regeldimension och c-avstånd avgör om en vägg blir stabil och om gipsskivorna sitter som de ska. Här går vi igenom de vanliga virkesdimensionerna för reglar, vilket c-avstånd du använder till innerväggar och hur dimensionen hänger ihop med gipsskivans mått.</p>
 
 <p><a href="/sv/verktyg/reglar-kalkylator">Räkna ut antal reglar till väggen i vår gratis kalkylator →</a></p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/reglar.webp" alt="Diagram: reglar med c/c-avstånd och gipsskiva" width="720" height="380" loading="lazy"><figcaption>Regelavståndet ska matcha skivbredden: 900 mm gips → c/c 450, 1200 mm → c/c 600.</figcaption></figure>
 
 <h2>Vanliga regeldimensioner</h2>
 <p>Reglar sågas i den så kallade 45-serien, där bredden (tjockleken) oftast är 45 mm och höjden varierar. De vanligaste dimensionerna för väggreglar är:</p>

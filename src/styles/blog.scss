@@ -395,7 +395,9 @@
 
 .blog-article-content h2 {
   font-size: 1.55rem;
-  margin-top: 1.3em;
+  margin-top: 1.5em;
+  padding-left: 14px;
+  border-left: 4px solid var(--blue, #2563c9);
 }
 
 .blog-article-content h3 {
@@ -403,17 +405,50 @@
   margin-top: 1.4em;
 }
 
-.blog-article-content ul,
+// Bullet lists become light "fakta-rutor" (callout cards) with check bullets,
+// so long articles are easier to scan. Ordered lists stay as clean numbered
+// steps. Scalable — applies to every article via CSS, no per-article markup.
+.blog-article-content ul {
+  list-style: none;
+  padding: 16px 20px;
+  margin-left: 0;
+  background: rgba(37, 99, 201, 0.045);
+  border-left: 3px solid var(--blue, #2563c9);
+  border-radius: 12px;
+}
+
+.blog-article-content ul li {
+  position: relative;
+  padding-left: 1.7em;
+}
+
+.blog-article-content ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1f9d6b;
+  font-weight: 700;
+}
+
 .blog-article-content ol {
   padding-left: 1.4em;
+  counter-reset: none;
 }
 
 .blog-article-content li + li {
   margin-top: 0.5em;
 }
 
-.blog-article-content ol {
-  counter-reset: none;
+// Diagrams (SVG/webp illustrations) — wider than the default 320px image cap.
+.blog-article-content .article-diagram {
+  margin: 26px 0;
+}
+
+.blog-article-content .article-diagram img {
+  max-width: 560px;
+  border-radius: 14px;
+  border: 1px solid rgba(10, 40, 90, 0.08);
 }
 
 .blog-article-content img {

@@ -55,7 +55,8 @@
 .blog-list-section {
   background: var(--bg);
   min-height: 60vh;
-  padding: 72px 0 96px;
+  // Equal top gap (hero → search) and toolbar margin-bottom (search → filter).
+  padding: 40px 0 96px;
 }
 
 .blog-article {
@@ -66,12 +67,13 @@
 }
 
 .blog-toolbar {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .blog-search {
   position: relative;
-  max-width: 460px;
+  max-width: 680px;
+  margin: 0 auto;
 }
 
 .blog-search-icon {

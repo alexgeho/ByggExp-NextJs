@@ -18015,9 +18015,113 @@ const A_GIPSSKIVOR_MATT_STANDARDMATT_VIKT: BlogPost = {
   publishedAt: "2026-08-20T14:40:00.000Z", createdAt: "2026-08-20T14:40:00.000Z", updatedAt: "2026-08-20T14:40:00.000Z",
 };
 
+const A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM_HTML = `
+<p>&quot;Egenkontroll el&quot; kan betyda två saker som är lätta att blanda ihop: företagets lagstadgade <strong>egenkontrollprogram</strong> och den praktiska kontrollen av en enskild elinstallation. Här reder vi ut skillnaden, vad lagen kräver av elinstallationsföretag och hur du dokumenterar kontrollen av utfört arbete.</p>
+
+<p><a href="/sv/verktyg/egenkontroll-mall">Ladda ner en gratis egenkontroll-mall (PDF) för att dokumentera kontrollen →</a></p>
+
+<h2>Två sorters egenkontroll inom el</h2>
+<ul>
+<li><strong>Egenkontrollprogram (EKP)</strong> – företagets övergripande system med rutiner för att elinstallationsarbete utförs rätt. Det är ett lagkrav för elinstallationsföretag.</li>
+<li><strong>Kontroll av utförd installation</strong> – den praktiska kontrollen och mätningen innan anläggningen tas i bruk, som dokumenteras per arbete. Här passar en egenkontroll-mall/protokoll.</li>
+</ul>
+
+<h2>Egenkontrollprogram – lagkravet</h2>
+<p>Alla <strong>elinstallationsföretag</strong> måste ha ett egenkontrollprogram. Kravet följer av <strong>elsäkerhetslagen (2016:732), 24 §</strong>, och preciseras i Elsäkerhetsverkets föreskrift <strong>ELSÄK-FS 2017:3</strong>. Programmet är företagets egna rutiner som säkerställer att elinstallationsarbete utförs av personer med rätt kompetens, på rätt sätt och kontrolleras tillräckligt.</p>
+<p>För att få utföra elinstallationsarbete måste företaget dessutom:</p>
+<ul>
+<li>vara <strong>registrerat hos Elsäkerhetsverket</strong>, och</li>
+<li>ha minst en <strong>elinstallatör för regelverket</strong> som är knuten till verksamheten.</li>
+</ul>
+<p>Även den som är <strong>underentreprenör</strong> och utför elinstallationsarbete åt ett annat företag måste ha ett eget egenkontrollprogram och en egen elinstallatör för regelverket – man &quot;lånar&quot; inte huvudentreprenörens. Elsäkerhetsverket tillhandahåller mallar och vägledning för själva egenkontrollprogrammet på sin webbplats.</p>
+
+<h2>Vad ska kontrollen av installationen omfatta?</h2>
+<p>Utöver programmet ska varje installation kontrolleras innan den tas i bruk. Typiska punkter som dokumenteras är:</p>
+<ul>
+<li>Okulär kontroll av utförande och märkning</li>
+<li>Mätning och provning (t.ex. kontinuitet, isolationsresistans, jordfelsbrytarens funktion)</li>
+<li>Att rätt komponenter och kabelareor använts</li>
+<li>Vem som utfört och kontrollerat arbetet, med datum och signatur</li>
+</ul>
+<p>Det är den här kontrollen du samlar i ett protokoll. En <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a> gör att du får med rätt uppgifter, kan lägga till foto och signatur och får ut en färdig PDF att arkivera.</p>
+
+<h2>Skillnaden mot bygg-egenkontroll</h2>
+<p>Egenkontroll inom el styrs av elsäkerhetslagstiftningen och Elsäkerhetsverket. Den allmänna <a href="/sv/blog/egenkontroll">egenkontrollen i bygg</a> handlar i stället om att styrka att bygg­åtgärder uppfyller kraven, ofta kopplat till en <a href="/sv/verktyg/kontrollplan-mall">kontrollplan</a> enligt PBL. Principen är densamma – dokumentera att arbetet är rätt utfört – men regelverket och kraven skiljer sig åt.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Tro att EKP räcker som installationskontroll.</strong> Programmet är rutinerna; varje arbete ska ändå kontrolleras och dokumenteras.</li>
+<li><strong>Underentreprenör utan eget EKP.</strong> Varje elinstallationsföretag behöver ett eget program och egen elinstallatör för regelverket.</li>
+<li><strong>Ingen dokumentation.</strong> Utan protokoll är det svårt att visa att kontrollen faktiskt gjorts om något ifrågasätts.</li>
+</ul>
+
+<p>Har du koll på både delarna – ett aktuellt egenkontrollprogram och en dokumenterad kontroll av varje installation – uppfyller du både lagkravet och kundens förväntan på ett spårbart, säkert elarbete.</p>
+`;
+
+const A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM: BlogPost = {
+  _id: "code-"+"egenkontroll-el-egenkontrollprogram",
+  title: "Egenkontroll el – egenkontrollprogram och kontroll av installationen", slug: "egenkontroll-el-egenkontrollprogram", locale: "sv",
+  excerpt: "Skillnaden mellan elinstallationsföretagets lagstadgade egenkontrollprogram (elsäkerhetslagen 24 §, ELSÄK-FS 2017:3) och den praktiska kontrollen av en installation. Med gratis mall.", tag: "Egenkontroll",
+  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM_HTML,
+  seoTitle: "Egenkontroll el – egenkontrollprogram & kontroll | ByggExp", seoDescription: "Egenkontroll el: elinstallationsföretag måste ha egenkontrollprogram (elsäkerhetslagen 24 §, ELSÄK-FS 2017:3) + registrering hos Elsäkerhetsverket. Så dokumenterar du kontrollen. Gratis mall.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T15:00:00.000Z", createdAt: "2026-08-20T15:00:00.000Z", updatedAt: "2026-08-20T15:00:00.000Z",
+};
+
+const A_EGENKONTROLL_ENTREPRENAD_HTML = `
+<p>I en entreprenad är egenkontrollen både ett kvalitetsverktyg och ett bevis. Den visar att du har byggt enligt handlingar och gällande krav – och blir din bästa försäkring om beställaren eller besiktningsmannen ifrågasätter kvaliteten. Här går vi igenom hur egenkontroll fungerar i entreprenadsammanhang, hur den kopplas till kontrollplan och besiktning, och vad den ska innehålla.</p>
+
+<p><a href="/sv/verktyg/egenkontroll-mall">Ladda ner en gratis egenkontroll-mall (PDF) →</a></p>
+
+<h2>Varför egenkontroll i entreprenad?</h2>
+<p>Egenkontroll i en entreprenad har oftast tre drivkrafter samtidigt:</p>
+<ul>
+<li><strong>Kontraktshandlingarna</strong> – beställaren kräver ofta dokumenterad egenkontroll som en del av kvalitetskraven, t.ex. via en KMA- eller kvalitetsplan.</li>
+<li><strong>Kontrollplan enligt PBL</strong> – för åtgärder som kräver kontrollplan är egenkontroll normalt den metod som anges för att styrka att kraven uppfylls.</li>
+<li><strong>Ditt eget skydd</strong> – vid en tvist är en löpande, signerad egenkontroll ofta det som avgör vem som har rätt.</li>
+</ul>
+
+<h2>Kopplingen till kontrollplan och besiktning</h2>
+<p>Kontrollplanen anger <em>vad</em> som ska kontrolleras och hur (ofta &quot;egenkontroll&quot; som metod). Egenkontrollen är <em>utförandet</em> av de kontrollerna – den ifyllda, signerade dokumentationen. Vid <strong>slutbesiktningen</strong> är egenkontrollerna en del av underlaget som visar att entreprenaden är utförd enligt handlingarna. Saknas de blir det svårare att få arbetet godkänt utan anmärkning. Se även guiderna om <a href="/sv/blog/slutbesiktning">slutbesiktning</a> och <a href="/sv/verktyg/kontrollplan-mall">kontrollplan</a>.</p>
+
+<h2>Vad ska egenkontrollen innehålla?</h2>
+<ul>
+<li><strong>Projekt och plats</strong> samt vilket moment/arbete kontrollen gäller</li>
+<li><strong>Vad som kontrollerats</strong> – mot ritning, beskrivning, AMA eller tillverkarens anvisning</li>
+<li><strong>Resultat</strong> – godkänt eller avvikelse, gärna med mätvärden</li>
+<li><strong>Åtgärd</strong> vid avvikelse och när den stängts</li>
+<li><strong>Datum, utförare och signatur</strong> – och gärna foto som styrker läget</li>
+</ul>
+<p>Avvikelser är inget att dölja – tvärtom visar en hanterad avvikelse att systemet fungerar. Läs mer om <a href="/sv/blog/avvikelsehantering-bygg-mall">avvikelsehantering</a>.</p>
+
+<h2>Egenkontroll, KMA och kvalitetsplan</h2>
+<p>I större entreprenader ingår egenkontrollen i ett bredare kvalitets-, miljö- och arbetsmiljöarbete (KMA). Kvalitetsplanen beskriver vilka kontroller som ska göras, och egenkontrollerna är beviset på att de gjorts. En generell <a href="/sv/blog/egenkontroll">egenkontroll i bygg</a> förklarar grunderna, medan den här guiden fokuserar på entreprenadsammanhanget. Se även <a href="/sv/verktyg/kvalitetsplan-mall">kvalitetsplan-mallen</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Fylla i allt i efterhand.</strong> Egenkontrollen ska göras löpande, när arbetet utförs – inte kvällen före besiktning.</li>
+<li><strong>Bara &quot;godkänt&quot;.</strong> En kontroll utan mätvärden eller foto är svag som bevis.</li>
+<li><strong>Ingen koppling till kontrollplanen.</strong> Kontrollerna ska matcha det kontrollplanen kräver, annars uppstår luckor.</li>
+</ul>
+
+<p>Gör egenkontrollen löpande, koppla den till kontrollplanen och spara den med foto och signatur. Då blir den både ett kvalitetsverktyg under bygget och ett starkt bevis vid besiktning och eventuell tvist.</p>
+`;
+
+const A_EGENKONTROLL_ENTREPRENAD: BlogPost = {
+  _id: "code-"+"egenkontroll-entreprenad",
+  title: "Egenkontroll i entreprenad – kontrollplan, besiktning och innehåll", slug: "egenkontroll-entreprenad", locale: "sv",
+  excerpt: "Hur egenkontroll fungerar i entreprenad: kopplingen till kontraktshandlingar, kontrollplan enligt PBL och slutbesiktning – och vad den ska innehålla. Med gratis mall.", tag: "Egenkontroll",
+  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_EGENKONTROLL_ENTREPRENAD_HTML,
+  seoTitle: "Egenkontroll i entreprenad – kontrollplan & besiktning | ByggExp", seoDescription: "Egenkontroll i entreprenad: koppling till kontraktshandlingar, kontrollplan enligt PBL och slutbesiktning, plus vad kontrollen ska innehålla. Gratis egenkontroll-mall.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T15:05:00.000Z", createdAt: "2026-08-20T15:05:00.000Z", updatedAt: "2026-08-20T15:05:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM,
+    A_EGENKONTROLL_ENTREPRENAD,
     A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND,
     A_REGLAR_DIMENSIONER_C_AVSTAND_VAGG,
     A_GIPSSKIVOR_MATT_STANDARDMATT_VIKT,

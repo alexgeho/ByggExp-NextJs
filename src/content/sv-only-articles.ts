@@ -5,6 +5,8 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'egenkontroll-el-egenkontrollprogram',
+  'egenkontroll-entreprenad',
   'berakna-takstolar-dimensionering-c-avstand',
   'reglar-dimensioner-c-avstand-vagg',
   'gipsskivor-matt-standardmatt-vikt',

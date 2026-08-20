@@ -400,6 +400,150 @@ const A_BYGGPROGRAM_FOR_BYGGFORETAG: BlogPost = {
   publishedAt: "2026-08-20T17:10:00.000Z", createdAt: "2026-08-20T17:10:00.000Z", updatedAt: "2026-08-20T17:10:00.000Z",
 };
 
+const A_ARBETSORDER_APP_BYGG_HTML = `
+<p>En arbetsorder-app ska ta bort sms:en och lapparna: rätt person får rätt jobb med all info, och du ser vad som är gjort – i realtid. Här går vi igenom vad en arbetsorder-app för byggföretag bör klara och hur ByggExp löser det.</p>
+
+<h2>Vad ska en arbetsorder-app för bygg klara?</h2>
+<ul>
+<li><strong>Skapa och tilldela</strong> – lägg ut jobb på rätt person eller lag, med adress, beskrivning och deadline.</li>
+<li><strong>Automatisk uppföljning</strong> – se status utan att ringa runt; påminnelser när något inte är klart.</li>
+<li><strong>Kopplat till projekt</strong> – varje order hör till ett projekt så tid, foto och kostnad hamnar rätt.</li>
+<li><strong>Foto och noteringar</strong> – <a href="/sv/blog/fotodokumentation-app-bygg">bevis och anteckningar</a> direkt på ordern.</li>
+<li><strong>Fungerar i mobilen</strong> – på bygget, inte bara på kontoret.</li>
+</ul>
+
+<h2>Så gör ByggExp det</h2>
+<p>ByggExp har <strong>uppgifter med automatisk uppföljning</strong> och en <strong>live-översikt över arbetslagen</strong>: du delar ut jobb, ser vad som pågår och vad som är klart, och kopplar tid och foto till rätt projekt. Samma data blir sedan underlag för <a href="/sv/blog/faktureringsprogram-bygg">faktura</a> och lön.</p>
+<p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Order via sms.</strong> Utan ett system tappas jobb och detaljer bort.</li>
+<li><strong>Ingen projektkoppling.</strong> Då hamnar tid och kostnad på fel ställe.</li>
+<li><strong>Ingen uppföljning.</strong> Du märker att något missats först när kunden ringer.</li>
+</ul>
+
+<p>Rätt arbetsorder-app gör att inget jobb faller mellan stolarna – och att kontoret ser läget utan att ringa runt.</p>
+`;
+
+const A_ARBETSORDER_APP_BYGG: BlogPost = {
+  _id: "code-"+"arbetsorder-app-bygg",
+  title: "Arbetsorder-app för byggföretag – slut på sms och lappar", slug: "arbetsorder-app-bygg", locale: "sv",
+  excerpt: "Vad en arbetsorder-app för bygg bör klara: skapa och tilldela jobb, automatisk uppföljning, projektkoppling och foto – i mobilen. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_ARBETSORDER_APP_BYGG_HTML,
+  seoTitle: "Arbetsorder-app för byggföretag – jobb & uppföljning | ByggExp", seoDescription: "Arbetsorder-app för bygg: skapa och tilldela jobb, automatisk uppföljning, projektkoppling och foto – i mobilen. Så slutar jobb falla mellan stolarna med ByggExp.",
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T18:00:00.000Z", createdAt: "2026-08-20T18:00:00.000Z", updatedAt: "2026-08-20T18:00:00.000Z",
+};
+
+const A_PROJEKTHANTERING_BYGGFORETAG_HTML = `
+<p>Projekthantering för byggföretag handlar om att hålla ihop tid, personal, uppgifter, foto och ekonomi per projekt – så att du ser marginalen medan projektet pågår, inte efteråt. Här går vi igenom vad ett projektverktyg för bygg bör klara och hur ByggExp gör det.</p>
+
+<h2>Vad ska ett projektverktyg för bygg klara?</h2>
+<ul>
+<li><strong>Projekt- och personalplanering</strong> – vem gör vad, var och när.</li>
+<li><strong>Tid per projekt</strong> – timmar bokförs på rätt projekt för <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">kostnadskontroll och marginal</a>.</li>
+<li><strong>Uppgifter och uppföljning</strong> – <a href="/sv/blog/arbetsorder-app-bygg">arbetsorder</a> kopplade till projektet.</li>
+<li><strong>Foto och dokument</strong> – all dokumentation samlad per projekt.</li>
+<li><strong>Ekonomi</strong> – offert, faktura, utlägg och kostnader på projektet.</li>
+</ul>
+
+<h2>Så gör ByggExp det</h2>
+<p>ByggExp samlar <strong>projekt- och personalplanering</strong>, tid, uppgifter, <strong>fotodokumentation</strong>, dokument, utlägg och fakturering per projekt. Eftersom timmar och kostnader bokförs på projektet ser du lönsamheten löpande – och kontoret och bygget jobbar mot samma bild. Se även guiden om att <a href="/sv/blog/digitalisera-byggforetag-projektstyrning">digitalisera projektstyrningen</a>.</p>
+<p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+
+<h2>Vad du ska titta på</h2>
+<ul>
+<li><strong>Ser du marginalen löpande?</strong> Ett projektverktyg ska visa nedlagd tid mot kalkyl i realtid.</li>
+<li><strong>Hänger tid, foto och ekonomi ihop?</strong> Annars blir det öar av data.</li>
+<li><strong>Funkar det i mobilen på bygget?</strong> Det är där projektet händer.</li>
+</ul>
+
+<p>Rätt projekthantering gör att du styr projektet medan det pågår – och slipper överraskningar i efterkalkylen.</p>
+`;
+
+const A_PROJEKTHANTERING_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"projekthantering-byggforetag",
+  title: "Projekthantering för byggföretag – tid, personal och marginal i ett", slug: "projekthantering-byggforetag", locale: "sv",
+  excerpt: "Vad ett projektverktyg för bygg bör klara: projekt- och personalplanering, tid per projekt, uppgifter, foto och ekonomi – med marginalen synlig löpande. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_PROJEKTHANTERING_BYGGFORETAG_HTML,
+  seoTitle: "Projekthantering för byggföretag – projektverktyg | ByggExp", seoDescription: "Projekthantering / projektverktyg för byggföretag: planering, tid per projekt, uppgifter, foto och ekonomi med marginalen synlig löpande. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T18:05:00.000Z", createdAt: "2026-08-20T18:05:00.000Z", updatedAt: "2026-08-20T18:05:00.000Z",
+};
+
+const A_ROT_FAKTURERING_PROGRAM_HTML = `
+<p>ROT-fakturering är där många byggföretag tappar tid och pengar: fel uträknat avdrag, krångel med Skatteverkets begäran och underlag som inte stämmer. Ett program som sköter ROT i fakturaflödet tar bort både felen och handpåläggningen. Här går vi igenom hur ROT-fakturering bör fungera och hur ByggExp gör det.</p>
+
+<h2>Vad ROT-fakturering ska klara</h2>
+<ul>
+<li><strong>Rätt avdrag automatiskt</strong> – 30 % av arbetskostnaden, med taket per person. Räkna först i vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylator</a>.</li>
+<li><strong>Tydligt för kunden</strong> – fakturan visar vad hen betalar efter avdrag.</li>
+<li><strong>Underlag till Skatteverket</strong> – rätt uppgifter så begäran om utbetalning går igenom.</li>
+<li><strong>Arbete särskilt från material</strong> – ROT gäller bara arbetskostnaden.</li>
+</ul>
+<p>Läs mer om fallgroparna i guiderna om <a href="/sv/blog/skatteverket-nekar-rotavdrag-forbehall">när Skatteverket nekar ROT</a> och att <a href="/sv/blog/kontrollera-kundens-rotutrymme">kontrollera kundens ROT-utrymme</a>.</p>
+
+<h2>Så gör ByggExp det</h2>
+<p>I ByggExp hanteras ROT i flödet från <strong>offert till faktura</strong>: arbetskostnaden särskiljs, avdraget räknas och kunden ser rätt belopp – och du får underlaget till Skatteverket utan att räkna för hand. Se hela <a href="/sv/blog/faktureringsprogram-bygg">faktureringsflödet</a>.</p>
+<p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>ROT för hand.</strong> Manuell uträkning ger fel och nekade avdrag.</li>
+<li><strong>Material med i avdraget.</strong> ROT gäller bara arbete – blanda inte in material.</li>
+<li><strong>Fel kunduppgifter.</strong> Saknas rätt underlag fastnar utbetalningen.</li>
+</ul>
+
+<p>Rätt ROT-fakturering sparar tid och undviker nekade avdrag – nyckeln är att arbetet särskiljs och att avdraget räknas i systemet, inte i huvudet.</p>
+`;
+
+const A_ROT_FAKTURERING_PROGRAM: BlogPost = {
+  _id: "code-"+"rot-fakturering-program",
+  title: "ROT-fakturering – så gör du rätt avdrag i fakturan", slug: "rot-fakturering-program", locale: "sv",
+  excerpt: "Hur ROT-fakturering bör fungera: rätt avdrag automatiskt, tydligt för kunden och rätt underlag till Skatteverket – utan handpåläggning. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/8fakturor.webp", contentHtml: A_ROT_FAKTURERING_PROGRAM_HTML,
+  seoTitle: "ROT-fakturering – rätt avdrag i fakturan | ByggExp", seoDescription: "ROT-fakturering för byggföretag: rätt avdrag automatiskt (30 % av arbetet, tak per person), tydligt för kunden och rätt underlag till Skatteverket. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T18:10:00.000Z", createdAt: "2026-08-20T18:10:00.000Z", updatedAt: "2026-08-20T18:10:00.000Z",
+};
+
+const A_FOTODOKUMENTATION_APP_BYGG_HTML = `
+<p>Fotodokumentation är byggföretagets billigaste försäkring: bilder som visar vad som gjorts och hur det såg ut – tidsstämplade och kopplade till rätt projekt. En app gör att bilderna faktiskt hamnar rätt i stället för att ligga kvar i mobilens kamerarulle. Här går vi igenom vad en fotodokumentations-app för bygg bör klara.</p>
+
+<h2>Vad ska en fotodokumentations-app klara?</h2>
+<ul>
+<li><strong>Foto kopplat till projekt och arbetspass</strong> – inte en lös bildmapp, utan bevis på rätt plats.</li>
+<li><strong>Tidsstämpel</strong> – när bilden togs, för spårbarhet vid tvist eller besiktning.</li>
+<li><strong>Noteringar</strong> – kort text till bilden (vad, var, varför).</li>
+<li><strong>Tillgängligt för kontoret</strong> – samlat, sökbart, inte spritt i olika telefoner.</li>
+</ul>
+<p>Varför det lönar sig: se guiden om <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">fotodokumentation som bevis</a>.</p>
+
+<h2>Så gör ByggExp det</h2>
+<p>ByggExp har <strong>fotodokumentation kopplad till arbetspass</strong> och projekt: teamet fotar på plats, bilderna hamnar automatiskt på rätt projekt och kontoret kommer åt dem. Samma projekt håller ihop tid, uppgifter, foto och ekonomi.</p>
+<p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Bilder i kamerarullen.</strong> Utan koppling till projekt går de inte att hitta när de behövs.</li>
+<li><strong>Ingen tidsstämpel.</strong> Ett foto utan datum är svagt som bevis.</li>
+<li><strong>Bara i en telefon.</strong> Kontoret kommer inte åt det som ligger lokalt hos en snickare.</li>
+</ul>
+
+<p>Rätt fotodokumentation kostar några sekunder per bild men kan avgöra en tvist – förutsatt att bilderna hamnar rätt, tidsstämplade och kopplade till projektet.</p>
+`;
+
+const A_FOTODOKUMENTATION_APP_BYGG: BlogPost = {
+  _id: "code-"+"fotodokumentation-app-bygg",
+  title: "Fotodokumentation-app för bygg – bevis kopplat till projektet", slug: "fotodokumentation-app-bygg", locale: "sv",
+  excerpt: "Vad en fotodokumentations-app för bygg bör klara: foto kopplat till projekt och arbetspass, tidsstämpel, noteringar och åtkomst för kontoret. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/4foto.webp", contentHtml: A_FOTODOKUMENTATION_APP_BYGG_HTML,
+  seoTitle: "Fotodokumentation-app för bygg – bevis per projekt | ByggExp", seoDescription: "Fotodokumentation-app för byggföretag: foto kopplat till projekt och arbetspass, tidsstämplat, med noteringar och åtkomst för kontoret. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/4foto.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T18:15:00.000Z", createdAt: "2026-08-20T18:15:00.000Z", updatedAt: "2026-08-20T18:15:00.000Z",
+};
+
 export const TILLVAXT_ARTICLES: BlogPost[] = [
   A_HITTA_KUNDER_BYGGFIRMA,
   A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING,
@@ -408,4 +552,8 @@ export const TILLVAXT_ARTICLES: BlogPost[] = [
   A_FAKTURERINGSPROGRAM_BYGG,
   A_TIDRAPPORTERING_APP_BYGGFORETAG,
   A_BYGGPROGRAM_FOR_BYGGFORETAG,
+  A_ARBETSORDER_APP_BYGG,
+  A_PROJEKTHANTERING_BYGGFORETAG,
+  A_ROT_FAKTURERING_PROGRAM,
+  A_FOTODOKUMENTATION_APP_BYGG,
 ];

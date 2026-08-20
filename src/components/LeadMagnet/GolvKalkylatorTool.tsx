@@ -24,16 +24,19 @@ export default function GolvKalkylatorTool() {
   const [spill, setSpill] = useState('8');
   const [perPack, setPerPack] = useState('2.5');
   const [fixPerM2, setFixPerM2] = useState('4'); // kg fästmassa per m²
+  const [fogPerM2, setFogPerM2] = useState('0.5'); // kg fogbruk per m² (grovt)
 
   const r = useMemo(() => {
     const base = num(area);
     const need = base * (1 + num(spill) / 100);
     const pack = num(perPack);
     const packs = pack > 0 ? Math.ceil(need / pack) : 0;
-    const fixKg = material === 'kakel' ? base * num(fixPerM2) : 0;
+    const isTile = material === 'kakel';
+    const fixKg = isTile ? base * num(fixPerM2) : 0;
     const fixBags = fixKg > 0 ? Math.ceil(fixKg / 20) : 0; // säck 20 kg
-    return { need, packs, fixKg, fixBags, isTile: material === 'kakel' };
-  }, [material, area, spill, perPack, fixPerM2]);
+    const fogKg = isTile ? base * num(fogPerM2) : 0;
+    return { need, packs, fixKg, fixBags, fogKg, isTile };
+  }, [material, area, spill, perPack, fixPerM2, fogPerM2]);
 
   const onPattern = (v: string) => {
     setPattern(v);
@@ -61,6 +64,7 @@ export default function GolvKalkylatorTool() {
         ['Behov inkl. spill', `${nf(r.need, 1)} m²`],
         ['Antal förpackningar', `${nf(r.packs)} st`],
         ...(r.isTile ? [['Fästmassa', `${nf(r.fixKg)} kg (${nf(r.fixBags)} säck)`]] : []),
+        ...(r.isTile && r.fogKg > 0 ? [['Fogbruk (ca)', `${nf(r.fogKg, 1)} kg`]] : []),
       ],
       'golv-materiallista.csv',
     );
@@ -112,6 +116,12 @@ export default function GolvKalkylatorTool() {
             <input type="number" min="0" inputMode="decimal" value={fixPerM2} onChange={(e) => setFixPerM2(e.currentTarget.value)} />
           </label>
         ) : null}
+        {r.isTile ? (
+          <label className="lm-tool-field">
+            <span>Fogbruk (kg/m²)</span>
+            <input type="number" min="0" inputMode="decimal" value={fogPerM2} onChange={(e) => setFogPerM2(e.currentTarget.value)} />
+          </label>
+        ) : null}
       </div>
 
       <div className="lm-result">
@@ -129,11 +139,17 @@ export default function GolvKalkylatorTool() {
             <span>{nf(r.fixKg)} kg · {nf(r.fixBags)} säck (20 kg)</span>
           </div>
         ) : null}
+        {r.isTile && r.fogKg > 0 ? (
+          <div className="lm-result-row">
+            <span>Fogbruk (ca)</span>
+            <span>{nf(r.fogKg, 1)} kg</span>
+          </div>
+        ) : null}
         <p className="lm-result-fine">
           En uppskattning. Diagonal läggning och många vinklar ökar spillet.
-          Fästmassans åtgång beror på tandning och plattstorlek (ofta 3–6 kg/m²) –
-          fogbruk tillkommer och beror på fogbredd. m² per förpackning står på
-          produkten.
+          Fästmassans åtgång beror på tandning och plattstorlek (ofta 3–6 kg/m²).
+          Fogbruket beror mycket på plattstorlek och fogbredd (ofta ca 0,3–1 kg/m²)
+          – justera värdet. m² per förpackning står på produkten.
         </p>
       </div>
 

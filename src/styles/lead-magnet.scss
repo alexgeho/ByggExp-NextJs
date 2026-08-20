@@ -604,6 +604,19 @@
   margin: 0;
 }
 
+.lm-tool-disclaimer {
+  max-width: 760px;
+  margin: 14px auto 0;
+  padding: 12px 16px;
+  border: 1px solid rgba(180, 83, 10, 0.25);
+  border-radius: 12px;
+  background: rgba(224, 133, 18, 0.06);
+  color: #6b5a3a;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
 .verktyg-hub-group {
   margin-bottom: 28px;
 }

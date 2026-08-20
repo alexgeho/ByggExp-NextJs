@@ -55,7 +55,7 @@ export default function BetongKalkylatorTool() {
       const W = num(width);
       const t = num(thickness) / 100;
       base = L * W * t;
-      meshArea = L * W;
+      meshArea = L * W * 1.1; // +10 % för överlapp mellan mattor
       if (edge === 'ja') {
         const perim = 2 * (L + W);
         // The slab already counts the full footprint at `thickness`, including the

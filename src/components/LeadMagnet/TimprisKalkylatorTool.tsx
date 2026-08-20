@@ -12,6 +12,7 @@ export default function TimprisKalkylatorTool() {
   const [salary, setSalary] = useState('');
   const [hours, setHours] = useState('');
   const [social, setSocial] = useState('31.42');
+  const [semester, setSemester] = useState('12');
   const [overhead, setOverhead] = useState('');
   const [profit, setProfit] = useState('10');
 
@@ -19,16 +20,18 @@ export default function TimprisKalkylatorTool() {
     const monthlySalary = Math.max(parseFloat(salary.replace(',', '.')) || 0, 0);
     const billable = Math.max(parseFloat(hours.replace(',', '.')) || 0, 0);
     const soc = Math.max(parseFloat(social.replace(',', '.')) || 0, 0) / 100;
+    const sem = Math.max(parseFloat(semester.replace(',', '.')) || 0, 0) / 100;
     const overheadCost = Math.max(parseFloat(overhead.replace(',', '.')) || 0, 0);
     const profitMargin = Math.max(parseFloat(profit.replace(',', '.')) || 0, 0) / 100;
 
-    const labourCost = monthlySalary * (1 + soc);
+    // Semesterlön (12 %) läggs på bruttolönen, arbetsgivaravgift ovanpå.
+    const labourCost = monthlySalary * (1 + sem) * (1 + soc);
     const totalCost = labourCost + overheadCost;
     const withProfit = totalCost * (1 + profitMargin);
     const hourlyExcl = billable > 0 ? withProfit / billable : 0;
     const hourlyIncl = hourlyExcl * 1.25;
     return { labourCost, totalCost, withProfit, hourlyExcl, hourlyIncl, billable };
-  }, [salary, hours, social, overhead, profit]);
+  }, [salary, hours, social, semester, overhead, profit]);
 
   return (
     <div className="lm-tool">
@@ -51,6 +54,10 @@ export default function TimprisKalkylatorTool() {
         <label className="lm-tool-field">
           <span>Sociala avgifter (%)</span>
           <input type="number" min="0" inputMode="decimal" value={social} onChange={(e) => setSocial(e.currentTarget.value)} />
+        </label>
+        <label className="lm-tool-field">
+          <span>Semesterlön (%)</span>
+          <input type="number" min="0" inputMode="decimal" value={semester} onChange={(e) => setSemester(e.currentTarget.value)} />
         </label>
         <label className="lm-tool-field">
           <span>Omkostnader per månad (kr)</span>
@@ -80,7 +87,7 @@ export default function TimprisKalkylatorTool() {
           <strong>{kr(result.withProfit)}</strong>
         </div>
         <p className="lm-result-fine">
-          En uppskattning. Sociala avgifter är förifyllda med 31,42 % (normal arbetsgivaravgift). Justera omkostnader (verktyg, bil, försäkring, admin) och vinstmarginal efter din verksamhet.
+          En uppskattning. Sociala avgifter är förifyllda med 31,42 % (normal arbetsgivaravgift) och semesterlön med 12 %. Justera omkostnader (verktyg, bil, försäkring, admin) och vinstmarginal efter din verksamhet. Räknar du på egen bruttolön i enskild firma kan du sätta semester till 0.
         </p>
       </div>
     </div>

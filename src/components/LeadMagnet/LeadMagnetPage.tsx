@@ -80,6 +80,16 @@ export default function LeadMagnetPage({
 
         {tool ? <div className="lead-magnet-tool">{tool}</div> : null}
 
+        {tool ? (
+          <p className="lm-tool-disclaimer">
+            Verktyget ger en uppskattning och är ett hjälpmedel – inte en färdig
+            kalkyl. Kontrollera alltid resultatet mot ritning, gällande regler,
+            leverantörens uppgifter och din yrkeserfarenhet innan du lämnar ett
+            bindande pris, beställer material eller använder filen. ByggExp
+            ansvarar inte för beslut som fattas enbart utifrån verktyget.
+          </p>
+        ) : null}
+
         {leadForm ? <div className="lead-magnet-tool">{leadForm}</div> : null}
 
         {preview ? <div className="lead-magnet-preview">{preview}</div> : null}

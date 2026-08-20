@@ -23,6 +23,8 @@ export default function DrojsmalsrantaKalkylatorTool() {
   const [amount, setAmount] = useState('');
   const [due, setDue] = useState('');
   const [paid, setPaid] = useState('');
+  // Referensräntan sätts om av Riksbanken 1 jan / 1 jul. 2,00 % gäller H1 2026 —
+  // se över detta default nästa gång (2026-07-01). Fältet är redigerbart.
   const [refRate, setRefRate] = useState('2');
   const [spread, setSpread] = useState('8');
   const [reminder, setReminder] = useState(false);

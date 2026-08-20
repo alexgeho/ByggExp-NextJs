@@ -27,6 +27,7 @@ export default function GipsKalkylatorTool() {
   const [boardLen, setBoardLen] = useState('2.6'); // skivlängd (m)
   const [frame, setFrame] = useState('tra'); // tra | stal
   const [insulate, setInsulate] = useState('nej'); // ja | nej
+  const [openings, setOpenings] = useState('0'); // m² dörr/fönster att dra av
   const [spill, setSpill] = useState('10');
 
   const r = useMemo(() => {
@@ -37,7 +38,7 @@ export default function GipsKalkylatorTool() {
     const cc = boardWidth === '900' ? 450 : 600; // mm, per Gyproc
     const spillF = 1 + num(spill) / 100;
 
-    const oneSide = L * H; // m² per sida
+    const oneSide = Math.max(L * H - num(openings), 0); // m² per sida, minus öppningar
     const cladArea = oneSide * s; // total beklädd yta
     const gipsNeed = cladArea * lay * spillF; // m² gips inkl. spill
     const boardArea = (num(boardWidth) / 1000) * num(boardLen);
@@ -63,7 +64,7 @@ export default function GipsKalkylatorTool() {
       insulM2,
       screws,
     };
-  }, [length, height, sides, layers, boardWidth, boardLen, insulate, spill]);
+  }, [length, height, sides, layers, boardWidth, boardLen, insulate, openings, spill]);
 
   const railLabel = frame === 'stal' ? 'Skena (upp + ned)' : 'Syll + hammarband';
 
@@ -160,6 +161,10 @@ export default function GipsKalkylatorTool() {
             <option value="nej">Nej</option>
             <option value="ja">Ja</option>
           </select>
+        </label>
+        <label className="lm-tool-field">
+          <span>Avdrag öppningar (m²)</span>
+          <input type="number" min="0" inputMode="decimal" value={openings} onChange={(e) => setOpenings(e.currentTarget.value)} />
         </label>
         <label className="lm-tool-field">
           <span>Spill (%)</span>

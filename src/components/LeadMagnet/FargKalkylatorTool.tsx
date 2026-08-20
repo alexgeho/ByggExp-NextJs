@@ -17,10 +17,12 @@ const nf = (v: number, d = 0) =>
 
 type Surface = 'vagg' | 'tak' | 'fasadtra' | 'fasadputs';
 
-// Default coverage per coat (m²/litre), typical Swedish figures.
+// Default coverage per coat (m²/litre), typical Swedish figures. Interior
+// wall/ceiling paints (Beckers Interio, Alcro) state ~8–10 m²/l per coat; 8 is
+// a realistic-but-safe default (field is editable).
 const COVERAGE: Record<Surface, number> = {
-  vagg: 7,
-  tak: 7,
+  vagg: 8,
+  tak: 8,
   fasadtra: 5,
   fasadputs: 4,
 };

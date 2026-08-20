@@ -17,7 +17,9 @@ export default function TakstolarKalkylatorTool() {
   const r = useMemo(() => {
     const l = num(length);
     const c = num(cc);
-    const count = l > 0 && c > 0 ? Math.floor((l * 1000) / c) + 1 : 0;
+    // Round the spacing count UP: a 10 m roof at c/c 1200 needs ceil(8.33)+1 = 10
+    // trusses, not floor(8.33)+1 = 9 (which would leave the last bay too wide).
+    const count = l > 0 && c > 0 ? Math.ceil((l * 1000) / c) + 1 : 0;
     return { count };
   }, [length, cc]);
 

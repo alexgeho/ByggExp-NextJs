@@ -12,8 +12,12 @@ export default function TrappaKalkylatorTool() {
     const t = num(targetRise);
     const steps = h > 0 && t > 0 ? Math.max(Math.round(h / t), 1) : 0;
     const rise = steps > 0 ? h / steps : 0;
-    const going = rise > 0 ? 630 - 2 * rise : 0;
-    return { steps, rise, going };
+    const going = rise > 0 ? Math.max(630 - 2 * rise, 0) : 0;
+    // BBR riktvärden inomhus: steghöjd ≤ ~180 mm, stegdjup ≥ 250 mm.
+    const warnings: string[] = [];
+    if (rise > 180) warnings.push('Steghöjden överstiger BBR-riktvärdet ~180 mm – trappan blir brant. Lägg till fler steg (lägre önskad steghöjd).');
+    if (going > 0 && going < 250) warnings.push('Stegdjupet understiger BBR-riktvärdet 250 mm (inomhus) – minska steghöjden för ett djupare steg.');
+    return { steps, rise, going, warnings };
   }, [height, targetRise]);
   return (
     <div className="lm-tool">
@@ -29,7 +33,10 @@ export default function TrappaKalkylatorTool() {
         <div className="lm-result-row lm-result-highlight"><span>Antal steg</span><strong>{result.steps.toLocaleString('sv-SE')} st</strong></div>
         <div className="lm-result-row"><span>Steghöjd</span><span>{result.rise.toLocaleString('sv-SE', { maximumFractionDigits: 0 })} mm</span></div>
         <div className="lm-result-row lm-result-total"><span>Rekommenderat stegdjup</span><strong>{result.going.toLocaleString('sv-SE', { maximumFractionDigits: 0 })} mm</strong></div>
-        <p className="lm-result-fine">En uppskattning. Bekväma trappor har ofta en steghöjd på 150–180 mm. Kontrollera krav i Boverkets byggregler (BBR) för trappan.</p>
+        {result.warnings.map((w) => (
+          <p key={w} className="lm-result-fine" style={{ color: '#b4530a', fontWeight: 600 }}>⚠ {w}</p>
+        ))}
+        <p className="lm-result-fine">En uppskattning. Bekväma trappor har ofta en steghöjd på 150–180 mm och stegdjup minst 250 mm (inomhus) enligt Boverkets byggregler (BBR). Kontrollera kraven för din typ av trappa.</p>
       </div>
     </div>
   );

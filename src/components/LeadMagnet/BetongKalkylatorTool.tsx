@@ -53,11 +53,16 @@ export default function BetongKalkylatorTool() {
     if (shape === 'platta') {
       const L = num(length);
       const W = num(width);
-      base = L * W * (num(thickness) / 100);
+      const t = num(thickness) / 100;
+      base = L * W * t;
       meshArea = L * W;
       if (edge === 'ja') {
         const perim = 2 * (L + W);
-        base += perim * (num(edgeW) / 100) * (num(edgeH) / 100);
+        // The slab already counts the full footprint at `thickness`, including the
+        // strip under the edge beam. Add ONLY the extra depth below the slab
+        // (edgeH − thickness), not the whole edgeH, to avoid double-counting.
+        const extraDepth = Math.max(num(edgeH) / 100 - t, 0);
+        base += perim * (num(edgeW) / 100) * extraDepth;
       }
     } else if (shape === 'balk') {
       base = num(bLen) * (num(bWidth) / 100) * (num(bHeight) / 100);

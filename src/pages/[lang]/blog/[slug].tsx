@@ -10,7 +10,8 @@ import { getBlogTools } from '../../../content/blog-tools';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { extractFaqFromHtml } from '../../../lib/faq';
 import { getMockBlogPost } from '../../../lib/blog-mock';
-import { getCodeArticle } from '../../../content/code-articles';
+import { getCodeArticle, getCodeArticles } from '../../../content/code-articles';
+import { categoryForTag } from '../../../lib/blog-categories';
 import { isSvOnlyArticle } from '../../../content/sv-only-articles';
 import { buildHreflangAlternates, localeOrigin } from '../../../lib/seo';
 import { blogPageTranslations } from '../../../locales/blog';
@@ -43,12 +44,23 @@ async function getRelatedPosts(
   lang: LandingLanguageCode,
   currentSlug: string,
 ): Promise<BlogPost[]> {
+  // Pool = code articles + CMS posts, deduped. Prefer same-category articles so
+  // "Liknande artiklar" is actually related, then fill up to 8 for the carousel.
+  let pool: BlogPost[] = getCodeArticles(lang);
   try {
-    const posts = await fetchPublishedBlogPosts(lang);
-    return posts.filter((p) => p.slug !== currentSlug).slice(0, 3);
+    const cms = await fetchPublishedBlogPosts(lang);
+    const seen = new Set(pool.map((p) => p.slug));
+    pool = [...pool, ...cms.filter((p) => !seen.has(p.slug))];
   } catch {
-    return [];
+    // CMS unavailable — code articles still fill the carousel.
   }
+  const current = pool.find((p) => p.slug === currentSlug);
+  const cat = current ? categoryForTag(current.tag) : null;
+  const others = pool.filter((p) => p.slug !== currentSlug);
+  const same = cat ? others.filter((p) => categoryForTag(p.tag) === cat) : [];
+  const sameSlugs = new Set(same.map((p) => p.slug));
+  const rest = others.filter((p) => !sameSlugs.has(p.slug));
+  return [...same, ...rest].slice(0, 8);
 }
 
 export const getServerSideProps: GetServerSideProps<

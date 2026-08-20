@@ -242,13 +242,20 @@
   margin-bottom: 28px;
 }
 
+// Horizontal carousel: cards scroll sideways with snap, on desktop and mobile.
 .blog-related-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
   gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
 
 .blog-related .blog-card {
+  flex: 0 0 clamp(240px, 80%, 320px);
+  scroll-snap-align: start;
   padding: 20px 22px 24px;
 }
 
@@ -265,11 +272,6 @@
   overflow: hidden;
 }
 
-@media (max-width: 860px) {
-  .blog-related-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 .blog-card p,
 .blog-empty-state,

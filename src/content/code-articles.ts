@@ -1,4 +1,5 @@
 import type { BlogLocale, BlogPost } from '../types/blog';
+import { GENERATED_BLOG_COVER_SLUGS } from './generated-blog-covers';
 
 // Real, indexable SEO articles served from code (not the CMS). Used for
 // Swedish-market articles we publish without the CMS. Unlike blog-mock.ts
@@ -18344,8 +18345,20 @@ const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   nb: [],
 };
 
+// Articles that originally shared a stock cover get a unique, on-brand
+// generated card at /landing/blog/<slug>.webp (see scratchpad/gen-covers.js).
+// Applied here so every consumer — listing, article hero and OG image — uses
+// the unique cover without editing each article object.
+function withGeneratedCover(post: BlogPost): BlogPost {
+  if (!GENERATED_BLOG_COVER_SLUGS.has(post.slug)) {
+    return post;
+  }
+  const cover = `/landing/blog/${post.slug}.webp`;
+  return { ...post, coverImageUrl: cover, seoImageUrl: `${SITE_URL}${cover}` };
+}
+
 export function getCodeArticles(locale: BlogLocale): BlogPost[] {
-  return CODE_ARTICLES[locale] ?? [];
+  return (CODE_ARTICLES[locale] ?? []).map(withGeneratedCover);
 }
 
 export function getCodeArticle(

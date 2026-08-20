@@ -115,6 +115,45 @@
   margin-bottom: 40px;
 }
 
+.blog-tools-hits {
+  max-width: 680px;
+  margin: 0 auto 28px;
+}
+
+.blog-tools-hits-heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--muted, #6b7a90);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px;
+}
+
+.blog-tools-hits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.blog-tool-hit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border: 1.5px solid rgba(31, 157, 107, 0.35);
+  border-radius: 999px;
+  background: rgba(31, 157, 107, 0.08);
+  color: #1f7d57;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.blog-tool-hit:hover {
+  background: rgba(31, 157, 107, 0.16);
+}
+
 .blog-filter-chip {
   --chip-color: #2563c9;
   appearance: none;

@@ -8,6 +8,7 @@ import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { getMockBlogPosts } from '../../../lib/blog-mock';
 import { getCodeArticles } from '../../../content/code-articles';
+import { VERKTYG_GROUPS } from '../../../content/verktyg-list';
 import {
   BLOG_CATEGORIES,
   categoryForTag,
@@ -83,23 +84,46 @@ export default function BlogIndexPage({
     return BLOG_CATEGORIES.filter((cat) => present.has(cat.key));
   }, [posts]);
 
+  // Split the query into words and require ALL of them to match (AND), so a
+  // multi-word query like "betong kalkylator" works instead of being matched as
+  // one literal substring.
+  const words = useMemo(
+    () => query.trim().toLowerCase().split(/\s+/).filter(Boolean),
+    [query],
+  );
+  const matchAll = (text: string) => words.every((w) => text.includes(w));
+
   // Client-side filtering only: every post is still server-rendered in the HTML
   // (crawlable) and no URL params are created, so no thin/duplicate filter URLs
   // for Google to waste crawl budget on.
   const visiblePosts = useMemo(() => {
-    const q = query.trim().toLowerCase();
     return posts.filter((post) => {
       if (activeCategory !== 'alla' && categoryForTag(post.tag) !== activeCategory) {
         return false;
       }
-      if (!q) return true;
-      return (
-        post.title.toLowerCase().includes(q) ||
-        (post.excerpt || '').toLowerCase().includes(q) ||
-        (post.tag || '').toLowerCase().includes(q)
-      );
+      if (words.length === 0) return true;
+      const hay = `${post.title} ${post.excerpt || ''} ${post.tag || ''}`.toLowerCase();
+      return matchAll(hay);
     });
-  }, [posts, activeCategory, query]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [posts, activeCategory, words]);
+
+  // Also surface matching free tools (calculators/templates) so a search like
+  // "betong kalkylator" finds the tool, not just articles. sv/nb markets only.
+  const matchedTools = useMemo(() => {
+    if (words.length === 0 || (lang !== 'sv' && lang !== 'nb')) return [];
+    const out: { slug: string; label: string }[] = [];
+    VERKTYG_GROUPS.forEach((group) => {
+      group.items.forEach((tool) => {
+        const hay = `${tool.label} ${group.title} verktyg kalkylator`.toLowerCase();
+        if (matchAll(hay)) out.push({ slug: tool.slug, label: tool.label });
+      });
+    });
+    return out.slice(0, 8);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [words, lang]);
+  const toolsHeading =
+    { sv: 'Verktyg', nb: 'Verktøy', en: 'Tools', ru: 'Инструменты' }[lang] || 'Verktyg';
 
   return (
     <>
@@ -174,10 +198,27 @@ export default function BlogIndexPage({
               ))}
             </div>
           ) : null}
-          {visiblePosts.length === 0 ? (
-            <div className="blog-empty-state">
-              {posts.length === 0 ? copy.empty : copy.noResults}
+          {matchedTools.length > 0 ? (
+            <div className="blog-tools-hits">
+              <h2 className="blog-tools-hits-heading">{toolsHeading}</h2>
+              <div className="blog-tools-hits-list">
+                {matchedTools.map((tool) => (
+                  <Link key={tool.slug} href={`/${lang}/verktyg/${tool.slug}`} className="blog-tool-hit">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6 2 2 6-6a4 4 0 0 0 5.4-5.4l-2.3 2.3-1.7-.3-.3-1.7 2.3-2.3Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+                    </svg>
+                    {tool.label}
+                  </Link>
+                ))}
+              </div>
             </div>
+          ) : null}
+          {visiblePosts.length === 0 ? (
+            matchedTools.length === 0 ? (
+              <div className="blog-empty-state">
+                {posts.length === 0 ? copy.empty : copy.noResults}
+              </div>
+            ) : null
           ) : (
             <div className="blog-grid">
               {visiblePosts.map((post) => (

@@ -73,15 +73,15 @@ export default function SiteSearch({
   }, [open]);
 
   const results = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q || !items) return [];
+    const words = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    if (words.length === 0 || !items) return [];
+    // Require every word to match somewhere in the item's text (AND), so a
+    // multi-word query like "betong kalkylator" works.
     return items
-      .filter(
-        (it) =>
-          it.title.toLowerCase().includes(q) ||
-          it.excerpt.toLowerCase().includes(q) ||
-          it.tag.toLowerCase().includes(q),
-      )
+      .filter((it) => {
+        const hay = `${it.title} ${it.excerpt} ${it.tag}`.toLowerCase();
+        return words.every((w) => hay.includes(w));
+      })
       .slice(0, 12);
   }, [query, items]);
 

@@ -18111,9 +18111,9 @@ const A_EGENKONTROLL_ENTREPRENAD: BlogPost = {
   _id: "code-"+"egenkontroll-entreprenad",
   title: "Egenkontroll i entreprenad – kontrollplan, besiktning och innehåll", slug: "egenkontroll-entreprenad", locale: "sv",
   excerpt: "Hur egenkontroll fungerar i entreprenad: kopplingen till kontraktshandlingar, kontrollplan enligt PBL och slutbesiktning – och vad den ska innehålla. Med gratis mall.", tag: "Egenkontroll",
-  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_EGENKONTROLL_ENTREPRENAD_HTML,
+  coverImageUrl: "/landing/verktyg/kontrollplan-preview.webp", contentHtml: A_EGENKONTROLL_ENTREPRENAD_HTML,
   seoTitle: "Egenkontroll i entreprenad – kontrollplan & besiktning | ByggExp", seoDescription: "Egenkontroll i entreprenad: koppling till kontraktshandlingar, kontrollplan enligt PBL och slutbesiktning, plus vad kontrollen ska innehålla. Gratis egenkontroll-mall.",
-  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  seoImageUrl: `${SITE_URL}/landing/verktyg/kontrollplan-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T15:05:00.000Z", createdAt: "2026-08-20T15:05:00.000Z", updatedAt: "2026-08-20T15:05:00.000Z",
 };
 

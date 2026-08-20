@@ -67,7 +67,7 @@
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 34px;
 }
 
@@ -93,21 +93,16 @@
 .blog-card-image {
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: contain;
+  background: rgba(10, 40, 90, 0.03);
   border-radius: 16px;
   margin-bottom: 22px;
 }
 
-// Funktioner page: three cards per row and uncropped device mockups
-// (contain instead of cover, so the whole screenshot shows). Scoped to
-// .funktioner-grid so the blog listing keeps its 2-col cropped photos.
+// Funktioner page: three cards per row (image uncropping is handled by the
+// shared .blog-card-image rule above).
 .funktioner-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  .blog-card-image {
-    object-fit: contain;
-    background: rgba(10, 40, 90, 0.03);
-  }
 }
 
 .blog-card-body {

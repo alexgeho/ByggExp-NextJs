@@ -19,12 +19,25 @@ function bare(host: string): string {
 }
 
 export function middleware(req: NextRequest) {
-  if (!NB_LIVE) return NextResponse.next();
-
-  const host = bare(req.headers.get('host') || '');
   const url = req.nextUrl;
   const { pathname } = url;
   const firstSeg = pathname.split('/')[1] || '';
+
+  // Googlebot scraped the literal Next.js route id `/[lang]/...` out of the
+  // __NEXT_DATA__ blob and crawled it, producing a batch of bogus 404s in Search
+  // Console. Those paths are never real links; 301 them onto the sv equivalent so
+  // the errors clear and any stray equity lands on the live page. Runs before the
+  // NB_LIVE guard so it applies regardless of the Norway rollout flag.
+  if (firstSeg === '[lang]') {
+    const rest = pathname.slice('/[lang]'.length); // '' | '/verktyg' | '/verktyg/tak-kalkylator'
+    const to = new URL(url);
+    to.pathname = `/sv${rest}`;
+    return NextResponse.redirect(to, 301);
+  }
+
+  if (!NB_LIVE) return NextResponse.next();
+
+  const host = bare(req.headers.get('host') || '');
 
   // Skip Next internals, API routes and files (anything with an extension).
   if (pathname.startsWith('/_next') || pathname.startsWith('/api') || pathname.includes('.')) {

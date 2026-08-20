@@ -588,7 +588,7 @@
 }
 
 .verktyg-hub-hero {
-  margin-bottom: 44px;
+  margin-bottom: 28px;
 }
 
 .verktyg-hub-hero h1 {
@@ -605,17 +605,17 @@
 }
 
 .verktyg-hub-group {
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 
 .verktyg-hub-group h2 {
   font-size: 1.4rem;
-  margin: 0 0 18px;
+  margin: 0 0 14px;
 }
 
 .verktyg-hub-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -647,6 +647,12 @@
   color: var(--muted);
   line-height: 1.5;
   font-size: 0.96rem;
+}
+
+@media (max-width: 900px) {
+  .verktyg-hub-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {

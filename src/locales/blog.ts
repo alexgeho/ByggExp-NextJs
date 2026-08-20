@@ -7,6 +7,8 @@ export const blogPageTranslations: Record<
     title: string;
     subtitle: string;
     empty: string;
+    searchPlaceholder: string;
+    noResults: string;
     home: string;
     back: string;
     related: string;
@@ -18,6 +20,8 @@ export const blogPageTranslations: Record<
     subtitle:
       'Praktiska tips, insikter och arbetsfloden för byggföretag som vill arbeta smartare.',
     empty: 'Inga artiklar publicerade än.',
+    searchPlaceholder: 'Sök artiklar …',
+    noResults: 'Inga artiklar matchar din sökning.',
     home: 'Hem',
     back: 'Tillbaka till bloggen',
     related: 'Liknande artiklar',
@@ -28,6 +32,8 @@ export const blogPageTranslations: Record<
     subtitle:
       'Praktiske tips, innsikt og arbeidsflyter for byggefirmaer som vil jobbe smartere.',
     empty: 'Ingen artikler publisert ennå.',
+    searchPlaceholder: 'Søk artikler …',
+    noResults: 'Ingen artikler matcher søket ditt.',
     home: 'Hjem',
     back: 'Tilbake til bloggen',
     related: 'Lignende artikler',
@@ -38,6 +44,8 @@ export const blogPageTranslations: Record<
     subtitle:
       'Practical tips, insights, and workflows for construction teams that want to work smarter.',
     empty: 'No published articles yet.',
+    searchPlaceholder: 'Search articles …',
+    noResults: 'No articles match your search.',
     home: 'Home',
     back: 'Back to blog',
     related: 'Related articles',
@@ -48,6 +56,8 @@ export const blogPageTranslations: Record<
     subtitle:
       'Практические советы, разборы и рабочие сценарии для строительных компаний, которые хотят работать эффективнее.',
     empty: 'Пока нет опубликованных статей.',
+    searchPlaceholder: 'Поиск статей …',
+    noResults: 'Ничего не найдено по вашему запросу.',
     home: 'Главная',
     back: 'Назад к блогу',
     related: 'Похожие статьи',

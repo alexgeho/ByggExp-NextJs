@@ -1,12 +1,18 @@
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useMemo, useState, type CSSProperties } from 'react';
 
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { getMockBlogPosts } from '../../../lib/blog-mock';
 import { getCodeArticles } from '../../../content/code-articles';
+import {
+  BLOG_CATEGORIES,
+  categoryForTag,
+  type BlogCategoryKey,
+} from '../../../lib/blog-categories';
 import { buildHreflangAlternates, localeOrigin } from '../../../lib/seo';
 import { blogPageTranslations } from '../../../locales/blog';
 import { footerTranslations } from '../../../locales/footer';
@@ -68,6 +74,33 @@ export default function BlogIndexPage({
   const canonicalUrl = `${localeOrigin(lang)}/${lang}/blog`;
   const hreflangAlternates = buildHreflangAlternates((code) => `${localeOrigin(code)}/${code}/blog`);
 
+  const [activeCategory, setActiveCategory] = useState<BlogCategoryKey | 'alla'>('alla');
+  const [query, setQuery] = useState('');
+
+  // Only offer categories that actually have articles in the current list.
+  const presentCategories = useMemo(() => {
+    const present = new Set(posts.map((post) => categoryForTag(post.tag)));
+    return BLOG_CATEGORIES.filter((cat) => present.has(cat.key));
+  }, [posts]);
+
+  // Client-side filtering only: every post is still server-rendered in the HTML
+  // (crawlable) and no URL params are created, so no thin/duplicate filter URLs
+  // for Google to waste crawl budget on.
+  const visiblePosts = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return posts.filter((post) => {
+      if (activeCategory !== 'alla' && categoryForTag(post.tag) !== activeCategory) {
+        return false;
+      }
+      if (!q) return true;
+      return (
+        post.title.toLowerCase().includes(q) ||
+        (post.excerpt || '').toLowerCase().includes(q) ||
+        (post.tag || '').toLowerCase().includes(q)
+      );
+    });
+  }, [posts, activeCategory, query]);
+
   return (
     <>
       <Head>
@@ -94,11 +127,60 @@ export default function BlogIndexPage({
 
       <section className="blog-list-section">
         <div className="container">
-          {posts.length === 0 ? (
-            <div className="blog-empty-state">{copy.empty}</div>
+          <div className="blog-toolbar">
+            <div className="blog-search">
+              <svg
+                className="blog-search-icon"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" />
+                <path d="m20 20-3.2-3.2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+              <input
+                type="search"
+                className="blog-search-input"
+                placeholder={copy.searchPlaceholder}
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                aria-label={copy.searchPlaceholder}
+              />
+            </div>
+          </div>
+          {presentCategories.length > 1 ? (
+            <div className="blog-filter" role="tablist" aria-label="Kategorier">
+              <button
+                type="button"
+                className={`blog-filter-chip${activeCategory === 'alla' ? ' is-active' : ''}`}
+                aria-pressed={activeCategory === 'alla'}
+                onClick={() => setActiveCategory('alla')}
+              >
+                Alla
+              </button>
+              {presentCategories.map((cat) => (
+                <button
+                  key={cat.key}
+                  type="button"
+                  className={`blog-filter-chip${activeCategory === cat.key ? ' is-active' : ''}`}
+                  aria-pressed={activeCategory === cat.key}
+                  style={{ '--chip-color': cat.color } as CSSProperties}
+                  onClick={() => setActiveCategory(cat.key)}
+                >
+                  {cat.label}
+                </button>
+              ))}
+            </div>
+          ) : null}
+          {visiblePosts.length === 0 ? (
+            <div className="blog-empty-state">
+              {posts.length === 0 ? copy.empty : copy.noResults}
+            </div>
           ) : (
             <div className="blog-grid">
-              {posts.map((post) => (
+              {visiblePosts.map((post) => (
                 <Link
                   key={post._id}
                   href={`/${lang}/blog/${encodeURIComponent(post.slug)}`}

@@ -17864,9 +17864,163 @@ const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING: BlogPost = {
   publishedAt: "2026-08-20T14:05:00.000Z", createdAt: "2026-08-20T14:05:00.000Z", updatedAt: "2026-08-20T14:05:00.000Z",
 };
 
+const A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND_HTML = `
+<p>Att räkna på takstolar handlar om två saker: hur <em>många</em> du behöver och hur de ska <em>dimensioneras</em>. Antalet räknar du enkelt själv utifrån taklängd och c-avstånd. Dimensioneringen – virkesdimension, spikplåtar och hållfasthet – ska däremot alltid göras av takstolstillverkaren utifrån spännvidd och snölast. Här går vi igenom båda delarna så att du får rätt siffror till offerten.</p>
+
+<p><a href="/sv/verktyg/takstolar-kalkylator">Räkna ut antal takstolar direkt i vår gratis kalkylator →</a></p>
+
+<h2>Så räknar du ut antal takstolar</h2>
+<p>Antalet takstolar styrs av takets längd (längs nocken) och centrumavståndet mellan takstolarna. Grundformeln är:</p>
+<p><strong>Antal takstolar = taklängd / c-avstånd + 1</strong></p>
+<p>Plus ett, eftersom det behövs en takstol i vardera änden. Exempel: ett tak som är 9 meter långt med c-avstånd 1 200 mm ger 9 000 / 1 200 = 7,5 → avrunda uppåt till 8, plus 1 = <strong>9 takstolar</strong>. Avrunda alltid uppåt så att avstånden inte blir för stora.</p>
+
+<h2>Vad är c-avstånd (cc-mått)?</h2>
+<p>C-avstånd, eller cc-mått, är avståndet från mitten på en takstol till mitten på nästa. I Sverige är <strong>1 200 mm standard</strong> för fackverkstakstolar i konstruktionsvirke C24. Vid tyngre taktäckning – som betong- eller tegelpannor – kan avståndet behöva minskas, ofta ner mot <strong>600 mm</strong>, för att bära lasten. Rätt c-avstånd hänger alltså ihop med både taktäckning och läkt- och råspontsdimension.</p>
+
+<h2>Dimensionering: spännvidd och snölast avgör</h2>
+<p>Själva dimensioneringen av takstolen – hur grovt virke som behövs och hur spikplåtarna ska placeras – styrs framför allt av två faktorer:</p>
+<ul>
+<li><strong>Spännvidd</strong> – avståndet mellan de bärande ytterväggarna. Ju större spännvidd, desto kraftigare virke och fler eller större spikplåtar krävs.</li>
+<li><strong>Snölast</strong> – hur mycket snö taket kan behöva bära. Snölasten varierar kraftigt beroende på var i landet du bygger och regleras i Boverkets konstruktionsregler (EKS/Eurokod). Även takets lutning spelar in – ett flackt tak samlar mer snö.</li>
+</ul>
+<p>Den vanligaste typen är <strong>fackverkstakstolen</strong> (W-takstol, ibland kallad svensk takstol), som är fribärande och därför inte behöver bärande innerväggar. Eftersom takstolar är en bärande konstruktion ska de tillverkas och dimensioneras enligt gällande konstruktionsregler – det är inget du räknar fram på en servett. Beställ dem prefabricerade och certifierade från en takstolstillverkare, som gör hållfasthetsberäkningen utifrån ditt underlag.</p>
+
+<h2>Så gör du i praktiken</h2>
+<ol>
+<li>Räkna ut antalet takstolar med taklängd och c-avstånd (kalkylatorn gör det åt dig).</li>
+<li>Ta fram spännvidd, taklutning och snözon för orten.</li>
+<li>Skicka underlaget till takstolstillverkaren för dimensionering och offert.</li>
+<li>Stäm av läkt- och råspontsåtgång mot det valda c-avståndet.</li>
+</ol>
+<p>När antalet är klart kan du fortsätta med resten av takkalkylen: <a href="/sv/verktyg/tak-kalkylator">takkalkylatorn</a> för materialåtgång och guiden om <a href="/sv/blog/takpannor-antal-per-m2">takpannor per m²</a> för själva täckningen. Läktavståndet räknar du i <a href="/sv/blog/lakt-avstand-tak-berakning">guiden om läktavstånd</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Glömma +1.</strong> Det behövs en takstol i varje gavel – räkna mellanrum, inte bara delning.</li>
+<li><strong>Behålla 1 200 mm vid tunga pannor.</strong> Tegel och betong kan kräva tätare c-avstånd – kontrollera mot tillverkarens anvisning.</li>
+<li><strong>Dimensionera själv.</strong> Takstolen är bärande – överlåt hållfasthetsberäkningen till tillverkaren.</li>
+</ul>
+
+<p>Antalet takstolar är enkel matematik, men dimensioneringen är en konstruktionsfråga. Räkna fram antalet för offerten, och låt tillverkaren stå för hållfastheten – då blir taket både rätt räknat och säkert.</p>
+`;
+
+const A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND: BlogPost = {
+  _id: "code-"+"berakna-takstolar-dimensionering-c-avstand",
+  title: "Beräkna takstolar – antal, c-avstånd och dimensionering", slug: "berakna-takstolar-dimensionering-c-avstand", locale: "sv",
+  excerpt: "Formeln för antal takstolar (taklängd / c-avstånd + 1), varför standard är c/c 1200 mm och hur spännvidd och snölast styr dimensioneringen. Med gratis kalkylator.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/takstolar-preview.webp", contentHtml: A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND_HTML,
+  seoTitle: "Beräkna takstolar – antal, c-avstånd & dimensionering | ByggExp", seoDescription: "Antal takstolar = taklängd / c-avstånd + 1. Standard c/c 1200 mm (600 mm vid tegel), och så styr spännvidd och snölast dimensioneringen. Gratis takstolskalkylator.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/takstolar-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T14:30:00.000Z", createdAt: "2026-08-20T14:30:00.000Z", updatedAt: "2026-08-20T14:30:00.000Z",
+};
+
+const A_REGLAR_DIMENSIONER_C_AVSTAND_VAGG_HTML = `
+<p>Rätt regeldimension och c-avstånd avgör om en vägg blir stabil och om gipsskivorna sitter som de ska. Här går vi igenom de vanliga virkesdimensionerna för reglar, vilket c-avstånd du använder till innerväggar och hur dimensionen hänger ihop med gipsskivans mått.</p>
+
+<p><a href="/sv/verktyg/reglar-kalkylator">Räkna ut antal reglar till väggen i vår gratis kalkylator →</a></p>
+
+<h2>Vanliga regeldimensioner</h2>
+<p>Reglar sågas i den så kallade 45-serien, där bredden (tjockleken) oftast är 45 mm och höjden varierar. De vanligaste dimensionerna för väggreglar är:</p>
+<ul>
+<li><strong>45 × 45 mm</strong> – glespanel, lättare stommar och reglar för mindre påfrestning.</li>
+<li><strong>45 × 70 mm</strong> – vanlig icke-bärande innervägg.</li>
+<li><strong>45 × 95 mm</strong> – innervägg där du vill ha plats för mer isolering/installationer, eller lätt bärande.</li>
+<li><strong>45 × 120 mm och grövre</strong> – ytterväggar och bärande konstruktioner, där dimensionen bestäms av last och isoleringstjocklek.</li>
+</ul>
+<p>Till reglar används normalt konstruktionsvirke; för bärande delar ska hållfasthetsklassen (t.ex. C24) vara dimensionerad för lasten. En icke-bärande innervägg är däremot en enklare historia där 45 × 70 mm ofta räcker.</p>
+
+<h2>C-avstånd för reglar</h2>
+<p>C-avståndet (cc-måttet) är avståndet från mitten på en regel till mitten på nästa. För väggreglar gäller normalt:</p>
+<ul>
+<li><strong>c 450 mm</strong> – standard för de flesta innerväggar och ger ett bra underlag för gips.</li>
+<li><strong>c 600 mm</strong> – kan användas där kraven är lägre och gipsskivans bredd (t.ex. 1 200 mm) delar jämnt på måttet.</li>
+</ul>
+<p>Poängen med c-avståndet är att gipsskivans kanter alltid ska hamna mitt på en regel. Med 900 mm breda skivor passar c 450 mm perfekt (skivan täcker tre reglar), och med 1 200 mm breda skivor passar c 600 mm. Väljer du fel c-avstånd hamnar skarvarna vid sidan av reglarna och väggen blir svår att skruva.</p>
+
+<h2>Så räknar du antal reglar</h2>
+<p>Antalet stående reglar i en vägg räknar du som:</p>
+<p><strong>Antal reglar = väggens längd / c-avstånd + 1</strong></p>
+<p>En 4,8 meter lång vägg med c 450 mm ger 4 800 / 450 = 10,7 → 11, plus 1 = <strong>12 reglar</strong>. Till det kommer syll och hammarband (topp- och bottenregel) samt extra reglar vid dörr- och fönsteröppningar. <a href="/sv/verktyg/reglar-kalkylator">Reglar-kalkylatorn</a> räknar antalet åt dig när du fyller i längden och c-avståndet.</p>
+
+<h2>Reglar och gips hänger ihop</h2>
+<p>Väljer du regeldimension och c-avstånd bör du samtidigt tänka på gipsskivans mått, eftersom de två ska matcha. Läs vidare om <a href="/sv/blog/gipsskivor-matt-standardmatt-vikt">gipsskivors standardmått och vikt</a> och om <a href="/sv/blog/materialatgang-innervagg-reglar-gips">materialåtgång för en innervägg med reglar och gips</a> för att få ihop hela väggen.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Fel c-avstånd mot skivbredden.</strong> Gipsskarven ska hamna mitt på en regel – matcha c-avståndet mot skivans bredd.</li>
+<li><strong>För klen dimension i bärande vägg.</strong> Bärande väggar ska dimensioneras för lasten, inte gissas.</li>
+<li><strong>Glömma extrareglar vid öppningar.</strong> Dörrar och fönster kräver förstärkning och fler reglar än den rena formeln ger.</li>
+</ul>
+
+<p>Reglar är enkelt när du har måtten klara: rätt dimension för uppgiften, ett c-avstånd som matchar gipsen och formeln för antalet. Då blir väggen både rak och lätt att klä.</p>
+`;
+
+const A_REGLAR_DIMENSIONER_C_AVSTAND_VAGG: BlogPost = {
+  _id: "code-"+"reglar-dimensioner-c-avstand-vagg",
+  title: "Reglar – dimensioner och c-avstånd för vägg", slug: "reglar-dimensioner-c-avstand-vagg", locale: "sv",
+  excerpt: "Vanliga regeldimensioner (45×45 till 45×120), c-avstånd 450 eller 600 mm och hur måttet ska matcha gipsskivans bredd. Med formel och gratis reglar-kalkylator.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/reglar-preview.webp", contentHtml: A_REGLAR_DIMENSIONER_C_AVSTAND_VAGG_HTML,
+  seoTitle: "Reglar – dimensioner & c-avstånd för vägg | ByggExp", seoDescription: "Vanliga regeldimensioner 45×45–45×120, c-avstånd 450 mm (900 mm gips) eller 600 mm (1200 mm gips) och formeln för antal reglar. Gratis reglar-kalkylator.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/reglar-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T14:35:00.000Z", createdAt: "2026-08-20T14:35:00.000Z", updatedAt: "2026-08-20T14:35:00.000Z",
+};
+
+const A_GIPSSKIVOR_MATT_STANDARDMATT_VIKT_HTML = `
+<p>Gipsskivor finns i några få standardmått, och att välja rätt storlek och bredd påverkar både hur mycket du behöver bära, hur många skarvar väggen får och hur åtgången räknas. Här är de vanliga måtten, vikten per m² och hur skivbredden hänger ihop med regelavståndet.</p>
+
+<p><a href="/sv/verktyg/gips-kalkylator">Räkna ut antal gipsskivor till väggen i vår gratis kalkylator →</a></p>
+
+<h2>Standardmått för gipsskivor</h2>
+<p>Vanlig <strong>normalgips</strong> (standardgips) är <strong>13 mm tjock</strong> och tillverkas i några återkommande format. Det som varierar är främst bredden och längden:</p>
+<ul>
+<li><strong>Bredd:</strong> 600, 900 eller 1 200 mm. Idag är <strong>900 × 2 500 mm</strong> ett mycket vanligt standardmått.</li>
+<li><strong>Längd:</strong> ofta 2 500, 2 700 eller 3 000 mm, för att matcha vanliga takhöjder.</li>
+<li><strong>Tjocklek:</strong> 13 mm för normalgips. (Det finns även tunnare och specialskivor för olika ändamål.)</li>
+</ul>
+<p>Smala skivor (600–900 mm) är lättare att hantera ensam, medan 1 200 mm breda skivor ger färre skarvar men är tyngre och mer otympliga.</p>
+
+<h2>Vikt per m²</h2>
+<p>En 13 mm normalgips väger ungefär <strong>9,0 kg/m²</strong> (formaten 13/900 och 13/1200 ligger runt 9,0 kg/m², och 13/600 något högre, cirka 9,3 kg/m²). Det betyder att en hel skiva på 900 × 2 500 mm (2,25 m²) väger drygt 20 kg – bra att veta både för transport och för att bedöma om du klarar monteringen ensam eller behöver en gipslyft.</p>
+
+<h2>Skivbredd och regelavstånd</h2>
+<p>Skivans bredd ska alltid matcha regelavståndet så att skarven hamnar mitt på en regel:</p>
+<ul>
+<li><strong>900 mm skiva → c 450 mm reglar</strong> (skivan spänner över tre reglar).</li>
+<li><strong>1 200 mm skiva → c 600 mm reglar</strong> (skivan spänner över tre reglar).</li>
+</ul>
+<p>Väljer du gips och reglar som inte matchar hamnar skarvarna fel och väggen blir svår att skruva och spackla. Läs mer i guiden om <a href="/sv/blog/reglar-dimensioner-c-avstand-vagg">regeldimensioner och c-avstånd</a>.</p>
+
+<h2>Så räknar du åtgången</h2>
+<p>Grundprincipen är väggens yta delat med skivans yta, plus spill:</p>
+<p><strong>Antal skivor = väggyta / skivyta × (1 + spill)</strong></p>
+<p>En vägg på 12 m² med skivor på 2,25 m² (900 × 2 500) ger 12 / 2,25 = 5,3 skivor, plus spill. Räkna med några procents spill för kap runt öppningar. <a href="/sv/verktyg/gips-kalkylator">Gips-kalkylatorn</a> gör uträkningen åt dig, och ska du klä hela innerväggen hjälper guiden om <a href="/sv/blog/materialatgang-innervagg-reglar-gips">materialåtgång för innervägg</a> med resten. Behöver du spackla skarvarna finns en guide om <a href="/sv/blog/spackel-atgang-vagg-tak">spackelåtgång</a> också.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Blanda skivbredd och c-avstånd.</strong> 900 mm gips vill ha c 450 mm, 1 200 mm gips vill ha c 600 mm.</li>
+<li><strong>Underskatta vikten.</strong> Drygt 20 kg per skiva – planera lyft och transport därefter.</li>
+<li><strong>Glömma spillet.</strong> Kap runt dörrar, fönster och hörn gör att åtgången alltid blir högre än den rena ytan.</li>
+</ul>
+
+<p>Håll dig till standardmåtten, matcha bredden mot regelavståndet och lägg på lite spill – då blir gipsberäkningen både snabb och rätt.</p>
+`;
+
+const A_GIPSSKIVOR_MATT_STANDARDMATT_VIKT: BlogPost = {
+  _id: "code-"+"gipsskivor-matt-standardmatt-vikt",
+  title: "Gipsskivor – standardmått, vikt och rätt bredd", slug: "gipsskivor-matt-standardmatt-vikt", locale: "sv",
+  excerpt: "Standardmått för normalgips (13 mm, 900×2500 mm m.fl.), vikt runt 9 kg/m² och hur skivbredden matchar regelavståndet. Med formel för åtgång och gratis kalkylator.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/gips-preview.webp", contentHtml: A_GIPSSKIVOR_MATT_STANDARDMATT_VIKT_HTML,
+  seoTitle: "Gipsskivor – standardmått, vikt & rätt bredd | ByggExp", seoDescription: "Standardmått för normalgips: 13 mm tjock, bredd 600/900/1200 mm (900×2500 vanligast), vikt ~9 kg/m² och hur bredden matchar c-avståndet. Gratis gipskalkylator.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/gips-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T14:40:00.000Z", createdAt: "2026-08-20T14:40:00.000Z", updatedAt: "2026-08-20T14:40:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND,
+    A_REGLAR_DIMENSIONER_C_AVSTAND_VAGG,
+    A_GIPSSKIVOR_MATT_STANDARDMATT_VIKT,
     A_FALL_LUTNING_BERAKNA_AVLOPP_MARK_TAK,
     A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING,
     A_TAKPANNOR_ANTAL_PER_M2,

@@ -17752,9 +17752,123 @@ const A_VADERSTOPP_PERMITTERING_BYGGAVTALET: BlogPost = {
   publishedAt: "2026-08-20T10:03:00.000Z", createdAt: "2026-08-20T10:03:00.000Z", updatedAt: "2026-08-20T10:03:00.000Z",
 };
 
+const A_FALL_LUTNING_BERAKNA_AVLOPP_MARK_TAK_HTML = `
+<p>Fall och lutning låter enkelt, men det är en av de vanligaste orsakerna till fuktskador, stående vatten och underkända våtrum. Här går vi igenom hur du räknar ut fall på tre sätt – mm per meter, procent och som förhållande (1:X) – och vilka riktvärden som gäller för avlopp, mark runt huset, tak och golv mot golvbrunn. Siffrorna nedan är utgångsvärden; följ alltid gällande branschregler och tillverkarens anvisningar för just din tillämpning.</p>
+
+<p><a href="/sv/verktyg/fall-kalkylator">Räkna ut fall och höjdskillnad direkt i vår gratis fall-kalkylator →</a></p>
+
+<h2>Vad är fall – och hur uttrycks det?</h2>
+<p>Fall är höjdskillnaden per längdenhet, alltså hur mycket en yta eller ett rör lutar. Samma lutning kan skrivas på tre sätt som betyder exakt samma sak:</p>
+<ul>
+<li><strong>Millimeter per meter (mm/m)</strong> – vanligast på bygget. 20 mm/m betyder att ytan sjunker 20 mm för varje meter.</li>
+<li><strong>Procent (%)</strong> – höjdskillnaden delat med längden gånger 100. 20 mm/m = 2 %.</li>
+<li><strong>Förhållande (1:X)</strong> – anger hur många längdenheter som går på en höjdenhet. 20 mm/m = 1:50.</li>
+</ul>
+<p>Sambandet är rakt igenom: <strong>20 mm/m = 2 % = 1:50</strong>. Höjdskillnaden räknar du som längd × fall. En 6 meter lång ledning med 15 mm/m ger 6 × 15 = 90 mm höjdskillnad mellan ändarna.</p>
+
+<h2>Fall på avlopp</h2>
+<p>Ett självfallsavlopp måste luta tillräckligt för att vattnet ska rinna undan, men inte så brant att vattnet skjuter iväg och lämnar fasta partiklar kvar. Ett vanligt utgångsvärde för liggande spillvattenledningar inne i huset är i storleksordningen <strong>10–20 mm per meter</strong>, men rätt fall beror på rördimension, längd och om det är spill- eller dagvatten. Klena dimensioner behöver ofta mer fall än grova. Följ alltid gällande branschregler och rörtillverkarens anvisningar – detta är en utgångspunkt, inte en projektering.</p>
+
+<h2>Fall på marken runt huset</h2>
+<p>Marken intill grunden ska luta <em>bort</em> från huset så att regn- och smältvatten leds undan i stället för att samlas mot grundmuren. En vanlig tumregel är att marken de första metrarna bör luta minst cirka <strong>15 mm per meter (1:50)</strong> från huset. Ett negativt fall – där marken lutar in mot huset – är en klassisk orsak till fukt i källare och krypgrund.</p>
+
+<h2>Fall på tak och altan</h2>
+<p>Även "platta" tak och altaner behöver fall för att inte bli till dammar. Riktvärdet beror helt på taktäckning och konstruktion, så här måste du utgå från tillverkarens och branschens anvisningar för det aktuella materialet. Principen är densamma: bestäm önskat fall i mm/m, mät längden och räkna ut höjdskillnaden så att du vet hur mycket reglar, läkt eller lutningsskikt behöver byggas upp i den ena änden.</p>
+
+<h2>Fall mot golvbrunn i våtrum</h2>
+<p>I våtrum är fallet reglerat i detalj i branschreglerna (bland annat GVK:s Säkra Våtrum och Byggkeramikrådets BBV). Vid duschplats eller motsvarande gäller normalt att golvet ska luta mot golvbrunnen <strong>minst 1:150 (cirka 7 mm/m) och högst 1:50 (20 mm/m)</strong>. Lutningen mellan golvbrunnen och angränsande vägg får vara högst 1:25 (40 mm/m), och på övrigt golv i rummet gäller ofta minst 1:500 och högst 1:100. En helt central regel är att det inte får finnas något <strong>bakfall</strong> – ingen del av golvet får luta bort från brunnen. Kontrollera alltid den aktuella versionen av branschreglerna innan du börjar, eftersom värdena kan uppdateras.</p>
+
+<h2>Så räknar du – steg för steg</h2>
+<ol>
+<li>Bestäm önskat fall för din tillämpning i mm per meter.</li>
+<li>Mät längden på ytan eller ledningen i meter.</li>
+<li>Multiplicera längd × fall för att få höjdskillnaden i mm.</li>
+<li>Vill du dubbelkolla mot en regel – räkna om till procent eller 1:X.</li>
+</ol>
+<p>Att göra det för hand går snabbt, men det är lätt att slarva bort en nolla. <a href="/sv/verktyg/fall-kalkylator">Fall-kalkylatorn</a> ger dig höjdskillnaden, procenten och förhållandet på en gång. Behöver du grus eller makadam till dräneringen kan du fortsätta med <a href="/sv/verktyg/grus-kalkylator">grus- och makadamkalkylatorn</a>, och ska du bygga en trappa i samma höjdskillnad hjälper <a href="/sv/blog/bygga-trappa-steghojd-stegdjup-berakning">guiden om att bygga trappa</a> dig vidare.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Blanda ihop enheterna.</strong> 1:50 är svagare lutning än 1:25 – ju större andra talet, desto flackare fall.</li>
+<li><strong>Glömma bakfall.</strong> Ett golv kan ha rätt fall vid brunnen men ändå ha en lågpunkt en bit bort där vatten blir stående.</li>
+<li><strong>Utgå från fel riktvärde.</strong> Fall för avlopp, mark och våtrumsgolv är helt olika – använd rätt värde för rätt tillämpning.</li>
+</ul>
+
+<p>Fall och lutning handlar i grunden om en enda uträkning, men rätt riktvärde och noggrann mätning avgör om resultatet håller i decennier. Räkna alltid ut höjdskillnaden innan du bygger upp underlaget – det är billigare att justera på ritbordet än på plats.</p>
+`;
+
+const A_FALL_LUTNING_BERAKNA_AVLOPP_MARK_TAK: BlogPost = {
+  _id: "code-"+"fall-lutning-berakna-avlopp-mark-tak",
+  title: "Fall och lutning – så räknar du rätt för avlopp, mark, tak och golvbrunn", slug: "fall-lutning-berakna-avlopp-mark-tak", locale: "sv",
+  excerpt: "Räkna om fall mellan mm/m, procent och 1:X – och se riktvärdena för avlopp, mark runt huset, tak och fall mot golvbrunn i våtrum. Med gratis fall-kalkylator.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/fall-preview.webp", contentHtml: A_FALL_LUTNING_BERAKNA_AVLOPP_MARK_TAK_HTML,
+  seoTitle: "Fall & lutning – räkna rätt för avlopp, mark & golvbrunn | ByggExp", seoDescription: "Så räknar du fall: mm/m, procent och 1:X hänger ihop (20 mm/m = 2 % = 1:50). Riktvärden för avlopp, mark, tak och fall mot golvbrunn i våtrum. Gratis kalkylator.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/fall-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T14:00:00.000Z", createdAt: "2026-08-20T14:00:00.000Z", updatedAt: "2026-08-20T14:00:00.000Z",
+};
+
+const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING_HTML = `
+<p>En trappa som känns obekväm är nästan alltid felräknad – stegen är för höga, för grunda eller ojämna. Med rätt beräkning från början får du en trappa som är både bekväm och säker att gå i. Här går vi igenom trappformeln, Boverkets riktvärden för steghöjd och stegdjup, och hur du räknar ut antal steg utifrån den totala höjden.</p>
+
+<p><a href="/sv/verktyg/trappa-kalkylator">Räkna ut antal steg och stegmått direkt i vår gratis trappberäknare →</a></p>
+
+<h2>Grundbegreppen: steghöjd och stegdjup</h2>
+<p>Två mått avgör hur en trappa känns:</p>
+<ul>
+<li><strong>Steghöjd (sättsteg)</strong> – den lodräta höjden mellan två steg.</li>
+<li><strong>Stegdjup (plansteg)</strong> – hur djupt varje steg är, alltså den yta du sätter foten på.</li>
+</ul>
+<p>Den <strong>totala höjden</strong> är avståndet från färdigt golv nedtill till färdigt golv upptill. Det är det måttet du utgår från när du räknar antal steg.</p>
+
+<h2>Trappformeln – regeln för en bekväm trappa</h2>
+<p>Den klassiska trappformeln (även kallad bekvämlighetsregeln) bygger på steglängden hos en normal gång och lyder:</p>
+<p><strong>2 × steghöjd + stegdjup = 600–650 mm</strong> (gärna runt 620–630 mm).</p>
+<p>Följer du den får trappan en naturlig rytm. Ett exempel: med en steghöjd på 175 mm blir det rekommenderade stegdjupet ungefär 630 − 2 × 175 = 280 mm. Blir stegen för höga och grunda, eller för låga och djupa, bryts rytmen och trappan känns obekväm – och risken för snubbel ökar.</p>
+
+<h2>Boverkets riktvärden</h2>
+<p>Boverkets byggregler (BBR) ställer krav på bland annat steghöjd, stegdjup och bredd för att minska risken för fallolyckor. Som utgångsvärden gäller ofta:</p>
+<ul>
+<li><strong>Steghöjd:</strong> bör inte överstiga cirka 180 mm (18 cm) inomhus. En bekväm nivå ligger ofta på 150–180 mm.</li>
+<li><strong>Stegdjup:</strong> minst cirka 250 mm (0,25 m) för trappor i eller i anslutning till byggnader. För trappor i gångvägar på tomten bör stegdjupet vara minst 300 mm (0,30 m).</li>
+</ul>
+<p>Exakta krav skiljer sig åt beroende på om det är en trappa i en bostad, i en publik byggnad eller utomhus. Kontrollera alltid gällande BBR-krav för just din typ av trappa innan du bygger.</p>
+
+<h2>Så räknar du ut antal steg</h2>
+<ol>
+<li>Mät den totala höjden trappan ska överbrygga, i mm.</li>
+<li>Dela höjden med en önskad steghöjd (ofta cirka 175 mm) och avrunda till närmaste heltal – det ger antalet steg.</li>
+<li>Räkna ut den faktiska steghöjden: total höjd delat med antal steg. (Avrundningen gör att den sällan blir exakt 175 mm.)</li>
+<li>Bestäm stegdjupet med trappformeln: stegdjup ≈ 630 − 2 × steghöjd.</li>
+</ol>
+<p>Exempel: en total höjd på 2 700 mm delat med 175 mm ger 15,4 – avrunda till <strong>16 steg</strong>. Faktisk steghöjd blir 2 700 / 16 = 169 mm, och stegdjupet enligt formeln cirka 630 − 2 × 169 = 292 mm. En jämn och bekväm trappa.</p>
+
+<p>Vår <a href="/sv/verktyg/trappa-kalkylator">trappberäknare</a> gör hela den här uträkningen åt dig när du fyller i den totala höjden. Ska trappan ut i trädgården kan du behöva räkna <a href="/sv/blog/fall-lutning-berakna-avlopp-mark-tak">fall och lutning</a> på gången intill, och bygger du en altan i anslutning hjälper <a href="/sv/verktyg/trall-kalkylator">trallkalkylatorn</a> dig med virket.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Ojämna steg.</strong> Alla steg i en trappa ska vara lika höga – ett avvikande steg (ofta det första eller sista) är en vanlig snubbelorsak och tillåts normalt inte.</li>
+<li><strong>Räkna på råhöjd i stället för färdig höjd.</strong> Golvbeläggning uppe och nere påverkar den totala höjden – räkna på färdiga golvnivåer.</li>
+<li><strong>Glömma fri höjd.</strong> Kontrollera takhöjden över trappan så att du inte slår i huvudet i bjälklaget ovanför.</li>
+</ul>
+
+<p>En trappa är ren geometri: rätt total höjd, jämn steghöjd och ett stegdjup som följer trappformeln ger nästan alltid ett bra resultat. Räkna igenom den innan du kapar första brädan – det är där en bekväm trappa avgörs.</p>
+`;
+
+const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING: BlogPost = {
+  _id: "code-"+"bygga-trappa-steghojd-stegdjup-berakning",
+  title: "Bygga trappa – så beräknar du steghöjd, stegdjup och antal steg", slug: "bygga-trappa-steghojd-stegdjup-berakning", locale: "sv",
+  excerpt: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, Boverkets riktvärden för steghöjd och stegdjup och hur du räknar ut antal steg från den totala höjden. Med gratis trappberäknare.", tag: "Kalkyl",
+  coverImageUrl: "/landing/verktyg/trappa-preview.webp", contentHtml: A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING_HTML,
+  seoTitle: "Bygga trappa – beräkna steghöjd, stegdjup & antal steg | ByggExp", seoDescription: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, BBR-riktvärden (steghöjd max ~180 mm, stegdjup minst 250 mm) och hur du räknar antal steg. Gratis trappberäknare.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/trappa-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T14:05:00.000Z", createdAt: "2026-08-20T14:05:00.000Z", updatedAt: "2026-08-20T14:05:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_FALL_LUTNING_BERAKNA_AVLOPP_MARK_TAK,
+    A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING,
     A_TAKPANNOR_ANTAL_PER_M2,
     A_VADERSTOPP_PERMITTERING_BYGGAVTALET,
     A_GDPR_KUNDREGISTER_BYGGFORETAG,

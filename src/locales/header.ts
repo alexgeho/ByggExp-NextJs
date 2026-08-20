@@ -10,6 +10,10 @@ export const headerTranslations = {
     resources: "Ресурсы",
     blog: "Блог",
     freeTools: "Бесплатные инструменты",
+    searchLabel: "Поиск",
+    searchPlaceholder: "Искать статьи и инструменты …",
+    searchHint: "Введите запрос, чтобы найти статьи и инструменты.",
+    searchNoResults: "Ничего не найдено.",
   },
 
   en: {
@@ -23,6 +27,10 @@ export const headerTranslations = {
     resources: "Resources",
     blog: "Blog",
     freeTools: "Free tools",
+    searchLabel: "Search",
+    searchPlaceholder: "Search articles and tools …",
+    searchHint: "Type to search articles and tools.",
+    searchNoResults: "No results found.",
   },
 
 
@@ -37,6 +45,10 @@ export const headerTranslations = {
     resources: "Resurser",
     blog: "Blogg",
     freeTools: "Gratis verktyg",
+    searchLabel: "Sök",
+    searchPlaceholder: "Sök artiklar och verktyg …",
+    searchHint: "Skriv för att söka bland artiklar och verktyg.",
+    searchNoResults: "Inga träffar.",
   },
 
   nb: {
@@ -50,5 +62,9 @@ export const headerTranslations = {
     resources: "Ressurser",
     blog: "Blogg",
     freeTools: "Gratis verktøy",
+    searchLabel: "Søk",
+    searchPlaceholder: "Søk artikler og verktøy …",
+    searchHint: "Skriv for å søke blant artikler og verktøy.",
+    searchNoResults: "Ingen treff.",
   },
 }

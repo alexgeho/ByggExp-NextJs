@@ -10,5 +10,9 @@ export type HeaderProps = {
     resources: string;
     blog: string;
     freeTools: string;
+    searchLabel: string;
+    searchPlaceholder: string;
+    searchHint: string;
+    searchNoResults: string;
   };
 };

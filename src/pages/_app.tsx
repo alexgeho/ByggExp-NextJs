@@ -7,6 +7,7 @@ import "../styles/blog.scss";
 import "../styles/blog-admin.scss";
 import "../styles/lead-magnet.scss";
 import "../components/Header/Header.scss";
+import "../components/SiteSearch/SiteSearch.scss";
 import "../components/Hero/Hero.scss";
 import "../components/Pain/Pain.scss";
 import "../components/Benefits/Benefits.scss";

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { languages, selectableLanguages } from "../../locales/languages";
+import SiteSearch from "../SiteSearch/SiteSearch";
 import type { HeaderProps } from "../../types/header";
 
 const logo = "/landing/header/logo.svg";
@@ -54,6 +55,17 @@ function Header({ headerT }: HeaderProps) {
 
         {/* NAV RIGHT */}
         <div className="nav-right">
+          {/* SITE SEARCH — always available, on every page */}
+          {!isMenuOpen && (
+            <SiteSearch
+              lang={lang}
+              label={headerT.searchLabel}
+              placeholder={headerT.searchPlaceholder}
+              emptyHint={headerT.searchHint}
+              noResults={headerT.searchNoResults}
+            />
+          )}
+
           {/* LANGUAGE */}
           {!isMenuOpen && (
             <div className="language-switcher">

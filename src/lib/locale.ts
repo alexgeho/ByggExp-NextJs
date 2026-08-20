@@ -7,6 +7,14 @@
 // doesn't resolve yet. Flip NB_LIVE to true in this one place at go-live.
 export const NB_LIVE = true;
 
+// Separate from NB_LIVE: true only once byggexp.no DNS is delegated AND the host
+// actually serves the nb site. Until then byggexp.no does not resolve, so we must
+// NOT emit nb hreflang/canonical alternates anywhere — they would point Google at
+// a dead host across the whole byggexp.se site. Flip to true once
+// `dig byggexp.no A` resolves and https://byggexp.no serves. (2026-08-20: still
+// pendingdelegation → kept false.)
+export const NO_DOMAIN_LIVE = false;
+
 export const TOOL_LOCALES = ['sv', 'nb'] as const;
 export type ToolLocale = (typeof TOOL_LOCALES)[number];
 

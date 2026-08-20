@@ -7,7 +7,7 @@ import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { getMockBlogPosts } from '../../../lib/blog-mock';
 import { getCodeArticles } from '../../../content/code-articles';
-import { buildHreflangAlternates } from '../../../lib/seo';
+import { buildHreflangAlternates, localeOrigin } from '../../../lib/seo';
 import { blogPageTranslations } from '../../../locales/blog';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -65,9 +65,8 @@ export default function BlogIndexPage({
   const copy = blogPageTranslations[lang];
   const headerT = headerTranslations[lang];
   const footerT = footerTranslations[lang];
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
-  const canonicalUrl = `${siteUrl}/${lang}/blog`;
-  const hreflangAlternates = buildHreflangAlternates((code) => `${siteUrl}/${code}/blog`);
+  const canonicalUrl = `${localeOrigin(lang)}/${lang}/blog`;
+  const hreflangAlternates = buildHreflangAlternates((code) => `${localeOrigin(code)}/${code}/blog`);
 
   return (
     <>

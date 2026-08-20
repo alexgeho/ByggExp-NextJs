@@ -6,7 +6,7 @@ import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
-import { buildHreflangAlternates } from '../../../lib/seo';
+import { buildHreflangAlternates, localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 import {
@@ -73,10 +73,9 @@ export default function FunktionerPage({
   const copy = FUNKTIONER_COPY[lang];
   const headerT = headerTranslations[lang];
   const footerT = footerTranslations[lang];
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
-  const canonicalUrl = `${siteUrl}/${lang}/funktioner`;
+  const canonicalUrl = `${localeOrigin(lang)}/${lang}/funktioner`;
   const hreflangAlternates = buildHreflangAlternates(
-    (code) => `${siteUrl}/${code}/funktioner`,
+    (code) => `${localeOrigin(code)}/${code}/funktioner`,
   );
 
   return (

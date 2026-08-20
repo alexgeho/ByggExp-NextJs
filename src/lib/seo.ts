@@ -1,7 +1,15 @@
 import { landingLanguageCodes, type LandingLanguageCode } from '../locales/languages';
+import { NO_DOMAIN_LIVE } from './locale';
 
 // Locale Google expects x-default to point at. Swedish is the primary market.
 const X_DEFAULT_LANG: LandingLanguageCode = 'sv';
+
+// Locales safe to emit as hreflang/canonical alternates. `nb` lives on the
+// separate ccTLD byggexp.no, which only resolves once its DNS is delegated —
+// until then, emitting an nb alternate would point Google at a dead host, so we
+// exclude it. Flip NO_DOMAIN_LIVE once byggexp.no serves.
+export const hreflangLocales: readonly LandingLanguageCode[] =
+  landingLanguageCodes.filter((lang) => lang !== 'nb' || NO_DOMAIN_LIVE);
 
 // Each locale lives on its own ccTLD: Norwegian (nb) on byggexp.no, everything
 // else on byggexp.se. Used to build canonical + hreflang URLs so every locale
@@ -23,7 +31,7 @@ export type HreflangAlternate = {
  */
 export function buildHreflangAlternates(
   buildHref: (lang: LandingLanguageCode) => string,
-  locales: readonly LandingLanguageCode[] = landingLanguageCodes,
+  locales: readonly LandingLanguageCode[] = hreflangLocales,
 ): HreflangAlternate[] {
   const alternates: HreflangAlternate[] = locales.map((lang) => ({
     hrefLang: lang,

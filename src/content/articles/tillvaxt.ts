@@ -544,7 +544,192 @@ const A_FOTODOKUMENTATION_APP_BYGG: BlogPost = {
   publishedAt: "2026-08-20T18:15:00.000Z", createdAt: "2026-08-20T18:15:00.000Z", updatedAt: "2026-08-20T18:15:00.000Z",
 };
 
+const A_LONEPROGRAM_BYGG_HTML = `
+<p>Ett löneprogram för byggföretag ska göra en jobbig sak enkel: förvandla registrerade timmar till rätt lön – med OB, övertid och restid enligt Byggavtalet – utan att någon räknar för hand. Här går vi igenom vad ett löneprogram för bygg bör klara och hur ByggExp löser det.</p>
+
+<h2>Vad ska ett löneprogram för bygg klara?</h2>
+<ul>
+<li><strong>Timmar → löneunderlag</strong> – registrerad tid blir underlag direkt, utan att skrivas om.</li>
+<li><strong>OB, övertid och restid</strong> – <a href="/sv/blog/ob-overtid-byggavtalet-rakna">OB och övertid</a> och <a href="/sv/blog/restidsersattning-byggavtalet">restid</a> enligt Byggavtalet.</li>
+<li><strong>Semesterlön</strong> – rätt påslag hanteras i underlaget.</li>
+<li><strong>Export</strong> – underlaget ska kunna exporteras (t.ex. Excel) till lönesystemet utan handpåläggning.</li>
+<li><strong>Projektkoppling</strong> – timmarna hör till rätt projekt så du också ser kostnaden per projekt.</li>
+</ul>
+
+<h2>Så gör ByggExp det</h2>
+<p>I ByggExp samlas arbetstid automatiskt i mobilen och blir <strong>löneunderlag ur samma timmar</strong> – samma data används även till <a href="/sv/blog/faktureringsprogram-bygg">fakturering</a> och <a href="/sv/blog/projekthantering-byggforetag">projektuppföljning</a>. Du registrerar en gång och slipper pussla ihop lönen från lappar och Excel varje månad.</p>
+<p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Vill du börja enkelt finns en gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Räkna om tiden manuellt.</strong> Dubbelarbete och fel vid varje lönekörning.</li>
+<li><strong>OB/övertid för hand.</strong> Lätt att missa tillägg enligt avtalet.</li>
+<li><strong>Ingen projektkod.</strong> Då syns inte lönekostnaden per projekt.</li>
+</ul>
+
+<p>Ett löneprogram som bygger på de timmar teamet redan registrerar sparar tid varje månad – och ger rätt lön utan handräkning.</p>
+`;
+
+const A_LONEPROGRAM_BYGG: BlogPost = {
+  _id: "code-"+"loneprogram-bygg",
+  title: "Löneprogram för byggföretag – från timmar till rätt lön", slug: "loneprogram-bygg", locale: "sv",
+  excerpt: "Vad ett löneprogram för bygg bör klara: timmar → löneunderlag, OB/övertid/restid enligt Byggavtalet, semesterlön och export till lönesystemet. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_LONEPROGRAM_BYGG_HTML,
+  seoTitle: "Löneprogram för byggföretag – timmar till lön | ByggExp", seoDescription: "Löneprogram för byggföretag: registrerade timmar blir löneunderlag med OB, övertid, restid och semesterlön – exporterbart till lönesystemet. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T19:00:00.000Z", createdAt: "2026-08-20T19:00:00.000Z", updatedAt: "2026-08-20T19:00:00.000Z",
+};
+
+const A_UTLAGG_APP_BYGG_HTML = `
+<p>Skrynkliga kvitton i handskfacket och utlägg som glöms bort kostar byggföretag pengar varje månad. En utläggs-app löser det: fota kvittot direkt, koppla det till rätt projekt, och få med kostnaden i kalkyl och faktura. Här går vi igenom vad en utläggs-/kvitto-app för bygg bör klara.</p>
+
+<h2>Vad ska en utläggs-app för bygg klara?</h2>
+<ul>
+<li><strong>Fota kvittot på plats</strong> – i mobilen, direkt när du handlar, innan det tappas bort.</li>
+<li><strong>Koppla till projekt</strong> – utlägget hamnar på rätt projekt för rätt marginal och fakturering.</li>
+<li><strong>Moms och belopp</strong> – registrera summa och moms så bokföringen blir rätt.</li>
+<li><strong>Samlat för kontoret</strong> – alla kvitton sökbara på ett ställe, inte spridda i telefoner.</li>
+</ul>
+
+<h2>Så gör ByggExp det</h2>
+<p>ByggExp har <strong>utlägg och kostnader</strong> kopplade till projekt: du fotar kvittot i appen, det bokförs på rätt projekt och syns i kostnadsbilden – samma projekt som håller ihop tid, <a href="/sv/blog/fotodokumentation-app-bygg">foto</a>, offert och faktura.</p>
+<p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Kvitton på papper.</strong> De försvinner och avdraget uteblir.</li>
+<li><strong>Inget projekt.</strong> Utan koppling syns inte kostnaden där den hör hemma.</li>
+<li><strong>Registrera i efterhand.</strong> Glömda utlägg är förlorade pengar.</li>
+</ul>
+
+<p>En utläggs-app tjänar in sig snabbt: inga borttappade kvitton, rätt kostnad på rätt projekt och mindre pyssel i bokföringen.</p>
+`;
+
+const A_UTLAGG_APP_BYGG: BlogPost = {
+  _id: "code-"+"utlagg-app-bygg",
+  title: "Utläggs-app för bygg – fota kvittot, koppla till projektet", slug: "utlagg-app-bygg", locale: "sv",
+  excerpt: "Vad en utläggs-/kvitto-app för byggföretag bör klara: fota kvittot på plats, koppla till projekt, registrera moms och samla allt för kontoret. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_UTLAGG_APP_BYGG_HTML,
+  seoTitle: "Utläggs-app för bygg – kvitton per projekt | ByggExp", seoDescription: "Utläggs-/kvitto-app för byggföretag: fota kvittot på plats, koppla till projekt, registrera moms och samla allt sökbart för kontoret. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T19:05:00.000Z", createdAt: "2026-08-20T19:05:00.000Z", updatedAt: "2026-08-20T19:05:00.000Z",
+};
+
+const A_KALKYLPROGRAM_BYGG_HTML = `
+<p>Ett kalkylprogram för bygg ska göra offerten både snabb och lönsam: rätt materialåtgång, rätt påslag och en tydlig väg från kalkyl till offert och faktura. Här går vi igenom vad ett kalkylprogram för byggföretag bör klara och hur du kommer igång gratis idag.</p>
+
+<h2>Vad ska ett kalkylprogram för bygg klara?</h2>
+<ul>
+<li><strong>Materialåtgång</strong> – räkna betong, tak, gips, färg m.m. Testa våra gratis <a href="/sv/verktyg">byggkalkylatorer</a>.</li>
+<li><strong>Rätt påslag och marginal</strong> – <a href="/sv/blog/paslag-pa-material">påslag vs marginal</a> så att kalkylen faktiskt är lönsam.</li>
+<li><strong>ROT</strong> – visa <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdraget</a> för kunden.</li>
+<li><strong>Från kalkyl till offert</strong> – en materialkalkyl ska bli en färdig <a href="/sv/blog/offertprogram-byggforetag">offert</a> med ett klick.</li>
+<li><strong>Uppföljning</strong> – jämför kalkyl mot utfall i <a href="/sv/blog/efterkalkyl-bygg-kalkyluppfoljning">efterkalkylen</a>.</li>
+</ul>
+
+<h2>Kalkylprogram, kalkylatorer eller Excel?</h2>
+<p>Börja gärna med lösa <a href="/sv/verktyg">gratis kalkylatorer</a> (betong, tak, gips, färg …) och väx in i ett samlat flöde när du offererar ofta. Poängen är att materialkalkylen och offerten hänger ihop – och att offerten sedan blir order och faktura utan dubbelarbete.</p>
+
+<h2>Så gör ByggExp det</h2>
+<p>Från våra materialkalkylatorer kan du <strong>skapa en offert direkt</strong>, och i ByggExp hänger offert, tid och faktura ihop – inklusive ROT. Du räknar en gång och använder underlaget hela vägen. <a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Snygg offert, fel påslag.</strong> Börja i kalkylen – ett program hjälper inte mot fel marginal.</li>
+<li><strong>Glömma spill.</strong> Materialåtgång utan spillmarginal blir för låg.</li>
+<li><strong>Ingen efterkalkyl.</strong> Utan uppföljning upprepas samma fel i nästa offert.</li>
+</ul>
+
+<p>Rätt kalkylprogram sparar tid och skyddar marginalen – men börja i kalkylen och ett tydligt flöde. Testa gratis med kalkylatorerna, väx in i ett system när volymen kräver det.</p>
+`;
+
+const A_KALKYLPROGRAM_BYGG: BlogPost = {
+  _id: "code-"+"kalkylprogram-bygg",
+  title: "Kalkylprogram för bygg – från materialkalkyl till lönsam offert", slug: "kalkylprogram-bygg", locale: "sv",
+  excerpt: "Vad ett kalkylprogram för byggföretag bör klara: materialåtgång, rätt påslag/marginal, ROT och vägen från kalkyl till offert och faktura. Kom igång gratis.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_KALKYLPROGRAM_BYGG_HTML,
+  seoTitle: "Kalkylprogram för bygg – kalkyl till offert | ByggExp", seoDescription: "Kalkylprogram för byggföretag: materialåtgång, rätt påslag och marginal, ROT och vägen från kalkyl till offert och faktura. Kom igång gratis med kalkylatorerna.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T19:10:00.000Z", createdAt: "2026-08-20T19:10:00.000Z", updatedAt: "2026-08-20T19:10:00.000Z",
+};
+
+const A_HANTVERKARAPP_HTML = `
+<p>En app för hantverkare ska samla det du gör varje dag – tid, jobb, foto, offert och faktura – på ett ställe, i mobilen, där jobbet sker. Här går vi igenom vad en bra hantverkarapp bör klara och hur ByggExp täcker hela kedjan.</p>
+
+<h2>Vad ska en app för hantverkare klara?</h2>
+<ul>
+<li><strong>Tidrapportering i mobilen</strong> – <a href="/sv/blog/tidrapportering-app-byggforetag">stämpla tid</a> på plats, kopplat till projekt.</li>
+<li><strong>Jobb och uppföljning</strong> – <a href="/sv/blog/arbetsorder-app-bygg">arbetsorder</a> med status, slut på sms.</li>
+<li><strong>Foto och utlägg</strong> – <a href="/sv/blog/fotodokumentation-app-bygg">fota</a> och <a href="/sv/blog/utlagg-app-bygg">registrera kvitton</a> direkt.</li>
+<li><strong>Offert och faktura</strong> – <a href="/sv/blog/faktureringsprogram-bygg">offert och faktura med ROT</a> i samma flöde.</li>
+<li><strong>Funkar på bygget</strong> – enkelt i mobilen, inte bara på kontoret.</li>
+</ul>
+
+<h2>Så gör ByggExp det</h2>
+<p>ByggExp är byggt för hantverkare och byggföretag: automatisk arbetstid, uppgifter med uppföljning, foto per arbetspass, utlägg, offert, faktura och löner – ur samma timmar. Du registrerar en gång och kontoret ser samma bild som bygget. Se hela paketet i guiden om <a href="/sv/blog/byggprogram-for-byggforetag">byggprogram</a>.</p>
+<p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Börja gärna med våra <a href="/sv/verktyg">gratis verktyg</a>.</p>
+
+<h2>Vad du ska titta på</h2>
+<ul>
+<li><strong>Funkar det i mobilen?</strong> En hantverkarapp som bara funkar på kontoret används inte.</li>
+<li><strong>Hänger delarna ihop?</strong> Tid, foto, offert och faktura ska dela data.</li>
+<li><strong>Svenska regler och ROT.</strong> Appen ska hantera ROT och svensk fakturastandard.</li>
+</ul>
+
+<p>Rätt hantverkarapp gör vardagen enklare: en registrering räcker, och pappersarbetet på kontoret krymper. Börja med gratis verktyg, väx in i ett samlat system när det behövs.</p>
+`;
+
+const A_HANTVERKARAPP: BlogPost = {
+  _id: "code-"+"hantverkarapp",
+  title: "App för hantverkare – tid, jobb, offert och faktura i mobilen", slug: "hantverkarapp", locale: "sv",
+  excerpt: "Vad en app för hantverkare bör klara: tidrapportering, arbetsorder, foto, utlägg samt offert och faktura med ROT – i mobilen på bygget. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_HANTVERKARAPP_HTML,
+  seoTitle: "App för hantverkare – allt i mobilen | ByggExp", seoDescription: "App för hantverkare: tidrapportering, arbetsorder, foto, utlägg samt offert och faktura med ROT – allt i mobilen på bygget. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T19:15:00.000Z", createdAt: "2026-08-20T19:15:00.000Z", updatedAt: "2026-08-20T19:15:00.000Z",
+};
+
+const A_DOKUMENTHANTERING_BYGG_HTML = `
+<p>Dokumenthantering för byggföretag handlar om att slippa leta: ritningar, avtal, egenkontroller, foton och protokoll ska ligga samlat per projekt – tillgängligt både på bygget och på kontoret. Här går vi igenom vad ett system för byggdokumentation bör klara och hur ByggExp gör det.</p>
+
+<h2>Vad ska dokumenthantering för bygg klara?</h2>
+<ul>
+<li><strong>Samlat per projekt</strong> – alla dokument på rätt projekt, inte spridda i mejl och telefoner.</li>
+<li><strong>Rätt sorters underlag</strong> – ritningar, avtal, <a href="/sv/blog/egenkontroll">egenkontroller</a>, <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">foton</a> och protokoll.</li>
+<li><strong>Åtkomst för både bygge och kontor</strong> – i mobilen på plats, samlat på kontoret.</li>
+<li><strong>Sökbart</strong> – hitta rätt dokument snabbt när det behövs, t.ex. vid <a href="/sv/blog/slutbesiktning">besiktning</a> eller tvist.</li>
+</ul>
+
+<h2>Så gör ByggExp det</h2>
+<p>ByggExp samlar <strong>alla projektdokument på ett ställe</strong> – kopplat till samma projekt som håller ihop tid, foto, offert och faktura. Bygget lägger till foto och underlag på plats, kontoret hittar allt samlat. Bra dokumentation är dessutom din bästa försäkring om något ifrågasätts – se guiden om <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">fotodokumentation som bevis</a>.</p>
+<p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Dokument i mejl och telefoner.</strong> Utan koppling till projekt går de inte att hitta.</li>
+<li><strong>Ingen struktur.</strong> Rätt underlag på rätt projekt sparar timmar vid besiktning och tvist.</li>
+<li><strong>Bara på kontoret.</strong> Bygget behöver komma åt ritningar och underlag på plats.</li>
+</ul>
+
+<p>Rätt dokumenthantering gör att du hittar underlaget på sekunder – och står starkt om kvaliteten ifrågasätts. Samla allt per projekt, tillgängligt för både bygge och kontor.</p>
+`;
+
+const A_DOKUMENTHANTERING_BYGG: BlogPost = {
+  _id: "code-"+"dokumenthantering-bygg",
+  title: "Dokumenthantering för byggföretag – allt samlat per projekt", slug: "dokumenthantering-bygg", locale: "sv",
+  excerpt: "Vad dokumenthantering för byggföretag bör klara: ritningar, avtal, egenkontroller, foton och protokoll samlade per projekt – tillgängligt för bygge och kontor. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/project.webp", contentHtml: A_DOKUMENTHANTERING_BYGG_HTML,
+  seoTitle: "Dokumenthantering för byggföretag – per projekt | ByggExp", seoDescription: "Dokumenthantering för byggföretag: ritningar, avtal, egenkontroller, foton och protokoll samlade per projekt, sökbart och tillgängligt för bygge och kontor. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/project.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T19:20:00.000Z", createdAt: "2026-08-20T19:20:00.000Z", updatedAt: "2026-08-20T19:20:00.000Z",
+};
+
 export const TILLVAXT_ARTICLES: BlogPost[] = [
+  A_LONEPROGRAM_BYGG,
+  A_UTLAGG_APP_BYGG,
+  A_KALKYLPROGRAM_BYGG,
+  A_HANTVERKARAPP,
+  A_DOKUMENTHANTERING_BYGG,
   A_HITTA_KUNDER_BYGGFIRMA,
   A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING,
   A_SKAFFA_RECENSIONER_OMDOMEN_BYGGFIRMA,

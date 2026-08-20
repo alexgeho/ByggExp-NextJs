@@ -80,16 +80,16 @@
   color: #10233f;
 }
 
-.wa-input {
+.wa-form {
   display: flex;
+  flex-direction: column;
   gap: 8px;
   padding: 12px;
   border-top: 1px solid #e7ecf3;
   background: #fff;
 }
 
-.wa-input input {
-  flex: 1;
+.wa-form input {
   border: 1.5px solid #d7deea;
   border-radius: 12px;
   padding: 11px 14px;
@@ -98,7 +98,7 @@
   outline: none;
 }
 
-.wa-input input:focus {
+.wa-form input:focus {
   border-color: #25d366;
 }
 
@@ -108,9 +108,14 @@
   background: #25d366;
   color: #fff;
   font-weight: 600;
-  padding: 0 16px;
+  padding: 11px 16px;
   cursor: pointer;
   white-space: nowrap;
+}
+
+.wa-send:disabled {
+  opacity: 0.5;
+  cursor: default;
 }
 
 .chat-fab {

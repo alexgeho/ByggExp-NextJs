@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
+import { API_URL } from '../../config/api';
+import { gaEvent } from '../../lib/analytics';
 import { languages } from '../../locales/languages';
 
 // Chat-style widget that forwards the visitor's message to the owner's WhatsApp.
@@ -11,38 +13,50 @@ import { languages } from '../../locales/languages';
 // Leave empty to hide the widget entirely.
 const WHATSAPP_NUMBER = '46707577575';
 
-const COPY: Record<string, { title: string; sub: string; greeting: string; placeholder: string; send: string; open: string }> = {
+type Copy = {
+  title: string; sub: string; greeting: string; placeholder: string;
+  contact: string; send: string; open: string; done: string;
+};
+const COPY: Record<string, Copy> = {
   sv: {
     title: 'Chatta med oss',
     sub: 'Svar via WhatsApp',
-    greeting: 'Hej! Skriv din fråga här så fortsätter vi i WhatsApp – vi svarar så snart vi kan.',
+    greeting: 'Hej! Skriv din fråga här så fortsätter vi i WhatsApp – eller lämna e-post/telefon så hör vi av oss.',
     placeholder: 'Skriv ditt meddelande …',
-    send: 'Öppna i WhatsApp',
+    contact: 'E-post eller telefon (om du inte har WhatsApp)',
+    send: 'Skicka',
     open: 'Öppna chatten',
+    done: 'Tack! Vi hör av oss så snart vi kan.',
   },
   nb: {
     title: 'Chat med oss',
     sub: 'Svar via WhatsApp',
-    greeting: 'Hei! Skriv spørsmålet ditt her, så fortsetter vi i WhatsApp.',
+    greeting: 'Hei! Skriv spørsmålet ditt her, så fortsetter vi i WhatsApp – eller legg igjen e-post/telefon.',
     placeholder: 'Skriv meldingen din …',
-    send: 'Åpne i WhatsApp',
+    contact: 'E-post eller telefon (om du ikke har WhatsApp)',
+    send: 'Send',
     open: 'Åpne chatten',
+    done: 'Takk! Vi hører fra oss snart.',
   },
   en: {
     title: 'Chat with us',
     sub: 'Reply via WhatsApp',
-    greeting: 'Hi! Write your question here and we’ll continue on WhatsApp.',
+    greeting: 'Hi! Write your question here and we’ll continue on WhatsApp – or leave an email/phone.',
     placeholder: 'Type your message …',
-    send: 'Open in WhatsApp',
+    contact: 'Email or phone (if you don’t use WhatsApp)',
+    send: 'Send',
     open: 'Open chat',
+    done: 'Thanks! We’ll get back to you shortly.',
   },
   ru: {
     title: 'Написать нам',
     sub: 'Ответ в WhatsApp',
-    greeting: 'Здравствуйте! Напишите вопрос — продолжим в WhatsApp.',
+    greeting: 'Здравствуйте! Напишите вопрос — продолжим в WhatsApp, или оставьте email/телефон.',
     placeholder: 'Ваше сообщение …',
-    send: 'Открыть в WhatsApp',
+    contact: 'Email или телефон (если нет WhatsApp)',
+    send: 'Отправить',
     open: 'Открыть чат',
+    done: 'Спасибо! Мы скоро свяжемся.',
   },
 };
 
@@ -54,13 +68,39 @@ export default function WhatsAppChat() {
 
   const [open, setOpen] = useState(false);
   const [msg, setMsg] = useState('');
+  const [contact, setContact] = useState('');
+  const [sent, setSent] = useState(false);
 
   if (!WHATSAPP_NUMBER) return null;
 
   const send = () => {
     const text = msg.trim();
-    const url = `https://wa.me/${WHATSAPP_NUMBER}${text ? `?text=${encodeURIComponent(text)}` : ''}`;
-    window.open(url, '_blank', 'noopener,noreferrer');
+    if (!text) return;
+    const c = contact.trim();
+
+    // Best-effort: also deliver the message to us by email/lead so visitors who
+    // don't use WhatsApp aren't lost. Fire-and-forget — never blocks WhatsApp.
+    const isEmail = c.includes('@');
+    void fetch(`${API_URL}/mail/demo-request`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        'f-name': 'Chattbesökare',
+        'f-email': isEmail ? c : '',
+        'f-phone': isEmail ? '' : c,
+        'f-source': 'chat-widget',
+        'f-message': text,
+      }),
+    }).catch(() => {});
+    gaEvent('chat_message_sent', { has_contact: c ? 'yes' : 'no' });
+
+    // Open WhatsApp with the message pre-filled for those who have it.
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,
+      '_blank',
+      'noopener,noreferrer',
+    );
+    setSent(true);
   };
 
   return (
@@ -83,18 +123,21 @@ export default function WhatsAppChat() {
             <button type="button" className="wa-close" onClick={() => setOpen(false)} aria-label="Stäng">✕</button>
           </div>
           <div className="wa-body">
-            <p className="wa-greeting">{copy.greeting}</p>
+            <p className="wa-greeting">{sent ? copy.done : copy.greeting}</p>
           </div>
-          <form
-            className="wa-input"
-            onSubmit={(e) => {
-              e.preventDefault();
-              send();
-            }}
-          >
-            <input type="text" value={msg} placeholder={copy.placeholder} aria-label={copy.placeholder} onChange={(e) => setMsg(e.target.value)} />
-            <button type="submit" className="wa-send">{copy.send}</button>
-          </form>
+          {!sent ? (
+            <form
+              className="wa-form"
+              onSubmit={(e) => {
+                e.preventDefault();
+                send();
+              }}
+            >
+              <input type="text" value={msg} placeholder={copy.placeholder} aria-label={copy.placeholder} onChange={(e) => setMsg(e.target.value)} />
+              <input type="text" value={contact} placeholder={copy.contact} aria-label={copy.contact} autoComplete="email" onChange={(e) => setContact(e.target.value)} />
+              <button type="submit" className="wa-send" disabled={msg.trim() === ''}>{copy.send}</button>
+            </form>
+          ) : null}
         </div>
       ) : null}
     </>

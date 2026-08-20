@@ -18222,9 +18222,131 @@ const A_OFFERTPROGRAM_BYGGFORETAG: BlogPost = {
   publishedAt: "2026-08-20T16:05:00.000Z", createdAt: "2026-08-20T16:05:00.000Z", updatedAt: "2026-08-20T16:05:00.000Z",
 };
 
+const A_FAKTURERINGSPROGRAM_BYGG_HTML = `
+<p>Ett faktureringsprogram för bygg ska göra mer än att skapa en PDF – det ska ta dig från nedlagda timmar till betald faktura utan dubbelarbete, och hantera ROT-avdraget rätt. Här går vi igenom vad ett faktureringsprogram för byggföretag bör klara, vad du ska titta på när du väljer, och hur ByggExp löser hela kedjan.</p>
+
+<h2>Vad ska ett faktureringsprogram för bygg klara?</h2>
+<ul>
+<li><strong>ROT-fakturering</strong> – räkna och redovisa <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdraget</a> automatiskt så att kunden ser vad hen betalar och du får rätt underlag till Skatteverket.</li>
+<li><strong>Från offert till faktura</strong> – en accepterad offert ska bli faktura med ett klick, inte skrivas om. Se <a href="/sv/blog/offert-till-betald-faktura-flode">hela flödet offert → faktura</a>.</li>
+<li><strong>Timmar → faktura</strong> – vid löpande räkning ska registrerade timmar bli fakturarader utan att någon räknar för hand.</li>
+<li><strong>Rätt fakturainnehåll</strong> – allt som en <a href="/sv/blog/vad-ska-faktura-innehalla-bygg">byggfaktura ska innehålla</a> enligt lag, med logga och betalningsvillkor.</li>
+<li><strong>Påminnelser</strong> – automatisk påminnelse när kunden inte betalar i tid.</li>
+</ul>
+
+<h2>Faktureringsprogram, mall eller Excel?</h2>
+<ul>
+<li><strong>Enstaka fakturor</strong> – en <a href="/sv/verktyg/faktura-mall">faktura-mall</a> räcker och är gratis att börja med.</li>
+<li><strong>Fakturor varje vecka</strong> – ett program sparar tid genom ROT-hantering, koppling offert→faktura→timmar och automatiska påminnelser, och minskar fel.</li>
+</ul>
+
+<h2>Så gör ByggExp det</h2>
+<p>I ByggExp hänger offert, tid och faktura ihop: du <strong>skapar offerter</strong>, förvandlar dem till <strong>fakturor</strong>, och de timmar som teamet registrerar i mobilen blir fakturaunderlag automatiskt. ROT hanteras i flödet, och samma timmar används även till <a href="/sv/blog/tidrapportering">tidrapportering</a> och löneunderlag – du registrerar en gång och använder datan flera gånger.</p>
+<p><a href="/sv/contact">Boka en demo av ByggExp</a> så visar vi hela kedjan från offert till betald faktura, eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Fint fakturaprogram, men frånkopplat.</strong> Om fakturan inte hämtar offert och timmar skriver du allt två gånger.</li>
+<li><strong>ROT för hand.</strong> Manuell ROT-beräkning ger fel och nekade avdrag – låt systemet räkna.</li>
+<li><strong>Ingen påminnelserutin.</strong> Obetalda fakturor som ingen bevakar blir dyra – se <a href="/sv/blog/kunden-betalar-inte-fakturan">vad du gör när kunden inte betalar</a>.</li>
+</ul>
+
+<p>Rätt faktureringsprogram sparar tid och pengar – men värdet ligger i att offert, tid och faktura sitter ihop och att ROT sköts automatiskt. Testa gratis med mallen, väx in i ett system när volymen kräver det.</p>
+`;
+
+const A_FAKTURERINGSPROGRAM_BYGG: BlogPost = {
+  _id: "code-"+"faktureringsprogram-bygg",
+  title: "Faktureringsprogram för bygg – ROT, offert och timmar i ett flöde", slug: "faktureringsprogram-bygg", locale: "sv",
+  excerpt: "Vad ett faktureringsprogram för byggföretag bör klara – ROT-fakturering, offert→faktura, timmar→faktura och påminnelser – och hur ByggExp löser hela kedjan.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/8fakturor.webp", contentHtml: A_FAKTURERINGSPROGRAM_BYGG_HTML,
+  seoTitle: "Faktureringsprogram för bygg – ROT & offert i ett | ByggExp", seoDescription: "Faktureringsprogram för byggföretag: ROT-fakturering, offert→faktura, timmar→faktura och automatiska påminnelser. Så väljer du – och så gör ByggExp det i ett flöde.",
+  seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T17:00:00.000Z", createdAt: "2026-08-20T17:00:00.000Z", updatedAt: "2026-08-20T17:00:00.000Z",
+};
+
+const A_TIDRAPPORTERING_APP_BYGGFORETAG_HTML = `
+<p>En tidrapporterings-app för byggföretag ska ta bort papperslapparna och Excel-krånglet: teamet stämplar tid i mobilen där jobbet sker, och timmarna blir direkt underlag för lön och faktura. Här går vi igenom vad en bra tidrapporterings-app ska klara och hur ByggExp gör det.</p>
+
+<h2>Vad ska en tidrapporterings-app för bygg klara?</h2>
+<ul>
+<li><strong>Registrering i mobilen</strong> – på plats, i realtid, kopplat till rätt projekt – inte i efterhand.</li>
+<li><strong>Projektkoppling</strong> – varje timme bokförs på rätt projekt så du kan följa marginalen och fakturera rätt.</li>
+<li><strong>OB, övertid och restid</strong> – <a href="/sv/blog/ob-overtid-byggavtalet-rakna">OB och övertid</a> och <a href="/sv/blog/restidsersattning-byggavtalet">restid</a> ska hanteras enligt Byggavtalet.</li>
+<li><strong>Export till lön</strong> – timmarna ska bli löneunderlag och kunna exporteras (t.ex. Excel) utan handpåläggning.</li>
+<li><strong>Underlag för faktura</strong> – vid löpande räkning blir samma timmar fakturarader.</li>
+</ul>
+<p>Läs mer om grunderna i guiden om <a href="/sv/blog/tidredovisning-byggforetag">tidredovisning i byggföretag</a> (och skillnaden mot <a href="/sv/blog/personalliggare">personalliggare</a>, som är ett separat lagkrav).</p>
+
+<h2>Så gör ByggExp det</h2>
+<p>ByggExp samlar in arbetstid automatiskt i mobilen och exporterar timmarna till Excel – och samma timmar blir både <strong>löneunderlag</strong> och <strong>fakturaunderlag</strong>. Du ser dessutom arbetslagen i en live-översikt och kan koppla foto och uppgifter till arbetspasset. Registrera en gång, använd datan till lön, faktura och uppföljning.</p>
+<p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Vill du börja enkelt finns en gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Rapportering i efterhand.</strong> Tid som fylls i en vecka senare blir gissningar.</li>
+<li><strong>Ingen projektkod.</strong> Utan koppling till projekt går det inte att följa marginal eller fakturera rätt.</li>
+<li><strong>Dubbelarbete mot lönen.</strong> Om timmarna inte blir löneunderlag räknar någon om allt manuellt.</li>
+</ul>
+
+<p>En tidrapporterings-app tjänar in sig snabbt: rätt lön, rätt faktura och koll på lönsamheten – utan papperslappar och utan pusslet vid varje lönekörning.</p>
+`;
+
+const A_TIDRAPPORTERING_APP_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"tidrapportering-app-byggforetag",
+  title: "Tidrapportering-app för byggföretag – timmar till lön och faktura", slug: "tidrapportering-app-byggforetag", locale: "sv",
+  excerpt: "Vad en tidrapporterings-app för bygg bör klara: registrering i mobilen, projektkoppling, OB/övertid/restid och export till lön och faktura. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: A_TIDRAPPORTERING_APP_BYGGFORETAG_HTML,
+  seoTitle: "Tidrapportering-app för byggföretag – lön & faktura | ByggExp", seoDescription: "Tidrapportering-app för bygg: stämpla tid i mobilen, koppla till projekt, hantera OB/övertid/restid och exportera timmarna till lön och faktura. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T17:05:00.000Z", createdAt: "2026-08-20T17:05:00.000Z", updatedAt: "2026-08-20T17:05:00.000Z",
+};
+
+const A_BYGGPROGRAM_FOR_BYGGFORETAG_HTML = `
+<p>Ett byggprogram (program för byggföretag) ska samla det som annars ligger utspritt i papper, Excel och sms: tid, projekt, offert, faktura, foto och dokument – på ett ställe. Här går vi igenom vad ett bra byggprogram ska klara och hur ByggExp täcker hela kedjan.</p>
+
+<h2>Vad ska ett byggprogram klara?</h2>
+<ul>
+<li><strong>Tid och lön</strong> – <a href="/sv/blog/tidrapportering-app-byggforetag">tidrapportering i mobilen</a> som blir löneunderlag automatiskt.</li>
+<li><strong>Offert och faktura</strong> – <a href="/sv/blog/offertprogram-byggforetag">offerter</a> och <a href="/sv/blog/faktureringsprogram-bygg">fakturor med ROT</a> i samma flöde.</li>
+<li><strong>Projekt- och personalplanering</strong> – vem gör vad, var och när.</li>
+<li><strong>Fotodokumentation</strong> kopplad till arbetspass och projekt – bevis om något ifrågasätts.</li>
+<li><strong>Dokument och kostnader</strong> – alla projektdokument, utlägg och kostnader samlade.</li>
+<li><strong>Verktyg och utrustning</strong> – koll på var maskinerna är.</li>
+</ul>
+
+<h2>Byggprogram, appar eller lösa verktyg?</h2>
+<p>Många börjar med lösa <a href="/sv/verktyg">gratis verktyg</a> (kalkyler, mallar) och växer in i ett samlat system när flera personer och projekt ska hänga ihop. Poängen med ett byggprogram är att du <strong>registrerar en gång</strong> – tid, foto, kostnad – och använder samma data till lön, faktura och uppföljning, i stället för att mata in allt flera gånger.</p>
+
+<h2>Så gör ByggExp det</h2>
+<p>ByggExp är byggt för byggföretag och hantverkare: automatisk arbetstid, uppgifter med uppföljning, live-översikt över arbetslagen, fotodokumentation per arbetspass, projekt- och personalplanering, verktygshantering, offert, faktura, projektdokument, utlägg och löner – ur samma timmar. Allt hänger ihop så att kontoret och bygget jobbar mot samma bild.</p>
+<p><a href="/sv/contact">Boka en demo av ByggExp</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+
+<h2>Vad du ska titta på när du väljer</h2>
+<ul>
+<li><strong>Hänger delarna ihop?</strong> Tid, offert, faktura och lön ska dela data – annars blir det öar.</li>
+<li><strong>Funkar det i mobilen på bygget?</strong> Om det bara funkar på kontoret används det inte.</li>
+<li><strong>ROT och svenska regler.</strong> Ett byggprogram ska hantera ROT och svensk fakturastandard.</li>
+</ul>
+
+<p>Rätt byggprogram gör att en registrering räcker – och att kontoret slipper jaga papper. Börja med gratis verktyg, väx in i ett samlat system när volymen kräver det.</p>
+`;
+
+const A_BYGGPROGRAM_FOR_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"byggprogram-for-byggforetag",
+  title: "Byggprogram för byggföretag – allt från tid till faktura i ett", slug: "byggprogram-for-byggforetag", locale: "sv",
+  excerpt: "Vad ett byggprogram (program för byggföretag) bör klara: tid, lön, offert, faktura med ROT, projekt- och personalplanering, foto och dokument – i ett system. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_BYGGPROGRAM_FOR_BYGGFORETAG_HTML,
+  seoTitle: "Byggprogram för byggföretag – tid, offert & faktura | ByggExp", seoDescription: "Byggprogram för byggföretag: samla tid, lön, offert, faktura med ROT, projekt- och personalplanering, fotodokumentation och dokument i ett system. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T17:10:00.000Z", createdAt: "2026-08-20T17:10:00.000Z", updatedAt: "2026-08-20T17:10:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_FAKTURERINGSPROGRAM_BYGG,
+    A_TIDRAPPORTERING_APP_BYGGFORETAG,
+    A_BYGGPROGRAM_FOR_BYGGFORETAG,
     A_TIDREDOVISNING_BYGGFORETAG,
     A_OFFERTPROGRAM_BYGGFORETAG,
     A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM,

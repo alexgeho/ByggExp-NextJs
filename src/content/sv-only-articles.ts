@@ -5,6 +5,9 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  'faktureringsprogram-bygg',
+  'tidrapportering-app-byggforetag',
+  'byggprogram-for-byggforetag',
   'tidredovisning-byggforetag',
   'offertprogram-byggforetag',
   'egenkontroll-el-egenkontrollprogram',

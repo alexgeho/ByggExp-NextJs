@@ -107,7 +107,7 @@ export default function FunktionerPage({
           {posts.length === 0 ? (
             <div className="blog-empty-state">{copy.empty}</div>
           ) : (
-            <div className="blog-grid">
+            <div className="blog-grid funktioner-grid">
               {posts.map((post) => (
                 <Link
                   key={post._id}

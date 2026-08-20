@@ -98,6 +98,18 @@
   margin-bottom: 22px;
 }
 
+// Funktioner page: three cards per row and uncropped device mockups
+// (contain instead of cover, so the whole screenshot shows). Scoped to
+// .funktioner-grid so the blog listing keeps its 2-col cropped photos.
+.funktioner-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  .blog-card-image {
+    object-fit: contain;
+    background: rgba(10, 40, 90, 0.03);
+  }
+}
+
 .blog-card-body {
   padding: 0;
 }
@@ -339,6 +351,10 @@
   .blog-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .funktioner-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 700px) {
@@ -347,6 +363,10 @@
   }
 
   .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .funktioner-grid {
     grid-template-columns: 1fr;
   }
 

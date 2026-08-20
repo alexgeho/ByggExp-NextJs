@@ -18118,9 +18118,115 @@ const A_EGENKONTROLL_ENTREPRENAD: BlogPost = {
   publishedAt: "2026-08-20T15:05:00.000Z", createdAt: "2026-08-20T15:05:00.000Z", updatedAt: "2026-08-20T15:05:00.000Z",
 };
 
+const A_TIDREDOVISNING_BYGGFORETAG_HTML = `
+<p>Tidredovisning – att löpande registrera vem som jobbat, när och på vilket projekt – är grunden för både korrekt lön, rätt fakturering och kontroll på lönsamheten. I byggbranschen hänger det dessutom ihop med lagkrav på personalliggare. Här går vi igenom vad tidredovisning omfattar, vad som är lagkrav och hur du gör det enkelt i praktiken.</p>
+
+<p><a href="/sv/verktyg/tidrapport-mall">Ladda ner en gratis tidrapport-mall (PDF) →</a></p>
+
+<h2>Vad är tidredovisning?</h2>
+<p>Tidredovisning (eller tidrapportering) är den löpande registreringen av arbetad tid. För ett byggföretag används den till flera saker samtidigt:</p>
+<ul>
+<li><strong>Löneunderlag</strong> – timmar, OB, övertid och restid ligger till grund för lönen.</li>
+<li><strong>Fakturering</strong> – vid löpande räkning faktureras nedlagd tid mot kund.</li>
+<li><strong>Projektuppföljning</strong> – jämför nedlagd tid mot kalkyl för att se marginalen i realtid.</li>
+<li><strong>ROT-underlag</strong> – arbetskostnaden måste kunna särskiljas för ROT-avdraget.</li>
+</ul>
+
+<h2>Tidredovisning och personalliggare – två olika saker</h2>
+<p>Det är lätt att blanda ihop tidredovisning med personalliggare, men de fyller olika syften:</p>
+<ul>
+<li><strong>Personalliggare</strong> är ett <em>lagkrav</em> på de flesta byggarbetsplatser: en elektronisk närvaroregistrering (vem är på plats just nu) som Skatteverket kan kontrollera. Läs mer om <a href="/sv/blog/personalliggare">personalliggare och reglerna</a>.</li>
+<li><strong>Tidredovisning</strong> är företagets egen registrering av arbetad tid för lön, fakturering och uppföljning – den styrs inte av samma lag, utan av kollektivavtal, anställningsavtal och dina interna behov.</li>
+</ul>
+<p>Många löser båda i samma system (ofta via <a href="/sv/blog/id06">ID06</a>-incheckning), men kraven är alltså olika: personalliggaren är en myndighetskontroll, tidredovisningen ett internt verktyg.</p>
+
+<h2>Vad ska en tidredovisning innehålla?</h2>
+<ul>
+<li><strong>Datum</strong> och vilken anställd det gäller</li>
+<li><strong>Projekt/arbetsplats</strong> tiden ska bokföras på</li>
+<li><strong>Start- och sluttid</strong> eller antal timmar</li>
+<li><strong>Typ av tid</strong> – normaltid, <a href="/sv/blog/ob-overtid-byggavtalet-rakna">OB och övertid</a>, <a href="/sv/blog/restidsersattning-byggavtalet">restid</a></li>
+<li><strong>Ev. frånvaro</strong> (sjuk, VAB, semester)</li>
+<li><strong>Signering</strong> – att uppgifterna stämmer</li>
+</ul>
+
+<h2>Så gör du det enkelt</h2>
+<p>Papperslappar och lösa Excel-filer skapar merjobb och fel vid lönekörningen. Poängen är att registrera tiden <strong>där arbetet sker</strong> – helst digitalt i mobilen – och att den direkt kan bli både löneunderlag och fakturaunderlag. Vill du börja enkelt kan du <a href="/sv/verktyg/tidrapport-mall">ladda ner vår gratis tidrapport-mall</a> och fylla i den online. Se även den mer grundläggande guiden om <a href="/sv/blog/tidrapportering">tidrapportering</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Rapportera i efterhand.</strong> Tid som fylls i en vecka senare blir gissningar – registrera löpande.</li>
+<li><strong>Ingen projektkod.</strong> Utan koppling till projekt går det inte att följa upp marginalen eller fakturera rätt.</li>
+<li><strong>Blanda ihop med personalliggaren.</strong> Personalliggaren uppfyller inte kravet på löneunderlag, och tidredovisningen uppfyller inte lagkravet på närvaroregistrering.</li>
+</ul>
+
+<p>Med en löpande, projektkopplad tidredovisning får du rätt lön, rätt faktura och koll på lönsamheten – och slipper pusslet vid varje lönekörning.</p>
+`;
+
+const A_TIDREDOVISNING_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"tidredovisning-byggforetag",
+  title: "Tidredovisning i byggföretag – lön, fakturering och personalliggare", slug: "tidredovisning-byggforetag", locale: "sv",
+  excerpt: "Vad tidredovisning omfattar (löneunderlag, fakturering, projektuppföljning, ROT), hur den skiljer sig från personalliggaren och vad den ska innehålla. Med gratis tidrapport-mall.", tag: "Tidrapportering",
+  coverImageUrl: "/landing/verktyg/tidrapport-preview.webp", contentHtml: A_TIDREDOVISNING_BYGGFORETAG_HTML,
+  seoTitle: "Tidredovisning i byggföretag – lön, faktura & liggare | ByggExp", seoDescription: "Tidredovisning för byggföretag: löneunderlag, fakturering vid löpande räkning, projektuppföljning och ROT – och hur den skiljer sig från personalliggaren. Gratis mall.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/tidrapport-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T16:00:00.000Z", createdAt: "2026-08-20T16:00:00.000Z", updatedAt: "2026-08-20T16:00:00.000Z",
+};
+
+const A_OFFERTPROGRAM_BYGGFORETAG_HTML = `
+<p>Ett offertprogram ska göra en sak riktigt bra: hjälpa dig skicka proffsiga, rätt räknade offerter snabbt – och sedan förvandla dem till order och faktura utan dubbelarbete. Här går vi igenom vad ett offertprogram för byggföretag bör klara, vad du ska titta på när du väljer, och hur du kommer igång gratis idag.</p>
+
+<p><a href="/sv/verktyg/offert-mall">Skapa en offert direkt med vår gratis offert-mall →</a></p>
+
+<h2>Vad är ett offertprogram?</h2>
+<p>Ett offertprogram är ett verktyg för att skapa, skicka och följa upp offerter. I stället för att skriva varje offert från ett tomt Word-dokument får du mallar, sparade rader och priser, automatisk summering och en tydlig lucka mellan &quot;skickad&quot; och &quot;accepterad&quot;. För byggföretag är det ofta första steget i en kedja: <a href="/sv/blog/offert-till-betald-faktura-flode">offert → order → faktura</a>.</p>
+
+<h2>Vad ska ett offertprogram för bygg klara?</h2>
+<ul>
+<li><strong>Snabba mallar och prislistor</strong> – återanvänd rader, material och timpriser i stället för att räkna om varje gång.</li>
+<li><strong>Rätt kalkyl i botten</strong> – tydlig uppdelning av material, arbete och <a href="/sv/blog/paslag-pa-material">påslag/marginal</a> så att offerten faktiskt är lönsam.</li>
+<li><strong>ROT-hantering</strong> – räkna och visa <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdraget</a> så att kunden ser vad hen betalar.</li>
+<li><strong>Proffsig PDF</strong> med företagslogga, villkor och giltighetstid.</li>
+<li><strong>Uppföljning</strong> – se vilka offerter som ligger ute och påminn i tid.</li>
+<li><strong>Koppling vidare</strong> – gör en accepterad offert till order och faktura utan att skriva om allt.</li>
+</ul>
+
+<h2>Offertprogram, mall eller Excel – vad ska du välja?</h2>
+<p>Det beror på hur ofta du offererar:</p>
+<ul>
+<li><strong>Enstaka offerter</strong> – en bra <a href="/sv/verktyg/offert-mall">offert-mall</a> räcker långt och är gratis att börja med.</li>
+<li><strong>Offerter varje vecka</strong> – ett offertprogram sparar tid genom sparade priser, uppföljning och koppling till faktura, och minskar räknefel.</li>
+</ul>
+<p>Grunden är densamma oavsett verktyg: en genomtänkt kalkyl. Läs mer om att <a href="/sv/blog/skriva-offert">skriva offert</a> som håller.</p>
+
+<h2>Så kommer du igång</h2>
+<p>Du behöver inte köpa ett system för att börja skicka bättre offerter idag. <a href="/sv/verktyg/offert-mall">Offert-mallen</a> ger dig en färdig PDF gratis, och när volymen växer är steget till ett offertprogram – där offert, tid och faktura hänger ihop – litet. <a href="/sv/contact">Boka en demo av ByggExp</a> om du vill se hela flödet från offert till betald faktura.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Snygg offert, svag kalkyl.</strong> Ett fint program hjälper inte om påslaget är fel – börja i kalkylen.</li>
+<li><strong>Ingen uppföljning.</strong> Offerter som ingen påminner om rinner ut i sanden.</li>
+<li><strong>Dubbelarbete mot fakturan.</strong> Om offerten inte kan bli faktura skriver du allt två gånger.</li>
+</ul>
+
+<p>Rätt offertprogram sparar tid och höjer träffsäkerheten – men börja i kalkylen och ett tydligt flöde. Testa gratis med mallen, väx in i ett system när volymen kräver det.</p>
+`;
+
+const A_OFFERTPROGRAM_BYGGFORETAG: BlogPost = {
+  _id: "code-"+"offertprogram-byggforetag",
+  title: "Offertprogram för byggföretag – vad du ska titta på (2026)", slug: "offertprogram-byggforetag", locale: "sv",
+  excerpt: "Vad ett offertprogram för bygg bör klara – mallar, kalkyl, ROT, PDF, uppföljning och koppling till faktura – och när mall räcker vs. system. Kom igång gratis.", tag: "Ekonomi",
+  coverImageUrl: "/landing/verktyg/offert-preview.webp", contentHtml: A_OFFERTPROGRAM_BYGGFORETAG_HTML,
+  seoTitle: "Offertprogram för byggföretag – så väljer du 2026 | ByggExp", seoDescription: "Vad ett offertprogram för bygg ska klara: mallar, kalkyl med rätt påslag, ROT, proffsig PDF, uppföljning och koppling till faktura. När mall räcker vs. system – kom igång gratis.",
+  seoImageUrl: `${SITE_URL}/landing/verktyg/offert-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-20T16:05:00.000Z", createdAt: "2026-08-20T16:05:00.000Z", updatedAt: "2026-08-20T16:05:00.000Z",
+};
+
 // Keyed by locale — Swedish-market articles only exist on sv.
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: [
+    A_TIDREDOVISNING_BYGGFORETAG,
+    A_OFFERTPROGRAM_BYGGFORETAG,
     A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM,
     A_EGENKONTROLL_ENTREPRENAD,
     A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND,

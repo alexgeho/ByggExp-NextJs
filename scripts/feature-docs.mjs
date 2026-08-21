@@ -99,6 +99,10 @@ export const FEATURE_DOCS = {
     ],
     webImage: { src: '/features-content/automatisk-tidrapportering-och-export-web.webp', alt: 'Tider i webbadmin – planerade, GPS- och manuella timmar per medarbetare och dag' },
     webImageCaption: 'Tider i webbadmin – planerade, GPS- och manuella timmar per medarbetare, redo att exportera till lön eller faktura.',
+    images: [
+      { src: '/features-content/automatisk-tidrapportering-och-export-1.webp', alt: 'ByggExp-appen: arbetspass med planerade, manuella och GPS-timmar i en månadskalender' },
+    ],
+    imagesCaption: 'Arbetspass i appen – planerade, manuella och GPS-timmar i kalendern, klara att summera och exportera.',
     ecosystem: 'timmarna du loggar här är samma timmar som blir <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a> och <a href="/sv/blog/fakturera-fran-byggexp">fakturarader</a>, och som räknas in i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomin</a> – registrera en gång, använd överallt.',
   },
   'narvaro-och-incheckning-pa-bygget': {

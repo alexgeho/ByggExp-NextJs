@@ -13,7 +13,25 @@ const salary = "/landing/features/12salary.webp";
 
 import type { FeaturesProps } from "../../types/features";
 
+// Each homepage feature card links to its dedicated feature landing page.
+// Order matches featureCards below. The pages are sv-only, so the link is only
+// rendered on the Swedish homepage (see lang check in render).
+const FEATURE_LINKS = [
+  "automatisk-tidrapportering-och-export", // 1 Automatisk insamling av arbetstid
+  "hantera-uppgifter-i-byggprojekt", // 2 Uppgifter med automatisk uppföljning
+  "narvaro-och-incheckning-pa-bygget", // 3 Live-översikt över arbetslagen
+  "dokumentera-med-foton-pa-bygget", // 4 Fotodokumentation
+  "dagsplanering-och-planeringsmoten", // 5 Projekt- och personalplanering
+  "hantera-verktyg-och-utrustning", // 6 Hantering av verktyg och utrustning
+  "skapa-offert-i-byggexp", // 7 Skapa offerter
+  "fakturera-fran-byggexp", // 8 Skapa fakturor
+  "projektekonomi-och-lonsamhet", // 9 Projektöversikt / ekonomi
+  "fota-kvitton-och-hantera-utlagg", // 10 Utlägg och kostnader
+  "loneunderlag-for-byggforetag", // 11 Löner från samma timmar
+];
+
 function Features({
+  lang,
   featuresT1_3,
   featuresT4_6,
   featuresT7_9,
@@ -248,6 +266,15 @@ function Features({
                       </li>
                     ))}
                   </ul>
+
+                  {lang === "sv" && FEATURE_LINKS[index] ? (
+                    <a
+                      className="step-link"
+                      href={`/sv/blog/${FEATURE_LINKS[index]}`}
+                    >
+                      Läs mer om funktionen →
+                    </a>
+                  ) : null}
                 </div>
 
                 <div className="step-visual">

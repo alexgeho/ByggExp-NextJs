@@ -1,4 +1,6 @@
 export type FeaturesProps = {
+  /** Current locale — feature cards only link to the (sv-only) feature pages on sv. */
+  lang?: string;
   featuresT1_3: {
     featuresTitle: string;
 

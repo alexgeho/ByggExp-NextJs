@@ -129,6 +129,7 @@ export default function HomePage({
       <Pain painT={painT} />
       <Benefits benefitsT={benefitsT} />
       <Features
+        lang={lang}
         featuresT1_3={featuresT1_3}
         featuresT4_6={featuresT4_6}
         featuresT7_9={featuresT7_9}

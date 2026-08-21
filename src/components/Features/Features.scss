@@ -197,6 +197,19 @@
   flex-direction: column;
   gap: 10px;
 }
+
+// Link from a homepage feature card to its dedicated feature landing page.
+.step-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--blue, #2563c9);
+  font-weight: 600;
+  font-size: var(--1400P);
+  text-decoration: none;
+}
+.step-link:hover {
+  text-decoration: underline;
+}
 .step-bullets li {
   display: flex;
   gap: 12px;

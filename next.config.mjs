@@ -29,6 +29,13 @@ const nextConfig = {
       { source: "/sv/verktyg/armering-kalkylator", destination: "/sv/verktyg/betong-kalkylator", statusCode: 301 },
       { source: "/sv/verktyg/kakelfix-kalkylator", destination: "/sv/verktyg/golv-kalkylator", statusCode: 301 },
       { source: "/sv/verktyg/murbruk-kalkylator", destination: "/sv/verktyg", statusCode: 301 },
+
+      // Clean vanity short links for marketing (YouTube, ads, print). The user
+      // shares the pretty /go/... URL; the redirect appends UTM so GA4 attributes
+      // the visit. Temporary (307) so a link can be re-pointed later without a
+      // cached 301. Add one row per campaign.
+      { source: "/go/verktyg", destination: "/en?utm_source=youtube&utm_medium=video&utm_campaign=tool-tracking", permanent: false },
+      { source: "/go/tid", destination: "/en?utm_source=youtube&utm_medium=video&utm_campaign=time-tracking", permanent: false },
     ];
   },
   async headers() {

@@ -41,6 +41,11 @@ export const FEATURE_DOCS = {
       'I mobilappen ser du direkt vilka fakturor som är obetalda och betalda.',
       'Följ upp betalningar löpande, även när du är ute på bygget.',
     ],
+    images: [
+      { src: '/features-content/fakturera-fran-byggexp-1.webp', alt: 'ByggExp-appen: skapa en ny faktura med kund, rader, moms och ROT-avdrag' },
+      { src: '/features-content/fakturera-fran-byggexp-2.webp', alt: 'ByggExp-appen: lista över fakturor med status – utkast och skickad' },
+    ],
+    imagesCaption: 'Så ser det ut i appen: skapa fakturan (med ROT och moms) och följ status – utkast, skickad, betald.',
   },
   'loneunderlag-for-byggforetag': {
     webbadmin: [

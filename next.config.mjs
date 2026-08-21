@@ -36,6 +36,10 @@ const nextConfig = {
       // cached 301. Add one row per campaign.
       { source: "/go/verktyg", destination: "/en?utm_source=youtube&utm_medium=video&utm_campaign=tool-tracking", permanent: false },
       { source: "/go/tid", destination: "/en?utm_source=youtube&utm_medium=video&utm_campaign=time-tracking", permanent: false },
+      { source: "/go/projekt", destination: "/en?utm_source=youtube&utm_medium=video&utm_campaign=create-project", permanent: false },
+      { source: "/go/foto", destination: "/en?utm_source=youtube&utm_medium=video&utm_campaign=photo-receipt", permanent: false },
+      { source: "/go/timmar", destination: "/en?utm_source=youtube&utm_medium=video&utm_campaign=manual-hours", permanent: false },
+      { source: "/go/faktura", destination: "/en?utm_source=youtube&utm_medium=video&utm_campaign=invoicing", permanent: false },
     ];
   },
   async headers() {

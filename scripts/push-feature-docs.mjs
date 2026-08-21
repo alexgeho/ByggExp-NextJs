@@ -76,18 +76,43 @@ function ask(question, { hidden = false } = {}) {
   });
 }
 
-async function login() {
-  const email = (process.env.ADMIN_EMAIL || await ask('Admin email: ')).trim();
-  const password = process.env.ADMIN_PASSWORD || await ask('Admin password (hidden): ', { hidden: true });
+async function tryLogin(email, password) {
   const r = await fetch(`${BASE}/auth/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({ email: email.trim(), password }),
   });
-  if (!r.ok) throw new Error(`Login failed (${r.status}). Check email/password.`);
-  const session = await r.json();
-  if (!session.access_token) throw new Error('Login ok but no access_token in response.');
-  return session;
+  if (!r.ok) return null;
+  const s = await r.json();
+  return s.access_token ? s : null;
+}
+
+function saveCreds(email, password) {
+  try {
+    const p = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '.env.admin');
+    fs.writeFileSync(p, `ADMIN_EMAIL=${email.trim()}\nADMIN_PASSWORD=${password}\n`, { mode: 0o600 });
+    console.log('✓ inloggning sparad i .env.admin (nästa gång behövs inget lösenord)');
+  } catch { /* non-fatal */ }
+}
+
+async function login() {
+  // 0) a ready access token (e.g. read from the browser's admin session)
+  if (process.env.ADMIN_TOKEN) return { access_token: process.env.ADMIN_TOKEN };
+  // 1) try saved creds from .env.admin / env
+  if (process.env.ADMIN_EMAIL && process.env.ADMIN_PASSWORD) {
+    const s = await tryLogin(process.env.ADMIN_EMAIL, process.env.ADMIN_PASSWORD);
+    if (s) return s;
+    console.log('⚠ sparad inloggning fungerade inte – ange den på nytt.\n');
+  }
+  // 2) interactive, self-verifying, up to 3 attempts; save on success
+  for (let i = 0; i < 3; i++) {
+    const email = (await ask('Admin email: ')).trim();
+    const password = await ask('Admin password (hidden): ', { hidden: true });
+    const s = await tryLogin(email, password);
+    if (s) { saveCreds(email, password); return s; }
+    console.log('✗ fel email eller lösenord, försök igen.\n');
+  }
+  throw new Error('Login failed after 3 attempts.');
 }
 
 async function getAdmin(id, token) {

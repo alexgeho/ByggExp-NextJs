@@ -73,25 +73,21 @@ export const getServerSideProps: GetServerSideProps<
     return { notFound: true };
   }
 
+  // Code-first: a code-published article wins over the CMS for the same slug.
+  // Feature pages ("Funktioner") were moved from the CMS into code, so this makes
+  // the code version authoritative and lets us edit layout/screenshots via git.
+  const codeArticle = getCodeArticle(lang, slug);
+  if (codeArticle) {
+    const related = await getRelatedPosts(lang, slug);
+    return { props: { lang, post: codeArticle, related } };
+  }
+
   try {
     const post = await fetchPublishedBlogPost(lang, slug);
     const related = await getRelatedPosts(lang, slug);
-
-    return {
-      props: {
-        lang,
-        post,
-        related,
-      },
-    };
+    return { props: { lang, post, related } };
   } catch {
-    // Not in the CMS: serve a code-published article (real, indexable) if we
-    // have one for this slug, otherwise fall back to a placeholder mock.
-    const codeArticle = getCodeArticle(lang, slug);
-    if (codeArticle) {
-      const related = await getRelatedPosts(lang, slug);
-      return { props: { lang, post: codeArticle, related } };
-    }
+    // Not in code or CMS: fall back to a placeholder mock if one exists.
     const mock = getMockBlogPost(lang, slug);
     if (mock) {
       return { props: { lang, post: mock, related: [] } };

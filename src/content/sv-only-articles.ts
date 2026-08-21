@@ -5,6 +5,19 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  // Feature pages ("Funktioner"), moved from CMS into code (sv-only).
+  'skapa-offert-i-byggexp',
+  'fakturera-fran-byggexp',
+  'loneunderlag-for-byggforetag',
+  'projektekonomi-och-lonsamhet',
+  'automatisk-tidrapportering-och-export',
+  'narvaro-och-incheckning-pa-bygget',
+  'hantera-uppgifter-i-byggprojekt',
+  'paminnelser-uppgifter-och-deadlines',
+  'dagsplanering-och-planeringsmoten',
+  'dokumentera-med-foton-pa-bygget',
+  'fota-kvitton-och-hantera-utlagg',
+  'hantera-verktyg-och-utrustning',
   'personalplanering-bygg',
   'verktygshantering-app',
   'bygg-app',

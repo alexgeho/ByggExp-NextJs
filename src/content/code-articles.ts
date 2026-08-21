@@ -19,6 +19,7 @@ import { REGELVERK_ARTICLES } from './articles/regelverk';
 import { PERSONAL_ARTICLES } from './articles/personal';
 import { KVALITET_ARTICLES } from './articles/kvalitet';
 import { TILLVAXT_ARTICLES } from './articles/tillvaxt';
+import { FEATURE_ARTICLES } from './articles/features';
 
 // Newest first — a stable, self-maintaining order (no hand-kept array).
 function byPublishedDesc(a: BlogPost, b: BlogPost): number {
@@ -34,6 +35,7 @@ const SV_ARTICLES: BlogPost[] = [
   ...PERSONAL_ARTICLES,
   ...KVALITET_ARTICLES,
   ...TILLVAXT_ARTICLES,
+  ...FEATURE_ARTICLES,
 ].sort(byPublishedDesc);
 
 // Keyed by locale — Swedish-market articles only exist on sv.

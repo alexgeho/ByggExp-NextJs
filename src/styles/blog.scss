@@ -496,6 +496,40 @@
   border: 1px solid rgba(10, 40, 90, 0.08);
 }
 
+// Two app screenshots (phone frames baked in) shown side by side; stacks on
+// narrow screens.
+.blog-article-content .app-shots {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 28px 0;
+}
+
+.blog-article-content .app-shots img {
+  width: 230px;
+  max-width: 46%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+}
+
+.blog-article-content .app-shots figcaption {
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted, #6b7a90);
+  margin-top: 2px;
+}
+
+@media (max-width: 560px) {
+  .blog-article-content .app-shots img {
+    width: 60%;
+    max-width: 240px;
+  }
+}
+
 .blog-article-content img {
   display: block;
   width: 100%;

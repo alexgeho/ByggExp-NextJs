@@ -47,6 +47,8 @@ export const FEATURE_DOCS = {
       { src: '/features-content/fakturera-fran-byggexp-2.webp', alt: 'ByggExp-appen: lista över fakturor med status – utkast och skickad' },
     ],
     imagesCaption: 'Ny faktura och listan över fakturor i ByggExp-appen.',
+    webImage: { src: '/features-content/fakturera-fran-byggexp-web.webp', alt: 'Skapa faktura i webbadmin – kund, projekt, fakturarader och knappen Lägg till arbete (timmar × pris)' },
+    webImageCaption: 'Skapa faktura i webbadmin – med "Lägg till arbete (timmar × pris)" blir loggade timmar fakturarader automatiskt.',
     ecosystem: 'fakturan står inte för sig själv – <a href="/sv/blog/automatisk-tidrapportering-och-export">loggad tid</a>, material och <a href="/sv/blog/fota-kvitton-och-hantera-utlagg">utlägg</a> blir automatiskt fakturarader, och fakturan syns direkt i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektets ekonomi</a> så du ser marginalen på en gång.',
   },
   'loneunderlag-for-byggforetag': {

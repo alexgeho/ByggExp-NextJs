@@ -530,6 +530,28 @@
   }
 }
 
+// Wide webbadmin (desktop) screenshot, full article width.
+.blog-article-content .web-shot {
+  margin: 24px 0;
+}
+
+.blog-article-content .web-shot img {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 1px solid rgba(10, 40, 90, 0.12);
+  box-shadow: 0 10px 30px rgba(6, 18, 40, 0.1);
+}
+
+.blog-article-content .web-shot figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted, #6b7a90);
+  margin-top: 8px;
+}
+
 // "Allt hänger ihop" ecosystem callout — highlights how a feature connects to
 // the rest (time/expenses -> invoice -> project economy).
 .blog-article-content .eco-note {

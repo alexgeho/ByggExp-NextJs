@@ -19,8 +19,11 @@ function buildBlock(doc) {
   const ol = (steps) => `<ol>\n${steps.map((s) => `<li>${s}</li>`).join('\n')}\n</ol>`;
   const parts = [];
   if (doc.webbadmin?.length) parts.push(`<h2>Så gör du i webbadmin</h2>\n${ol(doc.webbadmin)}`);
+  if (doc.webImage) {
+    const cap = doc.webImageCaption ? `<figcaption>${doc.webImageCaption}</figcaption>` : '';
+    parts.push(`<figure class="web-shot"><img src="${doc.webImage.src}" alt="${doc.webImage.alt}" loading="lazy">${cap}</figure>`);
+  }
   if (doc.appen?.length) parts.push(`<h2>Så gör du i appen</h2>\n${ol(doc.appen)}`);
-  if (doc.ecosystem) parts.push(`<p class="eco-note"><strong>Allt hänger ihop:</strong> ${doc.ecosystem}</p>`);
   if (doc.images?.length) {
     const imgs = doc.images
       .map((im) => `<img src="${im.src}" alt="${im.alt}" loading="lazy">`)
@@ -28,6 +31,7 @@ function buildBlock(doc) {
     const cap = doc.imagesCaption ? `<figcaption>${doc.imagesCaption}</figcaption>` : '';
     parts.push(`<figure class="app-shots">${imgs}${cap}</figure>`);
   }
+  if (doc.ecosystem) parts.push(`<p class="eco-note"><strong>Allt hänger ihop:</strong> ${doc.ecosystem}</p>`);
   return parts.join('\n');
 }
 

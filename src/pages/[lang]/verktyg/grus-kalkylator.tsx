@@ -50,7 +50,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     previewAlt: 'Förhandsvisning av grus & makadam',
     previewCaption: 'Så ser grus & makadam ut',
     sections: [
-      { id: 'sa-raknar-du', heading: 'Så räknar du ut mängden', body: (<><ol><li>Mät ytans längd och bredd i meter.</li><li>Ange djupet i centimeter.</li><li>Välj materialets densitet (ton/m³).</li><li>Se volymen i m³ och vikten i ton.</li></ol></>) },
+      { id: 'sa-raknar-du', heading: 'Så räknar du ut mängden', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/grus.webp" alt="Diagram: grusvolym som yta gånger tjocklek med packningspåslag" width={720} height={380} loading="lazy" /><figcaption>Volym = yta × tjocklek, plus packningspåslag. 1 m³ grus väger ca 1,5–1,8 ton.</figcaption></figure><ol><li>Mät ytans längd och bredd i meter.</li><li>Ange djupet i centimeter.</li><li>Välj materialets densitet (ton/m³).</li><li>Se volymen i m³ och vikten i ton.</li></ol></>) },
       { id: 'info', heading: 'Tänk på packning', body: (<><p>Material packar ihop sig efter läggning, så räkna med lite extra om djupet ska hålla efter packning. Densiteten skiljer sig mellan material – fråga leverantören.</p></>) },
     ],
     faqHeading: 'Vanliga frågor',

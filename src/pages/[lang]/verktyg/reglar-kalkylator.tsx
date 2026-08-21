@@ -50,7 +50,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     previewAlt: 'Förhandsvisning av reglar & virke',
     previewCaption: 'Så ser reglar & virke ut',
     sections: [
-      { id: 'sa-raknar-du', heading: 'Så räknar du ut virket', body: (<><ol><li>Mät väggens längd i meter.</li><li>Välj centrumavstånd (c/c) i mm.</li><li>Ange regelns längd/höjd.</li><li>Se antal reglar och totalt löpmeter.</li></ol></>) },
+      { id: 'sa-raknar-du', heading: 'Så räknar du ut virket', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/reglar.webp" alt="Diagram: reglar med c/c-avstånd och gipsskiva" width={720} height={380} loading="lazy" /><figcaption>Regelavståndet ska matcha skivbredden: 900 mm gips → c/c 450, 1200 mm → c/c 600.</figcaption></figure><ol><li>Mät väggens längd i meter.</li><li>Välj centrumavstånd (c/c) i mm.</li><li>Ange regelns längd/höjd.</li><li>Se antal reglar och totalt löpmeter.</li></ol></>) },
       { id: 'info', heading: 'Glöm inte', body: (<><p>Utöver de stående reglarna behövs syll och hammarband, samt kortlingar och extra reglar vid dörrar, fönster och hörn.</p></>) },
     ],
     faqHeading: 'Vanliga frågor',

@@ -54,11 +54,17 @@ const CONTENT: Record<Locale, ToolContent> = {
         id: 'sa-raknar-du',
         heading: 'Så räknas volymen – per gjutning',
         body: (
-          <ul>
-            <li><strong>Platta / golv:</strong> längd × bredd × tjocklek. Med kantbalk läggs omkrets × kantbalkens bredd × höjd till.</li>
-            <li><strong>Grundmur / balk:</strong> längd × bredd × höjd.</li>
-            <li><strong>Plintar / stolphål (runda):</strong> π × radie² × djup, gånger antal hål.</li>
-          </ul>
+          <>
+            <figure className="lm-diagram">
+              <img src="/landing/diagrams/betong.webp" alt="Diagram: betongvolym för platta på mark med kantbalk" width={720} height={380} loading="lazy" />
+              <figcaption>Volym = längd × bredd × tjocklek, plus kantbalken runt omkretsen. 1 m³ ≈ 80 säckar 25 kg.</figcaption>
+            </figure>
+            <ul>
+              <li><strong>Platta / golv:</strong> längd × bredd × tjocklek. Med kantbalk läggs omkrets × kantbalkens bredd × höjd till.</li>
+              <li><strong>Grundmur / balk:</strong> längd × bredd × höjd.</li>
+              <li><strong>Plintar / stolphål (runda):</strong> π × radie² × djup, gånger antal hål.</li>
+            </ul>
+          </>
         ),
       },
       {

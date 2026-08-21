@@ -54,12 +54,18 @@ const CONTENT: Record<Locale, ToolContent> = {
         id: 'sa-raknar-du',
         heading: 'Så räknar du ut kvadratmeter',
         body: (
-          <ol>
-            <li>Mät längd och bredd på rummet eller ytan i meter.</li>
-            <li>Lägg till en rad per utrymme om du har flera.</li>
-            <li>Ange spill i procent om du ska beställa material.</li>
-            <li>Se den totala ytan och hur mycket du bör beställa.</li>
-          </ol>
+          <>
+            <figure className="lm-diagram">
+              <img src="/landing/diagrams/kvadratmeter.webp" alt="Diagram: yta som längd gånger bredd, summera flera delytor" width={720} height={380} loading="lazy" />
+              <figcaption>Yta = längd × bredd. Flera rum? Summera delytorna och lägg på spill.</figcaption>
+            </figure>
+            <ol>
+              <li>Mät längd och bredd på rummet eller ytan i meter.</li>
+              <li>Lägg till en rad per utrymme om du har flera.</li>
+              <li>Ange spill i procent om du ska beställa material.</li>
+              <li>Se den totala ytan och hur mycket du bör beställa.</li>
+            </ol>
+          </>
         ),
       },
       {

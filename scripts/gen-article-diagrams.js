@@ -124,6 +124,73 @@ const byggdagbok = frame(`
   <text x="408" y="265" ${font} font-size="13.5" fill="${INK}">bilderna till dagens anteckning.</text>
 `);
 
+// 7. Betong – platta med kantbalk
+const betong = frame(`
+  ${title('Betong – volym för platta med kantbalk')}
+  <rect x="60" y="150" width="380" height="70" fill="rgba(37,99,201,0.10)" stroke="${INK}" stroke-width="2.5"/>
+  <rect x="60" y="150" width="40" height="130" fill="rgba(37,99,201,0.18)" stroke="${INK}" stroke-width="2.5"/>
+  <rect x="400" y="150" width="40" height="130" fill="rgba(37,99,201,0.18)" stroke="${INK}" stroke-width="2.5"/>
+  <line x1="60" y1="300" x2="440" y2="300" stroke="${BLUE}" stroke-width="2" marker-start="url(#b)" marker-end="url(#b)"/>
+  <text x="250" y="320" ${font} font-size="13" fill="${BLUE}" text-anchor="middle">Längd × bredd</text>
+  <text x="120" y="255" ${font} font-size="13" fill="${INK}">Kantbalk</text>
+  <text x="200" y="192" ${font} font-size="13" fill="${INK}">Platta (tjocklek)</text>
+  <text x="480" y="150" ${font} font-size="16" font-weight="700" fill="${INK}">Volym = L × B × tjocklek</text>
+  <text x="480" y="178" ${font} font-size="14" fill="${MUT}">+ kantbalk runt omkretsen</text>
+  <text x="480" y="214" ${font} font-size="15" font-weight="700" fill="${INK}">1 m³ ≈ 80 säckar 25 kg</text>
+  <text x="480" y="240" ${font} font-size="14" fill="${MUT}">Storsäck 1000 kg ≈ 520 l</text>
+  ${note('Från 1–2 m³ blir fabriksbetong ofta billigare än att blanda säck för hand.', INK)}
+  <defs><marker id="b" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M4 0v8" stroke="${BLUE}" stroke-width="2"/></marker></defs>
+`);
+
+// 8. Grus / bärlager – yta × tjocklek + packning
+const grus = frame(`
+  ${title('Grus – volym, packning och ton')}
+  ${stepBox(40, 110, 150, 74, 'Yta (m²)', '× tjocklek (m)', BLUE)}
+  ${arrow(190, 236, 147)}
+  ${stepBox(236, 110, 170, 74, '+ packnings-', 'påslag ~15–20%', AMBER)}
+  ${arrow(406, 452, 147)}
+  ${stepBox(452, 110, 150, 74, 'Volym', 'i m³', GREEN)}
+  <text x="40" y="232" ${font} font-size="15" font-weight="700" fill="${INK}">1 m³ grus ≈ 1,5–1,8 ton.</text>
+  <text x="40" y="258" ${font} font-size="14" fill="${MUT}">Bärlager packas – beställ därför något mer än teoretisk volym.</text>
+  ${note('Tumregel: 10 cm bärlager på 100 m² ≈ 10 m³ löst grus före packning.', INK)}
+  ${ARR_DEF}
+`);
+
+// 9. Kvadratmeter – yta av rum
+const kvadratmeter = frame(`
+  ${title('Kvadratmeter – räkna ut ytan')}
+  <rect x="60" y="90" width="240" height="150" fill="rgba(37,99,201,0.08)" stroke="${INK}" stroke-width="2.5"/>
+  <line x1="60" y1="260" x2="300" y2="260" stroke="${BLUE}" stroke-width="2" marker-start="url(#b)" marker-end="url(#b)"/>
+  <text x="180" y="280" ${font} font-size="14" fill="${BLUE}" text-anchor="middle">Längd</text>
+  <line x1="40" y1="90" x2="40" y2="240" stroke="${GREEN}" stroke-width="2" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text x="30" y="170" ${font} font-size="14" fill="${GREEN}" text-anchor="middle" transform="rotate(-90 30 170)">Bredd</text>
+  <text x="180" y="170" ${font} font-size="17" font-weight="800" fill="${INK}" text-anchor="middle">Yta = L × B</text>
+  <text x="360" y="120" ${font} font-size="15" font-weight="700" fill="${INK}">Fler rum? Summera</text>
+  <text x="360" y="144" ${font} font-size="15" font-weight="700" fill="${INK}">delytorna.</text>
+  <text x="360" y="178" ${font} font-size="14" fill="${MUT}">L-format rum: dela upp i</text>
+  <text x="360" y="200" ${font} font-size="14" fill="${MUT}">rektanglar och lägg ihop.</text>
+  <text x="360" y="236" ${font} font-size="14" fill="${INK}">Material: lägg på spill 5–10 %.</text>
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M4 0v8" stroke="${GREEN}" stroke-width="2"/></marker>
+    <marker id="b" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M4 0v8" stroke="${BLUE}" stroke-width="2"/></marker>
+  </defs>
+`);
+
+// 10. Moms – netto, moms, brutto
+const moms = frame(`
+  ${title('Moms – från netto till brutto')}
+  ${stepBox(50, 120, 150, 74, 'Netto', '(exkl. moms)', BLUE)}
+  ${arrow(200, 250, 157)}
+  <text x="225" y="150" ${font} font-size="13" fill="${MUT}" text-anchor="middle">× 1,25</text>
+  ${stepBox(250, 120, 150, 74, '+ 25% moms', '', AMBER)}
+  ${arrow(400, 460, 157)}
+  ${stepBox(460, 120, 150, 74, 'Brutto', '(inkl. moms)', GREEN)}
+  <text x="50" y="245" ${font} font-size="14" fill="${INK}">Vanligast i bygg: <tspan font-weight="700">25 %</tspan>. Vissa tjänster 12 % eller 6 %.</text>
+  <text x="50" y="272" ${font} font-size="14" fill="${MUT}">Baklänges: brutto ÷ 1,25 = netto. Momsen = brutto − netto.</text>
+  ${note('Omvänd byggmoms: köparen redovisar momsen – du fakturerar utan moms.', INK)}
+  ${ARR_DEF}
+`);
+
 const DIAGRAMS = {
   'ab-kontrakt': abKontrakt,
   'ata-flode': ata,
@@ -131,6 +198,10 @@ const DIAGRAMS = {
   'heta-arbeten': hetaArbeten,
   'egenkontroll-cykel': egenkontroll,
   'byggdagbok': byggdagbok,
+  'betong': betong,
+  'grus': grus,
+  'kvadratmeter': kvadratmeter,
+  'moms': moms,
 };
 
 async function main() {

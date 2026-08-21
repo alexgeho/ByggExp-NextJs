@@ -195,6 +195,26 @@
   margin-top: 0.5em;
 }
 
+// Explanatory formula diagram inside a tool section.
+.lead-magnet-section-body .lm-diagram {
+  margin: 0 0 18px;
+}
+
+.lead-magnet-section-body .lm-diagram img {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(10, 40, 90, 0.08);
+}
+
+.lead-magnet-section-body .lm-diagram figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--muted, #6b7a90);
+}
+
 // --- FAQ --------------------------------------------------------------------
 .lead-magnet-faq {
   margin-bottom: var(--lm-gap);

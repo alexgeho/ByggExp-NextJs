@@ -99,6 +99,10 @@ export default function MomsKalkylatorPage() {
             heading: 'Räkna ut moms själv på mobilen (25 %)',
             body: (
               <>
+                <figure className="lm-diagram">
+                  <img src="/landing/diagrams/moms.webp" alt="Diagram: moms från netto till brutto, netto × 1,25 = brutto" width={720} height={380} loading="lazy" />
+                  <figcaption>Netto × 1,25 = brutto (25 % moms). Baklänges: brutto ÷ 1,25 = netto.</figcaption>
+                </figure>
                 <p>
                   Har du bara mobilens miniräknare räcker tre enkla knapptryck. Exemplen
                   utgår från 25 % moms – den vanligaste satsen för byggtjänster.

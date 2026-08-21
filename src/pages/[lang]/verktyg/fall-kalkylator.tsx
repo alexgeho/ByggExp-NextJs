@@ -50,7 +50,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     previewAlt: 'Förhandsvisning av fall & lutning',
     previewCaption: 'Så ser fall & lutning ut',
     sections: [
-      { id: 'sa-raknar-du', heading: 'Så räknar du ut fallet', body: (<><ol><li>Ange längden i meter.</li><li>Ange önskat fall i mm per meter.</li><li>Se höjdskillnaden, lutningen i procent och som 1:X.</li></ol></>) },
+      { id: 'sa-raknar-du', heading: 'Så räknar du ut fallet', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/fall.webp" alt="Diagram: fall som längd, höjdskillnad och förhållande 1:X" width={720} height={380} loading="lazy" /><figcaption>Fall uttrycks som mm/m, procent och 1:X. 20 mm/m = 2 % = 1:50.</figcaption></figure><ol><li>Ange längden i meter.</li><li>Ange önskat fall i mm per meter.</li><li>Se höjdskillnaden, lutningen i procent och som 1:X.</li></ol></>) },
       { id: 'info', heading: 'Riktvärden', body: (<><p>Fall uttrycks på flera sätt: mm per meter, procent och förhållande (1:X). 20 mm/m är samma sak som 2 % och 1:50. Använd det mått som gäller för din tillämpning.</p></>) },
     ],
     faqHeading: 'Vanliga frågor',

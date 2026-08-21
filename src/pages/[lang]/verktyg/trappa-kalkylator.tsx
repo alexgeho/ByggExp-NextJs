@@ -50,7 +50,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     previewAlt: 'Förhandsvisning av trappberäknare',
     previewCaption: 'Så ser trappberäknare ut',
     sections: [
-      { id: 'sa-raknar-du', heading: 'Så räknar du ut trappan', body: (<><ol><li>Mät den totala höjden trappan ska överbrygga (mm).</li><li>Ange en önskad steghöjd (ofta ca 175 mm).</li><li>Se antal steg, faktisk steghöjd och rekommenderat stegdjup.</li></ol></>) },
+      { id: 'sa-raknar-du', heading: 'Så räknar du ut trappan', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/trappa.webp" alt="Diagram: steghöjd och stegdjup i en trappa enligt trappformeln" width={720} height={380} loading="lazy" /><figcaption>Bekvämlighetsregeln: 2 × steghöjd + stegdjup ≈ 630 mm. Steghöjd ofta ca 175 mm.</figcaption></figure><ol><li>Mät den totala höjden trappan ska överbrygga (mm).</li><li>Ange en önskad steghöjd (ofta ca 175 mm).</li><li>Se antal steg, faktisk steghöjd och rekommenderat stegdjup.</li></ol></>) },
       { id: 'info', heading: 'Bekvämlighetsregeln', body: (<><p>En trappa upplevs bekväm när 2 × steghöjd + stegdjup är ungefär 630 mm. Blir stegen för höga eller för grunda känns trappan obekväm och kan bli osäker.</p></>) },
     ],
     faqHeading: 'Vanliga frågor',

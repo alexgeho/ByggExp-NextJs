@@ -43,3 +43,6 @@ next-env.d.ts
 
 # Local design source files (heavy PNG mockups)
 design-assets/features-src/
+
+# Generated CMS content previews (scripts/push-feature-docs.mjs dry run)
+.feature-docs-preview/

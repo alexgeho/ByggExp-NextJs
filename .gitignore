@@ -46,3 +46,6 @@ design-assets/features-src/
 
 # Generated CMS content previews (scripts/push-feature-docs.mjs dry run)
 .feature-docs-preview/
+
+# Admin API credentials for CMS push scripts (owner-only, never commit)
+.env.admin

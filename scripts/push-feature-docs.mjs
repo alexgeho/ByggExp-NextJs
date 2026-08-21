@@ -15,6 +15,19 @@ import { fileURLToPath } from 'node:url';
 
 import { FEATURE_DOCS } from './feature-docs.mjs';
 
+// Load admin credentials from a gitignored .env.admin (KEY=VALUE per line) if it
+// exists, so the push can run non-interactively. The file lives only on the
+// owner's machine and is never committed or printed.
+(function loadEnvAdmin() {
+  try {
+    const p = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '.env.admin');
+    for (const line of fs.readFileSync(p, 'utf8').split('\n')) {
+      const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/);
+      if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
+    }
+  } catch { /* no file — fall back to interactive prompt */ }
+})();
+
 const BASE = (process.env.NEXT_PUBLIC_API_URL || 'https://api.byggexp.se').replace(/\/$/, '');
 const OUT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '.feature-docs-preview');
 const PUSH = process.argv.includes('--push');
@@ -64,8 +77,8 @@ function ask(question, { hidden = false } = {}) {
 }
 
 async function login() {
-  const email = (await ask('Admin email: ')).trim();
-  const password = await ask('Admin password (hidden): ', { hidden: true });
+  const email = (process.env.ADMIN_EMAIL || await ask('Admin email: ')).trim();
+  const password = process.env.ADMIN_PASSWORD || await ask('Admin password (hidden): ', { hidden: true });
   const r = await fetch(`${BASE}/auth/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

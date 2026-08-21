@@ -724,7 +724,189 @@ const A_DOKUMENTHANTERING_BYGG: BlogPost = {
   publishedAt: "2026-08-20T19:20:00.000Z", createdAt: "2026-08-20T19:20:00.000Z", updatedAt: "2026-08-20T19:20:00.000Z",
 };
 
+const A_PERSONALPLANERING_BYGG_HTML = `
+<p>Personalplanering i byggföretag handlar om att rätt person är på rätt plats vid rätt tid – utan dubbelbokningar, glapp eller sena sms. Ett bra bemanningssystem ger både kontoret och bygget samma bild av vem som gör vad. Här går vi igenom vad personalplanering för bygg bör klara och hur ByggExp gör det.</p>
+
+<h2>Vad ska personalplanering för bygg klara?</h2>
+<ul>
+<li><strong>Vem, var och när</strong> – planera personal och lag på projekt, utan dubbelbokning.</li>
+<li><strong>Koppling till projekt och tid</strong> – planerad tid hänger ihop med <a href="/sv/blog/tidrapportering-app-byggforetag">registrerad tid</a> och projektets marginal.</li>
+<li><strong>Live-läge</strong> – se var lagen är just nu, inte bara i ett schema på papper.</li>
+<li><strong>Enkelt att ändra</strong> – flytta personal när något ändras och alla ser det direkt.</li>
+</ul>
+<p>Se även guiden om <a href="/sv/blog/resursplanering-bygg">resursplanering</a> och att <a href="/sv/blog/bemanning-och-personalplanering">bemanna och planera personal</a>.</p>
+
+<h2>Så gör ByggExp det</h2>
+<p>ByggExp har <strong>projekt- och personalplanering</strong> plus en <strong>live-översikt över arbetslagen</strong>: du planerar vem som jobbar var, ser läget i realtid och kopplar det till tid och projekt. Samma data blir sedan underlag för <a href="/sv/blog/loneprogram-bygg">lön</a> och <a href="/sv/blog/faktureringsprogram-bygg">faktura</a>.</p>
+<p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Schema på papper/whiteboard.</strong> Ändringar når inte bygget i tid.</li>
+<li><strong>Ingen koppling till tid.</strong> Planerad och verklig tid glider isär utan att någon märker det.</li>
+<li><strong>Sena sms.</strong> Utan ett gemensamt läge blir det telefonpassning i stället för planering.</li>
+</ul>
+
+<p>Rätt personalplanering minskar glapp och dubbelbokningar – och ger kontoret och bygget samma bild i realtid.</p>
+`;
+
+const A_PERSONALPLANERING_BYGG: BlogPost = {
+  _id: "code-"+"personalplanering-bygg",
+  title: "Personalplanering för byggföretag – rätt person, rätt plats, rätt tid", slug: "personalplanering-bygg", locale: "sv",
+  excerpt: "Vad personalplanering / bemanning för byggföretag bör klara: planera lag på projekt utan dubbelbokning, koppling till tid och en live-översikt över arbetslagen. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_PERSONALPLANERING_BYGG_HTML,
+  seoTitle: "Personalplanering för byggföretag – bemanning | ByggExp", seoDescription: "Personalplanering / bemanning för byggföretag: planera lag på projekt utan dubbelbokning, koppla till tid och se arbetslagen live. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-21T09:00:00.000Z", createdAt: "2026-08-21T09:00:00.000Z", updatedAt: "2026-08-21T09:00:00.000Z",
+};
+
+const A_VERKTYGSHANTERING_APP_HTML = `
+<p>Var är slagborren? Vem har lasern? Verktyg och maskiner som försvinner mellan projekt kostar både tid och pengar. En app för verktygshantering ger koll på vad du äger, var det finns och vem som har det. Här går vi igenom vad verktygs- och maskinhantering för bygg bör klara.</p>
+
+<h2>Vad ska verktygshantering för bygg klara?</h2>
+<ul>
+<li><strong>Inventarie</strong> – en lista på verktyg och maskiner du äger eller hyr.</li>
+<li><strong>Var och hos vem</strong> – vilket projekt eller person som har utrustningen just nu.</li>
+<li><strong>Enkelt i mobilen</strong> – kvittera ut och in på plats, inte i en pärm på kontoret.</li>
+<li><strong>Koppling till projekt</strong> – så maskinkostnaden hamnar rätt.</li>
+</ul>
+
+<h2>Så gör ByggExp det</h2>
+<p>ByggExp har <strong>hantering av verktyg och utrustning</strong>: du ser vad du har och var det finns, kopplat till projekt och personal – i samma system som håller ihop <a href="/sv/blog/tidrapportering-app-byggforetag">tid</a>, foto, offert och faktura. Slut på att leta efter maskiner mellan bilar och bodar.</p>
+<p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Ska du köpa eller hyra? Se guiden om att <a href="/sv/blog/leasa-eller-kopa-maskiner-byggforetag">leasa eller köpa maskiner</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Ingen inventarie.</strong> Du vet inte vad du äger – och köper dubbelt.</li>
+<li><strong>Ingen utkvittering.</strong> När ingen vet vem som har vad försvinner utrustning.</li>
+<li><strong>Pärm på kontoret.</strong> Det som inte funkar i mobilen på bygget används inte.</li>
+</ul>
+
+<p>Rätt verktygshantering betalar sig snabbt: mindre letande, färre förlorade maskiner och rätt maskinkostnad på rätt projekt.</p>
+`;
+
+const A_VERKTYGSHANTERING_APP: BlogPost = {
+  _id: "code-"+"verktygshantering-app",
+  title: "Verktygshantering-app för bygg – koll på maskiner och utrustning", slug: "verktygshantering-app", locale: "sv",
+  excerpt: "Vad verktygs- och maskinhantering för byggföretag bör klara: inventarie, var och hos vem utrustningen finns, utkvittering i mobilen och koppling till projekt. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/tools.webp", contentHtml: A_VERKTYGSHANTERING_APP_HTML,
+  seoTitle: "Verktygshantering-app för bygg – maskiner & utrustning | ByggExp", seoDescription: "Verktygs- och maskinhantering för byggföretag: inventarie, var och hos vem utrustningen finns, utkvittering i mobilen och koppling till projekt. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/tools.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-21T09:05:00.000Z", createdAt: "2026-08-21T09:05:00.000Z", updatedAt: "2026-08-21T09:05:00.000Z",
+};
+
+const A_BYGG_APP_HTML = `
+<p>En bygg-app ska samla vardagen på bygget i mobilen: tid, jobb, foto, utlägg, offert och faktura – på ett ställe, för både snickaren på plats och kontoret. Här går vi igenom vad en bygg-app bör klara och hur ByggExp täcker hela kedjan.</p>
+
+<h2>Vad ska en bygg-app klara?</h2>
+<ul>
+<li><strong>Tid i mobilen</strong> – <a href="/sv/blog/tidrapportering-app-byggforetag">stämpla tid</a> på plats, kopplat till projekt.</li>
+<li><strong>Jobb och uppföljning</strong> – <a href="/sv/blog/arbetsorder-app-bygg">arbetsorder</a> med status.</li>
+<li><strong>Foto och utlägg</strong> – <a href="/sv/blog/fotodokumentation-app-bygg">fota</a> och <a href="/sv/blog/utlagg-app-bygg">registrera kvitton</a> direkt.</li>
+<li><strong>Offert och faktura</strong> – <a href="/sv/blog/faktureringsprogram-bygg">med ROT</a>, i samma flöde.</li>
+<li><strong>Ett läge för alla</strong> – kontoret och bygget ser samma bild.</li>
+</ul>
+
+<h2>Så gör ByggExp det</h2>
+<p>ByggExp är en bygg-app byggd för byggföretag och hantverkare: automatisk arbetstid, uppgifter, foto per arbetspass, utlägg, planering, offert, faktura och löner – ur samma timmar. Du registrerar en gång och använder datan hela vägen. Se hela paketet i guiden om <a href="/sv/blog/byggprogram-for-byggforetag">byggprogram</a> eller <a href="/sv/blog/hantverkarapp">app för hantverkare</a>.</p>
+<p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Testa gärna våra <a href="/sv/verktyg">gratis verktyg</a> först.</p>
+
+<h2>Vad du ska titta på</h2>
+<ul>
+<li><strong>Funkar det på bygget?</strong> En bygg-app som bara funkar på kontoret används inte.</li>
+<li><strong>Hänger delarna ihop?</strong> Tid, foto, offert och faktura ska dela data.</li>
+<li><strong>Svenska regler och ROT.</strong> Appen ska hantera ROT och svensk fakturastandard.</li>
+</ul>
+
+<p>Rätt bygg-app gör en registrering nog – och krymper pappersarbetet på kontoret. Börja med gratis verktyg, väx in i en samlad app när det behövs.</p>
+`;
+
+const A_BYGG_APP: BlogPost = {
+  _id: "code-"+"bygg-app",
+  title: "Bygg-app – tid, jobb, offert och faktura i mobilen", slug: "bygg-app", locale: "sv",
+  excerpt: "Vad en bygg-app bör klara: tidrapportering, arbetsorder, foto, utlägg samt offert och faktura med ROT – i mobilen för både bygget och kontoret. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/live.webp", contentHtml: A_BYGG_APP_HTML,
+  seoTitle: "Bygg-app – allt i mobilen för byggföretag | ByggExp", seoDescription: "Bygg-app för byggföretag och hantverkare: tidrapportering, arbetsorder, foto, utlägg samt offert och faktura med ROT – i mobilen. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/live.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-21T09:10:00.000Z", createdAt: "2026-08-21T09:10:00.000Z", updatedAt: "2026-08-21T09:10:00.000Z",
+};
+
+const A_BYGGPROGRAM_PRIS_HTML = `
+<p>&quot;Vad kostar ett byggprogram?&quot; är en av de vanligaste frågorna – och svaret är: det beror på. Här går vi igenom vad som styr priset på ett byggprogram, hur du räknar hem det, och hur du kan börja gratis innan du bestämmer dig.</p>
+
+<h2>Vad styr priset?</h2>
+<ul>
+<li><strong>Antal användare</strong> – de flesta byggprogram tar betalt per användare och månad, så priset växer med teamet.</li>
+<li><strong>Vilka funktioner</strong> – enbart tidrapportering kostar mindre än ett helt system med offert, faktura, lön och planering.</li>
+<li><strong>Bindningstid och support</strong> – månadsvis vs. årsavtal, och vilken hjälp som ingår.</li>
+<li><strong>Onboarding</strong> – uppstart och import kan tillkomma.</li>
+</ul>
+
+<h2>Räkna hem det – inte bara priset</h2>
+<p>Ett byggprogram ska tjäna in sig, inte bara kosta. Väg priset mot vad du sparar: mindre tid på lön och fakturering, färre <a href="/sv/blog/kunden-betalar-inte-fakturan">missade fakturor</a>, rätt <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT</a>, och koll på <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">marginalen per projekt</a>. Ofta räcker några sparade timmar i månaden för att betala abonnemanget.</p>
+
+<h2>Börja gratis</h2>
+<p>Du behöver inte betala för att komma igång. Testa våra <a href="/sv/verktyg">gratis verktyg</a> (kalkyler, offert- och faktura-mallar) och se hur flödet fungerar. Vill du se pris och paket för ByggExp – <a href="/sv#pricing">se priser</a> eller <a href="/sv/contact">boka en demo</a> så går vi igenom vad som passar din verksamhet.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Titta bara på månadspriset.</strong> Räkna på vad du sparar, inte bara vad det kostar.</li>
+<li><strong>Köpa för mycket.</strong> Betala för funktioner du faktiskt använder.</li>
+<li><strong>Hoppa över testet.</strong> Prova gratis innan du binder dig.</li>
+</ul>
+
+<p>Priset på ett byggprogram beror på användare och funktioner – men den viktigare frågan är vad det sparar. Börja gratis, räkna på nyttan, välj paket därefter.</p>
+`;
+
+const A_BYGGPROGRAM_PRIS: BlogPost = {
+  _id: "code-"+"byggprogram-pris",
+  title: "Vad kostar ett byggprogram? Så tänker du på priset", slug: "byggprogram-pris", locale: "sv",
+  excerpt: "Vad styr priset på ett byggprogram – användare, funktioner, bindningstid och onboarding – och hur du räknar hem det. Börja gratis och välj paket därefter.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_BYGGPROGRAM_PRIS_HTML,
+  seoTitle: "Vad kostar ett byggprogram? Pris & paket | ByggExp", seoDescription: "Vad kostar ett byggprogram? Priset styrs av antal användare, funktioner, bindningstid och onboarding. Så räknar du hem det – och börjar gratis. Se priser hos ByggExp.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-21T09:15:00.000Z", createdAt: "2026-08-21T09:15:00.000Z", updatedAt: "2026-08-21T09:15:00.000Z",
+};
+
+const A_BASTA_BYGGPROGRAM_HTML = `
+<p>Att välja &quot;bästa byggprogram&quot; handlar inte om en topplista – det bästa programmet är det som passar just din verksamhet. Här är en checklista för hur du väljer rätt byggprogram 2026, och vad som skiljer ett bra system från ett som bara blir en kostnad.</p>
+
+<h2>7 saker att bedöma</h2>
+<ul>
+<li><strong>Hänger delarna ihop?</strong> Tid, offert, faktura och lön ska dela data – annars blir det öar och dubbelarbete.</li>
+<li><strong>Funkar det i mobilen på bygget?</strong> Om det bara funkar på kontoret används det inte.</li>
+<li><strong>Svenska regler och ROT.</strong> <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT</a> och svensk fakturastandard ska hanteras rätt.</li>
+<li><strong>Från offert till faktura.</strong> En accepterad <a href="/sv/blog/offertprogram-byggforetag">offert</a> ska bli <a href="/sv/blog/faktureringsprogram-bygg">faktura</a> utan att skrivas om.</li>
+<li><strong>Timmar till lön.</strong> Registrerad tid ska bli <a href="/sv/blog/loneprogram-bygg">löneunderlag</a> automatiskt.</li>
+<li><strong>Enkelt att komma igång.</strong> Onboarding och support som gör att teamet faktiskt börjar använda det.</li>
+<li><strong>Pris mot nytta.</strong> Räkna på vad det <a href="/sv/blog/byggprogram-pris">sparar</a>, inte bara vad det kostar.</li>
+</ul>
+
+<h2>Så testar du</h2>
+<p>Börja med det du känner mest smärta i – ofta tid, offert eller faktura – och prova det i praktiken innan du bestämmer dig. Testa gärna våra <a href="/sv/verktyg">gratis verktyg</a> för att se hur flödet fungerar, och läs guiden om <a href="/sv/blog/byggprogram-for-byggforetag">byggprogram för byggföretag</a> för vad ett samlat system ska klara.</p>
+
+<h2>Så gör ByggExp det</h2>
+<p>ByggExp är byggt för svenska byggföretag och hantverkare och täcker hela kedjan: tid, uppgifter, foto, planering, utlägg, offert, faktura (med ROT) och löner – ur samma timmar. <a href="/sv/contact">Boka en demo</a> så visar vi om det passar din verksamhet, eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+
+<p>Det &quot;bästa&quot; byggprogrammet är det som hänger ihop, funkar på bygget och räknar hem sig. Utgå från din vardag, testa i praktiken och välj därefter.</p>
+`;
+
+const A_BASTA_BYGGPROGRAM: BlogPost = {
+  _id: "code-"+"basta-byggprogram-2026",
+  title: "Bästa byggprogram 2026 – så väljer du rätt (checklista)", slug: "basta-byggprogram-2026", locale: "sv",
+  excerpt: "Hur du väljer bästa byggprogram 2026: 7 saker att bedöma – hänger delarna ihop, funkar det i mobilen, ROT, offert→faktura, timmar→lön, onboarding och pris mot nytta. Så gör ByggExp det.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_BASTA_BYGGPROGRAM_HTML,
+  seoTitle: "Bästa byggprogram 2026 – så väljer du rätt | ByggExp", seoDescription: "Bästa byggprogram 2026: checklista med 7 saker att bedöma – integration, mobil, ROT, offert→faktura, timmar→lön, onboarding och pris mot nytta. Så gör ByggExp det.",
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-21T09:20:00.000Z", createdAt: "2026-08-21T09:20:00.000Z", updatedAt: "2026-08-21T09:20:00.000Z",
+};
+
 export const TILLVAXT_ARTICLES: BlogPost[] = [
+  A_PERSONALPLANERING_BYGG,
+  A_VERKTYGSHANTERING_APP,
+  A_BYGG_APP,
+  A_BYGGPROGRAM_PRIS,
+  A_BASTA_BYGGPROGRAM,
   A_LONEPROGRAM_BYGG,
   A_UTLAGG_APP_BYGG,
   A_KALKYLPROGRAM_BYGG,

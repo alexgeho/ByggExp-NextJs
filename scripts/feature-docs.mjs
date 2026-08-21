@@ -27,7 +27,7 @@ export const FEATURE_DOCS = {
       { src: '/features-content/skapa-offert-1.webp', alt: 'ByggExp-appen: skapa en ny offert med kund, titel, rader och pris' },
       { src: '/features-content/skapa-offert-2.webp', alt: 'ByggExp-appen: lista över offerter med status, t.ex. utkast' },
     ],
-    imagesCaption: 'Så ser det ut i appen: skapa offerten och följ dess status direkt i mobilen.',
+    imagesCaption: 'Ny offert och listan över offerter i ByggExp-appen.',
   },
   'fakturera-fran-byggexp': {
     webbadmin: [
@@ -45,7 +45,7 @@ export const FEATURE_DOCS = {
       { src: '/features-content/fakturera-fran-byggexp-1.webp', alt: 'ByggExp-appen: skapa en ny faktura med kund, rader, moms och ROT-avdrag' },
       { src: '/features-content/fakturera-fran-byggexp-2.webp', alt: 'ByggExp-appen: lista över fakturor med status – utkast och skickad' },
     ],
-    imagesCaption: 'Så ser det ut i appen: skapa fakturan (med ROT och moms) och följ status – utkast, skickad, betald.',
+    imagesCaption: 'Ny faktura och listan över fakturor i ByggExp-appen.',
   },
   'loneunderlag-for-byggforetag': {
     webbadmin: [

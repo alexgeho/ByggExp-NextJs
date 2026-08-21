@@ -117,6 +117,10 @@ export const FEATURE_DOCS = {
     ],
     webImage: { src: '/features-content/narvaro-och-incheckning-pa-bygget-web.webp', alt: 'Bemanningsöversikt i webbadmin – vem är inbokad på bygget vilken dag' },
     webImageCaption: 'Bemannings- och närvaroöversikt i webbadmin – se vilka som är inbokade och på plats, dag för dag.',
+    images: [
+      { src: '/features-content/narvaro-och-incheckning-pa-bygget-1.webp', alt: 'ByggExp-appen: närvaro per medarbetare – vem är på plats (At work) och inte' },
+    ],
+    imagesCaption: 'Närvaro i appen – se i realtid vilka som är på plats, per projekt.',
   },
   'hantera-uppgifter-i-byggprojekt': {
     webbadmin: [
@@ -144,6 +148,10 @@ export const FEATURE_DOCS = {
       'Ställ in upprepning om det är återkommande, som en månadsfaktura.',
       'Spara – du får en notis i mobilen när det är dags och bockar av när det är klart.',
     ],
+    images: [
+      { src: '/features-content/paminnelser-uppgifter-och-deadlines-1.webp', alt: 'ByggExp-appen: push-påminnelser om uppgifter och deadlines på låsskärmen' },
+    ],
+    imagesCaption: 'Påminnelser i appen – notiser om uppgifter och deadlines direkt på mobilen.',
   },
   'dagsplanering-och-planeringsmoten': {
     webbadmin: [
@@ -159,6 +167,10 @@ export const FEATURE_DOCS = {
     ],
     webImage: { src: '/features-content/dagsplanering-och-planeringsmoten-web.webp', alt: 'Planeringsvyn i webbadmin – vem gör vad vilken vecka, per person eller projekt' },
     webImageCaption: 'Planeringsvyn i webbadmin – dra ut jobb per person eller projekt över veckorna.',
+    images: [
+      { src: '/features-content/dagsplanering-och-planeringsmoten-1.webp', alt: 'ByggExp-appen: dagsplanering som tidslinje per medarbetare och projekt' },
+    ],
+    imagesCaption: 'Dagsplanering i appen – teamet ser sin plan som tidslinje, uppdaterad i realtid.',
   },
   'dokumentera-med-foton-pa-bygget': {
     webbadmin: [
@@ -171,6 +183,10 @@ export const FEATURE_DOCS = {
       'Bilden taggas automatiskt till projektet – lägg gärna till en kort kommentar, till exempel "fuktspärr innan gjutning".',
       'Spara – fotot laddas upp och blir synligt för alla i teamet med rätt behörighet.',
     ],
+    images: [
+      { src: '/features-content/dokumentera-med-foton-pa-bygget-1.webp', alt: 'ByggExp-appen: byggfoton per projekt och datum, kopplade till arbetspasset' },
+    ],
+    imagesCaption: 'Foton i appen – bilder samlade per projekt och datum, kopplade till arbetspasset.',
   },
   'fota-kvitton-och-hantera-utlagg': {
     webbadmin: [
@@ -183,6 +199,10 @@ export const FEATURE_DOCS = {
       'Fyll i belopp och moms och lägg till en kort notering om vad inköpet avser.',
       'Spara – kvittot laddas upp och blir synligt för administratören i webbadmin.',
     ],
+    images: [
+      { src: '/features-content/fota-kvitton-och-hantera-utlagg-1.webp', alt: 'ByggExp-appen: kvitton och utlägg – fota kvittot och koppla till projekt' },
+    ],
+    imagesCaption: 'Kvitton i appen – fota kvittot direkt vid kassan och koppla det till rätt projekt.',
     ecosystem: 'utlägget kopplas till projektet, syns i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomin</a> och kan tas med på <a href="/sv/blog/fakturera-fran-byggexp">fakturan</a> – ingen dubbelregistrering.',
   },
   'hantera-verktyg-och-utrustning': {

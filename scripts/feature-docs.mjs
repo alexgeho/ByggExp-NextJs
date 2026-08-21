@@ -135,6 +135,10 @@ export const FEATURE_DOCS = {
     ],
     webImage: { src: '/features-content/hantera-uppgifter-i-byggprojekt-web.webp', alt: 'Uppgifter i webbadmin – lista med ansvarig, projekt, start och deadline' },
     webImageCaption: 'Uppgifter i webbadmin – tilldela ansvarig och deadline, följ öppna, försenade och klara per projekt.',
+    images: [
+      { src: '/features-content/hantera-uppgifter-i-byggprojekt-1.webp', alt: 'ByggExp-appen: uppgiftslista per projekt med status' },
+    ],
+    imagesCaption: 'Uppgifter i appen – den ansvarige ser sin uppgift och uppdaterar status ute på bygget.',
   },
   'paminnelser-uppgifter-och-deadlines': {
     webbadmin: [
@@ -218,5 +222,9 @@ export const FEATURE_DOCS = {
     ],
     webImage: { src: '/features-content/hantera-verktyg-och-utrustning-web.webp', alt: 'Verktygsregistret i webbadmin – status, QR-kod, plats och vem som håller verktyget' },
     webImageCaption: 'Verktygsregistret i webbadmin – status (tillgängligt, i bruk, på service, trasigt), QR-kod, plats och ansvarig.',
+    images: [
+      { src: '/features-content/hantera-verktyg-och-utrustning-1.webp', alt: 'ByggExp-appen: verktygslista med status och vem som ansvarar' },
+    ],
+    imagesCaption: 'Verktyg i appen – personalen ser vilka verktyg som finns, var de är och vem som ansvarar.',
   },
 };

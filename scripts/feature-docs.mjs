@@ -28,6 +28,8 @@ export const FEATURE_DOCS = {
       { src: '/features-content/skapa-offert-2.webp', alt: 'ByggExp-appen: lista över offerter med status, t.ex. utkast' },
     ],
     imagesCaption: 'Ny offert och listan över offerter i ByggExp-appen.',
+    webImage: { src: '/features-content/skapa-offert-i-byggexp-web.webp', alt: 'Offerter i webbadmin – lista med kund, status och totalsumma' },
+    webImageCaption: 'Offerter i webbadmin – skapa, skicka och följ status (utkast, skickad, accepterad).',
     ecosystem: 'en godkänd offert blir underlag för <a href="/sv/blog/fakturera-fran-byggexp">fakturan</a> och följer med i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomin</a> – allt i samma system, utan att mata in något två gånger.',
   },
   'fakturera-fran-byggexp': {
@@ -88,6 +90,8 @@ export const FEATURE_DOCS = {
       'På bygget checkar var och en in – GPS-positionen bekräftar att de är på plats och tiden börjar räknas.',
       'Vid arbetsdagens slut checkar de ut så att passet stängs och timmarna bokförs på projektet.',
     ],
+    webImage: { src: '/features-content/automatisk-tidrapportering-och-export-web.webp', alt: 'Tider i webbadmin – planerade, GPS- och manuella timmar per medarbetare och dag' },
+    webImageCaption: 'Tider i webbadmin – planerade, GPS- och manuella timmar per medarbetare, redo att exportera till lön eller faktura.',
     ecosystem: 'timmarna du loggar här är samma timmar som blir <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a> och <a href="/sv/blog/fakturera-fran-byggexp">fakturarader</a>, och som räknas in i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomin</a> – registrera en gång, använd överallt.',
   },
   'narvaro-och-incheckning-pa-bygget': {
@@ -100,6 +104,8 @@ export const FEATURE_DOCS = {
       'Medarbetaren öppnar appen vid ankomst och trycker <strong>Checka in</strong> – GPS bekräftar arbetsplatsen.',
       'När arbetsdagen är slut checkar var och en ut i appen.',
     ],
+    webImage: { src: '/features-content/narvaro-och-incheckning-pa-bygget-web.webp', alt: 'Bemanningsöversikt i webbadmin – vem är inbokad på bygget vilken dag' },
+    webImageCaption: 'Bemannings- och närvaroöversikt i webbadmin – se vilka som är inbokade och på plats, dag för dag.',
   },
   'hantera-uppgifter-i-byggprojekt': {
     webbadmin: [
@@ -112,6 +118,8 @@ export const FEATURE_DOCS = {
       'Den ansvarige ser uppgiften direkt i appen på sin telefon.',
       'Ute på bygget uppdaterar medarbetaren status till pågående eller klar.',
     ],
+    webImage: { src: '/features-content/hantera-uppgifter-i-byggprojekt-web.webp', alt: 'Uppgifter i webbadmin – lista med ansvarig, projekt, start och deadline' },
+    webImageCaption: 'Uppgifter i webbadmin – tilldela ansvarig och deadline, följ öppna, försenade och klara per projekt.',
   },
   'paminnelser-uppgifter-och-deadlines': {
     webbadmin: [
@@ -138,6 +146,8 @@ export const FEATURE_DOCS = {
       'Under dagen ser teamet sin plan i appen.',
       'Ändrar du något i webbadmin uppdateras planen direkt i mobilen.',
     ],
+    webImage: { src: '/features-content/dagsplanering-och-planeringsmoten-web.webp', alt: 'Planeringsvyn i webbadmin – vem gör vad vilken vecka, per person eller projekt' },
+    webImageCaption: 'Planeringsvyn i webbadmin – dra ut jobb per person eller projekt över veckorna.',
   },
   'dokumentera-med-foton-pa-bygget': {
     webbadmin: [
@@ -175,5 +185,7 @@ export const FEATURE_DOCS = {
       'Personalen öppnar appen på bygget och ser vilka verktyg som finns och vem som ansvarar.',
       'Alla med behörighet ser aktuell plats och ansvarig direkt i mobilen.',
     ],
+    webImage: { src: '/features-content/hantera-verktyg-och-utrustning-web.webp', alt: 'Verktygsregistret i webbadmin – status, QR-kod, plats och vem som håller verktyget' },
+    webImageCaption: 'Verktygsregistret i webbadmin – status (tillgängligt, i bruk, på service, trasigt), QR-kod, plats och ansvarig.',
   },
 };

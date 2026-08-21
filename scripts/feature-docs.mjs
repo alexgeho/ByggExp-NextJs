@@ -77,6 +77,13 @@ export const FEATURE_DOCS = {
       'Teamet loggar tid och registrerar material och kvitton löpande så att siffrorna alltid är färska.',
       'Som ledare får du en snabb ekonomisk överblick per projekt i mobilen.',
     ],
+    webImage: { src: '/features-content/projektekonomi-och-lonsamhet-web.webp', alt: 'Projektekonomi i webbadmin – budget mot utfall för timmar, kostnader, fakturerat och marginal' },
+    webImageCaption: 'Projektöversikt i webbadmin – budget mot utfall för timmar, kostnader, fakturerat och marginal på ett ställe.',
+    images: [
+      { src: '/features-content/projektekonomi-och-lonsamhet-1.webp', alt: 'ByggExp-appen: projektets ekonomi – timpriser, arbetade timmar och kostnad' },
+      { src: '/features-content/projektekonomi-och-lonsamhet-2.webp', alt: 'ByggExp-appen: projektets ekonomi – kostnader, fakturerat och marginal' },
+    ],
+    imagesCaption: 'Projektekonomin i appen – timpriser, kostnader, fakturerat och marginal i realtid.',
     ecosystem: 'ekonomin uppdateras av det teamet redan gör – <a href="/sv/blog/automatisk-tidrapportering-och-export">loggade timmar</a>, material, <a href="/sv/blog/fota-kvitton-och-hantera-utlagg">kvitton</a> och skickade <a href="/sv/blog/fakturera-fran-byggexp">fakturor</a>. Du ser saldot mot budget i realtid, utan dubbelinmatning.',
   },
   'automatisk-tidrapportering-och-export': {

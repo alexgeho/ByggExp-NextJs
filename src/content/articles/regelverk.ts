@@ -83,6 +83,7 @@ const PERSONALLIGGARE: BlogPost = {
 
 const ID06_HTML = `
 <p>Nästan alla på ett bygge har ett ID06-kort i fickan – men få vet exakt vad det är, vad det krävs för och om det ens är ett lagkrav. Här reder vi ut vad ID06 är, vad det används till och hur det hänger ihop med personalliggaren.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/id06.webp" alt="Diagram: ID06 används för identitet, närvaroregistrering, kompetens och access" width="720" height="380" loading="lazy"><figcaption>ID06 används för identitet, närvaro (personalliggare), kompetens och access – men är inte ett lagkrav i sig.</figcaption></figure>
 
 <h2>Vad är ID06?</h2>
 <p>ID06 är byggbranschens system för <strong>identifikation, närvaroregistrering och kompetens</strong>. Kortet knyter en person till rätt identitet och används bland annat för att registrera vem som är på arbetsplatsen och för att samla individens utbildningar och intyg i ID06 Kompetensdatabas. Syftet är en säkrare arbetsplats och sundare konkurrens – att alla som vistas på bygget är behöriga och identitetskontrollerade.</p>

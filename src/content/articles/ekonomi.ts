@@ -151,6 +151,7 @@ const ATTESTERING: BlogPost = {
 
 const TIMPRIS_HTML = `
 <p>&quot;Vad ska jag ta betalt i timmen?&quot; är en av de vanligaste – och dyraste – frågorna en hantverkare kan svara fel på. Sätter du priset för lågt jobbar du gratis åt kunden; sätter du det för högt utan att kunna motivera det tappar du jobb. Här går vi igenom marknadsläget 2026, hur du räknar fram <em>ditt</em> timpris utifrån dina egna kostnader, och varför debiteringsgraden ofta är det som avgör om det går ihop.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/timpris.webp" alt="Diagram: timpris byggs upp av lön, sociala avgifter och omkostnader samt påslag" width="720" height="380" loading="lazy"><figcaption>Timpriset byggs upp: lön + sociala avgifter och omkostnader + påslag. Debiteringsgraden avgör om det går ihop.</figcaption></figure>
 
 <p><a href="/sv/verktyg/timpris-kalkylator">Räkna ut ditt timpris direkt i vår gratis timpris-kalkylator →</a></p>
 
@@ -247,6 +248,7 @@ const TIMPRIS: BlogPost = {
 
 const OFFERT_HTML = `
 <p>Offerten är det första kunden ser av ditt hantverk – och det dokument som avgör vem som får jobbet och vad som gäller om något blir dyrare. En tydlig offert vinner fler affärer och skyddar dig när diskussionen kommer. Här går vi igenom vad en offert måste innehålla, skillnaden mellan fast pris och löpande räkning, hur du hanterar ändringar (ÄTA) – och hur du gör en proffsig offert på minuter.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/offert.webp" alt="Diagram: vad en offert ska innehålla och fast pris vs löpande räkning" width="720" height="380" loading="lazy"><figcaption>En komplett offert: parter, omfattning, pris (fast eller löpande), ÄTA, giltighetstid och betalningsvillkor.</figcaption></figure>
 
 <p><a href="/sv/verktyg/offert-mall">Skapa en gratis offert (PDF) direkt i vår offertmall →</a></p>
 

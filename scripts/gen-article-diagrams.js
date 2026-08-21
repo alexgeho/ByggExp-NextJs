@@ -191,6 +191,60 @@ const moms = frame(`
   ${ARR_DEF}
 `);
 
+// 11. ID06 – vad kortet används till
+const id06 = frame(`
+  ${title('ID06 – vad kortet används till')}
+  ${stepBox(36, 120, 128, 74, 'Identitet', 'vem personen är', BLUE)}
+  ${stepBox(200, 120, 128, 74, 'Närvaro', 'personalliggare', GREEN)}
+  ${stepBox(364, 120, 128, 74, 'Kompetens', 'utbildningar', AMBER)}
+  ${stepBox(528, 120, 128, 74, 'Access', 'in-/utpassering', BLUE)}
+  <text x="40" y="238" ${font} font-size="15" font-weight="700" fill="${INK}">ID06 är inte ett lagkrav i sig.</text>
+  <text x="40" y="264" ${font} font-size="14" fill="${MUT}">Men det är vanligaste sättet att uppfylla kravet på elektronisk personalliggare.</text>
+`);
+
+// 12. Offert – vad den ska innehålla
+const offert = frame(`
+  ${title('Offert – vad den ska innehålla')}
+  ${card(40, 74, 330, 250, 'Offertens innehåll', BLUE, ['Parter och org.nr', 'Omfattning – vad som ingår', 'Pris: fast eller löpande', 'ÄTA – hur ändringar hanteras', 'Giltighetstid', 'Betalningsvillkor och ROT'])}
+  <text x="402" y="120" ${font} font-size="15" font-weight="700" fill="${INK}">Fast pris eller löpande?</text>
+  <text x="402" y="150" ${font} font-size="14" fill="${MUT}">Fast pris = förutsägbart för</text>
+  <text x="402" y="172" ${font} font-size="14" fill="${MUT}">kunden. Löpande = du tar</text>
+  <text x="402" y="194" ${font} font-size="14" fill="${MUT}">mindre risk vid osäkert jobb.</text>
+  <rect x="402" y="222" width="278" height="72" rx="10" fill="#eef4ff" stroke="#d5e2fb"/>
+  <text x="418" y="248" ${font} font-size="13.5" fill="${INK}">Ange tydligt vilket som gäller</text>
+  <text x="418" y="268" ${font} font-size="13.5" fill="${INK}">– det är här tvister uppstår.</text>
+`);
+
+// 13. Timpris – så byggs det upp
+const timpris = frame(`
+  ${title('Timpris – så byggs det upp')}
+  ${stepBox(36, 120, 128, 74, 'Lön', 'till dig', BLUE)}
+  ${arrow(164, 200, 157)}
+  ${stepBox(200, 120, 128, 74, '+ sociala avg.', '&amp; omkostnader', AMBER)}
+  ${arrow(328, 364, 157)}
+  ${stepBox(364, 120, 128, 74, '+ påslag', '/ vinst', AMBER)}
+  ${arrow(492, 528, 157)}
+  ${stepBox(528, 120, 128, 74, 'Timpris', 'till kund', GREEN)}
+  <text x="40" y="240" ${font} font-size="15" font-weight="700" fill="${INK}">Debiteringsgraden avgör ofta om det går ihop.</text>
+  <text x="40" y="266" ${font} font-size="14" fill="${MUT}">Bara en del av arbetstiden är fakturerbar – res, offert och admin är det inte.</text>
+  ${ARR_DEF}
+`);
+
+// 14. Slutbesiktning – så går den till
+const slutbesiktning = frame(`
+  ${title('Slutbesiktning – så går den till')}
+  ${stepBox(36, 120, 128, 74, 'Kallelse', 'i tid', BLUE)}
+  ${arrow(164, 200, 157)}
+  ${stepBox(200, 120, 128, 74, 'Besiktning', 'på plats', BLUE)}
+  ${arrow(328, 364, 157)}
+  ${stepBox(364, 120, 128, 74, 'Utlåtande', 'godkänd?', AMBER)}
+  ${arrow(492, 528, 157)}
+  ${stepBox(528, 120, 128, 74, 'Efter-', 'besiktning', GREEN)}
+  <text x="40" y="240" ${font} font-size="15" font-weight="700" fill="${INK}">Vid godkänd entreprenad:</text>
+  <text x="40" y="266" ${font} font-size="14" fill="${MUT}">ansvaret går över till beställaren och garantitiden börjar löpa.</text>
+  ${ARR_DEF}
+`);
+
 const DIAGRAMS = {
   'ab-kontrakt': abKontrakt,
   'ata-flode': ata,
@@ -202,6 +256,10 @@ const DIAGRAMS = {
   'grus': grus,
   'kvadratmeter': kvadratmeter,
   'moms': moms,
+  'id06': id06,
+  'offert': offert,
+  'timpris': timpris,
+  'slutbesiktning': slutbesiktning,
 };
 
 async function main() {

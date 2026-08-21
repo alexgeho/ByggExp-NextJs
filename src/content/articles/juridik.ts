@@ -176,6 +176,7 @@ const AB04: BlogPost = {
 
 const SLUTBESIKTNING_HTML = `
 <p>Slutbesiktningen är målsnöret i ett byggprojekt – det är här entreprenaden godkänns, ansvaret går över och garantitiden börjar ticka. Går den fel kan betalning hållas inne och tvister uppstå. Här är hur en slutbesiktning enligt AB 04 går till och vad du behöver ha ordning på.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/slutbesiktning.webp" alt="Diagram: slutbesiktningens steg – kallelse, besiktning, utlåtande och efterbesiktning" width="720" height="380" loading="lazy"><figcaption>Slutbesiktningens gång: kallelse, besiktning, utlåtande och eventuell efterbesiktning – vid godkänt börjar garantitiden löpa.</figcaption></figure>
 
 <h2>Vad är en slutbesiktning?</h2>
 <p>En slutbesiktning är en oberoende kontroll av att entreprenaden är utförd enligt kontraktet. Den utförs av en <strong>besiktningsman</strong> som ska vara oberoende i förhållande till båda parter och ha dokumenterad sakkunskap om entreprenadjuridik och byggteknik. Besiktningen regleras i <strong>AB 04 kap 7</strong> (och motsvarande i ABT 06).</p>

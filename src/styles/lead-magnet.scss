@@ -444,6 +444,13 @@
   color: #fff;
 }
 
+// Selected template — clear feedback that the click did something.
+.lm-tool-preset.is-active {
+  background: var(--lm-accent);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(37, 99, 201, 0.28);
+}
+
 // --- template preview image -------------------------------------------------
 .lead-magnet-preview {
   margin-bottom: var(--lm-gap);

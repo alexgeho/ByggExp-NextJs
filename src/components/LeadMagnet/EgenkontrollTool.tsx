@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { EGENKONTROLL_PRESETS } from './egenkontrollPresets';
 
@@ -23,6 +23,12 @@ export default function EgenkontrollTool() {
   const [category, setCategory] = useState(CATEGORIES[0]);
   const [rows, setRows] = useState<Row[]>([emptyRow(), emptyRow(), emptyRow()]);
   const [busy, setBusy] = useState(false);
+  // Clarity showed most "dead clicks" landing on the template buttons: users
+  // clicked a template but got no visible feedback (the filled table is below
+  // the fold). Track the chosen preset to highlight it, and scroll the table
+  // into view so it's obvious the template was applied.
+  const [activePreset, setActivePreset] = useState<string | null>(null);
+  const rowsRef = useRef<HTMLDivElement>(null);
 
   const setRow = (index: number, patch: Partial<Row>) =>
     setRows((prev) => prev.map((row, i) => (i === index ? { ...row, ...patch } : row)));
@@ -31,6 +37,7 @@ export default function EgenkontrollTool() {
   const applyPreset = (presetId: string) => {
     const preset = EGENKONTROLL_PRESETS.find((p) => p.id === presetId);
     if (!preset) return;
+    setActivePreset(presetId);
     setTitle(preset.name);
     setCategory(preset.category);
     setRows(
@@ -40,6 +47,10 @@ export default function EgenkontrollTool() {
         comment: item.reference ? `Ref: ${item.reference}` : '',
       })),
     );
+    // Let the table render, then bring it into view as clear confirmation.
+    window.setTimeout(() => {
+      rowsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 60);
   };
   const removeRow = (index: number) =>
     setRows((prev) => (prev.length > 1 ? prev.filter((_, i) => i !== index) : prev));
@@ -151,7 +162,8 @@ export default function EgenkontrollTool() {
             <button
               key={preset.id}
               type="button"
-              className="lm-tool-preset"
+              className={`lm-tool-preset${activePreset === preset.id ? ' is-active' : ''}`}
+              aria-pressed={activePreset === preset.id}
               onClick={() => applyPreset(preset.id)}
             >
               {preset.name}
@@ -194,7 +206,7 @@ export default function EgenkontrollTool() {
           </label>
         </div>
 
-        <div className="lm-tool-rows">
+        <div className="lm-tool-rows" ref={rowsRef}>
           <div className="lm-tool-row lm-tool-row-egen lm-tool-row-head">
             <span>Kontrollpunkt</span>
             <span>Resultat</span>

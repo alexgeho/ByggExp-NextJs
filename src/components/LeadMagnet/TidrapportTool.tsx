@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 
 // Free tidrapport (time report) tool: fill employee + project + day rows and
 // download a PDF with an automatic hour total. Mirrors what ByggExp captures
@@ -13,6 +13,17 @@ export default function TidrapportTool() {
   const [project, setProject] = useState('');
   const [rows, setRows] = useState<Row[]>([emptyRow(), emptyRow(), emptyRow()]);
   const [busy, setBusy] = useState(false);
+  // Highlight the chosen template and scroll the table into view — same fix as
+  // egenkontroll, where Clarity showed dead clicks on template buttons that gave
+  // no visible feedback.
+  const [activePreset, setActivePreset] = useState<string | null>(null);
+  const rowsRef = useRef<HTMLDivElement>(null);
+  const afterPreset = (id: string) => {
+    setActivePreset(id);
+    window.setTimeout(() => {
+      rowsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 60);
+  };
 
   const total = useMemo(
     () =>
@@ -38,16 +49,19 @@ export default function TidrapportTool() {
       { date: '', hours: '8', note: 'El i kök' },
       { date: '', hours: '6', note: 'Städ och skyddsrond' },
     ]);
+    afterPreset('exempel');
   };
 
   // Period templates — a daily, weekly or monthly timesheet, like the
   // variants competitors offer. Weekly seeds weekday labels, monthly seeds
   // one row per day of the month.
   const WEEKDAYS = ['Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag', 'Söndag'];
-  const seedDay = () => setRows([emptyRow()]);
-  const seedWeek = () => setRows(WEEKDAYS.map((day) => ({ date: '', hours: '', note: day })));
-  const seedMonth = () =>
+  const seedDay = () => { setRows([emptyRow()]); afterPreset('dag'); };
+  const seedWeek = () => { setRows(WEEKDAYS.map((day) => ({ date: '', hours: '', note: day }))); afterPreset('vecka'); };
+  const seedMonth = () => {
     setRows(Array.from({ length: 31 }, (_, i) => ({ date: '', hours: '', note: `Dag ${i + 1}` })));
+    afterPreset('manad');
+  };
 
   function downloadCsv() {
     const rowsOut = [
@@ -151,10 +165,10 @@ export default function TidrapportTool() {
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Välj period eller fyll i exempel:</span>
         <div className="lm-tool-presets-buttons">
-          <button type="button" className="lm-tool-preset" onClick={seedDay}>Dagsmall</button>
-          <button type="button" className="lm-tool-preset" onClick={seedWeek}>Veckomall</button>
-          <button type="button" className="lm-tool-preset" onClick={seedMonth}>Månadsmall</button>
-          <button type="button" className="lm-tool-preset" onClick={fillExample}>Fyll i exempel</button>
+          <button type="button" className={`lm-tool-preset${activePreset === 'dag' ? ' is-active' : ''}`} aria-pressed={activePreset === 'dag'} onClick={seedDay}>Dagsmall</button>
+          <button type="button" className={`lm-tool-preset${activePreset === 'vecka' ? ' is-active' : ''}`} aria-pressed={activePreset === 'vecka'} onClick={seedWeek}>Veckomall</button>
+          <button type="button" className={`lm-tool-preset${activePreset === 'manad' ? ' is-active' : ''}`} aria-pressed={activePreset === 'manad'} onClick={seedMonth}>Månadsmall</button>
+          <button type="button" className={`lm-tool-preset${activePreset === 'exempel' ? ' is-active' : ''}`} aria-pressed={activePreset === 'exempel'} onClick={fillExample}>Fyll i exempel</button>
         </div>
       </div>
 
@@ -176,7 +190,7 @@ export default function TidrapportTool() {
           </label>
         </div>
 
-        <div className="lm-tool-rows">
+        <div className="lm-tool-rows" ref={rowsRef}>
           <div className="lm-tool-row lm-tool-row-head">
             <span>Datum</span>
             <span>Timmar</span>

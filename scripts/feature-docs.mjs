@@ -23,6 +23,11 @@ export const FEATURE_DOCS = {
       'I mobilappen ser du dina skickade offerter och deras status.',
       'Följ upp direkt från bygget och påminn kunden vid behov.',
     ],
+    images: [
+      { src: '/features-content/skapa-offert-1.webp', alt: 'ByggExp-appen: skapa en ny offert med kund, titel, rader och pris' },
+      { src: '/features-content/skapa-offert-2.webp', alt: 'ByggExp-appen: lista över offerter med status, t.ex. utkast' },
+    ],
+    imagesCaption: 'Så ser det ut i appen: skapa offerten och följ dess status direkt i mobilen.',
   },
   'fakturera-fran-byggexp': {
     webbadmin: [

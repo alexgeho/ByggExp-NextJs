@@ -41,6 +41,15 @@ function buildBlock(doc) {
   const parts = [];
   if (doc.webbadmin?.length) parts.push(`<h2>Så gör du i webbadmin</h2>\n${ol(doc.webbadmin)}`);
   if (doc.appen?.length) parts.push(`<h2>Så gör du i appen</h2>\n${ol(doc.appen)}`);
+  if (doc.images?.length) {
+    const imgs = doc.images
+      .map((im) => `<img src="${im.src}" alt="${im.alt}" loading="lazy" style="width:240px;max-width:44%;height:auto;margin:0;border-radius:18px;display:block">`)
+      .join('');
+    const cap = doc.imagesCaption
+      ? `<figcaption style="flex-basis:100%;text-align:center;font-size:0.9rem;color:#6b7a90;margin-top:8px">${doc.imagesCaption}</figcaption>`
+      : '';
+    parts.push(`<figure style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:26px 0">${imgs}${cap}</figure>`);
+  }
   return `${MARK_START}\n${parts.join('\n')}\n${MARK_END}`;
 }
 

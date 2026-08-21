@@ -20,6 +20,7 @@ function buildBlock(doc) {
   const parts = [];
   if (doc.webbadmin?.length) parts.push(`<h2>Så gör du i webbadmin</h2>\n${ol(doc.webbadmin)}`);
   if (doc.appen?.length) parts.push(`<h2>Så gör du i appen</h2>\n${ol(doc.appen)}`);
+  if (doc.ecosystem) parts.push(`<p class="eco-note"><strong>Allt hänger ihop:</strong> ${doc.ecosystem}</p>`);
   if (doc.images?.length) {
     const imgs = doc.images
       .map((im) => `<img src="${im.src}" alt="${im.alt}" loading="lazy">`)

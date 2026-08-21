@@ -530,6 +530,18 @@
   }
 }
 
+// "Allt hänger ihop" ecosystem callout — highlights how a feature connects to
+// the rest (time/expenses -> invoice -> project economy).
+.blog-article-content .eco-note {
+  margin: 22px 0;
+  padding: 14px 18px;
+  background: #eef4ff;
+  border-left: 4px solid var(--blue, #2563c9);
+  border-radius: 10px;
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+
 .blog-article-content img {
   display: block;
   width: 100%;

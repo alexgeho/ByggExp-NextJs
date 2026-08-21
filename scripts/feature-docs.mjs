@@ -28,6 +28,7 @@ export const FEATURE_DOCS = {
       { src: '/features-content/skapa-offert-2.webp', alt: 'ByggExp-appen: lista över offerter med status, t.ex. utkast' },
     ],
     imagesCaption: 'Ny offert och listan över offerter i ByggExp-appen.',
+    ecosystem: 'en godkänd offert blir underlag för <a href="/sv/blog/fakturera-fran-byggexp">fakturan</a> och följer med i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomin</a> – allt i samma system, utan att mata in något två gånger.',
   },
   'fakturera-fran-byggexp': {
     webbadmin: [
@@ -46,6 +47,7 @@ export const FEATURE_DOCS = {
       { src: '/features-content/fakturera-fran-byggexp-2.webp', alt: 'ByggExp-appen: lista över fakturor med status – utkast och skickad' },
     ],
     imagesCaption: 'Ny faktura och listan över fakturor i ByggExp-appen.',
+    ecosystem: 'fakturan står inte för sig själv – <a href="/sv/blog/automatisk-tidrapportering-och-export">loggad tid</a>, material och <a href="/sv/blog/fota-kvitton-och-hantera-utlagg">utlägg</a> blir automatiskt fakturarader, och fakturan syns direkt i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektets ekonomi</a> så du ser marginalen på en gång.',
   },
   'loneunderlag-for-byggforetag': {
     webbadmin: [
@@ -71,6 +73,7 @@ export const FEATURE_DOCS = {
       'Teamet loggar tid och registrerar material och kvitton löpande så att siffrorna alltid är färska.',
       'Som ledare får du en snabb ekonomisk överblick per projekt i mobilen.',
     ],
+    ecosystem: 'ekonomin uppdateras av det teamet redan gör – <a href="/sv/blog/automatisk-tidrapportering-och-export">loggade timmar</a>, material, <a href="/sv/blog/fota-kvitton-och-hantera-utlagg">kvitton</a> och skickade <a href="/sv/blog/fakturera-fran-byggexp">fakturor</a>. Du ser saldot mot budget i realtid, utan dubbelinmatning.',
   },
   'automatisk-tidrapportering-och-export': {
     webbadmin: [
@@ -83,6 +86,7 @@ export const FEATURE_DOCS = {
       'På bygget checkar var och en in – GPS-positionen bekräftar att de är på plats och tiden börjar räknas.',
       'Vid arbetsdagens slut checkar de ut så att passet stängs och timmarna bokförs på projektet.',
     ],
+    ecosystem: 'timmarna du loggar här är samma timmar som blir <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a> och <a href="/sv/blog/fakturera-fran-byggexp">fakturarader</a>, och som räknas in i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomin</a> – registrera en gång, använd överallt.',
   },
   'narvaro-och-incheckning-pa-bygget': {
     webbadmin: [
@@ -156,6 +160,7 @@ export const FEATURE_DOCS = {
       'Fyll i belopp och moms och lägg till en kort notering om vad inköpet avser.',
       'Spara – kvittot laddas upp och blir synligt för administratören i webbadmin.',
     ],
+    ecosystem: 'utlägget kopplas till projektet, syns i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomin</a> och kan tas med på <a href="/sv/blog/fakturera-fran-byggexp">fakturan</a> – ingen dubbelregistrering.',
   },
   'hantera-verktyg-och-utrustning': {
     webbadmin: [

@@ -1,7 +1,7 @@
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
@@ -157,6 +157,12 @@ export default function BlogArticlePage({
     );
   }
 
+  // Horizontal carousel of related articles — arrows scroll the track.
+  const relatedRef = useRef<HTMLDivElement>(null);
+  const scrollRelated = (dir: number) => {
+    relatedRef.current?.scrollBy({ left: dir * 340, behavior: 'smooth' });
+  };
+
   // Click the hero to open it in a full-screen lightbox (Esc or click to close).
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   useEffect(() => {
@@ -282,7 +288,18 @@ export default function BlogArticlePage({
         <section className="blog-related">
           <div className="container container-narrow">
             <h2 className="blog-related-title">{copy.related}</h2>
-            <div className="blog-related-grid">
+            <div className="blog-related-carousel">
+              {related.length > 1 ? (
+                <button
+                  type="button"
+                  className="blog-related-arrow blog-related-arrow--prev"
+                  aria-label="Föregående"
+                  onClick={() => scrollRelated(-1)}
+                >
+                  ‹
+                </button>
+              ) : null}
+              <div className="blog-related-grid" ref={relatedRef}>
               {related.map((item) => (
                 <Link
                   key={item._id || item.slug}
@@ -303,6 +320,17 @@ export default function BlogArticlePage({
                   </div>
                 </Link>
               ))}
+              </div>
+              {related.length > 1 ? (
+                <button
+                  type="button"
+                  className="blog-related-arrow blog-related-arrow--next"
+                  aria-label="Nästa"
+                  onClick={() => scrollRelated(1)}
+                >
+                  ›
+                </button>
+              ) : null}
             </div>
           </div>
         </section>

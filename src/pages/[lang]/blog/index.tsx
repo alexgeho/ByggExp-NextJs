@@ -1,7 +1,8 @@
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useMemo, useState, type CSSProperties } from 'react';
+import { useEffect, useMemo, useState, type CSSProperties } from 'react';
+import { useRouter } from 'next/router';
 
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
@@ -77,6 +78,15 @@ export default function BlogIndexPage({
 
   const [activeCategory, setActiveCategory] = useState<BlogCategoryKey | 'alla'>('alla');
   const [query, setQuery] = useState('');
+
+  // Pre-select a category when arriving via a header link (/blog?kategori=kalkyl).
+  const router = useRouter();
+  useEffect(() => {
+    const k = router.query.kategori;
+    if (typeof k === 'string' && BLOG_CATEGORIES.some((c) => c.key === k)) {
+      setActiveCategory(k as BlogCategoryKey);
+    }
+  }, [router.query.kategori]);
 
   // Only offer categories that actually have articles in the current list.
   const presentCategories = useMemo(() => {

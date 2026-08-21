@@ -2,6 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { languages, selectableLanguages } from "../../locales/languages";
+import { BLOG_CATEGORIES } from "../../lib/blog-categories";
 import SiteSearch from "../SiteSearch/SiteSearch";
 import type { HeaderProps } from "../../types/header";
 
@@ -137,6 +138,27 @@ function Header({ headerT }: HeaderProps) {
                 >
                   {headerT.blog}
                 </Link>
+                {(lang === "sv" || lang === "nb") && (
+                  <div className="nav-dropdown-cats">
+                    {BLOG_CATEGORIES.map((cat) => (
+                      <Link
+                        key={cat.key}
+                        href={`/${lang}/blog?kategori=${cat.key}`}
+                        className="nav-dropdown-cat"
+                        onClick={() => {
+                          setResOpen(false);
+                          closeMenu();
+                        }}
+                      >
+                        <span
+                          className="nav-dropdown-cat-dot"
+                          style={{ background: cat.color }}
+                        />
+                        {cat.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
 

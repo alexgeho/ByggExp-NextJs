@@ -78,6 +78,7 @@ const AMP: BlogPost = {
 
 const HETA_ARBETEN_HTML = `
 <p>Heta arbeten är en av de vanligaste orsakerna till bränder på arbetsplatser – och ett moment där försäkringsbolagen ställer hårda krav. Saknas rätt certifikat eller brandvakt kan försäkringen sättas ur spel. Här är vad heta arbeten är, vilka roller som krävs och vad som gäller kring certifikat och tillstånd.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/heta-arbeten.webp" alt="Diagram: heta arbeten – rollerna tillståndsansvarig, hetarbetare och brandvakt" width="720" height="380" loading="lazy"><figcaption>Tre roller med giltig behörighet: tillståndsansvarig utfärdar tillstånd, hetarbetaren utför och brandvakten bevakar – även efter avslutat arbete.</figcaption></figure>
 
 <h2>Vad är heta arbeten?</h2>
 <p>Heta arbeten är tillfälliga arbeten som utförs på en tillfällig arbetsplats och som medför brandfara – till exempel svetsning, skärning, lödning, arbete med rondell eller andra verktyg som alstrar värme eller gnistor. Eftersom risken för brand är påtaglig finns särskilda säkerhetsregler och krav på behörighet.</p>
@@ -122,7 +123,7 @@ const HETA_ARBETEN_HTML = `
 <p>Ja. Tillståndsansvarig utfärdar ett skriftligt tillstånd med villkor och skyddsåtgärder.</p>
 
 <h2>Kom igång</h2>
-<p>Håll koll på behörigheter, tillstånd och arbetsmiljö på ett ställe. <a href="/sv/blog/arbetsmiljoplan">Läs om arbetsmiljöplan</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Håll koll på behörigheter, tillstånd och arbetsmiljö på ett ställe. Använd vår gratis <a href="/sv/verktyg/riskbedomning-mall">mall för riskbedömning</a>, <a href="/sv/blog/arbetsmiljoplan">läs om arbetsmiljöplan</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan (AMP)</a> · <a href="/sv/blog/egenkontroll">Egenkontroll och KMA</a></p>
 `.trim();

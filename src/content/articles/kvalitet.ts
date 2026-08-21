@@ -3,6 +3,7 @@ import { SITE_URL } from './site-url';
 
 const BYGGDAGBOK_HTML = `
 <p>En byggdagbok är ett av de enklaste sätten att skydda sig när något går snett i ett projekt. Ändå förs den ofta på lösa lappar eller inte alls. Här går vi igenom vad en byggdagbok är, vad den ska innehålla, vad AB 04 säger – och hur du för den på några minuter om dagen.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/byggdagbok.webp" alt="Diagram: byggdagbok – datum och väder, personal, utfört arbete, leveranser, ÄTA och avvikelser" width="720" height="380" loading="lazy"><figcaption>För in datum, väder, personal, utfört arbete, leveranser och ÄTA varje dag – dagboken blir ditt bevis vid en tvist.</figcaption></figure>
 
 <p><a href="/sv/verktyg/byggdagbok-mall">Ladda ner en gratis byggdagbok-mall (PDF) →</a></p>
 
@@ -109,6 +110,7 @@ const BYGGDAGBOK: BlogPost = {
 
 const EGENKONTROLL_HTML = `
 <p>Egenkontroll är det som styrker att jobbet är gjort rätt – och det som räddar dig när någon i efterhand ifrågasätter kvaliteten. Men ordet betyder faktiskt två olika saker, och det är här många går vilse. Här reder vi ut vad en egenkontroll är, vad den ska innehålla, hur den hänger ihop med KMA – och hur du gör den utan pappersstrul.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/egenkontroll-cykel.webp" alt="Diagram: egenkontrollens cykel – planera, kontrollera, dokumentera, åtgärda avvikelse" width="720" height="380" loading="lazy"><figcaption>Egenkontrollen är en cykel: planera kontrollpunkterna, kontrollera, dokumentera med signatur och datum, åtgärda avvikelser.</figcaption></figure>
 
 <p><a href="/sv/verktyg/egenkontroll-mall">Ladda ner en gratis egenkontroll-mall (PDF) →</a></p>
 

@@ -3,6 +3,7 @@ import { SITE_URL } from './site-url';
 
 const PERSONALLIGGARE_HTML = `
 <p>Personalliggare är ett lagkrav i byggbranschen – och att sköta den slarvigt kan bli dyrt. Ett oanmält besök från Skatteverket där personer saknas i liggaren kostar direkt i kontrollavgift. Här går vi igenom vem som måste ha personalliggare, vad som ska registreras, vad ett misstag kostar och hur du sköter den digitalt utan krångel.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/personalliggare.webp" alt="Diagram: personalliggare – vilka som ska registreras och Skatteverkets kontrollavgifter" width="720" height="380" loading="lazy"><figcaption>Alla på plats registreras – även UE och inhyrda. Vid brist: 12 500 kr plus 2 500 kr per oregistrerad person.</figcaption></figure>
 
 <h2>Vad är en personalliggare?</h2>
 <p>En personalliggare är en förteckning över vilka som är och har varit verksamma på arbetsplatsen, och när. I byggbranschen ska den vara <strong>elektronisk</strong> och kunna visas för Skatteverket vid ett besök. Syftet är att motverka svartarbete – liggaren visar vem som faktiskt var på plats en viss dag och tid.</p>

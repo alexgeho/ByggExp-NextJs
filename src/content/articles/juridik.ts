@@ -3,6 +3,7 @@ import { SITE_URL } from './site-url';
 
 const ATA_HTML = `
 <p>ÄTA-arbeten är där byggföretag tappar mest pengar helt i onödan. Jobbet blir gjort – men utan rätt papper och rätt underrättelse i tid uteblir betalningen. Här går vi igenom vad ÄTA är, skillnaden mellan föreskriven och likställd ÄTA, vad AB 04 kräver för att du ska få betalt, och hur du dokumenterar det rätt.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/ata-flode.webp" alt="Diagram: ÄTA från ändring/tillägg till skriftlig beställning, prisöverenskommelse och faktura" width="720" height="380" loading="lazy"><figcaption>Vägen till betalt: beställ ÄTA skriftligt, kom överens om pris och fakturera – muntliga ÄTA blir svåra att driva.</figcaption></figure>
 
 <p><a href="/sv/verktyg/ata-mall">Skapa en ÄTA gratis med vår ÄTA-mall (PDF/Excel) →</a></p>
 
@@ -103,6 +104,7 @@ const ATA: BlogPost = {
 
 const AB04_HTML = `
 <p>AB 04 och ABT 06 är de standardavtal som styr de flesta byggprojekt i Sverige. Väljer du fel – eller missar hur ansvaret fördelas – kan det bli dyrt. Här är skillnaden mellan avtalen, vad de reglerar och det du behöver ha koll på om ÄTA, dagbok, garantitid och besiktning.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/ab-kontrakt.webp" alt="Diagram: AB 04 (utförandeentreprenad) vs ABT 06 (totalentreprenad) – vem som projekterar och bär ritningsrisken" width="720" height="380" loading="lazy"><figcaption>Skillnaden i korthet: i AB 04 projekterar beställaren, i ABT 06 projekterar entreprenören – och bär då även ritningsrisken.</figcaption></figure>
 
 <h2>Vad är AB 04 och ABT 06?</h2>
 <p>Det är <strong>allmänna bestämmelser</strong> – färdiga avtalsvillkor framtagna av bygg- och installationsbranschen – som parterna hänvisar till i entreprenadkontraktet. De reglerar rättigheter och skyldigheter mellan beställare och entreprenör: pris, tid, ändringar (ÄTA), ansvar, besiktning och garantier.</p>
@@ -145,7 +147,7 @@ const AB04_HTML = `
 <p>I kap 2 i AB 04 och ABT 06. Se vår <a href="/sv/blog/ata-arbeten">ÄTA-guide</a> för hur du får betalt.</p>
 
 <h2>Kom igång</h2>
-<p>Håll koll på kontrakt, ÄTA, dagbok och ekonomi på ett ställe. <a href="/sv/blog/ata-arbeten">Läs om ÄTA</a>, skapa offert och faktura i ByggExp eller <a href="/sv/contact">boka en demo</a>.</p>
+<p>Håll koll på kontrakt, ÄTA, dagbok och ekonomi på ett ställe. Ladda ner en gratis <a href="/sv/verktyg/entreprenadkontrakt-mall">entreprenadkontrakt-mall</a>, <a href="/sv/blog/ata-arbeten">läs om ÄTA</a>, skapa offert och faktura i ByggExp eller <a href="/sv/contact">boka en demo</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a> · <a href="/sv/blog/byggdagbok">Byggdagbok</a> · <a href="/sv/blog/egenkontroll">Egenkontroll</a></p>
 `.trim();

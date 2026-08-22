@@ -236,6 +236,24 @@ export default function BlogArticlePage({
             }),
           }}
         />
+        {!post.noIndex && FEATURE_ARTICLE_SLUGS.has(post.slug) ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                name: "ByggExp",
+                applicationCategory: "BusinessApplication",
+                operatingSystem: "iOS, Android, Web",
+                description,
+                url: canonicalUrl,
+                offers: { "@type": "Offer", price: "0", priceCurrency: "SEK", description: "Boka en kostnadsfri demo" },
+                publisher: { "@type": "Organization", name: "ByggExp", url: `${localeOrigin(lang)}/${lang}` },
+              }),
+            }}
+          />
+        ) : null}
         {!post.noIndex ? (
           <script
             type="application/ld+json"

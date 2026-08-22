@@ -108,7 +108,9 @@ export default function BlogArticlePage({
   // Most slugs are shared across locales, so the same article path exists per
   // language. Market-specific articles are Swedish-only, though — for those we
   // must not emit en/ru alternates (those URLs don't exist → hreflang-to-404).
-  const svOnly = isSvOnlyArticle(post.slug);
+  // nb articles live only on byggexp.no and have no sv/en/ru counterpart, so they
+  // are self-canonical (no cross-locale alternates), same as sv-only articles.
+  const svOnly = isSvOnlyArticle(post.slug) || post.locale === 'nb';
   const hreflangAlternates = svOnly
     ? []
     : buildHreflangAlternates(

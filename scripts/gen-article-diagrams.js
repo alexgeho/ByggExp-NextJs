@@ -296,7 +296,39 @@ const projektuppfoljning = frame(`
   <text x="388" y="266" ${font} font-size="13.5" fill="${INK}">ÄTA-fakturera eller stäm av med kund.</text>
 `);
 
+// --- Norwegian (nb) diagrams for byggexp.no ---------------------------------
+// 19. Timeregistrering – flyt (nb)
+const nbTimeflyt = frame(`
+  ${title('Digital timeregistrering – slik fungerer det')}
+  ${stepBox(36, 120, 132, 74, 'Stemple inn', 'på bygget', BLUE)}
+  ${arrow(168, 204, 157)}
+  ${stepBox(204, 120, 132, 74, 'Timer på', 'riktig prosjekt', BLUE)}
+  ${arrow(336, 372, 157)}
+  ${stepBox(372, 120, 132, 74, 'Gjennomgå', 'i webadmin', AMBER)}
+  ${arrow(504, 540, 157)}
+  ${stepBox(540, 120, 128, 74, 'Eksport', 'lønn &amp; faktura', GREEN)}
+  <text x="40" y="240" ${font} font-size="15" font-weight="700" fill="${INK}">Registrer én gang – bruk overalt.</text>
+  <text x="40" y="266" ${font} font-size="14" fill="${MUT}">De samme timene blir lønnsunderlag, fakturalinjer og prosjektøkonomi.</text>
+  ${ARR_DEF}
+`);
+
+// 20. Stemplingsur med GPS (nb)
+const nbStemplingsur = frame(`
+  ${title('Stemplingsur-app med GPS')}
+  ${stepBox(40, 110, 150, 74, 'Stemple inn', 'i mobilen', BLUE)}
+  ${arrow(190, 236, 147)}
+  ${stepBox(236, 110, 176, 74, 'GPS bekrefter', 'arbeidsplassen', GREEN)}
+  ${arrow(412, 458, 147)}
+  ${stepBox(458, 110, 150, 74, 'Oppmøte', 'registrert', BLUE)}
+  <text x="40" y="232" ${font} font-size="15" font-weight="700" fill="${INK}">Fungerer på Android og iPhone.</text>
+  <text x="40" y="258" ${font} font-size="14" fill="${MUT}">Erstatter vegguret – innstempling knyttes til sted, ikke til en terminal.</text>
+  ${note('GPS gjør mobilstempling pålitelig – mindre diskusjon om timer i etterkant.', INK)}
+  ${ARR_DEF}
+`);
+
 const DIAGRAMS = {
+  'nb-timeregistrering-flyt': nbTimeflyt,
+  'nb-stemplingsur-gps': nbStemplingsur,
   'ab-kontrakt': abKontrakt,
   'ata-flode': ata,
   'personalliggare': personalliggare,

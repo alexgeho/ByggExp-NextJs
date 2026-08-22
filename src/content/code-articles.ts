@@ -20,6 +20,7 @@ import { PERSONAL_ARTICLES } from './articles/personal';
 import { KVALITET_ARTICLES } from './articles/kvalitet';
 import { TILLVAXT_ARTICLES } from './articles/tillvaxt';
 import { FEATURE_ARTICLES } from './articles/features';
+import { NB_ARTICLES } from './articles/nb-timeregistrering';
 
 // Newest first — a stable, self-maintaining order (no hand-kept array).
 function byPublishedDesc(a: BlogPost, b: BlogPost): number {
@@ -39,11 +40,13 @@ const SV_ARTICLES: BlogPost[] = [
 ].sort(byPublishedDesc);
 
 // Keyed by locale — Swedish-market articles only exist on sv.
+const NB_SORTED = [...NB_ARTICLES].sort(byPublishedDesc);
+
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: SV_ARTICLES,
   en: [],
   ru: [],
-  nb: [],
+  nb: NB_SORTED,
 };
 
 // Articles that originally shared a stock cover get a unique, on-brand

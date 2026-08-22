@@ -1114,6 +1114,7 @@ const S_TIDRAPPORTERING_HANTVERKARE_HTML = `
 <p>För en hantverkare är timmarna själva grunden för intäkten – både lönen och kundfakturan bygger på dem. Ändå förs tiden ofta på lappar eller i minnet, och då läcker det pengar. Tidrapportering för hantverkare handlar om att fånga varje timme där jobbet görs och koppla den till rätt kund, så att du kan fakturera allt du faktiskt arbetat. Den här guiden är skriven för mindre firmor och enmansföretagare.</p>
 <p>Läs den större bilden i vår guide om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>, eller ladda ner en gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>.</p>
 
+<figure class="article-diagram"><img src="/landing/diagrams/tidrapportering-flode.webp" alt="Diagram: digital tidrapportering – checka in, timmar på projekt, granska, export till lön och faktura" width="720" height="380" loading="lazy"><figcaption>Från incheckning till faktura: timmarna hamnar på rätt kund och blir underlag för lön och ROT-faktura.</figcaption></figure>
 <h2>Varför tidrapportering är extra viktigt för hantverkare</h2>
 <p>Som hantverkare är du ofta både utförare och fakturerare. Missar du en timme finns ingen administratör som fångar den – den är bara borta. Med tidrapportering i mobilen registreras timmarna löpande, per kund och jobb, så att inget faller mellan stolarna.</p>
 
@@ -1149,6 +1150,7 @@ const S_TIDRAPPORTERING_ENTREPRENAD_HTML = `
 <p>I en entreprenad passerar timmarna flera händer: underentreprenören rapporterar, huvudentreprenören attesterar och beställaren vill se underlag. Tidrapportering för entreprenad handlar om att göra den kedjan spårbar – rätt timmar, rätt projekt, rätt godkännande. Här går vi igenom hur du håller ordning på tid i entreprenader.</p>
 <p>Se helheten i vår guide om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>.</p>
 
+<figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projektuppföljning – följ timmar, kostnader, fakturerat och marginal mot budget" width="720" height="380" loading="lazy"><figcaption>Rapporterade timmar räknas in i projektuppföljningen – tid mot budget medan entreprenaden pågår.</figcaption></figure>
 <h2>Tid som underlag i entreprenader</h2>
 <p>När flera aktörer arbetar på samma projekt måste tiden gå att härleda: vem, när, vilket projekt. Digital tidrapportering med incheckning och koppling till projekt ger dig det underlaget automatiskt – användbart både för fakturering på löpande räkning och för avstämning med beställaren.</p>
 
@@ -1182,6 +1184,7 @@ const S_MOBIL_TIDRAPPORTERING_HTML = `
 <p>Bygglaget sitter inte vid en dator – de är på taket, i schaktet eller på väg till nästa jobb. Därför måste tidrapporteringen ske i mobilen. Mobil tidrapportering betyder att timmarna registreras där och när jobbet görs, i stället för att skrivas av minnet på kontoret. Här går vi igenom varför mobilen slår både papper och terminal.</p>
 <p>Se hela bilden i vår guide om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>.</p>
 
+<figure class="article-diagram"><img src="/landing/diagrams/tidrapportering-flode.webp" alt="Diagram: mobil tidrapportering – checka in, timmar på projekt, granska, export" width="720" height="380" loading="lazy"><figcaption>Allt sker i mobilen: checka in på bygget, timmarna kopplas till projektet och exporteras till lön och faktura.</figcaption></figure>
 <h2>Varför mobilen slår papper och väggterminal</h2>
 <ul>
 <li><strong>Tiden fångas när den sker</strong> – inte i efterhand, färre fel.</li>
@@ -1217,6 +1220,7 @@ const S_STAMPELKLOCKA_ANDROID_HTML = `
 <p>Kör laget Android-telefoner? Då vill du ha en stämpelklocka-app som fungerar smidigt på Android, med GPS och koppling till projekt. Här går vi igenom vad du ska tänka på när du väljer en stämpelklocka-app för Android till byggföretaget.</p>
 <p>Se hela guiden om <a href="/sv/blog/stampelklocka-app-gps-bygg">stämpelklocka app med GPS</a>.</p>
 
+<figure class="article-diagram"><img src="/landing/diagrams/stampelklocka-gps.webp" alt="Diagram: stämpelklocka app med GPS – checka in i mobilen, GPS bekräftar arbetsplatsen" width="720" height="380" loading="lazy"><figcaption>Checka in i mobilen, GPS bekräftar arbetsplatsen – samma flöde på Android som på iPhone.</figcaption></figure>
 <h2>Stämpelklocka-app på Android</h2>
 <p>På Android laddar medarbetaren ner appen, loggar in och checkar in med ett tryck. GPS bekräftar arbetsplatsen. Eftersom byggteam ofta blandar telefonmodeller är det viktigt att appen fungerar likadant på alla Android-enheter – och på iPhone för dem som har det.</p>
 
@@ -1252,6 +1256,7 @@ const S_STAMPELKLOCKA_IPHONE_HTML = `
 <p>Har laget iPhone? Då vill du ha en stämpelklocka-app som känns hemma på iOS och som checkar in med GPS. Här går vi igenom vad som är viktigt när du väljer en stämpelklocka-app för iPhone till byggföretaget.</p>
 <p>Se hela guiden om <a href="/sv/blog/stampelklocka-app-gps-bygg">stämpelklocka app med GPS</a>.</p>
 
+<figure class="article-diagram"><img src="/landing/diagrams/stampelklocka-gps.webp" alt="Diagram: stämpelklocka app med GPS på iPhone – checka in, GPS bekräftar arbetsplatsen" width="720" height="380" loading="lazy"><figcaption>Checka in i mobilen, GPS bekräftar arbetsplatsen – samma flöde på iPhone som på Android.</figcaption></figure>
 <h2>Stämpelklocka-app på iPhone</h2>
 <p>På iPhone laddar medarbetaren ner appen från App Store, loggar in och checkar in med ett tryck. GPS bekräftar att incheckningen sker på arbetsplatsen. Timmarna kopplas till projektet och blir underlag för lön och faktura.</p>
 
@@ -1287,6 +1292,7 @@ const S_TIDSREGISTRERING_APP_BYGG_HTML = `
 <p>Tidsregistrering är själva grunden: att fånga när personalen börjar och slutar arbeta. För byggföretag måste det ske i mobilen, ute på arbetsplatsen. En app för tidsregistrering ger korrekta arbetstider utan lappar – underlag som sedan blir lön, faktura och uppföljning. Här går vi igenom vad en tidsregistrering-app för bygg bör klara.</p>
 <p>Se helheten i vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
+<figure class="article-diagram"><img src="/landing/diagrams/tidrapporteringssystem.webp" alt="Diagram: tidsregistrering, tidrapportering och tidredovisning i tre steg" width="720" height="380" loading="lazy"><figcaption>Tidsregistrering är första steget: stämpling → rapportering → redovisning.</figcaption></figure>
 <h2>Vad är tidsregistrering?</h2>
 <p>Tidsregistrering är att registrera arbetstidens början och slut. Det är första steget i kedjan tidsregistrering → tidrapportering → tidredovisning. I en app sker det med in- och utcheckning i mobilen, gärna med GPS.</p>
 
@@ -1322,6 +1328,7 @@ const S_TIDREDOVISNING_APP_HTML = `
 <p>Tidredovisning är sista steget: att sammanställa de registrerade timmarna till ett underlag som går till lön, faktura och bokföring. En app för tidredovisning gör det automatiskt – du slipper renskriva och summera manuellt. Här går vi igenom vad en tidredovisning-app bör klara.</p>
 <p>Se helheten i vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
+<figure class="article-diagram"><img src="/landing/diagrams/tidrapporteringssystem.webp" alt="Diagram: tidsregistrering, tidrapportering och tidredovisning i tre steg" width="720" height="380" loading="lazy"><figcaption>Tidredovisning är sista steget: det sammanställda underlaget för lön, faktura och uppföljning.</figcaption></figure>
 <h2>Vad är tidredovisning?</h2>
 <p>Tidredovisning är den sammanställda rapporten över nedlagd tid – per medarbetare, projekt och period. Det är underlaget som lön, faktura och uppföljning bygger på.</p>
 
@@ -1357,6 +1364,7 @@ const S_PERSONALLIGGARE_APP_HTML = `
 <p>Elektronisk personalliggare är ett lagkrav på de flesta byggarbetsplatser, och en app gör kravet enkelt att uppfylla: personalen registrerar närvaro i mobilen, och liggaren finns alltid tillgänglig för Skatteverket. Här går vi igenom hur en personalliggare-app fungerar för byggföretag.</p>
 <p>Vill du ha hela regelverket? Läs vår guide om <a href="/sv/blog/personalliggare">personalliggare i byggbranschen</a>.</p>
 
+<figure class="article-diagram"><img src="/landing/diagrams/personalliggare.webp" alt="Diagram: personalliggare – vilka som registreras och Skatteverkets kontrollavgifter" width="720" height="380" loading="lazy"><figcaption>Alla som arbetar registreras – även UE och inhyrda. Appen håller liggaren korrekt i realtid.</figcaption></figure>
 <h2>Personalliggare som app</h2>
 <p>I stället för en pärm eller terminal registrerar varje person närvaro i mobilen – ofta kopplat till incheckning på bygget. Alla som arbetar registreras, även underentreprenörer och inhyrda. Liggaren uppdateras i realtid och kan visas direkt vid en kontroll.</p>
 

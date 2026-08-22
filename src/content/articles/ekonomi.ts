@@ -7769,7 +7769,172 @@ const A_OFFERTPROGRAM_BYGGFORETAG: BlogPost = {
   publishedAt: "2026-08-20T16:05:00.000Z", createdAt: "2026-08-20T16:05:00.000Z", updatedAt: "2026-08-20T16:05:00.000Z",
 };
 
+// --- ROT-avdrag consumer long-tail (funnels to ROT pillar + kalkylator) ------
+
+const R_ROT_PENSIONAR_HTML = `
+<p>Som pensionär har du precis samma rätt till ROT-avdrag som alla andra – det avgörande är att du äger bostaden och betalar tillräckligt med skatt att dra avdraget mot, inte din ålder. Här går vi igenom vad som gäller för ROT-avdrag för pensionärer, och hur du snabbt ser hur mycket du kan få.</p>
+<p>Vill du räkna direkt? Använd vår gratis <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylator</a>, eller läs hela guiden om <a href="/sv/blog/rot-avdrag">ROT-avdrag</a>.</p>
+
+<h2>Har pensionärer rätt till ROT-avdrag?</h2>
+<p>Ja. ROT-avdraget är kopplat till att du äger bostaden och har skatt att räkna av mot – inte till om du arbetar eller är pensionerad. Har du inkomst (pension räknas) och äger bostaden, kan du använda ROT som vanligt.</p>
+
+<h2>Villkoret som är extra viktigt som pensionär</h2>
+<p>ROT-avdraget dras mot din slutliga skatt. Har du låg skatt ett visst år kan du inte få mer avdrag än den skatt du faktiskt betalar. Det är värt att kontrollera din beräknade skatt innan ett stort arbete, så att hela avdraget ryms. Exakta belopp och regler finns hos Skatteverket.</p>
+
+<h2>Så mycket kan du få</h2>
+<p>ROT ger avdrag på arbetskostnaden (inte material) upp till ett tak per person och år. Se aktuell procentsats och maxbelopp hos <a href="/sv/blog/rot-avdrag">vår ROT-guide</a> och räkna ut ditt fall i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylatorn</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Får pensionärer ROT-avdrag?</h3>
+<p>Ja. Rätten till ROT beror på att du äger bostaden och har skatt att dra avdraget mot, inte på din ålder. Pension räknas som inkomst.</p>
+<h3>Kan låg skatt påverka ROT-avdraget för en pensionär?</h3>
+<p>Ja. Avdraget kan aldrig bli större än den slutliga skatt du betalar det året. Har du låg skatt kan hela avdraget inte alltid utnyttjas – kontrollera din beräknade skatt innan ett stort arbete.</p>
+<h3>Gäller ROT även för makar som är pensionärer?</h3>
+<p>Ja, avdraget är per person, så två ägare kan ofta dela på det. Se vår artikel om att fördela ROT mellan makar.</p>
+`.trim();
+
+const R_ROT_PENSIONAR: BlogPost = {
+  _id: 'code-rotavdrag-pensionar', title: 'ROT-avdrag för pensionärer – vad gäller?', slug: 'rotavdrag-pensionar', locale: 'sv',
+  excerpt: 'ROT-avdrag för pensionärer: du har samma rätt som alla andra – det avgörande är att du äger bostaden och har skatt att dra av mot. Så mycket kan du få.', tag: 'ROT',
+  coverImageUrl: '/landing/features/9ekonomi.webp', contentHtml: R_ROT_PENSIONAR_HTML,
+  seoTitle: 'ROT-avdrag för pensionärer 2026 – vad gäller? | ByggExp', seoDescription: 'ROT-avdrag för pensionärer: samma rätt som alla, kopplat till att du äger bostaden och har skatt att dra av mot. Så mycket kan du få – räkna med vår ROT-kalkylator.',
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
+  publishedAt: '2026-08-22T13:00:00.000Z', createdAt: '2026-08-22T13:00:00.000Z', updatedAt: '2026-08-22T13:00:00.000Z',
+};
+
+const R_ROT_BOSTADSRATT_HTML = `
+<p>Du kan använda ROT-avdrag även om du bor i bostadsrätt – men reglerna skiljer sig från när du äger ett hus, eftersom du äger själva lägenheten men inte fastigheten. Här går vi igenom vad som gäller för ROT-avdrag i bostadsrätt och vilka arbeten som räknas.</p>
+<p>Räkna ut ditt avdrag i vår gratis <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylator</a> eller läs hela <a href="/sv/blog/rot-avdrag">ROT-guiden</a>.</p>
+
+<h2>Gäller ROT-avdrag i bostadsrätt?</h2>
+<p>Ja, men bara för arbete inne i din egen lägenhet – det du som bostadsrättshavare ansvarar för. Arbete i föreningens gemensamma delar eller på fastighetens yttre ger inte dig personligt ROT-avdrag; det är föreningens ansvar.</p>
+
+<h2>Vilka arbeten räknas?</h2>
+<ul>
+<li>Renovering av kök och badrum inne i lägenheten.</li>
+<li>Snickeri, el och VVS inom lägenhetens ”inre underhåll”.</li>
+<li>Inte arbete i trapphus, fasad eller andra gemensamma ytor.</li>
+</ul>
+<p>Kontrollera alltid gränsdragningen mot föreningens ansvar och aktuella regler hos Skatteverket.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Kan man få ROT-avdrag i bostadsrätt?</h3>
+<p>Ja, för arbete inne i din egen lägenhet som du ansvarar för som bostadsrättshavare. Gemensamma ytor omfattas inte.</p>
+<h3>Får jag ROT för badrumsrenovering i bostadsrätt?</h3>
+<p>Ja, om renoveringen sker i din egen lägenhet och avser sådant du ansvarar för. Kontrollera mot föreningens stadgar och Skatteverkets regler.</p>
+`.trim();
+
+const R_ROT_BOSTADSRATT: BlogPost = {
+  _id: 'code-rotavdrag-bostadsratt', title: 'ROT-avdrag i bostadsrätt – vad gäller?', slug: 'rotavdrag-bostadsratt', locale: 'sv',
+  excerpt: 'ROT-avdrag i bostadsrätt: du får avdrag för arbete inne i din egen lägenhet, inte i föreningens gemensamma delar. Vilka arbeten som räknas.', tag: 'ROT',
+  coverImageUrl: '/landing/features/9ekonomi.webp', contentHtml: R_ROT_BOSTADSRATT_HTML,
+  seoTitle: 'ROT-avdrag i bostadsrätt – vad gäller 2026? | ByggExp', seoDescription: 'ROT-avdrag i bostadsrätt: avdrag för arbete inne i din egen lägenhet (kök, bad, el, VVS), inte gemensamma ytor. Så fungerar det – räkna med ROT-kalkylatorn.',
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
+  publishedAt: '2026-08-22T13:05:00.000Z', createdAt: '2026-08-22T13:05:00.000Z', updatedAt: '2026-08-22T13:05:00.000Z',
+};
+
+const R_ROT_FRITIDSHUS_HTML = `
+<p>ROT-avdrag går att använda även på fritidshus – förutsatt att du äger huset och att det inte hyrs ut som näringsverksamhet. Här går vi igenom vad som gäller för ROT-avdrag på fritidshus och vad du bör tänka på.</p>
+<p>Räkna ut avdraget i vår gratis <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylator</a> eller läs <a href="/sv/blog/rot-avdrag">ROT-guiden</a>.</p>
+
+<h2>Gäller ROT-avdrag på fritidshus?</h2>
+<p>Ja. ROT gäller för småhus och ägarlägenheter som du äger och använder, och ett fritidshus räknas dit. Det avgörande är att du äger huset och har skatt att dra avdraget mot – samma grundvillkor som för permanentbostaden.</p>
+
+<h2>Att tänka på</h2>
+<ul>
+<li>Du kan inte få ROT för hus som ägs av någon annan eller drivs som uthyrningsverksamhet.</li>
+<li>Avdraget delar samma årliga tak per person som ditt övriga ROT.</li>
+<li>Endast arbetskostnad ger avdrag, inte material.</li>
+</ul>
+<p>Kontrollera aktuella belopp och villkor hos Skatteverket.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Kan man använda ROT-avdrag på fritidshus?</h3>
+<p>Ja, om du äger fritidshuset och har skatt att dra avdraget mot. Det räknas som småhus. Hus som hyrs ut som näringsverksamhet omfattas inte.</p>
+<h3>Delar fritidshuset samma ROT-tak som mitt vanliga hus?</h3>
+<p>Ja, ROT-avdraget är per person och år oavsett hur många bostäder du äger. Se aktuellt maxbelopp hos Skatteverket.</p>
+`.trim();
+
+const R_ROT_FRITIDSHUS: BlogPost = {
+  _id: 'code-rotavdrag-fritidshus', title: 'ROT-avdrag på fritidshus – vad gäller?', slug: 'rotavdrag-fritidshus', locale: 'sv',
+  excerpt: 'ROT-avdrag på fritidshus: går att använda om du äger huset och har skatt att dra av mot. Vad som gäller och vad du bör tänka på.', tag: 'ROT',
+  coverImageUrl: '/landing/features/9ekonomi.webp', contentHtml: R_ROT_FRITIDSHUS_HTML,
+  seoTitle: 'ROT-avdrag på fritidshus 2026 – vad gäller? | ByggExp', seoDescription: 'ROT-avdrag på fritidshus: möjligt om du äger huset och har skatt att dra av mot, räknas som småhus. Så fungerar det – räkna med ROT-kalkylatorn.',
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
+  publishedAt: '2026-08-22T13:10:00.000Z', createdAt: '2026-08-22T13:10:00.000Z', updatedAt: '2026-08-22T13:10:00.000Z',
+};
+
+const R_ROT_ELLER_RUT_HTML = `
+<p>ROT och RUT är två olika skattereduktioner som ofta blandas ihop. Kort sagt: ROT är för byggnadsarbete på din bostad, RUT är för hushållsnära tjänster som städ och trädgård. Här går vi igenom skillnaden så du vet vilket avdrag som gäller för ditt arbete.</p>
+<p>Ska du räkna på ett byggarbete? Använd vår gratis <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylator</a>.</p>
+
+<h2>Skillnaden mellan ROT och RUT</h2>
+<ul>
+<li><strong>ROT</strong> – Reparation, Ombyggnad, Tillbyggnad. Snickeri, el, VVS, kakel, målning inomhus m.m.</li>
+<li><strong>RUT</strong> – hushållsnära tjänster: städning, fönsterputs, trädgårdsarbete, flytt, viss montering.</li>
+</ul>
+<p>Trädgårdsarbete och gräsklippning är alltså oftast RUT, inte ROT – en vanlig förväxling.</p>
+
+<h2>Gemensamt tak</h2>
+<p>ROT och RUT delar ett gemensamt tak per person och år, men med olika procentsatser för arbetskostnaden. Se aktuella belopp hos Skatteverket.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan ROT och RUT?</h3>
+<p>ROT gäller byggnadsarbete på bostaden (reparation, ombyggnad, tillbyggnad), RUT gäller hushållsnära tjänster som städ, fönsterputs och trädgård.</p>
+<h3>Är trädgårdsarbete ROT eller RUT?</h3>
+<p>Trädgårdsarbete räknas normalt som RUT, inte ROT. Byggnadsarbete på huset är ROT.</p>
+<h3>Har ROT och RUT samma tak?</h3>
+<p>De delar ett gemensamt tak per person och år, men procentsatsen på arbetskostnaden skiljer sig. Kontrollera aktuella belopp hos Skatteverket.</p>
+`.trim();
+
+const R_ROT_ELLER_RUT: BlogPost = {
+  _id: 'code-rot-eller-rut', title: 'ROT eller RUT – vad är skillnaden?', slug: 'rot-eller-rut', locale: 'sv',
+  excerpt: 'ROT eller RUT? ROT är byggnadsarbete på bostaden, RUT är hushållsnära tjänster som städ och trädgård. Så vet du vilket avdrag som gäller.', tag: 'ROT',
+  coverImageUrl: '/landing/features/9ekonomi.webp', contentHtml: R_ROT_ELLER_RUT_HTML,
+  seoTitle: 'ROT eller RUT – skillnaden förklarad 2026 | ByggExp', seoDescription: 'ROT eller RUT? ROT = byggnadsarbete på bostaden, RUT = hushållsnära tjänster (städ, trädgård). Skillnad, gemensamt tak och vanliga förväxlingar.',
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
+  publishedAt: '2026-08-22T13:15:00.000Z', createdAt: '2026-08-22T13:15:00.000Z', updatedAt: '2026-08-22T13:15:00.000Z',
+};
+
+const R_ROT_HUR_MYCKET_HTML = `
+<p>Hur mycket ROT-avdrag kan man få? Avdraget gäller arbetskostnaden (inte material), ges per person och år upp till ett tak, och kan aldrig bli större än den skatt du betalar. Här går vi igenom hur du räknar – och hur du snabbt ser ditt eget belopp.</p>
+<p>Enklast: fyll i arbetskostnaden i vår gratis <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylator</a> så räknar den ut din del direkt.</p>
+
+<h2>Hur mycket ROT-avdrag per person?</h2>
+<p>ROT ges per person och år upp till ett maxbelopp, och som en procentsats av arbetskostnaden. Äger ni bostaden tillsammans kan ni ofta dubbla avdraget genom att fördela det mellan er. Se aktuell procentsats och maxbelopp hos Skatteverket, eller läs vår <a href="/sv/blog/rot-avdrag">ROT-guide</a>.</p>
+
+<h2>Så räknar du</h2>
+<ol>
+<li>Ta arbetskostnaden (material räknas inte).</li>
+<li>Multiplicera med ROT-procentsatsen för året.</li>
+<li>Jämför mot maxbeloppet per person och din skatt.</li>
+</ol>
+<p>Kalkylatorn gör det åt dig och visar kundens del efter avdrag.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket ROT-avdrag kan jag få per år?</h3>
+<p>Upp till ett maxbelopp per person och år, som en procentsats av arbetskostnaden, och aldrig mer än den skatt du betalar. Aktuella belopp finns hos Skatteverket.</p>
+<h3>Kan makar dubbla ROT-avdraget?</h3>
+<p>Ofta ja – avdraget är per person, så två ägare kan fördela det mellan sig och tillsammans få mer.</p>
+<h3>Räknas material in i ROT-avdraget?</h3>
+<p>Nej. Endast arbetskostnaden ger ROT-avdrag, inte material eller resekostnader.</p>
+`.trim();
+
+const R_ROT_HUR_MYCKET: BlogPost = {
+  _id: 'code-rotavdrag-hur-mycket', title: 'Hur mycket ROT-avdrag kan man få?', slug: 'rotavdrag-hur-mycket', locale: 'sv',
+  excerpt: 'Hur mycket ROT-avdrag? Avdraget gäller arbetskostnaden per person och år upp till ett tak, aldrig mer än din skatt. Så räknar du – och dubblar med makar.', tag: 'ROT',
+  coverImageUrl: '/landing/features/9ekonomi.webp', contentHtml: R_ROT_HUR_MYCKET_HTML,
+  seoTitle: 'Hur mycket ROT-avdrag per person 2026? | ByggExp', seoDescription: 'Hur mycket ROT-avdrag kan man få? Per person och år upp till ett tak, procent av arbetskostnaden, aldrig mer än din skatt. Räkna ditt belopp med ROT-kalkylatorn.',
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
+  publishedAt: '2026-08-22T13:20:00.000Z', createdAt: '2026-08-22T13:20:00.000Z', updatedAt: '2026-08-22T13:20:00.000Z',
+};
+
 export const EKONOMI_ARTICLES: BlogPost[] = [
+  R_ROT_PENSIONAR,
+  R_ROT_BOSTADSRATT,
+  R_ROT_FRITIDSHUS,
+  R_ROT_ELLER_RUT,
+  R_ROT_HUR_MYCKET,
   ROT,
   ATTESTERING,
   TIMPRIS,

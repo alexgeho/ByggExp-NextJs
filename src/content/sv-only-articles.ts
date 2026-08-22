@@ -5,6 +5,12 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  // ROT-avdrag consumer long-tail (sv-only).
+  'rotavdrag-pensionar',
+  'rotavdrag-bostadsratt',
+  'rotavdrag-fritidshus',
+  'rot-eller-rut',
+  'rotavdrag-hur-mycket',
   // Software-intent cluster 2 (sv-only).
   'affarssystem-byggforetag',
   'crm-byggforetag',

@@ -1396,7 +1396,177 @@ const S_PERSONALLIGGARE_APP: BlogPost = {
   publishedAt: "2026-08-22T10:35:00.000Z", createdAt: "2026-08-22T10:35:00.000Z", updatedAt: "2026-08-22T10:35:00.000Z",
 };
 
+// --- Software-intent cluster 2: system/CRM/service/schema -------------------
+
+const A_AFFARSSYSTEM_BYGGFORETAG_HTML = `
+<p>Många byggföretag kör tid i en app, fakturor i en annan och lönen i ett tredje system – och lägger timmar varje vecka på att flytta siffror mellan dem. Ett affärssystem för byggföretag samlar allt i ett: tid, projekt, offert, faktura, lön och ekonomi hänger ihop, så att en registrering räcker. Här går vi igenom vad ett affärssystem (ibland kallat ERP) för bygg bör klara och varför ett molnbaserat, samlat system slår lösa öar.</p>
+<p>Vill du se hur delarna hänger ihop? Läs om <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomi</a> och <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a>.</p>
+
+<h2>Vad är ett affärssystem för byggföretag?</h2>
+<p>Ett affärssystem är den gemensamma plattform där hela verksamheten körs: projekt, personal, tid, material, offert, faktura och ekonomi. Skillnaden mot enskilda appar är att allt delar samma data – loggad tid blir automatiskt både löneunderlag och fakturarad och räknas in i projektets resultat.</p>
+
+<h2>Molnbaserat – tillgängligt på bygget och kontoret</h2>
+<p>Ett molnbaserat byggprogram körs i webbläsaren och i appen, utan installation eller egen server. Snickaren rapporterar i mobilen på bygget, kontoret ser samma siffror i realtid. Det är förutsättningen för att data ska vara aktuell och samlad.</p>
+
+<h2>Vad ett affärssystem för bygg bör täcka</h2>
+<ul>
+<li><a href="/sv/blog/automatisk-tidrapportering-och-export">Tidrapportering</a> och närvaro</li>
+<li><a href="/sv/blog/hantera-uppgifter-i-byggprojekt">Projekt- och uppgiftshantering</a></li>
+<li><a href="/sv/blog/skapa-offert-i-byggexp">Offert</a> och <a href="/sv/blog/fakturera-fran-byggexp">faktura</a></li>
+<li><a href="/sv/blog/loneunderlag-for-byggforetag">Löneunderlag</a></li>
+<li><a href="/sv/blog/projektekonomi-och-lonsamhet">Projektekonomi och uppföljning</a></li>
+</ul>
+
+<h2>Ett samlat system vs flera lösa appar</h2>
+<p>Lösa appar verkar billiga var för sig, men dubbelinmatning, exportfiler och fel mellan systemen kostar tid och pengar. Ett samlat affärssystem tar bort skarvarna – och ger en sann bild av ekonomin per projekt.</p>
+
+<h2>Kom igång</h2>
+<p>Vill du se ett samlat affärssystem för byggföretag? <a href="/sv/contact">Boka en demo av ByggExp</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan ett affärssystem och en bygg-app?</h3>
+<p>En bygg-app löser ofta ett moment (t.ex. tid). Ett affärssystem samlar hela verksamheten – tid, projekt, offert, faktura, lön och ekonomi – i en gemensam plattform där data delas, så att en registrering räcker.</p>
+<h3>Behöver ett litet byggföretag ett affärssystem?</h3>
+<p>Ja, ofta redan från ett par anställda. Vinsten är mindre dubbelarbete och en korrekt bild av ekonomin per projekt – inte antalet funktioner.</p>
+<h3>Vad betyder molnbaserat?</h3>
+<p>Att systemet körs i webbläsaren och appen utan installation eller egen server. Alla ser samma aktuella data, på bygget och på kontoret.</p>
+`.trim();
+
+const A_AFFARSSYSTEM_BYGGFORETAG: BlogPost = {
+  _id: "code-affarssystem-byggforetag",
+  title: "Affärssystem för byggföretag – allt i ett, molnbaserat", slug: "affarssystem-byggforetag", locale: "sv",
+  excerpt: "Ett affärssystem för byggföretag samlar tid, projekt, offert, faktura, lön och ekonomi i en molnbaserad plattform – en registrering räcker. Så väljer du rätt.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_AFFARSSYSTEM_BYGGFORETAG_HTML,
+  seoTitle: "Affärssystem för byggföretag – allt i ett, molnbaserat | ByggExp", seoDescription: "Affärssystem för byggföretag: samla tid, projekt, offert, faktura, lön och ekonomi i en molnbaserad plattform. Slipp dubbelinmatning mellan lösa appar.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-22T11:00:00.000Z", createdAt: "2026-08-22T11:00:00.000Z", updatedAt: "2026-08-22T11:00:00.000Z",
+};
+
+const A_CRM_BYGGFORETAG_HTML = `
+<p>Offerter i huvudet, kundkontakter på lappar och uppföljningar som glöms bort – så tappar byggföretag affärer utan att märka det. Ett CRM för byggföretag håller ordning på kunder, förfrågningar och offerter så att inget faller mellan stolarna och fler förfrågningar blir jobb. Här går vi igenom vad ett CRM för bygg bör klara.</p>
+<p>Snabb respons vinner ofta jobbet – börja med att kunna skicka <a href="/sv/blog/skapa-offert-i-byggexp">offert direkt</a> när förfrågan kommer in.</p>
+
+<h2>Vad är ett CRM för byggföretag?</h2>
+<p>CRM (kundhantering) samlar allt om varje kund och affär på ett ställe: kontaktuppgifter, förfrågningar, skickade offerter, status och nästa steg. För byggföretag är det bryggan mellan en förfrågan och ett vunnet projekt.</p>
+
+<h2>Från förfrågan till vunnet projekt</h2>
+<ul>
+<li>Samla alla förfrågningar på ett ställe – inget tappas.</li>
+<li>Koppla offert till kund och följ status (skickad, accepterad).</li>
+<li>Påminnelser om uppföljning så heta förfrågningar inte kallnar.</li>
+<li>När kunden tackar ja blir offerten grund för projekt och <a href="/sv/blog/fakturera-fran-byggexp">faktura</a>.</li>
+</ul>
+
+<h2>CRM som hänger ihop med resten</h2>
+<p>Störst nytta gör kundhanteringen när den sitter ihop med produktionen: en vunnen offert blir ett projekt med tid, material och ekonomi – utan att mata in kunden igen. Det är skillnaden mot ett fristående CRM.</p>
+
+<h2>Kom igång</h2>
+<p>Vill du fånga fler förfrågningar och följa upp dem systematiskt? <a href="/sv/contact">Boka en demo av ByggExp</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är ett CRM för byggföretag?</h3>
+<p>Ett system som samlar kunder, förfrågningar och offerter på ett ställe och hjälper dig följa upp dem – så att fler förfrågningar blir vunna projekt.</p>
+<h3>Behöver ett mindre byggföretag CRM?</h3>
+<p>Ja. Även med få kunder tappas affärer när uppföljningar glöms. Ett enkelt CRM med påminnelser gör att heta förfrågningar inte kallnar.</p>
+<h3>Vad är fördelen med ett CRM som är kopplat till offert och faktura?</h3>
+<p>En vunnen offert blir direkt ett projekt med tid, material och faktura – ingen dubbelinmatning av kunduppgifter, och full spårbarhet från förfrågan till betald faktura.</p>
+`.trim();
+
+const A_CRM_BYGGFORETAG: BlogPost = {
+  _id: "code-crm-byggforetag",
+  title: "CRM för byggföretag – från förfrågan till vunnet projekt", slug: "crm-byggforetag", locale: "sv",
+  excerpt: "Ett CRM för byggföretag samlar kunder, förfrågningar och offerter så att inget tappas och fler förfrågningar blir jobb. Så väljer du rätt kundhantering.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_CRM_BYGGFORETAG_HTML,
+  seoTitle: "CRM för byggföretag – kundhantering & offert | ByggExp", seoDescription: "CRM för byggföretag: samla kunder, förfrågningar och offerter, följ upp med påminnelser och gör fler förfrågningar till vunna projekt. Kopplat till offert och faktura.",
+  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-22T11:10:00.000Z", createdAt: "2026-08-22T11:10:00.000Z", updatedAt: "2026-08-22T11:10:00.000Z",
+};
+
+const A_SERVICEHANTERING_BYGG_HTML = `
+<p>Serviceuppdrag och mindre jobb är annorlunda än stora projekt: många korta besök, olika adresser, snabb fakturering. Utan system tappas timmar och material, och faktureringen släpar. Ett system för servicehantering (serviceorder) håller ordning på uppdragen från beställning till betald faktura. Här går vi igenom vad en serviceorder-app för bygg bör klara.</p>
+<p>Grunden är att fånga tid och material på plats – se <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering</a> och <a href="/sv/blog/fota-kvitton-och-hantera-utlagg">kvitton och utlägg</a>.</p>
+
+<h2>Vad är servicehantering?</h2>
+<p>Servicehantering är att styra serviceuppdrag och arbetsorder: vem gör vad, var, med vilken tid och vilket material – och hur det blir faktura. För service- och underhållsjobb med hög volym är det avgörande att inget uppdrag glöms eller faktureras för lågt.</p>
+
+<h2>Från serviceorder till faktura</h2>
+<ul>
+<li>Skapa en arbetsorder med kund, adress och vad som ska göras.</li>
+<li>Teknikern ser uppdraget i appen och registrerar tid och material på plats.</li>
+<li>Foton och noteringar dokumenterar utfört arbete.</li>
+<li>Uppdraget blir faktureringsunderlag – fakturera snabbt, medan jobbet är färskt.</li>
+</ul>
+
+<h2>Serviceavtal och återkommande jobb</h2>
+<p>För återkommande underhåll är det värdefullt att koppla uppdrag till <a href="/sv/blog/serviceavtal-underhallsavtal-byggforetag">serviceavtal</a>, så att planering och fakturering sköts löpande.</p>
+
+<h2>Kom igång</h2>
+<p>Vill du få ordning på serviceuppdragen från order till faktura? <a href="/sv/contact">Boka en demo av ByggExp</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är servicehantering i bygg?</h3>
+<p>Att styra serviceuppdrag och arbetsorder – vem, var, tid och material – och göra dem till faktureringsunderlag, så att inget uppdrag glöms eller faktureras för lågt.</p>
+<h3>Vad är skillnaden mot vanlig projekthantering?</h3>
+<p>Service handlar om många korta uppdrag på olika adresser med snabb fakturering, till skillnad från stora, långa projekt. Flödet order → utförande → faktura måste vara snabbt.</p>
+<h3>Kan tekniker registrera tid och material på plats?</h3>
+<p>Ja. I appen ser teknikern uppdraget och registrerar tid, material och foton direkt, vilket blir underlag för fakturan.</p>
+`.trim();
+
+const A_SERVICEHANTERING_BYGG: BlogPost = {
+  _id: "code-servicehantering-bygg",
+  title: "Servicehantering för bygg – från serviceorder till faktura", slug: "servicehantering-bygg", locale: "sv",
+  excerpt: "Servicehantering (serviceorder) för byggföretag: styr serviceuppdrag från beställning till betald faktura, med tid, material och foto på plats i appen.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_SERVICEHANTERING_BYGG_HTML,
+  seoTitle: "Servicehantering bygg – serviceorder-app till faktura | ByggExp", seoDescription: "Servicehantering för byggföretag: serviceorder från beställning till faktura, med tid, material och foto på plats. Håll ordning på service- och underhållsjobb.",
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-22T11:20:00.000Z", createdAt: "2026-08-22T11:20:00.000Z", updatedAt: "2026-08-22T11:20:00.000Z",
+};
+
+const A_SCHEMALAGGNING_BYGG_HTML = `
+<p>Att pussla vem som ska vara var, vilken dag, på vilket projekt – med semestrar och sjukdom i beräkningen – tar tid och blir lätt fel i huvudet eller i Excel. Ett verktyg för schemaläggning och personalplanering ger dig en delad vy över hela laget, kopplad till projekt och tid. Här går vi igenom vad schemaläggning för byggföretag bör klara.</p>
+<p>Planeringen hänger ihop med <a href="/sv/blog/dagsplanering-och-planeringsmoten">dagsplanering</a>, <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro</a> och <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering</a>.</p>
+
+<h2>Vad är schemaläggning för byggföretag?</h2>
+<p>Schemaläggning (personalplanering) är att fördela personal på projekt och dagar så att rätt kompetens finns på rätt plats. En bra vy visar hela laget över veckorna, med lediga och överbokade direkt synliga.</p>
+
+<h2>Vad ett schemaläggningsverktyg bör klara</h2>
+<ul>
+<li>Delad vy över hela laget per vecka eller månad.</li>
+<li>Planera per person eller per projekt.</li>
+<li>Se frånvaro (semester, sjuk) direkt i planen.</li>
+<li>Planen syns i appen för alla berörda och uppdateras i realtid.</li>
+</ul>
+
+<h2>Från plan till faktisk tid</h2>
+<p>Störst nytta gör schemat när det kopplas till verkligheten: planerad tid jämförs med <a href="/sv/blog/automatisk-tidrapportering-och-export">loggad tid</a>, och avvikelser syns i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a>.</p>
+
+<h2>Kom igång</h2>
+<p>Vill du sluta pussla i huvudet? <a href="/sv/contact">Boka en demo av ByggExp</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är schemaläggning för byggföretag?</h3>
+<p>Att fördela personal på projekt och dagar i en delad vy, så att rätt kompetens finns på rätt plats och lediga eller överbokade syns direkt.</p>
+<h3>Vad är skillnaden mot dagsplanering?</h3>
+<p>Schemaläggning är den längre planeringen över veckor/månader; dagsplaneringen är den konkreta genomgången av dagens jobb. De hänger ihop och delar samma plan.</p>
+<h3>Ser personalen sitt schema i mobilen?</h3>
+<p>Ja. Planen delas till appen och uppdateras i realtid, så alla berörda ser sitt schema och eventuella ändringar direkt.</p>
+`.trim();
+
+const A_SCHEMALAGGNING_BYGG: BlogPost = {
+  _id: "code-schemalaggning-bygg",
+  title: "Schemaläggning för byggföretag – personalplanering i en vy", slug: "schemalaggning-bygg", locale: "sv",
+  excerpt: "Schemaläggning och personalplanering för byggföretag: en delad vy över hela laget, kopplad till projekt, frånvaro och tid. Sluta pussla i huvudet och Excel.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_SCHEMALAGGNING_BYGG_HTML,
+  seoTitle: "Schemaläggning för byggföretag – personalplanering | ByggExp", seoDescription: "Schemaläggning och personalplanering för byggföretag: delad vy över laget per vecka, planera per person eller projekt, se frånvaro och koppla till tid.",
+  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-22T11:30:00.000Z", createdAt: "2026-08-22T11:30:00.000Z", updatedAt: "2026-08-22T11:30:00.000Z",
+};
+
 export const TILLVAXT_ARTICLES: BlogPost[] = [
+  A_AFFARSSYSTEM_BYGGFORETAG,
+  A_CRM_BYGGFORETAG,
+  A_SERVICEHANTERING_BYGG,
+  A_SCHEMALAGGNING_BYGG,
   A_APP_TIDRAPPORTERING_BYGG,
   A_STAMPELKLOCKA_APP_GPS,
   A_TIDRAPPORTERINGSSYSTEM_BYGG,

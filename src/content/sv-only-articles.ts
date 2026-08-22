@@ -5,6 +5,11 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  // Software-intent cluster 2 (sv-only).
+  'affarssystem-byggforetag',
+  'crm-byggforetag',
+  'servicehantering-bygg',
+  'schemalaggning-bygg',
   // Tidrapportering keyword-funnel cluster (sv-only).
   'app-for-tidrapportering-bygg',
   'stampelklocka-app-gps-bygg',

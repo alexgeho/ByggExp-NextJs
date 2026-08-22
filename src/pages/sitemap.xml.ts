@@ -52,7 +52,9 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
   // nb tools hub (individual nb calculators are crawled via the hub's links).
   if (isNo) {
     urls.push({ loc: `${localeOrigin('nb')}/nb/verktyg` });
+    urls.push({ loc: `${localeOrigin('nb')}/nb/fa-offert` });
   } else {
+    urls.push({ loc: `${localeOrigin('sv')}/sv/fa-offert` });
     SV_ONLY_PATHS.forEach((path) => {
       urls.push({ loc: `${localeOrigin('sv')}/sv/${path}` });
     });

@@ -153,6 +153,25 @@ export default function BlogArticlePage({
     );
   }
 
+  // Click any image inside the article body (screenshots, diagrams) to open it
+  // full-screen. Listeners are attached directly to each <img> since the body is
+  // dangerouslySet HTML.
+  const contentRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!el) return;
+    const imgs = Array.from(el.querySelectorAll('img'));
+    const open = (e: Event) => {
+      const src = (e.currentTarget as HTMLImageElement).getAttribute('src');
+      if (src) setLightboxImage(src);
+    };
+    imgs.forEach((img) => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', open);
+    });
+    return () => imgs.forEach((img) => img.removeEventListener('click', open));
+  }, [post.slug]);
+
   // Horizontal carousel of related articles — arrows scroll the track.
   const relatedRef = useRef<HTMLDivElement>(null);
   const scrollRelated = (dir: number) => {
@@ -261,16 +280,8 @@ export default function BlogArticlePage({
           ) : null}
 
           <div
+            ref={contentRef}
             className="blog-article-content"
-            onClick={(e) => {
-              // Content is dangerouslySet HTML, so delegate: click any image
-              // (screenshots, diagrams) to open it full-screen.
-              const target = e.target as HTMLElement;
-              if (target.tagName === 'IMG') {
-                const src = target.getAttribute('src');
-                if (src) setLightboxImage(src);
-              }
-            }}
             dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
 

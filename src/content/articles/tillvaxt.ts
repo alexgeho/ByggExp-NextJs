@@ -907,6 +907,7 @@ const A_APP_TIDRAPPORTERING_BYGG_HTML = `
 <p>Papperslappar i fickan, timmar som skrivs av minnet på fredagen och en administratör som jagar underlag – manuell tidrapportering kostar byggföretag både pengar och nerver. En app för tidrapportering löser det: personalen stämplar in och ut i mobilen, timmarna hamnar automatiskt på rätt projekt, och du får ett färdigt underlag till lön och faktura utan efterarbete. Här går vi igenom vad en app för tidrapportering i bygg ska klara, hur digital tidrapportering fungerar i praktiken och hur du kommer igång.</p>
 
 <p>Vill du testa direkt? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller läs mer om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering i ByggExp</a>.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/tidrapportering-flode.webp" alt="Diagram: digital tidrapportering – checka in, timmar på projekt, granska, export till lön och faktura" width="720" height="380" loading="lazy"><figcaption>Flödet: checka in på bygget, timmarna hamnar på rätt projekt, granska i webbadmin och exportera till lön och faktura.</figcaption></figure>
 
 <h2>Varför en app för tidrapportering i byggföretag</h2>
 <p>Tidrapportering i bygg skiljer sig från ett vanligt kontorsjobb: personalen är utspridd på olika arbetsplatser, byter projekt under dagen och sitter sällan vid en dator. Därför måste tidrapporteringen ske i mobilen – där jobbet utförs. En app för tidrapport ger dig:</p>
@@ -969,6 +970,7 @@ const A_STAMPELKLOCKA_APP_GPS_HTML = `
 <p>En stämpelklocka på väggen fungerar dåligt när personalen är ute på olika byggen. En stämpelklocka som app löser samma sak i mobilen: medarbetaren stämplar in och ut direkt på arbetsplatsen, och GPS bekräftar att det sker där jobbet utförs. Här går vi igenom hur en stämpelklocka-app med GPS fungerar för byggföretag, och vad du ska tänka på oavsett om laget kör Android eller iPhone.</p>
 
 <p>Vill du se hur det fungerar i praktiken? Läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a> eller <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning på bygget</a>.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/stampelklocka-gps.webp" alt="Diagram: stämpelklocka app med GPS – checka in i mobilen, GPS bekräftar arbetsplatsen, närvaro registrerad" width="720" height="380" loading="lazy"><figcaption>Checka in i mobilen, GPS bekräftar arbetsplatsen och närvaron registreras – på både Android och iPhone.</figcaption></figure>
 
 <h2>Vad är en stämpelklocka-app?</h2>
 <p>En stämpelklocka-app ersätter den fysiska stämpelklockan med mobilen. I stället för att dra ett kort vid en terminal trycker medarbetaren "Checka in" i appen när arbetsdagen börjar och "Checka ut" när den slutar. Tiden registreras automatiskt och kopplas till rätt projekt.</p>
@@ -1015,6 +1017,7 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 <p>När företaget växer räcker det inte längre med lappar och Excel. Ett tidrapporteringssystem samlar all tidsregistrering på ett ställe: timmarna registreras i mobilen, samlas per projekt och medarbetare, och blir färdig tidredovisning för lön, faktura och uppföljning. Här går vi igenom vad ett tidrapporteringssystem för bygg bör klara – och varför "enkelt" ofta slår "avancerat".</p>
 
 <p>Vill du komma igång snabbt? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering och export</a>.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/tidrapporteringssystem.webp" alt="Diagram: tidsregistrering, tidrapportering och tidredovisning i tre steg" width="720" height="380" loading="lazy"><figcaption>Tre steg i ett system: tidsregistrering (stämpling), tidrapportering (koppling till projekt) och tidredovisning (underlag för lön och faktura).</figcaption></figure>
 
 <h2>Vad är ett tidrapporteringssystem?</h2>
 <p>Ett tidrapporteringssystem är verktyget som hanterar hela flödet från registrerad tid till färdigt underlag. Skillnaden mot en enskild stämpelklocka är att systemet också strukturerar, summerar och exporterar tiden – tidsregistrering, tidrapportering och tidredovisning i samma kedja.</p>
@@ -1067,6 +1070,7 @@ const A_PROJEKTUPPFOLJNING_BYGG_HTML = `
 <p>Ett byggprojekt kan se lönsamt ut ända till slutfakturan – och sedan visa sig ha ätit upp marginalen i övertid och extra material. Projektuppföljning handlar om att se det i tid: följa tid, kostnader och lönsamhet löpande i stället för i efterhand. Här går vi igenom hur du följer upp byggprojekt i praktiken och vilka siffror du bör hålla koll på.</p>
 
 <p>Grunden för bra uppföljning är korrekt indata. Se till att laget loggar tid via <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a> och registrerar <a href="/sv/blog/fota-kvitton-och-hantera-utlagg">kvitton och utlägg</a> löpande.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projektuppföljning – följ timmar, kostnader, fakturerat och marginal mot budget i realtid" width="720" height="380" loading="lazy"><figcaption>Följ timmar, kostnader, fakturerat och marginal mot budget löpande – så hinner du agera innan budgettaket.</figcaption></figure>
 
 <h2>Vad är projektuppföljning i bygg?</h2>
 <p>Projektuppföljning betyder att du löpande jämför utfall mot plan: nedlagda timmar mot budgeterade, kostnader mot budget och fakturerat mot kontrakt. Målet är att upptäcka avvikelser medan du fortfarande kan agera – inte när projektet är klart.</p>

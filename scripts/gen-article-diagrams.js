@@ -245,6 +245,57 @@ const slutbesiktning = frame(`
   ${ARR_DEF}
 `);
 
+// 15. Tidrapportering – flöde in-/utcheckning → lön & faktura
+const tidflode = frame(`
+  ${title('Digital tidrapportering – flödet')}
+  ${stepBox(36, 120, 130, 74, 'Checka in', 'på bygget', BLUE)}
+  ${arrow(166, 202, 157)}
+  ${stepBox(202, 120, 130, 74, 'Timmar på', 'rätt projekt', BLUE)}
+  ${arrow(332, 368, 157)}
+  ${stepBox(368, 120, 130, 74, 'Granska', 'i webbadmin', AMBER)}
+  ${arrow(498, 534, 157)}
+  ${stepBox(534, 120, 128, 74, 'Export', 'lön &amp; faktura', GREEN)}
+  <text x="40" y="240" ${font} font-size="15" font-weight="700" fill="${INK}">Registrera en gång – använd överallt.</text>
+  <text x="40" y="266" ${font} font-size="14" fill="${MUT}">Samma timmar blir löneunderlag, fakturarader och projektekonomi.</text>
+  ${ARR_DEF}
+`);
+
+// 16. Stämpelklocka app med GPS
+const stampelklocka = frame(`
+  ${title('Stämpelklocka app med GPS')}
+  ${stepBox(40, 110, 150, 74, 'Checka in', 'i mobilen', BLUE)}
+  ${arrow(190, 236, 147)}
+  ${stepBox(236, 110, 170, 74, 'GPS bekräftar', 'arbetsplatsen', GREEN)}
+  ${arrow(406, 452, 147)}
+  ${stepBox(452, 110, 150, 74, 'Närvaro', 'registrerad', BLUE)}
+  <text x="40" y="232" ${font} font-size="15" font-weight="700" fill="${INK}">Fungerar på Android och iPhone.</text>
+  <text x="40" y="258" ${font} font-size="14" fill="${MUT}">Ersätter väggklockan – incheckning knyts till plats, inte till en terminal.</text>
+  ${note('GPS gör mobilstämpling pålitlig – mindre diskussion om timmar i efterhand.', INK)}
+  ${ARR_DEF}
+`);
+
+// 17. Tidrapporteringssystem – tre steg
+const tidsystem = frame(`
+  ${title('Tidsregistrering → rapportering → redovisning')}
+  ${card(36, 84, 200, 210, 'Tidsregistrering', BLUE, ['Stämpla in/ut', 'i mobilen', '(gärna med GPS)'])}
+  ${card(258, 84, 200, 210, 'Tidrapportering', GREEN, ['Timmar kopplas', 'till projekt', 'och aktivitet'])}
+  ${card(480, 84, 200, 210, 'Tidredovisning', AMBER, ['Sammanställt', 'underlag till lön,', 'faktura, uppföljning'])}
+  ${note('Ett tidrapporteringssystem tar dig genom alla tre steg utan dubbelinmatning.', INK)}
+`);
+
+// 18. Projektuppföljning – budget vs utfall → marginal
+const projektuppfoljning = frame(`
+  ${title('Projektuppföljning – utfall mot budget')}
+  ${card(36, 84, 300, 200, 'Följ löpande', BLUE, ['Timmar mot budget', 'Kostnader mot budget', 'Fakturerat mot kontrakt', 'Marginal (kr och %)'])}
+  <text x="372" y="120" ${font} font-size="15" font-weight="700" fill="${INK}">Se avvikelsen i tid.</text>
+  <text x="372" y="150" ${font} font-size="14" fill="${MUT}">Siffrorna uppdateras av det</text>
+  <text x="372" y="172" ${font} font-size="14" fill="${MUT}">laget redan gör – tid, material,</text>
+  <text x="372" y="194" ${font} font-size="14" fill="${MUT}">kvitton – i realtid.</text>
+  <rect x="372" y="220" width="308" height="64" rx="10" fill="#eef4ff" stroke="#d5e2fb"/>
+  <text x="388" y="246" ${font} font-size="13.5" fill="${INK}">Agera innan budgettaket: bemanning,</text>
+  <text x="388" y="266" ${font} font-size="13.5" fill="${INK}">ÄTA-fakturera eller stäm av med kund.</text>
+`);
+
 const DIAGRAMS = {
   'ab-kontrakt': abKontrakt,
   'ata-flode': ata,
@@ -260,6 +311,10 @@ const DIAGRAMS = {
   'offert': offert,
   'timpris': timpris,
   'slutbesiktning': slutbesiktning,
+  'tidrapportering-flode': tidflode,
+  'stampelklocka-gps': stampelklocka,
+  'tidrapporteringssystem': tidsystem,
+  'projektuppfoljning': projektuppfoljning,
 };
 
 async function main() {

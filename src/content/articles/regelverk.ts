@@ -56,7 +56,7 @@ const PERSONALLIGGARE_HTML = `
 <p>12 500 kr, plus 2 500 kr för varje person som är verksam men inte antecknad. Saknas anmälan om byggstart är avgiften 25 000 kr.</p>
 
 <h2>Kom igång</h2>
-<p>Slipp papperslistor och kontrollavgifter. Registrera närvaron digitalt, kopplad till projektet, och ha allt redo för Skatteverket. <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">Se hur närvaro fungerar i ByggExp</a> eller <a href="/sv/contact">boka en demo</a>.</p>
+<p>Slipp papperslistor och kontrollavgifter. Registrera närvaron digitalt, kopplad till projektet, och ha allt redo för Skatteverket. Läs om <a href="/sv/blog/personalliggare-bygg-app">personalliggare som app</a>, <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">se hur närvaro fungerar i ByggExp</a> eller <a href="/sv/contact">boka en demo</a>.</p>
 `.trim();
 
 const PERSONALLIGGARE: BlogPost = {

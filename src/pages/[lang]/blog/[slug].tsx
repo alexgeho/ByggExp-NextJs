@@ -5,7 +5,8 @@ import { useEffect, useRef, useState } from 'react';
 
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
-import { fetchPublishedBlogPost, fetchPublishedBlogPosts } from '../../../lib/blog-api';
+import { fetchPublishedBlogPost } from '../../../lib/blog-api';
+import { fetchPublishedBlogPostsCached } from '../../../lib/blog-cache';
 import { getBlogTools } from '../../../content/blog-tools';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { extractFaqFromHtml } from '../../../lib/faq';
@@ -47,13 +48,11 @@ async function getRelatedPosts(
   // Pool = code articles + CMS posts, deduped. Prefer same-category articles so
   // "Liknande artiklar" is actually related, then fill up to 8 for the carousel.
   let pool: BlogPost[] = getCodeArticles(lang);
-  try {
-    const cms = await fetchPublishedBlogPosts(lang);
-    const seen = new Set(pool.map((p) => p.slug));
-    pool = [...pool, ...cms.filter((p) => !seen.has(p.slug))];
-  } catch {
-    // CMS unavailable — code articles still fill the carousel.
-  }
+  // Cached CMS fetch (2 min TTL) — avoids a CMS round-trip on every request,
+  // which was a large part of TTFB.
+  const cms = await fetchPublishedBlogPostsCached(lang);
+  const seen = new Set(pool.map((p) => p.slug));
+  pool = [...pool, ...cms.filter((p) => !seen.has(p.slug))];
   const current = pool.find((p) => p.slug === currentSlug);
   const cat = current ? categoryForTag(current.tag) : null;
   const others = pool.filter((p) => p.slug !== currentSlug);

@@ -28,6 +28,8 @@ export const FEATURE_DOCS = {
       { src: '/features-content/skapa-offert-2.webp', alt: 'ByggExp-appen: lista över offerter med status, t.ex. utkast' },
     ],
     imagesCaption: 'Ny offert och listan över offerter i ByggExp-appen.',
+    docImage: { src: '/features-content/skapa-offert-i-byggexp-doc.webp', alt: 'Exempel på en färdig offert från ByggExp – rader, á-pris, moms och totalsumma med företagets logotyp' },
+    docImageCaption: 'Så ser en färdig offert ut – proffsig PDF med era uppgifter, rader, moms och totalsumma, redo att skicka.',
     webImage: { src: '/features-content/skapa-offert-i-byggexp-web.webp', alt: 'Offerter i webbadmin – lista med kund, status och totalsumma' },
     webImageCaption: 'Offerter i webbadmin – skapa, skicka och följ status (utkast, skickad, accepterad).',
     ecosystem: 'en godkänd offert blir underlag för <a href="/sv/blog/fakturera-fran-byggexp">fakturan</a> och följer med i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomin</a> – allt i samma system, utan att mata in något två gånger.',

@@ -18,6 +18,11 @@ const OUT = path.join(ROOT, 'src/content/articles/features.ts');
 function buildBlock(doc) {
   const ol = (steps) => `<ol>\n${steps.map((s) => `<li>${s}</li>`).join('\n')}\n</ol>`;
   const parts = [];
+  // Portrait document preview (e.g. what a generated offert/faktura PDF looks like).
+  if (doc.docImage) {
+    const cap = doc.docImageCaption ? `<figcaption>${doc.docImageCaption}</figcaption>` : '';
+    parts.push(`<figure class="doc-shot"><img src="${doc.docImage.src}" alt="${doc.docImage.alt}" loading="lazy">${cap}</figure>`);
+  }
   if (doc.webbadmin?.length) parts.push(`<h2>Så gör du i webbadmin</h2>\n${ol(doc.webbadmin)}`);
   if (doc.webImage) {
     const cap = doc.webImageCaption ? `<figcaption>${doc.webImageCaption}</figcaption>` : '';

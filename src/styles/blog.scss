@@ -530,6 +530,29 @@
   }
 }
 
+// Portrait document preview (A4 offert/faktura PDF).
+.blog-article-content .doc-shot {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.blog-article-content .doc-shot img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 1px solid rgba(10, 40, 90, 0.12);
+  box-shadow: 0 12px 34px rgba(6, 18, 40, 0.14);
+}
+
+.blog-article-content .doc-shot figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted, #6b7a90);
+  margin-top: 8px;
+}
+
 // Wide webbadmin (desktop) screenshot, full article width.
 .blog-article-content .web-shot {
   margin: 24px 0;

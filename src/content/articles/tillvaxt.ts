@@ -1401,6 +1401,7 @@ const S_PERSONALLIGGARE_APP: BlogPost = {
 const A_AFFARSSYSTEM_BYGGFORETAG_HTML = `
 <p>Många byggföretag kör tid i en app, fakturor i en annan och lönen i ett tredje system – och lägger timmar varje vecka på att flytta siffror mellan dem. Ett affärssystem för byggföretag samlar allt i ett: tid, projekt, offert, faktura, lön och ekonomi hänger ihop, så att en registrering räcker. Här går vi igenom vad ett affärssystem (ibland kallat ERP) för bygg bör klara och varför ett molnbaserat, samlat system slår lösa öar.</p>
 <p>Vill du se hur delarna hänger ihop? Läs om <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomi</a> och <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a>.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/affarssystem.webp" alt="Diagram: affärssystem – tid, projekt, offert, faktura, lön och ekonomi i en plattform" width="720" height="380" loading="lazy"><figcaption>Allt i en plattform: tid, projekt, offert, faktura, lön och ekonomi delar samma data – en registrering räcker.</figcaption></figure>
 
 <h2>Vad är ett affärssystem för byggföretag?</h2>
 <p>Ett affärssystem är den gemensamma plattform där hela verksamheten körs: projekt, personal, tid, material, offert, faktura och ekonomi. Skillnaden mot enskilda appar är att allt delar samma data – loggad tid blir automatiskt både löneunderlag och fakturarad och räknas in i projektets resultat.</p>
@@ -1445,6 +1446,7 @@ const A_AFFARSSYSTEM_BYGGFORETAG: BlogPost = {
 const A_CRM_BYGGFORETAG_HTML = `
 <p>Offerter i huvudet, kundkontakter på lappar och uppföljningar som glöms bort – så tappar byggföretag affärer utan att märka det. Ett CRM för byggföretag håller ordning på kunder, förfrågningar och offerter så att inget faller mellan stolarna och fler förfrågningar blir jobb. Här går vi igenom vad ett CRM för bygg bör klara.</p>
 <p>Snabb respons vinner ofta jobbet – börja med att kunna skicka <a href="/sv/blog/skapa-offert-i-byggexp">offert direkt</a> när förfrågan kommer in.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/crm-bygg.webp" alt="Diagram: CRM – från förfrågan till offert, uppföljning och vunnet projekt" width="720" height="380" loading="lazy"><figcaption>Från förfrågan till vunnet projekt: samla förfrågningar, skicka offert, följ upp med påminnelser – inget tappas.</figcaption></figure>
 
 <h2>Vad är ett CRM för byggföretag?</h2>
 <p>CRM (kundhantering) samlar allt om varje kund och affär på ett ställe: kontaktuppgifter, förfrågningar, skickade offerter, status och nästa steg. För byggföretag är det bryggan mellan en förfrågan och ett vunnet projekt.</p>
@@ -1485,6 +1487,7 @@ const A_CRM_BYGGFORETAG: BlogPost = {
 const A_SERVICEHANTERING_BYGG_HTML = `
 <p>Serviceuppdrag och mindre jobb är annorlunda än stora projekt: många korta besök, olika adresser, snabb fakturering. Utan system tappas timmar och material, och faktureringen släpar. Ett system för servicehantering (serviceorder) håller ordning på uppdragen från beställning till betald faktura. Här går vi igenom vad en serviceorder-app för bygg bör klara.</p>
 <p>Grunden är att fånga tid och material på plats – se <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering</a> och <a href="/sv/blog/fota-kvitton-och-hantera-utlagg">kvitton och utlägg</a>.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/servicehantering.webp" alt="Diagram: servicehantering – arbetsorder, tid och material på plats, foto, snabb faktura" width="720" height="380" loading="lazy"><figcaption>Serviceflödet: skapa arbetsorder, registrera tid och material på plats, dokumentera med foto och fakturera snabbt.</figcaption></figure>
 
 <h2>Vad är servicehantering?</h2>
 <p>Servicehantering är att styra serviceuppdrag och arbetsorder: vem gör vad, var, med vilken tid och vilket material – och hur det blir faktura. För service- och underhållsjobb med hög volym är det avgörande att inget uppdrag glöms eller faktureras för lågt.</p>
@@ -1525,6 +1528,7 @@ const A_SERVICEHANTERING_BYGG: BlogPost = {
 const A_SCHEMALAGGNING_BYGG_HTML = `
 <p>Att pussla vem som ska vara var, vilken dag, på vilket projekt – med semestrar och sjukdom i beräkningen – tar tid och blir lätt fel i huvudet eller i Excel. Ett verktyg för schemaläggning och personalplanering ger dig en delad vy över hela laget, kopplad till projekt och tid. Här går vi igenom vad schemaläggning för byggföretag bör klara.</p>
 <p>Planeringen hänger ihop med <a href="/sv/blog/dagsplanering-och-planeringsmoten">dagsplanering</a>, <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro</a> och <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering</a>.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/schemalaggning.webp" alt="Diagram: schemaläggning – hela laget per dag i en delad vy" width="720" height="380" loading="lazy"><figcaption>Hela laget i en vy: planera per person eller projekt över veckan, med frånvaro och överbokning synligt direkt.</figcaption></figure>
 
 <h2>Vad är schemaläggning för byggföretag?</h2>
 <p>Schemaläggning (personalplanering) är att fördela personal på projekt och dagar så att rätt kompetens finns på rätt plats. En bra vy visar hela laget över veckorna, med lediga och överbokade direkt synliga.</p>

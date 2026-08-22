@@ -326,7 +326,87 @@ const nbStemplingsur = frame(`
   ${ARR_DEF}
 `);
 
+// 21. Affärssystem – allt i ett (hub)
+const affarssystem = frame(`
+  ${title('Affärssystem – allt i ett')}
+  <circle cx="360" cy="200" r="52" fill="${BLUE}"/>
+  <text x="360" y="196" ${font} font-size="15" font-weight="800" fill="#fff" text-anchor="middle">ByggExp</text>
+  <text x="360" y="214" ${font} font-size="12" fill="#fff" text-anchor="middle">en plattform</text>
+  ${(() => {
+    const mods = ['Tid', 'Projekt', 'Offert', 'Faktura', 'Lön', 'Ekonomi'];
+    const cx = 360, cy = 200, r = 132;
+    return mods.map((m, i) => {
+      const a = (Math.PI * 2 * i) / mods.length - Math.PI / 2;
+      const x = cx + Math.cos(a) * r, y = cy + Math.sin(a) * r;
+      return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#c7d3e6" stroke-width="2"/>`
+        + `<rect x="${x - 52}" y="${y - 19}" width="104" height="38" rx="10" fill="#fff" stroke="${GREEN}" stroke-width="1.5"/>`
+        + `<text x="${x}" y="${y + 5}" ${font} font-size="14" font-weight="700" fill="${INK}" text-anchor="middle">${m}</text>`;
+    }).join('');
+  })()}
+  ${note('En registrering delas av alla moduler – ingen dubbelinmatning.', INK)}
+`);
+
+// 22. CRM – förfrågan → vunnet projekt
+const crm = frame(`
+  ${title('CRM – från förfrågan till vunnet projekt')}
+  ${stepBox(36, 120, 138, 74, 'Förfrågan', 'kommer in', BLUE)}
+  ${arrow(174, 210, 157)}
+  ${stepBox(210, 120, 138, 74, 'Offert', 'skickad', BLUE)}
+  ${arrow(348, 384, 157)}
+  ${stepBox(384, 120, 138, 74, 'Uppföljning', 'påminnelse', AMBER)}
+  ${arrow(522, 558, 157)}
+  ${stepBox(558, 120, 120, 74, 'Vunnet', 'projekt', GREEN)}
+  <text x="40" y="240" ${font} font-size="15" font-weight="700" fill="${INK}">Inget tappas – heta förfrågningar kallnar inte.</text>
+  <text x="40" y="266" ${font} font-size="14" fill="${MUT}">Vunnen offert blir projekt med tid, material och faktura.</text>
+  ${ARR_DEF}
+`);
+
+// 23. Servicehantering – order → faktura
+const service = frame(`
+  ${title('Servicehantering – order till faktura')}
+  ${stepBox(36, 120, 138, 74, 'Arbetsorder', 'skapas', BLUE)}
+  ${arrow(174, 210, 157)}
+  ${stepBox(210, 120, 138, 74, 'Tid + material', 'på plats', BLUE)}
+  ${arrow(348, 384, 157)}
+  ${stepBox(384, 120, 138, 74, 'Foto &amp;', 'dokumentation', AMBER)}
+  ${arrow(522, 558, 157)}
+  ${stepBox(558, 120, 120, 74, 'Fakturera', 'snabbt', GREEN)}
+  <text x="40" y="240" ${font} font-size="15" font-weight="700" fill="${INK}">Många korta uppdrag – inget faller mellan stolarna.</text>
+  <text x="40" y="266" ${font} font-size="14" fill="${MUT}">Teknikern ser ordern i appen och registrerar allt på plats.</text>
+  ${ARR_DEF}
+`);
+
+// 24. Schemaläggning – vem, var, när
+const schema = frame(`
+  ${title('Schemaläggning – hela laget i en vy')}
+  ${(() => {
+    let s = '';
+    const x0 = 60, y0 = 96, cw = 92, rh = 40, cols = 5, rows = 3;
+    const days = ['Mån', 'Tis', 'Ons', 'Tor', 'Fre'];
+    days.forEach((d, i) => { s += `<text x="${x0 + 90 + i * cw + cw / 2}" y="${y0 - 6}" ${font} font-size="12" fill="${MUT}" text-anchor="middle">${d}</text>`; });
+    const names = ['Erik', 'Anna', 'Sam'];
+    for (let r = 0; r < rows; r++) {
+      const y = y0 + r * rh;
+      s += `<text x="${x0}" y="${y + 26}" ${font} font-size="13" font-weight="700" fill="${INK}">${names[r]}</text>`;
+      for (let c = 0; c < cols; c++) {
+        const x = x0 + 90 + c * cw;
+        s += `<rect x="${x}" y="${y + 6}" width="${cw - 8}" height="${rh - 12}" rx="6" fill="#f2f6fc" stroke="#e0e8f4"/>`;
+      }
+    }
+    // some assignment bars
+    s += `<rect x="${x0 + 90}" y="${y0 + 12}" width="${cw * 3 - 8}" height="16" rx="8" fill="${BLUE}"/>`;
+    s += `<rect x="${x0 + 90 + cw}" y="${y0 + rh + 12}" width="${cw * 2 - 8}" height="16" rx="8" fill="${GREEN}"/>`;
+    s += `<rect x="${x0 + 90 + cw * 3}" y="${y0 + rh * 2 + 12}" width="${cw * 2 - 8}" height="16" rx="8" fill="${AMBER}"/>`;
+    return s;
+  })()}
+  ${note('Planera per person eller projekt – frånvaro och överbokning syns direkt.', INK)}
+`);
+
 const DIAGRAMS = {
+  'affarssystem': affarssystem,
+  'crm-bygg': crm,
+  'servicehantering': service,
+  'schemalaggning': schema,
   'nb-timeregistrering-flyt': nbTimeflyt,
   'nb-stemplingsur-gps': nbStemplingsur,
   'ab-kontrakt': abKontrakt,

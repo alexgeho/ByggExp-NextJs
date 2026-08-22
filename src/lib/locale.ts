@@ -13,7 +13,7 @@ export const NB_LIVE = true;
 // a dead host across the whole byggexp.se site. Flip to true once
 // `dig byggexp.no A` resolves and https://byggexp.no serves. (2026-08-20: still
 // pendingdelegation → kept false.)
-export const NO_DOMAIN_LIVE = false;
+export const NO_DOMAIN_LIVE = true;
 
 export const TOOL_LOCALES = ['sv', 'nb'] as const;
 export type ToolLocale = (typeof TOOL_LOCALES)[number];

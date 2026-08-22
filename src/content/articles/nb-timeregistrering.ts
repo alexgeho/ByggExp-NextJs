@@ -174,8 +174,59 @@ const S_STEMPLINGSUR_APP: BlogPost = {
   updatedAt: '2026-08-22T12:20:00.000Z',
 };
 
+const F_FAKTURERINGSPROGRAM_BYGG_HTML = `
+<p>For et byggefirma henger fakturering tett sammen med timene og prosjektet: du vil fakturere loggede timer, materiell og tillegg – med riktig MVA og forfallsdato – uten å taste inn alt på nytt. Et faktureringsprogram for bygg gjør nettopp det. Her går vi gjennom hva et faktureringsprogram for byggefirmaer bør klare.</p>
+<p>Grunnlaget er registrert tid – se <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>.</p>
+
+<h2>Hva et faktureringsprogram for bygg bør klare</h2>
+<ul>
+<li>Fakturere loggede timer og materiell direkte fra prosjektet.</li>
+<li>Riktig <strong>MVA</strong> (standardsats 25 % i Norge) og forfallsdato.</li>
+<li>KID-nummer og kontonummer for enkel betaling.</li>
+<li>Oversikt over ubetalte og betalte fakturaer.</li>
+</ul>
+<p>Sjekk alltid aktuelle MVA-satser og fakturakrav hos Skatteetaten.</p>
+
+<h2>Fra time til faktura</h2>
+<p>Poenget er å slippe dobbeltarbeid: timene teamet stempler blir automatisk fakturalinjer, og fakturaen henger sammen med prosjektets økonomi. Registrer én gang, bruk overalt.</p>
+
+<h2>Kom i gang</h2>
+<p>Vil du se hvordan tid blir faktura i ByggExp? <a href="/nb/blog/timeregistrering-app-bygg">Les om timeregistrering</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+
+<h2>Vanlige spørsmål</h2>
+<h3>Hva bør et faktureringsprogram for byggefirma klare?</h3>
+<p>Fakturere loggede timer og materiell fra prosjektet, med riktig MVA (25 %), forfallsdato, KID og kontonummer, samt oversikt over ubetalte fakturaer.</p>
+<h3>Hvilken MVA-sats gjelder for byggetjenester i Norge?</h3>
+<p>Standard MVA-sats er 25 %. Sjekk alltid aktuelle satser og regler hos Skatteetaten.</p>
+<h3>Kan fakturaen bygge på timene teamet registrerer?</h3>
+<p>Ja. I ByggExp blir loggede timer automatisk fakturalinjer, så du slipper å taste inn tallene på nytt.</p>
+`.trim();
+
+const F_FAKTURERINGSPROGRAM_BYGG: BlogPost = {
+  _id: 'code-nb-faktureringsprogram-bygg',
+  title: 'Faktureringsprogram for bygg – faktura fra timer og MVA',
+  slug: 'faktureringsprogram-bygg',
+  locale: 'nb',
+  excerpt:
+    'Faktureringsprogram for byggefirmaer: fakturer loggede timer og materiell fra prosjektet, med riktig MVA (25 %), KID og forfallsdato. Slik velger du rett.',
+  tag: 'Digitalisering',
+  coverImageUrl: '/landing/features/8fakturor.webp',
+  contentHtml: F_FAKTURERINGSPROGRAM_BYGG_HTML,
+  seoTitle: 'Faktureringsprogram for bygg – faktura fra timer & MVA | ByggExp',
+  seoDescription:
+    'Faktureringsprogram for byggefirmaer: fakturer loggede timer og materiell direkte fra prosjektet, med riktig MVA (25 %), KID og forfallsdato. Fra time til faktura.',
+  seoImageUrl: `${NO_SITE_URL}/landing/features/8fakturor.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-08-22T12:30:00.000Z',
+  createdAt: '2026-08-22T12:30:00.000Z',
+  updatedAt: '2026-08-22T12:30:00.000Z',
+};
+
 export const NB_ARTICLES: BlogPost[] = [
   P_TIMEREGISTRERING_APP_BYGG,
   S_GRATIS_TIMEREGISTRERING_APP,
   S_STEMPLINGSUR_APP,
+  F_FAKTURERINGSPROGRAM_BYGG,
 ];

@@ -227,9 +227,31 @@ export default function BlogArticlePage({
               datePublished: post.publishedAt || post.createdAt,
               dateModified: post.updatedAt,
               mainEntityOfPage: canonicalUrl,
+              author: { "@type": "Organization", name: "ByggExp", url: `${localeOrigin(lang)}/${lang}` },
+              publisher: {
+                "@type": "Organization",
+                name: "ByggExp",
+                logo: { "@type": "ImageObject", url: `${siteUrl}/logo.png` },
+              },
             }),
           }}
         />
+        {!post.noIndex ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Hem", item: `${localeOrigin(lang)}/${lang}` },
+                  { "@type": "ListItem", position: 2, name: copy.badge, item: `${localeOrigin(lang)}/${lang}/blog` },
+                  { "@type": "ListItem", position: 3, name: post.title, item: canonicalUrl },
+                ],
+              }),
+            }}
+          />
+        ) : null}
         {!post.noIndex && faq.length > 0 ? (
           <script
             type="application/ld+json"

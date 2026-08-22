@@ -5,6 +5,11 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  // Tidrapportering keyword-funnel cluster (sv-only).
+  'app-for-tidrapportering-bygg',
+  'stampelklocka-app-gps-bygg',
+  'tidrapporteringssystem-bygg',
+  'projektuppfoljning-bygg',
   // Feature pages ("Funktioner"), moved from CMS into code (sv-only).
   'skapa-offert-i-byggexp',
   'fakturera-fran-byggexp',

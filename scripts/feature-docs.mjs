@@ -77,8 +77,8 @@ export const FEATURE_DOCS = {
       'Teamet loggar tid och registrerar material och kvitton löpande så att siffrorna alltid är färska.',
       'Som ledare får du en snabb ekonomisk överblick per projekt i mobilen.',
     ],
-    webImage: { src: '/features-content/projektekonomi-och-lonsamhet-web.webp', alt: 'Projektekonomi i webbadmin – budget mot utfall för timmar, kostnader, fakturerat och marginal' },
-    webImageCaption: 'Projektöversikt i webbadmin – budget mot utfall för timmar, kostnader, fakturerat och marginal på ett ställe.',
+    webImage: { src: '/features-content/projektekonomi-och-lonsamhet-web.webp', alt: 'Skapa projekt i webbadmin – sätt budget, planerade timmar och material' },
+    webImageCaption: 'Sätt budgeten i webbadmin – total budget, planerade timmar och material. Sedan mäts ekonomin automatiskt mot den.',
     images: [
       { src: '/features-content/projektekonomi-och-lonsamhet-1.webp', alt: 'ByggExp-appen: projektets ekonomi – timpriser, arbetade timmar och kostnad' },
       { src: '/features-content/projektekonomi-och-lonsamhet-2.webp', alt: 'ByggExp-appen: projektets ekonomi – kostnader, fakturerat och marginal' },

@@ -1381,7 +1381,181 @@ const A_FARLIGT_AVFALL_ANTECKNINGSSKYLDIGHET_BYGG: BlogPost = {
   publishedAt: "2026-08-20T08:15:00.000Z", createdAt: "2026-08-20T08:15:00.000Z", updatedAt: "2026-08-20T08:15:00.000Z",
 };
 
+// --- Bygglov cluster (high-volume consumer/regulatory; funnels to kontrollplan-mall + /fa-offert) ---
+
+const B_BEHOVER_JAG_BYGGLOV_HTML = `
+<p>Behöver du bygglov? Det korta svaret: det beror på vad du ska bygga, hur stort och var. Vissa åtgärder kräver bygglov, andra bara en anmälan – och en del får du göra helt utan tillstånd. Här är en tydlig guide till när bygglov krävs enligt plan- och bygglagen (PBL), och var de vanligaste undantagen går.</p>
+<p>Planerar du att anlita någon för jobbet? <a href="/sv/fa-offert">Få 3 offerter från byggföretag</a> – gratis och utan förpliktelser.</p>
+
+<h2>När krävs bygglov?</h2>
+<p>Bygglov krävs oftast för att bygga nytt, bygga till, eller väsentligt ändra en byggnad (t.ex. fasad, takform eller användning). För en- och tvåbostadshus finns dock flera undantag – attefallsåtgärder och friggebod – som i stället kräver anmälan eller inget alls.</p>
+
+<h2>Vanliga åtgärder – lov, anmälan eller inget?</h2>
+<ul>
+<li><strong>Nytt hus / större tillbyggnad:</strong> bygglov.</li>
+<li><strong>Attefallshus (upp till 30 m²):</strong> anmälan + startbesked, inte bygglov.</li>
+<li><strong>Friggebod (upp till 15 m²):</strong> normalt varken lov eller anmälan.</li>
+<li><strong>Fasadändring, takkupa, inglasning:</strong> ofta bygglov – varierar.</li>
+<li><strong>Altan, staket, skärmtak:</strong> beror på storlek, höjd och placering.</li>
+</ul>
+<p>Reglerna tolkas delvis lokalt – <strong>kontrollera alltid med din kommun</strong> och Boverket innan du börjar.</p>
+
+<h2>Anmälan och startbesked</h2>
+<p>Även åtgärder utan bygglov (som attefallshus) kräver oftast en anmälan och ett <a href="/sv/blog/startbesked-bygglov-process-2026">startbesked</a> innan du får börja. Till bygget hör i regel en <a href="/sv/verktyg/kontrollplan-mall">kontrollplan</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur vet jag om jag behöver bygglov?</h3>
+<p>Det beror på åtgärd, storlek och placering. Nybyggnad och tillbyggnad kräver oftast bygglov; attefallshus kräver anmälan; friggebod ofta inget. Kontrollera alltid med din kommun.</p>
+<h3>Vad händer om jag bygger utan bygglov?</h3>
+<p>Att bygga utan lov (svartbygge) kan leda till byggsanktionsavgift och krav på rättelse. Sök lov eller gör anmälan innan du börjar.</p>
+<h3>Vad är skillnaden mellan bygglov och anmälan?</h3>
+<p>Bygglov är ett tillstånd som prövas mot detaljplan m.m. Anmälan är en enklare process för attefallsåtgärder, men även den kräver startbesked innan du får börja.</p>
+`.trim();
+
+const B_BEHOVER_JAG_BYGGLOV: BlogPost = {
+  _id: 'code-behover-jag-bygglov', title: 'Behöver du bygglov? Guide 2026', slug: 'behover-jag-bygglov', locale: 'sv',
+  excerpt: 'Behöver du bygglov? Det beror på vad, hur stort och var. Guide till när bygglov krävs enligt PBL, när det räcker med anmälan och vad du får göra utan lov.', tag: 'Regelverk',
+  coverImageUrl: '/landing/features/6verktyg.webp', contentHtml: B_BEHOVER_JAG_BYGGLOV_HTML,
+  seoTitle: 'Behöver du bygglov? Guide 2026 – lov, anmälan eller inget | ByggExp', seoDescription: 'Behöver du bygglov? Guide till plan- och bygglagen: när krävs bygglov, när räcker anmälan och startbesked, och vad du får bygga utan lov (attefall, friggebod).',
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
+  publishedAt: '2026-08-22T14:00:00.000Z', createdAt: '2026-08-22T14:00:00.000Z', updatedAt: '2026-08-22T14:00:00.000Z',
+};
+
+const B_ATTEFALLSHUS_REGLER_HTML = `
+<p>Ett attefallshus är en av de mest populära åtgärderna du kan göra utan bygglov – men det finns tydliga regler för storlek, höjd och placering, och du måste göra en anmälan. Här går vi igenom attefallshus-reglerna 2026: hur stort det får vara, avstånd till tomtgräns och vad som krävs innan du börjar.</p>
+<p>Vill du ta in offerter på ett attefallshus? <a href="/sv/fa-offert">Få 3 offerter från byggföretag</a> – gratis.</p>
+
+<h2>Hur stort får ett attefallshus vara?</h2>
+<p>Ett attefallshus får vara upp till <strong>30 m²</strong> byggnadsarea. Det kan användas som komplementbostadshus (permanent boende) eller komplementbyggnad (t.ex. förråd, garage, gäststuga). Taknockshöjden får vara högst <strong>4 meter</strong>.</p>
+
+<h2>Avstånd till tomtgräns</h2>
+<p>Attefallshuset ska placeras minst <strong>4,5 meter</strong> från tomtgräns. Vill du bygga närmare krävs berörda grannars medgivande. Nära allmän plats eller gata gäller särskilda regler.</p>
+
+<h2>Anmälan och startbesked</h2>
+<p>Attefallshus kräver inte bygglov, men en <strong>anmälan</strong> till kommunen och ett <strong>startbesked</strong> innan du får börja. Till bygget hör oftast en <a href="/sv/verktyg/kontrollplan-mall">kontrollplan</a>. Reglerna kan tolkas lokalt – kontrollera med din kommun.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur stort får ett attefallshus vara 2026?</h3>
+<p>Upp till 30 m² byggnadsarea, med taknockshöjd på högst 4 meter. Kontrollera aktuella detaljer hos Boverket och din kommun.</p>
+<h3>Hur nära tomtgräns får attefallshuset stå?</h3>
+<p>Minst 4,5 meter från tomtgräns, om inte berörda grannar ger sitt medgivande att bygga närmare.</p>
+<h3>Behöver jag bygglov för attefallshus?</h3>
+<p>Nej, men du måste göra en anmälan och få startbesked innan du börjar bygga.</p>
+`.trim();
+
+const B_ATTEFALLSHUS_REGLER: BlogPost = {
+  _id: 'code-attefallshus-regler', title: 'Attefallshus – regler, storlek och bygglov 2026', slug: 'attefallshus-regler', locale: 'sv',
+  excerpt: 'Attefallshus 2026: upp till 30 m², max 4 m nockhöjd, minst 4,5 m från tomtgräns. Kräver anmälan och startbesked – inte bygglov. Alla regler samlat.', tag: 'Regelverk',
+  coverImageUrl: '/landing/features/6verktyg.webp', contentHtml: B_ATTEFALLSHUS_REGLER_HTML,
+  seoTitle: 'Attefallshus regler 2026 – storlek, tomtgräns & bygglov | ByggExp', seoDescription: 'Attefallshus regler 2026: upp till 30 m², max 4 m nockhöjd, minst 4,5 m från tomtgräns, kräver anmälan och startbesked (inte bygglov). Så gäller det.',
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
+  publishedAt: '2026-08-22T14:05:00.000Z', createdAt: '2026-08-22T14:05:00.000Z', updatedAt: '2026-08-22T14:05:00.000Z',
+};
+
+const B_FRIGGEBOD_REGLER_HTML = `
+<p>En friggebod får du bygga utan både bygglov och anmälan – därför är den ett smidigt sätt att få förråd eller gäststuga. Men storleken och placeringen är reglerade. Här är friggebod-reglerna: hur stor den får vara, höjd och avstånd till tomtgräns.</p>
+<p>Vill du ha hjälp att bygga? <a href="/sv/fa-offert">Få 3 offerter från byggföretag</a>.</p>
+
+<h2>Hur stor får en friggebod vara?</h2>
+<p>Den sammanlagda byggnadsarean för friggebodar på tomten får vara högst <strong>15 m²</strong>, med en taknockshöjd på högst <strong>3 meter</strong>. Du kan ha flera friggebodar så länge den totala arean håller sig inom 15 m².</p>
+
+<h2>Avstånd till tomtgräns</h2>
+<p>Friggeboden ska placeras minst <strong>4,5 meter</strong> från tomtgräns om du inte har grannens medgivande att bygga närmare.</p>
+
+<h2>Friggebod eller attefallshus?</h2>
+<p>Friggeboden (15 m², inget lov/anmälan) är enklast men mindre. Vill du ha upp till 30 m² och kunna bo permanent, är ett <a href="/sv/blog/attefallshus-regler">attefallshus</a> rätt – men det kräver anmälan och startbesked.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur stor får en friggebod vara?</h3>
+<p>Sammanlagt högst 15 m² byggnadsarea med max 3 meter i nockhöjd. Kontrollera aktuella regler hos Boverket.</p>
+<h3>Behöver jag bygglov för en friggebod?</h3>
+<p>Nej, en friggebod inom reglerna kräver varken bygglov eller anmälan. Men avstånd till tomtgräns och storlek måste följas.</p>
+<h3>Hur nära tomtgränsen får friggeboden stå?</h3>
+<p>Minst 4,5 meter, om inte berörd granne ger medgivande att bygga närmare.</p>
+`.trim();
+
+const B_FRIGGEBOD_REGLER: BlogPost = {
+  _id: 'code-friggebod-regler', title: 'Friggebod – regler, storlek (15 kvm) och höjd', slug: 'friggebod-regler', locale: 'sv',
+  excerpt: 'Friggebod-regler: sammanlagt högst 15 m², max 3 m nockhöjd, minst 4,5 m från tomtgräns – utan bygglov eller anmälan. Friggebod eller attefallshus?', tag: 'Regelverk',
+  coverImageUrl: '/landing/features/6verktyg.webp', contentHtml: B_FRIGGEBOD_REGLER_HTML,
+  seoTitle: 'Friggebod regler – storlek 15 kvm, höjd & tomtgräns | ByggExp', seoDescription: 'Friggebod-regler: högst 15 m² sammanlagt, max 3 m nockhöjd, minst 4,5 m från tomtgräns, utan bygglov eller anmälan. Skillnaden mot attefallshus.',
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
+  publishedAt: '2026-08-22T14:10:00.000Z', createdAt: '2026-08-22T14:10:00.000Z', updatedAt: '2026-08-22T14:10:00.000Z',
+};
+
+const B_STAKET_BYGGLOV_HTML = `
+<p>Behöver du bygglov för staket eller plank? För vanliga staket krävs oftast inget bygglov, men för högre plank och murar kan det behövas – och reglerna varierar mellan kommuner. Här går vi igenom vad som gäller för staket, plank och tomtgräns.</p>
+<p>Ska du sätta upp staket? Räkna material i vår gratis <a href="/sv/verktyg/staket-kalkylator">staket-kalkylator</a>, eller <a href="/sv/fa-offert">få offerter från byggföretag</a>.</p>
+
+<h2>Staket, plank eller mur – vad kräver bygglov?</h2>
+<ul>
+<li><strong>Staket</strong> (luftigt, genomsiktligt) – normalt inget bygglov.</li>
+<li><strong>Plank</strong> (tätt, högre) – kan kräva bygglov över en viss höjd.</li>
+<li><strong>Mur</strong> – kräver ofta bygglov beroende på höjd.</li>
+</ul>
+<p>Gränsen för när ett plank blir bygglovspliktigt varierar mellan kommuner – <strong>fråga alltid din kommun</strong>.</p>
+
+<h2>Staket vid tomtgräns</h2>
+<p>Du får normalt sätta staket i din egen tomt. Vid själva tomtgränsen är det klokt att komma överens med grannen, eftersom ett gränsstaket ofta berör båda. Kontrollera även detaljplanens bestämmelser.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Behöver jag bygglov för staket?</h3>
+<p>För vanliga, genomsiktliga staket krävs normalt inget bygglov. Höga, täta plank och murar kan kräva bygglov – gränsen varierar mellan kommuner.</p>
+<h3>Hur högt staket får jag ha utan bygglov?</h3>
+<p>Det varierar mellan kommuner. Genomsiktliga staket är oftast fria, medan täta plank över en viss höjd kan kräva lov. Fråga din kommun.</p>
+<h3>Får jag sätta staket vid tomtgränsen?</h3>
+<p>Ja, inom din tomt. Vid själva gränsen bör du komma överens med grannen, och följa detaljplanen.</p>
+`.trim();
+
+const B_STAKET_BYGGLOV: BlogPost = {
+  _id: 'code-staket-bygglov', title: 'Staket och bygglov – regler, plank och tomtgräns', slug: 'staket-bygglov', locale: 'sv',
+  excerpt: 'Behöver du bygglov för staket? Vanliga staket kräver oftast inget – höga plank och murar kan kräva lov, och reglerna varierar per kommun. Så gäller det.', tag: 'Regelverk',
+  coverImageUrl: '/landing/features/6verktyg.webp', contentHtml: B_STAKET_BYGGLOV_HTML,
+  seoTitle: 'Staket och bygglov – regler, plank & tomtgräns | ByggExp', seoDescription: 'Behöver du bygglov för staket eller plank? Vanliga staket är oftast fria, höga plank/murar kan kräva lov. Regler, tomtgräns och kommunala skillnader.',
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
+  publishedAt: '2026-08-22T14:15:00.000Z', createdAt: '2026-08-22T14:15:00.000Z', updatedAt: '2026-08-22T14:15:00.000Z',
+};
+
+const B_UTERUM_BYGGLOV_HTML = `
+<p>Ett uterum eller en inglasad altan kan kräva bygglov – men inte alltid. Det beror på storlek, om det byggs ihop med huset och om det räknas som tillbyggnad. Här går vi igenom när uterum kräver bygglov och när det kan rymmas inom attefallsreglerna.</p>
+<p>Planerar du ett uterum? <a href="/sv/fa-offert">Få 3 offerter från byggföretag</a>.</p>
+
+<h2>Kräver uterum bygglov?</h2>
+<p>Ett uterum som byggs ihop med huset räknas oftast som en <strong>tillbyggnad</strong> och kräver då bygglov. Mindre tillbyggnader kan i vissa fall rymmas inom attefallsreglerna (attefallstillbyggnad) och kräver då i stället anmälan.</p>
+
+<h2>Inglasad altan</h2>
+<p>Att glasa in en befintlig altan ändrar byggnadens yttre och kan kräva bygglov. Kontrollera med din kommun innan du beställer.</p>
+
+<h2>Vad påverkar bedömningen?</h2>
+<ul>
+<li>Storlek (byggnadsarea).</li>
+<li>Om det byggs ihop med huset.</li>
+<li>Detaljplan och avstånd till tomtgräns.</li>
+</ul>
+<p>Reglerna tolkas lokalt – fråga alltid din kommun.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Behöver jag bygglov för uterum?</h3>
+<p>Ofta ja, om det byggs ihop med huset och räknas som tillbyggnad. Mindre tillbyggnader kan rymmas inom attefallsreglerna med anmälan i stället. Kontrollera med kommunen.</p>
+<h3>Kräver inglasad altan bygglov?</h3>
+<p>Inglasning ändrar byggnadens yttre och kan kräva bygglov. Fråga din kommun innan du börjar.</p>
+`.trim();
+
+const B_UTERUM_BYGGLOV: BlogPost = {
+  _id: 'code-uterum-bygglov', title: 'Uterum och bygglov – när krävs det?', slug: 'uterum-bygglov', locale: 'sv',
+  excerpt: 'Kräver uterum bygglov? Ofta ja om det byggs ihop med huset (tillbyggnad) – ibland räcker anmälan inom attefallsreglerna. Så gäller det för uterum och inglasad altan.', tag: 'Regelverk',
+  coverImageUrl: '/landing/features/6verktyg.webp', contentHtml: B_UTERUM_BYGGLOV_HTML,
+  seoTitle: 'Uterum och bygglov – när krävs det? | ByggExp', seoDescription: 'Kräver uterum bygglov? Byggs det ihop med huset räknas det oftast som tillbyggnad och kräver lov; ibland räcker attefallsanmälan. Inglasad altan, storlek, tomtgräns.',
+  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
+  publishedAt: '2026-08-22T14:20:00.000Z', createdAt: '2026-08-22T14:20:00.000Z', updatedAt: '2026-08-22T14:20:00.000Z',
+};
+
 export const REGELVERK_ARTICLES: BlogPost[] = [
+  B_BEHOVER_JAG_BYGGLOV,
+  B_ATTEFALLSHUS_REGLER,
+  B_FRIGGEBOD_REGLER,
+  B_STAKET_BYGGLOV,
+  B_UTERUM_BYGGLOV,
   PERSONALLIGGARE,
   ID06,
   A_KONTROLLANSVARIG_NAR_BEHOVS,

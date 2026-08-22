@@ -5,6 +5,12 @@
 //
 // Add a slug here when you publish an sv-only article in the CMS.
 export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
+  // Bygglov cluster (sv-only).
+  'behover-jag-bygglov',
+  'attefallshus-regler',
+  'friggebod-regler',
+  'staket-bygglov',
+  'uterum-bygglov',
   // ROT-avdrag consumer long-tail (sv-only).
   'rotavdrag-pensionar',
   'rotavdrag-bostadsratt',

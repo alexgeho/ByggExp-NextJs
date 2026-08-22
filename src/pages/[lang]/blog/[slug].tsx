@@ -262,6 +262,15 @@ export default function BlogArticlePage({
 
           <div
             className="blog-article-content"
+            onClick={(e) => {
+              // Content is dangerouslySet HTML, so delegate: click any image
+              // (screenshots, diagrams) to open it full-screen.
+              const target = e.target as HTMLElement;
+              if (target.tagName === 'IMG') {
+                const src = target.getAttribute('src');
+                if (src) setLightboxImage(src);
+              }
+            }}
             dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
 

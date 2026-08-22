@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { languages, selectableLanguages } from "../../locales/languages";
 import { BLOG_CATEGORIES } from "../../lib/blog-categories";
-import SiteSearch from "../SiteSearch/SiteSearch";
 import type { HeaderProps } from "../../types/header";
 
 const logo = "/landing/header/logo.svg";
@@ -56,16 +55,8 @@ function Header({ headerT }: HeaderProps) {
 
         {/* NAV RIGHT */}
         <div className="nav-right">
-          {/* SITE SEARCH — always available, on every page */}
-          {!isMenuOpen && (
-            <SiteSearch
-              lang={lang}
-              label={headerT.searchLabel}
-              placeholder={headerT.searchPlaceholder}
-              emptyHint={headerT.searchHint}
-              noResults={headerT.searchNoResults}
-            />
-          )}
+          {/* Header search removed — the blog has its own search under the hero,
+              and the header search was redundant. */}
 
           {/* LANGUAGE */}
           {!isMenuOpen && (

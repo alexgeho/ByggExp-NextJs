@@ -9,7 +9,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
-import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
+import OffertLeadForm from '../../../components/LeadMagnet/OffertLeadForm';
 import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
@@ -150,7 +150,7 @@ export default function Page({ lang }: { lang: Locale }) {
         title={c.h1}
         intro={c.intro}
         tool={<TrallKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="trall-kalkylator" />}
+        leadForm={<OffertLeadForm source="trall-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/trall-preview.webp"

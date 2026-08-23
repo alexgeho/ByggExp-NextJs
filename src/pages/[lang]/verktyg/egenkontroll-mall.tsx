@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -97,6 +98,7 @@ export default function EgenkontrollMallPage() {
         title="Egenkontroll – gratis mall att fylla i online"
         intro="Med den här gratis egenkontroll-mallen dokumenterar du kontrollpunkter för kvalitet, miljö och arbetsmiljö och laddar ner den som PDF eller Excel. Fyll i online – eller gör egenkontroller löpande i ByggExp."
         tool={<EgenkontrollTool />}
+        leadForm={<ToolLeadForm tool="egenkontroll-mall" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/egenkontroll-preview.webp"

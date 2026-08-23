@@ -17,13 +17,14 @@ export default function ToolLeadForm({
 }) {
   const [message, setMessage] = useState('');
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const [contact, setContact] = useState(''); // e-post eller telefon
   const [status, setStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!email.trim()) return;
+    const c = contact.trim();
+    if (!c) return;
+    const isEmail = c.includes('@');
     setStatus('sending');
     try {
       const res = await fetch(`${API_URL}/mail/demo-request`, {
@@ -31,8 +32,8 @@ export default function ToolLeadForm({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           'f-name': name.trim(),
-          'f-email': email.trim(),
-          'f-phone': phone.trim(),
+          'f-email': isEmail ? c : '',
+          'f-phone': isEmail ? '' : c,
           'f-source': `verktyg:${tool}`,
           'f-message': [message.trim(), summary].filter(Boolean).join(' — '),
         }),
@@ -68,7 +69,7 @@ export default function ToolLeadForm({
       </div>
 
       <form onSubmit={handleSubmit}>
-        <label className="lm-tool-field" style={{ display: 'block', marginBottom: 12 }}>
+        <label className="lm-tool-field" style={{ display: 'block', margin: '16px 0' }}>
           <span>Meddelande</span>
           <textarea
             value={message}
@@ -81,12 +82,8 @@ export default function ToolLeadForm({
 
         <div className="lm-tool-grid">
           <label className="lm-tool-field">
-            <span>E-post <span className="lm-req">*</span></span>
-            <input type="email" value={email} onChange={(e) => setEmail(e.currentTarget.value)} autoComplete="email" required />
-          </label>
-          <label className="lm-tool-field">
-            <span>Telefon</span>
-            <input type="tel" value={phone} onChange={(e) => setPhone(e.currentTarget.value)} autoComplete="tel" />
+            <span>E-post eller telefon <span className="lm-req">*</span></span>
+            <input value={contact} onChange={(e) => setContact(e.currentTarget.value)} placeholder="namn@exempel.se eller 070…" autoComplete="email" required />
           </label>
           <label className="lm-tool-field">
             <span>Namn</span>
@@ -95,7 +92,7 @@ export default function ToolLeadForm({
         </div>
 
         <div className="lm-tool-actions" style={{ marginTop: 14 }}>
-          <button type="submit" className="lm-tool-button" disabled={status === 'sending' || !email.trim()}>
+          <button type="submit" className="lm-tool-button" disabled={status === 'sending' || !contact.trim()}>
             {status === 'sending' ? 'Skickar…' : 'Skicka'}
           </button>
           {status === 'error' ? (

@@ -59,6 +59,12 @@ export default function EgenkontrollTool() {
       });
       if (!res.ok) {
         const j = (await res.json().catch(() => ({}))) as { error?: string };
+        if (res.status === 503) {
+          // Key not configured yet — show a friendly "coming soon" instead of a
+          // scary error, and steer the user to the ready-made templates below.
+          setAiError('AI-funktionen aktiveras inom kort – välj en färdig mall nedan så länge.');
+          return;
+        }
         throw new Error(j.error || 'Kunde inte generera.');
       }
       const data = (await res.json()) as {

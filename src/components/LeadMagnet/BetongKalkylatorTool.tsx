@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
+import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf, type MaterialRow } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
 
@@ -10,14 +11,12 @@ import { fakturaHref, offertHref } from '../../lib/offert';
 // with paid kalkyl-programs on the "vad kostar platta på mark" intent while
 // staying free. Sources: TräGuiden/Boverket build-up; rebar tie wire ~10 kg/ton
 // and place+tie ~12 h/ton (industry norms); platta på mark ~1100–1800 kr/m² incl.
-// labour (2026). All prices/norms are editable riktvärden.
+// labour (2026). All prices/norms are editable riktvärden. UI is bilingual
+// (sv default, en for /en/verktyg); nb falls back to sv text.
 
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
 }
-const nf = (v: number, d = 0) =>
-  v.toLocaleString('sv-SE', { maximumFractionDigits: d });
-const kr = (v: number) => `${Math.round(v).toLocaleString('sv-SE')} kr`;
 
 type Shape = 'platta' | 'balk' | 'plint';
 type Form = 'rekt' | 'egen';
@@ -31,7 +30,85 @@ const MESH_KG_PER_M2: Record<string, number> = { '5': 2.2, '6': 3.05, '7': 4.3, 
 // Load-bearing cellplast/EPS grades under a slab and a riktpris kr/m³ (editable).
 const EPS_PRICE: Record<string, number> = { S80: 1200, S100: 1400, S150: 1800, S200: 2300 };
 
-export default function BetongKalkylatorTool() {
+export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
+  const en = locale === 'en';
+  const loc = en ? 'en-GB' : 'sv-SE';
+  const nf = (v: number, d = 0) => v.toLocaleString(loc, { maximumFractionDigits: d });
+  const kr = (v: number) => `${Math.round(v).toLocaleString(loc)} kr`;
+  const t = en
+    ? {
+        title: 'Concrete calculator – slab on grade, reinforcement & cost',
+        sub: 'Estimates concrete, EPS insulation, reinforcement (mesh + edge bars + tie wire) and sub-base for a slab on grade – with edge beam and support for L-shaped slabs. Turn on cost for a guide price (material + labour + ROT). Export to Excel or PDF.',
+        shapeQ: 'What are you casting?',
+        oPlatta: 'Slab on grade', oBalk: 'Footing / beam / foundation', oPlint: 'Piers / post holes (round)',
+        formL: 'Shape', oRekt: 'Rectangular (length × width)', oEgen: 'Custom / L-shape (area + perimeter)',
+        length: 'Length (m)', width: 'Width (m)', area: 'Area (m²)', perim: 'Perimeter (m)',
+        thickness: 'Concrete thickness (cm)',
+        edgeQ: 'Edge beam?', yes: 'Yes', no: 'No',
+        edgeW: 'Edge beam width (cm)', edgeH: 'Edge beam depth (cm)', edgeBars: 'Edge bars (count)', barDiaL: 'Bar diameter',
+        meshQ: 'Reinforcement mesh?', meshTypeL: 'Mesh type',
+        isoThick: 'EPS insulation – thickness (mm)', isoGrade: 'EPS – grade (load)',
+        oS80: 'EPS S80 (light load)', oS100: 'EPS S100 (normal house)', oS150: 'EPS S150 (heavier load)', oS200: 'EPS S200 (industrial)',
+        baseThick: 'Crushed stone / sub-base (mm)',
+        bLen: 'Length (m)', bWidth: 'Width (cm)', bHeight: 'Height (cm)',
+        diam: 'Diameter (cm)', depth: 'Depth (cm)', count: 'Count (pcs)',
+        concreteL: 'Concrete', oFabrik: 'Ready-mix (m³)', oSack: 'Bag 25 kg', litersPerBag: 'Litres per bag', spill: 'Waste (%)',
+        rVolume: 'Concrete volume incl. waste', rBags: 'Dry-mix bags (25 kg)', rBigBag: 'Equivalent big bags (1000 kg)', rWater: 'Mixing water (approx.)',
+        rMesh: 'Reinforcement mesh', rEdge: 'Edge bars', rBind: 'Tie wire', rIso: 'EPS insulation', rBase: 'Crushed stone / sub-base',
+        showCostQ: 'Show cost (guide price)?', costNo: 'No', costYes: 'Yes – material + labour',
+        pSackL: 'Concrete (kr/bag)', pBetongL: 'Ready-mix (kr/m³)', pMeshL: 'Mesh (kr/sheet)', pSteelL: 'Rebar (kr/kg)', pBindL: 'Tie wire (kr/kg)',
+        pIsoL: 'EPS (kr/m³)', pBaseL: 'Crushed stone (kr/m³)', timprisL: 'Labour rate (kr/h)', hRebarL: 'Reinforcement: h/tonne', hM2L: 'Other labour: h/m²',
+        walkL: 'Walking / moving time (%)', bindTonL: 'Tie wire (kg/tonne)', rotQ: 'ROT deduction (private person)?',
+        cMaterial: 'Material', cLabour: (h: string) => `Labour (${h} h)`, cSum: 'Subtotal excl. VAT', cRot: 'ROT deduction (30% of labour)', cAfter: 'To pay after ROT', cPerM2: 'Guide price per m²',
+        fine: 'Estimate incl. waste per a typical build-up (crushed stone → EPS 200–300 mm → mesh + edge bars → concrete + edge beam). An L-shaped slab has a larger perimeter and therefore more edge beam, edge insulation and edge bars. The cost is a guide price – a finished slab on grade is often ~1,100–1,800 kr/m² incl. labour. Prices and labour times are editable. Always check against drawings and the structural engineer’s dimensioning.',
+        offert: 'Create quote from this', faktura: 'Create invoice', excel: 'Export Excel', pdf: 'Export PDF',
+        pcs: 'pcs', litre: 'litres', boards: 'boards',
+        slPlatta: 'Slab on grade', slBalk: 'Footing / beam', slPlint: 'Piers / post holes',
+        mConcrete: 'Concrete incl. waste', mBagsDry: 'Dry-mix bags (25 kg)', mReadymix: 'Ready-mix concrete', mWater: 'Mixing water (approx.)',
+        mMesh: (k: string) => `Reinforcement mesh K${k} (5.0×2.3 m)`, mEdge: (d: string) => `Edge bars Ø${d} mm`, mBind: 'Tie wire',
+        mIso: (g: string) => `EPS insulation ${g}`, mBase: 'Crushed stone / sub-base',
+        csvTitle: 'Concrete – estimate', csvArea: 'Area', csvPerim: 'Perimeter', csvMaterial: 'Material', csvQty: 'Quantity', csvCost: 'Cost (guide price)',
+        pdfTitle: 'Concrete – estimate', pdfNote: 'Guide values incl. waste. Prices and labour times are editable estimates – check against drawings, the engineer’s dimensioning and current prices.',
+        costHdr: '— Cost (guide price) —',
+        soConcrete: 'Concrete, bag 25 kg', soReadymix: 'Ready-mix concrete (m³)', soMesh: 'Reinforcement mesh (pcs)', soIso: 'EPS insulation (boards)', soLabour: 'Labour casting/reinforcement',
+      }
+    : {
+        title: 'Betongkalkylator – platta på mark, armering & kostnad',
+        sub: 'Räknar betong, cellplast, armering (nät + kantjärn + bindtråd) och bärlager för en platta på mark – med kantbalk och stöd för L-formade plattor. Slå på kostnad för ett riktpris (material + arbete + ROT). Exportera till Excel eller PDF.',
+        shapeQ: 'Vad gjuter du?',
+        oPlatta: 'Platta på mark', oBalk: 'Grundmur / balk / fundament', oPlint: 'Plintar / stolphål (runda)',
+        formL: 'Form', oRekt: 'Rektangulär (längd × bredd)', oEgen: 'Egen form / L-form (area + omkrets)',
+        length: 'Längd (m)', width: 'Bredd (m)', area: 'Area (m²)', perim: 'Omkrets (m)',
+        thickness: 'Betongtjocklek (cm)',
+        edgeQ: 'Kantbalk?', yes: 'Ja', no: 'Nej',
+        edgeW: 'Kantbalk bredd (cm)', edgeH: 'Kantbalk djup (cm)', edgeBars: 'Kamstål i kant (antal)', barDiaL: 'Kamstål diameter',
+        meshQ: 'Armeringsnät?', meshTypeL: 'Nättyp',
+        isoThick: 'Cellplast / EPS – tjocklek (mm)', isoGrade: 'Cellplast – kvalitet (bärighet)',
+        oS80: 'EPS S80 (lätt last)', oS100: 'EPS S100 (normal villa)', oS150: 'EPS S150 (tyngre last)', oS200: 'EPS S200 (industri)',
+        baseThick: 'Makadam / bärlager (mm)',
+        bLen: 'Längd (m)', bWidth: 'Bredd (cm)', bHeight: 'Höjd (cm)',
+        diam: 'Diameter (cm)', depth: 'Djup (cm)', count: 'Antal (st)',
+        concreteL: 'Betong', oFabrik: 'Fabriksbetong (m³)', oSack: 'Säck 25 kg', litersPerBag: 'Liter per säck', spill: 'Spill (%)',
+        rVolume: 'Betongvolym inkl. spill', rBags: 'Säckar torrbetong (25 kg)', rBigBag: 'Motsvarar storsäck (1000 kg)', rWater: 'Blandningsvatten (ca)',
+        rMesh: 'Armeringsnät', rEdge: 'Kantjärn', rBind: 'Bindtråd', rIso: 'Cellplast / EPS', rBase: 'Makadam / bärlager',
+        showCostQ: 'Visa kostnad (riktpris)?', costNo: 'Nej', costYes: 'Ja – material + arbete',
+        pSackL: 'Betong (kr/säck)', pBetongL: 'Fabriksbetong (kr/m³)', pMeshL: 'Armeringsnät (kr/nät)', pSteelL: 'Kamstål (kr/kg)', pBindL: 'Bindtråd (kr/kg)',
+        pIsoL: 'Cellplast (kr/m³)', pBaseL: 'Makadam (kr/m³)', timprisL: 'Timpris arbete (kr/tim)', hRebarL: 'Armering: tim/ton', hM2L: 'Övrigt arbete: tim/m²',
+        walkL: 'Gångtid / förflyttning (%)', bindTonL: 'Bindtråd (kg/ton)', rotQ: 'ROT-avdrag (privatperson)?',
+        cMaterial: 'Material', cLabour: (h: string) => `Arbete (${h} tim)`, cSum: 'Summa exkl. moms', cRot: 'ROT-avdrag (30 % av arbete)', cAfter: 'Att betala efter ROT', cPerM2: 'Riktpris per m²',
+        fine: 'Uppskattning inkl. spill enligt vanlig uppbyggnad (makadam → cellplast 200–300 mm → armeringsnät + kantjärn → betong + kantbalk). En L-formad platta har större omkrets och därmed mer kantbalk, kantisolering och kantjärn. Kostnaden är ett riktpris – en färdig platta på mark ligger ofta ca 1 100–1 800 kr/m² inkl. arbete. Priser och arbetstider är redigerbara. Kontrollera alltid mot ritning och konstruktörens dimensionering.',
+        offert: 'Skapa offert av det här', faktura: 'Skapa faktura', excel: 'Exportera Excel', pdf: 'Exportera PDF',
+        pcs: 'st', litre: 'liter', boards: 'skivor',
+        slPlatta: 'Platta på mark', slBalk: 'Grundmur / balk', slPlint: 'Plintar / stolphål',
+        mConcrete: 'Betong inkl. spill', mBagsDry: 'Säckar torrbetong (25 kg)', mReadymix: 'Fabriksbetong', mWater: 'Blandningsvatten (ca)',
+        mMesh: (k: string) => `Armeringsnät K${k} (5,0×2,3 m)`, mEdge: (d: string) => `Kantjärn Ø${d} mm`, mBind: 'Bindtråd',
+        mIso: (g: string) => `Cellplast / EPS ${g}`, mBase: 'Makadam / bärlager',
+        csvTitle: 'Betong – kalkyl', csvArea: 'Area', csvPerim: 'Omkrets', csvMaterial: 'Material', csvQty: 'Mängd', csvCost: 'Kostnad (riktpris)',
+        pdfTitle: 'Betong – kalkyl', pdfNote: 'Riktvärden inkl. spill. Priser och arbetstider är redigerbara uppskattningar – kontrollera mot ritning, konstruktörens dimensionering och aktuella priser.',
+        costHdr: '— Kostnad (riktpris) —',
+        soConcrete: 'Betong, säck 25 kg', soReadymix: 'Fabriksbetong (m³)', soMesh: 'Armeringsnät (st)', soIso: 'Cellplast (skivor)', soLabour: 'Arbete gjutning/armering',
+      };
+
   const [shape, setShape] = useState<Shape>('platta');
   const [form, setForm] = useState<Form>('rekt');
   const [length, setLength] = useState('');
@@ -88,10 +165,10 @@ export default function BetongKalkylatorTool() {
     if (shape === 'platta') {
       if (form === 'rekt') { const L = num(length), W = num(width); A = L * W; P = 2 * (L + W); }
       else { A = num(area); P = num(perim); }
-      const t = num(thickness) / 100;
-      base = A * t;
+      const t2 = num(thickness) / 100;
+      base = A * t2;
       if (edge === 'ja') {
-        const extraDepth = Math.max(num(edgeH) / 100 - t, 0);
+        const extraDepth = Math.max(num(edgeH) / 100 - t2, 0);
         base += P * (num(edgeW) / 100) * extraDepth;
         edgeBarsLen = P * num(edgeBars);
         edgeBarKg = edgeBarsLen * (BAR_KG_PER_M[barDia] || 0.888);
@@ -144,57 +221,59 @@ export default function BetongKalkylatorTool() {
     return { volume, liters, bags, bigBags, water, A, P, meshArea, meshSheets, meshKg, isoVol, isoBoards, baseVol, edgeBarsLen, edgeBarKg, steelKg, bindKg, rebarHours, otherHours, totalHours, cConcrete, cMesh, cSteel, cBind, cIso, cBase, cMaterial, cLabour, cTotal, rotAvdrag, cAfterRot, perM2 };
   }, [shape, form, length, width, area, perim, thickness, edge, edgeW, edgeH, edgeBars, barDia, isoThick, baseThick, mesh, meshType, bindPerTon, bLen, bWidth, bHeight, diam, depth, count, bagYield, spill, concreteMode, pBetong, pSack, pMesh, pSteel, pBind, pIso, pBase, timpris, hRebarTon, hPerM2, walkPct, rot]);
 
-  const shapeLabel = shape === 'platta' ? 'Platta på mark' : shape === 'balk' ? 'Grundmur / balk' : 'Plintar / stolphål';
+  const shapeLabel = shape === 'platta' ? t.slPlatta : shape === 'balk' ? t.slBalk : t.slPlint;
 
   const materialRows = useMemo(() => {
     const rows: MaterialRow[] = [
-      { desc: 'Betong inkl. spill', qty: `${nf(r.volume, 2)} m³ (${nf(r.liters)} l)` },
+      { desc: t.mConcrete, qty: `${nf(r.volume, 2)} m³ (${nf(r.liters)} l)` },
     ];
-    if (concreteMode === 'sack') rows.push({ desc: 'Säckar torrbetong (25 kg)', qty: `${nf(r.bags)} st` });
-    else rows.push({ desc: 'Fabriksbetong', qty: `${nf(r.volume, 2)} m³` });
-    rows.push({ desc: 'Blandningsvatten (ca)', qty: `${nf(r.water)} liter` });
+    if (concreteMode === 'sack') rows.push({ desc: t.mBagsDry, qty: `${nf(r.bags)} ${t.pcs}` });
+    else rows.push({ desc: t.mReadymix, qty: `${nf(r.volume, 2)} m³` });
+    rows.push({ desc: t.mWater, qty: `${nf(r.water)} ${t.litre}` });
     if (shape === 'platta') {
-      if (r.meshSheets > 0) rows.push({ desc: `Armeringsnät K${meshType} (5,0×2,3 m)`, qty: `${nf(r.meshSheets)} st · ${nf(r.meshKg)} kg` });
-      if (r.edgeBarKg > 0) rows.push({ desc: `Kantjärn Ø${barDia} mm`, qty: `${nf(r.edgeBarsLen)} m · ${nf(r.edgeBarKg)} kg` });
-      if (r.bindKg > 0) rows.push({ desc: 'Bindtråd', qty: `${nf(r.bindKg, 1)} kg` });
-      if (r.isoVol > 0) rows.push({ desc: `Cellplast / EPS ${epsGrade}`, qty: `${nf(r.isoVol, 2)} m³ (${nf(r.isoBoards)} skivor)` });
-      if (r.baseVol > 0) rows.push({ desc: 'Makadam / bärlager', qty: `${nf(r.baseVol, 2)} m³` });
+      if (r.meshSheets > 0) rows.push({ desc: t.mMesh(meshType), qty: `${nf(r.meshSheets)} ${t.pcs} · ${nf(r.meshKg)} kg` });
+      if (r.edgeBarKg > 0) rows.push({ desc: t.mEdge(barDia), qty: `${nf(r.edgeBarsLen)} m · ${nf(r.edgeBarKg)} kg` });
+      if (r.bindKg > 0) rows.push({ desc: t.mBind, qty: `${nf(r.bindKg, 1)} kg` });
+      if (r.isoVol > 0) rows.push({ desc: t.mIso(epsGrade), qty: `${nf(r.isoVol, 2)} m³ (${nf(r.isoBoards)} ${t.boards})` });
+      if (r.baseVol > 0) rows.push({ desc: t.mBase, qty: `${nf(r.baseVol, 2)} m³` });
     }
     return rows;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [r, shape, concreteMode, meshType, barDia, epsGrade]);
 
   const costRows = useMemo((): MaterialRow[] => ([
-    { desc: 'Material', qty: kr(r.cMaterial) },
-    { desc: `Arbete (${nf(r.totalHours, 1)} tim)`, qty: kr(r.cLabour) },
-    { desc: 'Summa exkl. moms', qty: kr(r.cTotal) },
-    ...(r.rotAvdrag > 0 ? [{ desc: 'ROT-avdrag (30 % av arbete)', qty: `−${kr(r.rotAvdrag)}` }] : []),
-    ...(r.rotAvdrag > 0 ? [{ desc: 'Att betala efter ROT', qty: kr(r.cAfterRot) }] : []),
-    ...(r.perM2 > 0 ? [{ desc: 'Riktpris per m²', qty: kr(r.perM2) }] : []),
+    { desc: t.cMaterial, qty: kr(r.cMaterial) },
+    { desc: t.cLabour(nf(r.totalHours, 1)), qty: kr(r.cLabour) },
+    { desc: t.cSum, qty: kr(r.cTotal) },
+    ...(r.rotAvdrag > 0 ? [{ desc: t.cRot, qty: `−${kr(r.rotAvdrag)}` }] : []),
+    ...(r.rotAvdrag > 0 ? [{ desc: t.cAfter, qty: kr(r.cAfterRot) }] : []),
+    ...(r.perM2 > 0 ? [{ desc: t.cPerM2, qty: kr(r.perM2) }] : []),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   ]), [r]);
 
   const exportCsv = () => {
     const rows: (string | number)[][] = [
-      ['Betong – kalkyl', 'byggexp.se'], ['Gjutning', shapeLabel],
-      ...(shape === 'platta' ? [['Area', `${nf(r.A, 1)} m²`], ['Omkrets', `${nf(r.P, 1)} m`]] : []),
-      [], ['Material', 'Mängd'], ...materialRows.map((m) => [m.desc, m.qty]),
-      ...(showCost ? [[], ['Kostnad (riktpris)', ''], ...costRows.map((c) => [c.desc, c.qty])] : []),
+      [t.csvTitle, 'byggexp.se'], [t.shapeQ, shapeLabel],
+      ...(shape === 'platta' ? [[t.csvArea, `${nf(r.A, 1)} m²`], [t.csvPerim, `${nf(r.P, 1)} m`]] : []),
+      [], [t.csvMaterial, t.csvQty], ...materialRows.map((m) => [m.desc, m.qty]),
+      ...(showCost ? [[], [t.csvCost, ''], ...costRows.map((c) => [c.desc, c.qty])] : []),
     ];
     gaEvent('export_excel', { tool: 'betong-kalkylator' });
     downloadCsvRows(rows, 'betong-kalkyl.csv');
   };
   const exportPdf = () => void downloadMaterialPdf({
-    title: 'Betong – kalkyl',
-    meta: `${shapeLabel}${shape === 'platta' ? ` · ${nf(r.A, 1)} m² · omkrets ${nf(r.P, 1)} m` : ''}`,
-    rows: showCost ? [...materialRows, { desc: '— Kostnad (riktpris) —', qty: '' }, ...costRows] : materialRows,
+    title: t.pdfTitle,
+    meta: `${shapeLabel}${shape === 'platta' ? ` · ${nf(r.A, 1)} m² · ${t.csvPerim} ${nf(r.P, 1)} m` : ''}`,
+    rows: showCost ? [...materialRows, { desc: t.costHdr, qty: '' }, ...costRows] : materialRows,
     filename: 'betong-kalkyl.pdf', tool: 'betong-kalkylator',
-    note: 'Riktvärden inkl. spill. Priser och arbetstider är redigerbara uppskattningar – kontrollera mot ritning, konstruktörens dimensionering och aktuella priser.',
+    note: t.pdfNote,
   });
 
   const seedRows = [
-    concreteMode === 'sack' ? { desc: 'Betong, säck 25 kg', qty: r.bags } : { desc: 'Fabriksbetong (m³)', qty: Math.round(r.volume * 10) / 10 },
-    ...(r.meshSheets > 0 ? [{ desc: 'Armeringsnät (st)', qty: r.meshSheets }] : []),
-    ...(r.isoBoards > 0 ? [{ desc: 'Cellplast (skivor)', qty: r.isoBoards }] : []),
-    { desc: 'Arbete gjutning/armering', qty: 1, labour: true },
+    concreteMode === 'sack' ? { desc: t.soConcrete, qty: r.bags } : { desc: t.soReadymix, qty: Math.round(r.volume * 10) / 10 },
+    ...(r.meshSheets > 0 ? [{ desc: t.soMesh, qty: r.meshSheets }] : []),
+    ...(r.isoBoards > 0 ? [{ desc: t.soIso, qty: r.isoBoards }] : []),
+    { desc: t.soLabour, qty: 1, labour: true },
   ];
   const offertUrl = offertHref(seedRows);
   const fakturaUrl = fakturaHref(seedRows);
@@ -203,106 +282,102 @@ export default function BetongKalkylatorTool() {
   return (
     <div className="lm-tool">
       <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Betongkalkylator – platta på mark, armering &amp; kostnad</h2>
-        <p className="lm-tool-sub">
-          Räknar betong, cellplast, armering (nät + kantjärn + bindtråd) och bärlager
-          för en platta på mark – med kantbalk och stöd för L-formade plattor. Slå på
-          kostnad för ett riktpris (material + arbete + ROT). Exportera till Excel eller PDF.
-        </p>
+        <h2 className="lm-tool-title">{t.title}</h2>
+        <p className="lm-tool-sub">{t.sub}</p>
       </div>
 
       <div className="lm-tool-grid">
-        <label className={fld}><span>Vad gjuter du?</span>
+        <label className={fld}><span>{t.shapeQ}</span>
           <select value={shape} onChange={(e) => setShape(e.currentTarget.value as Shape)}>
-            <option value="platta">Platta på mark</option>
-            <option value="balk">Grundmur / balk / fundament</option>
-            <option value="plint">Plintar / stolphål (runda)</option>
+            <option value="platta">{t.oPlatta}</option>
+            <option value="balk">{t.oBalk}</option>
+            <option value="plint">{t.oPlint}</option>
           </select></label>
 
         {shape === 'platta' ? (
           <>
-            <label className={fld}><span>Form</span>
+            <label className={fld}><span>{t.formL}</span>
               <select value={form} onChange={(e) => setForm(e.currentTarget.value as Form)}>
-                <option value="rekt">Rektangulär (längd × bredd)</option>
-                <option value="egen">Egen form / L-form (area + omkrets)</option>
+                <option value="rekt">{t.oRekt}</option>
+                <option value="egen">{t.oEgen}</option>
               </select></label>
             {form === 'rekt' ? (
               <>
-                <label className={fld}><span>Längd (m)</span><input type="number" min="0" inputMode="decimal" value={length} placeholder="t.ex. 10" onChange={(e) => setLength(e.currentTarget.value)} /></label>
-                <label className={fld}><span>Bredd (m)</span><input type="number" min="0" inputMode="decimal" value={width} placeholder="t.ex. 8" onChange={(e) => setWidth(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 10' : 't.ex. 10'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.width}</span><input type="number" min="0" inputMode="decimal" value={width} placeholder={en ? 'e.g. 8' : 't.ex. 8'} onChange={(e) => setWidth(e.currentTarget.value)} /></label>
               </>
             ) : (
               <>
-                <label className={fld}><span>Area (m²)</span><input type="number" min="0" inputMode="decimal" value={area} placeholder="t.ex. 92" onChange={(e) => setArea(e.currentTarget.value)} /></label>
-                <label className={fld}><span>Omkrets (m)</span><input type="number" min="0" inputMode="decimal" value={perim} placeholder="t.ex. 46" onChange={(e) => setPerim(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.area}</span><input type="number" min="0" inputMode="decimal" value={area} placeholder={en ? 'e.g. 92' : 't.ex. 92'} onChange={(e) => setArea(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.perim}</span><input type="number" min="0" inputMode="decimal" value={perim} placeholder={en ? 'e.g. 46' : 't.ex. 46'} onChange={(e) => setPerim(e.currentTarget.value)} /></label>
               </>
             )}
-            <label className={fld}><span>Betongtjocklek (cm)</span><input type="number" min="0" inputMode="decimal" value={thickness} onChange={(e) => setThickness(e.currentTarget.value)} /></label>
-            <label className={fld}><span>Kantbalk?</span>
-              <select value={edge} onChange={(e) => setEdge(e.currentTarget.value)}><option value="ja">Ja</option><option value="nej">Nej</option></select></label>
+            <label className={fld}><span>{t.thickness}</span><input type="number" min="0" inputMode="decimal" value={thickness} onChange={(e) => setThickness(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.edgeQ}</span>
+              <select value={edge} onChange={(e) => setEdge(e.currentTarget.value)}><option value="ja">{t.yes}</option><option value="nej">{t.no}</option></select></label>
             {edge === 'ja' ? (
               <>
-                <label className={fld}><span>Kantbalk bredd (cm)</span><input type="number" min="0" inputMode="decimal" value={edgeW} onChange={(e) => setEdgeW(e.currentTarget.value)} /></label>
-                <label className={fld}><span>Kantbalk djup (cm)</span><input type="number" min="0" inputMode="decimal" value={edgeH} onChange={(e) => setEdgeH(e.currentTarget.value)} /></label>
-                <label className={fld}><span>Kamstål i kant (antal)</span><input type="number" min="0" inputMode="numeric" value={edgeBars} onChange={(e) => setEdgeBars(e.currentTarget.value)} /></label>
-                <label className={fld}><span>Kamstål diameter</span>
+                <label className={fld}><span>{t.edgeW}</span><input type="number" min="0" inputMode="decimal" value={edgeW} onChange={(e) => setEdgeW(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.edgeH}</span><input type="number" min="0" inputMode="decimal" value={edgeH} onChange={(e) => setEdgeH(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.edgeBars}</span><input type="number" min="0" inputMode="numeric" value={edgeBars} onChange={(e) => setEdgeBars(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.barDiaL}</span>
                   <select value={barDia} onChange={(e) => setBarDia(e.currentTarget.value)}><option value="10">Ø10 mm</option><option value="12">Ø12 mm</option><option value="16">Ø16 mm</option></select></label>
               </>
             ) : null}
-            <label className={fld}><span>Armeringsnät?</span>
-              <select value={mesh} onChange={(e) => setMesh(e.currentTarget.value)}><option value="ja">Ja</option><option value="nej">Nej</option></select></label>
+            <label className={fld}><span>{t.meshQ}</span>
+              <select value={mesh} onChange={(e) => setMesh(e.currentTarget.value)}><option value="ja">{t.yes}</option><option value="nej">{t.no}</option></select></label>
             {mesh === 'ja' ? (
-              <label className={fld}><span>Nättyp</span>
+              <label className={fld}><span>{t.meshTypeL}</span>
                 <select value={meshType} onChange={(e) => setMeshType(e.currentTarget.value)}>
                   <option value="5">K5 (Ø5)</option><option value="6">K6 (Ø6)</option><option value="7">K7 (Ø7)</option><option value="8">K8 (Ø8)</option>
                 </select></label>
             ) : null}
-            <label className={fld}><span>Cellplast / EPS – tjocklek (mm)</span><input type="number" min="0" inputMode="decimal" value={isoThick} placeholder="t.ex. 300" onChange={(e) => setIsoThick(e.currentTarget.value)} /></label>
-            <label className={fld}><span>Cellplast – kvalitet (bärighet)</span>
+            <label className={fld}><span>{t.isoThick}</span><input type="number" min="0" inputMode="decimal" value={isoThick} placeholder={en ? 'e.g. 300' : 't.ex. 300'} onChange={(e) => setIsoThick(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.isoGrade}</span>
               <select value={epsGrade} onChange={(e) => { const g = e.currentTarget.value; setEpsGrade(g); setPIso(String(EPS_PRICE[g] || 1400)); }}>
-                <option value="S80">EPS S80 (lätt last)</option>
-                <option value="S100">EPS S100 (normal villa)</option>
-                <option value="S150">EPS S150 (tyngre last)</option>
-                <option value="S200">EPS S200 (industri)</option>
+                <option value="S80">{t.oS80}</option>
+                <option value="S100">{t.oS100}</option>
+                <option value="S150">{t.oS150}</option>
+                <option value="S200">{t.oS200}</option>
               </select></label>
-            <label className={fld}><span>Makadam / bärlager (mm)</span><input type="number" min="0" inputMode="decimal" value={baseThick} onChange={(e) => setBaseThick(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.baseThick}</span><input type="number" min="0" inputMode="decimal" value={baseThick} onChange={(e) => setBaseThick(e.currentTarget.value)} /></label>
           </>
         ) : null}
 
         {shape === 'balk' ? (
           <>
-            <label className={fld}><span>Längd (m)</span><input type="number" min="0" inputMode="decimal" value={bLen} placeholder="t.ex. 12" onChange={(e) => setBLen(e.currentTarget.value)} /></label>
-            <label className={fld}><span>Bredd (cm)</span><input type="number" min="0" inputMode="decimal" value={bWidth} onChange={(e) => setBWidth(e.currentTarget.value)} /></label>
-            <label className={fld}><span>Höjd (cm)</span><input type="number" min="0" inputMode="decimal" value={bHeight} onChange={(e) => setBHeight(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.bLen}</span><input type="number" min="0" inputMode="decimal" value={bLen} placeholder={en ? 'e.g. 12' : 't.ex. 12'} onChange={(e) => setBLen(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.bWidth}</span><input type="number" min="0" inputMode="decimal" value={bWidth} onChange={(e) => setBWidth(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.bHeight}</span><input type="number" min="0" inputMode="decimal" value={bHeight} onChange={(e) => setBHeight(e.currentTarget.value)} /></label>
           </>
         ) : null}
         {shape === 'plint' ? (
           <>
-            <label className={fld}><span>Diameter (cm)</span><input type="number" min="0" inputMode="decimal" value={diam} onChange={(e) => setDiam(e.currentTarget.value)} /></label>
-            <label className={fld}><span>Djup (cm)</span><input type="number" min="0" inputMode="decimal" value={depth} onChange={(e) => setDepth(e.currentTarget.value)} /></label>
-            <label className={fld}><span>Antal (st)</span><input type="number" min="0" inputMode="numeric" value={count} onChange={(e) => setCount(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.diam}</span><input type="number" min="0" inputMode="decimal" value={diam} onChange={(e) => setDiam(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.depth}</span><input type="number" min="0" inputMode="decimal" value={depth} onChange={(e) => setDepth(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.count}</span><input type="number" min="0" inputMode="numeric" value={count} onChange={(e) => setCount(e.currentTarget.value)} /></label>
           </>
         ) : null}
 
-        <label className={fld}><span>Betong</span>
-          <select value={concreteMode} onChange={(e) => setConcreteMode(e.currentTarget.value)}><option value="fabrik">Fabriksbetong (m³)</option><option value="sack">Säck 25 kg</option></select></label>
-        {concreteMode === 'sack' ? <label className={fld}><span>Liter per säck</span><input type="number" min="0" inputMode="decimal" value={bagYield} onChange={(e) => setBagYield(e.currentTarget.value)} /></label> : null}
-        <label className={fld}><span>Spill (%)</span><input type="number" min="0" inputMode="decimal" value={spill} onChange={(e) => setSpill(e.currentTarget.value)} /></label>
+        <label className={fld}><span>{t.concreteL}</span>
+          <select value={concreteMode} onChange={(e) => setConcreteMode(e.currentTarget.value)}><option value="fabrik">{t.oFabrik}</option><option value="sack">{t.oSack}</option></select></label>
+        {concreteMode === 'sack' ? <label className={fld}><span>{t.litersPerBag}</span><input type="number" min="0" inputMode="decimal" value={bagYield} onChange={(e) => setBagYield(e.currentTarget.value)} /></label> : null}
+        <label className={fld}><span>{t.spill}</span><input type="number" min="0" inputMode="decimal" value={spill} onChange={(e) => setSpill(e.currentTarget.value)} /></label>
       </div>
 
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>Betongvolym inkl. spill</span><strong>{nf(r.volume, 2)} m³</strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rVolume}</span><strong>{nf(r.volume, 2)} m³</strong></div>
         {concreteMode === 'sack'
-          ? <div className="lm-result-row lm-result-total"><span>Säckar torrbetong (25 kg)</span><strong>{nf(r.bags)} st</strong></div>
-          : <div className="lm-result-row"><span>Motsvarar storsäck (1000 kg)</span><span>{nf(r.bigBags, 1)} st</span></div>}
-        <div className="lm-result-row"><span>Blandningsvatten (ca)</span><span>{nf(r.water)} liter</span></div>
+          ? <div className="lm-result-row lm-result-total"><span>{t.rBags}</span><strong>{nf(r.bags)} {t.pcs}</strong></div>
+          : <div className="lm-result-row"><span>{t.rBigBag}</span><span>{nf(r.bigBags, 1)} {t.pcs}</span></div>}
+        <div className="lm-result-row"><span>{t.rWater}</span><span>{nf(r.water)} {t.litre}</span></div>
         {shape === 'platta' ? (
           <>
-            {r.meshSheets > 0 ? <div className="lm-result-row"><span>Armeringsnät K{meshType}</span><span>{nf(r.meshSheets)} st · {nf(r.meshKg)} kg</span></div> : null}
-            {r.edgeBarKg > 0 ? <div className="lm-result-row"><span>Kantjärn Ø{barDia}</span><span>{nf(r.edgeBarsLen)} m · {nf(r.edgeBarKg)} kg</span></div> : null}
-            {r.bindKg > 0 ? <div className="lm-result-row"><span>Bindtråd</span><span>{nf(r.bindKg, 1)} kg</span></div> : null}
-            {r.isoVol > 0 ? <div className="lm-result-row"><span>Cellplast / EPS {epsGrade}</span><span>{nf(r.isoVol, 2)} m³ · {nf(r.isoBoards)} skivor</span></div> : null}
-            {r.baseVol > 0 ? <div className="lm-result-row"><span>Makadam / bärlager</span><span>{nf(r.baseVol, 2)} m³</span></div> : null}
+            {r.meshSheets > 0 ? <div className="lm-result-row"><span>{t.rMesh} K{meshType}</span><span>{nf(r.meshSheets)} {t.pcs} · {nf(r.meshKg)} kg</span></div> : null}
+            {r.edgeBarKg > 0 ? <div className="lm-result-row"><span>{t.rEdge} Ø{barDia}</span><span>{nf(r.edgeBarsLen)} m · {nf(r.edgeBarKg)} kg</span></div> : null}
+            {r.bindKg > 0 ? <div className="lm-result-row"><span>{t.rBind}</span><span>{nf(r.bindKg, 1)} kg</span></div> : null}
+            {r.isoVol > 0 ? <div className="lm-result-row"><span>{t.rIso} {epsGrade}</span><span>{nf(r.isoVol, 2)} m³ · {nf(r.isoBoards)} {t.boards}</span></div> : null}
+            {r.baseVol > 0 ? <div className="lm-result-row"><span>{t.rBase}</span><span>{nf(r.baseVol, 2)} m³</span></div> : null}
           </>
         ) : null}
       </div>
@@ -310,9 +385,9 @@ export default function BetongKalkylatorTool() {
       {shape === 'platta' ? (
         <div style={{ marginTop: 16 }}>
           <label className={fld} style={{ maxWidth: 260 }}>
-            <span>Visa kostnad (riktpris)?</span>
+            <span>{t.showCostQ}</span>
             <select value={showCost ? 'ja' : 'nej'} onChange={(e) => setShowCost(e.currentTarget.value === 'ja')}>
-              <option value="nej">Nej</option><option value="ja">Ja – material + arbete</option>
+              <option value="nej">{t.costNo}</option><option value="ja">{t.costYes}</option>
             </select>
           </label>
 
@@ -320,48 +395,41 @@ export default function BetongKalkylatorTool() {
             <>
               <div className="lm-tool-grid" style={{ marginTop: 12 }}>
                 {concreteMode === 'sack'
-                  ? <label className={fld}><span>Betong (kr/säck)</span><input type="number" min="0" inputMode="decimal" value={pSack} onChange={(e) => setPSack(e.currentTarget.value)} /></label>
-                  : <label className={fld}><span>Fabriksbetong (kr/m³)</span><input type="number" min="0" inputMode="decimal" value={pBetong} onChange={(e) => setPBetong(e.currentTarget.value)} /></label>}
-                <label className={fld}><span>Armeringsnät (kr/nät)</span><input type="number" min="0" inputMode="decimal" value={pMesh} onChange={(e) => setPMesh(e.currentTarget.value)} /></label>
-                <label className={fld}><span>Kamstål (kr/kg)</span><input type="number" min="0" inputMode="decimal" value={pSteel} onChange={(e) => setPSteel(e.currentTarget.value)} /></label>
-                <label className={fld}><span>Bindtråd (kr/kg)</span><input type="number" min="0" inputMode="decimal" value={pBind} onChange={(e) => setPBind(e.currentTarget.value)} /></label>
-                <label className={fld}><span>Cellplast (kr/m³)</span><input type="number" min="0" inputMode="decimal" value={pIso} onChange={(e) => setPIso(e.currentTarget.value)} /></label>
-                <label className={fld}><span>Makadam (kr/m³)</span><input type="number" min="0" inputMode="decimal" value={pBase} onChange={(e) => setPBase(e.currentTarget.value)} /></label>
-                <label className={fld}><span>Timpris arbete (kr/tim)</span><input type="number" min="0" inputMode="decimal" value={timpris} onChange={(e) => setTimpris(e.currentTarget.value)} /></label>
-                <label className={fld}><span>Armering: tim/ton</span><input type="number" min="0" inputMode="decimal" value={hRebarTon} onChange={(e) => setHRebarTon(e.currentTarget.value)} /></label>
-                <label className={fld}><span>Övrigt arbete: tim/m²</span><input type="number" min="0" inputMode="decimal" value={hPerM2} onChange={(e) => setHPerM2(e.currentTarget.value)} /></label>
-                <label className={fld}><span>Gångtid / förflyttning (%)</span><input type="number" min="0" inputMode="decimal" value={walkPct} onChange={(e) => setWalkPct(e.currentTarget.value)} /></label>
-                <label className={fld}><span>Bindtråd (kg/ton)</span><input type="number" min="0" inputMode="decimal" value={bindPerTon} onChange={(e) => setBindPerTon(e.currentTarget.value)} /></label>
-                <label className={fld}><span>ROT-avdrag (privatperson)?</span>
-                  <select value={rot} onChange={(e) => setRot(e.currentTarget.value)}><option value="nej">Nej</option><option value="ja">Ja</option></select></label>
+                  ? <label className={fld}><span>{t.pSackL}</span><input type="number" min="0" inputMode="decimal" value={pSack} onChange={(e) => setPSack(e.currentTarget.value)} /></label>
+                  : <label className={fld}><span>{t.pBetongL}</span><input type="number" min="0" inputMode="decimal" value={pBetong} onChange={(e) => setPBetong(e.currentTarget.value)} /></label>}
+                <label className={fld}><span>{t.pMeshL}</span><input type="number" min="0" inputMode="decimal" value={pMesh} onChange={(e) => setPMesh(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.pSteelL}</span><input type="number" min="0" inputMode="decimal" value={pSteel} onChange={(e) => setPSteel(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.pBindL}</span><input type="number" min="0" inputMode="decimal" value={pBind} onChange={(e) => setPBind(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.pIsoL}</span><input type="number" min="0" inputMode="decimal" value={pIso} onChange={(e) => setPIso(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.pBaseL}</span><input type="number" min="0" inputMode="decimal" value={pBase} onChange={(e) => setPBase(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.timprisL}</span><input type="number" min="0" inputMode="decimal" value={timpris} onChange={(e) => setTimpris(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.hRebarL}</span><input type="number" min="0" inputMode="decimal" value={hRebarTon} onChange={(e) => setHRebarTon(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.hM2L}</span><input type="number" min="0" inputMode="decimal" value={hPerM2} onChange={(e) => setHPerM2(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.walkL}</span><input type="number" min="0" inputMode="decimal" value={walkPct} onChange={(e) => setWalkPct(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.bindTonL}</span><input type="number" min="0" inputMode="decimal" value={bindPerTon} onChange={(e) => setBindPerTon(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.rotQ}</span>
+                  <select value={rot} onChange={(e) => setRot(e.currentTarget.value)}><option value="nej">{t.no}</option><option value="ja">{t.yes}</option></select></label>
               </div>
 
               <div className="lm-result" style={{ marginTop: 12 }}>
-                <div className="lm-result-row"><span>Material</span><span>{kr(r.cMaterial)}</span></div>
-                <div className="lm-result-row"><span>Arbete ({nf(r.totalHours, 1)} tim)</span><span>{kr(r.cLabour)}</span></div>
-                <div className="lm-result-row lm-result-highlight"><span>Summa exkl. moms</span><strong>{kr(r.cTotal)}</strong></div>
-                {r.rotAvdrag > 0 ? <div className="lm-result-row"><span>ROT-avdrag (30 % av arbete)</span><span>−{kr(r.rotAvdrag)}</span></div> : null}
-                {r.rotAvdrag > 0 ? <div className="lm-result-row lm-result-total"><span>Att betala efter ROT</span><strong>{kr(r.cAfterRot)}</strong></div> : null}
-                {r.perM2 > 0 ? <div className="lm-result-row"><span>Riktpris per m²</span><span>{kr(r.perM2)}</span></div> : null}
+                <div className="lm-result-row"><span>{t.cMaterial}</span><span>{kr(r.cMaterial)}</span></div>
+                <div className="lm-result-row"><span>{t.cLabour(nf(r.totalHours, 1))}</span><span>{kr(r.cLabour)}</span></div>
+                <div className="lm-result-row lm-result-highlight"><span>{t.cSum}</span><strong>{kr(r.cTotal)}</strong></div>
+                {r.rotAvdrag > 0 ? <div className="lm-result-row"><span>{t.cRot}</span><span>−{kr(r.rotAvdrag)}</span></div> : null}
+                {r.rotAvdrag > 0 ? <div className="lm-result-row lm-result-total"><span>{t.cAfter}</span><strong>{kr(r.cAfterRot)}</strong></div> : null}
+                {r.perM2 > 0 ? <div className="lm-result-row"><span>{t.cPerM2}</span><span>{kr(r.perM2)}</span></div> : null}
               </div>
             </>
           ) : null}
         </div>
       ) : null}
 
-      <p className="lm-result-fine">
-        Uppskattning inkl. spill enligt vanlig uppbyggnad (makadam → cellplast 200–300 mm →
-        armeringsnät + kantjärn → betong + kantbalk). En L-formad platta har större omkrets
-        och därmed mer kantbalk, kantisolering och kantjärn. Kostnaden är ett riktpris – en
-        färdig platta på mark ligger ofta ca 1 100–1 800 kr/m² inkl. arbete. Priser och
-        arbetstider är redigerbara. Kontrollera alltid mot ritning och konstruktörens
-        dimensionering.
-      </p>
+      <p className="lm-result-fine">{t.fine}</p>
       <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-        <a className="lm-tool-button" href={r.volume > 0 ? offertUrl : undefined} aria-disabled={r.volume <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'betong-kalkylator' })}>Skapa offert av det här</a>
-        <a className="lm-tool-secondary" href={r.volume > 0 ? fakturaUrl : undefined} aria-disabled={r.volume <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'betong-kalkylator' })}>Skapa faktura</a>
-        <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.volume <= 0}>Exportera Excel</button>
-        <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={r.volume <= 0}>Exportera PDF</button>
+        <a className="lm-tool-button" href={r.volume > 0 ? offertUrl : undefined} aria-disabled={r.volume <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'betong-kalkylator' })}>{t.offert}</a>
+        <a className="lm-tool-secondary" href={r.volume > 0 ? fakturaUrl : undefined} aria-disabled={r.volume <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'betong-kalkylator' })}>{t.faktura}</a>
+        <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.volume <= 0}>{t.excel}</button>
+        <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={r.volume <= 0}>{t.pdf}</button>
       </div>
     </div>
   );

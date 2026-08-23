@@ -2,19 +2,56 @@ import { type FormEvent, useState } from 'react';
 
 import { API_URL } from '../../config/api';
 import { gaEvent } from '../../lib/analytics';
+import type { CalcLocale } from '../../lib/locale';
 
 // Contextual lead form shown under a calculator: the visitor can ask ByggExp to
-// help take the calculation further (offert, material, next steps). Only e-post
-// is required; name, phone and message are optional. Posts to the same
-// demo-request endpoint the contact form uses; `tool` and the message ride along
-// so sales sees which calculator the lead came from.
+// help take the calculation further (offert, material, next steps). Only the
+// contact field (e-post OR phone in one cell) is required; name and message are
+// optional. Posts to the same demo-request endpoint the contact form uses;
+// `tool` and the message ride along so sales sees which calculator the lead came
+// from. Bilingual: sv default, en for /en/verktyg; nb falls back to sv text.
 export default function ToolLeadForm({
   tool,
   summary,
+  locale = 'sv',
 }: {
   tool: string;
   summary?: string;
+  locale?: CalcLocale;
 }) {
+  const en = locale === 'en';
+  const t = en
+    ? {
+        heading: 'Want help taking this further?',
+        sub: 'Briefly describe what you need and we’ll help you with a quote, material and next steps – free of charge. Only the contact field is required.',
+        message: 'Message',
+        messagePh: 'Briefly describe your project or question …',
+        contact: 'Email or phone',
+        contactPh: 'name@example.com or +46…',
+        name: 'Name',
+        send: 'Send',
+        sending: 'Sending…',
+        error: 'Something went wrong – try again or email info@byggexp.se.',
+        privacy: 'We only use your details to contact you about your enquiry.',
+        thanks: 'Thanks! We’ll be in touch.',
+        thanksSub: 'We’ll get back to you by email or phone and help you take your calculation further.',
+      }
+    : {
+        heading: 'Vill du ha hjälp vidare?',
+        sub: 'Beskriv kort vad du behöver så hjälper vi dig med offert, material och nästa steg – utan kostnad. Bara kontaktfältet är obligatoriskt.',
+        message: 'Meddelande',
+        messagePh: 'Beskriv kort ditt projekt eller din fråga …',
+        contact: 'E-post eller telefon',
+        contactPh: 'namn@exempel.se eller 070…',
+        name: 'Namn',
+        send: 'Skicka',
+        sending: 'Skickar…',
+        error: 'Något gick fel – försök igen eller mejla info@byggexp.se.',
+        privacy: 'Vi använder uppgifterna endast för att kontakta dig om din förfrågan.',
+        thanks: 'Tack! Vi hör av oss.',
+        thanksSub: 'Vi återkommer på e-post eller telefon och hjälper dig vidare med din beräkning.',
+      };
+
   const [message, setMessage] = useState('');
   const [name, setName] = useState('');
   const [contact, setContact] = useState(''); // e-post eller telefon
@@ -49,11 +86,8 @@ export default function ToolLeadForm({
   if (status === 'done') {
     return (
       <div className="lm-tool lm-leadform">
-        <h2 className="lm-tool-title">Tack! Vi hör av oss.</h2>
-        <p className="lm-tool-sub">
-          Vi återkommer på e-post eller telefon och hjälper dig vidare med din
-          beräkning.
-        </p>
+        <h2 className="lm-tool-title">{t.thanks}</h2>
+        <p className="lm-tool-sub">{t.thanksSub}</p>
       </div>
     );
   }
@@ -61,48 +95,45 @@ export default function ToolLeadForm({
   return (
     <div className="lm-tool lm-leadform">
       <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Vill du ha hjälp vidare?</h2>
-        <p className="lm-tool-sub">
-          Beskriv kort vad du behöver så hjälper vi dig med offert, material och
-          nästa steg – utan kostnad. Bara e-post är obligatoriskt.
-        </p>
+        <h2 className="lm-tool-title">{t.heading}</h2>
+        <p className="lm-tool-sub">{t.sub}</p>
       </div>
 
       <form onSubmit={handleSubmit}>
         <label className="lm-tool-field" style={{ display: 'block', margin: '16px 0' }}>
-          <span>Meddelande</span>
+          <span>{t.message}</span>
           <textarea
             value={message}
             onChange={(e) => setMessage(e.currentTarget.value)}
             rows={3}
-            placeholder="Beskriv kort ditt projekt eller din fråga …"
+            placeholder={t.messagePh}
             style={{ width: '100%' }}
           />
         </label>
 
         <div className="lm-tool-grid">
           <label className="lm-tool-field">
-            <span>E-post eller telefon <span className="lm-req">*</span></span>
-            <input value={contact} onChange={(e) => setContact(e.currentTarget.value)} placeholder="namn@exempel.se eller 070…" autoComplete="email" required />
+            <span>{t.contact} <span className="lm-req">*</span></span>
+            <input value={contact} onChange={(e) => setContact(e.currentTarget.value)} placeholder={t.contactPh} autoComplete="email" required />
           </label>
           <label className="lm-tool-field">
-            <span>Namn</span>
+            <span>{t.name}</span>
             <input value={name} onChange={(e) => setName(e.currentTarget.value)} autoComplete="name" />
           </label>
         </div>
 
         <div className="lm-tool-actions" style={{ marginTop: 14 }}>
           <button type="submit" className="lm-tool-button" disabled={status === 'sending' || !contact.trim()}>
-            {status === 'sending' ? 'Skickar…' : 'Skicka'}
+            {status === 'sending' ? t.sending : t.send}
           </button>
           {status === 'error' ? (
             <span className="lm-result-fine" style={{ color: '#d64545' }}>
-              Något gick fel – försök igen eller mejla info@byggexp.se.
+              {t.error}
             </span>
           ) : null}
         </div>
         <p className="lm-result-fine" style={{ marginTop: 10 }}>
-          Vi använder uppgifterna endast för att kontakta dig om din förfrågan.
+          {t.privacy}
         </p>
       </form>
     </div>

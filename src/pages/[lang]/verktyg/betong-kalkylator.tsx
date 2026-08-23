@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -243,11 +243,116 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Concrete calculator 2026 – volume, bags & water | ByggExp',
+    description:
+      'Work out concrete for a slab, footing or piers: volume in m³, number of dry-mix bags, mixing water and reinforcement mesh. Free concrete calculator, no account.',
+    badge: 'Free calculator',
+    h1: 'Concrete calculator',
+    intro:
+      'Choose what you are casting – slab on grade, footing or piers – and we work out the concrete volume in cubic metres, number of dry-mix bags, mixing water and reinforcement mesh. A 25 kg bag yields about 12.5 litres of finished concrete.',
+    previewAlt: 'Preview of the concrete calculator',
+    previewCaption: 'This is how the concrete calculator looks',
+    sections: [
+      {
+        id: 'sa-raknar-du',
+        heading: 'How the volume is calculated – per pour',
+        body: (
+          <>
+            <figure className="lm-diagram">
+              <img src="/landing/diagrams/betong.webp" alt="Diagram: concrete volume for a slab on grade with edge beam" width={720} height={380} loading="lazy" />
+              <figcaption>Volume = length × width × thickness, plus the edge beam around the perimeter. 1 m³ ≈ 80 bags of 25 kg.</figcaption>
+            </figure>
+            <ul>
+              <li><strong>Slab / floor:</strong> length × width × thickness. With an edge beam, add perimeter × edge-beam width × height.</li>
+              <li><strong>Footing / beam:</strong> length × width × height.</li>
+              <li><strong>Piers / post holes (round):</strong> π × radius² × depth, times the number of holes.</li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        id: 'volym-till-sackar',
+        heading: 'From volume to bags and water',
+        body: (
+          <ul>
+            <li>1 m³ = <strong>1000 litres</strong> of concrete.</li>
+            <li>A <strong>25 kg</strong> bag of dry-mix ≈ 12.5 litres → about <strong>80 bags per m³</strong>.</li>
+            <li>A <strong>1000 kg big bag</strong> ≈ 520 litres.</li>
+            <li>Mixing water: about <strong>3–4 litres per bag</strong>.</li>
+          </ul>
+        ),
+      },
+      {
+        id: 'platta-kantbalk',
+        heading: 'Slab on grade: don’t forget the edge beam',
+        body: (
+          <p>
+            The thickened edge holds more concrete than you might think. A 5 × 10 m garage gives
+            about 5 m³ in the slab itself but almost another 1 m³ in the edge beam – always include
+            it, otherwise you will order too little.
+          </p>
+        ),
+      },
+      {
+        id: 'sack-eller-fabriksbetong',
+        heading: 'Bagged or ready-mix concrete?',
+        body: (
+          <p>
+            For smaller jobs, bagged concrete is convenient. From roughly 1–2 m³, ready-mix concrete
+            (delivered by truck) is usually both cheaper and easier than mixing many bags by hand –
+            and you finish the pour before the concrete starts to set.
+          </p>
+        ),
+      },
+    ],
+    faqHeading: 'Frequently asked questions about concrete',
+    faq: [
+      {
+        question: 'How do I calculate concrete volume?',
+        answer:
+          'For a slab the volume is length × width × thickness in metres (5 × 4 × 0.10 = 2 m³). For a beam/footing length × width × height, and for round piers π × radius² × depth × count. The calculator picks the right formula for what you are casting and adds waste.',
+      },
+      {
+        question: 'How many bags of concrete are in a cubic metre?',
+        answer:
+          'A 25 kg bag of dry-mix often yields about 12.5 litres of finished concrete, so a cubic metre (1000 litres) is roughly 80 bags. A 1000 kg big bag gives about 520 litres. Always check the value on your packaging.',
+      },
+      {
+        question: 'Don’t forget the edge beam on a slab on grade',
+        answer:
+          'The thickened edge (edge beam) holds surprisingly much concrete. Choose "Edge beam: Yes" and enter its width and depth, and the volume around the whole slab perimeter is added automatically.',
+      },
+      {
+        question: 'How much water do I need to mix in?',
+        answer:
+          'Reckon about 3–4 litres of water per 25 kg bag. The calculator shows a guide value for the whole amount – follow the product instructions for the exact consistency.',
+      },
+      {
+        question: 'When should I order ready-mix instead of bags?',
+        answer:
+          'From roughly 1–2 m³, ready-mix concrete (delivered by truck) is usually both cheaper and easier than mixing many bags by hand. For smaller jobs bagged concrete is fine.',
+      },
+      {
+        question: 'Does it cost anything?',
+        answer: 'No, the calculator is free and requires no account.',
+      },
+    ],
+    ctaHeading: 'Keep track of material and finances in ByggExp',
+    ctaText: 'Follow material, time and costs per project. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'kvadratmeter-kalkylator', label: 'Square-metre calculator' },
+      { slug: 'tak-kalkylator', label: 'Roof calculator' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -293,8 +398,9 @@ export default function Page({ lang }: { lang: Locale }) {
         intro={c.intro}
         embedSlug="betong-kalkylator"
         embedTitle={c.h1}
-        tool={<BetongKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="betong-kalkylator" />}
+        locale={lang}
+        tool={<BetongKalkylatorTool locale={lang} />}
+        leadForm={<ToolLeadForm tool="betong-kalkylator" locale={lang} />}
         preview={
           <PreviewImage
             src="/landing/verktyg/betong-preview.webp"

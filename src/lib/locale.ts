@@ -25,3 +25,18 @@ export function toolLocaleEnabled(lang: unknown): lang is ToolLocale {
   if (lang === 'nb') return NB_LIVE;
   return false;
 }
+
+// Calculators additionally serve English (/en/verktyg/...) for expats and /en
+// navigation parity. This is a separate, wider locale set than ToolLocale so the
+// mall/PDF utility pages are NOT forced to ship en content — only the calculator
+// pages opt in via CalcLocale + calcLocaleEnabled. sv always on; nb gated by
+// NB_LIVE; en always on.
+export const CALC_LOCALES = ['sv', 'nb', 'en'] as const;
+export type CalcLocale = (typeof CALC_LOCALES)[number];
+
+export function calcLocaleEnabled(lang: unknown): lang is CalcLocale {
+  if (lang === 'sv') return true;
+  if (lang === 'nb') return NB_LIVE;
+  if (lang === 'en') return true;
+  return false;
+}

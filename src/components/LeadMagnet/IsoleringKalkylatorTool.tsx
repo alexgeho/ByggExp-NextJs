@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
+import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Professional insulation calculator. From area and thickness it returns the
@@ -49,6 +50,20 @@ export default function IsoleringKalkylatorTool() {
     gaEvent('export_excel', { tool: 'isolering-kalkylator' });
     downloadCsvRows(rows, 'isolering-materiallista.csv');
   };
+
+  const exportPdf = () => void downloadMaterialPdf({
+    title: 'Isolering – materiallista',
+    meta: `${thickness} mm · lambda ${lambda} W/mK`,
+    rows: [
+      { desc: 'Behov inkl. spill', qty: `${nf(r.need, 1)} m²` },
+      { desc: 'Antal förpackningar', qty: `${nf(r.packs)} st` },
+      { desc: 'Volym isolering', qty: `${nf(r.volume, 1)} m³` },
+      { desc: 'U-värde, isolerskiktet (ca)', qty: `${nf(r.uValue, 2)} W/m²K` },
+    ],
+    filename: 'isolering-materiallista.pdf',
+    tool: 'isolering-kalkylator',
+    note: 'U-värdet gäller enbart isolerskiktet. Ett korrekt U-värde för hela väggen tar hänsyn till reglar, skivor och köldbryggor.',
+  });
 
   const seedRows = [
     { desc: `Isolering ${thickness} mm (förpackningar)`, qty: r.packs },
@@ -126,7 +141,10 @@ export default function IsoleringKalkylatorTool() {
             Skapa faktura
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.packs <= 0}>
-            Exportera till Excel
+            Exportera Excel
+          </button>
+          <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={r.packs <= 0}>
+            Exportera PDF
           </button>
         </div>
       </div>

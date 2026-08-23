@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
+import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Gravel/soil calculator: volume from area × depth, plus weight in tonnes.
@@ -50,6 +51,17 @@ export default function GrusKalkylatorTool() {
     );
   };
 
+  const exportPdf = () => void downloadMaterialPdf({
+    title: 'Grus & makadam',
+    rows: [
+      { desc: 'Volym (färdig, packad)', qty: `${nf(r.packed, 2)} m³` },
+      { desc: 'Att beställa (löst, inkl. packning)', qty: `${nf(r.order, 2)} m³` },
+      { desc: 'Vikt (ca)', qty: `${nf(r.tons)} ton` },
+    ],
+    filename: 'grus-makadam.pdf',
+    tool: 'grus-kalkylator',
+  });
+
   return (
     <div className="lm-tool">
       <div className="lm-tool-head">
@@ -77,7 +89,10 @@ export default function GrusKalkylatorTool() {
           Skapa faktura
         </a>
         <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>
-          Exportera till Excel
+          Exportera Excel
+        </button>
+        <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={disabled}>
+          Exportera PDF
         </button>
       </div>
     </div>

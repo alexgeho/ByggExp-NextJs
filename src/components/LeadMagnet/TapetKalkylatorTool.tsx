@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
+import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Wallpaper calculator using the correct strip (våder) method: wallpaper is hung
@@ -66,6 +67,18 @@ export default function TapetKalkylatorTool() {
     );
   };
 
+  const exportPdf = () => void downloadMaterialPdf({
+    title: 'Tapet – materiallista',
+    rows: [
+      { desc: 'Våder per rulle', qty: `${nf(r.stripsPerRoll)} st` },
+      { desc: 'Antal våder som behövs', qty: `${nf(r.stripsNeeded)} st` },
+      { desc: 'Antal rullar', qty: `${nf(r.rolls)} st` },
+    ],
+    filename: 'tapet-materiallista.pdf',
+    tool: 'tapet-kalkylator',
+    note: 'Uppskattning. Köp gärna en extra rulle ur samma parti (batch) som reserv.',
+  });
+
   return (
     <div className="lm-tool">
       <div className="lm-tool-head">
@@ -103,7 +116,10 @@ export default function TapetKalkylatorTool() {
           Skapa faktura
         </a>
         <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>
-          Exportera till Excel
+          Exportera Excel
+        </button>
+        <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={disabled}>
+          Exportera PDF
         </button>
       </div>
     </div>

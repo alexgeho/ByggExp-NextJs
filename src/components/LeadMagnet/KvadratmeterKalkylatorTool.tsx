@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
+import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Free area calculator: sum the area (length × width) of one or more rectangles
@@ -48,6 +49,18 @@ export default function KvadratmeterKalkylatorTool() {
     gaEvent('export_excel', { tool: 'kvadratmeter-kalkylator' });
     downloadCsvRows(csvRows, 'ytor-kvadratmeter.csv');
   };
+
+  const exportPdf = () => void downloadMaterialPdf({
+    title: 'Ytor – kvadratmeter',
+    rows: [
+      ...rows.map((row, i) => ({ desc: `Yta ${i + 1} (${row.l || 0} × ${row.w || 0} m)`, qty: `${nf(num(row.l) * num(row.w))} m²` })),
+      { desc: 'Total yta', qty: `${nf(result.base)} m²` },
+      { desc: 'Inkl. spill – beställ minst', qty: `${nf(result.withSpill)} m²` },
+      ...(result.cost > 0 ? [{ desc: 'Uppskattad materialkostnad', qty: `${Math.round(result.cost).toLocaleString('sv-SE')} kr` }] : []),
+    ],
+    filename: 'ytor-kvadratmeter.pdf',
+    tool: 'kvadratmeter-kalkylator',
+  });
 
   const seedRows = [
     { desc: 'Yta (m²)', qty: Math.round(result.withSpill * 100) / 100 },
@@ -117,7 +130,10 @@ export default function KvadratmeterKalkylatorTool() {
             Skapa faktura
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={result.base <= 0}>
-            Exportera till Excel
+            Exportera Excel
+          </button>
+          <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={result.base <= 0}>
+            Exportera PDF
           </button>
         </div>
       </div>

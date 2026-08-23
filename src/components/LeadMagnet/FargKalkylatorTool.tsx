@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
+import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Professional paint calculator. Litres = (area − openings) × coats ÷ coverage,
@@ -68,6 +69,19 @@ export default function FargKalkylatorTool() {
     gaEvent('export_excel', { tool: 'farg-kalkylator' });
     downloadCsvRows(rows, 'farg-atgang.csv');
   };
+
+  const exportPdf = () => void downloadMaterialPdf({
+    title: 'Färg – åtgång',
+    meta: `${surfaceLabel[surface]} · ${coats} strykningar · ${num(coverage) || defCov} m²/l`,
+    rows: [
+      { desc: 'Yta att måla totalt', qty: `${nf(r.paintedArea, 1)} m²` },
+      { desc: 'Färg som behövs', qty: `${nf(r.liters, 1)} liter` },
+      { desc: 'Köp minst (avrundat)', qty: `${nf(r.buy)} liter` },
+    ],
+    filename: 'farg-atgang.pdf',
+    tool: 'farg-kalkylator',
+    note: 'Uppskattning. Åtgången påverkas av underlaget. Täckförmågan står på burken.',
+  });
 
   const seedRows = [
     { desc: `Färg – ${surfaceLabel[surface]} (liter)`, qty: r.buy },
@@ -145,7 +159,10 @@ export default function FargKalkylatorTool() {
             Skapa faktura
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.liters <= 0}>
-            Exportera till Excel
+            Exportera Excel
+          </button>
+          <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={r.liters <= 0}>
+            Exportera PDF
           </button>
         </div>
       </div>

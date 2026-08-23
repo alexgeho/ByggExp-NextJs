@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
+import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Professional drywall (gipsskivor) calculator for a stud wall.
@@ -86,6 +87,21 @@ export default function GipsKalkylatorTool() {
     gaEvent('export_excel', { tool: 'gips-kalkylator' });
     downloadCsvRows(rows, 'gips-materiallista.csv');
   };
+
+  const exportPdf = () => void downloadMaterialPdf({
+    title: 'Gips – materiallista',
+    meta: `Vägg ${length || 0} × ${height || 0} m · ${sides === '2' ? 'dubbelsidig' : 'enkelsidig'} · ${layers} lager/sida`,
+    rows: [
+      { desc: 'Gipsskivor', qty: `${nf(r.sheets)} st` },
+      { desc: 'Beklädd yta / inkl. spill', qty: `${nf(r.cladArea, 1)} / ${nf(r.gipsNeed, 1)} m²` },
+      { desc: `Reglar (c/c ${r.cc} mm)`, qty: `${nf(r.studCount)} st · ${nf(r.studMeters, 1)} lpm` },
+      { desc: railLabel, qty: `${nf(r.railMeters, 1)} lpm` },
+      ...(r.insulM2 > 0 ? [{ desc: 'Isolering', qty: `${nf(r.insulM2, 1)} m²` }] : []),
+      { desc: 'Gipsskruv', qty: `${nf(r.screws)} st` },
+    ],
+    filename: 'gips-materiallista.pdf',
+    tool: 'gips-kalkylator',
+  });
 
   const seedRows = [
     { desc: 'Gipsskivor', qty: r.sheets },
@@ -213,7 +229,10 @@ export default function GipsKalkylatorTool() {
             Skapa faktura
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.sheets <= 0}>
-            Exportera till Excel
+            Exportera Excel
+          </button>
+          <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={r.sheets <= 0}>
+            Exportera PDF
           </button>
         </div>
       </div>

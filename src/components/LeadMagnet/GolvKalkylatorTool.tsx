@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
+import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Professional flooring / tiling calculator. Area + waste -> needed m² and
@@ -69,6 +70,19 @@ export default function GolvKalkylatorTool() {
       'golv-materiallista.csv',
     );
   };
+
+  const exportPdf = () => void downloadMaterialPdf({
+    title: 'Golv & kakel – materiallista',
+    meta: matLabel,
+    rows: [
+      { desc: 'Behov inkl. spill', qty: `${nf(r.need, 1)} m²` },
+      { desc: 'Antal förpackningar', qty: `${nf(r.packs)} st` },
+      ...(r.isTile && r.fixBags > 0 ? [{ desc: 'Fästmassa', qty: `${nf(r.fixKg)} kg (${nf(r.fixBags)} säck)` }] : []),
+      ...(r.isTile && r.fogKg > 0 ? [{ desc: 'Fogbruk (ca)', qty: `${nf(r.fogKg, 1)} kg` }] : []),
+    ],
+    filename: 'golv-materiallista.pdf',
+    tool: 'golv-kalkylator',
+  });
 
   const disabled = r.packs <= 0;
 
@@ -161,7 +175,10 @@ export default function GolvKalkylatorTool() {
           Skapa faktura
         </a>
         <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>
-          Exportera till Excel
+          Exportera Excel
+        </button>
+        <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={disabled}>
+          Exportera PDF
         </button>
       </div>
     </div>

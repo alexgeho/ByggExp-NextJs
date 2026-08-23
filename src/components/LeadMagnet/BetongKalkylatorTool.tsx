@@ -76,6 +76,7 @@ export default function BetongKalkylatorTool() {
   const [timpris, setTimpris] = useState('500'); // kr/tim
   const [hRebarTon, setHRebarTon] = useState('12'); // arbetstimmar per ton armering
   const [hPerM2, setHPerM2] = useState('1.2'); // övrig arbetstid per m² (schakt/iso/gjutning)
+  const [walkPct, setWalkPct] = useState('10'); // gångtid/förflyttning – påslag på arbetstid
   const [rot, setRot] = useState('nej');
 
   const r = useMemo(() => {
@@ -123,7 +124,8 @@ export default function BetongKalkylatorTool() {
     const bindKg = steelTon * num(bindPerTon);
     const rebarHours = steelTon * num(hRebarTon);
     const otherHours = shape === 'platta' ? A * num(hPerM2) : 0;
-    const totalHours = rebarHours + otherHours;
+    // Gångtid/förflyttning: non-productive walking/moving time added on top.
+    const totalHours = (rebarHours + otherHours) * (1 + num(walkPct) / 100);
 
     // Costs
     const cConcrete = concreteMode === 'sack' ? bags * num(pSack) : volume * num(pBetong);
@@ -140,7 +142,7 @@ export default function BetongKalkylatorTool() {
     const perM2 = A > 0 ? cTotal / A : 0;
 
     return { volume, liters, bags, bigBags, water, A, P, meshArea, meshSheets, meshKg, isoVol, isoBoards, baseVol, edgeBarsLen, edgeBarKg, steelKg, bindKg, rebarHours, otherHours, totalHours, cConcrete, cMesh, cSteel, cBind, cIso, cBase, cMaterial, cLabour, cTotal, rotAvdrag, cAfterRot, perM2 };
-  }, [shape, form, length, width, area, perim, thickness, edge, edgeW, edgeH, edgeBars, barDia, isoThick, baseThick, mesh, meshType, bindPerTon, bLen, bWidth, bHeight, diam, depth, count, bagYield, spill, concreteMode, pBetong, pSack, pMesh, pSteel, pBind, pIso, pBase, timpris, hRebarTon, hPerM2, rot]);
+  }, [shape, form, length, width, area, perim, thickness, edge, edgeW, edgeH, edgeBars, barDia, isoThick, baseThick, mesh, meshType, bindPerTon, bLen, bWidth, bHeight, diam, depth, count, bagYield, spill, concreteMode, pBetong, pSack, pMesh, pSteel, pBind, pIso, pBase, timpris, hRebarTon, hPerM2, walkPct, rot]);
 
   const shapeLabel = shape === 'platta' ? 'Platta på mark' : shape === 'balk' ? 'Grundmur / balk' : 'Plintar / stolphål';
 
@@ -328,6 +330,7 @@ export default function BetongKalkylatorTool() {
                 <label className={fld}><span>Timpris arbete (kr/tim)</span><input type="number" min="0" inputMode="decimal" value={timpris} onChange={(e) => setTimpris(e.currentTarget.value)} /></label>
                 <label className={fld}><span>Armering: tim/ton</span><input type="number" min="0" inputMode="decimal" value={hRebarTon} onChange={(e) => setHRebarTon(e.currentTarget.value)} /></label>
                 <label className={fld}><span>Övrigt arbete: tim/m²</span><input type="number" min="0" inputMode="decimal" value={hPerM2} onChange={(e) => setHPerM2(e.currentTarget.value)} /></label>
+                <label className={fld}><span>Gångtid / förflyttning (%)</span><input type="number" min="0" inputMode="decimal" value={walkPct} onChange={(e) => setWalkPct(e.currentTarget.value)} /></label>
                 <label className={fld}><span>Bindtråd (kg/ton)</span><input type="number" min="0" inputMode="decimal" value={bindPerTon} onChange={(e) => setBindPerTon(e.currentTarget.value)} /></label>
                 <label className={fld}><span>ROT-avdrag (privatperson)?</span>
                   <select value={rot} onChange={(e) => setRot(e.currentTarget.value)}><option value="nej">Nej</option><option value="ja">Ja</option></select></label>

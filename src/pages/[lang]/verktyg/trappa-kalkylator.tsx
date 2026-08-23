@@ -46,7 +46,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Trappberäknare',
     intro:
-      'Fyll i den totala höjden så räknar vi ut antal steg, steghöjd och ett rekommenderat stegdjup enligt bekvämlighetsregeln 2 × steghöjd + stegdjup ≈ 630 mm.',
+      'Ska du bygga eller rita en trappa? Ange höjden mellan de två våningsplanen, så får du direkt hur många steg som behövs och hur höga och djupa de bör vara för att kännas bekväma att gå i.',
     previewAlt: 'Förhandsvisning av trappberäknare',
     previewCaption: 'Så ser trappberäknare ut',
     sections: [
@@ -56,7 +56,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     faqHeading: 'Vanliga frågor',
     faq: [
       { question: 'Hur räknar jag ut antal steg i en trappa?', answer: 'Dela den totala höjden med önskad steghöjd (ofta ca 175 mm) och avrunda. Den faktiska steghöjden blir höjden delat med antal steg.' },
-      { question: 'Vad är en bekväm steghöjd?', answer: 'Ofta 150–180 mm. En vanlig tumregel är att 2 × steghöjd + stegdjup ska bli ungefär 600–640 mm för en bekväm trappa.' },
+      { question: 'Vad är en bekväm steghöjd?', answer: 'Ofta 150–180 mm. Lägre steg är skönare att gå i men kräver fler steg och mer plats, medan höga steg gör trappan brant. Det är balansen mot stegdjupet som avgör hur bekväm den känns.' },
       { question: 'Vilka krav finns på trappor?', answer: 'Boverkets byggregler (BBR) ställer krav på bland annat steghöjd, stegdjup och bredd. Kontrollera kraven för din typ av trappa.' },
       { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
     ],
@@ -108,7 +108,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Stair calculator',
     intro:
-      'Enter the total height and we work out the number of steps, the rise and a recommended going per the comfort rule 2 × rise + going ≈ 630 mm.',
+      'Building or drawing a stair? Enter the height between the two floor levels and you get, in one go, how many steps you need and how high and deep each one should be to feel comfortable to walk.',
     previewAlt: 'Preview of the stair calculator',
     previewCaption: 'This is how the stair calculator looks',
     sections: [
@@ -118,7 +118,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     faqHeading: 'Frequently asked questions',
     faq: [
       { question: 'How do I work out the number of steps in a stair?', answer: 'Divide the total height by the desired rise (often about 175 mm) and round. The actual rise is the height divided by the number of steps.' },
-      { question: 'What is a comfortable rise?', answer: 'Often 150–180 mm. A common rule of thumb is that 2 × rise + going should be about 600–640 mm for a comfortable stair.' },
+      { question: 'What is a comfortable rise?', answer: 'Often 150–180 mm. Lower steps are easier to walk but need more steps and more space, while high steps make the stair steep. It is the balance against the going that decides how comfortable it feels.' },
       { question: 'What requirements apply to stairs?', answer: 'The Swedish building regulations (BBR) set requirements for rise, going and width, among others. Check the requirements for your type of stair.' },
       { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
     ],

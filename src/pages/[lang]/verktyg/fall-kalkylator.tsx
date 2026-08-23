@@ -46,12 +46,12 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Fall & lutning',
     intro:
-      'Fyll i längden och fallet i mm per meter så räknar vi ut total höjdskillnad, lutning i procent och som förhållande (1:X). Bra för avlopp, mark och tak.',
+      'Slipp huvudräkningen. Ange längd och fall, så får du höjdskillnaden direkt – och lutningen i både procent och som förhållande (1:X). Praktiskt för avlopp, mark och tak, där fallet ofta anges på olika sätt.',
     previewAlt: 'Förhandsvisning av fall & lutning',
     previewCaption: 'Så ser fall & lutning ut',
     sections: [
       { id: 'sa-raknar-du', heading: 'Så räknar du ut fallet', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/fall.webp" alt="Diagram: fall som längd, höjdskillnad och förhållande 1:X" width={720} height={380} loading="lazy" /><figcaption>Fall uttrycks som mm/m, procent och 1:X. 20 mm/m = 2 % = 1:50.</figcaption></figure><ol><li>Ange längden i meter.</li><li>Ange önskat fall i mm per meter.</li><li>Se höjdskillnaden, lutningen i procent och som 1:X.</li></ol></>) },
-      { id: 'info', heading: 'Riktvärden', body: (<><p>Fall uttrycks på flera sätt: mm per meter, procent och förhållande (1:X). 20 mm/m är samma sak som 2 % och 1:50. Använd det mått som gäller för din tillämpning.</p></>) },
+      { id: 'info', heading: 'Riktvärden', body: (<><p>Vilket fall som krävs beror på tillämpningen och står oftast i ritning eller branschregel. Samma värde kan anges som mm per meter, procent eller förhållande (1:X) – kalkylatorn räknar om mellan alla tre, så du matchar kravet utan att räkna för hand.</p></>) },
     ],
     faqHeading: 'Vanliga frågor',
     faq: [
@@ -108,12 +108,12 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Slope & fall',
     intro:
-      'Enter the length and the fall in mm per metre and we work out the total height difference, the slope in percent and as a ratio (1:X). Handy for drainage, ground and roofs.',
+      'Skip the mental arithmetic. Enter the length and the fall, and the height difference comes straight back – plus the slope in both percent and as a ratio (1:X). Handy for drainage, ground and roofs, where fall is often given in different ways.',
     previewAlt: 'Preview of slope & fall',
     previewCaption: 'This is how slope & fall looks',
     sections: [
       { id: 'sa-raknar-du', heading: 'How to work out the fall', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/fall.webp" alt="Diagram: fall as length, height difference and ratio 1:X" width={720} height={380} loading="lazy" /><figcaption>Fall is expressed as mm/m, percent and 1:X. 20 mm/m = 2% = 1:50.</figcaption></figure><ol><li>Enter the length in metres.</li><li>Enter the desired fall in mm per metre.</li><li>See the height difference, the slope in percent and as 1:X.</li></ol></>) },
-      { id: 'info', heading: 'Guide values', body: (<><p>Fall is expressed in several ways: mm per metre, percent and ratio (1:X). 20 mm/m is the same as 2% and 1:50. Use the measure that applies to your case.</p></>) },
+      { id: 'info', heading: 'Guide values', body: (<><p>The fall you need depends on the application and is usually set out in a drawing or industry rule. The same value can be given as mm per metre, percent or ratio (1:X) – the calculator converts between all three, so you can match the requirement without doing the maths by hand.</p></>) },
     ],
     faqHeading: 'Frequently asked questions',
     faq: [

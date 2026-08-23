@@ -46,18 +46,18 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Grus & makadam',
     intro:
-      'Fyll i yta och djup så räknar vi ut volymen i kubikmeter och vikten i ton. Fungerar för grus, makadam, matjord och sand – justera densiteten efter materialet.',
+      'Beställ rätt mängd på en gång. Kalkylatorn räknar om ytan till både färdig volym och den lösare mängd du faktiskt behöver beställa – med packningspåslag – och ger vikten i ton för grus, makadam, matjord eller sand.',
     previewAlt: 'Förhandsvisning av grus & makadam',
     previewCaption: 'Så ser grus & makadam ut',
     sections: [
-      { id: 'sa-raknar-du', heading: 'Så räknar du ut mängden', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/grus.webp" alt="Diagram: grusvolym som yta gånger tjocklek med packningspåslag" width={720} height={380} loading="lazy" /><figcaption>Volym = yta × tjocklek, plus packningspåslag. 1 m³ grus väger ca 1,5–1,8 ton.</figcaption></figure><ol><li>Mät ytans längd och bredd i meter.</li><li>Ange djupet i centimeter.</li><li>Välj materialets densitet (ton/m³).</li><li>Se volymen i m³ och vikten i ton.</li></ol></>) },
-      { id: 'info', heading: 'Tänk på packning', body: (<><p>Material packar ihop sig efter läggning, så räkna med lite extra om djupet ska hålla efter packning. Densiteten skiljer sig mellan material – fråga leverantören.</p></>) },
+      { id: 'sa-raknar-du', heading: 'Så räknar du ut mängden', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/grus.webp" alt="Diagram: grusvolym som yta gånger tjocklek med packningspåslag" width={720} height={380} loading="lazy" /><figcaption>Volym = yta × tjocklek, plus ett påslag för packning.</figcaption></figure><ol><li>Mät ytans längd och bredd i meter.</li><li>Ange djupet i centimeter.</li><li>Välj materialets densitet (ton/m³).</li><li>Se volymen i m³ och vikten i ton.</li></ol></>) },
+      { id: 'info', heading: 'Tänk på packning', body: (<><p>Material packar ihop sig efter läggning, så räkna med lite extra om djupet ska hålla när ytan är färdigpackad. Kalkylatorn gör det åt dig: raden ”att beställa” visar den lösa mängden, som alltid är större än den färdiga volymen.</p></>) },
     ],
     faqHeading: 'Vanliga frågor',
     faq: [
       { question: 'Hur räknar jag ut hur mycket grus jag behöver?', answer: 'Volymen är längd × bredd × djup i meter. En yta på 10 × 3 m med 10 cm djup blir 3 m³. Vikten är volymen gånger densiteten.' },
       { question: 'Hur mycket väger en kubik grus?', answer: 'Grus och makadam väger ofta cirka 1,5–1,8 ton per m³, matjord ca 1,2–1,5. Ange densiteten i kalkylatorn.' },
-      { question: 'Grus säljs i ton eller kubik?', answer: 'Ofta i ton vid leverans och i kubik vid uppskattning – därför visar kalkylatorn båda.' },
+      { question: 'Säljs grus i ton eller kubik?', answer: 'Ofta i ton vid leverans och i kubik vid uppskattning – därför visar kalkylatorn båda.' },
       { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
     ],
     ctaHeading: 'Räkna material och tid i ByggExp',
@@ -108,12 +108,12 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Gravel & crushed stone',
     intro:
-      'Enter the area and depth and we work out the volume in cubic metres and the weight in tonnes. Works for gravel, crushed stone, topsoil and sand – adjust the density to the material.',
+      'Order the right amount the first time. The calculator turns your area into both the finished volume and the looser quantity you actually order – compaction included – and gives the weight in tonnes for gravel, crushed stone, topsoil or sand.',
     previewAlt: 'Preview of gravel & crushed stone',
     previewCaption: 'This is how gravel & crushed stone looks',
     sections: [
-      { id: 'sa-raknar-du', heading: 'How to work out the quantity', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/grus.webp" alt="Diagram: gravel volume as area times thickness with a compaction allowance" width={720} height={380} loading="lazy" /><figcaption>Volume = area × thickness, plus a compaction allowance. 1 m³ of gravel weighs about 1.5–1.8 tonnes.</figcaption></figure><ol><li>Measure the area’s length and width in metres.</li><li>Enter the depth in centimetres.</li><li>Choose the material’s density (t/m³).</li><li>See the volume in m³ and the weight in tonnes.</li></ol></>) },
-      { id: 'info', heading: 'Allow for compaction', body: (<><p>Material compacts after laying, so allow a little extra if the depth must hold after compaction. Density differs between materials – ask the supplier.</p></>) },
+      { id: 'sa-raknar-du', heading: 'How to work out the quantity', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/grus.webp" alt="Diagram: gravel volume as area times thickness with a compaction allowance" width={720} height={380} loading="lazy" /><figcaption>Volume = area × thickness, plus an allowance for compaction.</figcaption></figure><ol><li>Measure the area’s length and width in metres.</li><li>Enter the depth in centimetres.</li><li>Choose the material’s density (t/m³).</li><li>See the volume in m³ and the weight in tonnes.</li></ol></>) },
+      { id: 'info', heading: 'Allow for compaction', body: (<><p>Material compacts after laying, so allow a little extra if the depth must hold once the surface is settled. The calculator does this for you: the “to order” figure is the loose quantity, always larger than the finished volume.</p></>) },
     ],
     faqHeading: 'Frequently asked questions',
     faq: [

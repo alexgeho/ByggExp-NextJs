@@ -46,7 +46,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Golv- och kakelkalkylator',
     intro:
-      'Välj material och läggningssätt så räknar vi ut m² inkl. spill och antal förpackningar – för golv, laminat, klinker och kakel. För kakel får du även åtgången fästmassa i kg och säckar.',
+      'Beställ rätt mängd golv eller kakel på en gång – och slipp en extra vända till byggvaruhuset. Ange ytan så får du antalet förpackningar med påslag för spill, och för kakel även fästmassan i kg och säckar.',
     previewAlt: 'Förhandsvisning av golv- och kakelberäknare',
     previewCaption: 'Så ser golv- och kakelberäknare ut',
     sections: [
@@ -86,9 +86,9 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     faqHeading: 'Vanliga frågor',
     faq: [
-      { question: 'Hur mycket golv eller kakel ska jag köpa?', answer: 'Räkna ytan i m² och lägg på spill – rak läggning ofta 5–8 %, diagonal 10–15 %. Dela sedan på förpackningens m² för antal paket. Kalkylatorn väljer spill efter läggningssätt och räknar ut det åt dig.' },
-      { question: 'Hur mycket fästmassa går det åt till kakel?', answer: 'Räkna med ca 3–6 kg fästmassa per m² beroende på tandning och plattstorlek (ett vanligt riktvärde är 4 kg/m²). Välj "Kakel/klinker" i kalkylatorn så räknas kg och antal säckar (20 kg) ut. Fogbruk tillkommer och beror på fogbredd.' },
-      { question: 'Hur mycket spill vid diagonal läggning?', answer: 'Diagonal läggning och rum med många vinklar ger mer kap – räkna med 10–15 % i stället för 5–8 %. Ha alltid några plattor/brädor extra ur samma parti för framtida behov.' },
+      { question: 'Hur mycket golv eller kakel ska jag köpa?', answer: 'Räkna ytan i m² och lägg på spill – rak läggning ofta 5–8 %, diagonal 10–15 %. Dela sedan på förpackningens m² så får du antalet paket.' },
+      { question: 'Hur mycket fästmassa går det åt till kakel?', answer: 'Det beror på tandning och plattstorlek, så åtgången varierar. Välj "Kakel/klinker" i kalkylatorn så räknar den ut kg och antal säckar (20 kg) utifrån din yta.' },
+      { question: 'Hur mycket spill vid diagonal läggning?', answer: 'Diagonal läggning och rum med många vinklar ger mer kap. Lägg på mot 10–15 % och håll marginal för anpassningar mot väggar och rör.' },
       { question: 'Hur många m² är en förpackning?', answer: 'Det varierar per produkt och står på förpackningen – ange värdet i kalkylatorn så räknas antal paket ut.' },
       { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
     ],
@@ -172,7 +172,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Flooring & tile calculator',
     intro:
-      'Choose material and laying pattern and we work out m² incl. waste and the number of packs – for flooring, laminate, floor and wall tiles. For tiles you also get the tile adhesive needed in kg and bags.',
+      'Order the right amount of flooring or tile in one go – and skip the extra trip to the builders’ merchant. Enter the area and you get the number of packs with waste added, plus the tile adhesive in kg and bags.',
     previewAlt: 'Preview of the flooring & tile calculator',
     previewCaption: 'This is how the flooring & tile calculator looks',
     sections: [
@@ -212,9 +212,9 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     faqHeading: 'Frequently asked questions',
     faq: [
-      { question: 'How much flooring or tile should I buy?', answer: 'Work out the area in m² and add waste – straight laying often 5–8%, diagonal 10–15%. Then divide by the pack’s m² for the number of packs. The calculator picks the waste by laying pattern and works it out for you.' },
-      { question: 'How much adhesive is needed for tiles?', answer: 'Reckon about 3–6 kg of adhesive per m² depending on trowel notch and tile size (a common guide value is 4 kg/m²). Choose "Wall/floor tiles" and kg and number of bags (20 kg) are calculated. Grout comes on top and depends on joint width.' },
-      { question: 'How much waste for diagonal laying?', answer: 'Diagonal laying and rooms with many angles create more cuts – reckon 10–15% instead of 5–8%. Always keep a few tiles/boards extra from the same batch for future needs.' },
+      { question: 'How much flooring or tile should I buy?', answer: 'Work out the area in m² and add waste – straight laying often 5–8%, diagonal 10–15%. Then divide by the pack’s m² for the number of packs.' },
+      { question: 'How much adhesive is needed for tiles?', answer: 'It depends on the trowel notch and tile size, so consumption varies. Choose "Wall/floor tiles" in the calculator and it works out the kg and number of bags (20 kg) from your area.' },
+      { question: 'How much waste for diagonal laying?', answer: 'Diagonal laying and rooms with many angles create more cuts. Add up to 10–15% and leave a margin for fitting against walls and pipes.' },
       { question: 'How many m² is a pack?', answer: 'It varies by product and is stated on the pack – enter the value in the calculator and the number of packs is calculated.' },
       { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
     ],

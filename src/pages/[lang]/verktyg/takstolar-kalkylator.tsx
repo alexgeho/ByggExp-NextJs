@@ -46,7 +46,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Beräkna takstolar',
     intro:
-      'Beräkna antal takstolar snabbt: fyll i takets längd och centrumavstånd (c/c) så gör kalkylatorn takstolsberäkningen åt dig – gratis och utan konto.',
+      'Beräkna antal takstolar innan du beställer virke eller begär offert. Ange takets längd och centrumavstånd (c/c) så får du antalet direkt – ett snabbt materialunderlag, gratis och utan konto.',
     previewAlt: 'Förhandsvisning av takstolar',
     previewCaption: 'Så ser takstolar ut',
     sections: [
@@ -57,8 +57,8 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     faqHeading: 'Vanliga frågor',
     faq: [
-      { question: 'Hur beräknar man antal takstolar?', answer: 'Beräkning av takstolar: ta takets längd delat med centrumavståndet (c/c) och lägg till 1. Ett 10 m tak med c/c 1200 mm ger 9 takstolar. Kalkylatorn räknar ut det åt dig.' },
-      { question: 'Hur många takstolar behöver jag?', answer: 'Antal = takets längd delat med centrumavståndet (c/c) + 1. Ett 10 m tak med c/c 1200 mm ger 9 takstolar.' },
+      { question: 'Hur beräknar man antal takstolar?', answer: 'Ta takets längd delat med centrumavståndet (c/c) och lägg till en takstol. Ett 10 m tak med c/c 1200 mm ger 10 takstolar. Fyll i dina mått så räknar kalkylatorn ut det.' },
+      { question: 'Hur många takstolar behöver jag?', answer: 'Antalet styrs av takets längd och vilket c/c du väljer. Avrunda alltid uppåt och lägg till en takstol för gaveln – därför slutar formeln på +1. Kalkylatorn sköter avrundningen åt dig.' },
       { question: 'Vilket c/c-avstånd har takstolar?', answer: 'Vanligt är 1200 mm, men det beror på taktäckning, snölast och dimensionering. Följ konstruktörens uppgift.' },
       { question: 'Vad är skillnaden på att beräkna antal och att dimensionera takstolar?', answer: 'Den här kalkylatorn beräknar antal takstolar utifrån c/c. Dimensionering – att bestämma virkesdimensioner utifrån spännvidd och snölast – görs av en konstruktör enligt gällande last.' },
       { question: 'Ingår gavelspetsar och kortlingar?', answer: 'Nej, kalkylatorn räknar de vanliga takstolarna. Gavelkonstruktion och avväxlingar tillkommer.' },
@@ -92,8 +92,8 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     faqHeading: 'Vanlige spørsmål',
     faq: [
-      { question: 'Hvordan beregner man antall takstoler?', answer: 'Beregning av takstoler: ta takets lengde delt på senteravstanden (c/c) og legg til 1. Et tak på 10 m med c/c 1200 mm gir 9 takstoler. Kalkulatoren regner det ut for deg.' },
-      { question: 'Hvor mange takstoler trenger jeg?', answer: 'Antall = takets lengde delt på senteravstanden (c/c) + 1. Et tak på 10 m med c/c 1200 mm gir 9 takstoler.' },
+      { question: 'Hvordan beregner man antall takstoler?', answer: 'Ta takets lengde delt på senteravstanden (c/c) og legg til én takstol. Et tak på 10 m med c/c 1200 mm gir 10 takstoler. Fyll inn dine mål, så regner kalkulatoren det ut.' },
+      { question: 'Hvor mange takstoler trenger jeg?', answer: 'Antall = takets lengde delt på senteravstanden (c/c) + 1. Med tettere c/c blir det flere takstoler, med større c/c færre.' },
       { question: 'Hvilken c/c-avstand har takstoler?', answer: 'Vanlig er 1200 mm, men det avhenger av taktekking, snølast og dimensjonering. Følg konstruktørens angivelse.' },
       { question: 'Hva er forskjellen på å beregne antall og å dimensjonere takstoler?', answer: 'Denne kalkulatoren beregner antall takstoler ut fra c/c. Dimensjonering – å bestemme trelastdimensjoner ut fra spennvidde og snølast – gjøres av en konstruktør etter gjeldende last.' },
       { question: 'Er gavlspisser og kortlinger inkludert?', answer: 'Nei, kalkulatoren regner de vanlige takstolene. Gavlkonstruksjon og utvekslinger kommer i tillegg.' },
@@ -116,9 +116,9 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Calculate roof trusses',
     intro:
-      'Work out the number of roof trusses quickly: enter the roof length and spacing (c/c) and the calculator does the truss count for you – free and no account.',
+      'Work out the number of roof trusses before you order timber or request a quote. Enter the roof length and centre spacing (c/c) and you get the count straight away – a quick material estimate, free and no account.',
     previewAlt: 'Preview of roof trusses',
-    previewCaption: 'This is how roof trusses looks',
+    previewCaption: 'This is what roof trusses look like',
     sections: [
       { id: 'sa-raknar-du', heading: 'How to calculate the number of trusses', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/takstolar.webp" alt="Diagram: roof trusses with c/c spacing along the roof" width={720} height={380} loading="lazy" /><figcaption>Number of trusses = roof length ÷ c/c + 1. A standard c/c is 1200 mm.</figcaption></figure><p>The truss count uses a simple formula: <strong>count = roof length / c/c + 1</strong>. The extra truss is so that both gables also get a truss.</p><ol><li>Measure the roof length in metres.</li><li>Enter the spacing (c/c) in mm.</li><li>See the number of trusses instantly.</li></ol></>) },
       { id: 'exempel', heading: 'Example truss calculation', body: (<><p>A roof 10 metres long at c/c 1200 mm: 10,000 / 1200 = 8.33, rounded up to 9, plus 1 = <strong>10 trusses</strong>. At a closer c/c of 600 mm it becomes about 18 trusses for the same roof – so the spacing drives both the count and the material.</p></>) },
@@ -127,8 +127,8 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     faqHeading: 'Frequently asked questions',
     faq: [
-      { question: 'How do you calculate the number of trusses?', answer: 'Truss calculation: take the roof length divided by the spacing (c/c) and add 1. A 10 m roof at c/c 1200 mm gives 9 trusses. The calculator works it out for you.' },
-      { question: 'How many trusses do I need?', answer: 'Count = roof length divided by the spacing (c/c) + 1. A 10 m roof at c/c 1200 mm gives 9 trusses.' },
+      { question: 'How do you calculate the number of trusses?', answer: 'Take the roof length divided by the spacing (c/c) and add one truss. A 10 m roof at c/c 1200 mm gives 10 trusses. Enter your measurements and the calculator does it for you.' },
+      { question: 'How many trusses do I need?', answer: 'It depends on the roof length and the c/c you choose. Always round up and add one truss for the gable – that is why the formula ends in +1. The calculator handles the rounding.' },
       { question: 'What c/c spacing do trusses have?', answer: 'Common is 1200 mm, but it depends on the covering, snow load and dimensioning. Follow the engineer’s specification.' },
       { question: 'What is the difference between counting and dimensioning trusses?', answer: 'This calculator counts trusses from c/c. Dimensioning – determining timber sizes from span and snow load – is done by an engineer per the applicable load.' },
       { question: 'Are gable ends and noggins included?', answer: 'No, the calculator counts the ordinary trusses. Gable construction and trimming come in addition.' },

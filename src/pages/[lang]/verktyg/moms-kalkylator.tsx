@@ -43,7 +43,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Gratis kalkylator',
     h1: 'Momskalkylator – räkna ut moms',
     intro:
-      'Lägg på moms eller räkna baklänges från ett pris. Välj 25, 12 eller 6 % så ser du beloppet exklusive moms, själva momsen och beloppet inklusive moms.',
+      'Ska du prissätta ett jobb eller stämma av en faktura? Skriv in beloppet så får du svaret direkt – både framlänges och baklänges, med 25, 12 eller 6 % moms.',
     previewAlt: 'Förhandsvisning av momskalkylator',
     previewCaption: 'Så ser momskalkylatorn ut',
     sections: [
@@ -114,12 +114,12 @@ const CONTENT: Record<L, Content> = {
       {
         question: 'Vilken momssats gäller för byggtjänster?',
         answer:
-          'För de flesta byggtjänster är momsen 25 %. Vissa varor och tjänster har 12 % eller 6 %. Notera att omvänd byggmoms kan gälla mellan byggföretag.',
+          '25 % på i stort sett allt bygg- och hantverksarbete. Vilken sats som gäller styrs av tjänsten, inte av vem som fakturerar – och mellan byggföretag kan omvänd byggmoms flytta momsredovisningen till köparen.',
       },
       {
         question: 'Hur räknar jag baklänges från ett pris inklusive moms?',
         answer:
-          'Välj «Inklusive moms» i kalkylatorn. Med 25 % moms blir beloppet exklusive moms priset delat med 1,25, och momsen är skillnaden.',
+          'Ställ om kalkylatorn till «Inklusive moms» och skriv in bruttopriset. Då plockar den fram både beloppet exklusive moms och själva momsdelen åt dig – du slipper räkna för hand.',
       },
       {
         question: 'Kostar det något?',
@@ -144,7 +144,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Free calculator',
     h1: 'VAT calculator – work out VAT',
     intro:
-      'Add VAT or reverse-calculate from a price. Choose 25, 12 or 6% and see the amount excluding VAT, the VAT itself and the amount including VAT.',
+      'Pricing a job or checking an invoice? Type in the amount and get the answer straight away – forwards or in reverse, at 25, 12 or 6% VAT.',
     previewAlt: 'Preview of the VAT calculator',
     previewCaption: 'This is how the VAT calculator looks',
     sections: [
@@ -215,12 +215,12 @@ const CONTENT: Record<L, Content> = {
       {
         question: 'Which VAT rate applies to construction services?',
         answer:
-          'For most construction services VAT is 25%. Some goods and services are 12% or 6%. Note that reverse-charge VAT may apply between construction companies.',
+          '25% on virtually all construction and trade work. The rate follows the service, not who is invoicing – and between construction companies reverse charge can shift the VAT reporting to the buyer.',
       },
       {
         question: 'How do I reverse-calculate from a price including VAT?',
         answer:
-          'Choose "Including VAT" in the calculator. At 25% VAT, the amount excluding VAT is the price divided by 1.25, and the VAT is the difference.',
+          'Switch the calculator to "Including VAT" and enter the gross price. It then breaks out both the amount excluding VAT and the VAT itself for you – no manual maths needed.',
       },
       {
         question: 'Does it cost anything?',

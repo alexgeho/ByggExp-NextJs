@@ -46,9 +46,9 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Staketberäknare',
     intro:
-      'Fyll i staketets längd och avståndet mellan stolparna (c/c) så räknar vi ut antal stolpar och sektioner.',
+      'Innan du beställer stolpar och virke vill du veta exakt hur mycket som går åt. Ange längden och ditt c/c-avstånd, så får du antal stolpar och sektioner direkt – ett underlag att ta med till bygghandeln.',
     previewAlt: 'Förhandsvisning av staketberäknare',
-    previewCaption: 'Så ser staketberäknare ut',
+    previewCaption: 'Så ser staketberäknaren ut',
     sections: [
       { id: 'sa-raknar-du', heading: 'Så räknar du ut staketet', body: (<><ol><li>Mät staketets längd i meter.</li><li>Ange avståndet mellan stolparna (c/c).</li><li>Se antal stolpar och sektioner.</li></ol></>) },
       { id: 'info', heading: 'Tänk på stabiliteten', body: (<><p>Kortare stolpavstånd ger ett stadigare staket, särskilt för höga plank eller blåsiga lägen. Gräv ner eller gjut fast stolparna ordentligt.</p></>) },
@@ -56,7 +56,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     faqHeading: 'Vanliga frågor',
     faq: [
       { question: 'Hur många stolpar behöver jag till staketet?', answer: 'Antal sektioner är längden delat med stolpavståndet, avrundat uppåt. Antal stolpar är sektioner + 1.' },
-      { question: 'Vilket avstånd mellan staketstolpar?', answer: 'Ofta 2–2,5 meter, men det beror på staketets typ och vindlast. Tätare avstånd ger stadigare staket.' },
+      { question: 'Vilket avstånd bör jag ha mellan staketstolparna?', answer: 'Ofta 2–2,5 meter. Höga plank och vindutsatta tomter mår bra av tätare avstånd, medan låga staket klarar sig med glesare.' },
       { question: 'Ingår grinden?', answer: 'Nej, räkna grind och eventuella hörnstolpar separat.' },
       { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
     ],
@@ -108,7 +108,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Fence calculator',
     intro:
-      'Enter the fence length and the spacing between posts (c/c) and we work out the number of posts and sections.',
+      'Before you order posts and timber, you want to know exactly how much you need. Give the length and your c/c spacing, and you get the post and section count straight away – a figure to take to the builders’ merchant.',
     previewAlt: 'Preview of the fence calculator',
     previewCaption: 'This is how the fence calculator looks',
     sections: [
@@ -118,7 +118,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     faqHeading: 'Frequently asked questions',
     faq: [
       { question: 'How many posts do I need for the fence?', answer: 'The number of sections is the length divided by the post spacing, rounded up. The number of posts is sections + 1.' },
-      { question: 'What spacing between fence posts?', answer: 'Often 2–2.5 metres, but it depends on the fence type and wind load. Closer spacing gives a sturdier fence.' },
+      { question: 'What spacing should I use between fence posts?', answer: 'Often 2–2.5 metres. Tall panels and exposed plots do better with closer spacing, while low fences can go wider.' },
       { question: 'Is the gate included?', answer: 'No, count the gate and any corner posts separately.' },
       { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
     ],

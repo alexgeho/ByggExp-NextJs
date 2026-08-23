@@ -46,7 +46,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Golvvärme',
     intro:
-      'Fyll i ytan och centrumavståndet (c/c) mellan rören så räknar vi ut ungefärlig slinglängd och antal slingor.',
+      'Ska du lägga golvvärme och undrar hur mycket rör som går åt? Ange yta och c/c-avstånd så får du slinglängd och antal slingor direkt – ett snabbt underlag för materialbeställning och offert.',
     previewAlt: 'Förhandsvisning av golvvärme',
     previewCaption: 'Så ser golvvärme ut',
     sections: [
@@ -108,7 +108,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Underfloor heating',
     intro:
-      'Enter the area and the pipe spacing (c/c) and we work out the approximate loop length and number of loops.',
+      'Laying underfloor heating and wondering how much pipe it takes? Enter the area and c/c spacing to get the loop length and number of loops straight away – a quick basis for ordering material and quoting the job.',
     previewAlt: 'Preview of underfloor heating',
     previewCaption: 'This is how underfloor heating looks',
     sections: [

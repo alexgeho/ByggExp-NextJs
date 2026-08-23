@@ -46,9 +46,9 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Tapetberäknare',
     intro:
-      'Fyll i väggytan och rullens yta så räknar vi ut hur många tapetrullar du behöver, med påslag för mönsterpassning och spill.',
+      'Att gissa antalet tapetrullar slutar oftast med en rulle för lite mitt i jobbet. Fyll i väggarnas mått, mönsterrapport och rullstorlek så får du siffran innan du står i butiken.',
     previewAlt: 'Förhandsvisning av tapetberäknare',
-    previewCaption: 'Så ser tapetberäknare ut',
+    previewCaption: 'Så ser tapetberäknaren ut',
     sections: [
       { id: 'sa-raknar-du', heading: 'Så räknar du ut antal rullar', body: (<><ol><li>Räkna ut väggytan som ska tapetseras (m²).</li><li>Ange rullens yta (ofta ca 5 m²).</li><li>Lägg på spill för mönsterpassning.</li><li>Se hur många rullar du behöver.</li></ol></>) },
       { id: 'info', heading: 'Tips', body: (<><p>Köp alla rullar ur samma parti (samma batchnummer) så att färgen stämmer, och ta gärna en rulle extra som reserv.</p></>) },
@@ -108,7 +108,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Wallpaper calculator',
     intro:
-      'Enter the wall area and the roll’s area and we work out how many wallpaper rolls you need, with an allowance for pattern matching and waste.',
+      'Guessing at wallpaper usually ends with a roll too few halfway through the job. Enter the wall dimensions, pattern repeat and roll size and you’ll have the number before you reach the shop.',
     previewAlt: 'Preview of the wallpaper calculator',
     previewCaption: 'This is how the wallpaper calculator looks',
     sections: [

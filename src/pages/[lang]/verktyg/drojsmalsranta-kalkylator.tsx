@@ -42,7 +42,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Gratis kalkylator',
     h1: 'Dröjsmålsränta – räkna ut räntan på en obetald faktura',
     intro:
-      'Kunden betalar sent? Fyll i fakturabeloppet, förfallodatum och betaldatum så räknar kalkylatorn ut dröjsmålsräntan enligt räntelagen (referensränta + 8 procentenheter) plus eventuella avgifter.',
+      'En obetald faktura kostar dig ränta för varje dag den ligger kvar. Kalkylatorn räknar ut exakt hur mycket dröjsmålsränta du har rätt till och lägger på lagstadgad påminnelse- och inkassoavgift, så du ser hela summan att kräva.',
     previewAlt: 'Förhandsvisning av dröjsmålsränta-kalkylatorn',
     previewCaption: 'Så ser dröjsmålsränta-kalkylatorn ut',
     sections: [
@@ -68,9 +68,9 @@ const CONTENT: Record<L, Content> = {
         heading: 'Referensräntan ändras två gånger om året',
         body: (
           <p>
-            Riksbanken fastställer referensräntan den 1 januari och den 1 juli. Eftersom räntan ändras
-            behöver du kontrollera aktuell nivå och justera den i kalkylatorn – då blir dröjsmålsräntan alltid
-            rätt. Har ni avtalat en högre avtalsränta gäller den i stället.
+            Riksbanken fastställer referensräntan den 1 januari och den 1 juli. Eftersom nivån ändras
+            behöver du kontrollera den aktuella referensräntan och lägga in den i kalkylatorn – då blir
+            dröjsmålsräntan rätt.
           </p>
         ),
       },
@@ -80,7 +80,7 @@ const CONTENT: Record<L, Content> = {
       {
         question: 'Hur hög är dröjsmålsräntan?',
         answer:
-          'Enligt räntelagen är dröjsmålsräntan referensräntan plus 8 procentenheter, om inte en annan ränta avtalats. Referensräntan fastställs av Riksbanken 1 januari och 1 juli. Justera referensräntan i kalkylatorn till aktuell nivå.',
+          'Enligt räntelagen är den referensräntan plus 8 procentenheter, om ni inte avtalat en annan ränta. Har ni kommit överens om en högre avtalsränta gäller den i stället.',
       },
       {
         question: 'Från vilken dag räknas dröjsmålsräntan?',
@@ -115,7 +115,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Free calculator',
     h1: 'Late-payment interest – work out the interest on an unpaid invoice',
     intro:
-      'Customer paying late? Enter the invoice amount, due date and payment date and the calculator works out the late-payment interest per the Swedish Interest Act (reference rate + 8 percentage points) plus any fees.',
+      'An unpaid invoice costs you interest for every day it goes unpaid. The calculator works out exactly how much late-payment interest you are owed and adds the statutory reminder and debt-collection fees, so you see the full amount to claim.',
     previewAlt: 'Preview of the late-payment interest calculator',
     previewCaption: 'This is how the late-payment interest calculator looks',
     sections: [
@@ -141,9 +141,8 @@ const CONTENT: Record<L, Content> = {
         heading: 'The reference rate changes twice a year',
         body: (
           <p>
-            Riksbanken sets the reference rate on 1 January and 1 July. Since the rate changes, check the
-            current level and adjust it in the calculator – then the late-payment interest is always correct.
-            If you have agreed a higher contractual rate, that applies instead.
+            Riksbanken sets the reference rate on 1 January and 1 July. Because the level changes, check the
+            current reference rate and enter it in the calculator – then the late-payment interest is correct.
           </p>
         ),
       },
@@ -153,7 +152,7 @@ const CONTENT: Record<L, Content> = {
       {
         question: 'How high is the late-payment interest?',
         answer:
-          'Per the Interest Act the late-payment interest is the reference rate plus 8 percentage points, unless another rate has been agreed. The reference rate is set by Riksbanken on 1 January and 1 July. Adjust the reference rate in the calculator to the current level.',
+          'Per the Interest Act it is the reference rate plus 8 percentage points, unless you have agreed another rate. If you have agreed a higher contractual rate, that applies instead.',
       },
       {
         question: 'From which day is the interest counted?',

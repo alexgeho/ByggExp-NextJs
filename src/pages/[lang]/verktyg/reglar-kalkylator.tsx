@@ -46,7 +46,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Reglar & virke',
     intro:
-      'Fyll i väggens längd och centrumavstånd (c/c) så räknar vi ut antal reglar och totalt antal löpmeter virke.',
+      'Räkna reglarna innan du handlar virke, så slipper du både extraturen till bygghandeln och en hög överblivet virke. Ange väggens längd och centrumavstånd (c/c) – du får antal reglar och löpmeter på sekunden.',
     previewAlt: 'Förhandsvisning av reglar & virke',
     previewCaption: 'Så ser reglar & virke ut',
     sections: [
@@ -57,7 +57,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     faq: [
       { question: 'Hur räknar jag antal reglar?', answer: 'Antal stående reglar = längd ÷ centrumavstånd (c/c) + 1. En 6 m vägg med c/c 600 mm ger 6000 ÷ 600 + 1 = 11 reglar.' },
       { question: 'Vilket c/c-avstånd ska jag ha?', answer: 'Vanliga avstånd är 450 eller 600 mm beroende på skiv- och isoleringsmått samt krav. 600 mm är vanligast för innerväggar.' },
-      { question: 'Ingår syll och hammarband?', answer: 'Nej, kalkylatorn räknar de stående reglarna. Lägg till virke för syll (nedtill) och hammarband (upptill) separat.' },
+      { question: 'Ingår syll och hammarband?', answer: 'Nej, siffran gäller de stående reglarna. Syll (nedtill) och hammarband (upptill) löper längs hela väggen, så lägg till löpmeter virke motsvarande väggens längd för varje.' },
       { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
     ],
     ctaHeading: 'Räkna material och tid i ByggExp',
@@ -110,7 +110,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Studs & timber',
     intro:
-      'Enter the wall length and stud spacing (c/c) and we work out the number of studs and the total linear metres of timber.',
+      'Count the studs before you order timber, so you neither over-buy nor run short on the drive home. Enter the wall length and stud spacing (c/c) and get the stud count and linear metres in seconds.',
     previewAlt: 'Preview of studs & timber',
     previewCaption: 'This is how studs & timber looks',
     sections: [
@@ -121,7 +121,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     faq: [
       { question: 'How do I work out the number of studs?', answer: 'Number of vertical studs = length ÷ stud spacing (c/c) + 1. A 6 m wall at c/c 600 mm gives 6000 ÷ 600 + 1 = 11 studs.' },
       { question: 'Which c/c spacing should I use?', answer: 'Common spacings are 450 or 600 mm depending on board and insulation dimensions and requirements. 600 mm is the most common for interior walls.' },
-      { question: 'Are the plates included?', answer: 'No, the calculator counts the vertical studs. Add timber for the bottom plate (sole) and top plate separately.' },
+      { question: 'Are the plates included?', answer: 'No, the count is the vertical studs only. The bottom and top plates run the full length of the wall, so add linear metres of timber equal to the wall length for each.' },
       { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
     ],
     ctaHeading: 'Calculate material and time in ByggExp',

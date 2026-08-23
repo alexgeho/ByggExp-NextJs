@@ -42,7 +42,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Gratis kalkylator',
     h1: 'Spillprocent – räkna materialåtgång med spill',
     intro:
-      'Ange nettoåtgången och välj material eller ett eget spillpåslag. Kalkylatorn räknar ut hur mycket du behöver beställa när kapspill och kassation räknats in.',
+      'Beställer du för lite blir det stopp i produktionen, för mycket binder pengar i lagret. Här får du snabbt fram hur mycket du faktiskt ska köpa hem, med ett spillpåslag anpassat efter materialet.',
     previewAlt: 'Förhandsvisning av spillprocent-kalkylatorn',
     previewCaption: 'Så ser spillprocent-kalkylatorn ut',
     sections: [
@@ -74,7 +74,7 @@ const CONTENT: Record<L, Content> = {
       {
         question: 'Hur mycket spill ska jag räkna med?',
         answer:
-          'Det beror på material och ytans komplexitet. Vanliga riktvärden är 5 % för enkla ytor och gjutning, 8–10 % för trall, klinker och gips, och upp till 15 % för komplexa tak och plåt med många skärningar.',
+          'Utgå från riktvärdet för materialet och justera efter jobbet. Mycket skärningar, diagonal läggning, kupor och små rum med många passbitar drar upp procenten – stora raka ytor drar ner den. Är du osäker, ta det högre värdet i intervallet.',
       },
       {
         question: 'Hur räknas bruttoåtgången?',
@@ -84,7 +84,7 @@ const CONTENT: Record<L, Content> = {
       {
         question: 'Varför behöver jag räkna med spill?',
         answer:
-          'Kapspill, skärningar mot hörn och kassation gör att du alltid går åt mer material än den rena ytan. Räknar du utan spill riskerar du produktionsstopp och dyra efterbeställningar i fel bränning eller kulör.',
+          'Ingen yta läggs helt utan kap. Passbitar, snitt mot väggar och hörn, felkap och trasiga bitar går åt utan att täcka någon yta. Den delen ska vara med i beställningen från början, inte upptäckas mitt i jobbet.',
       },
       {
         question: 'Kostar kalkylatorn något?',
@@ -109,7 +109,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Free calculator',
     h1: 'Waste percentage – material need with waste',
     intro:
-      'Enter the net need and choose a material or your own waste allowance. The calculator works out how much you need to order once cutting waste and rejects are included.',
+      'Order too little and the job stalls; order too much and money sits in the stockroom. This works out how much you actually need to buy in, with a waste allowance matched to the material.',
     previewAlt: 'Preview of the waste percentage calculator',
     previewCaption: 'This is how the waste percentage calculator looks',
     sections: [
@@ -141,7 +141,7 @@ const CONTENT: Record<L, Content> = {
       {
         question: 'How much waste should I allow?',
         answer:
-          'It depends on the material and the complexity of the area. Common guide values are 5% for simple areas and casting, 8–10% for decking, tiles and plasterboard, and up to 15% for complex roofs and sheet metal with many cuts.',
+          'Start from the guide value for the material and adjust for the job. Lots of cuts, diagonal laying, dormers and small rooms full of fitted pieces push the percentage up; large straight areas pull it down. When in doubt, take the higher end of the range.',
       },
       {
         question: 'How is the gross need calculated?',
@@ -151,7 +151,7 @@ const CONTENT: Record<L, Content> = {
       {
         question: 'Why do I need to allow for waste?',
         answer:
-          'Cutting waste, cuts at corners and rejects mean you always use more material than the clean area. Without waste you risk a production stop and expensive re-orders in the wrong batch or colour.',
+          'No area gets laid without cutting. Fitted pieces, cuts against walls and corners, mis-cuts and broken boards are used up without covering any area. That share belongs in the order from the start, not discovered mid-job.',
       },
       {
         question: 'Does the calculator cost anything?',

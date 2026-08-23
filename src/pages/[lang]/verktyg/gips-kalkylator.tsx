@@ -46,7 +46,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Gipskalkylator',
     intro:
-      'Ange väggens mått så får du hela materiallistan för en regelvägg: gipsskivor, reglar, syll och hammarband, isolering och skruv. Skivbredden styr regelavståndet (c/c) enligt Gyprocs handbok.',
+      'Ska du bygga en gipsvägg? Ange längd och höjd så räknar kalkylatorn fram exakt hur många skivor, reglar och skruv du behöver – och ser till att skivskarvarna landar mitt på reglarna. Då slipper du både överköp och en extra vända till bygghandeln.',
     previewAlt: 'Förhandsvisning av gipsberäknare',
     previewCaption: 'Så ser gipsberäknare ut',
     sections: [
@@ -102,10 +102,10 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     faqHeading: 'Vanliga frågor',
     faq: [
-      { question: 'Vilket c/c-avstånd ska reglarna ha?', answer: 'Det styrs av skivbredden. Är gipsskivan 1200 mm bred sätts reglarna c/c 600 mm, är skivan 900 mm bred gäller c/c 450 mm. Kalkylatorn väljer rätt c/c automatiskt när du anger skivbredden.' },
+      { question: 'Vilket c/c-avstånd ska reglarna ha?', answer: 'Skivbredden avgör: en 1200 mm bred skiva ger c/c 600 mm, en 900 mm bred ger c/c 450 mm. Du behöver inte räkna själv – kalkylatorn sätter rätt c/c så fort du valt skivbredd.' },
       { question: 'Räknas gips på båda sidor av väggen?', answer: 'En regelvägg kläs normalt på båda sidor. Välj "Dubbelsidig" så dubblas gips- och skruvmängden, medan stommen (reglar, syll, hammarband) räknas en gång – den delas ju av båda sidorna.' },
-      { question: 'Hur många skruv går det åt?', answer: 'Räkna med ca 20 skruv per m² och gipslager. Gyproc anger tätare infästning i kanten (ca c200 mm) än i fält (ca c300 mm), och yttre lagret skruvas tätare än det inre.' },
-      { question: 'Ett eller två lager gips?', answer: 'Två lager ger bättre ljud- och brandmotstånd och krävs ibland enligt konstruktionen. Välj antal lager per sida i kalkylatorn så räknas skivor och skruv om.' },
+      { question: 'Hur många skruv går det åt?', answer: 'Räkna med ca 20 skruv per m² och gipslager – det är siffran kalkylatorn använder. En dubbelsidig vägg med dubbla lager drar alltså ungefär fyra gånger så mycket som ett enkelt lager på en sida.' },
+      { question: 'Ett eller två lager gips?', answer: 'För en vanlig innervägg räcker ett lager. Lägg på ett andra när du vill dämpa ljud eller höja brandklassen, eller när ritningen kräver det. Ställer du in antal lager per sida räknas skivor och skruv om direkt.' },
       { question: 'Hur stor är en gipsskiva?', answer: 'Vanliga mått är 1200 × 2600 mm (ca 3,1 m²) och 900 × 2600 mm (ca 2,3 m²). Välj skivbredd och skivlängd i kalkylatorn.' },
       { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
     ],
@@ -206,7 +206,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Plasterboard calculator',
     intro:
-      'Enter the wall dimensions and get the full material list for a stud wall: plasterboard, studs, bottom and top plates, insulation and screws. The board width sets the stud spacing (c/c) per Gyproc’s manual.',
+      'Building a plasterboard wall? Enter the length and height and the calculator works out exactly how many boards, studs and screws you need – and keeps the board joints landing in the middle of a stud. No over-ordering, no second trip to the merchant.',
     previewAlt: 'Preview of the plasterboard calculator',
     previewCaption: 'This is how the plasterboard calculator looks',
     sections: [
@@ -262,10 +262,10 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     faqHeading: 'Frequently asked questions',
     faq: [
-      { question: 'Which c/c spacing should the studs have?', answer: 'It is set by the board width. If the board is 1200 mm wide, studs go at c/c 600 mm; if the board is 900 mm wide, c/c 450 mm applies. The calculator picks the right c/c automatically when you enter the board width.' },
+      { question: 'Which c/c spacing should the studs have?', answer: 'The board width decides it: a 1200 mm board gives c/c 600 mm, a 900 mm board gives c/c 450 mm. You don’t have to work it out – the calculator sets the right c/c as soon as you pick the board width.' },
       { question: 'Is plasterboard counted on both sides of the wall?', answer: 'A stud wall is normally clad on both sides. Choose "Both sides" and the board and screw quantities double, while the frame (studs, plates) is counted once – it is shared by both sides.' },
-      { question: 'How many screws are needed?', answer: 'Reckon about 20 screws per m² and board layer. Gyproc specifies closer fixing at the edge (about c200 mm) than in the field (about c300 mm), and the outer layer is screwed more closely than the inner.' },
-      { question: 'One or two layers of plasterboard?', answer: 'Two layers give better sound and fire resistance and are sometimes required by the design. Choose the number of layers per side and boards and screws are recalculated.' },
+      { question: 'How many screws are needed?', answer: 'Reckon about 20 screws per m² and board layer – that is the figure the calculator uses. A wall clad on both sides with two layers therefore takes roughly four times as many as a single layer on one side.' },
+      { question: 'One or two layers of plasterboard?', answer: 'For a standard interior wall, a single layer does the job. Add a second when you want to dampen sound or raise the fire rating, or when the drawing calls for it. Set the number of layers per side and boards and screws are recalculated.' },
       { question: 'How big is a plasterboard sheet?', answer: 'Common sizes are 1200 × 2600 mm (about 3.1 m²) and 900 × 2600 mm (about 2.3 m²). Choose board width and length in the calculator.' },
       { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
     ],

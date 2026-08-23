@@ -47,7 +47,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Isoleringskalkylator',
     intro:
-      'Ange ytan och isoleringstjockleken så räknar vi ut antal förpackningar, volym i m³ och ett ungefärligt U-värde för isolerskiktet. Standard är mineralull med lambda 0,036 W/mK.',
+      'Ska du isolera vind, vägg eller golv? Fyll i yta och tjocklek, så räknar kalkylatorn fram antal förpackningar, volym och ett ungefärligt U-värde – med spillet inräknat. Resultatet kan du spara som materiallista inför inköpet.',
     previewAlt: 'Förhandsvisning av isoleringsberäknare',
     previewCaption: 'Så ser isoleringsberäknare ut',
     sections: [
@@ -89,10 +89,10 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     faqHeading: 'Vanliga frågor',
     faq: [
-      { question: 'Hur mycket isolering går det åt?', answer: 'Det beror på ytan och hur många m² en förpackning täcker vid vald tjocklek – ju tjockare isolering, desto färre m² per förpackning. Kalkylatorn räknar även ut volymen (m³) och antal förpackningar inkl. spill.' },
-      { question: 'Vad betyder lambda och U-värde?', answer: 'Lambda (W/mK) är materialets värmeledningsförmåga – mineralull ligger på ca 0,033–0,037. U-värdet beskriver hur mycket värme som släpps igenom: lägre är bättre. Kalkylatorn visar ett ungefärligt U-värde för enbart isolerskiktet (U ≈ lambda ÷ tjocklek).' },
-      { question: 'Vilket U-värde ger olika tjocklek?', answer: 'Grovt räknat ger ca 10 cm mineralull U ≈ 0,4, 20 cm ≈ 0,2 och 40 cm ≈ 0,1 W/m²K för isolerskiktet. Ett korrekt U-värde för hela väggen tar även hänsyn till reglar, skivor och köldbryggor.' },
-      { question: 'Vilket c/c ska reglarna ha?', answer: 'Skivor som är 560 mm breda passar reglar med c/c 600 mm (de kläms lätt ihop och sitter kvar av friktion). Lägg gärna isoleringen i två korsande skikt för att bryta köldbryggor.' },
+      { question: 'Hur mycket isolering går det åt?', answer: 'Fyll i ytan så lägger kalkylatorn på ditt spillpåslag (5 % som standard) och delar summan på hur många m² en förpackning räcker till. Du får volymen i m³ och antalet förpackningar att beställa.' },
+      { question: 'Vad betyder lambda och U-värde?', answer: 'Lambda (W/mK) är materialets värmeledningsförmåga – mineralull ligger på ca 0,033–0,037. U-värdet beskriver hur mycket värme konstruktionen släpper igenom, och lägre är bättre.' },
+      { question: 'Gäller U-värdet från kalkylatorn för hela väggen?', answer: 'Nej, det gäller bara isolerskiktet (U ≈ lambda ÷ tjocklek). Ett korrekt värde för hela väggen räknar även in reglar, skivor och köldbryggor, som släpper igenom mer värme än själva isoleringen.' },
+      { question: 'Vilket c/c ska reglarna ha?', answer: 'Reglar sätts oftast med c/c 600 mm, och då kläms 560 mm breda skivor fast av friktionen utan fästen. Har du tätare c/c kapar du skivorna smalare så att de sitter lika tätt.' },
       { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
     ],
     ctaHeading: 'Räkna material och tid i ByggExp',
@@ -179,7 +179,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Insulation calculator',
     intro:
-      'Enter the area and insulation thickness and we work out the number of packs, volume in m³ and an approximate U-value for the insulation layer. The default is mineral wool with lambda 0.036 W/mK.',
+      'Insulating an attic, wall or floor? Enter the area and thickness and the calculator returns the number of packs, the volume and an approximate U-value – waste included. Save the result as a material list to take to the merchant.',
     previewAlt: 'Preview of the insulation calculator',
     previewCaption: 'This is how the insulation calculator looks',
     sections: [
@@ -221,10 +221,10 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     faqHeading: 'Frequently asked questions',
     faq: [
-      { question: 'How much insulation is needed?', answer: 'It depends on the area and how many m² a pack covers at the chosen thickness – the thicker the insulation, the fewer m² per pack. The calculator also works out the volume (m³) and number of packs incl. waste.' },
-      { question: 'What do lambda and U-value mean?', answer: 'Lambda (W/mK) is the material’s thermal conductivity – mineral wool is about 0.033–0.037. The U-value describes how much heat passes through: lower is better. The calculator shows an approximate U-value for the insulation layer only (U ≈ lambda ÷ thickness).' },
-      { question: 'What U-value do different thicknesses give?', answer: 'Roughly, about 10 cm of mineral wool gives U ≈ 0.4, 20 cm ≈ 0.2 and 40 cm ≈ 0.1 W/m²K for the insulation layer. A correct whole-wall U-value also accounts for studs, boards and thermal bridges.' },
-      { question: 'Which c/c should the studs have?', answer: 'Boards 560 mm wide fit studs at c/c 600 mm (they compress slightly and stay in place by friction). Consider laying the insulation in two crossing layers to break thermal bridges.' },
+      { question: 'How much insulation is needed?', answer: 'Enter the area and the calculator adds your waste allowance (5% by default), then divides the total by how many m² one pack covers. You get the volume in m³ and the number of packs to order.' },
+      { question: 'What do lambda and U-value mean?', answer: 'Lambda (W/mK) is the material’s thermal conductivity – mineral wool is about 0.033–0.037. The U-value describes how much heat the construction lets through, and lower is better.' },
+      { question: 'Does the calculator’s U-value cover the whole wall?', answer: 'No, it applies to the insulation layer only (U ≈ lambda ÷ thickness). A correct whole-wall value also counts the studs, boards and thermal bridges, which let through more heat than the insulation itself.' },
+      { question: 'Which c/c should the studs have?', answer: 'Studs usually sit at c/c 600 mm, and 560 mm boards then wedge in by friction with no fixings. At a tighter c/c, cut the boards narrower so they fit just as snugly.' },
       { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
     ],
     ctaHeading: 'Calculate material and time in ByggExp',

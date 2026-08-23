@@ -46,7 +46,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Takkalkylator',
     intro:
-      'Ange byggnadens mått, taklutning och taktäckning så räknar vi ut takytan och materialet: takpannor, bärläkt i löpmeter och underlagspapp. Takytan räknas per takfall – bra inför omläggning eller offert.',
+      'Ska du lägga om taket eller prisa ett jobb? Fyll i husets mått, taklutning och taktäckning – kalkylatorn ger dig takytan per takfall och mängderna du behöver handla, så du slipper gissa dig till materialåtgången.',
     previewAlt: 'Förhandsvisning av takberäknare',
     previewCaption: 'Så ser takberäknaren ut',
     sections: [
@@ -90,12 +90,12 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'Hur räknar jag ut takytan?',
         answer:
-          'Takytan är grundytan (inkl. takutsprång) delat med cosinus av taklutningen: takyta = grundyta ÷ cos(lutning). Ju brantare tak, desto större yta än grundytan – vid 45° är takytan ca 1,4 gånger grundytan. Kalkylatorn gör det åt dig för både sadel- och pulpettak.',
+          'Takytan är grundytan (inklusive takutsprång) delad med cosinus av taklutningen: takyta = grundyta ÷ cos(lutning). Har taket flera takfall räknar du varje fall för sig och lägger ihop. Kalkylatorn sköter uträkningen för både sadel- och pulpettak.',
       },
       {
         question: 'Hur många takpannor går det per kvadratmeter?',
         answer:
-          'En betongpanna ligger ofta på ca 9–11 st/m² och en tegelpanna på ca 12–15 st/m². Kalkylatorn föreslår ett standardvärde per pannetyp som du kan justera efter din modell – kontrollera alltid tillverkarens läggningsanvisning.',
+          'Räkna med ungefär 9–11 st/m² för betongpannor och 12–15 st/m² för tegelpannor. Det exakta antalet står i pannmodellens läggningsanvisning, och kalkylatorn låter dig justera standardvärdet efter just din modell.',
       },
       {
         question: 'Hur mycket bärläkt behöver jag?',
@@ -216,7 +216,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Roof calculator',
     intro:
-      'Enter the building dimensions, roof pitch and covering and we work out the roof area and material: tiles, battens in linear metres and underlay felt. The roof area is figured per slope – handy before a re-roof or a quote.',
+      'Re-roofing or pricing a job? Enter the house dimensions, roof pitch and covering – the calculator gives you the roof area per slope and the quantities to order, so you don’t have to guess the material.',
     previewAlt: 'Preview of the roof calculator',
     previewCaption: 'This is how the roof calculator looks',
     sections: [
@@ -262,12 +262,12 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'How do I calculate the roof area?',
         answer:
-          'The roof area is the footprint (incl. overhang) divided by the cosine of the pitch: roof area = footprint ÷ cos(pitch). The steeper the roof, the larger the area versus the footprint – at 45° the roof area is about 1.4 times the footprint. The calculator does it for both gable and mono-pitch roofs.',
+          'The roof area is the footprint (including overhang) divided by the cosine of the pitch: roof area = footprint ÷ cos(pitch). If the roof has several slopes, work out each one separately and add them up. The calculator handles it for both gable and mono-pitch roofs.',
       },
       {
         question: 'How many roof tiles are there per square metre?',
         answer:
-          'A concrete tile is often about 9–11 pcs/m² and a clay tile about 12–15 pcs/m². The calculator suggests a standard value per tile type that you can adjust for your model – always check the manufacturer’s laying instructions.',
+          'Reckon on roughly 9–11 pcs/m² for concrete tiles and 12–15 pcs/m² for clay tiles. The exact figure is in the tile model’s laying instructions, and the calculator lets you adjust the default value to match your model.',
       },
       {
         question: 'How many battens do I need?',

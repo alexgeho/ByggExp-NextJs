@@ -42,7 +42,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Gratis kalkylator',
     h1: 'U-värde – räkna ut värmegenomgången',
     intro:
-      'Välj konstruktionstyp och lägg in materiallagren med tjocklek. Kalkylatorn summerar värmemotståndet och räknar ut U-värdet (W/m²K). Lägre U-värde betyder bättre isolering och lägre energiförlust.',
+      'Ska du efterisolera eller välja rätt isolertjocklek? Bygg upp väggen, taket eller golvet lager för lager, så ser du hur bra konstruktionen håller värmen. Du får värmemotståndet och U-värdet (W/m²K) direkt på skärmen – utan att räkna för hand.',
     previewAlt: 'Förhandsvisning av U-värde-kalkylator',
     previewCaption: 'Så ser U-värde-kalkylatorn ut',
     sections: [
@@ -80,7 +80,7 @@ const CONTENT: Record<L, Content> = {
       {
         question: 'Hur räknar man ut U-värde?',
         answer:
-          'U-värdet är 1 delat med det totala värmemotståndet: U = 1 / (Rsi + ΣR + Rse). Varje materiallagers motstånd R är tjockleken (i meter) delat med lambdavärdet (λ). Kalkylatorn summerar lagren och lägger till ytmotstånden.',
+          'U-värdet är 1 delat med det totala värmemotståndet: U = 1 / (Rsi + ΣR + Rse). Varje materiallagers motstånd R är tjockleken (i meter) delat med lambdavärdet (λ), och ytmotstånden Rsi och Rse läggs till för in- och utsida.',
       },
       {
         question: 'Vad är ett bra U-värde?',
@@ -88,7 +88,7 @@ const CONTENT: Record<L, Content> = {
           'Lägre är bättre. En välisolerad yttervägg ligger ofta runt 0,15–0,18 W/m²K och moderna fönster runt 0,9–1,2 W/m²K (Uw för hela fönstret). Kontrollera aktuella krav hos Boverket för din åtgärd.',
       },
       {
-        question: 'Skillnaden på Uw och Ug för fönster?',
+        question: 'Vad är skillnaden på Uw och Ug för fönster?',
         answer:
           'Ug avser bara glaset, Uw hela fönstret inklusive karm och båge. Uw är alltid högre (sämre) än Ug – jämför alltid Uw mot Uw när du utvärderar fönster.',
       },
@@ -115,7 +115,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Free calculator',
     h1: 'U-value – work out the heat transmission',
     intro:
-      'Choose the construction type and add the material layers with thickness. The calculator sums the thermal resistance and works out the U-value (W/m²K). A lower U-value means better insulation and lower energy loss.',
+      'Planning to add insulation or pick the right insulation thickness? Build the wall, roof or floor up layer by layer and see how well the construction holds the heat. You get the thermal resistance and U-value (W/m²K) on screen – no hand calculation needed.',
     previewAlt: 'Preview of the U-value calculator',
     previewCaption: 'This is how the U-value calculator looks',
     sections: [
@@ -153,7 +153,7 @@ const CONTENT: Record<L, Content> = {
       {
         question: 'How do you calculate the U-value?',
         answer:
-          'The U-value is 1 divided by the total thermal resistance: U = 1 / (Rsi + ΣR + Rse). Each material layer’s resistance R is the thickness (in metres) divided by the lambda value (λ). The calculator sums the layers and adds the surface resistances.',
+          'The U-value is 1 divided by the total thermal resistance: U = 1 / (Rsi + ΣR + Rse). Each material layer’s resistance R is the thickness (in metres) divided by the lambda value (λ), and the surface resistances Rsi and Rse are added for the inside and outside.',
       },
       {
         question: 'What is a good U-value?',
@@ -161,7 +161,7 @@ const CONTENT: Record<L, Content> = {
           'Lower is better. A well-insulated external wall is often around 0.15–0.18 W/m²K and modern windows around 0.9–1.2 W/m²K (Uw for the whole window). Check the current requirements at Boverket for your work.',
       },
       {
-        question: 'The difference between Uw and Ug for windows?',
+        question: 'What is the difference between Uw and Ug for windows?',
         answer:
           'Ug is the glass only, Uw the whole window including frame and sash. Uw is always higher (worse) than Ug – always compare Uw to Uw when evaluating windows.',
       },

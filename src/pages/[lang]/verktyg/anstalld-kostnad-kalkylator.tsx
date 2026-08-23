@@ -42,7 +42,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Gratis kalkylator',
     h1: 'Vad kostar en anställd? – kalkylator',
     intro:
-      'Fyll i månadslönen så räknar kalkylatorn ut den verkliga kostnaden för en anställd: arbetsgivaravgift, semester och omkostnader – och vad den kostar per debiterbar timme. Alla procentsatser går att justera.',
+      'Prissätter du dina jobb utifrån lönen? Då tar du för lite betalt. En anställd kostar långt mer än bruttolönen – den här kalkylatorn visar hur mycket, både per månad och per debiterbar timme, så att timpriset räcker till.',
     previewAlt: 'Förhandsvisning av kalkylator för vad en anställd kostar',
     previewCaption: 'Så ser kalkylatorn ut',
     sections: [
@@ -74,12 +74,12 @@ const CONTENT: Record<L, Content> = {
       {
         question: 'Vad kostar en anställd egentligen?',
         answer:
-          'Mer än lönen. Ovanpå bruttolönen tillkommer arbetsgivaravgifter (31,42 % för de flesta 2026), semesterlön (ofta 12 %) och omkostnader som försäkring, arbetskläder och verktyg. En månadslön på 34 000 kr landar ofta runt 50 000 kr i verklig månadskostnad.',
+          'Betydligt mer än vad som står på lönebeskedet. Med arbetsgivaravgift, semesterlön och omkostnader inräknade landar en månadslön på 34 000 kr ofta runt 50 000 kr per månad – det är den summan du bör prissätta efter.',
       },
       {
         question: 'Hur räknar jag kostnad per timme?',
         answer:
-          'Dela den totala månadskostnaden med antalet debiterbara timmar per månad. Alla timmar är inte debiterbara – restid, möten och ställtid ingår inte, så räkna realistiskt (ofta 120–140 h/månad).',
+          'Dela den totala månadskostnaden med antalet debiterbara timmar per månad – inte alla arbetade timmar. En heltidsanställd har sällan mer än 120–140 debiterbara timmar i månaden när ej fakturerbar tid räknats bort.',
       },
       {
         question: 'Hur hög är arbetsgivaravgiften 2026?',
@@ -109,7 +109,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Free calculator',
     h1: 'What does an employee cost? – calculator',
     intro:
-      'Enter the monthly salary and the calculator works out the real cost of an employee: employer contributions, holiday pay and overhead – and what it costs per billable hour. All percentages are adjustable.',
+      'Pricing your jobs off the salary? Then you are charging too little. An employee costs far more than the gross salary – this calculator shows how much, both per month and per billable hour, so your rate actually adds up.',
     previewAlt: 'Preview of the employee-cost calculator',
     previewCaption: 'This is how the calculator looks',
     sections: [
@@ -142,12 +142,12 @@ const CONTENT: Record<L, Content> = {
       {
         question: 'What does an employee really cost?',
         answer:
-          'More than the salary. On top of the gross salary come employer contributions (31.42% for most in 2026), holiday pay (often 12%) and overhead such as insurance, work clothes and tools. A monthly salary of 34,000 kr often lands around 50,000 kr in real monthly cost.',
+          'Considerably more than the figure on the payslip. With employer contributions, holiday pay and overhead added in, a monthly salary of 34,000 kr often lands around 50,000 kr per month – and that is the figure you should price against.',
       },
       {
         question: 'How do I calculate the cost per hour?',
         answer:
-          'Divide the total monthly cost by the number of billable hours per month. Not every hour is billable – travel, meetings and setup don’t count, so be realistic (often 120–140 h/month).',
+          'Divide the total monthly cost by the number of billable hours per month – not every hour worked. A full-time employee rarely exceeds 120–140 billable hours a month once non-invoiceable time is stripped out.',
       },
       {
         question: 'How high are employer contributions in 2026?',

@@ -46,7 +46,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Betongkalkylator',
     intro:
-      'Ska du gjuta en platta på mark, en grundbalk eller plintar? Fyll i måtten så räknar vi fram hela materiallistan – betongvolym, armering, cellplast och bärlager – och ett riktpris med både material och arbete. Bra att ha inför inköp eller offert.',
+      'Ska du gjuta en platta på mark, en grundbalk eller plintar? Fyll i måtten så får du både betongmängden och ett riktpris på skärmen – klart att ta med till bygghandeln eller lägga in i offerten.',
     previewAlt: 'Förhandsvisning av betongberäknare',
     previewCaption: 'Så ser betongberäknaren ut',
     sections: [
@@ -107,12 +107,12 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'Hur räknar jag ut betongvolym?',
         answer:
-          'För en platta är volymen längd × bredd × tjocklek i meter (5 × 4 × 0,10 = 2 m³). För en balk/grundmur längd × bredd × höjd, och för runda plintar π × radie² × djup × antal. Kalkylatorn väljer rätt formel utifrån vad du gjuter och lägger på spill.',
+          'Grundformeln är måtten i meter gånger varandra – en platta blir längd × bredd × tjocklek, alltså 5 × 4 × 0,10 = 2 m³. Balk, grundmur och runda plintar har egna formler, men kalkylatorn väljer rätt utifrån vad du gjuter och lägger på spill, så du slipper hålla reda på dem.',
       },
       {
         question: 'Hur många säckar betong går det på en kubik?',
         answer:
-          'En 25 kg säck torrbetong ger ofta ca 12,5 liter färdig betong, så en kubikmeter (1000 liter) motsvarar ungefär 80 säckar. En storsäck om 1000 kg ger ca 520 liter. Kontrollera alltid värdet på din förpackning.',
+          'Räkna med ungefär 80 säckar à 25 kg per kubikmeter, eller en storsäck på 1000 kg som räcker till drygt en halv kubik. Exakt utbyte står på förpackningen och skiljer mellan fabrikat – köp hellre en säck för mycket än en för lite.',
       },
       {
         question: 'Måste jag räkna med kantbalken?',
@@ -127,7 +127,7 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'När ska jag beställa färdig betong i stället för säck?',
         answer:
-          'Tumregeln är runt 1–2 m³: över den mängden blir fabriksbetong oftast både billigare och enklare än att blanda säck för säck. Under det räcker säckbetong gott.',
+          'Vid större gjutningar, från runt 1–2 m³, är det oftast värt att beställa fabriksbetong – du slipper släpa och blanda säckar och får jämnare kvalitet i hela gjutningen. Under den mängden räcker säckbetong gott.',
       },
       {
         question: 'Kostar det något?',
@@ -250,7 +250,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Concrete calculator',
     intro:
-      'Choose what you are casting – slab on grade, footing or piers – and we work out the concrete volume in cubic metres, number of dry-mix bags, mixing water and reinforcement mesh. A 25 kg bag yields about 12.5 litres of finished concrete.',
+      'Casting a slab on grade, a footing or piers? Enter the measurements and get the concrete you need and a guide price on screen – ready to take to the builders’ merchant or drop into a quote.',
     previewAlt: 'Preview of the concrete calculator',
     previewCaption: 'This is how the concrete calculator looks',
     sections: [
@@ -311,17 +311,17 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'How do I calculate concrete volume?',
         answer:
-          'For a slab the volume is length × width × thickness in metres (5 × 4 × 0.10 = 2 m³). For a beam/footing length × width × height, and for round piers π × radius² × depth × count. The calculator picks the right formula for what you are casting and adds waste.',
+          'The base formula is measurements in metres multiplied together – a slab is length × width × thickness, so 5 × 4 × 0.10 = 2 m³. Beams, footings and round piers each have their own formula, but the calculator picks the right one for what you are casting and adds waste, so you don’t have to track them.',
       },
       {
         question: 'How many bags of concrete are in a cubic metre?',
         answer:
-          'A 25 kg bag of dry-mix often yields about 12.5 litres of finished concrete, so a cubic metre (1000 litres) is roughly 80 bags. A 1000 kg big bag gives about 520 litres. Always check the value on your packaging.',
+          'Reckon about 80 bags of 25 kg per cubic metre, or a 1000 kg big bag that covers a bit over half a cubic metre. The exact yield is printed on the packaging and varies by brand – buy one bag too many rather than one too few.',
       },
       {
-        question: 'Don’t forget the edge beam on a slab on grade',
+        question: 'Do I have to include the edge beam?',
         answer:
-          'The thickened edge (edge beam) holds surprisingly much concrete. Choose "Edge beam: Yes" and enter its width and depth, and the volume around the whole slab perimeter is added automatically.',
+          'Yes – the thickened edge holds surprisingly much concrete and is easy to overlook. Choose "Edge beam: Yes" and enter its width and height, and the volume around the whole slab perimeter is added automatically.',
       },
       {
         question: 'How much water do I need to mix in?',
@@ -331,7 +331,7 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'When should I order ready-mix instead of bags?',
         answer:
-          'From roughly 1–2 m³, ready-mix concrete (delivered by truck) is usually both cheaper and easier than mixing many bags by hand. For smaller jobs bagged concrete is fine.',
+          'For larger pours, from around 1–2 m³, ordering ready-mix is usually worth it – no hauling and mixing bags by hand, and a more even quality across the whole pour. Below that, bagged concrete is fine.',
       },
       {
         question: 'Does it cost anything?',

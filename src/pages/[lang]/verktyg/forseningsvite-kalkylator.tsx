@@ -42,7 +42,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Gratis kalkylator',
     h1: 'Förseningsvite – räkna ut vitet i entreprenaden',
     intro:
-      'Ange kontraktssumman, den avtalade vitessatsen per vecka och antal veckors försening. Kalkylatorn räknar ut förseningsvitet enligt AB 04/ABT 06 och tar hänsyn till ett eventuellt takbelopp.',
+      'Blir entreprenaden försenad kan förseningsvitet bli dyrt. Kalkylatorn visar direkt vad det landar på – per påbörjad vecka och totalt – och kapar summan om ni har avtalat ett takbelopp. Gratis och utan inloggning.',
     previewAlt: 'Förhandsvisning av förseningsvite-kalkylatorn',
     previewCaption: 'Så ser förseningsvite-kalkylatorn ut',
     sections: [
@@ -70,7 +70,7 @@ const CONTENT: Record<L, Content> = {
           <ul>
             <li>Vite måste vara <strong>skriftligt avtalat</strong> för att gälla.</li>
             <li>Kontrollera från vilken tidpunkt förseningen räknas (kontraktstid + eventuell tidsförlängning för ÄTA och hinder).</li>
-            <li>Har ni avtalat ett takbelopp begränsas vitet – fyll i det i kalkylatorn.</li>
+            <li>Har ni avtalat ett takbelopp begränsas det totala vitet, oavsett hur lång förseningen blir.</li>
           </ul>
         ),
       },
@@ -116,7 +116,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Free calculator',
     h1: 'Delay penalty – work out the liquidated damages',
     intro:
-      'Enter the contract sum, the agreed penalty rate per week and the number of weeks of delay. The calculator works out the delay penalty per AB 04/ABT 06 and accounts for any cap.',
+      'When a project runs late, the delay penalty can add up fast. The calculator shows what it lands on – per commenced week and in total – and caps the amount if you’ve agreed a limit. Free, no sign-up.',
     previewAlt: 'Preview of the delay penalty calculator',
     previewCaption: 'This is how the delay penalty calculator looks',
     sections: [
@@ -145,7 +145,7 @@ const CONTENT: Record<L, Content> = {
           <ul>
             <li>The penalty must be <strong>agreed in writing</strong> to apply.</li>
             <li>Check from which point the delay is counted (contract time + any extension for variations and hindrances).</li>
-            <li>If you have agreed a cap, the penalty is limited – enter it in the calculator.</li>
+            <li>If you have agreed a cap, the total penalty is limited no matter how long the delay runs.</li>
           </ul>
         ),
       },

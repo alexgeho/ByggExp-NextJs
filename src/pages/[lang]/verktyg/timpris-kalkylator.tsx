@@ -47,7 +47,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Timpris-kalkylator – vad ska du ta betalt?',
     intro:
-      'Räkna baklänges från vad du vill tjäna till vilket timpris du behöver ta betalt. Kalkylatorn lägger på sociala avgifter, dina omkostnader och en vinstmarginal och delar på dina debiterbara timmar.',
+      'Många hantverkare sätter timpriset på känsla och märker för sent att pengarna inte räcker. Här utgår du istället från vad du vill ha kvar i lön och ser direkt vilket timpris det kräver – både exklusive och inklusive moms.',
     previewAlt: 'Förhandsvisning av timpris-kalkylator',
     previewCaption: 'Så ser timpris-kalkylatorn ut',
     sections: [
@@ -81,12 +81,12 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'Vad ska jag ta betalt per timme som hantverkare?',
         answer:
-          'Det beror på din önskade lön, dina omkostnader och hur många timmar du kan fakturera. Utgå från lönen, lägg på sociala avgifter (ca 31,42 %), omkostnader och en vinstmarginal och dela på debiterbara timmar – det gör kalkylatorn åt dig.',
+          'Det finns ingen fast siffra som passar alla. Priset måste bära din lön, alla omkostnader och en vinst, fördelat på de timmar du faktiskt kan fakturera. Fyll i din önskade lön i kalkylatorn så ser du vad just din verksamhet kräver – i stället för att gissa utifrån vad andra tar.',
       },
       {
         question: 'Varför är timpriset så mycket högre än min lön per timme?',
         answer:
-          'För att timpriset ska täcka mer än lönen: sociala avgifter, verktyg, bil, försäkringar, admin och tid som inte är debiterbar, plus vinst. Alla timmar du jobbar går inte att fakturera.',
+          'För att priset ska bära hela verksamheten, inte bara din lön. Ovanpå lönen ligger sociala avgifter, alla omkostnader och den tid som inte går att fakturera – och företaget ska dessutom gå med vinst. Din lön är bara en del av vad varje debiterbar timme måste dra in.',
       },
       {
         question: 'Vad är debiterbara timmar?',
@@ -187,7 +187,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Hourly rate calculator – what should you charge?',
     intro:
-      'Calculate backwards from what you want to earn to the hourly rate you need to charge. The calculator adds employer contributions, your overhead and a profit margin and divides by your billable hours.',
+      'Plenty of tradespeople set their rate on gut feeling and only later find the money doesn’t add up. Here you start from the take-home pay you actually want and see straight away what hourly rate that demands – both excluding and including VAT.',
     previewAlt: 'Preview of the hourly rate calculator',
     previewCaption: 'This is how the hourly rate calculator looks',
     sections: [
@@ -221,12 +221,12 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'What should I charge per hour as a tradesperson?',
         answer:
-          'It depends on your desired salary, your overhead and how many hours you can bill. Start from the salary, add employer contributions (about 31.42%), overhead and a profit margin and divide by billable hours – the calculator does it for you.',
+          'There is no single figure that fits everyone. The rate has to carry your salary, all your overhead and a profit, spread across the hours you can actually bill. Enter your desired salary in the calculator and you’ll see what your own business needs – instead of guessing from what others charge.',
       },
       {
         question: 'Why is the hourly rate so much higher than my salary per hour?',
         answer:
-          'Because the rate must cover more than salary: employer contributions, tools, vehicle, insurance, admin and non-billable time, plus profit. Not every hour you work can be billed.',
+          'Because the rate has to carry the whole business, not just your pay. On top of salary sit employer contributions, all your overhead and the time you can’t bill – and the company still needs to turn a profit. Your wage is only one slice of what each billable hour has to bring in.',
       },
       {
         question: 'What are billable hours?',

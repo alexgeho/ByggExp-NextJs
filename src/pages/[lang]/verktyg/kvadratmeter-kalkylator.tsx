@@ -46,7 +46,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Kvadratmeterberäknare – räkna ut ytan',
     intro:
-      'Fyll i längd och bredd för ett eller flera utrymmen så summeras ytan i kvadratmeter. Lägg till spill när du ska beställa golv, kakel, färg eller annat material – och ett pris per m² om du vill se materialkostnaden direkt.',
+      'Rätt kvadratmeter är skillnaden mellan att beställa lagom och att stå med en halv pall kakel över. Räkna ihop ytan för flera rum på en gång, lägg på spill för kap och få en materialkostnad direkt – underlag du kan ta rakt in i en offert.',
     previewAlt: 'Förhandsvisning av kvadratmeterberäknare',
     previewCaption: 'Så ser kvadratmeterberäknaren ut',
     sections: [
@@ -85,12 +85,12 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'Hur räknar jag ut kvadratmeter?',
         answer:
-          'Multiplicera längd × bredd i meter. Ett rum på 4 × 3 meter är 12 m². Har du flera rum eller ytor lägger du till en rad per yta så summeras allt.',
+          'Multiplicera längd × bredd i meter. Ett rum på 4 × 3 meter blir alltså 12 m².',
       },
       {
         question: 'Hur mycket spill ska jag räkna med?',
         answer:
-          'För golv och kakel brukar man lägga på cirka 5–10 % för kap och spill, mer vid diagonal läggning eller mycket vinklar. Ange spillprocenten så visar kalkylatorn hur mycket du bör beställa.',
+          'För golv och kakel lägger man normalt på 5–10 % för kap och spill, mer vid diagonal läggning eller många vinklar. Fyll i din spillprocent så justerar kalkylatorn beställningsmängden.',
       },
       {
         question: 'Kan jag räkna ut ytan för flera rum?',
@@ -196,7 +196,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Square-metre calculator – work out the area',
     intro:
-      'Enter the length and width for one or more spaces and the area is summed in square metres. Add waste when ordering flooring, tiles, paint or other material – and a price per m² if you want to see the material cost right away.',
+      'The right square-metre figure is the difference between ordering just enough and being left with half a pallet of tiles. Add up the area of several rooms at once, allow for cutting waste and get a material cost straight away – figures you can carry into a quote.',
     previewAlt: 'Preview of the square-metre calculator',
     previewCaption: 'This is how the square-metre calculator looks',
     sections: [
@@ -235,12 +235,12 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'How do I work out square metres?',
         answer:
-          'Multiply length × width in metres. A room of 4 × 3 metres is 12 m². If you have several rooms or areas, add one row per area and everything is summed.',
+          'Multiply length × width in metres. A room of 4 × 3 metres works out to 12 m².',
       },
       {
         question: 'How much waste should I allow?',
         answer:
-          'For flooring and tiles you usually add about 5–10% for cuts and waste, more for diagonal laying or many angles. Enter the waste percentage and the calculator shows how much you should order.',
+          'For flooring and tiles you usually add about 5–10% for cuts and waste, more for diagonal laying or lots of angles. Enter your waste percentage and the calculator adjusts the amount to order.',
       },
       {
         question: 'Can I work out the area for several rooms?',

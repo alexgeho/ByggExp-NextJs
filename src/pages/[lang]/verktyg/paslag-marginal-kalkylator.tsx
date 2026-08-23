@@ -47,7 +47,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Påslag & marginal – räkna ut pris och vinst',
     intro:
-      'Fyll i din självkostnad och antingen ett påslag eller en önskad marginal. Se försäljningspriset, vinsten och skillnaden mellan påslag och marginal direkt.',
+      'Sätt rätt pris utan att blanda ihop påslag och marginal. Ange din självkostnad, så räknar kalkylatorn fram försäljningspris och vinst – och visar samma affär mätt på båda sätten.',
     previewAlt: 'Förhandsvisning av påslag- och marginalkalkylator',
     previewCaption: 'Så ser påslag- och marginalkalkylatorn ut',
     sections: [
@@ -87,7 +87,7 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'Vad är skillnaden på påslag och marginal?',
         answer:
-          'Påslag räknas på självkostnaden, marginal räknas på försäljningspriset. Ett påslag på 30 % ger en marginal på cirka 23 % – samma vinst i kronor, men olika procent beroende på vad du räknar på.',
+          'Påslag räknas på självkostnaden, marginal på försäljningspriset. Vill du veta hur mycket av varje faktura som faktiskt blir vinst är det marginalen du ska titta på – ska du snabbt lägga på en känd procent på inköpet passar påslag bättre.',
       },
       {
         question: 'Hur räknar jag ut försäljningspriset?',
@@ -197,7 +197,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Markup & margin – work out price and profit',
     intro:
-      'Enter your cost price and either a markup or a target margin. See the selling price, the profit and the difference between markup and margin instantly.',
+      'Price a job without mixing up markup and margin. Enter your cost, and the calculator works out the selling price and profit – and shows the same deal measured both ways.',
     previewAlt: 'Preview of the markup and margin calculator',
     previewCaption: 'This is how the markup and margin calculator looks',
     sections: [
@@ -237,7 +237,7 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'What is the difference between markup and margin?',
         answer:
-          'Markup is calculated on the cost, margin on the selling price. A 30% markup gives a margin of about 23% – the same profit in currency, but a different percentage depending on what you calculate on.',
+          'Markup is calculated on the cost, margin on the selling price. To see how much of each invoice actually becomes profit, look at the margin – to quickly add a known percentage onto what you paid, markup is the handier one.',
       },
       {
         question: 'How do I work out the selling price?',

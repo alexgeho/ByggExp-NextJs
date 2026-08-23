@@ -42,7 +42,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Gratis kalkylator',
     h1: 'ROT-avdrag kalkylator 2026',
     intro:
-      'Räkna ut ROT-avdraget och se vad kunden betalar efter avdrag. Enligt Skatteverkets regler 2026: 30 % av arbetskostnaden, max 50 000 kr per person och år.',
+      'Slå in arbetskostnaden och se på sekunden hur stort ROT-avdraget blir och vad kunden faktiskt betalar. Ett snabbt sätt att ge raka besked redan i offerten.',
     previewAlt: 'Förhandsvisning av ROT-avdrag kalkylator',
     previewCaption: 'Så ser ROT-avdrag kalkylatorn ut',
     sections: [
@@ -132,7 +132,7 @@ const CONTENT: Record<L, Content> = {
       {
         question: 'Räknas material in i ROT-avdraget?',
         answer:
-          'Nej. ROT-avdraget gäller bara arbetskostnaden – inte material, resor eller maskiner. Därför är det viktigt att arbetskostnaden är tydligt specificerad på fakturan.',
+          'Nej, bara arbetskostnaden ger ROT. Material, resor och maskiner räknas bort. Har du satt en klumpsumma för hela jobbet måste du dela upp den på fakturan, annars kan Skatteverket neka avdraget.',
       },
       {
         question: 'Kan flera personer dela på avdraget?',
@@ -162,7 +162,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Free calculator',
     h1: 'ROT deduction calculator 2026',
     intro:
-      'Work out the ROT deduction and see what the customer pays after it. Per Skatteverket’s 2026 rules: 30% of the labour cost, max 50,000 kr per person and year.',
+      'Enter the labour cost and see in seconds how large the ROT deduction is and what the customer actually pays. A quick way to give a straight answer already in the quote.',
     previewAlt: 'Preview of the ROT deduction calculator',
     previewCaption: 'This is how the ROT deduction calculator looks',
     sections: [
@@ -252,7 +252,7 @@ const CONTENT: Record<L, Content> = {
       {
         question: 'Is material included in the ROT deduction?',
         answer:
-          'No. ROT applies only to the labour cost – not material, travel or machinery. That’s why it’s important that the labour cost is clearly itemised on the invoice.',
+          'No, only the labour cost qualifies for ROT. Material, travel and machinery are excluded. If you quote a single lump sum for the whole job you have to split it out on the invoice, or Skatteverket can reject the deduction.',
       },
       {
         question: 'Can several people share the deduction?',

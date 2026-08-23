@@ -46,7 +46,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Färgkalkylator',
     intro:
-      'Välj färgtyp – innervägg, tak, träfasad eller puts – ange ytan och antal strykningar, så räknar vi ut hur många liter färg du behöver, med avdrag för fönster och dörrar. Täckförmågan sätts efter färgtyp och kan justeras.',
+      'Köp för lite färg och du står där mitt i jobbet utan täckning; köp för mycket och resten torkar in i garaget. Ange yta och antal strykningar för vägg, tak, träfasad eller puts, så får du litertalet direkt – med marginal för spill inräknad.',
     previewAlt: 'Förhandsvisning av färgåtgång-kalkylator',
     previewCaption: 'Så ser färgåtgång-kalkylatorn ut',
     sections: [
@@ -78,9 +78,9 @@ const CONTENT: Record<Locale, ToolContent> = {
         heading: 'Tips för rätt mängd',
         body: (
           <p>
-            Grundfärg kan behövas på nytt eller sugande underlag, och en tredje strykning krävs
-            ibland vid stora kulörskillnader. Lite extra färg är billigare än ett extra inköp mitt
-            i jobbet – och samma bas/kulör kan skilja lite mellan batcher.
+            Runda alltid uppåt – lite färg över är billigare än ett extra inköp mitt i jobbet, och
+            en skvätt kvar räcker till bättringsmålning. Köp helst hela mängden i samma batch;
+            kulören kan skilja aningen mellan tillverkningsomgångar även med samma benämning.
           </p>
         ),
       },
@@ -90,7 +90,7 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'Hur mycket färg går det åt per kvadratmeter?',
         answer:
-          'Det beror på färgtypen. Inne ligger vägg- och takfärg ofta på ca 6–8 m² per liter och strykning, träfasad kring 5 m²/l och putsad fasad kring 4 m²/l. Kalkylatorn föreslår ett värde per färgtyp som du kan justera efter burken.',
+          'Räkna baklänges från täckförmågan: en liter räcker till ungefär 6–8 m² innervägg per strykning, mindre på sugande fasad. Med två strykningar halveras ytan en liter når. Fyll i ytan så gör kalkylatorn om det till liter åt dig.',
       },
       {
         question: 'Hur många strykningar behöver jag?',
@@ -161,7 +161,7 @@ const CONTENT: Record<Locale, ToolContent> = {
         heading: 'Tips for riktig mengde',
         body: (
           <p>
-            Grunning kan trengs på nytt eller sugende underlag, og et tredje strøk kreves
+            Grunning kan trengs på nye eller sugende underlag, og et tredje strøk kreves
             iblant ved store fargeforskjeller. Litt ekstra maling er billigere enn et ekstra innkjøp midt
             i jobben – og samme base/farge kan variere litt mellom batcher.
           </p>
@@ -212,7 +212,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Paint calculator',
     intro:
-      'Choose the paint type – interior wall, ceiling, wood façade or render – enter the area and number of coats, and we work out how many litres of paint you need, with a deduction for windows and doors. Coverage is set by paint type and can be adjusted.',
+      'Buy too little paint and you are back at the shop mid-job; buy too much and the rest dries out in the garage. Enter the area and number of coats for a wall, ceiling, wood façade or render, and you get the litres straight away – with a margin for waste already included.',
     previewAlt: 'Preview of the paint calculator',
     previewCaption: 'This is how the paint calculator looks',
     sections: [
@@ -244,9 +244,9 @@ const CONTENT: Record<Locale, ToolContent> = {
         heading: 'Tips for the right amount',
         body: (
           <p>
-            Primer may be needed on new or absorbent surfaces, and a third coat is sometimes required
-            for large colour differences. A little extra paint is cheaper than a second trip mid-job –
-            and the same base/colour can vary slightly between batches.
+            Always round up – a little paint left over is cheaper than a second trip mid-job, and the
+            remainder covers touch-ups later. Buy the full amount in one batch where you can; the shade
+            can differ slightly between production runs even under the same name.
           </p>
         ),
       },
@@ -256,7 +256,7 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'How much paint is used per square metre?',
         answer:
-          'It depends on the paint type. Indoors, wall and ceiling paint is often about 6–8 m² per litre and coat, wood façade around 5 m²/l and rendered façade around 4 m²/l. The calculator suggests a value per paint type that you can adjust to the can.',
+          'Work back from the coverage: a litre reaches about 6–8 m² of interior wall per coat, less on an absorbent façade. Two coats halve the area a litre covers. Enter your area and the calculator turns that into litres for you.',
       },
       {
         question: 'How many coats do I need?',

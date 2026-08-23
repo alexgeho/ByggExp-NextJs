@@ -28,6 +28,8 @@ const EPS_BOARD_MM = 100;
 // Rebar weight kg/m by diameter, and mesh weight kg/m² by type.
 const BAR_KG_PER_M: Record<string, number> = { '10': 0.617, '12': 0.888, '16': 1.578 };
 const MESH_KG_PER_M2: Record<string, number> = { '5': 2.2, '6': 3.05, '7': 4.3, '8': 5.5 };
+// Load-bearing cellplast/EPS grades under a slab and a riktpris kr/m³ (editable).
+const EPS_PRICE: Record<string, number> = { S80: 1200, S100: 1400, S150: 1800, S200: 2300 };
 
 export default function BetongKalkylatorTool() {
   const [shape, setShape] = useState<Shape>('platta');
@@ -45,6 +47,7 @@ export default function BetongKalkylatorTool() {
   const [barDia, setBarDia] = useState('12'); // kamstål diameter mm
 
   const [isoThick, setIsoThick] = useState('300');
+  const [epsGrade, setEpsGrade] = useState('S100'); // cellplast-kvalitet (bärighet)
   const [baseThick, setBaseThick] = useState('150');
   const [mesh, setMesh] = useState('ja');
   const [meshType, setMeshType] = useState('6'); // K6/K8 → kg/m²
@@ -152,11 +155,11 @@ export default function BetongKalkylatorTool() {
       if (r.meshSheets > 0) rows.push({ desc: `Armeringsnät K${meshType} (5,0×2,3 m)`, qty: `${nf(r.meshSheets)} st · ${nf(r.meshKg)} kg` });
       if (r.edgeBarKg > 0) rows.push({ desc: `Kantjärn Ø${barDia} mm`, qty: `${nf(r.edgeBarsLen)} m · ${nf(r.edgeBarKg)} kg` });
       if (r.bindKg > 0) rows.push({ desc: 'Bindtråd', qty: `${nf(r.bindKg, 1)} kg` });
-      if (r.isoVol > 0) rows.push({ desc: 'Cellplast / EPS', qty: `${nf(r.isoVol, 2)} m³ (${nf(r.isoBoards)} skivor)` });
+      if (r.isoVol > 0) rows.push({ desc: `Cellplast / EPS ${epsGrade}`, qty: `${nf(r.isoVol, 2)} m³ (${nf(r.isoBoards)} skivor)` });
       if (r.baseVol > 0) rows.push({ desc: 'Makadam / bärlager', qty: `${nf(r.baseVol, 2)} m³` });
     }
     return rows;
-  }, [r, shape, concreteMode, meshType, barDia]);
+  }, [r, shape, concreteMode, meshType, barDia, epsGrade]);
 
   const costRows = useMemo((): MaterialRow[] => ([
     { desc: 'Material', qty: kr(r.cMaterial) },
@@ -252,7 +255,14 @@ export default function BetongKalkylatorTool() {
                   <option value="5">K5 (Ø5)</option><option value="6">K6 (Ø6)</option><option value="7">K7 (Ø7)</option><option value="8">K8 (Ø8)</option>
                 </select></label>
             ) : null}
-            <label className={fld}><span>Cellplast / isolering (mm)</span><input type="number" min="0" inputMode="decimal" value={isoThick} onChange={(e) => setIsoThick(e.currentTarget.value)} /></label>
+            <label className={fld}><span>Cellplast / EPS – tjocklek (mm)</span><input type="number" min="0" inputMode="decimal" value={isoThick} placeholder="t.ex. 300" onChange={(e) => setIsoThick(e.currentTarget.value)} /></label>
+            <label className={fld}><span>Cellplast – kvalitet (bärighet)</span>
+              <select value={epsGrade} onChange={(e) => { const g = e.currentTarget.value; setEpsGrade(g); setPIso(String(EPS_PRICE[g] || 1400)); }}>
+                <option value="S80">EPS S80 (lätt last)</option>
+                <option value="S100">EPS S100 (normal villa)</option>
+                <option value="S150">EPS S150 (tyngre last)</option>
+                <option value="S200">EPS S200 (industri)</option>
+              </select></label>
             <label className={fld}><span>Makadam / bärlager (mm)</span><input type="number" min="0" inputMode="decimal" value={baseThick} onChange={(e) => setBaseThick(e.currentTarget.value)} /></label>
           </>
         ) : null}
@@ -289,7 +299,7 @@ export default function BetongKalkylatorTool() {
             {r.meshSheets > 0 ? <div className="lm-result-row"><span>Armeringsnät K{meshType}</span><span>{nf(r.meshSheets)} st · {nf(r.meshKg)} kg</span></div> : null}
             {r.edgeBarKg > 0 ? <div className="lm-result-row"><span>Kantjärn Ø{barDia}</span><span>{nf(r.edgeBarsLen)} m · {nf(r.edgeBarKg)} kg</span></div> : null}
             {r.bindKg > 0 ? <div className="lm-result-row"><span>Bindtråd</span><span>{nf(r.bindKg, 1)} kg</span></div> : null}
-            {r.isoVol > 0 ? <div className="lm-result-row"><span>Cellplast / EPS</span><span>{nf(r.isoVol, 2)} m³ · {nf(r.isoBoards)} skivor</span></div> : null}
+            {r.isoVol > 0 ? <div className="lm-result-row"><span>Cellplast / EPS {epsGrade}</span><span>{nf(r.isoVol, 2)} m³ · {nf(r.isoBoards)} skivor</span></div> : null}
             {r.baseVol > 0 ? <div className="lm-result-row"><span>Makadam / bärlager</span><span>{nf(r.baseVol, 2)} m³</span></div> : null}
           </>
         ) : null}

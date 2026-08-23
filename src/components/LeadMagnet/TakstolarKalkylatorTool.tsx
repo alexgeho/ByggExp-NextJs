@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
+import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Roof-truss calculator: number of trusses from roof length and spacing.
@@ -44,6 +45,14 @@ export default function TakstolarKalkylatorTool() {
     );
   };
 
+  const exportPdf = () => void downloadMaterialPdf({
+    title: 'Takstolar',
+    rows: [{ desc: `Antal takstolar (c/c ${cc})`, qty: `${nf(r.count)} st` }],
+    filename: 'takstolar.pdf',
+    tool: 'takstolar-kalkylator',
+    note: 'Antal, inte dimensionering. Dimensionering görs av konstruktör enligt snö- och vindlast.',
+  });
+
   return (
     <div className="lm-tool">
       <div className="lm-tool-head">
@@ -66,7 +75,10 @@ export default function TakstolarKalkylatorTool() {
           Skapa faktura
         </a>
         <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>
-          Exportera till Excel
+          Exportera Excel
+        </button>
+        <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={disabled}>
+          Exportera PDF
         </button>
       </div>
     </div>

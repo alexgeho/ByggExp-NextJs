@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
+import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Decking calculator: lineal metres and boards from area, board width, gap and
@@ -57,6 +58,17 @@ export default function TrallKalkylatorTool() {
     );
   };
 
+  const exportPdf = () => void downloadMaterialPdf({
+    title: 'Trall – materiallista',
+    rows: [
+      { desc: 'Löpmeter trall', qty: `${nf(r.meters)} lpm` },
+      { desc: 'Trallbrädor', qty: `${nf(r.boards)} st` },
+      { desc: `Reglar/bärlina c/c ${cc}`, qty: `${nf(r.joistM)} lpm` },
+    ],
+    filename: 'trall-materiallista.pdf',
+    tool: 'trall-kalkylator',
+  });
+
   return (
     <div className="lm-tool">
       <div className="lm-tool-head">
@@ -91,7 +103,10 @@ export default function TrallKalkylatorTool() {
           Skapa faktura
         </a>
         <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>
-          Exportera till Excel
+          Exportera Excel
+        </button>
+        <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={disabled}>
+          Exportera PDF
         </button>
       </div>
     </div>

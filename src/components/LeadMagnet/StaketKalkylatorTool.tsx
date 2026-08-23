@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
+import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Fence calculator: number of posts and sections from length and post spacing.
@@ -45,6 +46,16 @@ export default function StaketKalkylatorTool() {
     );
   };
 
+  const exportPdf = () => void downloadMaterialPdf({
+    title: 'Staket – materiallista',
+    rows: [
+      { desc: 'Antal stolpar', qty: `${nf(r.posts)} st` },
+      { desc: 'Antal sektioner', qty: `${nf(r.sections)} st` },
+    ],
+    filename: 'staket-materiallista.pdf',
+    tool: 'staket-kalkylator',
+  });
+
   return (
     <div className="lm-tool">
       <div className="lm-tool-head">
@@ -68,7 +79,10 @@ export default function StaketKalkylatorTool() {
           Skapa faktura
         </a>
         <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>
-          Exportera till Excel
+          Exportera Excel
+        </button>
+        <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={disabled}>
+          Exportera PDF
         </button>
       </div>
     </div>

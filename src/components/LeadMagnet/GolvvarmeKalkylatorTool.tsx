@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
+import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
 
 // Underfloor-heating calculator: pipe/loop length from area and pipe spacing
@@ -46,6 +47,16 @@ export default function GolvvarmeKalkylatorTool() {
     );
   };
 
+  const exportPdf = () => void downloadMaterialPdf({
+    title: 'Golvvärme',
+    rows: [
+      { desc: 'Ungefärlig slinglängd', qty: `${nf(r.total)} m` },
+      { desc: 'Antal slingor', qty: `${nf(r.loops)} st` },
+    ],
+    filename: 'golvvarme.pdf',
+    tool: 'golvvarme-kalkylator',
+  });
+
   return (
     <div className="lm-tool">
       <div className="lm-tool-head">
@@ -70,7 +81,10 @@ export default function GolvvarmeKalkylatorTool() {
           Skapa faktura
         </a>
         <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>
-          Exportera till Excel
+          Exportera Excel
+        </button>
+        <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={disabled}>
+          Exportera PDF
         </button>
       </div>
     </div>

@@ -1,5 +1,7 @@
-import { useRef, useState } from 'react';
+import { type FormEvent, useRef, useState } from 'react';
 
+import { API_URL } from '../../config/api';
+import { gaEvent } from '../../lib/analytics';
 import { EGENKONTROLL_PRESETS } from './egenkontrollPresets';
 
 // Free egenkontroll (self-inspection checklist) tool. Categories and result
@@ -30,6 +32,100 @@ export default function EgenkontrollTool() {
   const [activePreset, setActivePreset] = useState<string | null>(null);
   const rowsRef = useRef<HTMLDivElement>(null);
 
+  // AI generator + email gate. Generation is free; only downloading an
+  // AI-generated result asks for an email (= a warm lead). The plain manual /
+  // preset template stays free so we don't hurt the existing lead magnet.
+  const [aiMoment, setAiMoment] = useState('');
+  const [aiMaterial, setAiMaterial] = useState('');
+  const [aiBusy, setAiBusy] = useState(false);
+  const [aiError, setAiError] = useState('');
+  const [aiUsed, setAiUsed] = useState(false);
+  const [unlocked, setUnlocked] = useState(false);
+  const [gateOpen, setGateOpen] = useState(false);
+  const [gateBusy, setGateBusy] = useState(false);
+  const [email, setEmail] = useState('');
+  const pendingRef = useRef<'pdf' | 'csv' | null>(null);
+
+  async function generateAi() {
+    const moment = aiMoment.trim();
+    if (!moment || aiBusy) return;
+    setAiBusy(true);
+    setAiError('');
+    try {
+      const res = await fetch('/api/egenkontroll-generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ moment, material: aiMaterial.trim() }),
+      });
+      if (!res.ok) {
+        const j = (await res.json().catch(() => ({}))) as { error?: string };
+        throw new Error(j.error || 'Kunde inte generera.');
+      }
+      const data = (await res.json()) as {
+        title: string;
+        category: string;
+        rows: { point: string; krav: string; method: string }[];
+      };
+      setActivePreset(null);
+      setTitle(data.title);
+      if (CATEGORIES.includes(data.category)) setCategory(data.category);
+      setRows(
+        data.rows.map((r) => ({
+          point: r.point,
+          result: RESULTS[0],
+          comment: [r.krav ? `Krav: ${r.krav}` : '', r.method ? `Metod: ${r.method}` : '']
+            .filter(Boolean)
+            .join(' · '),
+        })),
+      );
+      setAiUsed(true);
+      gaEvent('egenkontroll_ai_generate', { moment: moment.slice(0, 60) });
+      window.setTimeout(() => {
+        rowsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 60);
+    } catch (e) {
+      setAiError(e instanceof Error ? e.message : 'Något gick fel.');
+    } finally {
+      setAiBusy(false);
+    }
+  }
+
+  // Returns true if the download may proceed; otherwise opens the email gate.
+  function ensureUnlocked(kind: 'pdf' | 'csv'): boolean {
+    if (!aiUsed || unlocked) return true;
+    pendingRef.current = kind;
+    setGateOpen(true);
+    return false;
+  }
+
+  async function submitGate(event: FormEvent) {
+    event.preventDefault();
+    const mail = email.trim();
+    if (!mail.includes('@') || gateBusy) return;
+    setGateBusy(true);
+    try {
+      // Best-effort lead to sales; don't block the download on it.
+      void fetch(`${API_URL}/mail/demo-request`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          'f-email': mail,
+          'f-source': 'verktyg:egenkontroll-ai',
+          'f-message': `AI-egenkontroll: ${aiMoment.trim()}`,
+        }),
+      }).catch(() => {});
+      gaEvent('egenkontroll_ai_unlock', {});
+      setUnlocked(true);
+      setGateOpen(false);
+      const kind = pendingRef.current;
+      pendingRef.current = null;
+      if (kind === 'csv') downloadCsv();
+      else void downloadPdf();
+    } finally {
+      setGateBusy(false);
+    }
+  }
+
   const setRow = (index: number, patch: Partial<Row>) =>
     setRows((prev) => prev.map((row, i) => (i === index ? { ...row, ...patch } : row)));
   const addRow = () => setRows((prev) => [...prev, emptyRow()]);
@@ -56,6 +152,7 @@ export default function EgenkontrollTool() {
     setRows((prev) => (prev.length > 1 ? prev.filter((_, i) => i !== index) : prev));
 
   async function downloadPdf() {
+    if (!ensureUnlocked('pdf')) return;
     setBusy(true);
     try {
       const { jsPDF } = await import('jspdf');
@@ -122,6 +219,7 @@ export default function EgenkontrollTool() {
 
   // CSV opens directly in Excel/Google Sheets (BOM keeps åäö correct).
   function downloadCsv() {
+    if (!ensureUnlocked('csv')) return;
     const out: (string | number)[][] = [
       ['Egenkontroll', title.trim() || ''],
       ['Kategori', category],
@@ -153,6 +251,47 @@ export default function EgenkontrollTool() {
         <p className="lm-tool-sub">
           Välj en färdig mall så fylls kontrollpunkterna i automatiskt – eller skriv egna. Ladda sedan ner din egenkontroll som PDF eller Excel. Inget konto behövs.
         </p>
+      </div>
+
+      <div
+        className="lm-tool-ai"
+        style={{
+          border: '1px solid rgba(37, 99, 235, 0.25)',
+          background: 'rgba(37, 99, 235, 0.05)',
+          borderRadius: 12,
+          padding: 16,
+          marginBottom: 18,
+        }}
+      >
+        <strong style={{ display: 'block', marginBottom: 4 }}>
+          ✨ Skapa en egenkontroll för just ditt moment – med AI
+        </strong>
+        <p className="lm-tool-sub" style={{ marginTop: 0 }}>
+          Beskriv vad du ska kontrollera så föreslår vi rätt kontrollpunkter med krav och
+          kontrollmetod – klart att granska, fylla i och skriva under.
+        </p>
+        <div className="lm-tool-grid">
+          <label className="lm-tool-field">
+            <span>Vad ska du kontrollera?</span>
+            <input value={aiMoment} placeholder="T.ex. tätskikt i våtrum, klinker" onChange={(e) => setAiMoment(e.currentTarget.value)} />
+          </label>
+          <label className="lm-tool-field">
+            <span>Material / detaljer (valfritt)</span>
+            <input value={aiMaterial} placeholder="T.ex. GVK, golvbrunn" onChange={(e) => setAiMaterial(e.currentTarget.value)} />
+          </label>
+        </div>
+        <div className="lm-tool-actions" style={{ marginTop: 10 }}>
+          <button type="button" className="lm-tool-button" onClick={() => void generateAi()} disabled={aiBusy || !aiMoment.trim()}>
+            {aiBusy ? 'Genererar…' : 'Generera med AI'}
+          </button>
+          {aiError ? <span className="lm-result-fine" style={{ color: '#d64545' }}>{aiError}</span> : null}
+        </div>
+        {aiUsed ? (
+          <p className="lm-result-fine" style={{ marginTop: 10 }}>
+            AI-genererat förslag – granska och anpassa mot ritning, gällande krav och tillverkarens
+            anvisning innan du använder eller lämnar för signering.
+          </p>
+        ) : null}
       </div>
 
       <div className="lm-tool-presets">
@@ -241,6 +380,42 @@ export default function EgenkontrollTool() {
           </button>
         </div>
       </form>
+
+      {gateOpen ? (
+        <form
+          className="lm-tool-gate"
+          onSubmit={submitGate}
+          style={{
+            marginTop: 14,
+            border: '1px solid rgba(37, 99, 235, 0.25)',
+            background: 'rgba(37, 99, 235, 0.05)',
+            borderRadius: 12,
+            padding: 16,
+          }}
+        >
+          <strong style={{ display: 'block', marginBottom: 4 }}>Nästan klart!</strong>
+          <p className="lm-tool-sub" style={{ marginTop: 0 }}>
+            Ange din e-post så låser vi upp nedladdningen av din AI-egenkontroll.
+          </p>
+          <div className="lm-tool-actions">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.currentTarget.value)}
+              placeholder="namn@företag.se"
+              autoComplete="email"
+              required
+              style={{ minWidth: 240 }}
+            />
+            <button type="submit" className="lm-tool-button" disabled={gateBusy || !email.includes('@')}>
+              {gateBusy ? 'Låser upp…' : 'Lås upp & ladda ner'}
+            </button>
+          </div>
+          <p className="lm-result-fine" style={{ marginTop: 8 }}>
+            Vi använder e-posten bara för att kontakta dig om egenkontroll och ByggExp.
+          </p>
+        </form>
+      ) : null}
     </div>
   );
 }

@@ -96,7 +96,7 @@ export default function EgenkontrollMallPage() {
       <LeadMagnetPage
         badge="Gratis mall"
         title="Egenkontroll – gratis mall att fylla i online"
-        intro="Med den här gratis egenkontroll-mallen dokumenterar du kontrollpunkter för kvalitet, miljö och arbetsmiljö och laddar ner den som PDF eller Excel. Fyll i online – eller gör egenkontroller löpande i ByggExp."
+        intro="Fyll i en egenkontroll för kvalitet, miljö och arbetsmiljö och ladda ner den som PDF eller Excel – gratis och utan konto. Nytt: låt AI föreslå rätt kontrollpunkter för just ditt moment, så slipper du börja från ett tomt blad."
         tool={<EgenkontrollTool />}
         leadForm={<ToolLeadForm tool="egenkontroll-mall" />}
         preview={

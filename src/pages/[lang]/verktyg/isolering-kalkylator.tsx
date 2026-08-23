@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -172,11 +172,76 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Insulation calculator – packs, m³ & U-value | ByggExp',
+    description:
+      'Work out insulation: number of packs, volume (m³) and an approximate U-value from area, thickness and lambda. Free insulation calculator, no account.',
+    badge: 'Free calculator',
+    h1: 'Insulation calculator',
+    intro:
+      'Enter the area and insulation thickness and we work out the number of packs, volume in m³ and an approximate U-value for the insulation layer. The default is mineral wool with lambda 0.036 W/mK.',
+    previewAlt: 'Preview of the insulation calculator',
+    previewCaption: 'This is how the insulation calculator looks',
+    sections: [
+      {
+        id: 'sa-raknar-du',
+        heading: 'What the calculator works out',
+        body: (
+          <ul>
+            <li><strong>Need:</strong> the area plus waste (m²).</li>
+            <li><strong>Packs:</strong> the need divided by m² per pack.</li>
+            <li><strong>Volume:</strong> area × thickness (m³).</li>
+            <li><strong>U-value (approx.):</strong> lambda ÷ thickness – for the insulation layer only.</li>
+          </ul>
+        ),
+      },
+      {
+        id: 'tjocklek-uvarde',
+        heading: 'Thickness, lambda and U-value',
+        body: (
+          <p>
+            The same pack covers fewer m² the thicker the insulation you choose. Thicker layers and a
+            lower lambda give a lower U-value (better). Roughly: 10 cm of mineral wool ≈ U 0.4, 20 cm
+            ≈ 0.2 and 40 cm ≈ 0.1 W/m²K. Check what thickness your structure (attic, wall, floor)
+            requires before ordering.
+          </p>
+        ),
+      },
+      {
+        id: 'reglar',
+        heading: 'Studs, board width and thermal bridges',
+        body: (
+          <p>
+            Insulation boards of 560 mm fit studs at c/c 600 mm. Consider laying the insulation in two
+            crossing layers so the studs don’t form continuous thermal bridges – in practice this gives
+            a noticeably better wall than the U-value of the insulation layer alone suggests.
+          </p>
+        ),
+      },
+    ],
+    faqHeading: 'Frequently asked questions',
+    faq: [
+      { question: 'How much insulation is needed?', answer: 'It depends on the area and how many m² a pack covers at the chosen thickness – the thicker the insulation, the fewer m² per pack. The calculator also works out the volume (m³) and number of packs incl. waste.' },
+      { question: 'What do lambda and U-value mean?', answer: 'Lambda (W/mK) is the material’s thermal conductivity – mineral wool is about 0.033–0.037. The U-value describes how much heat passes through: lower is better. The calculator shows an approximate U-value for the insulation layer only (U ≈ lambda ÷ thickness).' },
+      { question: 'What U-value do different thicknesses give?', answer: 'Roughly, about 10 cm of mineral wool gives U ≈ 0.4, 20 cm ≈ 0.2 and 40 cm ≈ 0.1 W/m²K for the insulation layer. A correct whole-wall U-value also accounts for studs, boards and thermal bridges.' },
+      { question: 'Which c/c should the studs have?', answer: 'Boards 560 mm wide fit studs at c/c 600 mm (they compress slightly and stay in place by friction). Consider laying the insulation in two crossing layers to break thermal bridges.' },
+      { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
+    ],
+    ctaHeading: 'Calculate material and time in ByggExp',
+    ctaText: 'Keep track of material, time and costs per project. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'reglar-kalkylator', label: 'Studs & timber' },
+      { slug: 'gips-kalkylator', label: 'Plasterboard calculator' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -220,8 +285,9 @@ export default function Page({ lang }: { lang: Locale }) {
         badge={c.badge}
         title={c.h1}
         intro={c.intro}
-        tool={<IsoleringKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="isolering-kalkylator" />}
+        locale={lang}
+        tool={<IsoleringKalkylatorTool locale={lang} />}
+        leadForm={<ToolLeadForm tool="isolering-kalkylator" locale={lang} />}
         preview={
           <PreviewImage
             src="/landing/verktyg/isolering-preview.webp"

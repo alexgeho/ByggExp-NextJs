@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 import TimprisKalkylatorTool from '../../../components/LeadMagnet/TimprisKalkylatorTool';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -180,11 +180,81 @@ const CONTENT: Record<Locale, ToolContent> = {
       { href: '/verktyg', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Hourly rate calculator – what to charge per hour | ByggExp',
+    description:
+      'Work out the hourly rate you need to charge as a tradesperson. Start from your desired salary, employer contributions, overhead and profit – free calculator, no account.',
+    badge: 'Free calculator',
+    h1: 'Hourly rate calculator – what should you charge?',
+    intro:
+      'Calculate backwards from what you want to earn to the hourly rate you need to charge. The calculator adds employer contributions, your overhead and a profit margin and divides by your billable hours.',
+    previewAlt: 'Preview of the hourly rate calculator',
+    previewCaption: 'This is how the hourly rate calculator looks',
+    sections: [
+      {
+        id: 'sa-fungerar-det',
+        heading: 'How the hourly rate is calculated',
+        body: (
+          <ol>
+            <li>Start from your desired gross salary per month.</li>
+            <li>Add employer contributions (about 31.42%) – the cost of having you employed.</li>
+            <li>Add overhead: tools, vehicle, insurance, premises and admin.</li>
+            <li>Add a profit margin so the business breaks even and can grow.</li>
+            <li>Divide the total by your billable hours – that gives the hourly rate.</li>
+          </ol>
+        ),
+      },
+      {
+        id: 'debiterbara-timmar',
+        heading: 'Don’t forget the non-billable hours',
+        body: (
+          <p>
+            A common mistake is to count all working hours as if they were billable. In reality, time
+            goes to quotes, purchasing, travel and administration. If you assume too many billable
+            hours the hourly rate comes out too low and you earn less than you think.
+          </p>
+        ),
+      },
+    ],
+    faqHeading: 'Frequently asked questions about hourly rate',
+    faq: [
+      {
+        question: 'What should I charge per hour as a tradesperson?',
+        answer:
+          'It depends on your desired salary, your overhead and how many hours you can bill. Start from the salary, add employer contributions (about 31.42%), overhead and a profit margin and divide by billable hours – the calculator does it for you.',
+      },
+      {
+        question: 'Why is the hourly rate so much higher than my salary per hour?',
+        answer:
+          'Because the rate must cover more than salary: employer contributions, tools, vehicle, insurance, admin and non-billable time, plus profit. Not every hour you work can be billed.',
+      },
+      {
+        question: 'What are billable hours?',
+        answer:
+          'The hours you can actually bill a customer. Travel, quotes, admin and other non-billable work don’t count – so they are often clearly fewer than your total working time.',
+      },
+      {
+        question: 'Is VAT included in the hourly rate?',
+        answer:
+          'The calculator shows the hourly rate both excluding and including VAT (25%). For private individuals you usually state the price including VAT.',
+      },
+    ],
+    ctaHeading: 'See profitability per project in ByggExp',
+    ctaText: 'Follow time, costs and margin per project in real time. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More free tools',
+    related: [
+      { href: '/verktyg/paslag-marginal-kalkylator', label: 'Markup & margin' },
+      { href: '/verktyg/rot-avdrag-kalkylator', label: 'ROT deduction calculator' },
+      { href: '/verktyg/moms-kalkylator', label: 'VAT calculator' },
+      { href: '/verktyg', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -230,8 +300,9 @@ export default function TimprisKalkylatorPage({ lang }: { lang: Locale }) {
         intro={c.intro}
         embedSlug="timpris-kalkylator"
         embedTitle={c.h1}
-        tool={<TimprisKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="timpris-kalkylator" />}
+        locale={lang}
+        tool={<TimprisKalkylatorTool locale={lang} />}
+        leadForm={<ToolLeadForm tool="timpris-kalkylator" locale={lang} />}
         preview={
           <PreviewImage
             src="/landing/verktyg/timpris-preview.webp"

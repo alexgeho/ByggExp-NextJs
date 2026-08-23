@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import OffertLeadForm from '../../../components/LeadMagnet/OffertLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -101,11 +101,42 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Fence calculator – number of posts and sections | ByggExp',
+    description:
+      'Work out the number of posts and sections for a fence from the length and the spacing between posts. Free fence calculator, no account.',
+    badge: 'Free calculator',
+    h1: 'Fence calculator',
+    intro:
+      'Enter the fence length and the spacing between posts (c/c) and we work out the number of posts and sections.',
+    previewAlt: 'Preview of the fence calculator',
+    previewCaption: 'This is how the fence calculator looks',
+    sections: [
+      { id: 'sa-raknar-du', heading: 'How to work out the fence', body: (<><ol><li>Measure the fence length in metres.</li><li>Enter the spacing between posts (c/c).</li><li>See the number of posts and sections.</li></ol></>) },
+      { id: 'info', heading: 'Think about stability', body: (<><p>A shorter post spacing gives a sturdier fence, especially for tall panels or windy spots. Dig in or concrete the posts properly.</p></>) },
+    ],
+    faqHeading: 'Frequently asked questions',
+    faq: [
+      { question: 'How many posts do I need for the fence?', answer: 'The number of sections is the length divided by the post spacing, rounded up. The number of posts is sections + 1.' },
+      { question: 'What spacing between fence posts?', answer: 'Often 2–2.5 metres, but it depends on the fence type and wind load. Closer spacing gives a sturdier fence.' },
+      { question: 'Is the gate included?', answer: 'No, count the gate and any corner posts separately.' },
+      { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
+    ],
+    ctaHeading: 'Calculate material and time in ByggExp',
+    ctaText: 'Keep track of material, time and costs per project. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'reglar-kalkylator', label: 'Studs & timber' },
+      { slug: 'grus-kalkylator', label: 'Gravel & crushed stone' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -149,7 +180,8 @@ export default function Page({ lang }: { lang: Locale }) {
         badge={c.badge}
         title={c.h1}
         intro={c.intro}
-        tool={<StaketKalkylatorTool />}
+        locale={lang}
+        tool={<StaketKalkylatorTool locale={lang} />}
         leadForm={<OffertLeadForm source="staket-kalkylator" />}
         preview={
           <PreviewImage

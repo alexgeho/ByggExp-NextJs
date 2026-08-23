@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -101,11 +101,42 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Underfloor heating calculator – loop length and loops | ByggExp',
+    description:
+      'Work out the loop length and number of loops for water-based underfloor heating from area and pipe spacing (c/c). Free calculator, no account.',
+    badge: 'Free calculator',
+    h1: 'Underfloor heating',
+    intro:
+      'Enter the area and the pipe spacing (c/c) and we work out the approximate loop length and number of loops.',
+    previewAlt: 'Preview of underfloor heating',
+    previewCaption: 'This is how underfloor heating looks',
+    sections: [
+      { id: 'sa-raknar-du', heading: 'How to work out underfloor heating', body: (<><ol><li>Work out the area in m².</li><li>Enter the c/c spacing between the pipes.</li><li>Enter the max loop length per loop.</li><li>See the approximate loop length and number of loops.</li></ol></>) },
+      { id: 'info', heading: 'Don’t forget supply and return', body: (<><p>The loop length above is for the floor area itself. Allow extra pipe to and from the manifold, and stay within the max length per loop for even flow.</p></>) },
+    ],
+    faqHeading: 'Frequently asked questions',
+    faq: [
+      { question: 'How long a loop do I need for underfloor heating?', answer: 'Roughly the area divided by the c/c spacing: 20 m² at c/c 200 mm gives about 100 metres of pipe. Add pipe for supply and return.' },
+      { question: 'How long can a loop be?', answer: 'Often a max of about 100–120 metres per loop depending on pipe dimension. Enter the max loop length and the number of loops is calculated.' },
+      { question: 'Which c/c spacing should I use?', answer: 'Common is 150–300 mm depending on the room and heat demand. Closer c/c means more pipe but more even heat.' },
+      { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
+    ],
+    ctaHeading: 'Calculate material and time in ByggExp',
+    ctaText: 'Keep track of material, time and costs per project. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'kvadratmeter-kalkylator', label: 'Square-metre calculator' },
+      { slug: 'reglar-kalkylator', label: 'Studs & timber' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -149,8 +180,9 @@ export default function Page({ lang }: { lang: Locale }) {
         badge={c.badge}
         title={c.h1}
         intro={c.intro}
-        tool={<GolvvarmeKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="golvvarme-kalkylator" />}
+        locale={lang}
+        tool={<GolvvarmeKalkylatorTool locale={lang} />}
+        leadForm={<ToolLeadForm tool="golvvarme-kalkylator" locale={lang} />}
         preview={
           <PreviewImage
             src="/landing/verktyg/golvvarme-preview.webp"

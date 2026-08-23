@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -101,11 +101,42 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Stair calculator – number of steps and step dimensions | ByggExp',
+    description:
+      'Work out the number of steps, rise and going for a stair from the total height. Free stair calculator using the comfort rule, no account.',
+    badge: 'Free calculator',
+    h1: 'Stair calculator',
+    intro:
+      'Enter the total height and we work out the number of steps, the rise and a recommended going per the comfort rule 2 × rise + going ≈ 630 mm.',
+    previewAlt: 'Preview of the stair calculator',
+    previewCaption: 'This is how the stair calculator looks',
+    sections: [
+      { id: 'sa-raknar-du', heading: 'How to work out the stair', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/trappa.webp" alt="Diagram: rise and going in a stair per the stair formula" width={720} height={380} loading="lazy" /><figcaption>Comfort rule: 2 × rise + going ≈ 630 mm. Rise is often about 175 mm.</figcaption></figure><ol><li>Measure the total height the stair must span (mm).</li><li>Enter a desired rise (often about 175 mm).</li><li>See the number of steps, the actual rise and recommended going.</li></ol></>) },
+      { id: 'info', heading: 'The comfort rule', body: (<><p>A stair feels comfortable when 2 × rise + going is about 630 mm. If the steps are too high or too shallow the stair feels uncomfortable and can be unsafe.</p></>) },
+    ],
+    faqHeading: 'Frequently asked questions',
+    faq: [
+      { question: 'How do I work out the number of steps in a stair?', answer: 'Divide the total height by the desired rise (often about 175 mm) and round. The actual rise is the height divided by the number of steps.' },
+      { question: 'What is a comfortable rise?', answer: 'Often 150–180 mm. A common rule of thumb is that 2 × rise + going should be about 600–640 mm for a comfortable stair.' },
+      { question: 'What requirements apply to stairs?', answer: 'The Swedish building regulations (BBR) set requirements for rise, going and width, among others. Check the requirements for your type of stair.' },
+      { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
+    ],
+    ctaHeading: 'Calculate material and time in ByggExp',
+    ctaText: 'Keep track of material, time and costs per project. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'fall-kalkylator', label: 'Slope & fall' },
+      { slug: 'kvadratmeter-kalkylator', label: 'Square-metre calculator' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -149,8 +180,9 @@ export default function Page({ lang }: { lang: Locale }) {
         badge={c.badge}
         title={c.h1}
         intro={c.intro}
-        tool={<TrappaKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="trappa-kalkylator" />}
+        locale={lang}
+        tool={<TrappaKalkylatorTool locale={lang} />}
+        leadForm={<ToolLeadForm tool="trappa-kalkylator" locale={lang} />}
         preview={
           <PreviewImage
             src="/landing/verktyg/trappa-preview.webp"

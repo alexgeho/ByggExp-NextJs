@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -109,11 +109,46 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Calculate roof trusses – count from c/c | ByggExp',
+    description:
+      'Calculate roof trusses free: work out the number of trusses from the roof length and spacing (c/c). Simple roof-truss calculator, no account.',
+    badge: 'Free calculator',
+    h1: 'Calculate roof trusses',
+    intro:
+      'Work out the number of roof trusses quickly: enter the roof length and spacing (c/c) and the calculator does the truss count for you – free and no account.',
+    previewAlt: 'Preview of roof trusses',
+    previewCaption: 'This is how roof trusses looks',
+    sections: [
+      { id: 'sa-raknar-du', heading: 'How to calculate the number of trusses', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/takstolar.webp" alt="Diagram: roof trusses with c/c spacing along the roof" width={720} height={380} loading="lazy" /><figcaption>Number of trusses = roof length ÷ c/c + 1. A standard c/c is 1200 mm.</figcaption></figure><p>The truss count uses a simple formula: <strong>count = roof length / c/c + 1</strong>. The extra truss is so that both gables also get a truss.</p><ol><li>Measure the roof length in metres.</li><li>Enter the spacing (c/c) in mm.</li><li>See the number of trusses instantly.</li></ol></>) },
+      { id: 'exempel', heading: 'Example truss calculation', body: (<><p>A roof 10 metres long at c/c 1200 mm: 10,000 / 1200 = 8.33, rounded up to 9, plus 1 = <strong>10 trusses</strong>. At a closer c/c of 600 mm it becomes about 18 trusses for the same roof – so the spacing drives both the count and the material.</p></>) },
+      { id: 'cc-avstand', heading: 'Which c/c spacing should the trusses have?', body: (<><p>The spacing (c/c) depends on the roof covering, sub-roof and snow load. A common spacing is 1200 mm for prefabricated truss rafters, but closer c/c (e.g. 600–900 mm) occurs with heavy covering or high snow load. Always use the c/c specified by the engineer for your roof.</p></>) },
+      { id: 'info', heading: 'Count vs. dimensioning of trusses', body: (<><p>This calculator does a <strong>truss count</strong> – not a structural calculation. <strong>Dimensioning of trusses</strong> (choice of timber sizes, span and fixings from snow and wind load) must be done by an engineer per Eurocode. Use the count here for material and quotes, and always follow the engineer’s drawing for the execution.</p></>) },
+    ],
+    faqHeading: 'Frequently asked questions',
+    faq: [
+      { question: 'How do you calculate the number of trusses?', answer: 'Truss calculation: take the roof length divided by the spacing (c/c) and add 1. A 10 m roof at c/c 1200 mm gives 9 trusses. The calculator works it out for you.' },
+      { question: 'How many trusses do I need?', answer: 'Count = roof length divided by the spacing (c/c) + 1. A 10 m roof at c/c 1200 mm gives 9 trusses.' },
+      { question: 'What c/c spacing do trusses have?', answer: 'Common is 1200 mm, but it depends on the covering, snow load and dimensioning. Follow the engineer’s specification.' },
+      { question: 'What is the difference between counting and dimensioning trusses?', answer: 'This calculator counts trusses from c/c. Dimensioning – determining timber sizes from span and snow load – is done by an engineer per the applicable load.' },
+      { question: 'Are gable ends and noggins included?', answer: 'No, the calculator counts the ordinary trusses. Gable construction and trimming come in addition.' },
+      { question: 'Does it cost anything?', answer: 'No, the roof-truss calculator is free and requires no account.' },
+    ],
+    ctaHeading: 'Calculate material and time in ByggExp',
+    ctaText: 'Keep track of material, time and costs per project. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'tak-kalkylator', label: 'Roof calculator' },
+      { slug: 'reglar-kalkylator', label: 'Studs & timber' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -157,8 +192,9 @@ export default function Page({ lang }: { lang: Locale }) {
         badge={c.badge}
         title={c.h1}
         intro={c.intro}
-        tool={<TakstolarKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="takstolar-kalkylator" />}
+        locale={lang}
+        tool={<TakstolarKalkylatorTool locale={lang} />}
+        leadForm={<ToolLeadForm tool="takstolar-kalkylator" locale={lang} />}
         preview={
           <PreviewImage
             src="/landing/verktyg/takstolar-preview.webp"

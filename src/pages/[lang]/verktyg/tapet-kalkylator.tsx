@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -101,11 +101,42 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Wallpaper calculator – how many rolls of wallpaper | ByggExp',
+    description:
+      'Work out how many rolls of wallpaper you need from the wall area and roll size, incl. waste for pattern matching. Free calculator, no account.',
+    badge: 'Free calculator',
+    h1: 'Wallpaper calculator',
+    intro:
+      'Enter the wall area and the roll’s area and we work out how many wallpaper rolls you need, with an allowance for pattern matching and waste.',
+    previewAlt: 'Preview of the wallpaper calculator',
+    previewCaption: 'This is how the wallpaper calculator looks',
+    sections: [
+      { id: 'sa-raknar-du', heading: 'How to work out the number of rolls', body: (<><ol><li>Work out the wall area to be papered (m²).</li><li>Enter the roll’s area (often about 5 m²).</li><li>Add waste for pattern matching.</li><li>See how many rolls you need.</li></ol></>) },
+      { id: 'info', heading: 'Tips', body: (<><p>Buy all rolls from the same batch (same batch number) so the colour matches, and take an extra roll as a reserve.</p></>) },
+    ],
+    faqHeading: 'Frequently asked questions',
+    faq: [
+      { question: 'How many m² does a roll of wallpaper cover?', answer: 'A standard roll often covers about 5 m², but it varies – check the wallpaper and enter the value in the calculator.' },
+      { question: 'Why do I need extra for the pattern?', answer: 'Patterned wallpaper needs the pattern matched between drops, which creates more waste. The larger the pattern, the larger the allowance.' },
+      { question: 'Should I deduct windows and doors?', answer: 'For small areas you can use the gross wall area for margin. For large openings you can deduct them, but always keep some reserve.' },
+      { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
+    ],
+    ctaHeading: 'Calculate material and time in ByggExp',
+    ctaText: 'Keep track of material, time and costs per project. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'farg-kalkylator', label: 'Paint coverage' },
+      { slug: 'kvadratmeter-kalkylator', label: 'Square-metre calculator' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -151,8 +182,9 @@ export default function Page({ lang }: { lang: Locale }) {
         intro={c.intro}
         embedSlug="tapet-kalkylator"
         embedTitle={c.h1}
-        tool={<TapetKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="tapet-kalkylator" />}
+        locale={lang}
+        tool={<TapetKalkylatorTool locale={lang} />}
+        leadForm={<ToolLeadForm tool="tapet-kalkylator" locale={lang} />}
         preview={
           <PreviewImage
             src="/landing/verktyg/tapet-preview.webp"

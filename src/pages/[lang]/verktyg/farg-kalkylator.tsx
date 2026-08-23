@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -205,11 +205,94 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Paint calculator – work out paint (litres) | ByggExp',
+    description:
+      'Work out paint consumption in litres: area, number of coats and coverage per paint type (wall, ceiling, wood façade, render) – with a deduction for windows and doors. Free, no account.',
+    badge: 'Free calculator',
+    h1: 'Paint calculator',
+    intro:
+      'Choose the paint type – interior wall, ceiling, wood façade or render – enter the area and number of coats, and we work out how many litres of paint you need, with a deduction for windows and doors. Coverage is set by paint type and can be adjusted.',
+    previewAlt: 'Preview of the paint calculator',
+    previewCaption: 'This is how the paint calculator looks',
+    sections: [
+      {
+        id: 'sa-raknar-du',
+        heading: 'How paint consumption is calculated',
+        body: (
+          <p>
+            The formula is: (area − windows/doors) × number of coats ÷ coverage (m²/l), plus waste.
+            A 40 m² wall with two coats and 7 m²/l gives 40 × 2 ÷ 7 ≈ 11.4 litres, plus a margin –
+            so about 12 litres.
+          </p>
+        ),
+      },
+      {
+        id: 'tackformaga',
+        heading: 'Coverage per paint type',
+        body: (
+          <ul>
+            <li><strong>Interior wall / ceiling:</strong> about 6–8 m² per litre and coat.</li>
+            <li><strong>Wood façade:</strong> about 5 m² per litre – rougher, absorbent surface.</li>
+            <li><strong>Rendered façade:</strong> about 4 m² per litre.</li>
+            <li>The calculator suggests a value per type; the exact figure is on the can.</li>
+          </ul>
+        ),
+      },
+      {
+        id: 'tips',
+        heading: 'Tips for the right amount',
+        body: (
+          <p>
+            Primer may be needed on new or absorbent surfaces, and a third coat is sometimes required
+            for large colour differences. A little extra paint is cheaper than a second trip mid-job –
+            and the same base/colour can vary slightly between batches.
+          </p>
+        ),
+      },
+    ],
+    faqHeading: 'Frequently asked questions about paint consumption',
+    faq: [
+      {
+        question: 'How much paint is used per square metre?',
+        answer:
+          'It depends on the paint type. Indoors, wall and ceiling paint is often about 6–8 m² per litre and coat, wood façade around 5 m²/l and rendered façade around 4 m²/l. The calculator suggests a value per paint type that you can adjust to the can.',
+      },
+      {
+        question: 'How many coats do I need?',
+        answer:
+          'Usually two coats for an even result, sometimes three on absorbent or strongly coloured surfaces. The calculator uses the number you enter.',
+      },
+      {
+        question: 'Should I deduct windows and doors?',
+        answer:
+          'Yes, for a more accurate amount. Enter the combined area of windows and doors in the "Deduct" field and they are removed before the consumption is calculated.',
+      },
+      {
+        question: 'Why is more paint used than calculated?',
+        answer:
+          'Absorbent, rough or untreated surfaces use more, and a dark-to-light colour change may need an extra coat or primer. Allow a little margin.',
+      },
+      {
+        question: 'Does it cost anything?',
+        answer: 'No, the calculator is free and requires no account.',
+      },
+    ],
+    ctaHeading: 'Calculate material and time in ByggExp',
+    ctaText: 'Keep track of material, time and costs per project. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'kvadratmeter-kalkylator', label: 'Square-metre calculator' },
+      { slug: 'betong-kalkylator', label: 'Concrete calculator' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -255,8 +338,9 @@ export default function Page({ lang }: { lang: Locale }) {
         intro={c.intro}
         embedSlug="farg-kalkylator"
         embedTitle={c.h1}
-        tool={<FargKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="farg-kalkylator" />}
+        locale={lang}
+        tool={<FargKalkylatorTool locale={lang} />}
+        leadForm={<ToolLeadForm tool="farg-kalkylator" locale={lang} />}
         preview={
           <PreviewImage
             src="/landing/verktyg/farg-preview.webp"

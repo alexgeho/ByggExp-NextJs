@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -101,11 +101,42 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Gravel & crushed stone calculator – m³ and tonnes | ByggExp',
+    description:
+      'Work out how much gravel, crushed stone or topsoil you need: volume in cubic metres and weight in tonnes from area and depth. Free calculator, no account.',
+    badge: 'Free calculator',
+    h1: 'Gravel & crushed stone',
+    intro:
+      'Enter the area and depth and we work out the volume in cubic metres and the weight in tonnes. Works for gravel, crushed stone, topsoil and sand – adjust the density to the material.',
+    previewAlt: 'Preview of gravel & crushed stone',
+    previewCaption: 'This is how gravel & crushed stone looks',
+    sections: [
+      { id: 'sa-raknar-du', heading: 'How to work out the quantity', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/grus.webp" alt="Diagram: gravel volume as area times thickness with a compaction allowance" width={720} height={380} loading="lazy" /><figcaption>Volume = area × thickness, plus a compaction allowance. 1 m³ of gravel weighs about 1.5–1.8 tonnes.</figcaption></figure><ol><li>Measure the area’s length and width in metres.</li><li>Enter the depth in centimetres.</li><li>Choose the material’s density (t/m³).</li><li>See the volume in m³ and the weight in tonnes.</li></ol></>) },
+      { id: 'info', heading: 'Allow for compaction', body: (<><p>Material compacts after laying, so allow a little extra if the depth must hold after compaction. Density differs between materials – ask the supplier.</p></>) },
+    ],
+    faqHeading: 'Frequently asked questions',
+    faq: [
+      { question: 'How do I work out how much gravel I need?', answer: 'The volume is length × width × depth in metres. A 10 × 3 m area at 10 cm depth is 3 m³. The weight is the volume times the density.' },
+      { question: 'How much does a cubic metre of gravel weigh?', answer: 'Gravel and crushed stone often weigh about 1.5–1.8 tonnes per m³, topsoil about 1.2–1.5. Enter the density in the calculator.' },
+      { question: 'Is gravel sold in tonnes or cubic metres?', answer: 'Often in tonnes on delivery and in cubic metres when estimating – so the calculator shows both.' },
+      { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
+    ],
+    ctaHeading: 'Calculate material and time in ByggExp',
+    ctaText: 'Keep track of material, time and costs per project. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'betong-kalkylator', label: 'Concrete calculator' },
+      { slug: 'kvadratmeter-kalkylator', label: 'Square-metre calculator' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -149,8 +180,9 @@ export default function Page({ lang }: { lang: Locale }) {
         badge={c.badge}
         title={c.h1}
         intro={c.intro}
-        tool={<GrusKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="grus-kalkylator" />}
+        locale={lang}
+        tool={<GrusKalkylatorTool locale={lang} />}
+        leadForm={<ToolLeadForm tool="grus-kalkylator" locale={lang} />}
         preview={
           <PreviewImage
             src="/landing/verktyg/grus-preview.webp"

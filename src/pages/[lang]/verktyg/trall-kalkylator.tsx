@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import OffertLeadForm from '../../../components/LeadMagnet/OffertLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -101,11 +101,42 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Decking calculator – linear metres and boards | ByggExp',
+    description:
+      'Work out how much decking you need: linear metres and number of boards from the deck area, board width and gap. Free decking calculator, no account.',
+    badge: 'Free calculator',
+    h1: 'Decking calculator',
+    intro:
+      'Enter the deck area, board width and the gap between boards and we work out how many linear metres of decking and how many boards you need, incl. waste.',
+    previewAlt: 'Preview of the decking calculator',
+    previewCaption: 'This is how the decking calculator looks',
+    sections: [
+      { id: 'sa-raknar-du', heading: 'How to work out the decking', body: (<><ol><li>Work out the deck area in m².</li><li>Enter the board width and the gap.</li><li>Enter the board length and waste.</li><li>See the linear metres and number of boards.</li></ol></>) },
+      { id: 'info', heading: 'Don’t forget the substructure', body: (<><p>Besides the deck boards you need joists/bearers, piers or a foundation and fixings. Buy a board or two extra for cuts and future replacements.</p></>) },
+    ],
+    faqHeading: 'Frequently asked questions',
+    faq: [
+      { question: 'How much decking is used per m²?', answer: 'It depends on the board width and the gap. With a 95 mm board and a 4 mm gap, each board covers about 99 mm, giving a little over 10 linear metres per m².' },
+      { question: 'How big a gap should I have?', answer: 'Often 3–6 mm depending on the timber’s moisture content – wood moves. Enter the gap in the calculator and consumption is affected.' },
+      { question: 'Are the joists under the deck included?', answer: 'No, the calculator counts the deck boards. Count timber for joists/bearers separately, often at c/c 600 mm.' },
+      { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
+    ],
+    ctaHeading: 'Calculate material and time in ByggExp',
+    ctaText: 'Keep track of material, time and costs per project. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'reglar-kalkylator', label: 'Studs & timber' },
+      { slug: 'kvadratmeter-kalkylator', label: 'Square-metre calculator' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -149,7 +180,8 @@ export default function Page({ lang }: { lang: Locale }) {
         badge={c.badge}
         title={c.h1}
         intro={c.intro}
-        tool={<TrallKalkylatorTool />}
+        locale={lang}
+        tool={<TrallKalkylatorTool locale={lang} />}
         leadForm={<OffertLeadForm source="trall-kalkylator" />}
         preview={
           <PreviewImage

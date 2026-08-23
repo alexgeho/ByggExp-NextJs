@@ -46,7 +46,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Betongkalkylator',
     intro:
-      'Välj vad du gjuter – platta, grundbalk eller plintar – så räknar vi ut betongvolym i kubikmeter, antal säckar torrbetong, blandningsvatten och armeringsnät. En säck 25 kg ger ca 12,5 liter färdig betong.',
+      'Ska du gjuta en platta på mark, en grundbalk eller plintar? Fyll i måtten så räknar vi fram hela materiallistan – betongvolym, armering, cellplast och bärlager – och ett riktpris med både material och arbete. Bra att ha inför inköp eller offert.',
     previewAlt: 'Förhandsvisning av betongberäknare',
     previewCaption: 'Så ser betongberäknaren ut',
     sections: [
@@ -115,9 +115,9 @@ const CONTENT: Record<Locale, ToolContent> = {
           'En 25 kg säck torrbetong ger ofta ca 12,5 liter färdig betong, så en kubikmeter (1000 liter) motsvarar ungefär 80 säckar. En storsäck om 1000 kg ger ca 520 liter. Kontrollera alltid värdet på din förpackning.',
       },
       {
-        question: 'Glöm inte kantbalken på en platta på mark',
+        question: 'Måste jag räkna med kantbalken?',
         answer:
-          'Den förtjockade kanten (kantbalken) rymmer förvånansvärt mycket betong. Välj "Kantbalk: Ja" och ange dess bredd och höjd så läggs volymen runt hela plattans omkrets till automatiskt.',
+          'Ja – den förtjockade kanten rymmer förvånansvärt mycket betong och glöms lätt bort. Välj "Kantbalk: Ja" och ange bredd och höjd, så lägger kalkylatorn till volymen runt hela plattans omkrets automatiskt.',
       },
       {
         question: 'Hur mycket vatten behöver jag blanda i?',
@@ -127,7 +127,7 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'När ska jag beställa färdig betong i stället för säck?',
         answer:
-          'Från ungefär 1–2 m³ blir fabriksbetong (färdig betong som levereras med bil) oftast både billigare och enklare än att blanda många säckar för hand. För mindre jobb räcker säckbetong bra.',
+          'Tumregeln är runt 1–2 m³: över den mängden blir fabriksbetong oftast både billigare och enklare än att blanda säck för säck. Under det räcker säckbetong gott.',
       },
       {
         question: 'Kostar det något?',

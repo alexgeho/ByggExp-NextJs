@@ -27,6 +27,18 @@ const SV_ONLY_PATHS = [
   ),
 ];
 
+// Calculators additionally serve English (/en/verktyg/...) — see CalcLocale in
+// lib/locale. Templates (mall) and PDF utilities remain sv-only, so only the
+// -kalkylator slugs get an /en sitemap entry (plus the /en/verktyg hub).
+const CALC_PATHS = [
+  'verktyg',
+  ...VERKTYG_GROUPS.flatMap((group) =>
+    group.items
+      .filter((item) => item.slug.endsWith('-kalkylator'))
+      .map((item) => `verktyg/${item.slug}`),
+  ),
+];
+
 type SitemapUrl = { loc: string; lastmod?: string };
 
 export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
@@ -57,6 +69,10 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
     urls.push({ loc: `${localeOrigin('sv')}/sv/fa-offert` });
     SV_ONLY_PATHS.forEach((path) => {
       urls.push({ loc: `${localeOrigin('sv')}/sv/${path}` });
+    });
+    // English calculators (calculators only; mall/PDF tools stay sv-only).
+    CALC_PATHS.forEach((path) => {
+      urls.push({ loc: `${localeOrigin('en')}/en/${path}` });
     });
   }
 

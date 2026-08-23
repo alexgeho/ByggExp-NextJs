@@ -6,7 +6,7 @@ import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 
 type Tool = { slug: string; title: string; description: string };
@@ -24,7 +24,7 @@ type Content = {
 // that actually serve the locale are listed — the Swedish-law tools (ROT, moms,
 // AB 04 templates) are sv-only, so nb lists just the locale-agnostic calculators
 // + PDF utilities that are translated.
-const CONTENT: Record<ToolLocale, Content> = {
+const CONTENT: Record<CalcLocale, Content> = {
   sv: {
     seoTitle: 'Byggkalkylatorer & gratis verktyg för byggföretag | ByggExp',
     seoDescription:
@@ -142,13 +142,59 @@ const CONTENT: Record<ToolLocale, Content> = {
       },
     ],
   },
+  en: {
+    seoTitle: 'Construction calculators & free tools for builders | ByggExp',
+    seoDescription:
+      'Free construction calculators and tools: ROT, VAT and hourly rate, material calculators (plasterboard, concrete, roof, flooring) and more. No account.',
+    badge: 'Free tools',
+    h1: 'Free construction calculators and tools for builders',
+    intro:
+      'Work out material, prices and deductions – and turn a material estimate into a quote with one click. All free and no account. Prices and ROT follow the Swedish market (SEK).',
+    groups: [
+      {
+        heading: 'Cost & finance calculators',
+        tools: [
+          { slug: 'rot-avdrag-kalkylator', title: 'ROT deduction calculator', description: 'Work out the ROT deduction and what the customer pays (2026).' },
+          { slug: 'moms-kalkylator', title: 'VAT calculator', description: 'Add VAT or reverse-calculate (25/12/6%).' },
+          { slug: 'timpris-kalkylator', title: 'Hourly rate calculator', description: 'What to charge per hour from salary and costs.' },
+          { slug: 'paslag-marginal-kalkylator', title: 'Markup & margin', description: 'Work out price from cost – markup vs margin.' },
+          { slug: 'anstalld-kostnad-kalkylator', title: 'Employee cost', description: 'What an employee really costs, per billable hour.' },
+          { slug: 'drojsmalsranta-kalkylator', title: 'Late-payment interest', description: 'Interest on an unpaid invoice (reference rate + 8%).' },
+          { slug: 'forseningsvite-kalkylator', title: 'Delay penalty', description: 'Liquidated damages per AB 04/ABT 06.' },
+        ],
+      },
+      {
+        heading: 'Construction calculators',
+        tools: [
+          { slug: 'betong-kalkylator', title: 'Concrete calculator', description: 'Volume, bags, reinforcement and cost for a slab.' },
+          { slug: 'tak-kalkylator', title: 'Roof calculator', description: 'Roof area, tiles, gutters and scaffolding.' },
+          { slug: 'farg-kalkylator', title: 'Paint coverage', description: 'How many litres of paint you need.' },
+          { slug: 'kvadratmeter-kalkylator', title: 'Square metres', description: 'Work out the area of one or more rooms.' },
+          { slug: 'golv-kalkylator', title: 'Flooring & tiles', description: 'Material and packs for flooring and tiles.' },
+          { slug: 'tapet-kalkylator', title: 'Wallpaper', description: 'How many rolls of wallpaper you need.' },
+          { slug: 'reglar-kalkylator', title: 'Studs & timber', description: 'Number of studs and linear metres from c/c.' },
+          { slug: 'grus-kalkylator', title: 'Gravel & crushed stone', description: 'Volume in m³ and weight in tonnes.' },
+          { slug: 'gips-kalkylator', title: 'Plasterboard', description: 'Number of boards from wall area and layers.' },
+          { slug: 'isolering-kalkylator', title: 'Insulation', description: 'Packs, volume and U-value.' },
+          { slug: 'trappa-kalkylator', title: 'Stairs', description: 'Number of steps, rise and going.' },
+          { slug: 'fall-kalkylator', title: 'Slope & fall', description: 'Height difference, percent and 1:X.' },
+          { slug: 'golvvarme-kalkylator', title: 'Underfloor heating', description: 'Loop length and number of loops.' },
+          { slug: 'trall-kalkylator', title: 'Decking', description: 'Linear metres and number of deck boards.' },
+          { slug: 'staket-kalkylator', title: 'Fence', description: 'Number of posts and sections.' },
+          { slug: 'takstolar-kalkylator', title: 'Roof trusses', description: 'Number of trusses from c/c.' },
+          { slug: 'u-varde-kalkylator', title: 'U-value', description: 'Thermal resistance and U-value for a construction.' },
+          { slug: 'spillprocent-kalkylator', title: 'Waste percentage', description: 'Material need including waste.' },
+        ],
+      },
+    ],
+  },
 };
 
-type VerktygHubProps = { lang: ToolLocale };
+type VerktygHubProps = { lang: CalcLocale };
 
 export const getServerSideProps: GetServerSideProps<VerktygHubProps> = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) return { notFound: true };
+  if (!calcLocaleEnabled(lang)) return { notFound: true };
   return { props: { lang } };
 };
 

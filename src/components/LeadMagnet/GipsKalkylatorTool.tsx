@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
+import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
 
@@ -11,15 +12,59 @@ import { fakturaHref, offertHref } from '../../lib/offert';
 // sides, and screws run ~20 st/m² per board layer. It returns not just the
 // sheet count but the whole bill of material: sheets, studs (löpmeter virke),
 // syll/hammarband (or skena for steel), insulation and screws.
+// Bilingual: sv default, en for /en/verktyg; nb falls back to sv text.
 
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
 }
 
-const nf = (v: number, d = 0) =>
-  v.toLocaleString('sv-SE', { maximumFractionDigits: d });
+export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
+  const en = locale === 'en';
+  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : 'sv-SE', { maximumFractionDigits: d });
+  const t = en
+    ? {
+        title: 'Plasterboard calculator – the full material list',
+        sub: 'Enter the wall and we work out plasterboard, studs, plates, insulation and screws. The board width sets the stud spacing (c/c) per Gyproc’s installation manual.',
+        length: 'Wall length (m)', height: 'Wall height (m)',
+        cladL: 'Cladding', cladBoth: 'Both sides', cladOne: 'One side',
+        layersL: 'Layers per side', l1: '1 layer', l2: '2 layers',
+        boardWidthL: 'Board width', boardLenL: 'Board length (m)',
+        frameL: 'Frame', frameWood: 'Timber studs', frameSteel: 'Steel studs',
+        insulL: 'Insulation in the wall', yes: 'Yes', no: 'No',
+        openings: 'Deduct openings (m²)', spill: 'Waste (%)',
+        rSheets: 'Plasterboard', rClad: 'Clad area / board incl. waste', rStuds: (cc: number) => `Studs (c/c ${cc} mm)`, rRail: '', rInsul: 'Insulation', rScrews: 'Plasterboard screws',
+        railWood: 'Bottom + top plate', railSteel: 'Track (top + bottom)',
+        fine: 'An estimate per Gyproc’s installation manual. The frame is counted once even with double-sided cladding; screws about 20 pcs/m² per layer (edge c200, field c300). Always check board sizes, stud type and fixings against the supplier’s instructions for your wall type.',
+        offert: 'Create quote from this', faktura: 'Create invoice', excel: 'Export Excel', pdf: 'Export PDF',
+        pcs: 'pcs', lm: 'lm',
+        csvTitle: 'Plasterboard calculator', csvWall: 'Wall', wallDesc: (l: string, h: string, s: string, lay: string) => `${l} × ${h} m, ${s}, ${lay} layer(s)/side`, both: 'double-sided', one: 'single-sided',
+        post: 'Item', qty: 'Quantity',
+        mSheets: 'Plasterboard', mClad: 'Clad area', mGips: 'Board incl. waste', mScrews: 'Plasterboard screws',
+        pdfTitle: 'Plasterboard – material list', pdfMeta: (l: string, h: string, s: string, lay: string) => `Wall ${l} × ${h} m · ${s} · ${lay} layer(s)/side`,
+        soLabour: 'Installation labour',
+      }
+    : {
+        title: 'Gipskalkylator – hela materiallistan',
+        sub: 'Fyll i väggen så räknar vi ut gipsskivor, reglar, syll/hammarband, isolering och skruv. Skivbredden styr regelavståndet (c/c) enligt Gyprocs monteringshandbok.',
+        length: 'Vägglängd (m)', height: 'Vägghöjd (m)',
+        cladL: 'Beklädnad', cladBoth: 'Dubbelsidig (båda sidor)', cladOne: 'Enkelsidig (en sida)',
+        layersL: 'Lager per sida', l1: '1 lager', l2: '2 lager',
+        boardWidthL: 'Skivbredd', boardLenL: 'Skivlängd (m)',
+        frameL: 'Stomme', frameWood: 'Träreglar', frameSteel: 'Stålreglar',
+        insulL: 'Isolering i väggen', yes: 'Ja', no: 'Nej',
+        openings: 'Avdrag öppningar (m²)', spill: 'Spill (%)',
+        rSheets: 'Gipsskivor', rClad: 'Beklädd yta / gips inkl. spill', rStuds: (cc: number) => `Reglar (c/c ${cc} mm)`, rRail: '', rInsul: 'Isolering', rScrews: 'Gipsskruv',
+        railWood: 'Syll + hammarband', railSteel: 'Skena (upp + ned)',
+        fine: 'En uppskattning enligt Gyprocs monteringshandbok. Stommen räknas en gång även vid dubbelsidig beklädnad; skruv ca 20 st/m² och lager (kant c200, fält c300). Kontrollera alltid skivmått, regeltyp och infästning mot leverantörens anvisning för din väggtyp.',
+        offert: 'Skapa offert av det här', faktura: 'Skapa faktura', excel: 'Exportera Excel', pdf: 'Exportera PDF',
+        pcs: 'st', lm: 'lpm',
+        csvTitle: 'Gipskalkylator', csvWall: 'Vägg', wallDesc: (l: string, h: string, s: string, lay: string) => `${l} × ${h} m, ${s}, ${lay} lager/sida`, both: 'dubbelsidig', one: 'enkelsidig',
+        post: 'Post', qty: 'Mängd',
+        mSheets: 'Gipsskivor', mClad: 'Beklädd yta', mGips: 'Gips inkl. spill', mScrews: 'Gipsskruv',
+        pdfTitle: 'Gips – materiallista', pdfMeta: (l: string, h: string, s: string, lay: string) => `Vägg ${l} × ${h} m · ${s} · ${lay} lager/sida`,
+        soLabour: 'Arbete montering',
+      };
 
-export default function GipsKalkylatorTool() {
   const [length, setLength] = useState('');
   const [height, setHeight] = useState('2.5');
   const [sides, setSides] = useState('2'); // 1 = enkelsidig, 2 = dubbelsidig
@@ -54,62 +99,53 @@ export default function GipsKalkylatorTool() {
     // ~20 skruv/m² per gipslager (Gyproc: c200 kant / c300 fält).
     const screws = Math.round(cladArea * lay * 20 * spillF);
 
-    return {
-      cc,
-      cladArea,
-      gipsNeed,
-      sheets,
-      studCount,
-      studMeters,
-      railMeters,
-      insulM2,
-      screws,
-    };
+    return { cc, cladArea, gipsNeed, sheets, studCount, studMeters, railMeters, insulM2, screws };
   }, [length, height, sides, layers, boardWidth, boardLen, insulate, openings, spill]);
 
-  const railLabel = frame === 'stal' ? 'Skena (upp + ned)' : 'Syll + hammarband';
+  const railLabel = frame === 'stal' ? t.railSteel : t.railWood;
+  const sidesLabel = sides === '2' ? t.both : t.one;
 
   const exportCsv = () => {
     const rows: (string | number)[][] = [
-      ['Gipskalkylator', 'byggexp.se'],
+      [t.csvTitle, 'byggexp.se'],
       [],
-      ['Vägg', `${length || 0} × ${height || 0} m, ${sides === '2' ? 'dubbelsidig' : 'enkelsidig'}, ${layers} lager/sida`],
+      [t.csvWall, t.wallDesc(length || '0', height || '0', sidesLabel, layers)],
       [],
-      ['Post', 'Mängd'],
-      ['Gipsskivor', `${nf(r.sheets)} st`],
-      ['Beklädd yta', `${nf(r.cladArea, 1)} m²`],
-      ['Gips inkl. spill', `${nf(r.gipsNeed, 1)} m²`],
-      [`Reglar (c/c ${r.cc} mm)`, `${nf(r.studCount)} st / ${nf(r.studMeters, 1)} lpm`],
-      [railLabel, `${nf(r.railMeters, 1)} lpm`],
-      ...(r.insulM2 > 0 ? [['Isolering', `${nf(r.insulM2, 1)} m²`]] : []),
-      ['Gipsskruv', `${nf(r.screws)} st`],
+      [t.post, t.qty],
+      [t.mSheets, `${nf(r.sheets)} ${t.pcs}`],
+      [t.mClad, `${nf(r.cladArea, 1)} m²`],
+      [t.mGips, `${nf(r.gipsNeed, 1)} m²`],
+      [t.rStuds(r.cc), `${nf(r.studCount)} ${t.pcs} / ${nf(r.studMeters, 1)} ${t.lm}`],
+      [railLabel, `${nf(r.railMeters, 1)} ${t.lm}`],
+      ...(r.insulM2 > 0 ? [[t.rInsul, `${nf(r.insulM2, 1)} m²`]] : []),
+      [t.mScrews, `${nf(r.screws)} ${t.pcs}`],
     ];
     gaEvent('export_excel', { tool: 'gips-kalkylator' });
     downloadCsvRows(rows, 'gips-materiallista.csv');
   };
 
   const exportPdf = () => void downloadMaterialPdf({
-    title: 'Gips – materiallista',
-    meta: `Vägg ${length || 0} × ${height || 0} m · ${sides === '2' ? 'dubbelsidig' : 'enkelsidig'} · ${layers} lager/sida`,
+    title: t.pdfTitle,
+    meta: t.pdfMeta(length || '0', height || '0', sidesLabel, layers),
     rows: [
-      { desc: 'Gipsskivor', qty: `${nf(r.sheets)} st` },
-      { desc: 'Beklädd yta / inkl. spill', qty: `${nf(r.cladArea, 1)} / ${nf(r.gipsNeed, 1)} m²` },
-      { desc: `Reglar (c/c ${r.cc} mm)`, qty: `${nf(r.studCount)} st · ${nf(r.studMeters, 1)} lpm` },
-      { desc: railLabel, qty: `${nf(r.railMeters, 1)} lpm` },
-      ...(r.insulM2 > 0 ? [{ desc: 'Isolering', qty: `${nf(r.insulM2, 1)} m²` }] : []),
-      { desc: 'Gipsskruv', qty: `${nf(r.screws)} st` },
+      { desc: t.mSheets, qty: `${nf(r.sheets)} ${t.pcs}` },
+      { desc: `${t.mClad} / ${t.mGips}`, qty: `${nf(r.cladArea, 1)} / ${nf(r.gipsNeed, 1)} m²` },
+      { desc: t.rStuds(r.cc), qty: `${nf(r.studCount)} ${t.pcs} · ${nf(r.studMeters, 1)} ${t.lm}` },
+      { desc: railLabel, qty: `${nf(r.railMeters, 1)} ${t.lm}` },
+      ...(r.insulM2 > 0 ? [{ desc: t.rInsul, qty: `${nf(r.insulM2, 1)} m²` }] : []),
+      { desc: t.mScrews, qty: `${nf(r.screws)} ${t.pcs}` },
     ],
     filename: 'gips-materiallista.pdf',
     tool: 'gips-kalkylator',
   });
 
   const seedRows = [
-    { desc: 'Gipsskivor', qty: r.sheets },
-    { desc: `Reglar (c/c ${r.cc} mm)`, qty: r.studCount },
-    { desc: `${railLabel} (lpm)`, qty: Math.round(r.railMeters) },
-    { desc: 'Isolering (m²)', qty: Math.round(r.insulM2) },
-    { desc: 'Gipsskruv', qty: r.screws },
-    { desc: 'Arbete montering', qty: 1, labour: true },
+    { desc: t.mSheets, qty: r.sheets },
+    { desc: t.rStuds(r.cc), qty: r.studCount },
+    { desc: `${railLabel} (${t.lm})`, qty: Math.round(r.railMeters) },
+    { desc: `${t.rInsul} (m²)`, qty: Math.round(r.insulM2) },
+    { desc: t.mScrews, qty: r.screws },
+    { desc: t.soLabour, qty: 1, labour: true },
   ];
   const offertUrl = offertHref(seedRows);
   const fakturaUrl = fakturaHref(seedRows);
@@ -117,122 +153,113 @@ export default function GipsKalkylatorTool() {
   return (
     <div className="lm-tool">
       <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Gipskalkylator – hela materiallistan</h2>
-        <p className="lm-tool-sub">
-          Fyll i väggen så räknar vi ut gipsskivor, reglar, syll/hammarband,
-          isolering och skruv. Skivbredden styr regelavståndet (c/c) enligt
-          Gyprocs monteringshandbok.
-        </p>
+        <h2 className="lm-tool-title">{t.title}</h2>
+        <p className="lm-tool-sub">{t.sub}</p>
       </div>
 
       <div className="lm-tool-grid">
         <label className="lm-tool-field">
-          <span>Vägglängd (m)</span>
-          <input type="number" min="0" inputMode="decimal" value={length} placeholder="t.ex. 6" onChange={(e) => setLength(e.currentTarget.value)} />
+          <span>{t.length}</span>
+          <input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 6' : 't.ex. 6'} onChange={(e) => setLength(e.currentTarget.value)} />
         </label>
         <label className="lm-tool-field">
-          <span>Vägghöjd (m)</span>
+          <span>{t.height}</span>
           <input type="number" min="0" inputMode="decimal" value={height} onChange={(e) => setHeight(e.currentTarget.value)} />
         </label>
         <label className="lm-tool-field">
-          <span>Beklädnad</span>
+          <span>{t.cladL}</span>
           <select value={sides} onChange={(e) => setSides(e.currentTarget.value)}>
-            <option value="2">Dubbelsidig (båda sidor)</option>
-            <option value="1">Enkelsidig (en sida)</option>
+            <option value="2">{t.cladBoth}</option>
+            <option value="1">{t.cladOne}</option>
           </select>
         </label>
         <label className="lm-tool-field">
-          <span>Lager per sida</span>
+          <span>{t.layersL}</span>
           <select value={layers} onChange={(e) => setLayers(e.currentTarget.value)}>
-            <option value="1">1 lager</option>
-            <option value="2">2 lager</option>
+            <option value="1">{t.l1}</option>
+            <option value="2">{t.l2}</option>
           </select>
         </label>
         <label className="lm-tool-field">
-          <span>Skivbredd</span>
+          <span>{t.boardWidthL}</span>
           <select value={boardWidth} onChange={(e) => setBoardWidth(e.currentTarget.value)}>
             <option value="1200">1200 mm (c/c 600)</option>
             <option value="900">900 mm (c/c 450)</option>
           </select>
         </label>
         <label className="lm-tool-field">
-          <span>Skivlängd (m)</span>
+          <span>{t.boardLenL}</span>
           <select value={boardLen} onChange={(e) => setBoardLen(e.currentTarget.value)}>
-            <option value="2.6">2,60 m</option>
-            <option value="2.7">2,70 m</option>
-            <option value="2.4">2,40 m</option>
-            <option value="3.0">3,00 m</option>
+            <option value="2.6">{en ? '2.60 m' : '2,60 m'}</option>
+            <option value="2.7">{en ? '2.70 m' : '2,70 m'}</option>
+            <option value="2.4">{en ? '2.40 m' : '2,40 m'}</option>
+            <option value="3.0">{en ? '3.00 m' : '3,00 m'}</option>
           </select>
         </label>
         <label className="lm-tool-field">
-          <span>Stomme</span>
+          <span>{t.frameL}</span>
           <select value={frame} onChange={(e) => setFrame(e.currentTarget.value)}>
-            <option value="tra">Träreglar</option>
-            <option value="stal">Stålreglar</option>
+            <option value="tra">{t.frameWood}</option>
+            <option value="stal">{t.frameSteel}</option>
           </select>
         </label>
         <label className="lm-tool-field">
-          <span>Isolering i väggen</span>
+          <span>{t.insulL}</span>
           <select value={insulate} onChange={(e) => setInsulate(e.currentTarget.value)}>
-            <option value="nej">Nej</option>
-            <option value="ja">Ja</option>
+            <option value="nej">{t.no}</option>
+            <option value="ja">{t.yes}</option>
           </select>
         </label>
         <label className="lm-tool-field">
-          <span>Avdrag öppningar (m²)</span>
+          <span>{t.openings}</span>
           <input type="number" min="0" inputMode="decimal" value={openings} onChange={(e) => setOpenings(e.currentTarget.value)} />
         </label>
         <label className="lm-tool-field">
-          <span>Spill (%)</span>
+          <span>{t.spill}</span>
           <input type="number" min="0" inputMode="decimal" value={spill} onChange={(e) => setSpill(e.currentTarget.value)} />
         </label>
       </div>
 
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
-          <span>Gipsskivor</span>
-          <strong>{nf(r.sheets)} st</strong>
+          <span>{t.rSheets}</span>
+          <strong>{nf(r.sheets)} {t.pcs}</strong>
         </div>
         <div className="lm-result-row">
-          <span>Beklädd yta / gips inkl. spill</span>
+          <span>{t.rClad}</span>
           <strong>{nf(r.cladArea, 1)} m² / {nf(r.gipsNeed, 1)} m²</strong>
         </div>
         <div className="lm-result-row">
-          <span>Reglar (c/c {r.cc} mm)</span>
-          <strong>{nf(r.studCount)} st · {nf(r.studMeters, 1)} lpm</strong>
+          <span>{t.rStuds(r.cc)}</span>
+          <strong>{nf(r.studCount)} {t.pcs} · {nf(r.studMeters, 1)} {t.lm}</strong>
         </div>
         <div className="lm-result-row">
           <span>{railLabel}</span>
-          <strong>{nf(r.railMeters, 1)} lpm</strong>
+          <strong>{nf(r.railMeters, 1)} {t.lm}</strong>
         </div>
         {r.insulM2 > 0 ? (
           <div className="lm-result-row">
-            <span>Isolering</span>
+            <span>{t.rInsul}</span>
             <strong>{nf(r.insulM2, 1)} m²</strong>
           </div>
         ) : null}
         <div className="lm-result-row lm-result-total">
-          <span>Gipsskruv</span>
-          <strong>{nf(r.screws)} st</strong>
+          <span>{t.rScrews}</span>
+          <strong>{nf(r.screws)} {t.pcs}</strong>
         </div>
-        <p className="lm-result-fine">
-          En uppskattning enligt Gyprocs monteringshandbok. Stommen räknas en gång
-          även vid dubbelsidig beklädnad; skruv ca 20 st/m² och lager (kant c200,
-          fält c300). Kontrollera alltid skivmått, regeltyp och infästning mot
-          leverantörens anvisning för din väggtyp.
-        </p>
+        <p className="lm-result-fine">{t.fine}</p>
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
           <a className="lm-tool-button" href={r.sheets > 0 ? offertUrl : undefined} aria-disabled={r.sheets <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'gips-kalkylator' })}>
-            Skapa offert av det här
+            {t.offert}
           </a>
           <a className="lm-tool-secondary" href={r.sheets > 0 ? fakturaUrl : undefined} aria-disabled={r.sheets <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'gips-kalkylator' })}>
-            Skapa faktura
+            {t.faktura}
           </a>
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.sheets <= 0}>
-            Exportera Excel
+            {t.excel}
           </button>
           <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={r.sheets <= 0}>
-            Exportera PDF
+            {t.pdf}
           </button>
         </div>
       </div>

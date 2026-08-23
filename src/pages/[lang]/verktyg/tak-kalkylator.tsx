@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import TakKalkylatorTool from '../../../components/LeadMagnet/TakKalkylatorTool';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -209,11 +209,98 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Roof calculator 2026 – roof area, tiles & battens | ByggExp',
+    description:
+      'Work out the roof area for a gable or mono-pitch roof and the whole material bill: tiles, battens in linear metres and underlay felt. Free roof calculator, no account.',
+    badge: 'Free calculator',
+    h1: 'Roof calculator',
+    intro:
+      'Enter the building dimensions, roof pitch and covering and we work out the roof area and material: tiles, battens in linear metres and underlay felt. The roof area is figured per slope – handy before a re-roof or a quote.',
+    previewAlt: 'Preview of the roof calculator',
+    previewCaption: 'This is how the roof calculator looks',
+    sections: [
+      {
+        id: 'sa-raknar-du',
+        heading: 'What the calculator works out',
+        body: (
+          <ul>
+            <li><strong>Roof area:</strong> footprint (incl. overhang) ÷ cos(pitch), per slope.</li>
+            <li><strong>Tiles:</strong> roof area × tiles per m² + waste.</li>
+            <li><strong>Battens:</strong> roof area ÷ batten spacing (linear metres).</li>
+            <li><strong>Underlay felt:</strong> roof area + about 10% overlap.</li>
+          </ul>
+        ),
+      },
+      {
+        id: 'formeln',
+        heading: 'Roof area = footprint ÷ cos(pitch)',
+        body: (
+          <p>
+            A steeper roof gives a larger area than the house measures on the ground – at 27° the roof
+            area is about 1.12 times the footprint, at 45° about 1.4 times. Don’t forget the overhang at
+            the eaves and gable, which adds further area. For hipped or complex roofs, split the roof
+            into sub-areas.
+          </p>
+        ),
+      },
+      {
+        id: 'pannor-lakt',
+        heading: 'Tiles and battens depend on the model',
+        body: (
+          <p>
+            Concrete tiles are often about 9–11 pcs/m² and clay tiles about 12–15 pcs/m². The batten
+            spacing (often 320–345 mm) is set by the tile model’s length and the roof pitch. The
+            calculator uses typical values per tile type – always check the manufacturer’s laying
+            instructions before buying.
+          </p>
+        ),
+      },
+    ],
+    faqHeading: 'Frequently asked questions about roof area',
+    faq: [
+      {
+        question: 'How do I calculate the roof area?',
+        answer:
+          'The roof area is the footprint (incl. overhang) divided by the cosine of the pitch: roof area = footprint ÷ cos(pitch). The steeper the roof, the larger the area versus the footprint – at 45° the roof area is about 1.4 times the footprint. The calculator does it for both gable and mono-pitch roofs.',
+      },
+      {
+        question: 'How many roof tiles are there per square metre?',
+        answer:
+          'A concrete tile is often about 9–11 pcs/m² and a clay tile about 12–15 pcs/m². The calculator suggests a standard value per tile type that you can adjust for your model – always check the manufacturer’s laying instructions.',
+      },
+      {
+        question: 'How many battens do I need?',
+        answer:
+          'The tiling battens run horizontally with a spacing that depends on the tile model (often 320–345 mm). The linear metres are the roof area divided by the batten spacing. Also allow for counter battens (vertical) and a margin for cuts.',
+      },
+      {
+        question: 'Does it handle sheet-metal and felt roofs?',
+        answer:
+          'Yes. If you choose sheet metal or felt, the calculator shows the roof area incl. overlap in m² instead of a tile count – these materials are sold on rolls or in sheets with overlap.',
+      },
+      {
+        question: 'Does it cost anything?',
+        answer: 'No, the calculator is free and requires no account.',
+      },
+    ],
+    ctaHeading: 'Create roofing quotes in ByggExp',
+    ctaText:
+      'Build quotes with material and labour, and follow the project from quote to invoice. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'takstolar-kalkylator', label: 'Roof trusses calculator' },
+      { slug: 'betong-kalkylator', label: 'Concrete calculator' },
+      { slug: 'kvadratmeter-kalkylator', label: 'Square-metre calculator' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -259,8 +346,9 @@ export default function Page({ lang }: { lang: Locale }) {
         intro={c.intro}
         embedSlug="tak-kalkylator"
         embedTitle={c.h1}
-        tool={<TakKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="tak-kalkylator" />}
+        locale={lang}
+        tool={<TakKalkylatorTool locale={lang} />}
+        leadForm={<ToolLeadForm tool="tak-kalkylator" locale={lang} />}
         preview={
           <PreviewImage
             src="/landing/verktyg/tak-preview.webp"

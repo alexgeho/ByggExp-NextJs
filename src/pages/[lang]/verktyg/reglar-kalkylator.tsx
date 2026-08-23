@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -103,11 +103,43 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Studs & timber calculator – number of studs (c/c) | ByggExp',
+    description:
+      'Work out the number of studs and linear metres of timber from the wall length and stud spacing (c/c). Free calculator for stud walls and framing, no account.',
+    badge: 'Free calculator',
+    h1: 'Studs & timber',
+    intro:
+      'Enter the wall length and stud spacing (c/c) and we work out the number of studs and the total linear metres of timber.',
+    previewAlt: 'Preview of studs & timber',
+    previewCaption: 'This is how studs & timber looks',
+    sections: [
+      { id: 'sa-raknar-du', heading: 'How to work out the timber', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/reglar.webp" alt="Diagram: studs with c/c spacing and plasterboard" width={720} height={380} loading="lazy" /><figcaption>Stud spacing should match the board width: 900 mm board → c/c 450, 1200 mm → c/c 600.</figcaption></figure><ol><li>Measure the wall length in metres.</li><li>Choose the stud spacing (c/c) in mm.</li><li>Enter the stud length/height.</li><li>See the number of studs and total linear metres.</li></ol></>) },
+      { id: 'info', heading: 'Don’t forget', body: (<><p>Besides the vertical studs you need bottom and top plates, plus noggins and extra studs at doors, windows and corners.</p></>) },
+    ],
+    faqHeading: 'Frequently asked questions',
+    faq: [
+      { question: 'How do I work out the number of studs?', answer: 'Number of vertical studs = length ÷ stud spacing (c/c) + 1. A 6 m wall at c/c 600 mm gives 6000 ÷ 600 + 1 = 11 studs.' },
+      { question: 'Which c/c spacing should I use?', answer: 'Common spacings are 450 or 600 mm depending on board and insulation dimensions and requirements. 600 mm is the most common for interior walls.' },
+      { question: 'Are the plates included?', answer: 'No, the calculator counts the vertical studs. Add timber for the bottom plate (sole) and top plate separately.' },
+      { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
+    ],
+    ctaHeading: 'Calculate material and time in ByggExp',
+    ctaText: 'Keep track of material, time and costs per project. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'takstolar-kalkylator', label: 'Roof trusses calculator' },
+      { slug: 'kvadratmeter-kalkylator', label: 'Square-metre calculator' },
+      { slug: 'betong-kalkylator', label: 'Concrete calculator' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -151,8 +183,9 @@ export default function Page({ lang }: { lang: Locale }) {
         badge={c.badge}
         title={c.h1}
         intro={c.intro}
-        tool={<ReglarKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="reglar-kalkylator" />}
+        locale={lang}
+        tool={<ReglarKalkylatorTool locale={lang} />}
+        leadForm={<ToolLeadForm tool="reglar-kalkylator" locale={lang} />}
         preview={
           <PreviewImage
             src="/landing/verktyg/reglar-preview.webp"

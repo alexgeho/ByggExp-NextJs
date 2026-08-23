@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -189,11 +189,89 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Square-metre calculator – work out m² for free | ByggExp',
+    description:
+      'Work out square metres (m²) for one or more rooms from length and width, with waste for materials like flooring and tiles. Free calculator, no account.',
+    badge: 'Free calculator',
+    h1: 'Square-metre calculator – work out the area',
+    intro:
+      'Enter the length and width for one or more spaces and the area is summed in square metres. Add waste when ordering flooring, tiles, paint or other material – and a price per m² if you want to see the material cost right away.',
+    previewAlt: 'Preview of the square-metre calculator',
+    previewCaption: 'This is how the square-metre calculator looks',
+    sections: [
+      {
+        id: 'sa-raknar-du',
+        heading: 'How to work out square metres',
+        body: (
+          <>
+            <figure className="lm-diagram">
+              <img src="/landing/diagrams/kvadratmeter.webp" alt="Diagram: area as length times width, summing several sub-areas" width={720} height={380} loading="lazy" />
+              <figcaption>Area = length × width. Several rooms? Sum the sub-areas and add waste.</figcaption>
+            </figure>
+            <ol>
+              <li>Measure the length and width of the room or area in metres.</li>
+              <li>Add one row per space if you have several.</li>
+              <li>Enter waste as a percentage if you are ordering material.</li>
+              <li>See the total area and how much you should order.</li>
+            </ol>
+          </>
+        ),
+      },
+      {
+        id: 'anvandning',
+        heading: 'When do you need to work out the area?',
+        body: (
+          <p>
+            Square metres are the basis for estimating material for flooring, tiles, painting,
+            insulation and much more – and for pricing work per m². With the right area and a little
+            waste you avoid both ordering too little and paying too much.
+          </p>
+        ),
+      },
+    ],
+    faqHeading: 'Frequently asked questions about square metres',
+    faq: [
+      {
+        question: 'How do I work out square metres?',
+        answer:
+          'Multiply length × width in metres. A room of 4 × 3 metres is 12 m². If you have several rooms or areas, add one row per area and everything is summed.',
+      },
+      {
+        question: 'How much waste should I allow?',
+        answer:
+          'For flooring and tiles you usually add about 5–10% for cuts and waste, more for diagonal laying or many angles. Enter the waste percentage and the calculator shows how much you should order.',
+      },
+      {
+        question: 'Can I work out the area for several rooms?',
+        answer:
+          'Yes. Add one row per room or area – the calculator sums the total square metres.',
+      },
+      {
+        question: 'Can I see the material cost?',
+        answer:
+          'Yes. Enter a price per m² (optional) and the calculator estimates the material cost for the area including waste – handy for a quick budget or quote.',
+      },
+      {
+        question: 'Does it cost anything?',
+        answer: 'No, the calculator is free and requires no account.',
+      },
+    ],
+    ctaHeading: 'Price and track projects in ByggExp',
+    ctaText: 'From areas and material to quote, invoice and profitability per project. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'farg-kalkylator', label: 'Paint coverage' },
+      { slug: 'betong-kalkylator', label: 'Concrete calculator' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -239,8 +317,9 @@ export default function Page({ lang }: { lang: Locale }) {
         intro={c.intro}
         embedSlug="kvadratmeter-kalkylator"
         embedTitle={c.h1}
-        tool={<KvadratmeterKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="kvadratmeter-kalkylator" />}
+        locale={lang}
+        tool={<KvadratmeterKalkylatorTool locale={lang} />}
+        leadForm={<ToolLeadForm tool="kvadratmeter-kalkylator" locale={lang} />}
         preview={
           <PreviewImage
             src="/landing/verktyg/kvadratmeter-preview.webp"

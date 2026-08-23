@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -199,11 +199,91 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Plasterboard calculator – boards, studs & screws 2026 | ByggExp',
+    description:
+      'Work out the full material list for a plasterboard wall: number of boards, studs (correct c/c), plates, insulation and screws – from the wall dimensions. Free, no account.',
+    badge: 'Free calculator',
+    h1: 'Plasterboard calculator',
+    intro:
+      'Enter the wall dimensions and get the full material list for a stud wall: plasterboard, studs, bottom and top plates, insulation and screws. The board width sets the stud spacing (c/c) per Gyproc’s manual.',
+    previewAlt: 'Preview of the plasterboard calculator',
+    previewCaption: 'This is how the plasterboard calculator looks',
+    sections: [
+      {
+        id: 'sa-raknar-du',
+        heading: 'How the calculator works',
+        body: (
+          <ul>
+            <li><strong>Plasterboard:</strong> wall length × height × number of sides × layers, plus waste, divided by the board area.</li>
+            <li><strong>Studs:</strong> wall length ÷ c/c + 1. The frame is counted once even when both sides are clad.</li>
+            <li><strong>Bottom + top plate:</strong> 2 × wall length in linear metres (top and bottom).</li>
+            <li><strong>Screws:</strong> about 20 pcs per m² and board layer.</li>
+            <li><strong>Insulation:</strong> the wall area once, since it fills the frame.</li>
+          </ul>
+        ),
+      },
+      {
+        id: 'skivbredd-cc',
+        heading: 'Board width sets the stud spacing (c/c)',
+        body: (
+          <ul>
+            <li>Board <strong>1200 mm</strong> wide → studs <strong>c/c 600 mm</strong>.</li>
+            <li>Board <strong>900 mm</strong> wide → studs <strong>c/c 450 mm</strong>.</li>
+            <li>The joint between two boards must always land in the middle of a stud – that’s why the dimensions are linked.</li>
+          </ul>
+        ),
+      },
+      {
+        id: 'lager-skruv',
+        heading: 'Layers, screws and insulation',
+        body: (
+          <p>
+            One layer is enough for most interior walls. Two layers give better sound and fire
+            resistance and are sometimes required by the design. Screw more closely at the edges
+            (about c200 mm) than in the field (about c300 mm), and screw the outer layer more closely
+            than the inner. If the wall is to be sound- or heat-insulated, fill the frame with
+            insulation equal to the wall area.
+          </p>
+        ),
+      },
+      {
+        id: 'info',
+        heading: 'Keep in mind',
+        body: (
+          <p>
+            Add waste for cuts around windows, doors and corners – better to buy a board or two
+            extra. The dimensions here follow Gyproc’s installation manual; always check board and
+            stud type and fixings against the supplier’s instructions for your specific wall type
+            (e.g. wet room, fire- or sound-rated wall).
+          </p>
+        ),
+      },
+    ],
+    faqHeading: 'Frequently asked questions',
+    faq: [
+      { question: 'Which c/c spacing should the studs have?', answer: 'It is set by the board width. If the board is 1200 mm wide, studs go at c/c 600 mm; if the board is 900 mm wide, c/c 450 mm applies. The calculator picks the right c/c automatically when you enter the board width.' },
+      { question: 'Is plasterboard counted on both sides of the wall?', answer: 'A stud wall is normally clad on both sides. Choose "Both sides" and the board and screw quantities double, while the frame (studs, plates) is counted once – it is shared by both sides.' },
+      { question: 'How many screws are needed?', answer: 'Reckon about 20 screws per m² and board layer. Gyproc specifies closer fixing at the edge (about c200 mm) than in the field (about c300 mm), and the outer layer is screwed more closely than the inner.' },
+      { question: 'One or two layers of plasterboard?', answer: 'Two layers give better sound and fire resistance and are sometimes required by the design. Choose the number of layers per side and boards and screws are recalculated.' },
+      { question: 'How big is a plasterboard sheet?', answer: 'Common sizes are 1200 × 2600 mm (about 3.1 m²) and 900 × 2600 mm (about 2.3 m²). Choose board width and length in the calculator.' },
+      { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
+    ],
+    ctaHeading: 'Calculate material and time in ByggExp',
+    ctaText: 'Keep track of material, time and costs per project. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'reglar-kalkylator', label: 'Studs & timber' },
+      { slug: 'kvadratmeter-kalkylator', label: 'Square-metre calculator' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -247,8 +327,9 @@ export default function Page({ lang }: { lang: Locale }) {
         badge={c.badge}
         title={c.h1}
         intro={c.intro}
-        tool={<GipsKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="gips-kalkylator" />}
+        locale={lang}
+        tool={<GipsKalkylatorTool locale={lang} />}
+        leadForm={<ToolLeadForm tool="gips-kalkylator" locale={lang} />}
         preview={
           <PreviewImage
             src="/landing/verktyg/gips-preview.webp"

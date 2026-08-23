@@ -10,7 +10,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
-import { toolLocaleEnabled, type ToolLocale } from '../../../lib/locale';
+import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
 import { localeOrigin } from '../../../lib/seo';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = ToolLocale;
+type Locale = CalcLocale;
 
 type ToolContent = {
   metaTitle: string;
@@ -165,11 +165,74 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'Alle gratis verktøy' },
     ],
   },
+  en: {
+    metaTitle: 'Flooring & tile calculator – packs & adhesive | ByggExp',
+    description:
+      'Work out flooring, laminate and tiles: m² incl. waste (straight/diagonal), number of packs and – for tiles – adhesive in kg and bags. Free calculator, no account.',
+    badge: 'Free calculator',
+    h1: 'Flooring & tile calculator',
+    intro:
+      'Choose material and laying pattern and we work out m² incl. waste and the number of packs – for flooring, laminate, floor and wall tiles. For tiles you also get the tile adhesive needed in kg and bags.',
+    previewAlt: 'Preview of the flooring & tile calculator',
+    previewCaption: 'This is how the flooring & tile calculator looks',
+    sections: [
+      {
+        id: 'sa-raknar-du',
+        heading: 'How the calculator works',
+        body: (
+          <ul>
+            <li><strong>Material:</strong> area × (1 + waste) ÷ m² per pack = number of packs.</li>
+            <li><strong>Waste:</strong> chosen by laying – straight about 8%, diagonal about 12%.</li>
+            <li><strong>Adhesive (tiles):</strong> area × kg/m² → kg and bags (20 kg).</li>
+          </ul>
+        ),
+      },
+      {
+        id: 'kakel-fastmassa',
+        heading: 'Tiles: adhesive and grout',
+        body: (
+          <p>
+            Adhesive consumption depends on the trowel notch and tile size – reckon about 3–6 kg/m²
+            (guide value 4 kg/m²). Large tiles and a coarse notch use more. On top of the adhesive
+            comes grout, which depends on joint width and tile size – always keep a little extra.
+          </p>
+        ),
+      },
+      {
+        id: 'info',
+        heading: 'Keep this in mind',
+        body: (
+          <p>
+            Buy a pack extra – material from the same batch can be hard to get later, and you want a
+            reserve if something breaks. Always check the m² per pack and the adhesive consumption on
+            the product.
+          </p>
+        ),
+      },
+    ],
+    faqHeading: 'Frequently asked questions',
+    faq: [
+      { question: 'How much flooring or tile should I buy?', answer: 'Work out the area in m² and add waste – straight laying often 5–8%, diagonal 10–15%. Then divide by the pack’s m² for the number of packs. The calculator picks the waste by laying pattern and works it out for you.' },
+      { question: 'How much adhesive is needed for tiles?', answer: 'Reckon about 3–6 kg of adhesive per m² depending on trowel notch and tile size (a common guide value is 4 kg/m²). Choose "Wall/floor tiles" and kg and number of bags (20 kg) are calculated. Grout comes on top and depends on joint width.' },
+      { question: 'How much waste for diagonal laying?', answer: 'Diagonal laying and rooms with many angles create more cuts – reckon 10–15% instead of 5–8%. Always keep a few tiles/boards extra from the same batch for future needs.' },
+      { question: 'How many m² is a pack?', answer: 'It varies by product and is stated on the pack – enter the value in the calculator and the number of packs is calculated.' },
+      { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
+    ],
+    ctaHeading: 'Calculate material and time in ByggExp',
+    ctaText: 'Keep track of material, time and costs per project. Book a demo.',
+    ctaButton: 'Book a demo',
+    relatedHeading: 'More construction calculators',
+    related: [
+      { slug: 'kvadratmeter-kalkylator', label: 'Square-metre calculator' },
+      { slug: 'farg-kalkylator', label: 'Paint coverage' },
+      { slug: '', label: 'All free tools' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!toolLocaleEnabled(lang)) {
+  if (!calcLocaleEnabled(lang)) {
     return { notFound: true };
   }
   return { props: { lang } };
@@ -215,8 +278,9 @@ export default function Page({ lang }: { lang: Locale }) {
         intro={c.intro}
         embedSlug="golv-kalkylator"
         embedTitle={c.h1}
-        tool={<GolvKalkylatorTool />}
-        leadForm={<ToolLeadForm tool="golv-kalkylator" />}
+        locale={lang}
+        tool={<GolvKalkylatorTool locale={lang} />}
+        leadForm={<ToolLeadForm tool="golv-kalkylator" locale={lang} />}
         preview={
           <PreviewImage
             src="/landing/verktyg/golv-preview.webp"

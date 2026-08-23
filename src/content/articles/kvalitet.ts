@@ -1398,7 +1398,7 @@ const A_DOU_PARM_DRIFT_UNDERHALL_BYGG: BlogPost = {
 const A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM_HTML = `
 <p>&quot;Egenkontroll el&quot; kan betyda två saker som är lätta att blanda ihop: företagets lagstadgade <strong>egenkontrollprogram</strong> och den praktiska kontrollen av en enskild elinstallation. Här reder vi ut skillnaden, vad lagen kräver av elinstallationsföretag och hur du dokumenterar kontrollen av utfört arbete.</p>
 
-<p><a href="/sv/verktyg/egenkontroll-mall">Ladda ner en gratis egenkontroll-mall (PDF) för att dokumentera kontrollen →</a></p>
+<p><a href="/sv/verktyg/egenkontroll-mall">Skapa en egenkontroll för el med AI – eller ladda ner en gratis mall (PDF) →</a></p>
 
 <h2>Två sorters egenkontroll inom el</h2>
 <ul>

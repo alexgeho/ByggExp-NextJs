@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -87,6 +88,7 @@ export default function AtaMallPage() {
         title="ÄTA-mall – gratis mall att fylla i online"
         intro="Skapa en tydlig ÄTA-beställning på minuten: typ, beskrivning, mängd, à-pris och vem som beställt. Fyll i formuläret och ladda ner den som PDF eller Excel att signera – eller hantera ÄTA löpande i ByggExp. Klicka på ”Fyll i exempel” för att se en färdig ÄTA."
         tool={<AtaMallTool />}
+        leadForm={<ToolLeadForm tool="ata-mall" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/ata-mall-preview.webp"

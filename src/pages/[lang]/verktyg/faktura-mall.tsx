@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -82,6 +83,7 @@ export default function FakturaMallPage() {
         title="Fakturamall – skapa faktura och ladda ner som PDF"
         intro="Gör en proffsig faktura med rader, moms och ROT-avdrag direkt online. Fakturanummer, datum och summor fylls i enkelt och du laddar ner en färdig PDF. Gratis och utan konto."
         tool={<FakturaGeneratorTool />}
+        leadForm={<ToolLeadForm tool="faktura-mall" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/faktura-preview.webp"

@@ -8,6 +8,7 @@ import LeadMagnetPage, {
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import OffertGeneratorTool from '../../../components/LeadMagnet/OffertGeneratorTool';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -82,6 +83,7 @@ export default function OffertMallPage() {
         title="Offertmall – skapa offert med ROT och ladda ner som PDF"
         intro="Bygg en proffsig offert med rader, moms och ROT-avdrag direkt online. Summorna räknas ut automatiskt och du laddar ner en färdig PDF. Gratis och utan konto."
         tool={<OffertGeneratorTool />}
+        leadForm={<ToolLeadForm tool="offert-mall" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/offert-preview.webp"

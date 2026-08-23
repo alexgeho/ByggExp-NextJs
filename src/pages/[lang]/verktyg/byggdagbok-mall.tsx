@@ -8,6 +8,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -94,6 +95,7 @@ export default function ByggdagbokMallPage() {
         title="Byggdagbok – gratis mall att fylla i online"
         intro="Med den här gratis byggdagbok-mallen dokumenterar du dagens arbete på några minuter: väder, bemanning, utfört arbete, avvikelser och ÄTA. Fyll i formuläret och ladda ner den som PDF eller Excel – eller för byggdagbok digitalt i ByggExp."
         tool={<ByggdagbokTool />}
+        leadForm={<ToolLeadForm tool="byggdagbok-mall" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/byggdagbok-preview.webp"

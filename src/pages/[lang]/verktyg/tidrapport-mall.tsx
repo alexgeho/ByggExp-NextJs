@@ -7,6 +7,7 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import TidrapportTool from '../../../components/LeadMagnet/TidrapportTool';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
@@ -112,6 +113,7 @@ export default function TidrapportMallPage() {
         title="Tidrapport – gratis mall att fylla i online"
         intro="Med den här gratis tidrapport-mallen fyller du i arbetstimmar per dag, vecka eller månad och laddar ner en färdig PDF eller Excel – summan räknas ut automatiskt. Perfekt som underlag för lön och fakturering i byggföretag."
         tool={<TidrapportTool />}
+        leadForm={<ToolLeadForm tool="tidrapport-mall" />}
         preview={
           <>
             <PreviewImage

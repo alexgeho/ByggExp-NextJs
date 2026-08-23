@@ -40,9 +40,9 @@ type ToolContent = {
 
 const CONTENT: Record<Locale, ToolContent> = {
   sv: {
-    metaTitle: 'Takkalkylator 2026 – takyta, takpannor & läkt | ByggExp',
+    metaTitle: 'Takkalkylator 2026 – takyta, pannor, rännor & ställning | ByggExp',
     description:
-      'Räkna ut takytan för sadel- eller pulpettak och hela materialet: takpannor, bärläkt i löpmeter och underlagspapp. Gratis takkalkylator, utan konto.',
+      'Fyll i husets mått och taklutning så räknar vi takytan och hela materialet: takpannor, läkt, underlagspapp, hängrännor, stuprör och byggnadsställning. Gratis, utan konto.',
     badge: 'Gratis kalkylator',
     h1: 'Takkalkylator',
     intro:

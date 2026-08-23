@@ -40,9 +40,9 @@ type ToolContent = {
 
 const CONTENT: Record<Locale, ToolContent> = {
   sv: {
-    metaTitle: 'Gipskalkylator – gipsskivor, reglar & skruv 2026 | ByggExp',
+    metaTitle: 'Gipskalkylator – antal gipsskivor, reglar & skruv | ByggExp',
     description:
-      'Räkna ut hela materiallistan för en gipsvägg: antal gipsskivor, reglar (rätt c/c), syll/hammarband, isolering och skruv – utifrån väggens mått. Gratis, utan konto.',
+      'Fyll i väggens mått så räknar vi hela materiallistan: antal gipsskivor, reglar (rätt c/c), skruv och isolering – enkel- eller dubbelsidig. Gratis, utan konto.',
     badge: 'Gratis kalkylator',
     h1: 'Gipskalkylator',
     intro:

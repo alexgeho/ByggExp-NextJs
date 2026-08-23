@@ -62,7 +62,7 @@ export default function OffertLeadForm({
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!name.trim() || !phone.trim() || !project) return;
+    if (!email.trim() || !project) return;
     setStatus('sending');
     const message = [
       `Projekt: ${project}`,
@@ -134,12 +134,12 @@ export default function OffertLeadForm({
             <input value={name} onChange={(e) => setName(e.currentTarget.value)} autoComplete="name" required />
           </label>
           <label className="lm-tool-field">
-            <span>{t.email}</span>
-            <input type="email" value={email} onChange={(e) => setEmail(e.currentTarget.value)} autoComplete="email" />
+            <span>{t.email} <span className="lm-req">*</span></span>
+            <input type="email" value={email} onChange={(e) => setEmail(e.currentTarget.value)} autoComplete="email" required />
           </label>
           <label className="lm-tool-field">
             <span>{t.phone}</span>
-            <input type="tel" value={phone} onChange={(e) => setPhone(e.currentTarget.value)} autoComplete="tel" required />
+            <input type="tel" value={phone} onChange={(e) => setPhone(e.currentTarget.value)} autoComplete="tel" />
           </label>
         </div>
 

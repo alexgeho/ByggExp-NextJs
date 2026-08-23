@@ -40,9 +40,9 @@ type ToolContent = {
 
 const CONTENT: Record<Locale, ToolContent> = {
   sv: {
-    metaTitle: 'Beräkna takstolar – kalkylator för antal utifrån c/c | ByggExp',
+    metaTitle: 'Takstolar – räkna ut antal gratis (c/c-kalkylator) | ByggExp',
     description:
-      'Beräkna takstolar gratis: räkna ut antal takstolar utifrån takets längd och centrumavstånd (c/c). Enkel kalkylator för takstolsberäkning, utan konto.',
+      'Fyll i takets längd och centrumavstånd (c/c) så räknar kalkylatorn antalet takstolar direkt – t.ex. 10 m tak med c/c 1200 mm = 10 st. Gratis, utan konto.',
     badge: 'Gratis kalkylator',
     h1: 'Beräkna takstolar',
     intro:

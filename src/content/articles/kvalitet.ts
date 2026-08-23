@@ -112,7 +112,7 @@ const EGENKONTROLL_HTML = `
 <p>Egenkontroll är det som styrker att jobbet är gjort rätt – och det som räddar dig när någon i efterhand ifrågasätter kvaliteten. Men ordet betyder faktiskt två olika saker, och det är här många går vilse. Här reder vi ut vad en egenkontroll är, vad den ska innehålla, hur den hänger ihop med KMA – och hur du gör den utan pappersstrul.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/egenkontroll-cykel.webp" alt="Diagram: egenkontrollens cykel – planera, kontrollera, dokumentera, åtgärda avvikelse" width="720" height="380" loading="lazy"><figcaption>Egenkontrollen är en cykel: planera kontrollpunkterna, kontrollera, dokumentera med signatur och datum, åtgärda avvikelser.</figcaption></figure>
 
-<p><a href="/sv/verktyg/egenkontroll-mall">Ladda ner en gratis egenkontroll-mall (PDF) →</a></p>
+<p><a href="/sv/verktyg/egenkontroll-mall">Skapa en egenkontroll med AI för ditt moment – eller ladda ner en gratis mall (PDF) →</a></p>
 
 <h2>Vad är en egenkontroll?</h2>
 <p>En egenkontroll är din egen dokumenterade kontroll av att arbetet uppfyller kraven – ritningar, Boverkets byggregler (BBR) och gällande branschregler. Den ska innehålla tillräckligt för att någon annan ska kunna följa <em>vad</em> som kontrollerades, <em>mot vilket krav</em> och <em>med vilket resultat</em>. Egenkontrollen är ofta det enda beviset på att ett dolt moment – till exempel tätskikt eller infästning – faktiskt utfördes korrekt.</p>

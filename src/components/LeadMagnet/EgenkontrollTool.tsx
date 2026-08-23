@@ -267,13 +267,13 @@ export default function EgenkontrollTool() {
           ✨ Skapa en egenkontroll för just ditt moment – med AI
         </strong>
         <p className="lm-tool-sub" style={{ marginTop: 0 }}>
-          Beskriv vad du ska kontrollera så föreslår vi rätt kontrollpunkter med krav och
-          kontrollmetod – klart att granska, fylla i och skriva under.
+          Beskriv vad du ska kontrollera – el, VVS, tätskikt, betong, tak – så föreslår vi rätt
+          kontrollpunkter med krav och kontrollmetod, klart att granska, fylla i och skriva under.
         </p>
         <div className="lm-tool-grid">
           <label className="lm-tool-field">
             <span>Vad ska du kontrollera?</span>
-            <input value={aiMoment} placeholder="T.ex. tätskikt i våtrum, klinker" onChange={(e) => setAiMoment(e.currentTarget.value)} />
+            <input value={aiMoment} placeholder="T.ex. elinstallation i kök, tätskikt i våtrum" onChange={(e) => setAiMoment(e.currentTarget.value)} />
           </label>
           <label className="lm-tool-field">
             <span>Material / detaljer (valfritt)</span>

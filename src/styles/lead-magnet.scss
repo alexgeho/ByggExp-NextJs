@@ -419,6 +419,43 @@
   }
 }
 
+// --- instant "grab the blank template now" bar ------------------------------
+.lm-tool-instant {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 18px 20px;
+  border: 1px solid var(--lm-accent);
+  border-radius: 16px;
+  background: rgba(35, 148, 255, 0.06);
+}
+
+.lm-tool-instant-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1 1 240px;
+}
+
+.lm-tool-instant-text strong {
+  font-size: 1.05rem;
+}
+
+.lm-tool-instant-text span {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.lm-tool-instant-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 // --- ready-made template presets (fishka) -----------------------------------
 .lm-tool-presets {
   margin-bottom: 20px;

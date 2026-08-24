@@ -10,6 +10,16 @@ const CONFIG: MallConfig = {
   filePrefix: 'entreprenadkontrakt',
   stampField: 'project',
   signatures: ['Beställarens underskrift', 'Entreprenörens underskrift'],
+  instantDownload: {
+    label: 'Ladda ner tom entreprenadkontrakt-mall direkt',
+    note: 'PDF eller Word att skriva ut och fylla i för hand – inget konto behövs. Fyll hellre i digitalt nedan för ett färdigt kontrakt.',
+  },
+  presets: {
+    field: 'standard',
+    label: 'Välj standardavtal (fyller i mallen åt dig):',
+    options: ['AB 04', 'ABT 06', 'ABS 18', 'Hantverkarformuläret 17'],
+  },
+  persist: true,
   fields: [
     { name: 'project', label: 'Projekt / arbetsplats', placeholder: 'T.ex. Badrumsrenovering, Bäckvägen 12' },
     { name: 'date', label: 'Datum', type: 'date' },

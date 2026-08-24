@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // Generic form → PDF/Excel lead-magnet tool. Give it a set of fields, a heading
 // and an example, and the visitor fills it in and downloads a ready template as
@@ -25,24 +25,93 @@ export type MallConfig = {
   example: Record<string, string>;
   /** Two signature lines at the bottom of the PDF; omit to hide. */
   signatures?: [string, string];
+  /**
+   * Prominent "download the blank template right now" bar above the form.
+   * Serves visitors who just want the mall in one click (e.g. "abt 06 mall
+   * gratis") without scrolling or filling anything in.
+   */
+  instantDownload?: {
+    /** e.g. "Ladda ner tom entreprenadkontrakt-mall" */
+    label: string;
+    /** Small helper line under the buttons. */
+    note?: string;
+  };
+  /**
+   * Quick-fill chips that set a single field (e.g. pick AB 04 / ABT 06).
+   * Lets the searcher land on exactly the variant they googled.
+   */
+  presets?: {
+    field: string;
+    label: string;
+    options: string[];
+  };
+  /**
+   * Persist the visitor's input to localStorage so a bookmarked page keeps
+   * their draft on return. Off by default (other mall tools don't need it).
+   */
+  persist?: boolean;
 };
 
 export default function MallToPdfTool({ config }: { config: MallConfig }) {
   const empty: Record<string, string> = Object.fromEntries(config.fields.map((f) => [f.name, '']));
   const [values, setValues] = useState<Record<string, string>>(empty);
   const [busy, setBusy] = useState(false);
+  const storageKey = `mall-draft:${config.filePrefix}`;
+  const restored = useRef(false);
+
+  // Restore a saved draft on mount so a bookmarked page keeps the visitor's
+  // input. Runs once, client-side only.
+  useEffect(() => {
+    if (!config.persist || restored.current) return;
+    restored.current = true;
+    try {
+      const raw = window.localStorage.getItem(storageKey);
+      if (raw) {
+        const saved = JSON.parse(raw) as Record<string, string>;
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time restore of a saved draft after mount (avoids SSR/hydration mismatch)
+        setValues((prev) => ({ ...prev, ...saved }));
+      }
+    } catch {
+      // ignore unreadable/blocked storage
+    }
+  }, [config.persist, storageKey]);
+
+  // Save on change (only once a draft actually has content).
+  useEffect(() => {
+    if (!config.persist || !restored.current) return;
+    try {
+      const hasContent = Object.values(values).some((v) => v.trim() !== '');
+      if (hasContent) window.localStorage.setItem(storageKey, JSON.stringify(values));
+      else window.localStorage.removeItem(storageKey);
+    } catch {
+      // ignore quota/blocked storage
+    }
+  }, [config.persist, storageKey, values]);
 
   const setField = (name: string, value: string) =>
     setValues((prev) => ({ ...prev, [name]: value }));
 
   const fillExample = () => setValues({ ...empty, ...config.example });
 
-  const stamp = () => {
-    const raw = config.stampField ? values[config.stampField]?.trim() : '';
+  const clearForm = () => {
+    setValues(empty);
+    if (config.persist) {
+      try {
+        window.localStorage.removeItem(storageKey);
+      } catch {
+        // ignore
+      }
+    }
+  };
+
+  const activePreset = config.presets ? values[config.presets.field]?.trim() : '';
+
+  const stamp = (src: Record<string, string>) => {
+    const raw = config.stampField ? src[config.stampField]?.trim() : '';
     return raw ? raw.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'mall' : 'mall';
   };
 
-  async function downloadPdf() {
+  async function downloadPdf(src: Record<string, string> = values) {
     setBusy(true);
     try {
       const { jsPDF } = await import('jspdf');
@@ -70,7 +139,7 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
       y += 24;
 
       for (const field of config.fields) {
-        const value = values[field.name]?.trim() || '—';
+        const value = src[field.name]?.trim() || '—';
         if (y > pageHeight - 120) {
           doc.addPage();
           y = 64;
@@ -102,19 +171,19 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
         doc.text(`${config.signatures[1]}: ____________________________`, marginX, y);
       }
 
-      doc.save(`${config.filePrefix}-${stamp()}.pdf`);
+      doc.save(`${config.filePrefix}-${stamp(src)}.pdf`);
     } finally {
       setBusy(false);
     }
   }
 
   // CSV opens directly in Excel/Google Sheets (BOM keeps åäö correct).
-  function downloadCsv() {
+  function downloadCsv(src: Record<string, string> = values) {
     const rows: (string | number)[][] = [
       [config.pdfHeading, ''],
       ['Skapad med', 'ByggExp – byggexp.se'],
       [],
-      ...config.fields.map((field) => [field.label, values[field.name]?.trim() || '']),
+      ...config.fields.map((field) => [field.label, src[field.name]?.trim() || '']),
     ];
     const csv = rows
       .map((cols) => cols.map((c) => `"${String(c ?? '').replace(/"/g, '""')}"`).join(';'))
@@ -123,7 +192,7 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `${config.filePrefix}-${stamp()}.csv`;
+    link.download = `${config.filePrefix}-${stamp(src)}.csv`;
     document.body.appendChild(link);
     link.click();
     link.remove();
@@ -132,16 +201,63 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
 
   return (
     <div className="lm-tool">
+      {config.instantDownload && (
+        <div className="lm-tool-instant">
+          <div className="lm-tool-instant-text">
+            <strong>{config.instantDownload.label}</strong>
+            {config.instantDownload.note && <span>{config.instantDownload.note}</span>}
+          </div>
+          <div className="lm-tool-instant-actions">
+            <button
+              type="button"
+              className="lm-tool-button"
+              disabled={busy}
+              onClick={() => void downloadPdf(empty)}
+            >
+              {busy ? 'Skapar PDF…' : 'Ladda ner tom PDF'}
+            </button>
+            <button
+              type="button"
+              className="lm-tool-secondary"
+              onClick={() => downloadCsv(empty)}
+            >
+              Word / Excel
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="lm-tool-head">
         <h2 className="lm-tool-title">{config.pdfHeading}</h2>
         <p className="lm-tool-sub">{config.subtitle}</p>
       </div>
+
+      {config.presets && (
+        <div className="lm-tool-presets">
+          <span className="lm-tool-presets-label">{config.presets.label}</span>
+          <div className="lm-tool-presets-buttons">
+            {config.presets.options.map((option) => (
+              <button
+                key={option}
+                type="button"
+                className={`lm-tool-preset${activePreset === option ? ' is-active' : ''}`}
+                onClick={() => setField(config.presets!.field, option)}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Se hur den fylls i:</span>
         <div className="lm-tool-presets-buttons">
           <button type="button" className="lm-tool-preset" onClick={fillExample}>
             Fyll i exempel
+          </button>
+          <button type="button" className="lm-tool-preset" onClick={clearForm}>
+            Rensa formuläret
           </button>
         </div>
       </div>
@@ -183,7 +299,7 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
           <button type="submit" className="lm-tool-button" disabled={busy}>
             {busy ? 'Skapar PDF…' : 'Ladda ner PDF'}
           </button>
-          <button type="button" className="lm-tool-secondary" onClick={downloadCsv}>
+          <button type="button" className="lm-tool-secondary" onClick={() => downloadCsv()}>
             Ladda ner Excel
           </button>
         </div>

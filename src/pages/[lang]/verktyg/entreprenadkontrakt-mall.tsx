@@ -80,8 +80,8 @@ export default function EntreprenadkontraktMallPage() {
 
       <LeadMagnetPage
         badge="Gratis mall"
-        title="Entreprenadkontrakt – gratis mall"
-        intro="Fyll i uppgifterna och ladda ner ett färdigt entreprenadkontrakt som PDF eller Excel. Mallen täcker parter, prismodell, tider, vite, ÄTA, garanti och hävning – de punkter som avgör vid en tvist."
+        title="Entreprenadkontrakt – gratis mall (AB 04 / ABT 06)"
+        intro="Ladda ner en gratis entreprenadkontrakt-mall direkt, eller välj standardavtal (AB 04, ABT 06, ABS 18, Hantverkarformuläret 17), fyll i och få ut ett färdigt kontrakt som PDF eller Excel. Mallen täcker parter, prismodell, tider, vite, ÄTA, garanti och hävning – de punkter som avgör vid en tvist."
         tool={<EntreprenadkontraktMallTool />}
         leadForm={<ToolLeadForm tool="entreprenadkontrakt-mall" />}
         preview={

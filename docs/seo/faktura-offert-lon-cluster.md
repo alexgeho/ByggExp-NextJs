@@ -15,7 +15,7 @@ Senast uppdaterad: 2026-08-25.
 |---|---|---|---|
 | faktura | ✅ 2026-08-25 | ✅ | 28 rader, bucketade volymer (10–100) |
 | offert | ✅ 2026-08-25 | ✅ | 14 rader; `offertmall bygg` = 500/mån (störst hittills) |
-| lön / löneunderlag | ⏳ väntar | – | |
+| lön / löneunderlag | ✅ 2026-08-25 | ✅ | 6 rader, nästan allt blankt — dött för nytt innehåll |
 | kalkyl / anbud | ⏳ väntar | – | |
 | ROT (rent) | ⏳ väntar | – | delvis täckt av faktura-batchen |
 
@@ -94,6 +94,19 @@ redan täckt av lead-magnet-verktyget.** Program/app-termer = noll volym igen.
 
 ---
 
+## 1c. Databatch: LÖN / LÖNEUNDERLAG (2026-08-25)
+
+**Nästan helt tomt.** Bekräftar mönstret för tredje gången: "program/app/system +
+bygg" har ingen volym i SE.
+- `löneprogram bygg` = 10–100. Resten (`lönesystem byggföretag`, `löneunderlag app`,
+  `lön bygg app`, `byggavtalet lön program`, `ackordslön program bygg`) = **blank**.
+- Befintligt räcker: artikel `loneprogram-bygg`, feature `loneunderlag-for-byggforetag`,
+  `ackordslon-bygg`. Den riktiga lön-efterfrågan ligger i byggavtals-/regeltermer
+  (semesterlön, OB, traktamente, sjuklön) som redan är väl täckta i regelverk/personal.
+- **Slutsats: lön = INGEN ny sida. Dött för kommersiellt SEO-innehåll.**
+
+---
+
 ## 2. Framväxande stridsplan (uppdateras allt eftersom batcher kommer)
 
 ### Beslutade byggen
@@ -107,9 +120,10 @@ redan täckt av lead-magnet-verktyget.** Program/app-termer = noll volym igen.
 - **Offert: INGEN ny pillar.** Huvudterm `offertmall bygg` (500/mån) täcks redan av
   verktyget `/sv/verktyg/offert-mall`. Valfritt: lägg "bygg" i verktygets h1 (låg prio).
 
+### Beslutade (lön)
+- **Lön: INGEN ny sida.** Batch nästan tom; befintligt räcker.
+
 ### Att besluta när fler batcher kommit
-- Lön/löneunderlag-pillar? (avvaktar lön-CSV — obs `loneunderlag-for-byggforetag`
-  finns redan som feature-artikel)
 - Kalkyl/anbud-pillar? (avvaktar kalkyl-CSV — `kalkylprogram-bygg`,
   `efterkalkyl-bygg-kalkyluppfoljning` finns)
 

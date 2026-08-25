@@ -1330,7 +1330,7 @@ const S_TIDRAPPORTERING_ENTREPRENAD: BlogPost = {
   title: "Tidrapportering för entreprenad – spårbara timmar och attestering", slug: "tidrapportering-entreprenad", locale: "sv",
   excerpt: "Tidrapportering i entreprenader: rapportera per projekt, attestera innan låsning och få spårbart underlag för fakturering och avstämning med beställaren.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: S_TIDRAPPORTERING_ENTREPRENAD_HTML,
-  seoTitle: "Tidrapportering för entreprenad – attestering & underlag | ByggExp", seoDescription: "Tidrapportering för entreprenad: spårbara timmar per projekt, attestering före låsning och underlag för fakturering på löpande räkning och avstämning med beställaren.",
+  seoTitle: "Tidrapportering för entreprenad – attestering | ByggExp", seoDescription: "Tidrapportering för entreprenad: spårbara timmar per projekt, attestering före låsning och underlag för fakturering på löpande räkning och avstämning med beställaren.",
   seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T10:05:00.000Z", createdAt: "2026-08-22T10:05:00.000Z", updatedAt: "2026-08-22T10:05:00.000Z",
 };
@@ -1523,7 +1523,7 @@ const S_TIDSREGISTRERING_APP_BYGG: BlogPost = {
   title: "Tidsregistrering app för bygg – korrekt arbetstid i mobilen", slug: "tidsregistrering-app-bygg", locale: "sv",
   excerpt: "Tidsregistrering-app för bygg: fånga arbetstidens början och slut i mobilen med GPS, kopplat till projekt. Grunden för lön, faktura och uppföljning.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: S_TIDSREGISTRERING_APP_BYGG_HTML,
-  seoTitle: "Tidsregistrering app för bygg – arbetstid i mobilen | ByggExp", seoDescription: "Tidsregistrering-app för bygg: fånga arbetstidens början och slut i mobilen – första steget i kedjan tidsregistrering → tidrapportering → tidredovisning. GPS, offline och koll på arbetstidslagen.",
+  seoTitle: "Tidsregistrering app för bygg – arbetstid i mobilen | ByggExp", seoDescription: "Tidsregistrering-app för bygg: fånga arbetstidens början och slut i mobilen med GPS. Första steget före tidrapportering och tidredovisning. Fungerar offline.",
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T10:25:00.000Z", createdAt: "2026-08-22T10:25:00.000Z", updatedAt: "2026-08-22T10:25:00.000Z",
 };

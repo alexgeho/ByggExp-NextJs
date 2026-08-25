@@ -116,6 +116,21 @@ const AB04_HTML = `
 <li><strong>ABT 06 – totalentreprenad.</strong> Entreprenören ansvarar för både projektering och utförande. Beställaren sätter funktionskrav och entreprenören levererar en färdig lösning som uppfyller dem.</li>
 </ul>
 <p>Kort sagt: med AB 04 följer entreprenören beställarens ritningar, med ABT 06 tar entreprenören helhetsansvaret.</p>
+<div class="article-table"><table>
+<thead><tr><th>&nbsp;</th><th>AB 04</th><th>ABT 06</th></tr></thead>
+<tbody>
+<tr><td><strong>Entreprenadform</strong></td><td>Utförandeentreprenad</td><td>Totalentreprenad</td></tr>
+<tr><td><strong>Vem projekterar</strong></td><td>Beställaren</td><td>Entreprenören</td></tr>
+<tr><td><strong>Ritningsrisk</strong></td><td>Beställaren</td><td>Entreprenören</td></tr>
+<tr><td><strong>Beställaren anger</strong></td><td>Färdiga handlingar</td><td>Funktionskrav</td></tr>
+<tr><td><strong>Garantitid</strong></td><td>5 år arbete / 2 år material</td><td>5 år för entreprenaden</td></tr>
+<tr><td><strong>Ansvarstid</strong></td><td colspan="2">10 år från godkänd entreprenad (inleds med garantitiden)</td></tr>
+<tr><td><strong>Typiskt projekt</strong></td><td>Detaljprojekterat bygge</td><td>Nyckelfärdig lösning</td></tr>
+</tbody>
+</table></div>
+
+<h2>När använder du AB 04 respektive ABT 06?</h2>
+<p>Valet styrs av vem som ska ta fram lösningen. Vill beställaren ha kontroll över utformningen och redan har (eller köper) färdig projektering passar <strong>AB 04</strong> – entreprenören bygger enligt handlingarna. Vill beställaren i stället köpa ett resultat och lägga över ansvaret för att lösningen fungerar passar <strong>ABT 06</strong> – entreprenören projekterar och bär ritningsrisken. Samma jobb kan alltså upphandlas på båda sätten; det är ansvarsfördelningen, inte byggets storlek, som avgör. För underentreprenader finns dessutom back-to-back-varianter, se <a href="/sv/blog/ab-u-underentreprenor-avtal">AB-U och ABT-U för underentreprenörer</a>.</p>
 
 <h2>ÄTA-arbeten</h2>
 <p>Ändrings-, tilläggs- och avgående arbeten (ÄTA) regleras i kap 2. Det är här mest pengar tvistas om – rätt hantering och underrättelse i tid avgör om du får betalt. Läs mer i vår <a href="/sv/blog/ata-arbeten">guide om ÄTA-arbeten</a>.</p>
@@ -128,6 +143,22 @@ const AB04_HTML = `
 <li><strong>AB 04:</strong> garantitid 5 år för entreprenörens arbetsprestation och 2 år för material och varor.</li>
 <li><strong>ABT 06:</strong> garantitid 5 år för entreprenaden.</li>
 <li><strong>Ansvarstid:</strong> 10 år från det att entreprenaden godkänts, och inleds med garantitiden. Under ansvarstiden kan entreprenören bli ansvarig för väsentliga fel som beror på vårdslöshet.</li>
+</ul>
+<p>Vill du gå djupare? Läs <a href="/sv/blog/garantitid-ansvarstid-ab-04">garantitid och ansvarstid i AB 04</a>.</p>
+
+<h2>Var får du tag på AB 04 och ABT 06?</h2>
+<p>Till skillnad från konsumentavtalen (som Hantverkarformuläret 17) är AB 04 och ABT 06 inte gratis blanketter. De ges ut av Byggandets Kontraktskommitté (BKK) och säljs som tryck och PDF via Svensk Byggtjänst. Du "laddar alltså inte ner" dem fritt – du hänvisar till dem i ditt entreprenadkontrakt och tillämpar villkoren. Själva kontraktet och underlaget bygger du enkelt med en gratis <a href="/sv/verktyg/entreprenadkontrakt-mall">entreprenadkontrakt-mall</a>, där du väljer om AB 04 eller ABT 06 ska gälla.</p>
+
+<h2>Fördjupning: AB 04 och ABT 06 i detalj</h2>
+<p>Den här guiden är översikten. För enskilda moment finns djupare genomgångar:</p>
+<ul>
+<li><a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a> – ändringar och tillägg, och hur du får betalt.</li>
+<li><a href="/sv/blog/slutbesiktning">Slutbesiktning enligt AB 04</a> – när ansvaret går över.</li>
+<li><a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid</a> – 5 och 10 år.</li>
+<li><a href="/sv/blog/garantibesiktning-2-ar-entreprenad">Garantibesiktning efter 2 år</a>.</li>
+<li><a href="/sv/blog/hindersanmalan-tidsforlangning-ab04">Hindersanmälan och tidsförlängning</a> – undvik vite.</li>
+<li><a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">Entreprenadgaranti och säkerhet</a>.</li>
+<li><a href="/sv/blog/nya-ab-04-abt-06-revidering-2027">Revideringen mot AB 25 / ABPU 25</a> – vad som är på gång.</li>
 </ul>
 
 <h2>Vanliga misstag</h2>
@@ -145,6 +176,12 @@ const AB04_HTML = `
 <p>Fem år för entreprenörens arbete (två år för material enligt AB 04). Ansvarstiden är tio år från godkänd entreprenad.</p>
 <h3>Var regleras ÄTA?</h3>
 <p>I kap 2 i AB 04 och ABT 06. Se vår <a href="/sv/blog/ata-arbeten">ÄTA-guide</a> för hur du får betalt.</p>
+<h3>Vad betyder "allmänna bestämmelser"?</h3>
+<p>Det är färdiga, branschgemensamma avtalsvillkor. AB 04 heter i sin helhet "Allmänna bestämmelser för byggnads-, anläggnings- och installationsentreprenader" och ABT 06 motsvarande för totalentreprenader. Du hänvisar till dem i kontraktet i stället för att skriva alla villkor själv.</p>
+<h3>Kan man ladda ner AB 04 och ABT 06 gratis?</h3>
+<p>Nej. De ges ut av BKK och säljs via Svensk Byggtjänst (tryck/PDF). De är alltså inte fria blanketter som konsumentavtalen – du köper dokumentet och hänvisar till det i ditt kontrakt.</p>
+<h3>Ska jag välja AB 04 eller ABT 06?</h3>
+<p>Välj AB 04 om beställaren projekterar och entreprenören bygger enligt handlingarna. Välj ABT 06 om entreprenören ska ansvara för både projektering och utförande utifrån funktionskrav.</p>
 
 <h2>Kom igång</h2>
 <p>Håll koll på kontrakt, ÄTA, dagbok och ekonomi på ett ställe. Ladda ner en gratis <a href="/sv/verktyg/entreprenadkontrakt-mall">entreprenadkontrakt-mall</a>, <a href="/sv/blog/ata-arbeten">läs om ÄTA</a>, skapa offert och faktura i ByggExp eller <a href="/sv/contact">boka en demo</a>.</p>

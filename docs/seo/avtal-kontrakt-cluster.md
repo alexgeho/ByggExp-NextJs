@@ -21,7 +21,7 @@ Senast uppdaterad: 2026-08-25.
 | entreprenadkontrakt / avtal | ✅ 2026-08-25 | ✅ | mall-varianter 10–100; huvudterm redan täckt av verktyget |
 | hantverkare avtal / ABS / hantverkarformuläret | ✅ 2026-08-25 | ✅ | STORT: hantverkarformuläret/abs 18/hantverkarformuläret 17 = 500 var + lång svans (versioner, pdf, konsumentverket) |
 | ÄTA | ✅ 2026-08-25 | ✅ | `äta arbeten` = 500 + svans (betyder/definition/exempel/likställd/ersättning/tvist); brus: "mall of scandinavia" (köpcentrum) |
-| AB 04 / ABT 06 | ⏳ | – |
+| AB 04 / ABT 06 | ✅ 2026-08-25 | ✅ | STÖRST i HELA projektet: `abt 06`=5000, `ab04`=5000, `ab 04`=500 + enorm svans |
 
 ## 1. Seed-listor (klistra i Keyword Planner, SE/Svenska, exportera CSV)
 
@@ -102,8 +102,33 @@ och täckte hela svansen (betyder/definition/likställd/ersättning/exempel/tvis
 Flagship-polerad → 1250 ord: + diagram (`ata-flode`), + seoTitle taktar nu huvudtermen
 "ÄTA-arbeten" (var "ÄTA-hantering mall & rutin"). Funnlar till ata-mall.
 
-## 2. Stridsplan (byggs när data kommit)
-_(fylls i per batch)_
+## 1d. Databatch: AB 04 / ABT 06 (2026-08-25) — STÖRST i hela projektet
+**`abt 06` = 5000/mån, `ab04` = 5000/mån** (bucket 1000–10000), `ab 04` = 500,
+`ab04 abt06` = 500. Enorm svans (10–100): skillnad (många varianter), allmänna
+bestämmelser, ladda ner/download/köpa, mall, utförande- vs totalentreprenad,
+entreprenadjuridik, kurs/utbildning, en kommentar, AB-U/ABT-U, entreprenadkontrakt ab04/abt06.
+
+**ÅTGÄRD (utförd):** kärnpelaren finns som CODE-artikel `ab-04-och-abt-06` (juridik.ts,
+AB04_HTML) och taktar huvudtermerna + skillnad. Var tunn (~470 ord) för projektets
+största term → flagship-uppgraderad **470 → 887 ord**: jämförelsetabell (utförande vs
+total), sektion "När använder du vilket", "Var får du tag på AB 04/ABT 06?" (ladda
+ner/köpa-svansen → Svensk Byggtjänst), hub "Fördjupning" som länkar till 7 smala
+AB04-artiklar (garantitid, slutbesiktning, garantibesiktning, hindersanmälan,
+entreprenadgaranti, revidering 2027, ÄTA) → gör sidan till pelare i AB04-klustret.
++3 FAQ (allmänna bestämmelser, ladda ner gratis?, välja vilket). Funnlar till
+entreprenadkontrakt-mall.
+
+## 2. SLUTLIG STRIDSPLAN — avtal-klustret KLART 2026-08-25
+| Delkluster | Volym-topp | Åtgärd |
+|---|---|---|
+| **AB 04 / ABT 06** | abt06/ab04 = 5000 | ✅ flagship `ab-04-och-abt-06` 470→887w + hub |
+| **hantverkarformuläret / ABS 18** | 3× 500 | ✅ flagship `abs-18-hantverkarformularet-17` 1198→1519w + diagram |
+| **ÄTA** | äta arbeten = 500 | ✅ flagship `ata-hantering-mall` + diagram + retitle |
+| **entreprenadkontrakt** | mall-varianter 10–100 | ✅ redan täckt av verktyget |
+
+**Lärdom bekräftad igen:** de feta B2B-termerna (ab04/abt06/äta arbeten/hantverkarformuläret)
+har verklig volym OCH ren proffsintent – tvärtemot "app/program+bygg". Intent-brus
+noterat: "mall of scandinavia äta" (köpcentrum). Nästa lever = backlinks (owner).
 
 ## 3. TODO
 - [ ] Få CSV per seed-grupp.

@@ -837,3 +837,45 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* Wide two-column tool layout (opt-in via LeadMagnetPage `wide`).
+   Inputs on the left, the live result panel sticky on the right, so the numbers
+   stay in view while you type instead of sitting below a long form. */
+.lm-tool-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+.lm-tool-aside {
+  position: sticky;
+  top: 20px;
+}
+.lm-tool-aside .lm-result {
+  margin-top: 0;
+}
+@media (max-width: 900px) {
+  .lm-tool-split {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .lm-tool-aside {
+    position: static;
+  }
+}
+
+/* Wide page variant: the page/tool goes wide, but reading blocks stay at a
+   comfortable measure so long text is still easy to read. */
+.lead-magnet--wide .container {
+  max-width: 1160px;
+}
+.lead-magnet--wide .lead-magnet-hero,
+.lead-magnet--wide .lead-magnet-section,
+.lead-magnet--wide .lead-magnet-faq,
+.lead-magnet--wide .lead-magnet-cta,
+.lead-magnet--wide .lead-magnet-related,
+.lead-magnet--wide .lm-tool-disclaimer {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}

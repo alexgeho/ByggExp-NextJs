@@ -324,6 +324,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         <p className="lm-tool-sub">{t.sub}</p>
       </div>
 
+      <div className="lm-tool-split">
       <div className="lm-tool-grid">
         <label className={fld}><span>{t.shapeQ}</span>
           <select value={shape} onChange={(e) => setShape(e.currentTarget.value as Shape)}>
@@ -403,6 +404,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         <label className={fld}><span>{t.spill}</span><input type="number" min="0" inputMode="decimal" value={spill} onChange={(e) => setSpill(e.currentTarget.value)} /></label>
       </div>
 
+      <div className="lm-tool-aside">
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight"><span>{t.rVolume}</span><strong>{nf(r.volume, 2)} m³</strong></div>
         {concreteMode === 'sack'
@@ -418,6 +420,8 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
             {r.baseVol > 0 ? <div className="lm-result-row"><span>{t.rBase}</span><span>{nf(r.baseVol, 2)} m³</span></div> : null}
           </>
         ) : null}
+      </div>
+      </div>
       </div>
 
       {shape === 'platta' ? (

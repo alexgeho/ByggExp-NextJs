@@ -54,6 +54,12 @@ export type LeadMagnetPageProps = {
   embedTitle?: string;
   /** Locale for the built-in tool disclaimer (sv default, en for /en). */
   locale?: CalcLocale | 'ru';
+  /**
+   * Wide layout: the page uses a wider container and the tool can lay its inputs
+   * and live result out in two columns (see `.lm-tool-split`). Reading blocks
+   * stay at a comfortable measure. Opt-in per calculator.
+   */
+  wide?: boolean;
 };
 
 export default function LeadMagnetPage({
@@ -72,6 +78,7 @@ export default function LeadMagnetPage({
   embedSlug,
   embedTitle,
   locale = 'sv',
+  wide = false,
 }: LeadMagnetPageProps) {
   const disclaimer =
     locale === 'ru'
@@ -80,8 +87,8 @@ export default function LeadMagnetPage({
       ? 'This tool gives an estimate and is an aid – not a finished calculation. Always check the result against drawings, applicable regulations, supplier data and your professional experience before giving a binding price, ordering material or using the file. ByggExp is not responsible for decisions made solely on the basis of the tool.'
       : 'Verktyget ger en uppskattning och är ett hjälpmedel – inte en färdig kalkyl. Kontrollera alltid resultatet mot ritning, gällande regler, leverantörens uppgifter och din yrkeserfarenhet innan du lämnar ett bindande pris, beställer material eller använder filen. ByggExp ansvarar inte för beslut som fattas enbart utifrån verktyget.';
   return (
-    <article className="lead-magnet">
-      <div className="container container-narrow">
+    <article className={wide ? 'lead-magnet lead-magnet--wide' : 'lead-magnet'}>
+      <div className={wide ? 'container' : 'container container-narrow'}>
         <header className="lead-magnet-hero">
           {badge ? <span className="lead-magnet-badge">{badge}</span> : null}
           <h1 className="lead-magnet-title">{title}</h1>

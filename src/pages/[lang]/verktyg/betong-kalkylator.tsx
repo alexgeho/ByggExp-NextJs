@@ -503,6 +503,7 @@ export default function Page({ lang }: { lang: Locale }) {
         badge={c.badge}
         title={c.h1}
         intro={c.intro}
+        wide
         embedSlug={lang === 'ru' ? undefined : 'betong-kalkylator'}
         embedTitle={c.h1}
         locale={lang}

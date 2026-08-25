@@ -422,6 +422,7 @@ export default function Page({ lang }: { lang: Locale }) {
           />
         }
         sections={c.sections}
+        wide
         embedSlug={lang === 'ru' ? undefined : 'gips-kalkylator'}
         embedTitle={c.h1}
         faqHeading={c.faqHeading}

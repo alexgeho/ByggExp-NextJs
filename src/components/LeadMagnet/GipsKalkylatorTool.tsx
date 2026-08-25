@@ -180,6 +180,7 @@ export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         <p className="lm-tool-sub">{t.sub}</p>
       </div>
 
+      <div className="lm-tool-split">
       <div className="lm-tool-grid">
         <label className="lm-tool-field">
           <span>{t.length}</span>
@@ -243,6 +244,7 @@ export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         </label>
       </div>
 
+      <div className="lm-tool-aside">
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rSheets}</span>
@@ -285,6 +287,8 @@ export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
             {t.pdf}
           </button>
         </div>
+      </div>
+      </div>
       </div>
     </div>
   );

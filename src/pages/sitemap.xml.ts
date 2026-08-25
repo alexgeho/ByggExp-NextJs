@@ -3,7 +3,7 @@ import type { GetServerSideProps } from 'next';
 import { fetchPublishedBlogPosts } from '../lib/blog-api';
 import { getCodeArticles } from '../content/code-articles';
 import { VERKTYG_GROUPS } from '../content/verktyg-list';
-import { landingLanguageCodes } from '../locales/languages';
+import { landingLanguageCodes, svEnLocales } from '../locales/languages';
 import { localeOrigin } from '../lib/seo';
 
 // Static routes that exist under every landing locale (besides the home page).
@@ -11,6 +11,13 @@ const LOCALE_STATIC_PATHS = [
   'blog',
   'funktioner',
   'contact',
+];
+
+// Legal pages are only written in sv + en; the /ru copies serve the en text and
+// canonicalise to /en (see LegalDocument). Listing those /ru URLs in the sitemap
+// submits non-canonical pages and feeds GSC "Duplicate without user-selected
+// canonical", so we only emit them for the locales they actually have content in.
+const LEGAL_STATIC_PATHS = [
   'villkor',
   'integritetspolicy',
   'dpa',
@@ -58,6 +65,13 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
     LOCALE_STATIC_PATHS.forEach((path) => {
       urls.push({ loc: `${origin}/${lang}/${path}` });
     });
+    // Legal pages: only the locales that have real content (sv + en). On
+    // byggexp.no the nb legal pages are separate, so skip legal there entirely.
+    if (svEnLocales.includes(lang as (typeof svEnLocales)[number])) {
+      LEGAL_STATIC_PATHS.forEach((path) => {
+        urls.push({ loc: `${origin}/${lang}/${path}` });
+      });
+    }
   });
 
   // Free tools. byggexp.se lists the full sv inventory; byggexp.no lists the

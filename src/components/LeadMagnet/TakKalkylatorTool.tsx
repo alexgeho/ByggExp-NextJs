@@ -198,11 +198,7 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
   const fld = 'lm-tool-field';
 
   return (
-    <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">{t.title}</h2>
-        <p className="lm-tool-sub">{t.sub}</p>
-      </div>
+    <div className="lm-tool lm-tool--split">
 
       <div className="lm-tool-grid">
         <label className={fld}><span>{t.formL}</span>

@@ -120,11 +120,7 @@ export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
 
   const fld = 'lm-tool-field';
   return (
-    <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">{t.title}</h2>
-        <p className="lm-tool-sub">{t.sub}</p>
-      </div>
+    <div className="lm-tool lm-tool--split">
       <div className="lm-tool-grid">
         <label className={fld}><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 6' : 't.ex. 6'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
         <label className={fld}><span>{t.height}</span><input type="number" min="0" inputMode="decimal" value={height} onChange={(e) => setHeight(e.currentTarget.value)} /></label>

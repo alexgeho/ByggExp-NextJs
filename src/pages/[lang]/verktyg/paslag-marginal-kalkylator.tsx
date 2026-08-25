@@ -309,6 +309,7 @@ export default function PaslagKalkylatorPage({ lang }: { lang: Locale }) {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        wide
         badge={c.badge}
         title={c.h1}
         intro={c.intro}

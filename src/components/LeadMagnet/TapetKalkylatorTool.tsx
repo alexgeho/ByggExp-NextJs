@@ -104,11 +104,7 @@ export default function TapetKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
   });
 
   return (
-    <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">{t.title}</h2>
-        <p className="lm-tool-sub">{t.sub}</p>
-      </div>
+    <div className="lm-tool lm-tool--split">
       <div className="lm-tool-grid">
         <label className="lm-tool-field"><span>{t.wallWidth}</span><input type="number" min="0" inputMode="decimal" value={wallWidth} placeholder={en ? 'e.g. 12' : 't.ex. 12'} onChange={(e) => setWallWidth(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.height}</span><input type="number" min="0" inputMode="decimal" value={height} onChange={(e) => setHeight(e.currentTarget.value)} /></label>

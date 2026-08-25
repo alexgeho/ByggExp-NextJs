@@ -281,6 +281,7 @@ export default function MomsKalkylatorPage({ lang }: { lang: L }) {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        wide
         badge={c.badge}
         title={c.h1}
         intro={c.intro}

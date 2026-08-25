@@ -124,11 +124,7 @@ export default function GolvKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
   const disabled = r.packs <= 0;
 
   return (
-    <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">{t.title}</h2>
-        <p className="lm-tool-sub">{t.sub}</p>
-      </div>
+    <div className="lm-tool lm-tool--split">
 
       <div className="lm-tool-grid">
         <label className="lm-tool-field">

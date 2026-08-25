@@ -81,11 +81,7 @@ export default function TakstolarKalkylatorTool({ locale = 'sv' }: { locale?: Ca
   });
 
   return (
-    <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">{t.title}</h2>
-        <p className="lm-tool-sub">{t.sub}</p>
-      </div>
+    <div className="lm-tool lm-tool--split">
       <div className="lm-tool-grid">
         <label className="lm-tool-field"><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 10' : 't.ex. 10'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.cc}</span><input type="number" min="0" inputMode="numeric" value={cc} onChange={(e) => setCc(e.currentTarget.value)} /></label>

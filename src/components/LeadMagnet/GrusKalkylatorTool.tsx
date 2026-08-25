@@ -90,11 +90,7 @@ export default function GrusKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
   });
 
   return (
-    <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">{t.title}</h2>
-        <p className="lm-tool-sub">{t.sub}</p>
-      </div>
+    <div className="lm-tool lm-tool--split">
       <div className="lm-tool-grid">
         <label className="lm-tool-field"><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 10' : 't.ex. 10'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.width}</span><input type="number" min="0" inputMode="decimal" value={width} placeholder={en ? 'e.g. 3' : 't.ex. 3'} onChange={(e) => setWidth(e.currentTarget.value)} /></label>

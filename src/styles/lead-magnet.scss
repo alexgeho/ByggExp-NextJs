@@ -890,3 +890,47 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Class-based wide split (rolled out to all calculators). The result is placed in
+   the right column, everything else (inputs, cost, actions) stacks in the left —
+   robust to each tool's exact child structure, no per-tool wrapper needed. */
+.lm-tool--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 1fr);
+  column-gap: 22px;
+  row-gap: var(--lm-gap);
+  align-items: start;
+}
+.lm-tool--split > * {
+  grid-column: 1;
+  margin-bottom: 0;
+}
+.lm-tool--split > .lm-tool-grid {
+  background: rgba(10, 40, 90, 0.02);
+  border: 1px solid var(--lm-card-border);
+  border-radius: 14px;
+  padding: 20px;
+}
+.lm-tool--split > .lm-result {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 0;
+  position: sticky;
+  top: 20px;
+  align-self: start;
+  background: rgba(37, 99, 201, 0.035);
+}
+@media (max-width: 900px) {
+  .lm-tool--split {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+  .lm-tool--split > .lm-result {
+    grid-column: 1;
+    grid-row: auto;
+    position: static;
+  }
+  .lm-tool--split > .lm-tool-grid {
+    padding: 16px;
+  }
+}

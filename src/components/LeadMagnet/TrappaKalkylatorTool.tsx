@@ -47,11 +47,7 @@ export default function TrappaKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [height, targetRise, locale]);
   return (
-    <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">{t.title}</h2>
-        <p className="lm-tool-sub">{t.sub}</p>
-      </div>
+    <div className="lm-tool lm-tool--split">
       <div className="lm-tool-grid">
         <label className="lm-tool-field"><span>{t.height}</span><input type="number" min="0" inputMode="numeric" value={height} placeholder={t.heightPh} onChange={(e) => setHeight(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.targetRise}</span><input type="number" min="0" inputMode="numeric" value={targetRise} onChange={(e) => setTargetRise(e.currentTarget.value)} /></label>

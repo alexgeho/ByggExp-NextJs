@@ -98,11 +98,7 @@ export default function KvadratmeterKalkylatorTool({ locale = 'sv' }: { locale?:
   const fakturaUrl = fakturaHref(seedRows);
 
   return (
-    <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">{t.title}</h2>
-        <p className="lm-tool-sub">{t.sub}</p>
-      </div>
+    <div className="lm-tool lm-tool--split">
 
       <div className="lm-tool-rows">
         <div className="lm-tool-row lm-tool-row-head">

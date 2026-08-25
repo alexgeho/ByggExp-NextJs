@@ -46,11 +46,7 @@ export default function FallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
   const unitHint = unit === 'procent' ? t.hPct : unit === 'ratio' ? t.hRatio : t.hMm;
   const valLabel = unit === 'procent' ? t.labPct : unit === 'ratio' ? t.labRatio : t.labMm;
   return (
-    <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">{t.title}</h2>
-        <p className="lm-tool-sub">{t.sub}</p>
-      </div>
+    <div className="lm-tool lm-tool--split">
       <div className="lm-tool-grid">
         <label className="lm-tool-field"><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={t.hLen} onChange={(e) => setLength(e.currentTarget.value)} /></label>
         <label className="lm-tool-field">

@@ -515,7 +515,7 @@ const A_ROT_FAKTURERING_PROGRAM_HTML = `
 <li><strong>Fel kunduppgifter.</strong> Saknas rätt underlag fastnar utbetalningen.</li>
 </ul>
 
-<p>Rätt ROT-fakturering sparar tid och undviker nekade avdrag – nyckeln är att arbetet särskiljs och att avdraget räknas i systemet, inte i huvudet.</p>
+<p>Rätt ROT-fakturering sparar tid och undviker nekade avdrag – nyckeln är att arbetet särskiljs och att avdraget räknas i systemet, inte i huvudet. Vill du se ett konkret räkneexempel steg för steg? Läs <a href="/sv/blog/faktura-med-rotavdrag">faktura med rotavdrag – exempel och mall</a>.</p>
 `;
 
 const A_ROT_FAKTURERING_PROGRAM: BlogPost = {

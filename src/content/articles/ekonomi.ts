@@ -510,7 +510,7 @@ const FAKTURA_HTML = `
 
 <p>Checklista före varje faktura: fakturanummer i obruten serie, faktura- och leveransdatum, säljarens momsnr, köparens uppgifter, specificerad tjänst, pris ex moms, rätt momssats (eller omvänd byggmoms-märkning), ROT-uppdelning vid privatkund, "Godkänd för F-skatt", samt förfallodatum och villkor.</p>
 
-<p>Relaterat: <a href="/sv/blog/skriva-offert">Skriva offert som hantverkare</a> och <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a>.</p>
+<p>Relaterat: <a href="/sv/blog/faktura-med-rotavdrag">Faktura med rotavdrag – exempel &amp; mall</a>, <a href="/sv/blog/skriva-offert">Skriva offert som hantverkare</a> och <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a>.</p>
 `.trim();
 
 const FAKTURA: BlogPost = {
@@ -2330,7 +2330,7 @@ const A_ROTAVDRAG_2026_NYA_REGLER_FORETAG_HTML = `
 <h2>Kom igång</h2>
 <p>Räkna ut kundens nettopris och företagets utbetalning på sekunder med vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylator</a>. Vill du se hur ByggExp kan effektivisera hela flödet från offert till betald faktura? <a href="/sv/contact">Boka en demo här</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/rot-avdrag">Rotavdrag – så fungerar det</a> och <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a>.</p>
+<p>Relaterat: <a href="/sv/blog/rot-avdrag">Rotavdrag – så fungerar det</a>, <a href="/sv/blog/faktura-med-rotavdrag">Faktura med rotavdrag – exempel &amp; mall</a> och <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a>.</p>
 `;
 
 const A_ROTAVDRAG_2026_NYA_REGLER_FORETAG: BlogPost = {
@@ -3128,7 +3128,7 @@ const A_BYGGFAKTURA_CHECKLISTA_ROT_HTML = `
 <h2>Kom igång</h2>
 <p>Skapa en korrekt ROT-faktura direkt i <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall &rarr;</a>, eller räkna på avdraget med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur hela flödet från tidrapport till ROT-faktura fungerar i praktiken? <a href="/sv/contact">Boka en demo &rarr;</a></p>
 
-<p>Relaterat: <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a>, <a href="/sv/blog/rot-avdrag">Allt om ROT-avdraget</a> och <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a>.</p>
+<p>Relaterat: <a href="/sv/blog/faktura-med-rotavdrag">Faktura med rotavdrag – exempel &amp; mall</a>, <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a> och <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a>.</p>
 `;
 
 const A_BYGGFAKTURA_CHECKLISTA_ROT: BlogPost = {
@@ -4561,7 +4561,7 @@ const A_VAD_SKA_FAKTURA_INNEHALLA_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Skapa en korrekt faktura direkt med <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall &rarr;</a>, eller <a href="/sv/contact">boka en demo</a> om du vill se hur ByggExp håller ordning på fakturor, ROT-underlag och betalningsvillkor i ett flöde.</p>
 
-<p>Relaterat: <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare – så gör du rätt</a> och <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturor</a>.</p>
+<p>Relaterat: <a href="/sv/blog/faktura-med-rotavdrag">Faktura med rotavdrag – exempel &amp; mall</a>, <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare – så gör du rätt</a> och <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturor</a>.</p>
 `;
 
 const A_VAD_SKA_FAKTURA_INNEHALLA_BYGG: BlogPost = {
@@ -5144,7 +5144,7 @@ const A_SKATTEVERKET_NEKAR_ROTAVDRAG_FORBEHALL_HTML = `
 
 <h2>Kom igång</h2>
 <p>Skriv aldrig ett ROT-jobb utan förbehållsklausul. Börja med att räkna rätt i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a> och lägg in förbehållet i din <a href="/sv/verktyg/offert-mall">offertmall</a>. Vill du se hur ByggExp binder ihop offert, avtal och faktura med ROT-underlaget? <a href="/sv/contact">Boka en demo -&gt;</a></p>
-<p>Relaterat: <a href="/sv/blog/rotavdrag-2026-nya-regler-foretag">ROT-avdraget 2026 – nya regler för företag</a>, <a href="/sv/blog/entreprenadkontrakt-mall">Entreprenadkontrakt – mall och guide</a>, <a href="/sv/blog/byggfaktura-checklista-rot">Byggfaktura med ROT – checklista</a>.</p>
+<p>Relaterat: <a href="/sv/blog/faktura-med-rotavdrag">Faktura med rotavdrag – så gör du</a>, <a href="/sv/blog/rotavdrag-2026-nya-regler-foretag">ROT-avdraget 2026 – nya regler för företag</a>, <a href="/sv/blog/byggfaktura-checklista-rot">Byggfaktura med ROT – checklista</a>.</p>
 `;
 
 const A_SKATTEVERKET_NEKAR_ROTAVDRAG_FORBEHALL: BlogPost = {
@@ -6542,7 +6542,7 @@ const A_ROT_FORDELA_MAKAR_TAK_2026_HTML = `
 <h2>Kom igång</h2>
 <p>Räkna ut avdraget per person innan ni fakturerar med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a> och ställ fakturan i <a href="/sv/verktyg/faktura-mall">fakturamallen</a> med arbetskostnad och andelar rätt uppdelade. Vill ni se hur ByggExp hanterar delade beställningar i praktiken? <a href="/sv/contact">Boka en demo här -&gt;</a></p>
 
-<p>Relaterat: <a href="/sv/blog/rotavdrag-2026-nya-regler-foretag">ROT-avdrag 2026 – nya regler för företag</a>, <a href="/sv/blog/rot-avdrag">Så fungerar ROT-avdraget för byggföretag</a>, <a href="/sv/blog/skatteverket-nekar-rotavdrag-forbehall">När Skatteverket nekar ROT-avdrag – skydda er med förbehåll</a>.</p>
+<p>Relaterat: <a href="/sv/blog/faktura-med-rotavdrag">Faktura med rotavdrag – exempel &amp; mall</a>, <a href="/sv/blog/rotavdrag-2026-nya-regler-foretag">ROT-avdrag 2026 – nya regler för företag</a>, <a href="/sv/blog/rot-avdrag">Så fungerar ROT-avdraget för byggföretag</a>.</p>
 `;
 
 const A_ROT_FORDELA_MAKAR_TAK_2026: BlogPost = {
@@ -6943,7 +6943,7 @@ const A_KONTROLLERA_KUNDENS_ROTUTRYMME_HTML = `
 
 <h2>Kom igång</h2>
 <p>Börja med att räkna avdrag och nettopris redan i offertläget med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>, och bygg fakturan på <a href="/sv/verktyg/faktura-mall">fakturamallen</a> som skiljer arbete från material. Vill du se hur offert, avtal med förbehåll och tidrapport hänger ihop i ett flöde? <a href="/sv/contact">Boka en demo av ByggExp</a>.</p>
-<p>Relaterat: <a href="/sv/blog/skatteverket-nekar-rotavdrag-forbehall">Skatteverket nekar ROT – så skyddar förbehållet dig</a>, <a href="/sv/blog/rotavdrag-2026-nya-regler-foretag">ROT-avdrag 2026: nya regler för företag</a>, <a href="/sv/blog/byggfaktura-checklista-rot">Byggfaktura med ROT – checklista</a>.</p>
+<p>Relaterat: <a href="/sv/blog/faktura-med-rotavdrag">Faktura med rotavdrag – exempel &amp; mall</a>, <a href="/sv/blog/skatteverket-nekar-rotavdrag-forbehall">Skatteverket nekar ROT – så skyddar förbehållet dig</a>, <a href="/sv/blog/byggfaktura-checklista-rot">Byggfaktura med ROT – checklista</a>.</p>
 `;
 
 const A_KONTROLLERA_KUNDENS_ROTUTRYMME: BlogPost = {

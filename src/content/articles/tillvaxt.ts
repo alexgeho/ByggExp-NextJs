@@ -918,6 +918,20 @@ const A_APP_TIDRAPPORTERING_BYGG_HTML = `
 <li><strong>Bättre koll på projektekonomin</strong> – du ser nedlagd tid mot budget i realtid.</li>
 </ul>
 
+<h2>Manuell vs digital tidrapportering</h2>
+<p>Skillnaden märks tydligast i veckoslutet, när underlaget ska bli lön och faktura:</p>
+<div class="article-table"><table>
+<thead><tr><th>&nbsp;</th><th>Papperslapp / Excel</th><th>App för tidrapportering</th></tr></thead>
+<tbody>
+<tr><td><strong>När tiden registreras</strong></td><td>I efterhand, av minnet</td><td>När passet sker</td></tr>
+<tr><td><strong>Rätt projekt</strong></td><td>Gissning i efterhand</td><td>Väljs vid incheckning</td></tr>
+<tr><td><strong>OB, övertid, restid</strong></td><td>Räknas för hand</td><td>Räknas automatiskt</td></tr>
+<tr><td><strong>Fakturaunderlag</strong></td><td>Renskrivs manuellt</td><td>Blir fakturarader direkt</td></tr>
+<tr><td><strong>Risk för fel</strong></td><td>Hög</td><td>Låg</td></tr>
+<tr><td><strong>Tid för administration</strong></td><td>Timmar varje vecka</td><td>Minuter</td></tr>
+</tbody>
+</table></div>
+
 <h2>Så fungerar digital tidrapportering i mobilen</h2>
 <p>Digital tidrapportering betyder att arbetstiden registreras direkt i en app i stället för på papper eller i Excel. I ByggExp går det till så här:</p>
 <ol>
@@ -927,6 +941,12 @@ const A_APP_TIDRAPPORTERING_BYGG_HTML = `
 <li>På kontoret granskas passen och exporteras till lön eller faktura med ett klick.</li>
 </ol>
 <p>Samma app fungerar på både iPhone och Android, så hela laget kan rapportera tid i mobilen oavsett telefon.</p>
+
+<h2>OB, övertid och restid – räknas rätt automatiskt</h2>
+<p>I byggbranschen är det sällan bara ”åtta timmar” som ska rapporteras. Byggavtalet har regler för OB-tillägg, övertid och restidsersättning, och räknar man dem för hand smyger felen in – oftast till företagets nackdel. En app för tidrapportering som känner till reglerna kan flagga övertid, lägga på rätt OB och skilja restid från arbetstid utan att arbetsledaren räknar manuellt. Det ger både korrekt lön och ett fakturaunderlag som håller om beställaren ifrågasätter timmarna.</p>
+
+<h2>Från tid till lön och faktura – ett flöde</h2>
+<p>Poängen med digital tidrapportering är att samma timme bara matas in en gång och sedan används överallt. De granskade och attesterade passen blir <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a>, <a href="/sv/blog/fakturera-fran-byggexp">fakturarader</a> och en post i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektuppföljningen</a> samtidigt. Ska du välja verktyg för hela kedjan? Läs vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 <h2>Tidrapportering för hantverkare och entreprenad</h2>
 <p>För hantverkare och underentreprenörer är tidrapporteringen ofta grunden för både lön och kundfaktura. En app som kopplar tid till projekt gör att du kan fakturera på loggad tid utan dubbelarbete – timmarna blir automatiskt fakturarader. Läs mer om hur tid blir faktura i vår guide om <a href="/sv/blog/fakturera-fran-byggexp">fakturering från ByggExp</a>.</p>
@@ -954,6 +974,10 @@ const A_APP_TIDRAPPORTERING_BYGG_HTML = `
 <p>Ja. I ByggExp blir loggade timmar automatiskt underlag för både löneunderlag och fakturarader, så du slipper mata in samma siffror flera gånger.</p>
 <h3>Kostar det något att komma igång?</h3>
 <p>Du kan ladda ner tidrapport-mallen gratis och boka en kostnadsfri demo för att se hur appen fungerar för ditt företag.</p>
+<h3>Hanterar appen OB, övertid och restid?</h3>
+<p>Ja. Timmarna kan räknas med rätt OB-tillägg, övertid och restid enligt byggavtalet automatiskt, så att både lön och fakturaunderlag blir korrekta utan handräkning.</p>
+<h3>Kräver appen att alla har samma sorts telefon?</h3>
+<p>Nej. Appen fungerar på både iPhone och Android med samma funktioner, så hela laget kan rapportera tid oavsett modell.</p>
 `.trim();
 
 const A_APP_TIDRAPPORTERING_BYGG: BlogPost = {
@@ -983,14 +1007,35 @@ const A_STAMPELKLOCKA_APP_GPS_HTML = `
 <li>Mindre diskussion om timmar i efterhand.</li>
 </ul>
 
+<h2>Väggterminal, papper eller app – en jämförelse</h2>
+<p>Byggföretag har historiskt löst tidsstämplingen på tre sätt. Så här står de sig mot varandra när personalen jobbar på flera arbetsplatser:</p>
+<div class="article-table"><table>
+<thead><tr><th>&nbsp;</th><th>Papper / Excel</th><th>Väggterminal</th><th>Stämpelklocka-app (ByggExp)</th></tr></thead>
+<tbody>
+<tr><td><strong>Stämpla var som helst</strong></td><td>Ja, men i efterhand</td><td>Nej – bunden till terminalen</td><td>Ja, direkt på arbetsplatsen</td></tr>
+<tr><td><strong>Bekräftad närvaro (GPS)</strong></td><td>Nej</td><td>Bara vid terminalen</td><td>Ja, GPS på incheckning</td></tr>
+<tr><td><strong>Koppling till projekt</strong></td><td>Manuell</td><td>Ofta ingen</td><td>Automatisk</td></tr>
+<tr><td><strong>Underlag för lön &amp; faktura</strong></td><td>Renskrivs för hand</td><td>Export krävs</td><td>Skapas automatiskt</td></tr>
+<tr><td><strong>Kostnad för hårdvara</strong></td><td>Ingen</td><td>Hög (terminal per plats)</td><td>Ingen – telefonen räcker</td></tr>
+<tr><td><strong>Passar rörlig byggpersonal</strong></td><td>Delvis</td><td>Dåligt</td><td>Ja</td></tr>
+</tbody>
+</table></div>
+<p>Slutsatsen för de flesta byggföretag är enkel: en app i mobilen ger samma kontroll som en väggterminal utan hårdvara, och till skillnad från papper skapar den underlaget åt dig.</p>
+
 <h2>Stämpelklocka-app för Android och iPhone</h2>
 <p>Ett byggteam har sällan samma telefon. Därför ska stämpelklockan finnas för både Android och iPhone, med samma funktion oavsett modell. ByggExp-appen fungerar på båda, så alla i laget kan stämpla in på samma sätt.</p>
 
 <h2>Från stämpling till lön och faktura</h2>
 <p>En stämpelklocka är bara halva jobbet – värdet kommer när timmarna används. I ByggExp blir de stämplade timmarna automatiskt underlag för <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a> och <a href="/sv/blog/fakturera-fran-byggexp">fakturering</a>, och räknas in i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektets ekonomi</a>. Registrera en gång, använd överallt.</p>
 
+<h2>Stämpelklocka och personalliggare</h2>
+<p>På bygg- och renoveringsarbetsplatser krävs ofta en <a href="/sv/blog/personalliggare-bygg-app">elektronisk personalliggare</a> där alla som arbetar registreras löpande. En stämpelklocka-app med GPS gör dubbel nytta: samma incheckning som bokför arbetstiden håller också liggaren aktuell i realtid – tillgänglig om Skatteverket gör ett oanmält besök. Kombinerar du det med <a href="/sv/blog/id06-nya-krav-2026-legitimering">ID06</a> har du både korrekt tid och en liggare som klarar en kontroll, utan dubbel administration. Slarv med liggaren är dyrt: läs om <a href="/sv/blog/kontrollavgift-personalliggare">kontrollavgiften för personalliggare</a>.</p>
+
+<h2>Fungerar stämplingen utan täckning?</h2>
+<p>Bygg innebär källare, nybyggen och platser med dålig mobiltäckning. En stämpelklocka-app för bygg måste därför kunna registrera in- och utcheckning offline och synka när telefonen får uppkoppling igen. Annars tappar du precis de pass som är svårast att rekonstruera i efterhand.</p>
+
 <h2>Kom igång</h2>
-<p>Vill du byta väggklockan mot en app? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Vill du byta väggklockan mot en app? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>. Vill du jämföra alternativ först? Se vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är en stämpelklocka-app?</h3>
@@ -1001,6 +1046,10 @@ const A_STAMPELKLOCKA_APP_GPS_HTML = `
 <p>Ja. ByggExp-appen finns för både Android och iPhone med samma funktion, så hela laget kan stämpla in oavsett telefon.</p>
 <h3>Kan stämplad tid användas till lön och faktura?</h3>
 <p>Ja. De stämplade timmarna blir automatiskt underlag för löneunderlag och fakturarader och räknas in i projektekonomin.</p>
+<h3>Fungerar en stämpelklocka-app som personalliggare?</h3>
+<p>Incheckningen kan hålla den elektroniska personalliggaren aktuell i realtid. Tillsammans med ID06 får du både korrekt arbetstid och en liggare som klarar en kontroll från Skatteverket.</p>
+<h3>Går det att stämpla in utan mobiltäckning?</h3>
+<p>Ja. Stämplingen registreras lokalt i appen och synkas automatiskt när telefonen får uppkoppling igen, så inga pass tappas på platser med dålig täckning.</p>
 `.trim();
 
 const A_STAMPELKLOCKA_APP_GPS: BlogPost = {
@@ -1033,6 +1082,32 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 <h2>Varför ett enkelt tidrapporteringssystem oftast vinner</h2>
 <p>Det mest avancerade systemet är värdelöst om laget inte orkar använda det. Ett enkelt tidrapporteringssystem – där man bara checkar in och ut i mobilen – får hög följsamhet, och det är följsamheten som avgör om siffrorna stämmer. Leta efter appar som personalen kan börja använda samma dag, utan utbildning.</p>
 
+<h2>Tecken på att du vuxit ur Excel</h2>
+<p>En <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> räcker långt för den minsta firman. Men flera av de här signalerna betyder att det är dags för ett riktigt system:</p>
+<ul>
+<li>Du lägger timmar varje vecka på att renskriva och räkna ihop tid.</li>
+<li>Timmar hamnar på fel projekt – eller glöms bort helt.</li>
+<li>Du kan inte se nedlagd tid mot budget förrän projektet är klart.</li>
+<li>Löne- och fakturaunderlaget bygger på minne i stället för data.</li>
+<li>Fler än ett par personer ska rapportera, på olika arbetsplatser.</li>
+</ul>
+
+<h2>Kalkylark vs tidrapporteringssystem</h2>
+<div class="article-table"><table>
+<thead><tr><th>&nbsp;</th><th>Excel / mall</th><th>Tidrapporteringssystem</th></tr></thead>
+<tbody>
+<tr><td><strong>Registrering</strong></td><td>Manuell, i efterhand</td><td>I mobilen, när passet sker</td></tr>
+<tr><td><strong>Projektkoppling</strong></td><td>Skrivs in för hand</td><td>Automatisk</td></tr>
+<tr><td><strong>Sammanställning</strong></td><td>Formler du underhåller</td><td>Klar per medarbetare och period</td></tr>
+<tr><td><strong>Lön &amp; faktura</strong></td><td>Kopiera och klistra</td><td>Export med ett klick</td></tr>
+<tr><td><strong>Tid mot budget</strong></td><td>Svår att få fram</td><td>I realtid</td></tr>
+<tr><td><strong>Skalar med teamet</strong></td><td>Nej</td><td>Ja</td></tr>
+</tbody>
+</table></div>
+
+<h2>Så byter du från Excel till ett system</h2>
+<p>Bytet behöver inte vara dramatiskt. Lägg upp pågående projekt och medarbetare i webbadmin, låt laget ladda ner appen och börja checka in – och kör mallen parallellt någon vecka tills alla är trygga. Eftersom ett enkelt system inte kräver utbildning är övergången oftast klar på dagar, inte månader.</p>
+
 <h2>Vad ett tidrapporteringssystem för bygg bör klara</h2>
 <ul>
 <li>Enkel tidsregistrering i mobilen (iPhone och Android), gärna med GPS.</li>
@@ -1054,6 +1129,10 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 <p>Ja, ofta redan från ett par anställda. Ett enkelt system minskar administration och fel, och ger korrekt underlag för lön och faktura direkt.</p>
 <h3>Vad kännetecknar ett enkelt tidrapporteringssystem?</h3>
 <p>Att personalen bara checkar in och ut i mobilen utan utbildning. Hög följsamhet är viktigare än många funktioner – det är det som gör att siffrorna stämmer.</p>
+<h3>När ska man byta från Excel till ett tidrapporteringssystem?</h3>
+<p>När du lägger tid varje vecka på att renskriva timmar, när timmar hamnar fel eller glöms, eller när fler än ett par personer ska rapportera från olika arbetsplatser. Då tjänar ett system snabbt in sig.</p>
+<h3>Hur lång tid tar det att komma igång?</h3>
+<p>Ett enkelt system kräver ingen utbildning – lägg upp projekt och medarbetare, låt laget ladda ner appen och börja checka in. Övergången är oftast klar på dagar.</p>
 `.trim();
 
 const A_TIDRAPPORTERINGSSYSTEM_BYGG: BlogPost = {
@@ -1297,21 +1376,36 @@ const S_TIDSREGISTRERING_APP_BYGG_HTML = `
 <p>Tidsregistrering är att registrera arbetstidens början och slut. Det är första steget i kedjan tidsregistrering → tidrapportering → tidredovisning. I en app sker det med in- och utcheckning i mobilen, gärna med GPS.</p>
 
 <h2>Tidsregistrering app för bygg – vad som är viktigt</h2>
-<ul>
-<li>Enkel in-/utcheckning i mobilen (Android och iPhone).</li>
-<li>GPS som bekräftar arbetsplatsen.</li>
-<li>Koppling till projekt.</li>
-<li>Export vidare till lön och faktura.</li>
-</ul>
+<div class="article-table"><table>
+<thead><tr><th>Funktion</th><th>Varför den behövs på bygg</th></tr></thead>
+<tbody>
+<tr><td><strong>In-/utcheckning i mobilen</strong></td><td>Personalen är på arbetsplatsen, inte vid en dator</td></tr>
+<tr><td><strong>GPS på incheckning</strong></td><td>Bekräftar närvaro där jobbet utförs</td></tr>
+<tr><td><strong>Offline-läge</strong></td><td>Källare och nybyggen saknar ofta täckning</td></tr>
+<tr><td><strong>Projektkoppling</strong></td><td>Timmarna hamnar rätt utan efterarbete</td></tr>
+<tr><td><strong>OB &amp; övertid</strong></td><td>Räknas enligt byggavtalet automatiskt</td></tr>
+<tr><td><strong>Export till lön &amp; faktura</strong></td><td>Registrera en gång, använd överallt</td></tr>
+</tbody>
+</table></div>
+
+<h2>Tidsregistrering och arbetstidslagen</h2>
+<p>Korrekt tidsregistrering är inte bara bra för ekonomin – det gör det också enklare att följa <a href="/sv/blog/arbetstidslagen-bygg">arbetstidslagen</a>. När arbetstid, raster och övertid registreras löpande har du underlag om dygns- eller veckovila ifrågasätts, och du ser tidigt om någon närmar sig gränserna för övertid.</p>
+
+<h2>GPS och integritet – vad gäller?</h2>
+<p>GPS på incheckningen behandlar personuppgifter, så det kräver en laglig grund och att personalen informeras. I praktiken registreras positionen vid stämplingstillfället för att bekräfta närvaro på arbetsplatsen – inte en löpande spårning av var någon befinner sig. Var tydlig med vad som samlas in och varför; det både uppfyller kraven och ökar acceptansen i laget.</p>
 
 <h2>Kom igång</h2>
-<p>Läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en demo</a>.</p>
+<p>Läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en demo</a>. Vill du fånga varje debiterbar timme? Se <a href="/sv/blog/tidrapportering-hantverkare">tidrapportering för hantverkare</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är skillnaden mellan tidsregistrering och tidrapportering?</h3>
 <p>Tidsregistrering är själva stämplingen – när man börjar och slutar. Tidrapportering är när timmarna kopplas till projekt och aktivitet. De hänger ihop i ett tidrapporteringssystem.</p>
 <h3>Behöver en app för tidsregistrering GPS?</h3>
 <p>GPS gör registreringen pålitlig genom att bekräfta att incheckningen sker på arbetsplatsen, vilket minskar diskussioner om timmar i efterhand.</p>
+<h3>Är GPS-stämpling tillåtet enligt GDPR?</h3>
+<p>Ja, om du har en laglig grund och informerar personalen. Positionen registreras vid incheckning för att bekräfta närvaro, inte som löpande spårning – var tydlig med vad som samlas in och varför.</p>
+<h3>Fungerar tidsregistreringen utan mobiltäckning?</h3>
+<p>Ja. Stämplingen sparas lokalt och synkas när telefonen får uppkoppling igen, så inga pass tappas i källare eller på nybyggen.</p>
 `.trim();
 
 const S_TIDSREGISTRERING_APP_BYGG: BlogPost = {
@@ -1368,11 +1462,27 @@ const S_PERSONALLIGGARE_APP_HTML = `
 <h2>Personalliggare som app</h2>
 <p>I stället för en pärm eller terminal registrerar varje person närvaro i mobilen – ofta kopplat till incheckning på bygget. Alla som arbetar registreras, även underentreprenörer och inhyrda. Liggaren uppdateras i realtid och kan visas direkt vid en kontroll.</p>
 
+<h2>Vad personalliggaren ska innehålla</h2>
+<div class="article-table"><table>
+<thead><tr><th>Uppgift</th><th>Kommentar</th></tr></thead>
+<tbody>
+<tr><td><strong>Företagets uppgifter</strong></td><td>Organisationsnummer</td></tr>
+<tr><td><strong>Person som är verksam</strong></td><td>Namn och personnummer</td></tr>
+<tr><td><strong>Tider</strong></td><td>När arbetet påbörjas och avslutas, per person och dag</td></tr>
+<tr><td><strong>Vilka omfattas</strong></td><td>Alla verksamma – anställda, UE och inhyrda</td></tr>
+<tr><td><strong>Tillgänglighet</strong></td><td>Ska kunna visas för Skatteverket på plats</td></tr>
+</tbody>
+</table></div>
+<p>En app fyller i det mesta automatiskt vid incheckning, så du slipper föra uppgifterna för hand.</p>
+
 <h2>Koppling till ID06 och närvaro</h2>
 <p>En personalliggare-app hänger ihop med <a href="/sv/blog/id06">ID06</a> och med <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning</a> – samma incheckning som registrerar arbetstid kan föra personalliggaren.</p>
 
-<h2>Vad en kontrollavgift kostar</h2>
-<p>Saknas eller brister liggaren vid en oanmäld kontroll utgår kontrollavgift – därför lönar sig en app som håller liggaren korrekt automatiskt. Detaljerna finns i vår <a href="/sv/blog/personalliggare">guide om personalliggare</a>.</p>
+<h2>Skatteverkets kontroll och kontrollavgift</h2>
+<p>Skatteverket får göra oanmälda besök på arbetsplatsen och begära att liggaren visas direkt. Saknas den, eller är den bristfällig, utgår en kontrollavgift – en fast grundavgift plus ett belopp per person som inte är registrerad. Det kan snabbt bli dyrt på ett bygge med flera lag och underentreprenörer, och är hela poängen med att låta en app hålla liggaren korrekt automatiskt. Aktuella belopp och undantag går vi igenom i guiden om <a href="/sv/blog/kontrollavgift-personalliggare">kontrollavgift för personalliggare</a>, och hela regelverket i <a href="/sv/blog/personalliggare">personalliggare i byggbranschen</a>.</p>
+
+<h2>En incheckning – både tid och liggare</h2>
+<p>Det stora med en app är att samma incheckning löser två saker: den registrerar <a href="/sv/blog/tidsregistrering-app-bygg">arbetstiden</a> som blir lön och faktura, och den för personalliggaren som klarar en kontroll. Ingen dubbel registrering, inga glömda poster. Läs mer om hur tiden blir underlag i <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a>.</p>
 
 <h2>Kom igång</h2>
 <p>Läs om <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning på bygget</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
@@ -1384,6 +1494,8 @@ const S_PERSONALLIGGARE_APP_HTML = `
 <p>Ja. Alla som arbetar på arbetsplatsen ska registreras, även underentreprenörer och inhyrd personal.</p>
 <h3>Hänger personalliggare-appen ihop med tidrapporteringen?</h3>
 <p>Ja. Samma incheckning som registrerar arbetstid kan föra personalliggaren, så du slipper dubbel registrering.</p>
+<h3>Vad kostar det om personalliggaren saknas vid en kontroll?</h3>
+<p>Skatteverket tar ut en kontrollavgift – en fast grundavgift plus ett belopp per oregistrerad person. Aktuella belopp finns i vår guide om kontrollavgift för personalliggare.</p>
 `.trim();
 
 const S_PERSONALLIGGARE_APP: BlogPost = {

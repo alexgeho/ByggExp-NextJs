@@ -485,6 +485,55 @@
   margin-top: 0.5em;
 }
 
+// Comparison tables inside articles. Scroll horizontally on small screens
+// instead of overflowing. Applies to every article via CSS, no per-article
+// markup. Wrap the table in <div class="article-table"> for the scroll frame.
+.blog-article-content .article-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 26px 0;
+  border: 1px solid rgba(10, 40, 90, 0.12);
+  border-radius: 14px;
+}
+
+.blog-article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.96rem;
+  min-width: 460px;
+}
+
+.blog-article-content thead {
+  background: rgba(37, 99, 201, 0.07);
+}
+
+.blog-article-content th,
+.blog-article-content td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(10, 40, 90, 0.09);
+  border-right: 1px solid rgba(10, 40, 90, 0.06);
+}
+
+.blog-article-content th {
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.blog-article-content tbody tr:nth-child(even) {
+  background: rgba(10, 40, 90, 0.02);
+}
+
+.blog-article-content tr > :last-child {
+  border-right: 0;
+}
+
+.blog-article-content tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
 // Diagrams (SVG/webp illustrations) — wider than the default 320px image cap.
 .blog-article-content .article-diagram {
   margin: 26px 0;

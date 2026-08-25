@@ -324,7 +324,8 @@ const A_FAKTURERINGSPROGRAM_BYGG: BlogPost = {
 };
 
 const A_TIDRAPPORTERING_APP_BYGGFORETAG_HTML = `
-<p>En tidrapporterings-app för byggföretag ska ta bort papperslapparna och Excel-krånglet: teamet stämplar tid i mobilen där jobbet sker, och timmarna blir direkt underlag för lön och faktura. Här går vi igenom vad en bra tidrapporterings-app ska klara och hur ByggExp gör det.</p>
+<p>Det här är guiden för dig som har <strong>anställda</strong> och ska välja tidrapportering för hela laget – inte bara för egen del. Vill du först förstå grunderna i hur en app fungerar, läs <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>; här fokuserar vi på företagsperspektivet: flera medarbetare, roller, attestering och vägen till lön och faktura.</p>
+<p>En tidrapporterings-app för byggföretag ska ta bort papperslapparna och Excel-krånglet: teamet stämplar tid i mobilen där jobbet sker, arbetsledaren attesterar, och timmarna blir direkt underlag för lön och faktura. Här går vi igenom vad en bra tidrapporterings-app ska klara för ett företag med anställda och hur ByggExp gör det.</p>
 
 <h2>Vad ska en tidrapporterings-app för bygg klara?</h2>
 <ul>
@@ -1373,7 +1374,7 @@ const S_MOBIL_TIDRAPPORTERING: BlogPost = {
   title: "Mobil tidrapportering – rapportera tid i mobilen på bygget", slug: "mobil-tidrapportering", locale: "sv",
   excerpt: "Mobil tidrapportering: registrera arbetstid i mobilen där jobbet görs i stället för på papper eller terminal. Varför mobilen slår båda – för hela bygglaget.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: S_MOBIL_TIDRAPPORTERING_HTML,
-  seoTitle: "Mobil tidrapportering – rapportera tid i mobilen på bygget | ByggExp", seoDescription: "Mobil tidrapportering för bygg: registrera arbetstid i mobilen där jobbet görs, med GPS och koppling till projekt. Slår både papper och väggterminal.",
+  seoTitle: "Mobil tidrapportering för bygg – tid i mobilen | ByggExp", seoDescription: "Mobil tidrapportering för bygg: registrera arbetstid i mobilen där jobbet görs, med GPS och koppling till projekt. Slår både papper och väggterminal.",
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T10:10:00.000Z", createdAt: "2026-08-22T10:10:00.000Z", updatedAt: "2026-08-22T10:10:00.000Z",
 };

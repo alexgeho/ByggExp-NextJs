@@ -132,6 +132,14 @@ const AB04_HTML = `
 <h2>När använder du AB 04 respektive ABT 06?</h2>
 <p>Valet styrs av vem som ska ta fram lösningen. Vill beställaren ha kontroll över utformningen och redan har (eller köper) färdig projektering passar <strong>AB 04</strong> – entreprenören bygger enligt handlingarna. Vill beställaren i stället köpa ett resultat och lägga över ansvaret för att lösningen fungerar passar <strong>ABT 06</strong> – entreprenören projekterar och bär ritningsrisken. Samma jobb kan alltså upphandlas på båda sätten; det är ansvarsfördelningen, inte byggets storlek, som avgör. För underentreprenader finns dessutom back-to-back-varianter, se <a href="/sv/blog/ab-u-underentreprenor-avtal">AB-U och ABT-U för underentreprenörer</a>.</p>
 
+<h2>Exempel: samma projekt under AB 04 respektive ABT 06</h2>
+<p>Tänk dig att en beställare vill bygga en ny industrihall.</p>
+<ul>
+<li><strong>AB 04-upplägget:</strong> beställaren (eller dennes konsult) tar fram kompletta bygghandlingar och ritningar. Entreprenören räknar på och bygger exakt enligt dem. Visar det sig att en ritning är fel bär beställaren den kostnaden – felet ligger i handlingarna som beställaren ansvarar för.</li>
+<li><strong>ABT 06-upplägget:</strong> beställaren anger funktionskrav ("en hall på 800 m² som klarar X ton taklast, klar till Q3"). Entreprenören projekterar själv lösningen och bygger den. Håller inte konstruktionen är det entreprenörens ansvar – hen bär både projekterings- och utförandefelet.</li>
+</ul>
+<p>Samma hall, samma pris kanske – men helt olika riskfördelning. Det är därför valet av standardavtal ska göras medvetet redan i upphandlingen, inte klistras på i efterhand.</p>
+
 <h2>ÄTA-arbeten</h2>
 <p>Ändrings-, tilläggs- och avgående arbeten (ÄTA) regleras i kap 2. Det är här mest pengar tvistas om – rätt hantering och underrättelse i tid avgör om du får betalt. Läs mer i vår <a href="/sv/blog/ata-arbeten">guide om ÄTA-arbeten</a>.</p>
 
@@ -478,15 +486,18 @@ const ABS18_HTML = `
 <p>Skyddet ska täcka rimlig extra kostnad för att färdigställa arbetet om konsumenten häver på grund av din försening, plus kostnad för att avhjälpa fel som noterats vid slutbesiktning och skador av sådana fel. Beloppet uppgår vanligtvis till minst 10 % av kontraktssumman, och ingen orimlig självrisk får läggas på konsumenten. I praktiken krävs skyddet ofta för att få startbesked, så lös det tidigt.</p>
 
 <h2>Jämförelse: ABS 18 vs Hantverkarformuläret 17</h2>
-<ul>
-<li><strong>Arbetets art:</strong> ABS 18 = nybyggnad/tillbyggnad av småhus. Hantverkarformuläret 17 = reparation/ombyggnad av befintligt.</li>
-<li><strong>Lagstöd:</strong> ABS 18 = KtjL §§ 51–61 (småhusregler) utöver de allmänna reglerna. Hantverkarformuläret 17 = KtjL:s allmänna regler.</li>
-<li><strong>Kontraktsblankett:</strong> ABS 18 = Entreprenadkontrakt (ABS 18). Hantverkarformuläret 17 = formuläret självt.</li>
-<li><strong>Slutbesiktning:</strong> ABS 18 = reglerad, kan krävas av båda parter. Hantverkarformuläret 17 = ingen obligatorisk.</li>
-<li><strong>Innehållande av betalning:</strong> ABS 18 = upp till 10 % till godkänd slutbesiktning. Hantverkarformuläret 17 = allmänna regler om innehållande vid fel.</li>
-<li><strong>Färdigställandeskydd:</strong> ABS 18 = obligatoriskt vid nybyggnad, annars efter byggnadsnämndens bedömning. Hantverkarformuläret 17 = normalt inte.</li>
-<li><strong>ÄTA:</strong> Båda har egen ÄTA-blankett.</li>
-</ul>
+<div class="article-table"><table>
+<thead><tr><th>&nbsp;</th><th>ABS 18</th><th>Hantverkarformuläret 17</th></tr></thead>
+<tbody>
+<tr><td><strong>Arbetets art</strong></td><td>Nybyggnad/tillbyggnad av småhus</td><td>Reparation/ombyggnad av befintligt</td></tr>
+<tr><td><strong>Lagstöd</strong></td><td>KtjL §§ 51–61 utöver allmänna reglerna</td><td>KtjL:s allmänna regler</td></tr>
+<tr><td><strong>Kontraktsblankett</strong></td><td>Entreprenadkontrakt (ABS 18)</td><td>Formuläret självt</td></tr>
+<tr><td><strong>Slutbesiktning</strong></td><td>Reglerad, kan krävas av båda parter</td><td>Ingen obligatorisk</td></tr>
+<tr><td><strong>Innehållen betalning</strong></td><td>Upp till 10 % till godkänd besiktning</td><td>Allmänna regler vid fel</td></tr>
+<tr><td><strong>Färdigställandeskydd</strong></td><td>Obligatoriskt vid nybyggnad</td><td>Normalt inte</td></tr>
+<tr><td><strong>ÄTA</strong></td><td colspan="2">Båda har egen ÄTA-blankett</td></tr>
+</tbody>
+</table></div>
 
 <h2>Vilken version gäller – 14, 17, 18 eller något annat?</h2>
 <p>Formulären revideras då och då, och gamla versionsnummer lever kvar i sökningar och gamla pärmar. Så här ligger det till:</p>

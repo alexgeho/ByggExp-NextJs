@@ -14,7 +14,7 @@ Senast uppdaterad: 2026-08-25.
 | Batch | CSV mottagen | Analyserad | Kommentar |
 |---|---|---|---|
 | faktura | ✅ 2026-08-25 | ✅ | 28 rader, bucketade volymer (10–100) |
-| offert | ⏳ väntar | – | |
+| offert | ✅ 2026-08-25 | ✅ | 14 rader; `offertmall bygg` = 500/mån (störst hittills) |
 | lön / löneunderlag | ⏳ väntar | – | |
 | kalkyl / anbud | ⏳ väntar | – | |
 | ROT (rent) | ⏳ väntar | – | delvis täckt av faktura-batchen |
@@ -62,6 +62,38 @@ ROT-faktura-intent, INTE i "program/app"-intent.**
 
 ---
 
+## 1b. Databatch: OFFERT (2026-08-25)
+
+Nyckelinsikt: **efterfrågan sitter i "offertmall bygg" (mall-intent), och den är
+redan täckt av lead-magnet-verktyget.** Program/app-termer = noll volym igen.
+
+### Hög-signal
+- **`offertmall bygg` = 500/mån** och **`bygg offertmall` = 500/mån** — störst i
+  hela klustret hittills. Bud 6–15 kr → mycket kommersiellt.
+- Varianter (10–100): `offert mall bygg`, `mall offert bygg`, `offertmallar bygg`,
+  `gratis offertmall bygg`, `offertmall bygg gratis`.
+- `offertprogram bygg` = 10–100 men bud 3.5–15.3 kr (högt värde).
+
+### Noll-signal (bygg inte)
+- `offert app bygg`, `skapa offert bygg`, `anbud bygg program`,
+  `offert hantverkare app`, `byggoffert program`, `kalkyl och offert bygg` → blank.
+
+### Befintlig täckning — REDAN BRA
+- Verktyg `/sv/verktyg/offert-mall`: `<title>` = "Offertmall bygg – gör offert med
+  ROT gratis | ByggExp" → **taktar redan huvudtermen "offertmall bygg"** (500/mån).
+  Lead-magnet (mall → PDF), matchar mall-intenten perfekt.
+- Artikel `offertprogram-byggforetag` täcker program-intenten.
+- Artikel `offert-till-betald-faktura-flode`, `kalkylera-fonsterbyte-offert`.
+
+### GAP / åtgärd (litet)
+- Verktygets synliga **h1** saknar "bygg" ("Offertmall – skapa offert med ROT…").
+  `<title>` har det (viktigast), men h1 kunde inkludera "bygg" för extra relevans.
+- Ev. kort stödartikel `offertmall-bygg` som funnlar till verktyget + folds
+  gratis/mallar-varianter — **låg prio**, verktyget rankar redan för huvudtermen.
+- Slutsats: **offert-klustret är i stort täckt. Ingen ny pillar behövs.**
+
+---
+
 ## 2. Framväxande stridsplan (uppdateras allt eftersom batcher kommer)
 
 ### Beslutade byggen
@@ -71,8 +103,11 @@ ROT-faktura-intent, INTE i "program/app"-intent.**
    länk till gratis `faktura-mall` + `rot-avdrag-kalkylator`, FAQ (schema).
    Status: **ej påbörjad.**
 
+### Beslutade (offert)
+- **Offert: INGEN ny pillar.** Huvudterm `offertmall bygg` (500/mån) täcks redan av
+  verktyget `/sv/verktyg/offert-mall`. Valfritt: lägg "bygg" i verktygets h1 (låg prio).
+
 ### Att besluta när fler batcher kommit
-- Offert-pillar? (avvaktar offert-CSV)
 - Lön/löneunderlag-pillar? (avvaktar lön-CSV — obs `loneunderlag-for-byggforetag`
   finns redan som feature-artikel)
 - Kalkyl/anbud-pillar? (avvaktar kalkyl-CSV — `kalkylprogram-bygg`,

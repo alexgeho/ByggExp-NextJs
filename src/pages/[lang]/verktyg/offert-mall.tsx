@@ -80,7 +80,7 @@ export default function OffertMallPage() {
 
       <LeadMagnetPage
         badge="Gratis mall"
-        title="Offertmall – skapa offert med ROT och ladda ner som PDF"
+        title="Offertmall för bygg – skapa offert med ROT och ladda ner som PDF"
         intro="Bygg en proffsig offert med rader, moms och ROT-avdrag direkt online. Summorna räknas ut automatiskt och du laddar ner en färdig PDF. Gratis och utan konto."
         tool={<OffertGeneratorTool />}
         leadForm={<ToolLeadForm tool="offert-mall" />}

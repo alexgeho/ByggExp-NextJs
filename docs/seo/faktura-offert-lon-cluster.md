@@ -152,12 +152,17 @@ ingen volym UTOM för **kalkylprogram** (som lever). Volymen sitter annars i
 | **lön** | ⛔ hoppa | Dött, befintligt räcker |
 | **kalkyl** | ✏️ stärk | Bygg ut `kalkylprogram-bygg` med gratis/bästa-vinkel + länk till `/sv/verktyg` |
 
-### Byggordning
-1. **Pillar `faktura-med-rotavdrag`** (störst gap + tydlig efterfrågan). ~700–900 ord,
-   räkneexempel, FAQ-schema, länk till `faktura-mall` + `rot-avdrag-kalkylator` +
-   `byggfaktura-checklista-rot`.
-2. **Stärk `kalkylprogram-bygg`** (gratis/bästa-sektion + FAQ + verktygslänkar).
-3. **Mini: h1 "bygg" på `offert-mall`** (medan jag ändå är i området).
+### Byggordning — UTFÖRT 2026-08-25
+1. ✅ **Pillar `faktura-med-rotavdrag`** byggd (ekonomi.ts, 629 ord, räkneexempel-tabell,
+   FAQ-schema, länkar till `faktura-mall` + `rot-avdrag-kalkylator` +
+   `byggfaktura-checklista-rot` + `kontrollera-kundens-rotutrymme`). ROT = 30 % av
+   arbetskostnad inkl. moms, max 50 000 kr/person/år (konsistent med site-fakta).
+2. ✅ **`kalkylprogram-bygg` stärkt** (201 → 549 ord): gratis-sektion, "bästa"-sektion
+   med kriterietabell, FAQ-schema, seoTitle nu med "gratis". Länkar till `/sv/verktyg`.
+3. ✅ **`offert-mall` h1** nu "Offertmall för bygg …".
+
+Not: batch-CSV 09_10_40 var en dubblett av kalkyl-batchen (inga nya data).
+**Klustret klart. Nästa lever = backlinks (owner).**
 
 ### Beslutade byggen
 1. **PILLAR: `faktura-med-rotavdrag`** (ny artikel) — folds: faktura med rotavdrag /

@@ -652,6 +652,24 @@ const A_KALKYLPROGRAM_BYGG_HTML = `
 <h2>Så gör ByggExp det</h2>
 <p>Från våra materialkalkylatorer kan du <strong>skapa en offert direkt</strong>, och i ByggExp hänger offert, tid och faktura ihop – inklusive ROT. Du räknar en gång och använder underlaget hela vägen. <a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
 
+<h2>Finns det gratis kalkylprogram för bygg?</h2>
+<p>Ja – du behöver inte betala för att komma igång. ByggExps <a href="/sv/verktyg">byggkalkylatorer</a> är gratis och täcker de vanligaste momenten: betong, tak, gips, reglar, färg, grus med mera. De räknar materialåtgång direkt i webbläsaren, utan konto. När du väl offererar ofta och vill att kalkyl, offert, tid och faktura ska hänga ihop väljer du ett samlat system – men börja gratis med kalkylatorerna och väx in i det när volymen kräver.</p>
+
+<h2>Bästa kalkylprogram för bygg – vad du ska titta efter</h2>
+<p>"Bäst" är det program laget faktiskt använder och som skyddar marginalen. Bedöm efter:</p>
+<div class="article-table"><table>
+<thead><tr><th>Kriterium</th><th>Varför det avgör</th></tr></thead>
+<tbody>
+<tr><td><strong>Rätt materialåtgång</strong></td><td>Grunden – med spillmarginal, annars blir kalkylen för låg</td></tr>
+<tr><td><strong>Påslag &amp; marginal</strong></td><td>Ett program hjälper inte mot fel påslag – det ska räknas rätt</td></tr>
+<tr><td><strong>Kalkyl → offert</strong></td><td>Materialkalkylen ska bli offert utan dubbelarbete</td></tr>
+<tr><td><strong>ROT</strong></td><td>Visa avdraget för kunden direkt</td></tr>
+<tr><td><strong>Efterkalkyl</strong></td><td>Jämför kalkyl mot utfall så nästa offert blir bättre</td></tr>
+<tr><td><strong>Enkelhet</strong></td><td>Ett program ingen använder är värdelöst oavsett funktioner</td></tr>
+</tbody>
+</table></div>
+<p>Se även <a href="/sv/blog/basta-byggprogram-2026">bästa byggprogram 2026</a> för helheten och <a href="/sv/blog/byggprogram-pris">vad ett byggprogram kostar</a>.</p>
+
 <h2>Vanliga misstag</h2>
 <ul>
 <li><strong>Snygg offert, fel påslag.</strong> Börja i kalkylen – ett program hjälper inte mot fel marginal.</li>
@@ -660,6 +678,14 @@ const A_KALKYLPROGRAM_BYGG_HTML = `
 </ul>
 
 <p>Rätt kalkylprogram sparar tid och skyddar marginalen – men börja i kalkylen och ett tydligt flöde. Testa gratis med kalkylatorerna, väx in i ett system när volymen kräver det.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Finns det gratis kalkylprogram för bygg?</h3>
+<p>Ja. ByggExps byggkalkylatorer är gratis och räknar materialåtgång (betong, tak, gips, färg m.m.) direkt i webbläsaren utan konto. Du kan börja gratis och väx in i ett samlat system när du offererar ofta.</p>
+<h3>Vilket är det bästa kalkylprogrammet för bygg?</h3>
+<p>Det som laget faktiskt använder och som skyddar marginalen – med rätt materialåtgång inklusive spill, rätt påslag, väg från kalkyl till offert, ROT och efterkalkyl. Enkelhet slår oftast många funktioner.</p>
+<h3>Behöver jag ett kalkylprogram eller räcker Excel?</h3>
+<p>Excel fungerar för enstaka kalkyler, men blir fel och tidskrävande när du offererar ofta. Ett program där kalkyl, offert och faktura hänger ihop tar bort dubbelarbetet och minskar marginalfelen.</p>
 `;
 
 const A_KALKYLPROGRAM_BYGG: BlogPost = {
@@ -667,7 +693,7 @@ const A_KALKYLPROGRAM_BYGG: BlogPost = {
   title: "Kalkylprogram för bygg – från materialkalkyl till lönsam offert", slug: "kalkylprogram-bygg", locale: "sv",
   excerpt: "Vad ett kalkylprogram för byggföretag bör klara: materialåtgång, rätt påslag/marginal, ROT och vägen från kalkyl till offert och faktura. Kom igång gratis.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_KALKYLPROGRAM_BYGG_HTML,
-  seoTitle: "Kalkylprogram för bygg – kalkyl till offert | ByggExp", seoDescription: "Kalkylprogram för byggföretag: materialåtgång, rätt påslag och marginal, ROT och vägen från kalkyl till offert och faktura. Kom igång gratis med kalkylatorerna.",
+  seoTitle: "Kalkylprogram för bygg – gratis kalkyl till offert | ByggExp", seoDescription: "Kalkylprogram för byggföretag: materialåtgång, rätt påslag och marginal, ROT och vägen från kalkyl till offert. Finns det gratis? Så väljer du bästa – kom igång gratis.",
   seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T19:10:00.000Z", createdAt: "2026-08-20T19:10:00.000Z", updatedAt: "2026-08-20T19:10:00.000Z",
 };

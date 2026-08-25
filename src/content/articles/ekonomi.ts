@@ -7929,7 +7929,78 @@ const R_ROT_HUR_MYCKET: BlogPost = {
   publishedAt: '2026-08-22T13:20:00.000Z', createdAt: '2026-08-22T13:20:00.000Z', updatedAt: '2026-08-22T13:20:00.000Z',
 };
 
+const R_FAKTURA_MED_ROTAVDRAG_HTML = `
+<p>Att fakturera med rotavdrag är enkelt när du väl vet hur det räknas och vad Skatteverket kräver på fakturan. Kort: du drar av kundens ROT-del direkt på fakturan, kunden betalar resten, och du begär tillbaka avdraget från Skatteverket. Här går vi igenom hur du gör en faktura med rotavdrag steg för steg – med ett konkret räkneexempel och en gratis mall.</p>
+<p>Vill du hoppa direkt till görandet? Ladda ner vår gratis <a href="/sv/verktyg/faktura-mall">fakturamall</a> eller räkna ut avdraget i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>.</p>
+
+<h2>Vad är rotavdrag på fakturan?</h2>
+<p>ROT-avdrag är en skattereduktion för kunden på <strong>arbetskostnaden</strong> vid renovering, om- och tillbyggnad. Grundreglerna: avdraget är <strong>30 % av arbetskostnaden (inklusive moms)</strong>, <strong>max 50 000 kr per person och år</strong>, och gäller aldrig mer än den skatt kunden betalar. Material, resor och maskiner ger inget avdrag. (Aktuella belopp och tak fastställs av Skatteverket – kontrollera årets nivå.)</p>
+<p>Som utförare tillämpar du avdraget direkt på fakturan (den så kallade fakturamodellen): kunden betalar sin del, och du begär resten från Skatteverket.</p>
+
+<h2>Så räknar du rotavdrag på fakturan – exempel</h2>
+<p>Ett badrumsjobb där arbete och material specificeras var för sig:</p>
+<div class="article-table"><table>
+<thead><tr><th>Post</th><th>Belopp (inkl. moms)</th></tr></thead>
+<tbody>
+<tr><td>Arbetskostnad</td><td>25 000 kr</td></tr>
+<tr><td>Material</td><td>10 000 kr</td></tr>
+<tr><td><strong>Fakturans totalsumma</strong></td><td><strong>35 000 kr</strong></td></tr>
+<tr><td>ROT-avdrag (30 % × 25 000)</td><td>−7 500 kr</td></tr>
+<tr><td><strong>Kunden betalar</strong></td><td><strong>27 500 kr</strong></td></tr>
+<tr><td>Du begär från Skatteverket</td><td>7 500 kr</td></tr>
+</tbody>
+</table></div>
+<p>Avdraget räknas alltså bara på arbetskostnaden – materialets 10 000 kr påverkas inte. Vill du testa med dina egna siffror? Använd <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylatorn</a>.</p>
+
+<h2>Vad fakturan måste innehålla för att ROT ska godkännas</h2>
+<p>För att Skatteverket ska betala ut avdraget måste fakturan och din begäran innehålla:</p>
+<ul>
+<li><strong>Arbetskostnaden särredovisad</strong> från material – ROT gäller bara arbetet.</li>
+<li><strong>Antal arbetade timmar</strong> och vad arbetet avsett.</li>
+<li><strong>Kundens personnummer</strong> (den som får avdraget).</li>
+<li><strong>Fastighetsbeteckning</strong> – eller lägenhetsnummer och bostadsrättsföreningens organisationsnummer för bostadsrätt.</li>
+<li><strong>Utfört ROT-berättigat arbete</strong> – att åtgärden faktiskt ger rätt till avdrag.</li>
+</ul>
+<p>Se hela listan i vår <a href="/sv/blog/byggfaktura-checklista-rot">checklista för byggfakturor med ROT</a> och grunderna i <a href="/sv/blog/vad-ska-faktura-innehalla-bygg">vad en byggfaktura ska innehålla</a>.</p>
+
+<h2>Så begär du utbetalning från Skatteverket</h2>
+<p>När kunden betalat sin del begär du resten via Skatteverkets e-tjänst för ROT/RUT. Du anger utfört arbete, arbetskostnad, kundens personnummer och fastighetsuppgifter. Kontrollera i förväg att kunden har utrymme kvar för året – annars kan avdraget nekas och du blir stående med mellanskillnaden. Läs om hur du <a href="/sv/blog/kontrollera-kundens-rotutrymme">kontrollerar kundens ROT-utrymme</a> och vad du gör om <a href="/sv/blog/skatteverket-nekar-rotavdrag-forbehall">Skatteverket nekar avdraget</a>.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Räkna ROT på hela fakturan.</strong> Avdraget gäller bara arbetskostnaden, inte material.</li>
+<li><strong>Glömma särredovisa arbetet.</strong> Utan tydlig arbetskostnad godkänns inte avdraget.</li>
+<li><strong>Inte kolla kundens utrymme.</strong> Är taket redan använt blir du utan pengarna.</li>
+<li><strong>Sakna fastighetsuppgifter.</strong> Personnummer räcker inte – fastighetsbeteckning eller BRF-uppgifter krävs.</li>
+</ul>
+
+<h2>Mall och verktyg</h2>
+<p>Gör det enkelt: skapa fakturan med rotavdrag och ladda ner som PDF i vår gratis <a href="/sv/verktyg/faktura-mall">fakturamall</a>, och räkna avdraget i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylatorn</a>. Vill du se hela flödet från offert till betald faktura? Läs <a href="/sv/blog/offert-till-betald-faktura-flode">offert till betald faktura</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur räknar jag rotavdrag på en faktura?</h3>
+<p>Ta arbetskostnaden inklusive moms och multiplicera med 30 %. Det beloppet drar du av på fakturan (upp till 50 000 kr per person och år). Kunden betalar totalsumman minus avdraget, och du begär avdraget från Skatteverket. Material räknas inte in.</p>
+<h3>Räknas material in i rotavdraget på fakturan?</h3>
+<p>Nej. Endast arbetskostnaden ger ROT-avdrag. Därför måste arbete och material särredovisas på fakturan.</p>
+<h3>Vad måste stå på en faktura med rotavdrag?</h3>
+<p>Särredovisad arbetskostnad och antal timmar, kundens personnummer samt fastighetsbeteckning (eller lägenhetsnummer och BRF:s organisationsnummer). Annars kan Skatteverket neka utbetalningen.</p>
+<h3>Vem betalar ut rotavdraget till mig?</h3>
+<p>Skatteverket. Kunden betalar sin del av fakturan, och du som utförare begär resten via Skatteverkets e-tjänst för ROT.</p>
+<h3>Finns det en mall för faktura med rotavdrag?</h3>
+<p>Ja. Med ByggExps gratis fakturamall skapar du en faktura med rotavdrag och laddar ner den som PDF – avdraget räknas ut åt dig.</p>
+`.trim();
+
+const R_FAKTURA_MED_ROTAVDRAG: BlogPost = {
+  _id: 'code-faktura-med-rotavdrag', title: 'Faktura med rotavdrag – så gör du + exempel och mall', slug: 'faktura-med-rotavdrag', locale: 'sv',
+  excerpt: 'Så gör du en faktura med rotavdrag: räkna 30 % på arbetskostnaden, dra av kundens del och begär resten från Skatteverket. Konkret räkneexempel + gratis mall.', tag: 'ROT',
+  coverImageUrl: '/landing/features/8fakturor.webp', contentHtml: R_FAKTURA_MED_ROTAVDRAG_HTML,
+  seoTitle: 'Faktura med rotavdrag – exempel + gratis mall | ByggExp', seoDescription: 'Faktura med rotavdrag steg för steg: räkna 30 % på arbetskostnaden, exempel med belopp, vad Skatteverket kräver och hur du begär utbetalning. Gratis fakturamall.',
+  seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
+  publishedAt: '2026-08-25T10:00:00.000Z', createdAt: '2026-08-25T10:00:00.000Z', updatedAt: '2026-08-25T10:00:00.000Z',
+};
+
 export const EKONOMI_ARTICLES: BlogPost[] = [
+  R_FAKTURA_MED_ROTAVDRAG,
   R_ROT_PENSIONAR,
   R_ROT_BOSTADSRATT,
   R_ROT_FRITIDSHUS,

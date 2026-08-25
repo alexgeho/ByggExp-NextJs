@@ -341,13 +341,13 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
               </select></label>
             {form === 'rekt' ? (
               <>
-                <label className={fld}><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 10' : 't.ex. 10'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
-                <label className={fld}><span>{t.width}</span><input type="number" min="0" inputMode="decimal" value={width} placeholder={en ? 'e.g. 8' : 't.ex. 8'} onChange={(e) => setWidth(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 10' : ru ? 'напр. 10' : 't.ex. 10'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.width}</span><input type="number" min="0" inputMode="decimal" value={width} placeholder={en ? 'e.g. 8' : ru ? 'напр. 8' : 't.ex. 8'} onChange={(e) => setWidth(e.currentTarget.value)} /></label>
               </>
             ) : (
               <>
-                <label className={fld}><span>{t.area}</span><input type="number" min="0" inputMode="decimal" value={area} placeholder={en ? 'e.g. 92' : 't.ex. 92'} onChange={(e) => setArea(e.currentTarget.value)} /></label>
-                <label className={fld}><span>{t.perim}</span><input type="number" min="0" inputMode="decimal" value={perim} placeholder={en ? 'e.g. 46' : 't.ex. 46'} onChange={(e) => setPerim(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.area}</span><input type="number" min="0" inputMode="decimal" value={area} placeholder={en ? 'e.g. 92' : ru ? 'напр. 92' : 't.ex. 92'} onChange={(e) => setArea(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.perim}</span><input type="number" min="0" inputMode="decimal" value={perim} placeholder={en ? 'e.g. 46' : ru ? 'напр. 46' : 't.ex. 46'} onChange={(e) => setPerim(e.currentTarget.value)} /></label>
               </>
             )}
             <label className={fld}><span>{t.thickness}</span><input type="number" min="0" inputMode="decimal" value={thickness} onChange={(e) => setThickness(e.currentTarget.value)} /></label>
@@ -370,7 +370,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
                   <option value="5">K5 (Ø5)</option><option value="6">K6 (Ø6)</option><option value="7">K7 (Ø7)</option><option value="8">K8 (Ø8)</option>
                 </select></label>
             ) : null}
-            <label className={fld}><span>{t.isoThick}</span><input type="number" min="0" inputMode="decimal" value={isoThick} placeholder={en ? 'e.g. 300' : 't.ex. 300'} onChange={(e) => setIsoThick(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.isoThick}</span><input type="number" min="0" inputMode="decimal" value={isoThick} placeholder={en ? 'e.g. 300' : ru ? 'напр. 300' : 't.ex. 300'} onChange={(e) => setIsoThick(e.currentTarget.value)} /></label>
             <label className={fld}><span>{t.isoGrade}</span>
               <select value={epsGrade} onChange={(e) => { const g = e.currentTarget.value; setEpsGrade(g); setPIso(String(EPS_PRICE[g] || 1400)); }}>
                 <option value="S80">{t.oS80}</option>
@@ -384,7 +384,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
 
         {shape === 'balk' ? (
           <>
-            <label className={fld}><span>{t.bLen}</span><input type="number" min="0" inputMode="decimal" value={bLen} placeholder={en ? 'e.g. 12' : 't.ex. 12'} onChange={(e) => setBLen(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.bLen}</span><input type="number" min="0" inputMode="decimal" value={bLen} placeholder={en ? 'e.g. 12' : ru ? 'напр. 12' : 't.ex. 12'} onChange={(e) => setBLen(e.currentTarget.value)} /></label>
             <label className={fld}><span>{t.bWidth}</span><input type="number" min="0" inputMode="decimal" value={bWidth} onChange={(e) => setBWidth(e.currentTarget.value)} /></label>
             <label className={fld}><span>{t.bHeight}</span><input type="number" min="0" inputMode="decimal" value={bHeight} onChange={(e) => setBHeight(e.currentTarget.value)} /></label>
           </>

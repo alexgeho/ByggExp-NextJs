@@ -183,7 +183,7 @@ export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
       <div className="lm-tool-grid">
         <label className="lm-tool-field">
           <span>{t.length}</span>
-          <input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 6' : 't.ex. 6'} onChange={(e) => setLength(e.currentTarget.value)} />
+          <input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 6' : ru ? 'напр. 6' : 't.ex. 6'} onChange={(e) => setLength(e.currentTarget.value)} />
         </label>
         <label className="lm-tool-field">
           <span>{t.height}</span>

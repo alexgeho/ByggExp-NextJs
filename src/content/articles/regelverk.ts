@@ -1416,7 +1416,7 @@ const B_BEHOVER_JAG_BYGGLOV: BlogPost = {
   _id: 'code-behover-jag-bygglov', title: 'Behöver du bygglov? Guide 2026', slug: 'behover-jag-bygglov', locale: 'sv',
   excerpt: 'Behöver du bygglov? Det beror på vad, hur stort och var. Guide till när bygglov krävs enligt PBL, när det räcker med anmälan och vad du får göra utan lov.', tag: 'Regelverk',
   coverImageUrl: '/landing/features/6verktyg.webp', contentHtml: B_BEHOVER_JAG_BYGGLOV_HTML,
-  seoTitle: 'Behöver du bygglov? Guide 2026 – lov, anmälan eller inget | ByggExp', seoDescription: 'Behöver du bygglov? Guide till plan- och bygglagen: när krävs bygglov, när räcker anmälan och startbesked, och vad du får bygga utan lov (attefall, friggebod).',
+  seoTitle: 'Behöver du bygglov? Guide 2026 – lov eller anmälan | ByggExp', seoDescription: 'Behöver du bygglov? Guide till plan- och bygglagen: när krävs bygglov, när räcker anmälan och startbesked, och vad du får bygga utan lov (attefall, friggebod).',
   seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
   publishedAt: '2026-08-22T14:00:00.000Z', createdAt: '2026-08-22T14:00:00.000Z', updatedAt: '2026-08-22T14:00:00.000Z',
 };
@@ -1447,7 +1447,7 @@ const B_ATTEFALLSHUS_REGLER: BlogPost = {
   _id: 'code-attefallshus-regler', title: 'Attefallshus – regler, storlek och bygglov 2026', slug: 'attefallshus-regler', locale: 'sv',
   excerpt: 'Attefallshus 2026: upp till 30 m², max 4 m nockhöjd, minst 4,5 m från tomtgräns. Kräver anmälan och startbesked – inte bygglov. Alla regler samlat.', tag: 'Regelverk',
   coverImageUrl: '/landing/features/6verktyg.webp', contentHtml: B_ATTEFALLSHUS_REGLER_HTML,
-  seoTitle: 'Attefallshus regler 2026 – storlek, tomtgräns & bygglov | ByggExp', seoDescription: 'Attefallshus regler 2026: upp till 30 m², max 4 m nockhöjd, minst 4,5 m från tomtgräns, kräver anmälan och startbesked (inte bygglov). Så gäller det.',
+  seoTitle: 'Attefallshus regler 2026 – storlek & bygglov | ByggExp', seoDescription: 'Attefallshus regler 2026: upp till 30 m², max 4 m nockhöjd, minst 4,5 m från tomtgräns, kräver anmälan och startbesked (inte bygglov). Så gäller det.',
   seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
   publishedAt: '2026-08-22T14:05:00.000Z', createdAt: '2026-08-22T14:05:00.000Z', updatedAt: '2026-08-22T14:05:00.000Z',
 };

@@ -1775,7 +1775,7 @@ const A_FALL_LUTNING_BERAKNA_AVLOPP_MARK_TAK: BlogPost = {
   title: "Fall och lutning – så räknar du rätt för avlopp, mark, tak och golvbrunn", slug: "fall-lutning-berakna-avlopp-mark-tak", locale: "sv",
   excerpt: "Räkna om fall mellan mm/m, procent och 1:X – och se riktvärdena för avlopp, mark runt huset, tak och fall mot golvbrunn i våtrum. Med gratis fall-kalkylator.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/fall-preview.webp", contentHtml: A_FALL_LUTNING_BERAKNA_AVLOPP_MARK_TAK_HTML,
-  seoTitle: "Fall & lutning – räkna rätt för avlopp, mark & golvbrunn | ByggExp", seoDescription: "Så räknar du fall: mm/m, procent och 1:X hänger ihop (20 mm/m = 2 % = 1:50). Riktvärden för avlopp, mark, tak och fall mot golvbrunn i våtrum. Gratis kalkylator.",
+  seoTitle: "Fall & lutning – räkna rätt för avlopp & mark | ByggExp", seoDescription: "Så räknar du fall: mm/m, procent och 1:X hänger ihop (20 mm/m = 2 % = 1:50). Riktvärden för avlopp, mark, tak och fall mot golvbrunn i våtrum. Gratis kalkylator.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/fall-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T14:00:00.000Z", createdAt: "2026-08-20T14:00:00.000Z", updatedAt: "2026-08-20T14:00:00.000Z",
 };

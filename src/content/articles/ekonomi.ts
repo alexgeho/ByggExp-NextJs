@@ -234,7 +234,7 @@ const TIMPRIS: BlogPost = {
   tag: 'Ekonomi',
   coverImageUrl: '/landing/features/2uppgift.webp',
   contentHtml: TIMPRIS_HTML,
-  seoTitle: 'Timpris hantverkare 2026 – så räknar du ut vad du ska ta betalt | ByggExp',
+  seoTitle: 'Timpris hantverkare 2026 – räkna rätt pris | ByggExp',
   seoDescription:
     'Vad ska du ta betalt i timmen? Marknadspriser 2026 och hur du räknar fram ditt timpris från kostnader, debiteringsgrad och vinst. Gratis timpris-kalkylator.',
   seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`,
@@ -7765,7 +7765,7 @@ const A_OFFERTPROGRAM_BYGGFORETAG: BlogPost = {
   title: "Offertprogram för byggföretag – vad du ska titta på (2026)", slug: "offertprogram-byggforetag", locale: "sv",
   excerpt: "Vad ett offertprogram för bygg bör klara – mallar, kalkyl, ROT, PDF, uppföljning och koppling till faktura – och när mall räcker vs. system. Kom igång gratis.", tag: "Ekonomi",
   coverImageUrl: "/landing/verktyg/offert-preview.webp", contentHtml: A_OFFERTPROGRAM_BYGGFORETAG_HTML,
-  seoTitle: "Offertprogram för byggföretag – så väljer du 2026 | ByggExp", seoDescription: "Vad ett offertprogram för bygg ska klara: mallar, kalkyl med rätt påslag, ROT, proffsig PDF, uppföljning och koppling till faktura. När mall räcker vs. system – kom igång gratis.",
+  seoTitle: "Offertprogram för byggföretag – så väljer du 2026 | ByggExp", seoDescription: "Vad ett offertprogram för bygg ska klara: mallar, kalkyl med rätt påslag, ROT, proffsig PDF och koppling till faktura. När mall räcker vs. system – gratis.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/offert-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T16:05:00.000Z", createdAt: "2026-08-20T16:05:00.000Z", updatedAt: "2026-08-20T16:05:00.000Z",
 };

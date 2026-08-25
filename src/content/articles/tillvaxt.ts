@@ -766,7 +766,7 @@ const A_DOKUMENTHANTERING_BYGG: BlogPost = {
   title: "Dokumenthantering för byggföretag – allt samlat per projekt", slug: "dokumenthantering-bygg", locale: "sv",
   excerpt: "Vad dokumenthantering för byggföretag bör klara: ritningar, avtal, egenkontroller, foton och protokoll samlade per projekt – tillgängligt för bygge och kontor. Så gör ByggExp det.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/project.webp", contentHtml: A_DOKUMENTHANTERING_BYGG_HTML,
-  seoTitle: "Dokumenthantering för byggföretag – per projekt | ByggExp", seoDescription: "Dokumenthantering för byggföretag: ritningar, avtal, egenkontroller, foton och protokoll samlade per projekt, sökbart och tillgängligt för bygge och kontor. Så gör ByggExp det.",
+  seoTitle: "Dokumenthantering för byggföretag – per projekt | ByggExp", seoDescription: "Dokumenthantering för byggföretag: ritningar, avtal, egenkontroller, foton och protokoll samlade per projekt – sökbart för bygge och kontor. Så gör ByggExp det.",
   seoImageUrl: `${SITE_URL}/landing/features/project.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T19:20:00.000Z", createdAt: "2026-08-20T19:20:00.000Z", updatedAt: "2026-08-20T19:20:00.000Z",
 };
@@ -1032,7 +1032,7 @@ const A_APP_TIDRAPPORTERING_BYGG: BlogPost = {
   title: "App för tidrapportering i byggföretag – så funkar digital tidrapport", slug: "app-for-tidrapportering-bygg", locale: "sv",
   excerpt: "App för tidrapportering i bygg: personalen stämplar in och ut i mobilen, timmarna hamnar på rätt projekt och blir underlag för lön och faktura. Så fungerar digital tidrapportering.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: A_APP_TIDRAPPORTERING_BYGG_HTML,
-  seoTitle: "App för tidrapportering i bygg – GPS, mobil & export | ByggExp", seoDescription: "App för tidrapportering i byggföretag: in- och utcheckning i mobilen med GPS, timmar på rätt projekt, export till lön och faktura. Digital tidrapport för hantverkare och entreprenad.",
+  seoTitle: "App för tidrapportering i bygg – GPS, mobil & export | ByggExp", seoDescription: "App för tidrapportering i bygg: in-/utcheckning i mobilen med GPS, timmar på rätt projekt, export till lön och faktura. Digital tidrapport för hantverkare.",
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T09:00:00.000Z", createdAt: "2026-08-22T09:00:00.000Z", updatedAt: "2026-08-22T09:00:00.000Z",
 };
@@ -1187,7 +1187,7 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG: BlogPost = {
   title: "Tidrapporteringssystem för bygg – tidsregistrering och tidredovisning", slug: "tidrapporteringssystem-bygg", locale: "sv",
   excerpt: "Ett tidrapporteringssystem samlar tidsregistrering, tidrapportering och tidredovisning på ett ställe – timmar i mobilen, färdigt underlag för lön och faktura. Så väljer du rätt.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML,
-  seoTitle: "Tidrapporteringssystem för bygg – tidsregistrering | ByggExp", seoDescription: "Tidrapporteringssystem för byggföretag: tidsregistrering i mobilen, tidredovisning per projekt och export till lön och faktura. Så väljer du ett enkelt system som laget använder.",
+  seoTitle: "Tidrapporteringssystem för bygg – tidsregistrering | ByggExp", seoDescription: "Tidrapporteringssystem för bygg: tidsregistrering i mobilen, tidredovisning per projekt och export till lön och faktura. Så väljer du ett enkelt system.",
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T09:20:00.000Z", createdAt: "2026-08-22T09:20:00.000Z", updatedAt: "2026-08-22T09:20:00.000Z",
 };

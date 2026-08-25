@@ -281,7 +281,7 @@ const TIDRAPPORTERING: BlogPost = {
   tag: 'Tidrapportering',
   coverImageUrl: '/landing/verktyg/tidrapport-preview.webp',
   contentHtml: TIDRAPPORTERING_HTML,
-  seoTitle: 'Tidrapportering i byggföretag – guide, mall & debiteringsgrad | ByggExp',
+  seoTitle: 'Tidrapportering i byggföretag – guide & mall | ByggExp',
   seoDescription:
     'Vad ska en tidrapport innehålla, hur skiljer den sig från personalliggare och hur ger tiden dig debiteringsgraden? Guide för byggföretag + gratis tidrapport-mall.',
   seoImageUrl: `${SITE_URL}/landing/verktyg/tidrapport-preview.webp`,
@@ -1443,7 +1443,7 @@ const A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM: BlogPost = {
   title: "Egenkontroll el – egenkontrollprogram och kontroll av installationen", slug: "egenkontroll-el-egenkontrollprogram", locale: "sv",
   excerpt: "Skillnaden mellan elinstallationsföretagets lagstadgade egenkontrollprogram (elsäkerhetslagen 24 §, ELSÄK-FS 2017:3) och den praktiska kontrollen av en installation. Med gratis mall.", tag: "Egenkontroll",
   coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM_HTML,
-  seoTitle: "Egenkontroll el – egenkontrollprogram & kontroll | ByggExp", seoDescription: "Egenkontroll el: elinstallationsföretag måste ha egenkontrollprogram (elsäkerhetslagen 24 §, ELSÄK-FS 2017:3) + registrering hos Elsäkerhetsverket. Så dokumenterar du kontrollen. Gratis mall.",
+  seoTitle: "Egenkontroll el – egenkontrollprogram & kontroll | ByggExp", seoDescription: "Egenkontroll el: elföretag måste ha egenkontrollprogram och registrering hos Elsäkerhetsverket (elsäkerhetslagen, ELSÄK-FS 2017:3). Så dokumenterar du. Gratis mall.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T15:00:00.000Z", createdAt: "2026-08-20T15:00:00.000Z", updatedAt: "2026-08-20T15:00:00.000Z",
 };

@@ -46,7 +46,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Gipskalkylator',
     intro:
-      'Ska du bygga en gipsvägg? Ange längd och höjd så räknar kalkylatorn fram exakt hur många skivor, reglar och skruv du behöver – och ser till att skivskarvarna landar mitt på reglarna. Då slipper du både överköp och en extra vända till bygghandeln.',
+      'Ange längd och höjd – skivor, reglar och skruv räknas ut direkt.',
     previewAlt: 'Förhandsvisning av gipsberäknare',
     previewCaption: 'Så ser gipsberäknare ut',
     sections: [
@@ -126,7 +126,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkulator',
     h1: 'Gipskalkulator',
     intro:
-      'Angi veggens mål så får du hele materiallisten for et bindingsverk: gipsplater, stendere, svill og toppsvill, isolasjon og skruer. Platebredden styrer stenderavstanden (c/c) etter Gyprocs håndbok.',
+      'Fyll inn lengde og høyde – plater, stendere og skruer med en gang.',
     previewAlt: 'Forhåndsvisning av gipsberegner',
     previewCaption: 'Slik ser gipsberegner ut',
     sections: [
@@ -206,7 +206,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Plasterboard calculator',
     intro:
-      'Building a plasterboard wall? Enter the length and height and the calculator works out exactly how many boards, studs and screws you need – and keeps the board joints landing in the middle of a stud. No over-ordering, no second trip to the merchant.',
+      'Enter length and height – boards, studs and screws, worked out instantly.',
     previewAlt: 'Preview of the plasterboard calculator',
     previewCaption: 'This is how the plasterboard calculator looks',
     sections: [
@@ -286,7 +286,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Бесплатный калькулятор',
     h1: 'Калькулятор гипсокартона',
     intro:
-      'Строите стену из гипсокартона? Укажите длину и высоту — и калькулятор рассчитает, сколько именно листов, стоек и саморезов нужно, и проследит, чтобы стыки листов приходились на середину стоек. Так вы избежите и перезакупки, и лишней поездки в строймагазин.',
+      'Укажите длину и высоту стены — листы, стойки и саморезы посчитаются сразу.',
     previewAlt: 'Предпросмотр калькулятора гипсокартона',
     previewCaption: 'Так выглядит калькулятор гипсокартона',
     sections: [

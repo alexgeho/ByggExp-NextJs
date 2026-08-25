@@ -46,7 +46,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Betongkalkylator',
     intro:
-      'Ska du gjuta en platta på mark, en grundbalk eller plintar? Fyll i måtten så får du både betongmängden och ett riktpris på skärmen – klart att ta med till bygghandeln eller lägga in i offerten.',
+      'Fyll i måtten – betongmängd, säckar och riktpris räknas ut direkt.',
     previewAlt: 'Förhandsvisning av betongberäknare',
     previewCaption: 'Så ser betongberäknaren ut',
     sections: [
@@ -151,7 +151,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkulator',
     h1: 'Betongkalkulator',
     intro:
-      'Velg hva du støper – plate, grunnbjelke eller plinter – så regner vi ut betongvolum i kubikkmeter, antall sekker tørrbetong, blandevann og armeringsnett. En sekk 25 kg gir ca. 12,5 liter ferdig betong.',
+      'Fyll inn målene – betongmengde, sekker og veiledende pris med en gang.',
     previewAlt: 'Forhåndsvisning av betongberegner',
     previewCaption: 'Slik ser betongberegneren ut',
     sections: [
@@ -250,7 +250,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Free calculator',
     h1: 'Concrete calculator',
     intro:
-      'Casting a slab on grade, a footing or piers? Enter the measurements and get the concrete you need and a guide price on screen – ready to take to the builders’ merchant or drop into a quote.',
+      'Enter the measurements – concrete volume, bags and a guide price, instantly.',
     previewAlt: 'Preview of the concrete calculator',
     previewCaption: 'This is how the concrete calculator looks',
     sections: [
@@ -355,7 +355,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Бесплатный калькулятор',
     h1: 'Калькулятор бетона',
     intro:
-      'Заливаете плиту по грунту, фундаментную балку или столбы? Введите размеры — и получите объём бетона и ориентировочную цену на экране, готовые взять в строймагазин или вставить в смету.',
+      'Введите размеры — объём бетона, мешки и ориентировочная цена посчитаются сразу.',
     previewAlt: 'Предпросмотр калькулятора бетона',
     previewCaption: 'Так выглядит калькулятор бетона',
     sections: [

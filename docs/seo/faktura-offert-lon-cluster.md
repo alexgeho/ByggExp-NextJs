@@ -17,7 +17,7 @@ Senast uppdaterad: 2026-08-25.
 | offert | ✅ 2026-08-25 | ✅ | 14 rader; `offertmall bygg` = 500/mån (störst hittills) |
 | lön / löneunderlag | ✅ 2026-08-25 | ✅ | 6 rader, nästan allt blankt — dött för nytt innehåll |
 | kalkyl / anbud | ✅ 2026-08-25 | ✅ | 11 rader; levande kommersiellt, "gratis"-varianter höga bud |
-| ROT (rent) | ✅ (via faktura) | ✅ | täckt av faktura-batchens ROT-rader |
+| ROT (rent) | ✅ 2026-08-25 | ✅ | rent-ROT-batch (rot avdrag program / rot faktura app / rot hantering bygg / rotavdrag företag program) = allt blankt; task-ROT täckt via faktura-pillar |
 
 **ALLA BATCHER INNE 2026-08-25. Insamling klar → se slutlig stridsplan §2.**
 

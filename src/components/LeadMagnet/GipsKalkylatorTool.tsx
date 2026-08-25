@@ -18,10 +18,33 @@ function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
 }
 
-export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
+export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale | 'ru' }) {
   const en = locale === 'en';
-  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : 'sv-SE', { maximumFractionDigits: d });
-  const t = en
+  const ru = locale === 'ru';
+  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : ru ? 'ru-RU' : 'sv-SE', { maximumFractionDigits: d });
+  const t = ru
+    ? {
+        title: 'Калькулятор гипсокартона — полный список материалов',
+        sub: 'Введите стену — и мы рассчитаем гипсокартон, стойки, направляющие, изоляцию и саморезы. Ширина листа задаёт шаг стоек (c/c) по монтажному руководству Gyproc.',
+        length: 'Длина стены (м)', height: 'Высота стены (м)',
+        cladL: 'Обшивка', cladBoth: 'С двух сторон', cladOne: 'С одной стороны',
+        layersL: 'Слоёв на сторону', l1: '1 слой', l2: '2 слоя',
+        boardWidthL: 'Ширина листа', boardLenL: 'Длина листа (м)',
+        frameL: 'Каркас', frameWood: 'Деревянные стойки', frameSteel: 'Стальные профили',
+        insulL: 'Изоляция в стене', yes: 'Да', no: 'Нет',
+        openings: 'Вычет проёмов (м²)', spill: 'Отходы (%)',
+        rSheets: 'Гипсокартон', rClad: 'Обшиваемая площадь / ГКЛ с отходами', rStuds: (cc: number) => `Стойки (c/c ${cc} мм)`, rRail: '', rInsul: 'Изоляция', rScrews: 'Саморезы для ГКЛ',
+        railWood: 'Нижняя + верхняя обвязка', railSteel: 'Направляющая (верх + низ)',
+        fine: 'Оценка по монтажному руководству Gyproc. Каркас считается один раз даже при двусторонней обшивке; саморезы ок. 20 шт/м² на слой (край c200, поле c300). Всегда сверяйте размеры листов, тип стоек и крепёж с инструкцией поставщика для вашего типа стены.',
+        offert: 'Создать смету из этого', faktura: 'Создать счёт', excel: 'Экспорт в Excel', pdf: 'Экспорт в PDF',
+        pcs: 'шт', lm: 'пог.м',
+        csvTitle: 'Калькулятор гипсокартона', csvWall: 'Стена', wallDesc: (l: string, h: string, s: string, lay: string) => `${l} × ${h} м, ${s}, ${lay} слой(ёв)/сторона`, both: 'двусторонняя', one: 'односторонняя',
+        post: 'Позиция', qty: 'Кол-во',
+        mSheets: 'Гипсокартон', mClad: 'Обшиваемая площадь', mGips: 'ГКЛ с отходами', mScrews: 'Саморезы для ГКЛ',
+        pdfTitle: 'Гипсокартон — список материалов', pdfMeta: (l: string, h: string, s: string, lay: string) => `Стена ${l} × ${h} м · ${s} · ${lay} слой(ёв)/сторона`,
+        soLabour: 'Работа по монтажу',
+      }
+    : en
     ? {
         title: 'Plasterboard calculator – the full material list',
         sub: 'Enter the wall and we work out plasterboard, studs, plates, insulation and screws. The board width sets the stud spacing (c/c) per Gyproc’s installation manual.',

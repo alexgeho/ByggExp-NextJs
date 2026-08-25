@@ -18,7 +18,7 @@ import { headerTranslations } from '../../../locales/header';
 // sv served on byggexp.se, nb served on byggexp.no (Norway expansion). Content is
 // keyed by locale; the page renders whichever the [lang] segment asks for. nb is
 // gated by NB_LIVE (see lib/locale) until byggexp.no goes live.
-type Locale = CalcLocale;
+type Locale = CalcLocale | 'ru';
 
 type ToolContent = {
   metaTitle: string;
@@ -348,14 +348,121 @@ const CONTENT: Record<Locale, ToolContent> = {
       { slug: '', label: 'All free tools' },
     ],
   },
+  ru: {
+    metaTitle: 'Калькулятор бетона 2026 — объём, мешки и вода | ByggExp',
+    description:
+      'Рассчитайте бетон для плиты, фундаментной балки или столбов: объём в м³, количество мешков сухой смеси, вода затворения и арматурная сетка. Бесплатный калькулятор бетона, без регистрации.',
+    badge: 'Бесплатный калькулятор',
+    h1: 'Калькулятор бетона',
+    intro:
+      'Заливаете плиту по грунту, фундаментную балку или столбы? Введите размеры — и получите объём бетона и ориентировочную цену на экране, готовые взять в строймагазин или вставить в смету.',
+    previewAlt: 'Предпросмотр калькулятора бетона',
+    previewCaption: 'Так выглядит калькулятор бетона',
+    sections: [
+      {
+        id: 'sa-raknar-du',
+        heading: 'Как считается объём — по каждой заливке',
+        body: (
+          <>
+            <figure className="lm-diagram">
+              <img src="/landing/diagrams/betong.webp" alt="Схема: объём бетона для плиты по грунту с краевой балкой" width={720} height={380} loading="lazy" />
+              <figcaption>Объём = длина × ширина × толщина, плюс краевая балка по периметру. 1 м³ ≈ 80 мешков по 25 кг.</figcaption>
+            </figure>
+            <ul>
+              <li><strong>Плита / пол:</strong> длина × ширина × толщина. С краевой балкой добавляется периметр × ширина балки × высота.</li>
+              <li><strong>Фундамент / балка:</strong> длина × ширина × высота.</li>
+              <li><strong>Столбы / лунки (круглые):</strong> π × радиус² × глубина, умножить на число лунок.</li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        id: 'volym-till-sackar',
+        heading: 'От объёма к мешкам и воде',
+        body: (
+          <ul>
+            <li>1 м³ = <strong>1000 литров</strong> бетона.</li>
+            <li>Мешок <strong>25 кг</strong> сухой смеси ≈ 12,5 литра → ок. <strong>80 мешков на м³</strong>.</li>
+            <li><strong>Биг-бэг 1000 кг</strong> ≈ 520 литров.</li>
+            <li>Вода затворения: ок. <strong>3–4 литра на мешок</strong>.</li>
+          </ul>
+        ),
+      },
+      {
+        id: 'platta-kantbalk',
+        heading: 'Плита по грунту: не забудьте краевую балку',
+        body: (
+          <p>
+            Утолщённый край вмещает больше бетона, чем кажется. Гараж 5 × 10 м даёт
+            ок. 5 м³ в самой плите, но почти ещё 1 м³ в краевой балке — всегда учитывайте её,
+            иначе закажете слишком мало.
+          </p>
+        ),
+      },
+      {
+        id: 'sack-eller-fabriksbetong',
+        heading: 'Мешковый или товарный бетон?',
+        body: (
+          <p>
+            Для небольших работ мешковый бетон удобен. Примерно от 1–2 м³ товарный бетон
+            (готовый, с доставкой миксером) обычно и дешевле, и проще, чем месить много
+            мешков вручную — и вы успеваете залить до начала схватывания.
+          </p>
+        ),
+      },
+    ],
+    faqHeading: 'Частые вопросы о бетоне',
+    faq: [
+      {
+        question: 'Как рассчитать объём бетона?',
+        answer:
+          'Базовая формула — размеры в метрах, перемноженные между собой: плита = длина × ширина × толщина, то есть 5 × 4 × 0,10 = 2 м³. У балки, фундамента и круглых столбов свои формулы, но калькулятор выбирает нужную по тому, что вы заливаете, и добавляет отходы, так что помнить их не нужно.',
+      },
+      {
+        question: 'Сколько мешков бетона в одном кубе?',
+        answer:
+          'Считайте примерно 80 мешков по 25 кг на кубометр или один биг-бэг 1000 кг на чуть больше половины куба. Точный выход указан на упаковке и зависит от производителя — лучше взять на мешок больше, чем на мешок меньше.',
+      },
+      {
+        question: 'Нужно ли учитывать краевую балку?',
+        answer:
+          'Да — утолщённый край вмещает удивительно много бетона и легко забывается. Выберите «Краевая балка: Да» и укажите ширину и высоту, и калькулятор автоматически добавит объём по всему периметру плиты.',
+      },
+      {
+        question: 'Сколько воды нужно добавлять?',
+        answer:
+          'Считайте ок. 3–4 литра воды на мешок 25 кг. Калькулятор показывает ориентир для всего объёма — точную консистенцию смотрите в инструкции продукта.',
+      },
+      {
+        question: 'Когда заказывать товарный бетон вместо мешков?',
+        answer:
+          'При больших заливках, примерно от 1–2 м³, обычно стоит заказать товарный бетон — не нужно таскать и месить мешки вручную, качество ровнее по всей заливке. Меньше этого объёма мешкового бетона достаточно.',
+      },
+      {
+        question: 'Это бесплатно?',
+        answer: 'Да, калькулятор бесплатный и не требует регистрации.',
+      },
+    ],
+    ctaHeading: 'Контролируйте материалы и экономику в ByggExp',
+    ctaText: 'Следите за материалами, временем и затратами по проекту. Закажите демо.',
+    ctaButton: 'Заказать демо',
+    relatedHeading: 'Другие строительные калькуляторы',
+    related: [
+      { slug: 'kvadratmeter-kalkylator', label: 'Калькулятор квадратных метров' },
+      { slug: 'tak-kalkylator', label: 'Калькулятор кровли' },
+      { slug: '', label: 'Все бесплатные инструменты' },
+    ],
+  },
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const lang = params?.lang;
-  if (!calcLocaleEnabled(lang)) {
-    return { notFound: true };
+  // ru is served for the calculator pages that have Russian content (for review /
+  // the Russian-speaking segment); other calculators stay sv/nb/en.
+  if (lang === 'ru' || calcLocaleEnabled(lang)) {
+    return { props: { lang } };
   }
-  return { props: { lang } };
+  return { notFound: true };
 };
 
 export default function Page({ lang }: { lang: Locale }) {
@@ -396,7 +503,7 @@ export default function Page({ lang }: { lang: Locale }) {
         badge={c.badge}
         title={c.h1}
         intro={c.intro}
-        embedSlug="betong-kalkylator"
+        embedSlug={lang === 'ru' ? undefined : 'betong-kalkylator'}
         embedTitle={c.h1}
         locale={lang}
         tool={<BetongKalkylatorTool locale={lang} />}

@@ -17,10 +17,27 @@ export default function ToolLeadForm({
 }: {
   tool: string;
   summary?: string;
-  locale?: CalcLocale;
+  locale?: CalcLocale | 'ru';
 }) {
   const en = locale === 'en';
-  const t = en
+  const ru = locale === 'ru';
+  const t = ru
+    ? {
+        heading: 'Нужна помощь дальше?',
+        sub: 'Коротко опишите, что нужно, и мы поможем со сметой, материалом и следующими шагами — бесплатно. Обязательно только поле контакта.',
+        message: 'Сообщение',
+        messagePh: 'Коротко опишите проект или вопрос …',
+        contact: 'E-mail или телефон',
+        contactPh: 'имя@пример.se или +46…',
+        name: 'Имя',
+        send: 'Отправить',
+        sending: 'Отправка…',
+        error: 'Что-то пошло не так — попробуйте снова или напишите info@byggexp.se.',
+        privacy: 'Мы используем ваши данные только чтобы связаться с вами по вашему запросу.',
+        thanks: 'Спасибо! Мы свяжемся с вами.',
+        thanksSub: 'Мы ответим по e-mail или телефону и поможем продолжить расчёт.',
+      }
+    : en
     ? {
         heading: 'Want help taking this further?',
         sub: 'Briefly describe what you need and we’ll help you with a quote, material and next steps – free of charge. Only the contact field is required.',

@@ -53,7 +53,7 @@ export type LeadMagnetPageProps = {
   /** Title used inside the embed snippet; defaults to the page title. */
   embedTitle?: string;
   /** Locale for the built-in tool disclaimer (sv default, en for /en). */
-  locale?: CalcLocale;
+  locale?: CalcLocale | 'ru';
 };
 
 export default function LeadMagnetPage({
@@ -74,7 +74,9 @@ export default function LeadMagnetPage({
   locale = 'sv',
 }: LeadMagnetPageProps) {
   const disclaimer =
-    locale === 'en'
+    locale === 'ru'
+      ? 'Инструмент даёт оценку и является вспомогательным средством, а не готовым расчётом. Всегда сверяйте результат с чертежами, действующими нормами, данными поставщика и своим профессиональным опытом, прежде чем давать обязывающую цену, заказывать материал или использовать файл. ByggExp не несёт ответственности за решения, принятые исключительно на основе инструмента.'
+      : locale === 'en'
       ? 'This tool gives an estimate and is an aid – not a finished calculation. Always check the result against drawings, applicable regulations, supplier data and your professional experience before giving a binding price, ordering material or using the file. ByggExp is not responsible for decisions made solely on the basis of the tool.'
       : 'Verktyget ger en uppskattning och är ett hjälpmedel – inte en färdig kalkyl. Kontrollera alltid resultatet mot ritning, gällande regler, leverantörens uppgifter och din yrkeserfarenhet innan du lämnar ett bindande pris, beställer material eller använder filen. ByggExp ansvarar inte för beslut som fattas enbart utifrån verktyget.';
   return (

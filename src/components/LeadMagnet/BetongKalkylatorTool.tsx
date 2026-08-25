@@ -30,12 +30,50 @@ const MESH_KG_PER_M2: Record<string, number> = { '5': 2.2, '6': 3.05, '7': 4.3, 
 // Load-bearing cellplast/EPS grades under a slab and a riktpris kr/m³ (editable).
 const EPS_PRICE: Record<string, number> = { S80: 1200, S100: 1400, S150: 1800, S200: 2300 };
 
-export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
+export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale | 'ru' }) {
   const en = locale === 'en';
-  const loc = en ? 'en-GB' : 'sv-SE';
+  const ru = locale === 'ru';
+  const loc = en ? 'en-GB' : ru ? 'ru-RU' : 'sv-SE';
   const nf = (v: number, d = 0) => v.toLocaleString(loc, { maximumFractionDigits: d });
   const kr = (v: number) => `${Math.round(v).toLocaleString(loc)} kr`;
-  const t = en
+  const t = ru
+    ? {
+        title: 'Калькулятор бетона — плита по грунту, армирование и стоимость',
+        sub: 'Рассчитывает бетон, пенополистирол (EPS), армирование (сетка + краевые стержни + вязальная проволока) и подстилающий слой для плиты по грунту — с краевой балкой и поддержкой L-образных плит. Включите стоимость для ориентировочной цены (материал + работа + ROT). Экспорт в Excel или PDF.',
+        shapeQ: 'Что заливаете?',
+        oPlatta: 'Плита по грунту', oBalk: 'Фундамент / балка / основание', oPlint: 'Столбы / лунки (круглые)',
+        formL: 'Форма', oRekt: 'Прямоугольная (длина × ширина)', oEgen: 'Своя форма / L-форма (площадь + периметр)',
+        length: 'Длина (м)', width: 'Ширина (м)', area: 'Площадь (м²)', perim: 'Периметр (м)',
+        thickness: 'Толщина бетона (см)',
+        edgeQ: 'Краевая балка?', yes: 'Да', no: 'Нет',
+        edgeW: 'Ширина краевой балки (см)', edgeH: 'Глубина краевой балки (см)', edgeBars: 'Стержни в кромке (шт)', barDiaL: 'Диаметр арматуры',
+        meshQ: 'Арматурная сетка?', meshTypeL: 'Тип сетки',
+        isoThick: 'Пенополистирол EPS — толщина (мм)', isoGrade: 'EPS — марка (нагрузка)',
+        oS80: 'EPS S80 (лёгкая нагрузка)', oS100: 'EPS S100 (обычный дом)', oS150: 'EPS S150 (повышенная нагрузка)', oS200: 'EPS S200 (промышленная)',
+        baseThick: 'Щебень / подстилающий слой (мм)',
+        bLen: 'Длина (м)', bWidth: 'Ширина (см)', bHeight: 'Высота (см)',
+        diam: 'Диаметр (см)', depth: 'Глубина (см)', count: 'Количество (шт)',
+        concreteL: 'Бетон', oFabrik: 'Товарный бетон (м³)', oSack: 'Мешок 25 кг', litersPerBag: 'Литров на мешок', spill: 'Отходы (%)',
+        rVolume: 'Объём бетона с отходами', rBags: 'Мешки сухой смеси (25 кг)', rBigBag: 'Эквивалент биг-бэгов (1000 кг)', rWater: 'Вода затворения (прибл.)',
+        rMesh: 'Арматурная сетка', rEdge: 'Краевые стержни', rBind: 'Вязальная проволока', rIso: 'Пенополистирол EPS', rBase: 'Щебень / подстилающий слой',
+        showCostQ: 'Показать стоимость (ориентир)?', costNo: 'Нет', costYes: 'Да — материал + работа',
+        pSackL: 'Бетон (kr/мешок)', pBetongL: 'Товарный бетон (kr/м³)', pMeshL: 'Сетка (kr/шт)', pSteelL: 'Арматура (kr/кг)', pBindL: 'Проволока (kr/кг)',
+        pIsoL: 'EPS (kr/м³)', pBaseL: 'Щебень (kr/м³)', timprisL: 'Ставка работы (kr/час)', hRebarL: 'Армирование: ч/тонна', hM2L: 'Прочая работа: ч/м²',
+        walkL: 'Перемещения / ходьба (%)', bindTonL: 'Проволока (кг/тонна)', rotQ: 'ROT-вычет (частное лицо)?',
+        cMaterial: 'Материал', cLabour: (h: string) => `Работа (${h} ч)`, cSum: 'Итого без НДС', cRot: 'ROT-вычет (30% от работы)', cAfter: 'К оплате после ROT', cPerM2: 'Ориентир. цена за м²',
+        fine: 'Оценка с учётом отходов по типовой конструкции (щебень → EPS 200–300 мм → сетка + краевые стержни → бетон + краевая балка). L-образная плита имеет больший периметр, а значит больше краевой балки, краевой изоляции и стержней. Стоимость ориентировочная — готовая плита по грунту обычно ~1 100–1 800 kr/м² с работой. Цены и трудозатраты редактируются. Всегда сверяйте с чертежами и расчётом конструктора.',
+        offert: 'Создать смету из этого', faktura: 'Создать счёт', excel: 'Экспорт в Excel', pdf: 'Экспорт в PDF',
+        pcs: 'шт', litre: 'литров', boards: 'плит',
+        slPlatta: 'Плита по грунту', slBalk: 'Фундамент / балка', slPlint: 'Столбы / лунки',
+        mConcrete: 'Бетон с отходами', mBagsDry: 'Мешки сухой смеси (25 кг)', mReadymix: 'Товарный бетон', mWater: 'Вода затворения (прибл.)',
+        mMesh: (k: string) => `Арматурная сетка K${k} (5,0×2,3 м)`, mEdge: (d: string) => `Краевые стержни Ø${d} мм`, mBind: 'Вязальная проволока',
+        mIso: (g: string) => `Пенополистирол EPS ${g}`, mBase: 'Щебень / подстилающий слой',
+        csvTitle: 'Бетон — расчёт', csvArea: 'Площадь', csvPerim: 'Периметр', csvMaterial: 'Материал', csvQty: 'Кол-во', csvCost: 'Стоимость (ориентир)',
+        pdfTitle: 'Бетон — расчёт', pdfNote: 'Ориентировочные значения с учётом отходов. Цены и трудозатраты — редактируемые оценки; сверяйте с чертежами, расчётом конструктора и актуальными ценами.',
+        costHdr: '— Стоимость (ориентир) —',
+        soConcrete: 'Бетон, мешок 25 кг', soReadymix: 'Товарный бетон (м³)', soMesh: 'Арматурная сетка (шт)', soIso: 'Пенополистирол (плит)', soLabour: 'Работа заливка/армирование',
+      }
+    : en
     ? {
         title: 'Concrete calculator – slab on grade, reinforcement & cost',
         sub: 'Estimates concrete, EPS insulation, reinforcement (mesh + edge bars + tie wire) and sub-base for a slab on grade – with edge beam and support for L-shaped slabs. Turn on cost for a guide price (material + labour + ROT). Export to Excel or PDF.',

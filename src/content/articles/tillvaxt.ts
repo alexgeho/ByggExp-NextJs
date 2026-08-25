@@ -923,7 +923,7 @@ const A_BASTA_BYGGPROGRAM: BlogPost = {
 // --- Tidrapportering keyword-funnel cluster (see memory) ---------------------
 
 const A_APP_TIDRAPPORTERING_BYGG_HTML = `
-<p>Papperslappar i fickan, timmar som skrivs av minnet på fredagen och en administratör som jagar underlag – manuell tidrapportering kostar byggföretag både pengar och nerver. En app för tidrapportering löser det: personalen stämplar in och ut i mobilen, timmarna hamnar automatiskt på rätt projekt, och du får ett färdigt underlag till lön och faktura utan efterarbete. Här går vi igenom vad en app för tidrapportering i bygg ska klara, hur digital tidrapportering fungerar i praktiken och hur du kommer igång.</p>
+<p>Papperslappar i fickan, timmar som skrivs av minnet på fredagen och en administratör som jagar underlag – manuell tidrapportering kostar byggföretag både pengar och nerver. En app för tidrapportering löser det: personalen stämplar in och ut i mobilen, timmarna hamnar automatiskt på rätt projekt, och du får ett färdigt underlag till lön och faktura utan efterarbete. Här går vi igenom vad en app för tidrapportering i bygg ska klara, hur digital tidrapportering fungerar i praktiken och hur du kommer igång. (Tidrapportering stavas ibland tidsrapportering och kallas även tidsregistrering – det handlar om samma sak: att fånga arbetstiden digitalt.)</p>
 
 <p>Vill du testa direkt? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller läs mer om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering i ByggExp</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/tidrapportering-flode.webp" alt="Diagram: digital tidrapportering – checka in, timmar på projekt, granska, export till lön och faktura" width="720" height="380" loading="lazy"><figcaption>Flödet: checka in på bygget, timmarna hamnar på rätt projekt, granska i webbadmin och exportera till lön och faktura.</figcaption></figure>
@@ -959,7 +959,7 @@ const A_APP_TIDRAPPORTERING_BYGG_HTML = `
 <li>Vid dagens slut checkar var och en ut, och timmarna bokförs automatiskt på projektet.</li>
 <li>På kontoret granskas passen och exporteras till lön eller faktura med ett klick.</li>
 </ol>
-<p>Samma app fungerar på både iPhone och Android, så hela laget kan rapportera tid i mobilen oavsett telefon.</p>
+<p>Samma app fungerar på både iPhone och Android, så hela laget kan rapportera tid i mobilen oavsett telefon. Har laget iPhone? Se guiden om <a href="/sv/blog/tidrapport-app-iphone">tidrapport-app för iPhone</a>.</p>
 
 <h2>OB, övertid och restid – räknas rätt automatiskt</h2>
 <p>I byggbranschen är det sällan bara ”åtta timmar” som ska rapporteras. Byggavtalet har regler för OB-tillägg, övertid och restidsersättning, och räknar man dem för hand smyger felen in – oftast till företagets nackdel. En app för tidrapportering som känner till reglerna kan flagga övertid, lägga på rätt OB och skilja restid från arbetstid utan att arbetsledaren räknar manuellt. Det ger både korrekt lön och ett fakturaunderlag som håller om beställaren ifrågasätter timmarna.</p>
@@ -1425,7 +1425,7 @@ const S_STAMPELKLOCKA_IPHONE_HTML = `
 <li>Fungerar offline och synkar när täckningen kommer tillbaka.</li>
 <li>Export till lön och faktura.</li>
 </ul>
-<p>Vill du förstå hela flödet? Se guiden om <a href="/sv/blog/stampelklocka-app-gps-bygg">stämpelklocka app med GPS</a> och om <a href="/sv/blog/tidsregistrering-app-bygg">tidsregistrering-app för bygg</a>.</p>
+<p>Vill du förstå hela flödet? Se guiden om <a href="/sv/blog/stampelklocka-app-gps-bygg">stämpelklocka app med GPS</a> och om <a href="/sv/blog/tidrapport-app-iphone">tidrapport-app för iPhone</a>.</p>
 
 <h2>Kom igång</h2>
 <p>Läs mer om <a href="/sv/blog/stampelklocka-app-gps-bygg">stämpelklocka med GPS</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
@@ -1777,6 +1777,55 @@ const A_SCHEMALAGGNING_BYGG: BlogPost = {
   publishedAt: "2026-08-22T11:30:00.000Z", createdAt: "2026-08-22T11:30:00.000Z", updatedAt: "2026-08-22T11:30:00.000Z",
 };
 
+const S_TIDRAPPORT_APP_IPHONE_HTML = `
+<p>Har du eller laget iPhone och vill rapportera tid direkt i mobilen? En tidrapport-app för iPhone låter dig checka in och ut på jobbet, koppla timmarna till rätt kund eller projekt och göra dem till underlag för lön och faktura – utan papperslappar. Här går vi igenom hur tidrapportering på iPhone fungerar och vad du ska tänka på.</p>
+<p>Se hela bilden i vår guide om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>, eller läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering och export</a>.</p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/tidrapportering-flode.webp" alt="Diagram: tidrapport app på iPhone – checka in, timmar på projekt, granska, export till lön och faktura" width="720" height="380" loading="lazy"><figcaption>Från incheckning på iPhone till färdigt underlag: timmarna kopplas till projektet och exporteras till lön och faktura.</figcaption></figure>
+
+<h2>Tidrapportering på iPhone – så fungerar det</h2>
+<p>Du laddar ner appen från App Store, loggar in och checkar in när arbetsdagen börjar. Timmarna registreras löpande och kopplas till rätt projekt eller kund. Vid dagens slut checkar du ut, och tiden blir underlag för både lön och faktura. Allt sker i mobilen – ingen dator behövs på plats.</p>
+
+<h2>Vad du bör titta efter i en tidrapport-app för iPhone</h2>
+<ul>
+<li>Enkel in-/utcheckning – gärna med GPS som bekräftar arbetsplatsen.</li>
+<li>Koppling till kund och projekt så timmarna hamnar rätt.</li>
+<li>Hantering av OB, övertid och restid enligt byggavtalet.</li>
+<li>Underlag för ROT-faktura direkt från loggad tid.</li>
+<li>Fungerar offline och synkar när täckningen kommer tillbaka.</li>
+<li>Samma app även för Android, så hela laget kan rapportera lika.</li>
+</ul>
+
+<h2>Rätt platsbehörighet på iPhone</h2>
+<p>För att GPS ska kunna bekräfta arbetsplatsen räcker det att välja "Tillåt när appen används" när iPhone frågar om platstjänster. Positionen registreras vid incheckning för att styrka närvaro – appen behöver inte spåra dig i bakgrunden.</p>
+
+<h2>Från timme till lön och faktura</h2>
+<p>Poängen med att rapportera tid på iPhone är att samma timme bara matas in en gång. De loggade timmarna blir <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a> och <a href="/sv/blog/fakturera-fran-byggexp">fakturarader</a> och räknas in i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a>. Vill du bara stämpla närvaro? Se <a href="/sv/blog/stampelklocka-app-iphone">stämpelklocka-app för iPhone</a>.</p>
+
+<h2>Kom igång</h2>
+<p>Vill du rapportera tid på iPhone? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, läs om <a href="/sv/blog/tidsregistrering-app-bygg">tidsregistrering-app för bygg</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Finns det en app för tidrapport på iPhone?</h3>
+<p>Ja. ByggExp-appen finns för iPhone i App Store och låter dig checka in och ut, koppla timmarna till projekt och göra dem till underlag för lön och faktura.</p>
+<h3>Fungerar tidrapporteringen på iPhone även för ROT?</h3>
+<p>Ja. När timmarna är kopplade till kund och jobb blir de underlag för fakturan inklusive ROT-avdrag, så du kan fakturera rätt belopp direkt.</p>
+<h3>Vilken platsbehörighet behöver appen på iPhone?</h3>
+<p>Det räcker med "Tillåt när appen används". GPS bekräftar arbetsplatsen vid incheckning – ingen spårning i bakgrunden.</p>
+<h3>Fungerar samma app om någon i laget har Android?</h3>
+<p>Ja. Appen finns för både iPhone och Android med samma funktioner, så hela laget kan rapportera tid oavsett telefon.</p>
+`.trim();
+
+const S_TIDRAPPORT_APP_IPHONE: BlogPost = {
+  _id: "code-tidrapport-app-iphone",
+  title: "Tidrapport app för iPhone – rapportera tid i mobilen", slug: "tidrapport-app-iphone", locale: "sv",
+  excerpt: "Tidrapport-app för iPhone: checka in och ut i mobilen, koppla timmarna till projekt och gör dem till underlag för lön och ROT-faktura. Så fungerar tidrapportering på iPhone.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: S_TIDRAPPORT_APP_IPHONE_HTML,
+  seoTitle: "Tidrapport app för iPhone – timmar i mobilen | ByggExp", seoDescription: "Tidrapport-app för iPhone: registrera arbetstid i mobilen med GPS, koppla till projekt och exportera till lön och ROT-faktura. Fungerar även på Android.",
+  seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-25T09:00:00.000Z", createdAt: "2026-08-25T09:00:00.000Z", updatedAt: "2026-08-25T09:00:00.000Z",
+};
+
 export const TILLVAXT_ARTICLES: BlogPost[] = [
   A_AFFARSSYSTEM_BYGGFORETAG,
   A_CRM_BYGGFORETAG,
@@ -1791,6 +1840,7 @@ export const TILLVAXT_ARTICLES: BlogPost[] = [
   S_MOBIL_TIDRAPPORTERING,
   S_STAMPELKLOCKA_ANDROID,
   S_STAMPELKLOCKA_IPHONE,
+  S_TIDRAPPORT_APP_IPHONE,
   S_TIDSREGISTRERING_APP_BYGG,
   S_TIDREDOVISNING_APP,
   S_PERSONALLIGGARE_APP,

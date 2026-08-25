@@ -1523,7 +1523,7 @@ const S_TIDSREGISTRERING_APP_BYGG: BlogPost = {
   title: "Tidsregistrering app för bygg – korrekt arbetstid i mobilen", slug: "tidsregistrering-app-bygg", locale: "sv",
   excerpt: "Tidsregistrering-app för bygg: fånga arbetstidens början och slut i mobilen med GPS, kopplat till projekt. Grunden för lön, faktura och uppföljning.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: S_TIDSREGISTRERING_APP_BYGG_HTML,
-  seoTitle: "Tidsregistrering app för bygg – arbetstid i mobilen | ByggExp", seoDescription: "Tidsregistrering-app för byggföretag: registrera arbetstid i mobilen med GPS och koppling till projekt. Underlag för lön, faktura och uppföljning.",
+  seoTitle: "Tidsregistrering app för bygg – arbetstid i mobilen | ByggExp", seoDescription: "Tidsregistrering-app för bygg: fånga arbetstidens början och slut i mobilen – första steget i kedjan tidsregistrering → tidrapportering → tidredovisning. GPS, offline och koll på arbetstidslagen.",
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T10:25:00.000Z", createdAt: "2026-08-22T10:25:00.000Z", updatedAt: "2026-08-22T10:25:00.000Z",
 };

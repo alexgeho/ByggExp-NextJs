@@ -1920,6 +1920,7 @@ const A_ATA_HANTERING_MALL_HTML = `
 <p>Varje år tappar svenska byggföretag stora belopp på extraarbeten som aldrig blir fakturerade – eller som faktureras men underkänns för att underlaget saknas. Fråga dig själv: har du verkligen fått betalt för allt extra du gjort i dina senaste projekt? Om svaret är osäkert är det nästan alltid ÄTA-hanteringen som brister. Det handlar sällan om att kunden vägrar betala av illvilja, utan om att beställningen var muntlig, dokumentationen tunn eller fakturan kom för sent.</p>
 
 <p>Med en fast rutin och en enkel blankett stänger du de flesta läckorna. Använd gärna <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall -&gt;</a> som utgångspunkt så har du fälten på plats redan från början.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/ata-flode.webp" alt="Diagram: ÄTA-flödet – ändring/tillägg, beställ skriftligt, pris (à-pris eller självkostnad), fakturera löpande" width="720" height="380" loading="lazy"><figcaption>ÄTA från ändring till betalt: dokumentera beställning och pris skriftligt innan arbetet utförs – muntlig ÄTA är svår att få betalt för.</figcaption></figure>
 
 <h2>Vad är ÄTA-arbeten?</h2>
 <p>ÄTA står för Ändrings-, Tilläggs- och Avgående arbeten – alltså arbete som tillkommer, ändras eller faller bort jämfört med det ursprungliga kontraktet. I praktiken uppstår extra jobb i så gott som varje projekt: en vägg visar sig vara rutten, marken bär inte, beställaren vill flytta ett uttag. Poängen är inte att undvika ÄTA, utan att hantera det rätt.</p>
@@ -2000,7 +2001,7 @@ const A_ATA_HANTERING_MALL: BlogPost = {
   title: "ÄTA-hantering mall – så dokumenterar och fakturerar du ÄTA utan att förlora ersättningen", slug: "ata-hantering-mall", locale: "sv",
   excerpt: "En konkret rutin och mall för att dokumentera och fakturera ÄTA-arbeten så att du får betalt för allt extra du gör – utan tvist vid slutbesiktningen.", tag: "Ekonomi",
   coverImageUrl: "/landing/verktyg/ata-mall-preview.webp", contentHtml: A_ATA_HANTERING_MALL_HTML,
-  seoTitle: "ÄTA-hantering mall & rutin | ByggExp", seoDescription: "Så dokumenterar och fakturerar du ÄTA i praktiken – rutin, mall och vanliga misstag som gör att hantverkare tappar ersättning. Ladda ner gratis ÄTA-mall.",
+  seoTitle: "ÄTA-arbeten – regler, ersättning & mall | ByggExp", seoDescription: "ÄTA-arbeten (ändrings-, tilläggs- och avgående arbeten): vad de betyder, reglerna i AB 04/ABT 06, likställda ÄTA, ersättning och hur du dokumenterar. Gratis ÄTA-mall.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/ata-mall-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-18T19:09:00.000Z", createdAt: "2026-08-18T19:09:00.000Z", updatedAt: "2026-08-18T19:09:00.000Z",
 };

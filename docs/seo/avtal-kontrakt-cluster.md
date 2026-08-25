@@ -20,7 +20,7 @@ Senast uppdaterad: 2026-08-25.
 |---|---|---|
 | entreprenadkontrakt / avtal | ✅ 2026-08-25 | ✅ | mall-varianter 10–100; huvudterm redan täckt av verktyget |
 | hantverkare avtal / ABS / hantverkarformuläret | ✅ 2026-08-25 | ✅ | STORT: hantverkarformuläret/abs 18/hantverkarformuläret 17 = 500 var + lång svans (versioner, pdf, konsumentverket) |
-| ÄTA | ⏳ | – |
+| ÄTA | ✅ 2026-08-25 | ✅ | `äta arbeten` = 500 + svans (betyder/definition/exempel/likställd/ersättning/tvist); brus: "mall of scandinavia" (köpcentrum) |
 | AB 04 / ABT 06 | ⏳ | – |
 
 ## 1. Seed-listor (klistra i Keyword Planner, SE/Svenska, exportera CSV)
@@ -89,6 +89,18 @@ redan stark (1198 ord) och taktar huvudtermerna. **Flagship-uppgraderad 1198→1
 + branded diagram (`abs-hantverkarformularet`), + sektion "Vilken version gäller?"
 (fångar versions-svansen 14/17/2021/2022), + sektion "Var hittar du formuläret (PDF)?"
 (fångar pdf/konsumentverket-svansen), + 3 nya FAQ. Funnlar till offert-mall + ata-mall.
+
+## 1c. Databatch: ÄTA (2026-08-25)
+Huvudterm **`äta arbeten` = 500/mån** (Medium, bud 2.3–3.5 kr) + stark svans (10–100):
+`äta mall`, `äta hantering`, `ändrings och tilläggsarbeten`, `ab 04 äta` / `abt 06 äta`,
+`avgående arbeten`, `ersättning för äta arbeten`, `exempel på äta arbeten`, `likställda/
+likställt äta`, `äta arbeten betyder/definition/tvist`, `äta totalentreprenad`.
+Intent-brus: `mall of scandinavia äta` (köpcentrum, ej bygg) → ignorera.
+
+**ÅTGÄRD (utförd):** befintlig `ata-hantering-mall` (ekonomi.ts) var redan stark (1228 ord)
+och täckte hela svansen (betyder/definition/likställd/ersättning/exempel/tvist/avgående).
+Flagship-polerad → 1250 ord: + diagram (`ata-flode`), + seoTitle taktar nu huvudtermen
+"ÄTA-arbeten" (var "ÄTA-hantering mall & rutin"). Funnlar till ata-mall.
 
 ## 2. Stridsplan (byggs när data kommit)
 _(fylls i per batch)_

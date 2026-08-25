@@ -718,7 +718,7 @@ const A_OVERLAMNING_RELATIONSHANDLINGAR: BlogPost = {
 };
 
 const A_ENTREPRENADKONTRAKT_MALL_HTML = `
-<p>Varje år förlorar byggföretag pengar på arbeten de faktiskt utfört – inte för att jobbet var dåligt, utan för att avtalet var svagt eller muntligt. När beställaren bestrider en faktura eller påstår att något var fel är det avtalstexten som avgör, inte vad ni kom överens om över telefon. Ett muntligt avtal är giltigt, men i praktiken näst intill omöjligt att bevisa. Den här guiden går igenom vad ett entreprenadkontrakt måste innehålla för att hålla vid tvist – och ger dig en <strong>entreprenadkontrakt mall gratis</strong> som du kan fylla i och skicka samma dag.</p>
+<p>Varje år förlorar byggföretag pengar på arbeten de faktiskt utfört – inte för att jobbet var dåligt, utan för att avtalet var svagt eller muntligt. När beställaren bestrider en faktura eller påstår att något var fel är det avtalstexten som avgör, inte vad ni kom överens om över telefon. Ett muntligt avtal är giltigt, men i praktiken näst intill omöjligt att bevisa. Den här guiden går igenom vad ett entreprenadkontrakt måste innehålla för att hålla vid tvist – och ger dig en <strong>entreprenadkontrakt mall gratis</strong> som du kan fylla i och skicka samma dag. (Kärt barn har många namn – entreprenadkontrakt, entreprenadavtal, byggkontrakt eller byggavtal syftar på samma sak: det skriftliga avtalet mellan dig och beställaren.)</p>
 
 <p>Vill du komma igång direkt kan du bygga ett bindande avtal från offert till underskrift med <a href="/sv/verktyg/offert-mall">vår gratis offert- och avtalsmall -&gt;</a>.</p>
 <p><a href="/sv/verktyg/entreprenadkontrakt-mall">Fyll i och ladda ner ett färdigt entreprenadkontrakt (PDF & Excel) med vår gratis mall -&gt;</a></p>
@@ -1997,7 +1997,7 @@ const A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET_HTML = `
 
 <h2>Kom igång</h2>
 <p>Rätt semesterlön börjar med rätt underlag. Samla timmar, ob och övertid löpande med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och stäm alltid av procentsats och beräkningsmetod mot gällande Byggavtal 2025–2027 och Byggnads egen semesterbroschyr. Vill du se hur ByggExp kan strukturera tidrapportering och löneunderlag för ditt företag, <a href="/sv/contact">boka en demo</a>.</p>
-<p>Relaterat: <a href="/sv/blog/byggnads-kollektivavtal-2026">Byggnads kollektivavtal 2026</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>, <a href="/sv/blog/ob-overtid-byggavtalet-rakna">Räkna ob och övertid i Byggavtalet</a>.</p>
+<p>Relaterat: <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Kollektivavtal i byggbranschen</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>, <a href="/sv/blog/ob-overtid-byggavtalet-rakna">Räkna ob och övertid i Byggavtalet</a>.</p>
 `;
 
 const A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET: BlogPost = {
@@ -2083,7 +2083,7 @@ const A_TJANSTEPENSION_BYGGAVTALET_BAO_HTML = `
 
 <h2>Kom igång</h2>
 <p>Bygg in pensionskostnaden i dina priser innan nästa anbud går ut. Testa <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a> eller bläddra bland alla <a href="/sv/verktyg">gratis byggverktyg</a>. Vill du se hur ByggExp håller ihop tidrapportering, kalkyl och kostnadsuppföljning – <a href="/sv/contact">boka en demo</a>.</p>
-<p>Relaterat: <a href="/sv/blog/byggnads-kollektivavtal-2026">Byggnads kollektivavtal 2026</a>, <a href="/sv/blog/vad-kostar-en-anstalld-byggforetag">vad kostar en anställd i ett byggföretag</a>, <a href="/sv/blog/anstalla-personal-byggforetag">anställa personal i byggföretag</a>.</p>
+<p>Relaterat: <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Kollektivavtal i byggbranschen</a>, <a href="/sv/blog/vad-kostar-en-anstalld-byggforetag">vad kostar en anställd i ett byggföretag</a>, <a href="/sv/blog/anstalla-personal-byggforetag">anställa personal i byggföretag</a>.</p>
 `;
 
 const A_TJANSTEPENSION_BYGGAVTALET_BAO: BlogPost = {

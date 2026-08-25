@@ -811,7 +811,7 @@ const A_VADERSTOPP_PERMITTERING_BYGGAVTALET_HTML = `
 
 <p><em>Detta är allmän vägledning, inte juridisk rådgivning. Väderstopp regleras i Byggavtalet 5.3.1, men löneutfallet beror på ditt exakta avtal och den konkreta situationen — verifiera alltid aktuell avtalstext och stäm av med Byggföretagen eller facket.</em></p>
 
-<p>Relaterat: <a href="/sv/blog/korttidsarbete-permittering-byggforetag">Korttidsarbete och permittering i byggföretag</a>, <a href="/sv/blog/byggnads-kollektivavtal-2026">Byggnads kollektivavtal 2026</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>.</p>
+<p>Relaterat: <a href="/sv/blog/korttidsarbete-permittering-byggforetag">Korttidsarbete och permittering i byggföretag</a>, <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Kollektivavtal i byggbranschen</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>.</p>
 `;
 
 const A_VADERSTOPP_PERMITTERING_BYGGAVTALET: BlogPost = {

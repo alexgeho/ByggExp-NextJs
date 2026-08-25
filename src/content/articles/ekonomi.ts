@@ -6260,7 +6260,7 @@ const A_KORTTIDSARBETE_PERMITTERING_BYGGFORETAG_HTML = `
 <h2>Kom igång</h2>
 <p>Bestäm om svackan är tillfällig eller varaktig, kontrollera aktiveringskravet hos Skatteverket, ta stöd av Byggföretagens Arbetsgivarguide och Byggnads – och ta juridisk eller avtalsmässig hjälp innan du fattar beslut. Håll samtidigt underlaget i ordning med <a href="/sv/verktyg/tidrapport-mall">tidrapport-mallen</a>. Vill du se hur ByggExp håller ihop tid, projekt och personal? <a href="/sv/contact">Boka en demo -&gt;</a></p>
 
-<p>Relaterat: <a href="/sv/blog/uppsagning-arbetsbrist-bygg">Uppsägning vid arbetsbrist i bygg</a>, <a href="/sv/blog/byggnads-kollektivavtal-2026">Byggnads kollektivavtal 2026</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>.</p>
+<p>Relaterat: <a href="/sv/blog/uppsagning-arbetsbrist-bygg">Uppsägning vid arbetsbrist i bygg</a>, <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Kollektivavtal i byggbranschen</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>.</p>
 `;
 
 const A_KORTTIDSARBETE_PERMITTERING_BYGGFORETAG: BlogPost = {
@@ -6862,7 +6862,7 @@ const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
 <h2>Kom igång</h2>
 <p>Bygg ett spårbart reseunderlag redan när jobbet utförs med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall</a>, och håll restid, reskostnad och traktamente på separata rader. Vill du se hur tidrapportering per projekt kan koppla ihop tid, resväg och lönesunderlag i din verksamhet? <a href="/sv/contact">Boka en demo</a>. Använd Byggavtalet 2025-2027 och Skatteverkets belopp för 2026 som dina primärkällor för de exakta satserna.</p>
 
-<p>Relaterat: <a href="/sv/blog/traktamente-byggnadsarbetare-2026">Traktamente för byggnadsarbetare 2026</a>, <a href="/sv/blog/ob-overtid-byggavtalet-rakna">OB och övertid enligt Byggavtalet - så räknar du</a>, <a href="/sv/blog/byggnads-kollektivavtal-2026">Byggnads kollektivavtal 2026</a>.</p>
+<p>Relaterat: <a href="/sv/blog/traktamente-byggnadsarbetare-2026">Traktamente för byggnadsarbetare 2026</a>, <a href="/sv/blog/ob-overtid-byggavtalet-rakna">OB och övertid enligt Byggavtalet - så räknar du</a>, <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Kollektivavtal i byggbranschen</a>.</p>
 `;
 
 const A_RESTIDSERSATTNING_BYGGAVTALET: BlogPost = {
@@ -7631,7 +7631,7 @@ const A_OPPEN_BOK_RIKTKOSTNAD_ENTREPRENAD_HTML = `
 <h2>Kom igång</h2>
 <p>Öppen bok och riktkostnad flyttar fokus från lägsta pris till gemensam kostnadskontroll — men modellen är bara så bra som avtalet och underlaget bakom den. Börja med att räkna och dokumentera i <a href="/sv/verktyg">våra gratis byggverktyg</a> och sätt ord på ersättningsformen med <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur ByggExp kan hålla ihop kalkyl, offert och kostnadsuppföljning i ett flöde? <a href="/sv/contact">Boka en demo här</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/fast-pris-eller-lopande-rakning">Fast pris eller löpande räkning</a>, <a href="/sv/blog/anbudskalkyl-bygg">Anbudskalkyl för bygg</a>, <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">Kostnadskontroll och marginal i byggprojekt</a>.</p>
+<p>Relaterat: <a href="/sv/blog/fast-pris-eller-lopande-rakning">Fast pris eller löpande räkning</a>, <a href="/sv/blog/kalkylprogram-bygg">Kalkylprogram för bygg</a>, <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">Kostnadskontroll och marginal i byggprojekt</a>.</p>
 `;
 
 const A_OPPEN_BOK_RIKTKOSTNAD_ENTREPRENAD: BlogPost = {

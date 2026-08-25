@@ -139,6 +139,24 @@ har volym (10–100 var), och "gratis"-varianterna har höga bud.
 
 ---
 
+## 1e. Databatch: COMBO / SYSTEM (2026-08-25)
+
+**Viktig intent-varning.** `byggprogram` = 500/mån och `bygg program` = 500/mån ser
+lockande ut, MEN termen är **intent-förorenad**:
+- `byggprogram gymnasiet` = 500, `byggprogram gymnasium` = 10–100 → **gymnasieutbildningen** ("byggprogrammet").
+- `byggprogram tv` = 500, `byggprogram tv4` = 10–100 → **TV-program** om bygge.
+→ Merparten av "byggprogram"-volymen vill ha skola eller TV, inte mjukvara. **Jaga
+inte den nakna termen** – låg konvertering och svårt att ranka mot skol-/TV-innehåll.
+
+**Noll-signal (dött):** `program för byggföretag`, `app för hantverkare faktura`,
+`administrationsprogram bygg`, `ekonomisystem byggföretag` → blank.
+
+**Befintlig täckning räcker:** den korrekta (mindre) kommersiella intenten
+"byggprogram för byggföretag" täcks redan av `byggprogram-for-byggforetag`,
+`basta-byggprogram-2026`, `byggprogram-pris`. **Ingen ny sida.**
+
+---
+
 ## 2. SLUTLIG STRIDSPLAN (alla batcher inne 2026-08-25)
 
 **Övergripande lärdom:** i detta kluster har "program/app/system + bygg" nästan

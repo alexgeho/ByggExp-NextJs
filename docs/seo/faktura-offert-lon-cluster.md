@@ -16,8 +16,10 @@ Senast uppdaterad: 2026-08-25.
 | faktura | ✅ 2026-08-25 | ✅ | 28 rader, bucketade volymer (10–100) |
 | offert | ✅ 2026-08-25 | ✅ | 14 rader; `offertmall bygg` = 500/mån (störst hittills) |
 | lön / löneunderlag | ✅ 2026-08-25 | ✅ | 6 rader, nästan allt blankt — dött för nytt innehåll |
-| kalkyl / anbud | ⏳ väntar | – | |
-| ROT (rent) | ⏳ väntar | – | delvis täckt av faktura-batchen |
+| kalkyl / anbud | ✅ 2026-08-25 | ✅ | 11 rader; levande kommersiellt, "gratis"-varianter höga bud |
+| ROT (rent) | ✅ (via faktura) | ✅ | täckt av faktura-batchens ROT-rader |
+
+**ALLA BATCHER INNE 2026-08-25. Insamling klar → se slutlig stridsplan §2.**
 
 **VIKTIG DATAVARNING:** kontot saknar aktiv annonsspend (Basic-access) → Planner
 returnerar volymspann ("10–100", visas som `50`) och `Unknown` competition, inte
@@ -107,7 +109,55 @@ bygg" har ingen volym i SE.
 
 ---
 
-## 2. Framväxande stridsplan (uppdateras allt eftersom batcher kommer)
+## 1d. Databatch: KALKYL / ANBUD (2026-08-25)
+
+Till skillnad från lön: **levande kommersiellt kluster.** Alla program-varianter
+har volym (10–100 var), och "gratis"-varianterna har höga bud.
+
+### Hög-signal
+- `kalkylprogram bygg`, `kalkylprogram för bygg`, `byggkalkyl program` (10–100,
+  Medium/High comp, bud 2.1–9.4 kr).
+- `bästa kalkylprogram bygg` (10–100, bud upp till 10.4 kr) — jämförelse-intent.
+- `kalkylprogram bygg gratis` / `gratis kalkylprogram bygg` (10–100, **bud upp till
+  13.7 kr** — högst i hela klustret). ByggExp-vinkel: de gratis `/sv/verktyg`-kalkylatorerna.
+- `anbudskalkyl bygg` (10–100).
+
+### Noll-signal
+- `efterkalkyl bygg`, `kalkyl app bygg`, `prissättning bygg program` → blank.
+
+### Befintlig täckning — REDAN BRA
+- Artikel `kalkylprogram-bygg`: `<title>` "Kalkylprogram för bygg – kalkyl till
+  offert", seoDesc nämner "Kom igång gratis med kalkylatorerna" → taktar huvudtermen
+  + gratis-vinkeln. Även `basta-byggprogram-2026`, `efterkalkyl-bygg-kalkyluppfoljning`.
+- Många gratis kalkylatorer under `/sv/verktyg` (perfekt landning för "gratis
+  kalkylprogram").
+
+### GAP / åtgärd
+- Stärk `kalkylprogram-bygg`: lägg in **"gratis"**- och **"bästa"**-vinklar
+  (sektion + FAQ) och länka till gratis-kalkylatorhubben `/sv/verktyg`. Ingen ny
+  sida (undvik kannibalisering). Prio: medel.
+
+---
+
+## 2. SLUTLIG STRIDSPLAN (alla batcher inne 2026-08-25)
+
+**Övergripande lärdom:** i detta kluster har "program/app/system + bygg" nästan
+ingen volym UTOM för **kalkylprogram** (som lever). Volymen sitter annars i
+**mall/exempel/task-intent**. Bygg för det, funnla till gratisverktygen.
+
+| Delkluster | Beslut | Åtgärd |
+|---|---|---|
+| **faktura (ROT)** | 🔨 BYGG | Ny pillar `faktura-med-rotavdrag` (exempel+mall+skatteverket), funnlar till `faktura-mall` + `rot-avdrag-kalkylator` |
+| **offert** | ✅ täckt | Valfritt: lägg "bygg" i h1 på verktyget `offert-mall` (låg prio) |
+| **lön** | ⛔ hoppa | Dött, befintligt räcker |
+| **kalkyl** | ✏️ stärk | Bygg ut `kalkylprogram-bygg` med gratis/bästa-vinkel + länk till `/sv/verktyg` |
+
+### Byggordning
+1. **Pillar `faktura-med-rotavdrag`** (störst gap + tydlig efterfrågan). ~700–900 ord,
+   räkneexempel, FAQ-schema, länk till `faktura-mall` + `rot-avdrag-kalkylator` +
+   `byggfaktura-checklista-rot`.
+2. **Stärk `kalkylprogram-bygg`** (gratis/bästa-sektion + FAQ + verktygslänkar).
+3. **Mini: h1 "bygg" på `offert-mall`** (medan jag ändå är i området).
 
 ### Beslutade byggen
 1. **PILLAR: `faktura-med-rotavdrag`** (ny artikel) — folds: faktura med rotavdrag /
@@ -120,12 +170,9 @@ bygg" har ingen volym i SE.
 - **Offert: INGEN ny pillar.** Huvudterm `offertmall bygg` (500/mån) täcks redan av
   verktyget `/sv/verktyg/offert-mall`. Valfritt: lägg "bygg" i verktygets h1 (låg prio).
 
-### Beslutade (lön)
+### Beslutade (lön + kalkyl)
 - **Lön: INGEN ny sida.** Batch nästan tom; befintligt räcker.
-
-### Att besluta när fler batcher kommit
-- Kalkyl/anbud-pillar? (avvaktar kalkyl-CSV — `kalkylprogram-bygg`,
-  `efterkalkyl-bygg-kalkyluppfoljning` finns)
+- **Kalkyl: ingen ny sida — stärk `kalkylprogram-bygg`** (gratis/bästa + verktygslänkar).
 
 ### Regler för klustret (lärdomar)
 - "program/app + bygg" har oftast noll volym i SE → bygg inte för dem.
@@ -137,6 +184,8 @@ bygg" har ingen volym i SE.
 ---
 
 ## 3. TODO / nästa steg
-- [ ] Få offert / lön / kalkyl-batcher som CSV.
+- [x] Samla alla batcher (faktura, offert, lön, kalkyl) — KLART 2026-08-25.
 - [ ] Bygg pillar `faktura-med-rotavdrag`.
-- [ ] Efter varje batch: fyll i sektion under "Databatch:" + uppdatera stridsplanen.
+- [ ] Stärk `kalkylprogram-bygg` (gratis/bästa + verktygslänkar).
+- [ ] Mini: lägg "bygg" i h1 på verktyget `offert-mall`.
+- [ ] (Owner) exakta volymer kräver aktiv Google Ads-kampanj — nuvarande tal är buckets.

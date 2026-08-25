@@ -7932,10 +7932,34 @@ const R_ROT_HUR_MYCKET: BlogPost = {
 const R_FAKTURA_MED_ROTAVDRAG_HTML = `
 <p>Att fakturera med rotavdrag är enkelt när du väl vet hur det räknas och vad Skatteverket kräver på fakturan. Kort: du drar av kundens ROT-del direkt på fakturan, kunden betalar resten, och du begär tillbaka avdraget från Skatteverket. Här går vi igenom hur du gör en faktura med rotavdrag steg för steg – med ett konkret räkneexempel och en gratis mall.</p>
 <p>Vill du hoppa direkt till görandet? Ladda ner vår gratis <a href="/sv/verktyg/faktura-mall">fakturamall</a> eller räkna ut avdraget i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/faktura-rotavdrag.webp" alt="Diagram: faktura med rotavdrag – arbetskostnad 25 000 kr, ROT 30 % = 7 500 kr, kunden betalar 27 500 kr och Skatteverket betalar dig 7 500 kr" width="720" height="380" loading="lazy"><figcaption>Fakturamodellen: du drar av ROT direkt på fakturan, kunden betalar totalsumman minus avdraget och du begär resten från Skatteverket.</figcaption></figure>
 
 <h2>Vad är rotavdrag på fakturan?</h2>
 <p>ROT-avdrag är en skattereduktion för kunden på <strong>arbetskostnaden</strong> vid renovering, om- och tillbyggnad. Grundreglerna: avdraget är <strong>30 % av arbetskostnaden (inklusive moms)</strong>, <strong>max 50 000 kr per person och år</strong>, och gäller aldrig mer än den skatt kunden betalar. Material, resor och maskiner ger inget avdrag. (Aktuella belopp och tak fastställs av Skatteverket – kontrollera årets nivå.)</p>
 <p>Som utförare tillämpar du avdraget direkt på fakturan (den så kallade fakturamodellen): kunden betalar sin del, och du begär resten från Skatteverket.</p>
+
+<h2>Vem har rätt till rotavdrag?</h2>
+<p>ROT-avdraget är kopplat till kunden, inte till dig som utförare. För att avdraget ska gälla behöver kunden uppfylla några grundvillkor:</p>
+<ul>
+<li><strong>Äga bostaden</strong> där arbetet utförs – småhus, ägarlägenhet eller bostadsrätt. Hyresrätt ger inte ROT.</li>
+<li><strong>Bo eller ha bostaden till sitt förfogande</strong> (även fritidshus och förälders bostad kan ge rätt i vissa fall).</li>
+<li><strong>Ha betalat tillräckligt med skatt</strong> under året – avdraget kan aldrig bli större än kundens skatt.</li>
+<li><strong>Ha kvar ROT-utrymme</strong> för året (taket är per person). Kolla i förväg – se <a href="/sv/blog/kontrollera-kundens-rotutrymme">kontrollera kundens ROT-utrymme</a>.</li>
+</ul>
+<p>Äger två personer bostaden kan de fördela avdraget mellan sig och tillsammans få mer – se <a href="/sv/blog/rot-fordela-makar-tak-2026">fördela ROT mellan makar</a>.</p>
+
+<h2>Vilka arbeten ger rotavdrag – och vilka gör det inte?</h2>
+<p>ROT gäller reparation, underhåll samt om- och tillbyggnad av bostad. Ett vanligt misstag är att ta med arbete som inte är ROT-berättigat – då nekas avdraget.</p>
+<div class="article-table"><table>
+<thead><tr><th>Ger ROT-avdrag</th><th>Ger INTE ROT-avdrag</th></tr></thead>
+<tbody>
+<tr><td>Badrums- och köksrenovering</td><td>Nybyggnad (och oftast de 5 första åren i nytt hus)</td></tr>
+<tr><td>Golv, målning, snickerier</td><td>Material, maskiner och resekostnader</td></tr>
+<tr><td>El, VVS, värme (arbetet)</td><td>Städning och trädgård (det är RUT)</td></tr>
+<tr><td>Om- och tillbyggnad</td><td>Ritning, projektering och besiktning</td></tr>
+</tbody>
+</table></div>
+<p>Är du osäker på om ett arbete är ROT-berättigat gäller Skatteverkets bedömning – dokumentera vad som utförts så att arbetskostnaden går att styrka.</p>
 
 <h2>Så räknar du rotavdrag på fakturan – exempel</h2>
 <p>Ett badrumsjobb där arbete och material specificeras var för sig:</p>
@@ -7951,6 +7975,30 @@ const R_FAKTURA_MED_ROTAVDRAG_HTML = `
 </tbody>
 </table></div>
 <p>Avdraget räknas alltså bara på arbetskostnaden – materialets 10 000 kr påverkas inte. Vill du testa med dina egna siffror? Använd <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylatorn</a>.</p>
+
+<h2>Delfakturor och löpande räkning</h2>
+<p>Vid större jobb fakturerar du ofta i etapper. Då drar du ROT på arbetskostnaden i <em>varje</em> delfaktura – men håll koll på kundens totala tak för året, så att den sista fakturan inte spränger 50 000-gränsen. Ett exempel med tre delfakturor:</p>
+<div class="article-table"><table>
+<thead><tr><th>Delfaktura</th><th>Arbetskostnad</th><th>ROT (30 %)</th></tr></thead>
+<tbody>
+<tr><td>1 – rivning &amp; stomme</td><td>30 000 kr</td><td>9 000 kr</td></tr>
+<tr><td>2 – el &amp; VVS</td><td>40 000 kr</td><td>12 000 kr</td></tr>
+<tr><td>3 – ytskikt &amp; slutförande</td><td>60 000 kr</td><td>18 000 kr → begränsas till taket</td></tr>
+</tbody>
+</table></div>
+<p>Här passeras kundens tak (30 000 kr ROT för en person) redan i delfaktura 2–3. Överskjutande arbetskostnad faktureras utan avdrag, eller fördelas på två ägare om båda har utrymme. Stäm av utrymmet innan du lovar kunden ett avdrag.</p>
+
+<h2>ROT eller RUT på fakturan?</h2>
+<p>ROT och RUT fungerar likadant på fakturan (avdrag på arbetet, du begär resten från Skatteverket) men gäller olika arbeten och kan ha olika procentsats och tak:</p>
+<div class="article-table"><table>
+<thead><tr><th>&nbsp;</th><th>ROT</th><th>RUT</th></tr></thead>
+<tbody>
+<tr><td>Gäller</td><td>Renovering, om-/tillbyggnad</td><td>Hushållsnära tjänster (städning, flytt, trädgård)</td></tr>
+<tr><td>På fakturan</td><td>Avdrag på arbetskostnaden</td><td>Avdrag på arbetskostnaden</td></tr>
+<tr><td>Procent &amp; tak</td><td colspan="2">Kontrollera årets nivå hos Skatteverket – reglerna har justerats flera år i rad</td></tr>
+</tbody>
+</table></div>
+<p>Blandar ett jobb både ROT- och RUT-arbete särredovisar du dem, eftersom de hanteras var för sig i din begäran.</p>
 
 <h2>Vad fakturan måste innehålla för att ROT ska godkännas</h2>
 <p>För att Skatteverket ska betala ut avdraget måste fakturan och din begäran innehålla:</p>
@@ -7986,6 +8034,12 @@ const R_FAKTURA_MED_ROTAVDRAG_HTML = `
 <p>Särredovisad arbetskostnad och antal timmar, kundens personnummer samt fastighetsbeteckning (eller lägenhetsnummer och BRF:s organisationsnummer). Annars kan Skatteverket neka utbetalningen.</p>
 <h3>Vem betalar ut rotavdraget till mig?</h3>
 <p>Skatteverket. Kunden betalar sin del av fakturan, och du som utförare begär resten via Skatteverkets e-tjänst för ROT.</p>
+<h3>Vem har rätt till rotavdrag?</h3>
+<p>Kunden som äger och bor i bostaden (småhus, ägarlägenhet eller bostadsrätt) och har betalat tillräckligt med skatt. Hyresrätt och nybyggnad ger normalt inte ROT. Avdraget är per person, så två ägare kan fördela det.</p>
+<h3>Kan jag dra ROT på varje delfaktura?</h3>
+<p>Ja. Vid löpande räkning drar du ROT på arbetskostnaden i varje delfaktura, men håll koll på kundens totala tak för året så att sista fakturan inte överstiger gränsen.</p>
+<h3>Vad händer om Skatteverket nekar utbetalningen?</h3>
+<p>Då blir du utan mellanskillnaden om du redan gett kunden avdraget. Kontrollera därför utrymme och rätt till avdrag i förväg. Läs mer om vad du gör om <a href="/sv/blog/skatteverket-nekar-rotavdrag-forbehall">Skatteverket nekar rotavdraget</a>.</p>
 <h3>Finns det en mall för faktura med rotavdrag?</h3>
 <p>Ja. Med ByggExps gratis fakturamall skapar du en faktura med rotavdrag och laddar ner den som PDF – avdraget räknas ut åt dig.</p>
 `.trim();

@@ -402,7 +402,19 @@ const schema = frame(`
   ${note('Planera per person eller projekt – frånvaro och överbokning syns direkt.', INK)}
 `);
 
+// Faktura med rotavdrag – hur betalningen fördelas (räkneexempel)
+const fakturaRotavdrag = frame(`
+  ${title('Faktura med rotavdrag – så fördelas betalningen')}
+  ${card(40, 78, 268, 208, 'Fakturan', BLUE, ['Arbetskostnad: 25 000 kr', 'Material: 10 000 kr', 'Totalt: 35 000 kr', 'ROT (30% av arbetet): −7 500 kr'])}
+  ${arrow(308, 372, 150)}
+  ${card(372, 78, 308, 92, 'Kunden betalar', GREEN, ['27 500 kr (totalt − ROT)'])}
+  ${card(372, 194, 308, 92, 'Skatteverket betalar dig', AMBER, ['7 500 kr (ROT-avdraget)'])}
+  ${note('ROT = 30% av arbetskostnaden inkl. moms, max 50 000 kr/person/år. Material ger inget avdrag.', INK)}
+  ${ARR_DEF}
+`);
+
 const DIAGRAMS = {
+  'faktura-rotavdrag': fakturaRotavdrag,
   'affarssystem': affarssystem,
   'crm-bygg': crm,
   'servicehantering': service,

@@ -158,7 +158,7 @@ const AB04_HTML = `
 <li><a href="/sv/blog/garantibesiktning-2-ar-entreprenad">Garantibesiktning efter 2 år</a>.</li>
 <li><a href="/sv/blog/hindersanmalan-tidsforlangning-ab04">Hindersanmälan och tidsförlängning</a> – undvik vite.</li>
 <li><a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">Entreprenadgaranti och säkerhet</a>.</li>
-<li><a href="/sv/blog/nya-ab-04-abt-06-revidering-2027">Revideringen mot AB 25 / ABPU 25</a> – vad som är på gång.</li>
+<li><a href="/sv/blog/nya-ab-04-abt-06-revidering-2027">Kommande revidering av AB 04 och ABT 06</a> – status för de nya bestämmelserna.</li>
 </ul>
 
 <h2>Vanliga misstag</h2>

@@ -7982,12 +7982,12 @@ const R_FAKTURA_MED_ROTAVDRAG_HTML = `
 <div class="article-table"><table>
 <thead><tr><th>Delfaktura</th><th>Arbetskostnad</th><th>ROT (30 %)</th></tr></thead>
 <tbody>
-<tr><td>1 – rivning &amp; stomme</td><td>30 000 kr</td><td>9 000 kr</td></tr>
-<tr><td>2 – el &amp; VVS</td><td>40 000 kr</td><td>12 000 kr</td></tr>
-<tr><td>3 – ytskikt &amp; slutförande</td><td>60 000 kr</td><td>18 000 kr → begränsas till taket</td></tr>
+<tr><td>1 – rivning &amp; stomme</td><td>60 000 kr</td><td>18 000 kr</td></tr>
+<tr><td>2 – el &amp; VVS</td><td>70 000 kr</td><td>21 000 kr (ackumulerat 39 000 kr)</td></tr>
+<tr><td>3 – ytskikt &amp; slutförande</td><td>60 000 kr</td><td>18 000 kr → men bara 11 000 kr ryms under taket</td></tr>
 </tbody>
 </table></div>
-<p>Här passeras kundens tak (30 000 kr ROT för en person) redan i delfaktura 2–3. Överskjutande arbetskostnad faktureras utan avdrag, eller fördelas på två ägare om båda har utrymme. Stäm av utrymmet innan du lovar kunden ett avdrag.</p>
+<p>Kundens tak är 50 000 kr ROT per person och år. Efter delfaktura 1–2 är 39 000 kr använt. Delfaktura 3 skulle ge 18 000 kr till, men bara 11 000 kr ryms under taket (50 000 − 39 000). Överskjutande arbetskostnad faktureras utan avdrag, eller fördelas på två ägare om båda har utrymme. Stäm av utrymmet innan du lovar kunden ett avdrag.</p>
 
 <h2>ROT eller RUT på fakturan?</h2>
 <p>ROT och RUT fungerar likadant på fakturan (avdrag på arbetet, du begär resten från Skatteverket) men gäller olika arbeten och kan ha olika procentsats och tak:</p>

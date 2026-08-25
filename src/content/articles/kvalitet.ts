@@ -1518,6 +1518,15 @@ const A_TIDREDOVISNING_BYGGFORETAG_HTML = `
 <li><strong>Tidredovisning</strong> är företagets egen registrering av arbetad tid för lön, fakturering och uppföljning – den styrs inte av samma lag, utan av kollektivavtal, anställningsavtal och dina interna behov.</li>
 </ul>
 <p>Många löser båda i samma system (ofta via <a href="/sv/blog/id06">ID06</a>-incheckning), men kraven är alltså olika: personalliggaren är en myndighetskontroll, tidredovisningen ett internt verktyg.</p>
+<div class="article-table"><table>
+<thead><tr><th>&nbsp;</th><th>Personalliggare</th><th>Tidredovisning</th></tr></thead>
+<tbody>
+<tr><td><strong>Vad det är</strong></td><td>Närvaro just nu på arbetsplatsen</td><td>Arbetad tid per projekt</td></tr>
+<tr><td><strong>Styrs av</strong></td><td>Lagkrav (Skatteverket)</td><td>Kollektiv-/anställningsavtal + interna behov</td></tr>
+<tr><td><strong>Används till</strong></td><td>Myndighetskontroll</td><td>Lön, faktura, uppföljning</td></tr>
+<tr><td><strong>Vid brist</strong></td><td>Kontrollavgift</td><td>Fel lön/faktura, sämre marginal</td></tr>
+</tbody>
+</table></div>
 
 <h2>Vad ska en tidredovisning innehålla?</h2>
 <ul>
@@ -1540,6 +1549,16 @@ const A_TIDREDOVISNING_BYGGFORETAG_HTML = `
 </ul>
 
 <p>Med en löpande, projektkopplad tidredovisning får du rätt lön, rätt faktura och koll på lönsamheten – och slipper pusslet vid varje lönekörning.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är skillnaden mellan tidredovisning och personalliggare?</h3>
+<p>Personalliggaren är ett lagkrav om närvaro på arbetsplatsen som Skatteverket kontrollerar. Tidredovisningen är företagets egen registrering av arbetad tid för lön, fakturering och uppföljning. De fyller olika syften men kan matas av samma incheckning.</p>
+<h3>Är tidredovisning ett lagkrav?</h3>
+<p>Själva tidredovisningen styrs inte av samma lag som personalliggaren, utan av kollektivavtal, anställningsavtal och företagets egna behov. Däremot krävs korrekt underlag för lön och för att kunna särskilja arbetskostnad vid ROT.</p>
+<h3>Vad ska en tidredovisning innehålla?</h3>
+<p>Datum och anställd, projekt eller arbetsplats, start- och sluttid eller antal timmar, typ av tid (normaltid, OB, övertid, restid), eventuell frånvaro och en signering av att uppgifterna stämmer.</p>
+<h3>Hur gör man tidredovisning enkelt i ett byggföretag?</h3>
+<p>Genom att registrera tiden där arbetet sker, digitalt i mobilen, så att den direkt blir både löneunderlag och fakturaunderlag. Då slipper du renskrivning och fel vid lönekörningen.</p>
 `;
 
 const A_TIDREDOVISNING_BYGGFORETAG: BlogPost = {

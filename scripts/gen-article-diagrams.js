@@ -413,7 +413,23 @@ const fakturaRotavdrag = frame(`
   ${ARR_DEF}
 `);
 
+// Kalkyl → offert → efterkalkyl (kalkylprogram-flödet)
+const kalkylFlode = frame(`
+  ${title('Från materialkalkyl till lönsam offert')}
+  ${stepBox(28, 150, 150, 78, 'Materialåtgång', '(inkl. spill)', BLUE)}
+  ${arrow(178, 214, 189)}
+  ${stepBox(214, 150, 150, 78, 'Påslag &amp;', 'marginal', BLUE)}
+  ${arrow(364, 400, 189)}
+  ${stepBox(400, 150, 150, 78, 'Offert', 'med ROT', GREEN)}
+  ${arrow(550, 586, 189)}
+  ${stepBox(586, 150, 106, 78, 'Efter-', 'kalkyl', AMBER)}
+  <text x="40" y="108" ${font} font-size="14.5" font-weight="700" fill="${INK}">Räkna en gång – underlaget följer med hela vägen.</text>
+  ${note('Efterkalkylen jämför kalkyl mot utfall, så nästa offert prissätts rätt.', INK)}
+  ${ARR_DEF}
+`);
+
 const DIAGRAMS = {
+  'kalkyl-flode': kalkylFlode,
   'faktura-rotavdrag': fakturaRotavdrag,
   'affarssystem': affarssystem,
   'crm-bygg': crm,

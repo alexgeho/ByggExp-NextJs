@@ -636,6 +636,7 @@ const A_UTLAGG_APP_BYGG: BlogPost = {
 
 const A_KALKYLPROGRAM_BYGG_HTML = `
 <p>Ett kalkylprogram för bygg ska göra offerten både snabb och lönsam: rätt materialåtgång, rätt påslag och en tydlig väg från kalkyl till offert och faktura. Här går vi igenom vad ett kalkylprogram för byggföretag bör klara och hur du kommer igång gratis idag.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/kalkyl-flode.webp" alt="Diagram: från materialåtgång och påslag till offert med ROT och efterkalkyl" width="720" height="380" loading="lazy"><figcaption>Flödet i ett kalkylprogram: räkna materialåtgång, lägg rätt påslag, skapa offert och följ upp med efterkalkyl – ett underlag hela vägen.</figcaption></figure>
 
 <h2>Vad ska ett kalkylprogram för bygg klara?</h2>
 <ul>

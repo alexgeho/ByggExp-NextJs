@@ -409,6 +409,7 @@ const ABS18_HTML = `
 <p>ABS 18 och Hantverkarformuläret 17 är två standardavtal som ofta blandas ihop. Båda är framtagna gemensamt av Byggföretagen (tidigare Sveriges Byggindustrier), Villaägarnas Riksförbund och Konsumentverket, och båda används när du som näringsidkare arbetar åt en konsument. Men de täcker olika typer av jobb. Väljer du fel blankett riskerar du ett svagare bevisläge, sämre skydd och otydliga regler om besiktning och betalning. Tesen är enkel: det är <strong>arbetets art</strong> som avgör valet, inte jobbets storlek eller pris. En dyr köksrenovering är fortfarande en renovering, och en liten tillbyggnad är fortfarande en småhusentreprenad.</p>
 
 <p>Oavsett vilket avtal som gäller behöver du en tydlig offert som grund. Börja med <a href="/sv/verktyg/offert-mall">vår gratis offertmall -&gt;</a> och bygg vidare på rätt standardblankett därifrån.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/abs-hantverkarformularet.webp" alt="Diagram: ABS 18 för nybyggnad/tillbyggnad av småhus (med slutbesiktning och färdigställandeskydd) vs Hantverkarformuläret 17 för reparation/ombyggnad av befintligt hus" width="720" height="380" loading="lazy"><figcaption>Arbetets art avgör: nybyggnad eller tillbyggnad → ABS 18; reparation eller ombyggnad → Hantverkarformuläret 17.</figcaption></figure>
 
 <h2>Grundregeln på 30 sekunder</h2>
 <p>Ställ dig en enda fråga innan du skriver avtal: bygger jag nytt eller bygger jag om något som redan finns?</p>
@@ -450,6 +451,19 @@ const ABS18_HTML = `
 <li><strong>ÄTA:</strong> Båda har egen ÄTA-blankett.</li>
 </ul>
 
+<h2>Vilken version gäller – 14, 17, 18 eller något annat?</h2>
+<p>Formulären revideras då och då, och gamla versionsnummer lever kvar i sökningar och gamla pärmar. Så här ligger det till:</p>
+<ul>
+<li><strong>Hantverkarformuläret 17</strong> är den aktuella versionen (utgiven 2017) och ersatte Hantverkarformuläret 14. Söker du på "Hantverkarformuläret 14", "19", "2021" eller "2022" är det i praktiken 17 du ska använda – någon nyare officiell utgåva har inte ersatt den.</li>
+<li><strong>ABS 18</strong> är den aktuella versionen för småhusentreprenad och ersatte ABS 09.</li>
+<li>Använd alltid den senaste utgåvan. Ett gammalt formulär kan sakna dagens hänvisningar till konsumenttjänstlagen och ge ett svagare avtal.</li>
+</ul>
+<p>Kontrollera alltid att du har den senaste blanketten hos utgivaren innan du skriver avtal – utgåvor kan uppdateras.</p>
+
+<h2>Var hittar du formuläret (PDF)?</h2>
+<p>Hantverkarformuläret 17 och ABS 18 är framtagna gemensamt av Konsumentverket, Byggföretagen och Villaägarnas Riksförbund. Du hämtar den officiella blanketten (PDF) hos någon av utgivarna – i första hand Konsumentverket eller Villaägarna. Ladda inte ner en gammal kopia från en slumpmässig sida; versionen och villkoren kan vara inaktuella.</p>
+<p>Själva standardblanketten fyller du i som den är – men <strong>underlaget runt avtalet</strong> gör du enklare digitalt: offert, ÄTA och dokumentation. Bygg offerten i <a href="/sv/verktyg/offert-mall">offertmallen</a> och håll ordning på tilläggen med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a>, så att allt är spårbart om något ifrågasätts.</p>
+
 <h2>5 vanliga misstag och hur du undviker dem</h2>
 <ol>
 <li><strong>Väljer avtal efter pris i stället för arbetets art.</strong> En stor renovering är inte en småhusentreprenad. Följ beslutsregeln.</li>
@@ -471,6 +485,12 @@ const ABS18_HTML = `
 <p>Normalt inte. Färdigställandeskydd är obligatoriskt vid nybyggnad av småhus och kan krävas vid tillbyggnad eller anmälningspliktiga arbeten om byggnadsnämnden bedömer det. En vanlig köksrenovering som varken är bygglovs- eller anmälningspliktig omfattas inte.</p>
 <h3>Kan avtalet ge kunden sämre villkor än lagen?</h3>
 <p>Nej. Konsumenttjänstlagen är tvingande till konsumentens fördel. Enligt § 3 är villkor som är sämre för konsumenten än lagen utan verkan. Både ABS 18 och Hantverkarformuläret 17 bygger på lagen och kan aldrig ge kunden ett svagare skydd än den.</p>
+<h3>Vilken är den senaste versionen av Hantverkarformuläret?</h3>
+<p>Hantverkarformuläret 17 (från 2017) är den aktuella versionen och ersatte Hantverkarformuläret 14. Söker du på 19, 2021 eller 2022 är det fortfarande 17 som gäller – kontrollera alltid senaste utgåvan hos utgivaren.</p>
+<h3>Var laddar jag ner Hantverkarformuläret 17 som PDF?</h3>
+<p>Hos utgivarna – Konsumentverket, Byggföretagen eller Villaägarnas Riksförbund. Undvik gamla kopior från slumpmässiga sidor, eftersom versionen och villkoren kan vara inaktuella.</p>
+<h3>Är formuläret gratis att använda?</h3>
+<p>Ja, standardblanketterna är framtagna för att användas av näringsidkare mot konsument. Du hämtar dem hos utgivarna och fyller i dem för ditt jobb.</p>
 
 <h2>Kom igång</h2>
 <p>Välj avtal efter arbetets art, hämta rätt standardblankett från Konsumentverket, Byggföretagen eller Villaägarna, och bygg ditt underlag i <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur offert, ÄTA och dokumentation hänger ihop i praktiken? <a href="/sv/contact">Boka en demo här -&gt;</a></p>

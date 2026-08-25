@@ -19,7 +19,7 @@ Senast uppdaterad: 2026-08-25.
 | Batch (seed) | CSV | Analyserad |
 |---|---|---|
 | entreprenadkontrakt / avtal | ✅ 2026-08-25 | ✅ | mall-varianter 10–100; huvudterm redan täckt av verktyget |
-| hantverkare avtal / ABS / hantverkarformuläret | ⏳ | – |
+| hantverkare avtal / ABS / hantverkarformuläret | ✅ 2026-08-25 | ✅ | STORT: hantverkarformuläret/abs 18/hantverkarformuläret 17 = 500 var + lång svans (versioner, pdf, konsumentverket) |
 | ÄTA | ⏳ | – |
 | AB 04 / ABT 06 | ⏳ | – |
 
@@ -76,6 +76,19 @@ Blankt: `avtal bygge mall`, `byggavtal privatperson`, `mall entreprenadkontrakt 
 `entreprenadkontrakt-mall` (juridik.ts). Huvudtermen + gratis/abt06/privatperson-vinkeln
 täcks. Synonymer (entreprenadavtal/byggkontrakt mall) kan vävas in i artikeln (låg prio).
 **Ingen ny pillar från denna batch – avvakta ÄTA/ABS/AB04-batcherna.**
+
+## 1b. Databatch: HANTVERKARFORMULÄRET / ABS 18 (2026-08-25) — STÖRST i klustret
+Tre huvudtermer på 100–1000/mån: **`hantverkarformuläret` = 500, `abs 18` = 500,
+`hantverkarformuläret 17` = 500**. Stor svans (10–100): versioner (14/17/18/19/2017/
+2019/2021/2022/21), `hantverkarformuläret pdf`, `... konsumentverket`, `abs 18 villkor`,
+`abs 18 konsumenttjänstlagen`, `allmänna bestämmelser abs 18`, `entreprenadkontrakt abs 18`.
+Blankt: `avtal hantverkare privatperson`, `snickare avtal mall`, `avtal renovering mall`.
+
+**ÅTGÄRD (utförd):** befintlig artikel `abs-18-hantverkarformularet-17` (juridik.ts) var
+redan stark (1198 ord) och taktar huvudtermerna. **Flagship-uppgraderad 1198→1519 ord:**
++ branded diagram (`abs-hantverkarformularet`), + sektion "Vilken version gäller?"
+(fångar versions-svansen 14/17/2021/2022), + sektion "Var hittar du formuläret (PDF)?"
+(fångar pdf/konsumentverket-svansen), + 3 nya FAQ. Funnlar till offert-mall + ata-mall.
 
 ## 2. Stridsplan (byggs när data kommit)
 _(fylls i per batch)_

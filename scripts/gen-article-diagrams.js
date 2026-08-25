@@ -428,7 +428,16 @@ const kalkylFlode = frame(`
   ${ARR_DEF}
 `);
 
+// ABS 18 vs Hantverkarformuläret 17 – vilket konsumentavtal?
+const absHantverk = frame(`
+  ${title('ABS 18 eller Hantverkarformuläret 17?')}
+  ${card(40, 78, 300, 214, 'ABS 18', BLUE, ['Nybyggnad / tillbyggnad', 'av en- eller tvåbostadshus', 'Slutbesiktning ingår', 'Färdigställandeskydd', '+ Entreprenadkontrakt (ABS 18)'])}
+  ${card(380, 78, 300, 214, 'Hantverkarformuläret 17', GREEN, ['Reparation / ombyggnad', 'av befintligt hus', 'Badrum, kök, tak, fönster …', 'Ingen obligatorisk besiktning', 'Löpande eller fast pris'])}
+  ${note('Det är arbetets art som avgör – inte priset. Båda vilar på konsumenttjänstlagen.', INK)}
+`);
+
 const DIAGRAMS = {
+  'abs-hantverkarformularet': absHantverk,
   'kalkyl-flode': kalkylFlode,
   'faktura-rotavdrag': fakturaRotavdrag,
   'affarssystem': affarssystem,

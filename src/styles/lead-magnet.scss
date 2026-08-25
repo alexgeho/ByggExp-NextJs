@@ -843,9 +843,16 @@
    stay in view while you type instead of sitting below a long form. */
 .lm-tool-split {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 1fr);
-  gap: 28px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 1fr);
+  gap: 22px;
   align-items: start;
+}
+/* Inputs and result read as two balanced panels of similar visual weight. */
+.lm-tool-split > .lm-tool-grid {
+  background: rgba(10, 40, 90, 0.02);
+  border: 1px solid var(--lm-card-border);
+  border-radius: 14px;
+  padding: 20px;
 }
 .lm-tool-aside {
   position: sticky;
@@ -853,11 +860,15 @@
 }
 .lm-tool-aside .lm-result {
   margin-top: 0;
+  background: rgba(37, 99, 201, 0.035);
 }
 @media (max-width: 900px) {
   .lm-tool-split {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 16px;
+  }
+  .lm-tool-split > .lm-tool-grid {
+    padding: 16px;
   }
   .lm-tool-aside {
     position: static;

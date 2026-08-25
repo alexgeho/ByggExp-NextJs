@@ -18,7 +18,7 @@ Senast uppdaterad: 2026-08-25.
 ## 0. Status på KW-batcherna
 | Batch (seed) | CSV | Analyserad |
 |---|---|---|
-| entreprenadkontrakt / avtal | ⏳ | – |
+| entreprenadkontrakt / avtal | ✅ 2026-08-25 | ✅ | mall-varianter 10–100; huvudterm redan täckt av verktyget |
 | hantverkare avtal / ABS / hantverkarformuläret | ⏳ | – |
 | ÄTA | ⏳ | – |
 | AB 04 / ABT 06 | ⏳ | – |
@@ -64,6 +64,18 @@ ab 04 abt 06 skillnad
 ab 04 mall
 totalentreprenad utförandeentreprenad
 ```
+
+## 1a. Databatch: ENTREPRENADKONTRAKT / AVTAL (2026-08-25)
+Mall-intent-kluster, alla 10–100/mån: `entreprenadkontrakt mall`, `entreprenadavtal mall`,
+`byggkontrakt mall`, `kontrakt hantverkare mall`, `entreprenadkontrakt privatperson`,
+`entreprenadkontrakt abt 06 mall`, `entreprenadkontrakt mall gratis`.
+Blankt: `avtal bygge mall`, `byggavtal privatperson`, `mall entreprenadkontrakt gratis`.
+
+**Redan täckt:** verktyget `/sv/verktyg/entreprenadkontrakt-mall` (`<title>`
+"Entreprenadkontrakt mall gratis (PDF & Excel)", h1 med AB 04/ABT 06) + blog-artikel
+`entreprenadkontrakt-mall` (juridik.ts). Huvudtermen + gratis/abt06/privatperson-vinkeln
+täcks. Synonymer (entreprenadavtal/byggkontrakt mall) kan vävas in i artikeln (låg prio).
+**Ingen ny pillar från denna batch – avvakta ÄTA/ABS/AB04-batcherna.**
 
 ## 2. Stridsplan (byggs när data kommit)
 _(fylls i per batch)_

@@ -217,8 +217,11 @@ export default function EgenkontrollMallPage() {
                 </p>
                 <ul>
                   <li>
-                    <strong>Egenkontroll el</strong> – jordfelsbrytare, isolationsmätning, märkning av
-                    gruppcentral och skyddsledare, ofta mot SS 436 40 00.
+                    <strong>
+                      <a href={`/${LOCALE}/verktyg/egenkontroll-el-mall`}>Egenkontroll el</a>
+                    </strong>{' '}
+                    – jordfelsbrytare, isolationsmätning, märkning av gruppcentral och skyddsledare,
+                    ofta mot SS 436 40 00.
                   </li>
                   <li>
                     <strong>Egenkontroll VVS</strong> – täthetsprovning, avstängningsventiler, isolering

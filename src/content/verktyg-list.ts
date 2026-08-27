@@ -51,6 +51,7 @@ export const VERKTYG_GROUPS: VerktygGroup[] = [
       { slug: 'ata-mall', label: 'ÄTA-mall' },
       { slug: 'tidrapport-mall', label: 'Tidrapport-mall' },
       { slug: 'egenkontroll-mall', label: 'Egenkontroll-mall' },
+      { slug: 'egenkontroll-el-mall', label: 'Egenkontroll el-mall' },
       { slug: 'entreprenadkontrakt-mall', label: 'Entreprenadkontrakt-mall' },
       { slug: 'kontrollplan-mall', label: 'Kontrollplan-mall' },
       { slug: 'gantt-schema-mall', label: 'Gantt-schema / tidsplan' },

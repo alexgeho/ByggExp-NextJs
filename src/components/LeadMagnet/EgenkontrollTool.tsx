@@ -17,19 +17,40 @@ const RESULTS = ['Ej besvarad', 'Godkänd', 'Anmärkning', 'Ej aktuellt'];
 
 const emptyRow = (): Row => ({ point: '', result: RESULTS[0], comment: '' });
 
-export default function EgenkontrollTool() {
-  const [title, setTitle] = useState('');
+// Rows to seed the table with when a dedicated landing (e.g. egenkontroll-el-mall)
+// pre-selects a preset, so the tool opens already relevant to the search intent.
+const presetRows = (presetId: string): Row[] => {
+  const preset = EGENKONTROLL_PRESETS.find((p) => p.id === presetId);
+  if (!preset) return [emptyRow(), emptyRow(), emptyRow()];
+  return preset.items.map((item) => ({
+    point: item.reference ? `${item.point} (${item.reference})` : item.point,
+    result: RESULTS[0],
+    comment: '',
+  }));
+};
+
+export default function EgenkontrollTool({
+  defaultPreset,
+}: {
+  defaultPreset?: string;
+} = {}) {
+  const seed = defaultPreset
+    ? EGENKONTROLL_PRESETS.find((p) => p.id === defaultPreset)
+    : undefined;
+  const [title, setTitle] = useState(seed?.name ?? '');
   const [project, setProject] = useState('');
   const [responsible, setResponsible] = useState('');
   const [date, setDate] = useState('');
-  const [category, setCategory] = useState(CATEGORIES[0]);
-  const [rows, setRows] = useState<Row[]>([emptyRow(), emptyRow(), emptyRow()]);
+  const [category, setCategory] = useState(seed?.category ?? CATEGORIES[0]);
+  const [rows, setRows] = useState<Row[]>(
+    defaultPreset ? presetRows(defaultPreset) : [emptyRow(), emptyRow(), emptyRow()],
+  );
   const [busy, setBusy] = useState(false);
   // Clarity showed most "dead clicks" landing on the template buttons: users
   // clicked a template but got no visible feedback (the filled table is below
   // the fold). Track the chosen preset to highlight it, and scroll the table
   // into view so it's obvious the template was applied.
-  const [activePreset, setActivePreset] = useState<string | null>(null);
+  const [activePreset, setActivePreset] = useState<string | null>(defaultPreset ?? null);
   const rowsRef = useRef<HTMLDivElement>(null);
 
   // AI generator + email gate. Generation is free; only downloading an

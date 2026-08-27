@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import ToolAppCta from './ToolAppCta';
+
 // Free ÄTA (change/additional work order) tool: the visitor fills the form and
 // downloads a ready ÄTA order as PDF or Excel. Fields follow what AB 04 kap 2
 // makes relevant so the order actually holds up (type, kind, amount, who
@@ -202,6 +204,18 @@ export default function AtaMallTool() {
           </button>
         </div>
       </form>
+
+      <ToolAppCta
+        tool="ata-mall"
+        heading="Slipp lösa PDF:er – hantera ÄTA i ByggExp"
+        text="Mallen ovan är gratis. I ByggExp noterar du ÄTA direkt i projektet, kopplar foton och beställarens mejl som underlag och tar med godkända ÄTA som rader på fakturan."
+        bullets={[
+          'ÄTA kopplad till projekt, dagbok och foton som bevis',
+          'Underrättelse i tid – innan rätten till betalt går förlorad',
+          'Godkända ÄTA blir automatiskt rader på fakturan',
+        ]}
+        secondary={{ href: '/sv/blog/ata-arbeten', label: 'Läs: så får du betalt för ÄTA' }}
+      />
     </div>
   );
 }

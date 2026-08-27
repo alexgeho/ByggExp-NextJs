@@ -4,6 +4,8 @@ import Head from 'next/head';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import FakturaGeneratorTool from '../../../components/LeadMagnet/FakturaGeneratorTool';
+import PartnerServices from '../../../components/LeadMagnet/PartnerServices';
+import { INVOICE_PARTNER_SERVICES } from '../../../content/partner-services';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
@@ -129,6 +131,13 @@ export default function FakturaMallPage() {
                 logotyp, får moms och ROT uträknat automatiskt och kan fakturera direkt utifrån loggad
                 tid, material och ÄTA – utan att skriva in raderna på nytt.
               </p>
+            ),
+          },
+          {
+            id: 'relaterade-tjanster',
+            heading: 'Om kunden inte betalar',
+            body: (
+              <PartnerServices items={INVOICE_PARTNER_SERVICES} context="faktura-mall" />
             ),
           },
         ]}

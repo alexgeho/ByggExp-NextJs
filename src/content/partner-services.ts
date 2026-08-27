@@ -38,3 +38,54 @@ export const CONTRACT_PARTNER_SERVICES: PartnerService[] = [
   // Affiliate/partner slot — add real deals here, e.g.:
   // { label: 'Teckna entreprenadförsäkring hos <partner>', href: 'https://…', description: '…', external: true },
 ];
+
+// Faktura context: what a contractor sending an invoice cares about — getting
+// paid, credit risk, reminders and late interest.
+export const INVOICE_PARTNER_SERVICES: PartnerService[] = [
+  {
+    label: 'Kunden betalar inte fakturan – vad gör du?',
+    href: '/sv/blog/kunden-betalar-inte-fakturan',
+    description: 'Steg för steg från påminnelse till inkasso och betalningsföreläggande.',
+  },
+  {
+    label: 'Påminnelse, inkasso och avgifter',
+    href: '/sv/blog/paminnelse-inkasso-avgift-bygg',
+    description: 'Vilka avgifter du får ta ut och i vilken ordning – utan att göra fel.',
+  },
+  {
+    label: 'Dröjsmålsränta 2026',
+    href: '/sv/blog/drojsmalsranta-2026',
+    description: 'Aktuell räntesats och hur du räknar rätt på en sen betalning.',
+  },
+  {
+    label: 'Kreditförsäkring för byggföretag',
+    href: '/sv/blog/kreditforsakring-byggforetag',
+    description: 'Skydda dig mot kundförluster när fakturan inte betalas.',
+  },
+  // Affiliate/partner slot (t.ex. factoring / kreditförsäkring), external: true.
+];
+
+// Offert context: winning the job and securing that it gets paid (ROT, credit).
+export const QUOTE_PARTNER_SERVICES: PartnerService[] = [
+  {
+    label: 'Från offert till betald faktura',
+    href: '/sv/blog/offert-till-betald-faktura-flode',
+    description: 'Så håller du ihop flödet så att det du offererar faktiskt blir betalt.',
+  },
+  {
+    label: 'Kontrollera kundens ROT-utrymme',
+    href: '/sv/blog/kontrollera-kundens-rotutrymme',
+    description: 'Undvik att fastna med ROT-avdraget – kontrollera utrymmet innan du lovar priset.',
+  },
+  {
+    label: 'ROT-avdrag 2026 – nya regler',
+    href: '/sv/blog/rotavdrag-2026-nya-regler-foretag',
+    description: 'Vad som gäller för ROT 2026 och hur du fakturerar rätt.',
+  },
+  {
+    label: 'Kreditförsäkring för byggföretag',
+    href: '/sv/blog/kreditforsakring-byggforetag',
+    description: 'Skydda marginalen mot kundförluster på större jobb.',
+  },
+  // Affiliate/partner slot, external: true.
+];

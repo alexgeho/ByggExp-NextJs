@@ -4,6 +4,8 @@ import Head from 'next/head';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import AtaMallTool from '../../../components/LeadMagnet/AtaMallTool';
+import PartnerServices from '../../../components/LeadMagnet/PartnerServices';
+import { CONTRACT_PARTNER_SERVICES } from '../../../content/partner-services';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
@@ -209,6 +211,13 @@ export default function AtaMallPage() {
                 tid och ekonomi ligger i samma app hänger allt ihop – från beställning till betald
                 faktura.
               </p>
+            ),
+          },
+          {
+            id: 'relaterade-tjanster',
+            heading: 'Innan ÄTA blir en tvist',
+            body: (
+              <PartnerServices items={CONTRACT_PARTNER_SERVICES} context="ata-mall" />
             ),
           },
         ]}

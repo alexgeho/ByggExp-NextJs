@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { parseOffertRows } from '../../lib/offert';
+import ToolAppCta from './ToolAppCta';
 
 // Free offert (quote) generator: fill company/customer + line rows, optionally
 // apply ROT on labour rows, and download a professional PDF via jspdf. All in
@@ -221,6 +222,18 @@ export default function OffertGeneratorTool() {
           {busy ? 'Skapar PDF…' : 'Ladda ner offert (PDF)'}
         </button>
       </div>
+
+      <ToolAppCta
+        tool="offert-mall"
+        heading="Vinn fler jobb – gör offerter i ByggExp"
+        text="Mallen ovan är gratis. I ByggExp bygger du offerter med din logotyp, får ROT och moms uträknat automatiskt och omvandlar en accepterad offert till faktura utan att skriva om raderna."
+        bullets={[
+          'Offert med logotyp, ROT och moms uträknat automatiskt',
+          'Accepterad offert blir faktura – utan dubbelarbete',
+          'Allt samlat per projekt, spårbart om något ifrågasätts',
+        ]}
+        secondary={{ href: '/sv/verktyg/faktura-mall', label: 'Faktura-mall' }}
+      />
     </div>
   );
 }

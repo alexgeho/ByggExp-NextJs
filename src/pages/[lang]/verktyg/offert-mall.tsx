@@ -7,8 +7,10 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import OffertGeneratorTool from '../../../components/LeadMagnet/OffertGeneratorTool';
+import PartnerServices from '../../../components/LeadMagnet/PartnerServices';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
+import { QUOTE_PARTNER_SERVICES } from '../../../content/partner-services';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -129,6 +131,13 @@ export default function OffertMallPage() {
                 logotyp, får ROT och moms uträknat automatiskt, och omvandlar en accepterad offert till
                 faktura utan att skriva in raderna på nytt – allt samlat per projekt.
               </p>
+            ),
+          },
+          {
+            id: 'relaterade-tjanster',
+            heading: 'Säkra att offerten blir betald',
+            body: (
+              <PartnerServices items={QUOTE_PARTNER_SERVICES} context="offert-mall" />
             ),
           },
         ]}

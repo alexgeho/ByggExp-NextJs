@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { parseOffertRows } from '../../lib/offert';
+import ToolAppCta from './ToolAppCta';
 
 // Free faktura (invoice) generator: company/customer, invoice number and dates,
 // line rows, VAT and optional ROT, live totals, and a professional PDF via
@@ -250,6 +251,18 @@ export default function FakturaGeneratorTool() {
           {busy ? 'Skapar PDF…' : 'Ladda ner faktura (PDF)'}
         </button>
       </div>
+
+      <ToolAppCta
+        tool="faktura-mall"
+        heading="Fakturera automatiskt i ByggExp"
+        text="Mallen ovan är gratis. I ByggExp skapar du fakturor med din logotyp, får moms och ROT uträknat automatiskt och fakturerar direkt utifrån loggad tid, material och ÄTA."
+        bullets={[
+          'Moms och ROT uträknat automatiskt – färre fel',
+          'Fakturera utifrån loggad tid, material och ÄTA',
+          'Se snabbt vilka fakturor som är obetalda',
+        ]}
+        secondary={{ href: '/sv/blog/kunden-betalar-inte-fakturan', label: 'Om kunden inte betalar' }}
+      />
     </div>
   );
 }

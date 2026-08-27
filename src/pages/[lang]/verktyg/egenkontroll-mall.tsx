@@ -224,8 +224,10 @@ export default function EgenkontrollMallPage() {
                     ofta mot SS 436 40 00.
                   </li>
                   <li>
-                    <strong>Egenkontroll VVS</strong> – täthetsprovning, avstängningsventiler, isolering
-                    av rör och kontroll av fall på avlopp.
+                    <strong>
+                      <a href={`/${LOCALE}/verktyg/egenkontroll-vvs-mall`}>Egenkontroll VVS</a>
+                    </strong>{' '}
+                    – täthetsprovning, avstängningsventiler, isolering av rör och kontroll av fall på avlopp.
                   </li>
                   <li>
                     <strong>

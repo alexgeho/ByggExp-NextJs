@@ -75,6 +75,7 @@ const CONTENT: Record<CalcLocale, Content> = {
           { slug: 'egenkontroll-mall', title: 'Egenkontroll', description: 'Färdiga checklistor för el, VVS, bygg och skyddsrond – PDF eller Excel.' },
           { slug: 'egenkontroll-el-mall', title: 'Egenkontroll el', description: 'Färdig el-checklista: jordfelsbrytare, isolationsmätning, märkning – PDF.' },
           { slug: 'egenkontroll-bygg-mall', title: 'Egenkontroll bygg', description: 'Färdig bygg-checklista: mått mot ritning, infästningar, fukt, brand (BBR) – PDF.' },
+          { slug: 'egenkontroll-vvs-mall', title: 'Egenkontroll VVS', description: 'Färdig VVS-checklista: täthetsprovning, ventiler, isolering, fall, tryck – PDF.' },
           { slug: 'arbetsberedning-mall', title: 'Arbetsberedning', description: 'Planera arbetsmomentet – arbetsgång, risker, kvalitet och resurser – som PDF.' },
         ],
       },

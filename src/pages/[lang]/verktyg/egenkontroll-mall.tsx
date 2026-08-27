@@ -228,8 +228,10 @@ export default function EgenkontrollMallPage() {
                     av rör och kontroll av fall på avlopp.
                   </li>
                   <li>
-                    <strong>Egenkontroll bygg / stomme</strong> – måttkontroll mot ritning, infästningar,
-                    fuktkontroll och brandtätning enligt BBR.
+                    <strong>
+                      <a href={`/${LOCALE}/verktyg/egenkontroll-bygg-mall`}>Egenkontroll bygg / stomme</a>
+                    </strong>{' '}
+                    – måttkontroll mot ritning, infästningar, fuktkontroll och brandtätning enligt BBR.
                   </li>
                   <li>
                     <strong>Skyddsrond (arbetsmiljö)</strong> – fallskydd, ordning och reda, skyddsutrustning

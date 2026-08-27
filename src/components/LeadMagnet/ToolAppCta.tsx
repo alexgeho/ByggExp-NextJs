@@ -1,3 +1,4 @@
+import { APP_CTA } from '../../config/cta';
 import { gaEvent } from '../../lib/analytics';
 
 // Conversion block shown right where a free tool delivers its result: the visitor
@@ -12,7 +13,7 @@ export default function ToolAppCta({
   heading,
   text,
   bullets,
-  primary = { href: '/sv/contact', label: 'Boka demo' },
+  primary = APP_CTA,
   secondary,
 }: {
   /** Tool slug, for analytics (which tool the CTA converted from). */

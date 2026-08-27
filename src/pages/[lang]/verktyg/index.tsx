@@ -73,6 +73,8 @@ const CONTENT: Record<CalcLocale, Content> = {
           { slug: 'ata-mall', title: 'ÄTA-mall', description: 'Skapa en tydlig ÄTA-beställning enligt AB 04 – PDF eller Excel.' },
           { slug: 'tidrapport-mall', title: 'Tidrapport', description: 'Timmar per dag, vecka eller månad – PDF eller Excel.' },
           { slug: 'egenkontroll-mall', title: 'Egenkontroll', description: 'Färdiga checklistor för el, VVS, bygg och skyddsrond – PDF eller Excel.' },
+          { slug: 'egenkontroll-el-mall', title: 'Egenkontroll el', description: 'Färdig el-checklista: jordfelsbrytare, isolationsmätning, märkning – PDF.' },
+          { slug: 'arbetsberedning-mall', title: 'Arbetsberedning', description: 'Planera arbetsmomentet – arbetsgång, risker, kvalitet och resurser – som PDF.' },
         ],
       },
       {

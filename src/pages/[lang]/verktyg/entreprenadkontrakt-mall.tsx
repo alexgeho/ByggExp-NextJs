@@ -7,8 +7,10 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import EntreprenadkontraktMallTool from '../../../components/LeadMagnet/EntreprenadkontraktMallTool';
+import PartnerServices from '../../../components/LeadMagnet/PartnerServices';
 import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
+import { CONTRACT_PARTNER_SERVICES } from '../../../content/partner-services';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -114,6 +116,13 @@ export default function EntreprenadkontraktMallPage() {
                 skydd blir utan verkan. Utgå då från ABS 18 eller Hantverkarformuläret 17. Mellan företag råder avtalsfrihet med
                 AB 04 eller ABT 06. Ange alltid vilket standardavtal som gäller.
               </p>
+            ),
+          },
+          {
+            id: 'innan-du-skriver-pa',
+            heading: 'Innan du skriver på – försäkring, garanti och tvist',
+            body: (
+              <PartnerServices items={CONTRACT_PARTNER_SERVICES} context="entreprenadkontrakt-mall" />
             ),
           },
         ]}

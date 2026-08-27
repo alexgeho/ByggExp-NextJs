@@ -3,6 +3,7 @@ import { type FormEvent, useRef, useState } from 'react';
 import { API_URL } from '../../config/api';
 import { gaEvent } from '../../lib/analytics';
 import { EGENKONTROLL_PRESETS } from './egenkontrollPresets';
+import ToolAppCta from './ToolAppCta';
 
 // Free egenkontroll (self-inspection checklist) tool. Categories and result
 // states mirror the ByggExp KMA module (Kvalitet/Miljö/Arbetsmiljö, and
@@ -443,6 +444,18 @@ export default function EgenkontrollTool({
           </p>
         </form>
       ) : null}
+
+      <ToolAppCta
+        tool="egenkontroll-mall"
+        heading="Slipp börja om – gör egenkontroller i ByggExp"
+        text="Mallen ovan är gratis. I ByggExp finns färdiga egenkontroll-mallar för el, VVS, bygg och skyddsrond – du fyller i på plats, markerar resultat och samlar alla kontroller per projekt."
+        bullets={[
+          'Färdiga mallar för el, VVS, bygg och skyddsrond',
+          'Anmärkningar följs upp tills de är åtgärdade',
+          'Egenkontroller samlade med byggdagbok, foton och tid per projekt',
+        ]}
+        secondary={{ href: '/sv/verktyg', label: 'Se alla gratis verktyg' }}
+      />
     </div>
   );
 }

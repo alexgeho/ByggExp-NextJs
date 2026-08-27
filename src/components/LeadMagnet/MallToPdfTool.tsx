@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
+import ToolAppCta, { type ToolAppCtaAction } from './ToolAppCta';
+
 // Generic form → PDF/Excel lead-magnet tool. Give it a set of fields, a heading
 // and an example, and the visitor fills it in and downloads a ready template as
 // PDF (jspdf, in the browser) or Excel/CSV. Used by the contract/checklist/plan
@@ -50,6 +52,18 @@ export type MallConfig = {
    * their draft on return. Off by default (other mall tools don't need it).
    */
   persist?: boolean;
+  /**
+   * Conversion block under the download buttons (free template → product). Omit
+   * `appCta: null` to hide it; leave undefined for the default "samla alla mallar
+   * i ByggExp" pitch derived from pdfHeading. See ToolAppCta.
+   */
+  appCta?: {
+    heading?: string;
+    text?: string;
+    bullets?: string[];
+    primary?: ToolAppCtaAction;
+    secondary?: ToolAppCtaAction;
+  } | null;
 };
 
 export default function MallToPdfTool({ config }: { config: MallConfig }) {
@@ -304,6 +318,26 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
           </button>
         </div>
       </form>
+
+      {config.appCta !== null && (
+        <ToolAppCta
+          tool={config.filePrefix}
+          heading={config.appCta?.heading ?? `Slipp börja om – gör ${config.pdfHeading.toLowerCase()} i ByggExp`}
+          text={
+            config.appCta?.text ??
+            `Mallen ovan är gratis. I ByggExp fyller du i på plats, återanvänder dina mallar och samlar alla dokument per projekt – ${config.pdfHeading.toLowerCase()}, egenkontroll, ÄTA, offert och mer på ett ställe.`
+          }
+          bullets={
+            config.appCta?.bullets ?? [
+              'Alla mallar samlade – ifyllda på plats och sparade per projekt',
+              'Återanvänd tidigare underlag i stället för att börja från ett tomt blad',
+              'Dokumentationen redo när beställare eller besiktning frågar',
+            ]
+          }
+          primary={config.appCta?.primary}
+          secondary={config.appCta?.secondary ?? { href: '/sv/verktyg', label: 'Se alla gratis verktyg' }}
+        />
+      )}
     </div>
   );
 }

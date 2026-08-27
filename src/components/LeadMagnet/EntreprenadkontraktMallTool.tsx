@@ -55,6 +55,18 @@ const CONFIG: MallConfig = {
     insurance: 'Entreprenören har giltig ansvarsförsäkring.',
     termination: 'Part får häva vid väsentligt avtalsbrott efter skriftlig erinran och skälig tid för rättelse.',
   },
+  // #3 e-sign pitch: contracts are the moment digital signing matters most.
+  appCta: {
+    heading: 'Signera kontraktet digitalt i ByggExp',
+    text:
+      'Mallen ovan är gratis att fylla i och skriva ut. Vill du slippa utskrift och skanning? I ByggExp skapar du kontraktet, skickar det för digital signering och får en tidsstämplad bekräftelse på vad parterna godkänt – kopplat till rätt projekt.',
+    bullets: [
+      'Digital signering – ingen utskrift, ingen skanning',
+      'Tidsstämplat bevis på vad som avtalats om en tvist uppstår',
+      'Kontrakt, ÄTA och offert samlade per projekt',
+    ],
+    secondary: { href: '/sv/blog/ab-04-och-abt-06', label: 'Läs: AB 04 vs ABT 06' },
+  },
 };
 
 export default function EntreprenadkontraktMallTool() {

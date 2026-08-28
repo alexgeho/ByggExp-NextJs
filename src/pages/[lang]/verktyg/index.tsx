@@ -41,6 +41,7 @@ const CONTENT: Record<CalcLocale, Content> = {
           { slug: 'moms-kalkylator', title: 'Momskalkylator', description: 'Lägg på eller räkna baklänges från moms (25/12/6 %).' },
           { slug: 'timpris-kalkylator', title: 'Timpris-kalkylator', description: 'Vad du behöver ta betalt per timme utifrån lön och kostnader.' },
           { slug: 'paslag-marginal-kalkylator', title: 'Påslag & marginal', description: 'Räkna pris från självkostnad – påslag vs marginal.' },
+          { slug: 'ob-overtid-kalkylator', title: 'OB & övertid', description: 'Räkna OB-tillägg och övertid enligt Byggavtalet (20–100 %).' },
         ],
       },
       {

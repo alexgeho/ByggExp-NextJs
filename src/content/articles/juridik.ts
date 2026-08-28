@@ -1293,7 +1293,7 @@ const A_SAGA_UPP_ANSTALLD_PERSONLIGA_SKAL_BYGG: BlogPost = {
 const A_OB_OVERTID_BYGGAVTALET_RAKNA_HTML = `
 <p>Fel på OB och övertid blir dyrt. Ett systematiskt räknefel som ligger kvar månad efter månad ger efterkrav, retroaktiva lönejusteringar och i värsta fall en tvist med MB-gruppen eller Byggnads region. Den här guiden går igenom hur OB-tillägg och övertidsersättning faktiskt fungerar i Byggavtalet mellan Byggföretagen och Byggnads, som löper 1 maj 2025 till 30 april 2027.</p>
 
-<p>Vill du ha ett strukturerat sätt att logga arbetad tid, OB och övertid direkt på arbetsplatsen? Testa vår gratis tidrapport-mall -&gt; <a href="/sv/verktyg/tidrapport-mall">/sv/verktyg/tidrapport-mall</a>.</p>
+<p>Vill du snabbt räkna ut ett tillägg? Använd vår gratis <a href="/sv/verktyg/ob-overtid-kalkylator">OB- och övertidskalkylator</a> – fyll i timlön och nivå så får du tillägget direkt. Vill du logga arbetad tid, OB och övertid direkt på arbetsplatsen? Testa vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>.</p>
 
 <h2>OB och övertid är två helt olika saker</h2>
 <p>Den vanligaste källan till fel är att blanda ihop begreppen. Principen är enkel när man väl slagit fast den:</p>

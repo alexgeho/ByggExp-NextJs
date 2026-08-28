@@ -17,6 +17,7 @@ export const VERKTYG_GROUPS: VerktygGroup[] = [
       { slug: 'drojsmalsranta-kalkylator', label: 'Dröjsmålsränta' },
       { slug: 'forseningsvite-kalkylator', label: 'Förseningsvite' },
       { slug: 'anstalld-kostnad-kalkylator', label: 'Vad kostar en anställd' },
+      { slug: 'ob-overtid-kalkylator', label: 'OB & övertid (Byggavtalet)' },
     ],
   },
   {

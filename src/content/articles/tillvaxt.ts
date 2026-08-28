@@ -803,7 +803,7 @@ const A_PERSONALPLANERING_BYGG_HTML = `
 <li><strong>Live-läge</strong> – se var lagen är just nu, inte bara i ett schema på papper.</li>
 <li><strong>Enkelt att ändra</strong> – flytta personal när något ändras och alla ser det direkt.</li>
 </ul>
-<p>Se även guiden om <a href="/sv/blog/resursplanering-bygg">resursplanering</a> och om <a href="/sv/blog/schemalaggning-bygg">schemaläggning för bygg</a>.</p>
+<p>Se även guiden om <a href="/sv/blog/resursplanering-bygg">resursplanering</a> och om att <a href="/sv/blog/bemanning-och-personalplanering">bemanna och planera personal rätt</a>.</p>
 
 <h2>Så gör ByggExp det</h2>
 <p>ByggExp har <strong>projekt- och personalplanering</strong> plus en <strong>live-översikt över arbetslagen</strong>: du planerar vem som jobbar var, ser läget i realtid och kopplar det till tid och projekt. Samma data blir sedan underlag för <a href="/sv/blog/loneprogram-bygg">lön</a> och <a href="/sv/blog/faktureringsprogram-bygg">faktura</a>.</p>

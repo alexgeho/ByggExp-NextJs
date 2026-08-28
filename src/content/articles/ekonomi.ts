@@ -7747,7 +7747,7 @@ const A_OFFERTPROGRAM_BYGGFORETAG_HTML = `
 <li><strong>Enstaka offerter</strong> – en bra <a href="/sv/verktyg/offert-mall">offert-mall</a> räcker långt och är gratis att börja med.</li>
 <li><strong>Offerter varje vecka</strong> – ett offertprogram sparar tid genom sparade priser, uppföljning och koppling till faktura, och minskar räknefel.</li>
 </ul>
-<p>Grunden är densamma oavsett verktyg: en genomtänkt kalkyl. Se hur du <a href="/sv/blog/skapa-offert-i-byggexp">skapar en offert steg för steg</a> som håller.</p>
+<p>Grunden är densamma oavsett verktyg: en genomtänkt kalkyl. Läs mer om att <a href="/sv/blog/skriva-offert">skriva offert</a> som håller.</p>
 
 <h2>Så kommer du igång</h2>
 <p>Du behöver inte köpa ett system för att börja skicka bättre offerter idag. <a href="/sv/verktyg/offert-mall">Offert-mallen</a> ger dig en färdig PDF gratis, och när volymen växer är steget till ett offertprogram – där offert, tid och faktura hänger ihop – litet. <a href="/sv/contact">Boka en demo av ByggExp</a> om du vill se hela flödet från offert till betald faktura.</p>

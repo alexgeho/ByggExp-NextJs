@@ -3983,7 +3983,7 @@ const A_A_PRISER_BYGG: BlogPost = {
 const A_ACKORDSLON_BYGG_HTML = `
 <p>Ackord är byggbranschens klassiska prestationslön: laget får betalt för utfört arbete i stället för nedlagd tid, och tar samtidigt större ansvar för planering och produktionsflöde. Rätt använt driver det produktivitet och ger en förutsägbar styckkostnad – men Byggavtalet ställer formella krav på överenskommelse, redovisning och granskning som du som arbetsgivare måste hålla ordning på.</p>
 
-<p>Grunden i allt ackord är dokumenterade mängder och tydliga underlag. Håll koll på arbetade timmar och utförda moment redan från start med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -&gt;</a> så att slutavräkningen bygger på fakta, inte minnesbilder.</p>
+<p>Grunden i allt ackord är dokumenterade mängder och tydliga underlag. Håll koll på arbetade timmar och utförda moment redan från start med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -&gt;</a> så att slutavräkningen bygger på fakta, inte minnesbilder. Vill du räkna ut ackordsöverskottet? Testa vår gratis <a href="/sv/verktyg/ackord-kalkylator">ackordskalkylator</a>.</p>
 
 <h2>Vad är ackordslön?</h2>
 <p>Vid ackord (prestationslön) följer lönen produktionen, inte klockan. Skillnaden mot tim- och månadslön är att arbetslaget får betalt för de mängder de faktiskt utför, och därmed också delar ansvaret för att planera arbetet och hålla flödet uppe. Ackord ger normalt högre lön än tim- eller resultatlön, just eftersom laget bär mer av risken och styrningen.</p>
@@ -6789,7 +6789,7 @@ const A_LEASA_ELLER_KOPA_MASKINER_BYGGFORETAG: BlogPost = {
 const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
 <p>Fyra ersättningar blandas ihop varje månad på byggföretagens lönebesked: restidsersättning, reskostnadsersättning, milersättning och traktamente. De styrs av olika logiker och delvis av olika regelverk - kollektivavtalet styr vad du <em>betalar ut</em>, Skatteverket styr vad som är <em>skattefritt</em>. Räknar du fel blir det antingen dyrt (för mycket utbetalt, eller skatteplikt du missat) eller en tvist med Byggnads (för lite utbetalt). Den här guiden reder ut vad varje post faktiskt ersätter och var skattegränsen går 2026.</p>
 
-<p>För att hålla ordning på restid, resväg och arbetstimmar per projekt kan du använda <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -&gt;</a> som underlag till reseräkning och lönekörning.</p>
+<p>Vill du snabbt räkna ut ersättningen? Använd vår gratis <a href="/sv/verktyg/restidsersattning-kalkylator">restids- och reseersättningskalkylator</a>. För att hålla ordning på restid, resväg och arbetstimmar per projekt kan du använda <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -&gt;</a> som underlag till reseräkning och lönekörning.</p>
 
 <h2>Fyra begrepp, fyra logiker</h2>
 <p>Det första steget är att sluta behandla posterna som samma sak. De ersätter olika saker:</p>

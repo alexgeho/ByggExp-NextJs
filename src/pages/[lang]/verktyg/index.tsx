@@ -42,6 +42,8 @@ const CONTENT: Record<CalcLocale, Content> = {
           { slug: 'timpris-kalkylator', title: 'Timpris-kalkylator', description: 'Vad du behöver ta betalt per timme utifrån lön och kostnader.' },
           { slug: 'paslag-marginal-kalkylator', title: 'Påslag & marginal', description: 'Räkna pris från självkostnad – påslag vs marginal.' },
           { slug: 'ob-overtid-kalkylator', title: 'OB & övertid', description: 'Räkna OB-tillägg och övertid enligt Byggavtalet (20–100 %).' },
+          { slug: 'restidsersattning-kalkylator', title: 'Restids- & reseersättning', description: 'Reskostnad (2,50 kr/km) och restidsersättning enligt Byggavtalet.' },
+          { slug: 'ackord-kalkylator', title: 'Ackord', description: 'Räkna ackordsöverskott: ackordssumma − förskott, granskningsarvode.' },
         ],
       },
       {

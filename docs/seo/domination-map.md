@@ -57,7 +57,15 @@ Videos, backlinks, product decisions, ads = owner. Marked ⚑owner where blocked
 
 ## Immediate queue (next in-repo actions, priority order)
 1. ~~Deepen `faktureringsprogram-bygg` (img + FAQ + hub)~~ ✅ done 2026-08-28.
-2. Deepen `projektuppfoljning-bygg`.
-3. Add FAQ + diagram + internal links to `takstolar-kalkylator` / `reglar-kalkylator` (pos 20→top-5).
-4. Cross-link arbetsmiljö articles → arbetsberedning/riskbedömning/skyddsrond tools.
-5. Re-pull GSC positions, update this table.
+2. ~~Deepen `projektuppfoljning-bygg`~~ — already strong (diagram+KPI table+FAQ); added real screenshot ✅.
+3. `takstolar-kalkylator` / material calcs — already have FAQ+diagram+c/c sections; **content-complete**. Lift needs backlinks, not more on-page.
+4. Cross-link arbetsmiljö articles → arbetsberedning/riskbedömning/skyddsrond tools. (optional polish)
+5. Re-pull GSC positions, update this table. (recurring)
+
+## Honest state 2026-08-28
+Top commercial clusters are now **content-complete on-page** (depth, images, FAQ schema,
+hub-and-spoke, 0 broken links). The in-repo content lever for Tier-1/2 is largely spent —
+further on-page edits yield diminishing returns. **Remaining growth is now ⚑owner-side:**
+backlinks (the #1 external lever — see backlinks-plan.md), product videos to embed, and the
+free-personalliggare-in-suite product decision. Best recurring in-repo task = re-pull GSC,
+find the next near-miss (pos 8–15) and push exactly those pages.

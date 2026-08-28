@@ -1304,6 +1304,8 @@ const A_PROJEKTUPPFOLJNING_BYGG_HTML = `
 </tbody>
 </table></div>
 
+<figure class="web-shot"><img src="/features-content/projektekonomi-och-lonsamhet-web.webp" alt="Projektuppföljning i webbadmin: budget mot utfall, timmar, kostnader och marginal i realtid" width="1000" height="548" loading="lazy"><figcaption>Projektets ekonomi i webbadmin – budget mot utfall, timmar, kostnader och marginal uppdateras löpande.</figcaption></figure>
+
 <h2>Så följer du upp projekt i realtid</h2>
 <p>Poängen med digital projektuppföljning är att siffrorna uppdateras av det laget redan gör. När tid, material och kvitton registreras löpande i mobilen ser du <a href="/sv/blog/projektekonomi-och-lonsamhet">projektets ekonomi</a> mot budget i realtid – utan att sammanställa något manuellt. Då hinner du agera på projekt som närmar sig budgettaket: justera bemanning, ÄTA-fakturera eller stämma av med kunden.</p>
 

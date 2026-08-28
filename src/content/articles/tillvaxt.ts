@@ -327,6 +327,8 @@ const A_TIDRAPPORTERING_APP_BYGGFORETAG_HTML = `
 <p>Det här är guiden för dig som har <strong>anställda</strong> och ska välja tidrapportering för hela laget – inte bara för egen del. Vill du först förstå grunderna i hur en app fungerar, läs <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>; här fokuserar vi på företagsperspektivet: flera medarbetare, roller, attestering och vägen till lön och faktura.</p>
 <p>En tidrapporterings-app för byggföretag ska ta bort papperslapparna och Excel-krånglet: teamet stämplar tid i mobilen där jobbet sker, arbetsledaren attesterar, och timmarna blir direkt underlag för lön och faktura. Här går vi igenom vad en bra tidrapporterings-app ska klara för ett företag med anställda och hur ByggExp gör det.</p>
 
+<figure class="web-shot"><img src="/features-content/automatisk-tidrapportering-och-export-web.webp" alt="Tidrapportering-app för byggföretag: tider i webbadmin med planerade, GPS- och manuella timmar per medarbetare och dag" width="1000" height="548" loading="lazy"><figcaption>Tider i webbadmin – planerade, GPS- och manuella timmar per medarbetare, redo att exportera till lön och faktura.</figcaption></figure>
+
 <h2>Vad ska en tidrapporterings-app för bygg klara?</h2>
 <ul>
 <li><strong>Registrering i mobilen</strong> – på plats, i realtid, kopplat till rätt projekt – inte i efterhand.</li>
@@ -360,6 +362,19 @@ const A_TIDRAPPORTERING_APP_BYGGFORETAG_HTML = `
 </ul>
 
 <p>En tidrapporterings-app tjänar in sig snabbt: rätt lön, rätt faktura och koll på lönsamheten – utan papperslappar och utan pusslet vid varje lönekörning.</p>
+
+<h2>Tidrapport, tidsregistrering eller tidredovisning – samma sak?</h2>
+<p>Orden används ofta om vartannat, men beskriver olika steg i samma kedja. <strong>Tidsregistrering</strong> är själva stämplingen (in och ut), <strong>tidrapportering</strong> kopplar timmarna till rätt projekt, och <strong>tidredovisning</strong> är det sammanställda underlaget till lön och faktura. En <strong>digital tidrapport</strong> i mobilen tar dig genom alla tre stegen utan dubbelinmatning. Vill du fördjupa dig i flödet, se guiden om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a> och om <a href="/sv/blog/tidsregistrering-app-bygg">tidsregistrering-app för bygg</a>.</p>
+
+<h2>Relaterade guider om tidrapportering</h2>
+<ul>
+<li><a href="/sv/blog/tidrapporteringssystem-bygg">Tidrapporteringssystem för bygg</a> – tidsregistrering, tidrapportering och tidredovisning i ett.</li>
+<li><a href="/sv/blog/stampelklocka-app-gps-bygg">Stämpelklocka app med GPS</a> – in- och utstämpling med platsbekräftelse.</li>
+<li><a href="/sv/blog/automatisk-tidrapportering-och-export">Automatisk tidrapportering och export</a> – tid som rapporterar sig själv.</li>
+<li><a href="/sv/blog/mobil-tidrapportering">Mobil tidrapportering</a> – rapportera tid där jobbet görs.</li>
+<li><a href="/sv/blog/personalliggare-bygg-app">Personalliggare app</a> – närvaro i realtid, redo för Skatteverket.</li>
+<li><a href="/sv/blog/tidrapportering-hantverkare">Tidrapportering för hantverkare</a> och <a href="/sv/blog/tidrapportering-entreprenad">för entreprenad</a>.</li>
+</ul>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad ska en tidrapporterings-app för byggföretag klara?</h3>
@@ -1159,6 +1174,8 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 <h2>Så byter du från Excel till ett system</h2>
 <p>Bytet behöver inte vara dramatiskt. Lägg upp pågående projekt och medarbetare i webbadmin, låt laget ladda ner appen och börja checka in – och kör mallen parallellt någon vecka tills alla är trygga. Eftersom ett enkelt system inte kräver utbildning är övergången oftast klar på dagar, inte månader.</p>
 
+<figure class="app-shots"><img src="/features-content/automatisk-tidrapportering-och-export-1.webp" alt="Tidrapporteringssystem i mobilen: arbetspass med planerade, manuella och GPS-timmar i en månadskalender" width="1000" height="548" loading="lazy"><figcaption>Tidrapporteringssystemet i appen – planerade, manuella och GPS-timmar samlade per medarbetare, klara att summera och exportera.</figcaption></figure>
+
 <h2>Vad ett tidrapporteringssystem för bygg bör klara</h2>
 <ul>
 <li>Enkel tidsregistrering i mobilen (iPhone och Android), gärna med GPS.</li>
@@ -1170,6 +1187,16 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 
 <h2>Kom igång</h2>
 <p>Vill du se ett enkelt tidrapporteringssystem för bygg i praktiken? <a href="/sv/blog/automatisk-tidrapportering-och-export">Läs om automatisk tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<h2>Relaterade guider om tidrapportering</h2>
+<ul>
+<li><a href="/sv/blog/tidrapportering-app-byggforetag">Tidrapportering-app för byggföretag</a> – timmar till lön och faktura.</li>
+<li><a href="/sv/blog/stampelklocka-app-gps-bygg">Stämpelklocka app med GPS</a> – in- och utstämpling med platsbekräftelse.</li>
+<li><a href="/sv/blog/tidsregistrering-app-bygg">Tidsregistrering-app för bygg</a> – korrekt arbetstid i mobilen.</li>
+<li><a href="/sv/blog/mobil-tidrapportering">Mobil tidrapportering</a> – rapportera tid där jobbet görs.</li>
+<li><a href="/sv/blog/personalliggare-bygg-app">Personalliggare app</a> – närvaro i realtid, redo för Skatteverket.</li>
+<li><a href="/sv/blog/tidrapportering-hantverkare">Tidrapportering för hantverkare</a> och <a href="/sv/blog/tidrapportering-entreprenad">för entreprenad</a>.</li>
+</ul>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är ett tidrapporteringssystem?</h3>

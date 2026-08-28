@@ -789,16 +789,21 @@ const A_DOKUMENTHANTERING_BYGG: BlogPost = {
 };
 
 const A_PERSONALPLANERING_BYGG_HTML = `
-<p>Personalplanering i byggföretag handlar om att rätt person är på rätt plats vid rätt tid – utan dubbelbokningar, glapp eller sena sms. Ett bra bemanningssystem ger både kontoret och bygget samma bild av vem som gör vad. Här går vi igenom vad personalplanering för bygg bör klara och hur ByggExp gör det.</p>
+<p>Bemanningsplanering – eller personalplanering – i byggföretag handlar om att rätt person är på rätt plats vid rätt tid, utan dubbelbokningar, glapp eller sena sms. Ett bra bemanningssystem ger både kontoret och bygget samma bild av vem som gör vad. Här går vi igenom vad bemanningsplanering för bygg bör klara och hur ByggExp gör det.</p>
 
-<h2>Vad ska personalplanering för bygg klara?</h2>
+<figure class="web-shot"><img src="/features-content/dagsplanering-och-planeringsmoten-web.webp" alt="Bemanningsplanering för byggföretag: planera personal och lag på projekt i webbadmin med live-översikt" width="1000" height="548" loading="lazy"><figcaption>Bemanningsplanering i webbadmin – planera vem som jobbar var, koppla till projekt och se arbetslagen i realtid.</figcaption></figure>
+
+<h2>Bemanningsplanering och personalplanering – samma sak?</h2>
+<p>Orden används om vartannat. <strong>Bemanningsplanering</strong> betonar att fördela rätt antal personer och kompetenser över projekten, medan <strong>personalplanering</strong> ofta syftar på den enskilda medarbetarens schema. I praktiken är det samma jobb: se till att projekten är bemannade utan att någon är dubbelbokad eller sitter utan uppgift. Ett bemanningssystem för bygg löser båda i samma vy.</p>
+
+<h2>Vad ska bemanningsplanering för bygg klara?</h2>
 <ul>
 <li><strong>Vem, var och när</strong> – planera personal och lag på projekt, utan dubbelbokning.</li>
 <li><strong>Koppling till projekt och tid</strong> – planerad tid hänger ihop med <a href="/sv/blog/tidrapportering-app-byggforetag">registrerad tid</a> och projektets marginal.</li>
 <li><strong>Live-läge</strong> – se var lagen är just nu, inte bara i ett schema på papper.</li>
 <li><strong>Enkelt att ändra</strong> – flytta personal när något ändras och alla ser det direkt.</li>
 </ul>
-<p>Se även guiden om <a href="/sv/blog/resursplanering-bygg">resursplanering</a> och att <a href="/sv/blog/bemanning-och-personalplanering">bemanna och planera personal</a>.</p>
+<p>Se även guiden om <a href="/sv/blog/resursplanering-bygg">resursplanering</a> och om <a href="/sv/blog/schemalaggning-bygg">schemaläggning för bygg</a>.</p>
 
 <h2>Så gör ByggExp det</h2>
 <p>ByggExp har <strong>projekt- och personalplanering</strong> plus en <strong>live-översikt över arbetslagen</strong>: du planerar vem som jobbar var, ser läget i realtid och kopplar det till tid och projekt. Samma data blir sedan underlag för <a href="/sv/blog/loneprogram-bygg">lön</a> och <a href="/sv/blog/faktureringsprogram-bygg">faktura</a>.</p>
@@ -812,14 +817,50 @@ const A_PERSONALPLANERING_BYGG_HTML = `
 </ul>
 
 <p>Rätt personalplanering minskar glapp och dubbelbokningar – och ger kontoret och bygget samma bild i realtid.</p>
+
+<h2>Så gör du en bemanningsplanering steg för steg</h2>
+<ol>
+<li>Lägg upp projekten och perioden du planerar för.</li>
+<li>Fördela personal och lag på projekten utifrån kompetens och var de behövs.</li>
+<li>Kontrollera att ingen är dubbelbokad och att inga projekt står obemannade.</li>
+<li>Dela planen med laget – i mobilen, så alla ser sitt schema direkt.</li>
+<li>Justera löpande när något ändras; koppla planen till <a href="/sv/blog/tidrapportering-app-byggforetag">registrerad tid</a> för att se plan mot verklighet.</li>
+</ol>
+
+<h2>Whiteboard vs bemanningssystem</h2>
+<div class="article-table"><table>
+<thead><tr><th>&nbsp;</th><th>Whiteboard / Excel</th><th>Bemanningssystem</th></tr></thead>
+<tbody>
+<tr><td><strong>Ändringar</strong></td><td>Når inte bygget i tid</td><td>Syns direkt i allas mobil</td></tr>
+<tr><td><strong>Dubbelbokning</strong></td><td>Lätt att missa</td><td>Fångas när du planerar</td></tr>
+<tr><td><strong>Koppling till tid</strong></td><td>Ingen</td><td>Plan mot verklig tid</td></tr>
+<tr><td><strong>Överblick</strong></td><td>Bara på kontoret</td><td>Live, var du än är</td></tr>
+</tbody>
+</table></div>
+
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/resursplanering-bygg">Resursplanering för bygg</a> – personal, maskiner och material på rätt plats.</li>
+<li><a href="/sv/blog/schemalaggning-bygg">Schemaläggning för bygg</a> – lägg scheman som når laget.</li>
+<li><a href="/sv/blog/tidrapportering-app-byggforetag">Tidrapportering-app för byggföretag</a> – planerad tid mot verklig.</li>
+<li><a href="/sv/blog/projekthantering-byggforetag">Projekthantering för byggföretag</a> – tid, personal och marginal i ett.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är bemanningsplanering?</h3>
+<p>Bemanningsplanering är att fördela rätt personal och kompetens över projekten så att alla jobb är bemannade utan dubbelbokning – och att planen når laget i tid. I bygg kopplas den ofta till projekt och registrerad tid.</p>
+<h3>Vad är skillnaden mellan bemanningsplanering och personalplanering?</h3>
+<p>De används synonymt. Bemanningsplanering betonar att bemanna projekten med rätt antal personer och kompetenser; personalplanering betonar den enskildes schema. Ett bemanningssystem för bygg löser båda i samma vy.</p>
+<h3>Behöver ett mindre byggföretag ett bemanningssystem?</h3>
+<p>Ofta redan från några anställda och flera samtidiga projekt. Så fort planering sker på whiteboard eller via sms blir det lätt dubbelbokningar och glapp – ett system som når mobilen tar bort det.</p>
 `;
 
 const A_PERSONALPLANERING_BYGG: BlogPost = {
   _id: "code-"+"personalplanering-bygg",
-  title: "Personalplanering för byggföretag – rätt person, rätt plats, rätt tid", slug: "personalplanering-bygg", locale: "sv",
-  excerpt: "Vad personalplanering / bemanning för byggföretag bör klara: planera lag på projekt utan dubbelbokning, koppling till tid och en live-översikt över arbetslagen. Så gör ByggExp det.", tag: "Digitalisering",
+  title: "Bemanningsplanering och personalplanering för byggföretag – rätt person, rätt plats", slug: "personalplanering-bygg", locale: "sv",
+  excerpt: "Bemanningsplanering och personalplanering för bygg: planera lag på projekt utan dubbelbokning, koppla planen till registrerad tid och se arbetslagen live. Så gör ByggExp det.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_PERSONALPLANERING_BYGG_HTML,
-  seoTitle: "Personalplanering för byggföretag – bemanning | ByggExp", seoDescription: "Personalplanering / bemanning för byggföretag: planera lag på projekt utan dubbelbokning, koppla till tid och se arbetslagen live. Så gör ByggExp det.",
+  seoTitle: "Bemanningsplanering & personalplanering bygg | ByggExp", seoDescription: "Bemanningsplanering och personalplanering för byggföretag: planera lag på projekt utan dubbelbokning, koppla till tid och se arbetslagen i realtid. Så gör ByggExp det.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-21T09:00:00.000Z", createdAt: "2026-08-21T09:00:00.000Z", updatedAt: "2026-08-21T09:00:00.000Z",
 };

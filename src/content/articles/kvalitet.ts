@@ -1462,6 +1462,8 @@ const A_EGENKONTROLL_ENTREPRENAD_HTML = `
 
 <p><a href="/sv/verktyg/egenkontroll-mall">Ladda ner en gratis egenkontroll-mall (PDF) →</a></p>
 
+<figure class="article-diagram"><img src="/landing/diagrams/egenkontroll-cykel.webp" alt="Egenkontroll i entreprenad – planera, kontrollera, dokumentera och åtgärda avvikelse" width="720" height="380" loading="lazy"><figcaption>Egenkontrollen i entreprenaden är en cykel: planera kontrollpunkterna, kontrollera, dokumentera med foto och signatur, åtgärda avvikelser.</figcaption></figure>
+
 <h2>Varför egenkontroll i entreprenad?</h2>
 <p>Egenkontroll i en entreprenad har oftast tre drivkrafter samtidigt:</p>
 <ul>
@@ -1494,6 +1496,22 @@ const A_EGENKONTROLL_ENTREPRENAD_HTML = `
 </ul>
 
 <p>Gör egenkontrollen löpande, koppla den till kontrollplanen och spara den med foto och signatur. Då blir den både ett kvalitetsverktyg under bygget och ett starkt bevis vid besiktning och eventuell tvist.</p>
+
+<h2>Färdiga egenkontroll-mallar per yrke</h2>
+<p>Kontrollpunkterna skiljer sig mellan moment i entreprenaden. Välj en färdig mall som öppnar ifylld med rätt punkter:</p>
+<ul>
+<li><strong><a href="/sv/verktyg/egenkontroll-el-mall">Egenkontroll el</a></strong> – jordfelsbrytare, isolationsmätning, märkning och skyddsledare.</li>
+<li><strong><a href="/sv/verktyg/egenkontroll-bygg-mall">Egenkontroll bygg / stomme</a></strong> – måttkontroll mot ritning, infästningar, fukt och brandtätning.</li>
+<li><strong><a href="/sv/verktyg/egenkontroll-vvs-mall">Egenkontroll VVS</a></strong> – täthetsprovning, ventiler, rörisolering och avloppsfall.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Är egenkontroll obligatorisk i en entreprenad?</h3>
+<p>Beställaren kräver ofta dokumenterad egenkontroll i kontraktshandlingarna (t.ex. via en KMA- eller kvalitetsplan), och för åtgärder som kräver kontrollplan enligt PBL är egenkontroll normalt den metod som anges för att styrka kraven. Oavsett är den ditt bästa bevis vid besiktning och tvist.</p>
+<h3>Hur hänger egenkontrollen ihop med slutbesiktningen?</h3>
+<p>Egenkontrollerna är en del av underlaget som visar att entreprenaden är utförd enligt handlingarna. Saknas de blir det svårare att få arbetet godkänt utan anmärkning vid <a href="/sv/blog/slutbesiktning">slutbesiktningen</a>.</p>
+<h3>Vem ansvarar för egenkontrollen i en entreprenad?</h3>
+<p>Den som utför arbetet ansvarar för sin egenkontroll, och en ansvarig signerar. Egenkontrollerna styrker ofta punkterna i byggherrens kontrollplan.</p>
 `;
 
 const A_EGENKONTROLL_ENTREPRENAD: BlogPost = {

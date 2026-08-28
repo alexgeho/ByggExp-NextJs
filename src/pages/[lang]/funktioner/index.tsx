@@ -91,6 +91,38 @@ export default function FunktionerPage({
         <meta property="og:title" content={`${copy.title} | ByggExp`} />
         <meta property="og:description" content={copy.subtitle} />
         <meta property="og:url" content={canonicalUrl} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'SoftwareApplication',
+              name: 'ByggExp',
+              applicationCategory: 'BusinessApplication',
+              operatingSystem: 'iOS, Android, Web',
+              description: copy.subtitle,
+              url: canonicalUrl,
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: lang === 'en' ? 'Home' : lang === 'nb' ? 'Hjem' : 'Hem',
+                  item: `${localeOrigin(lang)}/${lang}`,
+                },
+                { '@type': 'ListItem', position: 2, name: copy.title, item: canonicalUrl },
+              ],
+            }),
+          }}
+        />
       </Head>
       <Header headerT={headerT} />
 

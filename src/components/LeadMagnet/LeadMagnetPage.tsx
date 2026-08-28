@@ -86,8 +86,31 @@ export default function LeadMagnetPage({
       : locale === 'en'
       ? 'This tool gives an estimate and is an aid – not a finished calculation. Always check the result against drawings, applicable regulations, supplier data and your professional experience before giving a binding price, ordering material or using the file. ByggExp is not responsible for decisions made solely on the basis of the tool.'
       : 'Verktyget ger en uppskattning och är ett hjälpmedel – inte en färdig kalkyl. Kontrollera alltid resultatet mot ritning, gällande regler, leverantörens uppgifter och din yrkeserfarenhet innan du lämnar ett bindande pris, beställer material eller använder filen. ByggExp ansvarar inte för beslut som fattas enbart utifrån verktyget.';
+  // BreadcrumbList schema (Hem › Verktyg › <tool>) for a breadcrumb rich result in
+  // SERP. Derived from locale + title — no per-page wiring needed.
+  const routeLoc = locale === 'en' || locale === 'nb' ? locale : 'sv';
+  const origin = routeLoc === 'nb' ? 'https://byggexp.no' : 'https://byggexp.se';
+  const crumbLabels =
+    routeLoc === 'en'
+      ? { home: 'Home', tools: 'Tools' }
+      : routeLoc === 'nb'
+      ? { home: 'Hjem', tools: 'Verktøy' }
+      : { home: 'Hem', tools: 'Verktyg' };
+  const breadcrumbSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: crumbLabels.home, item: `${origin}/${routeLoc}` },
+      { '@type': 'ListItem', position: 2, name: crumbLabels.tools, item: `${origin}/${routeLoc}/verktyg` },
+      { '@type': 'ListItem', position: 3, name: title },
+    ],
+  });
   return (
     <article className={wide ? 'lead-magnet lead-magnet--wide' : 'lead-magnet'}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+      />
       <div className={wide ? 'container' : 'container container-narrow'}>
         <header className="lead-magnet-hero">
           {badge ? <span className="lead-magnet-badge">{badge}</span> : null}

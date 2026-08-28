@@ -49,6 +49,20 @@ Videos, backlinks, product decisions, ads = owner. Marked ⚑owner where blocked
 3. **Wedge-free** (⚑product) — personalliggare/egenkontroll/tidrapport free inside the suite → land, upsell. Point-solution rivals (e-liggare etc.) charge for these standalone.
 4. **Distribution** (⚑owner) — YouTube channel (started), backlinks (#1 external lever), Google reviews, PR, viral UE check-in spread.
 
+## Done 2026-08-28 (this pass)
+- **Schema:** BreadcrumbList now on all ~30 verktyg pages (via LeadMagnetPage) + SoftwareApplication
+  & BreadcrumbList on /funktioner. Blog already had full schema; Organization sitewide. → breadcrumb
+  rich results in SERP (CTR lift at same position).
+- **New calc:** `ob-overtid-kalkylator` (Byggavtalet OB/övertid) — serves the "räkna OB/övertid",
+  "ackord lön"-adjacent payroll near-miss; rates from verified article, user enters own wage.
+
+## Calculator opportunities (near-miss with an article but no calc yet)
+- `restid-kalkylator` ← restidsersattning-byggavtalet (query "restidsersättning byggnads", pos 8)
+- `ackord-kalkylator` ← ackordslon-bygg (query "ackord lön", pos 12)
+- `traktamente-kalkylator` ← traktamente-byggnadsarbetare-2026 (verify Skatteverket schablon first)
+- `semester-kalkylator` ← semesterlon-semesterersattning-byggavtalet
+Build each like ob-overtid: source rates from the paired verified article, user enters own inputs.
+
 ## Systemic hygiene (in-repo, recurring)
 - **Internal links:** 0 broken /sv/blog/ links across 280 slugs (verified 2026-08-28). Re-audit after big edits.
 - **Hub-and-spoke:** every pillar links its spokes AND spokes link back. Keep tightening.

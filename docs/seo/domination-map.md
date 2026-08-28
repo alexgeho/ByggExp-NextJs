@@ -55,6 +55,11 @@ Videos, backlinks, product decisions, ads = owner. Marked ⚑owner where blocked
 - **Video-on-money-pages:** embed each product video on its commercial page (dwell time + video-in-search). 5 embedded so far.
 - **Images + FAQ schema** on every commercial pillar (image SEO + rich results).
 
+## ⚑ Video task (owner shoots) — see docs/seo/video-plan.md
+6 YouTube videos mapped from the 48-keyword tidrapportering list → each embedded on its
+commercial page. Shoot order: Excel-mall → gratis-app → bygg → bästa → platform shorts →
+(optional) competitor. Owner sends youtu.be URL per video → Claude embeds + updates this map.
+
 ## Near-miss watchlist (pos 8–15, GSC clicks-sorted 2026-08-28)
 Queries on the cusp of page 1 — small push = big CTR jump. Most are already-optimized
 tool pages that now need **authority (backlinks)**, not more on-page:

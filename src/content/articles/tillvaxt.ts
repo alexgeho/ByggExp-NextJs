@@ -1674,11 +1674,17 @@ const S_PERSONALLIGGARE_APP_HTML = `
 </table></div>
 <p>En app fyller i det mesta automatiskt vid incheckning, så du slipper föra uppgifterna för hand.</p>
 
-<h2>Koppling till ID06 och närvaro</h2>
-<p>En personalliggare-app hänger ihop med <a href="/sv/blog/id06">ID06</a> och med <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning</a> – samma incheckning som registrerar arbetstid kan föra personalliggaren.</p>
+<h2>Behöver du ID06 för att föra personalliggare? Nej.</h2>
+<p>En vanlig missuppfattning är att du måste ha <a href="/sv/blog/id06">ID06</a>-kort och kortläsare för att uppfylla lagen. Det stämmer inte. Lagen kräver en <strong>elektronisk personalliggare</strong> – inte en viss teknik eller ett visst kort. Med en personalliggare-app registrerar var och en sin närvaro i mobilen, helt utan kortläsare eller dyr hårdvara. ID06 kan användas där en beställare kräver det, men det är inte ett lagkrav för själva liggaren.</p>
+
+<h2>Koppling till närvaro och tid</h2>
+<p>Personalliggare-appen hänger ihop med <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning</a> – samma incheckning som registrerar arbetstid kan föra personalliggaren. I ByggExp ingår personalliggaren i samma app som tid, projekt och foto, så du betalar inte för en separat lösning vid sidan av.</p>
 
 <h2>Skatteverkets kontroll och kontrollavgift</h2>
-<p>Skatteverket får göra oanmälda besök på arbetsplatsen och begära att liggaren visas direkt. Saknas den, eller är den bristfällig, utgår en kontrollavgift – en fast grundavgift plus ett belopp per person som inte är registrerad. Det kan snabbt bli dyrt på ett bygge med flera lag och underentreprenörer, och är hela poängen med att låta en app hålla liggaren korrekt automatiskt. Aktuella belopp och undantag går vi igenom i guiden om <a href="/sv/blog/kontrollavgift-personalliggare">kontrollavgift för personalliggare</a>, och hela regelverket i <a href="/sv/blog/personalliggare">personalliggare i byggbranschen</a>.</p>
+<p>Skatteverket får göra oanmälda besök på arbetsplatsen och begära att liggaren visas direkt. Saknas den, eller är den bristfällig, utgår en kontrollavgift på <strong>2 500 kr per kontrolltillfälle plus 2 500 kr för varje person som inte är registrerad</strong>. På ett bygge med flera lag och underentreprenörer blir det snabbt dyrt – och det är hela poängen med att låta en app hålla liggaren korrekt automatiskt. Aktuella belopp och undantag går vi igenom i guiden om <a href="/sv/blog/kontrollavgift-personalliggare">kontrollavgift för personalliggare</a>, och hela regelverket i <a href="/sv/blog/personalliggare">personalliggare i byggbranschen</a>.</p>
+
+<h2>Underentreprenörer checkar in – på sitt eget språk</h2>
+<p>På ett bygge jobbar sällan bara ett företag. En bra personalliggare-app låter <strong>underentreprenörer och inhyrda checka in själva</strong> på arbetsplatsen, så att liggaren är komplett utan att du måste jaga varje lag. Eftersom bygglag ofta är flerspråkiga underlättar det när appen fungerar på flera språk – då förstår alla hur de checkar in och liggaren blir korrekt från början.</p>
 
 <h2>En incheckning – både tid och liggare</h2>
 <p>Det stora med en app är att samma incheckning löser två saker: den registrerar <a href="/sv/blog/tidsregistrering-app-bygg">arbetstiden</a> som blir lön och faktura, och den för personalliggaren som klarar en kontroll. Ingen dubbel registrering, inga glömda poster. Läs mer om hur tiden blir underlag i <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a>.</p>
@@ -1694,15 +1700,19 @@ const S_PERSONALLIGGARE_APP_HTML = `
 <h3>Hänger personalliggare-appen ihop med tidrapporteringen?</h3>
 <p>Ja. Samma incheckning som registrerar arbetstid kan föra personalliggaren, så du slipper dubbel registrering.</p>
 <h3>Vad kostar det om personalliggaren saknas vid en kontroll?</h3>
-<p>Skatteverket tar ut en kontrollavgift – en fast grundavgift plus ett belopp per oregistrerad person. Aktuella belopp finns i vår guide om kontrollavgift för personalliggare.</p>
+<p>Skatteverket tar ut en kontrollavgift på 2 500 kr per kontrolltillfälle plus 2 500 kr för varje person som inte är registrerad. På ett bygge med flera lag blir det snabbt dyrt – aktuella belopp och undantag finns i vår guide om kontrollavgift för personalliggare.</p>
+<h3>Måste man ha ID06 för att föra personalliggare?</h3>
+<p>Nej. Lagen kräver en elektronisk personalliggare, inte ID06-kort eller kortläsare. Med en app registrerar var och en sin närvaro i mobilen utan hårdvara. ID06 kan krävas av en beställare, men är inte ett lagkrav för själva liggaren.</p>
+<h3>Kostar personalliggaren extra i ByggExp?</h3>
+<p>Nej, personalliggaren ingår i samma app som tid, projekt och foto – du behöver ingen separat lösning vid sidan av. Samma incheckning för både liggaren och arbetstiden.</p>
 `.trim();
 
 const S_PERSONALLIGGARE_APP: BlogPost = {
   _id: "code-personalliggare-bygg-app",
-  title: "Personalliggare app för bygg – närvaro i mobilen", slug: "personalliggare-bygg-app", locale: "sv",
-  excerpt: "Personalliggare som app: registrera närvaro i mobilen, liggaren uppdateras i realtid och finns tillgänglig för Skatteverket. Så uppfyller du lagkravet enkelt.", tag: "Digitalisering",
+  title: "Personalliggare app för bygg – utan ID06-krångel", slug: "personalliggare-bygg-app", locale: "sv",
+  excerpt: "Personalliggare som app: registrera närvaro i mobilen utan ID06-kort eller hårdvara, håll liggaren korrekt för Skatteverket och undvik kontrollavgift. Ingår i ByggExp.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: S_PERSONALLIGGARE_APP_HTML,
-  seoTitle: "Personalliggare app för bygg – närvaro i mobilen | ByggExp", seoDescription: "Personalliggare-app för byggföretag: registrera närvaro i mobilen, håll liggaren korrekt i realtid och tillgänglig för Skatteverket. Kopplad till ID06 och tidrapportering.",
+  seoTitle: "Personalliggare app för bygg – utan ID06 | ByggExp", seoDescription: "Personalliggare-app för byggföretag: registrera närvaro i mobilen utan ID06-kort eller hårdvara, undvik kontrollavgift och håll liggaren korrekt för Skatteverket. Ingår i ByggExp.",
   seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T10:35:00.000Z", createdAt: "2026-08-22T10:35:00.000Z", updatedAt: "2026-08-22T10:35:00.000Z",
 };

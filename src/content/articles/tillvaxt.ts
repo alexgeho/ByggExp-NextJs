@@ -1041,6 +1041,8 @@ const A_STAMPELKLOCKA_APP_GPS_HTML = `
 <p>En stämpelklocka på väggen fungerar dåligt när personalen är ute på olika byggen. En stämpelklocka som app löser samma sak i mobilen: medarbetaren stämplar in och ut direkt på arbetsplatsen, och GPS bekräftar att det sker där jobbet utförs. Här går vi igenom hur en stämpelklocka-app med GPS fungerar för byggföretag, och vad du ska tänka på oavsett om laget kör Android eller iPhone.</p>
 
 <p>Vill du se hur det fungerar i praktiken? Läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a> eller <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning på bygget</a>.</p>
+
+<figure class="video-embed" style="position:relative;width:100%;aspect-ratio:16/9;margin:24px 0"><iframe src="https://www.youtube-nocookie.com/embed/w5TO127GqfU" title="Stämpelklocka app med GPS – automatisk in- och utstämpling i ByggExp" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px"></iframe></figure>
 <figure class="article-diagram"><img src="/landing/diagrams/stampelklocka-gps.webp" alt="Diagram: stämpelklocka app med GPS – checka in i mobilen, GPS bekräftar arbetsplatsen, närvaro registrerad" width="720" height="380" loading="lazy"><figcaption>Checka in i mobilen, GPS bekräftar arbetsplatsen och närvaron registreras – på både Android och iPhone.</figcaption></figure>
 
 <h2>Vad är en stämpelklocka-app?</h2>

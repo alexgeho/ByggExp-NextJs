@@ -81,3 +81,55 @@ Source keyword list: 48 tidrapportering/tidredovisning/excel/app variants (2026-
 2. Owner sends the `youtu.be/…` URL.
 3. Claude embeds it on the target page(s) (responsive youtube-nocookie iframe) + tightens the on-page
    copy around it, and updates domination-map.md.
+
+---
+
+# Scripts (shoot with PHONE app + web ADMIN only)
+
+Source legend: **[TELEFON]** = screen-record the mobile app · **[ADMIN]** = screen-record web
+admin · **[WEBB]** = screen-record byggexp.se in a browser · *(text)* = on-screen caption.
+VO = Swedish voiceover (read as-is). Keep each 60–90 s, no talking head, no site footage.
+
+## Script 1 — Tidrapport i Excel (gratis mall → app) · ~75 s
+- **0–6 s [WEBB: en tom Excel-tidrapport]** VO: "Fyller du fortfarande i tidrapporten i Excel? Det finns ett snabbare sätt – och en gratis mall." *(Gratis tidrapport-mall)*
+- **6–28 s [WEBB: byggexp.se/verktyg/tidrapport-mall, fyll i]** VO: "Här är vår gratis tidrapport-mall. Skriv in namn, projekt och timmar direkt i webbläsaren – och ladda ner som Excel eller PDF på ett par minuter. Utan konto." *(byggexp.se/verktyg/tidrapport-mall)*
+- **28–45 s [WEBB: nedladdad Excel-fil]** VO: "Perfekt för en enstaka vecka. Men ska flera i laget rapportera, och timmarna bli lön och faktura, blir Excel snabbt rörigt – timmar hamnar fel eller glöms bort."
+- **45–65 s [TELEFON: checka in, se timmar] → [ADMIN: Tider-vyn]** VO: "I ByggExp stämplar var och en in i mobilen. Timmarna hamnar automatiskt på rätt projekt, och i admin exporterar du färdig tidredovisning till lön eller faktura – med ett klick."
+- **65–75 s [WEBB: byggexp.se]** VO: "Testa gratis-mallen i länken, och prova appen när Excel inte räcker. byggexp.se" *(Gratis mall + prova appen → byggexp.se)*
+
+## Script 2 — Tidrapportering app gratis (slipp papper & Excel) · ~70 s
+- **0–6 s [TELEFON: appens startvy]** VO: "Letar du efter en gratis app för tidrapportering? Så här enkelt funkar det." *(Tidrapportering – app)*
+- **6–22 s [TELEFON: checka in på ett projekt]** VO: "Du väljer projekt och stämplar in i mobilen. GPS bekräftar att du är på plats – och klockan börjar räkna."
+- **22–38 s [TELEFON: checka ut, se dagens/veckans timmar]** VO: "När du är klar stämplar du ut. Timmarna summeras per dag och projekt, så du alltid har koll – inga lappar, inget Excel."
+- **38–58 s [ADMIN: Tider-vyn med flera medarbetare, Exportera]** VO: "På kontoret ser du hela lagets timmar i admin – planerade, manuella och GPS – och exporterar dem till lön eller faktura med ett klick."
+- **58–70 s [WEBB: byggexp.se]** VO: "Kom igång gratis på byggexp.se." *(Kom igång gratis → byggexp.se)*
+
+## Script 3 — Tidrapportering för bygg (en incheckning → lön OCH faktura) · ~80 s
+- **0–7 s [TELEFON: incheckning]** VO: "På ett bygge är tid pengar – men bara om den registreras rätt. Så gör du en incheckning till både lön och faktura." *(Tidrapportering för bygg)*
+- **7–25 s [TELEFON: laget checkar in på projekt]** VO: "Laget stämplar in på rätt projekt i mobilen. Varje timme bokförs där jobbet sker – inte i efterhand på en lapp."
+- **25–45 s [ADMIN: Tider per projekt, OB/övertid]** VO: "I admin ser du timmarna per projekt och medarbetare, med OB och övertid enligt byggavtalet – redo som löneunderlag."
+- **45–65 s [ADMIN: skapa faktura från loggad tid]** VO: "Samma timmar blir fakturarader vid löpande räkning. En registrering – du använder den till både lön och faktura, utan att räkna om."
+- **65–80 s [ADMIN: projektets marginal] → [WEBB: byggexp.se]** VO: "Och du ser marginalen i realtid. Boka en demo på byggexp.se." *(Boka demo → byggexp.se)*
+
+## Script 4 — Bästa tidrapporterings-appen för bygg (buyer's guide) · ~75 s
+- **0–8 s [ADMIN eller WEBB: en checklista-grafik]** VO: "Vilken tidrapporterings-app är bäst för ett byggföretag? Titta på fyra saker – inte på antal funktioner." *(Bästa tidrapport-appen: 4 saker)*
+- **8–25 s [TELEFON: enkel incheckning]** VO: "Ett – enkelhet. Om laget inte orkar använda appen stämmer inga siffror. Leta efter något de kan börja med samma dag, utan utbildning."
+- **25–42 s [ADMIN: projektkoppling]** VO: "Två – projektkoppling. Varje timme ska hamna på rätt projekt, annars går det inte att följa marginal eller fakturera rätt."
+- **42–58 s [ADMIN: export till lön/faktura]** VO: "Tre – att timmarna blir både löneunderlag och fakturaunderlag. Fyra – att det funkar i mobilen, på bygget, inte bara på kontoret."
+- **58–75 s [WEBB: byggexp.se]** VO: "ByggExp är byggt för just det här. Jämför själv – prova gratis på byggexp.se." *(Prova gratis → byggexp.se)*
+
+## Script 5 — Platform shorts (iPhone / Android), 20–30 s each
+- **iPhone-version:** **[TELEFON iPhone]** VO: "Tidrapportering på iPhone: öppna appen, välj projekt, stämpla in. Timmarna hamnar på rätt projekt automatiskt. Stämpla ut när du är klar – klart." *(Tidrapportering – iPhone)* → CTA-kort "byggexp.se".
+- **Android-version:** identisk flow, spela in på en Android-telefon. VO byter "iPhone" → "Android".
+
+## Script 6 (optional) — Alternativ till Fortnox/Hogia för tidrapportering i bygg · ~70 s
+- **0–8 s** VO: "Kör du redan Fortnox, Hogia eller liknande – men tidrapporteringen på bygget haltar? Så här kompletterar du." *(Alternativ för tidrapportering i bygg)*
+- **8–45 s [TELEFON + ADMIN]** VO: "ByggExp är byggt för bygg: enkel incheckning i mobilen, timmar per projekt, OB och övertid enligt byggavtalet, och export till lön och faktura. Fokus på fältet – inte bara bokföringen."
+- **45–70 s [WEBB]** VO: "Testa vid sidan av ditt ekonomisystem och se skillnaden på bygget. byggexp.se." *(Prova gratis → byggexp.se)*
+- ⚠️ Undvik att påstå officiell integration/jämförelse du inte kan styrka. Positionera som komplement, inte "ersätter X".
+
+## Shoot tips
+- 9:16 för shorts (Video 5), 16:9 för 1–4 (matchar embed på sidorna).
+- Spela in i lugnt tempo, zooma in på knappen du trycker på.
+- Håll VO på svenska; texta gärna (YouTube-textning hjälper ranking).
+- Samma brand-thumbnail-mall som befintliga videor (BYGGEXP + skärm).

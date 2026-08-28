@@ -171,6 +171,15 @@ const EGENKONTROLL_HTML = `
 </ol>
 <p>Vill du börja enkelt? <a href="/sv/verktyg/egenkontroll-mall">Ladda ner vår gratis egenkontroll-mall</a> och fyll i den online – du får en färdig PDF.</p>
 
+<h2>Egenkontroll per yrke – färdiga mallar</h2>
+<p>Kontrollpunkterna skiljer sig mellan yrken. Välj en färdig mall som öppnar ifylld med rätt punkter för ditt moment:</p>
+<ul>
+<li><strong><a href="/sv/verktyg/egenkontroll-el-mall">Egenkontroll el</a></strong> – jordfelsbrytare, isolationsmätning (SS 436 40 00), märkning och skyddsledare.</li>
+<li><strong><a href="/sv/verktyg/egenkontroll-bygg-mall">Egenkontroll bygg / stomme</a></strong> – måttkontroll mot ritning, infästningar, fuktkontroll och brandtätning (BBR).</li>
+<li><strong><a href="/sv/verktyg/egenkontroll-vvs-mall">Egenkontroll VVS</a></strong> – täthetsprovning, avstängningsventiler, rörisolering och fall på avlopp.</li>
+</ul>
+<p>Behöver du planera själva momentet först? Se även <a href="/sv/verktyg/arbetsberedning-mall">arbetsberedning-mallen</a> och <a href="/sv/verktyg/riskbedomning-mall">riskbedömning-mallen</a>.</p>
+
 <h2>Vanliga frågor</h2>
 <h3>Är egenkontroll ett lagkrav?</h3>
 <p>För åtgärder som kräver en kontrollplan enligt PBL är egenkontroll normalt den metod som anges för att styrka kraven. I entreprenader regleras egenkontroll dessutom ofta i kontraktshandlingarna. Oavsett är den din bästa försäkring om kvaliteten ifrågasätts.</p>

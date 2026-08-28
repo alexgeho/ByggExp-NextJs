@@ -57,11 +57,13 @@ Videos, backlinks, product decisions, ads = owner. Marked ⚑owner where blocked
   "ackord lön"-adjacent payroll near-miss; rates from verified article, user enters own wage.
 
 ## Calculator opportunities (near-miss with an article but no calc yet)
-- `restid-kalkylator` ← restidsersattning-byggavtalet (query "restidsersättning byggnads", pos 8)
-- `ackord-kalkylator` ← ackordslon-bygg (query "ackord lön", pos 12)
-- `traktamente-kalkylator` ← traktamente-byggnadsarbetare-2026 (verify Skatteverket schablon first)
-- `semester-kalkylator` ← semesterlon-semesterersattning-byggavtalet
-Build each like ob-overtid: source rates from the paired verified article, user enters own inputs.
+- ~~`restidsersattning-kalkylator`~~ ✅ built (query "restidsersättning byggnads", pos 8)
+- ~~`ackord-kalkylator`~~ ✅ built (query "ackord lön", pos 12)
+- `traktamente-kalkylator` ← traktamente-byggnadsarbetare-2026 (Skatteverket 2026: 300 kr heldag,
+  150 halv/natt; Byggavtalet ~435 kr/dygn — verify current schablon before hard-coding)
+- `semester-kalkylator` ← semesterlon-semesterersattning-byggavtalet (12 % / procentregeln)
+Built so far: ob-overtid, restidsersattning, ackord. Pattern: rates from paired verified article,
+user enters own inputs, sv-only, FAQ + auto BreadcrumbList schema, reciprocal article link.
 
 ## Systemic hygiene (in-repo, recurring)
 - **Internal links:** 0 broken /sv/blog/ links across 280 slugs (verified 2026-08-28). Re-audit after big edits.

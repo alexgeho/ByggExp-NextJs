@@ -55,6 +55,19 @@ Videos, backlinks, product decisions, ads = owner. Marked ⚑owner where blocked
 - **Video-on-money-pages:** embed each product video on its commercial page (dwell time + video-in-search). 5 embedded so far.
 - **Images + FAQ schema** on every commercial pillar (image SEO + rich results).
 
+## Near-miss watchlist (pos 8–15, GSC clicks-sorted 2026-08-28)
+Queries on the cusp of page 1 — small push = big CTR jump. Most are already-optimized
+tool pages that now need **authority (backlinks)**, not more on-page:
+- `egenkontroll entreprenad` — 28 impr, pos 14 → **deepened: FAQ+tool links+diagram ✅**
+- `dagbok bygg mall` — 24, pos 9.5 → byggdagbok-mall (already strong; needs links)
+- `arbetsberedning mall` — 15, pos 10.6 → arbetsberedning-mall (built; needs links)
+- `åtgång murbruk` — 15, pos 10.5 → murbruk-kalkylator (needs links)
+- `restidsersättning byggnads` — 11, pos 8.3 → restid article (already page 1)
+- `skyddsrond byggarbetsplats` — 8, pos 13.4 → skyddsrond-mall
+- `ackord lön` — 12, pos 12.9 → lön article
+Already won (pos ≤6, hold): egenkontroll bygg mall pdf (5.4), entreprenadkontrakt abt 06 (3.5),
+abt-u 07 (6.6), cc mått takstolar (5.9), milersättning byggnads 2026 (3.1), entreprenadavtal mall (5.6).
+
 ## Immediate queue (next in-repo actions, priority order)
 1. ~~Deepen `faktureringsprogram-bygg` (img + FAQ + hub)~~ ✅ done 2026-08-28.
 2. ~~Deepen `projektuppfoljning-bygg`~~ — already strong (diagram+KPI table+FAQ); added real screenshot ✅.

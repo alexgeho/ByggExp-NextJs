@@ -1,0 +1,63 @@
+# SEO Domination Map — byggexp.se (SE)
+
+**Goal:** be the #1 destination for Swedish construction companies searching for anything
+software/admin-related — own the commercial and informational search funnel, funnel to the
+all-in-one product, and give away for free what point-solution competitors charge for.
+
+**How to read status:** 🟢 page-1 / near-miss (pos ≤12) · 🟡 page 2–3 (pos 13–35, push) ·
+🔴 gap or buried (pos >35 / no strong page). Positions = GSC 3-month snapshot **2026-08-28**
+(re-pull and update the numbers each review — they go stale).
+
+**Division of labour:** content/on-page/internal-links/images = handled in-repo (this map).
+Videos, backlinks, product decisions, ads = owner. Marked ⚑owner where blocked on that.
+
+---
+
+## Tier 1 — core SaaS money clusters (highest commercial intent)
+
+| Cluster | Money query (impr / pos) | Target page(s) | Status | Next action |
+|---|---|---|---|---|
+| **Tidrapportering** | tidrapporteringssystem bygg (86/30), tidrapportering bygg (78/34), tidrapport bygg (72/25) | `/blog/tidrapporteringssystem-bygg`, `/blog/tidrapportering-app-byggforetag` (pillars) + 12 spokes | 🟡 | pillars deepened (img+hub+semantics ✅). Needs: ⚑video embed + ⚑backlinks to pillars |
+| **Stämpelklocka** | stämpelklocka app gps | `/blog/stampelklocka-app-gps-bygg` (+android/iphone spokes) | 🟡 | GPS video embedded ✅. Platform shorts ⚑owner |
+| **Personalliggare** | personalliggare bygg (app) | `/blog/personalliggare-bygg-app`, `/blog/personalliggare`, `/blog/kontrollavgift-personalliggare` | 🟡 | reworked vs e-liggare: ID06-myth+kontrollavgift+free-in-suite ✅. ⚑personalliggare video. ⚑PRODUCT: make it free-inside-suite = land-grab wedge |
+| **Offert** | offertprogram bygg (72/20) | `/blog/offertprogram-byggforetag` + `/verktyg/offert-mall` | 🟡 | deepened (img+FAQ+hub ✅). Push with internal links from ekonomi cluster |
+| **Faktura** | faktureringsprogram bygg | `/blog/faktureringsprogram-bygg` + `/verktyg/faktura-mall` | 🟡 | video embedded ✅. Deepen like offert (img+FAQ+hub) — TODO |
+| **Bemanning/planering** | bemanningsplanering (90/54) | `/blog/personalplanering-bygg` (+ bemanning-och-personalplanering) | 🔴→🟡 | retitled to own "bemanningsplanering" + depth ✅. Watch for cannibalization w/ bemanning-och-personalplanering |
+
+## Tier 2 — high-intent adjacent (compliance, quality, project)
+
+| Cluster | Query (impr / pos) | Target page(s) | Status | Next action |
+|---|---|---|---|---|
+| **Egenkontroll** | egenkontroll bygg mall pdf (55/~5), egenkontroll mall gratis (52/11), egenkontroll bygg (80/22) | `/verktyg/egenkontroll-mall` (+el/bygg/vvs), `/blog/egenkontroll` | 🟢 | dedicated el/bygg/vvs tool pages ✅ + guide→tools hub ✅. **Best near-miss — clicks land here first.** Hold + monitor |
+| **Avtal / entreprenadjuridik** | abt 06 (73/20), ab04, abt-u 07 | `/blog/ab-04-och-abt-06`, `/verktyg/entreprenadkontrakt-mall` + 12 juridik articles | 🟡 | strong content. Push via internal links + entreprenadkontrakt tool CTA. See docs/seo/avtal-kontrakt-cluster.md |
+| **Projekt / projektledning** | projekthantering, projektuppföljning bygg | `/blog/projekthantering-byggforetag`, `/blog/projektuppfoljning-bygg` | 🟡 | create-project video embedded ✅. Deepen projektuppfoljning |
+| **Arbetsmiljö** | arbetsberedning mall, riskbedömning, skyddsrond | `/verktyg/arbetsberedning-mall`, `/verktyg/riskbedomning-mall`, `/verktyg/skyddsrond-mall` | 🟡 | arbetsberedning tool built ✅. Cross-link from arbetsmiljö articles |
+
+## Tier 3 — top-of-funnel volume (calculators / material — B2C-ish, brand + behavioral SEO)
+
+| Cluster | Query (impr / pos) | Target page(s) | Status | Next action |
+|---|---|---|---|---|
+| **Takstolar / material** | beräkna takstolar (70/21), reglar dimensioner (72/34), cc mått takstolar | `/verktyg/takstolar-kalkylator`, `/verktyg/reglar-kalkylator` + 18 material calcs | 🟡 | calcs exist. Add FAQ + diagrams + internal links to lift pos 20→top-5 |
+| **Ekonomi calc** | momsräknare (15/74), ROT, timpris | `/verktyg/moms-kalkylator`, `/verktyg/rot-avdrag-kalkylator`, `/verktyg/timpris-kalkylator` | 🟡 | high-volume generic — deepen surrounding articles, link to calcs |
+
+---
+
+## The 4 levers to #1 (see [[competitor-eliggare]] for the wedge thesis)
+
+1. **SEO domination** (in-repo) — own every cluster above. Cheapest CAC, current momentum.
+2. **Free-tools land grab** (in-repo) — be THE free toolbox (`/verktyg`, 29+ tools). Brand + funnel.
+3. **Wedge-free** (⚑product) — personalliggare/egenkontroll/tidrapport free inside the suite → land, upsell. Point-solution rivals (e-liggare etc.) charge for these standalone.
+4. **Distribution** (⚑owner) — YouTube channel (started), backlinks (#1 external lever), Google reviews, PR, viral UE check-in spread.
+
+## Systemic hygiene (in-repo, recurring)
+- **Internal links:** 0 broken /sv/blog/ links across 280 slugs (verified 2026-08-28). Re-audit after big edits.
+- **Hub-and-spoke:** every pillar links its spokes AND spokes link back. Keep tightening.
+- **Video-on-money-pages:** embed each product video on its commercial page (dwell time + video-in-search). 5 embedded so far.
+- **Images + FAQ schema** on every commercial pillar (image SEO + rich results).
+
+## Immediate queue (next in-repo actions, priority order)
+1. Deepen `faktureringsprogram-bygg` (img + FAQ + hub) — mirror offertprogram.
+2. Deepen `projektuppfoljning-bygg`.
+3. Add FAQ + diagram + internal links to `takstolar-kalkylator` / `reglar-kalkylator` (pos 20→top-5).
+4. Cross-link arbetsmiljö articles → arbetsberedning/riskbedömning/skyddsrond tools.
+5. Re-pull GSC positions, update this table.

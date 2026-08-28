@@ -284,6 +284,8 @@ const A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA: BlogPost = {
 const A_FAKTURERINGSPROGRAM_BYGG_HTML = `
 <p>Ett faktureringsprogram för bygg ska göra mer än att skapa en PDF – det ska ta dig från nedlagda timmar till betald faktura utan dubbelarbete, och hantera ROT-avdraget rätt. Här går vi igenom vad ett faktureringsprogram för byggföretag bör klara, vad du ska titta på när du väljer, och hur ByggExp löser hela kedjan.</p>
 
+<figure class="web-shot"><img src="/features-content/fakturera-fran-byggexp-web.webp" alt="Faktureringsprogram för bygg: skapa faktura i webbadmin från loggade timmar med ROT-avdrag" width="1000" height="548" loading="lazy"><figcaption>Skapa faktura i webbadmin – loggade timmar och material blir fakturarader med ROT uträknat, redo att skicka.</figcaption></figure>
+
 <h2>Vad ska ett faktureringsprogram för bygg klara?</h2>
 <ul>
 <li><strong>ROT-fakturering</strong> – räkna och redovisa <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdraget</a> automatiskt så att kunden ser vad hen betalar och du får rätt underlag till Skatteverket.</li>
@@ -311,6 +313,24 @@ const A_FAKTURERINGSPROGRAM_BYGG_HTML = `
 </ul>
 
 <p>Rätt faktureringsprogram sparar tid och pengar – men värdet ligger i att offert, tid och faktura sitter ihop och att ROT sköts automatiskt. Testa gratis med mallen, väx in i ett system när volymen kräver det.</p>
+
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/offertprogram-byggforetag">Offertprogram för byggföretag</a> – offerten som blir faktura.</li>
+<li><a href="/sv/blog/offert-till-betald-faktura-flode">Från offert till betald faktura</a> – hela flödet utan dubbelarbete.</li>
+<li><a href="/sv/blog/tidrapportering-app-byggforetag">Tidrapportering-app för byggföretag</a> – timmarna som blir fakturarader.</li>
+<li><a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar</a> – påminnelse, inkasso och dröjsmålsränta.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad ska ett faktureringsprogram för byggföretag klara?</h3>
+<p>ROT-fakturering, koppling offert→faktura, timmar→faktura vid löpande räkning, rätt fakturainnehåll enligt lag med logga och betalningsvillkor, samt automatiska påminnelser vid utebliven betalning.</p>
+<h3>Hanterar ett faktureringsprogram ROT-avdrag?</h3>
+<p>Ett bra program för bygg räknar och redovisar ROT-avdraget automatiskt så att kunden ser vad hen betalar och du får rätt underlag till Skatteverket. Du kan räkna det direkt i vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylator</a>.</p>
+<h3>Behöver jag ett program eller räcker en fakturamall?</h3>
+<p>Skickar du enstaka fakturor räcker en gratis <a href="/sv/verktyg/faktura-mall">faktura-mall</a>. Fakturerar du varje vecka sparar ett program tid genom ROT-hantering, koppling till offert och timmar och automatiska påminnelser – och minskar fel.</p>
+<h3>Kan fakturan bygga på timmarna teamet registrerar?</h3>
+<p>Ja. Vid löpande räkning blir registrerade timmar automatiskt fakturarader, så ingen räknar om samma siffror för hand.</p>
 `;
 
 const A_FAKTURERINGSPROGRAM_BYGG: BlogPost = {

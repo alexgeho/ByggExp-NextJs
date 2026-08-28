@@ -21,7 +21,7 @@ Videos, backlinks, product decisions, ads = owner. Marked ⚑owner where blocked
 | **Stämpelklocka** | stämpelklocka app gps | `/blog/stampelklocka-app-gps-bygg` (+android/iphone spokes) | 🟡 | GPS video embedded ✅. Platform shorts ⚑owner |
 | **Personalliggare** | personalliggare bygg (app) | `/blog/personalliggare-bygg-app`, `/blog/personalliggare`, `/blog/kontrollavgift-personalliggare` | 🟡 | reworked vs e-liggare: ID06-myth+kontrollavgift+free-in-suite ✅. ⚑personalliggare video. ⚑PRODUCT: make it free-inside-suite = land-grab wedge |
 | **Offert** | offertprogram bygg (72/20) | `/blog/offertprogram-byggforetag` + `/verktyg/offert-mall` | 🟡 | deepened (img+FAQ+hub ✅). Push with internal links from ekonomi cluster |
-| **Faktura** | faktureringsprogram bygg | `/blog/faktureringsprogram-bygg` + `/verktyg/faktura-mall` | 🟡 | video embedded ✅. Deepen like offert (img+FAQ+hub) — TODO |
+| **Faktura** | faktureringsprogram bygg | `/blog/faktureringsprogram-bygg` + `/verktyg/faktura-mall` | 🟡 | video embedded ✅. Deepened: img+FAQ(schema)+hub ✅ |
 | **Bemanning/planering** | bemanningsplanering (90/54) | `/blog/personalplanering-bygg` (+ bemanning-och-personalplanering) | 🔴→🟡 | retitled to own "bemanningsplanering" + depth ✅. Watch for cannibalization w/ bemanning-och-personalplanering |
 
 ## Tier 2 — high-intent adjacent (compliance, quality, project)
@@ -56,7 +56,7 @@ Videos, backlinks, product decisions, ads = owner. Marked ⚑owner where blocked
 - **Images + FAQ schema** on every commercial pillar (image SEO + rich results).
 
 ## Immediate queue (next in-repo actions, priority order)
-1. Deepen `faktureringsprogram-bygg` (img + FAQ + hub) — mirror offertprogram.
+1. ~~Deepen `faktureringsprogram-bygg` (img + FAQ + hub)~~ ✅ done 2026-08-28.
 2. Deepen `projektuppfoljning-bygg`.
 3. Add FAQ + diagram + internal links to `takstolar-kalkylator` / `reglar-kalkylator` (pos 20→top-5).
 4. Cross-link arbetsmiljö articles → arbetsberedning/riskbedömning/skyddsrond tools.

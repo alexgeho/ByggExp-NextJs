@@ -128,6 +128,112 @@ VO = Swedish voiceover (read as-is). Keep each 60–90 s, no talking head, no si
 - **45–70 s [WEBB]** VO: "Testa vid sidan av ditt ekonomisystem och se skillnaden på bygget. byggexp.se." *(Prova gratis → byggexp.se)*
 - ⚠️ Undvik att påstå officiell integration/jämförelse du inte kan styrka. Positionera som komplement, inte "ersätter X".
 
+# YouTube metadata (ready to paste — title / description / hashtags)
+
+Swedish. Title ≤ ~60 visible chars, keyword front. Description: hook line + bullets + CTA links.
+Pin the free-tool / byggexp.se link. A/B the title with the alt from the shoot list above.
+
+## Video 1 — Tidrapport i Excel
+**Title:** `Tidrapport i Excel – gratis mall (och när du bör byta till app)`
+**Description:**
+```
+Fyller du fortfarande i tidrapporten i Excel eller på papper? Här är en gratis tidrapport-mall du fyller i online och laddar ner som Excel eller PDF – och så gör du när Excel inte längre räcker till.
+
+I videon ser du:
+✅ Gratis tidrapport-mall i Excel och PDF – utan konto
+✅ Fyll i namn, projekt och timmar på ett par minuter
+✅ Varför Excel blir rörigt när flera i laget ska rapportera
+✅ Hur ByggExp stämplar tid i mobilen och exporterar till lön och faktura
+
+👉 Gratis tidrapport-mall: https://byggexp.se/sv/verktyg/tidrapport-mall
+👉 Prova ByggExp: https://byggexp.se
+
+#tidrapport #tidrapportering #excel #tidrapportmall #bygg #byggexp #stämpelklocka
+```
+
+## Video 2 — Tidrapportering app gratis
+**Title:** `Tidrapportering app gratis – slipp papper och Excel | ByggExp`
+**Description:**
+```
+Letar du efter en gratis app för tidrapportering? Så här enkelt funkar det – stämpla in i mobilen, håll koll på timmarna och exportera till lön och faktura.
+
+I videon ser du:
+✅ Checka in på projekt i mobilen – GPS bekräftar att du är på plats
+✅ Timmarna summeras per dag och projekt automatiskt
+✅ Hela lagets tid samlad i webbadmin
+✅ Export till lön och faktura med ett klick
+
+👉 Kom igång gratis: https://byggexp.se
+👉 Gratis tidrapport-mall: https://byggexp.se/sv/verktyg/tidrapport-mall
+
+#tidrapportering #tidrapporteringapp #gratis #stämpelklocka #byggapp #bygg #byggexp
+```
+
+## Video 3 — Tidrapportering för bygg
+**Title:** `Tidrapportering för bygg – en incheckning blir lön OCH faktura`
+**Description:**
+```
+På ett bygge är tid pengar – men bara om den registreras rätt. Så gör en enda incheckning i mobilen både löneunderlag och fakturaunderlag, kopplat till rätt projekt.
+
+I videon ser du:
+✅ Laget stämplar in på rätt projekt i mobilen
+✅ OB och övertid enligt byggavtalet i webbadmin
+✅ Loggade timmar blir fakturarader – ingen dubbelinmatning
+✅ Projektets marginal i realtid
+
+👉 Boka en demo: https://byggexp.se
+👉 Gratis tidrapport-mall: https://byggexp.se/sv/verktyg/tidrapport-mall
+
+#tidrapportering #tidrapporteringbygg #bygg #byggföretag #stämpelklocka #byggexp
+```
+
+## Video 4 — Bästa tidrapporterings-appen för bygg
+**Title:** `Bästa tidrapporterings-appen för bygg 2026 – så väljer du`
+**Description:**
+```
+Vilken tidrapporterings-app är bäst för ett byggföretag? Titta på fyra saker – inte på antal funktioner. En snabb köpguide.
+
+I videon går vi igenom:
+✅ Enkelhet – laget måste orka använda den, annars stämmer inga siffror
+✅ Projektkoppling – varje timme på rätt projekt
+✅ Export till både lön och faktura ur samma timmar
+✅ Funkar i mobilen på bygget, inte bara på kontoret
+
+👉 Prova ByggExp gratis: https://byggexp.se
+
+#tidrapportering #bästatidrapporteringapp #tidrapporteringssystem #bygg #byggexp
+```
+
+## Video 5 — Shorts (iPhone / Android)
+**Title (iPhone):** `Tidrapportering app för iPhone – stämpla in #shorts`
+**Title (Android):** `Tidrapportering app för Android – kom igång #shorts`
+**Description (båda):**
+```
+Tidrapportering direkt i mobilen: välj projekt, stämpla in, stämpla ut – timmarna hamnar på rätt projekt automatiskt.
+
+👉 Kom igång gratis: https://byggexp.se
+
+#shorts #tidrapportering #stämpelklocka #byggapp #bygg #byggexp
+```
+
+## Video 6 (optional) — Alternativ till Fortnox/Hogia
+**Title:** `Alternativ till Fortnox/Hogia för tidrapportering i bygg`
+**Description:**
+```
+Kör du redan Fortnox, Hogia eller liknande – men tidrapporteringen på bygget haltar? Så kompletterar du med en app byggd för fältet.
+
+I videon ser du:
+✅ Enkel incheckning i mobilen, timmar per projekt
+✅ OB och övertid enligt byggavtalet
+✅ Export till lön och faktura
+✅ Fokus på bygget, inte bara bokföringen
+
+👉 Testa gratis: https://byggexp.se
+
+#tidrapportering #fortnox #hogia #bygg #byggexp #tidrapporteringssystem
+```
+*(Positionera som komplement – påstå inte officiell integration du inte kan styrka.)*
+
 ## Shoot tips
 - 9:16 för shorts (Video 5), 16:9 för 1–4 (matchar embed på sidorna).
 - Spela in i lugnt tempo, zooma in på knappen du trycker på.

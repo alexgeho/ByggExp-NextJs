@@ -7726,6 +7726,8 @@ const A_OFFERTPROGRAM_BYGGFORETAG_HTML = `
 
 <p><a href="/sv/verktyg/offert-mall">Skapa en offert direkt med vår gratis offert-mall →</a></p>
 
+<figure class="web-shot"><img src="/features-content/skapa-offert-i-byggexp-web.webp" alt="Offertprogram för byggföretag: skapa offert i webbadmin med rader, material, arbete och ROT-avdrag" width="1000" height="548" loading="lazy"><figcaption>Skapa offert i webbadmin – rader, material och arbete med ROT uträknat, redo att skicka som PDF.</figcaption></figure>
+
 <h2>Vad är ett offertprogram?</h2>
 <p>Ett offertprogram är ett verktyg för att skapa, skicka och följa upp offerter. I stället för att skriva varje offert från ett tomt Word-dokument får du mallar, sparade rader och priser, automatisk summering och en tydlig lucka mellan &quot;skickad&quot; och &quot;accepterad&quot;. För byggföretag är det ofta första steget i en kedja: <a href="/sv/blog/offert-till-betald-faktura-flode">offert → order → faktura</a>.</p>
 
@@ -7745,7 +7747,7 @@ const A_OFFERTPROGRAM_BYGGFORETAG_HTML = `
 <li><strong>Enstaka offerter</strong> – en bra <a href="/sv/verktyg/offert-mall">offert-mall</a> räcker långt och är gratis att börja med.</li>
 <li><strong>Offerter varje vecka</strong> – ett offertprogram sparar tid genom sparade priser, uppföljning och koppling till faktura, och minskar räknefel.</li>
 </ul>
-<p>Grunden är densamma oavsett verktyg: en genomtänkt kalkyl. Läs mer om att <a href="/sv/blog/skriva-offert">skriva offert</a> som håller.</p>
+<p>Grunden är densamma oavsett verktyg: en genomtänkt kalkyl. Se hur du <a href="/sv/blog/skapa-offert-i-byggexp">skapar en offert steg för steg</a> som håller.</p>
 
 <h2>Så kommer du igång</h2>
 <p>Du behöver inte köpa ett system för att börja skicka bättre offerter idag. <a href="/sv/verktyg/offert-mall">Offert-mallen</a> ger dig en färdig PDF gratis, och när volymen växer är steget till ett offertprogram – där offert, tid och faktura hänger ihop – litet. <a href="/sv/contact">Boka en demo av ByggExp</a> om du vill se hela flödet från offert till betald faktura.</p>
@@ -7758,6 +7760,24 @@ const A_OFFERTPROGRAM_BYGGFORETAG_HTML = `
 </ul>
 
 <p>Rätt offertprogram sparar tid och höjer träffsäkerheten – men börja i kalkylen och ett tydligt flöde. Testa gratis med mallen, väx in i ett system när volymen kräver det.</p>
+
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/skapa-offert-i-byggexp">Skapa offert i ByggExp</a> – steg för steg med rader, ROT och PDF.</li>
+<li><a href="/sv/blog/offert-till-betald-faktura-flode">Från offert till betald faktura</a> – hela flödet utan dubbelarbete.</li>
+<li><a href="/sv/blog/faktureringsprogram-bygg">Faktureringsprogram för bygg</a> – gör offerten till faktura med ROT.</li>
+<li><a href="/sv/blog/kalkylprogram-bygg">Kalkylprogram för bygg</a> – rätt kalkyl i botten på offerten.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är ett offertprogram för byggföretag?</h3>
+<p>Ett verktyg för att skapa, skicka och följa upp offerter med mallar, sparade priser, ROT-hantering och proffsig PDF – och som låter en accepterad offert bli order och faktura utan att skrivas om.</p>
+<h3>Vad ska ett offertprogram för bygg klara?</h3>
+<p>Snabba mallar och prislistor, en tydlig kalkyl med rätt påslag, ROT-avdrag, proffsig PDF med logga och villkor, uppföljning av utestående offerter och koppling vidare till faktura.</p>
+<h3>Behöver jag ett offertprogram eller räcker en mall?</h3>
+<p>Offererar du enstaka jobb räcker en gratis <a href="/sv/verktyg/offert-mall">offert-mall</a>. Skickar du offerter varje vecka sparar ett offertprogram tid genom sparade priser, uppföljning och koppling till faktura – och minskar räknefel.</p>
+<h3>Hanterar ett offertprogram ROT-avdrag?</h3>
+<p>Ett bra offertprogram för bygg räknar och visar ROT-avdraget så att kunden ser vad hen betalar efter avdrag. Du kan räkna det direkt i vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylator</a>.</p>
 `;
 
 const A_OFFERTPROGRAM_BYGGFORETAG: BlogPost = {

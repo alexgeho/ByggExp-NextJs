@@ -459,6 +459,8 @@ const A_ARBETSORDER_APP_BYGG: BlogPost = {
 const A_PROJEKTHANTERING_BYGGFORETAG_HTML = `
 <p>Projekthantering för byggföretag handlar om att hålla ihop tid, personal, uppgifter, foto och ekonomi per projekt – så att du ser marginalen medan projektet pågår, inte efteråt. Här går vi igenom vad ett projektverktyg för bygg bör klara och hur ByggExp gör det.</p>
 
+<figure class="video-embed" style="position:relative;width:100%;aspect-ratio:16/9;margin:24px 0"><iframe src="https://www.youtube-nocookie.com/embed/_hJ0uuLW2H0" title="Skapa ett projekt i ByggExp – kom igång" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px"></iframe></figure>
+
 <h2>Vad ska ett projektverktyg för bygg klara?</h2>
 <ul>
 <li><strong>Projekt- och personalplanering</strong> – vem gör vad, var och när.</li>

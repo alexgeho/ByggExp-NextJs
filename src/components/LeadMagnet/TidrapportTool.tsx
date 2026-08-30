@@ -159,10 +159,6 @@ export default function TidrapportTool() {
     doc.setFontSize(10);
     doc.setTextColor(90, 90, 90);
     doc.text('Tidredovisning per projekt', M, 76);
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(11);
-    doc.setTextColor(0, 0, 0);
-    doc.text('byggexp.se', pageW - M, 60, { align: 'right' });
     rule(92, 120);
 
     // Meta
@@ -218,20 +214,17 @@ export default function TidrapportTool() {
     rule(y + rowH + 4, 120);
     y += rowH + 44;
 
-    // Signature
+    // Signature — stacked in a column (Underskrift above Datum)
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(10);
     doc.setTextColor(0, 0, 0);
-    doc.text('Underskrift', M, y);
     doc.setDrawColor(150, 150, 150);
-    doc.line(M + 66, y + 2, M + 250, y + 2);
-    doc.text('Datum', pageW / 2, y);
-    doc.line(pageW / 2 + 44, y + 2, pageW - M, y + 2);
-
-    // Footer
-    doc.setFontSize(8);
-    doc.setTextColor(150, 150, 150);
-    doc.text('Skapad gratis med ByggExp – byggexp.se/verktyg/tidrapport-mall', M, pageH - 30);
+    const sigLineEnd = M + 300;
+    doc.text('Underskrift', M, y);
+    doc.line(M + 66, y + 2, sigLineEnd, y + 2);
+    y += 30;
+    doc.text('Datum', M, y);
+    doc.line(M + 66, y + 2, sigLineEnd, y + 2);
 
     doc.save(`${filenameBase}.pdf`);
   }

@@ -63,10 +63,8 @@ export default function TidrapportTool() {
     afterPreset('manad');
   };
 
-  // A ready-to-fill blank weekly timesheet, for people who just want to grab a
-  // template and fill it in by hand (or customise it below).
-  const blankRows = (): Row[] => WEEKDAYS.map((day) => ({ date: '', hours: '', note: day }));
-
+  // A ready-to-fill blank weekly timesheet (Excel), for people who just want to
+  // grab a template and fill it in by hand (or customise it below).
   function downloadBlankCsv() {
     const out: (string | number)[][] = [
       ['Anställd', ''],
@@ -122,6 +120,7 @@ export default function TidrapportTool() {
     rowList: Row[],
     meta: { employee: string; project: string },
     filenameBase: string,
+    opts: { fillPage?: boolean } = {},
   ) {
     const { jsPDF } = await import('jspdf');
     const doc = new jsPDF({ unit: 'pt', format: 'a4', orientation: 'landscape' });
@@ -179,11 +178,11 @@ export default function TidrapportTool() {
     doc.setFont('helvetica', 'bold');
     doc.text('Anställd:', M, y);
     doc.setFont('helvetica', 'normal');
-    doc.text(meta.employee.trim() || '—', M + 56, y);
+    doc.text(meta.employee.trim(), M + 56, y);
     doc.setFont('helvetica', 'bold');
     doc.text('Projekt:', M + 340, y);
     doc.setFont('helvetica', 'normal');
-    doc.text(meta.project.trim() || '—', M + 392, y);
+    doc.text(meta.project.trim(), M + 392, y);
     y += 15;
     doc.setFontSize(9);
     doc.setTextColor(120, 120, 120);
@@ -217,12 +216,24 @@ export default function TidrapportTool() {
       y += rowH;
     });
 
+    // Fill the rest of the page with empty rows, so a downloaded template has
+    // no big blank space at the bottom and can be filled in by hand.
+    if (opts.fillPage) {
+      const fillBottom = pageH - 150;
+      while (y + rowH <= fillBottom) {
+        sigDivider(y);
+        rule(y + rowH, 210);
+        y += rowH;
+      }
+    }
+
     // Total (bold text + rule, no fill)
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(11);
     doc.setTextColor(0, 0, 0);
     doc.text('Totalt', colDateX, y + 16);
-    doc.text(`${sum.toLocaleString('sv-SE')} tim`, hoursRightX, y + 16, { align: 'right' });
+    const totalText = opts.fillPage && sum === 0 ? '' : `${sum.toLocaleString('sv-SE')} tim`;
+    doc.text(totalText, hoursRightX, y + 16, { align: 'right' });
     rule(y + rowH + 2, 120);
 
     // Client approval — filled in by the client's representative on handover.
@@ -256,7 +267,7 @@ export default function TidrapportTool() {
   async function downloadPdf() {
     setBusy(true);
     try {
-      await generatePdf(rows, { employee, project }, fileBase());
+      await generatePdf(rows, { employee, project }, fileBase(), { fillPage: true });
     } finally {
       setBusy(false);
     }
@@ -265,7 +276,7 @@ export default function TidrapportTool() {
   async function downloadBlankPdf() {
     setBusy(true);
     try {
-      await generatePdf(blankRows(), { employee: '', project: '' }, 'tidrapport-tom-mall');
+      await generatePdf([], { employee: '', project: '' }, 'tidrapport-tom-mall', { fillPage: true });
     } finally {
       setBusy(false);
     }

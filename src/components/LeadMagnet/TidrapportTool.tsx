@@ -115,54 +115,65 @@ export default function TidrapportTool() {
     URL.revokeObjectURL(url);
   }
 
-  // Build a print-friendly, ink-light timesheet PDF: black text on white with
-  // thin rules only — no filled header band or zebra shading, so it's cheap to
-  // print. No extra deps — drawn directly with jsPDF.
+  // Build a print-friendly LANDSCAPE timesheet PDF: black text on white, thin
+  // rules only (ink-light), with a Signatur column so each day can be signed
+  // off. No extra deps — drawn directly with jsPDF.
   async function generatePdf(
     rowList: Row[],
     meta: { employee: string; project: string },
     filenameBase: string,
   ) {
     const { jsPDF } = await import('jspdf');
-    const doc = new jsPDF({ unit: 'pt', format: 'a4' });
+    const doc = new jsPDF({ unit: 'pt', format: 'a4', orientation: 'landscape' });
     const pageW = doc.internal.pageSize.getWidth();
     const pageH = doc.internal.pageSize.getHeight();
-    const M = 48;
-    const rowH = 22;
+    const M = 40;
+    const rowH = 26;
     const colDateX = M;
-    const colNoteX = M + 210;
-    const hoursRightX = colNoteX - 24;
-    const noteW = pageW - M - colNoteX;
+    const hoursRightX = M + 160;
+    const colNoteX = M + 185;
+    const colSigX = pageW - M - 200;
+    const sigDivX = colSigX - 14;
+    const noteW = sigDivX - colNoteX - 8;
 
     const rule = (yy: number, shade: number) => {
       doc.setDrawColor(shade, shade, shade);
       doc.setLineWidth(0.5);
       doc.line(M, yy, pageW - M, yy);
     };
+    // Vertical divider that sets the Signatur column apart, drawn per row so it
+    // continues correctly across page breaks.
+    const sigDivider = (top: number) => {
+      doc.setDrawColor(205, 205, 205);
+      doc.setLineWidth(0.5);
+      doc.line(sigDivX, top, sigDivX, top + rowH);
+    };
 
     const drawTableHeader = (top: number) => {
       doc.setTextColor(0, 0, 0);
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(10);
-      doc.text('Datum', colDateX, top + 14);
-      doc.text('Timmar', hoursRightX, top + 14, { align: 'right' });
-      doc.text('Anteckning', colNoteX, top + 14);
+      doc.text('Datum', colDateX, top + 16);
+      doc.text('Timmar', hoursRightX, top + 16, { align: 'right' });
+      doc.text('Anteckning', colNoteX, top + 16);
+      doc.text('Signatur', colSigX, top + 16);
+      sigDivider(top);
       rule(top + rowH, 120);
     };
 
-    // Title (plain text, no coloured band)
+    // Title
     doc.setTextColor(0, 0, 0);
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(22);
-    doc.text('Tidrapport', M, 60);
+    doc.text('Tidrapport', M, 54);
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(10);
     doc.setTextColor(90, 90, 90);
-    doc.text('Tidredovisning per projekt', M, 76);
-    rule(92, 120);
+    doc.text('Tidredovisning per projekt', M, 70);
+    rule(84, 120);
 
     // Meta
-    let y = 120;
+    let y = 112;
     doc.setFontSize(11);
     doc.setTextColor(0, 0, 0);
     doc.setFont('helvetica', 'bold');
@@ -170,9 +181,9 @@ export default function TidrapportTool() {
     doc.setFont('helvetica', 'normal');
     doc.text(meta.employee.trim() || '—', M + 56, y);
     doc.setFont('helvetica', 'bold');
-    doc.text('Projekt:', pageW / 2, y);
+    doc.text('Projekt:', M + 340, y);
     doc.setFont('helvetica', 'normal');
-    doc.text(meta.project.trim() || '—', pageW / 2 + 50, y);
+    doc.text(meta.project.trim() || '—', M + 392, y);
     y += 15;
     doc.setFontSize(9);
     doc.setTextColor(120, 120, 120);
@@ -183,22 +194,23 @@ export default function TidrapportTool() {
     drawTableHeader(y);
     y += rowH;
 
-    // Rows (thin rule under each, no fill)
+    // Rows (thin rule under each + Signatur divider, no fill)
     doc.setFont('helvetica', 'normal');
     let sum = 0;
     rowList.forEach((row) => {
-      if (y + rowH > pageH - 120) {
+      if (y + rowH > pageH - 50) {
         doc.addPage();
-        y = 60;
+        y = 50;
         drawTableHeader(y);
         y += rowH;
       }
       doc.setFontSize(10);
       doc.setTextColor(0, 0, 0);
-      doc.text(row.date || '', colDateX, y + 14);
-      doc.text(row.hours || '', hoursRightX, y + 14, { align: 'right' });
+      doc.text(row.date || '', colDateX, y + 16);
+      doc.text(row.hours || '', hoursRightX, y + 16, { align: 'right' });
       const note = doc.splitTextToSize(row.note || '', noteW) as string[];
-      doc.text(note[0] || '', colNoteX, y + 14);
+      doc.text(note[0] || '', colNoteX, y + 16);
+      sigDivider(y);
       rule(y + rowH, 210);
       const value = parseFloat((row.hours || '').replace(',', '.'));
       if (Number.isFinite(value)) sum += value;
@@ -209,22 +221,9 @@ export default function TidrapportTool() {
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(11);
     doc.setTextColor(0, 0, 0);
-    doc.text('Totalt', colDateX, y + 15);
-    doc.text(`${sum.toLocaleString('sv-SE')} tim`, hoursRightX, y + 15, { align: 'right' });
-    rule(y + rowH + 4, 120);
-    y += rowH + 44;
-
-    // Signature — stacked in a column (Underskrift above Datum)
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(10);
-    doc.setTextColor(0, 0, 0);
-    doc.setDrawColor(150, 150, 150);
-    const sigLineEnd = M + 300;
-    doc.text('Underskrift', M, y);
-    doc.line(M + 66, y + 2, sigLineEnd, y + 2);
-    y += 30;
-    doc.text('Datum', M, y);
-    doc.line(M + 66, y + 2, sigLineEnd, y + 2);
+    doc.text('Totalt', colDateX, y + 16);
+    doc.text(`${sum.toLocaleString('sv-SE')} tim`, hoursRightX, y + 16, { align: 'right' });
+    rule(y + rowH + 2, 120);
 
     doc.save(`${filenameBase}.pdf`);
   }

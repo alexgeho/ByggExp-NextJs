@@ -2028,6 +2028,8 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML = `
 <p>Ja. Planen delas till appen och ändringar syns direkt, så ingen behöver ringa kontoret för att veta var de ska.</p>
 <h3>Hänger schemat ihop med tidrapporteringen?</h3>
 <p>I ett samlat system, ja. Planerad tid kan jämföras med loggad tid, och avvikelser syns i projektuppföljningen medan du fortfarande kan agera.</p>
+<h3>Schemaläggningsprogram eller schemaläggningssystem – spelar ordet någon roll?</h3>
+<p>Inte i praktiken. Ett schemaläggningsprogram och ett schemaläggningssystem betyder samma sak för ett byggföretag: mjukvaran som fördelar personal på projekt och dagar. Det viktiga är inte ordet, utan att planen delas till laget i mobilen och hänger ihop med tiden.</p>
 <h3>Vad kostar ett schemaläggningssystem?</h3>
 <p>Det beror på hur många ni är. Boka en demo för pris – ett enkelt system tjänar oftast in sig snabbt genom mindre pusslande och färre krockar på bygget.</p>
 `.trim();
@@ -2037,7 +2039,7 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG: BlogPost = {
   title: "Schemaläggningssystem för bygg – planera personal, projekt och tid", slug: "schemalaggningssystem-bygg", locale: "sv",
   excerpt: "Ett schemaläggningssystem samlar hela bemanningen i en delad vy, kopplad till projekt och tid – rätt person på rätt bygge, med frånvaro och överbokning synligt direkt. Så väljer du rätt.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML,
-  seoTitle: "Schemaläggningssystem för bygg – personal & projekt | ByggExp", seoDescription: "Schemaläggningssystem för byggföretag: planera hela laget per vecka och projekt i en delad vy, se frånvaro och överbokning direkt och koppla planen till tiden.",
+  seoTitle: "Schemaläggningssystem för bygg – personal & projekt | ByggExp", seoDescription: "Schemaläggningssystem och schemaläggningsprogram för byggföretag: planera hela laget per vecka och projekt i en delad vy, se frånvaro och överbokning direkt och koppla planen till tiden.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-30T10:00:00.000Z", createdAt: "2026-08-30T10:00:00.000Z", updatedAt: "2026-08-30T10:00:00.000Z",
 };

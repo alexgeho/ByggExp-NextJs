@@ -981,9 +981,11 @@ const A_RESURSPLANERING_BYGG_HTML = `
 <p>Byggföretagens prognos pekar på att bygginvesteringarna vänder uppåt med runt 4 procent under 2026 och att bostadsstarterna stiger till omkring 30 500 från bottenåret 2024. Samtidigt rapporterar branschen brist på ungefär 700 yrkesarbetare med rätt kompetens, och kompetensbristen flaggas som en risk som kan bromsa återhämtningen. Slutsatsen är enkel: när varje yrkesarbetare är en bristvara kostar dålig resursplanering dubbelt — en böjd tidplan och bränd personal på samma gång.</p>
 
 <h2>Så gör du i ByggExp</h2>
-<p>I ByggExp planeras resurser per projekt, men beläggningen syns aggregerat tvärs över hela portföljen. Det betyder att när ett lag redan är intecknat på ett projekt fångas överbeläggningen upp tidigt i stället för att upptäckas när två arbetsledare bråkar om samma besättning på måndag morgon. Du kopplar tidrapporterna till planen så att utfall och plan lever i samma system — börja gärna med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för att fånga faktiska timmar per lag. ByggExp trollar inte bort kapacitetsbrist, men det gör den synlig i tid så att du hinner utjämna innan det blir övertid eller dubbelbokning.</p>
+<p>Som resursplaneringsverktyg planerar ByggExp resurser per projekt, men beläggningen syns aggregerat tvärs över hela portföljen. Det betyder att när ett lag redan är intecknat på ett projekt fångas överbeläggningen upp tidigt i stället för att upptäckas när två arbetsledare bråkar om samma besättning på måndag morgon. Du kopplar tidrapporterna till planen så att utfall och plan lever i samma system — börja gärna med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för att fånga faktiska timmar per lag. ByggExp trollar inte bort kapacitetsbrist, men det gör den synlig i tid så att du hinner utjämna innan det blir övertid eller dubbelbokning.</p>
 
 <h2>Vanliga frågor</h2>
+<h3>Vad är ett resursplaneringsverktyg?</h3>
+<p>Ett resursplaneringsverktyg samlar alla projekt i en delad vy och ställer beläggningen per lag och maskin mot kapaciteten, så att överbeläggning och dubbelbokning syns innan de blir övertid. Skillnaden mot ett Excel-schema är att beläggningen räknas ihop tvärs över hela portföljen – inte ett projekt i taget.</p>
 <h3>Vad är skillnaden mellan resurshistogram och Gantt-schema?</h3>
 <p>Gantt-schemat visar aktiviteter över tid — vad som görs när. Resurshistogrammet visar summerad beläggning per resurs mot kapacitet — om laget faktiskt räcker till för alla aktiviteter samtidigt. Du behöver båda: tidplanen för sekvensen, histogrammet för att se överbeläggning.</p>
 <h3>Kan jag lösa överbeläggning med övertid?</h3>
@@ -1004,7 +1006,7 @@ const A_RESURSPLANERING_BYGG: BlogPost = {
   title: "Resursplanering i bygg — så undviker du överbeläggning och dubbelbokade lag", slug: "resursplanering-bygg", locale: "sv",
   excerpt: "Så använder du resurshistogram och resursutjämning för att undvika överbeläggning och dubbelbokade lag och maskiner när byggfirman växer från några projekt till en hel portfölj.", tag: "Planering",
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_RESURSPLANERING_BYGG_HTML,
-  seoTitle: "Resursplanering bygg: undvik dubbelbokning | ByggExp", seoDescription: "Resursplanering i bygg med resurshistogram och resursutjämning — så slipper firman överbeläggning, dubbelbokade lag och maskiner när ni växer.",
+  seoTitle: "Resursplaneringsverktyg för bygg – undvik dubbelbokning | ByggExp", seoDescription: "Resursplaneringsverktyg för bygg: med resurshistogram och resursutjämning slipper firman överbeläggning och dubbelbokade lag och maskiner när ni växer.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T08:18:00.000Z", createdAt: "2026-08-19T08:18:00.000Z", updatedAt: "2026-08-19T08:18:00.000Z",
 };

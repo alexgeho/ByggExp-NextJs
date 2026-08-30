@@ -9,7 +9,18 @@
 > Regel: variera ankartext (blanda "ByggExp", "byggexp.se", "tidrapportering-app",
 > "gratis offertmall") och peka på både startsidan OCH djupa sidor/verktyg.
 
-Senast uppdaterad: 2026-08-25.
+Senast uppdaterad: 2026-08-30.
+
+## ⭐ GSC-prioriterade mål-sidor att peka länkar mot (2026-08-30)
+Live GSC (3 mån: 388 klick / 38,6K visningar / snittposition 16,2) visar hög synlighet
+men position 2–5:a sidan på våra viktigaste frågor. Intern länkning är nu gjord (orphan-sidor
+fixade, near-miss-sidor boostade); **det som fattas är extern auktoritet.** Peka Tier 2–4-länkar
+mot dessa djupa sidor (störst hävstång, minst konkurrens att flytta):
+- `/sv/blog/tidrapporteringssystem-bygg` — "tidrapportering(ssystem) bygg" (128+126 visn, pos 29)
+- `/sv/blog/personalplanering-bygg` — "bemanningsplanering" (114 visn, pos 53 — mest att vinna)
+- `/sv/blog/entreprenadforsakring-allrisk-vad-tacker` — "entreprenadförsäkring" (107 visn, pos 13 — närmast sida 1)
+- `/sv/verktyg/egenkontroll-mall` + `/sv/blog/egenkontroll-bygg` — vårt starkaste klick-kluster (pos 23)
+Nytt linkable asset (2026-08-30): `/sv/verktyg/schema-mall` (gratis arbetsschema-mall).
 
 ---
 

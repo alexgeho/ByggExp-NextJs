@@ -214,6 +214,22 @@ Order:
 5. **personalliggare (2450, wedge)** — content already live; 🛠️ feature ships soon, re-verify claims when it lands.
 6. Product-fit singles: kalkyl, arbetsorder, byggdagbok, riskanalys/KMA → fold into existing clusters.
 
+## STATUS (2026-08-30) — pillars built
+- ✅ **Tidrapportering/system** — pillar + ~20 spokes (mature, pre-existing).
+- ✅ **Planering** — schemalaggningssystem-bygg (NEW), schemalaggning-bygg, personalplanering-bygg, resursplanering-bygg
+  (strengthened for "resursplaneringsverktyg"), gantt-schema-mall-bygg. "schemaläggningsprogram" folded into the system page.
+- ✅ **Projektledning/projekthantering** — projekthanteringssystem-bygg (NEW, targets projektledningssystem too),
+  projekthantering-byggforetag, projektuppfoljning-bygg.
+- ✅ **KMA/egenkontroll/arbetsmiljö** — kma-plan-mall, egenkontroll-*, skyddsrond, systematiskt-arbetsmiljoarbete + 5 tool pages.
+- ✅ **Byggdagbok** — byggdagbok (NEW, Dagbok feature gap).
+- ✅ **Kalkyl/faktura/offert** — kalkylprogram-bygg, faktureringsprogram-bygg, rot-fakturering-program, offert flows.
+
+### Remaining (not a plain article right now)
+- ⏳ **Free schema-mall TOOL** — "schema mall" 480 / "tomt schema mall" 390 / "gratis schemaläggningsprogram" — DEV task
+  (a React tool page like /sv/verktyg/tidrapport-mall), not an article.
+- ⏳ **Personalliggare** — content live; feature ships soon (no new work until it lands).
+- ⏳ **bemanningssystem / others** — need volym data from owner before deciding page vs fold.
+
 ## TODO
-- [ ] Owner pastes volym for the **Excel/mall** cluster (batch 1–2) to rank Video 1 vs the above.
-- [ ] Decide: start with #1 (tidrapporteringssystem, fastest — page exists) or #2 (projektledning, biggest new land).
+- [ ] Owner pastes volym for the **Excel/mall** cluster (batch 1–2) + bemanning tab.
+- [ ] DEV: free schema-mall tool page (behavioural play).

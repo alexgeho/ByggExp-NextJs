@@ -255,7 +255,7 @@ const TIDRAPPORTERING_HTML = `
 <p>För att lönen ska bli rätt behöver tidrapporten skilja på vanlig tid och tillägg. OB (obekväm arbetstid), övertid (utöver ordinarie tid för heltid) och mertid (för deltidsanställda) styrs av kollektivavtal – notera dem separat direkt när tiden registreras, annars blir det gissningar vid lönekörningen.</p>
 
 <h2>Så för du tid i ByggExp</h2>
-<p>I ByggExp stämplar teamet tid direkt i mobilen, kopplat till rätt projekt – så att inget skrivs av på lappar i efterhand:</p>
+<p>I ByggExp stämplar teamet <a href="/sv/blog/mobil-tidrapportering">tid direkt i mobilen</a>, kopplat till rätt projekt – så att inget skrivs av på lappar i efterhand:</p>
 <ol>
 <li>Varje medarbetare startar och stoppar tid per projekt och moment.</li>
 <li>OB, övertid och restid registreras med tiden – klart för lön.</li>
@@ -606,7 +606,7 @@ const A_GANTT_SCHEMA_MALL_BYGG_HTML = `
 <p>Att missa personalliggaren är dyrt: Skatteverkets kontrollavgift är 12 500 kr om liggare inte förs eller inte kan visas, plus 2 500 kr för varje person som är på plats men inte dokumenterad, och grundavgiften höjs till 25 000 kr vid upprepad förseelse inom ett år.</p>
 
 <h2>Steg 6 – Följ upp med % klart och revidera löpande</h2>
-<p>En tidsplan är en färskvara. Stäm av verkligt läge mot plan varje vecka och ange procent klart per aktivitet, så ser du tidigt om ett moment på den kritiska linjen börjar halka. Här kommer också ÄTA in i bilden: ändrings- och tilläggsarbeten ger entreprenören rätt till tidsförlängning enligt AB 04 kap 4. Den rätten är värd lite om du inte reviderar tidsplanen när ÄTA tillkommer – låt inte ursprungsschemat bli inaktuellt, för då tappar du både överblick och den dokumentation du behöver om vitesfrågan kommer upp.</p>
+<p>En <a href="/sv/blog/projektplanering-bygg">tidsplan</a> är en färskvara. Stäm av verkligt läge mot plan varje vecka och ange procent klart per aktivitet, så ser du tidigt om ett moment på den kritiska linjen börjar halka. Här kommer också ÄTA in i bilden: ändrings- och tilläggsarbeten ger entreprenören rätt till tidsförlängning enligt AB 04 kap 4. Den rätten är värd lite om du inte reviderar tidsplanen när ÄTA tillkommer – låt inte ursprungsschemat bli inaktuellt, för då tappar du både överblick och den dokumentation du behöver om vitesfrågan kommer upp.</p>
 
 <h2>Excel-arket kontra ett riktigt planeringsverktyg</h2>
 <p>Ett löst Excel-schema har två svagheter. Det blir snabbt inaktuellt eftersom uppdateringen ligger på en person, och det är osynligt för teamet ute på bygget som jobbar mot en utskrift från förra månaden. En genomtänkt kritisk linje är värdelös om ingen ser den aktuella versionen. Poängen med tidsplanen är att den är levande och delad – inte att den ser prydlig ut vid projektstart.</p>
@@ -850,7 +850,7 @@ const A_STARTMOTE_BYGGPROJEKT_CHECKLISTA_HTML = `
 <ul>
 <li>Kontraktshandlingar och tillämpligt standardavtal (AB 04 eller ABT 06)</li>
 <li>Aktuella ritningar och tekniska handlingar</li>
-<li>Preliminär tidplan med kritiska hållpunkter</li>
+<li>Preliminär <a href="/sv/blog/projektplanering-bygg">tidplan</a> med kritiska hållpunkter</li>
 <li>Kontaktlista med ombud och behörigheter</li>
 <li>KMA-plan samt arbetsmiljöplan</li>
 <li>Betalningsplan och budget</li>
@@ -938,7 +938,7 @@ const A_RESURSPLANERING_BYGG_HTML = `
 <p>Vill du börja i det konkreta kan du lägga upp projektens aktiviteter i vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a> och sedan lägga resurserna ovanpå tidplanen.</p>
 
 <h2>Skillnaden mellan projektplanering och resursplanering</h2>
-<p>Projektplanering svarar på <em>vad</em> som ska göras och <em>när</em>: aktiviteter, beroenden och slutdatum i en tidplan. Resursplanering svarar på en annan fråga — <em>vem eller vilken maskin</em> som utför varje aktivitet. De två hänger ihop men är inte samma sak, och det är i glappet mellan dem dubbelbokningarna uppstår.</p>
+<p><a href="/sv/blog/projektplanering-bygg">Projektplanering</a> svarar på <em>vad</em> som ska göras och <em>när</em>: aktiviteter, beroenden och slutdatum i en tidplan. Resursplanering svarar på en annan fråga — <em>vem eller vilken maskin</em> som utför varje aktivitet. De två hänger ihop men är inte samma sak, och det är i glappet mellan dem dubbelbokningarna uppstår.</p>
 <p>En resurs är allt som har begränsad kapacitet: yrkesarbetare, hela lag, underentreprenörer, maskiner, kranar och ställningar. Så länge varje projekt planeras för sig ser tidplanen fin ut — men ingen ser att samma resurs är intecknad på tre håll samtidigt. Poängen med riktig resursplanering är att beläggningen blir synlig tvärs över hela projektportföljen, inte bara inom ett projekt i taget.</p>
 
 <h2>Resurshistogram — se beläggningen mot kapaciteten</h2>
@@ -1587,7 +1587,7 @@ const A_TIDREDOVISNING_BYGGFORETAG_HTML = `
 <h3>Vad ska en tidredovisning innehålla?</h3>
 <p>Datum och anställd, projekt eller arbetsplats, start- och sluttid eller antal timmar, typ av tid (normaltid, OB, övertid, restid), eventuell frånvaro och en signering av att uppgifterna stämmer.</p>
 <h3>Hur gör man tidredovisning enkelt i ett byggföretag?</h3>
-<p>Genom att registrera tiden där arbetet sker, digitalt i mobilen, så att den direkt blir både löneunderlag och fakturaunderlag. Då slipper du renskrivning och fel vid lönekörningen.</p>
+<p>Genom att <a href="/sv/blog/mobil-tidrapportering">registrera tiden där arbetet sker, digitalt i mobilen</a>, så att den direkt blir både löneunderlag och fakturaunderlag. Då slipper du renskrivning och fel vid lönekörningen.</p>
 `;
 
 const A_TIDREDOVISNING_BYGGFORETAG: BlogPost = {

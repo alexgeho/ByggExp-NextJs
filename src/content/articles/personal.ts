@@ -37,7 +37,7 @@ const BEMANNING_HTML = `
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är skillnaden mellan bemanning och schemaläggning?</h3>
-<p>Bemanning handlar om att fördela rätt personal och kompetens över projekt; schemaläggning är att lägga de konkreta passen. I praktiken hänger de ihop.</p>
+<p>Bemanning handlar om att fördela rätt personal och kompetens över projekt; <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggning</a> är att lägga de konkreta passen. I praktiken hänger de ihop.</p>
 <h3>Hur hanterar jag frånvaro i planeringen?</h3>
 <p>Markera sjuk, VAB och semester i planen så att luckor syns direkt och kan täckas i tid. Se även <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning</a>.</p>
 <h3>Behöver jag ett verktyg för bemanning?</h3>

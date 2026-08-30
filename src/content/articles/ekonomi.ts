@@ -3462,7 +3462,7 @@ const A_DEBITERINGSGRAD_BYGG_HTML = `
 </ol>
 
 <h2>Så gör du i ByggExp</h2>
-<p>ByggExp låter dig tidrapportera per projekt och kund direkt i mobilen ute på jobbet, och markera vad som är debiterbart. Timmarna kopplas till projektet och blir underlag både för fakturering och för att följa upp debiteringsgraden per anställd. Du ser var den icke-debiterbara tiden faktiskt hamnar i stället för att gissa. ByggExp räknar inte din lönsamhet åt dig automatiskt – men den ger dig de mätdata du behöver för att räkna rätt och prissätta utifrån verkligheten.</p>
+<p>ByggExp låter dig <a href="/sv/blog/mobil-tidrapportering">tidrapportera per projekt och kund direkt i mobilen</a> ute på jobbet, och markera vad som är debiterbart. Timmarna kopplas till projektet och blir underlag både för fakturering och för att följa upp debiteringsgraden per anställd. Du ser var den icke-debiterbara tiden faktiskt hamnar i stället för att gissa. ByggExp räknar inte din lönsamhet åt dig automatiskt – men den ger dig de mätdata du behöver för att räkna rätt och prissätta utifrån verkligheten.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är en bra debiteringsgrad i byggbranschen?</h3>

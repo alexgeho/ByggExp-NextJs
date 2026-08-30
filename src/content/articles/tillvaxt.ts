@@ -818,7 +818,7 @@ const A_PERSONALPLANERING_BYGG_HTML = `
 
 <h2>Vad ska bemanningsplanering för bygg klara?</h2>
 <ul>
-<li><strong>Vem, var och när</strong> – planera personal och lag på projekt, utan dubbelbokning.</li>
+<li><strong>Vem, var och när</strong> – <a href="/sv/blog/schemalaggningssystem-bygg">planera personal</a> och lag på projekt, utan dubbelbokning.</li>
 <li><strong>Koppling till projekt och tid</strong> – planerad tid hänger ihop med <a href="/sv/blog/tidrapportering-app-byggforetag">registrerad tid</a> och projektets marginal.</li>
 <li><strong>Live-läge</strong> – se var lagen är just nu, inte bara i ett schema på papper.</li>
 <li><strong>Enkelt att ändra</strong> – flytta personal när något ändras och alla ser det direkt.</li>

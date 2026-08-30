@@ -9,7 +9,7 @@ import { fetchPublishedBlogPost } from '../../../lib/blog-api';
 import { fetchPublishedBlogPostsCached } from '../../../lib/blog-cache';
 import { getBlogTools } from '../../../content/blog-tools';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
-import { extractFaqFromHtml } from '../../../lib/faq';
+import { resolveFaq } from '../../../lib/faq';
 import { getMockBlogPost } from '../../../lib/blog-mock';
 import { getCodeArticle, getCodeArticles } from '../../../content/code-articles';
 import { categoryForTag } from '../../../lib/blog-categories';
@@ -193,7 +193,7 @@ export default function BlogArticlePage({
       document.body.style.overflow = '';
     };
   }, [lightboxImage]);
-  const faq = extractFaqFromHtml(post.contentHtml, lang);
+  const faq = resolveFaq(post, lang);
 
   return (
     <>

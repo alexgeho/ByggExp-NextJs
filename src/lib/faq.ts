@@ -1,6 +1,26 @@
-import type { BlogLocale } from '../types/blog';
+import type { BlogFaqItem, BlogLocale, BlogPost } from '../types/blog';
 
-export type FaqItem = { question: string; answer: string };
+export type FaqItem = BlogFaqItem;
+
+// Single entry point for the FAQ used in FAQPage structured data.
+// Prefers the structured `faq` field when the article provides one, and falls
+// back to parsing the FAQ section out of the article body otherwise — so every
+// existing article keeps working unchanged.
+export function resolveFaq(
+  post: Pick<BlogPost, 'faq' | 'contentHtml'>,
+  locale: BlogLocale,
+): FaqItem[] {
+  const structured = (post.faq ?? []).filter(
+    (item) => item && item.question?.trim() && item.answer?.trim(),
+  );
+  if (structured.length > 0) {
+    return structured.map((item) => ({
+      question: item.question.trim(),
+      answer: item.answer.trim(),
+    }));
+  }
+  return extractFaqFromHtml(post.contentHtml, locale);
+}
 
 // The published articles already contain a FAQ section in their body — an
 // <h2> heading (localised) followed by <h3>question</h3><p>answer</p> pairs.

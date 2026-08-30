@@ -179,11 +179,7 @@ export default function TidrapportTool() {
     doc.text('Projekt:', M + 340, y);
     doc.setFont('helvetica', 'normal');
     doc.text(meta.project.trim(), M + 392, y);
-    y += 15;
-    doc.setFontSize(9);
-    doc.setTextColor(120, 120, 120);
-    doc.text(`Utskriven ${new Date().toLocaleDateString('sv-SE')}`, M, y);
-    y += 20;
+    y += 24;
 
     // Table header
     drawTableHeader(y);

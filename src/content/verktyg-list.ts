@@ -60,6 +60,7 @@ export const VERKTYG_GROUPS: VerktygGroup[] = [
       { slug: 'entreprenadkontrakt-mall', label: 'Entreprenadkontrakt-mall' },
       { slug: 'kontrollplan-mall', label: 'Kontrollplan-mall' },
       { slug: 'gantt-schema-mall', label: 'Gantt-schema / tidsplan' },
+      { slug: 'schema-mall', label: 'Arbetsschema / veckoschema' },
       { slug: 'anstallningsavtal-mall', label: 'Anställningsavtal-mall' },
       { slug: 'mangdforteckning-mall', label: 'Mängdförteckning-mall' },
       { slug: 'restlista-mall', label: 'Restlista / punchlista' },

@@ -226,8 +226,8 @@ Order:
 - ✅ **Kalkyl/faktura/offert** — kalkylprogram-bygg, faktureringsprogram-bygg, rot-fakturering-program, offert flows.
 
 ### Remaining (not a plain article right now)
-- ⏳ **Free schema-mall TOOL** — "schema mall" 480 / "tomt schema mall" 390 / "gratis schemaläggningsprogram" — DEV task
-  (a React tool page like /sv/verktyg/tidrapport-mall), not an article.
+- ✅ **Free schema-mall TOOL** — DONE 2026-08-30: /sv/verktyg/schema-mall (arbetsschema/veckoschema, employees × days,
+  print-friendly PDF grid + blank template + Excel). Captures "schema mall" 480 / "tomt schema mall" 390 / "arbetsschema".
 - ⏳ **Personalliggare** — content live; feature ships soon (no new work until it lands).
 - ⏳ **bemanningssystem / others** — need volym data from owner before deciding page vs fold.
 

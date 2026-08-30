@@ -24,6 +24,7 @@ export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
   'schemalaggning-bygg',
   'schemalaggningssystem-bygg',
   'projekthanteringssystem-bygg',
+  'byggdagbok',
   // Tidrapportering keyword-funnel cluster (sv-only).
   'app-for-tidrapportering-bygg',
   'stampelklocka-app-gps-bygg',

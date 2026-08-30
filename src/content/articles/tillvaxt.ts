@@ -2127,9 +2127,86 @@ const A_PROJEKTHANTERINGSSYSTEM_BYGG: BlogPost = {
   publishedAt: "2026-08-30T10:10:00.000Z", createdAt: "2026-08-30T10:10:00.000Z", updatedAt: "2026-08-30T10:10:00.000Z",
 };
 
+const A_BYGGDAGBOK_HTML = `
+<p>En byggdagbok är den löpande dagboken över vad som faktiskt hände på bygget: vilka som var på plats, vad som utfördes, vädret, leveranser, avvikelser och beslut. Så länge allt går som planerat känns den som pappersarbete – men den dag en försening, en ÄTA eller en garantitvist ska redas ut är dagboken ofta det enda som visar vad som verkligen skedde, dag för dag. Här går vi igenom vad en byggdagbok ska innehålla, när den krävs och varför en digital byggdagbok slår pärmen.</p>
+
+<p>Vill du börja direkt? Ladda ner vår gratis <a href="/sv/verktyg/byggdagbok-mall">byggdagbok-mall</a> och fyll i den för dagens arbete.</p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/byggdagbok.webp" alt="Diagram: byggdagbok – daglig logg över personal, arbete, väder, leveranser och avvikelser per projekt" width="720" height="380" loading="lazy"><figcaption>Byggdagboken samlar dagens händelser per projekt – personal, utfört arbete, väder, leveranser och avvikelser på ett ställe.</figcaption></figure>
+
+<h2>Vad är en byggdagbok?</h2>
+<p>En byggdagbok är en kronologisk anteckning som förs varje arbetsdag under ett byggprojekt. Den beskriver kort men konkret vad som gjorts, vilka resurser som varit på plats och vad som avvikit från planen. Syftet är dubbelt: alla i projektet ska ha samma bild av läget, och du ska i efterhand kunna visa vad som hände och när.</p>
+
+<h2>Vad ska en byggdagbok innehålla?</h2>
+<p>Innehållet varierar med projektet, men en användbar dagbok täcker åtminstone det här per dag:</p>
+<ul>
+<li><strong>Datum och väder</strong> – temperatur och förhållanden som påverkar arbetet, som frost, regn eller vind.</li>
+<li><strong>Personal på plats</strong> – egna yrkesarbetare och underentreprenörer, gärna med antal timmar.</li>
+<li><strong>Utfört arbete</strong> – vilka moment som gjorts och var i projektet.</li>
+<li><strong>Leveranser och material</strong> – vad som kommit till platsen.</li>
+<li><strong>Avvikelser och hinder</strong> – förseningar, fel, väderstopp eller annat som bromsar arbetet.</li>
+<li><strong>ÄTA och ändringar</strong> – beställda tillägg, kopplade till <a href="/sv/verktyg/ata-mall">ÄTA-underlaget</a>.</li>
+<li><strong>Besök och beslut</strong> – besiktningar, möten med beställaren och beslut som fattats.</li>
+</ul>
+
+<h2>Måste man föra byggdagbok?</h2>
+<p>Det finns ingen generell lag som tvingar alla byggprojekt att föra dagbok på samma sätt som den elektroniska personalliggaren är obligatorisk. Men i standardavtalen AB 04 och ABT 06 (kap. 3 § 13) är det entreprenörens ansvar att föra dagbok över entreprenaden, och beställaren ska hållas informerad om innehållet. Skyldigheten gäller oavsett ersättningsform – alltså även vid fast pris, inte bara på löpande räkning. I praktiken är dagboken alltså avtalad i de flesta större projekt, och även utan avtalskrav är den din bästa dokumentation om något går till tvist.</p>
+
+<h2>Papper vs digital byggdagbok</h2>
+<div class="article-table"><table>
+<thead><tr><th>&nbsp;</th><th>Pappersdagbok / pärm</th><th>Digital byggdagbok</th></tr></thead>
+<tbody>
+<tr><td><strong>Var finns den</strong></td><td>På kontoret eller i bilen</td><td>I mobilen, per projekt</td></tr>
+<tr><td><strong>Foton</strong></td><td>Klistras in i efterhand</td><td>Tas och kopplas direkt</td></tr>
+<tr><td><strong>Sökbarhet</strong></td><td>Bläddra manuellt</td><td>Sök på datum och projekt</td></tr>
+<tr><td><strong>Tidsstämpel</strong></td><td>Skrivs för hand</td><td>Automatisk, svår att ifrågasätta</td></tr>
+<tr><td><strong>Tillgänglig för teamet</strong></td><td>En pärm, en person</td><td>Alla berörda, samtidigt</td></tr>
+<tr><td><strong>Risk</strong></td><td>Tappas bort eller blir blöt</td><td>Säkerhetskopierad i molnet</td></tr>
+</tbody>
+</table></div>
+
+<h2>Byggdagboken som bevis vid ÄTA, förseningar och tvist</h2>
+<p>Värdet i dagboken märks först när något ifrågasätts. Vid en <a href="/sv/verktyg/ata-mall">ÄTA</a> visar den när tilläggsarbetet beställdes och utfördes. Vid en försening visar den vad som stoppade arbetet och vem som orsakade stoppet. Och vid en garantitvist långt senare är daterade anteckningar och <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">foton kopplade till projektet</a> ofta det som avgör. En digital byggdagbok med automatisk tidsstämpel är svårare att ifrågasätta än en handskriven notering som fyllts i i efterhand.</p>
+
+<h2>Så för du byggdagbok digitalt i ByggExp</h2>
+<p>I ByggExp för du byggdagboken direkt i appen, kopplad till rätt projekt. Du skriver dagens notering, lägger till foton på plats och taggar avvikelser och ÄTA – allt tidsstämplat och samlat där resten av projektet finns. Eftersom dagboken ligger bredvid tid, foto och ekonomi hänger dokumentationen ihop med det som faktiskt hänt, i stället för att leva i en separat pärm.</p>
+
+<h2>Kom igång</h2>
+<p>Vill du sluta jaga anteckningar i efterhand? Ladda ner vår gratis <a href="/sv/verktyg/byggdagbok-mall">byggdagbok-mall</a>, läs om <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">fotodokumentation som bevis</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/fotodokumentation-byggprojekt-bevis">Fotodokumentation i byggprojekt</a> – bevis som håller vid ÄTA och tvist.</li>
+<li><a href="/sv/blog/startmote-byggprojekt-checklista">Startmöte i byggprojekt</a> – sätt projektet rätt från dag ett.</li>
+<li><a href="/sv/blog/overlamning-relationshandlingar">Överlämning och relationshandlingar</a> – checklista för avslutade projekt.</li>
+<li><a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">Kostnadskontroll och marginal</a> – håll koll på projektets ekonomi.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är en byggdagbok?</h3>
+<p>En kronologisk anteckning som förs varje arbetsdag under ett byggprojekt och beskriver kort vad som gjorts, vilka som varit på plats och vad som avvikit från planen. Den ger alla i projektet samma bild av läget och dokumenterar i efterhand vad som hände när.</p>
+<h3>Är byggdagbok ett lagkrav?</h3>
+<p>Nej, ingen lag tvingar fram den så som personalliggaren. Men AB 04 och ABT 06 gör den till entreprenörens ansvar, så i avtalade entreprenader är den i praktiken ett krav. I mindre privatjobb utan sådant avtal är den frivillig – men fortfarande din bästa dokumentation om något ifrågasätts.</p>
+<h3>Vad är skillnaden mot en personalliggare?</h3>
+<p>Personalliggaren registrerar vem som är på plats för Skatteverkets skull. Byggdagboken dokumenterar vad som händer i projektet – arbete, avvikelser, ÄTA och beslut. De löser olika saker.</p>
+<h3>Vad är fördelen med en digital byggdagbok?</h3>
+<p>Den största vinsten är bevisvärdet: en automatisk tidsstämpel går inte att skriva om i efterhand, till skillnad från en handskriven notering. Att allt dessutom är sökbart och tillgängligt för alla berörda samtidigt gör den snabbare att använda i vardagen.</p>
+`.trim();
+
+const A_BYGGDAGBOK: BlogPost = {
+  _id: "code-byggdagbok",
+  title: "Byggdagbok – vad den ska innehålla och varför digital slår pärmen", slug: "byggdagbok", locale: "sv",
+  excerpt: "Vad en byggdagbok ska innehålla, när den krävs (AB 04/ABT 06) och varför en digital byggdagbok med tidsstämpel och foton slår pappersdagboken som bevis vid ÄTA, försening och tvist.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/4foto.webp", contentHtml: A_BYGGDAGBOK_HTML,
+  seoTitle: "Byggdagbok – innehåll, krav och digital byggdagbok | ByggExp", seoDescription: "Byggdagbok för bygg: vad den ska innehålla, när den krävs enligt AB 04/ABT 06 och varför en digital byggdagbok med tidsstämpel och foton blir starkare bevis vid ÄTA och tvist.",
+  seoImageUrl: `${SITE_URL}/landing/features/4foto.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-30T11:00:00.000Z", createdAt: "2026-08-30T11:00:00.000Z", updatedAt: "2026-08-30T11:00:00.000Z",
+};
+
 export const TILLVAXT_ARTICLES: BlogPost[] = [
   A_SCHEMALAGGNINGSSYSTEM_BYGG,
   A_PROJEKTHANTERINGSSYSTEM_BYGG,
+  A_BYGGDAGBOK,
   A_AFFARSSYSTEM_BYGGFORETAG,
   A_CRM_BYGGFORETAG,
   A_SERVICEHANTERING_BYGG,

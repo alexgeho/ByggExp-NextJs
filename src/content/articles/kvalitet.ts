@@ -340,7 +340,7 @@ const VATRUM_HTML = `
 <p>Behöver du snabbt räkna ut hur mycket tätskikt och plattor som går åt över hela ytan tar du måtten i <a href="/sv/verktyg/kvadratmeter-kalkylator">vår kvadratmeter-kalkylator</a> innan du beställer material. BBV 26:1 innehåller dessutom uppdaterade krav på klinkerramen – kanten mot vägg och golvbrunn – presenterade i ett tydligare format, samt förtydliganden om tätning vid genomföringar. Kontrollera de exakta produkt- och tätningskraven i den senaste utgåvan av BBV 26:1 innan du börjar. Gå igenom dina infästningar och genomföringar: allt som bryter tätskiktet ska tätas enligt anvisning.</p>
 
 <h2>Så dokumenterar du utförandet – egenkontroll och kvalitetsdokument</h2>
-<p>Egenkontroller kan idag göras direkt i en mobilapp och kvalitetsdokumentet signeras elektroniskt av ansvarig våtrumsledare, med namn på den behörige plattsättare som utfört tätskiktsarbetet. Det är den här kedjan – rätt utförande plus spårbar dokumentation – som håller vid en skadereglering.</p>
+<p>Egenkontroller kan idag göras direkt i en mobilapp och kvalitetsdokumentet signeras elektroniskt av ansvarig våtrumsledare, med namn på den behörige plattsättaren som utfört tätskiktsarbetet. Det är den här kedjan – rätt utförande plus spårbar dokumentation – som håller vid en skadereglering.</p>
 <p>Kvalitetsdokumentet och våtrumsintyget bör innehålla:</p>
 <ul>
 <li>Intyg om att arbetet följer <strong>BBV 26:1 och Säkra Våtrum 2026</strong>.</li>
@@ -404,7 +404,7 @@ const VATRUM: BlogPost = {
 };
 
 const KONTRAVG_HTML = `
-<p>Skatteverket gör oanmälda kontrollbesök på byggarbetsplatser, och de dyker upp utan förvarning. På några minuter jämför inspektören vilka som faktiskt arbetar på plats mot vad personalliggaren visar. Stämmer det inte – eller om liggaren inte ens finns tillgänglig – börjar avgifterna ticka direkt, per person. Det mesta av detta är fullt undvikbart. En digital liggare som alltid är uppdaterad och kan visas på sekunden gör skillnaden mellan en normal arbetsdag och en oväntad räkning på tiotusentals kronor. I den här artikeln går vi igenom exakt vad en miss kostar 2026 och hur du bygger bort risken.</p>
+<p>Skatteverket gör oanmälda kontrollbesök på byggarbetsplatser. På några minuter jämför inspektören vilka som faktiskt arbetar på plats mot vad personalliggaren visar. Stämmer det inte – eller om liggaren inte ens finns tillgänglig – börjar avgifterna ticka direkt, per person. Det mesta av detta är fullt undvikbart. En digital liggare som alltid är uppdaterad och kan visas på sekunden gör skillnaden mellan en normal arbetsdag och en oväntad räkning på tiotusentals kronor. I den här artikeln går vi igenom exakt vad en miss kostar 2026 och hur du bygger bort risken.</p>
 
 <p>Ett smidigt sätt att komma igång är att först få ordning på tidregistreringen med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -&gt;</a> och sedan gå över till en digital liggare som loggar in- och utcheckning i realtid.</p>
 
@@ -593,7 +593,7 @@ const A_GANTT_SCHEMA_MALL_BYGG_HTML = `
 <p>Nu kopplar du ihop aktiviteterna. Den vanligaste kopplingen är färdigställande-start (FS): betongplattan måste ha härdat innan reglarna reses. Ibland behövs start-start (SS), där två moment kan löpa parallellt med viss förskjutning. Var sparsam med hårda kopplingar – varje onödigt beroende gör schemat stelare än verkligheten och skapar falska förseningar. Koppla bara det som fysiskt måste ske i en viss ordning.</p>
 
 <h2>Steg 4 – Identifiera den kritiska linjen</h2>
-<p>Den kritiska linjen är den längsta sammanhängande kedjan av beroende aktiviteter – den som styr projektets slutdatum. En försening på den kritiska linjen skjuter hela projektet framåt, medan en aktivitet med slack kan glida utan att det märks på slutdatum. När du vet var den kritiska linjen går vet du också var du ska lägga din uppmärksamhet, var förseningar är dyrast och var det är värt att sätta in extra resurser. Lägg in realistiska buffertar där osäkerheten är störst, hellre än en enda stor slutmarginal som frestar till att slösas bort tidigt.</p>
+<p>Den kritiska linjen är den längsta sammanhängande kedjan av beroende aktiviteter – den som styr projektets slutdatum. En försening på den kritiska linjen skjuter hela projektet framåt, medan en aktivitet med slack kan glida utan att det märks på slutdatum. När du vet var den kritiska linjen går vet du också var du ska lägga din uppmärksamhet, var förseningar är dyrast och var det är värt att sätta in extra resurser. Lägg in realistiska buffertar där osäkerheten är störst, hellre än en enda stor slutmarginal som lätt slösas bort tidigt.</p>
 
 <h2>Steg 5 – Lägg in milstolpar och lagkrav i schemat</h2>
 <p>Ett byggschema ska inte bara innehålla arbetsmoment utan även kontrollpunkter och regulatoriska krav. Lägg in dem som milstolpar så att de inte glöms bort i produktionsstressen:</p>
@@ -672,7 +672,7 @@ const A_BBV_ELLER_GVK_VATRUM_HTML = `
 <p>BBV 26:1 ersätter BBV 21:1, som gällde till och med 2025-12-31. Jobbar du på gränsen mellan åren, dokumentera startdatumet noga så att det är entydigt vilket regelverk som tillämpats.</p>
 
 <h2>Vad ett giltigt behörighetsbevis kräver – BBV</h2>
-<p>För BBV måste det behöriga företaget ha minst en behörig arbetsledare och minst en behörig plattsättare anställd. Plattsättaren ska ha svenskt yrkesbevis eller motsvarande – minst tre års heltid som plattsättare – och ha gått Byggkeramikrådets Grundkurs (kurs 1) och Tätskiktskurs (kurs 3) med godkänt prov. Behörigheten kräver omcertifiering vart femte år, och plattsättaren ska bära giltigt fotolegitimation utfärdat av Byggkeramikrådet och arbeta under en våtrumsansvarig arbetsledare.</p>
+<p>För BBV måste det behöriga företaget ha minst en behörig arbetsledare och minst en behörig plattsättare anställd. Plattsättaren ska ha svenskt yrkesbevis eller motsvarande – minst tre års heltid som plattsättare – och ha gått Byggkeramikrådets Grundkurs (kurs 1) och Tätskiktskurs (kurs 3) med godkänt prov. Behörigheten kräver omcertifiering vart femte år, och plattsättaren ska bära giltig fotolegitimation utfärdad av Byggkeramikrådet och arbeta under en våtrumsansvarig arbetsledare.</p>
 <p>Beviset på fackmässigt tätskiktsarbete är BBV-kvalitetsdokumentet, Bilaga A. Det utfärdas av det behöriga företag vars personal utfört jobbet och signeras digitalt av den våtrumsansvariga arbetsledaren. Sedan 2020 kan dokumentet endast signeras och utfärdas via BankID. Utan giltigt kvalitetsdokument – alltså behörig plattsättare, arbete enligt BBV och korrekt BankID-signering – är intyget inte giltigt. Missbruk av dokument eller undermåligt arbete kan leda till indragen behörighet.</p>
 
 <h2>Vad ett giltigt behörighetsbevis kräver – GVK och Säker Vatten</h2>
@@ -943,7 +943,7 @@ const A_RESURSPLANERING_BYGG_HTML = `
 
 <h2>Resurshistogram — se beläggningen mot kapaciteten</h2>
 <p>Ett resurshistogram är en stapelvy som summerar beläggningen per resurs eller lag över tid och ställer den mot tillgänglig kapacitet. Varje stapel visar hur många timmar som är inbokade en given vecka; en vågrät linje visar kapacitetstaket. Stiger stapeln över linjen har du överbeläggning — ni har lovat bort mer arbete än laget hinner med.</p>
-<p>Kapacitetstaket är inte en gissning, det går att räkna. Enligt Byggavtalet (i kraft 2025-05-01 till 2027-04-30) är ordinarie arbetstid 40 timmar i veckan, vilket ger 160 timmar per fyraveckorsperiod, förlagd flexibelt mellan 06.00 och 18.00 måndag till fredag. Från slutet av mars 2026 tillkommer 6 dagars arbetstidsförkortning för den som jobbar 40-timmarsvecka, där arbetsgivaren ensidigt får lägga ut en av dagarna i anslutning till en helg. Räkna även bort semester och andra frånvaron. Det som återstår är den faktiska kapaciteten histogrammet ska mätas mot — inte en teoretisk maxsiffra.</p>
+<p>Kapacitetstaket är inte en gissning, det går att räkna. Enligt Byggavtalet (i kraft 2025-05-01 till 2027-04-30) är ordinarie arbetstid 40 timmar i veckan, vilket ger 160 timmar per fyraveckorsperiod, förlagd flexibelt mellan 06.00 och 18.00 måndag till fredag. Från slutet av mars 2026 tillkommer 6 dagars arbetstidsförkortning för den som jobbar 40-timmarsvecka, där arbetsgivaren ensidigt får lägga ut en av dagarna i anslutning till en helg. Räkna även bort semester och annan frånvaro. Det som återstår är den faktiska kapaciteten histogrammet ska mätas mot — inte en teoretisk maxsiffra.</p>
 
 <h2>Resursutjämning: smoothing och leveling</h2>
 <p>När histogrammet visar en topp finns det två sätt att jämna ut den. Resursutjämning handlar om att flytta aktiviteter som inte ligger på kritiska linjen inom sitt slack — det tidsutrymme de kan förskjutas utan att påverka annat.</p>

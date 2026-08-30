@@ -1469,7 +1469,7 @@ const A_TACKNINGSBIDRAG_BYGGFORETAG_HTML = `
 
 <h2>Exakt felet: att blanda ihop baserna</h2>
 <p>Ta ett konkret exempel. Du köper material för 400 kr och säljer det för 1 000 kr. Påslaget är 150 procent (600 kr vinst på 400 kr inköp), men marginalen är bara 60 procent (600 kr av 1 000 kr). Samma affär, två helt olika procenttal.</p>
-<p>Ett mindre men vanligare fall: du köper för 200 kr och \\"lägger på 50 procent\\". Priset blir 300 kr, vinsten 100 kr. Det är 50 procent i påslag – men bara 33,3 procent i marginal. Den som säger \\"jag lägger på 20 procent\\" och tror att 20 procent av fakturan är vinst har i själva verket cirka 17 procent marginal. På ett enskilt jobb känns skillnaden liten. På ett år, över hundratals fakturor, är det där pengarna försvinner.</p>
+<p>Ett mindre men vanligare fall: du köper för 200 kr och &quot;lägger på 50 procent&quot;. Priset blir 300 kr, vinsten 100 kr. Det är 50 procent i påslag – men bara 33,3 procent i marginal. Den som säger &quot;jag lägger på 20 procent&quot; och tror att 20 procent av fakturan är vinst har i själva verket cirka 17 procent marginal. På ett enskilt jobb känns skillnaden liten. På ett år, över hundratals fakturor, är det där pengarna försvinner.</p>
 
 <h2>Formlerna du behöver (och en snabbtabell)</h2>
 <p>Du behöver egentligen bara två formler för att aldrig råka fel igen:</p>
@@ -1507,7 +1507,7 @@ const A_TACKNINGSBIDRAG_BYGGFORETAG_HTML = `
 <li><strong>Material:</strong> ett påslag på 10–15 procent på inköpspriset är branschstandard och rätt bas. Det ska täcka tid för inköp, logistik, lagerhållning och garantiansvar. Påslag på inköp är helt korrekt här.</li>
 <li><strong>Arbete:</strong> prissätts mot marginal av priset, eftersom timpriset ska bära en känd självkostnad plus vinst.</li>
 </ul>
-<p>Använder du samma logik rakt av på båda – till exempel \\"20 procent på allt\\" och tror det ger 20 procent vinst – underprissätter du systematiskt arbetet, som är den största posten i de flesta byggjobb.</p>
+<p>Använder du samma logik rakt av på båda – till exempel &quot;20 procent på allt&quot; och tror det ger 20 procent vinst – underprissätter du systematiskt arbetet, som är den största posten i de flesta byggjobb.</p>
 
 <h2>Så sätter du priset baklänges från önskad marginal</h2>
 <p>Räkna alltid framåt från kostnaden och kontrollera i marginal. Ett exempel: självkostnaden för ett jobb är 60 000 kr (lön, avgifter, omkostnader, material). Du vill ha 25 procent marginal.</p>
@@ -2153,7 +2153,7 @@ const A_STARTA_BYGGFORETAG_2026: BlogPost = {
 };
 
 const A_FACTORING_BYGGFORETAG_HTML = `
-<p>Byggbranschen betalar nästan alltid ut pengar innan de kommer in. Material köps och löner betalas veckovis, underentreprenörer ska ha sitt – men beställaren betalar först 30, ibland 60 dagar efter fakturadatum. Den glappet i kassan är inte ett tecken på dålig ekonomi, det är hur branschen fungerar. Factoring är ett av verktygen för att överbrygga glappet, men säljsidorna berättar sällan hela kostnadsbilden. Här går vi igenom hur det faktiskt fungerar, oberoende och konkret.</p>
+<p>Byggbranschen betalar nästan alltid ut pengar innan de kommer in. Material köps och löner betalas veckovis, underentreprenörer ska ha sitt – men beställaren betalar först 30, ibland 60 dagar efter fakturadatum. Det glappet i kassan är inte ett tecken på dålig ekonomi, det är så branschen fungerar. Factoring är ett av verktygen för att överbrygga glappet, men säljsidorna berättar sällan hela kostnadsbilden. Här går vi igenom hur det faktiskt fungerar, oberoende och konkret.</p>
 
 <p>Innan du ens funderar på factoring: se till att fakturorna är korrekta och går ut i tid. Fel förfallodatum, saknad momsmärkning eller otydliga rader gör att betalningen dröjer ännu längre. Använd gärna vår gratis <a href="/sv/verktyg/faktura-mall">fakturamall för byggföretag →</a> så att grunden sitter.</p>
 
@@ -2943,7 +2943,7 @@ const A_FONSTER_U_VARDE_2026_HTML = `
 const A_FONSTER_U_VARDE_2026: BlogPost = {
   _id: "code-"+"fonster-u-varde-2026",
   title: "Fönster u-värde 2026: Uw eller Ug – siffran som avgör om bytet lönar sig", slug: "fonster-u-varde-2026", locale: "sv",
-  excerpt: "De flesta fönsteroffdter jämför fel siffra – så skiljer du Uw från Ug, tolkar BBR-kravet 2026 och räknar hem bytet på riktigt.", tag: "Ekonomi",
+  excerpt: "De flesta fönsterofferter jämför fel siffra – så skiljer du Uw från Ug, tolkar BBR-kravet 2026 och räknar hem bytet på riktigt.", tag: "Ekonomi",
   coverImageUrl: "/landing/verktyg/isolering-preview.webp", contentHtml: A_FONSTER_U_VARDE_2026_HTML,
   seoTitle: "Fönster u-värde 2026: Uw vs Ug | ByggExp", seoDescription: "Uw eller Ug? Så läser du fönsteroffertens u-värde rätt 2026, vad BBR faktiskt kräver och hur du räknar hem fönsterbytet med ROT.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/isolering-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,

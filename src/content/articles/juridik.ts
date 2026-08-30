@@ -876,7 +876,7 @@ const A_UPPSAGNING_ARBETSBRIST_BYGG: BlogPost = {
 };
 
 const A_HAVNING_AV_ENTREPRENAD_HTML = `
-<p>Beställaren betalar inte. Fakturorna växer, likviditeten tryggnar och du står inför frestelsen att bara lägga ner verktygen och lämna bygget. Men hävning av entreprenad är ett av de skarpaste vapnen du har – och drar du i nödbromsen på fel grund blir din hävning i stället ett väsentligt avtalsbrott som du själv får betala för. Här går vi igenom när du som entreprenör faktiskt får häva vid utebliven betalning, vilka steg som måste komma först, och varför en obefogad hävning kan bli din dyraste faktura någonsin.</p>
+<p>Beställaren betalar inte. Fakturorna växer, likviditeten sinar och du står inför frestelsen att bara lägga ner verktygen och lämna bygget. Men hävning av entreprenad är ett av de skarpaste vapnen du har – och drar du i nödbromsen på fel grund blir din hävning i stället ett väsentligt avtalsbrott som du själv får betala för. Här går vi igenom när du som entreprenör faktiskt får häva vid utebliven betalning, vilka steg som måste komma först, och varför en obefogad hävning kan bli din dyraste faktura någonsin.</p>
 
 <p>Innan det går så långt: dokumentera dina ändringar och tilläggsarbeten löpande, så att det underliggande betalningskravet är solklart. Använd gärna <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall för att dokumentera arbetet -&gt;</a> så att du har ordning på vad som faktiskt är beställt och obetalt.</p>
 

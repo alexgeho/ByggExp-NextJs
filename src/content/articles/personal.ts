@@ -5,7 +5,7 @@ const BEMANNING_HTML = `
 <p>Rätt person, på rätt plats, vid rätt tid – låter enkelt, men bemanning är ofta det som gör eller stjälper marginalen i ett byggföretag. En sjukanmälan på fel dag eller en dubbelbokad snickare kan välta hela veckans plan. Här går vi igenom hur du planerar bemanningen så att projekten flyter.</p>
 
 <h2>Vad är bemanning och personalplanering i bygg?</h2>
-<p>Bemanning handlar om att fördela rätt personal och kompetens över projekt och dagar. Personalplanering är den löpande pusslet: vem jobbar var, vilka pass gäller, vem är ledig eller sjuk, och räcker kompetensen för det som ska göras. Målet är hög beläggning utan att någon blir överbelastad – och utan luckor som kostar tid.</p>
+<p>Bemanning handlar om att fördela rätt personal och kompetens över projekt och dagar. Personalplanering är det löpande pusslet: vem jobbar var, vilka pass gäller, vem är ledig eller sjuk, och räcker kompetensen för det som ska göras. Målet är hög beläggning utan att någon blir överbelastad – och utan luckor som kostar tid.</p>
 
 <h2>Varför bemanning är svårt</h2>
 <ul>
@@ -150,7 +150,7 @@ const FRANVARO: BlogPost = {
 };
 
 const ANSTALLA_HTML = `
-<p>Orderböckerna är fulla men du hinner inte med själv. Att gå från ensam hantverkare till arbetsgivare är ett av de största stegen du tar som byggföretagare — men det är fullt hanterbart om du vet vad som gäller. Många drar sig för det första anställningsstället för att det känns dyrt och byråkratiskt. Sanningen är att kostnaden ofta är lägre än du tror tack vare Växa-stödet, förutsatt att formalian sitter rätt.</p>
+<p>Orderböckerna är fulla men du hinner inte med själv. Att gå från ensam hantverkare till arbetsgivare är ett av de största stegen du tar som byggföretagare — men det är fullt hanterbart om du vet vad som gäller. Många drar sig för det första anställningssteget för att det känns dyrt och byråkratiskt. Kostnaden är ofta lägre än du tror tack vare Växa-stödet, förutsatt att formalian sitter rätt.</p>
 
 <p>Innan du landar en lönenivå bör du räkna hem vad medarbetaren faktiskt måste dra in per timme — testa <a href="/sv/verktyg/timpris-kalkylator">vår gratis timpris-kalkylator -&gt;</a> så ser du direkt hur lön, avgifter och overhead påverkar ditt pris ut mot kund.</p>
 
@@ -588,7 +588,7 @@ const A_PROVANSTALLNING_BYGG_REGLER_HTML = `
 
 <h2>Vad är en provanställning – och varför den skiljer sig från tillsvidare</h2>
 <p>Syftet med en provanställning är enkelt: både arbetsgivare och arbetstagare ska kunna pröva samarbetet under en begränsad tid utan att binda sig långsiktigt. Det är själva poängen med anställningsformen att den ska vara lätt att avsluta. Varken du som arbetsgivare eller den anställde behöver ange något skäl för att avbryta – till skillnad från en tillsvidareanställning, där det krävs sakliga skäl för uppsägning.</p>
-<p>Det viktiga att komma ihåg är att en provanställning inte tar slut av sig själv på ett tomt sätt. Om ingen part agerar övergår den automatiskt i en tillsvidareanställning dagen efter att prövotiden löpt ut. Passivitet leder alltså till fast anställning, inte till att anställningen upphör.</p>
+<p>Det viktiga att komma ihåg är att en provanställning inte tar slut av sig själv. Om ingen part agerar övergår den automatiskt i en tillsvidareanställning dagen efter att prövotiden löpt ut. Passivitet leder alltså till fast anställning, inte till att anställningen upphör.</p>
 
 <h2>Hur lång får provanställningen vara?</h2>
 <p>Enligt LAS 6 § får en provanställning pågå i högst sex månader. Den tiden är ett tak, inte en rekommendation, och den kan inte förlängas i efterhand. Du kan alltså inte i månad fem bestämma att provperioden ska pågå ytterligare en tid för att du är osäker.</p>
@@ -738,7 +738,7 @@ const A_VADERSTOPP_PERMITTERING_BYGGAVTALET_HTML = `
 <p>Ett bra sätt att hålla ordning på timmar, avbrott och ersättningsgrunder är att logga arbetstiden noggrant redan från start. Använd gärna vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall -&gt;</a> för att dokumentera väderavbrott, omfördelad tid och inomhusarbete på ett spårbart sätt.</p>
 
 <h2>Väderstopp vs. permittering — två olika saker</h2>
-<p>Det första du behöver skilja på är tre begrepp som ofta blandas ihop:</p>
+<p>Först behöver du skilja på tre begrepp som ofta blandas ihop:</p>
 <ul>
 <li><strong>Väderstopp (väderstillestånd)</strong> — ett kortare avbrott när arbetet inte kan utföras på grund av otjänligt väder. Regleras i Byggavtalets avsnitt 5.3.1. Det här är vad de allra flesta "vinterstopp" handlar om.</li>
 <li><strong>Permittering</strong> — en formell åtgärd enligt LAS och avtal där arbetsgivaren tillfälligt tar arbetstagaren ur arbete. Betydligt tyngre process än en kall dag.</li>

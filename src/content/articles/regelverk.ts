@@ -191,7 +191,7 @@ const A_KONTROLLANSVARIG_NAR_BEHOVS_HTML = `
 <li><strong>Villa / medelstort projekt:</strong> ca 15 000–30 000 kr.</li>
 <li><strong>Större eller kommersiella projekt:</strong> från ca 30 000 kr och uppåt – för riktigt stora byggen 50 000–200 000 kr eller mer.</li>
 </ul>
-<p>För en normal villa hamnar alltså kostnaden vanligen i intervallet 15 000–30 000 kr. Ett litet garagebygge kan klaras för runt 10 000–15 000 kr, medan ett flerbostadshus snabbt passerar 50 000 kr. Att KA behöver göra fler platsbesök, eller att objektet ligger långt bort, driver upp priset – be alltid om en offert som specificerar antal besök.</p>
+<p>Ett litet garagebygge kan klaras för runt 10 000–15 000 kr, medan ett flerbostadshus snabbt passerar 50 000 kr. Att KA behöver göra fler platsbesök, eller att objektet ligger långt bort, driver upp priset – be alltid om en offert som specificerar antal besök.</p>
 <p>En sak att inte blanda ihop: att <em>själv</em> bli certifierad KA kostar ca 8 500–14 500 kr för utbildning plus ca 8 000–15 000 kr i certifieringsavgift (beroende på organ och nivå), samt ca 495 kr exkl. moms för ID-kort. Det är kostnaden för att bli KA – inte för att anlita en.</p>
 
 <h2>N- eller K-behörighet – vilken KA behöver ditt projekt?</h2>
@@ -454,7 +454,7 @@ const A_YRKESBEVIS_BYGG_LARLING_HTML = `
 </ol>
 
 <h2>Så gör du i ByggExp</h2>
-<p>ByggExp utfärdar inte yrkesbevis – det gör bara BYN. Men den löpande dokumentationen som handledningen kräver kan du sköta i ByggExp. Lägg upp lärlingens arbetade tid per projekt och arbetsmoment, så har du underlag när handledaren ska bekräfta läranderesultat i Mina sidor och överblick över hur kvalificeringstiden fortskrider. Samma tidrapportering ger dig dessutom korrekt underlag för lön och fakturering. Kort sagt: BYN äger vägen till yrkesbeviset, ByggExp håller ordning på timmarna och uppföljningen längs vägen.</p>
+<p>ByggExp utfärdar inte yrkesbevis – det gör bara BYN. Men den löpande dokumentationen som handledningen kräver kan du sköta i ByggExp. Lägg upp lärlingens arbetade tid per projekt och arbetsmoment, så har du underlag när handledaren ska bekräfta läranderesultat i Mina sidor och överblick över hur kvalificeringstiden fortskrider. Samma tidrapportering ger dig dessutom korrekt underlag för lön och fakturering. Kort sagt: BYN äger vägen till yrkesbeviset, ByggExp håller ordning på timmarna och uppföljningen.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Behöver lärlingen fortfarande fylla i en lärlingsbok med utbildningstimmar?</h3>
@@ -499,7 +499,7 @@ const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN_HTML = `
 <li><strong>Inkom 1 juli 2025–30 juni 2026:</strong> byggherren väljer gammalt eller nytt – men inte en blandning.</li>
 <li><strong>Inkom efter 30 juni 2026:</strong> enbart Boverkets nya bygg- och konstruktionsregler gäller.</li>
 </ul>
-<p>Pågående projekt som startats under övergångsperioden enligt äldre regler kan omfattas av övergångsbestämmelser. Den exakta lydelsen bör du dubbelkolla mot Boverkets övergångsbestämmelser för just ditt ärende. En separat tidpunkt som rapporterats är att energikraven flyttas ut ur BBR till en egen energiregel, uppgivet omkring 1 oktober 2026 – det datumet är ännu obekräftat och bör verifieras separat mot Boverket.</p>
+<p>Pågående projekt som startats under övergångsperioden enligt äldre regler kan omfattas av övergångsbestämmelser. Den exakta lydelsen bör du dubbelkolla mot Boverkets övergångsbestämmelser för just ditt ärende. En separat tidpunkt som rapporterats är att energikraven flyttas ut ur BBR till en egen energiregel, uppgivet omkring 1 oktober 2026 – det datumet är ännu obekräftat och bör verifieras mot Boverket.</p>
 
 <h2>Myten om en ny kontrollplan – så ligger det till</h2>
 <p>En vanlig missuppfattning är att den nya regelreformen tvingar fram en helt ny sorts kontrollplan. Det stämmer inte. Kontrollplan och egenkontroll regleras av plan- och bygglagen (PBL, 10 kap.), inte av BBR eller byggreglerna. Själva reformen ändrar alltså inte de formella PBL-kraven på kontrollplanen.</p>
@@ -733,7 +733,7 @@ const A_ID06_BESTALLA_KORT_STEG_FOR_STEG_HTML = `
 
 <h2>Kompetensdatabasen och Safe Construction Training</h2>
 <p>Ett giltigt kort är sällan tillräckligt – de flesta svenska generalentreprenörer kräver att UE:ns personal har genomfört <strong>Safe Construction Training</strong>, Byggföretagens obligatoriska och kostnadsfria arbetsmiljöutbildning som krävts på medlemmarnas arbetsplatser sedan 1 juli 2021. Ett godkänt resultat är giltigt i 5 år och registreras gratis i <strong>ID06 Kompetensdatabas</strong>.</p>
-<p>Sedan 30 september 2025 hanteras kompetensdatabasen utan individens samtycke – den rättsliga grunden är numera en intresseavvägning, och utbildningsleverantörer registrerar intyg utan samtyckeshantering. Undantag gäller för utbildningar kopplade till fackligt uppdrag eller skyddsombud, där individens godkännande fortfarande krävs för att intyget ska visas för arbetsgivare. Utöver Safe Construction Training kan uppdraget kräva andra behörigheter som Heta arbeten eller ställningsbyggnad – kontrollera GE:ns leverantörskrav i förväg.</p>
+<p>Sedan 30 september 2025 hanteras kompetensdatabasen utan individens samtycke – den rättsliga grunden är numera en intresseavvägning, så utbildningsleverantörer registrerar intyg direkt. Undantag gäller för utbildningar kopplade till fackligt uppdrag eller skyddsombud, där individens godkännande fortfarande krävs för att intyget ska visas för arbetsgivare. Utöver Safe Construction Training kan uppdraget kräva andra behörigheter som Heta arbeten eller ställningsbyggnad – kontrollera GE:ns leverantörskrav i förväg.</p>
 
 <h2>Kostnader och giltighetstid</h2>
 <ul>
@@ -880,7 +880,7 @@ const A_UTSTATIONERING_UTLANDSK_ARBETSKRAFT_BYGG_HTML = `
 <p>Ett bra sätt att hålla ordning på arbetsmiljö- och kontrolldokumentationen är att strukturera den från start med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a>, så att anmälningsbevis, A1-intyg och ID06-loggning samlas på ett ställe.</p>
 
 <h2>Vad räknas som utstationering?</h2>
-<p>Utstationering innebär att en utländsk arbetsgivare tillfälligt skickar sina egna anställda för att arbeta i Sverige, medan anställningen fortsatt ligger kvar i hemlandet. Det är alltså inte samma sak som att du själv anställer en person, och inte heller samma sak som att du köper en färdig tjänst av ett utländskt bolag. För arbetstagare från EU/EES gäller fri rörlighet – de behöver inget arbetstillstånd. För tredjelandsmedborgare krävs däremot arbetstillstånd från Migrationsverket, oavsett om de kommer via utstationering eller anställs direkt. Att avgöra vilken kategori arbetet faller in under är avgörande, eftersom det styr vilka anmälningar, intyg och skatteregler som blir aktuella. Fastnar du i fel spår riskerar du både fel dokumentation och fel skattehantering.</p>
+<p>Utstationering innebär att en utländsk arbetsgivare tillfälligt skickar sina egna anställda för att arbeta i Sverige, medan anställningen fortsatt ligger kvar i hemlandet. Det är alltså inte samma sak som att du själv anställer en person, och inte heller samma sak som att du köper en färdig tjänst av ett utländskt bolag. För arbetstagare från EU/EES gäller fri rörlighet – de behöver inget arbetstillstånd. För tredjelandsmedborgare krävs däremot arbetstillstånd från Migrationsverket, oavsett om de kommer via utstationering eller anställs direkt. Vilken kategori arbetet faller in under är avgörande, eftersom det styr vilka anmälningar, intyg och skatteregler som blir aktuella. Fastnar du i fel spår riskerar du både fel dokumentation och fel skattehantering.</p>
 
 <h2>Utstationeringsanmälan till Arbetsmiljöverket</h2>
 <p>Kärnplikten ligger hos den utländska arbetsgivaren. Företaget måste registrera utstationeringen och en kontaktperson i Sverige i Arbetsmiljöverkets e-tjänst "Anmäl utstationering" senast den dag arbetet påbörjas i Sverige. Missas det är sanktionsavgiften 20 000 kr, plus upp till ytterligare 20 000 kr om obligatoriska uppgifter saknas. Anmälan ska uppdateras vid tolv månader, och arbetsgivaren kan förlänga tröskeln till 18 månader genom att anmäla en motivering till Arbetsmiljöverket före tolvmånadersgränsen.</p>

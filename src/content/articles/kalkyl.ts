@@ -38,7 +38,7 @@ const MATERIALKALKYL_HTML = `
 <li><strong>Färgåtgång per strykning</strong> – räkna minst två strykningar, inte en.</li>
 <li><strong>Golvbrunn, brunnsmanschett och kapmaterial</strong> i våtrum.</li>
 </ul>
-<p>Dessa poster är små var för sig men summerar snabbt, och de glöms oftast bort i en snabb offert. Ta med dem från början så håller kalkylen.</p>
+<p>Dessa poster är små var för sig men summerar sig snabbt, och de glöms oftast bort när offerten skrivs i hast. Ta med dem från början så håller kalkylen.</p>
 
 <h2>Steg 5 – Rätt mängd = rätt ekonomi</h2>
 <p>För lite material innebär arbetsstopp, en extra returresa, ny frakt och risken att efterbeställt kakel eller färg kommer från ett annat parti med avvikande nyans. För mycket innebär bundet kapital och svinn som du sällan får igen. Sikta på rätt mängd – och spara medvetet en referens: en hel extra platta eller en burk från samma parti gör att ett framtida byte matchar. Notera partinumret på materiallistan.</p>
@@ -215,7 +215,7 @@ const MANGD_HTML = `
 <p>Lämna aldrig tomma poster. En post utan angiven prissättning betraktas i regel som en nollpost utan värde om den inte uttryckligen hanteras – vilket betyder att du bundit dig att utföra arbetet gratis. Möter du en post du inte kan prissätta säkert, ta upp det som en fråga under anbudstiden i stället för att gissa eller lämna den blank.</p>
 
 <h2>Så är en mängdförteckning uppbyggd</h2>
-<p>En korrekt mängdförteckning enligt MER byggs upp med minst fyra kolumner: enhet, mängd, à-pris och summa. Varje post kopplas till mät- och ersättningsregler på lägsta möjliga kodnivå – ersättning ska begäras på lägsta möjliga kodnivå. En praktisk radstruktur ser ut så här:</p>
+<p>En korrekt mängdförteckning enligt MER byggs upp med minst fyra kolumner: enhet, mängd, à-pris och summa. Varje post kopplas till mät- och ersättningsregler, och ersättning ska begäras på lägsta möjliga kodnivå. En praktisk radstruktur ser ut så här:</p>
 <ul>
 <li><strong>Post / AMA-kod</strong> – referens till teknisk beskrivning eller AMA-rubrik.</li>
 <li><strong>Beskrivning</strong> – kort text om vad posten omfattar.</li>
@@ -227,7 +227,7 @@ const MANGD_HTML = `
 <p>Exempel: posten "Rivning innervägg, gips på regel" med enhet m², mängd 42, à-pris 185 kr ger summa 7 770 kr. Nästa post "Ny gipsvägg, dubbel skiva" med enhet m², mängd 42, à-pris 640 kr ger 26 880 kr. Delsummorna adderas till en totalsumma längst ner – det är den siffra beställaren jämför mot övriga anbud.</p>
 
 <h2>Från mängdförteckning till kalkyl och offert</h2>
-<p>Arbetsflödet är sig ganska likt oavsett projektstorlek:</p>
+<p>Arbetsflödet ser ungefär likadant ut oavsett projektstorlek:</p>
 <ol>
 <li>Ta fram mängder ur ritning, beskrivning eller BIM-modell. Behöver du snabbt räkna ytor för golv, väggar eller tak använder du <a href="/sv/verktyg/kvadratmeter-kalkylator">vår kvadratmeterkalkylator</a>.</li>
 <li>Sätt à-priser per post: material, arbetstimmar, underentreprenörer och påslag.</li>
@@ -350,7 +350,7 @@ const A_SPILLPROCENT_BYGG_MATERIAL_HTML = `
 <p>Räkneexempel: ett gipsjobb med 100 m² netto och ett gipspris på 60 kr/m². Räknar du 5 % spill beställer du för 6 300 kr. Det verkliga spillet blir 12 %, alltså 6 720 kr. De 420 kronorna som saknas i offerten är ren förlust på ett litet jobb — skala upp till ett flerbostadshus med tusentals kvadratmeter och ett par procents felräkning blir snabbt en betydande post.</p>
 
 <h2>Så gör du i ByggExp</h2>
-<p>ByggExp materialkalkylatorer räknar med spillpåslag redan inbyggt, så att du får inköpsmängden och inte bara den teoretiska nettomängden. Du mäter upp ytan eller volymen, väljer material och får en beställningsbar mängd direkt. Kalkylerna bygger på branschens schabloner — men eftersom geometri och läggningsmönster varierar bör du alltid dubbelkolla spillfaktorn mot det enskilda projektet innan du lägger den i offerten. Verktygen tar bort räknearbetet och risken för slarvfel; bedömningen av just ditt rum gör du fortfarande själv.</p>
+<p>ByggExps materialkalkylatorer har spillpåslaget inbyggt, så att du får inköpsmängden och inte bara den teoretiska nettomängden. Du mäter upp ytan eller volymen, väljer material och får en beställningsbar mängd direkt. Kalkylerna bygger på branschens schabloner — men eftersom geometri och läggningsmönster varierar bör du alltid dubbelkolla spillfaktorn mot det enskilda projektet innan du lägger den i offerten. Verktygen tar bort räknearbetet och risken för slarvfel; bedömningen av just ditt rum gör du fortfarande själv.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Hur mycket spill ska jag räkna med på gips?</h3>
@@ -1527,7 +1527,7 @@ const A_GOLVVARME_BERAKNING_EFFEKT_HTML = `
 <h3>Får jag installera elgolvvärme själv?</h3>
 <p>Nej. Elgolvvärme är en del av den fasta starkströmsanläggningen och ska installeras av ett registrerat elinstallationsföretag med auktoriserad elinstallatör. Du får ofta förbereda underlaget och lägga ut kabeln enligt anvisning, men kontrollmätning och inkoppling måste elföretaget göra — och kontrollen ska ske innan golvet spacklas.</p>
 <h3>Hur lång får en golvvärmeslinga vara?</h3>
-<p>Slinglängden begränsas av tryckfallet. Med 16 mm rör hålls slingan under 80–100 m (konservativt 60–70 m) och med 20 mm rör runt 80–90 m. För långa slingor kräver en kraftfullare cirkulationspump, så gör alltid en tryckfallsberäkning vid dimensioneringen.</p>
+<p>Slinglängden begränsas av tryckfallet. Med 16 mm rör hålls slingan under 80–100 m (konservativt 60–70 m) och med 20 mm rör runt 80–90 m. En för lång slinga kräver en kraftfullare cirkulationspump, så gör alltid en tryckfallsberäkning vid dimensioneringen.</p>
 
 <h2>Kom igång</h2>
 <p>Räkna fram effektbehov, slinglängd och c/c på minuter med vår <a href="/sv/verktyg/golvvarme-kalkylator">golvvärmekalkylator</a>, och lyft in resultatet i din offert. Vill du se hela flödet från kalkyl till offert och ROT-underlag? <a href="/sv/contact">Boka en demo</a> så visar vi hur ByggExp håller ihop dina projekt.</p>

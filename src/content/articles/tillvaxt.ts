@@ -15,7 +15,7 @@ const A_HITTA_KUNDER_BYGGFIRMA_HTML = `
 <li>Ladda upp riktiga bilder på färdiga jobb, inte stockbilder. Före/efter fungerar bäst.</li>
 <li>Svara på meddelanden och frågor snabbt – svarstiden syns för kunden.</li>
 </ul>
-<p>En profil som ligger och skräpar halvfärdig kostar dig jobb varje vecka utan att du märker det. Sätt av en timme och gör den klar.</p>
+<p>En halvfärdig profil kostar dig jobb varje vecka utan att du märker det. Sätt av en timme och gör den klar.</p>
 
 <h2>Recensioner som säljverktyg</h2>
 <p>Stjärnbetyg och omdömen påverkar både hur högt du rankas i lokala sökresultat och om kunden väljer just dig. Skillnaden mellan 3,8 och 4,6 i snitt är många förlorade förfrågningar. Bygg därför in en recensionsrutin i varje avslutat jobb:</p>
@@ -122,7 +122,7 @@ const A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING_HTML = `
 <p>Man kan digitalisera med en app för tid, en för offert och en för faktura. Vinsten blir dock större när de delar data. När tidrapport, offert och faktura bygger på samma kund, samma projekt och samma timmar minskar dubbelinmatningen, färre fakturor missas och spårbarheten blir sammanhängande – vilket är precis vad du behöver vid en tvist eller en kontroll. Frågan är alltså inte antalet verktyg, utan om de hänger ihop.</p>
 
 <h2>Så mycket admin kan en liten firma spara</h2>
-<p>Exakt hur mycket beror på hur firman jobbar idag, men storleksordningen är tydlig. Digitala flöden ger färre kvällar med pappersarbete, snabbare betalt eftersom fakturan kan gå iväg samma dag som jobbet är klart, och mindre risk för både räknefel och sanktionsavgifter. Rama in vinsten som timmar per vecka i sparad admin plus kortare tid från utfört arbete till pengar på kontot – två effekter som märks direkt i en fåmansfirma där ägaren är sin egen ekonomiavdelning.</p>
+<p>Exakt hur mycket beror på hur firman jobbar idag, men storleksordningen är tydlig. Digitala flöden ger färre kvällar med pappersarbete, snabbare betalt eftersom fakturan kan gå iväg samma dag som jobbet är klart, och mindre risk för både räknefel och sanktionsavgifter. Vinsten är konkret: timmar per vecka i sparad admin, plus kortare tid från utfört arbete till pengar på kontot – två effekter som märks direkt i en fåmansfirma där ägaren är sin egen ekonomiavdelning.</p>
 
 <h2>Så gör du i ByggExp</h2>
 <p>ByggExp samlar tidrapport, offert och faktura i ett flöde som delar samma kund- och projektdata. Tid som registreras på ett jobb kan bli underlag för lön och för fakturan, offerten kan omvandlas till faktura utan att uppgifterna skrivs om, och de obligatoriska momsuppgifterna följer med automatiskt. Målet är att ta bort dubbelinmatningen mellan stegen. ByggExp ersätter inte din revisor eller ett dedikerat personalliggarsystem, men ger dig ett sammanhängande underlag – och du bör alltid stämma av personalliggare, ROT och arkiveringskrav mot Skatteverket och ditt kollektivavtal.</p>
@@ -257,7 +257,7 @@ const A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA_HTML = `
 
 <h2>Vanliga frågor</h2>
 <h3>Kostar Google Företagsprofil något?</h3>
-<p>Nej. Att skapa, verifiera och optimera profilen är helt gratis. Det är just därför den är så kraftfull — lokalt slår en välskött gratisprofil ofta betald annonsering, eftersom kunder litar mer på kartrutan och recensionerna än på annonser.</p>
+<p>Nej. Att skapa, verifiera och optimera profilen är helt gratis. Det är just därför den ger så mycket tillbaka — lokalt slår en välskött gratisprofil ofta betald annonsering, eftersom kunder litar mer på kartrutan och recensionerna än på annonser.</p>
 <h3>Får jag bjuda kunden på rabatt om de lämnar en recension?</h3>
 <p>Nej. Att erbjuda rabatt, pengar eller presenter för recensioner är förbjudet och kan leda till att recensionerna tas bort eller att profilen stängs av. Du får däremot alltid be om en recension och skicka en länk eller QR-kod efter avslutat jobb — så länge du inte styr betyget.</p>
 <h3>Kan jag synas i flera orter än där jag har adress?</h3>
@@ -943,7 +943,7 @@ const A_BYGG_APP_HTML = `
 <li><strong>Svenska regler och ROT.</strong> Appen ska hantera ROT och svensk fakturastandard.</li>
 </ul>
 
-<p>Rätt bygg-app gör en registrering nog – och krymper pappersarbetet på kontoret. Börja med gratis verktyg, väx in i en samlad app när det behövs.</p>
+<p>Rätt bygg-app gör att en registrering räcker – och krymper pappersarbetet på kontoret. Börja med gratis verktyg, väx in i en samlad app när det behövs.</p>
 `;
 
 const A_BYGG_APP: BlogPost = {

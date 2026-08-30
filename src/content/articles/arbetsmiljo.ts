@@ -189,7 +189,7 @@ const ARBMILJO_HTML = `
 <p>Rollfördelningen är tydlig: Bas-P upprättar planen under projekteringen, Bas-U håller den uppdaterad under utförandet, och byggherren ansvarar för att den finns och är tillgänglig på arbetsplatsen. Din uppgift som egenföretagare är att läsa planen, följa den och kvittera att du tagit del av den.</p>
 
 <h2>Förhandsanmälan och sanktionsavgifter du bör känna till</h2>
-<p>Byggherren är skyldig att göra en förhandsanmälan till Arbetsmiljöverket när arbetet beräknas pågå längre än 30 arbetsdagar och mer än 20 personer sysselsätts samtidigt vid något tillfälle, <strong>eller</strong> när det totala antalet persondagar beräknas bli fler än 500. Även om detta är byggherrens ansvar påverkar det dig, eftersom förhandsanmälan i sin tur utlöser AMP-kravet. Sanktionsavgifterna är kännbara: utebliven förhandsanmälan kan leda till sanktionsavgift. Saknas arbetsmiljöplanen, eller är den inte tillgänglig, blir avgiften 50 000 kr i projekt som kräver förhandsanmälan och annars 10 000 kr. Ingen avgift tas ut om hela bygg- eller anläggningsarbetet pågår i högst två dagar i följd.</p>
+<p>Byggherren är skyldig att göra en förhandsanmälan till Arbetsmiljöverket när arbetet beräknas pågå längre än 30 arbetsdagar och mer än 20 personer sysselsätts samtidigt vid något tillfälle, <strong>eller</strong> när det totala antalet persondagar beräknas bli fler än 500. Även om detta är byggherrens ansvar påverkar det dig, eftersom förhandsanmälan i sin tur utlöser AMP-kravet. Sanktionsavgifterna är kännbara: även utebliven förhandsanmälan är sanktionsbelagd. Saknas arbetsmiljöplanen, eller är den inte tillgänglig, blir avgiften 50 000 kr i projekt som kräver förhandsanmälan och annars 10 000 kr. Ingen avgift tas ut om hela bygg- eller anläggningsarbetet pågår i högst två dagar i följd.</p>
 
 <h2>Personalliggare 2026 – gäller det dig?</h2>
 <p>Elektronisk personalliggare krävs när den sammanlagda bygg- och materialkostnaden överstiger 4 prisbasbelopp. Prisbasbeloppet för 2026 är fastställt till 59 200 kr, vilket ger gränsen <strong>236 800 kr</strong>. Undantag gäller när byggherren är privatperson och bygger för privat bruk. Uppgifterna – namn, personnummer samt in- och utcheckningstider – ska föras dagligen, sparas i 2 år och kunna visas vid en oanmäld kontroll från Skatteverket. Varje entreprenör för sin egen del av liggaren, så du för din. Notera att det inte finns något lagkrav på just ID06; lagen säger bara att uppgifterna ska vara elektroniska och korrekta – systemvalet är fritt. ID06 är dock den dominerande branschstandarden och det de flesta beställare förväntar sig.</p>
@@ -281,7 +281,7 @@ const BASPBASU_HTML = `
 <p>Viktigt: BAS-U:s samordning tar inte över varje enskild entreprenörs eget arbetsmiljöansvar för sina egna anställda. Samordnarrollen och arbetsgivarrollen löper parallellt – som underentreprenör ansvarar du fortfarande för dina egna medarbetare.</p>
 
 <h2>Kompetenskrav – räcker en tvådagarskurs?</h2>
-<p>Det finns ingen lagstadgad, obligatorisk kurs för att bli BAS-P eller BAS-U. Däremot måste samordnaren ha den utbildning, kompetens och erfarenhet som krävs i förhållande till projektets storlek, komplexitet och risknivå – och byggherren ska kunna styrka det, till exempel med intyg. Det finns inget exakt lagkrav på utbildningens längd, men det är just vägledning och inte ett lagkrav. Ett litet renoveringsjobb och ett komplext anläggningsprojekt ställer helt olika krav.</p>
+<p>Det finns ingen lagstadgad, obligatorisk kurs för att bli BAS-P eller BAS-U. Däremot måste samordnaren ha den utbildning, kompetens och erfarenhet som krävs i förhållande till projektets storlek, komplexitet och risknivå – och byggherren ska kunna styrka det, till exempel med intyg. Det finns inget exakt lagkrav på utbildningens längd – de kurslängder som nämns i branschen är vägledning, inte lag. Ett litet renoveringsjobb och ett komplext anläggningsprojekt ställer helt olika krav.</p>
 
 <h2>Fällan för småföretag – när du tar samordnarrollen på pappret</h2>
 <p>Här sitter de flesta problemen för mindre byggföretag. Det finns två vanliga fällor:</p>
@@ -291,7 +291,7 @@ const BASPBASU_HTML = `
 </ol>
 
 <h2>Sanktionsavgifter och personligt ansvar</h2>
-<p>AFS 2023:3, som gäller sedan 1 januari 2025 , är förenad med konkreta sanktionsavgifter:</p>
+<p>AFS 2023:3, som gäller sedan 1 januari 2025, är förenad med konkreta sanktionsavgifter:</p>
 <ul>
 <li>Utebliven förhandsanmälan: <strong>5 000 kr</strong>.</li>
 <li>Utebliven arbetsmiljöplan: <strong>10 000 kr</strong> när förhandsanmälan inte krävs, och <strong>50 000 kr</strong> när den krävs.</li>
@@ -347,7 +347,7 @@ const BASPBASU: BlogPost = {
 };
 
 const A_KVARTSDAMM_REGLER_BYGG_HTML = `
-<p>Kvartsdamm är byggbranschens tysta yrkessjukdom. Varje gång ni bilar, slipar, kapar eller borrar i betong, tegel eller puts frigörs respirabel kristallin kiseldioxid – partiklar så små att de når djupt ner i lungorna utan att synas. Med den skärpta regelstrukturen 2025–2026 är slarv inte längre bara en hälsorisk för montörerna, utan en direkt efterlevnadsrisk för firman. Den här guiden går igenom kvartsdamm, reglerna, kraven och byggbranschens praktiska compliance: gränsvärdet, den dokumenterade riskbedömningen, åtgärdstrappan och varför M-klassad dammsugare är minimikravet.</p>
+<p>Kvartsdamm är byggbranschens tysta yrkessjukdom. Varje gång ni bilar, slipar, kapar eller borrar i betong, tegel eller puts frigörs respirabel kristallin kiseldioxid – partiklar så små att de når djupt ner i lungorna utan att synas. Med den skärpta regelstrukturen 2025–2026 är slarv inte längre bara en hälsorisk för montörerna, utan en direkt efterlevnadsrisk för firman. Den här guiden går igenom kvartsdammets risker, reglerna och den praktiska efterlevnaden i byggbranschen: gränsvärdet, den dokumenterade riskbedömningen, åtgärdstrappan och varför M-klassad dammsugare är minimikravet.</p>
 
 <p>Ett strukturerat sätt att fånga riskbedömning, kontroller och åtgärder är att dokumentera dem löpande – börja med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall &rarr;</a> och bygg vidare därifrån.</p>
 
@@ -392,7 +392,7 @@ const A_KVARTSDAMM_REGLER_BYGG_HTML = `
 <h2>Medicinska kontroller och tjänstbarhetsintyg</h2>
 <p>Enligt AFS 2023:15 krävs medicinska kontroller med bedömning för tjänstbarhetsintyg när en person exponeras för respirabelt kvarts vid halt som är minst halva gränsvärdet – alltså <strong>0,05 mg/m³</strong> – och samtidigt arbetar mer än 20 timmar per vecka i minst tre månader per år. Undersökningen ska göras innan arbetet påbörjas och därefter med högst tre års intervall, och omfattar bland annat lungor och hjärta. Tjänstbarhetsintyget är en förutsättning för fortsatt arbete i miljön. Det är arbetsgivaren som ansvarar för att kontrollerna genomförs och står för kostnaden. Arbetstagarna ska dessutom ha information och utbildning om riskerna och skyddsåtgärderna.</p>
 
-<h2>Compliance-checklista för firman</h2>
+<h2>Efterlevnadschecklista för firman</h2>
 <ul>
 <li>Dokumenterad riskbedömning klar innan arbetet startar.</li>
 <li>Damm fångat vid källan med utsug eller våthantering.</li>
@@ -495,7 +495,7 @@ const A_BYGGSTALLNING_REGLER_KRAV_HTML = `
 <p>De flesta anmärkningar handlar inte om att ställningen rasat, utan om formalia som saknas: montör med bevis för 5 m som jobbar på 7, fotlist som &quot;glömts&quot; på ett plan, kontrolldokument som aldrig signerats, eller kopior som aldrig nått Bas-U. Lös stege på arbetsplanet och öppna åtgärdsluckor är också klassiker – båda är uttryckligt förbjudna på fasad-, rull- och hantverkarställningar.</p>
 
 <h2>Så gör du i ByggExp</h2>
-<p>ByggExp ersätter inte utbildningsbeviset eller certifierad montör – kompetensen måste finnas hos personalen. Det vi hjälper till med är dokumentationen runt omkring, så att den faktiskt finns när inspektören frågar. Med egenkontroll-mallen strukturerar du kontrollen före ibruktagande och den fortlöpande kontrollen, samlar foton och signaturer digitalt, och håller kontrolldokumenten tillgängliga för både användare och Bas-U på fleraarbetsgivarplatser. Kort sagt: rätt kompetens gör jobbet lagligt, dokumentationen gör det bevisbart.</p>
+<p>ByggExp ersätter inte utbildningsbeviset eller certifierad montör – kompetensen måste finnas hos personalen. Det vi hjälper till med är dokumentationen runt omkring, så att den faktiskt finns när inspektören frågar. Med egenkontroll-mallen strukturerar du kontrollen före ibruktagande och den fortlöpande kontrollen, samlar foton och signaturer digitalt, och håller kontrolldokumenten tillgängliga för både användare och Bas-U på arbetsplatser med flera arbetsgivare. Kort sagt: rätt kompetens gör jobbet lagligt, dokumentationen gör det bevisbart.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vilken utbildning krävs för en ställning på 6 meter?</h3>
@@ -511,7 +511,7 @@ const A_BYGGSTALLNING_REGLER_KRAV_HTML = `
 <p>Alltid före ibruktagande och fortlöpande under användning. Extra kontroll krävs efter hård vind och när ställningen stått oanvänd länge. Har den brister av arbetsmiljöbetydelse får den inte användas förrän de åtgärdats.</p>
 
 <h2>Kom igång</h2>
-<p>Sätt rutinen på plats innan nästa ställning reses: strukturera kontrollen med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen &rarr;</a> så att dokumentationen finns signerad och sökbar när den behövs. Vill du se hur det fungerar i en skarp arbetsflöde? <a href="/sv/contact">Boka en demo &rarr;</a> så visar vi upplägget.</p>
+<p>Sätt rutinen på plats innan nästa ställning reses: strukturera kontrollen med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen &rarr;</a> så att dokumentationen finns signerad och sökbar när den behövs. Vill du se hur det fungerar i ett skarpt arbetsflöde? <a href="/sv/contact">Boka en demo &rarr;</a> så visar vi upplägget.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – när krävs den och vad ska ingå</a> och <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>.</p>
 `;
@@ -549,7 +549,7 @@ const A_ARBETSMILJOVERKET_NYA_REGLER_2026_BYGG_HTML = `
 <p>Mycket av det som tidigare låg samlat i AFS 1999:3 hittar du numera i 2023:10–13. Den exakta paragrafmappningen bör du alltid dubbelkolla mot gällande AFS-text på av.se innan du skriver in nya hänvisningar i dina dokument.</p>
 
 <h2>Bas-P, Bas-U och arbetsmiljöplan i nya AFS 2023:3</h2>
-<p>För den som driver byggprojekt är AFS 2023:3 den viktigaste att ha koll på. Observera att den redan har ändrats en gång, genom AFS 2024:1 – så hänvisar dina mallar till 2023:3 måste du kontrollera att formuleringarna stämmer med den senaste lydelsen.</p>
+<p>För den som driver byggprojekt är AFS 2023:3 den viktigaste att ha koll på. Observera att den redan har ändrats en gång, genom AFS 2024:1 – hänvisar dina mallar till 2023:3 måste du alltså kontrollera att formuleringarna stämmer med den senaste lydelsen.</p>
 <p>Rollerna är oförändrade i sak:</p>
 <ul>
 <li><strong>Byggherren</strong> har det övergripande ansvaret och ska utse byggarbetsmiljösamordnare.</li>
@@ -1218,7 +1218,7 @@ const A_SYSTEMATISKT_ARBETSMILJOARBETE_LITET_BYGGFORETAG: BlogPost = {
 };
 
 const A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG_HTML = `
-<p>En dåligt planerad byggarbetsplats kostar timmar varje dag: material som flyttas fram och tillbaka, lastbilar som blockerar varandra, kranlyft som stoppas för att en gångväg ligger fel. En genomtänkt <strong>APD-plan</strong> är verktyget som förhindrar det. För dig som driver ett litet eller medelstort byggföretag, är platschef eller entreprenör är arbetsplatsdispositionen ofta skillnaden mellan ett bygge som flyter och ett som ständigt hackar. Här går vi igenom vad en APD-plan bygg-mässigt ska innehålla, vad reglerna kräver 2026 och hur du ritar upp den steg för steg.</p>
+<p>En dåligt planerad byggarbetsplats kostar timmar varje dag: material som flyttas fram och tillbaka, lastbilar som blockerar varandra, kranlyft som stoppas för att en gångväg ligger fel. En genomtänkt <strong>APD-plan</strong> är verktyget som förhindrar det. För dig som driver ett litet eller medelstort byggföretag, är platschef eller entreprenör, är arbetsplatsdispositionen ofta skillnaden mellan ett bygge som flyter och ett som ständigt hackar. Här går vi igenom vad en APD-plan bygg-mässigt ska innehålla, vad reglerna kräver 2026 och hur du ritar upp den steg för steg.</p>
 
 <p>Vill du komma igång direkt hittar du underlag och checklistor bland <a href="/sv/verktyg">våra gratis byggverktyg -&gt;</a> som du kan använda som stomme när du planerar etableringen.</p>
 
@@ -1889,7 +1889,7 @@ const A_LIFTUTBILDNING_KRAV_BYGG: BlogPost = {
 };
 
 const A_BULLER_VIBRATIONER_BYGG_GRANSVARDE_HTML = `
-<p>Buller vibrationer bygg gränsvärde är inte bara en juridisk detalj – det är två av de vanligaste dolda arbetsmiljöriskerna på en byggarbetsplats, och de ger skador som märks först efter åratal: hörselnedsättning, tinnitus och vita fingrar (HAVS). Sedan 1 januari 2025 finns reglerna samlade i AFS 2023:10 "Risker i arbetsmiljön", inte längre i de gamla föreskrifterna AFS 2005:15 och 2005:16. Här går vi igenom exakta gränsvärden, mät- och kontrollkrav som gäller 2026.</p>
+<p>Buller och vibrationer på bygget är inte bara juridiska detaljer kring gränsvärden – de är två av de vanligaste dolda arbetsmiljöriskerna på en byggarbetsplats, och de ger skador som märks först efter åratal: hörselnedsättning, tinnitus och vita fingrar (HAVS). Sedan 1 januari 2025 finns reglerna samlade i AFS 2023:10 "Risker i arbetsmiljön", inte längre i de gamla föreskrifterna AFS 2005:15 och 2005:16. Här går vi igenom exakta gränsvärden, mät- och kontrollkrav som gäller 2026.</p>
 
 <p>Bygg in kontrollpunkterna i ditt systematiska arbetsmiljöarbete med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall &rarr;</a> så att buller- och vibrationsbedömningen blir en rutin, inte en efterhandskonstruktion.</p>
 

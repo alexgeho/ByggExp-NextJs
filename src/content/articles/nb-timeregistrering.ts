@@ -78,7 +78,7 @@ const S_GRATIS_TIMEREGISTRERING_APP_HTML = `
 <figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: timeregistrering fra stempling til lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Uansett pris: verdien kommer når timene blir ferdig underlag for lønn og faktura.</figcaption></figure>
 
 <h2>Hva betyr en gratis timeregistrering-app?</h2>
-<p>Noen apper er gratis for et lite antall brukere, andre gir en gratis prøveperiode eller en gratis demo så du kan teste før du bestemmer deg. Det viktigste er ikke prisen alene, men om appen faktisk gir deg ferdig underlag til lønn og faktura – ellers flytter du bare papirarbeidet.</p>
+<p>Noen apper er gratis for et lite antall brukere, andre gir en prøveperiode eller demo så du kan teste før du bestemmer deg. Det viktigste er ikke prisen alene, men om appen faktisk gir deg ferdig underlag til lønn og faktura – ellers flytter du bare papirarbeidet.</p>
 
 <h2>Hva du bør se etter</h2>
 <ul>
@@ -132,7 +132,7 @@ const S_STEMPLINGSUR_APP_HTML = `
 <p>Et stemplingsur-app erstatter det fysiske stemplingsuret med mobilen. I stedet for å dra et kort ved en terminal trykker den ansatte "Stemple inn" når arbeidsdagen begynner og "Stemple ut" når den slutter. Tiden registreres automatisk og kobles til riktig prosjekt.</p>
 
 <h2>Hvorfor GPS på stemplingsuret</h2>
-<p>GPS-funksjonen bekrefter at innstemplingen skjer på arbeidsplassen, ikke hjemme fra sofaen. Det gir arbeidslederen trygghet i at timene stemmer, og den ansatte en enkel måte å vise oppmøte på. For firmaer med folk på flere prosjekter er GPS det som gjør mobilstempling pålitelig.</p>
+<p>GPS-funksjonen bekrefter at innstemplingen skjer på arbeidsplassen, ikke hjemme fra sofaen. Det gir arbeidslederen trygghet for at timene stemmer, og den ansatte en enkel måte å vise oppmøte på. For firmaer med folk på flere prosjekter er GPS det som gjør mobilstempling pålitelig.</p>
 
 <h2>Stemplingsur-app for Android og iPhone</h2>
 <p>Et byggelag har sjelden samme telefon. Derfor bør stemplingsuret finnes for både Android og iPhone, med samme funksjon. ByggExp-appen fungerer på begge.</p>

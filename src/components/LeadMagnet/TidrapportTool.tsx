@@ -225,6 +225,28 @@ export default function TidrapportTool() {
     doc.text(`${sum.toLocaleString('sv-SE')} tim`, hoursRightX, y + 16, { align: 'right' });
     rule(y + rowH + 2, 120);
 
+    // Client approval — filled in by the client's representative on handover.
+    y += rowH + 40;
+    if (y + 70 > pageH - 40) {
+      doc.addPage();
+      y = 60;
+    }
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(11);
+    doc.setTextColor(0, 0, 0);
+    doc.text('Godkänd av (beställarens representant)', M, y);
+    y += 30;
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(10);
+    doc.setDrawColor(150, 150, 150);
+    doc.setLineWidth(0.5);
+    doc.text('Namn:', M, y);
+    doc.line(M + 42, y + 2, M + 330, y + 2);
+    doc.text('Signatur:', M + 360, y);
+    doc.line(M + 420, y + 2, M + 615, y + 2);
+    doc.text('Datum:', M + 645, y);
+    doc.line(M + 695, y + 2, pageW - M, y + 2);
+
     doc.save(`${filenameBase}.pdf`);
   }
 

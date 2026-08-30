@@ -1237,6 +1237,11 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 
 <figure class="app-shots"><img src="/features-content/automatisk-tidrapportering-och-export-1.webp" alt="Tidrapporteringssystem i mobilen: arbetspass med planerade, manuella och GPS-timmar i en månadskalender" width="1000" height="548" loading="lazy"><figcaption>Tidrapporteringssystemet i appen – planerade, manuella och GPS-timmar samlade per medarbetare, klara att summera och exportera.</figcaption></figure>
 
+<h2>Exportera tidredovisning till Excel, lön och faktura</h2>
+<p>Nyttan med systemet ligger i sista steget: att den samlade tiden blir ett färdigt underlag utan handpåläggning. I tabellen ser du tre typer av timmar per medarbetare och dag – <strong>planerade</strong> timmar (satta utifrån arbetstiden när projektet skapades, och redigerbara direkt i tabellen), <strong>GPS-timmar</strong> (registrerade via platsdata) och <strong>manuellt inmatade</strong> timmar. Är någon frånvarande tas timmarna bort automatiskt, och vill du låta den manuella tiden ersätta den planerade räcker det att klicka på den.</p>
+<p>När perioden stämmer exporterar du den till <strong>Excel, CSV eller PDF</strong> med ett klick – ett rent ark med varje medarbetare, varje dag och summorna redan uträknade. Samma underlag kan du <strong>förbereda som faktura</strong> eller <strong>skicka till lön</strong> genom att bocka i de medarbetare du vill ha med.</p>
+<figure class="video-embed" style="position:relative;width:100%;aspect-ratio:16/9;margin:24px 0"><iframe src="https://www.youtube-nocookie.com/embed/eJg6SQWo9iY" title="Exportera tidrapporter till Excel, lön och faktura i ByggExp" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px"></iframe></figure>
+
 <h2>Vad ett tidrapporteringssystem för bygg bör klara</h2>
 <ul>
 <li>Enkel tidsregistrering i mobilen (iPhone och Android), gärna med GPS.</li>
@@ -1272,6 +1277,8 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 <p>När du lägger tid varje vecka på att renskriva timmar, när timmar hamnar fel eller glöms, eller när fler än ett par personer ska rapportera från olika arbetsplatser. Då tjänar ett system snabbt in sig.</p>
 <h3>Hur lång tid tar det att komma igång?</h3>
 <p>Ett enkelt system kräver ingen utbildning – lägg upp projekt och medarbetare, låt laget ladda ner appen och börja checka in. Övergången är oftast klar på dagar.</p>
+<h3>Kan jag exportera tidrapporten till Excel eller PDF?</h3>
+<p>Ja. Du exporterar den valda perioden till Excel, CSV eller PDF med ett klick – ett färdigt ark per medarbetare och dag med summorna uträknade. Samma underlag kan förberedas som faktura eller skickas till lön.</p>
 `.trim();
 
 const A_TIDRAPPORTERINGSSYSTEM_BYGG: BlogPost = {

@@ -40,9 +40,9 @@ type ToolContent = {
 
 const CONTENT: Record<Locale, ToolContent> = {
   sv: {
-    metaTitle: 'Reglar-kalkylator – antal reglar & löpmeter virke (c/c) | ByggExp',
+    metaTitle: 'Reglar dimensioner & antal – gratis kalkylator (c/c) | ByggExp',
     description:
-      'Fyll i väggens längd och c/c så får du antal reglar och löpmeter virke – t.ex. 6 m vägg med c/c 600 mm = 11 reglar. Gratis kalkylator för regelvägg, utan konto.',
+      'Reglar och rätt dimensioner för regelväggen: fyll i väggens längd och c/c så får du antal reglar och löpmeter virke – t.ex. 6 m vägg med c/c 600 mm = 11 reglar. Gratis, utan konto.',
     badge: 'Gratis kalkylator',
     h1: 'Reglar & virke',
     intro:

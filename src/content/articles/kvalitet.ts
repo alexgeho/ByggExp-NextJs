@@ -219,7 +219,7 @@ const EGENKONTROLL: BlogPost = {
 };
 
 const TIDRAPPORTERING_HTML = `
-<p>Tidrapportering känns som en administrativ börda – men det är faktiskt en av de mest lönsamma vanorna ett byggföretag kan ha. Rätt förd tid ger korrekt lön, säkrare fakturor, färre tvister och svaret på den viktigaste frågan av alla: hur stor andel av arbetstiden kan du egentligen fakturera? Här går vi igenom vad en tidrapport ska innehålla, skillnaden mot personalliggare, och hur du för tid utan pappersstrul.</p>
+<p><a href="/sv/blog/tidrapportering-hantverkare">Tidrapportering</a> känns som en administrativ börda – men det är faktiskt en av de mest lönsamma vanorna ett byggföretag kan ha. Rätt förd tid ger korrekt lön, säkrare fakturor, färre tvister och svaret på den viktigaste frågan av alla: hur stor andel av arbetstiden kan du egentligen fakturera? Här går vi igenom vad en tidrapport ska innehålla, skillnaden mot personalliggare, och hur du för tid utan pappersstrul.</p>
 
 <p><a href="/sv/verktyg/tidrapport-mall">Ladda ner en gratis tidrapport-mall (PDF/Excel) →</a></p>
 
@@ -1577,7 +1577,7 @@ const A_TIDREDOVISNING_BYGGFORETAG_HTML = `
 <li><strong>Blanda ihop med personalliggaren.</strong> Personalliggaren uppfyller inte kravet på löneunderlag, och tidredovisningen uppfyller inte lagkravet på närvaroregistrering.</li>
 </ul>
 
-<p>Med en löpande, projektkopplad tidredovisning får du rätt lön, rätt faktura och koll på lönsamheten – och slipper pusslet vid varje lönekörning.</p>
+<p>Med en löpande, projektkopplad <a href="/sv/blog/tidredovisning-app">tidredovisning</a> får du rätt lön, rätt faktura och koll på lönsamheten – och slipper pusslet vid varje lönekörning.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är skillnaden mellan tidredovisning och personalliggare?</h3>

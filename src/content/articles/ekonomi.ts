@@ -4745,7 +4745,7 @@ const A_KORJOURNAL_KRAV_SKATTEVERKET_BYGG_HTML = `
 
 <h2>Så gör du i ByggExp</h2>
 
-<p>ByggExp ersätter inte en dedikerad körjournalstjänst, men verktyget ger dig underlaget som gör körjournalen trovärdig. När du tidrapporterar per projekt och kund byggs det upp en spårbar logg över var dina montörer varit och vilka arbetsplatser som besökts – exakt den information som en granskad körjournal behöver kunna verifieras mot. Kopplar du ihop tidrapport, projekt och fakturaunderlag blir det svårt för Skatteverket att ifrågasätta att en resa var i tjänsten, eftersom arbetet på plats finns dokumenterat samma dag. Vår tidrapport-mall är en enkel start; för löpande drift finns projektöversikten i systemet.</p>
+<p>ByggExp ersätter inte en dedikerad körjournalstjänst, men verktyget ger dig underlaget som gör körjournalen trovärdig. När du <a href="/sv/blog/tidrapportering-hantverkare">tidrapporterar per projekt och kund</a> byggs det upp en spårbar logg över var dina montörer varit och vilka arbetsplatser som besökts – exakt den information som en granskad körjournal behöver kunna verifieras mot. Kopplar du ihop tidrapport, projekt och fakturaunderlag blir det svårt för Skatteverket att ifrågasätta att en resa var i tjänsten, eftersom arbetet på plats finns dokumenterat samma dag. Vår tidrapport-mall är en enkel start; för löpande drift finns projektöversikten i systemet.</p>
 
 <h2>Vanliga frågor</h2>
 

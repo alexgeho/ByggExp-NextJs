@@ -553,7 +553,7 @@ const A_MASTE_HA_KOLLEKTIVAVTAL_BYGG_HTML = `
 <p>Och som underentreprenör kan beställaren kräva att du har kollektivavtal via avtalet, för att slippa egna arbetskonflikter på arbetsplatsen. Vid stora projekt och offentlig upphandling är det därför ofta i praktiken en förutsättning för att över huvud taget få uppdraget – oavsett vad lagen säger.</p>
 
 <h2>Så gör du i ByggExp</h2>
-<p>ByggExp tar inte ställning för dig i avtalsfrågan – men vi ser till att din arbetsgivardokumentation är i ordning oavsett hur du väljer. I ByggExp samlar du anställningsavtal, tidrapporter och personaluppgifter på ett ställe, så att du snabbt kan visa villkor och arbetad tid om Byggnads, en beställare eller Skatteverket frågar. Har du kollektivavtal blir det enklare att hålla koll på att rapporterad tid och lön stämmer mot avtalets nivåer. Har du inte det, får du ändå ordning på det lagstadgade – korrekta avtal och spårbar tidredovisning – som gäller alla arbetsgivare i byggbranschen.</p>
+<p>ByggExp tar inte ställning för dig i avtalsfrågan – men vi ser till att din arbetsgivardokumentation är i ordning oavsett hur du väljer. I ByggExp samlar du anställningsavtal, tidrapporter och personaluppgifter på ett ställe, så att du snabbt kan visa villkor och arbetad tid om Byggnads, en beställare eller Skatteverket frågar. Har du kollektivavtal blir det enklare att hålla koll på att rapporterad tid och lön stämmer mot avtalets nivåer. Har du inte det, får du ändå ordning på det lagstadgade – korrekta avtal och spårbar <a href="/sv/blog/tidredovisning-app">tidredovisning</a> – som gäller alla arbetsgivare i byggbranschen.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Måste jag ha kollektivavtal för att anställa i byggbranschen?</h3>

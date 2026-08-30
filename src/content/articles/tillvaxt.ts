@@ -516,7 +516,7 @@ const A_PROJEKTHANTERING_BYGGFORETAG_HTML = `
 <li><strong>Funkar det i mobilen på bygget?</strong> Det är där projektet händer.</li>
 </ul>
 
-<p>Rätt projekthantering gör att du styr projektet medan det pågår – och slipper överraskningar i efterkalkylen.</p>
+<p>Rätt projekthantering gör att du <a href="/sv/blog/app-for-byggprojekt">styr projektet</a> medan det pågår – och slipper överraskningar i efterkalkylen.</p>
 `;
 
 const A_PROJEKTHANTERING_BYGGFORETAG: BlogPost = {
@@ -1074,7 +1074,7 @@ const A_APP_TIDRAPPORTERING_BYGG_HTML = `
 <p>Poängen med digital tidrapportering är att samma timme bara matas in en gång och sedan används överallt. De granskade och attesterade passen blir <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a>, <a href="/sv/blog/fakturera-fran-byggexp">fakturarader</a> och en post i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektuppföljningen</a> samtidigt. Ska du välja verktyg för hela kedjan? Läs vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 <h2>Tidrapportering för hantverkare och entreprenad</h2>
-<p>För hantverkare och underentreprenörer är tidrapporteringen ofta grunden för både lön och kundfaktura. En app som kopplar tid till projekt gör att du kan fakturera på loggad tid utan dubbelarbete – timmarna blir automatiskt fakturarader. Läs mer om hur tid blir faktura i vår guide om <a href="/sv/blog/fakturera-fran-byggexp">fakturering från ByggExp</a>.</p>
+<p>För <a href="/sv/blog/tidrapportering-hantverkare">hantverkare och underentreprenörer</a> är tidrapporteringen ofta grunden för både lön och kundfaktura. En app som kopplar tid till projekt gör att du kan fakturera på loggad tid utan dubbelarbete – timmarna blir automatiskt fakturarader. Läs mer om hur tid blir faktura i vår guide om <a href="/sv/blog/fakturera-fran-byggexp">fakturering från ByggExp</a>.</p>
 
 <h2>Vad du bör titta efter i en app för tidrapport</h2>
 <ul>
@@ -1190,7 +1190,7 @@ const A_STAMPELKLOCKA_APP_GPS: BlogPost = {
 };
 
 const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
-<p>När företaget växer räcker det inte längre med lappar och Excel. Ett tidrapporteringssystem samlar all tidsregistrering på ett ställe: timmarna registreras i mobilen, samlas per projekt och medarbetare, och blir färdig tidredovisning för lön, faktura och uppföljning. Här går vi igenom vad ett tidrapporteringssystem för bygg bör klara – och varför "enkelt" ofta slår "avancerat".</p>
+<p>När företaget växer räcker det inte längre med lappar och Excel. Ett tidrapporteringssystem samlar all tidsregistrering på ett ställe: timmarna registreras i mobilen, samlas per projekt och medarbetare, och blir färdig <a href="/sv/blog/tidredovisning-app">tidredovisning</a> för lön, faktura och uppföljning. Här går vi igenom vad ett tidrapporteringssystem för bygg bör klara – och varför "enkelt" ofta slår "avancerat".</p>
 
 <p>Vill du komma igång snabbt? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering och export</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/tidrapporteringssystem.webp" alt="Diagram: tidsregistrering, tidrapportering och tidredovisning i tre steg" width="720" height="380" loading="lazy"><figcaption>Tre steg i ett system: tidsregistrering (stämpling), tidrapportering (koppling till projekt) och tidredovisning (underlag för lön och faktura).</figcaption></figure>
@@ -1757,7 +1757,7 @@ const A_AFFARSSYSTEM_BYGGFORETAG_HTML = `
 <p>Ett affärssystem är den gemensamma plattform där hela verksamheten körs: projekt, personal, tid, material, offert, faktura och ekonomi. Skillnaden mot enskilda appar är att allt delar samma data – loggad tid blir automatiskt både löneunderlag och fakturarad och räknas in i projektets resultat.</p>
 
 <h2>Molnbaserat – tillgängligt på bygget och kontoret</h2>
-<p>Ett molnbaserat byggprogram körs i webbläsaren och i appen, utan installation eller egen server. Snickaren rapporterar i mobilen på bygget, kontoret ser samma siffror i realtid. Det är förutsättningen för att data ska vara aktuell och samlad.</p>
+<p>Ett molnbaserat byggprogram körs i webbläsaren och i appen, utan installation eller egen server. Snickaren <a href="/sv/blog/app-for-byggprojekt">rapporterar i mobilen på bygget</a>, kontoret ser samma siffror i realtid. Det är förutsättningen för att data ska vara aktuell och samlad.</p>
 
 <h2>Vad ett affärssystem för bygg bör täcka</h2>
 <ul>
@@ -2219,7 +2219,7 @@ const A_PROJEKTLEDNING_BYGGFORETAG_HTML = `
 <figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projektledning i bygg – faser från kalkyl och planering till produktion, uppföljning och överlämning" width="720" height="380" loading="lazy"><figcaption>Projektledningens faser: kalkyl och anbud, planering, produktion, löpande uppföljning och överlämning.</figcaption></figure>
 
 <h2>Vad är projektledning i bygg?</h2>
-<p>Projektledning är ansvaret för att ett byggprojekt når sina mål inom ramarna för tid, budget och kvalitet. Byggprojektledaren håller ihop kalkyl, planering, <a href="/sv/blog/personalplanering-bygg">bemanning</a>, ekonomi och dokumentation – och är den som ser till att kontoret och bygget har samma bild av läget. Skillnaden mot ren arbetsledning är horisonten: arbetsledaren styr dagens jobb, projektledaren styr hela projektet mot slutmålet.</p>
+<p>Projektledning är ansvaret för att ett byggprojekt når sina mål inom ramarna för tid, budget och kvalitet. Byggprojektledaren håller ihop kalkyl, planering, <a href="/sv/blog/personalplanering-bygg">bemanning</a>, ekonomi och dokumentation – och är den som ser till att kontoret och bygget har samma bild av läget. Skillnaden mot ren arbetsledning är horisonten: arbetsledaren styr dagens jobb, projektledaren <a href="/sv/blog/app-for-byggprojekt">styr hela projektet</a> mot slutmålet.</p>
 
 <h2>Faserna i ett byggprojekt</h2>
 <div class="article-table"><table>

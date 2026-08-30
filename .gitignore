@@ -49,3 +49,6 @@ design-assets/features-src/
 
 # Admin API credentials for CMS push scripts (owner-only, never commit)
 .env.admin
+
+# Personal job/LIA hunt working folder (local only, never commit/push)
+internship/

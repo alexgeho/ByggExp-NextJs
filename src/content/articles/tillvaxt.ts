@@ -1958,7 +1958,176 @@ const S_TIDRAPPORT_APP_IPHONE: BlogPost = {
   publishedAt: "2026-08-25T09:00:00.000Z", createdAt: "2026-08-25T09:00:00.000Z", updatedAt: "2026-08-25T09:00:00.000Z",
 };
 
+const A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML = `
+<p>Whiteboarden på kontoret och ett delat Excel-ark räcker så länge ni är några stycken på ett projekt. Men när flera lag ska fördelas över flera byggen – med semestrar, sjukdom och ändringar i sista stund – blir pusslet ohållbart. Ett schemaläggningssystem samlar hela bemanningen i en delad vy, kopplad till projekt och tid, så att rätt person är på rätt bygge och du ser luckorna innan de blir dyra. Här går vi igenom vad ett schemaläggningssystem för bygg bör klara, och när du vuxit ur kalkylarket.</p>
+
+<p>Vill du börja enkelt? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, eller läs om <a href="/sv/blog/schemalaggning-bygg">schemaläggning för byggföretag</a> steg för steg.</p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/schemalaggning.webp" alt="Diagram: schemaläggningssystem – hela laget per dag i en delad vy, kopplat till projekt" width="720" height="380" loading="lazy"><figcaption>Hela laget i en vy: planera per person eller projekt över veckan, med frånvaro och överbokning synligt direkt.</figcaption></figure>
+
+<h2>Vad är ett schemaläggningssystem?</h2>
+<p>Ett schemaläggningssystem fördelar personal på projekt och dagar och håller planen levande när något ändras. Skillnaden mot en handritad plan är att systemet visar hela laget samtidigt, flaggar krockar och frånvaro automatiskt och delar ändringen direkt till dem som berörs.</p>
+
+<h2>Whiteboard och Excel vs ett system</h2>
+<div class="article-table"><table>
+<thead><tr><th>&nbsp;</th><th>Whiteboard / Excel</th><th>Schemaläggningssystem</th></tr></thead>
+<tbody>
+<tr><td><strong>Överblick</strong></td><td>En plats, ett projekt i taget</td><td>Hela laget, alla projekt samtidigt</td></tr>
+<tr><td><strong>Ändringar</strong></td><td>Suddas och skrivs om</td><td>Dra och släpp, historiken kvar</td></tr>
+<tr><td><strong>Frånvaro</strong></td><td>Hålls i huvudet</td><td>Semester och sjuk syns i planen</td></tr>
+<tr><td><strong>Överbokning</strong></td><td>Upptäcks för sent</td><td>Flaggas direkt</td></tr>
+<tr><td><strong>Laget ser planen</strong></td><td>Bara på kontoret</td><td>I mobilen, i realtid</td></tr>
+<tr><td><strong>Kopplat till tid</strong></td><td>Nej</td><td>Planerad tid mot loggad</td></tr>
+</tbody>
+</table></div>
+
+<h2>Vad ett schemaläggningssystem för bygg bör klara</h2>
+<ul>
+<li>Delad vy över hela laget per vecka och månad, planerat per person eller per projekt.</li>
+<li>Frånvaro (semester, sjukdom) syns i planen, så du inte bokar någon som är ledig.</li>
+<li>Överbokning flaggas när samma person hamnar på två ställen samtidigt.</li>
+<li>Planen delas till appen och uppdateras i realtid för alla berörda.</li>
+<li>Koppling till <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapporteringen</a>, så planerad tid kan jämföras med den som faktiskt loggas.</li>
+</ul>
+
+<figure class="web-shot"><img src="/features-content/dagsplanering-och-planeringsmoten-web.webp" alt="Schemaläggningssystem i webbadmin: hela laget planerat per dag och projekt, med frånvaro och överbokning synligt" width="1000" height="548" loading="lazy"><figcaption>Planeringen i webbadmin – dra och släpp personal mellan projekt, med krockar och ledighet markerade.</figcaption></figure>
+
+<h2>Från plan till faktisk tid och marginal</h2>
+<p>Nyttan blir störst när schemat inte lever sitt eget liv. När den planerade tiden möter <a href="/sv/blog/automatisk-tidrapportering-och-export">loggad tid</a> ser du direkt om ett projekt drar över, och avvikelsen dyker upp i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a> medan du fortfarande kan flytta folk eller stämma av med kunden. Planering, tid och ekonomi blir samma kedja i stället för tre separata listor.</p>
+
+<h2>Tecken på att du vuxit ur Excel-schemat</h2>
+<ul>
+<li>Du ritar om planen flera gånger i veckan när jobb flyttas.</li>
+<li>Någon dyker upp på fel bygge, eller två lag krockar på samma.</li>
+<li>Semester och sjukdom finns bara i ditt huvud.</li>
+<li>Laget ringer kontoret för att veta var de ska imorgon.</li>
+<li>Ni är fler än ett par lag på fler än ett projekt.</li>
+</ul>
+
+<h2>Schemaläggning, bemanning och resursplanering – vad är vad?</h2>
+<p>Termerna glider ihop men skiljer sig i horisont: <a href="/sv/blog/personalplanering-bygg">bemanningsplanering</a> handlar om vilka personer som behövs framåt, <a href="/sv/blog/resursplanering-bygg">resursplanering</a> väger in maskiner och material, och schemaläggningen är den konkreta fördelningen dag för dag. Ett bra system håller ihop alla tre.</p>
+
+<h2>Kom igång</h2>
+<p>Vill du sluta pussla ihop schemat i huvudet och i Excel? Läs om <a href="/sv/blog/schemalaggning-bygg">schemaläggning för byggföretag</a>, ladda ner en gratis <a href="/sv/blog/gantt-schema-mall-bygg">Gantt- och schemamall</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<h2>Relaterade guider om planering</h2>
+<ul>
+<li><a href="/sv/blog/schemalaggning-bygg">Schemaläggning för byggföretag</a> – personalplanering i en vy.</li>
+<li><a href="/sv/blog/personalplanering-bygg">Bemanningsplanering och personalplanering</a> – rätt person, rätt plats.</li>
+<li><a href="/sv/blog/resursplanering-bygg">Resursplanering för bygg</a> – personal, maskiner och material.</li>
+<li><a href="/sv/blog/gantt-schema-mall-bygg">Gantt- och schemamall för bygg</a> – planera projektet visuellt.</li>
+<li><a href="/sv/blog/projekthanteringssystem-bygg">Projekthanteringssystem för bygg</a> – planering, tid och marginal i ett.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är ett schemaläggningssystem för bygg?</h3>
+<p>Ett verktyg som fördelar personal på projekt och dagar och håller planen levande när något ändras – till skillnad från Excel, som du får skriva om för hand.</p>
+<h3>När räcker Excel fortfarande?</h3>
+<p>Så länge ni är ett lag på ett projekt räcker ett delat ark långt. Behovet av ett system uppstår när flera lag ska fördelas över flera byggen samtidigt, och ändringar sker under veckan.</p>
+<h3>Ser personalen sitt schema i mobilen?</h3>
+<p>Ja. Planen delas till appen och ändringar syns direkt, så ingen behöver ringa kontoret för att veta var de ska.</p>
+<h3>Hänger schemat ihop med tidrapporteringen?</h3>
+<p>I ett samlat system, ja. Planerad tid kan jämföras med loggad tid, och avvikelser syns i projektuppföljningen medan du fortfarande kan agera.</p>
+<h3>Vad kostar ett schemaläggningssystem?</h3>
+<p>Det beror på hur många ni är. Boka en demo för pris – ett enkelt system tjänar oftast in sig snabbt genom mindre pusslande och färre krockar på bygget.</p>
+`.trim();
+
+const A_SCHEMALAGGNINGSSYSTEM_BYGG: BlogPost = {
+  _id: "code-schemalaggningssystem-bygg",
+  title: "Schemaläggningssystem för bygg – planera personal, projekt och tid", slug: "schemalaggningssystem-bygg", locale: "sv",
+  excerpt: "Ett schemaläggningssystem samlar hela bemanningen i en delad vy, kopplad till projekt och tid – rätt person på rätt bygge, med frånvaro och överbokning synligt direkt. Så väljer du rätt.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML,
+  seoTitle: "Schemaläggningssystem för bygg – personal & projekt | ByggExp", seoDescription: "Schemaläggningssystem för byggföretag: planera hela laget per vecka och projekt i en delad vy, se frånvaro och överbokning direkt och koppla planen till tiden.",
+  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-30T10:00:00.000Z", createdAt: "2026-08-30T10:00:00.000Z", updatedAt: "2026-08-30T10:00:00.000Z",
+};
+
+const A_PROJEKTHANTERINGSSYSTEM_BYGG_HTML = `
+<p>När kalkylen ligger i ett program, tiden i ett annat och fotona i telefonen, är det ingen som ser hur projektet faktiskt går förrän slutfakturan. Ett projekthanteringssystem – eller projektledningssystem – samlar planering, tid, uppgifter, dokumentation och ekonomi per projekt, så att du styr marginalen medan bygget pågår. Här går vi igenom vad ett projekthanteringssystem för bygg bör klara och hur du väljer rätt.</p>
+
+<p>Vill du ha grunderna först? Läs om <a href="/sv/blog/projekthantering-byggforetag">projekthantering för byggföretag</a> eller hur du <a href="/sv/blog/digitalisera-byggforetag-projektstyrning">digitaliserar projektstyrningen</a>.</p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projekthanteringssystem – planering, tid, kostnader och marginal samlat per projekt" width="720" height="380" loading="lazy"><figcaption>Ett nav per projekt: planering, tid, kostnader och fakturerat möts, så marginalen räknas ihop löpande.</figcaption></figure>
+
+<h2>Vad är ett projekthanteringssystem för bygg?</h2>
+<p>Ett projekthanteringssystem är navet där allt som rör ett projekt möts: bemanning och schema, nedlagd tid, uppgifter och arbetsorder, foton och dokument, offert, utlägg och faktura. Poängen är kopplingen – när timmar och kostnader bokförs på projektet räknas marginalen ihop av sig själv, i stället för att du sammanställer den i efterhand.</p>
+
+<h2>Projekthanteringssystem eller projektledningssystem?</h2>
+<p>Begreppen används om vartannat och betyder i praktiken samma sak för ett byggföretag: ett system som håller ihop projektets planering, genomförande och ekonomi. Det som skiljer ett system byggt för bygg från ett generellt projektverktyg är att det förstår timmar, ÄTA, ROT och marginal – inte bara uppgifter i en lista.</p>
+
+<h2>Vad ett projekthanteringssystem bör klara</h2>
+<ul>
+<li><strong>Planering</strong> – <a href="/sv/blog/schemalaggningssystem-bygg">schema och bemanning</a> kopplat till projektet.</li>
+<li><strong>Tid per projekt</strong> – timmar bokförs där jobbet sker, för <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">kostnadskontroll och marginal</a>.</li>
+<li><strong>Uppgifter och arbetsorder</strong> – <a href="/sv/blog/arbetsorder-app-bygg">jobb</a> kopplade till projekt och person.</li>
+<li><strong>Dokumentation</strong> – foto och dokument samlade per projekt.</li>
+<li><strong>Ekonomi</strong> – offert, utlägg, kostnader och faktura på samma projekt.</li>
+<li><strong>Marginal i realtid</strong> – nedlagt mot kalkyl medan projektet pågår.</li>
+</ul>
+
+<figure class="web-shot"><img src="/features-content/projektekonomi-och-lonsamhet-web.webp" alt="Projekthanteringssystem i webbadmin: budget mot utfall, timmar, kostnader och marginal per projekt" width="1000" height="548" loading="lazy"><figcaption>Projektets ekonomi i webbadmin – budget mot utfall, timmar, kostnader och marginal uppdateras löpande.</figcaption></figure>
+
+<h2>Spridda verktyg vs ett system</h2>
+<div class="article-table"><table>
+<thead><tr><th>&nbsp;</th><th>Spridda verktyg</th><th>Projekthanteringssystem</th></tr></thead>
+<tbody>
+<tr><td><strong>Var finns data</strong></td><td>I flera program och telefoner</td><td>Samlat per projekt</td></tr>
+<tr><td><strong>Marginal</strong></td><td>Räknas efter projektet</td><td>Syns löpande</td></tr>
+<tr><td><strong>Inmatning</strong></td><td>Tid, faktura och kalkyl var för sig</td><td>En registrering, används överallt</td></tr>
+<tr><td><strong>Kontor och bygge</strong></td><td>Olika bilder av läget</td><td>Samma bild i realtid</td></tr>
+<tr><td><strong>ÄTA och ändringar</strong></td><td>Tappas lätt bort</td><td>Loggas på projektet</td></tr>
+</tbody>
+</table></div>
+
+<h2>Så väljer du rätt system</h2>
+<ul>
+<li><strong>Ser du marginalen löpande?</strong> Ett system för bygg visar nedlagd tid mot kalkyl i realtid.</li>
+<li><strong>Hänger tid, foto och ekonomi ihop?</strong> Annars blir det öar av data som ingen orkar sammanställa.</li>
+<li><strong>Funkar det i mobilen på bygget?</strong> Det är där projektet händer – verktyg som kräver dator blir liggande och används sällan.</li>
+<li><strong>Är det byggt för bygg?</strong> Timmar, ÄTA, ROT och byggavtalet ska förstås av systemet, inte lösas med lappar vid sidan om.</li>
+</ul>
+
+<h2>Från system till bättre kalkyler</h2>
+<p>Ett projekthanteringssystem betalar sig två gånger: först genom att du agerar på projekt som drar över medan de pågår, sedan genom att utfallet blir underlag för nästa anbud. När projektet är klart jämför du utfall mot kalkyl i en <a href="/sv/blog/efterkalkyl-bygg-kalkyluppfoljning">efterkalkyl</a> och prissätter nästa jobb säkrare.</p>
+
+<h2>Kom igång</h2>
+<p>Vill du styra projekten medan de pågår? Läs om <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljning i realtid</a>, <a href="/sv/funktioner">se alla funktioner</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/projekthantering-byggforetag">Projekthantering för byggföretag</a> – tid, personal och marginal i ett.</li>
+<li><a href="/sv/blog/projektuppfoljning-bygg">Projektuppföljning i bygg</a> – tid, kostnader och lönsamhet i realtid.</li>
+<li><a href="/sv/blog/schemalaggningssystem-bygg">Schemaläggningssystem för bygg</a> – planera personal, projekt och tid.</li>
+<li><a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">Kostnadskontroll och marginal</a> – håll koll på projektets ekonomi.</li>
+<li><a href="/sv/blog/digitalisera-byggforetag-projektstyrning">Digitalisera projektstyrningen</a> – från lappar och Excel till ett system.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är ett projekthanteringssystem för bygg?</h3>
+<p>Ett system som samlar planering, tid, uppgifter, dokumentation och ekonomi per projekt, så att du ser marginalen medan projektet pågår i stället för efteråt.</p>
+<h3>Vad är skillnaden mellan projekthanteringssystem och projektledningssystem?</h3>
+<p>I praktiken samma sak för ett byggföretag. Det avgörande är inte namnet, utan att systemet är byggt för bygg.</p>
+<h3>Vad skiljer ett byggsystem från ett generellt projektverktyg?</h3>
+<p>Ett generellt verktyg hanterar uppgifter i en lista. Ett system för bygg kopplar timmar och kostnader till projektet och räknar marginalen automatiskt.</p>
+<h3>Måste hela laget använda det?</h3>
+<p>Nyttan kommer när tid och dokumentation registreras där jobbet sker. Därför ska systemet vara enkelt nog att laget använder det i mobilen utan utbildning – annars stämmer inte siffrorna.</p>
+<h3>Ser jag projektets marginal i realtid?</h3>
+<p>Ja. När timmar, utlägg och kostnader bokförs på projektet uppdateras ekonomin löpande, så du hinner agera innan budgettaket.</p>
+`.trim();
+
+const A_PROJEKTHANTERINGSSYSTEM_BYGG: BlogPost = {
+  _id: "code-projekthanteringssystem-bygg",
+  title: "Projekthanteringssystem för bygg – projektledning, tid och marginal i ett", slug: "projekthanteringssystem-bygg", locale: "sv",
+  excerpt: "Ett projekthanteringssystem (projektledningssystem) samlar planering, tid, uppgifter, dokumentation och ekonomi per projekt – så att du styr marginalen medan bygget pågår. Så väljer du rätt.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_PROJEKTHANTERINGSSYSTEM_BYGG_HTML,
+  seoTitle: "Projekthanteringssystem för bygg – projektledning | ByggExp", seoDescription: "Projekthanteringssystem / projektledningssystem för byggföretag: planering, tid per projekt, uppgifter, foto och ekonomi med marginalen synlig löpande. Så väljer du rätt.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-30T10:10:00.000Z", createdAt: "2026-08-30T10:10:00.000Z", updatedAt: "2026-08-30T10:10:00.000Z",
+};
+
 export const TILLVAXT_ARTICLES: BlogPost[] = [
+  A_SCHEMALAGGNINGSSYSTEM_BYGG,
+  A_PROJEKTHANTERINGSSYSTEM_BYGG,
   A_AFFARSSYSTEM_BYGGFORETAG,
   A_CRM_BYGGFORETAG,
   A_SERVICEHANTERING_BYGG,

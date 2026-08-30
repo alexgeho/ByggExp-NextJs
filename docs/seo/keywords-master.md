@@ -218,8 +218,9 @@ Order:
 - ✅ **Tidrapportering/system** — pillar + ~20 spokes (mature, pre-existing).
 - ✅ **Planering** — schemalaggningssystem-bygg (NEW), schemalaggning-bygg, personalplanering-bygg, resursplanering-bygg
   (strengthened for "resursplaneringsverktyg"), gantt-schema-mall-bygg. "schemaläggningsprogram" folded into the system page.
-- ✅ **Projektledning/projekthantering** — projekthanteringssystem-bygg (NEW, targets projektledningssystem too),
-  projekthantering-byggforetag, projektuppfoljning-bygg.
+- ✅ **Projektledning/projekthantering** — now a full pack: projektledning-byggforetag (NEW hub), projektplanering-bygg (NEW),
+  app-for-byggprojekt (NEW), projekthanteringssystem-bygg (NEW, targets projektledningssystem too),
+  projekthantering-byggforetag, projektuppfoljning-bygg, kostnadskontroll-byggprojekt-marginal, gantt-schema-mall-bygg.
 - ✅ **KMA/egenkontroll/arbetsmiljö** — kma-plan-mall, egenkontroll-*, skyddsrond, systematiskt-arbetsmiljoarbete + 5 tool pages.
 - ✅ **Byggdagbok** — byggdagbok (NEW, Dagbok feature gap).
 - ✅ **Kalkyl/faktura/offert** — kalkylprogram-bygg, faktureringsprogram-bygg, rot-fakturering-program, offert flows.

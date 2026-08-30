@@ -140,15 +140,17 @@ export default function TidrapportTool() {
       doc.setLineWidth(0.5);
       doc.line(M, yy, pageW - M, yy);
     };
-    // Vertical divider that sets the Signatur column apart, drawn per row so it
-    // continues correctly across page breaks.
-    const sigDivider = (top: number) => {
+    // Vertical column dividers (incl. the outer borders), drawn per row so the
+    // grid continues correctly across page breaks.
+    const colX = [M, M + 112, M + 173, sigDivX, pageW - M];
+    const colDividers = (top: number) => {
       doc.setDrawColor(205, 205, 205);
       doc.setLineWidth(0.5);
-      doc.line(sigDivX, top, sigDivX, top + rowH);
+      colX.forEach((x) => doc.line(x, top, x, top + rowH));
     };
 
     const drawTableHeader = (top: number) => {
+      rule(top, 120);
       doc.setTextColor(0, 0, 0);
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(10);
@@ -156,7 +158,7 @@ export default function TidrapportTool() {
       doc.text('Timmar', hoursRightX, top + 16, { align: 'right' });
       doc.text('Anteckning', colNoteX, top + 16);
       doc.text('Signatur', colSigX, top + 16);
-      sigDivider(top);
+      colDividers(top);
       rule(top + rowH, 120);
     };
 
@@ -201,7 +203,7 @@ export default function TidrapportTool() {
       doc.text(row.hours || '', hoursRightX, y + 16, { align: 'right' });
       const note = doc.splitTextToSize(row.note || '', noteW) as string[];
       doc.text(note[0] || '', colNoteX, y + 16);
-      sigDivider(y);
+      colDividers(y);
       rule(y + rowH, 210);
       const value = parseFloat((row.hours || '').replace(',', '.'));
       if (Number.isFinite(value)) sum += value;
@@ -213,20 +215,21 @@ export default function TidrapportTool() {
     if (opts.fillPage) {
       const fillBottom = pageH - 150;
       while (y + rowH <= fillBottom) {
-        sigDivider(y);
+        colDividers(y);
         rule(y + rowH, 210);
         y += rowH;
       }
     }
 
-    // Total (bold text + rule, no fill)
+    // Total row (part of the grid)
+    colDividers(y);
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(11);
     doc.setTextColor(0, 0, 0);
     doc.text('Totalt', colDateX, y + 16);
     const totalText = opts.fillPage && sum === 0 ? '' : `${sum.toLocaleString('sv-SE')} tim`;
     doc.text(totalText, hoursRightX, y + 16, { align: 'right' });
-    rule(y + rowH + 2, 120);
+    rule(y + rowH, 120);
 
     // Client approval — filled in by the client's representative on handover.
     y += rowH + 40;

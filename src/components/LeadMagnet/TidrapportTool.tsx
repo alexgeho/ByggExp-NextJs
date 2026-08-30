@@ -63,6 +63,34 @@ export default function TidrapportTool() {
     afterPreset('manad');
   };
 
+  // A ready-to-fill blank weekly timesheet, for people who just want to grab a
+  // template and fill it in by hand (or customise it below).
+  const blankRows = (): Row[] => WEEKDAYS.map((day) => ({ date: '', hours: '', note: day }));
+
+  function downloadBlankCsv() {
+    const out: (string | number)[][] = [
+      ['Anställd', ''],
+      ['Projekt', ''],
+      [],
+      ['Datum', 'Timmar', 'Anteckning'],
+      ...WEEKDAYS.map((day) => ['', '', day]),
+      [],
+      ['Totalt', '', ''],
+    ];
+    const csv = out
+      .map((cols) => cols.map((c) => `"${String(c ?? '').replace(/"/g, '""')}"`).join(';'))
+      .join('\r\n');
+    const blob = new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'tidrapport-tom-mall.csv';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  }
+
   function downloadCsv() {
     const rowsOut = [
       ['Anställd', employee],
@@ -87,67 +115,147 @@ export default function TidrapportTool() {
     URL.revokeObjectURL(url);
   }
 
+  // Build a clean, professional-looking timesheet PDF (branded header band,
+  // bordered zebra table, right-aligned hours, highlighted total, signature and
+  // footer). No extra deps — drawn directly with jsPDF.
+  async function generatePdf(
+    rowList: Row[],
+    meta: { employee: string; project: string },
+    filenameBase: string,
+  ) {
+    const { jsPDF } = await import('jspdf');
+    const doc = new jsPDF({ unit: 'pt', format: 'a4' });
+    const pageW = doc.internal.pageSize.getWidth();
+    const pageH = doc.internal.pageSize.getHeight();
+    const M = 40;
+    const contentW = pageW - M * 2;
+    const rowH = 22;
+    const colDateX = M + 10;
+    const colNoteX = M + 210;
+    const hoursRightX = colNoteX - 18;
+    const noteW = pageW - M - colNoteX - 8;
+
+    const drawTableHeader = (top: number) => {
+      doc.setFillColor(22, 34, 58);
+      doc.rect(M, top, contentW, rowH, 'F');
+      doc.setTextColor(255, 255, 255);
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(10);
+      doc.text('Datum', colDateX, top + 15);
+      doc.text('Timmar', hoursRightX, top + 15, { align: 'right' });
+      doc.text('Anteckning', colNoteX, top + 15);
+    };
+
+    // Header band
+    doc.setFillColor(22, 34, 58);
+    doc.rect(0, 0, pageW, 88, 'F');
+    doc.setTextColor(255, 255, 255);
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(22);
+    doc.text('Tidrapport', M, 46);
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(10);
+    doc.setTextColor(197, 205, 224);
+    doc.text('Tidredovisning per projekt', M, 64);
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(12);
+    doc.setTextColor(255, 255, 255);
+    doc.text('byggexp.se', pageW - M, 46, { align: 'right' });
+
+    // Meta
+    let y = 122;
+    doc.setFontSize(11);
+    doc.setTextColor(30, 30, 30);
+    doc.setFont('helvetica', 'bold');
+    doc.text('Anställd:', M, y);
+    doc.setFont('helvetica', 'normal');
+    doc.text(meta.employee.trim() || '—', M + 58, y);
+    doc.setFont('helvetica', 'bold');
+    doc.text('Projekt:', pageW / 2, y);
+    doc.setFont('helvetica', 'normal');
+    doc.text(meta.project.trim() || '—', pageW / 2 + 50, y);
+    y += 16;
+    doc.setFontSize(9);
+    doc.setTextColor(110, 118, 133);
+    doc.text(`Utskriven ${new Date().toLocaleDateString('sv-SE')}`, M, y);
+    y += 18;
+
+    // Table header
+    drawTableHeader(y);
+    y += rowH;
+
+    // Rows
+    doc.setFont('helvetica', 'normal');
+    doc.setLineWidth(0.5);
+    let sum = 0;
+    rowList.forEach((row, i) => {
+      if (y + rowH > pageH - 130) {
+        doc.addPage();
+        y = 60;
+        drawTableHeader(y);
+        y += rowH;
+      }
+      if (i % 2 === 1) {
+        doc.setFillColor(244, 246, 251);
+        doc.rect(M, y, contentW, rowH, 'F');
+      }
+      doc.setFontSize(10);
+      doc.setTextColor(35, 35, 35);
+      doc.text(row.date || '', colDateX, y + 15);
+      doc.text(row.hours || '', hoursRightX, y + 15, { align: 'right' });
+      const note = doc.splitTextToSize(row.note || '', noteW) as string[];
+      doc.text(note[0] || '', colNoteX, y + 15);
+      doc.setDrawColor(223, 227, 234);
+      doc.line(M, y + rowH, M + contentW, y + rowH);
+      const value = parseFloat((row.hours || '').replace(',', '.'));
+      if (Number.isFinite(value)) sum += value;
+      y += rowH;
+    });
+
+    // Total row
+    doc.setFillColor(234, 240, 251);
+    doc.rect(M, y, contentW, rowH, 'F');
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(11);
+    doc.setTextColor(22, 34, 58);
+    doc.text('Totalt', colDateX, y + 15);
+    doc.text(`${sum.toLocaleString('sv-SE')} tim`, hoursRightX, y + 15, { align: 'right' });
+    y += rowH + 44;
+
+    // Signature
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(10);
+    doc.setTextColor(35, 35, 35);
+    doc.text('Underskrift', M, y);
+    doc.setDrawColor(150, 150, 150);
+    doc.line(M + 66, y + 2, M + 250, y + 2);
+    doc.text('Datum', pageW / 2, y);
+    doc.line(pageW / 2 + 44, y + 2, pageW - M, y + 2);
+
+    // Footer
+    doc.setFontSize(8);
+    doc.setTextColor(140, 148, 163);
+    doc.text('Skapad gratis med ByggExp – byggexp.se/verktyg/tidrapport-mall', M, pageH - 28);
+
+    doc.save(`${filenameBase}.pdf`);
+  }
+
+  const fileBase = () =>
+    `tidrapport-${(employee.trim() || 'anstalld').replace(/\s+/g, '-').toLowerCase()}`;
+
   async function downloadPdf() {
     setBusy(true);
     try {
-      const { jsPDF } = await import('jspdf');
-      const doc = new jsPDF({ unit: 'pt', format: 'a4' });
-      const marginX = 48;
-      const pageWidth = doc.internal.pageSize.getWidth();
-      let y = 64;
+      await generatePdf(rows, { employee, project }, fileBase());
+    } finally {
+      setBusy(false);
+    }
+  }
 
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(20);
-      doc.text('Tidrapport', marginX, y);
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(10);
-      doc.setTextColor(120);
-      y += 18;
-      doc.text('Skapad med ByggExp – byggexp.se', marginX, y);
-      doc.setTextColor(20);
-      y += 26;
-
-      doc.setFontSize(11);
-      doc.text(`Anställd: ${employee.trim() || '—'}`, marginX, y);
-      doc.text(`Projekt: ${project.trim() || '—'}`, pageWidth / 2, y);
-      y += 22;
-
-      // table header
-      const cols = { date: marginX, hours: marginX + 130, note: marginX + 210 };
-      doc.setFont('helvetica', 'bold');
-      doc.text('Datum', cols.date, y);
-      doc.text('Timmar', cols.hours, y);
-      doc.text('Anteckning', cols.note, y);
-      y += 8;
-      doc.setDrawColor(210);
-      doc.line(marginX, y, pageWidth - marginX, y);
-      y += 16;
-      doc.setFont('helvetica', 'normal');
-
-      const pageHeight = doc.internal.pageSize.getHeight();
-      rows.forEach((row) => {
-        if (y > pageHeight - 90) {
-          doc.addPage();
-          y = 64;
-        }
-        doc.text(row.date || '—', cols.date, y);
-        doc.text(row.hours || '—', cols.hours, y);
-        const note = doc.splitTextToSize(row.note || '—', pageWidth - cols.note - marginX) as string[];
-        doc.text(note, cols.note, y);
-        y += Math.max(note.length * 14, 16) + 4;
-      });
-
-      y += 6;
-      doc.line(marginX, y, pageWidth - marginX, y);
-      y += 18;
-      doc.setFont('helvetica', 'bold');
-      doc.text(`Totalt: ${total.toLocaleString('sv-SE')} timmar`, cols.hours, y);
-      y += 40;
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(10);
-      doc.text('Underskrift: ______________________________', marginX, y);
-
-      doc.save(`tidrapport-${(employee.trim() || 'anstalld').replace(/\s+/g, '-').toLowerCase()}.pdf`);
+  async function downloadBlankPdf() {
+    setBusy(true);
+    try {
+      await generatePdf(blankRows(), { employee: '', project: '' }, 'tidrapport-tom-mall');
     } finally {
       setBusy(false);
     }
@@ -156,10 +264,34 @@ export default function TidrapportTool() {
   return (
     <div className="lm-tool">
       <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Fyll i och ladda ner din tidrapport</h2>
+        <h2 className="lm-tool-title">Ladda ner din tidrapport-mall</h2>
         <p className="lm-tool-sub">
-          Välj period (dag, vecka eller månad), fyll i timmarna och ladda ner som PDF eller Excel. Summan räknas ut automatiskt. Inget konto behövs.
+          Ladda ner en färdig tom mall direkt – eller fyll i timmarna online nedan och ladda ner en klar PDF eller Excel med summan uträknad. Inget konto behövs.
         </p>
+      </div>
+
+      <div
+        className="lm-tool-quick"
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          alignItems: 'center',
+          gap: '12px',
+          margin: '0 0 22px',
+          padding: '16px',
+          border: '1px solid #dfe3ea',
+          borderRadius: '12px',
+          background: '#f7f9fc',
+        }}
+      >
+        <span style={{ fontWeight: 600 }}>Vill du bara ha en tom mall?</span>
+        <button type="button" className="lm-tool-button" disabled={busy} onClick={() => void downloadBlankPdf()}>
+          {busy ? 'Skapar…' : 'Ladda ner tom mall (PDF)'}
+        </button>
+        <button type="button" className="lm-tool-secondary" onClick={downloadBlankCsv}>
+          Tom mall (Excel)
+        </button>
+        <span style={{ color: '#6e7685', fontSize: '0.9em' }}>Eller anpassa din egen nedan.</span>
       </div>
 
       <div className="lm-tool-presets">

@@ -2135,7 +2135,7 @@ const A_STARTA_BYGGFORETAG_2026_HTML = `
 <h3>Behöver jag ID06 och personalliggare?</h3>
 <p>ID06 krävs i praktiken av nästan alla byggarbetsplatser och generalentreprenörer. Elektronisk personalliggare är lagkrav när projektets totala kostnad överstiger cirka 235 000 kr, och saknad liggare ger kontrollavgift på 12 500 kr plus 2 500 kr per oregistrerad person.</p>
 <h3>Måste jag ha försäkring för att ta uppdrag?</h3>
-<p>Ingen försäkring är lagstadgad för ett litet byggföretag, men standardavtalen AB 04, ABT 06 och ABS 18 förutsätter att du har en ansvars- och entreprenadförsäkring. Har du anställda tillkommer avtalsförsäkringarna TFA och tjänstepension via Fora.</p>
+<p>Ingen försäkring är lagstadgad för ett litet byggföretag, men standardavtalen AB 04, ABT 06 och ABS 18 förutsätter att du har en ansvars- och <a href="/sv/blog/entreprenadforsakring-allrisk-vad-tacker">entreprenadförsäkring</a>. Har du anställda tillkommer avtalsförsäkringarna TFA och tjänstepension via Fora.</p>
 
 <h2>Kom igång</h2>
 <p>Börja med det som ger effekt direkt: sätt upp en proffsig offert med vår <a href="/sv/verktyg/offert-mall">offertmall</a> och visa kunden nettopriset med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur ByggExp hänger ihop offert, ROT och fakturering i ett flöde, <a href="/sv/contact">boka en demo</a> så går vi igenom det tillsammans.</p>
@@ -3670,7 +3670,7 @@ const A_OFFERT_TILL_BETALD_FAKTURA_FLODE: BlogPost = {
 };
 
 const A_ANSVARSFORSAKRING_BYGGFORETAG_HTML = `
-<p>Allt fler beställare och offentliga upphandlingar kräver dokumenterat försäkringsskydd innan kontraktet skrivs på. För dig som driver byggföretag räcker det inte längre att ha "en försäkring" – anbudsunderlaget pekar ofta ut vilka moment och vilka belopp som krävs. Här reder vi ut skillnaden mellan ansvarsförsäkring, allriskförsäkring och entreprenadförsäkring, och vilka nivåer som gäller för 2026.</p>
+<p>Allt fler beställare och offentliga upphandlingar kräver dokumenterat försäkringsskydd innan kontraktet skrivs på. För dig som driver byggföretag räcker det inte längre att ha "en försäkring" – anbudsunderlaget pekar ofta ut vilka moment och vilka belopp som krävs. Här reder vi ut skillnaden mellan ansvarsförsäkring, allriskförsäkring och <a href="/sv/blog/entreprenadforsakring-allrisk-vad-tacker">entreprenadförsäkring</a>, och vilka nivåer som gäller för 2026.</p>
 
 <p>Ska du snart lämna anbud? Se till att offertunderlaget är komplett med rätt villkor och referenser – bygg strukturen enkelt med <a href="/sv/verktyg/offert-mall">vår gratis offertmall -&gt;</a>.</p>
 
@@ -5057,7 +5057,7 @@ const A_VILKA_FORSAKRINGAR_BEHOVER_BYGGFORETAG_HTML = `
 <p>Det vanligaste felet är underförsäkring – att belopp och omfattning inte hängt med när företaget vuxit. Ett annat är att aldrig läsa villkoren förrän en skada inträffar, och då upptäcka undantag eller självrisker som gör ersättningen mager. Självrisknivåerna i entreprenad- och färdigställandesammanhang kan vara betydande och kopplas ofta till prisbasbeloppet, så håll koll på vad just ditt bolag har avtalat. Stäm alltid av beställarens försäkringskrav innan du skriver kontrakt, och gå igenom försäkringsbrevet minst en gång per år.</p>
 
 <h2>Så gör du i ByggExp</h2>
-<p>ByggExp tecknar inte dina försäkringar – det gör din mäklare eller ditt försäkringsbolag. Men ByggExp hjälper dig att få ordning på det som avgör vilket skydd du behöver: vilka avtal du jobbar under, vilka belopp dina projekt omfattar och vilka villkor du lovat beställaren. När offerter, avtal och underlag ligger samlat blir det enkelt att visa försäkringsgivaren rätt omsättning och riskbild, och att kontrollera att beställarens krav på ansvars- och entreprenadförsäkring faktiskt är uppfyllda innan du signerar. Du slipper leta i mejl när villkoren ska förnyas.</p>
+<p>ByggExp tecknar inte dina försäkringar – det gör din mäklare eller ditt försäkringsbolag. Men ByggExp hjälper dig att få ordning på det som avgör vilket skydd du behöver: vilka avtal du jobbar under, vilka belopp dina projekt omfattar och vilka villkor du lovat beställaren. När offerter, avtal och underlag ligger samlat blir det enkelt att visa försäkringsgivaren rätt omsättning och riskbild, och att kontrollera att beställarens krav på ansvars- och <a href="/sv/blog/entreprenadforsakring-allrisk-vad-tacker">entreprenadförsäkring</a> faktiskt är uppfyllda innan du signerar. Du slipper leta i mejl när villkoren ska förnyas.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Är företagsförsäkring ett lagkrav för byggföretag?</h3>

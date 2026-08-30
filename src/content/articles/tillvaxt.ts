@@ -432,7 +432,7 @@ const A_BYGGPROGRAM_FOR_BYGGFORETAG_HTML = `
 <p>Många börjar med lösa <a href="/sv/verktyg">gratis verktyg</a> (kalkyler, mallar) och växer in i ett samlat system när flera personer och projekt ska hänga ihop. Poängen med ett byggprogram är att du <strong>registrerar en gång</strong> – tid, foto, kostnad – och använder samma data till lön, faktura och uppföljning, i stället för att mata in allt flera gånger.</p>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp är byggt för byggföretag och hantverkare: automatisk arbetstid, uppgifter med uppföljning, live-översikt över arbetslagen, fotodokumentation per arbetspass, projekt- och personalplanering, verktygshantering, offert, faktura, projektdokument, utlägg och löner – ur samma timmar. Allt hänger ihop så att kontoret och bygget jobbar mot samma bild.</p>
+<p>ByggExp är byggt för byggföretag och hantverkare: automatisk arbetstid, uppgifter med uppföljning, live-översikt över arbetslagen, fotodokumentation per arbetspass, projekt- och <a href="/sv/blog/personalplanering-bygg">personalplanering</a>, verktygshantering, offert, faktura, projektdokument, utlägg och löner – ur samma timmar. Allt hänger ihop så att kontoret och bygget jobbar mot samma bild.</p>
 <p><a href="/sv/contact">Boka en demo av ByggExp</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
 
 <h2>Vad du ska titta på när du väljer</h2>
@@ -506,7 +506,7 @@ const A_PROJEKTHANTERING_BYGGFORETAG_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp samlar <strong>projekt- och personalplanering</strong>, tid, uppgifter, <strong>fotodokumentation</strong>, dokument, utlägg och fakturering per projekt. Eftersom timmar och kostnader bokförs på projektet ser du lönsamheten löpande – och kontoret och bygget jobbar mot samma bild. Se även guiden om att <a href="/sv/blog/digitalisera-byggforetag-projektstyrning">digitalisera projektstyrningen</a>.</p>
+<p>ByggExp samlar <strong>projekt- och <a href="/sv/blog/personalplanering-bygg">personalplanering</a></strong>, tid, uppgifter, <strong>fotodokumentation</strong>, dokument, utlägg och fakturering per projekt. Eftersom timmar och kostnader bokförs på projektet ser du lönsamheten löpande – och kontoret och bygget jobbar mot samma bild. Se även guiden om att <a href="/sv/blog/digitalisera-byggforetag-projektstyrning">digitalisera projektstyrningen</a>.</p>
 <p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
 
 <h2>Vad du ska titta på</h2>
@@ -2219,7 +2219,7 @@ const A_PROJEKTLEDNING_BYGGFORETAG_HTML = `
 <figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projektledning i bygg – faser från kalkyl och planering till produktion, uppföljning och överlämning" width="720" height="380" loading="lazy"><figcaption>Projektledningens faser: kalkyl och anbud, planering, produktion, löpande uppföljning och överlämning.</figcaption></figure>
 
 <h2>Vad är projektledning i bygg?</h2>
-<p>Projektledning är ansvaret för att ett byggprojekt når sina mål inom ramarna för tid, budget och kvalitet. Byggprojektledaren håller ihop kalkyl, planering, bemanning, ekonomi och dokumentation – och är den som ser till att kontoret och bygget har samma bild av läget. Skillnaden mot ren arbetsledning är horisonten: arbetsledaren styr dagens jobb, projektledaren styr hela projektet mot slutmålet.</p>
+<p>Projektledning är ansvaret för att ett byggprojekt når sina mål inom ramarna för tid, budget och kvalitet. Byggprojektledaren håller ihop kalkyl, planering, <a href="/sv/blog/personalplanering-bygg">bemanning</a>, ekonomi och dokumentation – och är den som ser till att kontoret och bygget har samma bild av läget. Skillnaden mot ren arbetsledning är horisonten: arbetsledaren styr dagens jobb, projektledaren styr hela projektet mot slutmålet.</p>
 
 <h2>Faserna i ett byggprojekt</h2>
 <div class="article-table"><table>
@@ -2329,7 +2329,7 @@ const A_PROJEKTPLANERING_BYGG_HTML = `
 <h3>Vad är projektplanering i bygg?</h3>
 <p>Att göra kalkylen genomförbar: aktiviteterna i rätt följd med beroenden, ett lag som räcker till, och en budget att stämma utfallet mot. Kort sagt en plan som går att styra efter, inte bara visa upp.</p>
 <h3>Hur planerar man ett byggprojekt steg för steg?</h3>
-<p>I den ordningen: först nedbrytning, för utan aktiviteter går inget att tidsätta; sedan tidplan med beroenden och kritisk linje; därefter bemanning och inköp mot tidplanen; sist budgeten, nedbruten så att utfallet går att följa löpande.</p>
+<p>I den ordningen: först nedbrytning, för utan aktiviteter går inget att tidsätta; sedan tidplan med beroenden och kritisk linje; därefter <a href="/sv/blog/personalplanering-bygg">bemanning</a> och inköp mot tidplanen; sist budgeten, nedbruten så att utfallet går att följa löpande.</p>
 <h3>Vad är kritisk linje?</h3>
 <p>Kedjan av aktiviteter utan tidsmarginal. Blir en av dem försenad flyttas hela projektets slutdatum, så det är där du lägger uppföljningen.</p>
 <h3>Vad är skillnaden mellan projektplanering och resursplanering?</h3>

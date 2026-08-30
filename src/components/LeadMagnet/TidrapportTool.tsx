@@ -115,9 +115,9 @@ export default function TidrapportTool() {
     URL.revokeObjectURL(url);
   }
 
-  // Build a clean, professional-looking timesheet PDF (branded header band,
-  // bordered zebra table, right-aligned hours, highlighted total, signature and
-  // footer). No extra deps — drawn directly with jsPDF.
+  // Build a print-friendly, ink-light timesheet PDF: black text on white with
+  // thin rules only — no filled header band or zebra shading, so it's cheap to
+  // print. No extra deps — drawn directly with jsPDF.
   async function generatePdf(
     rowList: Row[],
     meta: { employee: string; project: string },
@@ -127,105 +127,101 @@ export default function TidrapportTool() {
     const doc = new jsPDF({ unit: 'pt', format: 'a4' });
     const pageW = doc.internal.pageSize.getWidth();
     const pageH = doc.internal.pageSize.getHeight();
-    const M = 40;
-    const contentW = pageW - M * 2;
+    const M = 48;
     const rowH = 22;
-    const colDateX = M + 10;
+    const colDateX = M;
     const colNoteX = M + 210;
-    const hoursRightX = colNoteX - 18;
-    const noteW = pageW - M - colNoteX - 8;
+    const hoursRightX = colNoteX - 24;
+    const noteW = pageW - M - colNoteX;
 
-    const drawTableHeader = (top: number) => {
-      doc.setFillColor(22, 34, 58);
-      doc.rect(M, top, contentW, rowH, 'F');
-      doc.setTextColor(255, 255, 255);
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(10);
-      doc.text('Datum', colDateX, top + 15);
-      doc.text('Timmar', hoursRightX, top + 15, { align: 'right' });
-      doc.text('Anteckning', colNoteX, top + 15);
+    const rule = (yy: number, shade: number) => {
+      doc.setDrawColor(shade, shade, shade);
+      doc.setLineWidth(0.5);
+      doc.line(M, yy, pageW - M, yy);
     };
 
-    // Header band
-    doc.setFillColor(22, 34, 58);
-    doc.rect(0, 0, pageW, 88, 'F');
-    doc.setTextColor(255, 255, 255);
+    const drawTableHeader = (top: number) => {
+      doc.setTextColor(0, 0, 0);
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(10);
+      doc.text('Datum', colDateX, top + 14);
+      doc.text('Timmar', hoursRightX, top + 14, { align: 'right' });
+      doc.text('Anteckning', colNoteX, top + 14);
+      rule(top + rowH, 120);
+    };
+
+    // Title (plain text, no coloured band)
+    doc.setTextColor(0, 0, 0);
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(22);
-    doc.text('Tidrapport', M, 46);
+    doc.text('Tidrapport', M, 60);
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(10);
-    doc.setTextColor(197, 205, 224);
-    doc.text('Tidredovisning per projekt', M, 64);
+    doc.setTextColor(90, 90, 90);
+    doc.text('Tidredovisning per projekt', M, 76);
     doc.setFont('helvetica', 'bold');
-    doc.setFontSize(12);
-    doc.setTextColor(255, 255, 255);
-    doc.text('byggexp.se', pageW - M, 46, { align: 'right' });
+    doc.setFontSize(11);
+    doc.setTextColor(0, 0, 0);
+    doc.text('byggexp.se', pageW - M, 60, { align: 'right' });
+    rule(92, 120);
 
     // Meta
-    let y = 122;
+    let y = 120;
     doc.setFontSize(11);
-    doc.setTextColor(30, 30, 30);
+    doc.setTextColor(0, 0, 0);
     doc.setFont('helvetica', 'bold');
     doc.text('Anställd:', M, y);
     doc.setFont('helvetica', 'normal');
-    doc.text(meta.employee.trim() || '—', M + 58, y);
+    doc.text(meta.employee.trim() || '—', M + 56, y);
     doc.setFont('helvetica', 'bold');
     doc.text('Projekt:', pageW / 2, y);
     doc.setFont('helvetica', 'normal');
     doc.text(meta.project.trim() || '—', pageW / 2 + 50, y);
-    y += 16;
+    y += 15;
     doc.setFontSize(9);
-    doc.setTextColor(110, 118, 133);
+    doc.setTextColor(120, 120, 120);
     doc.text(`Utskriven ${new Date().toLocaleDateString('sv-SE')}`, M, y);
-    y += 18;
+    y += 20;
 
     // Table header
     drawTableHeader(y);
     y += rowH;
 
-    // Rows
+    // Rows (thin rule under each, no fill)
     doc.setFont('helvetica', 'normal');
-    doc.setLineWidth(0.5);
     let sum = 0;
-    rowList.forEach((row, i) => {
-      if (y + rowH > pageH - 130) {
+    rowList.forEach((row) => {
+      if (y + rowH > pageH - 120) {
         doc.addPage();
         y = 60;
         drawTableHeader(y);
         y += rowH;
       }
-      if (i % 2 === 1) {
-        doc.setFillColor(244, 246, 251);
-        doc.rect(M, y, contentW, rowH, 'F');
-      }
       doc.setFontSize(10);
-      doc.setTextColor(35, 35, 35);
-      doc.text(row.date || '', colDateX, y + 15);
-      doc.text(row.hours || '', hoursRightX, y + 15, { align: 'right' });
+      doc.setTextColor(0, 0, 0);
+      doc.text(row.date || '', colDateX, y + 14);
+      doc.text(row.hours || '', hoursRightX, y + 14, { align: 'right' });
       const note = doc.splitTextToSize(row.note || '', noteW) as string[];
-      doc.text(note[0] || '', colNoteX, y + 15);
-      doc.setDrawColor(223, 227, 234);
-      doc.line(M, y + rowH, M + contentW, y + rowH);
+      doc.text(note[0] || '', colNoteX, y + 14);
+      rule(y + rowH, 210);
       const value = parseFloat((row.hours || '').replace(',', '.'));
       if (Number.isFinite(value)) sum += value;
       y += rowH;
     });
 
-    // Total row
-    doc.setFillColor(234, 240, 251);
-    doc.rect(M, y, contentW, rowH, 'F');
+    // Total (bold text + rule, no fill)
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(11);
-    doc.setTextColor(22, 34, 58);
+    doc.setTextColor(0, 0, 0);
     doc.text('Totalt', colDateX, y + 15);
     doc.text(`${sum.toLocaleString('sv-SE')} tim`, hoursRightX, y + 15, { align: 'right' });
+    rule(y + rowH + 4, 120);
     y += rowH + 44;
 
     // Signature
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(10);
-    doc.setTextColor(35, 35, 35);
+    doc.setTextColor(0, 0, 0);
     doc.text('Underskrift', M, y);
     doc.setDrawColor(150, 150, 150);
     doc.line(M + 66, y + 2, M + 250, y + 2);
@@ -234,8 +230,8 @@ export default function TidrapportTool() {
 
     // Footer
     doc.setFontSize(8);
-    doc.setTextColor(140, 148, 163);
-    doc.text('Skapad gratis med ByggExp – byggexp.se/verktyg/tidrapport-mall', M, pageH - 28);
+    doc.setTextColor(150, 150, 150);
+    doc.text('Skapad gratis med ByggExp – byggexp.se/verktyg/tidrapport-mall', M, pageH - 30);
 
     doc.save(`${filenameBase}.pdf`);
   }

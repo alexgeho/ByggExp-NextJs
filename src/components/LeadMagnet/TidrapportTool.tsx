@@ -234,7 +234,7 @@ export default function TidrapportTool() {
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(11);
     doc.setTextColor(0, 0, 0);
-    doc.text('Godkänd av (beställarens representant)', M, y);
+    doc.text('Godkänd av', M, y);
     y += 30;
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(10);

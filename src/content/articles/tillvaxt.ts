@@ -2097,6 +2097,7 @@ const A_PROJEKTHANTERINGSSYSTEM_BYGG_HTML = `
 
 <h2>Relaterade guider</h2>
 <ul>
+<li><a href="/sv/blog/projektledning-byggforetag">Projektledning för byggföretag</a> – led byggprojekt från anbud till överlämning.</li>
 <li><a href="/sv/blog/projekthantering-byggforetag">Projekthantering för byggföretag</a> – tid, personal och marginal i ett.</li>
 <li><a href="/sv/blog/projektuppfoljning-bygg">Projektuppföljning i bygg</a> – tid, kostnader och lönsamhet i realtid.</li>
 <li><a href="/sv/blog/schemalaggningssystem-bygg">Schemaläggningssystem för bygg</a> – planera personal, projekt och tid.</li>
@@ -2203,7 +2204,205 @@ const A_BYGGDAGBOK: BlogPost = {
   publishedAt: "2026-08-30T11:00:00.000Z", createdAt: "2026-08-30T11:00:00.000Z", updatedAt: "2026-08-30T11:00:00.000Z",
 };
 
+const A_PROJEKTLEDNING_BYGGFORETAG_HTML = `
+<p>Projektledning i bygg handlar om att ta ett projekt från anbud till godkänd slutbesiktning utan att tappa kontrollen över tid, pengar och kvalitet på vägen. Det är en roll som lika mycket handlar om planering och uppföljning som om folk och kommunikation. Den här guiden går igenom faserna i ett byggprojekt, vad byggprojektledaren ansvarar för i varje steg och vilka verktyg som gör jobbet lättare.</p>
+
+<p>Vill du gå direkt på systemstödet? Läs om <a href="/sv/blog/projekthanteringssystem-bygg">projekthanteringssystem för bygg</a>, eller hur du <a href="/sv/blog/digitalisera-byggforetag-projektstyrning">digitaliserar projektstyrningen</a>.</p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projektledning i bygg – faser från kalkyl och planering till produktion, uppföljning och överlämning" width="720" height="380" loading="lazy"><figcaption>Projektledningens faser: kalkyl och anbud, planering, produktion, löpande uppföljning och överlämning.</figcaption></figure>
+
+<h2>Vad är projektledning i bygg?</h2>
+<p>Projektledning är ansvaret för att ett byggprojekt når sina mål inom ramarna för tid, budget och kvalitet. Byggprojektledaren håller ihop kalkyl, planering, bemanning, ekonomi och dokumentation – och är den som ser till att kontoret och bygget har samma bild av läget. Skillnaden mot ren arbetsledning är horisonten: arbetsledaren styr dagens jobb, projektledaren styr hela projektet mot slutmålet.</p>
+
+<h2>Faserna i ett byggprojekt</h2>
+<div class="article-table"><table>
+<thead><tr><th>Fas</th><th>Vad som händer</th><th>Projektledarens fokus</th></tr></thead>
+<tbody>
+<tr><td><strong>Kalkyl och anbud</strong></td><td>Räkna på jobbet, lämna offert</td><td>Rätt pris med marginal, tydliga förbehåll</td></tr>
+<tr><td><strong>Planering</strong></td><td>Tidplan, bemanning, inköp</td><td>Realistisk <a href="/sv/blog/projektplanering-bygg">projektplanering</a> och resurser på plats</td></tr>
+<tr><td><strong>Produktion</strong></td><td>Bygget pågår</td><td>Löpande uppföljning, ÄTA, avvikelser</td></tr>
+<tr><td><strong>Uppföljning</strong></td><td>Tid och kostnad mot budget</td><td>Agera på avvikelser innan budgettaket</td></tr>
+<tr><td><strong>Överlämning</strong></td><td>Besiktning, relationshandlingar</td><td>Godkänd slutbesiktning, rätt underlag</td></tr>
+</tbody>
+</table></div>
+
+<h2>Planering: lägg grunden innan spaden i marken</h2>
+<p>De flesta projekt vinns eller förloras i planeringen. Här sätter du <a href="/sv/blog/projektplanering-bygg">tidplanen</a>, fördelar laget med <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggning</a> och stämmer av kapaciteten med <a href="/sv/blog/resursplanering-bygg">resursplanering</a>. En genomarbetad plan gör produktionen lugnare – och ett <a href="/sv/blog/startmote-byggprojekt-checklista">startmöte</a> förankrar den i laget.</p>
+
+<h2>Produktion: styr medan projektet pågår</h2>
+<p>När bygget rullar är projektledarens viktigaste jobb att se läget i tid. Med tid som bokförs per projekt ser du nedlagda timmar mot budget, och avvikelser dyker upp i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a> medan de fortfarande går att åtgärda. ÄTA-arbeten och beslut fångas löpande i <a href="/sv/blog/byggdagbok">byggdagboken</a>, så att inget extra arbete utförs ofakturerat.</p>
+
+<figure class="web-shot"><img src="/features-content/projektekonomi-och-lonsamhet-web.webp" alt="Projektledning i webbadmin: budget mot utfall, timmar, kostnader och marginal per projekt" width="1000" height="548" loading="lazy"><figcaption>Projektets ekonomi i webbadmin – budget mot utfall och marginal löpande, så projektledaren hinner agera.</figcaption></figure>
+
+<h2>Ekonomi: håll marginalen hela vägen</h2>
+<p>Ett projekt kan se lönsamt ut ända till slutfakturan och ändå ha ätit upp marginalen i övertid och extra material. Därför följer en bra projektledare <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">kostnaderna mot budget</a> löpande i stället för i efterhand. När timmar, utlägg och fakturor bokförs på projektet räknas marginalen ihop automatiskt.</p>
+
+<h2>Överlämning: avsluta så att det håller</h2>
+<p>Projektet är inte klart förrän det är godkänt och dokumenterat. Samla besiktningsanmärkningar, åtgärda dem och lämna över <a href="/sv/blog/overlamning-relationshandlingar">relationshandlingar</a> i ordning. Ett projekt med ordning i dokumentationen gör överlämningen till en formsak i stället för en jakt på papper.</p>
+
+<h2>Verktyg för projektledning</h2>
+<p>Manuell projektledning i Excel och mejl fungerar tills projekten blir fler och större. Ett <a href="/sv/blog/projekthanteringssystem-bygg">projekthanteringssystem</a> samlar planering, tid, dokumentation och ekonomi per projekt, så att du styr med data i stället för magkänsla. I ByggExp hänger faserna ihop: planen möter loggad tid, tiden möter ekonomin, och dokumentationen ligger där projektet finns.</p>
+
+<h2>Kom igång</h2>
+<p>Vill du få ordning på projektledningen? Läs om <a href="/sv/blog/projektplanering-bygg">projektplanering för byggprojekt</a> och <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljning i realtid</a>, <a href="/sv/funktioner">se alla funktioner</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/projekthanteringssystem-bygg">Projekthanteringssystem för bygg</a> – planering, tid och marginal i ett.</li>
+<li><a href="/sv/blog/projektplanering-bygg">Projektplanering för byggprojekt</a> – från kalkyl och tidplan till bemanning.</li>
+<li><a href="/sv/blog/projektuppfoljning-bygg">Projektuppföljning i bygg</a> – tid, kostnader och lönsamhet i realtid.</li>
+<li><a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">Kostnadskontroll och marginal</a> – håll koll på projektets ekonomi.</li>
+<li><a href="/sv/blog/startmote-byggprojekt-checklista">Startmöte i byggprojekt</a> – sätt projektet rätt från dag ett.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad gör en byggprojektledare?</h3>
+<p>Byggprojektledaren för projektet från anbud till godkänd slutbesiktning: sätter tidplan och budget, styr inköp och bemanning, följer ekonomin löpande och ser till att avvikelser och ÄTA fångas i tid. Till skillnad från arbetsledaren, som styr dagens jobb, håller projektledaren ihop helheten över projektets hela längd.</p>
+<h3>Vad är skillnaden mellan projektledning och arbetsledning?</h3>
+<p>Arbetsledaren ansvarar för dagens jobb på plats – bemanning, moment, säkerhet. Projektledaren äger hela projektet över tid: tidplan, ekonomi och överlämning. I mindre byggföretag är det ofta samma person som bär båda rollerna, men det är två olika uppgifter.</p>
+<h3>Vilka faser har ett byggprojekt?</h3>
+<p>Vanligen kalkyl och anbud, planering, produktion, löpande uppföljning och överlämning med besiktning. Projektledaren har olika fokus i varje fas men följer ekonomin genom hela.</p>
+<h3>Behöver ett litet byggföretag ett system för projektledning?</h3>
+<p>Ofta redan vid några samtidiga projekt. Ett system samlar planering, tid och ekonomi per projekt så att marginalen syns löpande – i stället för att spåras i Excel och mejl.</p>
+`.trim();
+
+const A_PROJEKTLEDNING_BYGGFORETAG: BlogPost = {
+  _id: "code-projektledning-byggforetag",
+  title: "Projektledning för byggföretag – så leder du byggprojekt i mål", slug: "projektledning-byggforetag", locale: "sv",
+  excerpt: "Projektledning för byggföretag: faserna i ett byggprojekt, vad byggprojektledaren ansvarar för i varje steg – från kalkyl och planering till uppföljning och godkänd överlämning.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/project.webp", contentHtml: A_PROJEKTLEDNING_BYGGFORETAG_HTML,
+  seoTitle: "Projektledning för byggföretag – led byggprojekt i mål | ByggExp", seoDescription: "Projektledning för byggföretag: byggprojektets faser, byggprojektledarens ansvar och verktygen som håller ihop planering, tid, ekonomi och överlämning.",
+  seoImageUrl: `${SITE_URL}/landing/features/project.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-30T11:20:00.000Z", createdAt: "2026-08-30T11:20:00.000Z", updatedAt: "2026-08-30T11:20:00.000Z",
+};
+
+const A_PROJEKTPLANERING_BYGG_HTML = `
+<p>Ett byggprojekt som planeras dåligt blir dyrt oavsett hur skickligt laget är. Projektplanering handlar om att lägga ordningen rätt innan spaden sätts i marken: vad som ska göras, i vilken följd, av vem och när – och vad det får kosta. Här går vi igenom hur du planerar ett byggprojekt steg för steg, från kalkyl till en tidplan som håller.</p>
+
+<p>Vill du börja i det konkreta? Lägg upp aktiviteterna i vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>, eller se helheten i guiden om <a href="/sv/blog/projektledning-byggforetag">projektledning för byggföretag</a>.</p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/schemalaggning.webp" alt="Diagram: projektplanering – aktiviteter, tidplan, bemanning och budget i följd" width="720" height="380" loading="lazy"><figcaption>Projektplanering i följd: bryt ner arbetet, lägg tidplanen, bemanna och stäm av mot budget.</figcaption></figure>
+
+<h2>Vad är projektplanering i bygg?</h2>
+<p>Projektplanering är att omvandla kalkylen till en genomförbar plan: en tidplan med aktiviteter och beroenden, en bemanning som räcker till, och en budget att mäta utfallet mot. Målet är inte en perfekt plan på papper, utan en plan som håller när verkligheten kommer emot – och som är lätt att justera när något ändras.</p>
+
+<h2>Så planerar du ett byggprojekt steg för steg</h2>
+<ol>
+<li><strong>Bryt ner arbetet.</strong> Dela projektet i aktiviteter och etapper som går att tidsätta och följa upp.</li>
+<li><strong>Lägg tidplanen.</strong> Sätt aktiviteterna i följd med beroenden och identifiera den kritiska linjen – momenten som inte får glida.</li>
+<li><strong>Bemanna planen.</strong> Fördela lag och kompetens med <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggning</a> och stäm av kapaciteten med <a href="/sv/blog/resursplanering-bygg">resursplanering</a>.</li>
+<li><strong>Planera inköp och leveranser.</strong> Koppla materialleveranser till rätt moment så att inget stoppar bygget.</li>
+<li><strong>Sätt budgeten.</strong> Bryt ner kalkylen på projektet så att du kan mäta utfall mot plan löpande.</li>
+</ol>
+
+<figure class="web-shot"><img src="/features-content/dagsplanering-och-planeringsmoten-web.webp" alt="Projektplanering i webbadmin: aktiviteter och bemanning per projekt och dag i en delad vy" width="1000" height="548" loading="lazy"><figcaption>Planeringen i webbadmin – aktiviteter och bemanning per projekt, delad med laget och kopplad till tidrapporteringen.</figcaption></figure>
+
+<h2>Tidplan och kritisk linje</h2>
+<p>Tidplanen är planeringens ryggrad. Ett <a href="/sv/blog/gantt-schema-mall-bygg">Gantt-schema</a> visar aktiviteterna över tid med beroenden, så att du ser vilka moment som styr slutdatumet. Den kritiska linjen är kedjan av aktiviteter utan tidsmarginal – blir någon av dem försenad, flyttas hela projektets slut. Det är de momenten du bevakar hårdast.</p>
+
+<h2>Bemanning och resurser: planen måste vara möjlig</h2>
+<p>En tidplan som ingen kan bemanna är bara en önskelista. Lägg laget mot tidplanen och kontrollera att samma personer och maskiner inte är inbokade på två håll samtidigt. Med beläggningen synlig tvärs över projekten fångar du överbeläggning innan den blir övertid – inte när två arbetsledare bråkar om samma lag på måndag morgon.</p>
+
+<h2>Från plan till uppföljning</h2>
+<p>Planen är färskvara. Poängen är att jämföra den mot verkligheten: när tiden loggas per projekt ser du planerat mot utfall, och avvikelser dyker upp i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a> medan du fortfarande kan styra. Håll också koll på <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">kostnaderna mot budget</a> så att marginalen inte tickar iväg oförmärkt.</p>
+
+<h2>Kom igång</h2>
+<p>Vill du planera projekten så att de håller? Ladda ner vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>, läs om <a href="/sv/blog/projektledning-byggforetag">projektledning för byggföretag</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/projektledning-byggforetag">Projektledning för byggföretag</a> – led byggprojekt från anbud till överlämning.</li>
+<li><a href="/sv/blog/gantt-schema-mall-bygg">Gantt-schema och tidsplan för byggprojekt</a> – aktiviteter, beroenden och kritisk linje.</li>
+<li><a href="/sv/blog/resursplanering-bygg">Resursplanering i bygg</a> – undvik överbeläggning och dubbelbokning.</li>
+<li><a href="/sv/blog/schemalaggningssystem-bygg">Schemaläggningssystem för bygg</a> – planera personal, projekt och tid.</li>
+<li><a href="/sv/blog/projektuppfoljning-bygg">Projektuppföljning i bygg</a> – följ plan mot utfall i realtid.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är projektplanering i bygg?</h3>
+<p>Att göra kalkylen genomförbar: aktiviteterna i rätt följd med beroenden, ett lag som räcker till, och en budget att stämma utfallet mot. Kort sagt en plan som går att styra efter, inte bara visa upp.</p>
+<h3>Hur planerar man ett byggprojekt steg för steg?</h3>
+<p>I den ordningen: först nedbrytning, för utan aktiviteter går inget att tidsätta; sedan tidplan med beroenden och kritisk linje; därefter bemanning och inköp mot tidplanen; sist budgeten, nedbruten så att utfallet går att följa löpande.</p>
+<h3>Vad är kritisk linje?</h3>
+<p>Kedjan av aktiviteter utan tidsmarginal. Blir en av dem försenad flyttas hela projektets slutdatum, så det är där du lägger uppföljningen.</p>
+<h3>Vad är skillnaden mellan projektplanering och resursplanering?</h3>
+<p>Projektplaneringen svarar på vad som ska göras och när. Resursplaneringen svarar på vem eller vilken maskin som utför varje moment – och om kapaciteten räcker. De hänger ihop och det är i glappet dubbelbokningarna uppstår.</p>
+`.trim();
+
+const A_PROJEKTPLANERING_BYGG: BlogPost = {
+  _id: "code-projektplanering-bygg",
+  title: "Projektplanering för byggprojekt – från kalkyl och tidplan till bemanning", slug: "projektplanering-bygg", locale: "sv",
+  excerpt: "Så planerar du ett byggprojekt steg för steg: bryt ner arbetet, lägg tidplanen med kritisk linje, bemanna planen och sätt budgeten – en plan som håller när verkligheten kommer emot.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_PROJEKTPLANERING_BYGG_HTML,
+  seoTitle: "Projektplanering för byggprojekt – tidplan & bemanning | ByggExp", seoDescription: "Projektplanering i bygg steg för steg: nedbrytning, tidplan med kritisk linje, bemanning och budget. Så planerar du ett byggprojekt som håller och går att följa upp.",
+  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-30T11:30:00.000Z", createdAt: "2026-08-30T11:30:00.000Z", updatedAt: "2026-08-30T11:30:00.000Z",
+};
+
+const A_APP_FOR_BYGGPROJEKT_HTML = `
+<p>Det mesta i ett byggprojekt händer på bygget, inte på kontoret – men det är på kontoret som pärmarna och kalkylarken bor. En app för byggprojekt flyttar styrningen dit jobbet sker: tid, uppgifter, foton, dagbok och ekonomi i mobilen, kopplat till rätt projekt. Här går vi igenom vad en app för byggprojekt bör klara och varför den gör mest nytta ute på plats.</p>
+
+<p>Vill du se helheten? Läs om <a href="/sv/blog/projekthanteringssystem-bygg">projekthanteringssystem för bygg</a> eller vad en bredare <a href="/sv/blog/bygg-app">bygg-app</a> bör klara.</p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: app för byggprojekt – tid, uppgifter, foto och ekonomi kopplat till projektet i mobilen" width="720" height="380" loading="lazy"><figcaption>Allt kopplat till projektet i mobilen: tid, uppgifter, foto och dagbok – samlat där jobbet sker.</figcaption></figure>
+
+<h2>Vad är en app för byggprojekt?</h2>
+<p>En app för byggprojekt är mobilen som nav för allt som rör ett projekt: laget checkar in på rätt projekt, får sina uppgifter, fotar och för dagbok, och du som styr ser läget utan att ringa runt.</p>
+
+<h2>Vad en app för byggprojekt bör klara</h2>
+<ul>
+<li><strong>Tid per projekt</strong> – <a href="/sv/blog/app-for-tidrapportering-bygg">incheckning i mobilen</a>, gärna med GPS, kopplad till rätt projekt.</li>
+<li><strong>Uppgifter och arbetsorder</strong> – <a href="/sv/blog/arbetsorder-app-bygg">jobb som tilldelas</a> och följs upp direkt i appen.</li>
+<li><strong>Foto och byggdagbok</strong> – <a href="/sv/blog/byggdagbok">dokumentation</a> kopplad till projektet, tidsstämplad på plats.</li>
+<li><strong>Ekonomi i fickan</strong> – utlägg, material och en snabb överblick av projektets läge.</li>
+<li><strong>Fungerar offline</strong> – synkar när täckningen kommer tillbaka, så att arbetet inte stannar när mobilnätet är svagt.</li>
+</ul>
+
+<figure class="web-shot"><img src="/features-content/hantera-uppgifter-i-byggprojekt-web.webp" alt="App för byggprojekt: uppgifter och arbetsorder kopplade till projekt och person" width="1000" height="548" loading="lazy"><figcaption>Uppgifter kopplade till projekt och person – tilldelade, följda och avbockade direkt i mobilen.</figcaption></figure>
+
+<h2>Därför gör appen mest nytta på plats</h2>
+<p>En pärm på kontoret uppdateras i efterhand, ofta av minnet. En app uppdateras i stunden: timmen loggas när passet sker, fotot tas när avvikelsen upptäcks, uppgiften bockas av när den är klar. Det gör att siffrorna stämmer och att du som leder projektet ser samma bild som laget – utan fördröjning och utan dubbelinmatning.</p>
+
+<h2>Från app till styrning på kontoret</h2>
+<p>Poängen är att appen och webbadmin är samma system. Det som registreras i mobilen blir underlag i webben: timmarna blir löneunderlag och fakturarader, och allt räknas in i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a> så att du ser marginalen i realtid. Bygget rapporterar, kontoret styr – på samma data.</p>
+
+<h2>Kom igång</h2>
+<p>Vill du flytta projektstyrningen ut på bygget? Läs om <a href="/sv/blog/projekthantering-byggforetag">projekthantering för byggföretag</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/bygg-app">Bygg-app</a> – tid, jobb, offert och faktura i mobilen.</li>
+<li><a href="/sv/blog/projekthanteringssystem-bygg">Projekthanteringssystem för bygg</a> – planering, tid och marginal i ett.</li>
+<li><a href="/sv/blog/arbetsorder-app-bygg">Arbetsorder-app för byggföretag</a> – slut på sms och lappar.</li>
+<li><a href="/sv/blog/byggdagbok">Byggdagbok</a> – daglig dokumentation som håller vid tvist.</li>
+<li><a href="/sv/blog/projektledning-byggforetag">Projektledning för byggföretag</a> – led byggprojekt i mål.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är en app för byggprojekt?</h3>
+<p>Till skillnad från lösa appar för bara tid eller foto samlar den allt som rör projektet på ett ställe – tid, uppgifter, foto, dagbok och ekonomi. Så slipper laget hoppa mellan appar och du slipper leta efter uppgifter i mejl och sms.</p>
+<h3>Vad är skillnaden mot en vanlig bygg-app?</h3>
+<p>En bygg-app täcker hela företaget – offert, faktura och kontorets flöden. En app för byggprojekt sätter det enskilda projektet i centrum: tid, uppgifter och dokumentation kopplade till bygget. I ByggExp är de samma system.</p>
+<h3>Fungerar appen utan täckning på bygget?</h3>
+<p>Ja. En bra app för byggprojekt fungerar offline och synkar när täckningen kommer tillbaka, så registreringen inte tappas när mobilnätet är svagt.</p>
+<h3>Ser kontoret det som registreras i appen?</h3>
+<p>Ja. Appen och webbadmin är samma system, så tid, foto och utlägg som registreras i mobilen syns direkt på kontoret och räknas in i projektets ekonomi.</p>
+`.trim();
+
+const A_APP_FOR_BYGGPROJEKT: BlogPost = {
+  _id: "code-app-for-byggprojekt",
+  title: "App för byggprojekt – styr hela bygget från mobilen", slug: "app-for-byggprojekt", locale: "sv",
+  excerpt: "Vad en app för byggprojekt bör klara: tid, uppgifter, foto, byggdagbok och ekonomi i mobilen, kopplat till rätt projekt – så att bygget rapporterar och kontoret styr på samma data.", tag: "Digitalisering",
+  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_APP_FOR_BYGGPROJEKT_HTML,
+  seoTitle: "App för byggprojekt – styr bygget från mobilen | ByggExp", seoDescription: "App för byggprojekt: tid, uppgifter, foto, byggdagbok och ekonomi i mobilen kopplat till rätt projekt. Bygget rapporterar på plats, kontoret styr på samma data.",
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-08-30T11:40:00.000Z", createdAt: "2026-08-30T11:40:00.000Z", updatedAt: "2026-08-30T11:40:00.000Z",
+};
+
 export const TILLVAXT_ARTICLES: BlogPost[] = [
+  A_PROJEKTLEDNING_BYGGFORETAG,
+  A_PROJEKTPLANERING_BYGG,
+  A_APP_FOR_BYGGPROJEKT,
   A_SCHEMALAGGNINGSSYSTEM_BYGG,
   A_PROJEKTHANTERINGSSYSTEM_BYGG,
   A_BYGGDAGBOK,

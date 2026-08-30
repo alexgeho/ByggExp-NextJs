@@ -165,14 +165,10 @@ export default function TidrapportTool() {
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(22);
     doc.text('Tidrapport', M, 54);
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(10);
-    doc.setTextColor(90, 90, 90);
-    doc.text('Tidredovisning per projekt', M, 70);
-    rule(84, 120);
+    rule(70, 120);
 
     // Meta
-    let y = 112;
+    let y = 98;
     doc.setFontSize(11);
     doc.setTextColor(0, 0, 0);
     doc.setFont('helvetica', 'bold');

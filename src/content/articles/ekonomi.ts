@@ -1119,7 +1119,7 @@ const ENSKILD: BlogPost = {
 };
 
 const A_ANLITA_UNDERENTREPRENOR_HTML = `
-<p>Att anlita en underentreprenör (UE) är vardag för de flesta byggföretag, men det är också ett av de moment där mest pengar kan gå förlorade om du slarvar. Fel avtalstyp, en UE utan F-skatt eller en dåligt formulerad faktura kan snabbt bli din kostnad – och sedan 2019 kan du dessutom bli betalningsansvarig för UE:ns anställdas löner. Här går vi igenom hela kedjan: skillnaden mot bemanning, kontrollerna du måste göra, vad UE-avtalet ska innehålla, entreprenörsansvaret och skattereglerna som gäller 2026.</p>
+<p>Att anlita en <a href="/sv/blog/ab-u-underentreprenor-avtal">underentreprenör</a> (UE) är vardag för de flesta byggföretag, men det är också ett av de moment där mest pengar kan gå förlorade om du slarvar. Fel avtalstyp, en UE utan F-skatt eller en dåligt formulerad faktura kan snabbt bli din kostnad – och sedan 2019 kan du dessutom bli betalningsansvarig för UE:ns anställdas löner. Här går vi igenom hela kedjan: skillnaden mot bemanning, kontrollerna du måste göra, vad UE-avtalet ska innehålla, entreprenörsansvaret och skattereglerna som gäller 2026.</p>
 
 <p>Ett tydligt avtal är grunden för hela affären. Börja med ett komplett och strukturerat offertunderlag så att omfattning och pris är låsta redan innan arbetet startar – använd gärna vår gratis <a href="/sv/verktyg/offert-mall">offertmall &rarr;</a> som utgångspunkt.</p>
 
@@ -3496,7 +3496,7 @@ const A_OMVAND_BYGGMOMS_UNDERENTREPRENOR_HTML = `
 <p>Vill du ha ett underlag som redan är rätt uppställt? Använd <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall -&gt;</a> och fyll i köparens momsnummer och rätt hänvisningstext direkt.</p>
 
 <h2>Vad omvänd betalningsskyldighet betyder (och varför namnet bytte 2023)</h2>
-<p>Omvänd betalningsskyldighet inom byggsektorn innebär att det är <strong>köparen</strong>, inte du som säljare, som deklarerar och betalar in momsen till staten. Du fakturerar helt utan moms, och köparen redovisar den i sin egen momsdeklaration. Syftet är att motverka momsbedrägerier i kedjor av underentreprenörer, där moms tidigare kunde debiteras och dras av utan att någonsin betalas in.</p>
+<p>Omvänd betalningsskyldighet inom byggsektorn innebär att det är <strong>köparen</strong>, inte du som säljare, som deklarerar och betalar in momsen till staten. Du fakturerar helt utan moms, och köparen redovisar den i sin egen momsdeklaration. Syftet är att motverka momsbedrägerier i kedjor av <a href="/sv/blog/ab-u-underentreprenor-avtal">underentreprenörer</a>, där moms tidigare kunde debiteras och dras av utan att någonsin betalas in.</p>
 <p>Sedan den 1 juli 2023, i och med nya mervärdesskattelagen (SFS 2023:200), heter det <strong>omvänd betalningsskyldighet</strong> i stället för det tidigare <em>omvänd skattskyldighet</em>. Innehållet i reglerna är i sak oförändrat – bara terminologin har uppdaterats. Ser du fortfarande gamla mallar med "omvänd skattskyldighet" är principen densamma, men använd den nya formuleringen på nya fakturor.</p>
 
 <h2>De två villkoren – när MÅSTE du fakturera utan moms</h2>

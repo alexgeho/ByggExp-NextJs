@@ -1493,7 +1493,7 @@ const A_ENTREPRENADTVIST_UNDVIKA_DOKUMENTATION_HTML = `
 <p>Glöm inte heller underrättelseskyldigheten: förhållanden som ger rätt till ÄTA – exempelvis likställda ÄTA – ska anmälas till beställaren <em>utan dröjsmål</em>. Utebliven eller för sen underrättelse kan innebära att du förlorar rätten till både ersättning och tidsförlängning. Praktiskt betyder det en ÄTA-lapp per ändring, med omfattning, tids- och kostnadspåverkan, koppling till rätt ritning eller version, samt kvittens från beställaren.</p>
 
 <h2>Byggdagboken som räddar dig</h2>
-<p>En byggdagbok eller platsdagbok är inte ett generellt lagkrav, men den blir ofta bindande genom AB 04/ABT 06. Den ska föras löpande och innehålla datum, väder och temperatur, närvarande personal och underentreprenörer, utfört arbete, materialleveranser, avvikelser, hinder, fattade beslut och utförda ÄTA.</p>
+<p>En byggdagbok eller platsdagbok är inte ett generellt lagkrav, men den blir ofta bindande genom AB 04/ABT 06. Den ska föras löpande och innehålla datum, väder och temperatur, närvarande personal och <a href="/sv/blog/ab-u-underentreprenor-avtal">underentreprenörer</a>, utfört arbete, materialleveranser, avvikelser, hinder, fattade beslut och utförda ÄTA.</p>
 <p>Kärnbudskapet är att en anteckning skriven samma dag väger betydligt tyngre som bevis än en minnesbild flera månader senare. Det är just samtidigheten som gör dagboken till ett så starkt verktyg vid tvist om försening och ansvar – den visar dag för dag vad som stod i vägen och vem som orsakade det. En dagbok som fylls i i efterhand, inför en tvist, har långt sämre bevisvärde.</p>
 
 <h2>Egenkontroll och kontrollplan – två system, inte ett</h2>
@@ -1933,7 +1933,7 @@ const A_GARANTIBESIKTNING_2_AR_ENTREPRENAD: BlogPost = {
 };
 
 const A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET_HTML = `
-<p>Ett byggföretag som räknar semesterlön efter semesterlagens 12 procent räknar fel. Byggavtalet ger en högre semesterlön – 13,0 procent av den intjänade lönen – och bygger på procentregeln, inte på semesterlagens sammalöneregel. Skillnaden märks särskilt när dina anställda har ackord, ob, övertid och oregelbunden arbetstid. Missar du procentsatsen eller väljer fel beräkningsmetod blir det både reklamationer och rättelser i efterhand. Här går vi igenom hur du som arbetsgivare räknar rätt på semesterlön och semesterersättning enligt Byggavtalet 2025–2027.</p>
+<p>Ett byggföretag som räknar semesterlön efter semesterlagens 12 procent räknar fel. Byggavtalet ger en högre semesterlön – 13,0 procent av den intjänade lönen – och bygger på procentregeln, inte på semesterlagens sammalöneregel. Skillnaden märks särskilt när dina anställda har <a href="/sv/blog/ackordslon-bygg">ackord</a>, ob, övertid och oregelbunden arbetstid. Missar du procentsatsen eller väljer fel beräkningsmetod blir det både reklamationer och rättelser i efterhand. Här går vi igenom hur du som arbetsgivare räknar rätt på semesterlön och semesterersättning enligt Byggavtalet 2025–2027.</p>
 
 <p>Ett bra underlag är förutsättningen för rätt semesterlön, eftersom procenten läggs på hela den intjänade bruttolönen. Har du ordning på timmar, ackord och tillägg blir semesterkörningen enkel – börja med vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall -&gt;</a>.</p>
 
@@ -2326,7 +2326,7 @@ const A_OVERBESIKTNING_ENTREPRENAD_HTML = `
 
 <h2>Vanliga frågor</h2>
 <h3>Hur lång tid har jag på mig att påkalla överbesiktning?</h3>
-<p>Enligt AB 04 tre veckor från att du fått del av besiktningsutlåtandet, och påkallandet ska vara skriftligt. Vid underentreprenad enligt AB-U 04 gäller två veckor för entreprenören och fyra veckor för beställaren. Missad frist innebär att rätten går förlorad.</p>
+<p>Enligt AB 04 tre veckor från att du fått del av besiktningsutlåtandet, och påkallandet ska vara skriftligt. Vid <a href="/sv/blog/ab-u-underentreprenor-avtal">underentreprenad</a> enligt AB-U 04 gäller två veckor för entreprenören och fyra veckor för beställaren. Missad frist innebär att rätten går förlorad.</p>
 <h3>Vem betalar om jag förlorar överbesiktningen?</h3>
 <p>Då gör du det. Huvudregeln i AB 04 kap 7 § 16 är att den part vars uppfattning inte vinner bär kostnaden. Vinner du betalar beställaren; står den ursprungliga besiktningen sig betalar du som påkallade. Parterna kan avtala om annan fördelning i förväg.</p>
 <h3>Vad kostar en överbesiktning?</h3>

@@ -57,7 +57,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     faqHeading: 'Vanliga frågor',
     faq: [
-      { question: 'Hur beräknar man antal takstolar?', answer: 'Ta takets längd delat med centrumavståndet (c/c) och lägg till en takstol. Ett 10 m tak med c/c 1200 mm ger 10 takstolar. Fyll i dina mått så räknar kalkylatorn ut det.' },
+      { question: 'Hur beräknar man antal takstolar?', answer: 'Takstolsberäkning: ta takets längd delat med centrumavståndet (c/c) och lägg till en takstol. Ett 10 m tak med c/c 1200 mm ger 10 takstolar. Fyll i dina mått så räknar kalkylatorn ut det.' },
       { question: 'Hur många takstolar behöver jag?', answer: 'Antalet styrs av takets längd och vilket c/c du väljer. Avrunda alltid uppåt och lägg till en takstol för gaveln – därför slutar formeln på +1. Kalkylatorn sköter avrundningen åt dig.' },
       { question: 'Vilket c/c-avstånd har takstolar?', answer: 'Vanligt är 1200 mm, men det beror på taktäckning, snölast och dimensionering. Följ konstruktörens uppgift.' },
       { question: 'Vad är skillnaden på att beräkna antal och att dimensionera takstolar?', answer: 'Den här kalkylatorn beräknar antal takstolar utifrån c/c. Dimensionering – att bestämma virkesdimensioner utifrån spännvidd och snölast – görs av en konstruktör enligt gällande last.' },

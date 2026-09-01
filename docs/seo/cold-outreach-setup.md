@@ -50,10 +50,15 @@ B2C/B2B аутрич по шведским строительным/эл-фир�
   - DMARC ✅ добавил вручную: TXT `_dmarc` = `v=DMARC1; p=none; rua=mailto:alexander@byggexp.se`
     (режим мониторинга; позже ужесточить до `p=quarantine`)
   - A-запись домена → 188.66.60.20 (сервер Inleed, парковка). Веб-хостинга нет.
-- **Редирект tidrapportapp.se → byggexp.se — НЕ сделан (открыто).**
-  Причина: в DNS Inleed нет типа URL/Redirect; 301 нужен веб-сервер + SSL.
-  Варианты: (а) купить Inleed Webbhotell на домен → включить 301; (б) A-запись на VPS +
-  middleware-редирект в Next.js + выпустить SSL на VPS (нужен SSH). MX/почту НЕ трогать.
+- **Редирект tidrapportapp.se → byggexp.se — НАСТРОЕН (2026-09-01).**
+  Домен оказался на веб-хостинге Inleed (DirectAdmin, prime6.inleed.net:2222/evo).
+  - Site Redirects: `tidrapportapp.se/` → **301** → `https://byggexp.se` (создан ✅).
+  - Для HTTPS нужен SSL на apex (был только на mail./smtp.). Включил ACME
+    (SSL/TLS Certificates → ACME settings → Enable ACME, Let's Encrypt, wildcard),
+    запустил **PROVISION NOW** для `tidrapportapp.se` + `*.tidrapportapp.se`.
+  - ⏳ На момент записи сертификат ВЫПУСКАЛСЯ (DNS-01, до нескольких минут / макс 24ч).
+    Пока не выпущен — https://tidrapportapp.se даёт "Privacy error". После выпуска
+    редирект на byggexp.se заработает автоматически (http и https). ПРОВЕРИТЬ позже.
 
 ### Логотип для писем
 - Исходный `public/landing/header/logo.svg` — БЕЛЫЙ, + SVG не рендерится в почте.

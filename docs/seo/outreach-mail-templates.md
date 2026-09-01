@@ -20,7 +20,7 @@ Hej {{namn}}!
 
 Увидел, что вы работаете электриками в районе Стокгольма и, похоже, сейчас хорошо загружены. Ведёте тайм-репорты, счета и проекты в разных местах или вручную?
 
-Предполагаю, что что-то уже пробовали — и что часто это неоправданно дорого.
+Предполагаю, что что-то уже пробовали — и что часто это неудобно и неоправданно дорого.
 
 Мы разработчики шведского сервиса ByggExp, может слышали. Решение как раз для таких компаний, как ваша:
 
@@ -45,7 +45,7 @@ Hej {{namn}}!
 
 Såg att ni jobbar som elektriker runt Stockholm och verkar ha bra fart just nu. Sköter ni tidrapportering, fakturor och projekt i olika system eller för hand idag?
 
-Gissar att ni redan testat något — och att det ofta blir onödigt dyrt.
+Gissar att ni redan testat något — och att det ofta är både krångligt och onödigt dyrt.
 
 Vi är utvecklarna bakom det svenska verktyget ByggExp, kanske har ni hört talas om det. Byggt just för företag som er:
 

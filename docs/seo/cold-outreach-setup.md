@@ -56,9 +56,9 @@ B2C/B2B аутрич по шведским строительным/эл-фир�
   - Для HTTPS нужен SSL на apex (был только на mail./smtp.). Включил ACME
     (SSL/TLS Certificates → ACME settings → Enable ACME, Let's Encrypt, wildcard),
     запустил **PROVISION NOW** для `tidrapportapp.se` + `*.tidrapportapp.se`.
-  - ⏳ На момент записи сертификат ВЫПУСКАЛСЯ (DNS-01, до нескольких минут / макс 24ч).
-    Пока не выпущен — https://tidrapportapp.se даёт "Privacy error". После выпуска
-    редирект на byggexp.se заработает автоматически (http и https). ПРОВЕРИТЬ позже.
+  - ✅ Сертификат ВЫПУЩЕН (покрывает tidrapportapp.se + *.tidrapportapp.se, auto-renew).
+  - ✅ ПРОВЕРЕНО: https://tidrapportapp.se → 301 → https://byggexp.se/sv, сайт открывается
+    без ошибок сертификата. Редирект работает.
 
 ### Логотип для писем
 - Исходный `public/landing/header/logo.svg` — БЕЛЫЙ, + SVG не рендерится в почте.

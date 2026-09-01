@@ -40,6 +40,21 @@ B2C/B2B аутрич по шведским строительным/эл-фир�
   5) логотип BYGGEXP (в самом низу)
   Цвета: navy `#0f2350`, приглушённый `#5b6b86`. Флаг `_html_signature=1`.
 
+### Второй ящик — outreach-домен (2026-09-01)
+- **alexander@tidrapportapp.se** — отдельный домен под рассылку (защищает byggexp.se).
+  Roundcube identity id = **3314**. Та же HTML-подпись (логотип внизу), HTML=Alltid, `--` убрана.
+  Логин в Roundcube — отдельный (prime6.inleed.net/webmail, логин = alexander@tidrapportapp.se).
+- **Email-аутентификация домена (DNS в панели Inleed, login.inleed.net/domain/169915):**
+  - SPF ✅ (Inleed авто, `v=spf1 ...inleed... ~all`)
+  - DKIM ✅ (Inleed авто, `default._domainkey`)
+  - DMARC ✅ добавил вручную: TXT `_dmarc` = `v=DMARC1; p=none; rua=mailto:alexander@byggexp.se`
+    (режим мониторинга; позже ужесточить до `p=quarantine`)
+  - A-запись домена → 188.66.60.20 (сервер Inleed, парковка). Веб-хостинга нет.
+- **Редирект tidrapportapp.se → byggexp.se — НЕ сделан (открыто).**
+  Причина: в DNS Inleed нет типа URL/Redirect; 301 нужен веб-сервер + SSL.
+  Варианты: (а) купить Inleed Webbhotell на домен → включить 301; (б) A-запись на VPS +
+  middleware-редирект в Next.js + выпустить SSL на VPS (нужен SSH). MX/почту НЕ трогать.
+
 ### Логотип для писем
 - Исходный `public/landing/header/logo.svg` — БЕЛЫЙ, + SVG не рендерится в почте.
 - Сгенерирована тёмная PNG-версия (navy `#0f2350`, прозрачный фон, 360×46) →

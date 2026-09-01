@@ -40,3 +40,31 @@ export function calcLocaleEnabled(lang: unknown): lang is CalcLocale {
   if (lang === 'en') return true;
   return false;
 }
+
+// Calculators that ACTUALLY ship an English version (their page imports
+// calcLocaleEnabled and has en content). The labour/wage calculators
+// (ackord, ob-overtid, restidsersattning, …) are Swedish-agreement specific and
+// hard-guard `params.lang !== 'sv'` → they 404 on /en. The sitemap must therefore
+// emit /en ONLY for the slugs below, otherwise it advertises /en URLs that 404
+// (GSC "Not found (404)"). Keep this in sync with the *-kalkylator pages that
+// import calcLocaleEnabled.
+export const EN_CALC_SLUGS: ReadonlySet<string> = new Set([
+  'betong-kalkylator',
+  'fall-kalkylator',
+  'farg-kalkylator',
+  'gips-kalkylator',
+  'golv-kalkylator',
+  'golvvarme-kalkylator',
+  'grus-kalkylator',
+  'isolering-kalkylator',
+  'kvadratmeter-kalkylator',
+  'paslag-marginal-kalkylator',
+  'reglar-kalkylator',
+  'staket-kalkylator',
+  'tak-kalkylator',
+  'takstolar-kalkylator',
+  'tapet-kalkylator',
+  'timpris-kalkylator',
+  'trall-kalkylator',
+  'trappa-kalkylator',
+]);

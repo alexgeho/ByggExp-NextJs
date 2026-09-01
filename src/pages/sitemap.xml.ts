@@ -4,6 +4,7 @@ import { fetchPublishedBlogPosts } from '../lib/blog-api';
 import { getCodeArticles } from '../content/code-articles';
 import { VERKTYG_GROUPS } from '../content/verktyg-list';
 import { landingLanguageCodes, svEnLocales } from '../locales/languages';
+import { EN_CALC_SLUGS } from '../lib/locale';
 import { localeOrigin } from '../lib/seo';
 
 // Static routes that exist under every landing locale (besides the home page).
@@ -35,13 +36,16 @@ const SV_ONLY_PATHS = [
 ];
 
 // Calculators additionally serve English (/en/verktyg/...) — see CalcLocale in
-// lib/locale. Templates (mall) and PDF utilities remain sv-only, so only the
-// -kalkylator slugs get an /en sitemap entry (plus the /en/verktyg hub).
+// lib/locale. Templates (mall) and PDF utilities remain sv-only, and the
+// labour/wage calculators (ackord, ob-overtid, restidsersattning, …) are
+// Swedish-agreement specific and 404 on /en — so we emit /en ONLY for the calc
+// slugs that actually ship English content (EN_CALC_SLUGS), plus the /en/verktyg
+// hub. Emitting /en for a sv-only calc = advertising a 404 (GSC "Not found").
 const CALC_PATHS = [
   'verktyg',
   ...VERKTYG_GROUPS.flatMap((group) =>
     group.items
-      .filter((item) => item.slug.endsWith('-kalkylator'))
+      .filter((item) => EN_CALC_SLUGS.has(item.slug))
       .map((item) => `verktyg/${item.slug}`),
   ),
 ];

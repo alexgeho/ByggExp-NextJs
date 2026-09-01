@@ -30,6 +30,13 @@ const nextConfig = {
       { source: "/sv/verktyg/kakelfix-kalkylator", destination: "/sv/verktyg/golv-kalkylator", statusCode: 301 },
       { source: "/sv/verktyg/murbruk-kalkylator", destination: "/sv/verktyg", statusCode: 301 },
 
+      // Dead/renamed URLs Google crawled (GSC "Not found (404)"). 301 to the
+      // closest live page so the old indexed URL is replaced instead of 404-ing.
+      { source: "/contacts", destination: "/sv/contact", statusCode: 301 },
+      { source: "/sv/blog/byggnads-kollektivavtal-2026", destination: "/sv/blog/maste-ha-kollektivavtal-bygg", statusCode: 301 },
+      { source: "/sv/blog/anbudskalkyl-bygg", destination: "/sv/blog/kalkylprogram-bygg", statusCode: 301 },
+      { source: "/sv/blog/bygg-appar-i-sverige", destination: "/sv/blog/bygg-app", statusCode: 301 },
+
       // Clean vanity short links for marketing (YouTube, ads, print). The user
       // shares the pretty /go/... URL; the redirect appends UTM so GA4 attributes
       // the visit. Temporary (307) so a link can be re-pointed later without a

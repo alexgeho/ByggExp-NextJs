@@ -3,6 +3,31 @@
 Разбор «Not found (404)» из Google Search Console (byggexp.se). Дата: 2026-09-01.
 Статус GSC: 421 проиндексировано, 135 не проиндексировано (8 причин).
 
+## ✅ РЕШЕНО (2026-09-01, вечер) — проверено на live + пофикшено в коде
+
+Прогнал все 26 URL по live-сайту (fetch), разделил на баги / историю / корректные 404:
+
+- **Уже работали** (редирект `[lang]`→`/sv`, 200): `/[lang]`, `/[lang]/blog`, `/[lang]/funktioner`,
+  `/[lang]/verktyg`, `/[lang]/verktyg/{golv,kvadratmeter,staket,rot-avdrag}-kalkylator`, `/[lang]/underbitraden`.
+- **Пофикшено в коде (коммит "fix(seo): stop sitemap advertising /en…"):**
+  - Sitemap отдавал `/en/verktyg/<slug>` для ВСЕХ `-kalkylator`, но sv-only калькуляторы
+    (ackord, ob-overtid, restidsersattning + rot-avdrag/moms/…) 404-ят на /en. Теперь `/en`
+    только для `EN_CALC_SLUGS` (18 калькуляторов с реальным en; `src/lib/locale.ts`).
+  - 301: `/contacts`→`/sv/contact`, `/sv/blog/byggnads-kollektivavtal-2026`→`maste-ha-kollektivavtal-bygg`,
+    `/sv/blog/anbudskalkyl-bygg`→`kalkylprogram-bygg`, `/sv/blog/bygg-appar-i-sverige`→`bygg-app`
+    (цели проверены 200).
+- **Уже было починено ранее** (историческое, Google выкинет на рекролле):
+  `/en//ru/ blog` для sv-only постов — hreflang уже НЕ отдаёт en/ru (`[lang]/blog/[slug].tsx`),
+  sitemap их не эмитит.
+- **Корректные 404, не трогаем** (Google исключит сам): `/[lang]/blog/[slug]`, `/[lang]/embed/[slug]`
+  (литеральный `[slug]`), `/blog/test` (мусор), `/login`, `/signup`, `/faq` (app/несуществующие роуты).
+
+**Осталось:** после деплоя → в GSC нажать **Validate fix** для причины «Not found (404)»
+(и по желанию для «Duplicate without canonical»). Google перекраулит за дни-недели.
+
+---
+### Исходный разбор (для истории)
+
 ## Оценка 8 причин (что чинить, что норма)
 
 | Причина | Стр. | Вердикт |

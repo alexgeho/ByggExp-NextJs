@@ -16,13 +16,13 @@ export const featuresTranslations7_9 = {
     featuresCard8Step2: "Часы подтянутся автоматически",
     featuresCard8Step3: "Счет готов к отправке клиенту",
 
-    featuresCard9Title: "Все документы в одном месте",
+    featuresCard9Title: "Экономика проекта и рентабельность",
     featuresCard9Text:
-      "Документы всегда привязаны к нужному проекту. Вся информация хранится в одном месте.",
+      "Отработанные часы и материалы автоматически превращаются в затраты и сравниваются с бюджетом. Маржа по каждому проекту — в реальном времени.",
 
-    featuresCard9Step1: "Загрузите документы в проект",
-    featuresCard9Step2: "Фото и чертежи прямо со смены",
-    featuresCard9Step3: "Все материалы всегда под рукой",
+    featuresCard9Step1: "Задайте бюджет проекта",
+    featuresCard9Step2: "Часы и затраты считаются автоматически",
+    featuresCard9Step3: "Смотрите маржу в реальном времени",
   },
 
   en: {
@@ -40,12 +40,12 @@ export const featuresTranslations7_9 = {
     featuresCard8Step2: "Hours are added automatically",
     featuresCard8Step3: "Send the invoice to the customer",
 
-    featuresCard9Title: "All project documents in one place",
+    featuresCard9Title: "Project economics & profitability",
     featuresCard9Text:
-      "Photos, drawings and documents are always linked to the correct project. Everything is stored in one place and available to your entire team.",
-    featuresCard9Step1: "Upload documents to the project",
-    featuresCard9Step2: "Add photos and drawings directly from the shift",
-    featuresCard9Step3: "Access everything in one place",
+      "Logged hours and materials are automatically turned into costs and compared against the budget. See each project's margin in real time.",
+    featuresCard9Step1: "Set a budget for the project",
+    featuresCard9Step2: "Hours and costs are calculated automatically",
+    featuresCard9Step3: "See the margin in real time",
   },
 
   sv: {
@@ -63,13 +63,13 @@ export const featuresTranslations7_9 = {
     featuresCard8Step2: "Timmarna hämtas automatiskt",
     featuresCard8Step3: "Skicka fakturan till kunden",
 
-    featuresCard9Title: "Alla projektdokument på ett ställe",
+    featuresCard9Title: "Projektekonomi och lönsamhet",
     featuresCard9Text:
-      "Foton, ritningar och dokument kopplas alltid till rätt projekt. All information finns samlad på ett ställe.",
-    featuresCard9Step1: "Ladda upp dokument till projektet",
+      "Loggade timmar och material räknas automatiskt om till kostnad och ställs mot budgeten. Du ser marginalen per projekt i realtid.",
+    featuresCard9Step1: "Sätt en budget på projektet",
     featuresCard9Step2:
-      "Lägg till foton från arbetsplats",
-    featuresCard9Step3: "Hitta allt på ett ställe",
+      "Timmar och kostnader räknas automatiskt",
+    featuresCard9Step3: "Se marginalen i realtid",
   },
 
   nb: {
@@ -87,12 +87,12 @@ export const featuresTranslations7_9 = {
     featuresCard8Step2: "Timene hentes automatisk",
     featuresCard8Step3: "Send fakturaen til kunden",
 
-    featuresCard9Title: "Alle prosjektdokumenter på ett sted",
+    featuresCard9Title: "Prosjektøkonomi og lønnsomhet",
     featuresCard9Text:
-      "Bilder, tegninger og dokumenter kobles alltid til riktig prosjekt. All informasjon er samlet på ett sted.",
-    featuresCard9Step1: "Last opp dokumenter til prosjektet",
+      "Loggede timer og materialer regnes automatisk om til kostnader og måles mot budsjettet. Se marginen per prosjekt i sanntid.",
+    featuresCard9Step1: "Sett et budsjett på prosjektet",
     featuresCard9Step2:
-      "Legg til bilder fra byggeplassen",
-    featuresCard9Step3: "Finn alt på ett sted",
+      "Timer og kostnader beregnes automatisk",
+    featuresCard9Step3: "Se marginen i sanntid",
   },
 } as const;

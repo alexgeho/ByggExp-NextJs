@@ -8,9 +8,16 @@
 
 ## Тема письма (ротация A/B)
 - **`fråga om era elektrikerjobb`** — нейтральная, «просто вопрос» (обычно выше open rate).
-  Под категорию: `fråga om era snickerijobb` / `fråga om era jobb`.
+  RU: «вопрос про ваши электромонтажные работы». Под категорию: `fråga om era snickerijobb`
+  (RU: «про ваши столярные работы») / `fråga om era jobb` («про ваши работы»).
 - **`IT-tjänst för elföretag`** — прямая, описательная (на A/B-тест).
-- Запасные: `tidrapportering på jobben`, `personalliggare + tid`.
+  RU: «IT-сервис для электромонтажных фирм». ← рекомендуемый короткий вариант.
+- **`IT-tjänst för elföretag (tidrapportering, fakturering, projekthantering)`** — длинный вариант.
+  RU: «IT-сервис для электромонтажных фирм (учёт времени, выставление счетов, управление проектами)».
+  ⚠️ В инбоксе (особенно на телефоне) обрежется до `IT-tjänst för elföretag (tidrapporteri…` —
+  скобки не увидят. Использовать только на A/B-тест; функции лучше в 1-й строке тела.
+- Запасные: `tidrapportering på jobben` («учёт времени на объектах»),
+  `personalliggare + tid` («журнал персонала + время»).
 
 **Правило темы:** коротко (≤~40 симв, иначе режется в инбоксе, особенно на телефоне),
 без списка фич и без рекламных слов (spara / smidig / effektivisera / lösning).

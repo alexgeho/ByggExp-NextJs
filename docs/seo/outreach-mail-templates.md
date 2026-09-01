@@ -6,10 +6,17 @@
 
 Дата: 2026-09-01.
 
-## Тема письма
-- `tidrapportering på jobben`
-- `personalliggare + tid`
-- `fråga om era elektrikerjobb`
+## Тема письма (ротация A/B)
+- **`fråga om era elektrikerjobb`** — нейтральная, «просто вопрос» (обычно выше open rate).
+  Под категорию: `fråga om era snickerijobb` / `fråga om era jobb`.
+- **`IT-tjänst för elföretag`** — прямая, описательная (на A/B-тест).
+- Запасные: `tidrapportering på jobben`, `personalliggare + tid`.
+
+**Правило темы:** коротко (≤~40 симв, иначе режется в инбоксе, особенно на телефоне),
+без списка фич и без рекламных слов (spara / smidig / effektivisera / lösning).
+Перечисление функций (tidrapportering, fakturering, projekthantering) — в ПЕРВОЙ строке
+ТЕЛА, не в теме. Пример первой строки под тему «IT-tjänst för elföretag»:
+«Vi har byggt en IT-tjänst för elföretag — tidrapportering, fakturering och projekthantering i samma app.»
 
 ---
 

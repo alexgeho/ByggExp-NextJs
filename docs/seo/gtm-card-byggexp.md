@@ -8,7 +8,7 @@
 |---|---|---|---|
 | **Гео** | Один регион, даже если потенциал международный | ✅ | **Sverige** — svensktalande marknad (Stockholm первым, потом Göteborg/Malmö). Норвегия — отдельная карточка позже. |
 | **База** | ≥100 контактов + источник | ✅ | Google Sheet `byggexp-leads-1646` (elektriker Stockholm). Источник: **Google Maps / Places**. Расширять: LinkedIn Sales Nav, hitta.se, allabolag.se. |
-| **Тайтл/хук** | Сильный хук в теме, который нельзя не открыть | ✅ | Тема короткая и «скучная» (по шпаргалке): **`tidrapportering på jobben`**. Alt: `personalliggare + tid`, `fråga om era elektrikerjobb`. |
+| **Тайтл/хук** | Сильный хук в теме, который нельзя не открыть | ✅ | Ротация A/B: **`fråga om era elektrikerjobb`** (нейтральная, «просто вопрос») vs **`IT-tjänst för elföretag`** (прямая). Запас: `tidrapportering på jobben`, `personalliggare + tid`. Тема коротко, без фиче-листа — перечисление функций в 1-й строке тела. |
 | **Текст** | Главная выгода + боль + описание продукта/механики | ✅ | См. ниже (Вариант B, SV). Боль: учёт времени/счета/проекты **både krångligt och onödigt dyrt**. Механика: GPS-время + ручной ввод, offert/faktura, planering, **projektekonomi**. |
 | **Оффер/СТА** | Конкретный оффер/следующий шаг | ✅ | **«Får jag visa på 10 min i Teams nästa vecka?»** Бонусы: 14 dagars gratis test, inga årsavtal, support sv/en, oftast billigare. |
 | **Стоимость** | Есть цена (или обсуждается, в 1-м письме часто не пишем) | ➖ | В первом письме цену НЕ пишем — только «oftast billigare än det ni redan betalar för». Точная цена — на демо. |

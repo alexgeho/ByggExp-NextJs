@@ -81,9 +81,9 @@ Hej {{namn}}!
 
 Увидел, что вы электрики по Стокгольму и хорошо загружены. Тайм-репорты, счета и проекты сейчас в разных местах или вручную?
 
-Мы сделали шведский сервис ByggExp — время (GPS + вручную), офферты/счета, планирование и экономика проекта в одном приложении. Как раз для таких компаний, как ваша, и обычно дешевле того, что уже стоит.
+Мы сделали шведский сервис ByggExp — время (GPS + вручную), офферты/счета, планирование и экономика проекта. Всё в одном сервисе — веб + приложение. Как раз для таких компаний, как ваша.
 
-Покажу за 10 минут в Teams на следующей неделе — 14 дней бесплатно, без годовых контрактов, поддержка на шведском/английском.
+Покажу за 20 минут в Teams на следующей неделе — 14 дней бесплатно, без годовых контрактов, поддержка на шведском/английском.
 
 Mvh, Alexander
 
@@ -92,9 +92,9 @@ Hej {{namn}}!
 
 Såg att ni är elektriker runt Stockholm och har bra fart. Sköter ni tidrapportering, fakturor och projekt i olika system eller för hand idag?
 
-Vi har byggt det svenska verktyget ByggExp — tid (GPS + manuellt), offert/faktura, planering och projektekonomi i samma app. Byggt för företag som er, oftast billigare än det ni redan betalar för.
+Vi har byggt det svenska verktyget ByggExp — tid (GPS + manuellt), offert/faktura, planering och projektekonomi. Allt i samma tjänst, både webb och app. Byggt för företag som er.
 
-Får jag visa på 10 min i Teams nästa vecka? 14 dagars gratis test, inga årsavtal, support på svenska och engelska.
+Får jag visa på 20 min i Teams nästa vecka? 14 dagars gratis test, inga årsavtal, support på svenska och engelska.
 
 Mvh, Alexander
 

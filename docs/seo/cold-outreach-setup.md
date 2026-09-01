@@ -86,8 +86,25 @@ B2C/B2B аутрич по шведским строительным/эл-фир�
 
 **Вывод — база требует обработки ПЕРЕД рассылкой:**
 1. Отфильтровать активные (проверка org.nr / статуса на allabolag.se; allabolag заодно = источник org.nr + «похожие»).
-2. Обогатить email по сайтам (Hunter / Prospeo / Findymail / FullEnrich — из шпаргалки).
+2. ~~Обогатить email по сайтам~~ ✅ СДЕЛАНО (см. ниже).
 3. Валидировать почты (ZeroBounce / Millionverifier).
+
+### Сбор почт — ✅ СДЕЛАНО (2026-09-01, вечер)
+- **924 уникальных email** собрано с сайтов фирм. Hit rate **75%** (1012 из 1344 сайтов, после дедупа/чистки — 924).
+- **Файл:** `~/Downloads/byggexp-emails-final.csv` (колонки `namn, webbplats, email`).
+- **Метод:** Node-скрипт `scripts/lead-email-scraper.mjs` — читает CSV-экспорт таблицы, заходит на
+  каждый сайт (главная + /kontakt, /kontakta-oss, /contact, /om-oss), тянет email (mailto: + текст),
+  приоритет ролевым (info@/kontakt@/hej@), фильтрует мусор + домены-конструкторы (minhemsida, webador, telia).
+  Перезапуск: `LIMIT=2000 CONC=12 OUT=out.csv node scrape-emails.mjs` (CSV из
+  Sheet → File → Download → CSV, путь в env `CSV=`). Скрипт в scratchpad этой сессии.
+- **Состав почт:** info@ 641, kontakt@ 42, hej@/offert@/support@/mail@ и немного личных.
+- **Осталось почистить:** гиганты не-ICP (Bravida ×23, Veteranpoolen ×15 — дедуп оставил по 1, но лучше
+  исключить целиком) + спот-чек банкротов по allabolag.
+
+### Тест-отправка — ✅ СДЕЛАНО (2026-09-01)
+- Отправлено 1 тест-письмо: `alexander@tidrapportapp.se` → `alexander@byggexp.se`
+  (тема `fråga om era elektrikerjobb`, тело Вариант B SV + подпись с логотипом).
+- **⏳ НЕ ПРОВЕРЕНО куда упало** (inbox/spam) — критичный сигнал доходимости нового домена. ПРОВЕРИТЬ.
 
 ## Шаблон письма
 
@@ -106,13 +123,16 @@ demo 20 min i Teams, «allt i samma tjänst, webb + app». Подпись под
 
 ## Следующие шаги ⏭️
 
-**Блок «база» (обязательно ДО рассылки — почт сейчас нет):**
-1. [ ] Отфильтровать активные компании (org.nr / статус на allabolag.se; выкинуть банкротов).
-2. [ ] Обогатить email по сайтам (Hunter / Prospeo / Findymail / FullEnrich).
-3. [ ] Валидировать почты (ZeroBounce / Millionverifier).
-4. [ ] Экспорт финального CSV `namn,email` (только валидные).
+**Блок «база»:**
+1. [x] ✅ Собрано 924 email с сайтов → `~/Downloads/byggexp-emails-final.csv` (скрипт scrape-emails.mjs).
+2. [ ] Исключить гигантов не-ICP (Bravida, Veteranpoolen, крупные сети) — фильтр по списку.
+3. [ ] Спот-чек банкротов по allabolag (хотя бы топ-адресатов).
+4. [ ] Валидировать почты (ZeroBounce / Millionverifier) — либо MX-первопроход.
+5. [ ] Залить обратно в Google Sheet (колонка email) ИЛИ прямо в Instantly/Smartlead.
 
 **Блок «отправка»:**
+0. [ ] ⚠️ ПЕРВЫМ: проверить, куда упал тест-мейл на alexander@byggexp.se (inbox/spam). Если спам —
+   греть домен / плейн-текст identity, прежде чем слать реальным.
 5. [ ] Канал: вручную 20–30/день с `alexander@tidrapportapp.se` (домен готов, SPF/DKIM/DMARC ✅),
    либо Instantly/Smartlead с прогревом для объёма.
 6. [ ] 3 фолоуапа (см. outreach-mail-templates.md).

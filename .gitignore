@@ -52,3 +52,7 @@ design-assets/features-src/
 
 # Personal job/LIA hunt working folder (local only, never commit/push)
 internship/
+
+# lead-gen email exports (PII — never commit)
+byggexp-emails*.csv
+*emails-found*.csv

@@ -1,7 +1,11 @@
 # Cold Email Outreach — Setup & Runbook
 
 Рабочий документ по холодной email-рассылке от ByggExp. Обновляется по ходу.
-Последнее обновление: 2026-09-01.
+Последнее обновление: 2026-09-01 (вечер).
+
+**Связанные доки:**
+- Шаблоны писем (тема/тело/фолоуапы, RU+SV, Вариант A/B) — `docs/seo/outreach-mail-templates.md`
+- GTM-карточка (гео/база/хук/оффер) — `docs/seo/gtm-card-byggexp.md`
 
 ## Цель
 
@@ -68,33 +72,28 @@ B2C/B2B аутрич по шведским строительным/эл-фир�
 - Ре-генерация: sharp-скрипт берёт path из logo.svg, заливает `#0f2350`.
   (см. коммит "assets: add dark PNG wordmark for email signatures".)
 
-## Шаблон письма (готов к использованию)
+## Разбор базы лидов (2026-09-01) — ВАЖНО
 
-**Тема (выбрать одну, короткую и «скучную»):**
-- `tidrapportering på jobben`
-- `personalliggare + tid`
-- `fråga om era elektrikerjobb`
+Проанализировал весь Google Sheet (gviz HTML-экспорт). **База НЕ готова к рассылке как есть.**
+- **Всего: 1646 компаний.** Источник: `google_places` (100%).
+- **Категории:** El — 853, Snickeri — 793 (электрики + столяры, ~50/50). Не только электрики.
+- **География: ВСЯ Швеция** (не Стокгольм): Stockholm 118, Uppsala 108, Örebro 103, Göteborg 99,
+  Norrköping 99, Linköping 98, Malmö 97, Gävle 93, Helsingborg 88… (20+ городов).
+- **Контакты:** телефон 1482 (90%), сайт 1344 (82%), **email 0 (0%!)**, рейтинг 1350.
+- **Фильтра по качеству не было** (рейтинги любые, вкл. пустые/<4; отзывы любые, вкл. 0).
+- **⚠️ Есть банкроты/неактивные** — пример: Schibler Elservice AB = «Konkurs inledd 2026-05-11»
+  (виден на allabolag.se). Google Places про банкротства не знает.
 
-**Тело** (`{{namn}}` → имя фирмы):
+**Вывод — база требует обработки ПЕРЕД рассылкой:**
+1. Отфильтровать активные (проверка org.nr / статуса на allabolag.se; allabolag заодно = источник org.nr + «похожие»).
+2. Обогатить email по сайтам (Hunter / Prospeo / Findymail / FullEnrich — из шпаргалки).
+3. Валидировать почты (ZeroBounce / Millionverifier).
 
-```
-Hej {{namn}}!
+## Шаблон письма
 
-Såg att ni jobbar som elektriker runt Stockholm och verkar ha bra fart just nu. Sköter ni tidrapporteringen och personalliggaren för hand / i Excel idag?
-
-Frågar för att det brukar vara där timmar försvinner — man glömmer fakturera allt, och personalliggaren blir en stress när Skatteverket dyker upp på bygget.
-
-Vi bygger ByggExp, ett svenskt verktyg för hantverkare: tidrapportering, digital personalliggare (ID06), offert och faktura i samma app. Byggt för el- och byggföretag, inte ett stort dyrt affärssystem.
-
-Vill du att jag visar det på 10 min nästa vecka? Jag sätter gärna upp det åt er så ni bara kan testa.
-```
-
-(Подпись подставляется автоматически.)
-
-**Фолоуапы (через день каждый):**
-1. Hej igen! För ni tidrapporteringen digitalt redan, eller fortfarande papper/Excel?
-2. Har ni testat att digitalisera personalliggaren någon gång, eller känns det som overkill?
-3. Hur många är ni på bygget som mest? Kanske är det för tidigt — säg bara till så släpper jag det.
+Актуальные тема/тело/фолоуапы (RU+SV, Вариант A/B) — в **`docs/seo/outreach-mail-templates.md`**.
+Текущий рабочий: Вариант B (короткий), тема `fråga om era elektrikerjobb` (A/B с `IT-tjänst för elföretag`),
+demo 20 min i Teams, «allt i samma tjänst, webb + app». Подпись подставляется автоматически.
 
 ## ⚠️ Открытый риск / решение отложено
 
@@ -107,16 +106,27 @@ Vill du att jag visar det på 10 min nästa vecka? Jag sätter gärna upp det å
 
 ## Следующие шаги ⏭️
 
-1. [ ] **Экспорт базы** из Google Sheet → CSV `namn,email` (только строки с валидным email).
-2. [ ] **Валидация почт** (ZeroBounce / Millionverifier) — часть google_places email мусорные.
-3. [ ] Решить канал отправки:
-   - вручную по 20–30/день с alexander@byggexp.se (для старта ок), ИЛИ
-   - Instantly.ai / Smartlead (Pro) с отдельным доменом + прогрев (для объёма).
-4. [ ] Настроить **3 фолоуапа** в инструменте (или вести вручную).
-5. [ ] Определиться с plain-text vs HTML identity (см. риск выше) — как пойдёт доходимость.
-6. [ ] Расширить базу за пределы «электрики Stockholm»: другие kategori/город (Göteborg, Malmö).
-7. [ ] Персонализация {{namn}} + возможный триггер (много вакансий / отзывы на картах).
-8. [ ] Трекинг: open rate (цель 60–70%), reply (≥10%), бенчмарки из шпаргалки.
+**Блок «база» (обязательно ДО рассылки — почт сейчас нет):**
+1. [ ] Отфильтровать активные компании (org.nr / статус на allabolag.se; выкинуть банкротов).
+2. [ ] Обогатить email по сайтам (Hunter / Prospeo / Findymail / FullEnrich).
+3. [ ] Валидировать почты (ZeroBounce / Millionverifier).
+4. [ ] Экспорт финального CSV `namn,email` (только валидные).
+
+**Блок «отправка»:**
+5. [ ] Канал: вручную 20–30/день с `alexander@tidrapportapp.se` (домен готов, SPF/DKIM/DMARC ✅),
+   либо Instantly/Smartlead с прогревом для объёма.
+6. [ ] 3 фолоуапа (см. outreach-mail-templates.md).
+7. [ ] A/B тем: `fråga om era elektrikerjobb` vs `IT-tjänst för elföretag`.
+8. [ ] Сегментация El vs Snickeri (разные хук-строки), город — для персонализации.
+9. [ ] Трекинг: open 60–70%, reply ≥10%.
+
+**Отдельная задача (SEO, не outreach):** починить 404/индексацию GSC — план в
+`docs/seo/gsc-404-cleanup.md` (корень: литеральные `[lang]` в sitemap + en/ru локали).
+
+## Прочее сделано в этой сессии (вне outreach)
+- **Главная, карточка #9:** была подписана «документы», хотя картинка/ссылка про экономику →
+  переписал на «Projektekonomi och lönsamhet» (sv/en/ru/nb), задеплоено.
+- **GSC 404 разбор** (26 URL) — задокументирован в `gsc-404-cleanup.md`.
 
 ## Технические заметки (чтобы не искать заново)
 

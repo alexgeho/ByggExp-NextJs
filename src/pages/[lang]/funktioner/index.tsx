@@ -27,6 +27,10 @@ const FUNKTIONER_COPY = {
     subtitle:
       'Utforska vad ByggExp gör – från offert och tidrapportering till fakturor och löner. Klicka på en funktion för att läsa hur den fungerar.',
     empty: 'Inga funktioner ännu.',
+    customTitle: 'Vi bygger funktioner efter era behov',
+    customBody:
+      'Varje företag har sina egna arbetssätt. ByggExp är inte bara en färdig standardlösning – det är en plattform som vi gärna vidareutvecklar efter era behov. Berätta om era utmaningar och önskemål, så bygger vi det snabbt och med kvalitet. Era idéer blir en del av nya funktioner och uppdateringar i ByggExp.',
+    customCta: 'Boka en demo',
   },
   en: {
     badge: 'Features',
@@ -34,6 +38,10 @@ const FUNKTIONER_COPY = {
     subtitle:
       'Explore what ByggExp does – from quotes and time tracking to invoices and payroll. Click a feature to read how it works.',
     empty: 'No features yet.',
+    customTitle: 'We build features around your needs',
+    customBody:
+      "Every company has its own way of working. ByggExp isn't just an off-the-shelf solution – it's a platform we're happy to extend to fit your needs. Tell us about your challenges and wishes, and we'll build it fast and with quality. Your ideas become part of new features and updates in ByggExp.",
+    customCta: 'Book a demo',
   },
   ru: {
     badge: 'Функции',
@@ -41,6 +49,10 @@ const FUNKTIONER_COPY = {
     subtitle:
       'Что умеет ByggExp — от смет и учёта времени до счетов и зарплаты. Нажмите на функцию, чтобы узнать, как она работает.',
     empty: 'Пока нет функций.',
+    customTitle: 'Разработаем функции под ваши задачи',
+    customBody:
+      'У каждой компании свои процессы. ByggExp — не просто готовое решение, а платформа, которую мы дорабатываем под ваши нужды. Расскажите о своих задачах и пожеланиях — реализуем быстро и качественно. Ваши идеи становятся частью новых функций и обновлений ByggExp.',
+    customCta: 'Записаться на демо',
   },
 } as const;
 
@@ -165,7 +177,65 @@ export default function FunktionerPage({
         </div>
       </section>
 
+      <section className="funktioner-custom">
+        <div className="container container-narrow">
+          <div className="funktioner-custom-card">
+            <h2>{copy.customTitle}</h2>
+            <p>{copy.customBody}</p>
+            <Link href={`/${lang}#cta`} className="funktioner-custom-cta">
+              {copy.customCta}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <Footer footerT={footerT} />
+
+      <style jsx>{`
+        .funktioner-custom {
+          padding: 8px 20px 72px;
+          background: #f4f6fa;
+        }
+        .funktioner-custom-card {
+          background: linear-gradient(135deg, #0b2545 0%, #123a6b 100%);
+          color: #fff;
+          border-radius: 22px;
+          padding: 48px 44px;
+          text-align: center;
+          box-shadow: 0 30px 70px -34px rgba(11, 37, 69, 0.55);
+        }
+        .funktioner-custom-card h2 {
+          font-size: clamp(22px, 3.2vw, 30px);
+          line-height: 1.15;
+          margin: 0 0 16px;
+          letter-spacing: -0.02em;
+        }
+        .funktioner-custom-card p {
+          max-width: 640px;
+          margin: 0 auto 28px;
+          font-size: 16px;
+          line-height: 1.7;
+          color: #cfdcf2;
+        }
+        .funktioner-custom-cta {
+          display: inline-block;
+          background: #1c6cf3;
+          color: #fff;
+          text-decoration: none;
+          font-weight: 600;
+          padding: 14px 30px;
+          border-radius: 12px;
+          transition: background 0.15s ease;
+        }
+        .funktioner-custom-cta:hover {
+          background: #155ad1;
+        }
+        @media (max-width: 640px) {
+          .funktioner-custom-card {
+            padding: 34px 22px;
+          }
+        }
+      `}</style>
     </>
   );
 }

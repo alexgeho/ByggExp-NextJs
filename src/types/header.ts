@@ -9,7 +9,10 @@ export type HeaderProps = {
     funktioner: string;
     resources: string;
     blog: string;
+    blogDesc: string;
     freeTools: string;
+    freeToolsDesc: string;
+    browseBlog: string;
     searchLabel: string;
     searchPlaceholder: string;
     searchHint: string;

@@ -145,6 +145,14 @@
   opacity: 0.7;
 }
 
+.language-arrow {
+  transition: transform 0.2s ease;
+}
+
+.language-arrow.open {
+  transform: rotate(180deg);
+}
+
 .nav-dropdown-menu {
   position: absolute;
   top: calc(100% + 12px);
@@ -176,24 +184,129 @@
   background: rgba(255, 255, 255, 0.08);
 }
 
-// Blog category shortcuts inside the Resources dropdown.
-.nav-dropdown-cats {
+/* ---- Resources mega-menu (desktop) ---- */
+
+/* Open on hover as well as click; hover is desktop-only (guarded in the media
+   query it lives outside, and touch devices fall back to the click toggle). */
+@media (min-width: 841px) {
+  .nav-dropdown:hover .nav-dropdown-menu {
+    display: flex;
+  }
+  .nav-dropdown:hover .language-arrow {
+    transform: rotate(180deg);
+  }
+  /* Bridge the 12px gap so the menu doesn't close when the cursor crosses it. */
+  .nav-dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 14px;
+  }
+}
+
+.nav-mega {
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  padding: 12px;
+  opacity: 0;
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease;
+}
+
+.nav-mega.open,
+.nav-dropdown:hover .nav-mega {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.nav-mega-links {
+  display: flex;
+  gap: 6px;
+}
+
+.nav-mega .nav-mega-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1 1 220px;
+  min-width: 220px;
+  padding: 12px;
+  border-radius: 12px;
+  white-space: normal;
+}
+
+.nav-mega .nav-mega-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  opacity: 1;
+}
+
+.nav-mega-ico {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(28, 108, 243, 0.16);
+  color: #5aa0ff;
+}
+
+.nav-mega-text {
   display: flex;
   flex-direction: column;
+  gap: 3px;
+}
+
+.nav-mega-text strong {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.nav-mega-text small {
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.nav-mega-cats {
   margin-top: 6px;
-  padding-top: 6px;
+  padding-top: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.nav-dropdown-cat {
+.nav-mega-cats-title {
+  display: block;
+  padding: 0 8px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-mega-cats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px 8px;
+}
+
+.nav-mega .nav-dropdown-cat {
   display: flex !important;
   align-items: center;
   gap: 9px;
+  padding: 7px 8px;
   font-size: 13.5px;
+  white-space: normal;
   opacity: 0.82;
 }
 
-.nav-dropdown-cat:hover {
+.nav-mega .nav-dropdown-cat:hover {
   opacity: 1;
 }
 

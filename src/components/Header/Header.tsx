@@ -93,7 +93,8 @@ function Header({ headerT }: HeaderProps) {
             <Link href={`/${lang}#pricing`} onClick={closeMenu}>{headerT.pricing}</Link>
 
             {/* RESOURCES — free tools + blog, grouped so visitors don't mistake
-                them for the paid product (standard B2B-SaaS pattern). */}
+                them for the paid product. Rendered as a mega-menu (icon + title
+                + description) on desktop; flows inline in the burger on mobile. */}
             <div className="nav-dropdown">
               <button
                 type="button"
@@ -108,46 +109,83 @@ function Header({ headerT }: HeaderProps) {
                   className={resOpen ? "language-arrow open" : "language-arrow"}
                 />
               </button>
-              <div className={resOpen ? "nav-dropdown-menu open" : "nav-dropdown-menu"}>
-                {(lang === "sv" || lang === "nb") && (
+              <div
+                className={
+                  resOpen ? "nav-dropdown-menu nav-mega open" : "nav-dropdown-menu nav-mega"
+                }
+              >
+                <div className="nav-mega-links">
+                  {(lang === "sv" || lang === "nb") && (
+                    <Link
+                      href={`/${lang}/verktyg`}
+                      className="nav-mega-card"
+                      onClick={() => {
+                        setResOpen(false);
+                        closeMenu();
+                      }}
+                    >
+                      <span className="nav-mega-ico" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6 2 2 6-6a4 4 0 0 0 5.4-5.4l-2.3 2.3-1.7-.3-.3-1.7 2.3-2.3Z"
+                            stroke="currentColor"
+                            strokeWidth="1.6"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      <span className="nav-mega-text">
+                        <strong>{headerT.freeTools}</strong>
+                        <small>{headerT.freeToolsDesc}</small>
+                      </span>
+                    </Link>
+                  )}
                   <Link
-                    href={`/${lang}/verktyg`}
+                    href={`/${lang}/blog`}
+                    className="nav-mega-card"
                     onClick={() => {
                       setResOpen(false);
                       closeMenu();
                     }}
                   >
-                    {headerT.freeTools}
-                  </Link>
-                )}
-                <Link
-                  href={`/${lang}/blog`}
-                  onClick={() => {
-                    setResOpen(false);
-                    closeMenu();
-                  }}
-                >
-                  {headerT.blog}
-                </Link>
-                {(lang === "sv" || lang === "nb") && (
-                  <div className="nav-dropdown-cats">
-                    {BLOG_CATEGORIES.map((cat) => (
-                      <Link
-                        key={cat.key}
-                        href={`/${lang}/blog?kategori=${cat.key}`}
-                        className="nav-dropdown-cat"
-                        onClick={() => {
-                          setResOpen(false);
-                          closeMenu();
-                        }}
-                      >
-                        <span
-                          className="nav-dropdown-cat-dot"
-                          style={{ background: cat.color }}
+                    <span className="nav-mega-ico" aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5v-13ZM20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5v-13Z"
+                          stroke="currentColor"
+                          strokeWidth="1.6"
+                          strokeLinejoin="round"
                         />
-                        {cat.label}
-                      </Link>
-                    ))}
+                      </svg>
+                    </span>
+                    <span className="nav-mega-text">
+                      <strong>{headerT.blog}</strong>
+                      <small>{headerT.blogDesc}</small>
+                    </span>
+                  </Link>
+                </div>
+                {(lang === "sv" || lang === "nb") && (
+                  <div className="nav-mega-cats">
+                    <span className="nav-mega-cats-title">{headerT.browseBlog}</span>
+                    <div className="nav-mega-cats-grid">
+                      {BLOG_CATEGORIES.map((cat) => (
+                        <Link
+                          key={cat.key}
+                          href={`/${lang}/blog?kategori=${cat.key}`}
+                          className="nav-dropdown-cat"
+                          onClick={() => {
+                            setResOpen(false);
+                            closeMenu();
+                          }}
+                        >
+                          <span
+                            className="nav-dropdown-cat-dot"
+                            style={{ background: cat.color }}
+                          />
+                          {cat.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>

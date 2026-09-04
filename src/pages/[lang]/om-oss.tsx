@@ -59,6 +59,15 @@ export default function AboutPage({
           du kan testa allt gratis innan du bestämmer dig.
         </p>
 
+        <h2>Vi bygger funktioner efter era behov</h2>
+        <p>
+          Varje företag har sina egna arbetssätt. ByggExp är inte bara en färdig
+          standardlösning – det är en plattform som vi gärna vidareutvecklar
+          efter era behov. Berätta om era utmaningar och önskemål, så bygger vi
+          det snabbt och med kvalitet. Era idéer blir en del av nya funktioner
+          och uppdateringar i ByggExp.
+        </p>
+
         <h2>Kontakt och företagsuppgifter</h2>
         <p>
           RealMar AB, c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma.
@@ -118,6 +127,15 @@ export default function AboutPage({
         users. We listen to tradespeople and site managers, ship improvements
         continuously, and keep the product easy to get started with – you can
         try everything for free before you decide.
+      </p>
+
+      <h2>We build features around your needs</h2>
+      <p>
+        Every company has its own way of working. ByggExp isn't just an
+        off-the-shelf solution – it's a platform we're happy to extend to fit
+        your needs. Tell us about your challenges and wishes, and we'll build it
+        fast and with quality. Your ideas become part of new features and
+        updates in ByggExp.
       </p>
 
       <h2>Contact and company details</h2>

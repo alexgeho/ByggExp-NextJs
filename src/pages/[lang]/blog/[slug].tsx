@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
+import FeatureNav from '../../../components/FeatureNav/FeatureNav';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPost } from '../../../lib/blog-api';
@@ -303,6 +304,10 @@ export default function BlogArticlePage({
             <span>/</span>
             <span className="blog-breadcrumbs-current">{post.title}</span>
           </nav>
+
+          {FEATURE_ARTICLE_SLUGS.has(post.slug) ? (
+            <FeatureNav lang={lang} activeSlug={post.slug} />
+          ) : null}
 
           <div className="blog-article-head">
             <h1>{post.title}</h1>

@@ -183,6 +183,53 @@
   color: var(--white);
 }
 
+// Feature pill nav shown at the top of each feature article — lets visitors
+// jump between features without going back. Single scrollable row.
+.feature-nav {
+  margin: 6px 0 30px;
+}
+
+.feature-nav-track {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.feature-nav-track::-webkit-scrollbar {
+  display: none;
+}
+
+.feature-nav-chip {
+  flex: 0 0 auto;
+  padding: 8px 16px;
+  border: 1.5px solid rgba(15, 35, 80, 0.14);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    background 0.15s ease;
+}
+
+.feature-nav-chip:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.feature-nav-chip.is-active {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: var(--white);
+}
+
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

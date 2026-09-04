@@ -333,7 +333,9 @@ function FeatureCarousel({
             <Link
               key={post._id}
               href={`/${lang}/blog/${encodeURIComponent(post.slug)}`}
-              className="blog-card funktioner-slide"
+              className={`blog-card funktioner-slide${
+                visiblePosts.length === 1 ? ' is-solo' : ''
+              }`}
             >
               {post.coverImageUrl ? (
                 <img src={post.coverImageUrl} alt={post.title} className="blog-card-image" />
@@ -513,6 +515,41 @@ export default function FunktionerPage({
           scroll-snap-align: start;
           flex: 0 0 calc((100% - 68px) / 3);
           text-decoration: none;
+        }
+        /* A single filtered feature gets a full-width, horizontal spotlight card. */
+        .funktioner-slide.is-solo {
+          flex-basis: 100%;
+          flex-direction: row;
+          align-items: center;
+          gap: 40px;
+          padding: 40px;
+        }
+        .funktioner-slide.is-solo .blog-card-image {
+          width: 56%;
+          flex: 0 0 56%;
+          margin-bottom: 0;
+          aspect-ratio: 16 / 10;
+        }
+        .funktioner-slide.is-solo .blog-card-body {
+          flex: 1;
+        }
+        .funktioner-slide.is-solo .blog-card-body h2 {
+          font-size: clamp(24px, 2.6vw, 34px);
+        }
+        .funktioner-slide.is-solo .blog-card-body p {
+          font-size: 17px;
+        }
+        @media (max-width: 760px) {
+          .funktioner-slide.is-solo {
+            flex-direction: column;
+            gap: 20px;
+            padding: 24px;
+          }
+          .funktioner-slide.is-solo .blog-card-image {
+            width: 100%;
+            flex-basis: auto;
+            margin-bottom: 4px;
+          }
         }
         .fc-arrow {
           position: absolute;

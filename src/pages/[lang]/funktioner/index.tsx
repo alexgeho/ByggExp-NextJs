@@ -31,11 +31,30 @@ const ALLA_LABEL: Partial<Record<LandingLanguageCode, string>> = {
   nb: 'Alle',
 };
 
-// Short, pill-friendly label for a feature. Prefers the CMS tag (already a
-// concise feature name, e.g. "Närvaro", "Kvitton & utlägg") and falls back to
-// the title so a tag-less post still gets a readable pill.
-function featurePillLabel(post: BlogPost, fallback: string): string {
-  return post.tag || post.title || fallback;
+// Per-feature label overrides, when the CMS tag isn't the wording we want on
+// this page. Keyed by slug then language; used for both the pill and the card
+// badge so they always match.
+const FEATURE_TAG_OVERRIDE: Record<
+  string,
+  Partial<Record<LandingLanguageCode, string>>
+> = {
+  'paminnelser-uppgifter-och-deadlines': {
+    sv: 'Auto-påminnelser för uppgifter',
+    en: 'Auto-reminders for tasks',
+    ru: 'Автонапоминания по задачам',
+    nb: 'Auto-påminnelser for oppgaver',
+  },
+};
+
+// Display tag for a feature. Prefers an explicit override, then the CMS tag
+// (already a concise feature name, e.g. "Närvaro"), then the title so a
+// tag-less post still gets a readable label.
+function featureTag(
+  post: BlogPost,
+  lang: LandingLanguageCode,
+  fallback: string,
+): string {
+  return FEATURE_TAG_OVERRIDE[post.slug]?.[lang] || post.tag || post.title || fallback;
 }
 
 const FUNKTIONER_COPY = {
@@ -181,8 +200,8 @@ function FeatureCarousel({
 
   // One pill per feature, labelled with the feature's own name.
   const pills = useMemo(
-    () => posts.map((post) => ({ slug: post.slug, label: featurePillLabel(post, badge) })),
-    [posts, badge],
+    () => posts.map((post) => ({ slug: post.slug, label: featureTag(post, lang, badge) })),
+    [posts, lang, badge],
   );
 
   const visiblePosts = useMemo(() => {
@@ -282,7 +301,7 @@ function FeatureCarousel({
                 <img src={post.coverImageUrl} alt={post.title} className="blog-card-image" />
               ) : null}
               <div className="blog-card-body">
-                <span className="blog-tag">{post.tag || badge}</span>
+                <span className="blog-tag">{featureTag(post, lang, badge)}</span>
                 <h2>{post.title}</h2>
                 <p>{post.excerpt}</p>
               </div>

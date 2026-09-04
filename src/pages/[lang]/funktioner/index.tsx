@@ -277,7 +277,7 @@ export default function FunktionerPage({
 
       <Footer footerT={footerT} />
 
-      <style jsx>{`
+      <style jsx global>{`
         .funktioner-why {
           padding: 56px 20px 8px;
           background: #f4f6fa;

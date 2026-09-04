@@ -31,6 +31,29 @@ const FUNKTIONER_COPY = {
     customBody:
       'Varje företag har sina egna arbetssätt. ByggExp är inte bara en färdig standardlösning – det är en plattform som vi gärna vidareutvecklar efter era behov. Berätta om era utmaningar och önskemål, så bygger vi det snabbt och med kvalitet. Era idéer blir en del av nya funktioner och uppdateringar i ByggExp.',
     customCta: 'Boka en demo',
+    whyTitle: 'Fortfarande osäker?',
+    why: [
+      {
+        title: 'Enkel start',
+        body: 'Kräver inga särskilda kunskaper. Vi hjälper er att sätta upp och komma igång med teamet.',
+      },
+      {
+        title: 'Säkerhet och kontroll över data',
+        body: 'Din information är skyddad – du kan alltid återställa och exportera dina data.',
+      },
+      {
+        title: 'Flexibelt efter era processer',
+        body: 'Vi anpassar ByggExp efter era behov – berätta bara vad som är viktigt för er.',
+      },
+      {
+        title: 'Fungerar på alla enheter',
+        body: 'Mobil, surfplatta, dator – välj det som passar ert team.',
+      },
+      {
+        title: 'Support alltid nära',
+        body: 'Vi finns till hands för alla frågor – snabbt och på ett mänskligt sätt.',
+      },
+    ],
   },
   en: {
     badge: 'Features',
@@ -42,6 +65,29 @@ const FUNKTIONER_COPY = {
     customBody:
       "Every company has its own way of working. ByggExp isn't just an off-the-shelf solution – it's a platform we're happy to extend to fit your needs. Tell us about your challenges and wishes, and we'll build it fast and with quality. Your ideas become part of new features and updates in ByggExp.",
     customCta: 'Book a demo',
+    whyTitle: 'Still not sure?',
+    why: [
+      {
+        title: 'Easy to start',
+        body: 'No special skills required. We help you set it up and get your team going.',
+      },
+      {
+        title: 'Security and control of your data',
+        body: 'Your information is protected – you can always restore and export your data.',
+      },
+      {
+        title: 'Flexible to your processes',
+        body: 'We adapt ByggExp to your needs – just tell us what matters to you.',
+      },
+      {
+        title: 'Works on all devices',
+        body: 'Phone, tablet, computer – choose what suits your team.',
+      },
+      {
+        title: 'Support always close by',
+        body: "We're here for any questions – fast and in a human way.",
+      },
+    ],
   },
   ru: {
     badge: 'Функции',
@@ -53,6 +99,29 @@ const FUNKTIONER_COPY = {
     customBody:
       'У каждой компании свои процессы. ByggExp — не просто готовое решение, а платформа, которую мы дорабатываем под ваши нужды. Расскажите о своих задачах и пожеланиях — реализуем быстро и качественно. Ваши идеи становятся частью новых функций и обновлений ByggExp.',
     customCta: 'Записаться на демо',
+    whyTitle: 'Всё ещё сомневаетесь?',
+    why: [
+      {
+        title: 'Лёгкий старт',
+        body: 'Не требует специальных знаний. Поможем настроить и запустить для вашей команды.',
+      },
+      {
+        title: 'Безопасность и контроль данных',
+        body: 'Ваша информация под защитой — всегда можно восстановить и выгрузить данные.',
+      },
+      {
+        title: 'Гибкость под ваши процессы',
+        body: 'Адаптируем ByggExp под ваши задачи — просто расскажите, что важно для вас.',
+      },
+      {
+        title: 'Работает на всех устройствах',
+        body: 'Смартфон, планшет, компьютер — выбирайте то, что удобно вашей команде.',
+      },
+      {
+        title: 'Поддержка всегда рядом',
+        body: 'Мы на связи по любым вопросам — быстро и по-человечески.',
+      },
+    ],
   },
 } as const;
 
@@ -177,6 +246,23 @@ export default function FunktionerPage({
         </div>
       </section>
 
+      <section className="funktioner-why">
+        <div className="container container-narrow">
+          <h2 className="funktioner-why-title">{copy.whyTitle}</h2>
+          <div className="funktioner-why-grid">
+            {copy.why.map((item) => (
+              <div key={item.title} className="funktioner-why-item">
+                <span className="funktioner-why-check" aria-hidden="true">✓</span>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="funktioner-custom">
         <div className="container container-narrow">
           <div className="funktioner-custom-card">
@@ -192,8 +278,55 @@ export default function FunktionerPage({
       <Footer footerT={footerT} />
 
       <style jsx>{`
+        .funktioner-why {
+          padding: 56px 20px 8px;
+          background: #f4f6fa;
+        }
+        .funktioner-why-title {
+          text-align: center;
+          font-size: clamp(22px, 3.2vw, 30px);
+          letter-spacing: -0.02em;
+          color: #0b2545;
+          margin: 0 0 32px;
+        }
+        .funktioner-why-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px 32px;
+        }
+        .funktioner-why-item {
+          display: flex;
+          gap: 14px;
+          align-items: flex-start;
+        }
+        .funktioner-why-check {
+          flex: 0 0 auto;
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          background: #e3edfd;
+          color: #1c6cf3;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+          font-weight: 700;
+          margin-top: 2px;
+        }
+        .funktioner-why-item h3 {
+          margin: 0 0 4px;
+          font-size: 17px;
+          color: #0b2545;
+          letter-spacing: -0.01em;
+        }
+        .funktioner-why-item p {
+          margin: 0;
+          font-size: 15px;
+          line-height: 1.6;
+          color: #4a5a72;
+        }
         .funktioner-custom {
-          padding: 8px 20px 72px;
+          padding: 40px 20px 72px;
           background: #f4f6fa;
         }
         .funktioner-custom-card {
@@ -231,6 +364,9 @@ export default function FunktionerPage({
           background: #155ad1;
         }
         @media (max-width: 640px) {
+          .funktioner-why-grid {
+            grid-template-columns: 1fr;
+          }
           .funktioner-custom-card {
             padding: 34px 22px;
           }

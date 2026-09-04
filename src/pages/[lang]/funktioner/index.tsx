@@ -8,6 +8,10 @@ import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { buildHreflangAlternates, localeOrigin } from '../../../lib/seo';
+import { featuresTranslations1_3 } from '../../../locales/features1-3';
+import { featuresTranslations4_6 } from '../../../locales/features4-6';
+import { featuresTranslations7_9 } from '../../../locales/features7-9';
+import { featuresTranslations10_11 } from '../../../locales/features10-11';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 import {
@@ -19,16 +23,6 @@ import type { BlogPost } from '../../../types/blog';
 type FunktionerPageProps = {
   lang: LandingLanguageCode;
   posts: BlogPost[];
-};
-
-// The filter pills are built one-per-feature: each pill is named after the
-// feature (its tag) and filters the carousel down to that single feature, with
-// a leading "Alla / All" pill that shows the whole set.
-const ALLA_LABEL: Partial<Record<LandingLanguageCode, string>> = {
-  sv: 'Alla',
-  en: 'All',
-  ru: 'Все',
-  nb: 'Alle',
 };
 
 // Per-feature label overrides, when the CMS tag isn't the wording we want on
@@ -93,6 +87,45 @@ function featureTitle(post: BlogPost, lang: LandingLanguageCode): string {
 
 function featureExcerpt(post: BlogPost, lang: LandingLanguageCode): string {
   return FEATURE_CONTENT_OVERRIDE[post.slug]?.[lang]?.excerpt || post.excerpt || '';
+}
+
+// The paminnelser feature has no homepage card, so its 3 steps live here.
+const PAMINNELSER_STEPS: Record<LandingLanguageCode, string[]> = {
+  sv: ['Skapa uppgift med deadline', 'Sätt påminnelseintervall', 'Appen påminner tills det är klart'],
+  en: ['Create a task with a deadline', 'Set a reminder interval', 'The app reminds until it’s done'],
+  ru: ['Создайте задачу со сроком', 'Задайте интервал напоминаний', 'Приложение напоминает, пока не выполнено'],
+  nb: ['Opprett oppgave med frist', 'Sett påminnelsesintervall', 'Appen minner til det er gjort'],
+};
+
+const READ_MORE: Record<LandingLanguageCode, string> = {
+  sv: 'Läs mer om funktionen →',
+  en: 'Read more about the feature →',
+  ru: 'Подробнее о функции →',
+  nb: 'Les mer om funksjonen →',
+};
+
+// The three numbered steps shown on a feature card, reused from the homepage
+// feature copy so we don't duplicate content. Keyed by feature slug.
+function featureSteps(slug: string, lang: LandingLanguageCode): string[] {
+  const t1 = featuresTranslations1_3[lang];
+  const t2 = featuresTranslations4_6[lang];
+  const t3 = featuresTranslations7_9[lang];
+  const t4 = featuresTranslations10_11[lang];
+  const map: Record<string, string[]> = {
+    'automatisk-tidrapportering-och-export': [t1.featuresCard1Step1, t1.featuresCard1Step2, t1.featuresCard1Step3],
+    'hantera-uppgifter-i-byggprojekt': [t1.featuresCard2Step1, t1.featuresCard2Step2, t1.featuresCard2Step3],
+    'narvaro-och-incheckning-pa-bygget': [t1.featuresCard3Step1, t1.featuresCard3Step2, t1.featuresCard3Step3],
+    'dokumentera-med-foton-pa-bygget': [t2.featuresCard4Step1, t2.featuresCard4Step2, t2.featuresCard4Step3],
+    'dagsplanering-och-planeringsmoten': [t2.featuresCard5Step1, t2.featuresCard5Step2, t2.featuresCard5Step3],
+    'hantera-verktyg-och-utrustning': [t2.featuresCard6Step1, t2.featuresCard6Step2, t2.featuresCard6Step3],
+    'skapa-offert-i-byggexp': [t3.featuresCard7Step1, t3.featuresCard7Step2, t3.featuresCard7Step3],
+    'fakturera-fran-byggexp': [t3.featuresCard8Step1, t3.featuresCard8Step2, t3.featuresCard8Step3],
+    'projektekonomi-och-lonsamhet': [t3.featuresCard9Step1, t3.featuresCard9Step2, t3.featuresCard9Step3],
+    'fota-kvitton-och-hantera-utlagg': [t4.featuresCard10Step1, t4.featuresCard10Step2, t4.featuresCard10Step3],
+    'loneunderlag-for-byggforetag': [t4.featuresCard11Step1, t4.featuresCard11Step2, t4.featuresCard11Step3],
+    'paminnelser-uppgifter-och-deadlines': PAMINNELSER_STEPS[lang],
+  };
+  return map[slug] ?? [];
 }
 
 const FUNKTIONER_COPY = {
@@ -231,77 +264,76 @@ function FeatureCarousel({
   posts: BlogPost[];
   badge: string;
 }) {
-  const allaLabel = ALLA_LABEL[lang] ?? ALLA_LABEL.sv ?? 'Alla';
-  const [activeSlug, setActiveSlug] = useState<string>('alla');
   const trackRef = useRef<HTMLDivElement | null>(null);
-  const [nav, setNav] = useState({ prev: false, next: false, pages: 1, page: 0 });
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeIndexRef = useRef(0);
+  const lastIndex = posts.length - 1;
 
-  // One pill per feature, labelled with the feature's own name.
+  // One pill per feature, in carousel order.
   const pills = useMemo(
     () => posts.map((post) => ({ slug: post.slug, label: featureTag(post, lang, badge) })),
     [posts, lang, badge],
   );
 
-  const visiblePosts = useMemo(() => {
-    if (activeSlug === 'alla') return posts;
-    return posts.filter((post) => post.slug === activeSlug);
-  }, [posts, activeSlug]);
-
-  const syncNav = useCallback(() => {
+  // Bring a given card to the centre of the peek carousel.
+  const centerCard = useCallback((index: number, smooth = true) => {
     const el = trackRef.current;
     if (!el) return;
-    const { scrollLeft, scrollWidth, clientWidth } = el;
-    const hasOverflow = scrollWidth > clientWidth + 4;
-    const pages = hasOverflow ? Math.round(scrollWidth / clientWidth) : 1;
-    const page = hasOverflow ? Math.round(scrollLeft / clientWidth) : 0;
-    setNav({
-      prev: hasOverflow && scrollLeft > 4,
-      next: hasOverflow && scrollLeft + clientWidth < scrollWidth - 4,
-      pages,
-      page,
+    const card = el.children[index] as HTMLElement | undefined;
+    if (!card) return;
+    el.scrollTo({
+      left: card.offsetLeft - (el.clientWidth - card.offsetWidth) / 2,
+      behavior: smooth ? 'smooth' : 'auto',
     });
   }, []);
 
-  // Recompute arrows/dots on filter change, scroll and resize.
+  // As the user scrolls, mark whichever card is closest to the centre active.
+  const handleScroll = useCallback(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    const mid = el.scrollLeft + el.clientWidth / 2;
+    let best = 0;
+    let bestDist = Infinity;
+    Array.from(el.children).forEach((child, i) => {
+      const c = child as HTMLElement;
+      const dist = Math.abs(c.offsetLeft + c.offsetWidth / 2 - mid);
+      if (dist < bestDist) {
+        bestDist = dist;
+        best = i;
+      }
+    });
+    setActiveIndex(best);
+  }, []);
+
   useEffect(() => {
-    const el = trackRef.current;
-    if (el) el.scrollTo({ left: 0 });
-    syncNav();
-    window.addEventListener('resize', syncNav);
-    return () => window.removeEventListener('resize', syncNav);
-  }, [visiblePosts, syncNav]);
+    activeIndexRef.current = activeIndex;
+  }, [activeIndex]);
 
-  const scrollByPage = (dir: 1 | -1) => {
-    const el = trackRef.current;
-    if (!el) return;
-    el.scrollBy({ left: dir * el.clientWidth, behavior: 'smooth' });
-  };
+  // Centre the first card on mount and keep the active one centred on resize.
+  useEffect(() => {
+    centerCard(0, false);
+    const onResize = () => centerCard(activeIndexRef.current, false);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, [centerCard]);
 
-  const goToPage = (index: number) => {
-    const el = trackRef.current;
-    if (!el) return;
-    el.scrollTo({ left: index * el.clientWidth, behavior: 'smooth' });
+  const goTo = (index: number) => {
+    const clamped = Math.max(0, Math.min(lastIndex, index));
+    setActiveIndex(clamped);
+    centerCard(clamped);
   };
 
   return (
     <>
       {pills.length > 0 ? (
         <div className="blog-filter funktioner-filter" role="tablist" aria-label="Funktioner">
-          <button
-            type="button"
-            className={`blog-filter-chip${activeSlug === 'alla' ? ' is-active' : ''}`}
-            aria-pressed={activeSlug === 'alla'}
-            onClick={() => setActiveSlug('alla')}
-          >
-            {allaLabel}
-          </button>
-          {pills.map((pill) => (
+          {pills.map((pill, i) => (
             <button
               key={pill.slug}
               type="button"
-              className={`blog-filter-chip${activeSlug === pill.slug ? ' is-active' : ''}`}
-              aria-pressed={activeSlug === pill.slug}
-              onClick={() => setActiveSlug(pill.slug)}
+              className={`blog-filter-chip${activeIndex === i ? ' is-active' : ''}`}
+              aria-pressed={activeIndex === i}
+              onClick={() => goTo(i)}
             >
               {pill.label}
             </button>
@@ -314,46 +346,61 @@ function FeatureCarousel({
           type="button"
           className="fc-arrow fc-prev"
           aria-label="Föregående"
-          onClick={() => scrollByPage(-1)}
-          disabled={!nav.prev}
+          onClick={() => goTo(activeIndex - 1)}
+          disabled={activeIndex === 0}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M15 5l-7 7 7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
 
-        <div
-          className={`funktioner-carousel-track${
-            !nav.prev && !nav.next ? ' is-centered' : ''
-          }`}
-          ref={trackRef}
-          onScroll={syncNav}
-        >
-          {visiblePosts.map((post) => (
-            <Link
-              key={post._id}
-              href={`/${lang}/blog/${encodeURIComponent(post.slug)}`}
-              className={`blog-card funktioner-slide${
-                visiblePosts.length === 1 ? ' is-solo' : ''
-              }`}
-            >
-              {post.coverImageUrl ? (
-                <img src={post.coverImageUrl} alt={post.title} className="blog-card-image" />
-              ) : null}
-              <div className="blog-card-body">
-                <h2>{featureTitle(post, lang)}</h2>
-                <p>{featureExcerpt(post, lang)}</p>
+        <div className="funktioner-carousel-track" ref={trackRef} onScroll={handleScroll}>
+          {posts.map((post, i) => {
+            const steps = featureSteps(post.slug, lang);
+            const title = featureTitle(post, lang);
+            return (
+              <div
+                key={post._id}
+                className={`funktioner-slide${i === activeIndex ? ' is-active' : ''}`}
+                onClick={() => goTo(i)}
+              >
+                <div className="fk-text">
+                  <h3>{title}</h3>
+                  <p>{featureExcerpt(post, lang)}</p>
+                  {steps.length > 0 ? (
+                    <ul className="fk-steps">
+                      {steps.map((step, si) => (
+                        <li key={si}>
+                          <span className="fk-step-num">{si + 1}</span>
+                          {step}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                  <Link
+                    className="fk-link"
+                    href={`/${lang}/blog/${encodeURIComponent(post.slug)}`}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {READ_MORE[lang] ?? READ_MORE.sv}
+                  </Link>
+                </div>
+                {post.coverImageUrl ? (
+                  <div className="fk-visual">
+                    <img src={post.coverImageUrl} alt={title} />
+                  </div>
+                ) : null}
               </div>
-            </Link>
-          ))}
+            );
+          })}
         </div>
 
         <button
           type="button"
           className="fc-arrow fc-next"
           aria-label="Nästa"
-          onClick={() => scrollByPage(1)}
-          disabled={!nav.next}
+          onClick={() => goTo(activeIndex + 1)}
+          disabled={activeIndex === lastIndex}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -361,16 +408,16 @@ function FeatureCarousel({
         </button>
       </div>
 
-      {nav.pages > 1 ? (
-        <div className="fc-dots" aria-label="Sidor">
-          {Array.from({ length: nav.pages }).map((_, i) => (
+      {posts.length > 1 ? (
+        <div className="fc-dots" aria-label="Funktioner">
+          {posts.map((post, i) => (
             <button
-              key={i}
+              key={post._id}
               type="button"
-              className={`fc-dot${i === nav.page ? ' is-active' : ''}`}
-              aria-label={`Sida ${i + 1}`}
-              aria-current={i === nav.page ? 'true' : undefined}
-              onClick={() => goToPage(i)}
+              className={`fc-dot${i === activeIndex ? ' is-active' : ''}`}
+              aria-label={pills[i]?.label}
+              aria-current={i === activeIndex ? 'true' : undefined}
+              onClick={() => goTo(i)}
             />
           ))}
         </div>
@@ -490,70 +537,119 @@ export default function FunktionerPage({
 
       <style jsx global>{`
         .funktioner-filter {
-          margin-bottom: 28px;
+          margin-bottom: 22px;
         }
         .funktioner-carousel {
           position: relative;
         }
+        /* Peek carousel: the active feature sits centred and sharp, its
+           neighbours peek in on both sides, dimmed and blurred. */
         .funktioner-carousel-track {
           display: flex;
-          gap: 34px;
+          gap: 28px;
           overflow-x: auto;
           scroll-snap-type: x mandatory;
           scroll-behavior: smooth;
-          padding: 8px 4px 26px;
+          padding: 12px 16% 30px;
           -ms-overflow-style: none;
           scrollbar-width: none;
         }
         .funktioner-carousel-track::-webkit-scrollbar {
           display: none;
         }
-        .funktioner-carousel-track.is-centered {
-          justify-content: center;
-        }
         .funktioner-slide {
-          scroll-snap-align: start;
-          flex: 0 0 calc((100% - 68px) / 3);
+          scroll-snap-align: center;
+          flex: 0 0 68%;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          gap: 34px;
+          padding: 40px;
+          background: #fff;
+          border-radius: 22px;
+          box-shadow: 0 18px 44px rgba(10, 40, 90, 0.08);
+          cursor: pointer;
+          opacity: 0.4;
+          filter: blur(2px);
+          transform: scale(0.92);
+          transition:
+            opacity 0.3s ease,
+            filter 0.3s ease,
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+        }
+        .funktioner-slide.is-active {
+          opacity: 1;
+          filter: none;
+          transform: scale(1);
+          cursor: default;
+          box-shadow: 0 30px 70px -30px rgba(11, 37, 69, 0.5);
+        }
+        .fk-text {
+          flex: 1;
+          min-width: 0;
+        }
+        .fk-text h3 {
+          margin: 0 0 12px;
+          font-size: clamp(21px, 2.3vw, 29px);
+          line-height: 1.15;
+          letter-spacing: -0.02em;
+          color: #0b2545;
+        }
+        .fk-text > p {
+          margin: 0 0 20px;
+          font-size: 16px;
+          line-height: 1.6;
+          color: #4a5a72;
+        }
+        .fk-steps {
+          list-style: none;
+          margin: 0 0 22px;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+        .fk-steps li {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-size: 15px;
+          color: #0b2545;
+        }
+        .fk-step-num {
+          flex: 0 0 auto;
+          width: 26px;
+          height: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background: #e3edfd;
+          color: #1c6cf3;
+          font-size: 13px;
+          font-weight: 700;
+        }
+        .fk-link {
+          display: inline-block;
+          color: #1c6cf3;
+          font-weight: 600;
           text-decoration: none;
         }
-        /* A single filtered feature gets a full-width, horizontal spotlight card. */
-        .funktioner-slide.is-solo {
-          flex-basis: 100%;
-          flex-direction: row;
-          align-items: center;
-          gap: 40px;
-          padding: 40px;
+        .fk-link:hover {
+          text-decoration: underline;
         }
-        .funktioner-slide.is-solo .blog-card-image {
-          width: 56%;
-          flex: 0 0 56%;
-          margin-bottom: 0;
-          aspect-ratio: 16 / 10;
+        .fk-visual {
+          flex: 0 0 48%;
         }
-        .funktioner-slide.is-solo .blog-card-body {
-          flex: 1;
-        }
-        .funktioner-slide.is-solo .blog-card-body h2 {
-          font-size: clamp(24px, 2.6vw, 34px);
-        }
-        .funktioner-slide.is-solo .blog-card-body p {
-          font-size: 17px;
-        }
-        @media (max-width: 760px) {
-          .funktioner-slide.is-solo {
-            flex-direction: column;
-            gap: 20px;
-            padding: 24px;
-          }
-          .funktioner-slide.is-solo .blog-card-image {
-            width: 100%;
-            flex-basis: auto;
-            margin-bottom: 4px;
-          }
+        .fk-visual img {
+          width: 100%;
+          border-radius: 14px;
+          background: rgba(10, 40, 90, 0.03);
         }
         .fc-arrow {
           position: absolute;
-          top: 38%;
+          top: 50%;
           transform: translateY(-50%);
           z-index: 3;
           width: 48px;
@@ -567,7 +663,7 @@ export default function FunktionerPage({
           color: #0b2545;
           cursor: pointer;
           box-shadow: 0 12px 30px -8px rgba(11, 37, 69, 0.35);
-          transition: background 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+          transition: background 0.15s ease, opacity 0.15s ease;
         }
         .fc-arrow:hover:not(:disabled) {
           background: #1c6cf3;
@@ -578,14 +674,15 @@ export default function FunktionerPage({
           pointer-events: none;
         }
         .fc-prev {
-          left: -22px;
+          left: 8px;
         }
         .fc-next {
-          right: -22px;
+          right: 8px;
         }
         .fc-dots {
           display: flex;
           justify-content: center;
+          flex-wrap: wrap;
           gap: 9px;
           margin-top: 6px;
         }
@@ -606,23 +703,26 @@ export default function FunktionerPage({
           background: #1c6cf3;
           transform: scale(1.25);
         }
-        @media (max-width: 980px) {
+        @media (max-width: 900px) {
+          .funktioner-carousel-track {
+            padding: 12px 8% 28px;
+          }
           .funktioner-slide {
-            flex-basis: calc((100% - 34px) / 2);
+            flex-basis: 84%;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 20px;
+            padding: 24px;
           }
-          .fc-prev {
-            left: 6px;
-          }
-          .fc-next {
-            right: 6px;
+          .fk-visual {
+            order: -1;
+            flex-basis: auto;
           }
         }
-        @media (max-width: 700px) {
-          .funktioner-carousel-track {
-            gap: 16px;
-          }
+        @media (max-width: 620px) {
           .funktioner-slide {
-            flex-basis: 100%;
+            flex-basis: 88%;
+            filter: none;
           }
           .fc-arrow {
             display: none;

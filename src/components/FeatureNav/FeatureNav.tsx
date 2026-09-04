@@ -125,21 +125,23 @@ export default function FeatureNav({
 
   return (
     <nav className="feature-nav" aria-label="Funktioner">
-      <div className="feature-nav-track" ref={trackRef}>
-        {FEATURE_NAV.map((f) => {
-          const isActive = f.slug === activeSlug;
-          return (
-            <Link
-              key={f.slug}
-              href={`/${lang}/blog/${f.slug}`}
-              ref={isActive ? activeRef : undefined}
-              className={`feature-nav-chip${isActive ? ' is-active' : ''}`}
-              aria-current={isActive ? 'page' : undefined}
-            >
-              {f.label[lang] ?? f.label.sv}
-            </Link>
-          );
-        })}
+      <div className="feature-nav-inner">
+        <div className="feature-nav-track" ref={trackRef}>
+          {FEATURE_NAV.map((f) => {
+            const isActive = f.slug === activeSlug;
+            return (
+              <Link
+                key={f.slug}
+                href={`/${lang}/blog/${f.slug}`}
+                ref={isActive ? activeRef : undefined}
+                className={`feature-nav-chip${isActive ? ' is-active' : ''}`}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                {f.label[lang] ?? f.label.sv}
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </nav>
   );

@@ -34,6 +34,15 @@ const FEATURE_INNER_SLUGS = new Set<string>([
   'paminnelser-uppgifter-och-deadlines',
 ]);
 
+// Breadcrumb label for feature articles — they belong under "Funktioner", not
+// the blog, so the trail reads Hem / Funktioner / <feature>.
+const FEATURE_CRUMB: Record<LandingLanguageCode, string> = {
+  sv: 'Funktioner',
+  en: 'Features',
+  ru: 'Функции',
+  nb: 'Funksjoner',
+};
+
 type BlogArticlePageProps = {
   lang: LandingLanguageCode;
   post: BlogPost;
@@ -265,7 +274,9 @@ export default function BlogArticlePage({
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Hem", item: `${localeOrigin(lang)}/${lang}` },
-                  { "@type": "ListItem", position: 2, name: copy.badge, item: `${localeOrigin(lang)}/${lang}/blog` },
+                  FEATURE_ARTICLE_SLUGS.has(post.slug)
+                    ? { "@type": "ListItem", position: 2, name: FEATURE_CRUMB[lang] ?? FEATURE_CRUMB.sv, item: `${localeOrigin(lang)}/${lang}/funktioner` }
+                    : { "@type": "ListItem", position: 2, name: copy.badge, item: `${localeOrigin(lang)}/${lang}/blog` },
                   { "@type": "ListItem", position: 3, name: post.title, item: canonicalUrl },
                 ],
               }),
@@ -295,19 +306,25 @@ export default function BlogArticlePage({
 
       <Header headerT={headerT} />
 
+      {FEATURE_ARTICLE_SLUGS.has(post.slug) ? (
+        <FeatureNav lang={lang} activeSlug={post.slug} />
+      ) : null}
+
       <article className="blog-article">
         <div className="container container-narrow">
           <nav className="blog-breadcrumbs" aria-label="Breadcrumb">
             <Link href={`/${lang}`}>{copy.home}</Link>
             <span>/</span>
-            <Link href={`/${lang}/blog`}>{copy.badge}</Link>
+            {FEATURE_ARTICLE_SLUGS.has(post.slug) ? (
+              <Link href={`/${lang}/funktioner`}>
+                {FEATURE_CRUMB[lang] ?? FEATURE_CRUMB.sv}
+              </Link>
+            ) : (
+              <Link href={`/${lang}/blog`}>{copy.badge}</Link>
+            )}
             <span>/</span>
             <span className="blog-breadcrumbs-current">{post.title}</span>
           </nav>
-
-          {FEATURE_ARTICLE_SLUGS.has(post.slug) ? (
-            <FeatureNav lang={lang} activeSlug={post.slug} />
-          ) : null}
 
           <div className="blog-article-head">
             <h1>{post.title}</h1>

@@ -183,17 +183,28 @@
   color: var(--white);
 }
 
-// Feature pill nav shown at the top of each feature article — lets visitors
-// jump between features without going back. Single scrollable row.
+// Feature pill nav shown at the top of each feature article — a sticky bar
+// under the header, so the other features are always reachable. It belongs to
+// the product ("Funktioner"), not the blog.
 .feature-nav {
-  margin: 6px 0 30px;
+  position: sticky;
+  top: 61px; // sits right under the sticky site header
+  z-index: 40;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid rgba(15, 35, 80, 0.08);
+}
+
+.feature-nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px 32px;
 }
 
 .feature-nav-track {
   display: flex;
   gap: 10px;
   overflow-x: auto;
-  padding-bottom: 6px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }

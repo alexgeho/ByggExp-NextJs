@@ -1,6 +1,7 @@
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
@@ -19,6 +20,59 @@ type FunktionerPageProps = {
   lang: LandingLanguageCode;
   posts: BlogPost[];
 };
+
+// The 12 feature articles grouped into buyer-intent buckets for the filter
+// pills. Keyed by article slug so it stays stable regardless of CMS tag text.
+type FeatureCategoryKey = 'ekonomi' | 'tid' | 'planering' | 'dokumentation';
+
+const FEATURE_CATEGORY_BY_SLUG: Record<string, FeatureCategoryKey> = {
+  'skapa-offert-i-byggexp': 'ekonomi',
+  'fakturera-fran-byggexp': 'ekonomi',
+  'loneunderlag-for-byggforetag': 'ekonomi',
+  'projektekonomi-och-lonsamhet': 'ekonomi',
+  'fota-kvitton-och-hantera-utlagg': 'ekonomi',
+  'automatisk-tidrapportering-och-export': 'tid',
+  'narvaro-och-incheckning-pa-bygget': 'tid',
+  'dagsplanering-och-planeringsmoten': 'planering',
+  'hantera-uppgifter-i-byggprojekt': 'planering',
+  'paminnelser-uppgifter-och-deadlines': 'planering',
+  'dokumentera-med-foton-pa-bygget': 'dokumentation',
+  'hantera-verktyg-och-utrustning': 'dokumentation',
+};
+
+const FEATURE_CATEGORY_LABELS: Partial<
+  Record<LandingLanguageCode, { alla: string } & Record<FeatureCategoryKey, string>>
+> = {
+  sv: {
+    alla: 'Alla',
+    ekonomi: 'Ekonomi & fakturor',
+    tid: 'Tid & närvaro',
+    planering: 'Planering & uppgifter',
+    dokumentation: 'Dokumentation',
+  },
+  en: {
+    alla: 'All',
+    ekonomi: 'Finance & invoicing',
+    tid: 'Time & attendance',
+    planering: 'Planning & tasks',
+    dokumentation: 'Documentation',
+  },
+  ru: {
+    alla: 'Все',
+    ekonomi: 'Финансы и счета',
+    tid: 'Время и учёт',
+    planering: 'Планирование и задачи',
+    dokumentation: 'Документация',
+  },
+} as const;
+
+// Fixed display order for the pills.
+const FEATURE_CATEGORY_ORDER: FeatureCategoryKey[] = [
+  'ekonomi',
+  'tid',
+  'planering',
+  'dokumentation',
+];
 
 const FUNKTIONER_COPY = {
   sv: {
@@ -147,6 +201,166 @@ export const getServerSideProps: GetServerSideProps<FunktionerPageProps> = async
   }
 };
 
+function FeatureCarousel({
+  lang,
+  posts,
+  badge,
+}: {
+  lang: LandingLanguageCode;
+  posts: BlogPost[];
+  badge: string;
+}) {
+  const labels = FEATURE_CATEGORY_LABELS[lang] ?? FEATURE_CATEGORY_LABELS.sv;
+  const [activeCategory, setActiveCategory] = useState<FeatureCategoryKey | 'alla'>(
+    'alla',
+  );
+  const trackRef = useRef<HTMLDivElement | null>(null);
+  const [nav, setNav] = useState({ prev: false, next: false, pages: 1, page: 0 });
+
+  // Only show pills for categories that actually have feature articles present.
+  const presentCategories = useMemo(() => {
+    const present = new Set(
+      posts.map((post) => FEATURE_CATEGORY_BY_SLUG[post.slug]).filter(Boolean),
+    );
+    return FEATURE_CATEGORY_ORDER.filter((key) => present.has(key));
+  }, [posts]);
+
+  const visiblePosts = useMemo(() => {
+    if (activeCategory === 'alla') return posts;
+    return posts.filter((post) => FEATURE_CATEGORY_BY_SLUG[post.slug] === activeCategory);
+  }, [posts, activeCategory]);
+
+  const syncNav = useCallback(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    const { scrollLeft, scrollWidth, clientWidth } = el;
+    const hasOverflow = scrollWidth > clientWidth + 4;
+    const pages = hasOverflow ? Math.round(scrollWidth / clientWidth) : 1;
+    const page = hasOverflow ? Math.round(scrollLeft / clientWidth) : 0;
+    setNav({
+      prev: hasOverflow && scrollLeft > 4,
+      next: hasOverflow && scrollLeft + clientWidth < scrollWidth - 4,
+      pages,
+      page,
+    });
+  }, []);
+
+  // Recompute arrows/dots on filter change, scroll and resize.
+  useEffect(() => {
+    const el = trackRef.current;
+    if (el) el.scrollTo({ left: 0 });
+    syncNav();
+    window.addEventListener('resize', syncNav);
+    return () => window.removeEventListener('resize', syncNav);
+  }, [visiblePosts, syncNav]);
+
+  const scrollByPage = (dir: 1 | -1) => {
+    const el = trackRef.current;
+    if (!el) return;
+    el.scrollBy({ left: dir * el.clientWidth, behavior: 'smooth' });
+  };
+
+  const goToPage = (index: number) => {
+    const el = trackRef.current;
+    if (!el) return;
+    el.scrollTo({ left: index * el.clientWidth, behavior: 'smooth' });
+  };
+
+  return (
+    <>
+      {presentCategories.length > 0 ? (
+        <div className="blog-filter funktioner-filter" role="tablist" aria-label="Kategorier">
+          <button
+            type="button"
+            className={`blog-filter-chip${activeCategory === 'alla' ? ' is-active' : ''}`}
+            aria-pressed={activeCategory === 'alla'}
+            onClick={() => setActiveCategory('alla')}
+          >
+            {labels.alla}
+          </button>
+          {presentCategories.map((key) => (
+            <button
+              key={key}
+              type="button"
+              className={`blog-filter-chip${activeCategory === key ? ' is-active' : ''}`}
+              aria-pressed={activeCategory === key}
+              onClick={() => setActiveCategory(key)}
+            >
+              {labels[key]}
+            </button>
+          ))}
+        </div>
+      ) : null}
+
+      <div className="funktioner-carousel">
+        <button
+          type="button"
+          className="fc-arrow fc-prev"
+          aria-label="Föregående"
+          onClick={() => scrollByPage(-1)}
+          disabled={!nav.prev}
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M15 5l-7 7 7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+
+        <div
+          className={`funktioner-carousel-track${
+            !nav.prev && !nav.next ? ' is-centered' : ''
+          }`}
+          ref={trackRef}
+          onScroll={syncNav}
+        >
+          {visiblePosts.map((post) => (
+            <Link
+              key={post._id}
+              href={`/${lang}/blog/${encodeURIComponent(post.slug)}`}
+              className="blog-card funktioner-slide"
+            >
+              {post.coverImageUrl ? (
+                <img src={post.coverImageUrl} alt={post.title} className="blog-card-image" />
+              ) : null}
+              <div className="blog-card-body">
+                <span className="blog-tag">{post.tag || badge}</span>
+                <h2>{post.title}</h2>
+                <p>{post.excerpt}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <button
+          type="button"
+          className="fc-arrow fc-next"
+          aria-label="Nästa"
+          onClick={() => scrollByPage(1)}
+          disabled={!nav.next}
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+      {nav.pages > 1 ? (
+        <div className="fc-dots" aria-label="Sidor">
+          {Array.from({ length: nav.pages }).map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              className={`fc-dot${i === nav.page ? ' is-active' : ''}`}
+              aria-label={`Sida ${i + 1}`}
+              aria-current={i === nav.page ? 'true' : undefined}
+              onClick={() => goToPage(i)}
+            />
+          ))}
+        </div>
+      ) : null}
+    </>
+  );
+}
+
 export default function FunktionerPage({
   lang,
   posts,
@@ -220,28 +434,7 @@ export default function FunktionerPage({
           {posts.length === 0 ? (
             <div className="blog-empty-state">{copy.empty}</div>
           ) : (
-            <div className="blog-grid funktioner-grid">
-              {posts.map((post) => (
-                <Link
-                  key={post._id}
-                  href={`/${lang}/blog/${encodeURIComponent(post.slug)}`}
-                  className="blog-card"
-                >
-                  {post.coverImageUrl ? (
-                    <img
-                      src={post.coverImageUrl}
-                      alt={post.title}
-                      className="blog-card-image"
-                    />
-                  ) : null}
-                  <div className="blog-card-body">
-                    <span className="blog-tag">{post.tag || copy.badge}</span>
-                    <h2>{post.title}</h2>
-                    <p>{post.excerpt}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
+            <FeatureCarousel lang={lang} posts={posts} badge={copy.badge} />
           )}
         </div>
       </section>
@@ -278,6 +471,110 @@ export default function FunktionerPage({
       <Footer footerT={footerT} />
 
       <style jsx global>{`
+        .funktioner-filter {
+          margin-bottom: 28px;
+        }
+        .funktioner-carousel {
+          position: relative;
+        }
+        .funktioner-carousel-track {
+          display: flex;
+          gap: 34px;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          padding: 8px 4px 26px;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .funktioner-carousel-track::-webkit-scrollbar {
+          display: none;
+        }
+        .funktioner-carousel-track.is-centered {
+          justify-content: center;
+        }
+        .funktioner-slide {
+          scroll-snap-align: start;
+          flex: 0 0 calc((100% - 68px) / 3);
+          text-decoration: none;
+        }
+        .fc-arrow {
+          position: absolute;
+          top: 38%;
+          transform: translateY(-50%);
+          z-index: 3;
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          border-radius: 50%;
+          background: #fff;
+          color: #0b2545;
+          cursor: pointer;
+          box-shadow: 0 12px 30px -8px rgba(11, 37, 69, 0.35);
+          transition: background 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+        }
+        .fc-arrow:hover:not(:disabled) {
+          background: #1c6cf3;
+          color: #fff;
+        }
+        .fc-arrow:disabled {
+          opacity: 0;
+          pointer-events: none;
+        }
+        .fc-prev {
+          left: -22px;
+        }
+        .fc-next {
+          right: -22px;
+        }
+        .fc-dots {
+          display: flex;
+          justify-content: center;
+          gap: 9px;
+          margin-top: 6px;
+        }
+        .fc-dot {
+          width: 9px;
+          height: 9px;
+          padding: 0;
+          border: none;
+          border-radius: 50%;
+          background: rgba(11, 37, 69, 0.18);
+          cursor: pointer;
+          transition: background 0.15s ease, transform 0.15s ease;
+        }
+        .fc-dot:hover {
+          background: rgba(11, 37, 69, 0.4);
+        }
+        .fc-dot.is-active {
+          background: #1c6cf3;
+          transform: scale(1.25);
+        }
+        @media (max-width: 980px) {
+          .funktioner-slide {
+            flex-basis: calc((100% - 34px) / 2);
+          }
+          .fc-prev {
+            left: 6px;
+          }
+          .fc-next {
+            right: 6px;
+          }
+        }
+        @media (max-width: 700px) {
+          .funktioner-carousel-track {
+            gap: 16px;
+          }
+          .funktioner-slide {
+            flex-basis: 100%;
+          }
+          .fc-arrow {
+            display: none;
+          }
+        }
         .funktioner-why {
           padding: 56px 20px 8px;
           background: #f4f6fa;

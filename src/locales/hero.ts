@@ -18,7 +18,7 @@ export const heroTranslations = {
     heroDemo: "Запись на демо",
     heroHow: "Как это работает",
 
-    heroFeature1: "14 дней на тест",
+    heroFeature1: "Первый месяц бесплатно",
     heroFeature2: "Запуск за 15 минут",
     heroFeature3: "Без подписки",
   },

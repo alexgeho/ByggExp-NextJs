@@ -115,3 +115,4 @@ Mvh, Alexander
 - **Канал:** Teams + альтернатива «eller ett kort samtal om det passar bättre».
 - **Без ссылки** в первом письме; сайт/демо — во втором касании.
 - Фолоуапы — см. [[cold-outreach-setup]] (docs/seo/cold-outreach-setup.md).
+да дав

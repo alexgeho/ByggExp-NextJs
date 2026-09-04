@@ -153,7 +153,7 @@ function Header({ headerT }: HeaderProps) {
               </div>
             </div>
 
-            <Link href={`/${lang}#cta`} onClick={closeMenu}>{headerT.company}</Link>
+            <Link href={`/${lang}/om-oss`} onClick={closeMenu}>{headerT.company}</Link>
             <Link href={`/${lang}/contact`} onClick={closeMenu}>{headerT.contact}</Link>
 
             {/* MOBILET LANGUAGE */}

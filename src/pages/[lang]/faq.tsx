@@ -15,7 +15,17 @@ const FAQ_SV: Qa[] = [
   {
     question: "Kan jag prova gratis?",
     answer:
-      "Ja. Du kan testa ByggExp gratis med alla funktioner och utan att ange kort. Du bestämmer först därefter om du vill fortsätta med ett abonnemang.",
+      "Ja – första månaden är gratis, med alla funktioner och utan att du behöver ange kort. Du kan koppla in hela teamet och se hur det fungerar på riktiga uppdrag, och bestämmer först därefter om du vill fortsätta.",
+  },
+  {
+    question: "Är det svårt att komma igång?",
+    answer:
+      "Nej. De flesta är igång på cirka 5 minuter – öppna appen, välj projekt och starta tidtagningen på plats. Kontoret lägger upp projekt och uppgifter i webben och de på bygget använder mobilappen.",
+  },
+  {
+    question: "Tänk om någon i teamet inte är så van vid teknik?",
+    answer:
+      "ByggExp är gjort för att vara enkelt och självförklarande, även för den som inte använt liknande appar tidigare. Vi hjälper er att komma igång och finns tillgängliga för frågor – de flesta hantverkare tycker att det är enklare än de trodde.",
   },
   {
     question: "Vad kostar ByggExp?",
@@ -43,9 +53,19 @@ const FAQ_SV: Qa[] = [
       "GPS får användas för tidrapportering om det finns laglig grund och de anställda är informerade. Som arbetsgivare ansvarar du för att behandlingen kommuniceras till personalen. Se vår integritetspolicy för mer information.",
   },
   {
+    question: "Är mina data säkra?",
+    answer:
+      "All information krypteras och lagras på säkra servrar. Du styr själv åtkomsten, kan när som helst exportera dina data eller radera kontot, och vi lämnar inte ut uppgifter till tredje part.",
+  },
+  {
     question: "Äger jag min data och kan jag exportera den?",
     answer:
-      "Ja. Du äger dina data och kan exportera eller radera dem. Vid avslut kan uppgifterna exporteras, med undantag för vad lag kräver att vi sparar.",
+      "Ja. Du äger dina data och kan exportera dem till Excel på några klick, eller radera dem. Vid avslut kan uppgifterna exporteras, med undantag för vad lag kräver att vi sparar.",
+  },
+  {
+    question: "Tänk om det saknas en funktion vi behöver?",
+    answer:
+      "ByggExp är en levande produkt och vi lägger löpande till nya funktioner efter kundernas önskemål. Berätta vad ert företag behöver, så bygger vi det – era idéer blir en del av kommande uppdateringar.",
   },
   {
     question: "Kan jag säga upp abonnemanget?",
@@ -68,7 +88,17 @@ const FAQ_EN: Qa[] = [
   {
     question: "Can I try it for free?",
     answer:
-      "Yes. You can try ByggExp for free with all features and without entering a card. You only decide afterwards whether to continue with a subscription.",
+      "Yes – the first month is free, with all features and without entering a card. You can add your whole team and see how it works on real jobs, and only decide afterwards whether to continue.",
+  },
+  {
+    question: "Is it hard to get started?",
+    answer:
+      "No. Most people are up and running in about 5 minutes – open the app, pick a project and start the timer on site. The office sets up projects and tasks on the web, and the people on site use the mobile app.",
+  },
+  {
+    question: "What if someone on the team isn't very tech-savvy?",
+    answer:
+      "ByggExp is built to be simple and self-explanatory, even for someone who hasn't used apps like this before. We help you get started and are available for questions – most tradespeople find it easier than they expected.",
   },
   {
     question: "How much does ByggExp cost?",
@@ -96,9 +126,19 @@ const FAQ_EN: Qa[] = [
       "GPS may be used for time tracking when there is a legal basis and employees are informed. As the employer you are responsible for communicating the processing to your staff. See our privacy policy for more information.",
   },
   {
+    question: "Is my data secure?",
+    answer:
+      "All information is encrypted and stored on secure servers. You control access, can export your data or delete your account at any time, and we do not share data with third parties.",
+  },
+  {
     question: "Do I own my data and can I export it?",
     answer:
-      "Yes. You own your data and can export or delete it. On termination the data can be exported, except for what the law requires us to keep.",
+      "Yes. You own your data and can export it to Excel in a few clicks, or delete it. On termination the data can be exported, except for what the law requires us to keep.",
+  },
+  {
+    question: "What if a feature we need is missing?",
+    answer:
+      "ByggExp is a living product and we continuously add new features based on customer requests. Tell us what your company needs and we'll build it – your ideas become part of upcoming updates.",
   },
   {
     question: "Can I cancel the subscription?",

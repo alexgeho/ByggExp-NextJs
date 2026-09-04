@@ -21,58 +21,22 @@ type FunktionerPageProps = {
   posts: BlogPost[];
 };
 
-// The 12 feature articles grouped into buyer-intent buckets for the filter
-// pills. Keyed by article slug so it stays stable regardless of CMS tag text.
-type FeatureCategoryKey = 'ekonomi' | 'tid' | 'planering' | 'dokumentation';
-
-const FEATURE_CATEGORY_BY_SLUG: Record<string, FeatureCategoryKey> = {
-  'skapa-offert-i-byggexp': 'ekonomi',
-  'fakturera-fran-byggexp': 'ekonomi',
-  'loneunderlag-for-byggforetag': 'ekonomi',
-  'projektekonomi-och-lonsamhet': 'ekonomi',
-  'fota-kvitton-och-hantera-utlagg': 'ekonomi',
-  'automatisk-tidrapportering-och-export': 'tid',
-  'narvaro-och-incheckning-pa-bygget': 'tid',
-  'dagsplanering-och-planeringsmoten': 'planering',
-  'hantera-uppgifter-i-byggprojekt': 'planering',
-  'paminnelser-uppgifter-och-deadlines': 'planering',
-  'dokumentera-med-foton-pa-bygget': 'dokumentation',
-  'hantera-verktyg-och-utrustning': 'dokumentation',
+// The filter pills are built one-per-feature: each pill is named after the
+// feature (its tag) and filters the carousel down to that single feature, with
+// a leading "Alla / All" pill that shows the whole set.
+const ALLA_LABEL: Partial<Record<LandingLanguageCode, string>> = {
+  sv: 'Alla',
+  en: 'All',
+  ru: 'Все',
+  nb: 'Alle',
 };
 
-const FEATURE_CATEGORY_LABELS: Partial<
-  Record<LandingLanguageCode, { alla: string } & Record<FeatureCategoryKey, string>>
-> = {
-  sv: {
-    alla: 'Alla',
-    ekonomi: 'Ekonomi & fakturor',
-    tid: 'Tid & närvaro',
-    planering: 'Planering & uppgifter',
-    dokumentation: 'Dokumentation',
-  },
-  en: {
-    alla: 'All',
-    ekonomi: 'Finance & invoicing',
-    tid: 'Time & attendance',
-    planering: 'Planning & tasks',
-    dokumentation: 'Documentation',
-  },
-  ru: {
-    alla: 'Все',
-    ekonomi: 'Финансы и счета',
-    tid: 'Время и учёт',
-    planering: 'Планирование и задачи',
-    dokumentation: 'Документация',
-  },
-} as const;
-
-// Fixed display order for the pills.
-const FEATURE_CATEGORY_ORDER: FeatureCategoryKey[] = [
-  'ekonomi',
-  'tid',
-  'planering',
-  'dokumentation',
-];
+// Short, pill-friendly label for a feature. Prefers the CMS tag (already a
+// concise feature name, e.g. "Närvaro", "Kvitton & utlägg") and falls back to
+// the title so a tag-less post still gets a readable pill.
+function featurePillLabel(post: BlogPost, fallback: string): string {
+  return post.tag || post.title || fallback;
+}
 
 const FUNKTIONER_COPY = {
   sv: {
@@ -210,25 +174,21 @@ function FeatureCarousel({
   posts: BlogPost[];
   badge: string;
 }) {
-  const labels = FEATURE_CATEGORY_LABELS[lang] ?? FEATURE_CATEGORY_LABELS.sv;
-  const [activeCategory, setActiveCategory] = useState<FeatureCategoryKey | 'alla'>(
-    'alla',
-  );
+  const allaLabel = ALLA_LABEL[lang] ?? ALLA_LABEL.sv ?? 'Alla';
+  const [activeSlug, setActiveSlug] = useState<string>('alla');
   const trackRef = useRef<HTMLDivElement | null>(null);
   const [nav, setNav] = useState({ prev: false, next: false, pages: 1, page: 0 });
 
-  // Only show pills for categories that actually have feature articles present.
-  const presentCategories = useMemo(() => {
-    const present = new Set(
-      posts.map((post) => FEATURE_CATEGORY_BY_SLUG[post.slug]).filter(Boolean),
-    );
-    return FEATURE_CATEGORY_ORDER.filter((key) => present.has(key));
-  }, [posts]);
+  // One pill per feature, labelled with the feature's own name.
+  const pills = useMemo(
+    () => posts.map((post) => ({ slug: post.slug, label: featurePillLabel(post, badge) })),
+    [posts, badge],
+  );
 
   const visiblePosts = useMemo(() => {
-    if (activeCategory === 'alla') return posts;
-    return posts.filter((post) => FEATURE_CATEGORY_BY_SLUG[post.slug] === activeCategory);
-  }, [posts, activeCategory]);
+    if (activeSlug === 'alla') return posts;
+    return posts.filter((post) => post.slug === activeSlug);
+  }, [posts, activeSlug]);
 
   const syncNav = useCallback(() => {
     const el = trackRef.current;
@@ -268,25 +228,25 @@ function FeatureCarousel({
 
   return (
     <>
-      {presentCategories.length > 0 ? (
-        <div className="blog-filter funktioner-filter" role="tablist" aria-label="Kategorier">
+      {pills.length > 0 ? (
+        <div className="blog-filter funktioner-filter" role="tablist" aria-label="Funktioner">
           <button
             type="button"
-            className={`blog-filter-chip${activeCategory === 'alla' ? ' is-active' : ''}`}
-            aria-pressed={activeCategory === 'alla'}
-            onClick={() => setActiveCategory('alla')}
+            className={`blog-filter-chip${activeSlug === 'alla' ? ' is-active' : ''}`}
+            aria-pressed={activeSlug === 'alla'}
+            onClick={() => setActiveSlug('alla')}
           >
-            {labels.alla}
+            {allaLabel}
           </button>
-          {presentCategories.map((key) => (
+          {pills.map((pill) => (
             <button
-              key={key}
+              key={pill.slug}
               type="button"
-              className={`blog-filter-chip${activeCategory === key ? ' is-active' : ''}`}
-              aria-pressed={activeCategory === key}
-              onClick={() => setActiveCategory(key)}
+              className={`blog-filter-chip${activeSlug === pill.slug ? ' is-active' : ''}`}
+              aria-pressed={activeSlug === pill.slug}
+              onClick={() => setActiveSlug(pill.slug)}
             >
-              {labels[key]}
+              {pill.label}
             </button>
           ))}
         </div>

@@ -19,6 +19,37 @@ export function localeOrigin(lang: string): string {
   return lang === 'nb' ? 'https://byggexp.no' : seOrigin;
 }
 
+// Keyword-rich fallback title/description for the home page, per locale. Used
+// when the CMS SiteSeo is empty so the landing page never ships a bare
+// "<title>ByggExp</title>" with no description (weak for relevance + CTR).
+export const defaultHomeMeta: Record<
+  LandingLanguageCode,
+  { title: string; description: string }
+> = {
+  sv: {
+    title:
+      'ByggExp – tidrapportering, planering & projektledning för byggföretag',
+    description:
+      'Allt-i-ett-app för byggföretag: tidrapportering, digital personalliggare, schemaläggning, offert och faktura – på webben och i mobilen. Prova gratis.',
+  },
+  en: {
+    title: 'ByggExp – time tracking, planning & project management for builders',
+    description:
+      'All-in-one app for construction firms: time tracking, digital staff ledger, scheduling, quotes and invoicing – on web and mobile. Try it free.',
+  },
+  ru: {
+    title: 'ByggExp — учёт времени, планирование и управление стройпроектами',
+    description:
+      'Приложение всё-в-одном для строительных компаний: учёт рабочего времени, электронный журнал персонала, графики, сметы и счета — в вебе и мобильном. Попробуйте бесплатно.',
+  },
+  nb: {
+    title:
+      'ByggExp – timeføring, planlegging og prosjektstyring for byggefirma',
+    description:
+      'Alt-i-ett-app for byggefirma: timeføring, digitalt mannskapsregister, vaktplan, tilbud og faktura – på web og mobil. Prøv gratis.',
+  },
+};
+
 export type HreflangAlternate = {
   hrefLang: string;
   href: string;

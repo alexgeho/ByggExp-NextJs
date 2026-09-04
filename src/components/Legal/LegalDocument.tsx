@@ -18,18 +18,25 @@ import {
 // a horizontally scrollable table on small screens.
 export default function LegalDocument({
   title,
+  description,
   updated,
   lang = "sv",
   contentLocales = landingLanguageCodes,
+  head,
   children,
 }: {
   title: string;
+  // Optional meta description. Trust pages (About, FAQ) pass a real,
+  // keyword-rich sentence; legal pages fall back to a generic one.
+  description?: string;
   updated?: string;
   lang?: string;
   // Locales this document actually has distinct content for. Legal pages only
   // written in sv + en pass ["sv","en"]; the /ru URL then canonicalises to /en
   // instead of advertising a Russian alternate that is really English.
   contentLocales?: readonly LandingLanguageCode[];
+  // Extra <head> nodes (e.g. FAQPage JSON-LD) merged into the document head.
+  head?: ReactNode;
   children: ReactNode;
 }) {
   const safeLang: LandingLanguageCode = landingLanguageCodes.includes(
@@ -58,7 +65,7 @@ export default function LegalDocument({
     <>
       <Head>
         <title>{`${title} · ByggExp`}</title>
-        <meta name="description" content={`${title} – ByggExp`} />
+        <meta name="description" content={description || `${title} – ByggExp`} />
         <link rel="canonical" href={canonicalUrl} />
         {hreflangAlternates.map((alt) => (
           <link
@@ -68,6 +75,7 @@ export default function LegalDocument({
             href={alt.href}
           />
         ))}
+        {head}
       </Head>
 
       <Header headerT={headerTranslations[safeLang]} />

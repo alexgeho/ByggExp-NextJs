@@ -25,6 +25,14 @@ function Footer({ footerT }: FooterProps) {
             {footerT.footerBlog}
           </Link>
 
+          <Link href={`/${lang}/om-oss`}>
+            {footerT.footerAbout}
+          </Link>
+
+          <Link href={`/${lang}/faq`}>
+            {footerT.footerFaq}
+          </Link>
+
           <Link href={`/${lang}/integritetspolicy`}>
             {footerT.footerPrivacy}
           </Link>

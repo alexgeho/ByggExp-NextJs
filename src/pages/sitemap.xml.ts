@@ -23,6 +23,10 @@ const LEGAL_STATIC_PATHS = [
   'integritetspolicy',
   'dpa',
   'underbitraden',
+  // Trust pages — written in sv + en, /ru canonicalises to /en (same shell as
+  // the legal pages), so they follow the same sv+en-only emission rule.
+  'om-oss',
+  'faq',
 ];
 
 // Swedish-market-only pages (lead-magnet tools) — served on /sv only.

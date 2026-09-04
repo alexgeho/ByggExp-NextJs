@@ -57,6 +57,44 @@ function featureTag(
   return FEATURE_TAG_OVERRIDE[post.slug]?.[lang] || post.tag || post.title || fallback;
 }
 
+// Per-feature title/excerpt overrides for the card, when the CMS copy needs
+// updating faster than the CMS can be edited. Keyed by slug then language.
+const FEATURE_CONTENT_OVERRIDE: Record<
+  string,
+  Partial<Record<LandingLanguageCode, { title?: string; excerpt?: string }>>
+> = {
+  'automatisk-tidrapportering-och-export': {
+    sv: {
+      title: 'Automatisk och manuell tidrapportering',
+      excerpt:
+        'Låt GPS-incheckningen samla arbetstimmar per projekt automatiskt – eller låt teamet stämpla in tid manuellt i appen. Exportera en färdig tidsredovisning till lönen direkt från webben.',
+    },
+    en: {
+      title: 'Automatic and manual time tracking',
+      excerpt:
+        'Let GPS check-in collect hours per project automatically – or let the team log time manually in the app. Export a ready payroll report straight from the web.',
+    },
+    ru: {
+      title: 'Автоматический и ручной учёт времени',
+      excerpt:
+        'GPS-отметки собирают часы по проектам автоматически — или команда вводит время вручную в приложении. Готовый табель выгружается в зарплату прямо из веба.',
+    },
+    nb: {
+      title: 'Automatisk og manuell tidsregistrering',
+      excerpt:
+        'La GPS-innsjekk samle timer per prosjekt automatisk – eller la teamet stemple inn tid manuelt i appen. Eksporter en ferdig timeliste til lønn rett fra nettet.',
+    },
+  },
+};
+
+function featureTitle(post: BlogPost, lang: LandingLanguageCode): string {
+  return FEATURE_CONTENT_OVERRIDE[post.slug]?.[lang]?.title || post.title;
+}
+
+function featureExcerpt(post: BlogPost, lang: LandingLanguageCode): string {
+  return FEATURE_CONTENT_OVERRIDE[post.slug]?.[lang]?.excerpt || post.excerpt || '';
+}
+
 const FUNKTIONER_COPY = {
   sv: {
     badge: 'Funktioner',
@@ -301,9 +339,8 @@ function FeatureCarousel({
                 <img src={post.coverImageUrl} alt={post.title} className="blog-card-image" />
               ) : null}
               <div className="blog-card-body">
-                <span className="blog-tag">{featureTag(post, lang, badge)}</span>
-                <h2>{post.title}</h2>
-                <p>{post.excerpt}</p>
+                <h2>{featureTitle(post, lang)}</h2>
+                <p>{featureExcerpt(post, lang)}</p>
               </div>
             </Link>
           ))}

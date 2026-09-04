@@ -11,10 +11,10 @@ export const featuresTranslations1_3 = {
 
     featuresCard1Title: "Авто сбор и экспорт часов в Excel",
     featuresCard1Text:
-      "Сотрудник выбирает проект. ByggExp автоматически фиксирует рабочее время, определяя по GPS.",
+      "Сотрудник выбирает проект. Время фиксируется автоматически по GPS — или вводится вручную в приложении, когда так удобнее.",
 
     featuresCard1Step1: "Создай проект с адресом",
-    featuresCard1Step2: "GPS сам запускает смену",
+    featuresCard1Step2: "GPS или ручная отметка",
     featuresCard1Step3: "Часы сразу в системе",
 
     featuresCard2Title: "Задачи с авто контролем",
@@ -49,10 +49,10 @@ export const featuresTranslations1_3 = {
 
     featuresCard1Title: "Automatic Time Tracking and Excel Export",
     featuresCard1Text:
-      "Employees select a project and press Start. ByggExp automatically tracks working hours and verifies via GPS whether the employee is on site.",
+      "Employees select a project. Time is captured automatically via GPS — or entered manually in the app when that fits better. Both ways work.",
 
     featuresCard1Step1: "Create a project and assign employees",
-    featuresCard1Step2: "Employees start a shift with one tap",
+    featuresCard1Step2: "Start via GPS or clock in manually",
     featuresCard1Step3: "Export ready-to-use Excel reports in a few clicks",
 
     featuresCard2Title: "Tasks with Automatic Follow-Up",
@@ -84,12 +84,12 @@ export const featuresTranslations1_3 = {
     featuresSub:
       "Ingen dator behövs. Ingen sekreterare behövs. Bara en smartphone som redan finns i fickan.",
 
-    featuresCard1Title: "Automatisk insamling av arbetstid",
+    featuresCard1Title: "Automatisk och manuell tidrapportering",
     featuresCard1Text:
-      "Medarbetaren väljer projekt. ByggExp registrerar arbetstiden automatiskt via GPS.",
+      "Medarbetaren väljer projekt. Tiden registreras automatiskt via GPS – eller stämplas in manuellt i appen när det passar bättre. Båda sätten fungerar.",
 
     featuresCard1Step1: "Arbetare kommer till plats",
-    featuresCard1Step2: "GPS startar pass automatiskt",
+    featuresCard1Step2: "GPS eller manuell instämpling",
     featuresCard1Step3:
       "Tid finns i systemet",
 
@@ -123,12 +123,12 @@ export const featuresTranslations1_3 = {
     featuresSub:
       "Ingen datamaskin trengs. Ingen sekretær trengs. Bare en smarttelefon som allerede ligger i lomma.",
 
-    featuresCard1Title: "Automatisk innsamling av arbeidstid",
+    featuresCard1Title: "Automatisk og manuell tidsregistrering",
     featuresCard1Text:
-      "Medarbeideren velger prosjekt. ByggExp registrerer arbeidstiden automatisk via GPS.",
+      "Medarbeideren velger prosjekt. Tiden registreres automatisk via GPS – eller stemples inn manuelt i appen når det passer bedre. Begge måter fungerer.",
 
     featuresCard1Step1: "Arbeideren kommer til stedet",
-    featuresCard1Step2: "GPS starter økten automatisk",
+    featuresCard1Step2: "GPS eller manuell innstempling",
     featuresCard1Step3:
       "Timene ligger i systemet",
 

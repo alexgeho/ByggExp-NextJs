@@ -170,6 +170,13 @@ const CLOSE_LABEL: Record<LandingLanguageCode, string> = {
   nb: 'Lukk',
 };
 
+const ZOOM_LABEL: Record<LandingLanguageCode, string> = {
+  sv: 'Förstora bilden',
+  en: 'Enlarge image',
+  ru: 'Увеличить изображение',
+  nb: 'Forstørr bildet',
+};
+
 // The three numbered steps shown on a feature card, reused from the homepage
 // feature copy so we don't duplicate content. Keyed by feature slug.
 function featureSteps(slug: string, lang: LandingLanguageCode): string[] {
@@ -414,7 +421,10 @@ function FeatureCarousel({
     const card = el.children[extIndex] as HTMLElement | undefined;
     if (!card) return;
     const left = card.offsetLeft - (el.clientWidth - card.offsetWidth) / 2;
-    if (smooth) {
+    const reduceMotion =
+      typeof window !== 'undefined' &&
+      window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    if (smooth && !reduceMotion) {
       el.scrollTo({ left, behavior: 'smooth' });
       return;
     }
@@ -444,7 +454,7 @@ function FeatureCarousel({
           best = i;
         }
       });
-      setActiveExt(best);
+      if (best !== activeExtRef.current) setActiveExt(best);
 
       if (!loop) return;
       // Once scrolling settles, snap back into the middle copy (same card, same
@@ -473,7 +483,11 @@ function FeatureCarousel({
     centerExt(initialExt, false);
     const onResize = () => centerExt(activeExtRef.current, false);
     window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
+    return () => {
+      window.removeEventListener('resize', onResize);
+      if (scrollRaf.current != null) cancelAnimationFrame(scrollRaf.current);
+      if (settleTimer.current) clearTimeout(settleTimer.current);
+    };
   }, [centerExt, initialExt]);
 
   // Lightbox is a modal: focus the close button on open, keep focus trapped
@@ -518,13 +532,17 @@ function FeatureCarousel({
     selectExt(target);
   };
 
-  const goNext = () => (loop ? selectExt(activeExt + 1) : selectExt(Math.min(activeExt + 1, N - 1)));
-  const goPrev = () => (loop ? selectExt(activeExt - 1) : selectExt(Math.max(activeExt - 1, 0)));
+  // Step from the current card's middle-copy position so rapid clicking can
+  // never run activeExt out of bounds (it re-normalises into [N, 2N) each call).
+  const goNext = () =>
+    loop ? selectExt(N + extToReal(activeExt) + 1) : selectExt(Math.min(activeExt + 1, N - 1));
+  const goPrev = () =>
+    loop ? selectExt(N + extToReal(activeExt) - 1) : selectExt(Math.max(activeExt - 1, 0));
 
   return (
     <>
       {pills.length > 0 ? (
-        <div className="blog-filter funktioner-filter" role="tablist" aria-label="Funktioner">
+        <div className="blog-filter funktioner-filter" role="group" aria-label="Funktioner">
           {pills.map((pill, i) => (
             <button
               key={pill.slug}
@@ -563,25 +581,34 @@ function FeatureCarousel({
                 key={`${post._id}-${i}`}
                 className={`funktioner-slide${isActive ? ' is-active' : ''}`}
                 onClick={() => selectExt(i)}
+                aria-hidden={isActive ? undefined : true}
               >
                 <h3 className="fk-title">{title}</h3>
                 {coverImage ? (
                   <div className="fk-visual">
-                    <img
-                      src={coverImage}
-                      alt={title}
-                      decoding="async"
-                      draggable={false}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        if (isActive) {
+                    {isActive ? (
+                      <button
+                        type="button"
+                        className="fk-zoom"
+                        aria-label={ZOOM_LABEL[lang] ?? ZOOM_LABEL.sv}
+                        onClick={(e) => {
+                          e.stopPropagation();
                           lightboxTriggerRef.current = e.currentTarget;
                           setLightbox({ url: coverImage, alt: title });
-                        } else {
-                          selectExt(i);
-                        }
-                      }}
-                    />
+                        }}
+                      >
+                        <img src={coverImage} alt={title} decoding="async" draggable={false} />
+                      </button>
+                    ) : (
+                      <img
+                        src={coverImage}
+                        alt=""
+                        aria-hidden="true"
+                        decoding="async"
+                        draggable={false}
+                        loading="lazy"
+                      />
+                    )}
                   </div>
                 ) : null}
                 <div className="fk-text">
@@ -600,6 +627,7 @@ function FeatureCarousel({
                     className="fk-link"
                     href={`/${lang}/blog/${encodeURIComponent(post.slug)}`}
                     onClick={(e) => e.stopPropagation()}
+                    tabIndex={isActive ? undefined : -1}
                   >
                     {READ_MORE[lang] ?? READ_MORE.sv}
                   </Link>
@@ -623,7 +651,7 @@ function FeatureCarousel({
       </div>
 
       {N > 1 ? (
-        <div className="fc-dots" aria-label="Funktioner">
+        <div className="fc-dots" role="group" aria-label="Funktioner">
           {posts.map((post, i) => (
             <button
               key={post._id}

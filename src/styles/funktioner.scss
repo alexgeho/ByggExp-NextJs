@@ -41,15 +41,11 @@
   opacity: 0.4;
   filter: blur(2px);
   transform: scale(0.92);
-  will-change: transform, opacity, filter;
   transition:
     opacity 0.3s ease,
     filter 0.3s ease,
     transform 0.3s ease,
     box-shadow 0.3s ease;
-}
-.fk-visual img {
-  transform: translateZ(0);
 }
 .funktioner-slide.is-active {
   opacity: 1;
@@ -122,7 +118,21 @@
   object-fit: contain;
   border-radius: 14px;
   background: rgba(10, 40, 90, 0.03);
+}
+/* The active card's image is wrapped in a real button so it's keyboard-
+   reachable; reset the button chrome and carry the zoom affordance here. */
+.fk-zoom {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
   cursor: zoom-in;
+}
+.fk-zoom:focus-visible {
+  outline: 2px solid #1c6cf3;
+  outline-offset: 3px;
+  border-radius: 14px;
 }
 .fc-arrow {
   position: absolute;
@@ -348,5 +358,18 @@
   }
   .funktioner-custom-card {
     padding: 34px 22px;
+  }
+}
+
+/* Respect reduced-motion: no card transitions, no smooth-scroll, no fade. */
+@media (prefers-reduced-motion: reduce) {
+  .funktioner-carousel-track {
+    scroll-behavior: auto;
+  }
+  .funktioner-slide {
+    transition: none;
+  }
+  .fk-lightbox {
+    animation: none;
   }
 }

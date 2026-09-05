@@ -42,6 +42,11 @@ const FEATURE_CRUMB: Record<LandingLanguageCode, string> = {
   ru: 'Функции',
   nb: 'Funksjoner',
   pl: 'Funkcje',
+  uk: 'Функції',
+  fi: 'Ominaisuudet',
+  et: 'Funktsioonid',
+  lt: 'Funkcijos',
+  lv: 'Funkcijas',
 };
 
 type BlogArticlePageProps = {

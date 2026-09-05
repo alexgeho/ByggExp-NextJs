@@ -155,6 +155,11 @@ const PAMINNELSER_STEPS: Record<LandingLanguageCode, string[]> = {
   ru: ['Создайте задачу со сроком', 'Задайте интервал напоминаний', 'Приложение напоминает, пока не выполнено'],
   nb: ['Opprett oppgave med frist', 'Sett påminnelsesintervall', 'Appen minner til det er gjort'],
   pl: ['Utwórz zadanie z terminem', 'Ustaw interwał przypomnień', 'Aplikacja przypomina, aż zadanie będzie gotowe'],
+  uk: ['Створіть задачу з дедлайном', 'Задайте інтервал нагадувань', 'Застосунок нагадує, поки не виконано'],
+  fi: ['Luo tehtävä määräajalla', 'Aseta muistutusväli', 'Sovellus muistuttaa, kunnes tehtävä on valmis'],
+  et: ['Looge tähtajaga ülesanne', 'Määrake meeldetuletuse intervall', 'Rakendus tuletab meelde, kuni valmis'],
+  lt: ['Sukurkite užduotį su terminu', 'Nustatykite priminimų intervalą', 'Programėlė primena, kol atliksite'],
+  lv: ['Izveidojiet uzdevumu ar termiņu', 'Iestatiet atgādinājumu intervālu', 'Lietotne atgādina, līdz izdarīts'],
 };
 
 const READ_MORE: Record<LandingLanguageCode, string> = {
@@ -163,6 +168,11 @@ const READ_MORE: Record<LandingLanguageCode, string> = {
   ru: 'Подробнее о функции →',
   nb: 'Les mer om funksjonen →',
   pl: 'Dowiedz się więcej o funkcji →',
+  uk: 'Докладніше про функцію →',
+  fi: 'Lue lisää ominaisuudesta →',
+  et: 'Loe funktsiooni kohta rohkem →',
+  lt: 'Sužinokite daugiau apie funkciją →',
+  lv: 'Uzziniet vairāk par funkciju →',
 };
 
 const CLOSE_LABEL: Record<LandingLanguageCode, string> = {
@@ -171,6 +181,11 @@ const CLOSE_LABEL: Record<LandingLanguageCode, string> = {
   ru: 'Закрыть',
   nb: 'Lukk',
   pl: 'Zamknij',
+  uk: 'Закрити',
+  fi: 'Sulje',
+  et: 'Sulge',
+  lt: 'Uždaryti',
+  lv: 'Aizvērt',
 };
 
 const ZOOM_LABEL: Record<LandingLanguageCode, string> = {
@@ -179,6 +194,11 @@ const ZOOM_LABEL: Record<LandingLanguageCode, string> = {
   ru: 'Увеличить изображение',
   nb: 'Forstørr bildet',
   pl: 'Powiększ obraz',
+  uk: 'Збільшити зображення',
+  fi: 'Suurenna kuvaa',
+  et: 'Suurenda pilti',
+  lt: 'Padidinti vaizdą',
+  lv: 'Palielināt attēlu',
 };
 
 // The three numbered steps shown on a feature card, reused from the homepage
@@ -374,6 +394,101 @@ const FUNKTIONER_COPY = {
         title: 'Wsparcie zawsze blisko',
         body: 'Jesteśmy do dyspozycji przy każdym pytaniu – szybko i po ludzku.',
       },
+    ],
+  },
+  uk: {
+    badge: 'Функції',
+    title: 'Усі функції ByggExp',
+    subtitle:
+      'Дізнайтеся, що вміє ByggExp — від пропозицій і обліку часу до рахунків і зарплат. Натисніть на функцію, щоб побачити, як вона працює.',
+    empty: 'Поки немає функцій.',
+    customTitle: 'Створюємо функції під ваші потреби',
+    customBody:
+      'У кожної компанії свій спосіб роботи. ByggExp — не просто готове рішення, а платформа, яку ми охоче доопрацьовуємо під ваші потреби. Розкажіть про свої виклики й побажання — реалізуємо швидко і якісно. Ваші ідеї стають частиною нових функцій і оновлень ByggExp.',
+    customCta: 'Замовити демо',
+    whyTitle: 'Усе ще сумніваєтеся?',
+    why: [
+      { title: 'Простий старт', body: 'Не потребує спеціальних знань. Допоможемо налаштувати й запустити з командою.' },
+      { title: 'Безпека й контроль над даними', body: 'Ваші дані захищені — завжди можна відновити та експортувати.' },
+      { title: 'Гнучкість під ваші процеси', body: 'Адаптуємо ByggExp під ваші потреби — просто скажіть, що важливо.' },
+      { title: 'Працює на всіх пристроях', body: 'Телефон, планшет, комп’ютер — обирайте, що зручно вашій команді.' },
+      { title: 'Підтримка завжди поруч', body: 'Ми на зв’язку з будь-яких питань — швидко й по-людськи.' },
+    ],
+  },
+  fi: {
+    badge: 'Ominaisuudet',
+    title: 'Kaikki ByggExpin ominaisuudet',
+    subtitle:
+      'Tutustu siihen, mitä ByggExp tekee — tarjouksista ja työajanseurannasta laskuihin ja palkkoihin. Napsauta ominaisuutta nähdäksesi, miten se toimii.',
+    empty: 'Ei ominaisuuksia vielä.',
+    customTitle: 'Rakennamme ominaisuuksia tarpeidenne mukaan',
+    customBody:
+      'Jokaisella yrityksellä on oma tapansa työskennellä. ByggExp ei ole vain valmis ratkaisu — se on alusta, jota kehitämme mielellämme tarpeidenne mukaan. Kertokaa haasteistanne ja toiveistanne, niin rakennamme sen nopeasti ja laadukkaasti. Ideoistanne tulee osa ByggExpin uusia ominaisuuksia ja päivityksiä.',
+    customCta: 'Varaa demo',
+    whyTitle: 'Vieläkö epäröit?',
+    why: [
+      { title: 'Helppo aloitus', body: 'Ei vaadi erityisosaamista. Autamme ottamaan käyttöön ja pääsemään alkuun tiimin kanssa.' },
+      { title: 'Turvallisuus ja tietojen hallinta', body: 'Tietosi ovat suojattuja — voit aina palauttaa ja viedä ne.' },
+      { title: 'Joustava prosessienne mukaan', body: 'Mukautamme ByggExpin tarpeisiinne — kerro vain, mikä on tärkeää.' },
+      { title: 'Toimii kaikilla laitteilla', body: 'Puhelin, tabletti, tietokone — valitse tiimillesi sopiva.' },
+      { title: 'Tuki aina lähellä', body: 'Olemme käytettävissä kaikkiin kysymyksiin — nopeasti ja inhimillisesti.' },
+    ],
+  },
+  et: {
+    badge: 'Funktsioonid',
+    title: 'Kõik ByggExpi funktsioonid',
+    subtitle:
+      'Avastage, mida ByggExp teeb — pakkumistest ja tööaja arvestusest arvete ja palkadeni. Klõpsake funktsioonil, et näha, kuidas see töötab.',
+    empty: 'Funktsioone veel pole.',
+    customTitle: 'Loome funktsioone teie vajaduste järgi',
+    customBody:
+      'Igal ettevõttel on oma tööviis. ByggExp pole lihtsalt valmislahendus — see on platvorm, mida arendame hea meelega teie vajaduste järgi. Rääkige oma väljakutsetest ja soovidest, ehitame selle kiiresti ja kvaliteetselt. Teie ideedest saab osa ByggExpi uutest funktsioonidest ja uuendustest.',
+    customCta: 'Broneeri demo',
+    whyTitle: 'Kas ikka veel kahtlete?',
+    why: [
+      { title: 'Lihtne algus', body: 'Ei nõua eriteadmisi. Aitame seadistada ja tiimiga alustada.' },
+      { title: 'Turvalisus ja andmete kontroll', body: 'Teie andmed on kaitstud — saate need alati taastada ja eksportida.' },
+      { title: 'Paindlik teie protsesside järgi', body: 'Kohandame ByggExpi teie vajadustele — öelge vaid, mis on oluline.' },
+      { title: 'Töötab kõigil seadmetel', body: 'Telefon, tahvel, arvuti — valige tiimile sobiv.' },
+      { title: 'Tugi alati lähedal', body: 'Oleme iga küsimuse jaoks olemas — kiiresti ja inimlikult.' },
+    ],
+  },
+  lt: {
+    badge: 'Funkcijos',
+    title: 'Visos ByggExp funkcijos',
+    subtitle:
+      'Sužinokite, ką gali ByggExp — nuo pasiūlymų ir laiko apskaitos iki sąskaitų ir atlyginimų. Spustelėkite funkciją, kad pamatytumėte, kaip ji veikia.',
+    empty: 'Funkcijų dar nėra.',
+    customTitle: 'Kuriame funkcijas pagal jūsų poreikius',
+    customBody:
+      'Kiekviena įmonė turi savo darbo būdą. ByggExp — ne tik gatavas sprendimas, o platforma, kurią mielai tobuliname pagal jūsų poreikius. Papasakokite apie savo iššūkius ir pageidavimus — įgyvendinsime greitai ir kokybiškai. Jūsų idėjos tampa naujų ByggExp funkcijų ir atnaujinimų dalimi.',
+    customCta: 'Užsisakyti demo',
+    whyTitle: 'Vis dar abejojate?',
+    why: [
+      { title: 'Paprasta pradžia', body: 'Nereikia specialių žinių. Padėsime įdiegti ir pradėti su komanda.' },
+      { title: 'Saugumas ir duomenų kontrolė', body: 'Jūsų duomenys apsaugoti — visada galite juos atkurti ir eksportuoti.' },
+      { title: 'Lankstumas pagal jūsų procesus', body: 'Pritaikome ByggExp jūsų poreikiams — tik pasakykite, kas svarbu.' },
+      { title: 'Veikia visuose įrenginiuose', body: 'Telefonas, planšetė, kompiuteris — rinkitės, kas patogu komandai.' },
+      { title: 'Pagalba visada šalia', body: 'Esame pasiekiami bet kokiu klausimu — greitai ir žmogiškai.' },
+    ],
+  },
+  lv: {
+    badge: 'Funkcijas',
+    title: 'Visas ByggExp funkcijas',
+    subtitle:
+      'Uzziniet, ko ByggExp spēj — no piedāvājumiem un laika uzskaites līdz rēķiniem un algām. Noklikšķiniet uz funkcijas, lai redzētu, kā tā darbojas.',
+    empty: 'Vēl nav funkciju.',
+    customTitle: 'Veidojam funkcijas atbilstoši jūsu vajadzībām',
+    customBody:
+      'Katram uzņēmumam ir savs darba veids. ByggExp nav tikai gatavs risinājums — tā ir platforma, ko labprāt pilnveidojam atbilstoši jūsu vajadzībām. Pastāstiet par saviem izaicinājumiem un vēlmēm, un mēs to izveidosim ātri un kvalitatīvi. Jūsu idejas kļūst par daļu no jaunām ByggExp funkcijām un atjauninājumiem.',
+    customCta: 'Pieteikt demo',
+    whyTitle: 'Vēl aizvien šaubāties?',
+    why: [
+      { title: 'Vienkārša sākšana', body: 'Nav nepieciešamas īpašas zināšanas. Palīdzēsim iestatīt un sākt darbu ar komandu.' },
+      { title: 'Drošība un datu kontrole', body: 'Jūsu dati ir aizsargāti — vienmēr varat tos atjaunot un eksportēt.' },
+      { title: 'Elastīgs atbilstoši jūsu procesiem', body: 'Pielāgojam ByggExp jūsu vajadzībām — tikai pasakiet, kas ir svarīgi.' },
+      { title: 'Darbojas visās ierīcēs', body: 'Telefons, planšete, dators — izvēlieties komandai piemēroto.' },
+      { title: 'Atbalsts vienmēr tuvumā', body: 'Esam pieejami jebkuram jautājumam — ātri un cilvēcīgi.' },
     ],
   },
 } as const;

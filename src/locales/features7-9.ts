@@ -118,4 +118,109 @@ export const featuresTranslations7_9 = {
     featuresCard9Step2: "Godziny i koszty liczą się automatycznie",
     featuresCard9Step3: "Zobacz marżę w czasie rzeczywistym",
   },
+
+  uk: {
+    featuresCard7Title: "Створення комерційних пропозицій",
+    featuresCard7Text:
+      "Дані компанії заповнюються автоматично. Попередні пропозиції зберігаються, тож нові створювати простіше.",
+    featuresCard7Step1: "Створіть пропозицію просто в проєкті",
+    featuresCard7Step2: "Дані проєкту заповнюються автоматично",
+    featuresCard7Step3: "Надішліть пропозицію за кілька кліків",
+    featuresCard8Title: "Виставлення рахунків",
+    featuresCard8Text:
+      "Перетворюйте відпрацьовані години на готові рахунки. Економте час і отримуйте оплату швидше.",
+    featuresCard8Step1: "Оберіть проєкт і період",
+    featuresCard8Step2: "Години підтягуються автоматично",
+    featuresCard8Step3: "Надішліть рахунок клієнту",
+    featuresCard9Title: "Економіка й рентабельність проєкту",
+    featuresCard9Text:
+      "Відпрацьовані години й матеріали автоматично стають витратами й зіставляються з бюджетом. Маржа кожного проєкту — у реальному часі.",
+    featuresCard9Step1: "Задайте бюджет проєкту",
+    featuresCard9Step2: "Години й витрати рахуються автоматично",
+    featuresCard9Step3: "Дивіться маржу в реальному часі",
+  },
+
+  fi: {
+    featuresCard7Title: "Tee tarjouksia",
+    featuresCard7Text:
+      "Yrityksen tiedot täyttyvät automaattisesti. Aiemmat tarjoukset tallentuvat, joten uusia on helpompi tehdä.",
+    featuresCard7Step1: "Luo tarjous projektista",
+    featuresCard7Step2: "Projektin tiedot täyttyvät automaattisesti",
+    featuresCard7Step3: "Lähetä tarjous muutamalla klikkauksella",
+    featuresCard8Title: "Tee laskuja",
+    featuresCard8Text:
+      "Muunna kirjatut työtunnit valmiiksi laskuiksi. Säästä aikaa ja saa maksu nopeammin.",
+    featuresCard8Step1: "Valitse projekti ja jakso",
+    featuresCard8Step2: "Tunnit haetaan automaattisesti",
+    featuresCard8Step3: "Lähetä lasku asiakkaalle",
+    featuresCard9Title: "Projektin talous ja kannattavuus",
+    featuresCard9Text:
+      "Kirjatut tunnit ja materiaalit muuttuvat automaattisesti kustannuksiksi ja verrataan budjettiin. Kunkin projektin kate reaaliajassa.",
+    featuresCard9Step1: "Aseta projektin budjetti",
+    featuresCard9Step2: "Tunnit ja kustannukset lasketaan automaattisesti",
+    featuresCard9Step3: "Näe kate reaaliajassa",
+  },
+
+  et: {
+    featuresCard7Title: "Koosta pakkumisi",
+    featuresCard7Text:
+      "Ettevõtte andmed täidetakse automaatselt. Varasemad pakkumised salvestuvad, seega uusi on lihtsam koostada.",
+    featuresCard7Step1: "Looge pakkumine projektist",
+    featuresCard7Step2: "Projekti andmed täidetakse automaatselt",
+    featuresCard7Step3: "Saatke pakkumine paari klikiga",
+    featuresCard8Title: "Koosta arveid",
+    featuresCard8Text:
+      "Muutke registreeritud töötunnid valmis arveteks. Säästke aega ja saage makse kiiremini.",
+    featuresCard8Step1: "Valige projekt ja periood",
+    featuresCard8Step2: "Tunnid võetakse automaatselt",
+    featuresCard8Step3: "Saatke arve kliendile",
+    featuresCard9Title: "Projekti majandus ja kasumlikkus",
+    featuresCard9Text:
+      "Registreeritud tunnid ja materjalid muudetakse automaatselt kuludeks ja võrreldakse eelarvega. Iga projekti marginaal reaalajas.",
+    featuresCard9Step1: "Määrake projekti eelarve",
+    featuresCard9Step2: "Tunnid ja kulud arvutatakse automaatselt",
+    featuresCard9Step3: "Näete marginaali reaalajas",
+  },
+
+  lt: {
+    featuresCard7Title: "Kurkite pasiūlymus",
+    featuresCard7Text:
+      "Įmonės duomenys užpildomi automatiškai. Ankstesni pasiūlymai išsaugomi, todėl naujus kurti lengviau.",
+    featuresCard7Step1: "Sukurkite pasiūlymą iš projekto",
+    featuresCard7Step2: "Projekto duomenys užpildomi automatiškai",
+    featuresCard7Step3: "Išsiųskite pasiūlymą keliais paspaudimais",
+    featuresCard8Title: "Kurkite sąskaitas",
+    featuresCard8Text:
+      "Paverskite užregistruotas darbo valandas gatavomis sąskaitomis. Taupykite laiką ir gaukite apmokėjimą greičiau.",
+    featuresCard8Step1: "Pasirinkite projektą ir laikotarpį",
+    featuresCard8Step2: "Valandos paimamos automatiškai",
+    featuresCard8Step3: "Išsiųskite sąskaitą klientui",
+    featuresCard9Title: "Projekto ekonomika ir pelningumas",
+    featuresCard9Text:
+      "Užregistruotos valandos ir medžiagos automatiškai paverčiamos sąnaudomis ir palyginamos su biudžetu. Kiekvieno projekto marža realiu laiku.",
+    featuresCard9Step1: "Nustatykite projekto biudžetą",
+    featuresCard9Step2: "Valandos ir sąnaudos skaičiuojamos automatiškai",
+    featuresCard9Step3: "Matykite maržą realiu laiku",
+  },
+
+  lv: {
+    featuresCard7Title: "Veidojiet piedāvājumus",
+    featuresCard7Text:
+      "Uzņēmuma dati aizpildās automātiski. Iepriekšējie piedāvājumi tiek saglabāti, tāpēc jaunus veidot vieglāk.",
+    featuresCard7Step1: "Izveidojiet piedāvājumu no projekta",
+    featuresCard7Step2: "Projekta dati aizpildās automātiski",
+    featuresCard7Step3: "Nosūtiet piedāvājumu ar dažiem klikšķiem",
+    featuresCard8Title: "Veidojiet rēķinus",
+    featuresCard8Text:
+      "Pārvērtiet reģistrētās darba stundas gatavos rēķinos. Ietaupiet laiku un saņemiet samaksu ātrāk.",
+    featuresCard8Step1: "Izvēlieties projektu un periodu",
+    featuresCard8Step2: "Stundas tiek iegūtas automātiski",
+    featuresCard8Step3: "Nosūtiet rēķinu klientam",
+    featuresCard9Title: "Projekta ekonomika un rentabilitāte",
+    featuresCard9Text:
+      "Reģistrētās stundas un materiāli automātiski tiek pārrēķināti izmaksās un salīdzināti ar budžetu. Katra projekta peļņa reāllaikā.",
+    featuresCard9Step1: "Iestatiet projekta budžetu",
+    featuresCard9Step2: "Stundas un izmaksas tiek rēķinātas automātiski",
+    featuresCard9Step3: "Skatiet peļņu reāllaikā",
+  },
 } as const;

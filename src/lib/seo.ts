@@ -54,6 +54,36 @@ export const defaultHomeMeta: Record<
     description:
       'Aplikacja all-in-one dla firm budowlanych: ewidencja czasu, cyfrowy rejestr pracowników, grafik, oferty i faktury – w przeglądarce i w telefonie. Wypróbuj za darmo.',
   },
+  uk: {
+    title:
+      'ByggExp — облік часу, планування та управління будівництвом для будівельних компаній',
+    description:
+      'Застосунок «усе в одному» для будівельних компаній: облік часу, електронний журнал персоналу, графіки, пропозиції та рахунки — у вебі й мобільному. Спробуйте безкоштовно.',
+  },
+  fi: {
+    title:
+      'ByggExp – työajanseuranta, suunnittelu ja projektinhallinta rakentajille',
+    description:
+      'All-in-one-sovellus rakennusyrityksille: työajanseuranta, digitaalinen henkilöstörekisteri, aikataulutus, tarjoukset ja laskutus – webissä ja mobiilissa. Kokeile ilmaiseksi.',
+  },
+  et: {
+    title:
+      'ByggExp – tööaja arvestus, planeerimine ja projektijuhtimine ehitajatele',
+    description:
+      'Kõik-ühes rakendus ehitusettevõtetele: tööaja arvestus, digitaalne personaliregister, ajakava, pakkumised ja arveldamine – veebis ja mobiilis. Proovi tasuta.',
+  },
+  lt: {
+    title:
+      'ByggExp – laiko apskaita, planavimas ir projektų valdymas statybininkams',
+    description:
+      'Viskas viename programėlė statybos įmonėms: laiko apskaita, skaitmeninis personalo žurnalas, grafikai, pasiūlymai ir sąskaitos – žiniatinklyje ir telefone. Išbandykite nemokamai.',
+  },
+  lv: {
+    title:
+      'ByggExp – laika uzskaite, plānošana un projektu vadība būvniekiem',
+    description:
+      'Viss vienā lietotne būvuzņēmumiem: laika uzskaite, digitāls personāla reģistrs, grafiki, piedāvājumi un rēķini – tīmeklī un mobilajā. Izmēģiniet bez maksas.',
+  },
 };
 
 export type HreflangAlternate = {

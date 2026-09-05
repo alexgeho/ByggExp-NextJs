@@ -117,4 +117,99 @@ export const painTranslations = {
     painResultText:
       "koszty rosną, faktury wychodzą później, a płatności grzęzną tygodniami ...",
   },
+
+  uk: {
+    painTitle: "Корінь проблеми",
+    painHeading: "Компанії втрачають гроші, бо роблять ",
+    painTitleAccent1: "вручну",
+    painHeading2: " те, що успішні вже давно ",
+    painTitleAccent2: "автоматизували",
+    painItem1:
+      "Години надсилають у SMS або на папері — адміністрація вручну переносить їх в Excel",
+    painItem2:
+      "Працівник забув надіслати години — доводиться телефонувати й нагадувати",
+    painItem3:
+      "Години з об’єкта не збіглися з даними замовника — треба розбиратися",
+    painItem4:
+      "Адміністрація витрачає десятки годин на ручне введення в Excel",
+    painResult: "У підсумку:",
+    painResultText:
+      "витрати зростають, рахунки виставляють пізніше, а гроші зависають тижнями ...",
+  },
+
+  fi: {
+    painTitle: "Ongelman ydin",
+    painHeading: "Yritykset menettävät rahaa, koska tekevät ",
+    painTitleAccent1: "käsin",
+    painHeading2: " sen, minkä menestyvät ovat jo ",
+    painTitleAccent2: "automatisoineet",
+    painItem1:
+      "Tunnit lähetetään tekstiviestillä tai paperilla — hallinto siirtää ne käsin Exceliin",
+    painItem2:
+      "Työntekijä unohtaa ilmoittaa tuntinsa — jonkun on soitettava ja muistutettava",
+    painItem3:
+      "Työmaan tunnit eivät täsmää asiakkaan tietojen kanssa — aikaa kuluu erojen selvittelyyn",
+    painItem4:
+      "Hallinto käyttää kymmeniä tunteja manuaaliseen Excel-syöttöön",
+    painResult: "Lopputulos:",
+    painResultText:
+      "kustannukset kasvavat, laskut lähtevät myöhemmin ja maksut viivästyvät viikkoja ...",
+  },
+
+  et: {
+    painTitle: "Probleemi tuum",
+    painHeading: "Ettevõtted kaotavad raha, sest teevad ",
+    painTitleAccent1: "käsitsi",
+    painHeading2: " seda, mille edukad on juba ",
+    painTitleAccent2: "automatiseerinud",
+    painItem1:
+      "Tunnid saadetakse SMS-i või paberiga — administratsioon kannab need käsitsi Excelisse",
+    painItem2:
+      "Töötaja unustab tunnid esitada — keegi peab helistama ja meelde tuletama",
+    painItem3:
+      "Objekti tunnid ei klapi kliendi andmetega — aeg kulub erinevuste selgitamisele",
+    painItem4:
+      "Administratsioon kulutab kümneid tunde käsitsi Excelisse sisestamisele",
+    painResult: "Tulemus:",
+    painResultText:
+      "kulud kasvavad, arved lähevad hiljem ja maksed viibivad nädalaid ...",
+  },
+
+  lt: {
+    painTitle: "Problemos esmė",
+    painHeading: "Įmonės praranda pinigus, nes daro ",
+    painTitleAccent1: "rankiniu būdu",
+    painHeading2: " tai, ką sėkmingos jau seniai ",
+    painTitleAccent2: "automatizavo",
+    painItem1:
+      "Valandos siunčiamos SMS ar popieriuje — administracija rankiniu būdu perkelia jas į Excel",
+    painItem2:
+      "Darbuotojas pamiršta pateikti valandas — kažkas turi skambinti ir priminti",
+    painItem3:
+      "Objekto valandos nesutampa su kliento duomenimis — laikas gaištamas aiškinantis skirtumus",
+    painItem4:
+      "Administracija sugaišta dešimtis valandų rankiniam įvedimui į Excel",
+    painResult: "Rezultatas:",
+    painResultText:
+      "išlaidos auga, sąskaitos išrašomos vėliau, o mokėjimai vėluoja savaitėmis ...",
+  },
+
+  lv: {
+    painTitle: "Problēmas būtība",
+    painHeading: "Uzņēmumi zaudē naudu, jo dara ",
+    painTitleAccent1: "manuāli",
+    painHeading2: " to, ko veiksmīgie jau sen ir ",
+    painTitleAccent2: "automatizējuši",
+    painItem1:
+      "Stundas sūta īsziņā vai uz papīra — administrācija tās manuāli pārnes uz Excel",
+    painItem2:
+      "Darbinieks aizmirst iesniegt stundas — kādam jāzvana un jāatgādina",
+    painItem3:
+      "Objekta stundas nesakrīt ar klienta datiem — laiks paiet, noskaidrojot atšķirības",
+    painItem4:
+      "Administrācija patērē desmitiem stundu manuālai ievadei Excel",
+    painResult: "Rezultāts:",
+    painResultText:
+      "izmaksas aug, rēķini tiek izrakstīti vēlāk, un maksājumi kavējas nedēļām ...",
+  },
 };

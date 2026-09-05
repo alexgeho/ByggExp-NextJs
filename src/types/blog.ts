@@ -1,4 +1,4 @@
-export type BlogLocale = 'sv' | 'en' | 'ru' | 'nb' | 'pl';
+export type BlogLocale = 'sv' | 'en' | 'ru' | 'nb' | 'pl' | 'uk' | 'fi' | 'et' | 'lt' | 'lv';
 
 // A single FAQ entry as editable data. When a BlogPost provides a non-empty
 // `faq` array it is the source of truth for the FAQPage structured data; when

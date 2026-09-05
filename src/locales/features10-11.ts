@@ -78,4 +78,79 @@ export const featuresTranslations10_11 = {
     featuresCard11Step2: "Podstawa powstaje dla każdego pracownika",
     featuresCard11Step3: "Wyeksportuj dane do wypłaty jednym kliknięciem",
   },
+
+  uk: {
+    featuresCard10Title: "Витрати й видатки",
+    featuresCard10Text:
+      "Тримайте під контролем усі витрати й видатки за кожним проєктом. Сфотографуйте чек — він автоматично прив’яжеться до потрібного проєкту.",
+    featuresCard10Step1: "Сфотографуйте чек у застосунку",
+    featuresCard10Step2: "Прив’яжіть до потрібного проєкту",
+    featuresCard10Step3: "Дивіться витрати в реальному часі",
+    featuresCard11Title: "Зарплата з тих самих годин",
+    featuresCard11Text:
+      "Відпрацьовані години автоматично стають основою для зарплати — з мінімальними ручними коригуваннями.",
+    featuresCard11Step1: "Години фіксуються автоматично",
+    featuresCard11Step2: "Основа формується для кожного працівника",
+    featuresCard11Step3: "Вивантажте дані для зарплати одним кліком",
+  },
+
+  fi: {
+    featuresCard10Title: "Kulut ja kustannukset",
+    featuresCard10Text:
+      "Pidä kaikki kulut ja kustannukset hallinnassa projektikohtaisesti. Kuvaa kuitti, niin se kohdistuu oikeaan projektiin automaattisesti.",
+    featuresCard10Step1: "Kuvaa kuitti sovelluksessa",
+    featuresCard10Step2: "Kohdista oikeaan projektiin",
+    featuresCard10Step3: "Näe kustannukset reaaliajassa",
+    featuresCard11Title: "Palkat samoista tunneista",
+    featuresCard11Text:
+      "Kirjatut tunnit muodostavat automaattisesti palkkaperusteen — vähäisin manuaalisin korjauksin.",
+    featuresCard11Step1: "Tunnit kirjautuvat automaattisesti",
+    featuresCard11Step2: "Peruste luodaan jokaiselle työntekijälle",
+    featuresCard11Step3: "Vie palkkatiedot yhdellä klikkauksella",
+  },
+
+  et: {
+    featuresCard10Title: "Kulud ja väljaminekud",
+    featuresCard10Text:
+      "Hoidke kõik kulud ja väljaminekud projektide kaupa kontrolli all. Pildistage tšekk, nii jõuab see automaatselt õigesse projekti.",
+    featuresCard10Step1: "Pildistage tšekk rakenduses",
+    featuresCard10Step2: "Sidke õige projektiga",
+    featuresCard10Step3: "Näete kulusid reaalajas",
+    featuresCard11Title: "Palgad samadest tundidest",
+    featuresCard11Text:
+      "Registreeritud tunnid moodustavad automaatselt palga aluse — minimaalsete käsitsi paranduste abil.",
+    featuresCard11Step1: "Tunnid registreeritakse automaatselt",
+    featuresCard11Step2: "Alus luuakse igale töötajale",
+    featuresCard11Step3: "Eksportige palgaandmed ühe klikiga",
+  },
+
+  lt: {
+    featuresCard10Title: "Išlaidos ir sąnaudos",
+    featuresCard10Text:
+      "Kontroliuokite visas išlaidas ir sąnaudas kiekviename projekte. Nufotografuokite kvitą — jis automatiškai priskiriamas reikiamam projektui.",
+    featuresCard10Step1: "Nufotografuokite kvitą programėlėje",
+    featuresCard10Step2: "Priskirkite reikiamam projektui",
+    featuresCard10Step3: "Matykite išlaidas realiu laiku",
+    featuresCard11Title: "Atlyginimai iš tų pačių valandų",
+    featuresCard11Text:
+      "Užregistruotos valandos automatiškai tampa atlyginimo pagrindu — su minimaliomis rankinėmis pataisomis.",
+    featuresCard11Step1: "Valandos registruojamos automatiškai",
+    featuresCard11Step2: "Pagrindas sukuriamas kiekvienam darbuotojui",
+    featuresCard11Step3: "Eksportuokite atlyginimo duomenis vienu paspaudimu",
+  },
+
+  lv: {
+    featuresCard10Title: "Izdevumi un izmaksas",
+    featuresCard10Text:
+      "Kontrolējiet visus izdevumus un izmaksas katrā projektā. Nofotografējiet čeku — tas automātiski tiks piesaistīts vajadzīgajam projektam.",
+    featuresCard10Step1: "Nofotografējiet čeku lietotnē",
+    featuresCard10Step2: "Piesaistiet vajadzīgajam projektam",
+    featuresCard10Step3: "Skatiet izmaksas reāllaikā",
+    featuresCard11Title: "Algas no tām pašām stundām",
+    featuresCard11Text:
+      "Reģistrētās stundas automātiski kļūst par algas pamatu — ar minimāliem manuāliem labojumiem.",
+    featuresCard11Step1: "Stundas tiek reģistrētas automātiski",
+    featuresCard11Step2: "Pamats tiek izveidots katram darbiniekam",
+    featuresCard11Step3: "Eksportējiet algas datus ar vienu klikšķi",
+  },
 } as const;

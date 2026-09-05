@@ -114,4 +114,89 @@ export const heroTranslations = {
     heroFeature2: "Start w 15 minut",
     heroFeature3: "Bez zobowiązań",
   },
+
+  uk: {
+    heroPill: "Управління будівництвом",
+    heroTitle: "Автоматичний облік робочого часу та управління проєктами",
+    heroTitleAccent: "для будівельних компаній",
+    heroSubtitle:
+      "Швидше виставлення рахунків і зарплат, задачі з автонагадуваннями, контроль змін у реальному часі, планування. ",
+    heroSubtitleShort:
+      "Швидше виставлення рахунків і зарплат, задачі з автонагадуваннями ... ",
+    heroSubtitleBtnMore: "Більше ▼",
+    heroSubtitleBtnLess: "Менше ▲",
+    heroDemo: "Замовити демо",
+    heroHow: "Як це працює",
+    heroFeature1: "Перший місяць безкоштовно",
+    heroFeature2: "Запуск за 15 хвилин",
+    heroFeature3: "Без зобов’язань",
+  },
+
+  fi: {
+    heroPill: "Rakennusalan hallinta",
+    heroTitle: "Automaattinen työajanseuranta ja projektinhallinta",
+    heroTitleAccent: "rakennusyrityksille",
+    heroSubtitle:
+      "Nopeampi laskutus ja palkanmaksu, tehtävät automaattisilla muistutuksilla, vuorojen seuranta reaaliajassa, suunnittelu. ",
+    heroSubtitleShort:
+      "Nopeampi laskutus ja palkanmaksu, tehtävät automaattisilla muistutuksilla ... ",
+    heroSubtitleBtnMore: "Lisää ▼",
+    heroSubtitleBtnLess: "Vähemmän ▲",
+    heroDemo: "Varaa demo",
+    heroHow: "Miten se toimii",
+    heroFeature1: "Ensimmäinen kuukausi ilmaiseksi",
+    heroFeature2: "Käyttöönotto 15 minuutissa",
+    heroFeature3: "Ei sitoutumista",
+  },
+
+  et: {
+    heroPill: "Ehituse haldus",
+    heroTitle: "Automaatne tööaja arvestus ja projektijuhtimine",
+    heroTitleAccent: "ehitusettevõtetele",
+    heroSubtitle:
+      "Kiirem arveldamine ja palgaarvestus, ülesanded automaatsete meeldetuletustega, vahetuste jälgimine reaalajas, planeerimine. ",
+    heroSubtitleShort:
+      "Kiirem arveldamine ja palgaarvestus, ülesanded automaatsete meeldetuletustega ... ",
+    heroSubtitleBtnMore: "Rohkem ▼",
+    heroSubtitleBtnLess: "Vähem ▲",
+    heroDemo: "Broneeri demo",
+    heroHow: "Kuidas see töötab",
+    heroFeature1: "Esimene kuu tasuta",
+    heroFeature2: "Käivitus 15 minutiga",
+    heroFeature3: "Ilma kohustusteta",
+  },
+
+  lt: {
+    heroPill: "Statybų valdymas",
+    heroTitle: "Automatinė darbo laiko apskaita ir projektų valdymas",
+    heroTitleAccent: "statybos įmonėms",
+    heroSubtitle:
+      "Greitesnis sąskaitų ir atlyginimų išrašymas, užduotys su automatiniais priminimais, pamainų kontrolė realiu laiku, planavimas. ",
+    heroSubtitleShort:
+      "Greitesnis sąskaitų ir atlyginimų išrašymas, užduotys su automatiniais priminimais ... ",
+    heroSubtitleBtnMore: "Daugiau ▼",
+    heroSubtitleBtnLess: "Mažiau ▲",
+    heroDemo: "Užsisakyti demo",
+    heroHow: "Kaip tai veikia",
+    heroFeature1: "Pirmas mėnuo nemokamai",
+    heroFeature2: "Paleidimas per 15 minučių",
+    heroFeature3: "Jokių įsipareigojimų",
+  },
+
+  lv: {
+    heroPill: "Būvniecības pārvaldība",
+    heroTitle: "Automātiska darba laika uzskaite un projektu vadība",
+    heroTitleAccent: "būvuzņēmumiem",
+    heroSubtitle:
+      "Ātrāka rēķinu un algu izrakstīšana, uzdevumi ar automātiskiem atgādinājumiem, maiņu kontrole reāllaikā, plānošana. ",
+    heroSubtitleShort:
+      "Ātrāka rēķinu un algu izrakstīšana, uzdevumi ar automātiskiem atgādinājumiem ... ",
+    heroSubtitleBtnMore: "Vairāk ▼",
+    heroSubtitleBtnLess: "Mazāk ▲",
+    heroDemo: "Pieteikt demo",
+    heroHow: "Kā tas darbojas",
+    heroFeature1: "Pirmais mēnesis bez maksas",
+    heroFeature2: "Sākums 15 minūtēs",
+    heroFeature3: "Bez saistībām",
+  },
 } as const;

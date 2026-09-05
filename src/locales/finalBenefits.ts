@@ -93,4 +93,54 @@ export const finalBenefitsTranslations = {
     finalBenefitsItem4:
       "Błędy, utracone godziny i chaos zaczynają znikać",
   },
+
+  uk: {
+    finalBenefitsTitle: "Підсумовуючи, ви отримуєте",
+    finalBenefitsHeading1: "Повний контроль над проєктами —",
+    finalBenefitsAccent: "і спокійний сон",
+    finalBenefitsItem1: "Керівництво отримує більше часу та нижчі витрати",
+    finalBenefitsItem2: "Компанія працює швидше й спокійніше",
+    finalBenefitsItem3: "Команда витрачає час на роботу, а не на адміністрування",
+    finalBenefitsItem4: "Помилки, втрачені години й хаос починають зникати",
+  },
+
+  fi: {
+    finalBenefitsTitle: "Yhteenvetona saat",
+    finalBenefitsHeading1: "Täysi hallinta projekteista —",
+    finalBenefitsAccent: "ja rauhallisemmat yöunet",
+    finalBenefitsItem1: "Johto saa lisää aikaa ja pienemmät kustannukset",
+    finalBenefitsItem2: "Yritys toimii nopeammin ja rauhallisemmin",
+    finalBenefitsItem3: "Tiimi käyttää ajan työhön, ei hallintoon",
+    finalBenefitsItem4: "Virheet, hukatut tunnit ja kaaos alkavat kadota",
+  },
+
+  et: {
+    finalBenefitsTitle: "Kokkuvõttes saate",
+    finalBenefitsHeading1: "Täielik kontroll projektide üle —",
+    finalBenefitsAccent: "ja rahulikum uni",
+    finalBenefitsItem1: "Juhtkond saab rohkem aega ja madalamad kulud",
+    finalBenefitsItem2: "Ettevõte töötab kiiremini ja rahulikumalt",
+    finalBenefitsItem3: "Tiim kulutab aega tööle, mitte administreerimisele",
+    finalBenefitsItem4: "Vead, kaotatud tunnid ja kaos hakkavad kaduma",
+  },
+
+  lt: {
+    finalBenefitsTitle: "Apibendrinant, jūs gaunate",
+    finalBenefitsHeading1: "Visišką projektų kontrolę —",
+    finalBenefitsAccent: "ir ramesnį miegą",
+    finalBenefitsItem1: "Vadovybė gauna daugiau laiko ir mažesnes išlaidas",
+    finalBenefitsItem2: "Įmonė dirba greičiau ir ramiau",
+    finalBenefitsItem3: "Komanda skiria laiką darbui, o ne administravimui",
+    finalBenefitsItem4: "Klaidos, prarastos valandos ir chaosas pradeda nykti",
+  },
+
+  lv: {
+    finalBenefitsTitle: "Apkopojot, jūs iegūstat",
+    finalBenefitsHeading1: "Pilnu kontroli pār projektiem —",
+    finalBenefitsAccent: "un mierīgāku miegu",
+    finalBenefitsItem1: "Vadība iegūst vairāk laika un zemākas izmaksas",
+    finalBenefitsItem2: "Uzņēmums strādā ātrāk un mierīgāk",
+    finalBenefitsItem3: "Komanda velta laiku darbam, nevis administrēšanai",
+    finalBenefitsItem4: "Kļūdas, zaudētās stundas un haoss sāk izzust",
+  },
 } as const;

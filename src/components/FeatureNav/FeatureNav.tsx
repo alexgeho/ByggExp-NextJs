@@ -8,7 +8,10 @@ import type { LandingLanguageCode } from '../../locales/languages';
 // both on /funktioner and on each feature article page, so they always match.
 export const FEATURE_NAV: {
   slug: string;
-  label: Record<LandingLanguageCode, string>;
+  // sv/en/ru/nb/pl are provided; the newer worker locales (uk/fi/et/lt/lv) fall
+  // back to sv via featureNavLabel / the render below (feature articles aren't
+  // translated for those yet), so the map is Partial.
+  label: Partial<Record<LandingLanguageCode, string>>;
 }[] = [
   {
     slug: 'skapa-offert-i-byggexp',

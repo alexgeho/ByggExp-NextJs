@@ -34,6 +34,11 @@ const FAQ_HEADINGS: Record<BlogLocale, string> = {
   ru: 'Частые вопросы',
   nb: 'Vanlige spørsmål',
   pl: 'Najczęściej zadawane pytania',
+  uk: 'Часті запитання',
+  fi: 'Usein kysytyt kysymykset',
+  et: 'Korduma kippuvad küsimused',
+  lt: 'Dažnai užduodami klausimai',
+  lv: 'Bieži uzdotie jautājumi',
 };
 
 export function extractFaqFromHtml(html: string, locale: BlogLocale): FaqItem[] {

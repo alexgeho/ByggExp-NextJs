@@ -1,7 +1,7 @@
 import type { BlogLocale } from '../types/blog';
 
 export const blogPageTranslations: Record<
-  BlogLocale | 'nb' | 'pl',
+  BlogLocale,
   {
     badge: string;
     title: string;
@@ -73,5 +73,65 @@ export const blogPageTranslations: Record<
     home: 'Strona główna',
     back: 'Powrót do bloga',
     related: 'Podobne artykuły',
+  },
+  uk: {
+    badge: 'Блог',
+    title: 'Статті та посібники',
+    subtitle:
+      'Практичні поради, розбори та робочі сценарії для будівельних компаній, які хочуть працювати ефективніше.',
+    empty: 'Поки немає опублікованих статей.',
+    searchPlaceholder: 'Пошук статей …',
+    noResults: 'Немає статей за вашим запитом.',
+    home: 'Головна',
+    back: 'Назад до блогу',
+    related: 'Схожі статті',
+  },
+  fi: {
+    badge: 'Blogi',
+    title: 'Artikkelit ja oppaat',
+    subtitle:
+      'Käytännön vinkkejä, oivalluksia ja työnkulkuja rakennusyrityksille, jotka haluavat työskennellä fiksummin.',
+    empty: 'Ei julkaistuja artikkeleita vielä.',
+    searchPlaceholder: 'Hae artikkeleita …',
+    noResults: 'Ei hakua vastaavia artikkeleita.',
+    home: 'Etusivu',
+    back: 'Takaisin blogiin',
+    related: 'Aiheeseen liittyvät artikkelit',
+  },
+  et: {
+    badge: 'Blogi',
+    title: 'Artiklid ja juhendid',
+    subtitle:
+      'Praktilised nõuanded, ülevaated ja töövood ehitusettevõtetele, kes soovivad töötada targemalt.',
+    empty: 'Avaldatud artikleid veel pole.',
+    searchPlaceholder: 'Otsi artikleid …',
+    noResults: 'Otsingule vastavaid artikleid ei leitud.',
+    home: 'Avaleht',
+    back: 'Tagasi blogisse',
+    related: 'Seotud artiklid',
+  },
+  lt: {
+    badge: 'Tinklaraštis',
+    title: 'Straipsniai ir vadovai',
+    subtitle:
+      'Praktiniai patarimai, įžvalgos ir darbo eiga statybos įmonėms, norinčioms dirbti sumaniau.',
+    empty: 'Kol kas nėra paskelbtų straipsnių.',
+    searchPlaceholder: 'Ieškoti straipsnių …',
+    noResults: 'Pagal jūsų užklausą straipsnių nerasta.',
+    home: 'Pagrindinis',
+    back: 'Atgal į tinklaraštį',
+    related: 'Susiję straipsniai',
+  },
+  lv: {
+    badge: 'Blogs',
+    title: 'Raksti un ceļveži',
+    subtitle:
+      'Praktiski padomi, ieskati un darbplūsmas būvuzņēmumiem, kas vēlas strādāt gudrāk.',
+    empty: 'Vēl nav publicētu rakstu.',
+    searchPlaceholder: 'Meklēt rakstus …',
+    noResults: 'Nav atrasts neviens jūsu meklējumam atbilstošs raksts.',
+    home: 'Sākums',
+    back: 'Atpakaļ uz blogu',
+    related: 'Saistītie raksti',
   },
 };

@@ -186,4 +186,139 @@ export const featuresTranslations1_3 = {
     featuresCard3Step2: "Przejdź do zakładki Live",
     featuresCard3Step3: "Nieobecni widoczni od razu",
   },
+
+  uk: {
+    featuresTitle: "Як це працює",
+    featuresHeading1: "12 інструментів, які",
+    featuresHeadingAccent: "закривають 60 %",
+    featuresHeading2: "роботи адміністрації",
+    featuresSub:
+      "Можна без ноутбука, можна без секретарки. Потрібен лише смартфон, який і так у кишені.",
+    featuresCard1Title: "Автоматичний і ручний облік часу",
+    featuresCard1Text:
+      "Працівник обирає проєкт. Час фіксується автоматично за GPS — або вводиться вручну в застосунку, коли так зручніше. Обидва способи працюють.",
+    featuresCard1Step1: "Працівник приходить на місце",
+    featuresCard1Step2: "GPS або ручна відмітка",
+    featuresCard1Step3: "Години в системі",
+    featuresCard2Title: "Задачі з автоконтролем",
+    featuresCard2Text:
+      "Задачу можна поставити всьому проєкту або обраним працівникам. Поки задача не виконана, застосунок надсилає нагадування.",
+    featuresCard2Step1: "Натисніть Створити задачу",
+    featuresCard2Step2: "Додайте отримувачів",
+    featuresCard2Step3: "Встановіть дедлайн і нагадування",
+    featuresCard3Title: "Бригади в режимі Live",
+    featuresCard3Text:
+      "Контроль працівників у реальному часі. У панелі адміністратора одразу видно, хто почав зміну, кого немає і де всі працюють.",
+    featuresCard3Step1: "Відкрийте панель адміністратора",
+    featuresCard3Step2: "Перейдіть на вкладку Live",
+    featuresCard3Step3: "Відсутніх видно одразу",
+  },
+
+  fi: {
+    featuresTitle: "Näin se toimii",
+    featuresHeading1: "12 työkalua, jotka",
+    featuresHeadingAccent: "hoitavat 60 %",
+    featuresHeading2: "hallinnon työstä",
+    featuresSub:
+      "Ei tarvita kannettavaa eikä sihteeriä. Riittää älypuhelin, joka on jo taskussa.",
+    featuresCard1Title: "Automaattinen ja manuaalinen tuntikirjaus",
+    featuresCard1Text:
+      "Työntekijä valitsee projektin. Aika kirjautuu automaattisesti GPS:llä — tai leimataan käsin sovelluksessa, kun se sopii paremmin. Molemmat tavat toimivat.",
+    featuresCard1Step1: "Työntekijä saapuu paikalle",
+    featuresCard1Step2: "GPS tai manuaalinen leimaus",
+    featuresCard1Step3: "Tunnit ovat järjestelmässä",
+    featuresCard2Title: "Tehtävät automaattisella seurannalla",
+    featuresCard2Text:
+      "Tehtävä voidaan antaa koko projektille tai valituille työntekijöille. Jos tehtävää ei suoriteta, sovellus lähettää muistutuksia.",
+    featuresCard2Step1: "Napsauta Luo tehtävä",
+    featuresCard2Step2: "Lisää vastaanottajat",
+    featuresCard2Step3: "Aseta määräaika ja muistutus",
+    featuresCard3Title: "Työryhmät Live-tilassa",
+    featuresCard3Text:
+      "Työntekijöiden seuranta reaaliajassa. Hallintapaneelissa näkyy heti, kuka on aloittanut vuoron, kuka puuttuu ja missä kaikki työskentelevät.",
+    featuresCard3Step1: "Avaa hallintapaneeli",
+    featuresCard3Step2: "Siirry Live-välilehdelle",
+    featuresCard3Step3: "Poissaolijat näkyvät heti",
+  },
+
+  et: {
+    featuresTitle: "Kuidas see töötab",
+    featuresHeading1: "12 tööriista, mis",
+    featuresHeadingAccent: "katavad 60 %",
+    featuresHeading2: "administratsiooni tööst",
+    featuresSub:
+      "Ei ole vaja sülearvutit ega sekretäri. Piisab nutitelefonist, mis on niigi taskus.",
+    featuresCard1Title: "Automaatne ja käsitsi tööaja arvestus",
+    featuresCard1Text:
+      "Töötaja valib projekti. Aeg salvestub automaatselt GPS-iga — või stembeldatakse käsitsi rakenduses, kui see sobib paremini. Mõlemad viisid töötavad.",
+    featuresCard1Step1: "Töötaja tuleb kohale",
+    featuresCard1Step2: "GPS või käsitsi stembeldamine",
+    featuresCard1Step3: "Tunnid on süsteemis",
+    featuresCard2Title: "Ülesanded automaatse jälgimisega",
+    featuresCard2Text:
+      "Ülesande saab määrata kogu projektile või valitud töötajatele. Kui ülesannet ei täideta, saadab rakendus meeldetuletusi.",
+    featuresCard2Step1: "Klõpsake Loo ülesanne",
+    featuresCard2Step2: "Lisage saajad",
+    featuresCard2Step3: "Määrake tähtaeg ja meeldetuletus",
+    featuresCard3Title: "Meeskonnad Live-režiimis",
+    featuresCard3Text:
+      "Töötajate jälgimine reaalajas. Halduspaneelil on kohe näha, kes on vahetuse alustanud, kes puudub ja kus kõik töötavad.",
+    featuresCard3Step1: "Avage halduspaneel",
+    featuresCard3Step2: "Minge Live-vahekaardile",
+    featuresCard3Step3: "Puudujad on kohe näha",
+  },
+
+  lt: {
+    featuresTitle: "Kaip tai veikia",
+    featuresHeading1: "12 įrankių, kurie",
+    featuresHeadingAccent: "atlieka 60 %",
+    featuresHeading2: "administracijos darbo",
+    featuresSub:
+      "Nereikia nešiojamojo kompiuterio, nereikia sekretorės. Užtenka išmaniojo telefono, kuris ir taip kišenėje.",
+    featuresCard1Title: "Automatinė ir rankinė laiko apskaita",
+    featuresCard1Text:
+      "Darbuotojas pasirenka projektą. Laikas fiksuojamas automatiškai per GPS — arba įvedamas rankiniu būdu programėlėje, kai taip patogiau. Abu būdai veikia.",
+    featuresCard1Step1: "Darbuotojas atvyksta į vietą",
+    featuresCard1Step2: "GPS arba rankinis pažymėjimas",
+    featuresCard1Step3: "Valandos yra sistemoje",
+    featuresCard2Title: "Užduotys su automatine kontrole",
+    featuresCard2Text:
+      "Užduotį galima priskirti visam projektui arba pasirinktiems darbuotojams. Kol užduotis neatlikta, programėlė siunčia priminimus.",
+    featuresCard2Step1: "Spustelėkite Sukurti užduotį",
+    featuresCard2Step2: "Pridėkite gavėjus",
+    featuresCard2Step3: "Nustatykite terminą ir priminimą",
+    featuresCard3Title: "Brigados Live režimu",
+    featuresCard3Text:
+      "Darbuotojų kontrolė realiu laiku. Administravimo skydelyje iškart matyti, kas pradėjo pamainą, kas neatvyko ir kur visi dirba.",
+    featuresCard3Step1: "Atidarykite administravimo skydelį",
+    featuresCard3Step2: "Eikite į skirtuką Live",
+    featuresCard3Step3: "Nedalyvaujantys matomi iškart",
+  },
+
+  lv: {
+    featuresTitle: "Kā tas darbojas",
+    featuresHeading1: "12 rīki, kas",
+    featuresHeadingAccent: "paveic 60 %",
+    featuresHeading2: "administrācijas darba",
+    featuresSub:
+      "Var bez klēpjdatora, var bez sekretāres. Vajag tikai viedtālruni, kas jau tāpat ir kabatā.",
+    featuresCard1Title: "Automātiska un manuāla laika uzskaite",
+    featuresCard1Text:
+      "Darbinieks izvēlas projektu. Laiks tiek fiksēts automātiski ar GPS — vai ievadīts manuāli lietotnē, kad tā ērtāk. Abi veidi darbojas.",
+    featuresCard1Step1: "Darbinieks ierodas objektā",
+    featuresCard1Step2: "GPS vai manuāla atzīmēšana",
+    featuresCard1Step3: "Stundas ir sistēmā",
+    featuresCard2Title: "Uzdevumi ar automātisku kontroli",
+    featuresCard2Text:
+      "Uzdevumu var piešķirt visam projektam vai izvēlētiem darbiniekiem. Kamēr uzdevums nav izpildīts, lietotne sūta atgādinājumus.",
+    featuresCard2Step1: "Noklikšķiniet Izveidot uzdevumu",
+    featuresCard2Step2: "Pievienojiet saņēmējus",
+    featuresCard2Step3: "Iestatiet termiņu un atgādinājumu",
+    featuresCard3Title: "Brigādes Live režīmā",
+    featuresCard3Text:
+      "Darbinieku kontrole reāllaikā. Administrēšanas panelī uzreiz redzams, kurš sācis maiņu, kura nav un kur visi strādā.",
+    featuresCard3Step1: "Atveriet administrēšanas paneli",
+    featuresCard3Step2: "Dodieties uz cilni Live",
+    featuresCard3Step3: "Prombūtnē esošie redzami uzreiz",
+  },
 } as const;

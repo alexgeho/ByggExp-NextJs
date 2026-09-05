@@ -9,7 +9,7 @@ import type { BlogLocale, BlogPost } from '../types/blog';
 
 // Mock demo content exists for sv/en/ru only; nb (byggexp.no) and pl have their
 // own real content (or none yet) and never fall back to these placeholders.
-type MockLocale = Exclude<BlogLocale, 'nb' | 'pl'>;
+type MockLocale = Exclude<BlogLocale, 'nb' | 'pl' | 'uk' | 'fi' | 'et' | 'lt' | 'lv'>;
 type Localized = Record<MockLocale, string>;
 
 type Seed = {
@@ -387,7 +387,7 @@ function toPost(seed: Seed, locale: MockLocale): BlogPost {
 }
 
 export function getMockBlogPosts(locale: BlogLocale): BlogPost[] {
-  if (locale === 'nb' || locale === 'pl') return [];
+  if (locale !== 'sv' && locale !== 'en' && locale !== 'ru') return [];
   return SEEDS.map((seed) => toPost(seed, locale));
 }
 
@@ -395,7 +395,7 @@ export function getMockBlogPost(
   locale: BlogLocale,
   slug: string,
 ): BlogPost | null {
-  if (locale === 'nb' || locale === 'pl') return null;
+  if (locale !== 'sv' && locale !== 'en' && locale !== 'ru') return null;
   const seed = SEEDS.find((s) => s.slug === slug);
   return seed ? toPost(seed, locale) : null;
 }

@@ -206,7 +206,7 @@ const EGENKONTROLL: BlogPost = {
   tag: 'Egenkontroll',
   coverImageUrl: '/landing/verktyg/egenkontroll-preview.webp',
   contentHtml: EGENKONTROLL_HTML,
-  seoTitle: 'Egenkontroll bygg – innehåll, mall och exempel | ByggExp',
+  seoTitle: 'Egenkontroll bygg – gratis mall, exempel & PDF | ByggExp',
   seoDescription:
     'Vad ska en egenkontroll innehålla? Skillnaden mot kontrollplan enligt PBL och KMA, ett ifyllt exempel och en gratis egenkontroll-mall (PDF).',
   seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`,

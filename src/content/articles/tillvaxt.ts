@@ -1286,7 +1286,7 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG: BlogPost = {
   title: "Tidrapporteringssystem för bygg – tidsregistrering och tidredovisning", slug: "tidrapporteringssystem-bygg", locale: "sv",
   excerpt: "Ett tidrapporteringssystem samlar tidsregistrering, tidrapportering och tidredovisning på ett ställe – timmar i mobilen, färdigt underlag för lön och faktura. Så väljer du rätt.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML,
-  seoTitle: "Tidrapporteringssystem för bygg – tidsregistrering | ByggExp", seoDescription: "Tidrapporteringssystem för bygg: tidsregistrering i mobilen, tidredovisning per projekt och export till lön och faktura. Så väljer du ett enkelt system.",
+  seoTitle: "Tidrapporteringssystem för bygg – från tid till lön | ByggExp", seoDescription: "Tidrapporteringssystem för bygg: tidsregistrering i mobilen, tidredovisning per projekt och export till lön och faktura. Så väljer du ett enkelt system.",
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T09:20:00.000Z", createdAt: "2026-08-22T09:20:00.000Z", updatedAt: "2026-08-22T09:20:00.000Z",
 };
@@ -1741,7 +1741,7 @@ const S_PERSONALLIGGARE_APP: BlogPost = {
   title: "Personalliggare app för bygg – utan ID06-krångel", slug: "personalliggare-bygg-app", locale: "sv",
   excerpt: "Personalliggare som app: registrera närvaro i mobilen utan ID06-kort eller hårdvara, håll liggaren korrekt för Skatteverket och undvik kontrollavgift. Ingår i ByggExp.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: S_PERSONALLIGGARE_APP_HTML,
-  seoTitle: "Personalliggare app för bygg – utan ID06 | ByggExp", seoDescription: "Personalliggare-app för byggföretag: registrera närvaro i mobilen utan ID06-kort eller hårdvara, undvik kontrollavgift och håll liggaren korrekt.",
+  seoTitle: "Personalliggare utan ID06 – slipp kontrollavgiften | ByggExp", seoDescription: "Personalliggare-app för byggföretag: registrera närvaro i mobilen utan ID06-kort eller hårdvara, undvik kontrollavgift och håll liggaren korrekt.",
   seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T10:35:00.000Z", createdAt: "2026-08-22T10:35:00.000Z", updatedAt: "2026-08-22T10:35:00.000Z",
 };

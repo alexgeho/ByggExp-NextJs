@@ -1,0 +1,352 @@
+/* Styles for /[lang]/funktioner (feature carousel + why/custom sections).
+   Extracted from the page's styled-jsx block. Global class names, loaded via
+   _app.tsx. See src/pages/[lang]/funktioner/index.tsx. */
+
+/* Match the hero→pills gap (64px) below the pills too: the track adds
+   12px top padding, so 52 + 12 = 64. */
+.funktioner-filter {
+  margin-bottom: 52px;
+}
+.funktioner-carousel {
+  position: relative;
+}
+/* Peek carousel: the active feature sits centred and sharp, its
+   neighbours peek in on both sides, dimmed and blurred. */
+.funktioner-carousel-track {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 12px 16% 44px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.funktioner-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.funktioner-slide {
+  scroll-snap-align: center;
+  flex: 0 0 68%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 26px;
+  padding: 32px 36px 38px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 18px 44px rgba(10, 40, 90, 0.08);
+  cursor: pointer;
+  opacity: 0.4;
+  filter: blur(2px);
+  transform: scale(0.92);
+  will-change: transform, opacity, filter;
+  transition:
+    opacity 0.3s ease,
+    filter 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.fk-visual img {
+  transform: translateZ(0);
+}
+.funktioner-slide.is-active {
+  opacity: 1;
+  filter: none;
+  transform: scale(1);
+  cursor: default;
+  box-shadow: 0 18px 44px -22px rgba(11, 37, 69, 0.38);
+}
+.fk-text {
+  flex: 1;
+  min-width: 0;
+}
+.fk-title {
+  margin: 0;
+  font-size: clamp(21px, 2.3vw, 29px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #0b2545;
+}
+.fk-text > p {
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4a5a72;
+}
+.fk-steps {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.fk-steps li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #0b2545;
+}
+.fk-step-num {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(69, 179, 107, 0.14);
+  color: #45b36b;
+  font-size: 13px;
+  font-weight: 700;
+}
+.fk-link {
+  display: inline-block;
+  color: #1c6cf3;
+  font-weight: 600;
+  text-decoration: none;
+}
+.fk-link:hover {
+  text-decoration: underline;
+}
+.fk-visual {
+  width: 100%;
+}
+.fk-visual img {
+  display: block;
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: rgba(10, 40, 90, 0.03);
+  cursor: zoom-in;
+}
+.fc-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #0b2545;
+  cursor: pointer;
+  box-shadow: 0 12px 30px -8px rgba(11, 37, 69, 0.35);
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+.fc-arrow:hover:not(:disabled) {
+  background: #1c6cf3;
+  color: #fff;
+}
+.fc-arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+.fc-prev {
+  left: 8px;
+}
+.fc-next {
+  right: 8px;
+}
+.fc-dots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 6px;
+}
+.fc-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(11, 37, 69, 0.18);
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.fc-dot:hover {
+  background: rgba(11, 37, 69, 0.4);
+}
+.fc-dot.is-active {
+  background: #1c6cf3;
+  transform: scale(1.25);
+}
+@media (max-width: 900px) {
+  .funktioner-carousel-track {
+    padding: 12px 8% 46px;
+  }
+  .funktioner-slide {
+    flex-basis: 84%;
+    gap: 20px;
+    padding: 22px 22px 26px;
+  }
+  .fk-visual img {
+    max-height: 300px;
+  }
+}
+@media (max-width: 620px) {
+  .funktioner-slide {
+    flex-basis: 88%;
+    filter: none;
+  }
+  .fc-arrow {
+    display: none;
+  }
+}
+.fk-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4vw;
+  background: rgba(6, 18, 38, 0.82);
+  backdrop-filter: blur(4px);
+  cursor: zoom-out;
+  animation: fk-lb-fade 0.16s ease;
+}
+@keyframes fk-lb-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fk-lightbox img {
+  max-width: min(1100px, 96vw);
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.7);
+  cursor: default;
+}
+.fk-lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.fk-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+/* Vertical rhythm: 64px above the carousel and 64px between each of
+   the three blocks (split 32/32 across adjacent section paddings). */
+.funktioner-list-section {
+  padding: 64px 0 32px;
+}
+.funktioner-why {
+  padding: 8px 20px 56px;
+  background: #f4f6fa;
+}
+.funktioner-why-title {
+  text-align: center;
+  font-size: clamp(22px, 3.2vw, 30px);
+  letter-spacing: -0.02em;
+  color: #0b2545;
+  margin: 0 0 32px;
+}
+.funktioner-why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 32px;
+}
+.funktioner-why-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.funktioner-why-check {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #e3edfd;
+  color: #1c6cf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.funktioner-why-item h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+  color: #0b2545;
+  letter-spacing: -0.01em;
+}
+.funktioner-why-item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4a5a72;
+}
+.funktioner-custom {
+  padding: 32px 20px 96px;
+  background: #f4f6fa;
+}
+.funktioner-custom-card {
+  background: linear-gradient(135deg, #0b2545 0%, #123a6b 100%);
+  color: #fff;
+  border-radius: 22px;
+  padding: 48px 44px;
+  text-align: center;
+  box-shadow: 0 30px 70px -34px rgba(11, 37, 69, 0.55);
+}
+.funktioner-custom-card h2 {
+  font-size: clamp(22px, 3.2vw, 30px);
+  line-height: 1.15;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+.funktioner-custom-card p {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #cfdcf2;
+}
+.funktioner-custom-cta {
+  display: inline-block;
+  background: #1c6cf3;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: 12px;
+  transition: background 0.15s ease;
+}
+.funktioner-custom-cta:hover {
+  background: #155ad1;
+}
+@media (max-width: 640px) {
+  .funktioner-why-grid {
+    grid-template-columns: 1fr;
+  }
+  .funktioner-custom-card {
+    padding: 34px 22px;
+  }
+}

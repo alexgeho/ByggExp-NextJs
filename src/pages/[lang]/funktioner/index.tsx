@@ -763,8 +763,8 @@ export default function FunktionerPage({
           align-items: center;
           justify-content: center;
           border-radius: 50%;
-          background: #e3edfd;
-          color: #1c6cf3;
+          background: rgba(69, 179, 107, 0.14);
+          color: #45b36b;
           font-size: 13px;
           font-weight: 700;
         }

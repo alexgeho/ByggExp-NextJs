@@ -866,7 +866,7 @@ export default function FunktionerPage({
           padding: 64px 0 32px;
         }
         .funktioner-why {
-          padding: 80px 20px 56px;
+          padding: 48px 20px 56px;
           background: #f4f6fa;
         }
         .funktioner-why-title {
@@ -913,7 +913,7 @@ export default function FunktionerPage({
           color: #4a5a72;
         }
         .funktioner-custom {
-          padding: 32px 20px 32px;
+          padding: 32px 20px 64px;
           background: #f4f6fa;
         }
         .funktioner-custom-card {

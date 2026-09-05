@@ -2001,7 +2001,7 @@ const A_ATA_HANTERING_MALL: BlogPost = {
   title: "ÄTA-hantering mall – så dokumenterar och fakturerar du ÄTA utan att förlora ersättningen", slug: "ata-hantering-mall", locale: "sv",
   excerpt: "En konkret rutin och mall för att dokumentera och fakturera ÄTA-arbeten så att du får betalt för allt extra du gör – utan tvist vid slutbesiktningen.", tag: "Ekonomi",
   coverImageUrl: "/landing/verktyg/ata-mall-preview.webp", contentHtml: A_ATA_HANTERING_MALL_HTML,
-  seoTitle: "ÄTA-mall & rutin – dokumentera och fakturera ÄTA | ByggExp", seoDescription: "Så dokumenterar och fakturerar du ÄTA i praktiken: en enkel rutin, en gratis ÄTA-mall och de misstag som gör att hantverkare tappar ersättningen. (Reglerna: se vår ÄTA-guide.)",
+  seoTitle: "ÄTA-mall & rutin – dokumentera och fakturera ÄTA | ByggExp", seoDescription: "Så dokumenterar och fakturerar du ÄTA i praktiken: en enkel rutin, en gratis ÄTA-mall och de misstag som gör att hantverkare tappar ersättningen.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/ata-mall-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-18T19:09:00.000Z", createdAt: "2026-08-18T19:09:00.000Z", updatedAt: "2026-08-18T19:09:00.000Z",
 };
@@ -4474,7 +4474,7 @@ const A_KREDITFORSAKRING_BYGGFORETAG: BlogPost = {
   title: "Kreditförsäkring för byggföretag – skydda dig mot kundförluster", slug: "kreditforsakring-byggforetag", locale: "sv",
   excerpt: "En obetald storfaktura kan slå ut marginalen från flera projekt. Så skyddar du byggföretaget mot kundförluster 2026 – kreditkoll, betalningsvillkor och kreditförsäkring.", tag: "Ekonomi",
   coverImageUrl: "/landing/features/8fakturor.webp", contentHtml: A_KREDITFORSAKRING_BYGGFORETAG_HTML,
-  seoTitle: "Kreditförsäkring byggföretag | ByggExp", seoDescription: "Så skyddar du ditt byggföretag mot kundförluster 2026: kreditkoll, betalningsvillkor, lagens verktyg och kreditförsäkring. Praktisk guide för hantverkare och entreprenörer.",
+  seoTitle: "Kreditförsäkring byggföretag | ByggExp", seoDescription: "Så skyddar du ditt byggföretag mot kundförluster 2026: kreditkoll, betalningsvillkor, lagens verktyg och kreditförsäkring – för hantverkare och entreprenörer.",
   seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T09:00:00.000Z", createdAt: "2026-08-19T09:00:00.000Z", updatedAt: "2026-08-19T09:00:00.000Z",
 };
@@ -5879,7 +5879,7 @@ const A_FARDIGSTALLANDEGRAD_VINSTAVRAKNING_BYGGPROJEKT: BlogPost = {
   title: "Färdigställandegrad och successiv vinstavräkning – så redovisar byggbolaget pågående projekt rätt 2026", slug: "fardigstallandegrad-vinstavrakning-byggprojekt", locale: "sv",
   excerpt: "Metodvalet avgör om resultatet hoppar mellan åren eller jämnas ut – så räknar du färdigställandegrad och redovisar pågående fastprisprojekt rätt enligt K2 och K3.", tag: "Ekonomi",
   coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_FARDIGSTALLANDEGRAD_VINSTAVRAKNING_BYGGPROJEKT_HTML,
-  seoTitle: "Successiv vinstavräkning bygg | ByggExp", seoDescription: "Successiv vinstavräkning eller färdigställandemetoden? Så räknar byggbolaget färdigställandegrad, jämnar ut resultatet och redovisar pågående projekt rätt enligt K2/K3 2026.",
+  seoTitle: "Successiv vinstavräkning bygg | ByggExp", seoDescription: "Successiv vinstavräkning eller färdigställandemetoden? Så räknar byggbolaget färdigställandegrad och redovisar pågående projekt rätt enligt K2/K3.",
   seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T15:12:00.000Z", createdAt: "2026-08-19T15:12:00.000Z", updatedAt: "2026-08-19T15:12:00.000Z",
 };

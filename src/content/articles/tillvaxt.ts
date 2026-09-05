@@ -1741,7 +1741,7 @@ const S_PERSONALLIGGARE_APP: BlogPost = {
   title: "Personalliggare app för bygg – utan ID06-krångel", slug: "personalliggare-bygg-app", locale: "sv",
   excerpt: "Personalliggare som app: registrera närvaro i mobilen utan ID06-kort eller hårdvara, håll liggaren korrekt för Skatteverket och undvik kontrollavgift. Ingår i ByggExp.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: S_PERSONALLIGGARE_APP_HTML,
-  seoTitle: "Personalliggare app för bygg – utan ID06 | ByggExp", seoDescription: "Personalliggare-app för byggföretag: registrera närvaro i mobilen utan ID06-kort eller hårdvara, undvik kontrollavgift och håll liggaren korrekt för Skatteverket. Ingår i ByggExp.",
+  seoTitle: "Personalliggare app för bygg – utan ID06 | ByggExp", seoDescription: "Personalliggare-app för byggföretag: registrera närvaro i mobilen utan ID06-kort eller hårdvara, undvik kontrollavgift och håll liggaren korrekt.",
   seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T10:35:00.000Z", createdAt: "2026-08-22T10:35:00.000Z", updatedAt: "2026-08-22T10:35:00.000Z",
 };
@@ -2046,7 +2046,7 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG: BlogPost = {
   title: "Schemaläggningssystem för bygg – planera personal, projekt och tid", slug: "schemalaggningssystem-bygg", locale: "sv",
   excerpt: "Ett schemaläggningssystem samlar hela bemanningen i en delad vy, kopplad till projekt och tid – rätt person på rätt bygge, med frånvaro och överbokning synligt direkt. Så väljer du rätt.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML,
-  seoTitle: "Schemaläggningssystem för bygg – personal & projekt | ByggExp", seoDescription: "Schemaläggningssystem och schemaläggningsprogram för byggföretag: planera hela laget per vecka och projekt i en delad vy, se frånvaro och överbokning direkt och koppla planen till tiden.",
+  seoTitle: "Schemaläggningssystem för bygg – personal & projekt | ByggExp", seoDescription: "Schemaläggningssystem och schemaläggningsprogram för byggföretag: planera hela laget per vecka och projekt i en delad vy, se frånvaro och överbokning direkt.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-30T10:00:00.000Z", createdAt: "2026-08-30T10:00:00.000Z", updatedAt: "2026-08-30T10:00:00.000Z",
 };
@@ -2206,7 +2206,7 @@ const A_BYGGDAGBOK: BlogPost = {
   title: "Byggdagbok – vad den ska innehålla och varför digital slår pärmen", slug: "byggdagbok", locale: "sv",
   excerpt: "Vad en byggdagbok ska innehålla, när den krävs (AB 04/ABT 06) och varför en digital byggdagbok med tidsstämpel och foton slår pappersdagboken som bevis vid ÄTA, försening och tvist.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/4foto.webp", contentHtml: A_BYGGDAGBOK_HTML,
-  seoTitle: "Byggdagbok – innehåll, krav och digital byggdagbok | ByggExp", seoDescription: "Byggdagbok för bygg: vad den ska innehålla, när den krävs enligt AB 04/ABT 06 och varför en digital byggdagbok med tidsstämpel och foton blir starkare bevis vid ÄTA och tvist.",
+  seoTitle: "Byggdagbok – innehåll, krav och digital byggdagbok | ByggExp", seoDescription: "Byggdagbok för bygg: vad den ska innehålla, när den krävs enligt AB 04/ABT 06 och varför en digital byggdagbok med tidsstämpel och foton blir starkare bevis.",
   seoImageUrl: `${SITE_URL}/landing/features/4foto.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-30T11:00:00.000Z", createdAt: "2026-08-30T11:00:00.000Z", updatedAt: "2026-08-30T11:00:00.000Z",
 };

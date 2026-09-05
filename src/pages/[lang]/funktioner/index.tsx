@@ -265,9 +265,36 @@ function FeatureCarousel({
   badge: string;
 }) {
   const trackRef = useRef<HTMLDivElement | null>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const activeIndexRef = useRef(0);
-  const lastIndex = posts.length - 1;
+  const settleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const N = posts.length;
+  // Loop the carousel by cloning the last feature before the first and the
+  // first after the last, so there's always a neighbour peeking on both sides
+  // — even on the very first card. Needs at least two real features.
+  const loop = N > 1;
+  const offset = loop ? 1 : 0;
+
+  // The rendered (extended) slide list: [cloneOfLast, ...posts, cloneOfFirst].
+  const slides = useMemo(() => {
+    if (!loop) return posts;
+    return [posts[N - 1], ...posts, posts[0]];
+  }, [posts, loop, N]);
+
+  // activeExt = index into the extended list. Start on the first real card.
+  const [activeExt, setActiveExt] = useState(offset);
+  const activeExtRef = useRef(offset);
+  // Map an extended index back to the real feature index (0..N-1).
+  const extToReal = useCallback(
+    (e: number) => {
+      if (!loop) return e;
+      if (e === 0) return N - 1;
+      if (e === N + 1) return 0;
+      return e - 1;
+    },
+    [loop, N],
+  );
+  const activeReal = extToReal(activeExt);
+
+  const [lightbox, setLightbox] = useState<{ url: string; alt: string } | null>(null);
 
   // One pill per feature, in carousel order.
   const pills = useMemo(
@@ -275,11 +302,11 @@ function FeatureCarousel({
     [posts, lang, badge],
   );
 
-  // Bring a given card to the centre of the peek carousel.
-  const centerCard = useCallback((index: number, smooth = true) => {
+  // Bring a given extended slide to the centre of the peek carousel.
+  const centerExt = useCallback((extIndex: number, smooth = true) => {
     const el = trackRef.current;
     if (!el) return;
-    const card = el.children[index] as HTMLElement | undefined;
+    const card = el.children[extIndex] as HTMLElement | undefined;
     if (!card) return;
     el.scrollTo({
       left: card.offsetLeft - (el.clientWidth - card.offsetWidth) / 2,
@@ -287,7 +314,8 @@ function FeatureCarousel({
     });
   }, []);
 
-  // As the user scrolls, mark whichever card is closest to the centre active.
+  // As the user scrolls, mark whichever slide is closest to the centre active;
+  // once scrolling settles on a clone, jump silently to its real twin.
   const handleScroll = useCallback(() => {
     const el = trackRef.current;
     if (!el) return;
@@ -302,25 +330,57 @@ function FeatureCarousel({
         best = i;
       }
     });
-    setActiveIndex(best);
-  }, []);
+    setActiveExt(best);
+
+    if (!loop) return;
+    if (settleTimer.current) clearTimeout(settleTimer.current);
+    settleTimer.current = setTimeout(() => {
+      if (best === 0) {
+        setActiveExt(N);
+        centerExt(N, false); // cloneOfLast -> real last
+      } else if (best === N + 1) {
+        setActiveExt(1);
+        centerExt(1, false); // cloneOfFirst -> real first
+      }
+    }, 130);
+  }, [loop, N, centerExt]);
 
   useEffect(() => {
-    activeIndexRef.current = activeIndex;
-  }, [activeIndex]);
+    activeExtRef.current = activeExt;
+  }, [activeExt]);
 
   // Centre the first card on mount and keep the active one centred on resize.
   useEffect(() => {
-    centerCard(0, false);
-    const onResize = () => centerCard(activeIndexRef.current, false);
+    centerExt(offset, false);
+    const onResize = () => centerExt(activeExtRef.current, false);
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
-  }, [centerCard]);
+  }, [centerExt, offset]);
 
-  const goTo = (index: number) => {
-    const clamped = Math.max(0, Math.min(lastIndex, index));
-    setActiveIndex(clamped);
-    centerCard(clamped);
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setLightbox(null);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [lightbox]);
+
+  // Centre a specific extended slide (clones settle to their twin on scroll).
+  const selectExt = (extIndex: number) => {
+    setActiveExt(extIndex);
+    centerExt(extIndex, true);
+  };
+  // Centre a real feature by its index (used by pills and dots).
+  const goToReal = (realIndex: number) => selectExt(realIndex + offset);
+
+  const goNext = () => {
+    if (loop && activeReal === N - 1) selectExt(N + 1); // into cloneOfFirst, then wrap
+    else goToReal(Math.min(activeReal + 1, N - 1));
+  };
+  const goPrev = () => {
+    if (loop && activeReal === 0) selectExt(0); // into cloneOfLast, then wrap
+    else goToReal(Math.max(activeReal - 1, 0));
   };
 
   return (
@@ -331,9 +391,9 @@ function FeatureCarousel({
             <button
               key={pill.slug}
               type="button"
-              className={`blog-filter-chip${activeIndex === i ? ' is-active' : ''}`}
-              aria-pressed={activeIndex === i}
-              onClick={() => goTo(i)}
+              className={`blog-filter-chip${activeReal === i ? ' is-active' : ''}`}
+              aria-pressed={activeReal === i}
+              onClick={() => goToReal(i)}
             >
               {pill.label}
             </button>
@@ -346,8 +406,8 @@ function FeatureCarousel({
           type="button"
           className="fc-arrow fc-prev"
           aria-label="Föregående"
-          onClick={() => goTo(activeIndex - 1)}
-          disabled={activeIndex === 0}
+          onClick={goPrev}
+          disabled={!loop && activeReal === 0}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M15 5l-7 7 7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -355,15 +415,29 @@ function FeatureCarousel({
         </button>
 
         <div className="funktioner-carousel-track" ref={trackRef} onScroll={handleScroll}>
-          {posts.map((post, i) => {
+          {slides.map((post, i) => {
             const steps = featureSteps(post.slug, lang);
             const title = featureTitle(post, lang);
+            const isActive = i === activeExt;
             return (
               <div
-                key={post._id}
-                className={`funktioner-slide${i === activeIndex ? ' is-active' : ''}`}
-                onClick={() => goTo(i)}
+                key={`${post._id}-${i}`}
+                className={`funktioner-slide${isActive ? ' is-active' : ''}`}
+                onClick={() => selectExt(i)}
               >
+                {post.coverImageUrl ? (
+                  <div className="fk-visual">
+                    <img
+                      src={post.coverImageUrl}
+                      alt={title}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (isActive) setLightbox({ url: post.coverImageUrl!, alt: title });
+                        else selectExt(i);
+                      }}
+                    />
+                  </div>
+                ) : null}
                 <div className="fk-text">
                   <h3>{title}</h3>
                   <p>{featureExcerpt(post, lang)}</p>
@@ -385,11 +459,6 @@ function FeatureCarousel({
                     {READ_MORE[lang] ?? READ_MORE.sv}
                   </Link>
                 </div>
-                {post.coverImageUrl ? (
-                  <div className="fk-visual">
-                    <img src={post.coverImageUrl} alt={title} />
-                  </div>
-                ) : null}
               </div>
             );
           })}
@@ -399,8 +468,8 @@ function FeatureCarousel({
           type="button"
           className="fc-arrow fc-next"
           aria-label="Nästa"
-          onClick={() => goTo(activeIndex + 1)}
-          disabled={activeIndex === lastIndex}
+          onClick={goNext}
+          disabled={!loop && activeReal === N - 1}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -408,18 +477,27 @@ function FeatureCarousel({
         </button>
       </div>
 
-      {posts.length > 1 ? (
+      {N > 1 ? (
         <div className="fc-dots" aria-label="Funktioner">
           {posts.map((post, i) => (
             <button
               key={post._id}
               type="button"
-              className={`fc-dot${i === activeIndex ? ' is-active' : ''}`}
+              className={`fc-dot${activeReal === i ? ' is-active' : ''}`}
               aria-label={pills[i]?.label}
-              aria-current={i === activeIndex ? 'true' : undefined}
-              onClick={() => goTo(i)}
+              aria-current={activeReal === i ? 'true' : undefined}
+              onClick={() => goToReal(i)}
             />
           ))}
+        </div>
+      ) : null}
+
+      {lightbox ? (
+        <div className="fk-lightbox" role="dialog" aria-modal="true" onClick={() => setLightbox(null)}>
+          <button type="button" className="fk-lightbox-close" aria-label="Stäng" onClick={() => setLightbox(null)}>
+            ×
+          </button>
+          <img src={lightbox.url} alt={lightbox.alt} onClick={(e) => e.stopPropagation()} />
         </div>
       ) : null}
     </>
@@ -562,9 +640,10 @@ export default function FunktionerPage({
           flex: 0 0 68%;
           box-sizing: border-box;
           display: flex;
-          align-items: center;
-          gap: 34px;
-          padding: 40px;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 26px;
+          padding: 32px 36px 38px;
           background: #fff;
           border-radius: 22px;
           box-shadow: 0 18px 44px rgba(10, 40, 90, 0.08);
@@ -640,12 +719,16 @@ export default function FunktionerPage({
           text-decoration: underline;
         }
         .fk-visual {
-          flex: 0 0 48%;
+          width: 100%;
         }
         .fk-visual img {
+          display: block;
           width: 100%;
+          max-height: 400px;
+          object-fit: contain;
           border-radius: 14px;
           background: rgba(10, 40, 90, 0.03);
+          cursor: zoom-in;
         }
         .fc-arrow {
           position: absolute;
@@ -709,14 +792,11 @@ export default function FunktionerPage({
           }
           .funktioner-slide {
             flex-basis: 84%;
-            flex-direction: column;
-            align-items: stretch;
             gap: 20px;
-            padding: 24px;
+            padding: 22px 22px 26px;
           }
-          .fk-visual {
-            order: -1;
-            flex-basis: auto;
+          .fk-visual img {
+            max-height: 300px;
           }
         }
         @media (max-width: 620px) {
@@ -727,6 +807,56 @@ export default function FunktionerPage({
           .fc-arrow {
             display: none;
           }
+        }
+        .fk-lightbox {
+          position: fixed;
+          inset: 0;
+          z-index: 1000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 4vw;
+          background: rgba(6, 18, 38, 0.82);
+          backdrop-filter: blur(4px);
+          cursor: zoom-out;
+          animation: fk-lb-fade 0.16s ease;
+        }
+        @keyframes fk-lb-fade {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        .fk-lightbox img {
+          max-width: min(1100px, 96vw);
+          max-height: 90vh;
+          object-fit: contain;
+          border-radius: 14px;
+          box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.7);
+          cursor: default;
+        }
+        .fk-lightbox-close {
+          position: absolute;
+          top: 18px;
+          right: 22px;
+          width: 46px;
+          height: 46px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.14);
+          color: #fff;
+          font-size: 30px;
+          line-height: 1;
+          cursor: pointer;
+          transition: background 0.15s ease;
+        }
+        .fk-lightbox-close:hover {
+          background: rgba(255, 255, 255, 0.28);
         }
         .funktioner-why {
           padding: 56px 20px 8px;

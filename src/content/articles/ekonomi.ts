@@ -2104,7 +2104,7 @@ const A_STARTA_BYGGFORETAG_2026_HTML = `
 
 <h2>ID06, personalliggare och kollektivavtal</h2>
 <p><strong>ID06</strong> är byggbranschens system för legitimation och elektronisk närvaroregistrering. Kortet registrerar närvaro i den elektroniska personalliggaren, och nästan alla byggarbetsplatser och generalentreprenörer kräver ID06 av sina underentreprenörer. Du registrerar företaget via MittID06 genom en firmatecknare eller administratör och beställer sedan kort.</p>
-<p>Elektronisk personalliggare är ett lagkrav på byggarbetsplatser där den totala kostnaden överstiger fyra prisbasbelopp exklusive moms – cirka 235 000 kr (prisbasbeloppet 2025 var 58 800 kr). Byggherren ska anmäla byggarbetsplatsen till Skatteverket innan arbetet påbörjas. Saknas eller är personalliggaren felaktig kan Skatteverket ta ut en kontrollavgift på 12 500 kr plus 2 500 kr per person som inte är registrerad. Verifiera aktuella belopp och 2026 års prisbasbelopp hos Skatteverket.</p>
+<p>Elektronisk personalliggare är ett lagkrav på byggarbetsplatser där den totala kostnaden överstiger fyra prisbasbelopp exklusive moms – 236 800 kr (prisbasbeloppet 2026 är 59 200 kr). Byggherren ska anmäla byggarbetsplatsen till Skatteverket innan arbetet påbörjas. Saknas eller är personalliggaren felaktig kan Skatteverket ta ut en kontrollavgift på 12 500 kr plus 2 500 kr per person som inte är registrerad. Verifiera aktuella belopp hos Skatteverket.</p>
 <p><strong>Byggföretagen</strong> är branschens arbetsgivarorganisation med runt 4 000 medlemsföretag och part i Byggavtalet tillsammans med Byggnads. Kollektivavtal är inte lagstadgat, men krävs för medlemskap och efterfrågas ofta av stora offentliga och privata beställare. Medlemskapet ger dessutom juridisk rådgivning inom arbetsrätt, arbetsmiljö och entreprenadjuridik.</p>
 
 <h2>Försäkringar du inte kan hoppa över</h2>
@@ -2133,7 +2133,7 @@ const A_STARTA_BYGGFORETAG_2026_HTML = `
 <h3>Enskild firma eller aktiebolag – vad passar bäst för bygg?</h3>
 <p>AB begränsar ditt ansvar till aktiekapitalet på 25 000 kr och ger namnskydd i hela landet, vilket passar den som tar entreprenadrisk eller ska anställa. Enskild firma kräver inget kapital men innebär personligt och obegränsat ansvar för alla skulder.</p>
 <h3>Behöver jag ID06 och personalliggare?</h3>
-<p>ID06 krävs i praktiken av nästan alla byggarbetsplatser och generalentreprenörer. Elektronisk personalliggare är lagkrav när projektets totala kostnad överstiger cirka 235 000 kr, och saknad liggare ger kontrollavgift på 12 500 kr plus 2 500 kr per oregistrerad person.</p>
+<p>ID06 krävs i praktiken av nästan alla byggarbetsplatser och generalentreprenörer. Elektronisk personalliggare är lagkrav när projektets totala kostnad överstiger 236 800 kr (fyra prisbasbelopp), och saknad liggare ger kontrollavgift på 12 500 kr plus 2 500 kr per oregistrerad person.</p>
 <h3>Måste jag ha försäkring för att ta uppdrag?</h3>
 <p>Ingen försäkring är lagstadgad för ett litet byggföretag, men standardavtalen AB 04, ABT 06 och ABS 18 förutsätter att du har en ansvars- och <a href="/sv/blog/entreprenadforsakring-allrisk-vad-tacker">entreprenadförsäkring</a>. Har du anställda tillkommer avtalsförsäkringarna TFA och tjänstepension via Fora.</p>
 

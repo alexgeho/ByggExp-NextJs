@@ -572,13 +572,25 @@ export default function FunktionerPage({
         </div>
       </section>
 
-      <section className="blog-list-section">
+      <section className="blog-list-section funktioner-list-section">
         <div className="container">
           {posts.length === 0 ? (
             <div className="blog-empty-state">{copy.empty}</div>
           ) : (
             <FeatureCarousel lang={lang} posts={posts} badge={copy.badge} />
           )}
+        </div>
+      </section>
+
+      <section className="funktioner-custom">
+        <div className="container container-narrow">
+          <div className="funktioner-custom-card">
+            <h2>{copy.customTitle}</h2>
+            <p>{copy.customBody}</p>
+            <Link href={`/${lang}#cta`} className="funktioner-custom-cta">
+              {copy.customCta}
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -595,18 +607,6 @@ export default function FunktionerPage({
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="funktioner-custom">
-        <div className="container container-narrow">
-          <div className="funktioner-custom-card">
-            <h2>{copy.customTitle}</h2>
-            <p>{copy.customBody}</p>
-            <Link href={`/${lang}#cta`} className="funktioner-custom-cta">
-              {copy.customCta}
-            </Link>
           </div>
         </div>
       </section>
@@ -628,7 +628,7 @@ export default function FunktionerPage({
           overflow-x: auto;
           scroll-snap-type: x mandatory;
           scroll-behavior: smooth;
-          padding: 12px 16% 54px;
+          padding: 12px 16% 44px;
           -ms-overflow-style: none;
           scrollbar-width: none;
         }
@@ -662,7 +662,7 @@ export default function FunktionerPage({
           filter: none;
           transform: scale(1);
           cursor: default;
-          box-shadow: 0 30px 70px -30px rgba(11, 37, 69, 0.5);
+          box-shadow: 0 18px 44px -22px rgba(11, 37, 69, 0.38);
         }
         .fk-text {
           flex: 1;
@@ -858,8 +858,13 @@ export default function FunktionerPage({
         .fk-lightbox-close:hover {
           background: rgba(255, 255, 255, 0.28);
         }
+        /* Vertical rhythm: 64px above the carousel and 64px between each of
+           the three blocks (split 32/32 across adjacent section paddings). */
+        .funktioner-list-section {
+          padding: 64px 0 32px;
+        }
         .funktioner-why {
-          padding: 39px 20px 8px;
+          padding: 32px 20px 56px;
           background: #f4f6fa;
         }
         .funktioner-why-title {
@@ -906,7 +911,7 @@ export default function FunktionerPage({
           color: #4a5a72;
         }
         .funktioner-custom {
-          padding: 40px 20px 72px;
+          padding: 32px 20px 32px;
           background: #f4f6fa;
         }
         .funktioner-custom-card {

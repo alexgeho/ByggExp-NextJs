@@ -79,22 +79,37 @@ const FEATURE_CONTENT_OVERRIDE: Record<
         'La GPS-innsjekk samle timer per prosjekt automatisk – eller la teamet stemple inn tid manuelt i appen. Eksporter en ferdig timeliste til lønn rett fra nettet.',
     },
   },
-  // Shorter card titles (sv). Other languages fall back to the CMS title.
+  // Shorter card titles across all languages.
   'projektekonomi-och-lonsamhet': {
     sv: { title: 'Projektekonomi och lönsamhet i realtid' },
+    en: { title: 'Project economy and profit in real time' },
+    ru: { title: 'Экономика проекта и прибыль в реальном времени' },
+    nb: { title: 'Prosjektøkonomi og lønnsomhet i sanntid' },
   },
   'fakturera-fran-byggexp': {
     sv: { title: 'Fakturera loggad tid direkt' },
+    en: { title: 'Invoice logged time directly' },
+    ru: { title: 'Счёт по учтённому времени сразу' },
+    nb: { title: 'Fakturer logget tid direkte' },
   },
   'narvaro-och-incheckning-pa-bygget': {
     sv: { title: 'Närvaro och frånvarande i realtid' },
+    en: { title: 'Attendance and absence in real time' },
+    ru: { title: 'Присутствие и отсутствие в реальном времени' },
+    nb: { title: 'Nærvær og fravær i sanntid' },
   },
   // The two task features (Uppgifter + Auto-påminnelser) merge into this one.
   'hantera-uppgifter-i-byggprojekt': {
     sv: { title: 'Arbetsuppgifter med autopåminnelser' },
+    en: { title: 'Tasks with auto-reminders' },
+    ru: { title: 'Задачи с автонапоминаниями' },
+    nb: { title: 'Arbeidsoppgaver med autopåminnelser' },
   },
   'loneunderlag-for-byggforetag': {
     sv: { title: 'Från insamlade tidrapporter till lön' },
+    en: { title: 'From collected time reports to payroll' },
+    ru: { title: 'От собранных табелей до зарплаты' },
+    nb: { title: 'Fra innsamlede timelister til lønn' },
   },
 };
 
@@ -102,10 +117,21 @@ const FEATURE_CONTENT_OVERRIDE: Record<
 // feature folds into the tasks card ("Arbetsuppgifter med autopåminnelser").
 const HIDDEN_FEATURE_SLUGS = new Set(['paminnelser-uppgifter-och-deadlines']);
 
-// Per-feature cover overrides. Löneunderlag shares its CMS banner with
-// Tidrapportering (same Arbetspass mockup), which looked like a duplicate when
-// the two cards sit next to each other — use the homepage salary illustration.
+// Per-feature cover overrides. The CMS reuses the same Arbetspass banner across
+// several features, which looks like a duplicate in the carousel — use the
+// distinct homepage illustrations instead (local webp, one per feature, matches
+// the homepage feature cards). Keyed by slug; see Features.tsx.
 const FEATURE_IMAGE_OVERRIDE: Record<string, string> = {
+  'automatisk-tidrapportering-och-export': '/landing/features/1arbetspass.webp',
+  'hantera-uppgifter-i-byggprojekt': '/landing/features/2uppgift.webp',
+  'narvaro-och-incheckning-pa-bygget': '/landing/features/3personal.webp',
+  'dokumentera-med-foton-pa-bygget': '/landing/features/4foto.webp',
+  'dagsplanering-och-planeringsmoten': '/landing/features/5planering.webp',
+  'hantera-verktyg-och-utrustning': '/landing/features/6verktyg.webp',
+  'skapa-offert-i-byggexp': '/landing/features/7offerter.webp',
+  'fakturera-fran-byggexp': '/landing/features/8fakturor.webp',
+  'projektekonomi-och-lonsamhet': '/landing/features/9ekonomi.webp',
+  'fota-kvitton-och-hantera-utlagg': '/landing/features/11costs.webp',
   'loneunderlag-for-byggforetag': '/landing/features/12salary.webp',
 };
 
@@ -260,6 +286,40 @@ const FUNKTIONER_COPY = {
       {
         title: 'Поддержка всегда рядом',
         body: 'Мы на связи по любым вопросам — быстро и по-человечески.',
+      },
+    ],
+  },
+  nb: {
+    badge: 'Funksjoner',
+    title: 'Alle funksjoner i ByggExp',
+    subtitle:
+      'Utforsk hva ByggExp gjør – fra tilbud og timeføring til fakturaer og lønn. Klikk på en funksjon for å lese hvordan den fungerer.',
+    empty: 'Ingen funksjoner ennå.',
+    customTitle: 'Vi bygger funksjoner etter deres behov',
+    customBody:
+      'Hver bedrift har sine egne arbeidsmåter. ByggExp er ikke bare en ferdig standardløsning – det er en plattform vi gjerne videreutvikler etter deres behov. Fortell oss om deres utfordringer og ønsker, så bygger vi det raskt og med kvalitet. Ideene deres blir en del av nye funksjoner og oppdateringer i ByggExp.',
+    customCta: 'Bestill en demo',
+    whyTitle: 'Fortsatt usikker?',
+    why: [
+      {
+        title: 'Enkel start',
+        body: 'Krever ingen spesielle kunnskaper. Vi hjelper dere å sette opp og komme i gang med teamet.',
+      },
+      {
+        title: 'Sikkerhet og kontroll over data',
+        body: 'Informasjonen din er beskyttet – du kan alltid gjenopprette og eksportere dataene dine.',
+      },
+      {
+        title: 'Fleksibelt etter deres prosesser',
+        body: 'Vi tilpasser ByggExp etter deres behov – bare fortell oss hva som er viktig for dere.',
+      },
+      {
+        title: 'Fungerer på alle enheter',
+        body: 'Mobil, nettbrett, datamaskin – velg det som passer teamet deres.',
+      },
+      {
+        title: 'Support alltid nær',
+        body: 'Vi er tilgjengelige for alle spørsmål – raskt og på en menneskelig måte.',
       },
     ],
   },

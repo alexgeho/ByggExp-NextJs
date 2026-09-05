@@ -1,6 +1,8 @@
 # ByggExp — product feature inventory (admin.byggexp.se)
 
 Live inventory of the admin app modules, read from admin.byggexp.se (logged in as companyAdmin), 2026-08-30.
+Updated 2026-09-05: expanded Uppgifter (påminnelser/eskalering/upprepa) and added EKONOMI-moduler Utlägg / Löner /
+Lönsamhet — verified from the product's own screenshots (public/landing/features + public/features-content).
 Purpose: map real product features → SEO keyword clusters (see `docs/seo/keywords-master.md`) so content
 is built on features we actually have. ✅ = has landing/blog page · ❌ = feature exists, NO dedicated page (gap).
 
@@ -17,7 +19,11 @@ is built on features we actually have. ✅ = has landing/blog page · ❌ = feat
   **Allmänt** (projektöversikt, betalningsplan, team, uppgifter & deadlines, foton) ·
   **Ekonomi** (budget, betalningsplan, kostnader, marginal) · **Tid & personal** (timmar, team) ·
   **Filer** (dokument/foton) · **Inställningar**. → maps: projektledning/projekthantering bygg, projektuppföljning.
-- **Uppgifter** (`/company/tasks`) — task management, prioritet (low/normal/high), deadlines, "Snabb uppgift".
+- **Uppgifter** (`/company/tasks`) — task management: prioritet (low/normal/high), start-/förfallodatum + tid,
+  tilldela person eller hela projektteamet, "Snabb uppgift". **Påminnelser** med intervall (t.ex. var 15:e minut,
+  upprepas efter deadline tills slutförande bekräftas) + **eskalering** (meddela chefen efter N påminnelser).
+  **Upprepa** = återkommande uppgifter (nästa förekomst skapas automatiskt när den är klar). → maps: uppgifter,
+  påminnelser/deadlines. _(capabilities verified 2026-09-05 from Skapa-uppgift-formuläret.)_
 - **Dagbok** (`/company/dagbok`) — construction diary (byggdagbok). → maps: byggdagbok / digital byggdagbok.
 - **KMA** (`/company/kma`) — KMA & egenkontroller: egenkontroller + Mallar (templates), kategori, punkter, status.
   → maps: egenkontroll, KMA, riskanalys app.
@@ -38,6 +44,11 @@ is built on features we actually have. ✅ = has landing/blog page · ❌ = feat
 - **Offerter** (`/company/invoicing/offers`) — quotes/offers. → maps: offert bygg, mall offert bygg.
 - **Fakturor** (`/company/invoicing/invoices`) — invoices, incl. löpande räkning from logged hours. → maps: faktura, fakturamall.
 - **Inköpsfakturor** (`/company/invoicing/supplier-invoices`) — supplier invoices.
+- **Utlägg** (route TBD) — expenses/utlägg: foto av kvitto, kategori, moms; feeds project costs & invoicing.
+  → maps: kvitton/utlägg (feature page exists). _(verified 2026-09-05 in EKONOMI-menyn.)_
+- **Löner** (route TBD) — payroll basis (löneunderlag): summerade timmar/OB/övertid per anställd, Lönespec,
+  Godkänn / Markera som betald, export **CSV** och **AGI-underlag**. → maps: löneunderlag, lön. _(verified 2026-09-05.)_
+- **Lönsamhet** (route TBD) — profitability overview (marginal per projekt). → maps: projektekonomi/lönsamhet. _(verified 2026-09-05.)_
 
 ### Platform / cross-cutting
 - **Mobile app** — worker check-in, GPS, stämpla in/ut (seen in video scripts + shifts flow).

@@ -26,6 +26,23 @@ Senast uppdaterad: 2026-09-04. Ägare: Alex. Allt nedan är **live på prod** (b
 - `src/pages/[lang]/blog/[slug].tsx` — renderar `<FeatureNav>` + `FEATURE_CRUMB`-breadcrumb för feature-slugs.
 - `src/styles/blog.scss` — `.feature-nav*` (sticky bar).
 
+## Uppdatering 2026-09-05
+
+Karusellen byggdes om från peek-versionen ovan. Allt i `src/pages/[lang]/funktioner/index.tsx`, live på prod.
+
+- **Oändlig loop:** tre kopior av feature-listan renderas (`slides = [...posts, ...posts, ...posts]`), användaren hålls i mittkopian. Varje kort har alltid riktiga grannar på båda sidor och wrap är en tyst en-kopia-teleport → snurrar runt åt båda håll utan "hopp tillbaka". `activeExt` = index i trippel-listan, `extToReal` mappar till riktig feature.
+  - **Viktigt:** teleporten måste vara *direkt* — tracken har CSS `scroll-behavior: smooth`, som annars animerar teleporten till en synlig återspolning. `centerExt(_, false)` sätter `el.style.scrollBehavior='auto'` runt `scrollLeft`-tilldelningen.
+- **Kort-layout:** kolumn — **titel överst**, sedan bild (full kortbredd, `max-height 400px`, `object-fit: contain`), sedan beskrivning + steg + "Läs mer". Klick på bilden → **lightbox** (Esc/klick/× för att stänga; fokusfälla + återför fokus; lokaliserad `aria-label`). "Läs mer" navigerar in i artikeln.
+- **Bilder:** varje feature får sin egen bild från startsidan (`/landing/features/1arbetspass…12salary.webp`) via `FEATURE_IMAGE_OVERRIDE` — CMS återanvände samma Arbetspass-banner på flera kort. Lokala webp = snabbare, inga dubbletter.
+- **Steg-bullets** är gröna (`#45b36b` på `rgba(69,179,107,.14)`) som startsidan.
+- **Kortare titlar** (alla språk) via `FEATURE_CONTENT_OVERRIDE`: Projektekonomi/Fakturera/Närvaro/Löneunderlag + task-kortet.
+- **Task-dubbletten borttagen:** `paminnelser-uppgifter-och-deadlines` döljs (`HIDDEN_FEATURE_SLUGS`); slås ihop i kortet "Arbetsuppgifter med autopåminnelser" (`hantera-uppgifter-i-byggprojekt`).
+- **nb-copy tillagd** i `FUNKTIONER_COPY` — `/nb/funktioner` kraschade tidigare (500, saknad nyckel).
+- **Kanonisk ordning:** korten sorteras efter `FEATURE_NAV`-ordningen i `getServerSideProps` (CMS-ordningen var inte stabil).
+- **Scroll** coalescas till en körning per frame (`requestAnimationFrame`).
+
+Kvar (valfritt): ev. samla per-slug-config (`FEATURE_TAG_OVERRIDE`/`FEATURE_CONTENT_OVERRIDE`/`FEATURE_IMAGE_OVERRIDE`/`HIDDEN_FEATURE_SLUGS`) till ett objekt — men `featureSteps` är språk-dynamisk så full unifiering lönar sig inte; flytta ev. styled-jsx (~300 rader) till `blog.scss`.
+
 ## Nästa steg (att fortsätta med)
 
 - [ ] **Header-höjd:** `.feature-nav` sticky `top: 61px` är hårdkodat. Verifiera på prod att det inte blir hårstrå-glapp/overlap mot headern; justera annars (ev. gör headerhöjden till en CSS-var).

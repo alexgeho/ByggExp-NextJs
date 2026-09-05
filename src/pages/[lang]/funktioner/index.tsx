@@ -425,6 +425,7 @@ function FeatureCarousel({
                 className={`funktioner-slide${isActive ? ' is-active' : ''}`}
                 onClick={() => selectExt(i)}
               >
+                <h3 className="fk-title">{title}</h3>
                 {post.coverImageUrl ? (
                   <div className="fk-visual">
                     <img
@@ -439,7 +440,6 @@ function FeatureCarousel({
                   </div>
                 ) : null}
                 <div className="fk-text">
-                  <h3>{title}</h3>
                   <p>{featureExcerpt(post, lang)}</p>
                   {steps.length > 0 ? (
                     <ul className="fk-steps">
@@ -670,8 +670,8 @@ export default function FunktionerPage({
           flex: 1;
           min-width: 0;
         }
-        .fk-text h3 {
-          margin: 0 0 12px;
+        .fk-title {
+          margin: 0;
           font-size: clamp(21px, 2.3vw, 29px);
           line-height: 1.15;
           letter-spacing: -0.02em;

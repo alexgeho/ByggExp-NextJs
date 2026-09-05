@@ -628,7 +628,7 @@ export default function FunktionerPage({
           overflow-x: auto;
           scroll-snap-type: x mandatory;
           scroll-behavior: smooth;
-          padding: 12px 16% 30px;
+          padding: 12px 16% 54px;
           -ms-overflow-style: none;
           scrollbar-width: none;
         }
@@ -788,7 +788,7 @@ export default function FunktionerPage({
         }
         @media (max-width: 900px) {
           .funktioner-carousel-track {
-            padding: 12px 8% 28px;
+            padding: 12px 8% 46px;
           }
           .funktioner-slide {
             flex-basis: 84%;
@@ -859,7 +859,7 @@ export default function FunktionerPage({
           background: rgba(255, 255, 255, 0.28);
         }
         .funktioner-why {
-          padding: 56px 20px 8px;
+          padding: 39px 20px 8px;
           background: #f4f6fa;
         }
         .funktioner-why-title {

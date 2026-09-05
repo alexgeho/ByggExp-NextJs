@@ -614,8 +614,10 @@ export default function FunktionerPage({
       <Footer footerT={footerT} />
 
       <style jsx global>{`
+        /* Match the hero→pills gap (64px) below the pills too: the track adds
+           12px top padding, so 52 + 12 = 64. */
         .funktioner-filter {
-          margin-bottom: 22px;
+          margin-bottom: 52px;
         }
         .funktioner-carousel {
           position: relative;

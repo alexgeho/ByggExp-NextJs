@@ -7,6 +7,7 @@ import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
+import { FEATURE_NAV } from '../../../components/FeatureNav/FeatureNav';
 import { buildHreflangAlternates, localeOrigin } from '../../../lib/seo';
 import { featuresTranslations1_3 } from '../../../locales/features1-3';
 import { featuresTranslations4_6 } from '../../../locales/features4-6';
@@ -160,6 +161,13 @@ const READ_MORE: Record<LandingLanguageCode, string> = {
   en: 'Read more about the feature →',
   ru: 'Подробнее о функции →',
   nb: 'Les mer om funksjonen →',
+};
+
+const CLOSE_LABEL: Record<LandingLanguageCode, string> = {
+  sv: 'Stäng',
+  en: 'Close',
+  ru: 'Закрыть',
+  nb: 'Lukk',
 };
 
 // The three numbered steps shown on a feature card, reused from the homepage
@@ -336,15 +344,16 @@ export const getServerSideProps: GetServerSideProps<FunktionerPageProps> = async
 
   try {
     const posts = await fetchPublishedBlogPosts(lang);
-    return {
-      props: {
-        lang,
-        posts: posts.filter(
-          (post) =>
-            FEATURE_ARTICLE_SLUGS.has(post.slug) && !HIDDEN_FEATURE_SLUGS.has(post.slug),
-        ),
-      },
-    };
+    // Order is CMS-driven and can vary per language/fetch. Pin it to the
+    // canonical FEATURE_NAV order so the carousel is consistent everywhere.
+    const order = new Map(FEATURE_NAV.map((f, i) => [f.slug, i]));
+    const ordered = posts
+      .filter(
+        (post) =>
+          FEATURE_ARTICLE_SLUGS.has(post.slug) && !HIDDEN_FEATURE_SLUGS.has(post.slug),
+      )
+      .sort((a, b) => (order.get(a.slug) ?? 999) - (order.get(b.slug) ?? 999));
+    return { props: { lang, posts: ordered } };
   } catch {
     return { props: { lang, posts: [] } };
   }
@@ -361,6 +370,7 @@ function FeatureCarousel({
 }) {
   const trackRef = useRef<HTMLDivElement | null>(null);
   const settleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const scrollRaf = useRef<number | null>(null);
   const N = posts.length;
   // Infinite loop: render three copies of the feature list and keep the user
   // parked in the middle copy. Every card therefore always has real neighbours
@@ -385,6 +395,8 @@ function FeatureCarousel({
   const activeReal = extToReal(activeExt);
 
   const [lightbox, setLightbox] = useState<{ url: string; alt: string } | null>(null);
+  const closeBtnRef = useRef<HTMLButtonElement | null>(null);
+  const lightboxTriggerRef = useRef<HTMLElement | null>(null);
 
   // One pill per feature, in carousel order.
   const pills = useMemo(
@@ -413,38 +425,43 @@ function FeatureCarousel({
   }, []);
 
   // As the user scrolls, mark whichever slide is closest to the centre active;
-  // once scrolling settles on a clone, jump silently to its real twin.
+  // once scrolling settles on a clone, jump silently to its real twin. Coalesce
+  // the work to one run per frame so a fast scroll doesn't recompute per event.
   const handleScroll = useCallback(() => {
-    const el = trackRef.current;
-    if (!el) return;
-    const mid = el.scrollLeft + el.clientWidth / 2;
-    let best = 0;
-    let bestDist = Infinity;
-    Array.from(el.children).forEach((child, i) => {
-      const c = child as HTMLElement;
-      const dist = Math.abs(c.offsetLeft + c.offsetWidth / 2 - mid);
-      if (dist < bestDist) {
-        bestDist = dist;
-        best = i;
-      }
-    });
-    setActiveExt(best);
+    if (scrollRaf.current != null) return;
+    scrollRaf.current = requestAnimationFrame(() => {
+      scrollRaf.current = null;
+      const el = trackRef.current;
+      if (!el) return;
+      const mid = el.scrollLeft + el.clientWidth / 2;
+      let best = 0;
+      let bestDist = Infinity;
+      Array.from(el.children).forEach((child, i) => {
+        const c = child as HTMLElement;
+        const dist = Math.abs(c.offsetLeft + c.offsetWidth / 2 - mid);
+        if (dist < bestDist) {
+          bestDist = dist;
+          best = i;
+        }
+      });
+      setActiveExt(best);
 
-    if (!loop) return;
-    // Once scrolling settles, snap back into the middle copy (same card, same
-    // neighbours) if we've drifted into the first or last copy.
-    if (settleTimer.current) clearTimeout(settleTimer.current);
-    settleTimer.current = setTimeout(() => {
-      if (best < N) {
-        const t = best + N;
-        setActiveExt(t);
-        centerExt(t, false);
-      } else if (best >= 2 * N) {
-        const t = best - N;
-        setActiveExt(t);
-        centerExt(t, false);
-      }
-    }, 130);
+      if (!loop) return;
+      // Once scrolling settles, snap back into the middle copy (same card, same
+      // neighbours) if we've drifted into the first or last copy.
+      if (settleTimer.current) clearTimeout(settleTimer.current);
+      settleTimer.current = setTimeout(() => {
+        if (best < N) {
+          const t = best + N;
+          setActiveExt(t);
+          centerExt(t, false);
+        } else if (best >= 2 * N) {
+          const t = best - N;
+          setActiveExt(t);
+          centerExt(t, false);
+        }
+      }, 130);
+    });
   }, [loop, N, centerExt]);
 
   useEffect(() => {
@@ -459,13 +476,24 @@ function FeatureCarousel({
     return () => window.removeEventListener('resize', onResize);
   }, [centerExt, initialExt]);
 
+  // Lightbox is a modal: focus the close button on open, keep focus trapped
+  // inside it, and return focus to the image that opened it on close.
   useEffect(() => {
     if (!lightbox) return;
+    closeBtnRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setLightbox(null);
+      else if (e.key === 'Tab') {
+        e.preventDefault();
+        closeBtnRef.current?.focus();
+      }
     };
     window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      lightboxTriggerRef.current?.focus();
+      lightboxTriggerRef.current = null;
+    };
   }, [lightbox]);
 
   // Centre a specific slide (drifted copies snap back to the middle on settle).
@@ -546,8 +574,12 @@ function FeatureCarousel({
                       draggable={false}
                       onClick={(e) => {
                         e.stopPropagation();
-                        if (isActive) setLightbox({ url: coverImage, alt: title });
-                        else selectExt(i);
+                        if (isActive) {
+                          lightboxTriggerRef.current = e.currentTarget;
+                          setLightbox({ url: coverImage, alt: title });
+                        } else {
+                          selectExt(i);
+                        }
                       }}
                     />
                   </div>
@@ -606,8 +638,20 @@ function FeatureCarousel({
       ) : null}
 
       {lightbox ? (
-        <div className="fk-lightbox" role="dialog" aria-modal="true" onClick={() => setLightbox(null)}>
-          <button type="button" className="fk-lightbox-close" aria-label="Stäng" onClick={() => setLightbox(null)}>
+        <div
+          className="fk-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={lightbox.alt}
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            ref={closeBtnRef}
+            type="button"
+            className="fk-lightbox-close"
+            aria-label={CLOSE_LABEL[lang] ?? CLOSE_LABEL.sv}
+            onClick={() => setLightbox(null)}
+          >
             ×
           </button>
           <img src={lightbox.url} alt={lightbox.alt} onClick={(e) => e.stopPropagation()} />

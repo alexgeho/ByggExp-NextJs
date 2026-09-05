@@ -79,7 +79,25 @@ const FEATURE_CONTENT_OVERRIDE: Record<
         'La GPS-innsjekk samle timer per prosjekt automatisk – eller la teamet stemple inn tid manuelt i appen. Eksporter en ferdig timeliste til lønn rett fra nettet.',
     },
   },
+  // Shorter card titles (sv). Other languages fall back to the CMS title.
+  'projektekonomi-och-lonsamhet': {
+    sv: { title: 'Projektekonomi och lönsamhet i realtid' },
+  },
+  'fakturera-fran-byggexp': {
+    sv: { title: 'Fakturera loggad tid direkt' },
+  },
+  'narvaro-och-incheckning-pa-bygget': {
+    sv: { title: 'Närvaro och frånvarande i realtid' },
+  },
+  // The two task features (Uppgifter + Auto-påminnelser) merge into this one.
+  'hantera-uppgifter-i-byggprojekt': {
+    sv: { title: 'Arbetsuppgifter med autopåminnelser' },
+  },
 };
+
+// Feature slugs kept out of the funktioner carousel. The auto-reminders
+// feature folds into the tasks card ("Arbetsuppgifter med autopåminnelser").
+const HIDDEN_FEATURE_SLUGS = new Set(['paminnelser-uppgifter-och-deadlines']);
 
 function featureTitle(post: BlogPost, lang: LandingLanguageCode): string {
   return FEATURE_CONTENT_OVERRIDE[post.slug]?.[lang]?.title || post.title;
@@ -247,7 +265,10 @@ export const getServerSideProps: GetServerSideProps<FunktionerPageProps> = async
     return {
       props: {
         lang,
-        posts: posts.filter((post) => FEATURE_ARTICLE_SLUGS.has(post.slug)),
+        posts: posts.filter(
+          (post) =>
+            FEATURE_ARTICLE_SLUGS.has(post.slug) && !HIDDEN_FEATURE_SLUGS.has(post.slug),
+        ),
       },
     };
   } catch {
@@ -267,29 +288,24 @@ function FeatureCarousel({
   const trackRef = useRef<HTMLDivElement | null>(null);
   const settleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const N = posts.length;
-  // Loop the carousel by cloning the last feature before the first and the
-  // first after the last, so there's always a neighbour peeking on both sides
-  // — even on the very first card. Needs at least two real features.
+  // Infinite loop: render three copies of the feature list and keep the user
+  // parked in the middle copy. Every card therefore always has real neighbours
+  // on both sides, and wrapping past either end is a silent one-copy teleport
+  // (no visible jump-back). Needs at least two real features.
   const loop = N > 1;
-  const offset = loop ? 1 : 0;
+  const initialExt = loop ? N : 0; // first real card, in the middle copy
 
-  // The rendered (extended) slide list: [cloneOfLast, ...posts, cloneOfFirst].
   const slides = useMemo(() => {
     if (!loop) return posts;
-    return [posts[N - 1], ...posts, posts[0]];
-  }, [posts, loop, N]);
+    return [...posts, ...posts, ...posts];
+  }, [posts, loop]);
 
-  // activeExt = index into the extended list. Start on the first real card.
-  const [activeExt, setActiveExt] = useState(offset);
-  const activeExtRef = useRef(offset);
+  // activeExt = index into the (tripled) slide list.
+  const [activeExt, setActiveExt] = useState(initialExt);
+  const activeExtRef = useRef(initialExt);
   // Map an extended index back to the real feature index (0..N-1).
   const extToReal = useCallback(
-    (e: number) => {
-      if (!loop) return e;
-      if (e === 0) return N - 1;
-      if (e === N + 1) return 0;
-      return e - 1;
-    },
+    (e: number) => (loop ? ((e % N) + N) % N : e),
     [loop, N],
   );
   const activeReal = extToReal(activeExt);
@@ -333,14 +349,18 @@ function FeatureCarousel({
     setActiveExt(best);
 
     if (!loop) return;
+    // Once scrolling settles, snap back into the middle copy (same card, same
+    // neighbours) if we've drifted into the first or last copy.
     if (settleTimer.current) clearTimeout(settleTimer.current);
     settleTimer.current = setTimeout(() => {
-      if (best === 0) {
-        setActiveExt(N);
-        centerExt(N, false); // cloneOfLast -> real last
-      } else if (best === N + 1) {
-        setActiveExt(1);
-        centerExt(1, false); // cloneOfFirst -> real first
+      if (best < N) {
+        const t = best + N;
+        setActiveExt(t);
+        centerExt(t, false);
+      } else if (best >= 2 * N) {
+        const t = best - N;
+        setActiveExt(t);
+        centerExt(t, false);
       }
     }, 130);
   }, [loop, N, centerExt]);
@@ -351,11 +371,11 @@ function FeatureCarousel({
 
   // Centre the first card on mount and keep the active one centred on resize.
   useEffect(() => {
-    centerExt(offset, false);
+    centerExt(initialExt, false);
     const onResize = () => centerExt(activeExtRef.current, false);
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
-  }, [centerExt, offset]);
+  }, [centerExt, initialExt]);
 
   useEffect(() => {
     if (!lightbox) return;
@@ -366,22 +386,30 @@ function FeatureCarousel({
     return () => window.removeEventListener('keydown', onKey);
   }, [lightbox]);
 
-  // Centre a specific extended slide (clones settle to their twin on scroll).
+  // Centre a specific slide (drifted copies snap back to the middle on settle).
   const selectExt = (extIndex: number) => {
     setActiveExt(extIndex);
     centerExt(extIndex, true);
   };
-  // Centre a real feature by its index (used by pills and dots).
-  const goToReal = (realIndex: number) => selectExt(realIndex + offset);
+  // Centre a real feature by index (pills/dots): pick the nearest of its three
+  // copies so the scroll always takes the short way round.
+  const goToReal = (realIndex: number) => {
+    if (!loop) {
+      selectExt(realIndex);
+      return;
+    }
+    const base = activeExt - extToReal(activeExt); // start of the current copy
+    let target = base + realIndex;
+    [base + realIndex - N, base + realIndex + N].forEach((c) => {
+      if (c >= 0 && c < slides.length && Math.abs(c - activeExt) < Math.abs(target - activeExt)) {
+        target = c;
+      }
+    });
+    selectExt(target);
+  };
 
-  const goNext = () => {
-    if (loop && activeReal === N - 1) selectExt(N + 1); // into cloneOfFirst, then wrap
-    else goToReal(Math.min(activeReal + 1, N - 1));
-  };
-  const goPrev = () => {
-    if (loop && activeReal === 0) selectExt(0); // into cloneOfLast, then wrap
-    else goToReal(Math.max(activeReal - 1, 0));
-  };
+  const goNext = () => (loop ? selectExt(activeExt + 1) : selectExt(Math.min(activeExt + 1, N - 1)));
+  const goPrev = () => (loop ? selectExt(activeExt - 1) : selectExt(Math.max(activeExt - 1, 0)));
 
   return (
     <>

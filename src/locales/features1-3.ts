@@ -151,4 +151,39 @@ export const featuresTranslations1_3 = {
     featuresCard3Step2: "Gå til fanen Live",
     featuresCard3Step3: "Fraværende vises med en gang",
   },
+
+  pl: {
+    featuresTitle: "Jak to działa",
+
+    featuresHeading1: "12 narzędzi, które",
+    featuresHeadingAccent: "przejmują 60 %",
+    featuresHeading2: "pracy biura",
+
+    featuresSub:
+      "Bez laptopa, bez sekretarki. Wystarczy smartfon, który i tak masz w kieszeni.",
+
+    featuresCard1Title: "Automatyczna i ręczna ewidencja czasu",
+    featuresCard1Text:
+      "Pracownik wybiera projekt. Czas rejestruje się automatycznie przez GPS – albo wpisuje ręcznie w aplikacji, gdy tak wygodniej. Oba sposoby działają.",
+
+    featuresCard1Step1: "Pracownik przychodzi na miejsce",
+    featuresCard1Step2: "GPS lub ręczne odbicie",
+    featuresCard1Step3: "Godziny są w systemie",
+
+    featuresCard2Title: "Zadania z automatyczną kontrolą",
+    featuresCard2Text:
+      "Zadania można przypisać całemu projektowi lub wybranym pracownikom. Jeśli zadanie nie zostanie wykonane, aplikacja wysyła przypomnienia.",
+
+    featuresCard2Step1: "Kliknij Utwórz zadanie",
+    featuresCard2Step2: "Dodaj odbiorców",
+    featuresCard2Step3: "Ustaw termin i przypomnienie",
+
+    featuresCard3Title: "Podgląd ekip na żywo",
+    featuresCard3Text:
+      "Kontroluj pracowników i budowy w czasie rzeczywistym. W panelu administracyjnym od razu widać, kto zaczął zmianę, kogo brakuje i gdzie wszyscy pracują.",
+
+    featuresCard3Step1: "Otwórz panel administracyjny",
+    featuresCard3Step2: "Przejdź do zakładki Live",
+    featuresCard3Step3: "Nieobecni widoczni od razu",
+  },
 } as const;

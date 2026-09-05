@@ -1,7 +1,7 @@
 import type { BlogLocale } from '../types/blog';
 
 export const blogPageTranslations: Record<
-  BlogLocale | 'nb',
+  BlogLocale | 'nb' | 'pl',
   {
     badge: string;
     title: string;
@@ -61,5 +61,17 @@ export const blogPageTranslations: Record<
     home: 'Главная',
     back: 'Назад к блогу',
     related: 'Похожие статьи',
+  },
+  pl: {
+    badge: 'Blog',
+    title: 'Artykuły i poradniki',
+    subtitle:
+      'Praktyczne porady, analizy i procesy dla firm budowlanych, które chcą pracować mądrzej.',
+    empty: 'Nie opublikowano jeszcze żadnych artykułów.',
+    searchPlaceholder: 'Szukaj artykułów …',
+    noResults: 'Brak artykułów pasujących do wyszukiwania.',
+    home: 'Strona główna',
+    back: 'Powrót do bloga',
+    related: 'Podobne artykuły',
   },
 };

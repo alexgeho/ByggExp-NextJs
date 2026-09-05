@@ -147,4 +147,41 @@ export const pricingTranslations = {
 
     pricingTrial: "Kom i gang på 5 minutter.",
   },
+
+  pl: {
+    pricingTitle: "Ile to kosztuje?",
+    pricingHeading: "Jeden abonament, wszystko w cenie",
+
+    pricingSub:
+      "Bez ukrytych opłat. Bez niespodzianek. Bez opłaty wstępnej. Zrezygnuj, kiedy chcesz.",
+
+    pricingMonthly: "Miesięcznie",
+    pricingYearly: "Rocznie",
+
+    pricingTag: "Pierwszy miesiąc za darmo",
+
+    pricingPer: "SEK / miesiąc",
+    pricingPer1: "Start",
+    pricingPer10: "Wzrost",
+    pricingPer20: "Profesjonalny",
+    pricingPer40: "Dopasowany",
+    pricingCustom: "Porozmawiajmy",
+
+    priceDescription1: "1-10 użytkowników",
+
+    priceDescription2: "10-20 użytkowników",
+
+    priceDescription3: "20-40 użytkowników",
+
+    priceDescription4: "40+ użytkowników",
+
+    pricingItem1: "Wszystkie funkcje w cenie",
+    pricingItem2: "Nieograniczona liczba projektów",
+    pricingItem3: "Bez zobowiązań",
+    pricingItem4: "Aplikacja mobilna + panel administracyjny",
+
+    pricingButton: "Umów demo",
+
+    pricingTrial: "Uruchomienie zajmuje 5 minut.",
+  },
 } as const;

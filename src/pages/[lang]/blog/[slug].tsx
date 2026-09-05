@@ -41,6 +41,7 @@ const FEATURE_CRUMB: Record<LandingLanguageCode, string> = {
   en: 'Features',
   ru: 'Функции',
   nb: 'Funksjoner',
+  pl: 'Funkcje',
 };
 
 type BlogArticlePageProps = {

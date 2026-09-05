@@ -2,6 +2,7 @@ const ruFlag = "/landing/flags/ru.svg";
 const svFlag = "/landing/flags/sv.svg";
 const enFlag = "/landing/flags/en.svg";
 const nbFlag = "/landing/flags/no.svg";
+const plFlag = "/landing/flags/pl.svg";
 
 // Full list, includes languages reachable only by direct URL (e.g. /ru)
 export const languages = {
@@ -21,6 +22,10 @@ export const languages = {
     label: "Norsk",
     flag: nbFlag,
   },
+  pl: {
+    label: "Polski",
+    flag: plFlag,
+  },
 };
 
 // NOTE: `nb` (Norwegian, for byggexp.no) is registered in `languages` above but
@@ -28,7 +33,7 @@ export const languages = {
 // getStaticPaths across the landing/legal pages and the sitemap, so adding `nb`
 // here before every locale file has an `nb` key would break the build. Add "nb"
 // here once the translations below are complete (Norway expansion, phase 1).
-export const landingLanguageCodes = ["ru", "sv", "en", "nb"] as const;
+export const landingLanguageCodes = ["ru", "sv", "en", "nb", "pl"] as const;
 export type LandingLanguageCode = (typeof landingLanguageCodes)[number];
 
 // Locales that actually have hand-written content on the sv/en-only legal pages.
@@ -41,4 +46,5 @@ export const selectableLanguages = {
   sv: languages.sv,
   en: languages.en,
   nb: languages.nb,
+  pl: languages.pl,
 };

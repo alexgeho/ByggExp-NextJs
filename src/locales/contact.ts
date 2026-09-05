@@ -110,4 +110,32 @@ export const contactTranslations = {
     contactDemoText: "15 minutter — vi viser ByggExp med utgangspunkt i prosjektet deres.",
     contactDemoButton: "Bestill en demo",
   },
+
+  pl: {
+    contactEyebrow: "Kontakt",
+    contactTitle: "Skontaktuj się z nami",
+    contactLead:
+      "Masz pytania o ByggExp lub potrzebujesz pomocy? Chętnie odpowiemy.",
+
+    contactEmailLabel: "E-mail",
+    contactEmailSupport: "Wsparcie",
+    contactEmailConsult: "Doradztwo",
+    contactEmailPress: "Prasa",
+    contactResponseTime: "Zwykle odpowiadamy w ciągu jednego dnia roboczego.",
+
+    contactPhoneLabel: "Telefon",
+    contactPhoneSupport: "Wsparcie",
+    contactPhoneOffice: "Biuro",
+    contactHoursLabel: "Godziny pracy",
+    contactHours: "Pon–Pt, 08:00–17:00",
+    contactAddressLabel: "Adres",
+
+    contactChatLabel: "Czat",
+    contactChatText: "Najszybciej skontaktujesz się z nami przez WhatsApp.",
+    contactChatButton: "Otwórz WhatsApp",
+
+    contactDemoTitle: "Umów demo",
+    contactDemoText: "15 minut — pokażemy ByggExp na przykładzie Twojego projektu.",
+    contactDemoButton: "Umów demo",
+  },
 } as const;

@@ -95,4 +95,27 @@ export const featuresTranslations7_9 = {
       "Timer og kostnader beregnes automatisk",
     featuresCard9Step3: "Se marginen i sanntid",
   },
+
+  pl: {
+    featuresCard7Title: "Twórz oferty",
+    featuresCard7Text:
+      "Dane firmy uzupełniają się automatycznie. Wcześniejsze oferty są zapisywane, więc tworzenie nowych jest łatwiejsze.",
+    featuresCard7Step1: "Utwórz ofertę z poziomu projektu",
+    featuresCard7Step2: "Dane projektu uzupełniają się automatycznie",
+    featuresCard7Step3: "Wyślij ofertę w kilka kliknięć",
+
+    featuresCard8Title: "Twórz faktury",
+    featuresCard8Text:
+      "Zamień zarejestrowane godziny pracy w gotowe faktury. Oszczędzaj czas i szybciej otrzymuj zapłatę.",
+    featuresCard8Step1: "Wybierz projekt i okres",
+    featuresCard8Step2: "Godziny pobierają się automatycznie",
+    featuresCard8Step3: "Wyślij fakturę do klienta",
+
+    featuresCard9Title: "Ekonomia i rentowność projektu",
+    featuresCard9Text:
+      "Zarejestrowane godziny i materiały automatycznie przeliczają się na koszty i zestawiają z budżetem. Marża każdego projektu w czasie rzeczywistym.",
+    featuresCard9Step1: "Ustaw budżet projektu",
+    featuresCard9Step2: "Godziny i koszty liczą się automatycznie",
+    featuresCard9Step3: "Zobacz marżę w czasie rzeczywistym",
+  },
 } as const;

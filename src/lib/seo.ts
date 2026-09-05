@@ -48,6 +48,12 @@ export const defaultHomeMeta: Record<
     description:
       'Alt-i-ett-app for byggefirma: timeføring, digitalt mannskapsregister, vaktplan, tilbud og faktura – på web og mobil. Prøv gratis.',
   },
+  pl: {
+    title:
+      'ByggExp – ewidencja czasu, planowanie i zarządzanie budową dla firm budowlanych',
+    description:
+      'Aplikacja all-in-one dla firm budowlanych: ewidencja czasu, cyfrowy rejestr pracowników, grafik, oferty i faktury – w przeglądarce i w telefonie. Wypróbuj za darmo.',
+  },
 };
 
 export type HreflangAlternate = {

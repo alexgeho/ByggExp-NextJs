@@ -167,4 +167,46 @@ export const ctaTranslations = {
       "Vil du, kan du også bestille et passende tidspunkt direkte nedenfor.",
     ctaCalendlyButton: "Velg et tidspunkt i kalenderen",
   },
+
+  pl: {
+    ctaTitle: "Gotowy, aby wypróbować?",
+
+    ctaHeading1: "Umów demo —",
+    ctaAccent: "15 minut",
+    ctaHeading2: "przez rozmowę wideo",
+
+    ctaLead:
+      "Pokażemy, jak ByggExp działa na Twoich projektach, odpowiemy na pytania i pomożemy skonfigurować pierwszy czat z ekipą.",
+
+    ctaItem1: "Pomożemy skonfigurować ByggExp dla Ciebie i Twojego zespołu",
+    ctaItem2: "Wypróbujesz wszystkie funkcje za darmo",
+    ctaItem3: "Dostosujemy ByggExp do Waszego sposobu pracy",
+
+    ctaFormTitle: "Umów demo",
+
+    ctaNameLabel: "Jak się nazywasz?",
+    ctaNamePlaceholder: "Imię i nazwisko",
+    ctaNameError: "Podaj swoje imię",
+
+    ctaEmailLabel: "E-mail",
+    ctaEmailPlaceholder: "imie@firma.pl",
+    ctaEmailError: "Podaj prawidłowy adres e-mail",
+
+    ctaPhoneLabel: "Telefon",
+    ctaPhonePlaceholder: "+48 600 000 000",
+    ctaPhoneError: "Podaj numer telefonu",
+
+    ctaButton: "Umów demo",
+    ctaButtonSending: "Wysyłanie...",
+    ctaSubmitError: "Nie udało się wysłać zgłoszenia. Spróbuj ponownie.",
+
+    ctaPrivacy:
+      "Wysyłając formularz, wyrażasz zgodę na przetwarzanie danych osobowych. Nie udostępniamy ich osobom trzecim.",
+
+    ctaSuccessTitle: "Zgłoszenie wysłane!",
+    ctaSuccessText: "Skontaktujemy się z Tobą w ciągu godziny w godzinach pracy.",
+    ctaSuccessCalendlyHint:
+      "Jeśli chcesz, możesz od razu zarezerwować dogodny termin poniżej.",
+    ctaCalendlyButton: "Wybierz termin w kalendarzu",
+  },
 } as const;

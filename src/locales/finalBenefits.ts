@@ -74,4 +74,23 @@ export const finalBenefitsTranslations = {
     finalBenefitsItem4:
       "Feil, tapte timer og kaos begynner å forsvinne",
   },
+
+  pl: {
+    finalBenefitsTitle: "Podsumowując, zyskujesz",
+
+    finalBenefitsHeading1: "Pełna kontrola nad projektami —",
+    finalBenefitsAccent: "i spokojny sen",
+
+    finalBenefitsItem1:
+      "Kierownictwo zyskuje więcej czasu i niższe koszty",
+
+    finalBenefitsItem2:
+      "Firma działa szybciej i spokojniej",
+
+    finalBenefitsItem3:
+      "Zespół poświęca czas na pracę zamiast na administrację",
+
+    finalBenefitsItem4:
+      "Błędy, utracone godziny i chaos zaczynają znikać",
+  },
 } as const;

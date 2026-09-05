@@ -34,4 +34,13 @@ export const footerTranslations = {
     footerTerms: "Brukervilkår",
     footerDeleteAccount: "Slett konto",
   },
+
+  pl: {
+    footerBlog: "Blog",
+    footerAbout: "O nas",
+    footerFaq: "Najczęstsze pytania",
+    footerPrivacy: "Polityka prywatności",
+    footerTerms: "Regulamin",
+    footerDeleteAccount: "Usuń konto",
+  },
 } as const;

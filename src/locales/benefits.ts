@@ -187,4 +187,52 @@ export const benefitsTranslations = {
         "Alle prosjektdeltakere eller utvalgte personer får varsler samtidig.",
     },
   },
+
+  pl: {
+    office: {
+      benefitsOfficeTitle: "Co zyskujesz, pracując z nami?",
+
+      benefitsOfficeHeading1: "Już od pierwszego dnia ",
+      benefitsOfficeAccent: "oszczędzasz czas ",
+      benefitsOfficeHeading2: "na tym, co wcześniej robiono ręcznie.",
+
+      benefitsOfficeLead: "Dla kierownictwa:",
+
+      benefitsOfficeCard1Title: "Godziny od razu w systemie",
+      benefitsOfficeCard1Text:
+        "Faktury można wystawiać bez czekania i przypominania.",
+
+      benefitsOfficeCard2Title: "Eksport do Excela",
+      benefitsOfficeCard2Text:
+        "Gotowe godziny do wypłat i faktur jednym kliknięciem.",
+
+      benefitsOfficeCard3Title: "Automatyczne przypomnienia",
+      benefitsOfficeCard3Text:
+        "Nie musisz dzwonić i ręcznie przypominać pracownikom.",
+
+      benefitsOfficeCard4Title: "Kontrola budów",
+      benefitsOfficeCard4Text:
+        "Widzisz w czasie rzeczywistym, kto pracuje, gdzie i kto jest nieobecny.",
+    },
+
+    site: {
+      benefitsSiteLead: "Co zyskuje ekipa budowlana:",
+
+      benefitsSiteCard1Title: "Automatyczna ewidencja czasu",
+      benefitsSiteCard1Text:
+        "Telefon wystarczy mieć włączony, a pracownik po prostu przychodzi na budowę",
+
+      benefitsSiteCard2Title: "Zadania bez telefonów",
+      benefitsSiteCard2Text:
+        "Zadania prosto w aplikacji wraz z automatycznymi przypomnieniami.",
+
+      benefitsSiteCard3Title: "Wszystko w jednym miejscu",
+      benefitsSiteCard3Text:
+        "Zdjęcia i dokumenty przypisane do zmiany i projektu.",
+
+      benefitsSiteCard4Title: "Natychmiastowe powiadomienia",
+      benefitsSiteCard4Text:
+        "Wszyscy uczestnicy projektu lub wybrane osoby dostają powiadomienia jednocześnie.",
+    },
+  },
 } as const;

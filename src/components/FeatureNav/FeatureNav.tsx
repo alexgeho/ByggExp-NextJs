@@ -12,11 +12,11 @@ export const FEATURE_NAV: {
 }[] = [
   {
     slug: 'skapa-offert-i-byggexp',
-    label: { sv: 'Offert', en: 'Quotes', ru: 'Сметы', nb: 'Tilbud' },
+    label: { sv: 'Offert', en: 'Quotes', ru: 'Сметы', nb: 'Tilbud', pl: 'Oferty' },
   },
   {
     slug: 'fakturera-fran-byggexp',
-    label: { sv: 'Fakturering', en: 'Invoicing', ru: 'Счета', nb: 'Fakturering' },
+    label: { sv: 'Fakturering', en: 'Invoicing', ru: 'Счета', nb: 'Fakturering', pl: 'Faktury' },
   },
   {
     slug: 'projektekonomi-och-lonsamhet',
@@ -25,11 +25,12 @@ export const FEATURE_NAV: {
       en: 'Project economy',
       ru: 'Экономика проекта',
       nb: 'Prosjektøkonomi',
+      pl: 'Ekonomia projektu',
     },
   },
   {
     slug: 'loneunderlag-for-byggforetag',
-    label: { sv: 'Lön', en: 'Payroll', ru: 'Зарплата', nb: 'Lønn' },
+    label: { sv: 'Lön', en: 'Payroll', ru: 'Зарплата', nb: 'Lønn', pl: 'Wypłaty' },
   },
   {
     slug: 'automatisk-tidrapportering-och-export',
@@ -38,15 +39,16 @@ export const FEATURE_NAV: {
       en: 'Time tracking',
       ru: 'Учёт времени',
       nb: 'Tidsregistrering',
+      pl: 'Ewidencja czasu',
     },
   },
   {
     slug: 'narvaro-och-incheckning-pa-bygget',
-    label: { sv: 'Närvaro', en: 'Attendance', ru: 'Присутствие', nb: 'Oppmøte' },
+    label: { sv: 'Närvaro', en: 'Attendance', ru: 'Присутствие', nb: 'Oppmøte', pl: 'Obecność' },
   },
   {
     slug: 'hantera-uppgifter-i-byggprojekt',
-    label: { sv: 'Uppgifter', en: 'Tasks', ru: 'Задачи', nb: 'Oppgaver' },
+    label: { sv: 'Uppgifter', en: 'Tasks', ru: 'Задачи', nb: 'Oppgaver', pl: 'Zadania' },
   },
   {
     slug: 'paminnelser-uppgifter-och-deadlines',
@@ -55,6 +57,7 @@ export const FEATURE_NAV: {
       en: 'Auto-reminders for tasks',
       ru: 'Автонапоминания по задачам',
       nb: 'Auto-påminnelser for oppgaver',
+      pl: 'Auto-przypomnienia o zadaniach',
     },
   },
   {
@@ -64,6 +67,7 @@ export const FEATURE_NAV: {
       en: 'Day planning',
       ru: 'Планирование дня',
       nb: 'Dagsplanlegging',
+      pl: 'Planowanie dnia',
     },
   },
   {
@@ -73,6 +77,7 @@ export const FEATURE_NAV: {
       en: 'Photo documentation',
       ru: 'Фотодокументация',
       nb: 'Fotodokumentasjon',
+      pl: 'Dokumentacja zdjęciowa',
     },
   },
   {
@@ -82,6 +87,7 @@ export const FEATURE_NAV: {
       en: 'Receipts & expenses',
       ru: 'Чеки и расходы',
       nb: 'Kvitteringer & utlegg',
+      pl: 'Paragony i wydatki',
     },
   },
   {
@@ -91,6 +97,7 @@ export const FEATURE_NAV: {
       en: 'Tool management',
       ru: 'Учёт инструментов',
       nb: 'Verktøyhåndtering',
+      pl: 'Zarządzanie narzędziami',
     },
   },
 ];

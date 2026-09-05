@@ -7,9 +7,9 @@ import type { BlogLocale, BlogPost } from '../types/blog';
  * to the database.
  */
 
-// Mock demo content exists for the byggexp.se locales only; nb (byggexp.no) has
-// its own real content and never falls back to these placeholders.
-type MockLocale = Exclude<BlogLocale, 'nb'>;
+// Mock demo content exists for sv/en/ru only; nb (byggexp.no) and pl have their
+// own real content (or none yet) and never fall back to these placeholders.
+type MockLocale = Exclude<BlogLocale, 'nb' | 'pl'>;
 type Localized = Record<MockLocale, string>;
 
 type Seed = {
@@ -387,7 +387,7 @@ function toPost(seed: Seed, locale: MockLocale): BlogPost {
 }
 
 export function getMockBlogPosts(locale: BlogLocale): BlogPost[] {
-  if (locale === 'nb') return [];
+  if (locale === 'nb' || locale === 'pl') return [];
   return SEEDS.map((seed) => toPost(seed, locale));
 }
 
@@ -395,7 +395,7 @@ export function getMockBlogPost(
   locale: BlogLocale,
   slug: string,
 ): BlogPost | null {
-  if (locale === 'nb') return null;
+  if (locale === 'nb' || locale === 'pl') return null;
   const seed = SEEDS.find((s) => s.slug === slug);
   return seed ? toPost(seed, locale) : null;
 }

@@ -62,4 +62,20 @@ export const featuresTranslations10_11 = {
     featuresCard11Step2: "Grunnlaget lages for hver ansatt",
     featuresCard11Step3: "Eksporter lønnsgrunnlaget med ett klikk",
   },
+
+  pl: {
+    featuresCard10Title: "Wydatki i koszty",
+    featuresCard10Text:
+      "Panuj nad wszystkimi wydatkami i kosztami w każdym projekcie. Zrób zdjęcie paragonu, a trafi on automatycznie do właściwego projektu.",
+    featuresCard10Step1: "Zrób zdjęcie paragonu w aplikacji",
+    featuresCard10Step2: "Przypisz do właściwego projektu",
+    featuresCard10Step3: "Widzisz koszty w czasie rzeczywistym",
+
+    featuresCard11Title: "Wypłaty z tych samych godzin",
+    featuresCard11Text:
+      "Zarejestrowane godziny automatycznie stają się podstawą do wypłaty — przy minimalnych ręcznych poprawkach.",
+    featuresCard11Step1: "Godziny rejestrują się automatycznie",
+    featuresCard11Step2: "Podstawa powstaje dla każdego pracownika",
+    featuresCard11Step3: "Wyeksportuj dane do wypłaty jednym kliknięciem",
+  },
 } as const;

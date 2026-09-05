@@ -102,4 +102,30 @@ export const featuresTranslations4_6 = {
     featuresCard6Step2: "Koble til prosjekt eller arbeider",
     featuresCard6Step3: "Følg plassering og ansvar",
   },
+
+  pl: {
+    featuresCard4Title: "Dokumentacja zdjęciowa powiązana ze zmianą",
+    featuresCard4Text:
+      "Każde zdjęcie zapisuje się razem ze zmianą, projektem, godziną, GPS i pracownikiem.",
+
+    featuresCard4Step1: "Rób zdjęcia w aplikacji",
+    featuresCard4Step2: "Zdjęcie powiąże się ze zmianą",
+    featuresCard4Step3: "Cała historia zawsze pod ręką",
+
+    featuresCard5Title: "Planowanie projektów i pracowników",
+    featuresCard5Text:
+      "Zaplanuj projekty, rozdziel pracowników i miej pełny obraz obłożenia firmy. Wszystkie projekty w jednym kalendarzu.",
+
+    featuresCard5Step1: "Utwórz projekt i ustaw harmonogram",
+    featuresCard5Step2: "Przypisz pracowników do projektu",
+    featuresCard5Step3: "Panuj nad obłożeniem firmy",
+
+    featuresCard6Title: "Ewidencja sprzętu i narzędzi",
+    featuresCard6Text:
+      "Przypisuj sprzęt i narzędzia do pracowników lub projektów. Zawsze wiesz, gdzie się znajdują i kto za nie odpowiada.",
+
+    featuresCard6Step1: "Dodaj sprzęt i narzędzia",
+    featuresCard6Step2: "Przypisz do projektu lub pracownika",
+    featuresCard6Step3: "Śledź lokalizację i odpowiedzialność",
+  },
 } as const;

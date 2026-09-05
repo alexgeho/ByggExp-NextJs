@@ -94,4 +94,28 @@ export const translations = {
     whyResultText:
       "kostnadene øker, fakturaer sendes senere og betalinger forsinkes i uker ...",
   },
+
+  pl: {
+    how: "Jak to działa",
+    pricing: "Cennik",
+    company: "O nas",
+    demo: "Umów demo",
+
+    whyTitle: "Sedno problemu",
+    whyHeading:
+      "Firmy tracą pieniądze nie przez słabych pracowników, lecz dlatego, że robią ręcznie to, co skuteczne firmy już dawno zautomatyzowały",
+
+    whyItem1:
+      "Godziny przychodzą SMS-em lub na papierze — biuro ręcznie przepisuje je do Excela",
+    whyItem2:
+      "Pracownik zapomni zgłosić godziny — ktoś musi dzwonić i przypominać",
+    whyItem3:
+      "Godziny z budowy nie zgadzają się z danymi klienta — czas ucieka na wyjaśnianie różnic",
+    whyItem4:
+      "Biuro spędza dziesiątki godzin na ręcznym wpisywaniu do Excela",
+
+    whyResult: "W efekcie:",
+    whyResultText:
+      "koszty rosną, faktury wychodzą później, a płatności grzęzną tygodniami ...",
+  },
 } as const;

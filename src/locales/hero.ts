@@ -91,4 +91,27 @@ export const heroTranslations = {
     heroFeature2: "Kom i gang på 15 minutter",
     heroFeature3: "Ingen bindingstid",
   },
+
+  pl: {
+    heroPill: "Zarządzanie budową",
+
+    heroTitle: "Automatyczna ewidencja czasu pracy i zarządzanie projektami",
+
+    heroTitleAccent: "dla firm budowlanych",
+
+    heroSubtitle:
+      "Szybsze fakturowanie i wypłaty, zadania z automatycznymi przypomnieniami, kontrola zmian w czasie rzeczywistym, planowanie. ",
+    heroSubtitleShort:
+      "Szybsze fakturowanie i wypłaty, zadania z automatycznymi przypomnieniami ... ",
+
+    heroSubtitleBtnMore: "Więcej ▼",
+    heroSubtitleBtnLess: "Mniej ▲",
+
+    heroDemo: "Umów demo",
+    heroHow: "Jak to działa",
+
+    heroFeature1: "Pierwszy miesiąc za darmo",
+    heroFeature2: "Start w 15 minut",
+    heroFeature3: "Bez zobowiązań",
+  },
 } as const;

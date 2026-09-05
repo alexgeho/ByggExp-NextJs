@@ -47,6 +47,7 @@ const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   en: [],
   ru: [],
   nb: NB_SORTED,
+  pl: [],
 };
 
 // Articles that originally shared a stock cover get a unique, on-brand

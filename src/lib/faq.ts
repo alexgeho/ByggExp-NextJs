@@ -33,6 +33,7 @@ const FAQ_HEADINGS: Record<BlogLocale, string> = {
   en: 'Frequently asked questions',
   ru: 'Частые вопросы',
   nb: 'Vanlige spørsmål',
+  pl: 'Najczęściej zadawane pytania',
 };
 
 export function extractFaqFromHtml(html: string, locale: BlogLocale): FaqItem[] {

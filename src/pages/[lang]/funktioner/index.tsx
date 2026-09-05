@@ -154,6 +154,7 @@ const PAMINNELSER_STEPS: Record<LandingLanguageCode, string[]> = {
   en: ['Create a task with a deadline', 'Set a reminder interval', 'The app reminds until it’s done'],
   ru: ['Создайте задачу со сроком', 'Задайте интервал напоминаний', 'Приложение напоминает, пока не выполнено'],
   nb: ['Opprett oppgave med frist', 'Sett påminnelsesintervall', 'Appen minner til det er gjort'],
+  pl: ['Utwórz zadanie z terminem', 'Ustaw interwał przypomnień', 'Aplikacja przypomina, aż zadanie będzie gotowe'],
 };
 
 const READ_MORE: Record<LandingLanguageCode, string> = {
@@ -161,6 +162,7 @@ const READ_MORE: Record<LandingLanguageCode, string> = {
   en: 'Read more about the feature →',
   ru: 'Подробнее о функции →',
   nb: 'Les mer om funksjonen →',
+  pl: 'Dowiedz się więcej o funkcji →',
 };
 
 const CLOSE_LABEL: Record<LandingLanguageCode, string> = {
@@ -168,6 +170,7 @@ const CLOSE_LABEL: Record<LandingLanguageCode, string> = {
   en: 'Close',
   ru: 'Закрыть',
   nb: 'Lukk',
+  pl: 'Zamknij',
 };
 
 const ZOOM_LABEL: Record<LandingLanguageCode, string> = {
@@ -175,6 +178,7 @@ const ZOOM_LABEL: Record<LandingLanguageCode, string> = {
   en: 'Enlarge image',
   ru: 'Увеличить изображение',
   nb: 'Forstørr bildet',
+  pl: 'Powiększ obraz',
 };
 
 // The three numbered steps shown on a feature card, reused from the homepage
@@ -335,6 +339,40 @@ const FUNKTIONER_COPY = {
       {
         title: 'Support alltid nær',
         body: 'Vi er tilgjengelige for alle spørsmål – raskt og på en menneskelig måte.',
+      },
+    ],
+  },
+  pl: {
+    badge: 'Funkcje',
+    title: 'Wszystkie funkcje ByggExp',
+    subtitle:
+      'Odkryj, co potrafi ByggExp – od ofert i ewidencji czasu po faktury i wypłaty. Kliknij funkcję, aby zobaczyć, jak działa.',
+    empty: 'Brak funkcji.',
+    customTitle: 'Tworzymy funkcje pod Wasze potrzeby',
+    customBody:
+      'Każda firma ma swój sposób pracy. ByggExp to nie tylko gotowe rozwiązanie – to platforma, którą chętnie rozwijamy pod Wasze potrzeby. Opowiedzcie o swoich wyzwaniach i życzeniach, a zbudujemy to szybko i solidnie. Wasze pomysły stają się częścią nowych funkcji i aktualizacji ByggExp.',
+    customCta: 'Umów demo',
+    whyTitle: 'Nadal masz wątpliwości?',
+    why: [
+      {
+        title: 'Łatwy start',
+        body: 'Nie wymaga specjalnej wiedzy. Pomożemy skonfigurować i wystartować z zespołem.',
+      },
+      {
+        title: 'Bezpieczeństwo i kontrola nad danymi',
+        body: 'Twoje dane są chronione – zawsze możesz je przywrócić i wyeksportować.',
+      },
+      {
+        title: 'Elastyczność pod Wasze procesy',
+        body: 'Dostosujemy ByggExp do Waszych potrzeb – powiedzcie tylko, co jest dla Was ważne.',
+      },
+      {
+        title: 'Działa na wszystkich urządzeniach',
+        body: 'Telefon, tablet, komputer – wybierzcie to, co pasuje Waszemu zespołowi.',
+      },
+      {
+        title: 'Wsparcie zawsze blisko',
+        body: 'Jesteśmy do dyspozycji przy każdym pytaniu – szybko i po ludzku.',
       },
     ],
   },

@@ -92,4 +92,29 @@ export const painTranslations = {
     painResultText:
       "kostnadene øker, fakturaer sendes senere og betalinger forsinkes i uker ...",
   },
+
+  pl: {
+    painTitle: "Sedno problemu",
+    painHeading:
+      "Firmy tracą pieniądze, bo wciąż robią ",
+
+    painTitleAccent1: "ręcznie",
+
+    painHeading2: " to, co skuteczni już dawno ",
+
+    painTitleAccent2: "zautomatyzowali",
+
+    painItem1:
+      "Godziny przychodzą SMS-em lub na papierze — biuro ręcznie przepisuje je do Excela",
+    painItem2:
+      "Pracownik zapomni zgłosić godziny — ktoś musi dzwonić i przypominać",
+    painItem3:
+      "Godziny z budowy nie zgadzają się z danymi klienta — czas ucieka na wyjaśnianie różnic",
+    painItem4:
+      "Biuro spędza dziesiątki godzin na ręcznym wpisywaniu do Excela",
+
+    painResult: "W efekcie:",
+    painResultText:
+      "koszty rosną, faktury wychodzą później, a płatności grzęzną tygodniami ...",
+  },
 };

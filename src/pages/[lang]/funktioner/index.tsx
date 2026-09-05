@@ -93,6 +93,9 @@ const FEATURE_CONTENT_OVERRIDE: Record<
   'hantera-uppgifter-i-byggprojekt': {
     sv: { title: 'Arbetsuppgifter med autopåminnelser' },
   },
+  'loneunderlag-for-byggforetag': {
+    sv: { title: 'Från insamlade tidrapporter till lön' },
+  },
 };
 
 // Feature slugs kept out of the funktioner carousel. The auto-reminders
@@ -318,16 +321,24 @@ function FeatureCarousel({
     [posts, lang, badge],
   );
 
-  // Bring a given extended slide to the centre of the peek carousel.
+  // Bring a given extended slide to the centre of the peek carousel. The
+  // non-smooth path must be truly instant — the track has CSS
+  // `scroll-behavior: smooth`, which would otherwise animate the loop teleport
+  // into a visible rewind across the whole list, so we disable it inline.
   const centerExt = useCallback((extIndex: number, smooth = true) => {
     const el = trackRef.current;
     if (!el) return;
     const card = el.children[extIndex] as HTMLElement | undefined;
     if (!card) return;
-    el.scrollTo({
-      left: card.offsetLeft - (el.clientWidth - card.offsetWidth) / 2,
-      behavior: smooth ? 'smooth' : 'auto',
-    });
+    const left = card.offsetLeft - (el.clientWidth - card.offsetWidth) / 2;
+    if (smooth) {
+      el.scrollTo({ left, behavior: 'smooth' });
+      return;
+    }
+    const prev = el.style.scrollBehavior;
+    el.style.scrollBehavior = 'auto';
+    el.scrollLeft = left;
+    el.style.scrollBehavior = prev;
   }, []);
 
   // As the user scrolls, mark whichever slide is closest to the centre active;

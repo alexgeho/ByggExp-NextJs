@@ -102,6 +102,17 @@ const FEATURE_CONTENT_OVERRIDE: Record<
 // feature folds into the tasks card ("Arbetsuppgifter med autopåminnelser").
 const HIDDEN_FEATURE_SLUGS = new Set(['paminnelser-uppgifter-och-deadlines']);
 
+// Per-feature cover overrides. Löneunderlag shares its CMS banner with
+// Tidrapportering (same Arbetspass mockup), which looked like a duplicate when
+// the two cards sit next to each other — use the homepage salary illustration.
+const FEATURE_IMAGE_OVERRIDE: Record<string, string> = {
+  'loneunderlag-for-byggforetag': '/landing/features/12salary.webp',
+};
+
+function featureImage(post: BlogPost): string | undefined {
+  return FEATURE_IMAGE_OVERRIDE[post.slug] || post.coverImageUrl;
+}
+
 function featureTitle(post: BlogPost, lang: LandingLanguageCode): string {
   return FEATURE_CONTENT_OVERRIDE[post.slug]?.[lang]?.title || post.title;
 }
@@ -457,6 +468,7 @@ function FeatureCarousel({
           {slides.map((post, i) => {
             const steps = featureSteps(post.slug, lang);
             const title = featureTitle(post, lang);
+            const coverImage = featureImage(post);
             const isActive = i === activeExt;
             return (
               <div
@@ -465,14 +477,16 @@ function FeatureCarousel({
                 onClick={() => selectExt(i)}
               >
                 <h3 className="fk-title">{title}</h3>
-                {post.coverImageUrl ? (
+                {coverImage ? (
                   <div className="fk-visual">
                     <img
-                      src={post.coverImageUrl}
+                      src={coverImage}
                       alt={title}
+                      decoding="async"
+                      draggable={false}
                       onClick={(e) => {
                         e.stopPropagation();
-                        if (isActive) setLightbox({ url: post.coverImageUrl!, alt: title });
+                        if (isActive) setLightbox({ url: coverImage, alt: title });
                         else selectExt(i);
                       }}
                     />
@@ -692,11 +706,15 @@ export default function FunktionerPage({
           opacity: 0.4;
           filter: blur(2px);
           transform: scale(0.92);
+          will-change: transform, opacity, filter;
           transition:
             opacity 0.3s ease,
             filter 0.3s ease,
             transform 0.3s ease,
             box-shadow 0.3s ease;
+        }
+        .fk-visual img {
+          transform: translateZ(0);
         }
         .funktioner-slide.is-active {
           opacity: 1;

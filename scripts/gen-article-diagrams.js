@@ -334,6 +334,21 @@ const enkeltSystem = frame(`
   ${note('Systemet laget faktiskt använder ger rätt siffror – enkelhet vinner.', INK)}
 `);
 
+// 25. Bestille HMS-kort – fire steg (nb)
+const nbBestilleHms = frame(`
+  ${title('Bestille HMS-kort – fire steg')}
+  ${stepBox(30, 120, 150, 74, 'Registrer', 'virksomheten', MUT)}
+  ${arrow(180, 216, 157)}
+  ${stepBox(216, 120, 150, 74, 'Meld inn ansatte', '(A-melding)', BLUE)}
+  ${arrow(366, 402, 157)}
+  ${stepBox(402, 120, 150, 74, 'Bestill på', 'hmskort.no', GREEN)}
+  ${arrow(552, 588, 157)}
+  ${stepBox(588, 120, 104, 74, 'Kort', 'utstedes', BLUE)}
+  <text x="40" y="240" ${font} font-size="15" font-weight="700" fill="${INK}">Bruk den offisielle kanalen hmskort.no – tredjeparter tar ofte mye mer.</text>
+  <text x="40" y="266" ${font} font-size="14" fill="${MUT}">Pris via hmskort.no: ca. 135 kr + mva per kort.</text>
+  ${ARR_DEF}
+`);
+
 // 22. Mannskapsliste / elektronisk oversiktsliste – krav (nb)
 const nbMannskapsliste = frame(`
   ${title('Elektronisk oversiktsliste – krav (&#167; 15)')}
@@ -479,6 +494,7 @@ const DIAGRAMS = {
   'nb-stemplingsur-gps': nbStemplingsur,
   'nb-mannskapsliste-krav': nbMannskapsliste,
   'nb-hms-kort': nbHmsKort,
+  'nb-bestille-hms-kort': nbBestilleHms,
   'enkelt-tidrapporteringssystem': enkeltSystem,
   'ab-kontrakt': abKontrakt,
   'ata-flode': ata,

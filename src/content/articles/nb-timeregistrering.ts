@@ -619,6 +619,7 @@ const T_TIMELISTE_MAL_HTML = `
 </tbody>
 </table></div>
 <p>Legg til en rad per arbeidsdag, og summer timene nederst. Ett ark per ansatt per uke er en vanlig oppsett.</p>
+<p><a href="/nb/maler/timeliste-mal.csv" download>Last ned timeliste-mal</a> (åpnes i Excel) – ferdig oppsett du bare fyller ut.</p>
 
 <h2>Mal i Excel eller på papir?</h2>
 <p>En Excel-mal regner ut summene for deg, mens en utskrift er grei å ha i bilen eller på brakka. Begge deler funker for de aller minste firmaene. Ulempen er den samme: noen må samle inn arkene og taste tallene inn på nytt til lønn og faktura.</p>
@@ -962,6 +963,8 @@ const FM_FAKTURAMAL_HTML = `
 <tr><td>Kontonummer / KID</td><td>&nbsp;</td></tr>
 </tbody>
 </table></div>
+
+<p><a href="/nb/maler/fakturamal.csv" download>Last ned fakturamal</a> (åpnes i Excel) – sjekklisten over feltene, klar til utfylling.</p>
 
 <h2>Slipp å skrive fakturaer manuelt</h2>
 <p>En mal funker for de aller minste, men blir fort tungvint. Med et <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram for bygg</a> lages fakturaen fra de loggede timene og materiellet på prosjektet, med riktig mva og forfallsdato – uten å taste inn alt på nytt. Grunnlaget er <a href="/nb/blog/timeregistrering-app-bygg">registrert tid</a>.</p>

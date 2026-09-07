@@ -3,6 +3,27 @@
 Разбор «Not found (404)» из Google Search Console (byggexp.se). Дата: 2026-09-01.
 Статус GSC: 421 проиндексировано, 135 не проиндексировано (8 причин).
 
+## ✅ РАУНД 2 (2026-09-07) — Validation всё ещё Failed, добил остаток
+
+GSC 404 = **25** (было 26), статус **Failed**. Прогнал все 25 live-fetch'ем — разбивка:
+- **Уже 200 на live** (фикс раунда 1 сработал, ждут ре-валидации): `/sv/blog/byggnads-kollektivavtal-2026`,
+  `/sv/blog/anbudskalkyl-bygg`, `/blog/bygg-appar-i-sverige`, `/contacts`.
+- **Литеральные `[lang]`/`[slug]`** (11 шт, краул Aug 11–25, ДО фикса) — из sitemap уже убраны
+  (`curl sitemap.xml | grep [lang]` = 0), Google выкинет на рекролле. Не трогаю (нельзя редиректить
+  скобочные source в path-to-regexp).
+- **Всё ещё 404** — `/en|/ru` URL, которые Google проиндексировал ДО перехода на sv-only. Убрать из
+  sitemap было мало: Google продолжает краулить уже-индексированные URL. **→ Добавил 301 в
+  `next.config.mjs`** (все цели проверены 200):
+  `/en/verktyg/{ackord,ob-overtid,restidsersattning}-kalkylator` → `/sv/verktyg/...`,
+  `/en|/ru/blog/tidrapport-app-iphone` → `/sv/blog/...`,
+  `/en|/ru/blog/faktura-med-rotavdrag` → `/sv/blog/...`.
+- **Фантомы** `/faq`, `/login` (нет внутр. ссылок, старая выдача) → **301 на `/sv`**.
+- **`/blog/test`** — мусор, цели нет, оставляю 404 (Google выкинет сам).
+
+**Осталось:** деплой (push→VPS ~1–2 мин) → проверить live 301 → в GSC **Validate fix** для «Not found (404)».
+
+---
+
 ## ✅ РЕШЕНО (2026-09-01, вечер) — проверено на live + пофикшено в коде
 
 Прогнал все 26 URL по live-сайту (fetch), разделил на баги / историю / корректные 404:

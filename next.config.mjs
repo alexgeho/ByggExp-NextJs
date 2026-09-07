@@ -37,6 +37,23 @@ const nextConfig = {
       { source: "/sv/blog/anbudskalkyl-bygg", destination: "/sv/blog/kalkylprogram-bygg", statusCode: 301 },
       { source: "/sv/blog/bygg-appar-i-sverige", destination: "/sv/blog/bygg-app", statusCode: 301 },
 
+      // GSC "Not found (404)" round 2: /en & /ru URLs Google indexed before these
+      // pages went sv-only. Removing them from the sitemap wasn't enough — Google
+      // keeps re-crawling the already-indexed URLs and hitting 404. 301 to the live
+      // Swedish page (all targets verified 200) so the old URL is replaced.
+      { source: "/en/verktyg/ackord-kalkylator", destination: "/sv/verktyg/ackord-kalkylator", statusCode: 301 },
+      { source: "/en/verktyg/ob-overtid-kalkylator", destination: "/sv/verktyg/ob-overtid-kalkylator", statusCode: 301 },
+      { source: "/en/verktyg/restidsersattning-kalkylator", destination: "/sv/verktyg/restidsersattning-kalkylator", statusCode: 301 },
+      { source: "/en/blog/tidrapport-app-iphone", destination: "/sv/blog/tidrapport-app-iphone", statusCode: 301 },
+      { source: "/ru/blog/tidrapport-app-iphone", destination: "/sv/blog/tidrapport-app-iphone", statusCode: 301 },
+      { source: "/en/blog/faktura-med-rotavdrag", destination: "/sv/blog/faktura-med-rotavdrag", statusCode: 301 },
+      { source: "/ru/blog/faktura-med-rotavdrag", destination: "/sv/blog/faktura-med-rotavdrag", statusCode: 301 },
+
+      // Phantom routes Google indexed that have no marketing page (no internal
+      // links point here). 301 to the home page to clear the 404.
+      { source: "/faq", destination: "/sv", statusCode: 301 },
+      { source: "/login", destination: "/sv", statusCode: 301 },
+
       // Clean vanity short links for marketing (YouTube, ads, print). The user
       // shares the pretty /go/... URL; the redirect appends UTM so GA4 attributes
       // the visit. Temporary (307) so a link can be re-pointed later without a

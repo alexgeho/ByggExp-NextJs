@@ -33,6 +33,15 @@ const P_TIMEREGISTRERING_APP_BYGG_HTML = `
 <h2>Enkelt nok til at hele laget bruker det</h2>
 <p>Det mest avanserte systemet er verdiløst hvis laget ikke gidder å bruke det. En enkel timeregistrering-app – der man bare sjekker inn og ut – gir høy etterlevelse, og det er etterlevelsen som avgjør om tallene stemmer.</p>
 
+<h2>Timeregistrering som passer ulike behov</h2>
+<p>Enten dere er noen få eller et helt lag, er poenget det samme – timene skal registreres enkelt og havne riktig:</p>
+<ul>
+<li><strong>Fra Excel til app:</strong> mange starter med timeregistrering i Excel, men slipper dobbeltarbeidet når registreringen skjer i mobilen.</li>
+<li><strong>For ansatte og små bedrifter:</strong> elektronisk timeregistrering for ansatte gir ferdig underlag – også for mindre firmaer.</li>
+<li><strong>Elektronisk og automatisk:</strong> med GPS og innsjekk skjer timeføringen nær automatisk, så du slipper å regne for hånd.</li>
+<li><strong>På mobil:</strong> hele laget registrerer timer på mobilen, uansett hvor på bygget de er.</li>
+</ul>
+
 <h2>Fra timer til lønn og faktura</h2>
 <p>Verdien kommer når timene brukes: i ByggExp blir de registrerte timene automatisk grunnlag for både lønnsunderlag og fakturalinjer, og regnes inn i prosjektets økonomi. Registrer én gang, bruk overalt.</p>
 

@@ -14,7 +14,8 @@
 - Честно, по Arbeidstilsynet/hmskort.no; ByggExp карты НЕ выдаёт (явно), мягкая воронка на mannskapsliste. Все 200, в sitemap.
 - Прочее из Planner: timeregistrering 500 / timeliste 100-1K (покрыто); **stemplingsur 0-10 (мёртвый)**.
 - ✅ `timeliste-mal` (100-1K) — статья с инлайн-шаблоном (копировать в Excel/распечатать) + воронка на timeliste-app. Live, в sitemap.
-- nb-блог теперь: **11 статей** (timeregistrering ×4, mannskapsliste/HMS ×5, timeliste ×2). Дальше по NO — по желанию (prosjektstyring 100-1K).
+- ✅ `prosjektstyring-bygg` (до 100-1K) — pillar по модулю Prosjekt (Gantt/oppgaver/timer→margin) +диаграмма. Live, в sitemap.
+- nb-блог теперь: **12 статей** (timeregistrering ×4, mannskapsliste/HMS ×5, timeliste ×2, prosjektstyring ×1). Все топовые NO-ключи из Planner покрыты (кроме мёртвого stemplingsur).
 
 **SE-статья `enkelt-tidrapporteringssystem`** (KW 880/mo, был 404) — `src/content/articles/kvalitet.ts`
 - Спок к pillar `tidrapporteringssystem-bygg` под точный запрос «enkelt tidrapporteringssystem». Угол = enkelhet

@@ -1,6 +1,12 @@
 import type { CTAProps } from "../../types/cta";
 import { useState, type FormEvent, type ChangeEvent } from "react";
 import { API_URL } from "../../config/api";
+import {
+  NO_LEAD_FORM_ERRORS,
+  hasLeadFormErrors,
+  isValidEmail,
+  validateLeadForm,
+} from "../../lib/leadForm";
 import { CalendlyInlineWidget } from "../CalendlyInlineWidget";
 
 const CALENDLY_URL = "https://calendly.com/870717ag/30min";
@@ -10,11 +16,15 @@ function CTA({ ctaT }: CTAProps) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(false);
+  const [errors, setErrors] = useState(NO_LEAD_FORM_ERRORS);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (!name.trim() || !email.trim() || !phone.trim()) {
+    const nextErrors = validateLeadForm(name, email);
+    setErrors(nextErrors);
+
+    if (hasLeadFormErrors(nextErrors)) {
       return;
     }
 
@@ -25,7 +35,15 @@ function CTA({ ctaT }: CTAProps) {
       const response = await fetch(`${API_URL}/mail/demo-request`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          // The mail backend labels the lead with this; without it the
+          // notification falls back to the old /ru page.
+          "f-source":
+            typeof window !== "undefined"
+              ? `${window.location.host}${window.location.pathname}`
+              : "cta",
+        }),
       });
 
       if (!response.ok) {
@@ -45,7 +63,14 @@ function CTA({ ctaT }: CTAProps) {
   const [name, setName] = useState("");
 
   function handleNameChange(event: ChangeEvent<HTMLInputElement>) {
-    setName(event.currentTarget.value);
+    const value = event.currentTarget.value;
+    setName(value);
+
+    // Clear the warning as soon as the field is filled in, so the user
+    // sees the form recover while typing instead of only on re-submit.
+    if (errors.name && value.trim()) {
+      setErrors((prev) => ({ ...prev, name: false }));
+    }
   }
   /* END */
 
@@ -53,7 +78,12 @@ function CTA({ ctaT }: CTAProps) {
   const [email, setEmail] = useState("");
 
   function handleEmailChange(event: ChangeEvent<HTMLInputElement>) {
-    setEmail(event.currentTarget.value);
+    const value = event.currentTarget.value;
+    setEmail(value);
+
+    if (errors.email && isValidEmail(value)) {
+      setErrors((prev) => ({ ...prev, email: false }));
+    }
   }
   /* END */
 
@@ -144,7 +174,10 @@ function CTA({ ctaT }: CTAProps) {
               <h3>{ctaT.ctaFormTitle}</h3>
 
               <form id="demo-form" noValidate onSubmit={handleSubmit}>
-                <div className="form-group" data-field="name">
+                <div
+                  className={`form-group${errors.name ? " error" : ""}`}
+                  data-field="name"
+                >
                   <label htmlFor="f-name">{ctaT.ctaNameLabel}</label>
 
                   {/* NAME */}
@@ -156,13 +189,20 @@ function CTA({ ctaT }: CTAProps) {
                     autoComplete="name"
                     onChange={handleNameChange}
                     value={name}
+                    aria-invalid={errors.name}
+                    aria-describedby="f-name-error"
                   />
 
-                  <div className="err-msg">{ctaT.ctaNameError}</div>
+                  <div className="err-msg" id="f-name-error" role="alert">
+                    {ctaT.ctaNameError}
+                  </div>
                 </div>
 
                 {/* EMAIL */}
-                <div className="form-group" data-field="email">
+                <div
+                  className={`form-group${errors.email ? " error" : ""}`}
+                  data-field="email"
+                >
                   <label htmlFor="f-email">{ctaT.ctaEmailLabel}</label>
 
                   <input
@@ -173,14 +213,23 @@ function CTA({ ctaT }: CTAProps) {
                     autoComplete="email"
                     onChange={handleEmailChange}
                     value={email}
+                    aria-invalid={errors.email}
+                    aria-describedby="f-email-error"
                   />
 
-                  <div className="err-msg">{ctaT.ctaEmailError}</div>
+                  <div className="err-msg" id="f-email-error" role="alert">
+                    {ctaT.ctaEmailError}
+                  </div>
                 </div>
 
-                {/* PHONE */}
+                {/* PHONE — optional, an email address is enough */}
                 <div className="form-group" data-field="phone">
-                  <label htmlFor="f-phone">{ctaT.ctaPhoneLabel}</label>
+                  <label htmlFor="f-phone">
+                    {ctaT.ctaPhoneLabel}{" "}
+                    <span className="label-optional">
+                      ({ctaT.ctaPhoneOptional})
+                    </span>
+                  </label>
 
                   <input
                     id="f-phone"
@@ -191,8 +240,6 @@ function CTA({ ctaT }: CTAProps) {
                     onChange={handlePhoneChange}
                     value={phone}
                   />
-
-                  <div className="err-msg">{ctaT.ctaPhoneError}</div>
                 </div>
 
                 {/* SUBMIT */}
@@ -233,10 +280,10 @@ function CTA({ ctaT }: CTAProps) {
 
               <h3>{ctaT.ctaSuccessTitle}</h3>
 
-              <p id="success-msg">{ctaT.ctaSuccessText}</p>
               <p className="form-success-hint">
                 {ctaT.ctaSuccessCalendlyHint}
               </p>
+              <p id="success-msg">{ctaT.ctaSuccessText}</p>
 
               <div className="calendly-embed">
                 <CalendlyInlineWidget

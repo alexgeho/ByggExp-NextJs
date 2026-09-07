@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { languages, selectableLanguages } from "../../locales/languages";
@@ -44,6 +44,48 @@ function Header({ headerT }: HeaderProps) {
     setIsOpen(false);
     setIsMenuOpen(false);
   }
+
+  /* Close the header dropdowns on a click outside them (or on Escape).
+     Without this the language list stays open over the page until the
+     visitor picks a language. */
+  useEffect(() => {
+    if (!isOpen && !resOpen) {
+      return;
+    }
+
+    function handlePointerDown(event: PointerEvent) {
+      const target = event.target;
+
+      if (!(target instanceof Element)) {
+        setIsOpen(false);
+        setResOpen(false);
+        return;
+      }
+
+      if (!target.closest(".language-switcher, .mobile-language")) {
+        setIsOpen(false);
+      }
+
+      if (!target.closest(".nav-dropdown")) {
+        setResOpen(false);
+      }
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+        setResOpen(false);
+      }
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, resOpen]);
   /*  */
   return (
     <header className="site-header">

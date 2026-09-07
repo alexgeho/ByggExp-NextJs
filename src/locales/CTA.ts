@@ -25,7 +25,7 @@ export const ctaTranslations = {
 
     ctaPhoneLabel: "Телефон",
     ctaPhonePlaceholder: "+46 70 123 45 67",
-    ctaPhoneError: "Укажи телефон для связи",
+    ctaPhoneOptional: "необязательно",
 
     ctaButton: "Записаться на демо",
     ctaButtonSending: "Отправляем...",
@@ -35,9 +35,9 @@ export const ctaTranslations = {
       "Отправляя форму, Вы соглашаетесь с обработкой персональных данных. Не передаём третьим лицам.",
 
     ctaSuccessTitle: "Заявка отправлена!",
-    ctaSuccessText: "Свяжемся с тобой в течение часа в рабочее время.",
     ctaSuccessCalendlyHint:
-      "А если хотите — можете сразу забронировать удобное время ниже.",
+      "Выберите удобное время ниже — демо занимает 15 минут.",
+    ctaSuccessText: "Не нашли подходящего времени? Напишем вам на почту.",
     ctaCalendlyButton: "Выбрать время в календаре",
   },
 
@@ -67,7 +67,7 @@ export const ctaTranslations = {
 
     ctaPhoneLabel: "Phone",
     ctaPhonePlaceholder: "+46 70 123 45 67",
-    ctaPhoneError: "Please enter your phone number",
+    ctaPhoneOptional: "optional",
 
     ctaButton: "Book a Demo",
     ctaButtonSending: "Sending...",
@@ -77,10 +77,9 @@ export const ctaTranslations = {
       "By submitting this form, you agree to the processing of your personal data. We do not share it with third parties.",
 
     ctaSuccessTitle: "Request Sent!",
-    ctaSuccessText:
-      "We will contact you within one hour during business hours.",
     ctaSuccessCalendlyHint:
-      "Or, if you'd like, you can book a convenient time right away below.",
+      "Pick a time that suits you below — the demo takes 15 minutes.",
+    ctaSuccessText: "Nothing that fits? We'll reach out by email.",
     ctaCalendlyButton: "Pick a time on the calendar",
   },
 
@@ -110,7 +109,7 @@ export const ctaTranslations = {
 
     ctaPhoneLabel: "Telefon",
     ctaPhonePlaceholder: "+46 70 123 45 67",
-    ctaPhoneError: "Ange telefonnummer",
+    ctaPhoneOptional: "valfritt",
 
     ctaButton: "Boka demo",
     ctaButtonSending: "Skickar...",
@@ -120,9 +119,9 @@ export const ctaTranslations = {
       "Genom att skicka formuläret godkänner du behandlingen av personuppgifter. Vi delar inte uppgifterna med tredje part.",
 
     ctaSuccessTitle: "Ansökan skickad!",
-    ctaSuccessText: "Vi kontaktar dig inom en timme under arbetstid.",
     ctaSuccessCalendlyHint:
-      "Vill du kan du också boka en passande tid direkt nedan.",
+      "Välj en tid som passar dig nedan – demon tar 15 minuter.",
+    ctaSuccessText: "Passar ingen tid? Då hör vi av oss via e-post.",
     ctaCalendlyButton: "Välj en tid i kalendern",
   },
 
@@ -152,7 +151,7 @@ export const ctaTranslations = {
 
     ctaPhoneLabel: "Telefon",
     ctaPhonePlaceholder: "+47 400 00 000",
-    ctaPhoneError: "Oppgi telefonnummer",
+    ctaPhoneOptional: "valgfritt",
 
     ctaButton: "Bestill demo",
     ctaButtonSending: "Sender...",
@@ -162,9 +161,9 @@ export const ctaTranslations = {
       "Ved å sende inn skjemaet godtar du behandlingen av personopplysninger. Vi deler ikke opplysningene med tredjepart.",
 
     ctaSuccessTitle: "Søknad sendt!",
-    ctaSuccessText: "Vi kontakter deg innen en time i arbeidstiden.",
     ctaSuccessCalendlyHint:
-      "Vil du, kan du også bestille et passende tidspunkt direkte nedenfor.",
+      "Velg et tidspunkt som passer deg nedenfor – demoen tar 15 minutter.",
+    ctaSuccessText: "Passer ingen av tidene? Da tar vi kontakt på e-post.",
     ctaCalendlyButton: "Velg et tidspunkt i kalenderen",
   },
 
@@ -194,7 +193,7 @@ export const ctaTranslations = {
 
     ctaPhoneLabel: "Telefon",
     ctaPhonePlaceholder: "+48 600 000 000",
-    ctaPhoneError: "Podaj numer telefonu",
+    ctaPhoneOptional: "opcjonalnie",
 
     ctaButton: "Umów demo",
     ctaButtonSending: "Wysyłanie...",
@@ -229,7 +228,7 @@ export const ctaTranslations = {
     ctaEmailError: "Введіть дійсний email",
     ctaPhoneLabel: "Телефон",
     ctaPhonePlaceholder: "+380 67 123 45 67",
-    ctaPhoneError: "Вкажіть номер телефону",
+    ctaPhoneOptional: "необов'язково",
     ctaButton: "Замовити демо",
     ctaButtonSending: "Надсилаємо...",
     ctaSubmitError: "Не вдалося надіслати заявку. Спробуйте ще раз.",
@@ -261,7 +260,7 @@ export const ctaTranslations = {
     ctaEmailError: "Anna kelvollinen sähköpostiosoite",
     ctaPhoneLabel: "Puhelin",
     ctaPhonePlaceholder: "+358 40 123 4567",
-    ctaPhoneError: "Anna puhelinnumero",
+    ctaPhoneOptional: "valinnainen",
     ctaButton: "Varaa demo",
     ctaButtonSending: "Lähetetään...",
     ctaSubmitError: "Pyynnön lähetys epäonnistui. Yritä uudelleen.",
@@ -293,7 +292,7 @@ export const ctaTranslations = {
     ctaEmailError: "Sisestage kehtiv e-posti aadress",
     ctaPhoneLabel: "Telefon",
     ctaPhonePlaceholder: "+372 5123 4567",
-    ctaPhoneError: "Sisestage telefoninumber",
+    ctaPhoneOptional: "valikuline",
     ctaButton: "Broneeri demo",
     ctaButtonSending: "Saadan...",
     ctaSubmitError: "Taotluse saatmine ebaõnnestus. Proovige uuesti.",
@@ -325,7 +324,7 @@ export const ctaTranslations = {
     ctaEmailError: "Įveskite galiojantį el. pašto adresą",
     ctaPhoneLabel: "Telefonas",
     ctaPhonePlaceholder: "+370 600 00000",
-    ctaPhoneError: "Įveskite telefono numerį",
+    ctaPhoneOptional: "neprivaloma",
     ctaButton: "Užsisakyti demo",
     ctaButtonSending: "Siunčiama...",
     ctaSubmitError: "Nepavyko išsiųsti užklausos. Bandykite dar kartą.",
@@ -357,7 +356,7 @@ export const ctaTranslations = {
     ctaEmailError: "Norādiet derīgu e-pasta adresi",
     ctaPhoneLabel: "Tālrunis",
     ctaPhonePlaceholder: "+371 20 000 000",
-    ctaPhoneError: "Norādiet tālruņa numuru",
+    ctaPhoneOptional: "nav obligāts",
     ctaButton: "Pieteikt demo",
     ctaButtonSending: "Nosūta...",
     ctaSubmitError: "Neizdevās nosūtīt pieteikumu. Mēģiniet vēlreiz.",

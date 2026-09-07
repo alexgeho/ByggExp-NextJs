@@ -1,5 +1,11 @@
 import { useState, type FormEvent, type ChangeEvent } from "react";
 import { API_URL } from "../../config/api";
+import {
+  NO_LEAD_FORM_ERRORS,
+  hasLeadFormErrors,
+  isValidEmail,
+  validateLeadForm,
+} from "../../lib/leadForm";
 import type { ContactProps } from "../../types/contact";
 import type { CTAProps } from "../../types/cta";
 import { CalendlyInlineWidget } from "../CalendlyInlineWidget";
@@ -19,6 +25,7 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(false);
+  const [errors, setErrors] = useState(NO_LEAD_FORM_ERRORS);
 
   /* INPUTS */
   const [name, setName] = useState("");
@@ -26,10 +33,22 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
   const [phone, setPhone] = useState("");
 
   function handleNameChange(event: ChangeEvent<HTMLInputElement>) {
-    setName(event.currentTarget.value);
+    const value = event.currentTarget.value;
+    setName(value);
+
+    // Clear the warning as soon as the field is filled in, so the user
+    // sees the form recover while typing instead of only on re-submit.
+    if (errors.name && value.trim()) {
+      setErrors((prev) => ({ ...prev, name: false }));
+    }
   }
   function handleEmailChange(event: ChangeEvent<HTMLInputElement>) {
-    setEmail(event.currentTarget.value);
+    const value = event.currentTarget.value;
+    setEmail(value);
+
+    if (errors.email && isValidEmail(value)) {
+      setErrors((prev) => ({ ...prev, email: false }));
+    }
   }
   function handlePhoneChange(event: ChangeEvent<HTMLInputElement>) {
     setPhone(event.currentTarget.value);
@@ -38,7 +57,10 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (!name.trim() || !email.trim() || !phone.trim()) {
+    const nextErrors = validateLeadForm(name, email);
+    setErrors(nextErrors);
+
+    if (hasLeadFormErrors(nextErrors)) {
       return;
     }
 
@@ -53,6 +75,12 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
           "f-name": name,
           "f-email": email,
           "f-phone": phone,
+          // The mail backend labels the lead with this; without it the
+          // notification falls back to the old /ru page.
+          "f-source":
+            typeof window !== "undefined"
+              ? `${window.location.host}${window.location.pathname}`
+              : "kontakt",
         }),
       });
 
@@ -303,7 +331,9 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
                   onSubmit={handleSubmit}
                   className="contact-form"
                 >
-                  <div className="contact-form-group">
+                  <div
+                    className={`contact-form-group${errors.name ? " error" : ""}`}
+                  >
                     <label htmlFor="c-name">{ctaT.ctaNameLabel}</label>
                     <input
                       id="c-name"
@@ -313,10 +343,17 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
                       autoComplete="name"
                       value={name}
                       onChange={handleNameChange}
+                      aria-invalid={errors.name}
+                      aria-describedby="c-name-error"
                     />
+                    <div className="err-msg" id="c-name-error" role="alert">
+                      {ctaT.ctaNameError}
+                    </div>
                   </div>
 
-                  <div className="contact-form-group">
+                  <div
+                    className={`contact-form-group${errors.email ? " error" : ""}`}
+                  >
                     <label htmlFor="c-email">{ctaT.ctaEmailLabel}</label>
                     <input
                       id="c-email"
@@ -326,11 +363,22 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
                       autoComplete="email"
                       value={email}
                       onChange={handleEmailChange}
+                      aria-invalid={errors.email}
+                      aria-describedby="c-email-error"
                     />
+                    <div className="err-msg" id="c-email-error" role="alert">
+                      {ctaT.ctaEmailError}
+                    </div>
                   </div>
 
+                  {/* PHONE — optional, an email address is enough */}
                   <div className="contact-form-group">
-                    <label htmlFor="c-phone">{ctaT.ctaPhoneLabel}</label>
+                    <label htmlFor="c-phone">
+                      {ctaT.ctaPhoneLabel}{" "}
+                      <span className="label-optional">
+                        ({ctaT.ctaPhoneOptional})
+                      </span>
+                    </label>
                     <input
                       id="c-phone"
                       name="phone"
@@ -380,10 +428,10 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
                 </div>
 
                 <h3>{ctaT.ctaSuccessTitle}</h3>
-                <p>{ctaT.ctaSuccessText}</p>
                 <p className="contact-success-hint">
                   {ctaT.ctaSuccessCalendlyHint}
                 </p>
+                <p>{ctaT.ctaSuccessText}</p>
 
                 <div className="contact-calendly">
                   <CalendlyInlineWidget

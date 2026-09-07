@@ -24,7 +24,7 @@ export type CTAProps = {
 
     ctaPhoneLabel: string;
     ctaPhonePlaceholder: string;
-    ctaPhoneError: string;
+    ctaPhoneOptional: string;
 
     ctaButton: string;
     ctaButtonSending: string;

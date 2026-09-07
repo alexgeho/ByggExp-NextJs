@@ -289,6 +289,27 @@
   box-shadow: 0 0 0 3px rgba(35, 148, 255, 0.18);
 }
 
+.contact-form-group label .label-optional {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.contact-form-group.error input {
+  border-color: var(--danger);
+  background: rgba(229, 85, 106, 0.06);
+}
+
+.contact-form-group .err-msg {
+  display: none;
+  font-size: 13px;
+  color: #ffb0bb;
+  margin-top: 6px;
+}
+
+.contact-form-group.error .err-msg {
+  display: block;
+}
+
 .contact-form-submit {
   width: 100%;
   padding: 17px;

@@ -18,7 +18,8 @@
 - ✅ HMS-kort кластер дожат: +`mistet-hms-kort`, `hms-kort-gyldighet`, `byggekort` (синоним). Кластер = **7 страниц** (pillar + bestille/pris/sjekke/mistet/gyldighet/byggekort).
 - ✅ Раунд 2 Keyword Planner → 4 новых кластера (все 100-1K, подтверждено): `timepris-snekker`, `fakturamal` (тренд +900%), `sha-plan` (byggherreforskriften), `byggekontrakt` (NS 8405/8406/8407). +2 диаграммы. Регуляторику фактчекнул вебом.
 - ✅ Лид-магниты (ресёрч `docs/seo/leadmagnets-norway.md`): вывод — mal/kalkulator-ключи 10-100, вешать магниты на трафиковые pillar-страницы. Отгружено (product-led, без gate): timeliste-mal.csv, fakturamal.csv (Excel, `/public/nb/maler/`), SHA-plan sjekkliste (печатаемая HTML) на `sha-plan`. Дальше-кандидаты: timepris-калькулятор, HMS-kort sjekkliste. Owner-решения: email-gate vs signup, byggexp.no в GSC.
-- nb-блог теперь: **19 статей** + 3 лид-магнита. Все NO-ключи 100-1K+ из Planner покрыты (кроме мёртвого stemplingsur 0-10). Мелочь 10-100 на потом: byggeledelse, timeregistreringssystem, faktura app.
+- nb-блог теперь: **19 статей** + 3 лид-магнита.
+- ✅ **byggexp.no в GSC** (owner верифицировал Domain-property) → сабмитнул sitemap `byggexp.no/sitemap.xml` (25 URL; статус «Couldn't fetch» сразу после сабмита = норма, Google перекачает). Починил баг: `robots.txt` на .no указывал на .se-sitemap → сделал host-aware (`src/pages/robots.txt.ts`). Теперь NO-трафик виден в GSC. Все NO-ключи 100-1K+ из Planner покрыты (кроме мёртвого stemplingsur 0-10). Мелочь 10-100 на потом: byggeledelse, timeregistreringssystem, faktura app.
 
 **SE-статья `enkelt-tidrapporteringssystem`** (KW 880/mo, был 404) — `src/content/articles/kvalitet.ts`
 - Спок к pillar `tidrapporteringssystem-bygg` под точный запрос «enkelt tidrapporteringssystem». Угол = enkelhet

@@ -27,5 +27,13 @@
 3. Оставить timeregistrering/timeliste как есть (покрыто).
 4. **stemplingsur — заморозить** (0–10).
 
+## Раунд 2 (2026-09-07) — новые кластеры, подтверждено Planner (все 100-1K) → ВСЕ СДЕЛАНЫ
+- **timepris snekker / tømrer** (100-1K) → ✅ `timepris-snekker`
+- **faktura mal / fakturamal** (100-1K, тренд +900%) → ✅ `fakturamal`
+- **sha plan / sha plan eksempel** (100-1K) → ✅ `sha-plan`
+- **ns 8405 / norsk standard** (100-1K) → ✅ `byggekontrakt` (NS 8405/8406/8407)
+
+Итого nb-блог = 19 статей. Все NO-ключи 100-1K+ из Planner покрыты. Мелочь на потом (10-100): byggeledelse, byggekontrakt-хвост, timeregistreringssystem, faktura app.
+
 ## Данные
-Полный CSV Блока 1: `/tmp/no_kw/block1.csv` (Хром блокирует авто-скачивание 2-го+ файла подряд; блоки 2–5 сняты чтением таблиц).
+Полный CSV Блока 1: `/tmp/no_kw/block1.csv` (Хром блокирует авто-скачивание 2-го+ файла подряд; остальные блоки сняты чтением таблиц).

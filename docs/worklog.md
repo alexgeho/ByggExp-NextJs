@@ -16,7 +16,8 @@
 - ✅ `timeliste-mal` (100-1K) — статья с инлайн-шаблоном (копировать в Excel/распечатать) + воронка на timeliste-app. Live, в sitemap.
 - ✅ `prosjektstyring-bygg` (до 100-1K) — pillar по модулю Prosjekt (Gantt/oppgaver/timer→margin) +диаграмма. Live, в sitemap.
 - ✅ HMS-kort кластер дожат: +`mistet-hms-kort`, `hms-kort-gyldighet`, `byggekort` (синоним). Кластер = **7 страниц** (pillar + bestille/pris/sjekke/mistet/gyldighet/byggekort).
-- nb-блог теперь: **15 статей**. Все топовые NO-ключи из Planner покрыты (кроме мёртвого stemplingsur 0-10).
+- ✅ Раунд 2 Keyword Planner → 4 новых кластера (все 100-1K, подтверждено): `timepris-snekker`, `fakturamal` (тренд +900%), `sha-plan` (byggherreforskriften), `byggekontrakt` (NS 8405/8406/8407). +2 диаграммы. Регуляторику фактчекнул вебом.
+- nb-блог теперь: **19 статей**. Все NO-ключи 100-1K+ из Planner покрыты (кроме мёртвого stemplingsur 0-10). Мелочь 10-100 на потом: byggeledelse, timeregistreringssystem, faktura app.
 
 **SE-статья `enkelt-tidrapporteringssystem`** (KW 880/mo, был 404) — `src/content/articles/kvalitet.ts`
 - Спок к pillar `tidrapporteringssystem-bygg` под точный запрос «enkelt tidrapporteringssystem». Угол = enkelhet

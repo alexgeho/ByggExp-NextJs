@@ -5,7 +5,12 @@
  * address alone is enough for us to follow up on a lead.
  */
 
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
+// The part before "@" is restricted to ASCII: no mail provider issues
+// mailboxes with Cyrillic or accented characters there, so such an address is
+// a typo or junk and the lead would be unreachable. The domain stays
+// permissive — .se does register IDN domains (foretag.se with a-ring/umlauts),
+// and rejecting those would turn away real Swedish businesses.
+const EMAIL_PATTERN = /^[A-Za-z0-9._%+-]+@[^\s@]+\.[^\s@.]{2,}$/;
 
 export type LeadFormErrors = {
   name: boolean;

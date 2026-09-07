@@ -326,6 +326,29 @@ const nbStemplingsur = frame(`
   ${ARR_DEF}
 `);
 
+// 22. Mannskapsliste / elektronisk oversiktsliste – krav (nb)
+const nbMannskapsliste = frame(`
+  ${title('Elektronisk oversiktsliste – krav (&#167; 15)')}
+  ${card(40, 74, 320, 208, 'Hva skal registreres', BLUE, ['Navn og fødselsdato', 'Arbeidsgiver', 'HMS-kort-nummer', 'Inn- og uttid på plassen'])}
+  ${card(380, 74, 300, 208, 'Krav i forskriften', GREEN, ['Elektronisk liste', 'Oppdateres daglig', 'Byggherren har ansvaret', 'Alle som jobber – også UE'])}
+  ${note('Byggherreforskriften &#167; 15. Sjekk alltid gjeldende krav hos Arbeidstilsynet.', INK)}
+`);
+
+// 23. HMS-kort – fra arbeidskontrakt til byggeplass (nb)
+const nbHmsKort = frame(`
+  ${title('HMS-kort – fra kontrakt til byggeplass')}
+  ${stepBox(30, 120, 140, 74, 'Arbeids-', 'kontrakt', MUT)}
+  ${arrow(170, 206, 157)}
+  ${stepBox(206, 120, 140, 74, 'HMS-kort', 'utstedes', BLUE)}
+  ${arrow(346, 382, 157)}
+  ${stepBox(382, 120, 152, 74, 'Registreres i', 'oversiktslisten', GREEN)}
+  ${arrow(534, 570, 157)}
+  ${stepBox(570, 120, 122, 74, 'Adgang til', 'byggeplass', BLUE)}
+  <text x="40" y="240" ${font} font-size="15" font-weight="700" fill="${INK}">Gyldig HMS-kort kreves for å stå på oversiktslisten.</text>
+  <text x="40" y="266" ${font} font-size="14" fill="${MUT}">Kortet knytter personen til riktig arbeidsgiver på plassen.</text>
+  ${ARR_DEF}
+`);
+
 // 21. Affärssystem – allt i ett (hub)
 const affarssystem = frame(`
   ${title('Affärssystem – allt i ett')}
@@ -446,6 +469,8 @@ const DIAGRAMS = {
   'schemalaggning': schema,
   'nb-timeregistrering-flyt': nbTimeflyt,
   'nb-stemplingsur-gps': nbStemplingsur,
+  'nb-mannskapsliste-krav': nbMannskapsliste,
+  'nb-hms-kort': nbHmsKort,
   'ab-kontrakt': abKontrakt,
   'ata-flode': ata,
   'personalliggare': personalliggare,

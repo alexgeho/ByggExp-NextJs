@@ -2,6 +2,7 @@ import { useState, type FormEvent, type ChangeEvent } from "react";
 import { API_URL } from "../../config/api";
 import {
   NO_LEAD_FORM_ERRORS,
+  buildLeadPayload,
   hasLeadFormErrors,
   isValidEmail,
   validateLeadForm,
@@ -71,17 +72,7 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
       const response = await fetch(`${API_URL}/mail/demo-request`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          "f-name": name,
-          "f-email": email,
-          "f-phone": phone,
-          // The mail backend labels the lead with this; without it the
-          // notification falls back to the old /ru page.
-          "f-source":
-            typeof window !== "undefined"
-              ? `${window.location.host}${window.location.pathname}`
-              : "kontakt",
-        }),
+        body: JSON.stringify(buildLeadPayload(name, email, phone, "kontakt")),
       });
 
       if (!response.ok) {

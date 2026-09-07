@@ -8,6 +8,19 @@
 ## Сессия 2026-09-07
 
 ### ✅ Сделано (в проде)
+**Норвегия byggexp.no — 2-й nb-кластер (3 статьи)** — `src/content/articles/nb-timeregistrering.ts`
+- Было 4 nb-статьи (timeregistrering pillar + gratis + stemplingsur + faktureringsprogram). Добавил кластер
+  вокруг присутствия на площадке = норв. аналог personalliggare, написан по норв. источнику (byggherreforskriften
+  § 15 / Arbeidstilsynet), НЕ перевод:
+  - `mannskapsliste-byggeplass` (pillar): elektronisk oversiktsliste, § 15, что регистрируется
+    (navn/fødselsdato/arbeidsgiver/HMS-kort-nr), byggherrens ansvar, когда действует. Честный фрейминг:
+    ByggExp = GPS-oppmøte/timer, НЕ сертиф. HMS-kort-ридер → ссылка на Arbeidstilsynet.
+  - `hms-kort-bygg` (spoke): что такое HMS-kort, как выдаётся, связь с oversiktslisten.
+  - `timeliste-app-bygg` (commercial): «timeliste» = обиходное норв. слово; мост к timeregistrering pillar; app vs mal.
+- 2 новые брендовые nb-диаграммы (`nb-mannskapsliste-krav`, `nb-hms-kort`) через `gen-article-diagrams.js`.
+- Перелинковка с pillar. tsc + next build зелёные; live проверено (3×200, диаграммы 200, все в sitemap byggexp.no).
+- Итого nb-блог: **7 статей, 2 кластера**. NO-рынок узкий — дальше добивать точечно (prosjektstyring? anbud/tilbud?).
+
 **GSC «Not found (404)» — раунд 2** (`docs/seo/gsc-404-cleanup.md`)
 - Validation была **Failed** (25 URL). Прогнал все 25 live-fetch'ем: часть уже 200 (фикс раунда 1),
   литеральные `[lang]` из sitemap убраны, но `/en /ru`-URL (проиндексированы до перехода на sv-only)

@@ -364,6 +364,22 @@ const nbProsjektstyring = frame(`
   ${ARR_DEF}
 `);
 
+// 27. SHA-plan – innhold og krav (nb)
+const nbShaPlan = frame(`
+  ${title('SHA-plan – hva den skal inneholde')}
+  ${card(40, 84, 330, 210, 'Innhold', BLUE, ['Organisasjonskart', 'Framdriftsplan', 'Tiltak for farlig arbeid', 'Rutiner for avvik'])}
+  ${card(390, 84, 290, 210, 'Krav', GREEN, ['Skriftlig, før oppstart', 'Tilpasset prosjektet', 'Byggherrens ansvar', 'Oppdateres løpende'])}
+  ${note('Byggherreforskriften. Byggherren kan delegere til en SHA-koordinator.', INK)}
+`);
+
+// 28. NS 8405 vs NS 8407 – byggekontrakt (nb)
+const nbByggekontrakt = frame(`
+  ${title('NS 8405 vs NS 8407 – hvem prosjekterer?')}
+  ${card(40, 74, 300, 200, 'NS 8405', BLUE, ['Utførelsesentreprise', 'Byggherren prosjekterer', 'Entreprenøren utfører', 'Streng varslingsplikt'])}
+  ${card(380, 74, 300, 200, 'NS 8407', GREEN, ['Totalentreprise', 'Entreprenøren prosjekterer', 'og utfører', 'Funksjonsansvar'])}
+  ${note('NS 8406 = forenklet utførelse for mindre prosjekter.', INK)}
+`);
+
 // 22. Mannskapsliste / elektronisk oversiktsliste – krav (nb)
 const nbMannskapsliste = frame(`
   ${title('Elektronisk oversiktsliste – krav (&#167; 15)')}
@@ -511,6 +527,8 @@ const DIAGRAMS = {
   'nb-hms-kort': nbHmsKort,
   'nb-bestille-hms-kort': nbBestilleHms,
   'nb-prosjektstyring': nbProsjektstyring,
+  'nb-sha-plan': nbShaPlan,
+  'nb-byggekontrakt': nbByggekontrakt,
   'enkelt-tidrapporteringssystem': enkeltSystem,
   'ab-kontrakt': abKontrakt,
   'ata-flode': ata,

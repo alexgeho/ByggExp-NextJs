@@ -878,6 +878,246 @@ const BK_BYGGEKORT: BlogPost = {
   updatedAt: '2026-09-07T15:10:00.000Z',
 };
 
+const TP_TIMEPRIS_SNEKKER_HTML = `
+<p>Hva koster en snekker eller tømrer per time? Prisen varierer med region, oppdrag og om det er forbruker eller bedrift som betaler – men det finnes noen greie holdepunkter. Her går vi gjennom hva som påvirker timeprisen, hva som er vanlig, og hvordan et byggefirma holder styr på timer og timepris så faktureringen blir riktig.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: fra registrert tid til faktura – timene på riktig prosjekt blir grunnlag for lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Riktig timepris hjelper lite hvis timene ikke fanges opp – registrer dem der jobben gjøres.</figcaption></figure>
+
+<h2>Hva er vanlig timepris for snekker og tømrer?</h2>
+<p>Timeprisen ligger ofte i området <strong>500–800 kroner eks. mva</strong> for profesjonelle håndverkere, men spennet er stort og avhenger av region, kompleksitet og markedet. For forbrukere kommer 25 % mva i tillegg. Be alltid om et konkret tilbud – tallene her er kun et utgangspunkt.</p>
+
+<h2>Hva påvirker timeprisen?</h2>
+<ul>
+<li><strong>Region</strong> – prisene er gjerne høyere i og rundt de store byene.</li>
+<li><strong>Type arbeid</strong> – spesialisert eller risikofylt arbeid koster mer.</li>
+<li><strong>Rigg, reise og materialer</strong> – kommer ofte i tillegg til timeprisen.</li>
+<li><strong>Fastpris vs. timepris</strong> – større oppdrag avtales ofte som fastpris.</li>
+</ul>
+
+<h2>Timepris for byggefirmaet: fra time til riktig faktura</h2>
+<p>Setter du en timepris, må timene også fanges opp riktig – ellers lekker det penger. Med <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering i mobilen</a> knyttes timene til riktig prosjekt og blir grunnlag for fakturaen, slik at du fakturerer alle timene til avtalt pris uten å regne for hånd. Se også <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram for bygg</a>.</p>
+
+<h2>Kom i gang</h2>
+<p>Vil du sikre at alle timene blir fakturert til riktig pris? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+
+<h2>Vanlige spørsmål</h2>
+<h3>Hva koster en snekker per time?</h3>
+<p>Ofte 500–800 kroner eks. mva for profesjonelle, men prisen varierer med region og oppdrag. For forbrukere kommer 25 % mva i tillegg. Be om konkret tilbud.</p>
+<h3>Kommer mva i tillegg til timeprisen?</h3>
+<p>For forbrukere legges 25 % mva på. Bedrifter som er mva-registrert trekker fra inngående mva.</p>
+<h3>Hvordan sikrer jeg at alle timene blir fakturert?</h3>
+<p>Registrer timene digitalt på riktig prosjekt, så blir de automatisk grunnlag for fakturaen – ingen glemte timer.</p>
+`.trim();
+
+const TP_TIMEPRIS_SNEKKER: BlogPost = {
+  _id: 'code-nb-timepris-snekker',
+  title: 'Timepris for snekker og tømrer – hva koster en time?',
+  slug: 'timepris-snekker',
+  locale: 'nb',
+  excerpt:
+    'Hva koster en snekker eller tømrer per time? Vanlig timepris, hva som påvirker den, og hvordan byggefirmaet fanger opp alle timene til riktig faktura.',
+  tag: 'Økonomi',
+  coverImageUrl: '/landing/features/11costs.webp',
+  contentHtml: TP_TIMEPRIS_SNEKKER_HTML,
+  seoTitle: 'Timepris snekker & tømrer – hva koster en time? | ByggExp',
+  seoDescription:
+    'Timepris for snekker og tømrer: ofte 500–800 kr eks. mva, men varierer med region og oppdrag. Hva som påvirker prisen, og hvordan du fakturerer alle timene.',
+  seoImageUrl: `${NO_SITE_URL}/landing/features/11costs.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-09-07T15:20:00.000Z',
+  createdAt: '2026-09-07T15:20:00.000Z',
+  updatedAt: '2026-09-07T15:20:00.000Z',
+};
+
+const FM_FAKTURAMAL_HTML = `
+<p>Trenger du en fakturamal til byggefirmaet? En faktura må inneholde bestemte opplysninger for å være gyldig – mangler noe, kan den bli avvist. Her får du en sjekkliste over hva en faktura skal inneholde, en enkel mal du kan bruke, og hvordan du slipper å skrive fakturaer manuelt.</p>
+
+<h2>Hva en faktura skal inneholde</h2>
+<p>En gyldig faktura i Norge skal blant annet ha med:</p>
+<ul>
+<li><strong>Selger</strong>: navn, adresse og <strong>organisasjonsnummer</strong> (med «MVA» bak hvis mva-registrert).</li>
+<li><strong>Kjøper</strong>: navn og adresse.</li>
+<li><strong>Fakturanummer</strong> (fortløpende) og <strong>fakturadato</strong>.</li>
+<li><strong>Forfallsdato</strong>.</li>
+<li><strong>Beskrivelse</strong> av vare/tjeneste, antall og pris.</li>
+<li><strong>Mva-sats og mva-beløp</strong> (standard 25 %) samt totalbeløp.</li>
+<li><strong>Kontonummer</strong> og gjerne <strong>KID</strong> for enkel betaling.</li>
+</ul>
+<p>Sjekk alltid gjeldende krav hos Skatteetaten, siden reglene kan endres.</p>
+
+<h2>Enkel fakturamal</h2>
+<p>Kopier oppsettet under inn i et dokument eller regneark, og fyll inn:</p>
+<div class="article-table"><table>
+<thead><tr><th>Felt</th><th>Fyll inn</th></tr></thead>
+<tbody>
+<tr><td>Selger (navn, org.nr, adresse)</td><td>&nbsp;</td></tr>
+<tr><td>Kjøper (navn, adresse)</td><td>&nbsp;</td></tr>
+<tr><td>Fakturanummer / dato</td><td>&nbsp;</td></tr>
+<tr><td>Forfallsdato</td><td>&nbsp;</td></tr>
+<tr><td>Beskrivelse (timer/materiell)</td><td>&nbsp;</td></tr>
+<tr><td>Beløp eks. mva</td><td>&nbsp;</td></tr>
+<tr><td>Mva 25 %</td><td>&nbsp;</td></tr>
+<tr><td>Totalt å betale</td><td>&nbsp;</td></tr>
+<tr><td>Kontonummer / KID</td><td>&nbsp;</td></tr>
+</tbody>
+</table></div>
+
+<h2>Slipp å skrive fakturaer manuelt</h2>
+<p>En mal funker for de aller minste, men blir fort tungvint. Med et <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram for bygg</a> lages fakturaen fra de loggede timene og materiellet på prosjektet, med riktig mva og forfallsdato – uten å taste inn alt på nytt. Grunnlaget er <a href="/nb/blog/timeregistrering-app-bygg">registrert tid</a>.</p>
+
+<h2>Kom i gang</h2>
+<p>Bruk malen over, eller se hvordan faktura lages fra timene i <a href="/nb/blog/faktureringsprogram-bygg">ByggExp</a>. Les også om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+
+<h2>Vanlige spørsmål</h2>
+<h3>Hva må en faktura inneholde?</h3>
+<p>Selger med org.nr, kjøper, fakturanummer og dato, forfallsdato, beskrivelse, mva-sats og -beløp, totalbeløp og kontonummer. Se Skatteetaten for fullstendige krav.</p>
+<h3>Hvilken mva-sats gjelder?</h3>
+<p>Standard mva-sats er 25 %. Enkelte tjenester har andre satser – sjekk hos Skatteetaten.</p>
+<h3>Kan fakturaen lages fra timene automatisk?</h3>
+<p>Ja. I ByggExp blir loggede timer og materiell til fakturalinjer, så du slipper manuell inntasting.</p>
+`.trim();
+
+const FM_FAKTURAMAL: BlogPost = {
+  _id: 'code-nb-fakturamal',
+  title: 'Fakturamal for bygg – hva en faktura skal inneholde',
+  slug: 'fakturamal',
+  locale: 'nb',
+  excerpt:
+    'Gratis fakturamal for bygg: sjekkliste over hva en faktura skal inneholde (org.nr, mva 25 %, forfallsdato, KID) og hvordan du lager faktura fra timene automatisk.',
+  tag: 'Økonomi',
+  coverImageUrl: '/landing/features/8fakturor.webp',
+  contentHtml: FM_FAKTURAMAL_HTML,
+  seoTitle: 'Fakturamal for bygg – hva faktura skal inneholde | ByggExp',
+  seoDescription:
+    'Gratis fakturamal for bygg: sjekkliste over hva en faktura skal inneholde (org.nr, mva 25 %, forfallsdato, KID) og hvordan du lager faktura fra timene automatisk.',
+  seoImageUrl: `${NO_SITE_URL}/landing/features/8fakturor.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-09-07T15:30:00.000Z',
+  createdAt: '2026-09-07T15:30:00.000Z',
+  updatedAt: '2026-09-07T15:30:00.000Z',
+};
+
+const SH_SHA_PLAN_HTML = `
+<p>På bygge- og anleggsprosjekter skal byggherren sørge for en SHA-plan – en skriftlig plan for sikkerhet, helse og arbeidsmiljø – før arbeidet starter. Her går vi gjennom hva en SHA-plan er, hva den skal inneholde, hvem som har ansvaret, og forskjellen på SHA og HMS.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/nb-sha-plan.webp" alt="Diagram: SHA-plan – innhold (organisasjonskart, framdriftsplan, tiltak for farlig arbeid, avviksrutiner) og krav (skriftlig, prosjekttilpasset, byggherrens ansvar, oppdateres løpende)" width="720" height="380" loading="lazy"><figcaption>SHA-planen skal være skriftlig, prosjekttilpasset og oppdateres løpende – byggherren har ansvaret.</figcaption></figure>
+
+<h2>Hva er en SHA-plan?</h2>
+<p>SHA står for sikkerhet, helse og arbeidsmiljø. SHA-planen er en skriftlig plan som beskriver hvordan disse hensynene ivaretas på det konkrete prosjektet. Kravet følger av byggherreforskriften, og planen skal være på plass før arbeidet starter.</p>
+
+<h2>Hva skal SHA-planen inneholde?</h2>
+<p>Planen skal være tilpasset prosjektet – ikke en generisk mal – og inneholder blant annet:</p>
+<ul>
+<li><strong>Organisasjonskart</strong> som viser roller og ansvar.</li>
+<li><strong>Framdriftsplan</strong> for når og hvor arbeidsoperasjonene skal utføres.</li>
+<li><strong>Spesifikke tiltak</strong> for arbeid som kan medføre fare for liv og helse.</li>
+<li><strong>Rutiner for avviksmelding</strong>.</li>
+</ul>
+
+<h2>Hvem har ansvaret?</h2>
+<p>Byggherren har hovedansvaret for at SHA-planen utarbeides, følges og oppdateres løpende ved endringer. Byggherren kan delegere selve utførelsen til en <strong>SHA-koordinator</strong> (egen eller ekstern), men ansvaret blir hos byggherren.</p>
+
+<h2>SHA og HMS – hva er forskjellen?</h2>
+<p>SHA gjelder byggherrens ansvar for sikkerhet, helse og arbeidsmiljø på selve bygge- eller anleggsprosjektet. HMS er den enkelte virksomhetens eget, løpende internkontrollarbeid. De henger sammen, men SHA-planen er knyttet til prosjektet – ikke til én bedrift.</p>
+
+<h2>Dokumentasjon og oversikt på plassen</h2>
+<p>En del av SHA-arbeidet er å ha oversikt over hvem som er på plassen. Der hjelper en digital <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste</a> og <a href="/nb/blog/timeregistrering-app-bygg">oppmøteregistrering</a> deg med dokumentasjon. ByggExp er ikke et SHA-planverktøy, men gir deg den løpende oversikten over mannskapet.</p>
+
+<h2>Kom i gang</h2>
+<p>Les mer om <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>. Sjekk kravene til SHA-plan hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
+
+<h2>Vanlige spørsmål</h2>
+<h3>Hva er en SHA-plan?</h3>
+<p>En skriftlig plan for sikkerhet, helse og arbeidsmiljø på et bygge- eller anleggsprosjekt, som byggherren skal sørge for før arbeidet starter.</p>
+<h3>Hvem har ansvaret for SHA-planen?</h3>
+<p>Byggherren. Utførelsen kan delegeres til en SHA-koordinator, men ansvaret blir hos byggherren.</p>
+<h3>Hva er forskjellen på SHA og HMS?</h3>
+<p>SHA gjelder byggherrens ansvar på selve prosjektet, mens HMS er den enkelte virksomhetens eget internkontrollarbeid.</p>
+`.trim();
+
+const SH_SHA_PLAN: BlogPost = {
+  _id: 'code-nb-sha-plan',
+  title: 'SHA-plan – krav, innhold og ansvar',
+  slug: 'sha-plan',
+  locale: 'nb',
+  excerpt:
+    'SHA-plan for bygg: en skriftlig plan for sikkerhet, helse og arbeidsmiljø som byggherren skal ha før oppstart. Hva den skal inneholde, hvem som har ansvaret, SHA vs HMS.',
+  tag: 'Regelverk',
+  coverImageUrl: '/landing/features/5planering.webp',
+  contentHtml: SH_SHA_PLAN_HTML,
+  seoTitle: 'SHA-plan – krav, innhold og ansvar | ByggExp',
+  seoDescription:
+    'SHA-plan for bygg: skriftlig plan for sikkerhet, helse og arbeidsmiljø som byggherren skal ha før oppstart. Innhold, ansvar (SHA-koordinator) og forskjellen på SHA og HMS.',
+  seoImageUrl: `${NO_SITE_URL}/landing/features/5planering.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-09-07T15:40:00.000Z',
+  createdAt: '2026-09-07T15:40:00.000Z',
+  updatedAt: '2026-09-07T15:40:00.000Z',
+};
+
+const BY_BYGGEKONTRAKT_HTML = `
+<p>Hvilken byggekontrakt skal du bruke? For profesjonelle entrepriseprosjekter brukes Norsk Standard-kontraktene – først og fremst NS 8405, NS 8406 og NS 8407. Valget avgjøres av hvem som skal prosjektere og hvor stort prosjektet er. Her går vi gjennom forskjellene, så du velger riktig kontrakt.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/nb-byggekontrakt.webp" alt="Diagram: NS 8405 vs NS 8407 – utførelsesentreprise (byggherren prosjekterer) mot totalentreprise (entreprenøren prosjekterer og utfører)" width="720" height="380" loading="lazy"><figcaption>Hovedforskjellen er hvem som prosjekterer: byggherren (NS 8405/8406) eller entreprenøren (NS 8407).</figcaption></figure>
+
+<h2>NS 8405 – utførelsesentreprise for større prosjekter</h2>
+<p>NS 8405 brukes når entreprenøren i hovedsak skal utføre et arbeid som byggherren har prosjektert. Den er den mest omfattende og passer store prosjekter. Merk den strenge <strong>varslingsplikten</strong>: endringer og krav må varsles «uten ugrunnet opphold», ellers kan du miste retten til kompensasjon.</p>
+
+<h2>NS 8406 – forenklet utførelse for mindre prosjekter</h2>
+<p>NS 8406 er en forenklet variant av NS 8405, laget for mindre og mindre komplekse prosjekter. Byggherren prosjekterer også her, men reglene for varsling og frister er mildere enn i NS 8405.</p>
+
+<h2>NS 8407 – totalentreprise</h2>
+<p>I NS 8407 skal entreprenøren både <strong>prosjektere og utføre</strong>. Byggherren beskriver hvilke funksjoner som skal oppfylles, og entreprenøren finner ut hvordan. Kjernen er <strong>funksjonsansvar</strong>, og prosjekteringsrisikoen ligger hos entreprenøren.</p>
+
+<h2>Hva med forbrukere?</h2>
+<p>Skal du gjøre arbeid for en privatperson, gjelder som regel forbrukerreglene (bustadoppføringslova ved nye boliger, håndverkertjenesteloven ved arbeid på eksisterende bolig) – ikke NS-kontraktene, som er laget for næringsforhold. Ved tvil, få kontrakten kvalitetssikret juridisk.</p>
+
+<div class="article-table"><table>
+<thead><tr><th>Kontrakt</th><th>Type</th><th>Hvem prosjekterer</th><th>Passer</th></tr></thead>
+<tbody>
+<tr><td>NS 8405</td><td>Utførelse</td><td>Byggherren</td><td>Store prosjekter</td></tr>
+<tr><td>NS 8406</td><td>Utførelse (forenklet)</td><td>Byggherren</td><td>Mindre prosjekter</td></tr>
+<tr><td>NS 8407</td><td>Totalentreprise</td><td>Entreprenøren</td><td>Funksjonsbeskrevne prosjekter</td></tr>
+</tbody>
+</table></div>
+
+<h2>Kom i gang</h2>
+<p>Når kontrakten er på plass, henger fremdrift, timer og økonomi sammen. Les om <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring for bygg</a>, <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>.</p>
+
+<h2>Vanlige spørsmål</h2>
+<h3>Hva er forskjellen på NS 8405 og NS 8407?</h3>
+<p>I NS 8405 (utførelse) prosjekterer byggherren, og entreprenøren utfører. I NS 8407 (totalentreprise) både prosjekterer og utfører entreprenøren, med funksjonsansvar.</p>
+<h3>Når bruker jeg NS 8406?</h3>
+<p>Ved mindre utførelsesprosjekter der du vil ha enklere regler enn NS 8405, men fortsatt at byggherren prosjekterer.</p>
+<h3>Gjelder NS-kontraktene mot forbrukere?</h3>
+<p>Nei, som regel ikke. Mot forbrukere gjelder bustadoppføringslova eller håndverkertjenesteloven. Få kontrakten kvalitetssikret ved tvil.</p>
+`.trim();
+
+const BY_BYGGEKONTRAKT: BlogPost = {
+  _id: 'code-nb-byggekontrakt',
+  title: 'Byggekontrakt – NS 8405, NS 8406 og NS 8407',
+  slug: 'byggekontrakt',
+  locale: 'nb',
+  excerpt:
+    'Hvilken byggekontrakt bør du bruke? NS 8405 (utførelse), NS 8406 (forenklet) og NS 8407 (totalentreprise) – forskjellene, hvem som prosjekterer, og forbrukerreglene.',
+  tag: 'Regelverk',
+  coverImageUrl: '/landing/features/7offerter.webp',
+  contentHtml: BY_BYGGEKONTRAKT_HTML,
+  seoTitle: 'Byggekontrakt – NS 8405, 8406 og 8407 forskjell | ByggExp',
+  seoDescription:
+    'Byggekontrakt for entreprise: NS 8405 (utførelse), NS 8406 (forenklet) og NS 8407 (totalentreprise). Hvem prosjekterer, når du bruker hvilken, og forbrukerreglene.',
+  seoImageUrl: `${NO_SITE_URL}/landing/features/7offerter.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-09-07T15:50:00.000Z',
+  createdAt: '2026-09-07T15:50:00.000Z',
+  updatedAt: '2026-09-07T15:50:00.000Z',
+};
+
 export const NB_ARTICLES: BlogPost[] = [
   P_TIMEREGISTRERING_APP_BYGG,
   S_GRATIS_TIMEREGISTRERING_APP,
@@ -894,4 +1134,8 @@ export const NB_ARTICLES: BlogPost[] = [
   M_MISTET_HMS_KORT,
   G_HMS_KORT_GYLDIGHET,
   BK_BYGGEKORT,
+  TP_TIMEPRIS_SNEKKER,
+  FM_FAKTURAMAL,
+  SH_SHA_PLAN,
+  BY_BYGGEKONTRAKT,
 ];

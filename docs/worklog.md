@@ -17,7 +17,8 @@
 - ✅ `prosjektstyring-bygg` (до 100-1K) — pillar по модулю Prosjekt (Gantt/oppgaver/timer→margin) +диаграмма. Live, в sitemap.
 - ✅ HMS-kort кластер дожат: +`mistet-hms-kort`, `hms-kort-gyldighet`, `byggekort` (синоним). Кластер = **7 страниц** (pillar + bestille/pris/sjekke/mistet/gyldighet/byggekort).
 - ✅ Раунд 2 Keyword Planner → 4 новых кластера (все 100-1K, подтверждено): `timepris-snekker`, `fakturamal` (тренд +900%), `sha-plan` (byggherreforskriften), `byggekontrakt` (NS 8405/8406/8407). +2 диаграммы. Регуляторику фактчекнул вебом.
-- nb-блог теперь: **19 статей**. Все NO-ключи 100-1K+ из Planner покрыты (кроме мёртвого stemplingsur 0-10). Мелочь 10-100 на потом: byggeledelse, timeregistreringssystem, faktura app.
+- ✅ Лид-магниты (ресёрч `docs/seo/leadmagnets-norway.md`): вывод — mal/kalkulator-ключи 10-100, вешать магниты на трафиковые pillar-страницы. Отгружено (product-led, без gate): timeliste-mal.csv, fakturamal.csv (Excel, `/public/nb/maler/`), SHA-plan sjekkliste (печатаемая HTML) на `sha-plan`. Дальше-кандидаты: timepris-калькулятор, HMS-kort sjekkliste. Owner-решения: email-gate vs signup, byggexp.no в GSC.
+- nb-блог теперь: **19 статей** + 3 лид-магнита. Все NO-ключи 100-1K+ из Planner покрыты (кроме мёртвого stemplingsur 0-10). Мелочь 10-100 на потом: byggeledelse, timeregistreringssystem, faktura app.
 
 **SE-статья `enkelt-tidrapporteringssystem`** (KW 880/mo, был 404) — `src/content/articles/kvalitet.ts`
 - Спок к pillar `tidrapporteringssystem-bygg` под точный запрос «enkelt tidrapporteringssystem». Угол = enkelhet

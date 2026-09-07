@@ -1018,6 +1018,7 @@ const SH_SHA_PLAN_HTML = `
 <li><strong>Spesifikke tiltak</strong> for arbeid som kan medføre fare for liv og helse.</li>
 <li><strong>Rutiner for avviksmelding</strong>.</li>
 </ul>
+<p><a href="/nb/maler/sha-plan-sjekkliste.html" target="_blank" rel="noopener">Last ned SHA-plan sjekkliste</a> (skriv ut eller lagre som PDF) – en gratis sjekkliste over innhold, krav og ansvar.</p>
 
 <h2>Hvem har ansvaret?</h2>
 <p>Byggherren har hovedansvaret for at SHA-planen utarbeides, følges og oppdateres løpende ved endringer. Byggherren kan delegere selve utførelsen til en <strong>SHA-koordinator</strong> (egen eller ekstern), men ansvaret blir hos byggherren.</p>

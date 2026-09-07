@@ -5,6 +5,20 @@
 
 ---
 
+## Сессия 2026-09-07
+
+### ✅ Сделано (в проде)
+**GSC «Not found (404)» — раунд 2** (`docs/seo/gsc-404-cleanup.md`)
+- Validation была **Failed** (25 URL). Прогнал все 25 live-fetch'ем: часть уже 200 (фикс раунда 1),
+  литеральные `[lang]` из sitemap убраны, но `/en /ru`-URL (проиндексированы до перехода на sv-only)
+  продолжали краулиться и 404-ить.
+- Добавил 301 в `next.config.mjs`: `/en/verktyg/{ackord,ob-overtid,restidsersattning}-kalkylator`,
+  `/en|/ru/blog/{tidrapport-app-iphone,faktura-med-rotavdrag}` → sv; фантомы `/faq`,`/login` → `/sv`.
+  Задеплоено, live отдаёт **301** (проверено). `/blog/test` оставлен 404 (мусор).
+- В GSC нажал **START NEW VALIDATION** → идёт (Pending 25, Failed 0). Google перепроверит за дни-недели.
+
+---
+
 ## Сессия 2026-09-06
 
 ### ✅ Сделано

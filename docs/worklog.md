@@ -8,6 +8,17 @@
 ## Сессия 2026-09-07
 
 ### ✅ Сделано (в проде)
+**SE-статья `enkelt-tidrapporteringssystem`** (KW 880/mo, был 404) — `src/content/articles/kvalitet.ts`
+- Спок к pillar `tidrapporteringssystem-bygg` под точный запрос «enkelt tidrapporteringssystem». Угол = enkelhet
+  как критерий выбора (adoption / checklista / krångligt-vs-enkelt), чтобы НЕ каннибализировать pillar (у него
+  уже есть H2 про «enkelt»). Self-canonical, sv-only зарегистрирован, перелинковка с pillar+спокы.
+- Фичи сверены с PRODUCT-FEATURES; прошёл 2 редакторских агента (язык+факты) — смягчил 2 переобещания
+  («automatiskt» привязка к проекту, «igång på en dag») + мелкая тавтология. Новая диаграмма
+  `enkelt-tidrapporteringssystem`. tsc+build зелёные, live 200, в sitemap.
+- Урок: проверять CMS-страницы, а не только code-статьи — `tidrapportering-hantverkare` (2400) УЖЕ был в CMS
+  (не писал дубль). Реальные оставшиеся 404-пробелы: `tidsrapportering-app` (390), `tidrapportering-i-mobilen` (90).
+- **NO-ключи:** `docs/seo/keywords-norway.md` — 5 копипаст-блоков по 10 (полный SE→NO маппинг) для Keyword Planner.
+
 **Норвегия byggexp.no — 2-й nb-кластер (3 статьи)** — `src/content/articles/nb-timeregistrering.ts`
 - Было 4 nb-статьи (timeregistrering pillar + gratis + stemplingsur + faktureringsprogram). Добавил кластер
   вокруг присутствия на площадке = норв. аналог personalliggare, написан по норв. источнику (byggherreforskriften

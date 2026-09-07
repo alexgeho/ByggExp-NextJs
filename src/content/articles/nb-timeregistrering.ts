@@ -47,7 +47,7 @@ const P_TIMEREGISTRERING_APP_BYGG_HTML = `
 
 <h2>Kom i gang</h2>
 <p>Vil du se en timeregistrering-app for byggefirmaet ditt? <a href="/nb/blog/gratis-timeregistrering-app">Les om gratis timeregistrering</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a>, <a href="/nb/blog/stemplingsur-app">stemplingsur-app med GPS</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>.</p>
-<p>Trenger du også oversikt over hvem som er på plassen? Se <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og elektronisk oversiktsliste</a>, eller hvordan timene styrer marginen i <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring for bygg</a>.</p>
+<p>Trenger du også oversikt over hvem som er på plassen? Se <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og elektronisk oversiktsliste</a>, hele <a href="/nb/blog/timeregistreringssystem-bygg">timeregistreringssystemet</a>, eller hvordan timene styrer marginen i <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring for bygg</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva er en timeregistrering-app?</h3>
@@ -1131,7 +1131,61 @@ const BY_BYGGEKONTRAKT: BlogPost = {
   updatedAt: '2026-09-07T15:50:00.000Z',
 };
 
+const SY_TIMEREGISTRERINGSSYSTEM_HTML = `
+<p>Et timeregistreringssystem samler timeføringen for hele byggefirmaet på ett sted – fra den ansatte stempler inn til timene blir lønn og faktura. Her går vi gjennom hva et timeregistreringssystem for bygg er, når du har vokst ut av Excel, og hvorfor et enkelt system som laget faktisk bruker slår et avansert som ingen fyller ut.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: timeregistreringssystem – stemple inn, timer på prosjekt, gjennomgå, eksport til lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Et timeregistreringssystem: timene inn i mobilen, på riktig prosjekt, og videre til lønn og faktura.</figcaption></figure>
+
+<h2>Hva er et timeregistreringssystem?</h2>
+<p>Et timeregistreringssystem er programvaren som holder styr på arbeidstimene: hvem jobbet, når, og på hvilket prosjekt. For bygg betyr det at timene registreres i mobilen ute på plassen og samles automatisk, i stedet for på lapper og i regneark.</p>
+
+<h2>Når du har vokst ut av Excel</h2>
+<p>Excel funker helt til firmaet vokser. Da begynner det å koste tid: ark skal samles inn, tastes på nytt, og feilene sniker seg inn. Et timeregistreringssystem fjerner dobbeltarbeidet – timene registreres én gang og brukes overalt.</p>
+
+<h2>Timeregistreringssystem som app – i mobilen</h2>
+<p>På bygg skjer jobben ute, ikke ved en PC. Derfor bør et timeregistreringssystem finnes som app: den ansatte stempler inn og ut på mobilen, med GPS som bekrefter arbeidsplassen. Se mer i guiden om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>.</p>
+
+<h2>Enkelt system vinner</h2>
+<p>Et avansert timeregistreringssystem som halve laget hopper over gir feil tall. Et enkelt system – der man bare stempler inn og ut – gir høy bruk, og det er bruken som avgjør om tallene stemmer. Enkelt i bunn, mer avansert på kontoret.</p>
+
+<h2>Fra system til lønn og faktura</h2>
+<p>Verdien kommer når timene brukes: i ByggExp blir de registrerte timene automatisk grunnlag for lønnsunderlag og fakturalinjer, og regnes inn i prosjektøkonomien. Registrer én gang, bruk overalt.</p>
+
+<h2>Kom i gang</h2>
+<p>Vil du se et timeregistreringssystem for byggefirmaet? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+
+<h2>Vanlige spørsmål</h2>
+<h3>Hva er et timeregistreringssystem?</h3>
+<p>Programvare som holder styr på arbeidstimene – hvem, når og på hvilket prosjekt – slik at timene blir ferdig underlag for lønn og faktura uten manuell inntasting.</p>
+<h3>Finnes timeregistreringssystem som app?</h3>
+<p>Ja. De beste systemene for bygg fungerer i mobilen, så laget stempler inn og ut på plassen, med GPS.</p>
+<h3>Er et enkelt timeregistreringssystem godt nok?</h3>
+<p>Ofte bedre. Et enkelt system som alle bruker gir mer korrekte tall enn et avansert som halve laget hopper over.</p>
+`.trim();
+
+const SY_TIMEREGISTRERINGSSYSTEM: BlogPost = {
+  _id: 'code-nb-timeregistreringssystem-bygg',
+  title: 'Timeregistreringssystem for bygg – system, app og enkelhet',
+  slug: 'timeregistreringssystem-bygg',
+  locale: 'nb',
+  excerpt:
+    'Timeregistreringssystem for bygg: samler timene fra mobil til lønn og faktura. Når du har vokst ut av Excel, system vs app, og hvorfor et enkelt system vinner.',
+  tag: 'Digitalisering',
+  coverImageUrl: '/landing/features/1arbetspass.webp',
+  contentHtml: SY_TIMEREGISTRERINGSSYSTEM_HTML,
+  seoTitle: 'Timeregistreringssystem for bygg – app & enkelt | ByggExp',
+  seoDescription:
+    'Timeregistreringssystem for byggefirmaer: timene fra mobil (GPS) til lønn og faktura. Når du bør bytte fra Excel, system vs app, og hvorfor et enkelt system vinner.',
+  seoImageUrl: `${NO_SITE_URL}/landing/features/1arbetspass.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-09-07T16:00:00.000Z',
+  createdAt: '2026-09-07T16:00:00.000Z',
+  updatedAt: '2026-09-07T16:00:00.000Z',
+};
+
 export const NB_ARTICLES: BlogPost[] = [
+  SY_TIMEREGISTRERINGSSYSTEM,
   P_TIMEREGISTRERING_APP_BYGG,
   S_GRATIS_TIMEREGISTRERING_APP,
   S_STEMPLINGSUR_APP,

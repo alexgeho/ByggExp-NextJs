@@ -7,6 +7,34 @@
 
 ## Сессия 2026-09-07
 
+## 🇳🇴 НОРВЕГИЯ — СТАТУС + СЛЕДУЮЩИЕ ШАГИ (START HERE для NO)
+
+**Где всё лежит:**
+- Статьи: `src/content/articles/nb-timeregistrering.ts` (**20 nb-статей**), диаграммы: `scripts/gen-article-diagrams.js` (nb-*).
+- SEO-доки (`docs/seo/`): `no-innholdsarkitektur.md` (архитектура, ГЛАВНОЕ), `no-nokkelord-kjerner.md` (63 ключа→7 ядер), `seo-kjerner-norge.md` (9 ядер обзор), `se-to-no-keywords.md` (перевод SE-списка + Keyword Ideas объёмы), `keywords-norway.md` (сырьё Planner), `leadmagnets-norway.md` (план магнитов). Сырые CSV Planner: `docs/seo/AlexSeoNor/*.csv`.
+- Копии на рабочем столе владельца: `no-seo-kjerner.md`, `no-innholdsarkitektur.md`, `norske-nokkelord-mal.txt`.
+
+**✅ Сделано (всё live на byggexp.no, в sitemap):**
+- **20 статей, 7 SEO-ядер**, все 63 целевых NO-ключа разложены по ядрам, каждое ядро = своя страница.
+- Ядра: A-продукт (timeregistrering-app-bygg⭐, gratis, timeliste-app, timeregistreringssystem-bygg, stemplingsur, faktureringsprogram) · B-регуляторика (**hms-kort 1K-10K — 7 стр.**, mannskapsliste, sha-plan) · C-магниты (timeliste-mal, fakturamal, sha-plan-sjekkliste) · D-pris (timepris-snekker) · Прод (prosjektstyring, byggekontrakt).
+- **byggexp.no в GSC** (Domain-property, owner верифицировал) + sitemap сабмитнут + robots.txt host-aware фикс.
+- 3 лид-магнита (Excel `.csv` + печатаемый HTML) в `/public/nb/maler/`, product-led (без gate).
+- Ключевые факты рынка: HMS-kort = **1K-10K** (крупнейший); timeregistrering 500; timeliste 100-1K; sha-plan/timepris/faktura/ns8405 = 100-1K; **stemplingsur 0-10 (мёртвый)**; бренды конкурентов (visma/tripletex/smartdok…) — не таргетим.
+
+**⏭️ СЛЕДУЮЩИЕ ШАГИ (по приоритету, из `no-innholdsarkitektur.md` §6):**
+1. **Бэклинки на byggexp.no** — #1 рычаг (owner решил «потом»). Начатый список: proff.no, gulesider, 1881, mittanbud, byggstart, norskbyggebransje, Google Business Profile (NAP-консистентность!). Инсайт: 1 ссылка отраслевого СМИ/ассоциации > 100 каталожных. → оформить в backlink-план.
+2. **Добить B-хаб:** `byggherreforskriften` (pillar, свяжет mannskapsliste+SHA+HMS), `oversiktsliste` (спок).
+3. **D-хаб по профессиям:** timepris-rørlegger / -elektriker / -maler — СНАЧАЛА проверить объём в Keyword Planner.
+4. **C-хаб:** `tilbudsmal` (оффер-шаблон, магнит к byggekontrakt).
+5. **Магниты v2:** timepris-калькулятор (owner сказал «timepris дерьмо» — НЕ делать калькулятор), HMS-kort sjekkliste на 1K-10K кластер.
+6. Через ~неделю: **GSC Performance byggexp.no** → near-miss запросы (поз. 8-15) → усилить on-page.
+
+**Owner-решения (ждут):** модель магнита (email-gate vs product-led signup); юр-проверка шаблонов контрактов/tilbud.
+
+**Как продолжить:** прочитать `docs/seo/no-innholdsarkitektur.md` → взять пункт из §6 roadmap. Каждую новую статью прогонять через 5 вопросов (сегмент/хаб/ключ/ссылки/CTA).
+
+---
+
 ### ✅ Сделано (в проде)
 **Норвегия: HMS-kort кластер (byggexp.no)** — `nb-timeregistrering.ts`
 - Keyword Planner (гео Norway) показал: **hms kort = 1K–10K** — крупнейший NO-запрос (детали: `docs/seo/keywords-norway.md`).

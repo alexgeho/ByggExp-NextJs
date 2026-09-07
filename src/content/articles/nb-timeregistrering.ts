@@ -38,7 +38,7 @@ const P_TIMEREGISTRERING_APP_BYGG_HTML = `
 
 <h2>Kom i gang</h2>
 <p>Vil du se en timeregistrering-app for byggefirmaet ditt? <a href="/nb/blog/gratis-timeregistrering-app">Les om gratis timeregistrering</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a>, <a href="/nb/blog/stemplingsur-app">stemplingsur-app med GPS</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>.</p>
-<p>Trenger du også oversikt over hvem som er på plassen? Se <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og elektronisk oversiktsliste</a>.</p>
+<p>Trenger du også oversikt over hvem som er på plassen? Se <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og elektronisk oversiktsliste</a>, eller hvordan timene styrer marginen i <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring for bygg</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva er en timeregistrering-app?</h3>
@@ -660,6 +660,75 @@ const T_TIMELISTE_MAL: BlogPost = {
   updatedAt: '2026-09-07T14:30:00.000Z',
 };
 
+const PR_PROSJEKTSTYRING_BYGG_HTML = `
+<p>Prosjektstyring for bygg handler om å holde planen, oppgavene, timene og økonomien samlet – slik at du vet hvor prosjektet står før det skjærer seg. Her går vi gjennom hva et prosjektstyringsverktøy for byggefirmaer bør klare, og hvordan timene teamet fører henger direkte sammen med marginen på prosjektet.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/nb-prosjektstyring.webp" alt="Diagram: prosjektstyring – planlegg i Gantt, følg opp oppgaver og frister, timer på prosjektet, margin per prosjekt" width="720" height="380" loading="lazy"><figcaption>Prosjektstyring: planen, oppgavene, timene og økonomien på ett sted – timene går rett inn i marginen.</figcaption></figure>
+
+<h2>Hva er prosjektstyring for bygg?</h2>
+<p>Prosjektstyring er å planlegge arbeidet, fordele oppgaver, følge fremdriften og holde kontroll på økonomien – fra oppstart til ferdig prosjekt. For et byggefirma betyr det å vite hvem som gjør hva, når det skal være ferdig, og om prosjektet går med overskudd underveis.</p>
+
+<h2>Hva et prosjektstyringsverktøy bør klare</h2>
+<ul>
+<li><strong>Planlegging</strong> – legg opp prosjektet i en tidsplan (Gantt), på personer eller prosjekter.</li>
+<li><strong>Oppgaver og frister</strong> – tildel oppgaver til personer eller hele teamet, med påminnelser.</li>
+<li><strong>Timer på prosjektet</strong> – timene teamet fører knyttes til riktig prosjekt.</li>
+<li><strong>Dokumentasjon</strong> – foto og filer samlet på prosjektet.</li>
+<li><strong>Økonomi</strong> – budsjett, betalingsplan og margin per prosjekt.</li>
+</ul>
+
+<h2>Planlegging som teamet forstår</h2>
+<p>En tidsplan er bare nyttig hvis den brukes. En enkel Gantt-visning – der du planlegger etter personer eller prosjekter – gjør det lett å se hvem som er ledig, hva som henger etter, og når neste fase kan starte. Endrer noe seg på bygget, justerer du planen uten å begynne på nytt.</p>
+
+<h2>Fra timer til prosjektøkonomi</h2>
+<p>Det er her prosjektstyringen blir konkret: timene de ansatte fører via <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-appen</a> knyttes til prosjektet og regnes inn mot budsjettet. Da ser du marginen mens prosjektet pågår – ikke først når fakturaen er sendt. Registrer timene én gang, og bruk dem både til lønn, faktura og prosjektøkonomi.</p>
+
+<h2>Enkelt nok for håndverkere og mindre firmaer</h2>
+<p>Mindre byggefirmaer trenger sjelden tunge systemer. Poenget er å samle det viktigste – plan, oppgaver, timer og økonomi – på ett sted, uten at det blir en jobb i seg selv å holde det oppdatert. Da bruker teamet det faktisk, og tallene stemmer.</p>
+
+<h2>Kom i gang</h2>
+<p>Vil du se hvordan prosjekt, timer og økonomi henger sammen i ByggExp? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+
+<h2>Relaterte guider</h2>
+<ul>
+<li><a href="/nb/blog/timeregistrering-app-bygg">Timeregistrering-app for bygg</a></li>
+<li><a href="/nb/blog/timeliste-app-bygg">Timeliste-app for bygg</a></li>
+<li><a href="/nb/blog/mannskapsliste-byggeplass">Mannskapsliste og oversiktsliste</a></li>
+<li><a href="/nb/blog/faktureringsprogram-bygg">Faktureringsprogram for bygg</a></li>
+</ul>
+
+<h2>Vanlige spørsmål</h2>
+<h3>Hva er prosjektstyring for bygg?</h3>
+<p>Å planlegge arbeidet, fordele oppgaver, følge fremdriften og holde kontroll på økonomien fra oppstart til ferdig prosjekt – slik at du vet hvor prosjektet står underveis.</p>
+<h3>Hva bør et prosjektstyringsverktøy for byggefirma klare?</h3>
+<p>Planlegging (Gantt), oppgaver og frister, timer knyttet til prosjektet, dokumentasjon (foto/filer) og økonomi med budsjett og margin per prosjekt.</p>
+<h3>Hvordan henger timer og prosjektøkonomi sammen?</h3>
+<p>Timene teamet fører knyttes til prosjektet og regnes mot budsjettet, så du ser marginen mens arbeidet pågår – ikke først når fakturaen er sendt.</p>
+<h3>Passer prosjektstyring for mindre byggefirmaer?</h3>
+<p>Ja. Det viktigste er å samle plan, oppgaver, timer og økonomi på ett sted, enkelt nok til at teamet faktisk bruker det.</p>
+`.trim();
+
+const PR_PROSJEKTSTYRING_BYGG: BlogPost = {
+  _id: 'code-nb-prosjektstyring-bygg',
+  title: 'Prosjektstyring for bygg – plan, timer og margin på ett sted',
+  slug: 'prosjektstyring-bygg',
+  locale: 'nb',
+  excerpt:
+    'Prosjektstyring for bygg: hold plan, oppgaver, timer og økonomi samlet. Hva et prosjektstyringsverktøy bør klare, og hvordan timene henger sammen med marginen.',
+  tag: 'Digitalisering',
+  coverImageUrl: '/landing/features/5planering.webp',
+  contentHtml: PR_PROSJEKTSTYRING_BYGG_HTML,
+  seoTitle: 'Prosjektstyring for bygg – verktøy for plan & margin | ByggExp',
+  seoDescription:
+    'Prosjektstyring for bygg: samle plan (Gantt), oppgaver, timer og økonomi på ett sted. Hva et prosjektstyringsverktøy bør klare, og hvordan timene styrer marginen.',
+  seoImageUrl: `${NO_SITE_URL}/landing/features/5planering.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-09-07T14:40:00.000Z',
+  createdAt: '2026-09-07T14:40:00.000Z',
+  updatedAt: '2026-09-07T14:40:00.000Z',
+};
+
 export const NB_ARTICLES: BlogPost[] = [
   P_TIMEREGISTRERING_APP_BYGG,
   S_GRATIS_TIMEREGISTRERING_APP,
@@ -672,4 +741,5 @@ export const NB_ARTICLES: BlogPost[] = [
   P_HMS_KORT_PRIS,
   S_SJEKKE_HMS_KORT,
   T_TIMELISTE_MAL,
+  PR_PROSJEKTSTYRING_BYGG,
 ];

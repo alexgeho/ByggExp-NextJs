@@ -349,6 +349,21 @@ const nbBestilleHms = frame(`
   ${ARR_DEF}
 `);
 
+// 26. Prosjektstyring – fra plan til margin (nb)
+const nbProsjektstyring = frame(`
+  ${title('Prosjektstyring – fra plan til margin')}
+  ${stepBox(30, 120, 148, 74, 'Planlegg', '(Gantt)', BLUE)}
+  ${arrow(178, 214, 157)}
+  ${stepBox(214, 120, 158, 74, 'Følg opp', 'oppgaver &amp; frister', BLUE)}
+  ${arrow(372, 408, 157)}
+  ${stepBox(408, 120, 150, 74, 'Timer på', 'prosjektet', GREEN)}
+  ${arrow(558, 594, 157)}
+  ${stepBox(594, 120, 98, 74, 'Margin', 'per prosjekt', AMBER)}
+  <text x="40" y="240" ${font} font-size="15" font-weight="700" fill="${INK}">Alt på ett sted – planen, oppgavene, timene og økonomien.</text>
+  <text x="40" y="266" ${font} font-size="14" fill="${MUT}">Timene de ansatte fører går rett inn i prosjektets margin.</text>
+  ${ARR_DEF}
+`);
+
 // 22. Mannskapsliste / elektronisk oversiktsliste – krav (nb)
 const nbMannskapsliste = frame(`
   ${title('Elektronisk oversiktsliste – krav (&#167; 15)')}
@@ -495,6 +510,7 @@ const DIAGRAMS = {
   'nb-mannskapsliste-krav': nbMannskapsliste,
   'nb-hms-kort': nbHmsKort,
   'nb-bestille-hms-kort': nbBestilleHms,
+  'nb-prosjektstyring': nbProsjektstyring,
   'enkelt-tidrapporteringssystem': enkeltSystem,
   'ab-kontrakt': abKontrakt,
   'ata-flode': ata,

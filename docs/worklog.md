@@ -12,7 +12,9 @@
 - Keyword Planner (гео Norway) показал: **hms kort = 1K–10K** — крупнейший NO-запрос (детали: `docs/seo/keywords-norway.md`).
 - Pillar `hms-kort-bygg` (был) + 3 спока: `bestille-hms-kort` (+диаграмма nb-bestille-hms-kort), `hms-kort-pris`, `sjekke-hms-kort`.
 - Честно, по Arbeidstilsynet/hmskort.no; ByggExp карты НЕ выдаёт (явно), мягкая воронка на mannskapsliste. Все 200, в sitemap.
-- Прочее из Planner: timeregistrering 500 / timeliste 100-1K (покрыто); **stemplingsur 0-10 (мёртвый)**; ☐ timeliste-mal (100-1K) = next.
+- Прочее из Planner: timeregistrering 500 / timeliste 100-1K (покрыто); **stemplingsur 0-10 (мёртвый)**.
+- ✅ `timeliste-mal` (100-1K) — статья с инлайн-шаблоном (копировать в Excel/распечатать) + воронка на timeliste-app. Live, в sitemap.
+- nb-блог теперь: **11 статей** (timeregistrering ×4, mannskapsliste/HMS ×5, timeliste ×2). Дальше по NO — по желанию (prosjektstyring 100-1K).
 
 **SE-статья `enkelt-tidrapporteringssystem`** (KW 880/mo, был 404) — `src/content/articles/kvalitet.ts`
 - Спок к pillar `tidrapporteringssystem-bygg` под точный запрос «enkelt tidrapporteringssystem». Угол = enkelhet

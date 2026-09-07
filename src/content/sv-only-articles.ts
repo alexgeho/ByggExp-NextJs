@@ -32,6 +32,7 @@ export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
   'app-for-tidrapportering-bygg',
   'stampelklocka-app-gps-bygg',
   'tidrapporteringssystem-bygg',
+  'enkelt-tidrapporteringssystem',
   'projektuppfoljning-bygg',
   'tidrapportering-hantverkare',
   'tidrapportering-entreprenad',

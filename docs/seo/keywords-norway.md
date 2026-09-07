@@ -1,45 +1,58 @@
 # Keywords — Norge (byggexp.no)
 
-Вставляй блоки ниже в Google Keyword Planner (Location: Norway, Language: Norwegian), по 10 за раз.
-Это норвежские эквиваленты SE-списка + NO-специфика. НЕ бери шведские ключи (это keywords-master.md для .se).
+Полный список: все SE-ключи переведены в норвежские + NO-специфика. 50 терминов, 5 блоков по 10.
+Вставляй по блоку в Google Keyword Planner (Location: Norway, Language: Norwegian) → Get results / get metrics.
+НЕ бери шведские ключи (tidrapport/stämpelklocka/personalliggare) — это keywords-master.md для .se.
 
-## Блок 1 — timeregistrering / timeliste
+## Блок 1
+timeregistrering
 timeregistrering app
 timeregistrering app gratis
 timeregistrering bygg
-timeregistrering for byggefirma
+timeregistrering byggefirma
 timeregistrering håndverker
 timeregistrering entreprenør
 app for timeregistrering
 mobil timeregistrering
-digital timeregistrering
-timeliste
+timeregistrering i mobilen
 
-## Блок 2 — timeliste / stemplingsur
+## Блок 2
+digital timeregistrering
+timeregistrering app iphone
+timeregistrering app android
+timeregistreringssystem
+timeregistreringssystem bygg
+timeregistreringssystem app
+enkelt timeregistreringssystem
+gratis timeregistrering
+app til timeregistrering
+timeoversikt app
+
+## Блок 3
+timeliste
 timeliste app
 timeliste bygg
 timeliste håndverker
 timeliste mal
 gratis timeliste mal
 digital timeliste
+timeliste app iphone
+timeliste iphone
+timeliste entreprenør
+
+## Блок 4
 stemplingsur
 stemplingsur app
 stemplingsur app gps
 app stemplingsur
-
-## Блок 3 — stemplingsur / system / prosjekt
 stemplingsur app android
 stemplingsur app iphone
-timeregistreringssystem
-timeregistreringssystem bygg
-enkelt timeregistreringssystem
 prosjektstyring bygg
 prosjektstyringsverktøy
 prosjektoppfølging bygg
-faktura app bygg
-faktureringsprogram bygg
+prosjektstyring håndverker
 
-## Блок 4 — mannskapsliste / HMS / faktura
+## Блок 5
 mannskapsliste
 elektronisk mannskapsliste
 mannskapsliste byggeplass
@@ -47,13 +60,19 @@ oversiktsliste byggeplass
 elektronisk oversiktsliste
 HMS-kort
 HMS-kort bygg
-byggherreforskriften 15
+faktureringsprogram bygg
 faktureringsprogram håndverker
-timeregistrering i mobilen
+faktura app bygg
 
 ---
 
-## Что уже покрыто nb-страницами (не писать заново)
+## Заметки по переводу
+- «tidrapport / tidrapportering / tidsregistrering» (SE) → всё это по-норвежски **timeregistrering** (или обиходно **timeliste**). Не дублируй.
+- «tidredovisning» (SE) — в норвежском аналога-ключа нет; ближайшее «timeoversikt» (низкий спрос, проверь).
+- «personalliggare» (SE) → **mannskapsliste / oversiktsliste** (это регуляторный термин по byggherreforskriften § 15).
+- Гео-вариант «...stockholm» → для NO это «...oslo», но сначала проверь объём базового термина.
+
+## Уже покрыто nb-страницами (не писать заново)
 timeregistrering-app-bygg · gratis-timeregistrering-app · stemplingsur-app · faktureringsprogram-bygg · mannskapsliste-byggeplass · hms-kort-bygg · timeliste-app-bygg
 
 ## Пробелы-кандидаты (после проверки объёмов)

@@ -1600,7 +1600,99 @@ const A_TIDREDOVISNING_BYGGFORETAG: BlogPost = {
   publishedAt: "2026-08-20T16:00:00.000Z", createdAt: "2026-08-20T16:00:00.000Z", updatedAt: "2026-08-20T16:00:00.000Z",
 };
 
+const ENKELT_TIDRAPPORTERINGSSYSTEM_HTML = `
+<p>De flesta byggföretag behöver inte ett avancerat tidrapporteringssystem – de behöver ett <strong>enkelt</strong> som laget faktiskt fyller i. Ett system med hundra fält och en veckas upplärning ser bra ut i en demo, men på bygget blir det tomma rader och gissade timmar. Här går vi igenom vad ett enkelt tidrapporteringssystem är, varför enkelheten avgör om siffrorna stämmer, och hur du känner igen ett – utan att tappa det som verkligen behövs. Vill du förstå kategorin i stort, läs först guiden om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/enkelt-tidrapporteringssystem.webp" alt="Diagram: krångligt system (många fält, kräver utbildning, låg användning) vs enkelt system (stämpla in/ut i mobilen, igång på en dag, hela laget fyller i)" width="720" height="380" loading="lazy"><figcaption>Systemet som laget faktiskt använder ger rätt siffror – enkelheten avgör.</figcaption></figure>
+
+<h2>Vad menas med ett enkelt tidrapporteringssystem?</h2>
+<p>Enkelheten sitter i vardagsflödet, inte i antalet funktioner. För snickaren betyder det att stämpla in och ut i mobilen på några sekunder. För dig på kontoret betyder det ett färdigt underlag utan efterarbete. Ett enkelt tidrapporteringssystem tar bort stegen där tid annars läcker: inga lappar, ingen inmatning i efterhand, ingen jakt på vem som jobbade var.</p>
+
+<h2>Därför vinner det enkla systemet på bygget</h2>
+<p>Ett avancerat system som halva laget struntar i ger fel underlag – och fel underlag är värre än inget, för du litar på siffror som inte stämmer. Enkelheten driver användningen: när registreringen tar sekunder fyller alla i, varje dag. Hög användning ger rätt timmar, och rätt timmar ger rätt lön och rätt faktura. Det är därför enkelhet slår funktionslistan i praktiken.</p>
+
+<h2>Enkelt betyder inte fattigt</h2>
+<p>Ett bra, enkelt system döljer komplexiteten – den finns kvar, men du behöver inte se den. Det här ska fungera utan att göra vardagen krånglig:</p>
+<ul>
+<li><strong>Stämpla in/ut i mobilen med GPS</strong> – tiden knyts till plats, inte till en terminal.</li>
+<li><strong>Timmarna kopplas till projektet</strong> du checkar in på.</li>
+<li><strong>OB och övertid räknas enligt byggavtalet</strong> – du slipper räkna för hand.</li>
+<li><strong>Export till lön och faktura</strong> – timmarna blir färdigt underlag utan omtagning.</li>
+</ul>
+<figure class="web-shot"><img src="/landing/features/1arbetspass.webp" alt="Arbetspass i ByggExp – incheckning med GPS och timmar per projekt" width="1200" height="750" loading="lazy"><figcaption>I ByggExp stämplar laget in i appen, timmarna samlas per projekt och blir underlag till lön och faktura.</figcaption></figure>
+
+<h2>Checklista: så känner du igen ett enkelt system</h2>
+<ul>
+<li>Ni kommer igång snabbt – ingen lång införandeperiod.</li>
+<li>Den anställda behöver ingen manual för att stämpla in.</li>
+<li>Registreringen tar sekunder, inte minuter.</li>
+<li>Inga timmar behöver flyttas eller städas i efterhand.</li>
+<li>Underlaget till lön och faktura skapas utan att du matar in samma siffror igen.</li>
+<li>Det funkar på både iPhone och Android, så hela laget kan använda det.</li>
+</ul>
+
+<div class="article-table"><table>
+<thead><tr><th></th><th>Krångligt system</th><th>Enkelt system</th></tr></thead>
+<tbody>
+<tr><td>Upplärning</td><td>Kurs och manual</td><td>Ingen – stämpla in/ut</td></tr>
+<tr><td>Daglig registrering</td><td>Många fält, tar minuter</td><td>Sekunder i mobilen</td></tr>
+<tr><td>Användning i laget</td><td>Ofta låg</td><td>Hög – alla fyller i</td></tr>
+<tr><td>Risk för fel i timmarna</td><td>Hög</td><td>Låg</td></tr>
+<tr><td>Underlag till lön och faktura</td><td>Kräver efterarbete</td><td>Skapas automatiskt</td></tr>
+</tbody>
+</table></div>
+
+<h2>När ett enkelt system inte räcker</h2>
+<p>Har ni tung projektstyrning med många delmoment kan ni behöva mer runt omkring tidrapporteringen. Men själva tidregistreringen bör ändå vara enkel – lägg komplexiteten i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a>, inte i mobilen där laget stämplar in. Enkelt i botten, mer avancerat på kontoret.</p>
+
+<h2>Kom igång</h2>
+<p>Vill du testa hur enkelt det kan vara? Ladda ner en <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a> för att komma igång direkt, läs mer om <a href="/sv/blog/app-for-tidrapportering-bygg">appen för tidrapportering</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/tidrapporteringssystem-bygg">Tidrapporteringssystem för bygg – hela guiden</a></li>
+<li><a href="/sv/blog/app-for-tidrapportering-bygg">App för tidrapportering i bygg</a></li>
+<li><a href="/sv/blog/stampelklocka-app-gps-bygg">Stämpelklocka-app med GPS</a></li>
+<li><a href="/sv/blog/tidrapportering-hantverkare">Tidrapportering för hantverkare</a></li>
+<li><a href="/sv/blog/projektuppfoljning-bygg">Projektuppföljning i bygg</a></li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är ett enkelt tidrapporteringssystem?</h3>
+<p>Ett system där de anställda stämplar in och ut i mobilen på några sekunder och timmarna automatiskt blir underlag till lön och faktura – utan lappar, manuell inmatning eller upplärning.</p>
+<h3>Är ett enkelt system sämre än ett avancerat?</h3>
+<p>Nej. Det avgörande är om laget faktiskt använder det. Ett enkelt system som alla fyller i ger mer korrekta siffror än ett avancerat som halva laget hoppar över.</p>
+<h3>Hur snabbt kan vi komma igång?</h3>
+<p>Med ett enkelt system är målet att vara igång samma dag: lägg upp projekt och anställda, ladda ner appen och stämpla in. Ingen längre införandeperiod.</p>
+<h3>Kan ett enkelt system ändå ge underlag till lön och faktura?</h3>
+<p>Ja. I ByggExp räknas OB och övertid enligt byggavtalet, och de registrerade timmarna blir både löneunderlag och fakturaunderlag – enkelheten ligger i flödet, inte i att skala bort funktioner.</p>
+<h3>Funkar det för mindre byggföretag och hantverkare?</h3>
+<p>Ja, särskilt då. Mindre firmor har sällan tid för tunga system – ett enkelt system i mobilen passar vardagen. Se <a href="/sv/blog/tidrapportering-hantverkare">tidrapportering för hantverkare</a>.</p>
+`.trim();
+
+const ENKELT_TIDRAPPORTERINGSSYSTEM: BlogPost = {
+  _id: 'code-enkelt-tidrapporteringssystem',
+  title: 'Enkelt tidrapporteringssystem – så väljer du rätt',
+  slug: 'enkelt-tidrapporteringssystem',
+  locale: 'sv',
+  excerpt:
+    'Ett enkelt tidrapporteringssystem som laget faktiskt fyller i slår ett avancerat som ingen använder. Så känner du igen det – utan att tappa lön, OB och faktura.',
+  tag: 'Tidrapportering',
+  coverImageUrl: '/landing/features/1arbetspass.webp',
+  contentHtml: ENKELT_TIDRAPPORTERINGSSYSTEM_HTML,
+  seoTitle: 'Enkelt tidrapporteringssystem för bygg | ByggExp',
+  seoDescription:
+    'Enkelt tidrapporteringssystem för bygg: laget stämplar in/ut i mobilen med GPS, OB och övertid räknas automatiskt och timmarna blir underlag till lön och faktura.',
+  seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-09-07T13:00:00.000Z',
+  createdAt: '2026-09-07T13:00:00.000Z',
+  updatedAt: '2026-09-07T13:00:00.000Z',
+};
+
 export const KVALITET_ARTICLES: BlogPost[] = [
+  ENKELT_TIDRAPPORTERINGSSYSTEM,
   BYGGDAGBOK,
   EGENKONTROLL,
   TIDRAPPORTERING,

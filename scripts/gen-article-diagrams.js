@@ -326,6 +326,14 @@ const nbStemplingsur = frame(`
   ${ARR_DEF}
 `);
 
+// 24. Enkelt tidrapporteringssystem – krångligt vs enkelt (sv)
+const enkeltSystem = frame(`
+  ${title('Krångligt vs enkelt tidrapporteringssystem')}
+  ${card(40, 84, 300, 210, 'Krångligt', AMBER, ['Många fält att fylla i', 'Kräver utbildning', 'Låg användning i laget', 'Fel i tidsunderlaget'])}
+  ${card(380, 84, 300, 210, 'Enkelt', GREEN, ['Stämpla in/ut i mobilen', 'Igång på en dag', 'Hela laget fyller i', 'Rätt underlag till lön'])}
+  ${note('Systemet laget faktiskt använder ger rätt siffror – enkelhet vinner.', INK)}
+`);
+
 // 22. Mannskapsliste / elektronisk oversiktsliste – krav (nb)
 const nbMannskapsliste = frame(`
   ${title('Elektronisk oversiktsliste – krav (&#167; 15)')}
@@ -471,6 +479,7 @@ const DIAGRAMS = {
   'nb-stemplingsur-gps': nbStemplingsur,
   'nb-mannskapsliste-krav': nbMannskapsliste,
   'nb-hms-kort': nbHmsKort,
+  'enkelt-tidrapporteringssystem': enkeltSystem,
   'ab-kontrakt': abKontrakt,
   'ata-flode': ata,
   'personalliggare': personalliggare,

@@ -1,0 +1,40 @@
+%% Контент-архитектура byggexp.no — редактируй текстом, смотри на mermaid.live
+graph TD
+  subgraph A["A · Produkt / verktoy — CTA: demo"]
+    A1[timeregistrering-app-bygg *pillar*]
+    A1 --> A2[gratis-timeregistrering-app]
+    A1 --> A3[timeliste-app-bygg]
+    A1 --> A4[timeregistreringssystem-bygg]
+    A1 --> A5[stemplingsur-app]
+    A1 --> A6[faktureringsprogram-bygg]
+  end
+  subgraph B["B · Regelverk — maks trafikk — CTA: myk bro til A"]
+    B1[hms-kort-bygg *pillar 1K-10K*]
+    B1 --> B2[bestille-hms-kort]
+    B1 --> B3[hms-kort-pris]
+    B1 --> B4[sjekke-hms-kort]
+    B1 --> B5[mistet-hms-kort]
+    B1 --> B6[hms-kort-gyldighet]
+    B1 --> B7[byggekort]
+    B8[mannskapsliste-byggeplass *pillar*] --> B1
+    B9[sha-plan] --> B8
+  end
+  subgraph C["C · Maler — lead — CTA: last ned"]
+    C1[timeliste-mal]
+    C2[fakturamal]
+    C3[sha-plan-sjekkliste]
+  end
+  subgraph D["D · Pris — CTA: fang timene"]
+    D1[timepris-snekker]
+  end
+  subgraph P["Prosjekt / okonomi"]
+    P1[prosjektstyring-bygg]
+    P2[byggekontrakt]
+  end
+  B1 -. oppmoere/timer .-> A1
+  B8 -. hvem er pa plassen .-> A1
+  P1 -. timer til margin .-> A1
+  D1 -. fang timene .-> A1
+  C1 --> A3
+  C2 --> A6
+  C3 --> B9

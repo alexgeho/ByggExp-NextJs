@@ -1,0 +1,38 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="byggexp.no arkitektur" id="no-arch">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="A" value="&lt;b&gt;A · PRODUKT / verktøy&lt;/b&gt;&lt;br&gt;CTA: demo / prøv gratis&lt;br&gt;&lt;br&gt;⭐ timeregistrering-app-bygg&lt;br&gt;• gratis-timeregistrering-app&lt;br&gt;• timeliste-app-bygg&lt;br&gt;• timeregistreringssystem-bygg&lt;br&gt;• stemplingsur-app&lt;br&gt;• faktureringsprogram-bygg" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#dae8fc;strokeColor=#2563c9;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="B1" value="&lt;b&gt;B · REGELVERK — maks trafikk&lt;/b&gt;&lt;br&gt;CTA: myk bro til A&lt;br&gt;&lt;br&gt;⭐ hms-kort-bygg (1K-10K)&lt;br&gt;• bestille-hms-kort&lt;br&gt;• hms-kort-pris&lt;br&gt;• sjekke-hms-kort&lt;br&gt;• mistet-hms-kort&lt;br&gt;• hms-kort-gyldighet&lt;br&gt;• byggekort" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="540" y="40" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="B8" value="&lt;b&gt;⭐ mannskapsliste-byggeplass&lt;/b&gt;&lt;br&gt;(oversiktsliste § 15)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="540" y="300" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="B9" value="sha-plan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="540" y="390" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="C" value="&lt;b&gt;C · MALER — lead&lt;/b&gt;&lt;br&gt;CTA: last ned + app&lt;br&gt;&lt;br&gt;• timeliste-mal&lt;br&gt;• fakturamal&lt;br&gt;• sha-plan-sjekkliste" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#d5e8d4;strokeColor=#1f9d6b;" vertex="1" parent="1">
+          <mxGeometry x="60" y="320" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="D" value="&lt;b&gt;D · PRIS&lt;/b&gt;&lt;br&gt;CTA: fang timene → A&lt;br&gt;&lt;br&gt;• timepris-snekker" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#fff2cc;strokeColor=#e08512;" vertex="1" parent="1">
+          <mxGeometry x="60" y="500" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="P" value="&lt;b&gt;PROSJEKT / økonomi&lt;/b&gt;&lt;br&gt;&lt;br&gt;• prosjektstyring-bygg&lt;br&gt;• byggekontrakt (NS 8405/06/07)" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="60" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="endArrow=block;dashed=1;html=1;" edge="1" parent="1" source="B1" target="A"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="endArrow=block;dashed=1;html=1;" edge="1" parent="1" source="B8" target="A"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="endArrow=block;html=1;" edge="1" parent="1" source="B8" target="B1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="endArrow=block;html=1;" edge="1" parent="1" source="B9" target="B8"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" style="endArrow=block;dashed=1;html=1;" edge="1" parent="1" source="P" target="A"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="endArrow=block;dashed=1;html=1;" edge="1" parent="1" source="D" target="A"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" style="endArrow=block;html=1;" edge="1" parent="1" source="C" target="A"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

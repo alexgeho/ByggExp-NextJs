@@ -25,17 +25,20 @@
 - 3 лид-магнита (Excel `.csv` + печатаемый HTML) в `/public/nb/maler/`, product-led (без gate).
 - Ключевые факты рынка: HMS-kort = **1K-10K** (крупнейший); timeregistrering 500; timeliste 100-1K; sha-plan/timepris/faktura/ns8405 = 100-1K; **stemplingsur 0-10 (мёртвый)**; бренды конкурентов (visma/tripletex/smartdok…) — не таргетим.
 
-**⏭️ СЛЕДУЮЩИЕ ШАГИ (по приоритету, из `no-innholdsarkitektur.md` §6):**
-1. **Бэклинки на byggexp.no** — #1 рычаг (owner решил «потом»). Начатый список: proff.no, gulesider, 1881, mittanbud, byggstart, norskbyggebransje, Google Business Profile (NAP-консистентность!). Инсайт: 1 ссылка отраслевого СМИ/ассоциации > 100 каталожных. → оформить в backlink-план.
-2. ✅ **B-хаб добит:** `byggherreforskriften` pillar (2026-09-08, live) — связал HMS-kort+mannskapsliste+SHA-plan, HowTo+FAQ+диаграмма, залинкован из mannskapsliste/sha-plan. oversiktsliste отдельным спок НЕ делал (mannskapsliste покрывает — анти-каннибализация). nb-блог = **21 статья**.
-3. ✅ **D-хаб по профессиям добит:** timepris-rørlegger + -elektriker (100-1K, live). timepris-maler = только 50 → на потом. + SJA (100-1K, HMS) + framdriftsplan (100-1K, планирование) + byggeledelse (вплетён в prosjektstyring).
-4. **C-хаб:** `tilbudsmal` (оффер-шаблон, магнит к byggekontrakt) — Planner: 50 (tilbudsmal/word/excel). Ниже приоритет, но лёгкий магнит.
-5. **Магниты v2:** timepris-калькулятор (owner сказал «timepris дерьмо» — НЕ делать калькулятор), HMS-kort sjekkliste на 1K-10K кластер.
-6. Через ~неделю: **GSC Performance byggexp.no** → near-miss запросы (поз. 8-15) → усилить on-page.
+**⏭️ ПРОДОЛЖИТЬ ОТСЮДА — открытые шаги (по приоритету):**
+1. 🔴 **Бэклинки на byggexp.no = рычаг №1** (owner-действие, вне репо). Домен молодой + 0 внешнего веса → статьи висят «Discovered/Crawled – not indexed» (как GSC-скрин nordkod.se). Пока нет 5–10 качественных ссылок, новые статьи НЕ ранжируются, сколько ни пиши. Стартовый список площадок: proff.no, gulesider, 1881, mittanbud, byggstart, norskbyggebransje, Google Business Profile (NAP-консистентность!). Инсайт: 1 ссылка отраслевого СМИ/ассоциации > 100 каталожных. **→ TODO: оформить backlink-план отдельным md (owner проставляет сам).**
+2. **C-хаб `tilbudsmal`** (Planner: 50, tilbudsmal/word/excel) — лёгкий product-led лид-магнит (Excel/Word) + статья, линк к byggekontrakt/fakturamal. Низкий спрос, но дешёвый магнит.
+3. **Магнит:** HMS-kort sjekkliste на кластер 1K-10K (самый большой трафик). timepris-калькулятор НЕ делать (owner: «timepris дерьмо»).
+4. **timepris-maler** (50) — добить D-хаб третьей профессией, когда дойдут руки.
+5. Через ~неделю после накопления данных: **GSC Performance byggexp.no** → near-miss (поз. 8-15) → усилить on-page.
 
-**Owner-решения (ждут):** модель магнита (email-gate vs product-led signup); юр-проверка шаблонов контрактов/tilbud.
+**НЕ строить (проверено Planner 2026-09-08):** `prosjektledelse`/`prosjekt leder` (100-1K, но интент образовательный — utdanning/ntnu/prince2/kristiania/karlsen, не наш покупатель); `stemplingsur` (0-10, мёртвый); бренды конкурентов (visma/tripletex/smartdok…).
 
-**Как продолжить:** прочитать `docs/seo/no-innholdsarkitektur.md` → взять пункт из §6 roadmap. Каждую новую статью прогонять через 5 вопросов (сегмент/хаб/ключ/ссылки/CTA).
+**Как прогнать новые ключи в Planner:** Chrome-таб Google Ads Keyword Planner → сменить локацию на Norway + язык Norwegian → «Start with keywords», до 10 сидов → Get results → Download .csv → распарсить `iconv -f UTF-16` (bucket «100-1K» экспортится как 500).
+
+**Owner-решения (ждут):** бэклинки (см. п.1); модель магнита (email-gate vs product-led signup); юр-проверка шаблонов контрактов/tilbud.
+
+**Как продолжить:** прочитать эту шапку + `docs/seo/no-innholdsarkitektur.md` §6. Каждую новую статью прогонять через 5 вопросов (сегмент/хаб/ключ/ссылки/CTA). Деплой: push main → GHA → VPS (~1-2 мин), проверять live 200 + наличие в sitemap.
 
 ---
 

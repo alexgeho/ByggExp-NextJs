@@ -6,8 +6,16 @@ import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
-import { calcLocaleEnabled, type CalcLocale } from '../../../lib/locale';
-import { localeOrigin } from '../../../lib/seo';
+import { calcLocaleEnabled, NO_DOMAIN_LIVE, type CalcLocale } from '../../../lib/locale';
+import { buildHreflangAlternates, localeOrigin } from '../../../lib/seo';
+import type { LandingLanguageCode } from '../../../locales/languages';
+
+// /verktyg exists only for sv + en (byggexp.se) and nb (byggexp.no) — NOT the
+// other landing locales. Emit hreflang only for those, so we never point Google
+// at a /ru/verktyg etc. that 404s.
+const VERKTYG_HREFLANG_LOCALES: readonly LandingLanguageCode[] = NO_DOMAIN_LIVE
+  ? ['sv', 'en', 'nb']
+  : ['sv', 'en'];
 
 type Tool = { slug: string; title: string; description: string };
 type Group = { heading: string; tools: Tool[] };
@@ -212,6 +220,10 @@ export default function VerktygHubPage({
   const headerT = headerTranslations[lang];
   const footerT = footerTranslations[lang];
   const canonicalUrl = `${localeOrigin(lang)}/${lang}/verktyg`;
+  const hreflangAlternates = buildHreflangAlternates(
+    (l) => `${localeOrigin(l)}/${l}/verktyg`,
+    VERKTYG_HREFLANG_LOCALES,
+  );
 
   return (
     <>
@@ -219,6 +231,9 @@ export default function VerktygHubPage({
         <title>{c.seoTitle}</title>
         <meta name="description" content={c.seoDescription} />
         <link rel="canonical" href={canonicalUrl} />
+        {hreflangAlternates.map((alt) => (
+          <link key={alt.hrefLang} rel="alternate" hrefLang={alt.hrefLang} href={alt.href} />
+        ))}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={c.seoTitle} />
         <meta property="og:description" content={c.seoDescription} />

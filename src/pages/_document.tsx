@@ -27,6 +27,20 @@ const ORG_SCHEMA = JSON.stringify({
     "Bygglednings- och projektstyrningsprogram för byggföretag: tidrapportering, projektekonomi, offert, faktura och personalliggare.",
 });
 
+// Site-wide WebSite schema — declares the site entity + its name for Google
+// (helps sitelinks and brand SERP). No SearchAction/potentialAction: the site
+// search is a header dropdown that navigates straight to result URLs, so there's
+// no `?q=` results page to bind a Sitelinks Searchbox to. Add SearchAction here
+// only once a `/sv/sok?q={search_term_string}` results page exists.
+const WEBSITE_SCHEMA = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "ByggExp",
+  url: "https://byggexp.se",
+  inLanguage: "sv-SE",
+  publisher: { "@type": "Organization", name: "ByggExp", url: "https://byggexp.se" },
+});
+
 export default function Document() {
   return (
     <Html lang="sv">
@@ -40,11 +54,25 @@ export default function Document() {
         />
         <script dangerouslySetInnerHTML={{ __html: GA_INLINE }} />
         {allowIndex ? (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: ORG_SCHEMA }}
-          />
+          <>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: ORG_SCHEMA }}
+            />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: WEBSITE_SCHEMA }}
+            />
+          </>
         ) : null}
+        {/* Global social defaults — page-level Head tags override these. Ensures
+            every page (incl. the 61 calculators that only set og:title) has an
+            og:image + twitter card so shares render with a preview. */}
+        <meta property="og:site_name" content="ByggExp" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://byggexp.se/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://byggexp.se/logo.png" />
       </Head>
       <body>
         <Main />

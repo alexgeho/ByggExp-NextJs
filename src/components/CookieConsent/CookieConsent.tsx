@@ -2,7 +2,13 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { gaConsentDeny, gaConsentGrant, gaEvent, loadClarity } from "../../lib/analytics";
+import {
+  gaConsentDeny,
+  gaConsentGrant,
+  gaEvent,
+  loadClarity,
+  loadRetargeting,
+} from "../../lib/analytics";
 
 const KEY = "byggexp-consent";
 
@@ -44,6 +50,7 @@ export default function CookieConsent() {
     if (saved === "granted") {
       gaConsentGrant();
       loadClarity();
+      loadRetargeting();
     } else if (!saved) setOpen(true);
   }, []);
 
@@ -74,6 +81,7 @@ export default function CookieConsent() {
     if (granted) {
       gaConsentGrant();
       loadClarity();
+      loadRetargeting();
     } else gaConsentDeny();
     setOpen(false);
   }

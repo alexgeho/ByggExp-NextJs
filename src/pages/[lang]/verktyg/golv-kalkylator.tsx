@@ -294,6 +294,22 @@ export default function Page({ lang }: { lang: Locale }) {
         sections={c.sections}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the room length and width.',
+                  'The tool calculates the floor area in m².',
+                  'Add waste (5–10 %).',
+                  'Buy the right amount of flooring.',
+                ]
+              : [
+                  'Ange rummets längd och bredd.',
+                  'Verktyget räknar ut golvytan i m².',
+                  'Lägg till spill (5–10 %).',
+                  'Köp rätt mängd golv.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

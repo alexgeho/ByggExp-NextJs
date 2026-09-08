@@ -198,6 +198,22 @@ export default function Page({ lang }: { lang: Locale }) {
         embedTitle={c.h1}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the fence length and the post spacing.',
+                  'The tool calculates the number of posts and rails/boards.',
+                  'Add gates and waste.',
+                  'Order the material.',
+                ]
+              : [
+                  'Ange staketets längd och stolpavstånd.',
+                  'Verktyget räknar ut antal stolpar och reglar/brädor.',
+                  'Lägg till grindar och spill.',
+                  'Beställ materialet.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

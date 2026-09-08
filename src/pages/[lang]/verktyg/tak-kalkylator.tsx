@@ -362,6 +362,22 @@ export default function Page({ lang }: { lang: Locale }) {
         sections={c.sections}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the roof dimensions and the pitch.',
+                  'The tool calculates the roof area.',
+                  'Choose the roofing material for coverage.',
+                  'Order the right amount.',
+                ]
+              : [
+                  'Ange takets mått och taklutning.',
+                  'Verktyget räknar ut takytan.',
+                  'Välj takmaterial för åtgången.',
+                  'Beställ rätt mängd.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

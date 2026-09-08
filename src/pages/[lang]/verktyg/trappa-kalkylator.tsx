@@ -198,6 +198,22 @@ export default function Page({ lang }: { lang: Locale }) {
         embedTitle={c.h1}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the total height and available depth.',
+                  'The tool calculates the number of steps, riser and tread.',
+                  'Check it against the comfort formula (2×riser + tread).',
+                  'Use the measurements when building.',
+                ]
+              : [
+                  'Ange total höjd och tillgängligt djup.',
+                  'Verktyget räknar ut antal steg, sätthöjd och stegdjup.',
+                  'Kontrollera mot bekvämlighetsformeln (2×sätthöjd + stegdjup).',
+                  'Använd måtten vid bygget.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

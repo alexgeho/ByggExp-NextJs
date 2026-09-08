@@ -198,6 +198,22 @@ export default function Page({ lang }: { lang: Locale }) {
         embedTitle={c.h1}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the length and width of the deck.',
+                  'Enter the board width and the gap between boards.',
+                  'The tool calculates the number of boards and total metres.',
+                  'Add waste and order the timber.',
+                ]
+              : [
+                  'Ange altanens längd och bredd.',
+                  'Ange trallens bredd och springan mellan brädorna.',
+                  'Verktyget räknar ut antal trallbrädor och löpmeter.',
+                  'Lägg till spill och beställ virket.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

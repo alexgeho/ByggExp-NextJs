@@ -198,6 +198,22 @@ export default function Page({ lang }: { lang: Locale }) {
         embedTitle={c.h1}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the surface area and the desired gravel depth.',
+                  'The tool calculates the volume in m³ (and tonnes).',
+                  'Add a margin for compaction.',
+                  'Order the right amount of gravel.',
+                ]
+              : [
+                  'Ange ytans mått och önskat grusdjup.',
+                  'Verktyget räknar ut volymen i m³ (och ton).',
+                  'Lägg till marginal för packning.',
+                  'Beställ rätt mängd grus.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

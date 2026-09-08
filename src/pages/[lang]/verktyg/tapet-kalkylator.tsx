@@ -198,6 +198,22 @@ export default function Page({ lang }: { lang: Locale }) {
         sections={c.sections}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the wall dimensions and the roll width and length.',
+                  'The tool calculates the number of wallpaper rolls.',
+                  'Add extra for pattern matching.',
+                  'Buy the right number of rolls.',
+                ]
+              : [
+                  'Ange väggarnas mått och rullens bredd och längd.',
+                  'Verktyget räknar ut antal tapetrullar.',
+                  'Lägg till extra för mönsterpassning.',
+                  'Köp rätt antal rullar.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

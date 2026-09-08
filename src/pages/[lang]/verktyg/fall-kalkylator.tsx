@@ -198,6 +198,22 @@ export default function Page({ lang }: { lang: Locale }) {
         embedTitle={c.h1}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the length and the desired fall (e.g. 1:100).',
+                  'The tool calculates the height difference.',
+                  'Check it against the applicable requirement.',
+                  'Use the value when laying.',
+                ]
+              : [
+                  'Ange längden och önskat fall (t.ex. 1:100).',
+                  'Verktyget räknar ut höjdskillnaden.',
+                  'Kontrollera mot gällande krav.',
+                  'Använd värdet vid läggningen.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

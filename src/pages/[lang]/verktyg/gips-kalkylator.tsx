@@ -427,6 +427,22 @@ export default function Page({ lang }: { lang: Locale }) {
         embedTitle={c.h1}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the wall or ceiling area.',
+                  'Enter the board dimensions.',
+                  'The tool calculates the number of plasterboards.',
+                  'Add waste and order.',
+                ]
+              : [
+                  'Ange väggens eller takets area.',
+                  'Ange gipsskivans mått.',
+                  'Verktyget räknar ut antal gipsskivor.',
+                  'Lägg till spill och beställ.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

@@ -198,6 +198,22 @@ export default function Page({ lang }: { lang: Locale }) {
         embedTitle={c.h1}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the room area.',
+                  'Enter the pipe spacing (c/c) for the loop.',
+                  'The tool calculates the loop length and output.',
+                  'Use it as a basis for ordering.',
+                ]
+              : [
+                  'Ange rummets yta.',
+                  'Ange c/c-avstånd för slingan.',
+                  'Verktyget räknar ut slinglängd och effekt.',
+                  'Använd som underlag för beställning.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

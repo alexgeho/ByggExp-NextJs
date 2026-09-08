@@ -5,6 +5,27 @@ Build/lint зелёные после каждого куска. Коммиты �
 
 ---
 
+## 🟢 СЕССИЯ 2 (2026-09-08) — конверсия + добивки. ВСЁ live, AC проверены curl'ом.
+
+**ВАЖНО (модель):** self-serve триала НЕТ (триал даётся вручную после демо-звонка, 14 дней). Убран мёртвый концепт «Testa gratis»/`TRIAL_CTA`/`NEXT_PUBLIC_TRIAL_URL`. Единственный primary CTA = **«Boka demo» → APP_CTA (/sv/contact)**. «14 dagar gratis» — только текст-крючок.
+
+| # | Задача | Статус | Acceptance (проверено live) |
+|---|---|---|---|
+| 4 | **ESLint честный зелёный** | ✅ | `npx eslint src` = **0 problems** (было 10 err+1 warn). Real-fix (om-oss escape, seo redundant setState, ChatAssistant мёртвый disable) + justified-disable с причинами для легитимных mount/event-эффектов. `tsc` чист. |
+| 1 | **Контекстный продукт-баннер** | ✅ | `ProductBanner` (dark navy) на всех 61 tool + 6 mall через `LeadMagnetPage`. Headline контекстный по embedSlug: egenkontroll-mall→«Egenkontroller ingår i ByggExp», faktura-mall→«Offert & fakturering», rot→«Ekonomi & kalkyl», schema-mall→«Planering & bemanning» (curl-подтверждено). «Boka demo» + «14 dagar gratis efteråt». `cta_click{action:demo,source,placement:product_banner}`. **«Testa gratis» = 0** на tool-страницах. ⚠️ отклонение: `.container-narrow`=980px → настоящий right-rail без наложения невозможен без переписи лейаута → сделан in-flow dark-баннер под intro (desktop-горизонт / mobile-стек), не ломает layout. |
+| 2 | **HowTo на 8 калькуляторов** | ✅ | `curl … \| grep -o '"HowTo"'` = **1** на kvadratmeter/betong/takstolar/reglar/isolering/farg/moms/u-varde (было только rot). Локализовано sv/en. |
+| 3 | **bemanning-pillar** | ✅ | Новый `bemanningssystem-bygg`: 200, **title+H1 содержат «bemanningsplanering»**, HowTo+FAQPage schema, залинкован из **2** страниц (bemanning-och-personalplanering + franvaro-i-byggforetag). Анти-каннибализация: убрал дубль-таргетинг из старой bemanning-статьи. +`howTo` в BlogPost + эмиссия HowTo в blog-шаблоне (переиспользуемо). |
+| 5 | **GSC near-miss** | ✅ | Свежий GSC. In-repo фикс: `restidsersattning-kalkylator` таргетил Byggavtalet, но не «Byggnads» (0) под запрос «restidsersättning byggnads» (поз.8.9) → добавил факт-корректный FAQ про Byggnads. egenkontroll-mall уже оптимизирован под «gratis» (H1+16×, поз.16.3 = авторитет, не on-page). Глубокие near-miss (entreprenadförsäkring 13.2 CMS, head-термины page 2–3) = бэклинки [OWNER]. |
+
+**Бэклог (impact×effort):** P0 [OWNER] дать реальный demo-flow метрики; P1 раскатать HowTo на остальные пошаговые калькуляторы + ProductBanner A/B (headline generic vs contextual); P2 entreprenadförsäkring CMS-правка; P3 SearchAction results-page.
+**[OWNER] сессии 2:** ничего не блокировало (триал-модель уточнена → мёртвый концепт удалён). Бэклинки остаются #1 вне-репо рычагом для head-near-miss.
+
+---
+
+## (Сессия 1 — 2026-09-08, ранее)
+
+---
+
 ## 🔴🔴 [OWNER] — БЛОКЕРЫ (без них часть роста не поедет)
 - ⛔ **Публичный register/trial-URL НЕ существует:** `app.byggexp.se` = **NXDOMAIN** (не резолвится). Task 1 требует «Testa gratis»→register. Инфра построена и готова (env `NEXT_PUBLIC_TRIAL_URL` → один флаг включает primary-CTA сайтово, fallback на /sv/contact, без битых ссылок). **Нужно:** живой публичный URL регистрации/триала (НЕ admin.byggexp.se — его нельзя светить публично).
 - ⛔ **Ad-аккаунты/пиксель-ID (Task 2):** Meta Pixel ID, опц. GTM ID, LinkedIn Partner ID. Код-скелет готов (consent-gated, default denied), включается env-переменными.

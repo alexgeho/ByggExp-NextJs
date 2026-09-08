@@ -36,6 +36,11 @@ const FAQ: LeadMagnetFaqItem[] = [
     answer:
       'Milersättning är skattefri upp till 25 kr/mil (2,50 kr/km) enligt Skatteverket 2026 – belopp däröver blir skattepliktig lön. Restidsersättning är ersättning för tid och beskattas som lön. Kollektivavtalet styr vad du betalar ut, Skatteverket styr vad som är skattefritt.',
   },
+  {
+    question: 'Gäller restidsersättningen enligt Byggnads?',
+    answer:
+      'Ja. Byggavtalet är kollektivavtalet mellan Byggföretagen och Byggnads, så restidsersättning och reseersättning "enligt Byggnads" är samma sak som enligt Byggavtalet. Kalkylatorn utgår från Byggavtalets regler – hämta alltid gällande restidssats och satser ur avtalstexten, eftersom de revideras.',
+  },
 ];
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {

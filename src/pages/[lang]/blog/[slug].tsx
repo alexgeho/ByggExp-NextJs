@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import FeatureNav from '../../../components/FeatureNav/FeatureNav';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
+import ProductBanner from '../../../components/LeadMagnet/ProductBanner';
 import { fetchPublishedBlogPost } from '../../../lib/blog-api';
 import { fetchPublishedBlogPostsCached } from '../../../lib/blog-cache';
 import { getBlogTools } from '../../../content/blog-tools';
@@ -365,6 +366,10 @@ export default function BlogArticlePage({
               onClick={() => setLightboxImage(coverImageUrl)}
             />
           ) : null}
+
+          {/* Contextual product banner — sv only (Swedish copy). Shown high on the
+              article (demand lands here) so a valuable free read converts to a demo. */}
+          {lang === 'sv' ? <ProductBanner tool={post.slug} /> : null}
 
           <div
             ref={contentRef}

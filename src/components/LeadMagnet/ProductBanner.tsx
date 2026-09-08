@@ -24,7 +24,7 @@ export function productBannerHeadline(slug: string): string {
   const s = (slug || '').toLowerCase();
   if (s.includes('egenkontroll') || s.includes('kvalitet') || s.includes('kma') || s.includes('riskanalys'))
     return 'Egenkontroller ingår i ByggExp';
-  if (s.includes('faktura') || s.includes('offert'))
+  if (s.includes('faktura') || s.includes('offert') || s.includes('avtal') || s.includes('kontrakt') || s.includes('entreprenad') || s.includes('anbud'))
     return 'Offert & fakturering i ByggExp';
   if (s.includes('tidrapport') || s.includes('stampelklocka') || s.includes('tidredovisning') || s.includes('restidsersattning') || s.includes('ackord') || s.includes('ob-overtid'))
     return 'Tidrapportering & lön i ByggExp';

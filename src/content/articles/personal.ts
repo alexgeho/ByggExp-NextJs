@@ -35,7 +35,12 @@ const BEMANNING_HTML = `
 <h2>Så gör du i ByggExp</h2>
 <p>I ByggExp planerar du bemanningen visuellt: fördela personal på projekt och pass, se frånvaro och beläggning i en delad vy, och låt medarbetarna se sitt schema i mobilen. Eftersom bemanning, närvaro, tid och ekonomi ligger i samma app hänger planen ihop med verkligheten – planerade timmar följer med hela vägen till <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlaget</a>.</p>
 
+<h2>Från Excel till bemanningssystem</h2>
+<p>Många börjar med bemanningsplanering i Excel eller på en whiteboard. Det fungerar för ett projekt, men med flera projekt och skiftande frånvaro blir det snabbt oöverskådligt. Ett bemanningssystem samlar planen digitalt: du ser beläggning, frånvaro och kompetens i en delad vy, och laget ser sitt schema i mobilen. Skillnaden mot Excel är att bemanningsplaneringen hänger ihop med tid, närvaro och lön – ändrar du planen uppdateras allt automatiskt.</p>
+
 <h2>Vanliga frågor</h2>
+<h3>Vad är ett bemanningssystem?</h3>
+<p>Ett bemanningssystem är programvaran där du sköter bemanningsplaneringen digitalt – fördelar personal på projekt och pass, ser frånvaro och beläggning, och kopplar planen till tid och lön. Det ersätter bemanningsplanering i Excel med en delad, alltid uppdaterad vy.</p>
 <h3>Vad är skillnaden mellan bemanning och schemaläggning?</h3>
 <p>Bemanning handlar om att fördela rätt personal och kompetens över projekt; <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggning</a> är att lägga de konkreta passen. I praktiken hänger de ihop.</p>
 <h3>Hur hanterar jag frånvaro i planeringen?</h3>

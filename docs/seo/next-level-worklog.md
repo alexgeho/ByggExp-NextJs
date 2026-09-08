@@ -35,7 +35,7 @@ Build/lint зелёные после каждого куска. Коммиты �
 - [x] 4. Тех-SEO — WebSite schema, og:image, hreflang /verktyg ✅ (/funktioner уже был)
 - [x] 5. Pillar-ы — проверено: все названные УЖЕ есть; реальный пробел = Bemanning (объём [OWNER])
 - [x] 6. pSEO шаблон + дизайн ✅ (`pseo-template.md`); пилот — после подтверждения объёма
-- [ ] 7. GSC near-miss — 🔄 (тяну byggexp.se GSC)
+- [x] 7. GSC near-miss — ✅ данные сняты (`gsc-near-miss.md`); in-repo фикс: bemanning-статья +exact-ключи «bemanningsplanering/bemanningssystem» (было 0, поз.53). Глубокие near-miss (page 2–3) = бэклинки [OWNER].
 
 ---
 

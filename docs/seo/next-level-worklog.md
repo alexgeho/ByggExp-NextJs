@@ -29,12 +29,87 @@ Build/lint зелёные после каждого куска. Коммиты �
 
 ## Чек-лист задач
 - [x] 0. Индексация — проверено, включена ✅
-- [ ] 1. CRO / self-serve funnel 🔄
-- [ ] 2. Ретаргетинг-скелет (consent-gated)
-- [ ] 3. GEO/AEO (15 страниц: direct-answer + HowTo/FAQ)
-- [ ] 4. Тех-SEO (hreflang /verktyg+/funktioner, WebSite+SearchAction, HowTo+og:image на калькуляторах)
-- [ ] 5. Недостающие pillar-ы (Planering, Projektledning, Byggdagbok, Verktyg/QR)
-- [ ] 6. pSEO шаблон (услуга×город) + пилот 2–3
-- [ ] 7. GSC near-miss (recurring) — ⛔ нужен GSC-доступ
+- [x] 1. CRO / self-serve funnel ✅ (register-URL = [OWNER])
+- [x] 2. Ретаргетинг-скелет (consent-gated) ✅ (pixel-id = [OWNER])
+- [x] 3. GEO/AEO — HowTo-механизм + пилот + отчёт ✅ (pillar-CMS-правки = [OWNER])
+- [x] 4. Тех-SEO — WebSite schema, og:image, hreflang /verktyg ✅ (/funktioner уже был)
+- [x] 5. Pillar-ы — проверено: все названные УЖЕ есть; реальный пробел = Bemanning (объём [OWNER])
+- [x] 6. pSEO шаблон + дизайн ✅ (`pseo-template.md`); пилот — после подтверждения объёма
+- [ ] 7. GSC near-miss — 🔄 (тяну byggexp.se GSC)
 
-_(Детали и acceptance-критерии — по мере выполнения ниже.)_
+---
+
+## Gap-таблицы + действия по задачам
+
+### 1. CRO / self-serve funnel
+| Элемент | Было | Действие | Статус |
+|---|---|---|---|
+| primary «Testa gratis»→register | ❌ только «Boka demo» | dual-CTA в LeadMagnetPage+ToolAppCta (все 61 tool + 6 mall в 1 месте) | ✅ |
+| register-URL | ❌ app.byggexp.se = NXDOMAIN | env `NEXT_PUBLIC_TRIAL_URL`, fallback на demo (нет битых) | ⛔ [OWNER] URL |
+| funnel-события | частично | +`tool_view`, +`cta_click{action}`; `tool_lead_submit` уже был | ✅ |
+| gated лид-магнит | ✅ `ToolLeadForm` (email→/mail/demo-request, GA) | уже есть; nurture-подключение | ⛔ [OWNER] ESP |
+**A/B-гипотезы:** (1) «Testa gratis» primary vs «Boka demo» primary — CTR→register; (2) CTA после результата тула vs в конце статьи; (3) lead-form inline vs за кнопкой «Ladda ner».
+**Acceptance:** на любой /verktyg в HTML есть 2 CTA (Testa gratis + Boka demo); клик шлёт `cta_click`; смена `NEXT_PUBLIC_TRIAL_URL` меняет href primary сайтово.
+
+### 2. Ретаргетинг
+| Элемент | Действие | Статус |
+|---|---|---|
+| Meta pixel loader | `loadMetaPixel()` consent+env-gated | ✅ |
+| GTM loader | `loadGtm()` | ✅ |
+| события→fbq | `gaEvent` форвардит trackCustom | ✅ |
+| подключение на consent | CookieConsent оба пути | ✅ |
+| аудитории/lookalike/nurture | дизайн в `retargeting-plan.md` | ✅ |
+| pixel/GTM/LinkedIn id | env | ⛔ [OWNER] |
+**Acceptance:** loaders no-op без env-id и вне byggexp.se; вызываются на grant; `gaEvent`→fbq. Реальная загрузка — после установки id (owner).
+
+### 3. GEO/AEO
+| Элемент | Действие | Статус |
+|---|---|---|
+| HowTo schema | `howTo`-prop в LeadMagnetPage → JSON-LD | ✅ |
+| пилот | rot-avdrag-kalkylator (4 шага sv+en) | ✅ |
+| FAQPage | уже 100% money-страниц | ✅ |
+| отчёт 15 страниц | `aeo-report.md` | ✅ |
+| HowTo/direct-answer на pillar'ах (CMS) | список в отчёте | ⛔ [OWNER/CMS] |
+**Acceptance:** `curl rot-avdrag-kalkylator | grep '"HowTo"'` = 1 после деплоя; отчёт покрывает 15 страниц.
+
+### 4. Тех-SEO
+| Элемент | Было | Действие | Статус |
+|---|---|---|---|
+| WebSite schema | ❌ | добавлен в _document | ✅ |
+| SearchAction | ❌ (нет ?q= results) | не эмитим (честно), нужен results-page | 🔶 design |
+| глоб. og:image/twitter | ❌ (калькуляторы только og:title) | дефолты в _document | ✅ |
+| hreflang /funktioner | ✅ уже был | — | ✅ |
+| hreflang /verktyg hub | ❌ | добавлен (sv/en/nb-only) | ✅ |
+| HowTo на калькуляторах | ❌ | механизм + пилот | ✅ (раскатка incremental) |
+| каннибализация/битые/canonical | 0 битых, canonical ок (прошлые аудиты) | — | ✅ |
+**Acceptance:** `curl / | grep '"WebSite"'`=1; `/sv/verktyg` HTML содержит `rel=alternate hreflang`; og:image присутствует на калькуляторе.
+
+### 5. Pillar-ы (проверка перед постройкой)
+| Модуль | Страница | Статус |
+|---|---|---|
+| Planering | schemalaggningssystem-bygg / resursplanering-bygg / personalplanering-bygg | ✅ есть |
+| Projektledning/projekthantering | projektledning-byggforetag / projekthanteringssystem-bygg | ✅ есть |
+| Byggdagbok | byggdagbok | ✅ есть |
+| Verktyg/QR | verktygshantering-**app** (200) | ✅ есть |
+| **Bemanning** | bemanning-bygg = 404 | ⛔ реальный пробел, объём [OWNER] (outline готов в `pseo-template.md` §ниши) |
+**Acceptance:** все 4 названных модуля имеют live-pillar (curl 200) — подтверждено. Bemanning — единственный gap, gated на объём.
+
+### 6. pSEO
+Дизайн-шаблон + алгоритм уникализации + 5 гардов + top-20 городов + 3 ниши + пилот-спека → `pseo-template.md`.
+**Acceptance:** документ содержит шаблон, anti-thin+anti-cannibalization гарды, пилот-спеку. Реализация пилота — после объёма (гард «пилот сперва»).
+
+---
+
+## Бэклог impact × effort (что дальше)
+| Приоритет | Задача | Impact | Effort |
+|---|---|---|---|
+| P0 | [OWNER] выдать `NEXT_PUBLIC_TRIAL_URL` → включить «Testa gratis» | 🔥🔥🔥 | XS |
+| P0 | [OWNER] `NEXT_PUBLIC_META_PIXEL_ID` → ретаргет живой | 🔥🔥 | XS |
+| P1 | GSC near-miss (pos 8–15) → усилить (Task 7) | 🔥🔥 | S |
+| P1 | Раскатка HowTo на 8 калькуляторов | 🔥 | S |
+| P2 | Bemanning pillar (после объёма) | 🔥 | M |
+| P2 | pSEO пилот 3 города (после объёма + cities.ts) | 🔥🔥 | M |
+| P3 | SearchAction: сделать `/sv/sok?q=` results-page + schema | 🔶 | M |
+| P3 | HowTo/direct-answer на pillar'ах (CMS) | 🔥 | M |
+
+_(Полный [OWNER]-список — вверху файла.)_

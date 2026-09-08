@@ -5,6 +5,35 @@ Build/lint зелёные после каждого куска. Коммиты �
 
 ---
 
+## ▶️ START HERE — состояние + СЛЕДУЮЩИЕ ШАГИ (обновлено 2026-09-08)
+
+**Проверка перед стартом:** `npx eslint src --ext .ts,.tsx` (должно быть 0) · `npx tsc --noEmit` · `SITE_ALLOW_INDEX=true npx next build`. Все три сейчас зелёные.
+
+**Модель продукта (ВАЖНО, не путать):** self-serve триала НЕТ. Единственный primary CTA = **«Boka demo» → `APP_CTA` (/sv/contact)**. «14 dagar gratis» — только текст-крючок. `TRIAL_CTA`/`NEXT_PUBLIC_TRIAL_URL` удалены — НЕ возвращать.
+
+**Ключевые механизмы (переиспользуемые):**
+- `src/components/LeadMagnet/ProductBanner.tsx` — контекстный dark-баннер (headline по embedSlug), рендерится на всех tool/mall через `LeadMagnetPage`. Маппинг тем — в `productBannerHeadline()`.
+- `LeadMagnetPage` prop **`howTo={{steps}}`** → HowTo JSON-LD (калькуляторы). BlogPost prop **`howTo`** → HowTo в blog-шаблоне (`[lang]/blog/[slug].tsx`).
+- GA-события: `tool_view`, `cta_click{action:demo,placement}`, `tool_lead_submit`. Форвардятся в fbq (ретаргет-скелет, ждёт pixel-id [OWNER]).
+- Схемы глобально: Organization+WebSite в `_document`; FAQ/Breadcrumb/HowTo/SoftwareApplication per-page.
+
+**⏭️ СЛЕДУЮЩИЕ ШАГИ (по приоритету):**
+1. **P1 — раскатать HowTo** на остальные пошаговые калькуляторы (grus, tapet, trall, staket, golv, gips, tak, fall, golvvärme, trappa) — паттерн: `howTo={{steps: lang==='en'?[…]:[…]}}` после `faq={c.faq}`. AC: `curl|grep '"HowTo"'`=1.
+2. **P1 — A/B ProductBanner**: contextual vs generic headline (событие уже шлётся, нужен только эксперимент/GA-сегмент).
+3. **P2 — GSC near-miss (recurring)**: свежий GSC → pos 8–15 → усилить in-repo (tool/code-страницы). Текущие остатки: egenkontroll mall excel (100 показов, поз.23 — глубоко), abt 06 kontrakt mall (10.5). Данные: `gsc-near-miss.md`.
+4. **P2 — entreprenadförsäkring** (244 показа, поз.13.2) — CMS-правка exact-ключа (не в репо, admin/CMS).
+5. **P3 — SearchAction**: сделать `/sv/sok?q={term}` results-page → добавить SearchAction в WebSite schema (`_document`).
+6. **P3 — HowTo/direct-answer на CMS-pillar'ах** (список в `aeo-report.md`).
+
+**🔴 [OWNER] (вне репо, блокеры роста):**
+- **Бэклинки** — #1 рычаг для head-near-miss (page 2–3): tidrapporteringssystem-bygg, affärssystem-byggforetag, entreprenadforsakring, projekthanteringssystem-bygg. On-page исчерпан.
+- **`NEXT_PUBLIC_META_PIXEL_ID`** (+ опц. GTM/LinkedIn) → включить ретаргет (скелет готов). См. `retargeting-plan.md`.
+- ESP-подключение лид-магнита (nurture); CMS-правки pillar'ов.
+
+**Доки-навигация (`docs/seo/`):** `next-level-worklog.md` (этот, START HERE) · `gsc-near-miss.md` · `aeo-report.md` · `retargeting-plan.md` · `pseo-template.md` · `no-innholdsarkitektur.md` (Норвегия).
+
+---
+
 ## 🟢 СЕССИЯ 2 (2026-09-08) — конверсия + добивки. ВСЁ live, AC проверены curl'ом.
 
 **ВАЖНО (модель):** self-serve триала НЕТ (триал даётся вручную после демо-звонка, 14 дней). Убран мёртвый концепт «Testa gratis»/`TRIAL_CTA`/`NEXT_PUBLIC_TRIAL_URL`. Единственный primary CTA = **«Boka demo» → APP_CTA (/sv/contact)**. «14 dagar gratis» — только текст-крючок.

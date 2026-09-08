@@ -43,6 +43,12 @@ export type LeadMagnetPageProps = {
   sections?: LeadMagnetSection[];
   faqHeading?: string;
   faq?: LeadMagnetFaqItem[];
+  /**
+   * Optional HowTo steps → emits HowTo JSON-LD for AI-search / rich results
+   * ("how do I calculate X"). Keep steps short and imperative. Pair with a
+   * direct-answer intro for GEO/AEO. See docs/seo/aeo-report.md.
+   */
+  howTo?: { name?: string; steps: string[] };
   cta?: LeadMagnetCta;
   relatedHeading?: string;
   related?: LeadMagnetLink[];
@@ -75,6 +81,7 @@ export default function LeadMagnetPage({
   sections = [],
   faqHeading,
   faq = [],
+  howTo,
   cta,
   relatedHeading,
   related = [],
@@ -113,12 +120,31 @@ export default function LeadMagnetPage({
       { '@type': 'ListItem', position: 3, name: title },
     ],
   });
+  const howToSchema =
+    howTo && howTo.steps.length > 0
+      ? JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'HowTo',
+          name: howTo.name || title,
+          step: howTo.steps.map((text, i) => ({
+            '@type': 'HowToStep',
+            position: i + 1,
+            text,
+          })),
+        })
+      : null;
   return (
     <article className={wide ? 'lead-magnet lead-magnet--wide' : 'lead-magnet'}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
       />
+      {howToSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: howToSchema }}
+        />
+      ) : null}
       <div className={wide ? 'container' : 'container container-narrow'}>
         <header className="lead-magnet-hero">
           {badge ? <span className="lead-magnet-badge">{badge}</span> : null}

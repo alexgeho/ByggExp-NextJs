@@ -340,6 +340,23 @@ export default function RotKalkylatorPage({ lang }: { lang: L }) {
         embedTitle={c.h1}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          name: c.h1,
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the labour cost including VAT.',
+                  'The tool applies the 30% ROT deduction (up to the annual max per person).',
+                  'Read off the deduction and the amount the customer actually pays.',
+                  'Use the figures directly in your quote or invoice.',
+                ]
+              : [
+                  'Fyll i arbetskostnaden inklusive moms.',
+                  'Verktyget räknar av ROT-avdraget (30 %, upp till maxbeloppet per person och år).',
+                  'Läs av avdraget och vad kunden faktiskt betalar.',
+                  'Använd siffrorna direkt i offert eller faktura.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

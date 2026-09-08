@@ -96,7 +96,7 @@ export default function EgenkontrollMallPage() {
       <LeadMagnetPage
         badge="Gratis mall"
         title="Egenkontroll – gratis mall att fylla i online"
-        intro="Fyll i en egenkontroll för kvalitet, miljö och arbetsmiljö och ladda ner den som PDF eller Excel – gratis och utan konto. Nytt: låt AI föreslå rätt kontrollpunkter för just ditt moment, så slipper du börja från ett tomt blad."
+        intro="Ladda ner en färdig egenkontroll-mall – eller skapa din egen och ladda ner den. Gratis, som PDF eller Excel, utan konto."
         tool={<EgenkontrollTool />}
         leadForm={<ToolLeadForm tool="egenkontroll-mall" />}
         preview={

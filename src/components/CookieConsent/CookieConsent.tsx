@@ -51,7 +51,10 @@ export default function CookieConsent() {
       gaConsentGrant();
       loadClarity();
       loadRetargeting();
-    } else if (!saved) setOpen(true);
+    } else if (!saved) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- reveal the banner once, after reading the persisted consent choice on the client (must run post-hydration to avoid an SSR/client mismatch).
+      setOpen(true);
+    }
   }, []);
 
   // Delegated click tracking — one listener for "Boka demo" and tool downloads,

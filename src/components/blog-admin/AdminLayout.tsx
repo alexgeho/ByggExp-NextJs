@@ -44,6 +44,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
 
   useEffect(() => {
     const existing = readPersistedBlogAdminSession();
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- hydrate auth state from the persisted session on the client after mount (localStorage isn't available during SSR).
     setSession(existing ?? (DEV_ADMIN_BYPASS ? DEV_SESSION : null));
     setHydrated(true);
   }, []);

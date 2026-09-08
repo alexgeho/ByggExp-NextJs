@@ -131,9 +131,9 @@ export default function AboutPage({
 
       <h2>We build features around your needs</h2>
       <p>
-        Every company has its own way of working. ByggExp isn't just an
-        off-the-shelf solution – it's a platform we're happy to extend to fit
-        your needs. Tell us about your challenges and wishes, and we'll build it
+        Every company has its own way of working. ByggExp isn&apos;t just an
+        off-the-shelf solution – it&apos;s a platform we&apos;re happy to extend to fit
+        your needs. Tell us about your challenges and wishes, and we&apos;ll build it
         fast and with quality. Your ideas become part of new features and
         updates in ByggExp.
       </p>

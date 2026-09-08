@@ -52,6 +52,7 @@ export default function AdminArticlesPage() {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- initial data load on mount; loadPosts is a stable useCallback that sets loading/results state.
     void loadPosts();
   }, [loadPosts]);
 

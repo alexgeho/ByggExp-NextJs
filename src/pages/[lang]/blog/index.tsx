@@ -84,6 +84,7 @@ export default function BlogIndexPage({
   useEffect(() => {
     const k = router.query.kategori;
     if (typeof k === 'string' && BLOG_CATEGORIES.some((c) => c.key === k)) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- sync the selected category from the URL query (?kategori=…) when arriving via a header link; category is also user-changeable so it must be state.
       setActiveCategory(k as BlogCategoryKey);
     }
   }, [router.query.kategori]);

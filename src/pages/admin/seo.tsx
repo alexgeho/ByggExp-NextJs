@@ -27,7 +27,6 @@ export default function SeoPage() {
   useEffect(() => {
     const session = readPersistedBlogAdminSession();
     if (!session) return;
-    setMessage('');
     void fetchAdminSiteSeo(session, locale)
       .then((data) => setSeo(data || emptySeo(locale)))
       .catch(() => setMessage('Failed to load SEO settings'));

@@ -180,6 +180,7 @@ export default function BlogArticlePage({
     const imgs = Array.from(el.querySelectorAll('img'));
     const open = (e: Event) => {
       const src = (e.currentTarget as HTMLImageElement).getAttribute('src');
+      // eslint-disable-next-line react-hooks/immutability -- click handler for images inside dangerouslySet HTML; opens the lightbox by setting state on user interaction (not during render).
       if (src) setLightboxImage(src);
     };
     imgs.forEach((img) => {

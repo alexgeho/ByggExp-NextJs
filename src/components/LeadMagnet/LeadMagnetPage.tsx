@@ -152,8 +152,6 @@ export default function LeadMagnetPage({
           <p className="lead-magnet-intro">{intro}</p>
         </header>
 
-        <ProductBanner tool={toolId} />
-
         {tool ? <div className="lead-magnet-tool">{tool}</div> : null}
 
         {tool ? <p className="lm-tool-disclaimer">{disclaimer}</p> : null}
@@ -161,6 +159,10 @@ export default function LeadMagnetPage({
         {leadForm ? <div className="lead-magnet-tool">{leadForm}</div> : null}
 
         {preview ? <div className="lead-magnet-preview">{preview}</div> : null}
+
+        {/* Value first: only pitch the product AFTER the visitor has used the free
+            tool / downloaded the template. */}
+        <ProductBanner tool={toolId} />
 
         {sections.map((section) => (
           <section

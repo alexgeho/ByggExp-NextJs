@@ -367,15 +367,15 @@ export default function BlogArticlePage({
             />
           ) : null}
 
-          {/* Contextual product banner — sv only (Swedish copy). Shown high on the
-              article (demand lands here) so a valuable free read converts to a demo. */}
-          {lang === 'sv' ? <ProductBanner tool={post.slug} /> : null}
-
           <div
             ref={contentRef}
             className="blog-article-content"
             dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
+
+          {/* Contextual product banner — sv only (Swedish copy). Value first:
+              placed AFTER the article so the reader gets the guide before the pitch. */}
+          {lang === 'sv' ? <ProductBanner tool={post.slug} /> : null}
 
           {lang === 'sv' ? (
             <aside className="blog-tools" aria-label="Gratis verktyg">

@@ -248,7 +248,7 @@ const M_MANNSKAPSLISTE_BYGGEPLASS_HTML = `
 <p>En mannskapsliste er en oversikt over hvem som utfører arbeid på en bygge- eller anleggsplass. Mange i bransjen sier «mannskapsliste» eller «elektronisk mannskapsliste», mens byggherreforskriften bruker begrepet <strong>oversiktsliste</strong>. Det er samme sak: en løpende oversikt over personene på plassen.</p>
 
 <h2>Kravet i byggherreforskriften § 15</h2>
-<p>Etter byggherreforskriften § 15 skal byggherren sørge for at det føres en oversiktsliste over alle som utfører arbeid på bygge- eller anleggsplassen. Kravene i korte trekk:</p>
+<p>Etter <a href="/nb/blog/byggherreforskriften">byggherreforskriften</a> § 15 skal byggherren sørge for at det føres en oversiktsliste over alle som utfører arbeid på bygge- eller anleggsplassen. Kravene i korte trekk:</p>
 <ul>
 <li><strong>Elektronisk</strong> – listen skal føres elektronisk.</li>
 <li><strong>Oppdateres daglig</strong> – kontrolleres og holdes à jour hver dag.</li>
@@ -1017,7 +1017,7 @@ const SH_SHA_PLAN_HTML = `
 <figure class="article-diagram"><img src="/landing/diagrams/nb-sha-plan.webp" alt="Diagram: SHA-plan – innhold (organisasjonskart, framdriftsplan, tiltak for farlig arbeid, avviksrutiner) og krav (skriftlig, prosjekttilpasset, byggherrens ansvar, oppdateres løpende)" width="720" height="380" loading="lazy"><figcaption>SHA-planen skal være skriftlig, prosjekttilpasset og oppdateres løpende – byggherren har ansvaret.</figcaption></figure>
 
 <h2>Hva er en SHA-plan?</h2>
-<p>SHA står for sikkerhet, helse og arbeidsmiljø. SHA-planen er en skriftlig plan som beskriver hvordan disse hensynene ivaretas på det konkrete prosjektet. Kravet følger av byggherreforskriften, og planen skal være på plass før arbeidet starter.</p>
+<p>SHA står for sikkerhet, helse og arbeidsmiljø. SHA-planen er en skriftlig plan som beskriver hvordan disse hensynene ivaretas på det konkrete prosjektet. Kravet følger av <a href="/nb/blog/byggherreforskriften">byggherreforskriften</a>, og planen skal være på plass før arbeidet starter.</p>
 
 <h2>Hva skal SHA-planen inneholde?</h2>
 <p>Planen skal være tilpasset prosjektet – ikke en generisk mal – og inneholder blant annet:</p>
@@ -1184,7 +1184,79 @@ const SY_TIMEREGISTRERINGSSYSTEM: BlogPost = {
   updatedAt: '2026-09-07T16:00:00.000Z',
 };
 
+const BF_BYGGHERREFORSKRIFTEN_HTML = `
+<p>Byggherreforskriften er forskriften som pålegger byggherren ansvaret for sikkerhet, helse og arbeidsmiljø (SHA) på bygge- og anleggsplasser. Den samler kravene til SHA-plan, koordinator, forhåndsmelding og oversiktsliste. Her forklarer vi hva byggherreforskriften er, hvem som er byggherre, hvilke plikter du har, og hvordan kravene henger sammen.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/nb-byggherreforskriften.webp" alt="Diagram: byggherreforskriften – byggherrens plikter (SHA-plan, koordinator KP/KU, forhåndsmelding, oversiktsliste § 15) og roller" width="720" height="380" loading="lazy"><figcaption>Byggherrens plikter etter byggherreforskriften: SHA-plan, koordinator (KP/KU), forhåndsmelding og oversiktsliste.</figcaption></figure>
+
+<h2>Hva er byggherreforskriften?</h2>
+<p>Byggherreforskriften – «forskrift om sikkerhet, helse og arbeidsmiljø på bygge- eller anleggsplasser» – skal verne arbeidstakerne mot farer på bygge- og anleggsplasser. Den legger et selvstendig og overordnet ansvar på byggherren for at SHA blir ivaretatt gjennom hele prosjektet, fra planlegging til ferdigstillelse. Forskriften forvaltes av <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
+
+<h2>Hvem er byggherre – og hvem har ansvaret?</h2>
+<p>Byggherre er den som får utført et bygge- eller anleggsarbeid (tiltakshaver). Byggherren har det overordnede ansvaret, men byggherre, koordinator, prosjekterende, arbeidsgivere og enmannsbedrifter skal alle påse at forskriften følges. Byggherren kan sette bort oppgaver, men ansvaret for at koordineringen skjer forsvarlig blir hos byggherren.</p>
+
+<h2>Byggherrens plikter</h2>
+<ul>
+<li><strong>SHA-plan:</strong> sørge for en skriftlig <a href="/nb/blog/sha-plan">SHA-plan</a> før arbeidet starter, tilpasset prosjektet.</li>
+<li><strong>Koordinator:</strong> utpeke koordinator for prosjektering (KP) og utførelse (KU).</li>
+<li><strong>Forhåndsmelding:</strong> sende forhåndsmelding elektronisk til Arbeidstilsynet for større prosjekter, senest en uke før oppstart.</li>
+<li><strong>Oversiktsliste:</strong> sørge for elektronisk <a href="/nb/blog/mannskapsliste-byggeplass">oversiktsliste (mannskapsliste)</a> over alle på plassen (§ 15).</li>
+<li><strong>Oppdatere løpende:</strong> holde SHA-planen à jour ved endringer.</li>
+</ul>
+
+<h2>Koordinator: KP og KU</h2>
+<p>Koordinatoren skal samordne SHA-arbeidet. I prosjekteringsfasen har <strong>KP</strong> (koordinator prosjektering) ansvaret, i utførelsesfasen <strong>KU</strong> (koordinator utførelse). Byggherren kan ta rollen selv eller engasjere noen eksternt – men ansvaret for at koordineringen utføres forsvarlig blir hos byggherren.</p>
+
+<h2>Slik henger kravene sammen</h2>
+<p>Byggherreforskriften er «paraplyen» over flere krav du kanskje kjenner hver for seg: <a href="/nb/blog/sha-plan">SHA-planen</a> beskriver hvordan sikkerheten ivaretas, <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten</a> viser hvem som er på plassen, og hver person må ha gyldig <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> for å stå på listen. Digital oppmøteregistrering gir deg dokumentasjonen – i ByggExp sjekker de ansatte inn med GPS, så du har oversikt over mannskapet. ByggExp er ikke et SHA-planverktøy, men gir den løpende oversikten.</p>
+
+<h2>Kom i gang</h2>
+<p>Les mer om <a href="/nb/blog/sha-plan">SHA-plan</a>, <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>. Sjekk alltid gjeldende krav hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
+
+<h2>Vanlige spørsmål</h2>
+<h3>Hva er byggherreforskriften?</h3>
+<p>Forskrift om sikkerhet, helse og arbeidsmiljø på bygge- eller anleggsplasser. Den legger et overordnet ansvar på byggherren for SHA, og samler krav til SHA-plan, koordinator, forhåndsmelding og oversiktsliste.</p>
+<h3>Hvem har ansvaret etter byggherreforskriften?</h3>
+<p>Byggherren har det selvstendige og overordnede ansvaret. Oppgaver kan settes bort til koordinator, men ansvaret blir hos byggherren.</p>
+<h3>Hva er forskjellen på KP og KU?</h3>
+<p>KP er koordinator for prosjekteringsfasen, KU for utførelsesfasen. Begge samordner SHA-arbeidet i sin fase.</p>
+<h3>Når må det sendes forhåndsmelding?</h3>
+<p>For større prosjekter skal byggherren sende forhåndsmelding elektronisk til Arbeidstilsynet, senest en uke før arbeidet starter. Sjekk grensene hos Arbeidstilsynet.</p>
+`.trim();
+
+const BF_BYGGHERREFORSKRIFTEN: BlogPost = {
+  _id: 'code-nb-byggherreforskriften',
+  title: 'Byggherreforskriften – ansvar, SHA-plan og oversiktsliste',
+  slug: 'byggherreforskriften',
+  locale: 'nb',
+  excerpt:
+    'Byggherreforskriften: byggherrens ansvar for sikkerhet, helse og arbeidsmiljø. Krav til SHA-plan, koordinator (KP/KU), forhåndsmelding og oversiktsliste – forklart enkelt.',
+  tag: 'Regelverk',
+  coverImageUrl: '/landing/features/3personal.webp',
+  contentHtml: BF_BYGGHERREFORSKRIFTEN_HTML,
+  seoTitle: 'Byggherreforskriften – ansvar, SHA-plan & koordinator | ByggExp',
+  seoDescription:
+    'Byggherreforskriften forklart: byggherrens ansvar for SHA, krav til SHA-plan, koordinator (KP/KU), forhåndsmelding til Arbeidstilsynet og elektronisk oversiktsliste (§ 15).',
+  seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  howTo: {
+    name: 'Byggherrens plikter steg for steg',
+    steps: [
+      'Sørg for en skriftlig SHA-plan før arbeidet starter.',
+      'Utpek koordinator for prosjektering (KP) og utførelse (KU).',
+      'Send forhåndsmelding til Arbeidstilsynet for større prosjekter.',
+      'Sørg for elektronisk oversiktsliste over alle på plassen (§ 15).',
+      'Oppdater SHA-planen løpende ved endringer.',
+    ],
+  },
+  publishedAt: '2026-09-08T11:00:00.000Z',
+  createdAt: '2026-09-08T11:00:00.000Z',
+  updatedAt: '2026-09-08T11:00:00.000Z',
+};
+
 export const NB_ARTICLES: BlogPost[] = [
+  BF_BYGGHERREFORSKRIFTEN,
   SY_TIMEREGISTRERINGSSYSTEM,
   P_TIMEREGISTRERING_APP_BYGG,
   S_GRATIS_TIMEREGISTRERING_APP,

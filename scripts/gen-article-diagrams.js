@@ -380,6 +380,14 @@ const nbByggekontrakt = frame(`
   ${note('NS 8406 = forenklet utførelse for mindre prosjekter.', INK)}
 `);
 
+// 29. Byggherreforskriften – byggherrens plikter (nb)
+const nbByggherreforskriften = frame(`
+  ${title('Byggherreforskriften – byggherrens plikter')}
+  ${card(40, 84, 330, 214, 'Byggherren skal', BLUE, ['Sørge for SHA-plan før oppstart', 'Utpeke koordinator (KP/KU)', 'Sende forhåndsmelding', 'Sørge for oversiktsliste (&#167; 15)'])}
+  ${card(390, 84, 290, 214, 'Roller', GREEN, ['Byggherre – overordnet ansvar', 'KP – koordinator prosjektering', 'KU – koordinator utførelse', 'Arbeidsgivere følger SHA-planen'])}
+  ${note('Forskrift om SHA på bygge-/anleggsplasser. Ansvaret blir hos byggherren.', INK)}
+`);
+
 // 22. Mannskapsliste / elektronisk oversiktsliste – krav (nb)
 const nbMannskapsliste = frame(`
   ${title('Elektronisk oversiktsliste – krav (&#167; 15)')}
@@ -529,6 +537,7 @@ const DIAGRAMS = {
   'nb-prosjektstyring': nbProsjektstyring,
   'nb-sha-plan': nbShaPlan,
   'nb-byggekontrakt': nbByggekontrakt,
+  'nb-byggherreforskriften': nbByggherreforskriften,
   'enkelt-tidrapporteringssystem': enkeltSystem,
   'ab-kontrakt': abKontrakt,
   'ata-flode': ata,

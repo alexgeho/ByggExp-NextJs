@@ -1,4 +1,4 @@
-import { APP_CTA } from '../../config/cta';
+import { APP_CTA, TRIAL_CTA, HAS_TRIAL_URL } from '../../config/cta';
 import { gaEvent } from '../../lib/analytics';
 
 // Conversion block shown right where a free tool delivers its result: the visitor
@@ -13,8 +13,11 @@ export default function ToolAppCta({
   heading,
   text,
   bullets,
-  primary = APP_CTA,
-  secondary,
+  // Default: primary = self-serve trial ("Testa gratis"), secondary = demo. Pages
+  // can override. TRIAL_CTA is env-gated (falls back to the demo route, no dead
+  // links) — see src/config/cta.ts.
+  primary = { href: TRIAL_CTA.href, label: TRIAL_CTA.label },
+  secondary = APP_CTA,
 }: {
   /** Tool slug, for analytics (which tool the CTA converted from). */
   tool: string;
@@ -39,7 +42,14 @@ export default function ToolAppCta({
         </ul>
       )}
       <div className="lm-appcta-actions">
-        <a className="lm-appcta-button" href={primary.href} onClick={track('primary')}>
+        <a
+          className="lm-appcta-button"
+          href={primary.href}
+          {...(HAS_TRIAL_URL && primary.href === TRIAL_CTA.href
+            ? { target: '_blank', rel: 'noopener' }
+            : {})}
+          onClick={track('primary')}
+        >
           {primary.label}
         </a>
         {secondary && (

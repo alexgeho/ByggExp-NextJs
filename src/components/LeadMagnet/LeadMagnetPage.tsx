@@ -1,6 +1,9 @@
+import { useEffect } from 'react';
 import type { ReactNode } from 'react';
 
 import type { CalcLocale } from '../../lib/locale';
+import { TRIAL_CTA, HAS_TRIAL_URL } from '../../config/cta';
+import { gaEvent } from '../../lib/analytics';
 import EmbedSnippet from './EmbedSnippet';
 
 // Reusable, presentation-only layout for a lead-magnet / tool article page.
@@ -80,6 +83,11 @@ export default function LeadMagnetPage({
   locale = 'sv',
   wide = false,
 }: LeadMagnetPageProps) {
+  // Funnel step 1 (view). embedSlug identifies the tool; falls back to the title.
+  const toolId = embedSlug || title;
+  useEffect(() => {
+    gaEvent('tool_view', { tool: toolId });
+  }, [toolId]);
   const disclaimer =
     locale === 'ru'
       ? 'Инструмент даёт оценку и является вспомогательным средством, а не готовым расчётом. Всегда сверяйте результат с чертежами, действующими нормами, данными поставщика и своим профессиональным опытом, прежде чем давать обязывающую цену, заказывать материал или использовать файл. ByggExp не несёт ответственности за решения, принятые исключительно на основе инструмента.'
@@ -168,9 +176,31 @@ export default function LeadMagnetPage({
           <aside className="lead-magnet-cta">
             {cta.heading ? <h2 className="lead-magnet-cta-heading">{cta.heading}</h2> : null}
             {cta.text ? <p className="lead-magnet-cta-text">{cta.text}</p> : null}
-            <a className="lead-magnet-cta-button" href={cta.href}>
-              {cta.buttonLabel}
-            </a>
+            {/* Dual CTA: primary self-serve trial ("Testa gratis") + secondary
+                demo. TRIAL_CTA is env-gated (falls back to the demo route until a
+                real register URL exists, so no dead links). Each click is a funnel
+                step (cta_click) tagged by tool + action for GA4. */}
+            <div className="lead-magnet-cta-actions">
+              <a
+                className="lead-magnet-cta-button"
+                href={TRIAL_CTA.href}
+                {...(HAS_TRIAL_URL ? { target: '_blank', rel: 'noopener' } : {})}
+                onClick={() =>
+                  gaEvent('cta_click', { tool: toolId, action: 'trial', location: 'tool' })
+                }
+              >
+                {TRIAL_CTA.label}
+              </a>
+              <a
+                className="lead-magnet-cta-link"
+                href={cta.href}
+                onClick={() =>
+                  gaEvent('cta_click', { tool: toolId, action: 'demo', location: 'tool' })
+                }
+              >
+                {cta.buttonLabel}
+              </a>
+            </div>
           </aside>
         ) : null}
 

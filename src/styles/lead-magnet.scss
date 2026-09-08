@@ -175,6 +175,31 @@
   transform: translateY(-2px);
 }
 
+// Dual CTA row: primary "Testa gratis" button + secondary "Boka demo" link.
+.lead-magnet-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+}
+
+.lead-magnet-cta-link {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: 999px;
+  border: 1.5px solid var(--lm-accent);
+  background: transparent;
+  color: var(--lm-accent);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.lead-magnet-cta-link:hover {
+  transform: translateY(-2px);
+}
+
 .lm-tool-button:disabled,
 .lm-tool-button[aria-disabled='true'] {
   opacity: 0.6;

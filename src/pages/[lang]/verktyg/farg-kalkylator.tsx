@@ -354,6 +354,22 @@ export default function Page({ lang }: { lang: Locale }) {
         sections={c.sections}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the surface area and number of coats.',
+                  'Enter the paint coverage (m² per litre).',
+                  'The tool calculates the number of litres needed.',
+                  'Add a small margin and buy the paint.',
+                ]
+              : [
+                  'Ange ytans area och antal strykningar.',
+                  'Ange färgens åtgång (m² per liter).',
+                  'Verktyget räknar ut antal liter färg som behövs.',
+                  'Lägg till lite marginal och köp färgen.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

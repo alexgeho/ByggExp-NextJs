@@ -201,6 +201,22 @@ export default function Page({ lang }: { lang: Locale }) {
         embedTitle={c.h1}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the wall length and height.',
+                  'Choose the spacing (c/c) between the studs.',
+                  'The tool calculates the number of studs and metres.',
+                  'Add waste and order the timber.',
+                ]
+              : [
+                  'Ange väggens längd och höjd.',
+                  'Välj c/c-avstånd mellan reglarna.',
+                  'Verktyget räknar ut antal reglar och löpmeter.',
+                  'Lägg till spill och beställ virket.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

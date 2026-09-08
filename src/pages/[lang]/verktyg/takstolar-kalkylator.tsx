@@ -210,6 +210,22 @@ export default function Page({ lang }: { lang: Locale }) {
         embedTitle={c.h1}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the roof length and the chosen truss spacing (c/c).',
+                  'The tool calculates the number of trusses needed.',
+                  'Adjust the spacing if the load requires it.',
+                  'Use the result as a basis for ordering.',
+                ]
+              : [
+                  'Ange takets längd och valt c/c-avstånd mellan takstolarna.',
+                  'Verktyget räknar ut antal takstolar som behövs.',
+                  'Justera c/c-avståndet om lasten kräver det.',
+                  'Använd resultatet som underlag för beställning.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

@@ -302,6 +302,22 @@ export default function MomsKalkylatorPage({ lang }: { lang: L }) {
         embedTitle={c.h1}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the amount (with or without VAT).',
+                  'Choose the VAT rate (usually 25 %).',
+                  'The tool calculates the VAT and the total.',
+                  'Use the figures in your quote or invoice.',
+                ]
+              : [
+                  'Ange beloppet (med eller utan moms).',
+                  'Välj momssats (vanligtvis 25 %).',
+                  'Verktyget räknar ut moms och totalbelopp.',
+                  'Använd siffrorna i offert eller faktura.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

@@ -333,6 +333,22 @@ export default function Page({ lang }: { lang: Locale }) {
         sections={c.sections}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the length and width of the surface in metres.',
+                  'The tool calculates the area in square metres.',
+                  'Add waste (e.g. 5–10 %) if needed.',
+                  'Use the figure for material and your quote.',
+                ]
+              : [
+                  'Ange ytans längd och bredd i meter.',
+                  'Verktyget räknar ut arean i kvadratmeter.',
+                  'Lägg till spill (t.ex. 5–10 %) vid behov.',
+                  'Använd siffran för material och offert.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

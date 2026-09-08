@@ -521,6 +521,22 @@ export default function Page({ lang }: { lang: Locale }) {
         sections={c.sections}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the length, width and thickness of the pour.',
+                  'The tool calculates the concrete volume in m³.',
+                  'Add a margin for waste and uneven ground.',
+                  'Order the right amount of concrete.',
+                ]
+              : [
+                  'Ange längd, bredd och tjocklek på gjutningen.',
+                  'Verktyget räknar ut betongvolymen i m³.',
+                  'Lägg till marginal för spill och ojämnt underlag.',
+                  'Beställ rätt mängd betong.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

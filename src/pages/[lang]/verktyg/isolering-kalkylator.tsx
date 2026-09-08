@@ -303,6 +303,22 @@ export default function Page({ lang }: { lang: Locale }) {
         embedTitle={c.h1}
         faqHeading={c.faqHeading}
         faq={c.faq}
+        howTo={{
+          steps:
+            lang === 'en'
+              ? [
+                  'Enter the surface area and the desired insulation thickness.',
+                  'The tool calculates the amount of insulation needed.',
+                  'Check it against the U-value requirement.',
+                  'Order the right amount.',
+                ]
+              : [
+                  'Ange ytans area och önskad isolertjocklek.',
+                  'Verktyget räknar ut mängden isolering som behövs.',
+                  'Kontrollera mot U-värdeskravet.',
+                  'Beställ rätt mängd.',
+                ],
+        }}
         cta={{
           heading: c.ctaHeading,
           text: c.ctaText,

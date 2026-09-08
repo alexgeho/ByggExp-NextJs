@@ -54,9 +54,13 @@ export default function ProductBanner({ tool }: { tool: string }) {
         <a
           className="lm-pb-button"
           href={APP_CTA.href}
-          onClick={() =>
-            gaEvent('cta_click', { tool, action: 'demo', placement: 'product_banner' })
-          }
+          onClick={() => {
+            // Dedicated, directly-countable GA4 event (visible in GA4 → Events as
+            // "product_banner_click" without needing a custom dimension) + the
+            // generic funnel event. Both also forward to Meta Pixel via gaEvent.
+            gaEvent('product_banner_click', { tool });
+            gaEvent('cta_click', { tool, action: 'demo', placement: 'product_banner' });
+          }}
         >
           {APP_CTA.label}
         </a>

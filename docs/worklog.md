@@ -23,7 +23,7 @@
 
 **⏭️ СЛЕДУЮЩИЕ ШАГИ (по приоритету, из `no-innholdsarkitektur.md` §6):**
 1. **Бэклинки на byggexp.no** — #1 рычаг (owner решил «потом»). Начатый список: proff.no, gulesider, 1881, mittanbud, byggstart, norskbyggebransje, Google Business Profile (NAP-консистентность!). Инсайт: 1 ссылка отраслевого СМИ/ассоциации > 100 каталожных. → оформить в backlink-план.
-2. **Добить B-хаб:** `byggherreforskriften` (pillar, свяжет mannskapsliste+SHA+HMS), `oversiktsliste` (спок).
+2. ✅ **B-хаб добит:** `byggherreforskriften` pillar (2026-09-08, live) — связал HMS-kort+mannskapsliste+SHA-plan, HowTo+FAQ+диаграмма, залинкован из mannskapsliste/sha-plan. oversiktsliste отдельным спок НЕ делал (mannskapsliste покрывает — анти-каннибализация). nb-блог = **21 статья**.
 3. **D-хаб по профессиям:** timepris-rørlegger / -elektriker / -maler — СНАЧАЛА проверить объём в Keyword Planner.
 4. **C-хаб:** `tilbudsmal` (оффер-шаблон, магнит к byggekontrakt).
 5. **Магниты v2:** timepris-калькулятор (owner сказал «timepris дерьмо» — НЕ делать калькулятор), HMS-kort sjekkliste на 1K-10K кластер.

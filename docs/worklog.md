@@ -92,7 +92,7 @@
 - Собран из 3 блоков: (1) автономный режим «делай все шаги подряд сам, не спрашивай, обходи блокеры заглушками»; (2) core-SEO (локальное SEO, матрица услуга×район, money-страницы, on-page, тех-чеклист, owner-задачи); (3) topical authority (pillar→cluster, смежные кластеры, антиканнибализация).
 - Есть блок `⚙️ ПАРАМЕТРЫ` — заполнить под каждый сайт (компания/услуги/районы/конкуренты/NAP).
 - Агент первым делом сам сохраняет бриф в `docs/seo-agent-brief.md` целевого проекта + ведёт `docs/seo-worklog.md` (чек-лист ☐/🔄/✅) для продолжения между прогонами.
-- Контекст-повод: **villatakservice.se** (= Geal Tak AB, кровля, Sundbyberg/Stockholm). GSC: ~194 показа, **0 кликов**, ср. позиция **44.4** — новый, не ранжируется. Плацдарм-запросы: `takläggare/takrenovering/takbyte sundbyberg`, `besikta tak`, `villatak`. Конкурент takrenoveringistockholm.se — service-only, без блога, ~4 района (дыры: location-страницы, блог, «villa»-угол).
+- Контекст-повод: **villatakservice.se** (= Geal Entreprenad AB, кровля, Sundbyberg/Stockholm). GSC: ~194 показа, **0 кликов**, ср. позиция **44.4** — новый, не ранжируется. Плацдарм-запросы: `takläggare/takrenovering/takbyte sundbyberg`, `besikta tak`, `villatak`. Конкурент takrenoveringistockholm.se — service-only, без блога, ~4 района (дыры: location-страницы, блог, «villa»-угол).
 
 ### ⏭️ Следующие шаги (этот трек)
 - [ ] Заполнить блок ПАРАМЕТРЫ под каждый сайт из списка владельца (villatakservice.se + остальные, которые скинет) → отдать агентам.

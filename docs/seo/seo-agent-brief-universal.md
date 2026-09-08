@@ -5,7 +5,7 @@
 > `docs/seo-agent-brief.md` целевого проекта и ведёт `docs/seo-worklog.md`.
 >
 > Происхождение: собран 2026-09-06 из 3 блоков (автономия + core-SEO + topical authority),
-> изначально под villatakservice.se (Geal Tak AB, кровля, Sundbyberg/Stockholm;
+> изначально под villatakservice.se (Geal Entreprenad AB, кровля, Sundbyberg/Stockholm;
 > конкурент takrenoveringistockholm.se). Обобщён под любые услуги.
 
 ---

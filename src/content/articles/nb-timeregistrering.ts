@@ -692,6 +692,9 @@ const PR_PROSJEKTSTYRING_BYGG_HTML = `
 <h2>Fra timer til prosjektøkonomi</h2>
 <p>Det er her prosjektstyringen blir konkret: timene de ansatte fører via <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-appen</a> knyttes til prosjektet og regnes inn mot budsjettet. Da ser du marginen mens prosjektet pågår – ikke først når fakturaen er sendt. Registrer timene én gang, og bruk dem både til lønn, faktura og prosjektøkonomi.</p>
 
+<h2>Prosjektstyring og byggeledelse</h2>
+<p>Byggeledelse handler om å lede selve utførelsen på plassen – koordinere fagene, holde <a href="/nb/blog/framdriftsplan">framdriftsplanen</a>, følge opp HMS og sørge for at arbeidet blir gjort i riktig rekkefølge. Prosjektstyring er verktøyet som gir byggelederen oversikten: plan, oppgaver, timer og økonomi samlet, så avvik oppdages tidlig. Se hvordan du lager en <a href="/nb/blog/framdriftsplan">framdriftsplan</a> for prosjektet.</p>
+
 <h2>Enkelt nok for håndverkere og mindre firmaer</h2>
 <p>Mindre byggefirmaer trenger sjelden tunge systemer. Poenget er å samle det viktigste – plan, oppgaver, timer og økonomi – på ett sted, uten at det blir en jobb i seg selv å holde det oppdatert. Da bruker teamet det faktisk, og tallene stemmer.</p>
 
@@ -701,7 +704,7 @@ const PR_PROSJEKTSTYRING_BYGG_HTML = `
 <h2>Relaterte guider</h2>
 <ul>
 <li><a href="/nb/blog/timeregistrering-app-bygg">Timeregistrering-app for bygg</a></li>
-<li><a href="/nb/blog/timeliste-app-bygg">Timeliste-app for bygg</a></li>
+<li><a href="/nb/blog/framdriftsplan">Framdriftsplan for byggeprosjekt</a></li>
 <li><a href="/nb/blog/mannskapsliste-byggeplass">Mannskapsliste og oversiktsliste</a></li>
 <li><a href="/nb/blog/faktureringsprogram-bygg">Faktureringsprogram for bygg</a></li>
 </ul>
@@ -904,7 +907,7 @@ const TP_TIMEPRIS_SNEKKER_HTML = `
 </ul>
 
 <h2>Timepris for byggefirmaet: fra time til riktig faktura</h2>
-<p>Setter du en timepris, må timene også fanges opp riktig – ellers lekker det penger. Med <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering i mobilen</a> knyttes timene til riktig prosjekt og blir grunnlag for fakturaen, slik at du fakturerer alle timene til avtalt pris uten å regne for hånd. Se også <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram for bygg</a>.</p>
+<p>Setter du en timepris, må timene også fanges opp riktig – ellers lekker det penger. Med <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering i mobilen</a> knyttes timene til riktig prosjekt og blir grunnlag for fakturaen, slik at du fakturerer alle timene til avtalt pris uten å regne for hånd. Se også <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram for bygg</a>, <a href="/nb/blog/timepris-rorlegger">timepris for rørlegger</a> og <a href="/nb/blog/timepris-elektriker">timepris for elektriker</a>.</p>
 
 <h2>Kom i gang</h2>
 <p>Vil du sikre at alle timene blir fakturert til riktig pris? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
@@ -1023,8 +1026,8 @@ const SH_SHA_PLAN_HTML = `
 <p>Planen skal være tilpasset prosjektet – ikke en generisk mal – og inneholder blant annet:</p>
 <ul>
 <li><strong>Organisasjonskart</strong> som viser roller og ansvar.</li>
-<li><strong>Framdriftsplan</strong> for når og hvor arbeidsoperasjonene skal utføres.</li>
-<li><strong>Spesifikke tiltak</strong> for arbeid som kan medføre fare for liv og helse.</li>
+<li><strong><a href="/nb/blog/framdriftsplan">Framdriftsplan</a></strong> for når og hvor arbeidsoperasjonene skal utføres.</li>
+<li><strong>Spesifikke tiltak</strong> for arbeid som kan medføre fare for liv og helse – gjerne med <a href="/nb/blog/sikker-jobb-analyse">sikker jobb-analyse (SJA)</a>.</li>
 <li><strong>Rutiner for avviksmelding</strong>.</li>
 </ul>
 <p><a href="/nb/maler/sha-plan-sjekkliste.html" target="_blank" rel="noopener">Last ned SHA-plan sjekkliste</a> (skriv ut eller lagre som PDF) – en gratis sjekkliste over innhold, krav og ansvar.</p>
@@ -1207,7 +1210,7 @@ const BF_BYGGHERREFORSKRIFTEN_HTML = `
 <p>Koordinatoren skal samordne SHA-arbeidet. I prosjekteringsfasen har <strong>KP</strong> (koordinator prosjektering) ansvaret, i utførelsesfasen <strong>KU</strong> (koordinator utførelse). Byggherren kan ta rollen selv eller engasjere noen eksternt – men ansvaret for at koordineringen utføres forsvarlig blir hos byggherren.</p>
 
 <h2>Slik henger kravene sammen</h2>
-<p>Byggherreforskriften er «paraplyen» over flere krav du kanskje kjenner hver for seg: <a href="/nb/blog/sha-plan">SHA-planen</a> beskriver hvordan sikkerheten ivaretas, <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten</a> viser hvem som er på plassen, og hver person må ha gyldig <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> for å stå på listen. Digital oppmøteregistrering gir deg dokumentasjonen – i ByggExp sjekker de ansatte inn med GPS, så du har oversikt over mannskapet. ByggExp er ikke et SHA-planverktøy, men gir den løpende oversikten.</p>
+<p>Byggherreforskriften er «paraplyen» over flere krav du kanskje kjenner hver for seg: <a href="/nb/blog/sha-plan">SHA-planen</a> beskriver hvordan sikkerheten ivaretas, <a href="/nb/blog/sikker-jobb-analyse">sikker jobb-analyse (SJA)</a> brukes på risikofylt arbeid, <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten</a> viser hvem som er på plassen, og hver person må ha gyldig <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> for å stå på listen. Digital oppmøteregistrering gir deg dokumentasjonen – i ByggExp sjekker de ansatte inn med GPS, så du har oversikt over mannskapet. ByggExp er ikke et SHA-planverktøy, men gir den løpende oversikten.</p>
 
 <h2>Kom i gang</h2>
 <p>Les mer om <a href="/nb/blog/sha-plan">SHA-plan</a>, <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>. Sjekk alltid gjeldende krav hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
@@ -1255,7 +1258,262 @@ const BF_BYGGHERREFORSKRIFTEN: BlogPost = {
   updatedAt: '2026-09-08T11:00:00.000Z',
 };
 
+const TP_TIMEPRIS_RORLEGGER_HTML = `
+<p>Hva koster en rørlegger per time? Prisen varierer med region, oppdrag og om det er forbruker eller bedrift som betaler – men det finnes noen holdepunkter. Her går vi gjennom hva som er vanlig, hva som påvirker timeprisen, og hvordan et rørleggerfirma holder styr på timer og timepris så faktureringen blir riktig.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: fra registrert tid til faktura – timene på riktig prosjekt blir grunnlag for lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Riktig timepris hjelper lite hvis timene ikke fanges opp – registrer dem der jobben gjøres.</figcaption></figure>
+
+<h2>Hva er vanlig timepris for rørlegger?</h2>
+<p>Timeprisen ligger ofte i området <strong>700–1000 kroner eks. mva</strong> for profesjonelle rørleggere, men spennet er stort og avhenger av region, kompleksitet og marked. For forbrukere kommer 25 % mva i tillegg, og utrykning eller akutt arbeid utenom arbeidstid koster mer. Be alltid om et konkret tilbud – tallene her er kun et utgangspunkt.</p>
+
+<h2>Hva påvirker timeprisen?</h2>
+<ul>
+<li><strong>Region</strong> – prisene er gjerne høyere i og rundt de store byene.</li>
+<li><strong>Type arbeid</strong> – våtrom, nyinstallasjon eller feilsøking krever ulik kompetanse.</li>
+<li><strong>Utrykning og reise</strong> – akuttoppdrag og reisetid kommer ofte i tillegg.</li>
+<li><strong>Materiell</strong> – rør, deler og armatur faktureres som regel utenom timeprisen.</li>
+</ul>
+
+<h2>Timepris for rørleggerfirmaet: fra time til riktig faktura</h2>
+<p>Setter du en timepris, må timene også fanges opp riktig – ellers lekker det penger. Med <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering i mobilen</a> knyttes timene til riktig prosjekt og blir grunnlag for fakturaen, slik at du fakturerer alle timene til avtalt pris uten å regne for hånd. Se også <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram for bygg</a> og <a href="/nb/blog/timepris-snekker">timepris for snekker</a>.</p>
+
+<h2>Kom i gang</h2>
+<p>Vil du sikre at alle timene blir fakturert til riktig pris? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+
+<h2>Vanlige spørsmål</h2>
+<h3>Hva koster en rørlegger per time?</h3>
+<p>Ofte 700–1000 kroner eks. mva for profesjonelle, men prisen varierer med region og oppdrag. For forbrukere kommer 25 % mva i tillegg. Be om konkret tilbud.</p>
+<h3>Kommer mva i tillegg til timeprisen?</h3>
+<p>For forbrukere legges 25 % mva på. Bedrifter som er mva-registrert trekker fra inngående mva.</p>
+<h3>Hvordan sikrer jeg at alle timene blir fakturert?</h3>
+<p>Registrer timene digitalt på riktig prosjekt, så blir de automatisk grunnlag for fakturaen – ingen glemte timer.</p>
+`.trim();
+
+const TP_TIMEPRIS_RORLEGGER: BlogPost = {
+  _id: 'code-nb-timepris-rorlegger',
+  title: 'Timepris for rørlegger – hva koster en time?',
+  slug: 'timepris-rorlegger',
+  locale: 'nb',
+  excerpt:
+    'Hva koster en rørlegger per time? Vanlig timepris, hva som påvirker den, og hvordan rørleggerfirmaet fanger opp alle timene til riktig faktura.',
+  tag: 'Økonomi',
+  coverImageUrl: '/landing/features/11costs.webp',
+  contentHtml: TP_TIMEPRIS_RORLEGGER_HTML,
+  seoTitle: 'Timepris rørlegger – hva koster en time? | ByggExp',
+  seoDescription:
+    'Timepris for rørlegger: ofte 700–1000 kr eks. mva, men varierer med region og oppdrag. Hva som påvirker prisen, og hvordan du fakturerer alle timene.',
+  seoImageUrl: `${NO_SITE_URL}/landing/features/11costs.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-09-08T13:00:00.000Z',
+  createdAt: '2026-09-08T13:00:00.000Z',
+  updatedAt: '2026-09-08T13:00:00.000Z',
+};
+
+const TP_TIMEPRIS_ELEKTRIKER_HTML = `
+<p>Hva koster en elektriker per time? Prisen varierer med region, oppdrag og om det er forbruker eller bedrift som betaler. Her går vi gjennom hva som er vanlig, hva som påvirker timeprisen, og hvordan et elektrikerfirma holder styr på timer og timepris så faktureringen blir riktig.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: fra registrert tid til faktura – timene på riktig prosjekt blir grunnlag for lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Riktig timepris hjelper lite hvis timene ikke fanges opp – registrer dem der jobben gjøres.</figcaption></figure>
+
+<h2>Hva er vanlig timepris for elektriker?</h2>
+<p>Timeprisen ligger ofte i området <strong>700–950 kroner eks. mva</strong> for profesjonelle elektrikere, men spennet er stort og avhenger av region, kompleksitet og marked. For forbrukere kommer 25 % mva i tillegg. Be alltid om et konkret tilbud – tallene her er kun et utgangspunkt.</p>
+
+<h2>Hva påvirker timeprisen?</h2>
+<ul>
+<li><strong>Region</strong> – prisene er gjerne høyere i og rundt de store byene.</li>
+<li><strong>Type arbeid</strong> – nyanlegg, feilsøking eller sertifisert arbeid krever ulik kompetanse.</li>
+<li><strong>Dokumentasjon</strong> – samsvarserklæring og kontroll er en del av jobben.</li>
+<li><strong>Utrykning og materiell</strong> – akuttoppdrag, reise og deler kommer ofte i tillegg.</li>
+</ul>
+
+<h2>Timepris for elektrikerfirmaet: fra time til riktig faktura</h2>
+<p>Setter du en timepris, må timene også fanges opp riktig – ellers lekker det penger. Med <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering i mobilen</a> knyttes timene til riktig prosjekt og blir grunnlag for fakturaen, slik at du fakturerer alle timene til avtalt pris uten å regne for hånd. Se også <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram for bygg</a> og <a href="/nb/blog/timepris-rorlegger">timepris for rørlegger</a>.</p>
+
+<h2>Kom i gang</h2>
+<p>Vil du sikre at alle timene blir fakturert til riktig pris? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+
+<h2>Vanlige spørsmål</h2>
+<h3>Hva koster en elektriker per time?</h3>
+<p>Ofte 700–950 kroner eks. mva for profesjonelle, men prisen varierer med region og oppdrag. For forbrukere kommer 25 % mva i tillegg. Be om konkret tilbud.</p>
+<h3>Kommer mva i tillegg til timeprisen?</h3>
+<p>For forbrukere legges 25 % mva på. Bedrifter som er mva-registrert trekker fra inngående mva.</p>
+<h3>Hvordan sikrer jeg at alle timene blir fakturert?</h3>
+<p>Registrer timene digitalt på riktig prosjekt, så blir de automatisk grunnlag for fakturaen – ingen glemte timer.</p>
+`.trim();
+
+const TP_TIMEPRIS_ELEKTRIKER: BlogPost = {
+  _id: 'code-nb-timepris-elektriker',
+  title: 'Timepris for elektriker – hva koster en time?',
+  slug: 'timepris-elektriker',
+  locale: 'nb',
+  excerpt:
+    'Hva koster en elektriker per time? Vanlig timepris, hva som påvirker den, og hvordan elektrikerfirmaet fanger opp alle timene til riktig faktura.',
+  tag: 'Økonomi',
+  coverImageUrl: '/landing/features/11costs.webp',
+  contentHtml: TP_TIMEPRIS_ELEKTRIKER_HTML,
+  seoTitle: 'Timepris elektriker – hva koster en time? | ByggExp',
+  seoDescription:
+    'Timepris for elektriker: ofte 700–950 kr eks. mva, men varierer med region og oppdrag. Hva som påvirker prisen, og hvordan du fakturerer alle timene.',
+  seoImageUrl: `${NO_SITE_URL}/landing/features/11costs.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  publishedAt: '2026-09-08T13:10:00.000Z',
+  createdAt: '2026-09-08T13:10:00.000Z',
+  updatedAt: '2026-09-08T13:10:00.000Z',
+};
+
+const SJ_SIKKER_JOBB_ANALYSE_HTML = `
+<p>En sikker jobb-analyse (SJA) er en enkel, systematisk gjennomgang av en arbeidsoppgave <em>før</em> den starter, for å finne farer og bestemme tiltak. På bygg og anlegg brukes SJA på arbeid som kan være risikofylt – arbeid i høyden, graving, varmt arbeid, tunge løft. Her får du vite hva en SJA skal inneholde, når den skal brukes, og en gratis SJA-skjema du kan skrive ut.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/nb-sja.webp" alt="Diagram: sikker jobb-analyse i fire steg – beskriv oppgaven, kartlegg farer, bestem tiltak, gjennomfør og følg opp" width="720" height="380" loading="lazy"><figcaption>SJA i fire steg: beskriv oppgaven, kartlegg farene, bestem tiltak, gjennomfør og følg opp.</figcaption></figure>
+
+<h2>Hva er en sikker jobb-analyse (SJA)?</h2>
+<p>SJA er en systematisk vurdering av en konkret arbeidsoppgave der du, sammen med dem som skal utføre jobben, går gjennom hva som kan gå galt og hvilke tiltak som skal på plass før arbeidet starter. Den er et supplement til den generelle <a href="/nb/blog/byggherreforskriften">risikovurderingen</a> – ikke en erstatning – og skal dokumenteres skriftlig.</p>
+
+<h2>Når skal du bruke SJA?</h2>
+<p>SJA brukes på oppgaver med forhøyet risiko, eller der arbeidet er nytt, uvant eller endrer seg. Typiske eksempler:</p>
+<ul>
+<li>Arbeid i høyden – tak, stillas, lift.</li>
+<li>Graving og arbeid i grøft.</li>
+<li>Varmt arbeid – sveising, kutting, bruk av åpen ild.</li>
+<li>Tunge løft og bruk av kran.</li>
+<li>Arbeid med farlige stoffer eller elektrisk anlegg.</li>
+</ul>
+
+<h2>Hva skal en SJA inneholde?</h2>
+<p>Skjemaet trenger ikke være komplisert – poenget er at det gjøres og at alle er enige:</p>
+<ul>
+<li><strong>Arbeidsoppgave og sted</strong> – hva skal gjøres, hvor og når.</li>
+<li><strong>Deltakere</strong> – hvem er med på analysen.</li>
+<li><strong>Farer</strong> – hva kan gå galt i hvert steg av jobben.</li>
+<li><strong>Tiltak</strong> – hva gjør vi for å fjerne eller redusere faren.</li>
+<li><strong>Ansvarlig og signatur</strong> – hvem passer på at tiltakene er på plass.</li>
+</ul>
+<p><a href="/nb/maler/sja-skjema.html" target="_blank" rel="noopener">Last ned SJA-skjema</a> (skriv ut eller lagre som PDF) – et gratis skjema for sikker jobb-analyse, klart til utfylling på plassen.</p>
+
+<h2>SJA, risikovurdering og HMS henger sammen</h2>
+<p>SJA er en del av HMS-arbeidet på plassen. Den bygger på <a href="/nb/blog/sha-plan">SHA-planen</a> for prosjektet, og alle som deltar skal ha gyldig <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> og være ført på <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten</a>. Sammen gir det dokumentasjonen du trenger hvis Arbeidstilsynet spør.</p>
+
+<h2>Kom i gang</h2>
+<p>Bruk skjemaet over på neste risikofylte oppgave. Les også om <a href="/nb/blog/sha-plan">SHA-plan</a>, <a href="/nb/blog/byggherreforskriften">byggherreforskriften</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>. Sjekk alltid gjeldende krav hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
+
+<h2>Vanlige spørsmål</h2>
+<h3>Hva er en sikker jobb-analyse?</h3>
+<p>En systematisk gjennomgang av en arbeidsoppgave før den starter, der du kartlegger farer og bestemmer tiltak sammen med dem som skal utføre jobben.</p>
+<h3>Når må man ha SJA?</h3>
+<p>På oppgaver med forhøyet risiko, eller når arbeidet er nytt, uvant eller endrer seg – for eksempel arbeid i høyden, graving eller varmt arbeid.</p>
+<h3>Er SJA det samme som risikovurdering?</h3>
+<p>Nei. SJA er en detaljert vurdering av én konkret oppgave, som supplerer den generelle risikovurderingen for virksomheten eller prosjektet.</p>
+`.trim();
+
+const SJ_SIKKER_JOBB_ANALYSE: BlogPost = {
+  _id: 'code-nb-sikker-jobb-analyse',
+  title: 'Sikker jobb-analyse (SJA) – skjema, når og hvordan',
+  slug: 'sikker-jobb-analyse',
+  locale: 'nb',
+  excerpt:
+    'Sikker jobb-analyse (SJA): hva den er, når du skal bruke den, hva skjemaet skal inneholde – og et gratis SJA-skjema til utskrift for bygg og anlegg.',
+  tag: 'Regelverk',
+  coverImageUrl: '/landing/features/3personal.webp',
+  contentHtml: SJ_SIKKER_JOBB_ANALYSE_HTML,
+  seoTitle: 'Sikker jobb-analyse (SJA) – gratis skjema & guide | ByggExp',
+  seoDescription:
+    'Sikker jobb-analyse (SJA) for bygg: når den skal brukes, hva skjemaet skal inneholde og et gratis SJA-skjema til utskrift. Slik henger SJA, SHA og HMS sammen.',
+  seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  howTo: {
+    name: 'Sikker jobb-analyse steg for steg',
+    steps: [
+      'Beskriv arbeidsoppgaven, sted og hvem som deltar.',
+      'Kartlegg farene i hvert steg av jobben.',
+      'Bestem tiltak som fjerner eller reduserer hver fare.',
+      'Utpek ansvarlig og signer før arbeidet starter.',
+      'Gjennomfør jobben og følg opp at tiltakene virker.',
+    ],
+  },
+  publishedAt: '2026-09-08T13:20:00.000Z',
+  createdAt: '2026-09-08T13:20:00.000Z',
+  updatedAt: '2026-09-08T13:20:00.000Z',
+};
+
+const FR_FRAMDRIFTSPLAN_HTML = `
+<p>En framdriftsplan viser når og i hvilken rekkefølge arbeidsoppgavene på et byggeprosjekt skal utføres. Den er navet i <a href="/nb/blog/prosjektstyring-bygg">byggeledelse og prosjektstyring</a>: uten en plan sklir oppgaver ut, fag venter på hverandre, og prosjektet blir forsinket. Her går vi gjennom hva en framdriftsplan skal inneholde, hvordan du lager en, og hvordan du følger den opp underveis.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/nb-framdriftsplan.webp" alt="Diagram: framdriftsplan – aktiviteter på en tidslinje med avhengigheter, milepæler og ansvar per fag" width="720" height="380" loading="lazy"><figcaption>Framdriftsplanen legger aktivitetene på en tidslinje med avhengigheter, milepæler og ansvar per fag.</figcaption></figure>
+
+<h2>Hva er en framdriftsplan?</h2>
+<p>En framdriftsplan (også kalt tidsplan eller Gantt-plan) bryter prosjektet ned i aktiviteter og plasserer dem på en tidslinje. Den viser når hver oppgave starter og slutter, hvilke oppgaver som avhenger av hverandre, og hvilke milepæler som må nås. På bygg brukes den både til å koordinere fagene og til å avdekke forsinkelser tidlig.</p>
+
+<h2>Hva skal en framdriftsplan inneholde?</h2>
+<ul>
+<li><strong>Aktiviteter</strong> – arbeidsoppgavene brutt ned i håndterbare deler.</li>
+<li><strong>Varighet</strong> – hvor lang tid hver aktivitet tar.</li>
+<li><strong>Avhengigheter</strong> – hva må være ferdig før neste kan starte.</li>
+<li><strong>Milepæler</strong> – viktige punkter som tett bygg eller overtakelse.</li>
+<li><strong>Ansvar</strong> – hvilket fag eller hvilken person eier hver aktivitet.</li>
+</ul>
+
+<h2>Slik lager du en framdriftsplan</h2>
+<ol>
+<li>List opp alle aktivitetene fra oppstart til ferdigstillelse.</li>
+<li>Anslå varighet for hver aktivitet.</li>
+<li>Sett opp rekkefølgen og avhengighetene mellom dem.</li>
+<li>Marker milepæler og legg inn litt buffer for uforutsett.</li>
+<li>Fordel ansvar per fag, og del planen med alle på prosjektet.</li>
+</ol>
+
+<h2>Følg opp planen underveis</h2>
+<p>En framdriftsplan er ferskvare – den må oppdateres når virkeligheten endrer seg. Da hjelper det å se planlagt arbeid mot faktisk <a href="/nb/blog/timeregistrering-app-bygg">registrert tid</a> og status på prosjektet. Med <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring for bygg</a> samler du framdrift, timer og dokumentasjon på ett sted, så du oppdager avvik før de blir forsinkelser. Framdriftsplanen inngår også i <a href="/nb/blog/sha-plan">SHA-planen</a> for prosjektet.</p>
+
+<h2>Kom i gang</h2>
+<p>Les mer om <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring og byggeledelse</a>, <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>.</p>
+
+<h2>Vanlige spørsmål</h2>
+<h3>Hva er en framdriftsplan?</h3>
+<p>En plan som viser når og i hvilken rekkefølge arbeidsoppgavene i et prosjekt skal utføres, med varighet, avhengigheter og milepæler.</p>
+<h3>Hva er forskjellen på framdriftsplan og Gantt-diagram?</h3>
+<p>Et Gantt-diagram er en vanlig måte å vise en framdriftsplan på – aktivitetene tegnes som liggende søyler på en tidslinje.</p>
+<h3>Hvordan følger jeg opp framdriften?</h3>
+<p>Sammenlign planlagt arbeid med faktisk registrert tid og status jevnlig, og oppdater planen ved avvik.</p>
+`.trim();
+
+const FR_FRAMDRIFTSPLAN: BlogPost = {
+  _id: 'code-nb-framdriftsplan',
+  title: 'Framdriftsplan for byggeprosjekt – slik lager du en',
+  slug: 'framdriftsplan',
+  locale: 'nb',
+  excerpt:
+    'Framdriftsplan for bygg: hva den skal inneholde, hvordan du lager en steg for steg, og hvordan du følger den opp mot faktisk framdrift underveis.',
+  tag: 'Prosjekt',
+  coverImageUrl: '/landing/features/5planering.webp',
+  contentHtml: FR_FRAMDRIFTSPLAN_HTML,
+  seoTitle: 'Framdriftsplan for byggeprosjekt – slik lager du en | ByggExp',
+  seoDescription:
+    'Framdriftsplan for bygg: hva den skal inneholde (aktiviteter, avhengigheter, milepæler), hvordan du lager en steg for steg, og hvordan du følger opp framdriften.',
+  seoImageUrl: `${NO_SITE_URL}/landing/features/5planering.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  howTo: {
+    name: 'Slik lager du en framdriftsplan',
+    steps: [
+      'List opp alle aktivitetene fra oppstart til ferdigstillelse.',
+      'Anslå varighet for hver aktivitet.',
+      'Sett opp rekkefølge og avhengigheter.',
+      'Marker milepæler og legg inn buffer.',
+      'Fordel ansvar per fag og del planen med prosjektet.',
+    ],
+  },
+  publishedAt: '2026-09-08T13:30:00.000Z',
+  createdAt: '2026-09-08T13:30:00.000Z',
+  updatedAt: '2026-09-08T13:30:00.000Z',
+};
+
 export const NB_ARTICLES: BlogPost[] = [
+  FR_FRAMDRIFTSPLAN,
+  SJ_SIKKER_JOBB_ANALYSE,
+  TP_TIMEPRIS_RORLEGGER,
+  TP_TIMEPRIS_ELEKTRIKER,
   BF_BYGGHERREFORSKRIFTEN,
   SY_TIMEREGISTRERINGSSYSTEM,
   P_TIMEREGISTRERING_APP_BYGG,

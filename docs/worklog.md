@@ -9,8 +9,12 @@
 
 ## 🇳🇴 НОРВЕГИЯ — СТАТУС + СЛЕДУЮЩИЕ ШАГИ (START HERE для NO)
 
+**⚠️ Главный вывод (2026-09-08):** бриф `growth-brief-universal.md` написан под ЛОКАЛЬНЫЙ бизнес услуг (villatakservice.se). byggexp.no = НАЦИОНАЛЬНЫЙ SaaS → location-матрица `услуга×район`, LocalBusiness-схема, GBP/map-pack — **НЕ применимы** (и правильно пропущены). Применимая часть брифа (тех-фундамент + topical authority + on-page) — **выполнена**. Бутылочное горлышко трафика сейчас = **бэклинки + возраст домена**, НЕ количество статей. Статьи добиваем, но рычаг №1 — ссылки (owner).
+
+**✅ D-хаб + HMS/планирование добиты (2026-09-08):** прогнал Planner (Norway/Norwegian, 10 сидов→120 идей). Реальный спрос 100–1K: timepris rørlegger/elektriker, **sikker jobb analyse (SJA)**, framdriftsplan, byggeledelse. Построил 4 статьи: `timepris-rorlegger`, `timepris-elektriker`, `sikker-jobb-analyse` (+SJA-skjema лид-магнит, +диаграмма nb-sja, HowTo/FAQ), `framdriftsplan` (+диаграмма nb-framdriftsplan, HowTo/FAQ). byggeledelse (100-1K) вплёл секцией в prosjektstyring-bygg (анти-каннибализация). Кросс-линки: snekker↔rørlegger↔elektriker, sha-plan/byggherreforskriften→SJA+framdriftsplan. **prosjektledelse/prosjekt leder (100-1K) НЕ строим — интент образовательный** (utdanning/ntnu/prince2/kristiania/karlsen), не наш покупатель. nb-блог = **25 статей**. tsc/lint/build зелёные.
+
 **Где всё лежит:**
-- Статьи: `src/content/articles/nb-timeregistrering.ts` (**20 nb-статей**), диаграммы: `scripts/gen-article-diagrams.js` (nb-*).
+- Статьи: `src/content/articles/nb-timeregistrering.ts` (**25 nb-статей**), диаграммы: `scripts/gen-article-diagrams.js` (nb-*).
 - SEO-доки (`docs/seo/`): `no-innholdsarkitektur.md` (архитектура, ГЛАВНОЕ), `no-nokkelord-kjerner.md` (63 ключа→7 ядер), `seo-kjerner-norge.md` (9 ядер обзор), `se-to-no-keywords.md` (перевод SE-списка + Keyword Ideas объёмы), `keywords-norway.md` (сырьё Planner), `leadmagnets-norway.md` (план магнитов). Сырые CSV Planner: `docs/seo/AlexSeoNor/*.csv`.
 - Копии на рабочем столе владельца: `no-seo-kjerner.md`, `no-innholdsarkitektur.md`, `norske-nokkelord-mal.txt`.
 
@@ -24,8 +28,8 @@
 **⏭️ СЛЕДУЮЩИЕ ШАГИ (по приоритету, из `no-innholdsarkitektur.md` §6):**
 1. **Бэклинки на byggexp.no** — #1 рычаг (owner решил «потом»). Начатый список: proff.no, gulesider, 1881, mittanbud, byggstart, norskbyggebransje, Google Business Profile (NAP-консистентность!). Инсайт: 1 ссылка отраслевого СМИ/ассоциации > 100 каталожных. → оформить в backlink-план.
 2. ✅ **B-хаб добит:** `byggherreforskriften` pillar (2026-09-08, live) — связал HMS-kort+mannskapsliste+SHA-plan, HowTo+FAQ+диаграмма, залинкован из mannskapsliste/sha-plan. oversiktsliste отдельным спок НЕ делал (mannskapsliste покрывает — анти-каннибализация). nb-блог = **21 статья**.
-3. **D-хаб по профессиям:** timepris-rørlegger / -elektriker / -maler — СНАЧАЛА проверить объём в Keyword Planner.
-4. **C-хаб:** `tilbudsmal` (оффер-шаблон, магнит к byggekontrakt).
+3. ✅ **D-хаб по профессиям добит:** timepris-rørlegger + -elektriker (100-1K, live). timepris-maler = только 50 → на потом. + SJA (100-1K, HMS) + framdriftsplan (100-1K, планирование) + byggeledelse (вплетён в prosjektstyring).
+4. **C-хаб:** `tilbudsmal` (оффер-шаблон, магнит к byggekontrakt) — Planner: 50 (tilbudsmal/word/excel). Ниже приоритет, но лёгкий магнит.
 5. **Магниты v2:** timepris-калькулятор (owner сказал «timepris дерьмо» — НЕ делать калькулятор), HMS-kort sjekkliste на 1K-10K кластер.
 6. Через ~неделю: **GSC Performance byggexp.no** → near-miss запросы (поз. 8-15) → усилить on-page.
 

@@ -388,6 +388,29 @@ const nbByggherreforskriften = frame(`
   ${note('Forskrift om SHA på bygge-/anleggsplasser. Ansvaret blir hos byggherren.', INK)}
 `);
 
+// 30. Sikker jobb-analyse (SJA) – fire steg (nb)
+const nbSja = frame(`
+  ${title('Sikker jobb-analyse (SJA) – fire steg')}
+  ${stepBox(30, 120, 150, 74, 'Beskriv', 'oppgaven', BLUE)}
+  ${arrow(180, 216, 157)}
+  ${stepBox(216, 120, 150, 74, 'Kartlegg', 'farene', BLUE)}
+  ${arrow(366, 402, 157)}
+  ${stepBox(402, 120, 150, 74, 'Bestem', 'tiltak', GREEN)}
+  ${arrow(552, 588, 157)}
+  ${stepBox(588, 120, 104, 74, 'Følg', 'opp', AMBER)}
+  <text x="40" y="240" ${font} font-size="15" font-weight="700" fill="${INK}">Gjør analysen før arbeidet starter – sammen med dem som skal utføre jobben.</text>
+  <text x="40" y="266" ${font} font-size="14" fill="${MUT}">Signer før oppstart. Alle deltakere skal ha gyldig HMS-kort.</text>
+  ${ARR_DEF}
+`);
+
+// 31. Framdriftsplan – innhold og oppfølging (nb)
+const nbFramdriftsplan = frame(`
+  ${title('Framdriftsplan – innhold og oppfølging')}
+  ${card(40, 84, 330, 210, 'Planen inneholder', BLUE, ['Aktiviteter og varighet', 'Avhengigheter', 'Milepæler', 'Ansvar per fag'])}
+  ${card(390, 84, 290, 210, 'Følg opp', GREEN, ['Plan mot faktisk tid', 'Oppdater ved avvik', 'Oppdag forsinkelser tidlig', 'Del med hele prosjektet'])}
+  ${note('En framdriftsplan er ferskvare – oppdater den når virkeligheten endrer seg.', INK)}
+`);
+
 // 22. Mannskapsliste / elektronisk oversiktsliste – krav (nb)
 const nbMannskapsliste = frame(`
   ${title('Elektronisk oversiktsliste – krav (&#167; 15)')}
@@ -538,6 +561,8 @@ const DIAGRAMS = {
   'nb-sha-plan': nbShaPlan,
   'nb-byggekontrakt': nbByggekontrakt,
   'nb-byggherreforskriften': nbByggherreforskriften,
+  'nb-sja': nbSja,
+  'nb-framdriftsplan': nbFramdriftsplan,
   'enkelt-tidrapporteringssystem': enkeltSystem,
   'ab-kontrakt': abKontrakt,
   'ata-flode': ata,

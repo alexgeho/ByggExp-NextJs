@@ -147,8 +147,9 @@ export default function EgenkontrollMallPage() {
             body: (
               <ol>
                 <li>
-                  Välj en färdig mall ovan (el, VVS, bygg/stomme eller skyddsrond) så fylls
-                  kontrollpunkterna i automatiskt – eller skriv egna punkter.
+                  Välj en färdig mall ovan (el, VVS, bygg/stomme, våtrum/tätskikt, betong,
+                  tak, ventilation eller skyddsrond) så fylls kontrollpunkterna i automatiskt –
+                  eller skriv egna punkter.
                 </li>
                 <li>Fyll i titel, projekt, ansvarig och datum.</li>
                 <li>Gå igenom varje kontrollpunkt och sätt resultat: godkänd, anmärkning eller ej aktuellt.</li>
@@ -317,7 +318,7 @@ export default function EgenkontrollMallPage() {
             body: (
               <p>
                 Mallen ovan är gratis att använda. I ByggExp finns färdiga egenkontroll-mallar för el,
-                VVS, bygg/stomme och skyddsrond – du fyller i på plats, markerar resultat och samlar
+                VVS, bygg/stomme, våtrum, betong, tak, ventilation och skyddsrond – du fyller i på plats, markerar resultat och samlar
                 alla kontroller per projekt. Du kan skapa egna mallar för återkommande kontroller, se
                 vilka som är godkända och vilka som har anmärkning, och ha hela dokumentationen redo
                 när beställaren eller besiktningsmannen frågar. Eftersom egenkontrollerna ligger

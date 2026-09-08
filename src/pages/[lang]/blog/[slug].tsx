@@ -309,6 +309,23 @@ export default function BlogArticlePage({
             }}
           />
         ) : null}
+        {!post.noIndex && post.howTo && post.howTo.steps.length > 0 ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'HowTo',
+                name: post.howTo.name || post.title,
+                step: post.howTo.steps.map((text, i) => ({
+                  '@type': 'HowToStep',
+                  position: i + 1,
+                  text,
+                })),
+              }),
+            }}
+          />
+        ) : null}
       </Head>
 
       <Header headerT={headerT} />

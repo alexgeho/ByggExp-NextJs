@@ -35,12 +35,9 @@ const BEMANNING_HTML = `
 <h2>Så gör du i ByggExp</h2>
 <p>I ByggExp planerar du bemanningen visuellt: fördela personal på projekt och pass, se frånvaro och beläggning i en delad vy, och låt medarbetarna se sitt schema i mobilen. Eftersom bemanning, närvaro, tid och ekonomi ligger i samma app hänger planen ihop med verkligheten – planerade timmar följer med hela vägen till <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlaget</a>.</p>
 
-<h2>Från Excel till bemanningssystem</h2>
-<p>Många börjar med bemanningsplanering i Excel eller på en whiteboard. Det fungerar för ett projekt, men med flera projekt och skiftande frånvaro blir det snabbt oöverskådligt. Ett bemanningssystem samlar planen digitalt: du ser beläggning, frånvaro och kompetens i en delad vy, och laget ser sitt schema i mobilen. Skillnaden mot Excel är att bemanningsplaneringen hänger ihop med tid, närvaro och lön – ändrar du planen uppdateras allt automatiskt.</p>
+<p>Vill du ersätta Excel med ett digitalt verktyg? Läs om <a href="/sv/blog/bemanningssystem-bygg">bemanningssystem för bygg och digital bemanningsplanering</a>.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Vad är ett bemanningssystem?</h3>
-<p>Ett bemanningssystem är programvaran där du sköter bemanningsplaneringen digitalt – fördelar personal på projekt och pass, ser frånvaro och beläggning, och kopplar planen till tid och lön. Det ersätter bemanningsplanering i Excel med en delad, alltid uppdaterad vy.</p>
 <h3>Vad är skillnaden mellan bemanning och schemaläggning?</h3>
 <p>Bemanning handlar om att fördela rätt personal och kompetens över projekt; <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggning</a> är att lägga de konkreta passen. I praktiken hänger de ihop.</p>
 <h3>Hur hanterar jag frånvaro i planeringen?</h3>
@@ -127,7 +124,7 @@ const FRANVARO_HTML = `
 <p>20 % av en genomsnittlig veckolön, och görs en gång per sjukperiod.</p>
 
 <h2>Kom igång</h2>
-<p>Håll frånvaron samlad, kopplad till plan och lön. <a href="/sv/blog/bemanning-och-personalplanering">Läs om bemanning</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Håll frånvaron samlad, kopplad till plan och lön. <a href="/sv/blog/bemanningssystem-bygg">Läs om bemanningssystem och bemanningsplanering</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a> · <a href="/sv/blog/loneunderlag-for-byggforetag">Löneunderlag</a> · <a href="/sv/blog/app-for-tidrapportering-bygg">App för tidrapportering</a></p>
 `.trim();
@@ -829,7 +826,92 @@ const A_VADERSTOPP_PERMITTERING_BYGGAVTALET: BlogPost = {
   publishedAt: "2026-08-20T10:03:00.000Z", createdAt: "2026-08-20T10:03:00.000Z", updatedAt: "2026-08-20T10:03:00.000Z",
 };
 
+const BEMANNINGSSYSTEM_HTML = `
+<p>Ett bemanningssystem för bygg är programvaran där du sköter bemanningsplaneringen digitalt – fördelar rätt personal och kompetens över projekt och pass, ser frånvaro och beläggning i en delad vy, och kopplar planen till tid och lön. Här går vi igenom vad ett bemanningssystem är, varför bemanningsplanering i Excel snabbt blir ohållbar, och hur du planerar bemanningen steg för steg.</p>
+
+<h2>Vad är ett bemanningssystem?</h2>
+<p>Ett bemanningssystem är ett verktyg för bemanningsplanering: du ser alla projekt, alla medarbetare och deras kompetens på ett ställe, och fördelar personalen dag för dag. Till skillnad från ett kalkylark uppdateras planen i realtid, syns för hela laget och hänger ihop med frånvaro, tid och lön.</p>
+
+<h2>Från Excel till bemanningssystem</h2>
+<p>Många börjar med bemanningsplanering i Excel eller på en whiteboard. Det fungerar för ett projekt, men med flera projekt och skiftande frånvaro blir det snabbt oöverskådligt: dubbelbokningar, luckor och sena besked till laget. Ett bemanningssystem samlar bemanningsplaneringen digitalt och tar bort dubbelarbetet – ändrar du planen uppdateras allt automatiskt.</p>
+
+<div class="article-table"><table>
+<thead><tr><th></th><th>Bemanningsplanering i Excel</th><th>Bemanningssystem</th></tr></thead>
+<tbody>
+<tr><td>Överblick</td><td>Ett ark per vecka/projekt</td><td>Alla projekt i en delad vy</td></tr>
+<tr><td>Frånvaro</td><td>Manuell, lätt att missa</td><td>Syns direkt i planen</td></tr>
+<tr><td>Dubbelbokning</td><td>Upptäcks ofta för sent</td><td>Överbokning flaggas (rött)</td></tr>
+<tr><td>Laget ser schemat</td><td>Nej – skickas separat</td><td>Ja, i mobilen</td></tr>
+<tr><td>Koppling till tid & lön</td><td>Ingen</td><td>Planerade timmar följer med</td></tr>
+</tbody>
+</table></div>
+
+<h2>Så planerar du bemanningen steg för steg</h2>
+<ol>
+<li>Lägg in projekten och deras behov – antal personer och kompetens per period.</li>
+<li>Fördela personalen på projekt och pass i en delad vy.</li>
+<li>Markera frånvaro (sjuk, VAB, semester) så att luckor och överbokning syns direkt.</li>
+<li>Justera löpande när något ändras – och låt laget se sitt schema i mobilen.</li>
+<li>Följ upp beläggning mot plan för att hitta över- och underbeläggning.</li>
+</ol>
+
+<h2>Bemanningssystem i ByggExp</h2>
+<p>I ByggExp planerar du bemanningen visuellt: fördela personal på projekt och pass, se frånvaro och beläggning i en delad vy, och låt medarbetarna se sitt schema i mobilen. Eftersom bemanning, närvaro, <a href="/sv/blog/app-for-tidrapportering-bygg">tid</a> och ekonomi ligger i samma app hänger planen ihop med verkligheten – planerade timmar följer med hela vägen till <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlaget</a>.</p>
+
+<h2>Kom igång</h2>
+<p>Sluta pussla bemanningsplaneringen i huvudet eller i Excel. <a href="/sv/blog/bemanning-och-personalplanering">Läs mer om bemanning och personalplanering</a>, se <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggningssystem</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a></li>
+<li><a href="/sv/blog/schemalaggningssystem-bygg">Schemaläggningssystem för bygg</a></li>
+<li><a href="/sv/blog/resursplanering-bygg">Resursplanering i bygg</a></li>
+<li><a href="/sv/blog/dagsplanering-och-planeringsmoten">Dagsplanering och planeringsmöten</a></li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad är ett bemanningssystem?</h3>
+<p>Ett bemanningssystem är programvaran där du sköter bemanningsplaneringen digitalt – fördelar personal på projekt och pass, ser frånvaro och beläggning, och kopplar planen till tid och lön. Det ersätter bemanningsplanering i Excel med en delad, alltid uppdaterad vy.</p>
+<h3>Vad är skillnaden mellan bemanningsplanering och schemaläggning?</h3>
+<p>Bemanningsplanering handlar om att fördela rätt personal och kompetens över projekt; <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggning</a> är att lägga de konkreta passen. Ett bemanningssystem gör ofta båda delarna.</p>
+<h3>Behöver ett litet byggföretag ett bemanningssystem?</h3>
+<p>Vid ett projekt går det i huvudet – vid flera projekt blir en delad, digital bemanningsplanering snabbt nödvändig för att undvika dubbelbokningar och spilltid.</p>
+`.trim();
+
+const BEMANNINGSSYSTEM: BlogPost = {
+  _id: 'code-bemanningssystem-bygg',
+  title: 'Bemanningssystem för bygg – digital bemanningsplanering',
+  slug: 'bemanningssystem-bygg',
+  locale: 'sv',
+  excerpt:
+    'Bemanningssystem för bygg: sköt bemanningsplaneringen digitalt istället för i Excel. Fördela personal och kompetens över projekt, se frånvaro och beläggning – steg för steg.',
+  tag: 'Bemanning',
+  coverImageUrl: '/landing/features/5planering.webp',
+  contentHtml: BEMANNINGSSYSTEM_HTML,
+  seoTitle: 'Bemanningssystem för bygg – bemanningsplanering | ByggExp',
+  seoDescription:
+    'Bemanningssystem för bygg: digital bemanningsplanering istället för Excel. Fördela personal och kompetens över projekt och pass, se frånvaro och beläggning. Steg för steg.',
+  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`,
+  canonicalUrl: '',
+  noIndex: false,
+  isPublished: true,
+  howTo: {
+    name: 'Så gör du bemanningsplaneringen',
+    steps: [
+      'Lägg in projekten och deras behov – antal personer och kompetens per period.',
+      'Fördela personalen på projekt och pass i en delad vy.',
+      'Markera frånvaro så att luckor och överbokning syns direkt.',
+      'Justera löpande och låt laget se sitt schema i mobilen.',
+      'Följ upp beläggning mot plan för att hitta över- och underbeläggning.',
+    ],
+  },
+  publishedAt: '2026-09-08T10:00:00.000Z',
+  createdAt: '2026-09-08T10:00:00.000Z',
+  updatedAt: '2026-09-08T10:00:00.000Z',
+};
+
 export const PERSONAL_ARTICLES: BlogPost[] = [
+  BEMANNINGSSYSTEM,
   BEMANNING,
   FRANVARO,
   ANSTALLA,

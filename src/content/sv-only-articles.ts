@@ -263,6 +263,7 @@ export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
   'rot-avdrag',
   'id06',
   'bemanning-och-personalplanering',
+  'bemanningssystem-bygg',
   'ab-04-och-abt-06',
   'arbetsmiljoplan',
   'attestering',

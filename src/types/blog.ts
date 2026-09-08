@@ -28,6 +28,9 @@ export type BlogPost = {
   // Optional structured FAQ. When present and non-empty, it overrides the
   // FAQ parsed from `contentHtml` for FAQPage structured data.
   faq?: BlogFaqItem[];
+  // Optional HowTo steps → emits HowTo structured data (AI-search / rich result)
+  // for step-based guides. name defaults to the post title.
+  howTo?: { name?: string; steps: string[] };
 };
 
 export type BlogAdminUser = {

@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import type { ReactNode } from 'react';
 
 import type { CalcLocale } from '../../lib/locale';
-import { TRIAL_CTA, HAS_TRIAL_URL } from '../../config/cta';
 import { gaEvent } from '../../lib/analytics';
 import EmbedSnippet from './EmbedSnippet';
+import ProductBanner from './ProductBanner';
 
 // Reusable, presentation-only layout for a lead-magnet / tool article page.
 // Everything is prop-driven and every visual element carries a `lead-magnet-*`
@@ -152,6 +152,8 @@ export default function LeadMagnetPage({
           <p className="lead-magnet-intro">{intro}</p>
         </header>
 
+        <ProductBanner tool={toolId} />
+
         {tool ? <div className="lead-magnet-tool">{tool}</div> : null}
 
         {tool ? <p className="lm-tool-disclaimer">{disclaimer}</p> : null}
@@ -202,31 +204,18 @@ export default function LeadMagnetPage({
           <aside className="lead-magnet-cta">
             {cta.heading ? <h2 className="lead-magnet-cta-heading">{cta.heading}</h2> : null}
             {cta.text ? <p className="lead-magnet-cta-text">{cta.text}</p> : null}
-            {/* Dual CTA: primary self-serve trial ("Testa gratis") + secondary
-                demo. TRIAL_CTA is env-gated (falls back to the demo route until a
-                real register URL exists, so no dead links). Each click is a funnel
-                step (cta_click) tagged by tool + action for GA4. */}
-            <div className="lead-magnet-cta-actions">
-              <a
-                className="lead-magnet-cta-button"
-                href={TRIAL_CTA.href}
-                {...(HAS_TRIAL_URL ? { target: '_blank', rel: 'noopener' } : {})}
-                onClick={() =>
-                  gaEvent('cta_click', { tool: toolId, action: 'trial', location: 'tool' })
-                }
-              >
-                {TRIAL_CTA.label}
-              </a>
-              <a
-                className="lead-magnet-cta-link"
-                href={cta.href}
-                onClick={() =>
-                  gaEvent('cta_click', { tool: toolId, action: 'demo', location: 'tool' })
-                }
-              >
-                {cta.buttonLabel}
-              </a>
-            </div>
+            {/* Single primary CTA: "Boka demo". No self-serve trial exists (the
+                14-day trial is granted manually after the call). cta_click is the
+                funnel step, tagged by tool for GA4. */}
+            <a
+              className="lead-magnet-cta-button"
+              href={cta.href}
+              onClick={() =>
+                gaEvent('cta_click', { tool: toolId, action: 'demo', location: 'tool' })
+              }
+            >
+              {cta.buttonLabel}
+            </a>
           </aside>
         ) : null}
 

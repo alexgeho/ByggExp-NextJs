@@ -5,6 +5,12 @@
 
 ---
 
+## Сессия 2026-09-09
+
+**✅ GA4 разделён по рынкам:** byggexp.no больше НЕ трекался (config был захардкожен на `byggexp.se`). Создан отдельный GA4-property «ByggExp NO» (`G-GGT1EWGRCR`, Norway/NOK). `_document.tsx` теперь host-aware: se→`G-551T40R4WV`, no→`G-GGT1EWGRCR`, лоадер+Consent Mode общие. Задеплоено. Данные в GA идут только после accept в cookie-баннере (GDPR ок). Clarity/Meta Pixel/GTM всё ещё only-`.se` (AD_HOST/CLARITY_HOST) — при желании расширить на .no отдельно.
+
+---
+
 ## Сессия 2026-09-07
 
 ## 🇳🇴 НОРВЕГИЯ — СТАТУС + СЛЕДУЮЩИЕ ШАГИ (START HERE для NO)

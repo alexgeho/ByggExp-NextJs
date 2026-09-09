@@ -7,7 +7,17 @@
 
 ## Сессия 2026-09-09
 
-**✅ GA4 разделён по рынкам:** byggexp.no больше НЕ трекался (config был захардкожен на `byggexp.se`). Создан отдельный GA4-property «ByggExp NO» (`G-GGT1EWGRCR`, Norway/NOK). `_document.tsx` теперь host-aware: se→`G-551T40R4WV`, no→`G-GGT1EWGRCR`, лоадер+Consent Mode общие. Задеплоено. Данные в GA идут только после accept в cookie-баннере (GDPR ок). Clarity/Meta Pixel/GTM всё ещё only-`.se` (AD_HOST/CLARITY_HOST) — при желании расширить на .no отдельно.
+**✅ GA4 разделён по рынкам (задеплоено):** byggexp.no РАНЬШЕ не трекался — `gtag('config')` был захардкожен на `byggexp.se`. Создан отдельный GA4-property «ByggExp NO» (`G-GGT1EWGRCR`, stream ID 15748039148, URL https://byggexp.no, Norway/NOK, Enhanced measurement on). `src/pages/_document.tsx` теперь host-aware: `GA_SE_ID`=`G-551T40R4WV` для se, `GA_NO_ID`=`G-GGT1EWGRCR` для no; лоадер (`GA_LOADER_ID`) + Consent Mode общие, каждый хит роутится по hostname. Данные в GA идут только ПОСЛЕ accept в cookie-баннере (GDPR ок; до этого cookieless-пинги). Clarity/Meta Pixel/GTM всё ещё only-`.se` (`CLARITY_HOST`/`AD_HOST` в `src/lib/analytics.ts`) — на .no пока молчат.
+- ⏭️ **Проверить:** GA4 property «ByggExp NO» → Reports → Realtime после захода на byggexp.no + accept баннера (предупреждение «Data collection isn't active» уйдёт само после 1-го хита).
+- ⏭️ **Опц.:** если нужна запись сессий/ретаргетинг на .no — сделать Clarity/Meta host-aware так же (сейчас гейт на .se).
+
+**📋 Онбординг приложения — спека (обсуждение с партнёром-разработчиком, admin-репо НЕ трогаю):** договорились НЕ делать «гигантский мануал», а вести к одному killer-loop **«время с объекта (GPS-стемпинг) → часы в проект → lön/faktura»**. Онбординг делить ПО РОЛИ:
+  - **Админ (web):** 3 экрана — Företag (назв.+лого опц.) → Skapa projekt → Bjud in personal (тел/email+роль) → финальный экран-активация (что дальше: ребята стемпят → tid→lön/faktura). Тот список «1.Создание проекта…» = чисто админский.
+  - **Работник (mobile):** 2–3 экрана — Stämpla in/ut med GPS (=«журнал смен» = модуль **Arbetspass**, killer) → Dina pass & uppgifter → разрешения (геолокация+push, обязательны для стемпинга).
+  - Killer-фичи вокруг которых строить: Arbetspass/GPS (№1), Planering(Gantt)+Bemanning, Egenkontroll/KMA — но в онбординг их НЕ пихать, только упомянуть на финале.
+  - ⏭️ **Следующий шаг (если попросят):** расписать текст каждого экрана (заголовок+подпись+CTA) на sv/en/nb как спеку для передачи разработчику. Метрика активации: админ = 1 проект + ≥1 приглашённый; работник = 1 check-in.
+
+**🖼️ Hero-картинка главной — выданы стоковые запросы (owner подбирает):** ориентир = «реальная скандинавская стройка + телефон/планшет в руках» (продукт=учёт с объекта), горизонт с воздухом под текст, 1 визуал на все 10 языков. Запросы под Adobe/Shutterstock/iStock: `scandinavian construction worker using smartphone on building site`, `norwegian builder tablet construction site sunlight`, `carpenter checking phone timesheet building site` и т.д. ⏭️ owner выбирает фото; при желании подобрать отдельный визуал под byggexp.no.
 
 ---
 

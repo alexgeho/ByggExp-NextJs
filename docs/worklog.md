@@ -5,6 +5,21 @@
 
 ---
 
+## Сессия 2026-09-10
+
+**✅ 3 новые SEO-статьи из KP+GSC gap-анализа (задеплоены, sv-only):** прогнал Keyword Planner (SE, топ-10 сидов) + сверил с `docs/seo/gsc-near-miss.md`, вычел 296 существующих slug'ов → реальные пробелы. Важно: **bemanning/schemaläggning/avvikelsehantering УЖЕ построены** (не дублировал; `bemanningsplanering` поз.53 в GSC = бэклинки/авторитет, не отсутствие страницы). Построено (каждая: глубокая фактура с §-ссылками через веб-агента → 2 редакторских агента язык+факты → брендовая диаграмма → tsc+build):
+  - `kvalitetsplan-bygg` (kvalitet.ts) — krav AB04/ABT06 kap 2 §2, AMA AF 21 AFC/AFD.224, ISO 9001; ключевой угол = разделение **kontrollplan(PBL) ≠ kvalitetsplan ≠ egenkontroll**. Диаграмма `kvalitetsplan`.
+  - `e-signering-avtal` (juridik.ts) — avtalslagen 1915:218 formfrihet, eIDAS 910/2014 art.25, **BankID=AdES**, формкрав-исключения (JB4:1/ÄB10:1/ÄktB7:3), ÄTA-skriftlighet, bokföringslag 7 år. Диаграмма `e-signering-avtal` (3 eIDAS-уровня).
+  - `offert-vvs-elektriker-rormokare` (ekonomi.ts) — offert per yrke; **EL=lagkrav** (elsäkerhetslag 2016:732, registrering/egenkontroll), **VVS=branschkrav** (Säker Vatten, BBV/GVK); konsumenttjänstlag 36§ +15%, ROT 30% 2026. Диаграмма `offert-vvs-elektriker-rormokare`.
+- ⏭️ **Проверить live 200** (деплой ~1-2 мин): `/sv/blog/kvalitetsplan-bygg`, `/sv/blog/e-signering-avtal`, `/sv/blog/offert-vvs-elektriker-rormokare` + диаграммы + наличие в sitemap.
+- ⏭️ **Следующие KP+GSC gap-кандидаты** (если продолжать): свежий GSC-экспорт (Queries 3 мес) поверх 2-дневного среза; 2-й заход сидов (elektriker/vvs/mark/rivning/takläggare offert) — но объёмы 10-100, низкий приоритет.
+
+**⚙️ Google Ads API — статус (для headless keyword-pull):** авторизация ДОБИТА (перевыпущен refresh_token под aleksandrgerhard, OAuth-приложение под svbyggmaleri/Denis Hok — консистентно; конфиг `.googleads/google-ads.yaml`, venv поставлен, `test_api.py` коннектится). **Блокер:** Cloud-проект `776884778897` на уровне **Test** → `CLOUD_PROJECT_NOT_APPROVED_FOR_PRODUCTION` (реальные объёмы не отдаёт). Нужен production/Basic-доступ = ревью Google. Заявка от 8 авг в треде compliance [0-5473000040709] — **owner отправил короткий ответ-подтверждение Advertiser** 2026-09-10; ждём одобрения (дни). До тех пор ключи берём через **браузерный Keyword Planner + CSV** (у меня парсер готов). ⚠️ Под aleksandrgerhard нет активного Ads-аккаунта — KP гонять под Geal AB (svbyggmaleri) или достроить ByggExp-аккаунт.
+
+**🧭 LIA/работа (отдельный трек, вне репо-контента):** разобран слайд Medieinstitutet (146 компаний) → `internship/lia-foretag.xlsx` + `internship/lia-medieinstitutet-list.md` + Artifact (claude.ai/code/artifact/e0f4df78...). Топ-цели с live-ссылками: Redmind (Talent Accelerator — открыт), Avantime, Knowit/ex-Creuna, Viaplay, Blocket, Star Stable, CharpstAR. Письма Redmind+Avantime написаны (в чате). Детали: память [[job-hunt-praktik]].
+
+---
+
 ## Сессия 2026-09-09
 
 **✅ GA4 разделён по рынкам (задеплоено):** byggexp.no РАНЬШЕ не трекался — `gtag('config')` был захардкожен на `byggexp.se`. Создан отдельный GA4-property «ByggExp NO» (`G-GGT1EWGRCR`, stream ID 15748039148, URL https://byggexp.no, Norway/NOK, Enhanced measurement on). `src/pages/_document.tsx` теперь host-aware: `GA_SE_ID`=`G-551T40R4WV` для se, `GA_NO_ID`=`G-GGT1EWGRCR` для no; лоадер (`GA_LOADER_ID`) + Consent Mode общие, каждый хит роутится по hostname. Данные в GA идут только ПОСЛЕ accept в cookie-баннере (GDPR ок; до этого cookieless-пинги). Clarity/Meta Pixel/GTM всё ещё only-`.se` (`CLARITY_HOST`/`AD_HOST` в `src/lib/analytics.ts`) — на .no пока молчат.

@@ -586,11 +586,21 @@ const anbudKalkyl = frame(`
   ${note('Priset binder dig under giltighetstiden – sätt alltid ett slutdatum (2 § avtalslagen).', INK)}
 `);
 
+// Grön teknik-avdrag 2026 – tre kategorier
+const gronTeknik = frame(`
+  ${title('Grön teknik-avdrag 2026 – tre kategorier')}
+  ${card(30, 74, 210, 214, 'Solceller', BLUE, ['15 % (sänkt fr. 20)', 'Arbete + material', 'Nätanslutet system'])}
+  ${card(255, 74, 210, 214, 'Batteri/lagring', GREEN, ['50 %', 'Arbete + material', 'Kopplat till egen el'])}
+  ${card(480, 74, 210, 214, 'Laddbox', AMBER, ['50 %', 'Arbete + material', 'Typ 2 + jordfelsbrytare'])}
+  ${note('Eget tak 50 000 kr/person/år – separat från ROT/RUT. Dras av på fakturan.', INK)}
+`);
+
 const DIAGRAMS = {
   'kvalitetsplan': kvalitetsplan,
   'e-signering-avtal': eSignatur,
   'offert-vvs-elektriker-rormokare': offertYrke,
   'anbud-bygg': anbudKalkyl,
+  'gron-teknik-avdrag': gronTeknik,
   'abs-hantverkarformularet': absHantverk,
   'kalkyl-flode': kalkylFlode,
   'faktura-rotavdrag': fakturaRotavdrag,

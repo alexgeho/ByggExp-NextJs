@@ -8224,7 +8224,99 @@ const A_ANBUD_BYGG: BlogPost = {
   publishedAt: "2026-09-10T12:00:00.000Z", createdAt: "2026-09-10T12:00:00.000Z", updatedAt: "2026-09-10T12:00:00.000Z",
 };
 
+const A_GRON_TEKNIK_AVDRAG_HTML = `
+<p>Installerar du solceller, batterier eller laddboxar är grön teknik-avdrag din motsvarighet till ROT – men reglerna är inte samma. Avdraget omfattar både arbete och material, har egna procentsatser per kategori och ett eget takbelopp. Kör du fel procentsats eller missar att kolla kundens skatteutrymme kan Skatteverket neka utbetalningen, och då sitter du med förlusten. Här är vad som gäller 2026 och hur du fakturerar rätt.</p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/gron-teknik-avdrag.webp" alt="Diagram: grön teknik-avdrag 2026 – solceller 15 %, batteri 50 %, laddbox 50 %, på arbete och material, tak 50 000 kr per person och år" width="720" height="380" loading="lazy"><figcaption>Grön teknik-avdrag 2026: tre kategorier med olika procent, alla på både arbete och material, med ett eget tak på 50 000 kr per person och år.</figcaption></figure>
+
+<p>Avdraget dras av direkt på fakturan, precis som ROT. Så här hänger det ihop med resten av din <a href="/sv/blog/faktureringsprogram-bygg">ROT- och fakturahantering →</a>.</p>
+
+<h2>Vad är grön teknik-avdrag?</h2>
+<p>Grön teknik-avdrag är en skattereduktion för installation av grön teknik – solceller, lagring av egenproducerad el och laddningspunkter för elfordon. Det är ett eget avdrag, skilt från ROT och RUT. Precis som ROT fungerar det via fakturamodellen: du drar av kundens del direkt på fakturan och begär resten från Skatteverket, så kunden betalar bara nettot.</p>
+<p>Den viktigaste skillnaden mot ROT: grön teknik-avdrag omfattar <strong>både arbete och material</strong>. ROT gäller bara arbetskostnaden. Det är den vanligaste missuppfattningen bland installatörer – och den som kostar mest i onödigt låga avdrag. Rättsligt vilar avdraget på 67 kap. inkomstskattelagen (1999:1229) och lag (2020:1066) om förfarandet vid skattereduktion för installation av grön teknik.</p>
+
+<h2>Så mycket är avdraget 2026</h2>
+<div class="article-table"><table>
+<thead><tr><th>Kategori</th><th>Skattereduktion 2026</th><th>Underlag</th></tr></thead>
+<tbody>
+<tr><td>Nätanslutet solcellssystem</td><td><strong>15 %</strong></td><td>arbete + material</td></tr>
+<tr><td>Lagring av egenproducerad el (batteri)</td><td><strong>50 %</strong></td><td>arbete + material</td></tr>
+<tr><td>Laddningspunkt till elfordon (laddbox)</td><td><strong>50 %</strong></td><td>arbete + material</td></tr>
+</tbody></table></div>
+<p>Takbeloppet är <strong>50 000 kr per person och år</strong>, gemensamt för alla tre kategorierna men separat från ROT/RUT-taket. Äger två personer bostaden kan de begära var sitt avdrag, alltså upp till 100 000 kr per år.</p>
+<p>En förändring att känna till: solceller sänktes från 20 % till 15 %. Det är <strong>slutbetalningsdatumet</strong> som avgör vilken procentsats som gäller – inte när installationen gjordes. Betalar kunden slutfakturan efter halvårsskiftet 2025 är det 15 % som gäller. Batteri och laddbox ligger kvar på 50 %.</p>
+
+<h2>Vilka installationer kvalificerar?</h2>
+<ul>
+<li><strong>Solceller</strong> – ett nätanslutet solcellssystem. Underlaget omfattar paneler, nödvändig kringutrustning och arbete.</li>
+<li><strong>Batteri</strong> – lagring som är <strong>kopplad till egenproducerad förnybar el</strong>, typiskt en solcellsanläggning. Ett fristående batteri utan egen elproduktion kvalificerar inte.</li>
+<li><strong>Laddbox</strong> – laddningspunkten ska vara förberedd för elmätning och ha uttag enligt standard Typ 2 (EN 62196-2) eller Combo. Den ska ha <strong>egen gruppledning och egen jordfelsbrytare typ B</strong> (alternativt typ A i kombination med skydd mot felström över 6 mA DC). Missas jordfelsbrytaren eller standarden underkänns avdraget.</li>
+</ul>
+
+<h2>Så fakturerar du grön teknik-avdrag</h2>
+<p>Flödet är detsamma som för ROT, men med eget ansökningsflöde och eget tak:</p>
+<ul>
+<li><strong>Kunden måste äga bostaden</strong> och vara skattskyldig med tillräckligt skatteutrymme. Har kunden inte utrymme kvar kan Skatteverket neka – kolla det innan, precis som du <a href="/sv/blog/kontrollera-kundens-rotutrymme">kontrollerar kundens ROT-utrymme</a>.</li>
+<li><strong>Du drar av kundens del på fakturan</strong> och begär utbetalning av resten elektroniskt från Skatteverket.</li>
+<li><strong>Både arbete och material</strong> ingår i underlaget – särredovisa dem tydligt.</li>
+<li><strong>F-skatt krävs</strong> för det utförande företaget.</li>
+<li><strong>Deadline:</strong> begäran om utbetalning ska ha kommit in till Skatteverket senast 31 januari året efter det år kunden betalade. Du kan begära först när installationen är utförd och fullt betald.</li>
+</ul>
+
+<h2>Grön teknik, ROT eller RUT?</h2>
+<div class="article-table"><table>
+<thead><tr><th></th><th>Grön teknik</th><th>ROT</th><th>RUT</th></tr></thead>
+<tbody>
+<tr><td>Vad</td><td>Solceller, batteri, laddbox</td><td>Renovering, om-/tillbyggnad</td><td>Hushållsnära tjänster</td></tr>
+<tr><td>Procent</td><td>15 % / 50 % / 50 %</td><td>30 %</td><td>50 %</td></tr>
+<tr><td>Underlag</td><td>Arbete + material</td><td>Endast arbete</td><td>Endast arbete</td></tr>
+<tr><td>Tak/person/år</td><td>50 000 kr (eget)</td><td>50 000 kr</td><td>75 000 kr</td></tr>
+</tbody></table></div>
+<p>ROT är 30 % 2026 (den tillfälliga höjningen till 50 % under andra halvåret 2025 har upphört). Grön teknik har ett eget tak som inte tär på ROT/RUT-taket – läs mer om <a href="/sv/blog/rot-eller-rut">skillnaden mellan ROT och RUT</a>.</p>
+
+<h2>Kan man kombinera grön teknik och ROT?</h2>
+<p>Inte för samma kostnad. Ett och samma arbete ger antingen ROT eller grönt avdrag, inte båda. Däremot kan du använda olika avdrag för olika arbeten i samma projekt – till exempel grönt avdrag för själva solcells- eller batteriinstallationen och ROT för separat kringarbete som inte ingår i grön teknik-underlaget. Håll då kostnaderna åtskilda på fakturan.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Räknar bara arbetet</strong> – och missar att grön teknik även omfattar material.</li>
+<li><strong>Fel procent på solceller</strong> – kör 50 % i stället för 15 %. Femtio procent gäller bara batteri och laddbox.</li>
+<li><strong>Kollar inte kundens skatteutrymme eller ägande</strong> – och får utbetalningen nekad.</li>
+<li><strong>Laddbox-kraven uppfylls inte</strong> – egen jordfelsbrytare och Typ 2 saknas.</li>
+<li><strong>Dubbelavdrag</strong> – försöker ta både ROT och grönt avdrag för samma kostnad.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp gör ROT-fakturering med särredovisad arbetskostnad, och samma faktureringsmodell använder du för grön teknik-avdrag. Du bygger fakturan med poster för arbete och material var för sig, drar av kundens del och får en tydlig faktura att skicka. Själva begäran om utbetalning lämnar du in hos Skatteverket – men vi gör det enkelt att särredovisa och fakturera rätt så att underlaget håller.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur mycket är grön teknik-avdraget 2026?</h3>
+<p>15 % för nätanslutna solceller, 50 % för batterilagring och 50 % för laddbox – allt på både arbete och material. Takbeloppet är 50 000 kr per person och år, separat från ROT/RUT.</p>
+<h3>Gäller grön teknik-avdrag både arbete och material?</h3>
+<p>Ja. Till skillnad från ROT, som bara omfattar arbetskostnad, räknas både arbete och material in i underlaget för grön teknik-avdrag.</p>
+<h3>Varför är solcellsavdraget 15 % och inte 20 %?</h3>
+<p>Solceller sänktes från 20 % till 15 %. Det är slutbetalningsdatumet som avgör procentsatsen – betalar kunden slutfakturan efter halvårsskiftet 2025 gäller 15 %.</p>
+<h3>Kan kunden få både ROT och grön teknik-avdrag?</h3>
+<p>Ja, men inte för samma kostnad. Olika arbeten i samma projekt kan ge olika avdrag, så länge kostnaderna hålls åtskilda på fakturan.</p>
+
+<h2>Kom igång</h2>
+<p>Sätt rätt procent per kategori, ta med materialet i underlaget och kolla kundens utrymme innan du börjar – då blir grön teknik-avdraget en enkel affär i stället för en nekad utbetalning. Bygg fakturan i <a href="/sv/blog/faktureringsprogram-bygg">ett faktureringsprogram som klarar ROT och särredovisning</a>. Vill du se hur det fungerar i ett riktigt jobb? <a href="/sv/contact">Boka en demo →</a></p>
+
+<p>Relaterat: <a href="/sv/blog/rot-eller-rut">ROT eller RUT – skillnaden</a>, <a href="/sv/blog/kontrollera-kundens-rotutrymme">Kontrollera kundens avdragsutrymme</a>, <a href="/sv/blog/offert-vvs-elektriker-rormokare">Offert för el, VVS och rörmokare</a>.</p>
+`;
+
+const A_GRON_TEKNIK_AVDRAG: BlogPost = {
+  _id: "code-"+"gron-teknik-avdrag",
+  title: "Grön teknik-avdrag 2026 – så fungerar det för dig som installerar solceller, batteri och laddbox", slug: "gron-teknik-avdrag", locale: "sv",
+  excerpt: "Grön teknik-avdrag är ROT:s motsvarighet för solceller, batteri och laddbox – men på både arbete och material. Procentsatser 2026, tak och så fakturerar du rätt.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_GRON_TEKNIK_AVDRAG_HTML,
+  seoTitle: "Grön teknik-avdrag 2026 – %, tak & faktura | ByggExp", seoDescription: "Grön teknik-avdrag 2026: solceller 15 %, batteri och laddbox 50 % på arbete + material, tak 50 000 kr. Vad som kvalificerar och så fakturerar du som installatör.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-09-10T13:00:00.000Z", createdAt: "2026-09-10T13:00:00.000Z", updatedAt: "2026-09-10T13:00:00.000Z",
+};
+
 export const EKONOMI_ARTICLES: BlogPost[] = [
+  A_GRON_TEKNIK_AVDRAG,
   A_ANBUD_BYGG,
   A_OFFERT_VVS_EL_RORMOKARE,
   R_FAKTURA_MED_ROTAVDRAG,

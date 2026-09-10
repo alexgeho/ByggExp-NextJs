@@ -2503,7 +2503,82 @@ const A_NYA_AB_04_ABT_06_REVIDERING_2027: BlogPost = {
   publishedAt: "2026-08-20T09:15:00.000Z", createdAt: "2026-08-20T09:15:00.000Z", updatedAt: "2026-08-20T09:15:00.000Z",
 };
 
+const A_E_SIGNERING_AVTAL_HTML = `
+<p>Räcker det att kunden signerar offerten med BankID i mobilen, eller måste papperet skrivas under med penna för att hålla? För nästan alla avtal en hantverkare eller entreprenör skriver är svaret tydligt: en e-signatur är precis lika bindande som bläck. Här går vi igenom varför, vilka nivåer av elektronisk signatur som finns, de få undantag där digital signering inte fungerar – och varför en BankID-signatur ofta är ett starkare bevis än en inskannad namnteckning.</p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/e-signering-avtal.webp" alt="Diagram: tre nivåer av elektronisk signatur enligt eIDAS – enkel (SES), avancerad (AdES, BankID) och kvalificerad (QES)" width="720" height="380" loading="lazy"><figcaption>eIDAS delar in e-signaturer i tre nivåer. BankID är en avancerad signatur – mer än nog för hantverkar- och entreprenadavtal.</figcaption></figure>
+
+<p>Ska du få avtalet signerat behöver du först ett avtal värt att signera. Utgå gärna från <a href="/sv/blog/entreprenadkontrakt-mall">vår guide till entreprenadkontrakt med mall →</a>.</p>
+
+<h2>Är e-signerade avtal juridiskt bindande?</h2>
+<p>Ja, för de allra flesta avtal. Svensk avtalsrätt bygger på avtalsfrihet och formfrihet: avtalslagen (1915:218) ställer inget generellt krav på att ett avtal ska vara skriftligt eller undertecknat på ett visst sätt. Ett bindande avtal uppstår genom anbud och accept. Även muntliga avtal är bindande – problemet med dem är bevisningen, inte giltigheten.</p>
+<p>Det betyder att ett digitalt signerat avtal håller precis lika bra, så länge avtalet inte omfattas av ett lagstadgat formkrav. Dessutom slår eIDAS-förordningen (förordning (EU) nr 910/2014, i kraft i Sverige sedan 2016) fast i artikel 25.1 att en elektronisk signatur inte får nekas rättslig verkan enbart för att den är elektronisk. Sverige har erkänt e-signaturer i över tjugo år.</p>
+
+<h2>Tre nivåer av e-signatur – och var BankID hör hemma</h2>
+<p>eIDAS delar in elektroniska signaturer i tre nivåer med olika krav och olika styrka:</p>
+<div class="article-table"><table>
+<thead><tr><th>Nivå</th><th>Vad det innebär</th><th>Bevisvärde</th></tr></thead>
+<tbody>
+<tr><td><strong>Enkel (SES)</strong></td><td>Vilken elektronisk markering som helst – en kryssruta, en kod via sms, ett inskannat namn. Ingen identitetskontroll.</td><td>Lägst – lätt att ifrågasätta</td></tr>
+<tr><td><strong>Avancerad (AdES)</strong></td><td>Unikt kopplad till undertecknaren, identifierar personen och binds till dokumentet så att ändringar i efterhand kan upptäckas. <strong>BankID ligger här.</strong></td><td>Högt – stark ID-koppling</td></tr>
+<tr><td><strong>Kvalificerad (QES)</strong></td><td>En avancerad signatur plus kvalificerat certifikat och en kvalificerad anordning för underskrifter. Likställs enligt art. 25.2 med en handskriven underskrift.</td><td>Högst</td></tr>
+</tbody></table></div>
+<p>En vanlig missuppfattning är att man alltid behöver den kvalificerade nivån. Det stämmer inte. Kvalificerad signatur krävs bara där lagen uttryckligen begär en handskriftsekvivalent, och de fallen (se nedan) går oftast inte att e-signera överhuvudtaget. För ett vanligt hantverkar- eller entreprenadavtal räcker enkel eller avancerad signatur – BankID väljs för bevisstyrka och smidighet, inte för att lagen kräver det.</p>
+
+<h2>När fungerar e-signering inte?</h2>
+<p>Det finns några rättshandlingar där lagen kräver en särskild form – skriftligt, bevittnat eller registrerat – och där en ren e-signatur inte ger en giltig handling:</p>
+<div class="article-table"><table>
+<thead><tr><th>Rättshandling</th><th>Lag</th><th>Formkrav</th></tr></thead>
+<tbody>
+<tr><td>Fastighetsköp</td><td>Jordabalken 4 kap. 1 §</td><td>Skriftlig köpehandling undertecknad av båda parter; godtas i praktiken inte e-signerad vid lagfart</td></tr>
+<tr><td>Testamente</td><td>Ärvdabalken 10 kap. 1 §</td><td>Skriftligt, bevittnat av två samtidigt närvarande vittnen</td></tr>
+<tr><td>Äktenskapsförord</td><td>Äktenskapsbalken 7 kap. 3 §</td><td>Skriftligt, registreras hos Skatteverket</td></tr>
+<tr><td>Framtidsfullmakt</td><td>Lag (2017:310) 4 §</td><td>Skriftlig, två vittnen</td></tr>
+</tbody></table></div>
+<p>Tumregel: allt som har ett bevittningskrav eller måste registreras för att gälla ska du behandla som icke e-signerbart. För byggbranschen är det här sällan aktuellt – inget vanligt entreprenad- eller hantverkaravtal har ett sådant formkrav.</p>
+
+<h2>Entreprenad- och hantverkaravtal: räcker digital signatur?</h2>
+<p>Ja. Bygg- och hantverksavtal styrs av konsumenttjänstlagen (1985:716) för konsumentjobb och av standardavtal som AB 04, ABT 06, ABS 18 och <a href="/sv/blog/abs-18-hantverkarformularet-17">Hantverkarformuläret 17</a> för övrigt. Inget av dem ställer ett lagstadgat formkrav – standardavtalen är just avtal, inte lag, och binder bara när parterna antagit dem.</p>
+<p>Även skriftlighetskravet för ÄTA-arbeten går utmärkt att uppfylla digitalt. AB 04 kräver visserligen att <a href="/sv/blog/ata-arbeten">ÄTA beställs skriftligen</a> (kap. 2 § 6), men avtalets egen definition av "skriftligen" är information som går att läsa och lagra. Det omfattar e-post, digitala handlingar och protokoll – och därmed även en e-signerad beställning. En BankID-signatur ligger långt över den ribban.</p>
+
+<h2>Därför är en digital signatur ofta ett starkare bevis</h2>
+<p>Svensk rätt bygger på fri bevisprövning (rättegångsbalken 35 kap. 1 §): domstolen tar emot vilken bevisning som helst och värderar den fritt. Det finns ingen regel som säger att ett bläckoriginal väger tyngre.</p>
+<p>Tvärtom har en avancerad digital signatur med spårlogg oftast högre bevisvärde än en inskannad namnteckning. Den paketerar verifierad identitet, tidsstämpel, manipulationsskydd och en fullständig logg över vem som signerade, när och hur. En inskannad underskrift bevisar knappt vem som faktiskt skrev under eller om dokumentet ändrats efteråt. Samma logik som vid <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">fotodokumentation</a>: spårbarhet skapar bevisvärde.</p>
+
+<h2>Så länge måste du spara det signerade avtalet</h2>
+<p>Är avtalet räkenskapsinformation ska det arkiveras enligt bokföringslagen (1999:1078) i minst sju år efter utgången av det kalenderår då räkenskapsåret avslutades. En viktig ändring: sedan 1 juli 2024 finns inte längre kravet att bevara pappersoriginalet en viss tid. Du får skanna in ett papper och slänga originalet direkt, så länge överföringen inte riskerar att informationen ändras eller förloras. För ett e-signerat avtal är poängen enkel: spara den elektroniska originalfilen med signatur- och loggdata – det är den som utgör beviset – i sju år.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp skriver och signerar inte avtalet åt dig – e-signeringen sker i en e-signeringstjänst med BankID. Det ByggExp gör är att ta fram underlaget: du skapar offert och avtalsunderlag i offertmodulen och samlar den påskrivna handlingen tillsammans med projektets dagbok, foton och dokument på ett ställe. Då ligger avtalet kvar kopplat till rätt projekt i stället för i en mejltråd, och du hittar det när du behöver visa vad som avtalats.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är ett avtal signerat med BankID juridiskt bindande?</h3>
+<p>Ja. BankID är en avancerad elektronisk signatur enligt eIDAS. För avtal utan lagstadgat formkrav – vilket gäller i stort sett alla hantverkar- och entreprenadavtal – är det lika bindande som en penna på papper, och ofta ett starkare bevis.</p>
+<h3>Vilken nivå av e-signatur behöver jag för ett byggavtal?</h3>
+<p>Juridiskt räcker även en enkel signatur, eftersom byggavtal är formfria. I praktiken används BankID (avancerad nivå) för att få en tydlig identitetskoppling och en spårlogg som håller vid en tvist.</p>
+<h3>Kan ÄTA-arbeten beställas med e-signatur?</h3>
+<p>Ja. AB 04 kräver skriftlig beställning av ÄTA, men "skriftligen" enligt avtalet är information som kan läsas och lagras – e-post och e-signerade beställningar uppfyller kravet.</p>
+<h3>Hur länge måste jag spara ett e-signerat avtal?</h3>
+<p>Är det räkenskapsinformation ska det sparas i minst sju år enligt bokföringslagen. Spara den elektroniska originalfilen med signatur- och loggdata, eftersom det är den som utgör beviset.</p>
+
+<h2>Kom igång</h2>
+<p>Ett tydligt avtal som signeras digitalt är både snabbare och starkare bevismässigt än en påskriven papperslunta. Börja med själva avtalet – utgå från vår <a href="/sv/blog/entreprenadkontrakt-mall">entreprenadkontrakt-mall</a> och läs om hur du <a href="/sv/blog/entreprenadtvist-undvika-dokumentation">undviker tvister med rätt dokumentation</a>. Vill du se hur offert, avtal och projektdokumentation hänger ihop? <a href="/sv/contact">Boka en demo →</a></p>
+
+<p>Relaterat: <a href="/sv/blog/muntligt-avtal-sakra-bevis">Muntligt avtal – så säkrar du bevis</a>, <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaden</a>, <a href="/sv/blog/ata-arbeten">ÄTA-arbeten – ändring, tillägg, avgående</a>.</p>
+`;
+
+const A_E_SIGNERING_AVTAL: BlogPost = {
+  _id: "code-"+"e-signering-avtal",
+  title: "E-signering av avtal – är en digital signatur juridiskt bindande?", slug: "e-signering-avtal", locale: "sv",
+  excerpt: "En e-signatur är lika bindande som bläck för nästan alla avtal. Så fungerar eIDAS tre nivåer, var BankID hör hemma – och de få undantag där digital signering inte gäller.", tag: "Juridik",
+  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_E_SIGNERING_AVTAL_HTML,
+  seoTitle: "E-signering avtal – bindande? | ByggExp", seoDescription: "Är e-signerade avtal juridiskt bindande i Sverige? eIDAS tre nivåer, BankID, ÄTA-skriftlighet, bevisvärde och undantagen där digital signatur inte gäller.",
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-09-10T10:00:00.000Z", createdAt: "2026-09-10T10:00:00.000Z", updatedAt: "2026-09-10T10:00:00.000Z",
+};
+
 export const JURIDIK_ARTICLES: BlogPost[] = [
+  A_E_SIGNERING_AVTAL,
   ATA,
   AB04,
   SLUTBESIKTNING,

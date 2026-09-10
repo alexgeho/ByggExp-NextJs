@@ -553,8 +553,18 @@ const kvalitetsplan = frame(`
   ${note('Myndighetskrav (kommun) och avtalskrav (beställare) är två skilda sfärer.', INK)}
 `);
 
+// E-signatur – tre nivåer enligt eIDAS
+const eSignatur = frame(`
+  ${title('E-signatur – tre nivåer enligt eIDAS')}
+  ${card(30, 74, 210, 214, 'Enkel (SES)', AMBER, ['Kryssruta, kod, bild', 'Ingen ID-koppling', 'Lägst bevisvärde'])}
+  ${card(255, 74, 210, 214, 'Avancerad (AdES)', BLUE, ['BankID hör hit', 'Unik ID-koppling', 'Manipulationssäker', 'Starkt bevisvärde'])}
+  ${card(480, 74, 210, 214, 'Kvalificerad (QES)', GREEN, ['Kvalificerat cert', 'Likställs med penna', 'eIDAS art. 25.2'])}
+  ${note('För hantverkar- och entreprenadavtal räcker enkel eller avancerad – BankID är mer än nog.', INK)}
+`);
+
 const DIAGRAMS = {
   'kvalitetsplan': kvalitetsplan,
+  'e-signering-avtal': eSignatur,
   'abs-hantverkarformularet': absHantverk,
   'kalkyl-flode': kalkylFlode,
   'faktura-rotavdrag': fakturaRotavdrag,

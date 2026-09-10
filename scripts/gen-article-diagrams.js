@@ -544,7 +544,17 @@ const absHantverk = frame(`
   ${note('Det är arbetets art som avgör – inte priset. Båda vilar på konsumenttjänstlagen.', INK)}
 `);
 
+// Kvalitetsplan vs kontrollplan (PBL) vs egenkontroll – tre skilda system
+const kvalitetsplan = frame(`
+  ${title('Tre kontrollsystem – blanda inte ihop')}
+  ${card(30, 74, 210, 214, 'Kontrollplan (PBL)', AMBER, ['Offentligrättslig', 'PBL 10 kap 6 §', 'Byggherren ansvarar', 'Lämnas till kommunen'])}
+  ${card(255, 74, 210, 214, 'Kvalitetsplan', BLUE, ['Civilrättslig – avtal', 'AB 04/ABT 06 kap 2 §2', 'Entreprenören ansvarar', 'Lämnas till beställaren'])}
+  ${card(480, 74, 210, 214, 'Egenkontroll', GREEN, ['Del av kvalitetsplanen', 'Utförd kontroll', 'Entreprenören utför', 'Del av dokumentationen'])}
+  ${note('Myndighetskrav (kommun) och avtalskrav (beställare) är två skilda sfärer.', INK)}
+`);
+
 const DIAGRAMS = {
+  'kvalitetsplan': kvalitetsplan,
   'abs-hantverkarformularet': absHantverk,
   'kalkyl-flode': kalkylFlode,
   'faktura-rotavdrag': fakturaRotavdrag,

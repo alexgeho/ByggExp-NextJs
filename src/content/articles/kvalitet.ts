@@ -1691,7 +1691,99 @@ const ENKELT_TIDRAPPORTERINGSSYSTEM: BlogPost = {
   updatedAt: '2026-09-07T13:00:00.000Z',
 };
 
+const A_KVALITETSPLAN_BYGG_HTML = `
+<p>En kvalitetsplan i bygg är det dokument som beskriver hur du säkrar att entreprenaden uppfyller det som avtalats – vilka kontroller som ska göras, av vem, mot vilka krav och hur avvikelser hanteras. För en entreprenad mot företag är den sällan frivillig: den följer direkt av standardavtalet. Ändå förväxlas kvalitetsplanen ofta med kommunens kontrollplan, eller kopieras som en generisk mall som aldrig anpassas till projektet. Här går vi igenom vad kravet faktiskt innebär, vad planen ska innehålla och hur den skiljer sig från kontrollplan enligt PBL och från egenkontrollen.</p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/kvalitetsplan.webp" alt="Diagram: kontrollplan enligt PBL, kvalitetsplan enligt AB 04/ABT 06 och egenkontroll – tre skilda kontrollsystem" width="720" height="380" loading="lazy"><figcaption>Kontrollplan (PBL), kvalitetsplan (avtal) och egenkontroll är tre olika saker – myndighetskrav och avtalskrav hör inte ihop.</figcaption></figure>
+
+<p>Kontrollerna som planen pekar ut utförs som egenkontroller. Behöver du en struktur att bygga dem på, använd <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall →</a> som utgångspunkt.</p>
+
+<h2>Vad är en kvalitetsplan?</h2>
+<p>En kvalitetsplan är ett projektspecifikt styrdokument som beskriver hur entreprenören ska säkra kvaliteten i ett bestämt uppdrag. Den fångar kvalitetsmål, ansvar och organisation, vilka kontroller som ska göras, hur avvikelser hanteras och hur allt dokumenteras fram till överlämning.</p>
+<p>Viktigt att förstå: kvalitetsplanen är inte hela ditt kvalitetsledningssystem i miniatyr. Ledningssystemet – ofta byggt på ISO 9001 – är företagets ramverk med generella rutiner och mallar. Kvalitetsplanen är den projektanpassade tillämpningen av det ramverket. Har du ett fungerande företagssystem blir projektplanen mest ett urval och en anpassning, inte ett dokument skrivet från noll.</p>
+<p>Syftet är spårbarhet. En genomförd och dokumenterad kvalitetsplan är ditt bevis på att det som avtalats faktiskt levererats – vilket blir avgörande om beställaren ifrågasätter utförandet i efterhand.</p>
+
+<h2>Krävs en kvalitetsplan? Vad AB 04 och ABT 06 säger</h2>
+<p>För en entreprenad där beställaren är ett företag är kvalitetsplanen ett avtalskrav. Både AB 04 (utförandeentreprenad) och ABT 06 (totalentreprenad) föreskriver i <strong>kapitel 2 § 2</strong> att entreprenören ska upprätta en kvalitetsplan och en miljöplan för entreprenaden, och däri arbeta in de kvalitets- och miljöåtgärder som beställaren angett i förfrågningsunderlaget. Planerna ska överlämnas till beställaren för granskning innan arbetet påbörjas, och entreprenören är sedan skyldig att under entreprenadtiden både utföra och dokumentera åtagandena enligt planen.</p>
+<p>Kravets skärpa styrs av kontraktshandlingarna. AB och ABT sätter ramen; hur omfattande planen ska vara preciseras i de administrativa föreskrifterna (AF-delen). Där används <strong>AMA AF 21</strong> (som ersatte AMA AF 12) som referens. Entreprenörens kvalitets- och miljöplan behandlas under koderna <strong>AFC.224</strong> (utförandeentreprenad) respektive <strong>AFD.224</strong> (totalentreprenad), under paraplyavsnittet AFC.22/AFD.22 för kvalitets- och miljöarbete. Är beställarens krav tunt formulerat i AF-delen blir också planen tunn – då är det du som entreprenör som tjänar på att ändå göra den användbar.</p>
+<p>Ingen lag kräver ISO 9001, men i offentlig upphandling begär beställaren ofta ett certifierat eller likvärdigt kvalitetsledningssystem. Kedjan att hålla isär är: <strong>ledningssystem (ISO 9001) → kvalitetsplan (projektet) → egenkontroller (utförandet)</strong>.</p>
+
+<h2>Kvalitetsplan, kontrollplan (PBL) och egenkontroll – tre olika saker</h2>
+<p>Den vanligaste och dyraste missuppfattningen är att blanda ihop de tre systemen. De hör till olika rättsliga sfärer och lämnas till olika mottagare.</p>
+<div class="article-table"><table>
+<thead><tr><th>Dokument</th><th>Sfär</th><th>Krav enligt</th><th>Ansvarig</th><th>Lämnas till</th></tr></thead>
+<tbody>
+<tr><td><strong>Kontrollplan</strong></td><td>Offentligrättslig</td><td>PBL 10 kap 6 §</td><td>Byggherren</td><td>Byggnadsnämnden</td></tr>
+<tr><td><strong>Kvalitetsplan</strong></td><td>Civilrättslig (avtal)</td><td>AB 04/ABT 06 kap 2 §2</td><td>Entreprenören</td><td>Beställaren</td></tr>
+<tr><td><strong>Egenkontroll</strong></td><td>Civilrättslig</td><td>Kvalitetsplanen</td><td>Entreprenören</td><td>Beställaren</td></tr>
+</tbody></table></div>
+<p>Kontrollplanen enligt PBL är ett myndighetskrav. Den ska enligt PBL 10 kap 6 § ange vilka kontroller som ska göras och mot vilka krav, vem som utför dem, vilka anmälningar som ska göras till byggnadsnämnden och vilka arbetsplatsbesök nämnden bör göra. Den fastställs av nämnden och är underlag för start- och slutbesked. Den är normalt mindre omfattande än din samlade kvalitetssäkring. Läs mer i vår genomgång av <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler och kontrollplanen</a>.</p>
+<p>Kvalitetsplanen är däremot civilrättslig – den lever i avtalet mellan dig och beställaren, inte gentemot kommunen. Att lämna sin kvalitetsplan till byggnadsnämnden, eller tro att kommunens kontrollplan räcker som kvalitetssäkring mot beställaren, är att blanda ihop två helt skilda krav.</p>
+<p>Egenkontrollen är i sin tur en del av kvalitetsplanen: den praktiska kontroll du utför under arbetet, mot ritning, AMA och beställarkrav. Kvalitetsplanen säger vad som ska kontrolleras och hur; egenkontrollen är kontrollen genomförd och dokumenterad. Se <a href="/sv/blog/egenkontroll-entreprenad">egenkontroll i entreprenad</a> för hur den delen fungerar i praktiken.</p>
+
+<h2>Vad ska kvalitetsplanen innehålla?</h2>
+<p>Använd den här strukturen som mall och anpassa varje punkt till projektet – en plan där mål, toleranser och kontrollpunkter inte passar just detta bygge är bara pappersarbete:</p>
+<ul>
+<li><strong>Projekt- och uppdragsinfo</strong> – parter, entreprenadform (AB 04 eller ABT 06), omfattning.</li>
+<li><strong>Kvalitetsmål och acceptanskriterier</strong> – konkreta toleranser (mått, planhet, lod, fuktkvot) med hänvisning till gällande normer och beställarens krav.</li>
+<li><strong>Organisation och ansvar</strong> – utpekad kvalitetsansvarig och platschef med namn; koppling till BAS-U/BAS-P för arbetsmiljödelen.</li>
+<li><strong>Kontrollprogram (egenkontroller)</strong> – vilka moment som kontrolleras, av vem, hur, hur ofta och mot vilket krav.</li>
+<li><strong>Mottagningskontroll</strong> – kontroll av inköpt material och leveranser mot beställning.</li>
+<li><strong>Avvikelsehantering</strong> – hur avvikelser rapporteras, riskbedöms, åtgärdas, eskaleras till beställaren och dokumenteras.</li>
+<li><strong>Dokumentstyrning</strong> – hur ritningsrevisioner styrs så att arbetet görs mot senaste version.</li>
+<li><strong>Uppföljning</strong> – interna kvalitetsronder och revisioner under projektet.</li>
+<li><strong>Slutdokumentation och överlämning</strong> – relationshandlingar, drift- och underhållsinstruktioner, slutbesiktning och garantitider (normalt 5 år på arbetet och 2 år på material enligt AB/ABT).</li>
+</ul>
+<p>Två av punkterna har egna guider värda att läsa: <a href="/sv/blog/avvikelsehantering-bygg-mall">avvikelsehantering med mall</a> och <a href="/sv/blog/dou-parm-drift-underhall-bygg">DoU-pärmen vid överlämning</a>.</p>
+
+<h2>Vad du återanvänder och vad du anpassar per projekt</h2>
+<p>Det mesta i en kvalitetsplan är sig likt från projekt till projekt: rutinen för egenkontroll och avvikelser, dokumentstyrning, mallar för kontrollprogram och ansvarsroller. Det byggs en gång och lever i företagets ledningssystem. Det som måste anpassas varje gång är projektets kvalitetsmål och toleranser, den namngivna organisationen och vilka kontrollpunkter som är kritiska för just detta bygge. Har du grunden på plats blir varje ny plan ett par timmars arbete i stället för en helt ny produkt.</p>
+
+<h2>Nya byggregler 2025–2026 – vad det betyder</h2>
+<p>Boverkets nya byggregler ersätter i stor utsträckning BBR och EKS. De trädde i kraft 1 juli 2025 med en övergångsperiod till 30 juni 2026, då byggherren får välja gamla eller nya regler för ett projekt men inte blanda dem. Från 1 juli 2026 gäller enbart de nya reglerna för nya ärenden.</p>
+<p>De nya reglerna är funktionsbaserade: de anger krav på funktion i stället för detaljerade lösningar, och de allmänna råden tas i stor utsträckning bort. Det påverkar inte AB 04/ABT 06 eller kravet på kvalitetsplan – det är en annan regelsfär. Men det höjer indirekt värdet av en tydlig kvalitetsplan: när schablonlösningarna försvinner måste du själv visa och dokumentera att vald lösning uppfyller föreskriften. En strukturerad verifieringskedja i kvalitetsplanen blir helt enkelt viktigare.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Förväxlar kvalitetsplan med kontrollplan enligt PBL</strong> – och antar att start- och slutbeskedet från nämnden också kvitterar kvalitetsansvaret mot beställaren.</li>
+<li><strong>Generisk mall som aldrig projektanpassas</strong> – mål och kontrollpunkter passar inte det aktuella bygget.</li>
+<li><strong>Egenkontroller fylls i retroaktivt</strong> inför slutbesiktningen i stället för löpande – och tappar då sitt bevisvärde.</li>
+<li><strong>Avvikelsehantering finns bara på pappret</strong> – avvikelser dokumenteras och åtgärdas inte spårbart.</li>
+<li><strong>Ingen utpekad kvalitetsansvarig</strong> med namn, och ingen dokumentstyrning – arbetet görs mot en gammal ritningsrevision.</li>
+<li><strong>Planen överlämnas inte för granskning innan start</strong>, vilket kap 2 § 2 förutsätter.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>Själva kvalitetsplanen är ett avtalsdokument du upprättar mot beställarens förfrågningsunderlag – det skriver inget system åt dig. Men de delar planen refererar till kan du sköta löpande i ByggExp i stället för i en pärm på slutet. I KMA-modulen bygger du egenkontroller från mallar med kategori, punkter och status, så att ej godkända punkter fångas löpande och kopplas till rätt projekt. Byggdagbok och foton ligger i samma projekt, så underlaget till slutdokumentationen växer fram medan bygget pågår. Vi tar inte över kvalitetsansvaret och ersätter inte beställarens krav – vi ser till att kontrollerna och avvikelserna som kvalitetsplanen pekar ut faktiskt blir gjorda, dokumenterade och sökbara när slutbesiktningen börjar.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är en kvalitetsplan i bygg ett lagkrav?</h3>
+<p>Nej, inte enligt lag. Det är ett avtalskrav: AB 04 och ABT 06 kap 2 § 2 kräver att entreprenören upprättar en kvalitets- och miljöplan när dessa standardavtal gäller. Kravets omfattning preciseras i AF-delen enligt AMA AF 21.</p>
+<h3>Vad är skillnaden mellan kvalitetsplan och kontrollplan?</h3>
+<p>Kontrollplanen enligt PBL 10 kap 6 § är ett myndighetskrav som byggherren svarar för och lämnar till byggnadsnämnden. Kvalitetsplanen är ett avtalskrav enligt AB/ABT som entreprenören upprättar och lämnar till beställaren. Två skilda system – de ska inte likställas.</p>
+<h3>Vem ska skriva kvalitetsplanen?</h3>
+<p>Entreprenören. Vid totalentreprenad (ABT 06) svarar du för både projektering och utförande och därmed för en mer omfattande plan; vid utförandeentreprenad (AB 04) utgår du från beställarens handlingar. Den ska överlämnas för beställarens granskning innan arbetet startar.</p>
+<h3>Behöver ett litet byggföretag en kvalitetsplan?</h3>
+<p>Om ni arbetar under AB 04 eller ABT 06 – ja. Storleken på företaget spelar ingen roll; det är entreprenadformen och kontraktshandlingarna som avgör. Med några återanvändbara mallar blir den snabb att ta fram projekt för projekt.</p>
+
+<h2>Kom igång</h2>
+<p>Börja med kontrollprogrammet – det är kärnan i planen. Bygg dina egenkontroller från <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och koppla in en rutin för <a href="/sv/blog/avvikelsehantering-bygg-mall">avvikelser</a>. Vill du se hur egenkontroller, avvikelser och dokumentation hänger ihop i ett projekt? <a href="/sv/contact">Boka en demo →</a> så visar vi.</p>
+
+<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll – så gör du</a>, <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaden</a>, <a href="/sv/blog/fuktsakerhetsplan-byggaf">Fuktsäkerhetsplan enligt ByggaF</a>.</p>
+`;
+
+const A_KVALITETSPLAN_BYGG: BlogPost = {
+  _id: "code-"+"kvalitetsplan-bygg",
+  title: "Kvalitetsplan i bygg – krav enligt AB 04/ABT 06, innehåll och mall", slug: "kvalitetsplan-bygg", locale: "sv",
+  excerpt: "Vad en kvalitetsplan måste innehålla, varför AB 04/ABT 06 kap 2 § 2 kräver den – och hur den skiljer sig från kontrollplan enligt PBL och egenkontroll.", tag: "Kvalitet",
+  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_KVALITETSPLAN_BYGG_HTML,
+  seoTitle: "Kvalitetsplan bygg – krav, innehåll & mall | ByggExp", seoDescription: "Kvalitetsplan i bygg: krav enligt AB 04/ABT 06 kap 2 § 2, vad den ska innehålla, skillnad mot kontrollplan (PBL) och egenkontroll. Checklista att utgå från.",
+  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-09-10T09:00:00.000Z", createdAt: "2026-09-10T09:00:00.000Z", updatedAt: "2026-09-10T09:00:00.000Z",
+};
+
 export const KVALITET_ARTICLES: BlogPost[] = [
+  A_KVALITETSPLAN_BYGG,
   ENKELT_TIDRAPPORTERINGSSYSTEM,
   BYGGDAGBOK,
   EGENKONTROLL,

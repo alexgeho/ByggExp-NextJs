@@ -293,6 +293,7 @@ export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
   'likviditet-byggforetag',
   'anstalla-personal-byggforetag',
   'enskild-firma-eller-aktiebolag-bygg',
+  'kvalitetsplan-bygg',
 ]);
 
 export function isSvOnlyArticle(slug: string): boolean {

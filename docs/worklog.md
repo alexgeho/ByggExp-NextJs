@@ -7,6 +7,24 @@
 
 ## Сессия 2026-09-10
 
+**✅ Search Console API настроен headless + первый разбор GSC (вечер) — START HERE для GSC-трека:**
+- **Инфра (память `gsc-api-setup`):** скрипты в `.gsc/` (gitignored), venv переиспользован из `.googleads/venv` (+`google-api-python-client`).
+  - `near_miss.py [prop] [days]` — Search Analytics: запросы поз. 5–20 + CTR-проблемы → `near_miss.csv`.
+  - `index_status.py [prop] [max]` — URL Inspection API → coverageState по URL из sitemap → `index_status.csv`.
+  - Запуск: `.googleads/venv/bin/python .gsc/near_miss.py sc-domain:byggexp.se 90`.
+  - ⚠️ **Важная путаница с аккаунтами (решено):** GSC byggexp.se = аккаунт **aleksandrgerhard@gmail.com** (НЕ 870717ag, НЕ svbyggmaleri). Создан ОТДЕЛЬНЫЙ Cloud-проект `byggexp` под ним (НЕ `776884778897` от Ads/svbyggmaleri) + свой OAuth-app «ByggExp GSC» (Desktop, External/Testing, aleksandrgerhard=test user, client `966076972558-…`). **Токен ~7 дней** (Testing) → при `invalid_grant`: `python .gsc/gen_gsc_token.py`, логин aleksandrgerhard (нужен его passkey). «Навсегда» = Publish app в Production.
+- **📊 Разбор (отчёт `docs/seo/gsc-near-miss-2026-09-10.md`):**
+  - **Индексация: sv = 95% в индексе** (359/377 Submitted-and-indexed). **Стены НЕТ.** 149 "not-indexed" из Overview = в осн. 9 др. языков (блог пустой). Вывод: **рычаг роста = бэклинки + near-miss on-page, НЕ индексация и не кол-во статей.**
+  - **437 near-miss запросов** (поз. 5–20). Топ-кластеры: **takstolar** (~10 запросов поз.15–19, самый жирный), egenkontroll (часть уже стр.1), B2B försäkring/AB-avtal, product-category (projekthantering/arbetsorder/offertprogram bygg), tidrapportering-варианты.
+  - ⚡ **CTR-проблемы** (уже стр.1, поз≤10, ~0 кликов = плохой тайтл): `våtrumscertifikat` (8.1/151/0), `ackordslön`, `schemaläggningssystem`, `projektuppföljning bygg`, `traktamente byggnads 2026`, `dröjsmålsränta 2026`, `fotodokumentation`, `läktavstånd plåttak/betongpannor`, `uppgiftshantering bygg`.
+- **✅ Страница-инструмент `egenkontroll-mall` (#1 органика + AI-översikt по «egenkontroll bygg mall pdf») — UX для «сохранить/вернуться» (задеплоено `f1cbf7d`):** убрал дубль-заголовок «Fyll i och ladda ner…»; добавил **авто-сохранение черновика в localStorage** + баннер восстановления + «Börja om»; **сводку прогресса** (X punkter · godkända · anmärkningar · kvar); хинт об авто-сейве. Файл `src/components/LeadMagnet/EgenkontrollTool.tsx` (shared, влияет на все egenkontroll-*-mall). tsc+build зелёные.
+- ⏭️ **NEXT STEPS (GSC-трек, по приоритету):**
+  1. ⚡ **CTR-тайтлы** (30 мин, эффект сразу): править seoTitle 10 страниц из CTR-списка выше (найти статьи по slug в `src/content/articles/*.ts`, ключ вперёд + крючок ≤60 симв, НЕ переворачивать объёмный ключ — см. урок в сессии 09-05).
+  2. 🎯 **Takstolar-кластер** (самый большой near-miss): калькулятор/pillar `beräkna takstolar` + перелинковка → вытащить весь кластер поз.15–19 на стр.1. Свериться с сущест. takstolar-статьями (`grep -ri takstol src/content/articles/`), не дублировать.
+  3. 🔵 **4 discovered-not-indexed** (внутр. перелинковка + Request indexing в GSC): `egenkontroll-ventilation-mall`, `egenkontroll-vatrum-mall`, `app-for-byggprojekt`, `projektledning-byggforetag`.
+  4. Периодически: `near_miss.py` заново (данные копятся) → новые поз.8–15 → усиливать on-page. Свежий экспорт от owner больше НЕ нужен — тяну сам через API.
+- 💡 Мета-инсайт: egenkontroll-tool-подход (localStorage-персист + прогресс = «сохраняемый» инструмент) масштабировать на др. verktyg-инструменты (tidrapport-mall, byggdagbok-mall и т.д.) для поведенческого SEO.
+
 **✅ 3 новые SEO-статьи из KP+GSC gap-анализа (задеплоены, sv-only):** прогнал Keyword Planner (SE, топ-10 сидов) + сверил с `docs/seo/gsc-near-miss.md`, вычел 296 существующих slug'ов → реальные пробелы. Важно: **bemanning/schemaläggning/avvikelsehantering УЖЕ построены** (не дублировал; `bemanningsplanering` поз.53 в GSC = бэклинки/авторитет, не отсутствие страницы). Построено (каждая: глубокая фактура с §-ссылками через веб-агента → 2 редакторских агента язык+факты → брендовая диаграмма → tsc+build):
   - `kvalitetsplan-bygg` (kvalitet.ts) — krav AB04/ABT06 kap 2 §2, AMA AF 21 AFC/AFD.224, ISO 9001; ключевой угол = разделение **kontrollplan(PBL) ≠ kvalitetsplan ≠ egenkontroll**. Диаграмма `kvalitetsplan`.
   - `e-signering-avtal` (juridik.ts) — avtalslagen 1915:218 formfrihet, eIDAS 910/2014 art.25, **BankID=AdES**, формкрав-исключения (JB4:1/ÄB10:1/ÄktB7:3), ÄTA-skriftlighet, bokföringslag 7 år. Диаграмма `e-signering-avtal` (3 eIDAS-уровня).

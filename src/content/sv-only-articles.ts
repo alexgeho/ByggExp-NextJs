@@ -298,6 +298,7 @@ export const SV_ONLY_ARTICLE_SLUGS = new Set<string>([
   'offert-vvs-elektriker-rormokare',
   'anbud-bygg',
   'gron-teknik-avdrag',
+  'byggfelsforsakring',
 ]);
 
 export function isSvOnlyArticle(slug: string): boolean {

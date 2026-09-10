@@ -8315,7 +8315,77 @@ const A_GRON_TEKNIK_AVDRAG: BlogPost = {
   publishedAt: "2026-09-10T13:00:00.000Z", createdAt: "2026-09-10T13:00:00.000Z", updatedAt: "2026-09-10T13:00:00.000Z",
 };
 
+const A_BYGGFELSFORSAKRING_HTML = `
+<p>Söker du efter byggfelsförsäkring inför ett husbygge kommer du att bli förvirrad – och det med rätta. Den obligatoriska byggfelsförsäkringen finns inte längre. Kravet avskaffades 2014 och ersattes av något annat. Samtidigt säljer försäkringsbolag fortfarande produkter med snarlika namn, och de blandas lätt ihop med helt andra försäkringar. Här reder vi ut vad som gäller idag: vad som är lagkrav, vad som är frivilligt och vad som skyddar dig som beställare eller entreprenör.</p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/byggfelsforsakring.webp" alt="Diagram: färdigställandeskydd (lagkrav), nybyggnadsförsäkring (frivillig) och dolda fel-försäkring (säljarens) – tre olika skydd" width="720" height="380" loading="lazy"><figcaption>Färdigställandeskydd är lagkravet – nybyggnads- och dolda fel-försäkring är frivilliga och förväxlas ofta.</figcaption></figure>
+
+<h2>Är byggfelsförsäkring ett krav idag?</h2>
+<p>Nej. Den obligatoriska byggfelsförsäkringen avskaffades den 1 juni 2014, då lagen om byggfelsförsäkring (1993:320) upphävdes. Samma dag trädde lagen om färdigställandeskydd (2014:227) i kraft och tog över. Reglerna om färdigställandeskydd flyttades i stort sett oförändrade till den nya lagen.</p>
+<p>Slutsatsen är enkel: <strong>byggfelsförsäkring är inget lagkrav längre.</strong> Det som är obligatoriskt idag – för en konsument som låter bygga småhus – är <strong>färdigställandeskydd</strong>.</p>
+
+<h2>Färdigställandeskydd – det som faktiskt krävs</h2>
+<p>Färdigställandeskydd är antingen en försäkring eller en bankgaranti som täcker kostnaden för att <strong>färdigställa bygget och avhjälpa fel</strong> om entreprenören till exempel går i konkurs eller inte fullföljer sitt åtagande. Det krävs när en konsument anlitar en näringsidkare för att bygga ett en- eller tvåbostadshus: alltid vid nybyggnad, och vid tillbyggnad efter en behovsprövning av byggnadsnämnden.</p>
+<p>Skyddet ska finnas på plats innan bygget startar – det är en förutsättning för <strong>startbesked</strong>. Ansvaret för att det finns ligger på byggherren, alltså konsumenten, även om det i praktiken ofta ordnas via entreprenörens bankgaranti eller en försäkring. Vi går igenom detaljerna i en egen guide om <a href="/sv/blog/fardigstallandeskydd-smahus">färdigställandeskydd för småhus</a>.</p>
+<p>Skillnaden mot den gamla byggfelsförsäkringen är att färdigställandeskyddet främst handlar om att få huset klart och täcka entreprenörens kontraktsbrott – medan byggfelsförsäkringen var en försäkring mot byggfel som dyker upp långt senare.</p>
+
+<h2>Frivilliga försäkringar som säljs idag</h2>
+<p>Eftersom kravet är borta säljs skyddet mot byggfel numera frivilligt – men var uppmärksam på namnen:</p>
+<ul>
+<li><strong>Nybyggnadsförsäkring</strong> – efterföljaren till den gamla byggfelsförsäkringen, ofta under nytt namn. Den täcker byggrelaterade fel och skador som visar sig efter inflyttning, vanligen i 10 år från godkänd slutbesiktning. Argumentet är att byggfel ofta dyker upp flera år in och då inte täcks av vanlig villa- eller hemförsäkring.</li>
+<li><strong>Dolda fel-försäkring</strong> – en helt annan sak: det är <strong>säljarens</strong> försäkring. En privatperson som säljer sin villa ansvarar för dolda fel i 10 år enligt jordabalken, och den här försäkringen skyddar säljaren mot sådana krav. Den har inget med ett husbygge att göra.</li>
+</ul>
+<p>Marknaden har krympt sedan kravet togs bort. I praktiken erbjuds byggfels- och färdigställandeförsäkring till privatpersoner idag framför allt av Gar-Bo. Söker du efter "byggfelsförsäkring Folksam" eller liknande är utbudet alltså betydligt smalare än när försäkringen var obligatorisk.</p>
+
+<h2>Vad skyddar dig som beställare idag?</h2>
+<p>I stället för en enda obligatorisk försäkring finns ett skydd i flera lager:</p>
+<ul>
+<li><strong>Färdigställandeskydd</strong> – lagkravet ovan, mot att entreprenören inte fullföljer.</li>
+<li><strong>Entreprenörens felansvar</strong> – vid konsumententreprenad på fast egendom gäller konsumenttjänstlagen med en reklamationsrätt på upp till 10 år från godkänd slutbesiktning. I företagsentreprenad (<a href="/sv/blog/ab-04-och-abt-06">AB 04/ABT 06</a>) är garantitiden normalt 5 år och ansvarstiden 10 år.</li>
+<li><strong>Besiktning</strong> – slutbesiktning och <a href="/sv/blog/garantibesiktning-2-ar-entreprenad">garantibesiktning</a> är mekanismen som fastställer felen.</li>
+<li><strong>Frivillig nybyggnadsförsäkring</strong> – ett extra skydd mot dolda byggfel på lång sikt.</li>
+</ul>
+
+<h2>Blanda inte ihop försäkringarna</h2>
+<p>Fyra begrepp förväxlas ständigt. Håll isär dem:</p>
+<ul>
+<li><strong>Färdigställandeskydd</strong> – lagkrav, entreprenörens konkurs/kontraktsbrott, före startbesked.</li>
+<li><strong>Byggfels-/nybyggnadsförsäkring</strong> – frivillig, byggfel som visar sig efter inflyttning.</li>
+<li><strong>Dolda fel-försäkring</strong> – säljarens skydd vid en husförsäljning, inte vid ett bygge.</li>
+<li><strong><a href="/sv/blog/entreprenadforsakring-allrisk-vad-tacker">Entreprenadförsäkring (allrisk)</a></strong> – entreprenörens skydd för arbetet, material och maskiner <strong>under bygget</strong>, oftast krav enligt AB 04/ABT 06. Skyddar entreprenören, inte beställaren mot byggfel.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>ByggExp säljer inga försäkringar – men vi hjälper dig hålla ordning på det som avgör om ett felansvar går att driva. Egenkontroller, foton, dagbok och besiktningsunderlag samlas per projekt, så att du har dokumentationen som styrker vad som gjorts när en reklamation eller ett garantiärende dyker upp. Det är den spårbarheten, inte försäkringens namn, som brukar avgöra vem som får rätt.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Måste man ha byggfelsförsäkring?</h3>
+<p>Nej. Kravet avskaffades den 1 juni 2014. Det som är obligatoriskt idag för konsumenters småhusbyggen är färdigställandeskydd enligt lagen (2014:227).</p>
+<h3>Vad är skillnaden mellan byggfelsförsäkring och färdigställandeskydd?</h3>
+<p>Färdigställandeskydd är ett lagkrav som främst täcker att bygget blir klart om entreprenören inte fullföljer. Byggfelsförsäkring (idag frivillig nybyggnadsförsäkring) täcker byggfel som visar sig efter inflyttning, vanligen i 10 år.</p>
+<h3>Är dolda fel-försäkring samma sak?</h3>
+<p>Nej. Dolda fel-försäkring är säljarens skydd vid en villaförsäljning, kopplat till jordabalkens tioåriga ansvar. Den gäller inte ett husbygge.</p>
+<h3>Vem ordnar färdigställandeskyddet?</h3>
+<p>Ansvaret ligger på byggherren, alltså konsumenten, men det ordnas ofta i praktiken via entreprenörens bankgaranti eller en försäkring. Det måste finnas före startbesked.</p>
+
+<h2>Kom igång</h2>
+<p>Bygger du åt konsument? Se till att färdigställandeskyddet är på plats före start, och läs vår guide om <a href="/sv/blog/fardigstallandeskydd-smahus">färdigställandeskydd för småhus</a>. Vill du hålla besiktnings- och egenkontrollunderlaget samlat per projekt? <a href="/sv/contact">Boka en demo →</a></p>
+
+<p>Relaterat: <a href="/sv/blog/fardigstallandeskydd-smahus">Färdigställandeskydd för småhus</a>, <a href="/sv/blog/entreprenadforsakring-allrisk-vad-tacker">Entreprenadförsäkring – vad täcker allrisk?</a>, <a href="/sv/blog/vilka-forsakringar-behover-byggforetag">Vilka försäkringar behöver byggföretaget?</a></p>
+`;
+
+const A_BYGGFELSFORSAKRING: BlogPost = {
+  _id: "code-"+"byggfelsforsakring",
+  title: "Byggfelsförsäkring – är det ett krav idag, och vad gäller i stället?", slug: "byggfelsforsakring", locale: "sv",
+  excerpt: "Den obligatoriska byggfelsförsäkringen avskaffades 2014. Så ser skyddet ut idag: färdigställandeskydd som lagkrav, frivillig nybyggnadsförsäkring och vad som är vad.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_BYGGFELSFORSAKRING_HTML,
+  seoTitle: "Byggfelsförsäkring – krav eller avskaffat? | ByggExp", seoDescription: "Byggfelsförsäkring är inget lagkrav längre – avskaffades 2014. Så gäller färdigställandeskydd, frivillig nybyggnadsförsäkring och skillnaden mot dolda fel-försäkring.",
+  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-09-10T14:00:00.000Z", createdAt: "2026-09-10T14:00:00.000Z", updatedAt: "2026-09-10T14:00:00.000Z",
+};
+
 export const EKONOMI_ARTICLES: BlogPost[] = [
+  A_BYGGFELSFORSAKRING,
   A_GRON_TEKNIK_AVDRAG,
   A_ANBUD_BYGG,
   A_OFFERT_VVS_EL_RORMOKARE,

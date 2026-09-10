@@ -595,12 +595,22 @@ const gronTeknik = frame(`
   ${note('Eget tak 50 000 kr/person/år – separat från ROT/RUT. Dras av på fakturan.', INK)}
 `);
 
+// Byggfelsförsäkring – vad gäller idag (färdigställandeskydd / nybyggnads / dolda fel)
+const byggfels = frame(`
+  ${title('Byggfelsförsäkring finns inte kvar – vad gäller idag?')}
+  ${card(30, 74, 210, 214, 'Färdigställandeskydd', BLUE, ['LAGKRAV (2014:227)', 'Klart + kontraktsbrott', 'Krävs för startbesked'])}
+  ${card(255, 74, 210, 214, 'Nybyggnadsförsäkring', GREEN, ['Frivillig (t.ex. Gar-Bo)', 'Byggfel i 10 år', 'Efter slutbesiktning'])}
+  ${card(480, 74, 210, 214, 'Dolda fel-försäkring', AMBER, ['Säljarens skydd', 'Vid husförsäljning', 'Jordabalken 10 år'])}
+  ${note('Obligatorisk byggfelsförsäkring avskaffades 2014. Entreprenadförsäkring = entreprenörens skydd under bygget.', INK)}
+`);
+
 const DIAGRAMS = {
   'kvalitetsplan': kvalitetsplan,
   'e-signering-avtal': eSignatur,
   'offert-vvs-elektriker-rormokare': offertYrke,
   'anbud-bygg': anbudKalkyl,
   'gron-teknik-avdrag': gronTeknik,
+  'byggfelsforsakring': byggfels,
   'abs-hantverkarformularet': absHantverk,
   'kalkyl-flode': kalkylFlode,
   'faktura-rotavdrag': fakturaRotavdrag,

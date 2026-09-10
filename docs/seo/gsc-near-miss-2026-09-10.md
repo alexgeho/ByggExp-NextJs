@@ -3,8 +3,14 @@
 Источник: **Search Console API** (headless, `.gsc/near_miss.py` + `.gsc/index_status.py`, память `gsc-api-setup`).
 Property `sc-domain:byggexp.se`, период 2026-06-10 → 2026-09-08 (90 дней).
 
-## Итог по индексации (GSC Overview)
-- **418 проиндексировано / 149 НЕ проиндексировано** (~26% не в индексе — «стена» молодого домена).
+## Итог по индексации (URL Inspection API, 377 sv-URL)
+- GSC Overview: 418 indexed / 149 not-indexed. НО per-URL аудит по **sv** показал:
+  **359 Submitted and indexed (95%)** · 13 unknown-to-Google · 4 discovered-not-indexed · 1 crawled-not-indexed (om-oss).
+- **Вывод: «стены индексации» для sv НЕТ.** 149 not-indexed из Overview — это в основном 9 других языков
+  (pl/uk/fi/et/lt/lv/en/nb/ru, блог пустой). Новый sv-контент индексируется нормально → рычаг роста = бэклинки + near-miss on-page, НЕ индексация.
+- 13 unknown = сегодняшние новые статьи (ещё не докраулены, в sitemap есть) → само придёт / Request indexing.
+- 4 discovered-not-indexed: `egenkontroll-ventilation-mall`, `egenkontroll-vatrum-mall`, `app-for-byggprojekt`,
+  `projektledning-byggforetag` → внутр. перелинковка + Request indexing.
 - 767 кликов из поиска за период; кривая растёт с ~08.08.2026.
 - Полный per-URL аудит (coverageState) → `.gsc/index_status.csv`.
 

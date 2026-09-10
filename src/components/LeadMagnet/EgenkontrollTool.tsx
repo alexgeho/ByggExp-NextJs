@@ -1,4 +1,4 @@
-import { type FormEvent, useRef, useState } from 'react';
+import { type FormEvent, useEffect, useMemo, useRef, useState } from 'react';
 
 import { API_URL } from '../../config/api';
 import { gaEvent } from '../../lib/analytics';
@@ -67,6 +67,87 @@ export default function EgenkontrollTool({
   const [gateBusy, setGateBusy] = useState(false);
   const [email, setEmail] = useState('');
   const pendingRef = useRef<'pdf' | 'csv' | null>(null);
+
+  // --- Utkast sparas automatiskt i webbläsaren ---------------------------------
+  // Det som gör verktyget värt att komma tillbaka till: du kan börja fylla i en
+  // egenkontroll, stänga fliken och fortsätta senare – allt ligger kvar. Sparas
+  // i localStorage (client-only, därav effekt istället för useState-init för att
+  // undvika SSR-hydration-mismatch). Egen nyckel per mall så el/VVS/… inte krockar.
+  const storageKey = `bx-egenkontroll-draft${defaultPreset ? `-${defaultPreset}` : ''}`;
+  const [restored, setRestored] = useState(false);
+  const hydratedRef = useRef(false);
+
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem(storageKey);
+      if (raw) {
+        const d = JSON.parse(raw) as Partial<{
+          title: string; project: string; responsible: string;
+          date: string; category: string; rows: Row[];
+        }>;
+        const hasContent =
+          !!d.title?.trim() ||
+          !!d.project?.trim() ||
+          !!(d.rows?.some((r) => r.point?.trim() || r.comment?.trim() || r.result !== RESULTS[0]));
+        if (hasContent) {
+          if (d.title !== undefined) setTitle(d.title);
+          if (d.project !== undefined) setProject(d.project);
+          if (d.responsible !== undefined) setResponsible(d.responsible);
+          if (d.date !== undefined) setDate(d.date);
+          if (d.category && CATEGORIES.includes(d.category)) setCategory(d.category);
+          if (d.rows?.length) {
+            setRows(d.rows);
+            setActivePreset(null);
+          }
+          setRestored(true);
+        }
+      }
+    } catch {
+      /* korrupt/otillgänglig storage – strunt i det */
+    }
+    hydratedRef.current = true;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (!hydratedRef.current) return; // spara inte förrän vi läst ev. befintligt utkast
+    try {
+      window.localStorage.setItem(
+        storageKey,
+        JSON.stringify({ title, project, responsible, date, category, rows }),
+      );
+    } catch {
+      /* full/avstängd storage – ej kritiskt */
+    }
+  }, [title, project, responsible, date, category, rows, storageKey]);
+
+  function clearDraft() {
+    try {
+      window.localStorage.removeItem(storageKey);
+    } catch {
+      /* noop */
+    }
+    setTitle(seed?.name ?? '');
+    setProject('');
+    setResponsible('');
+    setDate('');
+    setCategory(seed?.category ?? CATEGORIES[0]);
+    setRows(defaultPreset ? presetRows(defaultPreset) : [emptyRow(), emptyRow(), emptyRow()]);
+    setActivePreset(defaultPreset ?? null);
+    setRestored(false);
+  }
+
+  // Sammanfattning – ger känslan av ett riktigt verktyg och sporrar till att
+  // faktiskt besvara alla punkter. Räknar bara ifyllda kontrollpunkter.
+  const stats = useMemo(() => {
+    const filled = rows.filter((r) => r.point.trim());
+    return {
+      total: filled.length,
+      godkand: filled.filter((r) => r.result === 'Godkänd').length,
+      anmarkning: filled.filter((r) => r.result === 'Anmärkning').length,
+      kvar: filled.filter((r) => r.result === 'Ej besvarad').length,
+    };
+  }, [rows]);
 
   async function generateAi() {
     const moment = aiMoment.trim();
@@ -274,12 +355,34 @@ export default function EgenkontrollTool({
 
   return (
     <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Fyll i och ladda ner din egenkontroll</h2>
-        <p className="lm-tool-sub">
-          Välj en färdig mall så fylls kontrollpunkterna i automatiskt – eller skriv egna. Ladda sedan ner din egenkontroll som PDF eller Excel. Inget konto behövs.
-        </p>
-      </div>
+      {restored ? (
+        <div
+          role="status"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 12,
+            flexWrap: 'wrap',
+            border: '1px solid rgba(22, 163, 74, 0.3)',
+            background: 'rgba(22, 163, 74, 0.08)',
+            borderRadius: 12,
+            padding: '10px 14px',
+            marginBottom: 16,
+          }}
+        >
+          <span style={{ fontSize: 14 }}>
+            ↩︎ Vi återställde ditt sparade utkast – fortsätt där du slutade.
+          </span>
+          <button
+            type="button"
+            className="lm-tool-secondary"
+            style={{ marginLeft: 'auto' }}
+            onClick={clearDraft}
+          >
+            Börja om
+          </button>
+        </div>
+      ) : null}
 
       <div
         className="lm-tool-ai"
@@ -396,6 +499,33 @@ export default function EgenkontrollTool({
           ))}
         </div>
 
+        {stats.total > 0 ? (
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 8,
+              flexWrap: 'wrap',
+              margin: '4px 0 2px',
+              fontSize: 13,
+            }}
+          >
+            <span style={{ fontWeight: 600 }}>
+              {stats.total} {stats.total === 1 ? 'kontrollpunkt' : 'kontrollpunkter'}
+            </span>
+            <span aria-hidden="true" style={{ color: '#9ca3af' }}>·</span>
+            <span style={{ color: '#16a34a' }}>✓ {stats.godkand} godkända</span>
+            {stats.anmarkning > 0 ? (
+              <span style={{ color: '#d97706' }}>⚠ {stats.anmarkning} anmärkning{stats.anmarkning === 1 ? '' : 'ar'}</span>
+            ) : null}
+            {stats.kvar > 0 ? (
+              <span style={{ color: '#6b7280' }}>○ {stats.kvar} kvar att besvara</span>
+            ) : (
+              <span style={{ color: '#16a34a' }}>Alla besvarade 🎉</span>
+            )}
+          </div>
+        ) : null}
+
         <div className="lm-tool-actions">
           <button type="button" className="lm-tool-secondary" onClick={addRow}>
             + Lägg till kontrollpunkt
@@ -407,6 +537,10 @@ export default function EgenkontrollTool({
             {busy ? 'Skapar PDF…' : 'Ladda ner PDF'}
           </button>
         </div>
+
+        <p className="lm-result-fine" style={{ marginTop: 8 }}>
+          💾 Utkastet sparas automatiskt i den här webbläsaren – du kan stänga sidan och fortsätta senare.
+        </p>
       </form>
 
       {gateOpen ? (

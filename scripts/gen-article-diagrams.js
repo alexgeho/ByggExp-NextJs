@@ -562,9 +562,19 @@ const eSignatur = frame(`
   ${note('För hantverkar- och entreprenadavtal räcker enkel eller avancerad – BankID är mer än nog.', INK)}
 `);
 
+// Offert per yrke – gemensamt + VVS + el
+const offertYrke = frame(`
+  ${title('Offert per yrke – vad ska med?')}
+  ${card(30, 74, 210, 214, 'Alla offerter', BLUE, ['Omfattning + avgränsning', 'Prismodell tydlig', 'ROT 30 %, moms 25 %', 'Giltighetstid'])}
+  ${card(255, 74, 210, 214, 'VVS och rörmokare', GREEN, ['Säker Vatten', 'Våtrum: BBV/GVK', 'Ofta försäkringskrav'])}
+  ${card(480, 74, 210, 214, 'Elektriker', AMBER, ['Registrerat elföretag', 'Krav i lag (2016:732)', 'Egenkontrollprogram', '"Kolla elföretaget"'])}
+  ${note('El = lagkrav (registrering). VVS/våtrum = bransch- och försäkringskrav.', INK)}
+`);
+
 const DIAGRAMS = {
   'kvalitetsplan': kvalitetsplan,
   'e-signering-avtal': eSignatur,
+  'offert-vvs-elektriker-rormokare': offertYrke,
   'abs-hantverkarformularet': absHantverk,
   'kalkyl-flode': kalkylFlode,
   'faktura-rotavdrag': fakturaRotavdrag,

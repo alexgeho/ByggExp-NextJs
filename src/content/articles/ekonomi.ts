@@ -8074,7 +8074,76 @@ const R_FAKTURA_MED_ROTAVDRAG: BlogPost = {
   publishedAt: '2026-08-25T10:00:00.000Z', createdAt: '2026-08-25T10:00:00.000Z', updatedAt: '2026-08-25T10:00:00.000Z',
 };
 
+const A_OFFERT_VVS_EL_RORMOKARE_HTML = `
+<p>En offert är ofta första gången kunden bedömer om du är ett proffs. En tydlig, komplett offert vinner jobbet och besparar dig tvister om vad som ingick; en luddig "cirka-summa" på sms gör tvärtom. Det gäller oavsett om du är VVS-montör, elektriker eller rörmokare – men varje yrke har sina egna punkter som måste med. Här går vi igenom vad varje offert ska innehålla, hur du sätter priset rätt enligt konsumenttjänstlagen, och vad som är särskilt viktigt för just VVS- och elarbeten.</p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/offert-vvs-elektriker-rormokare.webp" alt="Diagram: vad en offert ska innehålla – gemensamt för alla, plus specifikt för VVS/rörmokare (Säker Vatten, våtrum) och elektriker (registrering, egenkontroll)" width="720" height="380" loading="lazy"><figcaption>Alla offerter behöver samma grund. Ovanpå det har VVS och el sina egna krav – el är lagreglerat, VVS styrs av branschregler.</figcaption></figure>
+
+<p>Vill du ha en färdig struktur att fylla i? Använd <a href="/sv/verktyg/offert-mall">vår gratis offertmall →</a> och läs den generella guiden om att <a href="/sv/blog/skriva-offert">skriva offert</a>.</p>
+
+<h2>Vad varje offert måste innehålla</h2>
+<p>Grunden är densamma för alla hantverkare. Saknas någon av punkterna öppnar du för missförstånd:</p>
+<ul>
+<li><strong>Parter</strong> – ditt företag med org.nr och F-skatt, samt kundens uppgifter.</li>
+<li><strong>Omfattning och avgränsning</strong> – vad som ingår och vad som inte ingår. Det du inte skriver blir lätt en tvist om ÄTA senare.</li>
+<li><strong>Prismodell</strong> – ange uttryckligen om det är fast pris, löpande räkning (timtaxa + materialpåslag) eller ett ungefärligt pris. Se nästa avsnitt.</li>
+<li><strong>ROT och moms</strong> – om priset är före eller efter ROT-avdrag, med arbetskostnaden särredovisad, och pris inklusive moms mot konsument.</li>
+<li><strong>Giltighetstid</strong> – hur länge offerten gäller, till exempel 30 dagar. Utan det hänger ditt pris kvar hur länge som helst.</li>
+<li><strong>Betalningsvillkor</strong> – betalningsplan eller delfakturering, betalningstid och dröjsmålsränta.</li>
+<li><strong>ÄTA-reservation</strong> – hur ändrings- och tilläggsarbeten prissätts och godkänns, helst skriftligt innan de utförs.</li>
+<li><strong>Garanti och villkor</strong> – vad som gäller vid fel, och gärna hänvisning till standardavtal (Hantverkarformuläret eller ABS 18 mot konsument).</li>
+</ul>
+
+<h2>Fast pris, löpande räkning eller ungefärligt pris?</h2>
+<p>Detta är den vanligaste tvistekällan, och vid konsumentjobb styrs den av konsumenttjänstlagen (1985:716), som är tvingande till konsumentens fördel. Tre nivåer:</p>
+<ul>
+<li><strong>Fast pris</strong> – en bindande summa. Tydligast för kunden, men du bär risken för att jobbet drar ut.</li>
+<li><strong>Löpande räkning</strong> – timtaxa plus material. Ange timpris och gärna ett uppskattat antal timmar.</li>
+<li><strong>Ungefärligt pris</strong> – en prisuppgift. Här gäller en viktig regel: enligt 36 § andra stycket konsumenttjänstlagen får ett ungefärligt pris överskridas med <strong>högst 15 procent</strong>, om ni inte avtalat en annan gräns eller det tillkommit tilläggsarbete. En muntlig "cirka-summa" binder dig alltså till plus 15 procent.</li>
+</ul>
+<p>Har inget pris avtalats alls ska kunden betala skäligt pris (36 § första stycket). Mot konsument ska priset dessutom vara tydligt och inklusive moms enligt prisinformationslagen (2004:347).</p>
+<p><strong>ROT-avdrag 2026:</strong> avdraget är 30 procent av arbetskostnaden (sänkt från 50 procent för arbete utfört från 1 januari 2026), upp till ett årligt takbelopp per person. Det gäller bara arbetskostnaden – inte material, resor eller maskiner – och arbetskostnaden måste särredovisas på fakturan. Skriv i offerten att ROT förutsätter att kunden äger bostaden och har avdragsutrymme kvar, annars faktureras mellanskillnaden. Mer om det i vår guide till <a href="/sv/blog/faktureringsprogram-bygg">ROT-fakturering</a> och <a href="/sv/blog/fast-pris-eller-lopande-rakning">fast pris vs löpande räkning</a>.</p>
+
+<h2>VVS- och rörmokaroffert</h2>
+<p>Rörmokare och VVS-montör är samma yrke – en kund som söker "offert rörmokare" och en som söker "VVS-offert" letar efter samma sak. Utöver grunden ovan bör en VVS-offert specificera material och rör, armatur och porslin, arbetstid, framkörning samt demontering och bortforsling av gammalt gods.</p>
+<p>Det starkaste förtroendeargumentet är auktorisationen. Ett auktoriserat VVS-företag arbetar enligt Branschreglerna Säker Vatteninstallation, vilket minskar risken för vattenskador och legionella. Observera nivån: detta är ett <strong>branschkrav, inte ett lagkrav</strong> – men i praktiken ofta ett <strong>försäkringskrav</strong>. Många villa- och hemförsäkringar kräver nämligen att våtrums- och VVS-arbete utförts fackmässigt enligt gällande branschregler, annars sänks ersättningen vid skada. Skriv därför gärna i offerten att arbetet utförs av auktoriserat VVS-företag enligt Säker Vatten.</p>
+<p>Berör jobbet ett våtrum gäller även tätskiktsreglerna: <a href="/sv/blog/bbv-eller-gvk-vatrum">BBV för kakel och klinker, GVK för våtrumsmatta</a>, med ett våtrumsintyg som dokumentation. Även det är bransch- och försäkringskrav snarare än en specifik paragraf.</p>
+
+<h2>Elektriker: registreringen är ett lagkrav</h2>
+<p>För el är kraven strängare – här handlar det om lag. Elinstallationsarbete åt andra får bara utföras av ett företag som är <strong>registrerat hos Elsäkerhetsverket</strong> enligt elsäkerhetslagen (2016:732). Företaget ska ha minst en elinstallatör för regelefterlevnad och ett egenkontrollprogram – rutiner som säkrar att arbetet utförs av rätt kompetens och kontrolleras. Kunden kan själv kontrollera företaget i Elsäkerhetsverkets e-tjänst "Kolla elföretaget" innan man anlitar det.</p>
+<p>En vanlig fälla är begreppet "behörig elektriker". Det är utfasat sedan elsäkerhetslagen 2016 – det korrekta är registrerat elinstallationsföretag med auktoriserad elinstallatör. En el-offert bör därför nämna att företaget är registrerat hos Elsäkerhetsverket, att arbetet följer egenkontrollprogrammet, samt eventuell för- och färdiganmälan till elnätsägaren för fasta installationer. Det är både ett lagkrav och ett starkt säljargument.</p>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I offertmodulen bygger du offerten med poster, arbetskostnad och material var för sig, lägger på rätt påslag och ROT, och skickar en proffsig PDF till kunden. Godkänd offert kan sedan bli underlag för fakturan, så att du inte skriver om allt en gång till. Yrkesspecifika texter som Säker Vatten-auktorisation eller registrering hos Elsäkerhetsverket lägger du in som standardvillkor och återanvänder. Vi sätter inte priset åt dig och ersätter inte auktorisationen – men vi gör vägen från förfrågan till skickad offert kort.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad ska en VVS-offert innehålla?</h3>
+<p>Utöver parter, omfattning, pris, ROT, moms och giltighetstid bör den specificera material och rör, armatur, arbetstid, framkörning och bortforsling. Nämn gärna att arbetet utförs av auktoriserat VVS-företag enligt Säker Vatten – det är ofta ett försäkringskrav vid vattenskada.</p>
+<h3>Måste en elektriker vara registrerad för att lämna offert?</h3>
+<p>För att utföra elinstallationsarbete åt andra måste företaget vara registrerat hos Elsäkerhetsverket enligt elsäkerhetslagen (2016:732). Det är ett lagkrav, och kunden kan kontrollera det i tjänsten "Kolla elföretaget".</p>
+<h3>Är rörmokare och VVS samma sak?</h3>
+<p>Ja. Rörmokare är en vardaglig benämning på en VVS-montör. Det är samma yrke och samma arbete.</p>
+<h3>Hur mycket får ett ungefärligt pris överskridas?</h3>
+<p>Vid konsumentjobb högst 15 procent enligt 36 § konsumenttjänstlagen, om ni inte avtalat en annan gräns eller det tillkommit tilläggsarbete. Ett fast pris är bindande och får inte överskridas.</p>
+
+<h2>Kom igång</h2>
+<p>Ta fram en offertmall du kan återanvända per yrke, så blir varje ny offert några minuters arbete. Börja med <a href="/sv/verktyg/offert-mall">offertmallen</a> och läs vad du bör titta på i ett <a href="/sv/blog/offertprogram-byggforetag">offertprogram</a>. Vill du se hur offert, ROT och faktura hänger ihop? <a href="/sv/contact">Boka en demo →</a></p>
+
+<p>Relaterat: <a href="/sv/blog/skriva-offert">Skriva offert – steg för steg</a>, <a href="/sv/blog/fast-pris-eller-lopande-rakning">Fast pris eller löpande räkning</a>, <a href="/sv/blog/ata-arbeten">ÄTA-arbeten – ändring, tillägg, avgående</a>.</p>
+`;
+
+const A_OFFERT_VVS_EL_RORMOKARE: BlogPost = {
+  _id: "code-"+"offert-vvs-elektriker-rormokare",
+  title: "Offert för VVS, elektriker och rörmokare – så skriver du en som vinner jobbet", slug: "offert-vvs-elektriker-rormokare", locale: "sv",
+  excerpt: "Vad en offert ska innehålla för VVS, el och rörmokare – prismodell och ROT enligt konsumenttjänstlagen, plus yrkeskraven: Säker Vatten och registrering hos Elsäkerhetsverket.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/offert.webp", contentHtml: A_OFFERT_VVS_EL_RORMOKARE_HTML,
+  seoTitle: "Offert VVS, elektriker & rörmokare – mall | ByggExp", seoDescription: "Så skriver du en offert som VVS, elektriker eller rörmokare: innehåll, pris och ROT enligt konsumenttjänstlagen, Säker Vatten och krav på registrerat elföretag.",
+  seoImageUrl: `${SITE_URL}/landing/features/offert.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-09-10T11:00:00.000Z", createdAt: "2026-09-10T11:00:00.000Z", updatedAt: "2026-09-10T11:00:00.000Z",
+};
+
 export const EKONOMI_ARTICLES: BlogPost[] = [
+  A_OFFERT_VVS_EL_RORMOKARE,
   R_FAKTURA_MED_ROTAVDRAG,
   R_ROT_PENSIONAR,
   R_ROT_BOSTADSRATT,

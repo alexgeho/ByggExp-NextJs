@@ -571,10 +571,26 @@ const offertYrke = frame(`
   ${note('El = lagkrav (registrering). VVS/våtrum = bransch- och försäkringskrav.', INK)}
 `);
 
+// Anbudssumma – så byggs priset (självkostnad → påslag → risk → vinst)
+const anbudKalkyl = frame(`
+  ${title('Anbudssumma – så byggs priset')}
+  ${stepBox(22, 150, 116, 78, 'Självkostnad', 'material m.m.', BLUE)}
+  ${arrow(138, 172, 189)}
+  ${stepBox(172, 150, 116, 78, '+ Omkostnads-', 'pålägg', AMBER)}
+  ${arrow(288, 322, 189)}
+  ${stepBox(322, 150, 116, 78, '+ Risk', '', AMBER)}
+  ${arrow(438, 472, 189)}
+  ${stepBox(472, 150, 116, 78, '+ Vinst', '', GREEN)}
+  ${arrow(588, 610, 189)}
+  ${stepBox(610, 150, 90, 78, 'Anbuds-', 'summa', INK)}
+  ${note('Priset binder dig under giltighetstiden – sätt alltid ett slutdatum (2 § avtalslagen).', INK)}
+`);
+
 const DIAGRAMS = {
   'kvalitetsplan': kvalitetsplan,
   'e-signering-avtal': eSignatur,
   'offert-vvs-elektriker-rormokare': offertYrke,
+  'anbud-bygg': anbudKalkyl,
   'abs-hantverkarformularet': absHantverk,
   'kalkyl-flode': kalkylFlode,
   'faktura-rotavdrag': fakturaRotavdrag,

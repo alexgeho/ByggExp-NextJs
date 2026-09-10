@@ -8142,7 +8142,90 @@ const A_OFFERT_VVS_EL_RORMOKARE: BlogPost = {
   publishedAt: "2026-09-10T11:00:00.000Z", createdAt: "2026-09-10T11:00:00.000Z", updatedAt: "2026-09-10T11:00:00.000Z",
 };
 
+const A_ANBUD_BYGG_HTML = `
+<p>Ett anbud är inte ett prisförslag du enkelt kan ta tillbaka – i svensk rätt binder det dig så fort beställaren har läst det. Räknar du för lågt, glömmer en post eller sätter ingen giltighetstid kan ett vunnet jobb bli en förlustaffär. Här går vi igenom vad som skiljer anbud från offert, hur avtalslagen gör anbudet bindande, vad ett bygganbud ska innehålla och hur du bygger anbudspriset så att marginalen finns kvar när slutfakturan skrivs.</p>
+
+<figure class="article-diagram"><img src="/landing/diagrams/anbud-bygg.webp" alt="Diagram: anbudssumma byggs av självkostnad plus omkostnadspålägg, risk och vinst" width="720" height="380" loading="lazy"><figcaption>Anbudspriset byggs upp från självkostnaden med pålägg för omkostnader, risk och vinst – och binder dig under hela giltighetstiden.</figcaption></figure>
+
+<p>Behöver du en struktur att fylla i? Utgå från <a href="/sv/verktyg/offert-mall">vår gratis offertmall →</a> – samma grund fungerar för ett anbud.</p>
+
+<h2>Anbud, offert eller upphandling – vad är skillnaden?</h2>
+<p>Juridiskt är anbud och offert samma sak. Avtalslagen känner bara begreppet <strong>anbud</strong> – ett bindande erbjudande om att ingå avtal. "Offert" är vardagsordet för samma sak och används oftast mot konsument. Ett dokument du kallar offert binder alltså precis som ett anbud, om det uppfyller kraven på ett erbjudande.</p>
+<p>I byggbranschens B2B-värld lämnar du ett anbud till en beställare eller huvudentreprenör utifrån ett <strong>förfrågningsunderlag</strong>. Är beställaren offentlig gäller i stället <a href="/sv/blog/offentlig-upphandling-bygg-lou">offentlig upphandling enligt LOU</a> – samma ord "anbud", men en helt egen, formaliserad process. Den lämnar vi utanför den här guiden. Skriver du mot privatperson gäller i stället reglerna vi tar upp i <a href="/sv/blog/skriva-offert">guiden om att skriva offert</a>.</p>
+
+<h2>Ett anbud binder dig – det säger avtalslagen</h2>
+<p>Sverige följer löftesprincipen: enligt 1 § avtalslagen (1915:218) är ett anbud bindande för den som lämnat det. Du kan inte fritt ångra dig när anbudet väl har nått och lästs av mottagaren – en återkallelse måste enligt 7 § nå mottagaren senast samtidigt som anbudet. Det här är kärnan: ett skickat anbud är inte ett utkast.</p>
+<p>Hur länge binder det? Anger du ingen tid gäller en <strong>skälig acceptfrist</strong> enligt 3 § – en bedömningsfråga som du inte styr över, ungefär tiden för anbudet att nå fram, rimlig betänketid och svaret tillbaka. Ett muntligt anbud utan angiven tid måste enligt samma paragraf antas omedelbart. Slutsatsen är enkel: <strong>sätt alltid en egen giltighetstid</strong> – "Anbudet gäller till och med [datum]". Enligt 2 § är det den tiden som styr, och efter datumet är du fri. I förfrågningsunderlag kräver beställaren ofta en minsta giltighetstid som ditt anbud måste uppfylla.</p>
+<p>Två regler till är värda att kunna. Ett svar som kommer för sent räknas enligt 4 § som ett <strong>nytt anbud</strong> – då är det motparten som avgör om avtal blir av. Och ett svar som säger ja men ändrar något är enligt 6 § ett <strong>avslag i förening med nytt anbud</strong> (mer om det under förbehåll nedan).</p>
+
+<h2>Vad ska ett bygganbud innehålla?</h2>
+<p>Formen är inte lagstyrd i B2B – förfrågningsunderlagets AF-del brukar bestämma upplägget. Men en komplett anbudshandling har nästan alltid med:</p>
+<ul>
+<li><strong>Parter</strong> – anbudsgivare med org.nr och kontakt, samt beställare.</li>
+<li><strong>Referens till förfrågningsunderlaget</strong> – projekt-/diarienummer och exakt vilka handlingar anbudet bygger på (ritningar, mängdförteckning, AF-del, tekniska beskrivningar) med <strong>revision och datum</strong>. Det låser omfattningen.</li>
+<li><strong>Omfattning</strong> – vad som ingår och vad som inte ingår (entreprenadgräns).</li>
+<li><strong>Pris och prisform</strong> – fast pris, à-priser eller löpande räkning, och hur moms hanteras.</li>
+<li><strong>Giltighetstid</strong> – uttryckligt slutdatum (se ovan).</li>
+<li><strong>Förbehåll</strong> – eventuella avsteg från förfrågningsunderlaget, tydligt angivna (se nedan).</li>
+<li><strong>Avtalsvillkor</strong> – vilket standardavtal som gäller: <a href="/sv/blog/ab-04-och-abt-06">AB 04 för utförandeentreprenad eller ABT 06 för totalentreprenad</a>, med garantitid, försäkring och viten därefter.</li>
+<li><strong>Betalningsvillkor och tidplan</strong> – betalningsplan, à conto, start och färdigställande.</li>
+<li><strong>ÄTA-hantering</strong> – att priset bara omfattar de kontrakterade arbetena och att <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a> kräver skriftlig beställning och regleras separat enligt AB 04/ABT 06 kap. 2.</li>
+<li><strong>Bilagor</strong> – kalkylsammanställning, referensobjekt, F-skattebevis och försäkringsbevis.</li>
+</ul>
+
+<h2>Så bygger du anbudspriset</h2>
+<p>Anbudskalkylen byggs upp från självkostnaden och läggs på i tre steg. Räkna alltid samtliga poster – det är de bortglömda som äter marginalen:</p>
+<ul>
+<li><strong>Självkostnad</strong> – material inklusive spill och frakt, arbete (timmar × personalkostnad med sociala avgifter och OB), underentreprenörer enligt inhämtade <a href="/sv/blog/anlita-underentreprenor">UE-anbud</a>, maskiner samt etablering och arbetsplatsomkostnader (bodar, ställningar, avfall, arbetsledning på plats).</li>
+<li><strong>Omkostnadspålägg</strong> – central administration och arbetsledning som inte hör till objektet, oftast som ett procentuellt pålägg på produktionskostnaden.</li>
+<li><strong>Risk</strong> – ett medvetet riskpålägg för det som inte går att försäkra bort: ansvar för fel, försening och osäkra mängder. Hög risk höjer pålägget – eller hanteras med ett förbehåll i stället.</li>
+<li><strong>Vinst</strong> – marginalen ovanpå.</li>
+</ul>
+<p>Vilka procentsatser som är rätt beror helt på företag, entreprenadform och marknad – det finns ingen universell siffra. Poängen är strukturen: när priset är satt gäller det att <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">hålla marginalen mellan anbud och slutfaktura</a>.</p>
+
+<h2>Förbehåll – hantera dem rätt</h2>
+<p>Ett förbehåll är varje avsteg från förfrågningsunderlaget – ett villkor, en avgränsning eller en alternativ lösning. Här slår 6 § avtalslagen till: ett svar som lägger till, inskränker eller reserverar sig, och därför inte stämmer med förfrågan, räknas som ett avslag i förening med nytt anbud. Anbudet blir "orent".</p>
+<p>Konsekvensen är kännbar. Ett orent anbud går inte att jämföra på lika villkor med de andra och kan förkastas – särskilt i en upphandling, där likabehandling förbjuder att jämföra ett avvikande anbud mot ett som följer förfrågan. Reservationer är ibland nödvändiga för att prissätta en verklig risk ärligt, men varje förbehåll måste vara <strong>uttryckligt, motiverat och prissatt</strong> – och du får räkna med att det kan kosta jobbet. Ett dolt eller vagt förbehåll är det sämsta av allt: antingen ogiltigt eller diskvalificerande.</p>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Räknar för lågt</strong> – glömmer etablering, spill, arbetsledning eller en UE-post, och tar inte höjd för risk och omkostnader.</li>
+<li><strong>Baserar priset på odaterade handlingar</strong> – ingen fastlåst ritningsrevision leder till omfattningstvist.</li>
+<li><strong>Skickar en oren accept av misstag</strong> – "accepterar" en beställning men ändrar villkor (6 §), och har därmed juridiskt tackat nej och lämnat ett nytt anbud när du tror att avtal finns.</li>
+<li><strong>Ingen ÄTA-reservation</strong> – utför tilläggsarbeten utan skriftlig beställning och får svårt att ta betalt.</li>
+</ul>
+
+<h2>Så gör du i ByggExp</h2>
+<p>I offertmodulen bygger du anbudet med poster för arbete, material och UE var för sig, lägger på rätt pålägg och skickar en proffsig PDF. Standardtexter som giltighetstid, ÄTA-hantering och hänvisning till AB 04 eller ABT 06 lägger du in som återanvändbara villkor. Vinner du jobbet blir det godkända anbudet underlag för projektet och fakturorna, så att kalkyl, avtal och uppföljning hänger ihop. Vi räknar inte kalkylen åt dig och sätter inte marginalen – men vi gör vägen från förfrågningsunderlag till skickat anbud kort och spårbar.</p>
+
+<h2>Vanliga frågor</h2>
+<h3>Är ett anbud bindande?</h3>
+<p>Ja. Enligt 1 § avtalslagen binder ett anbud den som lämnat det, så snart mottagaren tagit del av det. Du kan inte fritt ångra dig – en återkallelse måste nå mottagaren senast samtidigt som anbudet (7 §).</p>
+<h3>Hur länge gäller ett anbud?</h3>
+<p>Så länge du anger. Sätt ett slutdatum – "gäller till och med [datum]" – så styr den tiden enligt 2 §. Anger du ingen tid gäller en skälig acceptfrist enligt 3 §, som är en bedömningsfråga du inte kontrollerar.</p>
+<h3>Vad är skillnaden mellan anbud och offert?</h3>
+<p>Juridiskt ingen – avtalslagen känner bara "anbud". "Offert" är vardagsordet, oftast mot konsument. Båda binder på samma sätt om de uppfyller kraven på ett erbjudande.</p>
+<h3>Vad händer om jag reserverar mig mot förfrågan?</h3>
+<p>Ett förbehåll gör anbudet "orent" enligt 6 § och kan leda till att det förkastas, eftersom det inte går att jämföra med de andra på lika villkor. Ange förbehåll uttryckligt och prissätt dem.</p>
+
+<h2>Kom igång</h2>
+<p>Ett räknat och tydligt anbud med satt giltighetstid är skillnaden mellan ett lönsamt jobb och en dyr läxa. Börja med <a href="/sv/verktyg/offert-mall">offertmallen</a> och läs hur du <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">håller marginalen</a> hela vägen till slutfaktura. Vill du se hur anbud, projekt och faktura hänger ihop? <a href="/sv/contact">Boka en demo →</a></p>
+
+<p>Relaterat: <a href="/sv/blog/skriva-offert">Skriva offert – steg för steg</a>, <a href="/sv/blog/offentlig-upphandling-bygg-lou">Offentlig upphandling enligt LOU</a>, <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaden</a>.</p>
+`;
+
+const A_ANBUD_BYGG: BlogPost = {
+  _id: "code-"+"anbud-bygg",
+  title: "Anbud i bygg – så skriver du ett bindande anbud som håller", slug: "anbud-bygg", locale: "sv",
+  excerpt: "Ett anbud binder dig så fort beställaren läst det. Så skiljer det sig från offert, vad avtalslagen säger, vad ett bygganbud ska innehålla och hur du bygger priset.", tag: "Ekonomi",
+  coverImageUrl: "/landing/features/offert.webp", contentHtml: A_ANBUD_BYGG_HTML,
+  seoTitle: "Anbud i bygg – bindande, innehåll & mall | ByggExp", seoDescription: "Anbud i bygg: så binder avtalslagen ditt anbud, giltighetstid, vad det ska innehålla, anbudskalkyl och förbehåll. Skillnaden mot offert och LOU förklarad.",
+  seoImageUrl: `${SITE_URL}/landing/features/offert.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-09-10T12:00:00.000Z", createdAt: "2026-09-10T12:00:00.000Z", updatedAt: "2026-09-10T12:00:00.000Z",
+};
+
 export const EKONOMI_ARTICLES: BlogPost[] = [
+  A_ANBUD_BYGG,
   A_OFFERT_VVS_EL_RORMOKARE,
   R_FAKTURA_MED_ROTAVDRAG,
   R_ROT_PENSIONAR,

@@ -5,6 +5,29 @@
 
 ---
 
+## 🟢 Сессия 2026-09-12 — egenkontroll-инструмент допилен + YouTube-стратегия
+
+### KLART (сделано)
+- **Egenkontroll-инструмент (`src/components/LeadMagnet/EgenkontrollTool.tsx`, общий для всех egenkontroll-*-mall) — серия правок, задеплоено:**
+  - PDF теперь **горизонтальный (landscape)** с рамочной таблицей: `Kontrollpunkt | Resultat | Datum | Kommentar`; новый **столбец Datum**; пустые ячейки (Ej besvarad / Datum / Kommentar) печатаются пустыми = **заполнять от руки**.
+  - Шапка PDF: пустые meta-поля (Titel/Projekt/Ansvarig/Datum) = **линии для заполнения** вместо «—».
+  - Убрано: **AI-блок** «Skapa med AI» + email-gate (скачивание теперь всегда бесплатно), поле **Kategori** (из формы/PDF/Excel), строка **«Skapad med ByggExp»**, все **`Ref: …`** из пресетов (не в Kontrollpunkt, не в Kommentar).
+  - Бейдж страницы `egenkontroll-mall.tsx`: `Gratis mall` → **`Gratis egenkontroll-mall`** (ключ в бейдж).
+- **Футер (`Footer.tsx`/`Footer.scss`):** добавлена **YouTube-иконка** (youtube.com/@byggexp) на всех 10 языках — серая, красная при hover, target _blank + rel noopener.
+- **YouTube growth-стратегия (новый трек):** `docs/marketing/youtube-strategy.md` (полный план + 90-дней) + `docs/marketing/youtube-step1-setup.md` (Шаг 1: setup канала с готовой copy — название, описание, баннер, плейлисты, UTM, закреп-коммент, сценарий трейлера, thumbnail-мал). Ресёрч: шведский bygg-YouTube, B2B SaaS-воронка, construction lead-gen. Инсайт зафиксирован: **позиционировать веб-дашборд как ядро** (шеф работает в нём, app — для стемпинга персонала); демо снимать в дашборде. Память: [[youtube-strategy]].
+
+### 🔜 NÄSTA STEG (продолжить отсюда)
+1. **YouTube Шаг 2 — расписать первые 8 видео** под «no-camera» формат (screen-recording дашборда + AI-голос + субтитры): заголовок + 2 текста thumbnail + сценарные пункты + какие экраны дашборда записать + лид-магнит/ссылка к каждому. Брать из существующих статей + GSC-ключей. → отдельный файл `docs/marketing/youtube-step2-videos.md`.
+2. Owner-решения по YouTube (в `youtube-strategy.md` §12): кто в кадре/озвучка · SV-only или отдельный NO-канал · бюджет на инструменты (TubeBuddy/vidIQ + Descript) · реальная кадентность на 12 недель.
+3. Owner может сам сделать Шаг 1 (setup канала) по `youtube-step1-setup.md` — готовая copy для вставки в YouTube Studio.
+4. (Не связано с YT, из GSC-трека) остаётся приоритет: CTR-тайтлы 10 страниц + takstolar-кластер (см. сессию 2026-09-10 ниже).
+
+### ⚠️ Öppna frågor / väntает
+- Для записи демо-футажа дашборда мне нужен доступ/логин (можно записывать GIF/скриншоты через браузерную автоматизацию) — owner решает, давать ли.
+- YouTube: старые данные-черновики egenkontroll в localStorage у owner'а показывали Ref до фикса — на live чисто после «Börja om» / повторного клика по пресету.
+
+---
+
 ## Сессия 2026-09-10
 
 **✅ Search Console API настроен headless + первый разбор GSC (вечер) — START HERE для GSC-трека:**

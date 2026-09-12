@@ -170,12 +170,7 @@ export default function EgenkontrollTool({
       doc.setFontSize(20);
       doc.text('Egenkontroll', marginX, y);
       doc.setFont('helvetica', 'normal');
-      doc.setFontSize(10);
-      doc.setTextColor(120);
-      y += 16;
-      doc.text('Skapad med ByggExp – byggexp.se', marginX, y);
-      doc.setTextColor(20);
-      y += 24;
+      y += 26;
 
       doc.setFontSize(11);
       const rightColX = marginX + 440;

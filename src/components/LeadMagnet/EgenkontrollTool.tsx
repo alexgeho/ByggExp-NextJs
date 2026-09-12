@@ -21,7 +21,7 @@ const presetRows = (presetId: string): Row[] => {
   const preset = EGENKONTROLL_PRESETS.find((p) => p.id === presetId);
   if (!preset) return [emptyRow(), emptyRow(), emptyRow()];
   return preset.items.map((item) => ({
-    point: item.reference ? `${item.point} (${item.reference})` : item.point,
+    point: item.point,
     result: RESULTS[0],
     comment: '',
   }));
@@ -140,7 +140,7 @@ export default function EgenkontrollTool({
     setTitle(preset.name);
     setRows(
       preset.items.map((item) => ({
-        point: item.reference ? `${item.point} (${item.reference})` : item.point,
+        point: item.point,
         result: RESULTS[0],
         comment: '',
       })),

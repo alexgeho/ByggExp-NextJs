@@ -94,7 +94,7 @@ export default function EgenkontrollMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
-        badge="Gratis mall"
+        badge="Gratis egenkontroll-mall"
         title="Egenkontroll – gratis mall att fylla i online"
         intro="Ladda ner en färdig egenkontroll-mall – eller skapa din egen och ladda ner den. Gratis, som PDF eller Excel, utan konto."
         tool={<EgenkontrollTool />}

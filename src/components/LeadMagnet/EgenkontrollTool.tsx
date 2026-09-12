@@ -11,7 +11,6 @@ import ToolAppCta from './ToolAppCta';
 
 type Row = { point: string; result: string; comment: string };
 
-const CATEGORIES = ['Kvalitet', 'Miljö', 'Arbetsmiljö', 'Övrigt'];
 const RESULTS = ['Ej besvarad', 'Godkänd', 'Anmärkning', 'Ej aktuellt'];
 
 const emptyRow = (): Row => ({ point: '', result: RESULTS[0], comment: '' });
@@ -40,7 +39,6 @@ export default function EgenkontrollTool({
   const [project, setProject] = useState('');
   const [responsible, setResponsible] = useState('');
   const [date, setDate] = useState('');
-  const [category, setCategory] = useState(seed?.category ?? CATEGORIES[0]);
   const [rows, setRows] = useState<Row[]>(
     defaultPreset ? presetRows(defaultPreset) : [emptyRow(), emptyRow(), emptyRow()],
   );
@@ -67,7 +65,7 @@ export default function EgenkontrollTool({
       if (raw) {
         const d = JSON.parse(raw) as Partial<{
           title: string; project: string; responsible: string;
-          date: string; category: string; rows: Row[];
+          date: string; rows: Row[];
         }>;
         const hasContent =
           !!d.title?.trim() ||
@@ -78,7 +76,6 @@ export default function EgenkontrollTool({
           if (d.project !== undefined) setProject(d.project);
           if (d.responsible !== undefined) setResponsible(d.responsible);
           if (d.date !== undefined) setDate(d.date);
-          if (d.category && CATEGORIES.includes(d.category)) setCategory(d.category);
           if (d.rows?.length) {
             setRows(d.rows);
             setActivePreset(null);
@@ -98,12 +95,12 @@ export default function EgenkontrollTool({
     try {
       window.localStorage.setItem(
         storageKey,
-        JSON.stringify({ title, project, responsible, date, category, rows }),
+        JSON.stringify({ title, project, responsible, date, rows }),
       );
     } catch {
       /* full/avstängd storage – ej kritiskt */
     }
-  }, [title, project, responsible, date, category, rows, storageKey]);
+  }, [title, project, responsible, date, rows, storageKey]);
 
   function clearDraft() {
     try {
@@ -115,7 +112,6 @@ export default function EgenkontrollTool({
     setProject('');
     setResponsible('');
     setDate('');
-    setCategory(seed?.category ?? CATEGORIES[0]);
     setRows(defaultPreset ? presetRows(defaultPreset) : [emptyRow(), emptyRow(), emptyRow()]);
     setActivePreset(defaultPreset ?? null);
     setRestored(false);
@@ -142,7 +138,6 @@ export default function EgenkontrollTool({
     if (!preset) return;
     setActivePreset(presetId);
     setTitle(preset.name);
-    setCategory(preset.category);
     setRows(
       preset.items.map((item) => ({
         point: item.point,
@@ -183,14 +178,25 @@ export default function EgenkontrollTool({
       y += 24;
 
       doc.setFontSize(11);
-      doc.text(`Titel: ${title.trim() || '—'}`, marginX, y);
-      doc.text(`Kategori: ${category}`, marginX + 440, y);
-      y += 18;
-      doc.text(`Projekt: ${project.trim() || '—'}`, marginX, y);
-      doc.text(`Ansvarig: ${responsible.trim() || '—'}`, marginX + 440, y);
-      y += 18;
-      doc.text(`Datum: ${date || '—'}`, marginX, y);
+      const rightColX = marginX + 440;
+      // Meta-fält: skriv värdet om det finns, annars en linje att fylla i för hand.
+      const metaLine = (label: string, value: string, x: number, lineEnd: number) => {
+        const text = `${label}: `;
+        doc.text(text, x, y);
+        const startX = x + doc.getTextWidth(text);
+        if (value.trim()) {
+          doc.text(value.trim(), startX, y);
+        } else {
+          doc.setDrawColor(160);
+          doc.line(startX, y + 2, lineEnd, y + 2);
+        }
+      };
+      metaLine('Titel', title, marginX, rightColX - 30);
+      metaLine('Ansvarig', responsible, rightColX, tableRight);
       y += 22;
+      metaLine('Projekt', project, marginX, rightColX - 30);
+      metaLine('Datum', date, rightColX, tableRight);
+      y += 26;
 
       // Table columns. Empty Resultat/Datum/Kommentar cells are deliberately
       // left blank so the sheet can be printed and filled in by hand.
@@ -275,7 +281,6 @@ export default function EgenkontrollTool({
   function downloadCsv() {
     const out: (string | number)[][] = [
       ['Egenkontroll', title.trim() || ''],
-      ['Kategori', category],
       ['Projekt', project.trim() || ''],
       ['Ansvarig', responsible.trim() || ''],
       ['Datum', date || ''],
@@ -356,14 +361,6 @@ export default function EgenkontrollTool({
           <label className="lm-tool-field">
             <span>Titel</span>
             <input value={title} onChange={(e) => setTitle(e.currentTarget.value)} placeholder="T.ex. Egenkontroll el" />
-          </label>
-          <label className="lm-tool-field">
-            <span>Kategori</span>
-            <select value={category} onChange={(e) => setCategory(e.currentTarget.value)}>
-              {CATEGORIES.map((c) => (
-                <option key={c} value={c}>{c}</option>
-              ))}
-            </select>
           </label>
           <label className="lm-tool-field">
             <span>Projekt</span>

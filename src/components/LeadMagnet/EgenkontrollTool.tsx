@@ -1,7 +1,5 @@
-import { type FormEvent, useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
-import { API_URL } from '../../config/api';
-import { gaEvent } from '../../lib/analytics';
 import { EGENKONTROLL_PRESETS } from './egenkontrollPresets';
 import ToolAppCta from './ToolAppCta';
 
@@ -53,20 +51,6 @@ export default function EgenkontrollTool({
   // into view so it's obvious the template was applied.
   const [activePreset, setActivePreset] = useState<string | null>(defaultPreset ?? null);
   const rowsRef = useRef<HTMLDivElement>(null);
-
-  // AI generator + email gate. Generation is free; only downloading an
-  // AI-generated result asks for an email (= a warm lead). The plain manual /
-  // preset template stays free so we don't hurt the existing lead magnet.
-  const [aiMoment, setAiMoment] = useState('');
-  const [aiMaterial, setAiMaterial] = useState('');
-  const [aiBusy, setAiBusy] = useState(false);
-  const [aiError, setAiError] = useState('');
-  const [aiUsed, setAiUsed] = useState(false);
-  const [unlocked, setUnlocked] = useState(false);
-  const [gateOpen, setGateOpen] = useState(false);
-  const [gateBusy, setGateBusy] = useState(false);
-  const [email, setEmail] = useState('');
-  const pendingRef = useRef<'pdf' | 'csv' | null>(null);
 
   // --- Utkast sparas automatiskt i webbläsaren ---------------------------------
   // Det som gör verktyget värt att komma tillbaka till: du kan börja fylla i en
@@ -149,92 +133,6 @@ export default function EgenkontrollTool({
     };
   }, [rows]);
 
-  async function generateAi() {
-    const moment = aiMoment.trim();
-    if (!moment || aiBusy) return;
-    setAiBusy(true);
-    setAiError('');
-    try {
-      const res = await fetch('/api/egenkontroll-generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ moment, material: aiMaterial.trim() }),
-      });
-      if (!res.ok) {
-        const j = (await res.json().catch(() => ({}))) as { error?: string };
-        if (res.status === 503) {
-          // Key not configured yet — show a friendly "coming soon" instead of a
-          // scary error, and steer the user to the ready-made templates below.
-          setAiError('AI-funktionen aktiveras inom kort – välj en färdig mall nedan så länge.');
-          return;
-        }
-        throw new Error(j.error || 'Kunde inte generera.');
-      }
-      const data = (await res.json()) as {
-        title: string;
-        category: string;
-        rows: { point: string; krav: string; method: string }[];
-      };
-      setActivePreset(null);
-      setTitle(data.title);
-      if (CATEGORIES.includes(data.category)) setCategory(data.category);
-      setRows(
-        data.rows.map((r) => ({
-          point: r.point,
-          result: RESULTS[0],
-          comment: [r.krav ? `Krav: ${r.krav}` : '', r.method ? `Metod: ${r.method}` : '']
-            .filter(Boolean)
-            .join(' · '),
-        })),
-      );
-      setAiUsed(true);
-      gaEvent('egenkontroll_ai_generate', { moment: moment.slice(0, 60) });
-      window.setTimeout(() => {
-        rowsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 60);
-    } catch (e) {
-      setAiError(e instanceof Error ? e.message : 'Något gick fel.');
-    } finally {
-      setAiBusy(false);
-    }
-  }
-
-  // Returns true if the download may proceed; otherwise opens the email gate.
-  function ensureUnlocked(kind: 'pdf' | 'csv'): boolean {
-    if (!aiUsed || unlocked) return true;
-    pendingRef.current = kind;
-    setGateOpen(true);
-    return false;
-  }
-
-  async function submitGate(event: FormEvent) {
-    event.preventDefault();
-    const mail = email.trim();
-    if (!mail.includes('@') || gateBusy) return;
-    setGateBusy(true);
-    try {
-      // Best-effort lead to sales; don't block the download on it.
-      void fetch(`${API_URL}/mail/demo-request`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          'f-email': mail,
-          'f-source': 'verktyg:egenkontroll-ai',
-          'f-message': `AI-egenkontroll: ${aiMoment.trim()}`,
-        }),
-      }).catch(() => {});
-      gaEvent('egenkontroll_ai_unlock', {});
-      setUnlocked(true);
-      setGateOpen(false);
-      const kind = pendingRef.current;
-      pendingRef.current = null;
-      if (kind === 'csv') downloadCsv();
-      else void downloadPdf();
-    } finally {
-      setGateBusy(false);
-    }
-  }
-
   const setRow = (index: number, patch: Partial<Row>) =>
     setRows((prev) => prev.map((row, i) => (i === index ? { ...row, ...patch } : row)));
   const addRow = () => setRows((prev) => [...prev, emptyRow()]);
@@ -261,15 +159,17 @@ export default function EgenkontrollTool({
     setRows((prev) => (prev.length > 1 ? prev.filter((_, i) => i !== index) : prev));
 
   async function downloadPdf() {
-    if (!ensureUnlocked('pdf')) return;
     setBusy(true);
     try {
       const { jsPDF } = await import('jspdf');
-      const doc = new jsPDF({ unit: 'pt', format: 'a4' });
-      const marginX = 48;
+      // Landscape (horizontal) so the table has room for a Datum column and
+      // wide "Kommentar" cells that are comfortable to write in.
+      const doc = new jsPDF({ unit: 'pt', format: 'a4', orientation: 'landscape' });
+      const marginX = 40;
       const pageWidth = doc.internal.pageSize.getWidth();
       const pageHeight = doc.internal.pageSize.getHeight();
-      let y = 64;
+      const tableRight = pageWidth - marginX;
+      let y = 54;
 
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(20);
@@ -277,46 +177,91 @@ export default function EgenkontrollTool({
       doc.setFont('helvetica', 'normal');
       doc.setFontSize(10);
       doc.setTextColor(120);
-      y += 18;
+      y += 16;
       doc.text('Skapad med ByggExp – byggexp.se', marginX, y);
       doc.setTextColor(20);
-      y += 26;
+      y += 24;
 
       doc.setFontSize(11);
       doc.text(`Titel: ${title.trim() || '—'}`, marginX, y);
-      doc.text(`Kategori: ${category}`, pageWidth / 2, y);
+      doc.text(`Kategori: ${category}`, marginX + 440, y);
       y += 18;
       doc.text(`Projekt: ${project.trim() || '—'}`, marginX, y);
-      doc.text(`Ansvarig: ${responsible.trim() || '—'}`, pageWidth / 2, y);
+      doc.text(`Ansvarig: ${responsible.trim() || '—'}`, marginX + 440, y);
       y += 18;
       doc.text(`Datum: ${date || '—'}`, marginX, y);
-      y += 24;
+      y += 22;
 
-      const cols = { point: marginX, result: marginX + 250, comment: marginX + 360 };
-      doc.setFont('helvetica', 'bold');
-      doc.text('Kontrollpunkt', cols.point, y);
-      doc.text('Resultat', cols.result, y);
-      doc.text('Kommentar', cols.comment, y);
-      y += 8;
-      doc.setDrawColor(210);
-      doc.line(marginX, y, pageWidth - marginX, y);
-      y += 16;
-      doc.setFont('helvetica', 'normal');
+      // Table columns. Empty Resultat/Datum/Kommentar cells are deliberately
+      // left blank so the sheet can be printed and filled in by hand.
+      const colX = {
+        point: marginX,
+        result: marginX + 340,
+        datum: marginX + 340 + 120,
+        comment: marginX + 340 + 120 + 110,
+      };
+      const pointWidth = colX.result - colX.point - 12;
+      const commentWidth = tableRight - colX.comment - 8;
+
+      const drawHeader = () => {
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(11);
+        doc.text('Kontrollpunkt', colX.point + 4, y + 15);
+        doc.text('Resultat', colX.result + 4, y + 15);
+        doc.text('Datum', colX.datum + 4, y + 15);
+        doc.text('Kommentar', colX.comment + 4, y + 15);
+        doc.setFont('helvetica', 'normal');
+        y += 22;
+      };
+
+      // Vertical column separators + top border for one page's table block.
+      const drawVerticals = (top: number, bottom: number) => {
+        doc.setDrawColor(180);
+        doc.line(marginX, top, tableRight, top);
+        [marginX, colX.result, colX.datum, colX.comment, tableRight].forEach((x) => {
+          doc.line(x, top, x, bottom);
+        });
+      };
+
+      let tableTop = y;
+      drawHeader();
+      doc.setDrawColor(180);
+      doc.line(marginX, y, tableRight, y); // underline header row
+      doc.setFontSize(10);
 
       rows.forEach((row) => {
-        if (y > pageHeight - 90) {
+        const pointLines = doc.splitTextToSize(row.point || '', pointWidth) as string[];
+        const commentLines = doc.splitTextToSize(row.comment || '', commentWidth) as string[];
+        const lineCount = Math.max(pointLines.length, commentLines.length, 1);
+        const rowHeight = Math.max(lineCount * 13 + 13, 28);
+
+        if (y + rowHeight > pageHeight - 70) {
+          drawVerticals(tableTop, y);
           doc.addPage();
-          y = 64;
+          y = 54;
+          tableTop = y;
+          drawHeader();
+          doc.setDrawColor(180);
+          doc.line(marginX, y, tableRight, y);
+          doc.setFontSize(10);
         }
-        const point = doc.splitTextToSize(row.point || '—', 195) as string[];
-        const comment = doc.splitTextToSize(row.comment || '—', pageWidth - cols.comment - marginX) as string[];
-        doc.text(point, cols.point, y);
-        doc.text(row.result, cols.result, y);
-        doc.text(comment, cols.comment, y);
-        y += Math.max(point.length, comment.length, 1) * 14 + 8;
+
+        const textY = y + 16;
+        doc.text(pointLines, colX.point + 4, textY);
+        // Only print an answered result; leave "Ej besvarad" blank to fill in.
+        if (row.result && row.result !== 'Ej besvarad') {
+          doc.text(row.result, colX.result + 4, textY);
+        }
+        // Datum-cellen lämnas alltid tom att fylla i.
+        doc.text(commentLines, colX.comment + 4, textY);
+        y += rowHeight;
+        doc.setDrawColor(220);
+        doc.line(marginX, y, tableRight, y); // row separator
       });
 
-      y = Math.min(y + 30, pageHeight - 60);
+      drawVerticals(tableTop, y);
+
+      y = Math.min(y + 34, pageHeight - 40);
       doc.setFontSize(10);
       doc.text('Underskrift ansvarig: ______________________________', marginX, y);
 
@@ -328,7 +273,6 @@ export default function EgenkontrollTool({
 
   // CSV opens directly in Excel/Google Sheets (BOM keeps åäö correct).
   function downloadCsv() {
-    if (!ensureUnlocked('csv')) return;
     const out: (string | number)[][] = [
       ['Egenkontroll', title.trim() || ''],
       ['Kategori', category],
@@ -336,8 +280,8 @@ export default function EgenkontrollTool({
       ['Ansvarig', responsible.trim() || ''],
       ['Datum', date || ''],
       [],
-      ['Kontrollpunkt', 'Resultat', 'Kommentar'],
-      ...rows.map((r) => [r.point || '', r.result, r.comment || '']),
+      ['Kontrollpunkt', 'Resultat', 'Datum', 'Kommentar'],
+      ...rows.map((r) => [r.point || '', r.result, '', r.comment || '']),
     ];
     const csv = out
       .map((cols) => cols.map((c) => `"${String(c ?? '').replace(/"/g, '""')}"`).join(';'))
@@ -383,47 +327,6 @@ export default function EgenkontrollTool({
           </button>
         </div>
       ) : null}
-
-      <div
-        className="lm-tool-ai"
-        style={{
-          border: '1px solid rgba(37, 99, 235, 0.25)',
-          background: 'rgba(37, 99, 235, 0.05)',
-          borderRadius: 12,
-          padding: 16,
-          marginBottom: 18,
-        }}
-      >
-        <strong style={{ display: 'block', marginBottom: 4 }}>
-          ✨ Skapa en egenkontroll för just ditt moment – med AI
-        </strong>
-        <p className="lm-tool-sub" style={{ marginTop: 0 }}>
-          Beskriv vad du ska kontrollera – el, VVS, tätskikt, betong, tak – så föreslår vi rätt
-          kontrollpunkter med krav och kontrollmetod, klart att granska, fylla i och skriva under.
-        </p>
-        <div className="lm-tool-grid">
-          <label className="lm-tool-field">
-            <span>Vad ska du kontrollera?</span>
-            <input value={aiMoment} placeholder="T.ex. elinstallation i kök, tätskikt i våtrum" onChange={(e) => setAiMoment(e.currentTarget.value)} />
-          </label>
-          <label className="lm-tool-field">
-            <span>Material / detaljer (valfritt)</span>
-            <input value={aiMaterial} placeholder="T.ex. GVK, golvbrunn" onChange={(e) => setAiMaterial(e.currentTarget.value)} />
-          </label>
-        </div>
-        <div className="lm-tool-actions" style={{ marginTop: 10 }}>
-          <button type="button" className="lm-tool-button" onClick={() => void generateAi()} disabled={aiBusy || !aiMoment.trim()}>
-            {aiBusy ? 'Genererar…' : 'Generera med AI'}
-          </button>
-          {aiError ? <span className="lm-result-fine" style={{ color: '#d64545' }}>{aiError}</span> : null}
-        </div>
-        {aiUsed ? (
-          <p className="lm-result-fine" style={{ marginTop: 10 }}>
-            AI-genererat förslag – granska och anpassa mot ritning, gällande krav och tillverkarens
-            anvisning innan du använder eller lämnar för signering.
-          </p>
-        ) : null}
-      </div>
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Börja från en färdig mall:</span>
@@ -542,42 +445,6 @@ export default function EgenkontrollTool({
           💾 Utkastet sparas automatiskt i den här webbläsaren – du kan stänga sidan och fortsätta senare.
         </p>
       </form>
-
-      {gateOpen ? (
-        <form
-          className="lm-tool-gate"
-          onSubmit={submitGate}
-          style={{
-            marginTop: 14,
-            border: '1px solid rgba(37, 99, 235, 0.25)',
-            background: 'rgba(37, 99, 235, 0.05)',
-            borderRadius: 12,
-            padding: 16,
-          }}
-        >
-          <strong style={{ display: 'block', marginBottom: 4 }}>Nästan klart!</strong>
-          <p className="lm-tool-sub" style={{ marginTop: 0 }}>
-            Ange din e-post så låser vi upp nedladdningen av din AI-egenkontroll.
-          </p>
-          <div className="lm-tool-actions">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.currentTarget.value)}
-              placeholder="namn@företag.se"
-              autoComplete="email"
-              required
-              style={{ minWidth: 240 }}
-            />
-            <button type="submit" className="lm-tool-button" disabled={gateBusy || !email.includes('@')}>
-              {gateBusy ? 'Låser upp…' : 'Lås upp & ladda ner'}
-            </button>
-          </div>
-          <p className="lm-result-fine" style={{ marginTop: 8 }}>
-            Vi använder e-posten bara för att kontakta dig om egenkontroll och ByggExp.
-          </p>
-        </form>
-      ) : null}
 
       <ToolAppCta
         tool="egenkontroll-mall"

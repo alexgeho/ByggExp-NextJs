@@ -12,11 +12,13 @@ Del av [youtube-strategy.md](./youtube-strategy.md). Gör hela detta innan nya v
 ## B. Kanalbeskrivning (About)
 Klistra in (Studio → Anpassning → Grundläggande info → Beskrivning):
 
-ByggExp är appen som ger byggföretag koll på tid, pengar och papper — tidrapportering med GPS, planering, egenkontroll, offert och faktura, allt på ett ställe.
+ByggExp är systemet som ger byggföretag koll på tid, pengar och papper — allt på ett ställe.
+
+Du som driver företaget jobbar mest i den kraftfulla webb-dashboarden på datorn: planering, projekt, tider, offert, faktura, egenkontroll och ekonomi i realtid. Personalen stämplar in och ut med GPS i mobilappen — tiderna landar direkt i dashboarden.
 
 På den här kanalen visar vi hur du:
 • slutar jaga tidlappar och får tider → lön och faktura automatiskt
-• skriver offerter och håller koll på projektets marginal
+• planerar projekt och håller koll på marginalen — från datorn
 • klarar egenkontroll, personalliggare och KMA utan pärmkaos
 
 Ny video varje vecka.

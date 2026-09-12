@@ -167,7 +167,7 @@ Bra nyheter: **det mesta finns redan.** Prioritering:
 **Format per long-form video (5–9 min):**
 1. Hook (0–30 s): problem + löfte.
 2. Kontext (varför det kostar pengar/tid).
-3. Lösning steg-för-steg (skärminspelning i appen + b-roll från bygge).
+3. Lösning steg-för-steg (skärminspelning i **webb-dashboarden** — där chefen jobbar mest — + mobilappen för personalens GPS-stämpling + b-roll från bygge). Positionering: ByggExp är inte "bara en app" — kärnan är en kraftfull webb-dashboard på datorn; appen är för personalen ute.
 4. "Så gör du i ByggExp" (produkt smyger in).
 5. CTA: ladda ner mall (länk) + testa gratis + prenumerera.
 

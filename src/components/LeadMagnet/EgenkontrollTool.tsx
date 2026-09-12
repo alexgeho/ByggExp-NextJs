@@ -140,9 +140,9 @@ export default function EgenkontrollTool({
     setTitle(preset.name);
     setRows(
       preset.items.map((item) => ({
-        point: item.point,
+        point: item.reference ? `${item.point} (${item.reference})` : item.point,
         result: RESULTS[0],
-        comment: item.reference ? `Ref: ${item.reference}` : '',
+        comment: '',
       })),
     );
     // Let the table render, then bring it into view as clear confirmation.

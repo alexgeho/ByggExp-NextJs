@@ -24,6 +24,15 @@
       .footer-meta a:hover {
         color: var(--white);
       }
+      .footer-social {
+        display: inline-flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.5);
+        transition: color 0.2s;
+      }
+      .footer-social:hover {
+        color: #ff0000;
+      }
 
       /* fade-in helpers */
       .reveal {

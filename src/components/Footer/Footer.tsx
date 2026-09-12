@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 
 const logo = "/landing/header/logo.svg";
 
+const YOUTUBE_URL = "https://www.youtube.com/@byggexp";
+
 
 
 function Footer({ footerT }: FooterProps) {
@@ -47,6 +49,21 @@ function Footer({ footerT }: FooterProps) {
 
           <a href="mailto:support@byggexp.se">
             support@byggexp.se
+          </a>
+
+          <a
+            className="footer-social"
+            href={YOUTUBE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="ByggExp på YouTube"
+          >
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+              <path
+                fill="currentColor"
+                d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"
+              />
+            </svg>
           </a>
         </div>
       </div>

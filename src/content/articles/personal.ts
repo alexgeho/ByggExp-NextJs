@@ -402,7 +402,7 @@ const A_ARBETSTIDSLAGEN_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Bygg en rutin där varje timme registreras löpande, så att dygnsvila, veckovila och övertidstak blir synliga innan de bryts. Starta med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, och vill du se hur digital tidregistrering fungerar för ditt byggföretag – <a href="/sv/contact">boka en demo</a> så visar vi upplägget.</p>
 
-<p>Relaterat: <a href="/sv/blog/tidrapportering">Tidrapportering i byggföretag</a> och <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>.</p>
+<p>Relaterat: <a href="/sv/blog/tidrapportering">Tidrapportering i byggföretag</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a> och <a href="/sv/blog/enkelt-tidrapporteringssystem">Enkelt tidrapporteringssystem</a>.</p>
 `;
 
 const A_ARBETSTIDSLAGEN_BYGG: BlogPost = {

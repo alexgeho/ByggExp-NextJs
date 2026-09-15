@@ -177,6 +177,9 @@ const EGENKONTROLL_HTML = `
 <li><strong><a href="/sv/verktyg/egenkontroll-el-mall">Egenkontroll el</a></strong> – jordfelsbrytare, isolationsmätning (SS 436 40 00), märkning och skyddsledare.</li>
 <li><strong><a href="/sv/verktyg/egenkontroll-bygg-mall">Egenkontroll bygg / stomme</a></strong> – måttkontroll mot ritning, infästningar, fuktkontroll och brandtätning (BBR).</li>
 <li><strong><a href="/sv/verktyg/egenkontroll-vvs-mall">Egenkontroll VVS</a></strong> – täthetsprovning, avstängningsventiler, rörisolering och fall på avlopp.</li>
+<li><strong><a href="/sv/verktyg/egenkontroll-vatrum-mall">Egenkontroll våtrum</a></strong> – tätskikt, genomföringar och fall mot golvbrunn enligt BBV/GVK.</li>
+<li><strong><a href="/sv/verktyg/egenkontroll-tak-mall">Egenkontroll tak</a></strong> – underlagstäckning, infästning, läktavstånd och taksäkerhet.</li>
+<li><strong><a href="/sv/verktyg/egenkontroll-ventilation-mall">Egenkontroll ventilation</a></strong> – luftflöden, injustering, kanaltäthet och OVK-underlag.</li>
 </ul>
 <p>Behöver du planera själva momentet först? Se även <a href="/sv/verktyg/arbetsberedning-mall">arbetsberedning-mallen</a> och <a href="/sv/verktyg/riskbedomning-mall">riskbedömning-mallen</a>.</p>
 
@@ -1769,7 +1772,7 @@ const A_KVALITETSPLAN_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Börja med kontrollprogrammet – det är kärnan i planen. Bygg dina egenkontroller från <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och koppla in en rutin för <a href="/sv/blog/avvikelsehantering-bygg-mall">avvikelser</a>. Vill du se hur egenkontroller, avvikelser och dokumentation hänger ihop i ett projekt? <a href="/sv/contact">Boka en demo →</a> så visar vi.</p>
 
-<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll – så gör du</a>, <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaden</a>, <a href="/sv/blog/fuktsakerhetsplan-byggaf">Fuktsäkerhetsplan enligt ByggaF</a>.</p>
+<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll – så gör du</a>, <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaden</a>, <a href="/sv/blog/fuktsakerhetsplan-byggaf">Fuktsäkerhetsplan enligt ByggaF</a>, <a href="/sv/blog/kvalitetsplan-bygg">Kvalitetsplan för bygget</a>.</p>
 `;
 
 const A_KVALITETSPLAN_BYGG: BlogPost = {

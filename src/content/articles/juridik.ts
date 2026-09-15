@@ -542,7 +542,7 @@ const ABS18_HTML = `
 
 <h2>Kom igång</h2>
 <p>Välj avtal efter arbetets art, hämta rätt standardblankett från Konsumentverket, Byggföretagen eller Villaägarna, och bygg ditt underlag i <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur offert, ÄTA och dokumentation hänger ihop i praktiken? <a href="/sv/contact">Boka en demo här -&gt;</a></p>
-<p>Relaterat: <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a> och <a href="/sv/blog/muntligt-avtal-sakra-bevis">Muntligt avtal – så säkrar du bevis</a>.</p>
+<p>Relaterat: <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a>, <a href="/sv/blog/muntligt-avtal-sakra-bevis">Muntligt avtal – så säkrar du bevis</a> och <a href="/sv/blog/e-signering-avtal">E-signering av avtal (BankID &amp; eIDAS)</a>.</p>
 `.trim();
 
 const ABS18: BlogPost = {

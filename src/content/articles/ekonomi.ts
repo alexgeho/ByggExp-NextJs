@@ -615,7 +615,7 @@ const PASLAG_HTML = `
 <h2>Kom igång</h2>
 <p>Sätt rätt påslag och se din faktiska marginal med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn</a>, och skriv in nivån direkt i <a href="/sv/verktyg/offert-mall">vår offertmall</a>. Vill du se hur hela flödet från offert till faktura fungerar i praktiken? <a href="/sv/contact">Boka en demo &rarr;</a></p>
 
-<p>Relaterat: <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a> &middot; <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a></p>
+<p>Relaterat: <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a> &middot; <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a> &middot; <a href="/sv/blog/offert-vvs-elektriker-rormokare">Offert för VVS, el &amp; rör</a></p>
 `.trim();
 
 const PASLAG: BlogPost = {
@@ -2765,7 +2765,7 @@ const A_DEBITERA_SERVICEBIL_ROT_HTML = `
 <h2>Kom igång</h2>
 <p>Grundprincipen är enkel att följa när du väl har raderna på plats: särredovisa alltid arbete, material, framkörning och maskinhyra – och låt bara arbetet bära ROT. Räkna på ditt nästa uppdrag med vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylator</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du sätter upp korrekta ROT-fakturor från början.</p>
 
-<p>Relaterat: <a href="/sv/blog/rot-avdrag">Så fungerar ROT-avdraget för hantverkare</a> och <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare – guide</a>.</p>
+<p>Relaterat: <a href="/sv/blog/rot-avdrag">Så fungerar ROT-avdraget för hantverkare</a>, <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare – guide</a> och <a href="/sv/blog/gron-teknik-avdrag">Grön teknik-avdrag (solceller, laddbox, batteri)</a>.</p>
 `;
 
 const A_DEBITERA_SERVICEBIL_ROT: BlogPost = {
@@ -8211,7 +8211,7 @@ const A_ANBUD_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Ett räknat och tydligt anbud med satt giltighetstid är skillnaden mellan ett lönsamt jobb och en dyr läxa. Börja med <a href="/sv/verktyg/offert-mall">offertmallen</a> och läs hur du <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">håller marginalen</a> hela vägen till slutfaktura. Vill du se hur anbud, projekt och faktura hänger ihop? <a href="/sv/contact">Boka en demo →</a></p>
 
-<p>Relaterat: <a href="/sv/blog/skriva-offert">Skriva offert – steg för steg</a>, <a href="/sv/blog/offentlig-upphandling-bygg-lou">Offentlig upphandling enligt LOU</a>, <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaden</a>.</p>
+<p>Relaterat: <a href="/sv/blog/skriva-offert">Skriva offert – steg för steg</a>, <a href="/sv/blog/offentlig-upphandling-bygg-lou">Offentlig upphandling enligt LOU</a>, <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaden</a>, <a href="/sv/blog/anbud-bygg">Anbud i bygg – så räknar och lämnar du</a>.</p>
 `;
 
 const A_ANBUD_BYGG: BlogPost = {
@@ -8371,7 +8371,7 @@ const A_BYGGFELSFORSAKRING_HTML = `
 <h2>Kom igång</h2>
 <p>Bygger du åt konsument? Se till att färdigställandeskyddet är på plats före start, och läs vår guide om <a href="/sv/blog/fardigstallandeskydd-smahus">färdigställandeskydd för småhus</a>. Vill du hålla besiktnings- och egenkontrollunderlaget samlat per projekt? <a href="/sv/contact">Boka en demo →</a></p>
 
-<p>Relaterat: <a href="/sv/blog/fardigstallandeskydd-smahus">Färdigställandeskydd för småhus</a>, <a href="/sv/blog/entreprenadforsakring-allrisk-vad-tacker">Entreprenadförsäkring – vad täcker allrisk?</a>, <a href="/sv/blog/vilka-forsakringar-behover-byggforetag">Vilka försäkringar behöver byggföretaget?</a></p>
+<p>Relaterat: <a href="/sv/blog/fardigstallandeskydd-smahus">Färdigställandeskydd för småhus</a>, <a href="/sv/blog/entreprenadforsakring-allrisk-vad-tacker">Entreprenadförsäkring – vad täcker allrisk?</a>, <a href="/sv/blog/vilka-forsakringar-behover-byggforetag">Vilka försäkringar behöver byggföretaget?</a>, <a href="/sv/blog/byggfelsforsakring">Byggfelsförsäkring – vad gäller idag?</a></p>
 `;
 
 const A_BYGGFELSFORSAKRING: BlogPost = {

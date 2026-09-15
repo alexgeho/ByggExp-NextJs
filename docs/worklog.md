@@ -5,6 +5,36 @@
 
 ---
 
+## 🟢 Сессия 2026-09-15 — GSC CTR-фиксы + онбординг-видео (YouTube)
+
+### KLART (сделано)
+- **⚡ CTR-тайтлы починены (8 страниц, задеплоено `f0b001c`)** — прогнал `.gsc/near_miss.py sc-domain:byggexp.se 90` (токен живой), сопоставил CTR-проблемные запросы (поз≤10, показы≥50, CTR<2%) с их страницами через API (`/tmp/gsc_map.py` — page-dimension по каждому запросу). Переписал seoTitle: ключ вперёд + конкретный крючок (цифра/год/вопрос), ≤~50 симв:
+  - `vatrumscertifikat-behorighet-gvk` (regelverk.ts): → «Våtrumscertifikat: BKR, GVK eller Säker Vatten?» (153 показа, поз 8.1)
+  - `ackordslon-bygg` (ekonomi.ts): → «Ackordslön i bygg 2026 – så räknar du rätt» (140, 9.5)
+  - `bygga-trappa-…` (kalkyl.ts): добавил ключ **trappformeln** (128 показов, 0 кликов — его вообще не было в тайтле!) → «Trappformeln & bygga trappa: steghöjd, stegdjup»
+  - `traktamente-byggnadsarbetare-2026` (ekonomi.ts): → «…2026 – skattefritt» (89, 7.2)
+  - `drojsmalsranta-2026` (ekonomi.ts): → «Dröjsmålsränta 2026: 10,00 % – räkna rätt» (88, 7.5 — вынес ставку-ответ в тайтл)
+  - `lakt-avstand-tak-berakning` (kalkyl.ts): → «Läktavstånd takpannor & plåt – så räknar du» (53+51, 8.6)
+  - `armering-berakning-platta-grund` (kalkyl.ts): → «Armering betongplatta – så beräknar du åtgången» (63, 9.8)
+  - `byggmotesprotokoll-mall` (kvalitet.ts): → «Byggmötesprotokoll – gratis mall & dagordning» (47, «startmöte abt 06 mall»)
+  - ⏸️ НЕ трогал: `fotodokumentation` и `AB-U 07` — тайтлы уже норм. Ложные срабатывания (топ-страница на поз.54–103 / 1 показ, не тайтл-проблема): schemaläggningssystem, projektuppföljning bygg, byggdagbok mall, uppgiftshantering bygg, digitalisera byggföretag.
+  - tsc+build зелёные. Эффект CTR виден в GSC через ~1–2 недели.
+- **YouTube: онбординг-видео Del 1 (webbpanelen)** — готовы тайтл + описание (в стиле существующих видео) + плейлист-решение: новый шведский плейлист **«Kom igång med ByggExp»** с Del 1 (webb/chef) + Del 2 (app/personal, снять позже). Отдельно от старых английских (Features/Get Started → «Så funkar ByggExp»).
+- **🔗 Перелинковка 10 сирот починена (задеплоено `f53b882`)** — `index_status.py` (свежий): **360 в индексе**, 10 «Discovered — not indexed», 7 «unknown to Google». Все 17 — в live-сайтмапе (459 URL), т.е. проблема не sitemap, а **0 внутренних ссылок** (сироты). Добавил контекстные Relaterat-ссылки из проиндексированных тематически близких статей:
+  - blog: `anbud-bygg` (← ekonomi offert/LOU), `offert-vvs-elektriker-rormokare` (← ekonomi), `gron-teknik-avdrag` (← ekonomi ROT), `byggfelsforsakring` (← ekonomi försäkring), `kvalitetsplan-bygg` (← kvalitet), `e-signering-avtal` (← juridik avtal), `enkelt-tidrapporteringssystem` (← personal tid).
+  - verktyg: `egenkontroll-vatrum/tak/ventilation-mall` добавлены в yrkeslistan статьи egenkontroll (kvalitet.ts).
+  - ⏸️ Осталась 1 сирота: `/sv/verktyg/signera-pdf` (мелкая PDF-утилита, 0 ссылок) — низкий приоритет, залинковать из e-signering-avtal при случае.
+  - ⚠️ **Request indexing** для этих 17 URL = ручное действие owner в GSC (API не даёт). После деплоя внутр. ссылки помогут краулеру сами через 1–2 недели.
+- **План по YouTube для коллеги** — Artifact-страница (RU + SV-тайтлы) для обсуждения: https://claude.ai/code/artifact/cd02aca4-9090-4238-8e17-04ef04255764 (нужно нажать Share).
+
+### 🔜 NÄSTA STEG
+1. Через ~1–2 нед: `near_miss.py` + `index_status.py` заново → проверить (а) поднялся ли CTR на 8 починенных тайтлах, (б) вышли ли 10 сирот из not-indexed. Выбрать следующую пачку поз.5–15.
+2. 🎯 **Takstolar-кластер** (самый большой near-miss, ~10 запросов поз.15–19: takstolar beräkning 221, beräkna takstolar 210, takstol dimensionering, räkna på takstolar…) — калькулятор/pillar `beräkna takstolar` + перелинковка.
+3. (owner) **Request indexing** в GSC для 17 not-indexed URL (список в свежем `.gsc/index_status.csv`, фильтр != "Submitted and indexed").
+4. YouTube Шаг 2: записать Del 1 + расписать первые 8 видео (`docs/marketing/youtube-step2-videos.md`).
+
+---
+
 ## 🟢 Сессия 2026-09-12 — egenkontroll-инструмент допилен + YouTube-стратегия
 
 ### KLART (сделано)

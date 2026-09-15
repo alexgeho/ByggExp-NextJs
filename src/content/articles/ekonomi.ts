@@ -1647,7 +1647,7 @@ const A_DROJSMALSRANTA_2026: BlogPost = {
   title: "Dröjsmålsränta 2026 för byggföretag – räkna rätt och få betalt", slug: "drojsmalsranta-2026", locale: "sv",
   excerpt: "Dröjsmålsräntan 2026 är 10,00 % – så räknar du rätt enligt räntelagen, lägger på förseningsersättning och driver in obetalda byggfakturor.", tag: "Ekonomi",
   coverImageUrl: "/landing/features/8fakturor.webp", contentHtml: A_DROJSMALSRANTA_2026_HTML,
-  seoTitle: "Dröjsmålsränta 2026 för bygg | ByggExp", seoDescription: "Dröjsmålsränta 2026 är 10,00 % (referensränta 2,00 % + 8 p.e.). Så räknar byggföretag rätt, tar ut 450 kr förseningsersättning och driver in obetalda fakturor.",
+  seoTitle: "Dröjsmålsränta 2026: 10,00 % – räkna rätt | ByggExp", seoDescription: "Dröjsmålsränta 2026 är 10,00 % (referensränta 2,00 % + 8 p.e.). Så räknar byggföretag rätt, tar ut 450 kr förseningsersättning och driver in obetalda fakturor.",
   seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-18T18:36:00.000Z", createdAt: "2026-08-18T18:36:00.000Z", updatedAt: "2026-08-18T18:36:00.000Z",
 };
@@ -1841,7 +1841,7 @@ const A_TRAKTAMENTE_BYGGNADSARBETARE_2026: BlogPost = {
   title: "Traktamente för byggnadsarbetare 2026 – så mycket är skattefritt (och varför avtalstraktamentet ofta beskattas)", slug: "traktamente-byggnadsarbetare-2026", locale: "sv",
   excerpt: "Så mycket traktamente är skattefritt för byggnadsarbetare 2026 – och varför kollektivavtalets traktamente ofta blir skattepliktig lön.", tag: "Ekonomi",
   coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_TRAKTAMENTE_BYGGNADSARBETARE_2026_HTML,
-  seoTitle: "Traktamente byggnadsarbetare 2026 | ByggExp", seoDescription: "Skattefria traktamentsbelopp 2026 för byggnadsarbetare: 300/150/150 kr, 50-kmregeln och varför Byggnads avtalstraktamente ofta beskattas.",
+  seoTitle: "Traktamente byggnadsarbetare 2026 – skattefritt | ByggExp", seoDescription: "Skattefria traktamentsbelopp 2026 för byggnadsarbetare: 300/150/150 kr, 50-kmregeln och varför Byggnads avtalstraktamente ofta beskattas.",
   seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-18T18:48:00.000Z", createdAt: "2026-08-18T18:48:00.000Z", updatedAt: "2026-08-18T18:48:00.000Z",
 };
@@ -4054,7 +4054,7 @@ const A_ACKORDSLON_BYGG: BlogPost = {
   title: "Ackordslön i bygg – så fungerar det (arbetsgivarens guide 2026)", slug: "ackordslon-bygg", locale: "sv",
   excerpt: "En konkret genomgång av ackordslön, ackordssedel och granskningsarvode ur arbetsgivarens perspektiv, i linje med Byggavtalet 2025–2027.", tag: "Ekonomi",
   coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_ACKORDSLON_BYGG_HTML,
-  seoTitle: "Ackordslön i bygg – så fungerar det | ByggExp", seoDescription: "Så fungerar ackord, ackordssedel, slutavräkning och granskningsarvode enligt Byggavtalet – en praktisk guide för byggföretag som arbetsgivare 2026.",
+  seoTitle: "Ackordslön i bygg 2026 – så räknar du rätt | ByggExp", seoDescription: "Så fungerar ackord, ackordssedel, slutavräkning och granskningsarvode enligt Byggavtalet – en praktisk guide för byggföretag som arbetsgivare 2026.",
   seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T08:00:00.000Z", createdAt: "2026-08-19T08:00:00.000Z", updatedAt: "2026-08-19T08:00:00.000Z",
 };

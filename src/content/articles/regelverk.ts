@@ -397,7 +397,7 @@ const A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK: BlogPost = {
   title: "Våtrumscertifikat och behörighet: BKR, GVK eller Säker Vatten?", slug: "vatrumscertifikat-behorighet-gvk", locale: "sv",
   excerpt: "Ingen myndighet utfärdar ett samlat våtrumscertifikat – här reder vi ut vad BKR, GVK och Säker Vatten faktiskt kräver och vilken behörighet ditt företag bör satsa på.", tag: "Behörighet",
   coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK_HTML,
-  seoTitle: "Våtrumscertifikat behörighet | ByggExp", seoDescription: "Det finns inget enda våtrumscertifikat. Så väljer ditt VVS- eller plattsättningsföretag rätt behörighet: BKR, GVK eller Säker Vatten – och varför kunden kräver det.",
+  seoTitle: "Våtrumscertifikat: BKR, GVK eller Säker Vatten? | ByggExp", seoDescription: "Det finns inget enda våtrumscertifikat. Så väljer ditt VVS- eller plattsättningsföretag rätt behörighet: BKR, GVK eller Säker Vatten – och varför kunden kräver det.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-18T19:30:00.000Z", createdAt: "2026-08-18T19:30:00.000Z", updatedAt: "2026-08-18T19:30:00.000Z",
 };

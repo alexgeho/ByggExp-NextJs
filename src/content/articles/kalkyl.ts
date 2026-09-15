@@ -655,7 +655,7 @@ const A_ARMERING_BERAKNING_PLATTA_GRUND: BlogPost = {
   title: "Armering betongplatta – så beräknar du åtgången (nät + stång)", slug: "armering-berakning-platta-grund", locale: "sv",
   excerpt: "Så mängdar du armeringsnät och stångarmering till betongplattan – nyckeltal, spillpåslag och räkneexempel som kompletterar betongkalkylen.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/betong-preview.webp", contentHtml: A_ARMERING_BERAKNING_PLATTA_GRUND_HTML,
-  seoTitle: "Armering betongplatta beräkning | ByggExp", seoDescription: "Räkna armeringsmängd till plattan – näts- och stångåtgång, nyckeltal för nät 5150/8150 och kamstål Ø8–Ø16. Metod, räkneexempel och koppling till K-ritning.",
+  seoTitle: "Armering betongplatta – så beräknar du åtgången | ByggExp", seoDescription: "Räkna armeringsmängd till plattan – näts- och stångåtgång, nyckeltal för nät 5150/8150 och kamstål Ø8–Ø16. Metod, räkneexempel och koppling till K-ritning.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/betong-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T11:06:00.000Z", createdAt: "2026-08-19T11:06:00.000Z", updatedAt: "2026-08-19T11:06:00.000Z",
 };
@@ -914,7 +914,7 @@ const A_LAKT_AVSTAND_TAK_BERAKNING: BlogPost = {
   title: "Läktavstånd för takpannor och plåt — så räknar du rätt", slug: "lakt-avstand-tak-berakning", locale: "sv",
   excerpt: "En guide för hantverkare: så beräknar du läktavstånd, bär- och ströläkt för takpannor eller plåt utan att hamna på en halv rad fel.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/tak-preview.webp", contentHtml: A_LAKT_AVSTAND_TAK_BERAKNING_HTML,
-  seoTitle: "Läktavstånd tak: så beräknar du | ByggExp", seoDescription: "Beräkna läktavstånd för takpannor och plåt steg för steg. Bärläkt, ströläkt, dimensioner och tillverkarens intervall — komplettera takkalkylen rätt.",
+  seoTitle: "Läktavstånd takpannor & plåt – så räknar du | ByggExp", seoDescription: "Beräkna läktavstånd för takpannor och plåt steg för steg. Bärläkt, ströläkt, dimensioner och tillverkarens intervall — komplettera takkalkylen rätt.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/tak-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T15:03:00.000Z", createdAt: "2026-08-19T15:03:00.000Z", updatedAt: "2026-08-19T15:03:00.000Z",
 };
@@ -1834,7 +1834,7 @@ const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING: BlogPost = {
   title: "Bygga trappa – så beräknar du steghöjd, stegdjup och antal steg", slug: "bygga-trappa-steghojd-stegdjup-berakning", locale: "sv",
   excerpt: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, Boverkets riktvärden för steghöjd och stegdjup och hur du räknar ut antal steg från den totala höjden. Med gratis trappberäknare.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/trappa-preview.webp", contentHtml: A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING_HTML,
-  seoTitle: "Bygga trappa – beräkna steghöjd, stegdjup & antal steg | ByggExp", seoDescription: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, BBR-riktvärden (steghöjd max ~180 mm, stegdjup minst 250 mm) och hur du räknar antal steg. Gratis trappberäknare.",
+  seoTitle: "Trappformeln & bygga trappa: steghöjd, stegdjup | ByggExp", seoDescription: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, BBR-riktvärden (steghöjd max ~180 mm, stegdjup minst 250 mm) och hur du räknar antal steg. Gratis trappberäknare.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/trappa-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T14:05:00.000Z", createdAt: "2026-08-20T14:05:00.000Z", updatedAt: "2026-08-20T14:05:00.000Z",
 };

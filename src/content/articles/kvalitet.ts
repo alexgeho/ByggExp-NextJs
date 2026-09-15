@@ -569,7 +569,7 @@ const A_BYGGMOTESPROTOKOLL_MALL: BlogPost = {
   title: "Byggmötesprotokoll – mall, dagordning och ansvar", slug: "byggmotesprotokoll-mall", locale: "sv",
   excerpt: "Byggmötesprotokollet är mer än en anteckning – det är ett juridiskt dokument enligt AB 04 och ABT 06. Här är dagordning, ansvar och en färdig mallstruktur.", tag: "Projektledning",
   coverImageUrl: "/landing/features/tasks.webp", contentHtml: A_BYGGMOTESPROTOKOLL_MALL_HTML,
-  seoTitle: "Byggmötesprotokoll mall | ByggExp", seoDescription: "Så skriver ni ett byggmötesprotokoll enligt AB 04 och ABT 06: dagordning, startmöte, hur ofta ni bör mötas och vem som ansvarar. Mall och rutiner.",
+  seoTitle: "Byggmötesprotokoll – gratis mall & dagordning | ByggExp", seoDescription: "Så skriver ni ett byggmötesprotokoll enligt AB 04 och ABT 06: dagordning, startmöte, hur ofta ni bör mötas och vem som ansvarar. Mall och rutiner.",
   seoImageUrl: `${SITE_URL}/landing/features/tasks.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-18T18:21:00.000Z", createdAt: "2026-08-18T18:21:00.000Z", updatedAt: "2026-08-18T18:21:00.000Z",
 };

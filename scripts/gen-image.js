@@ -100,21 +100,52 @@ async function main() {
   console.log(`→ ${model}  ar=${input.aspect_ratio}  n=${n}`);
   console.log(`  "${prompt}"`);
 
-  const res = await fetch(`https://api.replicate.com/v1/models/${model}/predictions`, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${token}`,
-      'Content-Type': 'application/json',
-      Prefer: 'wait', // block until the prediction finishes
-    },
-    body: JSON.stringify({ input }),
-  });
-
-  const data = await res.json();
+  const sleepMs = (ms) => new Promise((r) => setTimeout(r, ms));
+  let res, data;
+  for (let attempt = 0; attempt < 8; attempt++) {
+    res = await fetch(`https://api.replicate.com/v1/models/${model}/predictions`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+        Prefer: 'wait', // block until the prediction finishes
+      },
+      body: JSON.stringify({ input }),
+    });
+    if (res.status === 429) {
+      // Low-credit accounts are throttled to a few req/min. Back off and retry.
+      const wait = 12000;
+      process.stdout.write(`\r  …rate-limited, retrying in ${wait / 1000}s   `);
+      await sleepMs(wait);
+      continue;
+    }
+    data = await res.json();
+    break;
+  }
+  if (!data) {
+    console.error('✗ Rate limited repeatedly — try again shortly or raise your Replicate credit above $5.');
+    process.exit(1);
+  }
   if (!res.ok || data.error) {
     console.error('✗ Replicate error:', data.error || `${res.status} ${res.statusText}`, data.detail || '');
     process.exit(1);
   }
+
+  // `Prefer: wait` returns as soon as it can; larger models may still be
+  // running. Poll the prediction until it reaches a terminal state.
+  const getUrl = data.urls && data.urls.get;
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  let waited = 0;
+  while (['starting', 'processing'].includes(data.status) && getUrl) {
+    await sleep(2000);
+    waited += 2;
+    process.stdout.write(`\r  …${data.status} (${waited}s)   `);
+    const poll = await fetch(getUrl, { headers: { Authorization: `Bearer ${token}` } });
+    data = await poll.json();
+    if (waited > 300) break; // 5 min safety cap
+  }
+  if (waited) process.stdout.write('\n');
+
   if (data.status !== 'succeeded') {
     console.error(`✗ Prediction ${data.status}:`, data.error || JSON.stringify(data).slice(0, 300));
     process.exit(1);

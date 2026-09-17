@@ -2205,7 +2205,7 @@ const A_BYGGDAGBOK: BlogPost = {
   _id: "code-byggdagbok",
   title: "Byggdagbok – vad den ska innehålla och varför digital slår pärmen", slug: "byggdagbok", locale: "sv",
   excerpt: "Vad en byggdagbok ska innehålla, när den krävs (AB 04/ABT 06) och varför en digital byggdagbok med tidsstämpel och foton slår pappersdagboken som bevis vid ÄTA, försening och tvist.", tag: "Digitalisering",
-  coverImageUrl: "/landing/features/4foto.webp", contentHtml: A_BYGGDAGBOK_HTML,
+  coverImageUrl: "/landing/blog/byggdagbok.webp", contentHtml: A_BYGGDAGBOK_HTML,
   seoTitle: "Byggdagbok – innehåll, krav och digital byggdagbok | ByggExp", seoDescription: "Byggdagbok för bygg: vad den ska innehålla, när den krävs enligt AB 04/ABT 06 och varför en digital byggdagbok med tidsstämpel och foton blir starkare bevis.",
   seoImageUrl: `${SITE_URL}/landing/features/4foto.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-30T11:00:00.000Z", createdAt: "2026-08-30T11:00:00.000Z", updatedAt: "2026-08-30T11:00:00.000Z",

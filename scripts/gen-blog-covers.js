@@ -109,11 +109,24 @@ function svg(art) {
 </svg>`;
 }
 
+// Slugs with a real (photo/illustration) cover — e.g. generated via
+// scripts/gen-image.js. They must never get a generated text card, even if they
+// still share a stock coverImageUrl with another article (byggdagbok has a slug
+// twin that does). Keep the actual image at /landing/blog/<slug>.webp.
+const PHOTO_COVER_SLUGS = new Set([
+  'tidredovisning-byggforetag',
+  'egenkontroll-el-egenkontrollprogram',
+  'egenkontroll-entreprenad',
+  'byggdagbok',
+  'kvalitetsplan-bygg',
+  'enkelt-tidrapporteringssystem',
+]);
+
 async function main() {
   const arts = parseArticles();
   const cnt = {};
   arts.forEach((a) => { cnt[a.cover] = (cnt[a.cover] || 0) + 1; });
-  const targets = arts.filter((a) => cnt[a.cover] >= 2);
+  const targets = arts.filter((a) => cnt[a.cover] >= 2 && !PHOTO_COVER_SLUGS.has(a.slug));
   fs.mkdirSync(OUT, { recursive: true });
   for (const a of targets) {
     await sharp(Buffer.from(svg(a))).webp({ quality: 88 }).toFile(path.join(OUT, a.slug + '.webp'));

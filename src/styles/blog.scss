@@ -781,6 +781,38 @@
   border-radius: 18px;
 }
 
+/* Embedded interactive lead-magnet tool inside an article. */
+.article-tool {
+  margin-top: 48px;
+  padding: 28px 30px 32px;
+  background: rgba(31, 157, 107, 0.05);
+  border: 1px solid rgba(31, 157, 107, 0.22);
+  border-radius: 18px;
+}
+
+.article-tool-title {
+  margin: 0 0 8px;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #0f2350;
+}
+
+.article-tool-intro {
+  margin: 0 0 22px;
+  color: #47566b;
+}
+
+.article-tool-loading {
+  margin: 0;
+  color: #6b7a90;
+}
+
+@media (max-width: 600px) {
+  .article-tool {
+    padding: 22px 18px 26px;
+  }
+}
+
 .blog-tools h2 {
   margin: 0 0 16px;
   font-size: 1.3rem;

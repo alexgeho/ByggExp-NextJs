@@ -14,8 +14,19 @@ const salary = "/landing/features/12salary.webp";
 import type { FeaturesProps } from "../../types/features";
 
 // Each homepage feature card links to its dedicated feature landing page.
-// Order matches featureCards below. The pages are sv-only, so the link is only
-// rendered on the Swedish homepage (see lang check in render).
+// Order matches featureCards below. The feature pages exist in the main
+// languages (sv/en/pl/ru/nb), so the link renders on those homepages and points
+// to /<lang>/blog/<slug>. See LEARN_MORE_LABEL for the localized link text.
+const FEATURE_LINK_LANGS = ["sv", "en", "pl", "ru", "nb"] as const;
+
+const LEARN_MORE_LABEL: Record<string, string> = {
+  sv: "Läs mer om funktionen →",
+  en: "Learn more about the feature →",
+  pl: "Dowiedz się więcej o funkcji →",
+  ru: "Подробнее о функции →",
+  nb: "Les mer om funksjonen →",
+};
+
 const FEATURE_LINKS = [
   "automatisk-tidrapportering-och-export", // 1 Automatisk insamling av arbetstid
   "hantera-uppgifter-i-byggprojekt", // 2 Uppgifter med automatisk uppföljning
@@ -267,12 +278,14 @@ function Features({
                     ))}
                   </ul>
 
-                  {lang === "sv" && FEATURE_LINKS[index] ? (
+                  {FEATURE_LINK_LANGS.includes(
+                    lang as (typeof FEATURE_LINK_LANGS)[number],
+                  ) && FEATURE_LINKS[index] ? (
                     <a
                       className="step-link"
-                      href={`/sv/blog/${FEATURE_LINKS[index]}`}
+                      href={`/${lang}/blog/${FEATURE_LINKS[index]}`}
                     >
-                      Läs mer om funktionen →
+                      {LEARN_MORE_LABEL[lang] ?? LEARN_MORE_LABEL.en}
                     </a>
                   ) : null}
                 </div>

@@ -20,6 +20,10 @@ import { PERSONAL_ARTICLES } from './articles/personal';
 import { KVALITET_ARTICLES } from './articles/kvalitet';
 import { TILLVAXT_ARTICLES } from './articles/tillvaxt';
 import { FEATURE_ARTICLES } from './articles/features';
+import { FEATURE_ARTICLES_EN } from './articles/features-en';
+import { FEATURE_ARTICLES_PL } from './articles/features-pl';
+import { FEATURE_ARTICLES_RU } from './articles/features-ru';
+import { FEATURE_ARTICLES_NB } from './articles/features-nb';
 import { NB_ARTICLES } from './articles/nb-timeregistrering';
 
 // Newest first — a stable, self-maintaining order (no hand-kept array).
@@ -39,15 +43,17 @@ const SV_ARTICLES: BlogPost[] = [
   ...FEATURE_ARTICLES,
 ].sort(byPublishedDesc);
 
-// Keyed by locale — Swedish-market articles only exist on sv.
-const NB_SORTED = [...NB_ARTICLES].sort(byPublishedDesc);
+// Feature pages ("Funktioner") exist in the main languages (sv/en/pl/ru/nb) so
+// the homepage/funktioner links resolve to a real localized page. Other content
+// clusters are still sv-only. nb also keeps its own time-registration articles.
+const NB_SORTED = [...NB_ARTICLES, ...FEATURE_ARTICLES_NB].sort(byPublishedDesc);
 
 const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
   sv: SV_ARTICLES,
-  en: [],
-  ru: [],
+  en: [...FEATURE_ARTICLES_EN].sort(byPublishedDesc),
+  ru: [...FEATURE_ARTICLES_RU].sort(byPublishedDesc),
   nb: NB_SORTED,
-  pl: [],
+  pl: [...FEATURE_ARTICLES_PL].sort(byPublishedDesc),
   uk: [],
   fi: [],
   et: [],

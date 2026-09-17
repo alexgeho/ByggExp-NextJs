@@ -9,6 +9,7 @@ import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { getMockBlogPosts } from '../../../lib/blog-mock';
 import { getCodeArticles } from '../../../content/code-articles';
+import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { VERKTYG_GROUPS } from '../../../content/verktyg-list';
 import {
   BLOG_CATEGORIES,
@@ -40,11 +41,15 @@ export const getServerSideProps: GetServerSideProps<
   }
 
   // Code-published articles (real, indexable) always lead the list; CMS wins
-  // on slug collisions.
+  // on slug collisions. Feature articles ("Funktioner") are their own content
+  // type — they live under /funktioner and keep their /blog/<slug> URL, but must
+  // not appear in the blog listing/categories/search.
   const codeArticles = getCodeArticles(lang);
   const withCodeArticles = (base: BlogPost[]) => {
     const slugs = new Set(base.map((post) => post.slug));
-    return [...codeArticles.filter((post) => !slugs.has(post.slug)), ...base];
+    return [...codeArticles.filter((post) => !slugs.has(post.slug)), ...base].filter(
+      (post) => !FEATURE_ARTICLE_SLUGS.has(post.slug),
+    );
   };
 
   try {

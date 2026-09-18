@@ -109,18 +109,14 @@ function svg(art) {
 </svg>`;
 }
 
-// Slugs with a real (photo/illustration) cover — e.g. generated via
+// Slugs with a real (photo/illustration) cover — generated via
 // scripts/gen-image.js. They must never get a generated text card, even if they
-// still share a stock coverImageUrl with another article (byggdagbok has a slug
-// twin that does). Keep the actual image at /landing/blog/<slug>.webp.
-const PHOTO_COVER_SLUGS = new Set([
-  'tidredovisning-byggforetag',
-  'egenkontroll-el-egenkontrollprogram',
-  'egenkontroll-entreprenad',
-  'byggdagbok',
-  'kvalitetsplan-bygg',
-  'enkelt-tidrapporteringssystem',
-]);
+// still share a stock coverImageUrl with another article. Single source of truth
+// is src/content/photo-covers.ts (consumed by code-articles too).
+const PHOTO_COVER_SLUGS = new Set(
+  (fs.readFileSync(path.join(ROOT, 'src/content/photo-covers.ts'), 'utf8').match(/'[^']+'/g) || [])
+    .map((s) => s.slice(1, -1)),
+);
 
 async function main() {
   const arts = parseArticles();

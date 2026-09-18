@@ -1,5 +1,6 @@
 import type { BlogLocale, BlogPost } from '../types/blog';
 import { GENERATED_BLOG_COVER_SLUGS } from './generated-blog-covers';
+import { PHOTO_COVER_SLUGS } from './photo-covers';
 import { SITE_URL } from './articles/site-url';
 
 // Real, indexable SEO articles served from code (not the CMS). Used for
@@ -66,7 +67,11 @@ const CODE_ARTICLES: Record<BlogLocale, BlogPost[]> = {
 // Applied here so every consumer — listing, article hero and OG image — uses
 // the unique cover without editing each article object.
 function withGeneratedCover(post: BlogPost): BlogPost {
-  if (!GENERATED_BLOG_COVER_SLUGS.has(post.slug)) {
+  // Real photo covers (PHOTO_COVER_SLUGS) and generated text-card covers
+  // (GENERATED_BLOG_COVER_SLUGS) both live at /landing/blog/<slug>.webp — the
+  // photo file simply replaces the card. Routing photos here independently of
+  // the text-card manifest keeps them working even if that manifest is rebuilt.
+  if (!PHOTO_COVER_SLUGS.has(post.slug) && !GENERATED_BLOG_COVER_SLUGS.has(post.slug)) {
     return post;
   }
   const cover = `/landing/blog/${post.slug}.webp`;

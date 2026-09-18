@@ -5,6 +5,43 @@
 
 ---
 
+## 🟢 Сессия 2026-09-17…19 — AI-картинки (Replicate/FLUX) + мультиязычные фичи + фото-обложки всего блога
+
+### KLART (сделано, задеплоено)
+- **Генератор картинок заведён:** Replicate + `scripts/gen-image.js` (модель **flux-dev** ~$0.03/шт, schnell/pro тоже; retry на 429 + poll). Токен `REPLICATE_API_TOKEN` в gitignored `.env.admin`. Midjourney API нет — потому FLUX. Кредит $20 (billing на replicate.com/account/billing, цена каждой картинки в Dashboard→predictions).
+- **Фикс блога:** фича-страницы убраны из листинга `/sv/blog` (фильтр `FEATURE_ARTICLE_SLUGS` в `blog/index.tsx`) — URL `/blog/<slug>` остался, но в списке блога их нет (`98072fe`).
+- **Betong-калькулятор встроен в статью** `berakna-betongatgang-platta` как лид-магнит (`src/content/article-inline-tools.tsx` + рендер в `blog/[slug].tsx`, SSR, sv-only) (`0fa7371`).
+- **Фичи на 5 языках:** 12 фича-страниц переведены на en/pl/ru/nb (мульти-агент workflow, DeepL-ключа нет) → `features-{en,pl,ru,nb}.ts`, зарегистрированы в `code-articles.ts`. Линки «Läs mer» с главной теперь на sv/en/pl/ru/nb → `/{lang}/blog/{slug}` (`6636911`). Переводы pl/nb стоит вычитать носителю.
+- **Hero-заголовок:** «Automatisk **och manuell** tidsrapportering…» на всех 10 языках (`d90ba0a`, `c41fd57`).
+- **🖼️ Фото-обложки всего блога (главное):** ~**220 статей** получили фото вместо текстовых заглушек (`66fdf15`). Пайплайн: мульти-агент пишет промпт под тему+сцену → `gen-image.js` генерит. **Правила (фидбек Марии):** в каждом ряду ленты ≤1 тамбнейл с людьми, люди раскиданы по колонкам (не столбик), ~19% с людьми. Единый список `src/content/photo-covers.ts` → `code-articles` роутит на `/landing/blog/<slug>.webp` независимо от манифеста; `gen-blog-covers.js` их пропускает (guard). Стоило ~$7.4.
+
+### 🔜 NÄSTA STEG
+1. Проверить прод `/sv/blog` + категории после деплоя (фото-обложки, распределение людей).
+2. (опц.) Заменить фото ещё и светлые карточки-превью калькуляторов (golvvärme/taketberäknare/rallberäknare/grus & makadam) — сейчас это легитимные превью инструментов, не заглушки.
+3. Вычитка носителем переводов фича-страниц (особенно pl/nb) перед платным трафиком.
+4. (опц.) `/[lang]/funktioner` индекс для en/pl/ru/nb сейчас берёт карточки из CMS (пусто) — подключить код-статьи фич, если нужен список.
+5. Как раскатывать картинки: `node scripts/gen-image.js "<prompt>" --out public/landing/<name> --ar 16:9 --model dev --width 1000`. Массово — через мульти-агент (пишет промпты) + пул-раннер (см. scratchpad этой сессии).
+
+### ⚠️ Öppna frågor / väntar på
+- Коллега: решено дать ей отдельный комп и поставить свой Claude Code (не Live Share).
+- Rate-limit Replicate при параллелизме >~5 даже с кредитом — массовую генерацию гнать с CONC≤6 + retry, добор упавших последовательно.
+
+---
+
+## 🟢 Сессия 2026-09-16 — LIA/praktik-профиль + GSC index-аудит
+
+### KLART (сделано)
+- **LIA-трек:** заполнил профиль на **praktik.se до 82% («Exceptionell»)** через браузерную автоматизацию — все секции 100%, каждая проверена перезагрузкой (⚠️ **praktik.se флакает при сохранении** — всегда F5 + проверять после save): Om mig (финальный текст), Färdigheter (12 навыков), **Portfolio & Länkar (5 ссылок: GitHub, alexgeho.dev, byggexp.se, App Store, Google Play)**, Utbildning (Medieinstitutet, Yrkeshögskola, 2025-08–2027-06), CV загружен. Приложение ByggExp **live в обоих сторах** (App Store `id6748280779` · Google Play `se.byggexp.app`) — добавил в CV+профиль. Детали и next steps → `internship/applications-tracker.md` (блок SESSION 2026-09-16). Предпочтения (память [[job-hunt-praktik]]): НЕ писать «egenföretagare», НЕ писать «AI-first».
+- **Simon Frisk** (FB-группа «Praktikplatser inom IT») — ответил на его вопросы (stack/опыт/учёба). Ждём его предложение по практике.
+
+### 🔜 NÄSTA STEG
+- **GSC index-аудит (✅ прогон 16.09 23:06, свежий `.gsc/index_status.csv`):** **360 indexed · 11 «unknown to Google» · 6 «Discovered-not-indexed»** (итого 17 not-indexed — та же цифра, что 15.09). **ВЫВОД: за неделю ни одна из 17 не проиндексировалась**, хотя внутр. ссылки добавляли (15.09); часть откатилась Discovered→unknown. **Код-ошибок НЕТ** — все URL живые (200) и в сайтмапе. Значит **больше внутр. ссылок НЕ помогает** — рычаг: **Request indexing (ручное, owner) + бэклинки + время** (молодой сайт). Не тратить время на доп.линковку.
+  - **17 URL для Request Indexing (owner, вручную в GSC):** blog: byggfelsforsakring, gron-teknik-avdrag, anbud-bygg, offert-vvs-elektriker-rormokare, e-signering-avtal, kvalitetsplan-bygg, bemanningssystem-bygg, enkelt-tidrapporteringssystem, app-for-byggprojekt, projektplanering-bygg, projektledning-byggforetag, projekthanteringssystem-bygg. verktyg: egenkontroll-el/ventilation/vatrum/tak-mall, signera-pdf. (полный список всегда в `.gsc/index_status.csv`, фильтр != «Submitted and indexed»)
+  - Скорость: `index_status.py` ~20-25 мин (URL Inspection ~3-4с/URL × 377 sv), вывод буферизуется через `| head` → читать итог из CSV, не из stdout. Гонять в фоне.
+- **LIA:** дождаться Simon Frisk; топ-8 outreach (Redmind PRIO 1 — письмо переписать заново) — см. `internship/applications-tracker.md`.
+
+---
+
 ## 🟢 Сессия 2026-09-15 — GSC CTR-фиксы + онбординг-видео (YouTube)
 
 ### KLART (сделано)

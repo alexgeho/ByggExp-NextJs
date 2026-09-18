@@ -2,7 +2,7 @@ export const heroTranslations = {
   ru: {
     heroPill: "Управление проектами",
 
-    heroTitle: "Автоматический учет рабочего времени и управление проектами",
+    heroTitle: "Автоматический и ручной учет рабочего времени и управление проектами",
 
     heroTitleAccent: "для строительных компаний",
 
@@ -26,7 +26,7 @@ export const heroTranslations = {
   en: {
     heroPill: "Construction Software",
 
-    heroTitle: "Automated time tracking and project management",
+    heroTitle: "Automated and manual time tracking and project management",
 
     heroTitleAccent: "for Construction Companies",
 
@@ -49,7 +49,7 @@ export const heroTranslations = {
   sv: {
     heroPill: "Byggledning",
 
-    heroTitle: "Automatisk tidsrapportering och projekthantering",
+    heroTitle: "Automatisk och manuell tidsrapportering och projekthantering",
 
     heroTitleAccent: "för byggföretag",
 
@@ -72,7 +72,7 @@ export const heroTranslations = {
   nb: {
     heroPill: "Byggeledelse",
 
-    heroTitle: "Automatisk timeregistrering og prosjektstyring",
+    heroTitle: "Automatisk og manuell timeregistrering og prosjektstyring",
 
     heroTitleAccent: "for byggefirmaer",
 
@@ -95,7 +95,7 @@ export const heroTranslations = {
   pl: {
     heroPill: "Zarządzanie budową",
 
-    heroTitle: "Automatyczna ewidencja czasu pracy i zarządzanie projektami",
+    heroTitle: "Automatyczna i ręczna ewidencja czasu pracy i zarządzanie projektami",
 
     heroTitleAccent: "dla firm budowlanych",
 

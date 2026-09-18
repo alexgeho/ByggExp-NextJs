@@ -117,7 +117,7 @@ export const heroTranslations = {
 
   uk: {
     heroPill: "Управління будівництвом",
-    heroTitle: "Автоматичний облік робочого часу та управління проєктами",
+    heroTitle: "Автоматичний та ручний облік робочого часу та управління проєктами",
     heroTitleAccent: "для будівельних компаній",
     heroSubtitle:
       "Швидше виставлення рахунків і зарплат, задачі з автонагадуваннями, контроль змін у реальному часі, планування. ",
@@ -134,7 +134,7 @@ export const heroTranslations = {
 
   fi: {
     heroPill: "Rakennusalan hallinta",
-    heroTitle: "Automaattinen työajanseuranta ja projektinhallinta",
+    heroTitle: "Automaattinen ja manuaalinen työajanseuranta ja projektinhallinta",
     heroTitleAccent: "rakennusyrityksille",
     heroSubtitle:
       "Nopeampi laskutus ja palkanmaksu, tehtävät automaattisilla muistutuksilla, vuorojen seuranta reaaliajassa, suunnittelu. ",
@@ -151,7 +151,7 @@ export const heroTranslations = {
 
   et: {
     heroPill: "Ehituse haldus",
-    heroTitle: "Automaatne tööaja arvestus ja projektijuhtimine",
+    heroTitle: "Automaatne ja käsitsi tööaja arvestus ja projektijuhtimine",
     heroTitleAccent: "ehitusettevõtetele",
     heroSubtitle:
       "Kiirem arveldamine ja palgaarvestus, ülesanded automaatsete meeldetuletustega, vahetuste jälgimine reaalajas, planeerimine. ",
@@ -168,7 +168,7 @@ export const heroTranslations = {
 
   lt: {
     heroPill: "Statybų valdymas",
-    heroTitle: "Automatinė darbo laiko apskaita ir projektų valdymas",
+    heroTitle: "Automatinė ir rankinė darbo laiko apskaita ir projektų valdymas",
     heroTitleAccent: "statybos įmonėms",
     heroSubtitle:
       "Greitesnis sąskaitų ir atlyginimų išrašymas, užduotys su automatiniais priminimais, pamainų kontrolė realiu laiku, planavimas. ",
@@ -185,7 +185,7 @@ export const heroTranslations = {
 
   lv: {
     heroPill: "Būvniecības pārvaldība",
-    heroTitle: "Automātiska darba laika uzskaite un projektu vadība",
+    heroTitle: "Automātiska un manuāla darba laika uzskaite un projektu vadība",
     heroTitleAccent: "būvuzņēmumiem",
     heroSubtitle:
       "Ātrāka rēķinu un algu izrakstīšana, uzdevumi ar automātiskiem atgādinājumiem, maiņu kontrole reāllaikā, plānošana. ",

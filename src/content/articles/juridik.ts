@@ -1314,7 +1314,7 @@ const A_OB_OVERTID_BYGGAVTALET_RAKNA_HTML = `
 <li><strong>OB 2 = 40 %</strong></li>
 <li><strong>OB 3 = 70 %</strong></li>
 </ul>
-<p>Vilken nivå som gäller styrs av klockslag och veckodag. Tidig morgon kl 05–06 ligger på den lägsta nivån (<strong>OB 1 = 20 %</strong>), medan kväll kl 18–22 ligger på mellannivån (<strong>OB 2 = 40 %</strong>). Natt kl 22–05 samt hela lördag, söndag och helgdag ger den högsta satsen (<strong>OB 3 = 70 %</strong>). Vardagstid kl 06–18 är ordinarie tid utan OB. Stäm alltid av mot avtalstexten i § 2 p5 innan du bygger in gränserna i lönerutinen, eftersom det är just klockslagen som avgör vilken procent som ska användas.</p>
+<p>Vilken nivå som gäller styrs av klockslag och veckodag. Morgon kl 05–06 och eftermiddag kl 17–19 ligger på den lägsta nivån (<strong>OB 1 = 20 %</strong>), medan kväll kl 19–22 ligger på mellannivån (<strong>OB 2 = 40 %</strong>). Natt kl 22–05 samt hela lördag, söndag och helgdag ger den högsta satsen (<strong>OB 3 = 70 %</strong>). Vardagstid kl 06–18 är ordinarie tid utan OB. Stäm alltid av mot avtalstexten i § 2 p5 innan du bygger in gränserna i lönerutinen, eftersom det är just klockslagen som avgör vilken procent som ska användas.</p>
 
 <h2>Övertidens fyra nivåer (§ 2 p6.1)</h2>
 <p>Övertid har fyra nivåer, också beräknade i procent på utgående lön. Man skiljer på enkel och kvalificerad övertid:</p>

@@ -6823,7 +6823,7 @@ const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
 <h2>Traktamente och förrättningstillägg vid övernattning</h2>
 <p>Vid tjänsteresa med övernattning tillkommer traktamente. Här möts två regelverk som inte är samma sak:</p>
 <ul>
-<li><strong>Byggavtalets traktamente</strong> ligger i 2025-utgåvan på cirka 435 kr/dygn - alltså <em>över</em> Skatteverkets skattefria gräns. Mellanskillnaden är skattepliktig lön. Beloppet reduceras med 55% om arbetsgivaren står för maten och 35% om arbetsgivaren står för boendet. Exakt kronbelopp är avtalsberoende och revideras.</li>
+<li><strong>Byggavtalets traktamente</strong> ligger 2026 på cirka 450 kr/dygn - alltså <em>över</em> Skatteverkets skattefria gräns. Mellanskillnaden är skattepliktig lön. Beloppet reduceras med 55% om arbetsgivaren står för maten och 35% om arbetsgivaren står för boendet. Exakt kronbelopp är avtalsberoende och revideras.</li>
 <li><strong>Skatteverkets skattefria traktamente inrikes 2026:</strong> helt maximibelopp 300 kr/heldag (halvdag 150 kr, natt 150 kr). Efter tre månader på samma ort sänks skattefritt belopp till 210 kr, efter två år till 150 kr. Från 2026 gäller nya, striktare allmänna råd.</li>
 <li><strong>50-km- och övernattningskravet:</strong> skattefritt traktamente förutsätter tjänsteresa med övernattning mer än 50 km från både bostad och den vanliga verksamhetsorten.</li>
 </ul>

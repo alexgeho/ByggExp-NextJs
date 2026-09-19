@@ -598,7 +598,11 @@
 }
 
 .blog-article-content .article-diagram img {
-  max-width: 560px;
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  margin: 0 auto;
   border-radius: 14px;
   border: 1px solid rgba(10, 40, 90, 0.08);
 }

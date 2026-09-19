@@ -2212,7 +2212,7 @@ const A_BYGGDAGBOK: BlogPost = {
 };
 
 const A_PROJEKTLEDNING_BYGGFORETAG_HTML = `
-<p>Projektledning i bygg handlar om att ta ett projekt från anbud till godkänd slutbesiktning utan att tappa kontrollen över tid, pengar och kvalitet på vägen. Det är en roll som lika mycket handlar om planering och uppföljning som om folk och kommunikation. Den här guiden går igenom faserna i ett byggprojekt, vad byggprojektledaren ansvarar för i varje steg och vilka verktyg som gör jobbet lättare.</p>
+<p>Projektledning i bygg handlar om att ta ett projekt från anbud till godkänd slutbesiktning utan att tappa kontrollen över tid, pengar och kvalitet på vägen. Det är en roll som lika mycket handlar om planering och uppföljning som om folk och kommunikation. Den här guiden går igenom faserna i ett byggprojekt, vad byggprojektledaren ansvarar för i varje steg och vilka verktyg som gör jobbet lättare.</p><figure class="article-diagram"><img src="/landing/diagrams/byggdagbok-krav.webp" alt="Tabell som visar när byggdagbok krävs: AB 04 och ABT 06 kräver dagbok enligt kap 3 § 13, medan ABS 18 och Hantverkarformuläret 17 bara kräver det om parterna avtalat om det." width="720" height="380" loading="lazy"><figcaption>I AB 04 och ABT 06 är byggdagbok ett krav enligt kap 3 § 13, medan konsumentavtalen ABS 18 och Hantverkarformuläret 17 bara kräver dagbok om parterna avtalat om det.</figcaption></figure>
 
 <p>Vill du gå direkt på systemstödet? Läs om <a href="/sv/blog/projekthanteringssystem-bygg">projekthanteringssystem för bygg</a>, eller hur du <a href="/sv/blog/digitalisera-byggforetag-projektstyrning">digitaliserar projektstyrningen</a>.</p>
 

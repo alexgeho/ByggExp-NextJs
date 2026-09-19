@@ -379,7 +379,7 @@ const A_SPILLPROCENT_BYGG_MATERIAL: BlogPost = {
 };
 
 const A_BERAKNA_BETONGATGANG_PLATTA_HTML = `
-<p>En felräknad betongåtgång kostar dig antingen pengar i onödan – en halv pall torrbetong som blir stående – eller något värre: att bruket tar slut mitt i gjutningen och du får en kall fog rakt genom plattan. Bägge är onödiga. Med rätt formel och en rimlig spillmarginal räknar du fram exakt hur mycket betong platta, kantbalk och plintar drar innan du beställer en enda säck.</p>
+<p>En felräknad betongåtgång kostar dig antingen pengar i onödan – en halv pall torrbetong som blir stående – eller något värre: att bruket tar slut mitt i gjutningen och du får en kall fog rakt genom plattan. Bägge är onödiga. Med rätt formel och en rimlig spillmarginal räknar du fram exakt hur mycket betong platta, kantbalk och plintar drar innan du beställer en enda säck.<figure class="article-diagram"><img src="/landing/diagrams/berakna-betongatgang-platta.webp" alt="Tabell som visar formel, räkneexempel och betongvolym för platta, kantbalk, fyrkantig och rund plint, samt 10 procent spillpåslag och vikt per kubikmeter." width="720" height="380" loading="lazy"><figcaption>Varje grunddel räknas för sig med sin formel, och på totalvolymen läggs 10 procent spill innan beställning.</figcaption></figure></p>
 
 <p>Vill du hoppa över handräkningen tar <a href="/sv/verktyg/betong-kalkylator">vår gratis betongkalkylator</a> fram kubik, vikt, antal säckar och spill åt dig direkt – men det lönar sig att förstå vad den räknar på.</p>
 
@@ -552,7 +552,7 @@ const A_BERAKNA_MATERIALATGANG_TAK: BlogPost = {
 const A_ARMERING_BERAKNING_PLATTA_GRUND_HTML = `
 <p>När du väl vet hur många kubikmeter betong plattan drar återstår nästa fråga i kalkylen: hur mycket armering går det åt? Nät, kamstål, distanser och bindtråd är en egen materialpost som lätt glöms bort tills leveransen ska bokas. Den här guiden ger dig en praktisk metod för att mängda armeringen till en platta på mark – med nyckeltal du kan räkna på direkt. En sak måste sägas först: de exakta dimensionerna och mängderna styrs alltid av K-ritningen, inte av tumregler. Artikeln handlar om hur du översätter ritningens armeringsspecifikation till en beställning och en offert.</p>
 
-<p>Beräkna betongvolymen först i <a href="/sv/verktyg/betong-kalkylator">vår gratis betongkalkylator -&gt;</a> så har du grunden klar när du lägger på armeringen ovanpå.</p>
+<p>Beräkna betongvolymen först i <a href="/sv/verktyg/betong-kalkylator">vår gratis betongkalkylator -&gt;</a> så har du grunden klar när du lägger på armeringen ovanpå.</p><figure class="article-diagram"><img src="/landing/diagrams/armering-berakning-platta-grund.webp" alt="Diagram med nyckeltal för armering av betongplatta: kamståls vikt per meter, viktformel och räkneexempel för nät och kantbalk på en platta 10x8 meter." width="720" height="380" loading="lazy"><figcaption>Nyckeltal och färdiga räkneexempel för att mängda nät och stångarmering till en platta på mark – dimensionerna styrs alltid av K-ritningen.</figcaption></figure>
 
 <h2>Vad K-ritningen bestämmer – och vad du får uppskatta själv</h2>
 
@@ -1461,7 +1461,7 @@ const A_STAKET_MATERIAL_STOLPAR_ATGANG: BlogPost = {
 };
 
 const A_GOLVVARME_BERAKNING_EFFEKT_HTML = `
-<p>Rätt dimensionerad golvvärme avgör både komforten i det färdiga rummet och driftkostnaden i decennier framåt. Räknar du för lågt blir golvet aldrig varmt nog; räknar du för högt slösar du material och energi. För elgolvvärme tillkommer dessutom hårda behörighetskrav som avgör vem som ens får utföra jobbet. Den här guiden går igenom hur du som installatör eller beställare räknar effektbehov, slinglängd och c/c-avstånd för både vattenburen och elektrisk golvvärme.</p>
+<p>Rätt dimensionerad golvvärme avgör både komforten i det färdiga rummet och driftkostnaden i decennier framåt. Räknar du för lågt blir golvet aldrig varmt nog; räknar du för högt slösar du material och energi. För elgolvvärme tillkommer dessutom hårda behörighetskrav som avgör vem som ens får utföra jobbet. Den här guiden går igenom hur du som installatör eller beställare räknar effektbehov, slinglängd och c/c-avstånd för både vattenburen och elektrisk golvvärme.<figure class="article-diagram"><img src="/landing/diagrams/golvvarme-berakning-effekt.webp" alt="Diagram som visar tumregler för golvvärmens effektbehov i W/m² samt formeln för c/c-avstånd vid elgolvvärme med ett räkneexempel." width="720" height="380" loading="lazy"><figcaption>Effektbehov per hustyp och formeln c/c = kabelns lineära effekt delat på önskad yteffekt, med räkneexempel för elgolvvärme.</figcaption></figure></p>
 
 <p>Vill du snabbt få fram effektbehov, kabellängd och c/c för ett rum? Testa vår gratis <a href="/sv/verktyg/golvvarme-kalkylator">golvvärmekalkylator -&gt;</a> och mata in yta och isoleringsstandard.</p>
 

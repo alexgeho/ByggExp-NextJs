@@ -2,7 +2,7 @@ import type { BlogPost } from '../../types/blog';
 import { SITE_URL } from './site-url';
 
 const PERSONALLIGGARE_HTML = `
-<p>Personalliggare är ett lagkrav i byggbranschen – och att sköta den slarvigt kan bli dyrt. Ett oanmält besök från Skatteverket där personer saknas i liggaren kostar direkt i kontrollavgift. Här går vi igenom vem som måste ha personalliggare, vad som ska registreras, vad ett misstag kostar och hur du sköter den digitalt utan krångel.</p>
+<p>Personalliggare är ett lagkrav i byggbranschen – och att sköta den slarvigt kan bli dyrt. Ett oanmält besök från Skatteverket där personer saknas i liggaren kostar direkt i kontrollavgift. Här går vi igenom vem som måste ha personalliggare, vad som ska registreras, vad ett misstag kostar och hur du sköter den digitalt utan krångel.</p><figure class="article-diagram"><img src="/landing/diagrams/boverkets-nya-byggregler-2026-kontrollplan.webp" alt="Diagram som visar vilket regelverk som gäller beroende på när ansökan inkom: före 1 juli 2025 gamla BBR/EKS, mellan 1 juli 2025 och 30 juni 2026 fritt val utan blandning, efter 30 juni 2026 enbart nya reglerna." width="720" height="380" loading="lazy"><figcaption>Inkomdatumet för lov eller anmälan avgör vilket regelverk projektet ska följa under och efter övergångsperioden.</figcaption></figure>
 <figure class="article-diagram"><img src="/landing/diagrams/personalliggare.webp" alt="Diagram: personalliggare – vilka som ska registreras och Skatteverkets kontrollavgifter" width="720" height="380" loading="lazy"><figcaption>Alla på plats registreras – även UE och inhyrda. Vid brist: 12 500 kr plus 2 500 kr per oregistrerad person.</figcaption></figure>
 
 <h2>Vad är en personalliggare?</h2>

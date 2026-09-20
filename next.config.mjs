@@ -40,6 +40,9 @@ const nextConfig = {
       // which has never existed → the chain still ended in a 404. Point it at the
       // pillar article that covers the term.
       { source: "/sv/blog/tidrapport", destination: "/sv/blog/tidrapportering", statusCode: 301 },
+      // Junk URL from an early test post. It has no target, but leaving it 404 would
+      // fail the whole "Not found (404)" validation run in GSC — send it to the blog index.
+      { source: "/sv/blog/test", destination: "/sv/blog", statusCode: 301 },
 
       // GSC "Not found (404)" round 2: /en & /ru URLs Google indexed before these
       // pages went sv-only. Removing them from the sitemap wasn't enough — Google

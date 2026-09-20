@@ -36,6 +36,10 @@ const nextConfig = {
       { source: "/sv/blog/byggnads-kollektivavtal-2026", destination: "/sv/blog/maste-ha-kollektivavtal-bygg", statusCode: 301 },
       { source: "/sv/blog/anbudskalkyl-bygg", destination: "/sv/blog/kalkylprogram-bygg", statusCode: 301 },
       { source: "/sv/blog/bygg-appar-i-sverige", destination: "/sv/blog/bygg-app", statusCode: 301 },
+      // /blog/tidrapport (old, locale-less URL) was 301-ing onto /sv/blog/tidrapport,
+      // which has never existed → the chain still ended in a 404. Point it at the
+      // pillar article that covers the term.
+      { source: "/sv/blog/tidrapport", destination: "/sv/blog/tidrapportering", statusCode: 301 },
 
       // GSC "Not found (404)" round 2: /en & /ru URLs Google indexed before these
       // pages went sv-only. Removing them from the sitemap wasn't enough — Google

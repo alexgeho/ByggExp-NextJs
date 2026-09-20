@@ -18,10 +18,22 @@ function bare(host: string): string {
   return host.toLowerCase().split(':')[0].replace(/^www\./, '');
 }
 
+// A crawler normally sends `[` and `]` percent-encoded, so the literal route id
+// arrives as `/%5Blang%5D/...`. Compare on the decoded path or the redirect below
+// never fires (it 404s instead — and 500s on the pages that read the segment).
+function decodePath(pathname: string): string {
+  try {
+    return decodeURIComponent(pathname);
+  } catch {
+    return pathname; // malformed escape — leave as-is
+  }
+}
+
 export function middleware(req: NextRequest) {
   const url = req.nextUrl;
   const { pathname } = url;
-  const firstSeg = pathname.split('/')[1] || '';
+  const decodedPath = decodePath(pathname);
+  const firstSeg = decodedPath.split('/')[1] || '';
 
   // Googlebot scraped the literal Next.js route id `/[lang]/...` out of the
   // __NEXT_DATA__ blob and crawled it, producing a batch of bogus 404s in Search
@@ -29,9 +41,17 @@ export function middleware(req: NextRequest) {
   // the errors clear and any stray equity lands on the live page. Runs before the
   // NB_LIVE guard so it applies regardless of the Norway rollout flag.
   if (firstSeg === '[lang]') {
-    const rest = pathname.slice('/[lang]'.length); // '' | '/verktyg' | '/verktyg/tak-kalkylator'
+    // Drop any further unresolved segments (`/[lang]/blog/[slug]` → `/sv/blog`)
+    // so the target is a real page instead of another 404.
+    const rest = decodedPath
+      .split('/')
+      .slice(2)
+      .filter((seg) => !seg.startsWith('['));
+    // `/[lang]/embed/[slug]` strips down to `/sv/embed`, which has no index page
+    // — point it at the tools hub the widgets belong to instead.
+    if (rest.length === 1 && rest[0] === 'embed') rest[0] = 'verktyg';
     const to = new URL(url);
-    to.pathname = `/sv${rest}`;
+    to.pathname = `/sv${rest.length ? `/${rest.join('/')}` : ''}`;
     return NextResponse.redirect(to, 301);
   }
 

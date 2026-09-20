@@ -3,6 +3,41 @@
 Разбор «Not found (404)» из Google Search Console (byggexp.se). Дата: 2026-09-01.
 Статус GSC: 421 проиндексировано, 135 не проиндексировано (8 причин).
 
+## ✅ РАУНД 3 (2026-09-20) — найдена КОРНЕВАЯ причина (hreflang-to-404)
+
+Триггер: письмо GSC «New reason preventing your pages from being indexed → Blocked by robots.txt».
+**Ложная тревога:** единственный заблокированный URL = `https://admin.byggexp.se/` (наш `Disallow: /`,
+так и задумано; domain-property покрывает поддомены). robots.txt на byggexp.se/www/byggexp.no = `Allow: /`.
+
+Заодно разобрал весь Page indexing (430 indexed / 196 not indexed):
+- `Excluded by 'noindex'` (25) — все `/sv/embed/*`, намеренно.
+- `Alternate page with proper canonical` (37) — все `www.` → канонический non-www, норма.
+- `Not found (404)` (26, Validation **Failed** 15.09) — разобрано ниже.
+- Sitemap чист: все **495 URL = 200** (прогон curl по всему sitemap.xml).
+
+### Корневая причина 404-ов
+`[lang]/blog/[slug].tsx` отдавал hreflang по **ручному denylist** `sv-only-articles.ts`: если слаг не
+в списке — эмитим альтернаты на ВСЕ landing-языки. После добавления 6 новых языков (pl/uk/fi/et/lt/lv)
+две статьи не попали в список → hreflang вёл на `/fi/…`, `/et/…`, `/pl/…`, которые 404. Именно эти URL
+Google и краулил (`/fi|/et/blog/tidrapport-app-iphone`, `/ru|/en/blog/faktura-med-rotavdrag`).
+
+### Что сделано (коммит «fix(seo): derive hreflang…»)
+1. **hreflang выводится из реестра статей**, а не из denylist: `getCodeArticleLocales(slug)` в
+   `code-articles.ts` → альтернаты только для локалей, где статья реально есть. Новая статья или новый
+   язык больше не могут создать hreflang-to-404. `sv-only-articles.ts` удалён.
+2. **middleware: `/%5Blang%5D/…`** — краулер шлёт скобки в percent-encoding, поэтому старая проверка
+   `firstSeg === '[lang]'` не срабатывала (404, а `/[lang]/underbitraden` вообще 500). Теперь путь
+   декодируется, нерезолвленные `[slug]`-сегменты отбрасываются: `/[lang]/blog/[slug]` → `/sv/blog`,
+   `/[lang]/embed/[slug]` → `/sv/verktyg`.
+3. **Legacy `/blog/*` и `/blog`** — было 307 (временный), стало 301/308.
+4. **`/sv/blog/tidrapport`** (цепочка со старого `/blog/tidrapport` упиралась в 404) → 301 на
+   `/sv/blog/tidrapportering`.
+
+**Осталось:** после деплоя → GSC → Pages → «Not found (404)» → **VALIDATE FIX** (и через 1–2 недели
+проверить, что счётчик падает).
+
+---
+
 ## ✅ РАУНД 2 (2026-09-07) — Validation всё ещё Failed, добил остаток
 
 GSC 404 = **25** (было 26), статус **Failed**. Прогнал все 25 live-fetch'ем — разбивка:
@@ -21,8 +56,6 @@ GSC 404 = **25** (было 26), статус **Failed**. Прогнал все 2
 - **`/blog/test`** — мусор, цели нет, оставляю 404 (Google выкинет сам).
 
 **Осталось:** деплой (push→VPS ~1–2 мин) → проверить live 301 → в GSC **Validate fix** для «Not found (404)».
-
----
 
 ## ✅ РЕШЕНО (2026-09-01, вечер) — проверено на live + пофикшено в коде
 

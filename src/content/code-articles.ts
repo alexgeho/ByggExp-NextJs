@@ -89,6 +89,17 @@ export function getCodeArticle(
   return getCodeArticles(locale).find((post) => post.slug === slug) ?? null;
 }
 
+// Locales that actually publish this slug. hreflang must only ever point at
+// locales where the article exists — advertising an alternate that 404s is
+// exactly what filled GSC's "Not found (404)" report. Deriving it here (instead
+// of a hand-kept sv-only denylist) means a new article, or a new site language,
+// can never reintroduce hreflang-to-404.
+export function getCodeArticleLocales(slug: string): BlogLocale[] {
+  return (Object.keys(CODE_ARTICLES) as BlogLocale[]).filter((locale) =>
+    CODE_ARTICLES[locale].some((post) => post.slug === slug),
+  );
+}
+
 export function isCodeArticleSlug(slug: string): boolean {
   return Object.values(CODE_ARTICLES).some((posts) =>
     posts.some((post) => post.slug === slug),

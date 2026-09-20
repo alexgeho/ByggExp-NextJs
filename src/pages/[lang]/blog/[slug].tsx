@@ -14,9 +14,12 @@ import { getArticleInlineTool } from '../../../content/article-inline-tools';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { resolveFaq } from '../../../lib/faq';
 import { getMockBlogPost } from '../../../lib/blog-mock';
-import { getCodeArticle, getCodeArticles } from '../../../content/code-articles';
+import {
+  getCodeArticle,
+  getCodeArticleLocales,
+  getCodeArticles,
+} from '../../../content/code-articles';
 import { categoryForTag } from '../../../lib/blog-categories';
-import { isSvOnlyArticle } from '../../../content/sv-only-articles';
 import { buildHreflangAlternates, localeOrigin } from '../../../lib/seo';
 import { blogPageTranslations } from '../../../locales/blog';
 import { footerTranslations } from '../../../locales/footer';
@@ -123,17 +126,23 @@ export default function BlogArticlePage({
   const footerT = footerTranslations[lang];
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = post.canonicalUrl || `${localeOrigin(lang)}/${lang}/blog/${encodeURIComponent(post.slug)}`;
-  // Most slugs are shared across locales, so the same article path exists per
-  // language. Market-specific articles are Swedish-only, though — for those we
-  // must not emit en/ru alternates (those URLs don't exist → hreflang-to-404).
-  // nb articles live only on byggexp.no and have no sv/en/ru counterpart, so they
-  // are self-canonical (no cross-locale alternates), same as sv-only articles.
-  const svOnly = isSvOnlyArticle(post.slug) || post.locale === 'nb';
-  const hreflangAlternates = svOnly
-    ? []
-    : buildHreflangAlternates(
-        (code) => `${localeOrigin(code)}/${code}/blog/${encodeURIComponent(post.slug)}`,
-      );
+  // hreflang is derived from where the article ACTUALLY exists, never from a
+  // hand-kept list: the registry knows which locales publish this slug, so a new
+  // article — or a new site language — can't start advertising alternates that
+  // 404 (that is what filled GSC's "Not found (404)" with /fi, /et, /pl … URLs).
+  // A post with no cross-locale sibling (sv-only, nb-only, CMS/mock) gets none
+  // and stays self-canonical.
+  const articleLocales = getCodeArticleLocales(post.slug).filter(
+    (code): code is LandingLanguageCode =>
+      (landingLanguageCodes as readonly string[]).includes(code),
+  );
+  const hreflangAlternates =
+    articleLocales.length > 1
+      ? buildHreflangAlternates(
+          (code) => `${localeOrigin(code)}/${code}/blog/${encodeURIComponent(post.slug)}`,
+          articleLocales,
+        )
+      : [];
   const title = post.seoTitle || `${post.title} | ByggExp`;
   const description = post.seoDescription || post.excerpt;
   // Feature articles get a dedicated, per-slug hero under /public/features so

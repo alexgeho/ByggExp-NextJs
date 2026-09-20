@@ -31,8 +31,9 @@
 - Разбор и метод → `docs/seo/gsc-404-cleanup.md` (РАУНД 3).
 
 ### 🔜 NÄSTA STEG
-1. **(owner, 1 клик)** GSC → Pages → «Not found (404)» → **VALIDATE FIX**. Через 1–2 недели проверить,
-   что счётчик 26 падает (ре-валидация Google идёт днями).
+1. **Валидация в GSC запущена мной 20.09** («Not found (404)»: Validation started, pending 26,
+   failed 0). Через 1–2 недели проверить, что счётчик 26 падает — ре-валидация Google идёт днями.
+   Все 26 URL проверены live: 25 отдают 200 через 301, `/blog/test` → `/sv/blog`.
 2. «Discovered – currently not indexed» (42) — рычаг прежний: бэклинки + Request indexing, НЕ доп.
    внутренняя перелинковка (проверено в сентябре).
 

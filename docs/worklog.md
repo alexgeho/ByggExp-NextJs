@@ -6,8 +6,35 @@
 ---
 
 ## 📍 СТАТУС (кратко)
-Активно: SEO-контент + визуалы блога (фото-обложки готовы, диаграммы в топ-статьях, факт-чек 2026 пройден). Инструменты и NÄSTA STEG — в свежей сессии ниже.
+Активно: SEO-контент + визуалы блога; тех-SEO: 20.09 починен корень GSC-404 (hreflang-to-404) (фото-обложки готовы, диаграммы в топ-статьях, факт-чек 2026 пройден). Инструменты и NÄSTA STEG — в свежей сессии ниже.
 История сессий до 2026-09-12 → `docs/worklog-archive.md`. Индекс всех доков → `docs/README.md`. Норвегия (byggexp.no) — память [[norway-expansion]] + архив.
+
+## 🟢 Сессия 2026-09-20 — GSC: «Blocked by robots.txt» + корневой фикс 404 (hreflang)
+
+### KLART (сделано, задеплоено `61b193d`)
+- **Письмо GSC «Blocked by robots.txt» = ложная тревога.** Единственный заблокированный URL —
+  `https://admin.byggexp.se/` (наш же `Disallow: /`; domain-property покрывает поддомены).
+  robots.txt на byggexp.se/www/byggexp.no = `Allow: /` + Sitemap.
+- **Разобрал весь Page indexing** (430 indexed / 196 not): `noindex` (25) = только `/sv/embed/*`
+  (намеренно), `Alternate page w/ canonical` (37) = www-дубли (норма), `Duplicate without canonical` (4)
+  = `/ru/{dpa,villkor,integritetspolicy}` с каноникалом на `/en` (норма) + admin/login.
+  **Sitemap чист: все 495 URL = 200** (полный прогон curl).
+- **🔑 Корневая причина 404 (26, Validation Failed):** hreflang в `[lang]/blog/[slug].tsx` строился по
+  ручному denylist `sv-only-articles.ts` → после добавления 6 новых языков две статьи не попали в
+  список и стали рекламировать `/fi|/et|/pl/...`, которых нет. Теперь **hreflang выводится из реестра**
+  (`getCodeArticleLocales`) — только локали, где статья реально есть; denylist удалён.
+- **middleware `[lang]`:** краулер шлёт скобки percent-encoded (`/%5Blang%5D/…`), старая проверка не
+  срабатывала → 404 (а `/[lang]/underbitraden` отдавал 500). Теперь декодируем путь и отбрасываем
+  нерезолвленные `[slug]`-сегменты (`/[lang]/blog/[slug]` → `/sv/blog`, `embed` → `/sv/verktyg`).
+- **Легаси `/blog` и `/blog/<slug>`:** 307 → 301. **`/sv/blog/tidrapport`** → `/sv/blog/tidrapportering`
+  (старая цепочка `/blog/tidrapport` упиралась в 404).
+- Разбор и метод → `docs/seo/gsc-404-cleanup.md` (РАУНД 3).
+
+### 🔜 NÄSTA STEG
+1. **(owner, 1 клик)** GSC → Pages → «Not found (404)» → **VALIDATE FIX**. Через 1–2 недели проверить,
+   что счётчик 26 падает (ре-валидация Google идёт днями).
+2. «Discovered – currently not indexed» (42) — рычаг прежний: бэклинки + Request indexing, НЕ доп.
+   внутренняя перелинковка (проверено в сентябре).
 
 ## 🟢 Сессия 2026-09-17…19 — AI-картинки (Replicate/FLUX) + мультиязычные фичи + фото-обложки всего блога
 

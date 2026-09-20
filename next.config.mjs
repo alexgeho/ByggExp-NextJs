@@ -53,6 +53,13 @@ const nextConfig = {
       { source: "/en/blog/faktura-med-rotavdrag", destination: "/sv/blog/faktura-med-rotavdrag", statusCode: 301 },
       { source: "/ru/blog/faktura-med-rotavdrag", destination: "/sv/blog/faktura-med-rotavdrag", statusCode: 301 },
 
+      // Round 3: the same two articles were also advertised (via the old
+      // denylist-driven hreflang) in the six languages added later. hreflang no
+      // longer emits them, but Google keeps re-crawling what it already found —
+      // 301 onto the Swedish original so those 404s clear.
+      { source: "/:lang(pl|uk|fi|et|lt|lv)/blog/tidrapport-app-iphone", destination: "/sv/blog/tidrapport-app-iphone", statusCode: 301 },
+      { source: "/:lang(pl|uk|fi|et|lt|lv)/blog/faktura-med-rotavdrag", destination: "/sv/blog/faktura-med-rotavdrag", statusCode: 301 },
+
       // Phantom routes Google indexed that have no marketing page (no internal
       // links point here). 301 to the home page to clear the 404.
       { source: "/faq", destination: "/sv", statusCode: 301 },

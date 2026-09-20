@@ -6,12 +6,14 @@
 ---
 
 ## 📍 СТАТУС (кратко)
-Активно: SEO-контент + визуалы блога; тех-SEO: 20.09 починен корень GSC-404 (hreflang-to-404) (фото-обложки готовы, диаграммы в топ-статьях, факт-чек 2026 пройден). Инструменты и NÄSTA STEG — в свежей сессии ниже.
+Активно: SEO-контент + визуалы блога (фото-обложки готовы, диаграммы в топ-статьях, факт-чек 2026 пройден).
+20.09 закрыт тех-SEO долг: починен корень GSC-404 (hreflang-to-404), валидация в GSC запущена — ждём результат.
+Инструменты и NÄSTA STEG — в свежей сессии ниже.
 История сессий до 2026-09-12 → `docs/worklog-archive.md`. Индекс всех доков → `docs/README.md`. Норвегия (byggexp.no) — память [[norway-expansion]] + архив.
 
 ## 🟢 Сессия 2026-09-20 — GSC: «Blocked by robots.txt» + корневой фикс 404 (hreflang)
 
-### KLART (сделано, задеплоено `61b193d`)
+### KLART (сделано, задеплоено: `61b193d`, `a168129`, `176037d`, `b97cd87`)
 - **Письмо GSC «Blocked by robots.txt» = ложная тревога.** Единственный заблокированный URL —
   `https://admin.byggexp.se/` (наш же `Disallow: /`; domain-property покрывает поддомены).
   robots.txt на byggexp.se/www/byggexp.no = `Allow: /` + Sitemap.
@@ -28,14 +30,38 @@
   нерезолвленные `[slug]`-сегменты (`/[lang]/blog/[slug]` → `/sv/blog`, `embed` → `/sv/verktyg`).
 - **Легаси `/blog` и `/blog/<slug>`:** 307 → 301. **`/sv/blog/tidrapport`** → `/sv/blog/tidrapportering`
   (старая цепочка `/blog/tidrapport` упиралась в 404).
+- **Добито хвостами:** 301 для `/{pl,uk,fi,et,lt,lv}/blog/{tidrapport-app-iphone,faktura-med-rotavdrag}`
+  (Google продолжает краулить уже найденные URL, даже когда hreflang их больше не объявляет) и
+  `/sv/blog/test` → `/sv/blog` (один незакрытый 404 завалил бы весь прогон валидации).
+- **Итог проверки live:** все 25 проверяемых URL из отчёта отдают **200** (через 301). Sitemap — 495/495 = 200.
+- **Валидацию в GSC нажал сам** (Pages → Not found (404) → Start new validation): started 20.09,
+  pending 26, failed 0.
 - Разбор и метод → `docs/seo/gsc-404-cleanup.md` (РАУНД 3).
 
-### 🔜 NÄSTA STEG
-1. **Валидация в GSC запущена мной 20.09** («Not found (404)»: Validation started, pending 26,
-   failed 0). Через 1–2 недели проверить, что счётчик 26 падает — ре-валидация Google идёт днями.
-   Все 26 URL проверены live: 25 отдают 200 через 301, `/blog/test` → `/sv/blog`.
-2. «Discovered – currently not indexed» (42) — рычаг прежний: бэклинки + Request indexing, НЕ доп.
-   внутренняя перелинковка (проверено в сентябре).
+### 🛠️ Инструменты/приёмы этой сессии
+- **Разбор GSC без экспорта:** claude-in-chrome → `search.google.com/search-console/index?resource_id=sc-domain:byggexp.se`
+  → клик по причине → Examples (Rows per page 100) → `find` по таблице. Item_key в URL у каждой причины свой.
+- **Проверка всего sitemap одной командой:**
+  `curl -s https://byggexp.se/sitemap.xml | grep -o '<loc>[^<]*</loc>' | sed -E 's|</?loc>||g' | xargs -P8 -I{} sh -c 'echo "$(curl -s -o /dev/null -w %{http_code} {}) {}"'`
+  (⚠️ BSD sed не понимает `\?` — нужен `sed -E`).
+- **Ловушка:** краулер шлёт `[`/`]` percent-encoded → проверять надо `/%5Blang%5D/...`, а не `/[lang]/...`
+  (curl нужен `-g --path-as-is`, иначе он сам кодирует).
+- **Правило hreflang:** альтернат обязан вести на 200. Любой ручной список «где статья есть» протухает —
+  выводить из реестра контента.
+
+### 🔜 NÄSTA STEG (продолжать отсюда)
+1. **Через 1–2 недели (≈ 4–5 окт): проверить валидацию GSC.** Pages → «Not found (404)» — счётчик 26
+   должен падать, статус стать Passed. Если снова Failed — открыть Examples и прогнать те URL live
+   (`curl -sL -o /dev/null -w "%{http_code} %{url_effective}"`), все должны быть 200.
+2. **Заодно прогнать `.gsc/index_status.py`** — сравнить «not indexed» с сентябрьскими 17 и увидеть,
+   вышли ли сироты из Discovered. Токен GSC ~7 дней (Testing) — обновляю сам через браузер, см. [[gsc-api-setup]].
+3. **«Discovered – currently not indexed» (42)** — рычаг прежний: **бэклинки + Request indexing (owner,
+   вручную)**, НЕ доп. внутренняя перелинковка (проверено в сентябре, не помогло).
+4. **Контент (перенесено из прошлой сессии, приоритет выше тех-SEO — тех-долг закрыт):**
+   диаграммы для топ-40 статей (`.gsc/top_pages.py` + пайплайн из сессии 17–19.09) · кластер
+   **takstolar** (самый большой near-miss) · вычитка носителем pl/nb фича-страниц · факт-чек на
+   автопилот (ждёт решения owner'а).
+5. ⚠️ Тех-долг прежний: коллизия слага `byggdagbok` (2 статьи, отдаётся `tillvaxt.ts`).
 
 ## 🟢 Сессия 2026-09-17…19 — AI-картинки (Replicate/FLUX) + мультиязычные фичи + фото-обложки всего блога
 

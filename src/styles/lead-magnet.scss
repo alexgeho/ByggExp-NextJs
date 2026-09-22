@@ -1162,3 +1162,69 @@
     padding: 16px;
   }
 }
+
+// --- egenkontroll with measurement protocol (e.g. el) ------------------------
+// Two-line rows: the control point (with Krav/referens) spans the full width,
+// then Mätvärde · Resultat · Kommentar · remove underneath.
+.lm-tool-row-egen-measure {
+  grid-template-columns: 150px 150px 1fr 34px;
+  row-gap: 6px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--lm-field-border);
+}
+
+.lm-tool-row-egen-measure > .lm-tool-row-point {
+  grid-column: 1 / -1;
+}
+
+.lm-tool-row-ref {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.lm-tool-row-ref strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.lm-tool-measure {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lm-tool-measure span {
+  font-size: 0.85rem;
+  color: var(--muted);
+  min-width: 22px;
+}
+
+.lm-tool-section-row {
+  margin: 14px 0 8px;
+  padding-bottom: 4px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--lm-field-border);
+}
+
+.lm-tool-meta-extra {
+  margin-top: 12px;
+}
+
+.lm-tool-footnote {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+  .lm-tool-row-egen-measure {
+    grid-template-columns: 1fr 1fr 34px;
+  }
+
+  .lm-tool-row-egen-measure > input {
+    grid-column: 1 / -1;
+  }
+}

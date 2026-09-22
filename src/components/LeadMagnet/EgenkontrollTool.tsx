@@ -9,7 +9,17 @@ import ToolAppCta from './ToolAppCta';
 // auto-fill professional control points, or fill your own — then download a
 // PDF. sv-only by strategy.
 
-type Row = { point: string; result: string; comment: string };
+type Row = {
+  point: string;
+  result: string;
+  comment: string;
+  // Optional protocol fields, filled from presets like el (sections + measured values).
+  section?: string;
+  reference?: string;
+  unit?: string;
+  requirement?: string;
+  measured?: string;
+};
 
 const RESULTS = ['Ej besvarad', 'Godkänd', 'Anmärkning', 'Ej aktuellt'];
 
@@ -24,8 +34,17 @@ const presetRows = (presetId: string): Row[] => {
     point: item.point,
     result: RESULTS[0],
     comment: '',
+    section: item.section,
+    reference: item.reference,
+    unit: item.unit,
+    requirement: item.requirement,
+    measured: '',
   }));
 };
+
+// Rows that carry a requirement or unit turn the checklist into a measurement
+// protocol: extra Krav + Mätvärde columns in the form, PDF and Excel.
+const isProtocol = (rows: Row[]) => rows.some((r) => r.unit || r.requirement);
 
 export default function EgenkontrollTool({
   defaultPreset,
@@ -42,6 +61,7 @@ export default function EgenkontrollTool({
   const [rows, setRows] = useState<Row[]>(
     defaultPreset ? presetRows(defaultPreset) : [emptyRow(), emptyRow(), emptyRow()],
   );
+  const [meta, setMeta] = useState<Record<string, string>>({});
   const [busy, setBusy] = useState(false);
   // Clarity showed most "dead clicks" landing on the template buttons: users
   // clicked a template but got no visible feedback (the filled table is below
@@ -49,6 +69,11 @@ export default function EgenkontrollTool({
   // into view so it's obvious the template was applied.
   const [activePreset, setActivePreset] = useState<string | null>(defaultPreset ?? null);
   const rowsRef = useRef<HTMLDivElement>(null);
+  // Preset whose extra header fields / signatures / footnote apply. Kept separate
+  // from activePreset (the highlight), which resets when a draft is restored.
+  const [presetId, setPresetId] = useState<string | null>(defaultPreset ?? null);
+  const preset = EGENKONTROLL_PRESETS.find((p) => p.id === presetId);
+  const protocol = isProtocol(rows);
 
   // --- Utkast sparas automatiskt i webbläsaren ---------------------------------
   // Det som gör verktyget värt att komma tillbaka till: du kan börja fylla i en
@@ -65,7 +90,7 @@ export default function EgenkontrollTool({
       if (raw) {
         const d = JSON.parse(raw) as Partial<{
           title: string; project: string; responsible: string;
-          date: string; rows: Row[];
+          date: string; rows: Row[]; meta: Record<string, string>; presetId: string | null;
         }>;
         const hasContent =
           !!d.title?.trim() ||
@@ -80,6 +105,8 @@ export default function EgenkontrollTool({
             setRows(d.rows);
             setActivePreset(null);
           }
+          if (d.meta) setMeta(d.meta);
+          if (d.presetId !== undefined) setPresetId(d.presetId);
           setRestored(true);
         }
       }
@@ -95,12 +122,12 @@ export default function EgenkontrollTool({
     try {
       window.localStorage.setItem(
         storageKey,
-        JSON.stringify({ title, project, responsible, date, rows }),
+        JSON.stringify({ title, project, responsible, date, rows, meta, presetId }),
       );
     } catch {
       /* full/avstängd storage – ej kritiskt */
     }
-  }, [title, project, responsible, date, rows, storageKey]);
+  }, [title, project, responsible, date, rows, meta, presetId, storageKey]);
 
   function clearDraft() {
     try {
@@ -114,6 +141,8 @@ export default function EgenkontrollTool({
     setDate('');
     setRows(defaultPreset ? presetRows(defaultPreset) : [emptyRow(), emptyRow(), emptyRow()]);
     setActivePreset(defaultPreset ?? null);
+    setPresetId(defaultPreset ?? null);
+    setMeta({});
     setRestored(false);
   }
 
@@ -133,18 +162,13 @@ export default function EgenkontrollTool({
     setRows((prev) => prev.map((row, i) => (i === index ? { ...row, ...patch } : row)));
   const addRow = () => setRows((prev) => [...prev, emptyRow()]);
 
-  const applyPreset = (presetId: string) => {
-    const preset = EGENKONTROLL_PRESETS.find((p) => p.id === presetId);
-    if (!preset) return;
-    setActivePreset(presetId);
-    setTitle(preset.name);
-    setRows(
-      preset.items.map((item) => ({
-        point: item.point,
-        result: RESULTS[0],
-        comment: '',
-      })),
-    );
+  const applyPreset = (id: string) => {
+    const chosen = EGENKONTROLL_PRESETS.find((p) => p.id === id);
+    if (!chosen) return;
+    setActivePreset(id);
+    setPresetId(id);
+    setTitle(chosen.name);
+    setRows(presetRows(id));
     // Let the table render, then bring it into view as clear confirmation.
     window.setTimeout(() => {
       rowsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -153,10 +177,24 @@ export default function EgenkontrollTool({
   const removeRow = (index: number) =>
     setRows((prev) => (prev.length > 1 ? prev.filter((_, i) => i !== index) : prev));
 
+  // "Egenkontroll El" → egenkontroll-el (not egenkontroll-egenkontroll-el).
+  const fileBase = () =>
+    `egenkontroll-${(title.trim() || 'kontroll').replace(/^egenkontroll\s*/i, '').trim() || 'kontroll'}`
+      .replace(/[\s/]+/g, '-')
+      .toLowerCase();
+
   async function downloadPdf() {
     setBusy(true);
     try {
       const { jsPDF } = await import('jspdf');
+      // jsPDF's built-in Helvetica is WinAnsi: åäö and × work, Ω/Δ/≥/≤ don't.
+      const pdfText = (s: string) =>
+        s
+          .replace(/MΩ/g, 'Mohm')
+          .replace(/Ω/g, 'ohm')
+          .replace(/Δ/g, 'd')
+          .replace(/≥/g, '>=')
+          .replace(/≤/g, '<=');
       // Landscape (horizontal) so the table has room for a Datum column and
       // wide "Kommentar" cells that are comfortable to write in.
       const doc = new jsPDF({ unit: 'pt', format: 'a4', orientation: 'landscape' });
@@ -168,7 +206,7 @@ export default function EgenkontrollTool({
 
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(20);
-      doc.text('Egenkontroll', marginX, y);
+      doc.text(pdfText(title.trim() || 'Egenkontroll'), marginX, y);
       doc.setFont('helvetica', 'normal');
       y += 26;
 
@@ -180,93 +218,165 @@ export default function EgenkontrollTool({
         doc.text(text, x, y);
         const startX = x + doc.getTextWidth(text);
         if (value.trim()) {
-          doc.text(value.trim(), startX, y);
+          doc.text(pdfText(value.trim()), startX, y);
         } else {
           doc.setDrawColor(160);
           doc.line(startX, y + 2, lineEnd, y + 2);
         }
       };
-      metaLine('Titel', title, marginX, rightColX - 30);
-      metaLine('Ansvarig', responsible, rightColX, tableRight);
-      y += 22;
       metaLine('Projekt', project, marginX, rightColX - 30);
       metaLine('Datum', date, rightColX, tableRight);
-      y += 26;
+      y += 22;
+      metaLine('Ansvarig', responsible, marginX, rightColX - 30);
+      y += 22;
+      // Preset-specific header fields (e.g. el: företag, installatör, instrument).
+      (preset?.meta ?? []).forEach((f) => {
+        metaLine(f.label, meta[f.name] ?? '', marginX, tableRight);
+        y += 20;
+      });
+      y += 6;
 
       // Table columns. Empty Resultat/Datum/Kommentar cells are deliberately
-      // left blank so the sheet can be printed and filled in by hand.
-      const colX = {
-        point: marginX,
-        result: marginX + 340,
-        datum: marginX + 340 + 120,
-        comment: marginX + 340 + 120 + 110,
-      };
-      const pointWidth = colX.result - colX.point - 12;
-      const commentWidth = tableRight - colX.comment - 8;
+      // left blank so the sheet can be printed and filled in by hand. A
+      // measurement protocol adds Krav + Mätvärde columns.
+      const cols = protocol
+        ? [
+            { key: 'point', label: 'Kontrollpunkt', w: 240 },
+            { key: 'krav', label: 'Krav', w: 120 },
+            { key: 'measured', label: 'Mätvärde', w: 80 },
+            { key: 'result', label: 'Resultat', w: 80 },
+            { key: 'sign', label: 'Datum / sign.', w: 90 },
+            { key: 'comment', label: 'Kommentar', w: 0 },
+          ]
+        : [
+            { key: 'point', label: 'Kontrollpunkt', w: 340 },
+            { key: 'result', label: 'Resultat', w: 120 },
+            { key: 'sign', label: 'Datum / sign.', w: 110 },
+            { key: 'comment', label: 'Kommentar', w: 0 },
+          ];
+      const colX: number[] = [];
+      let cx = marginX;
+      cols.forEach((c) => {
+        colX.push(cx);
+        cx += c.w;
+      });
+      const colW = (i: number) => (i < cols.length - 1 ? cols[i].w : tableRight - colX[i]) - 8;
 
       const drawHeader = () => {
         doc.setFont('helvetica', 'bold');
-        doc.setFontSize(11);
-        doc.text('Kontrollpunkt', colX.point + 4, y + 15);
-        doc.text('Resultat', colX.result + 4, y + 15);
-        doc.text('Datum', colX.datum + 4, y + 15);
-        doc.text('Kommentar', colX.comment + 4, y + 15);
+        doc.setFontSize(10);
+        cols.forEach((c, i) => doc.text(c.label, colX[i] + 4, y + 15));
         doc.setFont('helvetica', 'normal');
         y += 22;
       };
 
-      // Vertical column separators + top border for one page's table block.
-      const drawVerticals = (top: number, bottom: number) => {
+      // Column separators for one row (section rows only get the outer border).
+      const drawVerticals = (top: number, bottom: number, outerOnly = false) => {
         doc.setDrawColor(180);
-        doc.line(marginX, top, tableRight, top);
-        [marginX, colX.result, colX.datum, colX.comment, tableRight].forEach((x) => {
-          doc.line(x, top, x, bottom);
-        });
+        (outerOnly ? [marginX, tableRight] : [...colX, tableRight]).forEach((x) =>
+          doc.line(x, top, x, bottom),
+        );
       };
 
-      let tableTop = y;
+      const newPage = () => {
+        doc.addPage();
+        y = 54;
+      };
+
+      const headerTop = y;
       drawHeader();
+      drawVerticals(headerTop, y);
+      doc.line(marginX, headerTop, tableRight, headerTop);
       doc.setDrawColor(180);
       doc.line(marginX, y, tableRight, y); // underline header row
-      doc.setFontSize(10);
+      doc.setFontSize(9.5);
 
+      let lastSection: string | undefined;
       rows.forEach((row) => {
-        const pointLines = doc.splitTextToSize(row.point || '', pointWidth) as string[];
-        const commentLines = doc.splitTextToSize(row.comment || '', commentWidth) as string[];
-        const lineCount = Math.max(pointLines.length, commentLines.length, 1);
-        const rowHeight = Math.max(lineCount * 13 + 13, 28);
-
-        if (y + rowHeight > pageHeight - 70) {
-          drawVerticals(tableTop, y);
-          doc.addPage();
-          y = 54;
-          tableTop = y;
-          drawHeader();
+        // Section heading row spanning the table (e.g. "A. Före ibruktagning").
+        if (row.section && row.section !== lastSection) {
+          lastSection = row.section;
+          if (y + 22 + 28 > pageHeight - 70) {
+            newPage();
+            const top = y;
+            drawHeader();
+            drawVerticals(top, y);
+            doc.line(marginX, top, tableRight, top);
+            doc.line(marginX, y, tableRight, y);
+          }
+          doc.setFillColor(238, 242, 247);
+          doc.rect(marginX, y, tableRight - marginX, 20, 'F');
+          doc.setFont('helvetica', 'bold');
+          doc.setFontSize(10);
+          doc.text(pdfText(row.section), marginX + 4, y + 14);
+          doc.setFont('helvetica', 'normal');
+          doc.setFontSize(9.5);
           doc.setDrawColor(180);
           doc.line(marginX, y, tableRight, y);
-          doc.setFontSize(10);
+          drawVerticals(y, y + 20, true);
+          y += 20;
+          doc.line(marginX, y, tableRight, y);
         }
 
-        const textY = y + 16;
-        doc.text(pointLines, colX.point + 4, textY);
-        // Only print an answered result; leave "Ej besvarad" blank to fill in.
-        if (row.result && row.result !== 'Ej besvarad') {
-          doc.text(row.result, colX.result + 4, textY);
+        const pointText = row.reference ? `${row.point}  (${row.reference})` : row.point;
+        const measuredText = row.measured?.trim()
+          ? `${row.measured.trim()}${row.unit ? ` ${row.unit}` : ''}`
+          : row.unit
+            ? `______ ${row.unit}`
+            : '';
+        const cell: Record<string, string> = {
+          point: pdfText(pointText || ''),
+          krav: pdfText(row.requirement || ''),
+          measured: pdfText(measuredText),
+          // Only print an answered result; leave "Ej besvarad" blank to fill in.
+          result: row.result && row.result !== 'Ej besvarad' ? row.result : '',
+          sign: '',
+          comment: pdfText(row.comment || ''),
+        };
+        const lines = cols.map((c, i) => doc.splitTextToSize(cell[c.key] || '', colW(i)) as string[]);
+        const lineCount = Math.max(1, ...lines.map((l) => l.length));
+        const rowHeight = Math.max(lineCount * 12 + 12, 26);
+
+        if (y + rowHeight > pageHeight - 70) {
+          newPage();
+          const top = y;
+          drawHeader();
+          drawVerticals(top, y);
+          doc.setDrawColor(180);
+          doc.line(marginX, top, tableRight, top);
+          doc.line(marginX, y, tableRight, y);
+          doc.setFontSize(9.5);
         }
-        // Datum-cellen lämnas alltid tom att fylla i.
-        doc.text(commentLines, colX.comment + 4, textY);
+
+        lines.forEach((l, i) => doc.text(l, colX[i] + 4, y + 15));
+        drawVerticals(y, y + rowHeight);
         y += rowHeight;
         doc.setDrawColor(220);
         doc.line(marginX, y, tableRight, y); // row separator
       });
 
-      drawVerticals(tableTop, y);
-
-      y = Math.min(y + 34, pageHeight - 40);
+      // Signatures (el: one per control stage) + regulatory footnote.
+      const signatures = preset?.signatures ?? ['Underskrift ansvarig'];
+      const blockHeight = signatures.length * 22 + (preset?.footnote ? 40 : 0) + 30;
+      if (y + blockHeight > pageHeight - 30) {
+        newPage();
+      } else {
+        y += 30;
+      }
       doc.setFontSize(10);
-      doc.text('Underskrift ansvarig: ______________________________', marginX, y);
+      signatures.forEach((s) => {
+        doc.text(`${pdfText(s)}: ______________________________________`, marginX, y);
+        y += 22;
+      });
+      if (preset?.footnote) {
+        doc.setFontSize(8);
+        doc.setTextColor(110);
+        const fn = doc.splitTextToSize(pdfText(preset.footnote), tableRight - marginX) as string[];
+        doc.text(fn, marginX, y + 4);
+        doc.setTextColor(0);
+      }
 
-      doc.save(`egenkontroll-${(title.trim() || 'kontroll').replace(/\s+/g, '-').toLowerCase()}.pdf`);
+      doc.save(`${fileBase()}.pdf`);
     } finally {
       setBusy(false);
     }
@@ -279,9 +389,17 @@ export default function EgenkontrollTool({
       ['Projekt', project.trim() || ''],
       ['Ansvarig', responsible.trim() || ''],
       ['Datum', date || ''],
+      ...(preset?.meta ?? []).map((f) => [f.label, meta[f.name] ?? '']),
       [],
-      ['Kontrollpunkt', 'Resultat', 'Datum', 'Kommentar'],
-      ...rows.map((r) => [r.point || '', r.result, '', r.comment || '']),
+      protocol
+        ? ['Avsnitt', 'Kontrollpunkt', 'Referens', 'Krav', 'Mätvärde', 'Enhet', 'Resultat', 'Datum / sign.', 'Kommentar']
+        : ['Kontrollpunkt', 'Resultat', 'Datum / sign.', 'Kommentar'],
+      ...rows.map((r) =>
+        protocol
+          ? [r.section || '', r.point || '', r.reference || '', r.requirement || '', r.measured || '', r.unit || '', r.result, '', r.comment || '']
+          : [r.point || '', r.result, '', r.comment || ''],
+      ),
+      ...(preset?.signatures ?? ['Underskrift ansvarig']).map((s) => [s, '']),
     ];
     const csv = out
       .map((cols) => cols.map((c) => `"${String(c ?? '').replace(/"/g, '""')}"`).join(';'))
@@ -290,7 +408,7 @@ export default function EgenkontrollTool({
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `egenkontroll-${(title.trim() || 'kontroll').replace(/\s+/g, '-').toLowerCase()}.csv`;
+    link.download = `${fileBase()}.csv`;
     document.body.appendChild(link);
     link.click();
     link.remove();
@@ -371,28 +489,81 @@ export default function EgenkontrollTool({
           </label>
         </div>
 
-        <div className="lm-tool-rows" ref={rowsRef}>
-          <div className="lm-tool-row lm-tool-row-egen lm-tool-row-head">
-            <span>Kontrollpunkt</span>
-            <span>Resultat</span>
-            <span>Kommentar</span>
-            <span aria-hidden="true" />
+        {preset?.meta?.length ? (
+          <div className="lm-tool-grid lm-tool-meta-extra">
+            {preset.meta.map((f) => (
+              <label className="lm-tool-field" key={f.name}>
+                <span>{f.label}</span>
+                <input
+                  value={meta[f.name] ?? ''}
+                  placeholder={f.placeholder}
+                  onChange={(e) => {
+                    const value = e.currentTarget.value;
+                    setMeta((prev) => ({ ...prev, [f.name]: value }));
+                  }}
+                />
+              </label>
+            ))}
           </div>
-          {rows.map((row, index) => (
-            <div className="lm-tool-row lm-tool-row-egen" key={index}>
-              <input value={row.point} placeholder="Vad kontrolleras" onChange={(e) => setRow(index, { point: e.currentTarget.value })} />
-              <select value={row.result} onChange={(e) => setRow(index, { result: e.currentTarget.value })}>
-                {RESULTS.map((r) => (
-                  <option key={r} value={r}>{r}</option>
-                ))}
-              </select>
-              <input value={row.comment} placeholder="Valfritt" onChange={(e) => setRow(index, { comment: e.currentTarget.value })} />
-              <button type="button" className="lm-tool-row-remove" aria-label="Ta bort rad" onClick={() => removeRow(index)}>
-                ×
-              </button>
+        ) : null}
+
+        <div className="lm-tool-rows" ref={rowsRef}>
+          {protocol ? null : (
+            <div className="lm-tool-row lm-tool-row-egen lm-tool-row-head">
+              <span>Kontrollpunkt</span>
+              <span>Resultat</span>
+              <span>Kommentar</span>
+              <span aria-hidden="true" />
             </div>
-          ))}
+          )}
+          {rows.map((row, index) => {
+            const showSection = !!row.section && row.section !== rows[index - 1]?.section;
+            return (
+              <div key={index}>
+                {showSection ? <div className="lm-tool-section-row">{row.section}</div> : null}
+                <div className={`lm-tool-row lm-tool-row-egen${protocol ? ' lm-tool-row-egen-measure' : ''}`}>
+                  <div className="lm-tool-row-point">
+                    <input value={row.point} placeholder="Vad kontrolleras" aria-label="Kontrollpunkt" onChange={(e) => setRow(index, { point: e.currentTarget.value })} />
+                    {row.requirement || row.reference ? (
+                      <span className="lm-tool-row-ref">
+                        {row.requirement ? <>Krav: <strong>{row.requirement}</strong></> : null}
+                        {row.requirement && row.reference ? ' · ' : null}
+                        {row.reference}
+                      </span>
+                    ) : null}
+                  </div>
+                  {protocol ? (
+                    row.unit ? (
+                      <label className="lm-tool-measure">
+                        <input
+                          value={row.measured ?? ''}
+                          inputMode="decimal"
+                          aria-label={`Mätvärde (${row.unit})`}
+                          placeholder="–"
+                          onChange={(e) => setRow(index, { measured: e.currentTarget.value })}
+                        />
+                        <span>{row.unit}</span>
+                      </label>
+                    ) : (
+                      <span aria-hidden="true" />
+                    )
+                  ) : null}
+                  <select value={row.result} aria-label="Resultat" onChange={(e) => setRow(index, { result: e.currentTarget.value })}>
+                    {RESULTS.map((r) => (
+                      <option key={r} value={r}>{r}</option>
+                    ))}
+                  </select>
+                  <input value={row.comment} placeholder="Valfritt" aria-label="Kommentar" onChange={(e) => setRow(index, { comment: e.currentTarget.value })} />
+                  <button type="button" className="lm-tool-row-remove" aria-label="Ta bort rad" onClick={() => removeRow(index)}>
+                    ×
+                  </button>
+                </div>
+              </div>
+            );
+          })}
         </div>
+
+        {preset?.footnote ? <p className="lm-tool-footnote">{preset.footnote}</p> : null}
 
         {stats.total > 0 ? (
           <div

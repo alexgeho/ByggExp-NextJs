@@ -22,27 +22,27 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Vad ska en egenkontroll för el innehålla?',
     answer:
-      'Projekt, ansvarig elektriker och datum samt kontrollpunkter med resultat (godkänd, anmärkning eller ej aktuellt). Typiska punkter är testad jordfelsbrytare, komplett märkning av gruppcentral, isolationsmätning enligt SS 436 40 00, anslutna skyddsledare samt täta och fastsatta dosor och uttag.',
+      'Företag, ansvarig elinstallatör, vilken anläggning som kontrolleras och vilket mätinstrument som använts. Därefter kontrollpunkter i två steg: före ibruktagning (skyddsjord ansluten, kapslingar och beröringsskydd på plats, inga oisolerade ledare åtkomliga) och när anläggningen är klar att överlämnas (kontinuitet, isolationsresistans, polaritet och fasföljd, spänning, jordfelsbrytare och överströmsskydd). Mätvärden skrivs in med enhet, och varje steg signeras och dateras.',
   },
   {
-    question: 'Är egenkontroll samma sak som en installationsintyg?',
+    question: 'Vilka regler styr egenkontrollen för el?',
     answer:
-      'Nej. Egenkontrollen är elektrikerns dokumenterade kontroll av att installationen är rätt utförd. Installationsintyget (och för behörighetsarbeten anmälan till Elsäkerhetsverket) är separata dokument, men egenkontrollen är det praktiska underlag som visar att kontrollerna faktiskt gjorts.',
+      'Elinstallationsföretag ska ha ett egenkontrollprogram enligt elsäkerhetslagen och Elsäkerhetsverkets föreskrift ELSÄK-FS 2017:3 (3 kap. 10–13 §§): bestämma kontrollens omfattning inför varje arbete, kontrollera det utförda arbetet och hantera fel och brister. Hur mätningarna görs anges inte av Elsäkerhetsverket – exempel på metoder finns i SS 436 40 00 utg. 4, del 6.',
   },
   {
-    question: 'Måste en egenkontroll för el göras enligt en standard?',
+    question: 'Vilka mätvärden gäller för isolationsresistans och jordfelsbrytare?',
     answer:
-      'Kontrollen görs mot gällande normer, framför allt elinstallationsreglerna SS 436 40 00. Isolationsmätning och funktionsprov av jordfelsbrytare är exempel på kontroller som kopplas direkt till standarden – ange gärna referensen i egenkontrollen.',
+      'För en vanlig lågspänningsinstallation mäts isolationsresistansen med 500 V likspänning och ska vara minst 1 MΩ. En 30 mA jordfelsbrytare ska normalt lösa ut inom 300 ms vid märkutlösningsström (IΔn) och inom 40 ms vid 5 × IΔn. Kontrollera alltid mot standarden och skyddsanordningens data för just din installation.',
   },
   {
-    question: 'Vem ansvarar för egenkontrollen av elinstallationen?',
+    question: 'Vem ansvarar för och signerar egenkontrollen?',
     answer:
-      'Den elektriker som utför arbetet ansvarar för sin egenkontroll, och en ansvarig person (t.ex. elinstallatör för regelefterlevnad) signerar. Dokumentationen sparas som bevis på att installationen kontrollerats och godkänts.',
+      'Den som utför arbetet kontrollerar det enligt företagets egenkontrollprogram innan anläggningen tas i bruk. Elinstallatören ansvarar för att programmet följs. Mallen har därför två signaturer: en för kontrollen före ibruktagning och en för kontrollen vid överlämning.',
   },
   {
     question: 'Hur länge ska en egenkontroll för el sparas?',
     answer:
-      'Spara egenkontrollen under ansvarstiden för arbetet. Enligt AB 04 är garantitiden normalt fem år och ansvarstiden tio år – och vid en elrelaterad tvist eller skada är just egenkontrollen den dokumentation som visar att arbetet var fackmässigt utfört.',
+      'Spara egenkontrollen minst lika länge som ansvaret för arbetet löper – enligt AB 04 är garantitiden normalt fem år och ansvarstiden tio år. Vid en tvist eller skada är mätprotokollet det som visar att installationen var kontrollerad och fackmässigt utförd.',
   },
 ];
 
@@ -61,7 +61,7 @@ export default function EgenkontrollElMallPage() {
 
   const title = 'Egenkontroll el – gratis mall (PDF) | ByggExp';
   const description =
-    'Gratis egenkontroll-mall för elinstallation. Fyll i jordfelsbrytare, isolationsmätning (SS 436 40 00), märkning och skyddsledare online och ladda ner som PDF – utan konto.';
+    'Gratis egenkontroll el med mätprotokoll: 22 kontrollpunkter före ibruktagning och vid överlämning, isolationsresistans, jordfelsbrytare (ms), kontinuitet. PDF/Excel, utan konto.';
 
   return (
     <>
@@ -94,7 +94,7 @@ export default function EgenkontrollElMallPage() {
       <LeadMagnetPage
         badge="Gratis mall"
         title="Egenkontroll el – gratis mall att fylla i online"
-        intro="Färdig egenkontroll för elinstallation – jordfelsbrytare, isolationsmätning, märkning och skyddsledare ligger redan ifyllda. Sätt resultat, kommentera eventuella anmärkningar och ladda ner som PDF. Gratis och utan konto."
+        intro="Färdig egenkontroll med mätprotokoll för elinstallation – 22 kontrollpunkter i fyra steg, från kontroll före ibruktagning till överlämning. Skriv in mätvärden (Ω, MΩ, ms), sätt resultat och ladda ner som PDF eller Excel med två signeringssteg. Gratis och utan konto."
         tool={<EgenkontrollTool defaultPreset="el" />}
         leadForm={<ToolLeadForm tool="egenkontroll-el-mall" />}
         preview={
@@ -132,32 +132,36 @@ export default function EgenkontrollElMallPage() {
             heading: 'Kontrollpunkter i en egenkontroll för el',
             body: (
               <>
-                <p>Mallen ovan öppnar redan ifylld med de vanligaste punkterna för en elinstallation:</p>
+                <p>
+                  Mallen följer de kontrollmoment Elsäkerhetsverket beskriver för egenkontroll och är
+                  uppdelad i fyra steg:
+                </p>
                 <ul>
                   <li>
-                    <strong>Jordfelsbrytare testad och fungerar</strong> – funktionsprov med testknapp
-                    och att den löser ut som den ska.
+                    <strong>A. Före ibruktagning</strong> – skyddsjord ansluten och fungerande,
+                    apparatlock, kapslingar och beröringsskydd på plats, inga enkel- eller oisolerade
+                    ledare åtkomliga och efterkontroll att utsatta delar inte är spänningsförande.
                   </li>
                   <li>
-                    <strong>Märkning av gruppcentral komplett</strong> – alla grupper märkta och lätta
-                    att identifiera.
+                    <strong>B. Okulär kontroll</strong> – utfört enligt handling, rätt ledare och
+                    förläggning, identifierbara skyddsledare, överströmsskydd enligt gruppförteckning,
+                    rätt kapslingsklass, fastsatta dosor och uttag, brandtätade genomföringar och märkt
+                    central.
                   </li>
                   <li>
-                    <strong>Isolationsmätning utförd (SS 436 40 00)</strong> – kontroll av
-                    isolationsresistans enligt elinstallationsreglerna.
+                    <strong>C. Provning och mätning</strong> – skyddsledarens kontinuitet till
+                    jordskena (Ω), isolationsresistans vid 500 V DC (MΩ, krav ≥ 1 MΩ), polaritet och
+                    fasföljd, spänning (V) och jordfelsbrytarens utlösningstid vid IΔn och 5 × IΔn (ms).
                   </li>
                   <li>
-                    <strong>Skyddsledare anslutna</strong> – att skyddsjord är dragen och ansluten i
-                    dosor, uttag och central.
-                  </li>
-                  <li>
-                    <strong>Dosor och uttag täta och fastsatta</strong> – mekaniskt infästa och täta
-                    mot omgivningen.
+                    <strong>D. Överlämning</strong> – avvikelser åtgärdade och efterkontrollerade,
+                    gruppförteckning, mätvärden och skötselinstruktion lämnade till beställaren.
                   </li>
                 </ul>
                 <p>
-                  Du behöver bara sätta resultat (godkänd, anmärkning eller ej aktuellt) och skriva en
-                  kommentar där det behövs – lägg till egna punkter för projektets specifika risker.
+                  I huvudet fyller du i företag, ansvarig elinstallatör, vilken anläggning som
+                  kontrolleras och vilket mätinstrument som använts – det gör protokollet spårbart.
+                  Punkter som inte berör arbetet markerar du som <em>ej aktuellt</em>.
                 </p>
               </>
             ),
@@ -167,34 +171,35 @@ export default function EgenkontrollElMallPage() {
             heading: 'Så fyller du i egenkontrollen för el steg för steg',
             body: (
               <ol>
-                <li>Kontrollpunkterna för el ligger redan i tabellen ovan – lägg till egna vid behov.</li>
-                <li>Fyll i projekt, ansvarig elektriker och datum.</li>
-                <li>Gå igenom varje punkt och sätt resultat: godkänd, anmärkning eller ej aktuellt.</li>
-                <li>Skriv en kommentar vid anmärkningar – t.ex. «skyddsledare saknas i dosa i hall».</li>
-                <li>Ladda ner egenkontrollen som PDF och signera.</li>
-                <li>Åtgärda anmärkningar och följ upp att de är avklarade.</li>
+                <li>Fyll i projekt, företag, ansvarig elinstallatör, anläggning och mätinstrument.</li>
+                <li>Gör steg A innan anläggningen spänningssätts och signera kontrollen före ibruktagning.</li>
+                <li>Gå igenom steg B och mät i steg C – skriv in det lägsta/högsta uppmätta värdet med enhet.</li>
+                <li>Sätt resultat per punkt och skriv en kommentar vid anmärkningar.</li>
+                <li>Åtgärda anmärkningar, efterkontrollera och signera kontrollen vid överlämning.</li>
+                <li>Ladda ner som PDF eller Excel och lämna över tillsammans med gruppförteckningen.</li>
               </ol>
             ),
           },
           {
             id: 'exempel-egenkontroll-el',
-            heading: 'Exempel: egenkontroll efter en elinstallation i lägenhet',
+            heading: 'Exempel: mätprotokoll efter elinstallation i lägenhet',
             body: (
               <>
-                <p>
-                  Säg att du precis dragit klart el i en lägenhet. Den ifyllda egenkontrollen kan då se
-                  ut så här:
-                </p>
+                <p>Du har dragit om grupp 1–8 i en lägenhet. Steg C i protokollet kan då se ut så här:</p>
                 <ul>
-                  <li>Jordfelsbrytare testad och fungerar – <em>Godkänd</em></li>
-                  <li>Märkning av gruppcentral komplett – <em>Godkänd</em></li>
-                  <li>Isolationsmätning utförd (SS 436 40 00) – <em>Godkänd</em></li>
-                  <li>Skyddsledare anslutna – <em>Anmärkning: saknas i dosa i hall, åtgärdas</em></li>
-                  <li>Dosor och uttag täta och fastsatta – <em>Godkänd</em></li>
+                  <li>Skyddsledarens kontinuitet till jordskena – <em>0,42 Ω, godkänd</em></li>
+                  <li>Isolationsresistans 500 V DC – <em>&gt; 200 MΩ, godkänd (krav ≥ 1 MΩ)</em></li>
+                  <li>Polaritet och fasföljd – <em>godkänd</em></li>
+                  <li>Jordfelsbrytare vid IΔn – <em>24 ms, godkänd (krav ≤ 300 ms)</em></li>
+                  <li>Jordfelsbrytare vid 5 × IΔn – <em>12 ms, godkänd (krav ≤ 40 ms)</em></li>
+                  <li>
+                    Dosor och uttag fastsatta (steg B) – <em>anmärkning: löst uttag i hall, åtgärdat och
+                    efterkontrollerat</em>
+                  </li>
                 </ul>
                 <p>
-                  Anmärkningen på skyddsledaren åtgärdas och följs upp, och den färdiga PDF:en signeras
-                  och sparas i projektet som bevis på att installationen kontrollerats.
+                  Med mätvärdena inskrivna och båda signeringsstegen ifyllda har du ett protokoll som
+                  håller om beställaren, en besiktningsman eller Elsäkerhetsverket frågar.
                 </p>
               </>
             ),
@@ -206,10 +211,11 @@ export default function EgenkontrollElMallPage() {
               <p>
                 Kontrollerna görs mot gällande normer, framför allt{' '}
                 <strong>elinstallationsreglerna SS 436 40 00</strong>. Isolationsmätning och funktionsprov
-                av jordfelsbrytare är exempel på kontroller som kopplas direkt till standarden. Egen­kontrollen
-                ersätter inte installationsintyg eller anmälan till Elsäkerhetsverket för
-                behörighetsarbeten – men den är det praktiska underlaget som visar att kontrollerna
-                faktiskt gjorts och att installationen är säker att ta i drift.
+                av jordfelsbrytare görs med metoderna i standardens del 6. Själva kravet på egenkontroll
+                kommer från elsäkerhetslagen och ELSÄK-FS 2017:3: företaget ska ha ett
+                egenkontrollprogram, kontrollera varje arbete innan anläggningen tas i bruk och hantera
+                fel och brister. Mallen är det praktiska protokollet för den kontrollen – rutinerna i
+                själva programmet beskriver du i företagets egenkontrollprogram.
               </p>
             ),
           },
@@ -219,12 +225,20 @@ export default function EgenkontrollElMallPage() {
             body: (
               <ul>
                 <li>
-                  <strong>Ingen mätning dokumenterad.</strong> Notera att isolationsmätningen är utförd –
-                  gärna med referens till SS 436 40 00.
+                  <strong>Bara en bock, inget mätvärde.</strong> «Isolationsmätning utförd» utan värde och
+                  enhet bevisar ingenting – skriv in uppmätt MΩ och ms.
                 </li>
                 <li>
                   <strong>Anmärkning utan uppföljning.</strong> En saknad skyddsledare som noteras men
                   aldrig följs upp är värdelös som bevis.
+                </li>
+                <li>
+                  <strong>Ingen kontroll före ibruktagning.</strong> Skyddsjord och beröringsskydd ska
+                  vara kontrollerade innan anläggningen spänningssätts – inte först vid överlämning.
+                </li>
+                <li>
+                  <strong>Okänt mätinstrument.</strong> Ange instrument och kalibrering, annars går
+                  värdena inte att lita på i efterhand.
                 </li>
                 <li>
                   <strong>Egenkontrollen görs i efterhand.</strong> Fyll i löpande medan arbetet pågår,

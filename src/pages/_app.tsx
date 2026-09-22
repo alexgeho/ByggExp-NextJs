@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import { useEffect } from "react";
 
 // ChatAssistant (AI chat) is temporarily disabled — re-enable by uncommenting
 // the import and the <ChatAssistant /> render below once ANTHROPIC_API_KEY is
@@ -6,6 +7,7 @@ import type { AppProps } from "next/app";
 // import ChatAssistant from "../components/ChatAssistant/ChatAssistant";
 import WhatsAppChat from "../components/ChatAssistant/WhatsAppChat";
 import CookieConsent from "../components/CookieConsent/CookieConsent";
+import { installDownloadTracking } from "../lib/downloadTracking";
 import 'quill/dist/quill.snow.css';
 import "../styles/globals.scss";
 import "../styles/blog.scss";
@@ -28,6 +30,11 @@ import "../components/ChatAssistant/ChatAssistant.scss";
 // GA4 tag lives in _document (<Head>); consent + custom events are handled by
 // CookieConsent.
 export default function App({ Component, pageProps }: AppProps) {
+  // Count every tool download (PDF/Excel/…) site-wide — see lib/downloadTracking.
+  useEffect(() => {
+    installDownloadTracking();
+  }, []);
+
   return (
     <>
       <Component {...pageProps} />

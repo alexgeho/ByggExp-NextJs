@@ -445,7 +445,35 @@
   justify-content: center;
 
   .benefits-slider {
-    max-width: 560px;
+    max-width: 620px;
+  }
+
+  // More air between the arrows and the card.
+  .benefits-slider-frame {
+    padding: 0 88px;
+  }
+
+  .benefits-dots {
+    gap: 14px;
+    margin-top: 24px;
+
+    span {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .benefits-single .benefits-slider-frame {
+    padding: 0 64px;
+  }
+}
+
+@media (max-width: 650px) {
+  // Phones keep the overlay arrows from the base slider styles.
+  .benefits-single .benefits-slider-frame {
+    padding: 0;
   }
 }
 

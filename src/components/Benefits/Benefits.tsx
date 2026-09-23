@@ -1,69 +1,53 @@
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
 
 import type { BenefitsProps } from "../../types/benefits";
 
 type Card = { icon: string; title: string; text: string };
 
-const ROTATE_MS = 2800;
+const GAP = 16; // keep in sync with .benefits-track gap in Benefits.scss
 
-// Position of a card on the drum relative to the active one:
-// 0 = front, -1 = above, 1 = below, 2 = behind (hidden).
-function drumOffset(index: number, active: number, count: number) {
-  const diff = (index - active + count) % count;
-  return diff === count - 1 ? -1 : diff;
-}
-
-function BenefitDrum({
-  cards,
-  iconClass,
-  delayMs,
-}: {
-  cards: Card[];
-  iconClass: string;
-  delayMs: number;
-}) {
+// One column of benefit cards as a slider — same scroll-snap pattern as the
+// Pricing and Features carousels: one card per view, arrows and dots.
+function BenefitSlider({ cards, iconClass }: { cards: Card[]; iconClass: string }) {
+  const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
+  const last = cards.length - 1;
 
-  useEffect(() => {
-    if (paused) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  function cardWidth() {
+    const first = trackRef.current?.querySelector<HTMLElement>(".benefit-card");
+    return first ? first.offsetWidth + GAP : 0;
+  }
 
-    let interval: number | undefined;
-    // Offset the second drum so the two columns don't turn in lockstep.
-    const start = window.setTimeout(() => {
-      setActive((a) => (a + 1) % cards.length);
-      interval = window.setInterval(() => {
-        setActive((a) => (a + 1) % cards.length);
-      }, ROTATE_MS);
-    }, ROTATE_MS + delayMs);
+  function scrollToSlide(index: number) {
+    const width = cardWidth();
+    if (!trackRef.current || !width) return;
+    // Scroll the track itself (scrollIntoView can nudge the page vertically).
+    trackRef.current.scrollTo({ left: index * width, behavior: "smooth" });
+    setActive(index);
+  }
 
-    return () => {
-      window.clearTimeout(start);
-      window.clearInterval(interval);
-    };
-  }, [paused, cards.length, delayMs]);
+  function handleScroll() {
+    const width = cardWidth();
+    if (!trackRef.current || !width) return;
+    setActive(Math.round(trackRef.current.scrollLeft / width));
+  }
 
   return (
-    <div
-      className="benefit-drum"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
-      onBlur={() => setPaused(false)}
-    >
-      <div className="benefit-drum-stage">
-        {cards.map((card, index) => {
-          const offset = drumOffset(index, active, cards.length);
-          return (
-            <button
-              type="button"
-              key={card.title}
-              className={`benefit-card benefit-drum-card is-pos-${offset < 0 ? "up" : offset}`}
-              onClick={() => setActive(index)}
-              aria-current={offset === 0}
-              tabIndex={offset === 0 ? 0 : -1}
-            >
+    <div className="benefits-slider">
+      <div className="benefits-slider-frame">
+        <button
+          type="button"
+          className="benefits-arrow benefits-arrow-left"
+          onClick={() => scrollToSlide(active - 1)}
+          disabled={active === 0}
+          aria-label="Previous"
+        >
+          ‹
+        </button>
+
+        <div className="benefits-track" ref={trackRef} onScroll={handleScroll}>
+          {cards.map((card) => (
+            <div className="benefit-card" key={card.title}>
               <div className="benefit-head">
                 <div className={iconClass}>
                   <img src={card.icon} alt="" />
@@ -71,19 +55,27 @@ function BenefitDrum({
                 <h3>{card.title}</h3>
               </div>
               <p>{card.text}</p>
-            </button>
-          );
-        })}
+            </div>
+          ))}
+        </div>
+
+        <button
+          type="button"
+          className="benefits-arrow benefits-arrow-right"
+          onClick={() => scrollToSlide(active + 1)}
+          disabled={active === last}
+          aria-label="Next"
+        >
+          ›
+        </button>
       </div>
 
-      <div className="benefit-drum-dots">
+      <div className="benefits-dots">
         {cards.map((card, index) => (
-          <button
-            type="button"
+          <span
             key={card.title}
-            className={index === active ? "is-active" : ""}
-            onClick={() => setActive(index)}
-            aria-label={card.title}
+            className={active === index ? "active" : ""}
+            onClick={() => scrollToSlide(index)}
           />
         ))}
       </div>
@@ -127,7 +119,7 @@ function Benefits({ benefitsT }: BenefitsProps) {
           {/* FOR OFFICE */}
           <div className="benefits-office">
             <div className="solution-lead">{office.benefitsOfficeLead}</div>
-            <BenefitDrum cards={officeCards} iconClass="benefit-icon" delayMs={0} />
+            <BenefitSlider cards={officeCards} iconClass="benefit-icon" />
           </div>
 
           {/* DEVIDER */}
@@ -136,7 +128,7 @@ function Benefits({ benefitsT }: BenefitsProps) {
           {/* FOR TEAM */}
           <div className="benefits-office">
             <div className="solution-lead">{site.benefitsSiteLead}</div>
-            <BenefitDrum cards={siteCards} iconClass="benefit-icon-blue" delayMs={ROTATE_MS / 2} />
+            <BenefitSlider cards={siteCards} iconClass="benefit-icon-blue" />
           </div>
         </div>
       </div>

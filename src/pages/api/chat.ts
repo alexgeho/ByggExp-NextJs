@@ -72,7 +72,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // spending a model call: the AI bubble only shows once the key is live.
   if (req.method === 'GET') {
     res.setHeader('Cache-Control', 'no-store');
-    res.status(200).json({ enabled: Boolean(process.env.ANTHROPIC_API_KEY) });
+    // A placeholder like "sk-ant-..." must not switch the site to a broken chat.
+    const key = process.env.ANTHROPIC_API_KEY ?? '';
+    res.status(200).json({ enabled: key.startsWith('sk-ant-') && key.length > 40 });
     return;
   }
 

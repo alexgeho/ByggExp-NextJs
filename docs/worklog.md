@@ -33,7 +33,7 @@
 ### 🔜 NÄSTA STEG
 1. ✅ egenkontroll: все 8 пресетов = протоколы с Metod + Krav/underlag и подписями (el, VVS 2026:1, bygg, vatrum, betong, tak, ventilation, skyddsrond).
 2. ✅ Быстрые из ревизии: arbetsberedning-статья → инструмент; пример договора = AB 04 (без «Commode»); новый
-   инструмент `byggmotesprotokoll-mall`. Дальше по ревизии: kontrollplan-mall → табличный формат PBL 2026 (п.4).
+   инструмент `byggmotesprotokoll-mall`. kontrollplan-mall = таблица по PBL (п.4 ✅). Дальше по ревизии: п.5 — 2-й deep-research договоров (AB 04/ABT 06/ABS 18/HF 17) и AFS 2023 → entreprenadkontrakt/skyddsrond/arbetsberedning.
 3. **Модель чата**: `CHAT_MODEL` = `claude-opus-4-8` (дорого, баланс ~$4) → owner решает про `claude-haiku-4-5`.
 4. ≈4–5 окт: GSC-валидация 404 + `.gsc/index_status.py` (см. сессию 20.09).
 5. ⚠️ owner: VPS root — 138k неудачных логинов, закрыть вход по паролю (только ключ + fail2ban).

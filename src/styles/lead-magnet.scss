@@ -1228,3 +1228,55 @@
     grid-column: 1 / -1;
   }
 }
+
+/* ---- Kontrollplan: one card per control (vad on top, hur/underlag/vem/typ below) ---- */
+.lm-kp-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 18px 0 12px;
+}
+
+.lm-kp-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.lm-kp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr 170px 34px;
+  gap: 8px;
+  align-items: center;
+}
+
+.lm-kp-row input,
+.lm-kp-row select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--lm-field-border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+}
+
+.lm-kp-what {
+  font-weight: 600;
+}
+
+.lm-kp-add {
+  margin-bottom: 18px;
+}
+
+@media (max-width: 760px) {
+  .lm-kp-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lm-kp-grid .lm-tool-row-remove {
+    justify-self: end;
+  }
+}

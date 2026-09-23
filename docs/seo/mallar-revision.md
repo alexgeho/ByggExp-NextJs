@@ -51,6 +51,7 @@
    (пример теперь целиком AB 04 между компаниями: гарантия 5/2 года, ansvarstid 10 лет).
 3. ✅ (23.09) Шаблон `/sv/verktyg/byggmotesprotokoll-mall` сделан (дагордning из статьи, beslut–ansvarig–datum),
    статья ссылается на него, добавлен в verktyg-list/хаб/sitemap.
-4. kontrollplan-mall → табличный формат PBL 2026.
+4. ✅ (23.09) kontrollplan-mall → таблица: vad / hur / mot vilket underlag / vem / egenkontroll-sakkunnig-KA + datum/sign;
+   блоки anmälningar till nämnden, arbetsplatsbesök, avfall, slutbesked; 2 подписи (byggherre, KA). Отдельный компонент.
 5. 2-й deep-research по договорам + AFS → затем entreprenadkontrakt / skyddsrond / arbetsberedning.
 6. Шаг 2: GA4-события скачиваний, смотреть через 2–4 недели.

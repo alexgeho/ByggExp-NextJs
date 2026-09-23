@@ -26,6 +26,11 @@ const FAQ: LeadMagnetFaqItem[] = [
       'För enklare åtgärder kan byggherren själv upprätta kontrollplanen. Vid mer omfattande projekt krävs en certifierad kontrollansvarig (KA). Byggnadsnämnden avgör i lovet om KA krävs.',
   },
   {
+    question: 'Vad är skillnaden på egenkontroll och certifierad sakkunnig?',
+    answer:
+      'En egenkontroll gör du eller entreprenören själv och dokumenterar. Vissa kontroller ska i stället göras av en certifierad sakkunnig – till exempel en certifierad funktionskontrollant för OVK. I mallen anger du för varje rad vilket som gäller.',
+  },
+  {
     question: 'Ska bygg- och rivningsavfall vara med?',
     answer:
       'Ja. Kontrollplanen ska visa hur bygg- och rivningsavfall hanteras och sorteras. Mallen har ett fält för detta.',
@@ -48,7 +53,7 @@ export default function KontrollplanMallPage() {
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/kontrollplan-mall`;
   const title = 'Kontrollplan mall (PBL) gratis PDF & Excel | ByggExp';
   const description =
-    'Ladda ner en gratis kontrollplan-mall enligt PBL för bygglov och anmälan. Fyll i fastighet, kontrollpunkter och avfallshantering och få en färdig kontrollplan som PDF.';
+    'Ladda ner en gratis kontrollplan-mall enligt PBL för bygglov och anmälan. Tabell med vad, hur, mot vilket underlag, vem och egenkontroll eller sakkunnig – plus anmälningar och arbetsplatsbesök. Ladda ner som PDF.';
 
   return (
     <>
@@ -81,7 +86,7 @@ export default function KontrollplanMallPage() {
       <LeadMagnetPage
         badge="Gratis mall"
         title="Kontrollplan enligt PBL – gratis mall"
-        intro="Fyll i projektuppgifter och kontrollpunkter och ladda ner en färdig kontrollplan som PDF eller Excel. Passar enklare bygglov och anmälningsärenden – för större projekt krävs en kontrollansvarig."
+        intro="Fyll i projektuppgifter och en rad per kontroll – vad, hur, mot vilket underlag, vem och om det är egenkontroll eller certifierad sakkunnig – och ladda ner en färdig kontrollplan som PDF eller Excel. Passar enklare bygglov och anmälningsärenden – för större projekt krävs en kontrollansvarig."
         tool={<KontrollplanMallTool />}
         leadForm={<ToolLeadForm tool="kontrollplan-mall" />}
         preview={
@@ -100,7 +105,10 @@ export default function KontrollplanMallPage() {
             body: (
               <ul>
                 <li>Fastighetsbeteckning, åtgärd och byggherre.</li>
-                <li>Kontrollpunkter: vad som kontrolleras, mot vilket krav, med vilken metod och av vem.</li>
+                <li>Kontrollpunkter: vad som kontrolleras, hur, mot vilket underlag och av vem.</li>
+                <li>Om varje kontroll görs som egenkontroll eller av certifierad sakkunnig.</li>
+                <li>Datum och signatur när kontrollen är utförd.</li>
+                <li>Vilka anmälningar som ska göras till byggnadsnämnden och nämndens arbetsplatsbesök.</li>
                 <li>Hantering och utsortering av bygg- och rivningsavfall.</li>
                 <li>Underlag som lämnas till byggnadsnämnden för slutbesked.</li>
               </ul>

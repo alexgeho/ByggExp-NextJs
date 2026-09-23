@@ -34,7 +34,7 @@
 1. ✅ egenkontroll: все 8 пресетов = протоколы с Metod + Krav/underlag и подписями (el, VVS 2026:1, bygg, vatrum, betong, tak, ventilation, skyddsrond).
 2. ✅ Быстрые из ревизии: arbetsberedning-статья → инструмент; пример договора = AB 04 (без «Commode»); новый
    инструмент `byggmotesprotokoll-mall`. kontrollplan-mall = таблица по PBL (п.4 ✅). П.5 ✅ факт-чек договоров/AFS внесён. **Ревизия mallar закрыта целиком.** ⏰ Осень 2026: BKK апдейт по AB 25/ABPU 25 — перепроверить формулировки AB 04/ABT 06.
-3. **Модель чата**: `CHAT_MODEL` = `claude-opus-4-8` (дорого, баланс ~$4) → owner решает про `claude-haiku-4-5`.
+3. ✅ Модель чата = `claude-sonnet-5` (`b9c6c48`, ~$0.9/100 сообщений; Haiku тестировали — выдумывал факты). Баланс Anthropic ~$4 → owner: auto-reload.
 4. ≈4–5 окт: GSC-валидация 404 + `.gsc/index_status.py` (см. сессию 20.09).
 5. ⚠️ owner: VPS root — 138k неудачных логинов, закрыть вход по паролю (только ключ + fail2ban).
 6. Stripe/оплата — owner делает сам в другом проекте (не наш трек).

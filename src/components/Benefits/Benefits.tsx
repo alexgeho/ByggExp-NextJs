@@ -7,7 +7,8 @@ type Card = { icon: string; title: string; text: string };
 const GAP = 16; // keep in sync with .benefits-track gap in Benefits.scss
 
 // One column of benefit cards as a slider — same scroll-snap pattern as the
-// Pricing and Features carousels: one card per view, arrows and dots.
+// Pricing and Features carousels: one card per view, arrows and dots. The
+// arrows loop: past the last card they wrap to the first and vice versa.
 function BenefitSlider({ cards, iconClass }: { cards: Card[]; iconClass: string }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
@@ -38,8 +39,7 @@ function BenefitSlider({ cards, iconClass }: { cards: Card[]; iconClass: string 
         <button
           type="button"
           className="benefits-arrow benefits-arrow-left"
-          onClick={() => scrollToSlide(active - 1)}
-          disabled={active === 0}
+          onClick={() => scrollToSlide(active === 0 ? last : active - 1)}
           aria-label="Previous"
         >
           ‹
@@ -62,8 +62,7 @@ function BenefitSlider({ cards, iconClass }: { cards: Card[]; iconClass: string 
         <button
           type="button"
           className="benefits-arrow benefits-arrow-right"
-          onClick={() => scrollToSlide(active + 1)}
-          disabled={active === last}
+          onClick={() => scrollToSlide(active === last ? 0 : active + 1)}
           aria-label="Next"
         >
           ›

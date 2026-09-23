@@ -6,10 +6,38 @@
 ---
 
 ## 📍 СТАТУС (кратко)
-Активно: SEO-контент + визуалы блога (фото-обложки готовы, диаграммы в топ-статьях, факт-чек 2026 пройден).
-20.09 закрыт тех-SEO долг: починен корень GSC-404 (hreflang-to-404), валидация в GSC запущена — ждём результат.
-Инструменты и NÄSTA STEG — в свежей сессии ниже.
+Активно: скачиваемые mallar по нормам (план `docs/seo/mallar-revision.md`, el готов) + UX главной/контактов.
+23.09: **AI-чат на сайте LIVE** (ключ на VPS), контакты переделаны, блоки преимуществ → карусели.
+20.09 закрыт тех-SEO долг (GSC-404), валидация в GSC идёт — проверить ≈4–5 окт.
 История сессий до 2026-09-12 → `docs/worklog-archive.md`. Индекс всех доков → `docs/README.md`. Норвегия (byggexp.no) — память [[norway-expansion]] + архив.
+
+## 🟢 Сессия 2026-09-22…23 — mallar-ревизия, AI-чат live, контакты, карусели
+
+### KLART (всё задеплоено)
+- **Ревизия скачиваемых mallar** (`a4ebb8b`) → `docs/seo/mallar-revision.md`: трафик GSC × нормы (Boverket, ELSÄK-FS,
+  Säker Vatten 2026:1), вердикт по каждой странице + план из 6 пунктов.
+- **egenkontroll-el-mall = настоящий протокол замеров** (`59c4c8d`): 22 пункта в 4 этапа (före ibruktagning → överlämning),
+  поля Krav/Mätvärde, 2 подписи; в PDF и Excel. **Счётчик скачиваний на весь сайт**: хук на `<a download>` →
+  `/api/track-download` (агрегат, без идентификаторов) + GA4 `file_download`; дашборд `/api/download-stats`.
+- **Контакты `/[lang]/contact` переделаны** (в стиле nordkod.se/kontakt): section-head шапка, форма
+  (имя/почта*/компания/телефон/тема/сообщение → `f-message`), карточки Ring/Mejla, «Så går det till»,
+  реквизиты RealMar AB, FAQ; 10 языков. WhatsApp-карточка убрана.
+- **AI-чат LIVE** (`6b3bcec`…`94213a9`): `SiteChat` спрашивает `GET /api/chat` → AI или WhatsApp-фолбэк
+  (ключ должен выглядеть как `sk-ant-…`, >40 симв.). В промпте факты о продукте (функции, цены 499/899/1799,
+  демо, контакты), ответ на языке посетителя, без markdown кроме ссылок. Нет на `/admin` и `/[lang]/embed/*`.
+  Ключ на VPS в `/opt/byggexp-next/shared/.env` + `pm2 restart --update-env` (см. память [[ai-assistant]]).
+- **Главная: блоки преимуществ → карусели** (`fe32464`, `5af5ab7`): общий `Benefits/BenefitSlider.tsx`
+  (scroll-snap как Pricing/Features, стрелки по кругу, точки); Benefits = 8 карточек в одной ленте
+  с пометкой аудитории, FinalBenefits = 4. Опечатка sv «För får byggteamet» исправлена.
+
+### 🔜 NÄSTA STEG
+1. **egenkontroll-mall + egenkontroll-vvs-mall** по образцу el (план п.1 в `docs/seo/mallar-revision.md`) — В РАБОТЕ.
+2. Быстрые из ревизии: ссылка arbetsberedning-статья → инструмент; «Commode» + HF17/AB04 в entreprenadkontrakt;
+   шаблон byggmötesprotokoll (сейчас 404 при обещании в тайтле).
+3. **Модель чата**: `CHAT_MODEL` = `claude-opus-4-8` (дорого, баланс ~$4) → owner решает про `claude-haiku-4-5`.
+4. ≈4–5 окт: GSC-валидация 404 + `.gsc/index_status.py` (см. сессию 20.09).
+5. ⚠️ owner: VPS root — 138k неудачных логинов, закрыть вход по паролю (только ключ + fail2ban).
+6. Stripe/оплата — аудит состояния запущен 23.09 (биллинг живёт в `ByggExp-BackEnd/src/billing/`).
 
 ## 🟢 Сессия 2026-09-20 — GSC: «Blocked by robots.txt» + корневой фикс 404 (hreflang)
 

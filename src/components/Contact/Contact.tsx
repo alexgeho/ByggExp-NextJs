@@ -212,14 +212,16 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
                   />
                 </div>
 
-                <button type="submit" className="kontakt-submit" disabled={isSubmitting}>
-                  {isSubmitting ? ctaT.ctaButtonSending : t.formSubmit}
-                </button>
+                <div className="kontakt-submit-row">
+                  <button type="submit" className="kontakt-submit" disabled={isSubmitting}>
+                    {isSubmitting ? ctaT.ctaButtonSending : t.formSubmit}
+                  </button>
+                  <p className="kontakt-fine">{ctaT.ctaPrivacy}</p>
+                </div>
 
                 {submitError && (
                   <p className="kontakt-fine kontakt-fine-error">{ctaT.ctaSubmitError}</p>
                 )}
-                <p className="kontakt-fine">{ctaT.ctaPrivacy}</p>
               </form>
             ) : (
               <div className="kontakt-success">

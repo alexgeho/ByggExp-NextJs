@@ -19,7 +19,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     formSubmit: "Отправить запрос",
 
     callLabel: "Позвоните нам",
-    callText: "Будни, 08:00–17:00 — быстрее всего для коротких вопросов.",
+    callText: "Будни, 08:00–17:00",
     mailLabel: "Напишите нам",
     mailText: "Обычно отвечаем в течение одного рабочего дня.",
     emailSupport: "Поддержка",
@@ -77,7 +77,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     formSubmit: "Send request",
 
     callLabel: "Call us",
-    callText: "Weekdays 08:00–17:00 — fastest for short questions.",
+    callText: "Weekdays 08:00–17:00",
     mailLabel: "Email us",
     mailText: "We usually reply within one business day.",
     emailSupport: "Support",
@@ -135,7 +135,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     formSubmit: "Skicka förfrågan",
 
     callLabel: "Ring oss",
-    callText: "Vardagar 08:00–17:00 — snabbast för korta frågor.",
+    callText: "Vardagar 08:00–17:00",
     mailLabel: "Mejla oss",
     mailText: "Vi svarar vanligtvis inom en arbetsdag.",
     emailSupport: "Support",
@@ -193,7 +193,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     formSubmit: "Send forespørsel",
 
     callLabel: "Ring oss",
-    callText: "Hverdager 08:00–17:00 — raskest for korte spørsmål.",
+    callText: "Hverdager 08:00–17:00",
     mailLabel: "Send e-post",
     mailText: "Vi svarer vanligvis innen en virkedag.",
     emailSupport: "Support",
@@ -251,7 +251,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     formSubmit: "Wyślij zapytanie",
 
     callLabel: "Zadzwoń",
-    callText: "Dni robocze 08:00–17:00 — najszybciej przy krótkich pytaniach.",
+    callText: "Dni robocze 08:00–17:00",
     mailLabel: "Napisz do nas",
     mailText: "Zwykle odpowiadamy w ciągu jednego dnia roboczego.",
     emailSupport: "Wsparcie",
@@ -309,7 +309,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     formSubmit: "Надіслати запит",
 
     callLabel: "Зателефонуйте",
-    callText: "Будні, 08:00–17:00 — найшвидше для коротких питань.",
+    callText: "Будні, 08:00–17:00",
     mailLabel: "Напишіть нам",
     mailText: "Зазвичай відповідаємо протягом одного робочого дня.",
     emailSupport: "Підтримка",
@@ -367,7 +367,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     formSubmit: "Lähetä pyyntö",
 
     callLabel: "Soita meille",
-    callText: "Arkisin 08:00–17:00 — nopein tapa lyhyisiin kysymyksiin.",
+    callText: "Arkisin 08:00–17:00",
     mailLabel: "Lähetä sähköpostia",
     mailText: "Vastaamme yleensä yhden työpäivän kuluessa.",
     emailSupport: "Tuki",
@@ -425,7 +425,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     formSubmit: "Saada päring",
 
     callLabel: "Helistage",
-    callText: "Tööpäeviti 08:00–17:00 — kiireim lühikeste küsimuste jaoks.",
+    callText: "Tööpäeviti 08:00–17:00",
     mailLabel: "Kirjutage meile",
     mailText: "Vastame tavaliselt ühe tööpäeva jooksul.",
     emailSupport: "Tugi",
@@ -483,7 +483,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     formSubmit: "Siųsti užklausą",
 
     callLabel: "Paskambinkite",
-    callText: "Darbo dienomis 08:00–17:00 — greičiausia trumpiems klausimams.",
+    callText: "Darbo dienomis 08:00–17:00",
     mailLabel: "Parašykite mums",
     mailText: "Paprastai atsakome per vieną darbo dieną.",
     emailSupport: "Pagalba",
@@ -541,7 +541,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     formSubmit: "Nosūtīt pieprasījumu",
 
     callLabel: "Zvaniet mums",
-    callText: "Darba dienās 08:00–17:00 — ātrāk īsiem jautājumiem.",
+    callText: "Darba dienās 08:00–17:00",
     mailLabel: "Rakstiet mums",
     mailText: "Parasti atbildam vienas darba dienas laikā.",
     emailSupport: "Atbalsts",

@@ -548,3 +548,26 @@
     gap: 2px;
   }
 }
+
+/* Submit button with the privacy note beside it */
+.kontakt-submit-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .kontakt-submit {
+    flex-shrink: 0;
+  }
+
+  .kontakt-fine {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .kontakt-submit-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

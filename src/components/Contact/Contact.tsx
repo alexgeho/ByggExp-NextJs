@@ -297,23 +297,6 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section className="kontakt-steps">
-        <div className="kontakt-container">
-          <span className="kontakt-eyebrow">{t.stepsEyebrow}</span>
-          <h2>{t.stepsTitle}</h2>
-          <ol className="kontakt-steps-list">
-            {t.steps.map((step, index) => (
-              <li key={step.title}>
-                <span className="kontakt-step-num">{index + 1}</span>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
       {/* COMPANY DETAILS */}
       <section className="kontakt-company">
         <div className="kontakt-container kontakt-company-grid">
@@ -379,6 +362,23 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
               <p>{item.a}</p>
             </details>
           ))}
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="kontakt-steps">
+        <div className="kontakt-container">
+          <span className="kontakt-eyebrow">{t.stepsEyebrow}</span>
+          <h2>{t.stepsTitle}</h2>
+          <ol className="kontakt-steps-list">
+            {t.steps.map((step, index) => (
+              <li key={step.title}>
+                <span className="kontakt-step-num">{index + 1}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
     </div>

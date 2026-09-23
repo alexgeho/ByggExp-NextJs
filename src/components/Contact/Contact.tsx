@@ -111,10 +111,11 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
             <span className="kontakt-breadcrumbs-current">{t.eyebrow}</span>
           </nav>
 
-          <div className="kontakt-hero-text">
-            <span className="kontakt-eyebrow">{t.eyebrow}</span>
+          {/* Same heading block (section-head) as the other site sections */}
+          <div className="section-head kontakt-head">
+            <span className="eyebrow">{t.eyebrow}</span>
             <h1>{t.title}</h1>
-            <p className="kontakt-lead">{t.lead}</p>
+            <p className="section-sub">{t.lead}</p>
             <ul className="kontakt-checks">
               {t.checks.map((check) => (
                 <li key={check}>✓ {check}</li>

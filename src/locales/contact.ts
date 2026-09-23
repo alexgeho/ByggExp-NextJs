@@ -10,7 +10,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     checks: ["Ответ за 1 рабочий день", "Бесплатное демо", "Помощь с запуском"],
 
     formName: "Имя",
-    formEmail: "Email *",
+    formEmail: "Email",
     formCompany: "Компания",
     formPhone: "Телефон (необязательно)",
     formTopic: "С чем помочь?",
@@ -71,7 +71,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     checks: ["Reply within 1 business day", "Free demo", "Help getting started"],
 
     formName: "Name",
-    formEmail: "Email *",
+    formEmail: "Email",
     formCompany: "Company",
     formPhone: "Phone (optional)",
     formTopic: "What can we help with?",
@@ -132,7 +132,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     checks: ["Svar inom 1 arbetsdag", "Gratis demo", "Hjälp att komma igång"],
 
     formName: "Namn",
-    formEmail: "E-post *",
+    formEmail: "E-post",
     formCompany: "Företag",
     formPhone: "Telefon (valfritt)",
     formTopic: "Vad gäller det?",
@@ -193,7 +193,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     checks: ["Svar innen 1 virkedag", "Gratis demo", "Hjelp til oppstart"],
 
     formName: "Navn",
-    formEmail: "E-post *",
+    formEmail: "E-post",
     formCompany: "Firma",
     formPhone: "Telefon (valgfritt)",
     formTopic: "Hva gjelder det?",
@@ -254,7 +254,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     checks: ["Odpowiedź w 1 dzień roboczy", "Darmowe demo", "Pomoc na start"],
 
     formName: "Imię i nazwisko",
-    formEmail: "E-mail *",
+    formEmail: "E-mail",
     formCompany: "Firma",
     formPhone: "Telefon (opcjonalnie)",
     formTopic: "W czym możemy pomóc?",
@@ -315,7 +315,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     checks: ["Відповідь за 1 робочий день", "Безкоштовне демо", "Допомога із запуском"],
 
     formName: "Ім’я",
-    formEmail: "Email *",
+    formEmail: "Email",
     formCompany: "Компанія",
     formPhone: "Телефон (необов’язково)",
     formTopic: "Чим допомогти?",
@@ -376,7 +376,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     checks: ["Vastaus 1 työpäivässä", "Ilmainen demo", "Apua alkuun"],
 
     formName: "Nimi",
-    formEmail: "Sähköposti *",
+    formEmail: "Sähköposti",
     formCompany: "Yritys",
     formPhone: "Puhelin (valinnainen)",
     formTopic: "Miten voimme auttaa?",
@@ -437,7 +437,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     checks: ["Vastus 1 tööpäeva jooksul", "Tasuta demo", "Abi alustamisel"],
 
     formName: "Nimi",
-    formEmail: "E-post *",
+    formEmail: "E-post",
     formCompany: "Ettevõte",
     formPhone: "Telefon (valikuline)",
     formTopic: "Millega saame aidata?",
@@ -498,7 +498,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     checks: ["Atsakymas per 1 darbo dieną", "Nemokama demonstracija", "Pagalba pradedant"],
 
     formName: "Vardas",
-    formEmail: "El. paštas *",
+    formEmail: "El. paštas",
     formCompany: "Įmonė",
     formPhone: "Telefonas (neprivaloma)",
     formTopic: "Kuo galime padėti?",
@@ -559,7 +559,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     checks: ["Atbilde 1 darba dienas laikā", "Bezmaksas demo", "Palīdzība uzsākšanā"],
 
     formName: "Vārds",
-    formEmail: "E-pasts *",
+    formEmail: "E-pasts",
     formCompany: "Uzņēmums",
     formPhone: "Tālrunis (nav obligāti)",
     formTopic: "Kā varam palīdzēt?",

@@ -9,9 +9,9 @@
   }
 
   h2 {
-    font-size: clamp(28px, 3vw, 40px);
-    line-height: 1.1;
-    font-weight: 700;
+    font-size: var(--fs-h2);
+    line-height: 1.05;
+    font-weight: 500;
     letter-spacing: -0.02em;
     color: var(--ink);
     margin-bottom: 16px;
@@ -36,14 +36,15 @@
   padding: 0 24px;
 }
 
+// Same eyebrow as .section-head .eyebrow elsewhere on the site.
 .kontakt-eyebrow {
   display: block;
   margin-bottom: 14px;
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--blue-2);
+  color: var(--blue);
 }
 
 /* HERO */
@@ -73,30 +74,25 @@
   color: var(--ink);
 }
 
-.kontakt-hero-text {
-  max-width: 600px;
-  margin: 80px auto 0;
+// Heading uses the global .section-head (eyebrow + title + sub); the page
+// title is an h1, so give it the same type as .section-head h2.
+.kontakt-head {
+  margin-top: 64px;
+  margin-bottom: 0;
 
   h1 {
-    font-size: clamp(36px, 5vw, 52px);
-    line-height: 1.08;
-    font-weight: 400;
+    font-size: var(--fs-h1);
+    line-height: 1.05;
+    font-weight: 500;
     letter-spacing: -0.02em;
     color: var(--ink);
-    margin-bottom: 20px;
   }
-}
-
-.kontakt-lead {
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--muted);
-  margin-bottom: 22px;
 }
 
 .kontakt-checks {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 8px 22px;
   list-style: none;
   padding: 0;
@@ -526,8 +522,12 @@
     padding: 0 16px;
   }
 
-  .kontakt-hero-text {
-    margin-top: 40px;
+  .kontakt-head {
+    margin-top: 32px;
+  }
+
+  .kontakt-head .section-sub {
+    width: 100%;
   }
 
   .kontakt-hero {

@@ -1280,3 +1280,43 @@
     justify-self: end;
   }
 }
+
+/* ---- Takstolar: optional geometry block + schematic truss drawing ---- */
+.lm-tool--truss > .lm-result {
+  grid-row: 1 / span 3;
+}
+
+@media (max-width: 900px) {
+  .lm-tool--truss > .lm-result {
+    grid-row: auto;
+  }
+}
+
+.lm-tool-subhead {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.lm-truss {
+  margin: 18px 0 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+  }
+}

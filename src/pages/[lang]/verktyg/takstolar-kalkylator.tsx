@@ -40,18 +40,19 @@ type ToolContent = {
 
 const CONTENT: Record<Locale, ToolContent> = {
   sv: {
-    metaTitle: 'Takstolar beräkning – räkna ut antal gratis (c/c) | ByggExp',
+    metaTitle: 'Beräkna takstolar online – antal, mått & ritning | ByggExp',
     description:
-      'Takstolar beräkning: fyll i takets längd och centrumavstånd (c/c) så räknar kalkylatorn antalet takstolar direkt – t.ex. 10 m tak med c/c 1200 mm = 10 st. Gratis, utan konto.',
+      'Takstolsberäkning online: antal takstolar från taklängd och c/c, plus nockhöjd, överramens längd och takyta från spännvidd och taklutning – med skiss av takstolen. Gratis, utan konto.',
     badge: 'Gratis kalkylator',
     h1: 'Beräkna takstolar',
     intro:
-      'Beräkna antal takstolar innan du beställer virke eller begär offert. Ange takets längd och centrumavstånd (c/c) så får du antalet direkt – ett snabbt materialunderlag, gratis och utan konto.',
+      'Räkna ut antal takstolar från takets längd och centrumavstånd (c/c). Fyll i spännvidd och taklutning så får du även nockhöjd, överramens längd och takyta – med en skiss av takstolen. Gratis och utan konto.',
     previewAlt: 'Förhandsvisning av takstolar',
     previewCaption: 'Så ser takstolar ut',
     sections: [
       { id: 'sa-raknar-du', heading: 'Så beräknar du antal takstolar', body: (<><figure className="lm-diagram"><img src="/landing/diagrams/takstolar.webp" alt="Diagram: takstolar med centrumavstånd c/c längs taket" width={720} height={380} loading="lazy" /><figcaption>Antal takstolar = takets längd ÷ c/c + 1. Standard c/c är 1200 mm.</figcaption></figure><p>Beräkningen av takstolar bygger på en enkel formel: <strong>antal = takets längd / c/c + 1</strong>. Den extra takstolen är för att både gavlarna ska få en takstol.</p><ol><li>Mät takets längd i meter.</li><li>Ange centrumavstånd (c/c) i mm.</li><li>Se antal takstolar direkt.</li></ol></>) },
       { id: 'exempel', heading: 'Exempel på takstolsberäkning', body: (<><p>Ett tak som är 10 meter långt med c/c 1200 mm: 10 000 / 1200 = 8,33, avrundat uppåt till 9, plus 1 = <strong>10 takstolar</strong>. Med tätare c/c 600 mm blir det i stället cirka 18 takstolar för samma tak – centrumavståndet styr alltså både antal och materialåtgång.</p></>) },
+      { id: 'matt-och-lutning', heading: 'Takstolens mått: nockhöjd, överram och lutning', body: (<><p>Fyller du i <strong>spännvidd</strong> (husets bredd) och <strong>taklutning</strong> räknar kalkylatorn ut takstolens yttre mått för en symmetrisk sadeltakstol:</p><ul><li><strong>Nockhöjd</strong> = halva spännvidden × tan(taklutning)</li><li><strong>Överramens längd</strong> per sida = (halva spännvidden + takfotsutsprång) ÷ cos(taklutning)</li><li><strong>Takyta</strong> = 2 × överramens längd × (takets längd + utsprång på gavlarna)</li></ul><p>Exempel: 8 m spännvidd och 27° lutning ger cirka 2,04 m nockhöjd och 5,05 m överram per sida med 500 mm utsprång. Skissen visar en W-takstol (fackverk) i rätt proportioner – en principskiss, inte en konstruktionsritning. Läs mer om takstolstyper, spännvidd och dimensionering i guiden <a href="/sv/blog/berakna-takstolar-dimensionering-c-avstand">takstolar – dimensionering och c-avstånd</a>.</p></>) },
       { id: 'cc-avstand', heading: 'Vilket c/c-avstånd ska takstolarna ha?', body: (<><p>Centrumavståndet (c/c) beror på taktäckning, underlagstak och snölast. Vanliga avstånd är 1200 mm för prefabricerade fackverkstakstolar, men tätare c/c (t.ex. 600–900 mm) förekommer vid tung taktäckning eller hög snölast. Använd alltid det c/c som konstruktören angett för ditt tak.</p></>) },
       { id: 'info', heading: 'Antal vs. dimensionering av takstolar', body: (<><p>Den här kalkylatorn gör en <strong>beräkning av antal takstolar</strong> – inte en hållfasthetsberäkning. <strong>Dimensionering av takstolar</strong> (val av virkesdimensioner, spännvidd och infästning utifrån snö- och vindlast) ska göras av en konstruktör enligt Eurokod. Använd antalet härifrån för material och offert, och följ alltid konstruktörens ritning för utförandet.</p></>) },
     ],
@@ -110,13 +111,13 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
   },
   en: {
-    metaTitle: 'Calculate roof trusses – count from c/c | ByggExp',
+    metaTitle: 'Calculate roof trusses – count, size & drawing | ByggExp',
     description:
       'Calculate roof trusses free: work out the number of trusses from the roof length and spacing (c/c). Simple roof-truss calculator, no account.',
     badge: 'Free calculator',
     h1: 'Calculate roof trusses',
     intro:
-      'Work out the number of roof trusses before you order timber or request a quote. Enter the roof length and centre spacing (c/c) and you get the count straight away – a quick material estimate, free and no account.',
+      'Work out the number of roof trusses from the roof length and centre spacing (c/c). Add the span and roof pitch to get the ridge height, top-chord length and roof area – with a sketch of the truss. Free, no account.',
     previewAlt: 'Preview of roof trusses',
     previewCaption: 'This is what roof trusses look like',
     sections: [

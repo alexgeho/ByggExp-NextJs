@@ -20,7 +20,7 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Vad ska en egenkontroll för tak innehålla?',
     answer:
-      'Projekt, ansvarig och datum samt kontrollpunkter med resultat. Typiska punkter är hel och rätt lagd underlagstäckning, infästning enligt vindlastkrav, täta genomföringar och anslutningar, kontrollerat fall och avvattning samt monterad taksäkerhet (snörasskydd och fästen).',
+      'Projekt, ansvarig och datum samt för varje kontrollpunkt metod, krav och resultat med datum och signatur. Typiska punkter är hel och rätt lagd underlagstäckning, läktavstånd enligt tillverkaren, infästning enligt vindlastkrav, täta genomföringar och anslutningar, kontrollerat fall och avvattning samt monterad taksäkerhet (snörasskydd, fästen och takstege).',
   },
   {
     question: 'Varför är infästning enligt vindlast viktig?',

@@ -21,7 +21,7 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Vad ska en egenkontroll för våtrum innehålla?',
     answer:
-      'Projekt, ansvarig och datum samt kontrollpunkter med resultat. Typiska punkter är fuktmätning i underlag före tätskikt, tätskikt applicerat enligt tillverkarens anvisning (BBV/GVK), kontrollerat fall mot golvbrunn, rätt monterad golvbrunn i nivå med tätskiktet och täta genomföringar.',
+      'Projekt, ansvarig och datum samt för varje kontrollpunkt metod, krav och resultat med datum och signatur. Typiska punkter är fuktmätning i underlag före tätskikt (mätvärde), fall mot golvbrunn, golvbrunn i nivå med tätskiktet, tätskikt och skikttjocklek enligt tillverkarens anvisning (BBV/GVK), förstärkta hörn och skarvar, täta genomföringar, fotodokumentation och våtrumsintyg.',
   },
   {
     question: 'Vad betyder BBV och GVK?',

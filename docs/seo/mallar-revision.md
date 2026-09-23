@@ -45,7 +45,8 @@
    этапы подписи (el), версия Säker Vatten 2026:1 (vvs). Сделано: el = протокол 22 п. (`59c4c8d`); инструмент получил
    поле «Metod» + колонку «Krav / underlag» для всех пресетов с требованиями; VVS = 16 п. в 3 этапа (провтряк/время/
    падение давления — пустые поля «enligt provningsmetod», числа не выдуманы; 2026:1 в шапке и сноске); Bygg/stomme =
-   13 п. с metod/krav (PBL 10:6). Остались на 5 пунктах: vatrum, betong, tak, ventilation, skyddsrond.
+   13 п. с metod/krav (PBL 10:6). 23.09 добиты остальные: vatrum 10 п. (RF %, скикт мм, intyg), betong 12 (täckskikt мм,
+   SS-EN 13670, RF), tak 11 (läkt мм), ventilation 12 (flöden l/s, OVK före ibruktagning), skyddsrond 15 п. в 6 зонах.
 2. Быстрые: ссылка arbetsberedning-статья → инструмент; удалить «Commode» и развести пример договора.
 3. Сделать шаблон byggmötesprotokoll (или сменить тайтл).
 4. kontrollplan-mall → табличный формат PBL 2026.

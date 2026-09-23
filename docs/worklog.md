@@ -31,7 +31,7 @@
   с пометкой аудитории, FinalBenefits = 4. Опечатка sv «För får byggteamet» исправлена.
 
 ### 🔜 NÄSTA STEG
-1. ✅ egenkontroll: VVS (Säker Vatten 2026:1) + Bygg переписаны, у всех пресетов Metod + Krav/underlag. Дальше — vatrum/betong/tak/ventilation/skyddsrond (всё ещё по 5 общих пунктов).
+1. ✅ egenkontroll: все 8 пресетов = протоколы с Metod + Krav/underlag и подписями (el, VVS 2026:1, bygg, vatrum, betong, tak, ventilation, skyddsrond).
 2. Быстрые из ревизии: ссылка arbetsberedning-статья → инструмент; «Commode» + HF17/AB04 в entreprenadkontrakt;
    шаблон byggmötesprotokoll (сейчас 404 при обещании в тайтле).
 3. **Модель чата**: `CHAT_MODEL` = `claude-opus-4-8` (дорого, баланс ~$4) → owner решает про `claude-haiku-4-5`.

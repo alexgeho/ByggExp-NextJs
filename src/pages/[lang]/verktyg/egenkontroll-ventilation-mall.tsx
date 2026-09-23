@@ -21,7 +21,7 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Vad ska en egenkontroll för ventilation innehålla?',
     answer:
-      'Projekt, ansvarig och datum samt kontrollpunkter med resultat. Typiska punkter är rensade och täta kanaler, don injusterade mot projekterade flöden, funktionstestade brandspjäll, komplett kanalisolering och ett upprättat injusteringsprotokoll.',
+      'Projekt, ansvarig och datum samt för varje kontrollpunkt metod, krav och resultat med datum och signatur. Typiska punkter är rensade och täta kanaler, komplett isolering, funktionstestade brandspjäll, uppmätta till- och frånluftsflöden mot projekterade värden, injusteringsprotokoll och OVK före ibruktagning.',
   },
   {
     question: 'Är egenkontroll för ventilation samma sak som OVK?',

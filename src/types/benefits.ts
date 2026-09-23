@@ -16,18 +16,6 @@ export type BenefitsOfficeT = {
 
   benefitsOfficeCard4Title: string;
   benefitsOfficeCard4Text: string;
-
-  benefitsOfficeCard5Title: string;
-  benefitsOfficeCard5Text: string;
-
-  benefitsOfficeCard6Title: string;
-  benefitsOfficeCard6Text: string;
-
-  benefitsOfficeCard7Title: string;
-  benefitsOfficeCard7Text: string;
-
-  benefitsOfficeCard8Title: string;
-  benefitsOfficeCard8Text: string;
 };
 
 export type BenefitsSiteT = {
@@ -44,18 +32,6 @@ export type BenefitsSiteT = {
 
   benefitsSiteCard4Title: string;
   benefitsSiteCard4Text: string;
-
-  benefitsSiteCard5Title: string;
-  benefitsSiteCard5Text: string;
-
-  benefitsSiteCard6Title: string;
-  benefitsSiteCard6Text: string;
-
-  benefitsSiteCard7Title: string;
-  benefitsSiteCard7Text: string;
-
-  benefitsSiteCard8Title: string;
-  benefitsSiteCard8Text: string;
 };
 
 export type BenefitsProps = {

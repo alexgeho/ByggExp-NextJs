@@ -437,3 +437,24 @@
     padding-right: 56px;
   }
 }
+
+/* ============ ONE SLIDER FOR BOTH AUDIENCES ============ */
+
+.benefits-single {
+  display: flex;
+  justify-content: center;
+
+  .benefits-slider {
+    max-width: 560px;
+  }
+}
+
+.benefit-audience {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9bd0ff;
+}

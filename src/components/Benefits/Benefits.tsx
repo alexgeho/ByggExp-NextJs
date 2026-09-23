@@ -2,14 +2,14 @@ import { useRef, useState } from "react";
 
 import type { BenefitsProps } from "../../types/benefits";
 
-type Card = { icon: string; title: string; text: string };
+type Card = { icon: string; iconClass: string; audience: string; title: string; text: string };
 
 const GAP = 16; // keep in sync with .benefits-track gap in Benefits.scss
 
-// One column of benefit cards as a slider — same scroll-snap pattern as the
+// All benefit cards (office + site team) in one slider — same scroll-snap pattern as the
 // Pricing and Features carousels: one card per view, arrows and dots. The
 // arrows loop: past the last card they wrap to the first and vice versa.
-function BenefitSlider({ cards, iconClass }: { cards: Card[]; iconClass: string }) {
+function BenefitSlider({ cards }: { cards: Card[] }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
   const last = cards.length - 1;
@@ -48,8 +48,9 @@ function BenefitSlider({ cards, iconClass }: { cards: Card[]; iconClass: string 
         <div className="benefits-track" ref={trackRef} onScroll={handleScroll}>
           {cards.map((card) => (
             <div className="benefit-card" key={card.title}>
+              <span className="benefit-audience">{card.audience.replace(/:\s*$/, "")}</span>
               <div className="benefit-head">
-                <div className={iconClass}>
+                <div className={card.iconClass}>
                   <img src={card.icon} alt="" />
                 </div>
                 <h3>{card.title}</h3>
@@ -87,25 +88,17 @@ function Benefits({ benefitsT }: BenefitsProps) {
   const site = benefitsT.site;
 
   const officeCards: Card[] = [
-    { icon: "/landing/benefits/card1.svg", title: office.benefitsOfficeCard1Title, text: office.benefitsOfficeCard1Text },
-    { icon: "/landing/benefits/card2.svg", title: office.benefitsOfficeCard2Title, text: office.benefitsOfficeCard2Text },
-    { icon: "/landing/benefits/card3.svg", title: office.benefitsOfficeCard3Title, text: office.benefitsOfficeCard3Text },
-    { icon: "/landing/benefits/card4.svg", title: office.benefitsOfficeCard4Title, text: office.benefitsOfficeCard4Text },
-    { icon: "/landing/benefits/card9.svg", title: office.benefitsOfficeCard5Title, text: office.benefitsOfficeCard5Text },
-    { icon: "/landing/benefits/card10.svg", title: office.benefitsOfficeCard6Title, text: office.benefitsOfficeCard6Text },
-    { icon: "/landing/benefits/card11.svg", title: office.benefitsOfficeCard7Title, text: office.benefitsOfficeCard7Text },
-    { icon: "/landing/benefits/card12.svg", title: office.benefitsOfficeCard8Title, text: office.benefitsOfficeCard8Text },
+    { icon: "/landing/benefits/card1.svg", iconClass: "benefit-icon", audience: office.benefitsOfficeLead, title: office.benefitsOfficeCard1Title, text: office.benefitsOfficeCard1Text },
+    { icon: "/landing/benefits/card2.svg", iconClass: "benefit-icon", audience: office.benefitsOfficeLead, title: office.benefitsOfficeCard2Title, text: office.benefitsOfficeCard2Text },
+    { icon: "/landing/benefits/card3.svg", iconClass: "benefit-icon", audience: office.benefitsOfficeLead, title: office.benefitsOfficeCard3Title, text: office.benefitsOfficeCard3Text },
+    { icon: "/landing/benefits/card4.svg", iconClass: "benefit-icon", audience: office.benefitsOfficeLead, title: office.benefitsOfficeCard4Title, text: office.benefitsOfficeCard4Text },
   ];
 
   const siteCards: Card[] = [
-    { icon: "/landing/benefits/card5.svg", title: site.benefitsSiteCard1Title, text: site.benefitsSiteCard1Text },
-    { icon: "/landing/benefits/card6.svg", title: site.benefitsSiteCard2Title, text: site.benefitsSiteCard2Text },
-    { icon: "/landing/benefits/card7.svg", title: site.benefitsSiteCard3Title, text: site.benefitsSiteCard3Text },
-    { icon: "/landing/benefits/card8.svg", title: site.benefitsSiteCard4Title, text: site.benefitsSiteCard4Text },
-    { icon: "/landing/benefits/card13.svg", title: site.benefitsSiteCard5Title, text: site.benefitsSiteCard5Text },
-    { icon: "/landing/benefits/card14.svg", title: site.benefitsSiteCard6Title, text: site.benefitsSiteCard6Text },
-    { icon: "/landing/benefits/card15.svg", title: site.benefitsSiteCard7Title, text: site.benefitsSiteCard7Text },
-    { icon: "/landing/benefits/card16.svg", title: site.benefitsSiteCard8Title, text: site.benefitsSiteCard8Text },
+    { icon: "/landing/benefits/card5.svg", iconClass: "benefit-icon-blue", audience: site.benefitsSiteLead, title: site.benefitsSiteCard1Title, text: site.benefitsSiteCard1Text },
+    { icon: "/landing/benefits/card6.svg", iconClass: "benefit-icon-blue", audience: site.benefitsSiteLead, title: site.benefitsSiteCard2Title, text: site.benefitsSiteCard2Text },
+    { icon: "/landing/benefits/card7.svg", iconClass: "benefit-icon-blue", audience: site.benefitsSiteLead, title: site.benefitsSiteCard3Title, text: site.benefitsSiteCard3Text },
+    { icon: "/landing/benefits/card8.svg", iconClass: "benefit-icon-blue", audience: site.benefitsSiteLead, title: site.benefitsSiteCard4Title, text: site.benefitsSiteCard4Text },
   ];
 
   return (
@@ -121,22 +114,9 @@ function Benefits({ benefitsT }: BenefitsProps) {
           </h2>
         </div>
 
-        {/* BENEFITS-BOTH */}
-        <div className="benefitsBoth">
-          {/* FOR OFFICE */}
-          <div className="benefits-office">
-            <div className="solution-lead">{office.benefitsOfficeLead}</div>
-            <BenefitSlider cards={officeCards} iconClass="benefit-icon" />
-          </div>
-
-          {/* DEVIDER */}
-          <div className="divider"></div>
-
-          {/* FOR TEAM */}
-          <div className="benefits-office">
-            <div className="solution-lead">{site.benefitsSiteLead}</div>
-            <BenefitSlider cards={siteCards} iconClass="benefit-icon-blue" />
-          </div>
+        {/* OFFICE + SITE TEAM, ONE SLIDER */}
+        <div className="benefits-single">
+          <BenefitSlider cards={[...officeCards, ...siteCards]} />
         </div>
       </div>
     </section>

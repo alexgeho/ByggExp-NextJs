@@ -15,7 +15,6 @@ import { CalendlyInlineWidget } from "../CalendlyInlineWidget";
 const CALENDLY_URL = "https://calendly.com/870717ag/30min";
 
 const PHONE = "+46 70 757 75 75";
-const WHATSAPP_NUMBER = "+46 70 757 75 75";
 const COMPANY = "RealMar AB";
 const ORG_NR = "559474-9383";
 const STREET = "Byggmästarvägen 18";
@@ -23,7 +22,6 @@ const POSTAL = "168 32 Bromma";
 const ADDRESS = `${STREET}, ${POSTAL}`;
 
 const phoneHref = `tel:${PHONE.replace(/\s/g, "")}`;
-const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, "")}`;
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS)}`;
 
 type Props = ContactProps & CTAProps & { lang: string };
@@ -277,18 +275,6 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
               <p>{t.mailText}</p>
             </div>
 
-            <div className="kontakt-card">
-              <span className="kontakt-card-label">{t.chatLabel}</span>
-              <p>{t.chatText}</p>
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="kontakt-card-link"
-              >
-                {t.chatButton} →
-              </a>
-            </div>
           </aside>
         </div>
       </section>

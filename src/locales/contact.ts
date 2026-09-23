@@ -25,9 +25,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     emailSupport: "Поддержка",
     emailSales: "Продажи и демо",
     emailPress: "Пресса",
-    chatLabel: "Чат",
-    chatText: "Самый быстрый способ связаться с нами — WhatsApp.",
-    chatButton: "Открыть WhatsApp",
 
     stepsEyebrow: "После вашего запроса",
     stepsTitle: "Как это происходит",
@@ -86,9 +83,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     emailSupport: "Support",
     emailSales: "Sales & demo",
     emailPress: "Press",
-    chatLabel: "Chat",
-    chatText: "The fastest way to reach us is via WhatsApp.",
-    chatButton: "Open WhatsApp",
 
     stepsEyebrow: "After your request",
     stepsTitle: "How it works",
@@ -147,9 +141,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     emailSupport: "Support",
     emailSales: "Försäljning & demo",
     emailPress: "Press",
-    chatLabel: "Chatta",
-    chatText: "Snabbaste sättet att nå oss är via WhatsApp.",
-    chatButton: "Öppna WhatsApp",
 
     stepsEyebrow: "Efter din förfrågan",
     stepsTitle: "Så går det till",
@@ -208,9 +199,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     emailSupport: "Support",
     emailSales: "Salg & demo",
     emailPress: "Presse",
-    chatLabel: "Chat",
-    chatText: "Raskeste måten å nå oss på er via WhatsApp.",
-    chatButton: "Åpne WhatsApp",
 
     stepsEyebrow: "Etter forespørselen",
     stepsTitle: "Slik går det til",
@@ -269,9 +257,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     emailSupport: "Wsparcie",
     emailSales: "Sprzedaż i demo",
     emailPress: "Prasa",
-    chatLabel: "Czat",
-    chatText: "Najszybciej skontaktujesz się z nami przez WhatsApp.",
-    chatButton: "Otwórz WhatsApp",
 
     stepsEyebrow: "Po wysłaniu zapytania",
     stepsTitle: "Jak to wygląda",
@@ -330,9 +315,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     emailSupport: "Підтримка",
     emailSales: "Продажі та демо",
     emailPress: "Преса",
-    chatLabel: "Чат",
-    chatText: "Найшвидше зв’язатися з нами через WhatsApp.",
-    chatButton: "Відкрити WhatsApp",
 
     stepsEyebrow: "Після вашого запиту",
     stepsTitle: "Як це відбувається",
@@ -391,9 +373,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     emailSupport: "Tuki",
     emailSales: "Myynti ja demo",
     emailPress: "Media",
-    chatLabel: "Chat",
-    chatText: "Nopeimmin tavoitat meidät WhatsAppilla.",
-    chatButton: "Avaa WhatsApp",
 
     stepsEyebrow: "Pyyntösi jälkeen",
     stepsTitle: "Näin se etenee",
@@ -452,9 +431,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     emailSupport: "Tugi",
     emailSales: "Müük ja demo",
     emailPress: "Meedia",
-    chatLabel: "Vestlus",
-    chatText: "Kõige kiiremini leiate meid WhatsAppis.",
-    chatButton: "Ava WhatsApp",
 
     stepsEyebrow: "Pärast päringut",
     stepsTitle: "Kuidas see käib",
@@ -513,9 +489,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     emailSupport: "Pagalba",
     emailSales: "Pardavimai ir demo",
     emailPress: "Spauda",
-    chatLabel: "Pokalbis",
-    chatText: "Greičiausiai susisieksite su mumis per WhatsApp.",
-    chatButton: "Atidaryti WhatsApp",
 
     stepsEyebrow: "Po jūsų užklausos",
     stepsTitle: "Kaip tai vyksta",
@@ -574,9 +547,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     emailSupport: "Atbalsts",
     emailSales: "Pārdošana un demo",
     emailPress: "Prese",
-    chatLabel: "Tērzēšana",
-    chatText: "Visātrāk mūs sasniegsiet, izmantojot WhatsApp.",
-    chatButton: "Atvērt WhatsApp",
 
     stepsEyebrow: "Pēc jūsu pieprasījuma",
     stepsTitle: "Kā tas notiek",

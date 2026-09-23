@@ -21,9 +21,6 @@ export type ContactT = {
   emailSupport: string;
   emailSales: string;
   emailPress: string;
-  chatLabel: string;
-  chatText: string;
-  chatButton: string;
 
   stepsEyebrow: string;
   stepsTitle: string;

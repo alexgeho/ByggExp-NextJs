@@ -91,3 +91,20 @@ gap: 20px;
 align-items: center;
 }
 }
+/* Slider cards here carry one statement and no title — show it big. */
+.final-benefits .benefits-single .benefit-card {
+  min-height: 200px;
+}
+
+.final-benefits .benefits-single .benefit-card p {
+  font-size: 26px;
+  line-height: 1.35;
+  color: var(--white);
+  min-height: 0;
+}
+
+@media (max-width: 650px) {
+  .final-benefits .benefits-single .benefit-card p {
+    font-size: 20px;
+  }
+}

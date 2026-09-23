@@ -536,3 +536,10 @@
   text-transform: uppercase;
   color: #9bd0ff;
 }
+
+// Inline SVG icons (FinalBenefits) sized like the <img> icons.
+.benefits-single .benefit-icon svg,
+.benefits-single .benefit-icon-blue svg {
+  width: 28px;
+  height: 28px;
+}

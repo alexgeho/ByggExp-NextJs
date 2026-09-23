@@ -1840,55 +1840,115 @@ const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING: BlogPost = {
 };
 
 const A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND_HTML = `
-<p>Att räkna på takstolar handlar om två saker: hur <em>många</em> du behöver och hur de ska <em>dimensioneras</em>. Antalet räknar du enkelt själv utifrån taklängd och c-avstånd. Dimensioneringen – virkesdimension, spikplåtar och hållfasthet – ska däremot alltid göras av takstolstillverkaren utifrån spännvidd och snölast. Här går vi igenom båda delarna så att du får rätt siffror till offerten.</p>
+<p>Ska du bygga eller byta tak behöver du veta tre saker om takstolarna: vilken typ som passar, hur många som behövs och vem som dimensionerar dem. Här får du typerna med spännvidd och lutning, formeln för antal, c-avstånd vid tunga pannor och reglerna för dimensionering sedan 2025.</p>
 
-<p><a href="/sv/verktyg/takstolar-kalkylator">Räkna ut antal takstolar direkt i vår gratis kalkylator →</a></p>
+<p><a href="/sv/verktyg/takstolar-kalkylator">Beräkna takstolar online – antal, nockhöjd och överram i vår gratis kalkylator →</a></p>
 
-<figure class="article-diagram"><img src="/landing/diagrams/takstolar.webp" alt="Diagram: takstolar med centrumavstånd c/c längs taket" width="720" height="380" loading="lazy"><figcaption>Antal takstolar = taklängd ÷ c/c + 1. Standard c/c är 1200 mm.</figcaption></figure>
+<figure class="article-diagram"><img src="/landing/diagrams/takstolar.webp" alt="Diagram: takstolar med centrumavstånd c/c längs taket" width="720" height="380" loading="lazy"><figcaption>Antal takstolar = taklängd ÷ c-avstånd + 1. Standard för prefabricerade takstolar är 1 200 mm.</figcaption></figure>
+
+<h2>Vad är en takstol?</h2>
+<p>En takstol är en färdig, bärande konstruktion som för ner yttertakets last till ytterväggarna. Den består av överramar, underram och diagonaler som hålls ihop av spikplåtar. Prefabricerade takstolar tillverkas oftast av 45 mm konstruktionsvirke i hållfasthetsklass C24, med en virkeshöjd på 120–220 mm beroende på spännvidd och last.</p>
+
+<h2>Vanliga typer av takstolar</h2>
+<p>Vilken typ du väljer beror på om vinden ska vara kallvind eller gå att inreda, och på vilken takform du vill ha.</p>
+<div class="article-table"><table>
+<thead><tr><th>Typ</th><th>Används till</th><th>Typisk spännvidd</th><th>Typisk lutning</th></tr></thead>
+<tbody>
+<tr><td>W-takstol (fackverk)</td><td>Vanligast för småhus, kallvind utan bärande innerväggar</td><td>4–12 m</td><td>14–30°</td></tr>
+<tr><td>WW-takstol</td><td>Som W-takstol men för bredare hus</td><td>9–16 m</td><td>14–30°</td></tr>
+<tr><td>A-takstol</td><td>Upphöjd underram som ger högre takhöjd, t.ex. garage och stuga</td><td>Enligt tillverkare</td><td>Enligt tillverkare</td></tr>
+<tr><td>Ramverkstakstol (vindstakstol)</td><td>Inredningsbar vind – hanbjälke och stödben blir väggar och tak</td><td>6–10 m (upp till 12 m)</td><td>27–50°</td></tr>
+<tr><td>Saxtakstol</td><td>Snedtak inne; innertaket lutar cirka 1° mindre än yttertaket</td><td>Enligt tillverkare</td><td>Enligt tillverkare</td></tr>
+<tr><td>Pulpettakstol</td><td>Tak med ett enda takfall</td><td>Enligt tillverkare</td><td>Enligt tillverkare</td></tr>
+<tr><td>Mansardtakstol</td><td>Brutet tak med mer utrymme på vinden</td><td>8–12 m</td><td>Brutet</td></tr>
+<tr><td>Fackverksbalk</td><td>Flacka tak, ofta under 14°</td><td>Enligt tillverkare</td><td>Från 0°</td></tr>
+</tbody></table></div>
+<p>Spännvidderna är typiska intervall från branschens tabeller, inte dimensioneringsvärden. Flera tillverkare säljer också förhöjda varianter, till exempel förhöjd sadel- eller ramtakstol.</p>
+
+<h2>Spännvidd och mått</h2>
+<p>Spännvidden är avståndet mellan de bärande ytterväggarna – i praktiken husets bredd. Det är det mått som påverkar takstolen mest: större spännvidd kräver högre virke, fler diagonaler eller en annan typ, till exempel WW i stället för W.</p>
+<p>Takstolens yttre mått följer av spännvidd och taklutning:</p>
+<p><strong>Nockhöjd = halva spännvidden × tan(lutning)</strong><br><strong>Överram = (halva spännvidden + takfotsutsprång) ÷ cos(lutning)</strong></p>
+<p>Ett 8 m brett hus med 27° lutning får cirka 2,0 m nockhöjd och drygt 5 m överram per sida med 500 mm utsprång. <a href="/sv/verktyg/takstolar-kalkylator">Kalkylatorn</a> räknar ut måtten och ritar en skiss av takstolen.</p>
 
 <h2>Så räknar du ut antal takstolar</h2>
-<p>Antalet takstolar styrs av takets längd (längs nocken) och centrumavståndet mellan takstolarna. Grundformeln är:</p>
-<p><strong>Antal takstolar = taklängd / c-avstånd + 1</strong></p>
-<p>Plus ett, eftersom det behövs en takstol i vardera änden. Exempel: ett tak som är 9 meter långt med c-avstånd 1 200 mm ger 9 000 / 1 200 = 7,5 → avrunda uppåt till 8, plus 1 = <strong>9 takstolar</strong>. Avrunda alltid uppåt så att avstånden inte blir för stora.</p>
+<p>Antalet styrs av takets längd längs nocken och centrumavståndet:</p>
+<p><strong>Antal takstolar = taklängd ÷ c-avstånd + 1</strong></p>
+<p>Ettan lägger du till för att båda gavlarna behöver en takstol. Avrunda alltid uppåt: ett 9 m långt tak med c-avstånd 1 200 mm ger 9 000 ÷ 1 200 = 7,5 → 8, plus 1 = <strong>9 takstolar</strong>. Det exakta antalet och var gaveltakstolarna placeras bestämmer tillverkaren i sin ritning.</p>
 
-<h2>Vad är c-avstånd (cc-mått)?</h2>
-<p>C-avstånd, eller cc-mått, är avståndet från mitten på en takstol till mitten på nästa. I Sverige är <strong>1 200 mm standard</strong> för fackverkstakstolar i konstruktionsvirke C24. Vid tyngre taktäckning – som betong- eller tegelpannor – kan avståndet behöva minskas, ofta ner mot <strong>600 mm</strong>, för att bära lasten. Rätt c-avstånd hänger alltså ihop med både taktäckning och läkt- och råspontsdimension.</p>
+<h2>C-avstånd – 1 200 mm även för tunga tak</h2>
+<p>C-avstånd (cc-mått) är avståndet från mitten av en takstol till mitten av nästa. <strong>1 200 mm är standard</strong> för prefabricerade takstolar i Sverige, och det gäller även för betong- och tegelpannor. Takstolarna dimensioneras då för tungt tak (0,55–1,00 kN/m²) i stället för lätt tak som plåt (0,10–0,35 kN/m²). Tätare c-avstånd, 600 eller 900 mm, förekommer i vissa fall, men det är tillverkaren som avgör – inte taktäckningen i sig.</p>
+<p>Ange därför taktäckningen när du beställer. Läktavståndet räknar du sedan fram i <a href="/sv/blog/lakt-avstand-tak-berakning">guiden om läktavstånd</a>.</p>
 
-<h2>Dimensionering: spännvidd och snölast avgör</h2>
-<p>Själva dimensioneringen av takstolen – hur grovt virke som behövs och hur spikplåtarna ska placeras – styrs framför allt av två faktorer:</p>
+<h2>Taklutning</h2>
+<p>Takstolstabellerna utgår ofta från lutningarna 14° (1:4), 27° (1:2) och 45° (1:1). Lutningen begränsar också vilken taktäckning du kan välja:</p>
 <ul>
-<li><strong>Spännvidd</strong> – avståndet mellan de bärande ytterväggarna. Ju större spännvidd, desto kraftigare virke och fler eller större spikplåtar krävs.</li>
-<li><strong>Snölast</strong> – hur mycket snö taket kan behöva bära. Snölasten varierar kraftigt beroende på var i landet du bygger och regleras i Boverkets konstruktionsregler (EKS/Eurokod). Även takets lutning spelar in – ett flackt tak samlar mer snö.</li>
+<li><strong>Betongpannor</strong> läggs enligt tillverkarna ner till 14°. Under cirka 22° gäller skärpta krav, till exempel tätare bärläkt och limmade skarvar i underlagstaket.</li>
+<li><strong>Lertegel</strong> kräver ofta brantare tak – vanliga tegelpannor har en lägsta lutning runt 22°.</li>
+<li><strong>Flacka tak under 14°</strong> byggs normalt med fackverksbalkar och annan taktäckning än pannor.</li>
 </ul>
-<p>Den vanligaste typen är <strong>fackverkstakstolen</strong> (W-takstol, ibland kallad svensk takstol), som är fribärande och därför inte behöver bärande innerväggar. Eftersom takstolar är en bärande konstruktion ska de tillverkas och dimensioneras enligt gällande konstruktionsregler – det är inget du räknar fram på en servett. Beställ dem prefabricerade och certifierade från en takstolstillverkare, som gör hållfasthetsberäkningen utifrån ditt underlag.</p>
+<p>Kontrollera alltid lägsta lutning i tillverkarens monteringsanvisning för just din panna.</p>
+
+<h2>Dimensionering: vem räknar och mot vilka regler?</h2>
+<p>Dimensioneringen – virkets höjd, spikplåtarnas storlek och placering – görs av takstolstillverkarens konstruktör. Tre faktorer styr:</p>
+<ul>
+<li><strong>Spännvidd</strong> – husets bredd.</li>
+<li><strong>Snölast</strong> – beror på var du bygger och på takets form och lutning. Grundvärdet hämtas ur en nationell snölastkarta.</li>
+<li><strong>Taktäckning</strong> – tungt eller lätt tak.</li>
+</ul>
+<p>Sedan 1 juli 2025 gäller Boverkets föreskrifter <strong>BFS 2024:6</strong> om bärförmåga, stadga och beständighet. De ersatte EKS. Har bygglovsansökan eller anmälan kommit in före 1 juli 2026 får de äldre reglerna fortfarande tillämpas, men gamla och nya regler får inte blandas. Eurokod 5 (SS-EN 1995-1-1) är fortfarande den anvisade metoden för att dimensionera träkonstruktioner.</p>
+<p>Tillverkaren ansvarar för att takstolarna håller, men byggherren har det övergripande ansvaret enligt plan- och bygglagen. Beställ därför takstolarna färdigdimensionerade i stället för att räkna fram dem själv.</p>
 
 <h2>Så gör du i praktiken</h2>
 <ol>
-<li>Räkna ut antalet takstolar med taklängd och c-avstånd (kalkylatorn gör det åt dig).</li>
-<li>Ta fram spännvidd, taklutning och snözon för orten.</li>
-<li>Skicka underlaget till takstolstillverkaren för dimensionering och offert.</li>
-<li>Stäm av läkt- och råspontsåtgång mot det valda c-avståndet.</li>
+<li>Välj typ utifrån vind och takform – kallvind, inredningsbar vind eller brutet tak.</li>
+<li>Ta fram spännvidd, taklutning, taktäckning och ort.</li>
+<li>Räkna ut antal och mått för offerten i <a href="/sv/verktyg/takstolar-kalkylator">kalkylatorn</a>.</li>
+<li>Skicka underlaget till en takstolstillverkare för dimensionering och ritning.</li>
+<li>Räkna läkt, underlagstak och pannor mot det c-avstånd tillverkaren anger.</li>
 </ol>
-<p>När antalet är klart kan du fortsätta med resten av takkalkylen: <a href="/sv/verktyg/tak-kalkylator">takkalkylatorn</a> för materialåtgång och guiden om <a href="/sv/blog/takpannor-antal-per-m2">takpannor per m²</a> för själva täckningen. Läktavståndet räknar du i <a href="/sv/blog/lakt-avstand-tak-berakning">guiden om läktavstånd</a>.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
-<li><strong>Glömma +1.</strong> Det behövs en takstol i varje gavel – räkna mellanrum, inte bara delning.</li>
-<li><strong>Behålla 1 200 mm vid tunga pannor.</strong> Tegel och betong kan kräva tätare c-avstånd – kontrollera mot tillverkarens anvisning.</li>
-<li><strong>Dimensionera själv.</strong> Takstolen är bärande – överlåt hållfasthetsberäkningen till tillverkaren.</li>
+<li><strong>Glömma +1.</strong> Då saknas takstolen i ena gaveln.</li>
+<li><strong>Inte ange taktäckningen.</strong> Utan den kan tillverkaren inte dimensionera för rätt last.</li>
+<li><strong>Tro att tegel kräver 600 mm c-avstånd.</strong> Det är dimensioneringen som anpassas, inte avståndet.</li>
+<li><strong>Dimensionera själv.</strong> Kalkylatorn ger antal och mått för offerten – virke och spikplåtar räknar tillverkaren fram.</li>
 </ul>
 
-<p>Antalet takstolar är enkel matematik, men dimensioneringen är en konstruktionsfråga. Räkna fram antalet för offerten, och låt tillverkaren stå för hållfastheten – då blir taket både rätt räknat och säkert.</p>
+<h2>Kom igång</h2>
+<p>Räkna ut antal takstolar, nockhöjd och överram i <a href="/sv/verktyg/takstolar-kalkylator">takstolskalkylatorn</a> och skapa en offert direkt från resultatet. Materialet för hela taket får du i <a href="/sv/verktyg/tak-kalkylator">takkalkylatorn</a>. Vill du se hur ByggExp samlar offert, projekt och egenkontroller på ett ställe? <a href="/sv/contact">Boka en demo</a>.</p>
+
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/takpannor-antal-per-m2">Takpannor – antal per m²</a></li>
+<li><a href="/sv/blog/lakt-avstand-tak-berakning">Läktavstånd – så räknar du</a></li>
+<li><a href="/sv/blog/berakna-materialatgang-tak">Beräkna materialåtgång för tak</a></li>
+<li><a href="/sv/blog/reglar-dimensioner-c-avstand-vagg">Reglar – dimensioner och c-avstånd</a></li>
+<li><a href="/sv/verktyg/egenkontroll-tak-mall">Egenkontroll tak – gratis mall</a></li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Hur många takstolar behöver jag?</h3>
+<p>Dela takets längd med c-avståndet, avrunda uppåt och lägg till en. Ett 9 m långt tak med c-avstånd 1 200 mm behöver 9 takstolar.</p>
+<h3>Vilket c-avstånd ska takstolarna ha?</h3>
+<p>Standard är 1 200 mm, även för betong- och tegelpannor. Tillverkaren dimensionerar takstolarna för tungt eller lätt tak och avgör om tätare avstånd behövs.</p>
+<h3>Hur stor spännvidd klarar en takstol?</h3>
+<p>En W-takstol täcker typiskt 4–12 m och en WW-takstol 9–16 m. Vilken takstol som klarar ditt hus avgör tillverkaren utifrån snölast och taktäckning.</p>
+<h3>Kan jag dimensionera takstolar själv?</h3>
+<p>Nej, inte i praktiken. Takstolar är bärande och dimensioneras av tillverkarens konstruktör enligt Boverkets regler (BFS 2024:6) och Eurokod 5. Du tar fram antal och mått för offerten.</p>
+<h3>Vilken taklutning är vanligast?</h3>
+<p>Takstolstabellerna utgår ofta från 14°, 27° och 45°. Betongpannor klarar ner till 14° enligt tillverkarna, medan många tegelpannor kräver minst runt 22°.</p>
 `;
 
 const A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND: BlogPost = {
   _id: "code-"+"berakna-takstolar-dimensionering-c-avstand",
-  title: "Beräkna takstolar – antal, c-avstånd och dimensionering", slug: "berakna-takstolar-dimensionering-c-avstand", locale: "sv",
-  excerpt: "Formeln för antal takstolar (taklängd / c-avstånd + 1), varför standard är c/c 1200 mm och hur spännvidd och snölast styr dimensioneringen. Med gratis kalkylator.", tag: "Kalkyl",
+  title: "Takstolar – typer, spännvidd, c-avstånd och dimensionering", slug: "berakna-takstolar-dimensionering-c-avstand", locale: "sv",
+  excerpt: "Typer av takstolar med spännvidd och lutning, formeln för antal, varför 1 200 mm c-avstånd gäller även för tegel och vilka regler (BFS 2024:6) som styr dimensioneringen.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/takstolar-preview.webp", contentHtml: A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND_HTML,
-  seoTitle: "Beräkna takstolar – antal, c-avstånd & dimensionering | ByggExp", seoDescription: "Antal takstolar = taklängd / c-avstånd + 1. Standard c/c 1200 mm (600 mm vid tegel), och så styr spännvidd och snölast dimensioneringen. Gratis takstolskalkylator.",
+  seoTitle: "Takstolar: typer, spännvidd & dimensionering | ByggExp", seoDescription: "W-, WW-, ramverks- och saxtakstol med typisk spännvidd och lutning. Antal = taklängd ÷ c-avstånd + 1, 1 200 mm även för tegel, regler enligt BFS 2024:6.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/takstolar-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T14:30:00.000Z", createdAt: "2026-08-20T14:30:00.000Z", updatedAt: "2026-08-20T14:30:00.000Z",
+  publishedAt: "2026-08-20T14:30:00.000Z", createdAt: "2026-08-20T14:30:00.000Z", updatedAt: "2026-09-23T20:00:00.000Z",
 };
 
 const A_REGLAR_DIMENSIONER_C_AVSTAND_VAGG_HTML = `

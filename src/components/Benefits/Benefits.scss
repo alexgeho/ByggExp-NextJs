@@ -300,3 +300,129 @@
     min-height: 180px;
   }
 }
+
+/* ============ DRUM (vertical 3D carousel per column) ============ */
+
+.benefit-drum {
+  width: 100%;
+  max-width: 420px;
+}
+
+.benefit-drum-stage {
+  position: relative;
+  height: 600px;
+  perspective: 1100px;
+  transform-style: preserve-3d;
+}
+
+.benefit-drum .benefit-drum-card {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  min-height: 240px;
+  margin: 0;
+  font: inherit;
+  color: var(--white);
+  text-align: left;
+  cursor: pointer;
+  backface-visibility: hidden;
+  // Opaque so the cards turning behind never show through the front one.
+  background: linear-gradient(180deg, #111f33, #0b1626);
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.7s ease,
+    filter 0.7s ease,
+    border-color 0.3s,
+    background 0.3s;
+}
+
+.benefit-drum .benefit-drum-card.is-pos-0,
+.benefit-drum .benefit-drum-card.is-pos-0:hover {
+  transform: translateY(-50%) translateZ(0) rotateX(0deg);
+  opacity: 1;
+  z-index: 3;
+  border-color: rgba(35, 148, 255, 0.45);
+  background: linear-gradient(180deg, #13294a, #0c1a2e);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.benefit-drum .benefit-drum-card.is-pos-up,
+.benefit-drum .benefit-drum-card.is-pos-up:hover {
+  transform: translateY(-138%) translateZ(-160px) rotateX(42deg) scale(0.86);
+  opacity: 0.4;
+  filter: blur(0.5px);
+  z-index: 2;
+}
+
+.benefit-drum .benefit-drum-card.is-pos-1,
+.benefit-drum .benefit-drum-card.is-pos-1:hover {
+  transform: translateY(38%) translateZ(-160px) rotateX(-42deg) scale(0.86);
+  opacity: 0.35;
+  filter: blur(0.5px);
+  z-index: 2;
+}
+
+.benefit-drum .benefit-drum-card.is-pos-2,
+.benefit-drum .benefit-drum-card.is-pos-2:hover {
+  transform: translateY(-50%) translateZ(-320px) scale(0.75);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.benefit-drum-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+
+  button {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+    transition:
+      width 0.3s,
+      background 0.3s;
+  }
+
+  button.is-active {
+    width: 22px;
+    background: var(--blue);
+  }
+}
+
+@media (max-width: 1050px) {
+  .benefit-drum .benefit-drum-card {
+    min-height: 180px;
+  }
+
+  .benefit-drum-stage {
+    height: 480px;
+  }
+}
+
+@media (max-width: 850px) {
+  .benefit-drum {
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 650px) {
+  .benefit-drum {
+    max-width: 420px;
+    width: 95%;
+  }
+
+  .benefit-drum .benefit-drum-card {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .benefit-drum .benefit-drum-card {
+    transition: opacity 0.2s;
+  }
+}

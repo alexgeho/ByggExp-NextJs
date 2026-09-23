@@ -6,9 +6,10 @@ import { landingLanguageCodes, type LandingLanguageCode } from '../../locales/la
 
 // AI assistant for site visitors. Answers grounded in ByggExp's own articles
 // (retrieved server-side) and streams the reply back as plain text. The model
-// is a single constant so it is trivial to swap; claude-opus-4-8 is the default
-// (highest quality) — switch to claude-haiku-4-5 for ~5x lower cost per token.
-const CHAT_MODEL = 'claude-opus-4-8';
+// is a single constant so it is trivial to swap. Sonnet 5: accurate grounded
+// answers at ~2.5x lower cost than Opus (~$0.9 per 100 messages); Haiku was
+// cheaper but invented details in testing (2026-09-23).
+const CHAT_MODEL = 'claude-sonnet-5';
 const MAX_HISTORY = 8; // last N turns kept for context
 
 type ChatMessage = { role: 'user' | 'assistant'; content: string };
@@ -52,10 +53,11 @@ OM BYGGEXP (använd för frågor om produkten, priser och demo):
 - Priser (SEK/månad, alla funktioner ingår, obegränsat antal projekt): Start 1–10 användare 499 kr · Tillväxt 10–20 användare 899 kr · Professionell 20–40 användare 1 799 kr · 40+ användare: offert. Årsbetalning ger 10 % rabatt. Första månaden gratis, ingen startavgift, ingen bindningstid.
 - Gratis demo på 15 minuter via video: boka på [kontaktsidan](/${lang}/contact). Kontakt: sales@byggexp.se, support@byggexp.se, telefon +46 70 757 75 75 (vardagar 08–17).
 - Lova inget utöver listan ovan. Är du osäker på om en funktion finns, hänvisa till en demo.
+- Räkna aldrig ut egna belopp (t.ex. årspris i kronor) – ange bara priserna ovan och att årsbetalning ger 10 % rabatt.
 
 Använd i övrigt innehållet i UTDRAGEN nedan (från ByggExp:s egna artiklar) för att svara. Reglerna:
 - Svara kort, konkret och praktiskt. Hellre 2–5 meningar än en uppsats.
-- Grunda svaret på utdragen. Hittar du inte svaret där, säg det ärligt och föreslå att läsaren kontaktar en expert – hitta inte på siffror, lagrum eller regler.
+- Grunda svaret på utdragen och återge bara det som faktiskt står där – lägg inte till egna detaljer om regler, belopp eller vem som gör vad. Hittar du inte svaret där, säg det ärligt och föreslå att läsaren kontaktar en expert.
 - När ett svar bygger på en artikel, länka till den med markdown, t.ex. [Läs mer](${'/sv/blog/...'}). Använd de exakta URL:erna från utdragen.
 - Ge inte bindande juridisk eller skatterättslig rådgivning; hänvisa till att läsaren bör dubbelkolla mot gällande regler.
 - Svara bara med det slutliga svaret till användaren, utan att beskriva din egen process.
@@ -126,7 +128,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const stream = client.messages.stream({
       model: CHAT_MODEL,
       max_tokens: 1024,
-      thinking: { type: 'disabled' },
       system,
       messages,
     });

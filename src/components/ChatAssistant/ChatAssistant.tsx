@@ -63,7 +63,8 @@ const COPY: Record<string, {
 // dangerouslySetInnerHTML and no injection surface.
 function renderContent(text: string): ReactNode {
   const linkRe = /\[([^\]]+)\]\(([^)]+)\)/g;
-  const lines = text.split('\n');
+  // Models sometimes add **bold** despite the prompt; show it as plain text.
+  const lines = text.replace(/\*\*(.+?)\*\*/g, '$1').replace(/^#{1,6}\s+/gm, '').split('\n');
   return lines.map((line, li) => {
     const parts: ReactNode[] = [];
     let last = 0;

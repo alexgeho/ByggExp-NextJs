@@ -1,4 +1,5 @@
-import { useState, type FormEvent, type ChangeEvent } from "react";
+import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import { API_URL } from "../../config/api";
 import {
   NO_LEAD_FORM_ERRORS,
@@ -13,15 +14,21 @@ import { CalendlyInlineWidget } from "../CalendlyInlineWidget";
 
 const CALENDLY_URL = "https://calendly.com/870717ag/30min";
 
-const PHONE_1 = "+46 70 757 75 75";
-const PHONE_2 = "+46 81 241 02 76";
+const PHONE = "+46 70 757 75 75";
 const WHATSAPP_NUMBER = "+46 70 757 75 75";
-const ADDRESS = "Byggmästarvägen 18, 168 32 Bromma, Sweden";
+const COMPANY = "RealMar AB";
+const ORG_NR = "559474-9383";
+const STREET = "Byggmästarvägen 18";
+const POSTAL = "168 32 Bromma";
+const ADDRESS = `${STREET}, ${POSTAL}`;
 
+const phoneHref = `tel:${PHONE.replace(/\s/g, "")}`;
 const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, "")}`;
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS)}`;
 
-function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
+type Props = ContactProps & CTAProps & { lang: string };
+
+function Contact({ contactT: t, ctaT, lang }: Props) {
   /* ON SUBMIT/SUCCESS */
   const [isSuccess, setIsSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -31,28 +38,24 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
   /* INPUTS */
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
   const [phone, setPhone] = useState("");
+  const [topic, setTopic] = useState("");
+  const [message, setMessage] = useState("");
 
-  function handleNameChange(event: ChangeEvent<HTMLInputElement>) {
-    const value = event.currentTarget.value;
+  function handleNameChange(value: string) {
     setName(value);
-
     // Clear the warning as soon as the field is filled in, so the user
     // sees the form recover while typing instead of only on re-submit.
     if (errors.name && value.trim()) {
       setErrors((prev) => ({ ...prev, name: false }));
     }
   }
-  function handleEmailChange(event: ChangeEvent<HTMLInputElement>) {
-    const value = event.currentTarget.value;
+  function handleEmailChange(value: string) {
     setEmail(value);
-
     if (errors.email && isValidEmail(value)) {
       setErrors((prev) => ({ ...prev, email: false }));
     }
-  }
-  function handlePhoneChange(event: ChangeEvent<HTMLInputElement>) {
-    setPhone(event.currentTarget.value);
   }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -60,7 +63,6 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
 
     const nextErrors = validateLeadForm(name, email);
     setErrors(nextErrors);
-
     if (hasLeadFormErrors(nextErrors)) {
       return;
     }
@@ -68,11 +70,22 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
     setIsSubmitting(true);
     setSubmitError(false);
 
+    const details = [
+      topic && `Ärende: ${topic}`,
+      company.trim() && `Företag: ${company.trim()}`,
+      message.trim() && `Meddelande: ${message.trim()}`,
+    ]
+      .filter(Boolean)
+      .join(" · ");
+
     try {
       const response = await fetch(`${API_URL}/mail/demo-request`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(buildLeadPayload(name, email, phone, "kontakt")),
+        body: JSON.stringify({
+          ...buildLeadPayload(name, email, phone, "kontakt"),
+          ...(details && { "f-message": details }),
+        }),
       });
 
       if (!response.ok) {
@@ -88,324 +101,135 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
   }
 
   return (
-    <section className="contact">
-      <div className="container">
-        <div className="contact-head">
-          <span className="eyebrow">{contactT.contactEyebrow}</span>
-          <h1>{contactT.contactTitle}</h1>
-          <p className="contact-lead">{contactT.contactLead}</p>
-        </div>
+    <div className="kontakt">
+      {/* HERO */}
+      <section className="kontakt-hero">
+        <div className="kontakt-container">
+          <nav className="kontakt-breadcrumbs" aria-label="Breadcrumb">
+            <Link href={`/${lang}`}>{t.breadcrumbHome}</Link>
+            <span aria-hidden="true">/</span>
+            <span className="kontakt-breadcrumbs-current">{t.eyebrow}</span>
+          </nav>
 
-        {/* INFO CARDS: row 1 = Email + Phone, row 2 = Chat + Address */}
-        <div className="contact-info-grid">
-          {/* EMAIL CARD */}
-          <div className="contact-card">
-            <span className="contact-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-              </svg>
-            </span>
-
-            <h3>{contactT.contactEmailLabel}</h3>
-
-            <div className="contact-email-list">
-              <div className="contact-email-item">
-                <span className="contact-email-purpose">
-                  {contactT.contactEmailSupport}
-                </span>
-                <a href="mailto:support@byggexp.se" className="contact-email">
-                  support@byggexp.se
-                </a>
-              </div>
-
-              <div className="contact-email-item">
-                <span className="contact-email-purpose">
-                  {contactT.contactEmailConsult}
-                </span>
-                <a href="mailto:sales@byggexp.se" className="contact-email">
-                  sales@byggexp.se
-                </a>
-              </div>
-
-              <div className="contact-email-item">
-                <span className="contact-email-purpose">
-                  {contactT.contactEmailPress}
-                </span>
-                <a href="mailto:press@byggexp.se" className="contact-email">
-                  press@byggexp.se
-                </a>
-              </div>
-            </div>
-
-            <p className="contact-note">{contactT.contactResponseTime}</p>
-          </div>
-
-          {/* PHONE CARD */}
-          <div className="contact-card">
-            <span className="contact-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-            </span>
-
-            <h3>{contactT.contactPhoneLabel}</h3>
-
-            <div className="contact-email-list">
-              <div className="contact-email-item">
-                <span className="contact-email-purpose">
-                  {contactT.contactPhoneSupport}
-                </span>
-                <a
-                  href={`tel:${PHONE_1.replace(/\s/g, "")}`}
-                  className="contact-email"
-                >
-                  {PHONE_1}
-                </a>
-              </div>
-
-              <div className="contact-email-item">
-                <span className="contact-email-purpose">
-                  {contactT.contactPhoneOffice}
-                </span>
-                <a
-                  href={`tel:${PHONE_2.replace(/\s/g, "")}`}
-                  className="contact-email"
-                >
-                  {PHONE_2}
-                </a>
-              </div>
-
-              <div className="contact-email-item">
-                <span className="contact-email-purpose">
-                  {contactT.contactHoursLabel}
-                </span>
-                <span className="contact-hours">{contactT.contactHours}</span>
-              </div>
-            </div>
-          </div>
-
-          {/* CHAT CARD */}
-          <div className="contact-card">
-            <span className="contact-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-              </svg>
-            </span>
-
-            <h3>{contactT.contactChatLabel}</h3>
-            <p className="contact-note">{contactT.contactChatText}</p>
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-card-btn"
-            >
-              {contactT.contactChatButton}
-            </a>
-          </div>
-
-          {/* ADDRESS CARD */}
-          <div className="contact-card">
-            <span className="contact-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-            </span>
-
-            <h3>{contactT.contactAddressLabel}</h3>
-            <a
-              href={mapsHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-note contact-address"
-            >
-              {ADDRESS}
-            </a>
+          <div className="kontakt-hero-text">
+            <span className="kontakt-eyebrow">{t.eyebrow}</span>
+            <h1>{t.title}</h1>
+            <p className="kontakt-lead">{t.lead}</p>
+            <ul className="kontakt-checks">
+              {t.checks.map((check) => (
+                <li key={check}>✓ {check}</li>
+              ))}
+            </ul>
           </div>
         </div>
+      </section>
 
-        {/* REQUEST FORM */}
-        <div className="contact-form-wrap">
-          <div className="contact-card contact-form-card">
-            {!isSuccess && (
-              <>
-                <div className="ctaLeft contact-form-left">
-                  <div className="section-head section-head--dark cta-head">
-                    <span className="eyebrow">{ctaT.ctaTitle}</span>
-
-                    <h2>
-                      {ctaT.ctaHeading1} <em>{ctaT.ctaAccent}</em>{" "}
-                      {ctaT.ctaHeading2}
-                    </h2>
-                  </div>
-
-                  <ul className="cta-list-contact">
-                    <li>
-                      <span className="check">
-                        <svg viewBox="0 0 14 10" fill="none">
-                          <path
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="m1 5 4 4 8-8"
-                          />
-                        </svg>
-                      </span>
-                      {ctaT.ctaItem1}
-                    </li>
-
-                    <li>
-                      <span className="check">
-                        <svg viewBox="0 0 14 10" fill="none">
-                          <path
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="m1 5 4 4 8-8"
-                          />
-                        </svg>
-                      </span>
-                      {ctaT.ctaItem2}
-                    </li>
-
-                    <li>
-                      <span className="check">
-                        <svg viewBox="0 0 14 10" fill="none">
-                          <path
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="m1 5 4 4 8-8"
-                          />
-                        </svg>
-                      </span>
-                      {ctaT.ctaItem3}
-                    </li>
-                  </ul>
-                </div>
-
-                <form
-                  noValidate
-                  onSubmit={handleSubmit}
-                  className="contact-form"
-                >
-                  <div
-                    className={`contact-form-group${errors.name ? " error" : ""}`}
-                  >
-                    <label htmlFor="c-name">{ctaT.ctaNameLabel}</label>
+      {/* FORM + CONTACT CARDS */}
+      <section className="kontakt-main">
+        <div className="kontakt-container kontakt-grid">
+          <div className="kontakt-form-col">
+            {!isSuccess ? (
+              <form noValidate onSubmit={handleSubmit} className="kontakt-form">
+                <div className="kontakt-row">
+                  <div className={`kontakt-field${errors.name ? " error" : ""}`}>
+                    <label htmlFor="c-name" className="sr-only">{t.formName}</label>
                     <input
                       id="c-name"
-                      name="name"
                       type="text"
-                      placeholder={ctaT.ctaNamePlaceholder}
+                      placeholder={t.formName}
                       autoComplete="name"
                       value={name}
-                      onChange={handleNameChange}
+                      onChange={(e) => handleNameChange(e.currentTarget.value)}
                       aria-invalid={errors.name}
                       aria-describedby="c-name-error"
                     />
-                    <div className="err-msg" id="c-name-error" role="alert">
+                    <div className="kontakt-err" id="c-name-error" role="alert">
                       {ctaT.ctaNameError}
                     </div>
                   </div>
 
-                  <div
-                    className={`contact-form-group${errors.email ? " error" : ""}`}
-                  >
-                    <label htmlFor="c-email">{ctaT.ctaEmailLabel}</label>
+                  <div className={`kontakt-field${errors.email ? " error" : ""}`}>
+                    <label htmlFor="c-email" className="sr-only">{t.formEmail}</label>
                     <input
                       id="c-email"
-                      name="email"
                       type="email"
-                      placeholder={ctaT.ctaEmailPlaceholder}
+                      placeholder={t.formEmail}
                       autoComplete="email"
                       value={email}
-                      onChange={handleEmailChange}
+                      onChange={(e) => handleEmailChange(e.currentTarget.value)}
                       aria-invalid={errors.email}
                       aria-describedby="c-email-error"
                     />
-                    <div className="err-msg" id="c-email-error" role="alert">
+                    <div className="kontakt-err" id="c-email-error" role="alert">
                       {ctaT.ctaEmailError}
                     </div>
                   </div>
+                </div>
 
-                  {/* PHONE — optional, an email address is enough */}
-                  <div className="contact-form-group">
-                    <label htmlFor="c-phone">
-                      {ctaT.ctaPhoneLabel}{" "}
-                      <span className="label-optional">
-                        ({ctaT.ctaPhoneOptional})
-                      </span>
-                    </label>
+                <div className="kontakt-row">
+                  <div className="kontakt-field">
+                    <label htmlFor="c-company" className="sr-only">{t.formCompany}</label>
                     <input
-                      id="c-phone"
-                      name="phone"
-                      type="tel"
-                      placeholder={ctaT.ctaPhonePlaceholder}
-                      autoComplete="tel"
-                      value={phone}
-                      onChange={handlePhoneChange}
+                      id="c-company"
+                      type="text"
+                      placeholder={t.formCompany}
+                      autoComplete="organization"
+                      value={company}
+                      onChange={(e) => setCompany(e.currentTarget.value)}
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="contact-form-submit"
-                    disabled={isSubmitting}
+                  <div className="kontakt-field">
+                    <label htmlFor="c-phone" className="sr-only">{t.formPhone}</label>
+                    <input
+                      id="c-phone"
+                      type="tel"
+                      placeholder={t.formPhone}
+                      autoComplete="tel"
+                      value={phone}
+                      onChange={(e) => setPhone(e.currentTarget.value)}
+                    />
+                  </div>
+                </div>
+
+                <div className="kontakt-field">
+                  <label htmlFor="c-topic" className="sr-only">{t.formTopic}</label>
+                  <select
+                    id="c-topic"
+                    value={topic}
+                    onChange={(e) => setTopic(e.currentTarget.value)}
+                    className={topic ? "" : "is-placeholder"}
                   >
-                    {isSubmitting
-                      ? ctaT.ctaButtonSending
-                      : contactT.contactDemoButton}
-                  </button>
+                    <option value="">{t.formTopic}</option>
+                    {t.topics.map((item) => (
+                      <option key={item} value={item}>{item}</option>
+                    ))}
+                  </select>
+                </div>
 
-                  {submitError && (
-                    <p className="contact-form-fine contact-form-fine-error">
-                      {ctaT.ctaSubmitError}
-                    </p>
-                  )}
+                <div className="kontakt-field">
+                  <label htmlFor="c-message" className="sr-only">{t.formMessage}</label>
+                  <textarea
+                    id="c-message"
+                    rows={5}
+                    placeholder={t.formMessage}
+                    value={message}
+                    onChange={(e) => setMessage(e.currentTarget.value)}
+                  />
+                </div>
 
-                  <p className="contact-form-fine">{ctaT.ctaPrivacy}</p>
-                </form>
-              </>
-            )}
+                <button type="submit" className="kontakt-submit" disabled={isSubmitting}>
+                  {isSubmitting ? ctaT.ctaButtonSending : t.formSubmit}
+                </button>
 
-            {/* SUCCESS */}
-            {isSuccess && (
-              <div className="contact-form-success">
-                <div className="contact-success-icon">
+                {submitError && (
+                  <p className="kontakt-fine kontakt-fine-error">{ctaT.ctaSubmitError}</p>
+                )}
+                <p className="kontakt-fine">{ctaT.ctaPrivacy}</p>
+              </form>
+            ) : (
+              <div className="kontakt-success">
+                <div className="kontakt-success-icon">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -417,32 +241,148 @@ function Contact({ contactT, ctaT }: ContactProps & CTAProps) {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
-
-                <h3>{ctaT.ctaSuccessTitle}</h3>
-                <p className="contact-success-hint">
-                  {ctaT.ctaSuccessCalendlyHint}
-                </p>
+                <h2>{ctaT.ctaSuccessTitle}</h2>
+                <p className="kontakt-success-hint">{ctaT.ctaSuccessCalendlyHint}</p>
                 <p>{ctaT.ctaSuccessText}</p>
-
-                <div className="contact-calendly">
+                <div className="kontakt-calendly">
                   <CalendlyInlineWidget
                     url={CALENDLY_URL}
-                    prefill={{
-                      name,
-                      email,
-                      customAnswers: { a1: phone },
-                    }}
+                    prefill={{ name, email, customAnswers: { a1: phone } }}
                     styles={{ height: "650px" }}
                   />
                 </div>
               </div>
             )}
           </div>
+
+          <aside className="kontakt-cards">
+            <div className="kontakt-card">
+              <span className="kontakt-card-label">{t.callLabel}</span>
+              <a href={phoneHref} className="kontakt-card-value">{PHONE}</a>
+              <p>{t.callText}</p>
+            </div>
+
+            <div className="kontakt-card">
+              <span className="kontakt-card-label">{t.mailLabel}</span>
+              <ul className="kontakt-mail-list">
+                <li>
+                  <span>{t.emailSales}</span>
+                  <a href="mailto:sales@byggexp.se">sales@byggexp.se</a>
+                </li>
+                <li>
+                  <span>{t.emailSupport}</span>
+                  <a href="mailto:support@byggexp.se">support@byggexp.se</a>
+                </li>
+                <li>
+                  <span>{t.emailPress}</span>
+                  <a href="mailto:press@byggexp.se">press@byggexp.se</a>
+                </li>
+              </ul>
+              <p>{t.mailText}</p>
+            </div>
+
+            <div className="kontakt-card">
+              <span className="kontakt-card-label">{t.chatLabel}</span>
+              <p>{t.chatText}</p>
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="kontakt-card-link"
+              >
+                {t.chatButton} →
+              </a>
+            </div>
+          </aside>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="kontakt-steps">
+        <div className="kontakt-container">
+          <span className="kontakt-eyebrow">{t.stepsEyebrow}</span>
+          <h2>{t.stepsTitle}</h2>
+          <ol className="kontakt-steps-list">
+            {t.steps.map((step, index) => (
+              <li key={step.title}>
+                <span className="kontakt-step-num">{index + 1}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* COMPANY DETAILS */}
+      <section className="kontakt-company">
+        <div className="kontakt-container kontakt-company-grid">
+          <div>
+            <span className="kontakt-eyebrow">{t.companyEyebrow}</span>
+            <h2>ByggExp — {COMPANY}</h2>
+            <p>{t.companyText}</p>
+            <p className="kontakt-company-links">
+              <Link href={`/${lang}/villkor`}>{t.termsLink}</Link>
+              <span aria-hidden="true"> · </span>
+              <Link href={`/${lang}/integritetspolicy`}>{t.privacyLink}</Link>
+            </p>
+          </div>
+
+          <dl className="kontakt-table">
+            <div>
+              <dt>{t.rowCompany}</dt>
+              <dd>{COMPANY}</dd>
+            </div>
+            <div>
+              <dt>{t.rowOrgNr}</dt>
+              <dd>{ORG_NR}</dd>
+            </div>
+            <div>
+              <dt>{t.rowAddress}</dt>
+              <dd>
+                {STREET}
+                <br />
+                {POSTAL}
+                <a href={mapsHref} target="_blank" rel="noopener noreferrer">
+                  {t.mapLink}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt>{t.rowHours}</dt>
+              <dd>{t.hours}</dd>
+            </div>
+            <div>
+              <dt>{t.rowMeetings}</dt>
+              <dd>{t.meetings}</dd>
+            </div>
+            <div>
+              <dt>{t.rowPhone}</dt>
+              <dd><a href={phoneHref}>{PHONE}</a></dd>
+            </div>
+            <div>
+              <dt>{t.rowEmail}</dt>
+              <dd><a href="mailto:sales@byggexp.se">sales@byggexp.se</a></dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="kontakt-faq">
+        <div className="kontakt-container kontakt-faq-inner">
+          <span className="kontakt-eyebrow">{t.faqEyebrow}</span>
+          <h2>{t.faqTitle}</h2>
+          {t.faq.map((item) => (
+            <details key={item.q} className="kontakt-faq-item">
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
-
 
 export default Contact;

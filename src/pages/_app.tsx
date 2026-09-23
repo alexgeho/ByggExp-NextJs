@@ -1,11 +1,7 @@
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 
-// ChatAssistant (AI chat) is temporarily disabled — re-enable by uncommenting
-// the import and the <ChatAssistant /> render below once ANTHROPIC_API_KEY is
-// live on the VPS (see memory/ai-assistant.md for activation steps).
-// import ChatAssistant from "../components/ChatAssistant/ChatAssistant";
-import WhatsAppChat from "../components/ChatAssistant/WhatsAppChat";
+import SiteChat from "../components/ChatAssistant/SiteChat";
 import CookieConsent from "../components/CookieConsent/CookieConsent";
 import { installDownloadTracking } from "../lib/downloadTracking";
 import 'quill/dist/quill.snow.css';
@@ -39,8 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Component {...pageProps} />
       <CookieConsent />
-      {/* <ChatAssistant /> (AI chat) disabled until ANTHROPIC_API_KEY is live */}
-      <WhatsAppChat />
+      <SiteChat />
     </>
   );
 }

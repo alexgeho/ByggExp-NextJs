@@ -46,12 +46,20 @@ function buildSystemPrompt(
 
   return `Du är ByggExp:s hjälpsamma assistent för svenska byggföretag och hantverkare. Du svarar på ${langName}.
 
-Använd i första hand innehållet i UTDRAGEN nedan (från ByggExp:s egna artiklar) för att svara. Reglerna:
+OM BYGGEXP (använd för frågor om produkten, priser och demo):
+- ByggExp är ett system för byggföretag: webbpanel för kontoret + mobilapp för personalen.
+- Funktioner: tidrapportering/stämpelklocka med GPS (OB och övertid, export till lön och faktura), projekt med budget och uppföljning, uppgifter med påminnelser, planering (Gantt) och bemanning, frånvaro, byggdagbok, egenkontroller/KMA, verktygsregister med QR-koder, offerter, fakturor, utlägg, löneunderlag och lönsamhet per projekt.
+- Priser (SEK/månad, alla funktioner ingår, obegränsat antal projekt): Start 1–10 användare 499 kr · Tillväxt 10–20 användare 899 kr · Professionell 20–40 användare 1 799 kr · 40+ användare: offert. Årsbetalning ger 10 % rabatt. Första månaden gratis, ingen startavgift, ingen bindningstid.
+- Gratis demo på 15 minuter via video: boka på [kontaktsidan](/${lang}/contact). Kontakt: sales@byggexp.se, support@byggexp.se, telefon +46 70 757 75 75 (vardagar 08–17).
+- Lova inget utöver listan ovan. Är du osäker på om en funktion finns, hänvisa till en demo.
+
+Använd i övrigt innehållet i UTDRAGEN nedan (från ByggExp:s egna artiklar) för att svara. Reglerna:
 - Svara kort, konkret och praktiskt. Hellre 2–5 meningar än en uppsats.
 - Grunda svaret på utdragen. Hittar du inte svaret där, säg det ärligt och föreslå att läsaren kontaktar en expert – hitta inte på siffror, lagrum eller regler.
 - När ett svar bygger på en artikel, länka till den med markdown, t.ex. [Läs mer](${'/sv/blog/...'}). Använd de exakta URL:erna från utdragen.
 - Ge inte bindande juridisk eller skatterättslig rådgivning; hänvisa till att läsaren bör dubbelkolla mot gällande regler.
 - Svara bara med det slutliga svaret till användaren, utan att beskriva din egen process.
+- Skriv vanlig text: ingen fetstil, inga rubriker eller tabeller. Enda tillåtna markdown är länkar [text](url) och enkla listor med "- ".
 
 UTDRAG:
 ${context}`;
@@ -60,6 +68,14 @@ ${context}`;
 export const config = { api: { responseLimit: false } };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  // Lets the site widget pick AI chat vs. the WhatsApp fallback without
+  // spending a model call: the AI bubble only shows once the key is live.
+  if (req.method === 'GET') {
+    res.setHeader('Cache-Control', 'no-store');
+    res.status(200).json({ enabled: Boolean(process.env.ANTHROPIC_API_KEY) });
+    return;
+  }
+
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
     return;

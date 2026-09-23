@@ -91,6 +91,10 @@ function Benefits({ benefitsT }: BenefitsProps) {
     { icon: "/landing/benefits/card2.svg", title: office.benefitsOfficeCard2Title, text: office.benefitsOfficeCard2Text },
     { icon: "/landing/benefits/card3.svg", title: office.benefitsOfficeCard3Title, text: office.benefitsOfficeCard3Text },
     { icon: "/landing/benefits/card4.svg", title: office.benefitsOfficeCard4Title, text: office.benefitsOfficeCard4Text },
+    { icon: "/landing/benefits/card9.svg", title: office.benefitsOfficeCard5Title, text: office.benefitsOfficeCard5Text },
+    { icon: "/landing/benefits/card10.svg", title: office.benefitsOfficeCard6Title, text: office.benefitsOfficeCard6Text },
+    { icon: "/landing/benefits/card11.svg", title: office.benefitsOfficeCard7Title, text: office.benefitsOfficeCard7Text },
+    { icon: "/landing/benefits/card12.svg", title: office.benefitsOfficeCard8Title, text: office.benefitsOfficeCard8Text },
   ];
 
   const siteCards: Card[] = [
@@ -98,6 +102,10 @@ function Benefits({ benefitsT }: BenefitsProps) {
     { icon: "/landing/benefits/card6.svg", title: site.benefitsSiteCard2Title, text: site.benefitsSiteCard2Text },
     { icon: "/landing/benefits/card7.svg", title: site.benefitsSiteCard3Title, text: site.benefitsSiteCard3Text },
     { icon: "/landing/benefits/card8.svg", title: site.benefitsSiteCard4Title, text: site.benefitsSiteCard4Text },
+    { icon: "/landing/benefits/card13.svg", title: site.benefitsSiteCard5Title, text: site.benefitsSiteCard5Text },
+    { icon: "/landing/benefits/card14.svg", title: site.benefitsSiteCard6Title, text: site.benefitsSiteCard6Text },
+    { icon: "/landing/benefits/card15.svg", title: site.benefitsSiteCard7Title, text: site.benefitsSiteCard7Text },
+    { icon: "/landing/benefits/card16.svg", title: site.benefitsSiteCard8Title, text: site.benefitsSiteCard8Text },
   ];
 
   return (

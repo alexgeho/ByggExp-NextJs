@@ -23,6 +23,22 @@ export const benefitsTranslations = {
       benefitsOfficeCard4Title: "Контроль объектов",
       benefitsOfficeCard4Text:
         "Видно в реальном времени кто работает, кто отсутствует и где.",
+
+      benefitsOfficeCard5Title: "Планирование и бригады",
+      benefitsOfficeCard5Text:
+        "Диаграмма Ганта и расстановка людей по дням — сразу видно, кто перегружен.",
+
+      benefitsOfficeCard6Title: "Экономика проекта",
+      benefitsOfficeCard6Text:
+        "Бюджет, затраты и маржа по каждому проекту в реальном времени.",
+
+      benefitsOfficeCard7Title: "Сметы и счета",
+      benefitsOfficeCard7Text:
+        "Сметы и счета в одной системе — счёт по факту прямо из отработанных часов.",
+
+      benefitsOfficeCard8Title: "Данные для зарплаты",
+      benefitsOfficeCard8Text:
+        "Часы, OB и сверхурочные по каждому сотруднику — выгрузка CSV и AGI.",
     },
 
     site: {
@@ -43,6 +59,22 @@ export const benefitsTranslations = {
       benefitsSiteCard4Title: "Уведомления",
       benefitsSiteCard4Text:
         "Все участники проекта получают уведомления одновременно.",
+
+      benefitsSiteCard5Title: "Строительный журнал",
+      benefitsSiteCard5Text:
+        "Записывайте ход работ за день прямо в телефоне.",
+
+      benefitsSiteCard6Title: "Самоконтроль",
+      benefitsSiteCard6Text:
+        "Egenkontroller по шаблонам — пункт за пунктом, готово к сдаче объекта.",
+
+      benefitsSiteCard7Title: "Инструмент по QR-коду",
+      benefitsSiteCard7Text:
+        "У каждого инструмента свой QR-код — видно, у кого он и на каком объекте.",
+
+      benefitsSiteCard8Title: "Расходы с чеком",
+      benefitsSiteCard8Text:
+        "Сфотографируйте чек, выберите категорию — расход привязан к проекту.",
     },
   },
 
@@ -70,6 +102,22 @@ export const benefitsTranslations = {
       benefitsOfficeCard4Title: "Site Monitoring",
       benefitsOfficeCard4Text:
         "See in real time who is working, where they are working, and who is absent.",
+
+      benefitsOfficeCard5Title: "Planning & staffing",
+      benefitsOfficeCard5Text:
+        "Gantt schedule and daily staffing — see instantly who is overbooked.",
+
+      benefitsOfficeCard6Title: "Project profitability",
+      benefitsOfficeCard6Text:
+        "Budget, costs and margin for every project in real time.",
+
+      benefitsOfficeCard7Title: "Quotes & invoices",
+      benefitsOfficeCard7Text:
+        "Quotes and invoices in one place — bill time and materials straight from logged hours.",
+
+      benefitsOfficeCard8Title: "Payroll basis",
+      benefitsOfficeCard8Text:
+        "Hours, unsocial-hours pay and overtime per employee — export to CSV and AGI.",
     },
 
     site: {
@@ -89,6 +137,22 @@ export const benefitsTranslations = {
       benefitsSiteCard4Title: "Instant Notifications",
       benefitsSiteCard4Text:
         "All project participants receive notifications at the same time.",
+
+      benefitsSiteCard5Title: "Site diary",
+      benefitsSiteCard5Text:
+        "Log the day's work straight from the phone.",
+
+      benefitsSiteCard6Title: "Self-inspections",
+      benefitsSiteCard6Text:
+        "Checklists from templates, point by point — ready for handover.",
+
+      benefitsSiteCard7Title: "Tools with QR codes",
+      benefitsSiteCard7Text:
+        "Every tool gets a QR code — see who has it and on which project.",
+
+      benefitsSiteCard8Title: "Expenses with receipts",
+      benefitsSiteCard8Text:
+        "Snap the receipt, pick a category — the expense lands on the project.",
     },
   },
 
@@ -117,6 +181,22 @@ export const benefitsTranslations = {
       benefitsOfficeCard4Title: "Kontroll över arbetsplatser",
       benefitsOfficeCard4Text:
         "Se i realtid vem som arbetar, var de arbetar och vem som är frånvarande.",
+
+      benefitsOfficeCard5Title: "Planering & bemanning",
+      benefitsOfficeCard5Text:
+        "Gantt-schema och bemanning per dag — se direkt vem som är överbokad.",
+
+      benefitsOfficeCard6Title: "Lönsamhet per projekt",
+      benefitsOfficeCard6Text:
+        "Budget, kostnader och marginal för varje projekt i realtid.",
+
+      benefitsOfficeCard7Title: "Offerter & fakturor",
+      benefitsOfficeCard7Text:
+        "Offerter och fakturor på ett ställe — löpande räkning direkt från loggade timmar.",
+
+      benefitsOfficeCard8Title: "Löneunderlag",
+      benefitsOfficeCard8Text:
+        "Timmar, OB och övertid per anställd — exportera CSV och AGI-underlag.",
     },
 
     site: {
@@ -137,6 +217,22 @@ export const benefitsTranslations = {
       benefitsSiteCard4Title: "Omedelbara notifieringar",
       benefitsSiteCard4Text:
         "Alla projektdeltagare eller valda personer får notifieringar samtidigt.",
+
+      benefitsSiteCard5Title: "Byggdagbok",
+      benefitsSiteCard5Text:
+        "Dokumentera dagens arbete direkt i mobilen.",
+
+      benefitsSiteCard6Title: "Egenkontroller",
+      benefitsSiteCard6Text:
+        "Egenkontroller från mallar, punkt för punkt — klart för överlämning.",
+
+      benefitsSiteCard7Title: "Verktyg med QR-kod",
+      benefitsSiteCard7Text:
+        "Varje verktyg får en QR-kod — se vem som har det och på vilket projekt.",
+
+      benefitsSiteCard8Title: "Utlägg med kvitto",
+      benefitsSiteCard8Text:
+        "Fota kvittot, välj kategori — utlägget hamnar på projektet.",
     },
   },
 
@@ -165,6 +261,22 @@ export const benefitsTranslations = {
       benefitsOfficeCard4Title: "Kontroll over byggeplassene",
       benefitsOfficeCard4Text:
         "Se i sanntid hvem som jobber, hvor de jobber og hvem som er fraværende.",
+
+      benefitsOfficeCard5Title: "Planlegging og bemanning",
+      benefitsOfficeCard5Text:
+        "Gantt-plan og bemanning per dag — se med en gang hvem som er overbooket.",
+
+      benefitsOfficeCard6Title: "Lønnsomhet per prosjekt",
+      benefitsOfficeCard6Text:
+        "Budsjett, kostnader og margin for hvert prosjekt i sanntid.",
+
+      benefitsOfficeCard7Title: "Tilbud og fakturaer",
+      benefitsOfficeCard7Text:
+        "Tilbud og fakturaer på ett sted — fakturer direkte fra registrerte timer.",
+
+      benefitsOfficeCard8Title: "Lønnsgrunnlag",
+      benefitsOfficeCard8Text:
+        "Timer, tillegg og overtid per ansatt — eksporter til CSV.",
     },
 
     site: {
@@ -185,6 +297,22 @@ export const benefitsTranslations = {
       benefitsSiteCard4Title: "Umiddelbare varsler",
       benefitsSiteCard4Text:
         "Alle prosjektdeltakere eller utvalgte personer får varsler samtidig.",
+
+      benefitsSiteCard5Title: "Byggdagbok",
+      benefitsSiteCard5Text:
+        "Dokumenter dagens arbeid rett fra mobilen.",
+
+      benefitsSiteCard6Title: "Egenkontroller",
+      benefitsSiteCard6Text:
+        "Egenkontroller fra maler, punkt for punkt — klart for overlevering.",
+
+      benefitsSiteCard7Title: "Verktøy med QR-kode",
+      benefitsSiteCard7Text:
+        "Hvert verktøy får en QR-kode — se hvem som har det og på hvilket prosjekt.",
+
+      benefitsSiteCard8Title: "Utlegg med kvittering",
+      benefitsSiteCard8Text:
+        "Ta bilde av kvitteringen, velg kategori — utlegget havner på prosjektet.",
     },
   },
 
@@ -213,6 +341,22 @@ export const benefitsTranslations = {
       benefitsOfficeCard4Title: "Kontrola budów",
       benefitsOfficeCard4Text:
         "Widzisz w czasie rzeczywistym, kto pracuje, gdzie i kto jest nieobecny.",
+
+      benefitsOfficeCard5Title: "Planowanie i obsada",
+      benefitsOfficeCard5Text:
+        "Harmonogram Gantta i obsada na każdy dzień — od razu widać, kto jest przeciążony.",
+
+      benefitsOfficeCard6Title: "Rentowność projektu",
+      benefitsOfficeCard6Text:
+        "Budżet, koszty i marża każdego projektu w czasie rzeczywistym.",
+
+      benefitsOfficeCard7Title: "Oferty i faktury",
+      benefitsOfficeCard7Text:
+        "Oferty i faktury w jednym miejscu — faktura prosto z zarejestrowanych godzin.",
+
+      benefitsOfficeCard8Title: "Podstawa do wynagrodzeń",
+      benefitsOfficeCard8Text:
+        "Godziny, dodatki i nadgodziny na pracownika — eksport do CSV i AGI.",
     },
 
     site: {
@@ -233,6 +377,22 @@ export const benefitsTranslations = {
       benefitsSiteCard4Title: "Natychmiastowe powiadomienia",
       benefitsSiteCard4Text:
         "Wszyscy uczestnicy projektu lub wybrane osoby dostają powiadomienia jednocześnie.",
+
+      benefitsSiteCard5Title: "Dziennik budowy",
+      benefitsSiteCard5Text:
+        "Dokumentuj dzisiejszą pracę prosto z telefonu.",
+
+      benefitsSiteCard6Title: "Kontrole własne",
+      benefitsSiteCard6Text:
+        "Kontrole z szablonów, punkt po punkcie — gotowe do odbioru.",
+
+      benefitsSiteCard7Title: "Narzędzia z kodem QR",
+      benefitsSiteCard7Text:
+        "Każde narzędzie ma kod QR — widać, kto je ma i na jakim projekcie.",
+
+      benefitsSiteCard8Title: "Wydatki z paragonem",
+      benefitsSiteCard8Text:
+        "Zrób zdjęcie paragonu, wybierz kategorię — wydatek trafia do projektu.",
     },
   },
 
@@ -251,6 +411,22 @@ export const benefitsTranslations = {
       benefitsOfficeCard3Text: "Не потрібно телефонувати й нагадувати працівникам вручну.",
       benefitsOfficeCard4Title: "Контроль об’єктів",
       benefitsOfficeCard4Text: "Видно в реальному часі, хто працює, хто відсутній і де.",
+
+      benefitsOfficeCard5Title: "Планування і бригади",
+      benefitsOfficeCard5Text:
+        "Діаграма Ганта і розстановка людей по днях — одразу видно, хто перевантажений.",
+
+      benefitsOfficeCard6Title: "Економіка проєкту",
+      benefitsOfficeCard6Text:
+        "Бюджет, витрати і маржа кожного проєкту в реальному часі.",
+
+      benefitsOfficeCard7Title: "Кошториси і рахунки",
+      benefitsOfficeCard7Text:
+        "Кошториси і рахунки в одній системі — рахунок одразу з відпрацьованих годин.",
+
+      benefitsOfficeCard8Title: "Дані для зарплати",
+      benefitsOfficeCard8Text:
+        "Години, надбавки і понаднормові по кожному працівнику — вивантаження в CSV і AGI.",
     },
     site: {
       benefitsSiteLead: "Що отримує будівельна бригада:",
@@ -262,6 +438,22 @@ export const benefitsTranslations = {
       benefitsSiteCard3Text: "Фото й документи прив’язуються до зміни та проєкту.",
       benefitsSiteCard4Title: "Сповіщення",
       benefitsSiteCard4Text: "Усі учасники проєкту або обрані особи отримують сповіщення одночасно.",
+
+      benefitsSiteCard5Title: "Будівельний журнал",
+      benefitsSiteCard5Text:
+        "Записуйте хід робіт за день просто в телефоні.",
+
+      benefitsSiteCard6Title: "Самоконтроль",
+      benefitsSiteCard6Text:
+        "Перевірки за шаблонами, пункт за пунктом — готово до здачі об'єкта.",
+
+      benefitsSiteCard7Title: "Інструмент з QR-кодом",
+      benefitsSiteCard7Text:
+        "Кожен інструмент має QR-код — видно, у кого він і на якому об'єкті.",
+
+      benefitsSiteCard8Title: "Витрати з чеком",
+      benefitsSiteCard8Text:
+        "Сфотографуйте чек, оберіть категорію — витрата прив'язана до проєкту.",
     },
   },
 
@@ -280,6 +472,22 @@ export const benefitsTranslations = {
       benefitsOfficeCard3Text: "Sinun ei tarvitse soittaa ja muistuttaa työntekijöitä käsin.",
       benefitsOfficeCard4Title: "Työmaiden hallinta",
       benefitsOfficeCard4Text: "Näet reaaliajassa kuka työskentelee, missä ja kuka on poissa.",
+
+      benefitsOfficeCard5Title: "Suunnittelu ja resursointi",
+      benefitsOfficeCard5Text:
+        "Gantt-aikataulu ja päiväkohtainen miehitys — näet heti, kuka on ylikuormitettu.",
+
+      benefitsOfficeCard6Title: "Projektin kannattavuus",
+      benefitsOfficeCard6Text:
+        "Budjetti, kulut ja kate jokaiselle projektille reaaliajassa.",
+
+      benefitsOfficeCard7Title: "Tarjoukset ja laskut",
+      benefitsOfficeCard7Text:
+        "Tarjoukset ja laskut samassa paikassa — laskuta suoraan kirjatuista tunneista.",
+
+      benefitsOfficeCard8Title: "Palkka-aineisto",
+      benefitsOfficeCard8Text:
+        "Tunnit, lisät ja ylityöt työntekijöittäin — vienti CSV-muotoon.",
     },
     site: {
       benefitsSiteLead: "Mitä työryhmä saa:",
@@ -291,6 +499,22 @@ export const benefitsTranslations = {
       benefitsSiteCard3Text: "Kuvat ja asiakirjat liitetään vuoroon ja projektiin.",
       benefitsSiteCard4Title: "Ilmoitukset",
       benefitsSiteCard4Text: "Kaikki projektin osallistujat tai valitut henkilöt saavat ilmoitukset samaan aikaan.",
+
+      benefitsSiteCard5Title: "Työmaapäiväkirja",
+      benefitsSiteCard5Text:
+        "Kirjaa päivän työt suoraan puhelimella.",
+
+      benefitsSiteCard6Title: "Omavalvonta",
+      benefitsSiteCard6Text:
+        "Tarkastukset pohjista kohta kohdalta — valmiina luovutukseen.",
+
+      benefitsSiteCard7Title: "Työkalut QR-koodilla",
+      benefitsSiteCard7Text:
+        "Jokainen työkalu saa QR-koodin — näet, kenellä se on ja missä projektissa.",
+
+      benefitsSiteCard8Title: "Kulut kuitilla",
+      benefitsSiteCard8Text:
+        "Kuvaa kuitti, valitse kategoria — kulu kirjautuu projektille.",
     },
   },
 
@@ -309,6 +533,22 @@ export const benefitsTranslations = {
       benefitsOfficeCard3Text: "Te ei pea töötajatele käsitsi helistama ja meelde tuletama.",
       benefitsOfficeCard4Title: "Objektide kontroll",
       benefitsOfficeCard4Text: "Näete reaalajas, kes töötab, kus ja kes puudub.",
+
+      benefitsOfficeCard5Title: "Planeerimine ja mehitamine",
+      benefitsOfficeCard5Text:
+        "Gantti graafik ja päevapõhine mehitamine — näed kohe, kes on üle koormatud.",
+
+      benefitsOfficeCard6Title: "Projekti kasumlikkus",
+      benefitsOfficeCard6Text:
+        "Iga projekti eelarve, kulud ja marginaal reaalajas.",
+
+      benefitsOfficeCard7Title: "Pakkumised ja arved",
+      benefitsOfficeCard7Text:
+        "Pakkumised ja arved ühes kohas — arve otse registreeritud tundidest.",
+
+      benefitsOfficeCard8Title: "Palgaandmed",
+      benefitsOfficeCard8Text:
+        "Tunnid, lisatasud ja ületunnid töötaja kaupa — eksport CSV-vormingusse.",
     },
     site: {
       benefitsSiteLead: "Mida ehitusmeeskond saab:",
@@ -320,6 +560,22 @@ export const benefitsTranslations = {
       benefitsSiteCard3Text: "Fotod ja dokumendid seotakse vahetuse ja projektiga.",
       benefitsSiteCard4Title: "Teavitused",
       benefitsSiteCard4Text: "Kõik projekti osalejad või valitud isikud saavad teavitused korraga.",
+
+      benefitsSiteCard5Title: "Ehituspäevik",
+      benefitsSiteCard5Text:
+        "Dokumenteeri päeva tööd otse telefonist.",
+
+      benefitsSiteCard6Title: "Omakontroll",
+      benefitsSiteCard6Text:
+        "Kontrollid mallide järgi, punkt punkti haaval — valmis üleandmiseks.",
+
+      benefitsSiteCard7Title: "Tööriistad QR-koodiga",
+      benefitsSiteCard7Text:
+        "Igal tööriistal on QR-kood — näed, kellel see on ja millisel projektil.",
+
+      benefitsSiteCard8Title: "Kulud tšekiga",
+      benefitsSiteCard8Text:
+        "Pildista tšekk, vali kategooria — kulu läheb projektile.",
     },
   },
 
@@ -338,6 +594,22 @@ export const benefitsTranslations = {
       benefitsOfficeCard3Text: "Nereikia skambinti ir rankiniu būdu priminti darbuotojams.",
       benefitsOfficeCard4Title: "Objektų kontrolė",
       benefitsOfficeCard4Text: "Realiu laiku matote, kas dirba, kur ir kas nedalyvauja.",
+
+      benefitsOfficeCard5Title: "Planavimas ir komplektavimas",
+      benefitsOfficeCard5Text:
+        "Ganto grafikas ir darbuotojų paskirstymas pagal dienas — iškart matyti, kas perkrautas.",
+
+      benefitsOfficeCard6Title: "Projekto pelningumas",
+      benefitsOfficeCard6Text:
+        "Kiekvieno projekto biudžetas, išlaidos ir marža realiu laiku.",
+
+      benefitsOfficeCard7Title: "Pasiūlymai ir sąskaitos",
+      benefitsOfficeCard7Text:
+        "Pasiūlymai ir sąskaitos vienoje vietoje — sąskaita tiesiai iš užregistruotų valandų.",
+
+      benefitsOfficeCard8Title: "Duomenys atlyginimams",
+      benefitsOfficeCard8Text:
+        "Valandos, priedai ir viršvalandžiai pagal darbuotoją — eksportas į CSV.",
     },
     site: {
       benefitsSiteLead: "Ką gauna statybų komanda:",
@@ -349,6 +621,22 @@ export const benefitsTranslations = {
       benefitsSiteCard3Text: "Nuotraukos ir dokumentai priskiriami pamainai ir projektui.",
       benefitsSiteCard4Title: "Pranešimai",
       benefitsSiteCard4Text: "Visi projekto dalyviai arba pasirinkti asmenys gauna pranešimus vienu metu.",
+
+      benefitsSiteCard5Title: "Statybos žurnalas",
+      benefitsSiteCard5Text:
+        "Dokumentuokite dienos darbus tiesiai telefone.",
+
+      benefitsSiteCard6Title: "Savikontrolė",
+      benefitsSiteCard6Text:
+        "Patikros pagal šablonus, punktas po punkto — paruošta perdavimui.",
+
+      benefitsSiteCard7Title: "Įrankiai su QR kodu",
+      benefitsSiteCard7Text:
+        "Kiekvienas įrankis turi QR kodą — matyti, kas jį turi ir kuriame projekte.",
+
+      benefitsSiteCard8Title: "Išlaidos su čekiu",
+      benefitsSiteCard8Text:
+        "Nufotografuokite čekį, pasirinkite kategoriją — išlaida priskiriama projektui.",
     },
   },
 
@@ -367,6 +655,22 @@ export const benefitsTranslations = {
       benefitsOfficeCard3Text: "Nav jāzvana un manuāli jāatgādina darbiniekiem.",
       benefitsOfficeCard4Title: "Objektu kontrole",
       benefitsOfficeCard4Text: "Reāllaikā redzat, kurš strādā, kur un kurš nav klāt.",
+
+      benefitsOfficeCard5Title: "Plānošana un komplektēšana",
+      benefitsOfficeCard5Text:
+        "Ganta grafiks un darbinieku sadale pa dienām — uzreiz redzams, kurš ir pārslogots.",
+
+      benefitsOfficeCard6Title: "Projekta rentabilitāte",
+      benefitsOfficeCard6Text:
+        "Katra projekta budžets, izmaksas un peļņa reāllaikā.",
+
+      benefitsOfficeCard7Title: "Piedāvājumi un rēķini",
+      benefitsOfficeCard7Text:
+        "Piedāvājumi un rēķini vienuviet — rēķins tieši no reģistrētajām stundām.",
+
+      benefitsOfficeCard8Title: "Algu dati",
+      benefitsOfficeCard8Text:
+        "Stundas, piemaksas un virsstundas pa darbiniekiem — eksports uz CSV.",
     },
     site: {
       benefitsSiteLead: "Ko iegūst būvniecības brigāde:",
@@ -378,6 +682,22 @@ export const benefitsTranslations = {
       benefitsSiteCard3Text: "Fotoattēli un dokumenti tiek piesaistīti maiņai un projektam.",
       benefitsSiteCard4Title: "Paziņojumi",
       benefitsSiteCard4Text: "Visi projekta dalībnieki vai izvēlētās personas saņem paziņojumus vienlaikus.",
+
+      benefitsSiteCard5Title: "Būvdarbu žurnāls",
+      benefitsSiteCard5Text:
+        "Dokumentējiet dienas darbus tieši telefonā.",
+
+      benefitsSiteCard6Title: "Paškontrole",
+      benefitsSiteCard6Text:
+        "Pārbaudes pēc veidnēm, punkts pa punktam — gatavs nodošanai.",
+
+      benefitsSiteCard7Title: "Instrumenti ar QR kodu",
+      benefitsSiteCard7Text:
+        "Katram instrumentam ir QR kods — redzams, kuram tas ir un kurā projektā.",
+
+      benefitsSiteCard8Title: "Izdevumi ar čeku",
+      benefitsSiteCard8Text:
+        "Nofotografējiet čeku, izvēlieties kategoriju — izdevums piesaistīts projektam.",
     },
   },
 } as const;

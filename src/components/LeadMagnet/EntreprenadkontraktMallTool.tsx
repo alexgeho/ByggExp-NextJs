@@ -12,7 +12,7 @@ const CONFIG: MallConfig = {
   signatures: ['Beställarens underskrift', 'Entreprenörens underskrift'],
   instantDownload: {
     label: 'Ladda ner tom entreprenadkontrakt-mall direkt',
-    note: 'PDF eller Word att skriva ut och fylla i för hand – inget konto behövs. Fyll hellre i digitalt nedan för ett färdigt kontrakt.',
+    note: 'PDF eller Excel att skriva ut och fylla i för hand – inget konto behövs. Fyll hellre i digitalt nedan för ett färdigt kontrakt.',
   },
   presets: {
     field: 'standard',

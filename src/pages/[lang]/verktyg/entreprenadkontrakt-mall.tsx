@@ -20,12 +20,12 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Vad ska ett entreprenadkontrakt innehålla?',
     answer:
-      'Parter, arbetsomfattning (och vad som inte ingår), prismodell, betalplan, tider och vite, ÄTA-hantering, besiktning, garanti- och ansvarstid, försäkring och hävningsvillkor. Mallen täcker alla dessa punkter.',
+      'Parter, arbetsomfattning (och vad som inte ingår), prismodell, betalplan, tider och vite, ÄTA-hantering, garanti- och ansvarstid, försäkring och hävningsvillkor. Mallen täcker alla dessa punkter – besiktning regleras i det standardavtal du anger.',
   },
   {
     question: 'Ska jag använda AB 04 eller ABS 18?',
     answer:
-      'Mellan näringsidkare används AB 04 (utförande) eller ABT 06 (total). Är beställaren konsument gäller konsumenttjänstlagen tvingande och du bör utgå från ABS 18 eller Hantverkarformuläret 17. Ange rätt standardavtal i kontraktet.',
+      'Mellan näringsidkare används AB 04 (utförande) eller ABT 06 (total). Är beställaren konsument gäller konsumenttjänstlagen tvingande. Använd Hantverkarformuläret 17 för reparationer och ombyggnader (t.ex. badrum) och ABS 18 när du uppför eller bygger till ett en- eller tvåbostadshus. Ange rätt standardavtal i kontraktet.',
   },
   {
     question: 'Gäller ett muntligt avtal?',
@@ -103,7 +103,7 @@ export default function EntreprenadkontraktMallPage() {
               <p>
                 Vid en konflikt är det kontraktstexten som avgör vad som räknas som fel eller avtalsbrott. Se till att
                 arbetsomfattningen är tydlig, att det framgår vad som <em>inte</em> ingår, och att prismodell och betalplan är
-                låsta. Reglera ÄTA skriftligt – merarbete på muntlig begäran är den vanligaste orsaken till att man inte får betalt.
+                låsta. Reglera ÄTA skriftligt – merarbete på muntlig begäran är en vanlig orsak till tvister om betalning.
               </p>
             ),
           },
@@ -113,7 +113,7 @@ export default function EntreprenadkontraktMallPage() {
             body: (
               <p>
                 Bygger du åt en konsument gäller konsumenttjänstlagen tvingande till konsumentens förmån – villkor som ger sämre
-                skydd blir utan verkan. Utgå då från ABS 18 eller Hantverkarformuläret 17. Mellan företag råder avtalsfrihet med
+                skydd blir utan verkan. Utgå då från Hantverkarformuläret 17 vid reparation och ombyggnad, eller ABS 18 vid nybyggnad eller tillbyggnad av småhus. Mellan företag råder avtalsfrihet med
                 AB 04 eller ABT 06. Ange alltid vilket standardavtal som gäller.
               </p>
             ),

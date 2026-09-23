@@ -53,5 +53,9 @@
    статья ссылается на него, добавлен в verktyg-list/хаб/sitemap.
 4. ✅ (23.09) kontrollplan-mall → таблица: vad / hur / mot vilket underlag / vem / egenkontroll-sakkunnig-KA + datum/sign;
    блоки anmälningar till nämnden, arbetsplatsbesök, avfall, slutbesked; 2 подписи (byggherre, KA). Отдельный компонент.
-5. 2-й deep-research по договорам + AFS → затем entreprenadkontrakt / skyddsrond / arbetsberedning.
+5. ✅ (23.09) 2-й deep-research по договорам + AFS: AB 04/ABT 06 действуют (преемники AB 25/ABPU 25 — не раньше
+   2027, BKK = foreningenbkk.se, апдейт осенью 2026 → перепроверить). Исправлено: ABS 18 только ny-/tillbyggnad
+   småhus, HF 17 — reparation/ombyggnad; Bas-P/Bas-U обязательны для всех проектов (не «på större byggen»);
+   «besiktning» убрано из списка содержимого; «vanligaste orsaken» смягчено; кнопка «Word / Excel» → «Excel»
+   (на деле CSV). Arbetsberedning: юридических утверждений нет, практика подтверждена. Garantitid AB 04 5/2 + 10 — ОК.
 6. Шаг 2: GA4-события скачиваний, смотреть через 2–4 недели.

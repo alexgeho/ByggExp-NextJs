@@ -235,7 +235,7 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
               className="lm-tool-secondary"
               onClick={() => downloadCsv(empty)}
             >
-              Word / Excel
+              Excel
             </button>
           </div>
         </div>

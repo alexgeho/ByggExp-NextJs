@@ -28,7 +28,7 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Vem deltar?',
     answer:
-      'Vanligtvis skyddsombud och arbetsledning, och på större byggen byggarbetsmiljösamordnaren (Bas-U). Anmärkningar protokollförs med ansvarig och åtgärdsdatum.',
+      'Vanligtvis arbetsledning och skyddsombud, gärna även byggarbetsmiljösamordnaren (Bas-U) – som byggherren ska utse för alla bygg- och anläggningsprojekt. Anmärkningar protokollförs med ansvarig och åtgärdsdatum.',
   },
   {
     question: 'Kostar mallen något?',

@@ -8,6 +8,8 @@ export type PresetItem = {
   reference?: string;
   /** Group heading the point belongs to (rendered as a section row). */
   section?: string;
+  /** How the point is checked (Boverket: "hur"), e.g. "Mätning", "Okulär". */
+  method?: string;
   /** Unit for a measured value, e.g. "MΩ" — shows a Mätvärde field. */
   unit?: string;
   /** Requirement / limit to compare against, e.g. "≥ 1 MΩ". */
@@ -79,27 +81,67 @@ export const EGENKONTROLL_PRESETS: EgenkontrollPreset[] = [
     id: 'vvs',
     name: 'Egenkontroll VVS',
     category: 'Kvalitet',
-    description: 'Kontroll av VVS-installation.',
-    items: [
-      { point: 'Täthetsprovning av rör utförd' },
-      { point: 'Avstängningsventiler monterade och märkta' },
-      { point: 'Isolering av rör komplett' },
-      { point: 'Fall på avloppsledningar kontrollerat' },
-      { point: 'Vattentryck kontrollerat' },
+    description:
+      'Kontroll av tappvatten- och avloppsinstallation med provningsprotokoll, enligt branschreglerna Säker Vatteninstallation 2026:1.',
+    meta: [
+      { name: 'company', label: 'VVS-företag / org.nr', placeholder: 'T.ex. Ditt VVS AB, 559000-0000' },
+      { name: 'installer', label: 'Montör (behörighet Säker Vatten)', placeholder: 'Namn, behörighetsnr' },
+      { name: 'site', label: 'Objekt / del som kontrolleras', placeholder: 'T.ex. Lgh 1102, badrum och kök' },
+      { name: 'rules', label: 'Branschregler (version)', placeholder: 'Säker Vatteninstallation 2026:1' },
     ],
+    items: [
+      // A — före inbyggnad: det som blir dolt ska kontrolleras innan det byggs in.
+      { section: 'A. Före inbyggnad', point: 'Handlingar och ritningar aktuella, ändringar dokumenterade', method: 'Granskning', requirement: 'Bygghandlingar' },
+      { section: 'A. Före inbyggnad', point: 'Rör, kopplingar och komponenter godkända för ändamålet', method: 'Dokumentgranskning', requirement: 'Säker Vatten, tillverkarens anvisning' },
+      { section: 'A. Före inbyggnad', point: 'Dolda ledningar förlagda så att läckage kan upptäckas', method: 'Okulär', requirement: 'Säker Vatten' },
+      { section: 'A. Före inbyggnad', point: 'Fästavstånd och fixpunkter enligt tillverkaren', method: 'Okulär / mätning', requirement: 'Tillverkarens anvisning' },
+      { section: 'A. Före inbyggnad', point: 'Rörgenomföringar i våtrum utförda enligt tätskiktssystemet', method: 'Okulär', requirement: 'Säker Vatten, tätskiktets anvisning' },
+      // B — provning. Provtryck/provtid/tryckfall enligt branschreglernas metod — fylls i per installation.
+      { section: 'B. Provning', point: 'Täthetsprovning tappvatten – provtryck', method: 'Tryckprovning', unit: 'bar', requirement: 'Enligt provningsmetod' },
+      { section: 'B. Provning', point: 'Täthetsprovning tappvatten – provtid', method: 'Tryckprovning', unit: 'min', requirement: 'Enligt provningsmetod' },
+      { section: 'B. Provning', point: 'Täthetsprovning tappvatten – tryckfall under provtiden', method: 'Tryckprovning', unit: 'bar', requirement: 'Inom godkänt värde' },
+      { section: 'B. Provning', point: 'Avloppsledningar täta, fall kontrollerat', method: 'Provning / mätning', requirement: 'Fall enligt handling' },
+      { section: 'B. Provning', point: 'Tappvarmvattentemperatur vid tappställe', method: 'Mätning', unit: '°C', requirement: '≥ 50 °C', reference: 'BBR' },
+      { section: 'B. Provning', point: 'Avstängningsventiler funktionsprovade, åtkomliga och märkta', method: 'Funktionsprov', requirement: 'Handlingar' },
+      { section: 'B. Provning', point: 'Återströmningsskydd monterat där det krävs', method: 'Okulär', requirement: 'SS-EN 1717' },
+      { section: 'B. Provning', point: 'Isolering av rör komplett (kondens, värmeförlust)', method: 'Okulär', requirement: 'Handlingar' },
+      // C — överlämning
+      { section: 'C. Överlämning', point: 'Installationsintyg upprättat, med branschreglernas version angiven', method: 'Dokument', requirement: 'Säker Vatten 2026:1' },
+      { section: 'C. Överlämning', point: 'Intyg och drift- och skötselinstruktioner lämnade till beställaren', method: 'Dokument', requirement: 'Säker Vatten' },
+      { section: 'C. Överlämning', point: 'Avvikelser åtgärdade och efterkontrollerade', method: 'Granskning', requirement: 'Kontrollplan' },
+    ],
+    signatures: ['Montör – namn, behörighetsnr, datum', 'Arbetsledare / ansvarig – namn, datum'],
+    footnote:
+      'Egenkontroll av VVS-installation enligt branschreglerna Säker Vatteninstallation 2026:1, som gäller från 1 januari 2026 (2021:2 kan gälla om bygglov eller handlingar är från före 2026). Provtryck, provtid och godkänt tryckfall anges enligt branschreglernas provningsmetod och tillverkarens anvisning – fyll i värdena som gäller för installationen. Kontrollera alltid mot projektets handlingar.',
   },
   {
     id: 'bygg',
     name: 'Egenkontroll Bygg / Stomme',
     category: 'Kvalitet',
-    description: 'Kontroll av byggkonstruktion.',
-    items: [
-      { point: 'Måttkontroll mot ritning' },
-      { point: 'Infästningar och förankringar kontrollerade' },
-      { point: 'Fuktkontroll utförd' },
-      { point: 'Brandtätning genomförd', reference: 'BBR' },
-      { point: 'Avvikelser dokumenterade' },
+    description:
+      'Kontroll av stomme och byggkonstruktion: vad, hur och mot vilket underlag – med datum och signatur per punkt.',
+    meta: [
+      { name: 'company', label: 'Företag / org.nr', placeholder: 'T.ex. Ditt Bygg AB, 559000-0000' },
+      { name: 'site', label: 'Byggdel / etapp', placeholder: 'T.ex. Stomme plan 2, ytterväggar' },
     ],
+    items: [
+      { section: 'A. Förberedelser', point: 'Handlingar (K-ritningar, beskrivning) aktuella på arbetsplatsen', method: 'Granskning', requirement: 'Bygghandlingar' },
+      { section: 'A. Förberedelser', point: 'Material enligt beskrivning, prestandadeklaration finns', method: 'Dokumentgranskning', requirement: 'Beskrivning, CE-märkning' },
+      { section: 'A. Förberedelser', point: 'Fuktkvot i virke före inbyggnad', method: 'Mätning', unit: '%', requirement: 'Enligt fuktsäkerhetsprojektering' },
+      { section: 'B. Utförande', point: 'Mått, läge och höjder mot ritning', method: 'Mätning', requirement: 'Ritning, toleranser' },
+      { section: 'B. Utförande', point: 'Lod och rakhet på väggar och pelare', method: 'Mätning', requirement: 'Toleranser enligt beskrivning' },
+      { section: 'B. Utförande', point: 'Reglar och bjälkar: dimension och c/c-avstånd', method: 'Mätning', requirement: 'Ritning' },
+      { section: 'B. Utförande', point: 'Infästningar, förankringar och beslag enligt K-ritning', method: 'Okulär', requirement: 'Konstruktionshandling' },
+      { section: 'B. Utförande', point: 'Spik- och skruvavstånd samt dimension', method: 'Stickprov', requirement: 'Konstruktionshandling' },
+      { section: 'B. Utförande', point: 'Stomstabilisering (vindstag, skivverkan) utförd', method: 'Okulär', requirement: 'Konstruktionshandling' },
+      { section: 'B. Utförande', point: 'Ång- och fuktspärr hel, skarvar och genomföringar tätade', method: 'Okulär', requirement: 'Fuktsäkerhetsprojektering' },
+      { section: 'B. Utförande', point: 'Brandtätning av genomföringar i brandcellsgräns', method: 'Okulär', requirement: 'Brandskyddsdokumentation', reference: 'BBR' },
+      { section: 'C. Avslut', point: 'Dolda konstruktioner fotodokumenterade före inbyggnad', method: 'Foto', requirement: 'Kontrollplan' },
+      { section: 'C. Avslut', point: 'Avvikelser dokumenterade, åtgärdade och efterkontrollerade', method: 'Granskning', requirement: 'Kontrollplan' },
+    ],
+    signatures: ['Utförare – namn, datum', 'Arbetsledare / ansvarig – namn, datum'],
+    footnote:
+      'Egenkontroll som del av kontrollplanen enligt plan- och bygglagen (10 kap. 6 §): för varje kontroll anges vad som kontrolleras, hur, mot vilket underlag och vem som utför den – datera och signera varje punkt. Toleranser och kravvärden enligt projektets handlingar.',
   },
   {
     id: 'skyddsrond',

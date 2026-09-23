@@ -22,7 +22,7 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Vad ska en egenkontroll för bygg innehålla?',
     answer:
-      'Projekt, ansvarig och datum samt kontrollpunkter med resultat (godkänd, anmärkning eller ej aktuellt). Typiska punkter för bygg och stomme är måttkontroll mot ritning, kontroll av infästningar och förankringar, fuktkontroll, brandtätning enligt BBR och dokumenterade avvikelser.',
+      'Projekt, ansvarig och datum samt för varje kontrollpunkt vad som kontrolleras, hur (metod), mot vilket underlag (krav), resultat och datum och signatur. Typiska punkter för bygg och stomme är fuktkvot i virke före inbyggnad, mått och lod mot ritning, infästningar och förankringar enligt K-ritning, stomstabilisering, fuktspärr, brandtätning och fotodokumentation av dolda konstruktioner.',
   },
   {
     question: 'Görs egenkontroll för bygg mot BBR?',
@@ -61,7 +61,7 @@ export default function EgenkontrollByggMallPage() {
 
   const title = 'Egenkontroll bygg – gratis mall (PDF) | ByggExp';
   const description =
-    'Gratis egenkontroll-mall för bygg och stomme. Fyll i måttkontroll, infästningar, fuktkontroll och brandtätning (BBR) online och ladda ner som PDF – utan konto.';
+    'Gratis egenkontroll-mall för bygg och stomme. Kontrollpunkter med metod och krav: fuktkvot, mått och lod, infästningar, fuktspärr och brandtätning (BBR). Fyll i online och ladda ner som PDF – utan konto.';
 
   return (
     <>
@@ -94,7 +94,7 @@ export default function EgenkontrollByggMallPage() {
       <LeadMagnetPage
         badge="Gratis mall"
         title="Egenkontroll bygg – gratis mall att fylla i online"
-        intro="Färdig egenkontroll för bygg och stomme – måttkontroll mot ritning, infästningar, fuktkontroll och brandtätning ligger redan ifyllda. Sätt resultat, kommentera eventuella anmärkningar och ladda ner som PDF. Gratis och utan konto."
+        intro="Färdig egenkontroll för bygg och stomme – fuktkvot före inbyggnad, mått och lod mot ritning, infästningar, stomstabilisering, fuktspärr och brandtätning ligger redan ifyllda, med metod och krav per punkt. Sätt resultat, signera och ladda ner som PDF. Gratis och utan konto."
         tool={<EgenkontrollTool defaultPreset="bygg" />}
         leadForm={<ToolLeadForm tool="egenkontroll-bygg-mall" />}
         preview={
@@ -131,30 +131,27 @@ export default function EgenkontrollByggMallPage() {
             heading: 'Kontrollpunkter i en egenkontroll för bygg/stomme',
             body: (
               <>
-                <p>Mallen ovan öppnar redan ifylld med de vanligaste punkterna för bygg och stomme:</p>
+                <p>
+                  Mallen ovan öppnar redan ifylld i tre steg – varje punkt har metod (hur den kontrolleras)
+                  och krav (mot vilket underlag), så som Boverket beskriver kontrollerna i en kontrollplan:
+                </p>
                 <ul>
                   <li>
-                    <strong>Måttkontroll mot ritning</strong> – att mått och placering stämmer med
-                    handlingarna.
+                    <strong>A. Förberedelser</strong> – aktuella handlingar på arbetsplatsen, material och
+                    prestandadeklaration, fuktkvot i virke före inbyggnad (mätvärde i %).
                   </li>
                   <li>
-                    <strong>Infästningar och förankringar kontrollerade</strong> – rätt typ, antal och
-                    utförande.
+                    <strong>B. Utförande</strong> – mått, lod och c/c-avstånd mot ritning, infästningar,
+                    spik- och skruvavstånd, stomstabilisering, ång- och fuktspärr samt brandtätning.
                   </li>
                   <li>
-                    <strong>Fuktkontroll utförd</strong> – fuktkvot och att inget byggs in för blött.
-                  </li>
-                  <li>
-                    <strong>Brandtätning genomförd (BBR)</strong> – genomföringar och avskiljningar
-                    täta enligt Boverkets byggregler.
-                  </li>
-                  <li>
-                    <strong>Avvikelser dokumenterade</strong> – noterade, åtgärdade och uppföljda.
+                    <strong>C. Avslut</strong> – fotodokumentation av dolda konstruktioner och åtgärdade
+                    avvikelser.
                   </li>
                 </ul>
                 <p>
-                  Du behöver bara sätta resultat (godkänd, anmärkning eller ej aktuellt) och skriva en
-                  kommentar där det behövs – lägg till egna punkter för projektets specifika krav.
+                  Sätt resultat (godkänd, anmärkning eller ej aktuellt), fyll i mätvärden och datera och
+                  signera varje punkt – lägg till egna punkter för projektets specifika krav.
                 </p>
               </>
             ),
@@ -180,11 +177,11 @@ export default function EgenkontrollByggMallPage() {
               <>
                 <p>Säg att du precis rest en del av stommen. Den ifyllda egenkontrollen kan då se ut så här:</p>
                 <ul>
-                  <li>Måttkontroll mot ritning – <em>Godkänd</em></li>
-                  <li>Infästningar och förankringar kontrollerade – <em>Godkänd</em></li>
-                  <li>Fuktkontroll utförd – <em>Godkänd</em></li>
-                  <li>Brandtätning genomförd (BBR) – <em>Anmärkning: genomföring i schakt otät, åtgärdas</em></li>
-                  <li>Avvikelser dokumenterade – <em>Godkänd</em></li>
+                  <li>Fuktkvot i virke före inbyggnad (mätning) – <em>Godkänd, mätvärde ifyllt</em></li>
+                  <li>Mått, läge och höjder mot ritning (mätning) – <em>Godkänd</em></li>
+                  <li>Infästningar och förankringar enligt K-ritning (okulär) – <em>Godkänd</em></li>
+                  <li>Brandtätning av genomföringar (okulär, BBR) – <em>Anmärkning: genomföring i schakt otät, åtgärdas</em></li>
+                  <li>Dolda konstruktioner fotodokumenterade – <em>Godkänd</em></li>
                 </ul>
                 <p>
                   Anmärkningen på brandtätningen åtgärdas och följs upp, och den färdiga PDF:en signeras

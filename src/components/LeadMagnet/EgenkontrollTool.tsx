@@ -16,6 +16,8 @@ type Row = {
   // Optional protocol fields, filled from presets like el (sections + measured values).
   section?: string;
   reference?: string;
+  /** How the point is checked (Boverket: "hur"), e.g. "Mätning". */
+  method?: string;
   unit?: string;
   requirement?: string;
   measured?: string;
@@ -36,15 +38,18 @@ const presetRows = (presetId: string): Row[] => {
     comment: '',
     section: item.section,
     reference: item.reference,
+    method: item.method,
     unit: item.unit,
     requirement: item.requirement,
     measured: '',
   }));
 };
 
-// Rows that carry a requirement or unit turn the checklist into a measurement
-// protocol: extra Krav + Mätvärde columns in the form, PDF and Excel.
+// Rows that carry a requirement or unit turn the checklist into a protocol with
+// a Krav column (what the point is checked against); rows with a unit add a
+// Mätvärde column on top.
 const isProtocol = (rows: Row[]) => rows.some((r) => r.unit || r.requirement);
+const hasMeasure = (rows: Row[]) => rows.some((r) => r.unit);
 
 export default function EgenkontrollTool({
   defaultPreset,
@@ -74,6 +79,7 @@ export default function EgenkontrollTool({
   const [presetId, setPresetId] = useState<string | null>(defaultPreset ?? null);
   const preset = EGENKONTROLL_PRESETS.find((p) => p.id === presetId);
   const protocol = isProtocol(rows);
+  const measure = hasMeasure(rows);
 
   // --- Utkast sparas automatiskt i webbläsaren ---------------------------------
   // Det som gör verktyget värt att komma tillbaka till: du kan börja fylla i en
@@ -239,13 +245,21 @@ export default function EgenkontrollTool({
       // Table columns. Empty Resultat/Datum/Kommentar cells are deliberately
       // left blank so the sheet can be printed and filled in by hand. A
       // measurement protocol adds Krav + Mätvärde columns.
-      const cols = protocol
+      const cols = protocol && measure
         ? [
-            { key: 'point', label: 'Kontrollpunkt', w: 240 },
-            { key: 'krav', label: 'Krav', w: 120 },
+            { key: 'point', label: 'Kontrollpunkt / metod', w: 240 },
+            { key: 'krav', label: 'Krav / underlag', w: 120 },
             { key: 'measured', label: 'Mätvärde', w: 80 },
             { key: 'result', label: 'Resultat', w: 80 },
             { key: 'sign', label: 'Datum / sign.', w: 90 },
+            { key: 'comment', label: 'Kommentar', w: 0 },
+          ]
+        : protocol
+        ? [
+            { key: 'point', label: 'Kontrollpunkt / metod', w: 280 },
+            { key: 'krav', label: 'Krav / underlag', w: 150 },
+            { key: 'result', label: 'Resultat', w: 80 },
+            { key: 'sign', label: 'Datum / sign.', w: 100 },
             { key: 'comment', label: 'Kommentar', w: 0 },
           ]
         : [
@@ -318,7 +332,9 @@ export default function EgenkontrollTool({
           doc.line(marginX, y, tableRight, y);
         }
 
-        const pointText = row.reference ? `${row.point}  (${row.reference})` : row.point;
+        const pointBase = row.reference ? `${row.point}  (${row.reference})` : row.point;
+        // Method on its own line under the point (Boverket: vad + hur).
+        const pointText = row.method ? `${pointBase}\nMetod: ${row.method}` : pointBase;
         const measuredText = row.measured?.trim()
           ? `${row.measured.trim()}${row.unit ? ` ${row.unit}` : ''}`
           : row.unit
@@ -392,11 +408,11 @@ export default function EgenkontrollTool({
       ...(preset?.meta ?? []).map((f) => [f.label, meta[f.name] ?? '']),
       [],
       protocol
-        ? ['Avsnitt', 'Kontrollpunkt', 'Referens', 'Krav', 'Mätvärde', 'Enhet', 'Resultat', 'Datum / sign.', 'Kommentar']
+        ? ['Avsnitt', 'Kontrollpunkt', 'Metod', 'Referens', 'Krav / underlag', 'Mätvärde', 'Enhet', 'Resultat', 'Datum / sign.', 'Kommentar']
         : ['Kontrollpunkt', 'Resultat', 'Datum / sign.', 'Kommentar'],
       ...rows.map((r) =>
         protocol
-          ? [r.section || '', r.point || '', r.reference || '', r.requirement || '', r.measured || '', r.unit || '', r.result, '', r.comment || '']
+          ? [r.section || '', r.point || '', r.method || '', r.reference || '', r.requirement || '', r.measured || '', r.unit || '', r.result, '', r.comment || '']
           : [r.point || '', r.result, '', r.comment || ''],
       ),
       ...(preset?.signatures ?? ['Underskrift ansvarig']).map((s) => [s, '']),
@@ -508,7 +524,7 @@ export default function EgenkontrollTool({
         ) : null}
 
         <div className="lm-tool-rows" ref={rowsRef}>
-          {protocol ? null : (
+          {measure ? null : (
             <div className="lm-tool-row lm-tool-row-egen lm-tool-row-head">
               <span>Kontrollpunkt</span>
               <span>Resultat</span>
@@ -521,18 +537,24 @@ export default function EgenkontrollTool({
             return (
               <div key={index}>
                 {showSection ? <div className="lm-tool-section-row">{row.section}</div> : null}
-                <div className={`lm-tool-row lm-tool-row-egen${protocol ? ' lm-tool-row-egen-measure' : ''}`}>
+                <div className={`lm-tool-row lm-tool-row-egen${measure ? ' lm-tool-row-egen-measure' : ''}`}>
                   <div className="lm-tool-row-point">
                     <input value={row.point} placeholder="Vad kontrolleras" aria-label="Kontrollpunkt" onChange={(e) => setRow(index, { point: e.currentTarget.value })} />
-                    {row.requirement || row.reference ? (
+                    {row.method || row.requirement || row.reference ? (
                       <span className="lm-tool-row-ref">
-                        {row.requirement ? <>Krav: <strong>{row.requirement}</strong></> : null}
-                        {row.requirement && row.reference ? ' · ' : null}
-                        {row.reference}
+                        {[
+                          row.method ? <>Metod: {row.method}</> : null,
+                          row.requirement ? <>Krav: <strong>{row.requirement}</strong></> : null,
+                          row.reference || null,
+                        ]
+                          .filter(Boolean)
+                          .map((part, i) => (
+                            <span key={i}>{i > 0 ? ' · ' : null}{part}</span>
+                          ))}
                       </span>
                     ) : null}
                   </div>
-                  {protocol ? (
+                  {measure ? (
                     row.unit ? (
                       <label className="lm-tool-measure">
                         <input

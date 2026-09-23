@@ -21,7 +21,7 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Vad ska en egenkontroll för VVS innehålla?',
     answer:
-      'Projekt, ansvarig och datum samt kontrollpunkter med resultat (godkänd, anmärkning eller ej aktuellt). Typiska punkter för VVS är täthetsprovning av rör, monterade och märkta avstängningsventiler, komplett rörisolering, kontrollerat fall på avloppsledningar och kontrollerat vattentryck.',
+      'Projekt, ansvarig montör och datum samt kontrollpunkter med metod, krav och resultat – och datum och signatur per punkt. Typiska punkter för VVS är kontroll av dolda ledningar före inbyggnad, täthetsprovning med provtryck, provtid och tryckfall, fall på avlopp, tappvarmvattentemperatur, funktionsprovade avstängningsventiler och installationsintyg enligt Säker Vatten 2026:1.',
   },
   {
     question: 'Är egenkontroll för VVS samma sak som säker vatten?',
@@ -60,7 +60,7 @@ export default function EgenkontrollVvsMallPage() {
 
   const title = 'Egenkontroll VVS – gratis mall (PDF) | ByggExp';
   const description =
-    'Gratis egenkontroll-mall för VVS. Fyll i täthetsprovning, avstängningsventiler, rörisolering, fall på avlopp och vattentryck online och ladda ner som PDF – utan konto.';
+    'Gratis egenkontroll-mall för VVS. Provningsprotokoll enligt Säker Vatten 2026:1: täthetsprovning med provtryck och provtid, fall på avlopp, varmvattentemperatur och intyg. Fyll i online, ladda ner som PDF – utan konto.';
 
   return (
     <>
@@ -93,7 +93,7 @@ export default function EgenkontrollVvsMallPage() {
       <LeadMagnetPage
         badge="Gratis mall"
         title="Egenkontroll VVS – gratis mall att fylla i online"
-        intro="Färdig egenkontroll för VVS-installation – täthetsprovning, avstängningsventiler, rörisolering, fall på avlopp och vattentryck ligger redan ifyllda. Sätt resultat, kommentera eventuella anmärkningar och ladda ner som PDF. Gratis och utan konto."
+        intro="Färdig egenkontroll för VVS-installation – kontroller före inbyggnad, täthetsprovning med provtryck och provtid, fall på avlopp, varmvattentemperatur och överlämning enligt Säker Vatten 2026:1 ligger redan ifyllda. Fyll i mätvärden, sätt resultat och ladda ner som PDF. Gratis och utan konto."
         tool={<EgenkontrollTool defaultPreset="vvs" />}
         leadForm={<ToolLeadForm tool="egenkontroll-vvs-mall" />}
         preview={
@@ -131,30 +131,30 @@ export default function EgenkontrollVvsMallPage() {
             heading: 'Kontrollpunkter i en egenkontroll för VVS',
             body: (
               <>
-                <p>Mallen ovan öppnar redan ifylld med de vanligaste punkterna för en VVS-installation:</p>
+                <p>
+                  Mallen ovan öppnar redan ifylld som ett provningsprotokoll i tre steg – varje punkt har
+                  metod (hur den kontrolleras) och krav (mot vilket underlag):
+                </p>
                 <ul>
                   <li>
-                    <strong>Täthetsprovning av rör utförd</strong> – tryckprovning som visar att systemet
-                    är tätt.
+                    <strong>A. Före inbyggnad</strong> – aktuella handlingar, godkända rör och
+                    komponenter, dolda ledningar förlagda så att läckage kan upptäckas, fästavstånd och
+                    rörgenomföringar i våtrum.
                   </li>
                   <li>
-                    <strong>Avstängningsventiler monterade och märkta</strong> – rätt placerade och lätta
-                    att identifiera.
+                    <strong>B. Provning</strong> – täthetsprovning med fält för provtryck (bar), provtid
+                    (min) och tryckfall, fall på avlopp, tappvarmvattentemperatur vid tappställe (minst
+                    50 °C), funktionsprov av avstängningsventiler, återströmningsskydd och isolering.
                   </li>
                   <li>
-                    <strong>Isolering av rör komplett</strong> – mot värmeförluster och kondens.
-                  </li>
-                  <li>
-                    <strong>Fall på avloppsledningar kontrollerat</strong> – rätt lutning så att avloppet
-                    rinner.
-                  </li>
-                  <li>
-                    <strong>Vattentryck kontrollerat</strong> – att trycket ligger inom rätt intervall.
+                    <strong>C. Överlämning</strong> – installationsintyg med branschreglernas version
+                    angiven, intyg och skötselinstruktioner till beställaren, åtgärdade avvikelser.
                   </li>
                 </ul>
                 <p>
-                  Du behöver bara sätta resultat (godkänd, anmärkning eller ej aktuellt) och skriva en
-                  kommentar där det behövs – lägg till egna punkter för projektets specifika krav.
+                  Fyll i mätvärdena, sätt resultat (godkänd, anmärkning eller ej aktuellt) och datera och
+                  signera varje punkt. Provtryck, provtid och godkänt tryckfall anges enligt branschreglernas
+                  provningsmetod och tillverkarens anvisning – mallen hittar inte på några värden.
                 </p>
               </>
             ),
@@ -180,11 +180,11 @@ export default function EgenkontrollVvsMallPage() {
               <>
                 <p>Säg att du precis dragit klart rör i ett badrum. Den ifyllda egenkontrollen kan då se ut så här:</p>
                 <ul>
-                  <li>Täthetsprovning av rör utförd – <em>Godkänd</em></li>
-                  <li>Avstängningsventiler monterade och märkta – <em>Godkänd</em></li>
-                  <li>Isolering av rör komplett – <em>Godkänd</em></li>
-                  <li>Fall på avloppsledningar kontrollerat – <em>Anmärkning: för lågt fall vid golvbrunn, justeras</em></li>
-                  <li>Vattentryck kontrollerat – <em>Godkänd</em></li>
+                  <li>Dolda ledningar förlagda så att läckage kan upptäckas – <em>Godkänd</em></li>
+                  <li>Täthetsprovning – provtryck, provtid och tryckfall ifyllda enligt provningsmetoden – <em>Godkänd</em></li>
+                  <li>Avloppsledningar täta, fall kontrollerat – <em>Anmärkning: för lågt fall vid golvbrunn, justeras</em></li>
+                  <li>Avstängningsventiler funktionsprovade och märkta – <em>Godkänd</em></li>
+                  <li>Installationsintyg upprättat med version 2026:1 – <em>Godkänd</em></li>
                 </ul>
                 <p>
                   Anmärkningen på avloppsfallet åtgärdas och följs upp, och den färdiga PDF:en signeras
@@ -198,8 +198,9 @@ export default function EgenkontrollVvsMallPage() {
             heading: 'Egenkontroll VVS och Säker Vatten',
             body: (
               <p>
-                Kontrollerna görs ofta mot branschreglerna <strong>Säker Vatten</strong> och mot
-                tillverkarnas monteringsanvisningar. Täthetsprovning och kontroll av att installationen
+                Kontrollerna görs ofta mot branschreglerna <strong>Säker Vatteninstallation 2026:1</strong>,
+                som gäller från 1 januari 2026 (2021:2 kan gälla om bygglov eller handlingar är från före
+                2026), och mot tillverkarnas monteringsanvisningar. Täthetsprovning och kontroll av att installationen
                 är utförd så att risken för vatten- och fuktskador minimeras är kärnan. Egenkontrollen
                 ersätter inte ett Säker Vatten-intyg, men den är det praktiska underlaget som visar att
                 kontrollerna faktiskt gjorts och att systemet är tätt innan det byggs in.

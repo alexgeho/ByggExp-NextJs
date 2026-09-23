@@ -24,7 +24,7 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Vad ska en egenkontroll innehålla?',
     answer:
-      'Titel, projekt, ansvarig och datum samt kontrollpunkter med resultat (godkänd, anmärkning eller ej aktuellt) och eventuell kommentar. Kontrollerna görs ofta mot BBR och projektets krav.',
+      'Titel, projekt, ansvarig och datum samt för varje kontrollpunkt vad som kontrolleras, hur (metod), mot vilket krav eller underlag, resultat (godkänd, anmärkning eller ej aktuellt) och datum och signatur. Kontrollerna görs ofta mot BBR, branschregler och projektets handlingar.',
   },
   {
     question: 'Måste egenkontroll vara digital?',
@@ -136,8 +136,10 @@ export default function EgenkontrollMallPage() {
                 <li>Titel och kategori (kvalitet, miljö eller arbetsmiljö)</li>
                 <li>Projekt, ansvarig och datum</li>
                 <li>Kontrollpunkter – vad som ska kontrolleras</li>
-                <li>Resultat: godkänd, anmärkning eller ej aktuellt</li>
-                <li>Kommentar och underskrift av ansvarig</li>
+                <li>Metod – hur varje punkt kontrolleras (mätning, okulär, provning …)</li>
+                <li>Krav – mot vilket underlag: ritning, BBR, branschregler, tillverkarens anvisning</li>
+                <li>Resultat: godkänd, anmärkning eller ej aktuellt, med mätvärde där det behövs</li>
+                <li>Datum och signatur per punkt, kommentar vid avvikelse</li>
               </ul>
             ),
           },

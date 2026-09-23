@@ -116,11 +116,6 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
             <span className="eyebrow">{t.eyebrow}</span>
             <h1>{t.title}</h1>
             <p className="section-sub">{t.lead}</p>
-            <ul className="kontakt-checks">
-              {t.checks.map((check) => (
-                <li key={check}>✓ {check}</li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>

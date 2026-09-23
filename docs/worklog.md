@@ -6,45 +6,72 @@
 ---
 
 ## 📍 СТАТУС (кратко)
-Активно: скачиваемые mallar по нормам (план `docs/seo/mallar-revision.md`, el готов) + UX главной/контактов.
-23.09: **AI-чат на сайте LIVE** (ключ на VPS), контакты переделаны, блоки преимуществ → карусели.
-20.09 закрыт тех-SEO долг (GSC-404), валидация в GSC идёт — проверить ≈4–5 окт.
+Последняя сессия: **22–24.09** (ниже). Ревизия скачиваемых mallar закрыта целиком, AI-чат на Sonnet 5 live,
+контакты и главная переделаны, takstolar-кластер пересобран. **Продолжать с «🔜 NÄSTA STEG» в сессии 22–24.09.**
 История сессий до 2026-09-12 → `docs/worklog-archive.md`. Индекс всех доков → `docs/README.md`. Норвегия (byggexp.no) — память [[norway-expansion]] + архив.
 
-## 🟢 Сессия 2026-09-22…23 — mallar-ревизия, AI-чат live, контакты, карусели
+## 🟢 Сессия 2026-09-22…24 — mallar по нормам, AI-чат, контакты, карусели, takstolar
 
-### KLART (всё задеплоено)
-- **Ревизия скачиваемых mallar** (`a4ebb8b`) → `docs/seo/mallar-revision.md`: трафик GSC × нормы (Boverket, ELSÄK-FS,
-  Säker Vatten 2026:1), вердикт по каждой странице + план из 6 пунктов.
-- **egenkontroll-el-mall = настоящий протокол замеров** (`59c4c8d`): 22 пункта в 4 этапа (före ibruktagning → överlämning),
-  поля Krav/Mätvärde, 2 подписи; в PDF и Excel. **Счётчик скачиваний на весь сайт**: хук на `<a download>` →
-  `/api/track-download` (агрегат, без идентификаторов) + GA4 `file_download`; дашборд `/api/download-stats`.
-- **Контакты `/[lang]/contact` переделаны** (в стиле nordkod.se/kontakt): section-head шапка, форма
-  (имя/почта*/компания/телефон/тема/сообщение → `f-message`), карточки Ring/Mejla, «Så går det till»,
-  реквизиты RealMar AB, FAQ; 10 языков. WhatsApp-карточка убрана.
-- **AI-чат LIVE** (`6b3bcec`…`94213a9`): `SiteChat` спрашивает `GET /api/chat` → AI или WhatsApp-фолбэк
-  (ключ должен выглядеть как `sk-ant-…`, >40 симв.). В промпте факты о продукте (функции, цены 499/899/1799,
-  демо, контакты), ответ на языке посетителя, без markdown кроме ссылок. Нет на `/admin` и `/[lang]/embed/*`.
-  Ключ на VPS в `/opt/byggexp-next/shared/.env` + `pm2 restart --update-env` (см. память [[ai-assistant]]).
-- **Главная: блоки преимуществ → карусели** (`fe32464`, `5af5ab7`): общий `Benefits/BenefitSlider.tsx`
-  (scroll-snap как Pricing/Features, стрелки по кругу, точки); Benefits = 8 карточек в одной ленте
-  с пометкой аудитории, FinalBenefits = 4. Опечатка sv «För får byggteamet» исправлена.
+### KLART (всё задеплоено на прод)
+**Скачиваемые шаблоны (ревизия `docs/seo/mallar-revision.md` — все 5 пунктов ✅):**
+- **egenkontroll — все 8 пресетов = протоколы** (`59c4c8d`, `ef80e05`, `94f0af4`): у каждого пункта Metod + колонка
+  «Krav / underlag», Mätvärde где есть единица, 2 подписи, сноска с нормой. el 22 п. (ELSÄK-FS 2017:3), VVS 16 п.
+  (Säker Vatten 2026:1), bygg 13, vatrum 10, betong 12, tak 11, ventilation 12 (OVK), skyddsrond 15. Граничные значения
+  НЕ выдумываем — пустые поля «enligt tillverkare/provningsmetod».
+- **kontrollplan-mall = таблица по PBL** (`e993a77`, свой компонент `KontrollplanMallTool`): vad / hur / mot vilket
+  underlag / vem / egenkontroll-sakkunnig-KA + datum/sign, блоки anmälningar till nämnden, arbetsplatsbesök, avfall, slutbesked.
+- **Новый инструмент `/sv/verktyg/byggmotesprotokoll-mall`** (`e03a15b`) — дагордning из статьи, статья ссылается на него.
+- Статья arbetsberedning → свой инструмент; пример entreprenadkontrakt = чистый AB 04 (без «Commode»).
+- **Факт-чек договоров/AFS** (`4c6e94b`): HF 17 = ремонт/ombyggnad, ABS 18 = ny-/tillbyggnad småhus; Bas-U обязателен
+  для всех проектов; кнопка «Word / Excel» → «Excel» (это CSV). AB 04/ABT 06 действуют (AB 25 не раньше 2027).
+- **Счётчик скачиваний на весь сайт** (`59c4c8d`): `<a download>` → `/api/track-download` + GA4 `file_download`;
+  дашборд `/api/download-stats`.
 
-### 🔜 NÄSTA STEG
-1. ✅ egenkontroll: все 8 пресетов = протоколы с Metod + Krav/underlag и подписями (el, VVS 2026:1, bygg, vatrum, betong, tak, ventilation, skyddsrond).
-2. ✅ Быстрые из ревизии: arbetsberedning-статья → инструмент; пример договора = AB 04 (без «Commode»); новый
-   инструмент `byggmotesprotokoll-mall`. kontrollplan-mall = таблица по PBL (п.4 ✅). П.5 ✅ факт-чек договоров/AFS внесён. **Ревизия mallar закрыта целиком.** ⏰ Осень 2026: BKK апдейт по AB 25/ABPU 25 — перепроверить формулировки AB 04/ABT 06.
-3. ✅ Модель чата = `claude-sonnet-5` (`b9c6c48`, ~$0.9/100 сообщений; Haiku тестировали — выдумывал факты). Баланс Anthropic ~$4 → owner: auto-reload.
-4a. ✅ **Takstolar-кластер (23.09):** GSC показал каннибализацию — калькулятор и статья ранжировались по одним запросам
-   (поз. 12–25). Калькулятор → tool-интент (+ геометрия: nockhöjd/överram/takyta + SVG W-takstol, `c2b839b`); статья →
-   guide-интент (типы W/WW/A/ramverk/sax/pulpet/mansard + spännvidd/lutning, факт-чек). **Исправлено: «600 mm vid tegel» —
-   ОШИБКА** (1200 mm и для tungt tak), EKS → **BFS 2024:6** (с 1.7.2025; старые правила только для ansökan до 1.7.2026).
-   Проверить позиции ≈ через 2–3 нед (`takstol` в GSC).
-4b. ⚠️ **EKS устарел по всему сайту:** 38 упоминаний в 6 файлах (`grep -rE "\bEKS\b" src`) → заменить на BFS 2024:6
-   с оговоркой про переходный период. Отдельная задача.
-4. ≈4–5 окт: GSC-валидация 404 + `.gsc/index_status.py` (см. сессию 20.09).
-5. ⚠️ owner: VPS root — 138k неудачных логинов, закрыть вход по паролю (только ключ + fail2ban).
-6. Stripe/оплата — owner делает сам в другом проекте (не наш трек).
+**AI-чат (память [[ai-assistant]]):**
+- LIVE с ключом на VPS (`/opt/byggexp-next/shared/.env` + `pm2 restart byggexp-next --update-env`).
+  `SiteChat` → `GET /api/chat` решает AI или WhatsApp-фолбэк; нет на `/admin` и `/[lang]/embed/*`.
+- Модель **`claude-sonnet-5`** (`b9c6c48`, ~$0.9/100 сообщений; Haiku выдумывал факты, Opus ~$2.3). Промпт: факты
+  о продукте (функции, цены 499/899/1799, демо), язык посетителя, не считать суммы, не добавлять деталей сверх статей.
+
+**Сайт/UX:**
+- **Контакты** `/[lang]/contact` (стиль nordkod.se): section-head шапка, форма → `f-message`, Ring/Mejla, реквизиты
+  RealMar AB, FAQ, «Så går det till»; 10 языков. WhatsApp-карточка и галочки в шапке убраны по просьбе owner'а.
+- **Главная:** блоки преимуществ → карусели (общий `Benefits/BenefitSlider.tsx`, стрелки по кругу, точки):
+  Benefits = 8 карточек с пометкой аудитории, FinalBenefits = 4. (Owner отверг: 3D-барабан, 16 карточек.)
+
+**SEO takstolar (`c2b839b`, `9f6bf13`):**
+- GSC: калькулятор и статья каннибализировали одни запросы (поз. 12–25). Калькулятор → tool-интент (+ nockhöjd,
+  överram, takyta + SVG W-takstol); статья → guide (типы W/WW/A/ramverk/sax/pulpet/mansard, spännvidd, lutning).
+- Исправлены ошибки: **«600 mm vid tegel» — неверно** (1200 mm и для tungt tak); **EKS → BFS 2024:6** (с 1.7.2025).
+
+### 🔜 NÄSTA STEG (продолжать отсюда, по порядку)
+1. **EKS → BFS 2024:6 по всему сайту.** 38 упоминаний в 6 файлах (`grep -rnE "\bEKS\b" src`). EKS отменён 1.7.2025
+   (BFS 2024:6); старые правила можно применять только если ansökan/anmälan до 1.7.2026, смешивать нельзя. Заменить
+   аккуратно, с этой оговоркой; источник: rinfo.boverket.se/BFS2024-6/dok/BFS2024-6_Konsekvensutredning.pdf.
+2. **≈4–5 окт — GSC:** валидация 404 (Pages → Not found, было 26 pending) + `.googleads/venv/bin/python .gsc/index_status.py`.
+   Токен GSC ~7 дней — обновить через браузер (память [[gsc-api-setup]]).
+3. **≈7–14 окт — эффект takstolar:** запросы `takstol` в GSC (скрипт-шаблон: query+page с фильтром contains) —
+   ушла ли каннибализация, поднялись ли позиции с 12–25.
+4. **≈через 2–4 нед — счётчик скачиваний:** `/api/download-stats` — какие шаблоны реально качают → куда вкладываться.
+5. **Контент:** диаграммы для топ-40 статей (`.gsc/top_pages.py` + пайплайн из сессии 17–19.09); следующие near-miss
+   кластеры из `.gsc/near_miss.py`.
+6. ⏰ **Осень 2026:** BKK (foreningenbkk.se) обещал апдейт по AB 25/ABPU 25 — перепроверить тексты про AB 04/ABT 06.
+7. Тех-долг: коллизия слага `byggdagbok` (2 статьи, отдаётся `tillvaxt.ts`).
+
+### ⚠️ На стороне owner'а
+- VPS root: 138k неудачных логинов — закрыть вход по паролю (только SSH-ключ + fail2ban).
+- Anthropic Console: включить auto-reload (баланс ~$4, чат встанет при нуле — сайт сам вернёт WhatsApp).
+- Вычитка носителем переводов pl/nb/fi/et/lt/lv.
+- Stripe/оплата — делается в другом проекте (не наш трек).
+
+### 🛠️ Приёмы этой сессии
+- Проверка PDF без скачивания: в странице подменить `URL.createObjectURL` (собрать Blob) +
+  `HTMLAnchorElement.prototype.dispatchEvent` → текст PDF читать из Blob.
+- Вкладка Chrome у агента в фоне → smooth-scroll не анимируется (это не баг сайта).
+- GSC по теме: `searchanalytics.query` с `dimensions:[query,page]` + `dimensionFilterGroups` (query contains X) →
+  видно каннибализацию (две наши страницы на один запрос).
+- Факты для статей/шаблонов — только после агента-факт-чекера по первоисточникам; статьи — через редакционного агента
+  (CONTENT-STYLE.md).
 
 ## 🟢 Сессия 2026-09-20 — GSC: «Blocked by robots.txt» + корневой фикс 404 (hreflang)
 

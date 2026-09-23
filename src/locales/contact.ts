@@ -5,9 +5,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   ru: {
     breadcrumbHome: "Главная",
     eyebrow: "Контакты",
-    title: "Давайте поговорим о вашей компании",
-    lead: "Вопросы о ByggExp, демо или помощь с аккаунтом — напишите пару строк в форме ниже, позвоните или отправьте письмо. Ответим в течение рабочего дня.",
-    checks: ["Ответ в течение рабочего дня", "Бесплатное демо за 15 минут", "Поможем начать работу"],
+    title: "Напишите нам",
+    lead: "Вопросы, демо или помощь с аккаунтом? Напишите, позвоните или отправьте письмо.",
+    checks: ["Ответ за 1 рабочий день", "Бесплатное демо", "Помощь с запуском"],
 
     formName: "Имя",
     formEmail: "Email *",
@@ -66,9 +66,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   en: {
     breadcrumbHome: "Home",
     eyebrow: "Contact",
-    title: "Let's talk about your company",
-    lead: "Questions about ByggExp, a demo or help with your account — write a few lines in the form below, call or email us. We reply within one business day.",
-    checks: ["Reply within one business day", "Free 15-minute demo", "Help getting started"],
+    title: "Talk to us",
+    lead: "Questions, a demo or help with your account? Write, call or email.",
+    checks: ["Reply within 1 business day", "Free demo", "Help getting started"],
 
     formName: "Name",
     formEmail: "Email *",
@@ -127,9 +127,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   sv: {
     breadcrumbHome: "Hem",
     eyebrow: "Kontakt",
-    title: "Låt oss prata om ditt byggföretag",
-    lead: "Frågor om ByggExp, en demo eller hjälp med kontot — skriv några rader i formuläret nedan, ring eller mejla. Vi återkommer inom en arbetsdag.",
-    checks: ["Svar inom en arbetsdag", "Gratis demo på 15 minuter", "Hjälp att komma igång"],
+    title: "Prata med oss",
+    lead: "Frågor, demo eller hjälp med kontot? Skriv, ring eller mejla.",
+    checks: ["Svar inom 1 arbetsdag", "Gratis demo", "Hjälp att komma igång"],
 
     formName: "Namn",
     formEmail: "E-post *",
@@ -188,9 +188,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   nb: {
     breadcrumbHome: "Hjem",
     eyebrow: "Kontakt",
-    title: "La oss snakke om byggefirmaet ditt",
-    lead: "Spørsmål om ByggExp, en demo eller hjelp med kontoen — skriv noen linjer i skjemaet nedenfor, ring eller send e-post. Vi svarer innen en virkedag.",
-    checks: ["Svar innen en virkedag", "Gratis demo på 15 minutter", "Hjelp til å komme i gang"],
+    title: "Snakk med oss",
+    lead: "Spørsmål, demo eller hjelp med kontoen? Skriv, ring eller send e-post.",
+    checks: ["Svar innen 1 virkedag", "Gratis demo", "Hjelp til oppstart"],
 
     formName: "Navn",
     formEmail: "E-post *",
@@ -249,9 +249,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   pl: {
     breadcrumbHome: "Strona główna",
     eyebrow: "Kontakt",
-    title: "Porozmawiajmy o Twojej firmie",
-    lead: "Pytania o ByggExp, demo lub pomoc z kontem — napisz kilka słów w formularzu poniżej, zadzwoń lub wyślij e-mail. Odpowiadamy w ciągu dnia roboczego.",
-    checks: ["Odpowiedź w ciągu dnia roboczego", "Bezpłatne demo w 15 minut", "Pomoc na start"],
+    title: "Porozmawiajmy",
+    lead: "Pytania, demo lub pomoc z kontem? Napisz, zadzwoń albo wyślij e-mail.",
+    checks: ["Odpowiedź w 1 dzień roboczy", "Darmowe demo", "Pomoc na start"],
 
     formName: "Imię i nazwisko",
     formEmail: "E-mail *",
@@ -310,9 +310,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   uk: {
     breadcrumbHome: "Головна",
     eyebrow: "Контакти",
-    title: "Поговорімо про вашу компанію",
-    lead: "Питання про ByggExp, демо чи допомога з акаунтом — напишіть кілька рядків у формі нижче, зателефонуйте або надішліть лист. Відповімо протягом робочого дня.",
-    checks: ["Відповідь протягом робочого дня", "Безкоштовне демо за 15 хвилин", "Допоможемо почати роботу"],
+    title: "Напишіть нам",
+    lead: "Питання, демо чи допомога з акаунтом? Напишіть, зателефонуйте або надішліть лист.",
+    checks: ["Відповідь за 1 робочий день", "Безкоштовне демо", "Допомога із запуском"],
 
     formName: "Ім’я",
     formEmail: "Email *",
@@ -371,9 +371,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   fi: {
     breadcrumbHome: "Etusivu",
     eyebrow: "Yhteystiedot",
-    title: "Jutellaan rakennusyrityksestäsi",
-    lead: "Kysymyksiä ByggExpistä, demo tai apua tilin kanssa — kirjoita muutama rivi alla olevaan lomakkeeseen, soita tai lähetä sähköpostia. Vastaamme yhden työpäivän kuluessa.",
-    checks: ["Vastaus yhden työpäivän kuluessa", "Ilmainen 15 minuutin demo", "Apua alkuun pääsemiseen"],
+    title: "Ota yhteyttä",
+    lead: "Kysymyksiä, demo tai apua tilin kanssa? Kirjoita, soita tai lähetä sähköpostia.",
+    checks: ["Vastaus 1 työpäivässä", "Ilmainen demo", "Apua alkuun"],
 
     formName: "Nimi",
     formEmail: "Sähköposti *",
@@ -432,9 +432,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   et: {
     breadcrumbHome: "Avaleht",
     eyebrow: "Kontakt",
-    title: "Räägime teie ettevõttest",
-    lead: "Küsimused ByggExpi kohta, demo või abi kontoga — kirjutage allolevasse vormi paar rida, helistage või saatke e-kiri. Vastame ühe tööpäeva jooksul.",
-    checks: ["Vastus ühe tööpäeva jooksul", "Tasuta 15-minutiline demo", "Abi alustamisel"],
+    title: "Võtke ühendust",
+    lead: "Küsimused, demo või abi kontoga? Kirjutage, helistage või saatke e-kiri.",
+    checks: ["Vastus 1 tööpäeva jooksul", "Tasuta demo", "Abi alustamisel"],
 
     formName: "Nimi",
     formEmail: "E-post *",
@@ -493,9 +493,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   lt: {
     breadcrumbHome: "Pradžia",
     eyebrow: "Kontaktai",
-    title: "Pakalbėkime apie jūsų įmonę",
-    lead: "Klausimai apie ByggExp, demonstracija ar pagalba su paskyra — parašykite kelias eilutes žemiau esančioje formoje, paskambinkite arba parašykite el. laišką. Atsakome per vieną darbo dieną.",
-    checks: ["Atsakymas per darbo dieną", "Nemokama 15 min. demonstracija", "Pagalba pradedant"],
+    title: "Susisiekite",
+    lead: "Klausimai, demonstracija ar pagalba su paskyra? Rašykite, skambinkite arba siųskite el. laišką.",
+    checks: ["Atsakymas per 1 darbo dieną", "Nemokama demonstracija", "Pagalba pradedant"],
 
     formName: "Vardas",
     formEmail: "El. paštas *",
@@ -554,9 +554,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   lv: {
     breadcrumbHome: "Sākums",
     eyebrow: "Kontakti",
-    title: "Parunāsim par jūsu uzņēmumu",
-    lead: "Jautājumi par ByggExp, demo vai palīdzība ar kontu — uzrakstiet dažas rindiņas zemāk esošajā formā, zvaniet vai rakstiet e-pastu. Atbildam vienas darba dienas laikā.",
-    checks: ["Atbilde vienas darba dienas laikā", "Bezmaksas 15 minūšu demo", "Palīdzība uzsākšanā"],
+    title: "Sazinieties ar mums",
+    lead: "Jautājumi, demo vai palīdzība ar kontu? Rakstiet, zvaniet vai sūtiet e-pastu.",
+    checks: ["Atbilde 1 darba dienas laikā", "Bezmaksas demo", "Palīdzība uzsākšanā"],
 
     formName: "Vārds",
     formEmail: "E-pasts *",

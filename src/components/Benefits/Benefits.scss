@@ -445,12 +445,48 @@
   justify-content: center;
 
   .benefits-slider {
-    max-width: 620px;
+    max-width: 740px;
   }
 
   // More air between the arrows and the card.
   .benefits-slider-frame {
-    padding: 0 88px;
+    padding: 0 100px;
+  }
+
+  .benefits-arrow {
+    width: 60px;
+    height: 60px;
+    font-size: 34px;
+  }
+
+  // Larger type: one card is shown at a time, so it can take the space.
+  .benefit-card {
+    padding: 32px;
+  }
+
+  .benefit-card h3 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .benefit-card p {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .benefit-audience {
+    font-size: 14px;
+  }
+
+  .benefit-icon,
+  .benefit-icon-blue {
+    width: 60px;
+    height: 60px;
+
+    img {
+      width: 28px;
+      height: 28px;
+    }
   }
 
   .benefits-dots {
@@ -466,7 +502,7 @@
 
 @media (max-width: 850px) {
   .benefits-single .benefits-slider-frame {
-    padding: 0 64px;
+    padding: 0 72px;
   }
 }
 
@@ -474,6 +510,20 @@
   // Phones keep the overlay arrows from the base slider styles.
   .benefits-single .benefits-slider-frame {
     padding: 0;
+  }
+
+  .benefits-single .benefits-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 26px;
+  }
+
+  .benefits-single .benefit-card h3 {
+    font-size: 22px;
+  }
+
+  .benefits-single .benefit-card p {
+    font-size: 17px;
   }
 }
 

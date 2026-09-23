@@ -544,7 +544,7 @@ const A_BYGGMOTESPROTOKOLL_MALL_HTML = `
 
 <h2>Så följer ni upp mötesbesluten i ByggExp</h2>
 
-<p>Ett protokoll är bara så bra som uppföljningen. I ByggExp skapar ni ett projekt och lägger in besluten från protokollet som Uppgifter (Tasks) med ansvarig person och påminnelser, så att inget vilar enbart på minnet mellan mötena. ÄTA-arbeten och deadlines kopplas till Mål och etapper, vilket gör det lätt att se på nästa byggmöte vad som är avklarat och vad som släpar. På så vis blir varje protokollpunkt en spårbar åtgärd i stället för en bortglömd notering. Behöver ni en startpunkt kan ni ladda ner vår <a href="/sv/verktyg/byggdagbok-mall">byggdagboksmall</a> och koppla den dagliga dokumentationen till mötesbesluten.</p>
+<p>Ett protokoll är bara så bra som uppföljningen. I ByggExp skapar ni ett projekt och lägger in besluten från protokollet som Uppgifter (Tasks) med ansvarig person och påminnelser, så att inget vilar enbart på minnet mellan mötena. ÄTA-arbeten och deadlines kopplas till Mål och etapper, vilket gör det lätt att se på nästa byggmöte vad som är avklarat och vad som släpar. På så vis blir varje protokollpunkt en spårbar åtgärd i stället för en bortglömd notering. Behöver ni en startpunkt kan ni använda vår <a href="/sv/verktyg/byggmotesprotokoll-mall">gratis byggmötesprotokoll-mall</a> med färdig dagordning, och koppla den dagliga dokumentationen i <a href="/sv/verktyg/byggdagbok-mall">byggdagboken</a> till mötesbesluten.</p>
 
 <h2>Vanliga frågor</h2>
 
@@ -562,7 +562,7 @@ const A_BYGGMOTESPROTOKOLL_MALL_HTML = `
 
 <h2>Kom igång</h2>
 
-<p>Sätt en fast dagordning, numrera protokollen och godkänn alltid föregående protokoll först på varje möte – då har ni ordning på både projektet och bevisningen. Ladda ner <a href="/sv/verktyg/byggdagbok-mall">byggdagboksmallen</a> och utforska <a href="/sv/funktioner">funktionerna i ByggExp</a> för att koppla mötesbesluten till uppgifter och etapper. Vill ni se det i ert eget projekt kan ni <a href="/sv/contact">boka en demo</a>.</p>
+<p>Sätt en fast dagordning, numrera protokollen och godkänn alltid föregående protokoll först på varje möte – då har ni ordning på både projektet och bevisningen. Fyll i <a href="/sv/verktyg/byggmotesprotokoll-mall">byggmötesprotokoll-mallen</a> inför nästa möte och utforska <a href="/sv/funktioner">funktionerna i ByggExp</a> för att koppla mötesbesluten till uppgifter och etapper. Vill ni se det i ert eget projekt kan ni <a href="/sv/contact">boka en demo</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/byggdagbok">Byggdagbok – så dokumenterar ni rätt</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i bygg – mall och rutiner</a>.</p>
 `;

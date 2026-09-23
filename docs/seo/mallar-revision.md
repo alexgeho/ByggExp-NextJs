@@ -47,8 +47,10 @@
    падение давления — пустые поля «enligt provningsmetod», числа не выдуманы; 2026:1 в шапке и сноске); Bygg/stomme =
    13 п. с metod/krav (PBL 10:6). 23.09 добиты остальные: vatrum 10 п. (RF %, скикт мм, intyg), betong 12 (täckskikt мм,
    SS-EN 13670, RF), tak 11 (läkt мм), ventilation 12 (flöden l/s, OVK före ibruktagning), skyddsrond 15 п. в 6 зонах.
-2. Быстрые: ссылка arbetsberedning-статья → инструмент; удалить «Commode» и развести пример договора.
-3. Сделать шаблон byggmötesprotokoll (или сменить тайтл).
+2. ✅ (23.09) Быстрые: ссылка arbetsberedning-статья → инструмент; удалить «Commode» и развести пример договора
+   (пример теперь целиком AB 04 между компаниями: гарантия 5/2 года, ansvarstid 10 лет).
+3. ✅ (23.09) Шаблон `/sv/verktyg/byggmotesprotokoll-mall` сделан (дагордning из статьи, beslut–ansvarig–datum),
+   статья ссылается на него, добавлен в verktyg-list/хаб/sitemap.
 4. kontrollplan-mall → табличный формат PBL 2026.
 5. 2-й deep-research по договорам + AFS → затем entreprenadkontrakt / skyddsrond / arbetsberedning.
 6. Шаг 2: GA4-события скачиваний, смотреть через 2–4 недели.

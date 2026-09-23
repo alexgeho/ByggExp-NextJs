@@ -32,18 +32,12 @@
 
 ### 🔜 NÄSTA STEG
 1. ✅ egenkontroll: все 8 пресетов = протоколы с Metod + Krav/underlag и подписями (el, VVS 2026:1, bygg, vatrum, betong, tak, ventilation, skyddsrond).
-2. Быстрые из ревизии: ссылка arbetsberedning-статья → инструмент; «Commode» + HF17/AB04 в entreprenadkontrakt;
-   шаблон byggmötesprotokoll (сейчас 404 при обещании в тайтле).
+2. ✅ Быстрые из ревизии: arbetsberedning-статья → инструмент; пример договора = AB 04 (без «Commode»); новый
+   инструмент `byggmotesprotokoll-mall`. Дальше по ревизии: kontrollplan-mall → табличный формат PBL 2026 (п.4).
 3. **Модель чата**: `CHAT_MODEL` = `claude-opus-4-8` (дорого, баланс ~$4) → owner решает про `claude-haiku-4-5`.
 4. ≈4–5 окт: GSC-валидация 404 + `.gsc/index_status.py` (см. сессию 20.09).
 5. ⚠️ owner: VPS root — 138k неудачных логинов, закрыть вход по паролю (только ключ + fail2ban).
-6. **Stripe/оплата (аудит 23.09):** код готов — бэкенд `ByggExp-BackEnd/src/billing/` (Checkout, Portal, webhook
-   `/billing/webhook`, 3 тарифа × мес/год из env `STRIPE_PRICE_*`, триал 30 дн, soft paywall при `BILLING_ENFORCED`)
-   + админка `/company/billing`. **Выключено: ключей нет.** Долги до включения: (1) триал из app-регистрации 14 дн
-   vs Stripe 30; (2) локальный триал не истекает (нет крона по `trialEndsAt`); (3) Tillväxt maxUsers 25 vs сайт 10–20;
-   (4) webhook не обновляет `maxUsers`; + нет invoice.payment_failed/trial_will_end, возможна 2-я подписка,
-   `current_period_end` в Stripe API v22 мог переехать. Owner: продукты/цены/webhook/Portal в Stripe, секреты в
-   GitHub бэкенда, DPA Stripe. ⏳ Ждёт разрешения owner'а править репо ByggExp-BackEnd.
+6. Stripe/оплата — owner делает сам в другом проекте (не наш трек).
 
 ## 🟢 Сессия 2026-09-20 — GSC: «Blocked by robots.txt» + корневой фикс 404 (hreflang)
 

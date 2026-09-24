@@ -6,9 +6,45 @@
 ---
 
 ## 📍 СТАТУС (кратко)
-Последняя сессия: **22–24.09** (ниже). Ревизия скачиваемых mallar закрыта целиком, AI-чат на Sonnet 5 live,
-контакты и главная переделаны, takstolar-кластер пересобран. **Продолжать с «🔜 NÄSTA STEG» в сессии 22–24.09.**
+Последняя сессия: **24–25.09** (ниже). Работа переезжает в **облачную сессию «Карта проектов»** на claude.ai/code
+(10 репо, работает при выключенном компе, с телефона — приложение Claude → Code). **Продолжать с «🔜 NÄSTA STEG» ниже.**
 История сессий до 2026-09-12 → `docs/worklog-archive.md`. Индекс всех доков → `docs/README.md`. Норвегия (byggexp.no) — память [[norway-expansion]] + архив.
+
+## 🟢 Сессия 2026-09-24…25 — нормы Boverket, облако для всех проектов, byggtorg
+
+### KLART
+- **EKS → BFS 2024:6** по всему сайту (`a14eee0`) и **BBR → новые BFS** (`3fe602f`): пожар 2024:7, влага/гигиена 2024:8,
+  лестницы/кровля 2024:9, доступность 2024:12. Переход: старые правила можно, если ansökan/anmälan до **1.7.2026** (BFS 2024:14 p.3).
+  Энергетика остаётся в BBR 31 до **1.10.2026**, потом **BFS 2026:9**.
+- **Routine на 1.10.2026 09:00** (облачный агент): обновит энергетику (п. 1c ниже), пушит ветку `claude/energiregler-bfs-2026-9`,
+  не в main → https://claude.ai/code/routines/trig_01PAiKVR3EBedFTLHFwVzJc3
+- **Облачная сессия «Карта проектов»** (claude.ai/code): ArmeringProffs, agry.se, byggexp-app, byggexp-admin, ByggExp-BackEnd,
+  ByggExp-NextJs, gealab.nu, Gjutabetongplatta, Nordkod, villatakservice.se. Она уже составила карту всех проектов.
+  Вводный промпт с правилами (язык, коротко, yarn, commit→main, факты, секреты) дан owner'у — вставить первым сообщением.
+- **Новый приватный репо `alexgeho/byggtorg`** (SEO-клиент Nordkod, WordPress): CLAUDE.md с правилами (только черновики),
+  seo-plan, status, `scripts/wp.sh` (креды только из env `WP_USER`/`WP_APP_PASSWORD`, публикацию блокирует).
+- ByggExp 1.1.2 одобрен: iOS «Ready for Distribution», Android в проде 100 %. Play-верификация разработчика — все Play-приложения уже зарегистрированы.
+- Анонс 1.1.2 (пост LinkedIn + сценарий YouTube Short) — тексты даны owner'у, публикует сам.
+- Практика/LIA: исследование IT-компаний на госконтрактах + 5 черновиков писем + карта-артефакт — **локально в `internship/`**
+  (gitignored, репо публичный). Память [[job-hunt-praktik]].
+
+### 🔜 NÄSTA STEG (по порядку)
+1. ⚠️ **Безопасность WP (срочно, owner):** в репо gealab.nu лежит `create-admin.php` (создаёт admin/123456) — удалить с сервера и из репо;
+   проверить подозрительный `wp-loada.php` → `wp-loadb.php` (agry.se и gealab.nu); `wp-config.php` в git — вынести/сменить ключи БД.
+2. **Облако:** дать Claude GitHub App доступ к `byggtorg`, `shop.agry.se`, `gealab.se` (github.com/settings/installations → Claude →
+   Configure) и добавить их в облачную сессию (или новую сессию со всеми 13). Для byggtorg — добавить `WP_USER` + app-password как
+   API credential для `byggtorg.se` в окружении Default. Пароль byggtorg потом заменить (однажды попал в чат).
+3. **LIA-письма:** `/mcp` → войти в Gmail → Claude кладёт 4 черновика (Iteam, Regent, Nexer, CGI) из `internship/utkast-lia-offentlig.md`;
+   Sopra Steria — LinkedIn вручную. Потом Redmind, Hotmat, Simon Frisk, Avantime.
+4. **≈4–5 окт — GSC:** валидация 404 + `.googleads/venv/bin/python .gsc/index_status.py` (токен обновить через браузер, [[gsc-api-setup]]).
+5. **≈7–14 окт — takstolar:** позиции по `takstol` в GSC — ушла ли каннибализация (калькулятор vs статья).
+6. **1 окт** — проверить результат routine (энергетика BFS 2026:9), смержить ветку после просмотра.
+7. Счётчик скачиваний через 2–4 нед (`/api/download-stats`); диаграммы для топ-40 статей; тех-долг slug `byggdagbok`.
+
+### ⚠️ На стороне owner'а
+- VPS root: 138k попыток подбора пароля — только SSH-ключ + fail2ban.
+- Anthropic Console: auto-reload (чат на Sonnet 5, ~$0.9/100 сообщений).
+- Stripe — ведётся в byggexp-admin/BackEnd (по карте: подписки LIVE, checkout ещё не проверен; лимит Tillväxt 20 vs 25).
 
 ## 🟢 Сессия 2026-09-22…24 — mallar по нормам, AI-чат, контакты, карусели, takstolar
 

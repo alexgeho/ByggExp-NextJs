@@ -49,6 +49,7 @@
    (BFS 2024:6); старые правила можно применять только если ansökan/anmälan до 1.7.2026, смешивать нельзя. Заменить
    аккуратно, с этой оговоркой; источник: rinfo.boverket.se/BFS2024-6/dok/BFS2024-6_Konsekvensutredning.pdf.
    ✅ Сделано `a14eee0`: 6 файлов, EKS→BFS 2024:6 + оговорка о переходе; устаревшие BBR-фразы — на решение owner.
+1b. **BBR тоже устарел** (новые правила Boverket с 1.7.2025; энергетика остаётся в BBR 31 до **1.10.2026** → после этой даты обновить U-värden/Um в kalkyl.ts/ekonomi.ts). Кандидаты на правку (от агента, `a14eee0`): regelverk.ts kontrollplan (~285–294), kvalitet.ts:118, :666, :1352 (переход по дате *beslut* vs *ansökan* — сверить), kalkyl.ts:1837, verktyg/trappa-kalkylator.tsx:60/122, egenkontroll-bygg-mall.tsx:30, api/egenkontroll-generate.ts:43.
 2. **≈4–5 окт — GSC:** валидация 404 (Pages → Not found, было 26 pending) + `.googleads/venv/bin/python .gsc/index_status.py`.
    Токен GSC ~7 дней — обновить через браузер (память [[gsc-api-setup]]).
 3. **≈7–14 окт — эффект takstolar:** запросы `takstol` в GSC (скрипт-шаблон: query+page с фильтром contains) —

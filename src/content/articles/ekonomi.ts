@@ -4334,7 +4334,7 @@ const A_KALKYLERA_FONSTERBYTE_OFFERT_HTML = `
 <p>Resultatet blir ett kundtimpris på ungefär 550–750 kr/tim (inklusive moms, exklusive ROT) beroende på ort. Sätter du kundpriset direkt utifrån timlönen 203 kr utan att bygga upp självkostnaden är offerten olönsam redan innan första fönstret är lyft.</p>
 
 <h2>U-värdeskravet påverkar både pris och produktval</h2>
-<p>Energikraven styr vilka fönster du får montera – och därmed materialkostnaden. Sikta på ett U-värde på högst 1,2 W/m²K vid utbyte; moderna 3-glasfönster når ofta 0,9–1,0 W/m²K. Boverkets nya funktionsbaserade byggregler gäller från 1 juli 2025. Under övergångsperioden till och med 30 juni 2026 får byggherren välja mellan gamla BBR/EKS och de nya reglerna – men inte blanda dem i samma ärende. Från 1 juli 2026 kan bara de nya reglerna tillämpas i nya ärenden.</p>
+<p>Energikraven styr vilka fönster du får montera – och därmed materialkostnaden. Sikta på ett U-värde på högst 1,2 W/m²K vid utbyte; moderna 3-glasfönster når ofta 0,9–1,0 W/m²K. Boverkets nya funktionsbaserade byggregler gäller från 1 juli 2025. Har bygglovsansökan eller anmälan kommit in före 1 juli 2026 får gamla BBR/EKS fortfarande tillämpas – men inte blandas med de nya reglerna i samma ärende. För ärenden som kommer in senare gäller bara de nya reglerna.</p>
 <p>Dokumentera valt fönstersystem och dess U-värde i offerten. Det skyddar dig om kunden i efterhand ifrågasätter produktvalet, och du kan snabbt kontrollräkna med vår <a href="/sv/verktyg/u-varde-kalkylator">U-värdeskalkylator -&gt;</a>. Läs mer i <a href="/sv/blog/fonster-u-varde-2026">Fönster och U-värde 2026</a>.</p>
 
 <h2>ROT 30 % 2026 – så hanterar du det i offerten</h2>
@@ -4361,7 +4361,7 @@ const A_KALKYLERA_FONSTERBYTE_OFFERT_HTML = `
 <h3>Får en kund i bostadsrätt ROT för fönsterbyte?</h3>
 <p>Oftast inte. Fönster och byggnadens yttre skal är normalt föreningens ansvar, och då saknas avdragsrätt för den enskilde bostadsrättshavaren. Ta upp detta i offerten till BRF-boende innan du räknar med avdrag.</p>
 <h3>Vilket U-värde ska nya fönster ha?</h3>
-<p>Sikta på högst 1,2 W/m²K vid utbyte. Moderna 3-glasfönster når ofta 0,9–1,0 W/m²K. Under övergången till och med 30 juni 2026 får du välja gamla BBR/EKS eller de nya funktionsbaserade reglerna, men inte blanda dem.</p>
+<p>Sikta på högst 1,2 W/m²K vid utbyte. Moderna 3-glasfönster når ofta 0,9–1,0 W/m²K. Kom ansökan eller anmälan in före 1 juli 2026 får gamla BBR/EKS fortfarande tillämpas, annars gäller de nya funktionsbaserade reglerna – blanda dem aldrig.</p>
 
 <h2>Kom igång</h2>
 <p>Börja med en tydlig struktur och räkna arbetet separat från materialet. Skapa din nästa offert med vår <a href="/sv/verktyg/offert-mall">offertmall</a> och kontrollräkna avdraget i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur hela flödet från offert till ROT-rapportering fungerar i praktiken? <a href="/sv/contact">Boka en demo</a>.</p>

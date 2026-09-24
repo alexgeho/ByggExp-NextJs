@@ -215,7 +215,7 @@ export const EGENKONTROLL_PRESETS: EgenkontrollPreset[] = [
       { section: 'A. Form', point: 'Form stabil, tät och rengjord; ingjutningsgods på plats', method: 'Okulär', requirement: 'Handlingar' },
       { section: 'B. Armering', point: 'Armering enligt konstruktionsritning (dimension, antal, c/c)', method: 'Mätning / okulär', requirement: 'K-ritning' },
       { section: 'B. Armering', point: 'Skarvlängder och förankring', method: 'Mätning', requirement: 'K-ritning' },
-      { section: 'B. Armering', point: 'Täckskikt kontrollerat', method: 'Mätning', unit: 'mm', requirement: 'Enligt K-ritning', reference: 'EKS / EN 1992' },
+      { section: 'B. Armering', point: 'Täckskikt kontrollerat', method: 'Mätning', unit: 'mm', requirement: 'Enligt K-ritning', reference: 'BFS 2024:6 / EN 1992' },
       { section: 'B. Armering', point: 'Distanser och stöd på plats, armering fast och ren', method: 'Okulär', requirement: 'K-ritning' },
       { section: 'C. Gjutning', point: 'Betongkvalitet enligt följesedel och recept', method: 'Dokument', requirement: 'K-ritning, beskrivning' },
       { section: 'C. Gjutning', point: 'Vibrering och gjutordning enligt plan', method: 'Okulär', requirement: 'Gjutplan' },
@@ -241,7 +241,7 @@ export const EGENKONTROLL_PRESETS: EgenkontrollPreset[] = [
     items: [
       { section: 'A. Underlag', point: 'Underlagstäckning hel och rätt lagd (omlott, infästning)', method: 'Okulär', requirement: 'Tillverkarens anvisning' },
       { section: 'A. Underlag', point: 'Ströläkt och bärläkt: dimension och avstånd', method: 'Mätning', unit: 'mm', requirement: 'Enligt tillverkarens läktavstånd' },
-      { section: 'B. Taktäckning', point: 'Infästning enligt vindlastkrav', method: 'Okulär / stickprov', requirement: 'Tillverkarens anvisning', reference: 'BBR / EKS' },
+      { section: 'B. Taktäckning', point: 'Infästning enligt vindlastkrav', method: 'Okulär / stickprov', requirement: 'Tillverkarens anvisning', reference: 'BFS 2024:6' },
       { section: 'B. Taktäckning', point: 'Taktäckning rätt lagd, raka rader, hela pannor/skivor', method: 'Okulär', requirement: 'Tillverkarens anvisning' },
       { section: 'B. Taktäckning', point: 'Nock, vindskivor och fotplåt monterade', method: 'Okulär', requirement: 'Handlingar' },
       { section: 'C. Anslutningar', point: 'Genomföringar och anslutningar täta (skorsten, ventilation)', method: 'Okulär', requirement: 'Tillverkarens anvisning' },

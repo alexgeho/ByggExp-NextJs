@@ -25,7 +25,7 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Varför är infästning enligt vindlast viktig?',
     answer:
-      'Taket utsätts för stora vindlaster. Rätt antal och rätt typ av infästningar enligt vindlastkravet (BBR/EKS) är avgörande för att takytan ska sitta kvar. Dokumentera att infästningen är utförd enligt projekteringen i egenkontrollen.',
+      'Taket utsätts för stora vindlaster. Rätt antal och rätt typ av infästningar enligt vindlastkravet i BFS 2024:6 (som ersatte EKS 1 juli 2025) är avgörande för att takytan ska sitta kvar. Dokumentera att infästningen är utförd enligt projekteringen i egenkontrollen.',
   },
   {
     question: 'Ingår taksäkerhet i egenkontrollen?',
@@ -115,7 +115,7 @@ export default function EgenkontrollTakMallPage() {
                 <p>Mallen ovan öppnar redan ifylld med de vanligaste punkterna:</p>
                 <ul>
                   <li><strong>Underlagstäckning hel och rätt lagd</strong> – inga skador eller fel.</li>
-                  <li><strong>Infästning enligt vindlastkrav</strong> – rätt antal och typ (BBR/EKS).</li>
+                  <li><strong>Infästning enligt vindlastkrav</strong> – rätt antal och typ (BFS 2024:6).</li>
                   <li><strong>Genomföringar och anslutningar täta</strong> – inga otätheter.</li>
                   <li><strong>Fall och avvattning kontrollerat</strong> – vatten leds bort rätt.</li>
                   <li><strong>Taksäkerhet monterad</strong> – snörasskydd och fästen.</li>

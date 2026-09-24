@@ -1073,7 +1073,7 @@ const A_FUKTSAKERHETSPLAN_BYGGAF_HTML = `
 <h3>Räcker det med en fuktrond?</h3>
 <p>Nej. En fuktrond är en återkommande inspektion, inte en engångskontroll. Ronderna ska genomföras systematiskt under hela produktionen så att fuktrisker fångas innan de byggs in, och fuktsakkunnig ska kallas till samtliga ronder.</p>
 <h3>Vad gäller efter 30 juni 2026?</h3>
-<p>Den ettåriga övergångsperioden löper ut 30 juni 2026. Fram till dess kan byggherren välja att tillämpa de gamla reglerna (BBR/EKS) eller de nya, funktionsbaserade reglerna. Därefter gäller de nya reglerna. Kontrollera alltid vilket regelverk som är avtalat för just ditt projekt.</p>
+<p>Den ettåriga övergångsperioden löpte ut 30 juni 2026. Har bygglovsansökan eller anmälan kommit in före 1 juli 2026 får de gamla reglerna (BBR/EKS) fortfarande tillämpas, men inte blandas med de nya. För senare ärenden gäller de nya, funktionsbaserade reglerna. Kontrollera alltid vilket regelverk som är avtalat för just ditt projekt.</p>
 
 <h2>Kom igång</h2>
 <p>Börja med att utse rollerna tidigt, skriv in ByggaF i avtalet, boka in fuktronder i tidplanen, säkra betonguttorkning innan tätskikt och golv, och arkivera dokumentationen. Ett enkelt första steg är att sätta upp en löpande kontroll med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>. Vill du se hur ByggExp samlar fuktronder och avvikelser i ett flöde? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
@@ -1743,7 +1743,7 @@ const A_KVALITETSPLAN_BYGG_HTML = `
 <p>Det mesta i en kvalitetsplan är sig likt från projekt till projekt: rutinen för egenkontroll och avvikelser, dokumentstyrning, mallar för kontrollprogram och ansvarsroller. Det byggs en gång och lever i företagets ledningssystem. Det som måste anpassas varje gång är projektets kvalitetsmål och toleranser, den namngivna organisationen och vilka kontrollpunkter som är kritiska för just detta bygge. Har du grunden på plats blir varje ny plan ett par timmars arbete i stället för en helt ny produkt.</p>
 
 <h2>Nya byggregler 2025–2026 – vad det betyder</h2>
-<p>Boverkets nya byggregler ersätter i stor utsträckning BBR och EKS. De trädde i kraft 1 juli 2025 med en övergångsperiod till 30 juni 2026, då byggherren får välja gamla eller nya regler för ett projekt men inte blanda dem. Från 1 juli 2026 gäller enbart de nya reglerna för nya ärenden.</p>
+<p>Boverkets nya byggregler ersätter i stor utsträckning BBR, och EKS har ersatts helt av BFS 2024:6. De trädde i kraft 1 juli 2025 med en övergångsperiod till 30 juni 2026, då byggherren fick välja gamla eller nya regler för ett projekt men inte blanda dem. Har bygglovsansökan eller anmälan kommit in före 1 juli 2026 får de gamla reglerna fortfarande tillämpas; för senare ärenden gäller enbart de nya.</p>
 <p>De nya reglerna är funktionsbaserade: de anger krav på funktion i stället för detaljerade lösningar, och de allmänna råden tas i stor utsträckning bort. Det påverkar inte AB 04/ABT 06 eller kravet på kvalitetsplan – det är en annan regelsfär. Men det höjer indirekt värdet av en tydlig kvalitetsplan: när schablonlösningarna försvinner måste du själv visa och dokumentera att vald lösning uppfyller föreskriften. En strukturerad verifieringskedja i kvalitetsplanen blir helt enkelt viktigare.</p>
 
 <h2>Vanliga misstag</h2>

@@ -556,11 +556,11 @@ const A_ARMERING_BERAKNING_PLATTA_GRUND_HTML = `
 
 <h2>Vad K-ritningen bestämmer – och vad du får uppskatta själv</h2>
 
-<p>Dimensionering av armerad betong görs av konstruktör enligt Boverkets konstruktionsregler (EKS), som ger de svenska nationella valen till Eurokod 2 (EN 1992) för betongkonstruktioner. Det är konstruktören som bestämmer dimension, centrumavstånd, kvalitet och placering utifrån laster och grundförhållanden. Din uppgift som yrkesperson är att <em>mängda</em> av armeringsspecifikationen på ritningen – inte att gissa dimensionen.</p>
+<p>Dimensionering av armerad betong görs av konstruktör enligt Boverkets föreskrifter BFS 2024:6 (som ersatte EKS 1 juli 2025), där Eurokod 2 (EN 1992) anvisas för betongkonstruktioner. Det är konstruktören som bestämmer dimension, centrumavstånd, kvalitet och placering utifrån laster och grundförhållanden. Din uppgift som yrkesperson är att <em>mängda</em> av armeringsspecifikationen på ritningen – inte att gissa dimensionen.</p>
 
 <p>På en armeringsritning ritas normalt överkantsarmering med heldragen linje och underkantsarmering med streckad linje. Till ritningen hör en armeringsspecifikation, alltså en järnförteckning med typbeteckning, dimension och antal för varje järn. Det är den listan du utgår från.</p>
 
-<p>Ett läge att känna till 2026: övergångsreglerna där de äldre EKS-reglerna för betong får väljas gäller till och med 30 juni 2026. Andra generationens Eurokod 2, publicerad i Sverige som SS-EN 1992-1-1:2023, är på väg in och ersätter första generationens Eurokoder mellan 2026 och 2028. För dig som mängdar spelar det sällan roll i vardagen, men be alltid om en aktuell K-ritning inför gjutning – reglerna bakom den kan vara nya.</p>
+<p>Ett läge att känna till 2026: har bygglovsansökan eller anmälan kommit in före 1 juli 2026 får de äldre reglerna (EKS) fortfarande tillämpas – men gamla och nya regler får inte blandas. Andra generationens Eurokod 2, publicerad i Sverige som SS-EN 1992-1-1:2023, är på väg in och ersätter första generationens Eurokoder mellan 2026 och 2028. För dig som mängdar spelar det sällan roll i vardagen, men be alltid om en aktuell K-ritning inför gjutning – reglerna bakom den kan vara nya.</p>
 
 <h2>Nät eller stång – två sätt att armera plattan</h2>
 
@@ -641,7 +641,7 @@ const A_ARMERING_BERAKNING_PLATTA_GRUND_HTML = `
 <p>Använd kilo per meter gånger längd. Ø8 väger 0,395, Ø10 0,617, Ø12 0,888 och Ø16 1,578 kg/m. För andra dimensioner: vikt (kg/m) = 0,00617 × d² där d är diametern i mm. Standardlängden är 6 m.</p>
 
 <h3>Kan jag bestämma armeringsdimensionen själv med en tumregel?</h3>
-<p>Nej. Dimensionering görs av konstruktör enligt Boverkets konstruktionsregler (EKS) och Eurokod 2, och redovisas i K-ritningens armeringsspecifikation. Tumreglerna i den här guiden är till för att mängda och beställa – inte för att välja dimension.</p>
+<p>Nej. Dimensionering görs av konstruktör enligt Boverkets konstruktionsregler BFS 2024:6 och Eurokod 2, och redovisas i K-ritningens armeringsspecifikation. Tumreglerna i den här guiden är till för att mängda och beställa – inte för att välja dimension.</p>
 
 <h2>Kom igång</h2>
 
@@ -887,7 +887,7 @@ const A_LAKT_AVSTAND_TAK_BERAKNING_HTML = `
 <p>Kontrollera alltid mot plåtprofilens monteringsanvisning — värdena varierar mellan tillverkare och profiler.</p>
 
 <h2>Följ alltid tillverkarens monteringsanvisning</h2>
-<p>Läktavstånd är ett bygg­tekniskt ämne, inte ett regulatoriskt. Det finns inga Skatteverkets- eller branschregler som sätter avståndet. Det bindande dokumentet för en fackmässig läggning är <strong>tillverkarens läggnings-/monteringsanvisning</strong>. Boverkets konstruktionsregler (EKS/BBR) styr snö- och vindlaster på takkonstruktionen generellt — alltså dimension och infästning — men inte själva läktavståndet.</p>
+<p>Läktavstånd är ett bygg­tekniskt ämne, inte ett regulatoriskt. Det finns inga Skatteverkets- eller branschregler som sätter avståndet. Det bindande dokumentet för en fackmässig läggning är <strong>tillverkarens läggnings-/monteringsanvisning</strong>. Boverkets konstruktionsregler BFS 2024:6 (som ersatte EKS 1 juli 2025) styr snö- och vindlaster på takkonstruktionen generellt — alltså dimension och infästning — men inte själva läktavståndet.</p>
 <p>Tänk också på minsta taklutning: för betong- och tegelpannor är den satt av tillverkaren och ligger typiskt vid minst 14° på ett hel­täckt, vattentätt underlagstak. Under den angivna minimigränsen blir pannorna inte täta oavsett hur kort läktavstånd du väljer. Verifiera det exakta värdet mot vald pannas datablad.</p>
 
 <h2>Så gör du i ByggExp</h2>

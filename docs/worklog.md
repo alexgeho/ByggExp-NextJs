@@ -48,6 +48,7 @@
 1. **EKS → BFS 2024:6 по всему сайту.** 38 упоминаний в 6 файлах (`grep -rnE "\bEKS\b" src`). EKS отменён 1.7.2025
    (BFS 2024:6); старые правила можно применять только если ansökan/anmälan до 1.7.2026, смешивать нельзя. Заменить
    аккуратно, с этой оговоркой; источник: rinfo.boverket.se/BFS2024-6/dok/BFS2024-6_Konsekvensutredning.pdf.
+   ✅ Сделано `a14eee0`: 6 файлов, EKS→BFS 2024:6 + оговорка о переходе; устаревшие BBR-фразы — на решение owner.
 2. **≈4–5 окт — GSC:** валидация 404 (Pages → Not found, было 26 pending) + `.googleads/venv/bin/python .gsc/index_status.py`.
    Токен GSC ~7 дней — обновить через браузер (память [[gsc-api-setup]]).
 3. **≈7–14 окт — эффект takstolar:** запросы `takstol` в GSC (скрипт-шаблон: query+page с фильтром contains) —

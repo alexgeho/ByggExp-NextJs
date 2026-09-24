@@ -25,9 +25,9 @@ const FAQ: LeadMagnetFaqItem[] = [
       'Projekt, ansvarig och datum samt för varje kontrollpunkt vad som kontrolleras, hur (metod), mot vilket underlag (krav), resultat och datum och signatur. Typiska punkter för bygg och stomme är fuktkvot i virke före inbyggnad, mått och lod mot ritning, infästningar och förankringar enligt K-ritning, stomstabilisering, fuktspärr, brandtätning och fotodokumentation av dolda konstruktioner.',
   },
   {
-    question: 'Görs egenkontroll för bygg mot BBR?',
+    question: 'Görs egenkontroll för bygg mot BBR eller de nya byggreglerna?',
     answer:
-      'Ofta ja. Kontrollpunkter för brand, fukt och konstruktion kopplas normalt till Boverkets byggregler (BBR) och till projektets ritningar och beskrivningar. Ange gärna referensen i egenkontrollen så syns det vilket krav kontrollen görs mot.',
+      'Kontrollpunkter för brand, fukt och konstruktion kopplas normalt till Boverkets byggregler och till projektets ritningar och beskrivningar. Sedan 1 juli 2025 har BBR och EKS ersatts av nya föreskrifter, t.ex. BFS 2024:6 (konstruktion), BFS 2024:7 (brand) och BFS 2024:8 (fukt). Har ansökan om bygglov eller anmälan kommit in före 1 juli 2026 får BBR fortfarande tillämpas. Ange referensen i egenkontrollen så syns det vilket krav kontrollen görs mot.',
   },
   {
     question: 'Vad är skillnaden mot byggherrens kontrollplan?',
@@ -61,7 +61,7 @@ export default function EgenkontrollByggMallPage() {
 
   const title = 'Egenkontroll bygg – gratis mall (PDF) | ByggExp';
   const description =
-    'Gratis egenkontroll-mall för bygg och stomme. Kontrollpunkter med metod och krav: fuktkvot, mått och lod, infästningar, fuktspärr och brandtätning (BBR). Fyll i online och ladda ner som PDF – utan konto.';
+    'Gratis egenkontroll-mall för bygg och stomme. Kontrollpunkter med metod och krav: fuktkvot, mått och lod, infästningar, fuktspärr och brandtätning. Fyll i online och ladda ner som PDF – utan konto.';
 
   return (
     <>
@@ -180,7 +180,7 @@ export default function EgenkontrollByggMallPage() {
                   <li>Fuktkvot i virke före inbyggnad (mätning) – <em>Godkänd, mätvärde ifyllt</em></li>
                   <li>Mått, läge och höjder mot ritning (mätning) – <em>Godkänd</em></li>
                   <li>Infästningar och förankringar enligt K-ritning (okulär) – <em>Godkänd</em></li>
-                  <li>Brandtätning av genomföringar (okulär, BBR) – <em>Anmärkning: genomföring i schakt otät, åtgärdas</em></li>
+                  <li>Brandtätning av genomföringar (okulär, BFS 2024:7) – <em>Anmärkning: genomföring i schakt otät, åtgärdas</em></li>
                   <li>Dolda konstruktioner fotodokumenterade – <em>Godkänd</em></li>
                 </ul>
                 <p>
@@ -192,11 +192,13 @@ export default function EgenkontrollByggMallPage() {
           },
           {
             id: 'egenkontroll-bygg-och-bbr',
-            heading: 'Egenkontroll bygg, BBR och kontrollplan',
+            heading: 'Egenkontroll bygg, byggregler och kontrollplan',
             body: (
               <p>
                 Kontrollpunkterna för bygg kopplas ofta till{' '}
-                <strong>BBR (Boverkets byggregler)</strong> och till projektets ritningar. Begreppet
+                <strong>Boverkets byggregler</strong> – sedan 1 juli 2025 bl.a. BFS 2024:6–2024:13, som ersatte BBR och EKS
+                (har ansökan eller anmälan kommit in före 1 juli 2026 får BBR fortfarande tillämpas) – och till
+                projektets ritningar. Begreppet
                 egenkontroll finns även i <strong>plan- och bygglagen (PBL)</strong>, men avser då
                 byggherrens egenkontroll som dokumenteras i en kontrollplan. Entreprenörens egenkontroll
                 – som den här mallen gäller – är det praktiska sättet att visa att arbetet uppfyller de
@@ -211,7 +213,7 @@ export default function EgenkontrollByggMallPage() {
             body: (
               <ul>
                 <li>
-                  <strong>Ingen koppling till ritning eller BBR.</strong> Ange referens där kontrollen
+                  <strong>Ingen koppling till ritning eller byggregel.</strong> Ange referens där kontrollen
                   görs mot ett krav.
                 </li>
                 <li>

@@ -57,7 +57,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     faq: [
       { question: 'Hur räknar jag ut antal steg i en trappa?', answer: 'Dela den totala höjden med önskad steghöjd (ofta ca 175 mm) och avrunda. Den faktiska steghöjden blir höjden delat med antal steg.' },
       { question: 'Vad är en bekväm steghöjd?', answer: 'Ofta 150–180 mm. Lägre steg är skönare att gå i men kräver fler steg och mer plats, medan höga steg gör trappan brant. Det är balansen mot stegdjupet som avgör hur bekväm den känns.' },
-      { question: 'Vilka krav finns på trappor?', answer: 'Boverkets byggregler (BBR) ställer krav på bland annat steghöjd, stegdjup och bredd. Kontrollera kraven för din typ av trappa.' },
+      { question: 'Vilka krav finns på trappor?', answer: 'Boverkets föreskrifter om säkerhet vid användning av byggnader (BFS 2024:9), som ersatte BBR 1 juli 2025, kräver att trappor är utformade så att man kan förflytta sig säkert, med krav på bl.a. ledstänger och räcken. Exakta mått för steghöjd och stegdjup anges inte längre – riktvärden som steghöjd max ca 180 mm och stegdjup minst 250 mm används ofta. Kontrollera kraven för din typ av trappa.' },
       { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
     ],
     ctaHeading: 'Räkna material och tid i ByggExp',
@@ -119,7 +119,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     faq: [
       { question: 'How do I work out the number of steps in a stair?', answer: 'Divide the total height by the desired rise (often about 175 mm) and round. The actual rise is the height divided by the number of steps.' },
       { question: 'What is a comfortable rise?', answer: 'Often 150–180 mm. Lower steps are easier to walk but need more steps and more space, while high steps make the stair steep. It is the balance against the going that decides how comfortable it feels.' },
-      { question: 'What requirements apply to stairs?', answer: 'The Swedish building regulations (BBR) set requirements for rise, going and width, among others. Check the requirements for your type of stair.' },
+      { question: 'What requirements apply to stairs?', answer: 'Boverket’s regulations on safety in use of buildings (BFS 2024:9), which replaced BBR on 1 July 2025, require stairs to be designed so people can move safely, including handrails and guarding. They no longer give exact figures for rise and going – rules of thumb such as a rise of at most about 180 mm and a going of at least 250 mm are commonly used. Check the requirements for your type of stair.' },
       { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
     ],
     ctaHeading: 'Calculate material and time in ByggExp',

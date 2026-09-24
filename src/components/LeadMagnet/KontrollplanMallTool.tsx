@@ -57,7 +57,7 @@ const EXAMPLE_ROWS: Row[] = [
   { what: 'Grundläggning: mått och armering', how: 'Mätning, okulär', against: 'K-ritning', who: 'Entreprenör', kind: 'Egenkontroll' },
   { what: 'Fuktkvot i virke före inbyggnad', how: 'Mätning', against: 'Fuktsäkerhetsprojektering', who: 'Entreprenör', kind: 'Egenkontroll' },
   { what: 'Bärande konstruktion: dimensioner och infästningar', how: 'Okulär, mått', against: 'K-ritning', who: 'Entreprenör', kind: 'Egenkontroll' },
-  { what: 'Brandskydd: avskiljningar och genomföringar', how: 'Okulär', against: 'Brandskyddsbeskrivning, BBR', who: 'Entreprenör', kind: 'Egenkontroll' },
+  { what: 'Brandskydd: avskiljningar och genomföringar', how: 'Okulär', against: 'Brandskyddsbeskrivning, BFS 2024:7', who: 'Entreprenör', kind: 'Egenkontroll' },
   { what: 'Tätskikt i våtrum', how: 'Okulär, intyg', against: 'Branschregler (t.ex. GVK/BKR)', who: 'Behörig våtrumsmontör', kind: 'Egenkontroll' },
   { what: 'Tappvatten och avlopp: täthet', how: 'Provning, intyg', against: 'Säker Vatteninstallation 2026:1', who: 'VVS-företag', kind: 'Egenkontroll' },
   { what: 'Elinstallation', how: 'Kontroll och mätning', against: 'Företagets egenkontrollprogram', who: 'Elinstallationsföretag', kind: 'Egenkontroll' },

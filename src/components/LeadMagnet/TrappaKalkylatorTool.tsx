@@ -17,9 +17,9 @@ export default function TrappaKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         height: 'Total height (mm)', targetRise: 'Desired step height (mm)', heightPh: 'e.g. 2700',
         rSteps: 'Number of steps', rRise: 'Step height (rise)', rGoing: 'Recommended going (tread depth)',
         pcs: 'pcs',
-        warnRise: 'The rise exceeds the BBR guide value of ~180 mm – the stair becomes steep. Add more steps (lower the desired rise).',
-        warnGoing: 'The going is below the BBR guide value of 250 mm (indoors) – reduce the rise for a deeper tread.',
-        fine: 'An estimate. Comfortable stairs often have a rise of 150–180 mm and a going of at least 250 mm (indoors) per the Swedish building regulations (BBR). Check the requirements for your type of stair.',
+        warnRise: 'The rise exceeds the common guide value of ~180 mm – the stair becomes steep. Add more steps (lower the desired rise).',
+        warnGoing: 'The going is below the common guide value of 250 mm (indoors) – reduce the rise for a deeper tread.',
+        fine: 'An estimate. Comfortable stairs often have a rise of 150–180 mm and a going of at least 250 mm (indoors). Boverket’s rules (BFS 2024:9) require safe stairs but no longer give exact figures. Check the requirements for your type of stair.',
       }
     : {
         title: 'Trappberäknare – antal steg och stegmått',
@@ -27,9 +27,9 @@ export default function TrappaKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         height: 'Total höjd (mm)', targetRise: 'Önskad steghöjd (mm)', heightPh: 't.ex. 2700',
         rSteps: 'Antal steg', rRise: 'Steghöjd', rGoing: 'Rekommenderat stegdjup',
         pcs: 'st',
-        warnRise: 'Steghöjden överstiger BBR-riktvärdet ~180 mm – trappan blir brant. Lägg till fler steg (lägre önskad steghöjd).',
-        warnGoing: 'Stegdjupet understiger BBR-riktvärdet 250 mm (inomhus) – minska steghöjden för ett djupare steg.',
-        fine: 'En uppskattning. Bekväma trappor har ofta en steghöjd på 150–180 mm och stegdjup minst 250 mm (inomhus) enligt Boverkets byggregler (BBR). Kontrollera kraven för din typ av trappa.',
+        warnRise: 'Steghöjden överstiger riktvärdet ~180 mm – trappan blir brant. Lägg till fler steg (lägre önskad steghöjd).',
+        warnGoing: 'Stegdjupet understiger riktvärdet 250 mm (inomhus) – minska steghöjden för ett djupare steg.',
+        fine: 'En uppskattning. Bekväma trappor har ofta en steghöjd på 150–180 mm och stegdjup minst 250 mm (inomhus). Boverkets regler (BFS 2024:9) kräver säkra trappor men anger inte längre exakta mått. Kontrollera kraven för din typ av trappa.',
       };
 
   const [height, setHeight] = useState('');

@@ -115,7 +115,7 @@ const EGENKONTROLL_HTML = `
 <p><a href="/sv/verktyg/egenkontroll-mall">Skapa en egenkontroll med AI för ditt moment – eller ladda ner en gratis mall (PDF) →</a></p>
 
 <h2>Vad är en egenkontroll?</h2>
-<p>En egenkontroll är din egen dokumenterade kontroll av att arbetet uppfyller kraven – ritningar, Boverkets byggregler (BBR) och gällande branschregler. Den ska innehålla tillräckligt för att någon annan ska kunna följa <em>vad</em> som kontrollerades, <em>mot vilket krav</em> och <em>med vilket resultat</em>. Egenkontrollen är ofta det enda beviset på att ett dolt moment – till exempel tätskikt eller infästning – faktiskt utfördes korrekt.</p>
+<p>En egenkontroll är din egen dokumenterade kontroll av att arbetet uppfyller kraven – ritningar, Boverkets byggregler (bl.a. BFS 2024:6–2024:13, som ersatte BBR 1 juli 2025) och gällande branschregler. Har ansökan om bygglov eller anmälan kommit in före 1 juli 2026 får BBR fortfarande tillämpas – ange då det i kravkolumnen. Den ska innehålla tillräckligt för att någon annan ska kunna följa <em>vad</em> som kontrollerades, <em>mot vilket krav</em> och <em>med vilket resultat</em>. Egenkontrollen är ofta det enda beviset på att ett dolt moment – till exempel tätskikt eller infästning – faktiskt utfördes korrekt.</p>
 
 <h2>Två olika &quot;egenkontroll&quot; – blanda inte ihop dem</h2>
 <p>Detta är den vanligaste förvirringen, och Boverket varnar själva för den:</p>
@@ -129,7 +129,7 @@ const EGENKONTROLL_HTML = `
 <p>En användbar egenkontroll har alltid dessa delar per kontrollpunkt:</p>
 <ul>
 <li><strong>Kontrollpunkt</strong> – vad som kontrolleras (t.ex. infästning, fall mot brunn, fuktkvot)</li>
-<li><strong>Krav / mot vad</strong> – ritning, BBR, monteringsanvisning eller branschregel</li>
+<li><strong>Krav / mot vad</strong> – ritning, Boverkets byggregler, monteringsanvisning eller branschregel</li>
 <li><strong>Kontrollmetod</strong> – mätning, okulär kontroll, protokoll</li>
 <li><strong>Resultat</strong> – godkänd / ej godkänd (gärna med värde, t.ex. &quot;fuktkvot 8 %&quot;)</li>
 <li><strong>Avvikelse och åtgärd</strong> – om något inte höll måttet, vad gjordes</li>
@@ -141,7 +141,7 @@ const EGENKONTROLL_HTML = `
 <p>Så här kan en rad i en egenkontroll se ut:</p>
 <ul>
 <li><strong>Kontrollpunkt:</strong> Tätskikt i våtrum, golv</li>
-<li><strong>Krav:</strong> BBR + tillverkarens monteringsanvisning, GVK</li>
+<li><strong>Krav:</strong> BFS 2024:8 (fuktsäkerhet) + tillverkarens monteringsanvisning, GVK</li>
 <li><strong>Metod:</strong> Okulär + kontroll av skikttjocklek och uppvik</li>
 <li><strong>Resultat:</strong> Godkänd – uppvik 150 mm, inga blåsor</li>
 <li><strong>Avvikelse:</strong> Ingen</li>
@@ -154,7 +154,7 @@ const EGENKONTROLL_HTML = `
 
 <h2>Vanliga misstag</h2>
 <ul>
-<li><strong>Kryssa &quot;godkänd&quot; utan krav.</strong> En bock utan referens till ritning eller BBR bevisar ingenting.</li>
+<li><strong>Kryssa &quot;godkänd&quot; utan krav.</strong> En bock utan referens till ritning eller byggregel bevisar ingenting.</li>
 <li><strong>Fylla i i efterhand.</strong> Egenkontroll som skrivs vid slutbesiktning tappar sitt värde – gör den när momentet utförs.</li>
 <li><strong>Inga foton på dolda moment.</strong> Tätskikt, armering och infästningar byggs in – utan bild finns inget bevis.</li>
 <li><strong>Blanda ihop med kontrollplanen enligt PBL.</strong> De hänger ihop men har olika ansvar och syfte.</li>
@@ -175,7 +175,7 @@ const EGENKONTROLL_HTML = `
 <p>Kontrollpunkterna skiljer sig mellan yrken. Välj en färdig mall som öppnar ifylld med rätt punkter för ditt moment:</p>
 <ul>
 <li><strong><a href="/sv/verktyg/egenkontroll-el-mall">Egenkontroll el</a></strong> – jordfelsbrytare, isolationsmätning (SS 436 40 00), märkning och skyddsledare.</li>
-<li><strong><a href="/sv/verktyg/egenkontroll-bygg-mall">Egenkontroll bygg / stomme</a></strong> – måttkontroll mot ritning, infästningar, fuktkontroll och brandtätning (BBR).</li>
+<li><strong><a href="/sv/verktyg/egenkontroll-bygg-mall">Egenkontroll bygg / stomme</a></strong> – måttkontroll mot ritning, infästningar, fuktkontroll och brandtätning (BFS 2024:7).</li>
 <li><strong><a href="/sv/verktyg/egenkontroll-vvs-mall">Egenkontroll VVS</a></strong> – täthetsprovning, avstängningsventiler, rörisolering och fall på avlopp.</li>
 <li><strong><a href="/sv/verktyg/egenkontroll-vatrum-mall">Egenkontroll våtrum</a></strong> – tätskikt, genomföringar och fall mot golvbrunn enligt BBV/GVK.</li>
 <li><strong><a href="/sv/verktyg/egenkontroll-tak-mall">Egenkontroll tak</a></strong> – underlagstäckning, infästning, läktavstånd och taksäkerhet.</li>
@@ -663,7 +663,7 @@ const A_BBV_ELLER_GVK_VATRUM_HTML = `
 <p>I praktiken berörs ett vanligt kaklat badrum med rördragning av alla tre huvudregelverken samtidigt: plattsättaren utfärdar BBV-kvalitetsdokument för tätskiktet under kaklet, medan VVS-företaget svarar för Säker Vatten-delen. Det är därför inte antingen eller – det är rätt regelverk för varje moment.</p>
 
 <h2>Är branschreglerna lag?</h2>
-<p>Nej. Branschreglerna är inte lag utan en praktisk tillämpning av fuktavsnittet i Boverkets byggregler (BBR). Det är en viktig distinktion, men den betyder inte att du kan strunta i dem. Det verkliga tvånget kommer från försäkringsbolagen: de flesta kräver att våtrummet är utfört enligt de branschregler som gällde vid installationstillfället, och de kräver i ökande grad dokumentation i form av kvalitetsdokument. Saknas det giltiga papper sänks eller uteblir ersättningen vid en vattenskada. Med tanke på vad en fuktskada i ett badrum kostar är det där den ekonomiska risken ligger – inte i något myndighetskrav.</p>
+<p>Nej. Branschreglerna är inte lag utan en praktisk tillämpning av kraven på fuktsäkerhet i Boverkets byggregler – i dag BFS 2024:8, som ersatte BBR:s fuktavsnitt 1 juli 2025. Det är en viktig distinktion, men den betyder inte att du kan strunta i dem. Det verkliga tvånget kommer från försäkringsbolagen: de flesta kräver att våtrummet är utfört enligt de branschregler som gällde vid installationstillfället, och de kräver i ökande grad dokumentation i form av kvalitetsdokument. Saknas det giltiga papper sänks eller uteblir ersättningen vid en vattenskada. Med tanke på vad en fuktskada i ett badrum kostar är det där den ekonomiska risken ligger – inte i något myndighetskrav.</p>
 
 <h2>Vad som är nytt 2026</h2>
 <p>Det stora med 2026 är samordningen. BBV 26:1, GVK Säkra Våtrum 2026 och Säker Vatteninstallation 2026:1 har harmoniserats för att undvika motstridiga krav mellan yrkesgrupperna. Reglerna gäller installationer och arbeten som påbörjas efter 2026-01-01 – avgörande är alltså startdatum, inte när jobbet slutförs. Bland de konkreta tekniska ändringarna:</p>
@@ -1349,7 +1349,7 @@ const A_DOU_PARM_DRIFT_UNDERHALL_BYGG_HTML = `
 <p>Behöver du ett strukturerat underlag att bygga vidare på? Samla flikar, egenkontroller och protokoll i ett dokument med hjälp av <a href="/sv/verktyg">våra gratis verktyg för bygg och överlämning →</a></p>
 
 <h2>Vad kräver lagen 2026?</h2>
-<p>Under 2025–2026 bytte det svenska byggregelverket skepnad. Boverkets nya funktionsbaserade byggregler ersatte BBR och EKS. Under övergångsperioden 1 juli 2025–30 juni 2026 fick byggherren välja mellan de gamla reglerna (BBR/EKS) och de nya — men inte blanda dem i samma projekt. Från 1 juli 2026 gäller enbart de nya reglerna för nya ärenden. En viktig detalj: om bygglovsbeslutet fattades före 1 juli 2026 enligt de gamla reglerna, så gäller de gamla reglerna även om startbeskedet kommer senare.</p>
+<p>Under 2025–2026 bytte det svenska byggregelverket skepnad. Boverkets nya funktionsbaserade byggregler ersatte BBR och EKS. Under övergångsperioden 1 juli 2025–30 juni 2026 fick byggherren välja mellan de gamla reglerna (BBR/EKS) och de nya — men inte blanda dem i samma projekt. Från 1 juli 2026 gäller enbart de nya reglerna för nya ärenden. En viktig detalj: det är ansökningsdagen som avgör, inte beslutet. Har ansökan om bygglov eller anmälan kommit in före 1 juli 2026 får de gamla reglerna fortfarande tillämpas, även om beslut och startbesked kommer senare. Energikraven ligger kvar i BBR tills nya energiregler (BFS 2026:9) träder i kraft 1 oktober 2026.</p>
 <p>De nya brandskyddsreglerna (BFS 2024:7), som trädde i kraft 1 juli 2025, ställer ett uttryckligt krav: drift- och underhållsinstruktioner ska tas fram så att byggnaden kan fortsätta uppfylla brandskyddskraven under drift. Det handlar om instruktioner för återkommande kontroller i driftskedet och för hur och när underhåll utförs. Brandskyddsdokumentationen ses som en del av den färdiga byggnaden, och kommunen bör redan i byggprocessen kräva att relevanta, tydliga drift- och underhållsinstruktioner följer med.</p>
 <p>Kopplingen till slutbeskedet är direkt. För slutbesked måste byggherren visa att alla krav enligt lovet, kontrollplanen, startbeskedet och eventuella kompletterande villkor är uppfyllda. Saknas DoU- eller brandskyddsdokumentation kan slutbeskedet hållas tillbaka — och då kan byggnaden inte tas i bruk.</p>
 

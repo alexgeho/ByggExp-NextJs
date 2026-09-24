@@ -282,18 +282,18 @@ const A_KONTROLLPLAN_MALL_BYGGLOV_HTML = `
 <ol>
 <li><strong>Kontrollpunkt</strong> – vad som kontrolleras (till exempel grundläggning, fuktskydd, bärande konstruktion, brandskydd).</li>
 <li><strong>Hur kontrolleras</strong> – metod, exempelvis okulär kontroll, mätning eller provning.</li>
-<li><strong>Mot vilket krav</strong> – BBR, Boverkets konstruktionsregler BFS 2024:6 (som ersatte EKS 1 juli 2025)/Eurokod, bygglovet eller ritningen.</li>
+<li><strong>Mot vilket krav</strong> – Boverkets byggregler (t.ex. BFS 2024:7 om brand och BFS 2024:8 om fukt och hygien, som ersatte BBR 1 juli 2025), Boverkets konstruktionsregler BFS 2024:6 (som ersatte EKS)/Eurokod, energikraven i BBR, bygglovet eller ritningen.</li>
 <li><strong>Vem</strong> – egenkontroll av byggherren/entreprenören eller sakkunnigkontroll.</li>
 <li><strong>Resultat och signatur</strong> – utfallet och underskrift av den som kontrollerat.</li>
 </ol>
 <p>Så här kan några rader se ut för en typisk tillbyggnad:</p>
 <ul>
 <li><strong>Grundläggning</strong> – okulär kontroll och mätning mot konstruktionsritning (BFS 2024:6) – egenkontroll – signatur.</li>
-<li><strong>Fuktskydd mot mark</strong> – okulär kontroll mot BBR och ritning – egenkontroll – signatur.</li>
+<li><strong>Fuktskydd mot mark</strong> – okulär kontroll mot BFS 2024:8 (fuktsäkerhet) och ritning – egenkontroll – signatur.</li>
 <li><strong>Bärande stomme</strong> – kontroll mot konstruktionsritning och BFS 2024:6 – egenkontroll eller sakkunnig beroende på risk – signatur.</li>
-<li><strong>Lufttäthet och isolering</strong> – kontroll mot BBR – egenkontroll – signatur.</li>
+<li><strong>Lufttäthet och isolering</strong> – kontroll mot energikraven i BBR avsnitt 9 (ersätts 1 oktober 2026 av BFS 2026:9) och ritning – egenkontroll – signatur.</li>
 </ul>
-<p>Har bygglovsansökan eller anmälan kommit in före 1 juli 2026 får de äldre reglerna (EKS) fortfarande tillämpas – men gamla och nya regler får inte blandas i samma projekt, så hänvisa konsekvent till ett regelverk i kontrollplanen.</p>
+<p>Har bygglovsansökan eller anmälan kommit in före 1 juli 2026 får de äldre reglerna (BBR/EKS) fortfarande tillämpas – men gamla och nya regler får inte blandas i samma projekt, så hänvisa konsekvent till ett regelverk i kontrollplanen.</p>
 <p>Riskbedömningen avgör om en punkt kräver sakkunnigkontroll i stället för egenkontroll. Särskild hänsyn tas till risken för allvarlig personskada eller störning för samhälle och miljö om kravet inte uppfylls. Ta bara med kontrollpunkter som är relevanta för det aktuella projektet – vaga och generiska planer är den vanligaste orsaken till kompletteringskrav.</p>
 
 <h2>Från ansökan till slutbesked – processen</h2>

@@ -140,8 +140,8 @@ const UVARDE_HTML = `
 <p>Kravet på primärenergital ersätter alltså inte U-värdeskraven – de gäller vid sidan av varandra.</p>
 
 <h2>Nya reglerna 1 juli 2026 – vad gäller?</h2>
-<p>Boverkets nya bygg- och konstruktionsregler gäller sedan 1 juli 2025. Under en övergångsperiod fram till 30 juni 2026 får byggherren välja mellan gamla BBR/EKS och det nya regelverket – men du får inte blanda dem i samma projekt. Från 1 juli 2026 kan BBR/EKS inte längre tillämpas i nya ärenden.</p>
-<p>Här finns en nyans som är lätt att missa: Boverket har ännu <strong>inte</strong> gett ut nya energihushållningsföreskrifter. Kraven på primärenergital, Um och U-värden regleras därför fortsatt i BBR även efter 1 juli 2026, tills nya energiföreskrifter träder i kraft – ett datum som ännu inte är fastställt. De aviserade skärpningarna innebär cirka 15–25 % lägre primärenergital jämfört med BBR 30 plus krav på lokal förnybar energiproduktion, men exakta sifferkrav var inte publicerade i föreskriftsform när detta skrevs. Kort sagt: räkna mot BBR idag, men lägg in marginal om projektet ska stå färdigt en bit in i framtiden.</p>
+<p>Boverkets nya bygg- och konstruktionsregler gäller sedan 1 juli 2025. Under övergångsperioden fram till 30 juni 2026 fick byggherren välja mellan gamla BBR/EKS och det nya regelverket – men inte blanda dem i samma projekt. Har ansökan om bygglov eller anmälan kommit in före 1 juli 2026 får BBR/EKS fortfarande tillämpas; i senare ärenden gäller de nya reglerna.</p>
+<p>Här finns en nyans som är lätt att missa: energikraven ingick <strong>inte</strong> i bytet 1 juli 2025. Kraven på primärenergital, Um och U-värden regleras fortsatt i BBR tills Boverkets föreskrifter om energihushållning och värmeisolering i byggnader (BFS 2026:9) träder i kraft 1 oktober 2026. De nya energireglerna innebär skärpningar jämfört med BBR 30. Kort sagt: räkna mot BBR i ärenden som omfattas av de nuvarande reglerna, men kontrollera kraven och övergångsreglerna i BFS 2026:9 för projekt som söks från 1 oktober 2026.</p>
 
 <h2>Från U-värde till offert</h2>
 <p>Så här går du från beräkning till en tjocklek du kan sälja:</p>
@@ -172,7 +172,7 @@ const UVARDE_HTML = `
 <h3>Kan jag lägga ihop U-värden för olika skikt?</h3>
 <p>Nej. Du adderar alltid värmemotstånd (R) för skikt i serie och räknar sedan U = 1/R_tot på slutet. Att addera U-värden eller lambda-värden ger fel resultat.</p>
 <h3>Gäller BBR:s energikrav fortfarande 2026?</h3>
-<p>Ja. Även om Boverkets nya byggregler gäller sedan 1 juli 2025 har inga nya energihushållningsföreskrifter getts ut ännu. Krav på primärenergital, Um och U-värden regleras därför fortsatt i BBR tills nya energiföreskrifter träder i kraft.</p>
+<p>Ja. Även om Boverkets nya byggregler gäller sedan 1 juli 2025 har inga nya energihushållningsföreskrifter getts ut ännu. Krav på primärenergital, Um och U-värden regleras därför fortsatt i BBR tills de nya energireglerna (BFS 2026:9) träder i kraft 1 oktober 2026.</p>
 
 <h2>Kom igång</h2>
 <p>Räkna igenom din konstruktion i <a href="/sv/verktyg/isolering-kalkylator">isolerkalkylatorn</a> och ta fram en tjocklek du kan stå för. Vill du se hur beräkning, materiallista och offert hänger ihop i praktiken kan du <a href="/sv/contact">boka en demo</a> så visar vi flödet från U-värde till färdig offert.</p>
@@ -514,7 +514,7 @@ const A_BERAKNA_MATERIALATGANG_TAK_HTML = `
 <li>Underlagsduk med ca 10% överlapp.</li>
 <li>Nockpannor eller nockband, fotplåt, vindskivor, fågelband.</li>
 <li>Skruv eller klammer enligt anvisning.</li>
-<li>Lagstadgad taksäkerhet: snörasskydd, glidskydd/takstege, fästöglor och nock-/takbrygga är krav enligt Boverkets regler och arbetsmiljöreglerna — inte tillval. Bekräfta gällande regelverk 2026 på boverket.se, eftersom Boverkets nya bygg- och konstruktionsregler ersätter BBR med en övergångsperiod.</li>
+<li>Lagstadgad taksäkerhet: snörasskydd, glidskydd/takstege, fästöglor och nock-/takbrygga är krav enligt Boverkets regler och arbetsmiljöreglerna — inte tillval. Bekräfta gällande regelverk 2026 på boverket.se, eftersom Boverkets nya bygg- och konstruktionsregler ersatte BBR och EKS 1 juli 2025 (äldre regler får bara tillämpas om ansökan eller anmälan kom in före 1 juli 2026).</li>
 </ul>
 
 <h2>Kostnad, ROT och kalkyl</h2>
@@ -1800,13 +1800,13 @@ const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING_HTML = `
 <p><strong>2 × steghöjd + stegdjup = 600–650 mm</strong> (gärna runt 620–630 mm).</p>
 <p>Följer du den får trappan en naturlig rytm. Ett exempel: med en steghöjd på 175 mm blir det rekommenderade stegdjupet ungefär 630 − 2 × 175 = 280 mm. Blir stegen för höga och grunda, eller för låga och djupa, bryts rytmen och trappan känns obekväm – och risken för snubbel ökar.</p>
 
-<h2>Boverkets riktvärden</h2>
-<p>Boverkets byggregler (BBR) ställer krav på bland annat steghöjd, stegdjup och bredd för att minska risken för fallolyckor. Som utgångsvärden gäller ofta:</p>
+<h2>Boverkets krav och vanliga riktvärden</h2>
+<p>Boverkets föreskrifter om säkerhet vid användning av byggnader (BFS 2024:9), som ersatte BBR 1 juli 2025, kräver att trappor är utformade så att man kan förflytta sig säkert – men anger inga exakta mått för steghöjd och stegdjup. Som utgångsvärden används därför ofta vedertagna riktvärden, bland annat från BBR:s tidigare allmänna råd:</p>
 <ul>
 <li><strong>Steghöjd:</strong> bör inte överstiga cirka 180 mm (18 cm) inomhus. En bekväm nivå ligger ofta på 150–180 mm.</li>
 <li><strong>Stegdjup:</strong> minst cirka 250 mm (0,25 m) för trappor i eller i anslutning till byggnader. För trappor i gångvägar på tomten bör stegdjupet vara minst 300 mm (0,30 m).</li>
 </ul>
-<p>Exakta krav skiljer sig åt beroende på om det är en trappa i en bostad, i en publik byggnad eller utomhus. Kontrollera alltid gällande BBR-krav för just din typ av trappa innan du bygger.</p>
+<p>Exakta krav skiljer sig åt beroende på om det är en trappa i en bostad, i en publik byggnad eller utomhus. Kontrollera alltid vad som gäller för just din typ av trappa innan du bygger – BFS 2024:9 och, i flerbostadshus och publika lokaler, tillgänglighetskraven i BFS 2024:12. Har ansökan om bygglov eller anmälan kommit in före 1 juli 2026 får BBR fortfarande tillämpas.</p>
 
 <h2>Så räknar du ut antal steg</h2>
 <ol>
@@ -1832,9 +1832,9 @@ const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING_HTML = `
 const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING: BlogPost = {
   _id: "code-"+"bygga-trappa-steghojd-stegdjup-berakning",
   title: "Bygga trappa – så beräknar du steghöjd, stegdjup och antal steg", slug: "bygga-trappa-steghojd-stegdjup-berakning", locale: "sv",
-  excerpt: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, Boverkets riktvärden för steghöjd och stegdjup och hur du räknar ut antal steg från den totala höjden. Med gratis trappberäknare.", tag: "Kalkyl",
+  excerpt: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, vanliga riktvärden för steghöjd och stegdjup och hur du räknar ut antal steg från den totala höjden. Med gratis trappberäknare.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/trappa-preview.webp", contentHtml: A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING_HTML,
-  seoTitle: "Trappformeln & bygga trappa: steghöjd, stegdjup | ByggExp", seoDescription: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, BBR-riktvärden (steghöjd max ~180 mm, stegdjup minst 250 mm) och hur du räknar antal steg. Gratis trappberäknare.",
+  seoTitle: "Trappformeln & bygga trappa: steghöjd, stegdjup | ByggExp", seoDescription: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, riktvärden (steghöjd max ~180 mm, stegdjup minst 250 mm) och hur du räknar antal steg. Gratis trappberäknare.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/trappa-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T14:05:00.000Z", createdAt: "2026-08-20T14:05:00.000Z", updatedAt: "2026-08-20T14:05:00.000Z",
 };

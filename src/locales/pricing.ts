@@ -56,7 +56,7 @@ export const pricingTranslations = {
     ],
     financeItems: [
       "Коммерческие предложения и счета",
-      "Напоминания о неоплаченных счетах",
+      "Напоминания о предстоящих платежах",
       "Зарплата, расчётные листки и AGI",
       "Экономика проекта: бюджет, смета и рентабельность",
       "Сканирование чеков и счетов – автоматически проводятся по проекту",
@@ -145,7 +145,7 @@ export const pricingTranslations = {
     ],
     financeItems: [
       "Quotes and invoices",
-      "Reminders for unpaid invoices",
+      "Reminders for upcoming payments",
       "Payroll, payslips and AGI (employer declaration)",
       "Project finances: budget, estimate and profitability",
       "Scan receipts and invoices – booked to the project automatically",
@@ -235,7 +235,7 @@ export const pricingTranslations = {
     ],
     financeItems: [
       "Offerter och fakturor",
-      "Påminnelser för obetalda fakturor",
+      "Påminnelser om kommande betalningar",
       "Löner, lönespecifikationer och AGI",
       "Projektekonomi: budget, kalkyl och lönsamhet",
       "Skanna kvitton och fakturor – bokförs automatiskt på projektet",
@@ -325,7 +325,7 @@ export const pricingTranslations = {
     ],
     financeItems: [
       "Tilbud og fakturaer",
-      "Påminnelser om ubetalte fakturaer",
+      "Påminnelser om kommende betalinger",
       "Lønn, lønnsslipper og arbeidsgiverdeklarasjon (AGI)",
       "Prosjektøkonomi: budsjett, kalkyle og lønnsomhet",
       "Skann kvitteringer og fakturaer – bokføres automatisk på prosjektet",
@@ -420,7 +420,7 @@ export const pricingTranslations = {
     ],
     financeItems: [
       "Oferty i faktury",
-      "Przypomnienia o niezapłaconych fakturach",
+      "Przypomnienia o nadchodzących płatnościach",
       "Wynagrodzenia, paski płacowe i AGI",
       "Finanse projektu: budżet, kosztorys i rentowność",
       "Skanowanie paragonów i faktur – automatycznie księgowane na projekt",
@@ -515,7 +515,7 @@ export const pricingTranslations = {
     ],
     financeItems: [
       "Комерційні пропозиції та рахунки",
-      "Нагадування про неоплачені рахунки",
+      "Нагадування про майбутні платежі",
       "Зарплата, розрахункові листки та AGI",
       "Економіка проєкту: бюджет, кошторис і рентабельність",
       "Сканування чеків і рахунків – автоматично проводяться по проєкту",
@@ -605,7 +605,7 @@ export const pricingTranslations = {
     ],
     financeItems: [
       "Tarjoukset ja laskut",
-      "Muistutukset maksamattomista laskuista",
+      "Muistutukset tulevista maksuista",
       "Palkat, palkkalaskelmat ja AGI",
       "Projektitalous: budjetti, laskelma ja kannattavuus",
       "Skannaa kuitit ja laskut – kirjataan automaattisesti projektille",
@@ -695,7 +695,7 @@ export const pricingTranslations = {
     ],
     financeItems: [
       "Pakkumised ja arved",
-      "Meeldetuletused tasumata arvete kohta",
+      "Meeldetuletused eelseisvatest maksetest",
       "Palgad, palgalehed ja AGI",
       "Projekti rahandus: eelarve, kalkulatsioon ja kasumlikkus",
       "Skanni tšekid ja arved – kirjendatakse automaatselt projektile",
@@ -790,7 +790,7 @@ export const pricingTranslations = {
     ],
     financeItems: [
       "Pasiūlymai ir sąskaitos",
-      "Priminimai apie neapmokėtas sąskaitas",
+      "Priminimai apie artėjančius mokėjimus",
       "Atlyginimai, algalapiai ir AGI",
       "Projekto finansai: biudžetas, sąmata ir pelningumas",
       "Nuskenuokite kvitus ir sąskaitas – automatiškai priskiriami projektui",
@@ -884,7 +884,7 @@ export const pricingTranslations = {
     ],
     financeItems: [
       "Piedāvājumi un rēķini",
-      "Atgādinājumi par neapmaksātiem rēķiniem",
+      "Atgādinājumi par gaidāmajiem maksājumiem",
       "Algas, algas lapiņas un AGI",
       "Projekta finanses: budžets, tāme un rentabilitāte",
       "Skenē čekus un rēķinus – automātiski tiek grāmatoti projektā",

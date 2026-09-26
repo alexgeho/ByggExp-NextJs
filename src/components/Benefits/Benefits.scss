@@ -11,6 +11,14 @@
   overflow: hidden;
 }
 
+/* align-items:center makes the container shrink-to-fit its content, i.e. the
+   whole slide track — on phones it grew wider than the screen. Keep it at the
+   section width so the slider frame clips the track. */
+.benefits > .container {
+  width: 100%;
+  min-width: 0;
+}
+
 .benefits::before {
   content: "";
   position: absolute;
@@ -512,10 +520,21 @@
     padding: 0;
   }
 
-  .benefits-single .benefits-arrow {
+  // On phones the arrows sit under the card, on the dots row, so they never
+  // cover the card's icon or text.
+  .benefits-single .benefits-arrow,
+  .benefits-single .benefits-arrow:hover {
+    top: auto;
+    bottom: -57px;
+    transform: none;
     width: 44px;
     height: 44px;
     font-size: 26px;
+  }
+
+  .benefits-single .benefits-dots {
+    margin-top: 28px;
+    margin-bottom: 16px;
   }
 
   .benefits-single .benefit-card h3 {

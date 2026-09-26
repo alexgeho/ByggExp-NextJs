@@ -15,7 +15,7 @@ export const pricingTranslations = {
 
     periodLabel: "Период оплаты",
     pricingMonthly: "Помесячно",
-    pricingYearly: "За год – 2 месяца бесплатно",
+    pricingYearly: "За год – скидка 15%",
 
     usersLabel: "Количество пользователей",
     usersDecrease: "Меньше пользователей",
@@ -40,8 +40,10 @@ export const pricingTranslations = {
     includedDetail: "вкл. {included} · +{extra} SEK за доп. пользователя",
     yearlyNote: "при оплате за год",
 
-    groupProject: "Проекты и команда",
-    groupFinance: "Финансы",
+    groupProject: "Управление проектами или бригадами",
+    groupFinance: "Отправить счёт или предложение",
+    groupProjectHint: "Создайте проект, добавьте команду и отслеживайте их часы и задачи.",
+    groupFinanceHint: "Настройте компанию и клиентов, затем отправляйте предложения и счета.",
     projectItems: [
       "Проекты, задачи и фото",
       "Отметка времени с GPS",
@@ -61,7 +63,7 @@ export const pricingTranslations = {
       "Личные финансы (скоро)",
     ],
 
-    pricingButton: "Попробовать бесплатно",
+    pricingButton: "Записаться на демо",
     pricingTrial: "Запуск занимает 5 минут.",
 
     offerBadge: "Спецпредложение",
@@ -90,7 +92,7 @@ export const pricingTranslations = {
 
     periodLabel: "Billing period",
     pricingMonthly: "Monthly",
-    pricingYearly: "Yearly – 2 months free",
+    pricingYearly: "Yearly – 15% off",
 
     usersLabel: "Number of users",
     usersDecrease: "Fewer users",
@@ -110,8 +112,10 @@ export const pricingTranslations = {
     includedDetail: "incl. {included} · +{extra} SEK per extra user",
     yearlyNote: "billed yearly",
 
-    groupProject: "Projects and team",
-    groupFinance: "Finance",
+    groupProject: "Manage projects or crews",
+    groupFinance: "Send an invoice or offer",
+    groupProjectHint: "Create a project, add your team, and track their hours and tasks.",
+    groupFinanceHint: "Set up your company and clients, then send offers and invoices.",
     projectItems: [
       "Projects, tasks and photos",
       "Clock-in with GPS",
@@ -131,7 +135,7 @@ export const pricingTranslations = {
       "Personal finance (coming soon)",
     ],
 
-    pricingButton: "Try for free",
+    pricingButton: "Book a demo",
     pricingTrial: "Setup takes 5 minutes.",
 
     offerBadge: "Special offer",
@@ -161,7 +165,7 @@ export const pricingTranslations = {
 
     periodLabel: "Betalningsperiod",
     pricingMonthly: "Per månad",
-    pricingYearly: "Per år – 2 mån gratis",
+    pricingYearly: "Per år – 15% rabatt",
 
     usersLabel: "Antal användare",
     usersDecrease: "Färre användare",
@@ -181,8 +185,10 @@ export const pricingTranslations = {
     includedDetail: "inkl. {included} · +{extra} kr per extra användare",
     yearlyNote: "vid årsbetalning",
 
-    groupProject: "Projekt och team",
-    groupFinance: "Ekonomi",
+    groupProject: "Hantera projekt eller arbetslag",
+    groupFinance: "Skicka faktura eller offert",
+    groupProjectHint: "Skapa ett projekt, lägg till ditt team och följ deras timmar och uppgifter.",
+    groupFinanceHint: "Lägg till företagsuppgifter och kunder, skicka sedan offerter och fakturor.",
     projectItems: [
       "Projekt, uppgifter och foton",
       "Stämpling med GPS",
@@ -202,7 +208,7 @@ export const pricingTranslations = {
       "Personlig ekonomi (kommer snart)",
     ],
 
-    pricingButton: "Prova gratis",
+    pricingButton: "Boka demo",
     pricingTrial: "Kom igång på 5 minuter.",
 
     offerBadge: "Specialerbjudande",
@@ -232,7 +238,7 @@ export const pricingTranslations = {
 
     periodLabel: "Betalingsperiode",
     pricingMonthly: "Per måned",
-    pricingYearly: "Per år – 2 mnd gratis",
+    pricingYearly: "Per år – 15% rabatt",
 
     usersLabel: "Antall brukere",
     usersDecrease: "Færre brukere",
@@ -252,8 +258,10 @@ export const pricingTranslations = {
     includedDetail: "inkl. {included} · +{extra} SEK per ekstra bruker",
     yearlyNote: "ved årlig betaling",
 
-    groupProject: "Prosjekt og team",
-    groupFinance: "Økonomi",
+    groupProject: "Administrer prosjekter eller arbeidslag",
+    groupFinance: "Send faktura eller tilbud",
+    groupProjectHint: "Opprett et prosjekt, legg til teamet ditt og følg timene og oppgavene deres.",
+    groupFinanceHint: "Sett opp firmaet og kundene dine, send deretter tilbud og fakturaer.",
     projectItems: [
       "Prosjekter, oppgaver og bilder",
       "Stempling med GPS",
@@ -273,7 +281,7 @@ export const pricingTranslations = {
       "Privatøkonomi (kommer snart)",
     ],
 
-    pricingButton: "Prøv gratis",
+    pricingButton: "Bestill demo",
     pricingTrial: "Kom i gang på 5 minutter.",
 
     offerBadge: "Spesialtilbud",
@@ -303,7 +311,7 @@ export const pricingTranslations = {
 
     periodLabel: "Okres rozliczeniowy",
     pricingMonthly: "Miesięcznie",
-    pricingYearly: "Rocznie – 2 miesiące gratis",
+    pricingYearly: "Rocznie – 15% taniej",
 
     usersLabel: "Liczba użytkowników",
     usersDecrease: "Mniej użytkowników",
@@ -328,8 +336,10 @@ export const pricingTranslations = {
     includedDetail: "w cenie {included} · +{extra} SEK za dodatkowego użytkownika",
     yearlyNote: "przy płatności rocznej",
 
-    groupProject: "Projekty i zespół",
-    groupFinance: "Finanse",
+    groupProject: "Zarządzaj projektami lub ekipami",
+    groupFinance: "Wyślij fakturę lub ofertę",
+    groupProjectHint: "Utwórz projekt, dodaj zespół i śledź ich godziny oraz zadania.",
+    groupFinanceHint: "Skonfiguruj firmę i klientów, następnie wysyłaj oferty i faktury.",
     projectItems: [
       "Projekty, zadania i zdjęcia",
       "Rejestracja czasu z GPS",
@@ -349,7 +359,7 @@ export const pricingTranslations = {
       "Finanse osobiste (wkrótce)",
     ],
 
-    pricingButton: "Wypróbuj za darmo",
+    pricingButton: "Umów demo",
     pricingTrial: "Uruchomienie zajmuje 5 minut.",
 
     offerBadge: "Oferta specjalna",
@@ -379,7 +389,7 @@ export const pricingTranslations = {
 
     periodLabel: "Період оплати",
     pricingMonthly: "Щомісяця",
-    pricingYearly: "За рік – 2 місяці безкоштовно",
+    pricingYearly: "За рік – знижка 15%",
 
     usersLabel: "Кількість користувачів",
     usersDecrease: "Менше користувачів",
@@ -404,8 +414,10 @@ export const pricingTranslations = {
     includedDetail: "вкл. {included} · +{extra} SEK за дод. користувача",
     yearlyNote: "при оплаті за рік",
 
-    groupProject: "Проєкти та команда",
-    groupFinance: "Фінанси",
+    groupProject: "Керувати проєктами або бригадами",
+    groupFinance: "Надіслати рахунок або пропозицію",
+    groupProjectHint: "Створіть проєкт, додайте команду та відстежуйте їхні години й завдання.",
+    groupFinanceHint: "Налаштуйте компанію та клієнтів, потім надсилайте пропозиції та рахунки.",
     projectItems: [
       "Проєкти, завдання та фото",
       "Відмітка часу з GPS",
@@ -425,7 +437,7 @@ export const pricingTranslations = {
       "Особисті фінанси (незабаром)",
     ],
 
-    pricingButton: "Спробувати безкоштовно",
+    pricingButton: "Замовити демо",
     pricingTrial: "Запуск займає 5 хвилин.",
 
     offerBadge: "Спецпропозиція",
@@ -455,7 +467,7 @@ export const pricingTranslations = {
 
     periodLabel: "Laskutusjakso",
     pricingMonthly: "Kuukausittain",
-    pricingYearly: "Vuosittain – 2 kk ilmaiseksi",
+    pricingYearly: "Vuosittain – 15% alennus",
 
     usersLabel: "Käyttäjien määrä",
     usersDecrease: "Vähemmän käyttäjiä",
@@ -475,8 +487,10 @@ export const pricingTranslations = {
     includedDetail: "sis. {included} · +{extra} SEK / lisäkäyttäjä",
     yearlyNote: "vuosilaskutuksella",
 
-    groupProject: "Projektit ja tiimi",
-    groupFinance: "Talous",
+    groupProject: "Hallitse projekteja tai työryhmiä",
+    groupFinance: "Lähetä lasku tai tarjous",
+    groupProjectHint: "Luo projekti, lisää tiimisi ja seuraa heidän tuntejaan ja tehtäviään.",
+    groupFinanceHint: "Määritä yrityksesi ja asiakkaasi, lähetä sitten tarjouksia ja laskuja.",
     projectItems: [
       "Projektit, tehtävät ja kuvat",
       "Leimaus GPS:llä",
@@ -496,7 +510,7 @@ export const pricingTranslations = {
       "Henkilökohtainen talous (tulossa pian)",
     ],
 
-    pricingButton: "Kokeile ilmaiseksi",
+    pricingButton: "Varaa demo",
     pricingTrial: "Käyttöönotto vie 5 minuuttia.",
 
     offerBadge: "Erikoistarjous",
@@ -526,7 +540,7 @@ export const pricingTranslations = {
 
     periodLabel: "Arveldusperiood",
     pricingMonthly: "Kuus",
-    pricingYearly: "Aastas – 2 kuud tasuta",
+    pricingYearly: "Aastas – 15% soodsam",
 
     usersLabel: "Kasutajate arv",
     usersDecrease: "Vähem kasutajaid",
@@ -546,8 +560,10 @@ export const pricingTranslations = {
     includedDetail: "sh {included} · +{extra} SEK iga lisakasutaja eest",
     yearlyNote: "aastamaksega",
 
-    groupProject: "Projektid ja meeskond",
-    groupFinance: "Rahandus",
+    groupProject: "Halda projekte või meeskondi",
+    groupFinance: "Saada arve või pakkumine",
+    groupProjectHint: "Loo projekt, lisa oma meeskond ning jälgi nende tunde ja ülesandeid.",
+    groupFinanceHint: "Seadista oma ettevõte ja kliendid, seejärel saada pakkumisi ja arveid.",
     projectItems: [
       "Projektid, ülesanded ja fotod",
       "Tööaja märkimine GPS-iga",
@@ -567,7 +583,7 @@ export const pricingTranslations = {
       "Isiklik rahandus (tulekul)",
     ],
 
-    pricingButton: "Proovi tasuta",
+    pricingButton: "Broneeri demo",
     pricingTrial: "Käivitamine võtab 5 minutit.",
 
     offerBadge: "Eripakkumine",
@@ -597,7 +613,7 @@ export const pricingTranslations = {
 
     periodLabel: "Atsiskaitymo laikotarpis",
     pricingMonthly: "Kas mėnesį",
-    pricingYearly: "Kas metus – 2 mėn. nemokamai",
+    pricingYearly: "Kas metus – 15% nuolaida",
 
     usersLabel: "Naudotojų skaičius",
     usersDecrease: "Mažiau naudotojų",
@@ -622,8 +638,10 @@ export const pricingTranslations = {
     includedDetail: "įsk. {included} · +{extra} SEK už papildomą naudotoją",
     yearlyNote: "mokant už metus",
 
-    groupProject: "Projektai ir komanda",
-    groupFinance: "Finansai",
+    groupProject: "Tvarkyti projektus ar brigadas",
+    groupFinance: "Siųsti sąskaitą ar pasiūlymą",
+    groupProjectHint: "Sukurkite projektą, pridėkite savo komandą ir stebėkite jų valandas bei užduotis.",
+    groupFinanceHint: "Sukonfigūruokite savo įmonę ir klientus, tada siųskite pasiūlymus ir sąskaitas.",
     projectItems: [
       "Projektai, užduotys ir nuotraukos",
       "Laiko žymėjimas su GPS",
@@ -643,7 +661,7 @@ export const pricingTranslations = {
       "Asmeniniai finansai (jau netrukus)",
     ],
 
-    pricingButton: "Išbandyti nemokamai",
+    pricingButton: "Užsisakyti demo",
     pricingTrial: "Paleidimas užtrunka 5 minutes.",
 
     offerBadge: "Specialus pasiūlymas",
@@ -673,7 +691,7 @@ export const pricingTranslations = {
 
     periodLabel: "Norēķinu periods",
     pricingMonthly: "Mēnesī",
-    pricingYearly: "Gadā – 2 mēneši bez maksas",
+    pricingYearly: "Gadā – 15% atlaide",
 
     usersLabel: "Lietotāju skaits",
     usersDecrease: "Mazāk lietotāju",
@@ -697,8 +715,10 @@ export const pricingTranslations = {
     includedDetail: "iekļ. {included} · +{extra} SEK par katru papildu lietotāju",
     yearlyNote: "maksājot par gadu",
 
-    groupProject: "Projekti un komanda",
-    groupFinance: "Finanses",
+    groupProject: "Pārvaldīt projektus vai brigādes",
+    groupFinance: "Nosūtīt rēķinu vai piedāvājumu",
+    groupProjectHint: "Izveidojiet projektu, pievienojiet savu komandu un sekojiet līdzi viņu stundām un uzdevumiem.",
+    groupFinanceHint: "Iestatiet savu uzņēmumu un klientus, tad sūtiet piedāvājumus un rēķinus.",
     projectItems: [
       "Projekti, uzdevumi un foto",
       "Laika reģistrēšana ar GPS",
@@ -718,7 +738,7 @@ export const pricingTranslations = {
       "Personīgās finanses (drīzumā)",
     ],
 
-    pricingButton: "Izmēģināt bez maksas",
+    pricingButton: "Pieteikt demo",
     pricingTrial: "Uzsākšana aizņem 5 minūtes.",
 
     offerBadge: "Īpašais piedāvājums",

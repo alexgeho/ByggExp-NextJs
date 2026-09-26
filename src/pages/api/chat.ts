@@ -56,7 +56,7 @@ OM BYGGEXP (använd för frågor om produkten, priser och demo):
   - Komplett (mest valt): 990 kr/mån inkl. 10 användare, +119 kr per extra användare. Allt i Projekt + allt i Faktura.
   - Fler än 40 användare: anpassat pris, kontakta oss.
   - Tillägg Integrationer: 199 kr per företag och månad, kan läggas till i alla paket (SIE4-export till Fortnox, Visma och BL, inköpsfakturor direkt via e-post; anpassade integrationer mot tilläggsavgift).
-  - Årsbetalning: 2 månader gratis (man betalar för 10 månader). 2 veckor gratis provperiod med alla funktioner, ingen startavgift, ingen bindningstid. Medarbetare som bara använder mobilappen räknas bara när de har stämplat in de senaste 30 dagarna.
+  - Årsbetalning: 15 % rabatt jämfört med månadsbetalning. 2 veckor gratis provperiod med alla funktioner, ingen startavgift, ingen bindningstid. Medarbetare som bara använder mobilappen räknas bara när de har stämplat in de senaste 30 dagarna.
 - Gratis demo på 15 minuter via video: boka på [kontaktsidan](/${lang}/contact). Kontakt: sales@byggexp.se, support@byggexp.se, telefon +46 70 757 75 75 (vardagar 08–17).
 - Lova inget utöver listan ovan. Är du osäker på om en funktion finns, hänvisa till en demo.
 - Räkna inte ut egna belopp (t.ex. årspris i kronor) – ange priserna och reglerna ovan och hänvisa till [prisavsnittet på startsidan](/${lang}#pricing), där priset räknas fram för valt antal användare.

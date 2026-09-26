@@ -199,13 +199,27 @@
   margin-bottom: 32px;
 }
 
+/* What you pay for — styled like the onboarding choice cards in the app. */
+.pricing-group-head {
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border: 1px solid #d6e6fb;
+  border-radius: 14px;
+  background: #f3f8ff;
+}
+
 .pricing-group-title {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted-2);
-  margin-bottom: 12px;
+  line-height: 1.3;
+  color: var(--blue-2);
+}
+
+.pricing-group-hint {
+  margin-top: 4px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted);
 }
 
 .pricing-list {

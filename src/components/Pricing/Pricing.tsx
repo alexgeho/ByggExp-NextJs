@@ -1,13 +1,14 @@
 import { useRef, useState } from "react";
 import type { PluralForms, PricingProps } from "../../types/pricing";
 
-/* Price model (SEK excl. VAT). Yearly = pay 10 months, get 12. */
+/* Price model (SEK excl. VAT). Yearly = 12 months minus YEARLY_DISCOUNT. */
 const FAKTURA_PRICE = 299;
 const FAKTURA_MAX_USERS = 2;
 const INCLUDED_USERS = 10;
 const PROJEKT = { base: 690, extra: 69 };
 const KOMPLETT = { base: 990, extra: 119 };
 const ADDON_PRICE = 199;
+const YEARLY_DISCOUNT = 0.15;
 
 const MIN_USERS = 1;
 const MAX_USERS = 40;
@@ -81,7 +82,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
   const pluralRules = new Intl.PluralRules(lang);
 
   const perMonth = (monthly: number) =>
-    isYearly ? (monthly * 10) / 12 : monthly;
+    isYearly ? monthly * (1 - YEARLY_DISCOUNT) : monthly;
   const fmt = (n: number) => numberFormat.format(Math.round(n));
   const total = (plan: { base: number; extra: number }) =>
     perMonth(plan.base + Math.max(0, users - INCLUDED_USERS) * plan.extra);
@@ -110,7 +111,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
           ? pricingT.fakturaUsers
           : pricingT.fakturaMaxUsers,
       detail: withYearNote(pricingT.fixedPrice),
-      groups: [{ title: pricingT.groupFinance, items: pricingT.financeItems }],
+      groups: [{ title: pricingT.groupFinance, hint: pricingT.groupFinanceHint, items: pricingT.financeItems }],
       popular: false,
     },
     {
@@ -120,7 +121,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
       price: fmt(total(PROJEKT)),
       usersLine: plural(pricingT.usersCount, users),
       detail: includedDetail(PROJEKT.extra),
-      groups: [{ title: pricingT.groupProject, items: pricingT.projectItems }],
+      groups: [{ title: pricingT.groupProject, hint: pricingT.groupProjectHint, items: pricingT.projectItems }],
       popular: false,
     },
     {
@@ -131,8 +132,8 @@ function Pricing({ pricingT, lang }: PricingProps) {
       usersLine: plural(pricingT.usersCount, users),
       detail: includedDetail(KOMPLETT.extra),
       groups: [
-        { title: pricingT.groupProject, items: pricingT.projectItems },
-        { title: pricingT.groupFinance, items: pricingT.financeItems },
+        { title: pricingT.groupProject, hint: pricingT.groupProjectHint, items: pricingT.projectItems },
+        { title: pricingT.groupFinance, hint: pricingT.groupFinanceHint, items: pricingT.financeItems },
       ],
       popular: true,
     },
@@ -250,7 +251,10 @@ function Pricing({ pricingT, lang }: PricingProps) {
                 <div className="pricing-groups">
                   {plan.groups.map((group) => (
                     <div className="pricing-group" key={group.title}>
+                      <div className="pricing-group-head">
                       <div className="pricing-group-title">{group.title}</div>
+                      <div className="pricing-group-hint">{group.hint}</div>
+                    </div>
                       <CheckList items={group.items} accent={plan.accent} />
                     </div>
                   ))}

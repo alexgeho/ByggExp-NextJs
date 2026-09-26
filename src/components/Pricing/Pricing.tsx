@@ -111,7 +111,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
           ? pricingT.fakturaUsers
           : pricingT.fakturaMaxUsers,
       detail: withYearNote(pricingT.fixedPrice),
-      groups: [{ title: pricingT.groupFinance, hint: pricingT.groupFinanceHint, items: pricingT.financeItems }],
+      groups: [{ title: pricingT.groupFinance, items: pricingT.financeItems }],
       popular: false,
     },
     {
@@ -121,7 +121,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
       price: fmt(total(PROJEKT)),
       usersLine: plural(pricingT.usersCount, users),
       detail: includedDetail(PROJEKT.extra),
-      groups: [{ title: pricingT.groupProject, hint: pricingT.groupProjectHint, items: pricingT.projectItems }],
+      groups: [{ title: pricingT.groupProject, items: pricingT.projectItems }],
       popular: false,
     },
     {
@@ -132,8 +132,8 @@ function Pricing({ pricingT, lang }: PricingProps) {
       usersLine: plural(pricingT.usersCount, users),
       detail: includedDetail(KOMPLETT.extra),
       groups: [
-        { title: pricingT.groupProject, hint: pricingT.groupProjectHint, items: pricingT.projectItems },
-        { title: pricingT.groupFinance, hint: pricingT.groupFinanceHint, items: pricingT.financeItems },
+        { title: pricingT.groupProject, items: pricingT.projectItems },
+        { title: pricingT.groupFinance, items: pricingT.financeItems },
       ],
       popular: true,
     },
@@ -251,10 +251,6 @@ function Pricing({ pricingT, lang }: PricingProps) {
                 <div className="pricing-groups">
                   {plan.groups.map((group) => (
                     <div className="pricing-group" key={group.title}>
-                      <div className="pricing-group-head">
-                      <div className="pricing-group-title">{group.title}</div>
-                      <div className="pricing-group-hint">{group.hint}</div>
-                    </div>
                       <CheckList items={group.items} accent={plan.accent} />
                     </div>
                   ))}

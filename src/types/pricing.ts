@@ -34,8 +34,6 @@ export type PricingT = {
 
   groupProject: string;
   groupFinance: string;
-  groupProjectHint: string;
-  groupFinanceHint: string;
   projectItems: readonly string[];
   financeItems: readonly string[];
 

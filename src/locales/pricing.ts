@@ -30,20 +30,18 @@ export const pricingTranslations = {
     pricingPer: "SEK / месяц",
     popular: "Чаще всего выбирают",
 
-    planFaktura: "Faktura",
-    planProjekt: "Projekt",
-    planKomplett: "Komplett",
+    planFaktura: "Счета и предложения",
+    planProjekt: "Проекты и команда",
+    planKomplett: "Проекты + счета",
 
     fakturaUsers: "1–2 пользователя",
-    fakturaMaxUsers: "Макс. 2 пользователя – выберите Komplett",
+    fakturaMaxUsers: "Максимум 2 пользователя",
     fixedPrice: "Фиксированная цена",
     includedDetail: "вкл. {included} · +{extra} SEK за доп. пользователя",
     yearlyNote: "при оплате за год",
 
     groupProject: "Управление проектами или бригадами",
     groupFinance: "Отправить счёт или предложение",
-    groupProjectHint: "Создайте проект, добавьте команду и отслеживайте их часы и задачи.",
-    groupFinanceHint: "Настройте компанию и клиентов, затем отправляйте предложения и счета.",
     projectItems: [
       "Проекты, задачи и фото",
       "Отметка времени с GPS",
@@ -102,20 +100,18 @@ export const pricingTranslations = {
     pricingPer: "SEK / month",
     popular: "Most popular",
 
-    planFaktura: "Faktura",
-    planProjekt: "Projekt",
-    planKomplett: "Komplett",
+    planFaktura: "Invoices & offers",
+    planProjekt: "Projects & team",
+    planKomplett: "Projects + invoices",
 
     fakturaUsers: "1–2 users",
-    fakturaMaxUsers: "Max 2 users – choose Komplett",
+    fakturaMaxUsers: "Max 2 users",
     fixedPrice: "Fixed price",
     includedDetail: "incl. {included} · +{extra} SEK per extra user",
     yearlyNote: "billed yearly",
 
     groupProject: "Manage projects or crews",
     groupFinance: "Send an invoice or offer",
-    groupProjectHint: "Create a project, add your team, and track their hours and tasks.",
-    groupFinanceHint: "Set up your company and clients, then send offers and invoices.",
     projectItems: [
       "Projects, tasks and photos",
       "Clock-in with GPS",
@@ -175,20 +171,18 @@ export const pricingTranslations = {
     pricingPer: "SEK / månad",
     popular: "Mest valt",
 
-    planFaktura: "Faktura",
-    planProjekt: "Projekt",
-    planKomplett: "Komplett",
+    planFaktura: "Faktura & offert",
+    planProjekt: "Projekt & team",
+    planKomplett: "Projekt + faktura",
 
     fakturaUsers: "1–2 användare",
-    fakturaMaxUsers: "Max 2 användare – välj Komplett",
+    fakturaMaxUsers: "Max 2 användare",
     fixedPrice: "Fast pris",
     includedDetail: "inkl. {included} · +{extra} kr per extra användare",
     yearlyNote: "vid årsbetalning",
 
     groupProject: "Hantera projekt eller arbetslag",
     groupFinance: "Skicka faktura eller offert",
-    groupProjectHint: "Skapa ett projekt, lägg till ditt team och följ deras timmar och uppgifter.",
-    groupFinanceHint: "Lägg till företagsuppgifter och kunder, skicka sedan offerter och fakturor.",
     projectItems: [
       "Projekt, uppgifter och foton",
       "Stämpling med GPS",
@@ -248,20 +242,18 @@ export const pricingTranslations = {
     pricingPer: "SEK / måned",
     popular: "Mest valgt",
 
-    planFaktura: "Faktura",
-    planProjekt: "Projekt",
-    planKomplett: "Komplett",
+    planFaktura: "Faktura og tilbud",
+    planProjekt: "Prosjekt og team",
+    planKomplett: "Prosjekt + faktura",
 
     fakturaUsers: "1–2 brukere",
-    fakturaMaxUsers: "Maks 2 brukere – velg Komplett",
+    fakturaMaxUsers: "Maks 2 brukere",
     fixedPrice: "Fast pris",
     includedDetail: "inkl. {included} · +{extra} SEK per ekstra bruker",
     yearlyNote: "ved årlig betaling",
 
     groupProject: "Administrer prosjekter eller arbeidslag",
     groupFinance: "Send faktura eller tilbud",
-    groupProjectHint: "Opprett et prosjekt, legg til teamet ditt og følg timene og oppgavene deres.",
-    groupFinanceHint: "Sett opp firmaet og kundene dine, send deretter tilbud og fakturaer.",
     projectItems: [
       "Prosjekter, oppgaver og bilder",
       "Stempling med GPS",
@@ -326,20 +318,18 @@ export const pricingTranslations = {
     pricingPer: "SEK / miesiąc",
     popular: "Najczęściej wybierany",
 
-    planFaktura: "Faktura",
-    planProjekt: "Projekt",
-    planKomplett: "Komplett",
+    planFaktura: "Faktury i oferty",
+    planProjekt: "Projekty i zespół",
+    planKomplett: "Projekty + faktury",
 
     fakturaUsers: "1–2 użytkowników",
-    fakturaMaxUsers: "Maks. 2 użytkowników – wybierz Komplett",
+    fakturaMaxUsers: "Maks. 2 użytkowników",
     fixedPrice: "Stała cena",
     includedDetail: "w cenie {included} · +{extra} SEK za dodatkowego użytkownika",
     yearlyNote: "przy płatności rocznej",
 
     groupProject: "Zarządzaj projektami lub ekipami",
     groupFinance: "Wyślij fakturę lub ofertę",
-    groupProjectHint: "Utwórz projekt, dodaj zespół i śledź ich godziny oraz zadania.",
-    groupFinanceHint: "Skonfiguruj firmę i klientów, następnie wysyłaj oferty i faktury.",
     projectItems: [
       "Projekty, zadania i zdjęcia",
       "Rejestracja czasu z GPS",
@@ -404,20 +394,18 @@ export const pricingTranslations = {
     pricingPer: "SEK / місяць",
     popular: "Найчастіше обирають",
 
-    planFaktura: "Faktura",
-    planProjekt: "Projekt",
-    planKomplett: "Komplett",
+    planFaktura: "Рахунки й пропозиції",
+    planProjekt: "Проєкти й команда",
+    planKomplett: "Проєкти + рахунки",
 
     fakturaUsers: "1–2 користувачі",
-    fakturaMaxUsers: "Макс. 2 користувачі – оберіть Komplett",
+    fakturaMaxUsers: "Максимум 2 користувачі",
     fixedPrice: "Фіксована ціна",
     includedDetail: "вкл. {included} · +{extra} SEK за дод. користувача",
     yearlyNote: "при оплаті за рік",
 
     groupProject: "Керувати проєктами або бригадами",
     groupFinance: "Надіслати рахунок або пропозицію",
-    groupProjectHint: "Створіть проєкт, додайте команду та відстежуйте їхні години й завдання.",
-    groupFinanceHint: "Налаштуйте компанію та клієнтів, потім надсилайте пропозиції та рахунки.",
     projectItems: [
       "Проєкти, завдання та фото",
       "Відмітка часу з GPS",
@@ -477,20 +465,18 @@ export const pricingTranslations = {
     pricingPer: "SEK / kk",
     popular: "Suosituin",
 
-    planFaktura: "Faktura",
-    planProjekt: "Projekt",
-    planKomplett: "Komplett",
+    planFaktura: "Laskut ja tarjoukset",
+    planProjekt: "Projektit ja tiimi",
+    planKomplett: "Projektit + laskut",
 
     fakturaUsers: "1–2 käyttäjää",
-    fakturaMaxUsers: "Enintään 2 käyttäjää – valitse Komplett",
+    fakturaMaxUsers: "Enintään 2 käyttäjää",
     fixedPrice: "Kiinteä hinta",
     includedDetail: "sis. {included} · +{extra} SEK / lisäkäyttäjä",
     yearlyNote: "vuosilaskutuksella",
 
     groupProject: "Hallitse projekteja tai työryhmiä",
     groupFinance: "Lähetä lasku tai tarjous",
-    groupProjectHint: "Luo projekti, lisää tiimisi ja seuraa heidän tuntejaan ja tehtäviään.",
-    groupFinanceHint: "Määritä yrityksesi ja asiakkaasi, lähetä sitten tarjouksia ja laskuja.",
     projectItems: [
       "Projektit, tehtävät ja kuvat",
       "Leimaus GPS:llä",
@@ -550,20 +536,18 @@ export const pricingTranslations = {
     pricingPer: "SEK / kuus",
     popular: "Enim valitud",
 
-    planFaktura: "Faktura",
-    planProjekt: "Projekt",
-    planKomplett: "Komplett",
+    planFaktura: "Arved ja pakkumised",
+    planProjekt: "Projektid ja meeskond",
+    planKomplett: "Projektid + arved",
 
     fakturaUsers: "1–2 kasutajat",
-    fakturaMaxUsers: "Kuni 2 kasutajat – vali Komplett",
+    fakturaMaxUsers: "Kuni 2 kasutajat",
     fixedPrice: "Fikseeritud hind",
     includedDetail: "sh {included} · +{extra} SEK iga lisakasutaja eest",
     yearlyNote: "aastamaksega",
 
     groupProject: "Halda projekte või meeskondi",
     groupFinance: "Saada arve või pakkumine",
-    groupProjectHint: "Loo projekt, lisa oma meeskond ning jälgi nende tunde ja ülesandeid.",
-    groupFinanceHint: "Seadista oma ettevõte ja kliendid, seejärel saada pakkumisi ja arveid.",
     projectItems: [
       "Projektid, ülesanded ja fotod",
       "Tööaja märkimine GPS-iga",
@@ -628,20 +612,18 @@ export const pricingTranslations = {
     pricingPer: "SEK / mėn.",
     popular: "Dažniausiai renkamasi",
 
-    planFaktura: "Faktura",
-    planProjekt: "Projekt",
-    planKomplett: "Komplett",
+    planFaktura: "Sąskaitos ir pasiūlymai",
+    planProjekt: "Projektai ir komanda",
+    planKomplett: "Projektai + sąskaitos",
 
     fakturaUsers: "1–2 naudotojai",
-    fakturaMaxUsers: "Daugiausia 2 naudotojai – rinkitės Komplett",
+    fakturaMaxUsers: "Daugiausia 2 naudotojai",
     fixedPrice: "Fiksuota kaina",
     includedDetail: "įsk. {included} · +{extra} SEK už papildomą naudotoją",
     yearlyNote: "mokant už metus",
 
     groupProject: "Tvarkyti projektus ar brigadas",
     groupFinance: "Siųsti sąskaitą ar pasiūlymą",
-    groupProjectHint: "Sukurkite projektą, pridėkite savo komandą ir stebėkite jų valandas bei užduotis.",
-    groupFinanceHint: "Sukonfigūruokite savo įmonę ir klientus, tada siųskite pasiūlymus ir sąskaitas.",
     projectItems: [
       "Projektai, užduotys ir nuotraukos",
       "Laiko žymėjimas su GPS",
@@ -705,20 +687,18 @@ export const pricingTranslations = {
     pricingPer: "SEK / mēnesī",
     popular: "Visbiežāk izvēlētā",
 
-    planFaktura: "Faktura",
-    planProjekt: "Projekt",
-    planKomplett: "Komplett",
+    planFaktura: "Rēķini un piedāvājumi",
+    planProjekt: "Projekti un komanda",
+    planKomplett: "Projekti + rēķini",
 
     fakturaUsers: "1–2 lietotāji",
-    fakturaMaxUsers: "Ne vairāk kā 2 lietotāji – izvēlieties Komplett",
+    fakturaMaxUsers: "Ne vairāk kā 2 lietotāji",
     fixedPrice: "Fiksēta cena",
     includedDetail: "iekļ. {included} · +{extra} SEK par katru papildu lietotāju",
     yearlyNote: "maksājot par gadu",
 
     groupProject: "Pārvaldīt projektus vai brigādes",
     groupFinance: "Nosūtīt rēķinu vai piedāvājumu",
-    groupProjectHint: "Izveidojiet projektu, pievienojiet savu komandu un sekojiet līdzi viņu stundām un uzdevumiem.",
-    groupFinanceHint: "Iestatiet savu uzņēmumu un klientus, tad sūtiet piedāvājumus un rēķinus.",
     projectItems: [
       "Projekti, uzdevumi un foto",
       "Laika reģistrēšana ar GPS",

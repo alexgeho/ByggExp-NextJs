@@ -76,7 +76,11 @@ async function getRelatedPosts(
   pool = [...pool, ...cms.filter((p) => !seen.has(p.slug))];
   const current = pool.find((p) => p.slug === currentSlug);
   const cat = current ? categoryForTag(current.tag) : null;
-  const others = pool.filter((p) => p.slug !== currentSlug);
+  let others = pool.filter((p) => p.slug !== currentSlug);
+  // A feature page ("Funktioner") only links to other feature pages.
+  if (FEATURE_ARTICLE_SLUGS.has(currentSlug)) {
+    others = others.filter((p) => FEATURE_ARTICLE_SLUGS.has(p.slug));
+  }
   const same = cat ? others.filter((p) => categoryForTag(p.tag) === cat) : [];
   const sameSlugs = new Set(same.map((p) => p.slug));
   const rest = others.filter((p) => !sameSlugs.has(p.slug));

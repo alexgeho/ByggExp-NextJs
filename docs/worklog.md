@@ -269,3 +269,9 @@
 4. YouTube Шаг 2: записать Del 1 + расписать первые 8 видео (`docs/marketing/youtube-step2-videos.md`).
 
 ---
+
+## 2026-09-26 — Funktioner + pris-pillen
+- Priser: "Funktioner anpassade…"-pillen står nu mitt i kortets lediga yta (lika avstånd till listan och knappen).
+- Funktionssidor: "Liknande artiklar" visar bara andra funktionssidor.
+- Nya offert/faktura-bilder (fakturera-fran-byggexp-doc.webp, skapa-offert-i-byggexp-doc.webp) renderade från backendens nuvarande PDF-mallar med demoföretaget Nordström Bygg AB.
+- Nästa: färger på planerna (orange ersätts), ev. flytt /blog/<slug> → /funktioner/<slug> med 301.

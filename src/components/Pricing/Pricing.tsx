@@ -238,7 +238,9 @@ function Pricing({ pricingT, lang }: PricingProps) {
                   <span className="per">{pricingT.pricingPer}</span>
                 </div>
 
-                <div className="pricing-groups">
+                <div
+                  className={`pricing-groups${plan.highlight ? " pricing-groups-fit" : ""}`}
+                >
                   {plan.groups.map((group) => (
                     <div className="pricing-group" key={group.title}>
                       <h3 className="pricing-group-title">{group.title}</h3>
@@ -248,12 +250,14 @@ function Pricing({ pricingT, lang }: PricingProps) {
                 </div>
 
                 {plan.highlight ? (
-                  <div className="pricing-highlight">
-                    <div className="pricing-highlight-title">
-                      {plan.highlight.split(" – ")[0]}
-                    </div>
-                    <div className="pricing-highlight-note">
-                      {plan.highlight.split(" – ")[1]}
+                  <div className="pricing-highlight-wrap">
+                    <div className="pricing-highlight">
+                      <div className="pricing-highlight-title">
+                        {plan.highlight.split(" – ")[0]}
+                      </div>
+                      <div className="pricing-highlight-note">
+                        {plan.highlight.split(" – ")[1]}
+                      </div>
                     </div>
                   </div>
                 ) : null}

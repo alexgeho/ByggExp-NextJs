@@ -5,6 +5,11 @@
 
 ---
 
+## 🟡 2026-09-26 (вечер) — ревизия инструментов /sv/verktyg (ждёт «ок»)
+Отчёт: `~/sites-hub/audits/2026-09-26/byggexp-verktyg-research.md` (GSC 90 дн + Keyword Planner + скачивания).
+Предложено удалить 16 (8 PDF-утилит, tapet/färg/golv/isolering/spillprocent, moms, förseningsvite, betalningspåminnelse) с 301; усилить egenkontroll, takstolar, CTR betong/grus/kvadratmeter, offert/faktura/tidrapport-mall, schema/gantt.
+⚠️ Хаб сейчас показывает все 64 (правка 26.09) — владелец раньше не хотел «беспонтовые»; привести в порядок после решения.
+
 ## 🟢 2026-09-26 — SEO-аудит: технические фиксы live (`ba81258`)
 Аудит всех сайтов → `~/sites-hub/audits/2026-09-26/` (byggexp-audit.md). Исправлено и проверено на live:
 - Пустой SSR `<title>` на /[lang]/blog и /[lang]/funktioner (смешанные JSX-дети) → строка-шаблон.

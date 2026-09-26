@@ -99,7 +99,6 @@ function Pricing({ pricingT, lang }: PricingProps) {
       groups: [
         { title: pricingT.planFakturaSub, items: pricingT.financeItems },
       ],
-      note: pricingT.fakturaLimitNote,
       popular: false,
     },
     {
@@ -249,9 +248,6 @@ function Pricing({ pricingT, lang }: PricingProps) {
                       <CheckList items={group.items} accent={plan.accent} />
                     </div>
                   ))}
-                  {plan.note ? (
-                    <p className="pricing-limit-note">{plan.note}</p>
-                  ) : null}
                 </div>
 
                 {plan.highlight ? (
@@ -295,6 +291,9 @@ function Pricing({ pricingT, lang }: PricingProps) {
             />
           ))}
         </div>
+
+        {/* Fair-use limits for the "*" items in Koll på pengarna. */}
+        <p className="pricing-limit-note">{pricingT.fakturaLimitNote}</p>
 
         {/* SPECIAL OFFER: 40+ users */}
         <div className="pricing-banner pricing-offer">

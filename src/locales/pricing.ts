@@ -58,15 +58,15 @@ export const pricingTranslations = {
     financeItems: [
       "Мобильное приложение + админ-панель",
       "Коммерческие предложения и счета*",
+      "E-mail для сканирования входящих счетов*",
       "Напоминания о предстоящих платежах",
       "Зарплата, расчётные листки и AGI",
       "Экономика проекта: бюджет, смета и рентабельность",
       "Сканирование чеков и счетов – автоматически проводятся по проекту*",
-      "Входящие счета и расходы",
       "Личные финансы (скоро)",
     ],
     fakturaLimitNote:
-      "* До 30 исходящих счетов и 100 отсканированных чеков и счетов в месяц. Нужно больше? Договоримся.",
+      "* До 30 исходящих и 30 входящих счетов и 100 отсканированных чеков в месяц. Нужно больше? Договоримся.",
 
     pricingButton: "Записаться на демо",
     pricingTrial: "14 дней бесплатно со всеми функциями",
@@ -151,15 +151,15 @@ export const pricingTranslations = {
     financeItems: [
       "Mobile app + admin panel",
       "Offers and invoices*",
+      "E-mail address for scanning incoming invoices*",
       "Reminders for upcoming payments",
       "Payroll, payslips and AGI",
       "Project finances: budget, estimate and profitability",
       "Scan receipts and invoices – booked to the project automatically*",
-      "Supplier invoices and expenses",
       "Personal finances (coming soon)",
     ],
     fakturaLimitNote:
-      "* Up to 30 outgoing invoices and 100 scanned receipts and invoices per month. Need more? Let's talk.",
+      "* Up to 30 outgoing and 30 incoming invoices and 100 scanned receipts per month. Need more? Let's talk.",
 
     pricingButton: "Book a demo",
     pricingTrial: "14 days free with all features",
@@ -245,15 +245,15 @@ export const pricingTranslations = {
     financeItems: [
       "Mobilapp + adminpanel",
       "Offerter och fakturor*",
+      "E-postadress för skanning av inkommande fakturor*",
       "Påminnelser om kommande betalningar",
       "Löner, lönespecifikationer och AGI",
       "Projektekonomi: budget, kalkyl och lönsamhet",
       "Skanna kvitton och fakturor – bokförs automatiskt på projektet*",
-      "Inköpsfakturor och utlägg",
       "Personlig ekonomi (kommer snart)",
     ],
     fakturaLimitNote:
-      "* Upp till 30 utgående fakturor och 100 skannade kvitton och fakturor per månad. Behöver ni mer? Vi hittar en lösning.",
+      "* Upp till 30 utgående och 30 inkommande fakturor samt 100 skannade kvitton per månad. Behöver ni mer? Vi hittar en lösning.",
 
     pricingButton: "Boka demo",
     pricingTrial: "14 dagar gratis med alla funktioner",
@@ -339,15 +339,15 @@ export const pricingTranslations = {
     financeItems: [
       "Mobilapp + adminpanel",
       "Tilbud og fakturaer*",
+      "E-postadresse for skanning av inngående fakturaer*",
       "Påminnelser om kommende betalinger",
       "Lønn, lønnsslipper og AGI",
       "Prosjektøkonomi: budsjett, kalkyle og lønnsomhet",
       "Skann kvitteringer og fakturaer – føres automatisk på prosjektet*",
-      "Inngående fakturaer og utlegg",
       "Personlig økonomi (kommer snart)",
     ],
     fakturaLimitNote:
-      "* Opptil 30 utgående fakturaer og 100 skannede kvitteringer og fakturaer per måned. Trenger dere mer? Ta kontakt.",
+      "* Opptil 30 utgående og 30 inngående fakturaer og 100 skannede kvitteringer per måned. Trenger dere mer? Ta kontakt.",
 
     pricingButton: "Bestill demo",
     pricingTrial: "14 dager gratis med alle funksjoner",
@@ -438,15 +438,15 @@ export const pricingTranslations = {
     financeItems: [
       "Aplikacja mobilna + panel administracyjny",
       "Oferty i faktury*",
+      "Adres e-mail do skanowania faktur przychodzących*",
       "Przypomnienia o nadchodzących płatnościach",
       "Wynagrodzenia, paski płacowe i AGI",
       "Finanse projektu: budżet, kosztorys i rentowność",
       "Skanowanie paragonów i faktur – automatycznie księgowane na projekt*",
-      "Faktury zakupowe i wydatki",
       "Finanse osobiste (wkrótce)",
     ],
     fakturaLimitNote:
-      "* Do 30 faktur wychodzących i 100 zeskanowanych paragonów i faktur miesięcznie. Potrzebujesz więcej? Porozmawiajmy.",
+      "* Do 30 faktur wychodzących i 30 przychodzących oraz 100 zeskanowanych paragonów miesięcznie. Potrzebujesz więcej? Porozmawiajmy.",
 
     pricingButton: "Umów demo",
     pricingTrial: "14 dni za darmo ze wszystkimi funkcjami",
@@ -537,15 +537,15 @@ export const pricingTranslations = {
     financeItems: [
       "Мобільний застосунок + адмін-панель",
       "Комерційні пропозиції та рахунки*",
+      "E-mail для сканування вхідних рахунків*",
       "Нагадування про майбутні платежі",
       "Зарплата, розрахункові листи та AGI",
       "Економіка проєкту: бюджет, кошторис і рентабельність",
       "Сканування чеків і рахунків – автоматично проводяться по проєкту*",
-      "Вхідні рахунки та витрати",
       "Особисті фінанси (скоро)",
     ],
     fakturaLimitNote:
-      "* До 30 вихідних рахунків і 100 відсканованих чеків і рахунків на місяць. Потрібно більше? Домовимося.",
+      "* До 30 вихідних і 30 вхідних рахунків та 100 відсканованих чеків на місяць. Потрібно більше? Домовимося.",
 
     pricingButton: "Замовити демо",
     pricingTrial: "14 днів безкоштовно з усіма функціями",
@@ -631,15 +631,15 @@ export const pricingTranslations = {
     financeItems: [
       "Mobiilisovellus + hallintapaneeli",
       "Tarjoukset ja laskut*",
+      "Sähköpostiosoite saapuvien laskujen skannaukseen*",
       "Muistutukset tulevista maksuista",
       "Palkat, palkkalaskelmat ja AGI",
       "Projektin talous: budjetti, laskelma ja kannattavuus",
       "Skannaa kuitit ja laskut – kirjataan projektille automaattisesti*",
-      "Ostolaskut ja kulut",
       "Henkilökohtainen talous (tulossa)",
     ],
     fakturaLimitNote:
-      "* Enintään 30 lähtevää laskua ja 100 skannattua kuittia ja laskua kuukaudessa. Tarvitsetteko enemmän? Sovitaan yhdessä.",
+      "* Enintään 30 lähtevää ja 30 saapuvaa laskua sekä 100 skannattua kuittia kuukaudessa. Tarvitsetteko enemmän? Sovitaan yhdessä.",
 
     pricingButton: "Varaa demo",
     pricingTrial: "14 päivää ilmaiseksi kaikilla ominaisuuksilla",
@@ -725,15 +725,15 @@ export const pricingTranslations = {
     financeItems: [
       "Mobiilirakendus + halduspaneel",
       "Pakkumised ja arved*",
+      "E-posti aadress sissetulevate arvete skannimiseks*",
       "Meeldetuletused eelseisvatest maksetest",
       "Palgad, palgalehed ja AGI",
       "Projekti rahandus: eelarve, kalkulatsioon ja kasumlikkus",
       "Skanni tšekke ja arveid – kirjendatakse projektile automaatselt*",
-      "Ostuarved ja kulud",
       "Isiklik rahandus (tulekul)",
     ],
     fakturaLimitNote:
-      "* Kuni 30 väljaminevat arvet ja 100 skannitud tšekki ja arvet kuus. Vajate rohkem? Räägime.",
+      "* Kuni 30 väljaminevat ja 30 sissetulevat arvet ning 100 skannitud tšekki kuus. Vajate rohkem? Räägime.",
 
     pricingButton: "Broneeri demo",
     pricingTrial: "14 päeva tasuta kõigi funktsioonidega",
@@ -824,15 +824,15 @@ export const pricingTranslations = {
     financeItems: [
       "Mobilioji programėlė + administravimo skydelis",
       "Pasiūlymai ir sąskaitos*",
+      "El. pašto adresas gaunamų sąskaitų skenavimui*",
       "Priminimai apie artėjančius mokėjimus",
       "Atlyginimai, algalapiai ir AGI",
       "Projekto finansai: biudžetas, sąmata ir pelningumas",
       "Kvitų ir sąskaitų skenavimas – automatiškai priskiriama projektui*",
-      "Gaunamos sąskaitos ir išlaidos",
       "Asmeniniai finansai (netrukus)",
     ],
     fakturaLimitNote:
-      "* Iki 30 išrašytų sąskaitų ir 100 nuskaitytų čekių bei sąskaitų per mėnesį. Reikia daugiau? Susitarsime.",
+      "* Iki 30 išrašytų ir 30 gaunamų sąskaitų bei 100 nuskaitytų čekių per mėnesį. Reikia daugiau? Susitarsime.",
 
     pricingButton: "Užsisakyti demo",
     pricingTrial: "14 dienų nemokamai su visomis funkcijomis",
@@ -922,15 +922,15 @@ export const pricingTranslations = {
     financeItems: [
       "Mobilā lietotne + administrācijas panelis",
       "Piedāvājumi un rēķini*",
+      "E-pasta adrese ienākošo rēķinu skenēšanai*",
       "Atgādinājumi par gaidāmajiem maksājumiem",
       "Algas, algas lapiņas un AGI",
       "Projekta finanses: budžets, tāme un rentabilitāte",
       "Čeku un rēķinu skenēšana – automātiski iegrāmatoti projektā*",
-      "Ienākošie rēķini un izdevumi",
       "Personīgās finanses (drīzumā)",
     ],
     fakturaLimitNote:
-      "* Līdz 30 izrakstītiem rēķiniem un 100 skenētiem čekiem un rēķiniem mēnesī. Vajag vairāk? Sarunāsim.",
+      "* Līdz 30 izrakstītiem un 30 ienākošiem rēķiniem un 100 skenētiem čekiem mēnesī. Vajag vairāk? Sarunāsim.",
 
     pricingButton: "Pieteikt demo",
     pricingTrial: "14 dienas bez maksas ar visām funkcijām",

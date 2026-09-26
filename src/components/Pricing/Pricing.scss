@@ -218,11 +218,14 @@
   margin-bottom: 0;
 }
 
-/* Fair-use limit under the Faktura list (the "*" items). */
+/* Fair-use limits for the "*" items, under the plan cards. */
 .pricing-limit-note {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.4;
+  max-width: 820px;
+  margin: 20px auto 0;
+  padding: 0 16px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
   color: var(--muted);
 }
 

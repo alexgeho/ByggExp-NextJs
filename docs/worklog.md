@@ -297,3 +297,4 @@ NÄSTA (из аудита, не сделано): продуктовые ленд
 - Priser: raden under knapparna = "14 dagar gratis med alla funktioner" (10 språk), ersätter "Kom igång på 5 minuter". Moms nämns inte (ägarens beslut).
 - Mobil: "Vad får ni…"-slidern var bredare än skärmen (flex align-items:center lät containern växa till hela spåret) – fixat med width:100%/min-width:0. Pilarna i sliders ligger nu under kortet på dot-raden på telefon.
 - Favicon: appikonen (byggexp-app/src/assets/icon.png) → favicon.ico (16/32/48, rundade hörn), icon-192/512.png, apple-touch-icon.png; länkar i _document.tsx.
+- Priser: Koll på pengarna — ny punkt "E-postadress för skanning av inkommande fakturor*", "Inköpsfakturor och utlägg" borttagen (enligt ägarens tabell). Noten flyttad under korten: 30 utgående + 30 inkommande fakturor + 100 skannade kvitton/mån (10 språk).

@@ -279,3 +279,4 @@
 
 ## 2026-09-26 — Slutkarusellen
 - "Vad ni får"-karusellen: egen ikon per kort (klocka, blixt, team, sköld med bock) i stället för samma sköld.
+- Priser: Koll på pengarna — "*" på fakturor och skanning + not "Upp till 30 utgående fakturor och 100 skannade kvitton/fakturor per månad. Behöver ni mer? Vi hittar en lösning." (10 språk). Endast text; ingen spärr i backend ännu (beslut väntar).

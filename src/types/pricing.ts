@@ -57,6 +57,7 @@ export type PricingT = {
   komplettItems: string[];
 
   usersNote: string;
+  fakturaLimitNote: string;
 
   footnote: string;
 };

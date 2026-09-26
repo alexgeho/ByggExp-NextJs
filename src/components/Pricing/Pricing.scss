@@ -218,6 +218,14 @@
   margin-bottom: 0;
 }
 
+/* Fair-use limit under the Faktura list (the "*" items). */
+.pricing-limit-note {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
 .pricing-highlight-wrap {
   flex-grow: 1;
   display: flex;

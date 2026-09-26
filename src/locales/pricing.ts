@@ -30,9 +30,9 @@ export const pricingTranslations = {
     pricingPer: "SEK / месяц",
     popular: "Чаще всего выбирают",
 
-    planFaktura: "Счета и предложения",
-    planProjekt: "Проекты и команда",
-    planKomplett: "Проекты + счета",
+    planFaktura: "Контроль денег",
+    planProjekt: "Контроль работ",
+    planKomplett: "Полный контроль",
 
     fakturaUsers: "1–2 пользователя",
     fakturaMaxUsers: "Максимум 2 пользователя",
@@ -100,9 +100,9 @@ export const pricingTranslations = {
     pricingPer: "SEK / month",
     popular: "Most popular",
 
-    planFaktura: "Invoices & offers",
-    planProjekt: "Projects & team",
-    planKomplett: "Projects + invoices",
+    planFaktura: "Money in check",
+    planProjekt: "Work in check",
+    planKomplett: "Everything in check",
 
     fakturaUsers: "1–2 users",
     fakturaMaxUsers: "Max 2 users",
@@ -171,9 +171,9 @@ export const pricingTranslations = {
     pricingPer: "SEK / månad",
     popular: "Mest valt",
 
-    planFaktura: "Faktura & offert",
-    planProjekt: "Projekt & team",
-    planKomplett: "Projekt + faktura",
+    planFaktura: "Koll på pengarna",
+    planProjekt: "Koll på jobbet",
+    planKomplett: "Full koll",
 
     fakturaUsers: "1–2 användare",
     fakturaMaxUsers: "Max 2 användare",
@@ -242,9 +242,9 @@ export const pricingTranslations = {
     pricingPer: "SEK / måned",
     popular: "Mest valgt",
 
-    planFaktura: "Faktura og tilbud",
-    planProjekt: "Prosjekt og team",
-    planKomplett: "Prosjekt + faktura",
+    planFaktura: "Kontroll på pengene",
+    planProjekt: "Kontroll på jobben",
+    planKomplett: "Full kontroll",
 
     fakturaUsers: "1–2 brukere",
     fakturaMaxUsers: "Maks 2 brukere",
@@ -318,9 +318,9 @@ export const pricingTranslations = {
     pricingPer: "SEK / miesiąc",
     popular: "Najczęściej wybierany",
 
-    planFaktura: "Faktury i oferty",
-    planProjekt: "Projekty i zespół",
-    planKomplett: "Projekty + faktury",
+    planFaktura: "Pieniądze pod kontrolą",
+    planProjekt: "Praca pod kontrolą",
+    planKomplett: "Pełna kontrola",
 
     fakturaUsers: "1–2 użytkowników",
     fakturaMaxUsers: "Maks. 2 użytkowników",
@@ -394,9 +394,9 @@ export const pricingTranslations = {
     pricingPer: "SEK / місяць",
     popular: "Найчастіше обирають",
 
-    planFaktura: "Рахунки й пропозиції",
-    planProjekt: "Проєкти й команда",
-    planKomplett: "Проєкти + рахунки",
+    planFaktura: "Контроль грошей",
+    planProjekt: "Контроль робіт",
+    planKomplett: "Повний контроль",
 
     fakturaUsers: "1–2 користувачі",
     fakturaMaxUsers: "Максимум 2 користувачі",
@@ -465,9 +465,9 @@ export const pricingTranslations = {
     pricingPer: "SEK / kk",
     popular: "Suosituin",
 
-    planFaktura: "Laskut ja tarjoukset",
-    planProjekt: "Projektit ja tiimi",
-    planKomplett: "Projektit + laskut",
+    planFaktura: "Rahat hallinnassa",
+    planProjekt: "Työt hallinnassa",
+    planKomplett: "Kaikki hallinnassa",
 
     fakturaUsers: "1–2 käyttäjää",
     fakturaMaxUsers: "Enintään 2 käyttäjää",
@@ -536,9 +536,9 @@ export const pricingTranslations = {
     pricingPer: "SEK / kuus",
     popular: "Enim valitud",
 
-    planFaktura: "Arved ja pakkumised",
-    planProjekt: "Projektid ja meeskond",
-    planKomplett: "Projektid + arved",
+    planFaktura: "Raha kontrolli all",
+    planProjekt: "Töö kontrolli all",
+    planKomplett: "Täielik kontroll",
 
     fakturaUsers: "1–2 kasutajat",
     fakturaMaxUsers: "Kuni 2 kasutajat",
@@ -612,9 +612,9 @@ export const pricingTranslations = {
     pricingPer: "SEK / mėn.",
     popular: "Dažniausiai renkamasi",
 
-    planFaktura: "Sąskaitos ir pasiūlymai",
-    planProjekt: "Projektai ir komanda",
-    planKomplett: "Projektai + sąskaitos",
+    planFaktura: "Pinigai kontroliuojami",
+    planProjekt: "Darbai kontroliuojami",
+    planKomplett: "Pilna kontrolė",
 
     fakturaUsers: "1–2 naudotojai",
     fakturaMaxUsers: "Daugiausia 2 naudotojai",
@@ -687,9 +687,9 @@ export const pricingTranslations = {
     pricingPer: "SEK / mēnesī",
     popular: "Visbiežāk izvēlētā",
 
-    planFaktura: "Rēķini un piedāvājumi",
-    planProjekt: "Projekti un komanda",
-    planKomplett: "Projekti + rēķini",
+    planFaktura: "Nauda kontrolē",
+    planProjekt: "Darbi kontrolē",
+    planKomplett: "Pilnīga kontrole",
 
     fakturaUsers: "1–2 lietotāji",
     fakturaMaxUsers: "Ne vairāk kā 2 lietotāji",

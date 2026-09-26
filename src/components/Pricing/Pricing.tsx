@@ -112,17 +112,20 @@ function Pricing({ pricingT, lang }: PricingProps) {
     },
     {
       key: "komplett",
+      highlight: pricingT.komplettItems[pricingT.komplettItems.length - 1],
       name: pricingT.planKomplett,
       accent: "blue" as Accent,
       price: fmt(total(KOMPLETT)),
       groups: [
         {
           title: pricingT.planKomplettSub,
-          items: pricingT.komplettItems.map((item) =>
-            item
-              .replace("{projekt}", pricingT.planProjekt)
-              .replace("{faktura}", pricingT.planFaktura),
-          ),
+          items: pricingT.komplettItems
+            .slice(0, -1)
+            .map((item) =>
+              item
+                .replace("{projekt}", pricingT.planProjekt)
+                .replace("{faktura}", pricingT.planFaktura),
+            ),
         },
       ],
       popular: true,
@@ -243,6 +246,17 @@ function Pricing({ pricingT, lang }: PricingProps) {
                     </div>
                   ))}
                 </div>
+
+                {plan.highlight ? (
+                  <div className="pricing-highlight">
+                    <div className="pricing-highlight-title">
+                      {plan.highlight.split(" – ")[0]}
+                    </div>
+                    <div className="pricing-highlight-note">
+                      {plan.highlight.split(" – ")[1]}
+                    </div>
+                  </div>
+                ) : null}
 
                 <a href="#cta" className="btn-primary">
                   {pricingT.pricingButton}

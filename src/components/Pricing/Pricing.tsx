@@ -324,17 +324,6 @@ function Pricing({ pricingT, lang }: PricingProps) {
           </div>
           <CheckList items={pricingT.addonItems} accent="green" />
         </div>
-
-        <p className="pricing-footnote">
-          {pricingT.usersNote
-            .replace("{projekt}", pricingT.planProjekt)
-            .replace("{komplett}", pricingT.planKomplett)
-            .replace("{faktura}", pricingT.planFaktura)
-            .replace("{included}", String(INCLUDED_USERS))
-            .replace("{p}", fmt(PROJEKT.extra))
-            .replace("{k}", fmt(KOMPLETT.extra))}{" "}
-          {pricingT.footnote}
-        </p>
       </div>
     </section>
   );

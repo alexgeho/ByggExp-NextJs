@@ -57,15 +57,19 @@ const FEATURE_CRUMB: Record<LandingLanguageCode, string> = {
 type BlogArticlePageProps = {
   lang: LandingLanguageCode;
   post: BlogPost;
-  related: BlogPost[];
+  related: RelatedCard[];
 };
 
 // Best-effort: fetch a few other published posts to suggest at the end of the
 // article. Never let this break the page — return [] on any failure.
+// Card fields only — shipping 8 full articles (contentHtml) in props bloated
+// every article's HTML payload.
+type RelatedCard = Pick<BlogPost, '_id' | 'slug' | 'title' | 'excerpt' | 'tag' | 'coverImageUrl'>;
+
 async function getRelatedPosts(
   lang: LandingLanguageCode,
   currentSlug: string,
-): Promise<BlogPost[]> {
+): Promise<RelatedCard[]> {
   // Pool = code articles + CMS posts, deduped. Prefer same-category articles so
   // "Liknande artiklar" is actually related, then fill up to 8 for the carousel.
   let pool: BlogPost[] = getCodeArticles(lang);
@@ -84,7 +88,14 @@ async function getRelatedPosts(
   const same = cat ? others.filter((p) => categoryForTag(p.tag) === cat) : [];
   const sameSlugs = new Set(same.map((p) => p.slug));
   const rest = others.filter((p) => !sameSlugs.has(p.slug));
-  return [...same, ...rest].slice(0, 8);
+  return [...same, ...rest].slice(0, 8).map(({ _id, slug, title, excerpt, tag, coverImageUrl }) => ({
+    _id,
+    slug,
+    title,
+    excerpt: excerpt || '',
+    tag: tag || '',
+    coverImageUrl: coverImageUrl || '',
+  }));
 }
 
 export const getServerSideProps: GetServerSideProps<
@@ -267,7 +278,7 @@ export default function BlogArticlePage({
               publisher: {
                 "@type": "Organization",
                 name: "ByggExp",
-                logo: { "@type": "ImageObject", url: `${siteUrl}/logo.png` },
+                logo: { "@type": "ImageObject", url: `${siteUrl}/icon-512.png` },
               },
             }),
           }}
@@ -449,6 +460,8 @@ export default function BlogArticlePage({
                       src={item.coverImageUrl}
                       alt={item.title}
                       className="blog-card-image"
+                      loading="lazy"
+                      decoding="async"
                     />
                   ) : null}
                   <div className="blog-card-body">

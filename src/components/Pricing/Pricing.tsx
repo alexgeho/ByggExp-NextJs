@@ -2,7 +2,8 @@ import { useRef, useState } from "react";
 import type { PluralForms, PricingProps } from "../../types/pricing";
 
 /* Price model (SEK excl. VAT). Yearly = 12 months minus YEARLY_DISCOUNT. */
-const FAKTURA_PRICE = 299;
+// Exported: the home page's SoftwareApplication schema quotes it as the entry price.
+export const FAKTURA_PRICE = 299;
 const INCLUDED_USERS = 10;
 const PROJEKT = { base: 690, extra: 69 };
 const KOMPLETT = { base: 990, extra: 119 };

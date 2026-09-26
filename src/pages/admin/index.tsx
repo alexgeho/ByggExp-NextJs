@@ -96,7 +96,7 @@ export default function AdminArticlesPage() {
   return (
     <>
       <Head>
-        <title>{heading} | ByggExp Admin</title>
+        <title>{`${heading} | ByggExp Admin`}</title>
       </Head>
       <AdminLayout>
         <main className="blog-admin-main">

@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import SiteChat from "../components/ChatAssistant/SiteChat";
 import CookieConsent from "../components/CookieConsent/CookieConsent";
 import { installDownloadTracking } from "../lib/downloadTracking";
-import 'quill/dist/quill.snow.css';
 import "../styles/globals.scss";
 import "../styles/blog.scss";
 import "../styles/funktioner.scss";

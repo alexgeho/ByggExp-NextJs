@@ -12,7 +12,7 @@ import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero/Hero";
 import Pain from "../../components/Pain/Pain";
 import { buildHreflangAlternates, defaultHomeMeta, localeOrigin } from "../../lib/seo";
-import Pricing from "../../components/Pricing/Pricing";
+import Pricing, { FAKTURA_PRICE } from "../../components/Pricing/Pricing";
 import { benefitsTranslations } from "../../locales/benefits";
 import { ctaTranslations } from "../../locales/CTA";
 import { featuresTranslations1_3 } from "../../locales/features1-3";
@@ -47,6 +47,28 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async ({ pa
     },
   };
 };
+
+// Product entity for the home page. Entry price comes from components/Pricing
+// so it can't drift from the visible plans (prices are SEK excl. VAT). No
+// aggregateRating until there are real, verifiable reviews.
+function homeAppSchema(url: string, description?: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "ByggExp",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "iOS, Android, Web",
+    url,
+    ...(description ? { description } : {}),
+    publisher: { "@type": "Organization", name: "ByggExp", url: "https://byggexp.se" },
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "SEK",
+      lowPrice: FAKTURA_PRICE,
+      offerCount: 3,
+    },
+  };
+}
 
 export default function HomePage({
   lang,
@@ -124,6 +146,10 @@ export default function HomePage({
         {description ? <meta property="og:description" content={description} /> : null}
         <meta property="og:url" content={canonicalUrl} />
         {seo?.imageUrl ? <meta property="og:image" content={seo.imageUrl} /> : null}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(homeAppSchema(canonicalUrl, description)) }}
+        />
       </Head>
       <Header headerT={headerT} />
       <Hero heroT={heroT} />

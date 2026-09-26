@@ -35,6 +35,18 @@ export function middleware(req: NextRequest) {
   const decodedPath = decodePath(pathname);
   const firstSeg = decodedPath.split('/')[1] || '';
 
+  // www.byggexp.se / www.byggexp.no served the full site with 200 (only the
+  // canonical saved us). 301 to the bare host so links and crawl budget
+  // consolidate on one origin.
+  const rawHost = (req.headers.get('host') || '').toLowerCase().split(':')[0];
+  if (rawHost === `www.${SE_HOST}` || rawHost === `www.${NO_HOST}`) {
+    const to = new URL(url);
+    to.protocol = 'https:';
+    to.host = bare(rawHost);
+    to.port = '';
+    return NextResponse.redirect(to, 301);
+  }
+
   // Googlebot scraped the literal Next.js route id `/[lang]/...` out of the
   // __NEXT_DATA__ blob and crawled it, producing a batch of bogus 404s in Search
   // Console. Those paths are never real links; 301 them onto the sv equivalent so

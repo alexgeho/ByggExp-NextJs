@@ -120,7 +120,16 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
     });
   });
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
+  // A CMS post and a code article can share a slug — emit each <loc> once
+  // (first entry wins, matching the blog's CMS-first precedence).
+  const seen = new Set<string>();
+  const uniqueUrls = urls.filter((url) => {
+    if (seen.has(url.loc)) return false;
+    seen.add(url.loc);
+    return true;
+  });
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${uniqueUrls
     .map((url) => {
       const lastmod = url.lastmod
         ? `<lastmod>${escapeXml(formatLastmod(url.lastmod))}</lastmod>`

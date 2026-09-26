@@ -1,4 +1,6 @@
-import { Head, Html, Main, NextScript } from "next/document";
+import { Head, Html, Main, NextScript, type DocumentProps } from "next/document";
+
+import { landingLanguageCodes, type LandingLanguageCode } from "../locales/languages";
 
 // Default: block indexing. Set SITE_ALLOW_INDEX=true to allow search engines.
 const allowIndex = process.env.SITE_ALLOW_INDEX === "true";
@@ -25,8 +27,16 @@ const ORG_SCHEMA = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "ByggExp",
+  legalName: "RealMar AB",
   url: "https://byggexp.se",
-  logo: "https://byggexp.se/logo.png",
+  logo: "https://byggexp.se/icon-512.png",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Bromma",
+    addressRegion: "Stockholm",
+    addressCountry: "SE",
+  },
+  sameAs: ["https://www.youtube.com/@byggexp"],
   description:
     "Bygglednings- och projektstyrningsprogram för byggföretag: tidrapportering, projektekonomi, offert, faktura och personalliggare.",
 });
@@ -45,9 +55,18 @@ const WEBSITE_SCHEMA = JSON.stringify({
   publisher: { "@type": "Organization", name: "ByggExp", url: "https://byggexp.se" },
 });
 
-export default function Document() {
+// <html lang> follows the /[lang]/ route segment so en/ru/pl… pages aren't
+// declared Swedish; anything without a locale segment falls back to sv.
+function htmlLang(props: DocumentProps): LandingLanguageCode {
+  const lang = props.__NEXT_DATA__?.query?.lang;
+  return typeof lang === "string" && landingLanguageCodes.includes(lang as LandingLanguageCode)
+    ? (lang as LandingLanguageCode)
+    : "sv";
+}
+
+export default function Document(props: DocumentProps) {
   return (
-    <Html lang="sv">
+    <Html lang={htmlLang(props)}>
       <Head>
         {allowIndex ? null : (
           <meta name="robots" content="noindex, nofollow" />
@@ -79,9 +98,11 @@ export default function Document() {
             og:image + twitter card so shares render with a preview. */}
         <meta property="og:site_name" content="ByggExp" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://byggexp.se/logo.png" />
+        <meta property="og:image" content="https://byggexp.se/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://byggexp.se/logo.png" />
+        <meta name="twitter:image" content="https://byggexp.se/og-default.jpg" />
       </Head>
       <body>
         <Main />

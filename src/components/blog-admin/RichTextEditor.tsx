@@ -1,6 +1,9 @@
 import dynamic from 'next/dynamic';
 import type { ComponentProps } from 'react';
 
+// Editor-only CSS: imported here (not in _app) so public pages don't ship it.
+import 'quill/dist/quill.snow.css';
+
 const ReactQuill = dynamic(() => import('react-quill-new'), { ssr: false });
 
 type RichTextEditorProps = ComponentProps<typeof ReactQuill>;

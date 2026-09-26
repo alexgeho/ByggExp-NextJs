@@ -300,7 +300,7 @@ export default function KontrollplanMallTool() {
         <p className="lm-tool-sub">
           Fyll i projektuppgifter och en rad per kontroll – vad, hur, mot vilket underlag, vem och om det är
           egenkontroll eller certifierad sakkunnig – och ladda ner kontrollplanen som PDF eller Excel.
-          Klicka på "Fyll i exempel" för att se ett ifyllt exempel. För större projekt tar en kontrollansvarig (KA)
+          Klicka på &quot;Fyll i exempel&quot; för att se ett ifyllt exempel. För större projekt tar en kontrollansvarig (KA)
           fram planen.
         </p>
       </div>

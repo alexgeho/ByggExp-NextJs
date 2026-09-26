@@ -52,6 +52,9 @@ const CONTENT: Record<CalcLocale, Content> = {
           { slug: 'ob-overtid-kalkylator', title: 'OB & övertid', description: 'Räkna OB-tillägg och övertid enligt Byggavtalet (20–100 %).' },
           { slug: 'restidsersattning-kalkylator', title: 'Restids- & reseersättning', description: 'Reskostnad (2,50 kr/km) och restidsersättning enligt Byggavtalet.' },
           { slug: 'ackord-kalkylator', title: 'Ackord', description: 'Räkna ackordsöverskott: ackordssumma − förskott, granskningsarvode.' },
+          { slug: 'anstalld-kostnad-kalkylator', title: 'Vad kostar en anställd', description: 'Lön, arbetsgivaravgift och omkostnader – plus kostnad per debiterbar timme.' },
+          { slug: 'drojsmalsranta-kalkylator', title: 'Dröjsmålsränta', description: 'Ränta på en obetald faktura: referensränta + 8 % och lagstadgade avgifter.' },
+          { slug: 'forseningsvite-kalkylator', title: 'Förseningsvite', description: 'Vite per påbörjad vecka enligt AB 04/ABT 06, med valfritt tak.' },
         ],
       },
       {
@@ -73,6 +76,8 @@ const CONTENT: Record<CalcLocale, Content> = {
           { slug: 'trall-kalkylator', title: 'Trall & altan', description: 'Löpmeter och antal trallbrädor.' },
           { slug: 'staket-kalkylator', title: 'Staket', description: 'Antal stolpar och sektioner.' },
           { slug: 'takstolar-kalkylator', title: 'Beräkna takstolar', description: 'Antal takstolar utifrån c/c.' },
+          { slug: 'spillprocent-kalkylator', title: 'Spillprocent', description: 'Materialåtgång med spill – bruttomängden att beställa (5–15 %).' },
+          { slug: 'u-varde-kalkylator', title: 'U-värde', description: 'Värmemotstånd och U-värde (W/m²K) för vägg, tak eller golv.' },
         ],
       },
       {
@@ -87,8 +92,40 @@ const CONTENT: Record<CalcLocale, Content> = {
           { slug: 'egenkontroll-el-mall', title: 'Egenkontroll el', description: 'Färdig el-checklista: jordfelsbrytare, isolationsmätning, märkning – PDF.' },
           { slug: 'egenkontroll-bygg-mall', title: 'Egenkontroll bygg', description: 'Bygg/stomme med metod och krav per punkt: fuktkvot, mått, infästningar, brand (BBR) – PDF.' },
           { slug: 'egenkontroll-vvs-mall', title: 'Egenkontroll VVS', description: 'Provningsprotokoll enligt Säker Vatten 2026:1: täthetsprovning, fall, varmvatten, intyg – PDF.' },
+          { slug: 'egenkontroll-vatrum-mall', title: 'Egenkontroll våtrum', description: 'Fuktmätning, tätskikt (BBV/GVK), fall mot golvbrunn och genomföringar – PDF.' },
+          { slug: 'egenkontroll-tak-mall', title: 'Egenkontroll tak', description: 'Underlagstäckning, infästning, genomföringar, fall och taksäkerhet – PDF.' },
+          { slug: 'egenkontroll-ventilation-mall', title: 'Egenkontroll ventilation', description: 'Täta kanaler, injustering av don, brandspjäll och isolering – PDF.' },
           { slug: 'arbetsberedning-mall', title: 'Arbetsberedning', description: 'Planera arbetsmomentet – arbetsgång, risker, kvalitet och resurser – som PDF.' },
           { slug: 'byggmotesprotokoll-mall', title: 'Byggmötesprotokoll', description: 'Färdig dagordning: ekonomi, tidplan, ÄTA, hinder, KMA och beslut med ansvarig – PDF.' },
+        ],
+      },
+      {
+        heading: 'Mallar – planering & projekt',
+        tools: [
+          { slug: 'schema-mall', title: 'Schema-mall (veckoschema)', description: 'Veckoschema för personal – fyll i pass per dag eller ladda ner en tom mall. PDF eller Excel.' },
+          { slug: 'gantt-schema-mall', title: 'Gantt-schema / tidsplan', description: 'Tidsplan med aktiviteter, ansvarig, start och slut – PDF eller Excel.' },
+          { slug: 'kontrollplan-mall', title: 'Kontrollplan', description: 'Kontrollplan enligt PBL för bygglov och anmälan – PDF.' },
+          { slug: 'kvalitetsplan-mall', title: 'Kvalitetsplan', description: 'Kvalitetsmål, egenkontroll och avvikelsehantering för mindre firmor – PDF.' },
+          { slug: 'mangdforteckning-mall', title: 'Mängdförteckning', description: 'Poster med mängd, enhet och á-pris som kalkylunderlag – PDF eller Excel.' },
+          { slug: 'efterkalkyl-mall', title: 'Efterkalkyl', description: 'Jämför anbud mot utfall per post och hitta marginalläckaget – PDF eller Excel.' },
+          { slug: 'restlista-mall', title: 'Restlista / punchlista', description: 'Kvarstående punkter med plats, ansvarig och datum – PDF eller Excel.' },
+        ],
+      },
+      {
+        heading: 'Mallar – säkerhet & KMA',
+        tools: [
+          { slug: 'riskbedomning-mall', title: 'Riskbedömning', description: 'Moment, risker, åtgärder och ansvarig – skriftlig riskbedömning som PDF.' },
+          { slug: 'skyddsrond-mall', title: 'Skyddsrond', description: 'Protokoll med fallskydd, ställning, el och brand – PDF.' },
+          { slug: 'avvikelserapport-mall', title: 'Avvikelserapport', description: 'Avvikelse, orsak, åtgärd och verifiering – PDF eller Excel.' },
+        ],
+      },
+      {
+        heading: 'Mallar – avtal & ekonomi',
+        tools: [
+          { slug: 'entreprenadkontrakt-mall', title: 'Entreprenadkontrakt', description: 'Parter, pris, tider, ÄTA och garanti i ett färdigt kontrakt – PDF eller Excel.' },
+          { slug: 'anstallningsavtal-mall', title: 'Anställningsavtal', description: 'Roll, anställningsform, lön, arbetstid och kollektivavtal – PDF eller Excel.' },
+          { slug: 'betalningspaminnelse-mall', title: 'Betalningspåminnelse', description: 'Påminnelse med lagstadgad avgift och dröjsmålsränta – PDF.' },
+          { slug: 'korjournal-mall', title: 'Körjournal', description: 'Resor med mätarställning och ärende enligt Skatteverket – PDF.' },
         ],
       },
       {

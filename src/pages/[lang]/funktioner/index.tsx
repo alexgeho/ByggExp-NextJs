@@ -755,8 +755,7 @@ function FeatureCarousel({
                     ) : (
                       <img
                         src={coverImage}
-                        alt=""
-                        aria-hidden="true"
+                        alt={title}
                         decoding="async"
                         draggable={false}
                         loading="lazy"
@@ -857,7 +856,7 @@ export default function FunktionerPage({
   return (
     <>
       <Head>
-        <title>{copy.title} | ByggExp</title>
+        <title>{`${copy.title} | ByggExp`}</title>
         <meta name="description" content={copy.subtitle} />
         <link rel="canonical" href={canonicalUrl} />
         {hreflangAlternates.map((alt) => (

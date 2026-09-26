@@ -1895,7 +1895,7 @@ const A_SCHEMALAGGNING_BYGG_HTML = `
 <p>Störst nytta gör schemat när det kopplas till verkligheten: planerad tid jämförs med <a href="/sv/blog/automatisk-tidrapportering-och-export">loggad tid</a>, och avvikelser syns i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a>.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du sluta pussla i huvudet? <a href="/sv/contact">Boka en demo av ByggExp</a>.</p>
+<p>Vill du börja enkelt? Ladda ner en gratis <a href="/sv/verktyg/schema-mall">schema-mall (veckoschema) för personal</a> som PDF eller Excel. Vill du sluta pussla i huvudet? <a href="/sv/contact">Boka en demo av ByggExp</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är schemaläggning för byggföretag?</h3>
@@ -2030,7 +2030,7 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML = `
 <h3>Vad är ett schemaläggningssystem för bygg?</h3>
 <p>Ett verktyg som fördelar personal på projekt och dagar och håller planen levande när något ändras – till skillnad från Excel, som du får skriva om för hand.</p>
 <h3>När räcker Excel fortfarande?</h3>
-<p>Så länge ni är ett lag på ett projekt räcker ett delat ark långt. Behovet av ett system uppstår när flera lag ska fördelas över flera byggen samtidigt, och ändringar sker under veckan.</p>
+<p>Så länge ni är ett lag på ett projekt räcker ett delat ark långt – till exempel vår gratis <a href="/sv/verktyg/schema-mall">schema-mall</a>. Behovet av ett system uppstår när flera lag ska fördelas över flera byggen samtidigt, och ändringar sker under veckan.</p>
 <h3>Ser personalen sitt schema i mobilen?</h3>
 <p>Ja. Planen delas till appen och ändringar syns direkt, så ingen behöver ringa kontoret för att veta var de ska.</p>
 <h3>Hänger schemat ihop med tidrapporteringen?</h3>

@@ -3,7 +3,8 @@ import type { GetServerSideProps } from "next";
 export const getServerSideProps: GetServerSideProps = async () => ({
   redirect: {
     destination: "/sv",
-    permanent: false,
+    // Permanent so the root's link equity consolidates on /sv.
+    permanent: true,
   },
 });
 

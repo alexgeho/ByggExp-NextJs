@@ -26,10 +26,23 @@ import {
 } from '../../../locales/languages';
 import type { BlogPost } from '../../../types/blog';
 
+// Only what the listing renders/searches — full contentHtml for ~290 posts made
+// the SSR payload ~3 MB.
+type BlogCard = Pick<BlogPost, '_id' | 'slug' | 'title' | 'excerpt' | 'tag' | 'coverImageUrl'>;
+
 type BlogIndexPageProps = {
   lang: LandingLanguageCode;
-  posts: BlogPost[];
+  posts: BlogCard[];
 };
+
+const toCard = ({ _id, slug, title, excerpt, tag, coverImageUrl }: BlogPost): BlogCard => ({
+  _id,
+  slug,
+  title,
+  excerpt: excerpt || '',
+  tag: tag || '',
+  coverImageUrl: coverImageUrl || '',
+});
 
 export const getServerSideProps: GetServerSideProps<
   BlogIndexPageProps
@@ -47,9 +60,9 @@ export const getServerSideProps: GetServerSideProps<
   const codeArticles = getCodeArticles(lang);
   const withCodeArticles = (base: BlogPost[]) => {
     const slugs = new Set(base.map((post) => post.slug));
-    return [...codeArticles.filter((post) => !slugs.has(post.slug)), ...base].filter(
-      (post) => !FEATURE_ARTICLE_SLUGS.has(post.slug),
-    );
+    return [...codeArticles.filter((post) => !slugs.has(post.slug)), ...base]
+      .filter((post) => !FEATURE_ARTICLE_SLUGS.has(post.slug))
+      .map(toCard);
   };
 
   try {
@@ -144,7 +157,7 @@ export default function BlogIndexPage({
   return (
     <>
       <Head>
-        <title>{copy.title} | ByggExp</title>
+        <title>{`${copy.title} | ByggExp`}</title>
         <meta name="description" content={copy.subtitle} />
         <link rel="canonical" href={canonicalUrl} />
         {hreflangAlternates.map((alt) => (
@@ -248,6 +261,8 @@ export default function BlogIndexPage({
                       src={post.coverImageUrl}
                       alt={post.title}
                       className="blog-card-image"
+                      loading="lazy"
+                      decoding="async"
                     />
                   ) : null}
                   <div className="blog-card-body">

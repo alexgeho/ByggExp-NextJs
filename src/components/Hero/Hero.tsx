@@ -105,7 +105,14 @@ function Hero({ heroT }: HeroProps) {
 
           {/* HERO VISUAL */}
           <div className="hero-visual">
-            <img src={phone} alt="Byggexp mobile" className="hero-phone" />
+            <img
+              src={phone}
+              alt="ByggExp-appen i mobilen"
+              className="hero-phone"
+              width={1200}
+              height={1504}
+              fetchPriority="high"
+            />
           </div>
         </div>
 

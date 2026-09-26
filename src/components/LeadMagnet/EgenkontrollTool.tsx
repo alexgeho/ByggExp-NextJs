@@ -103,6 +103,7 @@ export default function EgenkontrollTool({
           !!d.project?.trim() ||
           !!(d.rows?.some((r) => r.point?.trim() || r.comment?.trim() || r.result !== RESULTS[0]));
         if (hasContent) {
+          // eslint-disable-next-line react-hooks/set-state-in-effect -- restore the saved draft from localStorage after mount (not available during SSR).
           if (d.title !== undefined) setTitle(d.title);
           if (d.project !== undefined) setProject(d.project);
           if (d.responsible !== undefined) setResponsible(d.responsible);

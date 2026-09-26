@@ -298,7 +298,15 @@ function Features({
                       onClick={() => setLightboxImage(card.image)}
                       aria-label="Enlarge image"
                     >
-                      <img src={card.image} alt="" />
+                      {/* 1200w copy for the card; the 2400w original opens in the lightbox. */}
+                      <img
+                        src={card.image.replace(/\.webp$/, "-1200.webp")}
+                        alt={card.title}
+                        width={1200}
+                        height={656}
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </button>
                   </div>
                 </div>

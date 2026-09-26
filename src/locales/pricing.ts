@@ -46,15 +46,17 @@ export const pricingTranslations = {
     groupProject: "Управление проектами или бригадами",
     groupFinance: "Отправить счёт или предложение",
     projectItems: [
-      "Проекты, задачи и фото",
-      "Отметка времени с GPS",
-      "Журнал работ и самоконтроль",
-      "Планирование и расстановка персонала",
-      "Отсутствия",
-      "Инструменты с QR-кодом",
       "Мобильное приложение + админ-панель",
+      "Автоматический и ручной ввод рабочих часов",
+      "Контроль присутствия в режиме реального времени",
+      "Задачи с автонапоминаниями",
+      "Документы, фото и чертежи в одном месте",
+      "Планировщик проектов и сотрудников",
+      "Фотоотчёты, привязанные к смене",
+      "Выдача инструментов по QR-коду",
     ],
     financeItems: [
+      "Мобильное приложение + админ-панель",
       "Коммерческие предложения и счета",
       "Напоминания о предстоящих платежах",
       "Зарплата, расчётные листки и AGI",
@@ -88,9 +90,9 @@ export const pricingTranslations = {
 
       "Всё из «{faktura}»",
 
-      "Часы автоматически становятся счётом и основой для зарплаты",
+      "Рабочие часы за пару кликов превращаются в счёт или зарплату",
 
-      "Время, затраты и рентабельность по каждому проекту в одном месте",
+      "Сфотканные чеки, отчёты по часам, выставленные и входящие счета автоматически считаются в экономику проекта",
 
       "Функции, разработанные под ваш бизнес – по запросу",
 
@@ -135,22 +137,24 @@ export const pricingTranslations = {
     groupProject: "Manage projects or crews",
     groupFinance: "Send an invoice or offer",
     projectItems: [
-      "Projects, tasks and photos",
-      "Clock-in with GPS",
-      "Site diary and self-inspections",
-      "Planning and staffing",
-      "Absence",
-      "Tools with QR codes",
-      "Mobile app + Admin Panel",
+      "Mobile app + admin panel",
+      "Automatic and manual time tracking",
+      "Live attendance overview",
+      "Tasks with automatic reminders",
+      "Documents, photos and drawings in one place",
+      "Project and staff planning",
+      "Photo reports linked to the shift",
+      "Tools assigned via QR code",
     ],
     financeItems: [
-      "Quotes and invoices",
+      "Mobile app + admin panel",
+      "Offers and invoices",
       "Reminders for upcoming payments",
-      "Payroll, payslips and AGI (employer declaration)",
+      "Payroll, payslips and AGI",
       "Project finances: budget, estimate and profitability",
       "Scan receipts and invoices – booked to the project automatically",
       "Supplier invoices and expenses",
-      "Personal finance (coming soon)",
+      "Personal finances (coming soon)",
     ],
 
     pricingButton: "Book a demo",
@@ -177,9 +181,9 @@ export const pricingTranslations = {
 
       "Everything in \"{faktura}\"",
 
-      "Hours turn into invoices and payroll data automatically",
+      "Worked hours become invoices or payroll in a few clicks",
 
-      "Time, costs and profitability per project in one place",
+      "Photographed receipts, timesheets and incoming and outgoing invoices are counted into the project finances automatically",
 
       "Features built for your business – on request",
 
@@ -225,15 +229,17 @@ export const pricingTranslations = {
     groupProject: "Hantera projekt eller arbetslag",
     groupFinance: "Skicka faktura eller offert",
     projectItems: [
-      "Projekt, uppgifter och foton",
-      "Stämpling med GPS",
-      "Dagbok och egenkontroller",
-      "Planering och bemanning",
-      "Frånvaro",
-      "Verktyg med QR-kod",
-      "Mobilapp + Adminpanel",
+      "Mobilapp + adminpanel",
+      "Automatisk och manuell tidrapportering",
+      "Närvarokoll i realtid",
+      "Uppgifter med automatiska påminnelser",
+      "Dokument, foton och ritningar på ett ställe",
+      "Planering av projekt och personal",
+      "Fotorapporter kopplade till arbetspasset",
+      "Verktyg tilldelade via QR-kod",
     ],
     financeItems: [
+      "Mobilapp + adminpanel",
       "Offerter och fakturor",
       "Påminnelser om kommande betalningar",
       "Löner, lönespecifikationer och AGI",
@@ -267,9 +273,9 @@ export const pricingTranslations = {
 
       "Allt i {faktura}",
 
-      "Timmarna blir faktura och löneunderlag automatiskt",
+      "Arbetade timmar blir faktura eller lön med några klick",
 
-      "Tid, kostnader och lönsamhet per projekt på ett ställe",
+      "Fotade kvitton, tidrapporter och in- och utgående fakturor räknas automatiskt in i projektets ekonomi",
 
       "Funktioner anpassade för ert företag – på förfrågan",
 
@@ -315,22 +321,24 @@ export const pricingTranslations = {
     groupProject: "Administrer prosjekter eller arbeidslag",
     groupFinance: "Send faktura eller tilbud",
     projectItems: [
-      "Prosjekter, oppgaver og bilder",
-      "Stempling med GPS",
-      "Dagbok og egenkontroller",
-      "Planlegging og bemanning",
-      "Fravær",
-      "Verktøy med QR-kode",
-      "Mobilapp + Adminpanel",
+      "Mobilapp + adminpanel",
+      "Automatisk og manuell timeføring",
+      "Tilstedeværelse i sanntid",
+      "Oppgaver med automatiske påminnelser",
+      "Dokumenter, bilder og tegninger på ett sted",
+      "Planlegging av prosjekter og ansatte",
+      "Fotorapporter knyttet til skiftet",
+      "Verktøy tildelt via QR-kode",
     ],
     financeItems: [
+      "Mobilapp + adminpanel",
       "Tilbud og fakturaer",
       "Påminnelser om kommende betalinger",
-      "Lønn, lønnsslipper og arbeidsgiverdeklarasjon (AGI)",
+      "Lønn, lønnsslipper og AGI",
       "Prosjektøkonomi: budsjett, kalkyle og lønnsomhet",
-      "Skann kvitteringer og fakturaer – bokføres automatisk på prosjektet",
+      "Skann kvitteringer og fakturaer – føres automatisk på prosjektet",
       "Inngående fakturaer og utlegg",
-      "Privatøkonomi (kommer snart)",
+      "Personlig økonomi (kommer snart)",
     ],
 
     pricingButton: "Bestill demo",
@@ -357,9 +365,9 @@ export const pricingTranslations = {
 
       "Alt i {faktura}",
 
-      "Timene blir faktura og lønnsgrunnlag automatisk",
+      "Arbeidstimer blir faktura eller lønn med noen få klikk",
 
-      "Tid, kostnader og lønnsomhet per prosjekt på ett sted",
+      "Fotograferte kvitteringer, timelister og inngående og utgående fakturaer regnes automatisk inn i prosjektøkonomien",
 
       "Funksjoner tilpasset deres bedrift – på forespørsel",
 
@@ -410,15 +418,17 @@ export const pricingTranslations = {
     groupProject: "Zarządzaj projektami lub ekipami",
     groupFinance: "Wyślij fakturę lub ofertę",
     projectItems: [
-      "Projekty, zadania i zdjęcia",
-      "Rejestracja czasu z GPS",
-      "Dziennik budowy i samokontrola",
-      "Planowanie i obsada",
-      "Nieobecności",
-      "Narzędzia z kodem QR",
       "Aplikacja mobilna + panel administracyjny",
+      "Automatyczna i ręczna ewidencja czasu pracy",
+      "Kontrola obecności na żywo",
+      "Zadania z automatycznymi przypomnieniami",
+      "Dokumenty, zdjęcia i rysunki w jednym miejscu",
+      "Planowanie projektów i pracowników",
+      "Raporty zdjęciowe powiązane ze zmianą",
+      "Narzędzia przypisywane kodem QR",
     ],
     financeItems: [
+      "Aplikacja mobilna + panel administracyjny",
       "Oferty i faktury",
       "Przypomnienia o nadchodzących płatnościach",
       "Wynagrodzenia, paski płacowe i AGI",
@@ -452,9 +462,9 @@ export const pricingTranslations = {
 
       "Wszystko z „{faktura}”",
 
-      "Godziny automatycznie zamieniają się w fakturę i podstawę do wynagrodzeń",
+      "Przepracowane godziny w kilka kliknięć zamieniają się w fakturę lub wynagrodzenie",
 
-      "Czas, koszty i rentowność każdego projektu w jednym miejscu",
+      "Sfotografowane paragony, raporty godzin oraz faktury wystawione i przychodzące automatycznie trafiają do finansów projektu",
 
       "Funkcje tworzone dla Twojej firmy – na życzenie",
 
@@ -505,22 +515,24 @@ export const pricingTranslations = {
     groupProject: "Керувати проєктами або бригадами",
     groupFinance: "Надіслати рахунок або пропозицію",
     projectItems: [
-      "Проєкти, завдання та фото",
-      "Відмітка часу з GPS",
-      "Журнал робіт і самоконтроль",
-      "Планування та розстановка персоналу",
-      "Відсутності",
-      "Інструменти з QR-кодом",
-      "Мобільний застосунок + адмінпанель",
+      "Мобільний застосунок + адмін-панель",
+      "Автоматичний і ручний облік робочих годин",
+      "Контроль присутності в реальному часі",
+      "Завдання з автонагадуваннями",
+      "Документи, фото й креслення в одному місці",
+      "Планувальник проєктів і працівників",
+      "Фотозвіти, прив’язані до зміни",
+      "Видача інструментів за QR-кодом",
     ],
     financeItems: [
+      "Мобільний застосунок + адмін-панель",
       "Комерційні пропозиції та рахунки",
       "Нагадування про майбутні платежі",
-      "Зарплата, розрахункові листки та AGI",
+      "Зарплата, розрахункові листи та AGI",
       "Економіка проєкту: бюджет, кошторис і рентабельність",
       "Сканування чеків і рахунків – автоматично проводяться по проєкту",
       "Вхідні рахунки та витрати",
-      "Особисті фінанси (незабаром)",
+      "Особисті фінанси (скоро)",
     ],
 
     pricingButton: "Замовити демо",
@@ -547,9 +559,9 @@ export const pricingTranslations = {
 
       "Усе з «{faktura}»",
 
-      "Години автоматично стають рахунком і основою для зарплати",
+      "Робочі години за кілька кліків перетворюються на рахунок або зарплату",
 
-      "Час, витрати й рентабельність кожного проєкту в одному місці",
+      "Сфотографовані чеки, звіти про години, виставлені й вхідні рахунки автоматично враховуються в економіці проєкту",
 
       "Функції, розроблені під ваш бізнес – на запит",
 
@@ -595,22 +607,24 @@ export const pricingTranslations = {
     groupProject: "Hallitse projekteja tai työryhmiä",
     groupFinance: "Lähetä lasku tai tarjous",
     projectItems: [
-      "Projektit, tehtävät ja kuvat",
-      "Leimaus GPS:llä",
-      "Työmaapäiväkirja ja omavalvonta",
-      "Suunnittelu ja resursointi",
-      "Poissaolot",
-      "Työkalut QR-koodilla",
       "Mobiilisovellus + hallintapaneeli",
+      "Automaattinen ja manuaalinen tuntikirjaus",
+      "Läsnäolo reaaliajassa",
+      "Tehtävät automaattisilla muistutuksilla",
+      "Dokumentit, kuvat ja piirustukset yhdessä paikassa",
+      "Projektien ja henkilöstön suunnittelu",
+      "Vuoroon liitetyt kuvaraportit",
+      "Työkalut QR-koodilla",
     ],
     financeItems: [
+      "Mobiilisovellus + hallintapaneeli",
       "Tarjoukset ja laskut",
       "Muistutukset tulevista maksuista",
       "Palkat, palkkalaskelmat ja AGI",
-      "Projektitalous: budjetti, laskelma ja kannattavuus",
-      "Skannaa kuitit ja laskut – kirjataan automaattisesti projektille",
+      "Projektin talous: budjetti, laskelma ja kannattavuus",
+      "Skannaa kuitit ja laskut – kirjataan projektille automaattisesti",
       "Ostolaskut ja kulut",
-      "Henkilökohtainen talous (tulossa pian)",
+      "Henkilökohtainen talous (tulossa)",
     ],
 
     pricingButton: "Varaa demo",
@@ -637,9 +651,9 @@ export const pricingTranslations = {
 
       "Kaikki {faktura}-paketista",
 
-      "Tunneista syntyy lasku ja palkka-aineisto automaattisesti",
+      "Tehdyistä tunneista syntyy lasku tai palkka muutamalla klikkauksella",
 
-      "Aika, kulut ja kannattavuus projekteittain yhdessä paikassa",
+      "Kuvatut kuitit, tuntiraportit sekä lähtevät ja saapuvat laskut lasketaan automaattisesti projektin talouteen",
 
       "Yrityksellenne räätälöidyt toiminnot – pyynnöstä",
 
@@ -685,20 +699,22 @@ export const pricingTranslations = {
     groupProject: "Halda projekte või meeskondi",
     groupFinance: "Saada arve või pakkumine",
     projectItems: [
-      "Projektid, ülesanded ja fotod",
-      "Tööaja märkimine GPS-iga",
-      "Päevik ja enesekontroll",
-      "Planeerimine ja mehitamine",
-      "Puudumised",
-      "Tööriistad QR-koodiga",
       "Mobiilirakendus + halduspaneel",
+      "Automaatne ja käsitsi ajaarvestus",
+      "Kohalolu jälgimine reaalajas",
+      "Ülesanded automaatsete meeldetuletustega",
+      "Dokumendid, fotod ja joonised ühes kohas",
+      "Projektide ja töötajate planeerimine",
+      "Vahetusega seotud fotoaruanded",
+      "Tööriistad QR-koodiga",
     ],
     financeItems: [
+      "Mobiilirakendus + halduspaneel",
       "Pakkumised ja arved",
       "Meeldetuletused eelseisvatest maksetest",
       "Palgad, palgalehed ja AGI",
       "Projekti rahandus: eelarve, kalkulatsioon ja kasumlikkus",
-      "Skanni tšekid ja arved – kirjendatakse automaatselt projektile",
+      "Skanni tšekke ja arveid – kirjendatakse projektile automaatselt",
       "Ostuarved ja kulud",
       "Isiklik rahandus (tulekul)",
     ],
@@ -727,9 +743,9 @@ export const pricingTranslations = {
 
       "Kõik paketist „{faktura}“",
 
-      "Tunnid muutuvad automaatselt arveks ja palgaandmeteks",
+      "Töötunnid muutuvad mõne klõpsuga arveks või palgaks",
 
-      "Aeg, kulud ja kasumlikkus projektide kaupa ühes kohas",
+      "Pildistatud tšekid, tunniaruanded ning väljaminevad ja sissetulevad arved arvestatakse automaatselt projekti rahandusse",
 
       "Teie ettevõttele loodud funktsioonid – soovi korral",
 
@@ -780,22 +796,24 @@ export const pricingTranslations = {
     groupProject: "Tvarkyti projektus ar brigadas",
     groupFinance: "Siųsti sąskaitą ar pasiūlymą",
     projectItems: [
-      "Projektai, užduotys ir nuotraukos",
-      "Laiko žymėjimas su GPS",
-      "Dienynas ir savikontrolė",
-      "Planavimas ir darbuotojų paskirstymas",
-      "Neatvykimai",
-      "Įrankiai su QR kodu",
       "Mobilioji programėlė + administravimo skydelis",
+      "Automatinė ir rankinė darbo laiko apskaita",
+      "Buvimo kontrolė realiuoju laiku",
+      "Užduotys su automatiniais priminimais",
+      "Dokumentai, nuotraukos ir brėžiniai vienoje vietoje",
+      "Projektų ir darbuotojų planavimas",
+      "Su pamaina susietos nuotraukų ataskaitos",
+      "Įrankiai priskiriami QR kodu",
     ],
     financeItems: [
+      "Mobilioji programėlė + administravimo skydelis",
       "Pasiūlymai ir sąskaitos",
       "Priminimai apie artėjančius mokėjimus",
       "Atlyginimai, algalapiai ir AGI",
       "Projekto finansai: biudžetas, sąmata ir pelningumas",
-      "Nuskenuokite kvitus ir sąskaitas – automatiškai priskiriami projektui",
-      "Pirkimo sąskaitos ir išlaidos",
-      "Asmeniniai finansai (jau netrukus)",
+      "Kvitų ir sąskaitų skenavimas – automatiškai priskiriama projektui",
+      "Gaunamos sąskaitos ir išlaidos",
+      "Asmeniniai finansai (netrukus)",
     ],
 
     pricingButton: "Užsisakyti demo",
@@ -822,9 +840,9 @@ export const pricingTranslations = {
 
       "Viskas iš „{faktura}“",
 
-      "Valandos automatiškai virsta sąskaita ir atlyginimo duomenimis",
+      "Dirbtos valandos keliais paspaudimais virsta sąskaita arba atlyginimu",
 
-      "Laikas, išlaidos ir pelningumas pagal projektą vienoje vietoje",
+      "Nufotografuoti kvitai, valandų ataskaitos, išrašytos ir gautos sąskaitos automatiškai įtraukiamos į projekto finansus",
 
       "Funkcijos, sukurtos jūsų verslui – pagal užklausą",
 
@@ -874,20 +892,22 @@ export const pricingTranslations = {
     groupProject: "Pārvaldīt projektus vai brigādes",
     groupFinance: "Nosūtīt rēķinu vai piedāvājumu",
     projectItems: [
-      "Projekti, uzdevumi un foto",
-      "Laika reģistrēšana ar GPS",
-      "Dienasgrāmata un paškontrole",
-      "Plānošana un personāla sadale",
-      "Prombūtne",
-      "Instrumenti ar QR kodu",
-      "Mobilā lietotne + administrēšanas panelis",
+      "Mobilā lietotne + administrācijas panelis",
+      "Automātiska un manuāla darba laika uzskaite",
+      "Klātbūtnes kontrole reāllaikā",
+      "Uzdevumi ar automātiskiem atgādinājumiem",
+      "Dokumenti, foto un rasējumi vienuviet",
+      "Projektu un darbinieku plānošana",
+      "Ar maiņu saistītas foto atskaites",
+      "Instrumenti, piešķirti ar QR kodu",
     ],
     financeItems: [
+      "Mobilā lietotne + administrācijas panelis",
       "Piedāvājumi un rēķini",
       "Atgādinājumi par gaidāmajiem maksājumiem",
       "Algas, algas lapiņas un AGI",
       "Projekta finanses: budžets, tāme un rentabilitāte",
-      "Skenē čekus un rēķinus – automātiski tiek grāmatoti projektā",
+      "Čeku un rēķinu skenēšana – automātiski iegrāmatoti projektā",
       "Ienākošie rēķini un izdevumi",
       "Personīgās finanses (drīzumā)",
     ],
@@ -916,9 +936,9 @@ export const pricingTranslations = {
 
       "Viss no “{faktura}”",
 
-      "Stundas automātiski kļūst par rēķinu un algas datiem",
+      "Nostrādātās stundas ar dažiem klikšķiem kļūst par rēķinu vai algu",
 
-      "Laiks, izmaksas un rentabilitāte pa projektiem vienuviet",
+      "Nofotografēti čeki, stundu atskaites, izrakstītie un ienākošie rēķini automātiski tiek ieskaitīti projekta finansēs",
 
       "Funkcijas, kas izstrādātas jūsu uzņēmumam – pēc pieprasījuma",
 

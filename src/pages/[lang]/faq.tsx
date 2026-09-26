@@ -15,7 +15,7 @@ const FAQ_SV: Qa[] = [
   {
     question: "Kan jag prova gratis?",
     answer:
-      "Ja – första månaden är gratis, med alla funktioner och utan att du behöver ange kort. Du kan koppla in hela teamet och se hur det fungerar på riktiga uppdrag, och bestämmer först därefter om du vill fortsätta.",
+      "Ja – de första 2 veckorna är gratis, med alla funktioner och utan att du behöver ange kort. Du kan koppla in hela teamet och se hur det fungerar på riktiga uppdrag, och bestämmer först därefter om du vill fortsätta.",
   },
   {
     question: "Är det svårt att komma igång?",
@@ -88,7 +88,7 @@ const FAQ_EN: Qa[] = [
   {
     question: "Can I try it for free?",
     answer:
-      "Yes – the first month is free, with all features and without entering a card. You can add your whole team and see how it works on real jobs, and only decide afterwards whether to continue.",
+      "Yes – the first 2 weeks are free, with all features and without entering a card. You can add your whole team and see how it works on real jobs, and only decide afterwards whether to continue.",
   },
   {
     question: "Is it hard to get started?",

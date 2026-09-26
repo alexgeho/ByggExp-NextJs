@@ -80,7 +80,7 @@ export const pricingTranslations = {
     ],
 
     footnote:
-      "Все цены без НДС. Первый месяц бесплатно, без платы за подключение, без обязательного срока. Сотрудники, которые пользуются только мобильным приложением, учитываются, только если отмечались за последние 30 дней.",
+      "Все цены без НДС. 2 недели бесплатно со всеми функциями, без платы за подключение, без обязательного срока. Сотрудники, которые пользуются только мобильным приложением, учитываются, только если отмечались за последние 30 дней.",
   },
 
   en: {
@@ -150,7 +150,7 @@ export const pricingTranslations = {
     ],
 
     footnote:
-      "All prices excl. VAT. First month free, no setup fee, no lock-in. Staff who only use the mobile app are only counted if they have clocked in during the last 30 days.",
+      "All prices excl. VAT. 2 weeks free with all features, no setup fee, no lock-in. Staff who only use the mobile app are only counted if they have clocked in during the last 30 days.",
   },
 
   sv: {
@@ -221,7 +221,7 @@ export const pricingTranslations = {
     ],
 
     footnote:
-      "Alla priser exkl. moms. Första månaden gratis, ingen startavgift, ingen bindningstid. Medarbetare som bara använder mobilappen räknas bara när de har stämplat in de senaste 30 dagarna.",
+      "Alla priser exkl. moms. 2 veckor gratis med alla funktioner, ingen startavgift, ingen bindningstid. Medarbetare som bara använder mobilappen räknas bara när de har stämplat in de senaste 30 dagarna.",
   },
 
   nb: {
@@ -292,7 +292,7 @@ export const pricingTranslations = {
     ],
 
     footnote:
-      "Alle priser eks. mva. Første måned gratis, ingen oppstartsavgift, ingen bindingstid. Ansatte som bare bruker mobilappen, telles bare hvis de har stemplet inn de siste 30 dagene.",
+      "Alle priser eks. mva. 2 uker gratis med alle funksjoner, ingen oppstartsavgift, ingen bindingstid. Ansatte som bare bruker mobilappen, telles bare hvis de har stemplet inn de siste 30 dagene.",
   },
 
   pl: {
@@ -368,7 +368,7 @@ export const pricingTranslations = {
     ],
 
     footnote:
-      "Wszystkie ceny bez VAT. Pierwszy miesiąc za darmo, bez opłaty wstępnej, bez zobowiązań. Pracownicy, którzy korzystają tylko z aplikacji mobilnej, są liczeni tylko wtedy, gdy rejestrowali czas w ciągu ostatnich 30 dni.",
+      "Wszystkie ceny bez VAT. 2 tygodnie za darmo ze wszystkimi funkcjami, bez opłaty wstępnej, bez zobowiązań. Pracownicy, którzy korzystają tylko z aplikacji mobilnej, są liczeni tylko wtedy, gdy rejestrowali czas w ciągu ostatnich 30 dni.",
   },
 
   uk: {
@@ -444,7 +444,7 @@ export const pricingTranslations = {
     ],
 
     footnote:
-      "Усі ціни без ПДВ. Перший місяць безкоштовно, без плати за підключення, без зобов’язань. Працівники, які користуються лише мобільним застосунком, враховуються, тільки якщо відмічалися протягом останніх 30 днів.",
+      "Усі ціни без ПДВ. 2 тижні безкоштовно з усіма функціями, без плати за підключення, без зобов’язань. Працівники, які користуються лише мобільним застосунком, враховуються, тільки якщо відмічалися протягом останніх 30 днів.",
   },
 
   fi: {
@@ -515,7 +515,7 @@ export const pricingTranslations = {
     ],
 
     footnote:
-      "Hinnat ilman arvonlisäveroa. Ensimmäinen kuukausi ilmaiseksi, ei aloitusmaksua, ei sitoutumista. Vain mobiilisovellusta käyttävät työntekijät lasketaan mukaan vain, jos he ovat leimanneet viimeisen 30 päivän aikana.",
+      "Hinnat ilman arvonlisäveroa. 2 viikkoa ilmaiseksi kaikilla toiminnoilla, ei aloitusmaksua, ei sitoutumista. Vain mobiilisovellusta käyttävät työntekijät lasketaan mukaan vain, jos he ovat leimanneet viimeisen 30 päivän aikana.",
   },
 
   et: {
@@ -586,7 +586,7 @@ export const pricingTranslations = {
     ],
 
     footnote:
-      "Kõik hinnad ilma käibemaksuta. Esimene kuu tasuta, liitumistasu pole, kohustusi pole. Töötajaid, kes kasutavad ainult mobiilirakendust, arvestatakse ainult siis, kui nad on viimase 30 päeva jooksul aega märkinud.",
+      "Kõik hinnad ilma käibemaksuta. 2 nädalat tasuta kõigi funktsioonidega, liitumistasu pole, kohustusi pole. Töötajaid, kes kasutavad ainult mobiilirakendust, arvestatakse ainult siis, kui nad on viimase 30 päeva jooksul aega märkinud.",
   },
 
   lt: {
@@ -662,7 +662,7 @@ export const pricingTranslations = {
     ],
 
     footnote:
-      "Visos kainos nurodytos be PVM. Pirmas mėnuo nemokamai, be prijungimo mokesčio, be įsipareigojimų. Darbuotojai, kurie naudoja tik mobiliąją programėlę, skaičiuojami tik tada, jei per paskutines 30 dienų žymėjo laiką.",
+      "Visos kainos nurodytos be PVM. 2 savaitės nemokamai su visomis funkcijomis, be prijungimo mokesčio, be įsipareigojimų. Darbuotojai, kurie naudoja tik mobiliąją programėlę, skaičiuojami tik tada, jei per paskutines 30 dienų žymėjo laiką.",
   },
 
   lv: {
@@ -737,6 +737,6 @@ export const pricingTranslations = {
     ],
 
     footnote:
-      "Visas cenas norādītas bez PVN. Pirmais mēnesis bez maksas, bez pieslēgšanas maksas, bez saistībām. Darbinieki, kuri izmanto tikai mobilo lietotni, tiek skaitīti tikai tad, ja pēdējo 30 dienu laikā ir reģistrējuši laiku.",
+      "Visas cenas norādītas bez PVN. 2 nedēļas bez maksas ar visām funkcijām, bez pieslēgšanas maksas, bez saistībām. Darbinieki, kuri izmanto tikai mobilo lietotni, tiek skaitīti tikai tad, ja pēdējo 30 dienu laikā ir reģistrējuši laiku.",
   },
 } satisfies Record<string, PricingT>;

@@ -116,8 +116,14 @@ function Pricing({ pricingT, lang }: PricingProps) {
       accent: "blue" as Accent,
       price: fmt(total(KOMPLETT)),
       groups: [
-        { title: pricingT.planProjektSub, items: pricingT.projectItems },
-        { title: pricingT.planFakturaSub, items: pricingT.financeItems },
+        {
+          title: pricingT.planKomplettSub,
+          items: pricingT.komplettItems.map((item) =>
+            item
+              .replace("{projekt}", pricingT.planProjekt)
+              .replace("{faktura}", pricingT.planFaktura),
+          ),
+        },
       ],
       popular: true,
     },

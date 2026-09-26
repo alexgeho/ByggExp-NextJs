@@ -82,6 +82,20 @@ export const pricingTranslations = {
       "Индивидуальные интеграции за доплату",
     ],
 
+    komplettItems: [
+
+      "Всё из «{projekt}»",
+
+      "Всё из «{faktura}»",
+
+      "Часы автоматически становятся счётом и основой для зарплаты",
+
+      "Время, затраты и рентабельность по каждому проекту в одном месте",
+
+      "Функции, разработанные под ваш бизнес – по запросу",
+
+    ],
+
     usersNote: "«{projekt}» и «{komplett}» включают {included} пользователей, дальше {p} и {k} кр за каждого следующего в месяц. «{faktura}»: максимум 2 пользователя.",
 
     footnote:
@@ -155,6 +169,20 @@ export const pricingTranslations = {
       "SIE4 export to Fortnox, Visma and BL",
       "Supplier invoices straight by email",
       "Custom integrations for an additional fee",
+    ],
+
+    komplettItems: [
+
+      "Everything in \"{projekt}\"",
+
+      "Everything in \"{faktura}\"",
+
+      "Hours turn into invoices and payroll data automatically",
+
+      "Time, costs and profitability per project in one place",
+
+      "Features built for your business – on request",
+
     ],
 
     usersNote: "\"{projekt}\" and \"{komplett}\" include {included} users, then {p} and {k} kr per extra user per month. \"{faktura}\": max 2 users.",
@@ -233,6 +261,20 @@ export const pricingTranslations = {
       "Anpassade integrationer mot tilläggsavgift",
     ],
 
+    komplettItems: [
+
+      "Allt i {projekt}",
+
+      "Allt i {faktura}",
+
+      "Timmarna blir faktura och löneunderlag automatiskt",
+
+      "Tid, kostnader och lönsamhet per projekt på ett ställe",
+
+      "Funktioner anpassade för ert företag – på förfrågan",
+
+    ],
+
     usersNote: "{projekt} och {komplett} inkluderar {included} användare, därefter {p} resp. {k} kr per extra användare och månad. {faktura}: max 2 användare.",
 
     footnote:
@@ -307,6 +349,20 @@ export const pricingTranslations = {
       "SIE4-eksport til Fortnox, Visma og BL",
       "Inngående fakturaer rett via e-post",
       "Tilpassede integrasjoner mot tilleggsavgift",
+    ],
+
+    komplettItems: [
+
+      "Alt i {projekt}",
+
+      "Alt i {faktura}",
+
+      "Timene blir faktura og lønnsgrunnlag automatisk",
+
+      "Tid, kostnader og lønnsomhet per prosjekt på ett sted",
+
+      "Funksjoner tilpasset deres bedrift – på forespørsel",
+
     ],
 
     usersNote: "{projekt} og {komplett} inkluderer {included} brukere, deretter {p} og {k} kr per ekstra bruker per måned. {faktura}: maks 2 brukere.",
@@ -390,6 +446,20 @@ export const pricingTranslations = {
       "Integracje na zamówienie za dodatkową opłatą",
     ],
 
+    komplettItems: [
+
+      "Wszystko z „{projekt}”",
+
+      "Wszystko z „{faktura}”",
+
+      "Godziny automatycznie zamieniają się w fakturę i podstawę do wynagrodzeń",
+
+      "Czas, koszty i rentowność każdego projektu w jednym miejscu",
+
+      "Funkcje tworzone dla Twojej firmy – na życzenie",
+
+    ],
+
     usersNote: "„{projekt}” i „{komplett}” obejmują {included} użytkowników, potem {p} i {k} kr za każdego dodatkowego miesięcznie. „{faktura}”: maks. 2 użytkowników.",
 
     footnote:
@@ -471,6 +541,20 @@ export const pricingTranslations = {
       "Індивідуальні інтеграції за доплату",
     ],
 
+    komplettItems: [
+
+      "Усе з «{projekt}»",
+
+      "Усе з «{faktura}»",
+
+      "Години автоматично стають рахунком і основою для зарплати",
+
+      "Час, витрати й рентабельність кожного проєкту в одному місці",
+
+      "Функції, розроблені під ваш бізнес – на запит",
+
+    ],
+
     usersNote: "«{projekt}» і «{komplett}» включають {included} користувачів, далі {p} і {k} кр за кожного наступного на місяць. «{faktura}»: максимум 2 користувачі.",
 
     footnote:
@@ -547,6 +631,20 @@ export const pricingTranslations = {
       "Räätälöidyt integraatiot lisämaksusta",
     ],
 
+    komplettItems: [
+
+      "Kaikki {projekt}-paketista",
+
+      "Kaikki {faktura}-paketista",
+
+      "Tunneista syntyy lasku ja palkka-aineisto automaattisesti",
+
+      "Aika, kulut ja kannattavuus projekteittain yhdessä paikassa",
+
+      "Yrityksellenne räätälöidyt toiminnot – pyynnöstä",
+
+    ],
+
     usersNote: "{projekt} ja {komplett} sisältävät {included} käyttäjää, sen jälkeen {p} ja {k} kr lisäkäyttäjältä kuukaudessa. {faktura}: enintään 2 käyttäjää.",
 
     footnote:
@@ -621,6 +719,20 @@ export const pricingTranslations = {
       "SIE4-eksport Fortnoxi, Vismasse ja BL-i",
       "Ostuarved otse e-postiga",
       "Kohandatud liidestused lisatasu eest",
+    ],
+
+    komplettItems: [
+
+      "Kõik paketist „{projekt}“",
+
+      "Kõik paketist „{faktura}“",
+
+      "Tunnid muutuvad automaatselt arveks ja palgaandmeteks",
+
+      "Aeg, kulud ja kasumlikkus projektide kaupa ühes kohas",
+
+      "Teie ettevõttele loodud funktsioonid – soovi korral",
+
     ],
 
     usersNote: "{projekt} ja {komplett} sisaldavad {included} kasutajat, edasi {p} ja {k} kr iga lisakasutaja kohta kuus. {faktura}: kuni 2 kasutajat.",
@@ -704,6 +816,20 @@ export const pricingTranslations = {
       "Individualios integracijos už papildomą mokestį",
     ],
 
+    komplettItems: [
+
+      "Viskas iš „{projekt}“",
+
+      "Viskas iš „{faktura}“",
+
+      "Valandos automatiškai virsta sąskaita ir atlyginimo duomenimis",
+
+      "Laikas, išlaidos ir pelningumas pagal projektą vienoje vietoje",
+
+      "Funkcijos, sukurtos jūsų verslui – pagal užklausą",
+
+    ],
+
     usersNote: "„{projekt}“ ir „{komplett}“ apima {included} naudotojų, toliau {p} ir {k} kr už kiekvieną papildomą naudotoją per mėnesį. „{faktura}“: daugiausia 2 naudotojai.",
 
     footnote:
@@ -782,6 +908,20 @@ export const pricingTranslations = {
       "SIE4 eksports uz Fortnox, Visma un BL",
       "Ienākošie rēķini tieši pa e-pastu",
       "Pielāgotas integrācijas par papildu maksu",
+    ],
+
+    komplettItems: [
+
+      "Viss no “{projekt}”",
+
+      "Viss no “{faktura}”",
+
+      "Stundas automātiski kļūst par rēķinu un algas datiem",
+
+      "Laiks, izmaksas un rentabilitāte pa projektiem vienuviet",
+
+      "Funkcijas, kas izstrādātas jūsu uzņēmumam – pēc pieprasījuma",
+
     ],
 
     usersNote: "“{projekt}” un “{komplett}” ietver {included} lietotājus, tālāk {p} un {k} kr par katru papildu lietotāju mēnesī. “{faktura}”: ne vairāk kā 2 lietotāji.",

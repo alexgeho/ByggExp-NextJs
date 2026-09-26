@@ -5,6 +5,19 @@
 
 ---
 
+## 🟢 2026-09-26 — SEO-аудит: технические фиксы live (`ba81258`)
+Аудит всех сайтов → `~/sites-hub/audits/2026-09-26/` (byggexp-audit.md). Исправлено и проверено на live:
+- Пустой SSR `<title>` на /[lang]/blog и /[lang]/funktioner (смешанные JSX-дети) → строка-шаблон.
+- /[lang]/contact: title «Kontakta ByggExp – boka gratis demo», description, canonical, hreflang, OG.
+- Хаб /sv/verktyg: все 64 инструмента (22 не было; schema-mall была сиротой) + ссылки на schema-mall из schemalaggning-bygg / schemalaggningssystem-bygg.
+- /blog и «Liknande artiklar» передают в props только поля карточек: /sv/blog 3 МБ → 292 КБ, статья 109 → 46 КБ.
+- Главная: hero `fetchPriority=high` + размеры; скриншоты фич — копии 1200w (`*-1200.webp`, 1,37 МБ → 457 КБ) с alt и lazy; SoftwareApplication (lowPrice = `FAKTURA_PRICE` из Pricing).
+- quill CSS только в админ-редакторе; `<html lang>` по локали маршрута; www → apex 301 (middleware); `/` → `/sv` 308.
+- Organization: legalName RealMar AB, адрес Bromma, sameAs YouTube, logo = icon-512.png; og:image = `/og-default.jpg` 1200×630 (было logo.png 1 МБ).
+- sitemap: дедуп `<loc>` (было 37 дублей); 6 старых ошибок lint исправлены.
+
+NÄSTA (из аудита, не сделано): продуктовые лендинги /sv/funktioner/{tidrapportering,planering,projekthantering} под «system»-ключи (сначала GSC: какой URL ранжируется); перелинковка 50 статей без входящих; длинные description (91 > 160); hreflang калькуляторов sv↔en/nb; неиспользуемые тяжёлые файлы в /public (bg1.jpg, team*.jpg, *.eps) — спросить владельца.
+
 ## 🟢 2026-09-26 — страница цен: новые пакеты live
 - Пакеты Faktura/Projekt/Komplett (299 / 690 вкл. 10 + 69 / 990 вкл. 10 + 119), год −15%, пробный 2 недели, карусель на мобиле. Пилюли — вариант B «Koll på pengarna / Koll på jobbet / Full koll».
 - Варианты для A/B-теста сохранены в `docs/marketing/pricing-ab-tests.md` (вариант A — следующий кандидат).

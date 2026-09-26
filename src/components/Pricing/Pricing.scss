@@ -123,12 +123,18 @@
     0 14px 32px rgba(15, 34, 54, 0.08);
 }
 
-.pricing-plan-sub {
-  margin: -8px 0 18px;
-  font-size: 20px;
+.pricing-card-top .pricing-tag {
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.pricing-card-top .pricing-tag strong {
   font-weight: 700;
-  line-height: 1.25;
-  color: var(--ink);
+}
+
+.pricing-tag-sep {
+  margin: 0 6px;
+  opacity: 0.6;
 }
 
 .pricing-card-top {

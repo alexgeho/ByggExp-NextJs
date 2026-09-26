@@ -235,14 +235,16 @@ function Pricing({ pricingT, lang }: PricingProps) {
               >
                 <div className="pricing-card-top">
                   <span className={`pricing-tag pricing-tag-${plan.accent}`}>
-                    {plan.name}
+                    <strong>{plan.name}</strong>
+                    <span className="pricing-tag-sep" aria-hidden="true">
+                      ·
+                    </span>
+                    {plan.subtitle}
                   </span>
                   {plan.popular ? (
                     <span className="pricing-popular">{pricingT.popular}</span>
                   ) : null}
                 </div>
-
-                <h3 className="pricing-plan-sub">{plan.subtitle}</h3>
 
                 <div className="pricing-price">
                   <span className="num">{plan.price}</span>

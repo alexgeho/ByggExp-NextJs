@@ -273,5 +273,5 @@
 ## 2026-09-26 — Funktioner + pris-pillen
 - Priser: "Funktioner anpassade…"-pillen står nu mitt i kortets lediga yta (lika avstånd till listan och knappen).
 - Funktionssidor: "Liknande artiklar" visar bara andra funktionssidor.
-- Nya offert/faktura-bilder (fakturera-fran-byggexp-doc.webp, skapa-offert-i-byggexp-doc.webp) renderade från backendens nuvarande PDF-mallar med demoföretaget Nordström Bygg AB.
+- Nya offert/faktura-bilder (fakturera-fran-byggexp-doc.webp, skapa-offert-i-byggexp-doc.webp) renderade från backendens PDF-mallar; fakturan = ägarens exempel (Nordström Bygg AB, Faktura 2041), offerten med samma logga och sidfot.
 - Nästa: färger på planerna (orange ersätts), ev. flytt /blog/<slug> → /funktioner/<slug> med 301.

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { PluralForms, PricingProps } from "../../types/pricing";
 
 /* Price model (SEK excl. VAT). Yearly = pay 10 months, get 12. */
@@ -29,7 +29,13 @@ function CheckIcon() {
   );
 }
 
-function CheckList({ items, accent }: { items: readonly string[]; accent: Accent }) {
+function CheckList({
+  items,
+  accent,
+}: {
+  items: readonly string[];
+  accent: Accent;
+}) {
   return (
     <ul className="pricing-list">
       {items.map((item) => (
@@ -48,10 +54,34 @@ function Pricing({ pricingT, lang }: PricingProps) {
   const [isYearly, setYearly] = useState(false);
   const [users, setUsers] = useState(DEFAULT_USERS);
 
-  const numberFormat = new Intl.NumberFormat(lang, { maximumFractionDigits: 0 });
+  // Mobile/tablet: the cards are a swipeable carousel (arrows + dots).
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const scrollToSlide = (index: number) => {
+    const cards =
+      sliderRef.current?.querySelectorAll<HTMLElement>(".pricing-card");
+    const card = cards?.[index];
+    if (!card || !sliderRef.current) return;
+    sliderRef.current.scrollTo({ left: card.offsetLeft, behavior: "smooth" });
+    setActiveSlide(index);
+  };
+
+  const handleSliderScroll = () => {
+    const slider = sliderRef.current;
+    const first = slider?.querySelector<HTMLElement>(".pricing-card");
+    if (!slider || !first) return;
+    const gap = parseFloat(getComputedStyle(slider).columnGap) || 0;
+    setActiveSlide(Math.round(slider.scrollLeft / (first.offsetWidth + gap)));
+  };
+
+  const numberFormat = new Intl.NumberFormat(lang, {
+    maximumFractionDigits: 0,
+  });
   const pluralRules = new Intl.PluralRules(lang);
 
-  const perMonth = (monthly: number) => (isYearly ? (monthly * 10) / 12 : monthly);
+  const perMonth = (monthly: number) =>
+    isYearly ? (monthly * 10) / 12 : monthly;
   const fmt = (n: number) => numberFormat.format(Math.round(n));
   const total = (plan: { base: number; extra: number }) =>
     perMonth(plan.base + Math.max(0, users - INCLUDED_USERS) * plan.extra);
@@ -76,7 +106,9 @@ function Pricing({ pricingT, lang }: PricingProps) {
       accent: "green" as Accent,
       price: fmt(perMonth(FAKTURA_PRICE)),
       usersLine:
-        users <= FAKTURA_MAX_USERS ? pricingT.fakturaUsers : pricingT.fakturaMaxUsers,
+        users <= FAKTURA_MAX_USERS
+          ? pricingT.fakturaUsers
+          : pricingT.fakturaMaxUsers,
       detail: withYearNote(pricingT.fixedPrice),
       groups: [{ title: pricingT.groupFinance, items: pricingT.financeItems }],
       popular: false,
@@ -176,45 +208,80 @@ function Pricing({ pricingT, lang }: PricingProps) {
         </div>
 
         {/* CARDS */}
-        <div className="pricingOptions">
-          {plans.map((plan) => (
-            <div
+        <div className="pricing-slider">
+          <button
+            type="button"
+            className="pricing-arrow pricing-arrow-left"
+            onClick={() => scrollToSlide(activeSlide - 1)}
+            disabled={activeSlide === 0}
+            aria-label="‹"
+          >
+            ‹
+          </button>
+
+          <div
+            className="pricingOptions"
+            ref={sliderRef}
+            onScroll={handleSliderScroll}
+          >
+            {plans.map((plan) => (
+              <div
+                key={plan.key}
+                className={`pricing-card${plan.popular ? " pricing-card-popular" : ""}`}
+              >
+                <div className="pricing-card-top">
+                  <span className={`pricing-tag pricing-tag-${plan.accent}`}>
+                    {plan.name}
+                  </span>
+                  {plan.popular ? (
+                    <span className="pricing-popular">{pricingT.popular}</span>
+                  ) : null}
+                </div>
+
+                <div className="pricing-price">
+                  <span className="num">{plan.price}</span>
+
+                  <span className="per">{pricingT.pricingPer}</span>
+                </div>
+
+                <p className="pricing-sub">{plan.usersLine}</p>
+                <p className="pricing-detail">{plan.detail}</p>
+
+                <div className="pricing-groups">
+                  {plan.groups.map((group) => (
+                    <div className="pricing-group" key={group.title}>
+                      <div className="pricing-group-title">{group.title}</div>
+                      <CheckList items={group.items} accent={plan.accent} />
+                    </div>
+                  ))}
+                </div>
+
+                <a href="#cta" className="btn-primary">
+                  {pricingT.pricingButton}
+                </a>
+
+                <span className="pricing-trial">{pricingT.pricingTrial}</span>
+              </div>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            className="pricing-arrow pricing-arrow-right"
+            onClick={() => scrollToSlide(activeSlide + 1)}
+            disabled={activeSlide === plans.length - 1}
+            aria-label="›"
+          >
+            ›
+          </button>
+        </div>
+
+        <div className="pricing-dots" aria-hidden="true">
+          {plans.map((plan, i) => (
+            <span
               key={plan.key}
-              className={`pricing-card${plan.popular ? " pricing-card-popular" : ""}`}
-            >
-              <div className="pricing-card-top">
-                <span className={`pricing-tag pricing-tag-${plan.accent}`}>
-                  {plan.name}
-                </span>
-                {plan.popular ? (
-                  <span className="pricing-popular">{pricingT.popular}</span>
-                ) : null}
-              </div>
-
-              <div className="pricing-price">
-                <span className="num">{plan.price}</span>
-
-                <span className="per">{pricingT.pricingPer}</span>
-              </div>
-
-              <p className="pricing-sub">{plan.usersLine}</p>
-              <p className="pricing-detail">{plan.detail}</p>
-
-              <div className="pricing-groups">
-                {plan.groups.map((group) => (
-                  <div className="pricing-group" key={group.title}>
-                    <div className="pricing-group-title">{group.title}</div>
-                    <CheckList items={group.items} accent={plan.accent} />
-                  </div>
-                ))}
-              </div>
-
-              <a href="#cta" className="btn-primary">
-                {pricingT.pricingButton}
-              </a>
-
-              <span className="pricing-trial">{pricingT.pricingTrial}</span>
-            </div>
+              className={i === activeSlide ? "active" : ""}
+            />
           ))}
         </div>
 

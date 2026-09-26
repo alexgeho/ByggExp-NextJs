@@ -5,8 +5,9 @@
 
 | Вариант | Пакет «экономика» | Пакет «проекты» | Всё вместе | Статус |
 |---|---|---|---|---|
-| **B — через выгоду** | Koll på pengarna | Koll på jobbet | Full koll | ✅ LIVE с 2026-09-26 |
-| **A — функция + SEO** | Faktura & ekonomikoll | Tidrapport & projekt | Allt i ett | ⏳ кандидат на A/B (владелец просил сохранить) |
+| **B+A вместе** | пилюля «Koll på pengarna» + заголовок «Faktura & ekonomikoll» | «Koll på jobbet» + «Tidrapport & projekt» | «Full koll» + «Allt i ett» | ✅ LIVE с 2026-09-26 (вечер) |
+| B — через выгоду | Koll på pengarna | Koll på jobbet | Full koll | было live 26.09 днём |
+| A — функция + SEO | Faktura & ekonomikoll | Tidrapport & projekt | Allt i ett | теперь заголовок под пилюлей; для A/B можно тестировать «только B» vs «B+A» |
 | C — место работы | Kontor & ekonomi | Fält & team | Hela företaget | идея |
 | D — коротко | Ekonomi | Tidrapport | Komplett | идея |
 | (было 26.09) | Faktura & offert | Projekt & team | Projekt + faktura | заменён на B |

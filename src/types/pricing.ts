@@ -24,6 +24,9 @@ export type PricingT = {
   planFaktura: string;
   planProjekt: string;
   planKomplett: string;
+  planFakturaSub: string;
+  planProjektSub: string;
+  planKomplettSub: string;
 
   fakturaUsers: string;
   fakturaMaxUsers: string;

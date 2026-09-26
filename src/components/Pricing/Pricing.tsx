@@ -104,6 +104,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
     {
       key: "faktura",
       name: pricingT.planFaktura,
+      subtitle: pricingT.planFakturaSub,
       accent: "green" as Accent,
       price: fmt(perMonth(FAKTURA_PRICE)),
       usersLine:
@@ -117,6 +118,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
     {
       key: "projekt",
       name: pricingT.planProjekt,
+      subtitle: pricingT.planProjektSub,
       accent: "orange" as Accent,
       price: fmt(total(PROJEKT)),
       usersLine: plural(pricingT.usersCount, users),
@@ -127,6 +129,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
     {
       key: "komplett",
       name: pricingT.planKomplett,
+      subtitle: pricingT.planKomplettSub,
       accent: "blue" as Accent,
       price: fmt(total(KOMPLETT)),
       usersLine: plural(pricingT.usersCount, users),
@@ -238,6 +241,8 @@ function Pricing({ pricingT, lang }: PricingProps) {
                     <span className="pricing-popular">{pricingT.popular}</span>
                   ) : null}
                 </div>
+
+                <h3 className="pricing-plan-sub">{plan.subtitle}</h3>
 
                 <div className="pricing-price">
                   <span className="num">{plan.price}</span>

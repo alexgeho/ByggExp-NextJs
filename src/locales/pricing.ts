@@ -33,6 +33,9 @@ export const pricingTranslations = {
     planFaktura: "Контроль денег",
     planProjekt: "Контроль работ",
     planKomplett: "Полный контроль",
+    planFakturaSub: "Счета и финансы",
+    planProjektSub: "Учёт времени и проекты",
+    planKomplettSub: "Всё в одном",
 
     fakturaUsers: "1–2 пользователя",
     fakturaMaxUsers: "Максимум 2 пользователя",
@@ -103,6 +106,9 @@ export const pricingTranslations = {
     planFaktura: "Money in check",
     planProjekt: "Work in check",
     planKomplett: "Everything in check",
+    planFakturaSub: "Invoicing & finances",
+    planProjektSub: "Time tracking & projects",
+    planKomplettSub: "All in one",
 
     fakturaUsers: "1–2 users",
     fakturaMaxUsers: "Max 2 users",
@@ -174,6 +180,9 @@ export const pricingTranslations = {
     planFaktura: "Koll på pengarna",
     planProjekt: "Koll på jobbet",
     planKomplett: "Full koll",
+    planFakturaSub: "Faktura & ekonomikoll",
+    planProjektSub: "Tidrapport & projekt",
+    planKomplettSub: "Allt i ett",
 
     fakturaUsers: "1–2 användare",
     fakturaMaxUsers: "Max 2 användare",
@@ -245,6 +254,9 @@ export const pricingTranslations = {
     planFaktura: "Kontroll på pengene",
     planProjekt: "Kontroll på jobben",
     planKomplett: "Full kontroll",
+    planFakturaSub: "Faktura og økonomi",
+    planProjektSub: "Timeføring og prosjekt",
+    planKomplettSub: "Alt i ett",
 
     fakturaUsers: "1–2 brukere",
     fakturaMaxUsers: "Maks 2 brukere",
@@ -321,6 +333,9 @@ export const pricingTranslations = {
     planFaktura: "Pieniądze pod kontrolą",
     planProjekt: "Praca pod kontrolą",
     planKomplett: "Pełna kontrola",
+    planFakturaSub: "Faktury i finanse",
+    planProjektSub: "Ewidencja czasu i projekty",
+    planKomplettSub: "Wszystko w jednym",
 
     fakturaUsers: "1–2 użytkowników",
     fakturaMaxUsers: "Maks. 2 użytkowników",
@@ -397,6 +412,9 @@ export const pricingTranslations = {
     planFaktura: "Контроль грошей",
     planProjekt: "Контроль робіт",
     planKomplett: "Повний контроль",
+    planFakturaSub: "Рахунки й фінанси",
+    planProjektSub: "Облік часу й проєкти",
+    planKomplettSub: "Усе в одному",
 
     fakturaUsers: "1–2 користувачі",
     fakturaMaxUsers: "Максимум 2 користувачі",
@@ -468,6 +486,9 @@ export const pricingTranslations = {
     planFaktura: "Rahat hallinnassa",
     planProjekt: "Työt hallinnassa",
     planKomplett: "Kaikki hallinnassa",
+    planFakturaSub: "Laskutus ja talous",
+    planProjektSub: "Tuntikirjaus ja projektit",
+    planKomplettSub: "Kaikki yhdessä",
 
     fakturaUsers: "1–2 käyttäjää",
     fakturaMaxUsers: "Enintään 2 käyttäjää",
@@ -539,6 +560,9 @@ export const pricingTranslations = {
     planFaktura: "Raha kontrolli all",
     planProjekt: "Töö kontrolli all",
     planKomplett: "Täielik kontroll",
+    planFakturaSub: "Arved ja rahandus",
+    planProjektSub: "Ajaarvestus ja projektid",
+    planKomplettSub: "Kõik ühes",
 
     fakturaUsers: "1–2 kasutajat",
     fakturaMaxUsers: "Kuni 2 kasutajat",
@@ -615,6 +639,9 @@ export const pricingTranslations = {
     planFaktura: "Pinigai kontroliuojami",
     planProjekt: "Darbai kontroliuojami",
     planKomplett: "Pilna kontrolė",
+    planFakturaSub: "Sąskaitos ir finansai",
+    planProjektSub: "Laiko apskaita ir projektai",
+    planKomplettSub: "Viskas viename",
 
     fakturaUsers: "1–2 naudotojai",
     fakturaMaxUsers: "Daugiausia 2 naudotojai",
@@ -690,6 +717,9 @@ export const pricingTranslations = {
     planFaktura: "Nauda kontrolē",
     planProjekt: "Darbi kontrolē",
     planKomplett: "Pilnīga kontrole",
+    planFakturaSub: "Rēķini un finanses",
+    planProjektSub: "Laika uzskaite un projekti",
+    planKomplettSub: "Viss vienā",
 
     fakturaUsers: "1–2 lietotāji",
     fakturaMaxUsers: "Ne vairāk kā 2 lietotāji",

@@ -134,7 +134,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
   ];
 
   return (
-    <section className="pricing" id="pricing">
+    <section className="pricing">
       <div className="container">
         <div className="section-head">
           <span className="eyebrow">{pricingT.pricingTitle}</span>
@@ -144,8 +144,10 @@ function Pricing({ pricingT, lang }: PricingProps) {
           <p className="section-sub">{pricingT.pricingSub}</p>
         </div>
 
-        {/* CONTROLS: billing period + number of users */}
-        <div className="pricing-controls-row">
+        {/* CONTROLS: billing period + number of users. The #pricing anchor
+            (menu "Priser") sits here so the jump lands on the plans, not
+            on the section heading. */}
+        <div className="pricing-controls-row" id="pricing">
           <div
             className="toggleMonthYearPrice"
             role="group"

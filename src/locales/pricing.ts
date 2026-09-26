@@ -69,7 +69,7 @@ export const pricingTranslations = {
       "* До 30 исходящих счетов и 100 отсканированных чеков и счетов в месяц. Нужно больше? Договоримся.",
 
     pricingButton: "Записаться на демо",
-    pricingTrial: "Запуск занимает 5 минут.",
+    pricingTrial: "14 дней бесплатно со всеми функциями",
 
     offerBadge: "Спецпредложение",
     offerTitle: "Больше 40 пользователей?",
@@ -162,7 +162,7 @@ export const pricingTranslations = {
       "* Up to 30 outgoing invoices and 100 scanned receipts and invoices per month. Need more? Let's talk.",
 
     pricingButton: "Book a demo",
-    pricingTrial: "Setup takes 5 minutes.",
+    pricingTrial: "14 days free with all features",
 
     offerBadge: "Special offer",
     offerTitle: "More than 40 users?",
@@ -256,7 +256,7 @@ export const pricingTranslations = {
       "* Upp till 30 utgående fakturor och 100 skannade kvitton och fakturor per månad. Behöver ni mer? Vi hittar en lösning.",
 
     pricingButton: "Boka demo",
-    pricingTrial: "Kom igång på 5 minuter.",
+    pricingTrial: "14 dagar gratis med alla funktioner",
 
     offerBadge: "Specialerbjudande",
     offerTitle: "Fler än 40 användare?",
@@ -350,7 +350,7 @@ export const pricingTranslations = {
       "* Opptil 30 utgående fakturaer og 100 skannede kvitteringer og fakturaer per måned. Trenger dere mer? Ta kontakt.",
 
     pricingButton: "Bestill demo",
-    pricingTrial: "Kom i gang på 5 minutter.",
+    pricingTrial: "14 dager gratis med alle funksjoner",
 
     offerBadge: "Spesialtilbud",
     offerTitle: "Flere enn 40 brukere?",
@@ -449,7 +449,7 @@ export const pricingTranslations = {
       "* Do 30 faktur wychodzących i 100 zeskanowanych paragonów i faktur miesięcznie. Potrzebujesz więcej? Porozmawiajmy.",
 
     pricingButton: "Umów demo",
-    pricingTrial: "Uruchomienie zajmuje 5 minut.",
+    pricingTrial: "14 dni za darmo ze wszystkimi funkcjami",
 
     offerBadge: "Oferta specjalna",
     offerTitle: "Ponad 40 użytkowników?",
@@ -548,7 +548,7 @@ export const pricingTranslations = {
       "* До 30 вихідних рахунків і 100 відсканованих чеків і рахунків на місяць. Потрібно більше? Домовимося.",
 
     pricingButton: "Замовити демо",
-    pricingTrial: "Запуск займає 5 хвилин.",
+    pricingTrial: "14 днів безкоштовно з усіма функціями",
 
     offerBadge: "Спецпропозиція",
     offerTitle: "Понад 40 користувачів?",
@@ -642,7 +642,7 @@ export const pricingTranslations = {
       "* Enintään 30 lähtevää laskua ja 100 skannattua kuittia ja laskua kuukaudessa. Tarvitsetteko enemmän? Sovitaan yhdessä.",
 
     pricingButton: "Varaa demo",
-    pricingTrial: "Käyttöönotto vie 5 minuuttia.",
+    pricingTrial: "14 päivää ilmaiseksi kaikilla ominaisuuksilla",
 
     offerBadge: "Erikoistarjous",
     offerTitle: "Yli 40 käyttäjää?",
@@ -736,7 +736,7 @@ export const pricingTranslations = {
       "* Kuni 30 väljaminevat arvet ja 100 skannitud tšekki ja arvet kuus. Vajate rohkem? Räägime.",
 
     pricingButton: "Broneeri demo",
-    pricingTrial: "Käivitamine võtab 5 minutit.",
+    pricingTrial: "14 päeva tasuta kõigi funktsioonidega",
 
     offerBadge: "Eripakkumine",
     offerTitle: "Üle 40 kasutaja?",
@@ -835,7 +835,7 @@ export const pricingTranslations = {
       "* Iki 30 išrašytų sąskaitų ir 100 nuskaitytų čekių bei sąskaitų per mėnesį. Reikia daugiau? Susitarsime.",
 
     pricingButton: "Užsisakyti demo",
-    pricingTrial: "Paleidimas užtrunka 5 minutes.",
+    pricingTrial: "14 dienų nemokamai su visomis funkcijomis",
 
     offerBadge: "Specialus pasiūlymas",
     offerTitle: "Daugiau nei 40 naudotojų?",
@@ -933,7 +933,7 @@ export const pricingTranslations = {
       "* Līdz 30 izrakstītiem rēķiniem un 100 skenētiem čekiem un rēķiniem mēnesī. Vajag vairāk? Sarunāsim.",
 
     pricingButton: "Pieteikt demo",
-    pricingTrial: "Uzsākšana aizņem 5 minūtes.",
+    pricingTrial: "14 dienas bez maksas ar visām funkcijām",
 
     offerBadge: "Īpašais piedāvājums",
     offerTitle: "Vairāk nekā 40 lietotāju?",

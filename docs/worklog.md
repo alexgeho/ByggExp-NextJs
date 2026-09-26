@@ -281,3 +281,4 @@
 - "Vad ni får"-karusellen: egen ikon per kort (klocka, blixt, team, sköld med bock) i stället för samma sköld.
 - Priser: Koll på pengarna — "*" på fakturor och skanning + not "Upp till 30 utgående fakturor och 100 skannade kvitton/fakturor per månad. Behöver ni mer? Vi hittar en lösning." (10 språk). Endast text; ingen spärr i backend ännu (beslut väntar).
 - Priser: fotnoten under paketen (användare/moms/provperiod) borttagen på ägarens begäran; texterna ligger kvar i locales.
+- Priser: raden under knapparna = "14 dagar gratis med alla funktioner" (10 språk), ersätter "Kom igång på 5 minuter". Moms nämns inte (ägarens beslut).

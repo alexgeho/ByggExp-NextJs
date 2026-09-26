@@ -54,6 +54,8 @@ export type PricingT = {
   addonNote: string;
   addonItems: readonly string[];
 
+  usersNote: string;
+
   footnote: string;
 };
 

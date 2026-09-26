@@ -3,7 +3,6 @@ import type { PluralForms, PricingProps } from "../../types/pricing";
 
 /* Price model (SEK excl. VAT). Yearly = 12 months minus YEARLY_DISCOUNT. */
 const FAKTURA_PRICE = 299;
-const FAKTURA_MAX_USERS = 2;
 const INCLUDED_USERS = 10;
 const PROJEKT = { base: 690, extra: 69 };
 const KOMPLETT = { base: 990, extra: 119 };
@@ -90,27 +89,12 @@ function Pricing({ pricingT, lang }: PricingProps) {
   const plural = (forms: PluralForms, n: number) =>
     (forms[pluralRules.select(n)] ?? forms.other).replace("{n}", fmt(n));
 
-  const withYearNote = (text: string) =>
-    isYearly ? `${text} · ${pricingT.yearlyNote}` : text;
-
-  const includedDetail = (extra: number) =>
-    withYearNote(
-      pricingT.includedDetail
-        .replace("{included}", String(INCLUDED_USERS))
-        .replace("{extra}", fmt(perMonth(extra))),
-    );
-
   const plans = [
     {
       key: "faktura",
       name: pricingT.planFaktura,
       accent: "green" as Accent,
       price: fmt(perMonth(FAKTURA_PRICE)),
-      usersLine:
-        users <= FAKTURA_MAX_USERS
-          ? pricingT.fakturaUsers
-          : pricingT.fakturaMaxUsers,
-      detail: isYearly ? pricingT.yearlyNote : "",
       groups: [
         { title: pricingT.planFakturaSub, items: pricingT.financeItems },
       ],
@@ -121,8 +105,6 @@ function Pricing({ pricingT, lang }: PricingProps) {
       name: pricingT.planProjekt,
       accent: "orange" as Accent,
       price: fmt(total(PROJEKT)),
-      usersLine: plural(pricingT.usersCount, users),
-      detail: includedDetail(PROJEKT.extra),
       groups: [
         { title: pricingT.planProjektSub, items: pricingT.projectItems },
       ],
@@ -133,8 +115,6 @@ function Pricing({ pricingT, lang }: PricingProps) {
       name: pricingT.planKomplett,
       accent: "blue" as Accent,
       price: fmt(total(KOMPLETT)),
-      usersLine: plural(pricingT.usersCount, users),
-      detail: includedDetail(KOMPLETT.extra),
       groups: [
         { title: pricingT.planProjektSub, items: pricingT.projectItems },
         { title: pricingT.planFakturaSub, items: pricingT.financeItems },
@@ -249,9 +229,6 @@ function Pricing({ pricingT, lang }: PricingProps) {
                   <span className="per">{pricingT.pricingPer}</span>
                 </div>
 
-                <p className="pricing-sub">{plan.usersLine}</p>
-                <p className="pricing-detail">{plan.detail}</p>
-
                 <div className="pricing-groups">
                   {plan.groups.map((group) => (
                     <div className="pricing-group" key={group.title}>
@@ -320,7 +297,16 @@ function Pricing({ pricingT, lang }: PricingProps) {
           <CheckList items={pricingT.addonItems} accent="green" />
         </div>
 
-        <p className="pricing-footnote">{pricingT.footnote}</p>
+        <p className="pricing-footnote">
+          {pricingT.usersNote
+            .replace("{projekt}", pricingT.planProjekt)
+            .replace("{komplett}", pricingT.planKomplett)
+            .replace("{faktura}", pricingT.planFaktura)
+            .replace("{included}", String(INCLUDED_USERS))
+            .replace("{p}", fmt(PROJEKT.extra))
+            .replace("{k}", fmt(KOMPLETT.extra))}{" "}
+          {pricingT.footnote}
+        </p>
       </div>
     </section>
   );

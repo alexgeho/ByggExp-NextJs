@@ -274,5 +274,5 @@
 - Priser: "Funktioner anpassade…"-pillen står nu mitt i kortets lediga yta (lika avstånd till listan och knappen).
 - Funktionssidor: "Liknande artiklar" visar bara andra funktionssidor.
 - Nya offert/faktura-bilder (fakturera-fran-byggexp-doc.webp, skapa-offert-i-byggexp-doc.webp) renderade från backendens PDF-mallar; fakturan = ägarens egen bild (Nordström Bygg AB, Faktura 2041, 594px — byt mot högre upplösning när den finns), offerten med samma logga och sidfot.
-- Färger på planerna (variant B): Koll på pengarna blå, Koll på jobbet lila, Full koll grön (ram, "Mest valt", pillen).
+- Färger på planerna (variant B): Koll på pengarna blå, Koll på jobbet lila, Full koll grön (mjukgrön ram som taggen, "Mest valt"); pillen "Funktioner anpassade…" blå.
 - Nästa: ev. flytt /blog/<slug> → /funktioner/<slug> med 301.

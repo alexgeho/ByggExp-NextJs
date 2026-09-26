@@ -1,317 +1,742 @@
+import type { PricingT } from "../types/pricing";
+
+/*
+ * Pricing section copy. Swedish (sv) is the master text – translate from it.
+ * Plan names (Faktura / Projekt / Komplett) are product names and stay the
+ * same in every language. Prices are always SEK (numbers live in
+ * components/Pricing/Pricing.tsx).
+ */
 export const pricingTranslations = {
   ru: {
     pricingTitle: "Сколько это стоит?",
-    pricingHeading: "Один тариф, всё включено",
-
+    pricingHeading: "Три пакета – выберите нужный",
     pricingSub:
       "Никаких скрытых платежей. Никаких сюрпризов. Без платы за подключение. Отменить можно в любой момент.",
 
-    pricingMonthly: "Ежемесячно",
-    pricingYearly: "Ежегодно",
+    periodLabel: "Период оплаты",
+    pricingMonthly: "Помесячно",
+    pricingYearly: "За год – 2 месяца бесплатно",
 
-    pricingTag: "Первый месяц бесплатно",
+    usersLabel: "Количество пользователей",
+    usersDecrease: "Меньше пользователей",
+    usersIncrease: "Больше пользователей",
+    usersCount: {
+      one: "{n} пользователь",
+      few: "{n} пользователя",
+      many: "{n} пользователей",
+      other: "{n} пользователя",
+    },
 
     pricingPer: "SEK / месяц",
-    pricingPer1: "Starter",
-    pricingPer10: "Growth",
-    pricingPer20: "Proffesional",
-    pricingPer40: "Enterprise",
+    popular: "Чаще всего выбирают",
 
-    pricingCustom: "Индивидуально",
+    planFaktura: "Faktura",
+    planProjekt: "Projekt",
+    planKomplett: "Komplett",
 
-    priceDescription1: "1–10 пользователей в месяц",
+    fakturaUsers: "1–2 пользователя",
+    fakturaMaxUsers: "Макс. 2 пользователя – выберите Komplett",
+    fixedPrice: "Фиксированная цена",
+    includedDetail: "вкл. {included} · +{extra} SEK за доп. пользователя",
+    yearlyNote: "при оплате за год",
 
-    priceDescription2: "10–20 пользователей",
+    groupProject: "Проекты и команда",
+    groupFinance: "Финансы",
+    projectItems: [
+      "Проекты, задачи и фото",
+      "Отметка времени с GPS",
+      "Журнал работ и самоконтроль",
+      "Планирование и расстановка персонала",
+      "Отсутствия",
+      "Инструменты с QR-кодом",
+      "Мобильное приложение + админ-панель",
+    ],
+    financeItems: [
+      "Коммерческие предложения и счета",
+      "Напоминания о неоплаченных счетах",
+      "Зарплата, расчётные листки и AGI",
+      "Экономика проекта: бюджет, смета и рентабельность",
+      "Сканирование чеков и счетов – автоматически проводятся по проекту",
+      "Входящие счета и расходы",
+      "Личные финансы (скоро)",
+    ],
 
-    priceDescription3: "20–40 пользователей",
-
-    priceDescription4: "40+ пользователей",
-
-    pricingItem1: "Все функции включены",
-    pricingItem2: "Неограниченное количество проектов",
-    pricingItem3: "Без подписки",
-    pricingItem4: "Мобильное приложение + админ-панель",
-
-    pricingButton: "Записаться на демо",
-
+    pricingButton: "Попробовать бесплатно",
     pricingTrial: "Запуск занимает 5 минут.",
+
+    offerBadge: "Спецпредложение",
+    offerTitle: "Больше 40 пользователей?",
+    offerText: "Свяжитесь с нами – подберём индивидуальную цену для всей компании.",
+    offerButton: "Записаться на демо",
+
+    addonBadge: "Дополнение",
+    addonTitle: "Интеграции",
+    addonPer: "SEK / компания / месяц",
+    addonNote: "Можно добавить к любому пакету.",
+    addonItems: [
+      "Экспорт SIE4 в Fortnox, Visma и BL",
+      "Входящие счета напрямую по e-mail",
+      "Индивидуальные интеграции за доплату",
+    ],
+
+    footnote:
+      "Все цены без НДС. Первый месяц бесплатно, без платы за подключение, без обязательного срока. Сотрудники, которые пользуются только мобильным приложением, учитываются, только если отмечались за последние 30 дней.",
   },
 
   en: {
     pricingTitle: "How Much Does It Cost?",
-    pricingHeading: "One Plan, Everything Included",
-
+    pricingHeading: "Three Plans – Pick the One You Need",
     pricingSub: "No hidden fees. No surprises. No setup fees. Cancel anytime.",
 
+    periodLabel: "Billing period",
     pricingMonthly: "Monthly",
-    pricingYearly: "Yearly",
+    pricingYearly: "Yearly – 2 months free",
 
-    pricingTag: "First Month Free",
+    usersLabel: "Number of users",
+    usersDecrease: "Fewer users",
+    usersIncrease: "More users",
+    usersCount: { one: "{n} user", other: "{n} users" },
 
     pricingPer: "SEK / month",
-    pricingPer1: "Starter",
-    pricingPer10: "Growth",
-    pricingPer20: "Proffesional",
-    pricingPer40: "Enterprise",
+    popular: "Most popular",
 
-    pricingCustom: "Let's Talk",
+    planFaktura: "Faktura",
+    planProjekt: "Projekt",
+    planKomplett: "Komplett",
 
-    priceDescription1: "1–10 users",
+    fakturaUsers: "1–2 users",
+    fakturaMaxUsers: "Max 2 users – choose Komplett",
+    fixedPrice: "Fixed price",
+    includedDetail: "incl. {included} · +{extra} SEK per extra user",
+    yearlyNote: "billed yearly",
 
-    priceDescription2: "10–20 users",
+    groupProject: "Projects and team",
+    groupFinance: "Finance",
+    projectItems: [
+      "Projects, tasks and photos",
+      "Clock-in with GPS",
+      "Site diary and self-inspections",
+      "Planning and staffing",
+      "Absence",
+      "Tools with QR codes",
+      "Mobile app + Admin Panel",
+    ],
+    financeItems: [
+      "Quotes and invoices",
+      "Reminders for unpaid invoices",
+      "Payroll, payslips and AGI (employer declaration)",
+      "Project finances: budget, estimate and profitability",
+      "Scan receipts and invoices – booked to the project automatically",
+      "Supplier invoices and expenses",
+      "Personal finance (coming soon)",
+    ],
 
-    priceDescription3: "20–40 users",
-
-    priceDescription4: "40+ users",
-
-    pricingItem1: "All features included",
-    pricingItem2: "Unlimited projects",
-    pricingItem3: "No subscription",
-    pricingItem4: "Mobile app + Admin Panel",
-
-    pricingButton: "Book a demo",
-
+    pricingButton: "Try for free",
     pricingTrial: "Setup takes 5 minutes.",
+
+    offerBadge: "Special offer",
+    offerTitle: "More than 40 users?",
+    offerText: "Contact us for a custom price for the whole company.",
+    offerButton: "Book a demo",
+
+    addonBadge: "Add-on",
+    addonTitle: "Integrations",
+    addonPer: "SEK / company / month",
+    addonNote: "Can be added to any plan.",
+    addonItems: [
+      "SIE4 export to Fortnox, Visma and BL",
+      "Supplier invoices straight by email",
+      "Custom integrations for an additional fee",
+    ],
+
+    footnote:
+      "All prices excl. VAT. First month free, no setup fee, no lock-in. Staff who only use the mobile app are only counted if they have clocked in during the last 30 days.",
   },
 
   sv: {
     pricingTitle: "Vad kostar det?",
-    pricingHeading: "Ett abonnemang, allt ingår",
-
+    pricingHeading: "Tre paket – välj det ni behöver",
     pricingSub:
       "Inga dolda avgifter. Inga överraskningar. Ingen startavgift. Avsluta när du vill.",
 
+    periodLabel: "Betalningsperiod",
     pricingMonthly: "Per månad",
-    pricingYearly: "Per år",
+    pricingYearly: "Per år – 2 mån gratis",
 
-    pricingTag: "Första månaden gratis",
+    usersLabel: "Antal användare",
+    usersDecrease: "Färre användare",
+    usersIncrease: "Fler användare",
+    usersCount: { other: "{n} användare" },
 
     pricingPer: "SEK / månad",
-    pricingPer1: "Start",
-    pricingPer10: "Tillväxt",
-    pricingPer20: "Professionell",
-    pricingPer40: "Anpassad",
-    pricingCustom: "Låt oss prata",
+    popular: "Mest valt",
 
-    priceDescription1: "1-10 användare",
+    planFaktura: "Faktura",
+    planProjekt: "Projekt",
+    planKomplett: "Komplett",
 
-    priceDescription2: "10-20 användare",
+    fakturaUsers: "1–2 användare",
+    fakturaMaxUsers: "Max 2 användare – välj Komplett",
+    fixedPrice: "Fast pris",
+    includedDetail: "inkl. {included} · +{extra} kr per extra användare",
+    yearlyNote: "vid årsbetalning",
 
-    priceDescription3: "20-40 användare",
+    groupProject: "Projekt och team",
+    groupFinance: "Ekonomi",
+    projectItems: [
+      "Projekt, uppgifter och foton",
+      "Stämpling med GPS",
+      "Dagbok och egenkontroller",
+      "Planering och bemanning",
+      "Frånvaro",
+      "Verktyg med QR-kod",
+      "Mobilapp + Adminpanel",
+    ],
+    financeItems: [
+      "Offerter och fakturor",
+      "Påminnelser för obetalda fakturor",
+      "Löner, lönespecifikationer och AGI",
+      "Projektekonomi: budget, kalkyl och lönsamhet",
+      "Skanna kvitton och fakturor – bokförs automatiskt på projektet",
+      "Inköpsfakturor och utlägg",
+      "Personlig ekonomi (kommer snart)",
+    ],
 
-    priceDescription4: "40+ användare",
-
-    pricingItem1: "Alla funktioner ingår",
-    pricingItem2: "Obegränsat antal projekt",
-    pricingItem3: "Ingen bindningstid",
-    pricingItem4: "Mobilapp + Adminpanel",
-
-    pricingButton: "Boka demo",
-
+    pricingButton: "Prova gratis",
     pricingTrial: "Kom igång på 5 minuter.",
+
+    offerBadge: "Specialerbjudande",
+    offerTitle: "Fler än 40 användare?",
+    offerText: "Kontakta oss för ett anpassat pris för hela företaget.",
+    offerButton: "Boka demo",
+
+    addonBadge: "Tillägg",
+    addonTitle: "Integrationer",
+    addonPer: "SEK / företag / månad",
+    addonNote: "Kan läggas till i alla paket.",
+    addonItems: [
+      "SIE4-export till Fortnox, Visma och BL",
+      "Inköpsfakturor direkt via e-post",
+      "Anpassade integrationer mot tilläggsavgift",
+    ],
+
+    footnote:
+      "Alla priser exkl. moms. Första månaden gratis, ingen startavgift, ingen bindningstid. Medarbetare som bara använder mobilappen räknas bara när de har stämplat in de senaste 30 dagarna.",
   },
 
   nb: {
     pricingTitle: "Hva koster det?",
-    pricingHeading: "Ett abonnement, alt inkludert",
-
+    pricingHeading: "Tre pakker – velg den dere trenger",
     pricingSub:
       "Ingen skjulte avgifter. Ingen overraskelser. Ingen oppstartsavgift. Avslutt når du vil.",
 
+    periodLabel: "Betalingsperiode",
     pricingMonthly: "Per måned",
-    pricingYearly: "Per år",
+    pricingYearly: "Per år – 2 mnd gratis",
 
-    pricingTag: "Første måneden gratis",
+    usersLabel: "Antall brukere",
+    usersDecrease: "Færre brukere",
+    usersIncrease: "Flere brukere",
+    usersCount: { one: "{n} bruker", other: "{n} brukere" },
 
     pricingPer: "SEK / måned",
-    pricingPer1: "Start",
-    pricingPer10: "Vekst",
-    pricingPer20: "Profesjonell",
-    pricingPer40: "Tilpasset",
-    pricingCustom: "La oss prate",
+    popular: "Mest valgt",
 
-    priceDescription1: "1-10 brukere",
+    planFaktura: "Faktura",
+    planProjekt: "Projekt",
+    planKomplett: "Komplett",
 
-    priceDescription2: "10-20 brukere",
+    fakturaUsers: "1–2 brukere",
+    fakturaMaxUsers: "Maks 2 brukere – velg Komplett",
+    fixedPrice: "Fast pris",
+    includedDetail: "inkl. {included} · +{extra} SEK per ekstra bruker",
+    yearlyNote: "ved årlig betaling",
 
-    priceDescription3: "20-40 brukere",
+    groupProject: "Prosjekt og team",
+    groupFinance: "Økonomi",
+    projectItems: [
+      "Prosjekter, oppgaver og bilder",
+      "Stempling med GPS",
+      "Dagbok og egenkontroller",
+      "Planlegging og bemanning",
+      "Fravær",
+      "Verktøy med QR-kode",
+      "Mobilapp + Adminpanel",
+    ],
+    financeItems: [
+      "Tilbud og fakturaer",
+      "Påminnelser om ubetalte fakturaer",
+      "Lønn, lønnsslipper og arbeidsgiverdeklarasjon (AGI)",
+      "Prosjektøkonomi: budsjett, kalkyle og lønnsomhet",
+      "Skann kvitteringer og fakturaer – bokføres automatisk på prosjektet",
+      "Inngående fakturaer og utlegg",
+      "Privatøkonomi (kommer snart)",
+    ],
 
-    priceDescription4: "40+ brukere",
-
-    pricingItem1: "Alle funksjoner inkludert",
-    pricingItem2: "Ubegrenset antall prosjekter",
-    pricingItem3: "Ingen bindingstid",
-    pricingItem4: "Mobilapp + Adminpanel",
-
-    pricingButton: "Bestill demo",
-
+    pricingButton: "Prøv gratis",
     pricingTrial: "Kom i gang på 5 minutter.",
+
+    offerBadge: "Spesialtilbud",
+    offerTitle: "Flere enn 40 brukere?",
+    offerText: "Kontakt oss for en tilpasset pris for hele bedriften.",
+    offerButton: "Bestill demo",
+
+    addonBadge: "Tillegg",
+    addonTitle: "Integrasjoner",
+    addonPer: "SEK / bedrift / måned",
+    addonNote: "Kan legges til i alle pakker.",
+    addonItems: [
+      "SIE4-eksport til Fortnox, Visma og BL",
+      "Inngående fakturaer rett via e-post",
+      "Tilpassede integrasjoner mot tilleggsavgift",
+    ],
+
+    footnote:
+      "Alle priser eks. mva. Første måned gratis, ingen oppstartsavgift, ingen bindingstid. Ansatte som bare bruker mobilappen, telles bare hvis de har stemplet inn de siste 30 dagene.",
   },
 
   pl: {
     pricingTitle: "Ile to kosztuje?",
-    pricingHeading: "Jeden abonament, wszystko w cenie",
-
+    pricingHeading: "Trzy pakiety – wybierz ten, którego potrzebujesz",
     pricingSub:
       "Bez ukrytych opłat. Bez niespodzianek. Bez opłaty wstępnej. Zrezygnuj, kiedy chcesz.",
 
+    periodLabel: "Okres rozliczeniowy",
     pricingMonthly: "Miesięcznie",
-    pricingYearly: "Rocznie",
+    pricingYearly: "Rocznie – 2 miesiące gratis",
 
-    pricingTag: "Pierwszy miesiąc za darmo",
+    usersLabel: "Liczba użytkowników",
+    usersDecrease: "Mniej użytkowników",
+    usersIncrease: "Więcej użytkowników",
+    usersCount: {
+      one: "{n} użytkownik",
+      few: "{n} użytkowników",
+      many: "{n} użytkowników",
+      other: "{n} użytkownika",
+    },
 
     pricingPer: "SEK / miesiąc",
-    pricingPer1: "Start",
-    pricingPer10: "Wzrost",
-    pricingPer20: "Profesjonalny",
-    pricingPer40: "Dopasowany",
-    pricingCustom: "Porozmawiajmy",
+    popular: "Najczęściej wybierany",
 
-    priceDescription1: "1-10 użytkowników",
+    planFaktura: "Faktura",
+    planProjekt: "Projekt",
+    planKomplett: "Komplett",
 
-    priceDescription2: "10-20 użytkowników",
+    fakturaUsers: "1–2 użytkowników",
+    fakturaMaxUsers: "Maks. 2 użytkowników – wybierz Komplett",
+    fixedPrice: "Stała cena",
+    includedDetail: "w cenie {included} · +{extra} SEK za dodatkowego użytkownika",
+    yearlyNote: "przy płatności rocznej",
 
-    priceDescription3: "20-40 użytkowników",
+    groupProject: "Projekty i zespół",
+    groupFinance: "Finanse",
+    projectItems: [
+      "Projekty, zadania i zdjęcia",
+      "Rejestracja czasu z GPS",
+      "Dziennik budowy i samokontrola",
+      "Planowanie i obsada",
+      "Nieobecności",
+      "Narzędzia z kodem QR",
+      "Aplikacja mobilna + panel administracyjny",
+    ],
+    financeItems: [
+      "Oferty i faktury",
+      "Przypomnienia o niezapłaconych fakturach",
+      "Wynagrodzenia, paski płacowe i AGI",
+      "Finanse projektu: budżet, kosztorys i rentowność",
+      "Skanowanie paragonów i faktur – automatycznie księgowane na projekt",
+      "Faktury zakupowe i wydatki",
+      "Finanse osobiste (wkrótce)",
+    ],
 
-    priceDescription4: "40+ użytkowników",
-
-    pricingItem1: "Wszystkie funkcje w cenie",
-    pricingItem2: "Nieograniczona liczba projektów",
-    pricingItem3: "Bez zobowiązań",
-    pricingItem4: "Aplikacja mobilna + panel administracyjny",
-
-    pricingButton: "Umów demo",
-
+    pricingButton: "Wypróbuj za darmo",
     pricingTrial: "Uruchomienie zajmuje 5 minut.",
+
+    offerBadge: "Oferta specjalna",
+    offerTitle: "Ponad 40 użytkowników?",
+    offerText: "Skontaktuj się z nami po indywidualną cenę dla całej firmy.",
+    offerButton: "Umów demo",
+
+    addonBadge: "Dodatek",
+    addonTitle: "Integracje",
+    addonPer: "SEK / firma / miesiąc",
+    addonNote: "Można dodać do każdego pakietu.",
+    addonItems: [
+      "Eksport SIE4 do Fortnox, Visma i BL",
+      "Faktury zakupowe prosto przez e-mail",
+      "Integracje na zamówienie za dodatkową opłatą",
+    ],
+
+    footnote:
+      "Wszystkie ceny bez VAT. Pierwszy miesiąc za darmo, bez opłaty wstępnej, bez zobowiązań. Pracownicy, którzy korzystają tylko z aplikacji mobilnej, są liczeni tylko wtedy, gdy rejestrowali czas w ciągu ostatnich 30 dni.",
   },
 
   uk: {
     pricingTitle: "Скільки це коштує?",
-    pricingHeading: "Один тариф, усе включено",
+    pricingHeading: "Три пакети – оберіть потрібний",
     pricingSub:
       "Жодних прихованих платежів. Жодних сюрпризів. Без плати за підключення. Скасувати можна будь-коли.",
+
+    periodLabel: "Період оплати",
     pricingMonthly: "Щомісяця",
-    pricingYearly: "Щороку",
-    pricingTag: "Перший місяць безкоштовно",
+    pricingYearly: "За рік – 2 місяці безкоштовно",
+
+    usersLabel: "Кількість користувачів",
+    usersDecrease: "Менше користувачів",
+    usersIncrease: "Більше користувачів",
+    usersCount: {
+      one: "{n} користувач",
+      few: "{n} користувачі",
+      many: "{n} користувачів",
+      other: "{n} користувача",
+    },
+
     pricingPer: "SEK / місяць",
-    pricingPer1: "Старт",
-    pricingPer10: "Зростання",
-    pricingPer20: "Професійний",
-    pricingPer40: "Індивідуальний",
-    pricingCustom: "Обговорімо",
-    priceDescription1: "1-10 користувачів",
-    priceDescription2: "10-20 користувачів",
-    priceDescription3: "20-40 користувачів",
-    priceDescription4: "40+ користувачів",
-    pricingItem1: "Усі функції включені",
-    pricingItem2: "Необмежена кількість проєктів",
-    pricingItem3: "Без зобов’язань",
-    pricingItem4: "Мобільний застосунок + адмінпанель",
-    pricingButton: "Замовити демо",
+    popular: "Найчастіше обирають",
+
+    planFaktura: "Faktura",
+    planProjekt: "Projekt",
+    planKomplett: "Komplett",
+
+    fakturaUsers: "1–2 користувачі",
+    fakturaMaxUsers: "Макс. 2 користувачі – оберіть Komplett",
+    fixedPrice: "Фіксована ціна",
+    includedDetail: "вкл. {included} · +{extra} SEK за дод. користувача",
+    yearlyNote: "при оплаті за рік",
+
+    groupProject: "Проєкти та команда",
+    groupFinance: "Фінанси",
+    projectItems: [
+      "Проєкти, завдання та фото",
+      "Відмітка часу з GPS",
+      "Журнал робіт і самоконтроль",
+      "Планування та розстановка персоналу",
+      "Відсутності",
+      "Інструменти з QR-кодом",
+      "Мобільний застосунок + адмінпанель",
+    ],
+    financeItems: [
+      "Комерційні пропозиції та рахунки",
+      "Нагадування про неоплачені рахунки",
+      "Зарплата, розрахункові листки та AGI",
+      "Економіка проєкту: бюджет, кошторис і рентабельність",
+      "Сканування чеків і рахунків – автоматично проводяться по проєкту",
+      "Вхідні рахунки та витрати",
+      "Особисті фінанси (незабаром)",
+    ],
+
+    pricingButton: "Спробувати безкоштовно",
     pricingTrial: "Запуск займає 5 хвилин.",
+
+    offerBadge: "Спецпропозиція",
+    offerTitle: "Понад 40 користувачів?",
+    offerText: "Зв’яжіться з нами – підберемо індивідуальну ціну для всієї компанії.",
+    offerButton: "Замовити демо",
+
+    addonBadge: "Доповнення",
+    addonTitle: "Інтеграції",
+    addonPer: "SEK / компанія / місяць",
+    addonNote: "Можна додати до будь-якого пакета.",
+    addonItems: [
+      "Експорт SIE4 у Fortnox, Visma та BL",
+      "Вхідні рахунки напряму через e-mail",
+      "Індивідуальні інтеграції за доплату",
+    ],
+
+    footnote:
+      "Усі ціни без ПДВ. Перший місяць безкоштовно, без плати за підключення, без зобов’язань. Працівники, які користуються лише мобільним застосунком, враховуються, тільки якщо відмічалися протягом останніх 30 днів.",
   },
 
   fi: {
     pricingTitle: "Paljonko se maksaa?",
-    pricingHeading: "Yksi tilaus, kaikki mukana",
+    pricingHeading: "Kolme pakettia – valitse tarpeesi mukaan",
     pricingSub:
       "Ei piilokuluja. Ei yllätyksiä. Ei aloitusmaksua. Peruuta milloin haluat.",
+
+    periodLabel: "Laskutusjakso",
     pricingMonthly: "Kuukausittain",
-    pricingYearly: "Vuosittain",
-    pricingTag: "Ensimmäinen kuukausi ilmaiseksi",
+    pricingYearly: "Vuosittain – 2 kk ilmaiseksi",
+
+    usersLabel: "Käyttäjien määrä",
+    usersDecrease: "Vähemmän käyttäjiä",
+    usersIncrease: "Enemmän käyttäjiä",
+    usersCount: { one: "{n} käyttäjä", other: "{n} käyttäjää" },
+
     pricingPer: "SEK / kk",
-    pricingPer1: "Start",
-    pricingPer10: "Kasvu",
-    pricingPer20: "Ammattilainen",
-    pricingPer40: "Räätälöity",
-    pricingCustom: "Jutellaan",
-    priceDescription1: "1-10 käyttäjää",
-    priceDescription2: "10-20 käyttäjää",
-    priceDescription3: "20-40 käyttäjää",
-    priceDescription4: "40+ käyttäjää",
-    pricingItem1: "Kaikki ominaisuudet mukana",
-    pricingItem2: "Rajaton määrä projekteja",
-    pricingItem3: "Ei sitoutumista",
-    pricingItem4: "Mobiilisovellus + hallintapaneeli",
-    pricingButton: "Varaa demo",
+    popular: "Suosituin",
+
+    planFaktura: "Faktura",
+    planProjekt: "Projekt",
+    planKomplett: "Komplett",
+
+    fakturaUsers: "1–2 käyttäjää",
+    fakturaMaxUsers: "Enintään 2 käyttäjää – valitse Komplett",
+    fixedPrice: "Kiinteä hinta",
+    includedDetail: "sis. {included} · +{extra} SEK / lisäkäyttäjä",
+    yearlyNote: "vuosilaskutuksella",
+
+    groupProject: "Projektit ja tiimi",
+    groupFinance: "Talous",
+    projectItems: [
+      "Projektit, tehtävät ja kuvat",
+      "Leimaus GPS:llä",
+      "Työmaapäiväkirja ja omavalvonta",
+      "Suunnittelu ja resursointi",
+      "Poissaolot",
+      "Työkalut QR-koodilla",
+      "Mobiilisovellus + hallintapaneeli",
+    ],
+    financeItems: [
+      "Tarjoukset ja laskut",
+      "Muistutukset maksamattomista laskuista",
+      "Palkat, palkkalaskelmat ja AGI",
+      "Projektitalous: budjetti, laskelma ja kannattavuus",
+      "Skannaa kuitit ja laskut – kirjataan automaattisesti projektille",
+      "Ostolaskut ja kulut",
+      "Henkilökohtainen talous (tulossa pian)",
+    ],
+
+    pricingButton: "Kokeile ilmaiseksi",
     pricingTrial: "Käyttöönotto vie 5 minuuttia.",
+
+    offerBadge: "Erikoistarjous",
+    offerTitle: "Yli 40 käyttäjää?",
+    offerText: "Ota yhteyttä, niin teemme räätälöidyn hinnan koko yritykselle.",
+    offerButton: "Varaa demo",
+
+    addonBadge: "Lisäosa",
+    addonTitle: "Integraatiot",
+    addonPer: "SEK / yritys / kk",
+    addonNote: "Voidaan lisätä mihin tahansa pakettiin.",
+    addonItems: [
+      "SIE4-vienti Fortnoxiin, Vismaan ja BL:ään",
+      "Ostolaskut suoraan sähköpostilla",
+      "Räätälöidyt integraatiot lisämaksusta",
+    ],
+
+    footnote:
+      "Hinnat ilman arvonlisäveroa. Ensimmäinen kuukausi ilmaiseksi, ei aloitusmaksua, ei sitoutumista. Vain mobiilisovellusta käyttävät työntekijät lasketaan mukaan vain, jos he ovat leimanneet viimeisen 30 päivän aikana.",
   },
 
   et: {
     pricingTitle: "Kui palju see maksab?",
-    pricingHeading: "Üks tellimus, kõik sees",
+    pricingHeading: "Kolm paketti – vali see, mida vajad",
     pricingSub:
       "Ei mingeid varjatud tasusid. Ei üllatusi. Ei liitumistasu. Tühista millal soovid.",
+
+    periodLabel: "Arveldusperiood",
     pricingMonthly: "Kuus",
-    pricingYearly: "Aastas",
-    pricingTag: "Esimene kuu tasuta",
+    pricingYearly: "Aastas – 2 kuud tasuta",
+
+    usersLabel: "Kasutajate arv",
+    usersDecrease: "Vähem kasutajaid",
+    usersIncrease: "Rohkem kasutajaid",
+    usersCount: { one: "{n} kasutaja", other: "{n} kasutajat" },
+
     pricingPer: "SEK / kuus",
-    pricingPer1: "Start",
-    pricingPer10: "Kasv",
-    pricingPer20: "Professionaalne",
-    pricingPer40: "Kohandatud",
-    pricingCustom: "Räägime",
-    priceDescription1: "1-10 kasutajat",
-    priceDescription2: "10-20 kasutajat",
-    priceDescription3: "20-40 kasutajat",
-    priceDescription4: "40+ kasutajat",
-    pricingItem1: "Kõik funktsioonid sees",
-    pricingItem2: "Piiramatu arv projekte",
-    pricingItem3: "Ilma kohustusteta",
-    pricingItem4: "Mobiilirakendus + halduspaneel",
-    pricingButton: "Broneeri demo",
+    popular: "Enim valitud",
+
+    planFaktura: "Faktura",
+    planProjekt: "Projekt",
+    planKomplett: "Komplett",
+
+    fakturaUsers: "1–2 kasutajat",
+    fakturaMaxUsers: "Kuni 2 kasutajat – vali Komplett",
+    fixedPrice: "Fikseeritud hind",
+    includedDetail: "sh {included} · +{extra} SEK iga lisakasutaja eest",
+    yearlyNote: "aastamaksega",
+
+    groupProject: "Projektid ja meeskond",
+    groupFinance: "Rahandus",
+    projectItems: [
+      "Projektid, ülesanded ja fotod",
+      "Tööaja märkimine GPS-iga",
+      "Päevik ja enesekontroll",
+      "Planeerimine ja mehitamine",
+      "Puudumised",
+      "Tööriistad QR-koodiga",
+      "Mobiilirakendus + halduspaneel",
+    ],
+    financeItems: [
+      "Pakkumised ja arved",
+      "Meeldetuletused tasumata arvete kohta",
+      "Palgad, palgalehed ja AGI",
+      "Projekti rahandus: eelarve, kalkulatsioon ja kasumlikkus",
+      "Skanni tšekid ja arved – kirjendatakse automaatselt projektile",
+      "Ostuarved ja kulud",
+      "Isiklik rahandus (tulekul)",
+    ],
+
+    pricingButton: "Proovi tasuta",
     pricingTrial: "Käivitamine võtab 5 minutit.",
+
+    offerBadge: "Eripakkumine",
+    offerTitle: "Üle 40 kasutaja?",
+    offerText: "Võta meiega ühendust, et saada kogu ettevõttele kohandatud hind.",
+    offerButton: "Broneeri demo",
+
+    addonBadge: "Lisa",
+    addonTitle: "Liidestused",
+    addonPer: "SEK / ettevõte / kuus",
+    addonNote: "Saab lisada igale paketile.",
+    addonItems: [
+      "SIE4-eksport Fortnoxi, Vismasse ja BL-i",
+      "Ostuarved otse e-postiga",
+      "Kohandatud liidestused lisatasu eest",
+    ],
+
+    footnote:
+      "Kõik hinnad ilma käibemaksuta. Esimene kuu tasuta, liitumistasu pole, kohustusi pole. Töötajaid, kes kasutavad ainult mobiilirakendust, arvestatakse ainult siis, kui nad on viimase 30 päeva jooksul aega märkinud.",
   },
 
   lt: {
     pricingTitle: "Kiek tai kainuoja?",
-    pricingHeading: "Vienas planas, viskas įskaičiuota",
+    pricingHeading: "Trys paketai – pasirinkite reikiamą",
     pricingSub:
       "Jokių paslėptų mokesčių. Jokių staigmenų. Be prijungimo mokesčio. Atšaukite bet kada.",
+
+    periodLabel: "Atsiskaitymo laikotarpis",
     pricingMonthly: "Kas mėnesį",
-    pricingYearly: "Kas metus",
-    pricingTag: "Pirmas mėnuo nemokamai",
+    pricingYearly: "Kas metus – 2 mėn. nemokamai",
+
+    usersLabel: "Naudotojų skaičius",
+    usersDecrease: "Mažiau naudotojų",
+    usersIncrease: "Daugiau naudotojų",
+    usersCount: {
+      one: "{n} naudotojas",
+      few: "{n} naudotojai",
+      many: "{n} naudotojo",
+      other: "{n} naudotojų",
+    },
+
     pricingPer: "SEK / mėn.",
-    pricingPer1: "Startas",
-    pricingPer10: "Augimas",
-    pricingPer20: "Profesionalus",
-    pricingPer40: "Pritaikytas",
-    pricingCustom: "Pakalbėkime",
-    priceDescription1: "1-10 naudotojų",
-    priceDescription2: "10-20 naudotojų",
-    priceDescription3: "20-40 naudotojų",
-    priceDescription4: "40+ naudotojų",
-    pricingItem1: "Visos funkcijos įskaičiuotos",
-    pricingItem2: "Neribotas projektų skaičius",
-    pricingItem3: "Jokių įsipareigojimų",
-    pricingItem4: "Mobilioji programėlė + administravimo skydelis",
-    pricingButton: "Užsisakyti demo",
+    popular: "Dažniausiai renkamasi",
+
+    planFaktura: "Faktura",
+    planProjekt: "Projekt",
+    planKomplett: "Komplett",
+
+    fakturaUsers: "1–2 naudotojai",
+    fakturaMaxUsers: "Daugiausia 2 naudotojai – rinkitės Komplett",
+    fixedPrice: "Fiksuota kaina",
+    includedDetail: "įsk. {included} · +{extra} SEK už papildomą naudotoją",
+    yearlyNote: "mokant už metus",
+
+    groupProject: "Projektai ir komanda",
+    groupFinance: "Finansai",
+    projectItems: [
+      "Projektai, užduotys ir nuotraukos",
+      "Laiko žymėjimas su GPS",
+      "Dienynas ir savikontrolė",
+      "Planavimas ir darbuotojų paskirstymas",
+      "Neatvykimai",
+      "Įrankiai su QR kodu",
+      "Mobilioji programėlė + administravimo skydelis",
+    ],
+    financeItems: [
+      "Pasiūlymai ir sąskaitos",
+      "Priminimai apie neapmokėtas sąskaitas",
+      "Atlyginimai, algalapiai ir AGI",
+      "Projekto finansai: biudžetas, sąmata ir pelningumas",
+      "Nuskenuokite kvitus ir sąskaitas – automatiškai priskiriami projektui",
+      "Pirkimo sąskaitos ir išlaidos",
+      "Asmeniniai finansai (jau netrukus)",
+    ],
+
+    pricingButton: "Išbandyti nemokamai",
     pricingTrial: "Paleidimas užtrunka 5 minutes.",
+
+    offerBadge: "Specialus pasiūlymas",
+    offerTitle: "Daugiau nei 40 naudotojų?",
+    offerText: "Susisiekite su mumis dėl individualios kainos visai įmonei.",
+    offerButton: "Užsisakyti demo",
+
+    addonBadge: "Priedas",
+    addonTitle: "Integracijos",
+    addonPer: "SEK / įmonė / mėn.",
+    addonNote: "Galima pridėti prie bet kurio paketo.",
+    addonItems: [
+      "SIE4 eksportas į Fortnox, Visma ir BL",
+      "Pirkimo sąskaitos tiesiai el. paštu",
+      "Individualios integracijos už papildomą mokestį",
+    ],
+
+    footnote:
+      "Visos kainos nurodytos be PVM. Pirmas mėnuo nemokamai, be prijungimo mokesčio, be įsipareigojimų. Darbuotojai, kurie naudoja tik mobiliąją programėlę, skaičiuojami tik tada, jei per paskutines 30 dienų žymėjo laiką.",
   },
 
   lv: {
     pricingTitle: "Cik tas maksā?",
-    pricingHeading: "Viens abonements, viss iekļauts",
+    pricingHeading: "Trīs paketes – izvēlieties vajadzīgo",
     pricingSub:
       "Nekādu slēptu maksu. Nekādu pārsteigumu. Bez pieslēgšanas maksas. Atceliet, kad vēlaties.",
+
+    periodLabel: "Norēķinu periods",
     pricingMonthly: "Mēnesī",
-    pricingYearly: "Gadā",
-    pricingTag: "Pirmais mēnesis bez maksas",
+    pricingYearly: "Gadā – 2 mēneši bez maksas",
+
+    usersLabel: "Lietotāju skaits",
+    usersDecrease: "Mazāk lietotāju",
+    usersIncrease: "Vairāk lietotāju",
+    usersCount: {
+      zero: "{n} lietotāju",
+      one: "{n} lietotājs",
+      other: "{n} lietotāji",
+    },
+
     pricingPer: "SEK / mēnesī",
-    pricingPer1: "Sākums",
-    pricingPer10: "Izaugsme",
-    pricingPer20: "Profesionāls",
-    pricingPer40: "Pielāgots",
-    pricingCustom: "Parunāsim",
-    priceDescription1: "1-10 lietotāju",
-    priceDescription2: "10-20 lietotāju",
-    priceDescription3: "20-40 lietotāju",
-    priceDescription4: "40+ lietotāju",
-    pricingItem1: "Visas funkcijas iekļautas",
-    pricingItem2: "Neierobežots projektu skaits",
-    pricingItem3: "Bez saistībām",
-    pricingItem4: "Mobilā lietotne + administrēšanas panelis",
-    pricingButton: "Pieteikt demo",
+    popular: "Visbiežāk izvēlētā",
+
+    planFaktura: "Faktura",
+    planProjekt: "Projekt",
+    planKomplett: "Komplett",
+
+    fakturaUsers: "1–2 lietotāji",
+    fakturaMaxUsers: "Ne vairāk kā 2 lietotāji – izvēlieties Komplett",
+    fixedPrice: "Fiksēta cena",
+    includedDetail: "iekļ. {included} · +{extra} SEK par katru papildu lietotāju",
+    yearlyNote: "maksājot par gadu",
+
+    groupProject: "Projekti un komanda",
+    groupFinance: "Finanses",
+    projectItems: [
+      "Projekti, uzdevumi un foto",
+      "Laika reģistrēšana ar GPS",
+      "Dienasgrāmata un paškontrole",
+      "Plānošana un personāla sadale",
+      "Prombūtne",
+      "Instrumenti ar QR kodu",
+      "Mobilā lietotne + administrēšanas panelis",
+    ],
+    financeItems: [
+      "Piedāvājumi un rēķini",
+      "Atgādinājumi par neapmaksātiem rēķiniem",
+      "Algas, algas lapiņas un AGI",
+      "Projekta finanses: budžets, tāme un rentabilitāte",
+      "Skenē čekus un rēķinus – automātiski tiek grāmatoti projektā",
+      "Ienākošie rēķini un izdevumi",
+      "Personīgās finanses (drīzumā)",
+    ],
+
+    pricingButton: "Izmēģināt bez maksas",
     pricingTrial: "Uzsākšana aizņem 5 minūtes.",
+
+    offerBadge: "Īpašais piedāvājums",
+    offerTitle: "Vairāk nekā 40 lietotāju?",
+    offerText: "Sazinieties ar mums, lai saņemtu pielāgotu cenu visam uzņēmumam.",
+    offerButton: "Pieteikt demo",
+
+    addonBadge: "Papildinājums",
+    addonTitle: "Integrācijas",
+    addonPer: "SEK / uzņēmums / mēnesī",
+    addonNote: "Var pievienot jebkurai paketei.",
+    addonItems: [
+      "SIE4 eksports uz Fortnox, Visma un BL",
+      "Ienākošie rēķini tieši pa e-pastu",
+      "Pielāgotas integrācijas par papildu maksu",
+    ],
+
+    footnote:
+      "Visas cenas norādītas bez PVN. Pirmais mēnesis bez maksas, bez pieslēgšanas maksas, bez saistībām. Darbinieki, kuri izmanto tikai mobilo lietotni, tiek skaitīti tikai tad, ja pēdējo 30 dienu laikā ir reģistrējuši laiku.",
   },
-} as const;
+} satisfies Record<string, PricingT>;

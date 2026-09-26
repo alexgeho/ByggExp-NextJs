@@ -137,7 +137,7 @@ export default function HomePage({
         featuresT10_11={featuresT10_11}
       />
       <FinalBenefits finalBenefitsT={finalBenefitsT} />
-      <Pricing pricingT={pricingT} />
+      <Pricing pricingT={pricingT} lang={lang} />
       <CTA ctaT={ctaT} />
       <Footer footerT={footerT} />
     </>

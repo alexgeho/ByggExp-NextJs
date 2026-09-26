@@ -557,3 +557,47 @@
     padding: 24px 18px;
   }
 }
+
+/* Anchor jumps (#pricing) land below the sticky header, not under it. */
+#pricing {
+  scroll-margin-top: var(--pricing-anchor-offset, 72px);
+}
+
+/* Phones: compact heading so "Priser" in the menu lands on the plans,
+   not on a full screen of title text. */
+@media (max-width: 600px) {
+  .pricing {
+    padding-top: 20px;
+  }
+
+  .pricing .section-head {
+    margin-top: 0;
+    margin-bottom: 20px;
+    gap: 8px;
+  }
+
+  .pricing .section-head .eyebrow {
+    font-size: 0.8rem;
+  }
+
+  .pricing .section-head h2 {
+    font-size: 1.75rem;
+    line-height: 1.15;
+  }
+
+  .pricing .section-head .section-sub {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .pricing-controls-row {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .toggleButton,
+  .toggleButtonActive {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+}

@@ -19,11 +19,11 @@ export default function DeleteAccountPage({
   // translation for convenience.
   if (lang === "sv") {
     return (
-      <LegalDocument title="Radera konto och data" updated="2026-08-09" lang="sv">
+      <LegalDocument title="Radera konto och data" updated="2026-09-26" lang="sv">
         <p>
           Den här sidan beskriver hur du raderar ditt ByggExp-konto och de
           personuppgifter som är kopplade till det. ByggExp tillhandahålls av
-          RealMar AB, org.nr 559474-9383.
+          Real Marketing s. r. o. (IČO 53551958, momsreg.nr SK2121411820).
         </p>
 
         <h2>Så här begär du radering</h2>
@@ -61,8 +61,7 @@ export default function DeleteAccountPage({
 
         <h2>Kontakt</h2>
         <p>
-          RealMar AB, c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma,
-          Sverige. E-post: <a href="mailto:support@byggexp.se">support@byggexp.se</a>.
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakien. Kontaktadress i Sverige: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma. E-post: <a href="mailto:support@byggexp.se">support@byggexp.se</a>.
         </p>
       </LegalDocument>
     );
@@ -70,11 +69,10 @@ export default function DeleteAccountPage({
 
   if (lang === "ru") {
     return (
-      <LegalDocument title="Удаление аккаунта и данных" updated="2026-08-09" lang="ru">
+      <LegalDocument title="Удаление аккаунта и данных" updated="2026-09-26" lang="ru">
         <p>
           На этой странице описано, как удалить ваш аккаунт ByggExp и связанные
-          с ним персональные данные. ByggExp предоставляется компанией RealMar
-          AB (рег. № 559474-9383).
+          с ним персональные данные. ByggExp предоставляется компанией Real Marketing s. r. o. (IČO 53551958).
         </p>
 
         <h2>Как запросить удаление</h2>
@@ -113,19 +111,17 @@ export default function DeleteAccountPage({
 
         <h2>Контакты</h2>
         <p>
-          RealMar AB, c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma,
-          Швеция. E-mail: <a href="mailto:support@byggexp.se">support@byggexp.se</a>.
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Словакия. Контактный адрес в Швеции: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma. E-mail: <a href="mailto:support@byggexp.se">support@byggexp.se</a>.
         </p>
       </LegalDocument>
     );
   }
 
   return (
-    <LegalDocument title="Delete account and data" updated="2026-08-09" lang={lang}>
+    <LegalDocument title="Delete account and data" updated="2026-09-26" lang={lang}>
       <p>
         This page explains how to delete your ByggExp account and the personal
-        data associated with it. ByggExp is provided by RealMar AB
-        (company reg. no. 559474-9383).
+        data associated with it. ByggExp is provided by Real Marketing s. r. o. (company ID 53551958).
       </p>
 
       <h2>How to request deletion</h2>
@@ -161,8 +157,7 @@ export default function DeleteAccountPage({
 
       <h2>Contact</h2>
       <p>
-        RealMar AB, c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma,
-        Sweden. Email: <a href="mailto:support@byggexp.se">support@byggexp.se</a>.
+        Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Contact address in Sweden: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma, Sweden. Email: <a href="mailto:support@byggexp.se">support@byggexp.se</a>.
       </p>
     </LegalDocument>
   );

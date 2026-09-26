@@ -22,12 +22,11 @@ export default function AboutPage({
         title="Om oss"
         lang="sv"
         contentLocales={svEnLocales}
-        description="ByggExp byggs av RealMar AB – ett svenskt team som gör vardagens administration enklare för byggföretag: tidrapportering, planering, personalliggare, offert och faktura i en tjänst."
+        description="ByggExp byggs av Real Marketing s. r. o. – ett team i Stockholm som gör vardagens administration enklare för byggföretag: tidrapportering, planering, personalliggare, offert och faktura i en tjänst."
       >
         <h2>Vilka vi är</h2>
         <p>
-          ByggExp utvecklas och drivs av <strong>RealMar AB</strong> (org.nr
-          559474-9383), ett svenskt bolag med säte i Stockholm. Vi bygger
+          ByggExp utvecklas och drivs av <strong>Real Marketing s. r. o.</strong> (IČO 53551958), ett EU-bolag registrerat i Slovakien som drivs från Stockholm. Vi bygger
           programvara för bygg- och hantverksföretag – från enmansfirman till det
           växande företaget med flera arbetslag ute på fält.
         </p>
@@ -70,9 +69,9 @@ export default function AboutPage({
 
         <h2>Kontakt och företagsuppgifter</h2>
         <p>
-          RealMar AB, c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma.
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakien. Kontaktadress i Sverige: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma.
           <br />
-          Org.nr: 559474-9383
+          IČO: 53551958 · Momsreg.nr: SK2121411820
           <br />
           E-post: <a href="mailto:support@byggexp.se">support@byggexp.se</a>
         </p>
@@ -90,12 +89,12 @@ export default function AboutPage({
       title="About us"
       lang="en"
       contentLocales={svEnLocales}
-      description="ByggExp is built by RealMar AB – a Swedish team making everyday admin easier for construction firms: time tracking, planning, staff ledger, quotes and invoicing in one service."
+      description="ByggExp is built by Real Marketing s. r. o. – a Stockholm-based team making everyday admin easier for construction firms: time tracking, planning, staff ledger, quotes and invoicing in one service."
     >
       <h2>Who we are</h2>
       <p>
-        ByggExp is developed and operated by <strong>RealMar AB</strong>{" "}
-        (company reg. no. 559474-9383), a Swedish company based in Stockholm. We
+        ByggExp is developed and operated by <strong>Real Marketing s. r. o.</strong>{" "}
+        (company ID 53551958), an EU company registered in Slovakia and run from Stockholm. We
         build software for construction and trade companies – from the
         one-person firm to the growing business running several crews in the
         field.
@@ -140,10 +139,9 @@ export default function AboutPage({
 
       <h2>Contact and company details</h2>
       <p>
-        RealMar AB, c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma,
-        Sweden.
+        Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Contact address in Sweden: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma, Sweden.
         <br />
-        Company reg. no.: 559474-9383
+        Company ID (IČO): 53551958 · VAT no.: SK2121411820
         <br />
         Email: <a href="mailto:support@byggexp.se">support@byggexp.se</a>
       </p>

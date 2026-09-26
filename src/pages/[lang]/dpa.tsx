@@ -20,18 +20,18 @@ export default function DpaPage({
     return (
       <LegalDocument
         title="Personuppgiftsbiträdesavtal (DPA)"
-        updated="2026-07-30"
+        updated="2026-09-26"
         lang="sv"
         contentLocales={svEnLocales}
       >
         <p className="legal-page__note">
-          Detta biträdesavtal gäller mellan RealMar AB och det kundföretag som
+          Detta biträdesavtal gäller mellan Real Marketing s. r. o. och det kundföretag som
           tecknar ett konto. Det utgör bilaga till abonnemanget/huvudavtalet.
           Granskas av jurist innan undertecknande.
         </p>
 
         <p>
-          RealMar AB (org.nr 559474-9383), ”Biträdet”, behandlar personuppgifter
+          Real Marketing s. r. o. (IČO 53551958), ”Biträdet”, behandlar personuppgifter
           för kundföretagets (”Ansvarig”) räkning enligt art. 28 GDPR.
         </p>
 
@@ -93,7 +93,7 @@ export default function DpaPage({
 
         <h2>Kontakt</h2>
         <p>
-          RealMar AB, c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma.
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakien. Kontaktadress i Sverige: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma.
           E-post: support@byggexp.se.
         </p>
       </LegalDocument>
@@ -103,18 +103,18 @@ export default function DpaPage({
   return (
     <LegalDocument
       title="Data Processing Agreement (DPA)"
-      updated="2026-07-30"
+      updated="2026-09-26"
       lang="en"
       contentLocales={svEnLocales}
     >
       <p className="legal-page__note">
-        This data processing agreement applies between RealMar AB and the
+        This data processing agreement applies between Real Marketing s. r. o. and the
         customer company that opens an account. It forms an appendix to the
         subscription/main agreement. Have it reviewed by a lawyer before signing.
       </p>
 
       <p>
-        RealMar AB (company reg. no. 559474-9383), the “Processor”, processes
+        Real Marketing s. r. o. (company ID 53551958), the “Processor”, processes
         personal data on behalf of the customer company (the “Controller”) under
         Art. 28 GDPR.
       </p>
@@ -178,8 +178,7 @@ export default function DpaPage({
 
       <h2>Contact</h2>
       <p>
-        RealMar AB, c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma,
-        Sweden. Email: support@byggexp.se.
+        Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Contact address in Sweden: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma, Sweden. Email: support@byggexp.se.
       </p>
     </LegalDocument>
   );

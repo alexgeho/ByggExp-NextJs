@@ -39,9 +39,9 @@ export default function SubprocessorsPage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   if (lang === "sv") {
     return (
-      <LegalDocument title="Underbiträden" updated="2026-07-30" lang="sv" contentLocales={svEnLocales}>
+      <LegalDocument title="Underbiträden" updated="2026-09-26" lang="sv" contentLocales={svEnLocales}>
         <p>
-          RealMar AB (org.nr 559474-9383) anlitar följande underbiträden för att
+          Real Marketing s. r. o. (IČO 53551958) anlitar följande underbiträden för att
           tillhandahålla ByggExp. Överföring till tredje land sker endast med
           giltig mekanism (EU:s standardavtalsklausuler och/eller EU-US Data
           Privacy Framework).
@@ -74,7 +74,7 @@ export default function SubprocessorsPage({
         </p>
         <h2>Kontakt</h2>
         <p>
-          RealMar AB, c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma.
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakien. Kontaktadress i Sverige: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma.
           E-post: support@byggexp.se.
         </p>
       </LegalDocument>
@@ -82,9 +82,9 @@ export default function SubprocessorsPage({
   }
 
   return (
-    <LegalDocument title="Sub-processors" updated="2026-07-30" lang="en" contentLocales={svEnLocales}>
+    <LegalDocument title="Sub-processors" updated="2026-09-26" lang="en" contentLocales={svEnLocales}>
       <p>
-        RealMar AB (company reg. no. 559474-9383) uses the following
+        Real Marketing s. r. o. (company ID 53551958) uses the following
         sub-processors to provide ByggExp. Transfers to third countries take
         place only under a valid mechanism (EU Standard Contractual Clauses
         and/or the EU-US Data Privacy Framework).
@@ -116,8 +116,7 @@ export default function SubprocessorsPage({
       </p>
       <h2>Contact</h2>
       <p>
-        RealMar AB, c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma,
-        Sweden. Email: support@byggexp.se.
+        Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Contact address in Sweden: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma, Sweden. Email: support@byggexp.se.
       </p>
     </LegalDocument>
   );

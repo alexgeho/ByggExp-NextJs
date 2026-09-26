@@ -17,7 +17,7 @@ export default function TermsPage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   if (lang === "sv") {
     return (
-      <LegalDocument title="Användarvillkor" updated="2026-07-30" lang="sv" contentLocales={svEnLocales}>
+      <LegalDocument title="Användarvillkor" updated="2026-09-26" lang="sv" contentLocales={svEnLocales}>
         <p className="legal-page__note">
           Standardvillkor — justera pris och villkor efter behov. Granskas av
           jurist innan publicering.
@@ -25,7 +25,7 @@ export default function TermsPage({
 
         <h2>1. Tjänsten</h2>
         <p>
-          ByggExp tillhandahålls av RealMar AB, org.nr 559474-9383 (”vi”).
+          ByggExp tillhandahålls av Real Marketing s. r. o. (IČO 53551958, momsreg.nr SK2121411820) (”vi”).
           Villkoren gäller mellan oss och det företag som tecknar ett konto
           (”Kunden”).
         </p>
@@ -91,7 +91,7 @@ export default function TermsPage({
 
         <h2>Kontakt</h2>
         <p>
-          RealMar AB, c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma.
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakien. Kontaktadress i Sverige: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma.
           E-post: support@byggexp.se.
         </p>
       </LegalDocument>
@@ -99,7 +99,7 @@ export default function TermsPage({
   }
 
   return (
-    <LegalDocument title="Terms of Service" updated="2026-07-30" lang="en" contentLocales={svEnLocales}>
+    <LegalDocument title="Terms of Service" updated="2026-09-26" lang="en" contentLocales={svEnLocales}>
       <p className="legal-page__note">
         Standard terms — adjust pricing and conditions as needed. Have them
         reviewed by a lawyer before publishing.
@@ -107,7 +107,7 @@ export default function TermsPage({
 
       <h2>1. The service</h2>
       <p>
-        ByggExp is provided by RealMar AB, company reg. no. 559474-9383 (“we”).
+        ByggExp is provided by Real Marketing s. r. o. (company ID 53551958, VAT SK2121411820) (“we”).
         These terms apply between us and the company that opens an account (the
         “Customer”).
       </p>
@@ -171,8 +171,7 @@ export default function TermsPage({
 
       <h2>Contact</h2>
       <p>
-        RealMar AB, c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma,
-        Sweden. Email: support@byggexp.se.
+        Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Contact address in Sweden: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma, Sweden. Email: support@byggexp.se.
       </p>
     </LegalDocument>
   );

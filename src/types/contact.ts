@@ -32,6 +32,8 @@ export type ContactT = {
   privacyLink: string;
   rowCompany: string;
   rowOrgNr: string;
+  rowSeat: string;
+  seatCountry: string;
   rowAddress: string;
   mapLink: string;
   rowHours: string;

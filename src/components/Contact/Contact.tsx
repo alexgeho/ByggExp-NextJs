@@ -15,8 +15,11 @@ import { CalendlyInlineWidget } from "../CalendlyInlineWidget";
 const CALENDLY_URL = "https://calendly.com/870717ag/30min";
 
 const PHONE = "+46 70 757 75 75";
-const COMPANY = "RealMar AB";
-const ORG_NR = "559474-9383";
+const COMPANY = "Real Marketing s. r. o.";
+const ORG_NR = "53551958 (IČO) · VAT SK2121411820";
+// Registered office of the company (Slovakia); the Bromma address below is
+// the contact address in Sweden.
+const SEAT = "Gessayova 2616/14, 851 03 Bratislava";
 const STREET = "Byggmästarvägen 18";
 const POSTAL = "168 32 Bromma";
 const ADDRESS = `${STREET}, ${POSTAL}`;
@@ -303,6 +306,14 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
             <div>
               <dt>{t.rowOrgNr}</dt>
               <dd>{ORG_NR}</dd>
+            </div>
+            <div>
+              <dt>{t.rowSeat}</dt>
+              <dd>
+                {SEAT}
+                <br />
+                {t.seatCountry}
+              </dd>
             </div>
             <div>
               <dt>{t.rowAddress}</dt>

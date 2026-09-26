@@ -19,9 +19,9 @@ export default function PrivacyPolicyPage({
   // translation for convenience.
   if (lang === "sv") {
     return (
-      <LegalDocument title="Integritetspolicy" updated="2026-07-30" lang="sv" contentLocales={svEnLocales}>
+      <LegalDocument title="Integritetspolicy" updated="2026-09-26" lang="sv" contentLocales={svEnLocales}>
         <p>
-          Denna policy beskriver hur RealMar AB (”vi”), org.nr 559474-9383,
+          Denna policy beskriver hur Real Marketing s. r. o. (”vi”), IČO 53551958,
           behandlar personuppgifter i ByggExp-plattformen. För anställdas
           uppgifter agerar vi normalt personuppgiftsbiträde åt kundföretaget
           (arbetsgivaren), som är personuppgiftsansvarig.
@@ -105,7 +105,7 @@ export default function PrivacyPolicyPage({
 
         <h2>Kontakt</h2>
         <p>
-          RealMar AB, c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma.
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakien. Kontaktadress i Sverige: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma.
           E-post: support@byggexp.se.
         </p>
       </LegalDocument>
@@ -113,10 +113,10 @@ export default function PrivacyPolicyPage({
   }
 
   return (
-    <LegalDocument title="Privacy Policy" updated="2026-07-30" lang="en" contentLocales={svEnLocales}>
+    <LegalDocument title="Privacy Policy" updated="2026-09-26" lang="en" contentLocales={svEnLocales}>
       <p>
-        This policy describes how RealMar AB (“we”), company reg. no.
-        559474-9383, processes personal data in the ByggExp platform. For
+        This policy describes how Real Marketing s. r. o. (“we”), company ID
+        (IČO) 53551958, processes personal data in the ByggExp platform. For
         employee data we normally act as a data processor on behalf of the
         customer company (the employer), which is the data controller.
       </p>
@@ -198,8 +198,7 @@ export default function PrivacyPolicyPage({
 
       <h2>Contact</h2>
       <p>
-        RealMar AB, c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma,
-        Sweden. Email: support@byggexp.se.
+        Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Contact address in Sweden: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma, Sweden. Email: support@byggexp.se.
       </p>
     </LegalDocument>
   );

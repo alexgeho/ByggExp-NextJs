@@ -27,7 +27,8 @@ const ORG_SCHEMA = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "ByggExp",
-  legalName: "RealMar AB",
+  legalName: "Real Marketing s. r. o.",
+  vatID: "SK2121411820",
   url: "https://byggexp.se",
   logo: "https://byggexp.se/icon-512.png",
   address: {

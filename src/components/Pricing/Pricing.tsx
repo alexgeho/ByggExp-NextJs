@@ -104,39 +104,40 @@ function Pricing({ pricingT, lang }: PricingProps) {
     {
       key: "faktura",
       name: pricingT.planFaktura,
-      subtitle: pricingT.planFakturaSub,
       accent: "green" as Accent,
       price: fmt(perMonth(FAKTURA_PRICE)),
       usersLine:
         users <= FAKTURA_MAX_USERS
           ? pricingT.fakturaUsers
           : pricingT.fakturaMaxUsers,
-      detail: withYearNote(pricingT.fixedPrice),
-      groups: [{ title: pricingT.groupFinance, items: pricingT.financeItems }],
+      detail: isYearly ? pricingT.yearlyNote : "",
+      groups: [
+        { title: pricingT.planFakturaSub, items: pricingT.financeItems },
+      ],
       popular: false,
     },
     {
       key: "projekt",
       name: pricingT.planProjekt,
-      subtitle: pricingT.planProjektSub,
       accent: "orange" as Accent,
       price: fmt(total(PROJEKT)),
       usersLine: plural(pricingT.usersCount, users),
       detail: includedDetail(PROJEKT.extra),
-      groups: [{ title: pricingT.groupProject, items: pricingT.projectItems }],
+      groups: [
+        { title: pricingT.planProjektSub, items: pricingT.projectItems },
+      ],
       popular: false,
     },
     {
       key: "komplett",
       name: pricingT.planKomplett,
-      subtitle: pricingT.planKomplettSub,
       accent: "blue" as Accent,
       price: fmt(total(KOMPLETT)),
       usersLine: plural(pricingT.usersCount, users),
       detail: includedDetail(KOMPLETT.extra),
       groups: [
-        { title: pricingT.groupProject, items: pricingT.projectItems },
-        { title: pricingT.groupFinance, items: pricingT.financeItems },
+        { title: pricingT.planProjektSub, items: pricingT.projectItems },
+        { title: pricingT.planFakturaSub, items: pricingT.financeItems },
       ],
       popular: true,
     },
@@ -235,11 +236,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
               >
                 <div className="pricing-card-top">
                   <span className={`pricing-tag pricing-tag-${plan.accent}`}>
-                    <strong>{plan.name}</strong>
-                    <span className="pricing-tag-sep" aria-hidden="true">
-                      ·
-                    </span>
-                    {plan.subtitle}
+                    {plan.name}
                   </span>
                   {plan.popular ? (
                     <span className="pricing-popular">{pricingT.popular}</span>
@@ -258,6 +255,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
                 <div className="pricing-groups">
                   {plan.groups.map((group) => (
                     <div className="pricing-group" key={group.title}>
+                      <h3 className="pricing-group-title">{group.title}</h3>
                       <CheckList items={group.items} accent={plan.accent} />
                     </div>
                   ))}

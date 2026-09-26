@@ -13,7 +13,7 @@ const MIN_USERS = 1;
 const MAX_USERS = 40;
 const DEFAULT_USERS = 10;
 
-type Accent = "green" | "orange" | "blue";
+type Accent = "green" | "purple" | "blue";
 
 function CheckIcon() {
   return (
@@ -93,7 +93,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
     {
       key: "faktura",
       name: pricingT.planFaktura,
-      accent: "green" as Accent,
+      accent: "blue" as Accent,
       price: fmt(perMonth(FAKTURA_PRICE)),
       groups: [
         { title: pricingT.planFakturaSub, items: pricingT.financeItems },
@@ -103,7 +103,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
     {
       key: "projekt",
       name: pricingT.planProjekt,
-      accent: "orange" as Accent,
+      accent: "purple" as Accent,
       price: fmt(total(PROJEKT)),
       groups: [
         { title: pricingT.planProjektSub, items: pricingT.projectItems },
@@ -114,7 +114,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
       key: "komplett",
       highlight: pricingT.komplettItems[pricingT.komplettItems.length - 1],
       name: pricingT.planKomplett,
-      accent: "blue" as Accent,
+      accent: "green" as Accent,
       price: fmt(total(KOMPLETT)),
       groups: [
         {

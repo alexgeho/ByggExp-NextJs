@@ -69,6 +69,11 @@ export default function Document() {
             />
           </>
         ) : null}
+        {/* Favicon = the ByggExp app icon (from byggexp-app/src/assets/icon.png). */}
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         {/* Global social defaults — page-level Head tags override these. Ensures
             every page (incl. the 61 calculators that only set og:title) has an
             og:image + twitter card so shares render with a preview. */}

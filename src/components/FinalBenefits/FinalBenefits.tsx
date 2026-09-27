@@ -1,6 +1,5 @@
 import type { FinalBenefitsProps } from "../../types/finalbenefits";
 
-import BenefitSlider, { type SliderCard } from "../Benefits/BenefitSlider";
 
 function Icon({ children }: { children: React.ReactNode }) {
   return (
@@ -23,16 +22,18 @@ const zap = <Icon><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></pol
 const users = <Icon><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></Icon>;
 const shieldCheck = <Icon><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></Icon>;
 
+// Short recap right before the prices: four outcomes shown at once (no
+// carousel), so it reads in a glance and the visitor reaches pricing fast.
 function FinalBenefits({ finalBenefitsT }: FinalBenefitsProps) {
-  const cards: SliderCard[] = [
-    { id: "f1", icon: clock, iconClass: "benefit-icon", text: finalBenefitsT.finalBenefitsItem1 },
-    { id: "f2", icon: zap, iconClass: "benefit-icon", text: finalBenefitsT.finalBenefitsItem2 },
-    { id: "f3", icon: users, iconClass: "benefit-icon", text: finalBenefitsT.finalBenefitsItem3 },
-    { id: "f4", icon: shieldCheck, iconClass: "benefit-icon", text: finalBenefitsT.finalBenefitsItem4 },
+  const items = [
+    { id: "f1", icon: clock, text: finalBenefitsT.finalBenefitsItem1 },
+    { id: "f2", icon: zap, text: finalBenefitsT.finalBenefitsItem2 },
+    { id: "f3", icon: users, text: finalBenefitsT.finalBenefitsItem3 },
+    { id: "f4", icon: shieldCheck, text: finalBenefitsT.finalBenefitsItem4 },
   ];
 
   return (
-    <section className="final-benefits">
+    <section className="final-benefits final-benefits--compact">
       <div className="container final-benefits-inner">
         <div className="section-head section-head--dark">
           <span className="eyebrow">{finalBenefitsT.finalBenefitsTitle}</span>
@@ -43,10 +44,14 @@ function FinalBenefits({ finalBenefitsT }: FinalBenefitsProps) {
           </h2>
         </div>
 
-        {/* Same slider as the Benefits section above */}
-        <div className="benefits-single">
-          <BenefitSlider cards={cards} />
-        </div>
+        <ul className="final-outcomes">
+          {items.map((item) => (
+            <li className="final-outcome" key={item.id}>
+              <span className="final-outcome-icon">{item.icon}</span>
+              <span className="final-outcome-text">{item.text}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

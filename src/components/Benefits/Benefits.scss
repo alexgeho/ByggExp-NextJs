@@ -562,3 +562,108 @@
   width: 28px;
   height: 28px;
 }
+
+/* ============ PEEK CAROUSEL (centre card + dimmed neighbours) ============ */
+
+.benefits-single .benefits-slider--peek {
+  max-width: 1180px;
+  width: 100%;
+}
+
+.benefits-single .benefits-slider--peek .benefits-slider-frame {
+  padding: 0;
+}
+
+.benefits-slider--peek .benefits-track {
+  gap: 24px;
+  scroll-snap-type: x mandatory;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  // Fade the peeking cards out towards the edges.
+  mask-image: linear-gradient(to right, transparent 0, #000 12%, #000 88%, transparent 100%);
+}
+
+// Every card element sits on one rhythm: 16px between audience, icon,
+// title and text — no per-element margins or min-heights.
+.benefits-single .benefits-slider--peek .benefit-card {
+  flex: 0 0 min(620px, 60vw);
+  width: auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scroll-snap-align: center;
+  opacity: 0.4;
+  transform: scale(0.94);
+  cursor: pointer;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+
+  > * {
+    margin: 0;
+  }
+
+  h3,
+  p {
+    min-height: 0;
+  }
+
+  .benefit-audience,
+  .benefit-icon,
+  .benefit-icon-blue {
+    margin: 0;
+  }
+}
+
+.benefits-single .benefits-slider--peek .benefit-card.is-active {
+  opacity: 1;
+  transform: none;
+  cursor: default;
+  border-color: rgba(35, 148, 255, 0.35);
+  background: linear-gradient(180deg, rgba(35, 148, 255, 0.1), rgba(35, 148, 255, 0.02));
+}
+
+// Arrows float over the peeking cards, just outside the centre card.
+.benefits-single .benefits-slider--peek .benefits-arrow-left {
+  left: calc(12% - 30px);
+}
+
+.benefits-single .benefits-slider--peek .benefits-arrow-right {
+  right: calc(12% - 30px);
+}
+
+.benefits-single .benefits-slider--peek .benefits-arrow {
+  background: rgba(10, 24, 40, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+@media (max-width: 650px) {
+  // Full-bleed on phones so the neighbours peek in from the screen edges.
+  .benefits-single .benefits-slider--peek {
+    width: 100vw;
+    max-width: none;
+    margin-inline: calc(50% - 50vw);
+  }
+
+  .benefits-single .benefits-slider--peek .benefit-card {
+    flex-basis: calc(100vw - 72px);
+    padding: 24px;
+  }
+
+  .benefits-slider--peek .benefits-track {
+    gap: 12px;
+    mask-image: none;
+  }
+
+  // Phones: arrows stay on the dots row (see .benefits-single rules above).
+  .benefits-single .benefits-slider--peek .benefits-arrow-left {
+    left: 6px;
+  }
+
+  .benefits-single .benefits-slider--peek .benefits-arrow-right {
+    right: 6px;
+  }
+}

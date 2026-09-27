@@ -40,7 +40,7 @@ const FAQ_SV: Qa[] = [
   {
     question: "Hur fungerar tidrapportering och stämpelklocka med GPS?",
     answer:
-      "De anställda checkar in och ut i appen, och tiden kan registreras med GPS-baserad in- och utstämpling per arbetsplats. Tiderna kan sedan exporteras, till exempel till Excel, för lön och fakturering.",
+      "De anställda checkar in och ut i appen, och tiden kan registreras automatiskt med GPS-baserad in- och utstämpling per arbetsplats – eller fyllas i manuellt i appen per projekt och dag, för den som inte vill dela sin position. Tiderna kan sedan exporteras, till exempel till Excel, för lön och fakturering.",
   },
   {
     question: "Ingår digital personalliggare?",
@@ -50,7 +50,7 @@ const FAQ_SV: Qa[] = [
   {
     question: "Är GPS-registrering av anställda tillåten?",
     answer:
-      "GPS får användas för tidrapportering om det finns laglig grund och de anställda är informerade. Som arbetsgivare ansvarar du för att behandlingen kommuniceras till personalen. Se vår integritetspolicy för mer information.",
+      "GPS får användas för tidrapportering om det finns laglig grund och de anställda är informerade. Som arbetsgivare ansvarar du för att behandlingen kommuniceras till personalen. GPS är inget krav: medarbetare som inte vill dela sin position kan rapportera sina timmar manuellt i appen. Se vår integritetspolicy för mer information.",
   },
   {
     question: "Är mina data säkra?",
@@ -113,7 +113,7 @@ const FAQ_EN: Qa[] = [
   {
     question: "How does time tracking and the GPS time clock work?",
     answer:
-      "Employees clock in and out in the app, and time can be recorded with GPS-based check-in/check-out per site. The hours can then be exported, for example to Excel, for payroll and invoicing.",
+      "Employees clock in and out in the app, and time can be recorded automatically with GPS-based check-in/check-out per site – or entered manually in the app per project and day, for anyone who prefers not to share their location. The hours can then be exported, for example to Excel, for payroll and invoicing.",
   },
   {
     question: "Is a digital staff ledger included?",
@@ -123,7 +123,7 @@ const FAQ_EN: Qa[] = [
   {
     question: "Is GPS tracking of employees allowed?",
     answer:
-      "GPS may be used for time tracking when there is a legal basis and employees are informed. As the employer you are responsible for communicating the processing to your staff. See our privacy policy for more information.",
+      "GPS may be used for time tracking when there is a legal basis and employees are informed. As the employer you are responsible for communicating the processing to your staff. GPS is not required: employees who prefer not to share their location can report their hours manually in the app. See our privacy policy for more information.",
   },
   {
     question: "Is my data secure?",

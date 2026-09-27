@@ -35,7 +35,7 @@ export default function AboutPage({
         <p>
           Vi samlar det som annars sköts i Excel, papper och spridda appar i{" "}
           <strong>en enda tjänst</strong>: tidrapportering och stämpelklocka med
-          GPS, digital personalliggare, schemaläggning och resursplanering,
+          GPS eller manuell tidrapportering, digital personalliggare, schemaläggning och resursplanering,
           projekt- och uppgiftshantering, egenkontroller samt offert och faktura.
           Allt fungerar både i webben och i mobilappen, så att kontoret och de
           som är ute på bygget arbetar mot samma information.
@@ -104,7 +104,7 @@ export default function AboutPage({
       <p>
         We bring together what is otherwise handled in Excel, on paper and
         across scattered apps into <strong>a single service</strong>: time
-        tracking and a GPS time clock, a digital staff ledger, scheduling and
+        tracking with a GPS time clock or manual hours, a digital staff ledger, scheduling and
         resource planning, project and task management, self-inspections, and
         quotes and invoicing. Everything works both on the web and in the mobile
         app, so the office and the people on site work from the same

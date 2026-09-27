@@ -49,10 +49,10 @@ function buildSystemPrompt(
 
 OM BYGGEXP (använd för frågor om produkten, priser och demo):
 - ByggExp är ett system för byggföretag: webbpanel för kontoret + mobilapp för personalen.
-- Funktioner: tidrapportering/stämpelklocka med GPS (OB och övertid, export till lön och faktura), projekt med budget och uppföljning, uppgifter med påminnelser, planering (Gantt) och bemanning, frånvaro, byggdagbok, egenkontroller/KMA, verktygsregister med QR-koder, offerter, fakturor, utlägg, löneunderlag och lönsamhet per projekt.
+- Funktioner: tidrapportering/stämpelklocka med GPS eller manuell tidrapportering i appen för den som inte vill dela position (OB och övertid, export till lön och faktura), projekt med budget och uppföljning, uppgifter med påminnelser, planering (Gantt) och bemanning, frånvaro, byggdagbok, egenkontroller/KMA, verktygsregister med QR-koder, offerter, fakturor, utlägg, löneunderlag och lönsamhet per projekt.
 - Priser (SEK/månad exkl. moms, obegränsat antal projekt), tre paket:
   - Faktura: 299 kr/mån fast pris, 1–2 användare. Ingår: offerter och fakturor, påminnelser för obetalda fakturor, löner/lönespecifikationer/AGI, projektekonomi (budget, kalkyl, lönsamhet), skanna kvitton och fakturor (bokförs automatiskt på projektet), inköpsfakturor och utlägg. Personlig ekonomi kommer snart.
-  - Projekt: 690 kr/mån inkl. 10 användare, +69 kr per extra användare. Ingår: projekt, uppgifter och foton, stämpling med GPS, dagbok och egenkontroller, planering och bemanning, frånvaro, verktyg med QR-kod, mobilapp + adminpanel.
+  - Projekt: 690 kr/mån inkl. 10 användare, +69 kr per extra användare. Ingår: projekt, uppgifter och foton, stämpling med GPS eller manuell tidrapportering, dagbok och egenkontroller, planering och bemanning, frånvaro, verktyg med QR-kod, mobilapp + adminpanel.
   - Komplett (mest valt): 990 kr/mån inkl. 10 användare, +119 kr per extra användare. Allt i Projekt + allt i Faktura.
   - Fler än 40 användare: anpassat pris, kontakta oss.
   - Tillägg Integrationer: 199 kr per företag och månad, kan läggas till i alla paket (SIE4-export till Fortnox, Visma och BL, inköpsfakturor direkt via e-post; anpassade integrationer mot tilläggsavgift).

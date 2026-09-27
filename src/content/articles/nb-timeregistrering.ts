@@ -12,6 +12,8 @@ const P_TIMEREGISTRERING_APP_BYGG_HTML = `
 <p>Vil du se hvordan det fungerer? <a href="/nb/blog/gratis-timeregistrering-app">Les om gratis timeregistrering-app</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: digital timeregistrering – stemple inn, timer på prosjekt, gjennomgå, eksport til lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Flyten: stemple inn på bygget, timene havner på riktig prosjekt, gjennomgå i webadmin og eksporter til lønn og faktura.</figcaption></figure>
 
+<p class="eco-note"><strong>GPS eller manuelt – dere velger:</strong> ikke alle vil dele posisjonen sin, og det trenger de ikke. I ByggExp kan medarbeideren i stedet fylle inn timene sine manuelt i appen – per prosjekt og dag. De manuelle timene havner i samme timeoversikt og eksport til lønn og faktura som GPS-timene, og i nettadmin ser du planlagte, GPS- og manuelle timer side om side.</p>
+
 <h2>Hvorfor en timeregistrering-app for byggefirmaer</h2>
 <p>På bygg er de ansatte spredt på ulike arbeidsplasser, bytter prosjekt i løpet av dagen og sitter sjelden ved en PC. Derfor må timeregistreringen skje i mobilen – der jobben gjøres. En app gir deg:</p>
 <ul>
@@ -87,6 +89,8 @@ const S_GRATIS_TIMEREGISTRERING_APP_HTML = `
 <p>Se hele bildet i vår guide om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: timeregistrering fra stempling til lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Uansett pris: verdien kommer når timene blir ferdig underlag for lønn og faktura.</figcaption></figure>
 
+<p class="eco-note"><strong>GPS eller manuelt – dere velger:</strong> ikke alle vil dele posisjonen sin, og det trenger de ikke. I ByggExp kan medarbeideren i stedet fylle inn timene sine manuelt i appen – per prosjekt og dag. De manuelle timene havner i samme timeoversikt og eksport til lønn og faktura som GPS-timene, og i nettadmin ser du planlagte, GPS- og manuelle timer side om side.</p>
+
 <h2>Hva betyr en gratis timeregistrering-app?</h2>
 <p>Noen apper er gratis for et lite antall brukere, andre gir en prøveperiode eller demo så du kan teste før du bestemmer deg. Det viktigste er ikke prisen alene, men om appen faktisk gir deg ferdig underlag til lønn og faktura – ellers flytter du bare papirarbeidet.</p>
 
@@ -137,6 +141,8 @@ const S_STEMPLINGSUR_APP_HTML = `
 <p>Et stemplingsur på veggen fungerer dårlig når de ansatte er ute på ulike bygg. Et stemplingsur som app løser det samme i mobilen: den ansatte stempler inn og ut direkte på arbeidsplassen, og GPS bekrefter at det skjer der jobben gjøres. Her går vi gjennom hvordan et stemplingsur-app med GPS fungerer for byggefirmaer.</p>
 <p>Se hele bildet i vår guide om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-stemplingsur-gps.webp" alt="Diagram: stemplingsur-app med GPS – stemple inn i mobilen, GPS bekrefter arbeidsplassen, oppmøte registrert" width="720" height="380" loading="lazy"><figcaption>Stemple inn i mobilen, GPS bekrefter arbeidsplassen og oppmøtet registreres – på både Android og iPhone.</figcaption></figure>
+
+<p class="eco-note"><strong>GPS eller manuelt – dere velger:</strong> ikke alle vil dele posisjonen sin, og det trenger de ikke. I ByggExp kan medarbeideren i stedet fylle inn timene sine manuelt i appen – per prosjekt og dag. De manuelle timene havner i samme timeoversikt og eksport til lønn og faktura som GPS-timene, og i nettadmin ser du planlagte, GPS- og manuelle timer side om side.</p>
 
 <h2>Hva er et stemplingsur-app?</h2>
 <p>Et stemplingsur-app erstatter det fysiske stemplingsuret med mobilen. I stedet for å dra et kort ved en terminal trykker den ansatte "Stemple inn" når arbeidsdagen begynner og "Stemple ut" når den slutter. Tiden registreres automatisk og kobles til riktig prosjekt.</p>
@@ -373,6 +379,8 @@ const T_TIMELISTE_APP_BYGG_HTML = `
 <p>Timeliste og timeregistrering er to ord for det samme – se også vår guide om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: digital timeliste – stemple inn, timer på prosjekt, gjennomgå, eksport til lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Digital timeliste: timene føres i mobilen, havner på riktig prosjekt og blir grunnlag for lønn og faktura.</figcaption></figure>
 
+<p class="eco-note"><strong>GPS eller manuelt – dere velger:</strong> ikke alle vil dele posisjonen sin, og det trenger de ikke. I ByggExp kan medarbeideren i stedet fylle inn timene sine manuelt i appen – per prosjekt og dag. De manuelle timene havner i samme timeoversikt og eksport til lønn og faktura som GPS-timene, og i nettadmin ser du planlagte, GPS- og manuelle timer side om side.</p>
+
 <h2>Hvorfor digital timeliste for bygg?</h2>
 <p>På bygg er folk ute på ulike plasser og bytter prosjekt i løpet av dagen. En papirtimeliste blir lett unøyaktig og forsinket. En timeliste-app gir deg:</p>
 <ul>
@@ -602,6 +610,8 @@ const S_SJEKKE_HMS_KORT: BlogPost = {
 const T_TIMELISTE_MAL_HTML = `
 <p>Trenger du en enkel timeliste-mal til byggefirmaet? Nedenfor finner du en gratis mal du kan kopiere, skrive ut eller sette opp i Excel – pluss en oversikt over hva en god timeliste bør inneholde. Og når papirmalen begynner å bli tungvint, viser vi hvordan du bytter den ut med en app som fyller ut timelisten automatisk.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: fra timeliste til lønn og faktura – før timene, på riktig prosjekt, eksport til lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Enten du bruker mal eller app: verdien kommer når timene blir ferdig underlag for lønn og faktura.</figcaption></figure>
+
+<p class="eco-note"><strong>GPS eller manuelt – dere velger:</strong> ikke alle vil dele posisjonen sin, og det trenger de ikke. I ByggExp kan medarbeideren i stedet fylle inn timene sine manuelt i appen – per prosjekt og dag. De manuelle timene havner i samme timeoversikt og eksport til lønn og faktura som GPS-timene, og i nettadmin ser du planlagte, GPS- og manuelle timer side om side.</p>
 
 <h2>Hva en timeliste bør inneholde</h2>
 <p>En brukbar timeliste for bygg har med det du trenger for lønn og fakturering – ikke mer:</p>
@@ -1137,6 +1147,8 @@ const BY_BYGGEKONTRAKT: BlogPost = {
 const SY_TIMEREGISTRERINGSSYSTEM_HTML = `
 <p>Et timeregistreringssystem samler timeføringen for hele byggefirmaet på ett sted – fra den ansatte stempler inn til timene blir lønn og faktura. Her går vi gjennom hva et timeregistreringssystem for bygg er, når du har vokst ut av Excel, og hvorfor et enkelt system som laget faktisk bruker slår et avansert som ingen fyller ut.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: timeregistreringssystem – stemple inn, timer på prosjekt, gjennomgå, eksport til lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Et timeregistreringssystem: timene inn i mobilen, på riktig prosjekt, og videre til lønn og faktura.</figcaption></figure>
+
+<p class="eco-note"><strong>GPS eller manuelt – dere velger:</strong> ikke alle vil dele posisjonen sin, og det trenger de ikke. I ByggExp kan medarbeideren i stedet fylle inn timene sine manuelt i appen – per prosjekt og dag. De manuelle timene havner i samme timeoversikt og eksport til lønn og faktura som GPS-timene, og i nettadmin ser du planlagte, GPS- og manuelle timer side om side.</p>
 
 <h2>Hva er et timeregistreringssystem?</h2>
 <p>Et timeregistreringssystem er programvaren som holder styr på arbeidstimene: hvem jobbet, når, og på hvilket prosjekt. For bygg betyr det at timene registreres i mobilen ute på plassen og samles automatisk, i stedet for på lapper og i regneark.</p>

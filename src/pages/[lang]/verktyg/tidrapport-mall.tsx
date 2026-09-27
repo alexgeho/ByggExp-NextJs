@@ -29,7 +29,7 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Kan jag rapportera tid automatiskt?',
     answer:
-      'Ja. I ByggExp kan tiden samlas automatiskt via GPS-incheckning per projekt, så att du slipper fylla i timmar för hand och kan exportera direkt.',
+      'Ja. I ByggExp kan tiden samlas automatiskt via GPS-incheckning per projekt – eller fyllas i manuellt i appen av den som inte vill dela sin position. Allt hamnar i samma tidrapport och kan exporteras direkt.',
   },
   {
     question: 'Är arbetsgivaren skyldig att föra anteckningar om arbetstid?',
@@ -462,7 +462,8 @@ export default function TidrapportMallPage() {
             body: (
               <p>
                 Mallen ovan är gratis att använda. I ByggExp kan tidrapporteringen ske automatiskt:
-                med GPS-incheckning samlas timmarna per projekt, och du exporterar dem direkt som
+                med GPS-incheckning samlas timmarna per projekt. Vill någon inte dela sin position fyller
+                hen i timmarna manuellt i appen i stället – och du exporterar allt direkt som
                 underlag för lön och fakturering – utan dubbelarbete. Eftersom tiden ligger i samma
                 app som projekt, offert och faktura ser du dessutom direkt hur många timmar som lagts
                 på varje jobb och om det är lönsamt. För dig som arbetsledare försvinner insamlandet av
@@ -474,8 +475,8 @@ export default function TidrapportMallPage() {
         faqHeading="Vanliga frågor om tidrapport"
         faq={FAQ}
         cta={{
-          heading: 'Automatisk tidrapportering i ByggExp',
-          text: 'Låt GPS-incheckningen samla timmarna och exportera direkt till lön och faktura. Boka en demo och se hur det fungerar.',
+          heading: 'Automatisk och manuell tidrapportering i ByggExp',
+          text: 'Låt GPS-incheckningen samla timmarna – eller fyll i dem manuellt i appen – och exportera direkt till lön och faktura. Boka en demo och se hur det fungerar.',
           buttonLabel: 'Boka demo',
           href: `/${LOCALE}/contact`,
         }}
@@ -483,7 +484,7 @@ export default function TidrapportMallPage() {
         related={[
           { href: `/${LOCALE}/blog/tidrapportering`, label: 'Guide: tidrapportering i byggföretag' },
           { href: `/${LOCALE}/verktyg/byggdagbok-mall`, label: 'Byggdagbok – gratis mall' },
-          { href: `/${LOCALE}/blog/automatisk-tidrapportering-och-export`, label: 'Automatisk tidrapportering' },
+          { href: `/${LOCALE}/blog/automatisk-tidrapportering-och-export`, label: 'Automatisk och manuell tidrapportering' },
           { href: `/${LOCALE}/blog/loneunderlag-for-byggforetag`, label: 'Löneunderlag för byggföretag' },
         ]}
       />

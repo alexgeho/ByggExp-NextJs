@@ -349,6 +349,8 @@ const A_TIDRAPPORTERING_APP_BYGGFORETAG_HTML = `
 
 <figure class="web-shot"><img src="/features-content/automatisk-tidrapportering-och-export-web.webp" alt="Tidrapportering-app för byggföretag: tider i webbadmin med planerade, GPS- och manuella timmar per medarbetare och dag" width="1000" height="548" loading="lazy"><figcaption>Tider i webbadmin – planerade, GPS- och manuella timmar per medarbetare, redo att exportera till lön och faktura.</figcaption></figure>
 
+<p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
+
 <h2>Vad ska en tidrapporterings-app för bygg klara?</h2>
 <ul>
 <li><strong>Registrering i mobilen</strong> – på plats, i realtid, kopplat till rätt projekt – inte i efterhand.</li>
@@ -1034,6 +1036,8 @@ const A_APP_TIDRAPPORTERING_BYGG_HTML = `
 <p>Vill du testa direkt? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller läs mer om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering i ByggExp</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/tidrapportering-flode.webp" alt="Diagram: digital tidrapportering – checka in, timmar på projekt, granska, export till lön och faktura" width="720" height="380" loading="lazy"><figcaption>Flödet: checka in på bygget, timmarna hamnar på rätt projekt, granska i webbadmin och exportera till lön och faktura.</figcaption></figure>
 
+<p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
+
 <h2>Varför en app för tidrapportering i byggföretag</h2>
 <p>Tidrapportering i bygg skiljer sig från ett vanligt kontorsjobb: personalen är utspridd på olika arbetsplatser, byter projekt under dagen och sitter sällan vid en dator. Därför måste tidrapporteringen ske i mobilen – där jobbet utförs. En app för tidrapport ger dig:</p>
 <ul>
@@ -1123,6 +1127,8 @@ const A_STAMPELKLOCKA_APP_GPS_HTML = `
 <figure class="video-embed" style="position:relative;width:100%;aspect-ratio:16/9;margin:24px 0"><iframe src="https://www.youtube-nocookie.com/embed/w5TO127GqfU" title="Stämpelklocka app med GPS – automatisk in- och utstämpling i ByggExp" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px"></iframe></figure>
 <figure class="article-diagram"><img src="/landing/diagrams/stampelklocka-gps.webp" alt="Diagram: stämpelklocka app med GPS – checka in i mobilen, GPS bekräftar arbetsplatsen, närvaro registrerad" width="720" height="380" loading="lazy"><figcaption>Checka in i mobilen, GPS bekräftar arbetsplatsen och närvaron registreras – på både Android och iPhone.</figcaption></figure>
 
+<p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
+
 <h2>Vad är en stämpelklocka-app?</h2>
 <p>En stämpelklocka-app ersätter den fysiska stämpelklockan med mobilen. I stället för att dra ett kort vid en terminal trycker medarbetaren "Checka in" i appen när arbetsdagen börjar och "Checka ut" när den slutar. Tiden registreras automatiskt och kopplas till rätt projekt.</p>
 
@@ -1194,6 +1200,8 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 
 <p>Vill du komma igång snabbt? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering och export</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/tidrapporteringssystem.webp" alt="Diagram: tidsregistrering, tidrapportering och tidredovisning i tre steg" width="720" height="380" loading="lazy"><figcaption>Tre steg i ett system: tidsregistrering (stämpling), tidrapportering (koppling till projekt) och tidredovisning (underlag för lön och faktura).</figcaption></figure>
+
+<p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
 
 <h2>Vad är ett tidrapporteringssystem?</h2>
 <p>Ett tidrapporteringssystem är verktyget som hanterar hela flödet från registrerad tid till färdigt underlag. Skillnaden mot en enskild stämpelklocka är att systemet också strukturerar, summerar och exporterar tiden – tidsregistrering, tidrapportering och tidredovisning i samma kedja.</p>
@@ -1402,6 +1410,8 @@ const S_TIDRAPPORTERING_ENTREPRENAD_HTML = `
 <p>Se helheten i vår guide om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>.</p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projektuppföljning – följ timmar, kostnader, fakturerat och marginal mot budget" width="720" height="380" loading="lazy"><figcaption>Rapporterade timmar räknas in i projektuppföljningen – tid mot budget medan entreprenaden pågår.</figcaption></figure>
+<p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
+
 <h2>Tid som underlag i entreprenader</h2>
 <p>När flera aktörer arbetar på samma projekt måste tiden gå att härleda: vem, när, vilket projekt. Digital tidrapportering med incheckning och koppling till projekt ger dig det underlaget automatiskt – användbart både för fakturering på löpande räkning och för avstämning med beställaren.</p>
 
@@ -1441,6 +1451,8 @@ const S_MOBIL_TIDRAPPORTERING_HTML = `
 <p>Se hela bilden i vår guide om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>.</p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/tidrapportering-flode.webp" alt="Diagram: mobil tidrapportering – checka in, timmar på projekt, granska, export" width="720" height="380" loading="lazy"><figcaption>Allt sker i mobilen: checka in på bygget, timmarna kopplas till projektet och exporteras till lön och faktura.</figcaption></figure>
+<p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
+
 <h2>Varför mobilen slår papper och väggterminal</h2>
 <ul>
 <li><strong>Tiden fångas när den sker</strong> – inte i efterhand, färre fel.</li>
@@ -1485,6 +1497,8 @@ const S_STAMPELKLOCKA_ANDROID_HTML = `
 <p>Se hela guiden om <a href="/sv/blog/stampelklocka-app-gps-bygg">stämpelklocka app med GPS</a>.</p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/stampelklocka-gps.webp" alt="Diagram: stämpelklocka app med GPS – checka in i mobilen, GPS bekräftar arbetsplatsen" width="720" height="380" loading="lazy"><figcaption>Checka in i mobilen, GPS bekräftar arbetsplatsen – samma flöde på Android som på iPhone.</figcaption></figure>
+<p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
+
 <h2>Stämpelklocka-app på Android</h2>
 <p>På Android laddar medarbetaren ner appen, loggar in och checkar in med ett tryck. GPS bekräftar arbetsplatsen. Eftersom byggteam ofta blandar telefonmodeller är det viktigt att appen fungerar likadant på alla Android-enheter – och på iPhone för dem som har det.</p>
 
@@ -1534,6 +1548,8 @@ const S_STAMPELKLOCKA_IPHONE_HTML = `
 <p>Se hela guiden om <a href="/sv/blog/stampelklocka-app-gps-bygg">stämpelklocka app med GPS</a>.</p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/stampelklocka-gps.webp" alt="Diagram: stämpelklocka app med GPS på iPhone – checka in, GPS bekräftar arbetsplatsen" width="720" height="380" loading="lazy"><figcaption>Checka in i mobilen, GPS bekräftar arbetsplatsen – samma flöde på iPhone som på Android.</figcaption></figure>
+<p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
+
 <h2>Stämpelklocka-app på iPhone</h2>
 <p>På iPhone laddar medarbetaren ner appen från App Store, loggar in och checkar in med ett tryck. GPS bekräftar att incheckningen sker på arbetsplatsen. Timmarna kopplas till projektet och blir underlag för lön och faktura.</p>
 
@@ -1583,6 +1599,8 @@ const S_TIDSREGISTRERING_APP_BYGG_HTML = `
 <p>Se helheten i vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/tidrapporteringssystem.webp" alt="Diagram: tidsregistrering, tidrapportering och tidredovisning i tre steg" width="720" height="380" loading="lazy"><figcaption>Tidsregistrering är första steget: stämpling → rapportering → redovisning.</figcaption></figure>
+<p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
+
 <h2>Vad är tidsregistrering?</h2>
 <p>Tidsregistrering är att registrera arbetstidens början och slut. Det är första steget i kedjan tidsregistrering → tidrapportering → tidredovisning. I en app sker det med in- och utcheckning i mobilen, gärna med GPS.</p>
 
@@ -1634,6 +1652,8 @@ const S_TIDREDOVISNING_APP_HTML = `
 <p>Se helheten i vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/tidrapporteringssystem.webp" alt="Diagram: tidsregistrering, tidrapportering och tidredovisning i tre steg" width="720" height="380" loading="lazy"><figcaption>Tidredovisning är sista steget: det sammanställda underlaget för lön, faktura och uppföljning.</figcaption></figure>
+<p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
+
 <h2>Vad är tidredovisning?</h2>
 <p>Tidredovisning är den sammanställda rapporten över nedlagd tid – per medarbetare, projekt och period. Det är underlaget som lön, faktura och uppföljning bygger på.</p>
 
@@ -1921,6 +1941,8 @@ const S_TIDRAPPORT_APP_IPHONE_HTML = `
 <p>Se hela bilden i vår guide om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>, eller läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering och export</a>.</p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/tidrapportering-flode.webp" alt="Diagram: tidrapport app på iPhone – checka in, timmar på projekt, granska, export till lön och faktura" width="720" height="380" loading="lazy"><figcaption>Från incheckning på iPhone till färdigt underlag: timmarna kopplas till projektet och exporteras till lön och faktura.</figcaption></figure>
+
+<p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
 
 <h2>Tidrapportering på iPhone – så fungerar det</h2>
 <p>Du laddar ner appen från App Store, loggar in och checkar in när arbetsdagen börjar. Timmarna registreras löpande och kopplas till rätt projekt eller kund. Vid dagens slut checkar du ut, och tiden blir underlag för både lön och faktura. Allt sker i mobilen – ingen dator behövs på plats.</p>

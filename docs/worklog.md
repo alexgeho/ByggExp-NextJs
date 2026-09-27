@@ -5,6 +5,10 @@
 
 ---
 
+## 🟡 2026-09-27 — аутрич: база строительных и клининговых фирм
+Файл (локально, не в репо — репо публичный): `~/Desktop/byggexp-outreach/ByggExp_leads_Sverige.xlsx` — Platsbanken Bygg 797 / Städ 489 фирм (JobTech API, по org.nr), sweden4rus.nu (RU) 76, poloniainfo.se (PL) 77, «Все email» 1398.
+NÄSTA: сегментация по SNI/сотрудникам/Stockholm через SCB + Bolagsverket (бесплатно, нужны доступы); шведская/польская версия письма; детали — `~/sites-hub/worklog.md` 2026-09-27.
+
 ## 🟢 2026-09-27 — 3D-стеклянные иконки на главной (`50870dc`, `830a047`, `90c9203`, live)
 Исследование стиля (deep research): для B2B SaaS главный визуал — реальный UI, Recraft — только иконки/акценты; claymorphism (как nordkod) не для ByggExp.
 - Карусель «Vad får ni…» (`Benefits.tsx`): 8 стеклянных 3D-иконок вместо линейных SVG — card1–4 зелёные (руководство), card5–8 синие (бригада). `public/landing/benefits/card*.webp`.

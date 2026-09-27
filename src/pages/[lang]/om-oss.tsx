@@ -69,7 +69,7 @@ export default function AboutPage({
 
         <h2>Kontakt och företagsuppgifter</h2>
         <p>
-          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakien. Kontaktadress i Sverige: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma.
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakien. Kontaktadress i Sverige: c/o Alexander Gerhard, Ekbacksvägen 32, 168 69 Bromma.
           <br />
           IČO: 53551958 · Momsreg.nr: SK2121411820
           <br />
@@ -139,7 +139,7 @@ export default function AboutPage({
 
       <h2>Contact and company details</h2>
       <p>
-        Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Contact address in Sweden: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma, Sweden.
+        Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Contact address in Sweden: c/o Alexander Gerhard, Ekbacksvägen 32, 168 69 Bromma, Sweden.
         <br />
         Company ID (IČO): 53551958 · VAT no.: SK2121411820
         <br />

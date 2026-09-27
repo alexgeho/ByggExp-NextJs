@@ -74,7 +74,7 @@ export default function SubprocessorsPage({
         </p>
         <h2>Kontakt</h2>
         <p>
-          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakien. Kontaktadress i Sverige: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma.
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakien. Kontaktadress i Sverige: c/o Alexander Gerhard, Ekbacksvägen 32, 168 69 Bromma.
           E-post: support@byggexp.se.
         </p>
       </LegalDocument>
@@ -116,7 +116,7 @@ export default function SubprocessorsPage({
       </p>
       <h2>Contact</h2>
       <p>
-        Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Contact address in Sweden: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma, Sweden. Email: support@byggexp.se.
+        Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Contact address in Sweden: c/o Alexander Gerhard, Ekbacksvägen 32, 168 69 Bromma, Sweden. Email: support@byggexp.se.
       </p>
     </LegalDocument>
   );

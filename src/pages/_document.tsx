@@ -33,6 +33,8 @@ const ORG_SCHEMA = JSON.stringify({
   logo: "https://byggexp.se/icon-512.png",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Ekbacksvägen 32",
+    postalCode: "168 69",
     addressLocality: "Bromma",
     addressRegion: "Stockholm",
     addressCountry: "SE",

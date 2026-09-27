@@ -411,6 +411,18 @@
   }
 }
 
+.kontakt-company-logo {
+  margin: 0 0 20px;
+  line-height: 0;
+
+  img {
+    display: block;
+    width: 235px;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 .kontakt-company-links a {
   font-weight: 600;
   color: var(--blue-2);

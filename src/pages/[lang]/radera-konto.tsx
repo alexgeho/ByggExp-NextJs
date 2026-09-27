@@ -61,7 +61,7 @@ export default function DeleteAccountPage({
 
         <h2>Kontakt</h2>
         <p>
-          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakien. Kontaktadress i Sverige: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma. E-post: <a href="mailto:support@byggexp.se">support@byggexp.se</a>.
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakien. Kontaktadress i Sverige: c/o Alexander Gerhard, Ekbacksvägen 32, 168 69 Bromma. E-post: <a href="mailto:support@byggexp.se">support@byggexp.se</a>.
         </p>
       </LegalDocument>
     );
@@ -111,7 +111,7 @@ export default function DeleteAccountPage({
 
         <h2>Контакты</h2>
         <p>
-          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Словакия. Контактный адрес в Швеции: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma. E-mail: <a href="mailto:support@byggexp.se">support@byggexp.se</a>.
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Словакия. Контактный адрес в Швеции: c/o Alexander Gerhard, Ekbacksvägen 32, 168 69 Bromma. E-mail: <a href="mailto:support@byggexp.se">support@byggexp.se</a>.
         </p>
       </LegalDocument>
     );
@@ -157,7 +157,7 @@ export default function DeleteAccountPage({
 
       <h2>Contact</h2>
       <p>
-        Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Contact address in Sweden: c/o Alexander Gerhard, Byggmästarvägen 18, 168 32 Bromma, Sweden. Email: <a href="mailto:support@byggexp.se">support@byggexp.se</a>.
+        Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Contact address in Sweden: c/o Alexander Gerhard, Ekbacksvägen 32, 168 69 Bromma, Sweden. Email: <a href="mailto:support@byggexp.se">support@byggexp.se</a>.
       </p>
     </LegalDocument>
   );

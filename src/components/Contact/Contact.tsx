@@ -17,11 +17,11 @@ const CALENDLY_URL = "https://calendly.com/870717ag/30min";
 const PHONE = "+46 70 757 75 75";
 const COMPANY = "Real Marketing s. r. o.";
 const ORG_NR = "53551958 (IČO) · VAT SK2121411820";
-// Registered office of the company (Slovakia); the Bromma address below is
-// the contact address in Sweden.
+// Registered office of the company (Slovakia) — listed last in the table; the
+// Bromma office address is what visitors need first.
 const SEAT = "Gessayova 2616/14, 851 03 Bratislava";
-const STREET = "Byggmästarvägen 18";
-const POSTAL = "168 32 Bromma";
+const STREET = "Ekbacksvägen 32";
+const POSTAL = "168 69 Bromma";
 const ADDRESS = `${STREET}, ${POSTAL}`;
 
 const phoneHref = `tel:${PHONE.replace(/\s/g, "")}`;
@@ -289,7 +289,11 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
         <div className="kontakt-container kontakt-company-grid">
           <div>
             <span className="kontakt-eyebrow">{t.companyEyebrow}</span>
-            <h2>ByggExp — {COMPANY}</h2>
+            <h2 className="kontakt-company-logo">
+              {/* Same wordmark as the site header, in ink for the light section */}
+              <img src="/landing/header/logo-dark.svg" alt="ByggExp" width={235} height={30} />
+              <span className="sr-only"> — {COMPANY}</span>
+            </h2>
             <p>{t.companyText}</p>
             <p className="kontakt-company-links">
               <Link href={`/${lang}/villkor`}>{t.termsLink}</Link>
@@ -306,14 +310,6 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
             <div>
               <dt>{t.rowOrgNr}</dt>
               <dd>{ORG_NR}</dd>
-            </div>
-            <div>
-              <dt>{t.rowSeat}</dt>
-              <dd>
-                {SEAT}
-                <br />
-                {t.seatCountry}
-              </dd>
             </div>
             <div>
               <dt>{t.rowAddress}</dt>
@@ -341,6 +337,14 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
             <div>
               <dt>{t.rowEmail}</dt>
               <dd><a href="mailto:sales@byggexp.se">sales@byggexp.se</a></dd>
+            </div>
+            <div>
+              <dt>{t.rowSeat}</dt>
+              <dd>
+                {SEAT}
+                <br />
+                {t.seatCountry}
+              </dd>
             </div>
           </dl>
         </div>

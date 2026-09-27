@@ -28,9 +28,9 @@ export const benefitsTranslations = {
     site: {
       benefitsSiteLead: "Для бригады",
 
-      benefitsSiteCard1Title: "Учёт часов в телефоне",
+      benefitsSiteCard1Title: "Часы: авто или вручную",
       benefitsSiteCard1Text:
-        "Отметил начало и конец смены за несколько секунд.",
+        "Часы фиксируются автоматически по GPS — или работник вносит их сам в приложении.",
 
       benefitsSiteCard2Title: "Задачи без звонков",
       benefitsSiteCard2Text:
@@ -75,8 +75,9 @@ export const benefitsTranslations = {
     site: {
       benefitsSiteLead: "For the crew",
 
-      benefitsSiteCard1Title: "Time Tracking on the Phone",
-      benefitsSiteCard1Text: "Clock in and out in just a few seconds.",
+      benefitsSiteCard1Title: "Hours: automatic or manual",
+      benefitsSiteCard1Text:
+        "Hours are logged automatically via GPS – or the worker enters them in the app.",
 
       benefitsSiteCard2Title: "Tasks Without Calls",
       benefitsSiteCard2Text:
@@ -122,9 +123,9 @@ export const benefitsTranslations = {
     site: {
       benefitsSiteLead: "För byggteamet",
 
-      benefitsSiteCard1Title: "Auto tidrapportering",
+      benefitsSiteCard1Title: "Tidrapport: auto eller manuellt",
       benefitsSiteCard1Text:
-        "Telefonen behöver bara vara påslagen och arbetstagaren behöver komma till projektet",
+        "Tiden registreras automatiskt med GPS – eller så fyller medarbetaren i timmarna själv i appen.",
 
       benefitsSiteCard2Title: "Uppgifter utan telefonsamtal",
       benefitsSiteCard2Text:
@@ -170,9 +171,9 @@ export const benefitsTranslations = {
     site: {
       benefitsSiteLead: "For byggeteamet",
 
-      benefitsSiteCard1Title: "Automatisk timeregistrering",
+      benefitsSiteCard1Title: "Timer: automatisk eller manuelt",
       benefitsSiteCard1Text:
-        "Telefonen trenger bare være påslått og arbeidstakeren trenger bare komme til prosjektet",
+        "Timene registreres automatisk med GPS – eller medarbeideren fyller dem inn selv i appen.",
 
       benefitsSiteCard2Title: "Oppgaver uten telefonsamtaler",
       benefitsSiteCard2Text:
@@ -218,9 +219,9 @@ export const benefitsTranslations = {
     site: {
       benefitsSiteLead: "Dla ekipy",
 
-      benefitsSiteCard1Title: "Automatyczna ewidencja czasu",
+      benefitsSiteCard1Title: "Czas pracy: automatycznie lub ręcznie",
       benefitsSiteCard1Text:
-        "Telefon wystarczy mieć włączony, a pracownik po prostu przychodzi na budowę",
+        "Godziny zapisują się automatycznie przez GPS – albo pracownik wpisuje je sam w aplikacji.",
 
       benefitsSiteCard2Title: "Zadania bez telefonów",
       benefitsSiteCard2Text:
@@ -254,8 +255,9 @@ export const benefitsTranslations = {
     },
     site: {
       benefitsSiteLead: "Для бригади",
-      benefitsSiteCard1Title: "Автоматичний облік годин",
-      benefitsSiteCard1Text: "Достатньо, щоб телефон був увімкнений, а працівник прийшов на об’єкт",
+      benefitsSiteCard1Title: "Години: авто або вручну",
+      benefitsSiteCard1Text:
+        "Години фіксуються автоматично за GPS — або працівник вносить їх сам у застосунку.",
       benefitsSiteCard2Title: "Задачі без дзвінків",
       benefitsSiteCard2Text: "Завдання прямо в застосунку разом з автонагадуваннями.",
       benefitsSiteCard3Title: "Усе під рукою",
@@ -283,8 +285,9 @@ export const benefitsTranslations = {
     },
     site: {
       benefitsSiteLead: "Työryhmälle",
-      benefitsSiteCard1Title: "Automaattinen tuntien kirjaus",
-      benefitsSiteCard1Text: "Riittää, että puhelin on päällä ja työntekijä saapuu työmaalle",
+      benefitsSiteCard1Title: "Tunnit: automaattisesti tai käsin",
+      benefitsSiteCard1Text:
+        "Tunnit kirjautuvat automaattisesti GPS:llä – tai työntekijä syöttää ne itse sovelluksessa.",
       benefitsSiteCard2Title: "Tehtävät ilman puheluita",
       benefitsSiteCard2Text: "Tehtävät suoraan sovelluksessa automaattisilla muistutuksilla.",
       benefitsSiteCard3Title: "Kaikki yhdessä paikassa",
@@ -312,8 +315,9 @@ export const benefitsTranslations = {
     },
     site: {
       benefitsSiteLead: "Meeskonnale",
-      benefitsSiteCard1Title: "Automaatne tundide arvestus",
-      benefitsSiteCard1Text: "Piisab, kui telefon on sees ja töötaja tuleb objektile",
+      benefitsSiteCard1Title: "Tunnid: automaatselt või käsitsi",
+      benefitsSiteCard1Text:
+        "Tunnid salvestuvad automaatselt GPS-iga – või töötaja sisestab need ise rakenduses.",
       benefitsSiteCard2Title: "Ülesanded ilma helistamiseta",
       benefitsSiteCard2Text: "Ülesanded otse rakenduses koos automaatsete meeldetuletustega.",
       benefitsSiteCard3Title: "Kõik ühes kohas",
@@ -341,8 +345,9 @@ export const benefitsTranslations = {
     },
     site: {
       benefitsSiteLead: "Komandai",
-      benefitsSiteCard1Title: "Automatinė valandų apskaita",
-      benefitsSiteCard1Text: "Pakanka, kad telefonas būtų įjungtas, o darbuotojas atvyktų į objektą",
+      benefitsSiteCard1Title: "Valandos: automatiškai arba ranka",
+      benefitsSiteCard1Text:
+        "Valandos fiksuojamos automatiškai per GPS – arba darbuotojas pats įveda jas programėlėje.",
       benefitsSiteCard2Title: "Užduotys be skambučių",
       benefitsSiteCard2Text: "Užduotys tiesiai programėlėje su automatiniais priminimais.",
       benefitsSiteCard3Title: "Viskas po ranka",
@@ -370,8 +375,9 @@ export const benefitsTranslations = {
     },
     site: {
       benefitsSiteLead: "Brigādei",
-      benefitsSiteCard1Title: "Automātiska stundu uzskaite",
-      benefitsSiteCard1Text: "Pietiek, ka telefons ir ieslēgts un darbinieks ierodas objektā",
+      benefitsSiteCard1Title: "Stundas: automātiski vai manuāli",
+      benefitsSiteCard1Text:
+        "Stundas tiek fiksētas automātiski ar GPS – vai darbinieks pats tās ievada lietotnē.",
       benefitsSiteCard2Title: "Uzdevumi bez zvaniem",
       benefitsSiteCard2Text: "Uzdevumi tieši lietotnē kopā ar automātiskiem atgādinājumiem.",
       benefitsSiteCard3Title: "Viss pie rokas",

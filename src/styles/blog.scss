@@ -207,6 +207,20 @@
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  // Chips fade out ("into fog") at an edge only while there is more to scroll
+  // that way; FeatureNav toggles the data attributes on scroll/resize.
+  --fade-l: 0px;
+  --fade-r: 0px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 var(--fade-l), #000 calc(100% - var(--fade-r)), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 var(--fade-l), #000 calc(100% - var(--fade-r)), transparent 100%);
+}
+
+.feature-nav-track[data-more-left] {
+  --fade-l: 56px;
+}
+
+.feature-nav-track[data-more-right] {
+  --fade-r: 56px;
 }
 
 .feature-nav-track::-webkit-scrollbar {

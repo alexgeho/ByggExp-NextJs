@@ -133,6 +133,24 @@ export default function FeatureNav({
     track.scrollLeft = el.offsetLeft - track.clientWidth / 2 + el.clientWidth / 2;
   }, [activeSlug]);
 
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    // Mark which edges still hide chips so the CSS mask fades only those.
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth;
+      track.toggleAttribute('data-more-left', track.scrollLeft > 1);
+      track.toggleAttribute('data-more-right', track.scrollLeft < max - 1);
+    };
+    update();
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    return () => {
+      track.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+    };
+  }, [activeSlug]);
+
   return (
     <nav className="feature-nav" aria-label="Funktioner">
       <div className="feature-nav-inner">

@@ -7,7 +7,7 @@ export const benefitsTranslations = {
       benefitsOfficeAccent: "вы начнете экономить время ",
       benefitsOfficeHeading2: "на том, что раньше приходилось делать вручную.",
 
-      benefitsOfficeLead: "Что изменится для руководства:",
+      benefitsOfficeLead: "Для руководства",
 
       benefitsOfficeCard1Title: "Часы сразу в системе",
       benefitsOfficeCard1Text:
@@ -26,7 +26,7 @@ export const benefitsTranslations = {
     },
 
     site: {
-      benefitsSiteLead: "Что получает строительная бригада:",
+      benefitsSiteLead: "Для бригады",
 
       benefitsSiteCard1Title: "Учёт часов в телефоне",
       benefitsSiteCard1Text:
@@ -54,7 +54,7 @@ export const benefitsTranslations = {
       benefitsOfficeAccent: "you'll start saving time ",
       benefitsOfficeHeading2: "on tasks that were previously done manually.",
 
-      benefitsOfficeLead: "What changes for the management:",
+      benefitsOfficeLead: "For management",
 
       benefitsOfficeCard1Title: "Hours Instantly in the System",
       benefitsOfficeCard1Text:
@@ -73,7 +73,7 @@ export const benefitsTranslations = {
     },
 
     site: {
-      benefitsSiteLead: "What the construction crew gets:",
+      benefitsSiteLead: "For the crew",
 
       benefitsSiteCard1Title: "Time Tracking on the Phone",
       benefitsSiteCard1Text: "Clock in and out in just a few seconds.",
@@ -100,7 +100,7 @@ export const benefitsTranslations = {
       benefitsOfficeAccent: "sparar ni tid ",
       benefitsOfficeHeading2: "på allt som tidigare gjordes manuellt.",
 
-      benefitsOfficeLead: "För arbetsledningen:",
+      benefitsOfficeLead: "För ledningen",
 
       benefitsOfficeCard1Title: "Timmar direkt i systemet",
       benefitsOfficeCard1Text:
@@ -120,7 +120,7 @@ export const benefitsTranslations = {
     },
 
     site: {
-      benefitsSiteLead: "För byggteamet:",
+      benefitsSiteLead: "För byggteamet",
 
       benefitsSiteCard1Title: "Auto tidrapportering",
       benefitsSiteCard1Text:
@@ -148,7 +148,7 @@ export const benefitsTranslations = {
       benefitsOfficeAccent: "sparer dere tid ",
       benefitsOfficeHeading2: "på alt som tidligere ble gjort manuelt.",
 
-      benefitsOfficeLead: "For arbeidsledelsen:",
+      benefitsOfficeLead: "For ledelsen",
 
       benefitsOfficeCard1Title: "Timer rett inn i systemet",
       benefitsOfficeCard1Text:
@@ -168,7 +168,7 @@ export const benefitsTranslations = {
     },
 
     site: {
-      benefitsSiteLead: "For byggeteamet:",
+      benefitsSiteLead: "For byggeteamet",
 
       benefitsSiteCard1Title: "Automatisk timeregistrering",
       benefitsSiteCard1Text:
@@ -196,7 +196,7 @@ export const benefitsTranslations = {
       benefitsOfficeAccent: "oszczędzasz czas ",
       benefitsOfficeHeading2: "na tym, co wcześniej robiono ręcznie.",
 
-      benefitsOfficeLead: "Dla kierownictwa:",
+      benefitsOfficeLead: "Dla kierownictwa",
 
       benefitsOfficeCard1Title: "Godziny od razu w systemie",
       benefitsOfficeCard1Text:
@@ -216,7 +216,7 @@ export const benefitsTranslations = {
     },
 
     site: {
-      benefitsSiteLead: "Co zyskuje ekipa budowlana:",
+      benefitsSiteLead: "Dla ekipy",
 
       benefitsSiteCard1Title: "Automatyczna ewidencja czasu",
       benefitsSiteCard1Text:
@@ -242,7 +242,7 @@ export const benefitsTranslations = {
       benefitsOfficeHeading1: "Уже з першого дня ",
       benefitsOfficeAccent: "ви почнете економити час ",
       benefitsOfficeHeading2: "на тому, що раніше доводилося робити вручну.",
-      benefitsOfficeLead: "Що зміниться для керівництва:",
+      benefitsOfficeLead: "Для керівництва",
       benefitsOfficeCard1Title: "Години одразу в системі",
       benefitsOfficeCard1Text: "Рахунки можна виставляти без очікувань і нагадувань.",
       benefitsOfficeCard2Title: "Експорт в Excel",
@@ -253,7 +253,7 @@ export const benefitsTranslations = {
       benefitsOfficeCard4Text: "Працівники відмічаються, коли приходять на об’єкт, — ви одразу бачите, хто на місці, без дзвінків.",
     },
     site: {
-      benefitsSiteLead: "Що отримує будівельна бригада:",
+      benefitsSiteLead: "Для бригади",
       benefitsSiteCard1Title: "Автоматичний облік годин",
       benefitsSiteCard1Text: "Достатньо, щоб телефон був увімкнений, а працівник прийшов на об’єкт",
       benefitsSiteCard2Title: "Задачі без дзвінків",
@@ -271,7 +271,7 @@ export const benefitsTranslations = {
       benefitsOfficeHeading1: "Jo ensimmäisestä päivästä ",
       benefitsOfficeAccent: "alat säästää aikaa ",
       benefitsOfficeHeading2: "asioissa, jotka ennen tehtiin käsin.",
-      benefitsOfficeLead: "Mikä muuttuu johdolle:",
+      benefitsOfficeLead: "Johdolle",
       benefitsOfficeCard1Title: "Tunnit heti järjestelmässä",
       benefitsOfficeCard1Text: "Laskut voi lähettää ilman odottelua ja muistuttelua.",
       benefitsOfficeCard2Title: "Excel-vienti",
@@ -282,7 +282,7 @@ export const benefitsTranslations = {
       benefitsOfficeCard4Text: "Työntekijät kirjautuvat saapuessaan työmaalle – näet heti, kuka on paikalla, ilman soittelua.",
     },
     site: {
-      benefitsSiteLead: "Mitä työryhmä saa:",
+      benefitsSiteLead: "Työryhmälle",
       benefitsSiteCard1Title: "Automaattinen tuntien kirjaus",
       benefitsSiteCard1Text: "Riittää, että puhelin on päällä ja työntekijä saapuu työmaalle",
       benefitsSiteCard2Title: "Tehtävät ilman puheluita",
@@ -300,7 +300,7 @@ export const benefitsTranslations = {
       benefitsOfficeHeading1: "Juba esimesest päevast ",
       benefitsOfficeAccent: "hakkate säästma aega ",
       benefitsOfficeHeading2: "asjadel, mida varem tehti käsitsi.",
-      benefitsOfficeLead: "Mis muutub juhtkonna jaoks:",
+      benefitsOfficeLead: "Juhtkonnale",
       benefitsOfficeCard1Title: "Tunnid kohe süsteemis",
       benefitsOfficeCard1Text: "Arveid saab saata ilma ootamise ja meeldetuletusteta.",
       benefitsOfficeCard2Title: "Exceli eksport",
@@ -311,7 +311,7 @@ export const benefitsTranslations = {
       benefitsOfficeCard4Text: "Töötajad registreerivad end objektile saabudes – näed kohe, kes on kohal, ilma helistamata.",
     },
     site: {
-      benefitsSiteLead: "Mida ehitusmeeskond saab:",
+      benefitsSiteLead: "Meeskonnale",
       benefitsSiteCard1Title: "Automaatne tundide arvestus",
       benefitsSiteCard1Text: "Piisab, kui telefon on sees ja töötaja tuleb objektile",
       benefitsSiteCard2Title: "Ülesanded ilma helistamiseta",
@@ -329,7 +329,7 @@ export const benefitsTranslations = {
       benefitsOfficeHeading1: "Jau nuo pirmos dienos ",
       benefitsOfficeAccent: "pradėsite taupyti laiką ",
       benefitsOfficeHeading2: "tam, kas anksčiau buvo daroma rankiniu būdu.",
-      benefitsOfficeLead: "Kas pasikeičia vadovybei:",
+      benefitsOfficeLead: "Vadovybei",
       benefitsOfficeCard1Title: "Valandos iškart sistemoje",
       benefitsOfficeCard1Text: "Sąskaitas galima išrašyti be laukimo ir priminimų.",
       benefitsOfficeCard2Title: "Eksportas į Excel",
@@ -340,7 +340,7 @@ export const benefitsTranslations = {
       benefitsOfficeCard4Text: "Darbuotojai užsiregistruoja atvykę į objektą – iškart matote, kas yra vietoje, neskambinant.",
     },
     site: {
-      benefitsSiteLead: "Ką gauna statybų komanda:",
+      benefitsSiteLead: "Komandai",
       benefitsSiteCard1Title: "Automatinė valandų apskaita",
       benefitsSiteCard1Text: "Pakanka, kad telefonas būtų įjungtas, o darbuotojas atvyktų į objektą",
       benefitsSiteCard2Title: "Užduotys be skambučių",
@@ -358,7 +358,7 @@ export const benefitsTranslations = {
       benefitsOfficeHeading1: "Jau no pirmās dienas ",
       benefitsOfficeAccent: "sāksiet ietaupīt laiku ",
       benefitsOfficeHeading2: "tam, kas agrāk bija jādara manuāli.",
-      benefitsOfficeLead: "Kas mainās vadībai:",
+      benefitsOfficeLead: "Vadībai",
       benefitsOfficeCard1Title: "Stundas uzreiz sistēmā",
       benefitsOfficeCard1Text: "Rēķinus var izrakstīt bez gaidīšanas un atgādinājumiem.",
       benefitsOfficeCard2Title: "Eksports uz Excel",
@@ -369,7 +369,7 @@ export const benefitsTranslations = {
       benefitsOfficeCard4Text: "Darbinieki reģistrējas, ierodoties objektā – uzreiz redzat, kurš ir uz vietas, bez zvanīšanas.",
     },
     site: {
-      benefitsSiteLead: "Ko iegūst būvniecības brigāde:",
+      benefitsSiteLead: "Brigādei",
       benefitsSiteCard1Title: "Automātiska stundu uzskaite",
       benefitsSiteCard1Text: "Pietiek, ka telefons ir ieslēgts un darbinieks ierodas objektā",
       benefitsSiteCard2Title: "Uzdevumi bez zvaniem",

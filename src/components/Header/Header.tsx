@@ -48,6 +48,29 @@ function Header({ headerT }: HeaderProps) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  // "Priser" on the home page: the open mobile menu changes the page height,
+  // so the browser's own #pricing jump landed too high or too low. Close the
+  // menu first, then scroll so the billing toggle sits right under the header.
+  function goToPricing(e: React.MouseEvent<HTMLAnchorElement>) {
+    closeMenu();
+    if (router.pathname !== "/[lang]") return;
+    e.preventDefault();
+    // Screenshots above the prices load while the page scrolls and push the
+    // block down, so re-check where it ended up and finish the scroll.
+    function scrollToPricing(attempt: number) {
+      const target = document.getElementById("pricing");
+      if (!target) return;
+      const header = document.querySelector(".site-header");
+      const offset = (header?.getBoundingClientRect().height ?? 60) + 12;
+      const delta = target.getBoundingClientRect().top - offset;
+      if (Math.abs(delta) < 4 || attempt > 3) return;
+      window.scrollTo({ top: window.scrollY + delta, behavior: "smooth" });
+      window.setTimeout(() => scrollToPricing(attempt + 1), 900);
+    }
+
+    requestAnimationFrame(() => requestAnimationFrame(() => scrollToPricing(0)));
+  }
+
   function changeLanguage(language: string) {
     // Keep the user on the same page when switching language: swap only the
     // leading /<lang> segment, preserving the rest of the path, query and hash.
@@ -145,7 +168,7 @@ function Header({ headerT }: HeaderProps) {
           {/* NAV LINKS */}
           <div className={isMenuOpen ? "nav-links open" : "nav-links"}>
             <Link href={`/${lang}/funktioner`} onClick={closeMenu}>{headerT.funktioner}</Link>
-            <Link href={`/${lang}#pricing`} onClick={closeMenu}>{headerT.pricing}</Link>
+            <Link href={`/${lang}#pricing`} onClick={goToPricing}>{headerT.pricing}</Link>
 
             {/* RESOURCES — free tools + blog, grouped so visitors don't mistake
                 them for the paid product. Rendered as a mega-menu (icon + title

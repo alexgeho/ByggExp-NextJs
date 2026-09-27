@@ -562,3 +562,10 @@
 #pricing {
   scroll-margin-top: var(--pricing-anchor-offset, 72px);
 }
+
+// The desktop header is taller (80px) than on phones (61px).
+@media (min-width: 841px) {
+  #pricing {
+    scroll-margin-top: 92px;
+  }
+}

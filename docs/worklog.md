@@ -5,6 +5,16 @@
 
 ---
 
+## 🟢 2026-09-27 — 3D-стеклянные иконки на главной (`50870dc`, `830a047`, `90c9203`, live)
+Исследование стиля (deep research): для B2B SaaS главный визуал — реальный UI, Recraft — только иконки/акценты; claymorphism (как nordkod) не для ByggExp.
+- Карусель «Vad får ni…» (`Benefits.tsx`): 8 стеклянных 3D-иконок вместо линейных SVG — card1–4 зелёные (руководство), card5–8 синие (бригада). `public/landing/benefits/card*.webp`.
+- «Sammanfattningsvis får du» (`FinalBenefits.tsx`): секундомер, молния, команда, щит — `public/landing/final-benefits/*.webp`.
+- Цвета строго фирменные: синий `#2394FF`, зелёный `#45B36B`. Recraft даёт фиолетово-синий/мятный → перекрашено сдвигом hue (PIL HSV, без numpy), не перегенерацией.
+- Рецепт: Recraft `recraftv4_1_raster`, промпт «Single chunky 3D object: … frosted translucent glass, visible thickness, beveled edges, inner glow, rim light, three-quarter isometric, **no reflection, no floor, no shadow**, solid navy bg, no text» → remove_background → обрезка по alpha → 256px WebP (10–19 КБ), `loading=lazy`. Без «no reflection» остаётся тёмное отражение после удаления фона.
+- Потрачено ~64 кредита Recraft. Фоны и схема «Så funkar det» сгенерированы, но владелец их НЕ хочет.
+
+NÄSTA: если владелец пришлёт другие блоки с линейными иконками — тем же рецептом. В hero по исследованию лучше реальный скриншот приложения (не делалось).
+
 ## 🟡 2026-09-26 (вечер) — ревизия инструментов /sv/verktyg (ждёт «ок»)
 Отчёт: `~/sites-hub/audits/2026-09-26/byggexp-verktyg-research.md` (GSC 90 дн + Keyword Planner + скачивания).
 Предложено удалить 16 (8 PDF-утилит, tapet/färg/golv/isolering/spillprocent, moms, förseningsvite, betalningspåminnelse) с 301; усилить egenkontroll, takstolar, CTR betong/grus/kvadratmeter, offert/faktura/tidrapport-mall, schema/gantt.

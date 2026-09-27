@@ -667,3 +667,31 @@
     right: 6px;
   }
 }
+
+/* ============ 3D GLASS ICONS (Recraft, green = office, blue = crew) ============ */
+
+.benefit-icon-3d {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  // Pull the icon slightly left so the glass object lines up with the text edge.
+  margin-left: -6px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.benefits-single .benefits-slider--peek .benefit-card .benefit-icon-3d {
+  margin: 0 0 0 -6px;
+}
+
+@media (max-width: 650px) {
+  .benefit-icon-3d {
+    width: 76px;
+    height: 76px;
+  }
+}

@@ -35,6 +35,19 @@ function Header({ headerT }: HeaderProps) {
   /* RESOURCES DROPDOWN (free stuff: tools + blog, kept apart from the paid product) */
   const [resOpen, setResOpen] = useState(false);
 
+  // Logo on the home page: Next treats /sv -> /sv (or /sv#pricing -> /sv) as no
+  // real navigation, so the page stayed where it was. Drop the hash and scroll
+  // to the very top instead. On other pages the normal link takes you home.
+  function goHomeTop(e: React.MouseEvent<HTMLAnchorElement>) {
+    closeMenu();
+    if (router.pathname !== "/[lang]") return;
+    e.preventDefault();
+    if (window.location.hash) {
+      void router.replace(`/${lang}`, undefined, { shallow: true, scroll: false });
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   function changeLanguage(language: string) {
     // Keep the user on the same page when switching language: swap only the
     // leading /<lang> segment, preserving the rest of the path, query and hash.
@@ -91,7 +104,7 @@ function Header({ headerT }: HeaderProps) {
     <header className="site-header">
       <nav className="nav">
         {/* LOGO */}
-        <Link href={`/${lang}`} className="nav-logo">
+        <Link href={`/${lang}`} className="nav-logo" onClick={goHomeTop}>
           <img src={logo} alt="ByggExp" />
         </Link>
 

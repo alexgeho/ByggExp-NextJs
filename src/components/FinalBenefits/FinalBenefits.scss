@@ -140,18 +140,16 @@ align-items: center;
 }
 
 .final-outcome-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blue);
-  background: rgba(35, 148, 255, 0.18);
+  width: 88px;
+  height: 88px;
+  // Pull the glass object slightly left so it lines up with the text edge.
+  margin-left: -6px;
 
-  svg {
-    width: 24px;
-    height: 24px;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 
@@ -185,6 +183,9 @@ align-items: center;
 
   .final-outcome-icon {
     flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    margin-left: 0;
   }
 
   .final-outcome-text {

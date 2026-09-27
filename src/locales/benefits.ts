@@ -20,9 +20,9 @@ export const benefitsTranslations = {
       benefitsOfficeCard3Text:
         "Не нужно звонить и напоминать сотрудникам вручную.",
 
-      benefitsOfficeCard4Title: "Контроль объектов",
+      benefitsOfficeCard4Title: "Кто сегодня на объекте",
       benefitsOfficeCard4Text:
-        "Видно в реальном времени кто работает, кто отсутствует и где.",
+        "Сотрудники отмечаются по приходе на объект — вы сразу видите, кто на месте, без звонков.",
     },
 
     site: {
@@ -67,9 +67,9 @@ export const benefitsTranslations = {
       benefitsOfficeCard3Title: "Automatic Task Reminders",
       benefitsOfficeCard3Text: "No need to call and remind employees manually.",
 
-      benefitsOfficeCard4Title: "Site Monitoring",
+      benefitsOfficeCard4Title: "Who's on site today",
       benefitsOfficeCard4Text:
-        "See in real time who is working, where they are working, and who is absent.",
+        "The crew checks in on arrival at the site – you see at a glance who is there, without calling around.",
     },
 
     site: {
@@ -114,9 +114,9 @@ export const benefitsTranslations = {
       benefitsOfficeCard3Text:
         "Ni behöver inte ringa och påminna medarbetare manuellt.",
 
-      benefitsOfficeCard4Title: "Kontroll över arbetsplatser",
+      benefitsOfficeCard4Title: "Vem är på plats idag",
       benefitsOfficeCard4Text:
-        "Se i realtid vem som arbetar, var de arbetar och vem som är frånvarande.",
+        "Personalen checkar in när de kommer till arbetsplatsen – du ser direkt vilka som är på plats, utan att ringa runt.",
     },
 
     site: {
@@ -162,9 +162,9 @@ export const benefitsTranslations = {
       benefitsOfficeCard3Text:
         "Dere trenger ikke ringe og minne ansatte på manuelt.",
 
-      benefitsOfficeCard4Title: "Kontroll over byggeplassene",
+      benefitsOfficeCard4Title: "Hvem er på plass i dag",
       benefitsOfficeCard4Text:
-        "Se i sanntid hvem som jobber, hvor de jobber og hvem som er fraværende.",
+        "Mannskapet sjekker inn når de kommer til byggeplassen – du ser med en gang hvem som er der, uten å ringe rundt.",
     },
 
     site: {
@@ -210,9 +210,9 @@ export const benefitsTranslations = {
       benefitsOfficeCard3Text:
         "Nie musisz dzwonić i ręcznie przypominać pracownikom.",
 
-      benefitsOfficeCard4Title: "Kontrola budów",
+      benefitsOfficeCard4Title: "Kto jest dziś na budowie",
       benefitsOfficeCard4Text:
-        "Widzisz w czasie rzeczywistym, kto pracuje, gdzie i kto jest nieobecny.",
+        "Pracownicy meldują się po przyjściu na budowę – od razu widzisz, kto jest na miejscu, bez dzwonienia.",
     },
 
     site: {
@@ -249,8 +249,8 @@ export const benefitsTranslations = {
       benefitsOfficeCard2Text: "Готові години для зарплат і рахунків одним кліком.",
       benefitsOfficeCard3Title: "Автонагадування",
       benefitsOfficeCard3Text: "Не потрібно телефонувати й нагадувати працівникам вручну.",
-      benefitsOfficeCard4Title: "Контроль об’єктів",
-      benefitsOfficeCard4Text: "Видно в реальному часі, хто працює, хто відсутній і де.",
+      benefitsOfficeCard4Title: "Хто сьогодні на об’єкті",
+      benefitsOfficeCard4Text: "Працівники відмічаються, коли приходять на об’єкт, — ви одразу бачите, хто на місці, без дзвінків.",
     },
     site: {
       benefitsSiteLead: "Що отримує будівельна бригада:",
@@ -278,8 +278,8 @@ export const benefitsTranslations = {
       benefitsOfficeCard2Text: "Valmiit tunnit palkkoihin ja laskuihin yhdellä klikkauksella.",
       benefitsOfficeCard3Title: "Automaattiset muistutukset",
       benefitsOfficeCard3Text: "Sinun ei tarvitse soittaa ja muistuttaa työntekijöitä käsin.",
-      benefitsOfficeCard4Title: "Työmaiden hallinta",
-      benefitsOfficeCard4Text: "Näet reaaliajassa kuka työskentelee, missä ja kuka on poissa.",
+      benefitsOfficeCard4Title: "Kuka on tänään työmaalla",
+      benefitsOfficeCard4Text: "Työntekijät kirjautuvat saapuessaan työmaalle – näet heti, kuka on paikalla, ilman soittelua.",
     },
     site: {
       benefitsSiteLead: "Mitä työryhmä saa:",
@@ -307,8 +307,8 @@ export const benefitsTranslations = {
       benefitsOfficeCard2Text: "Valmis tunnid palkadeks ja arveteks ühe klikiga.",
       benefitsOfficeCard3Title: "Automaatsed meeldetuletused",
       benefitsOfficeCard3Text: "Te ei pea töötajatele käsitsi helistama ja meelde tuletama.",
-      benefitsOfficeCard4Title: "Objektide kontroll",
-      benefitsOfficeCard4Text: "Näete reaalajas, kes töötab, kus ja kes puudub.",
+      benefitsOfficeCard4Title: "Kes on täna objektil",
+      benefitsOfficeCard4Text: "Töötajad registreerivad end objektile saabudes – näed kohe, kes on kohal, ilma helistamata.",
     },
     site: {
       benefitsSiteLead: "Mida ehitusmeeskond saab:",
@@ -336,8 +336,8 @@ export const benefitsTranslations = {
       benefitsOfficeCard2Text: "Paruoštos valandos atlyginimams ir sąskaitoms vienu paspaudimu.",
       benefitsOfficeCard3Title: "Automatiniai priminimai",
       benefitsOfficeCard3Text: "Nereikia skambinti ir rankiniu būdu priminti darbuotojams.",
-      benefitsOfficeCard4Title: "Objektų kontrolė",
-      benefitsOfficeCard4Text: "Realiu laiku matote, kas dirba, kur ir kas nedalyvauja.",
+      benefitsOfficeCard4Title: "Kas šiandien objekte",
+      benefitsOfficeCard4Text: "Darbuotojai užsiregistruoja atvykę į objektą – iškart matote, kas yra vietoje, neskambinant.",
     },
     site: {
       benefitsSiteLead: "Ką gauna statybų komanda:",
@@ -365,8 +365,8 @@ export const benefitsTranslations = {
       benefitsOfficeCard2Text: "Gatavas stundas algām un rēķiniem ar vienu klikšķi.",
       benefitsOfficeCard3Title: "Automātiski atgādinājumi",
       benefitsOfficeCard3Text: "Nav jāzvana un manuāli jāatgādina darbiniekiem.",
-      benefitsOfficeCard4Title: "Objektu kontrole",
-      benefitsOfficeCard4Text: "Reāllaikā redzat, kurš strādā, kur un kurš nav klāt.",
+      benefitsOfficeCard4Title: "Kurš šodien ir objektā",
+      benefitsOfficeCard4Text: "Darbinieki reģistrējas, ierodoties objektā – uzreiz redzat, kurš ir uz vietas, bez zvanīšanas.",
     },
     site: {
       benefitsSiteLead: "Ko iegūst būvniecības brigāde:",

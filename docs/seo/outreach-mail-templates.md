@@ -115,4 +115,73 @@ Mvh, Alexander
 - **Канал:** Teams + альтернатива «eller ett kort samtal om det passar bättre».
 - **Без ссылки** в первом письме; сайт/демо — во втором касании.
 - Фолоуапы — см. [[cold-outreach-setup]] (docs/seo/cold-outreach-setup.md).
-да дав
+
+---
+
+## Platsbanken-база (2026-09-28) — SV + PL
+
+Для базы `~/Desktop/byggexp-outreach/ByggExp_leads_Sverige.xlsx` (лиды из объявлений о вакансиях).
+Триггер = их объявление: фирма нанимает → растёт → учёт времени/персонала становится проблемой.
+Плейсхолдеры: `{{yrke}}` — короткая профессия из колонки «Профессии» (вручную: «snickare»,
+«ställningsbyggare»), `{{ort}}` — первый город, `{{länk}}` — колонка «Ссылка». Ссылка только на их
+объявление (arbetsformedlingen.se), на byggexp.se — нет. Последняя строка (отказ) — обязательна.
+Слать с alexander@tidrapportapp.se, 10–15/день, каждое отдельно (не BCC).
+
+### Тема (A/B)
+- `er annons på Platsbanken` (RU: «ваше объявление на Platsbanken»)
+- `fråga om era {{yrke}}-jobb` / для уборки `fråga om era städuppdrag`
+
+### SV — стройка (Platsbanken Bygg)
+Hej!
+
+Jag såg att ni söker {{yrke}} i {{ort}} på Platsbanken: {{länk}}
+
+När laget växer brukar tidrapporter, personalliggare och fakturering bli det som äter kvällarna. Hur sköter ni det idag?
+
+Vi har byggt ByggExp, ett svenskt system för byggföretag: tidrapportering med GPS i mobilen, digital personalliggare, planering av arbetslag, offert och faktura. Allt i samma tjänst, webb och app, och appen finns på flera språk så att hela laget kan använda den.
+
+Får jag visa på 20 minuter i Teams nästa vecka? 14 dagar gratis, inga årsavtal.
+
+Om det inte är aktuellt, svara bara "nej" så hör jag inte av mig igen.
+
+Mvh, Alexander
+
+### SV — уборка (Platsbanken Städ)
+Hej!
+
+Jag såg att ni söker städare i {{ort}} på Platsbanken: {{länk}}
+
+Med fler anställda ute på olika adresser blir schemat, tidrapporterna och faktureringen snabbt mycket jobb. Hur sköter ni det idag?
+
+Vi har byggt ByggExp, ett svenskt system för företag med personal ute på uppdrag: schemaläggning, tidrapportering med GPS i mobilen, uppgifter med påminnelser, offert och faktura. Allt i samma tjänst, webb och app, och appen finns på flera språk så att alla i personalen kan använda den.
+
+Får jag visa på 20 minuter i Teams nästa vecka? 14 dagar gratis, inga årsavtal.
+
+Om det inte är aktuellt, svara bara "nej" så hör jag inte av mig igen.
+
+Mvh, Alexander
+
+### PL — PoloniaInfo (ogłoszenia «Dam pracę»)
+Temat: `Pana ogłoszenie na PoloniaInfo` (RU: «ваше объявление на PoloniaInfo»)
+
+Dzień dobry,
+
+widziałem Pana ogłoszenie na PoloniaInfo ({{tytuł}}, {{ort}}).
+
+Przy kilku pracownikach na różnych budowach godziny, personalliggare i faktury zabierają sporo wieczorów. Jak Pan to teraz prowadzi?
+
+Zrobiliśmy ByggExp, szwedzki program dla firm budowlanych: ewidencja czasu pracy z GPS w telefonie, cyfrowy personalliggare, planowanie ekip, oferty i faktury. Wszystko w jednym miejscu, przeglądarka i aplikacja, a aplikacja działa też po polsku.
+
+Mogę pokazać w 20 minut przez Teams lub telefon. 14 dni za darmo, bez rocznej umowy.
+
+Jeśli to nie dla Pana, wystarczy odpisać "nie" i więcej nie napiszę.
+
+Pozdrawiam,
+Alexander
+
+RU-смысл PL-письма: «увидел ваше объявление на PoloniaInfo; когда несколько рабочих на разных объектах,
+часы, personalliggare и счета съедают вечера — как ведёте сейчас? Мы сделали ByggExp… приложение
+работает и по-польски. Покажу за 20 минут в Teams или по телефону. 14 дней бесплатно, без годового
+договора. Если неактуально — ответьте «nie», больше не напишу».
+⚠️ PoloniaInfo — почти все адреса личные (gmail/hotmail) → только поштучно, по делу, со ссылкой на
+объявление; «Pan» — если по объявлению видно, что пишет женщина, заменить на «Pani».

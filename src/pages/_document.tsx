@@ -101,11 +101,11 @@ export default function Document(props: DocumentProps) {
             og:image + twitter card so shares render with a preview. */}
         <meta property="og:site_name" content="ByggExp" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://byggexp.se/og-cover-v3.jpg" />
+        <meta property="og:image" content="https://byggexp.se/og-cover-v4.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://byggexp.se/og-cover-v3.jpg" />
+        <meta name="twitter:image" content="https://byggexp.se/og-cover-v4.jpg" />
       </Head>
       <body>
         <Main />

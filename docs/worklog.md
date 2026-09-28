@@ -5,6 +5,12 @@
 
 ---
 
+## 🟢 2026-09-28 (ночь) — почта на Brevo, аутрич SV-1, отчёт по работнику
+- Системная почта (API) не уходила (535) → переведена на Brevo SMTP, byggexp.se аутентифицирован (DKIM/brevo-code, одна DMARC). Детали и дата истечения ключа (28.09.2027) — RUNBOOK бэкенда «Outgoing mail (Brevo)».
+- Аутрич: `docs/seo/outreach-mail-templates.md` — актуальные RU v1 + SV v1 (Platsbanken, UTM outreach-sv-1), старые шаблоны = архив. База: лист «Platsbanken SV-1» в xlsx на Desktop.
+- Бэкенд `03d38b6`: Dagens rapport снова возвращается в приложение; экспорт смен с листом «Per project». Админка: Часы → Экспорт → «Excel per employee (all projects)».
+NÄSTA: «ок» на SV-текст → отправка; монитор на сервер; см. `~/sites-hub/worklog.md` 2026-09-28 (ночь).
+
 ## 🟢 2026-09-28 — ручной ввод часов на сайте, контакты, инструменты, OG v4 (live)
 - «Автоматически по GPS ИЛИ вручную в приложении» (сверено с кодом: worker ставит manual-hours в приложении, manual перекрывает GPS за день; админ не правит чужие manual): статья automatisk-tidrapportering-och-export (5 яз., блок `eco-note` «GPS eller manuellt» после вступления), 11 sv + 6 nb статей про тид/stämpelklocka, FAQ sv/en, om-oss, tidrapport-mall, промпт чат-бота, карточка Benefits card5 (10 яз., иконка = секундомер). Не трогали: personalliggare/närvaro (там нужна отметка), GPS на фото, юр. страницы.
 - FeatureNav: маска-затухание краёв ленты пилюль (`data-more-left/right`).

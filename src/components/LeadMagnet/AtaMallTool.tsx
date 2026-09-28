@@ -146,12 +146,6 @@ export default function AtaMallTool() {
 
   return (
     <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Fyll i och ladda ner din ÄTA</h2>
-        <p className="lm-tool-sub">
-          Fyll i uppgifterna nedan och ladda ner en färdig ÄTA-beställning som PDF eller Excel att signera. Klicka på &quot;Fyll i exempel&quot; för att se en färdig, ifylld ÄTA. Inget konto behövs.
-        </p>
-      </div>
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Se hur den fylls i:</span>

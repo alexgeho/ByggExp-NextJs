@@ -135,13 +135,6 @@ export default function SignPdfTool() {
 
   return (
     <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Signera PDF – rita din signatur</h2>
-        <p className="lm-tool-sub">
-          Välj en PDF, rita din signatur och placera den på dokumentet. Allt sker i din webbläsare – filen laddas aldrig upp. Detta är en visuell signatur (bild), inte en BankID-signatur.
-        </p>
-      </div>
-
       <input
         ref={inputRef}
         type="file"

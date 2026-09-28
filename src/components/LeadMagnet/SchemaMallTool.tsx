@@ -183,12 +183,6 @@ export default function SchemaMallTool() {
 
   return (
     <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Gör ett arbetsschema för veckan</h2>
-        <p className="lm-tool-sub">
-          Ladda ner en färdig tom mall direkt – eller fyll i personal och pass per dag nedan och ladda ner som PDF eller Excel. Inget konto behövs.
-        </p>
-      </div>
 
       <div
         className="lm-tool-quick"

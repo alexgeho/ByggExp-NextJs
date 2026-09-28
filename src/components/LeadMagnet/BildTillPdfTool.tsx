@@ -72,12 +72,6 @@ export default function BildTillPdfTool() {
 
   return (
     <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Konvertera bilder till PDF</h2>
-        <p className="lm-tool-sub">
-          Lägg till JPG- eller PNG-bilder och gör en PDF med en bild per sida. Allt sker i din webbläsare – bilderna laddas aldrig upp. Inget konto behövs.
-        </p>
-      </div>
 
       <input
         ref={inputRef}

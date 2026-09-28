@@ -98,13 +98,6 @@ export default function MergePdfTool() {
 
   return (
     <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Slå ihop PDF – gratis och direkt i webbläsaren</h2>
-        <p className="lm-tool-sub">
-          Lägg till flera PDF-filer (eller bilder) och slå ihop dem till en enda PDF. Allt sker i din webbläsare – filerna laddas aldrig upp till någon server. Inget konto behövs.
-        </p>
-      </div>
-
       <input
         ref={inputRef}
         type="file"

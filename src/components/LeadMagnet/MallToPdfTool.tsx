@@ -241,11 +241,6 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
         </div>
       )}
 
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">{config.pdfHeading}</h2>
-        <p className="lm-tool-sub">{config.subtitle}</p>
-      </div>
-
       {config.presets && (
         <div className="lm-tool-presets">
           <span className="lm-tool-presets-label">{config.presets.label}</span>

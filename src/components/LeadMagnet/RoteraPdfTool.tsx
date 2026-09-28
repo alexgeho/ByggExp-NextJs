@@ -37,12 +37,6 @@ export default function RoteraPdfTool() {
 
   return (
     <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Rotera PDF</h2>
-        <p className="lm-tool-sub">
-          Välj en PDF och rotera alla sidor. Allt sker i din webbläsare – filen laddas aldrig upp. Inget konto behövs.
-        </p>
-      </div>
 
       <input
         ref={inputRef}

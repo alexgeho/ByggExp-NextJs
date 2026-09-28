@@ -75,12 +75,6 @@ export default function PdfTillJpgTool() {
 
   return (
     <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Konvertera PDF till JPG</h2>
-        <p className="lm-tool-sub">
-          Välj en PDF så gör vi en JPG-bild av varje sida. En sida laddas ner som bild, flera sidor som en zip-fil. Allt sker i din webbläsare – filen laddas aldrig upp.
-        </p>
-      </div>
 
       <input
         ref={inputRef}

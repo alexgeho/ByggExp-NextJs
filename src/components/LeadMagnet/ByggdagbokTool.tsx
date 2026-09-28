@@ -127,12 +127,6 @@ export default function ByggdagbokTool() {
 
   return (
     <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Fyll i och ladda ner din byggdagbok</h2>
-        <p className="lm-tool-sub">
-          Fyll i dagens uppgifter nedan och ladda ner den som PDF eller Excel att spara, skriva ut eller redigera. Inget konto behövs.
-        </p>
-      </div>
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Se hur den fylls i:</span>

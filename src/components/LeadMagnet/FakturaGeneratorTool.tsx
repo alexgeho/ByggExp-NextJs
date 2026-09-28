@@ -163,17 +163,13 @@ export default function FakturaGeneratorTool() {
 
   return (
     <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Skapa en faktura och ladda ner som PDF</h2>
-        <p className="lm-tool-sub">
-          Fyll i uppgifter, rader, moms och eventuellt ROT så räknas summorna ut och du får en färdig faktura som PDF. Allt sker i din webbläsare. Inget konto behövs.
-        </p>
-        {seeded ? (
+      {seeded ? (
+        <div className="lm-tool-head">
           <p className="lm-result-fine" style={{ marginTop: 4 }}>
             Raderna är ifyllda från din kalkyl – lägg till à-priser och fakturauppgifter.
           </p>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
 
       <div className="lm-tool-grid">
         <label className="lm-tool-field">

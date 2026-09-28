@@ -295,15 +295,6 @@ export default function KontrollplanMallTool() {
 
   return (
     <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Kontrollplan enligt PBL</h2>
-        <p className="lm-tool-sub">
-          Fyll i projektuppgifter och en rad per kontroll – vad, hur, mot vilket underlag, vem och om det är
-          egenkontroll eller certifierad sakkunnig – och ladda ner kontrollplanen som PDF eller Excel.
-          Klicka på &quot;Fyll i exempel&quot; för att se ett ifyllt exempel. För större projekt tar en kontrollansvarig (KA)
-          fram planen.
-        </p>
-      </div>
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Se hur den fylls i:</span>

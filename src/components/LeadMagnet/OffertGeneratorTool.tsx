@@ -149,18 +149,14 @@ export default function OffertGeneratorTool() {
 
   return (
     <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Skapa en offert och ladda ner som PDF</h2>
-        <p className="lm-tool-sub">
-          Fyll i rader, moms och eventuellt ROT så räknar vi ut summorna och gör en färdig offert som PDF. Allt sker i din webbläsare. Inget konto behövs.
-        </p>
-        {seeded ? (
+      {seeded ? (
+        <div className="lm-tool-head">
           <p className="lm-result-fine" style={{ marginTop: 4 }}>
             Materialraderna är ifyllda från din kalkyl – lägg till à-priser och en
             arbetsrad så är offerten klar.
           </p>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
 
       <div className="lm-tool-grid">
         <label className="lm-tool-field">

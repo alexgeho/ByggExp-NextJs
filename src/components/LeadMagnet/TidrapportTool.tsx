@@ -279,12 +279,6 @@ export default function TidrapportTool() {
 
   return (
     <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Ladda ner din tidrapport-mall</h2>
-        <p className="lm-tool-sub">
-          Ladda ner en färdig tom mall direkt – eller fyll i timmarna online nedan och ladda ner en klar PDF eller Excel med summan uträknad. Inget konto behövs.
-        </p>
-      </div>
 
       <div
         className="lm-tool-quick"

@@ -64,12 +64,6 @@ export default function TaBortSidorTool() {
 
   return (
     <div className="lm-tool">
-      <div className="lm-tool-head">
-        <h2 className="lm-tool-title">Ta bort sidor ur en PDF</h2>
-        <p className="lm-tool-sub">
-          Välj en PDF och ange vilka sidor som ska tas bort – resten behålls. Allt sker i din webbläsare, filen laddas aldrig upp. Inget konto behövs.
-        </p>
-      </div>
 
       <input
         ref={inputRef}

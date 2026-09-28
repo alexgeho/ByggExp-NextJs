@@ -591,6 +591,9 @@
   min-height: 0;
   display: flex;
   flex-direction: column;
+  // All cards share the tallest card's height; centre the content so the
+  // shorter ones get equal air above and below instead of a gap at the bottom.
+  justify-content: center;
   gap: 16px;
   scroll-snap-align: center;
   opacity: 0.4;
@@ -689,9 +692,4 @@
   margin: 0 0 0 -6px;
 }
 
-@media (max-width: 650px) {
-  .benefit-icon-3d {
-    width: 76px;
-    height: 76px;
-  }
-}
+

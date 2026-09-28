@@ -6,6 +6,68 @@
 
 Дата: 2026-09-01.
 
+## ✅ АКТУАЛЬНО: v1 (2026-09-28) — RU (Пальма, отправлено 45 шт.) + SV (Platsbanken, волна sv-1)
+
+Утверждён владельцем 28.09. Всё, что ниже этого раздела, — старые шаблоны (архив, не использовать).
+Правила: без цены; ссылка на сайт есть (в SV — с UTM); P.S. с отказом обязателен; слать с
+alexander@tidrapportapp.se по одному (не BCC), 10–15/день. База SV → лист «Platsbanken SV-1» в
+`~/Desktop/byggexp-outreach/ByggExp_leads_Sverige.xlsx` (колонка `{{yrke}}`, приоритет 1 = Sthlm/Uppsala).
+
+### RU v1
+```text
+Тема: По вашему объявлению на Шведской Пальме
+
+Здравствуйте!
+
+Видел ваше объявление о наборе персонала — желаю, чтобы дела и дальше шли хорошо. Часы рабочих вы, наверное, сейчас получаете по SMS и на бумажках, а потом вводите всё вручную?
+
+Мы — команда программистов, сделали ByggExp:
+• Часы приходят сами — автоматически по GPS или рабочий вводит вручную в приложении. Сразу готово для зарплаты и счетов.
+• В режиме live видно, кто сейчас на каком объекте.
+• Счета клиентам выставляете прямо из системы по отработанным часам.
+• Фото чеков и входящие счета — система сама их сканирует и разносит по проектам.
+
+И многое другое: задачи с автонапоминаниями, фотоотчёты с привязкой к смене, присвоение инструмента по QR-коду, коммерческие предложения.
+
+Приложение и админ-панель на 11 языках, 2 недели бесплатно.
+
+Созвонимся на 15 минут? Покажу по видео или при встрече.
+
+Александр, ByggExp
+https://byggexp.se/sv
+
+P.S. Если неактуально, ответьте «нет», и я больше не напишу.
+```
+
+### SV v1 (Platsbanken, utm_campaign=outreach-sv-1)
+```text
+Ämne: Er annons på Platsbanken
+
+Hej!
+
+Jag såg att ni söker {{yrke}} på Platsbanken – hoppas att det fortsätter att gå bra för er. Arbetarnas timmar får ni kanske in via sms och lappar i dag, och sedan förs allt in för hand?
+
+Vi är ett team av programmerare som har byggt ByggExp:
+• Timmarna kommer in av sig själva – automatiskt via GPS, eller så fyller den anställde i dem manuellt i appen. Direkt klart för lön och fakturering.
+• I realtid ser ni vem som är på vilket projekt just nu.
+• Fakturor till kunder skapar ni direkt i systemet utifrån arbetade timmar.
+• Foton på kvitton och inkommande leverantörsfakturor – systemet läser av dem och fördelar dem på rätt projekt.
+
+Och mycket mer: uppgifter med automatiska påminnelser, fotorapporter kopplade till arbetspasset, verktyg som lånas ut via QR-kod, offerter.
+
+Appen och adminpanelen finns på 11 språk, 2 veckor gratis.
+
+Ska vi ta 15 minuter? Jag visar gärna via video eller på plats.
+
+Alexander, ByggExp
+https://byggexp.se/sv?utm_source=platsbanken&utm_medium=email&utm_campaign=outreach-sv-1
+
+P.S. Om det inte är aktuellt, svara bara "nej" så hör jag inte av mig igen.
+```
+`{{yrke}}` — из колонки листа; если «personal» → «Jag såg att ni söker personal på Platsbanken».
+
+---
+
 ## Тема письма (ротация A/B)
 - **`fråga om era elektrikerjobb`** — нейтральная, «просто вопрос» (обычно выше open rate).
   RU: «вопрос про ваши электромонтажные работы». Под категорию: `fråga om era snickerijobb`

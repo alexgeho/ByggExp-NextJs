@@ -5,6 +5,14 @@
 
 ---
 
+## 🟢 2026-09-28 — ручной ввод часов на сайте, контакты, инструменты, OG v4 (live)
+- «Автоматически по GPS ИЛИ вручную в приложении» (сверено с кодом: worker ставит manual-hours в приложении, manual перекрывает GPS за день; админ не правит чужие manual): статья automatisk-tidrapportering-och-export (5 яз., блок `eco-note` «GPS eller manuellt» после вступления), 11 sv + 6 nb статей про тид/stämpelklocka, FAQ sv/en, om-oss, tidrapport-mall, промпт чат-бота, карточка Benefits card5 (10 яз., иконка = секундомер). Не трогали: personalliggare/närvaro (там нужна отметка), GPS на фото, юр. страницы.
+- FeatureNav: маска-затухание краёв ленты пилюль (`data-more-left/right`).
+- Контакты: лого `logo-dark.svg` вместо заголовка, офис Ekbacksvägen 32, 168 69 Bromma (+ 6 юр. страниц, Organization schema), Säte (Братислава) последней строкой.
+- Инструменты: убран дубль заголовка/подзаголовка внутри карточки у 27 шаблонов/PDF (16 компонентов LeadMagnet, в т.ч. MallToPdfTool); калькуляторы не затронуты.
+- OG: `og-cover-v4.jpg` (синий секундомер card5, зелёный календарь card1, card3 перекрашен в синий по палитре card5); старые имена отдают ту же картинку. Кеш Telegram — @WebpageBot.
+NÄSTA: аутрич — см. `~/sites-hub/worklog.md` 2026-09-28 (вечер); GA4-конверсия заявки для атрибуции.
+
 ## 🟡 2026-09-27 — аутрич: база строительных и клининговых фирм
 Файл (локально, не в репо — репо публичный): `~/Desktop/byggexp-outreach/ByggExp_leads_Sverige.xlsx` — Platsbanken Bygg 797 / Städ 489 фирм (JobTech API, по org.nr), sweden4rus.nu (RU) 76, poloniainfo.se (PL) 77, «Все email» 1398.
 NÄSTA: сегментация по SNI/сотрудникам/Stockholm через SCB + Bolagsverket (бесплатно, нужны доступы); шведская/польская версия письма; детали — `~/sites-hub/worklog.md` 2026-09-27.

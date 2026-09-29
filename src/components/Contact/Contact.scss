@@ -377,6 +377,30 @@
   }
 }
 
+/* 3D-glasikon per steg (som på startsidan), numret som liten bricka i hörnet */
+.kontakt-step-visual {
+  position: relative;
+  width: 104px;
+  height: 104px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .kontakt-step-num {
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+    box-shadow: 0 0 0 3px var(--bg);
+  }
+}
+
 .kontakt-step-num {
   display: inline-flex;
   align-items: center;

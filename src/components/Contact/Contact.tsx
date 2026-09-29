@@ -372,7 +372,17 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
           <ol className="kontakt-steps-list">
             {t.steps.map((step, index) => (
               <li key={step.title}>
-                <span className="kontakt-step-num">{index + 1}</span>
+                <div className="kontakt-step-visual">
+                  <img
+                    src={`/landing/contact/step${index + 1}.webp`}
+                    width={256}
+                    height={256}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="kontakt-step-num">{index + 1}</span>
+                </div>
                 <h3>{step.title}</h3>
                 <p>{step.text}</p>
               </li>

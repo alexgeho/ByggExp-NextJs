@@ -6,6 +6,7 @@ export type ContactT = {
 
   formName: string;
   formEmail: string;
+  contactError: string;
   formCompany: string;
   formPhone: string;
   formPhoneHint: string;
@@ -25,6 +26,9 @@ export type ContactT = {
   emailPress: string;
 
   appsLabel: string;
+  appsText: string;
+  videoLabel: string;
+  videoText: string;
   appStorePre: string;
   googlePlayPre: string;
   youtubePre: string;
@@ -47,6 +51,12 @@ export type ContactT = {
   hours: string;
   rowPayment: string;
   payment: string;
+  payTitle: string;
+  paySteps: readonly { title: string; text: string }[];
+  payTermsLink: string;
+
+  teamLabel: string;
+  teamRoles: { founder: string };
   rowPhone: string;
   rowEmail: string;
 

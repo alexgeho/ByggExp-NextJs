@@ -3,10 +3,11 @@ import { useState, type FormEvent, type ChangeEvent } from "react";
 import { API_URL } from "../../config/api";
 import {
   NO_LEAD_FORM_ERRORS,
-  buildLeadPayload,
+  buildContactLeadPayload,
   hasLeadFormErrors,
+  isValidContact,
   isValidEmail,
-  validateLeadForm,
+  validateContactLeadForm,
 } from "../../lib/leadForm";
 import { CalendlyInlineWidget } from "../CalendlyInlineWidget";
 
@@ -22,7 +23,7 @@ function CTA({ ctaT }: CTAProps) {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const nextErrors = validateLeadForm(name, email);
+    const nextErrors = validateContactLeadForm(name, contact);
     setErrors(nextErrors);
 
     if (hasLeadFormErrors(nextErrors)) {
@@ -36,7 +37,7 @@ function CTA({ ctaT }: CTAProps) {
       const response = await fetch(`${API_URL}/mail/demo-request`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(buildLeadPayload(name, email, phone, "cta")),
+        body: JSON.stringify(buildContactLeadPayload(name, contact, "cta")),
       });
 
       if (!response.ok) {
@@ -67,24 +68,16 @@ function CTA({ ctaT }: CTAProps) {
   }
   /* END */
 
-  /* INPUT EMAIL */
-  const [email, setEmail] = useState("");
+  /* INPUT PHONE OR EMAIL — one field, same rule as the Kontakt form */
+  const [contact, setContact] = useState("");
 
-  function handleEmailChange(event: ChangeEvent<HTMLInputElement>) {
+  function handleContactChange(event: ChangeEvent<HTMLInputElement>) {
     const value = event.currentTarget.value;
-    setEmail(value);
+    setContact(value);
 
-    if (errors.email && isValidEmail(value)) {
+    if (errors.email && isValidContact(value)) {
       setErrors((prev) => ({ ...prev, email: false }));
     }
-  }
-  /* END */
-
-  /* INPUT PHONE */
-  const [phone, setPhone] = useState("");
-
-  function handlePhoneChange(event: ChangeEvent<HTMLInputElement>) {
-    setPhone(event.currentTarget.value);
   }
   /* END */
 
@@ -193,11 +186,11 @@ function CTA({ ctaT }: CTAProps) {
                   <input
                     id="f-email"
                     name="email"
-                    type="email"
+                    type="text"
                     placeholder={ctaT.ctaEmailPlaceholder}
                     autoComplete="email"
-                    onChange={handleEmailChange}
-                    value={email}
+                    onChange={handleContactChange}
+                    value={contact}
                     aria-invalid={errors.email}
                     aria-describedby="f-email-error"
                   />
@@ -205,26 +198,6 @@ function CTA({ ctaT }: CTAProps) {
                   <div className="err-msg" id="f-email-error" role="alert">
                     {ctaT.ctaEmailError}
                   </div>
-                </div>
-
-                {/* PHONE — optional, an email address is enough */}
-                <div className="form-group" data-field="phone">
-                  <label htmlFor="f-phone">
-                    {ctaT.ctaPhoneLabel}{" "}
-                    <span className="label-optional">
-                      ({ctaT.ctaPhoneOptional})
-                    </span>
-                  </label>
-
-                  <input
-                    id="f-phone"
-                    name="phone"
-                    type="tel"
-                    placeholder={ctaT.ctaPhonePlaceholder}
-                    autoComplete="tel"
-                    onChange={handlePhoneChange}
-                    value={phone}
-                  />
                 </div>
 
                 {/* SUBMIT */}
@@ -273,11 +246,11 @@ function CTA({ ctaT }: CTAProps) {
               <div className="calendly-embed">
                 <CalendlyInlineWidget
                   url={CALENDLY_URL}
-                  prefill={{
-                    name,
-                    email,
-                    customAnswers: { a1: phone },
-                  }}
+                  prefill={
+                    isValidEmail(contact)
+                      ? { name, email: contact.trim() }
+                      : { name, customAnswers: { a1: contact.trim() } }
+                  }
                   styles={{ height: "750px" }}
                 />
               </div>

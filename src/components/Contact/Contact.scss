@@ -93,15 +93,48 @@
   padding-bottom: 80px !important;
 }
 
+// En avståndsskala för hela blocket: 8 / 12 / 16 / 24 / 32.
+// Ordning efter besökarens ärende:
+//   formulär   | ring / mejla
+//   personer (hela bredden)
+//   betalning  | appen + video
 .kontakt-grid {
-  // Formuläret först (vänster, bredast) – kontaktvägar, app och video i en
-  // smal kolumn till höger. Mobil: formulär → kontaktvägar.
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
-  gap: 20px;
-  align-items: start;
+  grid-template-areas:
+    "form contact"
+    "pay side";
+  gap: 24px;
+  align-items: stretch;
 }
 
+.kontakt-grid > .kontakt-form-col {
+  grid-area: form;
+}
+
+.kontakt-grid > .kontakt-channels {
+  grid-area: contact;
+}
+
+.kontakt-grid > .kontakt-team {
+  grid-area: team;
+}
+
+.kontakt-grid > .kontakt-payment {
+  grid-area: pay;
+}
+
+.kontakt-grid > .kontakt-side {
+  grid-area: side;
+}
+
+.kontakt-card-label--sub {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+// Formuläret är ett kort som de andra – samma ram, radie och skugga.
 .kontakt-form-col {
   display: flex;
   flex-direction: column;
@@ -109,7 +142,7 @@
   border: 1px solid var(--line);
   border-radius: 16px;
   background: var(--white);
-  box-shadow: 0 12px 32px rgba(10, 24, 40, 0.06);
+  box-shadow: 0 8px 24px rgba(10, 24, 40, 0.05);
 }
 
 .kontakt-form {
@@ -234,17 +267,14 @@
   color: var(--danger);
 }
 
-.kontakt-cards {
+.kontakt-card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.kontakt-card {
-  padding: 24px;
+  padding: 32px;
   border: 1px solid var(--line);
   border-radius: 16px;
   background: var(--white);
+  box-shadow: 0 8px 24px rgba(10, 24, 40, 0.05);
 
   p {
     font-size: 14px;
@@ -255,7 +285,7 @@
 
 .kontakt-card-label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -266,10 +296,10 @@
 .kontakt-mail-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 
   li {
     display: flex;
@@ -601,6 +631,15 @@
     grid-template-columns: 1fr;
   }
 
+  .kontakt-grid {
+    grid-template-areas:
+      "form"
+      "contact"
+      "pay"
+      "side";
+    gap: 16px;
+  }
+
 
   .kontakt-steps-list {
     grid-template-columns: repeat(2, 1fr);
@@ -612,8 +651,9 @@
     padding: 0 16px;
   }
 
-  .kontakt-form-col {
-    padding: 20px 16px;
+  .kontakt-form-col,
+  .kontakt-card {
+    padding: 24px 20px;
   }
 
   .kontakt-row,
@@ -661,11 +701,204 @@
   color: var(--muted);
 }
 
-/* App Store / Google Play / YouTube – mörka butiksbrickor */
+/* PERSONER */
+
+.kontakt-team-list {
+  display: grid;
+  grid-template-columns: repeat(var(--team-cols, 4), minmax(0, 1fr));
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.kontakt-person {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.kontakt-person-photo {
+  display: block;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--bg);
+  box-shadow:
+    0 0 0 3px var(--white),
+    0 0 0 4px var(--line);
+}
+
+.kontakt-person-id {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  strong {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  span {
+    font-size: 13px;
+    color: var(--muted);
+  }
+}
+
+.kontakt-person-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+
+  svg {
+    flex-shrink: 0;
+    color: var(--blue);
+  }
+
+  a:hover {
+    color: var(--blue);
+  }
+}
+
+.kontakt-team--n2 { --team-cols: 2; }
+.kontakt-team--n3 { --team-cols: 3; }
+.kontakt-team--n4 { --team-cols: 4; }
+
+// En person: kortet blir en rad – foto och namn till vänster,
+// direktnummer och mejl till höger – i stället för en ensam ruta.
+.kontakt-team--n1 {
+  .kontakt-team-list {
+    grid-template-columns: 1fr;
+  }
+
+  .kontakt-person {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .kontakt-person-links {
+    flex-direction: row;
+    gap: 12px;
+    margin-left: auto;
+
+    a {
+      padding: 10px 16px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      transition:
+        border-color 0.2s,
+        color 0.2s;
+    }
+
+    a:hover {
+      border-color: var(--blue);
+    }
+  }
+}
+
+/* BETALNING & ABONNEMANG */
+
+.kontakt-pay-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+
+  li {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+
+  strong {
+    display: block;
+    margin: 3px 0 4px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+}
+
+.kontakt-pay-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--blue-soft);
+  color: var(--blue-2);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.kontakt-pay-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+
+  .kontakt-card-link {
+    margin-top: 0;
+  }
+}
+
+.kontakt-pay-logos {
+  display: flex;
+  gap: 8px;
+
+  img {
+    width: 48px;
+    height: 30px;
+    padding: 6px 8px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--white);
+    object-fit: contain;
+  }
+}
+
+/* APPEN / VIDEO – två kort, två handlingar */
+
+.kontakt-side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .kontakt-card {
+    flex: 1;
+  }
+
+  .kontakt-card p {
+    margin-bottom: 16px;
+  }
+}
+
 .kontakt-badges {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
+  margin-top: auto;
 }
 
 .kontakt-badge {
@@ -673,7 +906,7 @@
   align-items: center;
   gap: 10px;
   min-width: 0;
-  height: 48px;
+  height: 52px;
   padding: 0 14px;
   border-radius: 10px;
   background: var(--navy-900);
@@ -710,5 +943,54 @@
 
   &:active {
     transform: scale(0.98);
+  }
+}
+
+@media (max-width: 900px) {
+  .kontakt-side {
+    gap: 16px;
+  }
+
+  .kontakt-team-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .kontakt-team-list,
+  .kontakt-team--n1 .kontakt-team-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  // Mobil: foto + namn på en rad, nummer och mejl under.
+  .kontakt-person,
+  .kontakt-team--n1 .kontakt-person {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    align-items: center;
+    column-gap: 16px;
+    row-gap: 14px;
+  }
+
+  .kontakt-person-photo {
+    width: 56px;
+    height: 56px;
+  }
+
+  .kontakt-person-links,
+  .kontakt-team--n1 .kontakt-person-links {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 0;
+
+    a {
+      justify-content: flex-start;
+    }
+  }
+
+  .kontakt-pay-foot {
+    flex-wrap: wrap;
   }
 }

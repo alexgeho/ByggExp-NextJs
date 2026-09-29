@@ -65,3 +65,30 @@ export function buildLeadPayload(
         : fallbackSource,
   };
 }
+
+/**
+ * Gemensam regel för ALLA leadformulär på sajten (startsidans CTA + Kontakt):
+ * två fält — "Namn / företag" och "Telefon eller e-post". Besökaren skriver
+ * det som passar; vi godtar en giltig e-post eller ett nummer med minst 7 siffror.
+ */
+export function isValidContact(value: string) {
+  const v = value.trim();
+  return isValidEmail(v) || v.replace(/\D/g, "").length >= 7;
+}
+
+export function validateContactLeadForm(name: string, contact: string): LeadFormErrors {
+  return {
+    name: !name.trim(),
+    email: !isValidContact(contact),
+  };
+}
+
+// Mejl-API:t kräver en giltig f-email. Lämnar besökaren bara telefon skickas
+// en tydlig markör och numret går i f-phone (samma mönster som PHONE_NOT_PROVIDED).
+const EMAIL_NOT_PROVIDED = "ej-angiven@byggexp.se";
+
+export function buildContactLeadPayload(name: string, contact: string, fallbackSource: string) {
+  const v = contact.trim();
+  const isEmail = isValidEmail(v);
+  return buildLeadPayload(name, isEmail ? v : EMAIL_NOT_PROVIDED, isEmail ? "" : v, fallbackSource);
+}

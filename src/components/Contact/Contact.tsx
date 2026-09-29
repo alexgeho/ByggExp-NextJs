@@ -3,10 +3,11 @@ import Link from "next/link";
 import { API_URL } from "../../config/api";
 import {
   NO_LEAD_FORM_ERRORS,
-  buildLeadPayload,
+  buildContactLeadPayload,
   hasLeadFormErrors,
+  isValidContact,
   isValidEmail,
-  validateLeadForm,
+  validateContactLeadForm,
 } from "../../lib/leadForm";
 import type { ContactProps } from "../../types/contact";
 import type { CTAProps } from "../../types/cta";
@@ -33,6 +34,23 @@ const phoneHref = `tel:${PHONE.replace(/\s/g, "")}`;
 const officeHref = `tel:${PHONE_OFFICE.replace(/\s/g, "")}`;
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS)}`;
 
+function PhoneIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+    </svg>
+  );
+}
+
+function MailIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-10 6L2 7" />
+    </svg>
+  );
+}
+
 type Props = ContactProps & CTAProps & { lang: string };
 
 function Contact({ contactT: t, ctaT, lang }: Props) {
@@ -44,9 +62,8 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
 
   /* INPUTS */
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [topic, setTopic] = useState("");
+  // Ett fält för telefon ELLER e-post — besökaren skriver det som passar.
+  const [contact, setContact] = useState("");
   const [message, setMessage] = useState("");
 
   function handleNameChange(value: string) {
@@ -57,9 +74,9 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
       setErrors((prev) => ({ ...prev, name: false }));
     }
   }
-  function handleEmailChange(value: string) {
-    setEmail(value);
-    if (errors.email && isValidEmail(value)) {
+  function handleContactChange(value: string) {
+    setContact(value);
+    if (errors.email && isValidContact(value)) {
       setErrors((prev) => ({ ...prev, email: false }));
     }
   }
@@ -67,7 +84,7 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const nextErrors = validateLeadForm(name, email);
+    const nextErrors = validateContactLeadForm(name, contact);
     setErrors(nextErrors);
     if (hasLeadFormErrors(nextErrors)) {
       return;
@@ -77,7 +94,6 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
     setSubmitError(false);
 
     const details = [
-      topic && `Ärende: ${topic}`,
       message.trim() && `Meddelande: ${message.trim()}`,
     ]
       .filter(Boolean)
@@ -88,7 +104,7 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          ...buildLeadPayload(name, email, phone, "kontakt"),
+          ...buildContactLeadPayload(name, contact, "kontakt"),
           ...(details && { "f-message": details }),
         }),
       });
@@ -119,7 +135,11 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
         </div>
       </section>
 
-      {/* FORM (left) + CONTACT CHANNELS (right). Mobile: form → channels */}
+      {/* Ordnat efter vad besökaren vill göra:
+            1. skriva till oss (formulär)      | ringa/mejla direkt
+            2. veta vem som svarar (personer, hela bredden)
+            3. betala/ändra abonnemang (kund) | hämta appen · titta på video
+          Mobil: samma ordning uppifrån och ned. */}
       <section className="kontakt-main">
         <div className="kontakt-container kontakt-grid">
           <div className="kontakt-form-col">
@@ -147,50 +167,21 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
                     <label htmlFor="c-email" className="sr-only">{t.formEmail}</label>
                     <input
                       id="c-email"
-                      type="email"
+                      type="text"
                       placeholder={t.formEmail}
                       autoComplete="email"
-                      value={email}
-                      onChange={(e) => handleEmailChange(e.currentTarget.value)}
+                      value={contact}
+                      onChange={(e) => handleContactChange(e.currentTarget.value)}
                       aria-invalid={errors.email}
                       aria-describedby="c-email-error"
                     />
                     <div className="kontakt-err" id="c-email-error" role="alert">
-                      {ctaT.ctaEmailError}
+                      {t.contactError}
                     </div>
                   </div>
                 </div>
 
-                <div className="kontakt-row">
-                  <div className="kontakt-field">
-                    <label htmlFor="c-phone" className="sr-only">{t.formPhone}</label>
-                    <input
-                      id="c-phone"
-                      type="tel"
-                      placeholder={t.formPhone}
-                      autoComplete="tel"
-                      value={phone}
-                      onChange={(e) => setPhone(e.currentTarget.value)}
-                    />
-                  </div>
-                  <div className="kontakt-field">
-                    <label htmlFor="c-topic" className="sr-only">{t.formTopic}</label>
-                    <select
-                      id="c-topic"
-                      value={topic}
-                      onChange={(e) => setTopic(e.currentTarget.value)}
-                      className={topic ? "" : "is-placeholder"}
-                    >
-                      <option value="">{t.formTopic}</option>
-                      {t.topics.map((item) => (
-                        <option key={item} value={item}>{item}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-
-                <div className="kontakt-field">
+                <div className="kontakt-field kontakt-field-grow">
                   <label htmlFor="c-message" className="sr-only">{t.formMessage}</label>
                   <textarea
                     id="c-message"
@@ -232,7 +223,11 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
                 <div className="kontakt-calendly">
                   <CalendlyInlineWidget
                     url={CALENDLY_URL}
-                    prefill={{ name, email, customAnswers: { a1: phone } }}
+                    prefill={
+                      isValidEmail(contact)
+                        ? { name, email: contact }
+                        : { name, customAnswers: { a1: contact } }
+                    }
                     styles={{ height: "650px" }}
                   />
                 </div>
@@ -240,43 +235,70 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
             )}
           </div>
 
-          <aside className="kontakt-cards">
-            <div className="kontakt-card">
-              <span className="kontakt-card-label">{t.callLabel}</span>
-              <ul className="kontakt-mail-list">
-                <li>
-                  <span>{t.phoneOffice}</span>
-                  <a href={officeHref}>{PHONE_OFFICE}</a>
-                </li>
-                <li>
-                  <span>{t.phoneMobile}</span>
-                  <a href={phoneHref}>{PHONE}</a>
-                </li>
-              </ul>
-              <p>{t.callText}</p>
-            </div>
+          {/* Kontaktvägar: telefon + e-post i ett kort */}
+          <div className="kontakt-card kontakt-channels">
+            <span className="kontakt-card-label">{t.callLabel}</span>
+            <ul className="kontakt-mail-list">
+              <li>
+                <span>{t.phoneOffice}</span>
+                <a href={officeHref}>{PHONE_OFFICE}</a>
+              </li>
+              <li>
+                <span>{t.phoneMobile}</span>
+                <a href={phoneHref}>{PHONE}</a>
+              </li>
+            </ul>
+            <p>{t.callText}</p>
 
-            <div className="kontakt-card">
-              <span className="kontakt-card-label">{t.mailLabel}</span>
-              <ul className="kontakt-mail-list">
-                <li>
-                  <span>{t.emailSales}</span>
-                  <a href="mailto:sales@byggexp.se">sales@byggexp.se</a>
-                </li>
-                <li>
-                  <span>{t.emailSupport}</span>
-                  <a href="mailto:support@byggexp.se">support@byggexp.se</a>
-                </li>
-                <li>
-                  <span>{t.emailPress}</span>
-                  <a href="mailto:press@byggexp.se">press@byggexp.se</a>
-                </li>
-              </ul>
-              <p>{t.mailText}</p>
-            </div>
+            <span className="kontakt-card-label kontakt-card-label--sub">{t.mailLabel}</span>
+            <ul className="kontakt-mail-list">
+              <li>
+                <span>{t.emailSales}</span>
+                <a href="mailto:sales@byggexp.se">sales@byggexp.se</a>
+              </li>
+              <li>
+                <span>{t.emailSupport}</span>
+                <a href="mailto:support@byggexp.se">support@byggexp.se</a>
+              </li>
+            </ul>
+            <p>{t.mailText}</p>
+          </div>
 
-            <div className="kontakt-card">
+          {/* Personer: riktiga människor bakom telefon och mejl (som remato.com/contact) */}
+
+          {/* Befintliga kunder: var och hur man betalar, byter kort och avslutar.
+              Allt här är bekräftat i admin (Prenumeration, /company/billing →
+              Stripe Checkout + Stripe-portalen) och i prissidans texter. */}
+          <div className="kontakt-card kontakt-payment">
+            <span className="kontakt-card-label">{t.payTitle}</span>
+            <ol className="kontakt-pay-steps">
+              {t.paySteps.map((step, index) => (
+                <li key={step.title}>
+                  <span className="kontakt-pay-num" aria-hidden="true">{index + 1}</span>
+                  <div>
+                    <strong>{step.title}</strong>
+                    <p>{step.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <div className="kontakt-pay-foot">
+              <div className="kontakt-pay-logos" aria-label={t.payment}>
+                <img src="/landing/contact/visa.svg" alt="Visa" width={44} height={28} />
+                <img src="/landing/contact/mastercard.svg" alt="Mastercard" width={44} height={28} />
+                <img src="/landing/contact/stripe.svg" alt="Stripe" width={44} height={28} />
+              </div>
+              <Link className="kontakt-card-link" href={`/${lang}/villkor`}>
+                {t.payTermsLink} →
+              </Link>
+            </div>
+          </div>
+
+          {/* Två olika handlingar – två kort: hämta appen / titta på video */}
+          <div className="kontakt-side">
+            <div className="kontakt-card kontakt-apps">
               <span className="kontakt-card-label">{t.appsLabel}</span>
+              <p>{t.appsText}</p>
               <div className="kontakt-badges">
                 <a
                   className="kontakt-badge"
@@ -302,8 +324,15 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
                     Google Play
                   </span>
                 </a>
+              </div>
+            </div>
+
+            <div className="kontakt-card kontakt-video">
+              <span className="kontakt-card-label">{t.videoLabel}</span>
+              <p>{t.videoText}</p>
+              <div className="kontakt-badges">
                 <a
-                  className="kontakt-badge kontakt-badge-yt"
+                  className="kontakt-badge"
                   href={YOUTUBE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -316,7 +345,7 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
                 </a>
               </div>
             </div>
-          </aside>
+          </div>
         </div>
       </section>
 

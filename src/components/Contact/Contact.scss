@@ -380,8 +380,8 @@
 /* 3D-glasikon per steg (som på startsidan), numret som liten bricka i hörnet */
 .kontakt-step-visual {
   position: relative;
-  width: 104px;
-  height: 104px;
+  width: 96px; // samma storlek som ikonerna på startsidan
+  height: 96px;
 
   img {
     display: block;
@@ -394,23 +394,20 @@
     position: absolute;
     top: 0;
     left: -4px;
-    width: 26px;
-    height: 26px;
-    font-size: 13px;
-    box-shadow: 0 0 0 3px var(--bg);
   }
 }
 
 .kontakt-step-num {
+  // Mjuk bricka som på nordkod.se: ljus fyllning + färgad siffra.
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background: var(--blue);
-  color: var(--white);
-  font-size: 14px;
+  background: rgba(35, 148, 255, 0.14);
+  color: var(--blue);
+  font-size: 13px;
   font-weight: 700;
 }
 

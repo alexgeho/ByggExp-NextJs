@@ -47,7 +47,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Реквизиты",
-    companyText: "ByggExp принадлежит компании Real Marketing s. r. o. Мы находимся в Бромме, Стокгольм, и работаем со строительными компаниями по всей Швеции.",
+    companyText: "ByggExp принадлежит компании Real Marketing s. r. o. Мы находимся в Бромме, Стокгольм.",
     termsLink: "Условия",
     privacyLink: "Политика конфиденциальности",
     rowCompany: "Компания",
@@ -128,7 +128,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Company details",
-    companyText: "ByggExp is operated by Real Marketing s. r. o. We are based in Bromma, Stockholm, and work with construction companies across Sweden.",
+    companyText: "ByggExp is operated by Real Marketing s. r. o. We are based in Bromma, Stockholm.",
     termsLink: "Terms",
     privacyLink: "Privacy policy",
     rowCompany: "Company",
@@ -209,7 +209,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Företagsuppgifter",
-    companyText: "ByggExp drivs av Real Marketing s. r. o. Vi finns i Bromma, Stockholm, och arbetar med byggföretag i hela Sverige.",
+    companyText: "ByggExp drivs av Real Marketing s. r. o. Vi finns i Bromma, Stockholm.",
     termsLink: "Villkor",
     privacyLink: "Integritetspolicy",
     rowCompany: "Bolag",
@@ -290,7 +290,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Firmaopplysninger",
-    companyText: "ByggExp drives av Real Marketing s. r. o. Vi holder til i Bromma, Stockholm, og jobber med byggefirmaer i Sverige og Norge.",
+    companyText: "ByggExp drives av Real Marketing s. r. o. Vi holder til i Bromma, Stockholm.",
     termsLink: "Vilkår",
     privacyLink: "Personvernerklæring",
     rowCompany: "Selskap",
@@ -371,7 +371,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Dane firmy",
-    companyText: "ByggExp prowadzi Real Marketing s. r. o. Mamy siedzibę w Bromma w Sztokholmie i współpracujemy z firmami budowlanymi w całej Szwecji.",
+    companyText: "ByggExp prowadzi Real Marketing s. r. o. Mamy siedzibę w Bromma w Sztokholmie.",
     termsLink: "Regulamin",
     privacyLink: "Polityka prywatności",
     rowCompany: "Spółka",
@@ -452,7 +452,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Реквізити",
-    companyText: "ByggExp належить компанії Real Marketing s. r. o. Ми знаходимося в Бруммі, Стокгольм, і працюємо з будівельними компаніями по всій Швеції.",
+    companyText: "ByggExp належить компанії Real Marketing s. r. o. Ми знаходимося в Бруммі, Стокгольм.",
     termsLink: "Умови",
     privacyLink: "Політика конфіденційності",
     rowCompany: "Компанія",
@@ -533,7 +533,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Yritystiedot",
-    companyText: "ByggExpiä ylläpitää Real Marketing s. r. o. Toimimme Brommassa Tukholmassa ja työskentelemme rakennusyritysten kanssa koko Ruotsissa.",
+    companyText: "ByggExpiä ylläpitää Real Marketing s. r. o. Toimimme Brommassa Tukholmassa.",
     termsLink: "Käyttöehdot",
     privacyLink: "Tietosuojakäytäntö",
     rowCompany: "Yhtiö",
@@ -614,7 +614,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Ettevõtte andmed",
-    companyText: "ByggExpi haldab Real Marketing s. r. o. Asume Brommas Stockholmis ja teeme koostööd ehitusettevõtetega üle kogu Rootsi.",
+    companyText: "ByggExpi haldab Real Marketing s. r. o. Asume Brommas Stockholmis.",
     termsLink: "Tingimused",
     privacyLink: "Privaatsuspoliitika",
     rowCompany: "Ettevõte",
@@ -695,7 +695,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Įmonės duomenys",
-    companyText: "ByggExp valdo Real Marketing s. r. o. Esame Brommoje, Stokholme, ir dirbame su statybos įmonėmis visoje Švedijoje.",
+    companyText: "ByggExp valdo Real Marketing s. r. o. Esame Brommoje, Stokholme.",
     termsLink: "Sąlygos",
     privacyLink: "Privatumo politika",
     rowCompany: "Įmonė",
@@ -776,7 +776,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Uzņēmuma rekvizīti",
-    companyText: "ByggExp pārvalda Real Marketing s. r. o. Atrodamies Brommā, Stokholmā, un strādājam ar būvniecības uzņēmumiem visā Zviedrijā.",
+    companyText: "ByggExp pārvalda Real Marketing s. r. o. Atrodamies Brommā, Stokholmā.",
     termsLink: "Noteikumi",
     privacyLink: "Privātuma politika",
     rowCompany: "Uzņēmums",

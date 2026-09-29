@@ -401,11 +401,6 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
               <span className="sr-only"> — {COMPANY}</span>
             </h2>
             <p>{t.companyText}</p>
-            <p className="kontakt-company-links">
-              <Link href={`/${lang}/villkor`}>{t.termsLink}</Link>
-              <span aria-hidden="true"> · </span>
-              <Link href={`/${lang}/integritetspolicy`}>{t.privacyLink}</Link>
-            </p>
           </div>
 
           <dl className="kontakt-table">
@@ -427,25 +422,6 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
                   {t.mapLink}
                 </a>
               </dd>
-            </div>
-            <div>
-              <dt>{t.rowHours}</dt>
-              <dd>{t.hours}</dd>
-            </div>
-            <div>
-              <dt>{t.rowPayment}</dt>
-              <dd>{t.payment}</dd>
-            </div>
-            <div>
-              <dt>{t.rowPhone}</dt>
-              <dd>
-                <a href={officeHref}>{PHONE_OFFICE}</a>
-                <a href={phoneHref}>{PHONE}</a>
-              </dd>
-            </div>
-            <div>
-              <dt>{t.rowEmail}</dt>
-              <dd><a href="mailto:sales@byggexp.se">sales@byggexp.se</a></dd>
             </div>
             <div>
               <dt>{t.rowSeat}</dt>

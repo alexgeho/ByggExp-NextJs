@@ -533,22 +533,22 @@
     border-top: none;
   }
 
-  /* Desktop: two columns of four rows, filled top-to-bottom */
+  /* Desktop: two columns of two rows (Bolag / Org.nr, Adress / Säte) */
   @media (min-width: 901px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
     grid-auto-flow: column;
 
     > div {
       grid-template-columns: 150px 1fr;
     }
 
-    > div:nth-child(5) {
+    > div:nth-child(3) {
       border-top: none;
     }
 
-    > div:nth-child(n + 5) {
+    > div:nth-child(n + 3) {
       border-left: 1px solid var(--line);
     }
   }

@@ -2,6 +2,7 @@ import type { HeroProps } from "../../types/hero";
 import { useState } from "react";
 
 const phone = "/landing/hero/phone-3d.webp";
+const laptop = "/landing/features/9ekonomi-1200.webp";
 
 function Hero({ heroT }: HeroProps) {
   const [wholeText, setWholeText] = useState(false);
@@ -105,6 +106,16 @@ function Hero({ heroT }: HeroProps) {
 
           {/* HERO VISUAL */}
           <div className="hero-visual">
+            <img
+              src={laptop}
+              srcSet={`${laptop} 1200w, /landing/features/9ekonomi.webp 2400w`}
+              sizes="(max-width: 900px) 90vw, 720px"
+              alt="ByggExp på webben – projektekonomi"
+              className="hero-laptop"
+              width={1200}
+              height={688}
+              fetchPriority="high"
+            />
             <img
               src={phone}
               alt="ByggExp-appen i mobilen"

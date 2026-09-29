@@ -199,11 +199,23 @@
     cursor: pointer;
   }
 }
-.hero-phone {
-  width: 460px;
-  max-width: 80%;
+.hero-laptop {
+  display: block;
+  width: 125%;
+  max-width: none;
   height: auto;
-  filter: drop-shadow(0 50px 100px rgba(0, 0, 0, 0.55));
+  margin-right: -25%;
+  filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.5));
+}
+
+/* Phone overlaps the laptop's lower-left corner, like the share image */
+.hero-phone {
+  position: absolute;
+  left: -8%;
+  bottom: 0;
+  width: 38%;
+  height: auto;
+  filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.6));
   animation: float 6s ease-in-out infinite;
 }
 @keyframes float {
@@ -300,10 +312,16 @@
   .hero-visual {
     align-self: center;
     position: relative;
-    width: 70%;
+    width: 88%;
+  }
+
+  .hero-laptop {
+    width: 100%;
+    margin-right: 0;
   }
 
   .hero-phone {
+    left: -4%;
     max-width: 100%;
   }
 

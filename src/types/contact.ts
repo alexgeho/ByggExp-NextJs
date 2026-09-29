@@ -1,4 +1,7 @@
 export type ContactT = {
+  bookDirectLead: string;
+  bookDirectLink: string;
+  bookDemoButton: string;
   breadcrumbHome: string;
   eyebrow: string;
   title: string;

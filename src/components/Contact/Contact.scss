@@ -994,3 +994,47 @@
     flex-wrap: wrap;
   }
 }
+
+/* Direkt till kalendern (Calendly-popup) */
+.kontakt-direct {
+  margin: 16px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--muted);
+
+  button {
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-weight: 600;
+    color: var(--blue);
+    cursor: pointer;
+  }
+
+  button:hover {
+    text-decoration: underline;
+  }
+}
+
+.kontakt-book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 10px 16px;
+  border: 1px solid rgba(35, 148, 255, 0.35);
+  border-radius: 10px;
+  background: rgba(35, 148, 255, 0.08);
+  color: var(--blue);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.kontakt-book-btn:hover {
+  background: rgba(35, 148, 255, 0.16);
+}

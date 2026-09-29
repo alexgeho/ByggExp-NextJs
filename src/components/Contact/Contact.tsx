@@ -11,7 +11,7 @@ import {
 } from "../../lib/leadForm";
 import type { ContactProps } from "../../types/contact";
 import type { CTAProps } from "../../types/cta";
-import { CalendlyInlineWidget } from "../CalendlyInlineWidget";
+import { CalendlyInlineWidget, CalendlyPopupModal } from "../CalendlyInlineWidget";
 
 const CALENDLY_URL = "https://calendly.com/870717ag/30min";
 
@@ -65,6 +65,7 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
   // Ett fält för telefon ELLER e-post — besökaren skriver det som passar.
   const [contact, setContact] = useState("");
   const [message, setMessage] = useState("");
+  const [calendlyOpen, setCalendlyOpen] = useState(false);
 
   function handleNameChange(value: string) {
     setName(value);
@@ -199,6 +200,13 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
                   <p className="kontakt-fine">{ctaT.ctaPrivacy}</p>
                 </div>
 
+                <p className="kontakt-direct">
+                  {t.bookDirectLead}{" "}
+                  <button type="button" onClick={() => setCalendlyOpen(true)}>
+                    {t.bookDirectLink} →
+                  </button>
+                </p>
+
                 {submitError && (
                   <p className="kontakt-fine kontakt-fine-error">{ctaT.ctaSubmitError}</p>
                 )}
@@ -249,6 +257,13 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
               </li>
             </ul>
             <p>{t.callText}</p>
+            <button type="button" className="kontakt-book-btn" onClick={() => setCalendlyOpen(true)}>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+              </svg>
+              {t.bookDemoButton}
+            </button>
 
             <span className="kontakt-card-label kontakt-card-label--sub">{t.mailLabel}</span>
             <ul className="kontakt-mail-list">
@@ -434,6 +449,14 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
           </dl>
         </div>
       </section>
+      {calendlyOpen && (
+        <CalendlyPopupModal
+          url={CALENDLY_URL}
+          open={calendlyOpen}
+          onModalClose={() => setCalendlyOpen(false)}
+          rootElement={document.getElementById("__next") ?? document.body}
+        />
+      )}
     </div>
   );
 }

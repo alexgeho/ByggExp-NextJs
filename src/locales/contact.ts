@@ -3,6 +3,9 @@ import type { LandingLanguageCode } from "./languages";
 
 export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   ru: {
+    bookDirectLead: "Удобнее сразу записаться?",
+    bookDirectLink: "Выберите время в календаре",
+    bookDemoButton: "Выбрать время для демо",
     breadcrumbHome: "Главная",
     eyebrow: "Контакты",
     title: "Запишитесь на демо или задайте вопрос",
@@ -84,6 +87,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   en: {
+    bookDirectLead: "Rather book right away?",
+    bookDirectLink: "Pick a time in the calendar",
+    bookDemoButton: "Pick a time for a demo",
     breadcrumbHome: "Home",
     eyebrow: "Contact",
     title: "Book a demo or ask us anything",
@@ -165,6 +171,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   sv: {
+    bookDirectLead: "Hellre boka direkt?",
+    bookDirectLink: "Välj en tid i kalendern",
+    bookDemoButton: "Välj tid för demo",
     breadcrumbHome: "Hem",
     eyebrow: "Kontakt",
     title: "Boka demo eller ställ en fråga",
@@ -246,6 +255,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   nb: {
+    bookDirectLead: "Heller booke med en gang?",
+    bookDirectLink: "Velg et tidspunkt i kalenderen",
+    bookDemoButton: "Velg tid for demo",
     breadcrumbHome: "Hjem",
     eyebrow: "Kontakt",
     title: "Book demo eller still et spørsmål",
@@ -327,6 +339,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   pl: {
+    bookDirectLead: "Wolisz od razu się umówić?",
+    bookDirectLink: "Wybierz termin w kalendarzu",
+    bookDemoButton: "Wybierz termin demo",
     breadcrumbHome: "Strona główna",
     eyebrow: "Kontakt",
     title: "Umów demo lub zadaj pytanie",
@@ -408,6 +423,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   uk: {
+    bookDirectLead: "Зручніше одразу записатися?",
+    bookDirectLink: "Оберіть час у календарі",
+    bookDemoButton: "Обрати час для демо",
     breadcrumbHome: "Головна",
     eyebrow: "Контакти",
     title: "Запишіться на демо або поставте питання",
@@ -489,6 +507,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   fi: {
+    bookDirectLead: "Varaatko mieluummin heti?",
+    bookDirectLink: "Valitse aika kalenterista",
+    bookDemoButton: "Valitse aika demolle",
     breadcrumbHome: "Etusivu",
     eyebrow: "Yhteystiedot",
     title: "Varaa demo tai kysy meiltä",
@@ -570,6 +591,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   et: {
+    bookDirectLead: "Soovid kohe aja broneerida?",
+    bookDirectLink: "Vali kalendrist aeg",
+    bookDemoButton: "Vali demo aeg",
     breadcrumbHome: "Avaleht",
     eyebrow: "Kontakt",
     title: "Broneeri demo või esita küsimus",
@@ -651,6 +675,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   lt: {
+    bookDirectLead: "Norite iškart užsiregistruoti?",
+    bookDirectLink: "Pasirinkite laiką kalendoriuje",
+    bookDemoButton: "Pasirinkti demo laiką",
     breadcrumbHome: "Pradžia",
     eyebrow: "Kontaktai",
     title: "Užsisakykite demonstraciją arba užduokite klausimą",
@@ -732,6 +759,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   lv: {
+    bookDirectLead: "Vēlaties uzreiz pieteikties?",
+    bookDirectLink: "Izvēlieties laiku kalendārā",
+    bookDemoButton: "Izvēlēties demo laiku",
     breadcrumbHome: "Sākums",
     eyebrow: "Kontakti",
     title: "Piesakiet demo vai uzdodiet jautājumu",

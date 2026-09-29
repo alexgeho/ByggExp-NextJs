@@ -9,6 +9,7 @@ export type ContactT = {
   formEmail: string;
   formCompany: string;
   formPhone: string;
+  formPhoneHint: string;
   formTopic: string;
   topics: readonly string[];
   formMessage: string;

@@ -15,6 +15,7 @@ import { CalendlyInlineWidget } from "../CalendlyInlineWidget";
 const CALENDLY_URL = "https://calendly.com/870717ag/30min";
 
 const PHONE = "+46 70 757 75 75";
+const PHONE_OFFICE = "+46 8 446 821 58";
 const COMPANY = "Real Marketing s. r. o.";
 const ORG_NR = "53551958 (IČO) · VAT SK2121411820";
 // Registered office of the company (Slovakia) — listed last in the table; the
@@ -25,6 +26,7 @@ const POSTAL = "168 69 Bromma";
 const ADDRESS = `${STREET}, ${POSTAL}`;
 
 const phoneHref = `tel:${PHONE.replace(/\s/g, "")}`;
+const officeHref = `tel:${PHONE_OFFICE.replace(/\s/g, "")}`;
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS)}`;
 
 type Props = ContactProps & CTAProps & { lang: string };
@@ -117,6 +119,11 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
             <span className="eyebrow">{t.eyebrow}</span>
             <h1>{t.title}</h1>
             <p className="section-sub">{t.lead}</p>
+            <ul className="kontakt-checks">
+              {t.checks.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -185,7 +192,9 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
                       autoComplete="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.currentTarget.value)}
+                      aria-describedby="c-phone-hint"
                     />
+                    <p className="kontakt-hint" id="c-phone-hint">{t.formPhoneHint}</p>
                   </div>
                 </div>
 
@@ -257,6 +266,7 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
           <aside className="kontakt-cards">
             <div className="kontakt-card">
               <span className="kontakt-card-label">{t.callLabel}</span>
+              <a href={officeHref} className="kontakt-card-value">{PHONE_OFFICE}</a>
               <a href={phoneHref} className="kontakt-card-value">{PHONE}</a>
               <p>{t.callText}</p>
             </div>
@@ -281,6 +291,48 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
             </div>
 
           </aside>
+        </div>
+      </section>
+
+
+      {/* HOW IT WORKS */}
+      <section className="kontakt-steps">
+        <div className="kontakt-container">
+          <span className="kontakt-eyebrow">{t.stepsEyebrow}</span>
+          <h2>{t.stepsTitle}</h2>
+          <ol className="kontakt-steps-list">
+            {t.steps.map((step, index) => (
+              <li key={step.title}>
+                <div className="kontakt-step-visual">
+                  <img
+                    src={`/landing/contact/step${index + 1}.webp`}
+                    width={256}
+                    height={256}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="kontakt-step-num">{index + 1}</span>
+                </div>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="kontakt-faq">
+        <div className="kontakt-container kontakt-faq-inner">
+          <span className="kontakt-eyebrow">{t.faqEyebrow}</span>
+          <h2>{t.faqTitle}</h2>
+          {t.faq.map((item) => (
+            <details key={item.q} className="kontakt-faq-item">
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
+          ))}
         </div>
       </section>
 
@@ -332,7 +384,11 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
             </div>
             <div>
               <dt>{t.rowPhone}</dt>
-              <dd><a href={phoneHref}>{PHONE}</a></dd>
+              <dd>
+                <a href={officeHref}>{PHONE_OFFICE}</a>
+                <br />
+                <a href={phoneHref}>{PHONE}</a>
+              </dd>
             </div>
             <div>
               <dt>{t.rowEmail}</dt>
@@ -347,47 +403,6 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
               </dd>
             </div>
           </dl>
-        </div>
-      </section>
-
-      {/* HOW IT WORKS */}
-      <section className="kontakt-steps">
-        <div className="kontakt-container">
-          <span className="kontakt-eyebrow">{t.stepsEyebrow}</span>
-          <h2>{t.stepsTitle}</h2>
-          <ol className="kontakt-steps-list">
-            {t.steps.map((step, index) => (
-              <li key={step.title}>
-                <div className="kontakt-step-visual">
-                  <img
-                    src={`/landing/contact/step${index + 1}.webp`}
-                    width={256}
-                    height={256}
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <span className="kontakt-step-num">{index + 1}</span>
-                </div>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="kontakt-faq">
-        <div className="kontakt-container kontakt-faq-inner">
-          <span className="kontakt-eyebrow">{t.faqEyebrow}</span>
-          <h2>{t.faqTitle}</h2>
-          {t.faq.map((item) => (
-            <details key={item.q} className="kontakt-faq-item">
-              <summary>{item.q}</summary>
-              <p>{item.a}</p>
-            </details>
-          ))}
         </div>
       </section>
     </div>

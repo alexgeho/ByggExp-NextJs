@@ -287,7 +287,7 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
       {/* COMPANY DETAILS */}
       <section className="kontakt-company">
         <div className="kontakt-container kontakt-company-grid">
-          <div>
+          <div className="kontakt-company-head">
             <span className="kontakt-eyebrow">{t.companyEyebrow}</span>
             <h2 className="kontakt-company-logo">
               {/* Same wordmark as the site header, in ink for the light section */}

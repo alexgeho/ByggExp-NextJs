@@ -399,8 +399,8 @@
 
 .kontakt-company-grid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 48px;
+  grid-template-columns: 1fr;
+  gap: 40px;
   align-items: start;
 
   p {
@@ -408,6 +408,16 @@
     line-height: 1.6;
     color: var(--muted);
     margin-bottom: 14px;
+  }
+}
+
+.kontakt-company-head {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+
+  .kontakt-company-logo img {
+    margin: 0 auto;
   }
 }
 
@@ -444,6 +454,26 @@
 
   > div:first-child {
     border-top: none;
+  }
+
+  /* Desktop: two columns of four rows, filled top-to-bottom */
+  @media (min-width: 901px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-auto-flow: column;
+
+    > div {
+      grid-template-columns: 150px 1fr;
+    }
+
+    > div:nth-child(5) {
+      border-top: none;
+    }
+
+    > div:nth-child(n + 5) {
+      border-left: 1px solid var(--line);
+    }
   }
 
   dt {

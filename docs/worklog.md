@@ -1,8 +1,36 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
 ## 📍 СТАТУС (кратко)
-Сайт в main/live (цены 26.09 уже на проде). Последняя сессия: **29.09 — контакты, hero с ноутбуком, мокап для объявлений**.
+Сайт в main/live (цены 26.09 уже на проде). Последняя сессия: **29.09 вечер — /contact, одно правило форм, Calendly, письма-лиды (бэкенд)**.
 Продолжать с «🔜 NÄSTA STEG» верхних сессий. Архив до 24.09 → `docs/worklog-archive.md`. Индекс доков → `docs/README.md`.
+
+## 🟢 2026-09-29 (вечер) — страница контактов, одно правило форм, Calendly, письма-лиды (live)
+### KLART
+- **/contact переделан** (последний коммит `7d670d3`): заголовок просто «Kontakt» (без маркетинга); слева форма, справа
+  «Ring oss» (Kontor **+46 8 446 821 58** / Mobil +46 70 757 75 75, часы) + «Mejla oss» (sales@, support@; press@ убран);
+  ниже «Betalning & abonnemang» (3 шага: Prenumeration в админке → карта через Stripe → «Hantera prenumeration»,
+  без bindningstid — всё сверено с админкой/pricing.ts) + отдельные карточки «Mobilappen» (App Store/Google Play) и
+  «Videor» (YouTube). Реквизиты внизу 2×2 без повторов: «Kontor i Sverige» / «Bolagets registrerade adress».
+  Порядок: форма+контакты → оплата/приложение/видео → тёмный «Så går det till» (3D-иконки как на главной) → FAQ → реквизиты.
+- **Одно правило для ВСЕХ лид-форм** (`src/lib/leadForm.ts`: `isValidContact`, `validateContactLeadForm`,
+  `buildContactLeadPayload`): 2 поля «Namn / företag» + «Telefon / e-post» (почта или ≥7 цифр), разделитель «/» везде.
+  Главная CTA и Kontakt. Только телефон → в API уходит f-email `ej-angiven@byggexp.se`.
+- **Calendly сразу:** кнопка «Välj tid för demo» в карточке «Ring oss» + строка «Hellre boka direkt? Välj en tid i
+  kalendern →» под формой — popup (`CalendlyPopupModal` в `CalendlyInlineWidget.tsx`). После отправки формы — как раньше.
+- **Бэкенд `ba8b11a`** (ByggExp-BackEnd, live): письмо о заявке больше не пишет «byggexp.se/ru» — берёт `f-source`
+  (реальная страница) и добавляет `f-message` (раньше текст «Berätta mer» терялся из-за whitelist DTO).
+- Контакты: 8 иконок карусели главной (зелёные/синие, «Кто сегодня на объекте» вместо «контроль»), OG-обложка
+  `og-cover.jpg`, мета-описания 10 языков — см. записи 27.09.
+- Подпись kontakt@byggexp.se (Roundcube): лого + имя + тёмно-синие ссылки; новый номер 08-446 821 58 в подпись ЕЩЁ НЕ добавлен.
+
+### 🔜 NÄSTA STEG
+1. Calendly: встреча «30 Minute Meeting», а на сайте «демо 15 минут» → либо поменять событие в Calendly на 15 мин, либо тексты на 30.
+2. «2 veckor gratis» (в оплате на /contact и в pricing): проверить, что клиент реально может сам запустить триал в админке; если нет — убрать в обоих местах.
+3. Подпись kontakt@byggexp.se: добавить 08-446 821 58 (нужно войти в Roundcube под kontakt@).
+4. API: сделать `f-email`/`f-phone` необязательными (одно из двух) и убрать заглушки `ej-angiven@byggexp.se` / «Ej angivet».
+5. Кнопка «Boka demo» в шапке → сразу Calendly-popup (обсуждали, не сделано).
+6. Команда на /contact: только реальные люди с фото (владелец против выдуманных людей НЕ решил окончательно; блок с «Grundare» убран — основатель не «ресепшен»).
+7. Правила из сессии: никаких слоганов на /contact; одно правило для форм; превью (скриншот) перед выкладкой крупных дизайн-правок.
 
 ## 🟢 2026-09-29 (день) — контакты, hero ноутбук+телефон, мокап для объявлений (live)
 ### KLART

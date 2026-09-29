@@ -1412,7 +1412,7 @@ const A_DOU_PARM_DRIFT_UNDERHALL_BYGG: BlogPost = {
 const A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM_HTML = `
 <p>&quot;Egenkontroll el&quot; kan betyda två saker som är lätta att blanda ihop: företagets lagstadgade <strong>egenkontrollprogram</strong> och den praktiska kontrollen av en enskild elinstallation. Här reder vi ut skillnaden, vad lagen kräver av elinstallationsföretag och hur du dokumenterar kontrollen av utfört arbete.</p>
 
-<p><a href="/sv/verktyg/egenkontroll-mall">Skapa en egenkontroll för el med AI – eller ladda ner en gratis mall (PDF) →</a></p>
+<p><a href="/sv/verktyg/egenkontroll-el-mall">Egenkontroll el – gratis mall med mätprotokoll (PDF) →</a></p>
 
 <h2>Två sorters egenkontroll inom el</h2>
 <ul>
@@ -1437,7 +1437,7 @@ const A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM_HTML = `
 <li>Att rätt komponenter och kabelareor använts</li>
 <li>Vem som utfört och kontrollerat arbetet, med datum och signatur</li>
 </ul>
-<p>Det är den här kontrollen du samlar i ett protokoll. En <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a> gör att du får med rätt uppgifter, kan lägga till foto och signatur och får ut en färdig PDF att arkivera.</p>
+<p>Det är den här kontrollen du samlar i ett protokoll. En <a href="/sv/verktyg/egenkontroll-el-mall">egenkontroll-mall för el</a> gör att du får med rätt uppgifter, kan lägga till foto och signatur och får ut en färdig PDF att arkivera.</p>
 
 <h2>Skillnaden mot bygg-egenkontroll</h2>
 <p>Egenkontroll inom el styrs av elsäkerhetslagstiftningen och Elsäkerhetsverket. Den allmänna <a href="/sv/blog/egenkontroll">egenkontrollen i bygg</a> handlar i stället om att styrka att bygg­åtgärder uppfyller kraven, ofta kopplat till en <a href="/sv/verktyg/kontrollplan-mall">kontrollplan</a> enligt PBL. Principen är densamma – dokumentera att arbetet är rätt utfört – men regelverket och kraven skiljer sig åt.</p>
@@ -1465,7 +1465,7 @@ const A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM: BlogPost = {
 const A_EGENKONTROLL_ENTREPRENAD_HTML = `
 <p>I en entreprenad är egenkontrollen både ett kvalitetsverktyg och ett bevis. Den visar att du har byggt enligt handlingar och gällande krav – och blir din bästa försäkring om beställaren eller besiktningsmannen ifrågasätter kvaliteten. Här går vi igenom hur egenkontroll fungerar i entreprenadsammanhang, hur den kopplas till kontrollplan och besiktning, och vad den ska innehålla.</p>
 
-<p><a href="/sv/verktyg/egenkontroll-mall">Ladda ner en gratis egenkontroll-mall (PDF) →</a></p>
+<p><a href="/sv/verktyg/egenkontroll-bygg-mall">Egenkontroll bygg – gratis mall att fylla i (PDF) →</a> · <a href="/sv/verktyg/egenkontroll-mall">alla egenkontroll-mallar</a></p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/egenkontroll-cykel.webp" alt="Egenkontroll i entreprenad – planera, kontrollera, dokumentera och åtgärda avvikelse" width="720" height="380" loading="lazy"><figcaption>Egenkontrollen i entreprenaden är en cykel: planera kontrollpunkterna, kontrollera, dokumentera med foto och signatur, åtgärda avvikelser.</figcaption></figure>
 

@@ -221,20 +221,20 @@ export default function EgenkontrollMallPage() {
                 <ul>
                   <li>
                     <strong>
-                      <a href={`/${LOCALE}/verktyg/egenkontroll-el-mall`}>Egenkontroll el</a>
+                      <a href={`/${LOCALE}/verktyg/egenkontroll-el-mall`}>Egenkontroll el – mall</a>
                     </strong>{' '}
                     – jordfelsbrytare, isolationsmätning, märkning av gruppcentral och skyddsledare,
                     ofta mot SS 436 40 00.
                   </li>
                   <li>
                     <strong>
-                      <a href={`/${LOCALE}/verktyg/egenkontroll-vvs-mall`}>Egenkontroll VVS</a>
+                      <a href={`/${LOCALE}/verktyg/egenkontroll-vvs-mall`}>Egenkontroll VVS – mall</a>
                     </strong>{' '}
                     – täthetsprovning, avstängningsventiler, isolering av rör och kontroll av fall på avlopp.
                   </li>
                   <li>
                     <strong>
-                      <a href={`/${LOCALE}/verktyg/egenkontroll-bygg-mall`}>Egenkontroll bygg / stomme</a>
+                      <a href={`/${LOCALE}/verktyg/egenkontroll-bygg-mall`}>Egenkontroll bygg – mall</a>
                     </strong>{' '}
                     – måttkontroll mot ritning, infästningar, fuktkontroll och brandtätning enligt BBR.
                   </li>

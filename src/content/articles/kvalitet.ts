@@ -1427,7 +1427,7 @@ const A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM_HTML = `
 <li>vara <strong>registrerat hos Elsäkerhetsverket</strong>, och</li>
 <li>ha minst en <strong>elinstallatör för regelverket</strong> som är knuten till verksamheten.</li>
 </ul>
-<p>Även den som är <strong>underentreprenör</strong> och utför elinstallationsarbete åt ett annat företag måste ha ett eget egenkontrollprogram och en egen elinstallatör för regelverket – man &quot;lånar&quot; inte huvudentreprenörens. Elsäkerhetsverket tillhandahåller mallar och vägledning för själva egenkontrollprogrammet på sin webbplats.</p>
+<p>Även den som är <strong>underentreprenör</strong> och utför elinstallationsarbete åt ett annat företag måste ha ett eget egenkontrollprogram och en egen elinstallatör för regelverket – man &quot;lånar&quot; inte huvudentreprenörens. Elsäkerhetsverket tillhandahåller mallar och vägledning för själva egenkontrollprogrammet på sin webbplats. Hur ett <a href="/sv/blog/egenkontrollprogram">egenkontrollprogram</a> byggs upp även för bygg och VVS går vi igenom i en egen guide.</p>
 
 <h2>Vad ska kontrollen av installationen omfatta?</h2>
 <p>Utöver programmet ska varje installation kontrolleras innan den tas i bruk. Typiska punkter som dokumenteras är:</p>
@@ -1460,6 +1460,78 @@ const A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM: BlogPost = {
   seoTitle: "Egenkontroll el – egenkontrollprogram & kontroll | ByggExp", seoDescription: "Egenkontroll el: elföretag måste ha egenkontrollprogram och registrering hos Elsäkerhetsverket (elsäkerhetslagen, ELSÄK-FS 2017:3). Så dokumenterar du. Gratis mall.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T15:00:00.000Z", createdAt: "2026-08-20T15:00:00.000Z", updatedAt: "2026-08-20T15:00:00.000Z",
+};
+
+const A_EGENKONTROLLPROGRAM_HTML = `
+<p>Ett <strong>egenkontrollprogram</strong> är företagets egna, nedskrivna rutiner för hur arbetet kontrolleras och dokumenteras. För elinstallationsföretag är det ett lagkrav. I bygg- och VVS-branschen är det i stället beställaren, kontrollplanen och branschreglerna som styr – men ett eget program gör att kontrollerna blir gjorda på samma sätt i varje projekt. Här går vi igenom vem som måste ha ett egenkontrollprogram, vad det ska innehålla och hur du kommer igång med en mall.</p>
+
+<p><a href="/sv/verktyg/egenkontroll-mall">Egenkontroll – gratis mallar för bygg, el och VVS (PDF/Excel) →</a></p>
+
+<h2>Egenkontrollprogram eller egenkontroll – vad är skillnaden?</h2>
+<ul>
+<li><strong>Egenkontrollprogrammet</strong> beskriver <em>hur</em> företaget arbetar: vem som ansvarar, vilka kontroller som görs, när de görs och hur de dokumenteras. Det skrivs en gång och hålls aktuellt.</li>
+<li><strong>Egenkontrollen</strong> är det ifyllda protokollet i ett enskilt projekt – beviset på att kontrollen faktiskt gjordes. Den tas fram för varje jobb, ofta med en <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a>.</li>
+</ul>
+<p>Programmet utan protokoll är tomma rutiner; protokoll utan program blir olika från jobb till jobb. Det är kombinationen som ger spårbarhet.</p>
+
+<h2>Vem måste ha ett egenkontrollprogram?</h2>
+<h3>Elinstallationsföretag – lagkrav</h3>
+<p>Alla elinstallationsföretag ska ha ett egenkontrollprogram enligt <strong>elsäkerhetslagen (2016:732), 24 §</strong>. Innehållet preciseras i Elsäkerhetsverkets föreskrift <strong>ELSÄK-FS 2017:3</strong>. Företaget ska också vara registrerat hos Elsäkerhetsverket och ha en elinstallatör för regelverket knuten till verksamheten. Läs mer i guiden om <a href="/sv/blog/egenkontroll-el-egenkontrollprogram">egenkontroll el och egenkontrollprogram</a>, och använd <a href="/sv/verktyg/egenkontroll-el-mall">egenkontroll el-mallen</a> för kontrollen av varje installation.</p>
+
+<h3>Byggföretag – inget eget lagkrav, men krav i praktiken</h3>
+<p>Plan- och bygglagen kräver inget egenkontrollprogram av ett byggföretag. Det är byggherren som ansvarar för att kraven uppfylls, och <a href="/sv/verktyg/kontrollplan-mall">kontrollplanen</a> anger vilka kontroller som ska göras – ofta med &quot;egenkontroll&quot; som metod. Därför behöver entreprenören kunna visa dokumenterade egenkontroller, och ett program gör det enkelt att leverera dem likadant i varje projekt. Många beställare frågar dessutom efter rutinerna i upphandling eller i <a href="/sv/blog/kvalitetsplan-bygg">kvalitetsplanen</a>. Se <a href="/sv/verktyg/egenkontroll-bygg-mall">egenkontroll bygg-mallen</a> för själva protokollet.</p>
+
+<h3>VVS och våtrum – branschreglerna</h3>
+<p>Branschregler som Säker Vatten för VVS och GVK/BBV för våtrum bygger på att arbetet egenkontrolleras och dokumenteras. Ett egenkontrollprogram beskriver hur ni gör det i varje jobb – till exempel täthetsprovning och intyg. Protokollet finns i <a href="/sv/verktyg/egenkontroll-vvs-mall">egenkontroll VVS-mallen</a>.</p>
+
+<h3>Egenkontroll enligt miljöbalken är något annat</h3>
+<p>Söker du på egenkontrollprogram kan du också hamna på miljöbalkens egenkontroll (förordningen 1998:901 om verksamhetsutövares egenkontroll) eller livsmedelskontroll. Det är andra regelverk för miljöfarlig verksamhet och livsmedel – den här guiden handlar om kontroll av utfört arbete i bygg, el och VVS.</p>
+
+<h2>Vad ska ett egenkontrollprogram innehålla?</h2>
+<p>Ett bra program är kort och praktiskt. Det svarar på de här frågorna:</p>
+<ol>
+<li><strong>Omfattning</strong> – vilka typer av arbeten programmet gäller (t.ex. el, stomme, våtrum, VVS).</li>
+<li><strong>Ansvar</strong> – vem som ansvarar för programmet, vem som utför och vem som signerar kontrollerna.</li>
+<li><strong>Kompetens</strong> – vilka behörigheter och utbildningar som krävs för respektive arbete.</li>
+<li><strong>Kontroller</strong> – vilka kontrollpunkter som görs, när (före, under, efter) och mot vilket krav eller vilken handling.</li>
+<li><strong>Dokumentation</strong> – vilken mall som används, att foto och signatur tas med och var protokollen sparas.</li>
+<li><strong>Avvikelser</strong> – hur fel rapporteras, åtgärdas och följs upp (se <a href="/sv/blog/avvikelsehantering-bygg-mall">avvikelsehantering</a>).</li>
+<li><strong>Material</strong> – hur levererat material kontrolleras (se <a href="/sv/blog/mottagningskontroll-material-bygg">mottagningskontroll</a>).</li>
+<li><strong>Uppföljning</strong> – hur ofta programmet ses över och uppdateras, till exempel en gång per år eller när regler ändras.</li>
+</ol>
+
+<h2>Exempel: upplägg för ett mindre byggföretag</h2>
+<table>
+<thead><tr><th>Del</th><th>Exempel på innehåll</th></tr></thead>
+<tbody>
+<tr><td>Ansvarig</td><td>VD ansvarar för programmet; arbetsledaren signerar kontrollerna i varje projekt.</td></tr>
+<tr><td>Före start</td><td>Genomgång av handlingar, kontrollplan och <a href="/sv/verktyg/arbetsberedning-mall">arbetsberedning</a>.</td></tr>
+<tr><td>Under arbetet</td><td>Egenkontroll per moment enligt mall: mått, infästningar, fukt, tätskikt, brandtätning.</td></tr>
+<tr><td>Efter arbetet</td><td>Slutkontroll, foto och signatur; protokollen samlas till <a href="/sv/blog/slutbesiktning">slutbesiktningen</a>.</td></tr>
+<tr><td>Arkiv</td><td>Protokollen sparas digitalt per projekt.</td></tr>
+</tbody>
+</table>
+
+<h2>Vanliga misstag</h2>
+<ul>
+<li><strong>Programmet ligger i en pärm.</strong> Rutinerna finns men följs inte ute på bygget. Gör kontrollerna där arbetet sker – i mobilen.</li>
+<li><strong>Samma mall för allt.</strong> Kontrollpunkterna skiljer sig mellan el, bygg och VVS. Använd yrkesspecifika mallar.</li>
+<li><strong>Ingen signatur eller inget foto.</strong> Då är det svårt att visa i efterhand att kontrollen verkligen gjordes.</li>
+<li><strong>Programmet uppdateras aldrig.</strong> Nya regler och nya arbetsmoment kräver att rutinerna ses över.</li>
+</ul>
+
+<h2>Egenkontroller i ByggExp</h2>
+<p>I ByggExp fyller arbetslaget i egenkontrollerna direkt i appen, med foto och signatur, och protokollen hamnar på rätt projekt. Vill du börja enkelt kan du <a href="/sv/verktyg/egenkontroll-mall">ladda ner en gratis egenkontroll-mall</a> och fylla i den online.</p>
+`;
+
+const A_EGENKONTROLLPROGRAM: BlogPost = {
+  _id: "code-"+"egenkontrollprogram",
+  title: "Egenkontrollprogram – vem som behöver det, innehåll och mall", slug: "egenkontrollprogram", locale: "sv",
+  excerpt: "Vad ett egenkontrollprogram är, när det är lagkrav (elinstallationsföretag) och vad det ska innehålla för bygg, el och VVS – med exempel och gratis mallar.", tag: "Egenkontroll",
+  coverImageUrl: "/landing/blog/egenkontroll.webp", contentHtml: A_EGENKONTROLLPROGRAM_HTML,
+  seoTitle: "Egenkontrollprogram – mall & exempel för bygg och el | ByggExp", seoDescription: "Egenkontrollprogram: när det är lagkrav (elsäkerhetslagen 24 §), vad det ska innehålla för bygg, el och VVS, exempel på upplägg och gratis egenkontroll-mallar.",
+  seoImageUrl: `${SITE_URL}/landing/blog/egenkontroll.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
+  publishedAt: "2026-09-29T12:00:00.000Z", createdAt: "2026-09-29T12:00:00.000Z", updatedAt: "2026-09-29T12:00:00.000Z",
 };
 
 const A_EGENKONTROLL_ENTREPRENAD_HTML = `
@@ -1805,6 +1877,7 @@ export const KVALITET_ARTICLES: BlogPost[] = [
   A_FOTODOKUMENTATION_BYGGPROJEKT_BEVIS,
   A_DOU_PARM_DRIFT_UNDERHALL_BYGG,
   A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM,
+  A_EGENKONTROLLPROGRAM,
   A_EGENKONTROLL_ENTREPRENAD,
   A_TIDREDOVISNING_BYGGFORETAG,
 ];

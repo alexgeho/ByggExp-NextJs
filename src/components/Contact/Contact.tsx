@@ -14,6 +14,10 @@ import { CalendlyInlineWidget } from "../CalendlyInlineWidget";
 
 const CALENDLY_URL = "https://calendly.com/870717ag/30min";
 
+const APP_STORE_URL = "https://apps.apple.com/se/app/id6748280779";
+const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=se.byggexp.app";
+const YOUTUBE_URL = "https://www.youtube.com/@byggexp";
+
 const PHONE = "+46 70 757 75 75";
 const PHONE_OFFICE = "+46 8 446 821 58";
 const COMPANY = "Real Marketing s. r. o.";
@@ -41,7 +45,6 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
   /* INPUTS */
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [company, setCompany] = useState("");
   const [phone, setPhone] = useState("");
   const [topic, setTopic] = useState("");
   const [message, setMessage] = useState("");
@@ -75,7 +78,6 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
 
     const details = [
       topic && `Ärende: ${topic}`,
-      company.trim() && `Företag: ${company.trim()}`,
       message.trim() && `Meddelande: ${message.trim()}`,
     ]
       .filter(Boolean)
@@ -105,7 +107,7 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
 
   return (
     <div className="kontakt">
-      {/* HERO */}
+      {/* HERO: breadcrumbs + plain page title, no sales copy */}
       <section className="kontakt-hero">
         <div className="kontakt-container">
           <nav className="kontakt-breadcrumbs" aria-label="Breadcrumb">
@@ -113,51 +115,13 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
             <span aria-hidden="true">/</span>
             <span className="kontakt-breadcrumbs-current">{t.eyebrow}</span>
           </nav>
+          <h1 className="kontakt-title">{t.eyebrow}</h1>
         </div>
       </section>
 
-      {/* FORM + CONTACT CARDS */}
+      {/* FORM (left) + CONTACT CHANNELS (right). Mobile: form → channels */}
       <section className="kontakt-main">
         <div className="kontakt-container kontakt-grid">
-            {/* Same heading block (section-head) as the other site sections */}
-          <div className="section-head kontakt-head">
-              <span className="eyebrow">{t.eyebrow}</span>
-              <h1>{t.title}</h1>
-              <p className="section-sub">{t.lead}</p>
-              <ul className="kontakt-checks">
-                {t.checks.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-          </div>
-          <div className="kontakt-cards">
-            <div className="kontakt-card">
-              <span className="kontakt-card-label">{t.callLabel}</span>
-              <a href={officeHref} className="kontakt-card-value">{PHONE_OFFICE}</a>
-              <a href={phoneHref} className="kontakt-card-value">{PHONE}</a>
-              <p>{t.callText}</p>
-            </div>
-
-            <div className="kontakt-card">
-              <span className="kontakt-card-label">{t.mailLabel}</span>
-              <ul className="kontakt-mail-list">
-                <li>
-                  <span>{t.emailSales}</span>
-                  <a href="mailto:sales@byggexp.se">sales@byggexp.se</a>
-                </li>
-                <li>
-                  <span>{t.emailSupport}</span>
-                  <a href="mailto:support@byggexp.se">support@byggexp.se</a>
-                </li>
-                <li>
-                  <span>{t.emailPress}</span>
-                  <a href="mailto:press@byggexp.se">press@byggexp.se</a>
-                </li>
-              </ul>
-              <p>{t.mailText}</p>
-            </div>
-
-          </div>
           <div className="kontakt-form-col">
             {!isSuccess ? (
               <form noValidate onSubmit={handleSubmit} className="kontakt-form">
@@ -199,18 +163,6 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
 
                 <div className="kontakt-row">
                   <div className="kontakt-field">
-                    <label htmlFor="c-company" className="sr-only">{t.formCompany}</label>
-                    <input
-                      id="c-company"
-                      type="text"
-                      placeholder={t.formCompany}
-                      autoComplete="organization"
-                      value={company}
-                      onChange={(e) => setCompany(e.currentTarget.value)}
-                    />
-                  </div>
-
-                  <div className="kontakt-field">
                     <label htmlFor="c-phone" className="sr-only">{t.formPhone}</label>
                     <input
                       id="c-phone"
@@ -219,32 +171,30 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
                       autoComplete="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.currentTarget.value)}
-                      aria-describedby="c-phone-hint"
                     />
-                    <p className="kontakt-hint" id="c-phone-hint">{t.formPhoneHint}</p>
+                  </div>
+                  <div className="kontakt-field">
+                    <label htmlFor="c-topic" className="sr-only">{t.formTopic}</label>
+                    <select
+                      id="c-topic"
+                      value={topic}
+                      onChange={(e) => setTopic(e.currentTarget.value)}
+                      className={topic ? "" : "is-placeholder"}
+                    >
+                      <option value="">{t.formTopic}</option>
+                      {t.topics.map((item) => (
+                        <option key={item} value={item}>{item}</option>
+                      ))}
+                    </select>
                   </div>
                 </div>
 
-                <div className="kontakt-field">
-                  <label htmlFor="c-topic" className="sr-only">{t.formTopic}</label>
-                  <select
-                    id="c-topic"
-                    value={topic}
-                    onChange={(e) => setTopic(e.currentTarget.value)}
-                    className={topic ? "" : "is-placeholder"}
-                  >
-                    <option value="">{t.formTopic}</option>
-                    {t.topics.map((item) => (
-                      <option key={item} value={item}>{item}</option>
-                    ))}
-                  </select>
-                </div>
 
                 <div className="kontakt-field">
                   <label htmlFor="c-message" className="sr-only">{t.formMessage}</label>
                   <textarea
                     id="c-message"
-                    rows={5}
+                    rows={3}
                     placeholder={t.formMessage}
                     value={message}
                     onChange={(e) => setMessage(e.currentTarget.value)}
@@ -290,9 +240,85 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
             )}
           </div>
 
+          <aside className="kontakt-cards">
+            <div className="kontakt-card">
+              <span className="kontakt-card-label">{t.callLabel}</span>
+              <ul className="kontakt-mail-list">
+                <li>
+                  <span>{t.phoneOffice}</span>
+                  <a href={officeHref}>{PHONE_OFFICE}</a>
+                </li>
+                <li>
+                  <span>{t.phoneMobile}</span>
+                  <a href={phoneHref}>{PHONE}</a>
+                </li>
+              </ul>
+              <p>{t.callText}</p>
+            </div>
+
+            <div className="kontakt-card">
+              <span className="kontakt-card-label">{t.mailLabel}</span>
+              <ul className="kontakt-mail-list">
+                <li>
+                  <span>{t.emailSales}</span>
+                  <a href="mailto:sales@byggexp.se">sales@byggexp.se</a>
+                </li>
+                <li>
+                  <span>{t.emailSupport}</span>
+                  <a href="mailto:support@byggexp.se">support@byggexp.se</a>
+                </li>
+                <li>
+                  <span>{t.emailPress}</span>
+                  <a href="mailto:press@byggexp.se">press@byggexp.se</a>
+                </li>
+              </ul>
+              <p>{t.mailText}</p>
+            </div>
+
+            <div className="kontakt-card">
+              <span className="kontakt-card-label">{t.appsLabel}</span>
+              <div className="kontakt-badges">
+                <a
+                  className="kontakt-badge"
+                  href={APP_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="/landing/contact/apple.svg" alt="" width={22} height={22} />
+                  <span>
+                    <small>{t.appStorePre}</small>
+                    App Store
+                  </span>
+                </a>
+                <a
+                  className="kontakt-badge"
+                  href={GOOGLE_PLAY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="/landing/contact/googleplay.svg" alt="" width={20} height={20} />
+                  <span>
+                    <small>{t.googlePlayPre}</small>
+                    Google Play
+                  </span>
+                </a>
+                <a
+                  className="kontakt-badge kontakt-badge-yt"
+                  href={YOUTUBE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="/landing/contact/youtube.svg" alt="" width={24} height={24} />
+                  <span>
+                    <small>{t.youtubePre}</small>
+                    YouTube
+                  </span>
+                </a>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
-
 
       {/* HOW IT WORKS */}
       <section className="kontakt-steps">
@@ -378,14 +404,13 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
               <dd>{t.hours}</dd>
             </div>
             <div>
-              <dt>{t.rowMeetings}</dt>
-              <dd>{t.meetings}</dd>
+              <dt>{t.rowPayment}</dt>
+              <dd>{t.payment}</dd>
             </div>
             <div>
               <dt>{t.rowPhone}</dt>
               <dd>
                 <a href={officeHref}>{PHONE_OFFICE}</a>
-                <br />
                 <a href={phoneHref}>{PHONE}</a>
               </dd>
             </div>

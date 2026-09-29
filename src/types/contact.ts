@@ -3,7 +3,6 @@ export type ContactT = {
   eyebrow: string;
   title: string;
   lead: string;
-  checks: readonly [string, string, string];
 
   formName: string;
   formEmail: string;
@@ -17,11 +16,18 @@ export type ContactT = {
 
   callLabel: string;
   callText: string;
+  phoneOffice: string;
+  phoneMobile: string;
   mailLabel: string;
   mailText: string;
   emailSupport: string;
   emailSales: string;
   emailPress: string;
+
+  appsLabel: string;
+  appStorePre: string;
+  googlePlayPre: string;
+  youtubePre: string;
 
   stepsEyebrow: string;
   stepsTitle: string;
@@ -39,8 +45,8 @@ export type ContactT = {
   mapLink: string;
   rowHours: string;
   hours: string;
-  rowMeetings: string;
-  meetings: string;
+  rowPayment: string;
+  payment: string;
   rowPhone: string;
   rowEmail: string;
 

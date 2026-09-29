@@ -7,9 +7,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     eyebrow: "Контакты",
     title: "Запишитесь на демо или задайте вопрос",
     lead: "Заполните форму — договоримся о времени. Или просто позвоните.",
-    checks: ["Ответ в течение 1 рабочего дня", "Бесплатное демо на 15 минут", "Без стартовой платы и обязательств"],
 
-    formName: "Имя",
+    formName: "Имя и компания",
     formEmail: "Email *",
     formCompany: "Компания",
     formPhone: "Телефон (необязательно)",
@@ -21,11 +20,18 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
 
     callLabel: "Позвоните нам",
     callText: "Будни, 08:00–17:00",
+    phoneOffice: "Офис",
+    phoneMobile: "Мобильный",
     mailLabel: "Напишите нам",
     mailText: "Обычно отвечаем в течение одного рабочего дня.",
     emailSupport: "Поддержка",
     emailSales: "Продажи и демо",
     emailPress: "Пресса",
+
+    appsLabel: "Приложение и видео",
+    appStorePre: "Загрузите в",
+    googlePlayPre: "Доступно в",
+    youtubePre: "Смотрите на",
 
     stepsEyebrow: "После вашего запроса",
     stepsTitle: "Как это происходит",
@@ -37,7 +43,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Реквизиты",
-    companyText: "ByggExp принадлежит компании Real Marketing s. r. o.. Мы находимся в Бромме, Стокгольм, и работаем со строительными компаниями по всей Швеции.",
+    companyText: "ByggExp принадлежит компании Real Marketing s. r. o. Мы находимся в Бромме, Стокгольм, и работаем со строительными компаниями по всей Швеции.",
     termsLink: "Условия",
     privacyLink: "Политика конфиденциальности",
     rowCompany: "Компания",
@@ -48,8 +54,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     mapLink: "Показать на карте →",
     rowHours: "Часы работы",
     hours: "Пн–Пт, 08:00–17:00",
-    rowMeetings: "Встречи",
-    meetings: "Онлайн, по видеосвязи",
+    rowPayment: "Оплата",
+    payment: "Картой через Stripe",
     rowPhone: "Телефон",
     rowEmail: "Email",
 
@@ -68,9 +74,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     eyebrow: "Contact",
     title: "Book a demo or ask us anything",
     lead: "Fill in the form and we'll find a time that suits you – or just give us a call.",
-    checks: ["Reply within 1 business day", "Free 15-minute demo", "No setup fee, no lock-in"],
 
-    formName: "Name",
+    formName: "Name and company",
     formEmail: "Email *",
     formCompany: "Company",
     formPhone: "Phone (optional)",
@@ -82,11 +87,18 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
 
     callLabel: "Call us",
     callText: "Weekdays 08:00–17:00",
+    phoneOffice: "Office",
+    phoneMobile: "Mobile",
     mailLabel: "Email us",
     mailText: "We usually reply within one business day.",
     emailSupport: "Support",
     emailSales: "Sales & demo",
     emailPress: "Press",
+
+    appsLabel: "App and video",
+    appStorePre: "Download on the",
+    googlePlayPre: "Get it on",
+    youtubePre: "Watch on",
 
     stepsEyebrow: "After your request",
     stepsTitle: "How it works",
@@ -98,7 +110,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Company details",
-    companyText: "ByggExp is operated by Real Marketing s. r. o.. We are based in Bromma, Stockholm, and work with construction companies across Sweden.",
+    companyText: "ByggExp is operated by Real Marketing s. r. o. We are based in Bromma, Stockholm, and work with construction companies across Sweden.",
     termsLink: "Terms",
     privacyLink: "Privacy policy",
     rowCompany: "Company",
@@ -109,8 +121,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     mapLink: "Show on map →",
     rowHours: "Office hours",
     hours: "Mon–Fri, 08:00–17:00",
-    rowMeetings: "Meetings",
-    meetings: "Online via video call",
+    rowPayment: "Payment",
+    payment: "Card via Stripe",
     rowPhone: "Phone",
     rowEmail: "Email",
 
@@ -129,9 +141,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     eyebrow: "Kontakt",
     title: "Boka demo eller ställ en fråga",
     lead: "Fyll i formuläret så hittar vi en tid som passar – eller ring oss direkt.",
-    checks: ["Svar inom 1 arbetsdag", "Kostnadsfri demo på 15 min", "Ingen startavgift, ingen bindningstid"],
 
-    formName: "Namn",
+    formName: "Namn och företag",
     formEmail: "E-post *",
     formCompany: "Företag",
     formPhone: "Telefon (valfritt)",
@@ -143,11 +154,18 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
 
     callLabel: "Ring oss",
     callText: "Vardagar 08:00–17:00",
+    phoneOffice: "Kontor",
+    phoneMobile: "Mobil",
     mailLabel: "Mejla oss",
     mailText: "Vi svarar vanligtvis inom en arbetsdag.",
     emailSupport: "Support",
     emailSales: "Försäljning & demo",
     emailPress: "Press",
+
+    appsLabel: "Appen och video",
+    appStorePre: "Hämta i",
+    googlePlayPre: "Ladda ned på",
+    youtubePre: "Titta på",
 
     stepsEyebrow: "Efter din förfrågan",
     stepsTitle: "Så går det till",
@@ -159,7 +177,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Företagsuppgifter",
-    companyText: "ByggExp drivs av Real Marketing s. r. o.. Vi finns i Bromma, Stockholm, och arbetar med byggföretag i hela Sverige.",
+    companyText: "ByggExp drivs av Real Marketing s. r. o. Vi finns i Bromma, Stockholm, och arbetar med byggföretag i hela Sverige.",
     termsLink: "Villkor",
     privacyLink: "Integritetspolicy",
     rowCompany: "Bolag",
@@ -170,8 +188,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     mapLink: "Visa på karta →",
     rowHours: "Öppettider",
     hours: "Mån–Fre, 08:00–17:00",
-    rowMeetings: "Möten",
-    meetings: "Digitalt via videomöte",
+    rowPayment: "Betalning",
+    payment: "Kort via Stripe",
     rowPhone: "Telefon",
     rowEmail: "E-post",
 
@@ -190,9 +208,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     eyebrow: "Kontakt",
     title: "Book demo eller still et spørsmål",
     lead: "Fyll ut skjemaet, så finner vi et tidspunkt som passer – eller ring oss direkte.",
-    checks: ["Svar innen 1 virkedag", "Gratis demo på 15 min", "Ingen oppstartsavgift, ingen binding"],
 
-    formName: "Navn",
+    formName: "Navn og firma",
     formEmail: "E-post *",
     formCompany: "Firma",
     formPhone: "Telefon (valgfritt)",
@@ -204,11 +221,18 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
 
     callLabel: "Ring oss",
     callText: "Hverdager 08:00–17:00",
+    phoneOffice: "Kontor",
+    phoneMobile: "Mobil",
     mailLabel: "Send e-post",
     mailText: "Vi svarer vanligvis innen en virkedag.",
     emailSupport: "Support",
     emailSales: "Salg & demo",
     emailPress: "Presse",
+
+    appsLabel: "Appen og video",
+    appStorePre: "Last ned fra",
+    googlePlayPre: "Last ned på",
+    youtubePre: "Se på",
 
     stepsEyebrow: "Etter forespørselen",
     stepsTitle: "Slik går det til",
@@ -220,7 +244,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Firmaopplysninger",
-    companyText: "ByggExp drives av Real Marketing s. r. o.. Vi holder til i Bromma, Stockholm, og jobber med byggefirmaer i Sverige og Norge.",
+    companyText: "ByggExp drives av Real Marketing s. r. o. Vi holder til i Bromma, Stockholm, og jobber med byggefirmaer i Sverige og Norge.",
     termsLink: "Vilkår",
     privacyLink: "Personvernerklæring",
     rowCompany: "Selskap",
@@ -231,8 +255,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     mapLink: "Vis på kart →",
     rowHours: "Åpningstider",
     hours: "Man–Fre, 08:00–17:00",
-    rowMeetings: "Møter",
-    meetings: "Digitalt via videomøte",
+    rowPayment: "Betaling",
+    payment: "Kort via Stripe",
     rowPhone: "Telefon",
     rowEmail: "E-post",
 
@@ -251,9 +275,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     eyebrow: "Kontakt",
     title: "Umów demo lub zadaj pytanie",
     lead: "Wypełnij formularz, a ustalimy dogodny termin – albo po prostu zadzwoń.",
-    checks: ["Odpowiedź w 1 dzień roboczy", "Bezpłatne demo – 15 min", "Bez opłaty startowej i zobowiązań"],
 
-    formName: "Imię i nazwisko",
+    formName: "Imię i firma",
     formEmail: "E-mail *",
     formCompany: "Firma",
     formPhone: "Telefon (opcjonalnie)",
@@ -265,11 +288,18 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
 
     callLabel: "Zadzwoń",
     callText: "Dni robocze 08:00–17:00",
+    phoneOffice: "Biuro",
+    phoneMobile: "Komórka",
     mailLabel: "Napisz do nas",
     mailText: "Zwykle odpowiadamy w ciągu jednego dnia roboczego.",
     emailSupport: "Wsparcie",
     emailSales: "Sprzedaż i demo",
     emailPress: "Prasa",
+
+    appsLabel: "Aplikacja i wideo",
+    appStorePre: "Pobierz z",
+    googlePlayPre: "Pobierz z",
+    youtubePre: "Oglądaj na",
 
     stepsEyebrow: "Po wysłaniu zapytania",
     stepsTitle: "Jak to wygląda",
@@ -281,7 +311,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Dane firmy",
-    companyText: "ByggExp prowadzi Real Marketing s. r. o.. Mamy siedzibę w Bromma w Sztokholmie i współpracujemy z firmami budowlanymi w całej Szwecji.",
+    companyText: "ByggExp prowadzi Real Marketing s. r. o. Mamy siedzibę w Bromma w Sztokholmie i współpracujemy z firmami budowlanymi w całej Szwecji.",
     termsLink: "Regulamin",
     privacyLink: "Polityka prywatności",
     rowCompany: "Spółka",
@@ -292,8 +322,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     mapLink: "Pokaż na mapie →",
     rowHours: "Godziny pracy",
     hours: "Pon–Pt, 08:00–17:00",
-    rowMeetings: "Spotkania",
-    meetings: "Online przez wideorozmowę",
+    rowPayment: "Płatność",
+    payment: "Kartą przez Stripe",
     rowPhone: "Telefon",
     rowEmail: "E-mail",
 
@@ -312,9 +342,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     eyebrow: "Контакти",
     title: "Запишіться на демо або поставте питання",
     lead: "Заповніть форму — домовимося про зручний час. Або просто зателефонуйте.",
-    checks: ["Відповідь протягом 1 робочого дня", "Безкоштовне демо на 15 хвилин", "Без стартової плати та зобов’язань"],
 
-    formName: "Ім’я",
+    formName: "Ім’я та компанія",
     formEmail: "Email *",
     formCompany: "Компанія",
     formPhone: "Телефон (необов’язково)",
@@ -326,11 +355,18 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
 
     callLabel: "Зателефонуйте",
     callText: "Будні, 08:00–17:00",
+    phoneOffice: "Офіс",
+    phoneMobile: "Мобільний",
     mailLabel: "Напишіть нам",
     mailText: "Зазвичай відповідаємо протягом одного робочого дня.",
     emailSupport: "Підтримка",
     emailSales: "Продажі та демо",
     emailPress: "Преса",
+
+    appsLabel: "Застосунок і відео",
+    appStorePre: "Завантажте в",
+    googlePlayPre: "Доступно в",
+    youtubePre: "Дивіться на",
 
     stepsEyebrow: "Після вашого запиту",
     stepsTitle: "Як це відбувається",
@@ -342,7 +378,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Реквізити",
-    companyText: "ByggExp належить компанії Real Marketing s. r. o.. Ми знаходимося в Бруммі, Стокгольм, і працюємо з будівельними компаніями по всій Швеції.",
+    companyText: "ByggExp належить компанії Real Marketing s. r. o. Ми знаходимося в Бруммі, Стокгольм, і працюємо з будівельними компаніями по всій Швеції.",
     termsLink: "Умови",
     privacyLink: "Політика конфіденційності",
     rowCompany: "Компанія",
@@ -353,8 +389,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     mapLink: "Показати на карті →",
     rowHours: "Години роботи",
     hours: "Пн–Пт, 08:00–17:00",
-    rowMeetings: "Зустрічі",
-    meetings: "Онлайн, через відеозв’язок",
+    rowPayment: "Оплата",
+    payment: "Карткою через Stripe",
     rowPhone: "Телефон",
     rowEmail: "Email",
 
@@ -373,9 +409,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     eyebrow: "Yhteystiedot",
     title: "Varaa demo tai kysy meiltä",
     lead: "Täytä lomake, niin sovimme sopivan ajan – tai soita suoraan.",
-    checks: ["Vastaus 1 työpäivässä", "Ilmainen 15 min demo", "Ei aloitusmaksua, ei sitoutumista"],
 
-    formName: "Nimi",
+    formName: "Nimi ja yritys",
     formEmail: "Sähköposti *",
     formCompany: "Yritys",
     formPhone: "Puhelin (valinnainen)",
@@ -387,11 +422,18 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
 
     callLabel: "Soita meille",
     callText: "Arkisin 08:00–17:00",
+    phoneOffice: "Toimisto",
+    phoneMobile: "Matkapuhelin",
     mailLabel: "Lähetä sähköpostia",
     mailText: "Vastaamme yleensä yhden työpäivän kuluessa.",
     emailSupport: "Tuki",
     emailSales: "Myynti ja demo",
     emailPress: "Media",
+
+    appsLabel: "Sovellus ja video",
+    appStorePre: "Lataa",
+    googlePlayPre: "Hanki",
+    youtubePre: "Katso",
 
     stepsEyebrow: "Pyyntösi jälkeen",
     stepsTitle: "Näin se etenee",
@@ -403,7 +445,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Yritystiedot",
-    companyText: "ByggExpiä ylläpitää Real Marketing s. r. o.. Toimimme Brommassa Tukholmassa ja työskentelemme rakennusyritysten kanssa koko Ruotsissa.",
+    companyText: "ByggExpiä ylläpitää Real Marketing s. r. o. Toimimme Brommassa Tukholmassa ja työskentelemme rakennusyritysten kanssa koko Ruotsissa.",
     termsLink: "Käyttöehdot",
     privacyLink: "Tietosuojakäytäntö",
     rowCompany: "Yhtiö",
@@ -414,8 +456,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     mapLink: "Näytä kartalla →",
     rowHours: "Aukioloajat",
     hours: "Ma–Pe, 08:00–17:00",
-    rowMeetings: "Tapaamiset",
-    meetings: "Etänä videopuhelulla",
+    rowPayment: "Maksu",
+    payment: "Kortilla Stripen kautta",
     rowPhone: "Puhelin",
     rowEmail: "Sähköposti",
 
@@ -434,9 +476,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     eyebrow: "Kontakt",
     title: "Broneeri demo või esita küsimus",
     lead: "Täida vorm ja leiame sobiva aja – või helista otse.",
-    checks: ["Vastus 1 tööpäeva jooksul", "Tasuta 15-minutiline demo", "Alustustasuta, ilma sidumiseta"],
 
-    formName: "Nimi",
+    formName: "Nimi ja ettevõte",
     formEmail: "E-post *",
     formCompany: "Ettevõte",
     formPhone: "Telefon (valikuline)",
@@ -448,11 +489,18 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
 
     callLabel: "Helistage",
     callText: "Tööpäeviti 08:00–17:00",
+    phoneOffice: "Kontor",
+    phoneMobile: "Mobiil",
     mailLabel: "Kirjutage meile",
     mailText: "Vastame tavaliselt ühe tööpäeva jooksul.",
     emailSupport: "Tugi",
     emailSales: "Müük ja demo",
     emailPress: "Meedia",
+
+    appsLabel: "Äpp ja video",
+    appStorePre: "Laadi alla",
+    googlePlayPre: "Hangi",
+    youtubePre: "Vaata",
 
     stepsEyebrow: "Pärast päringut",
     stepsTitle: "Kuidas see käib",
@@ -464,7 +512,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Ettevõtte andmed",
-    companyText: "ByggExpi haldab Real Marketing s. r. o.. Asume Brommas Stockholmis ja teeme koostööd ehitusettevõtetega üle kogu Rootsi.",
+    companyText: "ByggExpi haldab Real Marketing s. r. o. Asume Brommas Stockholmis ja teeme koostööd ehitusettevõtetega üle kogu Rootsi.",
     termsLink: "Tingimused",
     privacyLink: "Privaatsuspoliitika",
     rowCompany: "Ettevõte",
@@ -475,8 +523,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     mapLink: "Näita kaardil →",
     rowHours: "Lahtiolekuajad",
     hours: "E–R, 08:00–17:00",
-    rowMeetings: "Kohtumised",
-    meetings: "Veebis videokõne kaudu",
+    rowPayment: "Makse",
+    payment: "Kaardiga Stripe’i kaudu",
     rowPhone: "Telefon",
     rowEmail: "E-post",
 
@@ -495,9 +543,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     eyebrow: "Kontaktai",
     title: "Užsisakykite demonstraciją arba užduokite klausimą",
     lead: "Užpildykite formą ir suderinsime patogų laiką – arba tiesiog paskambinkite.",
-    checks: ["Atsakymas per 1 darbo dieną", "Nemokama 15 min. demonstracija", "Be pradinio mokesčio ir įsipareigojimų"],
 
-    formName: "Vardas",
+    formName: "Vardas ir įmonė",
     formEmail: "El. paštas *",
     formCompany: "Įmonė",
     formPhone: "Telefonas (neprivaloma)",
@@ -509,11 +556,18 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
 
     callLabel: "Paskambinkite",
     callText: "Darbo dienomis 08:00–17:00",
+    phoneOffice: "Biuras",
+    phoneMobile: "Mobilusis",
     mailLabel: "Parašykite mums",
     mailText: "Paprastai atsakome per vieną darbo dieną.",
     emailSupport: "Pagalba",
     emailSales: "Pardavimai ir demo",
     emailPress: "Spauda",
+
+    appsLabel: "Programėlė ir vaizdo įrašai",
+    appStorePre: "Atsisiųskite iš",
+    googlePlayPre: "Gaukite",
+    youtubePre: "Žiūrėkite",
 
     stepsEyebrow: "Po jūsų užklausos",
     stepsTitle: "Kaip tai vyksta",
@@ -525,7 +579,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Įmonės duomenys",
-    companyText: "ByggExp valdo Real Marketing s. r. o.. Esame Brommoje, Stokholme, ir dirbame su statybos įmonėmis visoje Švedijoje.",
+    companyText: "ByggExp valdo Real Marketing s. r. o. Esame Brommoje, Stokholme, ir dirbame su statybos įmonėmis visoje Švedijoje.",
     termsLink: "Sąlygos",
     privacyLink: "Privatumo politika",
     rowCompany: "Įmonė",
@@ -536,8 +590,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     mapLink: "Rodyti žemėlapyje →",
     rowHours: "Darbo laikas",
     hours: "Pr–Pn, 08:00–17:00",
-    rowMeetings: "Susitikimai",
-    meetings: "Nuotoliu, vaizdo skambučiu",
+    rowPayment: "Mokėjimas",
+    payment: "Kortele per Stripe",
     rowPhone: "Telefonas",
     rowEmail: "El. paštas",
 
@@ -556,9 +610,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     eyebrow: "Kontakti",
     title: "Piesakiet demo vai uzdodiet jautājumu",
     lead: "Aizpildiet formu, un vienosimies par ērtu laiku – vai vienkārši piezvaniet.",
-    checks: ["Atbilde 1 darba dienas laikā", "Bezmaksas 15 min demo", "Bez sākuma maksas un saistībām"],
 
-    formName: "Vārds",
+    formName: "Vārds un uzņēmums",
     formEmail: "E-pasts *",
     formCompany: "Uzņēmums",
     formPhone: "Tālrunis (nav obligāti)",
@@ -570,11 +623,18 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
 
     callLabel: "Zvaniet mums",
     callText: "Darba dienās 08:00–17:00",
+    phoneOffice: "Birojs",
+    phoneMobile: "Mobilais",
     mailLabel: "Rakstiet mums",
     mailText: "Parasti atbildam vienas darba dienas laikā.",
     emailSupport: "Atbalsts",
     emailSales: "Pārdošana un demo",
     emailPress: "Prese",
+
+    appsLabel: "Lietotne un video",
+    appStorePre: "Lejupielādējiet",
+    googlePlayPre: "Iegūstiet",
+    youtubePre: "Skatieties",
 
     stepsEyebrow: "Pēc jūsu pieprasījuma",
     stepsTitle: "Kā tas notiek",
@@ -586,7 +646,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     ],
 
     companyEyebrow: "Uzņēmuma rekvizīti",
-    companyText: "ByggExp pārvalda Real Marketing s. r. o.. Atrodamies Brommā, Stokholmā, un strādājam ar būvniecības uzņēmumiem visā Zviedrijā.",
+    companyText: "ByggExp pārvalda Real Marketing s. r. o. Atrodamies Brommā, Stokholmā, un strādājam ar būvniecības uzņēmumiem visā Zviedrijā.",
     termsLink: "Noteikumi",
     privacyLink: "Privātuma politika",
     rowCompany: "Uzņēmums",
@@ -597,8 +657,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     mapLink: "Rādīt kartē →",
     rowHours: "Darba laiks",
     hours: "P–Pk, 08:00–17:00",
-    rowMeetings: "Tikšanās",
-    meetings: "Tiešsaistē, videozvanā",
+    rowPayment: "Maksājums",
+    payment: "Ar karti caur Stripe",
     rowPhone: "Tālrunis",
     rowEmail: "E-pasts",
 

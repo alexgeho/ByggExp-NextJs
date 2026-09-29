@@ -54,7 +54,7 @@
 }
 
 .kontakt-main {
-  padding-top: 40px !important;
+  padding-top: 32px !important;
 }
 
 .kontakt-breadcrumbs {
@@ -78,31 +78,12 @@
   color: var(--ink);
 }
 
-// Heading uses the global .section-head (eyebrow + title + sub); the page
-// title is an h1, so give it the same type as .section-head h2.
-.kontakt-head {
-  margin-top: 64px;
-  margin-bottom: 0;
-
-  h1 {
-    font-size: var(--fs-h1);
-    line-height: 1.05;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-  }
-}
-
-.kontakt-checks {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 8px 22px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  font-weight: 600;
+.kontakt-title {
+  margin-top: 20px;
+  font-size: var(--fs-h1);
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   color: var(--ink);
 }
 
@@ -113,40 +94,38 @@
 }
 
 .kontakt-grid {
-  // Första skärmen: rubrik + löften + kontaktvägar till vänster, formuläret
-  // till höger (ovanför vecket). Mobil: rubrik → formulär → kontaktkort.
+  // Formuläret först (vänster, bredast) – kontaktvägar, app och video i en
+  // smal kolumn till höger. Mobil: formulär → kontaktvägar.
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  grid-template-areas:
-    "head form"
-    "cards form";
-  gap: 28px 48px;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 20px;
   align-items: start;
 }
 
-.kontakt-grid > .kontakt-head {
-  grid-area: head;
-  margin-top: 0;
-  text-align: left;
-
-  h1 {
-    font-size: clamp(34px, 3.6vw, 52px);
-  }
-
-  .section-sub {
-    width: auto;
-    max-width: 520px;
-    margin: 16px 0 0;
-    text-align: left;
-  }
+.kontakt-form-col {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 0 12px 32px rgba(10, 24, 40, 0.06);
 }
 
-.kontakt-grid > .kontakt-form-col {
-  grid-area: form;
+.kontakt-form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
-.kontakt-grid > .kontakt-cards {
-  grid-area: cards;
+.kontakt-field-grow {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  textarea {
+    flex: 1;
+  }
 }
 
 .kontakt-row {
@@ -192,7 +171,7 @@
 
   textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 0;
   }
 
   input:focus,
@@ -258,11 +237,11 @@
 .kontakt-cards {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .kontakt-card {
-  padding: 22px 22px 20px;
+  padding: 24px;
   border: 1px solid var(--line);
   border-radius: 16px;
   background: var(--white);
@@ -282,18 +261,6 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
-}
-
-.kontakt-card-value {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--ink);
-
-  &:hover {
-    color: var(--blue);
-  }
 }
 
 .kontakt-mail-list {
@@ -634,12 +601,6 @@
     grid-template-columns: 1fr;
   }
 
-  .kontakt-grid {
-    grid-template-areas:
-      "head"
-      "form"
-      "cards";
-  }
 
   .kontakt-steps-list {
     grid-template-columns: repeat(2, 1fr);
@@ -651,16 +612,8 @@
     padding: 0 16px;
   }
 
-  .kontakt-head {
-    margin-top: 0;
-  }
-
-  .kontakt-head .section-sub {
-    width: 100%;
-  }
-
-  .kontakt-hero {
-    padding-bottom: 48px !important;
+  .kontakt-form-col {
+    padding: 20px 16px;
   }
 
   .kontakt-row,
@@ -701,39 +654,6 @@
   }
 }
 
-/* Tre korta löften direkt under ingressen (svarstid, gratis demo, inga avgifter) */
-.kontakt-checks {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-  margin: 22px 0 0;
-
-  li {
-    position: relative;
-    padding-left: 26px;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--ink);
-  }
-
-  li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 18px;
-    height: 18px;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    background: rgba(35, 148, 255, 0.14)
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232394FF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E")
-      no-repeat center / 11px;
-  }
-}
-
 .kontakt-hint {
   margin: 6px 2px 0;
   font-size: 12.5px;
@@ -741,6 +661,54 @@
   color: var(--muted);
 }
 
-.kontakt-card .kontakt-card-value + .kontakt-card-value {
-  margin-top: 4px;
+/* App Store / Google Play / YouTube – mörka butiksbrickor */
+.kontakt-badges {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.kontakt-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  height: 48px;
+  padding: 0 14px;
+  border-radius: 10px;
+  background: var(--navy-900);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+
+  img {
+    flex-shrink: 0;
+    display: block;
+  }
+
+  span {
+    display: flex;
+    flex-direction: column;
+  }
+
+  small {
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: #ffffffb3;
+  }
+
+  &:hover {
+    background: var(--navy-800);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
 }

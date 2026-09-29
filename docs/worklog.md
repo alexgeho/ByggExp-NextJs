@@ -1,5 +1,13 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 🟢 SESSION 2026-09-29 — SEO egenkontroll (GSC)
+### KLART
+- ✅ `af61885` egenkontroll-artiklar länkar till specifika mallar (el → egenkontroll-el-mall, entreprenad → egenkontroll-bygg-mall).
+- ✅ `9b73572` ny artikel /sv/blog/egenkontrollprogram (hub för "egenkontrollprogram (mall/bygg/el)").
+### 🔜 NÄSTA STEG
+1. ~13.10: GSC egenkontroll-klustret mot `~/sites-hub/audits/2026-09-29/gsc-snapshot.md`.
+2. GSC-token: `cd .gsc && ~/.gsc-venv/bin/python gen_gsc_token.py` (ägaren, Terminal.app) + OAuth-app → In production.
+
 Единый файл «что сделано / что дальше», чтобы не начинать заново. Обновлять сверху.
 Деплой: push в `main` → GitHub Actions → VPS (~1–2 мин). Юзать **yarn** (не npm). Node 20 на проде.
 

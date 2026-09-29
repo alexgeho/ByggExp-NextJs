@@ -1,7 +1,4 @@
 export type ContactT = {
-  personRole: string;
-  bookMeeting: string;
-  appsLabel: string;
   breadcrumbHome: string;
   eyebrow: string;
   title: string;

@@ -3,9 +3,6 @@ import type { LandingLanguageCode } from "./languages";
 
 export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   ru: {
-    personRole: "Основатель",
-    bookMeeting: "Записаться на встречу",
-    appsLabel: "Приложение",
     breadcrumbHome: "Главная",
     eyebrow: "Контакты",
     title: "Запишитесь на демо или задайте вопрос",
@@ -67,9 +64,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   en: {
-    personRole: "Founder",
-    bookMeeting: "Book a meeting",
-    appsLabel: "The app",
     breadcrumbHome: "Home",
     eyebrow: "Contact",
     title: "Book a demo or ask us anything",
@@ -131,9 +125,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   sv: {
-    personRole: "Grundare",
-    bookMeeting: "Boka ett möte",
-    appsLabel: "Appen",
     breadcrumbHome: "Hem",
     eyebrow: "Kontakt",
     title: "Boka demo eller ställ en fråga",
@@ -195,9 +186,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   nb: {
-    personRole: "Grunnlegger",
-    bookMeeting: "Book et møte",
-    appsLabel: "Appen",
     breadcrumbHome: "Hjem",
     eyebrow: "Kontakt",
     title: "Book demo eller still et spørsmål",
@@ -259,9 +247,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   pl: {
-    personRole: "Założyciel",
-    bookMeeting: "Umów spotkanie",
-    appsLabel: "Aplikacja",
     breadcrumbHome: "Strona główna",
     eyebrow: "Kontakt",
     title: "Umów demo lub zadaj pytanie",
@@ -323,9 +308,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   uk: {
-    personRole: "Засновник",
-    bookMeeting: "Записатися на зустріч",
-    appsLabel: "Застосунок",
     breadcrumbHome: "Головна",
     eyebrow: "Контакти",
     title: "Запишіться на демо або поставте питання",
@@ -387,9 +369,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   fi: {
-    personRole: "Perustaja",
-    bookMeeting: "Varaa tapaaminen",
-    appsLabel: "Sovellus",
     breadcrumbHome: "Etusivu",
     eyebrow: "Yhteystiedot",
     title: "Varaa demo tai kysy meiltä",
@@ -451,9 +430,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   et: {
-    personRole: "Asutaja",
-    bookMeeting: "Broneeri kohtumine",
-    appsLabel: "Rakendus",
     breadcrumbHome: "Avaleht",
     eyebrow: "Kontakt",
     title: "Broneeri demo või esita küsimus",
@@ -515,9 +491,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   lt: {
-    personRole: "Įkūrėjas",
-    bookMeeting: "Užsisakyti susitikimą",
-    appsLabel: "Programėlė",
     breadcrumbHome: "Pradžia",
     eyebrow: "Kontaktai",
     title: "Užsisakykite demonstraciją arba užduokite klausimą",
@@ -579,9 +552,6 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   },
 
   lv: {
-    personRole: "Dibinātājs",
-    bookMeeting: "Pieteikt tikšanos",
-    appsLabel: "Lietotne",
     breadcrumbHome: "Sākums",
     eyebrow: "Kontakti",
     title: "Piesakiet demo vai uzdodiet jautājumu",

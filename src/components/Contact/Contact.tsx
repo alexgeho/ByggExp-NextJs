@@ -350,20 +350,6 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="kontakt-faq">
-        <div className="kontakt-container kontakt-faq-inner">
-          <span className="kontakt-eyebrow">{t.faqEyebrow}</span>
-          <h2>{t.faqTitle}</h2>
-          {t.faq.map((item) => (
-            <details key={item.q} className="kontakt-faq-item">
-              <summary>{item.q}</summary>
-              <p>{item.a}</p>
-            </details>
-          ))}
-        </div>
-      </section>
-
       {/* HOW IT WORKS */}
       <section className="kontakt-steps">
         <div className="kontakt-container">
@@ -388,6 +374,20 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="kontakt-faq">
+        <div className="kontakt-container kontakt-faq-inner">
+          <span className="kontakt-eyebrow">{t.faqEyebrow}</span>
+          <h2>{t.faqTitle}</h2>
+          {t.faq.map((item) => (
+            <details key={item.q} className="kontakt-faq-item">
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
+          ))}
         </div>
       </section>
     </div>

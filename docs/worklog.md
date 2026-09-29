@@ -5,6 +5,11 @@
 
 ---
 
+## 🟡 2026-09-29 — аутрич: реестры собраны (следующая волна после SV-1)
+- Собраны реестры: GVK 775 фирм · Säker Vatten 2246 · Elsäkerhetsverket 15 140 (8269 с email). BKR — нет (robots.txt запрещает ботов Anthropic; запрос выгрузки `~/Desktop/byggexp-outreach/BKR-forfragan.txt`). Черновик SCB — `SCB-forfragan.txt`.
+- CSV пока во временной папке сессии Claude — путь и команда переноса в `~/sites-hub/worklog.md` HANDOFF 2026-09-29. В репо НЕ класть (персональные данные).
+NÄSTA: перенести CSV → свести в xlsx (Тип / дубли с Platsbanken / убрать .no) → волна после SV-1.
+
 ## 🟢 2026-09-28 (ночь) — почта на Brevo, аутрич SV-1, отчёт по работнику
 - Системная почта (API) не уходила (535) → переведена на Brevo SMTP, byggexp.se аутентифицирован (DKIM/brevo-code, одна DMARC). Детали и дата истечения ключа (28.09.2027) — RUNBOOK бэкенда «Outgoing mail (Brevo)».
 - Аутрич: `docs/seo/outreach-mail-templates.md` — актуальные RU v1 + SV v1 (Platsbanken, UTM outreach-sv-1), старые шаблоны = архив. База: лист «Platsbanken SV-1» в xlsx на Desktop.

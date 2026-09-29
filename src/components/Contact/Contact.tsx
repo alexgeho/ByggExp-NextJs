@@ -113,24 +113,51 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
             <span aria-hidden="true">/</span>
             <span className="kontakt-breadcrumbs-current">{t.eyebrow}</span>
           </nav>
-
-          {/* Same heading block (section-head) as the other site sections */}
-          <div className="section-head kontakt-head">
-            <span className="eyebrow">{t.eyebrow}</span>
-            <h1>{t.title}</h1>
-            <p className="section-sub">{t.lead}</p>
-            <ul className="kontakt-checks">
-              {t.checks.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
         </div>
       </section>
 
       {/* FORM + CONTACT CARDS */}
       <section className="kontakt-main">
         <div className="kontakt-container kontakt-grid">
+            {/* Same heading block (section-head) as the other site sections */}
+          <div className="section-head kontakt-head">
+              <span className="eyebrow">{t.eyebrow}</span>
+              <h1>{t.title}</h1>
+              <p className="section-sub">{t.lead}</p>
+              <ul className="kontakt-checks">
+                {t.checks.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+          </div>
+          <div className="kontakt-cards">
+            <div className="kontakt-card">
+              <span className="kontakt-card-label">{t.callLabel}</span>
+              <a href={officeHref} className="kontakt-card-value">{PHONE_OFFICE}</a>
+              <a href={phoneHref} className="kontakt-card-value">{PHONE}</a>
+              <p>{t.callText}</p>
+            </div>
+
+            <div className="kontakt-card">
+              <span className="kontakt-card-label">{t.mailLabel}</span>
+              <ul className="kontakt-mail-list">
+                <li>
+                  <span>{t.emailSales}</span>
+                  <a href="mailto:sales@byggexp.se">sales@byggexp.se</a>
+                </li>
+                <li>
+                  <span>{t.emailSupport}</span>
+                  <a href="mailto:support@byggexp.se">support@byggexp.se</a>
+                </li>
+                <li>
+                  <span>{t.emailPress}</span>
+                  <a href="mailto:press@byggexp.se">press@byggexp.se</a>
+                </li>
+              </ul>
+              <p>{t.mailText}</p>
+            </div>
+
+          </div>
           <div className="kontakt-form-col">
             {!isSuccess ? (
               <form noValidate onSubmit={handleSubmit} className="kontakt-form">
@@ -263,34 +290,6 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
             )}
           </div>
 
-          <aside className="kontakt-cards">
-            <div className="kontakt-card">
-              <span className="kontakt-card-label">{t.callLabel}</span>
-              <a href={officeHref} className="kontakt-card-value">{PHONE_OFFICE}</a>
-              <a href={phoneHref} className="kontakt-card-value">{PHONE}</a>
-              <p>{t.callText}</p>
-            </div>
-
-            <div className="kontakt-card">
-              <span className="kontakt-card-label">{t.mailLabel}</span>
-              <ul className="kontakt-mail-list">
-                <li>
-                  <span>{t.emailSales}</span>
-                  <a href="mailto:sales@byggexp.se">sales@byggexp.se</a>
-                </li>
-                <li>
-                  <span>{t.emailSupport}</span>
-                  <a href="mailto:support@byggexp.se">support@byggexp.se</a>
-                </li>
-                <li>
-                  <span>{t.emailPress}</span>
-                  <a href="mailto:press@byggexp.se">press@byggexp.se</a>
-                </li>
-              </ul>
-              <p>{t.mailText}</p>
-            </div>
-
-          </aside>
         </div>
       </section>
 

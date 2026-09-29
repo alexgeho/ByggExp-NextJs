@@ -5,8 +5,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   ru: {
     breadcrumbHome: "Главная",
     eyebrow: "Контакты",
-    title: "Меньше бумажной работы — больше времени на объекте",
-    lead: "Бесплатная демонстрация на 15 минут: покажем, как ByggExp работает на ваших проектах. Или просто позвоните.",
+    title: "Запишитесь на демо или задайте вопрос",
+    lead: "Заполните форму — договоримся о времени. Или просто позвоните.",
     checks: ["Ответ в течение 1 рабочего дня", "Бесплатное демо на 15 минут", "Без стартовой платы и обязательств"],
 
     formName: "Имя",
@@ -66,8 +66,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   en: {
     breadcrumbHome: "Home",
     eyebrow: "Contact",
-    title: "Less paperwork – more time on site",
-    lead: "Book a free 15-minute demo and we'll show you ByggExp on your own projects. Or just give us a call.",
+    title: "Book a demo or ask us anything",
+    lead: "Fill in the form and we'll find a time that suits you – or just give us a call.",
     checks: ["Reply within 1 business day", "Free 15-minute demo", "No setup fee, no lock-in"],
 
     formName: "Name",
@@ -127,8 +127,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   sv: {
     breadcrumbHome: "Hem",
     eyebrow: "Kontakt",
-    title: "Mindre pappersarbete – mer tid på bygget",
-    lead: "Boka en kostnadsfri demo på 15 minuter så visar vi ByggExp utifrån era egna projekt. Eller ring oss direkt.",
+    title: "Boka demo eller ställ en fråga",
+    lead: "Fyll i formuläret så hittar vi en tid som passar – eller ring oss direkt.",
     checks: ["Svar inom 1 arbetsdag", "Kostnadsfri demo på 15 min", "Ingen startavgift, ingen bindningstid"],
 
     formName: "Namn",
@@ -188,8 +188,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   nb: {
     breadcrumbHome: "Hjem",
     eyebrow: "Kontakt",
-    title: "Mindre papirarbeid – mer tid på byggeplassen",
-    lead: "Book en gratis demo på 15 minutter, så viser vi ByggExp ut fra deres egne prosjekter. Eller ring oss direkte.",
+    title: "Book demo eller still et spørsmål",
+    lead: "Fyll ut skjemaet, så finner vi et tidspunkt som passer – eller ring oss direkte.",
     checks: ["Svar innen 1 virkedag", "Gratis demo på 15 min", "Ingen oppstartsavgift, ingen binding"],
 
     formName: "Navn",
@@ -249,8 +249,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   pl: {
     breadcrumbHome: "Strona główna",
     eyebrow: "Kontakt",
-    title: "Mniej papierkowej roboty – więcej czasu na budowie",
-    lead: "Umów bezpłatne 15-minutowe demo – pokażemy ByggExp na Twoich projektach. Albo po prostu zadzwoń.",
+    title: "Umów demo lub zadaj pytanie",
+    lead: "Wypełnij formularz, a ustalimy dogodny termin – albo po prostu zadzwoń.",
     checks: ["Odpowiedź w 1 dzień roboczy", "Bezpłatne demo – 15 min", "Bez opłaty startowej i zobowiązań"],
 
     formName: "Imię i nazwisko",
@@ -310,8 +310,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   uk: {
     breadcrumbHome: "Головна",
     eyebrow: "Контакти",
-    title: "Менше паперової роботи — більше часу на об’єкті",
-    lead: "Безкоштовне демо на 15 хвилин: покажемо, як ByggExp працює на ваших проєктах. Або просто зателефонуйте.",
+    title: "Запишіться на демо або поставте питання",
+    lead: "Заповніть форму — домовимося про зручний час. Або просто зателефонуйте.",
     checks: ["Відповідь протягом 1 робочого дня", "Безкоштовне демо на 15 хвилин", "Без стартової плати та зобов’язань"],
 
     formName: "Ім’я",
@@ -371,8 +371,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   fi: {
     breadcrumbHome: "Etusivu",
     eyebrow: "Yhteystiedot",
-    title: "Vähemmän paperitöitä – enemmän aikaa työmaalla",
-    lead: "Varaa ilmainen 15 minuutin demo, niin näytämme ByggExpin teidän omilla projekteillanne. Tai soita suoraan.",
+    title: "Varaa demo tai kysy meiltä",
+    lead: "Täytä lomake, niin sovimme sopivan ajan – tai soita suoraan.",
     checks: ["Vastaus 1 työpäivässä", "Ilmainen 15 min demo", "Ei aloitusmaksua, ei sitoutumista"],
 
     formName: "Nimi",
@@ -432,8 +432,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   et: {
     breadcrumbHome: "Avaleht",
     eyebrow: "Kontakt",
-    title: "Vähem paberitööd – rohkem aega objektil",
-    lead: "Broneeri tasuta 15-minutiline demo ja näitame ByggExpi teie enda projektide põhjal. Või helista otse.",
+    title: "Broneeri demo või esita küsimus",
+    lead: "Täida vorm ja leiame sobiva aja – või helista otse.",
     checks: ["Vastus 1 tööpäeva jooksul", "Tasuta 15-minutiline demo", "Alustustasuta, ilma sidumiseta"],
 
     formName: "Nimi",
@@ -493,8 +493,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   lt: {
     breadcrumbHome: "Pradžia",
     eyebrow: "Kontaktai",
-    title: "Mažiau popierizmo – daugiau laiko objekte",
-    lead: "Užsisakykite nemokamą 15 minučių demonstraciją – parodysime ByggExp jūsų projektų pavyzdžiu. Arba tiesiog paskambinkite.",
+    title: "Užsisakykite demonstraciją arba užduokite klausimą",
+    lead: "Užpildykite formą ir suderinsime patogų laiką – arba tiesiog paskambinkite.",
     checks: ["Atsakymas per 1 darbo dieną", "Nemokama 15 min. demonstracija", "Be pradinio mokesčio ir įsipareigojimų"],
 
     formName: "Vardas",
@@ -554,8 +554,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   lv: {
     breadcrumbHome: "Sākums",
     eyebrow: "Kontakti",
-    title: "Mazāk papīru – vairāk laika objektā",
-    lead: "Piesakiet bezmaksas 15 minūšu demo – parādīsim ByggExp uz jūsu pašu projektu piemēra. Vai vienkārši piezvaniet.",
+    title: "Piesakiet demo vai uzdodiet jautājumu",
+    lead: "Aizpildiet formu, un vienosimies par ērtu laiku – vai vienkārši piezvaniet.",
     checks: ["Atbilde 1 darba dienas laikā", "Bezmaksas 15 min demo", "Bez sākuma maksas un saistībām"],
 
     formName: "Vārds",

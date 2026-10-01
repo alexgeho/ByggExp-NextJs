@@ -1,4 +1,14 @@
 export type HeroProps = {
+  ctaT?: {
+    ctaNameLabel: string;
+    ctaNameError: string;
+    ctaEmailError: string;
+    ctaButton: string;
+    ctaButtonSending: string;
+    ctaSubmitError: string;
+    ctaSuccessTitle: string;
+    ctaSuccessText: string;
+  };
   heroT: {
     heroPill: string;
     heroTitle: string;

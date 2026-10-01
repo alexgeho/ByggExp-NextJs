@@ -152,7 +152,7 @@ export default function HomePage({
         />
       </Head>
       <Header headerT={headerT} />
-      <Hero heroT={heroT} />
+      <Hero heroT={heroT} ctaT={lang === "sv" ? ctaT : undefined} />
       <Pain painT={painT} />
       <Benefits benefitsT={benefitsT} />
       <Features

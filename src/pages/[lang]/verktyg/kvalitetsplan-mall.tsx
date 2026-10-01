@@ -100,7 +100,7 @@ export default function KvalitetsplanMallPage() {
             body: (
               <ul>
                 <li>Omfattning och kvalitetsmål för projektet.</li>
-                <li>Krav och standarder som gäller (BBR, AMA, kontrakt).</li>
+                <li>Krav och standarder som gäller (Boverkets byggregler, AMA, kontrakt).</li>
                 <li>Egenkontroll och kontrollpunkter.</li>
                 <li>Avvikelsehantering och materialkontroll.</li>
                 <li>Dokumentation och överlämning.</li>

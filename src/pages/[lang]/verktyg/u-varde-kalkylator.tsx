@@ -249,13 +249,13 @@ export default function UvardeKalkylatorPage({ lang }: { lang: L }) {
               ? [
                   'Enter each material layer and its thickness/lambda value.',
                   'The tool calculates the construction’s U-value.',
-                  'Compare it with the applicable requirement (BBR).',
+                  'Compare it with the applicable requirement (BFS 2026:9).',
                   'Increase the insulation if the value is too high.',
                 ]
               : [
                   'Ange varje materialskikt med tjocklek och lambdavärde.',
                   'Verktyget räknar ut konstruktionens U-värde.',
-                  'Jämför mot gällande krav (BBR).',
+                  'Jämför mot gällande krav (BFS 2026:9).',
                   'Öka isoleringen om värdet är för högt.',
                 ],
         }}

@@ -366,36 +366,3 @@
     display: none;
   }
 }
-
-/* Hero lead form (sv): two fields + Boka demo in one row, stacks on mobile */
-.hero-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  gap: 10px;
-  max-width: 640px;
-  margin-top: 8px;
-}
-.hero-form input {
-  font: inherit;
-  font-size: 1rem;
-  padding: 15px 18px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--white);
-  min-width: 0;
-}
-.hero-form input::placeholder { color: rgba(255, 255, 255, 0.5); }
-.hero-form input:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
-.hero-form input.error { border-color: #ff6b6b; }
-.hero-form .btn-primary { font-size: 1.1rem; padding: 15px 26px; justify-content: center; border: 0; cursor: pointer; white-space: nowrap; }
-.hero-form .btn-primary:disabled { opacity: 0.7; cursor: default; }
-.hero-form-error { grid-column: 1 / -1; color: #ff8a8a; font-size: 0.95rem; margin: 2px 0 0; }
-.hero-form-done { display: flex; flex-direction: column; gap: 4px; padding: 16px 20px; border-radius: 18px; background: rgba(35, 148, 255, 0.12); color: var(--white); max-width: 640px; }
-.hero-how-link { display: inline-block; margin-top: 16px; color: rgba(255, 255, 255, 0.75); font-size: 1rem; text-decoration: underline; text-underline-offset: 4px; }
-.hero-how-link:hover { color: var(--white); }
-@media (max-width: 700px) {
-  .hero-form { grid-template-columns: 1fr; }
-  .hero-form .btn-primary { width: 100%; }
-}
-.hero .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }

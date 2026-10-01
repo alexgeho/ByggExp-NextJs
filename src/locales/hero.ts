@@ -49,9 +49,9 @@ export const heroTranslations = {
   sv: {
     heroPill: "Byggledning",
 
-    heroTitle: "Slipp lappar, SMS och Excel",
+    heroTitle: "Automatisk och manuell tidsrapportering och projekthantering",
 
-    heroTitleAccent: "– tidrapporter, löner och fakturor direkt från mobilen",
+    heroTitleAccent: "för byggföretag",
 
     heroSubtitle:
       "Snabbare fakturering och lönehantering, automatiska påminnelser i uppgifter, kontroll av arbetspass i realtid, planering. ",

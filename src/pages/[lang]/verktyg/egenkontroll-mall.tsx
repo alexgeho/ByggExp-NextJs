@@ -24,7 +24,7 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Vad ska en egenkontroll innehålla?',
     answer:
-      'Titel, projekt, ansvarig och datum samt för varje kontrollpunkt vad som kontrolleras, hur (metod), mot vilket krav eller underlag, resultat (godkänd, anmärkning eller ej aktuellt) och datum och signatur. Kontrollerna görs ofta mot BBR, branschregler och projektets handlingar.',
+      'Titel, projekt, ansvarig och datum samt för varje kontrollpunkt vad som kontrolleras, hur (metod), mot vilket krav eller underlag, resultat (godkänd, anmärkning eller ej aktuellt) och datum och signatur. Kontrollerna görs ofta mot Boverkets byggregler, branschregler och projektets handlingar.',
   },
   {
     question: 'Måste egenkontroll vara digital?',
@@ -63,7 +63,7 @@ export default function EgenkontrollMallPage() {
 
   const title = 'Egenkontroll mall – gratis PDF & Excel | ByggExp';
   const description =
-    'Ladda ner en gratis egenkontroll-mall för kvalitet, miljö och arbetsmiljö som PDF eller Excel – eller fyll i online. Guide till egenkontroll enligt PBL och BBR.';
+    'Ladda ner en gratis egenkontroll-mall för kvalitet, miljö och arbetsmiljö som PDF eller Excel – eller fyll i online. Guide till egenkontroll enligt PBL och Boverkets byggregler.';
 
   return (
     <>
@@ -137,7 +137,7 @@ export default function EgenkontrollMallPage() {
                 <li>Projekt, ansvarig och datum</li>
                 <li>Kontrollpunkter – vad som ska kontrolleras</li>
                 <li>Metod – hur varje punkt kontrolleras (mätning, okulär, provning …)</li>
-                <li>Krav – mot vilket underlag: ritning, BBR, branschregler, tillverkarens anvisning</li>
+                <li>Krav – mot vilket underlag: ritning, Boverkets byggregler, branschregler, tillverkarens anvisning</li>
                 <li>Resultat: godkänd, anmärkning eller ej aktuellt, med mätvärde där det behövs</li>
                 <li>Datum och signatur per punkt, kommentar vid avvikelse</li>
               </ul>
@@ -171,8 +171,8 @@ export default function EgenkontrollMallPage() {
                   risker – fokusera på de kritiska momenten, inte en lång lista onödiga kontroller.
                 </li>
                 <li>
-                  <strong>Ingen koppling till norm.</strong> Ange referens (t.ex. BBR eller en
-                  SS-standard) där kontrollen görs mot ett krav.
+                  <strong>Ingen koppling till norm.</strong> Ange referens (t.ex. Boverkets byggregler
+                  eller en SS-standard) där kontrollen görs mot ett krav.
                 </li>
                 <li>
                   <strong>Anmärkningar utan uppföljning.</strong> En anmärkning som inte åtgärdas och
@@ -236,7 +236,7 @@ export default function EgenkontrollMallPage() {
                     <strong>
                       <a href={`/${LOCALE}/verktyg/egenkontroll-bygg-mall`}>Egenkontroll bygg – mall</a>
                     </strong>{' '}
-                    – måttkontroll mot ritning, infästningar, fuktkontroll och brandtätning enligt BBR.
+                    – måttkontroll mot ritning, infästningar, fuktkontroll och brandtätning enligt Boverkets byggregler.
                   </li>
                   <li>
                     <strong>Skyddsrond (arbetsmiljö)</strong> – fallskydd, ordning och reda, skyddsutrustning
@@ -248,15 +248,18 @@ export default function EgenkontrollMallPage() {
           },
           {
             id: 'egenkontroll-pbl-bbr',
-            heading: 'Egenkontroll och lagen – PBL och BBR',
+            heading: 'Egenkontroll och lagen – PBL och Boverkets byggregler',
             body: (
               <p>
                 Begreppet egenkontroll finns i <strong>plan- och bygglagen (PBL)</strong>, men avser då
                 byggherrens egenkontroll som dokumenteras i en <strong>kontrollplan</strong> – den
                 beskriver vad som ska kontrolleras, av vem och mot vad, ofta med{' '}
-                <strong>BBR (Boverkets byggregler)</strong> som referens. Entreprenörens egenkontroll,
-                som den här mallen gäller, är det praktiska sättet att visa att arbetet uppfyller de
-                kraven moment för moment.
+                <strong>Boverkets byggregler</strong> som referens. Det gamla samlade regelverket BBR är
+                i dag uppdelat i flera författningar, bl.a. BFS 2024:6–2024:13 (som ersatte BBR 1 juli
+                2025) och, för energikraven, Boverkets föreskrifter om energihushållning och
+                värmeisolering i byggnader (BFS 2026:9), som ersatte BBR:s energiregler 1 oktober 2026.
+                Entreprenörens egenkontroll, som den här mallen gäller, är det praktiska sättet att visa
+                att arbetet uppfyller de kraven moment för moment.
               </p>
             ),
           },
@@ -307,7 +310,7 @@ export default function EgenkontrollMallPage() {
             body: (
               <ul>
                 <li>Utgå från en färdig mall och anpassa punkterna efter projektets risker.</li>
-                <li>Ange referens (BBR eller relevant standard) där kontrollen görs mot ett krav.</li>
+                <li>Ange referens (Boverkets byggregler eller relevant standard) där kontrollen görs mot ett krav.</li>
                 <li>Fyll i på plats direkt när momentet är klart – inte i efterhand.</li>
                 <li>Åtgärda anmärkningar och dokumentera uppföljningen, inte bara felet.</li>
                 <li>Signera och spara egenkontrollen samlat per projekt.</li>

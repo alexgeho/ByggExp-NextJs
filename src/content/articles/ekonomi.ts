@@ -2876,13 +2876,13 @@ const A_FONSTER_U_VARDE_2026_HTML = `
 <li><strong>Karmyttermått</strong> för den aktuella storleken. Uw varierar med fönsterstorlek: ett litet fönster har proportionellt mer karm och därmed ofta sämre Uw än ett stort med samma konstruktion.</li>
 </ul>
 
-<h2>Vad kräver BBR/Boverket egentligen 2026?</h2>
-<p>Här sitter myten djupt: det finns <strong>inget krav på ett visst Uw per fönster</strong> i de svenska byggreglerna. Den nationella regleringen ligger på hela byggnaden:</p>
+<h2>Vad kräver Boverket egentligen?</h2>
+<p>Här sitter myten djupt: det finns <strong>inget krav på ett visst Uw per fönster</strong> i de svenska byggreglerna. Den nationella regleringen ligger på hela byggnaden. Fram till 1 oktober 2026 löd den på primärenergital och ett genomsnittligt Um via BBR; sedan dess gäller i stället Boverkets föreskrifter om energihushållning och värmeisolering i byggnader (BFS 2026:9), som ersatte BBR:s energiregler samma dag (en övergångstid till och med 30 september 2027 gör det möjligt för byggherren att i stället välja de upphävda BBR-reglerna). De tidigare BBR-kraven var:</p>
 <ul>
-<li><strong>Primärenergital (EP_pet)</strong> – riktvärdet är cirka 90 kWh/m²·år för bostäder och 70 kWh/m²·år för lokaler, sedan justerat per kommun med en geografisk justeringsfaktor. Justerade småhusvärden hamnar i praktiken ofta runt 95–130 beroende på klimatzon.</li>
-<li><strong>Genomsnittligt Um</strong> för hela klimatskalet får inte överstiga 0,40 W/m²K för en ny bostad.</li>
+<li><strong>Primärenergital (EP_pet)</strong> – riktvärdet var cirka 90 kWh/m²·år för bostäder och 70 kWh/m²·år för lokaler, sedan justerat per kommun med en geografisk justeringsfaktor. Justerade småhusvärden hamnade i praktiken ofta runt 95–130 beroende på klimatzon.</li>
+<li><strong>Genomsnittligt Um</strong> för hela klimatskalet fick inte överstiga 0,40 W/m²K för en ny bostad.</li>
 </ul>
-<p>Fönstren regleras alltså bara indirekt, via de här två talen. Um är det närmaste man kommer en fönstergräns – men det är ett medelvärde över hela skalet, inte en siffra per fönster. Vid ändring/renovering handlar det om vad som är skäligt att energieffektivisera, inte om ett fast Uw-tak. Boverket är dessutom på väg in i nya, funktionsbaserade byggregler, men energikravet uttrycks fortfarande som primärenergital och genomsnittligt Um – ingen föreskriven per-fönster-siffra tillkommer. Så när en kund frågar "klarar fönstret BBR?" är det korrekta svaret att räkna på hela huset, inte att peka på ett enskilt Uw.</p>
+<p>Fönstren regleras alltså bara indirekt, via motsvarande tal i det regelverk som gäller för projektet. Um är det närmaste man kommer en fönstergräns – men det är ett medelvärde över hela skalet, inte en siffra per fönster. Vid ändring/renovering handlar det om vad som är skäligt att energieffektivisera, inte om ett fast Uw-tak. I BFS 2026:9 ersätts primärenergital av energiprestandatal, men principen är densamma: ingen föreskriven per-fönster-siffra tillkommer. De exakta, fastställda kravtalen i BFS 2026:9 har vi inte kunnat verifiera – kontrollera dem mot Boverket. Så när en kund frågar "klarar fönstret kraven?" är det korrekta svaret att räkna på hela huset mot det regelverk som gäller för just det projektet, inte att peka på ett enskilt Uw.</p>
 
 <h2>U-värden i praktiken: gammalt vs nytt</h2>
 <p>Typiska Uw-intervall för hela fönstret:</p>
@@ -2925,8 +2925,8 @@ const A_FONSTER_U_VARDE_2026_HTML = `
 <p>ByggExp hjälper dig ta siffrorna hela vägen från beräkning till kund. Med <a href="/sv/verktyg/isolering-kalkylator">u-värdeskalkylatorn</a> uppskattar du värmeförlust och besparing per fönsterparti, och i <a href="/sv/verktyg/offert-mall">offertmallen</a> lägger du in Uw, storlek och en korrekt uppdelning av arbete och material så att ROT-avdraget räknas på rätt underlag. Vi lovar ingen exakt payback – klimat, elpris och husets övriga skal påverkar – men du får ett tydligt, spårbart underlag som håller vid en kundfråga.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Finns det ett BBR-krav på u-värde för fönster 2026?</h3>
-<p>Nej. Byggreglerna ställer inget krav på ett visst Uw per fönster. Kravet ligger på hela byggnadens primärenergital (riktvärde ca 90 kWh/m²·år för bostäder, geografiskt justerat) och på ett genomsnittligt Um ≤ 0,40 W/m²K för klimatskalet. Fönstren regleras bara indirekt via de talen.</p>
+<h3>Finns det ett krav på u-värde för fönster?</h3>
+<p>Nej. Byggreglerna ställer inget krav på ett visst Uw per fönster. Kravet ligger på hela byggnadens energiprestanda och på ett genomsnittligt Um för klimatskalet, i dag enligt Boverkets föreskrifter om energihushållning (BFS 2026:9) – tidigare (riktvärde ca 90 kWh/m²·år primärenergital för bostäder, geografiskt justerat, och Um ≤ 0,40 W/m²K) enligt BBR, som fortfarande kan väljas av byggherren under övergångstiden till 30 september 2027. Fönstren regleras bara indirekt via de talen.</p>
 <h3>Vad är skillnaden mellan Uw och Ug?</h3>
 <p>Ug mäter bara mitten av glaset, medan Uw mäter hela fönstret – glas, karm/båge och glaskant enligt EN 14351-1. Uw är alltid lika med eller sämre än Ug. Det är Uw som styr värmeförlust och energiberäkning, så jämför alltid Uw mot Uw.</p>
 <h3>Hur mycket är ROT-avdraget på fönsterbyte 2026?</h3>
@@ -2943,9 +2943,9 @@ const A_FONSTER_U_VARDE_2026_HTML = `
 const A_FONSTER_U_VARDE_2026: BlogPost = {
   _id: "code-"+"fonster-u-varde-2026",
   title: "Fönster u-värde 2026: Uw eller Ug – siffran som avgör om bytet lönar sig", slug: "fonster-u-varde-2026", locale: "sv",
-  excerpt: "De flesta fönsterofferter jämför fel siffra – så skiljer du Uw från Ug, tolkar BBR-kravet 2026 och räknar hem bytet på riktigt.", tag: "Ekonomi",
+  excerpt: "De flesta fönsterofferter jämför fel siffra – så skiljer du Uw från Ug, tolkar energikravet (BFS 2026:9) och räknar hem bytet på riktigt.", tag: "Ekonomi",
   coverImageUrl: "/landing/verktyg/isolering-preview.webp", contentHtml: A_FONSTER_U_VARDE_2026_HTML,
-  seoTitle: "Fönster u-värde 2026: Uw vs Ug | ByggExp", seoDescription: "Uw eller Ug? Så läser du fönsteroffertens u-värde rätt 2026, vad BBR faktiskt kräver och hur du räknar hem fönsterbytet med ROT.",
+  seoTitle: "Fönster u-värde 2026: Uw vs Ug | ByggExp", seoDescription: "Uw eller Ug? Så läser du fönsteroffertens u-värde rätt, vad Boverket faktiskt kräver och hur du räknar hem fönsterbytet med ROT.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/isolering-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-18T20:03:00.000Z", createdAt: "2026-08-18T20:03:00.000Z", updatedAt: "2026-08-18T20:03:00.000Z",
 };
@@ -4334,7 +4334,7 @@ const A_KALKYLERA_FONSTERBYTE_OFFERT_HTML = `
 <p>Resultatet blir ett kundtimpris på ungefär 550–750 kr/tim (inklusive moms, exklusive ROT) beroende på ort. Sätter du kundpriset direkt utifrån timlönen 203 kr utan att bygga upp självkostnaden är offerten olönsam redan innan första fönstret är lyft.</p>
 
 <h2>U-värdeskravet påverkar både pris och produktval</h2>
-<p>Energikraven styr vilka fönster du får montera – och därmed materialkostnaden. Sikta på ett U-värde på högst 1,2 W/m²K vid utbyte; moderna 3-glasfönster når ofta 0,9–1,0 W/m²K. Boverkets nya funktionsbaserade byggregler gäller från 1 juli 2025. Har bygglovsansökan eller anmälan kommit in före 1 juli 2026 får gamla BBR/EKS fortfarande tillämpas – men inte blandas med de nya reglerna i samma ärende. För ärenden som kommer in senare gäller bara de nya reglerna.</p>
+<p>Energikraven styr vilka fönster du får montera – och därmed materialkostnaden. Sikta på ett U-värde på högst 1,2 W/m²K vid utbyte; moderna 3-glasfönster når ofta 0,9–1,0 W/m²K. Boverkets nya funktionsbaserade byggregler gäller från 1 juli 2025, och sedan 1 oktober 2026 regleras energikraven specifikt av Boverkets föreskrifter om energihushållning och värmeisolering (BFS 2026:9). Har bygglovsansökan eller anmälan kommit in före 1 juli 2026 får gamla BBR/EKS fortfarande tillämpas – men inte blandas med de nya reglerna i samma ärende. För ärenden som kommer in senare gäller bara de nya reglerna.</p>
 <p>Dokumentera valt fönstersystem och dess U-värde i offerten. Det skyddar dig om kunden i efterhand ifrågasätter produktvalet, och du kan snabbt kontrollräkna med vår <a href="/sv/verktyg/u-varde-kalkylator">U-värdeskalkylator -&gt;</a>. Läs mer i <a href="/sv/blog/fonster-u-varde-2026">Fönster och U-värde 2026</a>.</p>
 
 <h2>ROT 30 % 2026 – så hanterar du det i offerten</h2>
@@ -4361,7 +4361,7 @@ const A_KALKYLERA_FONSTERBYTE_OFFERT_HTML = `
 <h3>Får en kund i bostadsrätt ROT för fönsterbyte?</h3>
 <p>Oftast inte. Fönster och byggnadens yttre skal är normalt föreningens ansvar, och då saknas avdragsrätt för den enskilde bostadsrättshavaren. Ta upp detta i offerten till BRF-boende innan du räknar med avdrag.</p>
 <h3>Vilket U-värde ska nya fönster ha?</h3>
-<p>Sikta på högst 1,2 W/m²K vid utbyte. Moderna 3-glasfönster når ofta 0,9–1,0 W/m²K. Kom ansökan eller anmälan in före 1 juli 2026 får gamla BBR/EKS fortfarande tillämpas, annars gäller de nya funktionsbaserade reglerna – blanda dem aldrig.</p>
+<p>Sikta på högst 1,2 W/m²K vid utbyte. Moderna 3-glasfönster når ofta 0,9–1,0 W/m²K. Kom ansökan eller anmälan in före 1 juli 2026 får gamla BBR/EKS fortfarande tillämpas, annars gäller de nya funktionsbaserade reglerna – blanda dem aldrig. Energikraven specifikt regleras sedan 1 oktober 2026 av BFS 2026:9.</p>
 
 <h2>Kom igång</h2>
 <p>Börja med en tydlig struktur och räkna arbetet separat från materialet. Skapa din nästa offert med vår <a href="/sv/verktyg/offert-mall">offertmall</a> och kontrollräkna avdraget i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur hela flödet från offert till ROT-rapportering fungerar i praktiken? <a href="/sv/contact">Boka en demo</a>.</p>

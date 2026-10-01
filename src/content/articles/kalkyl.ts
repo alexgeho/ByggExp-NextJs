@@ -104,7 +104,7 @@ const MATERIALKALKYL: BlogPost = {
 };
 
 const UVARDE_HTML = `
-<p>U-värdet avgör två saker på en gång: om konstruktionen godkänns i bygglovet och hur mycket isolering du behöver lägga in. Offererar du för tunt underkänns bygget mot BBR – offererar du för tjockt äter du upp din egen marginal. Att kunna räkna U-värde och baklänges bestämma isolertjocklek är därför ren yrkeskunskap, inte teori.</p>
+<p>U-värdet avgör två saker på en gång: om konstruktionen godkänns i bygglovet och hur mycket isolering du behöver lägga in. Offererar du för tunt underkänns bygget mot energikraven – offererar du för tjockt äter du upp din egen marginal. Att kunna räkna U-värde och baklänges bestämma isolertjocklek är därför ren yrkeskunskap, inte teori.</p>
 <p><a href="/sv/verktyg/u-varde-kalkylator">Räkna ut U-värdet för din konstruktion med vår gratis kalkylator -&gt;</a></p>
 
 <p>Vill du hoppa över handräkningen kan du testa dig fram direkt i <a href="/sv/verktyg/isolering-kalkylator">vår gratis isolerkalkylator –&gt;</a> och se hur tjockleken påverkar U-värdet innan du skriver offerten.</p>
@@ -130,18 +130,18 @@ const UVARDE_HTML = `
 <p><strong>d = λ × (1/U_mål − R_övrigt)</strong></p>
 <p>Säg att du siktar på U = 0,13 för samma takkonstruktion, med λ = 0,037 och övriga motstånd (Rsi + Rse + tunna skikt) på ca 0,14. Då blir d = 0,037 × (1/0,13 − 0,14) = 0,037 × (7,69 − 0,14) ≈ 0,279 m, alltså cirka <strong>280 mm mineralull</strong>. Där har du siffran som ska stå i offerten – inte en gissning, utan en beräkning du kan försvara.</p>
 
-<h2>BBR-kraven du måste klara 2026</h2>
-<p>Energikraven ligger på tre nivåer som gäller parallellt. Du behöver klara alla tre.</p>
+<h2>Energikraven du måste klara</h2>
+<p>Sedan den 1 oktober 2026 gäller Boverkets föreskrifter om energihushållning och värmeisolering i byggnader (BFS 2026:9), som ersatte BBR:s energiregler samma dag. En övergångstid till och med 30 september 2027 gör det möjligt för byggherren att i stället välja att tillämpa de upphävda BBR-reglerna. De exakta, fastställda kravtalen i BFS 2026:9 har vi inte kunnat verifiera – kontrollera dem alltid mot Boverket innan projektering. Som jämförelse låg de tidigare BBR-kraven (BBR 30, tabell 9:2a) på tre nivåer som gällde parallellt:</p>
 <ol>
-<li><strong>Primärenergital (BBR 30, tabell 9:2a):</strong> högst 90 kWh/m² Atemp och år för småhus, 75 för flerbostadshus och 70 för lokaler.</li>
-<li><strong>Genomsnittlig värmegenomgångskoefficient Um:</strong> det viktade medelvärdet för hela klimatskärmen får som mest vara 0,30 W/m²K för småhus (golvyta över 50 m²), 0,40 för flerbostadshus och 0,60 för lokaler. Um är den formella isoleringsgränsen – inte enskilda delars U-värde.</li>
-<li><strong>Riktvärden per byggnadsdel:</strong> vanligt citerade högsta U-värden för bostäder är yttervägg ≤ 0,18, tak ≤ 0,13, golv ≤ 0,15 och fönster/dörrar/portar ≤ 1,2 W/m²K. Detta är riktvärden för att nå Um-kravet, inte separata tvingande gränser.</li>
+<li><strong>Primärenergital:</strong> högst 90 kWh/m² Atemp och år för småhus, 75 för flerbostadshus och 70 för lokaler.</li>
+<li><strong>Genomsnittlig värmegenomgångskoefficient Um:</strong> det viktade medelvärdet för hela klimatskärmen fick som mest vara 0,30 W/m²K för småhus (golvyta över 50 m²), 0,40 för flerbostadshus och 0,60 för lokaler. Um var den formella isoleringsgränsen – inte enskilda delars U-värde.</li>
+<li><strong>Riktvärden per byggnadsdel:</strong> vanligt citerade högsta U-värden för bostäder var yttervägg ≤ 0,18, tak ≤ 0,13, golv ≤ 0,15 och fönster/dörrar/portar ≤ 1,2 W/m²K. Det var riktvärden för att nå Um-kravet, inte separata tvingande gränser.</li>
 </ol>
-<p>Kravet på primärenergital ersätter alltså inte U-värdeskraven – de gäller vid sidan av varandra.</p>
+<p>Kravet på primärenergital (i BFS 2026:9 energiprestandatal) ersätter alltså inte U-värdeskraven – de gäller vid sidan av varandra.</p>
 
-<h2>Nya reglerna 1 juli 2026 – vad gäller?</h2>
+<h2>Nya reglerna – vad gäller?</h2>
 <p>Boverkets nya bygg- och konstruktionsregler gäller sedan 1 juli 2025. Under övergångsperioden fram till 30 juni 2026 fick byggherren välja mellan gamla BBR/EKS och det nya regelverket – men inte blanda dem i samma projekt. Har ansökan om bygglov eller anmälan kommit in före 1 juli 2026 får BBR/EKS fortfarande tillämpas; i senare ärenden gäller de nya reglerna.</p>
-<p>Här finns en nyans som är lätt att missa: energikraven ingick <strong>inte</strong> i bytet 1 juli 2025. Kraven på primärenergital, Um och U-värden regleras fortsatt i BBR tills Boverkets föreskrifter om energihushållning och värmeisolering i byggnader (BFS 2026:9) träder i kraft 1 oktober 2026. De nya energireglerna innebär skärpningar jämfört med BBR 30. Kort sagt: räkna mot BBR i ärenden som omfattas av de nuvarande reglerna, men kontrollera kraven och övergångsreglerna i BFS 2026:9 för projekt som söks från 1 oktober 2026.</p>
+<p>Här finns en nyans som är lätt att missa: energikraven ingick <strong>inte</strong> i bytet 1 juli 2025 – de låg kvar i BBR längst av alla avsnitt. Kraven på primärenergital (energiprestandatal), Um och U-värden regleras nu i stället av Boverkets föreskrifter om energihushållning och värmeisolering i byggnader (BFS 2026:9), som trädde i kraft 1 oktober 2026 och innebär skärpningar jämfört med BBR 30. Under övergångstiden till och med 30 september 2027 får byggherren dock välja att i stället tillämpa de upphävda BBR-reglerna. Kort sagt: kontrollera vilket regelverk som gäller för projektet och räkna mot de kravtalen i BFS 2026:9.</p>
 
 <h2>Från U-värde till offert</h2>
 <p>Så här går du från beräkning till en tjocklek du kan sälja:</p>
@@ -166,13 +166,13 @@ const UVARDE_HTML = `
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är ett bra U-värde för yttervägg och tak?</h3>
-<p>Som riktvärden för bostäder brukar man sikta på yttervägg ≤ 0,18 och tak ≤ 0,13 W/m²K. Det är riktvärden för att klara BBR:s krav på genomsnittligt Um, inte enskilda tvingande gränser – det formella kravet gäller hela klimatskärmens medelvärde.</p>
+<p>Som riktvärden för bostäder brukar man sikta på yttervägg ≤ 0,18 och tak ≤ 0,13 W/m²K. Det var riktvärden för att klara BBR:s krav på genomsnittligt Um; sedan 1 oktober 2026 gäller i stället kraven i BFS 2026:9 – det formella kravet gäller hela klimatskärmens medelvärde, kontrollera den aktuella nivån mot Boverket.</p>
 <h3>Hur räknar jag ut hur tjock isolering jag behöver?</h3>
 <p>Lös ut tjockleken ur formeln: d = λ × (1/U_mål − R_övrigt). Sätt in lambda för materialet, ditt mål-U och summan av övriga värmemotstånd (övergångsmotstånd och tunna skikt). Resultatet är tjockleken i meter.</p>
 <h3>Kan jag lägga ihop U-värden för olika skikt?</h3>
 <p>Nej. Du adderar alltid värmemotstånd (R) för skikt i serie och räknar sedan U = 1/R_tot på slutet. Att addera U-värden eller lambda-värden ger fel resultat.</p>
-<h3>Gäller BBR:s energikrav fortfarande 2026?</h3>
-<p>Ja. Även om Boverkets nya byggregler gäller sedan 1 juli 2025 har inga nya energihushållningsföreskrifter getts ut ännu. Krav på primärenergital, Um och U-värden regleras därför fortsatt i BBR tills de nya energireglerna (BFS 2026:9) träder i kraft 1 oktober 2026.</p>
+<h3>Gäller BBR:s energikrav fortfarande?</h3>
+<p>Nej, inte som huvudregel. Sedan den 1 oktober 2026 regleras krav på energiprestanda (tidigare primärenergital), Um och U-värden i Boverkets föreskrifter om energihushållning och värmeisolering i byggnader (BFS 2026:9). En övergångstid till och med 30 september 2027 gör det dock möjligt för byggherren att i stället välja att tillämpa de upphävda BBR-reglerna.</p>
 
 <h2>Kom igång</h2>
 <p>Räkna igenom din konstruktion i <a href="/sv/verktyg/isolering-kalkylator">isolerkalkylatorn</a> och ta fram en tjocklek du kan stå för. Vill du se hur beräkning, materiallista och offert hänger ihop i praktiken kan du <a href="/sv/contact">boka en demo</a> så visar vi flödet från U-värde till färdig offert.</p>
@@ -182,15 +182,15 @@ const UVARDE_HTML = `
 
 const UVARDE: BlogPost = {
   _id: "code-berakna-u-varde-isolering",
-  title: "Beräkna U-värde och isolertjocklek – så klarar du BBR-kraven och offererar rätt",
+  title: "Beräkna U-värde och isolertjocklek – så klarar du energikraven och offererar rätt",
   slug: "berakna-u-varde-isolering",
   locale: "sv",
-  excerpt: "Lär dig räkna U-värde och isolertjocklek steg för steg – så klarar konstruktionen BBR-kraven utan att du överisolerar bort marginalen i offerten.",
+  excerpt: "Lär dig räkna U-värde och isolertjocklek steg för steg – så klarar konstruktionen energikraven utan att du överisolerar bort marginalen i offerten.",
   tag: "Byggkalkyl",
   coverImageUrl: "/landing/verktyg/isolering-preview.webp",
   contentHtml: UVARDE_HTML,
   seoTitle: "Beräkna U-värde isolering | ByggExp",
-  seoDescription: "Så räknar du ut U-värde och isolertjocklek för att klara BBR-kraven. Formel, räkneexempel och riktvärden för vägg, tak och golv 2026.",
+  seoDescription: "Så räknar du ut U-värde och isolertjocklek för att klara energikraven i BFS 2026:9. Formel, räkneexempel och riktvärden för vägg, tak och golv.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/isolering-preview.webp`,
   canonicalUrl: "",
   noIndex: false,

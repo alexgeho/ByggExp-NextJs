@@ -282,7 +282,7 @@ const A_KONTROLLPLAN_MALL_BYGGLOV_HTML = `
 <ol>
 <li><strong>Kontrollpunkt</strong> – vad som kontrolleras (till exempel grundläggning, fuktskydd, bärande konstruktion, brandskydd).</li>
 <li><strong>Hur kontrolleras</strong> – metod, exempelvis okulär kontroll, mätning eller provning.</li>
-<li><strong>Mot vilket krav</strong> – Boverkets byggregler (t.ex. BFS 2024:7 om brand och BFS 2024:8 om fukt och hygien, som ersatte BBR 1 juli 2025), Boverkets konstruktionsregler BFS 2024:6 (som ersatte EKS)/Eurokod, energikraven i BBR, bygglovet eller ritningen.</li>
+<li><strong>Mot vilket krav</strong> – Boverkets byggregler (t.ex. BFS 2024:7 om brand och BFS 2024:8 om fukt och hygien, som ersatte BBR 1 juli 2025), Boverkets konstruktionsregler BFS 2024:6 (som ersatte EKS)/Eurokod, energikraven i BFS 2026:9 (som ersatte BBR:s energiregler 1 oktober 2026), bygglovet eller ritningen.</li>
 <li><strong>Vem</strong> – egenkontroll av byggherren/entreprenören eller sakkunnigkontroll.</li>
 <li><strong>Resultat och signatur</strong> – utfallet och underskrift av den som kontrollerat.</li>
 </ol>
@@ -291,7 +291,7 @@ const A_KONTROLLPLAN_MALL_BYGGLOV_HTML = `
 <li><strong>Grundläggning</strong> – okulär kontroll och mätning mot konstruktionsritning (BFS 2024:6) – egenkontroll – signatur.</li>
 <li><strong>Fuktskydd mot mark</strong> – okulär kontroll mot BFS 2024:8 (fuktsäkerhet) och ritning – egenkontroll – signatur.</li>
 <li><strong>Bärande stomme</strong> – kontroll mot konstruktionsritning och BFS 2024:6 – egenkontroll eller sakkunnig beroende på risk – signatur.</li>
-<li><strong>Lufttäthet och isolering</strong> – kontroll mot energikraven i BBR avsnitt 9 (ersätts 1 oktober 2026 av BFS 2026:9) och ritning – egenkontroll – signatur.</li>
+<li><strong>Lufttäthet och isolering</strong> – kontroll mot energikraven i BFS 2026:9 (ersatte BBR avsnitt 9 den 1 oktober 2026) och ritning – egenkontroll – signatur.</li>
 </ul>
 <p>Har bygglovsansökan eller anmälan kommit in före 1 juli 2026 får de äldre reglerna (BBR/EKS) fortfarande tillämpas – men gamla och nya regler får inte blandas i samma projekt, så hänvisa konsekvent till ett regelverk i kontrollplanen.</p>
 <p>Riskbedömningen avgör om en punkt kräver sakkunnigkontroll i stället för egenkontroll. Särskild hänsyn tas till risken för allvarlig personskada eller störning för samhälle och miljö om kravet inte uppfylls. Ta bara med kontrollpunkter som är relevanta för det aktuella projektet – vaga och generiska planer är den vanligaste orsaken till kompletteringskrav.</p>
@@ -500,7 +500,7 @@ const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN_HTML = `
 <li><strong>Inkom 1 juli 2025–30 juni 2026:</strong> byggherren väljer gammalt eller nytt – men inte en blandning.</li>
 <li><strong>Inkom efter 30 juni 2026:</strong> enbart Boverkets nya bygg- och konstruktionsregler gäller.</li>
 </ul>
-<p>Pågående projekt som startats under övergångsperioden enligt äldre regler kan omfattas av övergångsbestämmelser. Den exakta lydelsen bör du dubbelkolla mot Boverkets övergångsbestämmelser för just ditt ärende. En separat tidpunkt som rapporterats är att energikraven flyttas ut ur BBR till en egen energiregel, uppgivet omkring 1 oktober 2026 – det datumet är ännu obekräftat och bör verifieras mot Boverket.</p>
+<p>Pågående projekt som startats under övergångsperioden enligt äldre regler kan omfattas av övergångsbestämmelser. Den exakta lydelsen bör du dubbelkolla mot Boverkets övergångsbestämmelser för just ditt ärende. Energikraven flyttades ut ur BBR till en egen författning, Boverkets föreskrifter om energihushållning och värmeisolering i byggnader (BFS 2026:9), som trädde i kraft 1 oktober 2026.</p>
 
 <h2>Myten om en ny kontrollplan – så ligger det till</h2>
 <p>En vanlig missuppfattning är att den nya regelreformen tvingar fram en helt ny sorts kontrollplan. Det stämmer inte. Kontrollplan och egenkontroll regleras av plan- och bygglagen (PBL, 10 kap.), inte av BBR eller byggreglerna. Själva reformen ändrar alltså inte de formella PBL-kraven på kontrollplanen.</p>
@@ -560,7 +560,7 @@ const A_NYA_BYGGREGLER_2026_ENTREPRENAD_HTML = `
 <h2>Boverkets nya bygg- och konstruktionsregler – övergångsperioden är slut</h2>
 <p>Boverkets nya byggregler är inte en enda författning, utan nio nya grundförfattningar: BFS 2024:4 (aktsamhet vid bygg-, rivnings- och markåtgärder), 2024:6 (bärförmåga, stadga och beständighet – konstruktionsreglerna), 2024:7 (brand), 2024:8 (hygien, hälsa och miljö), 2024:9 (säkerhet vid användning), 2024:10 (buller), 2024:11 (bostäders lämplighet), 2024:12 (tillgänglighet) och 2024:13 (tomter). De har ersatt motsvarande regler i BBR och EKS.</p>
 <p>Författningarna trädde i kraft under 2025. Under en övergångsperiod gick det att fortsätta tillämpa de äldre reglerna i BBR och EKS, men den möjligheten gäller bara ärenden där bygglovsansökan eller anmälan kom in före 1 juli 2026. För senare ärenden gäller de nya reglerna. EKS (BFS 2011:10, Boverkets tillämpning av eurokoderna) upphävdes 1 juli 2025 och ersattes av BFS 2024:6 om bärförmåga, stadga och beständighet.</p>
-<p>En viktig nyansering: BBR (BFS 2011:6) är inte helt upphävt ännu. Reglerna om energihushållning ligger kvar i BBR 31 (senaste ändring BFS 2024:14). En ny grundförfattning om energihushållning, samordnad med EU:s direktiv om byggnaders energiprestanda (EPBD), träder i kraft den 1 oktober 2026. Först då är samtliga BBR-regler ersatta.</p>
+<p>En viktig nyansering: BBR (BFS 2011:6) var inte helt upphävt förrän nu. Reglerna om energihushållning låg kvar längst, i BBR 31 (senaste ändring BFS 2024:14). Den 1 oktober 2026 trädde Boverkets föreskrifter om energihushållning och värmeisolering i byggnader (BFS 2026:9) i kraft, samordnad med EU:s direktiv om byggnaders energiprestanda (EPBD). Först då var samtliga BBR-regler ersatta.</p>
 
 <h2>Från detaljregler till funktionskrav – vad det betyder i praktiken</h2>
 <p>Den största principiella förändringen är att de nya reglerna bygger på funktionskrav. De innehåller i huvudsak inte längre några allmänna råd eller hänvisningar till specifika standarder. Boverket anger vad som ska uppnås, inte hur. Byggherren väljer lösning, men ska på vetenskaplig grund kunna visa att kraven uppfylls – med fackmässighet i projektering, utförande och kontroll.</p>
@@ -593,13 +593,13 @@ const A_NYA_BYGGREGLER_2026_ENTREPRENAD_HTML = `
 
 <h2>Vanliga frågor</h2>
 <h3>Gäller gamla BBR fortfarande?</h3>
-<p>Äldre BBR och EKS får bara tillämpas om bygglovsansökan eller anmälan kom in före 1 juli 2026 – och då utan att blandas med de nya reglerna. Reglerna om energihushållning ligger dock kvar i BBR 31 tills den nya energiförfattningen träder i kraft den 1 oktober 2026. Kontrollera aktuellt läge hos Boverket.</p>
+<p>Äldre BBR och EKS får bara tillämpas om bygglovsansökan eller anmälan kom in före 1 juli 2026 – och då utan att blandas med de nya reglerna. Reglerna om energihushållning låg kvar i BBR 31 längst av alla avsnitt, men ersattes av Boverkets föreskrifter om energihushållning och värmeisolering i byggnader (BFS 2026:9) den 1 oktober 2026, med en övergångstid till och med 30 september 2027 då byggherren får välja att i stället tillämpa de upphävda BBR-reglerna. Kontrollera aktuellt läge hos Boverket.</p>
 <h3>Måste jag följa svensk standard?</h3>
 <p>De nya reglerna är funktionskrav och innehåller i huvudsak inte längre hänvisningar till specifika standarder. Du väljer lösning, men ska på vetenskaplig grund kunna visa att kraven uppfylls. En standard kan fortfarande vara ett bra sätt att visa det.</p>
 <h3>Vad hände med EKS?</h3>
 <p>EKS (BFS 2011:10) upphävdes 1 juli 2025 och ersattes av BFS 2024:6 (Boverkets föreskrifter och allmänna råd om bärförmåga, stadga och beständighet). Eurokoderna (SS-EN 1990–1999) används fortfarande – de anvisas i de allmänna råden som ett sätt att uppfylla kraven.</p>
-<h3>När kommer de nya energireglerna?</h3>
-<p>En ny grundförfattning om energihushållning, samordnad med EU:s EPBD-direktiv, träder i kraft den 1 oktober 2026. Först då är samtliga BBR-regler ersatta. Bekräfta datum hos Boverket.</p>
+<h3>När kom de nya energireglerna?</h3>
+<p>Boverkets föreskrifter om energihushållning och värmeisolering i byggnader (BFS 2026:9), samordnad med EU:s EPBD-direktiv, trädde i kraft den 1 oktober 2026. Först då var samtliga BBR-regler ersatta. En övergångstid gäller till och med 30 september 2027.</p>
 
 <h2>Kom igång</h2>
 <p>Börja med att uppdatera dina projektdokument så att de speglar 2026 års regelverk. Skapa ett rent underlag med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>, och boka en <a href="/sv/contact">demo</a> om du vill se hur ByggExp kan hålla mallar och dokumentation samlade. Kom ihåg: exakta datum och paragrafer kan ändras – bevaka alltid Boverkets och Arbetsmiljöverkets sidor.</p>

@@ -1,8 +1,31 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
 ## 📍 СТАТУС (кратко)
-Сайт в main/live (цены 26.09 уже на проде). Последняя сессия: **29.09 вечер — /contact, одно правило форм, Calendly, письма-лиды (бэкенд)**.
+Сайт в main/live (цены 26.09 уже на проде). Последняя сессия: **01.10 routine — энергетика BFS 2026:9 (п. 1c, ветка, ещё не в main)**.
 Продолжать с «🔜 NÄSTA STEG» верхних сессий. Архив до 24.09 → `docs/worklog-archive.md`. Индекс доков → `docs/README.md`.
+
+## 🟢 2026-10-01 — энергетика BFS 2026:9 (routine, п. 1c) ✅
+### KLART
+- **Факты проверены WebSearch** (boverket.se/rinfo.boverket.se заблокированы network policy этого окружения — см. ⚠️ ниже):
+  BFS 2026:9 (Boverkets föreskrifter om energihushållning och värmeisolering i byggnader) вступил в силу **1.10.2026**,
+  заменил энергетические правила BBR (последняя часть старого BBR) — последний кусочек перехода BBR → новые BFS.
+  Переходный период подтверждён до **30.09.2027** (byggherren может выбрать старые правила BBR/BEN).
+- **Код обновлён** (ветка `claude/energiregler-bfs-2026-9`): `u-varde-kalkylator.tsx`, `kalkyl.ts` (статья + FAQ + title/excerpt/seo),
+  `kvalitet.ts` (большая статья про энергиправила ~1095–1168 — сняты "planeras"/future tense, даты в прошедшем времени),
+  `regelverk.ts`, `ekonomi.ts` (статья про фönster-U-värde), `egenkontroll-mall.tsx`, `kvalitetsplan-mall.tsx`,
+  `KvalitetsplanMallTool.tsx`, `egenkontroll-generate.ts` (AI-промпт), `verktyg/index.tsx` — везде где BBR подавался как
+  действующий свод, заменено на BFS 2026:9 / «Boverkets byggregler» + одна явная формулировка перехода на страницу.
+  `yarn install --frozen-lockfile`, `npx tsc --noEmit` и `yarn build` — ок.
+- ⚠️ **Цифры НЕ менялись** (primärenergital/Um/U-värden) — не удалось проверить точные значения BFS 2026:9 у первоисточника
+  (boverket.se и rinfo.boverket.se заблокированы в этом облачном окружении network policy). Старые BBR-значения оставлены
+  с пометкой «не проверено против BFS 2026:9 — сверить у Boverket» в местах, где раньше было дано как факт (kalkyl.ts,
+  kvalitet.ts ~1124, ekonomi.ts). Owner: открыть сетевой доступ к boverket.se/rinfo.boverket.se в настройках окружения
+  (или сверить вручную) и подставить реальные цифры.
+
+### 🔜 NÄSTA STEG
+1. Owner: просмотреть ветку `claude/energiregler-bfs-2026-9` (PR, если создан) → смержить в main.
+2. Owner: дать Claude Code доступ к boverket.se/rinfo.boverket.se (network policy окружения) → подставить проверенные
+   цифры BFS 2026:9 (primärenergital/energiprestandatal, Um, U-värden) вместо старых BBR-значений с пометкой.
 
 ## 🟢 2026-09-29 (вечер) — страница контактов, одно правило форм, Calendly, письма-лиды (live)
 ### KLART
@@ -182,7 +205,8 @@ NÄSTA (из аудита, не сделано): продуктовые ленд
    Sopra Steria — LinkedIn вручную. Потом Redmind, Hotmat, Simon Frisk, Avantime.
 4. **≈4–5 окт — GSC:** валидация 404 + `.googleads/venv/bin/python .gsc/index_status.py` (токен обновить через браузер, [[gsc-api-setup]]).
 5. **≈7–14 окт — takstolar:** позиции по `takstol` в GSC — ушла ли каннибализация (калькулятор vs статья).
-6. **1 окт** — проверить результат routine (энергетика BFS 2026:9), смержить ветку после просмотра.
+6. **1 окт** ✅ — routine отработал (энергетика BFS 2026:9), ветка `claude/energiregler-bfs-2026-9` запушена — см. сессию
+   выше. Owner: просмотреть и смержить; сверить цифры у Boverket (сайт заблокирован для облачного агента).
 7. Счётчик скачиваний через 2–4 нед (`/api/download-stats`); диаграммы для топ-40 статей; тех-долг slug `byggdagbok`.
 
 ### ⚠️ На стороне owner'а

@@ -1092,7 +1092,7 @@ const A_FUKTSAKERHETSPLAN_BYGGAF: BlogPost = {
 };
 
 const A_NYA_BYGGREGLER_2026_ENERGI_ISOLERING_HTML = `
-<p>Få frågor skapar lika mycket förvirring på byggmötena just nu som Boverkets nya energiregler. Det cirkulerar flera datum, ett EU-direktiv och en remiss med preliminära siffror – och som hantverkare eller byggföretag behöver du veta en enda sak: vad gäller för <em>just det här</em> projektet? Huvuddatumet att hålla fast vid är att Boverkets nya föreskrifter om energihushållning och värmeisolering planeras träda i kraft 1 oktober 2026. Från det datumet är samtliga äldre BBR-regler ersatta av det nya regelverket.</p>
+<p>Få frågor skapar lika mycket förvirring på byggmötena just nu som Boverkets nya energiregler. Sedan den 1 oktober 2026 gäller Boverkets föreskrifter om energihushållning och värmeisolering i byggnader (BFS 2026:9), som samma dag ersatte BBR:s energiregler – den sista pusselbiten i övergången från BBR till Boverkets nya byggregler. Som hantverkare eller byggföretag behöver du veta en enda sak: vad gäller för <em>just det här</em> projektet?</p>
 
 <p>Innan du projekterar klimatskalet lönar det sig att räkna på isoleringen tidigt – testa vår gratis <a href="/sv/verktyg/isolering-kalkylator">isolering-kalkylator</a> för att se hur vägguppbyggnaden står sig mot skärpta krav.</p>
 
@@ -1102,32 +1102,32 @@ const A_NYA_BYGGREGLER_2026_ENERGI_ISOLERING_HTML = `
 <li><strong>1 juli 2025</strong> – första etappen av Boverkets nya byggregler träder i kraft, med egen övergångstid.</li>
 <li><strong>25 maj 2026</strong> – ändringar i föreskrifterna om energideklaration (BED) träder i kraft. Detta är ett separat datum från energihushållningsföreskrifterna.</li>
 <li><strong>29 maj 2026</strong> – EU:s tidsfrist för att införliva energidelen i det omarbetade direktivet om byggnaders energiprestanda (EPBD). Från denna dag gäller även kravet på solklara byggnader vid nya bygglov.</li>
-<li><strong>1 oktober 2026</strong> – de nya energihushållningsföreskrifterna träder i kraft. Detta är det svenska ikraftträdandet, som ofta förväxlas med EU-datumet 29 maj.</li>
+<li><strong>1 oktober 2026</strong> – de nya energihushållningsföreskrifterna (BFS 2026:9) trädde i kraft. Detta är det svenska ikraftträdandet, som ofta förväxlas med EU-datumet 29 maj.</li>
 <li><strong>30 september 2027</strong> – övergångstiden löper ut. Efter detta datum gäller enbart de nya reglerna.</li>
 </ul>
 <p>Poängen: EU-fristen 29 maj och det svenska ikraftträdandet 1 oktober är två olika saker. Blanda inte ihop dem när du planerar projektet.</p>
 
 <h2>Övergångsregeln avgör vilket regelverk som gäller</h2>
 <p>Det här är den viktigaste praktiska detaljen. Fram till och med 30 september 2027 gäller en övergångstid där byggherren får välja att tillämpa antingen de nya energireglerna eller de upphävda reglerna i BBR och BEN. Vilket regelverk som styr ett projekt avgörs alltså av byggherrens val – inte automatiskt av när bygglovet söktes.</p>
-<p>Det betyder att du som entreprenör måste stämma av valet med byggherren tidigt, för det påverkar dimensionering, energiberäkning och kostnad. Ett pågående projekt som redan är projekterat mot dagens BBR-nivå kan i regel fortsätta på de upphävda reglerna under övergångstiden. Ett projekt som ändå siktar högt energimässigt kan lika gärna gå direkt på de nya reglerna. Oavsett vad ni väljer: dokumentera valet i projektet så att det inte blir en diskussion vid slutbesked.</p>
+<p>Det betyder att du som entreprenör måste stämma av valet med byggherren tidigt, för det påverkar dimensionering, energiberäkning och kostnad. Ett pågående projekt som redan är projekterat mot den tidigare BBR-nivån kan i regel fortsätta på de upphävda reglerna under övergångstiden. Ett projekt som ändå siktar högt energimässigt kan lika gärna gå direkt på de nya reglerna i BFS 2026:9. Oavsett vad ni väljer: dokumentera valet i projektet så att det inte blir en diskussion vid slutbesked.</p>
 
 <h2>Vad skärps för energin</h2>
-<p>De nya reglerna innebär en generell åtstramning. I Boverkets förslag, som var på remiss under februari till 17 april 2026, skärps energikraven med cirka 10 procent jämfört med dagens nivåer. Observera att den siffran var ett remissförslag – den slutliga nivån kan avvika, så verifiera alltid mot Boverket innan projektering.</p>
-<p>Utöver skärpta tal förändras även begreppen och klassningen:</p>
+<p>De nya reglerna innebär en generell åtstramning jämfört med de upphävda BBR-kraven. I Boverkets remissförslag, som var på remiss under februari till 17 april 2026, skärptes energikraven med cirka 10 procent jämfört med dagens nivåer. Den exakta, fastställda skärpningen i BFS 2026:9 har vi inte kunnat verifiera mot Boverkets författningstext – kontrollera alltid den fastställda nivån mot Boverket innan projektering.</p>
+<p>Utöver skärpta tal har även begreppen och klassningen ändrats:</p>
 <ul>
-<li>Begreppet <strong>primärenergital (EPpet)</strong> föreslås ersättas av <strong>energiprestandatal</strong>.</li>
-<li>Klassningen läggs om så att <strong>energiklass A föreslås bli ny byggnadsstandard</strong>, i stället för dagens klass C.</li>
-<li>En ny klass <strong>A0 för nollemissionsbyggnader</strong> införs. En A0-byggnad ska ha energiprestanda i klass A, får inte till någon del värmas av fossila bränslen på plats, och installationssystemen ska kunna svara på externa styrsignaler och anpassa energianvändningen.</li>
+<li>Begreppet <strong>primärenergital (EPpet)</strong> ersätts av <strong>energiprestandatal</strong>.</li>
+<li>Enligt remissförslaget läggs klassningen om så att <strong>energiklass A blir ny byggnadsstandard</strong>, i stället för tidigare klass C – kontrollera den fastställda klassningen mot Boverket.</li>
+<li>En ny klass <strong>A0 för nollemissionsbyggnader</strong> föreslogs införas. En A0-byggnad ska ha energiprestanda i klass A, får inte till någon del värmas av fossila bränslen på plats, och installationssystemen ska kunna svara på externa styrsignaler och anpassa energianvändningen. Verifiera mot Boverket om denna klass ingår i den fastställda föreskriften.</li>
 </ul>
 
-<h2>Dagens kravnivåer som referens</h2>
-<p>För att förstå hur mycket det stramas åt är det bra att ha utgångsläget klart för sig. Dagens krav på högsta primärenergital (BBR tabell 9:2a) ligger på ungefär:</p>
+<h2>De tidigare BBR-nivåerna som referens</h2>
+<p>För att förstå hur mycket det stramas åt är det bra att ha utgångsläget klart för sig. De upphävda kraven på högsta primärenergital (BBR tabell 9:2a) – som fortfarande kan väljas av byggherren till och med 30 september 2027 – låg på ungefär:</p>
 <ul>
 <li><strong>Ca 90 kWh/m² Atemp och år</strong> för småhus större än 130 m².</li>
 <li><strong>75 kWh/m²</strong> för flerbostadshus.</li>
 <li><strong>70 kWh/m²</strong> för lokaler.</li>
 </ul>
-<p>Kravet justeras dessutom för geografiskt läge med en geografisk justeringsfaktor (Fgeo, tabell 9:2c). Vid sidan av energitalet finns krav på installerad eleffekt för uppvärmning, genomsnittlig värmegenomgångskoefficient (Um) och luftläckning i tabell 9:2a och 9:2b. Se de här talen som utgångsläget som nu skärps – och räkna med att de nya talen ännu kan justeras innan de slutgiltigt fastställs.</p>
+<p>Kravet justeras dessutom för geografiskt läge med en geografisk justeringsfaktor (Fgeo, tabell 9:2c). Vid sidan av energitalet fanns krav på installerad eleffekt för uppvärmning, genomsnittlig värmegenomgångskoefficient (Um) och luftläckning i tabell 9:2a och 9:2b. Se de här talen som jämförelsenivå mot de skärpta kraven i BFS 2026:9 – de exakta kravtalen i den nya föreskriften kontrollerar du alltid mot Boverket.</p>
 
 <h2>Isolering, klimatskal och fukt</h2>
 <p>När energiprestandatalet skärps blir klimatskalet det som avgör om projektet klarar kraven. Värmeisoleringen (Um), lufttätheten och köldbryggorna får större betydelse, samtidigt som de nya reglerna även skärper fuktkraven. I praktiken innebär det:</p>
@@ -1159,11 +1159,11 @@ const A_NYA_BYGGREGLER_2026_ENERGI_ISOLERING_HTML = `
 
 <h2>Vanliga frågor</h2>
 <h3>När träder de nya energireglerna i kraft?</h3>
-<p>Boverkets nya föreskrifter om energihushållning och värmeisolering planeras träda i kraft 1 oktober 2026. Från det datumet är de äldre BBR-reglerna ersatta av det nya regelverket.</p>
+<p>Boverkets föreskrifter om energihushållning och värmeisolering i byggnader (BFS 2026:9) trädde i kraft 1 oktober 2026. Från det datumet är de äldre BBR-reglerna ersatta av det nya regelverket.</p>
 <h3>Måste jag använda de nya reglerna direkt?</h3>
 <p>Nej. En övergångstid gäller till och med 30 september 2027. Under den perioden får byggherren välja att tillämpa antingen de nya energireglerna eller de upphävda reglerna i BBR och BEN. Valet ska dokumenteras i projektet.</p>
 <h3>Stämmer det att kraven skärps med 10 procent?</h3>
-<p>Cirka 10 procent var nivån i Boverkets remissförslag under våren 2026. Det är ett förslag – den slutliga skärpningen kan avvika, så kontrollera alltid det fastställda kravtalet mot Boverket innan du projekterar.</p>
+<p>Cirka 10 procent var nivån i Boverkets remissförslag under våren 2026. Vi har inte kunnat verifiera den exakta, slutgiltiga skärpningen i den fastställda föreskriften BFS 2026:9 – kontrollera alltid det fastställda kravtalet mot Boverket innan du projekterar.</p>
 <h3>Vad är skillnaden mellan 29 maj och 1 oktober 2026?</h3>
 <p>29 maj 2026 är EU:s tidsfrist för att införliva energidelen i EPBD-direktivet, och datumet då kravet på solklara byggnader börjar gälla vid nya bygglov. 1 oktober 2026 är det svenska ikraftträdandet av energihushållningsföreskrifterna. De två datumen förväxlas ofta.</p>
 
@@ -1349,7 +1349,7 @@ const A_DOU_PARM_DRIFT_UNDERHALL_BYGG_HTML = `
 <p>Behöver du ett strukturerat underlag att bygga vidare på? Samla flikar, egenkontroller och protokoll i ett dokument med hjälp av <a href="/sv/verktyg">våra gratis verktyg för bygg och överlämning →</a></p>
 
 <h2>Vad kräver lagen 2026?</h2>
-<p>Under 2025–2026 bytte det svenska byggregelverket skepnad. Boverkets nya funktionsbaserade byggregler ersatte BBR och EKS. Under övergångsperioden 1 juli 2025–30 juni 2026 fick byggherren välja mellan de gamla reglerna (BBR/EKS) och de nya — men inte blanda dem i samma projekt. Från 1 juli 2026 gäller enbart de nya reglerna för nya ärenden. En viktig detalj: det är ansökningsdagen som avgör, inte beslutet. Har ansökan om bygglov eller anmälan kommit in före 1 juli 2026 får de gamla reglerna fortfarande tillämpas, även om beslut och startbesked kommer senare. Energikraven ligger kvar i BBR tills nya energiregler (BFS 2026:9) träder i kraft 1 oktober 2026.</p>
+<p>Under 2025–2026 bytte det svenska byggregelverket skepnad. Boverkets nya funktionsbaserade byggregler ersatte BBR och EKS. Under övergångsperioden 1 juli 2025–30 juni 2026 fick byggherren välja mellan de gamla reglerna (BBR/EKS) och de nya — men inte blanda dem i samma projekt. Från 1 juli 2026 gäller enbart de nya reglerna för nya ärenden. En viktig detalj: det är ansökningsdagen som avgör, inte beslutet. Har ansökan om bygglov eller anmälan kommit in före 1 juli 2026 får de gamla reglerna fortfarande tillämpas, även om beslut och startbesked kommer senare. Energikraven, som låg kvar i BBR längst av alla avsnitt, ersattes i sin tur av Boverkets föreskrifter om energihushållning och värmeisolering i byggnader (BFS 2026:9) den 1 oktober 2026.</p>
 <p>De nya brandskyddsreglerna (BFS 2024:7), som trädde i kraft 1 juli 2025, ställer ett uttryckligt krav: drift- och underhållsinstruktioner ska tas fram så att byggnaden kan fortsätta uppfylla brandskyddskraven under drift. Det handlar om instruktioner för återkommande kontroller i driftskedet och för hur och när underhåll utförs. Brandskyddsdokumentationen ses som en del av den färdiga byggnaden, och kommunen bör redan i byggprocessen kräva att relevanta, tydliga drift- och underhållsinstruktioner följer med.</p>
 <p>Kopplingen till slutbeskedet är direkt. För slutbesked måste byggherren visa att alla krav enligt lovet, kontrollplanen, startbeskedet och eventuella kompletterande villkor är uppfyllda. Saknas DoU- eller brandskyddsdokumentation kan slutbeskedet hållas tillbaka — och då kan byggnaden inte tas i bruk.</p>
 

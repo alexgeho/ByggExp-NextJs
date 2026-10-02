@@ -6,7 +6,7 @@ export const footerTranslations = {
     footerPrivacy: "Политика конфиденциальности",
     footerTerms: "Условия",
     footerDeleteAccount: "Удалить аккаунт",
-    footerCreditBy: "Сайт создан",
+    footerCreditBy: "Разработка сайта:",
   },
 
   en: {
@@ -56,7 +56,7 @@ export const footerTranslations = {
     footerPrivacy: "Політика конфіденційності",
     footerTerms: "Умови користування",
     footerDeleteAccount: "Видалити акаунт",
-    footerCreditBy: "Сайт створено",
+    footerCreditBy: "Розробка сайту:",
   },
 
   fi: {
@@ -66,7 +66,7 @@ export const footerTranslations = {
     footerPrivacy: "Tietosuojakäytäntö",
     footerTerms: "Käyttöehdot",
     footerDeleteAccount: "Poista tili",
-    footerCreditBy: "Sivuston toteutus",
+    footerCreditBy: "Sivuston toteutus:",
   },
 
   et: {

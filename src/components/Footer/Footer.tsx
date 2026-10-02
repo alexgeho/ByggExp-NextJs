@@ -21,7 +21,10 @@ function Footer({ footerT }: FooterProps) {
         </div>
 
         <div className="footer-meta">
-          <span>© 2026 Byggexp</span>
+          <span>
+            © 2026 Byggexp · {footerT.footerCreditBy}{" "}
+            <a href="https://nordkod.se/">Nordkod</a>
+          </span>
 
           <Link href={`/${lang}/blog`}>
             {footerT.footerBlog}

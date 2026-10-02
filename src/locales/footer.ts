@@ -6,6 +6,7 @@ export const footerTranslations = {
     footerPrivacy: "Политика конфиденциальности",
     footerTerms: "Условия",
     footerDeleteAccount: "Удалить аккаунт",
+    footerCreditBy: "Сайт создан",
   },
 
   en: {
@@ -15,6 +16,7 @@ export const footerTranslations = {
     footerPrivacy: "Privacy Policy",
     footerTerms: "Terms of Service",
     footerDeleteAccount: "Delete account",
+    footerCreditBy: "Website by",
   },
 
   sv: {
@@ -24,6 +26,7 @@ export const footerTranslations = {
     footerPrivacy: "Integritetspolicy",
     footerTerms: "Användarvillkor",
     footerDeleteAccount: "Radera konto",
+    footerCreditBy: "Webbplats av",
   },
 
   nb: {
@@ -33,6 +36,7 @@ export const footerTranslations = {
     footerPrivacy: "Personvernerklæring",
     footerTerms: "Brukervilkår",
     footerDeleteAccount: "Slett konto",
+    footerCreditBy: "Nettside av",
   },
 
   pl: {
@@ -42,6 +46,7 @@ export const footerTranslations = {
     footerPrivacy: "Polityka prywatności",
     footerTerms: "Regulamin",
     footerDeleteAccount: "Usuń konto",
+    footerCreditBy: "Strona wykonana przez",
   },
 
   uk: {
@@ -51,6 +56,7 @@ export const footerTranslations = {
     footerPrivacy: "Політика конфіденційності",
     footerTerms: "Умови користування",
     footerDeleteAccount: "Видалити акаунт",
+    footerCreditBy: "Сайт створено",
   },
 
   fi: {
@@ -60,6 +66,7 @@ export const footerTranslations = {
     footerPrivacy: "Tietosuojakäytäntö",
     footerTerms: "Käyttöehdot",
     footerDeleteAccount: "Poista tili",
+    footerCreditBy: "Sivuston toteutus",
   },
 
   et: {
@@ -69,6 +76,7 @@ export const footerTranslations = {
     footerPrivacy: "Privaatsuspoliitika",
     footerTerms: "Kasutustingimused",
     footerDeleteAccount: "Kustuta konto",
+    footerCreditBy: "Veebilehe tegi",
   },
 
   lt: {
@@ -78,6 +86,7 @@ export const footerTranslations = {
     footerPrivacy: "Privatumo politika",
     footerTerms: "Naudojimo sąlygos",
     footerDeleteAccount: "Ištrinti paskyrą",
+    footerCreditBy: "Svetainę sukūrė",
   },
 
   lv: {
@@ -87,5 +96,6 @@ export const footerTranslations = {
     footerPrivacy: "Privātuma politika",
     footerTerms: "Lietošanas noteikumi",
     footerDeleteAccount: "Dzēst kontu",
+    footerCreditBy: "Vietni izveidoja",
   },
 } as const;

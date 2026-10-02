@@ -6,5 +6,6 @@ export type FooterProps = {
     footerPrivacy: string;
     footerTerms: string;
     footerDeleteAccount: string;
+    footerCreditBy: string;
   };
 };

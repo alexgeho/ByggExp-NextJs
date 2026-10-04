@@ -34,7 +34,7 @@ export type LeadMagnetPageProps = {
   badge?: string;
   title: string;
   intro: string;
-  /** Replaces the generic product banner; shown right under the intro. */
+  /** Replaces the generic product banner; shown right after the tool. */
   productBanner?: ReactNode;
   /** Interactive tool slot (e.g. a form that generates a PDF). */
   tool?: ReactNode;
@@ -155,10 +155,11 @@ export default function LeadMagnetPage({
           <p className="lead-magnet-intro">{intro}</p>
         </header>
 
-        {/* A topic banner (e.g. AI egenkontroll) goes first — visible without scrolling. */}
-        {productBanner ?? null}
-
         {tool ? <div className="lead-magnet-tool">{tool}</div> : null}
+
+        {/* A topic banner (e.g. AI egenkontroll) follows the free tool: value
+            first, then the product. */}
+        {productBanner ?? null}
 
         {tool ? <p className="lm-tool-disclaimer">{disclaimer}</p> : null}
 

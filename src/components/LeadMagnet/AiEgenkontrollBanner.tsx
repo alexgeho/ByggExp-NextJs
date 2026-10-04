@@ -1,4 +1,3 @@
-import { APP_CTA } from '../../config/cta';
 import { gaEvent } from '../../lib/analytics';
 
 // AI egenkontroll banner on the egenkontroll pages (replaces the generic
@@ -39,13 +38,6 @@ export default function AiEgenkontrollBanner({ tool }: { tool: string }) {
           onClick={() => gaEvent('cta_click', { tool, action: 'signup_egenkontroll', placement: 'ai_banner' })}
         >
           Prova gratis
-        </a>
-        <a
-          className="lm-ai-secondary"
-          href={APP_CTA.href}
-          onClick={() => gaEvent('cta_click', { tool, action: 'demo', placement: 'ai_banner' })}
-        >
-          {APP_CTA.label}
         </a>
       </div>
     </aside>

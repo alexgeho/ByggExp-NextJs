@@ -1321,100 +1321,109 @@
   }
 }
 
-// AI egenkontroll banner (AiEgenkontrollBanner.tsx) — site colours: soft blue
-// card, ink text, primary blue CTA (same as "Boka demo" in the header). Copy on
-// one line: headline, 3-step icon flow, two buttons.
+// AI egenkontroll banner (AiEgenkontrollBanner.tsx) — site colours (soft blue
+// card, ink text, blue CTA). Visual equation: avtal + foton i appen = egenkontroll.
 .lm-ai-banner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 260px;
-  gap: 24px;
-  align-items: center;
   margin: 22px 0 28px;
   padding: 28px;
   border-radius: 20px;
   background: var(--blue-soft);
   color: var(--ink);
-}
-
-.lm-ai-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0 0 10px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--ink-2);
-}
-
-.lm-ai-pill {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 3px 10px;
-  border-radius: 999px;
-  background: var(--blue);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  text-align: center;
 }
 
 .lm-ai-headline {
-  margin: 0 0 20px;
+  margin: 0 0 18px;
   font-size: 26px;
   line-height: 1.2;
   color: var(--ink);
 }
 
-.lm-ai-text {
-  margin: 0 0 20px;
-  font-size: 16px;
-  line-height: 1.55;
-  color: var(--ink-2);
+.lm-ai-eq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 22px;
 }
 
-.lm-ai-flow {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 22px;
+.lm-ai-eq__item {
+  position: relative;
+  margin: 0;
+  flex: 1 1 0;
+  max-width: 220px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   gap: 8px;
 }
 
-.lm-ai-flow li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--ink-2);
-}
-
-// Arrow between steps.
-.lm-ai-flow li + li::before {
-  content: '→';
-  margin-right: 4px;
-  color: var(--muted-2);
-  font-weight: 400;
-}
-
-.lm-ai-flow img {
-  width: 54px;
-  height: 54px;
+.lm-ai-eq__item > img:not(.lm-ai-eq__photo) {
+  width: 100%;
+  height: 190px;
   object-fit: contain;
 }
 
-.lm-ai-visual {
+.lm-ai-eq__item figcaption {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+
+.lm-ai-eq__op {
+  flex: 0 0 auto;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+// Phone: real app screenshot in a simple device frame, site photos overlapping.
+.lm-ai-eq__phone {
+  display: block;
+  width: 96px;
+  height: 190px;
+  padding: 4px;
+  border-radius: 18px;
+  background: #0a1828;
+  box-shadow: 0 12px 26px rgba(10, 24, 40, 0.22);
+  overflow: hidden;
+}
+
+.lm-ai-eq__phone img {
+  display: block;
   width: 100%;
-  height: auto;
-  margin: -12px 0;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 14px;
+}
+
+.lm-ai-eq__photo {
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(10, 24, 40, 0.2);
+}
+
+.lm-ai-eq__photo--1 {
+  top: 18px;
+  left: calc(50% - 112px);
+  transform: rotate(-8deg);
+}
+
+.lm-ai-eq__photo--2 {
+  top: 96px;
+  right: calc(50% - 112px);
+  transform: rotate(7deg);
 }
 
 .lm-ai-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -1444,25 +1453,16 @@
   transform: translateY(-2px);
 }
 
-.lm-ai-micro {
-  margin: 12px 0 0;
-  font-size: 12.5px;
-  color: var(--muted);
-}
-
-@media (max-width: 860px) {
-  .lm-ai-banner {
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
-  .lm-ai-visual {
-    order: -1;
-    width: 180px;
-    margin: 0 auto;
-  }
+@media (max-width: 760px) {
+  .lm-ai-banner { padding: 20px 14px; }
   .lm-ai-headline { font-size: 22px; }
-  .lm-ai-flow { flex-direction: column; align-items: flex-start; }
-  .lm-ai-flow li + li::before { content: none; }
-  .lm-ai-primary,
-  .lm-ai-secondary { flex: 1 1 auto; text-align: center; }
+  .lm-ai-eq { gap: 6px; }
+  .lm-ai-eq__item > img:not(.lm-ai-eq__photo) { height: 110px; }
+  .lm-ai-eq__op { font-size: 24px; }
+  .lm-ai-eq__phone { width: 58px; height: 116px; padding: 3px; border-radius: 12px; }
+  .lm-ai-eq__phone img { border-radius: 9px; }
+  .lm-ai-eq__photo { width: 44px; height: 44px; border-width: 2px; }
+  .lm-ai-eq__photo--1 { top: 8px; left: calc(50% - 62px); }
+  .lm-ai-eq__photo--2 { display: none; }
+  .lm-ai-eq__item figcaption { font-size: 12px; white-space: nowrap; }
 }

@@ -1543,3 +1543,44 @@
   .lm-ai-eq__item figcaption { flex-direction: column; align-items: center; text-align: center; font-size: 12px; gap: 4px; }
   .lm-ai-eq__n { flex: 0 0 auto; width: 20px; height: 20px; font-size: 11px; }
 }
+
+// --- Tool form polish (owner, 2026-10-04): lighter placeholders, dropdown
+// arrow inset from the edge, more air between fields and rows.
+.lm-tool input::placeholder,
+.lm-tool textarea::placeholder {
+  color: var(--muted-2);
+  opacity: 0.75;
+}
+
+.lm-tool-field select,
+.lm-tool-row select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236b7a90' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+.lm-tool .lm-tool-grid {
+  gap: 22px 20px;
+}
+
+.lm-tool .lm-tool-field {
+  gap: 8px;
+}
+
+.lm-tool .lm-tool-rows {
+  gap: 16px;
+}
+
+.lm-tool .lm-tool-row-egen-measure {
+  row-gap: 10px;
+  padding-bottom: 16px;
+}
+
+.lm-tool .lm-tool-row-ref {
+  margin-top: 6px;
+}

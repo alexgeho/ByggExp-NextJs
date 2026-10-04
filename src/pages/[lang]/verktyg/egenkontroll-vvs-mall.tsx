@@ -9,7 +9,6 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
-import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -97,7 +96,7 @@ export default function EgenkontrollVvsMallPage() {
         title="Egenkontroll VVS – gratis mall att fylla i online"
         intro="Färdig egenkontroll för VVS-installation – kontroller före inbyggnad, täthetsprovning med provtryck och provtid, fall på avlopp, varmvattentemperatur och överlämning enligt Säker Vatten 2026:1 ligger redan ifyllda. Fyll i mätvärden, sätt resultat och ladda ner som PDF. Gratis och utan konto."
         tool={<EgenkontrollTool defaultPreset="vvs" />}
-        leadForm={<ToolLeadForm tool="egenkontroll-vvs-mall" />}
+        disclaimer={false}
         preview={
           <PreviewImage
             src="/landing/verktyg/egenkontroll-preview.webp"

@@ -9,7 +9,6 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
-import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -87,7 +86,7 @@ export default function EgenkontrollVentilationMallPage() {
         title="Egenkontroll ventilation – gratis mall att fylla i online"
         intro="Färdig egenkontroll för ventilation – täta kanaler, injustering av don, brandspjäll och isolering ligger redan ifyllda. Sätt resultat, kommentera anmärkningar och ladda ner som PDF. Gratis och utan konto."
         tool={<EgenkontrollTool defaultPreset="ventilation" />}
-        leadForm={<ToolLeadForm tool="egenkontroll-ventilation-mall" />}
+        disclaimer={false}
         preview={
           <PreviewImage
             src="/landing/verktyg/egenkontroll-preview.webp"

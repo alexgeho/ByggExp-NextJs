@@ -9,7 +9,6 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
-import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -87,7 +86,7 @@ export default function EgenkontrollVatrumMallPage() {
         title="Egenkontroll våtrum – gratis mall att fylla i online"
         intro="Färdig egenkontroll för våtrum och tätskikt – fuktmätning, tätskikt enligt BBV/GVK, fall mot golvbrunn och genomföringar ligger redan ifyllda. Sätt resultat, kommentera anmärkningar och ladda ner som PDF. Gratis och utan konto."
         tool={<EgenkontrollTool defaultPreset="vatrum" />}
-        leadForm={<ToolLeadForm tool="egenkontroll-vatrum-mall" />}
+        disclaimer={false}
         preview={
           <PreviewImage
             src="/landing/verktyg/egenkontroll-preview.webp"

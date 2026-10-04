@@ -9,7 +9,6 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
-import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -98,7 +97,7 @@ export default function EgenkontrollElMallPage() {
         title="Egenkontroll el – gratis mall att fylla i online"
         intro="Färdig egenkontroll med mätprotokoll för elinstallation – 22 kontrollpunkter i fyra steg, från kontroll före ibruktagning till överlämning. Skriv in mätvärden (Ω, MΩ, ms), sätt resultat och ladda ner som PDF eller Excel med två signeringssteg. Gratis och utan konto."
         tool={<EgenkontrollTool defaultPreset="el" />}
-        leadForm={<ToolLeadForm tool="egenkontroll-el-mall" />}
+        disclaimer={false}
         preview={
           <PreviewImage
             src="/landing/verktyg/egenkontroll-preview.webp"

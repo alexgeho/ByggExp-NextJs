@@ -9,7 +9,6 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
-import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -98,7 +97,7 @@ export default function EgenkontrollByggMallPage() {
         title="Egenkontroll bygg – gratis mall att fylla i online"
         intro="Färdig egenkontroll för bygg och stomme – fuktkvot före inbyggnad, mått och lod mot ritning, infästningar, stomstabilisering, fuktspärr och brandtätning ligger redan ifyllda, med metod och krav per punkt. Sätt resultat, signera och ladda ner som PDF. Gratis och utan konto."
         tool={<EgenkontrollTool defaultPreset="bygg" />}
-        leadForm={<ToolLeadForm tool="egenkontroll-bygg-mall" />}
+        disclaimer={false}
         preview={
           <PreviewImage
             src="/landing/verktyg/egenkontroll-preview.webp"

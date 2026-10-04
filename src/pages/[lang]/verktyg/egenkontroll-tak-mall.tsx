@@ -9,7 +9,6 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
-import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -86,7 +85,7 @@ export default function EgenkontrollTakMallPage() {
         title="Egenkontroll tak – gratis mall att fylla i online"
         intro="Färdig egenkontroll för takarbete – underlagstäckning, infästning enligt vindlast, genomföringar, fall och taksäkerhet ligger redan ifyllda. Sätt resultat, kommentera anmärkningar och ladda ner som PDF. Gratis och utan konto."
         tool={<EgenkontrollTool defaultPreset="tak" />}
-        leadForm={<ToolLeadForm tool="egenkontroll-tak-mall" />}
+        disclaimer={false}
         preview={
           <PreviewImage
             src="/landing/verktyg/egenkontroll-preview.webp"

@@ -38,6 +38,8 @@ export type LeadMagnetPageProps = {
   productBanner?: ReactNode;
   /** Interactive tool slot (e.g. a form that generates a PDF). */
   tool?: ReactNode;
+  /** Calculator disclaimer under the tool (off for templates). */
+  disclaimer?: boolean;
   /** Optional lead-capture form shown right under the tool. */
   leadForm?: ReactNode;
   /** Visual preview of the template/result (e.g. a TemplatePreview). */
@@ -79,6 +81,7 @@ export default function LeadMagnetPage({
   intro,
   productBanner,
   tool,
+  disclaimer: showDisclaimer = true,
   leadForm,
   preview,
   sections = [],
@@ -161,7 +164,7 @@ export default function LeadMagnetPage({
             first, then the product. */}
         {productBanner ?? null}
 
-        {tool ? <p className="lm-tool-disclaimer">{disclaimer}</p> : null}
+        {tool && showDisclaimer ? <p className="lm-tool-disclaimer">{disclaimer}</p> : null}
 
         {leadForm ? <div className="lead-magnet-tool">{leadForm}</div> : null}
 

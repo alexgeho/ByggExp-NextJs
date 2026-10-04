@@ -607,6 +607,22 @@
   flex-wrap: wrap;
 }
 
+// Blue button with a leading Feather icon (EgenkontrollTool actions).
+.lm-tool-button--icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  padding: 12px 22px;
+}
+
+// Phone: the actions stack as equal full-width buttons.
+@media (max-width: 600px) {
+  .lm-tool-actions .lm-tool-button--icon {
+    flex: 1 1 100%;
+  }
+}
+
 .lm-tool-secondary {
   display: inline-block;
   border: 1px solid var(--lm-accent);

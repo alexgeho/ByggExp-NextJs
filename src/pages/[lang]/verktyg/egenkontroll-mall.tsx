@@ -9,7 +9,6 @@ import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
 import PreviewImage from '../../../components/LeadMagnet/PreviewImage';
-import ToolLeadForm from '../../../components/LeadMagnet/ToolLeadForm';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 
@@ -100,7 +99,7 @@ export default function EgenkontrollMallPage() {
         title="Egenkontroll – gratis mall att fylla i online"
         intro="Ladda ner en färdig egenkontroll-mall – eller skapa din egen och ladda ner den. Gratis, som PDF eller Excel, utan konto."
         tool={<EgenkontrollTool />}
-        leadForm={<ToolLeadForm tool="egenkontroll-mall" />}
+        disclaimer={false}
         preview={
           <PreviewImage
             src="/landing/verktyg/egenkontroll-preview.webp"

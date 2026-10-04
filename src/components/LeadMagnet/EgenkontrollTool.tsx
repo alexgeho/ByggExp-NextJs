@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { EGENKONTROLL_PRESETS } from './egenkontrollPresets';
-import ToolAppCta from './ToolAppCta';
 
 // True when a title is just one of the template names (never typed by the user).
 const isPresetName = (value?: string | null) =>
@@ -68,6 +67,41 @@ const rowsEdited = (rows: Row[], presetId?: string | null) =>
 
 const isProtocol = (rows: Row[]) => rows.some((r) => r.unit || r.requirement);
 const hasMeasure = (rows: Row[]) => rows.some((r) => r.unit);
+
+// Feather glyphs (24×24 stroke) — actions differ by icon, not colour.
+const ICONS = {
+  plus: <path d="M12 5v14M5 12h14" />,
+  grid: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <path d="M3 9h18M3 15h18M9 3v18M15 3v18" />
+    </>
+  ),
+  fileText: (
+    <>
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+    </>
+  ),
+};
+
+function Icon({ name }: { name: keyof typeof ICONS }) {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      {ICONS[name]}
+    </svg>
+  );
+}
 
 export default function EgenkontrollTool({
   defaultPreset,
@@ -481,7 +515,8 @@ export default function EgenkontrollTool({
               aria-pressed={presetId === preset.id}
               onClick={() => applyPreset(preset.id)}
             >
-              {preset.name}
+              {/* "Egenkontroll" is the page's subject — chips say only the trade. */}
+              {preset.name.replace(/^Egenkontroll\s+/i, '')}
             </button>
           ))}
         </div>
@@ -605,29 +640,20 @@ export default function EgenkontrollTool({
         ) : null}
 
         <div className="lm-tool-actions">
-          <button type="button" className="lm-tool-secondary" onClick={addRow}>
-            + Lägg till kontrollpunkt
+          <button type="button" className="lm-tool-button lm-tool-button--icon" onClick={addRow}>
+            <Icon name="plus" />
+            Lägg till kontrollpunkt
           </button>
-          <button type="button" className="lm-tool-secondary" onClick={downloadCsv}>
+          <button type="button" className="lm-tool-button lm-tool-button--icon" onClick={downloadCsv}>
+            <Icon name="grid" />
             Ladda ner Excel
           </button>
-          <button type="submit" className="lm-tool-button" disabled={busy}>
+          <button type="submit" className="lm-tool-button lm-tool-button--icon" disabled={busy}>
+            <Icon name="fileText" />
             {busy ? 'Skapar PDF…' : 'Ladda ner PDF'}
           </button>
         </div>
       </form>
-
-      <ToolAppCta
-        tool="egenkontroll-mall"
-        heading="Slipp börja om – gör egenkontroller i ByggExp"
-        text="Mallen ovan är gratis. I ByggExp finns färdiga egenkontroll-mallar för el, VVS, bygg och skyddsrond – du fyller i på plats, markerar resultat och samlar alla kontroller per projekt."
-        bullets={[
-          'Färdiga mallar för el, VVS, bygg och skyddsrond',
-          'Anmärkningar följs upp tills de är åtgärdade',
-          'Egenkontroller samlade med byggdagbok, foton och tid per projekt',
-        ]}
-        secondary={{ href: '/sv/verktyg', label: 'Se alla gratis verktyg' }}
-      />
     </div>
   );
 }

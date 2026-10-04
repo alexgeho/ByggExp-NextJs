@@ -555,28 +555,24 @@ export default function EgenkontrollTool({
                       </span>
                     ) : null}
                   </div>
-                  {measure ? (
-                    row.unit ? (
-                      <label className="lm-tool-measure">
-                        <input
-                          value={row.measured ?? ''}
-                          inputMode="decimal"
-                          aria-label={`Mätvärde (${row.unit})`}
-                          placeholder="–"
-                          onChange={(e) => setRow(index, { measured: e.currentTarget.value })}
-                        />
-                        <span>{row.unit}</span>
-                      </label>
-                    ) : (
-                      <span aria-hidden="true" />
-                    )
-                  ) : null}
                   <select value={row.result} aria-label="Resultat" onChange={(e) => setRow(index, { result: e.currentTarget.value })}>
                     {RESULTS.map((r) => (
                       <option key={r} value={r}>{r}</option>
                     ))}
                   </select>
-                  <input value={row.comment} placeholder="Valfritt" aria-label="Kommentar" onChange={(e) => setRow(index, { comment: e.currentTarget.value })} />
+                  {measure && row.unit ? (
+                    <label className="lm-tool-measure">
+                      <input
+                        value={row.measured ?? ''}
+                        inputMode="decimal"
+                        aria-label={`Mätvärde (${row.unit})`}
+                        placeholder="–"
+                        onChange={(e) => setRow(index, { measured: e.currentTarget.value })}
+                      />
+                      <span>{row.unit}</span>
+                    </label>
+                  ) : null}
+                  <input className={measure && !row.unit ? 'lm-tool-row-comment-wide' : undefined} value={row.comment} placeholder="Valfritt" aria-label="Kommentar" onChange={(e) => setRow(index, { comment: e.currentTarget.value })} />
                   <button type="button" className="lm-tool-row-remove" aria-label="Ta bort rad" onClick={() => removeRow(index)}>
                     ×
                   </button>

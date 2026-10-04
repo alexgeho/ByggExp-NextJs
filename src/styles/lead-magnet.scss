@@ -1177,6 +1177,12 @@
   grid-column: 1 / -1;
 }
 
+// No measured value for this point: the comment takes the measure column too,
+// so Resultat stays aligned to the left edge on every row.
+.lm-tool-row-egen-measure > .lm-tool-row-comment-wide {
+  grid-column: span 2;
+}
+
 .lm-tool-row-ref {
   display: block;
   font-size: 0.78rem;

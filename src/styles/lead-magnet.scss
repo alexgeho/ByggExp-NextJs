@@ -1325,6 +1325,10 @@
 // card, ink text, primary blue CTA (same as "Boka demo" in the header). Copy on
 // one line: headline, 3-step icon flow, two buttons.
 .lm-ai-banner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 24px;
+  align-items: center;
   margin: 22px 0 28px;
   padding: 28px;
   border-radius: 20px;
@@ -1396,15 +1400,16 @@
   font-weight: 400;
 }
 
-.lm-ai-flow__icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  color: var(--blue);
+.lm-ai-flow img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.lm-ai-visual {
+  width: 100%;
+  height: auto;
+  margin: -12px 0;
 }
 
 .lm-ai-actions {
@@ -1447,7 +1452,13 @@
 
 @media (max-width: 860px) {
   .lm-ai-banner {
+    grid-template-columns: 1fr;
     padding: 20px;
+  }
+  .lm-ai-visual {
+    order: -1;
+    width: 180px;
+    margin: 0 auto;
   }
   .lm-ai-headline { font-size: 22px; }
   .lm-ai-flow { flex-direction: column; align-items: flex-start; }

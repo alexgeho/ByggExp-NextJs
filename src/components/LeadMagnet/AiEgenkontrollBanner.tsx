@@ -2,21 +2,15 @@ import { APP_CTA } from '../../config/cta';
 import { gaEvent } from '../../lib/analytics';
 
 // AI egenkontroll banner on the egenkontroll pages (replaces the generic
-// ProductBanner there). Self-serve sign-up on the solo plan, or a demo.
+// ProductBanner there): contract → photos in the app → finished egenkontroll.
+// 3D glass images: Recraft, recoloured to #2394FF / #45B36B (see worklog).
 const SIGNUP_URL = 'https://admin.byggexp.se/register?plan=egenkontroll';
-
-
-// How it works, in three icons: contract → photos in the app → done.
-const ICON = {
-  doc: 'M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h6',
-  camera: 'M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2zM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8z',
-  check: 'M22 11.1V12a10 10 0 1 1-5.9-9.1M22 4 12 14l-3-3',
-} as const;
+const IMG = '/landing/egenkontroll-ai';
 
 const FLOW = [
-  { icon: ICON.doc, label: 'Ladda upp avtal' },
-  { icon: ICON.camera, label: 'Fota i appen' },
-  { icon: ICON.check, label: 'Egenkontroll klar' },
+  { img: `${IMG}/avtal.webp`, label: 'Ladda upp avtal' },
+  { img: `${IMG}/foto.webp`, label: 'Fota i appen' },
+  { img: `${IMG}/klar.webp`, label: 'Egenkontroll klar' },
 ] as const;
 
 export default function AiEgenkontrollBanner({ tool }: { tool: string }) {
@@ -27,11 +21,7 @@ export default function AiEgenkontrollBanner({ tool }: { tool: string }) {
         <ol className="lm-ai-flow">
           {FLOW.map((step) => (
             <li key={step.label}>
-              <span className="lm-ai-flow__icon">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d={step.icon} />
-                </svg>
-              </span>
+              <img src={step.img} alt="" width={54} height={54} loading="lazy" />
               {step.label}
             </li>
           ))}
@@ -53,6 +43,14 @@ export default function AiEgenkontrollBanner({ tool }: { tool: string }) {
           </a>
         </div>
       </div>
+      <img
+        className="lm-ai-visual"
+        src={`${IMG}/egenkontroll-klar.webp`}
+        alt="Färdig egenkontroll med godkända punkter och foton"
+        width={560}
+        height={560}
+        loading="lazy"
+      />
     </aside>
   );
 }

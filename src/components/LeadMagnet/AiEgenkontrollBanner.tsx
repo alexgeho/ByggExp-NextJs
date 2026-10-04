@@ -11,12 +11,10 @@ const IMG = '/landing/egenkontroll-ai';
 export default function AiEgenkontrollBanner({ tool }: { tool: string }) {
   return (
     <aside className="lm-ai-banner" aria-label="AI-egenkontroll i ByggExp">
-      <h2 className="lm-ai-headline">Egenkontrollen fyller i sig själv</h2>
-
       <div className="lm-ai-eq">
         <figure className="lm-ai-eq__item">
           <img src={`${IMG}/avtal-foto.webp`} alt="Entreprenadavtal" width={420} height={402} loading="lazy" />
-          <figcaption>Avtal</figcaption>
+          <figcaption><span className="lm-ai-eq__n">1</span>Ladda upp avtal</figcaption>
         </figure>
         <span className="lm-ai-eq__op">+</span>
         <figure className="lm-ai-eq__item lm-ai-eq__app">
@@ -25,12 +23,12 @@ export default function AiEgenkontrollBanner({ tool }: { tool: string }) {
           </span>
           <img className="lm-ai-eq__photo lm-ai-eq__photo--1" src={`${IMG}/foto-objekt-1.webp`} alt="" width={240} height={240} loading="lazy" />
           <img className="lm-ai-eq__photo lm-ai-eq__photo--2" src={`${IMG}/foto-objekt-2.webp`} alt="" width={240} height={240} loading="lazy" />
-          <figcaption>Foton i appen</figcaption>
+          <figcaption><span className="lm-ai-eq__n">2</span>Fota utfört arbete</figcaption>
         </figure>
         <span className="lm-ai-eq__op">=</span>
         <figure className="lm-ai-eq__item">
           <img src={`${IMG}/egenkontroll-foto.webp`} alt="Färdig egenkontroll" width={316} height={420} loading="lazy" />
-          <figcaption>Egenkontroll</figcaption>
+          <figcaption><span className="lm-ai-eq__n">3</span>Färdig egenkontroll</figcaption>
         </figure>
       </div>
 

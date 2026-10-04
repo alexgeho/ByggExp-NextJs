@@ -539,19 +539,7 @@ export default function EgenkontrollTool({
                 <div className={`lm-tool-row lm-tool-row-egen${measure ? ' lm-tool-row-egen-measure' : ''}`}>
                   <div className="lm-tool-row-point">
                     <input value={row.point} placeholder="Kontrollpunkt" aria-label="Kontrollpunkt" onChange={(e) => setRow(index, { point: e.currentTarget.value })} />
-                    {row.method || row.requirement || row.reference ? (
-                      <span className="lm-tool-row-ref">
-                        {[
-                          row.method ? <>Metod: {row.method}</> : null,
-                          row.requirement ? <>Krav: <strong>{row.requirement}</strong></> : null,
-                          row.reference || null,
-                        ]
-                          .filter(Boolean)
-                          .map((part, i) => (
-                            <span key={i}>{i > 0 ? ' · ' : null}{part}</span>
-                          ))}
-                      </span>
-                    ) : null}
+                    {/* Metod/Krav stay in the PDF/Excel, not on screen (less text). */}
                   </div>
                   <select value={row.result} aria-label="Resultat" onChange={(e) => setRow(index, { result: e.currentTarget.value })}>
                     {RESULTS.map((r) => (

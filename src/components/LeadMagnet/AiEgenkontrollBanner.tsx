@@ -16,16 +16,14 @@ export default function AiEgenkontrollBanner({ tool }: { tool: string }) {
   return (
     <aside className="lm-ai-banner" aria-label="AI-egenkontroll i ByggExp">
       <div className="lm-ai-copy">
-        <span className="lm-ai-pill">Nyhet</span>
-        <h2 className="lm-ai-headline">Egenkontrollen som fyller i sig själv</h2>
-        <p className="lm-ai-text">Ladda upp avtalet, fota – AI bockar av.</p>
+        <h2 className="lm-ai-headline">Egenkontroll som fyller i sig själv från dina foton</h2>
         <div className="lm-ai-actions">
           <a
             className="lm-ai-primary"
             href={SIGNUP_URL}
             onClick={() => gaEvent('cta_click', { tool, action: 'signup_egenkontroll', placement: 'ai_banner' })}
           >
-            Prova gratis – 49 kr/mån
+            Prova gratis
           </a>
           <a
             className="lm-ai-secondary"

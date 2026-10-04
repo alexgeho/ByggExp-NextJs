@@ -1,5 +1,10 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 🟢 2026-10-04 — баннер AI-egenkontroll на 7 страницах egenkontroll (live)
+- `AiEgenkontrollBanner.tsx` вместо общего ProductBanner (проп `productBanner` в LeadMagnetPage): «Egenkontrollen fyller i sig själv», визуальное уравнение Avtal + Foton i appen = Egenkontroll, кнопки «Prova gratis» (admin.byggexp.se/register?plan=egenkontroll) и «Boka demo».
+- Картинки `public/landing/egenkontroll-ai/`: Recraft `recraftv4_1_raster`, фотореалистичные документы с точным шведским текстом в кавычках в промпте («Entreprenadavtal», «Egenkontroll» + строки), «isolated on plain pure white background, no shadow» → removeBackground → обрезка по альфе с порогом >40 (getbbox на RGBA не режет) → WebP. Скриншот приложения — настоящий (симулятор), фото объекта — Recraft.
+- Владелец: минимум текста; 3D-иконки и телефон в перчатке НЕ подошли — нужен реализм «как фото».
+
 ## 📍 СТАТУС (кратко)
 Сайт в main/live (цены 26.09 уже на проде). Последняя сессия: **29.09 вечер — /contact, одно правило форм, Calendly, письма-лиды (бэкенд)**.
 Продолжать с «🔜 NÄSTA STEG» верхних сессий. Архив до 24.09 → `docs/worklog-archive.md`. Индекс доков → `docs/README.md`.

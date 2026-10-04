@@ -34,8 +34,6 @@ export type LeadMagnetPageProps = {
   badge?: string;
   title: string;
   intro: string;
-  /** Optional banner right under the intro, above the tool (e.g. a feature teaser). */
-  topBanner?: ReactNode;
   /** Interactive tool slot (e.g. a form that generates a PDF). */
   tool?: ReactNode;
   /** Optional lead-capture form shown right under the tool. */
@@ -77,7 +75,6 @@ export default function LeadMagnetPage({
   badge,
   title,
   intro,
-  topBanner,
   tool,
   leadForm,
   preview,
@@ -154,8 +151,6 @@ export default function LeadMagnetPage({
           <h1 className="lead-magnet-title">{title}</h1>
           <p className="lead-magnet-intro">{intro}</p>
         </header>
-
-        {topBanner}
 
         {tool ? <div className="lead-magnet-tool">{tool}</div> : null}
 

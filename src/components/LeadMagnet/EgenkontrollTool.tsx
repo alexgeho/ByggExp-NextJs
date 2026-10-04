@@ -3,6 +3,10 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { EGENKONTROLL_PRESETS } from './egenkontrollPresets';
 import ToolAppCta from './ToolAppCta';
 
+// True when a title is just one of the template names (never typed by the user).
+const isPresetName = (value?: string | null) =>
+  !!value && EGENKONTROLL_PRESETS.some((p) => p.name.trim() === value.trim());
+
 // Free egenkontroll (self-inspection checklist) tool. Categories and result
 // states mirror the ByggExp KMA module (Kvalitet/Miljö/Arbetsmiljö, and
 // Ej besvarad/Godkänd/Anmärkning/Ej aktuellt). Pick a ready-made template to
@@ -113,17 +117,20 @@ export default function EgenkontrollTool({
           title: string; project: string; responsible: string;
           date: string; rows: Row[]; meta: Record<string, string>; presetId: string | null;
         }>;
+        // Old drafts stored the template name as the title value — that is
+        // not user input, so it is dropped (the name stays the placeholder).
+        const savedTitle = isPresetName(d.title) ? '' : (d.title ?? '');
         // Restore only real user input — not a blank form, a just-picked
         // template or the auto-filled date.
         const hasContent =
-          !!d.title?.trim() ||
+          !!savedTitle.trim() ||
           !!d.project?.trim() ||
           !!d.responsible?.trim() ||
           Object.values(d.meta ?? {}).some((v) => v?.trim()) ||
           (!!d.rows?.length && rowsEdited(d.rows, d.presetId));
         if (hasContent) {
           // eslint-disable-next-line react-hooks/set-state-in-effect -- restore the saved draft from localStorage after mount (not available during SSR).
-          setTitle(d.title ?? '');
+          setTitle(savedTitle);
           setProject(d.project ?? '');
           setResponsible(d.responsible ?? '');
           setDate(d.date || today());
@@ -194,6 +201,8 @@ export default function EgenkontrollTool({
     if (rowsEdited(rows, presetId) && !window.confirm('Ersätta dina kontrollpunkter med mallen?')) return;
     setPresetId(id);
     setRows(presetRows(id));
+    // A title that is just a template name follows the template (placeholder).
+    if (isPresetName(title)) setTitle('');
     // Let the table render, then bring it into view as clear confirmation.
     window.setTimeout(() => {
       rowsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });

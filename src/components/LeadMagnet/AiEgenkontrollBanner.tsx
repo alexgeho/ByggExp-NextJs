@@ -5,45 +5,46 @@ import { gaEvent } from '../../lib/analytics';
 // ProductBanner there). Self-serve sign-up on the solo plan, or a demo.
 const SIGNUP_URL = 'https://admin.byggexp.se/register?plan=egenkontroll';
 
-const STEPS = [
-  { title: 'Ladda upp avtalet', text: 'eller arbetsbeskrivningen – kontrollpunkterna skapas automatiskt.' },
-  { title: 'Fota på bygget', text: 'i appen medan arbetet pågår.' },
-  { title: 'Klart', text: 'AI bockar av utförda punkter med datum och foto som bevis. Du signerar.' },
+// Mini preview of a filled-in egenkontroll (pure CSS, no images).
+const PREVIEW = [
+  { text: 'Tätskikt enligt GVK', done: true },
+  { text: 'Golvbrunn monterad', done: true },
+  { text: 'Fall mot brunn', done: false },
 ] as const;
 
 export default function AiEgenkontrollBanner({ tool }: { tool: string }) {
   return (
     <aside className="lm-ai-banner" aria-label="AI-egenkontroll i ByggExp">
-      <p className="lm-ai-eyebrow">
-        <span className="lm-ai-pill">Nyhet</span> ByggExp Egenkontroll
-      </p>
-      <h2 className="lm-ai-headline">Egenkontrollen som fyller i sig själv – från dina foton</h2>
-      <ol className="lm-ai-steps">
-        {STEPS.map((s, i) => (
-          <li key={s.title}>
-            <span className="lm-ai-num">{i + 1}</span>
-            <span>
-              <strong>{s.title}</strong> {s.text}
-            </span>
-          </li>
+      <div className="lm-ai-copy">
+        <span className="lm-ai-pill">Nyhet</span>
+        <h2 className="lm-ai-headline">Egenkontrollen som fyller i sig själv</h2>
+        <p className="lm-ai-text">Ladda upp avtalet, fota – AI bockar av.</p>
+        <div className="lm-ai-actions">
+          <a
+            className="lm-ai-primary"
+            href={SIGNUP_URL}
+            onClick={() => gaEvent('cta_click', { tool, action: 'signup_egenkontroll', placement: 'ai_banner' })}
+          >
+            Prova gratis – 49 kr/mån
+          </a>
+          <a
+            className="lm-ai-secondary"
+            href={APP_CTA.href}
+            onClick={() => gaEvent('cta_click', { tool, action: 'demo', placement: 'ai_banner' })}
+          >
+            {APP_CTA.label}
+          </a>
+        </div>
+      </div>
+
+      <div className="lm-ai-preview" aria-hidden="true">
+        {PREVIEW.map((row) => (
+          <div key={row.text} className={`lm-ai-row${row.done ? ' is-done' : ''}`}>
+            <span className="lm-ai-check">{row.done ? '✓' : ''}</span>
+            <span className="lm-ai-row__text">{row.text}</span>
+            {row.done ? <span className="lm-ai-photo" /> : null}
+          </div>
         ))}
-      </ol>
-      <div className="lm-ai-actions">
-        <a
-          className="lm-ai-primary"
-          href={SIGNUP_URL}
-          onClick={() => gaEvent('cta_click', { tool, action: 'signup_egenkontroll', placement: 'ai_banner' })}
-        >
-          Prova gratis
-        </a>
-        <a
-          className="lm-ai-secondary"
-          href={APP_CTA.href}
-          onClick={() => gaEvent('cta_click', { tool, action: 'demo', placement: 'ai_banner' })}
-        >
-          {APP_CTA.label}
-        </a>
-        <span className="lm-ai-micro">49 kr/mån · 14 dagar gratis · ingen bindningstid</span>
       </div>
     </aside>
   );

@@ -203,7 +203,9 @@ export default function BlogIndexPage({
               />
             </div>
           </div>
-          {presentCategories.length > 1 ? (
+          {/* While searching, results go straight under the field (chips would
+              push them below the keyboard on a phone). */}
+          {presentCategories.length > 1 && !words.length ? (
             <div className="blog-filter" role="tablist" aria-label="Kategorier">
               <button
                 type="button"

@@ -94,7 +94,13 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
     setIsSubmitting(true);
     setSubmitError(false);
 
+    // ?amne=egenkontroll etc. — which page/banner the visitor came from.
+    const topic =
+      typeof window !== "undefined"
+        ? new URLSearchParams(window.location.search).get("amne")
+        : null;
     const details = [
+      topic && `Ämne: ${topic}`,
       message.trim() && `Meddelande: ${message.trim()}`,
     ]
       .filter(Boolean)

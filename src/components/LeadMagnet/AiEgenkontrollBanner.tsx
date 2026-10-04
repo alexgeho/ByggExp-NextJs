@@ -1,10 +1,11 @@
+import { APP_CTA } from '../../config/cta';
 import { gaEvent } from '../../lib/analytics';
 
 // AI egenkontroll banner on the egenkontroll pages (replaces the generic
 // ProductBanner there), told as an equation:
 //   contract + (the app + photos from site) = finished egenkontroll.
 // Photos: Recraft (realistic, background removed); app = real screenshot.
-const SIGNUP_URL = 'https://admin.byggexp.se/register?plan=egenkontroll';
+// Product not public yet: visitors book a consultation (no self-serve signup).
 const IMG = '/landing/egenkontroll-ai';
 
 export default function AiEgenkontrollBanner({ tool }: { tool: string }) {
@@ -39,14 +40,14 @@ export default function AiEgenkontrollBanner({ tool }: { tool: string }) {
       <div className="lm-ai-actions">
         <a
           className="lm-ai-primary"
-          href={SIGNUP_URL}
+          href={`${APP_CTA.href}?amne=egenkontroll`}
           onClick={() => {
             // Dedicated, directly countable GA4 event (+ Meta Pixel via gaEvent).
-            gaEvent('egenkontroll_prova_gratis', { tool });
-            gaEvent('cta_click', { tool, action: 'signup_egenkontroll', placement: 'ai_banner' });
+            gaEvent('egenkontroll_boka_demo', { tool });
+            gaEvent('cta_click', { tool, action: 'demo_egenkontroll', placement: 'ai_banner' });
           }}
         >
-          Prova gratis
+          {APP_CTA.label}
         </a>
       </div>
     </aside>

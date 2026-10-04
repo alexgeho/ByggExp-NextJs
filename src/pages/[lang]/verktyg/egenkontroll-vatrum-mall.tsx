@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import EgenkontrollTool from '../../../components/LeadMagnet/EgenkontrollTool';
+import AiEgenkontrollBanner from '../../../components/LeadMagnet/AiEgenkontrollBanner';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
@@ -81,6 +82,7 @@ export default function EgenkontrollVatrumMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        productBanner={<AiEgenkontrollBanner tool="egenkontroll-vatrum-mall" />}
         badge="Gratis mall"
         title="Egenkontroll våtrum – gratis mall att fylla i online"
         intro="Färdig egenkontroll för våtrum och tätskikt – fuktmätning, tätskikt enligt BBV/GVK, fall mot golvbrunn och genomföringar ligger redan ifyllda. Sätt resultat, kommentera anmärkningar och ladda ner som PDF. Gratis och utan konto."

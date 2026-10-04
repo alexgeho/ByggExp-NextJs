@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import EgenkontrollTool from '../../../components/LeadMagnet/EgenkontrollTool';
+import AiEgenkontrollBanner from '../../../components/LeadMagnet/AiEgenkontrollBanner';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
@@ -80,6 +81,7 @@ export default function EgenkontrollTakMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        productBanner={<AiEgenkontrollBanner tool="egenkontroll-tak-mall" />}
         badge="Gratis mall"
         title="Egenkontroll tak – gratis mall att fylla i online"
         intro="Färdig egenkontroll för takarbete – underlagstäckning, infästning enligt vindlast, genomföringar, fall och taksäkerhet ligger redan ifyllda. Sätt resultat, kommentera anmärkningar och ladda ner som PDF. Gratis och utan konto."

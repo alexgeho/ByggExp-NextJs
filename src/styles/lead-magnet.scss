@@ -1320,3 +1320,119 @@
     text-align: center;
   }
 }
+
+// AI egenkontroll banner (AiEgenkontrollBanner.tsx) — site colours: soft blue
+// card, ink text, primary blue CTA (same as "Boka demo" in the header).
+.lm-ai-banner {
+  margin: 22px 0 28px;
+  padding: 22px 24px;
+  border-radius: 16px;
+  background: var(--blue-soft);
+  border: 1px solid #bfdcfb;
+  color: var(--ink);
+}
+
+.lm-ai-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.lm-ai-pill {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lm-ai-headline {
+  margin: 0 0 14px;
+  font-size: 22px;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.lm-ai-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.lm-ai-steps li {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+
+.lm-ai-num {
+  flex: 0 0 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: var(--blue-2);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.lm-ai-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+}
+
+.lm-ai-primary,
+.lm-ai-secondary {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.lm-ai-primary {
+  background: var(--blue);
+  color: #fff;
+}
+
+.lm-ai-secondary {
+  background: #fff;
+  color: var(--blue-2);
+  border: 1px solid #bfdcfb;
+}
+
+.lm-ai-primary:hover,
+.lm-ai-secondary:hover {
+  transform: translateY(-2px);
+}
+
+.lm-ai-micro {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .lm-ai-banner { padding: 18px; }
+  .lm-ai-headline { font-size: 19px; }
+  .lm-ai-steps { grid-template-columns: 1fr; gap: 10px; }
+  .lm-ai-primary,
+  .lm-ai-secondary { flex: 1 1 100%; text-align: center; }
+}

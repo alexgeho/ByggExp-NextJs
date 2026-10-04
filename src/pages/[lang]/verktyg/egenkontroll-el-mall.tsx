@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import EgenkontrollTool from '../../../components/LeadMagnet/EgenkontrollTool';
+import AiEgenkontrollBanner from '../../../components/LeadMagnet/AiEgenkontrollBanner';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
@@ -92,6 +93,7 @@ export default function EgenkontrollElMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        productBanner={<AiEgenkontrollBanner tool="egenkontroll-el-mall" />}
         badge="Gratis mall"
         title="Egenkontroll el – gratis mall att fylla i online"
         intro="Färdig egenkontroll med mätprotokoll för elinstallation – 22 kontrollpunkter i fyra steg, från kontroll före ibruktagning till överlämning. Skriv in mätvärden (Ω, MΩ, ms), sätt resultat och ladda ner som PDF eller Excel med två signeringssteg. Gratis och utan konto."

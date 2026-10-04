@@ -34,6 +34,8 @@ export type LeadMagnetPageProps = {
   badge?: string;
   title: string;
   intro: string;
+  /** Replaces the generic product banner (e.g. a feature banner on topic pages). */
+  productBanner?: ReactNode;
   /** Interactive tool slot (e.g. a form that generates a PDF). */
   tool?: ReactNode;
   /** Optional lead-capture form shown right under the tool. */
@@ -75,6 +77,7 @@ export default function LeadMagnetPage({
   badge,
   title,
   intro,
+  productBanner,
   tool,
   leadForm,
   preview,
@@ -162,7 +165,7 @@ export default function LeadMagnetPage({
 
         {/* Value first: only pitch the product AFTER the visitor has used the free
             tool / downloaded the template. */}
-        <ProductBanner tool={toolId} />
+        {productBanner ?? <ProductBanner tool={toolId} />}
 
         {sections.map((section) => (
           <section

@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import EgenkontrollTool from '../../../components/LeadMagnet/EgenkontrollTool';
+import AiEgenkontrollBanner from '../../../components/LeadMagnet/AiEgenkontrollBanner';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
 } from '../../../components/LeadMagnet/LeadMagnetPage';
@@ -91,6 +92,7 @@ export default function EgenkontrollVvsMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        productBanner={<AiEgenkontrollBanner tool="egenkontroll-vvs-mall" />}
         badge="Gratis mall"
         title="Egenkontroll VVS – gratis mall att fylla i online"
         intro="Färdig egenkontroll för VVS-installation – kontroller före inbyggnad, täthetsprovning med provtryck och provtid, fall på avlopp, varmvattentemperatur och överlämning enligt Säker Vatten 2026:1 ligger redan ifyllda. Fyll i mätvärden, sätt resultat och ladda ner som PDF. Gratis och utan konto."

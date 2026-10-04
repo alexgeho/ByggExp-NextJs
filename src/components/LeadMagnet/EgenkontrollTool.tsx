@@ -623,19 +623,13 @@ export default function EgenkontrollTool({
               fontSize: 13,
             }}
           >
+            {/* One line: progress, plus remarks when there are any. */}
             <span style={{ fontWeight: 600 }}>
-              {stats.total} {stats.total === 1 ? 'kontrollpunkt' : 'kontrollpunkter'}
+              {stats.godkand}/{stats.total} godkända
             </span>
-            <span aria-hidden="true" style={{ color: '#9ca3af' }}>·</span>
-            <span style={{ color: '#16a34a' }}>✓ {stats.godkand} godkända</span>
             {stats.anmarkning > 0 ? (
-              <span style={{ color: '#d97706' }}>⚠ {stats.anmarkning} anmärkning{stats.anmarkning === 1 ? '' : 'ar'}</span>
+              <span style={{ color: '#d97706' }}>· {stats.anmarkning} anmärkning{stats.anmarkning === 1 ? '' : 'ar'}</span>
             ) : null}
-            {stats.kvar > 0 ? (
-              <span style={{ color: '#6b7280' }}>○ {stats.kvar} kvar att besvara</span>
-            ) : (
-              <span style={{ color: '#16a34a' }}>Alla besvarade 🎉</span>
-            )}
           </div>
         ) : null}
 

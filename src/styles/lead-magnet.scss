@@ -1617,3 +1617,41 @@
 .lm-tool .lm-tool-row-ref {
   margin-top: 6px;
 }
+
+// Phone: point, then Resultat + ×, then Kommentar full width — nothing cut.
+@media (max-width: 700px) {
+  .lm-tool-row-egen:not(.lm-tool-row-egen-measure) {
+    grid-template-columns: minmax(0, 1fr) 34px;
+  }
+
+  .lm-tool-row-egen:not(.lm-tool-row-egen-measure) > select { grid-row: 2; grid-column: 1; }
+  .lm-tool-row-egen:not(.lm-tool-row-egen-measure) > .lm-tool-row-remove { grid-row: 2; grid-column: 2; }
+  .lm-tool-row-egen:not(.lm-tool-row-egen-measure) > input { grid-row: 3; grid-column: 1 / -1; }
+
+  .lm-tool-row.lm-tool-row-egen select {
+    padding-right: 30px;
+    background-position: right 12px center;
+  }
+}
+
+// One-line-ish hero title: no orphan word on its own line.
+.lead-magnet-title {
+  text-wrap: balance;
+}
+
+// Phone, protocol rows: Resultat wide enough for "Ej besvarad"; a row without
+// a measured value puts Kommentar on its own full-width line too.
+@media (max-width: 700px) {
+  .lm-tool-row-egen-measure {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) 34px;
+  }
+
+  .lm-tool-row-egen-measure > input.lm-tool-row-comment-wide {
+    grid-row: 3;
+    grid-column: 1 / -1;
+  }
+  // No measured value → Resultat takes the free measure column (no hole).
+  .lm-tool-row-egen-measure:has(> input.lm-tool-row-comment-wide) > select {
+    grid-column: 1 / 3;
+  }
+}

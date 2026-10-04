@@ -1496,6 +1496,14 @@
   transform: rotate(7deg);
 }
 
+.lm-ai-how {
+  max-width: 620px;
+  margin: 0 auto 20px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
 .lm-ai-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1542,6 +1550,7 @@
   .lm-ai-eq__photo--2 { display: none; }
   .lm-ai-eq__item figcaption { flex-direction: column; align-items: center; text-align: center; font-size: 12px; gap: 4px; }
   .lm-ai-eq__n { flex: 0 0 auto; width: 20px; height: 20px; font-size: 11px; }
+  .lm-ai-how { font-size: 14px; }
 }
 
 // --- Tool form polish (owner, 2026-10-04): lighter placeholders, dropdown

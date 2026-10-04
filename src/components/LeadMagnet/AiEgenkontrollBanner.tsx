@@ -31,6 +31,11 @@ export default function AiEgenkontrollBanner({ tool }: { tool: string }) {
         </figure>
       </div>
 
+      <p className="lm-ai-how">
+        AI läser avtalet och gör kontrollpunkter av arbetet. När du fotar känner den igen vad
+        som är gjort och bockar av punkten med datum och foto som bevis.
+      </p>
+
       <div className="lm-ai-actions">
         <a
           className="lm-ai-primary"

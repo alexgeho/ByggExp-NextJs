@@ -48,6 +48,20 @@ const presetRows = (presetId: string): Row[] => {
 // Rows that carry a requirement or unit turn the checklist into a protocol with
 // a Krav column (what the point is checked against); rows with a unit add a
 // Mätvärde column on top.
+// Local YYYY-MM-DD (toISOString alone would give UTC and can be off by a day).
+const today = () => {
+  const d = new Date();
+  return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+};
+
+// Only what the user can type/choose — template text (point/method/…) is not input.
+const rowInput = (r: Row) => [r.point.trim(), r.result, r.comment.trim(), (r.measured ?? '').trim()];
+const baseRows = (presetId?: string | null) =>
+  presetId ? presetRows(presetId) : [emptyRow(), emptyRow(), emptyRow()];
+/** Rows differ from the untouched template (or the blank start). */
+const rowsEdited = (rows: Row[], presetId?: string | null) =>
+  JSON.stringify(rows.map(rowInput)) !== JSON.stringify(baseRows(presetId).map(rowInput));
+
 const isProtocol = (rows: Row[]) => rows.some((r) => r.unit || r.requirement);
 const hasMeasure = (rows: Row[]) => rows.some((r) => r.unit);
 
@@ -56,28 +70,29 @@ export default function EgenkontrollTool({
 }: {
   defaultPreset?: string;
 } = {}) {
-  const seed = defaultPreset
-    ? EGENKONTROLL_PRESETS.find((p) => p.id === defaultPreset)
-    : undefined;
-  const [title, setTitle] = useState(seed?.name ?? '');
+  // Title stays empty: the template name is only the placeholder (and the
+  // fallback for PDF/Excel), so the user never has to delete text to type.
+  const [title, setTitle] = useState('');
   const [project, setProject] = useState('');
   const [responsible, setResponsible] = useState('');
   const [date, setDate] = useState('');
-  const [rows, setRows] = useState<Row[]>(
-    defaultPreset ? presetRows(defaultPreset) : [emptyRow(), emptyRow(), emptyRow()],
-  );
+  const [rows, setRows] = useState<Row[]>(() => baseRows(defaultPreset));
   const [meta, setMeta] = useState<Record<string, string>>({});
   const [busy, setBusy] = useState(false);
-  // Clarity showed most "dead clicks" landing on the template buttons: users
-  // clicked a template but got no visible feedback (the filled table is below
-  // the fold). Track the chosen preset to highlight it, and scroll the table
-  // into view so it's obvious the template was applied.
-  const [activePreset, setActivePreset] = useState<string | null>(defaultPreset ?? null);
+  // Clarity showed "dead clicks" on the template buttons (the filled table is
+  // below the fold): highlight the chosen preset and scroll the table into view.
   const rowsRef = useRef<HTMLDivElement>(null);
-  // Preset whose extra header fields / signatures / footnote apply. Kept separate
-  // from activePreset (the highlight), which resets when a draft is restored.
+  // Chosen template: highlight + extra header fields / signatures / footnote.
   const [presetId, setPresetId] = useState<string | null>(defaultPreset ?? null);
   const preset = EGENKONTROLL_PRESETS.find((p) => p.id === presetId);
+  const docTitle = title.trim() || preset?.name || 'Egenkontroll';
+  // Mobile shows the chips as one scrollable line — keep the chosen one in view.
+  const chipsRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const box = chipsRef.current;
+    const chip = box?.querySelector<HTMLElement>('.is-active');
+    if (box && chip) box.scrollLeft = chip.offsetLeft - box.offsetLeft - 12;
+  }, [presetId]);
   const protocol = isProtocol(rows);
   const measure = hasMeasure(rows);
 
@@ -98,28 +113,33 @@ export default function EgenkontrollTool({
           title: string; project: string; responsible: string;
           date: string; rows: Row[]; meta: Record<string, string>; presetId: string | null;
         }>;
+        // Restore only real user input — not a blank form, a just-picked
+        // template or the auto-filled date.
         const hasContent =
           !!d.title?.trim() ||
           !!d.project?.trim() ||
-          !!(d.rows?.some((r) => r.point?.trim() || r.comment?.trim() || r.result !== RESULTS[0]));
+          !!d.responsible?.trim() ||
+          Object.values(d.meta ?? {}).some((v) => v?.trim()) ||
+          (!!d.rows?.length && rowsEdited(d.rows, d.presetId));
         if (hasContent) {
           // eslint-disable-next-line react-hooks/set-state-in-effect -- restore the saved draft from localStorage after mount (not available during SSR).
-          if (d.title !== undefined) setTitle(d.title);
-          if (d.project !== undefined) setProject(d.project);
-          if (d.responsible !== undefined) setResponsible(d.responsible);
-          if (d.date !== undefined) setDate(d.date);
-          if (d.rows?.length) {
-            setRows(d.rows);
-            setActivePreset(null);
-          }
-          if (d.meta) setMeta(d.meta);
+          setTitle(d.title ?? '');
+          setProject(d.project ?? '');
+          setResponsible(d.responsible ?? '');
+          setDate(d.date || today());
+          if (d.rows?.length) setRows(d.rows);
+          setMeta(d.meta ?? {});
           if (d.presetId !== undefined) setPresetId(d.presetId);
           setRestored(true);
+          hydratedRef.current = true;
+          return;
         }
       }
     } catch {
       /* korrupt/otillgänglig storage – strunt i det */
     }
+    // Client-only default (SSR would render a different/empty value).
+    setDate(today());
     hydratedRef.current = true;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -142,12 +162,11 @@ export default function EgenkontrollTool({
     } catch {
       /* noop */
     }
-    setTitle(seed?.name ?? '');
+    setTitle('');
     setProject('');
     setResponsible('');
-    setDate('');
-    setRows(defaultPreset ? presetRows(defaultPreset) : [emptyRow(), emptyRow(), emptyRow()]);
-    setActivePreset(defaultPreset ?? null);
+    setDate(today());
+    setRows(baseRows(defaultPreset));
     setPresetId(defaultPreset ?? null);
     setMeta({});
     setRestored(false);
@@ -170,11 +189,10 @@ export default function EgenkontrollTool({
   const addRow = () => setRows((prev) => [...prev, emptyRow()]);
 
   const applyPreset = (id: string) => {
-    const chosen = EGENKONTROLL_PRESETS.find((p) => p.id === id);
-    if (!chosen) return;
-    setActivePreset(id);
+    if (id === presetId) return;
+    // Don't silently wipe points the user already answered/typed.
+    if (rowsEdited(rows, presetId) && !window.confirm('Ersätta dina kontrollpunkter med mallen?')) return;
     setPresetId(id);
-    setTitle(chosen.name);
     setRows(presetRows(id));
     // Let the table render, then bring it into view as clear confirmation.
     window.setTimeout(() => {
@@ -186,7 +204,7 @@ export default function EgenkontrollTool({
 
   // "Egenkontroll El" → egenkontroll-el (not egenkontroll-egenkontroll-el).
   const fileBase = () =>
-    `egenkontroll-${(title.trim() || 'kontroll').replace(/^egenkontroll\s*/i, '').trim() || 'kontroll'}`
+    `egenkontroll-${docTitle.replace(/^egenkontroll\s*/i, '').trim() || 'kontroll'}`
       .replace(/[\s/]+/g, '-')
       .toLowerCase();
 
@@ -213,7 +231,7 @@ export default function EgenkontrollTool({
 
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(20);
-      doc.text(pdfText(title.trim() || 'Egenkontroll'), marginX, y);
+      doc.text(pdfText(docTitle), marginX, y);
       doc.setFont('helvetica', 'normal');
       y += 26;
 
@@ -402,7 +420,7 @@ export default function EgenkontrollTool({
   // CSV opens directly in Excel/Google Sheets (BOM keeps åäö correct).
   function downloadCsv() {
     const out: (string | number)[][] = [
-      ['Egenkontroll', title.trim() || ''],
+      ['Egenkontroll', docTitle],
       ['Projekt', project.trim() || ''],
       ['Ansvarig', responsible.trim() || ''],
       ['Datum', date || ''],
@@ -435,43 +453,23 @@ export default function EgenkontrollTool({
   return (
     <div className="lm-tool">
       {restored ? (
-        <div
-          role="status"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 12,
-            flexWrap: 'wrap',
-            border: '1px solid rgba(22, 163, 74, 0.3)',
-            background: 'rgba(22, 163, 74, 0.08)',
-            borderRadius: 12,
-            padding: '10px 14px',
-            marginBottom: 16,
-          }}
-        >
-          <span style={{ fontSize: 14 }}>
-            ↩︎ Vi återställde ditt sparade utkast – fortsätt där du slutade.
-          </span>
-          <button
-            type="button"
-            className="lm-tool-secondary"
-            style={{ marginLeft: 'auto' }}
-            onClick={clearDraft}
-          >
+        <div className="lm-tool-draft" role="status">
+          <span>Utkast återställt</span>
+          <button type="button" onClick={clearDraft}>
             Börja om
           </button>
         </div>
       ) : null}
 
       <div className="lm-tool-presets">
-        <span className="lm-tool-presets-label">Börja från en färdig mall:</span>
-        <div className="lm-tool-presets-buttons">
+        <span className="lm-tool-presets-label">Mall</span>
+        <div className="lm-tool-presets-buttons" ref={chipsRef}>
           {EGENKONTROLL_PRESETS.map((preset) => (
             <button
               key={preset.id}
               type="button"
-              className={`lm-tool-preset${activePreset === preset.id ? ' is-active' : ''}`}
-              aria-pressed={activePreset === preset.id}
+              className={`lm-tool-preset${presetId === preset.id ? ' is-active' : ''}`}
+              aria-pressed={presetId === preset.id}
               onClick={() => applyPreset(preset.id)}
             >
               {preset.name}
@@ -490,11 +488,11 @@ export default function EgenkontrollTool({
         <div className="lm-tool-grid">
           <label className="lm-tool-field">
             <span>Titel</span>
-            <input value={title} onChange={(e) => setTitle(e.currentTarget.value)} placeholder="T.ex. Egenkontroll el" />
+            <input value={title} onChange={(e) => setTitle(e.currentTarget.value)} placeholder={preset?.name ?? 'Egenkontroll'} />
           </label>
           <label className="lm-tool-field">
             <span>Projekt</span>
-            <input value={project} onChange={(e) => setProject(e.currentTarget.value)} placeholder="T.ex. Nybyggnad Ekgatan 4" />
+            <input value={project} onChange={(e) => setProject(e.currentTarget.value)} placeholder="Projekt eller adress" />
           </label>
           <label className="lm-tool-field">
             <span>Ansvarig</span>
@@ -540,7 +538,7 @@ export default function EgenkontrollTool({
                 {showSection ? <div className="lm-tool-section-row">{row.section}</div> : null}
                 <div className={`lm-tool-row lm-tool-row-egen${measure ? ' lm-tool-row-egen-measure' : ''}`}>
                   <div className="lm-tool-row-point">
-                    <input value={row.point} placeholder="Vad kontrolleras" aria-label="Kontrollpunkt" onChange={(e) => setRow(index, { point: e.currentTarget.value })} />
+                    <input value={row.point} placeholder="Kontrollpunkt" aria-label="Kontrollpunkt" onChange={(e) => setRow(index, { point: e.currentTarget.value })} />
                     {row.method || row.requirement || row.reference ? (
                       <span className="lm-tool-row-ref">
                         {[
@@ -572,7 +570,7 @@ export default function EgenkontrollTool({
                       <span>{row.unit}</span>
                     </label>
                   ) : null}
-                  <input className={measure && !row.unit ? 'lm-tool-row-comment-wide' : undefined} value={row.comment} placeholder="Valfritt" aria-label="Kommentar" onChange={(e) => setRow(index, { comment: e.currentTarget.value })} />
+                  <input className={measure && !row.unit ? 'lm-tool-row-comment-wide' : undefined} value={row.comment} placeholder="Kommentar" aria-label="Kommentar" onChange={(e) => setRow(index, { comment: e.currentTarget.value })} />
                   <button type="button" className="lm-tool-row-remove" aria-label="Ta bort rad" onClick={() => removeRow(index)}>
                     ×
                   </button>
@@ -581,8 +579,6 @@ export default function EgenkontrollTool({
             );
           })}
         </div>
-
-        {preset?.footnote ? <p className="lm-tool-footnote">{preset.footnote}</p> : null}
 
         {stats.total > 0 ? (
           <div
@@ -622,10 +618,6 @@ export default function EgenkontrollTool({
             {busy ? 'Skapar PDF…' : 'Ladda ner PDF'}
           </button>
         </div>
-
-        <p className="lm-result-fine" style={{ marginTop: 8 }}>
-          💾 Utkastet sparas automatiskt i den här webbläsaren – du kan stänga sidan och fortsätta senare.
-        </p>
       </form>
 
       <ToolAppCta

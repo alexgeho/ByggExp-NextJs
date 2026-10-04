@@ -5,6 +5,17 @@
 - Картинки `public/landing/egenkontroll-ai/`: Recraft `recraftv4_1_raster`, фотореалистичные документы с точным шведским текстом в кавычках в промпте («Entreprenadavtal», «Egenkontroll» + строки), «isolated on plain pure white background, no shadow» → removeBackground → обрезка по альфе с порогом >40 (getbbox на RGBA не режет) → WebP. Скриншот приложения — настоящий (симулятор), фото объекта — Recraft.
 - Владелец: минимум текста; 3D-иконки и телефон в перчатке НЕ подошли — нужен реализм «как фото».
 
+## 🟢 2026-10-04 (вечер) — источник регистраций, GA4 sign_up, тёмная тема писем (live)
+### KLART
+- **Källa:** admin.byggexp.se (boot-скрипт в `app/layout.jsx`, `src/shared/signupSource.js`) запоминает UTM/referrer/landing в sessionStorage + читает `_ga`/`_ga_551T40R4WV`; форма регистрации шлёт `source`. API (`src/auth/signup-source.ts`) → `pendingRegistration.source` → `company.signupSource` + последняя кампания рассыльщика по email. Колонка «Källa» в Företag. Коммиты: backend 1fe946f, 434963f, admin 71d8402, b085e34.
+- **GA4 `sign_up`:** `src/analytics/ga-measurement.ts` (Measurement Protocol, G-551T40R4WV), секрет `GA_API_SECRET` (GitHub secrets backend → .env при деплое).
+- **Письма:** тёмная тема в `brandedHtml` (color-scheme, prefers-color-scheme + Outlook data-ogsc), белый лого `assets/email-logo-white.png`, текст кнопок по центру (78491f1).
+- Сайт не ведёт на самостоятельную регистрацию (CTA = «Boka demo»); регистрации идут прямо на admin.byggexp.se/register (из писем, баннера egenkontroll, приложения).
+### 🔜 NÄSTA STEG
+1. Завершить тестовую регистрацию «Test Källa AB» (ждёт пароля владельца) → проверить Källa + GA sign_up → отметить sign_up ключевым событием в GA → удалить тестовую компанию.
+2. Компании до 04.10 в «Källa» пустые — при желании бэкфилл совпадений с рассыльщиком по email.
+3. Рассыльщик: снимок письма фиксируется при старте кампании; правки шаблона в идущую кампанию не попадают (можно обновлять снимок при «Продолжить»).
+
 ## 📍 СТАТУС (кратко)
 Сайт в main/live (цены 26.09 уже на проде). Последняя сессия: **29.09 вечер — /contact, одно правило форм, Calendly, письма-лиды (бэкенд)**.
 Продолжать с «🔜 NÄSTA STEG» верхних сессий. Архив до 24.09 → `docs/worklog-archive.md`. Индекс доков → `docs/README.md`.

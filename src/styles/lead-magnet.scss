@@ -1320,3 +1320,148 @@
     text-align: center;
   }
 }
+
+// AI-egenkontroll teaser (AiEgenkontrollBanner.tsx) — "kommer snart" card under
+// the intro on egenkontroll pages, with an inline early-access field.
+.lm-ai-banner {
+  margin: 18px 0 22px;
+  padding: 22px 24px;
+  border-radius: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, #0f2350 0%, #2a2f8f 60%, #5b3fc4 100%);
+  box-shadow: 0 10px 26px rgba(15, 35, 80, 0.2);
+}
+
+.lm-ai-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #c9d6ff;
+}
+
+.lm-ai-pill {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #5fd0a0;
+  color: #0f2350;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lm-ai-headline {
+  margin: 0 0 14px;
+  font-size: 22px;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.lm-ai-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.lm-ai-steps li {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #e6edfb;
+}
+
+.lm-ai-steps strong {
+  color: #fff;
+}
+
+.lm-ai-num {
+  flex: 0 0 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.16);
+  font-weight: 700;
+  font-size: 13px;
+  color: #fff;
+}
+
+.lm-ai-form {
+  display: flex;
+  gap: 10px;
+  max-width: 520px;
+}
+
+.lm-ai-form input {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 999px;
+  font-size: 15px;
+  color: #0f2350;
+}
+
+.lm-ai-form button {
+  flex: 0 0 auto;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 999px;
+  background: #5fd0a0;
+  color: #0f2350;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.15s ease;
+}
+
+.lm-ai-form button:hover {
+  transform: translateY(-2px);
+}
+
+.lm-ai-form button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+}
+
+.lm-ai-micro {
+  margin: 9px 0 0;
+  font-size: 12.5px;
+  color: #b8c6f0;
+}
+
+.lm-ai-error {
+  color: #ffb4b4;
+}
+
+.lm-ai-thanks {
+  margin: 0;
+  font-weight: 600;
+  color: #5fd0a0;
+}
+
+@media (max-width: 760px) {
+  .lm-ai-banner {
+    padding: 18px;
+  }
+  .lm-ai-headline {
+    font-size: 19px;
+  }
+  .lm-ai-steps {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .lm-ai-form {
+    flex-direction: column;
+  }
+}

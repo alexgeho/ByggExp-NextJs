@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
+import AiEgenkontrollBanner from '../../../components/LeadMagnet/AiEgenkontrollBanner';
 import EgenkontrollTool from '../../../components/LeadMagnet/EgenkontrollTool';
 import LeadMagnetPage, {
   type LeadMagnetFaqItem,
@@ -97,6 +98,7 @@ export default function EgenkontrollMallPage() {
         badge="Gratis egenkontroll-mall"
         title="Egenkontroll – gratis mall att fylla i online"
         intro="Ladda ner en färdig egenkontroll-mall – eller skapa din egen och ladda ner den. Gratis, som PDF eller Excel, utan konto."
+        topBanner={<AiEgenkontrollBanner tool="egenkontroll-mall" />}
         tool={<EgenkontrollTool />}
         leadForm={<ToolLeadForm tool="egenkontroll-mall" />}
         preview={

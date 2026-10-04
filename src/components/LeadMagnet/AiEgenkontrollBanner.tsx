@@ -35,7 +35,11 @@ export default function AiEgenkontrollBanner({ tool }: { tool: string }) {
         <a
           className="lm-ai-primary"
           href={SIGNUP_URL}
-          onClick={() => gaEvent('cta_click', { tool, action: 'signup_egenkontroll', placement: 'ai_banner' })}
+          onClick={() => {
+            // Dedicated, directly countable GA4 event (+ Meta Pixel via gaEvent).
+            gaEvent('egenkontroll_prova_gratis', { tool });
+            gaEvent('cta_click', { tool, action: 'signup_egenkontroll', placement: 'ai_banner' });
+          }}
         >
           Prova gratis
         </a>

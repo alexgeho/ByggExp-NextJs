@@ -1400,10 +1400,11 @@
 
 .lm-ai-eq {
   display: flex;
-  align-items: center;
+  // Pictures share one top line so the numbered steps line up below them.
+  align-items: flex-start;
   justify-content: center;
   gap: 14px;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .lm-ai-eq__item {
@@ -1414,7 +1415,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  // Same 24px rhythm everywhere in the banner: picture → step → text → button.
+  gap: 24px;
 }
 
 .lm-ai-eq__item > img:not(.lm-ai-eq__photo) {
@@ -1448,6 +1450,8 @@
 
 .lm-ai-eq__op {
   flex: 0 0 auto;
+  align-self: flex-start;
+  margin-top: 76px;
   font-size: 34px;
   font-weight: 700;
   color: var(--blue);
@@ -1498,7 +1502,7 @@
 
 .lm-ai-how {
   max-width: 620px;
-  margin: 0 auto 20px;
+  margin: 0 auto 24px;
   font-size: 15px;
   line-height: 1.55;
   color: var(--ink-2);
@@ -1539,14 +1543,18 @@
 
 @media (max-width: 760px) {
   .lm-ai-banner { padding: 20px 14px; }
+  // Phone: same rhythm, 16px.
+  .lm-ai-eq__item { gap: 16px; }
+  .lm-ai-eq { margin-bottom: 16px; }
+  .lm-ai-how { margin-bottom: 16px; }
   .lm-ai-headline { font-size: 22px; }
   .lm-ai-eq { gap: 6px; }
   .lm-ai-eq__item > img:not(.lm-ai-eq__photo) { height: 110px; }
-  .lm-ai-eq__op { font-size: 24px; }
-  .lm-ai-eq__phone { width: 58px; height: 116px; padding: 3px; border-radius: 12px; }
+  .lm-ai-eq__op { font-size: 24px; margin-top: 40px; }
+  .lm-ai-eq__phone { width: 55px; height: 110px; padding: 3px; border-radius: 12px; }
   .lm-ai-eq__phone img { border-radius: 9px; }
   .lm-ai-eq__photo { width: 44px; height: 44px; border-width: 2px; }
-  .lm-ai-eq__photo--1 { top: 8px; left: calc(50% - 62px); }
+  .lm-ai-eq__photo--1 { top: 8px; left: calc(50% - 48px); }
   .lm-ai-eq__photo--2 { display: none; }
   .lm-ai-eq__item figcaption { flex-direction: column; align-items: center; text-align: center; font-size: 12px; gap: 4px; }
   .lm-ai-eq__n { flex: 0 0 auto; width: 20px; height: 20px; font-size: 11px; }

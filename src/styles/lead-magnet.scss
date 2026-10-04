@@ -1323,12 +1323,8 @@
 
 // AI egenkontroll banner (AiEgenkontrollBanner.tsx) — site colours: soft blue
 // card, ink text, primary blue CTA (same as "Boka demo" in the header). Copy on
-// the left, a CSS-only preview of a filled-in egenkontroll on the right.
+// one line: headline, 3-step icon flow, two buttons.
 .lm-ai-banner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  gap: 28px;
-  align-items: center;
   margin: 22px 0 28px;
   padding: 28px;
   border-radius: 20px;
@@ -1373,6 +1369,44 @@
   color: var(--ink-2);
 }
 
+.lm-ai-flow {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.lm-ai-flow li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+// Arrow between steps.
+.lm-ai-flow li + li::before {
+  content: '→';
+  margin-right: 4px;
+  color: var(--muted-2);
+  font-weight: 400;
+}
+
+.lm-ai-flow__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: var(--blue);
+}
+
 .lm-ai-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1411,87 +1445,13 @@
   color: var(--muted);
 }
 
-.lm-ai-preview {
-  background: #fff;
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 12px 30px rgba(10, 24, 40, 0.08);
-}
-
-.lm-ai-preview__head {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--ink);
-}
-
-.lm-ai-preview__count {
-  color: var(--green-2);
-}
-
-.lm-ai-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 0;
-  font-size: 13.5px;
-  color: var(--muted);
-}
-
-.lm-ai-check {
-  flex: 0 0 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1.5px solid var(--muted-2);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.lm-ai-row + .lm-ai-row {
-  border-top: 1px solid var(--line);
-}
-
-.lm-ai-row.is-done {
-  color: var(--ink);
-}
-
-.lm-ai-row.is-done .lm-ai-check {
-  background: var(--green-2);
-  border-color: var(--green-2);
-}
-
-.lm-ai-row__text {
-  flex: 1;
-  min-width: 0;
-}
-
-.lm-ai-row__date {
-  font-size: 12px;
-  color: var(--muted);
-}
-
-.lm-ai-photo {
-  flex: 0 0 30px;
-  height: 30px;
-  border-radius: 6px;
-  background: linear-gradient(135deg, #c9d6e3 0%, #8fa6bd 55%, #5b7591 100%);
-}
-
 @media (max-width: 860px) {
   .lm-ai-banner {
-    grid-template-columns: 1fr;
     padding: 20px;
-    gap: 20px;
   }
   .lm-ai-headline { font-size: 22px; }
-  // Phone: keep it short — copy + buttons only.
-  .lm-ai-preview { display: none; }
+  .lm-ai-flow { flex-direction: column; align-items: flex-start; }
+  .lm-ai-flow li + li::before { content: none; }
   .lm-ai-primary,
   .lm-ai-secondary { flex: 1 1 auto; text-align: center; }
 }

@@ -1,7 +1,13 @@
-import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
+import type {
+  GetStaticPaths,
+  GetStaticProps,
+  InferGetStaticPropsType,
+} from "next";
 import Head from "next/head";
 
-import BenefitSlider, { type SliderCard } from "../../components/Benefits/BenefitSlider";
+import BenefitSlider, {
+  type SliderCard,
+} from "../../components/Benefits/BenefitSlider";
 import CTA from "../../components/CTA/CTA";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
@@ -28,25 +34,79 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => ({
 
 // Same carousel + glass 3D icons as the home page "Vad får ni…" block.
 const BENEFITS: { id: string; icon: string; title: string; text: string }[] = [
-  { id: "faktura", icon: "/landing/enmansforetag/benefits/faktura.webp", title: "Fakturera på minuten", text: "Faktura klar direkt från offert eller tid." },
-  { id: "kund", icon: "/landing/enmansforetag/benefits/kund-paminnelse.webp", title: "Påminnelse när kunden inte betalat", text: "Appen säger till – du slipper hålla koll." },
-  { id: "lev", icon: "/landing/enmansforetag/benefits/leverantor.webp", title: "Dina fakturor i tid", text: "Påminnelse innan leverantörsfakturan förfaller." },
-  { id: "kvitton", icon: "/landing/enmansforetag/benefits/kvitton.webp", title: "Kvitton med mobilen", text: "Fota – klart för bokföringen." },
-  { id: "anteckningar", icon: "/landing/enmansforetag/benefits/anteckningar.webp", title: "Anteckningar med påminnelse", text: "Skriv ner direkt – appen påminner i rätt tid." },
-  { id: "uppgifter", icon: "/landing/enmansforetag/benefits/uppgifter.webp", title: "Uppgifter med deadline", text: "Allt som ska göras – med påminnelse innan det är för sent." },
+  {
+    id: "faktura",
+    icon: "/landing/enmansforetag/benefits/faktura.webp",
+    title: "Fakturera på minuten",
+    text: "Faktura klar direkt från offert eller tid.",
+  },
+  {
+    id: "kund",
+    icon: "/landing/enmansforetag/benefits/kund-paminnelse.webp",
+    title: "Påminnelse när kunden inte betalat",
+    text: "Appen säger till – du slipper hålla koll.",
+  },
+  {
+    id: "lev",
+    icon: "/landing/enmansforetag/benefits/leverantor.webp",
+    title: "Dina fakturor i tid",
+    text: "Påminnelse innan leverantörsfakturan förfaller.",
+  },
+  {
+    id: "kvitton",
+    icon: "/landing/enmansforetag/benefits/kvitton.webp",
+    title: "Kvitton med mobilen",
+    text: "Fota – klart för bokföringen.",
+  },
+  {
+    id: "anteckningar",
+    icon: "/landing/enmansforetag/benefits/anteckningar.webp",
+    title: "Anteckningar med påminnelse",
+    text: "Skriv ner direkt – appen påminner i rätt tid.",
+  },
+  {
+    id: "uppgifter",
+    icon: "/landing/enmansforetag/benefits/uppgifter.webp",
+    title: "Uppgifter med deadline",
+    text: "Allt som ska göras – med påminnelse innan det är för sent.",
+  },
 ];
 const BENEFIT_CARDS: SliderCard[] = BENEFITS.map((b) => ({
   id: b.id,
-  icon: <img src={b.icon} alt="" width={256} height={256} loading="lazy" decoding="async" />,
+  icon: (
+    <img
+      src={b.icon}
+      alt=""
+      width={256}
+      height={256}
+      loading="lazy"
+      decoding="async"
+    />
+  ),
   iconClass: "benefit-icon-3d",
   title: b.title,
   text: b.text,
 }));
 
 const STEPS = [
-  { img: "/landing/features/7offerter-1200.webp", alt: "Offert i ByggExp på dator och mobil", title: "Offert", text: "Rader, pris, ROT-avdrag och moms. Skicka till kunden och följ status." },
-  { img: "/landing/features/1arbetspass-1200.webp", alt: "Tidrapport i ByggExp på dator och mobil", title: "Jobbet", text: "Tid, material och ÄTA loggas direkt på projektet." },
-  { img: "/landing/features/8fakturor-1200.webp", alt: "Faktura i ByggExp på dator och mobil", title: "Faktura", text: "Allt som loggats blir en faktura. Du ser vad som är betalt och obetalt." },
+  {
+    img: "/landing/features/7offerter-1200.webp",
+    alt: "Offert i ByggExp på dator och mobil",
+    title: "Offert",
+    text: "Rader, pris, ROT-avdrag och moms. Skicka till kunden och följ status.",
+  },
+  {
+    img: "/landing/features/1arbetspass-1200.webp",
+    alt: "Tidrapport i ByggExp på dator och mobil",
+    title: "Jobbet",
+    text: "Tid, material och ÄTA loggas direkt på projektet.",
+  },
+  {
+    img: "/landing/features/8fakturor-1200.webp",
+    alt: "Faktura i ByggExp på dator och mobil",
+    title: "Faktura",
+    text: "Allt som loggats blir en faktura. Du ser vad som är betalt och obetalt.",
+  },
 ];
 
 type Feature = {
@@ -60,13 +120,6 @@ type Feature = {
 };
 
 const FEATURES: Feature[] = [
-  {
-    eyebrow: "Lönsamhet",
-    title: "Vet du vilket jobb som faktiskt lönar sig?",
-    text: "ByggExp visar budget mot utfall, vad timmar och material kostar och marginalen per projekt i realtid – du ser direkt om ett jobb börjar gå back.",
-    img: "/landing/features/9ekonomi-1200.webp",
-    alt: "Projektets ekonomi i ByggExp: budget, kostnader och marginal",
-  },
   {
     eyebrow: "Kvitton och utlägg",
     title: "Släpp in kvittot – ByggExp läser av resten",
@@ -83,7 +136,10 @@ const FEATURES: Feature[] = [
     eyebrow: "Påminnelser",
     title: "Appen kommer ihåg – inte du",
     text: "Lägg in en uppgift med tid – ByggExp påminner dig i telefonen tills du markerar den som klar.",
-    bullets: ["Var 15:e minut, varje timme, dag eller vecka", "Återkommande uppgifter skapas automatiskt igen"],
+    bullets: [
+      "Var 15:e minut, varje timme, dag eller vecka",
+      "Återkommande uppgifter skapas automatiskt igen",
+    ],
     img: "/landing/enmansforetag/paminnelse-uppgift.webp",
     alt: "Uppgift med påminnelse i ByggExp och påminnelse på telefonens låsskärm",
   },
@@ -110,6 +166,13 @@ const FEATURES: Feature[] = [
     img: "/landing/features/4foto-1200.webp",
     alt: "Projektets foton i ByggExp på dator och mobil",
   },
+  {
+    eyebrow: "Lönsamhet",
+    title: "Vet du vilket jobb som faktiskt lönar sig?",
+    text: "ByggExp visar budget mot utfall, vad timmar och material kostar och marginalen per projekt i realtid – du ser direkt om ett jobb börjar gå back.",
+    img: "/landing/features/9ekonomi-1200.webp",
+    alt: "Projektets ekonomi i ByggExp: budget, kostnader och marginal",
+  },
 ];
 
 const INCLUDED = [
@@ -120,7 +183,9 @@ const INCLUDED = [
   "Projektekonomi: budget, kalkyl och lönsamhet",
 ];
 
-export default function EnmansforetagPage({ lang }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function EnmansforetagPage({
+  lang,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   const headerT = headerTranslations[lang];
   const ctaT = ctaTranslations[lang];
   const footerT = footerTranslations[lang];
@@ -155,8 +220,8 @@ export default function EnmansforetagPage({ lang }: InferGetStaticPropsType<type
                 Sköter du allt själv? <span>Låt appen ta pappersarbetet.</span>
               </h1>
               <p className="em-lead">
-                Offerter, fakturor, kvitton och deadlines – i en och samma telefon. ByggExp tar kvällens
-                pappersarbete.
+                Offerter, fakturor, kvitton och deadlines – i en och samma
+                telefon. ByggExp tar kvällens pappersarbete.
               </p>
               <a href="#cta" className="btn-primary">
                 Boka demo
@@ -168,8 +233,16 @@ export default function EnmansforetagPage({ lang }: InferGetStaticPropsType<type
               </ul>
             </div>
             <div className="em-hero-visual">
-              <img className="em-hero-laptop" src="/landing/features/9ekonomi-1200.webp" alt="ByggExp i adminpanelen" />
-              <img className="em-hero-phone" src="/landing/hero/phone-3d.webp" alt="ByggExp-appen i mobilen" />
+              <img
+                className="em-hero-laptop"
+                src="/landing/features/9ekonomi-1200.webp"
+                alt="ByggExp i adminpanelen"
+              />
+              <img
+                className="em-hero-phone"
+                src="/landing/hero/phone-3d.webp"
+                alt="ByggExp-appen i mobilen"
+              />
             </div>
           </div>
         </section>
@@ -191,7 +264,10 @@ export default function EnmansforetagPage({ lang }: InferGetStaticPropsType<type
 
         {/* FEATURE ROWS — image side alternates */}
         {FEATURES.map((f, i) => (
-          <section key={f.title} className={`em-feature${i % 2 === 0 ? "" : " em-feature-reverse"}`}>
+          <section
+            key={f.title}
+            className={`em-feature${i % 2 === 0 ? "" : " em-feature-reverse"}`}
+          >
             <div className="container em-feature-inner">
               <div className="em-feature-text">
                 <p className="em-eyebrow">{f.eyebrow}</p>
@@ -263,8 +339,8 @@ export default function EnmansforetagPage({ lang }: InferGetStaticPropsType<type
                 ))}
               </ul>
               <p>
-                Anställer du din första medarbetare? Löner och AGI ingår redan. Tidrapport och planering finns i
-                paketen för 690 och 990 SEK.
+                Anställer du din första medarbetare? Löner och AGI ingår redan.
+                Tidrapport och planering finns i paketen för 690 och 990 SEK.
               </p>
             </div>
           </div>

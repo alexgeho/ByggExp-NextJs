@@ -275,7 +275,7 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
             <ul className="kontakt-mail-list">
               <li>
                 <span>{t.emailSales}</span>
-                <a href="mailto:sales@byggexp.se">sales@byggexp.se</a>
+                <a href="mailto:kontakt@byggexp.se">kontakt@byggexp.se</a>
               </li>
               <li>
                 <span>{t.emailSupport}</span>

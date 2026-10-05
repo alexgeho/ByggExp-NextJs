@@ -354,9 +354,22 @@ export default function EnmansforetagPage({
             </div>
             <div className="em-price-box">
               <h3>Det här ingår</h3>
-              <ul className="em-bullets">
+              <ul className="step-bullets">
                 {INCLUDED.map((x) => (
-                  <li key={x}>{x}</li>
+                  <li key={x}>
+                    <span className="check">
+                      <svg viewBox="0 0 14 10" fill="none">
+                        <path
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="m1 5 4 4 8-8"
+                        />
+                      </svg>
+                    </span>
+                    {x}
+                  </li>
                 ))}
               </ul>
               <p>

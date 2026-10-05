@@ -243,12 +243,7 @@
 .em {
   --em-gap: 96px;
 }
-.em-feature {
-  padding: calc(var(--em-gap) / 2) 0;
-}
-.benefits + .em-feature {
-  padding-top: var(--em-gap);
-}
+
 .em-feature-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -279,7 +274,7 @@
 
 /* PRICE */
 .em-price {
-  padding: calc(var(--em-gap) / 2) 0 var(--em-gap);
+  padding: var(--em-gap) 0;
 }
 .em-price-num {
   font-size: clamp(3rem, 6vw, 5rem);
@@ -343,7 +338,7 @@
 
 /* screenshots open full-size on click */
 .em-hero-visual img,
-.em-feature img {
+.features .step-visual img {
   cursor: zoom-in;
 }
 

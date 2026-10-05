@@ -4,7 +4,7 @@ import type {
   InferGetStaticPropsType,
 } from "next";
 import Head from "next/head";
-import { useEffect, useState, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 
 import BenefitSlider, {
   type SliderCard,
@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => ({
   props: { lang: params?.lang as LandingLanguageCode },
 });
 
-const ZOOMABLE = ".em-hero-visual img, .em-feature img";
+const ZOOMABLE = ".em-hero-visual img, .features .step-visual img";
 
 // Same carousel + glass 3D icons as the home page "Vad får ni…" block.
 const BENEFITS: { id: string; icon: string; title: string; text: string }[] = [
@@ -94,18 +94,15 @@ const BENEFIT_CARDS: SliderCard[] = BENEFITS.map((b) => ({
 }));
 
 type Feature = {
-  eyebrow: string;
   title: string;
   text: string;
   bullets?: string[];
   img: string;
   alt: string;
-  phone?: boolean;
 };
 
 const FEATURES: Feature[] = [
   {
-    eyebrow: "Leverantörsfakturor",
     title: "Ingen leverantörsfaktura glöms bort",
     text: "Lägg in fakturan från grossisten eller maskinuthyraren – ByggExp påminner i god tid före förfallodagen.",
     bullets: [
@@ -117,7 +114,6 @@ const FEATURES: Feature[] = [
     alt: "Inköpsfakturor i ByggExp och notis i telefonen: faktura att betala, förfaller om 7 dagar",
   },
   {
-    eyebrow: "Kvitton och utlägg",
     title: "Släpp in kvittot – ByggExp läser av resten",
     text: "Fota kvittot i appen eller dra in det i adminpanelen. Leverantör, datum och belopp läses av automatiskt.",
     bullets: [
@@ -129,7 +125,6 @@ const FEATURES: Feature[] = [
     alt: "Utlägg i ByggExp: kvittolista i adminpanelen och nytt utlägg i mobilen",
   },
   {
-    eyebrow: "Påminnelser",
     title: "Appen kommer ihåg – inte du",
     text: "Lägg in en uppgift med tid – ByggExp påminner dig i telefonen tills du markerar den som klar.",
     bullets: [
@@ -140,7 +135,6 @@ const FEATURES: Feature[] = [
     alt: "Uppgift med påminnelse i ByggExp och påminnelse på telefonens låsskärm",
   },
   {
-    eyebrow: "Dokumentation",
     title: "Foton och kontroller – i projektet, inte i pärmar",
     text: "Foton, byggdagbok och egenkontroller sparas på rätt projekt.",
     bullets: [
@@ -151,7 +145,6 @@ const FEATURES: Feature[] = [
     alt: "Projektets foton i ByggExp på dator och mobil",
   },
   {
-    eyebrow: "Lönsamhet",
     title: "Vet du vilket jobb som faktiskt lönar sig?",
     text: "ByggExp visar budget mot utfall, vad timmar och material kostar och marginalen per projekt i realtid – du ser direkt om ett jobb börjar gå back.",
     img: "/landing/features/9ekonomi-1200.webp",
@@ -174,6 +167,25 @@ export default function EnmansforetagPage({
   // Every screenshot on the page opens full-size on click (same lightbox as the
   // home-page features). One delegated handler, so new images need no wiring.
   const [lightbox, setLightbox] = useState<string | null>(null);
+
+  // Features carousel — same scrolling as components/Features (gap 24px there).
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const cardStep = () => {
+    const card = sliderRef.current?.querySelector<HTMLElement>(".step");
+    return card ? card.offsetWidth + 24 : 0;
+  };
+  const scrollToSlide = (n: number) => {
+    const step = cardStep();
+    if (!step || n < 0 || n >= FEATURES.length) return;
+    sliderRef.current?.scrollTo({ left: n * step, behavior: "smooth" });
+    setActiveSlide(n);
+  };
+  const handleSliderScroll = () => {
+    const step = cardStep();
+    if (step && sliderRef.current)
+      setActiveSlide(Math.round(sliderRef.current.scrollLeft / step));
+  };
   const openImage = (e: MouseEvent<HTMLElement>) => {
     const img = (e.target as HTMLElement).closest<HTMLImageElement>(ZOOMABLE);
     if (img) setLightbox(img.currentSrc || img.src);
@@ -254,40 +266,82 @@ export default function EnmansforetagPage({
           </div>
         </section>
 
-        {/* FEATURE ROWS — image side alternates */}
-        {FEATURES.map((f, i) => (
-          <section
-            key={f.title}
-            className={`em-feature${i % 2 === 0 ? "" : " em-feature-reverse"}`}
-          >
-            <div className="container em-feature-inner">
-              <div className="em-feature-text">
-                <p className="em-eyebrow">{f.eyebrow}</p>
-                <h2>{f.title}</h2>
-                <p className="em-lead">{f.text}</p>
-                {f.bullets ? (
-                  <ul className="step-bullets">
-                    {f.bullets.map((b, n) => (
-                      <li key={b}>
-                        <span className="number">{n + 1}</span>
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
-              </div>
-              <div className="em-feature-visual">
-                {f.phone ? (
-                  <div className="em-phone">
-                    <img src={f.img} alt={f.alt} />
+        {/* FEATURES — same carousel as the home page "features" block */}
+        <section className="features">
+          <div className="container">
+            <div className="section-head">
+              <span className="eyebrow">Funktioner</span>
+              <h2>
+                Allt samlat – <em>i telefonen</em>
+              </h2>
+            </div>
+            <div className="features-slider">
+              <button
+                type="button"
+                className="features-arrow features-arrow-left"
+                onClick={() => scrollToSlide(activeSlide - 1)}
+                disabled={activeSlide === 0}
+                aria-label="Föregående"
+              >
+                ‹
+              </button>
+              <div
+                className="featuresOptions"
+                ref={sliderRef}
+                onScroll={handleSliderScroll}
+              >
+                {FEATURES.map((f) => (
+                  <div className="step" key={f.title}>
+                    <div className="step-text-block">
+                      <h3>{f.title}</h3>
+                      <p className="step-text">{f.text}</p>
+                      {f.bullets ? (
+                        <ul className="step-bullets">
+                          {f.bullets.map((b, n) => (
+                            <li key={b}>
+                              <span className="number">{n + 1}</span>
+                              {b}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </div>
+                    <div className="step-visual">
+                      <div className="phone-shell">
+                        <img
+                          src={f.img}
+                          alt={f.alt}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    </div>
                   </div>
-                ) : (
-                  <img className="em-mockup" src={f.img} alt={f.alt} />
-                )}
+                ))}
+              </div>
+              <button
+                type="button"
+                className="features-arrow features-arrow-right"
+                onClick={() => scrollToSlide(activeSlide + 1)}
+                disabled={activeSlide === FEATURES.length - 1}
+                aria-label="Nästa"
+              >
+                ›
+              </button>
+            </div>
+            <div className="features-controls">
+              <div className="features-dots">
+                {FEATURES.map((f, n) => (
+                  <span
+                    key={f.title}
+                    className={activeSlide === n ? "active" : ""}
+                    onClick={() => scrollToSlide(n)}
+                  />
+                ))}
               </div>
             </div>
-          </section>
-        ))}
+          </div>
+        </section>
 
         {/* PRICE — the "Koll på pengarna" card from the pricing page, as is */}
         <section className="em-price">

@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => ({
   props: { lang: params?.lang as LandingLanguageCode },
 });
 
-const ZOOMABLE = ".em-hero-visual img, .em-feature img, .em-step img";
+const ZOOMABLE = ".em-hero-visual img, .em-feature img";
 
 // Same carousel + glass 3D icons as the home page "Vad får ni…" block.
 const BENEFITS: { id: string; icon: string; title: string; text: string }[] = [
@@ -92,27 +92,6 @@ const BENEFIT_CARDS: SliderCard[] = BENEFITS.map((b) => ({
   title: b.title,
   text: b.text,
 }));
-
-const STEPS = [
-  {
-    img: "/landing/features/7offerter-1200.webp",
-    alt: "Offert i ByggExp på dator och mobil",
-    title: "Offert",
-    text: "Rader, pris, ROT-avdrag och moms. Skicka till kunden och följ status.",
-  },
-  {
-    img: "/landing/features/1arbetspass-1200.webp",
-    alt: "Tidrapport i ByggExp på dator och mobil",
-    title: "Jobbet",
-    text: "Tid, material och ÄTA loggas direkt på projektet.",
-  },
-  {
-    img: "/landing/features/8fakturor-1200.webp",
-    alt: "Faktura i ByggExp på dator och mobil",
-    title: "Faktura",
-    text: "Allt som loggats blir en faktura. Du ser vad som är betalt och obetalt.",
-  },
-];
 
 type Feature = {
   eyebrow: string;
@@ -309,24 +288,6 @@ export default function EnmansforetagPage({
             </div>
           </section>
         ))}
-
-        {/* QUOTE → INVOICE */}
-        <section className="em-steps">
-          <div className="container">
-            <p className="em-eyebrow">Offert och faktura</p>
-            <h2>Från offert till betald faktura – utan att skriva om något</h2>
-            <div className="em-steps-grid">
-              {STEPS.map((s, i) => (
-                <div key={s.title} className="em-step">
-                  <img src={s.img} alt={s.alt} />
-                  <span className="em-step-label">Steg {i + 1}</span>
-                  <h3>{s.title}</h3>
-                  <p>{s.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* PRICE — the "Koll på pengarna" card from the pricing page, as is */}
         <section className="em-price">

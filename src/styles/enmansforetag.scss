@@ -328,3 +328,10 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* screenshots open full-size on click */
+.em-hero-visual img,
+.em-feature img,
+.em-step img {
+  cursor: zoom-in;
+}

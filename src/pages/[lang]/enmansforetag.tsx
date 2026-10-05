@@ -4,6 +4,7 @@ import type {
   InferGetStaticPropsType,
 } from "next";
 import Head from "next/head";
+import { useEffect, useState, type MouseEvent } from "react";
 
 import BenefitSlider, {
   type SliderCard,
@@ -31,6 +32,8 @@ export const getStaticPaths: GetStaticPaths<Props> = async () => ({
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => ({
   props: { lang: params?.lang as LandingLanguageCode },
 });
+
+const ZOOMABLE = ".em-hero-visual img, .em-feature img, .em-step img";
 
 // Same carousel + glass 3D icons as the home page "Vad får ni…" block.
 const BENEFITS: { id: string; icon: string; title: string; text: string }[] = [
@@ -121,6 +124,18 @@ type Feature = {
 
 const FEATURES: Feature[] = [
   {
+    eyebrow: "Leverantörsfakturor",
+    title: "Ingen leverantörsfaktura glöms bort",
+    text: "Lägg in fakturan från grossisten eller maskinuthyraren – ByggExp påminner i god tid före förfallodagen.",
+    bullets: [
+      "Notis i telefonen före förfallodagen",
+      "Mindre risk för påminnelseavgifter och dröjsmålsränta",
+      "Kostnaden hamnar direkt på rätt projekt",
+    ],
+    img: "/landing/enmansforetag/leverantorsfakturor.webp",
+    alt: "Inköpsfakturor i ByggExp och notis i telefonen: faktura att betala, förfaller om 7 dagar",
+  },
+  {
     eyebrow: "Kvitton och utlägg",
     title: "Släpp in kvittot – ByggExp läser av resten",
     text: "Fota kvittot i appen eller dra in det i adminpanelen. Leverantör, datum och belopp läses av automatiskt.",
@@ -142,18 +157,6 @@ const FEATURES: Feature[] = [
     ],
     img: "/landing/enmansforetag/paminnelse-uppgift.webp",
     alt: "Uppgift med påminnelse i ByggExp och påminnelse på telefonens låsskärm",
-  },
-  {
-    eyebrow: "Leverantörsfakturor",
-    title: "Ingen leverantörsfaktura glöms bort",
-    text: "Lägg in fakturan från grossisten eller maskinuthyraren – ByggExp påminner i god tid före förfallodagen.",
-    bullets: [
-      "Notis i telefonen före förfallodagen",
-      "Mindre risk för påminnelseavgifter och dröjsmålsränta",
-      "Kostnaden hamnar direkt på rätt projekt",
-    ],
-    img: "/landing/enmansforetag/leverantorsfakturor.webp",
-    alt: "Inköpsfakturor i ByggExp och notis i telefonen: faktura att betala, förfaller om 7 dagar",
   },
   {
     eyebrow: "Dokumentation",
@@ -194,6 +197,26 @@ export default function EnmansforetagPage({
     "Driver du byggfirman själv? ByggExp samlar offerter, fakturor, kvitton och deadlines i telefonen – från 299 SEK/månad, 2 veckor gratis.";
   const canonicalUrl = `${localeOrigin(lang)}/${lang}/enmansforetag`;
 
+  // Every screenshot on the page opens full-size on click (same lightbox as the
+  // home-page features). One delegated handler, so new images need no wiring.
+  const [lightbox, setLightbox] = useState<string | null>(null);
+  const openImage = (e: MouseEvent<HTMLElement>) => {
+    const img = (e.target as HTMLElement).closest<HTMLImageElement>(ZOOMABLE);
+    if (img) setLightbox(img.currentSrc || img.src);
+  };
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [lightbox]);
+
   return (
     <>
       <Head>
@@ -207,7 +230,7 @@ export default function EnmansforetagPage({
       </Head>
       <Header headerT={headerT} />
 
-      <main className="em">
+      <main className="em" onClick={openImage}>
         {/* HERO — white */}
         <section className="em-hero">
           <div className="container em-hero-inner">
@@ -341,6 +364,32 @@ export default function EnmansforetagPage({
           </div>
         </section>
       </main>
+
+      {lightbox && (
+        <div className="image-lightbox" onClick={() => setLightbox(null)}>
+          <button
+            type="button"
+            className="image-lightbox-close"
+            onClick={() => setLightbox(null)}
+            aria-label="Stäng"
+          >
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                d="m5 5 14 14M19 5 5 19"
+              />
+            </svg>
+          </button>
+          <img
+            src={lightbox}
+            alt=""
+            className="image-lightbox-img"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
 
       <CTA ctaT={ctaT} />
       <Footer footerT={footerT} />

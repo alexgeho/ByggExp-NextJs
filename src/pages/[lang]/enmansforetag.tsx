@@ -1,6 +1,7 @@
 import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 
+import BenefitSlider, { type SliderCard } from "../../components/Benefits/BenefitSlider";
 import CTA from "../../components/CTA/CTA";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
@@ -25,12 +26,22 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => ({
   props: { lang: params?.lang as LandingLanguageCode },
 });
 
-const PAINS = [
-  { icon: "/landing/benefits/card6.webp", title: "Offerter och kundfakturor", text: "skrivs på kvällen, betalningen måste följas upp" },
-  { icon: "/landing/benefits/card7.webp", title: "Kvitton", text: "ligger i handskfacket och i fickan" },
-  { icon: "/landing/benefits/card5.webp", title: "Deadlines", text: "finns bara i huvudet" },
-  { icon: "/landing/benefits/card8.webp", title: "Leverantörsfakturor", text: "ska betalas i tid" },
+// Same carousel + glass 3D icons as the home page "Vad får ni…" block.
+const BENEFITS: { id: string; icon: string; title: string; text: string }[] = [
+  { id: "faktura", icon: "/landing/enmansforetag/benefits/faktura.webp", title: "Fakturera på minuten", text: "Faktura klar direkt från offert eller tid." },
+  { id: "kund", icon: "/landing/enmansforetag/benefits/kund-paminnelse.webp", title: "Påminnelse när kunden inte betalat", text: "Appen säger till – du slipper hålla koll." },
+  { id: "lev", icon: "/landing/enmansforetag/benefits/leverantor.webp", title: "Dina fakturor i tid", text: "Påminnelse innan leverantörsfakturan förfaller." },
+  { id: "kvitton", icon: "/landing/enmansforetag/benefits/kvitton.webp", title: "Kvitton med mobilen", text: "Fota – klart för bokföringen." },
+  { id: "anteckningar", icon: "/landing/enmansforetag/benefits/anteckningar.webp", title: "Anteckningar med påminnelse", text: "Skriv ner direkt – appen påminner i rätt tid." },
+  { id: "uppgifter", icon: "/landing/enmansforetag/benefits/uppgifter.webp", title: "Uppgifter med deadline", text: "Allt som ska göras – med påminnelse innan det är för sent." },
 ];
+const BENEFIT_CARDS: SliderCard[] = BENEFITS.map((b) => ({
+  id: b.id,
+  icon: <img src={b.icon} alt="" width={256} height={256} loading="lazy" decoding="async" />,
+  iconClass: "benefit-icon-3d",
+  title: b.title,
+  text: b.text,
+}));
 
 const STEPS = [
   { img: "/landing/features/7offerter-1200.webp", alt: "Offert i ByggExp på dator och mobil", title: "Offert", text: "Rader, pris, ROT-avdrag och moms. Skicka till kunden och följ status." },
@@ -165,21 +176,17 @@ export default function EnmansforetagPage({ lang }: InferGetStaticPropsType<type
           </div>
         </section>
 
-        {/* PROBLEM — dark, 3D icons as on the site */}
-        <section className="em-pain">
+        {/* BENEFITS — carousel as on the home page */}
+        <section className="benefits">
           <div className="container">
-            <p className="em-eyebrow em-eyebrow-dark">Utan anställda</p>
-            <h2>
-              Du är hantverkare, säljare och ekonom – <span>samtidigt</span>
-            </h2>
-            <div className="em-pain-grid">
-              {PAINS.map((p) => (
-                <div key={p.title} className="em-pain-item">
-                  <img src={p.icon} alt="" />
-                  <h3>{p.title}</h3>
-                  <p>{p.text}</p>
-                </div>
-              ))}
+            <div className="section-head section-head--dark">
+              <span className="eyebrow">Utan anställda</span>
+              <h2>
+                Få betalt i tid. <em>Betala i tid.</em>
+              </h2>
+            </div>
+            <div className="benefits-single">
+              <BenefitSlider cards={BENEFIT_CARDS} />
             </div>
           </div>
         </section>

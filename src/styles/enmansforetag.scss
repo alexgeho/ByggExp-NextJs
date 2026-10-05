@@ -361,7 +361,8 @@
 }
 .em-price-card {
   width: 100%;
-  max-width: 440px;
+  /* wide enough for every included item on one line */
+  max-width: 560px;
   text-align: left;
   .em-checks {
     justify-content: center;

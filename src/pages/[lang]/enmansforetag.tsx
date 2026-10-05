@@ -134,7 +134,7 @@ const FEATURES: Feature[] = [
       "Mindre risk för påminnelseavgifter och dröjsmålsränta",
       "Kostnaden hamnar direkt på rätt projekt",
     ],
-    img: "/landing/enmansforetag/leverantorsfakturor.webp",
+    img: "/landing/enmansforetag/leverantorsfakturor-v2.webp",
     alt: "Inköpsfakturor i ByggExp och notis i telefonen: faktura att betala, förfaller om 7 dagar",
   },
   {

@@ -330,19 +330,11 @@ export default function EnmansforetagPage({
 
         {/* PRICE — the "Koll på pengarna" card from the pricing page, as is */}
         <section className="em-price">
-          <div className="container em-feature-inner">
-            <div className="em-feature-text">
+          <div className="container em-price-inner">
+            <div className="em-price-head">
               <p className="em-eyebrow">Pris</p>
               <h2>Paketet Koll på pengarna</h2>
               <p className="em-lead">15 % rabatt vid årsbetalning</p>
-              <ul className="em-checks">
-                <li>Ingen startavgift</li>
-                <li>Ingen bindningstid</li>
-              </ul>
-              <p className="em-price-note">
-                Anställer du din första medarbetare? Löner och AGI ingår redan.
-                Tidrapport och planering finns i paketen för 690 och 990 SEK.
-              </p>
             </div>
             <div className="em-price-card">
               <div className="pricing-card">
@@ -389,6 +381,10 @@ export default function EnmansforetagPage({
                 </a>
                 <span className="pricing-trial">{pricingT.pricingTrial}</span>
               </div>
+              <ul className="em-checks">
+                <li>Ingen startavgift</li>
+                <li>Ingen bindningstid</li>
+              </ul>
               <p className="pricing-limit-note">{pricingT.fakturaLimitNote}</p>
             </div>
           </div>

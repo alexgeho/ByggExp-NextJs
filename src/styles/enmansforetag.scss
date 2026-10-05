@@ -336,21 +336,33 @@
   cursor: zoom-in;
 }
 
-/* price: the pricing-page card, left column = context */
+/* price: one centred column — heading, the pricing-page card, terms */
+.em-price-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.em-price-head {
+  max-width: 640px;
+  margin-bottom: 40px;
+  h2 {
+    margin-bottom: 16px;
+  }
+  .em-lead {
+    margin-bottom: 0;
+  }
+}
 .em-price-card {
-  max-width: 440px;
   width: 100%;
-  justify-self: end;
-}
-.em-price-note {
-  margin-top: 24px;
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.55;
-}
-@media (max-width: 900px) {
-  .em-price-card {
-    justify-self: stretch;
-    max-width: none;
+  max-width: 440px;
+  text-align: left;
+  .em-checks {
+    justify-content: center;
+    margin-top: 24px;
+  }
+  .pricing-limit-note {
+    text-align: center;
+    margin-top: 16px;
   }
 }

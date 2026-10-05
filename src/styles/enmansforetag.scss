@@ -83,18 +83,44 @@
   flex-direction: column;
   align-items: flex-start;
 
+  /* typography one-to-one with the home-page hero (components/Hero/Hero.scss) */
   h1 {
-    font-size: var(--fs-h1);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    font-size: clamp(20px, 4vw, 43px);
+    line-height: 1.02;
+    font-weight: 600;
+    letter-spacing: -0.025em;
     margin: 28px 0;
   }
-  /* same rhythm as the home-page hero */
   .em-lead {
+    font-size: clamp(16px, 2vw, 24px);
+    line-height: 1.45;
+    max-width: 520px;
     margin-bottom: 64px;
+  }
+  .btn-primary {
+    padding: 16px 28px;
+    font-size: 1.3rem;
+    font-weight: 400;
   }
   .em-checks {
     margin-top: 32px;
+  }
+  .em-pill {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+}
+@media (max-width: 560px) {
+  .em-hero-content {
+    h1 {
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+    .em-lead {
+      font-size: clamp(16px, 3.6vw, 24px);
+    }
   }
 }
 .em-pill {

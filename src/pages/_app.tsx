@@ -9,6 +9,7 @@ import "../styles/blog.scss";
 import "../styles/funktioner.scss";
 import "../styles/blog-admin.scss";
 import "../styles/lead-magnet.scss";
+import "../styles/enmansforetag.scss";
 import "../components/Header/Header.scss";
 import "../components/SiteSearch/SiteSearch.scss";
 import "../components/Hero/Hero.scss";

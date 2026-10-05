@@ -10,12 +10,14 @@ import BenefitSlider, {
   type SliderCard,
 } from "../../components/Benefits/BenefitSlider";
 import CTA from "../../components/CTA/CTA";
+import { FAKTURA_PRICE } from "../../components/Pricing/Pricing";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import { localeOrigin } from "../../lib/seo";
 import { ctaTranslations } from "../../locales/CTA";
 import { footerTranslations } from "../../locales/footer";
 import { headerTranslations } from "../../locales/header";
+import { pricingTranslations } from "../../locales/pricing";
 import type { LandingLanguageCode } from "../../locales/languages";
 
 // Sales page for one-person construction firms ("vi har inga anställda").
@@ -178,20 +180,13 @@ const FEATURES: Feature[] = [
   },
 ];
 
-const INCLUDED = [
-  "Mobilapp + adminpanel",
-  "Offerter och fakturor",
-  "Påminnelser om kommande betalningar",
-  "Skanna kvitton och fakturor – bokförs automatiskt på projektet",
-  "Projektekonomi: budget, kalkyl och lönsamhet",
-];
-
 export default function EnmansforetagPage({
   lang,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const headerT = headerTranslations[lang];
   const ctaT = ctaTranslations[lang];
   const footerT = footerTranslations[lang];
+  const pricingT = pricingTranslations[lang];
   const title = "ByggExp för enmansföretag – appen tar pappersarbetet";
   const description =
     "Driver du byggfirman själv? ByggExp samlar offerter, fakturor, kvitton och deadlines i telefonen – från 299 SEK/månad, 2 veckor gratis.";
@@ -333,49 +328,68 @@ export default function EnmansforetagPage({
           </div>
         </section>
 
-        {/* PRICE */}
+        {/* PRICE — the "Koll på pengarna" card from the pricing page, as is */}
         <section className="em-price">
           <div className="container em-feature-inner">
             <div className="em-feature-text">
               <p className="em-eyebrow">Pris</p>
               <h2>Paketet Koll på pengarna</h2>
-              <p className="em-price-num">
-                299 <span>SEK / månad</span>
-              </p>
               <p className="em-lead">15 % rabatt vid årsbetalning</p>
-              <a href="#cta" className="btn-primary">
-                Boka demo
-              </a>
               <ul className="em-checks">
-                <li>2 veckor gratis med alla funktioner</li>
                 <li>Ingen startavgift</li>
                 <li>Ingen bindningstid</li>
               </ul>
-            </div>
-            <div className="em-price-box">
-              <h3>Det här ingår</h3>
-              <ul className="step-bullets">
-                {INCLUDED.map((x) => (
-                  <li key={x}>
-                    <span className="check">
-                      <svg viewBox="0 0 14 10" fill="none">
-                        <path
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="m1 5 4 4 8-8"
-                        />
-                      </svg>
-                    </span>
-                    {x}
-                  </li>
-                ))}
-              </ul>
-              <p>
+              <p className="em-price-note">
                 Anställer du din första medarbetare? Löner och AGI ingår redan.
                 Tidrapport och planering finns i paketen för 690 och 990 SEK.
               </p>
+            </div>
+            <div className="em-price-card">
+              <div className="pricing-card">
+                <div className="pricing-card-top">
+                  <span className="pricing-tag pricing-tag-blue">
+                    {pricingT.planFaktura}
+                  </span>
+                </div>
+                <div className="pricing-price">
+                  <span className="num">{FAKTURA_PRICE}</span>
+                  <span className="per">{pricingT.pricingPer}</span>
+                </div>
+                <div className="pricing-groups">
+                  <div className="pricing-group">
+                    <h3 className="pricing-group-title">
+                      {pricingT.planFakturaSub}
+                    </h3>
+                    <ul className="pricing-list">
+                      {pricingT.financeItems.map((item) => (
+                        <li key={item}>
+                          <span className="check check-blue">
+                            <svg
+                              viewBox="0 0 14 10"
+                              fill="none"
+                              aria-hidden="true"
+                            >
+                              <path
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="m1 5 4 4 8-8"
+                              />
+                            </svg>
+                          </span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <a href="#cta" className="btn-primary">
+                  {pricingT.pricingButton}
+                </a>
+                <span className="pricing-trial">{pricingT.pricingTrial}</span>
+              </div>
+              <p className="pricing-limit-note">{pricingT.fakturaLimitNote}</p>
             </div>
           </div>
         </section>

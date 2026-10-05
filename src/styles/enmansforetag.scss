@@ -335,3 +335,22 @@
 .em-step img {
   cursor: zoom-in;
 }
+
+/* price: the pricing-page card, left column = context */
+.em-price-card {
+  max-width: 440px;
+  width: 100%;
+  justify-self: end;
+}
+.em-price-note {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+@media (max-width: 900px) {
+  .em-price-card {
+    justify-self: stretch;
+    max-width: none;
+  }
+}

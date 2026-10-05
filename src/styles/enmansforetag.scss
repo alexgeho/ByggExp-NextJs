@@ -44,6 +44,8 @@
 
 .em-checks {
   display: flex;
+  list-style: none;
+  padding: 0;
   flex-wrap: wrap;
   gap: 8px 20px;
   margin-top: 20px;

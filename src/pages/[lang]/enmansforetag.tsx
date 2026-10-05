@@ -184,24 +184,6 @@ export default function EnmansforetagPage({ lang }: InferGetStaticPropsType<type
           </div>
         </section>
 
-        {/* QUOTE → INVOICE */}
-        <section className="em-steps">
-          <div className="container">
-            <p className="em-eyebrow">Offert och faktura</p>
-            <h2>Från offert till betald faktura – utan att skriva om något</h2>
-            <div className="em-steps-grid">
-              {STEPS.map((s, i) => (
-                <div key={s.title} className="em-step">
-                  <img src={s.img} alt={s.alt} />
-                  <span className="em-step-label">Steg {i + 1}</span>
-                  <h3>{s.title}</h3>
-                  <p>{s.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* FEATURE ROWS — image side alternates */}
         {FEATURES.map((f, i) => (
           <section key={f.title} className={`em-feature${i % 2 === 0 ? "" : " em-feature-reverse"}`}>
@@ -230,6 +212,24 @@ export default function EnmansforetagPage({ lang }: InferGetStaticPropsType<type
             </div>
           </section>
         ))}
+
+        {/* QUOTE → INVOICE */}
+        <section className="em-steps">
+          <div className="container">
+            <p className="em-eyebrow">Offert och faktura</p>
+            <h2>Från offert till betald faktura – utan att skriva om något</h2>
+            <div className="em-steps-grid">
+              {STEPS.map((s, i) => (
+                <div key={s.title} className="em-step">
+                  <img src={s.img} alt={s.alt} />
+                  <span className="em-step-label">Steg {i + 1}</span>
+                  <h3>{s.title}</h3>
+                  <p>{s.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* PRICE */}
         <section className="em-price">

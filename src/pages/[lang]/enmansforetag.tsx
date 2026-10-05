@@ -292,9 +292,12 @@ export default function EnmansforetagPage({
                 <h2>{f.title}</h2>
                 <p className="em-lead">{f.text}</p>
                 {f.bullets ? (
-                  <ul className="em-bullets">
-                    {f.bullets.map((b) => (
-                      <li key={b}>{b}</li>
+                  <ul className="step-bullets">
+                    {f.bullets.map((b, n) => (
+                      <li key={b}>
+                        <span className="number">{n + 1}</span>
+                        {b}
+                      </li>
                     ))}
                   </ul>
                 ) : null}

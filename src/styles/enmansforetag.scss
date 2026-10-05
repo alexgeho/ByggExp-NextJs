@@ -372,3 +372,8 @@
     margin-top: 16px;
   }
 }
+
+/* home-page features carousel: same air above and below as the other blocks */
+.em .features {
+  padding: var(--em-gap) 0;
+}

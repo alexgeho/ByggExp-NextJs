@@ -253,8 +253,8 @@ export default function EnmansforetagPage({
             <div className="em-hero-visual">
               <img
                 className="em-hero-laptop"
-                src="/landing/enmansforetag/hero-projekt.webp"
-                alt="Projektets ekonomi i ByggExp och nytt utlägg i mobilen"
+                src="/landing/enmansforetag/hero-laptop.webp"
+                alt="Projektets ekonomi i ByggExp: budget, fakturerat och marginal"
               />
             </div>
           </div>

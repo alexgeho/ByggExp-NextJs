@@ -259,6 +259,9 @@
 }
 
 @media (max-width: 900px) {
+  .em-hero {
+    padding: 32px 0 48px;
+  }
   .em-hero-inner,
   .em-feature-inner {
     grid-template-columns: 1fr;

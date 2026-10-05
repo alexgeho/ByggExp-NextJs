@@ -12,6 +12,16 @@ NÄSTA: не возвращать self-serve («Prova gratis») до решен�
 - Картинки `public/landing/egenkontroll-ai/`: Recraft `recraftv4_1_raster`, фотореалистичные документы с точным шведским текстом в кавычках в промпте («Entreprenadavtal», «Egenkontroll» + строки), «isolated on plain pure white background, no shadow» → removeBackground → обрезка по альфе с порогом >40 (getbbox на RGBA не режет) → WebP. Скриншот приложения — настоящий (симулятор), фото объекта — Recraft.
 - Владелец: минимум текста; 3D-иконки и телефон в перчатке НЕ подошли — нужен реализм «как фото».
 
+## 🟢 2026-10-05 — /sv/enmansforetag переделана (live)
+### KLART
+- `src/pages/[lang]/enmansforetag.tsx` + `src/styles/enmansforetag.scss`: hero (картинка `public/landing/enmansforetag/hero-projekt-kvitton.webp`, типографика/отступы 1:1 с `components/Hero`), карусель benefits (`BenefitSlider`, иконки `public/landing/enmansforetag/benefits/*.webp` — перекраска card5–8 в зелёный), карусель функций на классах `components/Features` (`.features/.step/...`), lightbox по клику на скрины, карточка цены = разметка `components/Pricing` + `pricingTranslations` (`FAKTURA_PRICE`), колонка по центру.
+- Ритм отступов: `--em-gap` 96px (≤900px 64px) — над/под каждой секцией одинаково.
+- Админка: `SupplierInvoiceListPage.jsx` — колонки Totalt и Förfaller 2-я и 3-я.
+### 🔜 NÄSTA STEG
+1. Проверить enmansforetag на телефоне (390px).
+2. Скрин hero: телефон на английском → заменить шведским.
+3. Если нужны новые 3D-иконки (заметки, задачи) — Recraft из сессии nordkod/Armeringproffs.
+
 ## 🟢 2026-10-04 (вечер) — источник регистраций, GA4 sign_up, тёмная тема писем (live)
 ### KLART
 - **Källa:** admin.byggexp.se (boot-скрипт в `app/layout.jsx`, `src/shared/signupSource.js`) запоминает UTM/referrer/landing в sessionStorage + читает `_ga`/`_ga_551T40R4WV`; форма регистрации шлёт `source`. API (`src/auth/signup-source.ts`) → `pendingRegistration.source` → `company.signupSource` + последняя кампания рассыльщика по email. Колонка «Källa» в Företag. Коммиты: backend 1fe946f, 434963f, admin 71d8402, b085e34.

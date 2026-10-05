@@ -1,5 +1,12 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 🟢 2026-10-05 — egenkontroll-страницы: форма сверху, баннер → консультация (live)
+- 7 страниц egenkontroll: шаблон сразу под H1, после него `AiEgenkontrollBanner` (Avtal + Foton i appen = Egenkontroll, 3 шага, 2 строки «как работает»), кнопка **Boka demo** → `/sv/contact?amne=egenkontroll` (GA4 `egenkontroll_boka_demo`; в заявке «Ämne: egenkontroll»). Убраны «Slipp börja om», дисклеймер калькулятора и форма «hjälp vidare» (только на этих страницах).
+- `EgenkontrollTool`: Titel никогда не префиллится (старые черновики с названием шаблона чистятся), Datum = сегодня, черновик только при реальном вводе, смена шаблона спрашивает; чипы без «Egenkontroll»; PDF/Excel/+punkt синие с иконками; Metod/Krav скрыты на экране (есть в PDF); бледные плейсхолдеры, больше воздуха.
+- Контакт: sales@ → **kontakt@byggexp.se** (страница и чат-бот). Цветные Google Play / Mastercard. Поиск блога: при вводе чипы категорий скрыты — выдача сразу под полем.
+- Рецепт картинок: Recraft `recraftv4_1_raster`, точный шведский текст в кавычках, «isolated on plain pure white background, no shadow» → removeBackground → обрезка по альфе (порог >40) → WebP; скриншот приложения — настоящий.
+NÄSTA: не возвращать self-serve («Prova gratis») до решения владельца; превью PDF «El» на VVS-странице поправить; идея — короткий GIF процесса в баннере.
+
 ## 🟢 2026-10-04 — баннер AI-egenkontroll на 7 страницах egenkontroll (live)
 - `AiEgenkontrollBanner.tsx` вместо общего ProductBanner (проп `productBanner` в LeadMagnetPage): «Egenkontrollen fyller i sig själv», визуальное уравнение Avtal + Foton i appen = Egenkontroll, кнопки «Prova gratis» (admin.byggexp.se/register?plan=egenkontroll) и «Boka demo».
 - Картинки `public/landing/egenkontroll-ai/`: Recraft `recraftv4_1_raster`, фотореалистичные документы с точным шведским текстом в кавычках в промпте («Entreprenadavtal», «Egenkontroll» + строки), «isolated on plain pure white background, no shadow» → removeBackground → обрезка по альфе с порогом >40 (getbbox на RGBA не режет) → WebP. Скриншот приложения — настоящий (симулятор), фото объекта — Recraft.

@@ -76,7 +76,7 @@ const FEATURES: Feature[] = [
       "Alla kvitton per projekt i en lista",
       "Enkelt att lämna till din redovisning",
     ],
-    img: "/landing/features/11costs-1200.webp",
+    img: "/landing/enmansforetag/kvitton-utlagg.webp",
     alt: "Utlägg i ByggExp: kvittolista i adminpanelen och nytt utlägg i mobilen",
   },
   {

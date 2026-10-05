@@ -84,9 +84,8 @@ const FEATURES: Feature[] = [
     title: "Appen kommer ihåg – inte du",
     text: "Lägg in en uppgift med tid – ByggExp påminner dig i telefonen tills du markerar den som klar.",
     bullets: ["Var 15:e minut, varje timme, dag eller vecka", "Återkommande uppgifter skapas automatiskt igen"],
-    img: "/landing/enmansforetag/paminnelse.webp",
-    alt: "Påminnelse från ByggExp på telefonens låsskärm",
-    phone: true,
+    img: "/landing/enmansforetag/paminnelse-uppgift.webp",
+    alt: "Uppgift med påminnelse i ByggExp och påminnelse på telefonens låsskärm",
   },
   {
     eyebrow: "Leverantörsfakturor",

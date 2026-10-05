@@ -138,6 +138,7 @@ const FEATURES: Feature[] = [
     title: "Foton och kontroller – i projektet, inte i pärmar",
     text: "Foton, byggdagbok och egenkontroller sparas på rätt projekt.",
     bullets: [
+      "Egenkontrollen fylls i av sig själv – utifrån dina foton",
       "Svaret finns när kunden undrar hur det såg ut bakom väggen",
       "KMA och egenkontroller med färdiga mallar",
     ],

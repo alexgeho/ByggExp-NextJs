@@ -235,13 +235,8 @@ export default function EnmansforetagPage({
             <div className="em-hero-visual">
               <img
                 className="em-hero-laptop"
-                src="/landing/features/9ekonomi-1200.webp"
-                alt="ByggExp i adminpanelen"
-              />
-              <img
-                className="em-hero-phone"
-                src="/landing/hero/phone-3d.webp"
-                alt="ByggExp-appen i mobilen"
+                src="/landing/enmansforetag/hero-projekt.webp"
+                alt="Projektets ekonomi i ByggExp och nytt utlägg i mobilen"
               />
             </div>
           </div>

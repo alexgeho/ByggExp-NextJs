@@ -756,6 +756,18 @@ export default function ArbetsberedningMallTool() {
           {addButton('checks', 'Lägg till kontroll')}
         </div>
 
+
+        {/* Same downloads again at the end — people fill in, then forget to scroll up. */}
+        <div className="lm-tool-actions lm-tool-download lm-tool-download--bottom">
+          <button type="button" className="lm-tool-button lm-tool-button--icon" onClick={downloadCsv}>
+            <Icon name="download" />
+            <span className="lm-hide-sm">Ladda ner </span>Excel
+          </button>
+          <button type="submit" className="lm-tool-button lm-tool-button--icon" disabled={busy}>
+            <Icon name="download" />
+            {busy ? 'Skapar PDF…' : <><span className="lm-hide-sm">Ladda ner </span>PDF</>}
+          </button>
+        </div>
       </form>
     </div>
   );

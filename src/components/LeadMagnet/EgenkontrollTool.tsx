@@ -93,8 +93,11 @@ const pointOf = (r: Row) => r.point.trim() || r.hint || '';
 
 // Old drafts stored template text as the value — turn it back into the hint.
 const ALL_POINTS = new Set(EGENKONTROLL_PRESETS.flatMap((p) => p.items.map((i) => i.point)));
-const migrateRow = (r: Row): Row =>
-  !r.hint && ALL_POINTS.has(r.point) ? { ...r, hint: r.point, point: '' } : r;
+// Old answers "Ej besvarad"/"Ej aktuellt" are now just "Tomt" (blank).
+const migrateRow = (r: Row): Row => {
+  const row = r.result === 'Ej besvarad' || r.result === 'Ej aktuellt' ? { ...r, result: 'Tomt' } : r;
+  return !row.hint && ALL_POINTS.has(row.point) ? { ...row, hint: row.point, point: '' } : row;
+};
 
 const isProtocol = (rows: Row[]) => rows.some((r) => r.unit || r.requirement);
 const hasMeasure = (rows: Row[]) => rows.some((r) => r.unit);

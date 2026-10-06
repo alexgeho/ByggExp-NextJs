@@ -355,6 +355,7 @@ export default function BlogArticlePage({
             }}
           />
         ) : null}
+        {coverImageUrl ? <link rel="preload" as="image" href={coverImageUrl} fetchPriority="high" /> : null}
       </Head>
 
       <Header headerT={headerT} />
@@ -391,6 +392,9 @@ export default function BlogArticlePage({
               src={coverImageUrl}
               alt={post.title}
               className="blog-article-cover"
+              // LCP element on article pages — fetch it before other images.
+              fetchPriority="high"
+              decoding="async"
               onClick={() => setLightboxImage(coverImageUrl)}
             />
           ) : null}

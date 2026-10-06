@@ -934,7 +934,7 @@ const A_RESURSPLANERING_BYGG_HTML = `
 <p>Tidrapporteringen finns i samma system: laget stämplar in och ut i mobilappen med GPS, och timmarna hamnar på projektet. Läs mer i guiden om <a href="/sv/blog/tidrapportering">tidrapportering i byggbranschen</a>. Maskiner och underentreprenörer planeras inte i ByggExp. Håll dem i en separat bokningslista enligt metoden ovan.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att samla alla projekt i en gemensam vy – i vår <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a> eller i ett system. Vill du se hur Planering och Bemanning fungerar i ByggExp? <a href="/sv/contact">Boka en demo</a>. Du kan testa alla funktioner gratis i 14 dagar.</p>
+<p>Börja med att samla alla projekt i en gemensam vy – i vår <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a> eller i ett system. Vill du se hur Planering och Bemanning fungerar? Läs om ByggExp som <a href="/sv/blog/dagsplanering-och-planeringsmoten">planeringsprogram för bygg</a> eller <a href="/sv/contact">boka en demo</a>. Du kan testa alla funktioner gratis i 14 dagar.</p>
 
 <h2>Relaterade guider</h2>
 <ul>

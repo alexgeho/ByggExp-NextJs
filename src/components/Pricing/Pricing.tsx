@@ -5,7 +5,9 @@ import type { PluralForms, PricingProps } from "../../types/pricing";
 // Exported: the home page's SoftwareApplication schema quotes it as the entry price.
 export const FAKTURA_PRICE = 299;
 const INCLUDED_USERS = 10;
-const PROJEKT = { base: 690, extra: 69 };
+// Exported: feature pages' SoftwareApplication schema quotes "Koll på jobbet".
+export const PROJEKT_PRICE = 690;
+const PROJEKT = { base: PROJEKT_PRICE, extra: 69 };
 const KOMPLETT = { base: 990, extra: 119 };
 const ADDON_PRICE = 199;
 const YEARLY_DISCOUNT = 0.15;

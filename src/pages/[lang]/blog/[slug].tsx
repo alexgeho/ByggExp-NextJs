@@ -7,6 +7,7 @@ import FeatureNav from '../../../components/FeatureNav/FeatureNav';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import ProductBanner from '../../../components/LeadMagnet/ProductBanner';
+import { PROJEKT_PRICE } from '../../../components/Pricing/Pricing';
 import { fetchPublishedBlogPost } from '../../../lib/blog-api';
 import { fetchPublishedBlogPostsCached } from '../../../lib/blog-cache';
 import { getBlogTools } from '../../../content/blog-tools';
@@ -295,7 +296,24 @@ export default function BlogArticlePage({
                 operatingSystem: "iOS, Android, Web",
                 description,
                 url: canonicalUrl,
-                offers: { "@type": "Offer", price: "0", priceCurrency: "SEK", description: "Boka en kostnadsfri demo" },
+                // "Koll på jobbet" (tid, planering, närvaro): monthly, SEK excl. VAT.
+                // Price comes from components/Pricing so it can't drift. No
+                // aggregateRating until there are real, verifiable reviews.
+                offers: {
+                  "@type": "Offer",
+                  name: "Koll på jobbet",
+                  price: PROJEKT_PRICE,
+                  priceCurrency: "SEK",
+                  url: `${localeOrigin(lang)}/${lang}#pricing`,
+                  priceSpecification: {
+                    "@type": "UnitPriceSpecification",
+                    price: PROJEKT_PRICE,
+                    priceCurrency: "SEK",
+                    valueAddedTaxIncluded: false,
+                    unitCode: "MON",
+                    referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
+                  },
+                },
                 publisher: { "@type": "Organization", name: "ByggExp", url: `${localeOrigin(lang)}/${lang}` },
               }),
             }}

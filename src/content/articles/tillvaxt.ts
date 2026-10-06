@@ -1472,7 +1472,7 @@ const S_TIDRAPPORTERING_ENTREPRENAD_HTML = `
 <li><strong>SIE4-fil</strong> – för import i bokföringsprogram som Fortnox, Visma och Björn Lundén. Ingår i integrationstillägget för 199 kr/mån.</li>
 <li><strong>Tidrapport som PDF och Excel</strong> – underlag till beställaren eller för arkivet.</li>
 </ul>
-<p>Det är filexport, inte en direktkoppling via API: du laddar ner filen och läser in den i det andra systemet. Mer om flödet i <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering och export</a> och om valet av <a href="/sv/blog/loneprogram-bygg">löneprogram för bygg</a>.</p>
+<p>Det är filexport, inte en direktkoppling via API: du laddar ner filen och läser in den i det andra systemet. Mer om flödet i ByggExp:s <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering online</a> och om valet av <a href="/sv/blog/loneprogram-bygg">löneprogram för bygg</a>.</p>
 
 <h2>Omvänd byggmoms och ROT – vad tidrapporten ska visa</h2>
 <p>Momsen sätts på fakturan, inte i tidrapporten, men tidrapporten avgör om fakturan blir rätt.</p>
@@ -1588,7 +1588,7 @@ const S_MOBIL_TIDRAPPORTERING_HTML = `
 <p>Appen laddas ner från <a href="https://apps.apple.com/se/app/id6748280779" target="_blank" rel="noopener">App Store</a> (iPhone) och <a href="https://play.google.com/store/apps/details?id=se.byggexp.app" target="_blank" rel="noopener">Google Play</a> (Android).</p>
 
 <h2>Kom igång</h2>
-<p>Vill du se hur det fungerar med era projekt? <a href="/sv/contact">Boka en demo</a>, så visar vi appen och webbadmin med ert eget upplägg. Vill du börja enklare fungerar vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för de första veckorna.</p>
+<p>Se vad som ingår i ByggExp:s <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering online</a>. Vill du se hur det fungerar med era projekt? <a href="/sv/contact">Boka en demo</a>, så visar vi appen och webbadmin med ert eget upplägg. Vill du börja enklare fungerar vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för de första veckorna.</p>
 
 <h2>Relaterade guider</h2>
 <ul>
@@ -2184,7 +2184,7 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML = `
 <p>Termerna blandas ofta ihop men skiljer sig i tidshorisont. <a href="/sv/blog/bemanning-och-personalplanering">Bemanningsplanering</a> handlar om vilka personer och kompetenser som behövs framåt. <a href="/sv/blog/resursplanering-bygg">Resursplanering i bygg</a> väger kapaciteten mot projektens behov, ofta med maskiner och material. Schemaläggningen är den konkreta fördelningen dag för dag.</p>
 
 <h2>Kom igång</h2>
-<p>Testa ByggExp gratis i 14 dagar med alla funktioner, eller <a href="/sv/contact">boka en demo</a> så visar vi planeringen på era egna projekt.</p>
+<p>Se vad som ingår i ByggExp som <a href="/sv/blog/dagsplanering-och-planeringsmoten">planeringsprogram för bygg</a>. Testa gratis i 14 dagar med alla funktioner, eller <a href="/sv/contact">boka en demo</a> så visar vi planeringen på era egna projekt.</p>
 
 <h2>Relaterade guider om planering</h2>
 <ul>

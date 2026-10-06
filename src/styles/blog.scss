@@ -944,6 +944,12 @@
   line-height: 1.55;
 }
 
+// Links inside the answer (e.g. Byggnads prislistor, kontraktsmall) must read as links.
+.article-answer > div a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
 .article-answer > div > :first-child { margin-top: 0; }
 .article-answer > div > :last-child { margin-bottom: 0; }
 

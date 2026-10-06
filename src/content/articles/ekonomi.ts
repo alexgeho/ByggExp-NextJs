@@ -6867,7 +6867,7 @@ const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
 
 const A_RESTIDSERSATTNING_BYGGAVTALET: BlogPost = {
   _id: "code-"+"restidsersattning-byggavtalet",
-  title: "Restidsersättning Byggavtalet 2026", slug: "restidsersattning-byggavtalet", locale: "sv",
+  title: "Restidsersättning enligt Byggavtalet 2026", slug: "restidsersattning-byggavtalet", locale: "sv",
   excerpt: "Restid, reskostnad, milersättning och traktamente blandas ihop dagligen - här är den tydliga uppdelningen enligt Byggavtalet, med skattegränsen som ställer till det.", tag: "Ekonomi",
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_RESTIDSERSATTNING_BYGGAVTALET_HTML,
   seoTitle: "Restidsersättning Byggavtalet 2026 | ByggExp", seoDescription: "Så skiljer arbetsgivaren restidsersättning, reskostnad, milersättning och traktamente enligt Byggavtalet 2026 - med skatteperspektiv och räkneexempel.",

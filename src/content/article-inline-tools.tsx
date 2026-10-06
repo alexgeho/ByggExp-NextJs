@@ -126,12 +126,9 @@ export const ARTICLE_INLINE_TOOLS: Record<string, InlineTool> = {
     render: () => <ReglarKalkylatorTool locale="sv" />,
     position: 'top',
   },
-  // UE contract = entreprenadkontrakt with AB-U 07 on top of AB 04.
-  'ab-u-underentreprenor-avtal': {
-    heading: 'Fyll i kontraktet',
-    render: () => <EntreprenadkontraktMallTool />,
-    position: 'top',
-  },
+  // ab-u-underentreprenor-avtal: no tool on purpose. Searchers want the AB-U 07 /
+  // ABT-U 07 text; our kontrakt mall is AB 04/ABT 06 beställare–entreprenör and
+  // would mislead. Quick answer + Byggföretagen link only.
 };
 
 export function getArticleInlineTool(slug: string): InlineTool | null {

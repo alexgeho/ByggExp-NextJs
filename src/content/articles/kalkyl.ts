@@ -1834,7 +1834,7 @@ const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING: BlogPost = {
   title: "Bygga trappa – räkna steghöjd och stegdjup", slug: "bygga-trappa-steghojd-stegdjup-berakning", locale: "sv",
   excerpt: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, vanliga riktvärden för steghöjd och stegdjup och hur du räknar ut antal steg från den totala höjden. Med gratis trappberäknare.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/trappa-preview.webp", contentHtml: A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING_HTML,
-  seoTitle: "Trappformeln & bygga trappa: steghöjd, stegdjup | ByggExp", seoDescription: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, riktvärden (steghöjd max ~180 mm, stegdjup minst 250 mm) och hur du räknar antal steg. Gratis trappberäknare.",
+  seoTitle: "Trappformeln & bygga trappa: steghöjd, stegdjup | ByggExp", seoDescription: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, riktvärden (steghöjd 150–200 mm, stegdjup minst 250 mm) och hur du räknar antal steg. Gratis trappberäknare.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/trappa-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T14:05:00.000Z", createdAt: "2026-08-20T14:05:00.000Z", updatedAt: "2026-10-06T12:00:00.000Z",
 };

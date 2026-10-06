@@ -1386,7 +1386,7 @@ const A_OB_OVERTID_BYGGAVTALET_RAKNA: BlogPost = {
   title: "OB och övertid i Byggavtalet – så räknar du rätt", slug: "ob-overtid-byggavtalet-rakna", locale: "sv",
   excerpt: "OB och övertid betalas aldrig samtidigt och räknas på utgående lön, inte grundtimlön. Så fungerar nivåerna, taket och journalen i Byggavtalet § 2.", tag: "Lön & avtal",
   coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_OB_OVERTID_BYGGAVTALET_RAKNA_HTML,
-  seoTitle: "OB och övertid 2026 – procent i Byggavtalet | ByggExp", seoDescription: "Så räknar du OB-tillägg och övertidsersättning rätt enligt Byggavtalet § 2: nivåer, utgående lön, övertidstak och de vanligaste felen som kostar pengar.",
+  seoTitle: "OB och övertid i Byggavtalet 2026 – procentsatser | ByggExp", seoDescription: "Så räknar du OB-tillägg och övertidsersättning rätt enligt Byggavtalet § 2: nivåer, utgående lön, övertidstak och de vanligaste felen som kostar pengar.",
   seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T09:43:00.000Z", createdAt: "2026-08-19T09:43:00.000Z", updatedAt: "2026-10-06T12:00:00.000Z",
 };
@@ -2418,7 +2418,7 @@ const A_AB_U_UNDERENTREPRENOR_AVTAL_HTML = `
 
 const A_AB_U_UNDERENTREPRENOR_AVTAL: BlogPost = {
   _id: "code-"+"ab-u-underentreprenor-avtal",
-  title: "AB-U 07 och ABT-U 07 – så speglar du huvudavtalet mot din underentreprenör", slug: "ab-u-underentreprenor-avtal", locale: "sv",
+  title: "AB-U 07 och ABT-U 07 – avtal med underentreprenör", slug: "ab-u-underentreprenor-avtal", locale: "sv",
   excerpt: "Praktisk genomgång av hur AB-U 07 och ABT-U 07 speglar huvudavtalet mot din underentreprenör – klausul för klausul.", tag: "Avtal",
   coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_AB_U_UNDERENTREPRENOR_AVTAL_HTML,
   seoTitle: "AB-U 07 & ABT-U 07 underentreprenör | ByggExp", seoDescription: "Så använder du AB-U 07 och ABT-U 07 för att spegla huvudavtalets villkor mot din UE: garantitid, viten, betalning, besiktning och hävning back-to-back.",

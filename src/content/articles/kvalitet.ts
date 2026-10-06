@@ -1,112 +1,6 @@
 import type { BlogPost } from '../../types/blog';
 import { SITE_URL } from './site-url';
 
-const BYGGDAGBOK_HTML = `
-<p>En byggdagbok är ett av de enklaste sätten att skydda sig när något går snett i ett projekt. Ändå förs den ofta på lösa lappar eller inte alls. Här går vi igenom vad en byggdagbok är, vad den ska innehålla, vad AB 04 säger – och hur du för den på några minuter om dagen.</p>
-<figure class="article-diagram"><img src="/landing/diagrams/byggdagbok.webp" alt="Diagram: byggdagbok – datum och väder, personal, utfört arbete, leveranser, ÄTA och avvikelser" width="720" height="380" loading="lazy"><figcaption>För in datum, väder, personal, utfört arbete, leveranser och ÄTA varje dag – dagboken blir ditt bevis vid en tvist.</figcaption></figure>
-
-<p><a href="/sv/verktyg/byggdagbok-mall">Ladda ner en gratis byggdagbok-mall (PDF) →</a></p>
-
-<h2>Vad är en byggdagbok?</h2>
-<p>En byggdagbok är en löpande dagbok där du dokumenterar &quot;omständigheter av betydelse&quot; på arbetsplatsen – dag för dag. Syftet är att hålla beställaren informerad om hur arbetet fortskrider och att skapa ett tidsstämplat underlag om det senare uppstår diskussioner om tid, ÄTA-arbeten, hinder eller kostnader. Dagboken är ofta det enda samlade beviset på vad som faktiskt hände på bygget, och när.</p>
-
-<h2>Vad säger lagen och avtalen?</h2>
-<p>Det finns ingen generell lag som tvingar alla att föra byggdagbok. Kravet följer i stället av standardavtalen:</p>
-<ul>
-<li>I <strong>AB 04</strong> och <strong>ABT 06</strong> (entreprenader där beställaren är ett företag) framgår av <strong>kap 3 § 13</strong> att entreprenören ska föra dagbok.</li>
-<li>I standardavtalen för konsumententreprenader – <strong>ABS 18</strong> och <strong>Hantverkarformuläret 17</strong> – finns inget motsvarande krav. Där behöver dagbok bara föras om beställaren och entreprenören avtalat om det.</li>
-</ul>
-<p>Vill du veta mer i detalj regleras dagbokens innehåll även i <strong>AMA AF under kod AFC.37</strong>, som räknar upp vad den bör omfatta. Oavsett om det är ett formellt krav eller inte är en förd dagbok nästan alltid till entreprenörens fördel om en tvist uppstår.</p>
-
-<h2>Vad ska en byggdagbok innehålla?</h2>
-<p>Kärnan är alltid <strong>utfört arbete</strong>. Utöver det förs dagboken &quot;i tillämpliga delar&quot; med de uppgifter som har betydelse för projektet:</p>
-<ul>
-<li><strong>Datum</strong> och vilket projekt/arbetsplats noteringen gäller</li>
-<li><strong>Väder och temperatur</strong> – viktigt vid gjutning, målning och andra temperaturkänsliga moment</li>
-<li><strong>Bemanning</strong> – antal personer och vilka yrkesgrupper som varit på plats</li>
-<li><strong>Utfört arbete</strong> – vad som gjorts under dagen</li>
-<li><strong>Material och leveranser</strong> – vad som levererats eller saknats</li>
-<li><strong>Utförda kontroller</strong> och egenkontroller</li>
-<li><strong>ÄTA-arbeten</strong> och beställarens direktiv</li>
-<li><strong>Avvikande förutsättningar, hinder och störningar</strong> som påverkat tidplanen</li>
-<li><strong>Besök</strong> på arbetsplatsen (beställare, besiktningsman, myndighet)</li>
-<li><strong>Olycksfall och tillbud</strong></li>
-<li><strong>Foton</strong> som styrker läget på plats</li>
-</ul>
-<p>Du behöver inte fylla i allt varje dag – men det som är av betydelse för just den dagen ska med.</p>
-
-<h2>Exempel: en ifylld byggdagbok</h2>
-<p>Så här kan en tydlig notering se ut för en dag – kort, men med rätt saker:</p>
-<ul>
-<li><strong>Datum:</strong> 2026-05-14 · Projekt: Nybyggnad villa, Bäckvägen 12</li>
-<li><strong>Väder:</strong> Molnigt, 9 °C, uppehåll</li>
-<li><strong>Bemanning:</strong> 3 snickare + 1 lärling (kl 07–16)</li>
-<li><strong>Utfört arbete:</strong> Rest ytterväggar plan 2, monterat takstolar sektion A–C</li>
-<li><strong>Leveranser:</strong> Takstolar (28 st) kl 08:30 – 2 st skadade, reklamerade</li>
-<li><strong>Hinder:</strong> Kranbil försenad 2 h → takmontage flyttat till eftermiddag</li>
-<li><strong>ÄTA:</strong> Beställaren beställde extra eluttag i garage (ÄTA nr 4)</li>
-<li><strong>Kontroller:</strong> Egenkontroll infästning takstolar godkänd</li>
-<li><strong>Foton:</strong> 4 bilder på monterade takstolar</li>
-</ul>
-<p>Poängen är inte att skriva långt – utan att skriva rätt. En utomstående ska kunna förstå dagen i efterhand.</p>
-
-<h2>Vanliga misstag som gör dagboken svag</h2>
-<ul>
-<li><strong>Skriva i efterhand.</strong> En dagbok som förs veckor senare väger lätt vid en tvist – för den löpande, samma dag.</li>
-<li><strong>För vaga noteringar.</strong> &quot;Jobbat på taket&quot; säger inget. Skriv vad, var och hur mycket.</li>
-<li><strong>Glömma hinder och ÄTA.</strong> Det är förseningar, störningar och ändringar som kostar pengar – de måste med.</li>
-<li><strong>Lösa lappar.</strong> De försvinner. Håll allt samlat, tidsstämplat och kopplat till projektet.</li>
-<li><strong>Inga foton.</strong> En bild styrker läget bättre än en mening.</li>
-</ul>
-
-<h2>Så för du byggdagbok i ByggExp</h2>
-<p>I ByggExp för du dagboken direkt i mobilen, kopplad till rätt projekt, så att inget skrivs av på lappar i efterhand:</p>
-<ol>
-<li>Öppna projektet och lägg till en ny dagboksnotering för dagens datum.</li>
-<li>Fyll i väder och temperatur, bemanning och antal personer på plats.</li>
-<li>Beskriv utfört arbete, eventuella avvikelser samt material och leveranser.</li>
-<li>Lägg till foton från arbetsplatsen direkt i noteringen.</li>
-<li>Allt sparas tidsstämplat i projektet – hela teamet ser samma underlag och du kan exportera det när det behövs.</li>
-</ol>
-<p>Vill du börja på papper eller Excel först? <a href="/sv/verktyg/byggdagbok-mall">Ladda ner vår gratis byggdagbok-mall</a> och fyll i den online – du får en färdig PDF att spara eller skriva ut.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Är byggdagbok ett lagkrav?</h3>
-<p>Nej, det finns ingen generell lag. Men i AB 04 och ABT 06 (kap 3 § 13) ska entreprenören föra dagbok. Vid konsumententreprenader (ABS 18, Hantverkarformuläret 17) krävs det bara om parterna avtalat om det.</p>
-<h3>Vad är skillnaden mellan byggdagbok och egenkontroll?</h3>
-<p>Byggdagboken beskriver vad som hände på arbetsplatsen dag för dag. Egenkontrollen dokumenterar att specifika moment utförts och kontrollerats enligt krav. De kompletterar varandra – många för båda i samma system.</p>
-<h3>Hur länge ska en byggdagbok sparas?</h3>
-<p>Spara dagboken så länge det kan uppstå ansvars- eller garantifrågor i projektet. Eftersom dagboken kan bli avgörande vid en tvist är rekommendationen att spara den väl efter slutbesiktning.</p>
-<h3>Vem ska föra byggdagboken?</h3>
-<p>Normalt entreprenören, ofta genom platschef eller arbetsledare. Det viktiga är att den förs löpande och samlat – inte i efterhand.</p>
-
-<h2>Kom igång</h2>
-<p>Sluta jaga uppgifter i efterhand. För byggdagbok direkt på plats, koppla den till projektet och ha allt samlat när det gäller. <a href="/sv/verktyg/byggdagbok-mall">Ladda ner gratis byggdagbok-mall (PDF)</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
-
-<p>Relaterade mallar: <a href="/sv/verktyg/tidrapport-mall">Tidrapport-mall</a> · <a href="/sv/verktyg/egenkontroll-mall">Egenkontroll-mall</a></p>
-`.trim();
-
-const BYGGDAGBOK: BlogPost = {
-  _id: 'code-byggdagbok',
-  title: 'Byggdagbok – vad den ska innehålla och hur du för den rätt',
-  slug: 'byggdagbok',
-  locale: 'sv',
-  excerpt:
-    'Vad en byggdagbok ska innehålla, vad AB 04 kräver och hur du för den utan krångel – plus en gratis mall att ladda ner.',
-  tag: 'Byggdagbok',
-  coverImageUrl: '/landing/verktyg/byggdagbok-preview.webp',
-  contentHtml: BYGGDAGBOK_HTML,
-  seoTitle: 'Byggdagbok – krav, innehåll och gratis mall | ByggExp',
-  seoDescription:
-    'Vad är en byggdagbok, vad säger AB 04 och vad ska den innehålla? Ladda ner en gratis byggdagbok-mall (PDF) och för dagbok enkelt i ByggExp.',
-  seoImageUrl: `${SITE_URL}/landing/verktyg/byggdagbok-preview.webp`,
-  canonicalUrl: '',
-  noIndex: false,
-  isPublished: true,
-  publishedAt: '2026-08-12T09:00:00.000Z',
-  createdAt: '2026-08-12T09:00:00.000Z',
-  updatedAt: '2026-08-12T09:00:00.000Z',
-};
 
 const EGENKONTROLL_HTML = `
 <p>Egenkontroll är det som styrker att jobbet är gjort rätt – och det som räddar dig när någon i efterhand ifrågasätter kvaliteten. Men ordet betyder faktiskt två olika saker, och det är här många går vilse. Här reder vi ut vad en egenkontroll är, vad den ska innehålla, hur den hänger ihop med KMA – och hur du gör den utan pappersstrul.</p>
@@ -936,82 +830,147 @@ const A_STARTMOTE_BYGGPROJEKT_CHECKLISTA: BlogPost = {
 };
 
 const A_RESURSPLANERING_BYGG_HTML = `
-<p>Så länge firman kör ett eller två projekt bor resursplaneringen i huvudet på arbetsledaren eller i ett Excel-ark. Det fungerar — tills det inte gör det. När ni växer till en portfölj av samtidiga projekt blir det manuella schemat den vanligaste källan till dubbelbokning: samma lag utlovas till två projektledare, kranföraren står inbokad på två adresser samma morgon och plötsligt är resursplaneringen i bygget det som bromsar hela företaget. Det här är en genomgång av hur du får kontroll med resurshistogram och resursutjämning — och var lagen sätter gränserna.</p>
+<p>Resursplanering i bygg handlar om att rätt lag och rätt maskin finns på rätt arbetsplats – utan att samma resurs lovas bort två gånger. Med fem samtidiga projekt blir det manuella schemat en vanlig orsak till dubbelbokning: samma lag utlovas till två projektledare, eller grävmaskinen står inbokad på två adresser samma morgon.</p>
 
-<p>Vill du börja i det konkreta kan du lägga upp projektens aktiviteter i vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a> och sedan lägga resurserna ovanpå tidplanen.</p>
+<p>Här får du en checklista för att välja verktyg, en jämförelse mellan Excel och system, och metoden för att se och jämna ut överbeläggning. Vill du börja direkt kan du lägga upp projektens moment i vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>.</p>
 
-<h2>Skillnaden mellan projektplanering och resursplanering</h2>
-<p><a href="/sv/blog/projektplanering-bygg">Projektplanering</a> svarar på <em>vad</em> som ska göras och <em>när</em>: aktiviteter, beroenden och slutdatum i en tidplan. Resursplanering svarar på en annan fråga — <em>vem eller vilken maskin</em> som utför varje aktivitet. De två hänger ihop men är inte samma sak, och det är i glappet mellan dem dubbelbokningarna uppstår.</p>
-<p>En resurs är allt som har begränsad kapacitet: yrkesarbetare, hela lag, underentreprenörer, maskiner, kranar och ställningar. Så länge varje projekt planeras för sig ser tidplanen fin ut — men ingen ser att samma resurs är intecknad på tre håll samtidigt. Poängen med riktig resursplanering är att beläggningen blir synlig tvärs över hela projektportföljen, inte bara inom ett projekt i taget.</p>
+<h2>Vad innebär resursplanering i bygg?</h2>
+<p><a href="/sv/blog/projektplanering-bygg">Projektplanering</a> svarar på <em>vad</em> som ska göras och <em>när</em>: moment, beroenden och slutdatum. Resursplanering svarar på <em>vem eller vilken maskin</em> som utför varje moment, och om kapaciteten räcker. Det är i glappet mellan de två som dubbelbokningarna uppstår.</p>
+<p>En resurs är allt med begränsad kapacitet: yrkesarbetare, hela lag, underentreprenörer, maskiner, kranar och ställningar. Planerar varje projektledare sitt projekt för sig ser alla tidplaner bra ut – men ingen ser att samma snickarlag är inbokat på tre håll samma vecka. Resursplanering gör beläggningen synlig tvärs över alla projekt.</p>
 
-<h2>Resurshistogram — se beläggningen mot kapaciteten</h2>
-<p>Ett resurshistogram är en stapelvy som summerar beläggningen per resurs eller lag över tid och ställer den mot tillgänglig kapacitet. Varje stapel visar hur många timmar som är inbokade en given vecka; en vågrät linje visar kapacitetstaket. Stiger stapeln över linjen har du överbeläggning — ni har lovat bort mer arbete än laget hinner med.</p>
-<p>Kapacitetstaket är inte en gissning, det går att räkna. Enligt Byggavtalet (i kraft 2025-05-01 till 2027-04-30) är ordinarie arbetstid 40 timmar i veckan, vilket ger 160 timmar per fyraveckorsperiod, förlagd flexibelt mellan 06.00 och 18.00 måndag till fredag. Från slutet av mars 2026 tillkommer 6 dagars arbetstidsförkortning för den som jobbar 40-timmarsvecka, där arbetsgivaren ensidigt får lägga ut en av dagarna i anslutning till en helg. Räkna även bort semester och annan frånvaro. Det som återstår är den faktiska kapaciteten histogrammet ska mätas mot — inte en teoretisk maxsiffra.</p>
+<h2>Vad ett resursplaneringsverktyg för bygg ska klara</h2>
+<p>Oavsett om du väljer Excel, ett generellt planeringsverktyg eller ett byggsystem – ställ de här kraven:</p>
+<ul>
+<li><strong>Alla projekt i en vy</strong> – beläggningen per person summeras tvärs över projekten, inte ett projekt i taget.</li>
+<li><strong>Varning för överbokning</strong> – du ser direkt när någon har fler timmar inplanerade än en arbetsdag rymmer.</li>
+<li><strong>Frånvaro i planen</strong> – semester, ATF-dagar och sjukdom syns där du planerar, inte i en separat lista.</li>
+<li><strong>Vy per person och per projekt</strong> – arbetsledaren tänker i lag, projektledaren i projekt.</li>
+<li><strong>Ändringslogg</strong> – vem flyttade vem, och när. Annars går det inte att reda ut en krock i efterhand.</li>
+<li><strong>Koppling till tidrapporteringen</strong> – rapporterade timmar på projektet i samma system som planen, så att du ser om planen höll.</li>
+<li><strong>Maskiner och underentreprenörer</strong> – antingen i samma verktyg eller i en enkel, separat bokningslista. Bestäm vilket innan du väljer.</li>
+</ul>
+
+<h2>Excel, generellt planeringsverktyg eller byggsystem?</h2>
+<p>Funktionerna varierar mellan leverantörer, så fråga konkret om de rader som är viktigast för er.</p>
+<div class="article-table"><table>
+<thead><tr><th></th><th>Excel / whiteboard</th><th>Generellt planeringsverktyg</th><th>Byggsystem</th></tr></thead>
+<tbody>
+<tr><td><strong>Personal</strong></td><td>Ja, men manuellt. Krockar mellan flikar syns inte.</td><td>Ja, som resurser eller ansvariga på uppgifter.</td><td>Ja, per person och projekt, ofta med varning för överbokning.</td></tr>
+<tr><td><strong>Maskiner</strong></td><td>Egen rad eller flik, manuellt.</td><td>Ofta möjligt som egen resurstyp.</td><td>Varierar – en del system planerar maskiner, andra bara personal.</td></tr>
+<tr><td><strong>Frånvaro</strong></td><td>Skrivs in för hand.</td><td>Ofta en kalender, sällan kopplad till löneunderlaget.</td><td>Godkänd ledighet syns ofta direkt i planen.</td></tr>
+<tr><td><strong>Underentreprenörer (UE)</strong></td><td>Egen rad, manuellt.</td><td>Som externa gäster i projektet.</td><td>Varierar – kontrollera före köp.</td></tr>
+<tr><td><strong>Mobilapp</strong></td><td>Nej. Filen skickas runt eller fotas av.</td><td>Ja, men byggd för kontorsarbete.</td><td>Ja, ofta med in- och utstämpling på arbetsplatsen.</td></tr>
+<tr><td><strong>Koppling till tid</strong></td><td>Nej, tidrapporten ligger i en annan fil.</td><td>Ibland tidmätning, men inte byggtidrapport med OB, restid och traktamente.</td><td>Planering och tidrapportering i samma system.</td></tr>
+</tbody>
+</table></div>
+<p>Tumregel: Excel räcker för ett lag och ett par projekt. Ett generellt verktyg passar kontorsprojekt. När lagen roterar mellan flera arbetsplatser och timmarna ska bli lön och faktura lönar sig ett byggsystem. Hur du väljer system för det dagliga schemat går vi igenom i guiden om <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggningssystem för bygg</a>.</p>
+
+<h2>Resursplanering i Excel – gratis mall</h2>
+<p>Lägg projekten som rader och veckorna som kolumner, och skriv in vilket lag som är bokat var. Tre regler gör arket användbart:</p>
+<ol>
+<li><strong>En fil för alla projekt</strong> – inte ett ark per projektledare.</li>
+<li><strong>En rad per resurs</strong> – lag, nyckelpersoner och dyra maskiner, så att dubbelbokningar syns på samma rad.</li>
+<li><strong>En summeringsrad per vecka</strong> – inplanerade timmar mot tillgängliga.</li>
+</ol>
+<p>Ladda ner vår <a href="/sv/verktyg/gantt-schema-mall">gratis Gantt-schema-mall</a> och bygg resursraderna under tidplanen – steg för steg i guiden <a href="/sv/blog/gantt-schema-mall-bygg">Gantt-schema för bygge</a>. Arket börjar skava när flera personer ändrar i det samtidigt, när frånvaron ska hållas uppdaterad och när timmarna ska jämföras med tidrapporterna.</p>
+
+<h2>Resurshistogram – se beläggningen mot kapaciteten</h2>
+<p>Ett resurshistogram är en stapelvy som summerar beläggningen per resurs eller lag över tid och ställer den mot tillgänglig kapacitet. Varje stapel visar hur många timmar som är inbokade en viss vecka; en vågrät linje visar kapacitetstaket. Går stapeln över linjen har ni lovat bort mer arbete än laget hinner med.</p>
+<p>Kapacitetstaket går att räkna fram. Enligt Byggavtalet är ordinarie arbetstid i genomsnitt 40 timmar i veckan. Dra av arbetstidsförkortning, semester och annan frånvaro. Det som återstår är den faktiska kapaciteten som histogrammet ska mätas mot.</p>
 
 <h2>Resursutjämning: smoothing och leveling</h2>
-<p>När histogrammet visar en topp finns det två sätt att jämna ut den. Resursutjämning handlar om att flytta aktiviteter som inte ligger på kritiska linjen inom sitt slack — det tidsutrymme de kan förskjutas utan att påverka annat.</p>
+<p>När histogrammet visar en topp flyttar du moment som inte ligger på kritiska linjen inom sitt slack (flyt) – den tid de kan förskjutas utan att något annat påverkas. Det finns två varianter:</p>
 <ul>
-<li><strong>Resource smoothing</strong> — du jämnar ut belastningen utan att flytta projektets slutdatum. Du utnyttjar bara det slack som redan finns i icke-kritiska aktiviteter.</li>
-<li><strong>Resource leveling</strong> — kapaciteten räcker helt enkelt inte, och du accepterar att slutdatumet flyttas för att inte överbelägga laget.</li>
+<li><strong>Resource smoothing</strong> – du jämnar ut belastningen utan att flytta slutdatumet och använder bara det slack som redan finns.</li>
+<li><strong>Resource leveling</strong> – kapaciteten räcker inte, och du accepterar att slutdatumet flyttas hellre än att överbelägga laget.</li>
 </ul>
-<p>Praktiskt börjar du med att skydda kritiska linjen, fördela om lag mellan projekt och tidigare- eller senarelägga moment som tål det. Målet är att kapa toppen innan den blir övertid — inte att lösa den med övertid.</p>
+<p>I praktiken skyddar du först kritiska linjen, fördelar sedan om lag mellan projekten och tidigare- eller senarelägger moment som tål det. Målet är att kapa toppen innan den blir övertid.</p>
 
-<h2>Lagen sätter taket för hur långt du får tänja</h2>
-<p>Det är frestande att se övertid som ventilen som löser all överbeläggning. Det är den inte. Arbetstidslagen (1982:673) sätter hårda tak som ett resursschema aldrig får bryta mot:</p>
+<h2>Lagen sätter taket för övertiden</h2>
+<p>Övertid löser inte strukturell överbeläggning. <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/arbetstidslag-1982673_sfs-1982-673/" target="_blank" rel="noopener">Arbetstidslagen (1982:673)</a> sätter gränser som resursplanen inte får bryta mot:</p>
 <ul>
-<li>Allmän övertid: högst <strong>200 timmar per anställd och kalenderår</strong>, med ytterligare 150 timmar extra övertid.</li>
+<li>Allmän övertid: högst <strong>200 timmar per anställd och kalenderår</strong>. Vid särskilda skäl får ytterligare 150 timmar extra övertid tas ut.</li>
 <li>Högst <strong>48 timmar övertid per fyraveckorsperiod</strong>, eller 50 timmar per kalendermånad.</li>
-<li><strong>Dygnsvila</strong>: minst 11 sammanhängande timmars vila per 24-timmarsperiod.</li>
+<li><strong>Dygnsvila</strong>: minst 11 sammanhängande timmar per 24-timmarsperiod.</li>
 <li><strong>Veckovila</strong>: minst 36 sammanhängande timmar per sjudagarsperiod.</li>
 </ul>
-<p>Vilotiderna är särskilt lömska när firman växer. Att köra ett lag rakt från ett projekt in i nästa, eller dubbelboka en besättning över två arbetsplatser, kan bryta mot dygns- eller veckovilan även när veckans totala timmar ser rimliga ut. Histogrammet måste alltså hålla sig under både kapacitetstaket och lagtaket samtidigt.</p>
+<p>Kollektivavtal kan avvika från lagens regler, så kontrollera vad Byggavtalet säger för era anställda. Vilotiderna är lätta att missa: ett lag som går direkt från kvällsjobb på ett projekt till tidig start på nästa kan bryta mot dygnsvilan även när veckans timmar ser rimliga ut.</p>
 
-<h2>Dubbelbokning tvärs projekt — det klassiska växtvärkproblemet</h2>
-<p>Det verkliga tillväxtproblemet är inte överbeläggning inom ett projekt, utan dubbelbokning mellan projekt: samma lag, kranförare eller maskin lovad till två projektledare som var för sig inte ser den andres plan. Här är det värt att reda ut vad personalliggaren gör och inte gör.</p>
-<p>Elektronisk personalliggare är obligatorisk på byggarbetsplatser. Kravet gäller inte när beställaren är en privatperson som bygger för privat bruk, eller när den beräknade byggkostnaden på platsen understiger 4 prisbasbelopp. För 2026 är prisbasbeloppet 59 200 kr, vilket ger en gräns på 4 × 59 200 = 236 800 kr, alltså cirka 237 000 kr. Byggherren ska anmäla till Skatteverket innan arbetet startar. Notera att lagen inte kräver ID06 specifikt — kravet är bara att liggaren är elektronisk och visar vem som varit på plats och när. ID06 är marknadsstandard, inte ett lagkrav.</p>
-<p>Men personalliggaren visar vem som <em>faktiskt</em> var på plats i efterhand — den hindrar ingen dubbelbokning i förväg. Därför räcker inte liggaren som planeringsverktyg. Du behöver en central resursvy <em>före</em> arbetet, inte bara en liggare <em>efter</em>.</p>
+<h2>Personalliggaren förhindrar inte dubbelbokning</h2>
+<p>Den elektroniska personalliggaren är obligatorisk på byggarbetsplatser när den totala byggkostnaden exklusive moms beräknas överstiga 4 prisbasbelopp (4 × 59 200 kr = 236 800 kr för 2026), med undantag för privatpersoner som bygger för eget bruk. Men den visar vem som <em>var</em> på plats i efterhand – den förhindrar ingen krock i förväg. Det kräver en gemensam resursvy <em>innan</em> arbetet börjar.</p>
+
+<h2>Planera maskiner och utrustning</h2>
+<p>Maskiner är ofta den dyraste resursen per timme, och en inhyrd maskin kostar lika mycket i hyra när den står still som när den går. Så får du in dem i planeringen:</p>
+<ul>
+<li><strong>Planera bara flaskhalsarna.</strong> Kran, grävmaskin, lift och ställning ska ha en egen rad i planen. Handverktyg behöver det inte.</li>
+<li><strong>Koppla maskinen till momentet, inte till projektet.</strong> Kranen behövs under stomresningen, inte under hela projektet.</li>
+<li><strong>Räkna med transport och etablering.</strong> En maskin som flyttas mellan arbetsplatser är borta en halv dag eller mer.</li>
+<li><strong>Bestäm vem som äger bokningen.</strong> En person per maskin som godkänner flyttar, annars står den dubbelbokad igen.</li>
+</ul>
+<p>Om hur du håller ordning på vilken utrustning som finns och var den är: <a href="/sv/blog/hantera-verktyg-och-utrustning">Hantera verktyg och utrustning</a>.</p>
+
+<h2>Underentreprenörer i resursplanen</h2>
+<p>En underentreprenör planerar sina egna resurser, men ditt projekt är beroende av när de kommer. Behandla UE som en resurs med begränsad kapacitet:</p>
+<ul>
+<li><strong>Lägg in UE:s moment som egna rader</strong> med start, slut och kontaktperson.</li>
+<li><strong>Bekräfta datum skriftligt</strong> och stäm av en vecka innan, eftersom UE ofta har flera beställare samtidigt.</li>
+<li><strong>Planera överlämningarna.</strong> Kollisioner uppstår oftast i skarven, till exempel när elektrikern väntar på att snickarna ska bli klara med reglarna.</li>
+<li><strong>Ha en buffert framför kritiska UE-moment</strong> – en sen UE-start påverkar ofta flera egna lag.</li>
+</ul>
 
 <h2>Så bygger du processen i praktiken</h2>
 <ol>
-<li>Inventera kapaciteten per lag och maskin — faktiska tillgängliga timmar, inte teoretiska.</li>
-<li>Lägg alla projekt i EN delad resursvy, inte separata scheman per projektledare.</li>
-<li>Läs av histogrammet varje vecka och leta efter staplar över kapacitetslinjen.</li>
-<li>Utjämna topparna med smoothing eller leveling innan de blir övertid.</li>
-<li>Hantera underentreprenörer och maskiner som egna resurser med egen kapacitet.</li>
+<li>Räkna fram den faktiska kapaciteten per lag och nyckelmaskin – tillgängliga timmar efter frånvaro.</li>
+<li>Samla alla projekt i en gemensam resursvy.</li>
+<li>Gå igenom beläggningen varje vecka och leta efter dagar och veckor över kapaciteten.</li>
+<li>Jämna ut topparna med smoothing eller leveling innan de blir övertid.</li>
+<li>Stäm av underentreprenörer och maskinbokningar i samma veckomöte.</li>
 </ol>
 
-<h2>Varför just nu — marknaden 2026</h2>
-<p>Byggföretagens prognos pekar på att bygginvesteringarna vänder uppåt med runt 4 procent under 2026 och att bostadsstarterna stiger till omkring 30 500 från bottenåret 2024. Samtidigt rapporterar branschen brist på ungefär 700 yrkesarbetare med rätt kompetens, och kompetensbristen flaggas som en risk som kan bromsa återhämtningen. Slutsatsen är enkel: när varje yrkesarbetare är en bristvara kostar dålig resursplanering dubbelt — en böjd tidplan och bränd personal på samma gång.</p>
-
 <h2>Så gör du i ByggExp</h2>
-<p>Som resursplaneringsverktyg planerar ByggExp resurser per projekt, men beläggningen syns aggregerat tvärs över hela portföljen. Det betyder att när ett lag redan är intecknat på ett projekt fångas överbeläggningen upp tidigt i stället för att upptäckas när två arbetsledare bråkar om samma besättning på måndag morgon. Du kopplar tidrapporterna till planen så att utfall och plan lever i samma system — börja gärna med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för att fånga faktiska timmar per lag. ByggExp trollar inte bort kapacitetsbrist, men det gör den synlig i tid så att du hinner utjämna innan det blir övertid eller dubbelbokning.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Vad är ett resursplaneringsverktyg?</h3>
-<p>Ett resursplaneringsverktyg samlar alla projekt i en delad vy och ställer beläggningen per lag och maskin mot kapaciteten, så att överbeläggning och dubbelbokning syns innan de blir övertid. Skillnaden mot ett Excel-schema är att beläggningen räknas ihop tvärs över hela portföljen – inte ett projekt i taget.</p>
-<h3>Vad är skillnaden mellan resurshistogram och Gantt-schema?</h3>
-<p>Gantt-schemat visar aktiviteter över tid — vad som görs när. Resurshistogrammet visar summerad beläggning per resurs mot kapacitet — om laget faktiskt räcker till för alla aktiviteter samtidigt. Du behöver båda: tidplanen för sekvensen, histogrammet för att se överbeläggning.</p>
-<h3>Kan jag lösa överbeläggning med övertid?</h3>
-<p>Bara till en gräns. Arbetstidslagen tillåter högst 200 timmars allmän övertid per anställd och år, max 48 timmar per fyraveckorsperiod, samt kräver 11 timmars dygnsvila och 36 timmars veckovila. Övertid är en ventil, inte en lösning på strukturell överbeläggning.</p>
-<h3>Räcker personalliggaren för att undvika dubbelbokning?</h3>
-<p>Nej. Personalliggaren är elektronisk och visar vem som varit på plats i efterhand — den är obligatorisk över 4 prisbasbelopp (cirka 237 000 kr 2026). Men den planerar ingenting framåt. För att undvika dubbelbokning behöver du en central resursvy före arbetet.</p>
-<h3>Vad är skillnaden mellan resource smoothing och leveling?</h3>
-<p>Smoothing jämnar ut belastningen utan att flytta slutdatumet, genom att utnyttja slack i icke-kritiska aktiviteter. Leveling tillåter att slutdatumet flyttas när kapaciteten helt enkelt inte räcker till.</p>
+<p>ByggExp planerar personal. I <strong>Planering</strong> lägger du upp planen per personal eller per projekt i ett Gantt-schema, med vyerna 2 veckor, månad eller ett eget datumintervall. I <strong>Bemanning</strong> klickar du i en ruta för att sätta personer på ett projekt en viss dag. Godkänd frånvaro syns i planen, och har någon mer än 8 timmar inplanerade samma dag får du en varning om överbokning. Ändringsloggen visar vem som ändrade vad.</p>
+<figure class="web-shot"><img src="/features-content/dagsplanering-och-planeringsmoten-web.webp" alt="Resursplanering bygg i ByggExp: Gantt-schema per personal med projekt bokade över månaden" width="1000" height="548" loading="lazy"><figcaption>Planeringen i webbadmin – personalen per rad, projekten som staplar över veckorna.</figcaption></figure>
+<p>Tidrapporteringen finns i samma system: laget stämplar in och ut i mobilappen med GPS, och timmarna hamnar på projektet. Läs mer i guiden om <a href="/sv/blog/tidrapportering">tidrapportering i byggbranschen</a>. Maskiner och underentreprenörer planeras inte i ByggExp. Håll dem i en separat bokningslista enligt metoden ovan.</p>
 
 <h2>Kom igång</h2>
-<p>Gå från Excel och huvudräkning till en delad resursvy per projekt. Lägg upp tidplanen i vår <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>, koppla på timmarna via <a href="/sv/verktyg/tidrapport-mall">tidrapport-mallen</a> — och vill du se hur resursplaneringen fungerar över hela portföljen i praktiken, <a href="/sv/contact">boka en demo</a>.</p>
+<p>Börja med att samla alla projekt i en gemensam vy – i vår <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a> eller i ett system. Vill du se hur Planering och Bemanning fungerar i ByggExp? <a href="/sv/contact">Boka en demo</a>. Du kan testa alla funktioner gratis i 14 dagar.</p>
 
-<p>Relaterat: <a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a>, <a href="/sv/blog/gantt-schema-mall-bygg">Gantt-schema för bygge</a>, <a href="/sv/blog/tidrapportering">Tidrapportering i byggprojekt</a>.</p>
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/schemalaggningssystem-bygg">Schemaläggningssystem för bygg</a> – välj system för det dagliga schemat.</li>
+<li><a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a> – vilka personer som behövs framåt.</li>
+<li><a href="/sv/blog/personalplanering-bygg">Bemanningsplanering för byggföretag</a> – rätt person på rätt plats.</li>
+<li><a href="/sv/blog/projektplanering-bygg">Projektplanering i bygg</a> – tidplanen som resursplanen bygger på.</li>
+<li><a href="/sv/blog/tidrapportering">Tidrapportering i byggbranschen</a> – följ upp planen med faktiska timmar.</li>
+</ul>
+
+<h2>Vanliga frågor</h2>
+<h3>Vad innebär resursplanering?</h3>
+<p>Resursplanering innebär att fördela personal, maskiner och annan begränsad kapacitet på projektens moment, så att ingen resurs är dubbelbokad eller överbelagd. I bygg handlar det främst om att se beläggningen per lag tvärs över alla pågående projekt.</p>
+<h3>Var kan jag hitta ett planeringsprogram för byggbranschen?</h3>
+<p>Det finns flera svenska byggsystem med planering, oftast tillsammans med tidrapportering och projektuppföljning. Jämför dem mot checklistan ovan och testa med era egna projekt under en gratis provperiod innan ni bestämmer er.</p>
+<h3>Finns det gratis resursplaneringsverktyg?</h3>
+<p>Ja. Excel eller Google Kalkylark med en Gantt-mall fungerar för små firmor – vår Gantt-schema-mall är gratis. Det finns också gratisversioner av generella planeringsverktyg, men de saknar ofta byggspecifika funktioner som koppling till tidrapport och löneunderlag.</p>
+<h3>Kan man resursplanera i Excel?</h3>
+<p>Ja, så länge alla projekt ligger i samma fil och få personer ändrar i den. Med flera projektledare och roterande lag blir frånvaro och ändringar svåra att hålla aktuella.</p>
+<h3>Vad kostar ett resursplaneringsverktyg för bygg?</h3>
+<p>Priserna varierar mellan leverantörer och beror oftast på antal användare. I ByggExp ingår planering av projekt och personal i paketet Koll på jobbet för 690 kr i månaden exklusive moms, med 10 användare inkluderade och 69 kr per extra användare. Ingen startavgift, ingen bindningstid och 14 dagar gratis.</p>
+<h3>Vad är skillnaden mellan resurshistogram och Gantt-schema?</h3>
+<p>Gantt-schemat visar moment över tid – vad som görs när. Resurshistogrammet visar summerad beläggning per resurs mot kapaciteten – om laget räcker till. Du behöver båda.</p>
+<h3>Kan jag lösa överbeläggning med övertid?</h3>
+<p>Bara tillfälligt. Arbetstidslagen begränsar den allmänna övertiden till 200 timmar per år och 48 timmar per fyraveckorsperiod, och vilotiderna gäller ändå. Kollektivavtal kan ha egna regler.</p>
+<h3>Räcker personalliggaren för att undvika dubbelbokning?</h3>
+<p>Nej. Den registrerar närvaro men planerar ingenting. Dubbelbokningar stoppas bara av en gemensam plan över alla projekt.</p>
 `;
 
 const A_RESURSPLANERING_BYGG: BlogPost = {
   _id: "code-"+"resursplanering-bygg",
-  title: "Resursplanering i bygg — så undviker du överbeläggning och dubbelbokade lag", slug: "resursplanering-bygg", locale: "sv",
-  excerpt: "Så använder du resurshistogram och resursutjämning för att undvika överbeläggning och dubbelbokade lag och maskiner när byggfirman växer från några projekt till en hel portfölj.", tag: "Planering",
+  title: "Resursplanering i bygg – undvik dubbelbokning av lag och maskiner", slug: "resursplanering-bygg", locale: "sv",
+  excerpt: "Checklista för resursplaneringsverktyg, Excel jämfört med system, gratis mall och metoden för att planera lag, maskiner och underentreprenörer utan dubbelbokning.", tag: "Planering",
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_RESURSPLANERING_BYGG_HTML,
-  seoTitle: "Resursplaneringsverktyg för bygg – undvik dubbelbokning | ByggExp", seoDescription: "Resursplaneringsverktyg för bygg: med resurshistogram och resursutjämning slipper firman överbeläggning och dubbelbokade lag och maskiner när ni växer.",
+  seoTitle: "Resursplanering bygg – verktyg, metod och mall | ByggExp", seoDescription: "Resursplanering i bygg: checklista för verktyg, Excel jämfört med system, gratis mall och metoden för att undvika dubbelbokade lag och maskiner.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T08:18:00.000Z", createdAt: "2026-08-19T08:18:00.000Z", updatedAt: "2026-08-19T08:18:00.000Z",
+  publishedAt: "2026-08-19T08:18:00.000Z", createdAt: "2026-08-19T08:18:00.000Z", updatedAt: "2026-10-06T08:00:00.000Z",
 };
 
 const A_FUKTSAKERHETSPLAN_BYGGAF_HTML = `
@@ -1860,7 +1819,6 @@ const A_KVALITETSPLAN_BYGG: BlogPost = {
 export const KVALITET_ARTICLES: BlogPost[] = [
   A_KVALITETSPLAN_BYGG,
   ENKELT_TIDRAPPORTERINGSSYSTEM,
-  BYGGDAGBOK,
   EGENKONTROLL,
   TIDRAPPORTERING,
   VATRUM,

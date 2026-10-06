@@ -1406,90 +1406,224 @@ const S_TIDRAPPORTERING_HANTVERKARE: BlogPost = {
 };
 
 const S_TIDRAPPORTERING_ENTREPRENAD_HTML = `
-<p>I en entreprenad passerar timmarna flera händer: underentreprenören rapporterar, huvudentreprenören attesterar och beställaren vill se underlag. Tidrapportering för entreprenad handlar om att göra den kedjan spårbar – rätt timmar, rätt projekt, rätt godkännande. Här går vi igenom hur du håller ordning på tid i entreprenader.</p>
-<p>Se helheten i vår guide om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>.</p>
+<p>I en entreprenad ska samma timmar räcka till tre saker: lön till den egna personalen, faktura eller avstämning mot beställaren och uppföljning mot kalkylen. Tidrapportering för entreprenad handlar därför om att varje timme har en person, ett datum, ett projekt och en attest – och om att ÄTA-arbete och underentreprenörernas tid hålls isär från kontraktsarbetet.</p>
+<p>Saknar ni system i dag kan ni börja med vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a>. Grunderna finns i guiden om <a href="/sv/blog/tidrapportering">tidrapportering i byggföretag</a>.</p>
 
-<figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projektuppföljning – följ timmar, kostnader, fakturerat och marginal mot budget" width="720" height="380" loading="lazy"><figcaption>Rapporterade timmar räknas in i projektuppföljningen – tid mot budget medan entreprenaden pågår.</figcaption></figure>
+<figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projektuppföljning – följ timmar, kostnader, fakturerat och marginal mot budget" width="720" height="380" loading="lazy"><figcaption>Timmar per projekt – grunden för lön, faktura och uppföljning mot kalkylen.</figcaption></figure>
 <p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
 
-<h2>Tid som underlag i entreprenader</h2>
-<p>När flera aktörer arbetar på samma projekt måste tiden gå att härleda: vem, när, vilket projekt. Digital tidrapportering med incheckning och koppling till projekt ger dig det underlaget automatiskt – användbart både för fakturering på löpande räkning och för avstämning med beställaren.</p>
+<h2>Vad skiljer tidrapportering i entreprenad från vanlig tidrapportering?</h2>
+<p>Själva registreringen är densamma: timmar per person och dag. Skillnaden ligger i kraven runt omkring. Flera företag arbetar på samma arbetsplats, beställaren granskar underlaget, entreprenadavtalet styr hur ändrings- och tilläggsarbeten ersätts och kollektivavtalet styr vad yrkesarbetarna ska ha betalt för tid på kvällar, helger och resor. En tidrapport som håller i en entreprenad uppfyller fyra krav:</p>
+<ul>
+<li><strong>Rätt projekt</strong> – timmen bokas där den gjordes, inte på ett samlingskonto för ”övrigt”.</li>
+<li><strong>Rätt timtyp</strong> – normaltid, övertid och OB skiljs åt redan vid registreringen.</li>
+<li><strong>ÄTA för sig</strong> – tilläggsarbete märks så att det kan faktureras separat.</li>
+<li><strong>Attest före export</strong> – ingen timme går vidare till lön eller faktura innan en ansvarig har godkänt den.</li>
+</ul>
 
-<h2>Löpande räkning ställer högre krav på tiden</h2>
-<p>Faktureras entreprenaden på löpande räkning är tidsunderlaget själva fakturan – då måste varje timme kunna styrkas. Beställare granskar ofta underlag noggrant, och saknas spårbarhet kan timmar strykas. Digitalt registrerade timmar per projekt, med tidpunkt och person, ger ett underlag som håller. Detsamma gäller <a href="/sv/blog/ata-hantering-mall">ÄTA-arbeten</a>: extra arbete som inte kopplas till rätt post riskerar att aldrig bli betalt.</p>
+<h2>Underentreprenörernas timmar</h2>
+<p>Som huvudentreprenör rapporterar du inte UE:s tid. UE har egen personal och eget lönesystem och fakturerar dig. Det du behöver är kontroll: att timmarna UE debiterar på löpande räkning stämmer med det som faktiskt gjorts på arbetsplatsen.</p>
+<ul>
+<li>Skriv in i UE-avtalet hur tidsunderlaget ska se ut: per dag, per person och med ÄTA särredovisat.</li>
+<li>Begär underlaget varje månad, inte först med slutfakturan.</li>
+<li>Stäm av mot er egen bild av arbetsplatsen – bemanningen i byggdagboken, personalliggaren och arbetsledarens anteckningar.</li>
+<li>Godkänn UE:s faktura först när underlaget är avstämt.</li>
+</ul>
+<p>ByggExp har ingen särskild roll för underentreprenörer – systemet är byggt för er egen personal. UE:s tidsunderlag hanterar du som bilaga till deras faktura. Läs mer om att <a href="/sv/blog/anlita-underentreprenor">anlita underentreprenör</a> och om <a href="/sv/blog/omvand-byggmoms-underentreprenor">omvänd byggmoms mellan UE och huvudentreprenör</a>.</p>
 
-<h2>Attestering och kontroll</h2>
-<p>Innan timmar faktureras eller betalas bör de attesteras. Ett system där arbetsledaren granskar och godkänner passen innan de låses ger kontroll och minskar tvister om timmar i efterhand.</p>
+<h2>Månadsunderlag till beställaren vid löpande räkning</h2>
+<p>På löpande räkning är tidsunderlaget grunden för fakturan. Beställaren har rätt att granska det, och timmar som inte går att härleda riskerar att strykas. Ett månadsunderlag som klarar granskningen innehåller:</p>
+<ul>
+<li>datum, namn eller yrkesroll och antal timmar per dag</li>
+<li>vilket projekt, och gärna vilken del av arbetet, timmarna gäller</li>
+<li>ÄTA-timmar i en egen summering med hänvisning till respektive ÄTA</li>
+<li>timtyp där den påverkar priset, till exempel beställd övertid</li>
+<li>vem som har attesterat.</li>
+</ul>
+<p>Ett exempel: tre snickare har under oktober 412 timmar på projektet, varav 36 timmar på ÄTA 4 (extra bjälklagsförstärkning) och 12 timmar beställd lördagsövertid. Står de tre posterna var för sig ser beställaren direkt vad som är kontrakt, vad som är tillägg och varför timpriset skiljer sig. Står allt i en klump blir fakturan ifrågasatt.</p>
+<p>Skicka underlaget tillsammans med fakturan och för samma period varje gång. Då går granskningen fortare och diskussionerna om enskilda dagar blir färre. I ByggExp attesteras arbetspassen i webben, och tidrapporten för perioden exporteras som PDF eller Excel att bifoga fakturan.</p>
+<figure class="web-shot"><img src="/features-content/automatisk-tidrapportering-och-export-web.webp" alt="Tidrapportering för entreprenad i webbadmin: planerade, GPS- och manuella timmar per medarbetare och dag" width="1000" height="548" loading="lazy"><figcaption>Timmarna i webbadmin – granska per medarbetare och dag innan de attesteras och exporteras.</figcaption></figure>
 
-<h2>Koppling till projektekonomi</h2>
-<p>Rapporterade timmar bör räknas in i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a> så att du ser nedlagd tid mot budget medan projektet pågår, inte efteråt.</p>
+<h2>ÄTA-timmar separat – så tappar du dem inte</h2>
+<p>ÄTA-arbete som inte registreras när det görs blir sällan betalt. Två veckor senare minns ingen hur många timmar rivningen bakom den nya väggen tog, och utan underlag är det svårt att få beställaren att godkänna kostnaden. Ett fungerande flöde:</p>
+<ol>
+<li>Dokumentera ÄTA:n innan arbetet börjar – omfattning, uppskattad tid och om den ska debiteras på löpande räkning eller till fast pris. Vår <a href="/sv/verktyg/ata-mall">ÄTA-mall</a> ger en färdig struktur.</li>
+<li>Ge ÄTA:n ett nummer som laget väljer i appen när de rapporterar tid.</li>
+<li>Märk arbetspassen med ÄTA-numret samma dag som arbetet görs.</li>
+<li>Summera ÄTA-timmarna separat i månadsunderlaget.</li>
+</ol>
+<p>I ByggExp kopplas arbetspasset till en ÄTA, så att timmarna kan faktureras separat från kontraktsarbetet. Hela flödet beskrivs i guiden om <a href="/sv/blog/ata-hantering-mall">ÄTA-hantering</a>.</p>
+
+<h2>Byggavtalet: OB, övertid, restid och traktamente</h2>
+<p>För yrkesarbetare styr <a href="https://www.byggnads.se/stod-pa-jobbet/byggnads-kollektivavtal/ditt-kollektivavtal/" target="_blank" rel="noopener">Byggavtalet</a> mellan Byggnads och Byggföretagen hur tid utöver ordinarie dagtid ersätts. Lönen kan bara bli rätt om tidrapporten visar mer än en dagssumma:</p>
+<ul>
+<li><strong>Övertid</strong> – arbete utöver ordinarie arbetstid. Avtalet har fyra nivåer, och tidpunkten avgör vilken som gäller.</li>
+<li><strong>OB</strong> – ordinarie arbetstid förlagd till tidig morgon, kväll, natt eller helg. Tre nivåer. OB och övertid betalas aldrig för samma timme, så varje timme ska ha en timtyp.</li>
+<li><strong>Restid</strong> – resa till och från arbetsplatsen ersätts enligt avtalets avståndsregler. Kilometer och restid behöver framgå.</li>
+<li><strong>Traktamente</strong> – vid tjänsteresa med övernattning mer än 50 km från arbetsplatsen och bostaden. Lönehandläggaren behöver veta om det gäller hel eller halv dag, och skattefriheten följer Skatteverkets regler.</li>
+</ul>
+<p>I ByggExp väljer medarbetaren timtyp – normal, övertid eller OB – på varje arbetspass och fyller i restid i kilometer och minuter samt traktamente (inget, halvt eller helt). Systemet lagrar vad som rapporterats men räknar inte ut ersättningen enligt avtalet – den beräkningen görs i lönesystemet. Hur du räknar själv beskrivs i <a href="/sv/blog/ob-overtid-byggavtalet-rakna">OB och övertid i Byggavtalet</a>, <a href="/sv/blog/restidsersattning-byggavtalet">restidsersättning</a> och <a href="/sv/blog/traktamente-byggnadsarbetare-2026">traktamente för byggnadsarbetare</a>.</p>
+
+<h2>Export till lön och faktura</h2>
+<p>Attesterade timmar ska inte skrivas av för hand en gång till. Det vanliga är att exportera dem i ett format som lönesystemet eller bokföringen kan läsa. ByggExp exporterar:</p>
+<ul>
+<li><strong>Löneunderlag som CSV</strong> – för import i lönesystemet.</li>
+<li><strong>AGI-underlag som CSV</strong> – stöd för arbetsgivardeklarationen.</li>
+<li><strong>SIE4-fil</strong> – för import i bokföringsprogram som Fortnox, Visma och Björn Lundén. Ingår i integrationstillägget för 199 kr/mån.</li>
+<li><strong>Tidrapport som PDF och Excel</strong> – underlag till beställaren eller för arkivet.</li>
+</ul>
+<p>Det är filexport, inte en direktkoppling via API: du laddar ner filen och läser in den i det andra systemet. Mer om flödet i <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering och export</a> och om valet av <a href="/sv/blog/loneprogram-bygg">löneprogram för bygg</a>.</p>
+
+<h2>Omvänd byggmoms och ROT – vad tidrapporten ska visa</h2>
+<p>Momsen sätts på fakturan, inte i tidrapporten, men tidrapporten avgör om fakturan blir rätt.</p>
+<p><strong>Omvänd byggmoms</strong> gäller när du säljer byggtjänster till ett företag som självt säljer byggtjänster mer än tillfälligt – typiskt när du är UE åt en huvudentreprenör. Du fakturerar utan moms och anger köparens momsregistreringsnummer samt texten ”omvänd betalningsskyldighet”, enligt <a href="https://www.skatteverket.se/foretag/moms/sarskildamomsregler/byggverksamhet/omvandbetalningsskyldighetinombyggsektorn.4.47eb30f51122b1aaad28000545.html" target="_blank" rel="noopener">Skatteverkets regler för byggsektorn</a>. Timmarna måste därför ligga på rätt projekt: blandas ett B2B-uppdrag ihop med ett privatjobb i samma rapport, hamnar de på fel faktura.</p>
+<p><strong>ROT</strong> gäller arbete åt privatpersoner och bara arbetskostnaden – inte material, maskiner eller resor. Tidrapporten är underlaget för arbetskostnaden, så restid och arbetad tid ska stå på separata rader. Checklistan för en korrekt <a href="/sv/blog/byggfaktura-checklista-rot">byggfaktura med ROT</a> visar vad fakturan ska innehålla.</p>
+
+<h2>Nyckeltal som visar om tidrapporteringen fungerar</h2>
+<p>Tre mått visar om rapporteringen håller:</p>
+<div class="article-table"><table>
+<thead><tr><th>Nyckeltal</th><th>Så räknar du</th><th>Varningssignal</th></tr></thead>
+<tbody>
+<tr><td>Rapporteringsgrad</td><td>Andel arbetsdagar med tid rapporterad samma dag</td><td>Sjunker – timmar skrivs i efterhand och tappas bort</td></tr>
+<tr><td>Attesttid</td><td>Dagar från registrering till attest</td><td>Växer – fel upptäcks för sent för att rättas</td></tr>
+<tr><td>ÄTA-andel</td><td>ÄTA-timmar delat med projektets totala timmar</td><td>Noll på ett projekt med många ändringar – ÄTA rapporteras som kontraktsarbete</td></tr>
+</tbody>
+</table></div>
+<p>Följ måtten per projekt och månad. Jämför nedlagd tid med kalkylen löpande i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a>, inte först vid efterkalkylen.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du ha spårbar tidrapportering i dina entreprenader? Läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a> eller <a href="/sv/contact">boka en demo</a>.</p>
+<p>Börja med ett projekt: lägg upp det, låt laget rapportera i appen i en vecka och attestera i webben. Fungerar flödet tar ni med nästa projekt. ByggExp går att testa gratis i 14 dagar med alla funktioner, utan bindningstid – <a href="/sv/contact">boka en demo</a> så visar vi upplägget för entreprenad.</p>
+
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/mobil-tidrapportering">Mobil tidrapportering</a> – så rapporterar laget direkt på bygget</li>
+<li><a href="/sv/blog/app-for-tidrapportering-bygg">App för tidrapportering i bygg</a> – vad appen ska klara</li>
+<li><a href="/sv/blog/tidredovisning-byggforetag">Tidredovisning i byggföretag</a></li>
+<li><a href="/sv/blog/projektuppfoljning-bygg">Projektuppföljning i bygg</a></li>
+</ul>
 
 <h2>Vanliga frågor</h2>
-<h3>Hur hanteras tidrapportering mellan huvud- och underentreprenör?</h3>
-<p>Genom att varje aktör rapporterar sina timmar kopplade till projektet, och arbetsledaren attesterar innan de låses. Då blir underlaget spårbart för både fakturering och avstämning.</p>
-<h3>Kan rapporterad tid användas som underlag mot beställaren?</h3>
-<p>Ja. Digitalt registrerade och attesterade timmar per projekt fungerar som underlag vid löpande räkning och avstämning med beställaren.</p>
-<h3>Hur säkerställer man att ÄTA-timmar faktureras?</h3>
-<p>Genom att koppla tiden till rätt post redan vid registreringen och attestera den. Då blir extra arbete spårbart och glöms inte bort när fakturan för entreprenaden ställs ut.</p>
+<h3>Var kan jag få gratis tidrapportering?</h3>
+<p>Vill du börja på papper eller i Excel kan du ladda ner vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a>. För digital tidrapportering med app och attest kan du testa ByggExp gratis i 14 dagar, utan startavgift och bindningstid.</p>
+<h3>Vilken är den bästa appen för tidrapportering i byggbranschen?</h3>
+<p>Vid entreprenader bör appen klara timmar per projekt, märkning av ÄTA, timtyper för OB och övertid, attest och export till lönesystemet. Fungerar den på både iPhone och Android behöver laget inte byta telefon.</p>
+<h3>Kan underentreprenörens arbetsledare attestera timmarna?</h3>
+<p>Nej, inte i ByggExp – där attesterar administratören eller projektets administratör den egna personalens arbetspass. UE attesterar sin personals tid i sitt eget system, och du granskar deras tidsunderlag när fakturan kommer.</p>
+<h3>Kan vi få ett samlat månadsunderlag till fakturan?</h3>
+<p>Ja. Tidrapporten för perioden exporteras som PDF eller Excel och bifogas fakturan.</p>
+<h3>Hur hanterar man ÄTA-timmar i tidrapporten?</h3>
+<p>Märk arbetspassen med ÄTA:ns nummer samma dag som arbetet görs och redovisa ÄTA-timmarna i en egen summa.</p>
+<h3>Måste man tidrapportera varje vecka?</h3>
+<p>Ingen lag kräver veckorapporter, men arbetsgivaren ska föra anteckningar om övertid och mertid enligt arbetstidslagen. I praktiken fungerar daglig registrering bäst – ju längre man väntar, desto fler timmar faller bort.</p>
+<h3>Hur snabbt kommer vi igång?</h3>
+<p>Laget laddar ner appen från App Store eller Google Play och börjar rapportera på ett projekt.</p>
 `.trim();
 
 const S_TIDRAPPORTERING_ENTREPRENAD: BlogPost = {
   _id: "code-tidrapportering-entreprenad",
-  title: "Tidrapportering för entreprenad – spårbara timmar och attestering", slug: "tidrapportering-entreprenad", locale: "sv",
-  excerpt: "Tidrapportering i entreprenader: rapportera per projekt, attestera innan låsning och få spårbart underlag för fakturering och avstämning med beställaren.", tag: "Digitalisering",
+  title: "Tidrapportering för entreprenad – attest, ÄTA och underentreprenörer", slug: "tidrapportering-entreprenad", locale: "sv",
+  excerpt: "Tidrapportering i entreprenader: timmar per projekt, ÄTA separat, attest före lön och faktura, månadsunderlag till beställaren och kontroll av UE:s timmar.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: S_TIDRAPPORTERING_ENTREPRENAD_HTML,
-  seoTitle: "Tidrapportering för entreprenad – attestering | ByggExp", seoDescription: "Tidrapportering för entreprenad: spårbara timmar per projekt, attestering före låsning och underlag för fakturering på löpande räkning och avstämning med beställaren.",
+  seoTitle: "Tidrapportering entreprenad – attest, ÄTA och UE | ByggExp", seoDescription: "Tidrapportering för entreprenad: timmar per projekt, ÄTA separat, attest före lön och faktura, kontroll av UE-timmar och export via CSV och SIE4.",
   seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-22T10:05:00.000Z", createdAt: "2026-08-22T10:05:00.000Z", updatedAt: "2026-08-22T10:05:00.000Z",
+  publishedAt: "2026-08-22T10:05:00.000Z", createdAt: "2026-08-22T10:05:00.000Z", updatedAt: "2026-10-06T10:00:00.000Z",
 };
 
 const S_MOBIL_TIDRAPPORTERING_HTML = `
-<p>Bygglaget sitter inte vid en dator – de är på taket, i schaktet eller på väg till nästa jobb. Därför måste tidrapporteringen ske i mobilen. Mobil tidrapportering betyder att timmarna registreras där och när jobbet görs, i stället för att skrivas av minnet på kontoret. Här går vi igenom varför mobilen slår både papper och terminal.</p>
-<p>Se hela bilden i vår guide om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>.</p>
+<p>Hantverkarna sitter inte vid en dator. De står på taket, i schaktet eller kör mellan två jobb. Mobil tidrapportering betyder att arbetstiden registreras i telefonen där och när jobbet görs, i stället för att skrivas ner ur minnet på fredag eftermiddag. Här får du veta hur det fungerar i praktiken, hur du får hela laget att rapportera och vad det kostar.</p>
+<p>Vill du testa upplägget innan du väljer system? Börja med vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>. Jämför du appar mer brett finns en översikt i guiden om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>.</p>
 
-<figure class="article-diagram"><img src="/landing/diagrams/tidrapportering-flode.webp" alt="Diagram: mobil tidrapportering – checka in, timmar på projekt, granska, export" width="720" height="380" loading="lazy"><figcaption>Allt sker i mobilen: checka in på bygget, timmarna kopplas till projektet och exporteras till lön och faktura.</figcaption></figure>
+<figure class="article-diagram"><img src="/landing/diagrams/tidrapportering-flode.webp" alt="Diagram: mobil tidrapportering – checka in, timmar på projekt, granska, export" width="720" height="380" loading="lazy"><figcaption>Flödet: checka in på bygget, timmarna hamnar på projektet, arbetsledaren attesterar och tiden exporteras till lön och faktura.</figcaption></figure>
+
+<h2>Vad är mobil tidrapportering?</h2>
+<p>Medarbetaren stämplar in och ut i en app i stället för på en papperslapp, i en Excel-fil eller vid en väggterminal i bodan. Varje pass knyts till ett projekt, och kontoret ser timmarna direkt, utan att någon behöver samla in lappar eller tolka handstil. Samma data blir sedan löneunderlag, fakturaunderlag och projektuppföljning.</p>
+
+<h2>Så fungerar mobil tidrapportering i ByggExp</h2>
+<p>ByggExp har en app för iPhone och Android och en webbadmin för kontoret. Så här ser en arbetsdag ut:</p>
+<ol>
+<li><strong>Stämpla in med GPS.</strong> Medarbetaren väljer projekt och checkar in. Tid och position sparas på passet.</li>
+<li><strong>Automatisk paus utanför arbetsplatsen.</strong> Projektet har ett område (geofence). Lämnar medarbetaren området pausas passet automatiskt, så att lunch på stan eller ett ärende till bygghandeln inte räknas som arbetstid på projektet.</li>
+<li><strong>Rätt timtyp och ersättningar.</strong> Medarbetaren väljer timtyp per pass – normal tid, övertid eller OB – och kan lägga till restid (km och minuter) och traktamente (halvt eller helt).</li>
+<li><strong>ÄTA på passet.</strong> Är arbetet ett tilläggsarbete kopplas passet till rätt ÄTA. Då kan timmarna faktureras som ÄTA i stället för att försvinna i det fasta priset. Läs mer om <a href="/sv/blog/ata-hantering-mall">ÄTA-hantering</a>.</li>
+<li><strong>Attest i webbadmin.</strong> Arbetsledaren eller admin granskar och godkänner passen innan de går vidare.</li>
+<li><strong>Export.</strong> Attesterad tid exporteras som tidrapport i PDF eller Excel, som lönefil (CSV), som AGI-underlag och som SIE4-fil till Fortnox, Visma eller BL (SIE4-exporten ingår i tillägget Integrationer).</li>
+</ol>
 <p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
 
-<h2>Varför mobilen slår papper och väggterminal</h2>
-<ul>
-<li><strong>Tiden fångas när den sker</strong> – inte i efterhand, färre fel.</li>
-<li><strong>Fungerar på alla arbetsplatser</strong> – ingen terminal att gå till.</li>
-<li><strong>Hela laget rapporterar likadant</strong> – på både iPhone och Android.</li>
-<li><strong>GPS bekräftar närvaro</strong> på plats.</li>
-</ul>
+<figure class="app-shots"><img src="/features-content/automatisk-tidrapportering-och-export-1.webp" alt="Mobil tidrapportering i ByggExp-appen: arbetspass med planerade, manuella och GPS-timmar i en månadskalender" width="1000" height="548" loading="lazy"><figcaption>Arbetspassen i appen – planerade, manuella och GPS-timmar per medarbetare, klara att attestera och exportera.</figcaption></figure>
 
-<h2>Så fungerar tidrapportering i mobilen</h2>
-<p>Medarbetaren checkar in vid arbetsdagens start och ut vid slutet. Timmarna kopplas automatiskt till projektet och blir underlag för lön och faktura. Läs mer om <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning</a>.</p>
+<p>Mer om incheckning på plats finns i guiden om <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning på bygget</a>.</p>
+
+<h2>Mobil app, väggterminal eller papper och Excel?</h2>
+<p>De tre vanligaste sätten att samla in tid på ett byggföretag skiljer sig mest i var tiden registreras och hur mycket som återstår att göra på kontoret.</p>
+<div class="article-table"><table>
+<thead><tr><th></th><th>Mobil app</th><th>Väggterminal</th><th>Papper / Excel</th></tr></thead>
+<tbody>
+<tr><td>Var tiden registreras</td><td>Där jobbet görs</td><td>Vid terminalen</td><td>I efterhand, ofta ur minnet</td></tr>
+<tr><td>Flera arbetsplatser samma dag</td><td>Ja, ny incheckning per projekt</td><td>Kräver en terminal per plats</td><td>Ja, men svårt att kontrollera</td></tr>
+<tr><td>Koppling till projekt och ÄTA</td><td>Per pass, direkt</td><td>Beror på systemet</td><td>Manuellt, i efterhand</td></tr>
+<tr><td>Belägg för var arbetet gjordes</td><td>GPS-position på passet</td><td>Terminalens plats</td><td>Inget</td></tr>
+<tr><td>Hårdvara</td><td>Medarbetarnas telefoner</td><td>Terminal att köpa och flytta</td><td>Ingen</td></tr>
+<tr><td>Arbete på kontoret</td><td>Attest och export</td><td>Attest och export</td><td>Samla in, tolka, skriva in</td></tr>
+</tbody>
+</table></div>
+<p>Väggterminalen passar fasta arbetsplatser som verkstad eller lager. För ett lag som rör sig mellan flera byggen under veckan är mobilen enklast, eftersom den alltid finns med. Papper och Excel fungerar för en eller två personer, men tiden registreras i efterhand och varje timme ska skrivas in en gång till.</p>
 
 <h2>Så får du hela laget att rapportera</h2>
-<p>Mobil tidrapportering står och faller med följsamheten – rapporterar bara halva laget är siffrorna värdelösa. Nyckeln är att göra det så enkelt att ingen kan skylla på krångel: två tryck för in- och utcheckning, ingen inloggning varje gång, och påminnelse om man glömmer checka ut. Börja med ett projekt, visa laget att timmarna hamnar rätt, och rulla ut brett först när flödet sitter.</p>
+<p>Ett system där halva laget rapporterar ger halva underlaget.</p>
+<ul>
+<li><strong>Förklara varför.</strong> Rätt timmar betyder rätt lön, och tid som registreras på ÄTA kan faktureras.</li>
+<li><strong>Var tydlig med GPS.</strong> Berätta vad positionen används till: att bekräfta närvaro på projektet och pausa passet utanför projektområdet. Den som inte vill dela position rapporterar manuellt.</li>
+<li><strong>Börja med ett projekt.</strong> Låt ett lag köra några veckor, visa att timmarna hamnar rätt på lönespecen och rulla sedan ut till fler.</li>
+<li><strong>Attestera varje vecka.</strong> När arbetsledaren går igenom passen löpande syns glömda utcheckningar och fel projekt medan alla fortfarande minns veckan.</li>
+<li><strong>En regel för alla.</strong> Ingen tid på lapp vid sidan av. Allt som ska bli lön eller faktura ska finnas i appen.</li>
+</ul>
 
 <h2>Vad byggföretaget vinner</h2>
-<p>När tiden fångas i mobilen minskar administrationen på kontoret, fakturor kan skickas snabbare och du ser nedlagd tid mot budget medan projektet pågår – inte efteråt. Det är samma data som driver <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlaget</a> och <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a>.</p>
+<p>Lönekörningen går snabbare när ingen behöver tolka lappar. Fakturor på löpande räkning kan skickas när veckan är attesterad i stället för vid månadsskiftet. Du ser också nedlagd tid per projekt medan projektet pågår, så att du hinner agera om ett jobb drar iväg. Mot en beställare gäller dessutom att varje fakturerad timme ska kunna styrkas – läs mer om <a href="/sv/blog/tidrapportering-entreprenad">tidrapportering för entreprenad</a>.</p>
+
+<h2>Vad kostar mobil tidrapportering?</h2>
+<p>Tidrapportering ingår i ByggExp-paketet <strong>Koll på jobbet</strong> för 690 kr i månaden, med 10 användare inkluderade och 69 kr per extra användare. <strong>Full koll</strong> (990 kr i månaden, 10 användare, 119 kr per extra användare) lägger till offerter, fakturor, löner och projektekonomi. Tillägget Integrationer med SIE4-export kostar 199 kr i månaden. Alla priser är exklusive moms, och betalar du per år blir det 15 % billigare.</p>
+<p>Medarbetare som bara använder appen räknas som användare först när de har stämplat in under de senaste 30 dagarna. Du kan testa alla funktioner i 14 dagar, utan startavgift och utan bindningstid.</p>
+<p>Appen laddas ner från <a href="https://apps.apple.com/se/app/id6748280779" target="_blank" rel="noopener">App Store</a> (iPhone) och <a href="https://play.google.com/store/apps/details?id=se.byggexp.app" target="_blank" rel="noopener">Google Play</a> (Android).</p>
 
 <h2>Kom igång</h2>
-<p>Vill du flytta tidrapporteringen till mobilen? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en demo</a>.</p>
+<p>Vill du se hur det fungerar med era projekt? <a href="/sv/contact">Boka en demo</a>, så visar vi appen och webbadmin med ert eget upplägg. Vill du börja enklare fungerar vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för de första veckorna.</p>
+
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/tidrapportering">Tidrapportering i byggföretag</a> – grunderna</li>
+<li><a href="/sv/blog/tidrapportering-entreprenad">Tidrapportering för entreprenad</a> – spårbara timmar och attest</li>
+<li><a href="/sv/blog/app-for-tidrapportering-bygg">App för tidrapportering i bygg</a> – vad du ska jämföra</li>
+<li><a href="/sv/blog/loneunderlag-for-byggforetag">Löneunderlag för byggföretag</a></li>
+<li><a href="/sv/blog/projektuppfoljning-bygg">Projektuppföljning i bygg</a></li>
+</ul>
 
 <h2>Vanliga frågor</h2>
-<h3>Vad är mobil tidrapportering?</h3>
-<p>Att arbetstiden registreras direkt i mobilen där jobbet utförs – medarbetaren checkar in och ut – i stället för på papper eller vid en terminal.</p>
-<h3>Fungerar mobil tidrapportering utan täckning?</h3>
-<p>Incheckningen kan göras i appen och synkas när telefonen får uppkoppling, så att timmarna inte tappas bort på platser med dålig täckning.</p>
-<h3>Hur får man hela laget att faktiskt rapportera i mobilen?</h3>
-<p>Genom att göra det så enkelt som möjligt – två tryck för in- och utcheckning, ingen inloggning varje gång och påminnelser. Börja med ett projekt och rulla ut brett först när flödet sitter.</p>
+<h3>Vilken är den bästa appen för tidrapportering?</h3>
+<p>Det beror på branschen. För ett byggföretag bör appen stämpla in med GPS, koppla varje pass till ett projekt, hantera ÄTA, ha attest för arbetsledaren och kunna exportera till lön och bokföring. Testa med ett riktigt lag i ett par veckor innan du bestämmer dig.</p>
+<h3>Var kan jag få gratis tidrapportering?</h3>
+<p>Vår tidrapport-mall på byggexp.se/sv/verktyg/tidrapport-mall är gratis och fungerar för timmar per dag, vecka eller månad som PDF eller Excel. Vill du ha mobil tidrapportering med GPS kan du testa ByggExp gratis i 14 dagar.</p>
+<h3>Måste man tidrapportera varje vecka?</h3>
+<p>Nej, ingen lag kräver en veckorapport. Enligt 11 § <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/arbetstidslag-1982673_sfs-1982-673/" target="_blank" rel="noopener">arbetstidslagen</a> ska arbetsgivaren däremot föra anteckningar om jourtid, övertid och mertid. Hur ofta tiden lämnas in styrs av kollektivavtal och lönerutiner. På byggarbetsplatser krävs dessutom personalliggare enligt skatteförfarandelagen, där närvaron registreras varje dag. I praktiken är det enklast att stämpla dagligen och attestera varje vecka.</p>
+<h3>Fungerar appen på både iPhone och Android?</h3>
+<p>Ja. ByggExp-appen finns i App Store och Google Play, och hela laget rapporterar på samma sätt oavsett telefon. Kontoret arbetar i webbadmin.</p>
+<h3>Måste medarbetarna dela sin position?</h3>
+<p>Nej. GPS används för att bekräfta närvaro på projektet och för automatisk paus utanför projektområdet. Den som inte vill dela position kan fylla i timmarna manuellt i appen, och de hamnar i samma tidrapport.</p>
+<h3>Hur blir mobil tidrapportering underlag för lön?</h3>
+<p>Attesterade pass exporteras som lönefil (CSV) och AGI-underlag. Till bokföringen finns SIE4-export för Fortnox, Visma och BL.</p>
+<h3>Vad kostar mobil tidrapportering i ByggExp?</h3>
+<p>Från 690 kr i månaden exklusive moms för 10 användare i paketet Koll på jobbet. Du kan testa alla funktioner gratis i 14 dagar.</p>
 `.trim();
 
 const S_MOBIL_TIDRAPPORTERING: BlogPost = {
   _id: "code-mobil-tidrapportering",
-  title: "Mobil tidrapportering – rapportera tid i mobilen på bygget", slug: "mobil-tidrapportering", locale: "sv",
-  excerpt: "Mobil tidrapportering: registrera arbetstid i mobilen där jobbet görs i stället för på papper eller terminal. Varför mobilen slår båda – för hela bygglaget.", tag: "Digitalisering",
+  title: "Mobil tidrapportering för bygg – appen för iPhone och Android", slug: "mobil-tidrapportering", locale: "sv",
+  excerpt: "Mobil tidrapportering för bygg: stämpla in med GPS, timmar per projekt och ÄTA, attest och export till lön. Jämförelse med väggterminal och papper, priser och FAQ.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: S_MOBIL_TIDRAPPORTERING_HTML,
-  seoTitle: "Mobil tidrapportering för bygg – tid i mobilen | ByggExp", seoDescription: "Mobil tidrapportering för bygg: registrera arbetstid i mobilen där jobbet görs, med GPS och koppling till projekt. Slår både papper och väggterminal.",
+  seoTitle: "Mobil tidrapportering för bygg – iPhone och Android | ByggExp", seoDescription: "Mobil tidrapportering för bygg: stämpla in med GPS, timmar per projekt och ÄTA, attest och export till lön. För iPhone och Android – testa 14 dagar gratis.",
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-22T10:10:00.000Z", createdAt: "2026-08-22T10:10:00.000Z", updatedAt: "2026-08-22T10:10:00.000Z",
+  publishedAt: "2026-08-22T10:10:00.000Z", createdAt: "2026-08-22T10:10:00.000Z", updatedAt: "2026-10-06T10:00:00.000Z",
 };
 
 const S_STAMPELKLOCKA_ANDROID_HTML = `
@@ -1988,89 +2122,102 @@ const S_TIDRAPPORT_APP_IPHONE: BlogPost = {
 };
 
 const A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML = `
-<p>Whiteboarden på kontoret och ett delat Excel-ark räcker så länge ni är några stycken på ett projekt. Men när flera lag ska fördelas över flera byggen – med semestrar, sjukdom och ändringar i sista stund – blir pusslet ohållbart. Ett schemaläggningssystem samlar hela bemanningen i en delad vy, kopplad till projekt och tid, så att rätt person är på rätt bygge och du ser luckorna innan de blir dyra. Här går vi igenom vad ett schemaläggningssystem för bygg bör klara, och när du vuxit ur kalkylarket.</p>
+<p>Whiteboarden på kontoret och ett delat Excel-ark räcker så länge ni är några stycken på ett projekt. När flera lag ska fördelas över flera byggen – med semestrar, sjukdom och ändringar i sista stund – går pusslet inte längre ihop. Ett schemaläggningssystem för bygg samlar bemanningen i en delad vy kopplad till projekten, så att rätt person är på rätt bygge och du ser luckorna innan de blir dyra. Här får du åtta krav att ställa när du väljer system, reglerna schemat måste hålla och vad det kostar.</p>
 
-<p>Vill du börja enkelt? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, eller läs om <a href="/sv/blog/schemalaggning-bygg">schemaläggning för byggföretag</a> steg för steg.</p>
+<p>Vill du börja enkelt? Ladda ner vår gratis <a href="/sv/verktyg/schema-mall">schema-mall</a>, eller läs hur du lägger upp <a href="/sv/blog/schemalaggning-bygg">schemaläggning för byggföretag</a> steg för steg.</p>
 
-<figure class="article-diagram"><img src="/landing/diagrams/schemalaggning.webp" alt="Diagram: schemaläggningssystem – hela laget per dag i en delad vy, kopplat till projekt" width="720" height="380" loading="lazy"><figcaption>Hela laget i en vy: planera per person eller projekt över veckan, med frånvaro och överbokning synligt direkt.</figcaption></figure>
+<figure class="article-diagram"><img src="/landing/diagrams/schemalaggning.webp" alt="Diagram: schemaläggningssystem – hela laget per dag i en delad vy, kopplat till projekt" width="720" height="380" loading="lazy"><figcaption>Hela laget i en vy: planera per person eller projekt, med frånvaro och överbokning synliga direkt.</figcaption></figure>
 
 <h2>Vad är ett schemaläggningssystem?</h2>
-<p>Ett schemaläggningssystem fördelar personal på projekt och dagar och håller planen levande när något ändras. Skillnaden mot en handritad plan är att systemet visar hela laget samtidigt, flaggar krockar och frånvaro automatiskt och delar ändringen direkt till dem som berörs.</p>
+<p>Ett schemaläggningssystem fördelar personal på projekt och dagar och håller planen aktuell när något ändras. Till skillnad från en handritad plan visar det hela laget samtidigt, med frånvaro, och varnar för krockar. De flesta system på marknaden är byggda för skift i butik, vård och restaurang. På ett bygge planerar du i stället lag per projekt över veckor, och det är den skillnaden du ska välja efter.</p>
 
 <h2>Whiteboard och Excel vs ett system</h2>
 <div class="article-table"><table>
 <thead><tr><th>&nbsp;</th><th>Whiteboard / Excel</th><th>Schemaläggningssystem</th></tr></thead>
 <tbody>
-<tr><td><strong>Överblick</strong></td><td>En plats, ett projekt i taget</td><td>Hela laget, alla projekt samtidigt</td></tr>
-<tr><td><strong>Ändringar</strong></td><td>Suddas och skrivs om</td><td>Dra och släpp, historiken kvar</td></tr>
-<tr><td><strong>Frånvaro</strong></td><td>Hålls i huvudet</td><td>Semester och sjuk syns i planen</td></tr>
-<tr><td><strong>Överbokning</strong></td><td>Upptäcks för sent</td><td>Flaggas direkt</td></tr>
-<tr><td><strong>Laget ser planen</strong></td><td>Bara på kontoret</td><td>I mobilen, i realtid</td></tr>
-<tr><td><strong>Kopplat till tid</strong></td><td>Nej</td><td>Planerad tid mot loggad</td></tr>
+<tr><td><strong>Överblick</strong></td><td>Bara på kontoret, ett projekt i taget</td><td>Hela laget, alla projekt samtidigt</td></tr>
+<tr><td><strong>Ändringar</strong></td><td>Suddas och skrivs om</td><td>Ändras i en cell, med ändringslogg</td></tr>
+<tr><td><strong>Frånvaro</strong></td><td>Hålls i huvudet</td><td>Semester och sjukdom syns i planen</td></tr>
+<tr><td><strong>Överbokning</strong></td><td>Upptäcks för sent</td><td>Varning direkt</td></tr>
+<tr><td><strong>Kopplat till tid</strong></td><td>Nej</td><td>Timmar per projekt i samma system</td></tr>
 </tbody>
 </table></div>
 
-<h2>Vad ett schemaläggningssystem för bygg bör klara</h2>
+<h2>Så väljer du schemaläggningssystem – 8 krav</h2>
+<ol>
+<li><strong>Byggt för projekt, inte skift.</strong> Du ska kunna planera både per person och per projekt, över två veckor eller en månad. Ett system som bara räknar pass per dag blir fel för ett bygglag.</li>
+<li><strong>Mobilapp för laget.</strong> Planen och uppgifterna ska nå dem som står på bygget. Fråga exakt vad medarbetaren ser i appen – hela bemanningsplanen eller bara sina uppgifter.</li>
+<li><strong>Frånvaro i planen.</strong> Godkänd semester och sjukdom ska synas där du planerar, så att du inte bokar någon som är ledig.</li>
+<li><strong>Varning för dubbelbokning.</strong> Systemet ska varna när någon bokas på mer än 8 timmar samma dag – innan två projekt räknar med samma snickare.</li>
+<li><strong>Koppling till tidrapport och lön.</strong> Planen är en prognos – lön och faktura bygger på de faktiska timmarna. Kontrollera att tidrapporten finns i samma system och hur timmarna förs vidare till lönen: via integration eller via fil.</li>
+<li><strong>Stöd för Byggavtalet och arbetstidslagen.</strong> Timtyper som övertid och OB ska kunna registreras, och timmarna ska gå att följa upp mot dygns- och veckovila. Fråga om systemet räknar ut något automatiskt eller om medarbetaren väljer timtyp själv.</li>
+<li><strong>Flera projekt och ändringslogg.</strong> Du ska kunna flytta folk mellan byggen och se vem som ändrade vad och när – annars står två bud mot varandra på måndagsmorgonen.</li>
+<li><strong>Pris per användare – räknat på hela laget.</strong> Jämför vad 5, 10 och 20 användare kostar, om det finns startavgift och bindningstid, och vilka funktioner som kräver tillägg.</li>
+</ol>
+
+<figure class="web-shot"><img src="/features-content/dagsplanering-och-planeringsmoten-web.webp" alt="Schemaläggningssystem för bygg i webbadmin: personal planerad per projekt över en månad" width="1568" height="764" loading="lazy"><figcaption>Planeringen i ByggExp – personal per projekt över två veckor, en månad eller valfri period, med ändringslogg.</figcaption></figure>
+
+<figure class="app-shots"><img src="/features-content/dagsplanering-och-planeringsmoten-1.webp" alt="ByggExp-appen: Gantt-vy med uppgifter per medarbetare och projekt" width="520" height="1070" loading="lazy"><figcaption>I appen ser medarbetaren sina uppgifter per projekt i en Gantt-vy.</figcaption></figure>
+
+<h2>Regler att tänka på</h2>
+<p>Arbetsgivaren ansvarar för att schemat följer arbetstidslagen – även om medarbetaren själv ville jobba. Det här gäller enligt <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/arbetstidslag-1982673_sfs-1982-673/" target="_blank" rel="noopener">arbetstidslagen (1982:673)</a>:</p>
 <ul>
-<li>Delad vy över hela laget per vecka och månad, planerat per person eller per projekt.</li>
-<li>Frånvaro (semester, sjukdom) syns i planen, så du inte bokar någon som är ledig.</li>
-<li>Överbokning flaggas när samma person hamnar på två ställen samtidigt.</li>
-<li>Planen delas till appen och uppdateras i realtid för alla berörda.</li>
-<li>Koppling till <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapporteringen</a>, så planerad tid kan jämföras med den som faktiskt loggas.</li>
+<li><strong>Ordinarie arbetstid</strong> – högst 40 timmar i veckan (5 §).</li>
+<li><strong>Dygnsvila</strong> – minst 11 timmars sammanhängande ledighet per 24 timmar. Tiden mellan 00 och 05 ska ingå (13 §).</li>
+<li><strong>Veckovila</strong> – minst 36 timmars sammanhängande ledighet per sjudagarsperiod, helst över helgen (14 §).</li>
+<li><strong>Kollektivavtal går före</strong> – lagen får ersättas av kollektivavtal (3 §). Har ni Byggavtalet är det avtalstexten som gäller för övertid och arbetstidens förläggning.</li>
 </ul>
+<p>En vanlig fälla är helgjobb i slutspurten: laget jobbar lördag, men ingen ser till att de får 36 timmars sammanhängande ledighet en annan gång samma vecka. <a href="https://www.av.se/arbetsmiljoarbete-och-inspektioner/lagar-och-regler-om-arbetsmiljo/om-arbetstidslagen/" target="_blank" rel="noopener">Arbetsmiljöverket</a> har tillsyn över reglerna. Fördjupning finns i vår guide om <a href="/sv/blog/arbetstidslagen-bygg">arbetstidslagen i bygg</a>.</p>
 
-<figure class="web-shot"><img src="/features-content/dagsplanering-och-planeringsmoten-web.webp" alt="Schemaläggningssystem i webbadmin: hela laget planerat per dag och projekt, med frånvaro och överbokning synligt" width="1000" height="548" loading="lazy"><figcaption>Planeringen i webbadmin – dra och släpp personal mellan projekt, med krockar och ledighet markerade.</figcaption></figure>
+<h2>Kan AI lägga schemat?</h2>
+<p>Delvis. Det finns system som föreslår ett schema utifrån behov, kompetens och regler, och det fungerar bäst där passen upprepas – butik, vård, kundtjänst. På ett bygge styrs planen av saker som sällan står i systemet: när betongen härdat, när underentreprenören är klar, vad beställaren ändrat på byggmötet. Där lägger arbetsledaren fortfarande planen.</p>
+<p>ByggExp lägger inte schemat automatiskt. Du fördelar personalen själv, och systemet håller koll på frånvaro och dubbelbokningar medan du gör det.</p>
 
-<h2>Från plan till faktisk tid och marginal</h2>
-<p>Nyttan blir störst när schemat inte lever sitt eget liv. När den planerade tiden möter <a href="/sv/blog/automatisk-tidrapportering-och-export">loggad tid</a> ser du direkt om ett projekt drar över, och avvikelsen dyker upp i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a> medan du fortfarande kan flytta folk eller stämma av med kunden. Planering, tid och ekonomi blir samma kedja i stället för tre separata listor.</p>
+<h2>Schema i Excel – gratis mall</h2>
+<p>Vår gratis <a href="/sv/verktyg/schema-mall">schema-mall</a> ger ett färdigt arbets- och veckoschema att fylla i, och för projektets tidplan finns en <a href="/sv/verktyg/gantt-schema-mall">Gantt-mall</a>. Gränsen för Excel går oftast när laget börjar ringa kontoret för att få veta var de ska imorgon.</p>
 
-<h2>Tecken på att du vuxit ur Excel-schemat</h2>
-<ul>
-<li>Du ritar om planen flera gånger i veckan när jobb flyttas.</li>
-<li>Någon dyker upp på fel bygge, eller två lag krockar på samma.</li>
-<li>Semester och sjukdom finns bara i ditt huvud.</li>
-<li>Laget ringer kontoret för att veta var de ska imorgon.</li>
-<li>Ni är fler än ett par lag på fler än ett projekt.</li>
-</ul>
+<h2>Vad kostar ett schemaläggningssystem för bygg?</h2>
+<p>Allmänna schemasystem tar oftast betalt per användare och månad. I ByggExp ingår planering av projekt och personal i paketet Koll på jobbet: 690 kr/mån inklusive 10 användare, därefter 69 kr per extra användare. Med 15 användare blir det 690 + 5 × 69 = 1 035 kr/mån. Full koll, med lön, faktura och projektekonomi, kostar 990 kr/mån inklusive 10 användare (+119 kr per extra). Priserna är exklusive moms, utan startavgift och bindningstid. Medarbetare som bara använder appen räknas endast om de stämplat in de senaste 30 dagarna. <a href="/sv#pricing">Se alla priser</a>.</p>
 
 <h2>Schemaläggning, bemanning och resursplanering – vad är vad?</h2>
-<p>Termerna glider ihop men skiljer sig i horisont: <a href="/sv/blog/personalplanering-bygg">bemanningsplanering</a> handlar om vilka personer som behövs framåt, <a href="/sv/blog/resursplanering-bygg">resursplanering</a> väger in maskiner och material, och schemaläggningen är den konkreta fördelningen dag för dag. Ett bra system håller ihop alla tre.</p>
+<p>Termerna blandas ofta ihop men skiljer sig i tidshorisont. <a href="/sv/blog/bemanning-och-personalplanering">Bemanningsplanering</a> handlar om vilka personer och kompetenser som behövs framåt. <a href="/sv/blog/resursplanering-bygg">Resursplanering i bygg</a> väger kapaciteten mot projektens behov, ofta med maskiner och material. Schemaläggningen är den konkreta fördelningen dag för dag.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du sluta pussla ihop schemat i huvudet och i Excel? Läs om <a href="/sv/blog/schemalaggning-bygg">schemaläggning för byggföretag</a>, ladda ner en gratis <a href="/sv/blog/gantt-schema-mall-bygg">Gantt- och schemamall</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Testa ByggExp gratis i 14 dagar med alla funktioner, eller <a href="/sv/contact">boka en demo</a> så visar vi planeringen på era egna projekt.</p>
 
 <h2>Relaterade guider om planering</h2>
 <ul>
-<li><a href="/sv/blog/schemalaggning-bygg">Schemaläggning för byggföretag</a> – personalplanering i en vy.</li>
-<li><a href="/sv/blog/personalplanering-bygg">Bemanningsplanering och personalplanering</a> – rätt person, rätt plats.</li>
-<li><a href="/sv/blog/resursplanering-bygg">Resursplanering för bygg</a> – personal, maskiner och material.</li>
+<li><a href="/sv/blog/schemalaggning-bygg">Schemaläggning för byggföretag</a> – så lägger du schemat steg för steg.</li>
+<li><a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering i bygg</a> – rätt person på rätt plats.</li>
+<li><a href="/sv/blog/resursplanering-bygg">Resursplanering i bygg</a> – undvik överbeläggning och dubbelbokade lag.</li>
+<li><a href="/sv/blog/arbetstidslagen-bygg">Arbetstidslagen i bygg</a> – dygnsvila, veckovila och övertid.</li>
 <li><a href="/sv/blog/gantt-schema-mall-bygg">Gantt- och schemamall för bygg</a> – planera projektet visuellt.</li>
 <li><a href="/sv/blog/projekthanteringssystem-bygg">Projekthanteringssystem för bygg</a> – planering, tid och marginal i ett.</li>
 </ul>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är ett schemaläggningssystem för bygg?</h3>
-<p>Ett verktyg som fördelar personal på projekt och dagar och håller planen levande när något ändras – till skillnad från Excel, som du får skriva om för hand.</p>
-<h3>När räcker Excel fortfarande?</h3>
-<p>Så länge ni är ett lag på ett projekt räcker ett delat ark långt – till exempel vår gratis <a href="/sv/verktyg/schema-mall">schema-mall</a>. Behovet av ett system uppstår när flera lag ska fördelas över flera byggen samtidigt, och ändringar sker under veckan.</p>
-<h3>Ser personalen sitt schema i mobilen?</h3>
-<p>Ja. Planen delas till appen och ändringar syns direkt, så ingen behöver ringa kontoret för att veta var de ska.</p>
-<h3>Hänger schemat ihop med tidrapporteringen?</h3>
-<p>I ett samlat system, ja. Planerad tid kan jämföras med loggad tid, och avvikelser syns i projektuppföljningen medan du fortfarande kan agera.</p>
-<h3>Schemaläggningsprogram eller schemaläggningssystem – spelar ordet någon roll?</h3>
-<p>Inte i praktiken. Ett schemaläggningsprogram och ett schemaläggningssystem betyder samma sak för ett byggföretag: mjukvaran som fördelar personal på projekt och dagar. Det viktiga är inte ordet, utan att planen delas till laget i mobilen och hänger ihop med tiden.</p>
+<p>Ett system som fördelar personal på projekt och dagar, visar frånvaro och varnar för överbokning. Till skillnad från skiftsystem för butik och vård planerar det lag per projekt över veckor.</p>
 <h3>Vad kostar ett schemaläggningssystem?</h3>
-<p>Det beror på hur många ni är. Boka en demo för pris – ett enkelt system tjänar oftast in sig snabbt genom mindre pusslande och färre krockar på bygget.</p>
+<p>I ByggExp från 690 kr/mån inklusive 10 användare (exkl. moms), utan startavgift och bindningstid. 14 dagar gratis.</p>
+<h3>Vilket gratis schemaläggningsprogram är bäst?</h3>
+<p>För ett litet bygglag är ett delat kalkylark ofta bästa gratisalternativet, till exempel vår <a href="/sv/verktyg/schema-mall">schema-mall</a>. Gratisversioner av schemaappar är oftast byggda för skift och begränsade i antal användare. Behöver ni frånvaro, flera projekt och tidrapport i samma system blir det ett betalt system.</p>
+<h3>Kan man göra schema i Excel?</h3>
+<p>Ja. En veckomall med personer i rader och dagar i kolumner räcker för ett lag på ett projekt. Excel varnar däremot inte för dubbelbokning, visar inte frånvaro automatiskt och når inte laget i mobilen.</p>
+<h3>Går schemat att koppla till lönesystemet?</h3>
+<p>Lönen bygger på de faktiska timmarna, inte på schemat. I ByggExp exporterar du timmarna som lönefil (CSV) och AGI-underlag. För bokföringen i t.ex. Fortnox eller Visma finns SIE4-export i integrationstillägget (199 kr/mån). Direktkoppling via API finns inte.</p>
+<h3>Hur schemalägger man underentreprenörer?</h3>
+<p>Underentreprenörer styr du via avtal och tidplan, inte via ert personalschema. Lägg in deras insatser i projektets tidplan, till exempel med en <a href="/sv/verktyg/gantt-schema-mall">Gantt-mall</a>, och bekräfta datumen skriftligt. I ByggExp planerar du den egna personalen – UE ingår inte i bemanningsvyn.</p>
 `.trim();
 
 const A_SCHEMALAGGNINGSSYSTEM_BYGG: BlogPost = {
   _id: "code-schemalaggningssystem-bygg",
-  title: "Schemaläggningssystem för bygg – planera personal, projekt och tid", slug: "schemalaggningssystem-bygg", locale: "sv",
-  excerpt: "Ett schemaläggningssystem samlar hela bemanningen i en delad vy, kopplad till projekt och tid – rätt person på rätt bygge, med frånvaro och överbokning synligt direkt. Så väljer du rätt.", tag: "Digitalisering",
+  title: "Schemaläggningssystem för bygg – så väljer du rätt (2026)", slug: "schemalaggningssystem-bygg", locale: "sv",
+  excerpt: "Så väljer du schemaläggningssystem för bygg: 8 krav att ställa, reglerna om dygns- och veckovila, en gratis Excel-mall och vad det kostar per användare.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML,
-  seoTitle: "Schemaläggningssystem för bygg – personal & projekt | ByggExp", seoDescription: "Schemaläggningssystem och schemaläggningsprogram för byggföretag: planera hela laget per vecka och projekt i en delad vy, se frånvaro och överbokning direkt.",
+  seoTitle: "Schemaläggningssystem bygg – så väljer du rätt (2026) | ByggExp", seoDescription: "Schemaläggningssystem för bygg: 8 krav att ställa, regler om dygns- och veckovila, gratis Excel-mall och priser per användare. Så väljer du rätt system.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-30T10:00:00.000Z", createdAt: "2026-08-30T10:00:00.000Z", updatedAt: "2026-08-30T10:00:00.000Z",
+  publishedAt: "2026-08-30T10:00:00.000Z", createdAt: "2026-08-30T10:00:00.000Z", updatedAt: "2026-10-06T10:00:00.000Z",
 };
 
 const A_PROJEKTHANTERINGSSYSTEM_BYGG_HTML = `
@@ -2158,79 +2305,143 @@ const A_PROJEKTHANTERINGSSYSTEM_BYGG: BlogPost = {
 };
 
 const A_BYGGDAGBOK_HTML = `
-<p>En byggdagbok är den löpande dagboken över vad som faktiskt hände på bygget: vilka som var på plats, vad som utfördes, vädret, leveranser, avvikelser och beslut. Så länge allt går som planerat känns den som pappersarbete – men den dag en försening, en ÄTA eller en garantitvist ska redas ut är dagboken ofta det enda som visar vad som verkligen skedde, dag för dag. Här går vi igenom vad en byggdagbok ska innehålla, när den krävs och varför en digital byggdagbok slår pärmen.</p>
+<p>En byggdagbok är den löpande anteckningen över vad som hände på bygget: vilka som var på plats, vad som utfördes, vädret, leveranser, avvikelser och beslut. Så länge allt går enligt plan känns den som pappersarbete. Men den dag en försening, en ÄTA eller en garantitvist ska redas ut är dagboken ofta det enda som visar förloppet dag för dag. Här går vi igenom vad en byggdagbok ska innehålla, vad AB 04, ABT 06 och AMA AF kräver och vad en digital byggdagbok behöver klara.</p>
 
-<p>Vill du börja direkt? Ladda ner vår gratis <a href="/sv/verktyg/byggdagbok-mall">byggdagbok-mall</a> och fyll i den för dagens arbete.</p>
+<p>Vill du börja direkt? Ladda ner vår <a href="/sv/verktyg/byggdagbok-mall">gratis byggdagbok-mall</a> och fyll i dagens arbete.</p>
 
-<figure class="article-diagram"><img src="/landing/diagrams/byggdagbok.webp" alt="Diagram: byggdagbok – daglig logg över personal, arbete, väder, leveranser och avvikelser per projekt" width="720" height="380" loading="lazy"><figcaption>Byggdagboken samlar dagens händelser per projekt – personal, utfört arbete, väder, leveranser och avvikelser på ett ställe.</figcaption></figure>
+<figure class="article-diagram"><img src="/landing/diagrams/byggdagbok.webp" alt="Diagram: byggdagbok – daglig logg över personal, arbete, väder, leveranser och avvikelser per projekt" width="720" height="380" loading="lazy"><figcaption>Byggdagboken samlar dagens händelser per projekt: personal, utfört arbete, väder, leveranser och avvikelser.</figcaption></figure>
 
 <h2>Vad är en byggdagbok?</h2>
-<p>En byggdagbok är en kronologisk anteckning som förs varje arbetsdag under ett byggprojekt. Den beskriver kort men konkret vad som gjorts, vilka resurser som varit på plats och vad som avvikit från planen. Syftet är dubbelt: alla i projektet ska ha samma bild av läget, och du ska i efterhand kunna visa vad som hände och när.</p>
+<p>En byggdagbok är en kronologisk anteckning som förs varje arbetsdag under ett byggprojekt. Syftet är dubbelt: alla i projektet ska ha samma bild av läget, och du ska i efterhand kunna visa vad som gjordes och när.</p>
 
 <h2>Vad ska en byggdagbok innehålla?</h2>
-<p>Innehållet varierar med projektet, men en användbar dagbok täcker åtminstone det här per dag:</p>
+<p>Utöver utfört arbete tar du med det som har betydelse för dagen:</p>
 <ul>
-<li><strong>Datum och väder</strong> – temperatur och förhållanden som påverkar arbetet, som frost, regn eller vind.</li>
-<li><strong>Personal på plats</strong> – egna yrkesarbetare och underentreprenörer, gärna med antal timmar.</li>
+<li><strong>Datum, projekt och väder</strong> – temperatur och förhållanden som påverkar arbetet, som frost, regn eller vind.</li>
+<li><strong>Bemanning</strong> – egna yrkesarbetare och underentreprenörer, med antal personer.</li>
 <li><strong>Utfört arbete</strong> – vilka moment som gjorts och var i projektet.</li>
-<li><strong>Leveranser och material</strong> – vad som kommit till platsen.</li>
-<li><strong>Avvikelser och hinder</strong> – förseningar, fel, väderstopp eller annat som bromsar arbetet.</li>
-<li><strong>ÄTA och ändringar</strong> – beställda tillägg, kopplade till <a href="/sv/verktyg/ata-mall">ÄTA-underlaget</a>.</li>
-<li><strong>Besök och beslut</strong> – besiktningar, möten med beställaren och beslut som fattats.</li>
+<li><strong>Leveranser och material</strong> – vad som kom, vad som saknades och vad som var skadat.</li>
+<li><strong>Avvikelser och hinder</strong> – förseningar, fel, väderstopp och väntan på andra.</li>
+<li><strong>ÄTA och beställarens direktiv</strong> – kopplade till <a href="/sv/verktyg/ata-mall">ÄTA-underlaget</a>.</li>
+<li><strong>Kontroller, besök och beslut</strong> – egenkontroller, besiktningar och möten med beställaren.</li>
+<li><strong>Olycksfall och tillbud</strong> – vad som hände och vad som gjordes.</li>
 </ul>
 
-<h2>Måste man föra byggdagbok?</h2>
-<p>Det finns ingen generell lag som tvingar alla byggprojekt att föra dagbok på samma sätt som den elektroniska personalliggaren är obligatorisk. Men i standardavtalen AB 04 och ABT 06 (kap. 3 § 13) är det entreprenörens ansvar att föra dagbok över entreprenaden, och beställaren ska hållas informerad om innehållet. Skyldigheten gäller oavsett ersättningsform – alltså även vid fast pris, inte bara på löpande räkning. I praktiken är dagboken alltså avtalad i de flesta större projekt, och även utan avtalskrav är den din bästa dokumentation om något går till tvist.</p>
+<h2>Hur ser en byggdagbok ut? Ett exempel</h2>
+<p>En bra notering är kort men konkret. Så här kan en dag se ut:</p>
+<ul>
+<li><strong>Datum:</strong> 2026-05-14 · Nybyggnad villa, Bäckvägen 12</li>
+<li><strong>Väder:</strong> Molnigt, 9 °C, uppehåll</li>
+<li><strong>Bemanning:</strong> 3 snickare + 1 lärling, kl 07–16</li>
+<li><strong>Utfört arbete:</strong> Rest ytterväggar plan 2, monterat takstolar sektion A–C</li>
+<li><strong>Leveranser:</strong> 28 takstolar kl 08:30 – 2 skadade, reklamerade</li>
+<li><strong>Hinder:</strong> Kranbilen 2 h försenad, takmontaget flyttat till eftermiddagen</li>
+<li><strong>ÄTA:</strong> Beställaren vill ha extra eluttag i garaget (ÄTA nr 4)</li>
+<li><strong>Kontroller:</strong> Egenkontroll infästning takstolar – godkänd</li>
+<li><strong>Foton:</strong> 4 bilder på monterade takstolar och de skadade leveranserna</li>
+</ul>
+<p>Testet är enkelt: en utomstående ska kunna förstå dagen ett år senare.</p>
 
-<h2>Papper vs digital byggdagbok</h2>
+<h2>Vad kräver AB 04, ABT 06 och AMA AF (AFC.38)?</h2>
+<p>Ingen lag kräver byggdagbok. Kravet kommer från avtalen:</p>
+<ul>
+<li><strong>AB 04 och ABT 06, kap. 3 § 13:</strong> entreprenören ska föra dagbok över omständigheter av betydelse för entreprenaden. Skyldigheten gäller oavsett ersättningsform, alltså även vid fast pris.</li>
+<li><strong>AMA AF, kod AFC.38</strong> (AFD.38 vid totalentreprenad): anger vad dagboken ska innehålla, om förfrågningsunderlaget hänvisar till AMA AF. I äldre utgåvor av AMA AF låg dagboken under AFC.37, så båda koderna förekommer.</li>
+<li><strong>Konsumentjobb (ABS 18, Hantverkarformuläret 17):</strong> inget motsvarande krav. Dagbok förs bara om ni avtalat om det.</li>
+</ul>
+<p>Enligt AMA AF ska dagboken i tillämpliga delar innehålla uppgift om:</p>
+<ol>
+<li>Arbetsplatsens namn och belägenhet</li>
+<li>Tjänstgörande arbetsledare</li>
+<li>Ny eller ändrad handling</li>
+<li>Utförd kontroll</li>
+<li>Arbetsstyrkan</li>
+<li>Olycksfall eller annan arbetsskada</li>
+<li>Påbörjande och avslutande av viktigare arbetsmoment</li>
+<li>Direktiv eller anvisning om entreprenaden, till exempel ÄTA-arbeten</li>
+<li>Väderförhållanden, tjäle, grundvattenförhållanden och liknande</li>
+<li>Skada på vara eller arbete på grund av väder, brand, åverkan, bristfällig vård eller stöld</li>
+<li>Avvikande förutsättningar, till exempel brandfarliga heta arbeten</li>
+<li>Hinder</li>
+<li>Uppmätning av arbete, vara eller hjälpmedel</li>
+<li>Annan omständighet av betydelse</li>
+</ol>
+<p>Läs alltid AF-delen i ditt eget kontrakt. Beställaren kan skärpa kraven, till exempel kräva digitalt format eller att dagboken skickas varje vecka. Standardavtalen ges ut av <a href="https://www.bkk.se" target="_blank" rel="noopener">Byggandets Kontraktskommitté</a> och AMA AF av <a href="https://byggtjanst.se/tjanster/ama" target="_blank" rel="noopener">Svensk Byggtjänst</a>. Mer om avtalen finns i vår guide till <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06</a>.</p>
+
+<h2>Väder, bemanning och foton – det som oftast saknas</h2>
+<p>De flesta dagböcker beskriver utfört arbete men missar det som behövs när en försening ska förklaras:</p>
+<ul>
+<li><strong>Väder med siffror.</strong> ”Kallt” räcker inte. Skriv temperatur och nederbörd, särskilt inför gjutning, målning och tätskikt. Det är ditt underlag om du begär tidsförlängning för väderhinder.</li>
+<li><strong>Bemanning per dag.</strong> Antal personer och yrkesgrupper visar om bygget var fullt bemannat eller stod still i väntan på någon annan.</li>
+<li><strong>Foton som hör till dagen.</strong> En bild på en skadad leverans eller ett blockerat arbetsområde säger mer än en mening. Spara den med datum och projekt, inte bland alla andra bilder i mobilen. Läs mer om <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">fotodokumentation som bevis</a>.</li>
+<li><strong>Hinder när de uppstår.</strong> En notering som skrivs veckor senare väger lätt. Skriv samma dag.</li>
+</ul>
+
+<h2>Byggdagboken som bevis vid ÄTA, förseningar och tvist</h2>
+<p>Värdet märks när något ifrågasätts. Vid en <a href="/sv/blog/ata-arbeten">ÄTA</a> visar dagboken när arbetet beställdes och utfördes. Vid en försening visar den vad som stoppade arbetet. Vid en garantitvist är daterade anteckningar och foton ofta det som avgör.</p>
+<p>Däremot räcker en dagboksanteckning inte som ÄTA-beställning eller formell underrättelse. Domstol har bedömt att noteringar i dagboken bara visar entreprenörens uppfattning, och att beställarens signatur på dagboken inte är en beställning av ÄTA-arbeten (<a href="https://kilpatrick.se/dagbokssigneringar-bevisar-inte-godkanda-ata-arbeten/" target="_blank" rel="noopener">Kilpatrick</a>). Dokumentera ÄTA separat, till exempel i en <a href="/sv/verktyg/ata-mall">ÄTA-mall</a>, och använd dagboken som stöd.</p>
+
+<h2>Papper eller digital byggdagbok?</h2>
 <div class="article-table"><table>
 <thead><tr><th>&nbsp;</th><th>Pappersdagbok / pärm</th><th>Digital byggdagbok</th></tr></thead>
 <tbody>
-<tr><td><strong>Var finns den</strong></td><td>På kontoret eller i bilen</td><td>I mobilen, per projekt</td></tr>
-<tr><td><strong>Foton</strong></td><td>Klistras in i efterhand</td><td>Tas och kopplas direkt</td></tr>
+<tr><td><strong>Var finns den</strong></td><td>På kontoret eller i bilen</td><td>Per projekt, i systemet</td></tr>
+<tr><td><strong>Foton</strong></td><td>Skrivs ut eller sparas separat</td><td>Kopplas till dagens notering</td></tr>
 <tr><td><strong>Sökbarhet</strong></td><td>Bläddra manuellt</td><td>Sök på datum och projekt</td></tr>
-<tr><td><strong>Tidsstämpel</strong></td><td>Skrivs för hand</td><td>Automatisk, svår att ifrågasätta</td></tr>
-<tr><td><strong>Tillgänglig för teamet</strong></td><td>En pärm, en person</td><td>Alla berörda, samtidigt</td></tr>
-<tr><td><strong>Risk</strong></td><td>Tappas bort eller blir blöt</td><td>Säkerhetskopierad i molnet</td></tr>
+<tr><td><strong>Tillgänglig för teamet</strong></td><td>En pärm, en person</td><td>Alla med behörighet</td></tr>
+<tr><td><strong>Förlustrisk</strong></td><td>Kan tappas bort eller bli blöt</td><td>Låg, sparas i molnet</td></tr>
 </tbody>
 </table></div>
 
-<h2>Byggdagboken som bevis vid ÄTA, förseningar och tvist</h2>
-<p>Värdet i dagboken märks först när något ifrågasätts. Vid en <a href="/sv/verktyg/ata-mall">ÄTA</a> visar den när tilläggsarbetet beställdes och utfördes. Vid en försening visar den vad som stoppade arbetet och vem som orsakade stoppet. Och vid en garantitvist långt senare är daterade anteckningar och <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">foton kopplade till projektet</a> ofta det som avgör. En digital byggdagbok med automatisk tidsstämpel är svårare att ifrågasätta än en handskriven notering som fyllts i i efterhand.</p>
-
-<h2>Så för du byggdagbok digitalt i ByggExp</h2>
-<p>I ByggExp för du byggdagboken direkt i appen, kopplad till rätt projekt. Du skriver dagens notering, lägger till foton på plats och taggar avvikelser och ÄTA – allt tidsstämplat och samlat där resten av projektet finns. Eftersom dagboken ligger bredvid tid, foto och ekonomi hänger dokumentationen ihop med det som faktiskt hänt, i stället för att leva i en separat pärm.</p>
+<h2>Digital byggdagbok – vad ska den klara?</h2>
+<p>Systemen skiljer sig mycket åt. Ställ de här frågorna innan du väljer:</p>
+<ul>
+<li><strong>Täcker den AMA AF-punkterna?</strong> Minst väder, bemanning, utfört arbete, avvikelser, hinder och ÄTA ska ha egna fält.</li>
+<li><strong>Kopplas foton till rätt dag och projekt?</strong> Annars hamnar du tillbaka i en lös bildmapp.</li>
+<li><strong>Går den att fylla i där du är?</strong> Det avgör om den skrivs samma dag eller i efterhand.</li>
+<li><strong>Kan beställaren ta del av den?</strong> Kräver kontraktet att innehållet delges, behöver du export, delning eller utskrift.</li>
+<li><strong>Går det att se vem som skrev vad och när?</strong> Det stärker bevisvärdet.</li>
+<li><strong>Hänger den ihop med resten av projektet?</strong> Med tid, ÄTA och egenkontroller i samma system minskar dubbelarbetet.</li>
+</ul>
+<p>I ByggExp för du dagboken i webbversionen, per projekt och dag. Du fyller i väder och temperatur, bemanning, utfört arbete, avvikelser, material och övriga anteckningar. Foton laddar du upp till dagens inlägg. Dagboken ligger i samma projekt som tidrapporter och ÄTA, så du slipper leta i flera system.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du sluta jaga anteckningar i efterhand? Ladda ner vår gratis <a href="/sv/verktyg/byggdagbok-mall">byggdagbok-mall</a>, läs om <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">fotodokumentation som bevis</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Börja med vår <a href="/sv/verktyg/byggdagbok-mall">gratis byggdagbok-mall</a>, komplettera med en <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a> för kontrollerna eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
 
 <h2>Relaterade guider</h2>
 <ul>
 <li><a href="/sv/blog/fotodokumentation-byggprojekt-bevis">Fotodokumentation i byggprojekt</a> – bevis som håller vid ÄTA och tvist.</li>
+<li><a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a> – så beställer, dokumenterar och fakturerar du dem.</li>
 <li><a href="/sv/blog/startmote-byggprojekt-checklista">Startmöte i byggprojekt</a> – sätt projektet rätt från dag ett.</li>
 <li><a href="/sv/blog/overlamning-relationshandlingar">Överlämning och relationshandlingar</a> – checklista för avslutade projekt.</li>
-<li><a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">Kostnadskontroll och marginal</a> – håll koll på projektets ekonomi.</li>
+<li><a href="/sv/blog/personalliggare">Personalliggare</a> – vem som ska registreras och när.</li>
 </ul>
 
 <h2>Vanliga frågor</h2>
-<h3>Vad är en byggdagbok?</h3>
-<p>En kronologisk anteckning som förs varje arbetsdag under ett byggprojekt och beskriver kort vad som gjorts, vilka som varit på plats och vad som avvikit från planen. Den ger alla i projektet samma bild av läget och dokumenterar i efterhand vad som hände när.</p>
+<h3>Vilka krav finns för en byggdagbok?</h3>
+<p>I entreprenader enligt AB 04 och ABT 06 ska entreprenören föra dagbok (kap. 3 § 13), och AMA AF (AFC.38) anger innehållet. Vid konsumentjobb enligt ABS 18 eller Hantverkarformuläret 17 krävs den bara om ni avtalat om det.</p>
+<h3>Vad ska ingå i en byggdagbok?</h3>
+<p>Datum, projekt, väder, bemanning, utfört arbete, leveranser, avvikelser och hinder, ÄTA och beställarens direktiv, kontroller samt olycksfall. AMA AF listar 14 punkter som ska tas med i tillämpliga delar.</p>
+<h3>Hur ser en byggdagbok ut?</h3>
+<p>En notering per dag och projekt med fasta rubriker: datum, väder, bemanning, utfört arbete, leveranser, hinder, ÄTA, kontroller och foton. Varje rubrik fylls i med några korta, konkreta rader.</p>
+<h3>Var kan jag hitta en gratis digital dagbok?</h3>
+<p>Vår <a href="/sv/verktyg/byggdagbok-mall">gratis byggdagbok-mall</a> fyller du i online och laddar ner som PDF. Vill du samla dagboken med tid och ÄTA per projekt kan du testa ByggExp gratis i 14 dagar.</p>
 <h3>Är byggdagbok ett lagkrav?</h3>
-<p>Nej, ingen lag tvingar fram den så som personalliggaren. Men AB 04 och ABT 06 gör den till entreprenörens ansvar, så i avtalade entreprenader är den i praktiken ett krav. I mindre privatjobb utan sådant avtal är den frivillig – men fortfarande din bästa dokumentation om något ifrågasätts.</p>
+<p>Nej. Kravet kommer från standardavtalen, inte från lag. Gäller AB 04 eller ABT 06 är dagboken därför obligatorisk enligt avtalet.</p>
 <h3>Vad är skillnaden mot en personalliggare?</h3>
-<p>Personalliggaren registrerar vem som är på plats för Skatteverkets skull. Byggdagboken dokumenterar vad som händer i projektet – arbete, avvikelser, ÄTA och beslut. De löser olika saker.</p>
-<h3>Vad är fördelen med en digital byggdagbok?</h3>
-<p>Den största vinsten är bevisvärdet: en automatisk tidsstämpel går inte att skriva om i efterhand, till skillnad från en handskriven notering. Att allt dessutom är sökbart och tillgängligt för alla berörda samtidigt gör den snabbare att använda i vardagen.</p>
+<p>Personalliggaren är lagkrav på de flesta byggarbetsplatser och visar Skatteverket vem som är på plats. Byggdagboken dokumenterar vad som händer i projektet.</p>
+<h3>Räcker en dagboksanteckning som ÄTA-beställning?</h3>
+<p>Nej. Domstol har bedömt att dagboksnoteringar bara visar entreprenörens uppfattning. Få ÄTA-arbetet beställt och dokumenterat separat och använd dagboken som stöd.</p>
 `.trim();
 
 const A_BYGGDAGBOK: BlogPost = {
   _id: "code-byggdagbok",
-  title: "Byggdagbok – vad den ska innehålla och varför digital slår pärmen", slug: "byggdagbok", locale: "sv",
-  excerpt: "Vad en byggdagbok ska innehålla, när den krävs (AB 04/ABT 06) och varför en digital byggdagbok med tidsstämpel och foton slår pappersdagboken som bevis vid ÄTA, försening och tvist.", tag: "Digitalisering",
+  title: "Byggdagbok – vad den ska innehålla och hur du för den digitalt", slug: "byggdagbok", locale: "sv",
+  excerpt: "Vad en byggdagbok ska innehålla, vad AB 04, ABT 06 och AMA AF (AFC.38) kräver, ett ifyllt exempel och vad en digital byggdagbok behöver klara.", tag: "Digitalisering",
   coverImageUrl: "/landing/blog/byggdagbok.webp", contentHtml: A_BYGGDAGBOK_HTML,
-  seoTitle: "Byggdagbok – innehåll, krav och digital byggdagbok | ByggExp", seoDescription: "Byggdagbok för bygg: vad den ska innehålla, när den krävs enligt AB 04/ABT 06 och varför en digital byggdagbok med tidsstämpel och foton blir starkare bevis.",
+  seoTitle: "Byggdagbok – innehåll, krav och digital byggdagbok | ByggExp", seoDescription: "Byggdagbok: vad den ska innehålla, vad AB 04, ABT 06 och AMA AF (AFC.38) kräver och vad en digital byggdagbok ska klara. Med exempel och gratis mall.",
   seoImageUrl: `${SITE_URL}/landing/features/4foto.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-30T11:00:00.000Z", createdAt: "2026-08-30T11:00:00.000Z", updatedAt: "2026-08-30T11:00:00.000Z",
+  publishedAt: "2026-08-30T11:00:00.000Z", createdAt: "2026-08-30T11:00:00.000Z", updatedAt: "2026-10-06T10:00:00.000Z",
 };
 
 const A_PROJEKTLEDNING_BYGGFORETAG_HTML = `

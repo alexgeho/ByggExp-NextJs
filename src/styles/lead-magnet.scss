@@ -1777,3 +1777,34 @@
     display: none;
   }
 }
+
+// Resultat as three one-tap buttons (✓ Godkänd · ! Anmärkning · – Ej aktuellt).
+.lm-tool-result {
+  display: flex;
+  gap: 6px;
+  align-self: stretch; // same height as the text fields on the row
+}
+
+.lm-tool-result-btn {
+  flex: 1 1 0;
+  min-height: 44px;
+  min-width: 44px;
+  border: 1px solid var(--lm-field-border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--muted);
+  font: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.lm-tool-result-btn.is-ok:hover { border-color: #16a34a; color: #16a34a; }
+.lm-tool-result-btn.is-warn:hover { border-color: #d97706; color: #d97706; }
+.lm-tool-result-btn.is-na:hover { border-color: var(--muted); color: var(--ink); }
+
+.lm-tool-result-btn.is-ok.is-on { background: #16a34a; border-color: #16a34a; color: #fff; }
+.lm-tool-result-btn.is-warn.is-on { background: #d97706; border-color: #d97706; color: #fff; }
+.lm-tool-result-btn.is-na.is-on { background: var(--muted); border-color: var(--muted); color: #fff; }

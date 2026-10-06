@@ -124,6 +124,29 @@ const byggdagbok = frame(`
   <text x="408" y="265" ${font} font-size="13.5" fill="${INK}">bilderna till dagens anteckning.</text>
 `);
 
+// 6b. Byggdagbok – krav per standardavtal (rendered 2× like the other GSC-top diagrams)
+function kravRow(y, name, sub, req, reqColor, ref) {
+  return `<rect x="40" y="${y}" width="640" height="42" rx="8" fill="#fff" stroke="#e3e9f2"/>
+  <text x="58" y="${y + 19}" ${font} font-size="13.5" font-weight="800" fill="${INK}">${name}</text>
+  <text x="58" y="${y + 35}" ${font} font-size="11" fill="${MUT}">${sub}</text>
+  <text x="330" y="${y + 26}" ${font} font-size="13" font-weight="800" fill="${reqColor}">${req}</text>
+  <text x="520" y="${y + 26}" ${font} font-size="13" fill="${INK}">${ref}</text>`;
+}
+const byggdagbokKrav = frame(`
+  ${title('Krav på byggdagbok – vad avtalet säger')}
+  <rect x="40" y="66" width="640" height="34" rx="8" fill="${INK}"/>
+  <text x="58" y="88" ${font} font-size="12.5" font-weight="700" fill="#fff">Standardavtal</text>
+  <text x="330" y="88" ${font} font-size="12.5" font-weight="700" fill="#fff">Dagbok krävs?</text>
+  <text x="520" y="88" ${font} font-size="12.5" font-weight="700" fill="#fff">Referens</text>
+  ${kravRow(106, 'AB 04', 'Entreprenad, beställaren är företag', 'Ja', GREEN, 'kap 3 § 13')}
+  ${kravRow(152, 'ABT 06', 'Entreprenad, beställaren är företag', 'Ja', GREEN, 'kap 3 § 13')}
+  ${kravRow(198, 'ABS 18', 'Konsumententreprenad', 'Endast om avtalat', AMBER, '—')}
+  ${kravRow(244, 'Hantverkarformuläret 17', 'Konsumententreprenad', 'Endast om avtalat', AMBER, '—')}
+  <rect x="40" y="300" width="640" height="52" rx="10" fill="#eef4ff" stroke="${BLUE}"/>
+  <text x="58" y="321" ${font} font-size="12" font-weight="800" fill="${BLUE}">Dagbokens innehåll</text>
+  <text x="58" y="340" ${font} font-size="12" fill="${INK}">Regleras även i AMA AF under kod AFC.38 – kärnan är alltid utfört arbete.</text>
+`);
+
 // 7. Betong – platta med kantbalk
 const betong = frame(`
   ${title('Betong – volym för platta med kantbalk')}
@@ -636,6 +659,7 @@ const DIAGRAMS = {
   'heta-arbeten': hetaArbeten,
   'egenkontroll-cykel': egenkontroll,
   'byggdagbok': byggdagbok,
+  'byggdagbok-krav': byggdagbokKrav,
   'betong': betong,
   'grus': grus,
   'kvadratmeter': kvadratmeter,
@@ -650,11 +674,18 @@ const DIAGRAMS = {
   'projektuppfoljning': projektuppfoljning,
 };
 
+// Diagrams rendered at 2× (1440×760) for a sharp lightbox.
+const HIRES = new Set(['byggdagbok-krav']);
+
 async function main() {
   fs.mkdirSync(OUT, { recursive: true });
+  // Optional filter: node scripts/gen-article-diagrams.js byggdagbok-krav
+  const only = process.argv.slice(2);
   for (const [name, svg] of Object.entries(DIAGRAMS)) {
+    if (only.length && !only.includes(name)) continue;
     const out = path.join(OUT, `${name}.webp`);
-    await sharp(Buffer.from(svg)).webp({ quality: 90 }).toFile(out);
+    const density = HIRES.has(name) ? 144 : 72;
+    await sharp(Buffer.from(svg), { density }).webp({ quality: 90 }).toFile(out);
     console.log('wrote', out);
   }
 }

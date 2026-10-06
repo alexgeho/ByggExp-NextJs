@@ -845,7 +845,7 @@ const A_PERSONALPLANERING_BYGG_HTML = `
 <li>Lägg upp projekten och perioden du planerar för.</li>
 <li>Fördela personal och lag på projekten utifrån kompetens och var de behövs.</li>
 <li>Kontrollera att ingen är dubbelbokad och att inga projekt står obemannade.</li>
-<li>Dela planen med laget – i mobilen, så alla ser sitt schema direkt.</li>
+<li>Dela planen med laget – uppgifterna syns i mobilen.</li>
 <li>Justera löpande när något ändras; koppla planen till <a href="/sv/blog/tidrapportering-app-byggforetag">registrerad tid</a> för att se plan mot verklighet.</li>
 </ol>
 
@@ -1054,7 +1054,7 @@ const A_APP_TIDRAPPORTERING_BYGG_HTML = `
 <tbody>
 <tr><td><strong>När tiden registreras</strong></td><td>I efterhand, av minnet</td><td>När passet sker</td></tr>
 <tr><td><strong>Rätt projekt</strong></td><td>Gissning i efterhand</td><td>Väljs vid incheckning</td></tr>
-<tr><td><strong>OB, övertid, restid</strong></td><td>Räknas för hand</td><td>Räknas automatiskt</td></tr>
+<tr><td><strong>OB, övertid, restid</strong></td><td>Räknas för hand</td><td>Märks per pass och följer med i exporten</td></tr>
 <tr><td><strong>Fakturaunderlag</strong></td><td>Renskrivs manuellt</td><td>Blir fakturarader direkt</td></tr>
 <tr><td><strong>Risk för fel</strong></td><td>Hög</td><td>Låg</td></tr>
 <tr><td><strong>Tid för administration</strong></td><td>Timmar varje vecka</td><td>Minuter</td></tr>
@@ -1077,8 +1077,8 @@ const A_APP_TIDRAPPORTERING_BYGG_HTML = `
 <h2>Från tid till lön och faktura – ett flöde</h2>
 <p>Poängen med digital tidrapportering är att samma timme bara matas in en gång och sedan används överallt. De granskade och attesterade passen blir <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a>, <a href="/sv/blog/fakturera-fran-byggexp">fakturarader</a> och en post i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektuppföljningen</a> samtidigt. Ska du välja verktyg för hela kedjan? Läs vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
-<h2>Tidrapportering för hantverkare och entreprenad</h2>
-<p>För <a href="/sv/blog/tidrapportering-hantverkare">hantverkare och underentreprenörer</a> är tidrapporteringen ofta grunden för både lön och kundfaktura. En app som kopplar tid till projekt gör att du kan fakturera på loggad tid utan dubbelarbete – timmarna blir automatiskt fakturarader. Läs mer om hur tid blir faktura i vår guide om <a href="/sv/blog/fakturera-fran-byggexp">fakturering från ByggExp</a>.</p>
+<h2>Hantverkare eller entreprenad?</h2>
+<p>För <a href="/sv/blog/tidrapportering-hantverkare">hantverkare</a> är loggad tid oftast direkt underlag för kundfakturan. I entreprenader enligt AB 04 och ABT 06 tillkommer attest och ÄTA-timmar som ska hållas isär – det går vi igenom i guiden om <a href="/sv/blog/tidrapportering-entreprenad">tidrapportering för entreprenad</a>.</p>
 
 <h2>Vad du bör titta efter i en app för tidrapport</h2>
 <ul>
@@ -1104,7 +1104,7 @@ const A_APP_TIDRAPPORTERING_BYGG_HTML = `
 <h3>Kostar det något att komma igång?</h3>
 <p>Du kan ladda ner tidrapport-mallen gratis och boka en kostnadsfri demo för att se hur appen fungerar för ditt företag.</p>
 <h3>Hanterar appen OB, övertid och restid?</h3>
-<p>Ja. Timmarna kan räknas med rätt OB-tillägg, övertid och restid enligt byggavtalet automatiskt, så att både lön och fakturaunderlag blir korrekta utan handräkning.</p>
+<p>Ja. Varje pass märks som normaltid, OB eller övertid, och restid och traktamente registreras på passet. Allt följer med i löneunderlaget, så att du slipper leta i lappar – själva tilläggen enligt byggavtalet sätter du i lönesystemet.</p>
 <h3>Kräver appen att alla har samma sorts telefon?</h3>
 <p>Nej. Appen fungerar på både iPhone och Android med samma funktioner, så hela laget kan rapportera tid oavsett modell.</p>
 `.trim();
@@ -1322,7 +1322,7 @@ const A_PROJEKTUPPFOLJNING_BYGG_HTML = `
 <figure class="web-shot"><img src="/features-content/projektekonomi-och-lonsamhet-web.webp" alt="Projektuppföljning i webbadmin: budget mot utfall, timmar, kostnader och marginal i realtid" width="1000" height="548" loading="lazy"><figcaption>Projektets ekonomi i webbadmin – budget mot utfall, timmar, kostnader och marginal uppdateras löpande.</figcaption></figure>
 
 <h2>Så följer du upp projekt i realtid</h2>
-<p>Poängen med digital projektuppföljning är att siffrorna uppdateras av det laget redan gör. När tid, material och kvitton registreras löpande i mobilen ser du <a href="/sv/blog/projektekonomi-och-lonsamhet">projektets ekonomi</a> mot budget i realtid – utan att sammanställa något manuellt. Då hinner du agera på projekt som närmar sig budgettaket: justera bemanning, ÄTA-fakturera eller stämma av med kunden.</p>
+<p>Poängen med digital projektuppföljning är att siffrorna uppdateras av det laget redan gör. När tid, material och kvitton registreras löpande i mobilen ser du <a href="/sv/blog/projektekonomi-och-lonsamhet">projektets ekonomi</a> mot budget i realtid – utan att sammanställa något manuellt. Då hinner du agera på projekt som närmar sig budgettaket: justera bemanning, ÄTA-fakturera eller stämma av med kunden. I entreprenader är det ofta ÄTA-timmarna som faller mellan stolarna – guiden om <a href="/sv/blog/tidrapportering-entreprenad">tidrapportering för entreprenad</a> visar hur du håller isär dem.</p>
 
 <h2>Från uppföljning till bättre kalkyler</h2>
 <p>Uppföljningen är också din bästa lärdom inför nästa anbud. När projektet är klart jämför du utfallet mot kalkylen i en <a href="/sv/blog/efterkalkyl-bygg-kalkyluppfoljning">efterkalkyl</a> – då ser du vilka moment som konsekvent kostar mer än planerat och kan prisa nästa jobb rätt. Bra tidrapportering är förutsättningen: utan korrekta timmar blir efterkalkylen en gissning.</p>
@@ -1746,7 +1746,7 @@ const S_TIDSREGISTRERING_APP_BYGG_HTML = `
 <tr><td><strong>GPS på incheckning</strong></td><td>Bekräftar närvaro där jobbet utförs</td></tr>
 <tr><td><strong>Offline-läge</strong></td><td>Källare och nybyggen saknar ofta täckning</td></tr>
 <tr><td><strong>Projektkoppling</strong></td><td>Timmarna hamnar rätt utan efterarbete</td></tr>
-<tr><td><strong>OB &amp; övertid</strong></td><td>Räknas enligt byggavtalet automatiskt</td></tr>
+<tr><td><strong>OB &amp; övertid</strong></td><td>Märks per pass (normal, OB, övertid) och följer med till lön</td></tr>
 <tr><td><strong>Export till lön &amp; faktura</strong></td><td>Registrera en gång, använd överallt</td></tr>
 </tbody>
 </table></div>
@@ -2042,8 +2042,9 @@ const A_SCHEMALAGGNING_BYGG_HTML = `
 <li>Delad vy över hela laget per vecka eller månad.</li>
 <li>Planera per person eller per projekt.</li>
 <li>Se frånvaro (semester, sjuk) direkt i planen.</li>
-<li>Planen syns i appen för alla berörda och uppdateras i realtid.</li>
+<li>Uppgifterna syns i appen för dem som ska utföra dem.</li>
 </ul>
+<p>Ska du jämföra verktyg? Guiden om <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggningssystem för bygg</a> går igenom vad du bör kräva, och den om <a href="/sv/blog/resursplanering-bygg">resursplanering i bygg</a> hur du undviker dubbelbokning.</p>
 
 <h2>Från plan till faktisk tid</h2>
 <p>Störst nytta gör schemat när det kopplas till verkligheten: planerad tid jämförs med <a href="/sv/blog/automatisk-tidrapportering-och-export">loggad tid</a>, och avvikelser syns i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a>.</p>
@@ -2057,7 +2058,7 @@ const A_SCHEMALAGGNING_BYGG_HTML = `
 <h3>Vad är skillnaden mot dagsplanering?</h3>
 <p>Schemaläggning är den längre planeringen över veckor/månader; dagsplaneringen är den konkreta genomgången av dagens jobb. De hänger ihop och delar samma plan.</p>
 <h3>Ser personalen sitt schema i mobilen?</h3>
-<p>Ja. Planen delas till appen och uppdateras i realtid, så alla berörda ser sitt schema och eventuella ändringar direkt.</p>
+<p>I appen ser medarbetaren sina uppgifter och projekt i en tidslinje. Bemanningsplanen per dag hanteras i webben av arbetsledningen.</p>
 `.trim();
 
 const A_SCHEMALAGGNING_BYGG: BlogPost = {
@@ -2349,6 +2350,9 @@ const A_BYGGDAGBOK_HTML = `
 <li><strong>AMA AF, kod AFC.38</strong> (AFD.38 vid totalentreprenad): anger vad dagboken ska innehålla, om förfrågningsunderlaget hänvisar till AMA AF. I äldre utgåvor av AMA AF låg dagboken under AFC.37, så båda koderna förekommer.</li>
 <li><strong>Konsumentjobb (ABS 18, Hantverkarformuläret 17):</strong> inget motsvarande krav. Dagbok förs bara om ni avtalat om det.</li>
 </ul>
+
+<figure class="article-diagram"><img src="/landing/diagrams/byggdagbok-krav.webp" alt="Tabell som visar när byggdagbok krävs: AB 04 och ABT 06 kräver dagbok enligt kap 3 § 13, medan ABS 18 och Hantverkarformuläret 17 bara kräver det om parterna avtalat om det." width="720" height="380" loading="lazy"><figcaption>I AB 04 och ABT 06 är byggdagbok ett krav enligt kap 3 § 13, medan konsumentavtalen ABS 18 och Hantverkarformuläret 17 bara kräver dagbok om parterna avtalat om det.</figcaption></figure>
+
 <p>Enligt AMA AF ska dagboken i tillämpliga delar innehålla uppgift om:</p>
 <ol>
 <li>Arbetsplatsens namn och belägenhet</li>
@@ -2445,7 +2449,7 @@ const A_BYGGDAGBOK: BlogPost = {
 };
 
 const A_PROJEKTLEDNING_BYGGFORETAG_HTML = `
-<p>Projektledning i bygg handlar om att ta ett projekt från anbud till godkänd slutbesiktning utan att tappa kontrollen över tid, pengar och kvalitet på vägen. Det är en roll som lika mycket handlar om planering och uppföljning som om folk och kommunikation. Den här guiden går igenom faserna i ett byggprojekt, vad byggprojektledaren ansvarar för i varje steg och vilka verktyg som gör jobbet lättare.</p><figure class="article-diagram"><img src="/landing/diagrams/byggdagbok-krav.webp" alt="Tabell som visar när byggdagbok krävs: AB 04 och ABT 06 kräver dagbok enligt kap 3 § 13, medan ABS 18 och Hantverkarformuläret 17 bara kräver det om parterna avtalat om det." width="720" height="380" loading="lazy"><figcaption>I AB 04 och ABT 06 är byggdagbok ett krav enligt kap 3 § 13, medan konsumentavtalen ABS 18 och Hantverkarformuläret 17 bara kräver dagbok om parterna avtalat om det.</figcaption></figure>
+<p>Projektledning i bygg handlar om att ta ett projekt från anbud till godkänd slutbesiktning utan att tappa kontrollen över tid, pengar och kvalitet på vägen. Det är en roll som lika mycket handlar om planering och uppföljning som om folk och kommunikation. Den här guiden går igenom faserna i ett byggprojekt, vad byggprojektledaren ansvarar för i varje steg och vilka verktyg som gör jobbet lättare.</p>
 
 <p>Vill du gå direkt på systemstödet? Läs om <a href="/sv/blog/projekthanteringssystem-bygg">projekthanteringssystem för bygg</a>, eller hur du <a href="/sv/blog/digitalisera-byggforetag-projektstyrning">digitaliserar projektstyrningen</a>.</p>
 

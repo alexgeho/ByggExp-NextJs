@@ -139,6 +139,7 @@ const TIDRAPPORTERING_HTML = `
 <li><strong>Restid och ställtid</strong> – även om den inte debiteras påverkar den debiteringsgraden</li>
 </ul>
 <p>Registrera gärna varje pass för sig när samma person jobbar på flera projekt eller moment samma dag.</p>
+<p>Jobbar ni under AB 04 eller ABT 06 tillkommer attest och ÄTA-timmar som ska kunna redovisas separat – se guiden om <a href="/sv/blog/tidrapportering-entreprenad">tidrapportering för entreprenad</a>.</p>
 
 <h2>Tidrapport vs personalliggare – inte samma sak</h2>
 <p>Många blandar ihop dem, men de har olika syften:</p>
@@ -152,7 +153,7 @@ const TIDRAPPORTERING_HTML = `
 <p>För att lönen ska bli rätt behöver tidrapporten skilja på vanlig tid och tillägg. OB (obekväm arbetstid), övertid (utöver ordinarie tid för heltid) och mertid (för deltidsanställda) styrs av kollektivavtal – notera dem separat direkt när tiden registreras, annars blir det gissningar vid lönekörningen.</p>
 
 <h2>Så för du tid i ByggExp</h2>
-<p>I ByggExp stämplar teamet <a href="/sv/blog/mobil-tidrapportering">tid direkt i mobilen</a>, kopplat till rätt projekt – så att inget skrivs av på lappar i efterhand:</p>
+<p>Med <a href="/sv/blog/mobil-tidrapportering">mobil tidrapportering</a> i ByggExp stämplar teamet tid direkt i telefonen, kopplat till rätt projekt – så att inget skrivs av på lappar i efterhand:</p>
 <ol>
 <li>Varje medarbetare startar och stoppar tid per projekt och moment.</li>
 <li>OB, övertid och restid registreras med tiden – klart för lön.</li>
@@ -1608,6 +1609,7 @@ const A_TIDREDOVISNING_BYGGFORETAG_HTML = `
 <ul>
 <li><strong>Rapportera i efterhand.</strong> Tid som fylls i en vecka senare blir gissningar – registrera löpande.</li>
 <li><strong>Ingen projektkod.</strong> Utan koppling till projekt går det inte att följa upp marginalen eller fakturera rätt.</li>
+<li><strong>ÄTA-timmar blandas med kontraktsarbetet.</strong> I en entreprenad måste ÄTA-tiden hållas isär för att kunna faktureras – mer om det i guiden om <a href="/sv/blog/tidrapportering-entreprenad">tidrapportering för entreprenad</a>.</li>
 <li><strong>Blanda ihop med personalliggaren.</strong> Personalliggaren uppfyller inte kravet på löneunderlag, och tidredovisningen uppfyller inte lagkravet på närvaroregistrering.</li>
 </ul>
 
@@ -1715,7 +1717,7 @@ const ENKELT_TIDRAPPORTERINGSSYSTEM: BlogPost = {
   contentHtml: ENKELT_TIDRAPPORTERINGSSYSTEM_HTML,
   seoTitle: 'Enkelt tidrapporteringssystem för bygg | ByggExp',
   seoDescription:
-    'Enkelt tidrapporteringssystem för bygg: laget stämplar in/ut i mobilen med GPS, OB och övertid räknas automatiskt och timmarna blir underlag till lön och faktura.',
+    'Enkelt tidrapporteringssystem för bygg: laget stämplar in/ut i mobilen med GPS, timmarna märks som normaltid, OB eller övertid och blir underlag till lön och faktura.',
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`,
   canonicalUrl: '',
   noIndex: false,

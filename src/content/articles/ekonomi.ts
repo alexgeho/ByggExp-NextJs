@@ -1946,7 +1946,7 @@ const A_ATA_HANTERING_MALL_HTML = `
 <li><strong>Prissätt arbetet</strong> – enligt à-pris, fast pris eller löpande räkning.</li>
 <li><strong>Få skriftligt godkännande</strong> – innan du börjar utföra.</li>
 <li><strong>Utför arbetet</strong>.</li>
-<li><strong>Dokumentera löpande</strong> – i ÄTA-journal, dagbok och byggmötesprotokoll.</li>
+<li><strong>Dokumentera löpande</strong> – i ÄTA-journal, <a href="/sv/blog/byggdagbok">byggdagbok</a> och byggmötesprotokoll.</li>
 <li><strong>Fakturera löpande</strong> – med tidsedlar, materialkvitton och specifikationer som underlag.</li>
 </ol>
 
@@ -1965,7 +1965,7 @@ const A_ATA_HANTERING_MALL_HTML = `
 <p>Med underskriften på plats före utförandet har du säkrat både beställningen, priset och den eventuella tidsförskjutningen i ett enda dokument.</p>
 
 <h2>Fakturera rätt</h2>
-<p>Har inget à-pris eller fast pris avtalats ersätts ÄTA på näringssidan enligt självkostnadsprincipen, det vill säga löpande räkning. Det kräver verifierbara underlag – tidsedlar, materialkvitton och specifikationer. Utan dem blir det svårt att stå fast vid beloppet om beställaren ifrågasätter.</p>
+<p>Har inget à-pris eller fast pris avtalats ersätts ÄTA på näringssidan enligt självkostnadsprincipen, det vill säga löpande räkning. Det kräver verifierbara underlag – tidsedlar, materialkvitton och specifikationer. Utan dem blir det svårt att stå fast vid beloppet om beställaren ifrågasätter. ÄTA-timmarna behöver därför märkas redan i tidrapporten – se guiden om <a href="/sv/blog/tidrapportering-entreprenad">tidrapportering för entreprenad</a>.</p>
 <p>Lika viktigt: fakturera ÄTA löpande, inte i en klump vid projektets slut. Enligt AB 04/ABT 06 kap 6 ska ersättningskrav framställas i god tid, och krav som inte tagits med i slutfakturan efter godkänd slutbesiktning kan gå förlorade. Ta med alla ÄTA-krav <em>innan</em> slutbesiktning och slutfaktura. På konsumentjobb: håll dig inom prisuppgiften eller informera i tid om att den behöver överskridas.</p>
 
 <h2>Vanliga misstag och hur du undviker dem</h2>

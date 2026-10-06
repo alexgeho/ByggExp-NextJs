@@ -23,6 +23,7 @@ const BEMANNING_HTML = `
 <li>Justera löpande när något ändras – och låt laget se sitt schema.</li>
 <li>Följ upp beläggning mot plan för att hitta över- och underbeläggning.</li>
 </ol>
+<p>Hur du räknar kapacitet mot behov över flera projekt går vi igenom i guiden om <a href="/sv/blog/resursplanering-bygg">resursplanering i bygg</a>.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
@@ -33,7 +34,7 @@ const BEMANNING_HTML = `
 </ul>
 
 <h2>Så gör du i ByggExp</h2>
-<p>I ByggExp planerar du bemanningen visuellt: fördela personal på projekt och pass, se frånvaro och beläggning i en delad vy, och låt medarbetarna se sitt schema i mobilen. Eftersom bemanning, närvaro, tid och ekonomi ligger i samma app hänger planen ihop med verkligheten – planerade timmar följer med hela vägen till <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlaget</a>.</p>
+<p>I ByggExp planerar du bemanningen visuellt: fördela personal på projekt och pass, se frånvaro och beläggning i en delad vy, och låt medarbetarna se sina uppgifter i mobilen. Eftersom bemanning, närvaro, tid och ekonomi ligger i samma app hänger planen ihop med verkligheten – planerade timmar följer med hela vägen till <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlaget</a>.</p>
 
 <p>Vill du ersätta Excel med ett digitalt verktyg? Läs om <a href="/sv/blog/bemanningssystem-bygg">bemanningssystem för bygg och digital bemanningsplanering</a>.</p>
 
@@ -851,12 +852,12 @@ const BEMANNINGSSYSTEM_HTML = `
 <li>Lägg in projekten och deras behov – antal personer och kompetens per period.</li>
 <li>Fördela personalen på projekt och pass i en delad vy.</li>
 <li>Markera frånvaro (sjuk, VAB, semester) så att luckor och överbokning syns direkt.</li>
-<li>Justera löpande när något ändras – och låt laget se sitt schema i mobilen.</li>
+<li>Justera löpande när något ändras – och låt laget se sina uppgifter i mobilen.</li>
 <li>Följ upp beläggning mot plan för att hitta över- och underbeläggning.</li>
 </ol>
 
 <h2>Bemanningssystem i ByggExp</h2>
-<p>I ByggExp planerar du bemanningen visuellt: fördela personal på projekt och pass, se frånvaro och beläggning i en delad vy, och låt medarbetarna se sitt schema i mobilen. Eftersom bemanning, närvaro, <a href="/sv/blog/app-for-tidrapportering-bygg">tid</a> och ekonomi ligger i samma app hänger planen ihop med verkligheten – planerade timmar följer med hela vägen till <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlaget</a>.</p>
+<p>I ByggExp planerar du bemanningen visuellt: fördela personal på projekt och pass, se frånvaro och beläggning i en delad vy, och låt medarbetarna se sina uppgifter i mobilen. Eftersom bemanning, närvaro, <a href="/sv/blog/app-for-tidrapportering-bygg">tid</a> och ekonomi ligger i samma app hänger planen ihop med verkligheten – planerade timmar följer med hela vägen till <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlaget</a>.</p>
 
 <h2>Kom igång</h2>
 <p>Sluta pussla bemanningsplaneringen i huvudet eller i Excel. <a href="/sv/blog/bemanning-och-personalplanering">Läs mer om bemanning och personalplanering</a>, se <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggningssystem</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
@@ -901,7 +902,7 @@ const BEMANNINGSSYSTEM: BlogPost = {
       'Lägg in projekten och deras behov – antal personer och kompetens per period.',
       'Fördela personalen på projekt och pass i en delad vy.',
       'Markera frånvaro så att luckor och överbokning syns direkt.',
-      'Justera löpande och låt laget se sitt schema i mobilen.',
+      'Justera löpande och låt laget se sina uppgifter i mobilen.',
       'Följ upp beläggning mot plan för att hitta över- och underbeläggning.',
     ],
   },

@@ -1,5 +1,6 @@
 import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
@@ -21,7 +22,7 @@ const FAQ: LeadMagnetFaqItem[] = [
   {
     question: 'Är en byggdagbok ett krav?',
     answer:
-      'I entreprenader enligt AB 04 ska entreprenören föra dagbok över förhållanden av betydelse för entreprenaden och löpande delge beställaren innehållet. Vad dagboken bör innehålla styrs ofta av AMA AF (AF AMA 07).',
+      'I entreprenader enligt AB 04 och ABT 06 (kap. 3 § 13) ska entreprenören föra dagbok över förhållanden av betydelse för entreprenaden och löpande delge beställaren innehållet. Vad dagboken bör innehålla anges i AMA AF 12/21 under kod AFC.38.',
   },
   {
     question: 'Vad ska en byggdagbok innehålla?',
@@ -221,13 +222,13 @@ export default function ByggdagbokMallPage() {
           },
           {
             id: 'byggdagbok-lag-ab04-ama-af',
-            heading: 'Vad säger lagen – AB 04 och AMA AF',
+            heading: 'Vad kräver AB 04 och AMA AF?',
             body: (
               <p>
                 I entreprenader enligt standardavtalet <strong>AB 04</strong> ska entreprenören föra
                 dagbok över omständigheter av betydelse för entreprenaden och fortlöpande delge
                 beställaren innehållet. Hur dagboken utformas styrs ofta av{' '}
-                <strong>AMA AF (AF AMA 07)</strong>, som anger vilka uppgifter som förväntas. En väl
+                <strong>AMA AF 12/21 (kod AFC.38)</strong>, som anger vilka uppgifter som förväntas. En väl
                 förd byggdagbok blir därför både ett avtalskrav och ett viktigt bevisunderlag om
                 tidplan, ÄTA eller ansvar ifrågasätts i efterhand.
               </p>
@@ -275,7 +276,8 @@ export default function ByggdagbokMallPage() {
                 digital byggdagbok fylls i på plats i mobilen, kopplar bilder till rätt dag och projekt
                 och sparas automatiskt. Du kan söka tillbaka, dela med beställaren och slipper tolka
                 blöta anteckningar från fickan. För de flesta byggföretag väger fördelarna med digitalt
-                tungt – särskilt när dokumentationen ska hålla i flera år.
+                tungt – särskilt när dokumentationen ska hålla i flera år. Se vad en{' '}
+                <Link href="/sv/blog/byggdagbok">digital byggdagbok</Link> behöver klara.
               </p>
             ),
           },

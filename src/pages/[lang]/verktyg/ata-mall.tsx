@@ -233,6 +233,7 @@ export default function AtaMallPage() {
         related={[
           { href: `/${LOCALE}/blog/ata-arbeten`, label: 'Guide: ÄTA-arbeten enligt AB 04' },
           { href: `/${LOCALE}/verktyg/byggdagbok-mall`, label: 'Byggdagbok – gratis mall' },
+          { href: `/${LOCALE}/blog/byggdagbok`, label: 'Guide: byggdagbok' },
           { href: `/${LOCALE}/verktyg/offert-mall`, label: 'Offert – gratis mall' },
         ]}
       />

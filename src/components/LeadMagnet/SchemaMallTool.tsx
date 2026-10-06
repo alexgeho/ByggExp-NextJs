@@ -211,7 +211,7 @@ export default function SchemaMallTool() {
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Fyll i exempel:</span>
-        <ChipRow>
+        <ChipRow label="Fyll i exempel">
           <button type="button" className={`lm-tool-preset${activePreset === 'exempel' ? ' is-active' : ''}`} aria-pressed={activePreset === 'exempel'} onClick={fillExample}>Fyll i exempel</button>
         </ChipRow>
       </div>

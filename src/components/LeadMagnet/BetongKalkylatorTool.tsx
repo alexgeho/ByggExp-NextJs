@@ -54,7 +54,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         bLen: 'Длина (м)', bWidth: 'Ширина (см)', bHeight: 'Высота (см)',
         diam: 'Диаметр (см)', depth: 'Глубина (см)', count: 'Количество (шт)',
         concreteL: 'Бетон', oFabrik: 'Товарный бетон (м³)', oSack: 'Мешок 25 кг', litersPerBag: 'Литров на мешок', spill: 'Отходы (%)',
-        rVolume: 'Объём бетона с отходами', rBags: 'Мешки сухой смеси (25 кг)', rBigBag: 'Эквивалент биг-бэгов (1000 кг)', rWater: 'Вода затворения (прибл.)',
+        rVolume: 'Объём бетона с отходами', rVolumeEdge: 'Объём бетона с краевой балкой и отходами', rBags: 'Мешки сухой смеси (25 кг)', rBigBag: 'Эквивалент биг-бэгов (1000 кг)', rWater: 'Вода затворения (прибл.)',
         rMesh: 'Арматурная сетка', rEdge: 'Краевые стержни', rBind: 'Вязальная проволока', rIso: 'Пенополистирол EPS', rBase: 'Щебень / подстилающий слой',
         showCostQ: 'Показать стоимость (ориентир)?', costNo: 'Нет', costYes: 'Да — материал + работа',
         pSackL: 'Бетон (kr/мешок)', pBetongL: 'Товарный бетон (kr/м³)', pMeshL: 'Сетка (kr/шт)', pSteelL: 'Арматура (kr/кг)', pBindL: 'Проволока (kr/кг)',
@@ -91,7 +91,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         bLen: 'Length (m)', bWidth: 'Width (cm)', bHeight: 'Height (cm)',
         diam: 'Diameter (cm)', depth: 'Depth (cm)', count: 'Count (pcs)',
         concreteL: 'Concrete', oFabrik: 'Ready-mix (m³)', oSack: 'Bag 25 kg', litersPerBag: 'Litres per bag', spill: 'Waste (%)',
-        rVolume: 'Concrete volume incl. waste', rBags: 'Dry-mix bags (25 kg)', rBigBag: 'Equivalent big bags (1000 kg)', rWater: 'Mixing water (approx.)',
+        rVolume: 'Concrete volume incl. waste', rVolumeEdge: 'Concrete incl. edge beam and waste', rBags: 'Dry-mix bags (25 kg)', rBigBag: 'Equivalent big bags (1000 kg)', rWater: 'Mixing water (approx.)',
         rMesh: 'Reinforcement mesh', rEdge: 'Edge bars', rBind: 'Tie wire', rIso: 'EPS insulation', rBase: 'Crushed stone / sub-base',
         showCostQ: 'Show cost (guide price)?', costNo: 'No', costYes: 'Yes – material + labour',
         pSackL: 'Concrete (kr/bag)', pBetongL: 'Ready-mix (kr/m³)', pMeshL: 'Mesh (kr/sheet)', pSteelL: 'Rebar (kr/kg)', pBindL: 'Tie wire (kr/kg)',
@@ -127,7 +127,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         bLen: 'Längd (m)', bWidth: 'Bredd (cm)', bHeight: 'Höjd (cm)',
         diam: 'Diameter (cm)', depth: 'Djup (cm)', count: 'Antal (st)',
         concreteL: 'Betong', oFabrik: 'Fabriksbetong (m³)', oSack: 'Säck 25 kg', litersPerBag: 'Liter per säck', spill: 'Spill (%)',
-        rVolume: 'Betongvolym inkl. spill', rBags: 'Säckar torrbetong (25 kg)', rBigBag: 'Motsvarar storsäck (1000 kg)', rWater: 'Blandningsvatten (ca)',
+        rVolume: 'Betongvolym inkl. spill', rVolumeEdge: 'Betong inkl. kantbalk och spill', rBags: 'Säckar torrbetong (25 kg)', rBigBag: 'Motsvarar storsäck (1000 kg)', rWater: 'Blandningsvatten (ca)',
         rMesh: 'Armeringsnät', rEdge: 'Kantjärn', rBind: 'Bindtråd', rIso: 'Cellplast / EPS', rBase: 'Makadam / bärlager',
         showCostQ: 'Visa kostnad (riktpris)?', costNo: 'Nej', costYes: 'Ja – material + arbete',
         pSackL: 'Betong (kr/säck)', pBetongL: 'Fabriksbetong (kr/m³)', pMeshL: 'Armeringsnät (kr/nät)', pSteelL: 'Kamstål (kr/kg)', pBindL: 'Bindtråd (kr/kg)',
@@ -409,7 +409,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
       </details>
 
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{t.rVolume}</span><strong>{nf(r.volume, 2)} m³</strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{shape === 'platta' && edge === 'ja' ? t.rVolumeEdge : t.rVolume}</span><strong>{nf(r.volume, 2)} m³</strong></div>
         {concreteMode === 'sack'
           ? <div className="lm-result-row lm-result-total"><span>{t.rBags}</span><strong>{nf(r.bags)} {t.pcs}</strong></div>
           : <div className="lm-result-row"><span>{t.rBigBag}</span><span>{nf(r.bigBags, 1)} {t.pcs}</span></div>}

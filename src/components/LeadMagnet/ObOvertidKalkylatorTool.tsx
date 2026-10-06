@@ -27,9 +27,9 @@ export default function ObOvertidKalkylatorTool() {
   const kr = (v: number) =>
     `${v.toLocaleString(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kr`;
 
-  // Prefilled example so a result shows at once (owner: tools open ready to use).
+  // Prefilled with the article's example 1 (220 kr, 2 h övertid A = 132 kr).
   const [wage, setWage] = useState('220');
-  const [hours, setHours] = useState('3');
+  const [hours, setHours] = useState('2');
   const [levelId, setLevelId] = useState('ota');
 
   const r = useMemo(() => {

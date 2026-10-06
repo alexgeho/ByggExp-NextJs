@@ -33,10 +33,10 @@ export default function ForseningsviteKalkylatorTool({ locale = 'sv' }: { locale
         note: 'Enligt AB 04/ABT 06 ersätter ett avtalat vite beställarens rätt till skadestånd för förseningen. Saknas vitesklausul måste skadan i stället styrkas. Kontrollera alltid kontraktets exakta villkor.',
       };
 
-  // Prefilled example so a result shows at once.
-  const [sum, setSum] = useState('1000000');
+  // Prefilled with the article's example (4 Mkr, 1 %, 2 weeks = 80 000 kr) so a result shows at once.
+  const [sum, setSum] = useState('4000000');
   const [rate, setRate] = useState('1');
-  const [weeks, setWeeks] = useState('4');
+  const [weeks, setWeeks] = useState('2');
   const [cap, setCap] = useState('');
 
   const r = useMemo(() => {

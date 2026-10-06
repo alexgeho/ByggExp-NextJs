@@ -562,7 +562,7 @@ export default function EgenkontrollTool({
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Mall</span>
-        <ChipRow>
+        <ChipRow label="Mall">
           {chipPresets.map((preset) => (
             <button
               key={preset.id}

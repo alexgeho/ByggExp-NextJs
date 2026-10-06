@@ -4,7 +4,16 @@ import { useEffect, useRef, type ReactNode } from 'react';
 // fully in view; the edge fades only appear on a side that has more chips to
 // scroll to (no left fade at the start), so no chip is ever half hidden.
 // Native overflow scrolling — works with touch, trackpad and keyboard.
-export default function ChipRow({ children, className = '' }: { children: ReactNode; className?: string }) {
+export default function ChipRow({
+  children,
+  className = '',
+  label,
+}: {
+  children: ReactNode;
+  className?: string;
+  /** Accessible name for the group (the visible label next to the row). */
+  label?: string;
+}) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -25,15 +34,23 @@ export default function ChipRow({ children, className = '' }: { children: ReactN
     }
     update();
     box.addEventListener('scroll', update, { passive: true });
+    // Chips can change (e.g. Tidrapport periods) or wrap on desktop.
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(update) : null;
+    ro?.observe(box);
     window.addEventListener('resize', update);
     return () => {
       box.removeEventListener('scroll', update);
+      ro?.disconnect();
       window.removeEventListener('resize', update);
     };
   }, []);
 
   return (
-    <div ref={ref} className={`lm-tool-presets-buttons${className ? ` ${className}` : ''}`}>
+    <div
+      ref={ref}
+      role="group"
+      aria-label={label}
+      className={`lm-tool-presets-buttons${className ? ` ${className}` : ''}`}>
       {children}
     </div>
   );

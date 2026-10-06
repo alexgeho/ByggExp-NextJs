@@ -84,7 +84,7 @@ export default function WatermarkPdfTool() {
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Vanliga stämplar:</span>
-        <ChipRow>
+        <ChipRow label="Vanliga stämplar">
           {PRESETS.map((p) => (
             <button key={p} type="button" className="lm-tool-preset" onClick={() => setText(p)}>
               {p}

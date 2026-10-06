@@ -256,7 +256,7 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
       {config.presets && (
         <div className="lm-tool-presets">
           <span className="lm-tool-presets-label">{config.presets.label}</span>
-          <ChipRow>
+          <ChipRow label={config.presets.label}>
             {config.presets.options.map((option) => (
               <button
                 key={option}
@@ -273,7 +273,7 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Se hur den fylls i:</span>
-        <ChipRow>
+        <ChipRow label="Se hur den fylls i">
           <button type="button" className="lm-tool-preset" onClick={fillExample}>
             Fyll i exempel
           </button>

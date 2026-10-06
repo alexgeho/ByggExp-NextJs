@@ -139,9 +139,12 @@ export default function ByggdagbokTool() {
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Se hur den fylls i:</span>
-        <ChipRow>
+        <ChipRow label="Se hur den fylls i">
           <button type="button" className="lm-tool-preset" onClick={fillExample}>
             Fyll i exempel
+          </button>
+          <button type="button" className="lm-tool-preset" onClick={() => setValues({ ...EMPTY, date: todayIso() })}>
+            Rensa
           </button>
         </ChipRow>
       </div>

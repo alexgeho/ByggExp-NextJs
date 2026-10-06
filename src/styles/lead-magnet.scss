@@ -572,8 +572,11 @@
 }
 
 .lm-tool-row input,
-.lm-tool-row select {
+.lm-tool-row select,
+.lm-tool-schema-row > input {
   width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   padding: 10px 12px;
   border: 1px solid var(--lm-field-border);
   border-radius: 10px;
@@ -760,6 +763,20 @@
 
 .lm-tool-presets-buttons::-webkit-scrollbar {
   display: none;
+}
+
+// Mouse on a wide screen: a hidden-scrollbar row can't be scrolled with a
+// wheel, so the chips simply wrap (touch/trackpad keep the one-line scroll).
+@media (min-width: 701px) and (hover: hover) and (pointer: fine) {
+  .lm-tool-presets-buttons {
+    flex-wrap: wrap;
+    overflow-x: visible;
+
+    &.has-fade-left,
+    &.has-fade-right {
+      mask-image: none;
+    }
+  }
 }
 
 .lm-tool-preset {

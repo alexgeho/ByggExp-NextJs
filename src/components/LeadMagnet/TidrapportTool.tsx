@@ -307,7 +307,7 @@ export default function TidrapportTool() {
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Välj period eller fyll i exempel:</span>
-        <ChipRow>
+        <ChipRow label="Välj period eller fyll i exempel">
           <button type="button" className={`lm-tool-preset${activePreset === 'dag' ? ' is-active' : ''}`} aria-pressed={activePreset === 'dag'} onClick={seedDay}>Dagsmall</button>
           <button type="button" className={`lm-tool-preset${activePreset === 'vecka' ? ' is-active' : ''}`} aria-pressed={activePreset === 'vecka'} onClick={seedWeek}>Veckomall</button>
           <button type="button" className={`lm-tool-preset${activePreset === 'manad' ? ' is-active' : ''}`} aria-pressed={activePreset === 'manad'} onClick={seedMonth}>Månadsmall</button>

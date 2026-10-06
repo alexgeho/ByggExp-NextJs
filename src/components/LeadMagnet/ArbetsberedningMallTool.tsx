@@ -564,7 +564,7 @@ export default function ArbetsberedningMallTool() {
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Moment</span>
-        <ChipRow>
+        <ChipRow label="Moment">
           {ARBETSBEREDNING_PRESETS.map((p) => (
               <button
                 key={p.id}

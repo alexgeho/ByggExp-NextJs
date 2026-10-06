@@ -504,7 +504,7 @@ export default function HindersanmalanMallTool() {
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Avtal</span>
-        <ChipRow>
+        <ChipRow label="Avtal">
           {AVTAL.map((a) => (
             <button
               key={a}

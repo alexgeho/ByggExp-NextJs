@@ -102,7 +102,7 @@ export const ARTICLE_QUICK_ANSWERS: Record<string, QuickAnswer> = {
 <tr><td>45 × 95 mm</td><td>Innervägg med mer isolering, upp till 4 m vägghöjd</td></tr>
 </tbody>
 </table>
-<p>c 450 mm med 900 mm skivor, c 600 mm med 1 200 mm skivor. Bärande väggar och ytterväggar dimensioneras separat.</p>`,
+<p>c 450 mm med 900 mm skivor, c 600 mm med 1&nbsp;200&nbsp;mm skivor. Bärande väggar och ytterväggar dimensioneras separat.</p>`,
     source: {
       label: 'Gyproc Handbok – Innerväggar GT (pdf)',
       href: 'https://www.gyproc.se/documents/handbok/hb10-gyproc-gt.pdf',
@@ -111,7 +111,7 @@ export const ARTICLE_QUICK_ANSWERS: Record<string, QuickAnswer> = {
 
   'forseningsvite-entreprenad': {
     html: `<p><strong>Vite enligt kontraktet för varje påbörjad vecka</strong> som kontraktstiden överskrids (AB 04 kap 5 § 3).</p>
-<p>Exempel: avtalat vite 1 % av 4 Mkr = 40 000 kr/vecka. 8 dagars försening = 2 påbörjade veckor = 80 000 kr.</p>
+<p>Exempel: avtalat vite 1 % av 4 Mkr = 40&nbsp;000&nbsp;kr/vecka. 8 dagars försening = 2 påbörjade veckor = 80&nbsp;000&nbsp;kr.</p>
 <p>Avtalat vite = inget skadestånd utöver vitet. Inget vite avtalat = beställaren får kräva ersättning för styrkt skada.</p>`,
     source: { label: 'AB 04 kap 5 § 3 – Svensk Byggtjänst', href: AB04_BYGGTJANST },
   },

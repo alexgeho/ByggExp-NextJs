@@ -43,6 +43,10 @@ type Row = {
 };
 
 const RESULTS = ['Ej besvarad', 'Godkänd', 'Anmärkning', 'Ej aktuellt'];
+// What the dropdown offers. "Tomt" = leave the result empty (filled in by hand
+// on the printout); "Ej besvarad"/"Ej aktuellt" only show for old drafts.
+const RESULT_OPTIONS = ['Godkänd', 'Anmärkning', 'Tomt'];
+const BLANK_RESULTS = new Set(['Ej besvarad', 'Tomt']);
 
 // New rows start as Godkänd (owner: most points pass) — tap ! or – to change.
 const DEFAULT_RESULT = 'Godkänd';
@@ -274,7 +278,7 @@ export default function EgenkontrollTool({
       total: filled.length,
       godkand: filled.filter((r) => r.result === 'Godkänd').length,
       anmarkning: filled.filter((r) => r.result === 'Anmärkning').length,
-      kvar: filled.filter((r) => r.result === 'Ej besvarad').length,
+      kvar: filled.filter((r) => BLANK_RESULTS.has(r.result)).length,
     };
   }, [rows]);
 
@@ -466,8 +470,8 @@ export default function EgenkontrollTool({
           point: pdfText(pointText || ''),
           krav: pdfText(row.requirement || ''),
           measured: pdfText(measuredText),
-          // Only print an answered result; leave "Ej besvarad" blank to fill in.
-          result: row.result && row.result !== 'Ej besvarad' ? row.result : '',
+          // Only print an answered result; "Tomt" stays blank to fill in by hand.
+          result: row.result && !BLANK_RESULTS.has(row.result) ? row.result : '',
           sign: '',
           comment: pdfText(row.comment || ''),
         };
@@ -534,8 +538,8 @@ export default function EgenkontrollTool({
         : ['Kontrollpunkt', 'Resultat', 'Datum / sign.', 'Kommentar'],
       ...rows.map((r) =>
         protocol
-          ? [r.section || '', pointOf(r), r.method || '', r.reference || '', r.requirement || '', r.measured || '', r.unit || '', r.result, '', r.comment || '']
-          : [pointOf(r), r.result, '', r.comment || ''],
+          ? [r.section || '', pointOf(r), r.method || '', r.reference || '', r.requirement || '', r.measured || '', r.unit || '', BLANK_RESULTS.has(r.result) ? '' : r.result, '', r.comment || '']
+          : [pointOf(r), BLANK_RESULTS.has(r.result) ? '' : r.result, '', r.comment || ''],
       ),
       ...(preset?.signatures ?? ['Underskrift ansvarig']).map((s) => [s, '']),
     ];
@@ -659,9 +663,9 @@ export default function EgenkontrollTool({
                     <input value={row.point} placeholder={row.hint || 'Kontrollpunkt'} title={row.hint} aria-label="Kontrollpunkt" onChange={(e) => setRow(index, { point: e.currentTarget.value })} />
                     {/* Metod/Krav stay in the PDF/Excel, not on screen (less text). */}
                   </div>
-                  {/* Godkänd by default; "Ej besvarad" only stays for old drafts. */}
+                  {/* Godkänd by default; legacy values only show for old drafts. */}
                   <select value={row.result} aria-label="Resultat" onChange={(e) => setRow(index, { result: e.currentTarget.value })}>
-                    {(row.result === RESULTS[0] ? RESULTS : RESULTS.slice(1)).map((r) => (
+                    {(RESULT_OPTIONS.includes(row.result) ? RESULT_OPTIONS : [row.result, ...RESULT_OPTIONS]).map((r) => (
                       <option key={r} value={r}>{r}</option>
                     ))}
                   </select>

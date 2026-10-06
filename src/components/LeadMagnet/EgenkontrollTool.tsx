@@ -104,6 +104,8 @@ const hasMeasure = (rows: Row[]) => rows.some((r) => r.unit);
 
 // Feather glyphs (24×24 stroke) — actions differ by icon, not colour.
 const ICONS = {
+  // Download (arrow into tray) — reads as "save file" at a glance.
+  download: <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />,
   plus: <path d="M12 5v14M5 12h14" />,
   grid: (
     <>
@@ -610,11 +612,11 @@ export default function EgenkontrollTool({
         {/* Downloads first: the PDF/Excel is what people came for (owner). */}
         <div className="lm-tool-actions lm-tool-download">
           <button type="button" className="lm-tool-button lm-tool-button--icon" onClick={downloadCsv}>
-            <Icon name="grid" />
+            <Icon name="download" />
             <span className="lm-hide-sm">Ladda ner </span>Excel
           </button>
           <button type="submit" className="lm-tool-button lm-tool-button--icon" disabled={busy}>
-            <Icon name="fileText" />
+            <Icon name="download" />
             {busy ? 'Skapar PDF…' : <><span className="lm-hide-sm">Ladda ner </span>PDF</>}
           </button>
         </div>

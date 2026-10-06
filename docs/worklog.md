@@ -1,5 +1,13 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 🟢 2026-10-06 (день) — «человек получает то, за чем пришёл» (live)
+- Аудит топ-30 страниц GSC → `docs/seo/intent-audit-2026-10.md` (7 ок, 23 нет).
+- Механизмы: `src/content/article-inline-tools.tsx` (`position: 'top'` = инструмент под H1) и `src/content/article-quick-answers.ts` (короткий ответ под H1 + источник). Обложка статьи ≤340px / 220px.
+- Инструмент наверху: 11 статей (бетон, такстолы, лестница, golvvärme, армирование, tak, skyddsrond, entreprenadkontrakt, byggdagbok, kalkylprogram, hindersanmälan, arbetsberedning). Короткие ответы: 12 статей (OB, restid, AB-U, AB04, semesterlön, ackord, trappa, reglar, vite, hinder, moms lastbil, Boverket) — факты сверены, ошибки в статьях исправлены (OB-часы, traktamente 435, …).
+- /verktyg: калькуляторы с примером и результатом сразу; дисклеймер только у калькуляторов и под инструментом; новый шаблон hindersanmalan-mall; arbetsberedning = полноценный шаблон (Byggföretagen Mall 2, 7 моментов).
+- Инструменты: кнопки Excel/PDF сверху + снизу + полоска вместо шапки при прокрутке вниз (`StickyDownloadBar`); egenkontroll: Resultat dropdown Godkänd по умолчанию / Anmärkning / Tomt, Kommentar и Mätvärde в «⋯».
+NÄSTA: проверить через 2–3 недели CTR/позиции этих страниц в GSC; GSC-токен обновить; byggdagbok-статья (CMS) H1 длинный; ab-04 и прочие B-статьи — можно добавить инструмент-сравнение.
+
 ## 🟢 2026-10-06 — 5 коммерческих запросов → топ-3 (P0 live)
 - Deep research (живой google.se, AIO, PAA, аудит) → `docs/seo/commercial-top3-plan-2026-10.md`. Вывод: в топе продуктовые страницы, у нас блог; AIO цитирует нас 4/5, ссылок 0.
 - Переписаны: byggdagbok, tidrapportering-entreprenad, mobil-tidrapportering, schemalaggningssystem-bygg, resursplanering-bygg (title/H1/meta, PAA-FAQ, цены, первоисточники). Удалён дубль byggdagbok (kvalitet.ts). Внутренние ссылки, диаграмма byggdagbok-krav (AFC.38). LCP: preload обложки. Индексация запрошена 06.10.

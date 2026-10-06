@@ -14,6 +14,7 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 | /sv/blog/loneunderlag-for-byggforetag | feature | löneunderlag bygg | — | löneunderlag byggföretag |
 | /sv/blog/tidrapportering | pillar | tidrapportering bygg | 362 / 24.0 | tidrapportering byggföretag (245), tidrapport bygg (258) |
 | /sv/blog/tidrapporteringssystem-bygg | гайд | tidrapporteringssystem bygg | 312 / 25.1 | tidrapporteringssystem hantverkare (54) |
+| /sv/blog/basta-tidrapporteringssystem-bygg | сравнение | bästa tidrapporteringssystem bygg | — | jämförelse tidrapporteringssystem, tidrapporteringssystem pris, Bygglet/Fieldly/MyGizmo alternativ |
 | /sv/blog/mobil-tidrapportering | гайд | mobil tidrapportering | 127 / 12.0 | tidrapportering i mobilen (124), tidrapportering mobil (57) |
 | /sv/blog/tidrapportering-entreprenad | гайд | tidrapportering entreprenad | 161 / 14.8 | — |
 | /sv/blog/tidrapportering-hantverkare | гайд | tidrapportering hantverkare | 231 / 30.4 | tidrapport hantverkare (87) |
@@ -66,3 +67,5 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 2. **app-for-tidrapportering-bygg ↔ tidrapportering-app-byggforetag ↔ tidsregistrering-app-bygg.** Это три почти одинаковых «app»-гайда. Рекомендация: через 4–6 недель по GSC (связка запрос × страница) объединить слабейший в хаб с 301-редиректом.
 3. **tidredovisning-byggforetag ↔ tidredovisning-app.** Пересечение умеренное. Держать раздельно: «bygg» и «app».
 4. Старые анкоры «automatisk tidrapportering» (~15 ссылок из гайдов) и «dagsplanering» оставлены как есть. Они ведут на правильного владельца, просто без нового ключа.
+
+- tidrapporteringssystem-bygg (гайд, владеет «tidrapporteringssystem bygg») → basta-tidrapporteringssystem-bygg одной фразой; сравнение ссылается обратно на гайд. Title/H1 сравнения начинаются с «Bästa …», чтобы не каннибализировать гайд (2026-10-06).

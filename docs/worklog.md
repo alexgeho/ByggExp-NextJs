@@ -6,6 +6,7 @@
   - B (3ab39b3, 0ea6436): калькуляторы под быстрым ответом в OB/restid/ackord/vite/reglar; hydration #418 (formatDate без timeZone → Europe/Stockholm); мобильные крошки без последнего пункта; titles OB/semesterlön; факты: trappa (округлять вверх, 150–200 мм Byggtjänst), garantitid AB 04 vs ABT 06, ackord (Byggnads), traktamente 435 «vid övernattning»; с ab-u убран вводящий в заблуждение шаблон.
 - Тарифные карточки (d129fc8, fcc2b03): строки → страницы функций, «*» раскрывает лимиты (против dead clicks Clarity 21%).
 - Новая статья /sv/blog/basta-tidrapporteringssystem-bygg (54691b7, f851cc9): 8 систем, цены с сайтов вендоров (okt 2026), пример на 10 чел.
+- Возврат посетителей (3d107e1, 10115da): 28 калькуляторов хранят значения в URL (useUrlState, валидация параметров, canonical без параметров) + кнопка «Kopiera länk»; 23 шаблона — черновики в localStorage (useDraft, ключи bx-draft:v1:*, сохраняется только после правки, Rensa чистит); фикс падения u-värde.
 NÄSTA: через 1–2 нед. Clarity — dead clicks/quick backs; GSC ~20.10 — клики по статье-сравнению и OB/restid; идеи «чтобы возвращались»: значения калькуляторов в URL, черновики шаблонов, «Gör det i appen» после скачивания.
 
 ## 🟢 2026-10-06 (день) — «человек получает то, за чем пришёл» (live)

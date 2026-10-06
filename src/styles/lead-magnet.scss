@@ -1947,3 +1947,30 @@
     row-gap: 6px;
   }
 }
+
+// Phone: the tool is what people came for — less air above it, smaller H1
+// (owner, 2026-10-06).
+@media (max-width: 700px) {
+  .lead-magnet {
+    padding-top: 28px;
+  }
+
+  .lead-magnet .lead-magnet-badge {
+    margin-bottom: 10px;
+  }
+
+  .lead-magnet .lead-magnet-title {
+    font-size: 1.75rem;
+    line-height: 1.12;
+    margin-bottom: 10px;
+  }
+
+  .lead-magnet .lead-magnet-intro {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .lead-magnet .lead-magnet-hero {
+    margin-bottom: 20px;
+  }
+}

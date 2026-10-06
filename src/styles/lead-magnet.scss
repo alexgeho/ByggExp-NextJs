@@ -1803,3 +1803,28 @@
   border-radius: 0;
   background: none;
 }
+
+// Egenkontroll actions: one main action (PDF, filled). Excel = outline,
+// "Lägg till kontrollpunkt" = plain text action — different jobs, different weight.
+.lm-tool .lm-tool-button--outline {
+  background: transparent;
+  color: var(--lm-accent);
+  box-shadow: inset 0 0 0 1.5px var(--lm-accent);
+}
+
+.lm-tool .lm-tool-button--outline:hover {
+  background: rgba(35, 148, 255, 0.08);
+}
+
+.lm-tool .lm-tool-button--ghost {
+  background: transparent;
+  color: var(--lm-accent);
+  box-shadow: none;
+  padding-left: 4px;
+  padding-right: 12px;
+  margin-right: auto;
+}
+
+.lm-tool .lm-tool-button--ghost:hover {
+  background: rgba(35, 148, 255, 0.08);
+}

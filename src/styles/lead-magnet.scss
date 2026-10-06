@@ -1832,3 +1832,118 @@
 .lm-tool .lm-tool-button--ghost:hover {
   background: rgba(35, 148, 255, 0.08);
 }
+
+// --- Arbetsberedning (owner patterns from Egenkontroll, 2026-10-06) ---------
+// Sections: Arbetsordning (nr · steg · ⋯), Risker (risk · åtgärd · ⋯) with
+// quick risk boxes, Egenkontroll (reuses .lm-tool-row-ek).
+.lm-ab-section {
+  margin-top: 32px;
+}
+
+.lm-tool .lm-ab-section .lm-tool-section-row {
+  margin: 0 0 14px;
+}
+
+.lm-tool .lm-ab-section .lm-tool-rows {
+  margin-top: 0;
+  gap: 12px;
+}
+
+.lm-tool .lm-tool-row.lm-ab-row-step {
+  grid-template-columns: 22px minmax(0, 1fr) 40px;
+  gap: 10px;
+}
+
+.lm-ab-num {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-align: right;
+}
+
+.lm-tool .lm-tool-row.lm-ab-row-risk {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) 40px;
+  gap: 10px;
+}
+
+.lm-ab-flags {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px 16px;
+  margin-bottom: 16px;
+}
+
+.lm-ab-flag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.lm-ab-flag input {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  margin: 0;
+  accent-color: var(--lm-accent);
+}
+
+.lm-ab-add {
+  margin-top: 8px;
+}
+
+.lm-tool .lm-ab-add .lm-tool-button--ghost {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.lm-tool .lm-ab-actions {
+  justify-content: flex-end;
+  margin-top: 32px;
+}
+
+@media (max-width: 700px) {
+  .lm-ab-flags {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lm-ab-flag {
+    align-items: flex-start;
+  }
+
+  // Risk on its own line; Åtgärd · ⋯ below.
+  .lm-tool .lm-tool-row.lm-ab-row-risk {
+    grid-template-columns: minmax(0, 1fr) 40px;
+    row-gap: 8px;
+  }
+
+  .lm-tool .lm-tool-row.lm-ab-row-risk > input:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+// Date and text fields one height (date input renders 2px taller), same as rows.
+.lm-ab .lm-tool-grid input,
+.lm-ab .lm-tool-row input,
+.lm-ab .lm-tool-row select {
+  box-sizing: border-box;
+  height: 48px;
+}
+
+.lm-ab .lm-tool-row input,
+.lm-ab .lm-tool-row select,
+.lm-ab .lm-tool-grid input {
+  font-size: 0.92rem;
+}
+
+// Phone: risk + åtgärd read as one pair — tight inside, more air between pairs.
+@media (max-width: 700px) {
+  .lm-tool .lm-ab-section .lm-ab-risks {
+    gap: 22px;
+  }
+
+  .lm-tool .lm-tool-row.lm-ab-row-risk {
+    row-gap: 6px;
+  }
+}

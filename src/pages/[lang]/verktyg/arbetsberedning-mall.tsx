@@ -55,7 +55,7 @@ export default function ArbetsberedningMallPage() {
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/arbetsberedning-mall`;
   const title = 'Arbetsberedning mall – gratis (PDF & Excel) | ByggExp';
   const description =
-    'Gratis arbetsberedning-mall för bygget. Planera arbetsmomentet steg för steg – arbetsgång, risker och skyddsåtgärder, kvalitet och resurser – och ladda ner som PDF. Utan konto.';
+    'Gratis arbetsberedning-mall för bygget. Välj moment – ställning, rivning, takarbete, schakt, lyft, heta arbeten – fyll i arbetsordning, risker och egenkontroll och ladda ner som PDF. Utan konto.';
 
   return (
     <>
@@ -88,7 +88,7 @@ export default function ArbetsberedningMallPage() {
       <LeadMagnetPage
         badge="Gratis mall"
         title="Arbetsberedning – gratis mall att fylla i online"
-        intro="Planera ett arbetsmoment innan det utförs – arbetsgång steg för steg, risker och skyddsåtgärder, kvalitetskrav, resurser och miljö. Fyll i online och ladda ner en färdig arbetsberedning som PDF eller Excel. Gratis och utan konto."
+        intro="Välj moment och fyll i arbetsordning, risker med åtgärder och egenkontroll. Ladda ner som PDF eller Excel – gratis och utan konto."
         tool={<ArbetsberedningMallTool />}
         leadForm={<ToolLeadForm tool="arbetsberedning-mall" />}
         preview={

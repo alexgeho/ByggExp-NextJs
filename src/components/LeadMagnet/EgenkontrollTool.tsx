@@ -44,13 +44,6 @@ type Row = {
 
 const RESULTS = ['Ej besvarad', 'Godkänd', 'Anmärkning', 'Ej aktuellt'];
 
-// Answer buttons (RESULTS[0] "Ej besvarad" = none selected).
-const RESULT_BUTTONS = [
-  { value: 'Godkänd', icon: '✓', tone: 'ok' },
-  { value: 'Anmärkning', icon: '!', tone: 'warn' },
-  { value: 'Ej aktuellt', icon: '–', tone: 'na' },
-] as const;
-
 // New rows start as Godkänd (owner: most points pass) — tap ! or – to change.
 const DEFAULT_RESULT = 'Godkänd';
 const emptyRow = (): Row => ({ point: '', result: DEFAULT_RESULT, comment: '' });
@@ -666,24 +659,12 @@ export default function EgenkontrollTool({
                     <input value={row.point} placeholder={row.hint || 'Kontrollpunkt'} title={row.hint} aria-label="Kontrollpunkt" onChange={(e) => setRow(index, { point: e.currentTarget.value })} />
                     {/* Metod/Krav stay in the PDF/Excel, not on screen (less text). */}
                   </div>
-                  {/* One tap per answer instead of an "Ej besvarad" dropdown:
-                      nothing selected = not answered; tap again to clear. */}
-                  <div className="lm-tool-result" role="radiogroup" aria-label="Resultat">
-                    {RESULT_BUTTONS.map((rb) => (
-                      <button
-                        key={rb.value}
-                        type="button"
-                        role="radio"
-                        aria-checked={row.result === rb.value}
-                        aria-label={rb.value}
-                        title={rb.value}
-                        className={`lm-tool-result-btn is-${rb.tone}${row.result === rb.value ? ' is-on' : ''}`}
-                        onClick={() => setRow(index, { result: row.result === rb.value ? RESULTS[0] : rb.value })}
-                      >
-                        {rb.icon}
-                      </button>
+                  {/* Godkänd by default; "Ej besvarad" only stays for old drafts. */}
+                  <select value={row.result} aria-label="Resultat" onChange={(e) => setRow(index, { result: e.currentTarget.value })}>
+                    {(row.result === RESULTS[0] ? RESULTS : RESULTS.slice(1)).map((r) => (
+                      <option key={r} value={r}>{r}</option>
                     ))}
-                  </div>
+                  </select>
                   <div className="lm-tool-row-more">
                     <button
                       type="button"

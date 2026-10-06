@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
+import StickyDownloadBar from './StickyDownloadBar';
+
 import {
   ARBETSBEREDNING_PRESETS,
   RISK_FLAGS,
@@ -149,6 +151,7 @@ export default function ArbetsberedningMallTool() {
   const [rows, setRows] = useState<Rows>(() => baseRows());
   const [presetId, setPresetId] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const toolRootRef = useRef<HTMLDivElement>(null);
   const preset = findPreset(presetId);
   const { steps, risks, checks, flags } = rows;
 
@@ -572,7 +575,17 @@ export default function ArbetsberedningMallTool() {
   );
 
   return (
-    <div className="lm-tool lm-ab">
+    <div className="lm-tool lm-ab" ref={toolRootRef}>
+      <StickyDownloadBar scope={toolRootRef}>
+        <button type="button" className="lm-tool-button lm-tool-button--icon" onClick={downloadCsv}>
+          <Icon name="download" />
+          Excel
+        </button>
+        <button type="button" className="lm-tool-button lm-tool-button--icon" disabled={busy} onClick={() => void downloadPdf()}>
+          <Icon name="download" />
+          {busy ? 'Skapar PDF…' : 'PDF'}
+        </button>
+      </StickyDownloadBar>
       {restored ? (
         <div className="lm-tool-draft" role="status">
           <span>Utkast återställt</span>

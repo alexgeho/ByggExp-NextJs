@@ -2016,3 +2016,41 @@
 .lm-tool .lm-tool-download--bottom {
   margin: 28px 0 0;
 }
+
+// Download bar that replaces the site header while scrolling down a template.
+.lm-sticky-dl {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 300; // above the sticky site header (200)
+  background: var(--white);
+  border-bottom: 1px solid var(--lm-card-border);
+  transform: translateY(-100%);
+  transition: transform 0.2s ease;
+}
+
+.lm-sticky-dl.is-shown {
+  transform: translateY(0);
+}
+
+.lm-sticky-dl-inner {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 10px 16px;
+}
+
+.lm-sticky-dl .lm-tool-button {
+  flex: 1 1 0;
+  max-width: 220px;
+  justify-content: center;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  white-space: nowrap;
+}

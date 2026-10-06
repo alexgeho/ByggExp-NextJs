@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
+import StickyDownloadBar from './StickyDownloadBar';
+
 import { EGENKONTROLL_PRESETS } from './egenkontrollPresets';
 
 // True when a title is just one of the template names (never typed by the user).
@@ -153,6 +155,7 @@ export default function EgenkontrollTool({
   const [rows, setRows] = useState<Row[]>(() => baseRows(defaultPreset));
   const [meta, setMeta] = useState<Record<string, string>>({});
   const [busy, setBusy] = useState(false);
+  const toolRootRef = useRef<HTMLDivElement>(null);
   // Chosen template: highlight + extra header fields / signatures / footnote.
   const [presetId, setPresetId] = useState<string | null>(defaultPreset ?? null);
   const preset = EGENKONTROLL_PRESETS.find((p) => p.id === presetId);
@@ -563,7 +566,17 @@ export default function EgenkontrollTool({
   }
 
   return (
-    <div className="lm-tool">
+    <div className="lm-tool" ref={toolRootRef}>
+      <StickyDownloadBar scope={toolRootRef}>
+        <button type="button" className="lm-tool-button lm-tool-button--icon" onClick={downloadCsv}>
+          <Icon name="download" />
+          Excel
+        </button>
+        <button type="button" className="lm-tool-button lm-tool-button--icon" disabled={busy} onClick={() => void downloadPdf()}>
+          <Icon name="download" />
+          {busy ? 'Skapar PDF…' : 'PDF'}
+        </button>
+      </StickyDownloadBar>
       {restored ? (
         <div className="lm-tool-draft" role="status">
           <span>Utkast återställt</span>

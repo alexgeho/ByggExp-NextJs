@@ -1371,7 +1371,7 @@ const A_ARBETSBEREDNING_MALL_BYGG_HTML = `
 
 const A_ARBETSBEREDNING_MALL_BYGG: BlogPost = {
   _id: "code-"+"arbetsberedning-mall-bygg",
-  title: "Arbetsberedning mall bygg – så planerar du riskfyllda moment innan spaden i marken", slug: "arbetsberedning-mall-bygg", locale: "sv",
+  title: "Arbetsberedning mall – fyll i gratis online", slug: "arbetsberedning-mall-bygg", locale: "sv",
   excerpt: "En praktisk guide till arbetsberedning för hantverkare och byggföretag – planera metod, resurser och säkerhet innan det kritiska momentet startar.", tag: "Arbetsmiljö",
   coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_ARBETSBEREDNING_MALL_BYGG_HTML,
   seoTitle: "Arbetsberedning mall bygg | ByggExp", seoDescription: "Så gör du en arbetsberedning för riskfyllda moment: metod, resurser och säkerhet steg för steg. Mall, innehåll och krav enligt AFS 2023.",

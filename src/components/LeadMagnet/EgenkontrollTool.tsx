@@ -607,6 +607,18 @@ export default function EgenkontrollTool({
           void downloadPdf();
         }}
       >
+        {/* Downloads first: the PDF/Excel is what people came for (owner). */}
+        <div className="lm-tool-actions lm-tool-download">
+          <button type="button" className="lm-tool-button lm-tool-button--icon" onClick={downloadCsv}>
+            <Icon name="grid" />
+            <span className="lm-hide-sm">Ladda ner </span>Excel
+          </button>
+          <button type="submit" className="lm-tool-button lm-tool-button--icon" disabled={busy}>
+            <Icon name="fileText" />
+            {busy ? 'Skapar PDF…' : <><span className="lm-hide-sm">Ladda ner </span>PDF</>}
+          </button>
+        </div>
+
         <div className="lm-tool-grid">
           <label className="lm-tool-field">
             <span>Titel</span>
@@ -758,14 +770,6 @@ export default function EgenkontrollTool({
           <button type="button" className="lm-tool-button lm-tool-button--icon lm-tool-button--ghost" onClick={addRow}>
             <Icon name="plus" />
             Lägg till kontrollpunkt
-          </button>
-          <button type="button" className="lm-tool-button lm-tool-button--icon" onClick={downloadCsv}>
-            <Icon name="grid" />
-            Ladda ner Excel
-          </button>
-          <button type="submit" className="lm-tool-button lm-tool-button--icon" disabled={busy}>
-            <Icon name="fileText" />
-            {busy ? 'Skapar PDF…' : 'Ladda ner PDF'}
           </button>
         </div>
       </form>

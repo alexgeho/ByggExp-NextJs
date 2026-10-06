@@ -383,7 +383,7 @@ export default function BlogArticlePage({
         <FeatureNav lang={lang} activeSlug={post.slug} />
       ) : null}
 
-      <article className="blog-article">
+      <article className={`blog-article${toolOnTop ? ' blog-article--tool-first' : ''}`}>
         <div className="container container-narrow">
           <nav className="blog-breadcrumbs" aria-label="Breadcrumb">
             <Link href={`/${lang}`}>{copy.home}</Link>

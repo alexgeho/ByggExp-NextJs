@@ -892,3 +892,9 @@
   background: none;
   border: none;
 }
+
+// Tool-first articles: compact one-line H1 so the template starts high.
+.blog-article--tool-first h1 {
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
+  line-height: 1.12;
+}

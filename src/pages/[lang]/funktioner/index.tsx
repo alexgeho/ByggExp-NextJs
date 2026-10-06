@@ -8,6 +8,7 @@ import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { FEATURE_NAV } from '../../../components/FeatureNav/FeatureNav';
+import { useCenterActiveChip } from '../../../lib/useCenterActiveChip';
 import { buildHreflangAlternates, localeOrigin } from '../../../lib/seo';
 import { featuresTranslations1_3 } from '../../../locales/features1-3';
 import { featuresTranslations4_6 } from '../../../locales/features4-6';
@@ -553,6 +554,8 @@ function FeatureCarousel({
     [loop, N],
   );
   const activeReal = extToReal(activeExt);
+  const pillsRef = useRef<HTMLDivElement>(null);
+  useCenterActiveChip(pillsRef, activeReal);
 
   const [lightbox, setLightbox] = useState<{ url: string; alt: string } | null>(null);
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
@@ -695,7 +698,7 @@ function FeatureCarousel({
   return (
     <>
       {pills.length > 0 ? (
-        <div className="blog-filter funktioner-filter" role="group" aria-label="Funktioner">
+        <div className="blog-filter funktioner-filter" ref={pillsRef} role="group" aria-label="Funktioner">
           {pills.map((pill, i) => (
             <button
               key={pill.slug}

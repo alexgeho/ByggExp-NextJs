@@ -1,7 +1,7 @@
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useEffect, useMemo, useState, type CSSProperties } from 'react';
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { useRouter } from 'next/router';
 
 import Footer from '../../../components/Footer/Footer';
@@ -9,6 +9,7 @@ import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { getMockBlogPosts } from '../../../lib/blog-mock';
 import { getCodeArticles } from '../../../content/code-articles';
+import { useCenterActiveChip } from '../../../lib/useCenterActiveChip';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { VERKTYG_GROUPS } from '../../../content/verktyg-list';
 import {
@@ -95,6 +96,8 @@ export default function BlogIndexPage({
   const hreflangAlternates = buildHreflangAlternates((code) => `${localeOrigin(code)}/${code}/blog`);
 
   const [activeCategory, setActiveCategory] = useState<BlogCategoryKey | 'alla'>('alla');
+  const chipsRef = useRef<HTMLDivElement>(null);
+  useCenterActiveChip(chipsRef, activeCategory);
   const [query, setQuery] = useState('');
 
   // Pre-select a category when arriving via a header link (/blog?kategori=kalkyl).
@@ -206,7 +209,7 @@ export default function BlogIndexPage({
           {/* While searching, results go straight under the field (chips would
               push them below the keyboard on a phone). */}
           {presentCategories.length > 1 && !words.length ? (
-            <div className="blog-filter" role="tablist" aria-label="Kategorier">
+            <div className="blog-filter" ref={chipsRef} role="tablist" aria-label="Kategorier">
               <button
                 type="button"
                 className={`blog-filter-chip${activeCategory === 'alla' ? ' is-active' : ''}`}

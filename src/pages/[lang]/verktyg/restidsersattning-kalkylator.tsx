@@ -89,7 +89,7 @@ export default function RestidsersattningKalkylatorPage() {
         wide
         badge="Gratis kalkylator"
         title="Restids- och reseersättning – räkna enligt Byggavtalet"
-        intro="Fyll i resväg, resdagar och färdsätt så räknar kalkylatorn ut reskostnadsersättningen – och lägg till restimmar och restidssats för restidsersättningen. Två poster, egna rader. Gratis och utan konto."
+        intro="Egen bil 2,50 kr/km, samåkning +0,85 kr/km per passagerare. Restid = timmar × avtalssats."
         tool={<RestidsersattningKalkylatorTool />}
         leadForm={<ToolLeadForm tool="restidsersattning-kalkylator" />}
         sections={[

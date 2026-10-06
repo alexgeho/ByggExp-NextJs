@@ -81,6 +81,7 @@ export default function EntreprenadkontraktMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Entreprenadkontrakt – gratis mall (AB 04 / ABT 06)"
         intro="Ladda ner en gratis entreprenadkontrakt-mall direkt, eller välj standardavtal (AB 04, ABT 06, ABS 18, Hantverkarformuläret 17), fyll i och få ut ett färdigt kontrakt som PDF eller Excel. Mallen täcker parter, prismodell, tider, vite, ÄTA, garanti och hävning – de punkter som avgör vid en tvist."

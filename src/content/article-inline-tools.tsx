@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 
 import ArbetsberedningMallTool from '../components/LeadMagnet/ArbetsberedningMallTool';
+import HindersanmalanMallTool from '../components/LeadMagnet/HindersanmalanMallTool';
 import BetongKalkylatorTool from '../components/LeadMagnet/BetongKalkylatorTool';
 import ByggdagbokTool from '../components/LeadMagnet/ByggdagbokTool';
 import EntreprenadkontraktMallTool from '../components/LeadMagnet/EntreprenadkontraktMallTool';
@@ -87,6 +88,11 @@ export const ARTICLE_INLINE_TOOLS: Record<string, InlineTool> = {
   'kalkylprogram-bygg': {
     heading: 'Gör kalkyl och offert gratis',
     render: () => <OffertGeneratorTool />,
+    position: 'top',
+  },
+  'hindersanmalan-tidsforlangning-ab04': {
+    heading: 'Skriv din hindersanmälan',
+    render: () => <HindersanmalanMallTool />,
     position: 'top',
   },
 };

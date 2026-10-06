@@ -79,6 +79,7 @@ export default function KvalitetsplanMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Kvalitetsplan – gratis mall"
         intro="Fyll i projektets kvalitetsrutiner och ladda ner en färdig kvalitetsplan som PDF eller Excel. En nedbantad plan som täcker krav, egenkontroll, avvikelser, material och dokumentation – anpassad för mindre byggföretag."

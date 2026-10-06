@@ -79,6 +79,7 @@ export default function KorjournalMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Körjournal – gratis mall"
         intro="Fyll i fordon och resor och ladda ner en färdig körjournal som PDF eller Excel. En noggrant förd körjournal håller vid Skatteverkets granskning och skyddar dig mot förmånsbeskattning på firmabilen."

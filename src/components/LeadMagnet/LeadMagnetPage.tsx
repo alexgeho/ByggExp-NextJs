@@ -103,10 +103,10 @@ export default function LeadMagnetPage({
   }, [toolId]);
   const disclaimer =
     locale === 'ru'
-      ? 'Инструмент даёт оценку и является вспомогательным средством, а не готовым расчётом. Всегда сверяйте результат с чертежами, действующими нормами, данными поставщика и своим профессиональным опытом, прежде чем давать обязывающую цену, заказывать материал или использовать файл. ByggExp не несёт ответственности за решения, принятые исключительно на основе инструмента.'
+      ? 'Это оценка, а не готовый расчёт – сверяйте с чертежами, нормами и данными поставщика перед ценой или заказом.'
       : locale === 'en'
-      ? 'This tool gives an estimate and is an aid – not a finished calculation. Always check the result against drawings, applicable regulations, supplier data and your professional experience before giving a binding price, ordering material or using the file. ByggExp is not responsible for decisions made solely on the basis of the tool.'
-      : 'Verktyget ger en uppskattning och är ett hjälpmedel – inte en färdig kalkyl. Kontrollera alltid resultatet mot ritning, gällande regler, leverantörens uppgifter och din yrkeserfarenhet innan du lämnar ett bindande pris, beställer material eller använder filen. ByggExp ansvarar inte för beslut som fattas enbart utifrån verktyget.';
+      ? 'An estimate, not a finished calculation – check against drawings, regulations and supplier data before pricing or ordering.'
+      : 'En uppskattning, inte en färdig kalkyl – kontrollera mot ritning, regler och leverantörens uppgifter innan du lämnar pris eller beställer.';
   // BreadcrumbList schema (Hem › Verktyg › <tool>) for a breadcrumb rich result in
   // SERP. Derived from locale + title — no per-page wiring needed.
   const routeLoc = locale === 'en' || locale === 'nb' ? locale : 'sv';
@@ -164,9 +164,11 @@ export default function LeadMagnetPage({
             first, then the product. */}
         {productBanner ?? null}
 
-        {tool && showDisclaimer ? <p className="lm-tool-disclaimer">{disclaimer}</p> : null}
-
         {leadForm ? <div className="lead-magnet-tool">{leadForm}</div> : null}
+
+        {/* Calculators only (templates pass disclaimer={false}); kept short and
+            below the tool + lead form so it never takes the first screen. */}
+        {tool && showDisclaimer ? <p className="lm-tool-disclaimer">{disclaimer}</p> : null}
 
         {preview ? <div className="lead-magnet-preview">{preview}</div> : null}
 

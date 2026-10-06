@@ -109,6 +109,7 @@ export default function TidrapportMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Tidrapport – gratis mall att fylla i online"
         intro="Med den här gratis tidrapport-mallen fyller du i arbetstimmar per dag, vecka eller månad och laddar ner en färdig PDF eller Excel – summan räknas ut automatiskt. Perfekt som underlag för lön och fakturering i byggföretag."

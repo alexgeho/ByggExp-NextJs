@@ -42,6 +42,17 @@ export default function OffertGeneratorTool() {
     }
   }, [router.isReady, router.query.rows]);
 
+  // Row ⋯ menu (phone): closes on any outside click.
+  const [menuRow, setMenuRow] = useState<number | null>(null);
+  useEffect(() => {
+    if (menuRow === null) return;
+    const close = (e: MouseEvent) => {
+      if (!(e.target as HTMLElement).closest('.lm-tool-row-more')) setMenuRow(null);
+    };
+    document.addEventListener('mousedown', close);
+    return () => document.removeEventListener('mousedown', close);
+  }, [menuRow]);
+
   const setRow = (i: number, patch: Partial<Row>) =>
     setRows((prev) => prev.map((r, idx) => (idx === i ? { ...r, ...patch } : r)));
   const addRow = () => setRows((prev) => [...prev, emptyRow()]);
@@ -178,12 +189,43 @@ export default function OffertGeneratorTool() {
           <span aria-hidden="true" />
         </div>
         {rows.map((row, i) => (
-          <div className="lm-tool-row lm-offert-row" key={i}>
-            <input value={row.desc} placeholder="T.ex. Arbete montering" onChange={(e) => setRow(i, { desc: e.currentTarget.value })} />
-            <input type="number" min="0" value={row.qty} onChange={(e) => setRow(i, { qty: e.currentTarget.value })} />
-            <input type="number" min="0" value={row.price} placeholder="0" onChange={(e) => setRow(i, { price: e.currentTarget.value })} />
-            <input type="checkbox" checked={row.labour} aria-label="Arbetskostnad (ROT)" onChange={(e) => setRow(i, { labour: e.currentTarget.checked })} />
+          <div className={`lm-tool-row lm-offert-row${row.labour ? ' is-rot' : ''}`} key={i}>
+            <div className="lm-offert-desc">
+              <input value={row.desc} placeholder="T.ex. Arbete montering" aria-label="Beskrivning" onChange={(e) => setRow(i, { desc: e.currentTarget.value })} />
+              {row.labour ? <span className="lm-offert-rot-tag">ROT</span> : null}
+            </div>
+            <label className="lm-offert-cell">
+              <span>Antal</span>
+              <input type="number" min="0" inputMode="decimal" value={row.qty} onChange={(e) => setRow(i, { qty: e.currentTarget.value })} />
+            </label>
+            <label className="lm-offert-cell">
+              <span>À-pris</span>
+              <input type="number" min="0" inputMode="decimal" value={row.price} placeholder="0" onChange={(e) => setRow(i, { price: e.currentTarget.value })} />
+            </label>
+            <input type="checkbox" className="lm-offert-row-check" checked={row.labour} aria-label="Arbetskostnad (ROT)" onChange={(e) => setRow(i, { labour: e.currentTarget.checked })} />
             <button type="button" className="lm-tool-row-remove" aria-label="Ta bort rad" onClick={() => removeRow(i)}>×</button>
+            {/* Phone: ROT + Ta bort live behind ⋯ instead of loose controls. */}
+            <div className="lm-tool-row-more">
+              <button
+                type="button"
+                className="lm-tool-row-more-btn"
+                aria-label="Fler val"
+                aria-expanded={menuRow === i}
+                onClick={() => setMenuRow(menuRow === i ? null : i)}
+              >
+                ⋯
+              </button>
+              {menuRow === i ? (
+                <div className="lm-tool-row-menu" role="menu">
+                  <button type="button" role="menuitemcheckbox" aria-checked={row.labour} onClick={() => { setRow(i, { labour: !row.labour }); setMenuRow(null); }}>
+                    {row.labour ? '✓ ROT-arbete' : 'ROT-arbete'}
+                  </button>
+                  <button type="button" role="menuitem" className="is-danger" onClick={() => { removeRow(i); setMenuRow(null); }}>
+                    Ta bort
+                  </button>
+                </div>
+              ) : null}
+            </div>
           </div>
         ))}
       </div>

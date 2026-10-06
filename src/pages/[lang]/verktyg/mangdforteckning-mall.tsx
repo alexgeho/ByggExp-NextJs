@@ -79,6 +79,7 @@ export default function MangdforteckningMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Mängdförteckning – gratis mall"
         intro="Fyll i projektets poster med mängd, enhet och á-pris och ladda ner en färdig mängdförteckning som PDF eller Excel. Ett tydligt kalkylunderlag ger jämförbara anbud och färre tvister om vad som ingick."

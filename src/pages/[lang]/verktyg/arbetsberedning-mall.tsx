@@ -86,6 +86,7 @@ export default function ArbetsberedningMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Arbetsberedning – gratis mall att fylla i online"
         intro="Välj moment och fyll i arbetsordning, risker med åtgärder och egenkontroll. Ladda ner som PDF eller Excel – gratis och utan konto."

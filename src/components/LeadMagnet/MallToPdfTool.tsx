@@ -214,7 +214,7 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
   }
 
   return (
-    <div className="lm-tool">
+    <div className="lm-tool lm-tool--mall">
       {config.instantDownload && (
         <div className="lm-tool-instant">
           <div className="lm-tool-instant-text">

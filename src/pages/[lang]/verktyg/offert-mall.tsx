@@ -81,6 +81,7 @@ export default function OffertMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Offertmall för bygg – skapa offert med ROT och ladda ner som PDF"
         intro="Bygg en proffsig offert med rader, moms och ROT-avdrag direkt online. Summorna räknas ut automatiskt och du laddar ner en färdig PDF. Gratis och utan konto."

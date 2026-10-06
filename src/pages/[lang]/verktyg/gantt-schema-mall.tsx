@@ -79,6 +79,7 @@ export default function GanttSchemaMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Tidsplan & Gantt-schema – gratis mall"
         intro="Fyll i projektets aktiviteter med ansvarig, start och slut och ladda ner en färdig tidsplan som PDF eller Excel. Ett enkelt sätt att planera bygget och se vilka moment som styr slutdatumet."

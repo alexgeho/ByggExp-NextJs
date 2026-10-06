@@ -84,6 +84,7 @@ export default function KontrollplanMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Kontrollplan enligt PBL – gratis mall"
         intro="Fyll i projektuppgifter och en rad per kontroll – vad, hur, mot vilket underlag, vem och om det är egenkontroll eller certifierad sakkunnig – och ladda ner en färdig kontrollplan som PDF eller Excel. Passar enklare bygglov och anmälningsärenden – för större projekt krävs en kontrollansvarig."

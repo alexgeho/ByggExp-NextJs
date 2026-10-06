@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react';
 
+import { downloadMaterialPdf } from '../../lib/materialPdf';
+
 // Free travel-time / travel-cost calculator for Byggavtalet. Two SEPARATE posts
 // (the whole point of the paired article restidsersattning-byggavtalet):
 //   • Reskostnadsersättning – km-based. Verified 2025/26 avtalssatser: egen bil
@@ -9,6 +11,8 @@ import { useMemo, useState } from 'react';
 //   • Restidsersättning – time-based, and the rate is AVTALSBEROENDE and revised,
 //     so it is NOT hard-coded: the visitor enters the current restidssats (kr/tim)
 //     from gällande Byggavtal. (Article explicitly warns against unverified rates.)
+// Km/days start with a typical example (30 km, 5 dagar) so a result shows at once;
+// the restid row stays "–" until a rate is entered.
 // sv-only (Byggavtalet-specific).
 
 type Mode = 'bil' | 'forare' | 'passagerare' | 'kollektiv';
@@ -18,8 +22,8 @@ export default function RestidsersattningKalkylatorTool() {
   const kr = (v: number) =>
     `${v.toLocaleString(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kr`;
 
-  const [km, setKm] = useState('');
-  const [days, setDays] = useState('');
+  const [km, setKm] = useState('30');
+  const [days, setDays] = useState('5');
   const [mode, setMode] = useState<Mode>('bil');
   const [passengers, setPassengers] = useState('0');
   const [bilrate, setBilrate] = useState('2.50');
@@ -47,23 +51,48 @@ export default function RestidsersattningKalkylatorTool() {
     }
     const reskostnad = perDag * resdagar;
     const restid = tr * trRate;
-    return { eligible, mode, perDag, reskostnad, restid, total: reskostnad + restid };
+    return { eligible, mode, perDag, reskostnad, restid, hasRate: trRate > 0, total: reskostnad + restid };
   }, [km, days, mode, passengers, bilrate, poolrate, travelHours, travelRate]);
+
+  const modeLabel: Record<Mode, string> = {
+    bil: 'Egen bil',
+    forare: 'Samåkning (förare)',
+    passagerare: 'Samåkning (passagerare)',
+    kollektiv: 'Kollektivtrafik (mot kvitto)',
+  };
+
+  const exportPdf = () => void downloadMaterialPdf({
+    title: 'Restids- och reseersättning',
+    meta: `${modeLabel[mode]} · ${km || 0} km enkel väg · ${days || 0} resdagar`,
+    rows: [
+      ...(mode === 'kollektiv'
+        ? [{ desc: 'Reskostnad', qty: 'mot kvitto' }]
+        : [
+            { desc: 'Reskostnad per resdag (t/r)', qty: kr(r.perDag) },
+            { desc: 'Reskostnadsersättning totalt', qty: kr(r.reskostnad) },
+          ]),
+      { desc: 'Restidsersättning', qty: r.hasRate ? kr(r.restid) : '–' },
+      { desc: 'Reskostnad + restid', qty: kr(r.total) },
+    ],
+    filename: 'restidsersattning.pdf',
+    tool: 'restidsersattning-kalkylator',
+    note: 'Uppskattning enligt Byggavtalet. Kontrollera satserna mot gällande avtal.',
+  });
 
   return (
     <div className="lm-tool lm-tool--split">
-      <div className="lm-tool-grid">
+      <div className="lm-tool-grid lm-tool-grid--pair">
         <label className="lm-tool-field">
-          <span>Enkel resväg (km)</span>
+          <span>Enkel väg (km)</span>
           <input type="number" min="0" step="0.1" inputMode="decimal" value={km}
             placeholder="t.ex. 30" onChange={(e) => setKm(e.currentTarget.value)} />
         </label>
         <label className="lm-tool-field">
-          <span>Antal resdagar</span>
+          <span>Resdagar</span>
           <input type="number" min="0" step="1" inputMode="numeric" value={days}
             placeholder="t.ex. 5" onChange={(e) => setDays(e.currentTarget.value)} />
         </label>
-        <label className="lm-tool-field">
+        <label className="lm-tool-field lm-tool-field-wide">
           <span>Färdsätt</span>
           <select value={mode} onChange={(e) => setMode(e.currentTarget.value as Mode)}>
             <option value="bil">Egen bil</option>
@@ -80,26 +109,32 @@ export default function RestidsersattningKalkylatorTool() {
           </label>
         )}
         <label className="lm-tool-field">
-          <span>Bilersättning (kr/km)</span>
-          <input type="number" min="0" step="0.05" inputMode="decimal" value={bilrate}
-            onChange={(e) => setBilrate(e.currentTarget.value)} />
-        </label>
-        <label className="lm-tool-field">
-          <span>Samåkningstillägg (kr/km/passagerare)</span>
-          <input type="number" min="0" step="0.05" inputMode="decimal" value={poolrate}
-            onChange={(e) => setPoolrate(e.currentTarget.value)} />
-        </label>
-        <label className="lm-tool-field">
-          <span>Restid (timmar)</span>
+          <span>Restid (h)</span>
           <input type="number" min="0" step="0.5" inputMode="decimal" value={travelHours}
             placeholder="t.ex. 2" onChange={(e) => setTravelHours(e.currentTarget.value)} />
         </label>
         <label className="lm-tool-field">
-          <span>Restidssats (kr/tim, enligt avtal)</span>
+          <span>Restidssats</span>
           <input type="number" min="0" step="1" inputMode="decimal" value={travelRate}
-            placeholder="ange avtalssats" onChange={(e) => setTravelRate(e.currentTarget.value)} />
+            placeholder="kr/h" onChange={(e) => setTravelRate(e.currentTarget.value)} />
         </label>
       </div>
+
+      <details className="lm-tool-more">
+        <summary>Satser (kr/km)</summary>
+        <div className="lm-tool-grid lm-tool-grid--pair">
+          <label className="lm-tool-field">
+            <span>Bilersättning (kr/km)</span>
+            <input type="number" min="0" step="0.05" inputMode="decimal" value={bilrate}
+              onChange={(e) => setBilrate(e.currentTarget.value)} />
+          </label>
+          <label className="lm-tool-field">
+            <span>Samåkning (kr/km/pass.)</span>
+            <input type="number" min="0" step="0.05" inputMode="decimal" value={poolrate}
+              onChange={(e) => setPoolrate(e.currentTarget.value)} />
+          </label>
+        </div>
+      </details>
 
       <div className="lm-result">
         {!r.eligible && (
@@ -116,30 +151,31 @@ export default function RestidsersattningKalkylatorTool() {
         ) : (
           <>
             <div className="lm-result-row">
-              <span>Reskostnad per resdag (tur och retur)</span>
+              <span>Per resdag (t/r)</span>
               <span>{kr(r.perDag)}</span>
             </div>
             <div className="lm-result-row lm-result-highlight">
-              <span>Reskostnadsersättning totalt</span>
+              <span>Reskostnad</span>
               <strong>{kr(r.reskostnad)}</strong>
             </div>
           </>
         )}
         <div className="lm-result-row">
-          <span>Restidsersättning (timmar × avtalssats)</span>
-          <span>{kr(r.restid)}</span>
+          <span>Restid</span>
+          <span>{r.hasRate ? kr(r.restid) : '–'}</span>
         </div>
         <div className="lm-result-row lm-result-total">
-          <span>Reskostnad + restid</span>
+          <span>Totalt</span>
           <strong>{kr(r.total)}</strong>
         </div>
       </div>
+      <div className="lm-tool-actions">
+        <button type="button" className="lm-tool-button" onClick={exportPdf} disabled={r.total <= 0}>
+          Exportera PDF
+        </button>
+      </div>
       <p className="lm-tool-note">
-        Reskostnadsersättning och restidsersättning är två olika poster och redovisas på egna rader:
-        den ena betalar kilometrarna, den andra restiden. Restidssatsen är avtalsberoende – hämta den
-        från gällande Byggavtal. Reskostnaden är capad vid avtalets traktamentesnivå per dag, och
-        satserna revideras 1 maj. Skattefri milersättning är 25 kr/mil (2,50 kr/km) 2026 – belopp
-        däröver blir skattepliktig lön. Verktyget ger en uppskattning, inte en färdig reseräkning.
+        Restidssatsen är avtalsberoende – hämta den ur gällande Byggavtal. Satserna revideras 1 maj.
       </p>
     </div>
   );

@@ -87,6 +87,7 @@ export default function ByggmotesprotokollMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Byggmötesprotokoll – gratis mall med dagordning"
         intro="Färdig mall för byggmötet med fast dagordning – ekonomi, tidplan, ÄTA-arbeten, hinder, arbetsmiljö och KMA, kvalitet och beslut med ansvarig. Fyll i online och ladda ner protokollet som PDF eller Excel. Gratis och utan konto."

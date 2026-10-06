@@ -86,6 +86,7 @@ export default function AtaMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="ÄTA-mall – gratis mall att fylla i online"
         intro="Skapa en tydlig ÄTA-beställning på minuten: typ, beskrivning, mängd, à-pris och vem som beställt. Fyll i formuläret och ladda ner den som PDF eller Excel att signera – eller hantera ÄTA löpande i ByggExp. Klicka på ”Fyll i exempel” för att se en färdig ÄTA."

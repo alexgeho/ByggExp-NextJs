@@ -79,6 +79,7 @@ export default function AnstallningsavtalMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Anställningsavtal för byggföretag – gratis mall"
         intro="Fyll i uppgifterna och ladda ner ett färdigt anställningsavtal som PDF eller Excel. Mallen täcker den skriftliga information du som arbetsgivare måste lämna enligt LAS – anpassa alltid till ert kollektivavtal."

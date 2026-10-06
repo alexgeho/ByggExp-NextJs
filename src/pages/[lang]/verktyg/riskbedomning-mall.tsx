@@ -79,6 +79,7 @@ export default function RiskbedomningMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Riskbedömning – gratis mall"
         intro="Fyll i arbetsmoment och risker och ladda ner en färdig skriftlig riskbedömning som PDF eller Excel. Görs innan riskfyllda moment och ligger till grund för rätt skyddsåtgärder på bygget."

@@ -79,6 +79,7 @@ export default function EfterkalkylMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Efterkalkyl – gratis mall"
         intro="Fyll i anbud mot verkligt utfall per post och ladda ner en färdig efterkalkyl som PDF eller Excel. Hitta var marginalen läcker och räkna rätt på nästa jobb i stället för att upprepa samma kalkylfel."

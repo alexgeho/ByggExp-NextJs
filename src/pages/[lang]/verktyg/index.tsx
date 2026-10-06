@@ -87,6 +87,7 @@ const CONTENT: Record<CalcLocale, Content> = {
           { slug: 'faktura-mall', title: 'Fakturamall', description: 'Skapa faktura med nummer, datum, moms och ROT – som PDF.' },
           { slug: 'byggdagbok-mall', title: 'Byggdagbok', description: 'Fyll i dagens arbete och ladda ner som PDF eller Excel.' },
           { slug: 'ata-mall', title: 'ÄTA-mall', description: 'Skapa en tydlig ÄTA-beställning enligt AB 04 – PDF eller Excel.' },
+          { slug: 'hindersanmalan-mall', title: 'Hindersanmälan', description: 'Anmäl hinder och begär tidsförlängning enligt AB 04 / ABT 06 – PDF.' },
           { slug: 'tidrapport-mall', title: 'Tidrapport', description: 'Timmar per dag, vecka eller månad – PDF eller Excel.' },
           { slug: 'egenkontroll-mall', title: 'Egenkontroll', description: 'Färdiga checklistor för el, VVS, bygg och skyddsrond – PDF eller Excel.' },
           { slug: 'egenkontroll-el-mall', title: 'Egenkontroll el', description: 'Färdig el-checklista: jordfelsbrytare, isolationsmätning, märkning – PDF.' },

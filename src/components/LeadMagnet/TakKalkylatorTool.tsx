@@ -34,7 +34,7 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
         title: 'Roof calculator – area, tiles, drainage & scaffolding',
         sub: 'Enter the building dimensions and roof pitch and we work out the roof area and material: tiles, battens and felt – plus (optionally) gutters, downpipes, snow guards and scaffolding for the roof work. Export to Excel or PDF.',
         formL: 'Roof type', oSadel: 'Gable roof (two slopes)', oPulpet: 'Mono-pitch roof (one slope)',
-        length: 'Building length (m)', width: 'Building width (m)', pitch: 'Roof pitch (degrees)', overhang: 'Roof overhang (m)', height: 'Building height to eaves (m)',
+        length: 'Length (m)', width: 'Width (m)', pitch: 'Roof pitch (°)', overhang: 'Overhang (m)', height: 'Building height to eaves (m)',
         coveringL: 'Roof covering', tilesPerM2: (d: string) => `Tiles per m² (default ${d})`, spill: 'Waste / overlap (%)',
         guttersQ: 'Gutters & downpipes?', yes: 'Yes', no: 'No', downpipes: 'Number of downpipes', krokCC: 'Gutter bracket c/c (m)',
         snowQ: 'Snow guards?', scaffoldQ: 'Scaffolding?', scaffoldYes: 'Yes (façade area)',
@@ -43,7 +43,7 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
         rGutter: 'Gutters', rKrok: 'Gutter brackets', rStupror: (n: string) => `Downpipes (${n} pcs)`, rSnow: 'Snow guards', rScaffold: 'Scaffolding (façade area)',
         fine: 'Roof area = footprint (incl. overhang) ÷ cos(pitch). Gutters are figured on the eaves length, downpipes on count × building height, and scaffolding as façade area (perimeter × work height). Number of tiles and batten spacing depend on the model – follow the manufacturer’s laying instructions.',
         offert: 'Create quote from this', faktura: 'Create invoice', excel: 'Export Excel', pdf: 'Export PDF',
-        pcs: 'pcs', lm: 'lm',
+        pcs: 'pcs', lm: 'lm', more: 'More options',
         sadelShort: 'gable roof', pulpetShort: 'mono-pitch roof',
         cov: { betongpanna: 'Concrete tile', tegelpanna: 'Clay tile', plat: 'Sheet metal (profiled)', papp: 'Felt / membrane' } as Record<Covering, string>,
         mRoof: 'Roof area', mTiles: (c: string) => `Roof tiles (${c})`, mCover: (c: string) => `Roof covering ${c}`, mBatten: 'Tiling battens', mStrolakt: 'Counter battens', mFelt: 'Underlay felt', mNock: 'Ridge (length)', mGutter: 'Gutters', mKrok: 'Gutter brackets', mStupror: (n: string) => `Downpipes (${n} pcs)`, mSnow: 'Snow guards', mScaffold: 'Scaffolding',
@@ -55,7 +55,7 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
         title: 'Takkalkylator – yta, pannor, avvattning & ställning',
         sub: 'Ange husets mått och taklutning så räknar vi takytan och materialet: takpannor, läkt och papp – plus (valfritt) hängrännor, stuprör, snörasskydd och byggnadsställning för takarbetet. Exportera till Excel eller PDF.',
         formL: 'Takform', oSadel: 'Sadeltak (två fall)', oPulpet: 'Pulpettak (ett fall)',
-        length: 'Byggnadens längd (m)', width: 'Byggnadens bredd (m)', pitch: 'Taklutning (grader)', overhang: 'Takutsprång (m)', height: 'Byggnadshöjd till takfot (m)',
+        length: 'Längd (m)', width: 'Bredd (m)', pitch: 'Taklutning (°)', overhang: 'Utsprång (m)', height: 'Byggnadshöjd till takfot (m)',
         coveringL: 'Taktäckning', tilesPerM2: (d: string) => `Pannor per m² (standard ${d})`, spill: 'Spill / överlapp (%)',
         guttersQ: 'Hängrännor & stuprör?', yes: 'Ja', no: 'Nej', downpipes: 'Antal stuprör', krokCC: 'Rännkrok c/c (m)',
         snowQ: 'Snörasskydd?', scaffoldQ: 'Byggnadsställning?', scaffoldYes: 'Ja (fasadyta)',
@@ -64,7 +64,7 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
         rGutter: 'Hängrännor', rKrok: 'Rännkrokar', rStupror: (n: string) => `Stuprör (${n} st)`, rSnow: 'Snörasskydd', rScaffold: 'Byggnadsställning (fasadyta)',
         fine: 'Takyta = grundyta (inkl. utsprång) ÷ cos(taklutning). Hängrännor räknas på takfotslängden, stuprör på antal × byggnadshöjd, och ställning som fasadyta (omkrets × arbetshöjd). Antal pannor och läktavstånd beror på modell – följ tillverkarens läggningsanvisning.',
         offert: 'Skapa offert av det här', faktura: 'Skapa faktura', excel: 'Exportera Excel', pdf: 'Exportera PDF',
-        pcs: 'st', lm: 'lpm',
+        pcs: 'st', lm: 'lpm', more: 'Fler val',
         sadelShort: 'sadeltak', pulpetShort: 'pulpettak',
         cov: { betongpanna: 'Betongpanna', tegelpanna: 'Tegelpanna', plat: 'Plåt (profil)', papp: 'Papp / duk' } as Record<Covering, string>,
         mRoof: 'Takyta', mTiles: (c: string) => `Takpannor (${c})`, mCover: (c: string) => `Taktäckning ${c}`, mBatten: 'Bärläkt', mStrolakt: 'Ströläkt', mFelt: 'Underlagspapp', mNock: 'Nock (längd)', mGutter: 'Hängrännor', mKrok: 'Rännkrokar', mStupror: (n: string) => `Stuprör (${n} st)`, mSnow: 'Snörasskydd', mScaffold: 'Byggnadsställning',
@@ -74,8 +74,8 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
       };
 
   const [form, setForm] = useState('sadel'); // sadel | pulpet
-  const [length, setLength] = useState('');
-  const [width, setWidth] = useState('');
+  const [length, setLength] = useState('10');
+  const [width, setWidth] = useState('8');
   const [pitch, setPitch] = useState('27');
   const [overhang, setOverhang] = useState('0.3');
   const [covering, setCovering] = useState<Covering>('betongpanna');
@@ -200,7 +200,7 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
   return (
     <div className="lm-tool lm-tool--split">
 
-      <div className="lm-tool-grid">
+      <div className="lm-tool-grid lm-tool-grid--pair">
         <label className={fld}><span>{t.formL}</span>
           <select value={form} onChange={(e) => setForm(e.currentTarget.value)}>
             <option value="sadel">{t.oSadel}</option>
@@ -214,8 +214,6 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
           <input type="number" min="0" max="80" inputMode="decimal" value={pitch} onChange={(e) => setPitch(e.currentTarget.value)} /></label>
         <label className={fld}><span>{t.overhang}</span>
           <input type="number" min="0" inputMode="decimal" value={overhang} onChange={(e) => setOverhang(e.currentTarget.value)} /></label>
-        <label className={fld}><span>{t.height}</span>
-          <input type="number" min="0" inputMode="decimal" value={height} onChange={(e) => setHeight(e.currentTarget.value)} /></label>
         <label className={fld}><span>{t.coveringL}</span>
           <select value={covering} onChange={(e) => { setCovering(e.currentTarget.value as Covering); setTiles(''); }}>
             <option value="betongpanna">{t.cov.betongpanna}</option>
@@ -223,37 +221,44 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
             <option value="plat">{t.cov.plat}</option>
             <option value="papp">{t.cov.papp}</option>
           </select></label>
-        {def.tiles > 0 ? (
-          <label className={fld}><span>{t.tilesPerM2(nf(def.tiles, 1))}</span>
-            <input type="number" min="0" inputMode="decimal" value={tiles} placeholder={nf(def.tiles, 1)} onChange={(e) => setTiles(e.currentTarget.value)} /></label>
-        ) : null}
-        <label className={fld}><span>{t.spill}</span>
-          <input type="number" min="0" inputMode="decimal" value={spill} onChange={(e) => setSpill(e.currentTarget.value)} /></label>
-
-        <label className={fld}><span>{t.guttersQ}</span>
-          <select value={gutters} onChange={(e) => setGutters(e.currentTarget.value)}>
-            <option value="ja">{t.yes}</option><option value="nej">{t.no}</option>
-          </select></label>
-        {gutters === 'ja' ? (
-          <>
-            <label className={fld}><span>{t.downpipes}</span>
-              <input type="number" min="0" inputMode="numeric" value={downpipes} onChange={(e) => setDownpipes(e.currentTarget.value)} /></label>
-            <label className={fld}><span>{t.krokCC}</span>
-              <input type="number" min="0" inputMode="decimal" value={krokCC} onChange={(e) => setKrokCC(e.currentTarget.value)} /></label>
-          </>
-        ) : null}
-        <label className={fld}><span>{t.snowQ}</span>
-          <select value={snorasskydd} onChange={(e) => setSnorasskydd(e.currentTarget.value)}>
-            <option value="nej">{t.no}</option><option value="ja">{t.yes}</option>
-          </select></label>
-        <label className={fld}><span>{t.scaffoldQ}</span>
-          <select value={scaffold} onChange={(e) => setScaffold(e.currentTarget.value)}>
-            <option value="nej">{t.no}</option><option value="ja">{t.scaffoldYes}</option>
-          </select></label>
       </div>
 
+      <details className="lm-tool-more">
+        <summary>{t.more}</summary>
+        <div className="lm-tool-grid">
+          <label className={fld}><span>{t.height}</span>
+            <input type="number" min="0" inputMode="decimal" value={height} onChange={(e) => setHeight(e.currentTarget.value)} /></label>
+          {def.tiles > 0 ? (
+            <label className={fld}><span>{t.tilesPerM2(nf(def.tiles, 1))}</span>
+              <input type="number" min="0" inputMode="decimal" value={tiles} placeholder={nf(def.tiles, 1)} onChange={(e) => setTiles(e.currentTarget.value)} /></label>
+          ) : null}
+          <label className={fld}><span>{t.spill}</span>
+            <input type="number" min="0" inputMode="decimal" value={spill} onChange={(e) => setSpill(e.currentTarget.value)} /></label>
+
+          <label className={fld}><span>{t.guttersQ}</span>
+            <select value={gutters} onChange={(e) => setGutters(e.currentTarget.value)}>
+              <option value="ja">{t.yes}</option><option value="nej">{t.no}</option>
+            </select></label>
+          {gutters === 'ja' ? (
+            <>
+              <label className={fld}><span>{t.downpipes}</span>
+                <input type="number" min="0" inputMode="numeric" value={downpipes} onChange={(e) => setDownpipes(e.currentTarget.value)} /></label>
+              <label className={fld}><span>{t.krokCC}</span>
+                <input type="number" min="0" inputMode="decimal" value={krokCC} onChange={(e) => setKrokCC(e.currentTarget.value)} /></label>
+            </>
+          ) : null}
+          <label className={fld}><span>{t.snowQ}</span>
+            <select value={snorasskydd} onChange={(e) => setSnorasskydd(e.currentTarget.value)}>
+              <option value="nej">{t.no}</option><option value="ja">{t.yes}</option>
+            </select></label>
+          <label className={fld}><span>{t.scaffoldQ}</span>
+            <select value={scaffold} onChange={(e) => setScaffold(e.currentTarget.value)}>
+              <option value="nej">{t.no}</option><option value="ja">{t.scaffoldYes}</option>
+            </select></label>
+        </div>
+      </details>
+
       <div className="lm-result">
-        <div className="lm-result-row"><span>{t.rFootprint}</span><span>{nf(r.footprint, 1)} m²</span></div>
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rRoof(form === 'sadel' ? t.sadelShort : t.pulpetShort)}</span>
           <strong>{nf(r.roofArea, 1)} m²</strong>
@@ -263,6 +268,7 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
         ) : (
           <div className="lm-result-row lm-result-total"><span>{t.rCover}</span><strong>{nf(r.feltM2, 1)} m²</strong></div>
         )}
+        <div className="lm-result-row"><span>{t.rFootprint}</span><span>{nf(r.footprint, 1)} m²</span></div>
         {r.hasBatten ? <div className="lm-result-row"><span>{t.rBatten}</span><span>{nf(r.battenM)} {t.lm}</span></div> : null}
         {r.hasBatten ? <div className="lm-result-row"><span>{t.rStrolakt}</span><span>{nf(r.strolaktM)} {t.lm}</span></div> : null}
         <div className="lm-result-row"><span>{t.rFelt}</span><span>{nf(r.feltM2, 1)} m²</span></div>

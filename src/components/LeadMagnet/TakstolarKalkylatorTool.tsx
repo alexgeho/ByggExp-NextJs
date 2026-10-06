@@ -101,10 +101,10 @@ export default function TakstolarKalkylatorTool({ locale = 'sv' }: { locale?: Ca
         drawCap: 'Principskiss W-takstol – inte en konstruktionsritning', m: 'm', m2: 'm²',
       };
 
-  const [length, setLength] = useState('');
+  const [length, setLength] = useState('10');
   const [cc, setCc] = useState('1200');
-  const [span, setSpan] = useState('');
-  const [pitch, setPitch] = useState('');
+  const [span, setSpan] = useState('8');
+  const [pitch, setPitch] = useState('27');
   const [overhang, setOverhang] = useState('500');
 
   const r = useMemo(() => {
@@ -180,11 +180,11 @@ export default function TakstolarKalkylatorTool({ locale = 'sv' }: { locale?: Ca
 
   return (
     <div className="lm-tool lm-tool--split lm-tool--truss">
-      <div className="lm-tool-grid">
+      <div className="lm-tool-grid lm-tool-grid--pair">
         <label className="lm-tool-field"><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 10' : 't.ex. 10'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.cc}</span><input type="number" min="0" inputMode="numeric" value={cc} onChange={(e) => setCc(e.currentTarget.value)} /></label>
       </div>
-      <div className="lm-tool-grid">
+      <div className="lm-tool-grid lm-tool-grid--pair">
         <p className="lm-tool-subhead lm-tool-field-wide">{t.geoHead}</p>
         <label className="lm-tool-field"><span>{t.span}</span><input type="number" min="0" inputMode="decimal" value={span} placeholder={en ? 'e.g. 8' : 't.ex. 8'} onChange={(e) => setSpan(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.pitch}</span><input type="number" min="0" max="75" inputMode="decimal" value={pitch} placeholder={en ? 'e.g. 27' : 't.ex. 27'} onChange={(e) => setPitch(e.currentTarget.value)} /></label>

@@ -44,7 +44,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     description:
       'Räkna ut slinglängd och antal slingor för vattenburen golvvärme utifrån yta och centrumavstånd (c/c). Gratis kalkylator, utan konto.',
     badge: 'Gratis kalkylator',
-    h1: 'Golvvärme',
+    h1: 'Golvvärme kalkylator',
     intro:
       'Ska du lägga golvvärme och undrar hur mycket rör som går åt? Ange yta och c/c-avstånd så får du slinglängd och antal slingor direkt – ett snabbt underlag för materialbeställning och offert.',
     previewAlt: 'Förhandsvisning av golvvärme',
@@ -75,7 +75,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     description:
       'Regn ut sløyfelengde og antall sløyfer for vannbåren gulvvarme ut fra areal og senteravstand (c/c). Gratis kalkulator, uten konto.',
     badge: 'Gratis kalkulator',
-    h1: 'Gulvvarme',
+    h1: 'Gulvvarme kalkulator',
     intro:
       'Fyll inn arealet og senteravstanden (c/c) mellom rørene, så regner vi ut omtrentlig sløyfelengde og antall sløyfer.',
     previewAlt: 'Forhåndsvisning av gulvvarme',
@@ -106,7 +106,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     description:
       'Work out the loop length and number of loops for water-based underfloor heating from area and pipe spacing (c/c). Free calculator, no account.',
     badge: 'Free calculator',
-    h1: 'Underfloor heating',
+    h1: 'Underfloor heating calculator',
     intro:
       'Laying underfloor heating and wondering how much pipe it takes? Enter the area and c/c spacing to get the loop length and number of loops straight away – a quick basis for ordering material and quoting the job.',
     previewAlt: 'Preview of underfloor heating',

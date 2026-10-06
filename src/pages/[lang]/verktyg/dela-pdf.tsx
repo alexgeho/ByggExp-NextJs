@@ -237,6 +237,7 @@ export default function Page({ lang }: { lang: Locale }) {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge={c.badge}
         title={c.h1}
         intro={c.intro}

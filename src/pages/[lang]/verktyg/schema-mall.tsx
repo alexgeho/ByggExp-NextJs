@@ -93,6 +93,7 @@ export default function SchemaMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Schema-mall – gratis arbetsschema för veckan"
         intro="Gör ett veckoschema för personalen: skriv namn och pass per dag och ladda ner som PDF eller Excel. Vill du hellre skriva för hand? Ladda ner en tom schema-mall och fyll i på papper."

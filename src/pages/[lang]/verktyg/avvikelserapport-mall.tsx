@@ -79,6 +79,7 @@ export default function AvvikelserapportMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Avvikelserapport – gratis mall"
         intro="Dokumentera avvikelsen, orsaken, åtgärden och verifieringen och ladda ner en färdig avvikelserapport som PDF eller Excel. En spårbar avvikelsehantering skyddar dig mot vite och reklamation."

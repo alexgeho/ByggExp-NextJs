@@ -31,7 +31,7 @@ export default function FallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         hMm: 't.ex. 15', hPct: 't.ex. 2', hRatio: 't.ex. 50', hLen: 't.ex. 6',
       };
 
-  const [length, setLength] = useState('');
+  const [length, setLength] = useState('6');
   const [val, setVal] = useState('15');
   const [unit, setUnit] = useState<Unit>('mmpm');
   const result = useMemo(() => {
@@ -47,9 +47,8 @@ export default function FallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
   const valLabel = unit === 'procent' ? t.labPct : unit === 'ratio' ? t.labRatio : t.labMm;
   return (
     <div className="lm-tool lm-tool--split">
-      <div className="lm-tool-grid">
-        <label className="lm-tool-field"><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={t.hLen} onChange={(e) => setLength(e.currentTarget.value)} /></label>
-        <label className="lm-tool-field">
+      <div className="lm-tool-grid lm-tool-grid--pair">
+        <label className="lm-tool-field lm-tool-field-wide">
           <span>{t.fallAs}</span>
           <select value={unit} onChange={(e) => setUnit(e.currentTarget.value as Unit)}>
             <option value="mmpm">{t.uMm}</option>
@@ -57,6 +56,7 @@ export default function FallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
             <option value="ratio">{t.uRatio}</option>
           </select>
         </label>
+        <label className="lm-tool-field"><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={t.hLen} onChange={(e) => setLength(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{valLabel}</span><input type="number" min="0" inputMode="decimal" value={val} placeholder={unitHint} onChange={(e) => setVal(e.currentTarget.value)} /></label>
       </div>
       <div className="lm-result">

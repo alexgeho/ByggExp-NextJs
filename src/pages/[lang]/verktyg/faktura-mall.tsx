@@ -81,6 +81,7 @@ export default function FakturaMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Fakturamall – skapa faktura och ladda ner som PDF"
         intro="Gör en proffsig faktura med rader, moms och ROT-avdrag direkt online. Fakturanummer, datum och summor fylls i enkelt och du laddar ner en färdig PDF. Gratis och utan konto."

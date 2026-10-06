@@ -2054,3 +2054,219 @@
   padding-bottom: 11px;
   white-space: nowrap;
 }
+
+// --- Offert rows + mall example chips: phone fix (2026-10-06) ---------------
+// Offert: desktop keeps the column table (ROT checkbox + ×). Phone: description
+// full width, then Antal · À-pris · ⋯ (ROT / Ta bort) — equal heights, inline labels.
+.lm-offert-desc,
+.lm-offert-cell {
+  position: relative;
+  display: block;
+  min-width: 0;
+}
+
+.lm-offert-cell > span {
+  display: none;
+}
+
+.lm-offert-rot-tag {
+  display: none;
+}
+
+.lm-offert-row > .lm-tool-row-more {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .lm-tool .lm-tool-row.lm-offert-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 44px;
+    gap: 8px;
+  }
+
+  .lm-tool-rows .lm-offert-row + .lm-offert-row {
+    margin-top: 8px;
+  }
+
+  .lm-offert-row > .lm-offert-desc {
+    grid-column: 1 / -1;
+  }
+
+  .lm-offert-row > .lm-offert-row-check,
+  .lm-offert-row > .lm-tool-row-remove {
+    display: none;
+  }
+
+  .lm-offert-row > .lm-tool-row-more {
+    display: block;
+    align-self: stretch;
+  }
+
+  .lm-offert-row .lm-tool-row-more-btn {
+    width: 44px;
+    height: 100%;
+    border: 1px solid var(--lm-field-border);
+    border-radius: 10px;
+    background: var(--bg);
+  }
+
+  // Inline label inside the field: "Antal 1", "À-pris 0".
+  .lm-offert-cell > span {
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--muted);
+    pointer-events: none;
+  }
+
+  .lm-tool .lm-offert-cell > input {
+    padding-left: 62px;
+    text-align: right;
+  }
+
+  .lm-offert-rot-tag {
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(35, 148, 255, 0.12);
+    color: var(--lm-accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+    pointer-events: none;
+  }
+
+  .lm-offert-row.is-rot .lm-offert-desc > input {
+    padding-right: 52px;
+  }
+}
+
+// Mall "Se hur den fylls i": example = chip, Rensa = quiet text button, one line,
+// no edge fade (nothing to scroll, so nothing looks cut).
+.lm-tool--mall .lm-tool-presets:has(+ .lm-tool-form) .lm-tool-presets-buttons {
+  align-items: center;
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
+.lm-tool--mall .lm-tool-presets:has(+ .lm-tool-form) .lm-tool-preset + .lm-tool-preset {
+  border-color: transparent;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 500;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-shadow: none;
+}
+
+.lm-tool--mall .lm-tool-presets:has(+ .lm-tool-form) .lm-tool-preset + .lm-tool-preset:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+/* ==== Intent fix D (2026-10): tool result on the first screen ================
+   - .lm-tool-more: collapsed "Fler val" with secondary inputs (tak-kalkylator),
+     so the key result sits right under the main fields on phone.
+   - .lm-tool-disclaimer: short, quiet line under the tool (calculators only). */
+.lm-tool--split > .lm-tool-more {
+  border: 1px solid var(--lm-card-border);
+  border-radius: 14px;
+  background: rgba(10, 40, 90, 0.02);
+}
+
+.lm-tool-more > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 0 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink);
+  list-style: none;
+}
+
+.lm-tool-more > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lm-tool-more > summary::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 0.15s ease;
+}
+
+.lm-tool-more[open] > summary::after {
+  transform: rotate(-135deg) translateY(-2px);
+}
+
+.lm-tool-more > .lm-tool-grid {
+  padding: 4px 20px 20px;
+}
+
+@media (max-width: 900px) {
+  .lm-tool-more > summary {
+    padding: 0 16px;
+  }
+
+  .lm-tool-more > .lm-tool-grid {
+    padding: 4px 16px 16px;
+  }
+}
+
+.lm-tool-disclaimer {
+  margin: 16px auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--muted, #667085);
+  font-size: 0.8rem;
+}
+/* Phone: short numeric fields two per row (selects keep the full row), inputs
+   bottom-aligned so a 2-line label never breaks equal field heights. Puts the
+   calculator's result on the first screen. */
+@media (max-width: 640px) {
+  .lm-tool .lm-tool-grid.lm-tool-grid--pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 12px;
+  }
+
+  .lm-tool-grid--pair > .lm-tool-field {
+    justify-content: flex-end;
+  }
+
+  .lm-tool-grid--pair > .lm-tool-field:has(select),
+  .lm-tool-grid--pair > .lm-tool-subhead {
+    grid-column: 1 / -1;
+  }
+}
+/* Desktop: the result column spans the inputs + "Fler val" rows, so the
+   collapsed extras sit directly under the main fields. */
+@media (min-width: 901px) {
+  .lm-tool--split:has(> .lm-tool-more) > .lm-result {
+    grid-row: 1 / span 2;
+  }
+}
+/* ==== /Intent fix D ========================================================== */
+
+// --- Hindersanmälan mall (HindersanmalanMallTool, 2026-10-06): the kap 4 § 3
+// select has long options — keep it from widening the grid on phones.
+.lm-hinder .lm-tool-field {
+  min-width: 0;
+}
+
+.lm-hinder .lm-tool-field select {
+  width: 100%;
+  min-width: 0;
+  text-overflow: ellipsis;
+}

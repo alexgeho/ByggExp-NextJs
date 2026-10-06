@@ -46,7 +46,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Takkalkylator',
     intro:
-      'Ska du lägga om taket eller prisa ett jobb? Fyll i husets mått, taklutning och taktäckning – kalkylatorn ger dig takytan per takfall och mängderna du behöver handla, så du slipper gissa dig till materialåtgången.',
+      'Takyta, takpannor, läkt och hängrännor – ändra måtten så räknas allt om direkt.',
     previewAlt: 'Förhandsvisning av takberäknare',
     previewCaption: 'Så ser takberäknaren ut',
     sections: [

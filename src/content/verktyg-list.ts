@@ -52,6 +52,7 @@ export const VERKTYG_GROUPS: VerktygGroup[] = [
       { slug: 'faktura-mall', label: 'Faktura-mall' },
       { slug: 'byggdagbok-mall', label: 'Byggdagbok-mall' },
       { slug: 'ata-mall', label: 'ÄTA-mall' },
+      { slug: 'hindersanmalan-mall', label: 'Hindersanmälan-mall' },
       { slug: 'tidrapport-mall', label: 'Tidrapport-mall' },
       { slug: 'egenkontroll-mall', label: 'Egenkontroll-mall' },
       { slug: 'egenkontroll-el-mall', label: 'Egenkontroll el-mall' },

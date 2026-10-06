@@ -79,6 +79,7 @@ export default function BetalningspaminnelseMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Betalningspåminnelse – gratis mall"
         intro="Fyll i den obetalda fakturan och ladda ner en färdig betalningspåminnelse som PDF eller Excel. Lägg på lagstadgad avgift och dröjsmålsränta – en tydlig påminnelse gör att fler betalar innan det går till inkasso."

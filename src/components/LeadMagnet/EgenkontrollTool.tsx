@@ -173,7 +173,16 @@ export default function EgenkontrollTool({
       if (box.scrollLeft < third * 0.5) box.scrollLeft += third;
       else if (box.scrollLeft > third * 1.5) box.scrollLeft -= third;
     };
-    box.scrollLeft = box.scrollWidth / 3;
+    // Start the loop on the active (else first) chip of the middle copy, placed
+    // just past the edge fade, so no chip is cut on load.
+    const n = box.children.length / 3;
+    const activeIdx = Math.max(EGENKONTROLL_PRESETS.findIndex((p) => p.id === defaultPreset), 0);
+    const startChip = box.children[n + activeIdx] as HTMLElement | undefined;
+    const cs = getComputedStyle(box);
+    const fade = (cs.maskImage || cs.webkitMaskImage || 'none') === 'none' ? 0 : 40;
+    box.scrollLeft = startChip
+      ? box.scrollLeft + startChip.getBoundingClientRect().left - box.getBoundingClientRect().left - fade
+      : box.scrollWidth / 3;
     box.addEventListener('scroll', wrap, { passive: true });
     const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let raf = 0;
@@ -192,6 +201,8 @@ export default function EgenkontrollTool({
       cancelAnimationFrame(raf);
       box.removeEventListener('scroll', wrap);
     };
+    // Mount-only: the loop's start point is the preset the page opened with.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const pauseChips = (paused: boolean) => {
     chipsPaused.current = paused;

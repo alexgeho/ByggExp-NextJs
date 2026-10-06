@@ -79,6 +79,7 @@ export default function RestlistaMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Restlista / punchlista – gratis mall"
         intro="Fyll i projektuppgifter och kvarstående punkter och ladda ner en färdig restlista som PDF eller Excel att dela och bocka av. Ett enkelt sätt att stänga alla punkter mellan slutbesiktning och överlämning."

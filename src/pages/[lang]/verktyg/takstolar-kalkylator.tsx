@@ -47,7 +47,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     badge: 'Gratis kalkylator',
     h1: 'Beräkna takstolar',
     intro:
-      'Räkna ut antal takstolar från takets längd och centrumavstånd (c/c). Fyll i spännvidd och taklutning så får du även nockhöjd, överramens längd och takyta – med en skiss av takstolen. Gratis och utan konto.',
+      'Antal takstolar, nockhöjd och takyta – ändra måtten så räknas allt om direkt.',
     previewAlt: 'Förhandsvisning av takstolar',
     previewCaption: 'Så ser takstolar ut',
     sections: [

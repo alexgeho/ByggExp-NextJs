@@ -79,6 +79,7 @@ export default function SkyddsrondMallPage() {
       <Header headerT={headerT} />
 
       <LeadMagnetPage
+        disclaimer={false}
         badge="Gratis mall"
         title="Skyddsrond – gratis protokollmall"
         intro="Fyll i deltagare och kontrollpunkter och ladda ner ett färdigt skyddsrondsprotokoll som PDF eller Excel. En återkommande skyddsrond är kärnan i det systematiska arbetsmiljöarbetet på bygget."

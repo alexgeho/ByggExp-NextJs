@@ -26,6 +26,8 @@ type Row = {
   unit?: string;
   requirement?: string;
   measured?: string;
+  /** UI only: comment field opened via the ⋯ menu. */
+  showComment?: boolean;
 };
 
 const RESULTS = ['Ej besvarad', 'Godkänd', 'Anmärkning', 'Ej aktuellt'];
@@ -261,6 +263,17 @@ export default function EgenkontrollTool({
       kvar: filled.filter((r) => r.result === 'Ej besvarad').length,
     };
   }, [rows]);
+
+  // Row ⋯ menu (Kommentar / Ta bort); closes on any outside click.
+  const [menuRow, setMenuRow] = useState<number | null>(null);
+  useEffect(() => {
+    if (menuRow === null) return;
+    const close = (e: MouseEvent) => {
+      if (!(e.target as HTMLElement).closest('.lm-tool-row-more')) setMenuRow(null);
+    };
+    document.addEventListener('mousedown', close);
+    return () => document.removeEventListener('mousedown', close);
+  }, [menuRow]);
 
   const setRow = (index: number, patch: Partial<Row>) =>
     setRows((prev) => prev.map((row, i) => (i === index ? { ...row, ...patch } : row)));
@@ -612,19 +625,20 @@ export default function EgenkontrollTool({
 
         <div className="lm-tool-rows">
           {measure ? null : (
-            <div className="lm-tool-row lm-tool-row-egen lm-tool-row-head">
+            <div className="lm-tool-row lm-tool-row-ek lm-tool-row-head">
               <span>Kontrollpunkt</span>
               <span>Resultat</span>
-              <span>Kommentar</span>
               <span aria-hidden="true" />
             </div>
           )}
           {rows.map((row, index) => {
             const showSection = !!row.section && row.section !== rows[index - 1]?.section;
+            // Comment is hidden behind ⋯ until asked for (or already filled).
+            const showComment = row.showComment || !!row.comment;
             return (
               <div key={index}>
                 {showSection ? <div className="lm-tool-section-row">{row.section}</div> : null}
-                <div className={`lm-tool-row lm-tool-row-egen${measure ? ' lm-tool-row-egen-measure' : ''}`}>
+                <div className={`lm-tool-row lm-tool-row-ek${measure ? ' lm-tool-row-ek-measure' : ''}`}>
                   <div className="lm-tool-row-point">
                     <input value={row.point} placeholder={row.hint || 'Kontrollpunkt'} title={row.hint} aria-label="Kontrollpunkt" onChange={(e) => setRow(index, { point: e.currentTarget.value })} />
                     {/* Metod/Krav stay in the PDF/Excel, not on screen (less text). */}
@@ -646,10 +660,39 @@ export default function EgenkontrollTool({
                       <span>{row.unit}</span>
                     </label>
                   ) : null}
-                  <input className={measure && !row.unit ? 'lm-tool-row-comment-wide' : undefined} value={row.comment} placeholder="Kommentar" aria-label="Kommentar" onChange={(e) => setRow(index, { comment: e.currentTarget.value })} />
-                  <button type="button" className="lm-tool-row-remove" aria-label="Ta bort rad" onClick={() => removeRow(index)}>
-                    ×
-                  </button>
+                  <div className="lm-tool-row-more">
+                    <button
+                      type="button"
+                      className="lm-tool-row-more-btn"
+                      aria-label="Fler val"
+                      aria-expanded={menuRow === index}
+                      onClick={() => setMenuRow(menuRow === index ? null : index)}
+                    >
+                      ⋯
+                    </button>
+                    {menuRow === index ? (
+                      <div className="lm-tool-row-menu" role="menu">
+                        {showComment ? null : (
+                          <button type="button" role="menuitem" onClick={() => { setRow(index, { showComment: true }); setMenuRow(null); }}>
+                            Kommentar
+                          </button>
+                        )}
+                        <button type="button" role="menuitem" className="is-danger" onClick={() => { removeRow(index); setMenuRow(null); }}>
+                          Ta bort
+                        </button>
+                      </div>
+                    ) : null}
+                  </div>
+                  {showComment ? (
+                    <input
+                      className="lm-tool-row-comment"
+                      value={row.comment}
+                      placeholder="Kommentar"
+                      aria-label="Kommentar"
+                      autoFocus={row.showComment && !row.comment}
+                      onChange={(e) => setRow(index, { comment: e.currentTarget.value })}
+                    />
+                  ) : null}
                 </div>
               </div>
             );

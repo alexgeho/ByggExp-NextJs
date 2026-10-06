@@ -123,7 +123,7 @@ const AB04_HTML = `
 <tr><td><strong>Vem projekterar</strong></td><td>Beställaren</td><td>Entreprenören</td></tr>
 <tr><td><strong>Ritningsrisk</strong></td><td>Beställaren</td><td>Entreprenören</td></tr>
 <tr><td><strong>Beställaren anger</strong></td><td>Färdiga handlingar</td><td>Funktionskrav</td></tr>
-<tr><td><strong>Garantitid</strong></td><td>5 år arbete / 2 år material</td><td>5 år för entreprenaden</td></tr>
+<tr><td><strong>Garantitid</strong></td><td>5 år arbete / 2 år material och varor som entreprenören valt</td><td>5 år för entreprenaden / 2 år för material eller vara som beställaren föreskrivit</td></tr>
 <tr><td><strong>Ansvarstid</strong></td><td colspan="2">10 år från godkänd entreprenad (inleds med garantitiden)</td></tr>
 <tr><td><strong>Typiskt projekt</strong></td><td>Detaljprojekterat bygge</td><td>Nyckelfärdig lösning</td></tr>
 </tbody>
@@ -148,8 +148,8 @@ const AB04_HTML = `
 
 <h2>Garantitid och ansvarstid</h2>
 <ul>
-<li><strong>AB 04:</strong> garantitid 5 år för entreprenörens arbetsprestation och 2 år för material och varor.</li>
-<li><strong>ABT 06:</strong> garantitid 5 år för entreprenaden.</li>
+<li><strong>AB 04 (kap 4 § 7):</strong> garantitid 5 år för entreprenörens arbetsprestation och 2 år för material och varor som entreprenören valt (<a href="https://svjt.se/preprint/fel-under-garantitid-i-ab-04-och-bevisborda" target="_blank" rel="noopener noreferrer">SvJT</a>).</li>
+<li><strong>ABT 06 (kap 4 § 7):</strong> garantitid 5 år för entreprenaden – även för material entreprenören valt. 2 år gäller bara för särskilt material eller särskild vara (fabrikat) som beställaren föreskrivit (<a href="https://www.byggindustrin.se/arbetsliv/expertsvar-entreprenadjuridik/garantitid-for-sarskild-vara-vem-har-ratt/" target="_blank" rel="noopener noreferrer">Byggindustrin</a>).</li>
 <li><strong>Ansvarstid:</strong> 10 år från det att entreprenaden godkänts, och inleds med garantitiden. Under ansvarstiden kan entreprenören bli ansvarig för väsentliga fel som beror på vårdslöshet.</li>
 </ul>
 <p>Vill du gå djupare? Läs <a href="/sv/blog/garantitid-ansvarstid-ab-04">garantitid och ansvarstid i AB 04</a>.</p>
@@ -181,7 +181,7 @@ const AB04_HTML = `
 <h3>Vad är skillnaden mellan AB 04 och ABT 06?</h3>
 <p>AB 04 gäller utförandeentreprenad där beställaren projekterar. ABT 06 gäller totalentreprenad där entreprenören ansvarar för både projektering och utförande.</p>
 <h3>Hur lång är garantitiden?</h3>
-<p>Fem år för entreprenörens arbete (två år för material enligt AB 04). Ansvarstiden är tio år från godkänd entreprenad.</p>
+<p>Fem år för entreprenörens arbete. Två år för material och varor som entreprenören valt i AB 04, och för material som beställaren föreskrivit i ABT 06. Ansvarstiden är tio år från godkänd entreprenad.</p>
 <h3>Var regleras ÄTA?</h3>
 <p>I kap 2 i AB 04 och ABT 06. Se vår <a href="/sv/blog/ata-arbeten">ÄTA-guide</a> för hur du får betalt.</p>
 <h3>Vad betyder "allmänna bestämmelser"?</h3>
@@ -216,7 +216,7 @@ const AB04: BlogPost = {
   isPublished: true,
   publishedAt: '2026-08-12T15:00:00.000Z',
   createdAt: '2026-08-12T15:00:00.000Z',
-  updatedAt: '2026-08-12T15:00:00.000Z',
+  updatedAt: '2026-10-06T12:00:00.000Z',
 };
 
 const SLUTBESIKTNING_HTML = `
@@ -1033,7 +1033,7 @@ const A_FORSENINGSVITE_ENTREPRENAD: BlogPost = {
   coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_FORSENINGSVITE_ENTREPRENAD_HTML,
   seoTitle: "Förseningsvite i entreprenad | ByggExp", seoDescription: "Så fungerar förseningsvite i AB 04 och ABT 06: räkna ut vitet per påbörjad vecka, skriv klausulen rätt och vet vad som gäller om vitesrutan är tom.",
   seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T05:06:00.000Z", createdAt: "2026-08-19T05:06:00.000Z", updatedAt: "2026-08-19T05:06:00.000Z",
+  publishedAt: "2026-08-19T05:06:00.000Z", createdAt: "2026-08-19T05:06:00.000Z", updatedAt: "2026-10-06T12:00:00.000Z",
 };
 
 const A_HINDERSANMALAN_TIDSFORLANGNING_AB04_HTML = `
@@ -1386,9 +1386,9 @@ const A_OB_OVERTID_BYGGAVTALET_RAKNA: BlogPost = {
   title: "OB och övertid i Byggavtalet – så räknar du rätt", slug: "ob-overtid-byggavtalet-rakna", locale: "sv",
   excerpt: "OB och övertid betalas aldrig samtidigt och räknas på utgående lön, inte grundtimlön. Så fungerar nivåerna, taket och journalen i Byggavtalet § 2.", tag: "Lön & avtal",
   coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_OB_OVERTID_BYGGAVTALET_RAKNA_HTML,
-  seoTitle: "OB och övertid i Byggavtalet | ByggExp", seoDescription: "Så räknar du OB-tillägg och övertidsersättning rätt enligt Byggavtalet § 2: nivåer, utgående lön, övertidstak och de vanligaste felen som kostar pengar.",
+  seoTitle: "OB och övertid 2026 – procent i Byggavtalet | ByggExp", seoDescription: "Så räknar du OB-tillägg och övertidsersättning rätt enligt Byggavtalet § 2: nivåer, utgående lön, övertidstak och de vanligaste felen som kostar pengar.",
   seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T09:43:00.000Z", createdAt: "2026-08-19T09:43:00.000Z", updatedAt: "2026-08-19T09:43:00.000Z",
+  publishedAt: "2026-08-19T09:43:00.000Z", createdAt: "2026-08-19T09:43:00.000Z", updatedAt: "2026-10-06T12:00:00.000Z",
 };
 
 const A_KONSUMENTTJANSTLAGEN_HANTVERKARE_15_PROCENT_HTML = `
@@ -2016,9 +2016,9 @@ const A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET: BlogPost = {
   title: "Semesterlön och semesterersättning enligt Byggavtalet 2025–2027", slug: "semesterlon-semesterersattning-byggavtalet", locale: "sv",
   excerpt: "Byggavtalet ger 13 % semesterlön enligt procentregeln – inte lagens 12 %. Så räknar du rätt på hela den intjänade bruttolönen, med ob, ackord och övertid.", tag: "Lön & avtal",
   coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET_HTML,
-  seoTitle: "Semesterlön Byggavtalet 2026 | ByggExp", seoDescription: "Så räknar du rätt på semesterlön och semesterersättning enligt Byggavtalet 2025–2027: 13 % procentregel, ob, ackord och övertid – med räkneexempel för byggföretag.",
+  seoTitle: "Semesterlön Byggavtalet 2026 – 13 % | ByggExp", seoDescription: "Så räknar du rätt på semesterlön och semesterersättning enligt Byggavtalet 2025–2027: 13 % procentregel, ob, ackord och övertid – med räkneexempel för byggföretag.",
   seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T19:03:00.000Z", createdAt: "2026-08-19T19:03:00.000Z", updatedAt: "2026-08-19T19:03:00.000Z",
+  publishedAt: "2026-08-19T19:03:00.000Z", createdAt: "2026-08-19T19:03:00.000Z", updatedAt: "2026-10-06T12:00:00.000Z",
 };
 
 const A_TJANSTEPENSION_BYGGAVTALET_BAO_HTML = `
@@ -2423,7 +2423,7 @@ const A_AB_U_UNDERENTREPRENOR_AVTAL: BlogPost = {
   coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_AB_U_UNDERENTREPRENOR_AVTAL_HTML,
   seoTitle: "AB-U 07 & ABT-U 07 underentreprenör | ByggExp", seoDescription: "Så använder du AB-U 07 och ABT-U 07 för att spegla huvudavtalets villkor mot din UE: garantitid, viten, betalning, besiktning och hävning back-to-back.",
   seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T08:00:00.000Z", createdAt: "2026-08-20T08:00:00.000Z", updatedAt: "2026-08-20T08:00:00.000Z",
+  publishedAt: "2026-08-20T08:00:00.000Z", createdAt: "2026-08-20T08:00:00.000Z", updatedAt: "2026-10-06T12:00:00.000Z",
 };
 
 const A_NYA_AB_04_ABT_06_REVIDERING_2027_HTML = `

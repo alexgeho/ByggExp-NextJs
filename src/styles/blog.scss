@@ -487,6 +487,15 @@
   color: var(--ink);
 }
 
+// On phones the current crumb repeats the H1 right below it (2–3 lines).
+// Hide it and its separator; BreadcrumbList JSON-LD is unaffected.
+@media (max-width: 600px) {
+  .blog-breadcrumbs-current,
+  .blog-breadcrumbs > span:nth-last-child(2) {
+    display: none;
+  }
+}
+
 .blog-article-head {
   margin-bottom: 28px;
 }

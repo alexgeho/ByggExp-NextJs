@@ -1803,7 +1803,7 @@ const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING_HTML = `
 <h2>Boverkets krav och vanliga riktvärden</h2>
 <p>Boverkets föreskrifter om säkerhet vid användning av byggnader (BFS 2024:9), som ersatte BBR 1 juli 2025, kräver att trappor är utformade så att man kan förflytta sig säkert – men anger inga exakta mått för steghöjd och stegdjup. Som utgångsvärden används därför ofta vedertagna riktvärden, bland annat från BBR:s tidigare allmänna råd:</p>
 <ul>
-<li><strong>Steghöjd:</strong> BBR angav ingen maxhöjd. Trä- och Möbelföretagens handledning för trätrappor anger 170–210 mm som lämplig steghöjd i småhus och lägenheter. Ju lägre steg, desto djupare plansteg enligt trappformeln.</li>
+<li><strong>Steghöjd:</strong> 150–200 mm enligt <a href="https://byggkatalogen.byggtjanst.se/byggfakta/trappor/481" target="_blank" rel="noopener noreferrer">Svensk Byggtjänst (Byggfakta om trappor)</a>. Bekvämast är cirka 150–180 mm – högre steg gör trappan brant. Ju lägre steg, desto djupare plansteg enligt trappformeln.</li>
 <li><strong>Stegdjup:</strong> minst 250 mm (0,25 m) mätt i gånglinjen, för trappor i eller i anslutning till byggnader. För trappor i gångvägar på tomten bör stegdjupet vara minst 300 mm (0,30 m).</li>
 </ul>
 <p>Exakta krav skiljer sig åt beroende på om det är en trappa i en bostad, i en publik byggnad eller utomhus. Kontrollera alltid vad som gäller för just din typ av trappa innan du bygger – BFS 2024:9 och, i flerbostadshus och publika lokaler, tillgänglighetskraven i BFS 2024:12. Har ansökan om bygglov eller anmälan kommit in före 1 juli 2026 får BBR fortfarande tillämpas.</p>
@@ -1811,11 +1811,11 @@ const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING_HTML = `
 <h2>Så räknar du ut antal steg</h2>
 <ol>
 <li>Mät den totala höjden trappan ska överbrygga, i mm.</li>
-<li>Dela höjden med en önskad steghöjd (ofta cirka 175 mm) och avrunda till närmaste heltal – det ger antalet steg.</li>
-<li>Räkna ut den faktiska steghöjden: total höjd delat med antal steg. (Avrundningen gör att den sällan blir exakt 175 mm.)</li>
+<li>Dela höjden med den högsta steghöjd du vill ha (ofta cirka 175 mm) och avrunda <strong>uppåt</strong> till heltal – det ger antalet steg. Avrundar du nedåt blir varje steg högre än du tänkt.</li>
+<li>Räkna ut den faktiska steghöjden: total höjd delat med antal steg. Den blir då lika med eller lägre än den önskade.</li>
 <li>Bestäm stegdjupet med trappformeln: stegdjup ≈ 630 − 2 × steghöjd.</li>
 </ol>
-<p>Exempel: en total höjd på 2 700 mm delat med 175 mm ger 15,4 – avrunda till <strong>16 steg</strong>. Faktisk steghöjd blir 2 700 / 16 = 169 mm, och stegdjupet enligt formeln cirka 630 − 2 × 169 = 292 mm. En jämn och bekväm trappa.</p>
+<p>Exempel: en total höjd på 2 700 mm delat med 175 mm ger 15,4 – avrunda uppåt till <strong>16 steg</strong>. Faktisk steghöjd blir 2 700 / 16 = 169 mm, och stegdjupet enligt formeln cirka 630 − 2 × 169 = 292 mm. En jämn och bekväm trappa.</p>
 
 <p>Vår <a href="/sv/verktyg/trappa-kalkylator">trappberäknare</a> gör hela den här uträkningen åt dig när du fyller i den totala höjden. Ska trappan ut i trädgården kan du behöva räkna <a href="/sv/blog/fall-lutning-berakna-avlopp-mark-tak">fall och lutning</a> på gången intill, och bygger du en altan i anslutning hjälper <a href="/sv/verktyg/trall-kalkylator">trallkalkylatorn</a> dig med virket.</p>
 
@@ -1836,7 +1836,7 @@ const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING: BlogPost = {
   coverImageUrl: "/landing/verktyg/trappa-preview.webp", contentHtml: A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING_HTML,
   seoTitle: "Trappformeln & bygga trappa: steghöjd, stegdjup | ByggExp", seoDescription: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, riktvärden (steghöjd max ~180 mm, stegdjup minst 250 mm) och hur du räknar antal steg. Gratis trappberäknare.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/trappa-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T14:05:00.000Z", createdAt: "2026-08-20T14:05:00.000Z", updatedAt: "2026-08-20T14:05:00.000Z",
+  publishedAt: "2026-08-20T14:05:00.000Z", createdAt: "2026-08-20T14:05:00.000Z", updatedAt: "2026-10-06T12:00:00.000Z",
 };
 
 const A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND_HTML = `
@@ -2001,7 +2001,7 @@ const A_REGLAR_DIMENSIONER_C_AVSTAND_VAGG: BlogPost = {
   coverImageUrl: "/landing/verktyg/reglar-preview.webp", contentHtml: A_REGLAR_DIMENSIONER_C_AVSTAND_VAGG_HTML,
   seoTitle: "Reglar – dimensioner & c-avstånd för vägg | ByggExp", seoDescription: "Vanliga regeldimensioner 45×45–45×120, c-avstånd 450 mm (900 mm gips) eller 600 mm (1200 mm gips) och formeln för antal reglar. Gratis reglar-kalkylator.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/reglar-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T14:35:00.000Z", createdAt: "2026-08-20T14:35:00.000Z", updatedAt: "2026-08-20T14:35:00.000Z",
+  publishedAt: "2026-08-20T14:35:00.000Z", createdAt: "2026-08-20T14:35:00.000Z", updatedAt: "2026-10-06T12:00:00.000Z",
 };
 
 const A_GIPSSKIVOR_MATT_STANDARDMATT_VIKT_HTML = `

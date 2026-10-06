@@ -3991,7 +3991,7 @@ const A_ACKORDSLON_BYGG_HTML = `
 
 <h2>Lönegolvet du måste hålla</h2>
 <p>Ackord fritar dig inte från avtalade lägstanivåer. Grundlönen för yrkesarbetare var 196 kr/tim (34 104 kr/mån) från 1 maj 2025 och är <strong>203 kr/tim (35 322 kr/mån) från 1 maj 2026</strong>. Den utgående (individuella) lönen räknades då upp med 7,54 kr/tim, motsvarande 1 312 kr/mån.</p>
-<p>Löneökningen är totalt 6,4 % över två år: 3,4 % från 1 maj 2025 och 3,0 % från 1 maj 2026. Vid andra årets revision höjs utgående lön med 6,85 kr/tim, ungefär 1 192 kr/mån. Poängen för dig som räknar ackord: överenskommelsen måste utformas så att lönen aldrig underskrider avtalad lägstanivå, oavsett hur mängderna faller ut.</p>
+<p>Löneökningen är totalt 6,4 % över två år: 3,4 % från 1 maj 2025 och 3,0 % från 1 maj 2026. Vid andra årets revision höjs utgående lön med 6,85 kr/tim, ungefär 1 192 kr/mån (källa: <a href="https://www.byggnads.se/stod-pa-jobbet/byggnads-kollektivavtal/avtalsrorelsen2025/ditt-avtal/byggavtalet/" target="_blank" rel="noopener noreferrer">Byggnads – Byggavtalet 2025</a>). Poängen för dig som räknar ackord: överenskommelsen måste utformas så att lönen aldrig underskrider avtalad lägstanivå, oavsett hur mängderna faller ut.</p>
 
 <h2>Ackordssedeln och ackordsöverenskommelsen</h2>
 <p>Ackord ska regleras <strong>före</strong> arbetet påbörjas. Ackordsöverenskommelsen (ackordssedeln) är det dokument som binder parterna, och den bör innehålla åtminstone:</p>
@@ -4001,7 +4001,7 @@ const A_ACKORDSLON_BYGG_HTML = `
 <li>Nivå för löpande förskott under arbetets gång.</li>
 <li>Hur mängder ska mätas och dokumenteras.</li>
 </ul>
-<p>Byggnads rekommenderar att ackordslönen räknas fram med en ackordslista/prislista som båda parter godkänt, så att resultatet blir rättvist och transparent för både laget och företaget. En skriftlig överenskommelse skyddar dig mot tvist när slutsedeln ska stämmas av – utan godkänd prislista blir slutavräkningen en förhandling i efterhand.</p>
+<p>Byggnads rekommenderar att ackordslönen räknas fram med en ackordslista/prislista som båda parter godkänt (se Byggnads <a href="https://www.byggnads.se/stod-pa-jobbet/byggnads-kollektivavtal/ditt-kollektivavtal/" target="_blank" rel="noopener noreferrer">tids- och prislistor</a>, t.ex. Ny- och ombyggnadslistan), så att resultatet blir rättvist och transparent för både laget och företaget. En skriftlig överenskommelse skyddar dig mot tvist när slutsedeln ska stämmas av – utan godkänd prislista blir slutavräkningen en förhandling i efterhand.</p>
 
 <h2>Så räknas ackordet – prislista, förskott och slutavräkning</h2>
 <p>Processen följer ett fast mönster:</p>
@@ -4056,7 +4056,7 @@ const A_ACKORDSLON_BYGG: BlogPost = {
   coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_ACKORDSLON_BYGG_HTML,
   seoTitle: "Ackordslön i bygg 2026 – så räknar du rätt | ByggExp", seoDescription: "Så fungerar ackord, ackordssedel, slutavräkning och granskningsarvode enligt Byggavtalet – en praktisk guide för byggföretag som arbetsgivare 2026.",
   seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T08:00:00.000Z", createdAt: "2026-08-19T08:00:00.000Z", updatedAt: "2026-08-19T08:00:00.000Z",
+  publishedAt: "2026-08-19T08:00:00.000Z", createdAt: "2026-08-19T08:00:00.000Z", updatedAt: "2026-10-06T12:00:00.000Z",
 };
 
 const A_OFFENTLIG_UPPHANDLING_BYGG_LOU_HTML = `
@@ -6867,12 +6867,12 @@ const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
 
 const A_RESTIDSERSATTNING_BYGGAVTALET: BlogPost = {
   _id: "code-"+"restidsersattning-byggavtalet",
-  title: "Restidsersättning och reskostnad enligt Byggavtalet - så räknar arbetsgivaren rätt 2026", slug: "restidsersattning-byggavtalet", locale: "sv",
+  title: "Restidsersättning Byggavtalet 2026", slug: "restidsersattning-byggavtalet", locale: "sv",
   excerpt: "Restid, reskostnad, milersättning och traktamente blandas ihop dagligen - här är den tydliga uppdelningen enligt Byggavtalet, med skattegränsen som ställer till det.", tag: "Ekonomi",
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_RESTIDSERSATTNING_BYGGAVTALET_HTML,
   seoTitle: "Restidsersättning Byggavtalet 2026 | ByggExp", seoDescription: "Så skiljer arbetsgivaren restidsersättning, reskostnad, milersättning och traktamente enligt Byggavtalet 2026 - med skatteperspektiv och räkneexempel.",
   seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T22:09:00.000Z", createdAt: "2026-08-19T22:09:00.000Z", updatedAt: "2026-08-19T22:09:00.000Z",
+  publishedAt: "2026-08-19T22:09:00.000Z", createdAt: "2026-08-19T22:09:00.000Z", updatedAt: "2026-10-06T12:00:00.000Z",
 };
 
 const A_KONTROLLERA_KUNDENS_ROTUTRYMME_HTML = `

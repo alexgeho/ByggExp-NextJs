@@ -568,5 +568,8 @@ function formatDate(value: string, lang: LandingLanguageCode) {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    // Fixed zone: server (UTC) and browser must print the same day, or a
+    // late-evening UTC timestamp hydrates as the next day (React #418).
+    timeZone: 'Europe/Stockholm',
   }).format(new Date(value));
 }

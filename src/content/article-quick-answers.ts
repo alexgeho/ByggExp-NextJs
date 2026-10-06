@@ -51,7 +51,7 @@ export const ARTICLE_QUICK_ANSWERS: Record<string, QuickAnswer> = {
 <tr><td>Egen bil (över 2 km enkel väg)</td><td>2,50&nbsp;kr/km, max 120&nbsp;km enkel väg</td></tr>
 <tr><td>Samåkning, föraren</td><td>+0,85&nbsp;kr/km per passagerare</td></tr>
 <tr><td>Restid till förrättning</td><td>Grundlön, max 12&nbsp;tim/dygn inkl. arbetstid</td></tr>
-<tr><td>Traktamente</td><td>435&nbsp;kr/dag</td></tr>
+<tr><td>Traktamente</td><td>435&nbsp;kr/dag vid övernattning</td></tr>
 </tbody>
 </table>
 <p>Grundlön för yrkesarbetare: 203 kr/tim från 1 maj 2026. Förrättning = minst 70 km från bostaden. Skattefritt traktamente 2026: 300 kr/heldag – resten beskattas som lön.</p>`,
@@ -69,7 +69,7 @@ export const ARTICLE_QUICK_ANSWERS: Record<string, QuickAnswer> = {
 
   'ackordslon-bygg': {
     html: `<p><strong>Ackord</strong> är prestationslön: laget får betalt för utförd mängd enligt ackordslista eller arbetsgivarens ackordsunderlag – inte per timme.</p>
-<p>Grundlönen är garanterad: 203 kr/tim för yrkesarbetare från 1 maj 2026 (196 kr före).</p>`,
+<p>Grundlönen är garanterad: 203 kr/tim för yrkesarbetare från 1 maj 2026 (196 kr före). Listor: <a href="https://www.byggnads.se/stod-pa-jobbet/byggnads-kollektivavtal/ditt-kollektivavtal/" target="_blank" rel="noopener noreferrer">Byggnads tids- och prislistor</a>.</p>`,
     source: { label: 'Byggavtalet 2025–2027, § 3', href: BYGGAVTALET_PDF },
   },
 
@@ -85,7 +85,7 @@ export const ARTICLE_QUICK_ANSWERS: Record<string, QuickAnswer> = {
 <tbody>
 <tr><td>Entreprenad</td><td>Utförande</td><td>Total</td></tr>
 <tr><td>Projekterar</td><td>Beställaren</td><td>Entreprenören</td></tr>
-<tr><td>Garantitid</td><td>5 år (material/varor 2 år)</td><td>5 år</td></tr>
+<tr><td>Garantitid</td><td>5 år, material och varor som entreprenören valt 2 år</td><td>5 år, material som beställaren föreskrivit 2 år</td></tr>
 <tr><td>Ansvarstid</td><td colspan="2">10 år från godkännandet</td></tr>
 </tbody>
 </table>

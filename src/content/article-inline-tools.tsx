@@ -11,6 +11,11 @@ import SkyddsrondMallTool from '../components/LeadMagnet/SkyddsrondMallTool';
 import TakKalkylatorTool from '../components/LeadMagnet/TakKalkylatorTool';
 import TakstolarKalkylatorTool from '../components/LeadMagnet/TakstolarKalkylatorTool';
 import TrappaKalkylatorTool from '../components/LeadMagnet/TrappaKalkylatorTool';
+import ObOvertidKalkylatorTool from '../components/LeadMagnet/ObOvertidKalkylatorTool';
+import RestidsersattningKalkylatorTool from '../components/LeadMagnet/RestidsersattningKalkylatorTool';
+import AckordKalkylatorTool from '../components/LeadMagnet/AckordKalkylatorTool';
+import ForseningsviteKalkylatorTool from '../components/LeadMagnet/ForseningsviteKalkylatorTool';
+import ReglarKalkylatorTool from '../components/LeadMagnet/ReglarKalkylatorTool';
 
 // Interactive lead-magnet tools embedded directly inside a blog article (not
 // just linked). Keyed by the shared article slug. sv-only — the tools carry
@@ -93,6 +98,38 @@ export const ARTICLE_INLINE_TOOLS: Record<string, InlineTool> = {
   'hindersanmalan-tidsforlangning-ab04': {
     heading: 'Skriv din hindersanmälan',
     render: () => <HindersanmalanMallTool />,
+    position: 'top',
+  },
+  // Intent verify 2026-10: the calculator right after the quick answer.
+  'ob-overtid-byggavtalet-rakna': {
+    heading: 'Räkna OB och övertid',
+    render: () => <ObOvertidKalkylatorTool />,
+    position: 'top',
+  },
+  'restidsersattning-byggavtalet': {
+    heading: 'Räkna restidsersättning',
+    render: () => <RestidsersattningKalkylatorTool />,
+    position: 'top',
+  },
+  'ackordslon-bygg': {
+    heading: 'Räkna ackordsöverskott',
+    render: () => <AckordKalkylatorTool />,
+    position: 'top',
+  },
+  'forseningsvite-entreprenad': {
+    heading: 'Räkna förseningsvite',
+    render: () => <ForseningsviteKalkylatorTool locale="sv" />,
+    position: 'top',
+  },
+  'reglar-dimensioner-c-avstand-vagg': {
+    heading: 'Räkna reglar',
+    render: () => <ReglarKalkylatorTool locale="sv" />,
+    position: 'top',
+  },
+  // UE contract = entreprenadkontrakt with AB-U 07 on top of AB 04.
+  'ab-u-underentreprenor-avtal': {
+    heading: 'Fyll i kontraktet',
+    render: () => <EntreprenadkontraktMallTool />,
     position: 'top',
   },
 };

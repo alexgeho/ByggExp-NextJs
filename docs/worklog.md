@@ -1,5 +1,13 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-06 (вечер) — проверка intent-фиксов + доработки (сессия alexandergerhard-61)
+- Живой аудит 30 страниц intent-audit: 17 PASS / 12 PARTIAL / 1 FAIL → исправлено двумя партиями (строитель → критик → проверка):
+  - A (e5682fb, 9d99b84): egenkontroll-mall открывается на «Bygg / Stomme» (PDF не пустой); общий ChipRow (10 инструментов, без 3-копийной карусели); betong без overflow на 390, пример 10×8×0,1 → 11,24 m³ «inkl. kantbalk och spill»; trappa 2700 мм → 16 steg (Math.ceil); примеры в OB/ackord/vite/reglar; ToolDownloads + StickyDownloadBar у MallToPdfTool (skyddsrond, byggdagbok…), дата = сегодня; вступления в 1 строку (текст перенесён ниже); чат-кнопка прячется на телефоне, пока инструмент на экране.
+  - B (3ab39b3, 0ea6436): калькуляторы под быстрым ответом в OB/restid/ackord/vite/reglar; hydration #418 (formatDate без timeZone → Europe/Stockholm); мобильные крошки без последнего пункта; titles OB/semesterlön; факты: trappa (округлять вверх, 150–200 мм Byggtjänst), garantitid AB 04 vs ABT 06, ackord (Byggnads), traktamente 435 «vid övernattning»; с ab-u убран вводящий в заблуждение шаблон.
+- Тарифные карточки (d129fc8, fcc2b03): строки → страницы функций, «*» раскрывает лимиты (против dead clicks Clarity 21%).
+- Новая статья /sv/blog/basta-tidrapporteringssystem-bygg (54691b7, f851cc9): 8 систем, цены с сайтов вендоров (okt 2026), пример на 10 чел.
+NÄSTA: через 1–2 нед. Clarity — dead clicks/quick backs; GSC ~20.10 — клики по статье-сравнению и OB/restid; идеи «чтобы возвращались»: значения калькуляторов в URL, черновики шаблонов, «Gör det i appen» после скачивания.
+
 ## 🟢 2026-10-06 (день) — «человек получает то, за чем пришёл» (live)
 - Аудит топ-30 страниц GSC → `docs/seo/intent-audit-2026-10.md` (7 ок, 23 нет).
 - Механизмы: `src/content/article-inline-tools.tsx` (`position: 'top'` = инструмент под H1) и `src/content/article-quick-answers.ts` (короткий ответ под H1 + источник). Обложка статьи ≤340px / 220px.

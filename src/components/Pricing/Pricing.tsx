@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import type { MouseEvent, ReactNode } from "react";
+import type { ReactNode } from "react";
 import type { PluralForms, PricingProps } from "../../types/pricing";
 
 /* Price model (SEK excl. VAT). Yearly = 12 months minus YEARLY_DISCOUNT. */
@@ -35,7 +35,8 @@ function CheckIcon() {
 
 /* Feature lines link to the page that explains them (Clarity showed visitors
    clicking the lines and getting nothing). Targets are keyed by item index so
-   every language links to the same page. The feature articles exist only in
+   every language links to the same page; a locale whose list length differs
+   gets no links rather than wrong ones. The feature articles exist only in
    these languages; elsewhere the lines stay plain text. */
 const FEATURE_LINK_LANGS: readonly string[] = ["sv", "en", "pl", "ru", "nb"];
 
@@ -61,32 +62,28 @@ const FINANCE_LINKS: readonly (string | null)[] = [
   null, // Personlig ekonomi (kommer snart)
 ];
 
-// Komplett (after the highlight is split off): items 0/1 jump to the card they
-// name, 2/3 link like the plan cards.
+// Komplett (after the highlight is split off).
 const KOMPLETT_LINKS: readonly (string | null)[] = [
-  null, // Allt i Koll på jobbet  -> jump to that card
-  null, // Allt i Koll på pengarna -> jump to that card
-  "blog/loneunderlag-for-byggforetag", // Timmar blir faktura eller lön
+  null, // Allt i Koll på jobbet
+  null, // Allt i Koll på pengarna
+  "blog/fakturera-fran-byggexp", // Timmar blir faktura eller lön
   "blog/projektekonomi-och-lonsamhet", // Kvitton/fakturor in i projektekonomin
 ];
-const KOMPLETT_JUMPS: readonly (number | null)[] = [1, 0, null, null];
 
 type ListItem = {
   text: string;
   href?: string;
   /** Item ends with "*": tapping it shows the fair-use note. */
   note?: boolean;
-  /** Index of the plan card this item names ("Allt i …"). */
-  jump?: number;
 };
 
 function toItems(
   items: readonly string[],
   lang: string,
   links: readonly (string | null)[] = [],
-  jumps: readonly (number | null)[] = [],
 ): ListItem[] {
-  const linked = FEATURE_LINK_LANGS.includes(lang);
+  const linked =
+    FEATURE_LINK_LANGS.includes(lang) && links.length === items.length;
   return items.map((raw, i) => {
     const note = raw.endsWith("*");
     const link = linked ? links[i] : null;
@@ -94,18 +91,8 @@ function toItems(
       text: note ? raw.slice(0, -1) : raw,
       href: link ? `/${lang}/${link}` : undefined,
       note,
-      jump: jumps[i] ?? undefined,
     };
   });
-}
-
-/** Restart a one-shot CSS animation class on an element. */
-function flash(el: HTMLElement | null | undefined, className: string) {
-  if (!el) return;
-  el.classList.remove(className);
-  void el.offsetWidth;
-  el.classList.add(className);
-  window.setTimeout(() => el.classList.remove(className), 1200);
 }
 
 function CheckList({
@@ -115,7 +102,6 @@ function CheckList({
   note,
   openNote,
   onToggleNote,
-  onJump,
 }: {
   items: readonly ListItem[];
   accent: Accent;
@@ -123,7 +109,6 @@ function CheckList({
   note?: string;
   openNote?: string | null;
   onToggleNote?: (id: string) => void;
-  onJump?: (card: number) => void;
 }) {
   return (
     <ul className="pricing-list">
@@ -150,17 +135,6 @@ function CheckList({
               onClick={toggle}
             >
               {item.text}*
-            </button>
-          );
-        } else if (item.jump !== undefined && onJump) {
-          const card = item.jump;
-          body = (
-            <button
-              type="button"
-              className="pricing-item-btn pricing-item-jump"
-              onClick={() => onJump(card)}
-            >
-              {item.text}
             </button>
           );
         }
@@ -251,27 +225,6 @@ function Pricing({ pricingT, lang }: PricingProps) {
   const toggleNote = (id: string) =>
     setOpenNote((cur) => (cur === id ? null : id));
 
-  const cardAt = (index: number) =>
-    sliderRef.current?.querySelectorAll<HTMLElement>(".pricing-card")[index];
-
-  // "Allt i ..." in Full koll: bring the named card into view and mark it.
-  const jumpToCard = (index: number) => {
-    const slider = sliderRef.current;
-    if (slider && slider.scrollWidth > slider.clientWidth) scrollToSlide(index);
-    flash(cardAt(index), "pricing-card-flash");
-  };
-
-  // Price or empty card area: the card's own CTA is the next step. The price
-  // follows it; anywhere else it is highlighted so the eye lands on it.
-  const onCardClick = (e: MouseEvent<HTMLDivElement>) => {
-    const target = e.target as HTMLElement;
-    if (target.closest("a, button, .pricing-note")) return;
-    if (window.getSelection()?.toString()) return;
-    const cta = e.currentTarget.querySelector<HTMLAnchorElement>(".btn-primary");
-    if (target.closest(".pricing-price")) cta?.click();
-    else flash(cta, "pricing-cta-flash");
-  };
-
   const numberFormat = new Intl.NumberFormat(lang, {
     maximumFractionDigits: 0,
   });
@@ -332,7 +285,6 @@ function Pricing({ pricingT, lang }: PricingProps) {
               ),
             lang,
             KOMPLETT_LINKS,
-            KOMPLETT_JUMPS,
           ),
         },
       ],
@@ -432,7 +384,6 @@ function Pricing({ pricingT, lang }: PricingProps) {
               <div
                 key={plan.key}
                 className={`pricing-card${plan.popular ? " pricing-card-popular" : ""}`}
-                onClick={onCardClick}
               >
                 <div className="pricing-card-top">
                   <span className={`pricing-tag pricing-tag-${plan.accent}`}>
@@ -462,7 +413,6 @@ function Pricing({ pricingT, lang }: PricingProps) {
                         note={noteText}
                         openNote={openNote}
                         onToggleNote={toggleNote}
-                        onJump={jumpToCard}
                       />
                     </div>
                   ))}

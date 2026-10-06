@@ -321,7 +321,8 @@
   cursor: pointer;
 }
 
-/* The lone "*" next to a link: a bigger invisible tap area. */
+/* The lone "*" next to a link: a bigger invisible tap area (to the right
+   only, so it never covers the link text). */
 .pricing-star-btn {
   position: relative;
   margin-left: 1px;
@@ -329,7 +330,7 @@
   &::after {
     content: "";
     position: absolute;
-    inset: -10px -12px;
+    inset: -10px -12px -10px 0;
   }
 }
 
@@ -370,35 +371,6 @@
 
   &[hidden] {
     display: none;
-  }
-}
-
-/* Price click follows the card's CTA. */
-.pricing-card .pricing-price {
-  cursor: pointer;
-}
-
-/* Brief ring when the card or its CTA is the answer to a click. */
-@keyframes pricing-flash {
-  0% {
-    box-shadow: 0 0 0 0 rgba(35, 148, 255, 0.45);
-  }
-  100% {
-    box-shadow: 0 0 0 12px rgba(35, 148, 255, 0);
-  }
-}
-
-.pricing-cta-flash,
-.pricing-card-flash {
-  animation: pricing-flash 0.9s ease-out 1;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pricing-cta-flash,
-  .pricing-card-flash {
-    animation: none;
-    outline: 2px solid var(--blue);
-    outline-offset: 2px;
   }
 }
 

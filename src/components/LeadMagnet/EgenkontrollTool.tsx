@@ -3,8 +3,19 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { EGENKONTROLL_PRESETS } from './egenkontrollPresets';
 
 // True when a title is just one of the template names (never typed by the user).
-const isPresetName = (value?: string | null) =>
-  !!value && EGENKONTROLL_PRESETS.some((p) => p.name.trim() === value.trim());
+// True when a title comes from a template, not the user: the template name
+// itself, or an old prefilled name the user typed into ("Egenkontroll xyz /
+// Gjutning") — it contains the template's trade part. Such a title is dropped
+// so the (pale, template-following) placeholder shows instead.
+const isPresetName = (value?: string | null) => {
+  const v = value?.trim().toLowerCase();
+  if (!v) return false;
+  return EGENKONTROLL_PRESETS.some((p) => {
+    const name = p.name.trim().toLowerCase();
+    const trade = name.replace(/^egenkontroll\s+/, '');
+    return v === name || (v.startsWith('egenkontroll') && trade.length > 2 && v.includes(trade.split(' / ').pop()!));
+  });
+};
 
 // Free egenkontroll (self-inspection checklist) tool. Categories and result
 // states mirror the ByggExp KMA module (Kvalitet/Miljö/Arbetsmiljö, and

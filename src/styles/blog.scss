@@ -883,3 +883,12 @@
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(10, 40, 90, 0.1);
 }
+
+// Template-intent articles ("… mall"): the tool replaces the cover right under
+// the H1 — no extra frame, the tool card is the frame.
+.article-tool.article-tool--top {
+  margin: 28px 0 48px;
+  padding: 0;
+  background: none;
+  border: none;
+}

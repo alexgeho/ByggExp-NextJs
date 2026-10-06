@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 
+import ArbetsberedningMallTool from '../components/LeadMagnet/ArbetsberedningMallTool';
 import BetongKalkylatorTool from '../components/LeadMagnet/BetongKalkylatorTool';
 
 // Interactive lead-magnet tools embedded directly inside a blog article (not
@@ -13,6 +14,9 @@ type InlineTool = {
   heading: string;
   intro?: string;
   render: () => ReactNode;
+  /** 'top' = the tool IS what the searcher came for (e.g. "… mall"): it
+   *  replaces the cover right under the H1, the guide follows below. */
+  position?: 'top' | 'bottom';
 };
 
 export const ARTICLE_INLINE_TOOLS: Record<string, InlineTool> = {
@@ -21,6 +25,12 @@ export const ARTICLE_INLINE_TOOLS: Record<string, InlineTool> = {
     intro:
       'Fyll i måtten så får du kubik betong, antal säckar, armering och en kostnadsuppskattning – ladda ner allt som PDF.',
     render: () => <BetongKalkylatorTool locale="sv" />,
+  },
+  // Ranks #2 for "arbetsberedning mall": searchers want the template, not an essay.
+  'arbetsberedning-mall-bygg': {
+    heading: 'Fyll i din arbetsberedning',
+    render: () => <ArbetsberedningMallTool />,
+    position: 'top',
   },
 };
 

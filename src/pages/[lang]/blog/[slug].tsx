@@ -199,6 +199,7 @@ export default function BlogArticlePage({
 
   // Interactive lead-magnet tool embedded in this article, if any (sv-only).
   const inlineTool = getArticleInlineTool(post.slug);
+  const toolOnTop = lang === 'sv' && inlineTool?.position === 'top';
 
   // Click any image inside the article body (screenshots, diagrams) to open it
   // full-screen. Listeners are attached directly to each <img> since the body is
@@ -373,7 +374,7 @@ export default function BlogArticlePage({
             }}
           />
         ) : null}
-        {coverImageUrl ? <link rel="preload" as="image" href={coverImageUrl} fetchPriority="high" /> : null}
+        {coverImageUrl && !toolOnTop ? <link rel="preload" as="image" href={coverImageUrl} fetchPriority="high" /> : null}
       </Head>
 
       <Header headerT={headerT} />
@@ -405,7 +406,11 @@ export default function BlogArticlePage({
             </p>
           </div>
 
-          {coverImageUrl ? (
+          {toolOnTop && inlineTool ? (
+            <section className="article-tool article-tool--top" aria-label={inlineTool.heading}>
+              {inlineTool.render()}
+            </section>
+          ) : coverImageUrl ? (
             <img
               src={coverImageUrl}
               alt={post.title}
@@ -426,7 +431,7 @@ export default function BlogArticlePage({
           {/* Embedded interactive lead-magnet tool (sv-only), e.g. the concrete
               calculator on berakna-betongatgang-platta. Placed after the guide so
               the reader has context, then can act right on the page. */}
-          {lang === 'sv' && inlineTool ? (
+          {lang === 'sv' && inlineTool && !toolOnTop ? (
             <section className="article-tool" aria-label={inlineTool.heading}>
               <h2 className="article-tool-title">{inlineTool.heading}</h2>
               {inlineTool.intro ? (

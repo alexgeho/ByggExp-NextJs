@@ -2,7 +2,9 @@
 // All design knobs live in these CSS variables — change them (or the rules
 // below) to restyle every lead-magnet page at once after designer feedback.
 // The markup lives in src/components/LeadMagnet/*.
-.lead-magnet {
+// Tokens also apply to tools embedded in blog articles (.article-tool).
+.lead-magnet,
+.article-tool {
   --lm-accent: var(--blue);
   --lm-card-bg: var(--white);
   --lm-card-border: rgba(10, 40, 90, 0.1);
@@ -10,7 +12,9 @@
   --lm-radius: 18px;
   --lm-gap: 26px;
   --lm-field-border: rgba(10, 40, 90, 0.18);
+}
 
+.lead-magnet {
   background: var(--bg);
   padding: 56px 0 84px;
   color: var(--ink);

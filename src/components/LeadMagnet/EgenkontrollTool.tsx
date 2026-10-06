@@ -165,7 +165,7 @@ export default function EgenkontrollTool({
       box.removeEventListener('scroll', wrap);
     };
   }, []);
-  const pauseChips = (paused: boolean) => () => {
+  const pauseChips = (paused: boolean) => {
     chipsPaused.current = paused;
   };
   const protocol = isProtocol(rows);
@@ -542,12 +542,12 @@ export default function EgenkontrollTool({
         <div
           className="lm-tool-presets-buttons"
           ref={chipsRef}
-          onMouseEnter={pauseChips(true)}
-          onMouseLeave={pauseChips(false)}
-          onTouchStart={pauseChips(true)}
-          onTouchEnd={pauseChips(false)}
-          onFocus={pauseChips(true)}
-          onBlur={pauseChips(false)}
+          onMouseEnter={() => pauseChips(true)}
+          onMouseLeave={() => pauseChips(false)}
+          onTouchStart={() => pauseChips(true)}
+          onTouchEnd={() => pauseChips(false)}
+          onFocus={() => pauseChips(true)}
+          onBlur={() => pauseChips(false)}
         >
           {[0, 1, 2].flatMap((copy) => EGENKONTROLL_PRESETS.map((preset) => (
             <button

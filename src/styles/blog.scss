@@ -627,6 +627,30 @@
   border-bottom: 0;
 }
 
+// Many-column comparison tables: compact cells, and the first column (system
+// name) stays put while the table scrolls sideways on phones.
+.blog-article-content .article-table--compare th,
+.blog-article-content .article-table--compare td {
+  padding: 10px 12px;
+}
+
+.blog-article-content .article-table--compare th:first-child,
+.blog-article-content .article-table--compare td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--bg);
+  box-shadow: inset -1px 0 0 rgba(10, 40, 90, 0.12);
+}
+
+.blog-article-content .article-table--compare thead th:first-child {
+  background: linear-gradient(rgba(37, 99, 201, 0.07), rgba(37, 99, 201, 0.07)), var(--bg);
+}
+
+.blog-article-content .article-table--compare tbody tr:nth-child(even) td:first-child {
+  background: linear-gradient(rgba(10, 40, 90, 0.02), rgba(10, 40, 90, 0.02)), var(--bg);
+}
+
 // Diagrams (SVG/webp illustrations) — wider than the default 320px image cap.
 .blog-article-content .article-diagram {
   margin: 26px 0;

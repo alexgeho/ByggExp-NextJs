@@ -160,7 +160,7 @@ const TIDRAPPORTERING_HTML = `
 <li>Du ser nedlagd tid per projekt och din verkliga debiteringsgrad.</li>
 <li>Tiden blir direkt underlag för fakturan, med ROT och moms uträknat.</li>
 </ol>
-<p>Vill du börja på papper eller i Excel? <a href="/sv/verktyg/tidrapport-mall">Ladda ner tidrapport-mallen</a> – den finns för dag, vecka och månad, med PDF- och Excel-export.</p>
+<p>Vill du börja på papper eller i Excel? <a href="/sv/verktyg/tidrapport-mall">Ladda ner tidrapport-mallen</a> – den finns för dag, vecka och månad, med PDF- och Excel-export. Ska ni välja system? Se <a href="/sv/blog/basta-tidrapporteringssystem-bygg">bästa tidrapporteringssystem för bygg</a> – 8 system jämförda med pris.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är skillnaden mellan tidrapport och personalliggare?</h3>

@@ -14,6 +14,8 @@ const isPresetName = (value?: string | null) =>
 
 type Row = {
   point: string;
+  /** Template text: shown as the placeholder, used when point is left empty. */
+  hint?: string;
   result: string;
   comment: string;
   // Optional protocol fields, filled from presets like el (sections + measured values).
@@ -36,7 +38,8 @@ const presetRows = (presetId: string): Row[] => {
   const preset = EGENKONTROLL_PRESETS.find((p) => p.id === presetId);
   if (!preset) return [emptyRow(), emptyRow(), emptyRow()];
   return preset.items.map((item) => ({
-    point: item.point,
+    point: '',
+    hint: item.point,
     result: RESULTS[0],
     comment: '',
     section: item.section,
@@ -64,6 +67,14 @@ const baseRows = (presetId?: string | null) =>
 /** Rows differ from the untouched template (or the blank start). */
 const rowsEdited = (rows: Row[], presetId?: string | null) =>
   JSON.stringify(rows.map(rowInput)) !== JSON.stringify(baseRows(presetId).map(rowInput));
+
+/** What the row says: typed text, else the template text. */
+const pointOf = (r: Row) => r.point.trim() || r.hint || '';
+
+// Old drafts stored template text as the value — turn it back into the hint.
+const ALL_POINTS = new Set(EGENKONTROLL_PRESETS.flatMap((p) => p.items.map((i) => i.point)));
+const migrateRow = (r: Row): Row =>
+  !r.hint && ALL_POINTS.has(r.point) ? { ...r, hint: r.point, point: '' } : r;
 
 const isProtocol = (rows: Row[]) => rows.some((r) => r.unit || r.requirement);
 const hasMeasure = (rows: Row[]) => rows.some((r) => r.unit);
@@ -117,20 +128,46 @@ export default function EgenkontrollTool({
   const [rows, setRows] = useState<Row[]>(() => baseRows(defaultPreset));
   const [meta, setMeta] = useState<Record<string, string>>({});
   const [busy, setBusy] = useState(false);
-  // Clarity showed "dead clicks" on the template buttons (the filled table is
-  // below the fold): highlight the chosen preset and scroll the table into view.
-  const rowsRef = useRef<HTMLDivElement>(null);
   // Chosen template: highlight + extra header fields / signatures / footnote.
   const [presetId, setPresetId] = useState<string | null>(defaultPreset ?? null);
   const preset = EGENKONTROLL_PRESETS.find((p) => p.id === presetId);
   const docTitle = title.trim() || preset?.name || 'Egenkontroll';
-  // Mobile shows the chips as one scrollable line — keep the chosen one in view.
+  // Chips: one line rendered three times, drifting slowly in a loop (pauses
+  // on hover/touch, can be scrolled by hand). Scroll position is kept inside
+  // the middle copy so either direction wraps around seamlessly.
   const chipsRef = useRef<HTMLDivElement>(null);
+  const chipsPaused = useRef(false);
   useEffect(() => {
     const box = chipsRef.current;
-    const chip = box?.querySelector<HTMLElement>('.is-active');
-    if (box && chip) box.scrollLeft = chip.offsetLeft - box.offsetLeft - 12;
-  }, [presetId]);
+    if (!box) return;
+    const wrap = () => {
+      const third = box.scrollWidth / 3;
+      if (box.scrollLeft < third * 0.5) box.scrollLeft += third;
+      else if (box.scrollLeft > third * 1.5) box.scrollLeft -= third;
+    };
+    box.scrollLeft = box.scrollWidth / 3;
+    box.addEventListener('scroll', wrap, { passive: true });
+    const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let raf = 0;
+    let pos = box.scrollLeft;
+    const tick = () => {
+      // Keep a float position: scrollLeft may round sub-pixel steps away.
+      if (chipsPaused.current || Math.abs(box.scrollLeft - pos) > 2) pos = box.scrollLeft;
+      if (!chipsPaused.current) {
+        pos += 0.35;
+        box.scrollLeft = pos;
+      }
+      raf = requestAnimationFrame(tick);
+    };
+    if (!still) raf = requestAnimationFrame(tick);
+    return () => {
+      cancelAnimationFrame(raf);
+      box.removeEventListener('scroll', wrap);
+    };
+  }, []);
+  const pauseChips = (paused: boolean) => () => {
+    chipsPaused.current = paused;
+  };
   const protocol = isProtocol(rows);
   const measure = hasMeasure(rows);
 
@@ -161,14 +198,14 @@ export default function EgenkontrollTool({
           !!d.project?.trim() ||
           !!d.responsible?.trim() ||
           Object.values(d.meta ?? {}).some((v) => v?.trim()) ||
-          (!!d.rows?.length && rowsEdited(d.rows, d.presetId));
+          (!!d.rows?.length && rowsEdited(d.rows.map(migrateRow), d.presetId));
         if (hasContent) {
           // eslint-disable-next-line react-hooks/set-state-in-effect -- restore the saved draft from localStorage after mount (not available during SSR).
           setTitle(savedTitle);
           setProject(d.project ?? '');
           setResponsible(d.responsible ?? '');
           setDate(d.date || today());
-          if (d.rows?.length) setRows(d.rows);
+          if (d.rows?.length) setRows(d.rows.map(migrateRow));
           setMeta(d.meta ?? {});
           if (d.presetId !== undefined) setPresetId(d.presetId);
           setRestored(true);
@@ -216,7 +253,7 @@ export default function EgenkontrollTool({
   // Sammanfattning – ger känslan av ett riktigt verktyg och sporrar till att
   // faktiskt besvara alla punkter. Räknar bara ifyllda kontrollpunkter.
   const stats = useMemo(() => {
-    const filled = rows.filter((r) => r.point.trim());
+    const filled = rows.filter((r) => pointOf(r));
     return {
       total: filled.length,
       godkand: filled.filter((r) => r.result === 'Godkänd').length,
@@ -237,10 +274,6 @@ export default function EgenkontrollTool({
     setRows(presetRows(id));
     // A title that is just a template name follows the template (placeholder).
     if (isPresetName(title)) setTitle('');
-    // Let the table render, then bring it into view as clear confirmation.
-    window.setTimeout(() => {
-      rowsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }, 60);
   };
   const removeRow = (index: number) =>
     setRows((prev) => (prev.length > 1 ? prev.filter((_, i) => i !== index) : prev));
@@ -394,7 +427,7 @@ export default function EgenkontrollTool({
           doc.line(marginX, y, tableRight, y);
         }
 
-        const pointBase = row.reference ? `${row.point}  (${row.reference})` : row.point;
+        const pointBase = row.reference ? `${pointOf(row)}  (${row.reference})` : pointOf(row);
         // Method on its own line under the point (Boverket: vad + hur).
         const pointText = row.method ? `${pointBase}\nMetod: ${row.method}` : pointBase;
         const measuredText = row.measured?.trim()
@@ -474,8 +507,8 @@ export default function EgenkontrollTool({
         : ['Kontrollpunkt', 'Resultat', 'Datum / sign.', 'Kommentar'],
       ...rows.map((r) =>
         protocol
-          ? [r.section || '', r.point || '', r.method || '', r.reference || '', r.requirement || '', r.measured || '', r.unit || '', r.result, '', r.comment || '']
-          : [r.point || '', r.result, '', r.comment || ''],
+          ? [r.section || '', pointOf(r), r.method || '', r.reference || '', r.requirement || '', r.measured || '', r.unit || '', r.result, '', r.comment || '']
+          : [pointOf(r), r.result, '', r.comment || ''],
       ),
       ...(preset?.signatures ?? ['Underskrift ansvarig']).map((s) => [s, '']),
     ];
@@ -506,19 +539,30 @@ export default function EgenkontrollTool({
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Mall</span>
-        <div className="lm-tool-presets-buttons" ref={chipsRef}>
-          {EGENKONTROLL_PRESETS.map((preset) => (
+        <div
+          className="lm-tool-presets-buttons"
+          ref={chipsRef}
+          onMouseEnter={pauseChips(true)}
+          onMouseLeave={pauseChips(false)}
+          onTouchStart={pauseChips(true)}
+          onTouchEnd={pauseChips(false)}
+          onFocus={pauseChips(true)}
+          onBlur={pauseChips(false)}
+        >
+          {[0, 1, 2].flatMap((copy) => EGENKONTROLL_PRESETS.map((preset) => (
             <button
-              key={preset.id}
+              key={`${copy}-${preset.id}`}
               type="button"
               className={`lm-tool-preset${presetId === preset.id ? ' is-active' : ''}`}
               aria-pressed={presetId === preset.id}
+              aria-hidden={copy !== 1 || undefined}
+              tabIndex={copy !== 1 ? -1 : undefined}
               onClick={() => applyPreset(preset.id)}
             >
               {/* "Egenkontroll" is the page's subject — chips say only the trade. */}
               {preset.name.replace(/^Egenkontroll\s+/i, '')}
             </button>
-          ))}
+          )))}
         </div>
       </div>
 
@@ -566,7 +610,7 @@ export default function EgenkontrollTool({
           </div>
         ) : null}
 
-        <div className="lm-tool-rows" ref={rowsRef}>
+        <div className="lm-tool-rows">
           {measure ? null : (
             <div className="lm-tool-row lm-tool-row-egen lm-tool-row-head">
               <span>Kontrollpunkt</span>
@@ -582,7 +626,7 @@ export default function EgenkontrollTool({
                 {showSection ? <div className="lm-tool-section-row">{row.section}</div> : null}
                 <div className={`lm-tool-row lm-tool-row-egen${measure ? ' lm-tool-row-egen-measure' : ''}`}>
                   <div className="lm-tool-row-point">
-                    <input value={row.point} placeholder="Kontrollpunkt" aria-label="Kontrollpunkt" onChange={(e) => setRow(index, { point: e.currentTarget.value })} />
+                    <input value={row.point} placeholder={row.hint || 'Kontrollpunkt'} title={row.hint} aria-label="Kontrollpunkt" onChange={(e) => setRow(index, { point: e.currentTarget.value })} />
                     {/* Metod/Krav stay in the PDF/Excel, not on screen (less text). */}
                   </div>
                   <select value={row.result} aria-label="Resultat" onChange={(e) => setRow(index, { result: e.currentTarget.value })}>

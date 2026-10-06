@@ -734,11 +734,21 @@
 
 .lm-tool-presets-buttons {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 10px;
+  scrollbar-width: none;
+  // Chips fade in/out at the edges — reads as an endless line.
+  mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+}
+
+.lm-tool-presets-buttons::-webkit-scrollbar {
+  display: none;
 }
 
 .lm-tool-preset {
+  flex: 0 0 auto;
+  white-space: nowrap;
   border: 1px solid var(--lm-accent);
   background: var(--lm-card-bg);
   color: var(--lm-accent);
@@ -1242,7 +1252,8 @@
   margin: 14px 0 8px;
   padding-bottom: 4px;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.82rem; // same size as the column heads (Kontrollpunkt…)
+  color: var(--muted);
   border-bottom: 1px solid var(--lm-field-border);
 }
 
@@ -1267,17 +1278,7 @@
   }
 
   .lm-tool-presets-buttons {
-    flex-wrap: nowrap;
-    overflow-x: auto;
     gap: 8px;
-    margin: 0 -12px;
-    padding: 0 12px 2px;
-    scrollbar-width: none;
-  }
-
-  .lm-tool-preset {
-    flex: 0 0 auto;
-    white-space: nowrap;
   }
 }
 
@@ -1582,7 +1583,13 @@
 .lm-tool input::placeholder,
 .lm-tool textarea::placeholder {
   color: var(--muted-2);
-  opacity: 0.75;
+  opacity: 0.55;
+}
+
+// Placeholder disappears as soon as the field is clicked.
+.lm-tool input:focus::placeholder,
+.lm-tool textarea:focus::placeholder {
+  color: transparent;
 }
 
 .lm-tool-field select,

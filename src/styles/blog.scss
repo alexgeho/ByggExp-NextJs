@@ -898,3 +898,67 @@
   font-size: clamp(1.75rem, 3vw, 2.4rem);
   line-height: 1.12;
 }
+
+// Direct answer under the H1 (src/content/article-quick-answers.ts).
+.article-answer {
+  margin: 20px 0 32px;
+  padding: 20px 24px;
+  border-radius: 16px;
+  background: var(--white);
+  border: 1px solid rgba(15, 35, 80, 0.1);
+  box-shadow: 0 12px 34px rgba(10, 40, 90, 0.06);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.article-answer > div > :first-child { margin-top: 0; }
+.article-answer > div > :last-child { margin-bottom: 0; }
+
+.article-answer table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 0;
+  font-size: 0.98rem;
+}
+
+.article-answer th,
+.article-answer td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(15, 35, 80, 0.08);
+}
+
+.article-answer th {
+  font-size: 0.82rem;
+  color: var(--muted, #5b6b80);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.article-answer-source {
+  margin: 12px 0 0;
+  font-size: 0.82rem;
+  color: var(--muted, #5b6b80);
+}
+
+// Cover: decorative — never push the content people came for below the fold.
+.blog-article-cover {
+  max-height: 340px;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .article-answer {
+    padding: 16px;
+    font-size: 1rem;
+  }
+
+  .article-answer table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .blog-article-cover {
+    max-height: 220px;
+  }
+}

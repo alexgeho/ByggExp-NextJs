@@ -12,6 +12,7 @@ import { fetchPublishedBlogPost } from '../../../lib/blog-api';
 import { fetchPublishedBlogPostsCached } from '../../../lib/blog-cache';
 import { getBlogTools } from '../../../content/blog-tools';
 import { getArticleInlineTool } from '../../../content/article-inline-tools';
+import { getArticleQuickAnswer } from '../../../content/article-quick-answers';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { resolveFaq } from '../../../lib/faq';
 import { getMockBlogPost } from '../../../lib/blog-mock';
@@ -200,6 +201,7 @@ export default function BlogArticlePage({
   // Interactive lead-magnet tool embedded in this article, if any (sv-only).
   const inlineTool = getArticleInlineTool(post.slug);
   const toolOnTop = lang === 'sv' && inlineTool?.position === 'top';
+  const quickAnswer = lang === 'sv' ? getArticleQuickAnswer(post.slug) : null;
 
   // Click any image inside the article body (screenshots, diagrams) to open it
   // full-screen. Listeners are attached directly to each <img> since the body is
@@ -405,6 +407,21 @@ export default function BlogArticlePage({
               {formatDate(post.publishedAt || post.createdAt, lang)}
             </p>
           </div>
+
+          {/* The answer people searched for, before anything else. */}
+          {quickAnswer ? (
+            <section className="article-answer" aria-label="Kort svar">
+              <div dangerouslySetInnerHTML={{ __html: quickAnswer.html }} />
+              {quickAnswer.source ? (
+                <p className="article-answer-source">
+                  Källa:{' '}
+                  <a href={quickAnswer.source.href} target="_blank" rel="noopener noreferrer">
+                    {quickAnswer.source.label}
+                  </a>
+                </p>
+              ) : null}
+            </section>
+          ) : null}
 
           {toolOnTop && inlineTool ? (
             <section className="article-tool article-tool--top" aria-label={inlineTool.heading}>

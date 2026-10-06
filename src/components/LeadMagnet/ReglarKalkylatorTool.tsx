@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf, type MaterialRow } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Regelvägg (stud wall) calculator: studs from length/c/c, syll + hammarband,
 // plus the full wall build-up — gips (one or two sides, single/double layer),
@@ -57,15 +59,16 @@ export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         soGips: 'Gipsskivor (st)', soInsul: 'Mineralull (m²)', soLabour: 'Arbete stommontering',
       };
 
-  const [length, setLength] = useState('6'); // prefilled example → result on first screen
-  const [height, setHeight] = useState('2.4');
-  const [cc, setCc] = useState('600');
-  const [openings, setOpenings] = useState('0'); // m² dörrar/fönster
-  const [sides, setSides] = useState('2'); // gips-sidor (0,1,2)
-  const [layers, setLayers] = useState('1'); // gips-lager per sida
-  const [insulation, setInsulation] = useState('ja');
-  const [vapour, setVapour] = useState('ja'); // ångspärr/plastfolie
-  const [spill, setSpill] = useState('10');
+  const u = useUrlScope();
+  const [length, setLength] = useUrlParam(u, 'l', '6'); // prefilled example → result on first screen
+  const [height, setHeight] = useUrlParam(u, 'h', '2.4');
+  const [cc, setCc] = useUrlParam(u, 'cc', '600');
+  const [openings, setOpenings] = useUrlParam(u, 'o', '0'); // m² dörrar/fönster
+  const [sides, setSides] = useUrlParam(u, 's', '2'); // gips-sidor (0,1,2)
+  const [layers, setLayers] = useUrlParam(u, 'lag', '1'); // gips-lager per sida
+  const [insulation, setInsulation] = useUrlParam(u, 'iso', 'ja');
+  const [vapour, setVapour] = useUrlParam(u, 'ang', 'ja'); // ångspärr/plastfolie
+  const [spill, setSpill] = useUrlParam(u, 'sp', '10');
 
   const r = useMemo(() => {
     const l = num(length), h = num(height), c = num(cc);
@@ -151,7 +154,7 @@ export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         </div>
       </details>
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{t.rCount}</span><strong>{nf(r.count)} {t.pcs}</strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rCount}</span><strong>{nf(r.count)} {t.pcs}<CopyLinkButton scope={u} tool="reglar-kalkylator" en={en} /></strong></div>
         <div className="lm-result-row"><span>{t.rStud}</span><span>{nf(r.studMeters, 1)} {t.lm}</span></div>
         <div className="lm-result-row"><span>{t.rPlate}</span><span>{nf(r.plateMeters, 1)} {t.lm}</span></div>
         <div className="lm-result-row lm-result-total"><span>{t.rTotal}</span><strong>{nf(r.totalTimber, 1)} {t.lm}</strong></div>

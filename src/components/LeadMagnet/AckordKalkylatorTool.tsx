@@ -1,4 +1,6 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free ackord (piece-rate) slutavräkning calculator for Byggavtalet.
 // Slutavräkning: ackordssumma (prislista × mängder) − utbetalda förskott =
@@ -15,10 +17,11 @@ export default function AckordKalkylatorTool() {
     `${v.toLocaleString(loc, { minimumFractionDigits: 0, maximumFractionDigits: 0 })} kr`;
 
   // Prefilled example (same as the placeholders) so a result shows at once.
-  const [ackord, setAckord] = useState('900000');
-  const [forskott, setForskott] = useState('780000');
-  const [team, setTeam] = useState('4');
-  const [arvode, setArvode] = useState('1.5');
+  const u = useUrlScope();
+  const [ackord, setAckord] = useUrlParam(u, 'a', '900000');
+  const [forskott, setForskott] = useUrlParam(u, 'f', '780000');
+  const [team, setTeam] = useUrlParam(u, 'n', '4');
+  const [arvode, setArvode] = useUrlParam(u, 'g', '1.5');
 
   const r = useMemo(() => {
     const ackordssumma = Math.max(parseFloat(ackord.replace(/\s/g, '').replace(',', '.')) || 0, 0);
@@ -68,7 +71,7 @@ export default function AckordKalkylatorTool() {
         </div>
         <div className="lm-result-row lm-result-highlight">
           <span>Ackordsöverskott att fördela</span>
-          <strong>{kr(r.overskott)}</strong>
+          <strong>{kr(r.overskott)}<CopyLinkButton scope={u} tool="ackord-kalkylator" /></strong>
         </div>
         {r.antal > 0 && (
           <div className="lm-result-row">

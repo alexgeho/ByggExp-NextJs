@@ -1,9 +1,11 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { fakturaHref, offertHref } from '../../lib/offert';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Professional roof calculator. Roof area for a pitched roof is the footprint
 // (incl. eaves overhang) ÷ cos(pitch). From the area it estimates the covering
@@ -73,22 +75,23 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
         soCover: (c: string) => `Taktäckning ${c} (m²)`, soBatten: 'Bärläkt (lpm)', soFelt: 'Underlagspapp (m²)', soGutter: 'Hängrännor (m)', soStupror: 'Stuprör (m)', soScaffold: 'Byggnadsställning (m²)', soLabour: 'Arbete taktäckning',
       };
 
-  const [form, setForm] = useState('sadel'); // sadel | pulpet
-  const [length, setLength] = useState('10');
-  const [width, setWidth] = useState('8');
-  const [pitch, setPitch] = useState('27');
-  const [overhang, setOverhang] = useState('0.3');
-  const [covering, setCovering] = useState<Covering>('betongpanna');
-  const [tiles, setTiles] = useState('');
-  const [spill, setSpill] = useState('10');
+  const u = useUrlScope();
+  const [form, setForm] = useUrlParam(u, 'f', 'sadel'); // sadel | pulpet
+  const [length, setLength] = useUrlParam(u, 'l', '10');
+  const [width, setWidth] = useUrlParam(u, 'b', '8');
+  const [pitch, setPitch] = useUrlParam(u, 'v', '27');
+  const [overhang, setOverhang] = useUrlParam(u, 'u', '0.3');
+  const [covering, setCovering] = useUrlParam<Covering>(u, 'tm', 'betongpanna');
+  const [tiles, setTiles] = useUrlParam(u, 'st', '');
+  const [spill, setSpill] = useUrlParam(u, 'sp', '10');
 
   // Optional extras
-  const [height, setHeight] = useState('5'); // byggnadshöjd till takfot (m) – för stuprör & ställning
-  const [gutters, setGutters] = useState('ja'); // hängrännor + stuprör
-  const [downpipes, setDownpipes] = useState('2'); // antal stuprör
-  const [krokCC, setKrokCC] = useState('0.6'); // rännkroksavstånd m
-  const [snorasskydd, setSnorasskydd] = useState('nej');
-  const [scaffold, setScaffold] = useState('nej'); // byggnadsställning
+  const [height, setHeight] = useUrlParam(u, 'h', '5'); // byggnadshöjd till takfot (m) – för stuprör & ställning
+  const [gutters, setGutters] = useUrlParam(u, 'ran', 'ja'); // hängrännor + stuprör
+  const [downpipes, setDownpipes] = useUrlParam(u, 'stup', '2'); // antal stuprör
+  const [krokCC, setKrokCC] = useUrlParam(u, 'kc', '0.6'); // rännkroksavstånd m
+  const [snorasskydd, setSnorasskydd] = useUrlParam(u, 'sno', 'nej');
+  const [scaffold, setScaffold] = useUrlParam(u, 'stal', 'nej'); // byggnadsställning
 
   const def = DEFAULTS[covering];
 
@@ -264,9 +267,9 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
           <strong>{nf(r.roofArea, 1)} m²</strong>
         </div>
         {r.hasTiles ? (
-          <div className="lm-result-row lm-result-total"><span>{t.rTiles}</span><strong>{nf(r.tileCount)} {t.pcs}</strong></div>
+          <div className="lm-result-row lm-result-total"><span>{t.rTiles}</span><strong>{nf(r.tileCount)} {t.pcs}<CopyLinkButton scope={u} tool="tak-kalkylator" en={en} /></strong></div>
         ) : (
-          <div className="lm-result-row lm-result-total"><span>{t.rCover}</span><strong>{nf(r.feltM2, 1)} m²</strong></div>
+          <div className="lm-result-row lm-result-total"><span>{t.rCover}</span><strong>{nf(r.feltM2, 1)} m²<CopyLinkButton scope={u} tool="tak-kalkylator" en={en} /></strong></div>
         )}
         <div className="lm-result-row"><span>{t.rFootprint}</span><span>{nf(r.footprint, 1)} m²</span></div>
         {r.hasBatten ? <div className="lm-result-row"><span>{t.rBatten}</span><span>{nf(r.battenM)} {t.lm}</span></div> : null}

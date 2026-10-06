@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
+import { useDraft } from '../../lib/useDraft';
 import ChipRow from './ChipRow';
 import StickyDownloadBar from './StickyDownloadBar';
 
@@ -164,55 +165,34 @@ export default function ArbetsberedningMallTool() {
 
 
   // --- Draft autosave (localStorage, client-only) ----------------------------
-  const [restored, setRestored] = useState(false);
-  const hydratedRef = useRef(false);
-
-  useEffect(() => {
-    try {
-      const raw = window.localStorage.getItem(STORAGE_KEY);
-      if (raw) {
-        const d = JSON.parse(raw) as Partial<{ head: Head; rows: Rows; presetId: string | null }>;
-        const savedPreset = findPreset(d.presetId);
-        const savedRows = d.rows?.steps && d.rows.risks && d.rows.checks ? { ...d.rows, flags: d.rows.flags ?? [] } : null;
-        const hasContent =
-          Object.entries(d.head ?? {}).some(([k, v]) => k !== 'date' && v?.trim()) ||
-          (!!savedRows && rowsEdited(savedRows, savedPreset));
-        if (hasContent) {
-          // eslint-disable-next-line react-hooks/set-state-in-effect -- restore the saved draft from localStorage after mount (not available during SSR).
-          setHead({ ...emptyHead(), ...d.head, date: d.head?.date || today() });
-          if (savedRows) setRows(savedRows);
-          setPresetId(savedPreset ? savedPreset.id : null);
-          setRestored(true);
-          hydratedRef.current = true;
-          return;
-        }
-      }
-    } catch {
-      /* korrupt/otillgänglig storage */
-    }
-    setHead((h) => ({ ...h, date: today() }));
-    hydratedRef.current = true;
-  }, []);
-
-  useEffect(() => {
-    if (!hydratedRef.current) return;
-    try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify({ head, rows, presetId }));
-    } catch {
-      /* full/avstängd storage */
-    }
-  }, [head, rows, presetId]);
+  type Draft = Partial<{ head: Head; rows: Rows; presetId: string | null }>;
+  const draftValue = useMemo<Draft>(() => ({ head, rows, presetId }), [head, rows, presetId]);
+  const validRows = (d: Draft): Rows | null =>
+    d.rows?.steps && d.rows.risks && d.rows.checks ? { ...d.rows, flags: d.rows.flags ?? [] } : null;
+  const draft = useDraft<Draft>(STORAGE_KEY, draftValue, {
+    hasContent: (d) => {
+      const savedRows = validRows(d);
+      return (
+        Object.entries(d.head ?? {}).some(([k, v]) => k !== 'date' && typeof v === 'string' && v.trim()) ||
+        (!!savedRows && rowsEdited(savedRows, findPreset(d.presetId)))
+      );
+    },
+    apply: (d) => {
+      const savedPreset = findPreset(d.presetId);
+      const savedRows = validRows(d);
+      setHead({ ...emptyHead(), ...d.head, date: d.head?.date || today() });
+      if (savedRows) setRows(savedRows);
+      setPresetId(savedPreset ? savedPreset.id : null);
+    },
+    onFresh: () => setHead((h) => ({ ...h, date: today() })),
+  });
+  const restored = draft.restored;
 
   function clearDraft() {
-    try {
-      window.localStorage.removeItem(STORAGE_KEY);
-    } catch {
-      /* noop */
-    }
+    draft.clear();
     setHead({ ...emptyHead(), date: today() });
     setRows(baseRows());
     setPresetId(null);
-    setRestored(false);
   }
 
   // Row ⋯ menu; closes on any outside click.
@@ -542,7 +522,7 @@ export default function ArbetsberedningMallTool() {
   );
 
   return (
-    <div className="lm-tool lm-ab" ref={toolRootRef}>
+    <div className="lm-tool lm-ab" ref={toolRootRef} {...draft.bind}>
       <StickyDownloadBar scope={toolRootRef}>
         <button type="button" className="lm-tool-button lm-tool-button--icon" onClick={downloadCsv}>
           <Icon name="download" />

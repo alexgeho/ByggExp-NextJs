@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Roof-truss calculator: number of trusses from roof length and spacing, plus
 // optional truss geometry from span and pitch (ridge height, top-chord length,
@@ -101,11 +103,12 @@ export default function TakstolarKalkylatorTool({ locale = 'sv' }: { locale?: Ca
         drawCap: 'Principskiss W-takstol – inte en konstruktionsritning', m: 'm', m2: 'm²',
       };
 
-  const [length, setLength] = useState('10');
-  const [cc, setCc] = useState('1200');
-  const [span, setSpan] = useState('8');
-  const [pitch, setPitch] = useState('27');
-  const [overhang, setOverhang] = useState('500');
+  const u = useUrlScope();
+  const [length, setLength] = useUrlParam(u, 'l', '10');
+  const [cc, setCc] = useUrlParam(u, 'cc', '1200');
+  const [span, setSpan] = useUrlParam(u, 'spann', '8');
+  const [pitch, setPitch] = useUrlParam(u, 'v', '27');
+  const [overhang, setOverhang] = useUrlParam(u, 'u', '500');
 
   const r = useMemo(() => {
     const l = num(length);
@@ -191,7 +194,7 @@ export default function TakstolarKalkylatorTool({ locale = 'sv' }: { locale?: Ca
         <label className="lm-tool-field"><span>{t.overhang}</span><input type="number" min="0" inputMode="numeric" value={overhang} onChange={(e) => setOverhang(e.currentTarget.value)} /></label>
       </div>
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{t.rCount}</span><strong>{nf(r.count)} {t.pcs}</strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rCount}</span><strong>{nf(r.count)} {t.pcs}<CopyLinkButton scope={u} tool="takstolar-kalkylator" en={en} /></strong></div>
         {geo ? (
           <>
             <div className="lm-result-row"><span>{t.rHeight}</span><strong>{f2(geo.height)} {t.m}</strong></div>

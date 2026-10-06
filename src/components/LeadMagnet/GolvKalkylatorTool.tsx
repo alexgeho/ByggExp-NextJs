@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Professional flooring / tiling calculator. Area + waste -> needed m² and
 // packs; laying pattern presets the waste (straight vs diagonal). For tiles it
@@ -56,13 +58,14 @@ export default function GolvKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         soPacks: (m: string) => `${m} (förpackningar)`, soFix: 'Fästmassa (säck 20 kg)', soLabour: 'Arbete läggning',
       };
 
-  const [material, setMaterial] = useState<Material>('klickgolv');
-  const [area, setArea] = useState('');
-  const [pattern, setPattern] = useState('rak'); // rak | diagonal
-  const [spill, setSpill] = useState('8');
-  const [perPack, setPerPack] = useState('2.5');
-  const [fixPerM2, setFixPerM2] = useState('4'); // kg fästmassa per m²
-  const [fogPerM2, setFogPerM2] = useState('0.5'); // kg fogbruk per m² (grovt)
+  const u = useUrlScope();
+  const [material, setMaterial] = useUrlParam<Material>(u, 'typ', 'klickgolv');
+  const [area, setArea] = useUrlParam(u, 'a', '');
+  const [pattern, setPattern] = useUrlParam(u, 'lagg', 'rak'); // rak | diagonal
+  const [spill, setSpill] = useUrlParam(u, 'sp', '8');
+  const [perPack, setPerPack] = useUrlParam(u, 'fp', '2.5');
+  const [fixPerM2, setFixPerM2] = useUrlParam(u, 'fix', '4'); // kg fästmassa per m²
+  const [fogPerM2, setFogPerM2] = useUrlParam(u, 'fog', '0.5'); // kg fogbruk per m² (grovt)
 
   const r = useMemo(() => {
     const base = num(area);
@@ -170,7 +173,7 @@ export default function GolvKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rNeed}</span>
-          <strong>{nf(r.need, 1)} m²</strong>
+          <strong>{nf(r.need, 1)} m²<CopyLinkButton scope={u} tool="golv-kalkylator" en={en} /></strong>
         </div>
         <div className="lm-result-row lm-result-total">
           <span>{t.rPacks}</span>

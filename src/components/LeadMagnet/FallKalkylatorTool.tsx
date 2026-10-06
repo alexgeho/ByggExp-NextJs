@@ -1,6 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import type { CalcLocale } from '../../lib/locale';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free slope (fall) calculator: height difference, percentage and ratio from
 // length and fall in mm per metre. Bilingual: sv default, en for /en/verktyg.
@@ -31,9 +33,10 @@ export default function FallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         hMm: 't.ex. 15', hPct: 't.ex. 2', hRatio: 't.ex. 50', hLen: 't.ex. 6',
       };
 
-  const [length, setLength] = useState('6');
-  const [val, setVal] = useState('15');
-  const [unit, setUnit] = useState<Unit>('mmpm');
+  const u = useUrlScope();
+  const [length, setLength] = useUrlParam(u, 'l', '6');
+  const [val, setVal] = useUrlParam(u, 'v', '15');
+  const [unit, setUnit] = useUrlParam<Unit>(u, 'u', 'mmpm');
   const result = useMemo(() => {
     const l = num(length);
     const v = num(val);
@@ -60,7 +63,7 @@ export default function FallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         <label className="lm-tool-field"><span>{valLabel}</span><input type="number" min="0" inputMode="decimal" value={val} placeholder={unitHint} onChange={(e) => setVal(e.currentTarget.value)} /></label>
       </div>
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{t.rDrop}</span><strong>{result.drop.toLocaleString(loc, { maximumFractionDigits: 0 })} mm</strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rDrop}</span><strong>{result.drop.toLocaleString(loc, { maximumFractionDigits: 0 })} mm<CopyLinkButton scope={u} tool="fall-kalkylator" en={en} /></strong></div>
         <div className="lm-result-row"><span>{t.rFall}</span><span>{result.f.toLocaleString(loc, { maximumFractionDigits: 1 })} mm/m</span></div>
         <div className="lm-result-row"><span>{t.rSlope}</span><span>{result.pct.toLocaleString(loc, { maximumFractionDigits: 2 })} %</span></div>
         <div className="lm-result-row lm-result-total"><span>{t.rRatio}</span><strong>{result.ratio > 0 ? `1:${result.ratio.toLocaleString(loc, { maximumFractionDigits: 0 })}` : '—'}</strong></div>

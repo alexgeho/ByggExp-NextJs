@@ -1,6 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { downloadMaterialPdf } from '../../lib/materialPdf';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free travel-time / travel-cost calculator for Byggavtalet. Two SEPARATE posts
 // (the whole point of the paired article restidsersattning-byggavtalet):
@@ -22,16 +24,17 @@ export default function RestidsersattningKalkylatorTool() {
   const kr = (v: number) =>
     `${v.toLocaleString(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kr`;
 
-  const [km, setKm] = useState('30');
-  const [days, setDays] = useState('5');
-  const [mode, setMode] = useState<Mode>('bil');
-  const [passengers, setPassengers] = useState('0');
-  const [bilrate, setBilrate] = useState('2.50');
-  const [poolrate, setPoolrate] = useState('0.85');
+  const u = useUrlScope();
+  const [km, setKm] = useUrlParam(u, 'km', '30');
+  const [days, setDays] = useUrlParam(u, 'd', '5');
+  const [mode, setMode] = useUrlParam<Mode>(u, 'fm', 'bil');
+  const [passengers, setPassengers] = useUrlParam(u, 'pass', '0');
+  const [bilrate, setBilrate] = useUrlParam(u, 'br', '2.50');
+  const [poolrate, setPoolrate] = useUrlParam(u, 'pr', '0.85');
   // Example: 1 h restid paid at grundlön (Byggavtalet § 6; yrkesarbetare
   // 203 kr/tim from 1 maj 2026) — editable, the visitor checks their own rate.
-  const [travelHours, setTravelHours] = useState('1');
-  const [travelRate, setTravelRate] = useState('203');
+  const [travelHours, setTravelHours] = useUrlParam(u, 'th', '1');
+  const [travelRate, setTravelRate] = useUrlParam(u, 'tr', '203');
 
   const r = useMemo(() => {
     const enkel = Math.max(parseFloat(km.replace(',', '.')) || 0, 0);
@@ -158,7 +161,7 @@ export default function RestidsersattningKalkylatorTool() {
             </div>
             <div className="lm-result-row lm-result-highlight">
               <span>Reskostnad</span>
-              <strong>{kr(r.reskostnad)}</strong>
+              <strong>{kr(r.reskostnad)}<CopyLinkButton scope={u} tool="restidsersattning-kalkylator" /></strong>
             </div>
           </>
         )}

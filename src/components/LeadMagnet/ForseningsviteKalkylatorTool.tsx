@@ -1,6 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import type { CalcLocale } from '../../lib/locale';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free delay-penalty (förseningsvite) calculator for construction contracts.
 // AB 04/ABT 06: if a vite is agreed it is normally a percentage of the contract
@@ -34,10 +36,11 @@ export default function ForseningsviteKalkylatorTool({ locale = 'sv' }: { locale
       };
 
   // Prefilled with the article's example (4 Mkr, 1 %, 2 weeks = 80 000 kr) so a result shows at once.
-  const [sum, setSum] = useState('4000000');
-  const [rate, setRate] = useState('1');
-  const [weeks, setWeeks] = useState('2');
-  const [cap, setCap] = useState('');
+  const u = useUrlScope();
+  const [sum, setSum] = useUrlParam(u, 's', '4000000');
+  const [rate, setRate] = useUrlParam(u, 'p', '1');
+  const [weeks, setWeeks] = useUrlParam(u, 'v', '2');
+  const [cap, setCap] = useUrlParam(u, 'max', '');
 
   const r = useMemo(() => {
     const kontraktssumma = Math.max(parseFloat(sum.replace(',', '.')) || 0, 0);
@@ -94,7 +97,7 @@ export default function ForseningsviteKalkylatorTool({ locale = 'sv' }: { locale
         </div>
         <div className="lm-result-row lm-result-total">
           <span>{t.rTotal}</span>
-          <strong>{kr(r.vite)}</strong>
+          <strong>{kr(r.vite)}<CopyLinkButton scope={u} tool="forseningsvite-kalkylator" en={en} /></strong>
         </div>
       </div>
       {r.capped && (

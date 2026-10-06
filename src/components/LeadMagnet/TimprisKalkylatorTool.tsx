@@ -1,6 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import type { CalcLocale } from '../../lib/locale';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free "what should I charge per hour" calculator. Works backwards from a
 // desired salary + employer costs + overhead + profit to the hourly rate you
@@ -34,12 +36,13 @@ export default function TimprisKalkylatorTool({ locale = 'sv' }: { locale?: Calc
         fine: 'En uppskattning. Sociala avgifter är förifyllda med 31,42 % (normal arbetsgivaravgift) och semesterlön med 12 %. Justera omkostnader (verktyg, bil, försäkring, admin) och vinstmarginal efter din verksamhet. Räknar du på egen bruttolön i enskild firma kan du sätta semester till 0.',
       };
 
-  const [salary, setSalary] = useState('');
-  const [hours, setHours] = useState('');
-  const [social, setSocial] = useState('31.42');
-  const [semester, setSemester] = useState('12');
-  const [overhead, setOverhead] = useState('');
-  const [profit, setProfit] = useState('10');
+  const u = useUrlScope();
+  const [salary, setSalary] = useUrlParam(u, 'lon', '');
+  const [hours, setHours] = useUrlParam(u, 'h', '');
+  const [social, setSocial] = useUrlParam(u, 'soc', '31.42');
+  const [semester, setSemester] = useUrlParam(u, 'sem', '12');
+  const [overhead, setOverhead] = useUrlParam(u, 'oh', '');
+  const [profit, setProfit] = useUrlParam(u, 'vin', '10');
 
   const result = useMemo(() => {
     const monthlySalary = Math.max(parseFloat(salary.replace(',', '.')) || 0, 0);
@@ -90,7 +93,7 @@ export default function TimprisKalkylatorTool({ locale = 'sv' }: { locale?: Calc
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rExcl}</span>
-          <strong>{result.billable > 0 ? kr(result.hourlyExcl) : '—'}</strong>
+          <strong>{result.billable > 0 ? kr(result.hourlyExcl) : '—'}<CopyLinkButton scope={u} tool="timpris-kalkylator" en={en} /></strong>
         </div>
         <div className="lm-result-row">
           <span>{t.rIncl}</span>

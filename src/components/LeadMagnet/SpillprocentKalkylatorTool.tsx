@@ -1,6 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import type { CalcLocale } from '../../lib/locale';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free waste/spill calculator. Enter the net quantity and a spill percentage
 // (or pick a material preset) to get the gross quantity to order. Presets are
@@ -32,10 +34,11 @@ export default function SpillprocentKalkylatorTool({ locale = 'sv' }: { locale?:
 
   const PRESET_SPILL = [NaN, 10, 8, 10, 10, 5, 5, 8, 15];
 
-  const [net, setNet] = useState('');
-  const [unit, setUnit] = useState('m²');
-  const [presetIdx, setPresetIdx] = useState(1);
-  const [custom, setCustom] = useState('10');
+  const u = useUrlScope();
+  const [net, setNet] = useUrlParam(u, 'n', '');
+  const [unit, setUnit] = useUrlParam(u, 'e', 'm²');
+  const [presetIdx, setPresetIdx] = useUrlParam(u, 'p', 1);
+  const [custom, setCustom] = useUrlParam(u, 'eg', '10');
 
   const r = useMemo(() => {
     const netto = Math.max(parseFloat(net.replace(',', '.')) || 0, 0);
@@ -100,7 +103,7 @@ export default function SpillprocentKalkylatorTool({ locale = 'sv' }: { locale?:
         </div>
         <div className="lm-result-row lm-result-total">
           <span>{t.rOrder}</span>
-          <strong>{num(r.brutto)} {unitLabel}</strong>
+          <strong>{num(r.brutto)} {unitLabel}<CopyLinkButton scope={u} tool="spillprocent-kalkylator" en={en} /></strong>
         </div>
       </div>
       <p className="lm-tool-note">{t.note}</p>

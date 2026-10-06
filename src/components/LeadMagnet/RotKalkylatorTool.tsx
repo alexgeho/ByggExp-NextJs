@@ -1,6 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import type { CalcLocale } from '../../lib/locale';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free ROT-avdrag calculator. Rules (Skatteverket, from 2026-01-01): ROT = 30%
 // of labour cost (incl. VAT), max 50 000 kr per person and year; two owners can
@@ -35,9 +37,10 @@ export default function RotKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
         fine: 'Beräkningen är en uppskattning enligt reglerna 2026. Det slutliga avdraget beror på hur mycket ROT/RUT kunden redan använt under året (gemensamt tak 75 000 kr, varav max 50 000 kr ROT per person).',
       };
 
-  const [labour, setLabour] = useState('');
-  const [material, setMaterial] = useState('');
-  const [owners, setOwners] = useState(1);
+  const u = useUrlScope();
+  const [labour, setLabour] = useUrlParam(u, 'arb', '');
+  const [material, setMaterial] = useUrlParam(u, 'mat', '');
+  const [owners, setOwners] = useUrlParam(u, 'ag', 1);
 
   const result = useMemo(() => {
     const labourCost = Math.max(parseFloat(labour.replace(',', '.')) || 0, 0);
@@ -75,7 +78,7 @@ export default function RotKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rRot}</span>
-          <strong>{kr(result.rot)}</strong>
+          <strong>{kr(result.rot)}<CopyLinkButton scope={u} tool="rot-kalkylator" en={en} /></strong>
         </div>
         <div className="lm-result-row">
           <span>{t.rAfter}</span>

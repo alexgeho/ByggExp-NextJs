@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+
+import { hasText, useDraft } from '../../lib/useDraft';
 
 import ToolAppCta from './ToolAppCta';
 import ChipRow from './ChipRow';
@@ -88,6 +90,14 @@ export default function KontrollplanMallTool() {
   const [head, setHead] = useState<Head>(EMPTY_HEAD);
   const [rows, setRows] = useState<Row[]>([emptyRow(), emptyRow(), emptyRow()]);
   const [busy, setBusy] = useState(false);
+  const draftValue = useMemo(() => ({ head, rows }), [head, rows]);
+  const draft = useDraft('bx-kontrollplan-draft', draftValue, {
+    apply: (saved) => {
+      setHead({ ...EMPTY_HEAD, ...saved.head });
+      if (Array.isArray(saved.rows) && saved.rows.length) setRows(saved.rows.map((r) => ({ ...emptyRow(), ...r })));
+    },
+    hasContent: (v) => hasText(v),
+  });
 
   const setRow = (index: number, patch: Partial<Row>) =>
     setRows((prev) => prev.map((row, i) => (i === index ? { ...row, ...patch } : row)));
@@ -100,6 +110,7 @@ export default function KontrollplanMallTool() {
     setRows(EXAMPLE_ROWS);
   };
   const clearForm = () => {
+    draft.clear();
     setHead(EMPTY_HEAD);
     setRows([emptyRow(), emptyRow(), emptyRow()]);
   };
@@ -295,7 +306,7 @@ export default function KontrollplanMallTool() {
   }
 
   return (
-    <div className="lm-tool">
+    <div className="lm-tool" {...draft.bind}>
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Se hur den fylls i:</span>
@@ -323,7 +334,7 @@ export default function KontrollplanMallTool() {
               <input
                 value={head[f.name]}
                 placeholder={f.placeholder}
-                onChange={(e) => setHead((prev) => ({ ...prev, [f.name]: e.currentTarget.value }))}
+                onChange={(e) => { const v = e.currentTarget.value; setHead((prev) => ({ ...prev, [f.name]: v })); }}
               />
             </label>
           ))}
@@ -368,7 +379,7 @@ export default function KontrollplanMallTool() {
                 rows={2}
                 value={head[f.name]}
                 placeholder={f.placeholder}
-                onChange={(e) => setHead((prev) => ({ ...prev, [f.name]: e.currentTarget.value }))}
+                onChange={(e) => { const v = e.currentTarget.value; setHead((prev) => ({ ...prev, [f.name]: v })); }}
               />
             </label>
           ))}

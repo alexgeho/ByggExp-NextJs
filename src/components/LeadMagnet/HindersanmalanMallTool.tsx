@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import StickyDownloadBar from './StickyDownloadBar';
 import ChipRow from './ChipRow';
+import { useDraft } from '../../lib/useDraft';
 
 // Free hindersanmälan (notice of hindrance + request for time extension) under
 // AB 04 / ABT 06 kap 4 § 3 (grounds) and § 4 (notify "utan dröjsmål", else the
@@ -164,49 +165,19 @@ function DownloadIcon() {
 export default function HindersanmalanMallTool() {
   const [s, setS] = useState<State>(emptyState);
   const [busy, setBusy] = useState(false);
-  const [restored, setRestored] = useState(false);
-  const hydratedRef = useRef(false);
   const toolRootRef = useRef<HTMLDivElement>(null);
 
-  // --- Draft autosave (localStorage, client-only) ----------------------------
-  useEffect(() => {
-    try {
-      const raw = window.localStorage.getItem(STORAGE_KEY);
-      if (raw) {
-        const d = JSON.parse(raw) as Partial<State>;
-        const hasContent = ALL.some((f) => f.key !== 'datum' && d[f.key]?.trim()) || !!d.grund;
-        if (hasContent) {
-          // eslint-disable-next-line react-hooks/set-state-in-effect -- restore the saved draft from localStorage after mount (not available during SSR).
-          setS({ ...emptyState(), ...d, datum: d.datum || today() });
-          setRestored(true);
-          hydratedRef.current = true;
-          return;
-        }
-      }
-    } catch {
-      /* korrupt/otillgänglig storage */
-    }
-    setS((p) => ({ ...p, datum: today() }));
-    hydratedRef.current = true;
-  }, []);
-
-  useEffect(() => {
-    if (!hydratedRef.current) return;
-    try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(s));
-    } catch {
-      /* full/avstängd storage */
-    }
-  }, [s]);
+  // --- Draft autosave (localStorage, only after a real edit) -----------------
+  const draft = useDraft<Partial<State>>(STORAGE_KEY, s, {
+    apply: (d) => setS({ ...emptyState(), ...d, datum: d.datum || today() }),
+    hasContent: (d) => ALL.some((f) => f.key !== 'datum' && typeof d[f.key] === 'string' && d[f.key]?.trim()) || !!d.grund,
+    onFresh: () => setS((p) => ({ ...p, datum: today() })),
+  });
+  const restored = draft.restored;
 
   function clearDraft() {
-    try {
-      window.localStorage.removeItem(STORAGE_KEY);
-    } catch {
-      /* noop */
-    }
+    draft.clear();
     setS({ ...emptyState(), datum: today() });
-    setRestored(false);
   }
 
   const set = (key: keyof State, value: string) => setS((p) => ({ ...p, [key]: value }));
@@ -482,7 +453,7 @@ export default function HindersanmalanMallTool() {
   );
 
   return (
-    <div className="lm-tool lm-ab lm-hinder" ref={toolRootRef}>
+    <div className="lm-tool lm-ab lm-hinder" ref={toolRootRef} {...draft.bind}>
       <StickyDownloadBar scope={toolRootRef}>
         <button type="button" className="lm-tool-button lm-tool-button--icon" onClick={downloadCsv}>
           <DownloadIcon />

@@ -1,6 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import type { CalcLocale } from '../../lib/locale';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free Swedish VAT (moms) calculator. Rates: 25 % (standard, bygg), 12 %, 6 %.
 // Enter an amount and whether it's excl. or incl. moms — get all three values.
@@ -31,9 +33,10 @@ export default function MomsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         rExcl: 'Belopp exkl. moms', rVat: (r: number) => `Moms (${r} %)`, rIncl: 'Belopp inkl. moms',
       };
 
-  const [amount, setAmount] = useState('');
-  const [rate, setRate] = useState(25);
-  const [mode, setMode] = useState<'excl' | 'incl'>('excl');
+  const u = useUrlScope();
+  const [amount, setAmount] = useUrlParam(u, 'b', '');
+  const [rate, setRate] = useUrlParam(u, 'm', 25);
+  const [mode, setMode] = useUrlParam<'excl' | 'incl'>(u, 'typ', 'excl');
 
   const result = useMemo(() => {
     const value = Math.max(parseFloat(amount.replace(',', '.')) || 0, 0);
@@ -89,7 +92,7 @@ export default function MomsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         </div>
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rVat(rate)}</span>
-          <strong>{kr(result.moms)}</strong>
+          <strong>{kr(result.moms)}<CopyLinkButton scope={u} tool="moms-kalkylator" en={en} /></strong>
         </div>
         <div className="lm-result-row lm-result-total">
           <span>{t.rIncl}</span>

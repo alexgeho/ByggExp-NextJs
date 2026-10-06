@@ -1,6 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import type { CalcLocale } from '../../lib/locale';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free Swedish late-payment interest (dröjsmålsränta) calculator.
 // Per räntelagen the default rate is the Riksbank reference rate + 8 percentage
@@ -44,13 +46,14 @@ export default function DrojsmalsrantaKalkylatorTool({ locale = 'sv' }: { locale
         note: 'Beräkningen är enkel ränta (belopp × räntesats × dagar/365). Referensräntan fastställs av Riksbanken 1 januari och 1 juli – kontrollera aktuell nivå på riksbank.se.',
       };
 
-  const [amount, setAmount] = useState('');
-  const [due, setDue] = useState('');
-  const [paid, setPaid] = useState('');
-  const [refRate, setRefRate] = useState('2');
-  const [spread, setSpread] = useState('8');
-  const [reminder, setReminder] = useState(false);
-  const [debtColl, setDebtColl] = useState(false);
+  const u = useUrlScope();
+  const [amount, setAmount] = useUrlParam(u, 'b', '');
+  const [due, setDue] = useUrlParam(u, 'ff', '');
+  const [paid, setPaid] = useUrlParam(u, 'bd', '');
+  const [refRate, setRefRate] = useUrlParam(u, 'ref', '2');
+  const [spread, setSpread] = useUrlParam(u, 'pp', '8');
+  const [reminder, setReminder] = useUrlParam(u, 'pam', false);
+  const [debtColl, setDebtColl] = useUrlParam(u, 'ink', false);
 
   const r = useMemo(() => {
     const belopp = Math.max(parseFloat(amount.replace(',', '.')) || 0, 0);
@@ -115,7 +118,7 @@ export default function DrojsmalsrantaKalkylatorTool({ locale = 'sv' }: { locale
         )}
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rIntFees}</span>
-          <strong>{kr(r.ranta + r.avgifter)}</strong>
+          <strong>{kr(r.ranta + r.avgifter)}<CopyLinkButton scope={u} tool="drojsmalsranta-kalkylator" en={en} /></strong>
         </div>
         <div className="lm-result-row lm-result-total">
           <span>{t.rTotal}</span>

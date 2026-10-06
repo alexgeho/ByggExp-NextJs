@@ -1,4 +1,6 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free OB/övertid calculator for Byggavtalet. OB and övertid are percentages on
 // "utgående lön" (base hourly wage incl. variable pay), NOT the base wage alone.
@@ -28,9 +30,10 @@ export default function ObOvertidKalkylatorTool() {
     `${v.toLocaleString(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kr`;
 
   // Prefilled with the article's example 1 (220 kr, 2 h övertid A = 132 kr).
-  const [wage, setWage] = useState('220');
-  const [hours, setHours] = useState('2');
-  const [levelId, setLevelId] = useState('ota');
+  const u = useUrlScope();
+  const [wage, setWage] = useUrlParam(u, 'lon', '220');
+  const [hours, setHours] = useUrlParam(u, 'h', '2');
+  const [levelId, setLevelId] = useUrlParam(u, 'typ', 'ota');
 
   const r = useMemo(() => {
     const timlon = Math.max(parseFloat(wage.replace(',', '.')) || 0, 0);
@@ -109,7 +112,7 @@ export default function ObOvertidKalkylatorTool() {
         </div>
         <div className="lm-result-row lm-result-highlight">
           <span>{r.group === 'OB' ? 'OB-tillägg' : 'Övertidstillägg'} totalt</span>
-          <strong>{kr(r.tillaggTotalt)}</strong>
+          <strong>{kr(r.tillaggTotalt)}<CopyLinkButton scope={u} tool="ob-overtid-kalkylator" /></strong>
         </div>
         <div className="lm-result-row lm-result-total">
           <span>Grundlön + tillägg</span>

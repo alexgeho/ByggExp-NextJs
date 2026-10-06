@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Gravel/soil calculator: volume from area × depth, plus weight in tonnes.
 // Bilingual: sv default, en for /en/verktyg; nb falls back to sv text.
@@ -43,11 +45,12 @@ export default function GrusKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         soGravel: 'Grus/makadam (ton)', soLabour: 'Arbete/transport',
       };
 
-  const [length, setLength] = useState('');
-  const [width, setWidth] = useState('');
-  const [depth, setDepth] = useState('10');
-  const [density, setDensity] = useState('1.6');
-  const [packning, setPackning] = useState('20'); // % komprimeringspåslag
+  const u = useUrlScope();
+  const [length, setLength] = useUrlParam(u, 'l', '');
+  const [width, setWidth] = useUrlParam(u, 'b', '');
+  const [depth, setDepth] = useUrlParam(u, 'd', '10');
+  const [density, setDensity] = useUrlParam(u, 'den', '1.6');
+  const [packning, setPackning] = useUrlParam(u, 'pack', '20'); // % komprimeringspåslag
 
   const r = useMemo(() => {
     const packed = num(length) * num(width) * (num(depth) / 100);
@@ -100,7 +103,7 @@ export default function GrusKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
       </div>
       <div className="lm-result">
         <div className="lm-result-row"><span>{t.rPacked}</span><span>{nf(r.packed, 2)} m³</span></div>
-        <div className="lm-result-row lm-result-highlight"><span>{t.rOrder}</span><strong>{nf(r.order, 2)} m³</strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rOrder}</span><strong>{nf(r.order, 2)} m³<CopyLinkButton scope={u} tool="grus-kalkylator" en={en} /></strong></div>
         <div className="lm-result-row lm-result-total"><span>{t.rTons}</span><strong>{nf(r.tons)} {t.tons}</strong></div>
         <p className="lm-result-fine">{t.fine}</p>
       </div>

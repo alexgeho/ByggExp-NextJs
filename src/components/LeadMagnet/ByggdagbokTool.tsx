@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import ChipRow from './ChipRow';
 import { DownloadRow, DownloadSticky, todayIso } from './ToolDownloads';
+import { useDraft } from '../../lib/useDraft';
 
 // Free byggdagbok (site diary) tool: the visitor fills the form and downloads a
 // ready PDF. Fields mirror the real ByggExp dagbok form (DagbokForm.jsx) so the
@@ -42,6 +43,11 @@ export default function ByggdagbokTool() {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- client-only default (the server can't know the visitor's date).
     setValues((prev) => (prev.date ? prev : { ...prev, date: todayIso() }));
   }, []);
+
+  const draft = useDraft('bx-byggdagbok-draft', values, {
+    apply: (saved) => setValues((prev) => ({ ...prev, ...saved, date: saved.date || prev.date || '' })),
+    hasContent: (v) => Object.entries(v).some(([k, x]) => k !== 'date' && typeof x === 'string' && x.trim() !== ''),
+  });
 
   const setField = (name: string, value: string) =>
     setValues((prev) => ({ ...prev, [name]: value }));
@@ -134,7 +140,7 @@ export default function ByggdagbokTool() {
   }
 
   return (
-    <div className="lm-tool" ref={toolRootRef}>
+    <div className="lm-tool" ref={toolRootRef} {...draft.bind}>
       <DownloadSticky scope={toolRootRef} busy={busy} onExcel={downloadCsv} onPdf={() => void downloadPdf()} />
 
       <div className="lm-tool-presets">
@@ -143,7 +149,7 @@ export default function ByggdagbokTool() {
           <button type="button" className="lm-tool-preset" onClick={fillExample}>
             Fyll i exempel
           </button>
-          <button type="button" className="lm-tool-preset" onClick={() => setValues({ ...EMPTY, date: todayIso() })}>
+          <button type="button" className="lm-tool-preset" onClick={() => { draft.clear(); setValues({ ...EMPTY, date: todayIso() }); }}>
             Rensa
           </button>
         </ChipRow>

@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Professional insulation calculator. From area and thickness it returns the
 // insulated area, the volume (m³), the number of packs and an approximate
@@ -48,11 +50,12 @@ export default function IsoleringKalkylatorTool({ locale = 'sv' }: { locale?: Ca
         soIso: (th: string) => `Isolering ${th} mm (förpackningar)`, soLabour: 'Arbete isolering',
       };
 
-  const [area, setArea] = useState('');
-  const [thickness, setThickness] = useState('170'); // mm
-  const [lambda, setLambda] = useState('0.036'); // W/mK
-  const [perPack, setPerPack] = useState('5.4'); // m² per förpackning
-  const [spill, setSpill] = useState('5');
+  const u = useUrlScope();
+  const [area, setArea] = useUrlParam(u, 'a', '');
+  const [thickness, setThickness] = useUrlParam(u, 't', '170'); // mm
+  const [lambda, setLambda] = useUrlParam(u, 'lam', '0.036'); // W/mK
+  const [perPack, setPerPack] = useUrlParam(u, 'fp', '5.4'); // m² per förpackning
+  const [spill, setSpill] = useUrlParam(u, 'sp', '5');
 
   const r = useMemo(() => {
     const need = num(area) * (1 + num(spill) / 100);
@@ -135,7 +138,7 @@ export default function IsoleringKalkylatorTool({ locale = 'sv' }: { locale?: Ca
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rNeed}</span>
-          <strong>{nf(r.need, 1)} m²</strong>
+          <strong>{nf(r.need, 1)} m²<CopyLinkButton scope={u} tool="isolering-kalkylator" en={en} /></strong>
         </div>
         <div className="lm-result-row lm-result-total">
           <span>{t.rPacks}</span>

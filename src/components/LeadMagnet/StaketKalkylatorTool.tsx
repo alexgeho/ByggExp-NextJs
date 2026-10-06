@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Fence calculator: number of posts and sections from length and post spacing.
 // Bilingual: sv default, en for /en/verktyg; nb falls back to sv text.
@@ -39,8 +41,9 @@ export default function StaketKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         soPosts: 'Stolpar', soSections: 'Sektioner', soLabour: 'Arbete staketmontering',
       };
 
-  const [length, setLength] = useState('');
-  const [cc, setCc] = useState('2');
+  const u = useUrlScope();
+  const [length, setLength] = useUrlParam(u, 'l', '');
+  const [cc, setCc] = useUrlParam(u, 'cc', '2');
 
   const r = useMemo(() => {
     const l = num(length);
@@ -90,7 +93,7 @@ export default function StaketKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         <label className="lm-tool-field"><span>{t.cc}</span><input type="number" min="0" inputMode="decimal" value={cc} onChange={(e) => setCc(e.currentTarget.value)} /></label>
       </div>
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{t.rPosts}</span><strong>{nf(r.posts)} {t.pcs}</strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rPosts}</span><strong>{nf(r.posts)} {t.pcs}<CopyLinkButton scope={u} tool="staket-kalkylator" en={en} /></strong></div>
         <div className="lm-result-row lm-result-total"><span>{t.rSections}</span><strong>{nf(r.sections)} {t.pcs}</strong></div>
         <p className="lm-result-fine">{t.fine}</p>
       </div>

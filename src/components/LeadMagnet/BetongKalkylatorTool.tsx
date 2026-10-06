@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf, type MaterialRow } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Full concrete-slab estimator ("platta på mark"). Beyond volume it models the
 // real build-up and a cost estimate (à-pris = material + arbete), so it competes
@@ -147,52 +149,53 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         soConcrete: 'Betong, säck 25 kg', soReadymix: 'Fabriksbetong (m³)', soMesh: 'Armeringsnät (st)', soIso: 'Cellplast (skivor)', soLabour: 'Arbete gjutning/armering',
       };
 
-  const [shape, setShape] = useState<Shape>('platta');
-  const [form, setForm] = useState<Form>('rekt');
-  const [length, setLength] = useState('10');
-  const [width, setWidth] = useState('8');
-  const [area, setArea] = useState('');
-  const [perim, setPerim] = useState('');
-  const [thickness, setThickness] = useState('10');
+  const u = useUrlScope();
+  const [shape, setShape] = useUrlParam<Shape>(u, 'typ', 'platta');
+  const [form, setForm] = useUrlParam<Form>(u, 'form', 'rekt');
+  const [length, setLength] = useUrlParam(u, 'l', '10');
+  const [width, setWidth] = useUrlParam(u, 'b', '8');
+  const [area, setArea] = useUrlParam(u, 'a', '');
+  const [perim, setPerim] = useUrlParam(u, 'o', '');
+  const [thickness, setThickness] = useUrlParam(u, 't', '10');
 
-  const [edge, setEdge] = useState('ja');
-  const [edgeW, setEdgeW] = useState('30');
-  const [edgeH, setEdgeH] = useState('35');
-  const [edgeBars, setEdgeBars] = useState('3');
-  const [barDia, setBarDia] = useState('12'); // kamstål diameter mm
+  const [edge, setEdge] = useUrlParam(u, 'kb', 'ja');
+  const [edgeW, setEdgeW] = useUrlParam(u, 'kbb', '30');
+  const [edgeH, setEdgeH] = useUrlParam(u, 'kbd', '35');
+  const [edgeBars, setEdgeBars] = useUrlParam(u, 'kj', '3');
+  const [barDia, setBarDia] = useUrlParam(u, 'dia', '12'); // kamstål diameter mm
 
-  const [isoThick, setIsoThick] = useState('300');
-  const [epsGrade, setEpsGrade] = useState('S100'); // cellplast-kvalitet (bärighet)
-  const [baseThick, setBaseThick] = useState('150');
-  const [mesh, setMesh] = useState('ja');
-  const [meshType, setMeshType] = useState('6'); // K6/K8 → kg/m²
-  const [bindPerTon, setBindPerTon] = useState('10'); // kg bindtråd per ton stål
+  const [isoThick, setIsoThick] = useUrlParam(u, 'iso', '300');
+  const [epsGrade, setEpsGrade] = useUrlParam(u, 'eps', 'S100'); // cellplast-kvalitet (bärighet)
+  const [baseThick, setBaseThick] = useUrlParam(u, 'mak', '150');
+  const [mesh, setMesh] = useUrlParam(u, 'nat', 'ja');
+  const [meshType, setMeshType] = useUrlParam(u, 'nt', '6'); // K6/K8 → kg/m²
+  const [bindPerTon, setBindPerTon] = useUrlParam(u, 'bt', '10'); // kg bindtråd per ton stål
 
-  const [bLen, setBLen] = useState('12');
-  const [bWidth, setBWidth] = useState('20');
-  const [bHeight, setBHeight] = useState('30');
-  const [diam, setDiam] = useState('30');
-  const [depth, setDepth] = useState('60');
-  const [count, setCount] = useState('4');
+  const [bLen, setBLen] = useUrlParam(u, 'bl', '12');
+  const [bWidth, setBWidth] = useUrlParam(u, 'bb', '20');
+  const [bHeight, setBHeight] = useUrlParam(u, 'bh', '30');
+  const [diam, setDiam] = useUrlParam(u, 'dm', '30');
+  const [depth, setDepth] = useUrlParam(u, 'dj', '60');
+  const [count, setCount] = useUrlParam(u, 'n', '4');
 
-  const [bagYield, setBagYield] = useState('12.5');
-  const [spill, setSpill] = useState('5');
-  const [concreteMode, setConcreteMode] = useState('fabrik'); // fabrik | sack
+  const [bagYield, setBagYield] = useUrlParam(u, 'sl', '12.5');
+  const [spill, setSpill] = useUrlParam(u, 'sp', '5');
+  const [concreteMode, setConcreteMode] = useUrlParam(u, 'bm', 'fabrik'); // fabrik | sack
 
   // Cost layer (riktpriser 2026, editable)
-  const [showCost, setShowCost] = useState(false);
-  const [pBetong, setPBetong] = useState('1600'); // kr/m³ fabriksbetong
-  const [pSack, setPSack] = useState('80'); // kr/säck 25 kg
-  const [pMesh, setPMesh] = useState('300'); // kr/nät
-  const [pSteel, setPSteel] = useState('18'); // kr/kg kamstål
-  const [pBind, setPBind] = useState('45'); // kr/kg bindtråd
-  const [pIso, setPIso] = useState('1400'); // kr/m³ cellplast
-  const [pBase, setPBase] = useState('300'); // kr/m³ makadam
-  const [timpris, setTimpris] = useState('500'); // kr/tim
-  const [hRebarTon, setHRebarTon] = useState('12'); // arbetstimmar per ton armering
-  const [hPerM2, setHPerM2] = useState('1.2'); // övrig arbetstid per m² (schakt/iso/gjutning)
-  const [walkPct, setWalkPct] = useState('10'); // gångtid/förflyttning – påslag på arbetstid
-  const [rot, setRot] = useState('nej');
+  const [showCost, setShowCost] = useUrlParam(u, 'kost', false);
+  const [pBetong, setPBetong] = useUrlParam(u, 'pb', '1600'); // kr/m³ fabriksbetong
+  const [pSack, setPSack] = useUrlParam(u, 'ps', '80'); // kr/säck 25 kg
+  const [pMesh, setPMesh] = useUrlParam(u, 'pn', '300'); // kr/nät
+  const [pSteel, setPSteel] = useUrlParam(u, 'pst', '18'); // kr/kg kamstål
+  const [pBind, setPBind] = useUrlParam(u, 'pbt', '45'); // kr/kg bindtråd
+  const [pIso, setPIso] = useUrlParam(u, 'pi', '1400'); // kr/m³ cellplast
+  const [pBase, setPBase] = useUrlParam(u, 'pm', '300'); // kr/m³ makadam
+  const [timpris, setTimpris] = useUrlParam(u, 'tp', '500'); // kr/tim
+  const [hRebarTon, setHRebarTon] = useUrlParam(u, 'ht', '12'); // arbetstimmar per ton armering
+  const [hPerM2, setHPerM2] = useUrlParam(u, 'hm', '1.2'); // övrig arbetstid per m² (schakt/iso/gjutning)
+  const [walkPct, setWalkPct] = useUrlParam(u, 'gt', '10'); // gångtid/förflyttning – påslag på arbetstid
+  const [rot, setRot] = useUrlParam(u, 'rot', 'nej');
 
   const r = useMemo(() => {
     let base = 0, A = 0, P = 0;
@@ -409,7 +412,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
       </details>
 
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{shape === 'platta' && edge === 'ja' ? t.rVolumeEdge : t.rVolume}</span><strong>{nf(r.volume, 2)} m³</strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{shape === 'platta' && edge === 'ja' ? t.rVolumeEdge : t.rVolume}</span><strong>{nf(r.volume, 2)} m³<CopyLinkButton scope={u} tool="betong-kalkylator" en={en} /></strong></div>
         {concreteMode === 'sack'
           ? <div className="lm-result-row lm-result-total"><span>{t.rBags}</span><strong>{nf(r.bags)} {t.pcs}</strong></div>
           : <div className="lm-result-row"><span>{t.rBigBag}</span><span>{nf(r.bigBags, 1)} {t.pcs}</span></div>}

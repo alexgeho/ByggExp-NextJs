@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Professional paint calculator. Litres = (area − openings) × coats ÷ coverage,
 // plus waste. Coverage (m²/litre) is preset per surface type (interior wall/
@@ -58,12 +60,13 @@ export default function FargKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         soPaint: (s: string) => `Färg – ${s} (liter)`, soLabour: 'Arbete målning',
       };
 
-  const [surface, setSurface] = useState<Surface>('vagg');
-  const [area, setArea] = useState('');
-  const [openings, setOpenings] = useState('0');
-  const [coats, setCoats] = useState('2');
-  const [coverage, setCoverage] = useState(''); // override, tom = standard
-  const [spill, setSpill] = useState('10');
+  const u = useUrlScope();
+  const [surface, setSurface] = useUrlParam<Surface>(u, 'yta', 'vagg');
+  const [area, setArea] = useUrlParam(u, 'a', '');
+  const [openings, setOpenings] = useUrlParam(u, 'o', '0');
+  const [coats, setCoats] = useUrlParam(u, 'lag', '2');
+  const [coverage, setCoverage] = useUrlParam(u, 'tack', ''); // override, tom = standard
+  const [spill, setSpill] = useUrlParam(u, 'sp', '10');
 
   const defCov = COVERAGE[surface];
 
@@ -159,7 +162,7 @@ export default function FargKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         </div>
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rLiters}</span>
-          <strong>{nf(r.liters, 1)} {t.litres}</strong>
+          <strong>{nf(r.liters, 1)} {t.litres}<CopyLinkButton scope={u} tool="farg-kalkylator" en={en} /></strong>
         </div>
         <div className="lm-result-row lm-result-total">
           <span>{t.rBuy}</span>

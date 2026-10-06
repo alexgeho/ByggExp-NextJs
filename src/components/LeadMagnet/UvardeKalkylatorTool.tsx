@@ -1,6 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import type { CalcLocale } from '../../lib/locale';
+import { jsonCodec, useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free U-value calculator for a layered building element. U = 1 / (Rsi + ΣR + Rse)
 // where each layer's R = thickness(m) / λ. Surface resistances depend on the
@@ -41,10 +43,11 @@ export default function UvardeKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         note: 'Förenklad beräkning för homogena skikt (U = 1 / Rtot). Vid isolering mellan träreglar sänks värdet av köldbryggor – räkna då med den så kallade λ-metoden eller U-värde enligt tillverkarens underlag.',
       };
 
-  const [element, setElement] = useState('wall');
-  const [mat, setMat] = useState<Record<number, number>>({ 0: 1 });
-  const [lambda, setLambda] = useState<Record<number, string>>({});
-  const [thick, setThick] = useState<Record<number, string>>({ 0: '' });
+  const u = useUrlScope();
+  const [element, setElement] = useUrlParam(u, 'el', 'wall');
+  const [mat, setMat] = useUrlParam<Record<number, number>>(u, 'mat', { 0: 1 }, jsonCodec<Record<number, number>>());
+  const [lambda, setLambda] = useUrlParam<Record<number, string>>(u, 'lam', {}, jsonCodec<Record<number, string>>());
+  const [thick, setThick] = useUrlParam<Record<number, string>>(u, 't', { 0: '' }, jsonCodec<Record<number, string>>());
 
   const r = useMemo(() => {
     const rs = SURFACE_R[element];
@@ -86,7 +89,7 @@ export default function UvardeKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
               <span>{t.layer(i + 1)}</span>
               <select
                 value={mat[i] ?? 0}
-                onChange={(e) => setMat((p) => ({ ...p, [i]: parseInt(e.currentTarget.value, 10) }))}
+                onChange={(e) => { const v = parseInt(e.currentTarget.value, 10); setMat((p) => ({ ...p, [i]: v })); }}
               >
                 {t.materials.map((label, idx) => (
                   <option key={label} value={idx}>{label}</option>
@@ -98,14 +101,14 @@ export default function UvardeKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
                 <span>{t.lambda}</span>
                 <input type="number" step="0.001" inputMode="decimal" value={lambda[i] || ''}
                   placeholder={t.lambdaPh}
-                  onChange={(e) => setLambda((p) => ({ ...p, [i]: e.currentTarget.value }))} />
+                  onChange={(e) => { const v = e.currentTarget.value; setLambda((p) => ({ ...p, [i]: v })); }} />
               </label>
             )}
             <label className="lm-tool-field">
               <span>{t.thick}</span>
               <input type="number" min="0" inputMode="decimal" value={thick[i] || ''}
                 placeholder={t.thickPh}
-                onChange={(e) => setThick((p) => ({ ...p, [i]: e.currentTarget.value }))} />
+                onChange={(e) => { const v = e.currentTarget.value; setThick((p) => ({ ...p, [i]: v })); }} />
             </label>
           </div>
         );
@@ -126,7 +129,7 @@ export default function UvardeKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         </div>
         <div className="lm-result-row lm-result-total">
           <span>{t.rU}</span>
-          <strong>{fmt(r.u)} W/m²K</strong>
+          <strong>{fmt(r.u)} W/m²K<CopyLinkButton scope={u} tool="uvarde-kalkylator" en={en} /></strong>
         </div>
       </div>
       <p className="lm-tool-note">{t.note}</p>

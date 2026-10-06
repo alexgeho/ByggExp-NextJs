@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Wallpaper calculator using the correct strip (våder) method: wallpaper is hung
 // in full-height drops, so the real driver is how many drops fit in a roll —
@@ -47,12 +49,13 @@ export default function TapetKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
         soRolls: 'Tapet (rullar)', soLabour: 'Arbete tapetsering',
       };
 
-  const [wallWidth, setWallWidth] = useState(''); // total väggbredd, m
-  const [height, setHeight] = useState('2.5'); // takhöjd, m
-  const [repeat, setRepeat] = useState('0'); // mönsterrapport, cm
-  const [rollLen, setRollLen] = useState('10.05'); // rullängd, m
-  const [rollWidth, setRollWidth] = useState('53'); // rullbredd, cm
-  const [extra, setExtra] = useState('10'); // extra för kap/misstag, %
+  const u = useUrlScope();
+  const [wallWidth, setWallWidth] = useUrlParam(u, 'b', ''); // total väggbredd, m
+  const [height, setHeight] = useUrlParam(u, 'h', '2.5'); // takhöjd, m
+  const [repeat, setRepeat] = useUrlParam(u, 'rap', '0'); // mönsterrapport, cm
+  const [rollLen, setRollLen] = useUrlParam(u, 'rl', '10.05'); // rullängd, m
+  const [rollWidth, setRollWidth] = useUrlParam(u, 'rb', '53'); // rullbredd, cm
+  const [extra, setExtra] = useUrlParam(u, 'x', '10'); // extra för kap/misstag, %
 
   const r = useMemo(() => {
     const W = num(wallWidth);
@@ -116,7 +119,7 @@ export default function TapetKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
       <div className="lm-result">
         <div className="lm-result-row"><span>{t.rPerRoll}</span><span>{nf(r.stripsPerRoll)} {t.pcs}</span></div>
         <div className="lm-result-row"><span>{t.rNeeded}</span><span>{nf(r.stripsNeeded)} {t.pcs}</span></div>
-        <div className="lm-result-row lm-result-highlight lm-result-total"><span>{t.rRolls}</span><strong>{nf(r.rolls)} {t.pcs}</strong></div>
+        <div className="lm-result-row lm-result-highlight lm-result-total"><span>{t.rRolls}</span><strong>{nf(r.rolls)} {t.pcs}<CopyLinkButton scope={u} tool="tapet-kalkylator" en={en} /></strong></div>
         <p className="lm-result-fine">{t.fine}</p>
       </div>
       <div className="lm-tool-actions" style={{ marginTop: 16 }}>

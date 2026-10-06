@@ -1,4 +1,6 @@
 import { useMemo, useRef, useState } from 'react';
+
+import { hasText, useDraft } from '../../lib/useDraft';
 import ChipRow from './ChipRow';
 
 // Free tidrapport (time report) tool: fill employee + project + day rows and
@@ -19,6 +21,22 @@ export default function TidrapportTool() {
   // no visible feedback.
   const [activePreset, setActivePreset] = useState<string | null>(null);
   const rowsRef = useRef<HTMLDivElement>(null);
+  const draftValue = useMemo(() => ({ employee, project, rows }), [employee, project, rows]);
+  const draft = useDraft('bx-tidrapport-draft', draftValue, {
+    apply: (saved) => {
+      setEmployee(saved.employee ?? '');
+      setProject(saved.project ?? '');
+      if (Array.isArray(saved.rows) && saved.rows.length) setRows(saved.rows.map((r) => ({ ...emptyRow(), ...r })));
+    },
+    hasContent: (v) => hasText(v),
+  });
+  const clearForm = () => {
+    draft.clear();
+    setEmployee('');
+    setProject('');
+    setRows([emptyRow(), emptyRow(), emptyRow()]);
+    setActivePreset(null);
+  };
   const afterPreset = (id: string) => {
     setActivePreset(id);
     window.setTimeout(() => {
@@ -279,7 +297,7 @@ export default function TidrapportTool() {
   }
 
   return (
-    <div className="lm-tool">
+    <div className="lm-tool" {...draft.bind}>
 
       <div
         className="lm-tool-quick"
@@ -312,6 +330,7 @@ export default function TidrapportTool() {
           <button type="button" className={`lm-tool-preset${activePreset === 'vecka' ? ' is-active' : ''}`} aria-pressed={activePreset === 'vecka'} onClick={seedWeek}>Veckomall</button>
           <button type="button" className={`lm-tool-preset${activePreset === 'manad' ? ' is-active' : ''}`} aria-pressed={activePreset === 'manad'} onClick={seedMonth}>Månadsmall</button>
           <button type="button" className={`lm-tool-preset${activePreset === 'exempel' ? ' is-active' : ''}`} aria-pressed={activePreset === 'exempel'} onClick={fillExample}>Fyll i exempel</button>
+          <button type="button" className="lm-tool-preset" onClick={clearForm}>Rensa</button>
         </ChipRow>
       </div>
 

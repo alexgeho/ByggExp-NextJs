@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Underfloor-heating calculator: pipe/loop length from area and pipe spacing
 // (c/c), plus number of loops given a max loop length. Bilingual: sv default,
@@ -42,9 +44,10 @@ export default function GolvvarmeKalkylatorTool({ locale = 'sv' }: { locale?: Ca
         soPipe: (cc: string) => `Golvvärmerör c/c ${cc} (m)`, soLoops: 'Slingor / fördelaruttag', soLabour: 'Arbete installation',
       };
 
-  const [area, setArea] = useState('20');
-  const [cc, setCc] = useState('200');
-  const [maxLoop, setMaxLoop] = useState('100');
+  const u = useUrlScope();
+  const [area, setArea] = useUrlParam(u, 'a', '20');
+  const [cc, setCc] = useUrlParam(u, 'cc', '200');
+  const [maxLoop, setMaxLoop] = useUrlParam(u, 'max', '100');
 
   const r = useMemo(() => {
     const c = num(cc);
@@ -95,7 +98,7 @@ export default function GolvvarmeKalkylatorTool({ locale = 'sv' }: { locale?: Ca
       </div>
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight"><span>{t.rTotal}</span><strong>{nf(r.total)} {t.m}</strong></div>
-        <div className="lm-result-row lm-result-total"><span>{t.rLoops}</span><strong>{nf(r.loops)} {t.pcs}</strong></div>
+        <div className="lm-result-row lm-result-total"><span>{t.rLoops}</span><strong>{nf(r.loops)} {t.pcs}<CopyLinkButton scope={u} tool="golvvarme-kalkylator" en={en} /></strong></div>
         <p className="lm-result-fine">{t.fine}</p>
       </div>
       <div className="lm-tool-actions" style={{ marginTop: 16 }}>

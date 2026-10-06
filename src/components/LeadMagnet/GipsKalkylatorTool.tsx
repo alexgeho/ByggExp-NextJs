@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Professional drywall (gipsskivor) calculator for a stud wall.
 // Method follows Gyproc's Monteringshandbok: board width sets the stud c/c
@@ -88,16 +90,17 @@ export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         soLabour: 'Arbete montering',
       };
 
-  const [length, setLength] = useState('');
-  const [height, setHeight] = useState('2.5');
-  const [sides, setSides] = useState('2'); // 1 = enkelsidig, 2 = dubbelsidig
-  const [layers, setLayers] = useState('1'); // lager per sida
-  const [boardWidth, setBoardWidth] = useState('1200'); // 900 | 1200 (mm)
-  const [boardLen, setBoardLen] = useState('2.6'); // skivlängd (m)
-  const [frame, setFrame] = useState('tra'); // tra | stal
-  const [insulate, setInsulate] = useState('nej'); // ja | nej
-  const [openings, setOpenings] = useState('0'); // m² dörr/fönster att dra av
-  const [spill, setSpill] = useState('10');
+  const u = useUrlScope();
+  const [length, setLength] = useUrlParam(u, 'l', '');
+  const [height, setHeight] = useUrlParam(u, 'h', '2.5');
+  const [sides, setSides] = useUrlParam(u, 's', '2'); // 1 = enkelsidig, 2 = dubbelsidig
+  const [layers, setLayers] = useUrlParam(u, 'lag', '1'); // lager per sida
+  const [boardWidth, setBoardWidth] = useUrlParam(u, 'sb', '1200'); // 900 | 1200 (mm)
+  const [boardLen, setBoardLen] = useUrlParam(u, 'sl', '2.6'); // skivlängd (m)
+  const [frame, setFrame] = useUrlParam(u, 'st', 'tra'); // tra | stal
+  const [insulate, setInsulate] = useUrlParam(u, 'iso', 'nej'); // ja | nej
+  const [openings, setOpenings] = useUrlParam(u, 'o', '0'); // m² dörr/fönster att dra av
+  const [spill, setSpill] = useUrlParam(u, 'sp', '10');
 
   const r = useMemo(() => {
     const L = num(length);
@@ -243,7 +246,7 @@ export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rSheets}</span>
-          <strong>{nf(r.sheets)} {t.pcs}</strong>
+          <strong>{nf(r.sheets)} {t.pcs}<CopyLinkButton scope={u} tool="gips-kalkylator" en={en} /></strong>
         </div>
         <div className="lm-result-row">
           <span>{t.rClad}</span>

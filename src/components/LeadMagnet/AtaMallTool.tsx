@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { useDraft } from '../../lib/useDraft';
 import ToolAppCta from './ToolAppCta';
 import ChipRow from './ChipRow';
 
@@ -39,6 +40,11 @@ const EMPTY: Record<string, string> = Object.fromEntries(
 export default function AtaMallTool() {
   const [values, setValues] = useState<Record<string, string>>(EMPTY);
   const [busy, setBusy] = useState(false);
+
+  const draft = useDraft('bx-ata-draft', values, {
+    apply: (saved) => setValues((prev) => ({ ...prev, ...saved })),
+    hasContent: (v) => Object.entries(v).some(([k, x]) => k !== 'date' && typeof x === 'string' && x.trim() !== ''),
+  });
 
   const setField = (name: string, value: string) =>
     setValues((prev) => ({ ...prev, [name]: value }));
@@ -146,13 +152,16 @@ export default function AtaMallTool() {
   }
 
   return (
-    <div className="lm-tool">
+    <div className="lm-tool" {...draft.bind}>
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Se hur den fylls i:</span>
         <ChipRow label="Se hur den fylls i">
           <button type="button" className="lm-tool-preset" onClick={fillExample}>
             Fyll i exempel
+          </button>
+          <button type="button" className="lm-tool-preset" onClick={() => { draft.clear(); setValues(EMPTY); }}>
+            Rensa
           </button>
         </ChipRow>
       </div>

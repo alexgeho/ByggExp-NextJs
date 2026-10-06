@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
+import { useDraft } from '../../lib/useDraft';
 import ChipRow from './ChipRow';
 import StickyDownloadBar from './StickyDownloadBar';
 
@@ -179,69 +180,44 @@ export default function EgenkontrollTool({
   // i localStorage (client-only, därav effekt istället för useState-init för att
   // undvika SSR-hydration-mismatch). Egen nyckel per mall så el/VVS/… inte krockar.
   const storageKey = `bx-egenkontroll-draft${defaultPreset ? `-${defaultPreset}` : ''}`;
-  const [restored, setRestored] = useState(false);
-  const hydratedRef = useRef(false);
-
-  useEffect(() => {
-    try {
-      const raw = window.localStorage.getItem(storageKey);
-      if (raw) {
-        const d = JSON.parse(raw) as Partial<{
-          title: string; project: string; responsible: string;
-          date: string; rows: Row[]; meta: Record<string, string>; presetId: string | null;
-        }>;
-        // Old drafts stored the template name as the title value — that is
-        // not user input, so it is dropped (the name stays the placeholder).
-        const savedTitle = isPresetName(d.title) ? '' : (d.title ?? '');
-        // Restore only real user input — not a blank form, a just-picked
-        // template or the auto-filled date.
-        const hasContent =
-          !!savedTitle.trim() ||
-          !!d.project?.trim() ||
-          !!d.responsible?.trim() ||
-          Object.values(d.meta ?? {}).some((v) => v?.trim()) ||
-          (!!d.rows?.length && rowsEdited(d.rows.map(migrateRow), d.presetId));
-        if (hasContent) {
-          // eslint-disable-next-line react-hooks/set-state-in-effect -- restore the saved draft from localStorage after mount (not available during SSR).
-          setTitle(savedTitle);
-          setProject(d.project ?? '');
-          setResponsible(d.responsible ?? '');
-          setDate(d.date || today());
-          if (d.rows?.length) setRows(d.rows.map(migrateRow));
-          setMeta(d.meta ?? {});
-          if (d.presetId !== undefined) setPresetId(d.presetId);
-          setRestored(true);
-          hydratedRef.current = true;
-          return;
-        }
-      }
-    } catch {
-      /* korrupt/otillgänglig storage – strunt i det */
-    }
-    // Client-only default (SSR would render a different/empty value).
-    setDate(today());
-    hydratedRef.current = true;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    if (!hydratedRef.current) return; // spara inte förrän vi läst ev. befintligt utkast
-    try {
-      window.localStorage.setItem(
-        storageKey,
-        JSON.stringify({ title, project, responsible, date, rows, meta, presetId }),
+  type Draft = Partial<{
+    title: string; project: string; responsible: string;
+    date: string; rows: Row[]; meta: Record<string, string>; presetId: string | null;
+  }>;
+  const draftValue = useMemo<Draft>(
+    () => ({ title, project, responsible, date, rows, meta, presetId }),
+    [title, project, responsible, date, rows, meta, presetId],
+  );
+  const draft = useDraft<Draft>(storageKey, draftValue, {
+    // Restore only real user input — not a blank form, a just-picked template
+    // or the auto-filled date. Old drafts stored the template name as the title
+    // value — that is not user input, so it is dropped (it stays the placeholder).
+    hasContent: (d) => {
+      const savedTitle = isPresetName(d.title) ? '' : (d.title ?? '');
+      return (
+        !!savedTitle.trim() ||
+        !!d.project?.trim() ||
+        !!d.responsible?.trim() ||
+        Object.values(d.meta ?? {}).some((v) => v?.trim()) ||
+        (!!d.rows?.length && rowsEdited(d.rows.map(migrateRow), d.presetId ?? null))
       );
-    } catch {
-      /* full/avstängd storage – ej kritiskt */
-    }
-  }, [title, project, responsible, date, rows, meta, presetId, storageKey]);
+    },
+    apply: (d) => {
+      setTitle(isPresetName(d.title) ? '' : (d.title ?? ''));
+      setProject(d.project ?? '');
+      setResponsible(d.responsible ?? '');
+      setDate(d.date || today());
+      if (d.rows?.length) setRows(d.rows.map(migrateRow));
+      setMeta(d.meta ?? {});
+      if (d.presetId !== undefined) setPresetId(d.presetId);
+    },
+    // Client-only default (SSR would render a different/empty value).
+    onFresh: () => setDate(today()),
+  });
+  const restored = draft.restored;
 
   function clearDraft() {
-    try {
-      window.localStorage.removeItem(storageKey);
-    } catch {
-      /* noop */
-    }
+    draft.clear();
     setTitle('');
     setProject('');
     setResponsible('');
@@ -249,7 +225,6 @@ export default function EgenkontrollTool({
     setRows(baseRows(startPreset));
     setPresetId(startPreset);
     setMeta({});
-    setRestored(false);
   }
 
   // Sammanfattning – ger känslan av ett riktigt verktyg och sporrar till att
@@ -540,7 +515,7 @@ export default function EgenkontrollTool({
   }
 
   return (
-    <div className="lm-tool" ref={toolRootRef}>
+    <div className="lm-tool" ref={toolRootRef} {...draft.bind}>
       <StickyDownloadBar scope={toolRootRef}>
         <button type="button" className="lm-tool-button lm-tool-button--icon" onClick={downloadCsv}>
           <Icon name="download" />

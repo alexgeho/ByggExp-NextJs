@@ -1,4 +1,6 @@
-import { useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
+
+import { hasText, useDraft } from '../../lib/useDraft';
 import ChipRow from './ChipRow';
 
 // Free arbetsschema (weekly staff schedule) tool: employees × weekdays, download
@@ -17,6 +19,24 @@ export default function SchemaMallTool() {
   const [busy, setBusy] = useState(false);
   const [activePreset, setActivePreset] = useState<string | null>(null);
   const rowsRef = useRef<HTMLDivElement>(null);
+  const draftValue = useMemo(() => ({ company, week, rows }), [company, week, rows]);
+  const draft = useDraft('bx-arbetsschema-draft', draftValue, {
+    apply: (saved) => {
+      setCompany(saved.company ?? '');
+      setWeek(saved.week ?? '');
+      if (Array.isArray(saved.rows) && saved.rows.length) {
+        setRows(saved.rows.map((r) => ({ name: r.name ?? '', days: DAYS.map((_, d) => r.days?.[d] ?? '') })));
+      }
+    },
+    hasContent: (v) => hasText(v),
+  });
+  const clearForm = () => {
+    draft.clear();
+    setCompany('');
+    setWeek('');
+    setRows([emptyRow(), emptyRow(), emptyRow()]);
+    setActivePreset(null);
+  };
   const afterPreset = (id: string) => {
     setActivePreset(id);
     window.setTimeout(() => rowsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 60);
@@ -183,7 +203,7 @@ export default function SchemaMallTool() {
   const downloadBlankCsv = () => generateCsv(blankRows(), { company: '', week: '' }, 'arbetsschema-tom-mall');
 
   return (
-    <div className="lm-tool">
+    <div className="lm-tool" {...draft.bind}>
 
       <div
         className="lm-tool-quick"
@@ -213,6 +233,7 @@ export default function SchemaMallTool() {
         <span className="lm-tool-presets-label">Fyll i exempel:</span>
         <ChipRow label="Fyll i exempel">
           <button type="button" className={`lm-tool-preset${activePreset === 'exempel' ? ' is-active' : ''}`} aria-pressed={activePreset === 'exempel'} onClick={fillExample}>Fyll i exempel</button>
+          <button type="button" className="lm-tool-preset" onClick={clearForm}>Rensa</button>
         </ChipRow>
       </div>
 

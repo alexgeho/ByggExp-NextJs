@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
+import { jsonCodec, useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free area calculator: sum the area (length × width) of one or more rectangles
 // (rooms/sections), with an optional waste margin for material planning.
@@ -46,9 +48,10 @@ export default function KvadratmeterKalkylatorTool({ locale = 'sv' }: { locale?:
         soArea: 'Yta (m²)', soLabour: 'Arbete',
       };
 
-  const [rows, setRows] = useState<Row[]>([emptyRow(), emptyRow()]);
-  const [spill, setSpill] = useState('0');
-  const [price, setPrice] = useState('');
+  const u = useUrlScope();
+  const [rows, setRows] = useUrlParam<Row[]>(u, 'r', [emptyRow(), emptyRow()], jsonCodec<Row[]>());
+  const [spill, setSpill] = useUrlParam(u, 'sp', '0');
+  const [price, setPrice] = useUrlParam(u, 'pris', '');
 
   const setRow = (i: number, patch: Partial<Row>) =>
     setRows((prev) => prev.map((r, idx) => (idx === i ? { ...r, ...patch } : r)));
@@ -132,7 +135,7 @@ export default function KvadratmeterKalkylatorTool({ locale = 'sv' }: { locale?:
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
           <span>{t.total}</span>
-          <strong>{nf(result.base)} m²</strong>
+          <strong>{nf(result.base)} m²<CopyLinkButton scope={u} tool="kvadratmeter-kalkylator" en={en} /></strong>
         </div>
         <div className="lm-result-row lm-result-total">
           <span>{t.withSpill}</span>

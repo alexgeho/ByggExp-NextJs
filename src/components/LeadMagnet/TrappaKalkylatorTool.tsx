@@ -1,6 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import type { CalcLocale } from '../../lib/locale';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free stair calculator: number of steps, step height and recommended going
 // (tread depth) from total height. Uses the comfort rule 2·rise + going ≈ 630.
@@ -33,8 +35,9 @@ export default function TrappaKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
       };
 
   // Prefilled with a typical floor-to-floor height so the result shows at once.
-  const [height, setHeight] = useState('2700');
-  const [targetRise, setTargetRise] = useState('175');
+  const u = useUrlScope();
+  const [height, setHeight] = useUrlParam(u, 'h', '2700');
+  const [targetRise, setTargetRise] = useUrlParam(u, 'sh', '175');
   const result = useMemo(() => {
     const h = num(height);
     const tr = num(targetRise);
@@ -54,7 +57,7 @@ export default function TrappaKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         <label className="lm-tool-field"><span>{t.targetRise}</span><input type="number" min="0" inputMode="numeric" value={targetRise} onChange={(e) => setTargetRise(e.currentTarget.value)} /></label>
       </div>
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{t.rSteps}</span><strong>{result.steps.toLocaleString(loc)} {t.pcs}</strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rSteps}</span><strong>{result.steps.toLocaleString(loc)} {t.pcs}<CopyLinkButton scope={u} tool="trappa-kalkylator" en={en} /></strong></div>
         <div className="lm-result-row"><span>{t.rRise}</span><span>{result.rise.toLocaleString(loc, { maximumFractionDigits: 0 })} mm</span></div>
         <div className="lm-result-row lm-result-total"><span>{t.rGoing}</span><strong>{result.going.toLocaleString(loc, { maximumFractionDigits: 0 })} mm</strong></div>
         {result.warnings.map((w) => (

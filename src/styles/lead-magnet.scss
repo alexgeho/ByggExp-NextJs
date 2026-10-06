@@ -1086,6 +1086,47 @@
   font-size: 1.25rem;
 }
 
+/* Icon-only "copy link" inside the result value (keeps the row height). */
+.lm-copy-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin: -4px 0 -4px 8px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--muted);
+  vertical-align: middle;
+  cursor: pointer;
+  font: inherit;
+}
+
+.lm-copy-link:hover,
+.lm-copy-link:focus-visible,
+.lm-copy-link.is-done {
+  color: var(--lm-accent);
+}
+
+.lm-copy-link-tip {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 6px);
+  transform: translateY(-50%);
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #1c2430;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 5;
+}
+
 .lm-result-total {
   background: var(--lm-card-bg, var(--white));
 }

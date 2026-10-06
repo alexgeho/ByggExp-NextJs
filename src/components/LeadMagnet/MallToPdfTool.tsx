@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import ToolAppCta, { type ToolAppCtaAction } from './ToolAppCta';
 import { DownloadRow, DownloadSticky, todayIso } from './ToolDownloads';
 import ChipRow from './ChipRow';
+import { useDraft } from '../../lib/useDraft';
 
 // Generic form → PDF/Excel lead-magnet tool. Give it a set of fields, a heading
 // and an example, and the visitor fills it in and downloads a ready template as
@@ -50,8 +51,8 @@ export type MallConfig = {
     options: string[];
   };
   /**
-   * Persist the visitor's input to localStorage so a bookmarked page keeps
-   * their draft on return. Off by default (other mall tools don't need it).
+   * @deprecated Drafts are always autosaved now (useDraft); kept so old
+   * configs still type-check.
    */
   persist?: boolean;
   /**
@@ -73,7 +74,6 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
   const [values, setValues] = useState<Record<string, string>>(empty);
   const [busy, setBusy] = useState(false);
   const storageKey = `mall-draft:${config.filePrefix}`;
-  const restored = useRef(false);
   const toolRootRef = useRef<HTMLDivElement>(null);
   // "Datum" defaults to today — set after mount so SSR and hydration match.
   const hasDate = config.fields.some((f) => f.name === 'date' && f.type === 'date');
@@ -83,34 +83,11 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
     setValues((prev) => (prev.date ? prev : { ...prev, date: todayIso() }));
   }, [hasDate]);
 
-  // Restore a saved draft on mount so a bookmarked page keeps the visitor's
-  // input. Runs once, client-side only.
-  useEffect(() => {
-    if (!config.persist || restored.current) return;
-    restored.current = true;
-    try {
-      const raw = window.localStorage.getItem(storageKey);
-      if (raw) {
-        const saved = JSON.parse(raw) as Record<string, string>;
-        // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time restore of a saved draft after mount (avoids SSR/hydration mismatch)
-        setValues((prev) => ({ ...prev, ...saved, date: saved.date || prev.date || '' }));
-      }
-    } catch {
-      // ignore unreadable/blocked storage
-    }
-  }, [config.persist, storageKey]);
-
-  // Save on change (only once a draft actually has content).
-  useEffect(() => {
-    if (!config.persist || !restored.current) return;
-    try {
-      const hasContent = Object.entries(values).some(([k, v]) => k !== 'date' && v.trim() !== '');
-      if (hasContent) window.localStorage.setItem(storageKey, JSON.stringify(values));
-      else window.localStorage.removeItem(storageKey);
-    } catch {
-      // ignore quota/blocked storage
-    }
-  }, [config.persist, storageKey, values]);
+  // Draft autosave: a bookmarked page keeps the visitor's input (only real edits are stored).
+  const draft = useDraft(storageKey, values, {
+    apply: (saved) => setValues((prev) => ({ ...prev, ...saved, date: saved.date || prev.date || '' })),
+    hasContent: (v) => Object.entries(v).some(([k, x]) => k !== 'date' && typeof x === 'string' && x.trim() !== ''),
+  });
 
   const setField = (name: string, value: string) =>
     setValues((prev) => ({ ...prev, [name]: value }));
@@ -119,14 +96,8 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
   const fillExample = () => setValues(withToday({ ...empty, ...config.example }));
 
   const clearForm = () => {
+    draft.clear();
     setValues(withToday(empty));
-    if (config.persist) {
-      try {
-        window.localStorage.removeItem(storageKey);
-      } catch {
-        // ignore
-      }
-    }
   };
 
   const activePreset = config.presets ? values[config.presets.field]?.trim() : '';
@@ -225,7 +196,7 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
   }
 
   return (
-    <div className="lm-tool lm-tool--mall" ref={toolRootRef}>
+    <div className="lm-tool lm-tool--mall" ref={toolRootRef} {...draft.bind}>
       <DownloadSticky scope={toolRootRef} busy={busy} onExcel={() => downloadCsv()} onPdf={() => void downloadPdf()} />
       {config.instantDownload && (
         <div className="lm-tool-instant">

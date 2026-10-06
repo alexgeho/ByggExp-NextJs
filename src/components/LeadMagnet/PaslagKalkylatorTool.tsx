@@ -1,6 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import type { CalcLocale } from '../../lib/locale';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free markup/margin calculator (påslag vs marginal). Converts a cost into a
 // selling price using either a markup % or a target margin %, and shows both so
@@ -32,9 +34,10 @@ export default function PaslagKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         fine: 'Påslag räknas på självkostnaden, marginal räknas på försäljningspriset – därför skiljer sig procenttalen åt. Ett påslag på 30 % ger t.ex. en marginal på cirka 23 %.',
       };
 
-  const [cost, setCost] = useState('');
-  const [mode, setMode] = useState<'markup' | 'margin'>('markup');
-  const [percent, setPercent] = useState('');
+  const u = useUrlScope();
+  const [cost, setCost] = useUrlParam(u, 'k', '');
+  const [mode, setMode] = useUrlParam<'markup' | 'margin'>(u, 'typ', 'markup');
+  const [percent, setPercent] = useUrlParam(u, 'p', '');
 
   const result = useMemo(() => {
     const c = Math.max(parseFloat(cost.replace(',', '.')) || 0, 0);
@@ -75,7 +78,7 @@ export default function PaslagKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rPrice}</span>
-          <strong>{kr(result.price)}</strong>
+          <strong>{kr(result.price)}<CopyLinkButton scope={u} tool="paslag-kalkylator" en={en} /></strong>
         </div>
         <div className="lm-result-row">
           <span>{t.rProfit}</span>

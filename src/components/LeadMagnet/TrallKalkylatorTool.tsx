@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Decking calculator: lineal metres and boards from area, board width, gap and
 // waste — plus the joists (reglar/bärlina) underneath at a chosen c/c.
@@ -44,12 +46,13 @@ export default function TrallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
         soMeters: 'Trall (löpmeter)', soBoards: 'Trallbrädor', soJoist: (cc: string) => `Reglar/bärlina c/c ${cc} (lpm)`, soLabour: 'Arbete trallläggning',
       };
 
-  const [area, setArea] = useState('');
-  const [board, setBoard] = useState('95');
-  const [gap, setGap] = useState('4');
-  const [len, setLen] = useState('3.6');
-  const [cc, setCc] = useState('600');
-  const [spill, setSpill] = useState('10');
+  const u = useUrlScope();
+  const [area, setArea] = useUrlParam(u, 'a', '');
+  const [board, setBoard] = useUrlParam(u, 'br', '95');
+  const [gap, setGap] = useUrlParam(u, 'fog', '4');
+  const [len, setLen] = useUrlParam(u, 'len', '3.6');
+  const [cc, setCc] = useUrlParam(u, 'cc', '600');
+  const [spill, setSpill] = useUrlParam(u, 'sp', '10');
 
   const r = useMemo(() => {
     const pitch = (num(board) + num(gap)) / 1000; // m
@@ -109,7 +112,7 @@ export default function TrallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
         <label className="lm-tool-field"><span>{t.spill}</span><input type="number" min="0" inputMode="decimal" value={spill} onChange={(e) => setSpill(e.currentTarget.value)} /></label>
       </div>
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{t.rMeters}</span><strong>{nf(r.meters)} {t.lm}</strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rMeters}</span><strong>{nf(r.meters)} {t.lm}<CopyLinkButton scope={u} tool="trall-kalkylator" en={en} /></strong></div>
         <div className="lm-result-row lm-result-total"><span>{t.rBoards}</span><strong>{nf(r.boards)} {t.pcs}</strong></div>
         <div className="lm-result-row"><span>{t.rJoist(cc)}</span><span>{nf(r.joistM)} {t.lm}</span></div>
         <p className="lm-result-fine">{t.fine}</p>

@@ -1,6 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import type { CalcLocale } from '../../lib/locale';
+import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import CopyLinkButton from './CopyLinkButton';
 
 // Free "what does an employee cost" calculator for construction companies.
 // Loaded monthly cost = gross salary + employer contributions (arbetsgivar-
@@ -31,11 +33,12 @@ export default function AnstalldKostnadKalkylatorTool({ locale = 'sv' }: { local
         note: 'Riktvärde. Arbetsgivaravgiften är 31,42 % för de flesta anställda 2026. Semesterlön, försäkringar och avtalspension kan variera med kollektivavtal – justera procentsatserna efter er situation.',
       };
 
-  const [salary, setSalary] = useState('');
-  const [aga, setAga] = useState('31.42');
-  const [holiday, setHoliday] = useState('12');
-  const [overhead, setOverhead] = useState('0');
-  const [hours, setHours] = useState('130');
+  const u = useUrlScope();
+  const [salary, setSalary] = useUrlParam(u, 'lon', '');
+  const [aga, setAga] = useUrlParam(u, 'aga', '31.42');
+  const [holiday, setHoliday] = useUrlParam(u, 'sem', '12');
+  const [overhead, setOverhead] = useUrlParam(u, 'oh', '0');
+  const [hours, setHours] = useUrlParam(u, 'h', '130');
 
   const r = useMemo(() => {
     const lon = Math.max(parseFloat(salary.replace(',', '.')) || 0, 0);
@@ -104,7 +107,7 @@ export default function AnstalldKostnadKalkylatorTool({ locale = 'sv' }: { local
         )}
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rMonth}</span>
-          <strong>{kr(r.total)}</strong>
+          <strong>{kr(r.total)}<CopyLinkButton scope={u} tool="anstalld-kostnad-kalkylator" en={en} /></strong>
         </div>
         <div className="lm-result-row">
           <span>{t.rYear}</span>

@@ -1808,3 +1808,20 @@
 .lm-tool-result-btn.is-ok.is-on { background: #16a34a; border-color: #16a34a; color: #fff; }
 .lm-tool-result-btn.is-warn.is-on { background: #d97706; border-color: #d97706; color: #fff; }
 .lm-tool-result-btn.is-na.is-on { background: var(--muted); border-color: var(--muted); color: #fff; }
+
+// Extra line under a row (opened via ⋯): Mätvärde [unit] · Kommentar.
+.lm-tool-row-extra {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.lm-tool-row-extra .lm-tool-measure {
+  flex: 0 0 170px;
+}
+
+.lm-tool-row-extra .lm-tool-row-comment {
+  flex: 1 1 auto;
+  min-width: 0;
+}

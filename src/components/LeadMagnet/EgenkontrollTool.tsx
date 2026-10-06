@@ -26,8 +26,9 @@ type Row = {
   unit?: string;
   requirement?: string;
   measured?: string;
-  /** UI only: comment field opened via the ⋯ menu. */
+  /** UI only: comment / measured value opened via the ⋯ menu. */
   showComment?: boolean;
+  showMeasure?: boolean;
 };
 
 const RESULTS = ['Ej besvarad', 'Godkänd', 'Anmärkning', 'Ej aktuellt'];
@@ -644,10 +645,12 @@ export default function EgenkontrollTool({
             const showSection = !!row.section && row.section !== rows[index - 1]?.section;
             // Comment is hidden behind ⋯ until asked for (or already filled).
             const showComment = row.showComment || !!row.comment;
+            // Mätvärde too: off the main line, opened via ⋯ (the PDF keeps a blank line for it).
+            const showMeasure = !!row.unit && (row.showMeasure || !!row.measured?.trim());
             return (
               <div key={index}>
                 {showSection ? <div className="lm-tool-section-row">{row.section}</div> : null}
-                <div className={`lm-tool-row lm-tool-row-ek${measure ? ' lm-tool-row-ek-measure' : ''}`}>
+                <div className={`lm-tool-row lm-tool-row-ek`}>
                   <div className="lm-tool-row-point">
                     <input value={row.point} placeholder={row.hint || 'Kontrollpunkt'} title={row.hint} aria-label="Kontrollpunkt" onChange={(e) => setRow(index, { point: e.currentTarget.value })} />
                     {/* Metod/Krav stay in the PDF/Excel, not on screen (less text). */}
@@ -670,18 +673,6 @@ export default function EgenkontrollTool({
                       </button>
                     ))}
                   </div>
-                  {measure && row.unit ? (
-                    <label className="lm-tool-measure">
-                      <input
-                        value={row.measured ?? ''}
-                        inputMode="decimal"
-                        aria-label={`Mätvärde (${row.unit})`}
-                        placeholder="–"
-                        onChange={(e) => setRow(index, { measured: e.currentTarget.value })}
-                      />
-                      <span>{row.unit}</span>
-                    </label>
-                  ) : null}
                   <div className="lm-tool-row-more">
                     <button
                       type="button"
@@ -694,6 +685,11 @@ export default function EgenkontrollTool({
                     </button>
                     {menuRow === index ? (
                       <div className="lm-tool-row-menu" role="menu">
+                        {row.unit && !showMeasure ? (
+                          <button type="button" role="menuitem" onClick={() => { setRow(index, { showMeasure: true }); setMenuRow(null); }}>
+                            Mätvärde
+                          </button>
+                        ) : null}
                         {showComment ? null : (
                           <button type="button" role="menuitem" onClick={() => { setRow(index, { showComment: true }); setMenuRow(null); }}>
                             Kommentar
@@ -705,15 +701,32 @@ export default function EgenkontrollTool({
                       </div>
                     ) : null}
                   </div>
-                  {showComment ? (
-                    <input
-                      className="lm-tool-row-comment"
-                      value={row.comment}
-                      placeholder="Kommentar"
-                      aria-label="Kommentar"
-                      autoFocus={row.showComment && !row.comment}
-                      onChange={(e) => setRow(index, { comment: e.currentTarget.value })}
-                    />
+                  {showMeasure || showComment ? (
+                    <div className="lm-tool-row-extra">
+                      {showMeasure ? (
+                        <label className="lm-tool-measure">
+                          <input
+                            value={row.measured ?? ''}
+                            inputMode="decimal"
+                            aria-label={`Mätvärde (${row.unit})`}
+                            placeholder="Mätvärde"
+                            autoFocus={row.showMeasure && !row.measured}
+                            onChange={(e) => setRow(index, { measured: e.currentTarget.value })}
+                          />
+                          <span>{row.unit}</span>
+                        </label>
+                      ) : null}
+                      {showComment ? (
+                        <input
+                          className="lm-tool-row-comment"
+                          value={row.comment}
+                          placeholder="Kommentar"
+                          aria-label="Kommentar"
+                          autoFocus={row.showComment && !row.comment}
+                          onChange={(e) => setRow(index, { comment: e.currentTarget.value })}
+                        />
+                      ) : null}
+                    </div>
                   ) : null}
                 </div>
               </div>

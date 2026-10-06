@@ -1,5 +1,12 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 🟢 2026-10-06 — 5 коммерческих запросов → топ-3 (P0 live)
+- Deep research (живой google.se, AIO, PAA, аудит) → `docs/seo/commercial-top3-plan-2026-10.md`. Вывод: в топе продуктовые страницы, у нас блог; AIO цитирует нас 4/5, ссылок 0.
+- Переписаны: byggdagbok, tidrapportering-entreprenad, mobil-tidrapportering, schemalaggningssystem-bygg, resursplanering-bygg (title/H1/meta, PAA-FAQ, цены, первоисточники). Удалён дубль byggdagbok (kvalitet.ts). Внутренние ссылки, диаграмма byggdagbok-krav (AFC.38). LCP: preload обложки. Индексация запрошена 06.10.
+- Проверено по коду: НЕТ offline, Fortnox/Visma API (только SIE4/CSV), авто-OB по Byggavtalet, подписи/PDF/app у Dagbok, машин/UE/drag-n-drop в Planering. Ложные обещания убраны из статей. В бэкенде newsletter-template.ts всё ещё обещает «OB enligt byggavtalet automatiskt».
+- Egenkontroll-инструмент: пилюли в 1 строку по кругу, пункты шаблона = плейсхолдеры, плейсхолдер пропадает при фокусе.
+NÄSTA: P1 продуктовые страницы /sv/funktioner/resursplanering и /mobil-tidrapportering (новый шаблон); листинги BusinessWith/Programguiden/Systemkompassen (владелец); обновить GSC-токен (.gsc/gen_gsc_token.py); через 3–4 недели сверить позиции.
+
 ## 🟢 2026-10-05 — egenkontroll-страницы: форма сверху, баннер → консультация (live)
 - 7 страниц egenkontroll: шаблон сразу под H1, после него `AiEgenkontrollBanner` (Avtal + Foton i appen = Egenkontroll, 3 шага, 2 строки «как работает»), кнопка **Boka demo** → `/sv/contact?amne=egenkontroll` (GA4 `egenkontroll_boka_demo`; в заявке «Ämne: egenkontroll»). Убраны «Slipp börja om», дисклеймер калькулятора и форма «hjälp vidare» (только на этих страницах).
 - `EgenkontrollTool`: Titel никогда не префиллится (старые черновики с названием шаблона чистятся), Datum = сегодня, черновик только при реальном вводе, смена шаблона спрашивает; чипы без «Egenkontroll»; PDF/Excel/+punkt синие с иконками; Metod/Krav скрыты на экране (есть в PDF); бледные плейсхолдеры, больше воздуха.

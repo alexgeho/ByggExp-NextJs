@@ -1803,8 +1803,8 @@ const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING_HTML = `
 <h2>Boverkets krav och vanliga riktvärden</h2>
 <p>Boverkets föreskrifter om säkerhet vid användning av byggnader (BFS 2024:9), som ersatte BBR 1 juli 2025, kräver att trappor är utformade så att man kan förflytta sig säkert – men anger inga exakta mått för steghöjd och stegdjup. Som utgångsvärden används därför ofta vedertagna riktvärden, bland annat från BBR:s tidigare allmänna råd:</p>
 <ul>
-<li><strong>Steghöjd:</strong> bör inte överstiga cirka 180 mm (18 cm) inomhus. En bekväm nivå ligger ofta på 150–180 mm.</li>
-<li><strong>Stegdjup:</strong> minst cirka 250 mm (0,25 m) för trappor i eller i anslutning till byggnader. För trappor i gångvägar på tomten bör stegdjupet vara minst 300 mm (0,30 m).</li>
+<li><strong>Steghöjd:</strong> BBR angav ingen maxhöjd. Trä- och Möbelföretagens handledning för trätrappor anger 170–210 mm som lämplig steghöjd i småhus och lägenheter. Ju lägre steg, desto djupare plansteg enligt trappformeln.</li>
+<li><strong>Stegdjup:</strong> minst 250 mm (0,25 m) mätt i gånglinjen, för trappor i eller i anslutning till byggnader. För trappor i gångvägar på tomten bör stegdjupet vara minst 300 mm (0,30 m).</li>
 </ul>
 <p>Exakta krav skiljer sig åt beroende på om det är en trappa i en bostad, i en publik byggnad eller utomhus. Kontrollera alltid vad som gäller för just din typ av trappa innan du bygger – BFS 2024:9 och, i flerbostadshus och publika lokaler, tillgänglighetskraven i BFS 2024:12. Har ansökan om bygglov eller anmälan kommit in före 1 juli 2026 får BBR fortfarande tillämpas.</p>
 

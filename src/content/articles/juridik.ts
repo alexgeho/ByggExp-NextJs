@@ -1314,7 +1314,7 @@ const A_OB_OVERTID_BYGGAVTALET_RAKNA_HTML = `
 <li><strong>OB 2 = 40 %</strong></li>
 <li><strong>OB 3 = 70 %</strong></li>
 </ul>
-<p>Vilken nivå som gäller styrs av klockslag och veckodag. Morgon kl 05–06 och eftermiddag kl 17–19 ligger på den lägsta nivån (<strong>OB 1 = 20 %</strong>), medan kväll kl 19–22 ligger på mellannivån (<strong>OB 2 = 40 %</strong>). Natt kl 22–05 samt hela lördag, söndag och helgdag ger den högsta satsen (<strong>OB 3 = 70 %</strong>). Vardagstid kl 06–18 är ordinarie tid utan OB. Stäm alltid av mot avtalstexten i § 2 p5 innan du bygger in gränserna i lönerutinen, eftersom det är just klockslagen som avgör vilken procent som ska användas.</p>
+<p>Vilken nivå som gäller styrs av klockslag och veckodag. Måndag–fredag ger morgon kl 05–06 den lägsta nivån (<strong>OB 1 = 20 %</strong>) och kväll kl 18–22 mellannivån (<strong>OB 2 = 40 %</strong>). Natt kl 22–05 samt hela lördag, söndag och helgdag ger den högsta satsen (<strong>OB 3 = 70 %</strong>). Vardagstid kl 06–18 är ordinarie tid utan OB. Stäm alltid av mot avtalstexten i § 2 p5 innan du bygger in gränserna i lönerutinen, eftersom det är just klockslagen som avgör vilken procent som ska användas.</p>
 
 <h2>Övertidens fyra nivåer (§ 2 p6.1)</h2>
 <p>Övertid har fyra nivåer, också beräknade i procent på utgående lön. Man skiljer på enkel och kvalificerad övertid:</p>
@@ -1967,13 +1967,13 @@ const A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET_HTML = `
 <p><strong>Månadsavlönad byggnadsarbetare.</strong> Anta en fast månadslön på 34 000 kr och rörliga lönedelar (ob och övertid) på 60 000 kr under intjänandeåret. Vid uttag av semester:</p>
 <ul>
 <li>Månadslönen betalas som vanligt under ledigheten.</li>
-<li>Semestertillägg enligt avtal läggs på den fasta lönen.</li>
+<li>Semestertillägg läggs på den fasta lönen: 0,8 procent av månadslönen per betald semesterdag.</li>
 <li>På de rörliga 60 000 kr läggs 13,0 %: 60 000 × 0,13 = <strong>7 800 kr</strong> i semesterlön på rörliga delar.</li>
 </ul>
-<p>Den exakta mekaniken för hur semestertillägget på den fasta lönen ska beräknas per betald dag framgår av Byggavtalets semesterkapitel – kontrollera den mot din avtalstext. Poängen är att de rörliga delarna aldrig får glömmas bort: kontrollera att lönesystemet verkligen samlar ackord, ob och övertid i det semesterlönegrundande underlaget – inte bara grundlönen.</p>
+<p>Reglerna för månadsavlönade står i Byggavtalets bilaga I (Särskilda semesterregler). Poängen är att de rörliga delarna aldrig får glömmas bort: kontrollera att lönesystemet verkligen samlar ackord, ob och övertid i det semesterlönegrundande underlaget – inte bara grundlönen.</p>
 
 <h2>Semesterersättning vid avslutad anställning</h2>
-<p>Semesterersättning är den intjänade men inte uttagna semesterlönen som betalas ut när anställningen upphör. För byggnadsarbetare beräknas den med samma procentsats som semesterlönen, alltså 13,0 procent (respektive 13,1 eller 13,2 procent beroende på avtalsområde) av den intjänade lönen.</p>
+<p>Semesterersättning är den intjänade men inte uttagna semesterlönen som betalas ut när anställningen upphör. För timavlönade byggnadsarbetare beräknas den med samma procentsats som semesterlönen, alltså 13,0 procent av semesterlöneunderlaget (respektive 13,1 eller 13,2 procent beroende på avtalsområde). För månadsavlönade är semesterersättningen 4,6 procent av den aktuella månadslönen per ej uttagen semesterdag, plus semestertillägg.</p>
 <p>Enligt semesterlagen ska semesterersättningen betalas ut senast en månad efter att anställningen har upphört. Det är särskilt viktigt att ha koll på i byggbranschen, där projektanställningar och säsongsvariation gör att anställningar ofta avslutas. En felaktig eller sen utbetalning kan snabbt bli en tvistefråga.</p>
 <p>Räkna alltså ut all intjänad, ej uttagen semesterlön på hela bruttolönen fram till sista anställningsdagen, multiplicera med rätt procentsats och betala ut inom en månad. Har den anställde sparade dagar från tidigare år ska även dessa lösas ut.</p>
 
@@ -2002,7 +2002,7 @@ const A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET_HTML = `
 <h3>Räknas ob och övertid med i semesterlönen?</h3>
 <p>Ja. Procenten läggs på hela den intjänade bruttolönen under intjänandeåret, inklusive ackord, ob, övertid och vissa tillägg – inte bara grundlönen. Missar du de rörliga delarna underbetalar du semesterlönen.</p>
 <h3>När ska semesterersättning betalas ut?</h3>
-<p>Semesterersättningen – intjänad men inte uttagen semesterlön – ska enligt semesterlagen betalas ut senast en månad efter att anställningen upphört. Den beräknas med samma procentsats som semesterlönen, alltså 13 procent för byggnadsarbetare på Byggavtalet.</p>
+<p>Semesterersättningen – intjänad men inte uttagen semesterlön – ska enligt semesterlagen betalas ut senast en månad efter att anställningen upphört. För timavlönade på Byggavtalet är den 13,0 procent av semesterlöneunderlaget; för månadsavlönade 4,6 procent av månadslönen per ej uttagen dag plus semestertillägg.</p>
 <h3>När måste jag använda procentregeln i stället för sammalöneregeln?</h3>
 <p>När den anställde under intjänandeåret haft frånvaro som inte är semesterlönegrundande eller ändrat sysselsättningsgrad. Då är procentregeln tvingande. I bygg är detta vanligt vid permittering, sjukfrånvaro och varierande tjänstgöringsgrad.</p>
 

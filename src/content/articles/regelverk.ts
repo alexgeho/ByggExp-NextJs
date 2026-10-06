@@ -500,7 +500,7 @@ const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN_HTML = `
 <li><strong>Inkom 1 juli 2025–30 juni 2026:</strong> byggherren väljer gammalt eller nytt – men inte en blandning.</li>
 <li><strong>Inkom efter 30 juni 2026:</strong> enbart Boverkets nya bygg- och konstruktionsregler gäller.</li>
 </ul>
-<p>Pågående projekt som startats under övergångsperioden enligt äldre regler kan omfattas av övergångsbestämmelser. Den exakta lydelsen bör du dubbelkolla mot Boverkets övergångsbestämmelser för just ditt ärende. En separat tidpunkt som rapporterats är att energikraven flyttas ut ur BBR till en egen energiregel, uppgivet omkring 1 oktober 2026 – det datumet är ännu obekräftat och bör verifieras mot Boverket.</p>
+<p>Pågående projekt som startats under övergångsperioden enligt äldre regler kan omfattas av övergångsbestämmelser. Den exakta lydelsen bör du dubbelkolla mot Boverkets övergångsbestämmelser för just ditt ärende. Energikraven har flyttats ut ur BBR till en egen författning (BFS 2026:9), och den 1 oktober 2026 upphävdes BBR helt. Under en begränsad tid får äldre energiregler i BBR 31 fortfarande tillämpas under vissa förutsättningar.</p>
 
 <h2>Myten om en ny kontrollplan – så ligger det till</h2>
 <p>En vanlig missuppfattning är att den nya regelreformen tvingar fram en helt ny sorts kontrollplan. Det stämmer inte. Kontrollplan och egenkontroll regleras av plan- och bygglagen (PBL, 10 kap.), inte av BBR eller byggreglerna. Själva reformen ändrar alltså inte de formella PBL-kraven på kontrollplanen.</p>
@@ -511,13 +511,13 @@ const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN_HTML = `
 <p>Konkret betyder det att varje kontrollpunkt bör kopplas till tre saker: vilket funktionskrav den svarar mot, vilken metod eller lösning du valt, och vilket underlag som styrker att kravet är uppfyllt (mätning, provning, produktdokumentation eller motsvarande). Kopplingen mellan egenkontroll, kontrollplan och startbesked blir viktigare – kontrollansvarig ska kunna följa hur du kommit fram till att ett krav är uppfyllt, inte bara att någon skrivit sina initialer i en ruta.</p>
 <p>Rollfördelningen är densamma men skärps i praktiken: byggherren äger ansvaret, KA granskar och följer kontrollplanen, och du som entreprenör levererar verifieringen. Ju svagare din dokumentation är, desto mer sårbar blir hela kedjan vid slutbesked.</p>
 
-<h2>Checklista: förbered dig innan 30 juni 2026</h2>
+<h2>Checklista: så ställer du om rutinerna</h2>
 <ul>
-<li><strong>Bestäm regelval per projekt.</strong> Avgör tidigt om projektet ska följa gamla eller nya reglerna, och notera datumet då ansökan/anmälan inkom.</li>
+<li><strong>Notera regelverket per projekt.</strong> Projekt där ansökan/anmälan inkom under övergångsperioden kan följa gamla regler – skriv in vilket regelverk som gäller och datumet då ansökan/anmälan inkom.</li>
 <li><strong>Uppdatera egenkontrollmallarna mot funktionskraven.</strong> Byt ut avbockningar mot punkter som beskriver vald lösning och verifiering.</li>
 <li><strong>Dokumentera verifieringsmetoden.</strong> Bestäm i förväg hur varje funktionskrav ska styrkas – mätning, provning eller produktunderlag.</li>
 <li><strong>Stäm av med kontrollansvarig.</strong> Säkerställ att kontrollplan och egenkontroll hänger ihop mot startbesked.</li>
-<li><strong>Bevaka energiregeln.</strong> Håll koll på den separata energiregelns ikraftträdande och kontrollera BFS-numren mot Boverkets författningssamling.</li>
+<li><strong>Kolla energireglerna.</strong> Energikraven står nu i BFS 2026:9 – kontrollera vilken version som gäller för ditt ärende.</li>
 <li><strong>Spara underlagen under hela ansvarstiden.</strong> Verifieringsdokumentationen är ditt skydd om ett projekt ifrågasätts i efterhand – för arbete på byggnader kan fel enligt konsumenttjänstlagen reklameras i upp till tio år, och entreprenadavtalens ansvarstid enligt AB 04/ABT 06 är normalt tio år.</li>
 </ul>
 
@@ -525,8 +525,8 @@ const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN_HTML = `
 <p>ByggExp hjälper dig att strukturera egenkontrollen så att den håller för det funktionsbaserade regelverket. I stället för lösa pappersblanketter samlar du kontrollpunkter, valda lösningar och verifieringsunderlag på ett ställe – med foton och noteringar kopplade till rätt moment. Det gör det enklare att visa <em>hur</em> ett krav uppfyllts och att ta fram dokumentationen när kontrollansvarig eller byggnadsnämnden frågar. ByggExp ersätter inte kontrollansvarig eller kontrollplanen enligt PBL, och tar inte över byggherrens ansvar – men det gör det betydligt lättare att hålla ordning på underlaget och att spara det under den tid det kan behövas, till exempel under den tioåriga reklamations- och ansvarstiden.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Måste jag använda de nya reglerna redan nu?</h3>
-<p>Nej. Under övergångsperioden 1 juli 2025–30 juni 2026 får byggherren välja gamla eller nya reglerna, så länge du inte blandar dem i samma projekt. För ärenden där ansökan eller anmälan inkommer efter 30 juni 2026 gäller enbart de nya reglerna.</p>
+<h3>Måste jag använda de nya reglerna nu?</h3>
+<p>Ja, för nya ärenden. Övergångsperioden 1 juli 2025–30 juni 2026, då byggherren fick välja gamla eller nya regler (utan att blanda), är slut. Valde du äldre regler och fick lov före 1 juli 2026 gäller de äldre reglerna även vid startbeskedet.</p>
 <h3>Vad händer med pågående bygglov?</h3>
 <p>Vilket regelverk som gäller styrs i praktiken av datumet då ansökan eller anmälan inkom till byggnadsnämnden. Projekt som startats under övergångsperioden enligt äldre regler kan omfattas av övergångsbestämmelser – kontrollera lydelsen för ditt specifika ärende mot Boverket.</p>
 <h3>Ändras kontrollplanen av de nya byggreglerna?</h3>
@@ -534,7 +534,7 @@ const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN_HTML = `
 <h3>Hur länge bör jag spara egenkontroll och verifieringsunderlag?</h3>
 <p>Det finns ingen särskild lagstadgad arkiveringstid för egenkontroll i PBL, men underlaget kan behövas långt efter slutbesked. Fel i arbete på byggnader kan enligt konsumenttjänstlagen reklameras i upp till tio år, och ansvarstiden i AB 04/ABT 06 är normalt tio år efter godkänd slutbesiktning – spara därför verifieringsdokumentationen så länge den kan bli aktuell.</p>
 <h3>Vad gäller efter 30 juni 2026?</h3>
-<p>Då är valfriheten borta. Ärenden som påbörjas eller ansöks efter det datumet ska följa Boverkets nya bygg- och konstruktionsregler fullt ut. Se därför över mallar och rutiner i god tid före sommaren 2026.</p>
+<p>Då är valfriheten borta. Från 1 juli 2026 gäller Boverkets nya byggregler fullt ut för alla nya ärenden. Har du inte redan gjort det: uppdatera mallar och rutiner nu.</p>
 
 <h2>Kom igång</h2>
 <p>Börja med att se över dina egenkontrollrutiner mot funktionskraven med vår gratis <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmall</a>. Vill du se hur ByggExp samlar egenkontroll och verifieringsunderlag i ett flöde? Boka en demo via <a href="/sv/contact">/sv/contact</a>.</p>
@@ -544,10 +544,10 @@ const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN_HTML = `
 
 const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN: BlogPost = {
   _id: "code-"+"boverkets-nya-byggregler-2026-kontrollplan",
-  title: "Boverkets nya byggregler 2026: så påverkas din kontrollplan och egenkontroll", slug: "boverkets-nya-byggregler-2026-kontrollplan", locale: "sv",
-  excerpt: "Boverkets funktionsbaserade byggregler flyttar ansvaret till dig som entreprenör. Så påverkas egenkontroll och kontrollplan – och så förbereder du dig före 30 juni 2026.", tag: "Regelverk",
+  title: "Boverkets nya byggregler fullt ut 2026 – kontrollplan och egenkontroll", slug: "boverkets-nya-byggregler-2026-kontrollplan", locale: "sv",
+  excerpt: "Boverkets funktionsbaserade byggregler flyttar ansvaret till dig som entreprenör. Så påverkas egenkontroll och kontrollplan – och vad som gäller nu när övergångsperioden är slut.", tag: "Regelverk",
   coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN_HTML,
-  seoTitle: "Nya byggregler 2026: kontrollplan | ByggExp", seoDescription: "Boverkets nya bygg- och konstruktionsregler ändrar hur du dokumenterar egenkontroll. Så förbereder du dig och kontrollplanen före 30 juni 2026.",
+  seoTitle: "Nya byggregler 2026: kontrollplan | ByggExp", seoDescription: "Boverkets nya bygg- och konstruktionsregler ändrar hur du dokumenterar egenkontroll. Gäller fullt ut sedan 1 juli 2026 – så påverkas kontrollplanen.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T05:39:00.000Z", createdAt: "2026-08-19T05:39:00.000Z", updatedAt: "2026-08-19T05:39:00.000Z",
 };

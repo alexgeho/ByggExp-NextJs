@@ -3990,7 +3990,7 @@ const A_ACKORDSLON_BYGG_HTML = `
 <p>Reglerna finns i Byggavtalet, sektorns kollektivavtal mellan Byggnads och Byggföretagen. Den aktuella avtalsperioden löper 1 maj 2025–30 april 2027 och omfattar runt 100 000 yrkesarbetare. Som arbetsgivare är det Byggavtalets mätnings- och ackordsregler du har att förhålla dig till – ackord är inte en fri intern lönemodell utan ett reglerat system.</p>
 
 <h2>Lönegolvet du måste hålla</h2>
-<p>Ackord fritar dig inte från avtalade lägstanivåer. Grundlönen för yrkesarbetare angavs vid 2025 års revision till 196 kr/tim, alternativt 34 104 kr/mån. Den utgående (individuella) lönen räknades då upp med 7,54 kr/tim, motsvarande 1 312 kr/mån.</p>
+<p>Ackord fritar dig inte från avtalade lägstanivåer. Grundlönen för yrkesarbetare var 196 kr/tim (34 104 kr/mån) från 1 maj 2025 och är <strong>203 kr/tim (35 322 kr/mån) från 1 maj 2026</strong>. Den utgående (individuella) lönen räknades då upp med 7,54 kr/tim, motsvarande 1 312 kr/mån.</p>
 <p>Löneökningen är totalt 6,4 % över två år: 3,4 % från 1 maj 2025 och 3,0 % från 1 maj 2026. Vid andra årets revision höjs utgående lön med 6,85 kr/tim, ungefär 1 192 kr/mån. Poängen för dig som räknar ackord: överenskommelsen måste utformas så att lönen aldrig underskrider avtalad lägstanivå, oavsett hur mängderna faller ut.</p>
 
 <h2>Ackordssedeln och ackordsöverenskommelsen</h2>
@@ -6807,23 +6807,23 @@ const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
 <li>Ersättning utgår när <strong>enkel resväg överstiger 2 km</strong>.</li>
 <li><strong>Egen bil: 2,50 kr/km (25 kr/mil).</strong></li>
 <li><strong>Samåkning:</strong> föraren får 2,50 kr/km plus 0,85 kr/km per passagerare; passageraren får 0,85 kr/km.</li>
-<li><strong>Kollektivtrafik</strong> ersätts mot uppvisat kvitto.</li>
-<li>Ersättningen betalas <strong>per arbetsdag</strong> och är <strong>capad vid avtalets traktamentesnivå</strong> - den dagliga reskostnaden kan alltså inte överstiga dagsbeloppet för traktamente.</li>
+<li><strong>Annat färdmedel</strong> (t.ex. kollektivtrafik): styrkta kostnader, högst 2,50 kr/km.</li>
+<li>Ersättningen betalas <strong>per arbetsdag</strong> och räknas på <strong>högst 120 km enkel resväg</strong>.</li>
 </ul>
-<p>Notera att detta är avtalssatser som revideras 1 maj varje avtalsår. Kontrollera alltid gällande belopp mot Byggavtalet innan lönekörning - satserna ovan speglar 2025-utgåvan.</p>
+<p>Beloppen följer Skatteverket: ändras det skattefria beloppet för tjänsteresor eller traktamente, ändras avtalets belopp på samma sätt (Byggavtalet 2025–2027 § 6 p. 1).</p>
 
 <h2>Restidsersättning - betalning för själva restiden</h2>
-<p>Restidsersättning träder in när resan går utanför den fria zonen eller till en förrättning, och den ersätter den <em>tid</em> den anställde reser - inte kilometrarna. Det innebär två saker i praktiken:</p>
+<p>Restidsersättning betalas för nödvändig restid till och från en förrättningsort (minst 70 km enkel resväg från bostaden), och den ersätter den <em>tid</em> den anställde reser - inte kilometrarna. Det innebär två saker i praktiken:</p>
 <ul>
 <li>Restidsersättning och reskostnadsersättning <strong>kan kombineras</strong> för samma resa: den ena betalar timmarna, den andra bilen.</li>
-<li>Beloppet är en tidsbaserad avtalssats som är <strong>avtalsberoende och revideras</strong> - kontrollera aktuell restidssats i gällande avtalstext innan du lägger in den i lönesystemet.</li>
+<li>Restiden ersätts med <strong>grundlön per timme</strong>, högst 12 timmar per dygn minus samma dags arbetade timmar (§ 6 p. 2.7.2). För yrkesarbetare är grundlönen <strong>203 kr/tim från 1 maj 2026</strong> (196 kr/tim maj 2025–april 2026).</li>
 </ul>
 <p>En vanlig felkälla är att blanda restidsersättning med milsatser från andra avtal. Det förekommer siffror i omlopp (exempelvis restidsersättning uttryckt i kr/mil) som i själva verket hör hemma i plåt-, ventilations- eller VVS-avtalen - inte i Byggavtalet. Använd aldrig en sats du inte kunnat verifiera mot Byggavtalets egen text.</p>
 
 <h2>Traktamente och förrättningstillägg vid övernattning</h2>
 <p>Vid tjänsteresa med övernattning tillkommer traktamente. Här möts två regelverk som inte är samma sak:</p>
 <ul>
-<li><strong>Byggavtalets traktamente</strong> ligger 2026 på cirka 450 kr/dygn - alltså <em>över</em> Skatteverkets skattefria gräns. Mellanskillnaden är skattepliktig lön. Beloppet reduceras med 55% om arbetsgivaren står för maten och 35% om arbetsgivaren står för boendet. Exakt kronbelopp är avtalsberoende och revideras.</li>
+<li><strong>Byggavtalets traktamente</strong> är <strong>435 kr per dag</strong> vid övernattning (§ 6 p. 2.2) - alltså <em>över</em> Skatteverkets skattefria gräns. Mellanskillnaden är skattepliktig lön. Beloppet reduceras med 55% om arbetsgivaren står för maten och 35% om arbetsgivaren står för boendet.</li>
 <li><strong>Skatteverkets skattefria traktamente inrikes 2026:</strong> helt maximibelopp 300 kr/heldag (halvdag 150 kr, natt 150 kr). Efter tre månader på samma ort sänks skattefritt belopp till 210 kr, efter två år till 150 kr. Från 2026 gäller nya, striktare allmänna råd.</li>
 <li><strong>50-km- och övernattningskravet:</strong> skattefritt traktamente förutsätter tjänsteresa med övernattning mer än 50 km från både bostad och den vanliga verksamhetsorten.</li>
 </ul>
@@ -6841,8 +6841,8 @@ const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
 <p>En montör kör egen bil 6 mil tur och retur till ett projekt utanför fri zon och övernattar en vecka. Så här bör posterna redovisas <em>separat</em> på lönebeskedet (använd aktuella avtalssatser - beloppen nedan är ca-värden för att visa strukturen):</p>
 <ol>
 <li><strong>Reskostnadsersättning:</strong> 6 mil &times; 25 kr/mil = ca 150 kr för resdagen. Skattefri upp till Skatteverkets milgräns.</li>
-<li><strong>Restidsersättning:</strong> antal restimmar &times; gällande avtalssats. Ersätter tiden, redovisas som egen rad. Skattepliktig som lön.</li>
-<li><strong>Traktamente:</strong> avtalets dygnsbelopp (ca 435 kr) - varav 300 kr skattefritt och resterande del skattepliktig. Reduceras om arbetsgivaren står för mat eller boende.</li>
+<li><strong>Restidsersättning:</strong> antal restimmar &times; grundlön (203 kr/tim för yrkesarbetare). Ersätter tiden, redovisas som egen rad. Skattepliktig som lön.</li>
+<li><strong>Traktamente:</strong> avtalets dagsbelopp 435 kr - varav 300 kr skattefritt och resterande del skattepliktig. Reduceras om arbetsgivaren står för mat eller boende.</li>
 </ol>
 <p>Poängen är inte kronorna utan uppdelningen: tre olika rader, med rätt skattefri/skattepliktig hantering på varje. Hänvisa alltid till aktuell avtalstext för de exakta beloppen.</p>
 
@@ -6853,7 +6853,7 @@ const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
 <h3>Är restidsersättning och reskostnadsersättning samma sak?</h3>
 <p>Nej. Restidsersättning betalar för den tid resan tar, reskostnadsersättning betalar för resvägen/kostnaden (bil, samåkning eller kollektivtrafik). De kan utgå samtidigt för samma resa - den ena för timmarna, den andra för kilometrarna.</p>
 <h3>Vilken milersättning gäller för byggnadsarbetare 2026?</h3>
-<p>Reskostnaden vid egen bil enligt Byggavtalet är 2,50 kr/km (25 kr/mil) i 2025-utgåvan. Skatteverkets skattefria milersättning är också 25 kr/mil 2026. Betalar arbetsgivaren mer än den skattefria nivån blir överskjutande del skattepliktig lön. Kontrollera aktuell avtalssats, som revideras 1 maj.</p>
+<p>Reskostnaden vid egen bil enligt Byggavtalet 2025–2027 är 2,50 kr/km (25 kr/mil). Skatteverkets skattefria milersättning är också 25 kr/mil 2026. Betalar arbetsgivaren mer än den skattefria nivån blir överskjutande del skattepliktig lön.</p>
 <h3>Måste traktamentet över 300 kr beskattas?</h3>
 <p>Ja. Skatteverkets skattefria maximibelopp inrikes 2026 är 300 kr/heldag. Byggavtalets traktamente ligger över det, och mellanskillnaden är skattepliktig lön med arbetsgivaravgifter. Efter tre månader på samma ort sänks den skattefria gränsen till 210 kr, efter två år till 150 kr.</p>
 <h3>Gäller Skatteverkets reseavdrag för byggnadsarbetare?</h3>

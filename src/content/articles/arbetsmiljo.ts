@@ -1016,7 +1016,7 @@ const A_SKYDDSROND_BYGG_CHECKLISTA_HTML = `
 
 const A_SKYDDSROND_BYGG_CHECKLISTA: BlogPost = {
   _id: "code-"+"skyddsrond-bygg-checklista",
-  title: "Skyddsrond på bygget – checklista, intervall och protokoll (2026)", slug: "skyddsrond-bygg-checklista", locale: "sv",
+  title: "Skyddsrond – checklista att fylla i", slug: "skyddsrond-bygg-checklista", locale: "sv",
   excerpt: "Praktisk guide till skyddsronden på bygget: riskbaserat intervall, roller, protokoll och en färdig checklista enligt de nya reglerna 2025–2026.", tag: "Arbetsmiljö",
   coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_SKYDDSROND_BYGG_CHECKLISTA_HTML,
   seoTitle: "Skyddsrond bygg: checklista 2026 | ByggExp", seoDescription: "Hur ofta ska ni gå skyddsrond, vem deltar och vad ska protokollföras? Praktisk checklista för byggarbetsplatsen enligt AFS 2023:1 och 2023:3.",

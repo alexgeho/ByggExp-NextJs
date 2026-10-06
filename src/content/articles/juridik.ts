@@ -789,7 +789,7 @@ const A_ENTREPRENADKONTRAKT_MALL_HTML = `
 
 const A_ENTREPRENADKONTRAKT_MALL: BlogPost = {
   _id: "code-"+"entreprenadkontrakt-mall",
-  title: "Entreprenadkontrakt mall gratis – så håller avtalet vid tvist", slug: "entreprenadkontrakt-mall", locale: "sv",
+  title: "Entreprenadkontrakt mall – fyll i gratis", slug: "entreprenadkontrakt-mall", locale: "sv",
   excerpt: "En färdig entreprenadkontrakt-mall och en genomgång av vad avtalet måste innehålla för att hålla vid tvist – från prismodell och ÄTA till garanti- och ansvarstid.", tag: "Juridik",
   coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_ENTREPRENADKONTRAKT_MALL_HTML,
   seoTitle: "Entreprenadkontrakt mall gratis | ByggExp", seoDescription: "Ladda ner en gratis entreprenadkontrakt-mall som håller vid tvist. Se skillnaden på AB 04 och ABT 06, garantitider och vad kontraktet måste innehålla 2026.",
@@ -1111,7 +1111,7 @@ const A_HINDERSANMALAN_TIDSFORLANGNING_AB04_HTML = `
 
 const A_HINDERSANMALAN_TIDSFORLANGNING_AB04: BlogPost = {
   _id: "code-"+"hindersanmalan-tidsforlangning-ab04",
-  title: "Hindersanmälan och tidsförlängning enligt AB 04 – så undviker du vite", slug: "hindersanmalan-tidsforlangning-ab04", locale: "sv",
+  title: "Hindersanmälan mall – AB 04 och ABT 06", slug: "hindersanmalan-tidsforlangning-ab04", locale: "sv",
   excerpt: "Du har rätt till tidsförlängning enligt AB 04 – men bara om du anmäler hindret utan dröjsmål och skriftligt, annars börjar förseningsvitet löpa.", tag: "Entreprenadjuridik",
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_HINDERSANMALAN_TIDSFORLANGNING_AB04_HTML,
   seoTitle: "Hindersanmälan & tidsförlängning AB 04 | ByggExp", seoDescription: "Rätt till tidsförlängning enligt AB 04 kräver att du anmäler hindret i tid och skriftligt. Missar du hindersanmälan löper förseningsvitet. Så gör du rätt.",

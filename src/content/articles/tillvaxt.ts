@@ -731,7 +731,7 @@ const A_KALKYLPROGRAM_BYGG_HTML = `
 
 const A_KALKYLPROGRAM_BYGG: BlogPost = {
   _id: "code-"+"kalkylprogram-bygg",
-  title: "Kalkylprogram för bygg – från materialkalkyl till lönsam offert", slug: "kalkylprogram-bygg", locale: "sv",
+  title: "Kalkylprogram bygg – gör offerten gratis online", slug: "kalkylprogram-bygg", locale: "sv",
   excerpt: "Vad ett kalkylprogram för byggföretag bör klara: materialåtgång, rätt påslag/marginal, ROT och vägen från kalkyl till offert och faktura. Kom igång gratis.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_KALKYLPROGRAM_BYGG_HTML,
   seoTitle: "Kalkylprogram för bygg – gratis kalkyl till offert | ByggExp", seoDescription: "Kalkylprogram för byggföretag: materialåtgång, rätt påslag och marginal, ROT och vägen från kalkyl till offert. Finns det gratis? Så väljer du bästa – kom igång gratis.",

@@ -459,7 +459,7 @@ const A_BERAKNA_BETONGATGANG_PLATTA_HTML = `
 
 const A_BERAKNA_BETONGATGANG_PLATTA: BlogPost = {
   _id: "code-"+"berakna-betongatgang-platta",
-  title: "Beräkna betongåtgång för platta, plint och kantbalk – så räknar du rätt", slug: "berakna-betongatgang-platta", locale: "sv",
+  title: "Beräkna betongåtgång – kalkylator", slug: "berakna-betongatgang-platta", locale: "sv",
   excerpt: "Så räknar du fram rätt mängd betong för platta, kantbalk och plint – volym, vikt, antal säckar och spillmarginal utan gjutfog mitt i plattan.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/betong-preview.webp", contentHtml: A_BERAKNA_BETONGATGANG_PLATTA_HTML,
   seoTitle: "Beräkna betongåtgång platta | ByggExp", seoDescription: "Räkna kubik, vikt och antal säckar för platta, plint och kantbalk – med 10 % spill. Formel, exempel och gratis betongkalkylator för hantverkare.",
@@ -652,7 +652,7 @@ const A_ARMERING_BERAKNING_PLATTA_GRUND_HTML = `
 
 const A_ARMERING_BERAKNING_PLATTA_GRUND: BlogPost = {
   _id: "code-"+"armering-berakning-platta-grund",
-  title: "Armering betongplatta – så beräknar du åtgången (nät + stång)", slug: "armering-berakning-platta-grund", locale: "sv",
+  title: "Armering betongplatta – räkna åtgången", slug: "armering-berakning-platta-grund", locale: "sv",
   excerpt: "Så mängdar du armeringsnät och stångarmering till betongplattan – nyckeltal, spillpåslag och räkneexempel som kompletterar betongkalkylen.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/betong-preview.webp", contentHtml: A_ARMERING_BERAKNING_PLATTA_GRUND_HTML,
   seoTitle: "Armering betongplatta – så beräknar du åtgången | ByggExp", seoDescription: "Räkna armeringsmängd till plattan – näts- och stångåtgång, nyckeltal för nät 5150/8150 och kamstål Ø8–Ø16. Metod, räkneexempel och koppling till K-ritning.",
@@ -1831,7 +1831,7 @@ const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING_HTML = `
 
 const A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING: BlogPost = {
   _id: "code-"+"bygga-trappa-steghojd-stegdjup-berakning",
-  title: "Bygga trappa – så beräknar du steghöjd, stegdjup och antal steg", slug: "bygga-trappa-steghojd-stegdjup-berakning", locale: "sv",
+  title: "Bygga trappa – räkna steghöjd och stegdjup", slug: "bygga-trappa-steghojd-stegdjup-berakning", locale: "sv",
   excerpt: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, vanliga riktvärden för steghöjd och stegdjup och hur du räknar ut antal steg från den totala höjden. Med gratis trappberäknare.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/trappa-preview.webp", contentHtml: A_BYGGA_TRAPPA_STEGHOJD_STEGDJUP_BERAKNING_HTML,
   seoTitle: "Trappformeln & bygga trappa: steghöjd, stegdjup | ByggExp", seoDescription: "Trappformeln 2 × steghöjd + stegdjup ≈ 630 mm, riktvärden (steghöjd max ~180 mm, stegdjup minst 250 mm) och hur du räknar antal steg. Gratis trappberäknare.",
@@ -1943,7 +1943,7 @@ const A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND_HTML = `
 
 const A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND: BlogPost = {
   _id: "code-"+"berakna-takstolar-dimensionering-c-avstand",
-  title: "Takstolar – typer, spännvidd, c-avstånd och dimensionering", slug: "berakna-takstolar-dimensionering-c-avstand", locale: "sv",
+  title: "Takstolar – räkna antal och c-avstånd", slug: "berakna-takstolar-dimensionering-c-avstand", locale: "sv",
   excerpt: "Typer av takstolar med spännvidd och lutning, formeln för antal, varför 1 200 mm c-avstånd gäller även för tegel och vilka regler (BFS 2024:6) som styr dimensioneringen.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/takstolar-preview.webp", contentHtml: A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND_HTML,
   seoTitle: "Takstolar: typer, spännvidd & dimensionering | ByggExp", seoDescription: "W-, WW-, ramverks- och saxtakstol med typisk spännvidd och lutning. Antal = taklängd ÷ c-avstånd + 1, 1 200 mm även för tegel, regler enligt BFS 2024:6.",

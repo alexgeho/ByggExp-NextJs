@@ -743,7 +743,7 @@ export default function ArbetsberedningMallTool() {
         </div>
 
         <div className="lm-tool-actions lm-ab-actions">
-          <button type="button" className="lm-tool-button lm-tool-button--icon lm-tool-button--outline" onClick={downloadCsv}>
+          <button type="button" className="lm-tool-button lm-tool-button--icon" onClick={downloadCsv}>
             <Icon name="grid" />
             Ladda ner Excel
           </button>

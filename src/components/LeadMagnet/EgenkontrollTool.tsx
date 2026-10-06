@@ -759,7 +759,7 @@ export default function EgenkontrollTool({
             <Icon name="plus" />
             Lägg till kontrollpunkt
           </button>
-          <button type="button" className="lm-tool-button lm-tool-button--icon lm-tool-button--outline" onClick={downloadCsv}>
+          <button type="button" className="lm-tool-button lm-tool-button--icon" onClick={downloadCsv}>
             <Icon name="grid" />
             Ladda ner Excel
           </button>

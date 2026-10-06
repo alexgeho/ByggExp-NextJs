@@ -8,11 +8,11 @@ import { downloadMaterialPdf } from '../../lib/materialPdf';
 //     2,50 kr/km, samåkningstillägg 0,85 kr/km per passagerare, passagerare
 //     0,85 kr/km, utgår när enkel resväg > 2 km. Rates are user-adjustable since
 //     they are revised 1 maj each avtalsår.
-//   • Restidsersättning – time-based, and the rate is AVTALSBEROENDE and revised,
-//     so it is NOT hard-coded: the visitor enters the current restidssats (kr/tim)
-//     from gällande Byggavtal. (Article explicitly warns against unverified rates.)
-// Km/days start with a typical example (30 km, 5 dagar) so a result shows at once;
-// the restid row stays "–" until a rate is entered.
+//   • Restidsersättning – restid is paid at grundlön (Byggavtalet § 6), revised
+//     each avtalsår; prefilled with 203 kr/tim (from 1 maj 2026) as an editable
+//     example, the visitor checks their own rate.
+// Km/days/restid start with a typical example (30 km, 5 dagar, 1 h) so a result
+// shows at once.
 // sv-only (Byggavtalet-specific).
 
 type Mode = 'bil' | 'forare' | 'passagerare' | 'kollektiv';
@@ -28,8 +28,10 @@ export default function RestidsersattningKalkylatorTool() {
   const [passengers, setPassengers] = useState('0');
   const [bilrate, setBilrate] = useState('2.50');
   const [poolrate, setPoolrate] = useState('0.85');
-  const [travelHours, setTravelHours] = useState('');
-  const [travelRate, setTravelRate] = useState('');
+  // Example: 1 h restid paid at grundlön (Byggavtalet § 6; yrkesarbetare
+  // 203 kr/tim from 1 maj 2026) — editable, the visitor checks their own rate.
+  const [travelHours, setTravelHours] = useState('1');
+  const [travelRate, setTravelRate] = useState('203');
 
   const r = useMemo(() => {
     const enkel = Math.max(parseFloat(km.replace(',', '.')) || 0, 0);

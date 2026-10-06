@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 import StickyDownloadBar from './StickyDownloadBar';
+import ChipRow from './ChipRow';
 
 // Free hindersanmälan (notice of hindrance + request for time extension) under
 // AB 04 / ABT 06 kap 4 § 3 (grounds) and § 4 (notify "utan dröjsmål", else the
@@ -503,7 +504,7 @@ export default function HindersanmalanMallTool() {
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Avtal</span>
-        <div className="lm-tool-presets-buttons">
+        <ChipRow>
           {AVTAL.map((a) => (
             <button
               key={a}
@@ -515,7 +516,7 @@ export default function HindersanmalanMallTool() {
               {a}
             </button>
           ))}
-        </div>
+        </ChipRow>
       </div>
 
       <form

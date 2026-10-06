@@ -33,9 +33,10 @@ export default function ForseningsviteKalkylatorTool({ locale = 'sv' }: { locale
         note: 'Enligt AB 04/ABT 06 ersätter ett avtalat vite beställarens rätt till skadestånd för förseningen. Saknas vitesklausul måste skadan i stället styrkas. Kontrollera alltid kontraktets exakta villkor.',
       };
 
-  const [sum, setSum] = useState('');
+  // Prefilled example so a result shows at once.
+  const [sum, setSum] = useState('1000000');
   const [rate, setRate] = useState('1');
-  const [weeks, setWeeks] = useState('');
+  const [weeks, setWeeks] = useState('4');
   const [cap, setCap] = useState('');
 
   const r = useMemo(() => {
@@ -59,7 +60,7 @@ export default function ForseningsviteKalkylatorTool({ locale = 'sv' }: { locale
   return (
     <div className="lm-tool lm-tool--split">
 
-      <div className="lm-tool-grid">
+      <div className="lm-tool-grid lm-tool-grid--pair">
         <label className="lm-tool-field">
           <span>{t.sum}</span>
           <input type="number" min="0" inputMode="decimal" value={sum} placeholder={t.sumPh}

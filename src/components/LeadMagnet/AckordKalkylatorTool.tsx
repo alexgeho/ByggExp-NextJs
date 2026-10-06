@@ -14,9 +14,10 @@ export default function AckordKalkylatorTool() {
   const kr = (v: number) =>
     `${v.toLocaleString(loc, { minimumFractionDigits: 0, maximumFractionDigits: 0 })} kr`;
 
-  const [ackord, setAckord] = useState('');
-  const [forskott, setForskott] = useState('');
-  const [team, setTeam] = useState('');
+  // Prefilled example (same as the placeholders) so a result shows at once.
+  const [ackord, setAckord] = useState('900000');
+  const [forskott, setForskott] = useState('780000');
+  const [team, setTeam] = useState('4');
   const [arvode, setArvode] = useState('1.5');
 
   const r = useMemo(() => {
@@ -33,7 +34,7 @@ export default function AckordKalkylatorTool() {
 
   return (
     <div className="lm-tool lm-tool--split">
-      <div className="lm-tool-grid">
+      <div className="lm-tool-grid lm-tool-grid--pair">
         <label className="lm-tool-field">
           <span>Ackordssumma (kr)</span>
           <input type="number" min="0" step="1000" inputMode="decimal" value={ackord}
@@ -76,7 +77,7 @@ export default function AckordKalkylatorTool() {
           </div>
         )}
         <div className="lm-result-row lm-result-total">
-          <span>Granskningsarvode ({parseFloat(arvode.replace(',', '.')) || 0} % av ackordssumman)</span>
+          <span>Granskningsarvode ({(parseFloat(arvode.replace(',', '.')) || 0).toLocaleString(loc)} % av ackordssumman)</span>
           <strong>{kr(r.granskningsarvode)}</strong>
         </div>
       </div>

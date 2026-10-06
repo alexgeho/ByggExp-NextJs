@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import ChipRow from './ChipRow';
 
 // Free arbetsschema (weekly staff schedule) tool: employees × weekdays, download
 // a clean print-friendly PDF or Excel — or grab a blank template to fill by hand.
@@ -210,9 +211,9 @@ export default function SchemaMallTool() {
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Fyll i exempel:</span>
-        <div className="lm-tool-presets-buttons">
+        <ChipRow>
           <button type="button" className={`lm-tool-preset${activePreset === 'exempel' ? ' is-active' : ''}`} aria-pressed={activePreset === 'exempel'} onClick={fillExample}>Fyll i exempel</button>
-        </div>
+        </ChipRow>
       </div>
 
       <form

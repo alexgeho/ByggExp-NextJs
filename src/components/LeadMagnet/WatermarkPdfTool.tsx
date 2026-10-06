@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 
 import { downloadBytes } from '../../lib/download';
+import ChipRow from './ChipRow';
 
 // Free "vattenstämpel / watermark" tool: stamp a diagonal text watermark on
 // every page of a PDF, in the browser via pdf-lib. Files never leave the device.
@@ -83,13 +84,13 @@ export default function WatermarkPdfTool() {
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Vanliga stämplar:</span>
-        <div className="lm-tool-presets-buttons">
+        <ChipRow>
           {PRESETS.map((p) => (
             <button key={p} type="button" className="lm-tool-preset" onClick={() => setText(p)}>
               {p}
             </button>
           ))}
-        </div>
+        </ChipRow>
       </div>
 
       <label className="lm-tool-field lm-tool-field-wide" style={{ marginTop: 16 }}>

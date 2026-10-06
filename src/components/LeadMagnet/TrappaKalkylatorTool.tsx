@@ -19,7 +19,7 @@ export default function TrappaKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         pcs: 'pcs',
         warnRise: 'The rise exceeds the common guide value of ~180 mm – the stair becomes steep. Add more steps (lower the desired rise).',
         warnGoing: 'The going is below the common guide value of 250 mm (indoors) – reduce the rise for a deeper tread.',
-        fine: 'An estimate. Comfortable stairs often have a rise of 150–180 mm and a going of at least 250 mm (indoors). Boverket’s rules (BFS 2024:9) require safe stairs but no longer give exact figures. Check the requirements for your type of stair.',
+        fine: 'Rise 150–200 mm per Svensk Byggtjänst; most comfortable about 150–180 mm. Going at least 250 mm (indoors), 2 × rise + going ≈ 630 mm. Boverket’s rules (BFS 2024:9) require safe stairs but give no exact figures.',
       }
     : {
         title: 'Trappberäknare – antal steg och stegmått',
@@ -29,15 +29,16 @@ export default function TrappaKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         pcs: 'st',
         warnRise: 'Steghöjden överstiger riktvärdet ~180 mm – trappan blir brant. Lägg till fler steg (lägre önskad steghöjd).',
         warnGoing: 'Stegdjupet understiger riktvärdet 250 mm (inomhus) – minska steghöjden för ett djupare steg.',
-        fine: 'En uppskattning. Bekväma trappor har ofta en steghöjd på 150–180 mm och stegdjup minst 250 mm (inomhus). Boverkets regler (BFS 2024:9) kräver säkra trappor men anger inte längre exakta mått. Kontrollera kraven för din typ av trappa.',
+        fine: 'Steghöjd 150–200 mm enligt Svensk Byggtjänst; bekvämast ca 150–180 mm. Stegdjup minst 250 mm (inomhus), 2 × steghöjd + stegdjup ≈ 630 mm. Boverkets regler (BFS 2024:9) kräver säkra trappor men anger inga exakta mått.',
       };
 
-  const [height, setHeight] = useState('');
+  // Prefilled with a typical floor-to-floor height so the result shows at once.
+  const [height, setHeight] = useState('2700');
   const [targetRise, setTargetRise] = useState('175');
   const result = useMemo(() => {
     const h = num(height);
     const tr = num(targetRise);
-    const steps = h > 0 && tr > 0 ? Math.max(Math.round(h / tr), 1) : 0;
+    const steps = h > 0 && tr > 0 ? Math.max(Math.ceil(h / tr), 1) : 0;
     const rise = steps > 0 ? h / steps : 0;
     const going = rise > 0 ? Math.max(630 - 2 * rise, 0) : 0;
     const warnings: string[] = [];
@@ -48,7 +49,7 @@ export default function TrappaKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
   }, [height, targetRise, locale]);
   return (
     <div className="lm-tool lm-tool--split">
-      <div className="lm-tool-grid">
+      <div className="lm-tool-grid lm-tool-grid--pair">
         <label className="lm-tool-field"><span>{t.height}</span><input type="number" min="0" inputMode="numeric" value={height} placeholder={t.heightPh} onChange={(e) => setHeight(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.targetRise}</span><input type="number" min="0" inputMode="numeric" value={targetRise} onChange={(e) => setTargetRise(e.currentTarget.value)} /></label>
       </div>

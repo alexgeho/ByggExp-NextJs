@@ -25,7 +25,7 @@ export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
     ? {
         title: 'Stud wall – studs, plasterboard & insulation',
         sub: 'Enter the wall dimensions and build-up and we work out studs, bottom/top plates, plasterboard, screws, insulation and vapour barrier – with a deduction for openings. Export the material list to Excel or PDF.',
-        length: 'Wall length (m)', height: 'Wall height (m)', cc: 'Stud spacing c/c (mm)', openings: 'Deduct openings (m²)',
+        length: 'Wall length (m)', more: 'More options', height: 'Wall height (m)', cc: 'Stud spacing c/c (mm)', openings: 'Deduct openings (m²)',
         sidesL: 'Plasterboard – sides', sBoth: 'Both sides', sOne: 'One side', sNone: 'No plasterboard',
         layersL: 'Plasterboard – layers per side', l1: '1 layer', l2: '2 layers',
         insulQ: 'Insulation (mineral wool)?', vapourQ: 'Vapour barrier / plastic film?', yes: 'Yes', no: 'No', spill: 'Waste (%)',
@@ -42,7 +42,7 @@ export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
     : {
         title: 'Regelvägg – reglar, gips & isolering',
         sub: 'Fyll i väggens mått och uppbyggnad så räknar vi reglar, syll/hammarband, gipsskivor, skruv, isolering och ångspärr – med avdrag för öppningar. Exportera materiallistan till Excel eller PDF.',
-        length: 'Väggens längd (m)', height: 'Väggens höjd (m)', cc: 'Centrumavstånd c/c (mm)', openings: 'Avdrag öppningar (m²)',
+        length: 'Väggens längd (m)', more: 'Fler val', height: 'Väggens höjd (m)', cc: 'Centrumavstånd c/c (mm)', openings: 'Avdrag öppningar (m²)',
         sidesL: 'Gips – sidor', sBoth: 'Båda sidor', sOne: 'En sida', sNone: 'Ingen gips',
         layersL: 'Gips – lager per sida', l1: '1 lager', l2: '2 lager',
         insulQ: 'Isolering (mineralull)?', vapourQ: 'Ångspärr / plastfolie?', yes: 'Ja', no: 'Nej', spill: 'Spill (%)',
@@ -57,7 +57,7 @@ export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         soGips: 'Gipsskivor (st)', soInsul: 'Mineralull (m²)', soLabour: 'Arbete stommontering',
       };
 
-  const [length, setLength] = useState('');
+  const [length, setLength] = useState('6'); // prefilled example → result on first screen
   const [height, setHeight] = useState('2.4');
   const [cc, setCc] = useState('600');
   const [openings, setOpenings] = useState('0'); // m² dörrar/fönster
@@ -121,11 +121,16 @@ export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
   const fld = 'lm-tool-field';
   return (
     <div className="lm-tool lm-tool--split">
-      <div className="lm-tool-grid">
+      <div className="lm-tool-grid lm-tool-grid--pair">
         <label className={fld}><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 6' : 't.ex. 6'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
         <label className={fld}><span>{t.height}</span><input type="number" min="0" inputMode="decimal" value={height} onChange={(e) => setHeight(e.currentTarget.value)} /></label>
         <label className={fld}><span>{t.cc}</span><input type="number" min="0" inputMode="numeric" value={cc} onChange={(e) => setCc(e.currentTarget.value)} /></label>
         <label className={fld}><span>{t.openings}</span><input type="number" min="0" inputMode="decimal" value={openings} onChange={(e) => setOpenings(e.currentTarget.value)} /></label>
+      </div>
+
+      <details className="lm-tool-more">
+        <summary>{t.more}</summary>
+        <div className="lm-tool-grid">
         <label className={fld}><span>{t.sidesL}</span>
           <select value={sides} onChange={(e) => setSides(e.currentTarget.value)}>
             <option value="2">{t.sBoth}</option><option value="1">{t.sOne}</option><option value="0">{t.sNone}</option>
@@ -143,7 +148,8 @@ export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
             <option value="ja">{t.yes}</option><option value="nej">{t.no}</option>
           </select></label>
         <label className={fld}><span>{t.spill}</span><input type="number" min="0" inputMode="decimal" value={spill} onChange={(e) => setSpill(e.currentTarget.value)} /></label>
-      </div>
+        </div>
+      </details>
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight"><span>{t.rCount}</span><strong>{nf(r.count)} {t.pcs}</strong></div>
         <div className="lm-result-row"><span>{t.rStud}</span><span>{nf(r.studMeters, 1)} {t.lm}</span></div>

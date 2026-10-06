@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import ToolAppCta from './ToolAppCta';
+import ChipRow from './ChipRow';
 
 // Free ÄTA (change/additional work order) tool: the visitor fills the form and
 // downloads a ready ÄTA order as PDF or Excel. Fields follow what AB 04 kap 2
@@ -149,11 +150,11 @@ export default function AtaMallTool() {
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Se hur den fylls i:</span>
-        <div className="lm-tool-presets-buttons">
+        <ChipRow>
           <button type="button" className="lm-tool-preset" onClick={fillExample}>
             Fyll i exempel
           </button>
-        </div>
+        </ChipRow>
       </div>
 
       <form

@@ -84,7 +84,7 @@ export default function EntreprenadkontraktMallPage() {
         disclaimer={false}
         badge="Gratis mall"
         title="Entreprenadkontrakt – gratis mall (AB 04 / ABT 06)"
-        intro="Ladda ner en gratis entreprenadkontrakt-mall direkt, eller välj standardavtal (AB 04, ABT 06, ABS 18, Hantverkarformuläret 17), fyll i och få ut ett färdigt kontrakt som PDF eller Excel. Mallen täcker parter, prismodell, tider, vite, ÄTA, garanti och hävning – de punkter som avgör vid en tvist."
+        intro="Välj standardavtal, fyll i och ladda ner som PDF eller Excel."
         tool={<EntreprenadkontraktMallTool />}
         leadForm={<ToolLeadForm tool="entreprenadkontrakt-mall" />}
         preview={
@@ -101,11 +101,18 @@ export default function EntreprenadkontraktMallPage() {
             id: 'sa-haller-kontraktet',
             heading: 'Så håller kontraktet vid tvist',
             body: (
+              <>
+              <p>
+                Ladda ner en gratis entreprenadkontrakt-mall direkt, eller välj standardavtal (AB 04, ABT 06, ABS 18,
+                Hantverkarformuläret 17), fyll i och få ut ett färdigt kontrakt som PDF eller Excel. Mallen täcker parter,
+                prismodell, tider, vite, ÄTA, garanti och hävning – de punkter som avgör vid en tvist.
+              </p>
               <p>
                 Vid en konflikt är det kontraktstexten som avgör vad som räknas som fel eller avtalsbrott. Se till att
                 arbetsomfattningen är tydlig, att det framgår vad som <em>inte</em> ingår, och att prismodell och betalplan är
                 låsta. Reglera ÄTA skriftligt – merarbete på muntlig begäran är en vanlig orsak till tvister om betalning.
               </p>
+              </>
             ),
           },
           {

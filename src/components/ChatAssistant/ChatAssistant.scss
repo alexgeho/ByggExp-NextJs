@@ -286,3 +286,23 @@
   background: #fff;
   text-align: center;
 }
+
+// SiteChat wrapper: no box of its own. On a phone the chat button steps aside
+// while a tool form is on screen so it never covers fields or results.
+.site-chat {
+  display: contents;
+}
+
+.wa-fab,
+.chat-fab {
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.15s ease;
+}
+
+@media (max-width: 700px) {
+  .site-chat--tool .wa-fab,
+  .site-chat--tool .chat-fab {
+    opacity: 0;
+    transform: scale(0.6);
+    pointer-events: none;
+  }
+}

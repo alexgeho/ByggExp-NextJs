@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import ToolAppCta from './ToolAppCta';
+import ChipRow from './ChipRow';
 
 // Free kontrollplan (PBL) template as a real control table. Per control point
 // Boverket expects: vad som kontrolleras, hur, mot vilket underlag, vem som
@@ -298,14 +299,14 @@ export default function KontrollplanMallTool() {
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Se hur den fylls i:</span>
-        <div className="lm-tool-presets-buttons">
+        <ChipRow>
           <button type="button" className="lm-tool-preset" onClick={fillExample}>
             Fyll i exempel
           </button>
           <button type="button" className="lm-tool-preset" onClick={clearForm}>
             Rensa formuläret
           </button>
-        </div>
+        </ChipRow>
       </div>
 
       <form

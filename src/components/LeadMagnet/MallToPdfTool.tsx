@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 
 import ToolAppCta, { type ToolAppCtaAction } from './ToolAppCta';
+import { DownloadRow, DownloadSticky, todayIso } from './ToolDownloads';
+import ChipRow from './ChipRow';
 
 // Generic form → PDF/Excel lead-magnet tool. Give it a set of fields, a heading
 // and an example, and the visitor fills it in and downloads a ready template as
@@ -72,6 +74,14 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
   const [busy, setBusy] = useState(false);
   const storageKey = `mall-draft:${config.filePrefix}`;
   const restored = useRef(false);
+  const toolRootRef = useRef<HTMLDivElement>(null);
+  // "Datum" defaults to today — set after mount so SSR and hydration match.
+  const hasDate = config.fields.some((f) => f.name === 'date' && f.type === 'date');
+  useEffect(() => {
+    if (!hasDate) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- client-only default (the server can't know the visitor's date).
+    setValues((prev) => (prev.date ? prev : { ...prev, date: todayIso() }));
+  }, [hasDate]);
 
   // Restore a saved draft on mount so a bookmarked page keeps the visitor's
   // input. Runs once, client-side only.
@@ -83,7 +93,7 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
       if (raw) {
         const saved = JSON.parse(raw) as Record<string, string>;
         // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time restore of a saved draft after mount (avoids SSR/hydration mismatch)
-        setValues((prev) => ({ ...prev, ...saved }));
+        setValues((prev) => ({ ...prev, ...saved, date: saved.date || prev.date || '' }));
       }
     } catch {
       // ignore unreadable/blocked storage
@@ -94,7 +104,7 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
   useEffect(() => {
     if (!config.persist || !restored.current) return;
     try {
-      const hasContent = Object.values(values).some((v) => v.trim() !== '');
+      const hasContent = Object.entries(values).some(([k, v]) => k !== 'date' && v.trim() !== '');
       if (hasContent) window.localStorage.setItem(storageKey, JSON.stringify(values));
       else window.localStorage.removeItem(storageKey);
     } catch {
@@ -105,10 +115,11 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
   const setField = (name: string, value: string) =>
     setValues((prev) => ({ ...prev, [name]: value }));
 
-  const fillExample = () => setValues({ ...empty, ...config.example });
+  const withToday = (v: Record<string, string>) => (hasDate && !v.date ? { ...v, date: todayIso() } : v);
+  const fillExample = () => setValues(withToday({ ...empty, ...config.example }));
 
   const clearForm = () => {
-    setValues(empty);
+    setValues(withToday(empty));
     if (config.persist) {
       try {
         window.localStorage.removeItem(storageKey);
@@ -214,7 +225,8 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
   }
 
   return (
-    <div className="lm-tool lm-tool--mall">
+    <div className="lm-tool lm-tool--mall" ref={toolRootRef}>
+      <DownloadSticky scope={toolRootRef} busy={busy} onExcel={() => downloadCsv()} onPdf={() => void downloadPdf()} />
       {config.instantDownload && (
         <div className="lm-tool-instant">
           <div className="lm-tool-instant-text">
@@ -244,7 +256,7 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
       {config.presets && (
         <div className="lm-tool-presets">
           <span className="lm-tool-presets-label">{config.presets.label}</span>
-          <div className="lm-tool-presets-buttons">
+          <ChipRow>
             {config.presets.options.map((option) => (
               <button
                 key={option}
@@ -255,20 +267,20 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
                 {option}
               </button>
             ))}
-          </div>
+          </ChipRow>
         </div>
       )}
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Se hur den fylls i:</span>
-        <div className="lm-tool-presets-buttons">
+        <ChipRow>
           <button type="button" className="lm-tool-preset" onClick={fillExample}>
             Fyll i exempel
           </button>
           <button type="button" className="lm-tool-preset" onClick={clearForm}>
             Rensa formuläret
           </button>
-        </div>
+        </ChipRow>
       </div>
 
       <form
@@ -278,6 +290,9 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
           void downloadPdf();
         }}
       >
+        {/* Downloads first: the PDF/Excel is what people came for (owner). */}
+        <DownloadRow busy={busy} onExcel={() => downloadCsv()} onPdf={() => void downloadPdf()} />
+
         <div className="lm-tool-grid">
           {config.fields.map((field) => (
             <label
@@ -304,14 +319,8 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
           ))}
         </div>
 
-        <div className="lm-tool-actions">
-          <button type="submit" className="lm-tool-button" disabled={busy}>
-            {busy ? 'Skapar PDF…' : 'Ladda ner PDF'}
-          </button>
-          <button type="button" className="lm-tool-secondary" onClick={() => downloadCsv()}>
-            Ladda ner Excel
-          </button>
-        </div>
+        {/* Same downloads again at the end — people fill in, then forget to scroll up. */}
+        <DownloadRow bottom busy={busy} onExcel={() => downloadCsv()} onPdf={() => void downloadPdf()} />
       </form>
 
       {config.appCta !== null && (

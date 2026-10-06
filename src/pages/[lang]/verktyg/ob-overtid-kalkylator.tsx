@@ -89,7 +89,7 @@ export default function ObOvertidKalkylatorPage() {
         wide
         badge="Gratis kalkylator"
         title="OB och övertid – räkna ut tillägget enligt Byggavtalet"
-        intro="Fyll i din utgående timlön och antal timmar, välj OB- eller övertidsnivå, så räknar kalkylatorn ut tillägget per timme och totalt. Satserna följer Byggavtalet § 2. Gratis och utan konto."
+        intro="OB- och övertidstillägg enligt Byggavtalet § 2."
         tool={<ObOvertidKalkylatorTool />}
         leadForm={<ToolLeadForm tool="ob-overtid-kalkylator" />}
         sections={[
@@ -97,12 +97,18 @@ export default function ObOvertidKalkylatorPage() {
             id: 'ob-nivaer',
             heading: 'OB-ersättningens tre nivåer (§ 2 p5)',
             body: (
+              <>
+              <p>
+                Fyll i din utgående timlön och antal timmar, välj OB- eller övertidsnivå, så räknar kalkylatorn ut
+                tillägget per timme och totalt. Satserna följer Byggavtalet § 2. Gratis och utan konto.
+              </p>
               <ul>
                 <li><strong>OB 1 = 20 %</strong> – tidig morgon kl 05–06.</li>
                 <li><strong>OB 2 = 40 %</strong> – kväll kl 18–22.</li>
                 <li><strong>OB 3 = 70 %</strong> – natt kl 22–05 samt hela lördag, söndag och helgdag.</li>
                 <li>Vardagstid kl 06–18 är ordinarie tid utan OB.</li>
               </ul>
+              </>
             ),
           },
           {

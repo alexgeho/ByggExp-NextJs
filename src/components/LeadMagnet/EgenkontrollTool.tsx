@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
+import ChipRow from './ChipRow';
 import StickyDownloadBar from './StickyDownloadBar';
 
 import { EGENKONTROLL_PRESETS } from './egenkontrollPresets';
@@ -52,6 +53,7 @@ const BLANK_RESULTS = new Set(['Ej besvarad', 'Tomt']);
 
 // New rows start as Godkänd (owner: most points pass) — tap ! or – to change.
 const DEFAULT_RESULT = 'Godkänd';
+const DEFAULT_PRESET = 'bygg';
 const emptyRow = (): Row => ({ point: '', result: DEFAULT_RESULT, comment: '' });
 
 // Rows to seed the table with when a dedicated landing (e.g. egenkontroll-el-mall)
@@ -152,61 +154,22 @@ export default function EgenkontrollTool({
   const [project, setProject] = useState('');
   const [responsible, setResponsible] = useState('');
   const [date, setDate] = useState('');
-  const [rows, setRows] = useState<Row[]>(() => baseRows(defaultPreset));
+  // No preset given (the general /egenkontroll-mall page) → start on the most
+  // general template, so the form and the PDF are useful right away.
+  const startPreset = defaultPreset ?? DEFAULT_PRESET;
+  const [rows, setRows] = useState<Row[]>(() => baseRows(startPreset));
   const [meta, setMeta] = useState<Record<string, string>>({});
   const [busy, setBusy] = useState(false);
   const toolRootRef = useRef<HTMLDivElement>(null);
   // Chosen template: highlight + extra header fields / signatures / footnote.
-  const [presetId, setPresetId] = useState<string | null>(defaultPreset ?? null);
+  const [presetId, setPresetId] = useState<string | null>(startPreset);
+  // The page's own template leads the chip row, so it starts fully in view.
+  const chipPresets = useMemo(
+    () => [...EGENKONTROLL_PRESETS].sort((a, b) => Number(b.id === startPreset) - Number(a.id === startPreset)),
+    [startPreset],
+  );
   const preset = EGENKONTROLL_PRESETS.find((p) => p.id === presetId);
   const docTitle = title.trim() || preset?.name || 'Egenkontroll';
-  // Chips: one line rendered three times, drifting slowly in a loop (pauses
-  // on hover/touch, can be scrolled by hand). Scroll position is kept inside
-  // the middle copy so either direction wraps around seamlessly.
-  const chipsRef = useRef<HTMLDivElement>(null);
-  const chipsPaused = useRef(false);
-  useEffect(() => {
-    const box = chipsRef.current;
-    if (!box) return;
-    const wrap = () => {
-      const third = box.scrollWidth / 3;
-      if (box.scrollLeft < third * 0.5) box.scrollLeft += third;
-      else if (box.scrollLeft > third * 1.5) box.scrollLeft -= third;
-    };
-    // Start the loop on the active (else first) chip of the middle copy, placed
-    // just past the edge fade, so no chip is cut on load.
-    const n = box.children.length / 3;
-    const activeIdx = Math.max(EGENKONTROLL_PRESETS.findIndex((p) => p.id === defaultPreset), 0);
-    const startChip = box.children[n + activeIdx] as HTMLElement | undefined;
-    const cs = getComputedStyle(box);
-    const fade = (cs.maskImage || cs.webkitMaskImage || 'none') === 'none' ? 0 : 40;
-    box.scrollLeft = startChip
-      ? box.scrollLeft + startChip.getBoundingClientRect().left - box.getBoundingClientRect().left - fade
-      : box.scrollWidth / 3;
-    box.addEventListener('scroll', wrap, { passive: true });
-    const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let raf = 0;
-    let pos = box.scrollLeft;
-    const tick = () => {
-      // Keep a float position: scrollLeft may round sub-pixel steps away.
-      if (chipsPaused.current || Math.abs(box.scrollLeft - pos) > 2) pos = box.scrollLeft;
-      if (!chipsPaused.current) {
-        pos += 0.35;
-        box.scrollLeft = pos;
-      }
-      raf = requestAnimationFrame(tick);
-    };
-    if (!still) raf = requestAnimationFrame(tick);
-    return () => {
-      cancelAnimationFrame(raf);
-      box.removeEventListener('scroll', wrap);
-    };
-    // Mount-only: the loop's start point is the preset the page opened with.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  const pauseChips = (paused: boolean) => {
-    chipsPaused.current = paused;
-  };
   const protocol = isProtocol(rows);
   const measure = hasMeasure(rows);
 
@@ -283,8 +246,8 @@ export default function EgenkontrollTool({
     setProject('');
     setResponsible('');
     setDate(today());
-    setRows(baseRows(defaultPreset));
-    setPresetId(defaultPreset ?? null);
+    setRows(baseRows(startPreset));
+    setPresetId(startPreset);
     setMeta({});
     setRestored(false);
   }
@@ -599,31 +562,20 @@ export default function EgenkontrollTool({
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Mall</span>
-        <div
-          className="lm-tool-presets-buttons"
-          ref={chipsRef}
-          onMouseEnter={() => pauseChips(true)}
-          onMouseLeave={() => pauseChips(false)}
-          onTouchStart={() => pauseChips(true)}
-          onTouchEnd={() => pauseChips(false)}
-          onFocus={() => pauseChips(true)}
-          onBlur={() => pauseChips(false)}
-        >
-          {[0, 1, 2].flatMap((copy) => EGENKONTROLL_PRESETS.map((preset) => (
+        <ChipRow>
+          {chipPresets.map((preset) => (
             <button
-              key={`${copy}-${preset.id}`}
+              key={preset.id}
               type="button"
               className={`lm-tool-preset${presetId === preset.id ? ' is-active' : ''}`}
               aria-pressed={presetId === preset.id}
-              aria-hidden={copy !== 1 || undefined}
-              tabIndex={copy !== 1 ? -1 : undefined}
               onClick={() => applyPreset(preset.id)}
             >
               {/* "Egenkontroll" is the page's subject — chips say only the trade. */}
               {preset.name.replace(/^Egenkontroll\s+/i, '')}
             </button>
-          )))}
-        </div>
+          ))}
+        </ChipRow>
       </div>
 
       <form

@@ -94,7 +94,7 @@ export default function EgenkontrollVvsMallPage() {
         productBanner={<AiEgenkontrollBanner tool="egenkontroll-vvs-mall" />}
         badge="Gratis mall"
         title="Egenkontroll VVS – gratis mall att fylla i online"
-        intro="Färdig egenkontroll för VVS-installation – kontroller före inbyggnad, täthetsprovning med provtryck och provtid, fall på avlopp, varmvattentemperatur och överlämning enligt Säker Vatten 2026:1 ligger redan ifyllda. Fyll i mätvärden, sätt resultat och ladda ner som PDF. Gratis och utan konto."
+        intro="Kontrollpunkter enligt Säker Vatten 2026:1 – fyll i och ladda ner som PDF."
         tool={<EgenkontrollTool defaultPreset="vvs" />}
         disclaimer={false}
         preview={
@@ -112,6 +112,12 @@ export default function EgenkontrollVvsMallPage() {
             heading: 'Vad är en egenkontroll för VVS?',
             body: (
               <>
+                <p>
+                  Mallen ovan är en färdig egenkontroll för VVS-installation – kontroller före inbyggnad,
+                  täthetsprovning med provtryck och provtid, fall på avlopp, varmvattentemperatur och
+                  överlämning enligt Säker Vatten 2026:1 ligger redan ifyllda. Fyll i mätvärden, sätt
+                  resultat och ladda ner som PDF. Gratis och utan konto.
+                </p>
                 <p>
                   En egenkontroll för VVS är montörens egen dokumenterade kontroll av att
                   installationen är rätt och tät. Den visar vad som kontrollerats, av vem och med vilket

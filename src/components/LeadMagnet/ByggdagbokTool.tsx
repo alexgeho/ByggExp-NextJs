@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import ChipRow from './ChipRow';
+import { DownloadRow, DownloadSticky, todayIso } from './ToolDownloads';
 
 // Free byggdagbok (site diary) tool: the visitor fills the form and downloads a
 // ready PDF. Fields mirror the real ByggExp dagbok form (DagbokForm.jsx) so the
@@ -34,6 +36,12 @@ const EMPTY: Record<string, string> = Object.fromEntries(
 export default function ByggdagbokTool() {
   const [values, setValues] = useState<Record<string, string>>(EMPTY);
   const [busy, setBusy] = useState(false);
+  const toolRootRef = useRef<HTMLDivElement>(null);
+  // Datum = today, set after mount so SSR and hydration render the same.
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- client-only default (the server can't know the visitor's date).
+    setValues((prev) => (prev.date ? prev : { ...prev, date: todayIso() }));
+  }, []);
 
   const setField = (name: string, value: string) =>
     setValues((prev) => ({ ...prev, [name]: value }));
@@ -41,7 +49,7 @@ export default function ByggdagbokTool() {
   const fillExample = () =>
     setValues({
       project: 'Nybyggnad Ekgatan 4',
-      date: '',
+      date: todayIso(),
       weather: 'Molnigt, lätt regn',
       temperature: '+12°C',
       crewCount: '4',
@@ -126,15 +134,16 @@ export default function ByggdagbokTool() {
   }
 
   return (
-    <div className="lm-tool">
+    <div className="lm-tool" ref={toolRootRef}>
+      <DownloadSticky scope={toolRootRef} busy={busy} onExcel={downloadCsv} onPdf={() => void downloadPdf()} />
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Se hur den fylls i:</span>
-        <div className="lm-tool-presets-buttons">
+        <ChipRow>
           <button type="button" className="lm-tool-preset" onClick={fillExample}>
             Fyll i exempel
           </button>
-        </div>
+        </ChipRow>
       </div>
 
       <form
@@ -144,6 +153,9 @@ export default function ByggdagbokTool() {
           void downloadPdf();
         }}
       >
+        {/* Downloads first: the PDF/Excel is what people came for (owner). */}
+        <DownloadRow busy={busy} onExcel={downloadCsv} onPdf={() => void downloadPdf()} />
+
         <div className="lm-tool-grid">
           {FIELDS.map((field) => (
             <label
@@ -170,14 +182,8 @@ export default function ByggdagbokTool() {
           ))}
         </div>
 
-        <div className="lm-tool-actions">
-          <button type="submit" className="lm-tool-button" disabled={busy}>
-            {busy ? 'Skapar PDF…' : 'Ladda ner PDF'}
-          </button>
-          <button type="button" className="lm-tool-secondary" onClick={downloadCsv}>
-            Ladda ner Excel
-          </button>
-        </div>
+        {/* Same downloads again at the end — people fill in, then forget to scroll up. */}
+        <DownloadRow bottom busy={busy} onExcel={downloadCsv} onPdf={() => void downloadPdf()} />
       </form>
     </div>
   );

@@ -538,7 +538,7 @@
   }
 
   .lm-tool-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -742,8 +742,20 @@
   overflow-x: auto;
   gap: 10px;
   scrollbar-width: none;
-  // Chips fade in/out at the edges — reads as an endless line.
-  mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+  // Room for the active chip's shadow (overflow would clip it into a box).
+  padding: 4px 12px 14px;
+  margin: -4px -12px -14px;
+  // Edge fades only on a side with more chips to scroll to (ChipRow toggles
+  // the classes) — the row starts with no left fade, so no chip is cut.
+  &.has-fade-right {
+    mask-image: linear-gradient(90deg, #000 calc(100% - 40px), transparent);
+  }
+  &.has-fade-left {
+    mask-image: linear-gradient(90deg, transparent, #000 40px);
+  }
+  &.has-fade-left.has-fade-right {
+    mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+  }
 }
 
 .lm-tool-presets-buttons::-webkit-scrollbar {
@@ -1137,7 +1149,7 @@
 }
 @media (max-width: 900px) {
   .lm-tool-split {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 16px;
   }
   .lm-tool-split > .lm-tool-grid {
@@ -1195,7 +1207,7 @@
 }
 @media (max-width: 900px) {
   .lm-tool--split {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     row-gap: 16px;
   }
   .lm-tool--split > .lm-result {
@@ -2253,8 +2265,14 @@
 /* Desktop: the result column spans the inputs + "Fler val" rows, so the
    collapsed extras sit directly under the main fields. */
 @media (min-width: 901px) {
+  // A tall result would stretch rows 1–2 and leave a hole above "Fler val";
+  // the third (1fr) row soaks up that height instead.
+  .lm-tool--split:has(> .lm-tool-more) {
+    grid-template-rows: auto auto 1fr;
+  }
+
   .lm-tool--split:has(> .lm-tool-more) > .lm-result {
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 3;
   }
 }
 /* ==== /Intent fix D ========================================================== */
@@ -2269,4 +2287,19 @@
   width: 100%;
   min-width: 0;
   text-overflow: ellipsis;
+}
+
+// Grid/flex children never grow past the card: long select options or labels
+// used to push the betong tool to 397px on a 390px phone (2026-10-06).
+.lm-tool-split > *,
+.lm-tool--split > *,
+.lm-tool .lm-tool-field {
+  min-width: 0;
+}
+
+.lm-tool .lm-tool-field select,
+.lm-tool .lm-tool-field input:not([type='checkbox']):not([type='radio']) {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }

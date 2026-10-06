@@ -1,4 +1,5 @@
 import { useMemo, useRef, useState } from 'react';
+import ChipRow from './ChipRow';
 
 // Free tidrapport (time report) tool: fill employee + project + day rows and
 // download a PDF with an automatic hour total. Mirrors what ByggExp captures
@@ -306,12 +307,12 @@ export default function TidrapportTool() {
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Välj period eller fyll i exempel:</span>
-        <div className="lm-tool-presets-buttons">
+        <ChipRow>
           <button type="button" className={`lm-tool-preset${activePreset === 'dag' ? ' is-active' : ''}`} aria-pressed={activePreset === 'dag'} onClick={seedDay}>Dagsmall</button>
           <button type="button" className={`lm-tool-preset${activePreset === 'vecka' ? ' is-active' : ''}`} aria-pressed={activePreset === 'vecka'} onClick={seedWeek}>Veckomall</button>
           <button type="button" className={`lm-tool-preset${activePreset === 'manad' ? ' is-active' : ''}`} aria-pressed={activePreset === 'manad'} onClick={seedMonth}>Månadsmall</button>
           <button type="button" className={`lm-tool-preset${activePreset === 'exempel' ? ' is-active' : ''}`} aria-pressed={activePreset === 'exempel'} onClick={fillExample}>Fyll i exempel</button>
-        </div>
+        </ChipRow>
       </div>
 
       <form

@@ -10,13 +10,9 @@ const CONFIG: MallConfig = {
   filePrefix: 'entreprenadkontrakt',
   stampField: 'project',
   signatures: ['Beställarens underskrift', 'Entreprenörens underskrift'],
-  instantDownload: {
-    label: 'Ladda ner tom entreprenadkontrakt-mall direkt',
-    note: 'PDF eller Excel att skriva ut och fylla i för hand – inget konto behövs. Fyll hellre i digitalt nedan för ett färdigt kontrakt.',
-  },
   presets: {
     field: 'standard',
-    label: 'Välj standardavtal (fyller i mallen åt dig):',
+    label: 'Standardavtal',
     options: ['AB 04', 'ABT 06', 'ABS 18', 'Hantverkarformuläret 17'],
   },
   persist: true,

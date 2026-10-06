@@ -11,10 +11,6 @@ const CONFIG: MallConfig = {
   filePrefix: 'byggmotesprotokoll',
   stampField: 'meetingNo',
   signatures: ['Protokollförare', 'Justeras av'],
-  instantDownload: {
-    label: 'Ladda ner tom byggmötesprotokoll-mall',
-    note: 'Tom mall med dagordningen – skriv ut eller fyll i digitalt.',
-  },
   fields: [
     { name: 'project', label: 'Projekt', placeholder: 'T.ex. Nybyggnad flerbostadshus, Bäckvägen 12' },
     { name: 'meetingNo', label: 'Mötesnummer', placeholder: 'T.ex. BM 4' },

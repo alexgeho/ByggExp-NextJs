@@ -95,7 +95,7 @@ export default function EgenkontrollElMallPage() {
         productBanner={<AiEgenkontrollBanner tool="egenkontroll-el-mall" />}
         badge="Gratis mall"
         title="Egenkontroll el – gratis mall att fylla i online"
-        intro="Färdig egenkontroll med mätprotokoll för elinstallation – 22 kontrollpunkter i fyra steg, från kontroll före ibruktagning till överlämning. Skriv in mätvärden (Ω, MΩ, ms), sätt resultat och ladda ner som PDF eller Excel med två signeringssteg. Gratis och utan konto."
+        intro="22 kontrollpunkter med mätprotokoll – fyll i och ladda ner som PDF eller Excel."
         tool={<EgenkontrollTool defaultPreset="el" />}
         disclaimer={false}
         preview={
@@ -113,6 +113,12 @@ export default function EgenkontrollElMallPage() {
             heading: 'Vad är en egenkontroll för el?',
             body: (
               <>
+                <p>
+                  Mallen ovan är en färdig egenkontroll med mätprotokoll för elinstallation – 22
+                  kontrollpunkter i fyra steg, från kontroll före ibruktagning till överlämning. Skriv in
+                  mätvärden (Ω, MΩ, ms), sätt resultat och ladda ner som PDF eller Excel med två
+                  signeringssteg. Gratis och utan konto.
+                </p>
                 <p>
                   En egenkontroll för el är elektrikerns egen dokumenterade kontroll av att
                   elinstallationen är rätt och säkert utförd. Den visar vad som kontrollerats, av vem och

@@ -44,7 +44,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         oPlatta: 'Плита по грунту', oBalk: 'Фундамент / балка / основание', oPlint: 'Столбы / лунки (круглые)',
         formL: 'Форма', oRekt: 'Прямоугольная (длина × ширина)', oEgen: 'Своя форма / L-форма (площадь + периметр)',
         length: 'Длина (м)', width: 'Ширина (м)', area: 'Площадь (м²)', perim: 'Периметр (м)',
-        thickness: 'Толщина бетона (см)',
+        thickness: 'Толщина бетона (см)', more: 'Ещё параметры',
         edgeQ: 'Краевая балка?', yes: 'Да', no: 'Нет',
         edgeW: 'Ширина краевой балки (см)', edgeH: 'Глубина краевой балки (см)', edgeBars: 'Стержни в кромке (шт)', barDiaL: 'Диаметр арматуры',
         meshQ: 'Арматурная сетка?', meshTypeL: 'Тип сетки',
@@ -81,7 +81,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         oPlatta: 'Slab on grade', oBalk: 'Footing / beam / foundation', oPlint: 'Piers / post holes (round)',
         formL: 'Shape', oRekt: 'Rectangular (length × width)', oEgen: 'Custom / L-shape (area + perimeter)',
         length: 'Length (m)', width: 'Width (m)', area: 'Area (m²)', perim: 'Perimeter (m)',
-        thickness: 'Concrete thickness (cm)',
+        thickness: 'Concrete thickness (cm)', more: 'More options',
         edgeQ: 'Edge beam?', yes: 'Yes', no: 'No',
         edgeW: 'Edge beam width (cm)', edgeH: 'Edge beam depth (cm)', edgeBars: 'Edge bars (count)', barDiaL: 'Bar diameter',
         meshQ: 'Reinforcement mesh?', meshTypeL: 'Mesh type',
@@ -117,7 +117,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         oPlatta: 'Platta på mark', oBalk: 'Grundmur / balk / fundament', oPlint: 'Plintar / stolphål (runda)',
         formL: 'Form', oRekt: 'Rektangulär (längd × bredd)', oEgen: 'Egen form / L-form (area + omkrets)',
         length: 'Längd (m)', width: 'Bredd (m)', area: 'Area (m²)', perim: 'Omkrets (m)',
-        thickness: 'Betongtjocklek (cm)',
+        thickness: 'Betongtjocklek (cm)', more: 'Fler val',
         edgeQ: 'Kantbalk?', yes: 'Ja', no: 'Nej',
         edgeW: 'Kantbalk bredd (cm)', edgeH: 'Kantbalk djup (cm)', edgeBars: 'Kamstål i kant (antal)', barDiaL: 'Kamstål diameter',
         meshQ: 'Armeringsnät?', meshTypeL: 'Nättyp',
@@ -149,8 +149,8 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
 
   const [shape, setShape] = useState<Shape>('platta');
   const [form, setForm] = useState<Form>('rekt');
-  const [length, setLength] = useState('');
-  const [width, setWidth] = useState('');
+  const [length, setLength] = useState('10');
+  const [width, setWidth] = useState('8');
   const [area, setArea] = useState('');
   const [perim, setPerim] = useState('');
   const [thickness, setThickness] = useState('10');
@@ -168,7 +168,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
   const [meshType, setMeshType] = useState('6'); // K6/K8 → kg/m²
   const [bindPerTon, setBindPerTon] = useState('10'); // kg bindtråd per ton stål
 
-  const [bLen, setBLen] = useState('');
+  const [bLen, setBLen] = useState('12');
   const [bWidth, setBWidth] = useState('20');
   const [bHeight, setBHeight] = useState('30');
   const [diam, setDiam] = useState('30');
@@ -318,23 +318,18 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
   const fld = 'lm-tool-field';
 
   return (
-    <div className="lm-tool">
-      <div className="lm-tool-split">
-      <div className="lm-tool-grid">
+    <div className="lm-tool lm-tool--split">
+      {/* Main measures first (prefilled example) so the result shows at once;
+          the build-up details sit under "Fler val". */}
+      <div className="lm-tool-grid lm-tool-grid--pair">
         <label className={fld}><span>{t.shapeQ}</span>
           <select value={shape} onChange={(e) => setShape(e.currentTarget.value as Shape)}>
             <option value="platta">{t.oPlatta}</option>
             <option value="balk">{t.oBalk}</option>
             <option value="plint">{t.oPlint}</option>
           </select></label>
-
         {shape === 'platta' ? (
           <>
-            <label className={fld}><span>{t.formL}</span>
-              <select value={form} onChange={(e) => setForm(e.currentTarget.value as Form)}>
-                <option value="rekt">{t.oRekt}</option>
-                <option value="egen">{t.oEgen}</option>
-              </select></label>
             {form === 'rekt' ? (
               <>
                 <label className={fld}><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 10' : ru ? 'напр. 10' : 't.ex. 10'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
@@ -347,6 +342,35 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
               </>
             )}
             <label className={fld}><span>{t.thickness}</span><input type="number" min="0" inputMode="decimal" value={thickness} onChange={(e) => setThickness(e.currentTarget.value)} /></label>
+          </>
+        ) : null}
+        {shape === 'balk' ? (
+          <>
+            <label className={fld}><span>{t.bLen}</span><input type="number" min="0" inputMode="decimal" value={bLen} placeholder={en ? 'e.g. 12' : ru ? 'напр. 12' : 't.ex. 12'} onChange={(e) => setBLen(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.bWidth}</span><input type="number" min="0" inputMode="decimal" value={bWidth} onChange={(e) => setBWidth(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.bHeight}</span><input type="number" min="0" inputMode="decimal" value={bHeight} onChange={(e) => setBHeight(e.currentTarget.value)} /></label>
+          </>
+        ) : null}
+        {shape === 'plint' ? (
+          <>
+            <label className={fld}><span>{t.diam}</span><input type="number" min="0" inputMode="decimal" value={diam} onChange={(e) => setDiam(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.depth}</span><input type="number" min="0" inputMode="decimal" value={depth} onChange={(e) => setDepth(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.count}</span><input type="number" min="0" inputMode="numeric" value={count} onChange={(e) => setCount(e.currentTarget.value)} /></label>
+          </>
+        ) : null}
+
+      </div>
+
+      <details className="lm-tool-more">
+        <summary>{t.more}</summary>
+        <div className="lm-tool-grid">
+          {shape === 'platta' ? (
+            <>
+            <label className={fld}><span>{t.formL}</span>
+              <select value={form} onChange={(e) => setForm(e.currentTarget.value as Form)}>
+                <option value="rekt">{t.oRekt}</option>
+                <option value="egen">{t.oEgen}</option>
+              </select></label>
             <label className={fld}><span>{t.edgeQ}</span>
               <select value={edge} onChange={(e) => setEdge(e.currentTarget.value)}><option value="ja">{t.yes}</option><option value="nej">{t.no}</option></select></label>
             {edge === 'ja' ? (
@@ -375,31 +399,15 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
                 <option value="S200">{t.oS200}</option>
               </select></label>
             <label className={fld}><span>{t.baseThick}</span><input type="number" min="0" inputMode="decimal" value={baseThick} onChange={(e) => setBaseThick(e.currentTarget.value)} /></label>
-          </>
-        ) : null}
-
-        {shape === 'balk' ? (
-          <>
-            <label className={fld}><span>{t.bLen}</span><input type="number" min="0" inputMode="decimal" value={bLen} placeholder={en ? 'e.g. 12' : ru ? 'напр. 12' : 't.ex. 12'} onChange={(e) => setBLen(e.currentTarget.value)} /></label>
-            <label className={fld}><span>{t.bWidth}</span><input type="number" min="0" inputMode="decimal" value={bWidth} onChange={(e) => setBWidth(e.currentTarget.value)} /></label>
-            <label className={fld}><span>{t.bHeight}</span><input type="number" min="0" inputMode="decimal" value={bHeight} onChange={(e) => setBHeight(e.currentTarget.value)} /></label>
-          </>
-        ) : null}
-        {shape === 'plint' ? (
-          <>
-            <label className={fld}><span>{t.diam}</span><input type="number" min="0" inputMode="decimal" value={diam} onChange={(e) => setDiam(e.currentTarget.value)} /></label>
-            <label className={fld}><span>{t.depth}</span><input type="number" min="0" inputMode="decimal" value={depth} onChange={(e) => setDepth(e.currentTarget.value)} /></label>
-            <label className={fld}><span>{t.count}</span><input type="number" min="0" inputMode="numeric" value={count} onChange={(e) => setCount(e.currentTarget.value)} /></label>
-          </>
-        ) : null}
-
+            </>
+          ) : null}
         <label className={fld}><span>{t.concreteL}</span>
           <select value={concreteMode} onChange={(e) => setConcreteMode(e.currentTarget.value)}><option value="fabrik">{t.oFabrik}</option><option value="sack">{t.oSack}</option></select></label>
         {concreteMode === 'sack' ? <label className={fld}><span>{t.litersPerBag}</span><input type="number" min="0" inputMode="decimal" value={bagYield} onChange={(e) => setBagYield(e.currentTarget.value)} /></label> : null}
         <label className={fld}><span>{t.spill}</span><input type="number" min="0" inputMode="decimal" value={spill} onChange={(e) => setSpill(e.currentTarget.value)} /></label>
-      </div>
+        </div>
+      </details>
 
-      <div className="lm-tool-aside">
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight"><span>{t.rVolume}</span><strong>{nf(r.volume, 2)} m³</strong></div>
         {concreteMode === 'sack'
@@ -415,8 +423,6 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
             {r.baseVol > 0 ? <div className="lm-result-row"><span>{t.rBase}</span><span>{nf(r.baseVol, 2)} m³</span></div> : null}
           </>
         ) : null}
-      </div>
-      </div>
       </div>
 
       {shape === 'platta' ? (

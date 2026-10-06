@@ -82,7 +82,7 @@ export default function SkyddsrondMallPage() {
         disclaimer={false}
         badge="Gratis mall"
         title="Skyddsrond – gratis protokollmall"
-        intro="Fyll i deltagare och kontrollpunkter och ladda ner ett färdigt skyddsrondsprotokoll som PDF eller Excel. En återkommande skyddsrond är kärnan i det systematiska arbetsmiljöarbetet på bygget."
+        intro="Fyll i och ladda ner protokollet som PDF eller Excel."
         tool={<SkyddsrondMallTool />}
         leadForm={<ToolLeadForm tool="skyddsrond-mall" />}
         preview={
@@ -99,6 +99,11 @@ export default function SkyddsrondMallPage() {
             id: 'vad-gas-igenom',
             heading: 'Vad går ni igenom på skyddsronden?',
             body: (
+              <>
+              <p>
+                Fyll i deltagare och kontrollpunkter och ladda ner ett färdigt skyddsrondsprotokoll som PDF eller Excel.
+                En återkommande skyddsrond är kärnan i det systematiska arbetsmiljöarbetet på bygget.
+              </p>
               <ul>
                 <li>Ordning och städning – fria vägar, spill och avfall.</li>
                 <li>Fallskydd, räcken, ställningar och stegar.</li>
@@ -106,6 +111,7 @@ export default function SkyddsrondMallPage() {
                 <li>Brand, heta arbeten, damm, buller och kemiska produkter.</li>
                 <li>Första hjälpen och skyltning.</li>
               </ul>
+              </>
             ),
           },
           {

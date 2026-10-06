@@ -31,8 +31,36 @@ export default function SiteChat() {
     };
   }, []);
 
+  // Phone: the round button sat over the right edge of tool fields/results
+  // (e.g. "PDF", "750,00 kr"). While a free tool is on screen it steps aside;
+  // it is back as soon as the visitor scrolls past the tool.
+  const [toolInView, setToolInView] = useState(false);
+  useEffect(() => {
+    let raf = 0;
+    const check = () => {
+      raf = 0;
+      const vh = window.innerHeight;
+      const inView = Array.from(document.querySelectorAll('.lm-tool')).some((el) => {
+        const r = el.getBoundingClientRect();
+        return r.bottom > 80 && r.top < vh - 80;
+      });
+      setToolInView(inView);
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(check);
+    };
+    check();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      if (raf) cancelAnimationFrame(raf);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, [pathname]);
+
   if (isChatFree(pathname)) return null;
-  if (mode === 'ai') return <ChatAssistant />;
-  if (mode === 'whatsapp') return <WhatsAppChat />;
-  return null;
+  const chat = mode === 'ai' ? <ChatAssistant /> : mode === 'whatsapp' ? <WhatsAppChat /> : null;
+  if (!chat) return null;
+  return <div className={`site-chat${toolInView ? ' site-chat--tool' : ''}`}>{chat}</div>;
 }

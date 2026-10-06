@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
+import ChipRow from './ChipRow';
 import StickyDownloadBar from './StickyDownloadBar';
 
 import {
@@ -161,40 +162,6 @@ export default function ArbetsberedningMallTool() {
     return head[key].trim() || (hint && preset ? preset[hint] : '');
   };
 
-  // Chips: one line rendered three times, drifting slowly in a loop (pauses
-  // on hover/touch, can be scrolled by hand) — same as EgenkontrollTool.
-  const chipsRef = useRef<HTMLDivElement>(null);
-  const chipsPaused = useRef(false);
-  useEffect(() => {
-    const box = chipsRef.current;
-    if (!box) return;
-    const wrap = () => {
-      const third = box.scrollWidth / 3;
-      if (box.scrollLeft < third * 0.5) box.scrollLeft += third;
-      else if (box.scrollLeft > third * 1.5) box.scrollLeft -= third;
-    };
-    box.scrollLeft = box.scrollWidth / 3;
-    box.addEventListener('scroll', wrap, { passive: true });
-    const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let raf = 0;
-    let pos = box.scrollLeft;
-    const tick = () => {
-      if (chipsPaused.current || Math.abs(box.scrollLeft - pos) > 2) pos = box.scrollLeft;
-      if (!chipsPaused.current) {
-        pos += 0.35;
-        box.scrollLeft = pos;
-      }
-      raf = requestAnimationFrame(tick);
-    };
-    if (!still) raf = requestAnimationFrame(tick);
-    return () => {
-      cancelAnimationFrame(raf);
-      box.removeEventListener('scroll', wrap);
-    };
-  }, []);
-  const pauseChips = (paused: boolean) => {
-    chipsPaused.current = paused;
-  };
 
   // --- Draft autosave (localStorage, client-only) ----------------------------
   const [restored, setRestored] = useState(false);
@@ -597,32 +564,19 @@ export default function ArbetsberedningMallTool() {
 
       <div className="lm-tool-presets">
         <span className="lm-tool-presets-label">Moment</span>
-        <div
-          className="lm-tool-presets-buttons"
-          ref={chipsRef}
-          onMouseEnter={() => pauseChips(true)}
-          onMouseLeave={() => pauseChips(false)}
-          onTouchStart={() => pauseChips(true)}
-          onTouchEnd={() => pauseChips(false)}
-          onFocus={() => pauseChips(true)}
-          onBlur={() => pauseChips(false)}
-        >
-          {[0, 1, 2].flatMap((copy) =>
-            ARBETSBEREDNING_PRESETS.map((p) => (
+        <ChipRow>
+          {ARBETSBEREDNING_PRESETS.map((p) => (
               <button
-                key={`${copy}-${p.id}`}
+                key={p.id}
                 type="button"
                 className={`lm-tool-preset${presetId === p.id ? ' is-active' : ''}`}
                 aria-pressed={presetId === p.id}
-                aria-hidden={copy !== 1 || undefined}
-                tabIndex={copy !== 1 ? -1 : undefined}
                 onClick={() => applyPreset(p.id)}
               >
                 {p.name}
               </button>
-            )),
-          )}
-        </div>
+          ))}
+        </ChipRow>
       </div>
 
       <form

@@ -42,7 +42,7 @@ const CONTENT: Record<L, Content> = {
     badge: 'Gratis kalkylator',
     h1: 'Förseningsvite – räkna ut vitet i entreprenaden',
     intro:
-      'Blir entreprenaden försenad kan förseningsvitet bli dyrt. Kalkylatorn visar direkt vad det landar på – per påbörjad vecka och totalt – och kapar summan om ni har avtalat ett takbelopp. Gratis och utan inloggning.',
+      'Vite per påbörjad vecka och totalt, med takbelopp.',
     previewAlt: 'Förhandsvisning av förseningsvite-kalkylatorn',
     previewCaption: 'Så ser förseningsvite-kalkylatorn ut',
     sections: [
@@ -51,6 +51,10 @@ const CONTENT: Record<L, Content> = {
         heading: 'Så fungerar förseningsvite',
         body: (
           <>
+            <p>
+              Blir entreprenaden försenad kan förseningsvitet bli dyrt. Kalkylatorn visar direkt vad det landar på – per
+              påbörjad vecka och totalt – och kapar summan om ni har avtalat ett takbelopp. Gratis och utan inloggning.
+            </p>
             <p>
               Förseningsvite är ett i förväg bestämt belopp som utgår när entreprenaden blir försenad. I
               AB 04 och ABT 06 anges vitet som en procentsats av kontraktssumman per påbörjad vecka.

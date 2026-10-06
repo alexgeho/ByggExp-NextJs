@@ -27,8 +27,9 @@ export default function ObOvertidKalkylatorTool() {
   const kr = (v: number) =>
     `${v.toLocaleString(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kr`;
 
-  const [wage, setWage] = useState('');
-  const [hours, setHours] = useState('');
+  // Prefilled example so a result shows at once (owner: tools open ready to use).
+  const [wage, setWage] = useState('220');
+  const [hours, setHours] = useState('3');
   const [levelId, setLevelId] = useState('ota');
 
   const r = useMemo(() => {
@@ -50,7 +51,7 @@ export default function ObOvertidKalkylatorTool() {
 
   return (
     <div className="lm-tool lm-tool--split">
-      <div className="lm-tool-grid">
+      <div className="lm-tool-grid lm-tool-grid--pair">
         <label className="lm-tool-field">
           <span>Utgående timlön (kr/tim)</span>
           <input

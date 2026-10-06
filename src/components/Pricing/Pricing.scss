@@ -293,6 +293,115 @@
   height: 12px;
 }
 
+/* Clickable feature lines: look exactly like the plain ones; the underline
+   appears on hover only (no blue links in the plan cards). */
+.pricing-item {
+  min-width: 0;
+}
+
+.pricing-item-link,
+.pricing-item-btn,
+.pricing-star-btn {
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pricing-item-btn,
+.pricing-star-btn {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* The lone "*" next to a link: a bigger invisible tap area. */
+.pricing-star-btn {
+  position: relative;
+  margin-left: 1px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -10px -12px;
+  }
+}
+
+@media (hover: hover) {
+  .pricing-item-link:hover,
+  .pricing-item-btn:hover,
+  .pricing-star-btn:hover {
+    text-decoration-line: underline;
+    color: var(--ink);
+  }
+
+  .pricing-note-toggle:hover {
+    text-decoration-style: dotted;
+  }
+}
+
+.pricing-item-link:focus-visible,
+.pricing-item-btn:focus-visible,
+.pricing-star-btn:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.pricing-note-toggle[aria-expanded="true"] {
+  color: var(--ink);
+}
+
+.pricing-note {
+  display: block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: var(--bg);
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--muted);
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+/* Price click follows the card's CTA. */
+.pricing-card .pricing-price {
+  cursor: pointer;
+}
+
+/* Brief ring when the card or its CTA is the answer to a click. */
+@keyframes pricing-flash {
+  0% {
+    box-shadow: 0 0 0 0 rgba(35, 148, 255, 0.45);
+  }
+  100% {
+    box-shadow: 0 0 0 12px rgba(35, 148, 255, 0);
+  }
+}
+
+.pricing-cta-flash,
+.pricing-card-flash {
+  animation: pricing-flash 0.9s ease-out 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pricing-cta-flash,
+  .pricing-card-flash {
+    animation: none;
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+  }
+}
+
 .check-green {
   background: var(--green-1);
   color: var(--green-2);

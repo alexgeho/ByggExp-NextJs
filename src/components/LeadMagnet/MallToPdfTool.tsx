@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import ToolAppCta, { type ToolAppCtaAction } from './ToolAppCta';
 import { DownloadRow, DownloadSticky, todayIso } from './ToolDownloads';
 import ChipRow from './ChipRow';
-import { useDraft } from '../../lib/useDraft';
+import { stringRecord, useDraft } from '../../lib/useDraft';
 
 // Generic form → PDF/Excel lead-magnet tool. Give it a set of fields, a heading
 // and an example, and the visitor fills it in and downloads a ready template as
@@ -85,6 +85,7 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
 
   // Draft autosave: a bookmarked page keeps the visitor's input (only real edits are stored).
   const draft = useDraft(storageKey, values, {
+    migrate: stringRecord,
     apply: (saved) => setValues((prev) => ({ ...prev, ...saved, date: saved.date || prev.date || '' })),
     hasContent: (v) => Object.entries(v).some(([k, x]) => k !== 'date' && typeof x === 'string' && x.trim() !== ''),
   });
@@ -93,7 +94,11 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
     setValues((prev) => ({ ...prev, [name]: value }));
 
   const withToday = (v: Record<string, string>) => (hasDate && !v.date ? { ...v, date: todayIso() } : v);
-  const fillExample = () => setValues(withToday({ ...empty, ...config.example }));
+  // The example is not the visitor's input: it never becomes a draft.
+  const fillExample = () => {
+    draft.clear();
+    setValues(withToday({ ...empty, ...config.example }));
+  };
 
   const clearForm = () => {
     draft.clear();
@@ -249,7 +254,7 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
             Fyll i exempel
           </button>
           <button type="button" className="lm-tool-preset" onClick={clearForm}>
-            Rensa formuläret
+            Rensa
           </button>
         </ChipRow>
       </div>

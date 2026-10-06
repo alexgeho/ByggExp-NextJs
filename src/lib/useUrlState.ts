@@ -15,12 +15,25 @@ export type UrlScope = { active: boolean; off: boolean };
 
 const registry = new Set<object>();
 let pending: Record<string, string | null> = {};
+// Path the pending writes belong to: a client-side navigation inside the
+// debounce window must not carry them onto the next page.
+let pendingPath = '';
 let timer: ReturnType<typeof setTimeout> | null = null;
+
+function dropPending() {
+  if (timer) clearTimeout(timer);
+  timer = null;
+  pending = {};
+}
 
 export function flushUrlState() {
   if (timer) clearTimeout(timer);
   timer = null;
   if (typeof window === 'undefined' || !Object.keys(pending).length) return;
+  if (window.location.pathname !== pendingPath) {
+    pending = {};
+    return;
+  }
   try {
     const url = new URL(window.location.href);
     for (const [k, v] of Object.entries(pending)) {
@@ -42,6 +55,10 @@ export function flushUrlState() {
 }
 
 function queueWrite(key: string, value: string | null) {
+  if (window.location.pathname !== pendingPath) {
+    pending = {};
+    pendingPath = window.location.pathname;
+  }
   pending[key] = value;
   if (timer) clearTimeout(timer);
   timer = setTimeout(flushUrlState, 300);
@@ -53,11 +70,19 @@ export function useUrlScope(): UrlScope {
   useEffect(() => {
     const id = {};
     registry.add(id);
+    // Embedded in an iframe (/embed on a partner site): the URL is not the visitor's to share.
+    let framed = false;
+    try {
+      framed = window.self !== window.top;
+    } catch {
+      framed = true;
+    }
     // Wait for every calculator in the same commit to register.
-    const t = setTimeout(() => setMode(registry.size === 1 ? 'active' : 'off'), 0);
+    const t = setTimeout(() => setMode(!framed && registry.size === 1 ? 'active' : 'off'), 0);
     return () => {
       clearTimeout(t);
       registry.delete(id);
+      if (!registry.size) dropPending();
     };
   }, []);
   return { active: mode === 'active', off: mode === 'off' };
@@ -65,9 +90,27 @@ export function useUrlScope(): UrlScope {
 
 type Codec<T> = { parse: (raw: string) => T | undefined; format: (v: T) => string };
 
-const stringCodec: Codec<string> = { parse: (r) => r, format: (v) => v };
+// Upper bound for any number read from the URL (keeps results finite and sane).
+const MAX_ABS = 1e9;
+
+// Free string params are number fields (incl. '' = cleared) or ISO dates; anything
+// else in the URL is ignored. Selects/unions must pass their allowed values.
+const NUMERIC_RE = /^-?\d{0,10}(?:[.,]\d{0,6})?$/;
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+const stringCodec: Codec<string> = {
+  parse: (r) => {
+    if (DATE_RE.test(r)) return r;
+    if (!NUMERIC_RE.test(r)) return undefined;
+    const n = parseFloat(r.replace(',', '.'));
+    return Number.isNaN(n) || Math.abs(n) <= MAX_ABS ? r : undefined;
+  },
+  format: (v) => v,
+};
 const numberCodec: Codec<number> = {
-  parse: (r) => (r.trim() !== '' && Number.isFinite(Number(r)) ? Number(r) : undefined),
+  parse: (r) => {
+    const n = Number(r);
+    return r.trim() !== '' && Number.isFinite(n) && Math.abs(n) <= MAX_ABS ? n : undefined;
+  },
   format: (v) => String(v),
 };
 const boolCodec: Codec<boolean> = {
@@ -75,13 +118,19 @@ const boolCodec: Codec<boolean> = {
   format: (v) => (v ? '1' : '0'),
 };
 
-/** JSON codec for small arrays/records (rows, layers). */
-export function jsonCodec<T>(valid?: (v: unknown) => v is T): Codec<T> {
+/** True for a string the default codec would accept (number field value). */
+export function isNumericText(v: unknown): v is string {
+  return typeof v === 'string' && stringCodec.parse(v) === v;
+}
+
+/** JSON codec for small arrays/records (rows, layers). `valid` is mandatory: URL input is untrusted. */
+export function jsonCodec<T>(valid: (v: unknown) => v is T): Codec<T> {
   return {
     parse: (r) => {
+      if (r.length > 2000) return undefined;
       try {
         const v = JSON.parse(r) as unknown;
-        return !valid || valid(v) ? (v as T) : undefined;
+        return valid(v) ? v : undefined;
       } catch {
         return undefined;
       }
@@ -147,3 +196,6 @@ export function useUrlParam<T>(
 
   return [value, set];
 }
+
+/** Allowed values for the common ja/nej selects. */
+export const YES_NO: readonly string[] = ['ja', 'nej'];

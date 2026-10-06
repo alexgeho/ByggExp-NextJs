@@ -37,7 +37,9 @@ export default function SchemaMallTool() {
     setRows([emptyRow(), emptyRow(), emptyRow()]);
     setActivePreset(null);
   };
+  // Example/period templates are not the visitor's input: they never become a draft.
   const afterPreset = (id: string) => {
+    draft.clear();
     setActivePreset(id);
     window.setTimeout(() => rowsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 60);
   };

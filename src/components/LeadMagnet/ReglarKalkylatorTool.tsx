@@ -5,7 +5,7 @@ import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf, type MaterialRow } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
-import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import { useUrlParam, useUrlScope, YES_NO } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Regelvägg (stud wall) calculator: studs from length/c/c, syll + hammarband,
@@ -64,10 +64,10 @@ export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
   const [height, setHeight] = useUrlParam(u, 'h', '2.4');
   const [cc, setCc] = useUrlParam(u, 'cc', '600');
   const [openings, setOpenings] = useUrlParam(u, 'o', '0'); // m² dörrar/fönster
-  const [sides, setSides] = useUrlParam(u, 's', '2'); // gips-sidor (0,1,2)
-  const [layers, setLayers] = useUrlParam(u, 'lag', '1'); // gips-lager per sida
-  const [insulation, setInsulation] = useUrlParam(u, 'iso', 'ja');
-  const [vapour, setVapour] = useUrlParam(u, 'ang', 'ja'); // ångspärr/plastfolie
+  const [sides, setSides] = useUrlParam(u, 's', '2', ['0', '1', '2']); // gips-sidor (0,1,2)
+  const [layers, setLayers] = useUrlParam(u, 'lag', '1', ['1', '2']); // gips-lager per sida
+  const [insulation, setInsulation] = useUrlParam(u, 'iso', 'ja', YES_NO);
+  const [vapour, setVapour] = useUrlParam(u, 'ang', 'ja', YES_NO); // ångspärr/plastfolie
   const [spill, setSpill] = useUrlParam(u, 'sp', '10');
 
   const r = useMemo(() => {

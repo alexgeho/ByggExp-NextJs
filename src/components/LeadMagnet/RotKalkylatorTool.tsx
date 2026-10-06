@@ -40,7 +40,7 @@ export default function RotKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
   const u = useUrlScope();
   const [labour, setLabour] = useUrlParam(u, 'arb', '');
   const [material, setMaterial] = useUrlParam(u, 'mat', '');
-  const [owners, setOwners] = useUrlParam(u, 'ag', 1);
+  const [owners, setOwners] = useUrlParam(u, 'ag', 1, [1, 2]);
 
   const result = useMemo(() => {
     const labourCost = Math.max(parseFloat(labour.replace(',', '.')) || 0, 0);

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { languages, selectableLanguages } from "../../locales/languages";
 import { BLOG_CATEGORIES } from "../../lib/blog-categories";
+import { flushUrlState } from "../../lib/useUrlState";
 import type { HeaderProps } from "../../types/header";
 
 const logo = "/landing/header/logo.svg";
@@ -74,7 +75,11 @@ function Header({ headerT }: HeaderProps) {
   function changeLanguage(language: string) {
     // Keep the user on the same page when switching language: swap only the
     // leading /<lang> segment, preserving the rest of the path, query and hash.
-    const [path, hash] = router.asPath.split("#");
+    // The live URL, not router.asPath: calculators update the query in place
+    // (history.replaceState), so asPath can lag behind the visible inputs.
+    flushUrlState();
+    const { pathname, search, hash: rawHash } = window.location;
+    const [path, hash] = `${pathname}${search}${rawHash}`.split("#");
     const newPath = path.replace(/^\/[^/]+/, `/${language}`);
     void router.push(hash ? `${newPath}#${hash}` : newPath);
     setIsOpen(false);

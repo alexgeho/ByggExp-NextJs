@@ -1086,6 +1086,25 @@
   font-size: 1.25rem;
 }
 
+/* Value + copy icon stay on one line (the label wraps first); a very long
+   value wraps inside its own column instead of overflowing the card. */
+.lm-result-row > strong:has(> .lm-copy-link) {
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 70%;
+  text-align: right;
+  overflow-wrap: anywhere; /* numbers use no-break spaces */
+}
+
+/* The label gives way (even mid-word for an absurdly long value). */
+.lm-result-row:has(> strong > .lm-copy-link) > span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 /* Icon-only "copy link" inside the result value (keeps the row height). */
 .lm-copy-link {
   position: relative;
@@ -1125,6 +1144,15 @@
   white-space: nowrap;
   pointer-events: none;
   z-index: 5;
+}
+
+/* Empty live region stays in the a11y tree but takes no space. */
+.lm-copy-link-tip.is-hidden {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
 }
 
 .lm-result-total {

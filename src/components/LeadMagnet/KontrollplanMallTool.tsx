@@ -105,7 +105,9 @@ export default function KontrollplanMallTool() {
   const removeRow = (index: number) =>
     setRows((prev) => (prev.length > 1 ? prev.filter((_, i) => i !== index) : prev));
 
+  // The example is not the visitor's input: it never becomes a draft.
   const fillExample = () => {
+    draft.clear();
     setHead(EXAMPLE_HEAD);
     setRows(EXAMPLE_ROWS);
   };

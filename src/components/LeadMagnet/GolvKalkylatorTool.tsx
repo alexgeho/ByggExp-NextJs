@@ -59,9 +59,9 @@ export default function GolvKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
       };
 
   const u = useUrlScope();
-  const [material, setMaterial] = useUrlParam<Material>(u, 'typ', 'klickgolv');
+  const [material, setMaterial] = useUrlParam<Material>(u, 'typ', 'klickgolv', ['klickgolv', 'kakel']);
   const [area, setArea] = useUrlParam(u, 'a', '');
-  const [pattern, setPattern] = useUrlParam(u, 'lagg', 'rak'); // rak | diagonal
+  const [pattern, setPattern] = useUrlParam(u, 'lagg', 'rak', ['rak', 'diagonal']); // rak | diagonal
   const [spill, setSpill] = useUrlParam(u, 'sp', '8');
   const [perPack, setPerPack] = useUrlParam(u, 'fp', '2.5');
   const [fixPerM2, setFixPerM2] = useUrlParam(u, 'fix', '4'); // kg fästmassa per m²

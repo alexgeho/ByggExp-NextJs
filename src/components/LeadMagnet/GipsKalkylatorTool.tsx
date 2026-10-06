@@ -5,7 +5,7 @@ import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
-import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import { useUrlParam, useUrlScope, YES_NO } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Professional drywall (gipsskivor) calculator for a stud wall.
@@ -93,12 +93,12 @@ export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
   const u = useUrlScope();
   const [length, setLength] = useUrlParam(u, 'l', '');
   const [height, setHeight] = useUrlParam(u, 'h', '2.5');
-  const [sides, setSides] = useUrlParam(u, 's', '2'); // 1 = enkelsidig, 2 = dubbelsidig
-  const [layers, setLayers] = useUrlParam(u, 'lag', '1'); // lager per sida
-  const [boardWidth, setBoardWidth] = useUrlParam(u, 'sb', '1200'); // 900 | 1200 (mm)
-  const [boardLen, setBoardLen] = useUrlParam(u, 'sl', '2.6'); // skivlängd (m)
-  const [frame, setFrame] = useUrlParam(u, 'st', 'tra'); // tra | stal
-  const [insulate, setInsulate] = useUrlParam(u, 'iso', 'nej'); // ja | nej
+  const [sides, setSides] = useUrlParam(u, 's', '2', ['1', '2']); // 1 = enkelsidig, 2 = dubbelsidig
+  const [layers, setLayers] = useUrlParam(u, 'lag', '1', ['1', '2']); // lager per sida
+  const [boardWidth, setBoardWidth] = useUrlParam(u, 'sb', '1200', ['1200', '900']); // 900 | 1200 (mm)
+  const [boardLen, setBoardLen] = useUrlParam(u, 'sl', '2.6', ['2.6', '2.7', '2.4', '3.0']); // skivlängd (m)
+  const [frame, setFrame] = useUrlParam(u, 'st', 'tra', ['tra', 'stal']); // tra | stal
+  const [insulate, setInsulate] = useUrlParam(u, 'iso', 'nej', YES_NO); // ja | nej
   const [openings, setOpenings] = useUrlParam(u, 'o', '0'); // m² dörr/fönster att dra av
   const [spill, setSpill] = useUrlParam(u, 'sp', '10');
 

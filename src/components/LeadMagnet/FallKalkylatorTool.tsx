@@ -36,7 +36,7 @@ export default function FallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
   const u = useUrlScope();
   const [length, setLength] = useUrlParam(u, 'l', '6');
   const [val, setVal] = useUrlParam(u, 'v', '15');
-  const [unit, setUnit] = useUrlParam<Unit>(u, 'u', 'mmpm');
+  const [unit, setUnit] = useUrlParam<Unit>(u, 'u', 'mmpm', ['mmpm', 'procent', 'ratio']);
   const result = useMemo(() => {
     const l = num(length);
     const v = num(val);

@@ -4,7 +4,7 @@ import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { fakturaHref, offertHref } from '../../lib/offert';
-import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import { useUrlParam, useUrlScope, YES_NO } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Professional roof calculator. Roof area for a pitched roof is the footprint
@@ -76,22 +76,22 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
       };
 
   const u = useUrlScope();
-  const [form, setForm] = useUrlParam(u, 'f', 'sadel'); // sadel | pulpet
+  const [form, setForm] = useUrlParam(u, 'f', 'sadel', ['sadel', 'pulpet']); // sadel | pulpet
   const [length, setLength] = useUrlParam(u, 'l', '10');
   const [width, setWidth] = useUrlParam(u, 'b', '8');
   const [pitch, setPitch] = useUrlParam(u, 'v', '27');
   const [overhang, setOverhang] = useUrlParam(u, 'u', '0.3');
-  const [covering, setCovering] = useUrlParam<Covering>(u, 'tm', 'betongpanna');
+  const [covering, setCovering] = useUrlParam<Covering>(u, 'tm', 'betongpanna', ['betongpanna', 'tegelpanna', 'plat', 'papp']);
   const [tiles, setTiles] = useUrlParam(u, 'st', '');
   const [spill, setSpill] = useUrlParam(u, 'sp', '10');
 
   // Optional extras
   const [height, setHeight] = useUrlParam(u, 'h', '5'); // byggnadshöjd till takfot (m) – för stuprör & ställning
-  const [gutters, setGutters] = useUrlParam(u, 'ran', 'ja'); // hängrännor + stuprör
+  const [gutters, setGutters] = useUrlParam(u, 'ran', 'ja', YES_NO); // hängrännor + stuprör
   const [downpipes, setDownpipes] = useUrlParam(u, 'stup', '2'); // antal stuprör
   const [krokCC, setKrokCC] = useUrlParam(u, 'kc', '0.6'); // rännkroksavstånd m
-  const [snorasskydd, setSnorasskydd] = useUrlParam(u, 'sno', 'nej');
-  const [scaffold, setScaffold] = useUrlParam(u, 'stal', 'nej'); // byggnadsställning
+  const [snorasskydd, setSnorasskydd] = useUrlParam(u, 'sno', 'nej', YES_NO);
+  const [scaffold, setScaffold] = useUrlParam(u, 'stal', 'nej', YES_NO); // byggnadsställning
 
   const def = DEFAULTS[covering];
 

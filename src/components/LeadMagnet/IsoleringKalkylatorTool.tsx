@@ -17,6 +17,8 @@ function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
 }
 
+const THICKNESSES = ['45', '70', '95', '120', '145', '170', '195', '220', '245'];
+
 export default function IsoleringKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
   const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : 'sv-SE', { maximumFractionDigits: d });
@@ -52,7 +54,7 @@ export default function IsoleringKalkylatorTool({ locale = 'sv' }: { locale?: Ca
 
   const u = useUrlScope();
   const [area, setArea] = useUrlParam(u, 'a', '');
-  const [thickness, setThickness] = useUrlParam(u, 't', '170'); // mm
+  const [thickness, setThickness] = useUrlParam(u, 't', '170', THICKNESSES); // mm
   const [lambda, setLambda] = useUrlParam(u, 'lam', '0.036'); // W/mK
   const [perPack, setPerPack] = useUrlParam(u, 'fp', '5.4'); // m² per förpackning
   const [spill, setSpill] = useUrlParam(u, 'sp', '5');
@@ -116,7 +118,7 @@ export default function IsoleringKalkylatorTool({ locale = 'sv' }: { locale?: Ca
         <label className="lm-tool-field">
           <span>{t.thickness}</span>
           <select value={thickness} onChange={(e) => setThickness(e.currentTarget.value)}>
-            {['45', '70', '95', '120', '145', '170', '195', '220', '245'].map((th) => (
+            {THICKNESSES.map((th) => (
               <option key={th} value={th}>{th} mm</option>
             ))}
           </select>

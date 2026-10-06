@@ -27,7 +27,7 @@ export default function RestidsersattningKalkylatorTool() {
   const u = useUrlScope();
   const [km, setKm] = useUrlParam(u, 'km', '30');
   const [days, setDays] = useUrlParam(u, 'd', '5');
-  const [mode, setMode] = useUrlParam<Mode>(u, 'fm', 'bil');
+  const [mode, setMode] = useUrlParam<Mode>(u, 'fm', 'bil', ['bil', 'forare', 'passagerare', 'kollektiv']);
   const [passengers, setPassengers] = useUrlParam(u, 'pass', '0');
   const [bilrate, setBilrate] = useUrlParam(u, 'br', '2.50');
   const [poolrate, setPoolrate] = useUrlParam(u, 'pr', '0.85');

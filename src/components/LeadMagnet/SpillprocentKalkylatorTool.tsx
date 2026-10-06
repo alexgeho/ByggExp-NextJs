@@ -36,8 +36,8 @@ export default function SpillprocentKalkylatorTool({ locale = 'sv' }: { locale?:
 
   const u = useUrlScope();
   const [net, setNet] = useUrlParam(u, 'n', '');
-  const [unit, setUnit] = useUrlParam(u, 'e', 'm²');
-  const [presetIdx, setPresetIdx] = useUrlParam(u, 'p', 1);
+  const [unit, setUnit] = useUrlParam(u, 'e', 'm²', ['m²', 'lpm', 'st', 'm³', 'kg']);
+  const [presetIdx, setPresetIdx] = useUrlParam(u, 'p', 1, PRESET_SPILL.map((_, i) => i));
   const [custom, setCustom] = useUrlParam(u, 'eg', '10');
 
   const r = useMemo(() => {

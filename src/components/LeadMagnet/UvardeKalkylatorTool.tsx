@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
 import type { CalcLocale } from '../../lib/locale';
-import { jsonCodec, useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import { isNumericText, jsonCodec, useUrlParam, useUrlScope } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Free U-value calculator for a layered building element. U = 1 / (Rsi + ΣR + Rse)
@@ -17,6 +17,14 @@ const SURFACE_R: Record<string, number> = {
 };
 
 const LAYERS = [0, 1, 2, 3, 4];
+
+// Per-layer records from the URL: keys are layer indexes, values validated.
+const isLayerRecord = (v: unknown, ok: (x: unknown) => boolean): boolean =>
+  !!v && typeof v === 'object' && !Array.isArray(v) &&
+  Object.entries(v).every(([k, x]) => LAYERS.includes(Number(k)) && ok(x));
+const isMatRecord = (v: unknown): v is Record<number, number> =>
+  isLayerRecord(v, (x) => Number.isInteger(x) && (x as number) >= 0 && (x as number) < MAT_LAMBDA.length);
+const isTextRecord = (v: unknown): v is Record<number, string> => isLayerRecord(v, isNumericText);
 
 export default function UvardeKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
@@ -44,10 +52,10 @@ export default function UvardeKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
       };
 
   const u = useUrlScope();
-  const [element, setElement] = useUrlParam(u, 'el', 'wall');
-  const [mat, setMat] = useUrlParam<Record<number, number>>(u, 'mat', { 0: 1 }, jsonCodec<Record<number, number>>());
-  const [lambda, setLambda] = useUrlParam<Record<number, string>>(u, 'lam', {}, jsonCodec<Record<number, string>>());
-  const [thick, setThick] = useUrlParam<Record<number, string>>(u, 't', { 0: '' }, jsonCodec<Record<number, string>>());
+  const [element, setElement] = useUrlParam(u, 'el', 'wall', Object.keys(SURFACE_R));
+  const [mat, setMat] = useUrlParam<Record<number, number>>(u, 'mat', { 0: 1 }, jsonCodec(isMatRecord));
+  const [lambda, setLambda] = useUrlParam<Record<number, string>>(u, 'lam', {}, jsonCodec(isTextRecord));
+  const [thick, setThick] = useUrlParam<Record<number, string>>(u, 't', { 0: '' }, jsonCodec(isTextRecord));
 
   const r = useMemo(() => {
     const rs = SURFACE_R[element];

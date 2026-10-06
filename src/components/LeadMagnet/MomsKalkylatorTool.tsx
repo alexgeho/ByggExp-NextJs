@@ -35,8 +35,8 @@ export default function MomsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
 
   const u = useUrlScope();
   const [amount, setAmount] = useUrlParam(u, 'b', '');
-  const [rate, setRate] = useUrlParam(u, 'm', 25);
-  const [mode, setMode] = useUrlParam<'excl' | 'incl'>(u, 'typ', 'excl');
+  const [rate, setRate] = useUrlParam(u, 'm', 25, RATES);
+  const [mode, setMode] = useUrlParam<'excl' | 'incl'>(u, 'typ', 'excl', ['excl', 'incl']);
 
   const result = useMemo(() => {
     const value = Math.max(parseFloat(amount.replace(',', '.')) || 0, 0);

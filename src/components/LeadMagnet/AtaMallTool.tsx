@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { useDraft } from '../../lib/useDraft';
+import { stringRecord, useDraft } from '../../lib/useDraft';
 import ToolAppCta from './ToolAppCta';
 import ChipRow from './ChipRow';
 
@@ -42,6 +42,7 @@ export default function AtaMallTool() {
   const [busy, setBusy] = useState(false);
 
   const draft = useDraft('bx-ata-draft', values, {
+    migrate: stringRecord,
     apply: (saved) => setValues((prev) => ({ ...prev, ...saved })),
     hasContent: (v) => Object.entries(v).some(([k, x]) => k !== 'date' && typeof x === 'string' && x.trim() !== ''),
   });
@@ -49,7 +50,9 @@ export default function AtaMallTool() {
   const setField = (name: string, value: string) =>
     setValues((prev) => ({ ...prev, [name]: value }));
 
-  const fillExample = () =>
+  // The example is not the visitor's input: it never becomes a draft.
+  const fillExample = () => {
+    draft.clear();
     setValues({
       project: 'Nybyggnad villa, Bäckvägen 12',
       date: '',
@@ -65,6 +68,7 @@ export default function AtaMallTool() {
       timeImpact: 'Ingen påverkan på tidplan',
       orderedBy: 'Beställaren via mejl 2026-05-14',
     });
+  };
 
   async function downloadPdf() {
     setBusy(true);

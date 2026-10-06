@@ -33,7 +33,7 @@ export default function ObOvertidKalkylatorTool() {
   const u = useUrlScope();
   const [wage, setWage] = useUrlParam(u, 'lon', '220');
   const [hours, setHours] = useUrlParam(u, 'h', '2');
-  const [levelId, setLevelId] = useUrlParam(u, 'typ', 'ota');
+  const [levelId, setLevelId] = useUrlParam(u, 'typ', 'ota', LEVELS.map((l) => l.id));
 
   const r = useMemo(() => {
     const timlon = Math.max(parseFloat(wage.replace(',', '.')) || 0, 0);

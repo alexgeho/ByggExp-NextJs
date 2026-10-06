@@ -5,7 +5,7 @@ import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf, type MaterialRow } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
-import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import { useUrlParam, useUrlScope, YES_NO } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Full concrete-slab estimator ("platta på mark"). Beyond volume it models the
@@ -150,25 +150,25 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
       };
 
   const u = useUrlScope();
-  const [shape, setShape] = useUrlParam<Shape>(u, 'typ', 'platta');
-  const [form, setForm] = useUrlParam<Form>(u, 'form', 'rekt');
+  const [shape, setShape] = useUrlParam<Shape>(u, 'typ', 'platta', ['platta', 'balk', 'plint']);
+  const [form, setForm] = useUrlParam<Form>(u, 'form', 'rekt', ['rekt', 'egen']);
   const [length, setLength] = useUrlParam(u, 'l', '10');
   const [width, setWidth] = useUrlParam(u, 'b', '8');
   const [area, setArea] = useUrlParam(u, 'a', '');
   const [perim, setPerim] = useUrlParam(u, 'o', '');
   const [thickness, setThickness] = useUrlParam(u, 't', '10');
 
-  const [edge, setEdge] = useUrlParam(u, 'kb', 'ja');
+  const [edge, setEdge] = useUrlParam(u, 'kb', 'ja', YES_NO);
   const [edgeW, setEdgeW] = useUrlParam(u, 'kbb', '30');
   const [edgeH, setEdgeH] = useUrlParam(u, 'kbd', '35');
   const [edgeBars, setEdgeBars] = useUrlParam(u, 'kj', '3');
-  const [barDia, setBarDia] = useUrlParam(u, 'dia', '12'); // kamstål diameter mm
+  const [barDia, setBarDia] = useUrlParam(u, 'dia', '12', ['10', '12', '16']); // kamstål diameter mm
 
   const [isoThick, setIsoThick] = useUrlParam(u, 'iso', '300');
-  const [epsGrade, setEpsGrade] = useUrlParam(u, 'eps', 'S100'); // cellplast-kvalitet (bärighet)
+  const [epsGrade, setEpsGrade] = useUrlParam(u, 'eps', 'S100', ['S80', 'S100', 'S150']); // cellplast-kvalitet (bärighet)
   const [baseThick, setBaseThick] = useUrlParam(u, 'mak', '150');
-  const [mesh, setMesh] = useUrlParam(u, 'nat', 'ja');
-  const [meshType, setMeshType] = useUrlParam(u, 'nt', '6'); // K6/K8 → kg/m²
+  const [mesh, setMesh] = useUrlParam(u, 'nat', 'ja', YES_NO);
+  const [meshType, setMeshType] = useUrlParam(u, 'nt', '6', ['5', '6', '7', '8']); // K6/K8 → kg/m²
   const [bindPerTon, setBindPerTon] = useUrlParam(u, 'bt', '10'); // kg bindtråd per ton stål
 
   const [bLen, setBLen] = useUrlParam(u, 'bl', '12');
@@ -180,7 +180,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
 
   const [bagYield, setBagYield] = useUrlParam(u, 'sl', '12.5');
   const [spill, setSpill] = useUrlParam(u, 'sp', '5');
-  const [concreteMode, setConcreteMode] = useUrlParam(u, 'bm', 'fabrik'); // fabrik | sack
+  const [concreteMode, setConcreteMode] = useUrlParam(u, 'bm', 'fabrik', ['fabrik', 'sack']); // fabrik | sack
 
   // Cost layer (riktpriser 2026, editable)
   const [showCost, setShowCost] = useUrlParam(u, 'kost', false);
@@ -195,7 +195,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
   const [hRebarTon, setHRebarTon] = useUrlParam(u, 'ht', '12'); // arbetstimmar per ton armering
   const [hPerM2, setHPerM2] = useUrlParam(u, 'hm', '1.2'); // övrig arbetstid per m² (schakt/iso/gjutning)
   const [walkPct, setWalkPct] = useUrlParam(u, 'gt', '10'); // gångtid/förflyttning – påslag på arbetstid
-  const [rot, setRot] = useUrlParam(u, 'rot', 'nej');
+  const [rot, setRot] = useUrlParam(u, 'rot', 'nej', YES_NO);
 
   const r = useMemo(() => {
     let base = 0, A = 0, P = 0;

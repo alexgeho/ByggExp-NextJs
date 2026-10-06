@@ -5,7 +5,7 @@ import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
 import { fakturaHref, offertHref } from '../../lib/offert';
-import { jsonCodec, useUrlParam, useUrlScope } from '../../lib/useUrlState';
+import { isNumericText, jsonCodec, useUrlParam, useUrlScope } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Free area calculator: sum the area (length × width) of one or more rectangles
@@ -14,6 +14,10 @@ import CopyLinkButton from './CopyLinkButton';
 
 type Row = { l: string; w: string };
 const emptyRow = (): Row => ({ l: '', w: '' });
+// Rows from the URL (?r=[{"l":"4","w":"3"}]): 1–50 rows of number-field text only.
+const isRows = (v: unknown): v is Row[] =>
+  Array.isArray(v) && v.length > 0 && v.length <= 50 &&
+  v.every((r) => !!r && typeof r === 'object' && isNumericText((r as Row).l) && isNumericText((r as Row).w));
 
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
@@ -49,7 +53,7 @@ export default function KvadratmeterKalkylatorTool({ locale = 'sv' }: { locale?:
       };
 
   const u = useUrlScope();
-  const [rows, setRows] = useUrlParam<Row[]>(u, 'r', [emptyRow(), emptyRow()], jsonCodec<Row[]>());
+  const [rows, setRows] = useUrlParam<Row[]>(u, 'r', [emptyRow(), emptyRow()], jsonCodec(isRows));
   const [spill, setSpill] = useUrlParam(u, 'sp', '0');
   const [price, setPrice] = useUrlParam(u, 'pris', '');
 

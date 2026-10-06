@@ -9,6 +9,13 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 //   template or the prefilled example never create a key.
 // - `hasContent` decides what counts as real input; an empty draft removes the key.
 // - Every storage access is wrapped (private mode / blocked storage / quota).
+// - Stored only in this browser (localStorage), never sent anywhere. Keys are
+//   namespaced + versioned per tool (`bx-draft:v1:<name>`), so a draft can only
+//   come back in the template it was written in; bump DRAFT_VERSION when a
+//   draft shape changes incompatibly. The pre-v1 key (`<name>`) is migrated once.
+
+const DRAFT_VERSION = 1;
+const storageKey = (name: string) => `bx-draft:v${DRAFT_VERSION}:${name}`;
 
 type Options<T> = {
   /** Apply a saved draft to the tool's state. */
@@ -31,13 +38,26 @@ export function hasText(v: unknown, skip: readonly string[] = ['date']): boolean
   return false;
 }
 
-function read(key: string): unknown {
+/** Saved draft → flat record of strings (the simple form tools); anything else is dropped. */
+export function stringRecord(raw: unknown): Record<string, string> | null {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return null;
+  const out: Record<string, string> = {};
+  for (const [k, v] of Object.entries(raw)) if (typeof v === 'string') out[k] = v;
+  return out;
+}
+
+/** Parsed draft (always a plain object) or null; corrupt JSON is removed. */
+function read(key: string): Record<string, unknown> | null {
   try {
     const raw = window.localStorage.getItem(key);
-    return raw ? (JSON.parse(raw) as unknown) : null;
+    if (!raw) return null;
+    const v = JSON.parse(raw) as unknown;
+    if (v && typeof v === 'object' && !Array.isArray(v)) return v as Record<string, unknown>;
   } catch {
-    return null;
+    /* corrupt JSON / blocked storage */
   }
+  remove(key);
+  return null;
 }
 
 function remove(key: string) {
@@ -48,7 +68,8 @@ function remove(key: string) {
   }
 }
 
-export function useDraft<T>(key: string, value: T, opts: Options<T>) {
+export function useDraft<T>(name: string, value: T, opts: Options<T>) {
+  const key = storageKey(name);
   const [restored, setRestored] = useState(false);
   // The initial state object: never saved as-is (it's the untouched form).
   const [initial] = useState(value);
@@ -60,17 +81,37 @@ export function useDraft<T>(key: string, value: T, opts: Options<T>) {
 
   useEffect(() => {
     const { apply, hasContent, onFresh, migrate } = optsRef.current;
-    const raw = read(key);
-    const saved = raw == null ? null : migrate ? migrate(raw) : (raw as T);
-    if (saved != null && hasContent(saved)) {
+    // A key change (another template in the same instance) starts clean.
+    touched.current = false;
+    let raw = read(key);
+    if (raw == null) {
+      // One-time move from the unversioned key used before v1.
+      raw = read(name);
+      if (raw != null) {
+        remove(name);
+        try {
+          window.localStorage.setItem(key, JSON.stringify(raw));
+        } catch {
+          /* quota / blocked storage */
+        }
+      }
+    }
+    let saved: T | null = null;
+    try {
+      saved = raw == null ? null : migrate ? migrate(raw) : (raw as T);
+      if (saved != null && !hasContent(saved)) saved = null;
+    } catch {
+      saved = null; // unexpected shape: treat as no draft
+    }
+    if (saved != null) {
       touched.current = true;
       apply(saved);
       setRestored(true);
       return;
     }
-    if (raw != null) remove(key); // blank/stale draft
+    if (raw != null) remove(key); // blank/stale/broken draft
     onFresh?.();
-  }, [key]);
+  }, [key, name]);
 
   useEffect(() => {
     if (!touched.current || value === initial) return;
@@ -86,7 +127,7 @@ export function useDraft<T>(key: string, value: T, opts: Options<T>) {
     touched.current = true;
   }, []);
 
-  /** Rensa / Börja om: drop the draft; later edits start a new one. */
+  /** Rensa / Börja om / Fyll i exempel: drop the draft; only later edits start a new one. */
   const clear = useCallback(() => {
     touched.current = false;
     remove(key);

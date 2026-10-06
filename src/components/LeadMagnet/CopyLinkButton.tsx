@@ -56,7 +56,7 @@ export default function CopyLinkButton({ scope, tool, en = false }: { scope: Url
     <button
       type="button"
       className={`lm-copy-link${done ? ' is-done' : ''}`}
-      aria-label={done ? doneLabel : label}
+      aria-label={label}
       title={label}
       onClick={() => void onClick()}
     >
@@ -70,7 +70,10 @@ export default function CopyLinkButton({ scope, tool, en = false }: { scope: Url
           </>
         )}
       </svg>
-      {done ? <span className="lm-copy-link-tip" role="status">{doneLabel}</span> : null}
+      {/* Always mounted so screen readers announce the change (live region). */}
+      <span className={`lm-copy-link-tip${done ? '' : ' is-hidden'}`} role="status" aria-live="polite">
+        {done ? doneLabel : ''}
+      </span>
     </button>
   );
 }

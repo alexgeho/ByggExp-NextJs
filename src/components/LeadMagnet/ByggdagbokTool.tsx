@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import ChipRow from './ChipRow';
 import { DownloadRow, DownloadSticky, todayIso } from './ToolDownloads';
-import { useDraft } from '../../lib/useDraft';
+import { stringRecord, useDraft } from '../../lib/useDraft';
 
 // Free byggdagbok (site diary) tool: the visitor fills the form and downloads a
 // ready PDF. Fields mirror the real ByggExp dagbok form (DagbokForm.jsx) so the
@@ -45,6 +45,7 @@ export default function ByggdagbokTool() {
   }, []);
 
   const draft = useDraft('bx-byggdagbok-draft', values, {
+    migrate: stringRecord,
     apply: (saved) => setValues((prev) => ({ ...prev, ...saved, date: saved.date || prev.date || '' })),
     hasContent: (v) => Object.entries(v).some(([k, x]) => k !== 'date' && typeof x === 'string' && x.trim() !== ''),
   });
@@ -52,7 +53,9 @@ export default function ByggdagbokTool() {
   const setField = (name: string, value: string) =>
     setValues((prev) => ({ ...prev, [name]: value }));
 
-  const fillExample = () =>
+  // The example is not the visitor's input: it never becomes a draft.
+  const fillExample = () => {
+    draft.clear();
     setValues({
       project: 'Nybyggnad Ekgatan 4',
       date: todayIso(),
@@ -66,6 +69,7 @@ export default function ByggdagbokTool() {
       materials: 'Gips 40 skivor, reglar 60 st.',
       notes: 'Skyddsrond utförd utan anmärkning.',
     });
+  };
 
   async function downloadPdf() {
     setBusy(true);

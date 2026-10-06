@@ -61,7 +61,7 @@ export default function FargKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
       };
 
   const u = useUrlScope();
-  const [surface, setSurface] = useUrlParam<Surface>(u, 'yta', 'vagg');
+  const [surface, setSurface] = useUrlParam<Surface>(u, 'yta', 'vagg', ['vagg', 'tak', 'fasadtra', 'fasadputs']);
   const [area, setArea] = useUrlParam(u, 'a', '');
   const [openings, setOpenings] = useUrlParam(u, 'o', '0');
   const [coats, setCoats] = useUrlParam(u, 'lag', '2');

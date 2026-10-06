@@ -36,7 +36,7 @@ export default function PaslagKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
 
   const u = useUrlScope();
   const [cost, setCost] = useUrlParam(u, 'k', '');
-  const [mode, setMode] = useUrlParam<'markup' | 'margin'>(u, 'typ', 'markup');
+  const [mode, setMode] = useUrlParam<'markup' | 'margin'>(u, 'typ', 'markup', ['markup', 'margin']);
   const [percent, setPercent] = useUrlParam(u, 'p', '');
 
   const result = useMemo(() => {

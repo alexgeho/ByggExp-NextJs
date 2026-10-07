@@ -1,5 +1,8 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-07 — рассылки (маркетинг, без изменений кода)
+- Мейлер: 4 черновика не отправлены — El A2 (396) / B2 (397) / Uppföljning A+B (561) / VVS – Stockholm (690). Ждут подтверждения «бесплатно без тарифа» и запуска. Подробно — ~/sites-hub/worklog.md HANDOFF 2026-10-07 (рассылки). Файлы лидов — OneDrive/byggexp-outreach (не в репо: персональные данные).
+
 ## 2026-10-06 (вечер) — проверка intent-фиксов + доработки (сессия alexandergerhard-61)
 - Живой аудит 30 страниц intent-audit: 17 PASS / 12 PARTIAL / 1 FAIL → исправлено двумя партиями (строитель → критик → проверка):
   - A (e5682fb, 9d99b84): egenkontroll-mall открывается на «Bygg / Stomme» (PDF не пустой); общий ChipRow (10 инструментов, без 3-копийной карусели); betong без overflow на 390, пример 10×8×0,1 → 11,24 m³ «inkl. kantbalk och spill»; trappa 2700 мм → 16 steg (Math.ceil); примеры в OB/ackord/vite/reglar; ToolDownloads + StickyDownloadBar у MallToPdfTool (skyddsrond, byggdagbok…), дата = сегодня; вступления в 1 строку (текст перенесён ниже); чат-кнопка прячется на телефоне, пока инструмент на экране.

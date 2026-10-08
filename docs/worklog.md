@@ -1,5 +1,10 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-08 — Utskick (mailer): ny påminnelse + A2/B2
+- «El – Uppföljning A+B» avbruten vid 101/561 (ägaren ville ha annat slut). Ny «El – Påminnelse (samtal)» till 459 som inte fått uppföljningen: ämne «Påminnelse: tidrapporter hos {{företag|er}}», slut = samtal 15 min.
+- «El – A2 (kort)» 396 och «El – B2 (lista)» 397 skickas. Avsändare ByggExp (Brevo) 500/dag, 50/h, sändfönster AV. VVS (690) utkast.
+- Nästa: följ svar (alexander@tidrapportapp.se), starta VVS efter ägarens ok, överväg sändfönster 08–17.
+
 ## 2026-10-08 — Landningssida: faktakorrigeringar (live, f009685)
 - «12 verktyg … 60 %» → «11 verktyg som förenklar administrationen» (antalet räknas från kortlistan), i alla 10 språk.
 - Okällade 80 % (Grundproblemet) och 60 % borttagna — inte i product-facts-verified.md. Pain-blocket nu en kolumn.

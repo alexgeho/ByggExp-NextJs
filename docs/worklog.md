@@ -1,5 +1,12 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-08 — Landningssida: faktakorrigeringar (live, f009685)
+- «12 verktyg … 60 %» → «11 verktyg som förenklar administrationen» (antalet räknas från kortlistan), i alla 10 språk.
+- Okällade 80 % (Grundproblemet) och 60 % borttagna — inte i product-facts-verified.md. Pain-blocket nu en kolumn.
+- Benefits-slidern: SSR renderar en kopia, loop-kloner läggs till i klienten (aria-hidden) — texten dupliceras inte längre för sökmotorer.
+- Pris: «SEK / företag / månad» (paket per företag, 10 användare ingår, 299 upp till 2).
+- Kvar: Fiverr-portföljens skärmdump visar fortfarande gamla «12 verktyg / 60 %» → ny skärmdump (se sites-hub HANDOFF 2026-10-08).
+
 ## 2026-10-08 — PBL 1 dec 2025: attefall/friggebod/bygglov-texter uppdaterade (live)
 - regelverk.ts: behover-jag-bygglov, attefallshus-regler, friggebod-regler, uterum-bygglov, staket-bygglov omskrivna efter nya 9 kap. PBL (komplementbyggnad 30 m²/4,0 m/45 m² inom DP, 50/4,5/65 utanför, ingen anmälan utom VA/ventilation/eldstad/bärande/brand enl. PBF 6:1; tillbyggnad 30 m² under nock; plank 1,8/1,2 m; 4,5 m gräns; 37 § kulturvärden). KA-avsnitt (kontrollansvarig, kontrollplan, behörigheter) efter PBF 7 kap. 5 §. kalkyl.ts (betong per plint) rättad. Källa: riksdagen PBL/PBF + Boverket. updatedAt 2026-10-08.
 

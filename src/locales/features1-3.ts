@@ -2,7 +2,7 @@ export const featuresTranslations1_3 = {
   ru: {
     featuresTitle: "Как это работает",
 
-    featuresHeading1: "11 инструментов, которые",
+    featuresHeading1: "{n} инструментов, которые",
     featuresHeadingAccent: "упрощают",
     featuresHeading2: "работу администрации",
 
@@ -40,7 +40,7 @@ export const featuresTranslations1_3 = {
   en: {
     featuresTitle: "How It Works",
 
-    featuresHeading1: "11 tools that",
+    featuresHeading1: "{n} tools that",
     featuresHeadingAccent: "simplify",
     featuresHeading2: "admin work",
 
@@ -77,7 +77,7 @@ export const featuresTranslations1_3 = {
   sv: {
     featuresTitle: "Så fungerar det",
 
-    featuresHeading1: "11 verktyg som",
+    featuresHeading1: "{n} verktyg som",
     featuresHeadingAccent: "förenklar",
     featuresHeading2: "administrationen",
 
@@ -116,7 +116,7 @@ export const featuresTranslations1_3 = {
   nb: {
     featuresTitle: "Slik fungerer det",
 
-    featuresHeading1: "11 verktøy som",
+    featuresHeading1: "{n} verktøy som",
     featuresHeadingAccent: "forenkler",
     featuresHeading2: "administrasjonen",
 
@@ -155,7 +155,7 @@ export const featuresTranslations1_3 = {
   pl: {
     featuresTitle: "Jak to działa",
 
-    featuresHeading1: "11 narzędzi, które",
+    featuresHeading1: "{n} narzędzi, które",
     featuresHeadingAccent: "upraszczają",
     featuresHeading2: "pracę biura",
 
@@ -189,7 +189,7 @@ export const featuresTranslations1_3 = {
 
   uk: {
     featuresTitle: "Як це працює",
-    featuresHeading1: "11 інструментів, які",
+    featuresHeading1: "{n} інструментів, які",
     featuresHeadingAccent: "спрощують",
     featuresHeading2: "роботу адміністрації",
     featuresSub:
@@ -216,7 +216,7 @@ export const featuresTranslations1_3 = {
 
   fi: {
     featuresTitle: "Näin se toimii",
-    featuresHeading1: "11 työkalua, jotka",
+    featuresHeading1: "{n} työkalua, jotka",
     featuresHeadingAccent: "helpottavat",
     featuresHeading2: "hallinnon työtä",
     featuresSub:
@@ -243,7 +243,7 @@ export const featuresTranslations1_3 = {
 
   et: {
     featuresTitle: "Kuidas see töötab",
-    featuresHeading1: "11 tööriista, mis",
+    featuresHeading1: "{n} tööriista, mis",
     featuresHeadingAccent: "lihtsustavad",
     featuresHeading2: "administratsiooni tööd",
     featuresSub:
@@ -270,7 +270,7 @@ export const featuresTranslations1_3 = {
 
   lt: {
     featuresTitle: "Kaip tai veikia",
-    featuresHeading1: "11 įrankių, kurie",
+    featuresHeading1: "{n} įrankių, kurie",
     featuresHeadingAccent: "palengvina",
     featuresHeading2: "administracijos darbą",
     featuresSub:
@@ -297,7 +297,7 @@ export const featuresTranslations1_3 = {
 
   lv: {
     featuresTitle: "Kā tas darbojas",
-    featuresHeading1: "11 rīki, kas",
+    featuresHeading1: "{n} rīki, kas",
     featuresHeadingAccent: "atvieglo",
     featuresHeading2: "administrācijas darbu",
     featuresSub:

@@ -235,7 +235,7 @@ function Features({
           <span className="eyebrow">{featuresT1_3.featuresTitle}</span>
 
           <h2>
-            {featuresT1_3.featuresHeading1}{" "}
+            {featuresT1_3.featuresHeading1.replace("{n}", String(featureCards.length))}{" "}
             <em>{featuresT1_3.featuresHeadingAccent}</em>{" "}
             {featuresT1_3.featuresHeading2}
           </h2>

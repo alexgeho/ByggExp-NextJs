@@ -1,5 +1,8 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-08 — PBL 1 dec 2025: attefall/friggebod/bygglov-texter uppdaterade (live)
+- regelverk.ts: behover-jag-bygglov, attefallshus-regler, friggebod-regler, uterum-bygglov, staket-bygglov omskrivna efter nya 9 kap. PBL (komplementbyggnad 30 m²/4,0 m/45 m² inom DP, 50/4,5/65 utanför, ingen anmälan utom VA/ventilation/eldstad/bärande/brand enl. PBF 6:1; tillbyggnad 30 m² under nock; plank 1,8/1,2 m; 4,5 m gräns; 37 § kulturvärden). KA-avsnitt (kontrollansvarig, kontrollplan, behörigheter) efter PBF 7 kap. 5 §. kalkyl.ts (betong per plint) rättad. Källa: riksdagen PBL/PBF + Boverket. updatedAt 2026-10-08.
+
 ## 2026-10-08 — SEO-genomgång (GSC) + snabba CTR-/länkfixar (live, af6779f)
 - GSC 28 дн (по 05.10) vs пред. 28: клики ~1,1K vs 713, показы 109K vs 77,7K, CTR 1 % vs 0,9 %, поз. 11,7 vs 16. Индекс 438 / не 193 (redirect 64, alt canonical 40, noindex 25, Discovered 34, 404 23, dup 4, crawled 2, robots 1).
 - Высокие показы / низкий CTR на поз. 7–12: ab-04-och-abt-06 (5 575 / 0,2 % / 11,6), berakna-betongatgang-platta (4 720 / 0,4 % / 7,4), reglar-dimensioner (3 260 / 0,4 % / 7,0), gipsskivor (1 478 / 0,1 % / 8,9) → новые title/description под реальные запросы (garantitid; vikt/säckar per kubik; reglar mått/cc-mått; gipsskiva mått/tjocklek/vikt).

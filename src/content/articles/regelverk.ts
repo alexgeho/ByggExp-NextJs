@@ -164,24 +164,26 @@ const A_KONTROLLANSVARIG_NAR_BEHOVS_HTML = `
 <p>Ett krav som ofta missas: KA måste ha en <strong>självständig ställning</strong> i förhållande till den som utför åtgärden (PBL 10 kap. 9 §). En KA kan alltså inte vara anställd hos entreprenören som bygger. Bygger ditt företag huset kan ni inte samtidigt vara kontrollansvariga för det – kunden måste anlita en oberoende KA.</p>
 
 <h2>När behövs en kontrollansvarig?</h2>
-<p>Huvudregeln är enkel att komma ihåg: kräver åtgärden en kontrollplan, så krävs det en kontrollansvarig. I praktiken innebär det att KA behövs vid de flesta lov- och anmälningspliktiga åtgärder. Konkret handlar det ofta om:</p>
+<p>Huvudregeln i PBL (10 kap. 9 §) är att det ska finnas en KA för kontrollen i en kontrollplan. Sedan 1 december 2025 är undantagen i plan- och byggförordningen dock betydligt bredare, så i praktiken gäller KA-kravet främst bygglovspliktiga åtgärder av större slag, till exempel:</p>
 <ul>
-<li>nybyggnad,</li>
-<li>större tillbyggnad,</li>
-<li>ändring av bärande konstruktion,</li>
-<li>väsentlig ändring av VA eller ventilation,</li>
-<li>installation av eldstad eller rökkanal (i vissa fall),</li>
-<li>rivning som kräver lov eller anmälan.</li>
+<li>nybyggnad av bostadshus och andra huvudbyggnader,</li>
+<li>större tillbyggnad som kräver bygglov,</li>
+<li>ändrad användning eller ombyggnad som kräver bygglov,</li>
+<li>rivning som kräver rivningslov enligt PBL.</li>
 </ul>
 <p>Det är byggnadsnämnden i kommunen som avgör i varje enskilt fall om KA behövs. Utgångspunkten är dock tydlig: när ett projekt är så pass omfattande att det behöver följas upp mot en kontrollplan, ska en KA vara utsedd.</p>
 
 <h2>När behövs INGEN kontrollansvarig?</h2>
-<p>Det finns tydliga undantag. Grunden för dem finns i plan- och byggförordningen (PBF 2011:338, 7 kap. 5 §). KA krävs normalt inte för:</p>
+<p>Undantagen finns i PBL 10 kap. 10 § och plan- och byggförordningen (PBF 2011:338, 7 kap. 5 §). KA krävs normalt inte för bland annat:</p>
 <ul>
-<li>åtgärder som varken kräver lov eller anmälan, till exempel en friggebod,</li>
-<li>små ändringar av en- eller tvåbostadshus, om byggnadsnämnden inte beslutar annat.</li>
+<li>åtgärder som varken kräver lov eller anmälan,</li>
+<li>åtgärder som bara kräver anmälan – till exempel installation av VA, ventilation eller eldstad,</li>
+<li>komplementbyggnader och komplementbostadshus (det som tidigare kallades friggebod och attefallshus),</li>
+<li>att inreda ytterligare en bostad i ett enbostadshus,</li>
+<li>murar, plank och altaner,</li>
+<li>små ändringar av en- eller tvåbostadshus.</li>
 </ul>
-<p>En vanlig missuppfattning gäller Attefallsåtgärder, som ett komplementbostadshus på max 30 kvm. Dessa är <strong>inte automatiskt undantagna</strong> – byggnadsnämnden kan besluta att KA ändå krävs. Utgå därför aldrig från att en Attefallsåtgärd är befriad från KA-kravet utan att ha stämt av med kommunen. Betona för kunden att det alltid är nämnden som gör bedömningen i det enskilda fallet.</p>
+<p>Byggnadsnämnden kan ändå besluta att KA krävs i det enskilda fallet. Stäm därför av med kommunen innan du lovar kunden att KA inte behövs.</p>
 <p>Notera också att Boverkets nya byggregler gäller fullt ut från 1 juli 2026. Att lovplikten slopats för vissa åtgärder betyder inte att de tekniska kraven försvinner – även åtgärder utan bygglovsplikt måste uppfylla de nya reglerna, och ett eventuellt KA-krav påverkas inte av att lovplikten tagits bort.</p>
 
 <h2>Vad kostar en kontrollansvarig 2026?</h2>
@@ -232,8 +234,8 @@ const A_KONTROLLANSVARIG_NAR_BEHOVS_HTML = `
 <p>Nej. Det är byggherren (oftast din kund) som ansvarar för att utse KA. Eftersom KA måste vara oberoende av den som utför bygget, kan ditt företag inte vara KA för ett projekt ni själva bygger. Däremot är det bra att kunna vägleda kunden om när KA behövs.</p>
 <h3>Vad kostar det att anlita en kontrollansvarig 2026?</h3>
 <p>För ett mindre projekt ca 10 000–20 000 kr, för en villa ca 15 000–30 000 kr och för större projekt från ca 30 000 kr och uppåt (exkl. moms). Priset styrs av antal arbetsplatsbesök och projektets komplexitet.</p>
-<h3>Behövs KA för en Attefallsåtgärd?</h3>
-<p>Inte automatiskt, men byggnadsnämnden kan besluta att KA ändå krävs. Attefallsåtgärder är inte undantagna på samma sätt som åtgärder helt utan lov eller anmälan. Stäm alltid av med kommunen i det enskilda fallet.</p>
+<h3>Behövs KA för ett attefallshus (komplementbostadshus)?</h3>
+<p>Normalt inte. Sedan 1 december 2025 är komplementbyggnader och komplementbostadshus undantagna från KA-kravet (PBF 7 kap. 5 §), och de flesta kräver varken bygglov eller anmälan. Byggnadsnämnden kan dock besluta att KA krävs i ett enskilt fall.</p>
 <h3>Vad är skillnaden mellan N- och K-behörighet?</h3>
 <p>N (normal art) täcker en- och tvåbostadshus samt mindre projekt. K (komplicerad art) krävs för byggnader med fler än två våningar och större, mer komplexa projekt. Fel behörighet kan försena bygglovet.</p>
 
@@ -250,7 +252,7 @@ const A_KONTROLLANSVARIG_NAR_BEHOVS: BlogPost = {
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_KONTROLLANSVARIG_NAR_BEHOVS_HTML,
   seoTitle: "Kontrollansvarig när & kostnad | ByggExp", seoDescription: "När krävs kontrollansvarig, vad kostar en KA 2026 (10 000–50 000 kr) och skillnaden mellan N- och K-behörighet. Guide för hantverkare och byggföretag.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-18T18:18:00.000Z", createdAt: "2026-08-18T18:18:00.000Z", updatedAt: "2026-08-18T18:18:00.000Z",
+  publishedAt: "2026-08-18T18:18:00.000Z", createdAt: "2026-08-18T18:18:00.000Z", updatedAt: '2026-10-08T09:00:00.000Z',
 };
 
 const A_KONTROLLPLAN_MALL_BYGGLOV_HTML = `
@@ -270,7 +272,7 @@ const A_KONTROLLPLAN_MALL_BYGGLOV_HTML = `
 <p>Varje kontroll ska dessutom dokumenteras och signeras. Godtagbar dokumentation är till exempel besiktningsprotokoll, kontrollintyg, provningsintyg, mätprotokoll och foton – och den ska verifieras med en signatur av den person som kontrollerat att kravet är uppfyllt. Kontrollplanen ska också ange i vilken omfattning varje kontroll görs som byggherrens dokumenterade egenkontroll eller av en sakkunnig.</p>
 
 <h2>När behöver du INTE en kontrollansvarig?</h2>
-<p>En kontrollansvarig (KA) krävs inte för enklare åtgärder. Det gäller exempelvis mindre tillbyggnader, attefallshus och byte av takbeklädnad. I dessa enkla ärenden skriver byggherren – eller den anlitade hantverkaren – kontrollplanen själv. Kommunerna kallar det ofta en <strong>enkel kontrollplan enligt PBL 10 kap. 6–8 §§</strong>.</p>
+<p>En kontrollansvarig (KA) krävs inte för enklare åtgärder. Det gäller exempelvis anmälningspliktiga åtgärder (som VA eller eldstad), komplementbyggnader och komplementbostadshus (tidigare attefallshus) samt små ändringar av småhus (PBF 7 kap. 5 §). I dessa enkla ärenden skriver byggherren – eller den anlitade hantverkaren – kontrollplanen själv. Kommunerna kallar det ofta en <strong>enkel kontrollplan enligt PBL 10 kap. 6–8 §§</strong>.</p>
 <p>För dig som hantverkare betyder det en konkret möjlighet. I stället för att kunden ska anlita en KA för ett enkelt jobb kan du leverera en korrekt kontrollplan som en del av uppdraget. Det höjer värdet på din offert och gör hela processen smidigare mot kommunen. Kravet är att planen faktiskt är anpassad till projektet – inte en tom standardmall. Fyll i <a href="/sv/verktyg/egenkontroll-mall">mallen och ladda ner planen som PDF →</a> med kontrollpunkter som passar just den åtgärd du utför.</p>
 
 <h2>Nytt 2026: kontrollplan och avfallshanteringsplan är nu två dokument</h2>
@@ -314,7 +316,7 @@ const A_KONTROLLPLAN_MALL_BYGGLOV_HTML = `
 
 <h2>Vanliga frågor</h2>
 <h3>Måste jag anlita en kontrollansvarig?</h3>
-<p>Nej, inte för enkla åtgärder som mindre tillbyggnader, attefallshus och byte av takbeklädnad. Då kan byggherren eller den anlitade hantverkaren skriva en enkel kontrollplan själv enligt PBL 10 kap. 6–8 §§. För större och mer komplexa projekt krävs en KA.</p>
+<p>Nej, inte för enkla åtgärder som anmälningspliktiga installationer, komplementbyggnader och komplementbostadshus (tidigare attefallshus) och små ändringar av småhus. Då kan byggherren eller den anlitade hantverkaren skriva en enkel kontrollplan själv enligt PBL 10 kap. 6–8 §§. För större och mer komplexa projekt krävs en KA.</p>
 <h3>När ska kontrollplanen lämnas in?</h3>
 <p>Ett förslag till kontrollplan ska lämnas in redan med bygglovsansökan eller anmälan. Byggnadsnämnden fastställer planen i startbeskedet, och arbetet får inte påbörjas innan startbesked har utfärdats.</p>
 <h3>Vad är skillnaden efter regeländringen 2026?</h3>
@@ -335,7 +337,7 @@ const A_KONTROLLPLAN_MALL_BYGGLOV: BlogPost = {
   coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_KONTROLLPLAN_MALL_BYGGLOV_HTML,
   seoTitle: "Kontrollplan mall bygglov | ByggExp", seoDescription: "De flesta bygglov kräver en kontrollplan enligt PBL. För enkla ärenden skriver du den själv – utan kontrollansvarig. Mall som ger en klar PDF till kommunen.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-18T18:33:00.000Z", createdAt: "2026-08-18T18:33:00.000Z", updatedAt: "2026-08-18T18:33:00.000Z",
+  publishedAt: "2026-08-18T18:33:00.000Z", createdAt: "2026-08-18T18:33:00.000Z", updatedAt: '2026-10-08T09:00:00.000Z',
 };
 
 const A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK_HTML = `
@@ -649,7 +651,7 @@ const A_BEHORIGHETER_CERTIFIERINGAR_LONAR_SIG_HTML = `
 <p>Utbildningen är en endagsutbildning i Brandskyddsföreningens säkerhetsregler och kostar typiskt runt 2 500–2 900 kr per person. Certifikatet är giltigt i 5 år och går ut sista dagen i angiven månad. Saknas giltigt certifikat vid en brand minskas försäkringsersättningen markant. Med tanke på kostnaden – runt 2 500 kr mot potentiellt hela ersättningen vid en brand – är detta en av de mest lönsamma behörigheterna att hålla aktuell.</p>
 
 <h2>Kontrollansvarig (KA) enligt PBL – N och K</h2>
-<p>Kontrollansvarig krävs enligt plan- och bygglagen för de flesta åtgärder som kräver bygglov, rivningslov, marklov eller anmälan. Byggnadsnämnden kan göra undantag för enklare projekt. En KA måste vara certifierad av ett ackrediterat organ – RISE eller Kiwa, båda ackrediterade av Swedac – och certifieringen är giltig i 5 år förutsatt att en årlig rapport lämnas in.</p>
+<p>Kontrollansvarig krävs enligt plan- och bygglagen främst för större lovpliktiga åtgärder. Anmälningspliktiga åtgärder, komplementbyggnader och små ändringar av småhus är normalt undantagna (PBF 7 kap. 5 §), men byggnadsnämnden kan besluta annat. En KA måste vara certifierad av ett ackrediterat organ – RISE eller Kiwa, båda ackrediterade av Swedac – och certifieringen är giltig i 5 år förutsatt att en årlig rapport lämnas in.</p>
 <p>Det finns två behörighetsnivåer:</p>
 <ul>
 <li><strong>N (normal art)</strong> – bland annat en- och tvåbostadshus och byggnader med högst två våningar. Kräver minst 3 års erfarenhet av projektering, arbetsledning eller besiktning samt teknisk utbildning, till exempel högskoleingenjörsexamen (120 hp) eller motsvarande äldre utbildning.</li>
@@ -695,7 +697,7 @@ const A_BEHORIGHETER_CERTIFIERINGAR_LONAR_SIG: BlogPost = {
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_BEHORIGHETER_CERTIFIERINGAR_LONAR_SIG_HTML,
   seoTitle: "Behörigheter som vinner jobb 2026 | ByggExp", seoDescription: "Våtrumsbehörighet, Heta Arbeten och kontrollansvarig – vilka behörigheter beställare och försäkringsbolag faktiskt kräver 2026. Checklista för hantverkare.",
   seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T08:03:00.000Z", createdAt: "2026-08-19T08:03:00.000Z", updatedAt: "2026-08-19T08:03:00.000Z",
+  publishedAt: "2026-08-19T08:03:00.000Z", createdAt: "2026-08-19T08:03:00.000Z", updatedAt: '2026-10-08T09:00:00.000Z',
 };
 
 const A_ID06_BESTALLA_KORT_STEG_FOR_STEG_HTML = `
@@ -1385,170 +1387,219 @@ const A_FARLIGT_AVFALL_ANTECKNINGSSKYLDIGHET_BYGG: BlogPost = {
 // --- Bygglov cluster (high-volume consumer/regulatory; funnels to kontrollplan-mall + /fa-offert) ---
 
 const B_BEHOVER_JAG_BYGGLOV_HTML = `
-<p>Behöver du bygglov? Det korta svaret: det beror på vad du ska bygga, hur stort och var. Vissa åtgärder kräver bygglov, andra bara en anmälan – och en del får du göra helt utan tillstånd. Här är en tydlig guide till när bygglov krävs enligt plan- och bygglagen (PBL), och var de vanligaste undantagen går.</p>
+<p>Behöver du bygglov? Sedan 1 december 2025 gäller ett nytt 9 kap. i plan- och bygglagen (PBL) som gör betydligt fler åtgärder lovfria. Friggebod och attefallshus har ersatts av en samlad regel om komplementbyggnader, och många fasadändringar på småhus kräver inte längre lov. Här är vad som gäller 2026.</p>
 <p>Planerar du att anlita någon för jobbet? <a href="/sv/fa-offert">Få 3 offerter från byggföretag</a> – gratis och utan förpliktelser.</p>
 
 <h2>När krävs bygglov?</h2>
-<p>Bygglov krävs oftast för att bygga nytt, bygga till, eller väsentligt ändra en byggnad (t.ex. fasad, takform eller användning). För en- och tvåbostadshus finns dock flera undantag – attefallsåtgärder och friggebod – som i stället kräver anmälan eller inget alls.</p>
+<p>Bygglov krävs som huvudregel för nybyggnad och tillbyggnad. För småhus finns dock stora undantag – och detaljplanen kan i sin tur kräva lov även för sådant som annars är lovfritt.</p>
 
-<h2>Vanliga åtgärder – lov, anmälan eller inget?</h2>
+<h2>Vanliga åtgärder 2026 – lov, anmälan eller inget?</h2>
 <ul>
-<li><strong>Nytt hus / större tillbyggnad:</strong> bygglov.</li>
-<li><strong>Attefallshus (upp till 30 m²):</strong> anmälan + startbesked, inte bygglov.</li>
-<li><strong>Friggebod (upp till 15 m²):</strong> normalt varken lov eller anmälan.</li>
-<li><strong>Fasadändring, takkupa, inglasning:</strong> ofta bygglov – varierar.</li>
-<li><strong>Altan, staket, skärmtak:</strong> beror på storlek, höjd och placering.</li>
+<li><strong>Nytt hus:</strong> bygglov.</li>
+<li><strong>Komplementbyggnad eller komplementbostadshus (tidigare friggebod/attefallshus):</strong> inget lov och ingen anmälan inom detaljplan upp till 30 m² och 4,0 m nockhöjd (sammanlagt 45 m² på tomten), utanför detaljplan upp till 50 m² och 4,5 m (sammanlagt 65 m²).</li>
+<li><strong>Tillbyggnad av bostadshuset:</strong> lovfri upp till 30 m² bruttoarea (sammanlagt) om den inte går över husets taknock.</li>
+<li><strong>Fasadändring på en- eller tvåbostadshus</strong> (färg, material, takbeläggning): i regel lovfri – men varsamhetskrav och förvanskningsförbud gäller.</li>
+<li><strong>Mur, plank och altan inom detaljplan:</strong> lov om de blir högre än 1,8 m inom 3,6 m från en byggnad, eller högre än 1,2 m längre bort.</li>
 </ul>
-<p>Reglerna tolkas delvis lokalt – <strong>kontrollera alltid med din kommun</strong> och Boverket innan du börjar.</p>
+
+<h2>När krävs lov ändå?</h2>
+<ul>
+<li>Närmare tomtgräns än 4,5 m – om inte alla berörda grannar har gett skriftligt medgivande.</li>
+<li>För särskilt värdefulla byggnader och områden (kulturvärden) eller när detaljplanen kräver det.</li>
+<li>Strandskyddet gäller oavsett lovplikt – där kan dispens behövas.</li>
+</ul>
 
 <h2>Anmälan och startbesked</h2>
-<p>Även åtgärder utan bygglov (som attefallshus) kräver oftast en anmälan och ett <a href="/sv/blog/startbesked-bygglov-process-2026">startbesked</a> innan du får börja. Till bygget hör i regel en <a href="/sv/verktyg/kontrollplan-mall">kontrollplan</a>.</p>
+<p>Anmälan krävs i stället för vissa tekniska åtgärder, även när bygglov inte behövs: installation av vatten och avlopp, ventilation, eldstad eller rökkanal, väsentlig påverkan på bärande konstruktion eller brandskydd samt rivning av byggnader över 50 m². Då får arbetet inte påbörjas förrän du fått ett <a href="/sv/blog/startbesked-bygglov-process-2026">startbesked</a>, och till anmälan hör en <a href="/sv/verktyg/kontrollplan-mall">kontrollplan</a>.</p>
+<p>Lovfrihet är inte regelfrihet: byggnaden ska fortfarande uppfylla de tekniska kraven. Är du osäker – fråga kommunens bygglovsavdelning.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Hur vet jag om jag behöver bygglov?</h3>
-<p>Det beror på åtgärd, storlek och placering. Nybyggnad och tillbyggnad kräver oftast bygglov; attefallshus kräver anmälan; friggebod ofta inget. Kontrollera alltid med din kommun.</p>
+<p>Det beror på åtgärd, storlek och placering. Nybyggnad av hus kräver bygglov; komplementbyggnader och mindre tillbyggnader på småhus är i regel lovfria inom måtten ovan. Kontrollera detaljplanen och fråga kommunen.</p>
 <h3>Vad händer om jag bygger utan bygglov?</h3>
 <p>Att bygga utan lov (svartbygge) kan leda till byggsanktionsavgift och krav på rättelse. Sök lov eller gör anmälan innan du börjar.</p>
 <h3>Vad är skillnaden mellan bygglov och anmälan?</h3>
-<p>Bygglov är ett tillstånd som prövas mot detaljplan m.m. Anmälan är en enklare process för attefallsåtgärder, men även den kräver startbesked innan du får börja.</p>
+<p>Bygglov prövar placering och utformning mot detaljplanen. Anmälan gäller tekniska åtgärder som VA, ventilation och eldstad – där prövas bara de tekniska kraven, och du behöver startbesked innan du börjar.</p>
+<p><em>Källor: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/plan-och-bygglag-2010900_sfs-2010-900/" target="_blank" rel="noopener">plan- och bygglagen (PBL) 9 kap.</a>, <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/plan-och-byggforordning-2011338_sfs-2011-338/" target="_blank" rel="noopener">plan- och byggförordningen (PBF) 6 kap. 1 § och 7 kap. 5 §</a> och <a href="https://www.boverket.se/sv/PBL-kunskapsbanken/lov--byggande/anmalningsplikt/byggnader/nybyggnad/komplementbostadshus/" target="_blank" rel="noopener">Boverkets PBL kunskapsbank</a>. Uppdaterad 8 oktober 2026 enligt reglerna som gäller sedan 1 december 2025.</em></p>
 `.trim();
 
 const B_BEHOVER_JAG_BYGGLOV: BlogPost = {
   _id: 'code-behover-jag-bygglov', title: 'Behöver du bygglov? Guide 2026', slug: 'behover-jag-bygglov', locale: 'sv',
-  excerpt: 'Behöver du bygglov? Det beror på vad, hur stort och var. Guide till när bygglov krävs enligt PBL, när det räcker med anmälan och vad du får göra utan lov.', tag: 'Regelverk',
+  excerpt: 'Nya PBL sedan 1 december 2025: komplementbyggnader upp till 30 m² och tillbyggnader upp till 30 m² är i regel lovfria. Guide till när bygglov krävs, när anmälan behövs och vad du får göra utan lov.', tag: 'Regelverk',
   coverImageUrl: '/landing/features/6verktyg.webp', contentHtml: B_BEHOVER_JAG_BYGGLOV_HTML,
-  seoTitle: 'Behöver du bygglov? Guide 2026 – lov eller anmälan | ByggExp', seoDescription: 'Behöver du bygglov? Guide till plan- och bygglagen: när krävs bygglov, när räcker anmälan och startbesked, och vad du får bygga utan lov (attefall, friggebod).',
+  seoTitle: 'Behöver du bygglov? Nya regler 2026 | ByggExp', seoDescription: 'Nya bygglovsregler sedan 1 dec 2025: komplementbyggnad 30 m² (45 m² totalt) utan lov och anmälan, tillbyggnad 30 m², 4,5 m till tomtgräns. När krävs anmälan?',
   seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
-  publishedAt: '2026-08-22T14:00:00.000Z', createdAt: '2026-08-22T14:00:00.000Z', updatedAt: '2026-08-22T14:00:00.000Z',
+  publishedAt: '2026-08-22T14:00:00.000Z', createdAt: '2026-08-22T14:00:00.000Z', updatedAt: '2026-10-08T09:00:00.000Z',
 };
 
 const B_ATTEFALLSHUS_REGLER_HTML = `
-<p>Ett attefallshus är en av de mest populära åtgärderna du kan göra utan bygglov – men det finns tydliga regler för storlek, höjd och placering, och du måste göra en anmälan. Här går vi igenom attefallshus-reglerna 2026: hur stort det får vara, avstånd till tomtgräns och vad som krävs innan du börjar.</p>
+<p>Sedan 1 december 2025 finns inga särskilda attefallsregler längre. Attefallshus och friggebodar har ersatts av en samlad regel om <strong>komplementbyggnader</strong> och <strong>komplementbostadshus</strong> i 9 kap. plan- och bygglagen (PBL). Den stora nyheten: inom måtten krävs varken bygglov, anmälan eller startbesked – så länge du inte installerar vatten, avlopp, ventilation eller eldstad.</p>
 <p>Vill du ta in offerter på ett attefallshus? <a href="/sv/fa-offert">Få 3 offerter från byggföretag</a> – gratis.</p>
 
-<h2>Hur stort får ett attefallshus vara?</h2>
-<p>Ett attefallshus får vara upp till <strong>30 m²</strong> byggnadsarea. Det kan användas som komplementbostadshus (permanent boende) eller komplementbyggnad (t.ex. förråd, garage, gäststuga). Taknockshöjden får vara högst <strong>4 meter</strong>.</p>
+<h2>Hur stort får ett attefallshus vara 2026?</h2>
+<ul>
+<li><strong>Inom detaljplan:</strong> högst 30 m² byggnadsarea, taknockshöjd högst 4,0 m och sammanlagt högst 45 m² för alla lovfria komplementbyggnader och komplementbostadshus på tomten.</li>
+<li><strong>Utanför detaljplan:</strong> högst 50 m², taknockshöjd högst 4,5 m och sammanlagt högst 65 m².</li>
+</ul>
+<p>Byggnaden ska också vara mindre än det bostadshus den kompletterar och placeras inom tomten. Befintliga attefallshus och friggebodar räknas in i den sammanlagda arean. Samma mått gäller om du bygger till en befintlig komplementbyggnad.</p>
 
 <h2>Avstånd till tomtgräns</h2>
-<p>Attefallshuset ska placeras minst <strong>4,5 meter</strong> från tomtgräns. Vill du bygga närmare krävs berörda grannars medgivande. Nära allmän plats eller gata gäller särskilda regler.</p>
+<p>Närmare tomtgräns än <strong>4,5 meter</strong> krävs bygglov, om inte alla berörda grannar skriftligen har medgett placeringen. Samma sak gäller närmare än 30 meter från ett järnvägsspår (9 kap. 34–35 §§ PBL).</p>
 
-<h2>Anmälan och startbesked</h2>
-<p>Attefallshus kräver inte bygglov, men en <strong>anmälan</strong> till kommunen och ett <strong>startbesked</strong> innan du får börja. Till bygget hör oftast en <a href="/sv/verktyg/kontrollplan-mall">kontrollplan</a>. Reglerna kan tolkas lokalt – kontrollera med din kommun.</p>
+<h2>Anmälan och startbesked – när behövs det?</h2>
+<p>Själva byggnaden kräver ingen anmälan. Men enligt plan- och byggförordningen (6 kap. 1 §) krävs anmälan – och startbesked innan du gör den delen – om du:</p>
+<ul>
+<li>installerar vatten eller avlopp,</li>
+<li>installerar ventilation, eldstad eller rökkanal,</li>
+<li>påverkar bärande konstruktion eller brandskydd väsentligt i en befintlig byggnad.</li>
+</ul>
+<p>Ett komplementbostadshus med kök och badrum kräver alltså i praktiken en anmälan för VA och ventilation, med en enkel <a href="/sv/verktyg/kontrollplan-mall">kontrollplan</a>. Kontrollansvarig krävs normalt inte (PBF 7 kap. 5 §), men byggnadsnämnden kan besluta annat.</p>
+
+<h2>När krävs bygglov ändå?</h2>
+<ul>
+<li>Närmare tomtgräns än 4,5 m utan grannarnas skriftliga medgivande.</li>
+<li>För särskilt värdefulla byggnader eller områden, eller där detaljplanen skyddar kulturvärden (9 kap. 37 §).</li>
+<li>Komplementbostadshus i vissa områden för totalförsvaret, till exempel nära flygplatser och skjutfält.</li>
+<li>Om detaljplanen eller områdesbestämmelserna kräver lov.</li>
+</ul>
+<p>Strandskyddet gäller oavsett – inom strandskyddat område behövs dispens. Och lovfrihet är inte regelfrihet: byggnaden ska uppfylla de tekniska kraven, och ett komplementbostadshus ska uppfylla kraven på en bostad. Är du osäker – fråga kommunen innan du bygger.</p>
+
+<h2>Vad har ändrats jämfört med de gamla attefallsreglerna?</h2>
+<ul>
+<li>Förut krävdes alltid anmälan och startbesked för attefallshus. Nu krävs det bara för installationer som VA, ventilation och eldstad.</li>
+<li>Friggebod och attefallshus är nu samma regel, med ett gemensamt tak på 45 m² inom detaljplan.</li>
+<li>Utanför detaljplan får byggnaden vara 50 m² och 4,5 m hög.</li>
+<li>Attefallstillbyggnaden på 15 m² är ersatt av en lovfri tillbyggnad på upp till 30 m² bruttoarea som inte går över husets taknock.</li>
+</ul>
 
 <h2>Vanliga frågor</h2>
 <h3>Hur stort får ett attefallshus vara 2026?</h3>
-<p>Upp till 30 m² byggnadsarea, med taknockshöjd på högst 4 meter. Kontrollera aktuella detaljer hos Boverket och din kommun.</p>
+<p>Inom detaljplan högst 30 m² och 4,0 m nockhöjd (sammanlagt 45 m² på tomten). Utanför detaljplan högst 50 m² och 4,5 m (sammanlagt 65 m²).</p>
 <h3>Hur nära tomtgräns får attefallshuset stå?</h3>
-<p>Minst 4,5 meter från tomtgräns, om inte berörda grannar ger sitt medgivande att bygga närmare.</p>
-<h3>Behöver jag bygglov för attefallshus?</h3>
-<p>Nej, men du måste göra en anmälan och få startbesked innan du börjar bygga.</p>
+<p>Närmare än 4,5 meter krävs bygglov, om inte alla berörda grannar skriftligen har medgett placeringen.</p>
+<h3>Behöver jag anmälan och startbesked för attefallshus?</h3>
+<p>Inte för själva byggnaden sedan 1 december 2025. Installerar du vatten, avlopp, ventilation eller eldstad krävs anmälan och startbesked för den delen.</p>
+<p><em>Källor: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/plan-och-bygglag-2010900_sfs-2010-900/" target="_blank" rel="noopener">plan- och bygglagen (PBL) 9 kap.</a>, <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/plan-och-byggforordning-2011338_sfs-2011-338/" target="_blank" rel="noopener">plan- och byggförordningen (PBF) 6 kap. 1 § och 7 kap. 5 §</a> och <a href="https://www.boverket.se/sv/PBL-kunskapsbanken/lov--byggande/anmalningsplikt/byggnader/nybyggnad/komplementbostadshus/" target="_blank" rel="noopener">Boverkets PBL kunskapsbank</a>. Uppdaterad 8 oktober 2026 enligt reglerna som gäller sedan 1 december 2025.</em></p>
 `.trim();
 
 const B_ATTEFALLSHUS_REGLER: BlogPost = {
-  _id: 'code-attefallshus-regler', title: 'Attefallshus – regler, storlek och bygglov 2026', slug: 'attefallshus-regler', locale: 'sv',
-  excerpt: 'Attefallshus 2026: upp till 30 m², max 4 m nockhöjd, minst 4,5 m från tomtgräns. Kräver anmälan och startbesked – inte bygglov. Alla regler samlat.', tag: 'Regelverk',
+  _id: 'code-attefallshus-regler', title: 'Attefallshus 2026 – nya regler, storlek och anmälan', slug: 'attefallshus-regler', locale: 'sv',
+  excerpt: 'Nya regler sedan 1 dec 2025: attefallshus heter nu komplementbostadshus – upp till 30 m² och 4,0 m inom detaljplan (45 m² totalt), utan bygglov och anmälan. Anmälan bara för VA, ventilation och eldstad.', tag: 'Regelverk',
   coverImageUrl: '/landing/features/6verktyg.webp', contentHtml: B_ATTEFALLSHUS_REGLER_HTML,
-  seoTitle: 'Attefallshus regler 2026 – storlek & bygglov | ByggExp', seoDescription: 'Attefallshus regler 2026: upp till 30 m², max 4 m nockhöjd, minst 4,5 m från tomtgräns, kräver anmälan och startbesked (inte bygglov). Så gäller det.',
+  seoTitle: 'Attefallshus regler 2026 – nya PBL, 30 m² | ByggExp', seoDescription: 'Attefallshus 2026: inget bygglov, ingen anmälan upp till 30 m² och 4,0 m nock (45 m² totalt). Utanför detaljplan 50 m². Anmälan krävs för VA, ventilation, eldstad.',
   seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
-  publishedAt: '2026-08-22T14:05:00.000Z', createdAt: '2026-08-22T14:05:00.000Z', updatedAt: '2026-08-22T14:05:00.000Z',
+  publishedAt: '2026-08-22T14:05:00.000Z', createdAt: '2026-08-22T14:05:00.000Z', updatedAt: '2026-10-08T09:00:00.000Z',
 };
 
 const B_FRIGGEBOD_REGLER_HTML = `
-<p>En friggebod får du bygga utan både bygglov och anmälan – därför är den ett smidigt sätt att få förråd eller gäststuga. Men storleken och placeringen är reglerade. Här är friggebod-reglerna: hur stor den får vara, höjd och avstånd till tomtgräns.</p>
+<p>Friggeboden finns inte längre som egen regel. Sedan 1 december 2025 ingår den i den samlade regeln om <strong>komplementbyggnader</strong> i 9 kap. plan- och bygglagen (PBL) – samma regel som för attefallshus. För dig betyder det att du får bygga större än förut, utan bygglov och utan anmälan.</p>
 <p>Vill du ha hjälp att bygga? <a href="/sv/fa-offert">Få 3 offerter från byggföretag</a>.</p>
 
-<h2>Hur stor får en friggebod vara?</h2>
-<p>Den sammanlagda byggnadsarean för friggebodar på tomten får vara högst <strong>15 m²</strong>, med en taknockshöjd på högst <strong>3 meter</strong>. Du kan ha flera friggebodar så länge den totala arean håller sig inom 15 m².</p>
+<h2>Hur stor får en friggebod vara 2026?</h2>
+<ul>
+<li><strong>Inom detaljplan:</strong> högst 30 m² byggnadsarea och 4,0 m taknockshöjd. Alla lovfria komplementbyggnader och komplementbostadshus på tomten får tillsammans vara högst 45 m².</li>
+<li><strong>Utanför detaljplan:</strong> högst 50 m² och 4,5 m, sammanlagt högst 65 m².</li>
+</ul>
+<p>Byggnaden ska vara mindre än bostadshuset och stå inom tomten. Befintliga friggebodar och attefallshus räknas in i den sammanlagda arean.</p>
 
 <h2>Avstånd till tomtgräns</h2>
-<p>Friggeboden ska placeras minst <strong>4,5 meter</strong> från tomtgräns om du inte har grannens medgivande att bygga närmare.</p>
+<p>Närmare tomtgräns än <strong>4,5 meter</strong> krävs bygglov, om inte alla berörda grannar skriftligen har medgett placeringen.</p>
+
+<h2>Behövs anmälan?</h2>
+<p>Nej, inte för ett förråd eller en gäststuga utan installationer. Drar du in vatten, avlopp, ventilation eller en eldstad krävs anmälan och startbesked för den delen. Bygglov krävs ändå för särskilt värdefulla byggnader och områden, och strandskyddet gäller oavsett.</p>
 
 <h2>Friggebod eller attefallshus?</h2>
-<p>Friggeboden (15 m², inget lov/anmälan) är enklast men mindre. Vill du ha upp till 30 m² och kunna bo permanent, är ett <a href="/sv/blog/attefallshus-regler">attefallshus</a> rätt – men det kräver anmälan och startbesked.</p>
+<p>I dag är det samma regel. Skillnaden är användningen: en komplementbyggnad är t.ex. förråd, garage eller gäststuga, medan ett komplementbostadshus är en självständig bostad. Läs mer om <a href="/sv/blog/attefallshus-regler">attefallshus 2026</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Hur stor får en friggebod vara?</h3>
-<p>Sammanlagt högst 15 m² byggnadsarea med max 3 meter i nockhöjd. Kontrollera aktuella regler hos Boverket.</p>
+<p>Inom detaljplan högst 30 m² och 4,0 m nockhöjd (sammanlagt 45 m² på tomten), utanför detaljplan högst 50 m² och 4,5 m.</p>
 <h3>Behöver jag bygglov för en friggebod?</h3>
-<p>Nej, en friggebod inom reglerna kräver varken bygglov eller anmälan. Men avstånd till tomtgräns och storlek måste följas.</p>
-<h3>Hur nära tomtgränsen får friggeboden stå?</h3>
-<p>Minst 4,5 meter, om inte berörd granne ger medgivande att bygga närmare.</p>
+<p>Nej, inom måtten krävs varken bygglov eller anmälan. Närmare tomtgräns än 4,5 m krävs grannarnas skriftliga medgivande.</p>
+<h3>Gäller 15 m²-gränsen fortfarande?</h3>
+<p>Nej. Den gamla friggebodsregeln (15 m², 3 m) togs bort 1 december 2025 och ersattes av regeln om komplementbyggnader.</p>
+<p><em>Källor: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/plan-och-bygglag-2010900_sfs-2010-900/" target="_blank" rel="noopener">plan- och bygglagen (PBL) 9 kap.</a>, <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/plan-och-byggforordning-2011338_sfs-2011-338/" target="_blank" rel="noopener">plan- och byggförordningen (PBF) 6 kap. 1 § och 7 kap. 5 §</a> och <a href="https://www.boverket.se/sv/PBL-kunskapsbanken/lov--byggande/anmalningsplikt/byggnader/nybyggnad/komplementbostadshus/" target="_blank" rel="noopener">Boverkets PBL kunskapsbank</a>. Uppdaterad 8 oktober 2026 enligt reglerna som gäller sedan 1 december 2025.</em></p>
 `.trim();
 
 const B_FRIGGEBOD_REGLER: BlogPost = {
-  _id: 'code-friggebod-regler', title: 'Friggebod – regler, storlek (15 kvm) och höjd', slug: 'friggebod-regler', locale: 'sv',
-  excerpt: 'Friggebod-regler: sammanlagt högst 15 m², max 3 m nockhöjd, minst 4,5 m från tomtgräns – utan bygglov eller anmälan. Friggebod eller attefallshus?', tag: 'Regelverk',
+  _id: 'code-friggebod-regler', title: 'Friggebod 2026 – nya regler, storlek och höjd', slug: 'friggebod-regler', locale: 'sv',
+  excerpt: 'Friggeboden ersattes 1 dec 2025 av regeln om komplementbyggnad: inom detaljplan upp till 30 m² och 4,0 m nockhöjd (45 m² totalt), utan bygglov och anmälan. 4,5 m till tomtgräns.', tag: 'Regelverk',
   coverImageUrl: '/landing/features/6verktyg.webp', contentHtml: B_FRIGGEBOD_REGLER_HTML,
-  seoTitle: 'Friggebod regler – storlek 15 kvm, höjd & tomtgräns | ByggExp', seoDescription: 'Friggebod-regler: högst 15 m² sammanlagt, max 3 m nockhöjd, minst 4,5 m från tomtgräns, utan bygglov eller anmälan. Skillnaden mot attefallshus.',
+  seoTitle: 'Friggebod regler 2026 – nu 30 m² | ByggExp', seoDescription: 'Friggebod 2026: gamla 15 m²-regeln är borta. Nu gäller komplementbyggnad upp till 30 m² och 4,0 m nock inom detaljplan, 45 m² totalt, utan lov och anmälan.',
   seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
-  publishedAt: '2026-08-22T14:10:00.000Z', createdAt: '2026-08-22T14:10:00.000Z', updatedAt: '2026-08-22T14:10:00.000Z',
+  publishedAt: '2026-08-22T14:10:00.000Z', createdAt: '2026-08-22T14:10:00.000Z', updatedAt: '2026-10-08T09:00:00.000Z',
 };
 
 const B_STAKET_BYGGLOV_HTML = `
-<p>Behöver du bygglov för staket eller plank? För vanliga staket krävs oftast inget bygglov, men för högre plank och murar kan det behövas – och reglerna varierar mellan kommuner. Här går vi igenom vad som gäller för staket, plank och tomtgräns.</p>
+<p>Behöver du bygglov för staket eller plank? Sedan 1 december 2025 är reglerna för murar och plank samma i hela landet (9 kap. plan- och bygglagen). Vanliga, genomsiktliga staket kräver normalt inget lov. Här är vad som gäller för plank, murar och tomtgräns.</p>
 <p>Ska du sätta upp staket? Räkna material i vår gratis <a href="/sv/verktyg/staket-kalkylator">staket-kalkylator</a>, eller <a href="/sv/fa-offert">få offerter från byggföretag</a>.</p>
 
 <h2>Staket, plank eller mur – vad kräver bygglov?</h2>
 <ul>
 <li><strong>Staket</strong> (luftigt, genomsiktligt) – normalt inget bygglov.</li>
-<li><strong>Plank</strong> (tätt, högre) – kan kräva bygglov över en viss höjd.</li>
-<li><strong>Mur</strong> – kräver ofta bygglov beroende på höjd.</li>
+<li><strong>Plank och mur inom detaljplan</strong> – bygglov om de blir högre än 1,8 m inom 3,6 m från en byggnad, eller högre än 1,2 m längre bort.</li>
+<li><strong>Närmare tomtgräns än 4,5 m</strong> – bygglov för plank och mur över 1,2 m, om inte berörda grannar skriftligen har medgett det.</li>
 </ul>
-<p>Gränsen för när ett plank blir bygglovspliktigt varierar mellan kommuner – <strong>fråga alltid din kommun</strong>.</p>
+<p>Detaljplanen kan ha egna bestämmelser – kontrollera den och fråga kommunen om du är osäker.</p>
 
 <h2>Staket vid tomtgräns</h2>
-<p>Du får normalt sätta staket i din egen tomt. Vid själva tomtgränsen är det klokt att komma överens med grannen, eftersom ett gränsstaket ofta berör båda. Kontrollera även detaljplanens bestämmelser.</p>
+<p>Du får normalt sätta staket i din egen tomt. Vid själva tomtgränsen är det klokt att komma överens med grannen, eftersom ett gränsstaket ofta berör båda.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Behöver jag bygglov för staket?</h3>
-<p>För vanliga, genomsiktliga staket krävs normalt inget bygglov. Höga, täta plank och murar kan kräva bygglov – gränsen varierar mellan kommuner.</p>
-<h3>Hur högt staket får jag ha utan bygglov?</h3>
-<p>Det varierar mellan kommuner. Genomsiktliga staket är oftast fria, medan täta plank över en viss höjd kan kräva lov. Fråga din kommun.</p>
+<p>För vanliga, genomsiktliga staket krävs normalt inget bygglov. Plank och murar kan kräva lov beroende på höjd och avstånd till byggnad och tomtgräns.</p>
+<h3>Hur högt plank får jag ha utan bygglov?</h3>
+<p>Inom detaljplan upp till 1,8 m inom 3,6 m från en byggnad och upp till 1,2 m längre bort. Närmare tomtgräns än 4,5 m behövs grannarnas medgivande för plank över 1,2 m.</p>
 <h3>Får jag sätta staket vid tomtgränsen?</h3>
 <p>Ja, inom din tomt. Vid själva gränsen bör du komma överens med grannen, och följa detaljplanen.</p>
+<p><em>Källa: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/plan-och-bygglag-2010900_sfs-2010-900/" target="_blank" rel="noopener">plan- och bygglagen 9 kap. 19 och 34–35 §§</a>. Uppdaterad 8 oktober 2026.</em></p>
 `.trim();
 
 const B_STAKET_BYGGLOV: BlogPost = {
   _id: 'code-staket-bygglov', title: 'Staket och bygglov – regler, plank och tomtgräns', slug: 'staket-bygglov', locale: 'sv',
-  excerpt: 'Behöver du bygglov för staket? Vanliga staket kräver oftast inget – höga plank och murar kan kräva lov, och reglerna varierar per kommun. Så gäller det.', tag: 'Regelverk',
+  excerpt: 'Behöver du bygglov för staket? Vanliga staket kräver oftast inget. Plank och murar inom detaljplan kräver lov över 1,8 m nära huset och 1,2 m längre bort – regler sedan 1 dec 2025.', tag: 'Regelverk',
   coverImageUrl: '/landing/features/6verktyg.webp', contentHtml: B_STAKET_BYGGLOV_HTML,
-  seoTitle: 'Staket och bygglov – regler, plank & tomtgräns | ByggExp', seoDescription: 'Behöver du bygglov för staket eller plank? Vanliga staket är oftast fria, höga plank/murar kan kräva lov. Regler, tomtgräns och kommunala skillnader.',
+  seoTitle: 'Staket och bygglov – regler, plank & tomtgräns | ByggExp', seoDescription: 'Staket kräver normalt inget bygglov. Plank och mur: lov över 1,8 m inom 3,6 m från byggnad, annars över 1,2 m. Närmare tomtgräns än 4,5 m krävs grannens medgivande.',
   seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
-  publishedAt: '2026-08-22T14:15:00.000Z', createdAt: '2026-08-22T14:15:00.000Z', updatedAt: '2026-08-22T14:15:00.000Z',
+  publishedAt: '2026-08-22T14:15:00.000Z', createdAt: '2026-08-22T14:15:00.000Z', updatedAt: '2026-10-08T09:00:00.000Z',
 };
 
 const B_UTERUM_BYGGLOV_HTML = `
-<p>Ett uterum eller en inglasad altan kan kräva bygglov – men inte alltid. Det beror på storlek, om det byggs ihop med huset och om det räknas som tillbyggnad. Här går vi igenom när uterum kräver bygglov och när det kan rymmas inom attefallsreglerna.</p>
+<p>Ett uterum eller en inglasad altan som byggs ihop med huset räknas som en tillbyggnad. Sedan 1 december 2025 är mindre tillbyggnader lovfria – så många uterum kräver i dag varken bygglov eller anmälan. Här är vad som gäller 2026.</p>
 <p>Planerar du ett uterum? <a href="/sv/fa-offert">Få 3 offerter från byggföretag</a>.</p>
 
 <h2>Kräver uterum bygglov?</h2>
-<p>Ett uterum som byggs ihop med huset räknas oftast som en <strong>tillbyggnad</strong> och kräver då bygglov. Mindre tillbyggnader kan i vissa fall rymmas inom attefallsreglerna (attefallstillbyggnad) och kräver då i stället anmälan.</p>
-
-<h2>Inglasad altan</h2>
-<p>Att glasa in en befintlig altan ändrar byggnadens yttre och kan kräva bygglov. Kontrollera med din kommun innan du beställer.</p>
-
-<h2>Vad påverkar bedömningen?</h2>
+<p>Nej, inte om tillbyggnaden:</p>
 <ul>
-<li>Storlek (byggnadsarea).</li>
-<li>Om det byggs ihop med huset.</li>
-<li>Detaljplan och avstånd till tomtgräns.</li>
+<li>får högst <strong>30 m²</strong> bruttoarea eller öppenarea,</li>
+<li>inte går över husets taknock, och</li>
+<li>tillsammans med andra lovfria tillbyggnader på huset håller sig inom 30 m².</li>
 </ul>
-<p>Reglerna tolkas lokalt – fråga alltid din kommun.</p>
+<p>Den gamla attefallstillbyggnaden på 15 m² finns inte längre – den ersattes av den här regeln (9 kap. 10 § PBL).</p>
+
+<h2>När krävs lov ändå?</h2>
+<ul>
+<li>Närmare tomtgräns än 4,5 m, om inte berörda grannar skriftligen har medgett det.</li>
+<li>För särskilt värdefulla byggnader och områden, eller om detaljplanen kräver det.</li>
+<li>Om uterummet blir större än 30 m² eller högre än taknocken.</li>
+</ul>
+<p>Påverkar bygget husets bärande konstruktion eller brandskydd väsentligt, eller installerar du ventilation eller värme med eldstad, krävs anmälan och startbesked. Lovfrihet är inte regelfrihet – de tekniska kraven gäller. Fråga kommunen om du är osäker.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Behöver jag bygglov för uterum?</h3>
-<p>Ofta ja, om det byggs ihop med huset och räknas som tillbyggnad. Mindre tillbyggnader kan rymmas inom attefallsreglerna med anmälan i stället. Kontrollera med kommunen.</p>
+<p>Inte om uterummet är högst 30 m², inte går över husets taknock och placeras minst 4,5 m från tomtgräns (eller med grannarnas medgivande).</p>
 <h3>Kräver inglasad altan bygglov?</h3>
-<p>Inglasning ändrar byggnadens yttre och kan kräva bygglov. Fråga din kommun innan du börjar.</p>
+<p>En inglasning som ökar husets volym räknas som tillbyggnad och följer samma regel: lovfri upp till 30 m² under taknocken. Kontrollera detaljplanen och eventuella kulturvärden.</p>
+<p><em>Källor: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/plan-och-bygglag-2010900_sfs-2010-900/" target="_blank" rel="noopener">plan- och bygglagen (PBL) 9 kap.</a>, <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/plan-och-byggforordning-2011338_sfs-2011-338/" target="_blank" rel="noopener">plan- och byggförordningen (PBF) 6 kap. 1 § och 7 kap. 5 §</a> och <a href="https://www.boverket.se/sv/PBL-kunskapsbanken/lov--byggande/anmalningsplikt/byggnader/nybyggnad/komplementbostadshus/" target="_blank" rel="noopener">Boverkets PBL kunskapsbank</a>. Uppdaterad 8 oktober 2026 enligt reglerna som gäller sedan 1 december 2025.</em></p>
 `.trim();
 
 const B_UTERUM_BYGGLOV: BlogPost = {
   _id: 'code-uterum-bygglov', title: 'Uterum och bygglov – när krävs det?', slug: 'uterum-bygglov', locale: 'sv',
-  excerpt: 'Kräver uterum bygglov? Ofta ja om det byggs ihop med huset (tillbyggnad) – ibland räcker anmälan inom attefallsreglerna. Så gäller det för uterum och inglasad altan.', tag: 'Regelverk',
+  excerpt: 'Kräver uterum bygglov? Sedan 1 dec 2025 är tillbyggnader upp till 30 m² som inte går över taknocken lovfria. Så gäller det för uterum och inglasad altan 2026.', tag: 'Regelverk',
   coverImageUrl: '/landing/features/6verktyg.webp', contentHtml: B_UTERUM_BYGGLOV_HTML,
-  seoTitle: 'Uterum och bygglov – när krävs det? | ByggExp', seoDescription: 'Kräver uterum bygglov? Byggs det ihop med huset räknas det oftast som tillbyggnad och kräver lov; ibland räcker attefallsanmälan. Inglasad altan, storlek, tomtgräns.',
+  seoTitle: 'Uterum och bygglov 2026 – 30 m²-regeln | ByggExp', seoDescription: 'Uterum 2026: tillbyggnad upp till 30 m² under taknocken kräver inget bygglov. Närmare tomtgräns än 4,5 m krävs grannens medgivande. Inglasad altan samma regel.',
   seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
-  publishedAt: '2026-08-22T14:20:00.000Z', createdAt: '2026-08-22T14:20:00.000Z', updatedAt: '2026-08-22T14:20:00.000Z',
+  publishedAt: '2026-08-22T14:20:00.000Z', createdAt: '2026-08-22T14:20:00.000Z', updatedAt: '2026-10-08T09:00:00.000Z',
 };
 
 export const REGELVERK_ARTICLES: BlogPost[] = [

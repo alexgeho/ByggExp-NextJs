@@ -27,7 +27,7 @@ export const pricingTranslations = {
       other: "{n} пользователя",
     },
 
-    pricingPer: "SEK / месяц",
+    pricingPer: "SEK / компания / месяц",
     popular: "Чаще всего выбирают",
 
     planFaktura: "Контроль денег",
@@ -120,7 +120,7 @@ export const pricingTranslations = {
     usersIncrease: "More users",
     usersCount: { one: "{n} user", other: "{n} users" },
 
-    pricingPer: "SEK / month",
+    pricingPer: "SEK / company / month",
     popular: "Most popular",
 
     planFaktura: "Money in check",
@@ -214,7 +214,7 @@ export const pricingTranslations = {
     usersIncrease: "Fler användare",
     usersCount: { other: "{n} användare" },
 
-    pricingPer: "SEK / månad",
+    pricingPer: "SEK / företag / månad",
     popular: "Mest valt",
 
     planFaktura: "Koll på pengarna",
@@ -308,7 +308,7 @@ export const pricingTranslations = {
     usersIncrease: "Flere brukere",
     usersCount: { one: "{n} bruker", other: "{n} brukere" },
 
-    pricingPer: "SEK / måned",
+    pricingPer: "SEK / bedrift / måned",
     popular: "Mest valgt",
 
     planFaktura: "Kontroll på pengene",
@@ -407,7 +407,7 @@ export const pricingTranslations = {
       other: "{n} użytkownika",
     },
 
-    pricingPer: "SEK / miesiąc",
+    pricingPer: "SEK / firma / miesiąc",
     popular: "Najczęściej wybierany",
 
     planFaktura: "Pieniądze pod kontrolą",
@@ -506,7 +506,7 @@ export const pricingTranslations = {
       other: "{n} користувача",
     },
 
-    pricingPer: "SEK / місяць",
+    pricingPer: "SEK / компанія / місяць",
     popular: "Найчастіше обирають",
 
     planFaktura: "Контроль грошей",
@@ -600,7 +600,7 @@ export const pricingTranslations = {
     usersIncrease: "Enemmän käyttäjiä",
     usersCount: { one: "{n} käyttäjä", other: "{n} käyttäjää" },
 
-    pricingPer: "SEK / kk",
+    pricingPer: "SEK / yritys / kk",
     popular: "Suosituin",
 
     planFaktura: "Rahat hallinnassa",
@@ -694,7 +694,7 @@ export const pricingTranslations = {
     usersIncrease: "Rohkem kasutajaid",
     usersCount: { one: "{n} kasutaja", other: "{n} kasutajat" },
 
-    pricingPer: "SEK / kuus",
+    pricingPer: "SEK / ettevõte / kuus",
     popular: "Enim valitud",
 
     planFaktura: "Raha kontrolli all",
@@ -793,7 +793,7 @@ export const pricingTranslations = {
       other: "{n} naudotojų",
     },
 
-    pricingPer: "SEK / mėn.",
+    pricingPer: "SEK / įmonė / mėn.",
     popular: "Dažniausiai renkamasi",
 
     planFaktura: "Pinigai kontroliuojami",
@@ -891,7 +891,7 @@ export const pricingTranslations = {
       other: "{n} lietotāji",
     },
 
-    pricingPer: "SEK / mēnesī",
+    pricingPer: "SEK / uzņēmums / mēnesī",
     popular: "Visbiežāk izvēlētā",
 
     planFaktura: "Nauda kontrolē",

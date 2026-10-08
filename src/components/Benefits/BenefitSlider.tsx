@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 
 export type SliderCard = {
   id: string;
@@ -9,6 +9,7 @@ export type SliderCard = {
   text: string;
 };
 
+const noopSubscribe = () => () => {};
 const COPIES = 3; // render the deck 3× and keep the user in the middle copy
 
 // Card carousel for the Benefits section. The active card sits in the centre
@@ -21,6 +22,9 @@ export default function BenefitSlider({ cards }: { cards: SliderCard[] }) {
   const n = cards.length;
   const [pos, setPos] = useState(n); // absolute index in the tripled list
   const settleTimer = useRef<number | undefined>(undefined);
+  // Server HTML holds one copy (crawlers/readers see each card once); the
+  // looping clones are added after mount.
+  const looped = useSyncExternalStore(noopSubscribe, () => true, () => false);
 
   // Distance between two neighbouring cards, measured (the gap differs on phones).
   const step = useCallback(() => {
@@ -57,7 +61,7 @@ export default function BenefitSlider({ cards }: { cards: SliderCard[] }) {
     };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
-  }, [layout, jumpTo, step, n]);
+  }, [layout, jumpTo, step, n, looped]);
 
   function handleScroll() {
     const track = trackRef.current;
@@ -73,9 +77,9 @@ export default function BenefitSlider({ cards }: { cards: SliderCard[] }) {
   }
 
   const active = ((pos % n) + n) % n;
-  const deck = Array.from({ length: COPIES }, (_, copy) =>
+  const deck = (looped ? Array.from({ length: COPIES }, (_, copy) => copy) : [1]).flatMap((copy) =>
     cards.map((card, i) => ({ card, key: `${copy}-${card.id}`, abs: copy * n + i, clone: copy !== 1 })),
-  ).flat();
+  );
 
   return (
     <div className="benefits-slider benefits-slider--peek">

@@ -19,7 +19,7 @@
 
 .pain-top {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr;
   gap: 40px;
   align-items: center;
   justify-content: center;
@@ -35,25 +35,6 @@
 
 .eyebrowpain-mobile {
   display: none;
-}
-
-.stat-big {
-  display: flex;
-  align-self: center;
-
-  font-size: clamp(120px, 18vw, 220px);
-  font-weight: 600;
-  line-height: 0.9;
-  letter-spacing: -0.04em;
-  background: linear-gradient(180deg, #ffeef0 0%, #e5556a 50%, #ef1637 90%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.stat-big span {
-  font-size: 0.4em;
-  vertical-align: top;
 }
 
 .pain-header h2 {
@@ -111,7 +92,7 @@
 @media (max-width: 900px) {
   .pain-top {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     align-items: center;
     justify-content: center;
@@ -120,12 +101,6 @@
   .eyebrowpain-desktop {
     font-size: 1rem;
     font-style: normal;
-  }
-
-  .stat-big {
-    font-size: 8rem;
-    padding: 1px;
-    justify-content: center;
   }
 
   .pain-list {
@@ -174,15 +149,6 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-  }
-
-  .stat-big {
-    font-size: 9rem;
-    padding: 1px;
-  }
-
-  .stat-big span {
-    padding: 3px;
   }
 
   .pain-header {

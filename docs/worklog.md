@@ -1,5 +1,13 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-08 — SEO-genomgång (GSC) + snabba CTR-/länkfixar (live, af6779f)
+- GSC 28 дн (по 05.10) vs пред. 28: клики ~1,1K vs 713, показы 109K vs 77,7K, CTR 1 % vs 0,9 %, поз. 11,7 vs 16. Индекс 438 / не 193 (redirect 64, alt canonical 40, noindex 25, Discovered 34, 404 23, dup 4, crawled 2, robots 1).
+- Высокие показы / низкий CTR на поз. 7–12: ab-04-och-abt-06 (5 575 / 0,2 % / 11,6), berakna-betongatgang-platta (4 720 / 0,4 % / 7,4), reglar-dimensioner (3 260 / 0,4 % / 7,0), gipsskivor (1 478 / 0,1 % / 8,9) → новые title/description под реальные запросы (garantitid; vikt/säckar per kubik; reglar mått/cc-mått; gipsskiva mått/tjocklek/vikt).
+- «Discovered – not indexed» 34 (17 sv): добавлены строки «Relaterat» в 6 сильных статей → egenkontrollprogram, kvalitetsplan-bygg, egenkontroll vatrum/tak/ventilation-mall, bemanningssystem-bygg, byggmotesprotokoll-mall, e-signering-avtal, signera-pdf, anbud-bygg, byggfelsforsakring, offert-vvs-elektriker-rormokare.
+- Request Indexing не сделан: дневная квота GSC исчерпана → сделать 09.10 (ab-04, betong, reglar, gips + egenkontrollprogram, bemanningssystem-bygg, kvalitetsplan-bygg, anbud-bygg, e-signering-avtal, entreprenadkontrakt-mall).
+- Ещё видно: 3 «app»-гайда tidrapport (app-for-tidrapportering-bygg 3 852 показа поз. 18, tidrapportering-app-byggforetag 1 127 поз. 43) — каннибализация, решать ~20.10 по связке запрос×страница. Kvadratmeter/grus-kalkylator: CTR 0,1 % на поз. 9 — запросы анонимны.
+NÄSTA: 09.10 Request Indexing (10 URL); ~20.10 сверка CTR этих 4 страниц и Discovered.
+
 ## 2026-10-07 — рассылки (маркетинг, без изменений кода)
 - Мейлер: 4 черновика не отправлены — El A2 (396) / B2 (397) / Uppföljning A+B (561) / VVS – Stockholm (690). Ждут подтверждения «бесплатно без тарифа» и запуска. Подробно — ~/sites-hub/worklog.md HANDOFF 2026-10-07 (рассылки). Файлы лидов — OneDrive/byggexp-outreach (не в репо: персональные данные).
 

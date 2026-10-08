@@ -962,6 +962,7 @@ const A_RESURSPLANERING_BYGG_HTML = `
 <p>Bara tillfälligt. Arbetstidslagen begränsar den allmänna övertiden till 200 timmar per år och 48 timmar per fyraveckorsperiod, och vilotiderna gäller ändå. Kollektivavtal kan ha egna regler.</p>
 <h3>Räcker personalliggaren för att undvika dubbelbokning?</h3>
 <p>Nej. Den registrerar närvaro men planerar ingenting. Dubbelbokningar stoppas bara av en gemensam plan över alla projekt.</p>
+<p>Relaterat: <a href="/sv/blog/bemanningssystem-bygg">Bemanningssystem för bygg</a> · <a href="/sv/verktyg/byggmotesprotokoll-mall">Byggmötesprotokoll – mall</a></p>
 `;
 
 const A_RESURSPLANERING_BYGG: BlogPost = {
@@ -1410,6 +1411,7 @@ const A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM_HTML = `
 </ul>
 
 <p>Har du koll på både delarna – ett aktuellt egenkontrollprogram och en dokumenterad kontroll av varje installation – uppfyller du både lagkravet och kundens förväntan på ett spårbart, säkert elarbete.</p>
+<p>Relaterat: <a href="/sv/blog/offert-vvs-elektriker-rormokare">Offert för elektriker och VVS</a></p>
 `;
 
 const A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM: BlogPost = {
@@ -1549,6 +1551,7 @@ const A_EGENKONTROLL_ENTREPRENAD_HTML = `
 <p>Egenkontrollerna är en del av underlaget som visar att entreprenaden är utförd enligt handlingarna. Saknas de blir det svårare att få arbetet godkänt utan anmärkning vid <a href="/sv/blog/slutbesiktning">slutbesiktningen</a>.</p>
 <h3>Vem ansvarar för egenkontrollen i en entreprenad?</h3>
 <p>Den som utför arbetet ansvarar för sin egenkontroll, och en ansvarig signerar. Egenkontrollerna styrker ofta punkterna i byggherrens kontrollplan.</p>
+<p>Relaterat: <a href="/sv/blog/egenkontrollprogram">Egenkontrollprogram</a> · <a href="/sv/blog/kvalitetsplan-bygg">Kvalitetsplan i bygg</a> · <a href="/sv/verktyg/egenkontroll-vatrum-mall">Egenkontroll våtrum – mall</a> · <a href="/sv/verktyg/egenkontroll-tak-mall">Egenkontroll tak – mall</a> · <a href="/sv/verktyg/egenkontroll-ventilation-mall">Egenkontroll ventilation – mall</a></p>
 `;
 
 const A_EGENKONTROLL_ENTREPRENAD: BlogPost = {

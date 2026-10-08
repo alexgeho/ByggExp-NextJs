@@ -2351,6 +2351,7 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML = `
 <p>Lönen bygger på de faktiska timmarna, inte på schemat. I ByggExp exporterar du timmarna som lönefil (CSV) och AGI-underlag. För bokföringen i t.ex. Fortnox eller Visma finns SIE4-export i integrationstillägget (199 kr/mån). Direktkoppling via API finns inte.</p>
 <h3>Hur schemalägger man underentreprenörer?</h3>
 <p>Underentreprenörer styr du via avtal och tidplan, inte via ert personalschema. Lägg in deras insatser i projektets tidplan, till exempel med en <a href="/sv/verktyg/gantt-schema-mall">Gantt-mall</a>, och bekräfta datumen skriftligt. I ByggExp planerar du den egna personalen – UE ingår inte i bemanningsvyn.</p>
+<p>Relaterat: <a href="/sv/blog/bemanningssystem-bygg">Bemanningssystem för bygg</a></p>
 `.trim();
 
 const A_SCHEMALAGGNINGSSYSTEM_BYGG: BlogPost = {
@@ -2578,6 +2579,7 @@ const A_BYGGDAGBOK_HTML = `
 <p>Personalliggaren är lagkrav på de flesta byggarbetsplatser och visar Skatteverket vem som är på plats. Byggdagboken dokumenterar vad som händer i projektet.</p>
 <h3>Räcker en dagboksanteckning som ÄTA-beställning?</h3>
 <p>Nej. Domstol har bedömt att dagboksnoteringar bara visar entreprenörens uppfattning. Få ÄTA-arbetet beställt och dokumenterat separat och använd dagboken som stöd.</p>
+<p>Relaterat: <a href="/sv/verktyg/byggmotesprotokoll-mall">Byggmötesprotokoll – mall</a> · <a href="/sv/blog/kvalitetsplan-bygg">Kvalitetsplan i bygg</a></p>
 `.trim();
 
 const A_BYGGDAGBOK: BlogPost = {

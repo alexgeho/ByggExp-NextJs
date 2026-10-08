@@ -207,9 +207,9 @@ const AB04: BlogPost = {
   tag: 'Entreprenadjuridik',
   coverImageUrl: '/landing/features/7offerter.webp',
   contentHtml: AB04_HTML,
-  seoTitle: 'AB 04 och ABT 06 – skillnad, garantitid & ÄTA | ByggExp',
+  seoTitle: 'AB 04 & ABT 06: garantitid, ansvarstid & skillnad | ByggExp',
   seoDescription:
-    'AB 04 vs ABT 06: utförande- eller totalentreprenad, vem projekterar, ÄTA (kap 2), dagbok (kap 3 §13), garantitid 5 år och ansvarstid 10 år. Komplett guide.',
+    'Garantitid 5 år (2 år för material), ansvarstid 10 år. Skillnaden mellan AB 04 (utförande) och ABT 06 (totalentreprenad), ÄTA, dagbok och besiktning – i tabell.',
   seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`,
   canonicalUrl: '',
   noIndex: false,
@@ -785,6 +785,7 @@ const A_ENTREPRENADKONTRAKT_MALL_HTML = `
 <p>Skapa ett bindande entreprenadkontrakt på några minuter med <a href="/sv/verktyg/offert-mall">vår gratis offert- och avtalsmall</a>, eller utforska alla <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur kontrakt, offert och fakturering hänger ihop i ett flöde kan du <a href="/sv/contact">boka en demo</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06</a>, <a href="/sv/blog/abs-18-hantverkarformularet-17">ABS 18 och Hantverkarformuläret 17</a>, <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a>.</p>
+<p>Relaterat: <a href="/sv/blog/e-signering-avtal">E-signering av avtal</a> · <a href="/sv/verktyg/signera-pdf">Signera PDF gratis</a> · <a href="/sv/blog/anbud-bygg">Anbud i bygg</a> · <a href="/sv/blog/byggfelsforsakring">Byggfelsförsäkring</a></p>
 `;
 
 const A_ENTREPRENADKONTRAKT_MALL: BlogPost = {

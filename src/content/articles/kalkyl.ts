@@ -462,7 +462,7 @@ const A_BERAKNA_BETONGATGANG_PLATTA: BlogPost = {
   title: "Beräkna betongåtgång – kalkylator", slug: "berakna-betongatgang-platta", locale: "sv",
   excerpt: "Så räknar du fram rätt mängd betong för platta, kantbalk och plint – volym, vikt, antal säckar och spillmarginal utan gjutfog mitt i plattan.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/betong-preview.webp", contentHtml: A_BERAKNA_BETONGATGANG_PLATTA_HTML,
-  seoTitle: "Beräkna betongåtgång platta | ByggExp", seoDescription: "Räkna kubik, vikt och antal säckar för platta, plint och kantbalk – med 10 % spill. Formel, exempel och gratis betongkalkylator för hantverkare.",
+  seoTitle: "Betongåtgång: kubik, säckar & vikt per m³ | ByggExp", seoDescription: "1 m³ betong väger ca 2 400 kg och motsvarar ca 80 säckar à 25 kg. Räkna betong till platta, plint och kantbalk med 10 % spill – formel och gratis kalkylator.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/betong-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-18T19:03:00.000Z", createdAt: "2026-08-18T19:03:00.000Z", updatedAt: "2026-08-18T19:03:00.000Z",
 };
@@ -1999,7 +1999,7 @@ const A_REGLAR_DIMENSIONER_C_AVSTAND_VAGG: BlogPost = {
   title: "Reglar – dimensioner och c-avstånd för vägg", slug: "reglar-dimensioner-c-avstand-vagg", locale: "sv",
   excerpt: "Vanliga regeldimensioner (45×45 till 45×120), c-avstånd 450 eller 600 mm och hur måttet ska matcha gipsskivans bredd. Med formel och gratis reglar-kalkylator.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/reglar-preview.webp", contentHtml: A_REGLAR_DIMENSIONER_C_AVSTAND_VAGG_HTML,
-  seoTitle: "Reglar – dimensioner & c-avstånd för vägg | ByggExp", seoDescription: "Vanliga regeldimensioner 45×45–45×120, c-avstånd 450 mm (900 mm gips) eller 600 mm (1200 mm gips) och formeln för antal reglar. Gratis reglar-kalkylator.",
+  seoTitle: "Reglar mått & cc-mått i vägg: 45×70, 45×95 | ByggExp", seoDescription: "Standardmått för reglar (45×45–45×120), cc-mått 450 mm (900 mm gips) eller 600 mm (1200 mm gips) och formeln för antal reglar. Gratis reglar-kalkylator.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/reglar-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T14:35:00.000Z", createdAt: "2026-08-20T14:35:00.000Z", updatedAt: "2026-10-06T12:00:00.000Z",
 };
@@ -2049,7 +2049,7 @@ const A_GIPSSKIVOR_MATT_STANDARDMATT_VIKT: BlogPost = {
   title: "Gipsskivor – standardmått, vikt och rätt bredd", slug: "gipsskivor-matt-standardmatt-vikt", locale: "sv",
   excerpt: "Standardmått för normalgips (13 mm, 900×2500 mm m.fl.), vikt runt 9 kg/m² och hur skivbredden matchar regelavståndet. Med formel för åtgång och gratis kalkylator.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/gips-preview.webp", contentHtml: A_GIPSSKIVOR_MATT_STANDARDMATT_VIKT_HTML,
-  seoTitle: "Gipsskivor – standardmått, vikt & rätt bredd | ByggExp", seoDescription: "Standardmått för normalgips: 13 mm tjock, bredd 600/900/1200 mm (900×2500 vanligast), vikt ~9 kg/m² och hur bredden matchar c-avståndet. Gratis gipskalkylator.",
+  seoTitle: "Gipsskiva mått, tjocklek & vikt: 13 mm, 900×2500 | ByggExp", seoDescription: "Gipsskivans standardmått: 13 mm tjock, bredd 600/900/1200 mm (900×2500 vanligast), vikt ca 9 kg/m² och hur bredden matchar c-avståndet. Gratis gipskalkylator.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/gips-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T14:40:00.000Z", createdAt: "2026-08-20T14:40:00.000Z", updatedAt: "2026-08-20T14:40:00.000Z",
 };

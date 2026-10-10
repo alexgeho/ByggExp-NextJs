@@ -1,5 +1,10 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-10 — Analys av utskicken + sajtens konvertering
+- 2 320 mejl → 47 % öppnat → 48 klick → 21 svar → 1 intresserad → 0 registreringar. E-postbesök ~10 s, alla mobil (Clarity).
+- Orsaker: ingen registrering på byggexp.se (alla CTA → demoformulär), mejlet lovar «gratis utan tidsgräns» men sajten visar «14 dagar» + priser, ingen länk i mejlets brödtext, demoformulärets success skickar inget GA-event, två GA-taggar (G-551T40R4WV, G-GGT1EWGRCR).
+- Plan: ny startsida (stage först): hero med människor + «Kom igång gratis» + «från 299 kr/mån för hela företaget» → priser → kalkylator → 3 funktioner → omdömen → slut-CTA. Inga konkurrentnamn på sajten (ägarens beslut). Full rapport: ~/OneDrive/byggexp-outreach/analys-rassylki_2026-10-10.md.
+
 ## 2026-10-08 — Utskick (mailer): ny påminnelse + A2/B2
 - «El – Uppföljning A+B» avbruten vid 101/561 (ägaren ville ha annat slut). Ny «El – Påminnelse (samtal)» till 459 som inte fått uppföljningen: ämne «Påminnelse: tidrapporter hos {{företag|er}}», slut = samtal 15 min.
 - «El – A2 (kort)» 396 och «El – B2 (lista)» 397 skickas. Avsändare ByggExp (Brevo) 500/dag, 50/h, sändfönster AV. VVS (690) utkast.

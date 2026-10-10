@@ -1,5 +1,11 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-10 — Landningssida: 80 % och 60 % återställda (live)
+- «80 %» i Grundproblemet (d835c25) och «eliminerar 60 %» i funktionsrubriken, alla 10 språk (3afc136), återställda — de togs bort 08.10 (1af3bb4) utan ägarens ok. Antal verktyg räknas fortfarande från kortlistan ({n}).
+- Öppet: «SEK / företag / månad» (också ändrat 08.10) — ägaren bestämmer.
+- Regel: ändra/ta aldrig bort ägarens siffror/texter utan att fråga.
+NÄSTA: GSC Request Indexing 10 URL (försenat, se 2026-10-08); ny startsida på stage (se 2026-10-10 Analys).
+
 ## 2026-10-10 — Analys av utskicken + sajtens konvertering
 - 2 320 mejl → 47 % öppnat → 48 klick → 21 svar → 1 intresserad → 0 registreringar. E-postbesök ~10 s, alla mobil (Clarity).
 - Orsaker: ingen registrering på byggexp.se (alla CTA → demoformulär), mejlet lovar «gratis utan tidsgräns» men sajten visar «14 dagar» + priser, ingen länk i mejlets brödtext, demoformulärets success skickar inget GA-event, två GA-taggar (G-551T40R4WV, G-GGT1EWGRCR).

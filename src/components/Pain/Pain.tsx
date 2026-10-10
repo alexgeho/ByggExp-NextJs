@@ -9,6 +9,10 @@ function Pain({ painT }: PainProps) {
 
           <span className="eyebrowpain-mobile">{painT.painTitle}</span>
 
+          <div className="stat-big">
+            80<span>%</span>
+          </div>
+
           <div className="pain-header">
             <span className="eyebrowpain-desktop">{painT.painTitle}</span>
             <h2>

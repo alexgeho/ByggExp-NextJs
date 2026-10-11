@@ -13,6 +13,7 @@ import "../styles/enmansforetag.scss";
 import "../components/Header/Header.scss";
 import "../components/SiteSearch/SiteSearch.scss";
 import "../components/Hero/Hero.scss";
+import "../components/HeroV2/HeroV2.scss";
 import "../components/Pain/Pain.scss";
 import "../components/Benefits/Benefits.scss";
 import "../components/Features/Features.scss";

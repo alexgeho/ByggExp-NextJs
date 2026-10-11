@@ -9,7 +9,7 @@ import Features from "../../components/Features/Features";
 import FinalBenefits from "../../components/FinalBenefits/FinalBenefits";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import HeroV2 from "../../components/HeroV2/HeroV2";
+import HeroV2, { HERO_V2_VARIANTS, type HeroV2Variant } from "../../components/HeroV2/HeroV2";
 import Pain from "../../components/Pain/Pain";
 import { buildHreflangAlternates, defaultHomeMeta, localeOrigin } from "../../lib/seo";
 import Pricing, { FAKTURA_PRICE } from "../../components/Pricing/Pricing";
@@ -31,9 +31,10 @@ import type { SiteSeo } from "../../types/blog";
 type HomePageProps = {
   lang: LandingLanguageCode;
   seo: SiteSeo | null;
+  variant: HeroV2Variant;
 };
 
-export const getServerSideProps: GetServerSideProps<HomePageProps> = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps<HomePageProps> = async ({ params, query }) => {
   const lang = params?.lang as LandingLanguageCode;
   // Preview of the new home page — Swedish only, not indexed.
   if (lang !== "sv" || !landingLanguageCodes.includes(lang)) {
@@ -44,6 +45,8 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async ({ pa
     props: {
       lang,
       seo: await fetchSiteSeo(lang).catch(() => null),
+      // ?v=<variant> switches the hero layout while the owner compares them.
+      variant: HERO_V2_VARIANTS.find((v) => v === query.v) ?? "center",
     },
   };
 };
@@ -73,6 +76,7 @@ function homeAppSchema(url: string, description?: string) {
 export default function NyStartsidaPage({
   lang,
   seo,
+  variant,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const router = useRouter();
 
@@ -137,7 +141,7 @@ export default function NyStartsidaPage({
         <meta name="robots" content="noindex, nofollow" />
       </Head>
       <Header headerT={headerT} />
-      <HeroV2 />
+      <HeroV2 variant={variant} />
       <Pain painT={painT} />
       <Benefits benefitsT={benefitsT} />
       <Features

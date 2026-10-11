@@ -1,5 +1,10 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-11 — Startsida: mockups (inte byggt)
+- 3 helsidor (A foto-hero, B ljus, C pris först med kalkylator) + 4 hero-varianter med dator+mobil+folk. Allt i docs/design/startsida-mockups-2026-10/ (README, HTML, skärmdumpar) + canvas https://claude.ai/artifact/T1i1XP5UuNfLrD8W9nFe8S.
+- Rekommendation: helsida C + Hero 1. Ägaren har inte valt.
+NÄSTA: ägarens val → bygg på stage → «ok» → live (riktig registrering, generate_lead, en GA-tagg).
+
 ## 2026-10-10 — Landningssida: 80 % och 60 % återställda (live)
 - «80 %» i Grundproblemet (d835c25) och «eliminerar 60 %» i funktionsrubriken, alla 10 språk (3afc136), återställda — de togs bort 08.10 (1af3bb4) utan ägarens ok. Antal verktyg räknas fortfarande från kortlistan ({n}).
 - Öppet: «SEK / företag / månad» (också ändrat 08.10) — ägaren bestämmer.

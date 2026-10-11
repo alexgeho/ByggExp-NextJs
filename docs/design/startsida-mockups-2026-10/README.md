@@ -9,7 +9,7 @@ Varför: utskicket gav 0 registreringar (se docs/worklog.md 2026-10-10 Analys) �
 - C-pris-forst — kalkylator i hero (fungerar i HTML), 80 % + 60 % kvar. Agentens rekommendation.
 
 ## Bara hero (dator + mobil + folk)
-- **Hero-2 = ÄGARENS VAL (2026-10-11)**: ljus centrerad, enheter helt synliga, prisrad (ägarens val, en rad): «299 kr/mån för hela företaget – offerter, fakturor, löner, kvitton, … + 69 kr per arbetare – tidrapport, planering, närvaro, egenkontroll, …». OBS: stäm av mot /priser (idag 69 kr bara i 690-paketet, egenkontroll = eget paket) före live
+- **Hero-2 = ÄGARENS VAL (2026-10-11)**: ljus centrerad, enheter helt synliga, prisrad (ägarens val, en rad): «299 kr/mån – offerter, fakturor, löner, kvitton, … + 69 kr per arbetare – tidrapport, planering, närvaro, egenkontroll, …». OBS: stäm av mot /priser (idag 69 kr bara i 690-paketet, egenkontroll = eget paket) före live
 - Hero-1 mörk, foto höger + enheter över · Hero-3 fotobakgrund · Hero-4 delad 50/50
 
 ## Filer

@@ -2,7 +2,7 @@
 
 ## 2026-10-11 — Startsida: mockups (inte byggt)
 - 3 helsidor (A foto-hero, B ljus, C pris först med kalkylator) + 4 hero-varianter med dator+mobil+folk. Allt i docs/design/startsida-mockups-2026-10/ (README, HTML, skärmdumpar) + canvas https://claude.ai/artifact/T1i1XP5UuNfLrD8W9nFe8S.
-- Ägaren valde **Hero 2** (ljus, centrerad). Pris förtydligat: 299 = Fakturor & ekonomi (hela företaget), 690 + 69/arbetare över 10 = Tidrapport & projekt. Helsida under hero ej vald.
+- Ägaren valde **Hero 2** (ljus, centrerad). Prisrad enligt ägaren: «Från 299 kr/mån för hela företaget + 69 kr per arbetare» / «299 = fakturor & ekonomi · 69 = tidrapport i appen» (matchar inte dagens Pricing.tsx: 69 bara i 690-paketet över 10 – stäm av före live). Helsida under hero ej vald.
 NÄSTA: ägarens val → bygg på stage → «ok» → live (riktig registrering, generate_lead, en GA-tagg).
 
 ## 2026-10-10 — Landningssida: 80 % och 60 % återställda (live)

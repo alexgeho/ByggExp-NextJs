@@ -9,7 +9,7 @@ Varför: utskicket gav 0 registreringar (se docs/worklog.md 2026-10-10 Analys) �
 - C-pris-forst — kalkylator i hero (fungerar i HTML), 80 % + 60 % kvar. Agentens rekommendation.
 
 ## Bara hero (dator + mobil + folk)
-- **Hero-2 = ÄGARENS VAL (2026-10-11)**: ljus centrerad, enheter helt synliga, pris i 2 rader: «Fakturor & ekonomi: 299 kr/mån för hela företaget» / «Tidrapport & projekt: 690 kr/mån, +69 kr per arbetare över 10»
+- **Hero-2 = ÄGARENS VAL (2026-10-11)**: ljus centrerad, enheter helt synliga, prisrad (ägarens formulering): «Från 299 kr/mån för hela företaget + 69 kr per arbetare» + liten rad «299 = fakturor & ekonomi · 69 = tidrapport i appen». OBS: på /priser idag är 69 kr tillägg bara i 690-paketet över 10 användare – prismodellen måste matcha innan live
 - Hero-1 mörk, foto höger + enheter över · Hero-3 fotobakgrund · Hero-4 delad 50/50
 
 ## Filer

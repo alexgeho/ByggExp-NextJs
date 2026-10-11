@@ -13,7 +13,7 @@ function HeroV2() {
   return (
     <section className="hero-v2">
       <div className="hero-v2-inner">
-        <h1>Hela byggföretaget i en app</h1>
+        <h1>Hela byggföretaget på ett ställe</h1>
 
         <p className="hero-v2-price">
           <span>

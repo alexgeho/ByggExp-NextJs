@@ -1,5 +1,13 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-11 (kväll) — Ny hero på testsida (gren `ny-startsida`, INTE live)
+- Ägaren valde mockup Hero 2 → byggd som `src/components/HeroV2` + testsida `/sv/ny-startsida` (noindex, bara sv). Grenen `ny-startsida` är pushad men INTE mergad – main/live orörd.
+- Rubrik «Hela byggföretaget på ett ställe» (inte «i en app» – vi är mer än app). Pris i 2 rader: «299 kr/mån – offerter, fakturor, löner, kvitton, …» / «+ 69 kr per arbetare – tidrapport, planering, närvaro, egenkontroll, …».
+- 4 layoutvarianter via `?v=`: center / split / **dark** / **dark-center**. Ägaren behåller **3 (dark)** och **4 (dark-center)** – fortsätter 2026-10-12. Skärmdumpar: ~/Desktop/ByggExp-mockups/Test-varianter.
+- Header fortfarande mörk (sajtens globala) – ljus header ej gjord.
+NÄSTA (12.10): `git checkout ny-startsida && yarn dev -p 3123` → http://localhost:3123/sv/ny-startsida?v=dark och ?v=dark-center → ägaren väljer 3 eller 4 → ta bort övriga varianter → block under hero → «ok» → merge till main.
+OBS före live: prisraden matchar inte /priser (där 69 kr bara i 690-paketet över 10 användare, egenkontroll eget paket 49 kr) – prismodellen/Pricing.tsx måste stämma. «Kom igång gratis» → admin.byggexp.se/register.
+
 ## 2026-10-11 — Startsida: mockups (inte byggt)
 - 3 helsidor (A foto-hero, B ljus, C pris först med kalkylator) + 4 hero-varianter med dator+mobil+folk. Allt i docs/design/startsida-mockups-2026-10/ (README, HTML, skärmdumpar) + canvas https://claude.ai/artifact/T1i1XP5UuNfLrD8W9nFe8S.
 - Ägaren valde **Hero 2** (ljus, centrerad). Prisrad enligt ägaren: «Från 299 kr/mån för hela företaget + 69 kr per arbetare» / «299 = fakturor & ekonomi · 69 = tidrapport i appen» (matchar inte dagens Pricing.tsx: 69 bara i 690-paketet över 10 – stäm av före live). Helsida under hero ej vald.

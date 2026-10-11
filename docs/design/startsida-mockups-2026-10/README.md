@@ -23,3 +23,6 @@ Varför: utskicket gav 0 registreringar (se docs/worklog.md 2026-10-10 Analys) �
 ## Nästa
 1. Hero = Hero-2 (vald). Helsida under hero: inte vald än (A/B/C).
 2. Bygg på stage → ägarens «ok» → live. Kräver riktig registrering (knapp → konto), generate_lead på demoformuläret, en GA-tagg.
+
+## Status 2026-10-11 kväll
+Byggd i koden på grenen `ny-startsida` (testsida /sv/ny-startsida, ?v=dark | ?v=dark-center). Ägaren behåller variant 3 (dark) och 4 (dark-center). Se docs/worklog.md.

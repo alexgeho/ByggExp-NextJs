@@ -16,8 +16,12 @@ function HeroV2() {
         <h1>Hela byggföretaget i en app</h1>
 
         <p className="hero-v2-price">
-          <strong>299 kr/mån</strong> – offerter, fakturor, löner, kvitton, …{" "}
-          <strong>+ 69 kr</strong> per arbetare – tidrapport, planering, närvaro, egenkontroll, …
+          <span>
+            <strong>299 kr/mån</strong> – offerter, fakturor, löner, kvitton, …
+          </span>
+          <span>
+            <strong>+ 69 kr</strong> per arbetare – tidrapport, planering, närvaro, egenkontroll, …
+          </span>
         </p>
 
         <div className="hero-v2-ctas">

@@ -46,7 +46,7 @@ export const painTranslations = {
   sv: {
     painTitle: "Grundproblemet",
     painHeading:
-      "Företag förlorar pengar på att göra ",
+      "80 % av företagen förlorar pengar på att göra ",
 
     painTitleAccent1: "manuellt",
 

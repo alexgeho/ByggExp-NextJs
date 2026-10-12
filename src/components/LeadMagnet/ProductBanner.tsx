@@ -64,7 +64,7 @@ export default function ProductBanner({ tool }: { tool: string }) {
         >
           {APP_CTA.label}
         </a>
-        <p className="lm-pb-micro">14 dagar gratis efteråt</p>
+        <p className="lm-pb-micro">Sedan 14 dagar gratis</p>
       </div>
     </aside>
   );

@@ -95,7 +95,7 @@ const FEATURE_CONTENT_OVERRIDE: Record<
     nb: { title: 'Fakturer logget tid direkte' },
   },
   'narvaro-och-incheckning-pa-bygget': {
-    sv: { title: 'Närvaro och frånvarande i realtid' },
+    sv: { title: 'Närvaro och frånvaro i realtid' },
     en: { title: 'Attendance and absence in real time' },
     ru: { title: 'Присутствие и отсутствие в реальном времени' },
     nb: { title: 'Nærvær og fravær i sanntid' },
@@ -235,13 +235,13 @@ const FUNKTIONER_COPY = {
     empty: 'Inga funktioner ännu.',
     customTitle: 'Vi bygger funktioner efter era behov',
     customBody:
-      'Varje företag har sina egna arbetssätt. ByggExp är inte bara en färdig standardlösning – det är en plattform som vi gärna vidareutvecklar efter era behov. Berätta om era utmaningar och önskemål, så bygger vi det snabbt och med kvalitet. Era idéer blir en del av nya funktioner och uppdateringar i ByggExp.',
+      'Varje företag har sina egna arbetssätt. ByggExp är inte bara en färdig standardlösning – det är en plattform som vi gärna vidareutvecklar efter era behov. Berätta om era utmaningar och önskemål, så bygger vi lösningen snabbt och ordentligt. Era idéer blir en del av nya funktioner och uppdateringar i ByggExp.',
     customCta: 'Boka en demo',
     whyTitle: 'Fortfarande osäker?',
     why: [
       {
         title: 'Enkel start',
-        body: 'Kräver inga särskilda kunskaper. Vi hjälper er att sätta upp och komma igång med teamet.',
+        body: 'Kräver inga särskilda kunskaper. Vi hjälper er att sätta upp kontot och komma igång med teamet.',
       },
       {
         title: 'Säkerhet och kontroll över data',
@@ -256,8 +256,8 @@ const FUNKTIONER_COPY = {
         body: 'Mobil, surfplatta, dator – välj det som passar ert team.',
       },
       {
-        title: 'Support alltid nära',
-        body: 'Vi finns till hands för alla frågor – snabbt och på ett mänskligt sätt.',
+        title: 'Support när du behöver den',
+        body: 'Vi finns till hands för alla frågor – snabbt och personligt.',
       },
     ],
   },

@@ -49,7 +49,7 @@ export const heroTranslations = {
   sv: {
     heroPill: "Byggledning",
 
-    heroTitle: "Automatisk och manuell tidsrapportering och projekthantering",
+    heroTitle: "Automatisk och manuell tidrapportering och projekthantering",
 
     heroTitleAccent: "för byggföretag",
 

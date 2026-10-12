@@ -28,16 +28,16 @@ export default function AboutPage({
         <p>
           ByggExp utvecklas och drivs av <strong>Real Marketing s. r. o.</strong> (IČO 53551958), ett EU-bolag registrerat i Slovakien som drivs från Stockholm. Vi bygger
           programvara för bygg- och hantverksföretag – från enmansfirman till det
-          växande företaget med flera arbetslag ute på fält.
+          växande företaget med flera arbetslag ute i fält.
         </p>
 
         <h2>Vad vi gör</h2>
         <p>
-          Vi samlar det som annars sköts i Excel, papper och spridda appar i{" "}
+          Vi samlar det som annars sköts i Excel, på papper och i spridda appar i{" "}
           <strong>en enda tjänst</strong>: tidrapportering och stämpelklocka med
           GPS eller manuell tidrapportering, digital personalliggare, schemaläggning och resursplanering,
           projekt- och uppgiftshantering, egenkontroller samt offert och faktura.
-          Allt fungerar både i webben och i mobilappen, så att kontoret och de
+          Allt fungerar både på webben och i mobilappen, så att kontoret och de
           som är ute på bygget arbetar mot samma information.
         </p>
 
@@ -63,7 +63,7 @@ export default function AboutPage({
           Varje företag har sina egna arbetssätt. ByggExp är inte bara en färdig
           standardlösning – det är en plattform som vi gärna vidareutvecklar
           efter era behov. Berätta om era utmaningar och önskemål, så bygger vi
-          det snabbt och med kvalitet. Era idéer blir en del av nya funktioner
+          lösningen snabbt och ordentligt. Era idéer blir en del av nya funktioner
           och uppdateringar i ByggExp.
         </p>
 

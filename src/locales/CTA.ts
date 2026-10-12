@@ -93,7 +93,7 @@ export const ctaTranslations = {
     ctaLead:
       "Vi visar hur ByggExp fungerar på era projekt, svarar på frågor och hjälper er att skapa den första gruppchatten.",
 
-    ctaItem1: "Vi hjälper dig att sätta upp ByggExp för dig och ditt team",
+    ctaItem1: "Vi hjälper dig att sätta upp ByggExp för ditt team",
     ctaItem2: "Du får prova alla funktioner",
     ctaItem3: "Vi anpassar ByggExp efter ert arbetssätt",
 

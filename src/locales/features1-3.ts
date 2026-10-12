@@ -88,17 +88,17 @@ export const featuresTranslations1_3 = {
     featuresCard1Text:
       "Medarbetaren väljer projekt. Tiden registreras automatiskt via GPS – eller stämplas in manuellt i appen när det passar bättre. Båda sätten fungerar.",
 
-    featuresCard1Step1: "Arbetare kommer till plats",
+    featuresCard1Step1: "Arbetaren kommer till platsen",
     featuresCard1Step2: "GPS eller manuell instämpling",
     featuresCard1Step3:
-      "Tid finns i systemet",
+      "Tiden finns i systemet",
 
     featuresCard2Title: "Uppgifter med automatisk uppföljning",
     featuresCard2Text:
-      "Uppgifter kan tilldelas hela projektet, utvalda medarbetare. Om uppgiften inte slutförs skickar appen påminnelser.",
+      "Uppgifter kan tilldelas hela projektet eller utvalda medarbetare. Om uppgiften inte slutförs skickar appen påminnelser.",
 
     featuresCard2Step1:
-      "Klicka på skapa uppgift",
+      "Klicka på Skapa uppgift",
     featuresCard2Step2:
       "Lägg till mottagare",
     featuresCard2Step3:

@@ -207,7 +207,7 @@ export const pricingTranslations = {
 
     periodLabel: "Betalningsperiod",
     pricingMonthly: "Per månad",
-    pricingYearly: "Per år – 15% rabatt",
+    pricingYearly: "Per år – 15 % rabatt",
 
     usersLabel: "Antal användare",
     usersDecrease: "Färre användare",
@@ -301,7 +301,7 @@ export const pricingTranslations = {
 
     periodLabel: "Betalingsperiode",
     pricingMonthly: "Per måned",
-    pricingYearly: "Per år – 15% rabatt",
+    pricingYearly: "Per år – 15 % rabatt",
 
     usersLabel: "Antall brukere",
     usersDecrease: "Færre brukere",

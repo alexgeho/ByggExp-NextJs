@@ -105,11 +105,11 @@ export const benefitsTranslations = {
 
       benefitsOfficeCard1Title: "Timmar direkt i systemet",
       benefitsOfficeCard1Text:
-        "Fakturor kan skickas utan väntetid och påminnelser.",
+        "Fakturor skickas direkt – utan väntetid och utan att jaga påminnelser.",
 
       benefitsOfficeCard2Title: "Export till Excel",
       benefitsOfficeCard2Text:
-        "Färdiga timmar för löner och fakturor med ett klick.",
+        "Färdigt underlag för lön och fakturering med ett klick.",
 
       benefitsOfficeCard3Title: "Automatiska påminnelser",
       benefitsOfficeCard3Text:
@@ -123,7 +123,7 @@ export const benefitsTranslations = {
     site: {
       benefitsSiteLead: "För byggteamet",
 
-      benefitsSiteCard1Title: "Tidrapport: auto eller manuellt",
+      benefitsSiteCard1Title: "Tidrapport: automatiskt eller manuellt",
       benefitsSiteCard1Text:
         "Tiden registreras automatiskt med GPS – eller så fyller medarbetaren i timmarna själv i appen.",
 
@@ -135,7 +135,7 @@ export const benefitsTranslations = {
       benefitsSiteCard3Text:
         "Fotografier och dokument kopplas till arbetspass och projekt.",
 
-      benefitsSiteCard4Title: "Omedelbara notifieringar",
+      benefitsSiteCard4Title: "Direkta notiser",
       benefitsSiteCard4Text:
         "Alla projektdeltagare eller valda personer får notifieringar samtidigt.",
     },

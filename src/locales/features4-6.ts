@@ -54,7 +54,7 @@ export const featuresTranslations4_6 = {
   sv: {
     featuresCard4Title: "Fotodokumentation kopplad till arbetspass",
     featuresCard4Text:
-      "Varje bild kopplas automatiskt till arbetspasset, projektet, tidpunkten, person och GPS.",
+      "Varje bild kopplas automatiskt till arbetspasset, projektet, tidpunkten, personen och GPS-positionen.",
 
     featuresCard4Step1: "Ta bilder direkt i appen",
     featuresCard4Step2: "Bilderna kopplas till arbetspasset",
@@ -66,7 +66,7 @@ export const featuresTranslations4_6 = {
 
     featuresCard5Step1: "Skapa ett projekt och ange tidsplan",
     featuresCard5Step2: "Tilldela medarbetare till projektet",
-    featuresCard5Step3: "Få kontroll över beläggning",
+    featuresCard5Step3: "Få kontroll över beläggningen",
 
     featuresCard6Title: "Hantering av verktyg och utrustning",
     featuresCard6Text:

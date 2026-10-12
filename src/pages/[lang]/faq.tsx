@@ -20,7 +20,7 @@ const FAQ_SV: Qa[] = [
   {
     question: "Är det svårt att komma igång?",
     answer:
-      "Nej. De flesta är igång på cirka 5 minuter – öppna appen, välj projekt och starta tidtagningen på plats. Kontoret lägger upp projekt och uppgifter i webben och de på bygget använder mobilappen.",
+      "Nej. De flesta är igång på cirka 5 minuter – öppna appen, välj projekt och starta tidtagningen på plats. Kontoret lägger upp projekt och uppgifter på webben och de på bygget använder mobilappen.",
   },
   {
     question: "Tänk om någon i teamet inte är så van vid teknik?",
@@ -35,7 +35,7 @@ const FAQ_SV: Qa[] = [
   {
     question: "Fungerar ByggExp både på webben och i mobilen?",
     answer:
-      "Ja. Kontoret arbetar i webben och de som är ute på bygget använder mobilappen. Allt synkas mot samma information i realtid.",
+      "Ja. Kontoret arbetar på webben och de som är ute på bygget använder mobilappen. Allt synkas mot samma information i realtid.",
   },
   {
     question: "Hur fungerar tidrapportering och stämpelklocka med GPS?",
@@ -58,9 +58,9 @@ const FAQ_SV: Qa[] = [
       "All information krypteras och lagras på säkra servrar. Du styr själv åtkomsten, kan när som helst exportera dina data eller radera kontot, och vi lämnar inte ut uppgifter till tredje part.",
   },
   {
-    question: "Äger jag min data och kan jag exportera den?",
+    question: "Äger jag mina data och kan jag exportera dem?",
     answer:
-      "Ja. Du äger dina data och kan exportera dem till Excel på några klick, eller radera dem. Vid avslut kan uppgifterna exporteras, med undantag för vad lag kräver att vi sparar.",
+      "Ja. Du äger dina data och kan exportera dem till Excel på några klick, eller radera dem. Vid avslut kan uppgifterna exporteras, med undantag för det som lagen kräver att vi sparar.",
   },
   {
     question: "Tänk om det saknas en funktion vi behöver?",

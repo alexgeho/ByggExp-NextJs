@@ -51,7 +51,7 @@ export const featuresTranslations7_9 = {
   sv: {
     featuresCard7Title: "Skapa offerter",
     featuresCard7Text:
-      "Företagsinformation fylls i automatiskt. Tidigare offerter sparas så det är enklare att skapa nya.",
+      "Företagsinformation fylls i automatiskt. Tidigare offerter sparas, så att det är enklare att skapa nya.",
     featuresCard7Step1: "Skapa en offert från projektet",
     featuresCard7Step2: "Projektdata fylls i automatiskt",
     featuresCard7Step3: "Skicka offerten med några klick",

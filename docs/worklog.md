@@ -1,5 +1,12 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-12 — Svensk språkgranskning (live) + ny mejlsignatur
+- Språkgranskning (AI) av startsida, /funktioner, om-oss, faq och 11 funktionsguider: ~60 rättelser (27dfd5e). DeepL Write stöder inte svenska.
+- Grundproblemet: eyebrow borttagen, rubriken läses «80 % **av företagen** förlorar pengar …» (bara sv; övriga språk oförändrade).
+- Mejlsignatur (Roundcube alexander@byggexp.se): ikon 62px + «Rådgivare, ByggExp.se» + 070-757 75 75 · 08-446 821 58.
+- Johan (svensk, svåger) ombedd att granska igen – hans rättelser in när de kommer.
+NÄSTA: Auto-påminnelser-sidan + /verktyg språkgranskning; em dash (—) → svenskt tankstreck (–); ny hero (gren ny-startsida) väntar fortfarande på val dark/dark-center.
+
 ## 2026-10-11 (kväll) — Ny hero på testsida (gren `ny-startsida`, INTE live)
 - Ägaren valde mockup Hero 2 → byggd som `src/components/HeroV2` + testsida `/sv/ny-startsida` (noindex, bara sv). Grenen `ny-startsida` är pushad men INTE mergad – main/live orörd.
 - Rubrik «Hela byggföretaget på ett ställe» (inte «i en app» – vi är mer än app). Pris i 2 rader: «299 kr/mån – offerter, fakturor, löner, kvitton, …» / «+ 69 kr per arbetare – tidrapport, planering, närvaro, egenkontroll, …».

@@ -1,6 +1,7 @@
 export type PainProps = {
   painT: {
     painTitle: string;
+    painLead?: string;
     painHeading: string;
     painTitleAccent1: string;
     painHeading2: string;

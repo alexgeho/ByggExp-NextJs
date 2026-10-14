@@ -778,9 +778,9 @@ const A_ID06_BESTALLA_KORT_STEG_FOR_STEG: BlogPost = {
   title: "Så beställer du ID06-kort steg för steg inför ditt första uppdrag hos en generalentreprenör", slug: "id06-bestalla-kort-steg-for-steg", locale: "sv",
   excerpt: "Komplett guide för hantverkare och byggföretag: från företagets förutsättningar och det nya identifieringskravet 2026 till validering, kostnader och Safe Construction Training.", tag: "Personalliggare",
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_ID06_BESTALLA_KORT_STEG_FOR_STEG_HTML,
-  seoTitle: "ID06 beställa kort steg för steg | ByggExp", seoDescription: "Så beställer du ID06-kort steg för steg 2026: krav på företaget, nya pass-kravet från 28 januari, Safe Construction Training och kompetensdatabasen.",
+  seoTitle: "ID06-kort 2026: vad kostar det, beställa & förnya | ByggExp", seoDescription: "ID06-kort kostar 280 kr/st och 80 kr/år från år två. Så beställer du kortet steg för steg, när det ska förnyas (max 5 år) och pass-kravet från 28 januari.",
   seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T08:24:00.000Z", createdAt: "2026-08-19T08:24:00.000Z", updatedAt: "2026-08-19T08:24:00.000Z",
+  publishedAt: "2026-08-19T08:24:00.000Z", createdAt: "2026-08-19T08:24:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_STARTBESKED_BYGGLOV_PROCESS_2026_HTML = `

@@ -1483,7 +1483,7 @@ const A_GOLVVARME_BERAKNING_EFFEKT_HTML = `
 </ul>
 <h3>Hur många meter golvvärmeslang per m²?</h3>
 <p>Rörlängden per kvadratmeter är ungefär <strong>1 ÷ c/c i meter</strong>. Lägg sedan till anslutningsledningarna fram till fördelaren.</p>
-<div class="article-table"><table>
+<div class="article-table article-table--narrow"><table>
 <thead><tr><th>c/c</th><th>Golvvärmeslang per m²</th></tr></thead>
 <tbody>
 <tr><td>100 mm</td><td>ca 10 m</td></tr>
@@ -1528,7 +1528,7 @@ const A_GOLVVARME_BERAKNING_EFFEKT_HTML = `
 </ol>
 
 <h2>Så gör du i ByggExp</h2>
-<p>I ByggExp samlar du dimensioneringen och materialkalkylen på ett ställe. Du matar in rumsytor och effektbehov, får fram slinglängd, c/c och ungefärlig materialåtgång, och kan föra över posterna direkt till en offert med separat rad för arbetskostnad — vilket gör ROT-underlaget tydligt för kunden. Systemet räknar åt dig, men ansvaret för behörighet, tryckfallsberäkning och våtrumsregler ligger fortfarande hos dig och ditt anlitade elinstallationsföretag. ByggExp ersätter alltså inte fackmässig kontroll — det snabbar upp kalkylen och håller ihop underlaget.</p>
+<p>Slinglängd och antal slingor räknar du fram med vår gratis <a href="/sv/verktyg/golvvarme-kalkylator">golvvärmekalkylator</a>: ange yta, c/c och max slinglängd. Själva jobbet följer du sedan i ByggExp – medarbetarna stämplar in och ut i mobilen med GPS och timmarna hamnar på projektet, och i dagboken noterar du material och avvikelser dag för dag. Ansvaret för behörighet, tryckfallsberäkning och våtrumsregler ligger fortfarande hos dig och ditt anlitade elinstallationsföretag.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Hur många watt per kvadratmeter behöver golvvärmen?</h3>
@@ -1538,12 +1538,12 @@ const A_GOLVVARME_BERAKNING_EFFEKT_HTML = `
 <h3>Får jag installera elgolvvärme själv?</h3>
 <p>Nej. Elgolvvärme är en del av den fasta starkströmsanläggningen och ska installeras av ett registrerat elinstallationsföretag med auktoriserad elinstallatör. Du får ofta förbereda underlaget och lägga ut kabeln enligt anvisning, men kontrollmätning och inkoppling måste elföretaget göra — och kontrollen ska ske innan golvet spacklas.</p>
 <h3>Hur många meter golvvärmeslang går det åt per m²?</h3>
-<p>Ungefär 1 ÷ c/c i meter: cirka 10 m vid c/c 100 mm, 6,7 m vid 150 mm och 5 m vid 200 mm. Räkna till anslutningsledningarna fram till fördelaren.</p>
+<p>Ungefär 1 ÷ c/c i meter: cirka 10 m vid c/c 100 mm, 6,7 m vid 150 mm och 5 m vid 200 mm. Lägg till rör för anslutningsledningarna fram till fördelaren.</p>
 <h3>Hur lång får en golvvärmeslinga vara?</h3>
 <p>Slinglängden begränsas av tryckfallet. Med 16 mm rör hålls slingan under 80–100 m (konservativt 60–70 m) och med 20 mm rör runt 80–90 m. En för lång slinga kräver en kraftfullare cirkulationspump, så gör alltid en tryckfallsberäkning vid dimensioneringen.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna fram effektbehov, slinglängd och c/c på minuter med vår <a href="/sv/verktyg/golvvarme-kalkylator">golvvärmekalkylator</a>, och lyft in resultatet i din offert. Vill du se hela flödet från kalkyl till offert och ROT-underlag? <a href="/sv/contact">Boka en demo</a> så visar vi hur ByggExp håller ihop dina projekt.</p>
+<p>Räkna fram slinglängd och antal slingor på minuter med vår <a href="/sv/verktyg/golvvarme-kalkylator">golvvärmekalkylator</a> och för in resultatet i din offert. Vill du se hur ByggExp håller ihop tid och dagbok per projekt? <a href="/sv/contact">Boka en demo</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/berakna-u-varde-isolering">Beräkna U-värde för isolering</a> · <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a> · <a href="/sv/blog/kakel-klinker-atgang-vatrum">Åtgång av kakel och klinker i våtrum</a></p>
 `;

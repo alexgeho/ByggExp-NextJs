@@ -605,6 +605,11 @@
   min-width: 460px;
 }
 
+// Two-column lookup tables fit a phone as-is — no sideways scroll.
+.blog-article-content .article-table--narrow table {
+  min-width: 0;
+}
+
 .blog-article-content thead {
   background: rgba(37, 99, 201, 0.07);
 }

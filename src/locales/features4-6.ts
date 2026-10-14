@@ -2,7 +2,7 @@ export const featuresTranslations4_6 = {
   ru: {
     featuresCard4Title: "Фотоотчет с привязкой к смене",
     featuresCard4Text:
-      "Каждая фотография сохраняется вместе со сменой, проектом, временем, GPS и сотрудником.",
+      "Каждая фотография сохраняется вместе со сменой, проектом, временем и сотрудником.",
 
     featuresCard4Step1: "Делайте фото в приложении",
     featuresCard4Step2: "Оно привяжется к смене",
@@ -28,7 +28,7 @@ export const featuresTranslations4_6 = {
   en: {
     featuresCard4Title: "Shift-based photo reports",
     featuresCard4Text:
-      "Every photo is automatically linked to the shift, project, time and GPS location. No more guessing who took it, where it was taken or when it happened.",
+      "Every photo is automatically linked to the shift, project, date and person. No more guessing who took it, which job it belongs to or when it happened.",
 
     featuresCard4Step1: "Take photos directly in the app",
     featuresCard4Step2: "Photos are automatically linked to the shift and project",
@@ -54,7 +54,7 @@ export const featuresTranslations4_6 = {
   sv: {
     featuresCard4Title: "Fotodokumentation kopplad till arbetspass",
     featuresCard4Text:
-      "Varje bild kopplas automatiskt till arbetspasset, projektet, tidpunkten, personen och GPS-positionen.",
+      "Varje bild kopplas automatiskt till arbetspasset, projektet, datumet och personen.",
 
     featuresCard4Step1: "Ta bilder direkt i appen",
     featuresCard4Step2: "Bilderna kopplas till arbetspasset",
@@ -80,7 +80,7 @@ export const featuresTranslations4_6 = {
   nb: {
     featuresCard4Title: "Fotodokumentasjon koblet til arbeidsøkt",
     featuresCard4Text:
-      "Hvert bilde kobles automatisk til arbeidsøkten, prosjektet, tidspunktet, personen og GPS.",
+      "Hvert bilde kobles automatisk til arbeidsøkten, prosjektet, datoen og personen.",
 
     featuresCard4Step1: "Ta bilder rett i appen",
     featuresCard4Step2: "Bildene kobles til arbeidsøkten",
@@ -106,7 +106,7 @@ export const featuresTranslations4_6 = {
   pl: {
     featuresCard4Title: "Dokumentacja zdjęciowa powiązana ze zmianą",
     featuresCard4Text:
-      "Każde zdjęcie zapisuje się razem ze zmianą, projektem, godziną, GPS i pracownikiem.",
+      "Każde zdjęcie zapisuje się razem ze zmianą, projektem, godziną i pracownikiem.",
 
     featuresCard4Step1: "Rób zdjęcia w aplikacji",
     featuresCard4Step2: "Zdjęcie powiąże się ze zmianą",
@@ -132,7 +132,7 @@ export const featuresTranslations4_6 = {
   uk: {
     featuresCard4Title: "Фотозвіт із прив’язкою до зміни",
     featuresCard4Text:
-      "Кожне фото зберігається разом зі зміною, проєктом, часом, GPS і працівником.",
+      "Кожне фото зберігається разом зі зміною, проєктом, часом і працівником.",
     featuresCard4Step1: "Робіть фото в застосунку",
     featuresCard4Step2: "Воно прив’яжеться до зміни",
     featuresCard4Step3: "Уся історія завжди під рукою",
@@ -153,7 +153,7 @@ export const featuresTranslations4_6 = {
   fi: {
     featuresCard4Title: "Kuvaraportti vuoroon kytkettynä",
     featuresCard4Text:
-      "Jokainen kuva tallentuu vuoron, projektin, ajankohdan, GPS:n ja työntekijän kanssa.",
+      "Jokainen kuva tallentuu vuoron, projektin, ajankohdan ja työntekijän kanssa.",
     featuresCard4Step1: "Ota kuvia sovelluksessa",
     featuresCard4Step2: "Kuva kytkeytyy vuoroon",
     featuresCard4Step3: "Koko historia on aina saatavilla",
@@ -174,7 +174,7 @@ export const featuresTranslations4_6 = {
   et: {
     featuresCard4Title: "Fotoraport vahetusega seotud",
     featuresCard4Text:
-      "Iga foto salvestatakse koos vahetuse, projekti, kellaaja, GPS-i ja töötajaga.",
+      "Iga foto salvestatakse koos vahetuse, projekti, kellaaja ja töötajaga.",
     featuresCard4Step1: "Tehke fotosid rakenduses",
     featuresCard4Step2: "Foto seotakse vahetusega",
     featuresCard4Step3: "Kogu ajalugu on alati käepärast",
@@ -195,7 +195,7 @@ export const featuresTranslations4_6 = {
   lt: {
     featuresCard4Title: "Fotoataskaita, susieta su pamaina",
     featuresCard4Text:
-      "Kiekviena nuotrauka išsaugoma kartu su pamaina, projektu, laiku, GPS ir darbuotoju.",
+      "Kiekviena nuotrauka išsaugoma kartu su pamaina, projektu, laiku ir darbuotoju.",
     featuresCard4Step1: "Darykite nuotraukas programėlėje",
     featuresCard4Step2: "Ji bus susieta su pamaina",
     featuresCard4Step3: "Visa istorija visada po ranka",
@@ -216,7 +216,7 @@ export const featuresTranslations4_6 = {
   lv: {
     featuresCard4Title: "Fotoatskaite, sasaistīta ar maiņu",
     featuresCard4Text:
-      "Katrs foto tiek saglabāts kopā ar maiņu, projektu, laiku, GPS un darbinieku.",
+      "Katrs foto tiek saglabāts kopā ar maiņu, projektu, laiku un darbinieku.",
     featuresCard4Step1: "Uzņemiet fotoattēlus lietotnē",
     featuresCard4Step2: "Tas tiks sasaistīts ar maiņu",
     featuresCard4Step3: "Visa vēsture vienmēr pie rokas",

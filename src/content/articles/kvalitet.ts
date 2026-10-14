@@ -1268,7 +1268,7 @@ const A_FOTODOKUMENTATION_BYGGPROJEKT_BEVIS_HTML = `
 <p>Att fotografera på arbetsplatsen är i huvudsak tillåtet, men lagring och spridning av bilder på identifierbara personer kräver laglig grund enligt GDPR – till exempel berättigat intresse eller samtycke. Samtycke måste vara dokumenterat, frivilligt och lika lätt att återkalla som att lämna. För intern byggdokumentation är berättigat intresse eller avtal därför ofta en stabilare grund än samtycke, som kan dras tillbaka när som helst. Rikta kameran mot arbetet, inte mot personerna, så långt det går, och ha en tydlig rutin för bilder där personal syns.</p>
 
 <h2>Så gör du i ByggExp</h2>
-<p>ByggExp samlar dagbok, egenkontroll och foton på ett ställe, kopplat till rätt projekt. När du lägger en bild i dagboken eller på en kontrollpunkt behåller systemet tidpunkt och koppling – bilden hamnar inte i en privat mobil utan i ett projektarkiv som ligger kvar. Du kan knyta foton till en ÄTA-anmälan och till en hinderanteckning, så att bild och skriftlig underrättelse hänger ihop den dag de skapas. Vi trollar inte bort juridiken – skriftlighetskravet och fristerna måste du fortfarande uppfylla – men vi gör det enkelt att bygga en spårbar, daterad dokumentation som håller när den behövs.</p>
+<p>ByggExp samlar dagbok, egenkontroll och foton på ett ställe, kopplat till rätt projekt. En bild i dagboken hör till dagens anteckning – datum, utfört arbete och avvikelser eller hinder – och foton från appen kopplas till arbetspasset. Bilden hamnar alltså inte i en privat mobil utan i ett projektarkiv som ligger kvar. Vi trollar inte bort juridiken – skriftlighetskravet och fristerna måste du fortfarande uppfylla – men vi gör det enkelt att bygga en spårbar, daterad dokumentation. Behöver du bildens exakta tidpunkt och GPS-position som bevis, spara även originalfilen med intakt metadata.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Räcker ett foto som bevis vid en entreprenadtvist?</h3>
@@ -1293,7 +1293,7 @@ const A_FOTODOKUMENTATION_BYGGPROJEKT_BEVIS: BlogPost = {
   coverImageUrl: "/landing/features/4foto.webp", contentHtml: A_FOTODOKUMENTATION_BYGGPROJEKT_BEVIS_HTML,
   seoTitle: "Fotodokumentation byggprojekt | ByggExp", seoDescription: "Så bygger platschefen en fotodokumentation som håller som bevis vid ÄTA-, försenings- och garantitvister. Checklista, metadata, GDPR och arkivering.",
   seoImageUrl: `${SITE_URL}/landing/features/4foto.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T08:03:00.000Z", createdAt: "2026-08-20T08:03:00.000Z", updatedAt: "2026-08-20T08:03:00.000Z",
+  publishedAt: "2026-08-20T08:03:00.000Z", createdAt: "2026-08-20T08:03:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_DOU_PARM_DRIFT_UNDERHALL_BYGG_HTML = `

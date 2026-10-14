@@ -568,39 +568,39 @@ const A_ROT_FAKTURERING_PROGRAM: BlogPost = {
 };
 
 const A_FOTODOKUMENTATION_APP_BYGG_HTML = `
-<p>Fotodokumentation är byggföretagets billigaste försäkring: bilder som visar vad som gjorts och hur det såg ut – tidsstämplade och kopplade till rätt projekt. En app gör att bilderna faktiskt hamnar rätt i stället för att ligga kvar i mobilens kamerarulle. Här går vi igenom vad en fotodokumentations-app för bygg bör klara.</p>
+<p>Fotodokumentation är byggföretagets billigaste försäkring: bilder som visar vad som gjorts och hur det såg ut – daterade och kopplade till rätt projekt. En app gör att bilderna faktiskt hamnar rätt i stället för att ligga kvar i mobilens kamerarulle. Här går vi igenom vad en fotodokumentations-app för bygg bör klara.</p>
 
 <h2>Vad ska en fotodokumentations-app klara?</h2>
 <ul>
 <li><strong>Foto kopplat till projekt och arbetspass</strong> – inte en lös bildmapp, utan bevis på rätt plats.</li>
-<li><strong>Tidsstämpel</strong> – när bilden togs, för spårbarhet vid tvist eller besiktning.</li>
+<li><strong>Datum och sammanhang</strong> – vilken dag och på vilket jobb bilden togs, för spårbarhet vid tvist eller besiktning.</li>
 <li><strong>Noteringar</strong> – kort text till bilden (vad, var, varför).</li>
 <li><strong>Tillgängligt för kontoret</strong> – samlat, sökbart, inte spritt i olika telefoner.</li>
 </ul>
 <p>Varför det lönar sig: se guiden om <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">fotodokumentation som bevis</a>.</p>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp har <strong>fotodokumentation kopplad till arbetspass</strong> och projekt: teamet fotar på plats, bilderna hamnar automatiskt på rätt projekt och kontoret kommer åt dem. Samma projekt håller ihop tid, uppgifter, foto och ekonomi.</p>
+<p>ByggExp har <strong>fotodokumentation kopplad till arbetspass</strong> och projekt: teamet fotar på plats och varje bild kopplas till arbetspasset – och därmed till datum, projekt och person – så att kontoret kommer åt dem. Samma projekt håller ihop tid, uppgifter, foto och ekonomi.</p>
 <p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
 <li><strong>Bilder i kamerarullen.</strong> Utan koppling till projekt går de inte att hitta när de behövs.</li>
-<li><strong>Ingen tidsstämpel.</strong> Ett foto utan datum är svagt som bevis.</li>
+<li><strong>Inget datum.</strong> Ett foto som inte går att knyta till en dag är svagt som bevis.</li>
 <li><strong>Bara i en telefon.</strong> Kontoret kommer inte åt det som ligger lokalt hos en snickare.</li>
 </ul>
 
-<p>Rätt fotodokumentation kostar några sekunder per bild men kan avgöra en tvist – förutsatt att bilderna hamnar rätt, tidsstämplade och kopplade till projektet.</p>
+<p>Rätt fotodokumentation kostar några sekunder per bild men kan avgöra en tvist – förutsatt att bilderna hamnar rätt, daterade och kopplade till projektet.</p>
 `;
 
 const A_FOTODOKUMENTATION_APP_BYGG: BlogPost = {
   _id: "code-"+"fotodokumentation-app-bygg",
   title: "Fotodokumentation-app för bygg – bevis kopplat till projektet", slug: "fotodokumentation-app-bygg", locale: "sv",
-  excerpt: "Vad en fotodokumentations-app för bygg bör klara: foto kopplat till projekt och arbetspass, tidsstämpel, noteringar och åtkomst för kontoret. Så gör ByggExp det.", tag: "Digitalisering",
+  excerpt: "Vad en fotodokumentations-app för bygg bör klara: foto kopplat till projekt och arbetspass, datum och åtkomst för kontoret. Så gör ByggExp det.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/4foto.webp", contentHtml: A_FOTODOKUMENTATION_APP_BYGG_HTML,
-  seoTitle: "Fotodokumentation-app för bygg – bevis per projekt | ByggExp", seoDescription: "Fotodokumentation-app för byggföretag: foto kopplat till projekt och arbetspass, tidsstämplat, med noteringar och åtkomst för kontoret. Så gör ByggExp det.",
+  seoTitle: "Fotodokumentation-app för bygg – bevis per projekt | ByggExp", seoDescription: "Fotodokumentation-app för byggföretag: foto kopplat till projekt och arbetspass, daterat och samlat för kontoret. Så gör ByggExp det.",
   seoImageUrl: `${SITE_URL}/landing/features/4foto.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T18:15:00.000Z", createdAt: "2026-08-20T18:15:00.000Z", updatedAt: "2026-08-20T18:15:00.000Z",
+  publishedAt: "2026-08-20T18:15:00.000Z", createdAt: "2026-08-20T18:15:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_LONEPROGRAM_BYGG_HTML = `
@@ -2742,7 +2742,7 @@ const A_APP_FOR_BYGGPROJEKT_HTML = `
 <ul>
 <li><strong>Tid per projekt</strong> – <a href="/sv/blog/app-for-tidrapportering-bygg">incheckning i mobilen</a>, gärna med GPS, kopplad till rätt projekt.</li>
 <li><strong>Uppgifter och arbetsorder</strong> – <a href="/sv/blog/arbetsorder-app-bygg">jobb som tilldelas</a> och följs upp direkt i appen.</li>
-<li><strong>Foto och byggdagbok</strong> – <a href="/sv/blog/byggdagbok">dokumentation</a> kopplad till projektet, tidsstämplad på plats.</li>
+<li><strong>Foto och byggdagbok</strong> – <a href="/sv/blog/byggdagbok">dokumentation</a> kopplad till projektet och dagen.</li>
 <li><strong>Ekonomi i fickan</strong> – utlägg, material och en snabb överblick av projektets läge.</li>
 <li><strong>Fungerar offline</strong> – synkar när täckningen kommer tillbaka, så att arbetet inte stannar när mobilnätet är svagt.</li>
 </ul>
@@ -2773,7 +2773,7 @@ const A_APP_FOR_BYGGPROJEKT_HTML = `
 <h3>Vad är skillnaden mot en vanlig bygg-app?</h3>
 <p>En bygg-app täcker hela företaget – offert, faktura och kontorets flöden. En app för byggprojekt sätter det enskilda projektet i centrum: tid, uppgifter och dokumentation kopplade till bygget. I ByggExp är de samma system.</p>
 <h3>Fungerar appen utan täckning på bygget?</h3>
-<p>Ja. En bra app för byggprojekt fungerar offline och synkar när täckningen kommer tillbaka, så registreringen inte tappas när mobilnätet är svagt.</p>
+<p>Inte i dag. ByggExp behöver mobilnät eller wifi för att registrera tid och foto.</p>
 <h3>Ser kontoret det som registreras i appen?</h3>
 <p>Ja. Appen och webbadmin är samma system, så tid, foto och utlägg som registreras i mobilen syns direkt på kontoret och räknas in i projektets ekonomi.</p>
 `.trim();
@@ -2785,7 +2785,7 @@ const A_APP_FOR_BYGGPROJEKT: BlogPost = {
   coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_APP_FOR_BYGGPROJEKT_HTML,
   seoTitle: "App för byggprojekt – styr bygget från mobilen | ByggExp", seoDescription: "App för byggprojekt: tid, uppgifter, foto, byggdagbok och ekonomi i mobilen kopplat till rätt projekt. Bygget rapporterar på plats, kontoret styr på samma data.",
   seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-30T11:40:00.000Z", createdAt: "2026-08-30T11:40:00.000Z", updatedAt: "2026-08-30T11:40:00.000Z",
+  publishedAt: "2026-08-30T11:40:00.000Z", createdAt: "2026-08-30T11:40:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 export const TILLVAXT_ARTICLES: BlogPost[] = [

@@ -597,7 +597,7 @@ const S_SJEKKE_HMS_KORT: BlogPost = {
   contentHtml: S_SJEKKE_HMS_KORT_HTML,
   seoTitle: 'Sjekk HMS-kort – slå opp kortnummer eller QR-kode | ByggExp',
   seoDescription:
-    'Sjekk HMS-kort: slå opp kortnummeret eller skann QR-koden og se om kortet er aktivt, sperret eller utløpt. Og hvem som kontrollerer kortene på plassen.',
+    'Sjekk HMS-kort: slå opp kortnummeret eller skann QR-koden og se om kortet er aktivt, sperret eller utløpt – og hvem som skal kontrollere kortene.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
@@ -844,7 +844,7 @@ const G_HMS_KORT_GYLDIGHET: BlogPost = {
   contentHtml: G_HMS_KORT_GYLDIGHET_HTML,
   seoTitle: 'Hvor lenge er HMS-kort gyldig? Gyldighet og fornyelse | ByggExp',
   seoDescription:
-    'Hvor lenge er HMS-kortet gyldig? Inntil to år – men det kan bli ugyldig før datoen. Når arbeidsgiveren må fornye, og hva som gjør kortet ugyldig.',
+    'Hvor lenge er HMS-kortet gyldig? Inntil to år, og bare så lenge arbeidsforholdet varer. Når arbeidsgiveren må fornye, og hva som gjør kortet ugyldig.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,

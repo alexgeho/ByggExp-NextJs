@@ -1883,7 +1883,7 @@ const A_LIFTUTBILDNING_KRAV_BYGG: BlogPost = {
   title: "Liftutbildning – krav på bygget 2026: liftkort, körtillstånd och AFS 2023:11", slug: "liftutbildning-krav-bygg", locale: "sv",
   excerpt: "Så uppfyller ditt byggföretag kraven på liftutbildning 2026 – skillnaden mellan liftkort och körtillstånd, lift-kategorierna och arbetsgivarens dokumentationsansvar enligt AFS 2023:11.", tag: "Arbetsmiljö",
   coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_LIFTUTBILDNING_KRAV_BYGG_HTML,
-  seoTitle: "Liftutbildning: krav, giltighetstid & körtillstånd 2026 | ByggExp", seoDescription: "Hur länge gäller liftutbildning? Rekommendationen är 5 år. Krav enligt AFS 2023:11, liftkort vs körtillstånd, kategorierna A1–B3 och arbetsgivarens ansvar.",
+  seoTitle: "Liftutbildning: krav, giltighetstid & körtillstånd 2026 | ByggExp", seoDescription: "Hur länge gäller liftutbildning? Branschen rekommenderar repetition efter 5 år – inget lagkrav. AFS 2023:11, liftkort vs körtillstånd, kategorierna A1–B3.",
   seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T08:24:00.000Z", createdAt: "2026-08-20T08:24:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };

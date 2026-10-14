@@ -409,12 +409,12 @@ const A_TIDRAPPORTERING_APP_BYGGFORETAG_HTML = `
 
 const A_TIDRAPPORTERING_APP_BYGGFORETAG: BlogPost = {
   _id: "code-"+"tidrapportering-app-byggforetag",
-  title: "Tidrapportering-app för byggföretag – timmar till lön och faktura", slug: "tidrapportering-app-byggforetag", locale: "sv",
+  title: "Tidrapportering för byggföretag med anställda – attest, roller och lön", slug: "tidrapportering-app-byggforetag", locale: "sv",
   excerpt: "Vad en tidrapporterings-app för bygg bör klara: registrering i mobilen, projektkoppling, OB/övertid/restid och export till lön och faktura. Så gör ByggExp det.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: A_TIDRAPPORTERING_APP_BYGGFORETAG_HTML,
-  seoTitle: "Tidrapportering-app för byggföretag – lön & faktura | ByggExp", seoDescription: "Tidrapportering-app för bygg: stämpla tid i mobilen, koppla till projekt, hantera OB/övertid/restid och exportera timmarna till lön och faktura. Så gör ByggExp det.",
+  seoTitle: "Tidrapport för anställda i bygg – attest & lön | ByggExp", seoDescription: "Tidrapport för hela laget: medarbetarna stämplar i mobilen, arbetsledaren attesterar och timmarna blir löneunderlag och fakturarader. Så gör ByggExp.",
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T17:05:00.000Z", createdAt: "2026-08-20T17:05:00.000Z", updatedAt: "2026-08-20T17:05:00.000Z",
+  publishedAt: "2026-08-20T17:05:00.000Z", createdAt: "2026-08-20T17:05:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_BYGGPROGRAM_FOR_BYGGFORETAG_HTML = `
@@ -1071,8 +1071,8 @@ const A_APP_TIDRAPPORTERING_BYGG_HTML = `
 </ol>
 <p>Samma app fungerar på både iPhone och Android, så hela laget kan rapportera tid i mobilen oavsett telefon. Har laget iPhone? Se guiden om <a href="/sv/blog/tidrapport-app-iphone">tidrapport-app för iPhone</a>.</p>
 
-<h2>OB, övertid och restid – räknas rätt automatiskt</h2>
-<p>I byggbranschen är det sällan bara ”åtta timmar” som ska rapporteras. Byggavtalet har regler för OB-tillägg, övertid och restidsersättning, och räknar man dem för hand smyger felen in – oftast till företagets nackdel. En app för tidrapportering som känner till reglerna kan flagga övertid, lägga på rätt OB och skilja restid från arbetstid utan att arbetsledaren räknar manuellt. Det ger både korrekt lön och ett fakturaunderlag som håller om beställaren ifrågasätter timmarna.</p>
+<h2>OB, övertid och restid – registreras per pass</h2>
+<p>I byggbranschen är det sällan bara ”åtta timmar” som ska rapporteras. Byggavtalet har regler för OB-tillägg, övertid och restidsersättning, och räknar man dem för hand smyger felen in – oftast till företagets nackdel. I ByggExp väljer medarbetaren timtyp (normal, övertid eller OB) för varje pass och registrerar restid separat, så att löneunderlaget visar timmarna per timtyp. Satserna hämtar du ur Byggavtalet – appen räknar inte ut dem automatiskt. Det ger ett underlag för lön och faktura som håller om beställaren ifrågasätter timmarna.</p>
 
 <h2>Från tid till lön och faktura – ett flöde</h2>
 <p>Poängen med digital tidrapportering är att samma timme bara matas in en gång och sedan används överallt. De granskade och attesterade passen blir <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a>, <a href="/sv/blog/fakturera-fran-byggexp">fakturarader</a> och en post i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektuppföljningen</a> samtidigt. Ska du välja verktyg för hela kedjan? Läs vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
@@ -1971,9 +1971,9 @@ const S_TIDREDOVISNING_APP_HTML = `
 const S_TIDREDOVISNING_APP: BlogPost = {
   _id: "code-tidredovisning-app",
   title: "Tidredovisning app – sammanställ timmar till lön och faktura", slug: "tidredovisning-app", locale: "sv",
-  excerpt: "Tidredovisning-app: sammanställ registrerade timmar per medarbetare och period, räkna OB och övertid och exportera till lön och faktura – automatiskt.", tag: "Digitalisering",
+  excerpt: "Tidredovisning-app: sammanställ registrerade timmar per medarbetare och period, per timtyp (normal, OB, övertid), och exportera till lön och faktura.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/12salary.webp", contentHtml: S_TIDREDOVISNING_APP_HTML,
-  seoTitle: "Tidredovisning app – timmar till lön och faktura | ByggExp", seoDescription: "Tidredovisning-app för bygg: sammanställ timmar per medarbetare och period, räkna OB och övertid och exportera till lönesystem. Underlag för lön och faktura.",
+  seoTitle: "Tidredovisning app – timmar till lön och faktura | ByggExp", seoDescription: "Tidredovisning-app för bygg: sammanställ timmar per medarbetare och period, summera OB- och övertidstimmar och exportera underlag till lön och faktura.",
   seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T10:30:00.000Z", createdAt: "2026-08-22T10:30:00.000Z", updatedAt: "2026-08-22T10:30:00.000Z",
 };

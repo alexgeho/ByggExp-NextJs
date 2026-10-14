@@ -68,3 +68,19 @@ export const EN_CALC_SLUGS: ReadonlySet<string> = new Set([
   'trall-kalkylator',
   'trappa-kalkylator',
 ]);
+
+// Calculators proposed for removal (301) and awaiting the owner's decision
+// (audits/2026-09-26 verktyg-research). Until decided, they get no hreflang and
+// are left out of the byggexp.no sitemap, so we don't push new nb URLs into the
+// index that may soon redirect. Remove a slug here once the owner keeps it.
+export const PENDING_REMOVAL_CALC_SLUGS: ReadonlySet<string> = new Set([
+  'farg-kalkylator',
+  'golv-kalkylator',
+  'isolering-kalkylator',
+  'tapet-kalkylator',
+]);
+
+// Calculators that get reciprocal sv/en/nb hreflang + an nb sitemap entry.
+export const HREFLANG_CALC_SLUGS: ReadonlySet<string> = new Set(
+  [...EN_CALC_SLUGS].filter((slug) => !PENDING_REMOVAL_CALC_SLUGS.has(slug)),
+);

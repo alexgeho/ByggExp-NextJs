@@ -4,7 +4,7 @@ import { fetchPublishedBlogPosts } from '../lib/blog-api';
 import { getCodeArticles } from '../content/code-articles';
 import { VERKTYG_GROUPS } from '../content/verktyg-list';
 import { landingLanguageCodes, svEnLocales } from '../locales/languages';
-import { EN_CALC_SLUGS } from '../lib/locale';
+import { EN_CALC_SLUGS, HREFLANG_CALC_SLUGS } from '../lib/locale';
 import { localeOrigin } from '../lib/seo';
 
 // Static routes that exist under every landing locale (besides the home page).
@@ -86,8 +86,9 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
   // nb tools hub + the calculators that ship nb content (same set as /en).
   if (isNo) {
     urls.push({ loc: `${localeOrigin('nb')}/nb/fa-offert` });
-    // CALC_PATHS starts with the 'verktyg' hub itself.
-    CALC_PATHS.forEach((path) => {
+    // CALC_PATHS starts with the 'verktyg' hub itself; tools pending removal
+    // are skipped (see PENDING_REMOVAL_CALC_SLUGS).
+    CALC_PATHS.filter((path) => path === 'verktyg' || HREFLANG_CALC_SLUGS.has(path.slice('verktyg/'.length))).forEach((path) => {
       urls.push({ loc: `${localeOrigin('nb')}/nb/${path}` });
     });
   } else {

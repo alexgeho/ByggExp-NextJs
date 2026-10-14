@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import type { ReactNode } from 'react';
 
-import { EN_CALC_SLUGS, NB_LIVE, NO_DOMAIN_LIVE, type CalcLocale } from '../../lib/locale';
+import { HREFLANG_CALC_SLUGS, NB_LIVE, NO_DOMAIN_LIVE, type CalcLocale } from '../../lib/locale';
 import { localeOrigin } from '../../lib/seo';
 import { gaEvent } from '../../lib/analytics';
 import EmbedSnippet from './EmbedSnippet';
@@ -102,11 +102,11 @@ export default function LeadMagnetPage({
   // Reciprocal hreflang for calculators that ship sv + en (+ nb on byggexp.no).
   // Without it Google served /en calculators for Swedish queries and treated the
   // three versions as unrelated pages. Slug comes from the route, so no per-page
-  // wiring; templates and sv-only tools (not in EN_CALC_SLUGS) get nothing.
+  // wiring; templates, sv-only tools and tools pending removal get nothing.
   const { pathname } = useRouter();
   const calcSlug = /^\/\[lang\]\/verktyg\/([a-z0-9-]+)$/.exec(pathname)?.[1];
   const calcHreflangLocales: string[] =
-    calcSlug && EN_CALC_SLUGS.has(calcSlug)
+    calcSlug && HREFLANG_CALC_SLUGS.has(calcSlug)
       ? ['sv', 'en', ...(NB_LIVE && NO_DOMAIN_LIVE ? ['nb'] : [])]
       : [];
   const hreflangAlternates = calcHreflangLocales.length

@@ -226,7 +226,7 @@ const A_KONTROLLANSVARIG_NAR_BEHOVS_HTML = `
 <tr><td><strong>Summa</strong></td><td></td><td><strong>23 timmar + resor</strong></td></tr>
 </tbody>
 </table></div>
-<p>Med ett antaget timpris på 1 000 kr exkl. moms blir det 23 000 kr plus restid. Byt ut timpriset mot offertens. Det som oftast skiljer offerter åt är antalet arbetsplatsbesök – fråga hur många som ingår och vad ett extra besök kostar. Är priset fast, se till att det står vad som gäller om tidplanen drar ut.</p>
+<p>Multiplicera timmarna med timpriset i offerten och lägg till restid. Det som oftast skiljer offerter åt är antalet arbetsplatsbesök – fråga hur många som ingår och vad ett extra besök kostar. Är priset fast, se till att det står vad som gäller om tidplanen drar ut.</p>
 
 <h2>Byta kontrollansvarig</h2>
 <p>En KA som lämnar uppdraget ska meddela byggnadsnämnden. Byggherren föreslår då en ny KA och nämnden utser den (10 kap. 11 c §). Om KA inte sköter uppgifterna ska byggherren omedelbart meddela nämnden (11 b §), som kan entlediga KA och underrätta certifieringsorganet (11 kap. 35 §). Föreslår byggherren ingen ny KA kan nämnden enligt Boverket förbjuda att arbetet fortsätter.</p>
@@ -453,7 +453,7 @@ const A_YRKESBEVIS_BYGG_LARLING_HTML = `
 </table></div>
 
 <div class="article-table"><table>
-<thead><tr><th>Lönesteg</th><th>Fördelningstal</th><th>kr/tim</th><th>kr/mån</th></tr></thead>
+<thead><tr><th>Lönesteg</th><th>Fördelningstal</th><th>kr/tim</th><th>kr/mån (174 tim)</th></tr></thead>
 <tbody>
 <tr><td>Företagslärling under grundutbildning</td><td>0,70</td><td>142,10</td><td>24 725</td></tr>
 <tr><td>Lärling 70 %</td><td>0,70</td><td>142,10</td><td>24 725</td></tr>

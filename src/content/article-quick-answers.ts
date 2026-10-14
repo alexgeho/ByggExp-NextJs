@@ -48,9 +48,9 @@ export const ARTICLE_QUICK_ANSWERS: Record<string, QuickAnswer> = {
   'restidsersattning-byggavtalet': {
     html: `<table>
 <tbody>
-<tr><td>Egen bil, daglig resa (över 2&nbsp;km enkel väg)</td><td>2,50&nbsp;kr/km, max 120&nbsp;km enkel väg</td></tr>
+<tr><td>Egen bil, daglig resa (minst 2&nbsp;km enkel väg)</td><td>2,50&nbsp;kr/km, max 120&nbsp;km enkel väg</td></tr>
 <tr><td>Samåkning, föraren</td><td>+0,85&nbsp;kr/km per passagerare</td></tr>
-<tr><td>Restid till/från förrättning</td><td>Grundlön, max 12&nbsp;tim/dygn inkl. arbetstid</td></tr>
+<tr><td>Restid till/från förrättning</td><td>Grundlön, max 12&nbsp;tim/dygn minus arbetade timmar</td></tr>
 <tr><td>Traktamente</td><td>450&nbsp;kr/dag vid övernattning (från 1 jan 2026)</td></tr>
 </tbody>
 </table>
@@ -209,7 +209,7 @@ export const ARTICLE_QUICK_ANSWERS: Record<string, QuickAnswer> = {
 <thead><tr><th>Skikt</th><th>Åtgång torrbruk</th></tr></thead>
 <tbody>
 <tr><td>Grundning</td><td>ca 5&nbsp;kg/m²</td></tr>
-<tr><td>Grovputs, 0–3&nbsp;mm</td><td>ca 18–20&nbsp;kg/m² per 10&nbsp;mm</td></tr>
+<tr><td>Grovputs (sand 0–3&nbsp;mm)</td><td>ca 18–20&nbsp;kg/m² per 10&nbsp;mm</td></tr>
 <tr><td>Filtning, 5&nbsp;mm</td><td>ca 9&nbsp;kg/m²</td></tr>
 <tr><td>Ytputs/ädelputs</td><td>ca 4–25&nbsp;kg/m²</td></tr>
 </tbody>

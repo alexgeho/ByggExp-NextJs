@@ -1765,15 +1765,15 @@ const A_BOKFORING_ENSKILD_FIRMA_BYGG: BlogPost = {
 };
 
 const A_TRAKTAMENTE_BYGGNADSARBETARE_2026_HTML = `
-<p>Byggavtalets traktamente är 450 kr per dag från 1 januari 2026 och betalas när arbetstagaren övernattar på en förrättningsort minst 70 km från bostaden. Beloppet följer Skatteverkets skattefria nivå: 300 kr för hel dag plus 150 kr i nattschablon blir exakt 450 kr. En vanlig vecka på förrättning kan därför betalas helt skattefritt de första tre månaderna – förutsatt att den anställda själv ordnar boendet. Det som alltid blir lön är förrättningstillägget, och efter tre månader på samma ort börjar även en del av traktamentet beskattas.</p>
+<p>Byggavtalets traktamente är 450 kr per dag från 1 januari 2026 och betalas när arbetstagaren övernattar på en förrättningsort minst 70 km från bostaden. Beloppet följer Skatteverkets skattefria nivå: 300 kr för hel dag plus 150 kr i nattschablon blir exakt 450 kr. Traktamentet för en vanlig arbetsdag på förrättning kan därför betalas helt skattefritt de första tre månaderna – förutsatt att den anställda själv ordnar boendet. Det som alltid blir lön är förrättningstillägget, och efter tre månader på samma ort börjar även en del av traktamentet beskattas.</p>
 
 <h2>Vad Byggavtalet säger om traktamente 2026</h2>
-<p>Reglerna finns i <a href="https://www.byggnads.se/49ec78/siteassets/kollektivavtal/byggavtalet-2025-digital-utgava-1.pdf" target="_blank" rel="noopener noreferrer">Byggavtalet 2025–2027 § 6 punkt 2</a>. Avtalet följer Skatteverkets maximibelopp: när det skattefria beloppet ändras, ändras avtalets belopp vid samma tidpunkt. Därför höjde parterna traktamentet från 435 kr till 450 kr den 1 januari 2026, enligt <a href="https://byggforetagen.se/avtal/a0cd80f7-ff07-de11-b4e1-02bf9e69ca65/" target="_blank" rel="noopener noreferrer">Byggföretagens information om Byggavtalet</a>.</p>
+<p>Reglerna finns i <a href="https://www.byggnads.se/49ec78/siteassets/kollektivavtal/byggavtalet-2025-digital-utgava-1.pdf" target="_blank" rel="noopener noreferrer">Byggavtalet 2025–2027 § 6 punkt 2</a>. Avtalet följer Skatteverkets maximibelopp: när det skattefria beloppet ändras, ändras avtalets belopp vid samma tidpunkt. Därför höjdes traktamentet från 435 kr till 450 kr den 1 januari 2026, när Skatteverkets maximibelopp steg till 300 kr, enligt <a href="https://www.skatteverket.se/download/18.1522bf3f19aea8075ba3da6/1768986614741/traktamenten-mm-i-byggbranschen-skv353-utgava15.pdf" target="_blank" rel="noopener noreferrer">Skatteverkets broschyr SKV 353</a>.</p>
 <ul>
-<li><strong>Förrättningsort:</strong> ett område med 3,5 mils radie från den första arbetsplatsen som gav rätt till traktamente. Ny förrättningsort uppstår först när arbetstagaren under minst fyra veckor arbetar utanför den radien.</li>
+<li><strong>Förrättningsort:</strong> ett område med 3,5 mils radie från den första arbetsplatsen som gav rätt till traktamente. Ny förrättningsort uppstår först när arbetstagaren under minst fyra veckor arbetar mer än 3,5 mil från närmast föregående arbetsplats.</li>
 <li><strong>Halvt traktamente</strong> betalas bara vid första inställelsen om resan börjar efter kl. 12.00 och vid avflyttningen om hemresan avslutas före kl. 19.00.</li>
 <li><strong>Lediga dagar</strong> under förrättningen – helg, semester, fridag – ger ett traktamente per dag, men högst två under en sammanhängande ledighet.</li>
-<li><strong>Sjukdom:</strong> traktamente betalas i högst 30 dagar om arbetstagaren anmält arbetsoförmågan inom två dagar.</li>
+<li><strong>Sjukdom:</strong> traktamente betalas i högst 30 dagar om arbetstagaren anmält arbetsoförmågan inom två dagar och visar läkarintyg när arbetsgivaren begär det.</li>
 <li><strong>Tidsgräns:</strong> högst två år på samma förrättningsort. Därefter krävs en skriftlig, tidsbestämd överenskommelse – utom vid ett bestämt projekt som varar längre, där traktamente betalas tills projektet är klart.</li>
 </ul>
 
@@ -1785,7 +1785,6 @@ const A_TRAKTAMENTE_BYGGNADSARBETARE_2026_HTML = `
 <tr><td>Arbetstagaren ordnar både mat och boende</td><td>–</td><td>450,00 kr</td></tr>
 <tr><td>Arbetsgivaren ordnar fri logi</td><td>35 %</td><td>292,50 kr</td></tr>
 <tr><td>Överenskommelse om fri kost</td><td>55 %</td><td>202,50 kr</td></tr>
-<tr><td>Fri kost och fri logi</td><td>90 %</td><td>45,00 kr</td></tr>
 </tbody>
 </table></div>
 <p>Arbetsgivaren ska samråda med arbetstagaren om boendet innan arbetet på förrättningsorten börjar. Logi som arbetsgivaren ordnar ska hålla ändamålsenlig standard med goda toalett- och duschmöjligheter, och bor flera i samma förläggning ska det finnas gemensamhetsutrymme, matlagning och kylskåp.</p>
@@ -1854,7 +1853,7 @@ const A_TRAKTAMENTE_BYGGNADSARBETARE_2026: BlogPost = {
   title: "Traktamente för byggnadsarbetare 2026 – Byggavtalet och skattefria belopp", slug: "traktamente-byggnadsarbetare-2026", locale: "sv",
   excerpt: "Byggavtalets traktamente är 450 kr per dag från 2026. Så räknar du avdrag för kost och logi, förrättningstillägg och vilken del som är skattefri.", tag: "Ekonomi",
   coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_TRAKTAMENTE_BYGGNADSARBETARE_2026_HTML,
-  seoTitle: "Traktamente Byggnads 2026 – 450 kr/dag | ByggExp", seoDescription: "Byggnads traktamente 2026 är 450 kr/dag. Avdrag för kost och logi, förrättningstillägg, Skatteverkets 300/150/150 kr och ett exempel på en vecka borta.",
+  seoTitle: "Traktamente Byggnads 2026 – 450 kr/dag | ByggExp", seoDescription: "Byggnads traktamente 2026 är 450 kr/dag. Avdrag för kost och logi, förrättningstillägg, skattefria 300 kr/dag + 150 kr/natt och ett veckoexempel.",
   seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-18T18:48:00.000Z", createdAt: "2026-08-18T18:48:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
@@ -6415,7 +6414,7 @@ const A_FRISKVARDSBIDRAG_BYGGFORETAG_AVDRAG: BlogPost = {
 };
 
 const A_VIRKESATGANG_ALTAN_TRALLDACK_HTML = `
-<p>Siffran 7,94 lm/m² för trall 28×120 gäller vid ett kant-till-kant-avstånd på 126 mm, alltså 120 mm bräda plus 6 mm. Det är Svenskt Träs minsta avstånd för ny impregnerad furutrall, inte ett mått på springan: brädorna levereras ofta något bredare än nominellt och krymper när de torkar. Spillet kommer ovanpå och styrs mer av vilka längder du köper än av en procentsats. Nedan finns tabellerna från <a href="https://www.svenskttra.se/siteassets/5-publikationer/pdfer/st-lathunden-2021-med-utvik.pdf" target="_blank" rel="noopener noreferrer">Svenskt Träs Lathunden (utgåva 8:2021)</a> och en komplett materiallista för en altan på 4 × 5 meter.</p>
+<p>Siffran 7,94 lm/m² för trall 28×120 gäller vid ett kant-till-kant-avstånd på 126 mm, alltså 120 mm bräda plus 6 mm. Det är Svenskt Träs minsta avstånd för ny impregnerad furutrall, inte ett mått på springan: impregnerade brädor är ofta fuktiga vid leverans och krymper när de torkar, så springan blir större med tiden. Spillet kommer ovanpå och styrs mer av vilka längder du köper än av en procentsats. Nedan finns tabellerna från <a href="https://www.svenskttra.se/siteassets/5-publikationer/pdfer/st-lathunden-2021-med-utvik.pdf" target="_blank" rel="noopener noreferrer">Svenskt Träs Lathunden (utgåva 8:2021)</a> och en komplett materiallista för en altan på 4 × 5 meter.</p>
 
 <h2>Löpmeter trall per m² – tabell för vanliga bredder</h2>
 <p>Formeln är 1 000 delat med kant-till-kant-avståndet i millimeter. Tjockleken påverkar inte åtgången – 28×145 och 34×145 går åt lika mycket per kvadratmeter.</p>
@@ -6440,7 +6439,7 @@ const A_VIRKESATGANG_ALTAN_TRALLDACK_HTML = `
 <p>Vill du slippa räkna för hand, lägg in måtten i <a href="/sv/verktyg/trall-kalkylator">trallkalkylatorn</a>.</p>
 
 <h2>Trallens dimensioner, tjocklek och längder</h2>
-<p>Svenskt Träs produktkatalog listar trall i 22×95, 28×95, 28×120, 28×145, 34×95, 34×120 och 34×145, plus rillad trall i 28×120, 28×145 och 34×145. Impregnerad trall ska vara sort G4-2 eller G4-3 enligt SS-EN 1611-1. Tjockleken bestämmer hur glest du får lägga golvbjälkarna och hur lång skruven ska vara:</p>
+<p><a href="https://www.vida.se/wp-content/uploads/2021/05/Vida_Trall_8sid.pdf" target="_blank" rel="noopener noreferrer">Vida</a> listar till exempel trall i 22×95, 28×95, 28×120, 28×145, 34×95, 34×120 och 34×145, plus rillad trall i 28×120, 28×145 och 34×145. Impregnerad trall ska vara sort G4-2 eller G4-3 enligt SS-EN 1611-1. Tjockleken bestämmer hur glest du får lägga golvbjälkarna och hur lång skruven ska vara:</p>
 <div class="article-table"><table>
 <thead><tr><th>Trallens tjocklek</th><th>Max cc golvbjälke</th><th>Trallskruv, längd</th><th>Halslängd</th></tr></thead>
 <tbody>
@@ -6461,7 +6460,7 @@ const A_VIRKESATGANG_ALTAN_TRALLDACK_HTML = `
 <li>cc 400: 2,50 lm/m²</li>
 <li>cc 300: 3,33 lm/m²</li>
 </ul>
-<p><strong>Diagonal eller fiskben:</strong> trallen spänner då snett över bjälkarna och det fria spannet längs brädan blir längre. Vid 45 grader blir cc 600 mätt vinkelrätt ungefär 600 ÷ 0,71 = 849 mm längs brädan – mer än vad 28 mm trall klarar. Lägg bjälkarna på cc 400 (cirka 566 mm längs brädan) och räkna med mer spill, eftersom varje bräda kapas snett i båda ändar.</p>
+<p><strong>Diagonal eller fiskben:</strong> trallen spänner då snett över bjälkarna och det fria spannet längs brädan blir längre. Vid 45 grader blir cc 600 mätt vinkelrätt ungefär 600 ÷ 0,71 = 849 mm längs brädan – mer än vad 28 mm trall klarar. Räkna därför med tätare bjälkar, till exempel cc 400 (cirka 566 mm längs brädan), och kontrollera mot trallens anvisning. Räkna också med mer spill, eftersom varje bräda kapas snett i båda ändar.</p>
 
 <h2>Golvbjälkar och bärlinor – vad Lathunden tillåter</h2>
 <p>I Lathunden heter det som bär trallen golvbjälkar och det som vilar på plintarna bärlinor. Tabellerna nedan är utdrag för C24-virke till altan, dimensionerade enligt Boverkets konstruktionsregler EKS 11. Med C14 blir spännvidderna kortare.</p>
@@ -6489,8 +6488,8 @@ const A_VIRKESATGANG_ALTAN_TRALLDACK_HTML = `
 <h2>Exempel: materiallista för en altan på 4 × 5 meter</h2>
 <p>Fristående altan på plintar, 5,0 meter längs huset och 4,0 meter ut. Golvbjälkarna går ut från huset över tre bärlinor, och trallen läggs parallellt med fasaden.</p>
 <ol>
-<li><strong>Golvbjälkar:</strong> 45×145 C24 i två fack klarar 4,19 m vid cc 600, så 4,0 m fungerar. Fem meter delat i nio mellanrum ger tio bjälkar med verkligt cc 556 mm. Kontroll enligt Lathunden: 20 m² × 1,67 + 4,0 = 37,4 lm.</li>
-<li><strong>Bärlinor:</strong> med 4,0 m golvbjälkar läser vi kolumnen 4,2 m. 45×220 C24 tillåter 2,62 m mellan plintarna, så tre plintar per bärlina (2,5 m mellan) räcker. 2,5 ÷ 4 = 0,625 m, alltså uppfyller cc 556 rekommendationen.</li>
+<li><strong>Golvbjälkar:</strong> 45×145 C24 i två fack klarar 4,19 m vid cc 600, så 4,0 m fungerar. Fem meter delat i nio mellanrum ger tio bjälkar med verkligt cc 556 mm. Det blir 10 × 4,0 = 40 lm, samma som Lathundens formel: 20 m² × (1 000 ÷ 556) + 4,0 = 40 lm.</li>
+<li><strong>Bärlinor:</strong> med 4,0 m golvbjälkar läser vi kolumnen 4,2 m. 45×220 C24 tillåter 2,62 m mellan plintarna, så i det här exemplet räcker tre plintar per bärlina (2,5 m mellan). 2,5 ÷ 4 = 0,625 m, alltså uppfyller cc 556 rekommendationen.</li>
 <li><strong>Trall:</strong> 20 m² × 7,94 = 158,8 lm enligt tabellen. I praktiken behövs 4 000 ÷ 126 = 31,7, alltså 32 rader. Med 5,1-metersbrädor blir det 32 brädor och 163,2 lm, utan en enda skarv. Spillet stannar på knappt 3 procent.</li>
 <li><strong>Skruv:</strong> 32 rader × 10 bjälkar = 320 korsningar. Med två skruv per korsning blir det 640 skruv, 55 mm långa.</li>
 </ol>
@@ -6515,7 +6514,7 @@ const A_VIRKESATGANG_ALTAN_TRALLDACK_HTML = `
 <li><strong>Rörelsefog:</strong> 6 mm mot vägg, grund, pelare och fris. Börjar du läggningen mot huset hamnar den kluvna sista brädan i ytterkanten.</li>
 <li><strong>Fris:</strong> en tvärgående bräda som döljer ändträet kräver extra stöd i form av 45×95 spikreglar innanför den yttre bjälken.</li>
 <li><strong>Infästning:</strong> brädor från 95 mm bredd ska ha två skruv per bjälke, 30 mm från kanten. Smalare brädor (45 och 70 mm) fästs med en skruv i mitten. Förborra ändarna med 3,0–3,5 mm.</li>
-<li><strong>Skruv per m²:</strong> 28×120 ger 7,94 × 1,67 × 2 = cirka 26 skruv per m² vid cc 600, och cirka 40 vid cc 400. Lägg till extra vid skarvar och friser.</li>
+<li><strong>Skruv per m²:</strong> 28×120 ger 7,94 × 1,67 × 2 = cirka 27 skruv per m² vid cc 600, och cirka 40 vid cc 400. Lägg till extra vid skarvar och friser.</li>
 </ul>
 <p>Behöver du räkna bjälkar och plintar för en annan storlek fungerar <a href="/sv/verktyg/reglar-kalkylator">reglarkalkylatorn</a> för själva regelmängden. Spännvidderna kontrollerar du fortfarande mot tabellerna.</p>
 
@@ -6523,11 +6522,11 @@ const A_VIRKESATGANG_ALTAN_TRALLDACK_HTML = `
 <h3>Hur många löpmeter trall går det åt per kvm?</h3>
 <p>För 28×120 går det åt 7,94 lm/m², för 28×145 6,58 lm/m² och för 28×95 10,00 lm/m², exklusive spill. Värdena bygger på Svenskt Träs minsta kant-till-kant-avstånd: 126, 152 respektive 100 mm.</p>
 <h3>Vilket cc-avstånd ska reglarna ha för trall 28×120?</h3>
-<p>Högst 600 mm enligt Svenskt Trä, eftersom trallen är 28 mm tjock. Lägger du trallen diagonalt eller i fiskben bör du gå ner till cc 400, eftersom spannet längs brädan då blir längre.</p>
+<p>Högst 600 mm enligt Svenskt Trä, eftersom trallen är 28 mm tjock. Lägger du trallen diagonalt eller i fiskben blir spannet längs brädan längre – räkna då med tätare bjälkar, till exempel cc 400.</p>
 <h3>Vilken skruv ska man ha till trall 28×120?</h3>
 <p>Trallskruv som är 55 mm lång med 28 mm hals och minst 4,2 mm ytterdiameter, i rostfritt A2/A4 eller härdat stål med korrosionsskydd motsvarande C4. Vid pool, brygga eller kust gäller A4. Brädor som är 95 mm eller bredare får två skruv per bjälke.</p>
 <h3>Hur många skruv går det åt per kvadratmeter trall?</h3>
-<p>Med 28×120 och två skruv per korsning blir det cirka 26 skruv per m² vid cc 600 och cirka 40 vid cc 400. Räkna lite extra för skarvar, friser och skruv som går förlorad.</p>
+<p>Med 28×120 och två skruv per korsning blir det cirka 27 skruv per m² vid cc 600 och cirka 40 vid cc 400. Räkna lite extra för skarvar, friser och skruv som går förlorad.</p>
 <h3>Vad är en löpmeter?</h3>
 <p>En löpmeter är en meter virke räknat i längd, oavsett bredd. För att räkna om kvadratmeter till löpmeter multiplicerar du ytan med åtgången per m², till exempel 20 m² × 7,94 = 158,8 lm för 28×120.</p>
 <h3>Vilka längder finns trallvirke i?</h3>
@@ -6863,7 +6862,7 @@ const A_LEASA_ELLER_KOPA_MASKINER_BYGGFORETAG: BlogPost = {
 };
 
 const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
-<p>Byggavtalet ger ingen restidsersättning för den dagliga resan mellan hemmet och bygget – där betalas bara reskostnad, 2,50 kr per km när enkel resväg är längre än 2 km. Restid ersätts först när arbetstagaren reser till eller från en förrättningsort minst 70 km bort, och då med grundlön för högst 12 timmar per dygn minus samma dags arbetade timmar. Reglerna står i <a href="https://www.byggnads.se/49ec78/siteassets/kollektivavtal/byggavtalet-2025-digital-utgava-1.pdf" target="_blank" rel="noopener noreferrer">Byggavtalet 2025–2027 § 6</a>. Om ersättningen blir skattefri avgörs inte av avtalet utan av var den anställda har sitt tjänsteställe.</p>
+<p>Byggavtalet ger ingen restidsersättning för den dagliga resan mellan hemmet och bygget – där betalas bara reskostnad, 2,50 kr per km när enkel resväg är minst 2 km. Restid ersätts först när arbetstagaren reser till eller från en förrättningsort minst 70 km bort, och då med grundlön för högst 12 timmar per dygn minus samma dags arbetade timmar. Reglerna står i <a href="https://www.byggnads.se/49ec78/siteassets/kollektivavtal/byggavtalet-2025-digital-utgava-1.pdf" target="_blank" rel="noopener noreferrer">Byggavtalet 2025–2027 § 6</a>. Om ersättningen blir skattefri avgörs inte av avtalet utan av var den anställda har sitt tjänsteställe.</p>
 
 <h2>Daglig resa: reskostnadsersättning enligt § 6 punkt 1</h2>
 <p>Ersättningen gäller resor mellan den fasta bostaden och arbetsplatsen utanför arbetstiden. Resvägen räknas som kortaste farbara väg på allmän väg (punkt 3.5), och arbetstagaren får aldrig mer än för den faktiska resvägen och det faktiska ressättet (punkt 3.6). Den maximala ersättningen per dag beräknas på högst 120 km enkel resväg.</p>
@@ -6872,7 +6871,7 @@ const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
 <tbody>
 <tr><td>Egen bil</td><td>2,50 kr/km</td></tr>
 <tr><td>Kollektivtrafik eller annat färdmedel</td><td>Styrkt kostnad, högst 2,50 kr/km</td></tr>
-<tr><td>Samåkning – föraren</td><td>2,50 kr/km + 0,85 kr/km för varje passagerare</td></tr>
+<tr><td>Samåkning – föraren</td><td>2,50 kr/km + 0,85 kr/km per passagerare, räknat på passagerarens resväg</td></tr>
 <tr><td>Samåkning – passageraren</td><td>0,85 kr/km</td></tr>
 <tr><td>Arbetsgivaren ordnar transport</td><td>Ingen ersättning, utom 2,50 kr/km till och från upphämtningsplatsen (då gäller inte 2-kilometersgränsen)</td></tr>
 </tbody>
@@ -6891,7 +6890,7 @@ const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
 <li><strong>Alternativregeln:</strong> den som byter arbetsplats ofta men besöker arbetsgivarens lokaler, garage eller förråd mer än en gång i veckan har tjänstestället där.</li>
 <li><strong>Undantagsregeln:</strong> den som arbetar på skiftande platser och sällan besöker arbetsgivarens lokaler har tjänstestället i bostaden.</li>
 </ol>
-<p>Samma 225 kr kan alltså vara skattefria för en snickare som åker direkt hemifrån till skiftande byggen, men lön för en kollega som hämtar firmabilen i företagets garage varje morgon. Samåkningstillägget på 0,85 kr/km är enligt avtalet alltid skattepliktigt med sociala avgifter. I arbetsgivardeklarationen kryssas skattefri bilersättning i ruta 050, och det som överstiger 25 kr/mil redovisas som lön i ruta 011.</p>
+<p>Samma 225 kr kan alltså vara skattefria för en snickare som åker direkt hemifrån till skiftande byggen, men lön för en kollega som besöker företagets förråd flera gånger i veckan och därför har tjänstestället där. Samåkningstillägget på 0,85 kr/km är enligt avtalet alltid skattepliktigt med sociala avgifter. I arbetsgivardeklarationen kryssas skattefri bilersättning i ruta 050, och det som överstiger 25 kr/mil redovisas som lön i ruta 011.</p>
 
 <h2>Restid till och från förrättningsort</h2>
 <p>Restidsersättning finns bara i samband med förrättning, alltså arbete minst 70 km enkel resväg från bostaden (§ 6 punkt 2.7.2). Arbetstagaren har rätt till ersättning för den restid som är nödvändig för resan dit och hem, högst 12 timmar per dygn minskat med de timmar som arbetats samma dag. Restiden ersätts med grundlön enligt § 3, oavsett om den ligger under eller utanför ordinarie arbetstid.</p>
@@ -6909,7 +6908,7 @@ const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
 <p>En yrkesarbetare kör egen bil 310 km till en förrättning i oktober 2026. Resan tar 4 timmar och hen arbetar 5 timmar samma dag. Taket blir 12 − 5 = 7 timmar, så alla 4 restimmar ersätts:</p>
 <ul>
 <li>Restid: 4 tim × 203 kr = 812 kr – lön med skatteavdrag och arbetsgivaravgifter.</li>
-<li>Reskostnad: 310 km × 2,50 kr = 775 kr – skattefri, eftersom inställelseresan är en tjänsteresa och beloppet motsvarar 31 mil × 25 kr.</li>
+<li>Reskostnad: 310 km × 2,50 kr = 775 kr – normalt skattefri, eftersom inställelseresan är en tjänsteresa och beloppet motsvarar 31 mil × 25 kr (förutsatt att förrättningsorten inte är den anställdas tjänsteställe).</li>
 </ul>
 <p>Hade resan i stället tagit 9 timmar med 5 arbetade timmar samma dag, hade bara 7 restimmar ersatts. Veckovisa hemresor under en pågående förrättning är inte inställelse eller avflyttning, och enligt SKV 353 är hemresor som arbetsgivaren betalar lön.</p>
 
@@ -6933,7 +6932,7 @@ const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
 <h3>Får man betalt för restiden till jobbet varje dag enligt Byggavtalet?</h3>
 <p>Nej. För den dagliga resan mellan bostad och arbetsplats betalas bara reskostnadsersättning per kilometer. Restidsersättning med grundlön gäller resan till och från en förrättningsort minst 70 km bort.</p>
 <h3>Vilken milersättning gäller i Byggavtalet 2026?</h3>
-<p>För dagliga resor med egen bil 2,50 kr/km, alltså 25 kr/mil, när enkel resväg överstiger 2 km. Kör den anställda egen bil i tjänsten efter överenskommelse gäller i stället 30, 26 eller 24 kr/mil beroende på hur många mil som körts under kalenderåret.</p>
+<p>För dagliga resor med egen bil 2,50 kr/km, alltså 25 kr/mil, när enkel resväg är minst 2 km. Kör den anställda egen bil i tjänsten efter överenskommelse gäller i stället 30, 26 eller 24 kr/mil beroende på hur många mil som körts under kalenderåret.</p>
 <h3>Är reseersättningen från Byggavtalet skattefri?</h3>
 <p>Upp till 25 kr/mil när resan är en tjänsteresa, till exempel när bostaden är tjänsteställe eller vid inställelse till en förrättning. Resor till och från ett fast tjänsteställe är lön, och samåkningstillägget är alltid skattepliktigt.</p>
 <h3>Hur fungerar taket på 120 km?</h3>

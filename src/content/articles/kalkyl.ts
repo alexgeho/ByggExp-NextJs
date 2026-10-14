@@ -140,7 +140,7 @@ const UVARDE_HTML = `
 <p>Skillnaden mellan materialen är stor. 200 mm armerad betong har R = 0,2 / 2,3 = 0,09 och ger en vägg med U ≈ 3,9 utan isolering. 200 mm massivt trä ger R = 1,54 och U ≈ 0,59. Samma tjocklek glasull med λ 0,035 ger R = 5,7.</p>
 
 <h2>Räkneexempel: regelvägg med 45 + 170 mm isolering</h2>
-<p>Väggen består inifrån av gips 12,5 mm, ett installationsskikt med 45 mm isolering mellan 45 mm reglar, en stomme med 170 mm isolering mellan 45 mm reglar c/c 600, vindskydd och en ventilerad träfasad. Isoleringen har λ 0,035, gipsen λ 0,25 och träet λ 0,13. Luftspalten och fasaden räknas inte med, så R<sub>se</sub> = 0,13.</p>
+<p>Väggen består inifrån av gips 12,5 mm, ett installationsskikt med 45 mm isolering mellan liggande 45 mm reglar c/c 600, en stomme med 170 mm isolering mellan 45 mm reglar c/c 600, vindskydd och en ventilerad träfasad. Isoleringen har λ 0,035, gipsen λ 0,25 och träet λ 0,13. Luftspalten och fasaden räknas inte med, så R<sub>se</sub> = 0,13.</p>
 <div class="article-table"><table>
 <thead><tr><th>Skikt</th><th>Endast isolering</th><th>Med reglar (undre gränsvärde)</th></tr></thead>
 <tbody>
@@ -153,7 +153,7 @@ const UVARDE_HTML = `
 </tbody>
 </table></div>
 <p>Räknat som om väggen bara vore isolering blir U = 1 / 6,45 = <strong>0,155 W/m²K</strong>. Det är för optimistiskt, eftersom reglarna leder värme ungefär fyra gånger bättre än isoleringen.</p>
-<p>SS-EN ISO 6946 hanterar reglarna med två gränsvärden. Det <strong>undre</strong> får du genom att vikta lambda i de inhomogena skikten: med 45 mm regel per 600 mm är träandelen 7,5 %, och λ = 0,075 × 0,13 + 0,925 × 0,035 = 0,042. Det ger R″ = 5,41. Det <strong>övre</strong> får du genom att räkna parallella vägar – en genom isolering och en genom trä – och vikta deras U-värden efter area, vilket här ger R′ = 5,82. Väggens värmemotstånd är medelvärdet: R<sub>T</sub> = (5,82 + 5,41) / 2 = 5,62, och U = 1 / 5,62 = <strong>0,178 W/m²K</strong>.</p>
+<p>SS-EN ISO 6946 hanterar reglarna med två gränsvärden. Det <strong>undre</strong> får du genom att vikta lambda i de inhomogena skikten: med 45 mm regel per 600 mm är träandelen 7,5 %, och λ = 0,075 × 0,13 + 0,925 × 0,035 = 0,042. Det ger R″ = 5,41. Det <strong>övre</strong> får du genom att räkna parallella vägar genom väggen – isolering eller trä i vart och ett av de två korsande regelskikten – och vikta deras U-värden efter area, vilket här ger R′ = 5,82. Väggens värmemotstånd är medelvärdet: R<sub>T</sub> = (5,82 + 5,41) / 2 = 5,62, och U = 1 / 5,62 = <strong>0,178 W/m²K</strong>.</p>
 <p>7,5 % trä räknar bara med reglarna. Syll, hammarband, kortlingar och fönsteromfattningar höjer träandelen i en verklig vägg. Med 12 % trä blir U = 0,192 i samma vägg, alltså över kravet för väggar vid ändring.</p>
 
 <h2>Räkneexempel: vindsbjälklag med 500 mm lösull</h2>
@@ -707,9 +707,9 @@ const A_PUTS_MURBRUK_ATGANG_FASAD_HTML = `
 <div class="article-table"><table>
 <thead><tr><th>Skikt</th><th>Tjocklek</th><th>Åtgång torrbruk</th><th>Kg per mm och m²</th></tr></thead>
 <tbody>
-<tr><td>Grundning (vällingkonsistens)</td><td>3–4 mm</td><td>ca 5 kg/m²</td><td>1,8</td></tr>
-<tr><td>Grovputs/stockningsbruk, 0–3 mm</td><td>10–15 mm</td><td>ca 18–20 kg/m² per 10 mm</td><td>1,8–2,0</td></tr>
-<tr><td>Filtningsbruk, 0–1 mm</td><td>5 mm</td><td>ca 9 kg/m²</td><td>1,8</td></tr>
+<tr><td>Grundning (vällingkonsistens)</td><td>tunt skikt</td><td>ca 5 kg/m²</td><td>–</td></tr>
+<tr><td>Grovputs/stockningsbruk, kornstorlek 0–3 mm</td><td>10–15 mm</td><td>ca 18–20 kg/m² per 10 mm</td><td>1,8–2,0</td></tr>
+<tr><td>Filtningsbruk, kornstorlek 0–1 mm</td><td>5 mm</td><td>ca 9 kg/m²</td><td>1,8</td></tr>
 <tr><td>Ytputs/ädelputs</td><td>beror på struktur</td><td>ca 4–25 kg/m²</td><td>–</td></tr>
 </tbody>
 </table></div>
@@ -725,7 +725,7 @@ const A_PUTS_MURBRUK_ATGANG_FASAD_HTML = `
 <li><strong>Socklar och ytor under mark:</strong> cementbruk A.</li>
 <li><strong>Gammal oorganisk puts:</strong> nät över hela fasaden, sedan till exempel 10 mm putsbruk B som grundning och 10 mm putsbruk C som utstockning.</li>
 </ul>
-<p>Det sista fallet betyder dubbelt så mycket bruk per m² som en vanlig grundning. Renoverar du en gammal fasad blir åtgången därför betydligt högre än på nytt murverk med samma ytputs.</p>
+<p>I det sista fallet drar grundningen ensam cirka 18–20 kg/m², ungefär fyra gånger så mycket som en vanlig grundning. Renoverar du en gammal fasad blir åtgången därför betydligt högre än på nytt murverk med samma ytputs.</p>
 
 <h2>Räkneexempel: 150 m² fasad i tre skikt</h2>
 <p>Exemplet gäller en tegelfasad med 150 m² nettoyta efter avdrag för öppningar. Grovputsen läggs 12 mm och räknas med 2,0 kg per mm och m² för marginal. Ytputsen antas här vara 8 kg/m² – byt mot värdet i produktbladet för den ytputs du väljer. Spillet är satt till 10 % – vill du pröva andra påslag kan du räkna om mängderna i <a href="/sv/verktyg/spillprocent-kalkylator">spillprocent-kalkylatorn</a>.</p>
@@ -753,7 +753,7 @@ const A_PUTS_MURBRUK_ATGANG_FASAD_HTML = `
 <tr><td>LECA isoblock FIN 380 (10 block/m²)</td><td>16 kg</td></tr>
 </tbody>
 </table></div>
-<p>Blockvärdet kommer från <a href="https://benders.se/globalassets/c4-assets/document/PB-SE-LECA-Isoblock-FIN-380--2026-4610005.pdf" target="_blank" rel="noopener noreferrer">Benders produktblad för LECA isoblock FIN 380</a>. Stora block med tunnare fogar drar alltså en bråkdel av vad tegel gör per m² vägg. Rekommenderad fogtjocklek för Finjas färgade murbruk är 8–12 mm.</p>
+<p>Blockvärdet kommer från <a href="https://benders.se/globalassets/c4-assets/document/PB-SE-LECA-Isoblock-FIN-380--2026-4610005.pdf" target="_blank" rel="noopener noreferrer">Benders produktblad för LECA isoblock FIN 380</a>. Stora block med tunnare fogar drar alltså en bråkdel av vad tegel gör per m² vägg. Rekommenderad fogtjocklek för Finjas färgade murbruk är 8–12 mm – tjockare fogar ger högre åtgång än tabellen.</p>
 <p>Vill du räkna i liter: en 25 kg säck <a href="https://media.derome.se/medias/docus/62/10152927.pdf" target="_blank" rel="noopener noreferrer">Finja Murbruk B</a> ger cirka 16 liter färdigt bruk, alltså ungefär 1,5 kg torrbruk per liter. 70 kg/m² motsvarar därmed cirka 45 liter färdigt bruk per m² tegelvägg.</p>
 <p><strong>Exempel:</strong> 40 m² fasad i håltegel av svenskt format ger 40 × 70 = 2 800 kg murbruk, med 10 % spill 3 080 kg – 124 säckar à 25 kg eller drygt tre storsäckar. Kontrollera vilka förpackningar bruket finns i: Finjas Färgat Murbruk M5 levereras till exempel bara i storsäck och bulk.</p>
 
@@ -764,7 +764,7 @@ const A_PUTS_MURBRUK_ATGANG_FASAD_HTML = `
 <h3>Hur mycket putsbruk går det åt per m²?</h3>
 <p>För grovputs med 0–3 mm sand cirka 18–20 kg torrbruk per m² och 10 mm skikt, alltså 1,8–2,0 kg per mm. Grundning drar cirka 5 kg/m² och ytputs 4–25 kg/m² beroende på struktur.</p>
 <h3>Hur mycket murbruk går det åt till en tegelvägg?</h3>
-<p>Enligt Finja cirka 70 kg torrbruk per m² för håltegel i svenskt format, 65 kg för massivtegel i svenskt format och 60–65 kg för danskt format. Det motsvarar knappt tre 25 kg säckar per m² halvstensvägg.</p>
+<p>Enligt Finja cirka 70 kg torrbruk per m² för håltegel i svenskt format, 65 kg för massivtegel i svenskt format och 60–65 kg för danskt format. Det motsvarar knappt tre 25 kg säckar per m² vägg.</p>
 <h3>Hur många säckar puts behöver jag?</h3>
 <p>Multiplicera ytan med åtgången per m² för varje skikt, lägg på spill och dela med säckvikten. 100 m² grovputs i 10 mm med 20 kg/m² och 10 % spill blir 2 200 kg, alltså 88 säckar à 25 kg eller 110 säckar à 20 kg.</p>
 <h3>Hur tjockt ska grovputsen läggas?</h3>
@@ -933,7 +933,7 @@ const A_LAKT_AVSTAND_TAK_BERAKNING_HTML = `
 <p>Med takboard eller annat lätt undertak utelämnas ströläkten när bärläkten spikas direkt mot takstolarna. Spänns en duk över takstolarna sätts i stället ströläkt 25 × 48 mm mellan duken och bärläkten. Läktavståndet är detsamma som på råspont och papp. Takstolarnas c/c-avstånd avgör alltså läktdimensionen – mer om det i guiden om <a href="/sv/blog/berakna-takstolar-dimensionering-c-avstand">takstolar och c/c-avstånd</a>.</p>
 
 <h2>Läktavstånd för plåttak och pannplåt</h2>
-<p>På plåttak styrs avståndet av profilen och snölasten, inte av överlappet mellan pannor. Värdena nedan kommer från Plannjas monteringsanvisningar (<a href="https://www.plannja.se/konsument/support/ladda-ner/monteringsanvisning" target="_blank" rel="noopener noreferrer">plannja.se</a>). Andra tillverkares profiler kan ha andra mått.</p>
+<p>På plåttak styrs avståndet av profilen och snölasten, inte av överlappet mellan pannor. Värdena nedan kommer från Plannjas monteringsanvisningar för <a href="https://www.plannja.se/docs/default-source/documents-se/montering-uppdelade-2020/se-plannja-montering-regent-2026-1x.pdf" target="_blank" rel="noopener noreferrer">Regent</a>, <a href="https://www.plannja.se/docs/default-source/documents-se/montering-uppdelade-2020/se-plannja-montering-tak-vagg-profiler-2026-3.pdf" target="_blank" rel="noopener noreferrer">tak- och väggprofiler</a> och takpannor (Royal, utgåva 2025). Andra tillverkares profiler kan ha andra mått.</p>
 
 <h3>Pannplåt följer pannsteget</h3>
 <p>För pannprofilerad plåt ska bärläkten följa plåtens pannsteg. Mått A är avståndet mellan takfotsläkten och andra bärläkten, mått B gäller resten av takfallet.</p>
@@ -944,7 +944,7 @@ const A_LAKT_AVSTAND_TAK_BERAKNING_HTML = `
 <tr><td>Regent</td><td>350 mm</td><td>325 mm (340 med Kombiläkt)</td><td>45 × 70 vid snölast 1,0–2,5, 45 × 95 vid 3,0–4,0</td><td>14°</td></tr>
 </tbody>
 </table></div>
-<p>På underlagstak av träpanel (minst 17 mm) används bärläkt 25 × 50 mm upp till snölast 2,5 och 34 × 70 mm vid snölast 3,0–4,0, med ströläkt 25 × 50 mm c/c 600.</p>
+<p>På underlagstak av träpanel (minst 17 mm) används bärläkt 25 × 50 mm upp till snölast 2,5 och 34 × 70 mm vid snölast 3,0–4,0, med ströläkt 25 × 50 mm c/c 600. Mått A blir då något annorlunda, till exempel 340 mm för Regent med 25 × 50 – kontrollera tabellen i anvisningen.</p>
 
 <h3>Trapetsprofil (TP20 och liknande)</h3>
 <p>För trapetsprofiler som Plannja 20-105 och 20-75 på träpanel är bärläktavståndet c/c 500 mm och ströläkten ligger c/c 600 mm. Bärläkten är 25 × 50 mm upp till snölast 2,5 och 34 × 70 mm vid 3,0–4,0. På lätt underlagstak med takstolar c/c 1 200 mm är läkten bärande och avståndet beror på snölasten:</p>
@@ -963,7 +963,7 @@ const A_LAKT_AVSTAND_TAK_BERAKNING_HTML = `
 <li><strong>Bärläkt:</strong> 15 rader + takfotsläkt = 16 × 10 m = 160 löpmeter.</li>
 <li><strong>Ströläkt:</strong> 100 mm in från varje gavel ger 9 800 mm att fördela, 9 800 / 600 = 16,3 → 17 mellanrum, alltså 18 ströläkt × 5,4 m = cirka 97 löpmeter.</li>
 </ul>
-<p>Lägg till skarvar och kap innan du beställer. Övriga mängder för taket kan du ta fram i <a href="/sv/verktyg/tak-kalkylator">tak-kalkylatorn</a> och i guiden om <a href="/sv/blog/berakna-materialatgang-tak">materialåtgång för tak</a>.</p>
+<p>Räkna med ett påslag för skarvar och kap, till exempel 5–10 %, innan du beställer. Övriga mängder för taket kan du ta fram i <a href="/sv/verktyg/tak-kalkylator">tak-kalkylatorn</a> och i guiden om <a href="/sv/blog/berakna-materialatgang-tak">materialåtgång för tak</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vilket läktavstånd har betongpannor?</h3>

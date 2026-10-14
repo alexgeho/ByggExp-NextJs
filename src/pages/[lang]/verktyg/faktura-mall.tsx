@@ -125,12 +125,12 @@ export default function FakturaMallPage() {
           },
           {
             id: 'faktura-i-byggexp',
-            heading: 'Fakturera automatiskt i ByggExp',
+            heading: 'Fakturera i ByggExp',
             body: (
               <p>
-                Den här mallen är gratis att använda. I ByggExp skapar du fakturor med företagets
-                logotyp, får moms och ROT uträknat automatiskt och kan fakturera direkt utifrån loggad
-                tid, material och ÄTA – utan att skriva in raderna på nytt.
+                Den här mallen är gratis att använda. I ByggExp skapar du fakturan i webbadmin med
+                företagets logotyp. Moms och ROT-avdrag räknas ut på fakturan, och en godkänd ÄTA kan
+                bli en faktura utan att du skriver in raderna på nytt.
               </p>
             ),
           },
@@ -146,7 +146,7 @@ export default function FakturaMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Fakturera proffsigt i ByggExp',
-          text: 'Faktura med logotyp, moms och ROT – direkt från loggad tid och material. Boka en demo.',
+          text: 'Faktura med logotyp, moms och ROT-avdrag – och godkänd ÄTA blir faktura direkt. Boka en demo.',
           buttonLabel: 'Boka demo',
           href: `/${LOCALE}/contact`,
         }}

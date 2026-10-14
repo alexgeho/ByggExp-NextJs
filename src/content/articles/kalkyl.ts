@@ -1481,6 +1481,17 @@ const A_GOLVVARME_BERAKNING_EFFEKT_HTML = `
 <li><strong>Badrum och kalla zoner:</strong> c/c 100–150 mm</li>
 <li><strong>Övriga rum:</strong> c/c 150–200 mm</li>
 </ul>
+<h3>Hur många meter golvvärmeslang per m²?</h3>
+<p>Rörlängden per kvadratmeter är ungefär <strong>1 ÷ c/c i meter</strong>. Lägg sedan till anslutningsledningarna fram till fördelaren.</p>
+<div class="article-table"><table>
+<thead><tr><th>c/c</th><th>Golvvärmeslang per m²</th></tr></thead>
+<tbody>
+<tr><td>100 mm</td><td>ca 10 m</td></tr>
+<tr><td>150 mm</td><td>ca 6,7 m</td></tr>
+<tr><td>200 mm</td><td>ca 5 m</td></tr>
+<tr><td>300 mm</td><td>ca 3,3 m</td></tr>
+</tbody></table></div>
+<p>Exempel: 20 m² med c/c 150 mm ger cirka 20 × 6,7 = 134 m rör – alltså två slingor med 16 mm rör.</p>
 <p>Rörvalet styr hur lång varje slinga får vara innan tryckfallet blir för högt. Med 16 mm rör håller du slingan under 80–100 m (konservativt 60–70 m), och med 20 mm rör klarar du cirka 80–90 m. För långa slingor ger så högt tryckfall att du tvingas till en kraftfullare cirkulationspump — därför gör man alltid en tryckfallsberäkning vid dimensioneringen. Slingorna samlas i en fördelare (manifold) och injusteras rum för rum så att varje slinga får rätt flöde.</p>
 
 <h2>Elgolvvärme – dimensionering och materialberäkning</h2>
@@ -1526,6 +1537,8 @@ const A_GOLVVARME_BERAKNING_EFFEKT_HTML = `
 <p>För vattenburen värme används typiskt c/c 100–150 mm i badrum och kalla zoner och 150–200 mm i övriga rum. För elgolvvärme räknas c/c ut som kabelns lineära effekt delat på önskad yteffekt — till exempel 12 W/m ÷ 125 W/m² ≈ 10 cm.</p>
 <h3>Får jag installera elgolvvärme själv?</h3>
 <p>Nej. Elgolvvärme är en del av den fasta starkströmsanläggningen och ska installeras av ett registrerat elinstallationsföretag med auktoriserad elinstallatör. Du får ofta förbereda underlaget och lägga ut kabeln enligt anvisning, men kontrollmätning och inkoppling måste elföretaget göra — och kontrollen ska ske innan golvet spacklas.</p>
+<h3>Hur många meter golvvärmeslang går det åt per m²?</h3>
+<p>Ungefär 1 ÷ c/c i meter: cirka 10 m vid c/c 100 mm, 6,7 m vid 150 mm och 5 m vid 200 mm. Räkna till anslutningsledningarna fram till fördelaren.</p>
 <h3>Hur lång får en golvvärmeslinga vara?</h3>
 <p>Slinglängden begränsas av tryckfallet. Med 16 mm rör hålls slingan under 80–100 m (konservativt 60–70 m) och med 20 mm rör runt 80–90 m. En för lång slinga kräver en kraftfullare cirkulationspump, så gör alltid en tryckfallsberäkning vid dimensioneringen.</p>
 
@@ -1540,9 +1553,9 @@ const A_GOLVVARME_BERAKNING_EFFEKT: BlogPost = {
   title: "Golvvärme: så beräknar du effekt, slinglängd och c/c", slug: "golvvarme-berakning-effekt", locale: "sv",
   excerpt: "En praktisk guide för installatören: räkna effektbehov, slinglängd och c/c för både vattenburen och elgolvvärme, och håll dig inom regelverket.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/golvvarme-preview.webp", contentHtml: A_GOLVVARME_BERAKNING_EFFEKT_HTML,
-  seoTitle: "Golvvärme beräkning effekt & slinga | ByggExp", seoDescription: "Dimensionera vattenburen och elgolvvärme rätt: W/m², slinglängd, c/c och materialåtgång. Plus behörighetskrav och GVK-regler för våtrum.",
+  seoTitle: "Golvvärme beräkning: effekt per m², slang & c/c | ByggExp", seoDescription: "Räkna golvvärme: effekt i W/m², meter slang per m² (≈ 1 ÷ c/c), slinglängd och c/c för vattenburen och elgolvvärme – med räkneexempel.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/golvvarme-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T20:24:00.000Z", createdAt: "2026-08-19T20:24:00.000Z", updatedAt: "2026-08-19T20:24:00.000Z",
+  publishedAt: "2026-08-19T20:24:00.000Z", createdAt: "2026-08-19T20:24:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_TAPET_ATGANG_RULLAR_HTML = `

@@ -1646,7 +1646,7 @@ const ENKELT_TIDRAPPORTERINGSSYSTEM_HTML = `
 <ul>
 <li><strong>Stämpla in/ut i mobilen med GPS</strong> – tiden knyts till plats, inte till en terminal.</li>
 <li><strong>Timmarna kopplas till projektet</strong> du checkar in på.</li>
-<li><strong>OB och övertid räknas enligt byggavtalet</strong> – du slipper räkna för hand.</li>
+<li><strong>Timtyp per pass</strong> – normaltid, OB eller övertid märks direkt i appen och följer med i löneunderlaget.</li>
 <li><strong>Export till lön och faktura</strong> – timmarna blir färdigt underlag utan omtagning.</li>
 </ul>
 <figure class="web-shot"><img src="/landing/features/1arbetspass.webp" alt="Arbetspass i ByggExp – incheckning med GPS och timmar per projekt" width="1200" height="750" loading="lazy"><figcaption>I ByggExp stämplar laget in i appen, timmarna samlas per projekt och blir underlag till lön och faktura.</figcaption></figure>
@@ -1695,7 +1695,7 @@ const ENKELT_TIDRAPPORTERINGSSYSTEM_HTML = `
 <h3>Hur snabbt kan vi komma igång?</h3>
 <p>Med ett enkelt system är målet att vara igång samma dag: lägg upp projekt och anställda, ladda ner appen och stämpla in. Ingen längre införandeperiod.</p>
 <h3>Kan ett enkelt system ändå ge underlag till lön och faktura?</h3>
-<p>Ja. I ByggExp räknas OB och övertid enligt byggavtalet, och de registrerade timmarna blir både löneunderlag och fakturaunderlag – enkelheten ligger i flödet, inte i att skala bort funktioner.</p>
+<p>Ja. I ByggExp märks varje pass som normaltid, OB eller övertid, och de registrerade timmarna blir både löneunderlag och fakturaunderlag – enkelheten ligger i flödet, inte i att skala bort funktioner. Satserna för OB och övertid stämmer du av mot Byggavtalet; appen räknar inte ut dem automatiskt.</p>
 <h3>Funkar det för mindre byggföretag och hantverkare?</h3>
 <p>Ja, särskilt då. Mindre firmor har sällan tid för tunga system – ett enkelt system i mobilen passar vardagen. Se <a href="/sv/blog/tidrapportering-hantverkare">tidrapportering för hantverkare</a>.</p>
 `.trim();
@@ -1719,7 +1719,7 @@ const ENKELT_TIDRAPPORTERINGSSYSTEM: BlogPost = {
   isPublished: true,
   publishedAt: '2026-09-07T13:00:00.000Z',
   createdAt: '2026-09-07T13:00:00.000Z',
-  updatedAt: '2026-09-07T13:00:00.000Z',
+  updatedAt: '2026-10-14T12:00:00.000Z',
 };
 
 const A_KVALITETSPLAN_BYGG_HTML = `

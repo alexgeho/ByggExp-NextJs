@@ -604,7 +604,7 @@ const A_FOTODOKUMENTATION_APP_BYGG: BlogPost = {
 };
 
 const A_LONEPROGRAM_BYGG_HTML = `
-<p>Ett löneprogram för byggföretag ska göra en jobbig sak enkel: förvandla registrerade timmar till rätt lön – med OB, övertid och restid enligt Byggavtalet – utan att någon räknar för hand. Här går vi igenom vad ett löneprogram för bygg bör klara och hur ByggExp löser det.</p>
+<p>Ett löneprogram för byggföretag ska göra en jobbig sak enklare: att registrerade timmar blir ett korrekt löneunderlag – med OB, övertid och restid enligt Byggavtalet – utan att någon skriver av lappar. Här går vi igenom vad ett löneprogram för bygg bör klara, vad ByggExp gör och vad du själv stämmer av mot avtalet.</p>
 
 <h2>Vad ska ett löneprogram för bygg klara?</h2>
 <ul>
@@ -616,27 +616,28 @@ const A_LONEPROGRAM_BYGG_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>I ByggExp samlas arbetstid automatiskt i mobilen och blir <strong>löneunderlag ur samma timmar</strong> – samma data används även till <a href="/sv/blog/faktureringsprogram-bygg">fakturering</a> och <a href="/sv/blog/projekthantering-byggforetag">projektuppföljning</a>. Du registrerar en gång och slipper pussla ihop lönen från lappar och Excel varje månad.</p>
+<p>I ByggExp stämplar medarbetarna in och ut i mobilappen (iPhone och Android) med GPS, och timmarna hamnar på rätt projekt. På varje pass väljer medarbetaren timtyp – normal, övertid eller OB – och registrerar restid (km och minuter) och traktamente. Passen attesteras och exporteras som <strong>löneunderlag (CSV)</strong>, AGI-underlag och tidrapport i PDF eller Excel; med tillägget Integrationer även som SIE4-fil för Fortnox, Visma eller BL. Samma timmar används till <a href="/sv/blog/faktureringsprogram-bygg">fakturering</a> och <a href="/sv/blog/projekthantering-byggforetag">projektuppföljning</a>, så du slipper pussla ihop lönen från lappar och Excel varje månad.</p>
+<p>ByggExp räknar inte ut Byggavtalets regler för OB och övertid automatiskt. Timtypen väljs per pass, och satser och tidsgränser stämmer du av mot avtalet – se <a href="/sv/blog/ob-overtid-byggavtalet-rakna">så räknar du OB och övertid</a>.</p>
 <p><a href="/sv/contact">Boka en demo</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Vill du börja enkelt finns en gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
 <li><strong>Räkna om tiden manuellt.</strong> Dubbelarbete och fel vid varje lönekörning.</li>
-<li><strong>OB/övertid för hand.</strong> Lätt att missa tillägg enligt avtalet.</li>
+<li><strong>Fel timtyp på passet.</strong> Registreras övertid som normal tid försvinner tillägget ur underlaget.</li>
 <li><strong>Ingen projektkod.</strong> Då syns inte lönekostnaden per projekt.</li>
 </ul>
 
-<p>Ett löneprogram som bygger på de timmar teamet redan registrerar sparar tid varje månad – och ger rätt lön utan handräkning.</p>
+<p>Ett löneprogram som bygger på de timmar teamet redan registrerar sparar tid varje månad – och ger ett underlag som går att kontrollera mot avtalet.</p>
 `;
 
 const A_LONEPROGRAM_BYGG: BlogPost = {
   _id: "code-"+"loneprogram-bygg",
-  title: "Löneprogram för byggföretag – från timmar till rätt lön", slug: "loneprogram-bygg", locale: "sv",
-  excerpt: "Vad ett löneprogram för bygg bör klara: timmar → löneunderlag, OB/övertid/restid enligt Byggavtalet, semesterlön och export till lönesystemet. Så gör ByggExp det.", tag: "Digitalisering",
+  title: "Löneprogram för byggföretag – från timmar till löneunderlag", slug: "loneprogram-bygg", locale: "sv",
+  excerpt: "Vad ett löneprogram för bygg bör klara: timmar → löneunderlag, OB/övertid/restid enligt Byggavtalet och export till lönesystemet. Så gör ByggExp det – och vad du stämmer av själv.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_LONEPROGRAM_BYGG_HTML,
-  seoTitle: "Löneprogram för byggföretag – timmar till lön | ByggExp", seoDescription: "Löneprogram för byggföretag: registrerade timmar blir löneunderlag med OB, övertid, restid och semesterlön – exporterbart till lönesystemet. Så gör ByggExp det.",
+  seoTitle: "Löneprogram för byggföretag – timmar till lön | ByggExp", seoDescription: "Löneprogram för byggföretag: timmar blir löneunderlag med OB, övertid och restid per pass – exporterat som CSV till lönesystemet. Så gör ByggExp det.",
   seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T19:00:00.000Z", createdAt: "2026-08-20T19:00:00.000Z", updatedAt: "2026-08-20T19:00:00.000Z",
+  publishedAt: "2026-08-20T19:00:00.000Z", createdAt: "2026-08-20T19:00:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_UTLAGG_APP_BYGG_HTML = `

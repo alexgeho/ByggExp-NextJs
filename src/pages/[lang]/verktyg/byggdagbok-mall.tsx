@@ -321,7 +321,7 @@ export default function ByggdagbokMallPage() {
         faqHeading="Vanliga frågor om byggdagbok"
         faq={FAQ}
         cta={{
-          heading: 'För byggdagbok automatiskt i ByggExp',
+          heading: 'För byggdagbok digitalt i ByggExp',
           text: 'Dokumentera bygget, tiden och ekonomin i en app – från offert till lön. Boka en demo och se hur det fungerar.',
           buttonLabel: 'Boka demo',
           href: `/${LOCALE}/contact`,

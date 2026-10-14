@@ -134,8 +134,8 @@ export default function RestidsersattningKalkylatorPage() {
         faqHeading="Vanliga frågor om restids- och reseersättning"
         faq={FAQ}
         cta={{
-          heading: 'Rätt reseunderlag – automatiskt i ByggExp',
-          text: 'Låt tidrapporteringen fånga restid, resväg och timmar per projekt, så blir reseräkningen och lönen korrekt. Boka en demo.',
+          heading: 'Restid per pass i ByggExp',
+          text: 'Registrera restid i km och minuter direkt på arbetspasset i appen. Boka en demo.',
           buttonLabel: 'Boka demo',
           href: `/${LOCALE}/contact`,
         }}

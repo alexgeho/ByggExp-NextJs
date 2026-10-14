@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import SiteChat from "../components/ChatAssistant/SiteChat";
 import CookieConsent from "../components/CookieConsent/CookieConsent";
 import { installDownloadTracking } from "../lib/downloadTracking";
+import { captureUtm } from "../lib/leadForm";
 import "../styles/globals.scss";
 import "../styles/blog.scss";
 import "../styles/funktioner.scss";
@@ -29,6 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
   // Count every tool download (PDF/Excel/…) site-wide — see lib/downloadTracking.
   useEffect(() => {
     installDownloadTracking();
+    captureUtm();
   }, []);
 
   return (

@@ -47,6 +47,30 @@ export function hasLeadFormErrors(errors: LeadFormErrors) {
  */
 const PHONE_NOT_PROVIDED = "Ej angivet";
 
+// UTM of the visit's landing page (mail links carry utm_source=mailer), kept
+// for the session so a lead sent from another page is still attributed.
+const UTM_KEY = "byggexp.utm";
+
+export function captureUtm() {
+  try {
+    if (sessionStorage.getItem(UTM_KEY)) return;
+    const q = new URLSearchParams(window.location.search);
+    if (!q.get("utm_source")) return;
+    sessionStorage.setItem(
+      UTM_KEY,
+      JSON.stringify({ source: q.get("utm_source"), campaign: q.get("utm_campaign") || "" }),
+    );
+  } catch {}
+}
+
+function readUtm(): { source?: string; campaign?: string } {
+  try {
+    return JSON.parse(sessionStorage.getItem(UTM_KEY) || "null") || {};
+  } catch {
+    return {};
+  }
+}
+
 export function buildLeadPayload(
   name: string,
   email: string,
@@ -63,8 +87,12 @@ export function buildLeadPayload(
       typeof window !== "undefined"
         ? `${window.location.host}${window.location.pathname}`
         : fallbackSource,
+    ...(typeof window !== "undefined" && utmFields(readUtm())),
   };
 }
+
+const utmFields = (u: { source?: string; campaign?: string }) =>
+  u.source ? { "f-utm-source": u.source, "f-utm-campaign": u.campaign || "" } : {};
 
 /**
  * Gemensam regel för ALLA leadformulär på sajten (startsidans CTA + Kontakt):

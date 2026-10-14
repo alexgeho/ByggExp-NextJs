@@ -40,7 +40,7 @@ type ToolContent = {
 
 const CONTENT: Record<Locale, ToolContent> = {
   sv: {
-    metaTitle: 'Fall & lutning kalkylator – höjdskillnad, % & 1:X (gratis) | ByggExp',
+    metaTitle: 'Räkna ut fall & lutning – höjdskillnad, % och 1:X | ByggExp',
     description:
       'Räkna ut fall och lutning: höjdskillnad, procent och förhållande (1:X) utifrån längd och fall i mm/m. Bra för avlopp, mark och tak. Gratis, utan konto.',
     badge: 'Gratis kalkylator',

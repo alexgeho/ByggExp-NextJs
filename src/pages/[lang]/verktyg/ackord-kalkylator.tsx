@@ -48,7 +48,7 @@ export default function AckordKalkylatorPage() {
   const footerT = footerTranslations[LOCALE];
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/ackord-kalkylator`;
-  const metaTitle = 'Ackordskalkylator – räkna ackordsöverskott (Byggavtalet) | ByggExp';
+  const metaTitle = 'Ackordskalkylator – ackordsöverskott enligt Byggavtalet | ByggExp';
   const description =
     'Räkna ut ackordsöverskottet gratis: ackordssumma minus utbetalda förskott, granskningsarvode 1,5 % och fördelning i laget. För slutavräkning enligt Byggavtalet.';
 

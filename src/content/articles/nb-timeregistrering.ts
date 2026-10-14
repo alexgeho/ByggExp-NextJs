@@ -568,7 +568,7 @@ const S_SJEKKE_HMS_KORT_HTML = `
 <p>På bygge- og anleggsplasser skal alle som utfører arbeid ha gyldig HMS-kort, og kortet er en forutsetning for å stå på den elektroniske <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten (mannskapslisten)</a>. Å kontrollere kortene gjør det enklere å se at alle på plassen er registrert hos en seriøs arbeidsgiver.</p>
 
 <h2>Hva betyr et sperret eller utløpt kort?</h2>
-<p>Et kort kan bli sperret hvis virksomheten ikke lenger oppfyller kravene, eller løpe ut på gyldighetstiden. Da må arbeidsgiveren ordne opp og eventuelt <a href="/nb/blog/bestille-hms-kort">bestille nytt kort</a>. En person uten gyldig kort skal ikke føres på oversiktslisten.</p>
+<p>Et kort kan bli sperret hvis virksomheten ikke lenger oppfyller kravene, eller løpe ut på gyldighetstiden. Da må arbeidsgiveren ordne opp og eventuelt <a href="/nb/blog/bestille-hms-kort">bestille nytt kort</a>. En person uten gyldig kort skal ikke føres på oversiktslisten. Hvor lenge et kort varer, leser du i <a href="/nb/blog/hms-kort-gyldighet">HMS-kort gyldighet</a>.</p>
 
 <h2>Digital oversikt på plassen</h2>
 <p>Selve kortkontrollen bekrefter identitet og arbeidsgiver. For å vite hvem som faktisk er på jobb og når, bruker mange en app: i ByggExp sjekker de ansatte inn og ut med GPS, så du får en tidsstemplet oppmøteoversikt i tillegg til kortkontrollen. ByggExp erstatter ikke selve HMS-kortet.</p>
@@ -587,7 +587,7 @@ const S_SJEKKE_HMS_KORT_HTML = `
 
 const S_SJEKKE_HMS_KORT: BlogPost = {
   _id: 'code-nb-sjekke-hms-kort',
-  title: 'Sjekke om HMS-kort er gyldig – slik gjør du det',
+  title: 'Sjekke HMS-kort – slik kontrollerer du kortet',
   slug: 'sjekke-hms-kort',
   locale: 'nb',
   excerpt:
@@ -595,16 +595,16 @@ const S_SJEKKE_HMS_KORT: BlogPost = {
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: S_SJEKKE_HMS_KORT_HTML,
-  seoTitle: 'Sjekke HMS-kort – er kortet gyldig? | ByggExp',
+  seoTitle: 'Sjekk HMS-kort – slå opp kortnummer eller QR-kode | ByggExp',
   seoDescription:
-    'Slik sjekker du om et HMS-kort er gyldig: slå opp kortnummeret eller skann QR-koden. Hvorfor kontroll er viktig på byggeplassen, og hva sperret/utløpt kort betyr.',
+    'Sjekk HMS-kort: slå opp kortnummeret eller skann QR-koden og se om kortet er aktivt, sperret eller utløpt. Og hvem som kontrollerer kortene på plassen.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
   isPublished: true,
   publishedAt: '2026-09-07T14:20:00.000Z',
   createdAt: '2026-09-07T14:20:00.000Z',
-  updatedAt: '2026-09-07T14:20:00.000Z',
+  updatedAt: '2026-10-14T12:00:00.000Z',
 };
 
 const T_TIMELISTE_MAL_HTML = `
@@ -842,16 +842,16 @@ const G_HMS_KORT_GYLDIGHET: BlogPost = {
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: G_HMS_KORT_GYLDIGHET_HTML,
-  seoTitle: 'HMS-kort gyldighet – hvor lenge varer det? | ByggExp',
+  seoTitle: 'Hvor lenge er HMS-kort gyldig? Gyldighet og fornyelse | ByggExp',
   seoDescription:
-    'HMS-kort gyldighet: kortet varer inntil to år og bare så lenge ansettelsesforholdet består. Når du må fornye, og hva som gjør et kort ugyldig før utløpsdatoen.',
+    'Hvor lenge er HMS-kortet gyldig? Inntil to år – men det kan bli ugyldig før datoen. Når arbeidsgiveren må fornye, og hva som gjør kortet ugyldig.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
   isPublished: true,
   publishedAt: '2026-09-07T15:00:00.000Z',
   createdAt: '2026-09-07T15:00:00.000Z',
-  updatedAt: '2026-09-07T15:00:00.000Z',
+  updatedAt: '2026-10-14T12:00:00.000Z',
 };
 
 const BK_BYGGEKORT_HTML = `

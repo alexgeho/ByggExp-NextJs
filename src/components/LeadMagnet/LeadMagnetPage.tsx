@@ -1,7 +1,10 @@
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import type { ReactNode } from 'react';
 
-import type { CalcLocale } from '../../lib/locale';
+import { EN_CALC_SLUGS, NB_LIVE, NO_DOMAIN_LIVE, type CalcLocale } from '../../lib/locale';
+import { localeOrigin } from '../../lib/seo';
 import { gaEvent } from '../../lib/analytics';
 import EmbedSnippet from './EmbedSnippet';
 import ProductBanner from './ProductBanner';
@@ -96,6 +99,25 @@ export default function LeadMagnetPage({
   locale = 'sv',
   wide = false,
 }: LeadMagnetPageProps) {
+  // Reciprocal hreflang for calculators that ship sv + en (+ nb on byggexp.no).
+  // Without it Google served /en calculators for Swedish queries and treated the
+  // three versions as unrelated pages. Slug comes from the route, so no per-page
+  // wiring; templates and sv-only tools (not in EN_CALC_SLUGS) get nothing.
+  const { pathname } = useRouter();
+  const calcSlug = /^\/\[lang\]\/verktyg\/([a-z0-9-]+)$/.exec(pathname)?.[1];
+  const calcHreflangLocales: string[] =
+    calcSlug && EN_CALC_SLUGS.has(calcSlug)
+      ? ['sv', 'en', ...(NB_LIVE && NO_DOMAIN_LIVE ? ['nb'] : [])]
+      : [];
+  const hreflangAlternates = calcHreflangLocales.length
+    ? [
+        ...calcHreflangLocales.map((lang) => ({
+          hrefLang: lang,
+          href: `${localeOrigin(lang)}/${lang}/verktyg/${calcSlug}`,
+        })),
+        { hrefLang: 'x-default', href: `${localeOrigin('sv')}/sv/verktyg/${calcSlug}` },
+      ]
+    : [];
   // Funnel step 1 (view). embedSlug identifies the tool; falls back to the title.
   const toolId = embedSlug || title;
   useEffect(() => {
@@ -141,6 +163,13 @@ export default function LeadMagnetPage({
       : null;
   return (
     <article className={wide ? 'lead-magnet lead-magnet--wide' : 'lead-magnet'}>
+      {hreflangAlternates.length ? (
+        <Head>
+          {hreflangAlternates.map((alt) => (
+            <link key={alt.hrefLang} rel="alternate" hrefLang={alt.hrefLang} href={alt.href} />
+          ))}
+        </Head>
+      ) : null}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}

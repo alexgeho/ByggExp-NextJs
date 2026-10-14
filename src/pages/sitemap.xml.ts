@@ -83,10 +83,13 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
   });
 
   // Free tools. byggexp.se lists the full sv inventory; byggexp.no lists the
-  // nb tools hub (individual nb calculators are crawled via the hub's links).
+  // nb tools hub + the calculators that ship nb content (same set as /en).
   if (isNo) {
-    urls.push({ loc: `${localeOrigin('nb')}/nb/verktyg` });
     urls.push({ loc: `${localeOrigin('nb')}/nb/fa-offert` });
+    // CALC_PATHS starts with the 'verktyg' hub itself.
+    CALC_PATHS.forEach((path) => {
+      urls.push({ loc: `${localeOrigin('nb')}/nb/${path}` });
+    });
   } else {
     urls.push({ loc: `${localeOrigin('sv')}/sv/fa-offert` });
     SV_ONLY_PATHS.forEach((path) => {

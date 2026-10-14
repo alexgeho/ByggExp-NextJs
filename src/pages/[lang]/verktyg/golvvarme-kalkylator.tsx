@@ -56,7 +56,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     faqHeading: 'Vanliga frågor',
     faq: [
       { question: 'Hur lång slinga behöver jag för golvvärme?', answer: 'Ungefär ytan delat med c/c-avståndet: 20 m² med c/c 200 mm ger cirka 100 meter rör. Lägg till rör för tillopp och retur.' },
-      { question: 'Hur långt kan en slinga vara?', answer: 'Ofta max cirka 100–120 meter per slinga beroende på rördimension. Ange max slinglängd så räknas antal slingor ut.' },
+      { question: 'Hur långt kan en slinga vara?', answer: 'Som riktvärde högst cirka 90 m med 17 mm rör och 100 m med 20 mm rör (Uponor, vanlig villapump). 16 mm rör ger kortare slingor. Följ rörtillverkarens anvisning och ange max slinglängd, så räknas antal slingor ut.' },
       { question: 'Vilket c/c-avstånd ska jag ha?', answer: 'Vanligt är 150–300 mm beroende på rum och värmebehov. Tätare c/c ger mer rör men jämnare värme.' },
       { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
     ],
@@ -87,7 +87,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     faqHeading: 'Vanlige spørsmål',
     faq: [
       { question: 'Hvor lang sløyfe trenger jeg for gulvvarme?', answer: 'Omtrent arealet delt på senteravstanden: 20 m² med c/c 200 mm gir cirka 100 meter rør. Legg til rør for tilførsel og retur.' },
-      { question: 'Hvor lang kan en sløyfe være?', answer: 'Ofte maks cirka 100–120 meter per sløyfe avhengig av rørdimensjon. Angi maks sløyfelengde, så regnes antall sløyfer ut.' },
+      { question: 'Hvor lang kan en sløyfe være?', answer: 'Som veiledende verdi maks cirka 90 m med 17 mm rør og 100 m med 20 mm rør (Uponor, vanlig villapumpe). 16 mm rør gir kortere sløyfer. Følg rørprodusentens anvisning og angi maks sløyfelengde, så regnes antall sløyfer ut.' },
       { question: 'Hvilken c/c-avstand skal jeg ha?', answer: 'Vanlig er 150–300 mm avhengig av rom og varmebehov. Tettere c/c gir mer rør, men jevnere varme.' },
       { question: 'Koster det noe?', answer: 'Nei, kalkulatoren er gratis og krever ingen konto.' },
     ],
@@ -118,7 +118,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     faqHeading: 'Frequently asked questions',
     faq: [
       { question: 'How long a loop do I need for underfloor heating?', answer: 'Roughly the area divided by the c/c spacing: 20 m² at c/c 200 mm gives about 100 metres of pipe. Add pipe for supply and return.' },
-      { question: 'How long can a loop be?', answer: 'Often a max of about 100–120 metres per loop depending on pipe dimension. Enter the max loop length and the number of loops is calculated.' },
+      { question: 'How long can a loop be?', answer: 'As a guide, a maximum of about 90 m with 17 mm pipe and 100 m with 20 mm pipe (Uponor, standard house pump). 16 mm pipe gives shorter loops. Follow the pipe manufacturer’s instructions and enter the max loop length to calculate the number of loops.' },
       { question: 'Which c/c spacing should I use?', answer: 'Common is 150–300 mm depending on the room and heat demand. Closer c/c means more pipe but more even heat.' },
       { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
     ],

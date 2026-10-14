@@ -1563,7 +1563,7 @@ const A_GOLVVARME_BERAKNING_EFFEKT_HTML = `
 <tr><td>300 mm</td><td>ca 3,3 m</td></tr>
 </tbody></table></div>
 <p>Exempel: 20 m² med c/c 150 mm ger cirka 20 × 6,7 = 134 m rör – alltså två slingor med 16 mm rör.</p>
-<p>Rörvalet styr hur lång varje slinga får vara innan tryckfallet blir för högt. Med 16 mm rör håller du slingan under 80–100 m (konservativt 60–70 m), och med 20 mm rör klarar du cirka 80–90 m. För långa slingor ger så högt tryckfall att du tvingas till en kraftfullare cirkulationspump — därför gör man alltid en tryckfallsberäkning vid dimensioneringen. Slingorna samlas i en fördelare (manifold) och injusteras rum för rum så att varje slinga får rätt flöde.</p>
+<p>Rörvalet styr hur lång varje slinga får vara innan tryckfallet blir för högt. Som riktvärde anger <a href="https://www.uponor.com/sv-se/vvs/produkter/golvvarme" target="_blank" rel="noopener noreferrer">Uponor</a> högst cirka 100 m per slinga för 20 × 2 mm rör och högst 90 m för 17 × 2 mm rör, förutsatt en cirkulationspump dimensionerad för en normalstor villa. Klenare rör, som 16 mm, ger högre tryckfall per meter och därmed kortare slingor – följ alltid anvisningen för just ditt rör och din fördelare. För långa slingor ger så högt tryckfall att du tvingas till en kraftfullare cirkulationspump — därför gör man alltid en tryckfallsberäkning vid dimensioneringen. Slingorna samlas i en fördelare (manifold) och injusteras rum för rum så att varje slinga får rätt flöde.</p>
 
 <h2>Elgolvvärme – dimensionering och materialberäkning</h2>
 <p>Elgolvvärme dimensioneras efter den fria, värmbara golvytan. Dra av ytan under badkar, toalettstol och fast inredning — där ska ingen kabel ligga. När du vet ytan och önskad yteffekt räknar du fram c/c ur kabelns lineära effekt:</p>
@@ -1611,7 +1611,7 @@ const A_GOLVVARME_BERAKNING_EFFEKT_HTML = `
 <h3>Hur många meter golvvärmeslang går det åt per m²?</h3>
 <p>Ungefär 1 ÷ c/c i meter: cirka 10 m vid c/c 100 mm, 6,7 m vid 150 mm och 5 m vid 200 mm. Lägg till rör för anslutningsledningarna fram till fördelaren.</p>
 <h3>Hur lång får en golvvärmeslinga vara?</h3>
-<p>Slinglängden begränsas av tryckfallet. Med 16 mm rör hålls slingan under 80–100 m (konservativt 60–70 m) och med 20 mm rör runt 80–90 m. En för lång slinga kräver en kraftfullare cirkulationspump, så gör alltid en tryckfallsberäkning vid dimensioneringen.</p>
+<p>Slinglängden begränsas av tryckfallet. Som riktvärde anger Uponor högst cirka 100 m för 20 mm rör och 90 m för 17 mm rör med en vanlig villapump; 16 mm rör ger kortare slingor. Följ rörtillverkarens anvisning och gör alltid en tryckfallsberäkning vid dimensioneringen.</p>
 
 <h2>Kom igång</h2>
 <p>Räkna fram slinglängd och antal slingor på minuter med vår <a href="/sv/verktyg/golvvarme-kalkylator">golvvärmekalkylator</a> och för in resultatet i din offert. Vill du se hur ByggExp håller ihop tid och dagbok per projekt? <a href="/sv/contact">Boka en demo</a>.</p>

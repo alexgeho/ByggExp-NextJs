@@ -1956,12 +1956,12 @@ const A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND_HTML = `
 
 const A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND: BlogPost = {
   _id: "code-"+"berakna-takstolar-dimensionering-c-avstand",
-  title: "Takstolar – räkna antal och c-avstånd", slug: "berakna-takstolar-dimensionering-c-avstand", locale: "sv",
+  title: "Takstolar – c-avstånd, spännvidd och typer", slug: "berakna-takstolar-dimensionering-c-avstand", locale: "sv",
   excerpt: "Typer av takstolar med spännvidd och lutning, formeln för antal, varför 1 200 mm c-avstånd gäller även för tegel och vilka regler (BFS 2024:6) som styr dimensioneringen.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/takstolar-preview.webp", contentHtml: A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND_HTML,
-  seoTitle: "Takstolar: typer, spännvidd & dimensionering | ByggExp", seoDescription: "W-, WW-, ramverks- och saxtakstol med typisk spännvidd och lutning. Antal = taklängd ÷ c-avstånd + 1, 1 200 mm även för tegel, regler enligt BFS 2024:6.",
+  seoTitle: "Takstolar: c-avstånd, spännvidd & dimensionering | ByggExp", seoDescription: "Avstånd mellan takstolar: 1 200 mm c/c, även för tegel. W-, WW-, ramverks- och saxtakstol med typisk spännvidd och lutning, regler enligt BFS 2024:6.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/takstolar-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T14:30:00.000Z", createdAt: "2026-08-20T14:30:00.000Z", updatedAt: "2026-09-23T20:00:00.000Z",
+  publishedAt: "2026-08-20T14:30:00.000Z", createdAt: "2026-08-20T14:30:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_REGLAR_DIMENSIONER_C_AVSTAND_VAGG_HTML = `

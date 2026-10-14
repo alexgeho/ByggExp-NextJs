@@ -54,7 +54,7 @@ export const ARTICLE_INLINE_TOOLS: Record<string, InlineTool> = {
     position: 'top',
   },
   'berakna-takstolar-dimensionering-c-avstand': {
-    heading: 'Beräkna takstolar',
+    heading: 'Räkna antal takstolar',
     render: () => <TakstolarKalkylatorTool locale="sv" />,
     position: 'top',
   },

@@ -382,7 +382,7 @@ const KONTRAVG: BlogPost = {
 };
 
 const A_BYGGMOTESPROTOKOLL_MALL_HTML = `
-<p>Enligt AB 04 och ABT 06 kap. 3 § 3 för beställaren protokoll vid byggmötet och entreprenören justerar det, om parterna inte kommit överens om något annat. Det viktigaste med det: en anteckning i byggmötesprotokollet uppfyller avtalens krav på skriftlighet. En ÄTA-underrättelse eller ett anmält hinder som står i ett justerat protokoll räknas alltså som skriftligt lämnat – och det som saknas där får ni bevisa på annat sätt.</p>
+<p>Enligt AB 04 och ABT 06 kap. 3 § 3 för beställaren protokoll vid byggmötet och entreprenören justerar det, om parterna inte kommit överens om något annat (se till exempel <a href="https://www.byggvarlden.se/jurister-ar-tro-det-eller-ej-inte-nagra-gladjedodare/" target="_blank" rel="noopener noreferrer">juristernas genomgång i Byggvärlden</a>). Det viktigaste med det: en anteckning i byggmötesprotokollet uppfyller avtalens krav på skriftlighet. En ÄTA-underrättelse eller ett anmält hinder som står i ett justerat protokoll räknas alltså som skriftligt lämnat – och det som saknas där får ni bevisa på annat sätt.</p>
 
 <h2>Startmöte och byggmöte – vad avtalen säger</h2>
 <p>AB 04 införde ett obligatoriskt startmöte i kap. 3 § 2, och ABT 06 har samma ordning. Enligt Svensk Byggtjänsts genomgång i <a href="https://static.byggtjanst.se/amadocs/any_1_2005_4-11.pdf" target="_blank" rel="noopener noreferrer">AMA-nytt Anläggning 1/2005</a> gäller detta för startmötet:</p>

@@ -294,14 +294,14 @@ const MANGD_HTML = `
 <thead><tr><th>Post</th><th>Förteckning</th><th>Utfört</th><th>Ändring</th><th>Värde</th><th>À-pris gäller?</th></tr></thead>
 <tbody>
 <tr><td>Golv, 450 kr/m²</td><td>300 m²</td><td>330 m²</td><td>+10 %</td><td>13 500 kr</td><td>Ja, under 25 %</td></tr>
-<tr><td>Golv, 450 kr/m²</td><td>300 m²</td><td>390 m²</td><td>+30 %</td><td>40 500 kr</td><td>Kan omförhandlas</td></tr>
+<tr><td>Golv, 450 kr/m²</td><td>300 m²</td><td>390 m²</td><td>+30 %</td><td>40 500 kr</td><td>Kan omförhandlas för delen över 25 %</td></tr>
 <tr><td>Sockel, 95 kr/m</td><td>200 m</td><td>280 m</td><td>+40 %</td><td>7 600 kr</td><td>Ja, under 12 000 kr</td></tr>
 </tbody>
 </table></div>
 <p>À-priset gäller inte heller för arbete som tillkommer eller utgår under andra förutsättningar än dem priset bygger på, om kostnaderna påverkas. Enligt Liman räcker då inte subjektiva antaganden, utan förutsättningarna ska vara objektiva och förankrade i avtalet.</p>
 
 <h2>Är en ändrad mängd ett ÄTA-arbete?</h2>
-<p>AB 04 ger inget entydigt svar. I Svea hovrätts mål T 15105-22, refererat av <a href="https://kilpatrick.se/vad-avses-med-uppgift-i-ab-04-och-ar-mangdforandringar-ett-ata-arbete/" target="_blank" rel="noopener noreferrer">Kilpatrick</a>, var avtalet fast pris med prissatt mängdförteckning. Förteckningen angav 100 m², medan entreprenören hävdade att knappt 4 000 m² hade utförts. Hovrätten ansåg att merarbetet var kontraktsarbete och inte ett ÄTA-arbete som behövde beställas. Hur mycket mängden ökat var inte avgörande. Entreprenören fick ändå inte betalt, eftersom den större mängden inte var bevisad: mätfilen var osäker och mätteknikern hördes inte. Domen hade överklagats till Högsta domstolen när artikeln skrevs.</p>
+<p>AB 04 ger inget entydigt svar. I Svea hovrätts mål T 15105-22, refererat av <a href="https://kilpatrick.se/vad-avses-med-uppgift-i-ab-04-och-ar-mangdforandringar-ett-ata-arbete/" target="_blank" rel="noopener noreferrer">Kilpatrick</a>, var avtalet fast pris med prissatt mängdförteckning. Förteckningen angav 100 m², medan entreprenören hävdade att knappt 4 000 m² hade utförts. Hovrätten ansåg att merarbetet var kontraktsarbete och inte ett ÄTA-arbete som behövde beställas. Hur mycket mängden ökat var inte avgörande. Entreprenören fick ändå inte betalt, eftersom den större mängden inte var bevisad: mätfilen var osäker och mätteknikern hördes inte. Enligt Kilpatricks kommentar i februari 2025 hade domen överklagats till Högsta domstolen, och det var då oklart om prövningstillstånd skulle ges.</p>
 <p>Lärdomen är praktisk. Mät upp och dokumentera regleringsposterna löpande, gärna gemensamt med beställaren. Arbete som verkligen är nytt och saknar post hanteras som ÄTA, se <a href="/sv/blog/ata-hantering-mall">ÄTA-hantering</a>.</p>
 
 <h2>Vanliga frågor</h2>

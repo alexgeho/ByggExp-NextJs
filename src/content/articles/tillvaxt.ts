@@ -1191,9 +1191,9 @@ const A_STAMPELKLOCKA_APP_GPS: BlogPost = {
   title: "Stämpelklocka app med GPS för byggföretag", slug: "stampelklocka-app-gps-bygg", locale: "sv",
   excerpt: "Stämpelklocka som app: personalen checkar in och ut i mobilen och GPS bekräftar närvaron på arbetsplatsen. För både Android och iPhone. Så fungerar det för byggföretag.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_STAMPELKLOCKA_APP_GPS_HTML,
-  seoTitle: "Stämpelklocka app med GPS för bygg (Android & iPhone) | ByggExp", seoDescription: "Stämpelklocka som app med GPS för byggföretag: in- och utcheckning i mobilen, närvaro bekräftad på arbetsplatsen, för Android och iPhone. Timmarna blir lön och faktura.",
+  seoTitle: "Stämpelklocka app med GPS för bygg – 14 dagar gratis | ByggExp", seoDescription: "Stämpelklocka i mobilen för byggföretag: in- och utcheckning med GPS på arbetsplatsen, timmar per projekt och export till lön. För iPhone och Android.",
   seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-22T09:10:00.000Z", createdAt: "2026-08-22T09:10:00.000Z", updatedAt: "2026-08-22T09:10:00.000Z",
+  publishedAt: "2026-08-22T09:10:00.000Z", createdAt: "2026-08-22T09:10:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `

@@ -534,108 +534,108 @@ const FAKTURA: BlogPost = {
 };
 
 const PASLAG_HTML = `
-<p>Att lägga påslag på materialet du köper in är inte fusk eller girighet — det är en av de viktigaste marginalerna du har som hantverkare, och det är fullt lagligt. Ändå tvekar många att ta betalt för det, delvis på grund av en seglivad myt om en påhittad &quot;15 %-regel&quot;. Efter den här artikeln vet du vilka påslagsnivåer som håller i praktiken, hur du räknar momsen rätt, vad ROT betyder för materialet och hur du dokumenterar påslaget så att en kund inte kan hålla inne pengarna i efterhand.</p>
+<p>Vill du tjäna 20 procent av försäljningspriset på materialet måste påslaget vara 25 procent, inte 20. Påslag räknas på inköpspriset och marginal på utpriset, och skillnaden växer ju högre nivåerna blir. Vid ROT-jobb finns dessutom ett golv: enligt <a href="https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete/safungerarrotavdraget.4.5947400c11f47f7f9dd80004014.html" target="_blank" rel="noopener noreferrer">Skatteverket</a> får företaget inte ta mindre betalt för materialet än inköpspriset. Rabatt på material för att flytta pengar till den avdragsgilla arbetskostnaden är alltså inte tillåten.</p>
 
-<p>Vill du snabbt räkna fram rätt utpris och se skillnaden mellan påslag och marginal? Testa <a href="/sv/verktyg/paslag-marginal-kalkylator">vår gratis påslags- och marginalkalkylator &rarr;</a> medan du läser.</p>
-
-<h2>Är materialpåslag ens lagligt?</h2>
-<p>Ja. Den som tillhandahåller materialet — alltså du som köper in det, bär det hem, garanterar funktionen och hanterar eventuella reklamationer — har rätt att ta ett procentpåslag på inköpspriset. Påslaget ska täcka hantering, administration, garanti- och funktionsansvar, spill, kapitalbindning och den prisrisk du tar när du ligger ute med pengarna.</p>
-<p>Det finns dock en nyans du måste ha koll på. Vid <strong>konsumentjobb</strong> är prissättningen inte helt fri: priset, inklusive påslaget, ska vara <em>skäligt</em> enligt konsumenttjänstlagen 36 §. Vid <strong>entreprenad mellan företag</strong> styr istället avtalet och eventuella standardvillkor som AB 04. Skälighetskravet betyder inte att du ska hålla igen — det betyder att du ska kunna motivera din nivå. Och det är enklare än många tror.</p>
-
-<h2>Myten om &quot;15 %-regeln&quot;</h2>
-<p>Här reder vi ut den vanligaste missuppfattningen i hela branschen. Många tror att materialpåslaget &quot;får vara max 15 %&quot; enligt konsumenttjänstlagen. Det är fel. 15 %-regeln i lagen handlar inte om påslag alls — den handlar om <strong>ungefärliga prisuppgifter</strong>.</p>
-<p>Regeln säger att om du lämnat en ungefärlig prisuppgift till en konsument, får slutpriset inte överstiga det uppgivna priset med mer än 15 % (om ni inte avtalat ett annat pristak). Ett exempel:</p>
+<h2>Påslag och marginal – formlerna</h2>
 <ul>
-<li>Du lämnar ungefärligt pris: <strong>4 500 kr</strong></li>
-<li>Tak enligt 15 %-regeln: 4 500 &times; 1,15 = <strong>5 175 kr</strong></li>
+<li><strong>Utpris</strong> = inköpspris × (1 + påslag)</li>
+<li><strong>Påslag</strong> = (utpris − inköpspris) ÷ inköpspris</li>
+<li><strong>Marginal</strong> = (utpris − inköpspris) ÷ utpris</li>
+<li><strong>Från påslag till marginal:</strong> marginal = påslag ÷ (1 + påslag)</li>
+<li><strong>Från marginal till påslag:</strong> påslag = marginal ÷ (1 − marginal)</li>
 </ul>
-<p>Det här är alltså ett tak för hur mycket din <em>slutnota</em> får glida från en ungefärlig uppskattning — det säger ingenting om hur stort ditt materialpåslag får vara. Blanda inte ihop pristak med marginal. De är två helt olika saker.</p>
+<p>Räkna alltid exklusive moms. Momsen läggs på utpriset sist och påverkar varken påslaget eller marginalen.</p>
+<div class="article-table"><table>
+<thead><tr><th>Påslag</th><th>Ger marginal</th><th>Önskad marginal</th><th>Kräver påslag</th></tr></thead>
+<tbody>
+<tr><td>10 %</td><td>9,1 %</td><td>10 %</td><td>11,1 %</td></tr>
+<tr><td>15 %</td><td>13,0 %</td><td>15 %</td><td>17,6 %</td></tr>
+<tr><td>20 %</td><td>16,7 %</td><td>20 %</td><td>25,0 %</td></tr>
+<tr><td>25 %</td><td>20,0 %</td><td>25 %</td><td>33,3 %</td></tr>
+<tr><td>30 %</td><td>23,1 %</td><td>30 %</td><td>42,9 %</td></tr>
+<tr><td>50 %</td><td>33,3 %</td><td>–</td><td>–</td></tr>
+</tbody>
+</table></div>
+<p>Vill du slippa formlerna räknar <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn</a> åt båda hållen.</p>
 
-<h2>Vilka nivåer håller?</h2>
-<p>Branschpraxis för materialpåslag ligger typiskt på <strong>5–20 % på inköpspriset</strong>. El- och VVS-installatörer ligger ofta högre, runt 20–30 %, eftersom deras material bär mer ansvar och risk. Så här kan du tänka kring nivåerna:</p>
+<h2>Räkneexempel: material till ett badrum</h2>
+<p>Inköp enligt grossistfaktura: 18 400 kr exklusive moms. Påslag 15 procent.</p>
 <ul>
-<li><strong>Självkostnad + 10–15 %:</strong> tryggt, vanligt och lätt att försvara i vilken diskussion som helst.</li>
-<li><strong>20–25 %:</strong> vanligt förekommande och sällan ifrågasatt, särskilt för installatörsjobb.</li>
-<li><strong>30–40 %:</strong> förekommer, men kräver en tydlig förklaring och helst ett skriftligt avtal med kunden.</li>
+<li>Påslag: 18 400 × 0,15 = 2 760 kr</li>
+<li>Utpris: 18 400 + 2 760 = 21 160 kr exklusive moms</li>
+<li>Moms 25 %: 5 290 kr, att fakturera 26 450 kr</li>
+<li>Marginal: 2 760 ÷ 21 160 = 13,0 %</li>
 </ul>
-<p>Koppla nivån till verkligheten: större risk, längre garanti och mer hantering motiverar högre påslag. Ett dyrt specialbeställt material du får ligga ute med i veckor och ansvara för i flera år tål ett annat påslag än en påse skruv. Linjen som installatörsbranschen själv driver är transparens — våga sätta din nivå, men var beredd att förklara den.</p>
+<p>Har du räknat med 15 procent ”marginal” i kalkylen men lagt på 15 procent påslag, saknas ungefär 2 procentenheter på varje materialrad. På ett års inköp blir det lätt mer än det verkar.</p>
 
-<h2>Räkna rätt — moms och marginal</h2>
-<p>Här tappar många pengar av ren slarv. Räkna alltid påslaget på <strong>nettopriset</strong>, alltså inköpspriset exklusive moms, och lägg på moms (25 %) allra sist. Så här ser rätt väg ut för ett material som kostar 1 000 kr exkl. moms med 15 % påslag:</p>
+<h2>Vilken nivå ska påslaget ha?</h2>
+<p>Det finns ingen lagstadgad procentsats för materialpåslag, och Byggföretagen tar sedan 2015 inte längre fram schablonprocentsatser för debitering på löpande räkning (se förordet till <a href="https://byggforetagen.se/app/uploads/2022/08/Formula%CC%88r_LR06.pdf" target="_blank" rel="noopener noreferrer">formulär LR06</a>). Nivån är alltså din egen, och den går att räkna fram. Påslaget ska bära det som materialet kostar dig utöver fakturan: inköpstid, hämtning, kapitalbindning, returer och risken för reklamationer.</p>
+<p><strong>Exempel med hypotetiska siffror:</strong> en firma köper material för 1 200 000 kr per år. Inköp och hämtning tar 150 timmar à 550 kr i intern kostnad (82 500 kr). Bilkostnaden för hämtningarna är 20 000 kr och reklamationer på material 12 000 kr. Summan, 114 500 kr, är 9,5 procent av inköpen. Under den nivån går materialet med förlust. Vill firman ha 5 procent vinst på materialet ovanpå det hamnar påslaget runt 15 procent.</p>
+<p>Gör samma räkning med dina egna siffror ur bokföringen. Det är också det bästa svaret om en kund ifrågasätter nivån.</p>
+
+<h2>Konsumentjobb: skäligt pris och 15-procentsregeln</h2>
+<p>Har ni inte kommit överens om priset ska konsumenten enligt <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/konsumenttjanstlag-1985716_sfs-1985-716/" target="_blank" rel="noopener noreferrer">konsumenttjänstlagen 36 §</a> betala vad som är skäligt med hänsyn till tjänstens art, omfattning och utförande, gängse pris för motsvarande tjänster och omständigheterna i övrigt. Ett påslag som inte står i avtalet prövas alltså mot vad andra tar.</p>
+<p>Samma paragraf säger att en ungefärlig prisuppgift inte får överskridas med mer än 15 procent, om ni inte avtalat en annan gräns. Regeln gäller slutpriset, inte storleken på påslaget. Enligt 40 § ska du dessutom lämna en specificerad räkning om konsumenten begär det, och då syns materialraderna.</p>
+<p>Standardavtalen för konsumenter har en egen ruta för påslaget. I <a href="https://byggtjanstcms.byggtjanst.se/globalassets/pdf/entreprenadkontrakt-abs-18.pdf" target="_blank" rel="noopener noreferrer">Entreprenadkontrakt ABS 18</a>, som gäller ny- och tillbyggnad av småhus, debiteras material på löpande räkning ”med självkostnad med tillägg för entreprenörarvode på självkostnaderna om __ %”. Beställaren har rätt att granska originalverifikationerna. Vid reparation och ombyggnad gäller i stället Hantverkarformuläret, och enligt <a href="https://byggforetagen.se/app/uploads/2020/01/ifyllnadshjalp-hantverkarformularet-17.pdf" target="_blank" rel="noopener noreferrer">Byggföretagens ifyllnadshjälp</a> fungerar påslaget där på samma sätt: ett procentuellt entreprenörarvode på kostnaderna som ska täcka centraladministration, räntor, vinst och risk. Skriv in procentsatsen, så blir det aldrig en skälighetsfråga.</p>
+
+<h2>ROT-avdrag: materialet betalas fullt ut</h2>
+<p>Skatteverket är tydligt: materialkostnaden ger inte rätt till rotavdrag, och kunden ska betala den i sin helhet. Bara arbetad tid på plats ger avdrag, med högst 30 procent av arbetskostnaden och högst 50 000 kr per person och år. Fakturan bör skilja på arbetad tid, material och övriga kostnader som resor, maskiner och administration. Det innebär också att en framkörningsavgift, som är en resekostnad, inte ingår i underlaget.</p>
+<div class="article-table"><table>
+<thead><tr><th>Fakturarad</th><th>Inkl. moms</th><th>Rotavdrag</th></tr></thead>
+<tbody>
+<tr><td>Arbete (32 000 kr exkl. moms)</td><td>40 000 kr</td><td>12 000 kr</td></tr>
+<tr><td>Material inkl. 15 % påslag</td><td>26 450 kr</td><td>0 kr</td></tr>
+<tr><td>Summa</td><td>66 450 kr</td><td>12 000 kr</td></tr>
+<tr><td>Kunden betalar</td><td colspan="2">54 450 kr</td></tr>
+</tbody>
+</table></div>
+<p>Påslaget ligger kvar på materialraden och påverkar inte avdraget. Kontrollera resten av fakturans uppgifter med <a href="/sv/blog/byggfaktura-checklista-rot">checklistan för byggfaktura med ROT</a>.</p>
+
+<h2>Entreprenörsarvode enligt AB 04 och ABT 06</h2>
+<p>Mellan företag, på löpande räkning enligt självkostnadsprincipen, finns inget separat materialpåslag. AB 04 och ABT 06 kapitel 6 § 9 räknar upp vilka kostnader som ersätts: material och varor, arbetsledning, arbetare, hjälpmedel, underentreprenader, försäkringar och avgifter samt övriga kostnader (punkt 1–7). Ovanpå dem kommer entreprenörsarvodet (punkt 8), som ett procentpåslag exklusive moms. Paragrafen återges i <a href="https://byggforetagen.se/app/uploads/2022/08/Formula%CC%88r_LR06.pdf" target="_blank" rel="noopener noreferrer">Byggföretagens formulär LR06</a>.</p>
 <ul>
-<li>Nettopris: 1 000 kr</li>
-<li>Påslag 15 %: +150 kr &rarr; 1 150 kr</li>
-<li>Moms 25 %: +287,50 kr &rarr; <strong>1 437,50 kr att fakturera</strong></li>
+<li><strong>8 a:</strong> arvode i procent av dina kostnader enligt punkt 1–7.</li>
+<li><strong>8 b:</strong> arvode i procent av kostnaden för arbetare, hjälpmedel, material eller varor som beställaren själv tillhandahåller.</li>
+<li><strong>§ 10 p. 2:</strong> arvodet omfattar vinst, räntor och centraladministration, med hänsyn till eventuella årsomsättningsrabatter. Övriga rabatter ska tillgodoräknas beställaren.</li>
+<li><strong>§ 10 p. 4:</strong> beställaren har rätt att granska samtliga originalverifikationer.</li>
 </ul>
-<p>Det vanligaste felet är att lägga moms på inköpet, sedan påslag, sedan moms igen — det blir dubbel moms och en faktura som inte håller. Rent matematiskt spelar ordningen ingen roll (1 000 &times; 1,15 &times; 1,25 blir samma som 1 000 &times; 1,25 &times; 1,15), men fakturan måste tydligt visa nettopris, påslag och moms var för sig.</p>
-<p>En annan sak att hålla isär: <strong>påslag</strong> räknas på inköpspriset, <strong>marginal</strong> räknas på utpriset. 20 % påslag är inte samma sak som 20 % marginal. Räknar du fel här luras du själv på lönsamhet. Kalkylatorn ovan visar båda samtidigt så du ser vad du faktiskt tjänar.</p>
-
-<h2>ROT 2026 och materialet — vad du MÅSTE veta</h2>
-<p>ROT-avdraget är 2026 tillbaka på <strong>30 % av arbetskostnaden</strong>. Den tillfälliga höjningen till 50 % gällde bara 12 maj–31 december 2025 och är borta. Taket är 50 000 kr per person och år, och ROT och RUT tillsammans max 75 000 kr per år. Avgörande är betalningsdatumet — betalas fakturan 2026 gäller 30 %, oavsett när jobbet utfördes.</p>
-<p>Det viktigaste för din prissättning: <strong>ROT gäller aldrig material</strong>, bara arbetskostnad. Ditt materialpåslag ger alltså aldrig något ROT-avdrag för kunden. På fakturan ska arbetskostnad och materialkostnad redovisas separat.</p>
-<p>Frestelsen att &quot;flytta&quot; arbetskostnad in i materialpriset — eller tvärtom — för att pynta ROT-underlaget är otillåten och felaktig. Håll de två posterna rena. Ditt materialpåslag lönar sig helt på din sida av kalkylen ändå; det behöver inte gömmas.</p>
-
-<h2>Skriftligt avtal = ditt viktigaste skydd</h2>
-<p>Om en konsument bestrider ditt påslag som oskäligt får hen betala den skäliga delen och hålla inne resten tills saken är utredd. Skäligheten bedöms då mot vad materialet och tjänsten normalt kostar — jämförelseofferter blir bevis. Det enskilt viktigaste skyddet mot att hamna i den situationen är att <strong>avtala påslagets storlek skriftligt innan arbetet startar</strong>. Utan avtal hamnar du i en skälighetsdiskussion; med avtal har ni redan kommit överens.</p>
-<p>Se till att din offert innehåller:</p>
-<ul>
-<li>Påslagets storlek i procent, tydligt angivet.</li>
-<li>Om priset är <strong>fast</strong> eller en <strong>ungefärlig uppgift</strong> (kom ihåg 15 %-taket på det senare).</li>
-<li>En prisjusteringsklausul om materialpriser stiger under jobbet — vid fast pris bär du annars risken själv och får inte ta mer betalt utan ett sådant förbehåll.</li>
-<li>Separata rader för arbete och material inför ROT.</li>
-</ul>
-<p>En genomarbetad offert löser det mesta i förväg. Läs mer i vår guide om att <a href="/sv/blog/skriva-offert">skriva offert</a>.</p>
-
-<h2>Entreprenad och B2B — kort om självkostnadsprincipen</h2>
-<p>Jobbar du mot andra företag på löpande räkning enligt självkostnadsprincipen (AB 04 / ABT 06 kap 6 § 9) fungerar det annorlunda. Då ersätts dina faktiska kostnader — material, arbete, underentreprenörsfakturor — plus ett <strong>entreprenörarvode</strong>, ett procentpåslag för central administration och vinst. Storleken är inte fastslagen i AB 04 utan ska avtalas mellan parterna, och både huvud- och underentreprenör får lägga sitt eget påslag. Principen är densamma som i konsumentledet: påslaget är legitimt, men skriv ner nivån.</p>
-
-<h2>Vanligaste misstagen</h2>
-<ul>
-<li>Att tro att påslaget &quot;måste vara 15 %&quot; — det är en myt.</li>
-<li>Att räkna påslag på bruttopris och råka dubbelmomsa fakturan.</li>
-<li>Att förväxla påslag med marginal och underprissätta sig själv.</li>
-<li>Att lämna fast pris utan prisjusteringsklausul när materialpriserna rör sig.</li>
-<li>Att inte skriva ner påslaget innan start — och sedan fastna i en skälighetstvist.</li>
-<li>Att blanda arbete och material på fakturan och krångla till ROT.</li>
-</ul>
-
-<h2>Så gör du i ByggExp</h2>
-<p>I ByggExp bygger du offerten med separata rader för arbete och material, så att påslag, moms och ROT-underlag hamnar rätt från början. Du sätter din påslagsnivå en gång och återanvänder den, skriver in prisjusteringsklausulen som standardtext och tar med kundens godkännande skriftligt — precis det som skyddar dig om ett pris ifrågasätts senare. När jobbet är klart går offerten vidare till faktura utan att du behöver räkna om något. Verktyget sätter inte din prisstrategi åt dig, men det ser till att siffrorna du bestämt faktiskt hamnar rätt hela vägen.</p>
+<p>Procentsatsen anges inte i AB 04. Enligt kommentaren till paragrafen kan parterna fastställa den i kontraktshandlingarna, för att slippa diskutera vad som är ett skäligt arvode. Byggherrarnas <a href="https://www.byggherre.se/media/4630/v%C3%A4gledning-om-till%C3%A4mpning-av-sj%C3%A4lvkostnadsprincipen.pdf" target="_blank" rel="noopener noreferrer">vägledning om självkostnadsprincipen</a> beskriver arvodet som projektets täckningsbidrag till entreprenörens verksamhet, och centraladministration som kostnader ”ovanför arbetsplatsen”.</p>
+<p><strong>Exempel:</strong> material med listpris 100 000 kr som du får för 88 000 kr tack vare en projektrabatt på 12 procent. Avtalat arvode är 10 procent (exempelsiffra). Rätt debitering blir 88 000 + 8 800 = 96 800 kr. Att fakturera listpriset plus arvode, alltså 110 000 kr, strider mot § 10, eftersom rabatter som inte är årsomsättningsrabatter tillhör beställaren.</p>
+<p>Vid fast pris gäller inget av detta. Där ligger påslaget inbakat i priset och redovisas inte. Skillnaderna mellan formerna går vi igenom i <a href="/sv/blog/fast-pris-eller-lopande-rakning">fast pris eller löpande räkning</a> och <a href="/sv/blog/oppen-bok-riktkostnad-entreprenad">öppen bok och riktkostnad</a>.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Hur stort materialpåslag får jag ta?</h3>
-<p>Det finns ingen fast lagstadgad gräns. Branschpraxis ligger på 5–20 %, installatörer ofta 20–30 %. Vid konsumentjobb ska priset vara skäligt, men påslag upp mot 20–25 % är i praktiken mycket svårt att få underkänt. Högre nivåer kräver tydlig motivering och helst avtal.</p>
-<h3>Betyder 15 %-regeln att påslaget måste vara max 15 %?</h3>
-<p>Nej. 15 %-regeln i konsumenttjänstlagen handlar om att ett slutpris inte får överstiga en <em>ungefärlig prisuppgift</em> med mer än 15 %. Den säger ingenting om hur stort materialpåslaget får vara.</p>
-<h3>Ger materialpåslaget kunden ROT-avdrag?</h3>
-<p>Nej. ROT gäller bara arbetskostnaden — 30 % 2026, max 50 000 kr per person och år. Material ger aldrig ROT, oavsett påslag. Redovisa alltid arbete och material separat på fakturan.</p>
-<h3>Kan kunden vägra betala mitt påslag?</h3>
-<p>En konsument kan hålla inne den del av priset som bedöms oskälig, men måste betala den skäliga delen. Har ni avtalat påslagets storlek skriftligt före start står du mycket starkare — då är nivån redan överenskommen.</p>
-
-<h2>Kom igång</h2>
-<p>Sätt rätt påslag och se din faktiska marginal med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn</a>, och skriv in nivån direkt i <a href="/sv/verktyg/offert-mall">vår offertmall</a>. Vill du se hur hela flödet från offert till faktura fungerar i praktiken? <a href="/sv/contact">Boka en demo &rarr;</a></p>
-
-<p>Relaterat: <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a> &middot; <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a> &middot; <a href="/sv/blog/offert-vvs-elektriker-rormokare">Offert för VVS, el &amp; rör</a></p>
+<h3>Vad är skillnaden mellan påslag och marginal?</h3>
+<p>Påslag räknas på inköpspriset och marginal på försäljningspriset. 25 procent påslag ger 20 procent marginal, eftersom 25 ÷ 125 = 0,20.</p>
+<h3>Hur räknar man ut påslag i procent?</h3>
+<p>Ta utpriset minus inköpspriset och dela med inköpspriset. Köper du för 800 kr och säljer för 1 000 kr blir påslaget 200 ÷ 800 = 25 procent, medan marginalen är 200 ÷ 1 000 = 20 procent.</p>
+<h3>Hur stort påslag på material får en hantverkare ta?</h3>
+<p>Det finns ingen lagstadgad gräns. Mot konsument ska priset vara skäligt om det inte är avtalat, enligt konsumenttjänstlagen 36 §. Skriv därför in påslaget i procent i offerten eller kontraktet – i ABS 18 finns en färdig rad för det.</p>
+<h3>Ger material rätt till rotavdrag?</h3>
+<p>Nej. Enligt Skatteverket ger bara arbetskostnaden avdrag. Materialet betalas fullt ut och får inte prissättas lägre än inköpspriset, och resor, maskiner och administration ingår inte heller.</p>
+<h3>Vad är entreprenörsarvode?</h3>
+<p>Det är det procentuella påslag som entreprenören får på sina verifierade självkostnader vid löpande räkning enligt AB 04 och ABT 06 kapitel 6 § 9 punkt 8. Det ska täcka vinst, räntor och centraladministration, och procentsatsen avtalas mellan parterna.</p>
+<h3>Får man lägga entreprenörsarvode på underentreprenörens faktura?</h3>
+<p>Ja. Underentreprenader är punkt 5 bland kostnaderna i kapitel 6 § 9, och arvodet enligt punkt 8 a räknas på punkterna 1–7. Rabatter som inte är årsomsättningsrabatter ska dock tillgodoräknas beställaren.</p>
 `.trim();
 
 const PASLAG: BlogPost = {
   _id: "code-paslag-pa-material",
-  title: "Materialpåslag för hantverkare — så sätter du ett lagligt och lönsamt påslag (2026)",
+  title: "Påslag på material – påslag, marginal och entreprenörsarvode",
   slug: "paslag-pa-material",
   locale: "sv",
-  excerpt: "Materialpåslag är din rätt och en av dina viktigaste marginaler — här är nivåerna som håller, momsen rätt räknad och avtalet som skyddar dig.",
+  excerpt: "Formlerna för påslag och marginal med omräkningstabell, vad konsumenttjänstlagen och ABS 18 säger om priset, varför materialet aldrig ger ROT och hur entreprenörsarvodet fungerar enligt AB 04.",
   tag: "Ekonomi",
   coverImageUrl: "/landing/verktyg/paslag-preview.webp",
   contentHtml: PASLAG_HTML,
-  seoTitle: "Materialpåslag hantverkare 2026 | ByggExp",
-  seoDescription: "Så sätter du ett lagligt och lönsamt materialpåslag som hantverkare: branschnivåer 5–20 %, momsen rätt, ROT-fällan och avtalet som skyddar dig.",
+  seoTitle: "Påslag på material: påslag vs marginal | ByggExp",
+  seoDescription: "25 % påslag ger 20 % marginal. Formler och tabell, material och ROT enligt Skatteverket och entreprenörsarvode enligt AB 04 kap. 6 § 9 – med räkneexempel.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/paslag-preview.webp`,
   canonicalUrl: "",
   noIndex: false,
   isPublished: true,
   publishedAt: "2026-08-18T09:00:00.000Z",
   createdAt: "2026-08-18T09:00:00.000Z",
-  updatedAt: "2026-08-18T09:00:00.000Z",
+  updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const EFAKTURA_HTML = `
@@ -1765,85 +1765,98 @@ const A_BOKFORING_ENSKILD_FIRMA_BYGG: BlogPost = {
 };
 
 const A_TRAKTAMENTE_BYGGNADSARBETARE_2026_HTML = `
-<p>Många byggföretag betalar ut traktamente varje månad utan att veta att en stor del av det faktiskt är skattepliktig lön. Kollektivavtalets traktamente och Skatteverkets skattefria schablon är två helt olika saker – och när de inte överlappar hamnar mellanskillnaden som lön med arbetsgivaravgifter. För inkomstår 2026 är de skattefria beloppen 300 kr för hel dag, 150 kr för halv dag och 150 kr för natt, förutsatt att två grundvillkor är uppfyllda.</p>
+<p>Byggavtalets traktamente är 450 kr per dag från 1 januari 2026 och betalas när arbetstagaren övernattar på en förrättningsort minst 70 km från bostaden. Beloppet följer Skatteverkets skattefria nivå: 300 kr för hel dag plus 150 kr i nattschablon blir exakt 450 kr. En vanlig vecka på förrättning kan därför betalas helt skattefritt de första tre månaderna – förutsatt att den anställda själv ordnar boendet. Det som alltid blir lön är förrättningstillägget, och efter tre månader på samma ort börjar även en del av traktamentet beskattas.</p>
 
-<p>Ett korrekt traktamente bygger på korrekta underlag. Har du inte tidrapporter och reseuppgifter som visar övernattning och avstånd blir det omöjligt att styrka skattefriheten – börja därför med vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall -></a> för att få dokumentationen på plats.</p>
-
-<h2>Skatteverkets skattefria belopp 2026 (inrikes)</h2>
-<p>För tjänsteresor inom Sverige gäller följande schablonbelopp för inkomstår 2026, fastställda i Skatteverkets rättsliga vägledning:</p>
+<h2>Vad Byggavtalet säger om traktamente 2026</h2>
+<p>Reglerna finns i <a href="https://www.byggnads.se/49ec78/siteassets/kollektivavtal/byggavtalet-2025-digital-utgava-1.pdf" target="_blank" rel="noopener noreferrer">Byggavtalet 2025–2027 § 6 punkt 2</a>. Avtalet följer Skatteverkets maximibelopp: när det skattefria beloppet ändras, ändras avtalets belopp vid samma tidpunkt. Därför höjde parterna traktamentet från 435 kr till 450 kr den 1 januari 2026, enligt <a href="https://byggforetagen.se/avtal/a0cd80f7-ff07-de11-b4e1-02bf9e69ca65/" target="_blank" rel="noopener noreferrer">Byggföretagens information om Byggavtalet</a>.</p>
 <ul>
-<li><strong>Hel dag (helt maximibelopp): 300 kr.</strong></li>
-<li><strong>Halv dag (halvt maximibelopp): 150 kr.</strong> Gäller avresedag om resan börjar efter kl 12 och hemkomstdag om du kommer hem före kl 19.</li>
-<li><strong>Nattraktamente (schablon när arbetsgivaren inte betalar logi): 150 kr.</strong></li>
-</ul>
-<p>Vid längre förrättning på samma ort trappas det skattefria beloppet ned. Efter tre månader sänks det till <strong>210 kr per hel dag</strong> (70 % av maximibeloppet). Efter två år på samma ort sänks det ytterligare till <strong>150 kr per hel dag</strong> (50 % av maximibeloppet). Betalar företaget ut mer än så blir det överskjutande beloppet skattepliktigt.</p>
-
-<h2>De två grundvillkoren – övernattning och 50-kmregeln</h2>
-<p>För att traktamentet överhuvudtaget ska kunna betalas ut skattefritt måste båda dessa villkor vara uppfyllda:</p>
-<ol>
-<li><strong>Övernattning.</strong> Skatteverket är tydliga: "Du måste alltid övernatta minst en natt för att arbetsgivaren ska kunna betala ut ett skattefritt traktamente." En endagsförrättning kan alltså aldrig ge skattefritt traktamente.</li>
-<li><strong>50-kmregeln.</strong> Tjänsteresan måste gå till en plats som ligger mer än 50 km från både bostaden och den vanliga arbetsplatsen (tjänstestället). Ligger arbetsplatsen närmare än så är villkoret inte uppfyllt.</li>
-</ol>
-<p>Detta är exakt där byggbranschen ofta faller. Mycket arbete sker på dagpendlingsavstånd och utan övernattning – och då finns ingen skattefri traktamentesgrund, oavsett vad kollektivavtalet säger.</p>
-
-<h2>Vad är "tjänstestället" för en byggnadsarbetare?</h2>
-<p>Tjänstestället avgör var en tjänsteresa börjar. För många yrken är tjänstestället kontoret, men för en byggnadsarbetare är det ofta själva byggarbetsplatsen där man utför arbetet under en period. Det får två konsekvenser:</p>
-<ul>
-<li>Resor <em>till och från</em> den arbetsplats som är tjänsteställe räknas som vanliga arbetsresor, inte tjänsteresor – och ger inte traktamente.</li>
-<li>Först när arbetet sker på en annan plats, mer än 50 km bort och med övernattning, uppstår en tjänsteresa som kan ge skattefritt traktamente.</li>
-</ul>
-<p>Att fastställa tjänstestället rätt är alltså avgörande. Bedömer företaget det fel riskerar man att betala ut "skattefritt" traktamente som i själva verket är skattepliktigt.</p>
-
-<h2>Byggavtalet vs Skatteverket – varför avtalstraktamentet ofta beskattas</h2>
-<p>Byggnads kollektivavtal reglerar traktamente och reseersättning enligt avtalets egna villkor. De villkoren följer inte automatiskt Skatteverkets regler. Avtalet kan ge rätt till traktamente även vid endagsförrättning eller vid resor under 50 km – ersättningar som helt enkelt inte uppfyller Skatteverkets krav på övernattning och avstånd.</p>
-<p>Skattemekanismen är enkel: traktamente som betalas utan övernattning eller för resa under 50 km uppfyller inte villkoren för skattefrihet och är då <strong>skattepliktig lön</strong>. Företaget ska ta upp beloppet som ersättning, dra skatt och betala arbetsgivaravgifter. Att kalla utbetalningen "traktamente" i avtalet ändrar inte den skattemässiga hanteringen.</p>
-
-<h2>Räkneexempel: endagsförrättning respektive övernattning</h2>
-<p><strong>Fall A – endagsförrättning, 40 km bort.</strong> Byggföretaget betalar 200 kr i avtalstraktamente. Ingen övernattning och under 50 km betyder att inget villkor är uppfyllt. Hela beloppet är skattepliktig lön: den anställde betalar inkomstskatt på 200 kr och företaget betalar arbetsgivaravgifter ovanpå. Nettot i handen blir klart lägre än 200 kr.</p>
-<p><strong>Fall B – förrättning 90 km bort med övernattning.</strong> Företaget betalar 300 kr per hel dag. Båda villkoren är uppfyllda och betalar arbetsgivaren inte logi kan även 150 kr nattraktamente betalas skattefritt. Här går ersättningen ut skattefritt, utan skatteavdrag och utan arbetsgivaravgifter på schablonbeloppet – förutsatt att underlagen finns.</p>
-<p>Skillnaden mellan fallen är inte beloppet på pappret, utan om övernattning och avstånd är dokumenterade.</p>
-
-<h2>Måltidsavdrag och kostförmån</h2>
-<p>Det skattefria traktamentet förutsätter att arbetsgivaren inte redan har betalat måltiderna. Ingår fri frukost, lunch eller middag – till exempel på arbetsplatsen eller via hotellet – ska ett måltidsavdrag göras som minskar det skattefria beloppet, och den fria måltiden kan dessutom bli en kostförmån. Betalar företaget ut fullt traktamente <em>och</em> bjuder på måltider utan avdrag betalas för mycket ut skattefritt, vilket kan slå tillbaka vid en granskning.</p>
-
-<h2>Checklista för arbetsgivare och anställd 2026</h2>
-<ul>
-<li>Fastställ tjänstestället för varje anställd – är byggarbetsplatsen tjänsteställe eller inte?</li>
-<li>Kontrollera att resan går mer än 50 km från både bostad och tjänsteställe.</li>
-<li>Säkerställ och dokumentera minst en övernattning.</li>
-<li>Upprätta reseräkning med datum, tider, ort och syfte.</li>
-<li>Gör måltidsavdrag för fria måltider.</li>
-<li>Håll isär avtalstraktamente och skattefritt schablonbelopp – hantera mellanskillnaden som lön.</li>
-<li>Spara underlagen i sju år.</li>
+<li><strong>Förrättningsort:</strong> ett område med 3,5 mils radie från den första arbetsplatsen som gav rätt till traktamente. Ny förrättningsort uppstår först när arbetstagaren under minst fyra veckor arbetar utanför den radien.</li>
+<li><strong>Halvt traktamente</strong> betalas bara vid första inställelsen om resan börjar efter kl. 12.00 och vid avflyttningen om hemresan avslutas före kl. 19.00.</li>
+<li><strong>Lediga dagar</strong> under förrättningen – helg, semester, fridag – ger ett traktamente per dag, men högst två under en sammanhängande ledighet.</li>
+<li><strong>Sjukdom:</strong> traktamente betalas i högst 30 dagar om arbetstagaren anmält arbetsoförmågan inom två dagar.</li>
+<li><strong>Tidsgräns:</strong> högst två år på samma förrättningsort. Därefter krävs en skriftlig, tidsbestämd överenskommelse – utom vid ett bestämt projekt som varar längre, där traktamente betalas tills projektet är klart.</li>
 </ul>
 
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp ersätter inte lönesystemet, men ger dig underlagen som avgör om ett traktamente kan betalas skattefritt eller inte. Med tidrapporteringen registrerar dina medarbetare arbetsplats, dagar och tider, vilket gör det enkelt att se när en förrättning faktiskt innehåller övernattning och sträcker sig utanför tjänstestället. Underlagen samlas per anställd och projekt, så att du eller din redovisningskonsult snabbt kan avgöra vilken del av avtalstraktamentet som är skattefri och vilken del som ska hanteras som lön. Beloppen och den skattemässiga bedömningen måste du alltid stämma av mot Skatteverket och ditt kollektivavtal – ByggExp levererar spårbarheten, inte skatterådgivningen.</p>
+<h2>Avdrag när arbetsgivaren står för kost eller logi</h2>
+<p>Avtalets 450 kr ska täcka både mat och boende. Står arbetsgivaren för någon av delarna minskas beloppet (§ 6 punkt 2.2 och 2.4):</p>
+<div class="article-table"><table>
+<thead><tr><th>Situation</th><th>Reducering</th><th>Traktamente per dag 2026</th></tr></thead>
+<tbody>
+<tr><td>Arbetstagaren ordnar både mat och boende</td><td>–</td><td>450,00 kr</td></tr>
+<tr><td>Arbetsgivaren ordnar fri logi</td><td>35 %</td><td>292,50 kr</td></tr>
+<tr><td>Överenskommelse om fri kost</td><td>55 %</td><td>202,50 kr</td></tr>
+<tr><td>Fri kost och fri logi</td><td>90 %</td><td>45,00 kr</td></tr>
+</tbody>
+</table></div>
+<p>Arbetsgivaren ska samråda med arbetstagaren om boendet innan arbetet på förrättningsorten börjar. Logi som arbetsgivaren ordnar ska hålla ändamålsenlig standard med goda toalett- och duschmöjligheter, och bor flera i samma förläggning ska det finnas gemensamhetsutrymme, matlagning och kylskåp.</p>
+
+<h2>Förrättningstillägget – alltid lön</h2>
+<p>När arbetstagaren övernattar på förrättningsorten och själv står för boendet betalas förrättningstillägg för varje dag hen arbetar: 35 % av traktamentet de första 90 kalenderdagarna och 20 % därefter (§ 6 punkt 2.5). Med 2026 års belopp blir det 157,50 kr respektive 90,00 kr per arbetsdag. Tillägget betalas inte när arbetsgivaren tillhandahåller fri logi, och avtalet anger uttryckligen att arbetsgivaren ska dra preliminärskatt och betala sociala avgifter på det. Lägg in både tillägget och avgifterna när du räknar på <a href="/sv/blog/vad-kostar-en-anstalld-byggforetag">vad en anställd kostar</a> på ett projekt långt hemifrån.</p>
+
+<h2>Skatteverkets skattefria belopp 2026</h2>
+<p>För att traktamente ska vara skattefritt krävs en tjänsteresa med övernattning på en plats mer än 50 km från både bostaden och tjänstestället, och underlag som visar resan. Beloppen för inkomstår 2026 enligt <a href="https://www.skatteverket.se/foretag/arbetsgivare/lonochersattning/traktamenteochbilersattning.4.361dc8c15312eff6fd1703e.html" target="_blank" rel="noopener noreferrer">Skatteverket</a>:</p>
+<div class="article-table"><table>
+<thead><tr><th>Skattefritt per dag</th><th>Första 3 månaderna</th><th>Efter 3 månader</th><th>Efter 2 år</th></tr></thead>
+<tbody>
+<tr><td>Hel dag</td><td>300 kr</td><td>210 kr</td><td>150 kr</td></tr>
+<tr><td>Halv dag</td><td>150 kr</td><td>0 kr</td><td>0 kr</td></tr>
+<tr><td>Nattschablon</td><td>150 kr</td><td>150 kr</td><td>150 kr</td></tr>
+</tbody>
+</table></div>
+<p>Hel dag gäller om resan börjar före kl. 12.00 avresedagen eller slutar efter kl. 19.00 hemkomstdagen. Nattschablonen på 150 kr får bara betalas skattefritt när den anställda haft egna utgifter för logi. Ordnar arbetsgivaren boendet gratis finns inget skattefritt nattraktamente alls, enligt <a href="https://www.skatteverket.se/download/18.1522bf3f19aea8075ba3da6/1768986614741/traktamenten-mm-i-byggbranschen-skv353-utgava15.pdf" target="_blank" rel="noopener noreferrer">broschyren SKV 353 för byggbranschen</a>.</p>
+<p>Tremånadersgränsen räknas per ort. En ny period börjar bara om arbetet flyttas till en annan kommun eller ett annat specifikt område och den anställda samtidigt byter nattlogi. Sjukdom och semester bryter inte perioden, men förlänger den med de dagar som skulle ha arbetats.</p>
+
+<h2>Där avtal och skatteregler går isär</h2>
+<ul>
+<li><strong>50–70 km:</strong> Skatteverket tillåter skattefritt traktamente från 50 km, men Byggavtalet ger rätt till traktamente först från 70 km.</li>
+<li><strong>Hemresa över helgen:</strong> avtalet betalar traktamente för lediga dagar, men reser den anställda hem är det traktamentet skattepliktigt – skattefrihet kräver övernattning på arbetsorten.</li>
+<li><strong>Efter tre månader:</strong> avtalet betalar fortfarande 450 kr, men skattefritt är bara 210 + 150 = 360 kr. 90 kr per dag blir lön, och halva dagar blir helt skattepliktiga.</li>
+<li><strong>Fri kost:</strong> avtalet drar 55 % och ger 202,50 kr. Skatteverkets avdrag för frukost, lunch och middag är 270 kr, så med eget boende blir skattefritt 30 + 150 = 180 kr – och de fria måltiderna är dessutom en kostförmån på 310 kr per dag.</li>
+<li><strong>Efter två år:</strong> avtalet kan fortsätta betala vid längre projekt, medan skattefritt sjunker till 150 + 150 = 300 kr per dag.</li>
+</ul>
+
+<h2>Räkneexempel: sju dagar borta</h2>
+<p>En betongarbetare med tjänsteställe i bostaden ska till ett projekt 18 mil bort. Hen reser söndag kl. 10.00, arbetar måndag–fredag och åker hem på lördagen när uppdraget är klart – hemma kl. 14.00. Hen hyr eget rum och står själv för maten. Det blir sju kalenderdagar och sex nätter.</p>
+<div class="article-table"><table>
+<thead><tr><th>Post</th><th>Avtalet betalar</th><th>Varav skattefritt</th><th>Varav lön</th></tr></thead>
+<tbody>
+<tr><td>Söndag, helt traktamente (avresa före kl. 12)</td><td>450,00 kr</td><td>300 + 150 = 450 kr</td><td>0 kr</td></tr>
+<tr><td>Måndag–fredag, 5 × 450 kr</td><td>2 250,00 kr</td><td>5 × 450 = 2 250 kr</td><td>0 kr</td></tr>
+<tr><td>Lördag, halvt traktamente (hemma före kl. 19)</td><td>225,00 kr</td><td>150 kr</td><td>75,00 kr</td></tr>
+<tr><td>Förrättningstillägg, 5 arbetsdagar × 157,50 kr</td><td>787,50 kr</td><td>0 kr</td><td>787,50 kr</td></tr>
+<tr><td><strong>Summa</strong></td><td><strong>3 712,50 kr</strong></td><td><strong>2 850,00 kr</strong></td><td><strong>862,50 kr</strong></td></tr>
+</tbody>
+</table></div>
+<p>Lördagen har ingen natt kvar på orten, så där ryms bara halvdagens 150 kr skattefritt och 75 kr blir lön. Den skattefria delen betalas ut utan skatteavdrag och redovisas med kryss i ruta 051 i arbetsgivardeklarationen; lönedelen redovisas som vanlig lön. Restid och reskostnad för själva resan dit och hem kommer ovanpå och beskrivs i <a href="/sv/blog/restidsersattning-byggavtalet">restidsersättning enligt Byggavtalet</a>.</p>
+<p>Samma person fyra månader senare, en hel vecka med helgen kvar på orten: avtalet ger 7 × 450 = 3 150 kr i traktamente och 5 × 90 = 450 kr i förrättningstillägg. Skattefritt är 7 × 360 = 2 520 kr, så 630 kr av traktamentet plus hela tillägget blir lön.</p>
+
+<h2>Underlaget som bär skattefriheten</h2>
+<p>Det är arbetsgivaren som ska visa att villkoren är uppfyllda. Enligt SKV 353 bör reseräkningen innehålla bostadsadress och arbetsort, när resan började och slutade med datum och klockslag, var den anställda övernattat, om hen haft egna logiutgifter, eventuella fria måltider och om den anställda stannat på orten under lediga dagar. Kräver någon traktamente för lika många dagar som månaden har, eller ligger arbetsorten på rimligt pendlingsavstånd, behöver underlaget visa att övernattningen faktiskt skett. En <a href="/sv/verktyg/tidrapport-mall">tidrapport per dag och arbetsplats</a> gör det enkelt att stämma av mot reseräkningen.</p>
+<p>I ByggExp anges traktamente som ingen, halv eller hel dag på varje arbetspass, så att lönen får rätt antal dagar.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Är Byggnads avtalstraktamente alltid skattefritt?</h3>
-<p>Nej. Avtalstraktamente betalas enligt kollektivavtalet oavsett skattereglerna. Är det utbetalat utan övernattning eller för en resa under 50 km uppfyller det inte Skatteverkets villkor och är då skattepliktig lön med arbetsgivaravgifter.</p>
-<h3>Hur mycket är skattefritt traktamente 2026?</h3>
-<p>För inrikes tjänsteresor 2026 är hel dag 300 kr, halv dag 150 kr och natt 150 kr. Efter tre månader på samma ort sänks helt dagsbelopp till 210 kr och efter två år till 150 kr.</p>
-<h3>Kan jag få traktamente utan att övernatta?</h3>
-<p>Inte skattefritt. Skatteverket kräver minst en övernattning för att ett skattefritt traktamente ska kunna betalas ut. Endagsförrättningar ger inget skattefritt traktamente.</p>
-<h3>Vad händer om vi bjuder på lunch under resan?</h3>
-<p>Fria måltider ger ett måltidsavdrag som minskar det skattefria beloppet och kan innebära kostförmån. Betalar ni fullt traktamente utan avdrag blir för mycket utbetalt skattefritt.</p>
-
-<h2>Kom igång</h2>
-<p>Bygg rätt underlag från början med vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, och se fler verktyg för byggföretag i vår <a href="/sv/verktyg">verktygslåda</a>. Vill du se hur spårbarheten fungerar i praktiken? <a href="/sv/contact">Boka en demo -></a></p>
-
-<p>Relaterat: <a href="/sv/blog/franvaro-i-byggforetag">Så hanterar du frånvaro i byggföretag</a> och fler <a href="/sv/verktyg">gratis verktyg för hantverkare</a>.</p>
+<h3>Hur mycket är traktamentet enligt Byggnads 2026?</h3>
+<p>450 kr per dag från 1 januari 2026 vid övernattning på en förrättningsort minst 70 km från bostaden. Under 2025 var beloppet 435 kr.</p>
+<h3>Är Byggnads traktamente skattefritt 2026?</h3>
+<p>De första tre månaderna kan hela beloppet vara skattefritt när den anställda själv ordnar boendet, eftersom 300 kr i dagtraktamente plus 150 kr i nattschablon blir 450 kr. Förrättningstillägget är alltid lön, och efter tre månader på samma ort blir 90 kr per dag skattepliktigt.</p>
+<h3>Hur räknas 7 dagars traktamente?</h3>
+<p>Varje kalenderdag räknas för sig: hel dag om resan börjar före kl. 12 eller slutar efter kl. 19, annars halv dag, plus nattschablon för varje natt med egna logiutgifter. Ligger arbetstagaren kvar på orten över helgen ger avtalet traktamente även för de två lediga dagarna.</p>
+<h3>Hur mycket minskar traktamentet om arbetsgivaren står för boendet?</h3>
+<p>Byggavtalet minskar traktamentet med 35 % till 292,50 kr per dag, och förrättningstillägget faller bort. Skattemässigt får då inget nattraktamente betalas skattefritt.</p>
+<h3>Vad är förrättningstillägg?</h3>
+<p>Ett tillägg på 35 % av traktamentet, 157,50 kr per arbetsdag 2026, de första 90 dagarna och 20 % därefter. Det betalas när arbetstagaren själv ordnar boendet och är skattepliktig lön med arbetsgivaravgifter.</p>
+<h3>Måste vi betala traktamente om den anställda åker hem varje kväll?</h3>
+<p>Nej, avtalets traktamente förutsätter övernattning på förrättningsorten. Då gäller i stället reskostnadsersättning för den dagliga resan, och betalas traktamente ändå är det lön.</p>
 `;
 
 const A_TRAKTAMENTE_BYGGNADSARBETARE_2026: BlogPost = {
   _id: "code-"+"traktamente-byggnadsarbetare-2026",
-  title: "Traktamente för byggnadsarbetare 2026 – så mycket är skattefritt (och varför avtalstraktamentet ofta beskattas)", slug: "traktamente-byggnadsarbetare-2026", locale: "sv",
-  excerpt: "Så mycket traktamente är skattefritt för byggnadsarbetare 2026 – och varför kollektivavtalets traktamente ofta blir skattepliktig lön.", tag: "Ekonomi",
+  title: "Traktamente för byggnadsarbetare 2026 – Byggavtalet och skattefria belopp", slug: "traktamente-byggnadsarbetare-2026", locale: "sv",
+  excerpt: "Byggavtalets traktamente är 450 kr per dag från 2026. Så räknar du avdrag för kost och logi, förrättningstillägg och vilken del som är skattefri.", tag: "Ekonomi",
   coverImageUrl: "/landing/features/12salary.webp", contentHtml: A_TRAKTAMENTE_BYGGNADSARBETARE_2026_HTML,
-  seoTitle: "Traktamente byggnadsarbetare 2026 – skattefritt | ByggExp", seoDescription: "Skattefria traktamentsbelopp 2026 för byggnadsarbetare: 300/150/150 kr, 50-kmregeln och varför Byggnads avtalstraktamente ofta beskattas.",
+  seoTitle: "Traktamente Byggnads 2026 – 450 kr/dag | ByggExp", seoDescription: "Byggnads traktamente 2026 är 450 kr/dag. Avdrag för kost och logi, förrättningstillägg, Skatteverkets 300/150/150 kr och ett exempel på en vecka borta.",
   seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-18T18:48:00.000Z", createdAt: "2026-08-18T18:48:00.000Z", updatedAt: "2026-08-18T18:48:00.000Z",
+  publishedAt: "2026-08-18T18:48:00.000Z", createdAt: "2026-08-18T18:48:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_PERIODISERINGSFOND_BYGGBOLAG_HTML = `
@@ -5400,89 +5413,123 @@ const A_KAKEL_KLINKER_ATGANG_VATRUM: BlogPost = {
 };
 
 const A_ENTREPRENADFORSAKRING_ALLRISK_VAD_TACKER_HTML = `
-<p>"Jag har ju en företagsförsäkring." Det är den vanligaste missuppfattningen bland svenska hantverkare och byggföretag – och den kan bli dyr. En ansvarsförsäkring ensam skyddar inte själva bygget om det brinner, blåser omkull eller blir bestulet. Två helt olika försäkringar behövs: en <strong>allriskförsäkring</strong> som skyddar entreprenaden, och en <strong>ansvarsförsäkring</strong> som skyddar er mot skadeståndskrav. Och enligt de vanligaste standardavtalen, AB 04 och ABT 06, är ni skyldiga att ha båda. Den här guiden reder ut vad entreprenadförsäkringen faktiskt täcker under pågående bygge, var luckorna sitter och vad kontraktet kräver 2026.</p>
+<p>Entreprenadförsäkringen består av två delar som ersätter helt olika saker: <strong>allrisk</strong> betalar för oförutsedd fysisk skada på det ni bygger och det ni bygger med, <strong>ansvar</strong> betalar skadestånd när ni skadar någon annans person eller egendom. Avgörande i praktiken är undantaget för fel i utförandet – det tar bort kostnaden för att rätta själva felet, men inte nödvändigtvis följdskadan. Exemplen längre ner visar hur det slår i kronor.</p>
 
-<p>Ska du lämna anbud och vill ha ordning på försäkringsvillkoren redan i offerten? Börja med <a href="/sv/verktyg/offert-mall">vår gratis offertmall -></a> så att rätt förutsättningar står svart på vitt från start.</p>
-
-<h2>Entreprenadförsäkring vs ansvarsförsäkring – den avgörande skillnaden</h2>
-<p>Skillnaden handlar om vad som skadas och vem som drabbas. Allriskförsäkringen är en <strong>egendomsförsäkring</strong>: den ersätter plötslig och oförutsedd fysisk skada på själva bygget, det monterade materialet och era hjälpmedel under byggtiden – oavsett vem som vållat skadan. Ansvarsförsäkringen är en <strong>skadeståndsförsäkring</strong>: den täcker person- och sakskada som drabbar tredje man, alltså utomstående, och som ni blir skadeståndsskyldiga för.</p>
+<h2>Vad allriskförsäkringen täcker – och vad den inte täcker</h2>
+<p>Byggandets Kontraktskommitté (BKK) har låtit försäkringsbranschen beskriva den lägsta nivå en entreprenadförsäkring måste ha för att uppfylla AB 04 och ABT 06, den så kallade <a href="http://static.byggtjanst.se/SharepointImages/sites/af-12/SiteCollectionDocuments/Bilaga_1_Forsakring.pdf" target="_blank" rel="noopener noreferrer">basomfattningen (bilaga 1 till AMA AF)</a>. Enligt den lämnas ersättning för ”oförutsedd fysisk skada på eller förlust av” försäkrad egendom, som delas upp i två objekt:</p>
 <ul>
-<li><strong>Allrisk (egendom):</strong> skada på det ni bygger och det ni bygger med. Exempel: en storm river ner en halvfärdig takstomme.</li>
-<li><strong>Ansvar (skadestånd):</strong> skada ni orsakar utomstående. Exempel: en byggställning faller och skadar en parkerad bil på gatan.</li>
+<li><strong>Arbeten</strong> – det ni utför och levererar enligt kontraktet, inklusive material och arbete som beställaren tillhandahåller.</li>
+<li><strong>Hjälpmedel</strong> – verktyg, bodar, ställningar och annan egendom som behövs för jobbet men inte byggs in.</li>
 </ul>
-<p>Gränsen går alltså vid vems egendom som skadas. Blir bygget självt förstört är det allrisken som gäller. Skadar ni någon annans person eller egendom är det ansvarsförsäkringen. Därför räcker inte den ena utan den andra – och en ren ansvarsförsäkring uppfyller inte försäkringsplikten enligt standardavtalen, eftersom den inte täcker bygget i sig.</p>
+<p>Skyddet gäller på arbetsområdet i Sverige. Kontor, verkstad och förråd räknas inte som arbetsområde – där gäller företagets vanliga egendomsförsäkring.</p>
 
-<h2>Vad täcker allriskförsäkringen under pågående bygge?</h2>
-<p>Allriskförsäkringen skyddar entreprenaden mot plötsliga och oförutsedda händelser under byggtiden. Typiskt omfattas:</p>
+<div class="article-table"><table>
+<thead><tr><th>Händelse</th><th>Allrisk enligt basomfattningen</th></tr></thead>
+<tbody>
+<tr><td>Storm river ner nyrest takstol</td><td>Ersätts – oförutsedd fysisk skada på Arbeten</td></tr>
+<tr><td>Brand i bod, verktyg förstörs</td><td>Ersätts – skada på Hjälpmedel</td></tr>
+<tr><td>Inbrott i container, tidpunkt känd</td><td>Ersätts om rimliga säkerhetsåtgärder vidtagits</td></tr>
+<tr><td>Svinn – material som ”försvunnit” utan känd tidpunkt</td><td>Ersätts inte</td></tr>
+<tr><td>Mögel eller röta</td><td>Ersätts inte, utom som direkt följd av en annan ersättningsbar skada</td></tr>
+<tr><td>Förslitning, rost, korrosion</td><td>Ersätts inte, utom vid extraordinär händelse</td></tr>
+<tr><td>Kostnaden att rätta ett utförandefel</td><td>Ersätts inte</td></tr>
+<tr><td>Grov vårdslöshet av företagsledning eller arbetsledning</td><td>Ersätts inte</td></tr>
+<tr><td>Fryssprängd motor i maskin</td><td>Ersätts inte (undantag för Hjälpmedel)</td></tr>
+</tbody>
+</table></div>
+
+<p>Bolagens egna produkter brukar ge ett bredare skydd än basomfattningen. Den är golvet – det en försäkring minst måste innehålla för att vara avtalsenlig.</p>
+
+<h3>Fel i utförandet – undantaget som ofta missförstås</h3>
+<p>Basomfattningen undantar kostnaden för att åtgärda fel i material eller arbetsprestation, liksom fel som beror på felaktiga ritningar eller beräkningar. Men undantaget är begränsat: det avser bara de kostnader som hade uppstått om felet åtgärdats <em>omedelbart innan</em> skadan inträffade. Det betyder att följdskadan på resten av entreprenaden i regel ersätts, medan själva rättelsen betalas av er.</p>
+
+<h2>Räkneexempel: vattenskada från en felaktig koppling</h2>
+<p>Ett hypotetiskt badrumsprojekt i en villa enligt AB 04. En koppling i ert nydragna tappvattenrör är felmonterad och släpper under helgen. Vattnet förstör nylagt golv och gips i entreprenaden, och rinner vidare in i kundens hall som inte ingår i jobbet. Självrisken är satt till 20 % av prisbasbeloppet, vilket är vad <a href="https://secure235.lansforsakringar.se/Villkor/Forkop/V965-10-KOPINFO.pdf" target="_blank" rel="noopener noreferrer">Länsförsäkringars köpinformation för Entreprenad</a> anger som normal självrisk för egendoms- och ansvarsskada. Med <a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/priser-och-ekonomiska-tendenser/priser/konsumentprisindex-kpi/pong/statistiknyhet/prisbasbeloppet-for-ar-2026" target="_blank" rel="noopener noreferrer">prisbasbeloppet 2026 på 59 200 kr</a> blir det 11 840 kr.</p>
+
+<div class="article-table"><table>
+<thead><tr><th>Post</th><th>Belopp</th><th>Vilken del betalar</th></tr></thead>
+<tbody>
+<tr><td>Byta den felaktiga kopplingen</td><td>4 000 kr</td><td>Ingen – undantaget för fel i utförande</td></tr>
+<tr><td>Riva och lägga om golv och gips i badrummet</td><td>95 000 kr</td><td>Allrisk, objektet Arbeten</td></tr>
+<tr><td>Avdrag självrisk</td><td>−11 840 kr</td><td>Ni</td></tr>
+<tr><td><strong>Utbetalning för entreprenaden</strong></td><td><strong>83 160 kr</strong></td><td></td></tr>
+<tr><td>Fuktskadad hall utanför arbetet</td><td>60 000 kr</td><td>Tillägget befintlig egendom, om det finns</td></tr>
+</tbody>
+</table></div>
+<p>Utan tillägg för befintlig egendom faller hallen tillbaka på frågan om ni är skadeståndsskyldiga mot kunden – och då på ansvarsförsäkringen med dess egna villkor och självrisk. Basomfattningen anger att självrisken dras ”vid varje skadetillfälle”, så två separata händelser ger två självrisker.</p>
+
+<h2>Befintlig egendom – ROT-försäkringen</h2>
+<p>Basomfattningen definierar befintlig egendom som byggherrens egendom inom eller i direkt anslutning till arbetsområdet, och den ingår <strong>inte</strong> i objektet Arbeten. Skyddet för den kommer därför som ett tillägg, ofta kallat ROT-försäkring. I Länsförsäkringars köpinformation ingår befintlig egendom med ett fast belopp på 5 000 000 kr. På försäkringsbeviset enligt BKK:s mall står befintlig egendom under ”kompletterande försäkringsskydd” som förstariskförsäkring – kontrollera alltså att raden är ifylld innan ni börjar riva i någons hem.</p>
+
+<h2>Ansvarsförsäkringen: tredje man och beloppsgolvet</h2>
+<p>Ansvarsdelen (mer i <a href="/sv/blog/ansvarsforsakring-byggforetag">guiden om ansvarsförsäkring för byggföretag</a>) täcker skadeståndsskyldighet för person- och sakskada, inklusive miljöskada enligt 32 kap. miljöbalken under vissa förutsättningar. Försäkringsbolaget utreder om ni är ansvariga, förhandlar och för er talan vid rättegång. Det klassiska exemplet är en ställning som välter över en parkerad bil.</p>
+<p>Basomfattningen kräver ett försäkringsbelopp på <strong>minst 200 prisbasbelopp</strong> – 11 840 000 kr med 2026 års prisbasbelopp. Jämför det med ert eget försäkringsbrev: Länsförsäkringars köpinformation anger ”högsta ersättning normalt 10 miljoner kronor” för ansvar, alltså under golvet. Ett standardpaket kan därför behöva höjas innan ni skriver under ett AB 04-kontrakt.</p>
+<p>Viktiga undantag i ansvarsdelen enligt basomfattningen:</p>
 <ul>
-<li>Brand, storm, vatten och översvämning</li>
-<li>Stöld och vandalism på arbetsområdet</li>
-<li>Ras och sättningar</li>
-<li>Handhavandefel och olyckshändelser under montage</li>
+<li>skada på det ni själva levererat eller åtagit er att uppföra (det är allriskens område),</li>
+<li>egendom ni hyrt, lånat eller lyfter och transporterar – vid lyft utan särskilt avtal ersätts högst 100 000 kr,</li>
+<li>böter och viten, till exempel förseningsvite,</li>
+<li>personskada orsakad av asbest, kvartsdamm, mögel, PCB, formaldehyd eller elektromagnetiska fält.</li>
 </ul>
-<p>Skyddet gäller det monterade arbetet, byggmaterial som finns på arbetsområdet samt hjälpmedel och verktyg. Försäkringsbeloppet ska motsvara entreprenadens <strong>återanskaffningsvärde</strong> plus det arbete och material som beställaren tillhandahåller – underskatta inte den summan, för är beloppet för lågt riskerar ni underförsäkring vid en storskada.</p>
-<p>Lika viktigt är att känna till undantagen. Allrisken ersätter normalt <em>inte</em> rena felaktigheter i det utförda arbetet eller kostnaden för att göra om ett felaktigt moment (omgörning), gradvis fukt- och mögelskada, eller förslitning. Den täcker den plötsliga, oförutsedda händelsen – inte konsekvensen av bristande utförande. Det är en viktig distinktion när ni bedömer om en skada verkligen är försäkringsbar eller om det handlar om ett kvalitetsfel ni själva ansvarar för.</p>
 
-<h2>Ansvarsförsäkring – skyddet mot skadeståndskrav</h2>
-<p>Ansvarsförsäkringen träder in när ert arbete orsakar person- eller sakskada på tredje man och ni blir skadeståndsskyldiga. Två klassiska exempel:</p>
+<h2>Vad AB 04 och ABT 06 kräver</h2>
+<p>Försäkringsplikten finns i <a href="https://byggtjanst.se/bokhandel/upphandling/ab-04" target="_blank" rel="noopener noreferrer">AB 04</a> kap. 5 § 22 och ABT 06 kap. 5 § 23. En genomgång i <a href="http://static.byggtjanst.se/amadocs/ama_info_hus_sid16-17.pdf" target="_blank" rel="noopener noreferrer">AMA-nytt Hus 1/2006</a>, skriven av en försäkringsjurist på If, sammanfattar kraven så här:</p>
+<ol>
+<li>Entreprenören ska ha allriskförsäkring för skada på entreprenaden.</li>
+<li>Den ska även gälla till förmån för beställaren om beställaren är byggherre.</li>
+<li>Den ska gälla under entreprenadtiden, oavsett vilken part som ansvarar för skadan.</li>
+<li>Efter entreprenadtiden ska den gälla i två år, men bara för skador som entreprenören ansvarar för.</li>
+<li>Ansvarsförsäkringen ska gälla under entreprenadtiden och två år efter godkännandet.</li>
+<li>Självrisken får vara högst 3 prisbasbelopp per försäkring – 177 600 kr år 2026.</li>
+<li>Entreprenören ska lämna ett försäkringsbevis från försäkringsgivaren till beställaren.</li>
+</ol>
+<p>Underentreprenörer omfattas av er allrisk bara om ni skriftligen åtagit er att försäkra underentreprenaden. Annars behöver varje UE sitt eget skydd – en punkt som hör hemma i <a href="/sv/blog/entreprenadkontrakt-mall">entreprenadkontraktet</a> och UE-avtalet.</p>
+
+<h2>Allrisk, ansvar, färdigställandeskydd – vem behöver vad</h2>
+<div class="article-table"><table>
+<thead><tr><th>Skydd</th><th>Ersätter</th><th>Krävs av</th></tr></thead>
+<tbody>
+<tr><td>Allrisk (entreprenad)</td><td>Fysisk skada på Arbeten och Hjälpmedel</td><td>AB 04 kap. 5 § 22 / ABT 06 kap. 5 § 23</td></tr>
+<tr><td>Ansvar (entreprenad)</td><td>Skadestånd till tredje man</td><td>Samma paragrafer, minst 200 prisbasbelopp enligt basomfattningen</td></tr>
+<tr><td>Befintlig egendom</td><td>Kundens befintliga hus och lösöre</td><td>Avtalas separat i AF eller kontrakt</td></tr>
+<tr><td>Färdigställandeskydd</td><td>Konsumentens merkostnad att slutföra eller rätta fel om ni inte kan</td><td>Lag (2014:227), konsument + småhus</td></tr>
+</tbody>
+</table></div>
+<p><strong>Byggfelsförsäkring</strong> är ett äldre begrepp. <a href="https://data.riksdagen.se/dokument/sfs-2014-227.text" target="_blank" rel="noopener noreferrer">Lagen (2014:227) om färdigställandeskydd</a> ersatte den 1 juni 2014 lagen om byggfelsförsäkring, och sedan dess finns inget krav på byggfelsförsäkring vid nya projekt. Färdigställandeskydd krävs när en näringsidkare bygger åt en konsument på ett en- eller tvåbostadshus, vid nybyggnad och – om byggnadsnämnden bedömer att det behövs – vid tillbyggnad eller anmälningspliktiga åtgärder. Det krävs inte för åtgärder utan bygglovsplikt. Det är konsumenten som ska se till att skyddet finns, och konsumenten får inte belastas med självrisk. Läs mer i <a href="/sv/blog/byggfelsforsakring">guiden om byggfelsförsäkring</a>.</p>
+
+<h2>Kontrollera försäkringsbeviset före startmötet</h2>
+<p>BKK och försäkringsbranschen har tagit fram en gemensam mall för försäkringsbevis. Där ska försäkringsbelopp för Arbeten, Hjälpmedel och Ansvar stå, samt två rader om självrisk som ”inte överstiger 3 prisbasbelopp”. Gå igenom fyra saker innan beviset lämnas till beställaren:</p>
 <ul>
-<li>Ett tappat verktyg från ett tak skadar en förbipasserande.</li>
-<li>En vattenläcka under arbetet sprider sig till grannens lägenhet.</li>
+<li>Beloppet för Arbeten ska enligt basomfattningen motsvara återanskaffningsvärdet inklusive röjning och det som beställaren tillhandahåller. Ett paket där allrisken är en procentsats av omsättningen kan bli för lågt för ett enskilt stort projekt.</li>
+<li>Ansvarsbeloppet ska vara minst 200 prisbasbelopp.</li>
+<li>Befintlig egendom ska vara med om ni arbetar i en befintlig byggnad.</li>
+<li>Särskilt riskfyllda arbeten – exempelvis broar, tunnlar eller arbeten i vatten – och hjälpmedel som mobilkranar och grävmaskiner kräver enligt basomfattningen ofta ett särskilt försäkringsavtal.</li>
 </ul>
-<p>Enligt AB 04 och ABT 06 får ansvarsförsäkringen inte understiga <strong>200 prisbasbelopp</strong> och ska gälla i minst två år efter godkänd entreprenad. Observera att ansvarsförsäkringen skiljer sig från skyddet för beställarens befintliga egendom – det är en vanlig men kostsam förväxling, som vi tar upp härnäst.</p>
-
-<h2>Befintlig egendom / ROT-försäkring – den vanligaste luckan</h2>
-<p>Här sitter den lucka som fäller flest byggföretag vid renovering och ombyggnad. Skada på den del av beställarens hus som <em>inte</em> ingår i ert jobb – till exempel resten av villan när ni bara byter ett badrum – täcks <strong>inte</strong> automatiskt av grundallrisken. Det kräver ett särskilt moment: "befintlig egendom" eller ROT-försäkring.</p>
-<p>Flera bolags villkor går ett steg längre: de kräver att ni <strong>skriftligen i kontraktet</strong> åtagit er att försäkra beställarens befintliga egendom för att momentet överhuvudtaget ska gälla för projektet. Bakgrunden är att entreprenörens skadeståndsansvar för befintlig egendom enligt standardavtalen är begränsat till en schablon på 15 % av kontraktssumman, om inte högre försäkringsbelopp finns. Just därför behöver momentet tecknas separat och skrivas in i kontraktet. Extra kritiskt är detta vid ROT-arbeten i bebodda fastigheter, där en vattenskada snabbt kan spridas långt utanför själva arbetsområdet.</p>
-
-<h2>När krävs försäkringen i kontraktet? AB 04 och ABT 06</h2>
-<p>Försäkringsplikten är inte frivillig – den följer direkt av kap. 5 § 22 i både AB 04 och ABT 06. Där framgår att entreprenören <strong>ska</strong> ha både allriskförsäkring och ansvarsförsäkring. Det gör försäkringen till ett kontraktskrav i de vanligaste svenska standardavtalen.</p>
-<ul>
-<li><strong>Giltighetstid:</strong> Allrisken ska gälla under hela entreprenadtiden och i minst två år efter att entreprenaden godkänts. Ansvarsförsäkringen ska gälla i minst två år efter godkänd entreprenad.</li>
-<li><strong>Belopp:</strong> Ansvarsförsäkringen får inte understiga minst 200 prisbasbelopp. Med 2026 års prisbasbelopp på 59 200 kr motsvarar det drygt 11,8 miljoner kronor – men skriv gärna "minst 200 prisbasbelopp" i era handlingar så att beloppet inte blir inaktuellt nästa år.</li>
-<li><strong>Självrisk:</strong> Självrisken får inte överstiga 3 prisbasbelopp, vilket 2026 innebär ett tak på 177 600 kr, för vare sig allrisk eller ansvar. Marknadens standardsjälvrisker ligger ofta lägre, men avtalet sätter taket.</li>
-<li><strong>Medförsäkring:</strong> Beställaren och huvudentreprenören är normalt automatiskt medförsäkrade i entreprenörens allrisk. Underentreprenörer omfattas endast om det uttryckligen åtagits skriftligt – annars måste varje UE ha egen försäkring.</li>
-</ul>
-<p>Beställare begär dessutom ofta in försäkringsbevis före byggstart. Kan ni visa upp rätt belopp och rätt moment redan vid anbud stärker det er trovärdighet.</p>
-
-<h2>Vanliga misstag – och en snabb checklista</h2>
-<p>De dyraste felen vi ser återkommer:</p>
-<ul>
-<li>Att tro att en ansvarsförsäkring täcker bygget – det gör den inte.</li>
-<li>För lågt allriskbelopp, vilket ger underförsäkring vid storskada.</li>
-<li>Att glömma momentet för befintlig egendom vid ROT – och att inte skriva in åtagandet i kontraktet.</li>
-<li>Att förutsätta att UE är medförsäkrade när de inte är det skriftligt.</li>
-<li>Att missa att skyddet ska gälla i två år efter godkänd entreprenad.</li>
-</ul>
-<p>Checklista inför nästa projekt: kontrollera (1) försäkringsbeloppen, (2) självrisken mot avtalets tak, (3) att momentet befintlig egendom finns och är inskrivet i kontraktet, (4) UE-täckningen, och (5) att giltigheten sträcker sig minst två år efter godkännande.</p>
-
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp tecknar inte försäkringar – men vi hjälper er få ordning på handlingarna där försäkringskraven ska synas. I offerten kan ni tydligt ange vilka avtalsvillkor och försäkringskrav som gäller, och i kontraktet skriva in åtagandet om befintlig egendom så att momentet faktiskt gäller för projektet. Med samlade offerter, kontrakt och projekt på ett ställe blir det enkelt att visa upp rätt underlag för beställaren före byggstart. Läs alltid det specifika försäkringsbeviset – ByggExp strukturerar dokumenten, försäkringsbolaget avgör villkoren.</p>
+<p>Entreprenadförsäkringen skyddar mot skador, inte mot att ett företag inte fullgör kontraktet. Säkerhet för fullgörande är en separat fråga – se <a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">entreprenadgaranti och säkerhet enligt AB 04</a>.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Räcker min företagsförsäkring för att uppfylla AB 04/ABT 06?</h3>
-<p>Inte nödvändigtvis. Standardavtalen kräver både allrisk- och ansvarsförsäkring med bestämda belopp och giltighetstider. En grundläggande företagsförsäkring innehåller inte alltid allrisk på entreprenaden. Kontrollera försäkringsbeviset mot avtalets krav.</p>
-<h3>Vad är skillnaden mellan allrisk och ansvarsförsäkring?</h3>
-<p>Allrisken är en egendomsförsäkring som ersätter fysisk skada på själva bygget och materialet under byggtiden. Ansvarsförsäkringen är en skadeståndsförsäkring som täcker skador ni orsakar tredje man. Ni behöver båda.</p>
-<h3>Täcks skador på beställarens befintliga hus?</h3>
-<p>Inte automatiskt. Skada på den del av fastigheten som inte ingår i jobbet kräver ett särskilt moment – befintlig egendom eller ROT-försäkring – och flera bolag kräver att åtagandet skrivits in skriftligt i kontraktet.</p>
-<h3>Hur länge måste försäkringen gälla?</h3>
-<p>Allrisken ska gälla under hela entreprenadtiden och minst två år efter godkännande. Ansvarsförsäkringen ska gälla i minst två år efter godkänd entreprenad enligt AB 04 och ABT 06.</p>
-
-<h2>Kom igång</h2>
-<p>Rätt försäkring är både ett kontraktskrav och en konkurrensfördel när ni lämnar anbud. Se till att belopp, självrisk och moment stämmer redan i offerten med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>, och boka en <a href="/sv/contact">demo</a> om ni vill se hur ByggExp håller ihop offert, kontrakt och projektdokumentation. Villkoren skiljer sig mellan bolag – läs alltid försäkringsbeviset och det specifika kontraktet innan ni skriver på.</p>
-
-<p>Relaterat: <a href="/sv/blog/ansvarsforsakring-byggforetag">Ansvarsförsäkring för byggföretag</a>, <a href="/sv/blog/kreditforsakring-byggforetag">Kreditförsäkring för byggföretag</a> och <a href="/sv/blog/entreprenadkontrakt-mall">Entreprenadkontrakt – mall och guide</a>.</p>
+<h3>Vad är en entreprenadförsäkring?</h3>
+<p>Ett paket med allriskförsäkring för det ni bygger och era hjälpmedel på arbetsplatsen, plus ansvarsförsäkring för skador ni orsakar andra. AB 04 och ABT 06 kräver båda delarna med minst den nivå som BKK:s basomfattning beskriver.</p>
+<h3>Täcker allriskförsäkringen fel i vårt eget arbete?</h3>
+<p>Inte kostnaden för att rätta själva felet. Följdskadan på entreprenaden ersätts däremot normalt, eftersom undantaget bara gäller det som hade kostat att åtgärda felet omedelbart innan skadan inträffade.</p>
+<h3>Hur hög ansvarsförsäkring krävs enligt AB 04?</h3>
+<p>Minst 200 prisbasbelopp enligt BKK:s basomfattning, vilket är 11 840 000 kr år 2026. Kontrollera ert försäkringsbrev – vissa standardpaket anger ett lägre maxbelopp och behöver höjas.</p>
+<h3>Vad är en ROT-försäkring för hantverkare?</h3>
+<p>Ett tillägg som täcker skador på kundens befintliga byggnad och egendom runt arbetet, så kallad befintlig egendom. Den ingår inte i grundallrisken, så den behöver finnas på försäkringsbeviset när ni arbetar i ett befintligt hus.</p>
+<h3>Hur hög får självrisken vara enligt AB 04 och ABT 06?</h3>
+<p>Högst 3 prisbasbelopp för allrisk och för ansvar, 177 600 kr år 2026. Bolagen får ta ut förhöjd självrisk för vissa skador, till exempel vid heta arbeten, men grundsjälvrisken får inte överstiga taket.</p>
+<h3>Behövs byggfelsförsäkring fortfarande?</h3>
+<p>Nej, inte för nya projekt. Sedan 1 juni 2014 gäller i stället lagen om färdigställandeskydd, som krävs när en näringsidkare uppför ett en- eller tvåbostadshus åt en konsument och i vissa fall vid tillbyggnad, om byggnadsnämnden bedömer att det behövs.</p>
 `;
 
 const A_ENTREPRENADFORSAKRING_ALLRISK_VAD_TACKER: BlogPost = {
   _id: "code-"+"entreprenadforsakring-allrisk-vad-tacker",
-  title: "Entreprenadförsäkring – vad täcker den egentligen? Guide 2026 för byggföretag", slug: "entreprenadforsakring-allrisk-vad-tacker", locale: "sv",
-  excerpt: "Många hantverkare tror att företagsförsäkringen räcker – men allrisk och ansvar är två olika skydd, och standardavtalen kräver båda.", tag: "Ekonomi",
+  title: "Entreprenadförsäkring – vad täcker allrisk och ansvar?", slug: "entreprenadforsakring-allrisk-vad-tacker", locale: "sv",
+  excerpt: "Vad allrisk- och ansvarsförsäkringen faktiskt ersätter, vilka undantag som gäller enligt BKK:s basomfattning och vad AB 04/ABT 06 kräver – med räkneexempel på en vattenskada.", tag: "Ekonomi",
   coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_ENTREPRENADFORSAKRING_ALLRISK_VAD_TACKER_HTML,
-  seoTitle: "Entreprenadförsäkring vad täcker | ByggExp", seoDescription: "Allrisk skyddar bygget, ansvar skyddar mot skadestånd – och AB 04/ABT 06 kräver båda. Så vet du vad din entreprenadförsäkring täcker 2026.",
+  seoTitle: "Entreprenadförsäkring – vad täcker den? | ByggExp", seoDescription: "Allrisk, ansvar och befintlig egendom: undantag, minst 200 prisbasbelopp, självrisk högst 3 pbb enligt AB 04/ABT 06 och ett räkneexempel för 2026.",
   seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T11:12:00.000Z", createdAt: "2026-08-19T11:12:00.000Z", updatedAt: "2026-08-19T11:12:00.000Z",
+  publishedAt: "2026-08-19T11:12:00.000Z", createdAt: "2026-08-19T11:12:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_KOLLEKTIVAVTALADE_FORSAKRINGAR_BYGG_HTML = `
@@ -6368,104 +6415,133 @@ const A_FRISKVARDSBIDRAG_BYGGFORETAG_AVDRAG: BlogPost = {
 };
 
 const A_VIRKESATGANG_ALTAN_TRALLDACK_HTML = `
-<p>Inför säsongens altanjobb sitter marginalen i beräkningen. Räknar du för snålt får du hämta virke mitt i monteringen och äter upp vinsten på restid. Räknar du för brett binder du kapital i en trave som blir liggande. Den som kan sin virkesåtgång per m² – trall, reglar och bärlinor – lägger en offert som håller och slipper obehagliga överraskningar när brädorna väl ligger på plintarna.</p>
+<p>Siffran 7,94 lm/m² för trall 28×120 gäller vid ett kant-till-kant-avstånd på 126 mm, alltså 120 mm bräda plus 6 mm. Det är Svenskt Träs minsta avstånd för ny impregnerad furutrall, inte ett mått på springan: brädorna levereras ofta något bredare än nominellt och krymper när de torkar. Spillet kommer ovanpå och styrs mer av vilka längder du köper än av en procentsats. Nedan finns tabellerna från <a href="https://www.svenskttra.se/siteassets/5-publikationer/pdfer/st-lathunden-2021-med-utvik.pdf" target="_blank" rel="noopener noreferrer">Svenskt Träs Lathunden (utgåva 8:2021)</a> och en komplett materiallista för en altan på 4 × 5 meter.</p>
 
-<p>Vill du hoppa direkt till siffrorna? Mata in altanens mått i <a href="/sv/verktyg/trall-kalkylator">vår gratis trall-kalkylator -&gt;</a> så får du löpmeter trall, spillpåslag och antal brädor på sekunder.</p>
+<h2>Löpmeter trall per m² – tabell för vanliga bredder</h2>
+<p>Formeln är 1 000 delat med kant-till-kant-avståndet i millimeter. Tjockleken påverkar inte åtgången – 28×145 och 34×145 går åt lika mycket per kvadratmeter.</p>
+<div class="article-table"><table>
+<thead><tr><th>Trall (impregnerad furu)</th><th>Kant-till-kant</th><th>Åtgång exkl. spill</th></tr></thead>
+<tbody>
+<tr><td>22×95, 28×95, 34×95</td><td>100 mm</td><td>10,00 lm/m²</td></tr>
+<tr><td>28×120, 34×120</td><td>126 mm</td><td>7,94 lm/m²</td></tr>
+<tr><td>28×145, 34×145</td><td>152 mm</td><td>6,58 lm/m²</td></tr>
+<tr><td>Staketläkt 28×70</td><td>74 mm</td><td>13,51 lm/m²</td></tr>
+</tbody>
+</table></div>
+<p>Värmebehandlad, acetylerad och kiselimpregnerad trall rör sig mindre och har egna värden i Lathunden, till exempel 8,20 lm/m² för värmebehandlad 118 mm. Svenskt Trä anger också att fogsprånget mellan två intilliggande brädor får vara högst 3 mm och att trall aldrig får monteras utan springa.</p>
 
-<h2>Stommen på 30 sekunder</h2>
-<p>En altan byggs i tydliga lager, och varje lager har sin egen åtgångslogik:</p>
+<h2>Vad är en löpmeter – och hur räknar man om till m²?</h2>
+<p>En löpmeter (lm, ibland lpm) är bara längd: en meter virke, oavsett bredd och tjocklek. Kvadratmeter är yta. För att gå mellan dem behöver du åtgången per m² från tabellen ovan.</p>
 <ul>
-<li><strong>Plintar</strong> i mark bär hela konstruktionen.</li>
-<li><strong>Bärlinor</strong> (ofta 45x170 mm) vilar på plintarna och tar upp lasten tvärs altanen.</li>
-<li><strong>Reglar</strong> (ofta 45x145 mm) läggs vinkelrätt mot bärlinorna och bär trallen.</li>
-<li><strong>Trall</strong> (standard 28x120 mm) skruvas på reglarna – det synliga golvet.</li>
+<li><strong>m² till löpmeter:</strong> yta × åtgång. 25 m² med 28×120 blir 25 × 7,94 = 198,5 lm.</li>
+<li><strong>Löpmeter till m²:</strong> löpmeter ÷ åtgång. 100 lm 28×120 täcker 100 ÷ 7,94 = 12,6 m².</li>
+<li><strong>Löpmeter till antal brädor:</strong> löpmeter ÷ brädlängd, avrundat uppåt. 198,5 lm i 4,8-metersbrädor blir 42 brädor.</li>
 </ul>
-<p>Dimensionerna ovan är en beprövad stomme för en fristående altan i normal höjd. Grövre spännvidder eller tak över altanen kräver egen dimensionering, men för de flesta uterum är 45x145 reglar och 45x170 bärlina en trygg utgångspunkt.</p>
+<p>Vill du slippa räkna för hand, lägg in måtten i <a href="/sv/verktyg/trall-kalkylator">trallkalkylatorn</a>.</p>
 
-<h2>cc-avståndet styr allt</h2>
-<p>Centrumavståndet mellan reglarna (cc) avgör både hur mycket virke som går åt och hur golvet känns att gå på. Svenskt Trä och TräGuiden anger maximalt cc utifrån trallens tjocklek:</p>
+<h2>Trallens dimensioner, tjocklek och längder</h2>
+<p>Svenskt Träs produktkatalog listar trall i 22×95, 28×95, 28×120, 28×145, 34×95, 34×120 och 34×145, plus rillad trall i 28×120, 28×145 och 34×145. Impregnerad trall ska vara sort G4-2 eller G4-3 enligt SS-EN 1611-1. Tjockleken bestämmer hur glest du får lägga golvbjälkarna och hur lång skruven ska vara:</p>
+<div class="article-table"><table>
+<thead><tr><th>Trallens tjocklek</th><th>Max cc golvbjälke</th><th>Trallskruv, längd</th><th>Halslängd</th></tr></thead>
+<tbody>
+<tr><td>22 mm</td><td>400 mm</td><td>45 mm</td><td>22 mm</td></tr>
+<tr><td>26 mm (värmebehandlad)</td><td>450 mm</td><td>55 mm</td><td>28 mm</td></tr>
+<tr><td>28 mm</td><td>600 mm</td><td>55 mm</td><td>28 mm</td></tr>
+<tr><td>34 mm</td><td>800 mm</td><td>75 mm</td><td>34 mm</td></tr>
+</tbody>
+</table></div>
+<p>Källa: <a href="https://www.vida.se/wp-content/uploads/2021/05/Vida_Trall_8sid.pdf" target="_blank" rel="noopener noreferrer">Montering av trall (Vida, baserad på Svenskt Trä)</a>, tabell 1. Skruven ska ha minst 4,2 mm ytterdiameter och vara av rostfritt A2 eller A4, alternativt härdat stål med korrosionsskydd motsvarande klass C4. Vid pooler, bryggor och kustnära lägen rekommenderas A4 (C5).</p>
+<p>Bygghandeln säljer trall i längder från omkring 3,0 till 5,4 meter, ofta i steg om 0,3 meter, men vilka längder som finns i lager skiljer sig mellan butiker. Konstruktionsvirke längre än 5 400 mm är enligt Lathunden ofta fingerskarvat.</p>
+
+<h2>cc-avstånd för reglarna under trallen</h2>
+<p>För 28 mm trall, som 28×120, är gränsen cc 600 mm. Lägger du 34 mm kan du gå upp till cc 800, medan 22 mm kräver cc 400. Tätare än gränsen går alltid – golvet blir styvare men du köper mer virke.</p>
+<p>Regelvirket räknas enligt Lathunden som 1 000 ÷ cc löpmeter per m², plus längden av en regel:</p>
 <ul>
-<li><strong>22 mm trä:</strong> cc högst 400 mm</li>
-<li><strong>26 mm värmebehandlat:</strong> cc högst 450 mm</li>
-<li><strong>28 mm (standardtrall):</strong> cc högst 600 mm</li>
-<li><strong>34 mm:</strong> cc högst 800 mm</li>
+<li>cc 600: 1,67 lm/m²</li>
+<li>cc 400: 2,50 lm/m²</li>
+<li>cc 300: 3,33 lm/m²</li>
 </ul>
-<p>Standardtrallen 28x120 mm klarar alltså cc 600. Men många proffs väljer ändå cc 400 – golvet blir styvare, fjädrar mindre och känns påtagligt gediget under foten. Skillnaden kostar mer regelvirke men höjer den upplevda kvaliteten, vilket ofta är värt det på synliga uterum. Bygger du i komposit gäller alltid tillverkarens anvisning framför trätabellen.</p>
+<p><strong>Diagonal eller fiskben:</strong> trallen spänner då snett över bjälkarna och det fria spannet längs brädan blir längre. Vid 45 grader blir cc 600 mätt vinkelrätt ungefär 600 ÷ 0,71 = 849 mm längs brädan – mer än vad 28 mm trall klarar. Lägg bjälkarna på cc 400 (cirka 566 mm längs brädan) och räkna med mer spill, eftersom varje bräda kapas snett i båda ändar.</p>
 
-<h2>Räkna trall i löpmeter per m²</h2>
-<p>Trallåtgången beror på brädans bredd plus monteringsspalten. Grundformeln är enkel:</p>
-<p><strong>Löpmeter trall per m² = 1000 / (brädbredd + spalt)</strong></p>
-<p>Räkneexempel för 120 mm bräda med 6 mm spalt: modulen blir 126 mm, och 1000 / 126 = cirka 7,94 lm/m². En rak altan på 40 m² kräver då cirka 318 lm trall – före spillpåslag. Byter du brädbredd ändras åtgången direkt:</p>
-<ul>
-<li><strong>95 mm bräda + 6 mm spalt:</strong> ca 9,9 lm/m²</li>
-<li><strong>120 mm bräda + 6 mm spalt:</strong> ca 7,94 lm/m²</li>
-<li><strong>145 mm bräda + 6 mm spalt:</strong> ca 6,62 lm/m²</li>
-</ul>
-<p>När du har löpmetern, anpassa mot lagerlängderna (3,6–5,4 m). Rita altanen i skala och lägg brädlängderna så att kapet minimeras – det är här du sparar både virke och tid.</p>
+<h2>Golvbjälkar och bärlinor – vad Lathunden tillåter</h2>
+<p>I Lathunden heter det som bär trallen golvbjälkar och det som vilar på plintarna bärlinor. Tabellerna nedan är utdrag för C24-virke till altan, dimensionerade enligt Boverkets konstruktionsregler EKS 11. Med C14 blir spännvidderna kortare.</p>
+<div class="article-table"><table>
+<thead><tr><th>Golvbjälke C24</th><th>Ett fack, cc 600</th><th>Ett fack, cc 400</th><th>Två fack, cc 600</th></tr></thead>
+<tbody>
+<tr><td>45×120</td><td>1,91 m</td><td>2,19 m</td><td>3,37 m</td></tr>
+<tr><td>45×145</td><td>2,31 m</td><td>2,64 m</td><td>4,19 m</td></tr>
+<tr><td>45×170</td><td>2,71 m</td><td>3,10 m</td><td>5,01 m</td></tr>
+<tr><td>45×195</td><td>3,11 m</td><td>3,56 m</td><td>5,83 m</td></tr>
+</tbody>
+</table></div>
+<p>Värdena är maximal fri längd. ”Två fack” betyder att bjälken vilar på tre bärlinor och att mittstödet ligger någonstans mellan 40 och 60 procent av längden. Har altanen räcke i bjälkarnas riktning ska en extra bjälke sitta mellan de två yttersta.</p>
+<div class="article-table"><table>
+<thead><tr><th>Bärlina C24, golvbjälkar i två fack</th><th>Fri längd 3,0 m</th><th>4,2 m</th><th>5,4 m</th></tr></thead>
+<tbody>
+<tr><td>45×145</td><td>2,06 m</td><td>1,74 m</td><td>1,54 m</td></tr>
+<tr><td>45×170</td><td>2,41 m</td><td>2,04 m</td><td>1,80 m</td></tr>
+<tr><td>45×195</td><td>2,77 m</td><td>2,34 m</td><td>2,06 m</td></tr>
+<tr><td>45×220</td><td>3,03 m</td><td>2,62 m</td><td>2,33 m</td></tr>
+</tbody>
+</table></div>
+<p>Här är värdet största plintavstånd längs bärlinan, och ”fri längd” är golvbjälkarnas längd. Mittbärlinan ska vara dubbel. Lathunden rekommenderar dessutom att golvbjälkarnas cc är högst plintavståndet delat med fyra – med plintar var 2,0 meter blir det alltså cc 500 eller tätare. Ligger ditt mått mellan två kolumner, läs i den längre kolumnen; det ger kortare plintavstånd och du hamnar på säkra sidan.</p>
 
-<h2>Räkna reglar och bärlinor</h2>
-<p>Reglarna räknas per m² golvyta med formeln <strong>1 / cc</strong>:</p>
-<ul>
-<li><strong>cc 400 mm:</strong> 2,5 lm regel/m²</li>
-<li><strong>cc 600 mm:</strong> 1,67 lm regel/m²</li>
-</ul>
-<p>Lägg till kantreglar runt ytterkanten samt eventuella extra reglar vid skarvar. För 40 m² med cc 400 blir det 100 lm regelvirke plus kantreglar. Bärlinorna räknas i stället efter hur många linor som behövs tvärs altanen: spännvidden mellan plintar hålls typiskt 1,5–2,0 m beroende på last och dimension. Antalet bärlinor gånger altanens bredd ger löpmetern, och antalet plintar följer av spännvidden längs varje lina. Behöver du snabbt slå fast regelåtgång och plintantal, ta <a href="/sv/verktyg/reglar-kalkylator">reglar-kalkylatorn</a> till hjälp.</p>
-
-<h2>Spill, kap och spalt – de tre som spräcker kalkylen</h2>
-<p>Tre detaljer avgör om din materiallista håller:</p>
+<h2>Exempel: materiallista för en altan på 4 × 5 meter</h2>
+<p>Fristående altan på plintar, 5,0 meter längs huset och 4,0 meter ut. Golvbjälkarna går ut från huset över tre bärlinor, och trallen läggs parallellt med fasaden.</p>
 <ol>
-<li><strong>Spill:</strong> räkna 10–15 % påslag på trallen som branschtumregel. Rak, enkel altan klarar sig på 5–10 %; vinklar, mönster och diagonalläggning kräver mer.</li>
-<li><strong>Spalt:</strong> trall får aldrig monteras utan springa. Använd 4–6 mm monteringsspalt för ny tryckimpregnerad trall som rör sig och krymper. I det färdiga golvet bör fogsprånget inte överstiga 3 mm.</li>
-<li><strong>Infästning och skydd:</strong> brädor bredare än 70 mm ska dubbelskruvas med 30 mm kantavstånd, smalare brädor (45–70 mm) får en centrerad skruv. Utomhus krävs korrosionsskydd lägst klass C4 – varmförzinkat eller rostfritt A2/A4 – och C5 vid kust.</li>
+<li><strong>Golvbjälkar:</strong> 45×145 C24 i två fack klarar 4,19 m vid cc 600, så 4,0 m fungerar. Fem meter delat i nio mellanrum ger tio bjälkar med verkligt cc 556 mm. Kontroll enligt Lathunden: 20 m² × 1,67 + 4,0 = 37,4 lm.</li>
+<li><strong>Bärlinor:</strong> med 4,0 m golvbjälkar läser vi kolumnen 4,2 m. 45×220 C24 tillåter 2,62 m mellan plintarna, så tre plintar per bärlina (2,5 m mellan) räcker. 2,5 ÷ 4 = 0,625 m, alltså uppfyller cc 556 rekommendationen.</li>
+<li><strong>Trall:</strong> 20 m² × 7,94 = 158,8 lm enligt tabellen. I praktiken behövs 4 000 ÷ 126 = 31,7, alltså 32 rader. Med 5,1-metersbrädor blir det 32 brädor och 163,2 lm, utan en enda skarv. Spillet stannar på knappt 3 procent.</li>
+<li><strong>Skruv:</strong> 32 rader × 10 bjälkar = 320 korsningar. Med två skruv per korsning blir det 640 skruv, 55 mm långa.</li>
 </ol>
-<p>Skruvhuvudet ska ligga exakt i nivå med träytan, aldrig försänkt, så att vatten inte samlas i skallen.</p>
+<div class="article-table"><table>
+<thead><tr><th>Material</th><th>Mängd</th><th>Kommentar</th></tr></thead>
+<tbody>
+<tr><td>Plintar</td><td>9 st</td><td>3 bärlinor × 3 plintar</td></tr>
+<tr><td>Bärlina 45×220 C24, NTR A</td><td>4 st à 5,1–5,4 m</td><td>2 ytterlinor + dubbel mittlina</td></tr>
+<tr><td>Golvbjälke 45×145 C24, NTR A</td><td>10 st à 4,2 m</td><td>Kapas till 4,0 m, cc 556 mm</td></tr>
+<tr><td>Trall 28×120, NTR AB</td><td>32 st à 5,1 m</td><td>163,2 lm, inga skarvar</td></tr>
+<tr><td>Trallskruv 55 mm, minst 4,2 mm, A2/A4 eller C4</td><td>640 st + reserv</td><td>Två per korsning</td></tr>
+<tr><td>Grundisoleringspapp, remsor</td><td>40 m</td><td>På bjälkarnas översida</td></tr>
+<tr><td>Beslag bjälke–bärlina och bärlina–plint</td><td>Enligt tillverkare</td><td>Antal följer av ritningen</td></tr>
+</tbody>
+</table></div>
+<p>Varför NTR A i stommen? Svenskt Träs monteringsanvisning anger NTR A för trä i markkontakt, för konstruktioner där personsäkerheten kräver att de inte försvagas och för trä som är svårt att byta, till exempel på plintar. NTR AB räcker för oskyddat trä ovan mark, som trallen. Betong till plintarna räknar du ut i guiden om <a href="/sv/blog/betong-plintar-stolpfundament">betong till plintar och stolpfundament</a>.</p>
+<p>Finns bara 4,2 och 4,8 meter i lager måste raderna skarvas. Skarvarna ska då ligga stumt över stöd, med påsalning av 45×95 spikreglar på båda sidor om bjälken. Skarvar i intilliggande brädor ska förskjutas minst 1 200 mm, och skarvslutbrädor ska vara minst 2 meter långa. Det ger mer kap, och därmed mer spill, än en jämn procentsats antyder – se <a href="/sv/blog/spillprocent-bygg-material">spillprocent på byggmaterial</a>.</p>
 
-<h2>Skruv- och infästningsåtgång</h2>
-<p>På breda brädor sätts två skruv per regelkorsning. Antalet korsningar per m² beror på både brädbredd och cc, så åtgången varierar – men på en standardaltan med 120 mm trall och cc 400 landar du grovt kring 30–40 skruv per m². Använd skruv med minst 4,2 mm ytterdiameter; längden anpassas efter trallen: cirka 45 mm för 22 mm trall, 55 mm för 28 mm och 75 mm för 34 mm. Köp med marginal – tappade och feldragna skruv är oundvikligt på ett altangolv.</p>
-
-<h2>Offert och ROT 2026 – dela material och arbete rätt</h2>
-<p>Bygger du en altan eller ett trädäck sammanbyggt med ett småhus ger ROT-avdrag på <strong>arbetet</strong> – aldrig på material, maskinhyra eller resor. ROT 2026 är 30 % av arbetskostnaden med tak 50 000 kr per person och år (gemensamt tak med RUT på 75 000 kr). För dig som hantverkare betyder det att offerten måste särredovisa arbete och material tydligt, annars tappar kunden avdraget och du får diskussionen efteråt. Sätt en ärlig arbetsandel, håll materiallistan separat och spara underlaget – bokföring och underlag ska bevaras i sju år.</p>
-
-<h2>Snabb checklista + kalkylexempel för 40 m² altan</h2>
-<p>En rak altan på 40 m², trall 28x120 mm med 6 mm spalt, reglar cc 400:</p>
+<h2>Detaljer som ändrar mängderna</h2>
 <ul>
-<li><strong>Trall:</strong> 40 × 7,94 = ca 318 lm, plus 12 % spill = ca 356 lm</li>
-<li><strong>Reglar 45x145:</strong> 40 × 2,5 = 100 lm plus kantreglar</li>
-<li><strong>Bärlina 45x170:</strong> efter spännvidd 1,5–2,0 m och antal linor tvärs ytan</li>
-<li><strong>Skruv:</strong> ca 30–40 st/m², dvs 1200–1600 st, C4-skydd, längd 55 mm</li>
-<li><strong>Plintar:</strong> enligt bärlinans spännvidd</li>
+<li><strong>Lutning:</strong> bjälkarna ska ligga horisontellt eller luta cirka 1:100 ut från huset. På 4,0 meter blir det 40 mm fall, vilket påverkar plinthöjderna.</li>
+<li><strong>Rörelsefog:</strong> 6 mm mot vägg, grund, pelare och fris. Börjar du läggningen mot huset hamnar den kluvna sista brädan i ytterkanten.</li>
+<li><strong>Fris:</strong> en tvärgående bräda som döljer ändträet kräver extra stöd i form av 45×95 spikreglar innanför den yttre bjälken.</li>
+<li><strong>Infästning:</strong> brädor från 95 mm bredd ska ha två skruv per bjälke, 30 mm från kanten. Smalare brädor (45 och 70 mm) fästs med en skruv i mitten. Förborra ändarna med 3,0–3,5 mm.</li>
+<li><strong>Skruv per m²:</strong> 28×120 ger 7,94 × 1,67 × 2 = cirka 26 skruv per m² vid cc 600, och cirka 40 vid cc 400. Lägg till extra vid skarvar och friser.</li>
 </ul>
-
-<h2>Så gör du i ByggExp</h2>
-<p>I ByggExp lägger du upp altanjobbet som ett projekt och bygger materiallistan från kalkylatorernas siffror direkt i offerten. Du separerar arbete och material så att ROT-underlaget blir rätt från början, och samlar mängder, spillpåslag och skruvåtgång på ett ställe. När kunden godkänner har du en mängdförteckning att beställa virke efter – och en offert som stämmer med det du faktiskt bygger. Verktyget räknar inte åt dig i fält, men det håller kalkyl, offert och underlag i ordning så att marginalen inte läcker mellan Excel-ark.</p>
+<p>Behöver du räkna bjälkar och plintar för en annan storlek fungerar <a href="/sv/verktyg/reglar-kalkylator">reglarkalkylatorn</a> för själva regelmängden. Spännvidderna kontrollerar du fortfarande mot tabellerna.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Hur mycket trall går åt per m²?</h3>
-<p>Använd formeln 1000 / (brädbredd + spalt). En 120 mm bräda med 6 mm spalt ger cirka 7,94 lm/m². Lägg sedan på 10–15 % spill för kap och anpassning mot lagerlängder.</p>
-
-<h3>Vilket cc-avstånd ska reglarna ha?</h3>
-<p>Standardtrall på 28 mm klarar max cc 600 mm enligt TräGuiden, men många väljer cc 400 för ett styvare golv. Tunnare trall kräver tätare cc: 22 mm högst 400 mm.</p>
-
-<h3>Hur stor spalt ska jag ha mellan trallbrädorna?</h3>
-<p>Trall ska alltid monteras med springa. Använd 4–6 mm monteringsspalt för ny tryckimpregnerad trall som krymper. I det färdiga golvet bör fogsprånget inte överstiga 3 mm.</p>
-
-<h3>Får kunden ROT-avdrag på altanbygget?</h3>
-<p>Ja, om altanen byggs samman med ett småhus ger ROT 30 % på arbetskostnaden, tak 50 000 kr per person 2026. Avdraget gäller bara arbetet – aldrig material, maskinhyra eller resor.</p>
-
-<h2>Kom igång</h2>
-<p>Räkna fram hela materiallistan för nästa altan i <a href="/sv/verktyg/trall-kalkylator">trall-kalkylatorn</a> och komplettera med <a href="/sv/verktyg/reglar-kalkylator">reglar-kalkylatorn</a>. Vill du se hur kalkyl, offert och ROT-uppdelning hänger ihop i ett projekt? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
-
-<p>Relaterat: <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>, <a href="/sv/blog/spillprocent-bygg-material">Spillprocent på byggmaterial</a> och <a href="/sv/blog/mangdforteckning-bygg">Mängdförteckning i bygget</a>.</p>
+<h3>Hur många löpmeter trall går det åt per kvm?</h3>
+<p>För 28×120 går det åt 7,94 lm/m², för 28×145 6,58 lm/m² och för 28×95 10,00 lm/m², exklusive spill. Värdena bygger på Svenskt Träs minsta kant-till-kant-avstånd: 126, 152 respektive 100 mm.</p>
+<h3>Vilket cc-avstånd ska reglarna ha för trall 28×120?</h3>
+<p>Högst 600 mm enligt Svenskt Trä, eftersom trallen är 28 mm tjock. Lägger du trallen diagonalt eller i fiskben bör du gå ner till cc 400, eftersom spannet längs brädan då blir längre.</p>
+<h3>Vilken skruv ska man ha till trall 28×120?</h3>
+<p>Trallskruv som är 55 mm lång med 28 mm hals och minst 4,2 mm ytterdiameter, i rostfritt A2/A4 eller härdat stål med korrosionsskydd motsvarande C4. Vid pool, brygga eller kust gäller A4. Brädor som är 95 mm eller bredare får två skruv per bjälke.</p>
+<h3>Hur många skruv går det åt per kvadratmeter trall?</h3>
+<p>Med 28×120 och två skruv per korsning blir det cirka 26 skruv per m² vid cc 600 och cirka 40 vid cc 400. Räkna lite extra för skarvar, friser och skruv som går förlorad.</p>
+<h3>Vad är en löpmeter?</h3>
+<p>En löpmeter är en meter virke räknat i längd, oavsett bredd. För att räkna om kvadratmeter till löpmeter multiplicerar du ytan med åtgången per m², till exempel 20 m² × 7,94 = 158,8 lm för 28×120.</p>
+<h3>Vilka längder finns trallvirke i?</h3>
+<p>Vanligen mellan 3,0 och 5,4 meter, ofta i steg om 0,3 meter, men sortimentet varierar mellan butiker. Välj längder som täcker en hel rad eller ger skarvar över bjälkarna, så minskar spillet.</p>
 `;
 
 const A_VIRKESATGANG_ALTAN_TRALLDACK: BlogPost = {
   _id: "code-"+"virkesatgang-altan-tralldack",
   title: "Virkesåtgång för altan: räkna trall, reglar och bärlinor per m²", slug: "virkesatgang-altan-tralldack", locale: "sv",
-  excerpt: "Så räknar du exakt virkesåtgång för altanen – trall, reglar, bärlinor och skruv per m² med rätt cc-avstånd och spillpåslag.", tag: "Ekonomi",
+  excerpt: "Trall per m² enligt Svenskt Träs tabeller, cc-avstånd per trallens tjocklek, spännvidder för golvbjälkar och bärlinor – och en komplett materiallista för en altan på 4 × 5 meter.", tag: "Ekonomi",
   coverImageUrl: "/landing/verktyg/trall-preview.webp", contentHtml: A_VIRKESATGANG_ALTAN_TRALLDACK_HTML,
-  seoTitle: "Virkesåtgång altan trall per m² | ByggExp", seoDescription: "Räkna trall, reglar och bärlinor per m² altan. Formler för löpmeter, cc-avstånd, spill och skruv – plus ROT 2026 för din offert.",
+  seoTitle: "Virkesåtgång altan: trall per m², cc och bärlinor | ByggExp", seoDescription: "Trall 28×120 går åt 7,94 lm/m². Tabeller för trall, cc och bärlinor enligt Svenskt Trä, plus materiallista för en altan på 4 × 5 m med skruv och plintar.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/trall-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T20:09:00.000Z", createdAt: "2026-08-19T20:09:00.000Z", updatedAt: "2026-08-19T20:09:00.000Z",
+  publishedAt: "2026-08-19T20:09:00.000Z", createdAt: "2026-08-19T20:09:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_ROT_FORDELA_MAKAR_TAK_2026_HTML = `
@@ -6787,92 +6863,95 @@ const A_LEASA_ELLER_KOPA_MASKINER_BYGGFORETAG: BlogPost = {
 };
 
 const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
-<p>Fyra ersättningar blandas ihop varje månad på byggföretagens lönebesked: restidsersättning, reskostnadsersättning, milersättning och traktamente. De styrs av olika logiker och delvis av olika regelverk - kollektivavtalet styr vad du <em>betalar ut</em>, Skatteverket styr vad som är <em>skattefritt</em>. Räknar du fel blir det antingen dyrt (för mycket utbetalt, eller skatteplikt du missat) eller en tvist med Byggnads (för lite utbetalt). Den här guiden reder ut vad varje post faktiskt ersätter och var skattegränsen går 2026.</p><figure class="article-diagram"><img src="/landing/diagrams/restidsersattning-byggavtalet.webp" alt="Tabell som jämför restidsersättning, reskostnadsersättning, milersättning och traktamente med vad varje post ersätter och satser 2026." width="720" height="380" loading="lazy"><figcaption>De fyra ersättningarna sida vid sida: vad var och en täcker och gällande satser 2026 enligt Byggavtalet och Skatteverket.</figcaption></figure>
+<p>Byggavtalet ger ingen restidsersättning för den dagliga resan mellan hemmet och bygget – där betalas bara reskostnad, 2,50 kr per km när enkel resväg är längre än 2 km. Restid ersätts först när arbetstagaren reser till eller från en förrättningsort minst 70 km bort, och då med grundlön för högst 12 timmar per dygn minus samma dags arbetade timmar. Reglerna står i <a href="https://www.byggnads.se/49ec78/siteassets/kollektivavtal/byggavtalet-2025-digital-utgava-1.pdf" target="_blank" rel="noopener noreferrer">Byggavtalet 2025–2027 § 6</a>. Om ersättningen blir skattefri avgörs inte av avtalet utan av var den anställda har sitt tjänsteställe.</p>
 
-<p>Vill du snabbt räkna ut ersättningen? Använd vår gratis <a href="/sv/verktyg/restidsersattning-kalkylator">restids- och reseersättningskalkylator</a>. För att hålla ordning på restid, resväg och arbetstimmar per projekt kan du använda <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -&gt;</a> som underlag till reseräkning och lönekörning.</p>
+<h2>Daglig resa: reskostnadsersättning enligt § 6 punkt 1</h2>
+<p>Ersättningen gäller resor mellan den fasta bostaden och arbetsplatsen utanför arbetstiden. Resvägen räknas som kortaste farbara väg på allmän väg (punkt 3.5), och arbetstagaren får aldrig mer än för den faktiska resvägen och det faktiska ressättet (punkt 3.6). Den maximala ersättningen per dag beräknas på högst 120 km enkel resväg.</p>
+<div class="article-table"><table>
+<thead><tr><th>Ressätt</th><th>Ersättning</th></tr></thead>
+<tbody>
+<tr><td>Egen bil</td><td>2,50 kr/km</td></tr>
+<tr><td>Kollektivtrafik eller annat färdmedel</td><td>Styrkt kostnad, högst 2,50 kr/km</td></tr>
+<tr><td>Samåkning – föraren</td><td>2,50 kr/km + 0,85 kr/km för varje passagerare</td></tr>
+<tr><td>Samåkning – passageraren</td><td>0,85 kr/km</td></tr>
+<tr><td>Arbetsgivaren ordnar transport</td><td>Ingen ersättning, utom 2,50 kr/km till och från upphämtningsplatsen (då gäller inte 2-kilometersgränsen)</td></tr>
+</tbody>
+</table></div>
+<p>Två undantag är lätta att missa. Maskinförare, förrådsarbetare, reparatörer och liknande som utgår från företagets verkstad eller förråd får inte ersättning för arbete där (punkt 3.7). Och den som flyttar närmare arbetsplatsen får det lägre beloppet från flyttdagen (punkt 3.1).</p>
 
-<h2>Fyra begrepp, fyra logiker</h2>
-<p>Det första steget är att sluta behandla posterna som samma sak. De ersätter olika saker:</p>
-<ul>
-<li><strong>Restidsersättning</strong> - betalning för själva <em>tiden</em> den anställde lägger på att resa till och från arbetsplatsen eller förrättningen. Det är en tidsersättning, inte en kostnadsersättning.</li>
-<li><strong>Reskostnadsersättning</strong> - ersättning för <em>resvägen/kostnaden</em> mellan bostad och arbetsplats. Här ligger körningen med egen bil, samåkning och kollektivtrafik.</li>
-<li><strong>Milersättning</strong> - inte en egen post, utan <em>km-satsen inuti</em> reskostnadsersättningen när den anställde kör egen bil.</li>
-<li><strong>Traktamente</strong> - ersättning för <em>mat och logi</em> vid tjänsteresa med övernattning. En helt separat värld med egna skatteregler.</li>
-</ul>
-<p>Ihopblandning är dyr åt båda hållen: betalar du traktamente som om det vore skattefri milersättning missar du arbetsgivaravgifter, och betalar du bara reskostnad när avtalet också kräver restidsersättning ligger du under kollektivavtalet.</p>
+<h3>Exempel: vanlig arbetsmånad</h3>
+<p>En snickare kör egen bil 45 km enkel väg till ett bostadsprojekt. Med resvägen tur och retur blir det 90 km × 2,50 kr = 225 kr per arbetsdag och 4 725 kr på 21 arbetsdagar. Bor hen 150 km bort räknas dagen ändå bara på 120 km enkel resväg: 240 km × 2,50 kr = 600 kr per dag.</p>
+<p>Vill du räkna på egna avstånd och samåkning finns <a href="/sv/verktyg/restidsersattning-kalkylator">kalkylatorn för restids- och reseersättning</a>.</p>
 
-<h2>Reskostnadsersättning för daglig resa hem&harr;arbetsplats</h2>
-<p>Detta är den vanligaste posten - den dagliga resan mellan bostad och arbetsplats. Enligt Byggavtalet gäller följande huvudlinjer:</p>
-<ul>
-<li>Ersättning utgår när <strong>enkel resväg överstiger 2 km</strong>.</li>
-<li><strong>Egen bil: 2,50 kr/km (25 kr/mil).</strong></li>
-<li><strong>Samåkning:</strong> föraren får 2,50 kr/km plus 0,85 kr/km per passagerare; passageraren får 0,85 kr/km.</li>
-<li><strong>Annat färdmedel</strong> (t.ex. kollektivtrafik): styrkta kostnader, högst 2,50 kr/km.</li>
-<li>Ersättningen betalas <strong>per arbetsdag</strong> och räknas på <strong>högst 120 km enkel resväg</strong>.</li>
-</ul>
-<p>Beloppen följer Skatteverket: ändras det skattefria beloppet för tjänsteresor eller traktamente, ändras avtalets belopp på samma sätt (Byggavtalet 2025–2027 § 6 p. 1).</p>
-
-<h2>Restidsersättning - betalning för själva restiden</h2>
-<p>Restidsersättning betalas för nödvändig restid till och från en förrättningsort (minst 70 km enkel resväg från bostaden), och den ersätter den <em>tid</em> den anställde reser - inte kilometrarna. Det innebär två saker i praktiken:</p>
-<ul>
-<li>Restidsersättning och reskostnadsersättning <strong>kan kombineras</strong> för samma resa: den ena betalar timmarna, den andra bilen.</li>
-<li>Restiden ersätts med <strong>grundlön per timme</strong>, högst 12 timmar per dygn minus samma dags arbetade timmar (§ 6 p. 2.7.2). För yrkesarbetare är grundlönen <strong>203 kr/tim från 1 maj 2026</strong> (196 kr/tim maj 2025–april 2026).</li>
-</ul>
-<p>En vanlig felkälla är att blanda restidsersättning med milsatser från andra avtal. Det förekommer siffror i omlopp (exempelvis restidsersättning uttryckt i kr/mil) som i själva verket hör hemma i plåt-, ventilations- eller VVS-avtalen - inte i Byggavtalet. Använd aldrig en sats du inte kunnat verifiera mot Byggavtalets egen text.</p>
-
-<h2>Traktamente och förrättningstillägg vid övernattning</h2>
-<p>Vid tjänsteresa med övernattning tillkommer traktamente. Här möts två regelverk som inte är samma sak:</p>
-<ul>
-<li><strong>Byggavtalets traktamente</strong> är <strong>435 kr per dag</strong> vid övernattning (§ 6 p. 2.2) - alltså <em>över</em> Skatteverkets skattefria gräns. Mellanskillnaden är skattepliktig lön. Beloppet reduceras med 55% om arbetsgivaren står för maten och 35% om arbetsgivaren står för boendet.</li>
-<li><strong>Skatteverkets skattefria traktamente inrikes 2026:</strong> helt maximibelopp 300 kr/heldag (halvdag 150 kr, natt 150 kr). Efter tre månader på samma ort sänks skattefritt belopp till 210 kr, efter två år till 150 kr. Från 2026 gäller nya, striktare allmänna råd.</li>
-<li><strong>50-km- och övernattningskravet:</strong> skattefritt traktamente förutsätter tjänsteresa med övernattning mer än 50 km från både bostad och den vanliga verksamhetsorten.</li>
-</ul>
-<p>Utöver traktamentet finns <strong>förrättningstillägg</strong> vid eget boende på annan ort: 35% av traktamentesbeloppet de första 90 dagarna, därefter 20%. Detta tillägg är <strong>helt skattepliktigt</strong>, till skillnad från den skattefria delen av traktamentet.</p>
-
-<h2>Skatt - skiljelinjen som ställer till det</h2>
-<p>Den avgörande insikten: <strong>kollektivavtalet styr utbetalningen, Skatteverket styr skatten.</strong> De sammanfaller inte.</p>
-<ul>
-<li>Skattefri milersättning för egen bil är <strong>25 kr/mil (2,50 kr/km)</strong> enligt Skatteverket 2026 - oförändrat sedan 2024. Det är ett tak för skattefrihet, inte en avtalsnivå.</li>
-<li>Allt avtalet betalar <em>över</em> den skattefria nivån blir <strong>skattepliktig lön med arbetsgivaravgifter</strong>. Det gäller traktamentets överskjutande del och hela förrättningstillägget.</li>
-<li>Byggnadsarbetares reseersättning styrs av kollektivavtalet, inte av reseavdraget i deklarationen, eftersom de typiskt saknar fast arbetsplats. Att blanda ihop avtalets reseersättning med deklarationens reseavdrag är en klassisk felkälla.</li>
-</ul>
-
-<h2>Räkneexempel (B2B)</h2>
-<p>En montör kör egen bil 6 mil tur och retur till ett projekt utanför fri zon och övernattar en vecka. Så här bör posterna redovisas <em>separat</em> på lönebeskedet (använd aktuella avtalssatser - beloppen nedan är ca-värden för att visa strukturen):</p>
+<h2>Är reseersättningen skattefri?</h2>
+<p>Avtalets 2,50 kr/km är exakt samma nivå som Skatteverkets skattefria bilersättning för egen bil 2026, <a href="https://www.skatteverket.se/foretag/arbetsgivare/lonochersattning/traktamenteochbilersattning.4.361dc8c15312eff6fd1703e.html" target="_blank" rel="noopener noreferrer">25 kr per mil</a>. Men beloppet är bara skattefritt när resan räknas som tjänsteresa. Enligt Skatteverkets broschyr <a href="https://www.skatteverket.se/download/18.1522bf3f19aea8075ba3da6/1768986614741/traktamenten-mm-i-byggbranschen-skv353-utgava15.pdf" target="_blank" rel="noopener noreferrer">Traktamenten m.m. i byggbranschen (SKV 353)</a> är ersättning för resor till och från arbetet lön. Har den anställda bostaden som tjänsteställe räknas resan till bygget däremot som tjänsteresa.</p>
+<p>Var tjänstestället ligger bedöms i tre steg:</p>
 <ol>
-<li><strong>Reskostnadsersättning:</strong> 6 mil &times; 25 kr/mil = ca 150 kr för resdagen. Skattefri upp till Skatteverkets milgräns.</li>
-<li><strong>Restidsersättning:</strong> antal restimmar &times; grundlön (203 kr/tim för yrkesarbetare). Ersätter tiden, redovisas som egen rad. Skattepliktig som lön.</li>
-<li><strong>Traktamente:</strong> avtalets dagsbelopp 435 kr - varav 300 kr skattefritt och resterande del skattepliktig. Reduceras om arbetsgivaren står för mat eller boende.</li>
+<li><strong>Huvudregeln:</strong> platsen där huvuddelen av arbetet görs. En byggarbetsplats kan bli tjänsteställe, till exempel vid en tidsbegränsad anställning på ett enda projekt.</li>
+<li><strong>Alternativregeln:</strong> den som byter arbetsplats ofta men besöker arbetsgivarens lokaler, garage eller förråd mer än en gång i veckan har tjänstestället där.</li>
+<li><strong>Undantagsregeln:</strong> den som arbetar på skiftande platser och sällan besöker arbetsgivarens lokaler har tjänstestället i bostaden.</li>
 </ol>
-<p>Poängen är inte kronorna utan uppdelningen: tre olika rader, med rätt skattefri/skattepliktig hantering på varje. Hänvisa alltid till aktuell avtalstext för de exakta beloppen.</p>
+<p>Samma 225 kr kan alltså vara skattefria för en snickare som åker direkt hemifrån till skiftande byggen, men lön för en kollega som hämtar firmabilen i företagets garage varje morgon. Samåkningstillägget på 0,85 kr/km är enligt avtalet alltid skattepliktigt med sociala avgifter. I arbetsgivardeklarationen kryssas skattefri bilersättning i ruta 050, och det som överstiger 25 kr/mil redovisas som lön i ruta 011.</p>
 
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp löser inte lönekörningen åt dig, men det ger dig underlaget som gör den korrekt. Med tidrapportering per projekt får du timmar, restid och resväg registrerade på rätt kostnadsställe redan när jobbet utförs - istället för att rekonstruera dem i efterhand ur minnet. Det ger dig ett spårbart underlag till reseräkning, lönesystem och eventuell granskning från Byggnads, och gör det enklare att hålla restidsersättning, reskostnad och traktamente på separata rader. Beloppen och avtalssatserna lägger du in enligt gällande Byggavtal - ByggExp håller ordning på tiden och platsen, du håller ordning på satserna.</p>
+<h2>Restid till och från förrättningsort</h2>
+<p>Restidsersättning finns bara i samband med förrättning, alltså arbete minst 70 km enkel resväg från bostaden (§ 6 punkt 2.7.2). Arbetstagaren har rätt till ersättning för den restid som är nödvändig för resan dit och hem, högst 12 timmar per dygn minskat med de timmar som arbetats samma dag. Restiden ersätts med grundlön enligt § 3, oavsett om den ligger under eller utanför ordinarie arbetstid.</p>
+<div class="article-table"><table>
+<thead><tr><th>Kategori (urval)</th><th>Grundlön 1 maj 2025–30 april 2026</th><th>Grundlön från 1 maj 2026</th></tr></thead>
+<tbody>
+<tr><td>Yrkesarbetare, yrkeskunnig, maskinförare</td><td>196,00 kr/tim</td><td>203,00 kr/tim</td></tr>
+<tr><td>Bilförare m.fl.</td><td>186,20 kr/tim</td><td>192,85 kr/tim</td></tr>
+<tr><td>Övriga arbetstagare 1</td><td>172,48 kr/tim</td><td>178,64 kr/tim</td></tr>
+</tbody>
+</table></div>
+<p>För själva resan vid första inställelsen och vid avflyttningen betalas dessutom reskostnad för den faktiska resvägen – här gäller inte taket på 120 km (punkt 2.7.1).</p>
+
+<h3>Exempel: inställelse till ett projekt 31 mil bort</h3>
+<p>En yrkesarbetare kör egen bil 310 km till en förrättning i oktober 2026. Resan tar 4 timmar och hen arbetar 5 timmar samma dag. Taket blir 12 − 5 = 7 timmar, så alla 4 restimmar ersätts:</p>
+<ul>
+<li>Restid: 4 tim × 203 kr = 812 kr – lön med skatteavdrag och arbetsgivaravgifter.</li>
+<li>Reskostnad: 310 km × 2,50 kr = 775 kr – skattefri, eftersom inställelseresan är en tjänsteresa och beloppet motsvarar 31 mil × 25 kr.</li>
+</ul>
+<p>Hade resan i stället tagit 9 timmar med 5 arbetade timmar samma dag, hade bara 7 restimmar ersatts. Veckovisa hemresor under en pågående förrättning är inte inställelse eller avflyttning, och enligt SKV 353 är hemresor som arbetsgivaren betalar lön.</p>
+
+<h2>Egen bil i tjänsten är något annat än reskostnad</h2>
+<p>Kör den anställda egen bil under arbetstid, till exempel mellan två byggen eller till grossisten, gäller § 6 punkt 4. Ingen part kan kräva att egen bil används – det kräver en överenskommelse. Bilersättningen trappas ned med antalet mil per kalenderår:</p>
+<div class="article-table"><table>
+<thead><tr><th>Mil per kalenderår</th><th>Byggavtalet</th><th>Skattefritt</th><th>Skattepliktig del</th></tr></thead>
+<tbody>
+<tr><td>Upp till 1 000</td><td>30 kr/mil</td><td>25 kr/mil</td><td>5 kr/mil</td></tr>
+<tr><td>1 001–2 000</td><td>26 kr/mil</td><td>25 kr/mil</td><td>1 kr/mil</td></tr>
+<tr><td>Över 2 000</td><td>24 kr/mil</td><td>24 kr/mil</td><td>0 kr</td></tr>
+</tbody>
+</table></div>
+<p>Exempel: 1 400 tjänstemil under året ger 1 000 × 30 kr + 400 × 26 kr = 40 400 kr. Av det är 1 400 × 25 kr = 35 000 kr skattefritt och 5 400 kr lön. Vägtullar och trängselskatt på beordrade tjänsteresor ersätts mot kvitto (punkt 4.4) och kan betalas skattefritt. Körsträckan ska kunna styrkas, se <a href="/sv/blog/korjournal-krav-skatteverket-bygg">vad Skatteverket kräver av en körjournal</a>. Används firmabil i stället gäller andra regler, som vi går igenom i <a href="/sv/blog/servicebil-eller-formansbil">servicebil eller förmånsbil</a>.</p>
+
+<h2>Traktamente tillkommer vid övernattning</h2>
+<p>Övernattar arbetstagaren på förrättningsorten betalas traktamente med 450 kr per dag från 1 januari 2026 (435 kr under 2025), plus ett skattepliktigt förrättningstillägg om hen själv ordnar boendet. Avdrag för kost och logi, skattegränserna och ett veckoexempel finns i <a href="/sv/blog/traktamente-byggnadsarbetare-2026">traktamente för byggnadsarbetare 2026</a>.</p>
+<p>I ByggExp-appen registrerar den anställda restid i kilometer och minuter direkt på arbetspasset, så att underlaget till lönen följer med projektet.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Är restidsersättning och reskostnadsersättning samma sak?</h3>
-<p>Nej. Restidsersättning betalar för den tid resan tar, reskostnadsersättning betalar för resvägen/kostnaden (bil, samåkning eller kollektivtrafik). De kan utgå samtidigt för samma resa - den ena för timmarna, den andra för kilometrarna.</p>
-<h3>Vilken milersättning gäller för byggnadsarbetare 2026?</h3>
-<p>Reskostnaden vid egen bil enligt Byggavtalet 2025–2027 är 2,50 kr/km (25 kr/mil). Skatteverkets skattefria milersättning är också 25 kr/mil 2026. Betalar arbetsgivaren mer än den skattefria nivån blir överskjutande del skattepliktig lön.</p>
-<h3>Måste traktamentet över 300 kr beskattas?</h3>
-<p>Ja. Skatteverkets skattefria maximibelopp inrikes 2026 är 300 kr/heldag. Byggavtalets traktamente ligger över det, och mellanskillnaden är skattepliktig lön med arbetsgivaravgifter. Efter tre månader på samma ort sänks den skattefria gränsen till 210 kr, efter två år till 150 kr.</p>
-<h3>Gäller Skatteverkets reseavdrag för byggnadsarbetare?</h3>
-<p>Nej, inte automatiskt. Byggnadsarbetares reseersättning styrs av kollektivavtalet eftersom de typiskt saknar fast arbetsplats - inte av reseavdraget i deklarationen. Att blanda ihop de två är en vanlig felkälla.</p>
-
-<h2>Kom igång</h2>
-<p>Bygg ett spårbart reseunderlag redan när jobbet utförs med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall</a>, och håll restid, reskostnad och traktamente på separata rader. Vill du se hur tidrapportering per projekt kan koppla ihop tid, resväg och lönesunderlag i din verksamhet? <a href="/sv/contact">Boka en demo</a>. Använd Byggavtalet 2025-2027 och Skatteverkets belopp för 2026 som dina primärkällor för de exakta satserna.</p>
-
-<p>Relaterat: <a href="/sv/blog/traktamente-byggnadsarbetare-2026">Traktamente för byggnadsarbetare 2026</a>, <a href="/sv/blog/ob-overtid-byggavtalet-rakna">OB och övertid enligt Byggavtalet - så räknar du</a>, <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Kollektivavtal i byggbranschen</a>.</p>
+<h3>Får man betalt för restiden till jobbet varje dag enligt Byggavtalet?</h3>
+<p>Nej. För den dagliga resan mellan bostad och arbetsplats betalas bara reskostnadsersättning per kilometer. Restidsersättning med grundlön gäller resan till och från en förrättningsort minst 70 km bort.</p>
+<h3>Vilken milersättning gäller i Byggavtalet 2026?</h3>
+<p>För dagliga resor med egen bil 2,50 kr/km, alltså 25 kr/mil, när enkel resväg överstiger 2 km. Kör den anställda egen bil i tjänsten efter överenskommelse gäller i stället 30, 26 eller 24 kr/mil beroende på hur många mil som körts under kalenderåret.</p>
+<h3>Är reseersättningen från Byggavtalet skattefri?</h3>
+<p>Upp till 25 kr/mil när resan är en tjänsteresa, till exempel när bostaden är tjänsteställe eller vid inställelse till en förrättning. Resor till och från ett fast tjänsteställe är lön, och samåkningstillägget är alltid skattepliktigt.</p>
+<h3>Hur fungerar taket på 120 km?</h3>
+<p>Den dagliga reskostnaden beräknas på högst 120 km enkel resväg, oavsett hur långt bort arbetstagaren bor. Taket gäller inte första inställelsen och avflyttningen vid förrättning, då betalas den faktiska resvägen.</p>
+<h3>Får passageraren ersättning vid samåkning?</h3>
+<p>Ja, 0,85 kr/km för resvägen mellan sin egen bostad och arbetsplatsen, och föraren får samma belopp extra per passagerare ovanpå sina 2,50 kr/km. Båda samåkningsbeloppen är skattepliktiga.</p>
+<h3>Hur många timmar restid ersätts per dygn?</h3>
+<p>Högst 12 timmar per dygn minus de timmar som arbetats samma dag. Med 5 arbetade timmar kan alltså högst 7 timmar restid ersättas det dygnet.</p>
 `;
 
 const A_RESTIDSERSATTNING_BYGGAVTALET: BlogPost = {
   _id: "code-"+"restidsersattning-byggavtalet",
   title: "Restidsersättning enligt Byggavtalet 2026", slug: "restidsersattning-byggavtalet", locale: "sv",
-  excerpt: "Restid, reskostnad, milersättning och traktamente blandas ihop dagligen - här är den tydliga uppdelningen enligt Byggavtalet, med skattegränsen som ställer till det.", tag: "Ekonomi",
+  excerpt: "Restid, reskostnad per km och bilersättning enligt Byggavtalet § 6 – med räkneexempel och var gränsen för skattefri ersättning går 2026.", tag: "Ekonomi",
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_RESTIDSERSATTNING_BYGGAVTALET_HTML,
-  seoTitle: "Restidsersättning Byggavtalet 2026 | ByggExp", seoDescription: "Så skiljer arbetsgivaren restidsersättning, reskostnad, milersättning och traktamente enligt Byggavtalet 2026 - med skatteperspektiv och räkneexempel.",
+  seoTitle: "Restidsersättning & milersättning Byggavtalet 2026 | ByggExp", seoDescription: "Byggavtalet 2026: 2,50 kr/km för dagliga resor, restid med grundlön 203 kr/tim vid förrättning och när reseersättningen är skattefri – med exempel.",
   seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T22:09:00.000Z", createdAt: "2026-08-19T22:09:00.000Z", updatedAt: "2026-10-06T12:00:00.000Z",
+  publishedAt: "2026-08-19T22:09:00.000Z", createdAt: "2026-08-19T22:09:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_KONTROLLERA_KUNDENS_ROTUTRYMME_HTML = `

@@ -147,112 +147,116 @@ const ID06: BlogPost = {
 };
 
 const A_KONTROLLANSVARIG_NAR_BEHOVS_HTML = `
-<p>En av de första frågorna som dyker upp när ett bygglovsprojekt drar igång är om det behövs en kontrollansvarig (KA) – och vad det i så fall landar på i kostnad. Kort svar: KA krävs vid de flesta lov- och anmälningspliktiga åtgärder, och att anlita en kostar oftast mellan 10 000 och 50 000 kr beroende på projektets storlek. Som hantverkare eller byggföretag är det du som får förklara detta för kunden, så det lönar sig att ha svaren klara redan i offertskedet.</p>
+<p>Kontrollansvarig (KA) krävs i praktiken för åtgärder som behöver bygglov, rivningslov eller marklov – men inte för anmälningspliktiga åtgärder, attefallshus och komplementbyggnader. Sedan 1 december 2025 räknar <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/plan-och-byggforordning-2011338_sfs-2011-338/" target="_blank" rel="noopener noreferrer">plan- och byggförordningen 7 kap. 5 §</a> upp elva undantag. Nämnden kan ändå kräva KA i de flesta av dem, och vem som är KA fastställs i <a href="/sv/blog/startbesked-bygglov-process-2026">startbeskedet</a>.</p>
 
-<p>Ett bra sätt att lägga grunden är att strukturera kontrollerna tidigt. Använd gärna <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> för att dokumentera de kontroller som KA sedan ska följa upp mot kontrollplanen.</p>
-
-<h2>Vad är en kontrollansvarig (KA)?</h2>
-<p>En kontrollansvarig är en certifierad person som biträder byggherren under byggprocessen. Rollen regleras i plan- och bygglagen (PBL 10 kap. 9 §) och innebär att KA ska se till att bygget uppfyller gällande krav och att kontrollplanen följs. KA är alltså inte samma sak som en besiktningsman eller en projektledare – det är en oberoende funktion med lagstadgade uppgifter.</p>
-<p>Enligt PBL 10 kap. 11 § ska KA bland annat:</p>
+<h2>Huvudregeln: KA följer kontrollplanen</h2>
+<p>Enligt <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/plan-och-bygglag-2010900_sfs-2010-900/" target="_blank" rel="noopener noreferrer">plan- och bygglagen (PBL) 10 kap. 9 §</a> ska det finnas en eller flera kontrollansvariga för den kontroll som omfattas av en kontrollplan eller avfallshanteringsplan. Kontrollplan krävs i sin tur för åtgärder som behöver startbesked, alltså lov- eller anmälningspliktiga åtgärder (10 kap. 3 och 6 §§). Undantagen ligger på två ställen:</p>
 <ul>
-<li>biträda byggherren med förslag till kontrollplan,</li>
-<li>se till att kontrollplanen och gällande bestämmelser följs och att nödvändiga kontroller utförs,</li>
-<li>meddela byggherren, och vid behov byggnadsnämnden, om avvikelser upptäcks,</li>
-<li>närvara vid tekniskt samråd, besiktningar och slutsamråd,</li>
-<li>lämna ett utlåtande till byggherren och nämnden inför slutbeskedet.</li>
+<li><strong>PBL 10 kap. 10 §</strong> – små ändringar av en- eller tvåbostadshus, om byggnadsnämnden inte beslutar annat.</li>
+<li><strong>PBF 7 kap. 5 §</strong> – en lista med andra åtgärder där KA inte krävs.</li>
 </ul>
-<p>Ett krav som ofta missas: KA måste ha en <strong>självständig ställning</strong> i förhållande till den som utför åtgärden (PBL 10 kap. 9 §). En KA kan alltså inte vara anställd hos entreprenören som bygger. Bygger ditt företag huset kan ni inte samtidigt vara kontrollansvariga för det – kunden måste anlita en oberoende KA.</p>
+<p>Formuleringen ”för den kontroll som omfattas av … avfallshanteringsplan” kom in i lagen den 1 juli 2026 (SFS 2026:712). Samtidigt fick KA nya uppgifter kring avfall och återanvändbara byggprodukter.</p>
 
-<h2>När behövs en kontrollansvarig?</h2>
-<p>Huvudregeln i PBL (10 kap. 9 §) är att det ska finnas en KA för kontrollen i en kontrollplan. Sedan 1 december 2025 är undantagen i plan- och byggförordningen dock betydligt bredare, så i praktiken gäller KA-kravet främst bygglovspliktiga åtgärder av större slag, till exempel:</p>
+<h2>Åtgärd för åtgärd: krävs KA?</h2>
+<div class="article-table"><table>
+<thead><tr><th>Åtgärd</th><th>KA krävs?</th><th>Grund</th></tr></thead>
+<tbody>
+<tr><td>Nytt en- eller tvåbostadshus, även fritidshus</td><td>Ja</td><td>Bygglov (PBL 9 kap. 3 §) → kontrollplan → 10 kap. 9 §</td></tr>
+<tr><td>Flerbostadshus, lokaler, byggnad med fler än två våningar</td><td>Ja, och ofta behörighet K</td><td>10 kap. 9 §</td></tr>
+<tr><td>Tillbyggnad av villa som kräver bygglov</td><td>Ja, om den inte räknas som liten ändring</td><td>10 kap. 9–10 §§</td></tr>
+<tr><td>Tillbyggnad högst 30 m² brutto, under taknocken</td><td>Nej – bygglovsfri</td><td>PBL 9 kap. 10 §, PBF 7 kap. 5 § p. 1</td></tr>
+<tr><td>Ändrad användning som kräver bygglov</td><td>Ja, som huvudregel</td><td>PBL 9 kap. 15 §, 10 kap. 9 §</td></tr>
+<tr><td>Rivning av byggnad i detaljplan som kräver rivningslov</td><td>Ja, som huvudregel</td><td>PBL 9 kap. 43 §</td></tr>
+<tr><td>Anmälningspliktig åtgärd: bärande konstruktion, brandskydd, eldstad, ventilation, VA, hiss</td><td>Nej, om nämnden inte beslutar annat</td><td>PBF 6 kap. 1 §, 7 kap. 5 § p. 2</td></tr>
+<tr><td>Attefallshus, garage, förråd (komplementbyggnad eller komplementbostadshus)</td><td>Nej, om nämnden inte beslutar annat</td><td>PBF 7 kap. 5 § p. 3</td></tr>
+<tr><td>Inreda ytterligare en bostad i ett enbostadshus</td><td>Nej, om nämnden inte beslutar annat</td><td>PBF 7 kap. 5 § p. 4</td></tr>
+<tr><td>Mur, plank eller altan</td><td>Nej, om nämnden inte beslutar annat</td><td>PBF 7 kap. 5 § p. 6</td></tr>
+<tr><td>Skylt eller ljusanordning</td><td>Nej, om nämnden inte beslutar annat</td><td>PBF 7 kap. 5 § p. 5</td></tr>
+<tr><td>Åtgärd utan krav på lov eller anmälan</td><td>Nej – nämnden kan inte heller kräva det</td><td>PBF 7 kap. 5 § p. 1</td></tr>
+</tbody>
+</table></div>
+<p>Boverket skriver i <a href="https://www.boverket.se/sv/PBL-kunskapsbanken/lov--byggande/byggprocessen/kontrollansvariga-och-deras-uppgifter/" target="_blank" rel="noopener noreferrer">PBL kunskapsbanken</a> att nämnden bara bör kräva KA för en anmälningspliktig åtgärd om den är komplicerad och byggherren inte bedöms klara sitt ansvar utan stöd. Nämndens bedömning av om KA ska krävas får inte överklagas.</p>
+<p>Raderna om lovfria åtgärder gäller inte överallt. Enligt PBL 9 kap. 34–37 §§ kan bygglov krävas ändå, till exempel genom områdesbestämmelser eller i särskilt värdefulla miljöer. Då följer KA-frågan lovet.</p>
+
+<h2>Vem kan vara KA – och vem kan inte</h2>
+<p>En KA är enligt PBL 1 kap. 8 § en fysisk person med certifikat och ”en självständig ställning i förhållande till den som utför den åtgärd som ska kontrolleras”. Boverket preciserar vad det innebär:</p>
 <ul>
-<li>nybyggnad av bostadshus och andra huvudbyggnader,</li>
-<li>större tillbyggnad som kräver bygglov,</li>
-<li>ändrad användning eller ombyggnad som kräver bygglov,</li>
-<li>rivning som kräver rivningslov enligt PBL.</li>
+<li>KA och de som utför arbetet <strong>kan inte arbeta i samma företag</strong>. Samma koncern eller företagsgrupp går däremot.</li>
+<li>KA bör inte vara nära släkt med, eller anställd av, den som utför åtgärden (make, maka, sambo, förälder, barn eller syskon räknas som nära släkt).</li>
+<li>Byggherren själv, projektören eller en anställd hos byggherren <strong>kan</strong> vara KA – så länge de inte själva utför det som kontrolleras.</li>
+<li>Om åtgärden omfattas av obligatorisk sakkunnigkontroll får KA inte tidigare ha varit delaktig i projektet (10 kap. 11 a §, ny från 1 juli 2026).</li>
 </ul>
-<p>Det är byggnadsnämnden i kommunen som avgör i varje enskilt fall om KA behövs. Utgångspunkten är dock tydlig: när ett projekt är så pass omfattande att det behöver följas upp mot en kontrollplan, ska en KA vara utsedd.</p>
+<p>För ett byggföretag betyder det konkret: bygger ni villan kan ingen hos er vara KA för den. Kunden behöver en extern KA, och det lönar sig att säga det redan i offerten.</p>
 
-<h2>När behövs INGEN kontrollansvarig?</h2>
-<p>Undantagen finns i PBL 10 kap. 10 § och plan- och byggförordningen (PBF 2011:338, 7 kap. 5 §). KA krävs normalt inte för bland annat:</p>
-<ul>
-<li>åtgärder som varken kräver lov eller anmälan,</li>
-<li>åtgärder som bara kräver anmälan – till exempel installation av VA, ventilation eller eldstad,</li>
-<li>komplementbyggnader och komplementbostadshus (det som tidigare kallades friggebod och attefallshus),</li>
-<li>att inreda ytterligare en bostad i ett enbostadshus,</li>
-<li>murar, plank och altaner,</li>
-<li>små ändringar av en- eller tvåbostadshus.</li>
-</ul>
-<p>Byggnadsnämnden kan ändå besluta att KA krävs i det enskilda fallet. Stäm därför av med kommunen innan du lovar kunden att KA inte behövs.</p>
-<p>Notera också att Boverkets nya byggregler gäller fullt ut från 1 juli 2026. Att lovplikten slopats för vissa åtgärder betyder inte att de tekniska kraven försvinner – även åtgärder utan bygglovsplikt måste uppfylla de nya reglerna, och ett eventuellt KA-krav påverkas inte av att lovplikten tagits bort.</p>
+<h2>Behörighet N eller K</h2>
+<p>Certifiering sker enligt Boverkets föreskrifter BFS 2011:14 och gäller i fem år. Det finns två behörigheter:</p>
+<div class="article-table"><table>
+<thead><tr><th>Behörighet</th><th>Typiska projekt enligt Boverket</th></tr></thead>
+<tbody>
+<tr><td>N – normal art</td><td>Nybyggnad, tillbyggnad, ombyggnad eller rivning av en- eller tvåbostadshus</td></tr>
+<tr><td>K – komplicerad art</td><td>Byggnader med fler än två våningar, kabinbanor, radio- och telemaster, vindkraftverk</td></tr>
+</tbody>
+</table></div>
+<p>Två organ certifierar kontrollansvariga i dag: RISE och Kiwa. På deras webbplatser går det att söka fram en KA och se behörighet och hur länge certifikatet gäller. Kontrollera giltighetstiden mot projektets längd – byggnadsnämnden måste kunna godta en KA med giltigt certifikat både vid lov och startbesked.</p>
 
-<h2>Vad kostar en kontrollansvarig 2026?</h2>
-<p>Priset styrs framför allt av projektets komplexitet, antalet arbetsplatsbesök och restid. Som riktvärden för 2026 (exklusive moms) gäller:</p>
-<ul>
-<li><strong>Mindre projekt</strong> (garage, mindre tillbyggnad): ca 10 000–20 000 kr.</li>
-<li><strong>Villa / medelstort projekt:</strong> ca 15 000–30 000 kr.</li>
-<li><strong>Större eller kommersiella projekt:</strong> från ca 30 000 kr och uppåt – för riktigt stora byggen 50 000–200 000 kr eller mer.</li>
-</ul>
-<p>Ett litet garagebygge kan klaras för runt 10 000–15 000 kr, medan ett flerbostadshus snabbt passerar 50 000 kr. Att KA behöver göra fler platsbesök, eller att objektet ligger långt bort, driver upp priset – be alltid om en offert som specificerar antal besök.</p>
-<p>En sak att inte blanda ihop: att <em>själv</em> bli certifierad KA kostar ca 8 500–14 500 kr för utbildning plus ca 8 000–15 000 kr i certifieringsavgift (beroende på organ och nivå), samt ca 495 kr exkl. moms för ID-kort. Det är kostnaden för att bli KA – inte för att anlita en.</p>
-
-<h2>N- eller K-behörighet – vilken KA behöver ditt projekt?</h2>
-<p>Certifierade kontrollansvariga finns i två behörighetsnivåer, och det spelar roll att välja rätt:</p>
-<ul>
-<li><strong>N – normal art:</strong> täcker ny-, till- och ombyggnad samt rivning av en- och tvåbostadshus, och mindre projekt i övrigt. Det räcker för de allra flesta villaprojekt.</li>
-<li><strong>K – komplicerad art:</strong> krävs för byggnader med fler än två våningar samt större och mer komplexa projekt.</li>
-</ul>
-<p>Att anlita en KA med fel behörighetsnivå kan försena bygglovet, eftersom nämnden inte godkänner en KA som saknar rätt behörighet för objektet. Kontrollera nivån innan avtal skrivs. Certifieringen utförs av ackrediterade certifieringsorgan – RISE, Kiwa och DNV – och gäller normalt i fem år. För förnyelse krävs dokumenterade KA-uppdrag och fortbildning, vilket är en indikation på att KA:n är aktiv i yrket.</p>
-
-<h2>KA i bygglovsflödet steg för steg</h2>
-<p>För att kunden ska förstå var KA kommer in, hjälper det att beskriva flödet:</p>
+<h2>Vad KA gör, steg för steg</h2>
+<p>Uppgifterna står i PBL 10 kap. 11 § och gäller sedan 1 juli 2026 i denna lydelse:</p>
 <ol>
-<li>KA utses redan i samband med ansökan eller anmälan.</li>
-<li>Tekniskt samråd hålls med byggnadsnämnden, där KA närvarar.</li>
-<li>Nämnden ger startbesked – bygget får påbörjas.</li>
-<li>Kontroller utförs löpande under bygget enligt kontrollplanen.</li>
-<li>Slutsamråd hålls när bygget är klart.</li>
-<li>KA lämnar sitt utlåtande till byggherren och nämnden.</li>
-<li>Nämnden utfärdar slutbesked – då får byggnaden tas i bruk.</li>
+<li>Biträda byggherren med förslag till kontrollplan och med att identifiera avfall och återanvändbara byggprodukter.</li>
+<li>Se till att kontrollplanen, bestämmelserna och villkoren följs och att kontrollerna blir gjorda.</li>
+<li>Informera byggherren om avvikelser och vid behov meddela byggnadsnämnden.</li>
+<li>Närvara vid tekniskt samråd, besiktningar, andra kontroller och nämndens arbetsplatsbesök.</li>
+<li>Lämna protokoll från arbetsplatsbesök till eventuella sakkunniga.</li>
+<li>Dokumentera egna byggplatsbesök och notera iakttagelser inför slutbeskedet.</li>
+<li>Lämna ett utlåtande, med eventuella sakkunnigutlåtanden, till byggherren och nämnden som underlag för slutbesked.</li>
+<li>Meddela nämnden om uppdraget lämnas.</li>
 </ol>
-<p>KA:n är alltså med genom hela processen, från ansökan till slutbesked. Ju bättre de löpande kontrollerna dokumenteras, desto smidigare blir slutsamrådet.</p>
+<p>KA behöver alltså inte själv utföra kontrollerna. Egenkontrollerna görs av er som utför arbetet (se <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a>) och redovisas mot kontrollplanen – den <a href="/sv/verktyg/kontrollplan-mall">kontrollplan-mallen</a> visar hur punkterna brukar ställas upp, och <a href="/sv/blog/kontrollplan-mall-bygglov">guiden om kontrollplan för bygglov</a> går igenom innehållet.</p>
 
-<h2>Så väljer du rätt KA</h2>
-<ul>
-<li><strong>Certifiering:</strong> kontrollera att personen är certifierad – kommunen har ofta listor att stämma av mot.</li>
-<li><strong>Rätt behörighetsnivå:</strong> N eller K beroende på projektet.</li>
-<li><strong>Oberoende:</strong> KA får inte vara knuten till entreprenören som utför åtgärden.</li>
-<li><strong>Referenser:</strong> be om liknande genomförda projekt.</li>
-<li><strong>Tydlig offert:</strong> antal platsbesök, restid och vad som ingår ska framgå.</li>
-</ul>
+<h2>Vad kostar en kontrollansvarig?</h2>
+<p>Det finns inget reglerat pris – KA är ett civilrättsligt uppdrag mellan byggherren och KA. Offerten styrs av hur många av momenten ovan som ingår och hur långt bort bygget ligger. Be om ett pris per moment, så går offerter att jämföra:</p>
+<div class="article-table"><table>
+<thead><tr><th>Moment i offerten</th><th>Antal</th><th>Timmar (exempel)</th></tr></thead>
+<tbody>
+<tr><td>Förslag till kontrollplan och avfallsinventering</td><td>1</td><td>4</td></tr>
+<tr><td>Tekniskt samråd</td><td>1</td><td>2</td></tr>
+<tr><td>Arbetsplatsbesök inkl. dokumentation</td><td>4</td><td>3 per besök = 12</td></tr>
+<tr><td>Slutsamråd</td><td>1</td><td>2</td></tr>
+<tr><td>Utlåtande inför slutbesked</td><td>1</td><td>3</td></tr>
+<tr><td><strong>Summa</strong></td><td></td><td><strong>23 timmar + resor</strong></td></tr>
+</tbody>
+</table></div>
+<p>Med ett antaget timpris på 1 000 kr exkl. moms blir det 23 000 kr plus restid. Byt ut timpriset mot offertens. Det som oftast skiljer offerter åt är antalet arbetsplatsbesök – fråga hur många som ingår och vad ett extra besök kostar. Är priset fast, se till att det står vad som gäller om tidplanen drar ut.</p>
 
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp ersätter inte den kontrollansvariga – KA är en lagstadgad, oberoende roll. Men verktygen hjälper dig och kunden att hålla ordning på det som KA sedan följer upp. Med en strukturerad egenkontroll dokumenteras varje moment löpande, vilket ger KA ett bättre underlag inför tekniskt samråd och slutsamråd. Du kan samla foton, checklistor och avvikelser på ett ställe, så att kontrollplanens punkter blir enkla att bocka av. Det minskar risken för att kontroller saknas när slutbeskedet ska utfärdas – och gör att projektet flyter på utan onödiga förseningar.</p>
+<h2>Byta kontrollansvarig</h2>
+<p>En KA som lämnar uppdraget ska meddela byggnadsnämnden. Byggherren föreslår då en ny KA och nämnden utser den (10 kap. 11 c §). Om KA inte sköter uppgifterna ska byggherren omedelbart meddela nämnden (11 b §), som kan entlediga KA och underrätta certifieringsorganet (11 kap. 35 §). Föreslår byggherren ingen ny KA kan nämnden enligt Boverket förbjuda att arbetet fortsätter.</p>
+
+<h2>Byggbedömare – ny aktör, inte i bruk ännu</h2>
+<p>Från 1 juli 2026 finns byggbedömare i PBL: certifierade företag som ska kunna kontrollera både projektering och utförande av vissa nybyggnader. Kontrollplan krävs inte för utförande som omfattas av en byggbedömares kontroll. Enligt <a href="https://www.boverket.se/sv/om-boverket/boverkets-uppdrag-och-styrning/aktuella-uppdrag/effektiv-och-saker-byggprocess/" target="_blank" rel="noopener noreferrer">Boverkets tidplan</a> beslutas föreskrifterna tidigast hösten 2027, och därefter tar ackrediteringen av certifieringsorgan strax under ett år. För projekt som startar nu gäller KA-systemet.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Måste jag som byggföretag anlita en egen kontrollansvarig?</h3>
-<p>Nej. Det är byggherren (oftast din kund) som ansvarar för att utse KA. Eftersom KA måste vara oberoende av den som utför bygget, kan ditt företag inte vara KA för ett projekt ni själva bygger. Däremot är det bra att kunna vägleda kunden om när KA behövs.</p>
-<h3>Vad kostar det att anlita en kontrollansvarig 2026?</h3>
-<p>För ett mindre projekt ca 10 000–20 000 kr, för en villa ca 15 000–30 000 kr och för större projekt från ca 30 000 kr och uppåt (exkl. moms). Priset styrs av antal arbetsplatsbesök och projektets komplexitet.</p>
-<h3>Behövs KA för ett attefallshus (komplementbostadshus)?</h3>
-<p>Normalt inte. Sedan 1 december 2025 är komplementbyggnader och komplementbostadshus undantagna från KA-kravet (PBF 7 kap. 5 §), och de flesta kräver varken bygglov eller anmälan. Byggnadsnämnden kan dock besluta att KA krävs i ett enskilt fall.</p>
+<h3>När behövs en kontrollansvarig?</h3>
+<p>När åtgärden kräver bygglov, rivningslov eller marklov och inte finns bland undantagen i PBF 7 kap. 5 §. Typexemplet är ett nytt bostadshus. Anmälningspliktiga åtgärder, attefallshus och komplementbyggnader kräver normalt ingen KA.</p>
+<h3>Behövs kontrollansvarig för fritidshus?</h3>
+<p>Ja, om fritidshuset är en ny huvudbyggnad som kräver bygglov. Ett fritidshus är normalt ett en- eller tvåbostadshus, och då räcker behörighet N.</p>
+<h3>Kan vårt byggföretag vara kontrollansvarig för huset vi bygger?</h3>
+<p>Nej. KA och de som utför arbetet får inte arbeta i samma företag. Byggherren själv eller en anställd hos byggherren kan däremot vara KA, om de är certifierade och inte utför det som kontrolleras.</p>
+<h3>Vad kostar en kontrollansvarig?</h3>
+<p>Priset är inte reglerat utan sätts i offerten. Det beror på antal arbetsplatsbesök, samråd, restid och om KA tar fram förslaget till kontrollplan. Jämför offerter per moment, inte bara totalsumma.</p>
+<h3>Hur byter man kontrollansvarig?</h3>
+<p>Byggherren föreslår en ny KA till byggnadsnämnden, som fattar beslut. Den gamla KA ska själv meddela nämnden när uppdraget lämnas.</p>
 <h3>Vad är skillnaden mellan N- och K-behörighet?</h3>
-<p>N (normal art) täcker en- och tvåbostadshus samt mindre projekt. K (komplicerad art) krävs för byggnader med fler än två våningar och större, mer komplexa projekt. Fel behörighet kan försena bygglovet.</p>
-
-<h2>Kom igång</h2>
-<p>Lägg grunden för en smidig kontrollprocess redan från start. Använd <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> för att dokumentera kontrollerna löpande, så att KA har allt underlag som behövs inför slutbeskedet. Vill du se hur ByggExp kan hålla ihop dokumentationen i dina projekt? <a href="/sv/contact">Boka en demo</a> så visar vi hur det fungerar i praktiken.</p>
-
-<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – när och hur</a>.</p>
+<p>N gäller projekt av normal art, till exempel en- och tvåbostadshus. K gäller komplicerad art, till exempel byggnader med fler än två våningar, master och vindkraftverk.</p>
 `;
 
 const A_KONTROLLANSVARIG_NAR_BEHOVS: BlogPost = {
   _id: "code-"+"kontrollansvarig-nar-behovs",
   title: "Kontrollansvarig – när behövs det och vad kostar det?", slug: "kontrollansvarig-nar-behovs", locale: "sv",
-  excerpt: "En genomgång av när kontrollansvarig krävs, vad en KA kostar 2026 och skillnaden mellan N- och K-behörighet i bygglovsflödet.", tag: "Bygglov",
+  excerpt: "När PBL kräver kontrollansvarig efter ändringarna 1 december 2025 och 1 juli 2026, vem som får vara KA, N- eller K-behörighet och hur en KA-offert byggs upp.", tag: "Bygglov",
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_KONTROLLANSVARIG_NAR_BEHOVS_HTML,
-  seoTitle: "Kontrollansvarig när & kostnad | ByggExp", seoDescription: "När krävs kontrollansvarig, vad kostar en KA 2026 (10 000–50 000 kr) och skillnaden mellan N- och K-behörighet. Guide för hantverkare och byggföretag.",
+  seoTitle: "Kontrollansvarig – när krävs KA och vad kostar det? | ByggExp", seoDescription: "Tabell över vilka åtgärder som kräver KA enligt PBL 10 kap. 9 § och PBF 7 kap. 5 §, vem som får vara KA, N/K-behörighet, uppgifter och offert.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-18T18:18:00.000Z", createdAt: "2026-08-18T18:18:00.000Z", updatedAt: '2026-10-08T09:00:00.000Z',
+  publishedAt: "2026-08-18T18:18:00.000Z", createdAt: "2026-08-18T18:18:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_KONTROLLPLAN_MALL_BYGGLOV_HTML = `
@@ -341,148 +345,191 @@ const A_KONTROLLPLAN_MALL_BYGGLOV: BlogPost = {
 };
 
 const A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK_HTML = `
-<p>Många beställare hör av sig med samma önskemål: "jag vill anlita ett företag med våtrumscertifikat". Problemet är att något sådant enskilt certifikat inte existerar i Sverige. I stället driver tre olika branschorgan – BKR, GVK och Säker Vatten – varsitt parallellt behörighetssystem, uppdelat efter vilket hantverk du utför. Väljer du fel behörighet, eller ingen alls, riskerar din kund att bli utan försäkringsersättning efter en vattenskada. Den här artikeln vänder sig till dig som är hantverkare, VVS-företagare eller plattsättare och funderar på vilken behörighet som är värd att investera i – och hur du använder den som säljargument i offerten.</p>
+<p>Inget våtrumscertifikat är lagkrav. Boverkets fuktregler – i dag <a href="https://rinfo.boverket.se/BFS2024-8/pdf/BFS2024-8.pdf" target="_blank" rel="noopener noreferrer">BFS 2024:8, 7 kap. 7–8 §§</a>, som ersatte BBR avsnitt 6:5 när övergångstiden gick ut 30 juni 2026 – ställer funktionskrav på tätskiktet: det ska vara vattentätt, tätt i skarvar och genomföringar, ha rätt ånggenomgångsmotstånd och vara åldersbeständigt. Vem som utför arbetet säger föreskrifterna ingenting om. Kravet på behörighet kommer i stället från försäkringsbolagen, beställarna och branschorganisationerna – och där är det i praktiken svårt att klara sig utan.</p>
 
-<p>Ett tydligt underlag börjar med en proffsig offert. Använd gärna <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a> för att lyfta fram företagets behörigheter redan i anbudet.</p>
+<h2>Varför försäkringen styr</h2>
+<p>Enligt <a href="https://www.konsumenternas.se/forsakringar/boendeforsakringar/villaforsakringar/vattenskador/" target="_blank" rel="noopener noreferrer">Konsumenternas</a> kräver försäkringsbolagen normalt att de branschregler som gällde när våtrummet byggdes eller renoverades har följts för att en vattenskada ska ersättas, och kunden kan behöva visa ett våtrumsintyg från en behörig hantverkare. Villkoren skiljer sig mellan bolagen – vissa ersätter ändå, men ofta med högre självrisk. För dig som hantverkare betyder det att kunden i praktiken köper dokumentationen lika mycket som arbetet.</p>
 
-<h2>Varför det inte finns ETT våtrumscertifikat</h2>
-<p>Ett våtrum byggs av flera yrkesgrupper med helt olika ansvar. Rörinstallationen – tappvatten, avlopp och anslutningar – hanteras av VVS-montörer. Tätskiktet och ytskiktet – membran, plastmatta, kakel och klinker – hanteras av plattsättare och tätskiktsmontörer. Eftersom kraven skiljer sig åt mellan dessa moment finns tre skilda branschsystem: Säker Vatten för rörinstallationer, GVK för tätskikt och plastmatta, samt BKR (Byggkeramikrådet) för keramik. En central princip går igen i alla tre: <strong>auktorisationen ligger på företaget</strong>, medan den enskilde hantverkaren har en personlig behörighet eller branschlegitimation som är knuten till det auktoriserade företaget. Säker Vatten uttrycker det som att "en branschlegitimation är alltid kopplad till ett auktoriserat företag" – legitimationen gäller inte för arbete som utförs utanför en auktoriserad firma.</p>
+<h2>Tre system för tre moment</h2>
+<p>Ett badrum består av rörinstallation, tätskikt och ytskikt, och varje del har sitt eget branschsystem. Gemensamt för alla tre är att det är <strong>företaget</strong> som auktoriseras eller blir behörigt, medan personerna har behörighetsbevis eller legitimation som är knutna till ett sådant företag.</p>
 
-<h2>Säker Vatten – för VVS och rörinstallationer</h2>
-<p>Säker Vatten är systemet för dig som gör rörarbeten. För att företaget ska bli auktoriserat krävs en skriftlig förbindelse att följa branschreglerna Säker Vatteninstallation, giltig ansvarsförsäkring, registrering hos Bolagsverket samt svensk F-skatt och momsregistrering. Kraven ser olika ut för VVS-företag och konsultföretag.</p>
-<p>Varje VVS-montör och lärling på företaget måste dessutom ha en egen branschlegitimation. Den kräver att man genomgått utbildningen "Säker Vatteninstallation för VVS-företag" plus ett av följande: dokumenterad yrkesutbildning med branschcertifikat, godkänd validering eller en tidigare godkänd särskild prövning. Sedan 1 januari 2020 erbjuds inte längre särskild prövning till montörer som saknar svenskt branschcertifikat. Legitimationen är giltig i fem år efter godkänd utbildning och är numera digital – den nås via BankID i Säker Vattens app, medan äldre ID06-kombinerade bevis gäller tills de går ut.</p>
-<p>De aktuella reglerna är "Branschregler Säker Vatteninstallation 2026:1". Projekt som startats efter 1 januari 2026 ska utföras enligt 2026:1-versionen. När jobbet är klart lämnar det auktoriserade företaget ett "intyg om Säker Vatteninstallation" till kunden – beskrivet som en värdehandling vid försäljning eller vid reglering av en eventuell skada. I dag finns runt 2 234 auktoriserade VVS-företag och cirka 13 978 personer med branschlegitimation.</p>
+<div class="article-table"><table>
+<thead><tr><th></th><th>GVK</th><th>BKR</th><th>Säker Vatten</th></tr></thead>
+<tbody>
+<tr><td>Område</td><td>Tätskikt: plastmatta och tätskikt under keramik</td><td>Plattsättning med tätskikt (kakel och klinker)</td><td>Rör- och VVS-installationer</td></tr>
+<tr><td>Branschregler</td><td>Säkra Våtrum 2026:1, från 1 jan 2026</td><td>Byggkeramikrådets branschregler för våtrum (BBV)</td><td>Säker Vatteninstallation 2026:1, från 1 jan 2026</td></tr>
+<tr><td>Krav på personal</td><td>Montörer: behörighet Plast eller Tätskikt under keramik. Minst en arbetsledare per 10 anställda med behörighet</td><td>Minst en behörig arbetsledare och en behörig plattsättare</td><td>Alla montörer, arbetsledare och lärlingar ska ha branschlegitimation</td></tr>
+<tr><td>Giltighet</td><td>5 år, sedan fortbildningskurs</td><td>Tills vidare, förnyas per kalenderår. Återkurs vart femte år</td><td>Legitimationen gäller 5 år efter godkänd utbildning</td></tr>
+<tr><td>Dokument till kunden</td><td>Kopia av våtrumsanmälan, våtrumsintyg (obligatoriskt mot konsument)</td><td>Kvalitetsdokument</td><td>Digitalt intyg inom fyra veckor</td></tr>
+<tr><td>Avgifter 2026 (exkl. moms)</td><td>8 400 kr (Plast eller Keramik), 9 400 kr (båda) + 0,27 promille av omsättningen</td><td>5 100–16 500 kr efter antal plattsättare</td><td>Serviceavgift 5 600 kr + 170 kr per montör, arbetsledare och lärling (lägre för medlemmar i Installatörsföretagen), plus medlemsavgift. Inträde 7 500 kr</td></tr>
+</tbody>
+</table></div>
 
-<h2>GVK – tätskikt, plastmatta och keramik</h2>
-<p>GVK (AB Svensk Våtrumskontroll) täcker tätskikt, plastmattebeläggning och även keramik. Systemet har tre separata behörigheter: Plastmatta, Keramik och Tätskikt under keramik. Montörer måste ha giltig GVK-behörighet för sitt område, och företaget ska ha minst en arbetsledare per tio anställda som klarat behörighetskursen Arbetsledare. Alla GVK-behörigheter gäller i fem år och kräver därefter fortbildning för förnyelse.</p>
-<p>De gällande branschreglerna heter "Säkra Våtrum 2026" och trädde i kraft 1 januari 2026. Reglerna används som måttstock av försäkringsbolag och beställare – de kan jämföra ett utfört arbete mot branschreglerna för att avgöra om det håller.</p>
-<p>Kostnadsmässigt (2026, exkl. moms) ligger registreringsavgiften på cirka 12 490 kr. Årsavgiften är 8 400 kr för Plast eller Keramik, 9 400 kr för båda, plus 0,27 promille av föregående års omsättning (minst 1 500 kr). Behörighetskurserna Plastmatta och Keramik kostar 3 800 kr styck, och Arbetsledarkursen 4 000 kr. Räkna alltså med både en engångskostnad och en löpande årlig utgift.</p>
+<h2>GVK-behörighet – krav och kostnad</h2>
+<p>För att <a href="https://www.gvk.se/kvalitetsarbete/bli-auktoriserad/" target="_blank" rel="noopener noreferrer">bli GVK-auktoriserat</a> ska företaget huvudsakligen arbeta med våtrum, ha F-skatt och vara momsregistrerat i Sverige, och bifoga kopia av yrkesbevis med ansökan. Efter godkännande ska minst en arbetsledare per tio anställda klara GVK:s arbetsledarkurs med prov, och montörerna ska ha giltig behörighet för plastmatta respektive tätskikt under keramik. Behörighetskurserna är bara öppna för anställda i ett auktoriserat företag, eller ett som håller på att auktoriseras, och montören behöver ett <a href="/sv/blog/yrkesbevis-bygg-larling">yrkesbevis</a>. Var femte år krävs fortbildning för att behörigheten ska gälla fem år till.</p>
+<p>Enligt <a href="https://www.gvk.se/siteassets/gvk/dokument/sakra-vatrum-2026.pdf" target="_blank" rel="noopener noreferrer">Säkra Våtrum 2026</a> är det bara GVK-auktoriserade företag som får utfärda våtrumsintyg och kvalitetsdokument enligt GVK. Varje jobb ska anmälas till GVK med en våtrumsanmälan, som kan leda till stickprovskontroll, och kunden ska få en kopia.</p>
+<p><strong>Räkneexempel (hypotetiskt, priser exkl. moms 2026):</strong> ett plattsättningsföretag med 6 anställda, varav 4 montörer, söker GVK-auktorisation för keramik. Omsättningen förra året var 8 miljoner kr.</p>
+<div class="article-table"><table>
+<thead><tr><th>Post</th><th>Belopp</th></tr></thead>
+<tbody>
+<tr><td>Registreringsavgift (engång)</td><td>12 490 kr</td></tr>
+<tr><td>Årsavgift Keramik</td><td>8 400 kr</td></tr>
+<tr><td>Rörlig avgift: 8 000 000 × 0,27 ‰</td><td>2 160 kr</td></tr>
+<tr><td>Behörighetskurs Keramik, 4 × 3 800 kr</td><td>15 200 kr</td></tr>
+<tr><td>Arbetsledarkurs, 1 person</td><td>4 000 kr</td></tr>
+<tr><td><strong>Första året</strong></td><td><strong>42 250 kr</strong></td></tr>
+</tbody>
+</table></div>
+<p>Året därpå återstår årsavgiften plus den rörliga delen – i exemplet 10 560 kr – tills fortbildningen blir aktuell efter fem år. Lägg till lönekostnaden för kursdagarna.</p>
 
-<h2>BKR / BBV – kakel och klinker</h2>
-<p>BKR är plattsättarnas system. Ett behörigt plattsättningsföretag måste ha minst en behörig arbetsledare och minst en behörig plattsättare. Utbildningspaketet består av en tvådagars tätskikts- och materialkurs (teori), en endags arbetsledarkurs som täcker auktorisation och entreprenadjuridik, en tre timmars praktisk tätskiktskurs, samt ett kunskapsprov i plattsättning om yrkesbevis saknas. En ensamföretagare måste gå samtliga kurser själv.</p>
-<p>De aktuella våtrumsreglerna är "BBV 26:1" (Byggkeramikrådets branschregler för våtrum). BKR har gett ut branschregler sedan slutet av 1980-talet. Ett behörigt företag ska lämna kunden ett kvalitetsdokument för det färdiga jobbet. Auktorisationen gäller tills vidare men kräver årlig förnyelse och en obligatorisk återkurs vart femte år.</p>
-<p>Årsavgiften är trappad efter antal anställda plattsättare och inkluderar PER-medlemskap: 5 100 kr för 1–2 plattsättare, 6 700 kr för 3–5, 10 000 kr för 6–10, 13 200 kr för 11–20 och 16 500 kr för 21 eller fler. Notera att GVK och BKR överlappar på keramik – en plattsättare väljer ett av systemen, inte båda.</p>
-
-<h2>Vem behöver vilket – och varför kunden kräver det</h2>
-<p>En enkel tumregel efter yrke: är du VVS-montör eller rörläggare behöver du Säker Vatten. Är du plattsättare eller tätskiktsmontör behöver du BKR eller GVK. En hel badrumsrenovering kräver i praktiken båda hantverken auktoriserade – en Säker Vatten-auktoriserad rörläggare plus en BKR- eller GVK-behörig plattsättare eller tätskiktsmontör.</p>
-<p>Den kommersiella drivkraften är tydlig. Försäkringsbolag villkorar ersättning vid vattenskada mot att installationen följt branschreglerna. Kan kunden inte visa upp kvalitetsdokumentet eller intyget efter en läcka riskerar hen nedsatt eller helt indragen ersättning. Våtrum och rörinstallationer är den ledande källan till kostsamma vattenskador i svenska bostäder, och därför screenar seriösa beställare, BRF:er och byggföretag aktivt efter behörighet redan i upphandlingen. Att synas i branschorganens "hitta företag"-register blir en direkt källa till förfrågningar. Behörigheten är alltså inte bara en kostnad – den är ett säljargument och en förutsättning för att komma med i seriösa upphandlingar.</p>
-
-<h2>Vanliga misstag</h2>
+<h2>BKR-behörighet för plattsättare</h2>
+<p>Enligt <a href="https://www.bkr.se/om-behorighet/bli-behorig-guide" target="_blank" rel="noopener noreferrer">Byggkeramikrådets guide</a> ska plattsättning vara en etablerad verksamhet med egna anställda plattsättare. Minst en ska ha yrkesbevis eller motsvarande erfarenhet, vilket BKR anger som tre år med heltid i plattsättning – saknas yrkesbevis görs ett kunskapstest. Företaget kreditupplyses, och den som fått behörighet återkallad i ett tidigare bolag får inte sitta i ledningen.</p>
 <ul>
-<li>Att tro att en behörighet täcker hela våtrummet – rör och tätskikt kräver olika system.</li>
-<li>Att låta legitimationen gälla för svartjobb eller uppdrag utanför det auktoriserade företaget – den är knuten till firman.</li>
-<li>Att missa femårsgränsen för förnyelse och plötsligt stå utan giltig behörighet mitt i en upphandling.</li>
-<li>Att glömma lämna kvalitetsdokument eller intyg till kunden – utan det tappar dokumentationen sitt värde vid en skada.</li>
-<li>Att inte räkna in årsavgifter och obligatoriska återkurser i kalkylen.</li>
+<li><strong>Kurs 1</strong>, grundkurs i tätskikt och material: två dagar teori.</li>
+<li><strong>Kurs 2</strong>, arbetsledarkurs med entreprenadjuridik: en dag.</li>
+<li><strong>Kurs 3</strong>, praktisk tätskiktskurs: tre timmar.</li>
 </ul>
+<p>Arbetsledaren går kurs 1 och 2, plattsättaren kurs 1 och 3. En enmansföretagare går alla tre. Årsavgiften inkluderar medlemskap i PER och är 5 100 kr för 1–2 plattsättare, 6 700 kr för 3–5, 10 000 kr för 6–10, 13 200 kr för 11–20 och 16 500 kr för 21 eller fler. Skillnaderna mot GVK i själva utförandet går vi igenom i <a href="/sv/blog/bbv-eller-gvk-vatrum">BBV eller GVK i våtrum</a>.</p>
 
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp utfärdar inga behörigheter – det gör branschorganen. Men vi hjälper dig att använda behörigheten i säljet och att sköta den dokumentation som kunden och försäkringsbolaget kräver. I <a href="/sv/verktyg/offert-mall">offertmallen</a> lyfter du fram vilka behörigheter företaget har direkt i anbudet, vilket sänker tröskeln för beställare som screenar. Med <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmallen</a> dokumenterar du utförandet löpande så att underlaget till kvalitetsdokument och intyg finns på plats när jobbet är klart. Målet är att göra det enkelt att bevisa att arbetet är fackmässigt – inte att ersätta branschreglerna.</p>
+<h2>Säker Vatten för VVS-företag</h2>
+<p>För att ett VVS-företag ska <a href="https://sakervatten.se/auktorisation/krav-for-auktorisation/vvs-foretag/" target="_blank" rel="noopener noreferrer">auktoriseras</a> krävs bland annat ansvarsförsäkring med en ansvarsdel på minst 10 miljoner kronor, F-skatt och momsregistrering, minst en heltidsanställd VVS-montör med branschcertifikat eller godkänd validering, och att minst hälften av VVS-montörerna uppfyller utbildningskraven. All personal ska ha <a href="https://sakervatten.se/auktorisation/branschlegitimation/" target="_blank" rel="noopener noreferrer">branschlegitimation</a> inom sex månader från att auktorisationen godkänts. Legitimationen kräver utbildningen Säker Vatteninstallation för VVS-företag, gäller fem år och är digital via BankID i Säker Vattens app.</p>
+<p><a href="https://sakervatten.se/branschregler/branschregler-saker-vatteninstallation-20261/" target="_blank" rel="noopener noreferrer">Branschregler Säker Vatteninstallation 2026:1</a> gäller sedan 1 januari 2026, med en övergångsregel för rör-i-rörsystem och fördelarskåp fram till 1 januari 2027. Efter avslutat arbete ska beställaren få ett digitalt intyg inom fyra veckor.</p>
+
+<h2>Måste man ha certifierad plattsättare?</h2>
+<p>Inte enligt lag. En privatperson eller en snickare utan behörighet får bygga ett badrum, så länge det uppfyller Boverkets krav. Men utan intyg från ett behörigt företag är det svårare att visa att branschreglerna följts om något läcker, och det kan påverka försäkringsersättningen. GVK kallar själva våtrumsanmälan för en värdehandling.</p>
+<p>Oavsett behörighet behöver du dokumentera förkontroll av underlaget och egenkontroll av tätskiktet. Vår <a href="/sv/verktyg/egenkontroll-vatrum-mall">egenkontroll för våtrum</a> täcker de vanligaste kontrollpunkterna, och vad som ändrades i branschreglerna inför 2026 står i <a href="/sv/blog/nya-vatrumsregler-2026">nya våtrumsregler 2026</a>.</p>
+
+<h2>Våtrumscertifikat som privatperson</h2>
+<p>Det går inte. Alla tre systemen certifierar företag, och personliga behörigheter kräver anställning i ett auktoriserat eller behörigt företag – hos GVK är det ett uttryckligt villkor för att få gå behörighetskursen. GVK erbjuder en webbutbildning, Säkra Våtrum för beställare, men den ger ingen behörighet. Det en privatperson kan göra är att anlita ett auktoriserat företag, kräva rätt intyg efter jobbet och, för GVK-jobb, själv beställa en särskild kontroll av det utförda arbetet.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Finns det ett gemensamt våtrumscertifikat i Sverige?</h3>
-<p>Nej. Det finns tre separata system: Säker Vatten för rörinstallationer, GVK för tätskikt och plastmatta, samt BKR för keramik. Ett företag behöver det eller de system som matchar de hantverk det utför.</p>
-<h3>Ligger behörigheten på företaget eller på personen?</h3>
-<p>Auktorisationen ligger på företaget. Den enskilde hantverkaren har en personlig behörighet eller branschlegitimation som är knuten till det auktoriserade företaget och inte gäller för arbete utanför det.</p>
-<h3>Hur länge gäller behörigheten?</h3>
-<p>GVK-behörigheter och Säker Vattens branschlegitimation gäller i fem år och kräver därefter förnyelse. BKR-auktorisationen gäller tills vidare men kräver årlig förnyelse plus en obligatorisk återkurs vart femte år.</p>
-<h3>Varför kräver kunden att jag är behörig?</h3>
-<p>Försäkringsbolag villkorar ofta ersättning vid vattenskada mot att installationen följt branschreglerna. Utan behörigt utförande och rätt dokumentation riskerar kunden nedsatt eller indragen ersättning efter en läcka.</p>
-
-<h2>Kom igång</h2>
-<p>Rätt behörighet är en tillgång i säljet, inte bara en post i budgeten. Börja med att visa den tydligt i anbudet med <a href="/sv/verktyg/offert-mall">offertmallen</a> och dokumentera utförandet i <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmallen</a>. Vill du se hur ByggExp kan effektivisera din dokumentation från offert till färdigt intyg? Boka en <a href="/sv/contact">demo</a>. Verifiera alltid aktuella avgifter och kursdatum direkt hos BKR, GVK och Säker Vatten innan du budgeterar.</p>
-
-<p>Relaterat: <a href="/sv/blog/nya-vatrumsregler-2026">Nya våtrumsregler 2026 – vad som ändras</a>.</p>
+<h3>Är våtrumscertifikat ett lagkrav?</h3>
+<p>Nej. Boverkets föreskrifter ställer funktionskrav på tätskiktet men inga krav på att den som utför arbetet ska vara certifierad. Kravet kommer från försäkringsvillkor, beställare och branschregler.</p>
+<h3>Kan en privatperson ta våtrumscertifikat?</h3>
+<p>Nej. GVK, BKR och Säker Vatten auktoriserar företag, och personliga behörigheter är knutna till anställning i ett sådant företag. En privatperson kan däremot gå GVK:s webbutbildning för beställare, som inte ger behörighet.</p>
+<h3>Hur länge gäller GVK-behörighet?</h3>
+<p>Fem år. Därefter krävs en fortbildningskurs för att behörigheten ska gälla i fem år till. Säker Vattens branschlegitimation gäller också fem år, medan BKR-behörigheten förnyas varje kalenderår med återkurs vart femte år.</p>
+<h3>Vad kostar det att bli GVK-auktoriserad?</h3>
+<p>Registreringsavgiften är 12 490 kr och årsavgiften 8 400 kr för plast eller keramik (9 400 kr för båda) plus 0,27 promille av förra årets omsättning, minst 1 500 kr. Behörighetskurserna kostar 3 800 kr och arbetsledarkursen 4 000 kr, allt exklusive moms.</p>
+<h3>Vilken behörighet behövs för en hel badrumsrenovering?</h3>
+<p>Rördragningen görs av ett Säker Vatten-auktoriserat VVS-företag och tätskikt och plattsättning av ett GVK-auktoriserat eller BKR-behörigt företag. Kunden bör få ett intyg från varje företag.</p>
+<h3>Påverkar behörigheten försäkringen?</h3>
+<p>Ofta. De flesta försäkringsbolag kräver att gällande branschregler följts för att ersätta en vattenskada i våtrum, och ett våtrumsintyg från behörig hantverkare är det enklaste beviset. Villkoren varierar mellan bolagen.</p>
 `;
 
 const A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK: BlogPost = {
   _id: "code-"+"vatrumscertifikat-behorighet-gvk",
-  title: "Våtrumscertifikat och behörighet: BKR, GVK eller Säker Vatten?", slug: "vatrumscertifikat-behorighet-gvk", locale: "sv",
-  excerpt: "Ingen myndighet utfärdar ett samlat våtrumscertifikat – här reder vi ut vad BKR, GVK och Säker Vatten faktiskt kräver och vilken behörighet ditt företag bör satsa på.", tag: "Behörighet",
+  title: "Våtrumscertifikat och behörighet: GVK, BKR eller Säker Vatten?", slug: "vatrumscertifikat-behorighet-gvk", locale: "sv",
+  excerpt: "Inget våtrumscertifikat är lagkrav – men försäkringen styr. Så fungerar GVK, BKR och Säker Vatten, vad behörigheten kostar och varför en privatperson inte kan certifiera sig.", tag: "Behörighet",
   coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK_HTML,
-  seoTitle: "Våtrumscertifikat: BKR, GVK eller Säker Vatten? | ByggExp", seoDescription: "Det finns inget enda våtrumscertifikat. Så väljer ditt VVS- eller plattsättningsföretag rätt behörighet: BKR, GVK eller Säker Vatten – och varför kunden kräver det.",
+  seoTitle: "Våtrumscertifikat: GVK, BKR eller Säker Vatten? | ByggExp", seoDescription: "Våtrumscertifikat är inget lagkrav, men försäkringen kräver branschregler. Jämför GVK, BKR och Säker Vatten: krav, giltighet, avgifter 2026.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-18T19:30:00.000Z", createdAt: "2026-08-18T19:30:00.000Z", updatedAt: "2026-08-18T19:30:00.000Z",
+  publishedAt: "2026-08-18T19:30:00.000Z", createdAt: "2026-08-18T19:30:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_YRKESBEVIS_BYGG_LARLING_HTML = `
-<p>Kompetensbristen i byggbranschen löser sig inte med annonser – den löser sig genom att företag utbildar sina egna. Att handleda en lärling fram till yrkesbevis ger dig en fullärd yrkesarbetare med bekräftad kompetens i ID06 kompetensdatabas, och samtidigt en person som redan kan era rutiner, kunder och arbetsplatser. Men reglerna för vägen dit har ändrats, och många företag jobbar fortfarande efter en gammal modell. Här går vi igenom vad som faktiskt gäller 2026, styrt av Byggbranschens Yrkesnämnd (BYN) och Yrkesutbildningsavtalet YUA 2020.</p>
+<p>Kvalificeringstiden räknas i kalendermånader, inte i loggade timmar – och semester, arbetstidsförkortning, helglönedagar och fridagar ingår i tiden enligt <a href="https://www.byggnads.se/49ec78/siteassets/kollektivavtal/byggavtalet-2025-digital-utgava-1.pdf" target="_blank" rel="noopener noreferrer">Yrkesutbildningsavtalet (bilaga H i Byggavtalet 2025–2027), § 7 b</a>. Det som förlänger tiden är annan frånvaro: arbetsgivaren korrigerar den i BYN:s Mina sidor inför varje löneuppflyttning, och yrkesbeviset flyttas fram motsvarande. En träarbetare som börjar kvalificeringstiden 1 september 2026 och inte har någon sådan frånvaro kan alltså få sitt yrkesbevis efter 36 månader, i september 2029.</p>
 
-<p>Under lärlingstiden behöver du dokumentera arbetad tid och uppföljning löpande – ladda ner vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a> för att hålla ordning på lärlingens timmar och arbetsmoment från dag ett.</p>
+<p>Systemet sköts av <a href="https://www.byggbranschensyrkesnamnd.se/larling/ny-som-larling/hur-nar-jag-mitt-yrkesbevis/" target="_blank" rel="noopener noreferrer">Byggbranschens Yrkesnämnd (BYN)</a>, där arbetsgivar- och arbetstagarparterna i bygg- och anläggningsbranschen samarbetar. Adressen byn.se leder i dag vidare till byggbranschensyrkesnamnd.se.</p>
 
-<h2>Timmar eller månader? Så fungerar kravet idag</h2>
-<p>Först en viktig korrigering av en vanlig missuppfattning: den gamla pappersbaserade utbildningsboken där lärlingen loggade utbildningstimmar är utbytt. I dagens YUA 2020-modell mäts lärlingstiden som <strong>kvalificeringstid i månader</strong>, inte i antal loggade utbildningstimmar. Godkännandet sker på uppnådda praktiska läranderesultat – alltså vad lärlingen faktiskt kan – och rapporteringen görs digitalt i BYN:s Mina sidor (e-boken).</p>
-<p>Notera också att BYN har bytt webbadress. Den gamla adressen byn.se leder numera vidare via en permanent omdirigering (301) – rätt sida är <strong>byggbranschensyrkesnamnd.se</strong>. Verifiera alltid aktuella krav och regler direkt hos BYN innan ni registrerar en lärling, eftersom detaljerna kan skilja mellan yrken.</p>
-
-<h2>Kvalificeringstid per yrke</h2>
-<p>Kvalificeringstiden varierar beroende på yrke. Huvudspåren ser ut så här:</p>
-<ul>
-<li><strong>36 månader:</strong> Bergarbetare, Beläggningsarbetare, Betongarbetare, Golvläggare, Murare, Träarbetare samt Väg- &amp; anläggningsarbetare.</li>
-<li><strong>30 månader:</strong> Håltagare, Plattsättare, Takmontör, Undertaksmontör, Ställningsbyggare och Stenmontör.</li>
-<li><strong>24 månader:</strong> Maskinförare – Anläggningsmaskiner, Grundläggning och Kranar.</li>
-</ul>
-<p>Kvalificeringstiden kan kortas beroende på tidigare skolgång eller validerad kompetens. Har lärlingen redan gått gymnasiets bygg- och anläggningsprogram eller genomfört vuxenutbildning hos en BYN-godkänd anordnare, räknas det av. Ett par yrken behåller fortfarande timkrav som undantag – anläggningsdykare har till exempel totalt 5 800 timmars utbildning, varav 3 200 timmar grundutbildning och minst 800 loggade dyktimmar, plus godkänd läkarundersökning enligt <strong>AFS 2023:15</strong> (Arbetsmiljöverkets föreskrifter om medicinska kontroller, gällande sedan 1 januari 2025). Det visar att enstaka specialyrken avviker även om huvudmodellen är månadsbaserad.</p>
-
-<h2>Grundutbildning och distansutbildning</h2>
-<p>Innan lärlingen går över i kvalificeringstid ska grundutbildningen – både teori och praktik – vara klar. Som företagslärling måste den delen vara avklarad inom <strong>max 12 månader</strong> (6 månader för maskinförare). Det är företaget som beställer och betalar den yrkesteoretiska distansutbildningen.</p>
-<p>För en träarbetare kombineras den yrkesteoretiska distansutbildningen med en kvalificeringstid på 36 månader hos ett företag med kollektivavtal innan yrkesbeviset utfärdas. Kontrollera det exakta antalet teoritimmar och aktuell kursanordnare direkt hos BYN. Planera in distansstudierna tidigt – ligger teorin efter blir hela vägen till yrkesbevis försenad.</p>
-
-<h2>Krav på företaget</h2>
-<p>För att ni överhuvudtaget ska få utbilda lärlingar mot byggbranschens yrkesbevis krävs följande:</p>
-<ul>
-<li><strong>Kollektivavtal</strong> för bygg/anläggning är ett absolut krav – utan det kan företaget inte registrera lärlingar hos BYN.</li>
-<li>Lärlingen är normalt <strong>minst 18 år</strong>. Dispens kan sökas hos BYN.</li>
-<li>Ett <strong>skriftligt anställningsavtal</strong> (provanställning eller tillsvidare) måste finnas.</li>
-<li>Registrering sker i <strong>Mina sidor</strong> med företagets organisationsnummer.</li>
-</ul>
-<p>Vid registreringen anger ni handledare, bifogar anställningsavtalet och dokumenterar lärlingens tidigare kvalifikationer med betyg, intyg eller valideringsintyg. Handledaren bekräftar handledarinstruktionerna i systemet.</p>
-
-<h2>Handledarens roll</h2>
-<p>Handledaren är den som gör att lärlingssystemet fungerar i praktiken. Kraven är tydliga:</p>
-<ul>
-<li>Handledaren måste ha <strong>yrkesbevis i samma yrke</strong> som lärlingen, eller motsvarande dokumenterad kompetens.</li>
-<li>En handledare får ha <strong>högst tre lärlingar</strong> totalt. För ställningsbyggare gäller särskild regel: 1 lärling under grundutbildning och 3 under kvalificeringstid.</li>
-<li>Handledaren godkänner och bekräftar läranderesultat och rapporter i e-boken (Mina sidor).</li>
-</ul>
-<p>Handledarutbildning rekommenderas starkt – det gör att bedömningen av läranderesultaten blir korrekt och att godkännandena i systemet inte fastnar. En handledare som förstår kraven undviker att lärlingen når slutet av kvalificeringstiden med luckor som borde ha åtgärdats i tid.</p>
-
-<h2>Steg för steg – från anställning till yrkesbevis</h2>
+<h2>Tre vägar till yrkesbevis</h2>
 <ol>
-<li>Kontrollera att företaget har kollektivavtal och teckna skriftligt anställningsavtal med lärlingen.</li>
-<li>Registrera lärlingen i Mina sidor med org.nr och tilldela en behörig handledare.</li>
-<li>Dokumentera tidigare kvalifikationer så att eventuell avkortning av kvalificeringstiden räknas av.</li>
-<li>Beställ och betala den yrkesteoretiska distansutbildningen – klar inom 12 månader (maskinförare 6).</li>
-<li>Följ upp arbetsmoment och godkänn läranderesultat löpande i e-boken under kvalificeringstiden.</li>
-<li>När kvalificeringstiden är genomförd och godkänd utfärdas yrkesbeviset digitalt via Mina sidor, registreras i ID06 kompetensdatabas och lärlingen får ett fysiskt plastkort plus certifieringsdokument.</li>
+<li><strong>Gymnasiets bygg- och anläggningsprogram</strong> – med yrkesexamen och godkänt i yrkets kravkurser går eleven direkt till kvalificeringstid.</li>
+<li><strong>Vuxenutbildning</strong> hos en av BYN godkänd utbildningsgivare (GUG), till exempel via komvux eller arbetsmarknadsutbildning.</li>
+<li><strong>Företagslärling</strong> – personen anställs utan grundutbildning, läser BYN:s yrkesteori på distans och gör den praktiska grundutbildningen i företaget.</li>
 </ol>
+<p>Oavsett väg ska lärlingen registreras med en lärlingsanmälan i Mina sidor. Saknar en gymnasieelev godkänt i någon kravkurs blir det en anpassad period som företagslärling innan kvalificeringstiden kan börja.</p>
 
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp utfärdar inte yrkesbevis – det gör bara BYN. Men den löpande dokumentationen som handledningen kräver kan du sköta i ByggExp. Lägg upp lärlingens arbetade tid per projekt och arbetsmoment, så har du underlag när handledaren ska bekräfta läranderesultat i Mina sidor och överblick över hur kvalificeringstiden fortskrider. Samma tidrapportering ger dig dessutom korrekt underlag för lön och fakturering. Kort sagt: BYN äger vägen till yrkesbeviset, ByggExp håller ordning på timmarna och uppföljningen.</p>
+<h2>Kvalificeringstid och lärlingslön per yrke</h2>
+<p>Lärlingslönen är en procentsats av yrkesarbetarens grundlön, uttryckt som fördelningstal. Den första tabellen visar hur länge varje steg gäller, den andra vad stegen ger i grundlön från 1 maj 2026 till 30 april 2027 enligt Byggavtalet § 3 punkt 9.2–9.3.</p>
+
+<div class="article-table"><table>
+<thead><tr><th>Kvalificeringstid</th><th>Yrken</th><th>70 %</th><th>80 %</th><th>90 %</th></tr></thead>
+<tbody>
+<tr><td>36 månader</td><td>Träarbetare, betongarbetare, murare, golvläggare, bergarbetare, beläggningsarbetare, väg- och anläggningsarbetare</td><td>mån 0–12</td><td>mån 13–24</td><td>mån 25–36</td></tr>
+<tr><td>30 månader</td><td>Plattsättare, håltagare, stenmontör, ställningsbyggare, tak- och tätskiktsmontör, undertaksmontör</td><td>mån 0–12</td><td>mån 13–24</td><td>mån 25–30</td></tr>
+<tr><td>24 månader</td><td>Maskinförare, kranförare</td><td>mån 0–6</td><td>mån 7–12</td><td>mån 13–24</td></tr>
+</tbody>
+</table></div>
+
+<div class="article-table"><table>
+<thead><tr><th>Lönesteg</th><th>Fördelningstal</th><th>kr/tim</th><th>kr/mån</th></tr></thead>
+<tbody>
+<tr><td>Företagslärling under grundutbildning</td><td>0,70</td><td>142,10</td><td>24 725</td></tr>
+<tr><td>Lärling 70 %</td><td>0,70</td><td>142,10</td><td>24 725</td></tr>
+<tr><td>Lärling 80 %</td><td>0,80</td><td>162,40</td><td>28 258</td></tr>
+<tr><td>Lärling 90 %</td><td>0,90</td><td>182,70</td><td>31 790</td></tr>
+<tr><td>Yrkesarbetare</td><td>1,00</td><td>203,00</td><td>35 322</td></tr>
+</tbody>
+</table></div>
+<p>Anläggningsdykare har en egen trappa: kvalificeringstiden är 800 dyktimmar enligt loggbok, inte månader.</p>
+
+<h3>Räkneexempel: lärlingslön i ackord</h3>
+<p>Fördelningstalet styr också lärlingens andel när laget jobbar på prestationslön. Enligt Byggavtalet § 3 punkt 3.1.11 multipliceras arbetade timmar med fördelningstalet. För lärlingar läggs dessutom ett belopp till premielönesumman: skillnaden mellan arbetade timmar och fördelningstimmar gånger 23 kr (10 kr vid ren resultatlön).</p>
+<p>Exempel (hypotetiskt): en snickarlärling i månad 15 (fördelningstal 0,80) arbetar 160 timmar under avstämningsperioden. Fördelningstimmar: 160 × 0,80 = 128. Skillnad: 32 timmar × 23 kr = 736 kr som tillförs lagets premielönesumma. Lärlingen kostar alltså laget mindre i fördelning, och laget kompenseras för handledningstiden. Mer om hur ackordet räknas finns i guiden om <a href="/sv/blog/ackordslon-bygg">ackordslön i bygg</a>.</p>
+
+<h2>Krav på företaget och handledaren</h2>
+<ul>
+<li><strong>Kollektivavtal.</strong> Företaget måste vara bundet av kollektivavtal genom medlemskap i Byggföretagen eller Maskinentreprenörerna, eller ha hängavtal med Byggnads eller Seko. Läs mer om vad det innebär i <a href="/sv/blog/maste-ha-kollektivavtal-bygg">måste man ha kollektivavtal i bygg</a>.</li>
+<li><strong>Ålder.</strong> Normalt 18 år. För yngre lärlingar krävs undantag från BYN.</li>
+<li><strong>Handledare</strong> med yrkesbevis i samma yrke, eller motsvarande kompetens. En handledare får ha högst tre lärlingar. För ställningsbyggare gäller högst en under grundutbildning eller tre under kvalificeringstid, enligt BYN:s <a href="https://www.byggbranschensyrkesnamnd.se/foretag/foretagsroller/att-vara-handledare/" target="_blank" rel="noopener noreferrer">regler för handledare</a>.</li>
+<li><strong>Bredd.</strong> Företaget ska kunna ge alla praktiska moment i yrkets kvalifikationskrav. Har ni smal inriktning kan BYN-regionen godkänna samverkan med ett annat företag.</li>
+</ul>
+
+<h2>Anställningen: provanställning och distansutbildning</h2>
+<p>En <strong>företagslärling</strong> kan provanställas i högst 12 månader (maskinförare 6), och grundutbildningen ska vara klar inom samma tid. Företaget beställer och betalar den yrkesteoretiska distansutbildningen. Vill arbetsgivaren avbryta efter sex månader måste lärlingen underrättas skriftligt och BYN-regionen informeras minst två månader i förväg.</p>
+<p>En <strong>lärling under kvalificeringstid</strong> kan provanställas i högst 6 månader enligt Byggavtalet. Den som gjort sin grundutbildning som företagslärling hos samma arbetsgivare kan inte provanställas igen. Mer om reglerna finns i <a href="/sv/blog/provanstallning-bygg-regler">provanställning i bygg</a>.</p>
+<p>För maskinförare är distansutbildningen hos ME-skolan prissatt per del: inriktning inklusive hjullastare 8 500 kr, fördjupning 4 250 kr och 2 125 kr per ytterligare maskinslag, allt exklusive moms enligt <a href="https://www.byggbranschensyrkesnamnd.se/utbildning/foretagslarling/distansutbildning-for-maskinforare/" target="_blank" rel="noopener noreferrer">BYN</a>. Lärlingen får inte köra maskin på arbetsplatsen förrän introduktionskursen är godkänd.</p>
+
+<h2>Lärlingsbok, e-bok och timmar – vad gäller nu?</h2>
+<p>Den gamla lärlingsboken där timmar loggades hörde till Yrkesutbildningsavtalet 2006, som upphörde 31 december 2023. Timmarna registrerades i systemet BYN 2.0, som nu är på väg ut – för den som använt det finns funktionen registerutdrag. Därför cirkulerar fortfarande äldre instruktioner om att registrera timmar, även för maskinförare.</p>
+<p>I dag finns två lägen:</p>
+<ul>
+<li><strong>Under grundutbildning</strong> (företagslärling) har lärlingen en e-bok i Mina sidor. Lärlingen rapporterar praktiska läranderesultat, handledaren godkänner dem och distansleverantören rapporterar teorin. När allt är godkänt godkänner handledaren hela e-boken och BYN-regionen startar kvalificeringstiden.</li>
+<li><strong>Under kvalificeringstid</strong> finns ingen e-bok och inga timmar att logga. I stället tar företaget fram en utvecklingsplan som visar vilka arbeten lärlingen ska få pröva, och följer upp den i samtal.</li>
+</ul>
+<p>Lön, frånvaro och arbetad tid behöver ändå dokumenteras som för alla anställda – frånvaron är det som avgör när lärlingen flyttas upp i lönetrappan.</p>
+
+<h2>När tiden är klar – så utfärdas yrkesbeviset</h2>
+<ol>
+<li>Företaget får ett meddelande i Mina sidor när kvalificeringstiden är fullgjord.</li>
+<li>Företaget ger klartecken och registrerar att tiden följt utvecklingsplanen.</li>
+<li>Företaget skriver ett intyg till lärlingen med arbetsgivarens namn, organisationsnummer, handledare, anställningstid och de huvudsakliga arbetsuppgifterna (YUA § 6 d).</li>
+<li>BYN-regionen utfärdar yrkesbeviset. Det blir tillgängligt digitalt i Mina sidor, registreras i ID06 kompetensdatabas och skickas hem som plastkort.</li>
+</ol>
+<p>Ett borttappat kort kan ersättas via Mina sidor för 450 kr inklusive moms. Hittar en maskinförare inte sitt yrkesbevis hos BYN kan det vara utfärdat av TYA, som BYN samverkar med.</p>
+
+<h2>Validering för vuxna och utländska yrkesarbetare</h2>
+<p>Den som redan kan yrket men saknar svensk utbildning har två vägar:</p>
+<ul>
+<li><strong>Validering</strong> hos en godkänd valideringsutförare. Enligt <a href="https://www.byggbranschensyrkesnamnd.se/yrkesarbetare/validering/vad-innebar-validering/" target="_blank" rel="noopener noreferrer">BYN</a> tar den 3–5 dagar beroende på yrke. Visar valideringen att allt finns kan yrkesbevis utfärdas om personen har arbetserfarenhet som motsvarar kvalificeringstiden (YUA § 8). Annars blir resultatet en plan för komplettering, och validerade delar kan korta kvalificeringstiden (§ 9 b).</li>
+<li><strong>Erkännandeintyg</strong> (Letter of Acknowledgement) för den som har formell yrkesutbildning från ett annat land plus minst två års erfarenhet i yrket. Intyget motsvarar ett svenskt yrkesbevis. Ansökningsavgiften är 5 500 kr och betalas även om ansökan avslås, enligt <a href="https://www.byggbranschensyrkesnamnd.se/acknowledgement/letter-of-acknowledgement/" target="_blank" rel="noopener noreferrer">BYN</a>.</li>
+</ul>
+<p>Planerar du att anställa och vill veta vad en lärling kostar totalt med arbetsgivaravgifter och avtalsförsäkringar, räkna i <a href="/sv/verktyg/anstalld-kostnad-kalkylator">kalkylatorn för personalkostnad</a>.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Behöver lärlingen fortfarande fylla i en lärlingsbok med utbildningstimmar?</h3>
-<p>Nej. Den gamla pappersbaserade utbildningsboken med timloggar är utbytt. I YUA 2020-modellen mäts tiden som kvalificeringstid i månader och godkännandet sker på uppnådda praktiska läranderesultat, som dokumenteras digitalt i BYN:s Mina sidor.</p>
-<h3>Kan vårt företag utbilda lärlingar utan kollektivavtal?</h3>
-<p>Nej. Kollektivavtal för bygg/anläggning är ett krav för att företaget ska få registrera och utbilda lärlingar mot byggbranschens yrkesbevis. Utan avtal kan ni inte gå vidare med registrering hos BYN.</p>
-<h3>Hur lång är kvalificeringstiden?</h3>
-<p>Den beror på yrket: 36 månader för bland annat träarbetare, betong, murare och golv, 30 månader för exempelvis platt-, sten-, tak- och undertaksmontör samt ställningsbyggare, och 24 månader för maskinförare. Tidigare skolgång eller validerad kompetens kan korta tiden.</p>
+<h3>Hur länge är man lärling som snickare?</h3>
+<p>En träarbetare har 36 månaders kvalificeringstid efter godkänd grundutbildning. Som företagslärling utan gymnasieutbildning kommer grundutbildningen, högst 12 månader, före det.</p>
+<h3>Vad tjänar en snickarlärling 2026?</h3>
+<p>Från 1 maj 2026 är grundlönen 142,10 kr/tim första året, 162,40 kr/tim andra året och 182,70 kr/tim tredje året av kvalificeringstiden, det vill säga 70, 80 och 90 procent av yrkesarbetarens 203 kr/tim.</p>
+<h3>Behöver lärlingen fortfarande en lärlingsbok?</h3>
+<p>Nej. Lärlingsboken med timmar hörde till det gamla avtalet som upphörde vid utgången av 2023. Företagslärlingar under grundutbildning har en digital e-bok med läranderesultat, medan lärlingar under kvalificeringstid har en utvecklingsplan.</p>
+<h3>Kan företaget ha lärlingar utan kollektivavtal?</h3>
+<p>Nej. Företaget måste vara bundet av kollektivavtal inom bygg och anläggning, genom medlemskap i en arbetsgivarorganisation eller hängavtal. Företag inom närliggande avtalsområden kan i vissa fall träffa avtal för enskilda lärlingar via BYN-regionen.</p>
+<h3>Finns det ett prov för yrkesbevis som snickare?</h3>
+<p>Inte för den som går den vanliga vägen – yrkesbeviset utfärdas när grundutbildning och kvalificeringstid är godkända. Den som saknar utbildning men har erfarenhet kan i stället valideras genom frågor och praktiska övningar hos en godkänd valideringsutförare.</p>
 <h3>Hur många lärlingar får en handledare ha?</h3>
-<p>Maximalt tre lärlingar totalt. För ställningsbyggare gäller en särskild regel med 1 lärling under grundutbildning och 3 under kvalificeringstid. Handledaren måste ha yrkesbevis i samma yrke som lärlingen.</p>
-
-<h2>Kom igång</h2>
-<p>Börja med att sätta rutinen för tidsdokumentation – ladda ner vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och koppla lärlingens timmar till rätt projekt och arbetsmoment. Vill du se hur ByggExp håller ihop tidrapportering, uppföljning och fakturering i ett flöde? <a href="/sv/contact">Boka en demo</a> så visar vi upplägget för ditt företag.</p>
-
-<p>Relaterat: <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag</a> och <a href="/sv/blog/tidrapportering">Tidrapportering för byggföretag</a>.</p>
+<p>Högst tre totalt. För ställningsbyggare gäller högst en under grundutbildning eller tre under kvalificeringstid. BYN-regionen kan ge undantag.</p>
 `;
 
 const A_YRKESBEVIS_BYGG_LARLING: BlogPost = {
   _id: "code-"+"yrkesbevis-bygg-larling",
-  title: "Yrkesbevis i bygg: så handleder du en lärling 2026", slug: "yrkesbevis-bygg-larling", locale: "sv",
-  excerpt: "Vad som faktiskt gäller 2026 när du utbildar en lärling till yrkesbevis – kvalificeringstid i månader, krav på företag och handledare, och vägen via BYN:s Mina sidor.", tag: "Kompetens",
+  title: "Yrkesbevis i bygg: lärlingstid, lärlingslön och handledning 2026", slug: "yrkesbevis-bygg-larling", locale: "sv",
+  excerpt: "Hur lång kvalificeringstiden är per yrke, vad lärlingen tjänar enligt Byggavtalet 2025–2027 och hur vägen till yrkesbevis går via BYN – även för vuxna och utländska yrkesarbetare.", tag: "Kompetens",
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_YRKESBEVIS_BYGG_LARLING_HTML,
-  seoTitle: "Yrkesbevis och lärling i bygg 2026 | ByggExp", seoDescription: "Så handleder du en lärling till yrkesbevis 2026 enligt BYN och YUA 2020: kvalificeringstid i månader, krav på företag och handledare, steg för steg.",
+  seoTitle: "Yrkesbevis och lärling i bygg: tid och lön 2026 | ByggExp", seoDescription: "Lärlingstid 24–36 månader beroende på yrke, lärlingslön 70–90 % av 203 kr/tim och vägen till yrkesbevis via BYN. Med lönetabell och räkneexempel.",
   seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T05:21:00.000Z", createdAt: "2026-08-19T05:21:00.000Z", updatedAt: "2026-08-19T05:21:00.000Z",
+  publishedAt: "2026-08-19T05:21:00.000Z", createdAt: "2026-08-19T05:21:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN_HTML = `

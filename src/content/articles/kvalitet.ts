@@ -382,94 +382,88 @@ const KONTRAVG: BlogPost = {
 };
 
 const A_BYGGMOTESPROTOKOLL_MALL_HTML = `
-<p>Ett byggmötesprotokoll ser vid första anblick ut som en enkel sammanfattning av vad som sades på mötet. I praktiken är det något helt annat: enligt branschstandardavtalen AB 04 och ABT 06 är protokollet ett dokument som kan avgöra en framtida tvist. En anteckning om en beställd ÄTA eller ett anmält hinder som hamnar i protokollet uppfyller avtalets skriftlighetskrav – och det som inte protokollförs riskerar att aldrig ha hänt när diskussionen om betalning kommer. Söker du en <strong>byggmötesprotokoll mall</strong> som håller juridiskt behöver du därför förstå både strukturen och rutinerna runt den.</p>
+<p>Enligt AB 04 och ABT 06 kap. 3 § 3 för beställaren protokoll vid byggmötet och entreprenören justerar det, om parterna inte kommit överens om något annat. Det viktigaste med det: en anteckning i byggmötesprotokollet uppfyller avtalens krav på skriftlighet. En ÄTA-underrättelse eller ett anmält hinder som står i ett justerat protokoll räknas alltså som skriftligt lämnat – och det som saknas där får ni bevisa på annat sätt.</p>
 
-<p>Den här guiden går igenom dagordning, mötesfrekvens och ansvar – och hur ni följer upp besluten efteråt. Vill du se hur projekt, uppgifter och etapper hänger ihop kan du utforska <a href="/sv/funktioner">våra funktioner för byggprojekt</a>.</p>
+<h2>Startmöte och byggmöte – vad avtalen säger</h2>
+<p>AB 04 införde ett obligatoriskt startmöte i kap. 3 § 2, och ABT 06 har samma ordning. Enligt Svensk Byggtjänsts genomgång i <a href="https://static.byggtjanst.se/amadocs/any_1_2005_4-11.pdf" target="_blank" rel="noopener noreferrer">AMA-nytt Anläggning 1/2005</a> gäller detta för startmötet:</p>
+<ul>
+<li>Beställaren kallar, och mötet hålls innan entreprenaden påbörjas.</li>
+<li>Parterna går igenom kontraktshandlingarna, klargör behörighet för andra än ombuden, bestämmer hur information ska utbytas och tar upp övriga frågor om samverkan.</li>
+<li>Beställaren för protokoll, som godkänns av båda parternas ombud.</li>
+<li>Parterna kan komma överens om att underrättelser om ÄTA (kap. 2 § 7), andra avvikelser (kap. 2 § 9) och hinder (kap. 4 § 4) ska lämnas skriftligen, även om kontraktet inte säger det.</li>
+</ul>
+<p>Byggmötena regleras i kap. 3 § 3. Parterna är skyldiga att delta och ska företrädas av en behörig person. Mötena hålls i den utsträckning som behövs och behandlar frågor som är gemensamma för parterna. Någon fast frekvens finns inte i avtalen – den anges i de administrativa föreskrifterna (AF) eller bestäms på startmötet. I en totalentreprenad enligt ABT 06 tillkommer projekteringsmöten.</p>
+<p>Avtalen är standardavtal från Byggandets Kontraktskommitté och gäller bara om de är avtalade. Texten finns hos <a href="https://byggtjanst.se/bokhandel/upphandling/ab-04" target="_blank" rel="noopener noreferrer">Svensk Byggtjänst</a>. En utförligare agenda för det första mötet finns i <a href="/sv/blog/startmote-byggprojekt-checklista">checklistan för startmöte</a>.</p>
 
-<h2>Vad är ett byggmöte – och skillnaden mot startmöte och projektmöte</h2>
-
-<p>Ett byggmöte är ett återkommande möte under entreprenadtiden mellan beställare och en eller flera entreprenörer. Här behandlas ekonomi, förseningar mot tidsplanen, avvikelser i mark- och förhållanden, behov av ÄTA-arbeten och beställarens ställningstaganden. Det är projektets formella styrmöte.</p>
-
-<p>Det ska inte förväxlas med <strong>projektmötet</strong>, som är ett internt möte mellan nyckelpersoner och ofta hålls veckovis för att driva det dagliga arbetet framåt. Innan de reguljära byggmötena drar igång hålls ett <strong>startmöte</strong> – en kick-off där organisation, rutiner och kontaktvägar sätts. I en totalentreprenad enligt ABT 06 tillkommer dessutom <strong>projekteringsmöten</strong> för att styra själva projekteringen.</p>
-
-<p>Vilken avtalsform ni arbetar under påverkar mötesbilden. AB 04 gäller utförandeentreprenad, där beställaren står för handlingarna, medan ABT 06 gäller totalentreprenad, där entreprenören ansvarar för både projektering och utförande. Kapitel 3 (Organisation) i båda avtalen reglerar mötena, men det är branschstandard från Byggandets Kontraktskommitté – inte lag.</p>
-
-<h2>Hur ofta bör ni hålla byggmöte?</h2>
-
-<p>AB 04 och ABT 06 anger att möten ska hållas ”i den omfattning som erfordras”. Det finns alltså ingen lagstadgad eller avtalsfast frekvens – det är upp till parterna att bestämma vad projektet kräver.</p>
-
-<p>I praktiken sätts frekvensen i de administrativa föreskrifterna (AF), som upprättas enligt AMA AF. Vanligast är byggmöte en gång per månad. Större och mer komplexa projekt håller tätare möten, ibland varannan vecka, medan lugnare skeden kan klara sig med glesare intervall.</p>
-
-<p>För mindre hantverks- och byggföretag räcker ofta ett månadsvis byggmöte, kompletterat med korta interna avstämningar däremellan. Det viktiga är att intervallet är bestämt i förväg och att alla vet när nästa möte hålls – det är själva förutsättningen för att protokollen ska kunna justeras i tid.</p>
-
-<h2>Vem ansvarar för protokollet?</h2>
-
-<p>Enligt AB 04 och ABT 06 är det <strong>beställaren</strong> som ska föra protokollet. Beställaren ansvarar också för att protokollet skickas till entreprenören utan dröjsmål och i god tid före nästa möte, så att det hinner granskas.</p>
-
-<p>Entreprenören ska <strong>justera</strong> protokollet – alltså granska och godkänna det. Om något är felaktigt eller ofullständigt antecknat måste entreprenören invända utan dröjsmål, och senast innan nästa möte. Uteblir invändningen står protokollanteckningen kvar som parternas gemensamma bild av vad som beslutats, och den kan användas som bevis i en senare tvist.</p>
-
-<p>Den enkla men avgörande rutinen: börja varje byggmöte med att formellt godkänna föregående protokoll. Då tvingas eventuella oklarheter upp till ytan medan de fortfarande går att korrigera, i stället för att dyka upp som en obehaglig överraskning ett år senare.</p>
-
-<h2>Dagordning – vad ska med i ett byggmötesprotokoll</h2>
-
-<p>Ett tydligt protokoll ska innehålla mötesnummer och projektnamn, datum, tid och plats, samt vilka parter som närvarade – byggherre, entreprenör och projektledare. Numrera varje möte separat (BM1, BM2, BM3 …) så att det alltid går att hänvisa exakt till rätt protokoll. Använd samma dagordning varje gång, så att inget faller bort mellan mötena.</p>
-
+<h2>Dagordning för ett byggmöte</h2>
+<p>Samma numrering varje gång gör att en fråga kan följas från möte till möte: punkt 6 är alltid ÄTA, punkt 7 alltid hinder. Numrera mötena (BM1, BM2 …) och ge varje ärende ett id som behålls tills det är stängt, till exempel 6.3.</p>
 <ol>
-<li><strong>Formalia</strong> – mötesnummer, projekt, datum/tid/plats</li>
-<li><strong>Närvaro</strong> – vilka parter och roller som deltar</li>
-<li><strong>Godkännande av föregående protokoll</strong> – justering och eventuella invändningar</li>
-<li><strong>Ekonomi</strong> – fakturering, betalningar, prognos mot budget</li>
-<li><strong>Tidsplan</strong> – status, avvikelser och åtgärder</li>
-<li><strong>ÄTA-arbeten</strong> – beställda, pågående och begärda ändringar och tillägg</li>
-<li><strong>Hinder och förseningar</strong> – anmälda hinder och konsekvenser för tidplanen</li>
-<li><strong>Arbetsmiljö och KMA</strong> – kvalitet, miljö och arbetsmiljöfrågor</li>
-<li><strong>Kvalitet och besiktningar</strong> – egenkontroller, kommande besiktningar</li>
-<li><strong>Nästa möte</strong> – datum, tid och öppna punkter att bevaka</li>
+<li><strong>Mötets öppnande</strong> – närvaro, ombud och vilka som har behörighet att fatta beslut.</li>
+<li><strong>Justering av föregående protokoll</strong> – godkänt, eller vilka invändningar som gjorts.</li>
+<li><strong>Arbetsmiljö</strong> – tillbud, skyddsronder, BAS-U:s frågor.</li>
+<li><strong>Tidplan</strong> – utfall mot tidplanen, kritiska aktiviteter, kommande hållpunkter.</li>
+<li><strong>Handlingar och frågor</strong> – nya ritningar, öppna tekniska frågor, svar som väntas från beställaren.</li>
+<li><strong>ÄTA</strong> – nya underrättelser, beställda arbeten, priser och tidspåverkan.</li>
+<li><strong>Hinder och förseningar</strong> – anmälda hinder och begärd tidsförlängning.</li>
+<li><strong>Kvalitet och kontroller</strong> – egenkontroller, avvikelser, kommande besiktningar.</li>
+<li><strong>Ekonomi</strong> – fakturering, betalningar, prognos.</li>
+<li><strong>Övrigt och nästa möte</strong> – datum, tid och plats.</li>
 </ol>
 
-<p>Varje punkt bör dokumenteras med ett tydligt beslut och en ansvarig person – inte bara ett konstaterande. Ett protokoll där det står ”ansvarig: entreprenören, klart: nästa möte” är värt betydligt mer än ett som bara noterar att en fråga ”diskuterades”.</p>
+<h2>Så skriver ni punkterna – ett exempelutdrag</h2>
+<p>En protokollpunkt behöver tre saker: vad som har hänt, vad som beslutades eller vem som ska göra vad, och när. ”Diskuterades” är inget beslut. Så här kan ett utdrag se ut i ett hypotetiskt projekt:</p>
+<div class="article-table"><table>
+<thead><tr><th>Punkt</th><th>Ärende</th><th>Beslut / åtgärd</th><th>Ansvarig</th><th>Klart</th></tr></thead>
+<tbody>
+<tr><td>BM4 4.1</td><td>Stomme plan 2 en vecka efter tidplan p.g.a. sen leverans av limträ</td><td>E lämnar reviderad tidplan. Ingen ändring av färdigställandetid.</td><td>E</td><td>BM5</td></tr>
+<tr><td>BM4 6.3</td><td>ÄTA 07: berg påträffat vid schakt för VA, ca 40 m³ utöver förfrågningsunderlaget</td><td>E underrättade 12/3. B beställer arbetet på löpande räkning enligt kontraktets ersättningsregler.</td><td>B / E</td><td>Beställd</td></tr>
+<tr><td>BM4 7.1</td><td>Hinder: bygglovshandling för fasadändring saknas</td><td>E anmäler hinder och begär tidsförlängning med 5 arbetsdagar. B svarar till BM5.</td><td>B</td><td>BM5</td></tr>
+<tr><td>BM4 8.2</td><td>Fuktmätning av bjälklag före mattläggning</td><td>Mätprotokoll bifogas egenkontrollen före läggning.</td><td>E</td><td>v. 16</td></tr>
+</tbody>
+</table></div>
+<p>B = beställaren, E = entreprenören. Skriv vem som sa vad när parterna är oense, till exempel ”E anser att arbetet är en ÄTA, B bestrider”. Då är oenigheten dokumenterad i stället för att se ut som ett gemensamt beslut.</p>
 
-<h2>Protokollet som juridiskt bevis – skriftlighetskravet</h2>
+<h3>ÄTA och hinder i protokollet</h3>
+<p>Enligt AB 04 kap. 2 § 7 ska entreprenören inhämta beställarens synpunkter innan ett likställt ÄTA-arbete påbörjas om kostnaden överstiger gränsbeloppet. Om inget annat avtalats är gränsbeloppet ett halvt prisbasbelopp, vilket är 29 600 kr år 2026 med <a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/priser-och-ekonomiska-tendenser/priser/konsumentprisindex-kpi/pong/statistiknyhet/prisbasbeloppet-for-ar-2026" target="_blank" rel="noopener noreferrer">prisbasbeloppet 59 200 kr</a>. Under gränsbeloppet får arbetet påbörjas, men beställaren ska underrättas utan dröjsmål. Notera datumet för underrättelsen i protokollet – det är den uppgiften som avgör om ni var i tid. Mer om hanteringen finns i <a href="/sv/blog/ata-hantering-mall">guiden om ÄTA-hantering</a> och om hinder i <a href="/sv/blog/hindersanmalan-tidsforlangning-ab04">hindersanmälan och tidsförlängning</a>.</p>
 
-<p>Både AB 04 och ABT 06 ställer krav på skriftlig form för flera typer av meddelanden mellan parterna. En anteckning i byggmötesprotokollet uppfyller det kravet. Det gäller bland annat beställning av ÄTA-arbeten (AB 04 kap 2 § 6) och underrättelse om hinder och förseningar.</p>
+<h2>Justering – rutinen som gör protokollet giltigt</h2>
+<p>Att entreprenören justerar betyder att protokollet granskas och godkänns, eller att invändningar lämnas. Ett protokoll som justerats utan invändning blir svårt att ifrågasätta i efterhand. Därför:</p>
+<ul>
+<li>Läs protokollet samma dag det kommer, inte på väg in till nästa möte.</li>
+<li>Skicka invändningen skriftligt och ange punkt och önskad lydelse: ”BM4 6.3 – ska vara: B beställer arbetet; inte: B tar ställning till BM5.”</li>
+<li>Ta upp invändningen under punkt 2 på nästa möte och se till att den antecknas.</li>
+<li>Spara protokollen numrerade och i ordning – i en tvist är serien viktigare än det enskilda protokollet.</li>
+</ul>
+<p>Protokollet ersätter inte byggdagboken. Enligt AMA-nytt klargör AB 04 kap. 3 § 13 att entreprenören ensam för dagbok, och där hör det dagliga hemma: väder, bemanning, leveranser och störningar. Byggmötet tar upp det som kräver ställningstagande från båda parter. Se <a href="/sv/blog/byggdagbok">guiden om byggdagbok</a>.</p>
 
-<p>Konsekvensen är konkret: om en ÄTA beställs muntligt på mötet men aldrig hamnar i protokollet, riskerar entreprenören att stå utan skriftligt underlag för sin ersättning. Samma sak med ett hinder som inte anmäls i tid – rätten till tidsförlängning kan gå förlorad. Därför ska varje ÄTA, hinder och förbehåll noteras i protokollet, och entreprenören ska kontrollera att de faktiskt kom med när protokollet justeras.</p>
-
-<p>Ett välfört byggmötesprotokoll är alltså inte byråkrati utan er starkaste dokumentation den dag ekonomin ifrågasätts.</p>
-
-<h2>Så följer ni upp mötesbesluten i ByggExp</h2>
-
-<p>Ett protokoll är bara så bra som uppföljningen. I ByggExp skapar ni ett projekt och lägger in besluten från protokollet som Uppgifter (Tasks) med ansvarig person och påminnelser, så att inget vilar enbart på minnet mellan mötena. ÄTA-arbeten och deadlines kopplas till Mål och etapper, vilket gör det lätt att se på nästa byggmöte vad som är avklarat och vad som släpar. På så vis blir varje protokollpunkt en spårbar åtgärd i stället för en bortglömd notering. Behöver ni en startpunkt kan ni använda vår <a href="/sv/verktyg/byggmotesprotokoll-mall">gratis byggmötesprotokoll-mall</a> med färdig dagordning, och koppla den dagliga dokumentationen i <a href="/sv/verktyg/byggdagbok-mall">byggdagboken</a> till mötesbesluten.</p>
+<h2>Protokollet i en tvist</h2>
+<p>Eftersom en protokollanteckning uppfyller skriftlighetskravet mellan parterna kan den ersätta ett separat brev för ÄTA-underrättelser, hinder och andra besked. Det fungerar åt båda håll. En beställning av en ÄTA som står i ett justerat protokoll är svår för beställaren att förneka. En underrättelse som bara sagts muntligt på mötet men inte antecknats får entreprenören bevisa på annat sätt – med vittnen, e-post eller dagbok. Om det i kontraktet står att vissa underrättelser ska vara skriftliga, kontrollera vid justeringen att varje sådan underrättelse finns med ordagrant och med datum.</p>
+<p>Protokollet kan inte ändra kontraktet hur som helst. Beslut som går utöver vad ombuden har behörighet till behöver stöd i kontraktet eller i ett separat avtal. Därför hör behörighetsfrågan till startmötet och punkt 1 på varje byggmöte.</p>
+<p>Den tomma mallen med dagordning finns som <a href="/sv/verktyg/byggmotesprotokoll-mall">byggmötesprotokoll-mall</a>.</p>
 
 <h2>Vanliga frågor</h2>
-
-<h3>Är byggmötesprotokoll lagstadgat?</h3>
-<p>Nej. Kravet kommer från branschstandardavtalen AB 04 och ABT 06, kapitel 3, inte från lag. Men om ni avtalat om AB 04 eller ABT 06 i entreprenaden är protokollföringen bindande mellan parterna, och protokollets bevisvärde är fullt reellt i en tvist.</p>
-
-<h3>Hur ofta ska man hålla byggmöte?</h3>
-<p>Avtalen säger ”i den omfattning som erfordras”, alltså ingen fast frekvens. I praktiken bestäms intervallet i de administrativa föreskrifterna och är vanligen en gång per månad. Större eller mer komplexa projekt håller tätare möten.</p>
-
 <h3>Vem skriver byggmötesprotokollet?</h3>
-<p>Beställaren för protokollet och skickar det i god tid före nästa möte. Entreprenören justerar det och måste invända utan dröjsmål om något är felaktigt antecknat, annars står anteckningen kvar som gemensam bild.</p>
-
-<h3>Vad händer om en ÄTA inte protokollförs?</h3>
-<p>Då saknas ofta det skriftliga underlag som avtalet kräver. Entreprenören riskerar att inte få ersättning för arbetet. Kontrollera därför alltid att beställda ÄTA och anmälda hinder finns med innan protokollet godkänns.</p>
-
-<h2>Kom igång</h2>
-
-<p>Sätt en fast dagordning, numrera protokollen och godkänn alltid föregående protokoll först på varje möte – då har ni ordning på både projektet och bevisningen. Fyll i <a href="/sv/verktyg/byggmotesprotokoll-mall">byggmötesprotokoll-mallen</a> inför nästa möte och utforska <a href="/sv/funktioner">funktionerna i ByggExp</a> för att koppla mötesbesluten till uppgifter och etapper. Vill ni se det i ert eget projekt kan ni <a href="/sv/contact">boka en demo</a>.</p>
-
-<p>Relaterat: <a href="/sv/blog/byggdagbok">Byggdagbok – så dokumenterar ni rätt</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i bygg – mall och rutiner</a>.</p>
+<p>Beställaren, enligt AB 04 och ABT 06 kap. 3 § 3, om inget annat avtalats. Entreprenören justerar protokollet. Vid startmötet godkänns protokollet av båda parternas ombud.</p>
+<h3>Hur ofta ska man hålla byggmöte?</h3>
+<p>Avtalen anger ingen frekvens, bara att möten ska hållas i den utsträckning som behövs. Intervallet står i de administrativa föreskrifterna eller bestäms på startmötet.</p>
+<h3>Räcker en anteckning i byggmötesprotokollet som skriftlig ÄTA-underrättelse?</h3>
+<p>Ja. Enligt AB 04 och ABT 06 är skriftlighetskravet mellan parterna uppfyllt genom anteckning i byggmötesprotokoll. Se till att datum och innehåll står tydligt och att protokollet justeras.</p>
+<h3>Vad ska tas upp på ett startmöte enligt ABT 06?</h3>
+<p>Kontraktshandlingarna, behörighet för andra än ombuden, hur information ska utbytas och övriga samverkansfrågor. I en totalentreprenad är det också läge att bestämma hur projekteringsmötena ska gå till.</p>
+<h3>Vad händer om entreprenören inte invänder mot protokollet?</h3>
+<p>Då står anteckningarna som parternas gemensamma bild av mötet och blir svåra att ifrågasätta senare. Invänd skriftligt så fort ni hittar ett fel och få invändningen antecknad på nästa möte.</p>
+<h3>Är byggmötesprotokoll lagstadgat?</h3>
+<p>Nej. Kravet kommer från AB 04 och ABT 06 och gäller när avtalen ingår i kontraktet. Utan standardavtal styr det ni själva skrivit in i kontraktet.</p>
 `;
 
 const A_BYGGMOTESPROTOKOLL_MALL: BlogPost = {
   _id: "code-"+"byggmotesprotokoll-mall",
-  title: "Byggmötesprotokoll – mall, dagordning och ansvar", slug: "byggmotesprotokoll-mall", locale: "sv",
-  excerpt: "Byggmötesprotokollet är mer än en anteckning – det är ett juridiskt dokument enligt AB 04 och ABT 06. Här är dagordning, ansvar och en färdig mallstruktur.", tag: "Projektledning",
+  title: "Byggmötesprotokoll – dagordning, justering och ansvar enligt AB 04", slug: "byggmotesprotokoll-mall", locale: "sv",
+  excerpt: "Vad AB 04 och ABT 06 säger om startmöte, byggmöte och protokoll, en numrerad dagordning, ett exempelutdrag och hur justeringen gör protokollet till bevis.", tag: "Projektledning",
   coverImageUrl: "/landing/features/tasks.webp", contentHtml: A_BYGGMOTESPROTOKOLL_MALL_HTML,
-  seoTitle: "Byggmötesprotokoll – gratis mall & dagordning | ByggExp", seoDescription: "Så skriver ni ett byggmötesprotokoll enligt AB 04 och ABT 06: dagordning, startmöte, hur ofta ni bör mötas och vem som ansvarar. Mall och rutiner.",
+  seoTitle: "Byggmötesprotokoll – dagordning och exempel | ByggExp", seoDescription: "Byggmöte och startmöte enligt AB 04/ABT 06 kap. 3: vem för protokoll, justering, skriftlighet för ÄTA och hinder, dagordning och exempelprotokoll.",
   seoImageUrl: `${SITE_URL}/landing/features/tasks.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-18T18:21:00.000Z", createdAt: "2026-08-18T18:21:00.000Z", updatedAt: "2026-08-18T18:21:00.000Z",
+  publishedAt: "2026-08-18T18:21:00.000Z", createdAt: "2026-08-18T18:21:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_GANTT_SCHEMA_MALL_BYGG_HTML = `

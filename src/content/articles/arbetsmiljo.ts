@@ -244,89 +244,97 @@ const ARBMILJO: BlogPost = {
 };
 
 const BASPBASU_HTML = `
-<p>Byggherren måste utse en BAS-P och en BAS-U för varje bygg- eller anläggningsarbete – men vad är egentligen skillnaden? Kort svar: BAS-P samordnar arbetsmiljön i projekteringen, BAS-U samordnar den i utförandet, och byggherren utser båda men blir aldrig helt av med sitt eget ansvar. För dig som driver ett mindre byggföretag är det just den sista meningen som gör att en till synes enkel underskrift kan bli dyr.</p>
+<p>Byggherren kan aldrig lämna ifrån sig ansvaret genom att utse en BAS. Enligt <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/arbetsmiljolag-19771160_sfs-1977-1160/" target="_blank" rel="noopener noreferrer">arbetsmiljölagen 3 kap. 6 §</a> ska den som låter utföra ett bygg- eller anläggningsarbete utse en lämplig BAS-P och en lämplig BAS-U – men byggherren svarar fortfarande för att uppgifterna blir gjorda och ska följa upp dem löpande (AFS 2023:3, 2 kap. 18 §). Det enda sättet att flytta själva byggherreansvaret är ett skriftligt avtal enligt 3 kap. 7 c § med en entreprenör som självständigt sköter projekteringen eller utförandet. Undantaget är privatpersoner: när konsumenttjänstlagen gäller går ansvaret automatiskt över till en självständig entreprenör, om inget annat avtalats skriftligt.</p>
 
-<p>Grunden i samordningen är dokumentation – att arbetsmiljöplanen lever och att egenkontrollerna faktiskt görs. Ett enkelt sätt att komma igång är med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a> som du kan använda direkt på arbetsplatsen.</p>
+<p>Reglerna för rollerna finns sedan 1 januari 2025 i <a href="https://www.av.se/globalassets/filer/publikationer/foreskrifter/projektering-och-byggarbetsmiljosamordning-grundlaggande-skyldigheter-afs2023-3.pdf" target="_blank" rel="noopener noreferrer">AFS 2023:3 om projektering och byggarbetsmiljösamordning</a>. Kapitel 2 riktar sig till byggherren, kapitel 3 till BAS-P och kapitel 4 till BAS-U. Paragrafhänvisningarna nedan gäller den föreskriften.</p>
 
-<h2>Snabbsvaret – skillnaden mellan BAS-P och BAS-U</h2>
-<p>Bokstaven avslöjar var i projektet rollen sitter. BAS-P står för Byggarbetsmiljösamordnare för <strong>Planering och projektering</strong> – ritbordsfasen. BAS-U står för samordnare för <strong>Utförandet</strong> – den bemannade byggarbetsplatsen. Så här hänger kedjan ihop:</p>
+<h2>Vad är BAS-P och BAS-U?</h2>
+<p>BAS står för byggarbetsmiljösamordnare. P betyder planering och projektering, U betyder utförande. Båda samordnar – de tar inte över arbetsgivarens ansvar för den egna personalen, vilket står uttryckligen i 1 kap. 3 §. En underentreprenör ansvarar alltså fortfarande för sina egna anställda, oavsett vem som är BAS-U.</p>
+
+<div class="article-table"><table>
+<thead><tr><th></th><th>BAS-P</th><th>BAS-U</th></tr></thead>
+<tbody>
+<tr><td>Skede</td><td>Planering och projektering</td><td>Utförande på byggarbetsplatsen</td></tr>
+<tr><td>Lagrum</td><td>AML 3 kap. 7 a §, AFS 2023:3 kap. 3</td><td>AML 3 kap. 7 b §, AFS 2023:3 kap. 4</td></tr>
+<tr><td>Utses</td><td>Så snart planering och projektering påbörjats (2 kap. 10 §)</td><td>Före byggstart – planen ska överlämnas till BAS-U innan första arbetet (2 kap. 23 §)</td></tr>
+<tr><td>Arbetsmiljöplanen</td><td>Upprättar eller låter upprätta den före byggstart (3 kap. 14 §)</td><td>Tar emot den, håller den tillgänglig och uppdaterar den (4 kap. 26–29 §§)</td></tr>
+<tr><td>Typiska uppgifter</td><td>Samordnar projektörerna, ser till att risker byggs bort i handlingarna, sammanställer underlag om allvarliga risker</td><td>Ordnings- och skyddsregler, skyddsverksamhet, introduktion, klartecken till entreprenörer, kontroller av att entreprenörerna följer planen</td></tr>
+<tr><td>Sanktionsavgift</td><td>10 000 eller 50 000 kr om planen saknas vid byggstart (3 kap. 17 §)</td><td>10 000 eller 50 000 kr om planen inte finns tillgänglig på arbetsplatsen (4 kap. 28 §)</td></tr>
+</tbody>
+</table></div>
+
+<h2>Vem utser BAS-P och BAS-U?</h2>
+<p>Byggherren. Det kan vara ett fastighetsbolag, en kommun, en bostadsrättsförening eller en privatperson som bygger om sitt hus. Byggherren kan utse sig själv, ett eget anställt, en konsult eller den entreprenör som utför jobbet. Arbetsmiljöverket påpekar på sin <a href="https://www.av.se/produktion-industri-och-logistik/bygg/vem-ar-ansvarig-for-vad-i-ett-byggprojekt/bas-u/" target="_blank" rel="noopener noreferrer">sida om Bas-U</a> att rollen inte kan delegeras vidare av den som fått den – är ett företag utsett får det inte skicka uppdraget till ett annat företag.</p>
+<p>Vid villabyggen och badrumsrenoveringar åt privatpersoner blir det i praktiken ofta entreprenören som har ansvaret. AFS 2023:3, 5 kap. 3 §, kräver då att entreprenören innan arbetet börjar klargör för de inblandade att den är byggherrens ställföreträdare.</p>
+
+<h2>Kan samma person vara både BAS-P och BAS-U?</h2>
+<p>Ja. 2 kap. 12 § säger det rakt ut: samma juridiska eller fysiska person kan utses till båda rollerna. Samma paragraf kräver att det bara finns <strong>en</strong> BAS-P och <strong>en</strong> BAS-U i projektet vid varje tidpunkt, och att det alltid står klart vem som har vilken roll. Flera samtidiga BAS-U på samma projekt går alltså inte. Däremot kan en samordnare bytas ut under projektet, och då ska planen och övriga uppgifter lämnas över (2 kap. 23 §).</p>
+<p>BAS-P och BAS-U kan också vara en juridisk person, till exempel byggföretaget eller en konsultfirma. Då måste företaget förfoga över en lämplig handläggare och byggherren ska se till att det framgår vem handläggaren är (2 kap. 9 och 12 §§). En extern BAS-U, alltså en inhyrd konsult, är vanligt i större projekt och fungerar på samma sätt – handläggaren ska vara anställd eller inhyrd av den som utsetts (4 kap. 3 §).</p>
+
+<h2>Krav på BAS-P och BAS-U – vilken utbildning krävs?</h2>
+<p>Det finns ingen lagstadgad kurs eller certifiering. Kravet är att handläggaren har den utbildning, kompetens och erfarenhet som behövs med hänsyn till projektets storlek, komplexitet och risknivå, och att den kan avsätta tillräckligt med tid (2 kap. 9 §). Byggherren ska kunna styrka kvalifikationerna, till exempel med kursintyg och en beskrivning av tidigare uppdrag (2 kap. 11 §).</p>
+<p>Enligt de allmänna råden till 9 § bör utbildningen minst omfatta:</p>
 <ul>
-<li><strong>Byggherren</strong> – beställer arbetet, utser båda samordnarna, avsätter tid och resurser och följer upp.</li>
-<li><strong>BAS-P</strong> – samordnar projektörerna, bygger bort förutsebara risker och <strong>upprättar arbetsmiljöplanen</strong> innan bygget startar.</li>
-<li><strong>BAS-U</strong> – tar över på plats, håller arbetsmiljöplanen uppdaterad mot verkligheten och samordnar alla som arbetar samtidigt.</li>
+<li>arbetsmiljöarbete inklusive praktiskt samordningsarbete i byggprojekt,</li>
+<li>arbetsmiljöregler för byggherrar, projektörer och samordnare,</li>
+<li>föreskrifterna om bygg- och anläggningsarbete, arbetsplatsens utformning, systematiskt arbetsmiljöarbete och organisatorisk och social arbetsmiljö,</li>
+<li>övriga föreskrifter om de risker som finns i just det projektet.</li>
 </ul>
-<p>BAS-P lämnar alltså över ett underlag; BAS-U förvaltar och uppdaterar det när grävmaskinen väl är på plats.</p>
+<p>För ett litet lågriskprojekt räcker mindre erfarenhet än för en tunnel eller ett höghus. Det är byggherrens bedömning – och byggherrens risk om den blir fel.</p>
 
-<h2>Byggherrens roll – kedjan börjar och slutar här</h2>
-<p>Enligt Arbetsmiljölagen 3 kap. 6 § är byggherren skyldig att utse en <em>lämplig</em> BAS-P och en <em>lämplig</em> BAS-U. Att peka ut en samordnare befriar dock inte byggherren från ansvar. Byggherren måste fortfarande organisera resurser, ge projektet tillräckligt med tid, klargöra vem som gör vad, följa upp samordnarnas arbete och se till att arbetsmiljöplanen lämnas över korrekt.</p>
-<p>Byggherren ansvarar också för <strong>förhandsanmälan</strong> till Arbetsmiljöverket. Den ska skickas innan arbetet påbörjas om antingen jobbet beräknas pågå mer än 30 arbetsdagar med fler än 20 personer sysselsatta samtidigt någon gång, eller om det totalt beräknas överstiga 500 persondagar.</p>
+<h2>Måste BAS-U vara på plats?</h2>
+<p>Föreskrifterna kräver ingen daglig närvaro. Men flera av BAS-U:s uppgifter går inte att sköta enbart på distans: ge klartecken innan en entreprenör börjar (4 kap. 12 §), se till att alla får en introduktion (15 §), se till att det kontrolleras att entreprenörerna arbetar säkert och följer planen (20 §) och se till att underlaget för gemensamma ställningar kontrolleras (22 §). Hur ofta BAS-U eller dess handläggare måste vara på arbetsplatsen styrs alltså av projektets risker och tempo, och det bör stå i uppdraget. Kontrollerna dokumenteras lämpligen vid <a href="/sv/blog/skyddsrond-bygg-checklista">skyddsronder</a>.</p>
+<p>Har projektet bara en entreprenör hela vägen och är den entreprenören också BAS-U, gäller inte 4–7, 12–18 och 20–23 §§ i kapitel 4 (4 kap. 1 §). Det förenklar för den lilla firman som tar ett helt jobb på egen hand.</p>
 
-<h2>BAS-P i projekteringen – bygga bort riskerna på ritbordet</h2>
-<p>BAS-P:s uppdrag regleras i AML 3 kap 7 a § och i 3 kap AFS 2023:3. Uppgifterna handlar om att förebygga innan spaden sätts i marken:</p>
+<h2>Arbetsmiljöplan och förhandsanmälan</h2>
+<p>En skriftlig arbetsmiljöplan krävs enligt 11 kap. 2 § om något av de 13 arbetena med särskild risk förekommer – till exempel fallrisk på två meter eller mer, schakt, rivning av bärande konstruktioner eller arbete där fordonstrafik passerar – eller om projektet är så stort att förhandsanmälan krävs. I praktiken krävs planen alltså i de flesta byggprojekt, även små.</p>
+<p>Förhandsanmälan till Arbetsmiljöverket görs av byggherren före byggstart när något av detta gäller (2 kap. 25 §):</p>
 <ul>
-<li>Samordna projektörernas arbete så att arbetsmiljön i både bygg- och driftskedet vägs in.</li>
-<li>Se till att förutsebara risker konstrueras bort redan i projekteringen.</li>
-<li>Upprätta arbetsmiljöplanen och identifiera om något av de 13 <strong>särskilt farliga arbetena</strong> förekommer.</li>
+<li>arbetet beräknas pågå längre än 30 arbetsdagar <strong>och</strong> fler än 20 personer sysselsätts samtidigt vid något tillfälle, eller</li>
+<li>det totala antalet persondagar beräknas bli fler än 500.</li>
 </ul>
-<p>Till de särskilt farliga arbetena hör bland annat fallrisk där höjdskillnaden är 2 meter eller mer, arbete nära högspänningsledningar, rivning av bärande konstruktioner, arbete med asbest eller andra farliga material, arbete i schakt och tunnlar, drunkningsrisk och arbete med sprängämnen. Förekommer något av dem måste en arbetsmiljöplan finnas innan arbetsplatsen etableras – oavsett projektets storlek.</p>
+<p>En kopia av anmälan ska sitta väl synlig på arbetsplatsen (2 kap. 26 §). Hur planen byggs upp och vad den ska innehålla beskriver vi i guiden om <a href="/sv/blog/kma-plan-mall">KMA-plan</a>, och planeringen av etablering och trafik hör hemma i <a href="/sv/blog/apd-plan-arbetsplatsdisposition-bygg">APD-planen</a>.</p>
 
-<h2>BAS-U i utförandet – samordning på plats</h2>
-<p>BAS-U:s uppdrag regleras i AML 3 kap 7 b § och i 4 kap AFS 2023:3. Här handlar det om den levande arbetsplatsen:</p>
-<ul>
-<li>Hålla arbetsmiljöplanen uppdaterad mot de faktiska förhållandena.</li>
-<li>Förhindra farliga samtidiga arbeten – att en aktör inte utsätter en annan för risk.</li>
-<li>Organisera gemensamma skyddsanordningar som ställningar, hissar och trafikleder.</li>
-<li>Genomföra skyddsronder, arbetsmiljöintroduktioner och samverka med skyddsombud.</li>
-</ul>
-<p>Viktigt: BAS-U:s samordning tar inte över varje enskild entreprenörs eget arbetsmiljöansvar för sina egna anställda. Samordnarrollen och arbetsgivarrollen löper parallellt – som underentreprenör ansvarar du fortfarande för dina egna medarbetare.</p>
+<h2>Sanktionsavgifter – räkneexempel</h2>
+<p>Avgifterna är fasta belopp och kan tas ut från flera parter i samma projekt. Ingen avgift tas ut för saknad plan om hela arbetet pågår högst två dagar i följd.</p>
+<div class="article-table"><table>
+<thead><tr><th>Överträdelse</th><th>Vem betalar</th><th>Belopp</th></tr></thead>
+<tbody>
+<tr><td>Ingen förhandsanmälan</td><td>Byggherren (2 kap. 25 §)</td><td>5 000 kr</td></tr>
+<tr><td>Ingen arbetsmiljöplan vid byggstart</td><td>Byggherren (2 kap. 22 §) och BAS-P (3 kap. 17 §) var för sig</td><td>10 000 kr, eller 50 000 kr om förhandsanmälan krävs</td></tr>
+<tr><td>Planen inte tillgänglig på arbetsplatsen</td><td>BAS-U (4 kap. 28 §)</td><td>10 000 kr, eller 50 000 kr om förhandsanmälan krävs</td></tr>
+</tbody>
+</table></div>
+<p><strong>Exempel 1 (hypotetiskt):</strong> Fasadrenovering med ställning, 60 arbetsdagar, högst 8 personer samtidigt. 60 × 8 = 480 persondagar, alltså under 500, och aldrig fler än 20 samtidigt – ingen förhandsanmälan. Men ställningen innebär fallrisk över två meter, så planen krävs. Saknas den vid byggstart: byggherren 10 000 kr + BAS-P 10 000 kr = 20 000 kr.</p>
+<p><strong>Exempel 2 (hypotetiskt):</strong> Samma typ av jobb men 40 arbetsdagar med 25 personer under en period. Över 30 dagar och över 20 personer samtidigt – förhandsanmälan krävs. Saknas både anmälan och plan: byggherren 50 000 + 5 000 kr och BAS-P 50 000 kr = 105 000 kr. Vid en allvarlig olycka kan det dessutom bli fråga om straffansvar.</p>
 
-<h2>Kompetenskrav – räcker en tvådagarskurs?</h2>
-<p>Det finns ingen lagstadgad, obligatorisk kurs för att bli BAS-P eller BAS-U. Däremot måste samordnaren ha den utbildning, kompetens och erfarenhet som krävs i förhållande till projektets storlek, komplexitet och risknivå – och byggherren ska kunna styrka det, till exempel med intyg. Det finns inget exakt lagkrav på utbildningens längd – de kurslängder som nämns i branschen är vägledning, inte lag. Ett litet renoveringsjobb och ett komplext anläggningsprojekt ställer helt olika krav.</p>
-
-<h2>Fällan för småföretag – när du tar samordnarrollen på pappret</h2>
-<p>Här sitter de flesta problemen för mindre byggföretag. Det finns två vanliga fällor:</p>
+<h2>BAS-P och BAS-U mall – vad utnämningen ska innehålla</h2>
+<p>Det finns ingen officiell blankett, men en skriftlig utnämning gör det lätt att visa att kraven i 2 kap. 9–12 §§ är uppfyllda. Ta med:</p>
 <ol>
-<li><strong>Du skriver under fel avtal.</strong> Enligt AML 3 kap 7 c § kan byggherrens 6 §-skyldigheter överföras till en uppdragstagare – men bara om två villkor är uppfyllda: du har anlitats för att självständigt sköta projekteringen eller utförandet, <em>och</em> det avtalas skriftligt att ansvaret går över. Saknas det skriftliga avtalet, eller är du inte verkligt självständig, stannar ansvaret hos byggherren. Baksidan är att ett tydligt formulerat avtal kan flytta hela byggherreansvaret till dig utan att du fattat vidden av det.</li>
-<li><strong>Du står som BAS-U utan förutsättningar.</strong> Att ta samordnaransvaret utan tid, personal eller dokumenterad kompetens innebär att du bär ett ansvar du inte kan leva upp till – och det är på arbetsplatsen olyckorna sker.</li>
+<li>Projekt, adress och byggherre med organisationsnummer.</li>
+<li>Vem som utses, roll (BAS-P, BAS-U eller båda) och från vilket datum.</li>
+<li>Om en juridisk person utses: namnet på handläggaren.</li>
+<li>Hur kvalifikationerna styrks – kursintyg, tidigare uppdrag.</li>
+<li>Vilken tid och vilka resurser samordnaren har, och hur ofta BAS-U ska vara på plats.</li>
+<li>Hur överlämningen av arbetsmiljöplanen från BAS-P till BAS-U ska gå till.</li>
+<li>Att utnämningen gäller samordnarrollen – inte en överlåtelse av byggherreansvaret enligt AML 3 kap. 7 c §. Är det en överlåtelse, skriv det uttryckligen i ett separat avtal.</li>
 </ol>
-
-<h2>Sanktionsavgifter och personligt ansvar</h2>
-<p>AFS 2023:3, som gäller sedan 1 januari 2025, är förenad med konkreta sanktionsavgifter:</p>
-<ul>
-<li>Utebliven förhandsanmälan: <strong>5 000 kr</strong>.</li>
-<li>Utebliven arbetsmiljöplan: <strong>10 000 kr</strong> när förhandsanmälan inte krävs, och <strong>50 000 kr</strong> när den krävs.</li>
-</ul>
-<p>Avgiften för arbetsmiljöplanen kan tas ut <em>separat</em> på byggherren, på BAS-P och på BAS-U. Med andra ord kan du som samordnare drabbas personligen, parallellt med byggherren. Ingen avgift tas ut om hela arbetet pågår i högst två sammanhängande dagar. Vid en allvarlig olycka kan det dessutom bli fråga om straffansvar – sanktionsavgiften är bara golvet.</p>
-
-<h2>Checklista innan du tackar ja till BAS-P eller BAS-U</h2>
-<ul>
-<li>Har du ett skriftligt uppdrag som tydligt anger vilken roll du tar?</li>
-<li>Framgår gränsen för ditt ansvar – tar du samordnarrollen eller hela byggherreansvaret enligt 7 c §?</li>
-<li>Finns en arbetsmiljöplan, och vem har upprättat den?</li>
-<li>Är förhandsanmälan gjord om tröskeln passeras?</li>
-<li>Har du faktisk tid att vara på plats och samordna?</li>
-<li>Har du kompetens och intyg som står i proportion till projektets risknivå?</li>
-<li>Hur samordnas underentreprenörerna och deras samtidiga arbeten?</li>
-<li>Hur dokumenteras skyddsronder, introduktioner och avvikelser?</li>
-</ul>
-
-<h2>Så gör du i ByggExp</h2>
-<p>Samordnaransvaret står och faller med dokumentationen – att arbetsmiljöplanen är uppdaterad och att egenkontrollerna faktiskt utförs och sparas. I ByggExp håller du kontrollerna samlade och spårbara, så att du vid en skyddsrond eller en inspektion kan visa vad som gjorts, när och av vem. Det ersätter inte kompetensen som BAS-P eller BAS-U kräver, men det gör det lättare att leva upp till rollen i praktiken och att spara underlagen så länge du behöver dem.</p>
+<p>Punkt 7 är den som oftast blir fel. Den som bara skriver "Entreprenören är BAS-U" har inte tagit över byggherreansvaret – men den som skriver under ett avtal där entreprenören "självständigt ansvarar för utförandet och övertar byggherrens skyldigheter" har gjort det. För riskerna i det egna arbetet behöver du dessutom en <a href="/sv/verktyg/riskbedomning-mall">riskbedömning</a> och <a href="/sv/verktyg/arbetsberedning-mall">arbetsberedningar</a>.</p>
+<p>Söker du begreppen på engelska används ofta "construction work environment coordinator" för planning and design (BAS-P) respektive execution (BAS-U). Skriv gärna ut båda benämningarna i arbetsmiljöplanen när utländska entreprenörer finns på plats – 11 kap. 5 § kräver att alla enkelt ska kunna förstå de delar som berör dem.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Vad är skillnaden mellan BAS-P och BAS-U?</h3>
-<p>BAS-P samordnar arbetsmiljön under planering och projektering och upprättar arbetsmiljöplanen. BAS-U samordnar arbetsmiljön under utförandet på den bemannade arbetsplatsen och håller planen uppdaterad. P sitter vid ritbordet, U på bygget.</p>
-<h3>Kan samma person vara både BAS-P och BAS-U?</h3>
-<p>Ja, lagen hindrar inte det, förutsatt att personen har den utbildning, kompetens och erfarenhet som krävs för båda faserna i förhållande till projektets storlek, komplexitet och risknivå. I mindre projekt är det vanligt att rollerna samlas hos en person.</p>
-<h3>Slipper byggherren ansvar genom att utse en BAS?</h3>
-<p>Nej. Byggherren måste fortfarande organisera resurser, ge tillräckligt med tid, klargöra vem som gör vad och följa upp samordnarnas arbete. Ansvaret kan bara flyttas till en uppdragstagare via ett skriftligt avtal enligt AML 3 kap 7 c §, och bara om denne självständigt sköter arbetet.</p>
-<h3>Vad kostar det att sakna arbetsmiljöplan?</h3>
-<p>Sanktionsavgiften är 10 000 kr när förhandsanmälan inte krävs och 50 000 kr när den krävs. Avgiften kan tas ut separat på byggherren, BAS-P och BAS-U. Saknad förhandsanmälan kostar 5 000 kr.</p>
-
-<h2>Kom igång</h2>
-<p>Börja med att få dokumentationen på plats. Använd <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> för att komma igång med kontrollerna redan idag, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller arbetsmiljöplan och samordning samlat i praktiken.</p>
-
-<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – när krävs den och vad ska ingå</a> och <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>.</p>
+<h3>Kan BAS-P och BAS-U vara samma person?</h3>
+<p>Ja. AFS 2023:3, 2 kap. 12 §, säger att samma juridiska eller fysiska person kan utses till både BAS-P och BAS-U, förutsatt att den har rätt kompetens och tid för båda skedena.</p>
+<h3>Kan BAS-P och BAS-U vara en juridisk person?</h3>
+<p>Ja, till exempel byggföretaget eller en konsultfirma. Företaget måste då förfoga över en lämplig handläggare, och byggherren ska se till att det framgår vem den personen är.</p>
+<h3>Kan det finnas flera BAS-U på en arbetsplats?</h3>
+<p>Nej, inte i samma projekt samtidigt. Byggherren ska se till att det bara finns en BAS-P och en BAS-U vid varje tidpunkt. Pågår flera skilda byggprojekt på samma eller angränsande område ska byggherrarna så tidigt som möjligt komma överens om hur samordningen mellan projekten ska gå till.</p>
+<h3>Måste BAS-U vara på plats hela tiden?</h3>
+<p>Nej, det finns inget krav på daglig närvaro. Men BAS-U ska bland annat ge klartecken till entreprenörer, ordna introduktion och kontrollera att planen följs, så närvaron måste räcka för att de uppgifterna faktiskt blir gjorda.</p>
+<h3>Vem utser BAS-P och BAS-U när en privatperson bygger?</h3>
+<p>Privatpersonen är byggherre och ska utse dem. Har privatpersonen anlitat en entreprenör som självständigt sköter hela jobbet och konsumenttjänstlagen gäller, går byggherreansvaret i stället över till entreprenören, om inget annat avtalats skriftligt.</p>
+<h3>När behövs inte BAS-U?</h3>
+<p>Lagen undantar inga byggnads- eller anläggningsarbeten, så en BAS-U ska alltid utses. Om det bara finns en entreprenör som också är BAS-U slipper den flera av samordningsuppgifterna, och sanktionsavgiften för saknad plan tas inte ut om hela arbetet tar högst två dagar.</p>
 `.trim();
 
 const BASPBASU: BlogPost = {
@@ -334,16 +342,16 @@ const BASPBASU: BlogPost = {
   title: "BAS-P och BAS-U – vem ansvarar för vad?",
   slug: "bas-p-bas-u",
   locale: "sv",
-  excerpt: "Vem gör vad i kedjan byggherre, BAS-P och BAS-U – och varför du som småföretagare bör tänka efter innan du skriver under samordnaruppdraget.",
+  excerpt: "Vem som utser BAS-P och BAS-U, vad rollerna kräver enligt AFS 2023:3, när arbetsmiljöplan och förhandsanmälan behövs och vad sanktionsavgifterna blir.",
   tag: "Arbetsmiljö",
   coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp",
   contentHtml: BASPBASU_HTML,
-  seoTitle: "BAS-P och BAS-U – skillnaden | ByggExp",
-  seoDescription: "BAS-P samordnar arbetsmiljön i projekteringen, BAS-U i utförandet. Så skiljer sig rollerna – och riskerna när småföretag tar samordnaransvaret.",
+  seoTitle: "BAS-P och BAS-U: krav, ansvar och avgifter | ByggExp",
+  seoDescription: "Byggherren utser BAS-P och BAS-U. Så fördelas uppgifterna enligt AFS 2023:3, när en person får ha båda rollerna och vad en saknad arbetsmiljöplan kostar.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`,
   canonicalUrl: "",
   noIndex: false, isPublished: true,
-  publishedAt: "2026-08-18T14:00:00.000Z", createdAt: "2026-08-18T14:00:00.000Z", updatedAt: "2026-08-18T14:00:00.000Z",
+  publishedAt: "2026-08-18T14:00:00.000Z", createdAt: "2026-08-18T14:00:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_KVARTSDAMM_REGLER_BYGG_HTML = `

@@ -267,88 +267,91 @@ const ANSTALLA: BlogPost = {
 };
 
 const A_INHYRD_PERSONAL_REGLER_HTML = `
-<p>Att hyra in personal är ett självklart verktyg för de flesta byggföretag. När ett stort projekt drar igång, en sjukskrivning slår hål i laget eller orderboken plötsligt svämmar över, är bemanning ofta snabbaste vägen till full kapacitet. Men inhyrning är inte samma sak som att köpa en tjänst i lösvikt – regelverket lägger ett tydligt ansvar på dig som kundföretag, och missar kan bli dyra i form av skadestånd eller en tillsvidareanställning du aldrig planerade för.</p>
+<p>Hyr ett byggföretag med Byggavtalet in personal från ett bemanningsföretag ska förhandlingsfrågan vara löst innan första arbetsdagen: är bemanningsföretaget medlem i Byggföretagen behövs ingen primärförhandling, annars ska det kontrolleras och anmälas till Byggnads region eller förhandlas enligt 38 § MBL. På bygget är du sedan likställd med arbetsgivare i arbetsmiljöfrågor, de inhyrda ska registreras i personalliggaren som din egen personal, och efter mer än 24 månader på samma driftsenhet inom 36 månader måste du erbjuda tillsvidareanställning eller betala två månadslöner.</p>
 
-<p>Innan du skriver på nästa bemanningsavtal: kartlägg ditt personalbehov och håll ordning på tid och driftsenheter med <a href="/sv/verktyg">våra gratis verktyg för byggföretag -></a>. God dokumentation är själva grunden för att klara reglerna nedan.</p>
+<h2>Inhyrning eller underentreprenad?</h2>
+<p>Allt annat hänger på den frågan. Enligt <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2012854-om-uthyrning-av-arbetstagare_sfs-2012-854/" target="_blank" rel="noopener noreferrer">lagen (2012:854) om uthyrning av arbetstagare</a> är kundföretaget den för vilken, och under vars kontroll och ledning, de uthyrda arbetar. Byggavtalets branschöverenskommelse (Bilaga D punkt 1.1) beskriver underentreprenad som ett avtalsförhållande som präglas av självständighet och separat ansvar för arbetets utförande. Fördelar du arbetet dagligen och betalar per timme är det i praktiken inhyrning, oavsett vad avtalet kallas.</p>
+<div class="article-table"><table>
+<thead><tr><th></th><th>Inhyrd personal</th><th>Underentreprenör</th></tr></thead>
+<tbody>
+<tr><td>Vem leder arbetet</td><td>Du som kundföretag</td><td>Underentreprenören själv</td></tr>
+<tr><td>Ansvar för resultatet</td><td>Ditt</td><td>Underentreprenörens enligt avtalet</td></tr>
+<tr><td>Uthyrningslagens kundansvar</td><td>Ja, 11–12 a §§</td><td>Nej</td></tr>
+<tr><td>Arbetsmiljö</td><td>Du ska vidta skyddsåtgärder och är likställd med arbetsgivare</td><td>Underentreprenören som arbetsgivare, samordning via BAS-U</td></tr>
+<tr><td>Förhandling med Byggnads</td><td>Bilaga D eller 38 § MBL</td><td>Bilaga D eller 38 § MBL</td></tr>
+<tr><td>Personalliggare</td><td>Du ansvarar för att de registreras</td><td>Underentreprenören registrerar sin personal</td></tr>
+<tr><td>Moms på fakturan</td><td colspan="2">Omvänd betalningsskyldighet i båda fallen när det gäller byggtjänster och du själv säljer byggtjänster</td></tr>
+</tbody>
+</table></div>
+<p>Anlitar du ett enmansföretag är gränsen extra känslig. Bilaga D påpekar att gränsdragningen mellan uppdragstagare och arbetstagare då ska följa tvingande arbetsrätt och Arbetsdomstolens praxis. Vill du hellre lägga ut ett avgränsat åtagande, se <a href="/sv/blog/anlita-underentreprenor">att anlita en underentreprenör</a>.</p>
 
-<h2>Vad är Uthyrningslagen?</h2>
-<p>Reglerna för inhyrd personal styrs av Uthyrningslagen – <strong>Lag (2012:854) om uthyrning av arbetstagare</strong>. Den genomför EU:s bemanningsdirektiv (2008/104/EG) i svensk rätt och sätter ramarna för hela branschen.</p>
-<p>Lagen skiljer på två roller. <strong>Bemanningsföretaget</strong> är den som har arbetstagare anställda i syfte att hyra ut dem. <strong>Kundföretaget</strong> är den för vilken, och under vars kontroll och ledning, de uthyrda faktiskt arbetar (5 §). Det innebär en viktig sak i praktiken: även om den inhyrda snickaren har sin anställning hos bemanningsbolaget, är det du som kundföretag som har arbetsledningsansvaret på bygget. Du leder, fördelar och styr arbetet – och tar därmed också ett arbetsmiljöansvar för personen på plats.</p>
-
-<h2>Likabehandlingsprincipen – samma villkor som egen personal</h2>
-<p>Kärnan i lagen är likabehandlingsprincipen (6 §). En inhyrd arbetstagare ska ha minst de grundläggande arbets- och anställningsvillkor som skulle ha gällt om hen hade anställts direkt av dig för samma arbete. Det handlar inte bara om lön, utan om ett helt paket:</p>
-<ul>
-<li>arbetstidens längd och förläggning</li>
-<li>övertid, raster och vila</li>
-<li>nattarbete</li>
-<li>semester och helgdagar</li>
-<li>lön</li>
-</ul>
-<p>Tanken är att inhyrning inte ska bli ett sätt att pressa villkoren under det som gäller för din egen personal. En inhyrd yrkesarbetare ska alltså i grunden inte ha sämre villkor än den fast anställda som står bredvid och gör samma jobb.</p>
-
-<h2>Kollektivavtalets roll – varför bemanningsavtalet oftast styr lönen</h2>
-<p>Här finns ett viktigt undantag. Enligt 8 § får man göra avsteg från likabehandlingen – framför allt när det gäller lön – genom kollektivavtal, förutsatt att avtalet respekterar det övergripande skydd för arbetstagare som direktivet kräver. I praktiken innebär det att bemanningsbranschens kollektivavtal (till exempel Kompetensföretagens avtal med LO-förbunden) ersätter 6 §:s löneregel för uthyrd personal.</p>
-<p>Slutsatsen för dig som byggföretag: hyr in från <strong>seriösa, kollektivavtalsanslutna bemanningsföretag</strong>. Då vet du att lönen regleras enligt ett känt avtal, att villkoren är ordnade och att du minskar risken för tvister om vad den inhyrda egentligen skulle ha haft betalt. Auktoriserade leverantörer är regel, inte undantag, för en trygg inhyrning.</p>
-
-<h2>24-månadersregeln steg för steg</h2>
-<p>Sedan 1 oktober 2022 gäller den så kallade 24-månadersregeln (12 a §). Har en inhyrd varit placerad på <strong>en och samma driftsenhet</strong> hos dig i sammanlagt <strong>mer än 24 månader under en period om 36 månader</strong>, måste du som kundföretag agera. Du ska antingen:</p>
+<h2>Förhandla med Byggnads innan du hyr in</h2>
+<p>38 § <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1976580-om-medbestammande-i-arbetslivet_sfs-1976-580/" target="_blank" rel="noopener noreferrer">medbestämmandelagen</a> kräver att en kollektivavtalsbunden arbetsgivare förhandlar innan någon som inte är anställd ska utföra arbete i verksamheten. Undantaget för kortvarigt arbete och särskild sakkunskap gäller inte inhyrning av arbetstagare. Inom Byggavtalet preciseras skyldigheten i <a href="https://www.byggnads.se/49ec78/siteassets/kollektivavtal/byggavtalet-2025-digital-utgava-1.pdf" target="_blank" rel="noopener noreferrer">Bilaga D</a>, som ger tre vägar:</p>
 <ol>
-<li>erbjuda arbetstagaren en tillsvidareanställning hos dig, eller</li>
-<li>betala en ersättning motsvarande <strong>två månadslöner</strong> till arbetstagaren.</li>
+<li><strong>Bemanningsföretaget är medlem i Byggföretagen</strong> (punkt 3.1): ingen skyldighet att primärförhandla.</li>
+<li><strong>Bemanningsföretaget är inte medlem men bundet av Byggavtalet</strong> genom hängavtal (punkt 4): du ska kontrollera att det är godkänt för F-skatt, har registreringsbevis, är bundet av Byggavtalet och inte har klara förfallna lönefordringar. Första gången ska du lämna organisationsnummer, namn, adress, kontaktuppgifter och tillämpligt avtal till Byggnads region där ditt företag har sitt säte, och föra en förteckning över anlitade företag som revideras med regionen en gång per år.</li>
+<li><strong>Övriga fall</strong> (punkt 5.1): primärförhandling med Byggnads region enligt 38 § MBL. Anser facket att inhyrningen kan strida mot lag eller kollektivavtal kan det lägga veto enligt 39 §.</li>
 </ol>
-<p>Oavsett vilket alternativ du väljer ska det ske inom <strong>en månad</strong> efter att gränsen passerats. Regeln finns för att inhyrning inte ska bli en permanent lösning som kringgår vanliga anställningsförhållanden.</p>
-<p><strong>Räkneexempel:</strong> Du hyr in en betongarbetare till din driftsenhet i Västerås. Personen jobbar hos dig 14 månader, är borta ett halvår på annat uppdrag, och kommer tillbaka i 11 månader – allt inom en och samma 36-månadersperiod. Totalt blir det 25 månader, alltså över gränsen. Nu har du en månad på dig att antingen erbjuda tillsvidareanställning eller betala två månadslöner. Poängen: det är den <em>sammanlagda</em> tiden på samma driftsenhet som räknas, inte en sammanhängande period.</p>
-<p>Notera att det finns undantag (12 b §). 24-månadersregeln gäller inte arbetstagare som är anställda med särskilt anställningsstöd, i skyddat arbete eller med lönebidrag för utveckling. Motsvarande undantag från likabehandling finns i 7–8 §§.</p>
+<p>Har ni sagt upp anställda på grund av arbetsbrist som fortfarande har företrädesrätt till återanställning gäller dessutom Bilaga A6. Då ska ni alltid förhandla, förklara varför behovet inte kan lösas genom återanställning, och vid inhyrning längre än fem veckor överlägga med MB-gruppen eller Byggnads region.</p>
 
-<h2>Förhandlingsskyldigheten enligt MBL 38 §</h2>
-<p>Innan du hyr in personal räcker det inte att skriva avtal med bemanningsbolaget. Enligt <strong>MBL 38 §</strong> måste du som arbetsgivare påkalla och genomföra primär förhandling med den kollektivavtalsbärande fackliga organisationen – på bygget oftast Byggnads – innan inhyrningen beslutas.</p>
-<p>Facket har dessutom en vetorätt (39 §). Under vissa förutsättningar kan de lägga in veto om den planerade inhyrningen skulle strida mot lag eller kollektivavtal, till exempel om leverantören saknar avtal eller inte sköter sina åtaganden. Att förhandla i god tid är alltså inte bara en formalitet – det är en förutsättning för att inhyrningen ska vara laglig.</p>
+<h2>Vilken lön har den inhyrde?</h2>
+<p>Lönen betalas av bemanningsföretaget, som enligt 6 § uthyrningslagen ska ge minst de grundläggande villkor som hade gällt om du anställt personen direkt. Avvikelser får göras genom ett centralt kollektivavtal. För bemanningsföretag som hyr ut inom Byggavtalets område finns sådana regler i Bilaga A4: hyrs en arbetstagare ut till en arbetsplats med tidlön ska hen ha lika lön som jämförbar yrkeskategori hos dig. Ingår den inhyrde i ett prestationslönelag ska hen ha samma lön som laget utifrån sitt fördelningstal. Vid inhyrning längre än två veckor under en avstämningsperiod ska någon av parterna i prestationslöneöverenskommelsen ta initiativ till överläggning om vilka som ska omfattas.</p>
+<p>Lägger du inhyrda i ett ackordslag får det alltså direkt betydelse för fördelningslistan – mer om det i <a href="/sv/blog/ackordslon-bygg">ackordslön i byggbranschen</a>.</p>
 
-<h2>På bygget – ID06, personalliggare och arbetsmiljö</h2>
-<p>På en byggarbetsplats tillkommer praktiska krav som gäller <em>all</em> personal, även inhyrda. Varje person ska vara <strong>ID06-registrerad</strong> och föras in i den elektroniska <strong>personalliggaren</strong>. Kravet på personalliggare i byggbranschen följer av skatteförfarandelagen och kontrolleras av Skatteverket vid oanmälda besök – saknas den inhyrda i liggaren riskerar du kontrollavgift.</p>
-<p>Eftersom du har arbetsledningen på plats bär du också ett arbetsmiljöansvar för den inhyrda under arbetet. Introduktion, skyddsutrustning och riskgenomgångar gäller lika mycket för bemanningspersonalen som för ditt eget lag.</p>
-
-<h2>Sanktioner om du gör fel</h2>
-<p>Regelverket har tänder. Enligt 13–14 §§ medför brott mot Uthyrningslagen skadeståndsskyldighet – både ersättning för den faktiska förlust arbetstagaren lidit och ersättning för den kränkning som skett. Till det kommer den ekonomiska risken i 24-månadersregeln: missar du att bevaka gränsen kan du plötsligt stå med en oplanerad tillsvidareanställning eller ett krav på två månadslöner. Det är kostnader som är fullt möjliga att undvika med ordning och framförhållning.</p>
-
-<h2>Checklista: så hyr du in personal rätt</h2>
+<h2>Kundföretagets egna skyldigheter</h2>
+<p>Uthyrningslagen lägger fyra skyldigheter direkt på dig som hyr in:</p>
 <ul>
-<li>Välj ett seriöst, kollektivavtalsanslutet (gärna auktoriserat) bemanningsföretag.</li>
-<li>Genomför primär förhandling enligt MBL 38 § med Byggnads innan inhyrningen.</li>
-<li>Säkerställ att den inhyrda är ID06-registrerad och förs in i personalliggaren.</li>
-<li>Dokumentera vilken driftsenhet personen jobbar på och exakt hur länge.</li>
-<li>Bevaka den sammanlagda tiden mot 24-månadersgränsen inom rullande 36 månader.</li>
-<li>Ge introduktion och skyddsutrustning – arbetsmiljöansvaret är ditt på plats.</li>
-<li>Spara underlag och avtal i minst 7 år.</li>
+<li><strong>11 §</strong> – tillgång till gemensamma anläggningar på samma villkor som egen personal, till exempel bodar, omklädningsrum och matrum, om det inte finns särskilda skäl.</li>
+<li><strong>12 §</strong> – information om lediga tillsvidare- och provanställningar. Det räcker att informationen är allmänt tillgänglig på arbetsplatsen.</li>
+<li><strong>12 a §</strong> – erbjudande om tillsvidareanställning till den som varit placerad på samma driftsenhet i sammanlagt mer än 24 månader under 36 månader, eller ersättning motsvarande två aktuella månadslöner. Båda ska ske senast en månad efter att gränsen passerats. Regeln kan bara ändras genom kollektivavtal som slutits av en central sammanslutning av arbetstagarorganisationer.</li>
+<li><strong>14 §</strong> – bryter du mot 11, 12 eller 12 a § blir du skadeståndsskyldig mot arbetstagaren för både förlust och kränkning.</li>
 </ul>
 
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp ersätter inte bemanningsavtalet eller den fackliga förhandlingen – men systemet ger dig kontrollen som gör att du klarar reglerna. Med tidrapportering per person och projekt ser du hur länge en inhyrd faktiskt har arbetat hos dig, vilket gör 24-månadersgränsen möjlig att bevaka innan den överraskar dig. Du håller ordning på vilka som är på vilken arbetsplats, samlar avtal och underlag på ett ställe och får spårbarhet som håller vid en granskning. Kort sagt: ByggExp gör det administrativa så pass enkelt att du hinner ta beslutet i tid i stället för i efterhand.</p>
+<h3>Exempel: när passeras 24-månadersgränsen?</h3>
+<p>En inhyrd snickare arbetar på er driftsenhet i Uppsala från 1 mars 2024 till 31 augusti 2025, alltså 18 månader. Efter ett uppehåll är hon tillbaka på samma driftsenhet från 1 februari 2026. Den sammanlagda tiden når 24 månader den 31 juli 2026, och från 1 augusti är den överskriden – inom samma 36-månadersperiod. Senast 1 september 2026 ska ni ha lämnat ett erbjudande om tillsvidareanställning eller betalat två av hennes aktuella månadslöner. Med en månadslön på 36 000 kr blir alternativet 72 000 kr.</p>
+<p>Det kräver att någon räknar dagar per person och driftsenhet. Planerar ni bemanningen i förväg syns gränsen i tid – se <a href="/sv/blog/personalplanering-bygg">personalplanering i byggföretag</a>.</p>
+
+<h2>Arbetsmiljöansvaret följer med in på bygget</h2>
+<p>Bemanningsföretaget har kvar arbetsgivaransvaret, men enligt 3 kap. 12 § andra stycket <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/arbetsmiljolag-19771160_sfs-1977-1160/" target="_blank" rel="noopener noreferrer">arbetsmiljölagen</a> ska den som hyr in arbetskraft vidta de skyddsåtgärder som arbetet kräver. Arbetsmiljöverkets <a href="https://www.av.se/globalassets/filer/publikationer/foreskrifter/systematiskt-arbetsmiljoarbete-grundlaggande-skyldigheter-for-dig-med-arbetsgivaransvar-afs2023-1.pdf" target="_blank" rel="noopener noreferrer">AFS 2023:1 om systematiskt arbetsmiljöarbete</a> går längre: i 4 § likställs den som hyr in arbetskraft med arbetsgivare. Det betyder i praktiken:</p>
+<ul>
+<li>De inhyrdas arbetsuppgifter ska ingå i era undersökningar och riskbedömningar, som alltid ska dokumenteras skriftligt (11 §).</li>
+<li>De ska ha tillräckliga kunskaper om arbetet och riskerna, och vid allvarliga risker ska det finnas skriftliga instruktioner (10 §). Introduktionen bör anpassas efter till exempel erfarenhet och språkkunskaper.</li>
+<li>Kräver uppgiften särskild behörighet, till exempel för lift eller heta arbeten, bör ni kontrollera intyget innan arbetet börjar.</li>
+</ul>
+<p>Använd gärna en <a href="/sv/verktyg/riskbedomning-mall">mall för riskbedömning</a> och gå igenom den med de inhyrda första dagen.</p>
+
+<h2>Personalliggare och ID06</h2>
+<p>På byggarbetsplatser där kostnaden överstiger fyra prisbasbelopp – 236 800 kr med 2026 års prisbasbelopp på 59 200 kr – ska alla som är verksamma registreras i personalliggaren. Skatteverket svarar att personal från bemanningsföretag <a href="https://www.skatteverket.se/foretag/arbetsgivare/personalliggare/personalliggarebyggbranschen/fragorochsvarompersonalliggareibyggbranschen.4.361dc8c15312eff6fd6ba7.html" target="_blank" rel="noopener noreferrer">ska registrera sig på samma sätt som om de arbetat direkt för dig</a>. Byggherren ska hålla med utrustningen, men varje entreprenör ansvarar för sin egen personal och sina inhyrda. Vad en missad registrering kostar går vi igenom i <a href="/sv/blog/kontrollavgift-personalliggare">kontrollavgift för personalliggare</a>. De flesta byggarbetsplatser kräver också ID06-kort för passage och registrering, se <a href="/sv/blog/id06-nya-krav-2026-legitimering">nya ID06-krav 2026</a>.</p>
+
+<h2>Faktura, F-skatt och moms</h2>
+<p>Kontrollera F-skatten innan första betalningen, till exempel via <a href="https://www.skatteverket.se/hamtaforetagsinformation" target="_blank" rel="noopener noreferrer">Skatteverkets tjänst för företagsinformation</a>. Saknar bemanningsföretaget F-skatt ska du göra skatteavdrag med 30 % på ersättningen för arbetet. <a href="https://www.skatteverket.se/foretag/moms/sarskildamomsregler/byggverksamhet/omvandbetalningsskyldighetinombyggsektorn" target="_blank" rel="noopener noreferrer">Omvänd betalningsskyldighet</a> gäller även när ett företag hyr ut arbetskraft för byggtjänster till en köpare som säljer sådana tjänster mer än tillfälligt. Bemanningsfakturan ska då vara utan moms, och du redovisar momsen själv – på samma sätt som beskrivs i <a href="/sv/blog/omvand-byggmoms-underentreprenor">omvänd byggmoms för underentreprenörer</a>. I bokföringen är inhyrd personal en köpt tjänst, inte lön – har bemanningsföretaget F-skatt hamnar den inte i er arbetsgivardeklaration.</p>
+
+<h2>Om ni själva hyr ut personal</h2>
+<p>Lånar ni ut egna snickare till ett annat byggföretag gäller momsregeln åt andra hållet: är det arbetskraft för byggtjänster och köparen säljer byggtjänster mer än tillfälligt ska fakturan vara utan moms med hänvisning till omvänd betalningsskyldighet. Är ert företag ett bemanningsföretag i lagens mening – det vill säga har anställda i syfte att hyra ut dem – och bundet av Byggavtalet gäller Bilaga A4 om anställningsformer, lön och arbetstid för de uthyrda.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Räknas semester och frånvaro in i 24-månadersperioden?</h3>
-<p>Det är den tid arbetstagaren varit placerad på din driftsenhet som räknas mot gränsen mer än 24 månader under 36 månader. Kortare avbrott gör inte att räkningen nollställs – det är den sammanlagda placeringstiden som är avgörande. Är du osäker på hur en längre frånvaro ska bedömas, stäm av med bemanningsföretaget och er fackliga motpart.</p>
-<h3>Gäller reglerna vid entreprenad och underentreprenad?</h3>
-<p>Uthyrningslagen gäller just uthyrning av arbetstagare – att du leder och fördelar arbetet för personal som är anställd hos någon annan. En äkta entreprenad, där underentreprenören själv leder sitt arbete och ansvarar för resultatet, är något annat och omfattas inte på samma sätt. Gränsen kan i praktiken vara hårfin, och det avgörande är vem som faktiskt har arbetsledningen. Bygger upplägget på att du styr personerna dagligen talar mycket för att det är inhyrning.</p>
-<h3>Vem betalar de två månadslönerna om gränsen passeras?</h3>
-<p>Det är kundföretaget – alltså ditt byggföretag som hyr in – som ansvarar för att antingen erbjuda tillsvidareanställning eller betala ersättningen motsvarande två månadslöner, inom en månad. Skyldigheten ligger på dig som kundföretag, inte på bemanningsbolaget.</p>
-<h3>Måste vi verkligen förhandla med facket före varje inhyrning?</h3>
-<p>Ja, huvudregeln enligt MBL 38 § är att du ska påkalla primär förhandling med den kollektivavtalsbärande organisationen innan du beslutar om inhyrning. Rutiner för hur ofta och i vilken form kan regleras i ert kollektivavtal, men skyldigheten att förhandla går inte att hoppa över.</p>
-
-<h2>Kom igång</h2>
-<p>Bygg upp rutiner som gör inhyrningen trygg – börja med att strukturera personal- och tidsuppgifter i <a href="/sv/verktyg">ByggExps gratis verktyg</a>. Vill du se hur systemet håller koll på inhyrd tid och driftsenheter i praktiken? <a href="/sv/contact">Boka en demo här</a> så visar vi.</p>
-
-<p>Relaterat: <a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering för byggföretag</a> och <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag – guide</a>.</p>
+<h3>Måste man förhandla med Byggnads innan man hyr in personal?</h3>
+<p>Inte om bemanningsföretaget är medlem i Byggföretagen och ni saknar uppsagda med företrädesrätt. Annars ska bemanningsföretaget kontrolleras och anmälas till Byggnads region enligt Bilaga D punkt 4, eller så ska ni primärförhandla enligt 38 § MBL.</p>
+<h3>Vem har arbetsmiljöansvaret för inhyrd personal?</h3>
+<p>Båda. Bemanningsföretaget är arbetsgivare, men du som hyr in ska vidta skyddsåtgärder enligt arbetsmiljölagen och är likställd med arbetsgivare i AFS 2023:1 – riskbedömning, introduktion och instruktioner gäller alltså även de inhyrda.</p>
+<h3>Ska inhyrd personal stå i personalliggaren?</h3>
+<p>Ja. Enligt Skatteverket ska personal från bemanningsföretag registrera sig på samma sätt som om de arbetade direkt för dig, och det är du som entreprenör som ansvarar för att det görs.</p>
+<h3>Är det omvänd moms på faktura för inhyrd personal?</h3>
+<p>Ja, när bemanningsföretaget hyr ut arbetskraft för byggtjänster och ditt företag säljer byggtjänster mer än tillfälligt. Fakturan ska då vara utan moms och du redovisar både utgående och ingående moms.</p>
+<h3>Vad händer om en inhyrd varit hos oss i mer än 24 månader?</h3>
+<p>Inom en månad efter att gränsen passerats ska du erbjuda tillsvidareanställning eller betala två aktuella månadslöner. Gör du ingetdera blir du skadeståndsskyldig enligt 14 § uthyrningslagen.</p>
+<h3>Vilken lön ska en inhyrd byggnadsarbetare ha?</h3>
+<p>Bemanningsföretaget betalar lönen. Enligt Byggavtalets Bilaga A4 ska den inhyrde vid tidlön ha samma lön som jämförbar yrkeskategori hos dig, och i ett prestationslönelag samma lön som laget utifrån sitt fördelningstal.</p>
 `;
 
 const A_INHYRD_PERSONAL_REGLER: BlogPost = {
   _id: "code-"+"inhyrd-personal-regler",
-  title: "Inhyrd personal – reglerna varje byggföretag måste ha koll på 2026", slug: "inhyrd-personal-regler", locale: "sv",
-  excerpt: "Bemanning löser toppar i produktionen – men fel hantering kan ge skadestånd och tvingade tillsvidareanställningar. Här är reglerna byggföretaget måste kunna.", tag: "Personal",
+  title: "Inhyrd personal i byggföretag – regler 2026", slug: "inhyrd-personal-regler", locale: "sv",
+  excerpt: "Förhandling med Byggnads, kundföretagets skyldigheter enligt uthyrningslagen, arbetsmiljöansvar, personalliggare och omvänd moms när du hyr in personal till bygget.", tag: "Personal",
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_INHYRD_PERSONAL_REGLER_HTML,
-  seoTitle: "Inhyrd personal regler 2026 | ByggExp", seoDescription: "Uthyrningslagen, likabehandlingsprincipen och 24-månadersregeln – så hyr ditt byggföretag in personal rätt och undviker skadestånd och tvingade anställningar.",
+  seoTitle: "Hyra in personal i bygg – regler 2026 | ByggExp", seoDescription: "Hyra in personal till bygget: förhandling enligt Byggavtalet och MBL, 24-månadersregeln, arbetsmiljöansvar, personalliggare och omvänd moms.",
   seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-18T19:12:00.000Z", createdAt: "2026-08-18T19:12:00.000Z", updatedAt: "2026-08-18T19:12:00.000Z",
+  publishedAt: "2026-08-18T19:12:00.000Z", createdAt: "2026-08-18T19:12:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_ARBETSTIDSLAGEN_BYGG_HTML = `

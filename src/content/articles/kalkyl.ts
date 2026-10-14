@@ -104,200 +104,239 @@ const MATERIALKALKYL: BlogPost = {
 };
 
 const UVARDE_HTML = `
-<p>U-värdet avgör två saker på en gång: om konstruktionen godkänns i bygglovet och hur mycket isolering du behöver lägga in. Offererar du för tunt underkänns bygget mot BBR – offererar du för tjockt äter du upp din egen marginal. Att kunna räkna U-värde och baklänges bestämma isolertjocklek är därför ren yrkeskunskap, inte teori.</p>
-<p><a href="/sv/verktyg/u-varde-kalkylator">Räkna ut U-värdet för din konstruktion med vår gratis kalkylator -&gt;</a></p>
+<p>Ett U-värde som bara räknas på isoleringen blir för bra. I en vanlig regelvägg med 215 mm mineralull ger formeln U = 0,155 W/m²K om du räknar som om väggen bara vore isolering, men med reglarna inräknade enligt SS-EN ISO 6946 blir det 0,178 – och med lite mer trä i väggen än i exemplet hamnar den över 0,18. Skillnaden avgör om en tilläggsisolering klarar Boverkets krav, så nedan räknar vi både den enkla och den korrekta vägen.</p>
 
-<p>Vill du hoppa över handräkningen kan du testa dig fram direkt i <a href="/sv/verktyg/isolering-kalkylator">vår gratis isolerkalkylator –&gt;</a> och se hur tjockleken påverkar U-värdet innan du skriver offerten.</p>
+<h2>Formeln för U-värde: R = d/λ och U = 1/R</h2>
+<p>Varje skikt har ett värmemotstånd R = d / λ, där d är tjockleken i meter och λ (lambda) är materialets värmekonduktivitet i W/(m·K). Motstånden för skikten adderas, tillsammans med ett inre och ett yttre övergångsmotstånd:</p>
+<p><strong>R<sub>T</sub> = R<sub>si</sub> + d₁/λ₁ + d₂/λ₂ + … + R<sub>se</sub></strong> och <strong>U = 1 / R<sub>T</sub></strong></p>
+<p>U-värdet anges i W/(m²·K), alltså hur många watt som går genom en kvadratmeter per grads temperaturskillnad. Förr hette samma storhet k-värde. Lägg alltid ihop R-värden – aldrig U-värden eller lambdavärden för skikt som ligger efter varandra.</p>
 
-<h2>Vad U-värde och lambda faktiskt betyder</h2>
-<p>Tre storheter styr allt. <strong>Lambda (λ, W/mK)</strong> är materialets värmekonduktivitet – ju lägre, desto bättre isolerar det. Mineralull ligger på 0,033–0,037, EPS-cellplast 0,031–0,038, PIR/PUR så lågt som 0,022–0,024. En träregel leder däremot värme betydligt sämre bort, med λ runt 0,14, vilket är själva anledningen till att reglar blir köldbryggor.</p>
-<p><strong>R (värmemotstånd, m²K/W)</strong> är hur mycket ett skikt bromsar värmen: R = d / λ, alltså tjocklek i meter delat med lambda. <strong>U-värdet (W/m²K)</strong> är slutligen U = 1 / R_tot. Lägre U-värde betyder bättre isolering. Den enda regel du aldrig får bryta: du adderar värmemotstånd (R) för skikt i serie – aldrig lambda-värden och aldrig U-värden.</p>
+<h2>Övergångsmotstånd Rsi och Rse</h2>
+<p>Övergångsmotstånden beror på värmeflödets riktning. Värdena nedan är de som SS-EN ISO 6946 anger för vanliga ytor, här hämtade ur <a href="https://www.cibse.org/media/wzrjrf3l/conventions-for-u-value-calculations.pdf" target="_blank" rel="noopener noreferrer">BRE:s Conventions for U-value calculations (BR 443)</a> som återger standarden.</p>
+<div class="article-table"><table>
+<thead><tr><th>Byggnadsdel</th><th>Värmeflöde</th><th>R<sub>si</sub> (m²K/W)</th><th>R<sub>se</sub> (m²K/W)</th></tr></thead>
+<tbody>
+<tr><td>Vägg, fönster</td><td>horisontellt</td><td>0,13</td><td>0,04</td></tr>
+<tr><td>Tak, vindsbjälklag</td><td>uppåt</td><td>0,10</td><td>0,04</td></tr>
+<tr><td>Golv</td><td>nedåt</td><td>0,17</td><td>0,04</td></tr>
+</tbody>
+</table></div>
+<p>Bakom en välventilerad luftspalt, som bakom en träpanel eller i en kallvind, räknas luftspalten och allt utanför den inte med. I stället ökar R<sub>se</sub>: för vanliga ytor sätts den till 0,13 för väggar och 0,10 för tak, alltså samma som det inre motståndet.</p>
 
-<h2>Formeln steg för steg</h2>
-<p>Det totala värmemotståndet är summan av det inre värmeövergångsmotståndet, alla materialskikt och det yttre värmeövergångsmotståndet:</p>
-<p><strong>R_tot = Rsi + ΣR_skikt + Rse</strong></p>
-<p>Övergångsmotstånden är standardiserade i SS-EN ISO 6946 och beror på byggnadsdelens läge:</p>
+<h2>Lambdavärden för vanliga material</h2>
+<p>För isolering ska du använda tillverkarens deklarerade värde λ<sub>D</sub> för den aktuella produkten. Övriga värden är tabellvärden.</p>
+<div class="article-table"><table>
+<thead><tr><th>Material</th><th>λ (W/m·K)</th><th>Källa</th></tr></thead>
+<tbody>
+<tr><td>Glasull, regelskiva (ISOVER UNI-skiva 35)</td><td>0,035</td><td><a href="https://xlbygg.se/media/attachments/5f0/d7c/5f0d7c4dc91092ce2a19523878348d2b.pdf" target="_blank" rel="noopener noreferrer">ISOVER EPD</a></td></tr>
+<tr><td>Lösull stenull på vindsbjälklag (PAROC BLT 3, ≥33 kg/m³)</td><td>0,041</td><td><a href="https://www.paroc.com/sv-se/documents/uploads/paroc-blt-3.pdf" target="_blank" rel="noopener noreferrer">PAROC datablad</a></td></tr>
+<tr><td>Lösull stenull i vägg (PAROC BLT 3, ≥70 kg/m³)</td><td>0,036</td><td>PAROC datablad</td></tr>
+<tr><td>Gipsskiva (Gyproc GN 13)</td><td>0,25</td><td><a href="https://media.derome.se/medias/docus/193/$v90/5200409690.pdf" target="_blank" rel="noopener noreferrer">Gyproc produktblad</a></td></tr>
+<tr><td>Barrträ, ca 500 kg/m³</td><td>0,13</td><td>BR 443</td></tr>
+<tr><td>Armerad betong</td><td>2,30</td><td>BR 443</td></tr>
+<tr><td>Stål</td><td>50</td><td>BR 443</td></tr>
+</tbody>
+</table></div>
+<p>Skillnaden mellan materialen är stor. 200 mm armerad betong har R = 0,2 / 2,3 = 0,09 och ger en vägg med U ≈ 3,9 utan isolering. 200 mm massivt trä ger R = 1,54 och U ≈ 0,59. Samma tjocklek glasull med λ 0,035 ger R = 5,7.</p>
+
+<h2>Räkneexempel: regelvägg med 45 + 170 mm isolering</h2>
+<p>Väggen består inifrån av gips 12,5 mm, ett installationsskikt med 45 mm isolering mellan 45 mm reglar, en stomme med 170 mm isolering mellan 45 mm reglar c/c 600, vindskydd och en ventilerad träfasad. Isoleringen har λ 0,035, gipsen λ 0,25 och träet λ 0,13. Luftspalten och fasaden räknas inte med, så R<sub>se</sub> = 0,13.</p>
+<div class="article-table"><table>
+<thead><tr><th>Skikt</th><th>Endast isolering</th><th>Med reglar (undre gränsvärde)</th></tr></thead>
+<tbody>
+<tr><td>R<sub>si</sub></td><td>0,130</td><td>0,130</td></tr>
+<tr><td>Gips 12,5 mm</td><td>0,050</td><td>0,050</td></tr>
+<tr><td>Installationsskikt 45 mm</td><td>1,286</td><td>1,068</td></tr>
+<tr><td>Stomme 170 mm</td><td>4,857</td><td>4,036</td></tr>
+<tr><td>R<sub>se</sub></td><td>0,130</td><td>0,130</td></tr>
+<tr><td><strong>R<sub>T</sub></strong></td><td><strong>6,45</strong></td><td><strong>5,41</strong></td></tr>
+</tbody>
+</table></div>
+<p>Räknat som om väggen bara vore isolering blir U = 1 / 6,45 = <strong>0,155 W/m²K</strong>. Det är för optimistiskt, eftersom reglarna leder värme ungefär fyra gånger bättre än isoleringen.</p>
+<p>SS-EN ISO 6946 hanterar reglarna med två gränsvärden. Det <strong>undre</strong> får du genom att vikta lambda i de inhomogena skikten: med 45 mm regel per 600 mm är träandelen 7,5 %, och λ = 0,075 × 0,13 + 0,925 × 0,035 = 0,042. Det ger R″ = 5,41. Det <strong>övre</strong> får du genom att räkna parallella vägar – en genom isolering och en genom trä – och vikta deras U-värden efter area, vilket här ger R′ = 5,82. Väggens värmemotstånd är medelvärdet: R<sub>T</sub> = (5,82 + 5,41) / 2 = 5,62, och U = 1 / 5,62 = <strong>0,178 W/m²K</strong>.</p>
+<p>7,5 % trä räknar bara med reglarna. Syll, hammarband, kortlingar och fönsteromfattningar höjer träandelen i en verklig vägg. Med 12 % trä blir U = 0,192 i samma vägg, alltså över kravet för väggar vid ändring.</p>
+
+<h2>Räkneexempel: vindsbjälklag med 500 mm lösull</h2>
+<p>Bjälklaget har gips 12,5 mm i taket, 170 mm lösull mellan takstolarnas underramar (45 mm, c/c 1 200) och 330 mm lösull ovanpå, totalt 500 mm med λ 0,041. Vinden är en ventilerad kallvind, så R<sub>si</sub> = 0,10 och R<sub>se</sub> = 0,10.</p>
 <ul>
-<li><strong>Yttervägg:</strong> Rsi = 0,13 och Rse = 0,04</li>
-<li><strong>Tak:</strong> Rsi = 0,10 och Rse = 0,04</li>
-<li><strong>Golv:</strong> Rsi = 0,17 och Rse = 0,04</li>
+<li>Utan takstolar: R<sub>T</sub> = 0,10 + 0,05 + 4,15 + 8,05 + 0,10 = 12,45 → U = <strong>0,080 W/m²K</strong>.</li>
+<li>Med underramarna inräknade (träandel 3,75 % i det nedre skiktet) blir R<sub>T</sub> = 12,22 → U = <strong>0,082 W/m²K</strong>.</li>
 </ul>
-<p>En viktig detalj: vid en väl ventilerad luftspalt sätts Rse till 0,13, och luftspalten samt fasadskiktet utanför räknas inte med alls – luften bakom en ventilerad fasad hjälper inte till att isolera.</p>
+<p>Här spelar träet nästan ingen roll, eftersom 330 mm av isoleringen ligger ovanför takstolarna utan avbrott.</p>
+<p>Vill du räkna baklänges löser du ut tjockleken: d = λ × (1/U − R<sub>övrigt</sub>). För U 0,13 med λ 0,041 och R<sub>övrigt</sub> = 0,10 + 0,05 + 0,10 = 0,25 blir d = 0,041 × (7,69 − 0,25) = 0,305 m, alltså cirka 310 mm lösull – räknat utan takstolar. Samma beräkning kan du göra i <a href="/sv/verktyg/u-varde-kalkylator">U-värdeskalkylatorn</a> och <a href="/sv/verktyg/isolering-kalkylator">isoleringskalkylatorn</a>.</p>
 
-<h2>Räkneexempel från verkligheten</h2>
-<p>Ta ett tak med 400 mm mineralull, λ = 0,037. Skiktets värmemotstånd blir R = 0,40 / 0,037 ≈ 10,8. Lägg till övergångsmotstånden så blir R_tot ≈ 11,0, och U = 1 / 11,0 ≈ <strong>0,091 W/m²K</strong>. Det klarar med god marginal riktvärdet för tak.</p>
-<p>Oftast vill du räkna åt andra hållet: <em>hur tjock isolering krävs för att nå ett mål-U?</em> Då löser du ut tjockleken:</p>
-<p><strong>d = λ × (1/U_mål − R_övrigt)</strong></p>
-<p>Säg att du siktar på U = 0,13 för samma takkonstruktion, med λ = 0,037 och övriga motstånd (Rsi + Rse + tunna skikt) på ca 0,14. Då blir d = 0,037 × (1/0,13 − 0,14) = 0,037 × (7,69 − 0,14) ≈ 0,279 m, alltså cirka <strong>280 mm mineralull</strong>. Där har du siffran som ska stå i offerten – inte en gissning, utan en beräkning du kan försvara.</p>
-
-<h2>BBR-kraven du måste klara 2026</h2>
-<p>Energikraven ligger på tre nivåer som gäller parallellt. Du behöver klara alla tre.</p>
-<ol>
-<li><strong>Primärenergital (BBR 30, tabell 9:2a):</strong> högst 90 kWh/m² Atemp och år för småhus, 75 för flerbostadshus och 70 för lokaler.</li>
-<li><strong>Genomsnittlig värmegenomgångskoefficient Um:</strong> det viktade medelvärdet för hela klimatskärmen får som mest vara 0,30 W/m²K för småhus (golvyta över 50 m²), 0,40 för flerbostadshus och 0,60 för lokaler. Um är den formella isoleringsgränsen – inte enskilda delars U-värde.</li>
-<li><strong>Riktvärden per byggnadsdel:</strong> vanligt citerade högsta U-värden för bostäder är yttervägg ≤ 0,18, tak ≤ 0,13, golv ≤ 0,15 och fönster/dörrar/portar ≤ 1,2 W/m²K. Detta är riktvärden för att nå Um-kravet, inte separata tvingande gränser.</li>
-</ol>
-<p>Kravet på primärenergital ersätter alltså inte U-värdeskraven – de gäller vid sidan av varandra.</p>
-
-<h2>Nya reglerna 1 juli 2026 – vad gäller?</h2>
-<p>Boverkets nya bygg- och konstruktionsregler gäller sedan 1 juli 2025. Under övergångsperioden fram till 30 juni 2026 fick byggherren välja mellan gamla BBR/EKS och det nya regelverket – men inte blanda dem i samma projekt. Har ansökan om bygglov eller anmälan kommit in före 1 juli 2026 får BBR/EKS fortfarande tillämpas; i senare ärenden gäller de nya reglerna.</p>
-<p>Här finns en nyans som är lätt att missa: energikraven ingick <strong>inte</strong> i bytet 1 juli 2025. Kraven på primärenergital, Um och U-värden regleras fortsatt i BBR tills Boverkets föreskrifter om energihushållning och värmeisolering i byggnader (BFS 2026:9) träder i kraft 1 oktober 2026. De nya energireglerna innebär skärpningar jämfört med BBR 30. Kort sagt: räkna mot BBR i ärenden som omfattas av de nuvarande reglerna, men kontrollera kraven och övergångsreglerna i BFS 2026:9 för projekt som söks från 1 oktober 2026.</p>
-
-<h2>Från U-värde till offert</h2>
-<p>Så här går du från beräkning till en tjocklek du kan sälja:</p>
-<ul>
-<li><strong>Utgå från U-målet</strong>, inte från en tjocklek du är van vid. Välj konstruktion efter kravet, inte tvärtom.</li>
-<li><strong>Räkna in köldbryggorna.</strong> Reglar med λ ≈ 0,14 sänker prestandan i en regelvägg – ett U-värde räknat på enbart isoleringen blir för optimistiskt.</li>
-<li><strong>Ta höjd för marginal.</strong> Lägg dig tydligt under riktvärdet så att en detaljändring på plats inte välter godkännandet.</li>
-<li><strong>Skriv U-värdet i offerten.</strong> Ett dokumenterat U-värde är ett säljargument mot kunden och ett bevis mot kontrollansvarig – använd det.</li>
-</ul>
-
-<h2>Vanliga misstag (checklista)</h2>
-<ul>
-<li>Glömda övergångsmotstånd Rsi och Rse – ger ett för lågt (för bra) U-värde på pappret.</li>
-<li>Att räkna på deklarerat lambda i stället för dimensionerande värde för fukt och montage.</li>
-<li>Köldbryggor via reglar och infästningar som aldrig kommer med i kalkylen.</li>
-<li>Att förväxla Um (medelvärdet för hela klimatskärmen) med en enskild byggnadsdels U-värde.</li>
-<li>Att blanda gamla BBR/EKS och de nya reglerna i samma projekt under övergångsperioden.</li>
-</ul>
-
-<h2>Så gör du i ByggExp</h2>
-<p>I ByggExp kan du räkna isolertjocklek och U-värde med isolerkalkylatorn och sedan ta beräkningen vidare in i offerten, där materialåtgången landar i samma underlag. Du får ett spårbart U-värde att bifoga och en materiallista som följer med prissättningen – i stället för att räkna i ett löst kalkylark vid sidan om. Verktyget hjälper dig att jämföra tjocklekar snabbt, men det ersätter inte en fullständig energiberäkning för bygglovet; den delen står fortfarande projektörens beräkning för.</p>
+<h2>Boverkets krav från 1 oktober 2026</h2>
+<p>Den 1 oktober 2026 trädde <a href="https://rinfo.boverket.se/BFS2026-9/pdf/BFS2026-9.pdf" target="_blank" rel="noopener noreferrer">BFS 2026:9, Boverkets föreskrifter om energihushållning och värmeisolering i byggnader</a>, i kraft. Samtidigt upphävdes BBR (BFS 2011:6), där energikraven fanns kvar fram till dess. För nya byggnader finns kravet på isolering som ett genomsnitt för hela klimatskärmen, U<sub>m</sub>, som räknas som transmissionsförlusterna genom alla delar inklusive köldbryggor delat med klimatskärmens totala invändiga area.</p>
+<div class="article-table"><table>
+<thead><tr><th>Byggnadskategori</th><th>Högsta U<sub>m</sub> (W/m²K)</th></tr></thead>
+<tbody>
+<tr><td>En- och tvåbostadshus i ett plan</td><td>0,30</td></tr>
+<tr><td>En- och tvåbostadshus i mer än ett plan</td><td>0,40</td></tr>
+<tr><td>Flerbostadshus</td><td>0,40</td></tr>
+<tr><td>Lokaler</td><td>0,50</td></tr>
+</tbody>
+</table></div>
+<p>Vid <strong>ändring</strong> av en byggnad, till exempel tilläggsisolering eller fönsterbyte, räcker det att den ändrade delen klarar U-värdena i tabell 6. Då anses kravet uppfyllt:</p>
+<div class="article-table"><table>
+<thead><tr><th>Byggnadsdel</th><th>Högsta U (W/m²K)</th></tr></thead>
+<tbody>
+<tr><td>Tak</td><td>0,13</td></tr>
+<tr><td>Vägg</td><td>0,18</td></tr>
+<tr><td>Golv</td><td>0,15</td></tr>
+<tr><td>Fönster</td><td>1,1</td></tr>
+<tr><td>Ytterdörr</td><td>1,1</td></tr>
+</tbody>
+</table></div>
+<p>Kraven får anpassas, till exempel om det krävs för varsamhet, om förbättringen blir försumbar eller om kostnaden är oskäligt hög i förhållande till nyttan. Övergångsreglerna tillåter, med vissa undantag, de gamla BBR-reglerna för arbeten där ansökan om bygglov eller anmälan kommer in före 1 oktober 2027, eller som påbörjas före det datumet om inget lov eller anmälan krävs – men då ska alla äldre bestämmelser tillämpas, inte bara de som passar. Mer om fönster finns i guiden om <a href="/sv/blog/fonster-u-varde-2026">U-värde för fönster</a>.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Vad är ett bra U-värde för yttervägg och tak?</h3>
-<p>Som riktvärden för bostäder brukar man sikta på yttervägg ≤ 0,18 och tak ≤ 0,13 W/m²K. Det är riktvärden för att klara BBR:s krav på genomsnittligt Um, inte enskilda tvingande gränser – det formella kravet gäller hela klimatskärmens medelvärde.</p>
-<h3>Hur räknar jag ut hur tjock isolering jag behöver?</h3>
-<p>Lös ut tjockleken ur formeln: d = λ × (1/U_mål − R_övrigt). Sätt in lambda för materialet, ditt mål-U och summan av övriga värmemotstånd (övergångsmotstånd och tunna skikt). Resultatet är tjockleken i meter.</p>
-<h3>Kan jag lägga ihop U-värden för olika skikt?</h3>
-<p>Nej. Du adderar alltid värmemotstånd (R) för skikt i serie och räknar sedan U = 1/R_tot på slutet. Att addera U-värden eller lambda-värden ger fel resultat.</p>
-<h3>Gäller BBR:s energikrav fortfarande 2026?</h3>
-<p>Ja. Även om Boverkets nya byggregler gäller sedan 1 juli 2025 har inga nya energihushållningsföreskrifter getts ut ännu. Krav på primärenergital, Um och U-värden regleras därför fortsatt i BBR tills de nya energireglerna (BFS 2026:9) träder i kraft 1 oktober 2026.</p>
-
-<h2>Kom igång</h2>
-<p>Räkna igenom din konstruktion i <a href="/sv/verktyg/isolering-kalkylator">isolerkalkylatorn</a> och ta fram en tjocklek du kan stå för. Vill du se hur beräkning, materiallista och offert hänger ihop i praktiken kan du <a href="/sv/contact">boka en demo</a> så visar vi flödet från U-värde till färdig offert.</p>
-
-<p>Relaterat: <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget – så får du åtgången rätt</a>.</p>
+<h3>Hur räknar man ut U-värdet?</h3>
+<p>Räkna R = d/λ för varje skikt med tjockleken i meter, addera alla R-värden och de två övergångsmotstånden (för en vägg 0,13 och 0,04) och ta U = 1 / summan. En vägg med R<sub>T</sub> 5,0 har alltså U 0,20 W/m²K.</p>
+<h3>Vilken enhet har U-värdet?</h3>
+<p>W/(m²·K), alltså watt per kvadratmeter och grad temperaturskillnad. Värmemotståndet R anges i m²K/W och lambda i W/(m·K). Det äldre namnet för U-värde är k-värde.</p>
+<h3>Vilket U-värde ska en yttervägg ha 2026?</h3>
+<p>Vid ändring av en vägg anses kravet uppfyllt om den ändrade delen har högst 0,18 W/m²K enligt BFS 2026:9. För nybyggnad finns inget krav per vägg – där gäller medelvärdet U<sub>m</sub> för hela klimatskärmen, till exempel 0,30 för ett enplanshus.</p>
+<h3>Vilket U-värde har betong?</h3>
+<p>Betong isolerar dåligt: armerad betong har λ cirka 2,3 W/(m·K), så en 200 mm betongvägg utan isolering får U ≈ 3,9 W/m²K. Det är isoleringsskiktet som avgör U-värdet i en betongvägg.</p>
+<h3>Vilket U-värde har trä?</h3>
+<p>Barrträ har λ cirka 0,13 W/(m·K). 200 mm massivt trä ger U ≈ 0,59 W/m²K, vilket är långt ifrån kraven för vägg. I en regelvägg gör träets högre lambda att reglarna blir köldbryggor.</p>
+<h3>Varför blir mitt U-värde sämre i kalkylatorn än i handräkningen?</h3>
+<p>Oftast för att reglar och takstolar räknas med. I exemplet ovan går en vägg från 0,155 till 0,178 W/m²K när 7,5 % trä räknas in enligt SS-EN ISO 6946.</p>
 `.trim();
 
 const UVARDE: BlogPost = {
   _id: "code-berakna-u-varde-isolering",
-  title: "Beräkna U-värde och isolertjocklek – så klarar du BBR-kraven och offererar rätt",
+  title: "Beräkna U-värde – formel, lambdavärden och krav 2026",
   slug: "berakna-u-varde-isolering",
   locale: "sv",
-  excerpt: "Lär dig räkna U-värde och isolertjocklek steg för steg – så klarar konstruktionen BBR-kraven utan att du överisolerar bort marginalen i offerten.",
+  excerpt: "Så räknar du U-värde med R = d/λ och övergångsmotstånd enligt SS-EN ISO 6946, med räkneexempel för regelvägg och vindsbjälklag och Boverkets krav i BFS 2026:9.",
   tag: "Byggkalkyl",
   coverImageUrl: "/landing/verktyg/isolering-preview.webp",
   contentHtml: UVARDE_HTML,
-  seoTitle: "Beräkna U-värde isolering | ByggExp",
-  seoDescription: "Så räknar du ut U-värde och isolertjocklek för att klara BBR-kraven. Formel, räkneexempel och riktvärden för vägg, tak och golv 2026.",
+  seoTitle: "Beräkna U-värde – formel, exempel och krav 2026 | ByggExp",
+  seoDescription: "U = 1/(Rsi + Σd/λ + Rse). Lambdavärden, räkneexempel för vägg och vind med reglar inräknade, och U-värdeskraven i BFS 2026:9 från 1 oktober 2026.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/isolering-preview.webp`,
   canonicalUrl: "",
   noIndex: false,
   isPublished: true,
   publishedAt: "2026-08-18T10:30:00.000Z",
   createdAt: "2026-08-18T10:30:00.000Z",
-  updatedAt: "2026-08-18T10:30:00.000Z",
+  updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const MANGD_HTML = `
-<p>Ett anbud vinns eller förloras på hur väl mängderna är beräknade och prissatta. En slarvig mängdförteckning gör att du antingen räknar bort dig och förlorar jobbet, eller vinner det men blöder pengar under hela projektet. En noggrann förteckning gör tvärtom: den ger dig kontroll på varje post, skyddar dig när mängderna ändras och gör anbudet jämförbart med konkurrenternas. Den här guiden går igenom vad en mängdförteckning är, skillnaden mellan oprissatt och prissatt, hur den byggs upp kolumn för kolumn och hur du tar den vidare till kalkyl och offert.</p>
-<p><a href="/sv/verktyg/mangdforteckning-mall">Skapa en mängdförteckning med vår gratis mall (PDF & Excel) -&gt;</a></p>
+<p>En post som saknar mängduppgift i mängdförteckningen ska normalt anses ha mängden noll, om förfrågningsunderlaget inte tydligt hänvisar någon annanstans. Så tolkas AB 04 kapitel 1 § 3 i Svensk Byggtjänsts <a href="https://byggtjanstcms.byggtjanst.se/globalassets/bokhandeln/provlas/provlas_mer-anlaggning_fragor-och-svar_utg-2.pdf" target="_blank" rel="noopener noreferrer">MER Anläggning – frågor och svar</a>. Formuleringar som ”i erforderlig omfattning” räknas där som felaktiga, eftersom de inte går att kalkylera. För dig som räknar anbud betyder det att luckor och vaga poster ska frågas om under anbudstiden, inte gissas fram.</p>
 
-<p>Vill du komma igång direkt? Använd <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a> för att strukturera posterna och ta din prissatta mängdförteckning hela vägen till ett färdigt anbud.</p>
+<h2>Vad räknas som en mängdförteckning?</h2>
+<p>AB 04 definierar mängdförteckning som en förteckning över mängder av skilda slag, med eller utan beskrivning av utförande, funktion eller kvalitet. Den kan omfatta mängder av arbetsprestationer, hjälpmedel, material eller varor, enligt Svensk Byggtjänsts genomgång av <a href="https://static.byggtjanst.se/amadocs/any_1_2005_4-11.pdf" target="_blank" rel="noopener noreferrer">nyheterna i AB 04 (AMA-nytt 1/2005)</a>. Det äldre ordet ”mängdbeskrivning” finns inte kvar. En handling med både mängder och text kallas i stället mängdförteckning med beskrivning.</p>
+<p>Var handlingen hamnar i rangordningen beror på om den är prissatt. Rangordningen i AB 04 kapitel 1 § 3 är, enligt Svensk Byggtjänsts guide <a href="https://byggtjanstcms.byggtjanst.se/globalassets/kunskapsbank/guider/navigera-ratt-bland-reglerna/navigerarattblandreglerna251030.pdf" target="_blank" rel="noopener noreferrer">Navigera rätt bland reglerna</a>:</p>
+<div class="article-table"><table>
+<thead><tr><th>Plats</th><th>Handling</th></tr></thead>
+<tbody>
+<tr><td>6</td><td>Mät- och ersättningsregler (MER)</td></tr>
+<tr><td>7</td><td>À-prislista (prissatt mängdförteckning)</td></tr>
+<tr><td>8–9</td><td>Kompletterande och administrativa föreskrifter</td></tr>
+<tr><td>10</td><td>Ej prissatt mängdförteckning</td></tr>
+<tr><td>11</td><td>Teknisk beskrivning</td></tr>
+<tr><td>12</td><td>Ritningar</td></tr>
+</tbody>
+</table></div>
+<p>Står det olika i mängdförteckningen och på ritningen går alltså mängdförteckningen före. Ditt prissatta exemplar rankas dessutom högre än beställarens oprissatta.</p>
 
-<h2>Vad är en mängdförteckning?</h2>
-<p>En mängdförteckning (MF) är en handling där de arbeten som ingår i ett projekt förtecknas post för post, oftast med mängder och med hänvisning till AMA-koder eller teknisk beskrivning. Det är ett centralt anbuds- och kontraktsdokument som används av beställare, konsulter och entreprenörer genom hela byggprocessen. Poster refererar till standardiserade koder och rubriker i AMA (Allmän material- och arbetsbeskrivning), medan MER (Mät- och ersättningsregler, till exempel MER Anläggning) styr hur arbeten ska mätas och ersättas och hur parterna ska skriva i förteckningen.</p>
-<p>Metoden passar bäst för färdigprojekterade utförandeentreprenader enligt AB 04, där omfattningen är känd. Vid totalentreprenad enligt ABT 06 är den slutliga utformningen ofta oklar, och för ramavtal leder metoden lätt till fiktiva mängder och tvister.</p>
-
-<h2>Oprissatt vs prissatt mängdförteckning</h2>
-<p>Skillnaden avgör vem som räknar. Den <strong>oprissatta</strong> mängdförteckningen tas normalt fram av beställaren eller konsulten. Den innehåller poster och mängder men inga priser – det är ditt underlag. Den <strong>prissatta</strong> mängdförteckningen är exakt samma dokument, men med dina à-priser, delsummor och totalsumma ifyllda. Den utgör i praktiken ditt anbud.</p>
-<p>Lämna aldrig tomma poster. En post utan angiven prissättning betraktas i regel som en nollpost utan värde om den inte uttryckligen hanteras – vilket betyder att du bundit dig att utföra arbetet gratis. Möter du en post du inte kan prissätta säkert, ta upp det som en fråga under anbudstiden i stället för att gissa eller lämna den blank.</p>
-
-<h2>Så är en mängdförteckning uppbyggd</h2>
-<p>En korrekt mängdförteckning enligt MER byggs upp med minst fyra kolumner: enhet, mängd, à-pris och summa. Varje post kopplas till mät- och ersättningsregler, och ersättning ska begäras på lägsta möjliga kodnivå. En praktisk radstruktur ser ut så här:</p>
+<h2>Koder, AMA och MER – så hänger det ihop</h2>
+<p>AMA-systemet består av tre delar: AMA med kravtexter, RA med råd och anvisningar, och MER med mät- och ersättningsregler. Alla tre följer samma koder och rubriker, som bygger på klassifikationssystemet BSAB 96, enligt <a href="https://byggtjanstcms.byggtjanst.se/globalassets/bokhandeln/provlas/provlas-beskrivningshandboken-utg-5.pdf" target="_blank" rel="noopener noreferrer">Beskrivningshandboken</a>. MER finns som MER Hus, MER Anläggning och MER EL. Det är MER som innehåller reglerna för hur en mängdförteckning ska skrivas och hur utfört arbete mäts och ersätts.</p>
 <ul>
-<li><strong>Post / AMA-kod</strong> – referens till teknisk beskrivning eller AMA-rubrik.</li>
-<li><strong>Beskrivning</strong> – kort text om vad posten omfattar.</li>
-<li><strong>Enhet</strong> – m, m², m³, st, kg, tim.</li>
-<li><strong>Mängd</strong> – uppmätt eller beräknad kvantitet.</li>
-<li><strong>À-pris</strong> – allt inkluderat: inköp, leverans, montage, arbete, påslag och vinst.</li>
-<li><strong>Summa</strong> – mängd × à-pris.</li>
+<li><strong>Med beskrivning:</strong> inledningen ska ange vilken AMA handlingen ansluter till, till exempel AMA Anläggning 20.</li>
+<li><strong>Utan beskrivning:</strong> mängdförteckningen ansluter inte till AMA. Kraven står då i en separat teknisk beskrivning med samma koder.</li>
+<li><strong>MER gäller i sin helhet</strong> när den är förtecknad som handling i de administrativa föreskrifterna (AFB.22). En mängdförteckning ”ansluter” alltså inte till MER.</li>
+<li><strong>Kompletthetskravet</strong> i MER gäller varje mängdförteckning för sig. Saknas en kod i mängdförteckningen men finns i den tekniska beskrivningen kan entreprenören hävda att mängden under koden ska regleras från noll.</li>
 </ul>
-<p>Exempel: posten "Rivning innervägg, gips på regel" med enhet m², mängd 42, à-pris 185 kr ger summa 7 770 kr. Nästa post "Ny gipsvägg, dubbel skiva" med enhet m², mängd 42, à-pris 640 kr ger 26 880 kr. Delsummorna adderas till en totalsumma längst ner – det är den siffra beställaren jämför mot övriga anbud.</p>
+<p>En rad har i praktiken kolumnerna kod, rubrik eller text, enhet, mängd, à-pris och belopp.</p>
 
-<h2>Från mängdförteckning till kalkyl och offert</h2>
-<p>Arbetsflödet ser ungefär likadant ut oavsett projektstorlek:</p>
-<ol>
-<li>Ta fram mängder ur ritning, beskrivning eller BIM-modell. Behöver du snabbt räkna ytor för golv, väggar eller tak använder du <a href="/sv/verktyg/kvadratmeter-kalkylator">vår kvadratmeterkalkylator</a>.</li>
-<li>Sätt à-priser per post: material, arbetstimmar, underentreprenörer och påslag.</li>
-<li>Summera delsummor till totalsumma och kontrollera mot din interna kalkyl.</li>
-<li>Överför posterna till offert eller anbud i den form beställaren begärt.</li>
-</ol>
-<p>Poängen är att mängdförteckningen och kalkylen hänger ihop: samma poster som du räknar internt ska kunna spåras rakt igenom till det du lämnar in. Då blir efterkalkylen enkel och du ser var pengarna faktiskt hamnade.</p>
-
-<h2>Fast pris, löpande räkning, à-pris eller mängdkontrakt?</h2>
-<p>Ersättningsformen avgör vad mängdförteckningen betyder i praktiken:</p>
+<h2>R, OR och nollmängder</h2>
+<p>I ett mängdkontrakt markeras varje post som reglerbar eller oreglerbar. Det beskriver advokaten Lars-Otto Liman i <a href="http://static.byggtjanst.se/amadocs/af20_ersattningsformer.pdf" target="_blank" rel="noopener noreferrer">AMA-nytt AF 1/2008, Ersättningsformer</a>:</p>
 <ul>
-<li><strong>Fast pris</strong> – en förutbestämd totalsumma. Mängdförteckningen ligger bakom priset men slutsumman ändras inte med mängden.</li>
-<li><strong>Löpande räkning</strong> – à-priser eller timpris utan förutbestämt totalpris.</li>
-<li><strong>Takpris</strong> – löpande räkning men med ett avtalat tak.</li>
-<li><strong>Mängdkontrakt</strong> – en mellanform med fasta à-priser men rörlig slutsumma efter uppmätt mängd. Här är mängdförteckningen kärnan i avtalet.</li>
+<li><strong>R (reglerbar):</strong> mängden är beställarens bedömning och regleras efter uppmätning av det som faktiskt utförts.</li>
+<li><strong>OR (oreglerbar):</strong> omfattningen går att bestämma i förväg, och ingen uppmätning görs.</li>
+<li><strong>Nollmängd:</strong> arbetsslaget finns med, men mängden är satt till noll eftersom beställaren inte kan bedöma hur mycket som behövs. Liman nämner spontning som exempel. Ditt à-pris blir då det enda som styr ersättningen om arbetet blir aktuellt.</li>
 </ul>
-<p>Ett à-pris ska alltid räknas allt inkluderat: inköp, leverans, montage, arbete och vinst. Det är den formen som gör mängdkontraktet rättvist för båda parter.</p>
+<p>Anbudssumman är summan av alla poster, mängd gånger à-pris. När beställaren jämför anbud är det den summan som räknas, men vid reglering är det à-priserna som avgör. Ett lågt à-pris på en post som sannolikt växer kan alltså bli dyrt. Mer om att sätta enhetspriser finns i <a href="/sv/blog/a-priser-bygg">à-priser i bygg</a>.</p>
 
-<h2>Mängdreglering och ÄTA</h2>
-<p>Vad händer när mängderna ändras? Här är den avgörande skillnaden: ökning eller minskning av mängder inom förteckningens ramar räknas <strong>inte</strong> som ÄTA-arbete. Det regleras i stället som mängdreglering och ersätts efter faktiskt uppmätt mängd. Helt nytt, ej kontrakterat arbete beställs och ersätts däremot som ÄTA.</p>
-<p>À-priserna i mängdförteckningen gäller inom en mängdavvikelse på ±25 %, förutsatt att avvikelsen påverkar kontraktssumman med minst 0,5 %. Vid större avvikelse kan endera parten begära att à-priset omförhandlas utifrån jämförbara prestationer (AB 04 kap. 6 § 6). Det här skyddar dig: ett väl satt à-pris håller även om mängden justeras, så länge avvikelsen ligger inom ramen.</p>
+<h2>Så mängdar du från ritning – exempel</h2>
+<p>Att mängda är att ta fram mängder ur ritningar, beskrivningar eller en modell. Exemplet är ett rum på 4,2 × 3,6 meter med 2,5 meter i takhöjd, en dörr på 0,9 × 2,1 meter och ett fönster på 1,2 × 1,2 meter. Här dras öppningarna av från väggytan. Om det är rätt i ditt projekt avgör mätreglerna och beskrivningen.</p>
+<div class="article-table"><table>
+<thead><tr><th>Post</th><th>Uträkning</th><th>Enhet</th><th>Mängd</th></tr></thead>
+<tbody>
+<tr><td>Golvbeläggning</td><td>4,2 × 3,6</td><td>m²</td><td>15,1</td></tr>
+<tr><td>Golvsockel</td><td>2 × (4,2 + 3,6) − 0,9</td><td>m</td><td>14,7</td></tr>
+<tr><td>Målning vägg</td><td>15,6 × 2,5 − 1,89 − 1,44</td><td>m²</td><td>35,7</td></tr>
+<tr><td>Målning tak</td><td>4,2 × 3,6</td><td>m²</td><td>15,1</td></tr>
+</tbody>
+</table></div>
+<p>Skriv uträkningen bredvid mängden. När något ändras ser du direkt vad som påverkas, och det blir lättare att visa underlaget vid en reglering. Ytor räknar du snabbt i <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeterkalkylatorn</a>.</p>
+<p>Så här kan samma poster se ut prissatta. À-priserna är exempelsiffror och ska innehålla allt: material, arbete, hjälpmedel och påslag.</p>
+<div class="article-table"><table>
+<thead><tr><th>Post</th><th>Mängd</th><th>À-pris</th><th>Belopp</th></tr></thead>
+<tbody>
+<tr><td>Golvbeläggning</td><td>15,1 m²</td><td>450 kr</td><td>6 795 kr</td></tr>
+<tr><td>Golvsockel</td><td>14,7 m</td><td>95 kr</td><td>1 397 kr</td></tr>
+<tr><td>Målning vägg</td><td>35,7 m²</td><td>120 kr</td><td>4 284 kr</td></tr>
+<tr><td>Målning tak</td><td>15,1 m²</td><td>140 kr</td><td>2 114 kr</td></tr>
+<tr><td><strong>Summa</strong></td><td></td><td></td><td><strong>14 590 kr</strong></td></tr>
+</tbody>
+</table></div>
+<p>Vill du ställa upp en egen förteckning finns kolumnerna färdiga i <a href="/sv/verktyg/mangdforteckning-mall">mallen för mängdförteckning</a>.</p>
 
-<h2>2026: AB 04/ABT 06 gäller fortfarande</h2>
-<p>AB 04 och ABT 06 är fortfarande gällande standardavtal 2026. De aviserade nya avtalen AB 25/ABPU 25 – som förtydligar och stärker mängdkontraktets ställning och ersätter ÄTA-begreppet med "ändring av entreprenaden" (inklusive avvikande eller utelämnad mängd) – är försenade. Per juni 2026 anger BKK preliminär lansering under senare delen av 2027, och namnen kan bli AB 27/ABPU 27. Slutsats: bygg din mängdförteckning på AB 04 i dag, men håll koll på hur mängdregleringen förändras när det nya regelverket väl kommer.</p>
+<h2>Mängdreglering: när à-priset slutar gälla</h2>
+<p>Enligt AB 04 kapitel 6 § 6 gäller ett angivet à-pris vid upp till 25 procents ökning eller minskning av det kontraktsarbete som priset avser. Det gäller dock alltid upp till ett värde motsvarande 0,5 procent av kontraktssumman. Den som vill ändra à-priset måste alltså passera två spärrar: ändringen ska vara större än 25 procent, och dess värde ska överstiga 0,5 procent av kontraktssumman. Ett à-pris gäller tills en part skriftligen anmält att det inte längre gäller. Då ska parterna försöka enas om ett nytt pris med utgångspunkt i det gällande à-priset för samma eller likartat arbete.</p>
+<p><strong>Exempel</strong> med kontraktssumma 2 400 000 kr, där 0,5 procent är 12 000 kr:</p>
+<div class="article-table"><table>
+<thead><tr><th>Post</th><th>Förteckning</th><th>Utfört</th><th>Ändring</th><th>Värde</th><th>À-pris gäller?</th></tr></thead>
+<tbody>
+<tr><td>Golv, 450 kr/m²</td><td>300 m²</td><td>330 m²</td><td>+10 %</td><td>13 500 kr</td><td>Ja, under 25 %</td></tr>
+<tr><td>Golv, 450 kr/m²</td><td>300 m²</td><td>390 m²</td><td>+30 %</td><td>40 500 kr</td><td>Kan omförhandlas</td></tr>
+<tr><td>Sockel, 95 kr/m</td><td>200 m</td><td>280 m</td><td>+40 %</td><td>7 600 kr</td><td>Ja, under 12 000 kr</td></tr>
+</tbody>
+</table></div>
+<p>À-priset gäller inte heller för arbete som tillkommer eller utgår under andra förutsättningar än dem priset bygger på, om kostnaderna påverkas. Enligt Liman räcker då inte subjektiva antaganden, utan förutsättningarna ska vara objektiva och förankrade i avtalet.</p>
 
-<h2>Vanliga misstag som kostar dig jobbet</h2>
-<ul>
-<li><strong>Streckposter på för hög kodnivå.</strong> Beställare som anger otillåtna streckposter (tre eller fyra streck) tvingar anbudsgivare till spekulativ prissättning. Begär förtydligande i stället för att chansa.</li>
-<li><strong>Tomma poster.</strong> Poster utan pris blir nollposter – du riskerar att utföra arbetet utan ersättning.</li>
-<li><strong>À-priser som inte täcker allt.</strong> Glömmer du leverans, montage eller påslag urholkas marginalen på varje enhet.</li>
-<li><strong>Ingen koppling mellan mängdförteckning och kalkyl.</strong> Utan spårbarhet vet du inte var jobbet gick plus eller minus.</li>
-<li><strong>Fel avtalsform.</strong> Mängdkontrakt på en totalentreprenad med oklar utformning skapar tvister om fiktiva mängder.</li>
-</ul>
-
-<h2>Så gör du i ByggExp</h2>
-<p>I ByggExp bygger du din prissatta mängdförteckning post för post och tar den vidare till ett färdigt anbud utan att skriva om allt på nytt. Du sätter enhet, mängd, à-pris och summa per rad, och totalsumman räknas automatiskt. Ytor och mängder kan du ta fram med kalkylverktygen och föra in direkt, så att samma poster följer med hela vägen från kalkyl till offert. Det ersätter inte din branschkunskap om AMA och MER – men det tar bort dubbelarbetet och räknefelen mellan underlag, kalkyl och anbud.</p>
+<h2>Är en ändrad mängd ett ÄTA-arbete?</h2>
+<p>AB 04 ger inget entydigt svar. I Svea hovrätts mål T 15105-22, refererat av <a href="https://kilpatrick.se/vad-avses-med-uppgift-i-ab-04-och-ar-mangdforandringar-ett-ata-arbete/" target="_blank" rel="noopener noreferrer">Kilpatrick</a>, var avtalet fast pris med prissatt mängdförteckning. Förteckningen angav 100 m², medan entreprenören hävdade att knappt 4 000 m² hade utförts. Hovrätten ansåg att merarbetet var kontraktsarbete och inte ett ÄTA-arbete som behövde beställas. Hur mycket mängden ökat var inte avgörande. Entreprenören fick ändå inte betalt, eftersom den större mängden inte var bevisad: mätfilen var osäker och mätteknikern hördes inte. Domen hade överklagats till Högsta domstolen när artikeln skrevs.</p>
+<p>Lärdomen är praktisk. Mät upp och dokumentera regleringsposterna löpande, gärna gemensamt med beställaren. Arbete som verkligen är nytt och saknar post hanteras som ÄTA, se <a href="/sv/blog/ata-hantering-mall">ÄTA-hantering</a>.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Vad kostar det att göra en mängdförteckning?</h3>
-<p>Själva mallen kostar ingenting – du kan använda vår offertmall gratis. Kostnaden ligger i den tid det tar att mäta mängder och sätta korrekta à-priser. Ju bättre underlag och verktyg, desto snabbare går det och desto mindre risk för dyra räknefel.</p>
-<h3>Måste jag följa AMA och MER?</h3>
-<p>Det beror på förfrågan. När beställaren hänvisar till AMA och MER i handlingarna gäller de reglerna för hur poster kodas, mäts och ersätts, och då ska din prissatta förteckning följa samma struktur. Även utan formell koppling är AMA-rubriker en bra ordning att bygga posterna efter.</p>
-<h3>Vad är skillnaden mellan mängdförteckning och kalkyl?</h3>
-<p>Kalkylen är din interna beräkning av vad jobbet kostar dig – material, timmar, UE och påslag. Mängdförteckningen är det formaliserade dokumentet, ofta enligt beställarens mall, med poster och à-priser som lämnas in som anbud. De ska hänga ihop, men mängdförteckningen är den utåtriktade handlingen.</p>
-<h3>Vem ansvarar för felaktiga mängder?</h3>
-<p>I en oprissatt förteckning som beställaren tagit fram är det beställaren som svarar för de angivna mängderna, och avvikelser hanteras som mängdreglering efter faktiskt uppmätt mängd. Därför är à-priset så viktigt: det håller inom ±25 %-ramen även om den verkliga mängden skiljer sig från den angivna.</p>
-
-<h2>Kom igång</h2>
-<p>Sätt upp din prissatta mängdförteckning i <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a> och räkna fram ytorna med <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeterkalkylatorn</a>. Vill du se hela flödet från mängder till färdigt anbud i ett verktyg? <a href="/sv/contact">Boka en demo</a> så visar vi hur det fungerar för just din verksamhet.</p>
-<p>Relaterat: <a href="/sv/blog/skriva-offert">Skriva offert – så gör du</a> och <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>.</p>
+<h3>Vad är en mängdförteckning?</h3>
+<p>Det är en förteckning över mängder av skilda slag, med eller utan beskrivning av utförande, funktion eller kvalitet. Den är ordnad efter koder och rubriker som bygger på BSAB 96, och i en utförandeentreprenad är den ofta grunden för anbudet.</p>
+<h3>Vad är en prissatt mängdförteckning?</h3>
+<p>Det är mängdförteckningen med anbudsgivarens à-priser och belopp ifyllda. I AB 04 jämställs den med à-prislista och har plats 7 i rangordningen, före den oprissatta förteckningen på plats 10.</p>
+<h3>Vad betyder mängda?</h3>
+<p>Att mängda är att ta fram mängder, som m², m och antal, ur ritningar, beskrivningar eller en modell, post för post. Varje mängd bör ha sin uträkning sparad.</p>
+<h3>Vad betyder R och OR i en mängdförteckning?</h3>
+<p>R står för reglerbar mängd, som regleras efter uppmätning av utfört arbete. OR står för oreglerbar mängd, där omfattningen bestäms i förväg och ingen uppmätning görs.</p>
+<h3>Vad händer om en mängd saknas i mängdförteckningen?</h3>
+<p>Har mängduppgiften för en post utelämnats, och underlaget inte tydligt hänvisar någon annanstans, ska mängden normalt anses vara noll enligt AB 04 kapitel 1 § 3. Ställ en fråga under anbudstiden hellre än att räkna in en egen mängd.</p>
+<h3>Hur mycket får mängden ändras innan à-priset kan omförhandlas?</h3>
+<p>Enligt AB 04 kapitel 6 § 6 gäller à-priset vid upp till 25 procents ändring och alltid upp till ett värde av 0,5 procent av kontraktssumman. Båda gränserna måste passeras innan en part kan kräva ett nytt à-pris.</p>
 `.trim();
 
 const MANGD: BlogPost = {
   _id: "code-"+"mangdforteckning-bygg",
-  title: "Mängdförteckning bygg – så gör du en mall som vinner jobbet",
+  title: "Mängdförteckning i bygg – så fungerar den i anbud och reglering",
   slug: "mangdforteckning-bygg",
   locale: "sv",
-  excerpt: "En praktisk genomgång av mängdförteckningen – från oprissatt underlag till prissatt anbud, med mall, kolumnstruktur och kopplingen till kalkyl och offert.",
+  excerpt: "Vad en mängdförteckning är enligt AB 04, hur den hänger ihop med AMA, MER och BSAB-koder, vad R, OR och nollmängder betyder och när ett à-pris får omförhandlas – med mängdningsexempel.",
   tag: "Byggkalkyl",
   coverImageUrl: "/landing/verktyg/offert-preview.webp",
   contentHtml: MANGD_HTML,
-  seoTitle: "Mängdförteckning mall bygg | ByggExp",
-  seoDescription: "Så gör du en oprissatt och prissatt mängdförteckning post för post – med mall, kolumner, à-priser och kopplingen till kalkyl och offert.",
+  seoTitle: "Mängdförteckning bygg: AB 04, AMA och à-priser | ByggExp",
+  seoDescription: "Vad en mängdförteckning är, prissatt eller inte, rangordning i AB 04, R/OR-poster, hur du mängdar från ritning och när à-priset gäller vid ändrade mängder.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/offert-preview.webp`,
   canonicalUrl: "",
   noIndex: false,
   isPublished: true,
   publishedAt: "2026-08-18T11:30:00.000Z",
   createdAt: "2026-08-18T11:30:00.000Z",
-  updatedAt: "2026-08-18T11:30:00.000Z",
+  updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_SPILLPROCENT_BYGG_MATERIAL_HTML = `
@@ -661,97 +700,87 @@ const A_ARMERING_BERAKNING_PLATTA_GRUND: BlogPost = {
 };
 
 const A_PUTS_MURBRUK_ATGANG_FASAD_HTML = `
-<p>Materialåtgången per m² avgör marginalen i ett putsanbud. Bruk är billigt per säck men tungt i volym, och skillnaden mellan 25 och 40 kg torrbruk per m² fasad blir snabbt tusenlappar på ett par hundra kvadratmeter. Räknar du för lågt äter du upp vinsten när pallarna tar slut mitt i jobbet. Räknar du för högt lägger du ett anbud som konkurrenten slår. Nyckeln till en korrekt <strong>putsåtgång fasad beräkning</strong> är att bygga upp åtgången skikt för skikt, ta rätt siffra från produktbladet och lägga på realistiskt spill.</p>
+<p>Putsåtgången räknar du skikt för skikt: tjockleken i mm gånger produktens åtgång per mm och m². För vanligt grovputsbruk med 0–3 mm sand ligger det på 1,8–2,0 kg torrbruk per mm och m², så 12 mm grovputs drar 22–24 kg/m². Grundning och ytputs kommer ovanpå, och säckstorleken skiljer mellan tillverkare – 20 eller 25 kg – vilket ändrar antalet säckar med en fjärdedel.</p>
 
-<p>Börja med att mäta upp fasadytan exakt – dra av öppningar men lägg till laibningar och smygar – med vår gratis <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylator -&gt;</a> innan du räknar åtgången per m².</p>
+<h2>Åtgång per skikt i en tjockputs på murverk</h2>
+<p>En tjockputs på tegel, lättklinker eller betonghålsten består normalt av tre skikt: grundning, grovputs (utstockning) och ytputs. Siffrorna nedan kommer från <a href="https://www.finja.se/hjalp-putsning-dok" target="_blank" rel="noopener noreferrer">Finjas vägledning Hjälp vid putsning (jan 2026)</a> och respektive produktblad.</p>
+<div class="article-table"><table>
+<thead><tr><th>Skikt</th><th>Tjocklek</th><th>Åtgång torrbruk</th><th>Kg per mm och m²</th></tr></thead>
+<tbody>
+<tr><td>Grundning (vällingkonsistens)</td><td>3–4 mm</td><td>ca 5 kg/m²</td><td>1,8</td></tr>
+<tr><td>Grovputs/stockningsbruk, 0–3 mm</td><td>10–15 mm</td><td>ca 18–20 kg/m² per 10 mm</td><td>1,8–2,0</td></tr>
+<tr><td>Filtningsbruk, 0–1 mm</td><td>5 mm</td><td>ca 9 kg/m²</td><td>1,8</td></tr>
+<tr><td>Ytputs/ädelputs</td><td>beror på struktur</td><td>ca 4–25 kg/m²</td><td>–</td></tr>
+</tbody>
+</table></div>
+<p>Weber anger samma storleksordning för sina bruk. <a href="https://bygma.se/globalassets/produkter/10-byggmaterial/101-cement-bruk--putssystem/10108-putsbruk/p610050867/610050867_PB1.pdf" target="_blank" rel="noopener noreferrer">weberbase 130 lättbetongputs B</a> drar 20 kg/m² vid 10 mm, med högst 10 mm per påslag, och <a href="https://media.derome.se/medias/docus/99/$v2/PDS-SE-weber_cementbruk_a.pdf" target="_blank" rel="noopener noreferrer">weber cementbruk A</a> cirka 10 kg/m² vid 5 mm. Båda säljs i 20 kg säck, medan Finjas bruk normalt säljs i 25 kg säck.</p>
+<p>Ytputsens spann är så stort att du inte kan räkna med ett schablonvärde. En fin stänkputs och en grov ädelputs kan skilja flera gånger i kg per m² – ta siffran ur produktbladet för exakt den kornstorlek och struktur som står i beskrivningen.</p>
 
-<h2>Grundformeln: kg torrbruk per mm och m²</h2>
-<p>Putsbruk har en bulkdensitet på ungefär 1600–1800 kg/m³. Det ger en tumregel på cirka <strong>1,8 kg torrbruk per mm skikttjocklek och m²</strong> – alltså runt 18–20 kg/m² per centimeter. Finja grundningsbruk A anges till just ~1,8 kg/mm/m².</p>
-<p>Men tumregeln är bara en utgångspunkt. Lätt- och fiberbaserade produkter kan ligga så lågt som 0,9–1,4 kg/mm/m². Ta därför alltid den exakta åtgången från produktbladet för det bruk du faktiskt lägger i anbudet. Formeln är enkel: <em>skikttjocklek (mm) × åtgång (kg/mm/m²) = kg/m² för det skiktet</em>.</p>
-
-<h2>Skikt för skikt i ett tjockputssystem</h2>
-<p>Ett fullständigt tjockputssystem består av tre skikt, och du måste summera åtgången för vart och ett:</p>
+<h2>Vilket bruk i vilket skikt?</h2>
+<p>Grundregeln är att det starkaste skiktet ligger innerst och de svagare längre ut. Finja rekommenderar till exempel:</p>
 <ul>
-<li><strong>Grundning/slamning</strong> (t.ex. Grundningsbruk A) för vidhäftning mellan underlag och puts: cirka <strong>5 kg/m²</strong> i slamkonsistens, oftast 3–4 mm.</li>
-<li><strong>Utstockning/grovputs</strong> (Puts- &amp; Murbruk C) läggs 10–15 mm, i vissa system upp till ~20 mm närmast isolering. Vid ~1,8 kg/mm/m² blir det <strong>≈18–27 kg/m²</strong> bara för detta skikt.</li>
-<li><strong>Ytputs/ädelputs/stänkputs</strong> varierar kraftigt: <strong>4–25 kg/m²</strong> beroende på kornstorlek och ytstruktur. Grövre struktur och större korn drar mer material.</li>
+<li><strong>Tegel och betonghålsten:</strong> Grundningsbruk A och därefter putsbruk B eller C. Nät vid utsatta ställen.</li>
+<li><strong>Lättklinker:</strong> Grundningsbruk A och putsbruk B eller C, med nät enligt arbetsanvisningen.</li>
+<li><strong>Betong:</strong> glasfiberbruk A, helnätat, eftersom betong har dålig vidhäftning.</li>
+<li><strong>Socklar och ytor under mark:</strong> cementbruk A.</li>
+<li><strong>Gammal oorganisk puts:</strong> nät över hela fasaden, sedan till exempel 10 mm putsbruk B som grundning och 10 mm putsbruk C som utstockning.</li>
 </ul>
-<p>Summerar du skikten landar en typisk tjockputsfasad på ungefär <strong>25–40 kg/m²</strong> totalt, beroende på valda tjocklekar och finish.</p>
+<p>Det sista fallet betyder dubbelt så mycket bruk per m² som en vanlig grundning. Renoverar du en gammal fasad blir åtgången därför betydligt högre än på nytt murverk med samma ytputs.</p>
 
-<h2>Tunnputs eller tjockputs – stor skillnad i åtgång</h2>
-<p>Åtgången hänger helt på systemvalet. <strong>Tjockputs</strong> läggs på murverk (tegel, block, betong) och drar mest bruk – de 25–40 kg/m² ovan. <strong>Tunnputs</strong> läggs på EPS eller mineralull i ett putsat fasadisoleringssystem och använder betydligt mindre material per m², eftersom armering och tunna skikt ersätter den tjocka utstockningen. När du prisar ett jobb måste du veta vilket system som gäller innan du sätter en kg-siffra – de går inte att jämföra rakt av.</p>
+<h2>Räkneexempel: 150 m² fasad i tre skikt</h2>
+<p>Exemplet gäller en tegelfasad med 150 m² nettoyta efter avdrag för öppningar. Grovputsen läggs 12 mm och räknas med 2,0 kg per mm och m² för marginal. Ytputsen antas här vara 8 kg/m² – byt mot värdet i produktbladet för den ytputs du väljer. Spillet är satt till 10 % – vill du pröva andra påslag kan du räkna om mängderna i <a href="/sv/verktyg/spillprocent-kalkylator">spillprocent-kalkylatorn</a>.</p>
+<div class="article-table"><table>
+<thead><tr><th>Skikt</th><th>Uträkning</th><th>Torrbruk inkl. spill</th><th>Säckar à 25 kg</th></tr></thead>
+<tbody>
+<tr><td>Grundning</td><td>150 × 5 × 1,10</td><td>825 kg</td><td>33</td></tr>
+<tr><td>Grovputs 12 mm</td><td>150 × 24 × 1,10</td><td>3 960 kg</td><td>159</td></tr>
+<tr><td>Ytputs</td><td>150 × 8 × 1,10</td><td>1 320 kg</td><td>53</td></tr>
+<tr><td>Summa</td><td></td><td>6 105 kg</td><td>245</td></tr>
+</tbody>
+</table></div>
+<p>Med ett bruk i 20 kg säck behövs 198 säckar bara för grovputsen. Vid de här mängderna är storsäck på 1 000 kg ofta enklare: grovputsen ryms i fyra storsäckar. Skikten blir gärna egna rader i <a href="/sv/blog/mangdforteckning-bygg">mängdförteckningen</a>, så att det syns vad som är grundning, grovputs och ytputs. Ytan mäter du upp i <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a>, och hur stort spillpåslag som är rimligt för olika material går vi igenom i guiden om <a href="/sv/blog/spillprocent-bygg-material">spillprocent</a>.</p>
 
-<h2>Murbruksåtgång vid tegel- och blockfasad</h2>
-<p>Murar du i stället för att putsa gäller andra tal. För en standardtegelvägg (tegel 250×120×65 mm) går det åt cirka <strong>0,04 m³ murbruk per m²</strong> vägg, vilket motsvarar ungefär <strong>64–72 kg/m²</strong> i vikt. Fogtjockleken styr: tunnare fogar ger fler tegel och mindre bruk, tjockare fogar tvärtom.</p>
-<p>För tegelmängden räknar standardfasadtegel (228×108×54 mm, 12 mm fog) till <strong>63 st/m²</strong> – men lägg anbudet på <strong>66 st/m²</strong> för att täcka kap och hanteringsspill. Samma logik för bruket: lägg på 10–15 % marginal.</p>
+<h2>Murbruk per m² vid murning av tegel och block</h2>
+<p>Vid murning beror åtgången på stenformat, fogtjocklek och väggtjocklek. <a href="https://www.finja.se/storage/ma/3c17be880fc4424aa940a6e8ea9c05e2/321d1602b00a4dc98fbfeeafc4968abc/pdf/615152986F0AA97224764E6EBB1434F4FC0460BB/F%C3%A4rgat%20Murbruk%20M5_84_PB_sv.pdf" target="_blank" rel="noopener noreferrer">Finjas produktblad för Färgat Murbruk</a> anger:</p>
+<div class="article-table"><table>
+<thead><tr><th>Murverk</th><th>Murbruk per m² vägg</th></tr></thead>
+<tbody>
+<tr><td>Håltegel, svenskt format</td><td>ca 70 kg</td></tr>
+<tr><td>Massivtegel, svenskt format</td><td>ca 65 kg</td></tr>
+<tr><td>Håltegel, danskt format</td><td>ca 65 kg</td></tr>
+<tr><td>Massivtegel, danskt format</td><td>ca 60 kg</td></tr>
+<tr><td>Beklädnadstegel</td><td>ca 45 kg</td></tr>
+<tr><td>LECA isoblock FIN 380 (10 block/m²)</td><td>16 kg</td></tr>
+</tbody>
+</table></div>
+<p>Blockvärdet kommer från <a href="https://benders.se/globalassets/c4-assets/document/PB-SE-LECA-Isoblock-FIN-380--2026-4610005.pdf" target="_blank" rel="noopener noreferrer">Benders produktblad för LECA isoblock FIN 380</a>. Stora block med tunnare fogar drar alltså en bråkdel av vad tegel gör per m² vägg. Rekommenderad fogtjocklek för Finjas färgade murbruk är 8–12 mm.</p>
+<p>Vill du räkna i liter: en 25 kg säck <a href="https://media.derome.se/medias/docus/62/10152927.pdf" target="_blank" rel="noopener noreferrer">Finja Murbruk B</a> ger cirka 16 liter färdigt bruk, alltså ungefär 1,5 kg torrbruk per liter. 70 kg/m² motsvarar därmed cirka 45 liter färdigt bruk per m² tegelvägg.</p>
+<p><strong>Exempel:</strong> 40 m² fasad i håltegel av svenskt format ger 40 × 70 = 2 800 kg murbruk, med 10 % spill 3 080 kg – 124 säckar à 25 kg eller drygt tre storsäckar. Kontrollera vilka förpackningar bruket finns i: Finjas Färgat Murbruk M5 levereras till exempel bara i storsäck och bulk.</p>
 
-<h2>Räkna spill rätt</h2>
-<p>Teoretisk åtgång är aldrig verklig åtgång. Lägg på <strong>10–15 % spill</strong> på både bruk och tegel, och tänk på att spillet uppstår på flera ställen:</p>
-<ul>
-<li>Pump- och blandningssvinn – bruk som stannar i slang, blandare och hink.</li>
-<li>Kallgränser och stopp där material härdar innan det används.</li>
-<li>Spill vid kap, hörn och komplicerad geometri.</li>
-<li>Säck- och pallavrundning – torrbruk säljs i 25 kg-säck och per pall, så du betalar för hela pallar oavsett vad du förbrukar.</li>
-</ul>
-<p>Vill du sätta en genomtänkt spillfaktor för olika material har vi en genomgång i artikeln om <a href="/sv/blog/spillprocent-bygg-material">spillprocent i byggmaterial</a>.</p>
-
-<h2>Från åtgång till säckar och kronor</h2>
-<p>När du har åtgången per m² är säckantalet ren aritmetik: <em>area × kg/m² × spillfaktor ÷ 25</em>, avrundat uppåt per pall.</p>
-<p>Räkneexempel för en <strong>150 m² tjockputsfasad</strong> med total åtgång 30 kg/m²:</p>
-<ol>
-<li>150 m² × 30 kg/m² = 4 500 kg teoretisk åtgång.</li>
-<li>Spillpåslag 12 %: 4 500 × 1,12 = 5 040 kg.</li>
-<li>5 040 ÷ 25 = 201,6 säckar → avrunda till <strong>202 säckar</strong>, sedan uppåt till hel pall.</li>
-</ol>
-<p>Tillverkarnas mängdberäknare (Finja Produktväljare, Weber, XL-Bygg) gör samma sak från area och tjocklek och ger säckar och pallar direkt. Ska du även prisa fasadfärg efter putsen räknar du åtgången per liter med vår <a href="/sv/verktyg/farg-kalkylator">färg-kalkylator</a>.</p>
-
-<h2>Rätt bruk mot underlaget</h2>
-<p>Åtgången är meningslös om bruket är fel. <strong>Cementbruk (A)</strong> är starkt och snabbt men styvt och spricker på tegel och trä. <strong>KC-bruk/kalkcementbruk (B)</strong> är det vanligaste valet idag. <strong>Ren kalkbruk (K/E)</strong> är mjukt och rörligt. Grundregeln: lägg aldrig ett starkare bruk över ett svagare original – KC över ren kalk spricker. Detta påverkar både vilken produkt du prisar och hur mycket du behöver av den.</p>
-
-<h2>Moms och ROT i anbudet</h2>
-<p>Åtgången ger materialkostnaden, men anbudets slutsiffra beror på momsupplägget:</p>
-<ul>
-<li><strong>B2B mot annat byggföretag:</strong> omvänd skattskyldighet gäller för byggtjänster inklusive putsarbeten. Fakturan bär <strong>ingen moms</strong>, måste märkas &quot;Omvänd skattskyldighet för byggtjänster gäller&quot; och innehålla köparens momsregistreringsnummer. Köparen redovisar momsen.</li>
-<li><strong>Privatkund:</strong> putsarbete som del av fasadrenovering är ROT-godkänt. ROT-avdraget 2026 är <strong>30 % av arbetskostnaden</strong> – aldrig material, resa eller admin – med tak 50 000 kr per person och år. Från 2026 gäller ett gemensamt ROT+RUT-tak på <strong>75 000 kr</strong> per person och år. Arbete och material ska specificeras var för sig på fakturan, och du måste ha F-skatt.</li>
-</ul>
-<p>Standardmomsen är annars 25 %. Spara underlagen i minst 7 år.</p>
-
-<h2>Checklista innan du lämnar anbud</h2>
-<ul>
-<li>Rätt bruk mot underlaget – inget starkare över svagare.</li>
-<li>Kontrollmätt area inklusive laibningar och avdrag för öppningar.</li>
-<li>Åtgång per m² hämtad från produktbladet, skikt för skikt.</li>
-<li>Spillpåslag 10–15 % samt säck- och pallavrundning.</li>
-<li>Momsupplägg fastställt: omvänd byggmoms eller ROT.</li>
-</ul>
-
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp samlar underlaget så att åtgången inte blir en gissning. Du mäter fasadytan, för in åtgång per m² och spillfaktor och får materialmängden i säckar och kronor – samma logik som en mängdförteckning, kopplad till anbudet. Verktygen räknar, men den slutliga åtgången ska alltid stämmas av mot produktbladet för det bruk du valt; ByggExp ersätter inte tillverkarens datablad utan gör det snabbare att omsätta det till ett anbud.</p>
+<h2>Tunnputs på fasadisolering</h2>
+<p>På ett putsat fasadisoleringssystem (puts på cellplast eller mineralull) används armeringsbruk med nät och en tunn ytputs i stället för grovputs. Åtgången per m² blir mycket lägre än för en tjockputs, men skikten, tjocklekarna och produkterna är bundna till systemet. Räkna därför med siffrorna i systemleverantörens anvisning och inte med tabellen ovan – bruk från olika system ska inte blandas.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Hur mycket putsbruk går det åt per m² fasad?</h3>
-<p>Tumregeln är cirka 1,8 kg torrbruk per mm skikt och m². Ett fullständigt tjockputssystem landar totalt på ungefär 25–40 kg/m² beroende på tjocklek och finish. Ta alltid exakt åtgång från produktbladet.</p>
-<h3>Hur mycket murbruk behövs för en tegelvägg?</h3>
-<p>För standardtegel går det åt cirka 0,04 m³ per m² vägg, ungefär 64–72 kg/m² i vikt. Fogtjockleken avgör – tunnare fogar ger mindre bruk och fler tegel.</p>
-<h3>Hur mycket spill ska jag räkna med?</h3>
-<p>Lägg på 10–15 % på både bruk och tegel för pump- och blandningssvinn, kap och hantering. Räkna dessutom uppåt till hel säck och pall, eftersom torrbruk säljs i 25 kg-säck.</p>
-<h3>Får jag ROT-avdrag på putsarbete?</h3>
-<p>Ja, putsarbete som del av fasadrenovering är ROT-godkänt när kunden är privatperson på en befintlig bostad och du har F-skatt. Avdraget är 30 % av arbetskostnaden, max 50 000 kr per person och år. Material ger aldrig ROT.</p>
-
-<h2>Kom igång</h2>
-<p>Mät fasaden och räkna åtgången med vår <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylator</a>, och sätt ett anbud där marginalen håller. Vill du se hur åtgång, spill och moms hänger ihop i ett komplett anbud – <a href="/sv/contact">boka en demo</a> så visar vi upplägget.</p>
-
-<p>Relaterat: <a href="/sv/blog/spillprocent-bygg-material">Spillprocent i byggmaterial</a>, <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>, <a href="/sv/blog/mangdforteckning-bygg">Mängdförteckning i bygg</a>.</p>
+<h3>Hur mycket putsbruk går det åt per m²?</h3>
+<p>För grovputs med 0–3 mm sand cirka 18–20 kg torrbruk per m² och 10 mm skikt, alltså 1,8–2,0 kg per mm. Grundning drar cirka 5 kg/m² och ytputs 4–25 kg/m² beroende på struktur.</p>
+<h3>Hur mycket murbruk går det åt till en tegelvägg?</h3>
+<p>Enligt Finja cirka 70 kg torrbruk per m² för håltegel i svenskt format, 65 kg för massivtegel i svenskt format och 60–65 kg för danskt format. Det motsvarar knappt tre 25 kg säckar per m² halvstensvägg.</p>
+<h3>Hur många säckar puts behöver jag?</h3>
+<p>Multiplicera ytan med åtgången per m² för varje skikt, lägg på spill och dela med säckvikten. 100 m² grovputs i 10 mm med 20 kg/m² och 10 % spill blir 2 200 kg, alltså 88 säckar à 25 kg eller 110 säckar à 20 kg.</p>
+<h3>Hur tjockt ska grovputsen läggas?</h3>
+<p>Finja anger 10–15 mm för grovputsen. Vissa produkter har en högsta tjocklek per påslag, till exempel 10 mm för weberbase 130 lättbetongputs B, så tjockare puts får läggas i flera påslag.</p>
+<h3>Hur mycket ger en säck murbruk?</h3>
+<p>En 25 kg säck Finja Murbruk B blandad med cirka 4 liter vatten ger ungefär 16 liter färdigt bruk.</p>
 `;
 
 const A_PUTS_MURBRUK_ATGANG_FASAD: BlogPost = {
   _id: "code-"+"puts-murbruk-atgang-fasad",
-  title: "Putsåtgång fasad – räkna puts- och murbruksåtgång per m² för anbudet", slug: "puts-murbruk-atgang-fasad", locale: "sv",
-  excerpt: "Räkna puts- och murbruksåtgång per m² fasad inklusive spill så att marginalen håller hela vägen till färdigt anbud.", tag: "Kalkyl",
+  title: "Putsåtgång fasad – puts- och murbruk per m²", slug: "puts-murbruk-atgang-fasad", locale: "sv",
+  excerpt: "Åtgång av grundning, grovputs och ytputs per m² och mm enligt tillverkarnas produktblad, murbruk per m² tegel och block, och ett räkneexempel med säckar.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/betong-preview.webp", contentHtml: A_PUTS_MURBRUK_ATGANG_FASAD_HTML,
-  seoTitle: "Putsåtgång fasad – beräkning | ByggExp", seoDescription: "Så beräknar du putsåtgång per m² fasad inklusive spill – grundformeln, skikt för skikt, murbruk vid tegel, säckantal och moms i anbudet.",
+  seoTitle: "Putsåtgång och murbruk per m² – räkna säckar | ByggExp", seoDescription: "Putsbruk drar 1,8–2,0 kg per mm och m². Åtgång per skikt, murbruk per m² tegel och block, och räkneexempel för 150 m² fasad med antal säckar.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/betong-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T13:18:00.000Z", createdAt: "2026-08-19T13:18:00.000Z", updatedAt: "2026-08-19T13:18:00.000Z",
+  publishedAt: "2026-08-19T13:18:00.000Z", createdAt: "2026-08-19T13:18:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_SPACKEL_ATGANG_VAGG_TAK_HTML = `
@@ -841,82 +870,124 @@ const A_SPACKEL_ATGANG_VAGG_TAK: BlogPost = {
 };
 
 const A_LAKT_AVSTAND_TAK_BERAKNING_HTML = `
-<p>Ett par millimeter fel i läktavståndet märks inte på första raden — men efter trettio rader har felet vuxit till en hel panna för mycket eller för lite, och då sitter du med en snedställd nockrad eller pannor som inte når hängrännan. Läktavståndet är därför en av de beräkningar där det lönar sig att räkna innan spiken sätts, inte efteråt.</p>
+<p>Läktavståndet räknar du på sträckan mellan nedersta och översta bärläkten, inte på hela takfallet: dela sträckan med tillverkarens största tillåtna läktavstånd för din taklutning, avrunda antalet mellanrum uppåt och dela sträckan igen med det antalet. Då blir alla rader lika och du hamnar alltid under maxvärdet. Det som skiljer sig mellan materialen är var gränserna ligger – betongpannor har ett intervall som beror på lutningen, lertegel har ofta ett fast mått och plåt läktas efter pannsteg eller bärighet.</p>
 
-<p>Den här guiden kompletterar din materialkalkyl för taket. Har du inte redan räknat pann- och läktåtgång kan du börja i <a href="/sv/verktyg/tak-kalkylator">vår gratis tak-kalkylator -></a> och sedan använda siffrorna härifrån för att lägga ut läkten rätt.</p>
+<h2>Läktavstånd för betongpannor beroende på taklutning</h2>
+<p>Enligt <a href="https://www.benders.se/globalassets/c4-assets/document/Monteringsanvisning-BETONG-1o2kupig--2023-07-LU-2.pdf" target="_blank" rel="noopener noreferrer">Benders monteringsanvisning för Palema och Exklusiv (2023-07)</a> är minsta läktavstånd 310 mm och största 375 mm. Under 22° ska läktavståndet vara tätare, 310–340 mm, och tätare läktning rekommenderas även i väderutsatta lägen. Pannorna får läggas ned till 14° taklutning, och under 22° ska underlagspappen vara skarvklistrad.</p>
+<div class="article-table"><table>
+<thead><tr><th>Taklutning</th><th>Största läktavstånd</th><th>Pannor per m² (Palema 2-kupig)</th><th>Pannor per m² (Exklusiv 1-kupig)</th></tr></thead>
+<tbody>
+<tr><td>22° och brantare</td><td>375 mm</td><td>8,9</td><td>10,7</td></tr>
+<tr><td>18–21°</td><td>340 mm</td><td>9,8</td><td>11,8</td></tr>
+<tr><td>14–17°</td><td>320 mm</td><td>10,4</td><td>12,4</td></tr>
+<tr><td>Minsta tillåtna, alla lutningar</td><td>310 mm</td><td>10,8</td><td>12,8</td></tr>
+</tbody>
+</table></div>
+<p>Pannor per m² följer direkt av läktavståndet – ju tätare läkt, desto fler pannor. Behöver du antalet pannor till hela taket finns uträkningen i guiden om <a href="/sv/blog/takpannor-antal-per-m2">takpannor per m²</a>.</p>
 
-<h2>Vad är bärläkt, ströläkt och läktavstånd?</h2>
-<p>Ett korrekt uppbyggt tak har flera lager, och ordningen spelar roll för både bärighet och ventilation. Underifrån och upp ser det ut så här:</p>
+<h2>Lertegel: fast läktavstånd i stället för intervall</h2>
+<p>Strängpressat lertegel har ofta ett bestämt mått som inte ska jämkas fram. <a href="https://www.benders.se/globalassets/c4-assets/document/Lertegel-Strangpressat-Hoganas-Sandby-montering-2026-LU.pdf" target="_blank" rel="noopener noreferrer">Benders anvisning för Höganäs och Sandby (2026-05)</a> anger:</p>
 <ul>
-<li><strong>Underlagstak/underlagsduk</strong> — det vattenavvisande skiktet som fångar upp läckvatten och kondens.</li>
-<li><strong>Ströläkt</strong> — läggs i takfallets riktning (lodrätt, uppför taket) ovanpå underlaget. Den bär ingen pannlast utan skapar en dränerad, ventilerad luftspalt så att fukt och vatten kan rinna av.</li>
-<li><strong>Bärläkt</strong> — spikas horisontellt tvärs över ströläkten. Det är på bärläkten pannorna hängs och hela taklasten vilar.</li>
+<li><strong>Höganäs:</strong> 375 mm ±2 mm c/c, för alla taklutningar ned till 18°.</li>
+<li><strong>Sandby:</strong> 330 mm ±2 mm c/c.</li>
+<li>Takfotsläkten ska vara cirka 10 mm högre än övrig bärläkt (för betongpannor är det cirka 20 mm).</li>
+<li>Från takfotsläktens nederkant till nedersta bärläktens överkant: högst 340 mm för Höganäs och 300 mm för Sandby.</li>
 </ul>
-<p>Med <strong>läktavstånd</strong> menas avståndet mellan två intilliggande bärläkt, och det mäts alltid <strong>från överkant till överkant</strong> — inte mellan mitten eller underkanterna. Det är den detaljen som avgör hur mycket varje panna hakar över nästa.</p>
+<p>Eftersom tegel bränns i ugn varierar pannornas längd något. Har du pannorna på plats kan du lägga ut några och kontrollmäta innan du spikar hela takfallet. Går takfallet inte jämnt ut med det fasta måttet justerar man vid takfoten eller kapar översta raden – inte genom att ändra läktavståndet.</p>
 
-<h2>Vad styr läktavståndet?</h2>
-<p>Läktavståndet är inte en fast siffra. Det bestäms av två saker samtidigt: pannans effektiva täckande längd (bygglängd) och takets lutning. Därför anger tillverkaren ett <strong>intervall</strong> med ett min- och ett maxvärde, kopplat till en lutningstabell.</p>
-<p>Principen är enkel: <strong>lägre taklutning kräver kortare läktavstånd</strong>, eftersom pannorna då måste överlappa mer för att hålla tätt. Brantare tak släpper undan vattnet snabbare och tillåter ett längre avstånd. För en vanlig 2-kupig betongpanna (t.ex. Benders Palema med bruttolängd 420 mm) ligger läktavståndet grovt i intervallet <strong>315–375 mm</strong>, med tillverkarens angivna max på 375 mm. Det exakta värdet för just din lutning hittar du i pannans läggningsanvisning.</p>
-
-<h2>Så beräknar du läktavståndet steg för steg</h2>
+<h2>Så räknar du ut läktavståndet steg för steg</h2>
 <ol>
-<li><strong>Mät effektiv taklängd</strong> från takfot till nock längs takfallet.</li>
-<li><strong>Sätt takfot-offset.</strong> Avståndet från takfotens underkant till överkant på den <em>första</em> bärläkten får inte överstiga ca 340 mm för standard 2-kupiga betongpannor. Det placerar bottenraden så att de nedersta pannorna hänger korrekt över hängrännan.</li>
-<li><strong>Dela resterande längd i ett jämnt antal rader</strong> så att varje läktavstånd blir lika stort och hamnar inom tillverkarens min–max-intervall.</li>
-<li><strong>Justera antal rader — inte lutningen — tills avståndet passar.</strong> Översta raden ska sitta strax under nockläkten/nockpannan.</li>
+<li><strong>Bestäm taklutningen.</strong> Mät hur mycket taket stiger på en vågrät meter. Lutningen i grader är arctan(höjning/100) – 45 cm höjning ger 24°, vilket är Benders eget exempel.</li>
+<li><strong>Fäst takfotsläkten</strong> och den nedersta bärläkten. För betongpannor är 340 mm från takfotsläktens underkant till första bärläktens överkant ett universalmått som passar de flesta tak enligt Benders.</li>
+<li><strong>Fäst översta bärläkten</strong> cirka 30 mm under takspetsen och prova att pannans klackar får plats mot nockbrädan.</li>
+<li><strong>Mät sträckan</strong> mellan nedersta och översta bärläkten, ovankant till ovankant.</li>
+<li><strong>Dela med maxvärdet</strong> för din lutning och avrunda uppåt till helt antal mellanrum. Dela sträckan med det antalet – det är ditt läktavstånd.</li>
 </ol>
-<p><strong>Räkneexempel:</strong> Effektiv taklängd 6 000 mm. Dra bort takfot-offset 340 mm och lämna 200 mm ner till nockläkten: 6 000 − 340 − 200 = 5 460 mm kvar att fördela. Med 15 mellanrum blir läktavståndet 5 460 / 15 = 364 mm — inom intervallet 315–375 mm, alltså godkänt. Testar du 14 mellanrum blir det 390 mm, vilket är för mycket. Svaret blir 15 rader. Behöver du samtidigt kontrollera läkt- och reglingsåtgång i löpmeter kan <a href="/sv/verktyg/reglar-kalkylator">reglar-kalkylatorn</a> ta fram virkesmängden.</p>
+<p>Läktavståndet mäts alltid från ovankant till ovankant på bärläkten. Markera gärna läkten med ackumulerade mått från nedersta läkten (359, 719, 1 078 mm och så vidare) i stället för att mäta varje mellanrum för sig, så att små avvikelser inte summeras uppåt i takfallet.</p>
 
-<h2>Dimensioner och kvalitet på läkten</h2>
-<p>Rätt dimension på virket är lika viktig som rätt avstånd — särskilt i snötunga zoner eller vid stort centrumavstånd på takstolarna.</p>
+<h2>Räkneexempel: 5,4 meter takfall med betongpannor</h2>
+<p>Takfallet är 5 400 mm från takfotsläktens underkant till takspetsen, och lutningen är 27°. Pannan är Palema 2-kupig.</p>
+<div class="article-table"><table>
+<thead><tr><th>Steg</th><th>Uträkning</th><th>Resultat</th></tr></thead>
+<tbody>
+<tr><td>Nedersta bärläkt, överkant</td><td>340 mm från takfotsläktens underkant</td><td>340 mm</td></tr>
+<tr><td>Översta bärläkt, överkant</td><td>5 400 − 30</td><td>5 370 mm</td></tr>
+<tr><td>Sträcka att dela</td><td>5 370 − 340</td><td>5 030 mm</td></tr>
+<tr><td>Antal mellanrum vid 27° (max 375 mm)</td><td>5 030 / 375 = 13,4 → avrunda uppåt</td><td>14</td></tr>
+<tr><td>Läktavstånd</td><td>5 030 / 14</td><td>359 mm</td></tr>
+<tr><td>Bärläkt och pannrader</td><td>14 mellanrum + 1</td><td>15 rader</td></tr>
+</tbody>
+</table></div>
+<p>359 mm ligger inom 310–375 mm och fungerar. Hade samma tak haft 18° lutning gäller max 340 mm: 5 030 / 340 = 14,8, alltså 15 mellanrum och 5 030 / 15 = 335 mm, med 16 pannrader. En flackare lutning ger alltså en extra rad pannor och en extra bärläkt på samma takfall.</p>
+
+<h2>Bärläkt och ströläkt: dimensioner och c/c-avstånd</h2>
+<p>För betongpannor och lertegel på traditionellt underlagstak (råspont och papp) anger Benders följande:</p>
+<div class="article-table"><table>
+<thead><tr><th>Läkt</th><th>Dimension</th><th>Avstånd och placering</th></tr></thead>
+<tbody>
+<tr><td>Ströläkt</td><td>25 × 48 mm (±2 mm)</td><td>Längs takfallet, högst 600 mm c/c. Yttersta ströläkten cirka 100 mm från vindskivans insida.</td></tr>
+<tr><td>Bärläkt</td><td>25 × 48 mm (±2 mm)</td><td>Tvärs takfallet enligt läktavståndet. Spikas där den korsar ströläkten.</td></tr>
+<tr><td>Bärläkt på lätt undertak</td><td>45 × 70 mm (±2 mm), dimensionshyvlad</td><td>Vid takstolsavstånd 800–1 200 mm. Ska vara kontinuerlig över minst tre takstolar.</td></tr>
+</tbody>
+</table></div>
+<p>Med takboard eller annat lätt undertak utelämnas ströläkten när bärläkten spikas direkt mot takstolarna. Spänns en duk över takstolarna sätts i stället ströläkt 25 × 48 mm mellan duken och bärläkten. Läktavståndet är detsamma som på råspont och papp. Takstolarnas c/c-avstånd avgör alltså läktdimensionen – mer om det i guiden om <a href="/sv/blog/berakna-takstolar-dimensionering-c-avstand">takstolar och c/c-avstånd</a>.</p>
+
+<h2>Läktavstånd för plåttak och pannplåt</h2>
+<p>På plåttak styrs avståndet av profilen och snölasten, inte av överlappet mellan pannor. Värdena nedan kommer från Plannjas monteringsanvisningar (<a href="https://www.plannja.se/konsument/support/ladda-ner/monteringsanvisning" target="_blank" rel="noopener noreferrer">plannja.se</a>). Andra tillverkares profiler kan ha andra mått.</p>
+
+<h3>Pannplåt följer pannsteget</h3>
+<p>För pannprofilerad plåt ska bärläkten följa plåtens pannsteg. Mått A är avståndet mellan takfotsläkten och andra bärläkten, mått B gäller resten av takfallet.</p>
+<div class="article-table"><table>
+<thead><tr><th>Profil (Plannja)</th><th>Pannsteg = mått B</th><th>Mått A, lätt underlagstak</th><th>Bärläkt, lätt underlagstak</th><th>Minsta lutning</th></tr></thead>
+<tbody>
+<tr><td>Royal</td><td>400 mm</td><td>375 mm (390 med Kombiläkt)</td><td>45 × 70 vid snölast 1,0–2,5, 45 × 95 vid 3,0–4,0</td><td>14°</td></tr>
+<tr><td>Regent</td><td>350 mm</td><td>325 mm (340 med Kombiläkt)</td><td>45 × 70 vid snölast 1,0–2,5, 45 × 95 vid 3,0–4,0</td><td>14°</td></tr>
+</tbody>
+</table></div>
+<p>På underlagstak av träpanel (minst 17 mm) används bärläkt 25 × 50 mm upp till snölast 2,5 och 34 × 70 mm vid snölast 3,0–4,0, med ströläkt 25 × 50 mm c/c 600.</p>
+
+<h3>Trapetsprofil (TP20 och liknande)</h3>
+<p>För trapetsprofiler som Plannja 20-105 och 20-75 på träpanel är bärläktavståndet c/c 500 mm och ströläkten ligger c/c 600 mm. Bärläkten är 25 × 50 mm upp till snölast 2,5 och 34 × 70 mm vid 3,0–4,0. På lätt underlagstak med takstolar c/c 1 200 mm är läkten bärande och avståndet beror på snölasten:</p>
+<div class="article-table"><table>
+<thead><tr><th>Bärläkt</th><th>Snölast 1,0–1,5</th><th>Snölast 2,0–2,5</th><th>Snölast 3,0–4,0</th></tr></thead>
+<tbody>
+<tr><td>Trä 45 × 70</td><td>800 mm</td><td>500 mm</td><td>–</td></tr>
+<tr><td>Trä 45 × 90</td><td>1 000 mm</td><td>700 mm</td><td>500 mm</td></tr>
+</tbody>
+</table></div>
+<p>Tabellen anger största avstånd med hänsyn till läkten. Profilen kan kräva kortare avstånd för att plåten ska tåla last eller gång – Plannja 20-75 i aluminium är till exempel inte gåbar alls vid maximala c/c 500 mm. Bor du på gränsen mellan två snözoner väljer du den högre. Minsta rekommenderade lutning för 20-105 är 5,7°, och mellan 5,7° och 14° ska sid- och ändöverlapp tätas.</p>
+
+<h2>Hur mycket läkt går det åt per m²?</h2>
+<p>Bärläkt i löpmeter per m² takyta är 1 000 delat med läktavståndet i mm. Ströläkt c/c 600 ger 1,67 m per m². För ett takfall på 5,4 × 10 m med läktavståndet 359 mm från exemplet ovan:</p>
 <ul>
-<li><strong>Bärläkt:</strong> standard 25×48 mm sågat virke (kvalitet G4-2 / C-sorterat). Den nedersta fotläkten sätts ofta som 25×38 mm på högkant medan resten ligger plant.</li>
-<li><strong>Ströläkt:</strong> typiskt 25×25 mm eller 25×48 mm, c/c högst 600 mm och som mest 100 mm in från vindskivan vid gaveln.</li>
-<li><strong>Uppgradera</strong> till 34×45 mm eller C24 vid snözon eller långa spännvidder mellan takstolarna.</li>
-<li><strong>Infästning:</strong> ströläkt spikas med varmförzinkad trådspik 2,8×75 mm, bärläkt med 3,4×100 mm.</li>
-<li><strong>Skarvar:</strong> bärläktens skarvar måste alltid landa på en ströläkt eller en stödklots — aldrig fritt spännande.</li>
+<li><strong>Bärläkt:</strong> 15 rader + takfotsläkt = 16 × 10 m = 160 löpmeter.</li>
+<li><strong>Ströläkt:</strong> 100 mm in från varje gavel ger 9 800 mm att fördela, 9 800 / 600 = 16,3 → 17 mellanrum, alltså 18 ströläkt × 5,4 m = cirka 97 löpmeter.</li>
 </ul>
-
-<h2>Läktavstånd för plåttak — helt andra regler</h2>
-<p>För profilerad plåt gäller inte pannans bygglängd. Här styrs läktavståndet av profil, plåttjocklek, snözon och lutning, och läkten dimensioneras efter <strong>bärighet</strong>, inte täckande längd:</p>
-<ul>
-<li><strong>TRP/pannplåt:</strong> normalt c/c 400–600 mm; TP20 upp till ca 600 mm.</li>
-<li><strong>Tegelprofilerad plåt:</strong> läktas i takt med att profilen "trappar", oftast 350 eller 400 mm.</li>
-<li><strong>Klickfals/bandtäckning:</strong> tätare, högst c/c 300 mm.</li>
-</ul>
-<p>Kontrollera alltid mot plåtprofilens monteringsanvisning — värdena varierar mellan tillverkare och profiler.</p>
-
-<h2>Följ alltid tillverkarens monteringsanvisning</h2>
-<p>Läktavstånd är ett bygg­tekniskt ämne, inte ett regulatoriskt. Det finns inga Skatteverkets- eller branschregler som sätter avståndet. Det bindande dokumentet för en fackmässig läggning är <strong>tillverkarens läggnings-/monteringsanvisning</strong>. Boverkets konstruktionsregler BFS 2024:6 (som ersatte EKS 1 juli 2025) styr snö- och vindlaster på takkonstruktionen generellt — alltså dimension och infästning — men inte själva läktavståndet.</p>
-<p>Tänk också på minsta taklutning: för betong- och tegelpannor är den satt av tillverkaren och ligger typiskt vid minst 14° på ett hel­täckt, vattentätt underlagstak. Under den angivna minimigränsen blir pannorna inte täta oavsett hur kort läktavstånd du väljer. Verifiera det exakta värdet mot vald pannas datablad.</p>
-
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp kopplar ihop takberäkningen med resten av jobbet. Du lägger in takets mått och lutning i tak-kalkylatorn, får fram pann- och läktåtgång, och kan föra över materiallistan direkt till offert och inköp utan att skriva om siffrorna. Själva läktavståndet räknar du enligt stegen ovan mot vald pannas intervall — verktyget hjälper dig med mängderna och att hålla ihop kalkylen, men ersätter inte tillverkarens anvisning. Allt sparas på projektet så att kalkyl, offert och underlag finns samlat om något ska styrkas i efterhand.</p>
+<p>Lägg till skarvar och kap innan du beställer. Övriga mängder för taket kan du ta fram i <a href="/sv/verktyg/tak-kalkylator">tak-kalkylatorn</a> och i guiden om <a href="/sv/blog/berakna-materialatgang-tak">materialåtgång för tak</a>.</p>
 
 <h2>Vanliga frågor</h2>
-<h3>Hur mäts läktavståndet — mitt på läkten eller på kanten?</h3>
-<p>Alltid från överkant på en bärläkt till överkant på nästa. Mäter du från mitten eller underkanten blir raderna successivt fel eftersom läktens tjocklek då räknas fel varje rad.</p>
-<h3>Varför får jag ett intervall och inte en exakt siffra från tillverkaren?</h3>
-<p>Därför att rätt läktavstånd beror på takets lutning. Lägre lutning kräver kortare avstånd och mer överlapp för att hålla tätt, brantare tak tillåter längre avstånd. Intervallet, t.ex. 315–375 mm för en 2-kupig betongpanna, hör ihop med en lutningstabell i läggningsanvisningen.</p>
-<h3>Kan jag använda samma läktavstånd på ett plåttak?</h3>
-<p>Nej. Plåt läktas efter bärighet — profil, plåttjocklek och snözon — inte efter pannlängd. Profilerad plåt ligger normalt på c/c 400–600 mm, medan klickfals kräver högst 300 mm. Följ plåtprofilens egen anvisning.</p>
-<h3>Vad händer om läktavståndet blir några millimeter fel?</h3>
-<p>Felet ackumuleras rad för rad. Efter hela takfallet kan det motsvara en hel panna för mycket eller för lite, vilket ger en sned nockrad eller pannor som inte överlappar rätt. Därför delar man taklängden i ett jämnt antal lika rader från början.</p>
-
-<h2>Kom igång</h2>
-<p>Räkna fram takets material och läktåtgång i <a href="/sv/verktyg/tak-kalkylator">tak-kalkylatorn</a>, och kontrollera virkesmängden med <a href="/sv/verktyg/reglar-kalkylator">reglar-kalkylatorn</a>. Vill du se hur kalkyl, offert och materiallista hänger ihop i ett projekt? <a href="/sv/contact">Boka en demo här -></a>.</p>
-
-<p>Relaterat: <a href="/sv/blog/berakna-materialatgang-tak">Beräkna materialåtgång för tak</a> och <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>.</p>
+<h3>Vilket läktavstånd har betongpannor?</h3>
+<p>För Benders betongpannor 310–375 mm. Vid 22° och brantare får du gå upp till 375 mm, vid 18–21° högst 340 mm och vid 14–17° högst 320 mm. Minsta taklutning är 14°.</p>
+<h3>Vilket läktavstånd har tegelpannor?</h3>
+<p>Strängpressat lertegel har ofta ett fast mått. Benders Höganäs läktas med 375 mm ±2 mm och Sandby med 330 mm ±2 mm, för taklutningar ned till 18°. Andra tegelpannor har egna mått – kontrollera alltid pannans monteringsanvisning.</p>
+<h3>Hur stort avstånd ska det vara mellan bärläkten på ett plåttak?</h3>
+<p>För trapetsprofil på träpanel anger Plannja c/c 500 mm. För pannplåt följer läkten pannsteget, till exempel 400 mm för Plannja Royal. På lätt underlagstak med takstolar c/c 1 200 mm beror avståndet på snölasten och läktens dimension, från 500 till 1 000 mm för träläkt.</p>
+<h3>Vad är skillnaden mellan ströläkt och bärläkt?</h3>
+<p>Ströläkten ligger längs takfallet ovanpå underlagstaket och ger en luftspalt där vatten kan rinna undan. Bärläkten spikas tvärs över ströläkten och bär pannorna. För betongpannor och tegel är båda normalt 25 × 48 mm, ströläkten med högst 600 mm c/c.</p>
+<h3>Hur mäts läktavståndet?</h3>
+<p>Från ovankant på en bärläkt till ovankant på nästa. Själva indelningen görs mellan nedersta och översta bärläkten, inte från takfoten, eftersom takfotsraden och nocken har egna mått.</p>
+<h3>Vilken dimension ska bärläkten ha om takstolarna står c/c 1 200?</h3>
+<p>För betongpannor på lätt undertak anger Benders 45 × 70 mm dimensionshyvlad bärläkt vid takstolsavstånd 800–1 200 mm, kontinuerlig över minst tre takstolar. För plåt på lätt underlagstak anger Plannja 45 × 70 eller 45 × 95 mm beroende på snölast.</p>
 `;
 
 const A_LAKT_AVSTAND_TAK_BERAKNING: BlogPost = {
   _id: "code-"+"lakt-avstand-tak-berakning",
-  title: "Läktavstånd för takpannor och plåt — så räknar du rätt", slug: "lakt-avstand-tak-berakning", locale: "sv",
-  excerpt: "En guide för hantverkare: så beräknar du läktavstånd, bär- och ströläkt för takpannor eller plåt utan att hamna på en halv rad fel.", tag: "Kalkyl",
+  title: "Läktavstånd för takpannor och plåt – så räknar du rätt", slug: "lakt-avstand-tak-berakning", locale: "sv",
+  excerpt: "Läktavstånd för betongpannor, lertegel och plåt enligt tillverkarnas anvisningar, med räkneexempel, läktdimensioner och åtgång per m².", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/tak-preview.webp", contentHtml: A_LAKT_AVSTAND_TAK_BERAKNING_HTML,
-  seoTitle: "Läktavstånd takpannor & plåt – så räknar du | ByggExp", seoDescription: "Beräkna läktavstånd för takpannor och plåt steg för steg. Bärläkt, ströläkt, dimensioner och tillverkarens intervall — komplettera takkalkylen rätt.",
+  seoTitle: "Läktavstånd betongpannor, tegel och plåt | ByggExp", seoDescription: "Läktavstånd per taklutning för betongpannor (310–375 mm), fasta mått för lertegel och c/c för plåttak. Räkneexempel, bärläkt och ströläkt.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/tak-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T15:03:00.000Z", createdAt: "2026-08-19T15:03:00.000Z", updatedAt: "2026-08-19T15:03:00.000Z",
+  publishedAt: "2026-08-19T15:03:00.000Z", createdAt: "2026-08-19T15:03:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_DRANERING_GRUS_MATERIAL_BERAKNING_HTML = `

@@ -48,14 +48,14 @@ export const ARTICLE_QUICK_ANSWERS: Record<string, QuickAnswer> = {
   'restidsersattning-byggavtalet': {
     html: `<table>
 <tbody>
-<tr><td>Egen bil (över 2 km enkel väg)</td><td>2,50&nbsp;kr/km, max 120&nbsp;km enkel väg</td></tr>
+<tr><td>Egen bil, daglig resa (över 2&nbsp;km enkel väg)</td><td>2,50&nbsp;kr/km, max 120&nbsp;km enkel väg</td></tr>
 <tr><td>Samåkning, föraren</td><td>+0,85&nbsp;kr/km per passagerare</td></tr>
-<tr><td>Restid till förrättning</td><td>Grundlön, max 12&nbsp;tim/dygn inkl. arbetstid</td></tr>
-<tr><td>Traktamente</td><td>435&nbsp;kr/dag vid övernattning</td></tr>
+<tr><td>Restid till/från förrättning</td><td>Grundlön, max 12&nbsp;tim/dygn inkl. arbetstid</td></tr>
+<tr><td>Traktamente</td><td>450&nbsp;kr/dag vid övernattning (från 1 jan 2026)</td></tr>
 </tbody>
 </table>
-<p>Grundlön för yrkesarbetare: 203 kr/tim från 1 maj 2026. Förrättning = minst 70 km från bostaden. Skattefritt traktamente 2026: 300 kr/heldag – resten beskattas som lön.</p>`,
-    source: { label: 'Byggavtalet 2025–2027, § 6', href: BYGGAVTALET_PDF },
+<p>Grundlön för yrkesarbetare: 203 kr/tim från 1 maj 2026. Förrättning = minst 70 km från bostaden. Skattefri bilersättning 2026: 25 kr/mil.</p>`,
+    source: { label: "Byggavtalet 2025–2027, § 6", href: "https://www.byggnads.se/49ec78/siteassets/kollektivavtal/byggavtalet-2025-digital-utgava-1.pdf" },
   },
 
   'bygga-trappa-steghojd-stegdjup-berakning': {
@@ -144,6 +144,105 @@ export const ARTICLE_QUICK_ANSWERS: Record<string, QuickAnswer> = {
       label: 'Boverket – Nu gäller nya byggregler fullt ut',
       href: 'https://www.boverket.se/sv/PBL-kunskapsbanken/nyheter-pa-pbl-kunskapsbanken/nya-byggregler-fullt-ut/',
     },
+  },
+
+  'bas-p-bas-u': {
+    html: `<p><strong>BAS-P</strong> samordnar arbetsmiljön under planering och projektering och upprättar arbetsmiljöplanen. <strong>BAS-U</strong> samordnar på byggarbetsplatsen och håller planen aktuell.</p><p>Byggherren utser båda. Samma person eller företag får ha båda rollerna, men det får bara finnas en BAS-P och en BAS-U åt gången.</p>`,
+    source: { label: "AFS 2023:3, 2 kap. 9–12 §§", href: "https://www.av.se/globalassets/filer/publikationer/foreskrifter/projektering-och-byggarbetsmiljosamordning-grundlaggande-skyldigheter-afs2023-3.pdf" },
+  },
+
+  'berakna-u-varde-isolering': {
+    html: `<p><strong>U = 1 / (R<sub>si</sub> + d₁/λ₁ + d₂/λ₂ + … + R<sub>se</sub>)</strong>, med d i meter och λ i W/(m·K). Enhet: W/(m²·K).</p>
+<p>R<sub>si</sub> = 0,13 för vägg, 0,10 för tak, 0,17 för golv. R<sub>se</sub> = 0,04.</p>`,
+    source: { label: "SS-EN ISO 6946, återgiven i BRE BR 443", href: "https://www.cibse.org/media/wzrjrf3l/conventions-for-u-value-calculations.pdf" },
+  },
+
+  'byggmotesprotokoll-mall': {
+    html: `<p><strong>Beställaren</strong> för protokoll vid byggmötet, <strong>entreprenören</strong> justerar det (AB 04/ABT 06 kap. 3 § 3).</p><p>En anteckning i byggmötesprotokollet uppfyller skriftlighetskravet mellan parterna – även för ÄTA-underrättelser och hinder.</p>`,
+    source: { label: "AMA-nytt Anläggning 1/2005, Svensk Byggtjänst", href: "https://static.byggtjanst.se/amadocs/any_1_2005_4-11.pdf" },
+  },
+
+  'entreprenadforsakring-allrisk-vad-tacker': {
+    html: `<p><strong>Allrisk</strong> – oförutsedd fysisk skada på det ni bygger (Arbeten) och era verktyg och maskiner (Hjälpmedel) på arbetsområdet.</p><p><strong>Ansvar</strong> – skadestånd för person- och sakskada på tredje man, minst 200 prisbasbelopp (11 840 000 kr 2026).</p><p>Självrisk högst 3 prisbasbelopp (177 600 kr). Kundens befintliga hus kräver tillägget befintlig egendom.</p>`,
+    source: { label: "BKK:s basomfattning, bilaga 1 till AMA AF", href: "http://static.byggtjanst.se/SharepointImages/sites/af-12/SiteCollectionDocuments/Bilaga_1_Forsakring.pdf" },
+  },
+
+  'inhyrd-personal-regler': {
+    html: `<ul>
+<li><strong>Före start:</strong> bemanningsföretag i Byggföretagen – ingen primärförhandling; annars kontroll och anmälan till Byggnads region eller förhandling enligt 38&nbsp;§ MBL.</li>
+<li><strong>På bygget:</strong> du är likställd med arbetsgivare i arbetsmiljön och ansvarar för att de inhyrda står i personalliggaren.</li>
+<li><strong>Över 24 mån på samma driftsenhet (inom 36):</strong> erbjud tillsvidareanställning eller betala två månadslöner inom en månad.</li>
+</ul>`,
+    source: { label: "Lag (2012:854) och Byggavtalet Bilaga D", href: "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2012854-om-uthyrning-av-arbetstagare_sfs-2012-854/" },
+  },
+
+  'kontrollansvarig-nar-behovs': {
+    html: `<p><strong>KA krävs</strong> när en åtgärd behöver bygglov, rivningslov eller marklov – till exempel nytt bostadshus – och inte är undantagen.</p><p><strong>Ingen KA</strong> för anmälningspliktiga åtgärder, attefallshus, komplementbyggnader, mur, plank och altan – om inte byggnadsnämnden beslutar annat.</p>`,
+    source: { label: "PBL 10 kap. 9–10 §§, PBF 7 kap. 5 §", href: "https://www.boverket.se/sv/PBL-kunskapsbanken/lov--byggande/byggprocessen/kontrollansvariga-och-deras-uppgifter/" },
+  },
+
+  'lakt-avstand-tak-berakning': {
+    html: `<table>
+<thead><tr><th>Taklutning</th><th>Läktavstånd betongpannor</th></tr></thead>
+<tbody>
+<tr><td>22° och brantare</td><td>310–375&nbsp;mm</td></tr>
+<tr><td>18–21°</td><td>310–340&nbsp;mm</td></tr>
+<tr><td>14–17°</td><td>310–320&nbsp;mm</td></tr>
+</tbody>
+</table>
+<p>Mäts ovankant till ovankant bärläkt. Pannorna får läggas ned till 14° taklutning.</p>`,
+    source: { label: "Benders monteringsanvisning Palema och Exklusiv, 2023-07", href: "https://www.benders.se/globalassets/c4-assets/document/Monteringsanvisning-BETONG-1o2kupig--2023-07-LU-2.pdf" },
+  },
+
+  'mangdforteckning-bygg': {
+    html: `<p><strong>Mängdförteckning</strong> – förteckning över mängder av skilda slag, med eller utan beskrivning av utförande, funktion eller kvalitet (AB 04).</p><p>Prissatt = à-prislista, plats 7 i rangordningen. Ej prissatt = plats 10, före teknisk beskrivning (11) och ritningar (12).</p>`,
+    source: { label: "Svensk Byggtjänst – Navigera rätt bland reglerna", href: "https://byggtjanstcms.byggtjanst.se/globalassets/kunskapsbank/guider/navigera-ratt-bland-reglerna/navigerarattblandreglerna251030.pdf" },
+  },
+
+  'paslag-pa-material': {
+    html: `<p><strong>Påslag</strong> = (utpris − inköp) ÷ inköp. <strong>Marginal</strong> = (utpris − inköp) ÷ utpris.</p><table><thead><tr><th>Påslag</th><th>10&nbsp;%</th><th>15&nbsp;%</th><th>20&nbsp;%</th><th>25&nbsp;%</th><th>30&nbsp;%</th></tr></thead><tbody><tr><td>Marginal</td><td>9,1&nbsp;%</td><td>13,0&nbsp;%</td><td>16,7&nbsp;%</td><td>20,0&nbsp;%</td><td>23,1&nbsp;%</td></tr></tbody></table><p>Material ger aldrig rotavdrag och får inte säljas under inköpspris.</p>`,
+    source: { label: "Skatteverket – Så fungerar rotavdraget", href: "https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete/safungerarrotavdraget.4.5947400c11f47f7f9dd80004014.html" },
+  },
+
+  'puts-murbruk-atgang-fasad': {
+    html: `<table>
+<thead><tr><th>Skikt</th><th>Åtgång torrbruk</th></tr></thead>
+<tbody>
+<tr><td>Grundning</td><td>ca 5&nbsp;kg/m²</td></tr>
+<tr><td>Grovputs, 0–3&nbsp;mm</td><td>ca 18–20&nbsp;kg/m² per 10&nbsp;mm</td></tr>
+<tr><td>Filtning, 5&nbsp;mm</td><td>ca 9&nbsp;kg/m²</td></tr>
+<tr><td>Ytputs/ädelputs</td><td>ca 4–25&nbsp;kg/m²</td></tr>
+</tbody>
+</table>`,
+    source: { label: "Finja, Hjälp vid putsning (jan 2026)", href: "https://www.finja.se/hjalp-putsning-dok" },
+  },
+
+  'traktamente-byggnadsarbetare-2026': {
+    html: `<table>
+<tbody>
+<tr><td>Byggavtalet, traktamente</td><td>450&nbsp;kr/dag vid övernattning, minst 70&nbsp;km från bostaden</td></tr>
+<tr><td>Arbetsgivaren ordnar logi / kost</td><td>−35&nbsp;% / −55&nbsp;%</td></tr>
+<tr><td>Förrättningstillägg (eget boende)</td><td>35&nbsp;% dag 1–90, sedan 20&nbsp;% – skattepliktigt</td></tr>
+<tr><td>Skattefritt 2026</td><td>300&nbsp;kr heldag, 150&nbsp;kr halvdag, 150&nbsp;kr natt</td></tr>
+</tbody>
+</table>
+<p>Efter 3 månader på samma ort är 210&nbsp;kr per heldag skattefritt, efter 2 år 150&nbsp;kr.</p>`,
+    source: { label: "Byggavtalet 2025–2027 § 6 och Skatteverket SKV 353", href: "https://www.skatteverket.se/download/18.1522bf3f19aea8075ba3da6/1768986614741/traktamenten-mm-i-byggbranschen-skv353-utgava15.pdf" },
+  },
+
+  'vatrumscertifikat-behorighet-gvk': {
+    html: `<p>Det finns inget lagstadgat våtrumscertifikat. Boverket ställer bara krav på att tätskiktet fungerar.</p><p>Behörighet ges till <strong>företag</strong> av tre branschorgan: <strong>GVK</strong> (tätskikt och plastmatta), <strong>BKR</strong> (plattsättning) och <strong>Säker Vatten</strong> (rör och VVS). Personliga behörigheter gäller bara i ett sådant företag.</p>`,
+    source: { label: "Boverket BFS 2024:8, 7 kap.", href: "https://rinfo.boverket.se/BFS2024-8/pdf/BFS2024-8.pdf" },
+  },
+
+  'virkesatgang-altan-tralldack': {
+    html: `<table><thead><tr><th>Trall</th><th>Löpmeter per m²</th><th>Max cc regel</th></tr></thead><tbody><tr><td>28×95</td><td>10,00</td><td>600&nbsp;mm</td></tr><tr><td>28×120</td><td>7,94</td><td>600&nbsp;mm</td></tr><tr><td>28×145</td><td>6,58</td><td>600&nbsp;mm</td></tr><tr><td>34×145</td><td>6,58</td><td>800&nbsp;mm</td></tr></tbody></table><p>Exklusive spill. Regelvirke: 1,67 lm/m² vid cc 600, 2,50 lm/m² vid cc 400.</p>`,
+    source: { label: "Svenskt Trä – Lathunden, utgåva 8:2021", href: "https://www.svenskttra.se/siteassets/5-publikationer/pdfer/st-lathunden-2021-med-utvik.pdf" },
+  },
+
+  'yrkesbevis-bygg-larling': {
+    html: `<p>Yrkesbevis utfärdas av BYN efter godkänd grundutbildning plus kvalificeringstid: <strong>36 månader</strong> för bland annat träarbetare och murare, <strong>30 månader</strong> för bland annat plattsättare och ställningsbyggare, <strong>24 månader</strong> för maskin- och kranförare.</p><p>Lärlingslönen är 70, 80 och 90 % av yrkesarbetarens grundlön (203 kr/tim från 1 maj 2026).</p>`,
+    source: { label: "Byggavtalet 2025–2027, § 3 p. 9.3 och bilaga H § 7 b", href: "https://www.byggnads.se/49ec78/siteassets/kollektivavtal/byggavtalet-2025-digital-utgava-1.pdf" },
   },
 };
 

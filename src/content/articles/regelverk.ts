@@ -197,7 +197,7 @@ const A_KONTROLLANSVARIG_NAR_BEHOVS_HTML = `
 <tr><td>K – komplicerad art</td><td>Byggnader med fler än två våningar, kabinbanor, radio- och telemaster, vindkraftverk</td></tr>
 </tbody>
 </table></div>
-<p>Två organ certifierar kontrollansvariga i dag: RISE och Kiwa. På deras webbplatser går det att söka fram en KA och se behörighet och hur länge certifikatet gäller. Kontrollera giltighetstiden mot projektets längd – byggnadsnämnden måste kunna godta en KA med giltigt certifikat både vid lov och startbesked.</p>
+<p>Två organ certifierar kontrollansvariga i dag: RISE och Kiwa. På deras webbplatser går det att söka fram en KA och se behörighet och hur länge certifikatet gäller. Kontrollera giltighetstiden mot projektets längd – Boverket rekommenderar att nämnden jämför certifikatets giltighet med hur länge bygget beräknas pågå.</p>
 
 <h2>Vad KA gör, steg för steg</h2>
 <p>Uppgifterna står i PBL 10 kap. 11 § och gäller sedan 1 juli 2026 i denna lydelse:</p>
@@ -348,7 +348,7 @@ const A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK_HTML = `
 <p>Inget våtrumscertifikat är lagkrav. Boverkets fuktregler – i dag <a href="https://rinfo.boverket.se/BFS2024-8/pdf/BFS2024-8.pdf" target="_blank" rel="noopener noreferrer">BFS 2024:8, 7 kap. 7–8 §§</a>, som ersatte BBR avsnitt 6:5 när övergångstiden gick ut 30 juni 2026 – ställer funktionskrav på tätskiktet: det ska vara vattentätt, tätt i skarvar och genomföringar, ha rätt ånggenomgångsmotstånd och vara åldersbeständigt. Vem som utför arbetet säger föreskrifterna ingenting om. Kravet på behörighet kommer i stället från försäkringsbolagen, beställarna och branschorganisationerna – och där är det i praktiken svårt att klara sig utan.</p>
 
 <h2>Varför försäkringen styr</h2>
-<p>Enligt <a href="https://www.konsumenternas.se/forsakringar/boendeforsakringar/villaforsakringar/vattenskador/" target="_blank" rel="noopener noreferrer">Konsumenternas</a> kräver försäkringsbolagen normalt att de branschregler som gällde när våtrummet byggdes eller renoverades har följts för att en vattenskada ska ersättas, och kunden kan behöva visa ett våtrumsintyg från en behörig hantverkare. Villkoren skiljer sig mellan bolagen – vissa ersätter ändå, men ofta med högre självrisk. För dig som hantverkare betyder det att kunden i praktiken köper dokumentationen lika mycket som arbetet.</p>
+<p>Försäkringsvillkoren kräver ofta att de branschregler som gällde när våtrummet byggdes eller renoverades har följts för att en vattenskada ska ersättas – så har Allmänna reklamationsnämnden bedömt i flera ärenden, enligt <a href="https://www.konsumenternas.se/konsumentstod/lag-ratt/rattsfall-och-beslut/sakforsakringar/villa--och-bostadsrattsforsakringar/vattenskada/" target="_blank" rel="noopener noreferrer">Konsumenternas</a>. Ett våtrumsintyg från ett behörigt företag är det enklaste sättet att visa det. Villkoren skiljer sig mellan bolagen – vissa ersätter ändå, men ofta med högre självrisk. För dig som hantverkare betyder det att kunden i praktiken köper dokumentationen lika mycket som arbetet.</p>
 
 <h2>Tre system för tre moment</h2>
 <p>Ett badrum består av rörinstallation, tätskikt och ytskikt, och varje del har sitt eget branschsystem. Gemensamt för alla tre är att det är <strong>företaget</strong> som auktoriseras eller blir behörigt, medan personerna har behörighetsbevis eller legitimation som är knutna till ett sådant företag.</p>
@@ -361,12 +361,12 @@ const A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK_HTML = `
 <tr><td>Krav på personal</td><td>Montörer: behörighet Plast eller Tätskikt under keramik. Minst en arbetsledare per 10 anställda med behörighet</td><td>Minst en behörig arbetsledare och en behörig plattsättare</td><td>Alla montörer, arbetsledare och lärlingar ska ha branschlegitimation</td></tr>
 <tr><td>Giltighet</td><td>5 år, sedan fortbildningskurs</td><td>Tills vidare, förnyas per kalenderår. Återkurs vart femte år</td><td>Legitimationen gäller 5 år efter godkänd utbildning</td></tr>
 <tr><td>Dokument till kunden</td><td>Kopia av våtrumsanmälan, våtrumsintyg (obligatoriskt mot konsument)</td><td>Kvalitetsdokument</td><td>Digitalt intyg inom fyra veckor</td></tr>
-<tr><td>Avgifter 2026 (exkl. moms)</td><td>8 400 kr (Plast eller Keramik), 9 400 kr (båda) + 0,27 promille av omsättningen</td><td>5 100–16 500 kr efter antal plattsättare</td><td>Serviceavgift 5 600 kr + 170 kr per montör, arbetsledare och lärling (lägre för medlemmar i Installatörsföretagen), plus medlemsavgift. Inträde 7 500 kr</td></tr>
+<tr><td>Avgifter 2026 (exkl. moms)</td><td>8 400 kr (Plast eller Keramik), 9 400 kr (båda) + 0,27 promille av omsättningen</td><td>5 100–16 500 kr per år efter antal plattsättare (BKR anger inte om moms ingår)</td><td>Serviceavgift 5 600 kr + 170 kr per montör, arbetsledare och lärling (lägre för medlemmar i Installatörsföretagen), plus medlemsavgift. Inträde 7 500 kr</td></tr>
 </tbody>
 </table></div>
 
 <h2>GVK-behörighet – krav och kostnad</h2>
-<p>För att <a href="https://www.gvk.se/kvalitetsarbete/bli-auktoriserad/" target="_blank" rel="noopener noreferrer">bli GVK-auktoriserat</a> ska företaget huvudsakligen arbeta med våtrum, ha F-skatt och vara momsregistrerat i Sverige, och bifoga kopia av yrkesbevis med ansökan. Efter godkännande ska minst en arbetsledare per tio anställda klara GVK:s arbetsledarkurs med prov, och montörerna ska ha giltig behörighet för plastmatta respektive tätskikt under keramik. Behörighetskurserna är bara öppna för anställda i ett auktoriserat företag, eller ett som håller på att auktoriseras, och montören behöver ett <a href="/sv/blog/yrkesbevis-bygg-larling">yrkesbevis</a>. Var femte år krävs fortbildning för att behörigheten ska gälla fem år till.</p>
+<p>För att <a href="https://www.gvk.se/kvalitetsarbete/bli-auktoriserad/" target="_blank" rel="noopener noreferrer">bli GVK-auktoriserat</a> ska företaget huvudsakligen arbeta med våtrum, ha F-skatt och vara momsregistrerat i Sverige, och bifoga kopia av yrkesbevis med ansökan. Efter godkännande ska minst en arbetsledare per tio anställda klara GVK:s arbetsledarkurs med prov, och montörerna ska ha giltig behörighet för plastmatta respektive tätskikt under keramik. Behörighetskurserna är bara öppna för anställda i ett auktoriserat företag, eller ett som håller på att auktoriseras, och montören behöver ett <a href="/sv/blog/yrkesbevis-bygg-larling">yrkesbevis</a> som plattsättare eller golvläggare, eller en godkänd validering. Var femte år krävs fortbildning för att behörigheten ska gälla fem år till.</p>
 <p>Enligt <a href="https://www.gvk.se/siteassets/gvk/dokument/sakra-vatrum-2026.pdf" target="_blank" rel="noopener noreferrer">Säkra Våtrum 2026</a> är det bara GVK-auktoriserade företag som får utfärda våtrumsintyg och kvalitetsdokument enligt GVK. Varje jobb ska anmälas till GVK med en våtrumsanmälan, som kan leda till stickprovskontroll, och kunden ska få en kopia.</p>
 <p><strong>Räkneexempel (hypotetiskt, priser exkl. moms 2026):</strong> ett plattsättningsföretag med 6 anställda, varav 4 montörer, söker GVK-auktorisation för keramik. Omsättningen förra året var 8 miljoner kr.</p>
 <div class="article-table"><table>
@@ -380,7 +380,7 @@ const A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK_HTML = `
 <tr><td><strong>Första året</strong></td><td><strong>42 250 kr</strong></td></tr>
 </tbody>
 </table></div>
-<p>Året därpå återstår årsavgiften plus den rörliga delen – i exemplet 10 560 kr – tills fortbildningen blir aktuell efter fem år. Lägg till lönekostnaden för kursdagarna.</p>
+<p>Året därpå återstår årsavgiften plus den rörliga delen – i exemplet 10 560 kr – tills fortbildningen blir aktuell efter fem år. Första årets årsavgift räknas per auktoriserad månad, så blir företaget auktoriserat mitt i året blir summan lägre. Lägg till lönekostnaden för kursdagarna, och kontrollera aktuella priser hos GVK innan ni budgeterar.</p>
 
 <h2>BKR-behörighet för plattsättare</h2>
 <p>Enligt <a href="https://www.bkr.se/om-behorighet/bli-behorig-guide" target="_blank" rel="noopener noreferrer">Byggkeramikrådets guide</a> ska plattsättning vara en etablerad verksamhet med egna anställda plattsättare. Minst en ska ha yrkesbevis eller motsvarande erfarenhet, vilket BKR anger som tre år med heltid i plattsättning – saknas yrkesbevis görs ett kunskapstest. Företaget kreditupplyses, och den som fått behörighet återkallad i ett tidigare bolag får inte sitta i ledningen.</p>
@@ -410,7 +410,7 @@ const A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK_HTML = `
 <h3>Hur länge gäller GVK-behörighet?</h3>
 <p>Fem år. Därefter krävs en fortbildningskurs för att behörigheten ska gälla i fem år till. Säker Vattens branschlegitimation gäller också fem år, medan BKR-behörigheten förnyas varje kalenderår med återkurs vart femte år.</p>
 <h3>Vad kostar det att bli GVK-auktoriserad?</h3>
-<p>Registreringsavgiften är 12 490 kr och årsavgiften 8 400 kr för plast eller keramik (9 400 kr för båda) plus 0,27 promille av förra årets omsättning, minst 1 500 kr. Behörighetskurserna kostar 3 800 kr och arbetsledarkursen 4 000 kr, allt exklusive moms.</p>
+<p>Registreringsavgiften är 12 490 kr och årsavgiften 8 400 kr för plast eller keramik (9 400 kr för båda) plus 0,27 promille av förra årets omsättning, minst 1 500 kr. Behörighetskurserna kostar 3 800 kr och arbetsledarkursen 4 000 kr, allt exklusive moms enligt GVK:s prislista 2026 – kontrollera aktuellt pris.</p>
 <h3>Vilken behörighet behövs för en hel badrumsrenovering?</h3>
 <p>Rördragningen görs av ett Säker Vatten-auktoriserat VVS-företag och tätskikt och plattsättning av ett GVK-auktoriserat eller BKR-behörigt företag. Kunden bör få ett intyg från varje företag.</p>
 <h3>Påverkar behörigheten försäkringen?</h3>

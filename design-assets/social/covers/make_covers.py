@@ -33,21 +33,36 @@ def background(w, h, cell):
     return img
 
 
-def cover(name, w, h, safe, lines, fs, cell, url=True):
+def wrap(d, text, f, width):
+    out, cur = [], ""
+    for word in text.split():
+        t = (cur + " " + word).strip()
+        if d.textlength(t, font=f) <= width:
+            cur = t
+        else:
+            out.append(cur); cur = word
+    return out + [cur]
+
+
+def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None):
     sl, st, sw, sh = safe
     img = background(w, h, cell)
     d = ImageDraw.Draw(img)
-    big, small = font(fs, "Heavy"), font(int(fs * .4), "Medium")
-    lh = int(fs * 1.08)
-    block_h = lh * len(lines) + (int(fs * .45) + int(fs * .4) if url else 0)
+    big, small = font(fs, "Heavy"), font(int(fs * .42), "Medium")
+    lh, slh = int(fs * 1.08), int(fs * .42 * 1.4)
+    sub_lines = wrap(d, sub, small, tw) if sub else []
+    block_h = lh * len(lines) + (int(fs * .4) + slh * len(sub_lines) if sub_lines else 0)
     y = st + (sh - block_h) // 2
     text_w = 0
     for text, color in lines:
         d.text((sl, y), text, font=big, fill=color)
         text_w = max(text_w, d.textlength(text, font=big))
         y += lh
-    if url:
-        d.text((sl, y + int(fs * .45) - int(fs * .08)), "byggexp.se", font=small, fill=(255, 255, 255, 180))
+    y += int(fs * .4)
+    for t in sub_lines:
+        d.text((sl, y), t, font=small, fill=(200, 214, 232))
+        text_w = max(text_w, d.textlength(t, font=small))
+        y += slh
     # product screenshot fills the rest of the safe area
     gap = int(fs * .8)
     box_w, box_h = int(sl + sw - (sl + text_w + gap)), sh
@@ -63,13 +78,14 @@ def cover(name, w, h, safe, lines, fs, cell, url=True):
     img.convert("RGB").save(HERE / f"{name}.png", optimize=True)
 
 
-TWO = [("Tid, projekt och ÄTA", WHITE), ("för byggföretag", SKY)]
-THREE = [("Tid, projekt", WHITE), ("och ÄTA", WHITE), ("för byggföretag", SKY)]
+SUB = "Snabbare fakturering och lönehantering, automatiska påminnelser i uppgifter, kontroll av arbetspass i realtid, planering."
+TITLE = [("Automatisk och manuell", WHITE), ("tidrapportering och", WHITE), ("projekthantering", WHITE), ("för byggföretag", SKY)]
+SHORT = [("Tidrapportering och projekthantering", WHITE), ("för byggföretag", SKY)]
 
 # Facebook: 1640x624, keep inside centre ~1180px (mobile crops the sides)
-cover("facebook-cover", 1640, 624, (230, 50, 1180, 524), THREE, 62, 48)
+cover("facebook-cover", 1640, 624, (230, 40, 1180, 544), TITLE, 50, 48, SUB, 560)
 # LinkedIn company: 1128x191, logo overlaps bottom-left -> start content at x=300
-cover("linkedin-cover", 1128, 191, (300, 20, 800, 151), TWO, 30, 24, url=False)
+cover("linkedin-cover", 1128, 191, (300, 20, 800, 151), SHORT, 26, 24)
 # YouTube: 2560x1440, safe area 1546x423 in the centre
-cover("youtube-banner", 2560, 1440, (507, 509, 1546, 423), THREE, 84, 64)
+cover("youtube-banner", 2560, 1440, (507, 509, 1546, 423), TITLE, 62, 64, SUB, 720)
 print("ok")

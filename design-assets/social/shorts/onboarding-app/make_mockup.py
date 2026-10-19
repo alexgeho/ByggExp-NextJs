@@ -10,11 +10,11 @@ from PIL import Image, ImageDraw, ImageFont
 HERE = Path(__file__).resolve().parent
 BG = Path.home() / "Documents/ByggExp/logos-banners/background.png"
 W, H = 1920, 1080
-SCR_H = 940                      # screen height on canvas
+SCR_H = 972                      # screen height on canvas (phone ~ full height, as in the SV onboarding video)
 SCR_W = round(SCR_H * 1206 / 2622)
-BEZEL = 16                       # black bezel around the screen
+BEZEL = 12                       # black bezel around the screen
 R_SCR = 62                       # screen corner radius
-PHONE_CX = 640                   # phone centre x
+PHONE_CX = 960                   # phone centred
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 
 
@@ -41,19 +41,19 @@ def layers(text):
     bg = Image.alpha_composite(bg.convert("RGBA"), shadow.filter(ImageFilter.GaussianBlur(40)))
     if text:
         d = ImageDraw.Draw(bg)
-        f = font(64)
-        x, y = 1010, 0
+        f = font(54, "Regular")
+        x, y = 1232, 0
         lines, cur = [], ""
         for w in text.split():
             t = (cur + " " + w).strip()
-            if d.textlength(t, font=f) <= 820:
+            if d.textlength(t, font=f) <= 640:
                 cur = t
             else:
                 lines.append(cur); cur = w
         lines.append(cur)
-        y = (H - len(lines) * 76) // 2
+        y = 1012 - len(lines) * 58  # bottom-anchored, right of the phone
         for i, l in enumerate(lines):
-            d.text((x, y + i * 76), l, font=f, fill=(255, 255, 255), stroke_width=0)
+            d.text((x, y + i * 58), l, font=f, fill=(255, 255, 255), stroke_width=0)
     bg.convert("RGB").save(tmp / "bg.png")
 
     # bezel frame with transparent screen hole (titanium edge + black bezel)

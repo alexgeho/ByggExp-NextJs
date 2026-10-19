@@ -23,6 +23,8 @@ import "../components/CTA/CTA.scss";
 import "../components/Footer/Footer.scss";
 import "../components/Contact/Contact.scss";
 import "../components/ChatAssistant/ChatAssistant.scss";
+// Design system last: shared rules win over older page styles (see DESIGN-SYSTEM.md)
+import "../styles/design-system.scss";
 
 // GA4 tag lives in _document (<Head>); consent + custom events are handled by
 // CookieConsent.

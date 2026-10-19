@@ -1,0 +1,129 @@
+/* ByggExp design system — single source of shared spacing/radius and layout rules.
+   Imported LAST in _app.tsx so these rules win over older page styles.
+   Every owner correction becomes a rule here + a line in DESIGN-SYSTEM.md
+   (repo root), so it is applied site-wide and never has to be repeated. */
+
+:root {
+  /* spacing scale (8pt) */
+  --ds-space-1: 8px;
+  --ds-space-2: 16px;
+  --ds-space-3: 24px;
+  --ds-space-4: 32px;
+
+  /* panels: the left input panel of a calculator is the reference (2026-10-19) */
+  --ds-panel-pad: 20px;
+  --ds-panel-pad-sm: 16px;
+  --ds-panel-radius: 14px;
+  --ds-panel-gap: 22px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --ds-panel-pad: var(--ds-panel-pad-sm);
+  }
+}
+
+/* R1. Side-by-side panels are always the same height (inputs | result). */
+.lm-tool-split {
+  align-items: stretch;
+  gap: var(--ds-panel-gap);
+}
+.lm-tool-split > .lm-tool-grid {
+  padding: var(--ds-panel-pad);
+  border-radius: var(--ds-panel-radius);
+  align-content: start;
+}
+.lm-tool-aside {
+  display: flex;
+  flex-direction: column;
+}
+.lm-tool-aside .lm-result {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--ds-panel-radius);
+}
+
+/* R1 for the class-based split used by most calculators (.lm-tool--split):
+   the left column is a stack of separate blocks, so the whole column becomes
+   ONE panel (a ::before backdrop) that spans the same rows as the result —
+   both columns end on the same line. Desktop only; phones stack as before. */
+@media (min-width: 901px) {
+  .lm-tool--split {
+    row-gap: 0;
+    align-items: start;
+  }
+  .lm-tool--split::before {
+    content: '';
+    grid-column: 1;
+    grid-row: 1 / span 40;
+    border: 1px solid var(--lm-card-border);
+    border-radius: var(--ds-panel-radius);
+    background: rgba(10, 40, 90, 0.02);
+    align-self: stretch;
+  }
+  /* blocks that sit in the column panel align to the panel padding, not their own */
+  .lm-tool--split > .lm-result-fine {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* explicit rows so left blocks overlap the backdrop instead of being
+     auto-placed below it (the backdrop occupies column 1, rows 1–40) */
+  @for $i from 1 through 30 {
+    .lm-tool--split > :nth-child(#{$i}) {
+      grid-row: #{$i};
+    }
+  }
+  .lm-tool--split > .lm-result,
+  .lm-tool--split:has(> .lm-tool-more) > .lm-result {
+    grid-row: 1 / span 40;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    position: static;
+  }
+  .lm-tool--split > :not(.lm-result) {
+    margin: var(--ds-space-2) var(--ds-panel-pad) 0;
+  }
+  .lm-tool--split > :first-child:not(.lm-result) {
+    margin-top: var(--ds-panel-pad);
+  }
+  /* the inner input grid no longer needs its own frame inside the column panel */
+  .lm-tool--split > .lm-tool-grid {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+  /* bottom breathing room of the column panel = panel padding */
+  .lm-tool--split::after {
+    content: '';
+    grid-column: 1;
+    grid-row: 40;
+    height: var(--ds-panel-pad);
+  }
+  .lm-tool--split > .lm-result > .lm-tool-actions {
+    margin-top: auto !important;
+    padding-top: var(--ds-space-2);
+  }
+}
+
+/* R2. Nothing touches a panel edge: content inside a panel keeps the same
+   inner padding as the reference panel. Buttons at the bottom of the result
+   panel get the panel padding on left, right and bottom. */
+.lm-result {
+  border-radius: var(--ds-panel-radius);
+}
+.lm-result-row,
+.lm-result-fine {
+  padding-left: var(--ds-panel-pad);
+  padding-right: var(--ds-panel-pad);
+}
+.lm-result > .lm-tool-actions {
+  padding: 0 var(--ds-panel-pad) var(--ds-panel-pad);
+}
+/* In equal-height panels the actions sit at the bottom edge of the panel. */
+.lm-tool-aside .lm-result > .lm-tool-actions {
+  margin-top: auto !important;
+  padding-top: var(--ds-space-2);
+}

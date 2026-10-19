@@ -50,3 +50,23 @@ En ÄTA godkänns – och sen skrivs samma rader in igen i fakturan.
 I ByggExp blir den godkända ÄTA:n en förifylld faktura. Moms och ROT-avdrag räknas ut. Ett steg i stället för två.
 
 Första kommentar: https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=founder-v2
+
+## FB FÄST (pinned) — bild: 00-verktyg.jpg
+Räkna, skriv ÄTA och offert – direkt i mobilen 🔨
+
+60+ gratis verktyg – utan konto:
+• ROT, moms, timpris, påslag
+• Betong, gips, tak, golv
+• ÄTA, offert, faktura, egenkontroll
+
+Öppna länken och testa – det tar en minut.
+👉 https://byggexp.se/sv/verktyg?utm_source=facebook&utm_medium=social&utm_campaign=pinned
+
+## FB TRIGGER — bild: 07-ata-trigger.jpg
+Extrajobb utan skriftlig ÄTA är svårt att få betalt för.
+
+Skriv ÄTA i kommentarerna – så skickar vi ÄTA-mallen till dig i Messenger. Fyll i och ladda ner som PDF. Gratis.
+
+### Automatiskt svar i Messenger (Comment to message, nyckelord: ÄTA, ata, mall)
+Hej! Här är ÄTA-mallen: https://byggexp.se/sv/verktyg/ata-mall?utm_source=facebook&utm_medium=messenger&utm_campaign=ata-trigger
+Fyll i, ladda ner som PDF och låt beställaren skriva under innan du börjar. Lycka till på bygget!

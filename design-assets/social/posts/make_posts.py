@@ -13,8 +13,10 @@ NAVY, SKY, WHITE = (11, 26, 46), (111, 208, 248), (255, 255, 255)
 # out, headline lines (second in SKY), parts stacked top→bottom: (screenshot, crop box px | None) or "ARROW"
 # Screenshots: puppeteer, filled forms, 2x (S5, S8). See DESIGN-SYSTEM-SMM.md.
 POSTS = [
+    ("00-verktyg.jpg", ["60+ gratis verktyg", "för byggare"], [("c1.png", None), "GAP", ("c2.png", None), "GAP", ("c3.png", None)]),
     ("04-ob.jpg", ["OB eller övertid?", "Räkna tillägget"], [("m-ob.png", (36, 36, 1076, 948))]),
     ("05-egenkontroll.jpg", ["Egenkontroll våtrum", "Klar på bygget"], [("m-ek.png", (30, 2900, 1068, 3365)), ("m-ek.png", (30, 3725, 1068, 4090)), ("m-ek.png", (30, 340, 1068, 500))]),
+    ("07-ata-trigger.jpg", ["Kommentera ÄTA", "– få mallen gratis"], [("ata-pdf.png", (120, 105, 1545, 1450))]),
     ("06-faktura.jpg", ["Från ÄTA", "till faktura"], [("m-ata.png", (60, 940, 1038, 1180)), ("m-ata.png", (60, 3133, 1038, 3372)), "ARROW", ("m-fk2.png", (60, 652, 1038, 892)), ("m-fk2.png", (60, 2532, 1038, 3054))]),
 ]
 FOOTERS = ("row", "small", "stack", "right")  # S10: owner picks one; default below
@@ -54,20 +56,26 @@ def make(out, lines, parts, src_dir, footer=FOOTER):
     cw = 1700
     blocks = []
     for p in parts:
-        if p == "ARROW":
-            blocks.append(None)
+        if p in ("ARROW", "GAP"):
+            blocks.append(p)
             continue
         im = Image.open(Path(src_dir) / p[0]).convert("RGB")
         im = im.crop(p[1]) if p[1] else im
         blocks.append(im)
-    k = cw / max(b.width for b in blocks if b is not None)  # one scale for all parts, left-aligned
-    blocks = [b.resize((round(b.width * k), round(b.height * k)), Image.LANCZOS) if b is not None else None for b in blocks]
+    k = cw / max(b.width for b in blocks if not isinstance(b, str))  # one scale for all parts, left-aligned
+    blocks = [b if isinstance(b, str) else b.resize((round(b.width * k), round(b.height * k)), Image.LANCZOS) for b in blocks]
     gap = 140
     pad = 0 if parts[0][0] == "m-ob.png" else 70  # whole tool card has its own frame; crops get equal white margin (S5)
-    card = Image.new("RGB", (cw + 2 * pad, sum(b.height if b else gap for b in blocks) + 2 * pad), WHITE)
+    sgap = 40  # between stacked cards
+    first = next(b for b in blocks if not isinstance(b, str))
+    fill = first.getpixel((2, 2))  # page background of the screenshot, so tiles sit on their own surface
+    card = Image.new("RGB", (cw + 2 * pad, sum(gap if b == "ARROW" else sgap if b == "GAP" else b.height for b in blocks) + 2 * pad), fill if "GAP" in blocks else WHITE)
     cd, yy = ImageDraw.Draw(card), pad
     for b in blocks:
-        if b is None:
+        if b == "GAP":
+            yy += sgap
+            continue
+        if b == "ARROW":
             cx, cy = pad + cw // 2, yy + gap // 2
             cd.polygon([(cx - 44, cy - 24), (cx + 44, cy - 24), (cx, cy + 30)], fill=(35, 148, 255))
             yy += gap
@@ -112,4 +120,4 @@ if __name__ == "__main__":
         make(*p, sys.argv[1])
     if "--footers" in sys.argv:  # comparison set for owner
         for f in FOOTERS:
-            make(f"04-ob-{f}.jpg", POSTS[0][1], POSTS[0][2], sys.argv[1], f)
+            make(f"04-ob-{f}.jpg", POSTS[1][1], POSTS[1][2], sys.argv[1], f)

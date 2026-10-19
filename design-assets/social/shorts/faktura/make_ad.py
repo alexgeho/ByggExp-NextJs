@@ -17,9 +17,12 @@ FF = imageio_ffmpeg.get_ffmpeg_exe()
 BG = Path.home() / "Documents/ByggExp/logos-banners/background.png"
 LOGO = HERE.parents[3] / "public/icon-512.png"
 
-# (voice beat, orig start, orig end, output seconds) — None = end card
-BEATS = [("v1", 16.6, 18.8, 2.0), ("v2", 140.5, 154.5, 3.6), ("v3", 163.0, 183.0, 3.5),
-         ("v4", 204.6, 209.6, 2.4), ("v5", None, None, 3.0)]
+# (voice beat, orig start, orig end, output seconds) — None = end card.
+# RULE (owner 2026-10-19): never speed footage up — every clip plays at 1x; pick short key moments instead.
+BEATS = [("v1", 16.8, 18.8, 2.0), ("v2", 140.4, 144.0, 3.6), ("v3", 178.6, 182.1, 3.5),
+         ("v4", 204.6, 207.0, 2.4), ("v5", None, None, 3.0)]
+for _v, _a, _b, _d in BEATS:
+    assert _a is None or abs((_b - _a) - _d) < 0.05, f"{_v}: clip must play at 1x"
 taps_all = json.load(open(HERE / "analysis.json"))["taps"]
 
 

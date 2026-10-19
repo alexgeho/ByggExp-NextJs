@@ -5,7 +5,7 @@
    0.0,
    17.4
   ],
-  "text": "Så här skickar du din första faktura i ByggExp-appen."
+  "text": "Nu går vi igenom alla steg för att skapa din första faktura i ByggExp-appen."
  },
  {
   "id": "i2",
@@ -21,7 +21,7 @@
    21.0,
    39.0
   ],
-  "text": "Först fyller du i företagsuppgifterna: namn, organisationsnummer och e-post."
+  "text": "Först fyller vi i företagsuppgifterna. De följer sedan med på varje faktura, offert och egenkontroll, så du fyller i dem bara en gång."
  },
  {
   "id": "f2",
@@ -29,47 +29,55 @@
    39.0,
    41.4
   ],
-  "text": "De följer med på varje offert och faktura."
+  "text": "Spara – och första steget är klart."
  },
  {
   "id": "k1",
   "orig": [
    41.4,
-   84.0
+   53.0
   ],
-  "text": "Sedan lägger du till en klient och fyller i kontaktuppgifterna."
+  "text": "Sedan lägger vi till en kund. Du väljer privatperson eller företag – vi tar ett företag."
  },
  {
   "id": "k2",
   "orig": [
-   84.0,
+   53.0,
+   66.0
+  ],
+  "text": "Det räcker med företagsnamnet, men allt du fyller i visas snyggt på fakturan."
+ },
+ {
+  "id": "k3",
+  "orig": [
+   66.0,
+   78.0
+  ],
+  "text": "Kunden sparas i systemet och finns alltid kvar. Nästa gång väljer du den bara – adress och alla uppgifter fylls i på fakturan automatiskt."
+ },
+ {
+  "id": "k4",
+  "orig": [
+   78.0,
    112.6
   ],
-  "text": "Välj betalningsvillkor, till exempel trettio dagar, valuta och omvänd moms när det behövs."
+  "text": "Här väljer du betalningsvillkor och övriga inställningar som följer med alla fakturor till den här kunden."
  },
  {
   "id": "a1",
   "orig": [
    112.6,
-   116.0
+   125.0
   ],
-  "text": "Nästa steg är artiklar."
+  "text": "I nästa steg skapar vi en artikel – det du säljer, till exempel betongarbeten."
  },
  {
   "id": "a2",
   "orig": [
-   116.0,
-   133.0
-  ],
-  "text": "Skriv namnet, till exempel betongarbeten, och välj momssats."
- },
- {
-  "id": "a3",
-  "orig": [
-   133.0,
+   125.0,
    135.2
   ],
-  "text": "Artikeln sparas, så du lägger in den bara en gång."
+  "text": "Du väljer momssats, och artikeln sparas så att du kan använda den på alla kommande fakturor."
  },
  {
   "id": "u1",
@@ -77,26 +85,42 @@
    135.2,
    141.0
   ],
-  "text": "Nu skapar du fakturan."
+  "text": "Nu skapar vi fakturan."
  },
  {
   "id": "u2",
   "orig": [
    141.0,
-   158.0
+   150.0
   ],
-  "text": "Välj kund, så fylls betalningsvillkor och förfallodatum i automatiskt."
+  "text": "Vi väljer kunden vi skapade tidigare – betalningsvillkor, förfallodatum och er referens fylls i automatiskt."
  },
  {
   "id": "u3",
   "orig": [
-   158.0,
-   204.5
+   150.0,
+   163.0
   ],
-  "text": "Lägg till en rad med antal, enhet och á-pris – summan räknas ut direkt."
+  "text": "Sedan väljer vi projektet. Orderreferensen hämtas från projektet och projektets namn hamnar i beskrivningen."
  },
  {
   "id": "u4",
+  "orig": [
+   163.0,
+   181.0
+  ],
+  "text": "Vi väljer artikeln och anger till exempel 58 timmar à 595 kronor."
+ },
+ {
+  "id": "u5",
+  "orig": [
+   181.0,
+   204.5
+  ],
+  "text": "Systemet räknar ut allt automatiskt."
+ },
+ {
+  "id": "u6",
   "orig": [
    204.5,
    207.0
@@ -109,7 +133,7 @@
    207.0,
    209.5
   ],
-  "text": "Klart! Fakturan är skickad."
+  "text": "Klart – din första faktura är skickad!"
  },
  {
   "id": "d2",

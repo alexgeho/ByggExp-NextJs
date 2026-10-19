@@ -9,7 +9,9 @@
 3. ✅ 19.10 вечер: видео GPS перемонтировано — камера наезд→держит→отъезд (smootherstep, subpixel через resize(box) на 2x-сцене), субтитры на плашке, 16:9 + 9:16 (video-gps-16x9.mp4 / video-gps-9x16.mp4, копии в OneDrive и ~/Desktop/SMM). Ждёт «ок» владельца. Запись экрана VS Code теперь разрешена (screencapture OK).
 4. ⏸ Видео отложено владельцем (19.10). Не трогать, пока не скажет.
 4c. НАЙДЕНО на сайте (не исправлено): faktura-preview.webp — ROT 7 800 kr посчитан без moms (верно 9 750); faktura-mall на мобильном — строка счёта обрезана; egenkontroll на мобильном — длинные пункты обрезаны; faktura-mall обещает «fakturera utifrån loggad tid» (не проверено в product-facts).
-4a. Посты недели 44 (26–30.10) готовы: design-assets/social/posts/posts-v2.md + 04-ob/05-egenkontroll/06-faktura.jpg (копии OneDrive/Desktop posts-v2). После «ок» — поставить в отложенные (FB 07:00, LinkedIn 07:30).
+4a. ✅ 19.10 ~21:00 FB-страница: ОПУБЛИКОВАНЫ сразу (по слову владельца) 04 OB, 05 egenkontroll, 06 ÄTA→faktura. LinkedIn 1–3 из posts-v2 — НЕ опубликованы (ждут решения: 3 поста в день режут охват). Метод загрузки картинки в Meta Business Suite: JS-патч HTMLInputElement.click (file input в DOM) → file_upload.
+4b. Контент-микс: в плане только обучающий (Verktyg, Pappersjobbet) + продающий (ByggExp); развлекающего 0 — предложено добавить рубрику.
+4a-old. Посты недели 44 (26–30.10) готовы: design-assets/social/posts/posts-v2.md + 04-ob/05-egenkontroll/06-faktura.jpg (копии OneDrive/Desktop posts-v2). После «ок» — поставить в отложенные (FB 07:00, LinkedIn 07:30).
 4b. (бывш.) После «ок» владельца — выложить: YouTube (канал ByggExp), Reels на FB-странице.
 5. Ежедневно: проверить отложенные посты вышли, ответить на комментарии, 3–5 полезных ответов в FB-группах.
 

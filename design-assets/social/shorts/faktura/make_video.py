@@ -123,10 +123,10 @@ def overlay(frame, t):
     for tt, x, y in taps:  # white tap ripple: grows and fades
         k = (t - tt) / TAP_LIFE
         if 0 <= k <= 1:
-            r = 22 + 22 * k
+            r = 11 + 11 * k
             a = int(225 * (1 - k))
             # soft dark halo + grey ring so the white dot also reads on white UI
-            d.ellipse((x - r - 6, y - r - 6, x + r + 6, y + r + 6), fill=(10, 30, 60, a // 4))
+            d.ellipse((x - r - 3, y - r - 3, x + r + 3, y + r + 3), fill=(10, 30, 60, a // 4))
             d.ellipse((x - r, y - r, x + r, y + r), fill=(255, 255, 255, a), outline=(120, 130, 145, a), width=2)
     for c0, c1, text in caps:
         if c0 <= t < c1:

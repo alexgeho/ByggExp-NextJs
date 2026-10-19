@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
-W, H, FPS = 1080, 1920, 30
+W, H, FPS = 1920, 1080, 30
 NAVY, SKY, WHITE = (11, 26, 46), (111, 208, 248), (255, 255, 255)
 
 
@@ -33,7 +33,7 @@ def lerp_rect(a, b, t):
 def bg():
     img = Image.new("RGB", (W, H), NAVY)
     glow = Image.new("L", (W, H), 0)
-    ImageDraw.Draw(glow).ellipse((-300, 700, W + 300, 2400), fill=120)
+    ImageDraw.Draw(glow).ellipse((-200, 500, W + 200, 1700), fill=120)
     glow = glow.filter(ImageFilter.GaussianBlur(240))
     return Image.composite(Image.new("RGB", (W, H), (35, 148, 255)), img, glow)
 
@@ -49,23 +49,22 @@ SRC = {
 # scene: (start, end, kind, source, card (w,h,y), rect_from, rect_to)
 SCENES = [
     (0.0, 2.73, "hook"),
-    (2.73, 8.15, "shot", "phone", (640, 1309, 210), (0, 0, 1320, 2699), (160, 180, 1160, 2225)),
-    (8.15, 10.76, "shot", "shifts", (1000, 1100, 300), (240, 0, 937, 767), (268, 330, 600, 695)),
-    (10.76, 17.09, "shot", "export", (1000, 1100, 300), (870, 0, 1567, 767), (1300, 160, 1556, 442)),
+    (2.73, 8.15, "shot", "phone", (900, 820, 470), 1.0, 1.05),
+    (8.15, 10.76, "shot", "shifts", (1640, 802, 470), 1.0, 1.05),
+    (10.76, 17.09, "shot", "export", (1640, 802, 470), 1.0, 1.05),
     (17.09, None, "cta"),
 ]
 
 
-def card(frame, src, cw, ch, cy, rect):
-    x0, y0, x1, y1 = rect
-    crop = src.crop((int(x0), int(y0), int(x1), int(y1))).resize((cw, ch), Image.LANCZOS)
-    mask = Image.new("L", (cw, ch), 0)
-    ImageDraw.Draw(mask).rounded_rectangle((0, 0, cw, ch), 36, fill=255)
-    cx = (W - cw) // 2
+def card(frame, src, mw, mh, cyc, zoom):
+    # whole image, never cropped: fit into (mw, mh), then scale by zoom around centre
+    k = min(mw / src.width, mh / src.height) * zoom
+    img = src.resize((int(src.width * k), int(src.height * k)), Image.LANCZOS)
+    x, y = (W - img.width) // 2, cyc - img.height // 2
     sh = Image.new("RGBA", frame.size, (0, 0, 0, 0))
-    ImageDraw.Draw(sh).rounded_rectangle((cx, cy + 24, cx + cw, cy + ch + 24), 36, fill=(0, 0, 0, 150))
-    frame.alpha_composite(sh.filter(ImageFilter.GaussianBlur(30)))
-    frame.paste(crop, (cx, cy), mask)
+    sh.paste((0, 0, 0, 140), (x, y + 18, x + img.width, y + 18 + img.height), img.split()[3])
+    frame.alpha_composite(sh.filter(ImageFilter.GaussianBlur(24)))
+    frame.alpha_composite(img, (x, y))
 
 
 def stroked(d, xy, text, f, fill, stroke=7):
@@ -110,32 +109,31 @@ def caption_chunks(al):
 def render(t, total, chunks):
     frame = BG.copy().convert("RGBA")
     d = ImageDraw.Draw(frame)
-    frame.alpha_composite(LOGO, ((W - 96) // 2, 70))
     scene = next(s for s in SCENES if s[0] <= t and (s[1] is None or t < s[1]))
     kind = scene[2]
     if kind == "hook":
-        blur = SRC["shifts"].convert("RGB").resize((int(767 * W / H * 2.2), 767 * 2)).filter(ImageFilter.GaussianBlur(18))
+        blur = SRC["shifts"].convert("RGB").resize((W, H)).filter(ImageFilter.GaussianBlur(18))
         frame.paste(Image.blend(blur.crop((0, 0, W, H)) if blur.width >= W else blur.resize((W, H)), Image.new("RGB", (W, H), NAVY), 0.6), (0, 0))
-        frame.alpha_composite(LOGO, ((W - 96) // 2, 70))
+        frame.alpha_composite(LOGO, ((W - 96) // 2, 90))
         pop = min(1, t / 0.35)
         f = font(int(118 * (0.85 + 0.15 * ease(pop))))
-        centered_lines(d, ["Jagar du", "fortfarande", "tidlappar?"], 640, f, [WHITE, SKY, WHITE], stroke=0)
+        centered_lines(d, ["Jagar du fortfarande", "tidlappar?"], 330, f, [WHITE, SKY, WHITE], stroke=0)
     elif kind == "shot":
-        s0, s1, _, src, (cw, ch, cy), ra, rb = scene
+        s0, s1, _, src, (mw, mh, cyc), z0, z1 = scene
         p = ease(min(1, (t - s0) / (s1 - s0)))
-        card(frame, SRC[src], cw, ch, cy, lerp_rect(ra, rb, p))
+        card(frame, SRC[src], mw, mh, cyc, z0 + (z1 - z0) * p)
     else:
         p = ease(min(1, (t - scene[0]) / 0.5))
         big = LOGO.resize((int(220 * (0.8 + 0.2 * p)),) * 2)
-        frame.alpha_composite(big, ((W - big.width) // 2, 560))
-        centered_lines(d, ["Testa gratis", "i 14 dagar"], 860, font(110), [WHITE])
-        centered_lines(d, ["byggexp.se"], 1120, font(96), [SKY])
+        frame.alpha_composite(big, ((W - big.width) // 2, 170))
+        centered_lines(d, ["Testa gratis i 14 dagar"], 470, font(104), [WHITE])
+        centered_lines(d, ["byggexp.se"], 630, font(92), [SKY])
     if kind == "shot":
         for text, cs, ce in chunks:
             if cs <= t <= ce + 0.15:
-                f = font(84)
+                f = font(72)
                 w = d.textlength(text, font=f)
-                stroked(d, ((W - w) / 2, 1560), text, f, WHITE)
+                stroked(d, ((W - w) / 2, 930), text, f, WHITE)
                 break
     return frame.convert("RGB")
 
@@ -144,7 +142,7 @@ def main():
     al = json.load(open(HERE / "alignment.json"))
     total = al["character_end_times_seconds"][-1] + 1.0
     chunks = caption_chunks(al)
-    out = HERE / "short-gps.mp4"
+    out = HERE / "video-gps-16x9.mp4"
     ff = imageio_ffmpeg.get_ffmpeg_exe()
     proc = subprocess.Popen([ff, "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
                              "-r", str(FPS), "-i", "-", "-i", str(HERE / "voice.mp3"), "-c:v", "libx264", "-preset", "medium",

@@ -81,3 +81,10 @@
 ## Оговорки
 
 Данные по соцсетям — общее население по возрасту, отдельно по строителям статистики нет. Стоимость рекламы — бенчмарки США, шведских цифр нет; реальную цену покажет тест в неделях 7–10.
+
+## Аккаунты (созданы 2026-10-19)
+
+- Facebook: https://www.facebook.com/profile.php?id=61595288321379 (кнопка «Learn more» → /sv/verktyg с UTM)
+- LinkedIn: https://www.linkedin.com/company/byggexp
+- YouTube: @ByggExp
+- Instagram: создаёт владелец (имя byggexp), затем Professional → связать с FB-страницей

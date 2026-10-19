@@ -1,0 +1,122 @@
+[
+ {
+  "id": "i1",
+  "orig": [
+   0.0,
+   17.4
+  ],
+  "text": "Så här skickar du din första faktura i ByggExp-appen."
+ },
+ {
+  "id": "i2",
+  "orig": [
+   17.4,
+   21.0
+  ],
+  "text": "Välj Skicka faktura eller offert – appen guidar dig steg för steg."
+ },
+ {
+  "id": "f1",
+  "orig": [
+   21.0,
+   39.0
+  ],
+  "text": "Först fyller du i företagsuppgifterna: namn, organisationsnummer och e-post."
+ },
+ {
+  "id": "f2",
+  "orig": [
+   39.0,
+   41.4
+  ],
+  "text": "De följer med på varje offert och faktura."
+ },
+ {
+  "id": "k1",
+  "orig": [
+   41.4,
+   84.0
+  ],
+  "text": "Sedan lägger du till en klient och fyller i kontaktuppgifterna."
+ },
+ {
+  "id": "k2",
+  "orig": [
+   84.0,
+   112.6
+  ],
+  "text": "Välj betalningsvillkor, till exempel trettio dagar, valuta och omvänd moms när det behövs."
+ },
+ {
+  "id": "a1",
+  "orig": [
+   112.6,
+   116.0
+  ],
+  "text": "Nästa steg är artiklar."
+ },
+ {
+  "id": "a2",
+  "orig": [
+   116.0,
+   133.0
+  ],
+  "text": "Skriv namnet, till exempel betongarbeten, och välj momssats."
+ },
+ {
+  "id": "a3",
+  "orig": [
+   133.0,
+   135.2
+  ],
+  "text": "Artikeln sparas, så du lägger in den bara en gång."
+ },
+ {
+  "id": "u1",
+  "orig": [
+   135.2,
+   141.0
+  ],
+  "text": "Nu skapar du fakturan."
+ },
+ {
+  "id": "u2",
+  "orig": [
+   141.0,
+   158.0
+  ],
+  "text": "Välj kund, så fylls betalningsvillkor och förfallodatum i automatiskt."
+ },
+ {
+  "id": "u3",
+  "orig": [
+   158.0,
+   204.5
+  ],
+  "text": "Lägg till en rad med antal, enhet och á-pris – summan räknas ut direkt."
+ },
+ {
+  "id": "u4",
+  "orig": [
+   204.5,
+   207.0
+  ],
+  "text": "Tryck på Skapa och skicka."
+ },
+ {
+  "id": "d1",
+  "orig": [
+   207.0,
+   209.5
+  ],
+  "text": "Klart! Fakturan är skickad."
+ },
+ {
+  "id": "d2",
+  "orig": [
+   209.5,
+   215.9
+  ],
+  "text": "Testa ByggExp gratis i fjorton dagar på byggexp.se."
+ }
+]

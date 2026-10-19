@@ -1,13 +1,16 @@
 # ByggExp SMM — статус и следующий шаг (handoff для агента)
 
 Обновлено: 2026-10-19 (вечер). Копия: OneDrive-Personal/ByggExp-SMM/smm-status.md
-Агент: прочитай этот файл целиком, потом делай «▶ СЛЕДУЮЩИЙ ШАГ».
+Агент: прочитай этот файл целиком и design-assets/social/DESIGN-SYSTEM-SMM.md (правила визуала: правка → правило → дизайн), потом делай «▶ СЛЕДУЮЩИЙ ШАГ».
 
 ## ▶ СЛЕДУЮЩИЙ ШАГ
-1. iOS-приложение в симуляторе: дождаться/повторить сборку (см. «Видео → симулятор»), установить, открыть. Владелец входит в demo@byggexp.se сам (пароль агенту вводить нельзя).
+1. iOS-приложение в симуляторе: собрано и запущено, висит на «Open in "ByggExp"?» — владелец жмёт Open в Device Hub (у агента нет Accessibility для клика). Дальше (см. «Видео → симулятор»), установить, открыть. Владелец входит в demo@byggexp.se сам (пароль агенту вводить нельзя).
 2. Записать живой экран (нужно: Системные настройки → Запись экрана → Visual Studio Code ВКЛ; проверка: `screencapture -x /tmp/t.png` без ошибки). Если нет доступа — монтировать из скриншотов (как сейчас).
-3. Перемонтировать видео GPS: плавный зум «как камера» (наезд к кнопке/колонке/меню → отъезд), без дёрганья (subpixel, Image.transform AFFINE вместо int-resize), 16:9 + 9:16, экраны целиком на общем плане.
-4. После «ок» владельца — выложить: YouTube (канал ByggExp), Reels на FB-странице.
+3. ✅ 19.10 вечер: видео GPS перемонтировано — камера наезд→держит→отъезд (smootherstep, subpixel через resize(box) на 2x-сцене), субтитры на плашке, 16:9 + 9:16 (video-gps-16x9.mp4 / video-gps-9x16.mp4, копии в OneDrive и ~/Desktop/SMM). Ждёт «ок» владельца. Запись экрана VS Code теперь разрешена (screencapture OK).
+4. ⏸ Видео отложено владельцем (19.10). Не трогать, пока не скажет.
+4c. НАЙДЕНО на сайте (не исправлено): faktura-preview.webp — ROT 7 800 kr посчитан без moms (верно 9 750); faktura-mall на мобильном — строка счёта обрезана; egenkontroll на мобильном — длинные пункты обрезаны; faktura-mall обещает «fakturera utifrån loggad tid» (не проверено в product-facts).
+4a. Посты недели 44 (26–30.10) готовы: design-assets/social/posts/posts-v2.md + 04-ob/05-egenkontroll/06-faktura.jpg (копии OneDrive/Desktop posts-v2). После «ок» — поставить в отложенные (FB 07:00, LinkedIn 07:30).
+4b. (бывш.) После «ок» владельца — выложить: YouTube (канал ByggExp), Reels на FB-странице.
 5. Ежедневно: проверить отложенные посты вышли, ответить на комментарии, 3–5 полезных ответов в FB-группах.
 
 ## Аккаунты
@@ -52,6 +55,14 @@
   `cd ~/Bygg-exp-dev/tot-bygghub-mobile-app-ios/ios && xcodebuild -workspace ByggExp.xcworkspace -scheme ByggExp -configuration Debug -destination 'id=5904885A-ED7B-465B-A0AC-359665F69AAC' -derivedDataPath build/dd IPHONEOS_DEPLOYMENT_TARGET=15.1 build`
   затем `xcrun simctl install <UDID> build/dd/Build/Products/Debug-iphonesimulator/*.app` и `xcrun simctl launch`. Metro уже на :8081. Веб-версия приложения: `CI=1 npx expo start --web --port 8082`.
 - Демо-данные: админ-аккаунт «Roger» (тот же, что на скринах сайта) — можно показывать.
+- **Туториал-пайплайн (готов, 2026-10-19):** design-assets/social/shorts/faktura/ — `analyze.py` (паузы + тапы из записи Screen Studio) → `script_sv.json` (фразы с привязкой к моменту) → TTS Malin по фразам → `make_video.py <src> sv <out>` (вырезает паузы, белые круги на тапах, субтитры справа как в SV-ролике). Готово: ~/Desktop/SMM/onboarding/faktura-sv.mp4 (1:29 из 3:36, исходник ~/Downloads/faktura10.mp4). Далее: EN-версия (script_en.json + voice_en), по желанию 4K.
+- Мокап-генератор: design-assets/social/shorts/onboarding-app/make_mockup.py — iPhone на фоне ~/Documents/ByggExp/logos-banners/background.png, геометрия снята с SV-ролика на YouTube (телефон y38–1039, текст x1231, шаг 53px). Оригиналы владелец делает в **Screen Studio** (пресет Wide 16:9, фон Image, padding 5%).
+
+## 💡 Идеи на потом (обсуждение, НЕ делать без запроса)
+**Видео со спецэффектами** (2026-10-19, владелец: «пока чисто для обсуждения»):
+1. **Монтаж телефон + админка с переходами** (вылет телефона, ноутбук+телефон, наезды, фирменные шрифты) → **Remotion** (видео как React-страница, рендер командой, бесплатно до 3 человек). Новых сервисов не нужно. Рекомендация — начинать с этого.
+2. **3D-телефон с пролётом камеры** → **Rotato** (~$59 навсегда / $7 в мес., Mac/веб; работает владелец) или упрощённо через Remotion.
+3. **Человек достаёт телефон — экран включается, там наше приложение** → ИИ-видео (Veo 3.1, Kling, Runway, Seedance; ~$0.03–0.40 за секунду через API; ключ Replicate уже есть). Надёжный способ: ИИ генерирует сцену с пустым/зелёным экраном → вставляем НАСТОЯЩУЮ запись приложения с трекингом (ИИ сам мелкий UI-текст рисует «кашей»).
 
 ## Правила (не нарушать)
 - Только проверенные факты продукта: docs/seo/product-facts-verified.md (нет Fortnox API, offline, авто-OB).

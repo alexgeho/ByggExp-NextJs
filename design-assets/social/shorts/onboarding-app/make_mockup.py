@@ -10,15 +10,17 @@ from PIL import Image, ImageDraw, ImageFont
 HERE = Path(__file__).resolve().parent
 BG = Path.home() / "Documents/ByggExp/logos-banners/background.png"
 W, H = 1920, 1080
-SCR_H = 972                      # screen height on canvas (phone ~ full height, as in the SV onboarding video)
+SCR_H = 975                      # measured from the SV onboarding video: phone outer y 38–1039
 SCR_W = round(SCR_H * 1206 / 2622)
-BEZEL = 12                       # black bezel around the screen
+BEZEL = 7                       # black bezel around the screen
 R_SCR = 62                       # screen corner radius
 PHONE_CX = 960                   # phone centred
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 
 
 def font(size, weight="Semibold"):
+    if weight == "Caption":  # caption face ~ Montserrat Medium in the SV video; closest system font
+        return ImageFont.truetype("/System/Library/Fonts/Avenir Next.ttc", size, index=5)
     f = ImageFont.truetype("/System/Library/Fonts/SFNS.ttf", size)
     try:
         f.set_variation_by_name(weight)
@@ -41,19 +43,21 @@ def layers(text):
     bg = Image.alpha_composite(bg.convert("RGBA"), shadow.filter(ImageFilter.GaussianBlur(40)))
     if text:
         d = ImageDraw.Draw(bg)
-        f = font(54, "Regular")
-        x, y = 1232, 0
-        lines, cur = [], ""
-        for w in text.split():
-            t = (cur + " " + w).strip()
-            if d.textlength(t, font=f) <= 640:
-                cur = t
-            else:
-                lines.append(cur); cur = w
-        lines.append(cur)
-        y = 1012 - len(lines) * 58  # bottom-anchored, right of the phone
+        f = font(50, "Caption")
+        x, y = 1231, 0
+        lines = []
+        for para in text.split("\\n"):  # "\n" in the CLI text = forced line break (e.g. after "Välkommen")
+            cur = ""
+            for w in para.split():
+                t = (cur + " " + w).strip()
+                if d.textlength(t, font=f) <= 590:
+                    cur = t
+                else:
+                    lines.append(cur); cur = w
+            lines.append(cur)
+        y = 1019 - len(lines) * 53  # measured: last line bottom at y=1019, 53px line step
         for i, l in enumerate(lines):
-            d.text((x, y + i * 58), l, font=f, fill=(255, 255, 255), stroke_width=0)
+            d.text((x, y + i * 53), l, font=f, fill=(255, 255, 255), stroke_width=0)
     bg.convert("RGB").save(tmp / "bg.png")
 
     # bezel frame with transparent screen hole (titanium edge + black bezel).
@@ -65,8 +69,8 @@ def layers(text):
 
     frame = Image.new("RGBA", (W * SS, H * SS), (0, 0, 0, 0))
     d = ImageDraw.Draw(frame)
-    d.rounded_rectangle(r((px - 4, py - 4, px + pw + 4, py + ph + 4)), (R_SCR + BEZEL + 4) * SS, fill=(196, 202, 212, 255))
-    d.rounded_rectangle(r((px - 2.5, py - 2.5, px + pw + 2.5, py + ph + 2.5)), (R_SCR + BEZEL + 2.5) * SS, fill=(150, 156, 166, 255))
+    d.rounded_rectangle(r((px - 6, py - 6, px + pw + 6, py + ph + 6)), (R_SCR + BEZEL + 6) * SS, fill=(226, 229, 234, 255))
+    d.rounded_rectangle(r((px - 1.5, py - 1.5, px + pw + 1.5, py + ph + 1.5)), (R_SCR + BEZEL + 1.5) * SS, fill=(176, 182, 192, 255))
     d.rounded_rectangle(r((px, py, px + pw, py + ph)), (R_SCR + BEZEL) * SS, fill=(12, 12, 14, 255))
     for y0, y1 in ((py + 190, py + 260), (py + 290, py + 380), (py + 400, py + 490)):
         d.rounded_rectangle(r((px - 8, y0, px - 3, y1)), 2 * SS, fill=(170, 176, 186, 255))

@@ -71,6 +71,21 @@
 
 Формат каждого: вертикальное видео 15–30 сек (экран телефона + руки/стройка), 1 строка текста на видео, подпись ≤3 строк, ссылка.
 
+
+## 5b. Очередь постов по спросу (GSC, 3 мес. до 19.10.2026) — ПРИОРИТЕТ над §5
+Правило: темы постов берём из Google Search Console (клики/показы), раз в 2 недели обновляем.
+| # | Тема | Ссылка | GSC клики / показы |
+|---|---|---|---|
+| 1 | Egenkontroll mall (bygg/el/vvs) — серия из 3 | /sv/verktyg/egenkontroll-mall, -el-, -vvs- | 232 / 4 647 (+61 vvs) |
+| 2 | OB/övertid enligt Byggavtalet (гайд) | /sv/blog/ob-overtid-byggavtalet-rakna | 120 / 4 336 |
+| 3 | Entreprenadkontrakt mall (ABT 06) | /sv/blog/entreprenadkontrakt-mall | 96 / 1 798 |
+| 4 | Takstolar: dimensionering, c-avstånd | /sv/blog/berakna-takstolar-dimensionering-c-avstand + /verktyg/takstolar-kalkylator | 82+57 / 13 753 |
+| 5 | AB-U 07 underentreprenör avtal | /sv/blog/ab-u-underentreprenor-avtal | 74 / 3 894 |
+| 6 | Arbetsberedning mall | /sv/blog/arbetsberedning-mall-bygg | 58 / 1 333 |
+| 7 | Fall-kalkylator (fall mot brunn) | /sv/verktyg/fall-kalkylator | 53 |
+| 8 | Ackordslön bygg | /sv/blog/ackordslon-bygg | 44 |
+Уже вышло: OB (04), egenkontroll våtrum (05). Takstolar — больше всего показов (9 064) → первый кандидат на видео.
+
 ## 6. Метрики (каждую пятницу, 10 мин)
 
 - Подписчики FB/IG/LinkedIn/YouTube

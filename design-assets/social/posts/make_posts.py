@@ -13,6 +13,11 @@ NAVY, SKY, WHITE = (11, 26, 46), (111, 208, 248), (255, 255, 255)
 # out, headline lines (second in SKY), parts stacked top→bottom: (screenshot, crop box px | None) or "ARROW"
 # Screenshots: puppeteer, filled forms, 2x (S5, S8). See DESIGN-SYSTEM-SMM.md.
 POSTS = [
+    ("08-ek-el.jpg", ["Egenkontroll el", "Gratis mall – PDF"], [("egenkontroll-el-mall-0.png", None), ("egenkontroll-el-mall-1.png", None)]),
+    ("09-ek-vvs.jpg", ["Egenkontroll VVS", "Gratis mall – PDF"], [("egenkontroll-vvs-mall-0.png", None), ("egenkontroll-vvs-mall-1.png", None)]),
+    ("10-ek-bygg.jpg", ["Egenkontroll bygg", "Gratis mall – PDF"], [("egenkontroll-bygg-mall-0.png", None), ("egenkontroll-bygg-mall-1.png", None)]),
+    ("11-kontrakt.jpg", ["Entreprenadkontrakt", "Gratis mall – AB 04"], [("kontrakt-0.png", None), ("kontrakt-1.png", None), ("kontrakt-2.png", None)]),
+    ("12-takstolar.jpg", ["Hur många takstolar?", "Räkna direkt"], [("takstolar.png", (66, 66, 1032, 468)), ("takstolar.png", (66, 1404, 1032, 1572))]),
     ("00-verktyg.jpg", ["60+ gratis verktyg", "för byggare"], [("c1.png", None), "GAP", ("c2.png", None), "GAP", ("c3.png", None)]),
     ("04-ob.jpg", ["OB eller övertid?", "Räkna tillägget"], [("m-ob.png", (36, 36, 1076, 948))]),
     ("05-egenkontroll.jpg", ["Egenkontroll våtrum", "Klar på bygget"], [("m-ek.png", (30, 2900, 1068, 3365)), ("m-ek.png", (30, 3725, 1068, 4090)), ("m-ek.png", (30, 340, 1068, 500))]),
@@ -65,7 +70,7 @@ def make(out, lines, parts, src_dir, footer=FOOTER):
     k = cw / max(b.width for b in blocks if not isinstance(b, str))  # one scale for all parts, left-aligned
     blocks = [b if isinstance(b, str) else b.resize((round(b.width * k), round(b.height * k)), Image.LANCZOS) for b in blocks]
     gap = 140
-    pad = 0 if parts[0][0] == "m-ob.png" else 70  # whole tool card has its own frame; crops get equal white margin (S5)
+    pad = 0 if parts[0][0] in ("m-ob.png", "takstolar.png") else 70  # whole tool card has its own frame; crops get equal white margin (S5)
     sgap = 40  # between stacked cards
     first = next(b for b in blocks if not isinstance(b, str))
     fill = first.getpixel((2, 2))  # page background of the screenshot, so tiles sit on their own surface
@@ -120,4 +125,4 @@ if __name__ == "__main__":
         make(*p, sys.argv[1])
     if "--footers" in sys.argv:  # comparison set for owner
         for f in FOOTERS:
-            make(f"04-ob-{f}.jpg", POSTS[1][1], POSTS[1][2], sys.argv[1], f)
+            make(f"04-ob-{f}.jpg", POSTS[6][1], POSTS[6][2], sys.argv[1], f)

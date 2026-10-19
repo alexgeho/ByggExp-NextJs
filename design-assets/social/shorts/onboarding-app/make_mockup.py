@@ -56,27 +56,32 @@ def layers(text):
             d.text((x, y + i * 58), l, font=f, fill=(255, 255, 255), stroke_width=0)
     bg.convert("RGB").save(tmp / "bg.png")
 
-    # bezel frame with transparent screen hole (titanium edge + black bezel)
-    frame = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(frame)
-    d.rounded_rectangle((px - 4, py - 4, px + pw + 4, py + ph + 4), R_SCR + BEZEL + 4, fill=(196, 202, 212, 255))
-    d.rounded_rectangle((px, py, px + pw, py + ph), R_SCR + BEZEL, fill=(12, 12, 14, 255))
-    hole = Image.new("L", (W, H), 0)
-    ImageDraw.Draw(hole).rounded_rectangle((px + BEZEL, py + BEZEL, px + BEZEL + SCR_W, py + BEZEL + SCR_H), R_SCR, fill=255)
-    a = frame.split()[3].point(lambda v: v)
-    a = Image.composite(Image.new("L", (W, H), 0), a, hole)
-    frame.putalpha(a)
-    # side buttons
-    for y0, y1 in ((py + 190, py + 260), (py + 290, py + 380), (py + 400, py + 490)):
-        d2 = ImageDraw.Draw(frame)
-        d2.rounded_rectangle((px - 8, y0, px - 3, y1), 2, fill=(170, 176, 186, 255))
-    d2.rounded_rectangle((px + pw + 3, py + 300, px + pw + 8, py + 440), 2, fill=(170, 176, 186, 255))
-    frame.save(tmp / "frame.png")
+    # bezel frame with transparent screen hole (titanium edge + black bezel).
+    # Drawn at SS× and downscaled so every curve is anti-aliased (no stair-step pixels).
+    SS = 4
 
-    # rounded mask for the screen video
-    m = Image.new("L", (SCR_W, SCR_H), 0)
-    ImageDraw.Draw(m).rounded_rectangle((0, 0, SCR_W - 1, SCR_H - 1), R_SCR, fill=255)
-    m.save(tmp / "mask.png")
+    def r(box):
+        return tuple(v * SS for v in box)
+
+    frame = Image.new("RGBA", (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(frame)
+    d.rounded_rectangle(r((px - 4, py - 4, px + pw + 4, py + ph + 4)), (R_SCR + BEZEL + 4) * SS, fill=(196, 202, 212, 255))
+    d.rounded_rectangle(r((px - 2.5, py - 2.5, px + pw + 2.5, py + ph + 2.5)), (R_SCR + BEZEL + 2.5) * SS, fill=(150, 156, 166, 255))
+    d.rounded_rectangle(r((px, py, px + pw, py + ph)), (R_SCR + BEZEL) * SS, fill=(12, 12, 14, 255))
+    for y0, y1 in ((py + 190, py + 260), (py + 290, py + 380), (py + 400, py + 490)):
+        d.rounded_rectangle(r((px - 8, y0, px - 3, y1)), 2 * SS, fill=(170, 176, 186, 255))
+    d.rounded_rectangle(r((px + pw + 3, py + 300, px + pw + 8, py + 440)), 2 * SS, fill=(170, 176, 186, 255))
+    # hole is 1px smaller than the screen so the bezel overlaps the video edge (no seam)
+    hole = Image.new("L", (W * SS, H * SS), 0)
+    ImageDraw.Draw(hole).rounded_rectangle(
+        r((px + BEZEL + 1, py + BEZEL + 1, px + BEZEL + SCR_W - 1, py + BEZEL + SCR_H - 1)), (R_SCR - 1) * SS, fill=255)
+    frame.putalpha(Image.composite(Image.new("L", frame.size, 0), frame.split()[3], hole))
+    frame.resize((W, H), Image.LANCZOS).save(tmp / "frame.png")
+
+    # rounded mask for the screen video (anti-aliased the same way)
+    m = Image.new("L", (SCR_W * SS, SCR_H * SS), 0)
+    ImageDraw.Draw(m).rounded_rectangle((0, 0, SCR_W * SS - 1, SCR_H * SS - 1), R_SCR * SS, fill=255)
+    m.resize((SCR_W, SCR_H), Image.LANCZOS).save(tmp / "mask.png")
     return tmp, px + BEZEL, py + BEZEL
 
 

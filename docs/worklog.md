@@ -1,5 +1,12 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-19 — SMM-старт, видео-пайплайн, дизайн-система (HANDOFF)
+- Соцсети: FB-страница (id 61595288321379), LinkedIn company/byggexp, YouTube — обложки (design-assets/social/covers), ссылки, описание; футер сайта: YouTube/FB/LinkedIn (4dfa8ca). Посты: 3 вышли, 6 отложены (FB ср/пт 07:00, LinkedIn вт–пт 07:30). 10 FB-групп.
+- Дизайн-система сайта: DESIGN-SYSTEM.md + src/styles/design-system.scss (R1 равные панели, R2 отступ 20px) — на все калькуляторы.
+- Видео: design-assets/social/shorts/faktura/ — analyze.py (паузы+тапы) → script_sv.json → TTS Malin → make_video.py (туториал) / make_ad.py (15 с). Готово: ~/Desktop/SMM/onboarding/faktura-sv.mp4, ad-faktura-15s.mp4. Правило S12: не ускорять видео.
+- iOS-симулятор: Xcode 27.1 → Device Hub, сборка через xcodebuild (команда в docs/marketing/smm-status.md).
+NÄSTA: EN-туториал (script_en.json), 9:16 реклама, музыка (Music-доступ ключа ElevenLabs), Instagram (владелец), LinkedIn-инвайты (владелец). Полный статус: docs/marketing/smm-status.md.
+
 ## 2026-10-12 — Svensk språkgranskning (live) + ny mejlsignatur
 - Språkgranskning (AI) av startsida, /funktioner, om-oss, faq och 11 funktionsguider: ~60 rättelser (27dfd5e). DeepL Write stöder inte svenska.
 - Grundproblemet: eyebrow borttagen, rubriken läses «80 % **av företagen** förlorar pengar …» (bara sv; övriga språk oförändrade).

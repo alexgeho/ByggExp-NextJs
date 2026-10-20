@@ -10,6 +10,7 @@ import FinalBenefits from "../../components/FinalBenefits/FinalBenefits";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero/Hero";
+import HeroV2 from "../../components/HeroV2/HeroV2";
 import Pain from "../../components/Pain/Pain";
 import { buildHreflangAlternates, defaultHomeMeta, localeOrigin } from "../../lib/seo";
 import Pricing, { FAKTURA_PRICE } from "../../components/Pricing/Pricing";
@@ -32,9 +33,11 @@ import type { SiteSeo } from "../../types/blog";
 type HomePageProps = {
   lang: LandingLanguageCode;
   seo: SiteSeo | null;
+  // ?v=old shows the previous home page (git tag startsida-v1) for comparison.
+  oldVersion: boolean;
 };
 
-export const getServerSideProps: GetServerSideProps<HomePageProps> = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps<HomePageProps> = async ({ params, query }) => {
   const lang = params?.lang as LandingLanguageCode;
   if (!landingLanguageCodes.includes(lang)) {
     return { notFound: true };
@@ -44,6 +47,7 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async ({ pa
     props: {
       lang,
       seo: await fetchSiteSeo(lang).catch(() => null),
+      oldVersion: query.v === "old",
     },
   };
 };
@@ -73,6 +77,7 @@ function homeAppSchema(url: string, description?: string) {
 export default function HomePage({
   lang,
   seo,
+  oldVersion,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const router = useRouter();
 
@@ -131,6 +136,16 @@ export default function HomePage({
   const title = seo?.title || fallbackMeta.title;
   const description = seo?.description || fallbackMeta.description;
 
+  const features = (
+    <Features
+      lang={lang}
+      featuresT1_3={featuresT1_3}
+      featuresT4_6={featuresT4_6}
+      featuresT7_9={featuresT7_9}
+      featuresT10_11={featuresT10_11}
+    />
+  );
+
   return (
     <>
       <Head>
@@ -140,7 +155,7 @@ export default function HomePage({
         {hreflangAlternates.map((alt) => (
           <link key={alt.hrefLang} rel="alternate" hrefLang={alt.hrefLang} href={alt.href} />
         ))}
-        {seo?.noIndex ? <meta name="robots" content="noindex, nofollow" /> : null}
+        {seo?.noIndex || oldVersion ? <meta name="robots" content="noindex, nofollow" /> : null}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         {description ? <meta property="og:description" content={description} /> : null}
@@ -152,18 +167,26 @@ export default function HomePage({
         />
       </Head>
       <Header headerT={headerT} />
-      <Hero heroT={heroT} />
-      <Pain painT={painT} />
-      <Benefits benefitsT={benefitsT} />
-      <Features
-        lang={lang}
-        featuresT1_3={featuresT1_3}
-        featuresT4_6={featuresT4_6}
-        featuresT7_9={featuresT7_9}
-        featuresT10_11={featuresT10_11}
-      />
-      <FinalBenefits finalBenefitsT={finalBenefitsT} />
-      <Pricing pricingT={pricingT} lang={lang} />
+      {oldVersion ? (
+        <>
+          <Hero heroT={heroT} />
+          <Pain painT={painT} />
+          <Benefits benefitsT={benefitsT} />
+          {features}
+          <FinalBenefits finalBenefitsT={finalBenefitsT} />
+          <Pricing pricingT={pricingT} lang={lang} />
+        </>
+      ) : (
+        <>
+          {/* Hero → services → prices first; pain and benefits further down (owner 2026-10-20) */}
+          {lang === "sv" ? <HeroV2 variant="center" /> : <Hero heroT={heroT} />}
+          {features}
+          <Pricing pricingT={pricingT} lang={lang} />
+          <Pain painT={painT} />
+          <Benefits benefitsT={benefitsT} />
+          <FinalBenefits finalBenefitsT={finalBenefitsT} />
+        </>
+      )}
       <CTA ctaT={ctaT} />
       <Footer footerT={footerT} />
     </>

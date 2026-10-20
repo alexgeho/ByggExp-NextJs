@@ -65,7 +65,7 @@ def make(out, lines, parts, src_dir, footer=FOOTER):
     f = font(92)
     for i, t in enumerate(lines):
         w = d.textlength(t, font=f)
-        d.text(((W - w) / 2, 110 + i * 104), t, font=f, fill=WHITE if i == 0 else SKY)
+        d.text(((W - w) / 2, 150 + i * 104), t, font=f, fill=WHITE if i == 0 else SKY)
     cw = 1700
     blocks = []
     for p in parts:
@@ -95,7 +95,7 @@ def make(out, lines, parts, src_dir, footer=FOOTER):
             continue
         card.paste(b, (pad, yy))
         yy += b.height
-    mw, mh, top, bottom = W - 2 * 64, 0, 370, 1170
+    mw, mh, top, bottom = W - 2 * 64, 0, 400, 1185
     k = min(mw / card.width, (bottom - top) / card.height)
     card = rounded(card.resize((round(card.width * k), round(card.height * k)), Image.LANCZOS).convert("RGBA"), 24)
     x, y = (W - card.width) // 2, top + (bottom - top - card.height) // 2

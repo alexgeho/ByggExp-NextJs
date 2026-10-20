@@ -174,7 +174,7 @@ a {
   padding: 0 32px;
 }
 section {
-  padding: 60px 0;
+  padding: var(--ds-section-pad, 60px) 0;
 }
 
 

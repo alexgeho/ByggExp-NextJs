@@ -419,8 +419,8 @@
     .hero-v2-inner {
       max-width: 1440px;
       gap: 40px;
-      padding-top: 60px;
-      padding-bottom: 60px;
+      padding-top: var(--ds-section-pad);
+      padding-bottom: var(--ds-section-pad);
     }
     .hero-v2-content {
       flex: 0 1 440px;

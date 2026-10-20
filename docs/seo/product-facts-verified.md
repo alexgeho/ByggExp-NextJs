@@ -30,3 +30,6 @@
 - Apps: https://apps.apple.com/se/app/id6748280779 · https://play.google.com/store/apps/details?id=se.byggexp.app
 - Personalliggare: module not fully shipped — don't present as live feature beyond "personalliggare-PDF".
 - No customer reviews/quotes/customer counts available — never invent.
+
+## Skanning (ägaren bekräftat 2026-10-20)
+- YES: skanning av kvitton och inkommande fakturor (admin, e-post); arbetare skannar kvitton med mobilkameran i appen.

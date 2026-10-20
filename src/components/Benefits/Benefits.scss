@@ -699,3 +699,32 @@
 }
 
 
+
+/* owner 2026-10-20: every card = icon left, label + title + subtitle right */
+.benefits-single .benefits-slider--peek .benefit-card {
+  flex-direction: row;
+  align-items: center;
+  gap: 28px;
+
+  .benefit-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+
+    > * {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .benefits-single .benefits-slider--peek .benefit-card {
+    gap: 16px;
+
+    .benefit-icon-3d {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}

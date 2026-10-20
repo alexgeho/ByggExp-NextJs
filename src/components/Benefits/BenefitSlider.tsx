@@ -101,12 +101,14 @@ export default function BenefitSlider({ cards }: { cards: SliderCard[] }) {
               aria-hidden={clone || undefined}
               onClick={abs !== pos ? () => jumpTo(abs, true) : undefined}
             >
-              {card.audience && (
-                <span className="benefit-audience">{card.audience.replace(/:\s*$/, "")}</span>
-              )}
               <div className={card.iconClass}>{card.icon}</div>
-              {card.title && <h3>{card.title}</h3>}
-              {card.text && <p>{card.text}</p>}
+              <div className="benefit-body">
+                {card.audience && (
+                  <span className="benefit-audience">{card.audience.replace(/:\s*$/, "")}</span>
+                )}
+                {card.title && <h3>{card.title}</h3>}
+                {card.text && <p>{card.text}</p>}
+              </div>
             </div>
           ))}
         </div>

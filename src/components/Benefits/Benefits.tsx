@@ -26,7 +26,7 @@ function Benefits({ benefitsT, finalBenefitsT }: BenefitsProps) {
         icon: <img src={`/landing/final-benefits/${name}.webp`} alt="" width={256} height={256} loading="lazy" decoding="async" />,
         iconClass: "benefit-icon-3d",
         title: finalBenefitsT[`finalBenefitsItem${i + 1}` as "finalBenefitsItem1"],
-        text: "",
+        text: finalBenefitsT[`finalBenefitsItem${i + 1}Text` as "finalBenefitsItem1Text"] ?? "",
       }))
     : [];
 

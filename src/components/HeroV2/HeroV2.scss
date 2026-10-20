@@ -92,11 +92,20 @@
   padding: 0;
   border: 0;
   background: none;
-  font: inherit; // same size as the price line
+  font: inherit; // same font/size as the price line
+  font-family: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
   color: var(--muted);
   cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
+  &::after {
+    content: " ›";
+  }
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
 }
 
 .hero-v2-ctas {
@@ -274,7 +283,7 @@
   }
 
   .hero-v2-more {
-    color: #e6eef7; // grey, a touch lighter than the line
+    color: #d9e8f8; // almost the line colour, a touch lighter
   }
 
   .hero-v2-btn--ghost {

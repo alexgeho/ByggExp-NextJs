@@ -70,7 +70,7 @@ function HeroV2({ variant = "center" }: HeroV2Props) {
                   aria-expanded={open[i]}
                   onClick={() => setOpen((o) => o.map((v, j) => (j === i ? !v : v)))}
                 >
-                  {open[i] ? "Visa mindre" : "Läs mer"}
+                  {open[i] ? "visa mindre" : "läs mer"}
                 </button>
               </p>
             ))}

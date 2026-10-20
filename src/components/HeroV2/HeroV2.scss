@@ -92,10 +92,8 @@
   padding: 0;
   border: 0;
   background: none;
-  font: inherit;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--blue-500, #3b8cff);
+  font: inherit; // same size as the price line
+  color: var(--muted);
   cursor: pointer;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -273,6 +271,10 @@
   .hero-v2-price,
   .hero-v2-meta {
     color: #cfe3f7;
+  }
+
+  .hero-v2-more {
+    color: #e6eef7; // grey, a touch lighter than the line
   }
 
   .hero-v2-btn--ghost {

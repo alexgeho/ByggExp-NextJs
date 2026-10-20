@@ -538,11 +538,11 @@
   .hero-v2--dark .hero-v2-visual {
     aspect-ratio: 358 / 374; // office photo + 40px + two badges + 40px
   }
-  // badges: 20px from the worker card, 40px under the office photo and above the bottom
+  // badges: 40px from the worker card, under the office photo and above the bottom
   .hero-v2-stores {
     top: auto;
     bottom: 40px;
-    left: calc(36% + 20px);
+    left: calc(36% + 40px);
     gap: 10px;
     align-items: flex-start;
     justify-content: flex-end;

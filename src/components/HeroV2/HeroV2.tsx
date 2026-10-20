@@ -4,10 +4,11 @@
 // there via ?v=<variant>:
 //   center      – light, text centred, devices with people on both sides
 //   split       – light, text left, devices + people right
+//   split-scenes – light, text left, office + site photos with real screens right
 //   dark        – darkened photo background, text left, devices right
 //   dark-center – darkened photo background, text centred, devices below
 
-export const HERO_V2_VARIANTS = ["center", "split", "dark", "dark-center"] as const;
+export const HERO_V2_VARIANTS = ["center", "split", "split-scenes", "dark", "dark-center"] as const;
 export type HeroV2Variant = (typeof HERO_V2_VARIANTS)[number];
 
 const REGISTER_URL = "https://admin.byggexp.se/register";
@@ -25,6 +26,7 @@ type HeroV2Props = {
 
 function HeroV2({ variant = "center" }: HeroV2Props) {
   const isDark = variant === "dark" || variant === "dark-center";
+  const showScenes = isDark || variant === "split-scenes";
 
   return (
     <section className={`hero-v2 hero-v2--${variant}`}>
@@ -44,7 +46,7 @@ function HeroV2({ variant = "center" }: HeroV2Props) {
               <strong>299 kr/mån</strong> – offerter, fakturor, löner, kvitton, …
             </span>
             <span>
-              <strong>+ 69 kr</strong> per arbetare – tidrapport, planering, närvaro, egenkontroll, …
+              <strong>69 kr/mån</strong> per arbetare – tidrapport, planering, närvaro, egenkontroll, …
             </span>
           </p>
 
@@ -61,22 +63,22 @@ function HeroV2({ variant = "center" }: HeroV2Props) {
         </div>
 
         <div className="hero-v2-visual">
-          {isDark ? (
+          {showScenes ? (
             <>
               <img
                 src={peopleRight}
                 alt="Projektledare på kontoret ser arbetspassen i ByggExp"
                 className="hero-v2-scene hero-v2-scene--office"
-                width={1872}
-                height={1280}
+                width={2566}
+                height={1824}
                 fetchPriority="high"
               />
               <img
                 src={peopleLeft}
                 alt="Hantverkare stämplar in på bygget i ByggExp-appen"
                 className="hero-v2-scene hero-v2-scene--site"
-                width={1060}
-                height={1325}
+                width={1527}
+                height={2103}
               />
             </>
           ) : (

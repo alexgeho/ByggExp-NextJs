@@ -57,7 +57,7 @@ def tiles(names, gap=36, r=48):
     return out
 
 
-def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=None):
+def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=None, price=None, stores=False):
     sl, st, sw, sh = safe
     img = background(w, h, cell)
     d = ImageDraw.Draw(img)
@@ -66,7 +66,9 @@ def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=N
     sub_lines = wrap(d, sub, small, tw) if sub else []
     if url:
         sub_lines = sub_lines + [url]
-    block_h = lh * len(lines) + (int(fs * .4) + slh * len(sub_lines) if sub_lines else 0)
+    ph = int(fs * .9)  # S17 price pill, S16 store badges under it
+    extra = (int(fs * .4) + ph if price else 0) + (int(fs * .3) + ph if stores else 0)
+    block_h = lh * len(lines) + (int(fs * .4) + slh * len(sub_lines) if sub_lines else 0) + extra
     y = st + (sh - block_h) // 2
     text_w = 0
     for text, color in lines:
@@ -78,6 +80,23 @@ def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=N
         d.text((sl, y), t, font=font(int(fs * .42), "Heavy") if t == url else small, fill=SKY if t == url else (200, 214, 232))
         text_w = max(text_w, d.textlength(t, font=small))
         y += slh
+    if price:
+        y += int(fs * .4) - (int(fs * .4) if sub_lines else 0)
+        fp = font(int(ph * .52), "Bold")
+        pw = d.textlength(price, font=fp) + ph
+        d.rounded_rectangle((sl, y, sl + pw, y + ph), ph // 2, fill=SKY)
+        d.text((sl + ph / 2, y + ph * .2), price, font=fp, fill=NAVY)
+        text_w = max(text_w, pw)
+        y += ph
+    if stores:
+        y += int(fs * .3)
+        b = Image.open(TILES / "stores.png").convert("RGBA").crop((313, 64, 931, 151))
+        b.putalpha(b.split()[3].point(lambda a: 255 if a > 200 else 0))
+        b = b.resize((round(b.width * ph / b.height), ph), Image.LANCZOS)
+        img = img.convert("RGBA")
+        img.alpha_composite(b, (sl, y))
+        d = ImageDraw.Draw(img)
+        text_w = max(text_w, b.width)
     # product screenshot fills the rest of the safe area
     gap = int(fs * .8)
     box_w, box_h = int(sl + sw - (sl + text_w + gap)), sh
@@ -122,4 +141,11 @@ cover("linkedin-cover", 1128, 191, (300, 20, 800, 151), SHORT, 26, 24)
 cover("youtube-banner", 2560, 1440, (507, 509, 1546, 423), TITLE, 62, 64, SUB, 720)
 for n in ("linkedin-cover-value", "linkedin-cover-product"):  # LinkedIn rejects the 2x PNG; upload this JPG
     Image.open(HERE / f"{n}.png").convert("RGB").resize((1584, 268), Image.LANCZOS).save(HERE / f"{n}.jpg", quality=92)
+# S16/S17: hero collage from the home page + price + store badges
+HERO = Image.open(TILES / "hero-nostores.png")  # badges sit next to the price instead
+HEAD = [("Hela byggföretaget", WHITE), ("på ett ställe", SKY)]
+PRICE = "299 kr/mån + 69 kr/arbetare"
+cover("facebook-cover-v4", 1640, 624, (230, 40, 1180, 544), HEAD, 64, 48, shot=HERO, price=PRICE, stores=True)
+cover("linkedin-cover-v4", 2256, 382, (700, 24, 1300, 334), HEAD, 60, 48, shot=HERO, price=PRICE, stores=True)
+Image.open(HERE / "linkedin-cover-v4.png").convert("RGB").resize((1584, 268), Image.LANCZOS).save(HERE / "linkedin-cover-v4.jpg", quality=92)
 print("ok")

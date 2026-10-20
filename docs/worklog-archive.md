@@ -1,5 +1,155 @@
 # ByggExp — архив worklog
 
+## 🟡 2026-09-29 — аутрич: реестры собраны (следующая волна после SV-1)
+- Собраны реестры: GVK 775 фирм · Säker Vatten 2246 · Elsäkerhetsverket 15 140 (8269 с email). BKR — нет (robots.txt запрещает ботов Anthropic; запрос выгрузки `~/Desktop/byggexp-outreach/BKR-forfragan.txt`). Черновик SCB — `SCB-forfragan.txt`.
+- CSV пока во временной папке сессии Claude — путь и команда переноса в `~/sites-hub/worklog.md` HANDOFF 2026-09-29. В репо НЕ класть (персональные данные).
+NÄSTA: перенести CSV → свести в xlsx (Тип / дубли с Platsbanken / убрать .no) → волна после SV-1.
+
+## 🟢 2026-09-28 (ночь) — почта на Brevo, аутрич SV-1, отчёт по работнику
+- Системная почта (API) не уходила (535) → переведена на Brevo SMTP, byggexp.se аутентифицирован (DKIM/brevo-code, одна DMARC). Детали и дата истечения ключа (28.09.2027) — RUNBOOK бэкенда «Outgoing mail (Brevo)».
+- Аутрич: `docs/seo/outreach-mail-templates.md` — актуальные RU v1 + SV v1 (Platsbanken, UTM outreach-sv-1), старые шаблоны = архив. База: лист «Platsbanken SV-1» в xlsx на Desktop.
+- Бэкенд `03d38b6`: Dagens rapport снова возвращается в приложение; экспорт смен с листом «Per project». Админка: Часы → Экспорт → «Excel per employee (all projects)».
+NÄSTA: «ок» на SV-текст → отправка; монитор на сервер; см. `~/sites-hub/worklog.md` 2026-09-28 (ночь).
+
+## 🟢 2026-09-28 — ручной ввод часов на сайте, контакты, инструменты, OG v4 (live)
+- «Автоматически по GPS ИЛИ вручную в приложении» (сверено с кодом: worker ставит manual-hours в приложении, manual перекрывает GPS за день; админ не правит чужие manual): статья automatisk-tidrapportering-och-export (5 яз., блок `eco-note` «GPS eller manuellt» после вступления), 11 sv + 6 nb статей про тид/stämpelklocka, FAQ sv/en, om-oss, tidrapport-mall, промпт чат-бота, карточка Benefits card5 (10 яз., иконка = секундомер). Не трогали: personalliggare/närvaro (там нужна отметка), GPS на фото, юр. страницы.
+- FeatureNav: маска-затухание краёв ленты пилюль (`data-more-left/right`).
+- Контакты: лого `logo-dark.svg` вместо заголовка, офис Ekbacksvägen 32, 168 69 Bromma (+ 6 юр. страниц, Organization schema), Säte (Братислава) последней строкой.
+- Инструменты: убран дубль заголовка/подзаголовка внутри карточки у 27 шаблонов/PDF (16 компонентов LeadMagnet, в т.ч. MallToPdfTool); калькуляторы не затронуты.
+- OG: `og-cover-v4.jpg` (синий секундомер card5, зелёный календарь card1, card3 перекрашен в синий по палитре card5); старые имена отдают ту же картинку. Кеш Telegram — @WebpageBot.
+NÄSTA: аутрич — см. `~/sites-hub/worklog.md` 2026-09-28 (вечер); GA4-конверсия заявки для атрибуции.
+
+## 🟡 2026-09-27 — аутрич: база строительных и клининговых фирм
+Файл (локально, не в репо — репо публичный): `~/Desktop/byggexp-outreach/ByggExp_leads_Sverige.xlsx` — Platsbanken Bygg 797 / Städ 489 фирм (JobTech API, по org.nr), sweden4rus.nu (RU) 76, poloniainfo.se (PL) 77, «Все email» 1398.
+NÄSTA: сегментация по SNI/сотрудникам/Stockholm через SCB + Bolagsverket (бесплатно, нужны доступы); шведская/польская версия письма; детали — `~/sites-hub/worklog.md` 2026-09-27.
+
+## 🟢 2026-09-27 (вечер) — иконки v2, карточка «кто на объекте», описания, бейджи (live)
+- Все 8 иконок карусели — «композиции» (`cd20939`, `c3950d1`): зелёные 1–4 (календарь+часы, таблица XLS, телефон+колокол,
+  список людей с отметками+каска), синие 5–8 (телефон+секундомер, чек-лист без звонков, папка+фото+камера, колокол+аватары).
+  Цвет подгоняется ПОСЛЕ генерации под #45B36B / #2394FF по hue+saturation+value (скрипт `match` в scratchpad; Recraft сам уводит в мяту/фиолет).
+- Карточка 4 (`d71f120`): НЕ «контроль/где работает» (звучит как слежка, и мы не знаем точку — только чек-ин в радиусе площадки).
+  Теперь «Кто сегодня на объекте / Vem är på plats idag» во всех 10 языках, иконка без метки на карте.
+- Бейджи: «Для руководства / Для бригады» (и аналоги во всех языках).
+- Мета-описания главной (`77bd268`, все языки): время, журнал персонала, планирование, КП и выставление счетов, зарплаты, экономика проектов.
+- `og-default.jpg` возвращён как копия `og-cover.jpg` (кешированные превью /ru показывали пустое поле). Превью обновлять через @WebpageBot.
+
+NÄSTA: при желании перегенерировать card5 (секундомер вышел контуром); обновить превью /ru, /sv через @WebpageBot.
+
+## 🟢 2026-09-27 (день) — логотип, «Priser», превью ссылок (`5e93911`, `35665f1`, `a8e1a45`, live)
+- Логотип на главной → плавно наверх и убирает `#pricing` (раньше на `/sv#pricing` ничего не происходило). `Header.tsx` goHomeTop.
+- «Priser» на главной: закрывает мобильное меню, скроллит к переключателю Per månad/år и перепроверяет (скриншоты фич догружаются и сдвигают блок ~155px). Десктоп: `#pricing` scroll-margin 92px (шапка 80px).
+- OG-картинка: `og-default.jpg` был размытым логотипом → новый `public/og-cover.jpg` (навигация+свечение, лого, дашборд, телефон, 3D-иконки; без текста — для всех 10 языков). Telegram-кеш обновлён через @WebpageBot для /uk.
+
+NÄSTA: при желании обновить превью /sv, /en через @WebpageBot; hero — реальный скриншот (по исследованию).
+
+## 🟢 2026-09-27 — 3D-стеклянные иконки на главной (`50870dc`, `830a047`, `90c9203`, live)
+Исследование стиля (deep research): для B2B SaaS главный визуал — реальный UI, Recraft — только иконки/акценты; claymorphism (как nordkod) не для ByggExp.
+- Карусель «Vad får ni…» (`Benefits.tsx`): 8 стеклянных 3D-иконок вместо линейных SVG — card1–4 зелёные (руководство), card5–8 синие (бригада). `public/landing/benefits/card*.webp`.
+- «Sammanfattningsvis får du» (`FinalBenefits.tsx`): секундомер, молния, команда, щит — `public/landing/final-benefits/*.webp`.
+- Цвета строго фирменные: синий `#2394FF`, зелёный `#45B36B`. Recraft даёт фиолетово-синий/мятный → перекрашено сдвигом hue (PIL HSV, без numpy), не перегенерацией.
+- Рецепт: Recraft `recraftv4_1_raster`, промпт «Single chunky 3D object: … frosted translucent glass, visible thickness, beveled edges, inner glow, rim light, three-quarter isometric, **no reflection, no floor, no shadow**, solid navy bg, no text» → remove_background → обрезка по alpha → 256px WebP (10–19 КБ), `loading=lazy`. Без «no reflection» остаётся тёмное отражение после удаления фона.
+- Потрачено ~64 кредита Recraft. Фоны и схема «Så funkar det» сгенерированы, но владелец их НЕ хочет.
+
+NÄSTA: если владелец пришлёт другие блоки с линейными иконками — тем же рецептом. В hero по исследованию лучше реальный скриншот приложения (не делалось).
+
+## 🟡 2026-09-26 (вечер) — ревизия инструментов /sv/verktyg (ждёт «ок»)
+Отчёт: `~/sites-hub/audits/2026-09-26/byggexp-verktyg-research.md` (GSC 90 дн + Keyword Planner + скачивания).
+Предложено удалить 16 (8 PDF-утилит, tapet/färg/golv/isolering/spillprocent, moms, förseningsvite, betalningspåminnelse) с 301; усилить egenkontroll, takstolar, CTR betong/grus/kvadratmeter, offert/faktura/tidrapport-mall, schema/gantt.
+⚠️ Хаб сейчас показывает все 64 (правка 26.09) — владелец раньше не хотел «беспонтовые»; привести в порядок после решения.
+
+## 🟢 2026-09-26 — SEO-аудит: технические фиксы live (`ba81258`)
+Аудит всех сайтов → `~/sites-hub/audits/2026-09-26/` (byggexp-audit.md). Исправлено и проверено на live:
+- Пустой SSR `<title>` на /[lang]/blog и /[lang]/funktioner (смешанные JSX-дети) → строка-шаблон.
+- /[lang]/contact: title «Kontakta ByggExp – boka gratis demo», description, canonical, hreflang, OG.
+- Хаб /sv/verktyg: все 64 инструмента (22 не было; schema-mall была сиротой) + ссылки на schema-mall из schemalaggning-bygg / schemalaggningssystem-bygg.
+- /blog и «Liknande artiklar» передают в props только поля карточек: /sv/blog 3 МБ → 292 КБ, статья 109 → 46 КБ.
+- Главная: hero `fetchPriority=high` + размеры; скриншоты фич — копии 1200w (`*-1200.webp`, 1,37 МБ → 457 КБ) с alt и lazy; SoftwareApplication (lowPrice = `FAKTURA_PRICE` из Pricing).
+- quill CSS только в админ-редакторе; `<html lang>` по локали маршрута; www → apex 301 (middleware); `/` → `/sv` 308.
+- Organization: legalName RealMar AB, адрес Bromma, sameAs YouTube, logo = icon-512.png; og:image = `/og-default.jpg` 1200×630 (было logo.png 1 МБ).
+- sitemap: дедуп `<loc>` (было 37 дублей); 6 старых ошибок lint исправлены.
+
+NÄSTA (из аудита, не сделано): продуктовые лендинги /sv/funktioner/{tidrapportering,planering,projekthantering} под «system»-ключи (сначала GSC: какой URL ранжируется); перелинковка 50 статей без входящих; длинные description (91 > 160); hreflang калькуляторов sv↔en/nb; неиспользуемые тяжёлые файлы в /public (bg1.jpg, team*.jpg, *.eps) — спросить владельца.
+
+## 🟢 2026-09-26 — страница цен: новые пакеты live
+- Пакеты Faktura/Projekt/Komplett (299 / 690 вкл. 10 + 69 / 990 вкл. 10 + 119), год −15%, пробный 2 недели, карусель на мобиле. Пилюли — вариант B «Koll på pengarna / Koll på jobbet / Full koll».
+- Варианты для A/B-теста сохранены в `docs/marketing/pricing-ab-tests.md` (вариант A — следующий кандидат).
+
+## 🟡 2026-09-26 — пробный период = 2 недели
+- Владелец: пробный период **2 недели со всеми функциями**. «Первый месяц бесплатно» заменён на «2 недели» в hero (10 языков), сноске цен (10 языков), FAQ (sv/en) и AI-чате. Ветка `claude/zealous-bohr-6rhqv5`, не main.
+
+## 🟢 Сессия 2026-09-26 — новая модель цен (ветка `claude/zealous-bohr-6rhqv5`, НЕ в main)
+
+### KLART
+- **Блок цен на главной переделан по одобренному макету:** 3 пакета — **Faktura** 299 SEK/мес фикс (1–2 польз.),
+  **Projekt** 690 (вкл. 10 польз., +69 за доп.), **Komplett** 990 (вкл. 10, +119, «Mest valt»). Переключатель
+  «Per månad / Per år – 2 mån gratis» (год = 10×мес/12) + степпер «Antal användare» 1–40 (по умолч. 10), цены считаются вживую.
+  Ниже: «Specialerbjudande» (40+ → Boka demo, `#cta`), «Tillägg: Integrationer» 199 SEK/företag/mån, сноска (моms, 30 дней).
+  Старые 499/899/1799, слайдер со стрелками/точками и «−10 %» удалены. Мобайл: карточки в колонку, контролы переносятся (проверено 375px).
+- Файлы: `src/components/Pricing/Pricing.tsx` + `.scss`, `src/locales/pricing.ts` (все 10 языков, sv = мастер, плюрализация
+  через `Intl.PluralRules`), `src/types/pricing.ts`. Валюта везде SEK (как и раньше, в т.ч. nb). Названия пакетов не переводятся.
+- **AI-чат** (`src/pages/api/chat.ts`): факты о ценах/пакетах обновлены, «не считать суммы» → ссылка на `/{lang}#pricing`.
+- `yarn build` ок, `yarn lint` — те же 6 старых ошибок, новых нет.
+
+### 🔜 NÄSTA STEG
+1. Owner: просмотреть ветку (превью/локально) → смержить в main.
+2. Проверить совпадение с биллингом (Stripe в byggexp-admin/BackEnd: планы, цена доп. польз., годовая оплата, правило «30 дней»).
+3. Устаревшие внутренние доки со старыми ценами: `docs/seo/video-paid-overview-script.md`, `docs/seo/inbound-demo-call-script.md` — переписать.
+4. Переводы fi/et/lt/lv — машинного уровня, вычитать перед рекламой.
+
+## 🟢 Сессия 2026-09-24…25 — нормы Boverket, облако для всех проектов, byggtorg
+
+### KLART
+- **EKS → BFS 2024:6** по всему сайту (`a14eee0`) и **BBR → новые BFS** (`3fe602f`): пожар 2024:7, влага/гигиена 2024:8,
+  лестницы/кровля 2024:9, доступность 2024:12. Переход: старые правила можно, если ansökan/anmälan до **1.7.2026** (BFS 2024:14 p.3).
+  Энергетика остаётся в BBR 31 до **1.10.2026**, потом **BFS 2026:9**.
+- **Routine на 1.10.2026 09:00** (облачный агент): обновит энергетику (п. 1c ниже), пушит ветку `claude/energiregler-bfs-2026-9`,
+  не в main → https://claude.ai/code/routines/trig_01PAiKVR3EBedFTLHFwVzJc3
+- **Облачная сессия «Карта проектов»** (claude.ai/code): ArmeringProffs, agry.se, byggexp-app, byggexp-admin, ByggExp-BackEnd,
+  ByggExp-NextJs, gealab.nu, Gjutabetongplatta, Nordkod, villatakservice.se. Она уже составила карту всех проектов.
+  Вводный промпт с правилами (язык, коротко, yarn, commit→main, факты, секреты) дан owner'у — вставить первым сообщением.
+- **Новый приватный репо `alexgeho/byggtorg`** (SEO-клиент Nordkod, WordPress): CLAUDE.md с правилами (только черновики),
+  seo-plan, status, `scripts/wp.sh` (креды только из env `WP_USER`/`WP_APP_PASSWORD`, публикацию блокирует).
+- ByggExp 1.1.2 одобрен: iOS «Ready for Distribution», Android в проде 100 %. Play-верификация разработчика — все Play-приложения уже зарегистрированы.
+- Анонс 1.1.2 (пост LinkedIn + сценарий YouTube Short) — тексты даны owner'у, публикует сам.
+- Практика/LIA: исследование IT-компаний на госконтрактах + 5 черновиков писем + карта-артефакт — **локально в `internship/`**
+  (gitignored, репо публичный). Память [[job-hunt-praktik]].
+
+### 🔜 NÄSTA STEG (по порядку)
+1. ⚠️ **Безопасность WP (срочно, owner):** в репо gealab.nu лежит `create-admin.php` (создаёт admin/123456) — удалить с сервера и из репо;
+   проверить подозрительный `wp-loada.php` → `wp-loadb.php` (agry.se и gealab.nu); `wp-config.php` в git — вынести/сменить ключи БД.
+2. **Облако:** дать Claude GitHub App доступ к `byggtorg`, `shop.agry.se`, `gealab.se` (github.com/settings/installations → Claude →
+   Configure) и добавить их в облачную сессию (или новую сессию со всеми 13). Для byggtorg — добавить `WP_USER` + app-password как
+   API credential для `byggtorg.se` в окружении Default. Пароль byggtorg потом заменить (однажды попал в чат).
+3. **LIA-письма:** `/mcp` → войти в Gmail → Claude кладёт 4 черновика (Iteam, Regent, Nexer, CGI) из `internship/utkast-lia-offentlig.md`;
+   Sopra Steria — LinkedIn вручную. Потом Redmind, Hotmat, Simon Frisk, Avantime.
+4. **≈4–5 окт — GSC:** валидация 404 + `.googleads/venv/bin/python .gsc/index_status.py` (токен обновить через браузер, [[gsc-api-setup]]).
+5. **≈7–14 окт — takstolar:** позиции по `takstol` в GSC — ушла ли каннибализация (калькулятор vs статья).
+6. **1 окт** — проверить результат routine (энергетика BFS 2026:9), смержить ветку после просмотра.
+7. Счётчик скачиваний через 2–4 нед (`/api/download-stats`); диаграммы для топ-40 статей; тех-долг slug `byggdagbok`.
+
+### ⚠️ На стороне owner'а
+- VPS root: 138k попыток подбора пароля — только SSH-ключ + fail2ban.
+- Anthropic Console: auto-reload (чат на Sonnet 5, ~$0.9/100 сообщений).
+- Stripe — ведётся в byggexp-admin/BackEnd (по карте: подписки LIVE, checkout ещё не проверен; лимит Tillväxt 20 vs 25).
+
+---
+
+## 2026-09-26 — Funktioner + pris-pillen
+- Priser: "Funktioner anpassade…"-pillen står nu mitt i kortets lediga yta (lika avstånd till listan och knappen).
+- Funktionssidor: "Liknande artiklar" visar bara andra funktionssidor.
+- Nya offert/faktura-bilder (fakturera-fran-byggexp-doc.webp, skapa-offert-i-byggexp-doc.webp) renderade från backendens PDF-mallar; fakturan = ägarens egen bild (Nordström Bygg AB, Faktura 2041, 594px — byt mot högre upplösning när den finns), offerten med samma logga och sidfot.
+- Färger på planerna (variant B): Koll på pengarna blå, Koll på jobbet lila, Full koll grön (mjukgrön ram som taggen, "Mest valt"); pillen "Funktioner anpassade…" blå.
+- Nästa: ev. flytt /blog/<slug> → /funktioner/<slug> med 301.
+
+## 2026-09-26 — Slutkarusellen
+- "Vad ni får"-karusellen: egen ikon per kort (klocka, blixt, team, sköld med bock) i stället för samma sköld.
+- Priser: Koll på pengarna — "*" på fakturor och skanning + not "Upp till 30 utgående fakturor och 100 skannade kvitton/fakturor per månad. Behöver ni mer? Vi hittar en lösning." (10 språk). Endast text; ingen spärr i backend ännu (beslut väntar).
+- Priser: fotnoten under paketen (användare/moms/provperiod) borttagen på ägarens begäran; texterna ligger kvar i locales.
+- Priser: raden under knapparna = "14 dagar gratis med alla funktioner" (10 språk), ersätter "Kom igång på 5 minuter". Moms nämns inte (ägarens beslut).
+- Mobil: "Vad får ni…"-slidern var bredare än skärmen (flex align-items:center lät containern växa till hela spåret) – fixat med width:100%/min-width:0. Pilarna i sliders ligger nu under kortet på dot-raden på telefon.
+- Favicon: appikonen (byggexp-app/src/assets/icon.png) → favicon.ico (16/32/48, rundade hörn), icon-192/512.png, apple-touch-icon.png; länkar i _document.tsx.
+- Priser: Koll på pengarna — ny punkt "E-postadress för skanning av inkommande fakturor*", "Inköpsfakturor och utlägg" borttagen (enligt ägarens tabell). Noten flyttad under korten: 30 utgående + 30 inkommande fakturor + 100 skannade kvitton/mån (10 språk).
+
 Старые сессии (до 2026-09-24). Актуальное — в .
 
 ---

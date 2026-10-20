@@ -83,7 +83,7 @@ def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=N
         y += slh
     if rows:
         y += int(fs * .4) - (int(fs * .4) if sub_lines else 0)
-        fp, fl = font(int(ph * .52), "Bold"), font(int(ph * .5), "Medium")
+        fp, fl = font(int(ph * .52), "Bold"), font(int(ph * .44), "Medium")
         pw = max(d.textlength(r[0] if isinstance(r, tuple) else r, font=fp) for r in rows) + ph  # equal pill width
         for i, r in enumerate(rows):
             p, label = r if isinstance(r, tuple) else (r, None)
@@ -153,7 +153,7 @@ for n in ("linkedin-cover-value", "linkedin-cover-product"):  # LinkedIn rejects
 # S16/S17: hero collage from the home page + price + store badges
 HERO = Image.open(TILES / "hero-nostores.png")  # badges sit next to the price instead
 HEAD = [("Hela byggföretaget", WHITE), ("på ett ställe", SKY)]
-PRICE = [("299 kr/mån", "offert, faktura, lön"), ("+69 kr/arbetare", "appen: tidrapport, planering")]  # S18
+PRICE = [("299 kr/mån", "offert, faktura, lön, projektekonomi m.m."), ("+69 kr/arbetare", "tidrapport, närvaro, planering m.m.")]  # S18
 cover("facebook-cover-v4", 1640, 624, (270, 40, 1100, 544), HEAD, 64, 48, shot=HERO, price=PRICE, stores=True)
 cover("linkedin-cover-v4", 2256, 382, (700, 24, 1300, 334), HEAD, 48, 48, shot=HERO, price=PRICE, stores=True)
 Image.open(HERE / "linkedin-cover-v4.png").convert("RGB").resize((1584, 268), Image.LANCZOS).save(HERE / "linkedin-cover-v4.jpg", quality=92)

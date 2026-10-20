@@ -127,3 +127,25 @@
   margin-top: auto !important;
   padding-top: var(--ds-space-2);
 }
+
+// R3 · a labelled field inside an actions row: label left of the control, one line, same height as the buttons.
+.lm-tool-actions > .lm-tool-field {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  max-width: none !important;
+  white-space: nowrap;
+}
+.lm-tool-actions > .lm-tool-field select,
+.lm-tool-actions > .lm-tool-field input,
+.lm-tool-actions > .lm-tool-secondary {
+  height: 46px;
+  box-sizing: border-box;
+}
+.lm-tool-actions > .lm-tool-field input {
+  width: 140px;
+}
+.lm-tool-actions > .lm-tool-secondary {
+  display: inline-flex;
+  align-items: center;
+}

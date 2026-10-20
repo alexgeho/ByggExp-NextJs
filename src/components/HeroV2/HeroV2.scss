@@ -82,6 +82,8 @@
 
 .hero-v2-price-line.is-open {
   flex-wrap: wrap;
+  row-gap: 2px; // «visa mindre» hugs its own list…
+  margin-bottom: 12px; // …and keeps clear of the next line
   .hero-v2-price-text {
     white-space: normal;
   }
@@ -102,9 +104,11 @@
   &::after {
     content: " ›";
   }
-  &:hover {
-    text-decoration: underline;
-    text-underline-offset: 3px;
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
   }
 }
 
@@ -573,6 +577,23 @@
     left: calc(30% + 16px);
     top: 83%;
     flex-direction: row;
+    gap: 12px;
+  }
+}
+
+/* stores: in the collage on phones (R9), under the trust checks on desktop */
+.hero-v2-stores--content {
+  display: none;
+}
+@media (min-width: 901px) {
+  .hero-v2-stores--collage {
+    display: none;
+  }
+  .hero-v2-stores--content {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     gap: 12px;
   }
 }

@@ -53,6 +53,54 @@
   }
 }
 
+// one line + "Läs mer"; open = full list
+.hero-v2-content,
+.hero-v2-price {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.hero-v2-price {
+  width: 100%;
+}
+
+.hero-v2-price-line {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  max-width: 560px;
+}
+
+.hero-v2-price-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hero-v2-price-line.is-open {
+  flex-wrap: wrap;
+  .hero-v2-price-text {
+    white-space: normal;
+  }
+}
+
+.hero-v2-more {
+  flex: none;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--blue-500, #3b8cff);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .hero-v2-ctas {
   display: flex;
   flex-wrap: wrap;
@@ -95,6 +143,11 @@
 
 .hero-v2-meta {
   margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, max-content); // 2×2, never a lone last item
+  gap: 8px 28px;
   font-size: 15px;
   color: #33475e;
 }

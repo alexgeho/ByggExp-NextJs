@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 // New home hero (owner-picked mockup "Hero 2", 2026-10-11): laptop + phone
 // with people. Swedish only for now — shown on the preview page
 // /sv/ny-startsida until the owner approves it. Layout variants are compared
@@ -20,6 +22,20 @@ const peopleRight = "/landing/hero/kontor.webp";
 // dark: site photo behind the text; real ByggExp screens inside the photos (R6)
 const darkBg = "/landing/hero/bg-bygge.webp";
 
+// full package contents (src/locales/pricing.ts: financeItems / projectItems), one line until "Läs mer"
+const PRICE_LINES = [
+  {
+    price: "299 kr/mån",
+    items:
+      "offerter och fakturor, inkommande fakturor via e‑post, betalningspåminnelser, löner, lönespecifikationer och AGI, projektekonomi med budget, kalkyl och lönsamhet, kvitton som bokförs på projektet",
+  },
+  {
+    price: "+69 kr/arbetare",
+    items:
+      "tidrapport automatiskt och manuellt, närvaro i realtid, planering av projekt och personal, egenkontroll, uppgifter med påminnelser, dokument, foton och ritningar, fotorapporter från arbetspasset, verktyg via QR-kod",
+  },
+];
+
 type HeroV2Props = {
   variant?: HeroV2Variant;
 };
@@ -27,6 +43,7 @@ type HeroV2Props = {
 function HeroV2({ variant = "center" }: HeroV2Props) {
   const isDark = variant === "dark" || variant === "dark-center";
   const showScenes = isDark || variant === "split-scenes";
+  const [open, setOpen] = useState([false, false]);
 
   return (
     <section className={`hero-v2 hero-v2--${variant}`}>
@@ -41,14 +58,23 @@ function HeroV2({ variant = "center" }: HeroV2Props) {
         <div className="hero-v2-content">
           <h1>Hela byggföretaget på ett ställe</h1>
 
-          <p className="hero-v2-price">
-            <span>
-              <strong>299 kr/mån</strong> – offerter, fakturor, löner, kvitton, …
-            </span>
-            <span>
-              <strong>+69 kr/arbetare</strong> – tidrapport, planering, närvaro, egenkontroll, …
-            </span>
-          </p>
+          <div className="hero-v2-price">
+            {PRICE_LINES.map((line, i) => (
+              <p key={line.price} className={`hero-v2-price-line${open[i] ? " is-open" : ""}`}>
+                <span className="hero-v2-price-text">
+                  <strong>{line.price}</strong> – {line.items}
+                </span>
+                <button
+                  type="button"
+                  className="hero-v2-more"
+                  aria-expanded={open[i]}
+                  onClick={() => setOpen((o) => o.map((v, j) => (j === i ? !v : v)))}
+                >
+                  {open[i] ? "Visa mindre" : "Läs mer"}
+                </button>
+              </p>
+            ))}
+          </div>
 
           <div className="hero-v2-ctas">
             <a href={REGISTER_URL} className="hero-v2-btn hero-v2-btn--primary">
@@ -59,7 +85,12 @@ function HeroV2({ variant = "center" }: HeroV2Props) {
             </a>
           </div>
 
-          <p className="hero-v2-meta">✓ Ingen bindningstid</p>
+          <ul className="hero-v2-meta">
+            <li>✓ 14 dagar gratis</li>
+            <li>✓ Ingen startavgift</li>
+            <li>✓ Ingen bindningstid</li>
+            <li>✓ iPhone &amp; Android</li>
+          </ul>
         </div>
 
         <div className="hero-v2-visual">

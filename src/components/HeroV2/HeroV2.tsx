@@ -67,16 +67,16 @@ function HeroV2({ variant = "center" }: HeroV2Props) {
                 src={peopleRight}
                 alt="Projektledare på kontoret ser arbetspassen i ByggExp"
                 className="hero-v2-scene hero-v2-scene--office"
-                width={1216}
-                height={832}
+                width={1872}
+                height={1280}
                 fetchPriority="high"
               />
               <img
                 src={peopleLeft}
                 alt="Hantverkare stämplar in på bygget i ByggExp-appen"
                 className="hero-v2-scene hero-v2-scene--site"
-                width={666}
-                height={832}
+                width={1060}
+                height={1325}
               />
             </>
           ) : (

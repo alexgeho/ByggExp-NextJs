@@ -486,3 +486,61 @@
     }
   }
 }
+
+/* App Store / Google Play badges in the empty corner under the office photo */
+.hero-v2-stores {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: calc(36% + 12px);
+  top: 66%; // below the office photo
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hero-v2-store {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 148px;
+  padding: 6px 12px;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.1;
+
+  svg {
+    flex: none;
+    width: 22px;
+    height: 22px;
+  }
+
+  small {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 900px) {
+  // taller collage so both badges fit under the office photo
+  .hero-v2--dark .hero-v2-visual {
+    aspect-ratio: 8 / 7;
+  }
+}
+
+@media (min-width: 901px) {
+  .hero-v2-stores {
+    left: calc(30% + 16px);
+    top: 83%;
+    flex-direction: row;
+    gap: 12px;
+  }
+}

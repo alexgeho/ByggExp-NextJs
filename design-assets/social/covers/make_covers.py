@@ -110,10 +110,16 @@ cover("linkedin-cover-value", 2256, 382, (700, 30, 1300, 322), VALUE, 64, 48, "K
 # YouTube safe area 1546x423 (507, 509), inset 40px so nothing touches the mobile crop
 cover("youtube-banner-value", 2560, 1440, (547, 529, 1466, 383), VALUE, 84, 64, VSUB, 700, OB, "byggexp.se")
 
+# S14 LinkedIn = product showcase
+PRODUCT = [("Från incheckning", WHITE), ("till lön och faktura", SKY)]
+cover("linkedin-cover-product", 2256, 382, (700, 30, 1300, 322), PRODUCT, 60, 48, "Ett system för hela byggföretaget", 900, None, "byggexp.se")
+
 # Facebook: 1640x624, keep inside centre ~1180px (mobile crops the sides)
 cover("facebook-cover", 1640, 624, (230, 40, 1180, 544), TITLE, 50, 48, SUB, 560)
 # LinkedIn company: 1128x191, logo overlaps bottom-left -> start content at x=300
 cover("linkedin-cover", 1128, 191, (300, 20, 800, 151), SHORT, 26, 24)
 # YouTube: 2560x1440, safe area 1546x423 in the centre
 cover("youtube-banner", 2560, 1440, (507, 509, 1546, 423), TITLE, 62, 64, SUB, 720)
+for n in ("linkedin-cover-value", "linkedin-cover-product"):  # LinkedIn rejects the 2x PNG; upload this JPG
+    Image.open(HERE / f"{n}.png").convert("RGB").resize((1584, 268), Image.LANCZOS).save(HERE / f"{n}.jpg", quality=92)
 print("ok")

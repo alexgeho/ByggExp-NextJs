@@ -72,7 +72,7 @@ Appen finns för iPhone och Android.
 ```text
 Måndag morgon. Förra veckans timmar ska attesteras.
 
-I ByggExp ser du varje pass per person och projekt: planerat, GPS och manuellt sida vid sida. Du godkänner på webben och tar ut tidrapporten som PDF eller Excel, löne-CSV eller SIE4-fil till bokföringen.
+I ByggExp ser du varje pass per person och projekt, med start, slut och tid. Ta ut tidrapporten som Excel, PDF eller CSV – för hela projektet eller per anställd.
 
 Inget att knappa in igen.
 👉 https://byggexp.se/sv/blog/automatisk-tidrapportering-och-export?utm_source=linkedin&utm_medium=social&utm_campaign=page-product
@@ -95,7 +95,7 @@ Ett steg i stället för två.
 **Цель:** вторая денежная боль: зарплата из часов без ручного подсчёта.
 **Скрин:** `public/landing/features/12salary-1200.webp` (Löner: Timmar × Timlön = Brutto, кнопки Exportera CSV / AGI-underlag). **Переснять:** сейчас у 6 из 8 строк timlön 0,00 (нарушение S5/S11). Нужно 3–4 строки с timlön ≈ 230 kr; Brutto = timmar × 230, это видно на картинке (S8). Заголовок: «Lönen den 25:e?» / «Timmarna finns redan».
 ```text
-Lönen ska vara klar den 25:e. Timmarna ligger på lappar hos fem personer.
+Lönen ska vara klar den 25:e. Timmarna ligger på lappar och i sms.
 
 I ByggExp summeras timmarna per medarbetare och timtyp: normal, övertid och OB enligt passet. Bruttolönen räknas med de faktorer ni själva anger. Exportera CSV till lönesystemet och ta ut AGI-underlaget.
 👉 https://byggexp.se/sv/blog/loneunderlag-for-byggforetag?utm_source=linkedin&utm_medium=social&utm_campaign=page-product

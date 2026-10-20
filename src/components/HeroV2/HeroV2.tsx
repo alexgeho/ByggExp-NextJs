@@ -32,7 +32,7 @@ const PRICE_LINES = [
   {
     price: "+69 kr/arbetare",
     items:
-      "tidrapport automatiskt och manuellt, närvaro i realtid, planering av projekt och personal, egenkontroll, uppgifter med påminnelser, dokument, foton och ritningar, fotorapporter från arbetspasset, verktyg via QR-kod",
+      "tidrapport automatiskt och manuellt, närvaro i realtid, planering av projekt och personal, egenkontroll, uppgifter med påminnelser, dokument, foton och ritningar, fotorapporter från arbetspasset, skanning av kvitton med mobilkameran, verktyg via QR-kod",
   },
 ];
 

@@ -1,5 +1,6 @@
 export const finalBenefitsTranslations = {
   ru: {
+    finalBenefitsLead: "Для компании",
     finalBenefitsTitle: "Итого, что Вы получаете",
 
     finalBenefitsHeading1: "Объект под контролем —",
@@ -28,6 +29,7 @@ export const finalBenefitsTranslations = {
   },
 
   en: {
+    finalBenefitsLead: "For the company",
     finalBenefitsTitle: "What You Get in the End",
 
     finalBenefitsHeading1: "Your projects stay under control —",
@@ -56,6 +58,7 @@ export const finalBenefitsTranslations = {
   },
 
   sv: {
+    finalBenefitsLead: "För företaget",
     finalBenefitsTitle: "Sammanfattningsvis får du",
 
     finalBenefitsHeading1: "Full kontroll",
@@ -84,6 +87,7 @@ export const finalBenefitsTranslations = {
   },
 
   nb: {
+    finalBenefitsLead: "For bedriften",
     finalBenefitsTitle: "Oppsummert får du",
 
     finalBenefitsHeading1: "Full kontroll over prosjektene —",
@@ -112,6 +116,7 @@ export const finalBenefitsTranslations = {
   },
 
   pl: {
+    finalBenefitsLead: "Dla firmy",
     finalBenefitsTitle: "Podsumowując, zyskujesz",
 
     finalBenefitsHeading1: "Pełna kontrola nad projektami —",
@@ -140,6 +145,7 @@ export const finalBenefitsTranslations = {
   },
 
   uk: {
+    finalBenefitsLead: "Для компанії",
     finalBenefitsTitle: "Підсумовуючи, ви отримуєте",
     finalBenefitsHeading1: "Повний контроль над проєктами —",
     finalBenefitsAccent: "і спокійний сон",
@@ -159,6 +165,7 @@ export const finalBenefitsTranslations = {
   },
 
   fi: {
+    finalBenefitsLead: "Yritykselle",
     finalBenefitsTitle: "Yhteenvetona saat",
     finalBenefitsHeading1: "Täysi hallinta projekteista —",
     finalBenefitsAccent: "ja rauhallisemmat yöunet",
@@ -178,6 +185,7 @@ export const finalBenefitsTranslations = {
   },
 
   et: {
+    finalBenefitsLead: "Ettevõttele",
     finalBenefitsTitle: "Kokkuvõttes saate",
     finalBenefitsHeading1: "Täielik kontroll projektide üle —",
     finalBenefitsAccent: "ja rahulikum uni",
@@ -197,6 +205,7 @@ export const finalBenefitsTranslations = {
   },
 
   lt: {
+    finalBenefitsLead: "Įmonei",
     finalBenefitsTitle: "Apibendrinant, jūs gaunate",
     finalBenefitsHeading1: "Visišką projektų kontrolę —",
     finalBenefitsAccent: "ir ramesnį miegą",
@@ -216,6 +225,7 @@ export const finalBenefitsTranslations = {
   },
 
   lv: {
+    finalBenefitsLead: "Uzņēmumam",
     finalBenefitsTitle: "Apkopojot, jūs iegūstat",
     finalBenefitsHeading1: "Pilnu kontroli pār projektiem —",
     finalBenefitsAccent: "un mierīgāku miegu",

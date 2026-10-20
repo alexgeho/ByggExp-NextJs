@@ -10,6 +10,7 @@ export type FinalBenefitsProps = {
     finalBenefitsItem3: string;
     finalBenefitsItem4: string;
 
+    finalBenefitsLead?: string;
     finalBenefitsItem1Text?: string;
     finalBenefitsItem2Text?: string;
     finalBenefitsItem3Text?: string;

@@ -357,7 +357,7 @@
     .hero-v2-inner {
       flex-direction: column;
       align-items: stretch;
-      padding-top: 20px;
+      padding-top: 32px; // = gap under the title (R7)
       gap: 32px;
     }
 
@@ -472,5 +472,16 @@
   }
   .hero-v2 .hero-v2-content .hero-v2-meta {
     align-self: center;
+    order: 1; // trust checks go under the photos
+  }
+  .hero-v2--dark,
+  .hero-v2--split,
+  .hero-v2--split-scenes {
+    .hero-v2-content {
+      display: contents;
+    }
+    .hero-v2-pill {
+      align-self: flex-start;
+    }
   }
 }

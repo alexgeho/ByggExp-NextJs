@@ -415,9 +415,12 @@
 @media (min-width: 901px) {
   .hero-v2--dark,
   .hero-v2--split-scenes {
+    padding: 0; // drop global section padding; air = next block's 60px (R7)
     .hero-v2-inner {
       max-width: 1440px;
       gap: 40px;
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
     .hero-v2-content {
       flex: 0 1 440px;

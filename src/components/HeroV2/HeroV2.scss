@@ -152,9 +152,10 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, max-content); // 2×2, never a lone last item
-  gap: 8px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; // 3 checks: one row, or 2 + 1 centred on phones
+  gap: 8px 20px;
   font-size: 15px;
   color: #33475e;
 }

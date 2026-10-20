@@ -116,7 +116,6 @@ function HeroV2({ variant = "center" }: HeroV2Props) {
             <li>✓ 14 dagar gratis</li>
             <li>✓ Ingen startavgift</li>
             <li>✓ Ingen bindningstid</li>
-            <li>✓ iPhone &amp; Android</li>
           </ul>
         </div>
 

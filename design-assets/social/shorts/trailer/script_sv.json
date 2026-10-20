@@ -1,0 +1,32 @@
+[
+ {
+  "id": "t1",
+  "scene": "hook",
+  "text": "Vi hjälper hantverkare att räkna och fakturera snabbare – med gratis verktyg."
+ },
+ {
+  "id": "t2",
+  "scene": "rot",
+  "text": "Skriv in arbetskostnaden, så ser du direkt ROT-avdraget och vad kunden betalar."
+ },
+ {
+  "id": "t3",
+  "scene": "betong",
+  "text": "Ange måtten på plattan och få betong, armering och cellplast – med spill inräknat."
+ },
+ {
+  "id": "t4",
+  "scene": "faktura",
+  "text": "Fyll i raderna – moms och summa räknas ut, och fakturan laddar du ner som PDF."
+ },
+ {
+  "id": "t5",
+  "scene": "hub",
+  "text": "Över sextio verktyg och mallar – gratis och utan konto, på byggexp.se."
+ },
+ {
+  "id": "t6",
+  "scene": "cta",
+  "text": "Prenumerera på kanalen, så visar vi fler sätt att spara tid på pappersjobbet."
+ }
+]

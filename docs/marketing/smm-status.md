@@ -72,3 +72,9 @@
 - Только проверенные факты продукта: docs/seo/product-facts-verified.md (нет Fortnox API, offline, авто-OB).
 - Без выдуманных отзывов/кейсов/числа клиентов. Ссылки с UTM. Шведский язык.
 - Публикация/рассылка от имени владельца — только по его «да».
+
+## 4f. 20.10 LinkedIn-страница — упаковка (правило S13)
+- Сделано: адрес (Ekbacksvägen 32, Bromma), слоган «60+ gratis kalkylatorer och mallar…», кнопка «Besök webbplats» → /sv/verktyg?utm…page-button, новая обложка linkedin-cover-value.jpg (критик «чисто»). FB-обложка facebook-cover-value.png готова, НЕ загружена.
+- Опубликовано на странице: takstolar, entreprenadkontrakt, egenkontroll bygg, egenkontroll VVS. Egenkontroll el — в черновиках. Остальное остановлено по слову владельца: сначала посты о платных функциях, калькуляторы ещё не проверены.
+- В работе: эксперт по маркетингу → docs/marketing/linkedin-plan.md; QA калькуляторов → docs/marketing/verktyg-qa.md.
+- Загрузка обложки LinkedIn: PNG 2256x382 падает с ошибкой, JPG 1584x268 проходит.

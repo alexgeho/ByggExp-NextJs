@@ -107,3 +107,73 @@ Hur många takstolar behövs?
 Skriv in takets längd och c/c-avstånd – kalkylatorn räknar ut antalet takstolar (längd ÷ c/c + 1, t.ex. 12 m ÷ 1,2 m + 1 = 11 st). Med takstolens mått får du även nockhöjd och takyta. Gratis.
 
 👉 https://byggexp.se/sv/verktyg/takstolar-kalkylator?utm_source=facebook&utm_medium=social&utm_campaign=smm-v3
+
+# LinkedIn-sida ByggExp — start (20.10), publiceras i denna ordning, sista fästs
+
+## LI-sida 1 · bild: 12-takstolar.jpg
+Hur många takstolar behövs?
+
+Skriv in takets längd och c/c-avstånd – kalkylatorn räknar ut antalet takstolar (längd ÷ c/c + 1, t.ex. 12 m ÷ 1,2 m + 1 = 11 st). Med takstolens mått får du även nockhöjd och takyta. Gratis.
+
+👉 https://byggexp.se/sv/verktyg/takstolar-kalkylator?utm_source=linkedin&utm_medium=social&utm_campaign=page-start
+
+## LI-sida 2 · bild: 11-kontrakt.jpg
+Bygger du utan skriftligt kontrakt?
+
+Gratis mall för entreprenadkontrakt enligt AB 04 eller ABT 06: omfattning, pris, betalplan, vite, ÄTA och garanti på ett ställe. Ladda ner som PDF.
+
+👉 https://byggexp.se/sv/verktyg/entreprenadkontrakt-mall?utm_source=linkedin&utm_medium=social&utm_campaign=page-start
+
+## LI-sida 3 · bild: 10-ek-bygg.jpg
+Egenkontroll bygg – gratis mall.
+
+Fuktkvot i virke, mått mot ritning och resten av punkterna är förifyllda. Sätt resultat och ladda ner som PDF eller Excel. Utan konto.
+
+👉 https://byggexp.se/sv/verktyg/egenkontroll-bygg-mall?utm_source=linkedin&utm_medium=social&utm_campaign=page-start
+
+## LI-sida 4 · bild: 09-ek-vvs.jpg
+Egenkontroll VVS – gratis mall.
+
+Täthetsprovning, fall på avlopp och övriga kontrollpunkter står redan i mallen. Fyll i resultat och ladda ner som PDF eller Excel. Utan konto.
+
+👉 https://byggexp.se/sv/verktyg/egenkontroll-vvs-mall?utm_source=linkedin&utm_medium=social&utm_campaign=page-start
+
+## LI-sida 5 · bild: 08-ek-el.jpg
+Egenkontroll el – gratis mall.
+
+Kontrollpunkterna är redan ifyllda: skyddsjord, kontinuitet, isolationsresistans m.m. Sätt Godkänd eller skriv anmärkning, ladda ner som PDF eller Excel. Utan konto.
+
+👉 https://byggexp.se/sv/verktyg/egenkontroll-el-mall?utm_source=linkedin&utm_medium=social&utm_campaign=page-start
+
+## LI-sida 6 · bild: 06-faktura.jpg
+Godkänd ÄTA → faktura. Utan att skriva om allt.
+
+I ByggExp blir den godkända ÄTA:n en förifylld faktura med din logotyp. Moms och ROT-avdrag räknas ut.
+
+Testa gratis i 14 dagar, ingen bindningstid.
+👉 https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=page-start
+
+## LI-sida 7 · bild: 05-egenkontroll.jpg
+Egenkontroll våtrum – klar på bygget, inte i efterhand.
+
+Fuktmätning, tätskikt, fall mot golvbrunn, genomföringar: punkterna är redan ifyllda. Sätt Godkänd, skriv anmärkning, ladda ner som PDF eller Excel. Gratis, utan konto.
+
+👉 https://byggexp.se/sv/verktyg/egenkontroll-vatrum-mall?utm_source=linkedin&utm_medium=social&utm_campaign=page-start
+
+## LI-sida 8 · bild: 04-ob.jpg
+OB eller övertid – vad kostar timmen egentligen?
+
+Skriv in timlön och timmar, välj nivå enligt Byggavtalet – kalkylatorn räknar tillägget. Och kom ihåg: OB och övertid betalas aldrig för samma timme.
+
+👉 https://byggexp.se/sv/verktyg/ob-overtid-kalkylator?utm_source=linkedin&utm_medium=social&utm_campaign=page-start
+
+## LI-sida 9 · bild: 00-verktyg.jpg
+Räkna, skriv ÄTA och offert – direkt i mobilen 🔨
+
+60+ gratis verktyg – utan konto:
+• ROT, moms, timpris, påslag
+• Betong, gips, tak, golv
+• ÄTA, offert, faktura, egenkontroll
+
+Öppna länken och testa – det tar en minut.
+👉 https://byggexp.se/sv/verktyg?utm_source=linkedin&utm_medium=social&utm_campaign=page-start

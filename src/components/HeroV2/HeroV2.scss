@@ -235,9 +235,6 @@
   }
 }
 
-.hero-v2--dark .hero-v2-visual {
-  aspect-ratio: 1200 / 656;
-}
 
 .hero-v2--dark .hero-v2-device {
   left: 0;
@@ -297,5 +294,42 @@
       flex: none;
       width: 100%;
     }
+  }
+}
+
+/* ---------- dark: office photo + site photo, real screens inside (R6) ---------- */
+.hero-v2-scene {
+  position: absolute;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+.hero-v2-scene--office {
+  right: 0;
+  top: 0;
+  width: 84%;
+  aspect-ratio: 1216 / 832;
+}
+
+.hero-v2-scene--site {
+  left: 0;
+  bottom: 0;
+  width: 36%;
+  aspect-ratio: 4 / 5;
+  border: 4px solid rgba(255, 255, 255, 0.9);
+}
+
+.hero-v2--dark .hero-v2-visual {
+  aspect-ratio: 10 / 8;
+}
+
+@media (max-width: 900px) {
+  .hero-v2-scene {
+    border-radius: 12px;
+  }
+  .hero-v2-scene--site {
+    border-width: 3px;
   }
 }

@@ -14,8 +14,10 @@ const REGISTER_URL = "https://admin.byggexp.se/register";
 
 const device = "/landing/features/1arbetspass-1200.webp";
 const deviceLarge = "/landing/features/1arbetspass.webp";
-const peopleLeft = "/landing/hero/handslag.webp";
-const peopleRight = "/landing/hero/mobil.webp";
+const peopleLeft = "/landing/hero/bygget.webp";
+const peopleRight = "/landing/hero/kontor.webp";
+// dark: site photo behind the text; real ByggExp screens inside the photos (R6)
+const darkBg = "/landing/hero/bg-bygge.webp";
 
 type HeroV2Props = {
   variant?: HeroV2Variant;
@@ -28,7 +30,7 @@ function HeroV2({ variant = "center" }: HeroV2Props) {
     <section className={`hero-v2 hero-v2--${variant}`}>
       {isDark && (
         <>
-          <img src={peopleLeft} alt="" className="hero-v2-bg" aria-hidden="true" />
+          <img src={darkBg} alt="" className="hero-v2-bg" aria-hidden="true" />
           <span className="hero-v2-scrim" aria-hidden="true" />
         </>
       )}
@@ -59,34 +61,52 @@ function HeroV2({ variant = "center" }: HeroV2Props) {
         </div>
 
         <div className="hero-v2-visual">
-          {!isDark && (
+          {isDark ? (
+            <>
+              <img
+                src={peopleRight}
+                alt="Projektledare på kontoret ser arbetspassen i ByggExp"
+                className="hero-v2-scene hero-v2-scene--office"
+                width={1216}
+                height={832}
+                fetchPriority="high"
+              />
+              <img
+                src={peopleLeft}
+                alt="Hantverkare stämplar in på bygget i ByggExp-appen"
+                className="hero-v2-scene hero-v2-scene--site"
+                width={666}
+                height={832}
+              />
+            </>
+          ) : (
             <>
               <img
                 src={peopleLeft}
-                alt="Hantverkare skakar hand på bygget"
+                alt="Hantverkare stämplar in på bygget i ByggExp-appen"
                 className="hero-v2-photo hero-v2-photo--left"
                 width={600}
                 height={340}
               />
               <img
                 src={peopleRight}
-                alt="Hantverkare rapporterar tid i mobilen"
+                alt="Projektledare på kontoret ser arbetspassen i ByggExp"
                 className="hero-v2-photo hero-v2-photo--right"
                 width={600}
                 height={340}
               />
+              <img
+                src={device}
+                srcSet={`${device} 1200w, ${deviceLarge} 2400w`}
+                sizes="(max-width: 900px) 92vw, 760px"
+                alt="ByggExp på dator och mobil – arbetspass"
+                className="hero-v2-device"
+                width={1200}
+                height={656}
+                fetchPriority="high"
+              />
             </>
           )}
-          <img
-            src={device}
-            srcSet={`${device} 1200w, ${deviceLarge} 2400w`}
-            sizes="(max-width: 900px) 92vw, 760px"
-            alt="ByggExp på dator och mobil – arbetspass"
-            className="hero-v2-device"
-            width={1200}
-            height={656}
-            fetchPriority="high"
-          />
         </div>
       </div>
     </section>

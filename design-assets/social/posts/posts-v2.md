@@ -177,3 +177,66 @@ Räkna, skriv ÄTA och offert – direkt i mobilen 🔨
 
 Öppna länken och testa – det tar en minut.
 👉 https://byggexp.se/sv/verktyg?utm_source=linkedin&utm_medium=social&utm_campaign=page-start
+
+# FB v3 (20.10) — перевыкладка по S15: популярные темы (GSC) + функции ByggExp. Порядок публикации сверху вниз, последний = верх ленты, закрепить 21-gps.
+
+## FB3-1 · 12-takstolar.jpg
+Hur många takstolar behövs?
+
+Längd ÷ c/c + 1 – t.ex. 12 m ÷ 1,2 m + 1 = 11 st. Kalkylatorn ger även nockhöjd och takyta.
+
+Och när bygget är igång: i ByggExp checkar laget in med GPS och timmarna hamnar på rätt projekt.
+👉 https://byggexp.se/sv/verktyg/takstolar-kalkylator?utm_source=facebook&utm_medium=social&utm_campaign=smm-v3
+
+## FB3-2 · 11-kontrakt.jpg
+Bygger du utan skriftligt kontrakt?
+
+Mall för entreprenadkontrakt enligt AB 04 eller ABT 06: omfattning, pris, betalplan, vite, ÄTA och garanti. Ladda ner som PDF.
+
+I ByggExp godkänns ÄTA:n i projektet och blir en förifylld faktura.
+👉 https://byggexp.se/sv/verktyg/entreprenadkontrakt-mall?utm_source=facebook&utm_medium=social&utm_campaign=smm-v3
+
+## FB3-3 · 10-ek-bygg.jpg
+Egenkontroll bygg – fyll i på plats.
+
+Fuktkvot i virke, mått mot ritning och övriga punkter är förifyllda. Sätt resultat, ladda ner som PDF eller Excel.
+
+Foton från bygget samlas per projekt i ByggExp-appen.
+👉 https://byggexp.se/sv/verktyg/egenkontroll-bygg-mall?utm_source=facebook&utm_medium=social&utm_campaign=smm-v3
+
+## FB3-4 · 09-ek-vvs.jpg
+Egenkontroll VVS – fyll i på plats.
+
+Täthetsprovning, fall på avlopp och övriga kontrollpunkter står redan i mallen. Ladda ner som PDF eller Excel.
+
+Foton från bygget samlas per projekt i ByggExp-appen.
+👉 https://byggexp.se/sv/verktyg/egenkontroll-vvs-mall?utm_source=facebook&utm_medium=social&utm_campaign=smm-v3
+
+## FB3-5 · 08-ek-el.jpg
+Egenkontroll el – fyll i på plats.
+
+Skyddsjord, kontinuitet, isolationsresistans m.m. står redan i mallen. Sätt Godkänd eller anmärkning, ladda ner som PDF eller Excel.
+
+Foton från bygget samlas per projekt i ByggExp-appen.
+👉 https://byggexp.se/sv/verktyg/egenkontroll-el-mall?utm_source=facebook&utm_medium=social&utm_campaign=smm-v3
+
+## FB3-6 · 05-egenkontroll.jpg
+Egenkontroll våtrum – klar på bygget, inte i efterhand.
+
+Fuktmätning, tätskikt, fall mot golvbrunn: punkterna står redan i mallen. Sätt Godkänd, ladda ner som PDF eller Excel.
+
+Foton från bygget samlas per projekt i ByggExp-appen.
+👉 https://byggexp.se/sv/verktyg/egenkontroll-vatrum-mall?utm_source=facebook&utm_medium=social&utm_campaign=smm-v3
+
+## FB3-7 · 04-ob.jpg
+OB eller övertid – vad kostar timmen?
+
+Timlön 230 kr × 2 timmar, övertid A 30 %: tillägget blir 138 kr. OB och övertid betalas inte för samma timme.
+
+I ByggExp väljer laget timtyp – normal, övertid eller OB – på varje pass. Lönen räknas med de faktorer ni anger.
+👉 https://byggexp.se/sv/verktyg/ob-overtid-kalkylator?utm_source=facebook&utm_medium=social&utm_campaign=smm-v3
+
+## FB3-8 · 25-foto.jpg — текст = linkedin-plan Пост 7 (utm facebook)
+## FB3-9 · 26-pris.jpg — текст = linkedin-plan Пост 8 (utm facebook)
+## FB3-10 · 06-faktura.jpg — текст = linkedin-plan Пост 4 (utm facebook)
+## FB3-11 · 21-gps.jpg — текст = linkedin-plan Пост 2 (utm facebook), ЗАКРЕПИТЬ

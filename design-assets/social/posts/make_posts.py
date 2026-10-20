@@ -13,10 +13,10 @@ NAVY, SKY, WHITE = (11, 26, 46), (111, 208, 248), (255, 255, 255)
 # out, headline lines (second in SKY), parts stacked top→bottom: (screenshot, crop box px | None) or "ARROW"
 # Screenshots: puppeteer, filled forms, 2x (S5, S8). See DESIGN-SYSTEM-SMM.md.
 POSTS = [
-    ("08-ek-el.jpg", ["Egenkontroll el", "Gratis mall – PDF"], [("egenkontroll-el-mall-0.png", None), ("egenkontroll-el-mall-1.png", None)]),
-    ("09-ek-vvs.jpg", ["Egenkontroll VVS", "Gratis mall – PDF"], [("egenkontroll-vvs-mall-0.png", None), ("egenkontroll-vvs-mall-1.png", None)]),
-    ("10-ek-bygg.jpg", ["Egenkontroll bygg", "Gratis mall – PDF"], [("egenkontroll-bygg-mall-0.png", None), ("egenkontroll-bygg-mall-1.png", None)]),
-    ("11-kontrakt.jpg", ["Entreprenadkontrakt", "Gratis mall – AB 04"], [("kontrakt-0.png", None), ("kontrakt-1.png", None), ("kontrakt-2.png", None)]),
+    ("08-ek-el.jpg", ["Egenkontroll el", "Fyll i på plats"], [("egenkontroll-el-mall-0.png", None), ("egenkontroll-el-mall-1.png", None)]),
+    ("09-ek-vvs.jpg", ["Egenkontroll VVS", "Fyll i på plats"], [("egenkontroll-vvs-mall-0.png", None), ("egenkontroll-vvs-mall-1.png", None)]),
+    ("10-ek-bygg.jpg", ["Egenkontroll bygg", "Fyll i på plats"], [("egenkontroll-bygg-mall-0.png", None), ("egenkontroll-bygg-mall-1.png", None)]),
+    ("11-kontrakt.jpg", ["Entreprenadkontrakt", "Enligt AB 04"], [("kontrakt-0.png", None), ("kontrakt-1.png", None), ("kontrakt-2.png", None)]),
     ("12-takstolar.jpg", ["Hur många takstolar?", "Räkna direkt"], [("takstolar.png", (66, 66, 1032, 468)), ("takstolar.png", (66, 1404, 1032, 1572))]),
     ("00-verktyg.jpg", ["60+ gratis verktyg", "för byggare"], [("c1.png", None), "GAP", ("c2.png", None), "GAP", ("c3.png", None)]),
     ("04-ob.jpg", ["OB eller övertid?", "Räkna tillägget"], [("m-ob.png", (36, 36, 1076, 948))]),

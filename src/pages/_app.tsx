@@ -3,6 +3,7 @@ import { useEffect } from "react";
 
 import SiteChat from "../components/ChatAssistant/SiteChat";
 import CookieConsent from "../components/CookieConsent/CookieConsent";
+import PromoBanner from "../components/PromoBanner/PromoBanner";
 import { installDownloadTracking } from "../lib/downloadTracking";
 import { captureUtm } from "../lib/leadForm";
 import "../styles/globals.scss";
@@ -24,6 +25,7 @@ import "../components/CTA/CTA.scss";
 import "../components/Footer/Footer.scss";
 import "../components/Contact/Contact.scss";
 import "../components/ChatAssistant/ChatAssistant.scss";
+import "../components/PromoBanner/PromoBanner.scss";
 // Design system last: shared rules win over older page styles (see DESIGN-SYSTEM.md)
 import "../styles/design-system.scss";
 
@@ -40,6 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Component {...pageProps} />
       <CookieConsent />
+      <PromoBanner />
       <SiteChat />
     </>
   );

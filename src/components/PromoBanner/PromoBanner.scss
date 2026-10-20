@@ -1,0 +1,206 @@
+/* Mini hero at the bottom of blog/tool pages (owner 2026-10-20) */
+.promo {
+  position: fixed;
+  left: 22px;
+  bottom: 22px;
+  z-index: 900;
+  width: 380px;
+  max-width: calc(100vw - 24px);
+  background: var(--navy-900);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  animation: promo-in 0.35s ease-out;
+}
+
+@keyframes promo-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+.promo-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 8px 10px 16px;
+}
+
+.promo-title {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--white);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.promo-from {
+  font-weight: 400;
+  color: #cfe3f7;
+}
+
+.promo-icon {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 16px 16px;
+}
+
+.promo-photos {
+  position: relative;
+  height: 150px;
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+.promo-office {
+  right: 0;
+  top: 0;
+  width: 80%;
+  height: 120px;
+}
+
+.promo-site {
+  left: 0;
+  bottom: 0;
+  width: 30%;
+  height: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.promo-price {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #cfe3f7;
+}
+
+.promo-line {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+
+  strong {
+    color: var(--white);
+  }
+}
+
+.promo-line-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.promo-line.is-open {
+  flex-wrap: wrap;
+  row-gap: 2px;
+
+  .promo-line-text {
+    white-space: normal;
+  }
+}
+
+.promo-more {
+  flex: none;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: #d9e8f8;
+  cursor: pointer;
+
+  &::after {
+    content: " ›";
+  }
+}
+
+.promo-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 44px;
+  border-radius: 999px;
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.promo-meta {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 14px;
+  font-size: 13px;
+  color: #cfe3f7;
+}
+
+/* phones: full width at the bottom, clear of the chat button */
+@media (max-width: 600px) {
+  .promo {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    width: auto;
+    max-width: none;
+  }
+  .promo.is-min {
+    right: 84px; // the chat bubble sits bottom-right
+  }
+  .promo:not(.is-min) {
+    bottom: 88px; // open card sits above the chat bubble
+    max-height: calc(100vh - 160px);
+    overflow-y: auto;
+  }
+  .promo-photos {
+    height: 120px;
+  }
+  .promo-office {
+    height: 96px;
+  }
+  .promo-site {
+    height: 84px;
+  }
+}
+
+.promo.is-min .promo-title {
+  font-size: 14px;
+}

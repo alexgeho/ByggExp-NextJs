@@ -13,7 +13,7 @@ import { useState } from "react";
 export const HERO_V2_VARIANTS = ["center", "split", "split-scenes", "dark", "dark-center"] as const;
 export type HeroV2Variant = (typeof HERO_V2_VARIANTS)[number];
 
-const REGISTER_URL = "https://admin.byggexp.se/register";
+export const REGISTER_URL = "https://admin.byggexp.se/register";
 const APP_STORE_URL = "https://apps.apple.com/se/app/id6748280779";
 const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=se.byggexp.app";
 
@@ -48,7 +48,7 @@ const peopleRight = "/landing/hero/kontor.webp";
 const darkBg = "/landing/hero/bg-bygge.webp";
 
 // full package contents (src/locales/pricing.ts: financeItems / projectItems), one line until "Läs mer"
-const PRICE_LINES = [
+export const PRICE_LINES = [
   {
     price: "299 kr/mån",
     items:

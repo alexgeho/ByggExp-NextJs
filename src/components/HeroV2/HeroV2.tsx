@@ -56,6 +56,11 @@ function HeroV2({ variant = "center" }: HeroV2Props) {
 
       <div className="hero-v2-inner">
         <div className="hero-v2-content">
+          <span className="hero-v2-pill">
+            <span className="hero-v2-pill-dot" aria-hidden="true" />
+            Byggledning
+          </span>
+
           <h1>Hela byggföretaget på ett ställe</h1>
 
           <div className="hero-v2-price">

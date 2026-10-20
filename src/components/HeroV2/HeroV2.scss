@@ -432,3 +432,40 @@
     object-position: center;
   }
 }
+
+/* badge above the title (same as the old hero pill) */
+.hero-v2-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(35, 148, 255, 0.14);
+  border: 1px solid rgba(35, 148, 255, 0.32);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #9bd0ff;
+  letter-spacing: 0.01em;
+  margin-bottom: -12px; // sits closer to the title than the content gap
+}
+
+.hero-v2-pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 4px rgba(35, 148, 255, 0.25);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* stacked (tablet/phone): buttons and trust checks centred */
+@media (max-width: 900px) {
+  .hero-v2 .hero-v2-content .hero-v2-ctas {
+    align-self: center;
+    width: 100%;
+    max-width: 480px;
+  }
+  .hero-v2 .hero-v2-content .hero-v2-meta {
+    align-self: center;
+  }
+}

@@ -27,7 +27,7 @@ const PRICE_LINES = [
   {
     price: "299 kr/mån",
     items:
-      "offerter och fakturor, inkommande fakturor via e‑post, betalningspåminnelser, löner, lönespecifikationer och AGI, projektekonomi med budget, kalkyl och lönsamhet, kvitton som bokförs på projektet",
+      "offerter och fakturor, skanning av kvitton och fakturor, inkommande fakturor via e‑post, betalningspåminnelser, löner, lönespecifikationer och AGI, projektekonomi med budget, kalkyl och lönsamhet, kvitton som bokförs på projektet",
   },
   {
     price: "+69 kr/arbetare",

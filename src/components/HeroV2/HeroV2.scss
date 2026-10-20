@@ -536,13 +536,18 @@
 @media (max-width: 900px) {
   // taller collage so both badges fit under the office photo
   .hero-v2--dark .hero-v2-visual {
-    aspect-ratio: 12 / 11; // photos stay where they were
-    margin-bottom: 46px; // room for the badges' 40px bottom air
+    // office photo (84% × 832/1216 of the width) + 40px + two badges (88px);
+    // the worker card and Google Play share the bottom line
+    aspect-ratio: auto;
+    height: calc((100vw - 32px) * 0.5747 + 128px);
+  }
+  .hero-v2 .hero-v2-content .hero-v2-meta {
+    margin-top: 8px; // 32px gap + 8 = 40px under the photos, like the badges
   }
   // badges: 40px from the worker card, under the office photo and above the bottom
   .hero-v2-stores {
-    top: calc(63% + 40px); // office photo bottom + 40px
-    bottom: auto;
+    top: auto;
+    bottom: 0;
     left: calc(36% + 40px);
     gap: 10px;
     align-items: flex-start;

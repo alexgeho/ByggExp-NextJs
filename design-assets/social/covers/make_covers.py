@@ -57,7 +57,7 @@ def tiles(names, gap=36, r=48):
     return out
 
 
-def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=None, price=None, stores=False):
+def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=None, price=None, stores=False, label_w=None):
     sl, st, sw, sh = safe
     img = background(w, h, cell)
     d = ImageDraw.Draw(img)
@@ -93,8 +93,12 @@ def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=N
             d.text((sl + (pw - d.textlength(p, font=fp)) / 2, y + ph * .2), p, font=fp, fill=NAVY)
             rw = pw
             if label:  # what the price includes, one left line for all labels
-                d.text((sl + pw + ph * .4, y + ph * .22), label, font=fl, fill=WHITE)
-                rw = pw + ph * .4 + d.textlength(label, font=fl)
+                ls = wrap(d, label, fl, label_w) if label_w else [label]  # label_w: wrap so the photo keeps its size
+                lh2 = fl.size * 1.15
+                ty = y + (ph - lh2 * len(ls)) / 2 + (fl.size * .05 if len(ls) > 1 else ph * .22 - (ph - lh2) / 2)
+                for k, t in enumerate(ls):
+                    d.text((sl + pw + ph * .4, ty + k * lh2), t, font=fl, fill=WHITE)
+                rw = pw + ph * .4 + max(d.textlength(t, font=fl) for t in ls)
             text_w = max(text_w, rw)
             y += ph
     if stores:
@@ -153,8 +157,8 @@ for n in ("linkedin-cover-value", "linkedin-cover-product"):  # LinkedIn rejects
 # S16/S17: hero collage from the home page + price + store badges
 HERO = Image.open(TILES / "hero-nostores.png")  # badges sit next to the price instead
 HEAD = [("Hela byggföretaget", WHITE), ("på ett ställe", SKY)]
-PRICE = [("299 kr/mån", "offert, faktura, lön, projektekonomi m.m."), ("+69 kr/arbetare", "tidrapport, närvaro, planering m.m.")]  # S18
-cover("facebook-cover-v4", 1640, 624, (270, 40, 1100, 544), HEAD, 64, 48, shot=HERO, price=PRICE, stores=True)
+PRICE = [("299 kr/mån", "offert, faktura, lön, projektekonomi, projektledning m.m."), ("+69 kr/arbetare", "tidrapport, närvaro, planering, egenkontroll m.m.")]  # S18
+cover("facebook-cover-v4", 1640, 624, (270, 40, 1100, 544), HEAD, 64, 48, shot=HERO, price=PRICE, stores=True, label_w=440)
 cover("linkedin-cover-v4", 2256, 382, (700, 24, 1300, 334), HEAD, 48, 48, shot=HERO, price=PRICE, stores=True)
 Image.open(HERE / "linkedin-cover-v4.png").convert("RGB").resize((1584, 268), Image.LANCZOS).save(HERE / "linkedin-cover-v4.jpg", quality=92)
 print("ok")

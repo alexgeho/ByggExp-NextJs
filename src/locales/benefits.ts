@@ -97,9 +97,9 @@ export const benefitsTranslations = {
     office: {
       benefitsOfficeTitle: "Vad får ni genom att arbeta med oss?",
 
-      benefitsOfficeHeading1: "Redan från första dagen ",
-      benefitsOfficeAccent: "sparar ni tid ",
-      benefitsOfficeHeading2: "på allt som tidigare gjordes manuellt.",
+      benefitsOfficeHeading1: "Spara tid ",
+      benefitsOfficeAccent: "från dag ett",
+      benefitsOfficeHeading2: "",
 
       benefitsOfficeLead: "För ledningen",
 

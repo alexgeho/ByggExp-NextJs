@@ -86,9 +86,9 @@ export const ctaTranslations = {
   sv: {
     ctaTitle: "Redo att prova?",
 
-    ctaHeading1: "Boka en demo —",
-    ctaAccent: "15 minuter",
-    ctaHeading2: "via videosamtal",
+    ctaHeading1: "Boka demo –",
+    ctaAccent: "15 min",
+    ctaHeading2: "",
 
     ctaLead:
       "Vi visar hur ByggExp fungerar på era projekt, svarar på frågor och hjälper er att skapa den första gruppchatten.",

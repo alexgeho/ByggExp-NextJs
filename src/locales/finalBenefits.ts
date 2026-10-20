@@ -40,8 +40,8 @@ export const finalBenefitsTranslations = {
   sv: {
     finalBenefitsTitle: "Sammanfattningsvis får du",
 
-    finalBenefitsHeading1: "Full kontroll över projekten —",
-    finalBenefitsAccent: "och lugnare sömn",
+    finalBenefitsHeading1: "Full kontroll",
+    finalBenefitsAccent: "över projekten",
 
     finalBenefitsItem1:
       "Ledningen får mer tid och lägre kostnader",

@@ -164,3 +164,16 @@
 .final-benefits {
   background: var(--navy-700);
 }
+
+// R5 · section header = one short title only: no eyebrow, no subtitle, modest size.
+.section-head {
+  margin-top: 0;
+  .eyebrow,
+  .section-sub {
+    display: none;
+  }
+  h2 {
+    font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem);
+    line-height: 1.15;
+  }
+}

@@ -77,9 +77,9 @@ export const featuresTranslations1_3 = {
   sv: {
     featuresTitle: "Så fungerar det",
 
-    featuresHeading1: "{n} verktyg som",
-    featuresHeadingAccent: "eliminerar 60 %",
-    featuresHeading2: "av administrationens arbete",
+    featuresHeading1: "{n} verktyg –",
+    featuresHeadingAccent: "60 % mindre admin",
+    featuresHeading2: "",
 
     featuresSub:
       "Ingen dator behövs. Ingen sekreterare behövs. Bara en smartphone som redan finns i fickan.",

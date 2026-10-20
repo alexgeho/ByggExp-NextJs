@@ -201,7 +201,7 @@ export const pricingTranslations = {
 
   sv: {
     pricingTitle: "Vad kostar det?",
-    pricingHeading: "Tre paket – välj det ni behöver",
+    pricingHeading: "Tre paket",
     pricingSub:
       "Inga dolda avgifter. Inga överraskningar. Ingen startavgift. Avsluta när du vill.",
 

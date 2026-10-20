@@ -651,33 +651,125 @@
   }
 }
 
-/* DARK (owner 2026-10-20): navy section, white plan cards stay as they are */
+/* DARK (owner 2026-10-20): whole block dark — navy section, glass cards, light text */
 .pricing {
+  --pd-card: rgba(255, 255, 255, 0.04);
+  --pd-line: rgba(255, 255, 255, 0.1);
+  --pd-text: rgba(255, 255, 255, 0.82);
+  --pd-muted: rgba(255, 255, 255, 0.55);
   background: var(--navy-900);
   position: relative;
 
+  /* controls */
   .toggleButton {
     background: transparent;
     border-color: transparent;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--pd-muted);
   }
   .toggleButtonActive {
-    background: var(--white);
+    background: var(--pd-card) !important;
+    border-color: var(--blue);
+    color: var(--white);
   }
-  .pricing-users-label {
+  .pricing-users-label,
+  .pricing-stepper-value,
+  .pricing-stepper button {
     color: var(--white);
   }
   .pricing-stepper {
-    border-color: transparent;
+    background: var(--pd-card);
+    border-color: var(--pd-line);
   }
+
+  /* plan cards */
+  .pricing-card,
+  .pricing-offer,
+  .pricing-addon {
+    background: var(--pd-card);
+    border-color: var(--pd-line);
+    box-shadow: none;
+  }
+  .pricing-card-popular {
+    border-color: rgba(69, 179, 107, 0.55);
+  }
+  .pricing-price .num,
+  .pricing-group-title,
+  .pricing-banner h3,
+  .pricing-item-link:hover,
+  .pricing-item-btn:hover,
+  .pricing-note-toggle[aria-expanded="true"] {
+    color: var(--white);
+  }
+  .pricing-price .per,
+  .pricing-detail,
+  .pricing-trial,
+  .pricing-banner p,
   .pricing-footnote,
-  .pricing-limit-note {
-    color: rgba(255, 255, 255, 0.6);
+  .pricing-limit-note,
+  .pricing-highlight-note {
+    color: var(--pd-muted);
   }
+  .pricing-sub,
+  .pricing-list li {
+    color: var(--pd-text);
+  }
+  .pricing-group + .pricing-group {
+    border-top-color: var(--pd-line);
+  }
+  .pricing-highlight {
+    background: rgba(35, 148, 255, 0.1);
+    border-color: rgba(35, 148, 255, 0.3);
+  }
+  .pricing-highlight-title {
+    color: #9bd0ff;
+  }
+  .pricing-note {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--pd-text);
+  }
+
+  /* tags and checks: translucent instead of pastel */
+  .pricing-tag-blue,
+  .pricing-banner-badge-blue,
+  .check-blue {
+    background: rgba(35, 148, 255, 0.18);
+    color: #9bd0ff;
+  }
+  .pricing-tag-purple,
+  .pricing-banner-badge-purple,
+  .check-purple {
+    background: rgba(160, 100, 230, 0.2);
+    color: #d6b8ff;
+  }
+  .pricing-tag-green,
+  .check-green,
+  .pricing-addon .check-green {
+    background: rgba(69, 179, 107, 0.2);
+    color: #8fe0aa;
+  }
+  .pricing-popular {
+    color: #8fe0aa;
+  }
+
+  .pricing-offer-btn {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+  }
+  .pricing-offer-btn:hover {
+    background: rgba(35, 148, 255, 0.25);
+  }
+
   .pricing-dots span {
     background: rgba(255, 255, 255, 0.25);
   }
-  .pricing-dots span.active {
+  .pricing-dots .active {
     background: var(--blue);
   }
+}
+/* banner badges sit on the card border: solid so the line doesn't show through */
+.pricing .pricing-banner-badge-purple {
+  background: #2a1d45;
+}
+.pricing .pricing-banner-badge-blue {
+  background: #10294a;
 }

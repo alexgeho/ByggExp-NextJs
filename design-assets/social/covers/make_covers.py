@@ -107,6 +107,8 @@ VSUB = "Kalkylatorer och mallar för lön, moms, betong, ÄTA och egenkontroll �
 OB = Image.open(TILES / "m-ob.png").crop((36, 36, 1076, 948))  # real calculator: input + result (S8)
 cover("facebook-cover-value", 1640, 624, (290, 60, 1060, 504), VALUE, 72, 48, VSUB, 560, OB, "byggexp.se")
 cover("linkedin-cover-value", 2256, 382, (700, 30, 1300, 322), VALUE, 64, 48, "Kalkylatorer och mallar – utan konto", 900, OB, "byggexp.se")
+# YouTube safe area 1546x423 (507, 509), inset 40px so nothing touches the mobile crop
+cover("youtube-banner-value", 2560, 1440, (547, 529, 1466, 383), VALUE, 84, 64, VSUB, 700, OB, "byggexp.se")
 
 # Facebook: 1640x624, keep inside centre ~1180px (mobile crops the sides)
 cover("facebook-cover", 1640, 624, (230, 40, 1180, 544), TITLE, 50, 48, SUB, 560)

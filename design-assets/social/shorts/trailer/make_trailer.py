@@ -20,11 +20,11 @@ CAP_Y = 930
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 
 # per clip: crop of the 2x recording (whole tool card) and push-in focus (fractions of crop) + zoom
-CLIPS = {
-    "rot": dict(crop=(170, 60, 2390, 900), focus=(0.76, 0.38), zoom=1.6),
-    "betong": dict(crop=(170, 40, 2390, 880), focus=(0.77, 0.30), zoom=1.5),
-    "faktura": dict(crop=(350, 680, 2210, 1620), focus=(0.62, 0.62), zoom=1.5),
-    "hub": dict(crop=(160, 0, 2400, 1440), focus=(0.5, 0.5), zoom=1.0),
+CLIPS = {  # focus/zoom keep inputs and results in view together (S8)
+    "rot": dict(crop=(170, 60, 2390, 680), focus=(0.5, 0.5), zoom=1.3),
+    "betong": dict(crop=(170, 30, 2390, 1200), focus=(0.5, 0.42), zoom=1.25),
+    "faktura": dict(crop=(350, 680, 2210, 1620), focus=(0.5, 0.55), zoom=1.3),
+    "hub": dict(crop=(0, 0, 1800, 1012), focus=(0.5, 0.5), zoom=1.0),
 }
 LEAD, TAIL = 0.25, 0.7  # voice starts 0.25s into a scene; scene lasts ≥ voice + tail
 TAP_LIFE = 0.5
@@ -53,6 +53,11 @@ def bg():
 
 
 BG = bg()
+BAND = BG.convert("RGBA")  # navy strip under the captions, soft top edge
+_m = Image.new("L", (W, H), 0)
+for _y in range(860, H):
+    ImageDraw.Draw(_m).line((0, _y, W, _y), fill=min(255, (_y - 860) * 9))
+BAND.putalpha(_m)
 LOGO = Image.open(ROOT / "public/icon-512.png").convert("RGBA")
 script = json.load(open(HERE / "script_sv.json"))
 
@@ -119,7 +124,8 @@ def camera(sc, t, stage, focus):
     """wide while typing → push in after the last tap → hold → pull out before the cut (S3)"""
     zmax = CLIPS[sc["scene"]]["zoom"]
     taps = sc["meta"]["taps"]
-    p0 = sc["t0"] + (taps[-1][0] + 0.5 if taps else 0.5)
+    last = max([tp[0] for tp in taps] + [sc["meta"]["frames"][-1][1]])  # push in once the screen is final
+    p0 = sc["t0"] + last + 0.4
     p1, out0 = p0 + 0.9, sc["t1"] - 0.8
     k = ease((t - p0) / (p1 - p0)) if t < out0 else 1 - ease((t - out0) / 0.8)
     if p0 >= out0 - 0.6:  # not enough room for a hold → stay wide
@@ -143,14 +149,26 @@ def chunks(sc):
         cur, en = cur + c, e
     if cur:
         words.append((cur, st, en))
-    out, buf = [], []
-    for w in words:
-        buf.append(w)
-        if w[0][-1] in ".?:,–" or sum(len(x[0]) + 1 for x in buf) > 30:
-            out.append((" ".join(x[0] for x in buf), sc["vt"] + buf[0][1], sc["vt"] + buf[-1][2]))
-            buf = []
-    if buf:
-        out.append((" ".join(x[0] for x in buf), sc["vt"] + buf[0][1], sc["vt"] + buf[-1][2]))
+    out, clause = [], []
+    for i, w in enumerate(words):  # split at punctuation; long clauses split before och/så/på
+        clause.append(w)
+        if w[0][-1] in ".?:,–" or i == len(words) - 1:
+            txt = " ".join(x[0] for x in clause)
+            if len(txt) > 38:
+                cut = next((j for j in range(len(clause) // 2, len(clause)) if clause[j][0] in ("och", "så", "på", "med")), len(clause) // 2)
+                parts = [clause[:cut], clause[cut:]]
+            else:
+                parts = [clause]
+            for pt in parts:
+                out.append([" ".join(x[0] for x in pt), sc["vt"] + pt[0][1], sc["vt"] + pt[-1][2]])
+            clause = []
+    out = [o for o in out if o[0] != "–"]
+    k = 0
+    while k < len(out):  # no one-word captions: merge into the previous one
+        if len(out[k][0].split()) == 1 and k > 0:
+            out[k - 1][0] += " " + out[k][0]; out[k - 1][2] = out[k][2]; out.pop(k)
+        else:
+            k += 1
     return [(txt.replace(" –", ""), a, b) for txt, a, b in out if txt != "–"]
 
 
@@ -169,6 +187,7 @@ def render(t):
     if sc["scene"] in CLIPS:
         stage, focus = card(sc, lt)
         frame = camera(sc, t, stage, focus)
+        frame.alpha_composite(BAND)
     else:
         frame = BG.copy().convert("RGBA")
     d = ImageDraw.Draw(frame)
@@ -190,7 +209,7 @@ def render(t):
         ImageDraw.Draw(pill).rounded_rectangle(((W - bw) / 2, 500, (W + bw) / 2, 620), 60, fill=(255, 0, 0, 255))
         frame.alpha_composite(pill)
         centered(d, label, 515, f, WHITE)
-        centered(d, "Fler gratis tips för hantverkare", 680, font(56, "Semibold"), WHITE)
+        centered(d, "Fler sätt att spara tid på pappersjobbet", 680, font(56, "Semibold"), WHITE)
         centered(d, "byggexp.se", 780, font(76), SKY)
     for text, c0, c1 in CAPS:  # captions on a navy plate (S6)
         if c0 <= t <= c1 + 0.15:

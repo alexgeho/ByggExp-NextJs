@@ -10,7 +10,7 @@ import FinalBenefits from "../../components/FinalBenefits/FinalBenefits";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero/Hero";
-import HeroV2 from "../../components/HeroV2/HeroV2";
+import HeroV2, { HERO_V2_VARIANTS, type HeroV2Variant } from "../../components/HeroV2/HeroV2";
 import Pain from "../../components/Pain/Pain";
 import { buildHreflangAlternates, defaultHomeMeta, localeOrigin } from "../../lib/seo";
 import Pricing, { FAKTURA_PRICE } from "../../components/Pricing/Pricing";
@@ -35,6 +35,7 @@ type HomePageProps = {
   seo: SiteSeo | null;
   // ?v=old shows the previous home page (git tag startsida-v1) for comparison.
   oldVersion: boolean;
+  heroVariant: HeroV2Variant;
 };
 
 export const getServerSideProps: GetServerSideProps<HomePageProps> = async ({ params, query }) => {
@@ -48,6 +49,8 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async ({ pa
       lang,
       seo: await fetchSiteSeo(lang).catch(() => null),
       oldVersion: query.v === "old",
+      // ?v=<variant> previews other HeroV2 layouts without changing the default.
+      heroVariant: HERO_V2_VARIANTS.find((v) => v === query.v) ?? "dark",
     },
   };
 };
@@ -78,6 +81,7 @@ export default function HomePage({
   lang,
   seo,
   oldVersion,
+  heroVariant,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const router = useRouter();
 
@@ -179,7 +183,7 @@ export default function HomePage({
       ) : (
         <>
           {/* Hero → services → prices first; pain and benefits further down (owner 2026-10-20) */}
-          {lang === "sv" ? <HeroV2 variant="center" /> : <Hero heroT={heroT} />}
+          {lang === "sv" ? <HeroV2 variant={heroVariant} /> : <Hero heroT={heroT} />}
           {features}
           <Pricing pricingT={pricingT} lang={lang} />
           <Pain painT={painT} />

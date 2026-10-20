@@ -149,3 +149,18 @@
   display: inline-flex;
   align-items: center;
 }
+
+// R4 · neighbouring page sections never share a background: photo hero → light → white → light → navy.
+.pricing {
+  background: var(--white);
+}
+.pricing .toggleButtonActive {
+  background-color: var(--bg);
+}
+.pain {
+  background: var(--bg);
+}
+// R4: three dark sections in a row → the middle one one step lighter.
+.final-benefits {
+  background: var(--navy-700);
+}

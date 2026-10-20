@@ -536,15 +536,16 @@
 @media (max-width: 900px) {
   // taller collage so both badges fit under the office photo
   .hero-v2--dark .hero-v2-visual {
-    aspect-ratio: 12 / 11;
+    aspect-ratio: 358 / 374; // office photo + 40px + two badges + 40px
   }
-  // badges: same 20px from the worker card (left) and the office photo (top)
+  // badges: 20px from the worker card, 40px under the office photo and above the bottom
   .hero-v2-stores {
-    top: calc(63% + 20px);
+    top: auto;
+    bottom: 40px;
     left: calc(36% + 20px);
     gap: 10px;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
   .hero-v2-store {
     width: 136px;

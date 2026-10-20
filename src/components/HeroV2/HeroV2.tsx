@@ -85,9 +85,6 @@ function HeroV2({ variant = "center" }: HeroV2Props) {
             <a href={REGISTER_URL} className="hero-v2-btn hero-v2-btn--primary">
               Kom igång gratis
             </a>
-            <a href="#cta" className="hero-v2-btn hero-v2-btn--ghost">
-              Boka demo
-            </a>
           </div>
 
           <ul className="hero-v2-meta">

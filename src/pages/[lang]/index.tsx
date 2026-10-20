@@ -187,8 +187,7 @@ export default function HomePage({
           {features}
           <Pricing pricingT={pricingT} lang={lang} />
           <Pain painT={painT} />
-          <Benefits benefitsT={benefitsT} />
-          <FinalBenefits finalBenefitsT={finalBenefitsT} />
+          <Benefits benefitsT={benefitsT} finalBenefitsT={finalBenefitsT} />
         </>
       )}
       <CTA ctaT={ctaT} />

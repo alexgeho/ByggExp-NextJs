@@ -535,6 +535,12 @@
   .benefits-single .benefits-dots {
     margin-top: 28px;
     margin-bottom: 16px;
+    gap: 10px; // 12 cards: all dots fit between the arrows
+
+    span {
+      width: 10px;
+      height: 10px;
+    }
   }
 
   .benefits-single .benefit-card h3 {

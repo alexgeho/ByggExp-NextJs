@@ -2,7 +2,7 @@ import type { BenefitsProps } from "../../types/benefits";
 
 import BenefitSlider, { type SliderCard } from "./BenefitSlider";
 
-function Benefits({ benefitsT }: BenefitsProps) {
+function Benefits({ benefitsT, finalBenefitsT }: BenefitsProps) {
   const office = benefitsT.office;
   const site = benefitsT.site;
 
@@ -20,6 +20,16 @@ function Benefits({ benefitsT }: BenefitsProps) {
     { id: "b8", icon: <img src="/landing/benefits/card8.webp" alt="" width={256} height={256} loading="lazy" decoding="async" />, iconClass: "benefit-icon-3d", audience: site.benefitsSiteLead, title: site.benefitsSiteCard4Title, text: site.benefitsSiteCard4Text },
   ];
 
+  const outcomeCards: SliderCard[] = finalBenefitsT
+    ? (["time", "speed", "team", "shield"] as const).map((name, i) => ({
+        id: `f${i + 1}`,
+        icon: <img src={`/landing/final-benefits/${name}.webp`} alt="" width={256} height={256} loading="lazy" decoding="async" />,
+        iconClass: "benefit-icon-3d",
+        title: finalBenefitsT[`finalBenefitsItem${i + 1}` as "finalBenefitsItem1"],
+        text: "",
+      }))
+    : [];
+
   return (
     <section className="benefits">
       <div className="container">
@@ -35,7 +45,7 @@ function Benefits({ benefitsT }: BenefitsProps) {
 
         {/* OFFICE + SITE TEAM, ONE SLIDER */}
         <div className="benefits-single">
-          <BenefitSlider cards={[...officeCards, ...siteCards]} />
+          <BenefitSlider cards={[...officeCards, ...siteCards, ...outcomeCards]} />
         </div>
       </div>
     </section>

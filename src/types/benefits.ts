@@ -1,3 +1,5 @@
+import type { FinalBenefitsProps } from "./finalbenefits";
+
 export type BenefitsOfficeT = {
   benefitsOfficeTitle: string;
   benefitsOfficeHeading1: string;
@@ -39,4 +41,6 @@ export type BenefitsProps = {
     office: BenefitsOfficeT;
     site: BenefitsSiteT;
   };
+  // outcome cards appended to the carousel (owner 2026-10-20: one block, not two)
+  finalBenefitsT?: FinalBenefitsProps["finalBenefitsT"];
 };

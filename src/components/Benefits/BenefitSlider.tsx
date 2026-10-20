@@ -106,7 +106,7 @@ export default function BenefitSlider({ cards }: { cards: SliderCard[] }) {
               )}
               <div className={card.iconClass}>{card.icon}</div>
               {card.title && <h3>{card.title}</h3>}
-              <p>{card.text}</p>
+              {card.text && <p>{card.text}</p>}
             </div>
           ))}
         </div>

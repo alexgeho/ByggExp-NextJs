@@ -23,6 +23,14 @@ POSTS = [
     ("05-egenkontroll.jpg", ["Egenkontroll våtrum", "Klar på bygget"], [("m-ek.png", (30, 2900, 1068, 3365)), ("m-ek.png", (30, 3725, 1068, 4090)), ("m-ek.png", (30, 340, 1068, 500))]),
     ("07-ata-trigger.jpg", ["Kommentera ÄTA", "– få mallen gratis"], [("ata-pdf.png", (120, 105, 1545, 1450))]),
     ("06-faktura.jpg", ["Från ÄTA", "till faktura"], [("m-ata.png", (60, 940, 1038, 1180)), ("m-ata.png", (60, 3133, 1038, 3372)), "ARROW", ("m-fk2.png", (60, 652, 1038, 892)), ("m-fk2.png", (60, 2532, 1038, 3054))]),
+    # S14 LinkedIn product posts: real app screens from public/landing/features (flattened to src/f-*.png)
+    ("20-system.jpg", ["Tid, ÄTA, faktura, lön", "I ett system för bygget"], [("f-shifts.png", (248, 42, 1200, 840))]),
+    ("21-gps.jpg", ["Vem var på bygget?", "Appen vet – med GPS"], [("f-shifts.png", (1926, 360, 2374, 1170))]),
+    ("22-attest.jpg", ["Veckans timmar", "Per person och dag"], [("f-shifts.png", (586, 336, 1308, 390)), ("f-shifts.png", (586, 468, 1308, 826)), ("f-shifts.png", (586, 900, 1308, 1044))]),
+    ("23-lon.jpg", ["Lönen den 25:e?", "Timmarna finns redan"], [("f-salary.png", (823, 258, 1578, 312)), ("f-salary.png", (646, 426, 1476, 672))]),
+    ("24-planering.jpg", ["Vem jobbar var?", "Allt på en skärm"], [("f-plan.png", (583, 468, 1488, 1062))]),
+    ("25-foto.jpg", ["Hur såg det ut?", "Foton per arbetspass"], [("f-foto.png", (1919, 360, 2374, 900))]),
+    ("26-pris.jpg", ["Vad kostar det?", "Från 299 kr i månaden"], [("pris.png", (0, 30, 770, 360)), "GAP", ("pris.png", (815, 30, 1585, 360)), "GAP", ("pris.png", (1630, 30, 2400, 360))]),
 ]
 FOOTERS = ("row", "small", "stack", "right")  # S10: owner picks one; default below
 FOOTER = "row"

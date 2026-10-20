@@ -181,3 +181,10 @@
     line-height: 1.15;
   }
 }
+
+/* R8: a section heading's letters sit at the section padding, like a card or photo
+   edge (no extra line-height leading above the caps) */
+.section-head h2 {
+  text-box-trim: trim-start;
+  text-box-edge: cap alphabetic;
+}

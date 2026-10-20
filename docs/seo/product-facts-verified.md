@@ -33,3 +33,6 @@
 
 ## Skanning (ägaren bekräftat 2026-10-20)
 - YES: skanning av kvitton och inkommande fakturor (admin, e-post); arbetare skannar kvitton med mobilkameran i appen.
+
+## Flytt (ägaren bekräftat 2026-10-20)
+- YES: vi hjälper kunden att flytta över (data från gamla systemet) gratis.

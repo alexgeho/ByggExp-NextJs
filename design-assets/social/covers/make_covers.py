@@ -67,7 +67,8 @@ def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=N
     if url:
         sub_lines = sub_lines + [url]
     ph = int(fs * .9)  # S17 price pill, S16 store badges under it
-    extra = (int(fs * .4) + ph if price else 0) + (int(fs * .3) + ph if stores else 0)
+    rows = [price] if isinstance(price, str) else (price or [])  # S18: [(price, what it includes)]
+    extra = (int(fs * .4) + len(rows) * ph + (len(rows) - 1) * int(fs * .25) if rows else 0) + (int(fs * .3) + ph if stores else 0)
     block_h = lh * len(lines) + (int(fs * .4) + slh * len(sub_lines) if sub_lines else 0) + extra
     y = st + (sh - block_h) // 2
     text_w = 0
@@ -80,14 +81,22 @@ def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=N
         d.text((sl, y), t, font=font(int(fs * .42), "Heavy") if t == url else small, fill=SKY if t == url else (200, 214, 232))
         text_w = max(text_w, d.textlength(t, font=small))
         y += slh
-    if price:
+    if rows:
         y += int(fs * .4) - (int(fs * .4) if sub_lines else 0)
-        fp = font(int(ph * .52), "Bold")
-        pw = d.textlength(price, font=fp) + ph
-        d.rounded_rectangle((sl, y, sl + pw, y + ph), ph // 2, fill=SKY)
-        d.text((sl + ph / 2, y + ph * .2), price, font=fp, fill=NAVY)
-        text_w = max(text_w, pw)
-        y += ph
+        fp, fl = font(int(ph * .52), "Bold"), font(int(ph * .5), "Medium")
+        pw = max(d.textlength(r[0] if isinstance(r, tuple) else r, font=fp) for r in rows) + ph  # equal pill width
+        for i, r in enumerate(rows):
+            p, label = r if isinstance(r, tuple) else (r, None)
+            if i:
+                y += int(fs * .25)
+            d.rounded_rectangle((sl, y, sl + pw, y + ph), ph // 2, fill=SKY)
+            d.text((sl + (pw - d.textlength(p, font=fp)) / 2, y + ph * .2), p, font=fp, fill=NAVY)
+            rw = pw
+            if label:  # what the price includes, one left line for all labels
+                d.text((sl + pw + ph * .4, y + ph * .22), label, font=fl, fill=WHITE)
+                rw = pw + ph * .4 + d.textlength(label, font=fl)
+            text_w = max(text_w, rw)
+            y += ph
     if stores:
         y += int(fs * .3)
         b = Image.open(TILES / "stores.png").convert("RGBA").crop((313, 64, 931, 151))
@@ -144,8 +153,8 @@ for n in ("linkedin-cover-value", "linkedin-cover-product"):  # LinkedIn rejects
 # S16/S17: hero collage from the home page + price + store badges
 HERO = Image.open(TILES / "hero-nostores.png")  # badges sit next to the price instead
 HEAD = [("Hela byggföretaget", WHITE), ("på ett ställe", SKY)]
-PRICE = "299 kr/mån + 69 kr/arbetare"
-cover("facebook-cover-v4", 1640, 624, (230, 40, 1180, 544), HEAD, 64, 48, shot=HERO, price=PRICE, stores=True)
-cover("linkedin-cover-v4", 2256, 382, (700, 24, 1300, 334), HEAD, 60, 48, shot=HERO, price=PRICE, stores=True)
+PRICE = [("299 kr/mån", "offert, faktura, lön"), ("+69 kr/arbetare", "appen: tidrapport, planering")]  # S18
+cover("facebook-cover-v4", 1640, 624, (270, 40, 1100, 544), HEAD, 64, 48, shot=HERO, price=PRICE, stores=True)
+cover("linkedin-cover-v4", 2256, 382, (700, 24, 1300, 334), HEAD, 48, 48, shot=HERO, price=PRICE, stores=True)
 Image.open(HERE / "linkedin-cover-v4.png").convert("RGB").resize((1584, 268), Image.LANCZOS).save(HERE / "linkedin-cover-v4.jpg", quality=92)
 print("ok")

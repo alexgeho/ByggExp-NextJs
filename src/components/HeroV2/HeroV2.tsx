@@ -115,7 +115,7 @@ function HeroV2({ variant = "center" }: HeroV2Props) {
           <ul className="hero-v2-meta">
             <li>✓ 14 dagar gratis</li>
             <li>✓ Ingen startavgift</li>
-            <li>✓ Ingen bindningstid</li>
+            <li>✓ Gratis flytt av data</li>
           </ul>
 
           {showScenes && <StoreBadges place="content" />}

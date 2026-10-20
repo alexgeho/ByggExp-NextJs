@@ -298,7 +298,16 @@ function Pricing({ pricingT, lang }: PricingProps) {
         <div className="section-head section-head--dark">
           <span className="eyebrow">{pricingT.pricingTitle}</span>
 
-          <h2>{pricingT.pricingHeading}</h2>
+          {/* R5: the part after the dash is the blue accent */}
+          <h2>
+            {pricingT.pricingHeading.split(" – ")[0]}
+            {pricingT.pricingHeading.includes(" – ") && (
+              <>
+                {" – "}
+                <em>{pricingT.pricingHeading.split(" – ").slice(1).join(" – ")}</em>
+              </>
+            )}
+          </h2>
 
           <p className="section-sub">{pricingT.pricingSub}</p>
         </div>

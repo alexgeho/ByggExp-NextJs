@@ -321,7 +321,7 @@
   width: 36%;
   aspect-ratio: 4 / 5;
   object-position: 40% center; // keep the face and the phone in frame
-  border: 4px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .hero-v2--dark .hero-v2-visual,
@@ -337,9 +337,7 @@
   .hero-v2-scene {
     border-radius: 12px;
   }
-  .hero-v2-scene--site {
-    border-width: 3px;
-  }
+
 }
 
 /* scenes: photos dominate the first screen so the product reads */

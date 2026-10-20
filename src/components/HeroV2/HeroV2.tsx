@@ -46,7 +46,7 @@ function HeroV2({ variant = "center" }: HeroV2Props) {
               <strong>299 kr/mån</strong> – offerter, fakturor, löner, kvitton, …
             </span>
             <span>
-              <strong>69 kr/mån</strong> per arbetare – tidrapport, planering, närvaro, egenkontroll, …
+              <strong>+69 kr/arbetare</strong> – tidrapport, planering, närvaro, egenkontroll, …
             </span>
           </p>
 
@@ -69,8 +69,8 @@ function HeroV2({ variant = "center" }: HeroV2Props) {
                 src={peopleRight}
                 alt="Projektledare på kontoret ser arbetspassen i ByggExp"
                 className="hero-v2-scene hero-v2-scene--office"
-                width={2566}
-                height={1824}
+                width={2628}
+                height={1867}
                 fetchPriority="high"
               />
               <img

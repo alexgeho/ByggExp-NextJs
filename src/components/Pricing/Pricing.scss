@@ -650,3 +650,34 @@
     scroll-margin-top: 92px;
   }
 }
+
+/* DARK (owner 2026-10-20): navy section, white plan cards stay as they are */
+.pricing {
+  background: var(--navy-900);
+  position: relative;
+
+  .toggleButton {
+    background: transparent;
+    border-color: transparent;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .toggleButtonActive {
+    background: var(--white);
+  }
+  .pricing-users-label {
+    color: var(--white);
+  }
+  .pricing-stepper {
+    border-color: transparent;
+  }
+  .pricing-footnote,
+  .pricing-limit-note {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .pricing-dots span {
+    background: rgba(255, 255, 255, 0.25);
+  }
+  .pricing-dots span.active {
+    background: var(--blue);
+  }
+}

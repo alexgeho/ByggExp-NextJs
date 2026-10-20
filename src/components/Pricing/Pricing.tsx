@@ -295,7 +295,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
   return (
     <section className="pricing">
       <div className="container">
-        <div className="section-head">
+        <div className="section-head section-head--dark">
           <span className="eyebrow">{pricingT.pricingTitle}</span>
 
           <h2>{pricingT.pricingHeading}</h2>

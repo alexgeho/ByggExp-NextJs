@@ -153,12 +153,13 @@
   align-items: center;
 }
 
-// R4 · neighbouring page sections never share a background: photo hero → light → white → light → navy.
+// R4 · neighbouring page sections never share a background:
+// photo hero → light (features) → navy (pricing) → light (pain) → navy (benefits) → light (demo).
 .pricing {
-  background: var(--white);
+  background: var(--navy-900);
 }
 .pricing .toggleButtonActive {
-  background-color: var(--bg);
+  background-color: var(--white);
 }
 .pain {
   background: var(--bg);

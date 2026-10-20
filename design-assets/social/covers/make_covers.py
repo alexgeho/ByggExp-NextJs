@@ -111,7 +111,10 @@ def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=N
             text_w = max(text_w, rw)
             y += rh
     if stores:
-        y += int(fs * .3)
+        # S19: store badges sit with equal space above and below them
+        if center and rows:  # measure from the last price pill, not the taller label next to it
+            y -= (rhs[-1] - ph) // 2
+        y += (h - y - ph) // 2 if center else int(fs * .3)
         b = Image.open(TILES / "stores.png").convert("RGBA").crop((313, 64, 931, 151))
         b.putalpha(b.split()[3].point(lambda a: 255 if a > 200 else 0))
         b = b.resize((round(b.width * ph / b.height), ph), Image.LANCZOS)

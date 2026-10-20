@@ -14,6 +14,7 @@ NÄSTA:
 3. Låta svensk (Johan) granska nya texter: underrubriker i karusellen, «Gratis flytt av data», «skanning av kvitton med mobilkameran».
 4. Jämför före/efter (GA4/Clarity) för nya startsidan — gamla finns på tag startsida-v1 och /sv?v=old.
 5. Kvar från tidigare: YouTube-paketering (kräver «да»), admin-trailer (ren demo-företag behövs), EN faktura-tutorial, 9:16-reklam, musik.
+6. (ägaren 20.10, NÄSTA DAG) Promo-banner på övriga sidor (blogg, verktyg, kalkylatorer – där SEO-trafiken landar), inte på startsidan: liten kort längst ner (slide-in, inte helskärms-popup – Google straffar påträngande popups på mobil), efter ~50 % scroll eller 20 s, lätt att stänga (×), stängd = visas inte igen på 7 dagar. Innehåll = mini-hero: de två fotona, «Hela byggföretaget på ett ställe», «299 kr/mån + 69 kr/arbetare», knapp «Kom igång gratis». GA-händelser: visad / klick / stängd. Variant till Desktop först.
 Skärmdumpar/varianter: ~/Desktop/ByggExp-startsida-varianter.
 
 ## 2026-10-19 — Рассылки: итерация 1 закрыта, итерация 2 через цену

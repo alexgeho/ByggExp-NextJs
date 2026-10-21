@@ -1,5 +1,13 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-21 — SEO-проход (ветка seo-2026-10-21, НЕ live)
+- GSC 28 дн (21.09–18.10): .se 1 159 кл / 118,7K пок / CTR 0,98 % / поз. 11,4 (пред. 1 055 / 110,9K / 0,95 / 14,3); .no 69 / 9,4K / 0,73 / 22,6 (26 / 5,0K).
+- Факты: personalliggare-bygg-app — kontrollavgift 12 500 kr (было 2 500), ByggExp = GPS-incheckning + personalliggare-PDF (было «personalliggaren ingår»).
+- CTR/AEO: title/desc хаба tidrapport, staket, APD-plan, ROT fritidshus, kvadratmeter; quick answers: staket, apd-plan, rotavdrag-fritidshus, gipsskivor, id06-bestalla. Title-правки 08.10 (betong/reglar/gips) CTR не подняли — дальше не трогать title.
+- 301: tidsregistrering-app-bygg → app-for-tidrapportering-bygg, projekthanteringssystem-bygg → projekthantering-byggforetag (усилена). Ссылки на unknown/Discovered URL с ab-04, skriva-offert, projekthantering, egenkontroll-mall.
+- build ок; lint падает на PromoBanner.tsx:130 (`<a>` → Link, из main 20.10, не трогал).
+NÄSTA: «ок» владельца → merge + деплой → Request Indexing 10 URL (список в ~/sites-hub/audits/2026-10-21/byggexp.md); каталоги/ссылки — ~/OneDrive/byggexp-outreach/backlinks-citations-2026-10-21.md; замер ~04.11.
+
 ## 2026-10-21 — Сайт: инструмент сверху, «gratis konsultation»; ДОЛГ: App Store
 - Live `c767db6`: в статьях egenkontroll/mall форма сверху, статья ниже (R10); «Boka demo» → «Boka gratis konsultation» (sv/nb/en); промо-баннер → /sv#cta (форма заявки), не в админку.
 - Открыто: hero главной «Kom igång gratis» всё ещё ведёт на admin/register — владелец не решил.

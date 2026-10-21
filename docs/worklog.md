@@ -1,5 +1,10 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-21 (ночь) — HANDOFF: трекер источника лидов (live, `995d479`)
+- `src/lib/leadForm.ts`: `captureVisit()` (в _app) пишет в sessionStorage `byggexp.visit` utm_*, gclid/msclkid → medium cpc, внешний referrer, первую страницу. Все формы (CTA, Kontakt, чат, инструменты, offert) шлют f-utm-medium / f-referrer / f-landing; Calendly получает то же через `calendlyUtm()`.
+- Видно в письме о заявке («Came from») и в admin → Tratt → Demo → «Källa».
+- Скрипт звонка docs/seo/inbound-demo-call-script.md: цены 499/899/1799 устарели (сейчас 299/690/990, 14 дней бесплатно) — обновить.
+
 ## 2026-10-21 (вечер) — HANDOFF: инструмент сверху, hero 10 языков, соло, баннер (live)
 - R10: в статьях, куда приходят за шаблоном/расчётом, инструмент сразу под H1, под ним обложка, потом текст (src/content/article-inline-tools.tsx, `position: 'top'`). Добавлено ~30 статей по GSC (запросы mall/räkna/exempel). Новые шаблоны: ApdPlanMallTool, KmaPlanMallTool. Без инструмента оставлены AB 04/ABT 06, Hantverkarformuläret 17 (авторские тексты), BAS-P/U, schemaläggning (продуктовый интент).
 - Консультация вместо демо: sv/nb/en везде (шапка «Gratis konsultation», CTA, FAQ, контакты); промо-баннер → /sv#cta. Остальные 7 языков всё ещё «демо».

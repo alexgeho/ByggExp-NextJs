@@ -131,3 +131,5 @@
 - Instagram всё ещё не создан — регистрирует владелец.
 - 21.10 Instagram: владелец создал @byggexp; агент: аватар, bio (Hela byggföretaget…/299+69 exkl. moms/14 dagar gratis), Business, категория Programvara, e-mail kontakt@byggexp.se. Имя профиля пока «Alexander Gerhard» (менять в Accounts Center), ссылка только из мобильного приложения, связь с FB-страницей — не сделана (вход в IG из Business Suite).
 - 21.10 Новый посыл S21 (не боль, а выгода перехода). Владелец удалил пост-вопрос про tidlappar. Черновики v5: design-assets/social/posts/v5-erbjudande.md — ждут ok. Отложенные посты v1 (боль) — проверить и снять.
+- 21.10 поздно: ÄTA убран из IG bio, LinkedIn-слогана и описаний (sv+en), FB bio. IG bio: «Hela byggföretaget på ett ställe. / Tidrapport med GPS, offert, faktura och lön m.m. / 299 kr/mån för hela ekonomin + 69 kr/arbetare (exkl. moms).»
+- LinkedIn личный: новый пост v5 №1 с картинкой 00-hero — отложен на 22.10 08:00. Старые отложенные (22.10 07:30 påslag, переписан текстом v5, но с превью калькулятора; 23.10 07:30 «pappersjobb») — удалить владельцу (удаление агенту нельзя). ÄTA-пост 20.10 — удалить владельцу.

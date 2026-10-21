@@ -44,6 +44,8 @@ function Footer({ footerT }: FooterProps) {
             {footerT.footerBlog}
           </Link>
 
+          {lang === "sv" ? <Link href="/sv/enmansforetag">Enmansföretag</Link> : null}
+
           <Link href={`/${lang}/om-oss`}>
             {footerT.footerAbout}
           </Link>

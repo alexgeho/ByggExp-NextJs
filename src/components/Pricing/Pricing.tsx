@@ -401,6 +401,12 @@ function Pricing({ pricingT, lang }: PricingProps) {
                   {plan.popular ? (
                     <span className="pricing-popular">{pricingT.popular}</span>
                   ) : null}
+                  {/* Sole traders: the Faktura plan is the one for them (sv-only page). */}
+                  {plan.key === "faktura" && lang === "sv" ? (
+                    <a className="pricing-solo" href="/sv/enmansforetag">
+                      För enmansföretag →
+                    </a>
+                  ) : null}
                 </div>
 
                 <div className="pricing-price">

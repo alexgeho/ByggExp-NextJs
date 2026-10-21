@@ -170,7 +170,7 @@ if __name__ == "__main__":
     # S16/S17: hero collage from the home page + price + store badges
     HERO = Image.open(TILES / "hero-nostores.png")  # badges sit next to the price instead
     HEAD = [("Hela byggföretaget", WHITE), ("på ett ställe", SKY)]
-    PRICE = [("299 kr/mån", "offert, faktura, lön, projektekonomi, projektledning, fakturaskanning m.m."), ("+69 kr/arbetare", "tidrapport, närvaro, planering, egenkontroll, kvittoskanning m.m.")]  # S18
+    PRICE = [("299 kr/mån", "offert, faktura, lön, projektekonomi, projektledning, fakturaskanning m.m."), ("+69 kr/arbetare", "tidrapport, närvaro, egenkontroll, kvittoskanning m.m.")]  # S18
     cover("facebook-cover-v4", 1640, 624, (270, 40, 1120, 544), HEAD, 64, 48, shot=HERO, price=PRICE, stores=True, label_w=420, center=True, shot_r=1580)
     cover("linkedin-cover-v4", 2256, 382, (700, 24, 1300, 334), HEAD, 48, 48, shot=HERO, price=PRICE, stores=True, center=True, label_w=560, label_k=.62)  # labels readable at half size
     Image.open(HERE / "linkedin-cover-v4.png").convert("RGB").resize((1584, 268), Image.LANCZOS).save(HERE / "linkedin-cover-v4.jpg", quality=92)

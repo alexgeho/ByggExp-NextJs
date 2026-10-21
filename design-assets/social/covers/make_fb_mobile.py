@@ -14,7 +14,7 @@ AV = (822, 509, 188)  # avatar circle on mobile
 GREY = (207, 227, 247)  # site hero dark: .hero-v2-price #cfe3f7 (HeroV2.scss)
 SKYB, BLUE, DARK = (35, 148, 255), (30, 111, 217), (11, 61, 145)  # голубой / синий / тёмно-голубой
 PRICE = [("299 kr/mån", "offert, faktura, lön, projektekonomi, projektledning, fakturaskanning m.m."),
-         ("+69 kr/arbetare", "tidrapport, närvaro, planering, egenkontroll, kvittoskanning m.m.")]
+         ("+69 kr/arbetare", "tidrapport, närvaro, egenkontroll, kvittoskanning m.m.")]
 
 
 def badges(h):

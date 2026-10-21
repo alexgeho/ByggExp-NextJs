@@ -137,7 +137,7 @@ export default function PromoBanner() {
           </a>
           <ul className="promo-meta">
             <li>✓ 14 dagar gratis</li>
-            <li>✓ Ingen startavgift</li>
+            <li>✓ Ingen bindningstid</li>
             <li>✓ Gratis flytt av data</li>
           </ul>
         </div>

@@ -35,7 +35,7 @@ export const heroV2Translations: Record<string, HeroV2Copy> = {
     more: "läs mer",
     less: "visa mindre",
     cta: "Kom igång gratis",
-    meta: ["14 dagar gratis", "Ingen startavgift", "Gratis flytt av data"],
+    meta: ["14 dagar gratis", "Ingen bindningstid", "Gratis flytt av data"],
     appStore: "Hämta i",
     googlePlay: "Ladda ned på",
     altOffice: "Projektledare på kontoret ser arbetspassen i ByggExp",

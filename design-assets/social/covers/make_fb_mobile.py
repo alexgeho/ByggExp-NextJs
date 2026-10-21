@@ -31,16 +31,14 @@ def paste_shadow(img, im, x, y, blur=18):
     img.alpha_composite(im, (x, y))
 
 
-def render(name, price_col, align):
+def render(name, price_col, align, k=.9):
+    """S20: proportions of the site hero (HeroV2.scss) scaled by k: h1 60/1.05 in 2 lines,
+    32 gap, price 19/1.5 with 4 between lines, 32 gap, store badges 48."""
     img = mc.background(W, H, 48).convert("RGBA")
     d = ImageDraw.Draw(img)
-    big = mc.font(48, "Semibold")  # site h1: weight 600, all white
-    fp, fl = mc.font(27, "Bold"), mc.font(24, "Regular")
-    ph, lh2, gap = 44, 32, 14
-    # headline: one line, white + sky
-    a, b = "Hela byggföretaget ", "på ett ställe"
-    hw = d.textlength(a + b, font=big)
-    # S21: price as on the site hero: bold price – grey "what's included", no pills
+    big = mc.font(round(60 * k), "Semibold")  # site h1: weight 600, all white
+    fp, fl = mc.font(round(19 * k), "Bold"), mc.font(round(19 * k), "Regular")
+    lh1, lh2, gap, blk = 60 * k * 1.05, 19 * k * 1.5, 4 * k, 32 * k
     dash = d.textlength(" – ", font=fl)
     rows = []
     for p, l in PRICE:  # flows like a paragraph: first line after "price – ", the rest from the left edge
@@ -52,28 +50,32 @@ def render(name, price_col, align):
                 ls[-1] = t
             else:
                 ls.append(w)
+        if len(ls) > 1 and " " not in ls[-1]:  # no lone word ("m.m.") on the last line
+            head, _, last = ls[-2].rpartition(" ")
+            ls[-2], ls[-1] = head, last + " " + ls[-1]
         rows.append((p, ls))
     x0 = MX0
     y = MY0
-    d.text((x0, y), a, font=big, fill=mc.WHITE)
-    d.text((x0 + d.textlength(a, font=big), y), b, font=big, fill=mc.WHITE)
-    y += 76
+    for line in ("Hela byggföretaget", "på ett ställe"):
+        d.text((x0, y + lh1 * .8), line, font=big, fill=mc.WHITE, anchor="ls")
+        y += lh1
+    y += blk
     for p, ls in rows:
-        rh = lh2 * len(ls)
-        d.text((x0, y + lh2 * .8), p, font=fp, fill=price_col, anchor="ls")
-        d.text((x0 + d.textlength(p, font=fp), y + lh2 * .8), " – ", font=fl, fill=GREY, anchor="ls")
-        for k, t in enumerate(ls):
-            lx = x0 + d.textlength(p, font=fp) + dash if k == 0 else x0
-            d.text((lx, y + k * lh2 + lh2 * .8), t, font=fl, fill=GREY, anchor="ls")
-        y += rh + gap
+        d.text((x0, y + lh2 * .75), p, font=fp, fill=price_col, anchor="ls")
+        d.text((x0 + d.textlength(p, font=fp), y + lh2 * .75), " – ", font=fl, fill=GREY, anchor="ls")
+        for i, t in enumerate(ls):
+            lx = x0 + d.textlength(p, font=fp) + dash if i == 0 else x0
+            d.text((lx, y + i * lh2 + lh2 * .75), t, font=fl, fill=GREY, anchor="ls")
+        y += lh2 * len(ls) + gap
+    y += blk - gap
     # store badges left of the avatar, stacked
-    bh = 46
+    bh = round(48 * k)
     bs = badges(bh)
     cx, cy, r = AV
-    by = int(y) + 26  # same air above the badges as between headline and prices
+    by = int(y)
     bx = x0  # badges on the same left line as the text
     for i, bd in enumerate(bs):
-        img.alpha_composite(bd, (int(bx), by + i * (bh + 16)))
+        img.alpha_composite(bd, (int(bx), by + i * (bh + round(12 * k))))
     # photo right of the avatar; desktop shows the rest up to 1600
     hero = Image.open(TILES / "hero-nostores.png").convert("RGBA")
     hero.thumbnail((620, 300), Image.LANCZOS)
@@ -102,6 +104,5 @@ def phone_preview(img, name):
 
 
 if __name__ == "__main__":
-    for n, col in [("fb-site", mc.WHITE)]:
-        phone_preview(render(n, col, "left"), n)
+    phone_preview(render("fb-site", mc.WHITE, "left", .9), "fb-site")  # k=1 runs into the avatar
     print("ok")

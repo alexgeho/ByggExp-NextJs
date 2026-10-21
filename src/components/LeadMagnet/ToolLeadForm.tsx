@@ -3,6 +3,7 @@ import { type FormEvent, useState } from 'react';
 import { API_URL } from '../../config/api';
 import { gaEvent } from '../../lib/analytics';
 import type { CalcLocale } from '../../lib/locale';
+import { leadVisitFields } from '../../lib/leadForm';
 
 // Contextual lead form shown under a calculator: the visitor can ask ByggExp to
 // help take the calculation further (offert, material, next steps). Only the
@@ -90,6 +91,7 @@ export default function ToolLeadForm({
           'f-phone': isEmail ? '' : c,
           'f-source': `verktyg:${tool}`,
           'f-message': [message.trim(), summary].filter(Boolean).join(' — '),
+          ...leadVisitFields(),
         }),
       });
       if (!res.ok) throw new Error('request failed');

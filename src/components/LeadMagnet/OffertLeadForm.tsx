@@ -2,6 +2,7 @@ import { type FormEvent, useState } from 'react';
 
 import { API_URL } from '../../config/api';
 import { gaEvent } from '../../lib/analytics';
+import { leadVisitFields } from '../../lib/leadForm';
 
 // B2C offert-request form: a homeowner describes a project and we capture the
 // lead (routed/sold to construction firms). Posts to the same lead endpoint as
@@ -80,6 +81,7 @@ export default function OffertLeadForm({
           'f-phone': phone.trim(),
           'f-source': `offert-b2c:${source}`,
           'f-message': message,
+          ...leadVisitFields(),
         }),
       });
       if (!res.ok) throw new Error('request failed');

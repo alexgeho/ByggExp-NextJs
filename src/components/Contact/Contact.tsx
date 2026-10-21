@@ -8,6 +8,7 @@ import {
   isValidContact,
   isValidEmail,
   validateContactLeadForm,
+  calendlyUtm,
 } from "../../lib/leadForm";
 import type { ContactProps } from "../../types/contact";
 import type { CTAProps } from "../../types/cta";
@@ -237,6 +238,7 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
                 <div className="kontakt-calendly">
                   <CalendlyInlineWidget
                     url={CALENDLY_URL}
+                    utm={calendlyUtm()}
                     prefill={
                       isValidEmail(contact)
                         ? { name, email: contact }
@@ -458,6 +460,7 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
       {calendlyOpen && (
         <CalendlyPopupModal
           url={CALENDLY_URL}
+          utm={calendlyUtm()}
           open={calendlyOpen}
           onModalClose={() => setCalendlyOpen(false)}
           rootElement={document.getElementById("__next") ?? document.body}

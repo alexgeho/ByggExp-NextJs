@@ -8,6 +8,7 @@ import {
   isValidContact,
   isValidEmail,
   validateContactLeadForm,
+  calendlyUtm,
 } from "../../lib/leadForm";
 import { CalendlyInlineWidget } from "../CalendlyInlineWidget";
 
@@ -246,6 +247,7 @@ function CTA({ ctaT }: CTAProps) {
               <div className="calendly-embed">
                 <CalendlyInlineWidget
                   url={CALENDLY_URL}
+                  utm={calendlyUtm()}
                   prefill={
                     isValidEmail(contact)
                       ? { name, email: contact.trim() }

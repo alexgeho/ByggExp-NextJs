@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { API_URL } from '../../config/api';
 import { gaEvent } from '../../lib/analytics';
 import { languages } from '../../locales/languages';
+import { leadVisitFields } from '../../lib/leadForm';
 
 // Chat-style widget that forwards the visitor's message to the owner's WhatsApp.
 // No backend, no cost: on send we open wa.me with the message pre-filled, so the
@@ -90,6 +91,7 @@ export default function WhatsAppChat() {
         'f-phone': isEmail ? '' : c,
         'f-source': 'chat-widget',
         'f-message': text,
+        ...leadVisitFields(),
       }),
     }).catch(() => {});
     gaEvent('chat_message_sent', { has_contact: c ? 'yes' : 'no' });

@@ -47,29 +47,81 @@ export function hasLeadFormErrors(errors: LeadFormErrors) {
  */
 const PHONE_NOT_PROVIDED = "Ej angivet";
 
-// UTM of the visit's landing page (mail links carry utm_source=mailer), kept
-// for the session so a lead sent from another page is still attributed.
-const UTM_KEY = "byggexp.utm";
+// Where the visitor came from: UTM tags (mail links carry utm_source=mailer),
+// an ad click id, the external referrer and the first page of the visit.
+// Captured once per browser session on the very first page load (before client
+// routing rewrites the URL), so a lead sent from another page is still
+// attributed. Session-only and no cookies — same as the admin register page.
+const VISIT_KEY = "byggexp.visit";
 
-export function captureUtm() {
+type Visit = {
+  source: string;
+  medium: string;
+  campaign: string;
+  referrer: string;
+  landing: string;
+};
+
+export function captureVisit() {
   try {
-    if (sessionStorage.getItem(UTM_KEY)) return;
+    if (sessionStorage.getItem(VISIT_KEY)) return;
     const q = new URLSearchParams(window.location.search);
-    if (!q.get("utm_source")) return;
-    sessionStorage.setItem(
-      UTM_KEY,
-      JSON.stringify({ source: q.get("utm_source"), campaign: q.get("utm_campaign") || "" }),
-    );
+    let referrer = document.referrer || "";
+    try {
+      if (referrer && new URL(referrer).hostname === window.location.hostname) referrer = "";
+    } catch {
+      referrer = "";
+    }
+    // An ad click without UTM tags still says which network paid for it.
+    const ad = q.get("gclid") ? "google" : q.get("msclkid") ? "bing" : "";
+    const visit: Visit = {
+      source: q.get("utm_source") || ad,
+      medium: q.get("utm_medium") || (ad && !q.get("utm_source") ? "cpc" : ""),
+      campaign: q.get("utm_campaign") || "",
+      referrer,
+      landing: window.location.pathname,
+    };
+    sessionStorage.setItem(VISIT_KEY, JSON.stringify(visit));
   } catch {}
 }
 
-function readUtm(): { source?: string; campaign?: string } {
+function readVisit(): Partial<Visit> {
   try {
-    return JSON.parse(sessionStorage.getItem(UTM_KEY) || "null") || {};
+    return JSON.parse(sessionStorage.getItem(VISIT_KEY) || "null") || {};
   } catch {
     return {};
   }
 }
+
+const hostOf = (url = "") => {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return "";
+  }
+};
+
+// The same source for bookings made straight in Calendly (no form): it shows
+// up under the event's UTM details.
+export function calendlyUtm() {
+  const v = readVisit();
+  return {
+    utmSource: v.source || hostOf(v.referrer) || "direkt",
+    utmMedium: v.medium || "",
+    utmCampaign: v.campaign || "",
+    utmContent: v.landing || "",
+  };
+}
+
+const visitFields = (v: Partial<Visit>) => ({
+  ...(v.source && { "f-utm-source": v.source, "f-utm-campaign": v.campaign || "" }),
+  ...(v.medium && { "f-utm-medium": v.medium }),
+  ...(v.referrer && { "f-referrer": v.referrer.slice(0, 300) }),
+  ...(v.landing && { "f-landing": v.landing.slice(0, 200) }),
+});
+
+// For lead forms that build their own payload (chat, tools, offert).
+export const leadVisitFields = () => visitFields(readVisit());
 
 export function buildLeadPayload(
   name: string,
@@ -87,12 +139,9 @@ export function buildLeadPayload(
       typeof window !== "undefined"
         ? `${window.location.host}${window.location.pathname}`
         : fallbackSource,
-    ...(typeof window !== "undefined" && utmFields(readUtm())),
+    ...(typeof window !== "undefined" && visitFields(readVisit())),
   };
 }
-
-const utmFields = (u: { source?: string; campaign?: string }) =>
-  u.source ? { "f-utm-source": u.source, "f-utm-campaign": u.campaign || "" } : {};
 
 /**
  * Gemensam regel för ALLA leadformulär på sajten (startsidans CTA + Kontakt):

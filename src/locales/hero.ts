@@ -20,7 +20,7 @@ export const heroTranslations = {
 
     heroFeature1: "2 недели бесплатно",
     heroFeature2: "Запуск за 15 минут",
-    heroFeature3: "Без подписки",
+    heroFeature3: "Без обязательств",
   },
 
   en: {
@@ -43,7 +43,7 @@ export const heroTranslations = {
 
     heroFeature1: "2 Weeks Free",
     heroFeature2: "Setup in 15 Minutes",
-    heroFeature3: "No subscription",
+    heroFeature3: "No lock-in",
   },
 
   sv: {

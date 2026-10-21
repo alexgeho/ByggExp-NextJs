@@ -9,7 +9,7 @@ import make_covers as mc  # noqa: E402
 
 HERE, TILES = mc.HERE, mc.TILES
 W, H = 1640, 624
-MX0, MX1, MY0 = 480, 1225, 88  # x from 480: FB back arrow sits at x 400-475  # mobile-safe zone
+MX0, MX1, MY0 = 496, 1225, 74  # x from 496: FB back arrow sits at x 400-475, keep air  # mobile-safe zone
 AV = (822, 509, 188)  # avatar circle on mobile
 GREY = (207, 227, 247)  # site hero dark: .hero-v2-price #cfe3f7 (HeroV2.scss)
 SKYB, BLUE, DARK = (35, 148, 255), (30, 111, 217), (11, 61, 145)  # голубой / синий / тёмно-голубой
@@ -31,14 +31,15 @@ def paste_shadow(img, im, x, y, blur=18):
     img.alpha_composite(im, (x, y))
 
 
-def render(name, price_col, align, k=.9):
+def render(name, price_col, align, k=.9, pk=1.3):
     """S20: proportions of the site hero (HeroV2.scss) scaled by k: h1 60/1.05 in 2 lines,
     32 gap, price 19/1.5 with 4 between lines, 32 gap, store badges 48."""
     img = mc.background(W, H, 48).convert("RGBA")
     d = ImageDraw.Draw(img)
     big = mc.font(round(60 * k), "Semibold")  # site h1: weight 600, all white
-    fp, fl = mc.font(round(19 * k), "Bold"), mc.font(round(19 * k), "Regular")
-    lh1, lh2, gap, blk = 60 * k * 1.05, 19 * k * 1.5, 4 * k, 32 * k
+    # pk: prices x1.3 over the site, else ~8 pt on a phone (owner ok 2026-10-21)
+    fp, fl = mc.font(round(19 * k * pk), "Bold"), mc.font(round(19 * k * pk), "Regular")
+    lh1, lh2, gap, blk = 60 * k * 1.05, 19 * k * pk * 1.35, 4 * k, 32 * k
     dash = d.textlength(" – ", font=fl)
     rows = []
     for p, l in PRICE:  # flows like a paragraph: first line after "price – ", the rest from the left edge
@@ -69,7 +70,7 @@ def render(name, price_col, align, k=.9):
         y += lh2 * len(ls) + gap
     y += blk - gap
     # store badges left of the avatar, stacked
-    bh = round(48 * k)
+    bh = round(40 * k)  # 48 on the site; 40 keeps Google Play 20+ px off the avatar
     bs = badges(bh)
     cx, cy, r = AV
     by = int(y)
@@ -91,7 +92,7 @@ def phone_preview(img, name):
     ph = Image.new("RGB", (crop.width, crop.height + 60), (255, 255, 255))
     ph.paste(crop, (0, 0))
     dd = ImageDraw.Draw(ph, "RGBA")
-    dd.rectangle((0, 0, crop.width, 50), fill=(0, 0, 0, 60))  # status bar
+    dd.rectangle((0, 0, crop.width, 32), fill=(0, 0, 0, 60))  # status bar (clock ends at y 32 on the owner screenshot)
     for x in (40, 490, 545):
         dd.ellipse((x - 20, 110, x + 20, 150), fill=(0, 0, 0, 90))
     dd.rounded_rectangle((0, crop.height - 3, crop.width, crop.height + 60), 30, fill=(255, 255, 255))

@@ -1,5 +1,13 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-21 — Сайт: инструмент сверху, «gratis konsultation»; ДОЛГ: App Store
+- Live `c767db6`: в статьях egenkontroll/mall форма сверху, статья ниже (R10); «Boka demo» → «Boka gratis konsultation» (sv/nb/en); промо-баннер → /sv#cta (форма заявки), не в админку.
+- Открыто: hero главной «Kom igång gratis» всё ещё ведёт на admin/register — владелец не решил.
+### ⏳ ДОЛГ — App Store (iPhone-приложение, apps.apple.com/us/app/byggexp/id6748280779)
+- Новый подзаголовок (утверждён владельцем): **«Tidrapport, projekt & faktura»** (29/30 симв.; было «Bygg: tid, projekt, team»). Personalliggare НЕ ставить — модуля ещё нет.
+- Меняется только с новой версией приложения: App Store Connect → + Version → App Information → Subtitle → Submit for Review.
+- Владелец соберёт, что ещё обновить в приложении (скриншоты, описание, keywords) → одной версией. Проверить: есть ли фактуры в самом iPhone-приложении (иначе Apple может придраться).
+
 ## 2026-10-20 — Ny startsida: hero, block och avstånd (live, sv)
 - Hero (HeroV2, sv): mörk foto-hero; bild kontor (kvinna bakifrån, skärm = projektekonomi) + bygget (arbetare med app, kant 1px). Badge «Byggledning», rubrik «Hela byggföretaget på ett ställe».
 - Prisrader: «299 kr/mån – …» och «+69 kr/arbetare – …», hela listan bakom «läs mer» (en rad var; «visa mindre» tätt mot sin lista). Lagt till: skanning av kvitton och fakturor (299) och skanning av kvitton med mobilkameran (69) — ägaren bekräftat, i product-facts-verified.md.

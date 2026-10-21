@@ -133,3 +133,8 @@
 - 21.10 Новый посыл S21 (не боль, а выгода перехода). Владелец удалил пост-вопрос про tidlappar. Черновики v5: design-assets/social/posts/v5-erbjudande.md — ждут ok. Отложенные посты v1 (боль) — проверить и снять.
 - 21.10 поздно: ÄTA убран из IG bio, LinkedIn-слогана и описаний (sv+en), FB bio. IG bio: «Hela byggföretaget på ett ställe. / Tidrapport med GPS, offert, faktura och lön m.m. / 299 kr/mån för hela ekonomin + 69 kr/arbetare (exkl. moms).»
 - LinkedIn личный: новый пост v5 №1 с картинкой 00-hero — отложен на 22.10 08:00. Старые отложенные (22.10 07:30 påslag, переписан текстом v5, но с превью калькулятора; 23.10 07:30 «pappersjobb») — удалить владельцу (удаление агенту нельзя). ÄTA-пост 20.10 — удалить владельцу.
+
+## 2026-10-22 ночь · v6 посты в FB-группах (S21), профиль Alexander
+Тексты/картинки: design-assets/social/posts/v6-grupper/ (маркетолог → дизайнер → критик ×3 круга).
+Опубликовано: g04 Reklam Är Tillåtet · g03 Marknadsför ditt Företag · g02 Nya företag! (на модерации; окно «согласен с правилами» не принимал — владелец) · g10 Jag vill hitta en målare, snickare · g06 Bygg och Renovering i Stockholm (на модерации) · g01 Jag vill hitta en plattsättare… 
+Правила групп: Driva Eget — свои посты запрещены, только комментарий в маркетинг-треде по понедельникам (g01/g05 туда). Egenföretagare — реклама только в рекламном треде 1 раз в месяц (дата = номер месяца, напр. 11/11). Bygg och renovering 168K и Bygg och Renovering 13K — реклама запрещена.

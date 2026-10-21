@@ -129,3 +129,5 @@
 - FB: загружена covers/fb-site.png (без плашек, цвета/пропорции сайта, цены ×1.3, под мобильную обрезку и аватар). LinkedIn: li-site.jpg (1584x268), «поделиться в посте» — нет.
 - Генератор: covers/make_fb_mobile.py (render + phone_preview, render_li). planering убран из строки +69 kr/arbetare.
 - Instagram всё ещё не создан — регистрирует владелец.
+- 21.10 Instagram: владелец создал @byggexp; агент: аватар, bio (Hela byggföretaget…/299+69 exkl. moms/14 dagar gratis), Business, категория Programvara, e-mail kontakt@byggexp.se. Имя профиля пока «Alexander Gerhard» (менять в Accounts Center), ссылка только из мобильного приложения, связь с FB-страницей — не сделана (вход в IG из Business Suite).
+- 21.10 Новый посыл S21 (не боль, а выгода перехода). Владелец удалил пост-вопрос про tidlappar. Черновики v5: design-assets/social/posts/v5-erbjudande.md — ждут ok. Отложенные посты v1 (боль) — проверить и снять.

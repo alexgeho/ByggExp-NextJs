@@ -247,7 +247,7 @@ export default function LeadMagnetPage({
           <aside className="lead-magnet-cta">
             {cta.heading ? <h2 className="lead-magnet-cta-heading">{cta.heading}</h2> : null}
             {cta.text ? <p className="lead-magnet-cta-text">{cta.text}</p> : null}
-            {/* Single primary CTA: "Boka demo". No self-serve trial exists (the
+            {/* Single primary CTA: "Boka gratis konsultation". No self-serve trial exists (the
                 14-day trial is granted manually after the call). cta_click is the
                 funnel step, tagged by tool for GA4. */}
             <a

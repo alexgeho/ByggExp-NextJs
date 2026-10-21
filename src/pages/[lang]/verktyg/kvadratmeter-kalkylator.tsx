@@ -108,8 +108,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       },
     ],
     ctaHeading: 'Prissätt och följ projekt i ByggExp',
-    ctaText: 'Från ytor och material till offert, faktura och lönsamhet per projekt. Boka en demo.',
-    ctaButton: 'Boka demo',
+    ctaText: 'Från ytor och material till offert, faktura och lönsamhet per projekt. Boka en gratis konsultation.',
+    ctaButton: 'Boka gratis konsultation',
     relatedHeading: 'Fler byggkalkylatorer',
     related: [
       { slug: 'farg-kalkylator', label: 'Färgåtgång' },
@@ -180,8 +180,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       },
     ],
     ctaHeading: 'Prissett og følg prosjekter i ByggExp',
-    ctaText: 'Fra flater og materialer til tilbud, faktura og lønnsomhet per prosjekt. Bestill en demo.',
-    ctaButton: 'Bestill demo',
+    ctaText: 'Fra flater og materialer til tilbud, faktura og lønnsomhet per prosjekt. Bestill en gratis konsultasjon.',
+    ctaButton: 'Bestill gratis konsultasjon',
     relatedHeading: 'Flere byggkalkulatorer',
     related: [
       { slug: 'farg-kalkylator', label: 'Malingsforbruk' },
@@ -258,8 +258,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       },
     ],
     ctaHeading: 'Price and track projects in ByggExp',
-    ctaText: 'From areas and material to quote, invoice and profitability per project. Book a demo.',
-    ctaButton: 'Book a demo',
+    ctaText: 'From areas and material to quote, invoice and profitability per project. Book a free consultation.',
+    ctaButton: 'Book a free consultation',
     relatedHeading: 'More construction calculators',
     related: [
       { slug: 'farg-kalkylator', label: 'Paint coverage' },

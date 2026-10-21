@@ -122,8 +122,8 @@ export default function GanttSchemaMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Planera projektet i ByggExp',
-          text: 'Etapper, uppgifter och procent klart i stället för ett löst Excel-ark. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Etapper, uppgifter och procent klart i stället för ett löst Excel-ark. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

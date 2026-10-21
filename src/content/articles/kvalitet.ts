@@ -88,7 +88,7 @@ const EGENKONTROLL_HTML = `
 <p>KMA är helheten – kvalitet, miljö och arbetsmiljö. Egenkontrollen är ett av verktygen inom kvalitetsdelen, det du använder för att dokumentera att kraven är uppfyllda.</p>
 
 <h2>Kom igång</h2>
-<p>Gör egenkontrollen där arbetet sker, med foto och signatur, kopplad till projektet. <a href="/sv/verktyg/egenkontroll-mall">Ladda ner gratis egenkontroll-mall (PDF)</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Gör egenkontrollen där arbetet sker, med foto och signatur, kopplad till projektet. <a href="/sv/verktyg/egenkontroll-mall">Ladda ner gratis egenkontroll-mall (PDF)</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
 <p>Relaterade mallar: <a href="/sv/verktyg/byggdagbok-mall">Byggdagbok-mall</a> · <a href="/sv/blog/byggdagbok">Guide: byggdagbok</a></p>
 `.trim();
@@ -173,7 +173,7 @@ const TIDRAPPORTERING_HTML = `
 <p>Ja, om de ska betalas rätt. Notera OB, övertid och mertid separat direkt vid registreringen så att lönen blir korrekt enligt kollektivavtalet.</p>
 
 <h2>Kom igång</h2>
-<p>Gör tidrapporteringen till en vana som betalar sig. <a href="/sv/verktyg/tidrapport-mall">Ladda ner en gratis tidrapport-mall</a>, eller <a href="/sv/contact">boka en demo av ByggExp</a> och stämpla tid direkt i mobilen – kopplat till projekt, lön och faktura.</p>
+<p>Gör tidrapporteringen till en vana som betalar sig. <a href="/sv/verktyg/tidrapport-mall">Ladda ner en gratis tidrapport-mall</a>, eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a> och stämpla tid direkt i mobilen – kopplat till projekt, lön och faktura.</p>
 
 <p>Relaterat: <a href="/sv/blog/personalliggare">Personalliggare</a> · <a href="/sv/blog/id06">ID06</a> · <a href="/sv/blog/timpris-hantverkare">Timpris</a> · <a href="/sv/verktyg/tidrapport-mall">Tidrapport-mall</a></p>
 `.trim();
@@ -276,7 +276,7 @@ const VATRUM_HTML = `
 <p>Kvalitetsdokumentet bör innehålla intyg om att arbetet följer BBV 26:1 och Säkra Våtrum 2026, genomförda egenkontroller för tätskikt, golvlutning och rörgenomföringar, fotodokumentation från kritiska moment samt en produkt- och materialförteckning med tätskiktssystem, golvbrunn och blandare. Det signeras elektroniskt av ansvarig våtrumsledare.</p>
 
 <h2>Kom igång</h2>
-<p>Sätt upp dokumentationen innan spadtaget: börja i <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> och räkna material med <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a>. Vill du se hur egenkontroll, foton och kvalitetsdokument hänger ihop i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi flödet. Ladda även ner de fullständiga regelverken hos BKR, GVK och Säker Vatten – den här artikeln ersätter inte källtexterna.</p>
+<p>Sätt upp dokumentationen innan spadtaget: börja i <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> och räkna material med <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a>. Vill du se hur egenkontroll, foton och kvalitetsdokument hänger ihop i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi flödet. Ladda även ner de fullständiga regelverken hos BKR, GVK och Säker Vatten – den här artikeln ersätter inte källtexterna.</p>
 
 <p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/byggdagbok">Byggdagbok – så för du den rätt</a>.</p>
 `.trim();
@@ -359,7 +359,7 @@ const KONTRAVG_HTML = `
 <p>Nej. Kontrollavgiften är en sanktionsavgift och är inte avdragsgill enligt inkomstskattelagen 9 kap. 9 §. Bruttobeloppet är den faktiska kostnaden, utan skattelättnad.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att strama upp tidregistreringen med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -&gt;</a>, och utforska fler kostnadsfria hjälpmedel i <a href="/sv/verktyg">vår verktygslåda för hantverkare</a>. Vill du se hur löpande digital registrering fungerar i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi flödet från incheckning till färdigt underlag.</p>
+<p>Börja med att strama upp tidregistreringen med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall -&gt;</a>, och utforska fler kostnadsfria hjälpmedel i <a href="/sv/verktyg">vår verktygslåda för hantverkare</a>. Vill du se hur löpande digital registrering fungerar i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi flödet från incheckning till färdigt underlag.</p>
 
 <p>Relaterat: <a href="/sv/blog/personalliggare">Personalliggare i byggbranschen – kraven i korthet</a> och <a href="/sv/blog/id06">ID06 – vad det är och hur det hänger ihop med personalliggaren</a>.</p>
 `.trim();
@@ -521,7 +521,7 @@ const A_GANTT_SCHEMA_MALL_BYGG_HTML = `
 <p>Stäm av minst en gång i veckan och revidera vid varje ÄTA som påverkar tid. En plan som inte uppdateras tappar snabbt sitt värde både som styrverktyg och som underlag i en eventuell vitesdiskussion.</p>
 
 <h2>Kom igång</h2>
-<p>Bryt ner ditt nästa projekt i etapper och uppgifter i <a href="/sv/funktioner">ByggExps projektfunktioner</a> och lämna det lösa kalkylarket bakom dig. Vill du se hur planering, uppföljning och fakturering hänger ihop i praktiken? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Bryt ner ditt nästa projekt i etapper och uppgifter i <a href="/sv/funktioner">ByggExps projektfunktioner</a> och lämna det lösa kalkylarket bakom dig. Vill du se hur planering, uppföljning och fakturering hänger ihop i praktiken? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a> och <a href="/sv/verktyg/offert-mall">gratis offertmall</a>.</p>
 `;
@@ -606,7 +606,7 @@ const A_BBV_ELLER_GVK_VATRUM_HTML = `
 <p>Ett giltigt BBV-kvalitetsdokument (Bilaga A) kräver att arbetet utförts av en behörig plattsättare enligt BBV och att dokumentet signerats digitalt via BankID av den våtrumsansvariga arbetsledaren. Saknas någon av delarna är intyget inte giltigt.</p>
 
 <h2>Kom igång</h2>
-<p>Bygg upp bevisningen redan under jobbet med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall &rarr;</a>, så att egenkontroller, foton och regeluppgifter finns dokumenterade när ersättningsfrågan ställs. Vill du se hur ByggExp samlar allt underlag per projekt? <a href="/sv/contact">Boka en demo &rarr;</a> så visar vi upplägget.</p>
+<p>Bygg upp bevisningen redan under jobbet med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall &rarr;</a>, så att egenkontroller, foton och regeluppgifter finns dokumenterade när ersättningsfrågan ställs. Vill du se hur ByggExp samlar allt underlag per projekt? <a href="/sv/contact">Boka en gratis konsultation &rarr;</a> så visar vi upplägget.</p>
 
 <p>Relaterat: <a href="/sv/blog/vatrumscertifikat-behorighet-gvk">Våtrumscertifikat och behörighet – GVK</a>, <a href="/sv/blog/nya-vatrumsregler-2026">Nya våtrumsregler 2026</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
 `;
@@ -713,7 +713,7 @@ const A_MOTTAGNINGSKONTROLL_MATERIAL_BYGG_HTML = `
 <p>Tillverkaren ska spara DoP:en och den tekniska dokumentationen i tio år efter att produkten släpptes på marknaden. Som byggherre bör du arkivera kontrollunderlag och dokumentation samlat per projekt så att det finns tillgängligt vid besiktning och eventuella reklamationer.</p>
 
 <h2>Kom igång</h2>
-<p>Bygg in mottagningskontrollen i din kvalitetsrutin med vår <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a> och gör kontrollen till en fast del av varje leverans. Vill du se hur det fungerar i praktiken för ditt företag? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Bygg in mottagningskontrollen i din kvalitetsrutin med vår <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a> och gör kontrollen till en fast del av varje leverans. Vill du se hur det fungerar i praktiken för ditt företag? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/leverantorsfaktura-bygg-projekt">Leverantörsfakturor i byggprojekt</a>.</p>
 `;
@@ -809,7 +809,7 @@ const A_STARTMOTE_BYGGPROJEKT_CHECKLISTA_HTML = `
 <p>BAS-P ansvarar för att ta fram arbetsmiljöplanen under projekteringen, och den ska finnas innan byggarbetsplatsen etableras. BAS-U ansvarar sedan för att den följs och uppdateras under utförandet, enligt AFS 2023:3.</p>
 
 <h2>Kom igång</h2>
-<p>Förbered nästa uppstartsmöte med en tydlig agenda och en checklista som håller. Planera tidplanen i <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mallen</a>, sätt ÄTA-rutinen med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a> och samla besluten som uppgifter i <a href="/sv/funktioner">ByggExp</a>. Vill du se hur det fungerar i praktiken? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Förbered nästa uppstartsmöte med en tydlig agenda och en checklista som håller. Planera tidplanen i <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mallen</a>, sätt ÄTA-rutinen med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a> och samla besluten som uppgifter i <a href="/sv/funktioner">ByggExp</a>. Vill du se hur det fungerar i praktiken? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/byggmotesprotokoll-mall">Byggmötesprotokoll – mall och struktur</a>, <a href="/sv/blog/gantt-schema-mall-bygg">Gantt-schema för byggprojekt</a>, <a href="/sv/blog/ata-hantering-mall">ÄTA-hantering – rutin och mall</a>.</p>
 `;
@@ -928,7 +928,7 @@ const A_RESURSPLANERING_BYGG_HTML = `
 <p>Tidrapporteringen finns i samma system: laget stämplar in och ut i mobilappen med GPS, och timmarna hamnar på projektet. Läs mer i guiden om <a href="/sv/blog/tidrapportering">tidrapportering i byggbranschen</a>. Maskiner och underentreprenörer planeras inte i ByggExp. Håll dem i en separat bokningslista enligt metoden ovan.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att samla alla projekt i en gemensam vy – i vår <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a> eller i ett system. Vill du se hur Planering och Bemanning fungerar? Läs om ByggExp som <a href="/sv/blog/dagsplanering-och-planeringsmoten">planeringsprogram för bygg</a> eller <a href="/sv/contact">boka en demo</a>. Du kan testa alla funktioner gratis i 14 dagar.</p>
+<p>Börja med att samla alla projekt i en gemensam vy – i vår <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a> eller i ett system. Vill du se hur Planering och Bemanning fungerar? Läs om ByggExp som <a href="/sv/blog/dagsplanering-och-planeringsmoten">planeringsprogram för bygg</a> eller <a href="/sv/contact">boka en gratis konsultation</a>. Du kan testa alla funktioner gratis i 14 dagar.</p>
 
 <h2>Relaterade guider</h2>
 <ul>
@@ -1031,7 +1031,7 @@ const A_FUKTSAKERHETSPLAN_BYGGAF_HTML = `
 <p>Den ettåriga övergångsperioden löpte ut 30 juni 2026. Har bygglovsansökan eller anmälan kommit in före 1 juli 2026 får de gamla reglerna (BBR/EKS) fortfarande tillämpas, men inte blandas med de nya. För senare ärenden gäller de nya, funktionsbaserade reglerna. Kontrollera alltid vilket regelverk som är avtalat för just ditt projekt.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att utse rollerna tidigt, skriv in ByggaF i avtalet, boka in fuktronder i tidplanen, säkra betonguttorkning innan tätskikt och golv, och arkivera dokumentationen. Ett enkelt första steg är att sätta upp en löpande kontroll med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>. Vill du se hur ByggExp samlar fuktronder och avvikelser i ett flöde? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+<p>Börja med att utse rollerna tidigt, skriv in ByggaF i avtalet, boka in fuktronder i tidplanen, säkra betonguttorkning innan tätskikt och golv, och arkivera dokumentationen. Ett enkelt första steg är att sätta upp en löpande kontroll med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>. Vill du se hur ByggExp samlar fuktronder och avvikelser i ett flöde? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi.</p>
 
 <p>Relaterat: <a href="/sv/blog/nya-vatrumsregler-2026">Nya våtrumsregler 2026</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i bygg</a>, <a href="/sv/blog/kontrollplan-mall-bygglov">Kontrollplan och mall för bygglov</a>.</p>
 `;
@@ -1121,7 +1121,7 @@ const A_NYA_BYGGREGLER_2026_ENERGI_ISOLERING_HTML = `
 <p>29 maj 2026 är EU:s tidsfrist för att införliva energidelen i EPBD-direktivet. 1 oktober 2026 är det svenska ikraftträdandet av energihushållningsföreskrifterna. De två datumen förväxlas ofta.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att stämma av tidigt med kommun och energiberäknare, och sätt regelverksvalet på pränt redan i projekteringsstarten. Räkna på klimatskalet med vår <a href="/sv/verktyg/isolering-kalkylator">isolering-kalkylator</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du samlar kalkyler och underlag per projekt. Kom ihåg att reglernas exakta kravtal kan ändras – kontrollera alltid mot Boverket.</p>
+<p>Börja med att stämma av tidigt med kommun och energiberäknare, och sätt regelverksvalet på pränt redan i projekteringsstarten. Räkna på klimatskalet med vår <a href="/sv/verktyg/isolering-kalkylator">isolering-kalkylator</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du samlar kalkyler och underlag per projekt. Kom ihåg att reglernas exakta kravtal kan ändras – kontrollera alltid mot Boverket.</p>
 
 <p>Relaterat: <a href="/sv/blog/berakna-u-varde-isolering">Beräkna U-värde för isolering</a>, <a href="/sv/blog/nya-byggregler-2026-entreprenad">Nya byggregler 2026 och entreprenaden</a>, <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler 2026 och kontrollplanen</a>.</p>
 `;
@@ -1213,7 +1213,7 @@ const A_AVVIKELSEHANTERING_BYGG_MALL_HTML = `
 <p>Behandla dem som en del av projektets dokumentation och spara dem tillsammans med kontrollplan och egenkontroller. Bokförings- och underlagshandlingar ska bevaras i sju år, och avvikelsehistoriken är dessutom ovärderlig om en garantibesiktning eller tvist dyker upp senare.</p>
 
 <h2>Kom igång</h2>
-<p>Inför rutinen i tre steg: (1) ladda ner och anpassa <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> med ett avsnitt för avvikelser, (2) bestäm vem som äger avvikelsemötet och hur ofta det hålls, (3) börja rapportera varje avvikelse med nummer, ansvarig och deadline. Vill du se hur kontrollplan, egenkontroll och avvikelser hänger ihop digitalt? <a href="/sv/contact">Boka en demo av ByggExp -&gt;</a> så visar vi flödet på ett verkligt projekt.</p>
+<p>Inför rutinen i tre steg: (1) ladda ner och anpassa <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> med ett avsnitt för avvikelser, (2) bestäm vem som äger avvikelsemötet och hur ofta det hålls, (3) börja rapportera varje avvikelse med nummer, ansvarig och deadline. Vill du se hur kontrollplan, egenkontroll och avvikelser hänger ihop digitalt? <a href="/sv/contact">Boka en gratis konsultation av ByggExp -&gt;</a> så visar vi flödet på ett verkligt projekt.</p>
 
 <p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll enligt PBL</a>, <a href="/sv/blog/kma-plan-mall">KMA-plan mall</a> och <a href="/sv/blog/mottagningskontroll-material-bygg">Mottagningskontroll av material</a>.</p>
 `;
@@ -1281,7 +1281,7 @@ const A_FOTODOKUMENTATION_BYGGPROJEKT_BEVIS_HTML = `
 <p>Att fotografera är i huvudsak tillåtet, men att lagra och sprida bilder på identifierbara personer kräver laglig grund enligt GDPR. För intern dokumentation är berättigat intresse ofta en stabilare grund än samtycke, eftersom samtycke fritt kan återkallas.</p>
 
 <h2>Kom igång</h2>
-<p>En enkel, konsekvent fotorutin är billig försäkring mot dyra tvister. Börja med att strukturera dokumentationen kring <a href="/sv/verktyg/byggdagbok-mall">byggdagbok-mallen</a> och koppla in <a href="/sv/verktyg/egenkontroll-mall">egenkontrollen</a>. Vill du se hur det fungerar i ett riktigt projekt? <a href="/sv/contact">Boka en demo -&gt;</a> så visar vi hur foton, dagbok och ÄTA hänger ihop.</p>
+<p>En enkel, konsekvent fotorutin är billig försäkring mot dyra tvister. Börja med att strukturera dokumentationen kring <a href="/sv/verktyg/byggdagbok-mall">byggdagbok-mallen</a> och koppla in <a href="/sv/verktyg/egenkontroll-mall">egenkontrollen</a>. Vill du se hur det fungerar i ett riktigt projekt? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a> så visar vi hur foton, dagbok och ÄTA hänger ihop.</p>
 
 <p>Relaterat: <a href="/sv/blog/byggdagbok">Byggdagbok – så för du den rätt</a>, <a href="/sv/blog/entreprenadtvist-undvika-dokumentation">Undvik entreprenadtvist med rätt dokumentation</a>, <a href="/sv/blog/ata-hantering-mall">ÄTA-hantering med mall</a>.</p>
 `;
@@ -1347,7 +1347,7 @@ const A_DOU_PARM_DRIFT_UNDERHALL_BYGG_HTML = `
 <p>Om inget annat avtalats, ja. Dokumentationen levereras digitalt, i praktiken ofta som en indexerad PDF namngiven efter pärmen (till exempel "DU-Bygg") plus original. Följ beställarens eller branschens kravspecifikation för format och struktur.</p>
 
 <h2>Kom igång</h2>
-<p>Bygg din DoU-pärm på en struktur du kan återanvända. Börja med <a href="/sv/verktyg">våra gratis byggverktyg →</a> och <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen →</a>, eller <a href="/sv/contact">boka en demo →</a> så visar vi hur du samlar underlaget löpande fram till överlämningen.</p>
+<p>Bygg din DoU-pärm på en struktur du kan återanvända. Börja med <a href="/sv/verktyg">våra gratis byggverktyg →</a> och <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen →</a>, eller <a href="/sv/contact">boka en gratis konsultation →</a> så visar vi hur du samlar underlaget löpande fram till överlämningen.</p>
 
 <p>Relaterat: <a href="/sv/blog/overlamning-relationshandlingar">Relationshandlingar vid överlämning</a>, <a href="/sv/blog/restlista-overlamning-bygg-mall">Restlista och mall för överlämning</a>, <a href="/sv/blog/slutbesiktning">Slutbesiktning steg för steg</a>.</p>
 `;
@@ -1676,7 +1676,7 @@ const ENKELT_TIDRAPPORTERINGSSYSTEM_HTML = `
 <p>Har ni tung projektstyrning med många delmoment kan ni behöva mer runt omkring tidrapporteringen. Men själva tidregistreringen bör ändå vara enkel – lägg komplexiteten i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a>, inte i mobilen där laget stämplar in. Enkelt i botten, mer avancerat på kontoret.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du testa hur enkelt det kan vara? Ladda ner en <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a> för att komma igång direkt, läs mer om <a href="/sv/blog/app-for-tidrapportering-bygg">appen för tidrapportering</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Vill du testa hur enkelt det kan vara? Ladda ner en <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a> för att komma igång direkt, läs mer om <a href="/sv/blog/app-for-tidrapportering-bygg">appen för tidrapportering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
 <h2>Relaterade guider</h2>
 <ul>
@@ -1798,7 +1798,7 @@ const A_KVALITETSPLAN_BYGG_HTML = `
 <p>Om ni arbetar under AB 04 eller ABT 06 – ja. Storleken på företaget spelar ingen roll; det är entreprenadformen och kontraktshandlingarna som avgör. Med några återanvändbara mallar blir den snabb att ta fram projekt för projekt.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med kontrollprogrammet – det är kärnan i planen. Bygg dina egenkontroller från <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och koppla in en rutin för <a href="/sv/blog/avvikelsehantering-bygg-mall">avvikelser</a>. Vill du se hur egenkontroller, avvikelser och dokumentation hänger ihop i ett projekt? <a href="/sv/contact">Boka en demo →</a> så visar vi.</p>
+<p>Börja med kontrollprogrammet – det är kärnan i planen. Bygg dina egenkontroller från <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och koppla in en rutin för <a href="/sv/blog/avvikelsehantering-bygg-mall">avvikelser</a>. Vill du se hur egenkontroller, avvikelser och dokumentation hänger ihop i ett projekt? <a href="/sv/contact">Boka en gratis konsultation →</a> så visar vi.</p>
 
 <p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll – så gör du</a>, <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaden</a>, <a href="/sv/blog/fuktsakerhetsplan-byggaf">Fuktsäkerhetsplan enligt ByggaF</a>, <a href="/sv/blog/kvalitetsplan-bygg">Kvalitetsplan för bygget</a>.</p>
 `;

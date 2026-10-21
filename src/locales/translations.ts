@@ -27,7 +27,7 @@ export const translations = {
     how: "How it works",
     pricing: "Pricing",
     company: "About us",
-    demo: "Book a demo",
+    demo: "Book a free consultation",
 
     whyTitle: "Root cause",
     whyHeading:
@@ -51,7 +51,7 @@ export const translations = {
     how: "Hur det fungerar",
     pricing: "Priser",
     company: "Om oss",
-    demo: "Boka demo",
+    demo: "Boka gratis konsultation",
 
     whyTitle: "Grundproblemet",
     whyHeading:
@@ -75,7 +75,7 @@ export const translations = {
     how: "Slik fungerer det",
     pricing: "Priser",
     company: "Om oss",
-    demo: "Bestill demo",
+    demo: "Bestill gratis konsultasjon",
 
     whyTitle: "Grunnproblemet",
     whyHeading:

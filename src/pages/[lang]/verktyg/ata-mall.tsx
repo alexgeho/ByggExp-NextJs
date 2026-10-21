@@ -226,8 +226,8 @@ export default function AtaMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Hantera ÄTA hela vägen till fakturan i ByggExp',
-          text: 'Dokumentera ÄTA, dagbok, tid och ekonomi i en app – från offert till lön. Boka en demo och se hur det fungerar.',
-          buttonLabel: 'Boka demo',
+          text: 'Dokumentera ÄTA, dagbok, tid och ekonomi i en app – från offert till lön. Boka en gratis konsultation och se hur det fungerar.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Fler guider och mallar"

@@ -147,8 +147,8 @@ export default function ObOvertidKalkylatorPage() {
         faq={FAQ}
         cta={{
           heading: 'OB och övertid per pass i ByggExp',
-          text: 'Laget stämplar in i mobilen och märker varje pass som normaltid, OB eller övertid. Attesterade pass exporteras som löneunderlag. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Laget stämplar in i mobilen och märker varje pass som normaltid, OB eller övertid. Attesterade pass exporteras som löneunderlag. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

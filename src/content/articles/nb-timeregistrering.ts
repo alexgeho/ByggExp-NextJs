@@ -9,7 +9,7 @@ import { NO_SITE_URL } from './site-url';
 
 const P_TIMEREGISTRERING_APP_BYGG_HTML = `
 <p>Papirlapper, timer som skrives ned fredag ettermiddag og en administrasjon som jager underlag – manuell timeregistrering koster byggefirmaer både penger og tid. En timeregistrering-app løser det: de ansatte stempler inn og ut på mobilen, timene havner automatisk på riktig prosjekt, og du får ferdig underlag til lønn og faktura uten etterarbeid. Her går vi gjennom hva en timeregistrering-app for bygg bør klare – og hvorfor de fleste velger en enkel løsning i mobilen.</p>
-<p>Vil du se hvordan det fungerer? <a href="/nb/blog/gratis-timeregistrering-app">Les om gratis timeregistrering-app</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+<p>Vil du se hvordan det fungerer? <a href="/nb/blog/gratis-timeregistrering-app">Les om gratis timeregistrering-app</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: digital timeregistrering – stemple inn, timer på prosjekt, gjennomgå, eksport til lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Flyten: stemple inn på bygget, timene havner på riktig prosjekt, gjennomgå i webadmin og eksporter til lønn og faktura.</figcaption></figure>
 
 <p class="eco-note"><strong>GPS eller manuelt – dere velger:</strong> ikke alle vil dele posisjonen sin, og det trenger de ikke. I ByggExp kan medarbeideren i stedet fylle inn timene sine manuelt i appen – per prosjekt og dag. De manuelle timene havner i samme timeoversikt og eksport til lønn og faktura som GPS-timene, og i nettadmin ser du planlagte, GPS- og manuelle timer side om side.</p>
@@ -48,7 +48,7 @@ const P_TIMEREGISTRERING_APP_BYGG_HTML = `
 <p>Verdien kommer når timene brukes: i ByggExp blir de registrerte timene automatisk grunnlag for både lønnsunderlag og fakturalinjer, og regnes inn i prosjektets økonomi. Registrer én gang, bruk overalt.</p>
 
 <h2>Kom i gang</h2>
-<p>Vil du se en timeregistrering-app for byggefirmaet ditt? <a href="/nb/blog/gratis-timeregistrering-app">Les om gratis timeregistrering</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a>, <a href="/nb/blog/stemplingsur-app">stemplingsur-app med GPS</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>.</p>
+<p>Vil du se en timeregistrering-app for byggefirmaet ditt? <a href="/nb/blog/gratis-timeregistrering-app">Les om gratis timeregistrering</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a>, <a href="/nb/blog/stemplingsur-app">stemplingsur-app med GPS</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
 <p>Trenger du også oversikt over hvem som er på plassen? Se <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og elektronisk oversiktsliste</a>, hele <a href="/nb/blog/timeregistreringssystem-bygg">timeregistreringssystemet</a>, eller hvordan timene styrer marginen i <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring for bygg</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
@@ -157,7 +157,7 @@ const S_STEMPLINGSUR_APP_HTML = `
 <p>Et stemplingsur er bare halve jobben – verdien kommer når timene brukes. I ByggExp blir de stemplede timene automatisk grunnlag for lønn og faktura, og regnes inn i prosjektøkonomien.</p>
 
 <h2>Kom i gang</h2>
-<p>Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>.</p>
+<p>Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva er et stemplingsur-app?</h3>
@@ -207,7 +207,7 @@ const F_FAKTURERINGSPROGRAM_BYGG_HTML = `
 <p>Poenget er å slippe dobbeltarbeid: timene teamet stempler blir automatisk fakturalinjer, og fakturaen henger sammen med prosjektets økonomi. Registrer én gang, bruk overalt.</p>
 
 <h2>Kom i gang</h2>
-<p>Vil du se hvordan tid blir faktura i ByggExp? <a href="/nb/blog/timeregistrering-app-bygg">Les om timeregistrering</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+<p>Vil du se hvordan tid blir faktura i ByggExp? <a href="/nb/blog/timeregistrering-app-bygg">Les om timeregistrering</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva bør et faktureringsprogram for byggefirma klare?</h3>
@@ -281,7 +281,7 @@ const M_MANNSKAPSLISTE_BYGGEPLASS_HTML = `
 <p>Merk: ByggExp er et verktøy for timeregistrering og oppmøte, ikke en sertifisert HMS-kort-leser. For den lovpålagte elektroniske oversiktslisten etter § 15 – med HMS-kort-registrering – må du kontrollere kravene hos Arbeidstilsynet og velge en løsning som oppfyller dem.</p>
 
 <h2>Kom i gang</h2>
-<p>Vil du ha digital oversikt over oppmøte og timer på bygget? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>.</p>
+<p>Vil du ha digital oversikt over oppmøte og timer på bygget? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva er forskjellen på mannskapsliste og oversiktsliste?</h3>
@@ -340,7 +340,7 @@ const H_HMS_KORT_BYGG_HTML = `
 <p>Selve HMS-kortet dokumenterer identitet og arbeidsgiver, mens du fortsatt trenger å vite hvem som faktisk er på jobb og hvor lenge. Med ByggExp sjekker de ansatte inn og ut i mobilen, med GPS-bekreftelse, slik at du får en tidsstemplet oversikt over oppmøtet – og timene blir samtidig grunnlag for lønn og faktura. ByggExp erstatter ikke selve HMS-kortet, men gir deg den daglige oversikten over mannskapet.</p>
 
 <h2>Kom i gang</h2>
-<p>Vil du ha digital oppmøte- og timeoversikt på bygget? Les om <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste</a>, <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+<p>Vil du ha digital oppmøte- og timeoversikt på bygget? Les om <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste</a>, <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 <p>Mer om HMS-kort: <a href="/nb/blog/bestille-hms-kort">bestille HMS-kort</a>, <a href="/nb/blog/hms-kort-pris">hva et HMS-kort koster</a>, <a href="/nb/blog/sjekke-hms-kort">sjekke om et kort er gyldig</a>, <a href="/nb/blog/hms-kort-gyldighet">hvor lenge kortet varer</a>, <a href="/nb/blog/mistet-hms-kort">mistet kort</a> og <a href="/nb/blog/byggekort">byggekort (samme kort)</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
@@ -473,7 +473,7 @@ const B_BESTILLE_HMS_KORT_HTML = `
 <p>HMS-kortet dokumenterer identitet og arbeidsgiver, men du trenger fortsatt å vite hvem som faktisk er på jobb. Med ByggExp sjekker de ansatte inn og ut i mobilen med GPS, så du får en tidsstemplet oversikt over oppmøtet – et godt grunnlag for <a href="/nb/blog/mannskapsliste-byggeplass">mannskapslisten</a>. ByggExp utsteder ikke selve HMS-kortet.</p>
 
 <h2>Kom i gang</h2>
-<p>Les mer om <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a>, <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>. Sjekk alltid gjeldende krav og priser hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
+<p>Les mer om <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a>, <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>. Sjekk alltid gjeldende krav og priser hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hvor bestiller man HMS-kort?</h3>
@@ -574,7 +574,7 @@ const S_SJEKKE_HMS_KORT_HTML = `
 <p>Selve kortkontrollen bekrefter identitet og arbeidsgiver. For å vite hvem som faktisk er på jobb og når, bruker mange en app: i ByggExp sjekker de ansatte inn og ut med GPS, så du får en tidsstemplet oppmøteoversikt i tillegg til kortkontrollen. ByggExp erstatter ikke selve HMS-kortet.</p>
 
 <h2>Kom i gang</h2>
-<p>Les mer om <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a>, <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>. Sjekk gjeldende regler hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
+<p>Les mer om <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a>, <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>. Sjekk gjeldende regler hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hvordan sjekker jeg om et HMS-kort er gyldig?</h3>
@@ -647,7 +647,7 @@ const T_TIMELISTE_MAL_HTML = `
 <p>Vokser firmaet, blir malen fort en flaskehals. Med en <a href="/nb/blog/timeliste-app-bygg">timeliste-app</a> fører de ansatte timene i mobilen på riktig prosjekt, og du slipper å samle inn ark og taste på nytt. I ByggExp blir timene automatisk grunnlag for lønn og faktura – samme informasjon som i malen, bare uten etterarbeidet.</p>
 
 <h2>Kom i gang</h2>
-<p>Bruk malen over i dag, eller se hvordan en <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> fungerer. Les også om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>.</p>
+<p>Bruk malen over i dag, eller se hvordan en <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> fungerer. Les også om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva bør en timeliste-mal inneholde?</h3>
@@ -709,7 +709,7 @@ const PR_PROSJEKTSTYRING_BYGG_HTML = `
 <p>Mindre byggefirmaer trenger sjelden tunge systemer. Poenget er å samle det viktigste – plan, oppgaver, timer og økonomi – på ett sted, uten at det blir en jobb i seg selv å holde det oppdatert. Da bruker teamet det faktisk, og tallene stemmer.</p>
 
 <h2>Kom i gang</h2>
-<p>Vil du se hvordan prosjekt, timer og økonomi henger sammen i ByggExp? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+<p>Vil du se hvordan prosjekt, timer og økonomi henger sammen i ByggExp? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 
 <h2>Relaterte guider</h2>
 <ul>
@@ -920,7 +920,7 @@ const TP_TIMEPRIS_SNEKKER_HTML = `
 <p>Setter du en timepris, må timene også fanges opp riktig – ellers lekker det penger. Med <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering i mobilen</a> knyttes timene til riktig prosjekt og blir grunnlag for fakturaen, slik at du fakturerer alle timene til avtalt pris uten å regne for hånd. Se også <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram for bygg</a>, <a href="/nb/blog/timepris-rorlegger">timepris for rørlegger</a> og <a href="/nb/blog/timepris-elektriker">timepris for elektriker</a>.</p>
 
 <h2>Kom i gang</h2>
-<p>Vil du sikre at alle timene blir fakturert til riktig pris? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+<p>Vil du sikre at alle timene blir fakturert til riktig pris? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva koster en snekker per time?</h3>
@@ -992,7 +992,7 @@ const FM_FAKTURAMAL_HTML = `
 <p>En mal funker for de aller minste, men blir fort tungvint. Med et <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram for bygg</a> lages fakturaen fra de loggede timene og materiellet på prosjektet, med riktig mva og forfallsdato – uten å taste inn alt på nytt. Grunnlaget er <a href="/nb/blog/timeregistrering-app-bygg">registrert tid</a>.</p>
 
 <h2>Kom i gang</h2>
-<p>Bruk malen over, eller se hvordan faktura lages fra timene i <a href="/nb/blog/faktureringsprogram-bygg">ByggExp</a>. Les også om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+<p>Bruk malen over, eller se hvordan faktura lages fra timene i <a href="/nb/blog/faktureringsprogram-bygg">ByggExp</a>. Les også om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva må en faktura inneholde?</h3>
@@ -1052,7 +1052,7 @@ const SH_SHA_PLAN_HTML = `
 <p>En del av SHA-arbeidet er å ha oversikt over hvem som er på plassen. Der hjelper en digital <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste</a> og <a href="/nb/blog/timeregistrering-app-bygg">oppmøteregistrering</a> deg med dokumentasjon. ByggExp er ikke et SHA-planverktøy, men gir deg den løpende oversikten over mannskapet.</p>
 
 <h2>Kom i gang</h2>
-<p>Les mer om <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>. Sjekk kravene til SHA-plan hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
+<p>Les mer om <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>. Sjekk kravene til SHA-plan hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva er en SHA-plan?</h3>
@@ -1111,7 +1111,7 @@ const BY_BYGGEKONTRAKT_HTML = `
 </table></div>
 
 <h2>Kom i gang</h2>
-<p>Når kontrakten er på plass, henger fremdrift, timer og økonomi sammen. Les om <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring for bygg</a>, <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>.</p>
+<p>Når kontrakten er på plass, henger fremdrift, timer og økonomi sammen. Les om <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring for bygg</a>, <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva er forskjellen på NS 8405 og NS 8407?</h3>
@@ -1166,7 +1166,7 @@ const SY_TIMEREGISTRERINGSSYSTEM_HTML = `
 <p>Verdien kommer når timene brukes: i ByggExp blir de registrerte timene automatisk grunnlag for lønnsunderlag og fakturalinjer, og regnes inn i prosjektøkonomien. Registrer én gang, bruk overalt.</p>
 
 <h2>Kom i gang</h2>
-<p>Vil du se et timeregistreringssystem for byggefirmaet? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+<p>Vil du se et timeregistreringssystem for byggefirmaet? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva er et timeregistreringssystem?</h3>
@@ -1225,7 +1225,7 @@ const BF_BYGGHERREFORSKRIFTEN_HTML = `
 <p>Byggherreforskriften er «paraplyen» over flere krav du kanskje kjenner hver for seg: <a href="/nb/blog/sha-plan">SHA-planen</a> beskriver hvordan sikkerheten ivaretas, <a href="/nb/blog/sikker-jobb-analyse">sikker jobb-analyse (SJA)</a> brukes på risikofylt arbeid, <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten</a> viser hvem som er på plassen, og hver person må ha gyldig <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> for å stå på listen. Digital oppmøteregistrering gir deg dokumentasjonen – i ByggExp sjekker de ansatte inn med GPS, så du har oversikt over mannskapet. ByggExp er ikke et SHA-planverktøy, men gir den løpende oversikten.</p>
 
 <h2>Kom i gang</h2>
-<p>Les mer om <a href="/nb/blog/sha-plan">SHA-plan</a>, <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>. Sjekk alltid gjeldende krav hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
+<p>Les mer om <a href="/nb/blog/sha-plan">SHA-plan</a>, <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>. Sjekk alltid gjeldende krav hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva er byggherreforskriften?</h3>
@@ -1289,7 +1289,7 @@ const TP_TIMEPRIS_RORLEGGER_HTML = `
 <p>Setter du en timepris, må timene også fanges opp riktig – ellers lekker det penger. Med <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering i mobilen</a> knyttes timene til riktig prosjekt og blir grunnlag for fakturaen, slik at du fakturerer alle timene til avtalt pris uten å regne for hånd. Se også <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram for bygg</a> og <a href="/nb/blog/timepris-snekker">timepris for snekker</a>.</p>
 
 <h2>Kom i gang</h2>
-<p>Vil du sikre at alle timene blir fakturert til riktig pris? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+<p>Vil du sikre at alle timene blir fakturert til riktig pris? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva koster en rørlegger per time?</h3>
@@ -1341,7 +1341,7 @@ const TP_TIMEPRIS_ELEKTRIKER_HTML = `
 <p>Setter du en timepris, må timene også fanges opp riktig – ellers lekker det penger. Med <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering i mobilen</a> knyttes timene til riktig prosjekt og blir grunnlag for fakturaen, slik at du fakturerer alle timene til avtalt pris uten å regne for hånd. Se også <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram for bygg</a> og <a href="/nb/blog/timepris-rorlegger">timepris for rørlegger</a>.</p>
 
 <h2>Kom i gang</h2>
-<p>Vil du sikre at alle timene blir fakturert til riktig pris? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en demo</a>.</p>
+<p>Vil du sikre at alle timene blir fakturert til riktig pris? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva koster en elektriker per time?</h3>
@@ -1406,7 +1406,7 @@ const SJ_SIKKER_JOBB_ANALYSE_HTML = `
 <p>SJA er en del av HMS-arbeidet på plassen. Den bygger på <a href="/nb/blog/sha-plan">SHA-planen</a> for prosjektet, og alle som deltar skal ha gyldig <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> og være ført på <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten</a>. Sammen gir det dokumentasjonen du trenger hvis Arbeidstilsynet spør.</p>
 
 <h2>Kom i gang</h2>
-<p>Bruk skjemaet over på neste risikofylte oppgave. Les også om <a href="/nb/blog/sha-plan">SHA-plan</a>, <a href="/nb/blog/byggherreforskriften">byggherreforskriften</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>. Sjekk alltid gjeldende krav hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
+<p>Bruk skjemaet over på neste risikofylte oppgave. Les også om <a href="/nb/blog/sha-plan">SHA-plan</a>, <a href="/nb/blog/byggherreforskriften">byggherreforskriften</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>. Sjekk alltid gjeldende krav hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva er en sikker jobb-analyse?</h3>
@@ -1478,7 +1478,7 @@ const FR_FRAMDRIFTSPLAN_HTML = `
 <p>En framdriftsplan er ferskvare – den må oppdateres når virkeligheten endrer seg. Da hjelper det å se planlagt arbeid mot faktisk <a href="/nb/blog/timeregistrering-app-bygg">registrert tid</a> og status på prosjektet. Med <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring for bygg</a> samler du framdrift, timer og dokumentasjon på ett sted, så du oppdager avvik før de blir forsinkelser. Framdriftsplanen inngår også i <a href="/nb/blog/sha-plan">SHA-planen</a> for prosjektet.</p>
 
 <h2>Kom i gang</h2>
-<p>Les mer om <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring og byggeledelse</a>, <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering</a> eller <a href="/nb/contact">bestill en demo av ByggExp</a>.</p>
+<p>Les mer om <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring og byggeledelse</a>, <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva er en framdriftsplan?</h3>

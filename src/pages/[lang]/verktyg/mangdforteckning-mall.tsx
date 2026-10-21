@@ -122,8 +122,8 @@ export default function MangdforteckningMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Kalkylera och offerera i ByggExp',
-          text: 'Samla kalkyl, offert och inköp på ett ställe. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Samla kalkyl, offert och inköp på ett ställe. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

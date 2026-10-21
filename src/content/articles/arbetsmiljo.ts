@@ -49,7 +49,7 @@ const AMP_HTML = `
 <p>BAS-P samordnar arbetsmiljön i planering och projektering; BAS-U samordnar under utförandet på plats.</p>
 
 <h2>Kom igång</h2>
-<p>Håll arbetsmiljön, kontroller och dokumentation samlat och aktuellt. <a href="/sv/blog/egenkontroll">Läs om egenkontroll och KMA</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Håll arbetsmiljön, kontroller och dokumentation samlat och aktuellt. <a href="/sv/blog/egenkontroll">Läs om egenkontroll och KMA</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll och KMA</a> · <a href="/sv/blog/personalliggare">Personalliggare</a></p>
 `.trim();
@@ -123,7 +123,7 @@ const HETA_ARBETEN_HTML = `
 <p>Ja. Tillståndsansvarig utfärdar ett skriftligt tillstånd med villkor och skyddsåtgärder.</p>
 
 <h2>Kom igång</h2>
-<p>Håll koll på behörigheter, tillstånd och arbetsmiljö på ett ställe. Använd vår gratis <a href="/sv/verktyg/riskbedomning-mall">mall för riskbedömning</a>, <a href="/sv/blog/arbetsmiljoplan">läs om arbetsmiljöplan</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Håll koll på behörigheter, tillstånd och arbetsmiljö på ett ställe. Använd vår gratis <a href="/sv/verktyg/riskbedomning-mall">mall för riskbedömning</a>, <a href="/sv/blog/arbetsmiljoplan">läs om arbetsmiljöplan</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan (AMP)</a> · <a href="/sv/blog/egenkontroll">Egenkontroll och KMA</a></p>
 `.trim();
@@ -218,7 +218,7 @@ const ARBMILJO_HTML = `
 <p>Ja. Du ska samråda med övriga entreprenörer, följa Bas-U:s anvisningar, informera om risker ditt arbete skapar och invänta klartecken innan riskfyllda moment startar. Bas-U:s samordningsansvar tar däremot inte bort ditt eget arbetsmiljöansvar för det arbete du utför.</p>
 
 <h2>Kom igång</h2>
-<p>Du har fullt arbetsmiljöansvar även som soloföretagare – och rätt dokumentation skyddar dig både vid en olycka och vid en kontroll. Kom igång med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och bygg en riskbedömning för ditt nästa uppdrag. Vill du se hur du samlar all arbetsmiljödokumentation i ett system? <a href="/sv/contact">Boka en demo</a> så visar vi hur det fungerar i praktiken.</p>
+<p>Du har fullt arbetsmiljöansvar även som soloföretagare – och rätt dokumentation skyddar dig både vid en olycka och vid en kontroll. Kom igång med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och bygg en riskbedömning för ditt nästa uppdrag. Vill du se hur du samlar all arbetsmiljödokumentation i ett system? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi hur det fungerar i praktiken.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Så upprättar du en arbetsmiljöplan</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt – så gör du</a>.</p>
 `.trim();
@@ -427,7 +427,7 @@ const A_KVARTSDAMM_REGLER_BYGG_HTML = `
 <p>Nej. Torrsopning och avblåsning med tryckluft är förbjudet eftersom det virvlar upp de farligaste partiklarna. Kvartshaltigt damm ska sugas upp med minst M-klassad utrustning eller hanteras vått.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att systematisera riskbedömning och funktionskontroller i <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>, så har ni dokumentationen på plats innan nästa dammande jobb. Vill ni se hur det fungerar för hela firman kan ni <a href="/sv/contact">boka en demo</a>. Detta är förenklad vägledning och inte juridisk rådgivning – kontrollera alltid gällande AFS för ert specifika arbete.</p>
+<p>Börja med att systematisera riskbedömning och funktionskontroller i <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>, så har ni dokumentationen på plats innan nästa dammande jobb. Vill ni se hur det fungerar för hela firman kan ni <a href="/sv/contact">boka en gratis konsultation</a>. Detta är förenklad vägledning och inte juridisk rådgivning – kontrollera alltid gällande AFS för ert specifika arbete.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i bygg</a>.</p>
 `;
@@ -519,7 +519,7 @@ const A_BYGGSTALLNING_REGLER_KRAV_HTML = `
 <p>Alltid före ibruktagande och fortlöpande under användning. Extra kontroll krävs efter hård vind och när ställningen stått oanvänd länge. Har den brister av arbetsmiljöbetydelse får den inte användas förrän de åtgärdats.</p>
 
 <h2>Kom igång</h2>
-<p>Sätt rutinen på plats innan nästa ställning reses: strukturera kontrollen med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen &rarr;</a> så att dokumentationen finns signerad och sökbar när den behövs. Vill du se hur det fungerar i ett skarpt arbetsflöde? <a href="/sv/contact">Boka en demo &rarr;</a> så visar vi upplägget.</p>
+<p>Sätt rutinen på plats innan nästa ställning reses: strukturera kontrollen med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen &rarr;</a> så att dokumentationen finns signerad och sökbar när den behövs. Vill du se hur det fungerar i ett skarpt arbetsflöde? <a href="/sv/contact">Boka en gratis konsultation &rarr;</a> så visar vi upplägget.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – när krävs den och vad ska ingå</a> och <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>.</p>
 `;
@@ -600,7 +600,7 @@ const A_ARBETSMILJOVERKET_NYA_REGLER_2026_BYGG_HTML = `
 <p>Ja. Kraven på arbetsmiljöplan, Bas-P och Bas-U utgår från projektets art, inte enbart storleken. Uppfylls kriterierna gäller reglerna oavsett om projektet är stort eller litet.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att inventera dina dokument, byt ut AFS-hänvisningarna mot de nya numren och se till att platsledningen känner igen dem. Ladda ner <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> för att strukturera arbetet, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller arbetsmiljödokumentationen samlad. Läs alltid gällande AFS-text på Arbetsmiljöverket (av.se) innan du fastställer hänvisningar.</p>
+<p>Börja med att inventera dina dokument, byt ut AFS-hänvisningarna mot de nya numren och se till att platsledningen känner igen dem. Ladda ner <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> för att strukturera arbetet, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du håller arbetsmiljödokumentationen samlad. Läs alltid gällande AFS-text på Arbetsmiljöverket (av.se) innan du fastställer hänvisningar.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – krav och innehåll</a>, <a href="/sv/blog/bas-p-bas-u">Bas-P och Bas-U – roller och ansvar</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
 `;
@@ -671,7 +671,7 @@ const A_NYA_ASBESTREGLER_2026_HTML = `
 <p>Brister i utbildning, riskbedömning, skyddsutrustning eller medicinska kontroller kan leda till krav på åtgärder och i vissa fall sanktionsavgifter. Dokumenterade rutiner och intyg är din bästa försäkring — de visar att verksamheten uppfyller kraven.</p>
 
 <h2>Kom igång</h2>
-<p>2026 är året kraven märks i vardagen. Boka utbildning för berörd personal, inventera dina äldre projekt och uppdatera riskbedömningarna redan nu. Kom i gång med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a> för att strukturera dokumentationen, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller ihop arbetsmiljöunderlaget per projekt.</p>
+<p>2026 är året kraven märks i vardagen. Boka utbildning för berörd personal, inventera dina äldre projekt och uppdatera riskbedömningarna redan nu. Kom i gång med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a> för att strukturera dokumentationen, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du håller ihop arbetsmiljöunderlaget per projekt.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar som egenföretagare</a> och <a href="/sv/blog/heta-arbeten">Heta arbeten — regler och tillstånd</a>.</p>
 `;
@@ -760,7 +760,7 @@ const A_FALLSKYDD_KRAV_BYGG_HTML = `
 <p>AFS 2023:13 &quot;Risker vid vissa typer av arbeten&quot;, kapitel 5 om byggnads- och anläggningsarbete. Den ersatte AFS 1999:3 den 1 januari 2025 och har ändrats genom AFS 2025:6 och AFS 2025:8. Stegar och ställningar regleras separat i AFS 2023:9.</p>
 
 <h2>Kom igång</h2>
-<p>Kollektivt fallskydd är nästan alltid både billigare och juridiskt säkrare än att chansa på selen – ett räcke kostar timmar, en sanktionsavgift kostar tiotusentals kronor. Sätt upp en fallskyddskontroll som rutin med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du kopplar kontrollen till arbetsmiljöplanen för hela projektet.</p>
+<p>Kollektivt fallskydd är nästan alltid både billigare och juridiskt säkrare än att chansa på selen – ett räcke kostar timmar, en sanktionsavgift kostar tiotusentals kronor. Sätt upp en fallskyddskontroll som rutin med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du kopplar kontrollen till arbetsmiljöplanen för hela projektet.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – krav och innehåll</a> och <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>.</p>
 `;
@@ -844,7 +844,7 @@ const A_KMA_PLAN_MALL_HTML = `
 <p>Mallar räcker för att komma igång, men ett företagsövergripande ledningssystem gör arbetet mer hållbart. För mindre byggföretag är Byggföretagens BF9K ett smidigt alternativ som integrerar kvalitet, miljö och arbetsmiljö utan att du behöver tre separata ISO-system.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och bygg vidare med fler mallar i vår <a href="/sv/verktyg">verktygssamling</a>. Vill du se hur egenkontroller och uppgifter kopplas per projekt i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi hur du får KMA-planen att leva i vardagen i stället för i en pärm.</p>
+<p>Börja med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och bygg vidare med fler mallar i vår <a href="/sv/verktyg">verktygssamling</a>. Vill du se hur egenkontroller och uppgifter kopplas per projekt i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi hur du får KMA-planen att leva i vardagen i stället för i en pärm.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – när krävs den och vad ska den innehålla</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/bas-p-bas-u">BAS-P och BAS-U – roller och ansvar</a>.</p>
 `;
@@ -930,7 +930,7 @@ const A_NYA_GRANSVARDEN_2026_DIISOCYANATER_HTML = `
 <p>Övergångsvärdet (10/20 µg NCO/m³) är en högre, tillfällig nivå som gäller fram till 31 december 2028. Slutvärdet (6/12 µg NCO/m³) är den strängare nivå som blir bindande från 1 januari 2029.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att inventera dina produkter och samla utbildningsbevisen – och lägg in kemikalie- och skyddskontrollerna i <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a>. Vill du se hur riskbedömning och dokumentation kan hänga ihop i ett flöde är du välkommen att <a href="/sv/contact">boka en demo</a>.</p>
+<p>Börja med att inventera dina produkter och samla utbildningsbevisen – och lägg in kemikalie- och skyddskontrollerna i <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a>. Vill du se hur riskbedömning och dokumentation kan hänga ihop i ett flöde är du välkommen att <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a> och <a href="/sv/blog/arbetsmiljoplan">Så skriver du en arbetsmiljöplan</a>.</p>
 `;
@@ -1110,7 +1110,7 @@ const A_RISKBEDOMNING_BYGGARBETSPLATS_MALL_HTML = `
 <p>Nej. De föreskrifterna gäller inte längre sedan 1 januari 2025. Innehållet finns nu i AFS 2023:1 och AFS 2023:3, och en mall som hänvisar till de gamla numren är föråldrad och bör bytas ut.</p>
 
 <h2>Kom igång</h2>
-<p>Ladda ner och anpassa vår <a href="/sv/verktyg/riskbedomning-mall">gratis riskbedömningsmall</a> och koppla den till din <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmall</a> för en komplett rutin. Vill du se hur riskbedömning, egenkontroll och dokumentation hänger ihop i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+<p>Ladda ner och anpassa vår <a href="/sv/verktyg/riskbedomning-mall">gratis riskbedömningsmall</a> och koppla den till din <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmall</a> för en komplett rutin. Vill du se hur riskbedömning, egenkontroll och dokumentation hänger ihop i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan (AMP) – krav och innehåll</a>, <a href="/sv/blog/fallskydd-krav-bygg">Fallskydd – krav på bygget</a>, <a href="/sv/blog/heta-arbeten">Heta arbeten – regler och tillstånd</a>.</p>
 `;
@@ -1210,7 +1210,7 @@ const A_SYSTEMATISKT_ARBETSMILJOARBETE_LITET_BYGGFORETAG_HTML = `
 <p>Ja. Organisatorisk och social arbetsmiljö ligger i AFS 2023:2 och ska integreras i ert SAM. Stress, arbetsbelastning, kränkande särbehandling och ensamarbete ska hanteras även i det lilla byggföretaget.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med det som alltid är obligatoriskt: en skriftlig riskbedömning per projekt. Utgå från <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll- och riskbedömningsmall &rarr;</a> så har ni en struktur att fylla i direkt. Vill ni se hur ni samlar arbetsmiljödokumentationen digitalt per projekt, <a href="/sv/contact">boka en demo av ByggExp här</a>.</p>
+<p>Börja med det som alltid är obligatoriskt: en skriftlig riskbedömning per projekt. Utgå från <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll- och riskbedömningsmall &rarr;</a> så har ni en struktur att fylla i direkt. Vill ni se hur ni samlar arbetsmiljödokumentationen digitalt per projekt, <a href="/sv/contact">boka en gratis konsultation av ByggExp här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>, <a href="/sv/blog/arbetsmiljoplan">Så skriver du en arbetsmiljöplan</a> och <a href="/sv/blog/arbetsmiljoverket-nya-regler-2026-bygg">Arbetsmiljöverkets nya regler 2026 för bygg</a>.</p>
 `;
@@ -1288,7 +1288,7 @@ const A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG_HTML = `
 <p>När arbetet beräknas pågå längre än 30 arbetsdagar och mer än 20 personer vid något tillfälle arbetar samtidigt, eller när det totala antalet persondagar överstiger 500. Kopian ska anslås väl synligt på arbetsplatsen. Saknas den blir sanktionsavgiften 5 000 kr.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med en tydlig APD-plan och håll den uppdaterad genom hela bygget. Minimikraven att bocka av: AMP klar före byggstart, förhandsanmälan gjord vid trösklarna, och en aktuell APD-plan synlig på plats. Använd <a href="/sv/verktyg">våra gratis byggverktyg</a> som stomme, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du kopplar plan, arbetsmiljö och egenkontroll i ett flöde.</p>
+<p>Börja med en tydlig APD-plan och håll den uppdaterad genom hela bygget. Minimikraven att bocka av: AMP klar före byggstart, förhandsanmälan gjord vid trösklarna, och en aktuell APD-plan synlig på plats. Använd <a href="/sv/verktyg">våra gratis byggverktyg</a> som stomme, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du kopplar plan, arbetsmiljö och egenkontroll i ett flöde.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan (AMP) – så gör du</a>, <a href="/sv/blog/startmote-byggprojekt-checklista">Startmöte i byggprojekt: checklista</a>, <a href="/sv/blog/bas-p-bas-u">Bas-P och Bas-U: roller och ansvar</a>.</p>
 `;
@@ -1372,7 +1372,7 @@ const A_ARBETSBEREDNING_MALL_BYGG_HTML = `
 <p>Arbetsgivaren, i praktiken arbetsledare eller platschef, men den ska tas fram tillsammans med yrkesarbetarna. Bas-U har samordningsansvaret för att beredningar finns för riskfyllda moment och stämmer med andra entreprenörers arbete.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att fylla i <a href="/sv/verktyg/arbetsberedning-mall">vår kostnadsfria arbetsberedning-mall</a>, eller bläddra bland fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur beredning, egenkontroll och projektdokumentation hänger ihop i ett flöde? <a href="/sv/contact">Boka en demo →</a></p>
+<p>Börja med att fylla i <a href="/sv/verktyg/arbetsberedning-mall">vår kostnadsfria arbetsberedning-mall</a>, eller bläddra bland fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur beredning, egenkontroll och projektdokumentation hänger ihop i ett flöde? <a href="/sv/contact">Boka en gratis konsultation →</a></p>
 
 <p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>, <a href="/sv/blog/kma-plan-mall">KMA-plan mall</a> och <a href="/sv/blog/startmote-byggprojekt-checklista">Checklista för startmöte i byggprojekt</a>.</p>
 `;
@@ -1468,7 +1468,7 @@ const A_PERSONLIG_SKYDDSUTRUSTNING_KRAV_BYGG_HTML = `
 <p>Du bekostar din egen skyddsutrustning, men kravet på att faktiskt använda hjälm, skyddsskor och hi-vis på bygget gäller lika fullt. Har du inhyrd eller egen personal blir du arbetsgivare och ska då tillhandahålla PPE kostnadsfritt.</p>
 
 <h2>Kom igång</h2>
-<p>Se över att din PPE-rutin och dina arbetsmiljödokument pekar mot de nya AFS-numren, och lägg in kontrollpunkterna i den löpande egenkontrollen. Börja med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> eller bläddra bland <a href="/sv/verktyg">alla gratis verktyg för byggföretag</a>. Vill du se hur dokumentationen fungerar i praktiken för dina projekt kan du <a href="/sv/contact">boka en demo</a>.</p>
+<p>Se över att din PPE-rutin och dina arbetsmiljödokument pekar mot de nya AFS-numren, och lägg in kontrollpunkterna i den löpande egenkontrollen. Börja med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> eller bläddra bland <a href="/sv/verktyg">alla gratis verktyg för byggföretag</a>. Vill du se hur dokumentationen fungerar i praktiken för dina projekt kan du <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/fallskydd-krav-bygg">Fallskydd på bygget — krav och regler</a>, <a href="/sv/blog/kvartsdamm-regler-bygg">Kvartsdamm — regler och gränsvärden</a>, <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan — så gör du</a>.</p>
 `;
@@ -1559,7 +1559,7 @@ const A_TILLBUD_ARBETSSKADA_ANMALAN_BYGG_HTML = `
 <p>Riskbedömningar, utredningar och åtgärdsplaner ska dokumenteras skriftligt enligt AFS 2023:1 och bevaras som underlag för uppföljning. TFA-anmälan har långa preskriptionstider – upp till 10 år för en arbetsolycka – så spara underlagen med god marginal.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att strukturera hur ni fångar tillbud och gör egenkontroller på arbetsplatsen med <a href="/sv/verktyg/egenkontroll-mall">vår kostnadsfria egenkontroll-mall</a>, och se fler verktyg i <a href="/sv/verktyg">verktygslådan</a>. Vill du se hur dokumentation och uppföljning fungerar i praktiken? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Börja med att strukturera hur ni fångar tillbud och gör egenkontroller på arbetsplatsen med <a href="/sv/verktyg/egenkontroll-mall">vår kostnadsfria egenkontroll-mall</a>, och se fler verktyg i <a href="/sv/verktyg">verktygslådan</a>. Vill du se hur dokumentation och uppföljning fungerar i praktiken? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>, <a href="/sv/blog/arbetsmiljoplan">Så skriver du en arbetsmiljöplan</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
 `;
@@ -1719,7 +1719,7 @@ const A_ENSAMARBETE_BYGG_REGLER_HTML = `
 <p>Ja. AFS 2023:13 innehåller särskilda skyldigheter för ensam- och familjeföretagare, och samordningsansvaret gäller när du hyrs in på annans byggarbetsplats.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att lista vilka moment som får respektive inte får utföras ensam, utse en kontaktperson och sätt ett incheckningsintervall. Dokumentera bedömningen med vår <a href="/sv/verktyg/egenkontroll-mall">egenkontroll- och checklistmall</a>, eller utforska fler gratisverktyg i <a href="/sv/verktyg">ByggExp verktygslåda</a>. Vill du se hur rutinerna fungerar samlat i ett system? <a href="/sv/contact">Boka en demo</a> så visar vi dig.</p>
+<p>Börja med att lista vilka moment som får respektive inte får utföras ensam, utse en kontaktperson och sätt ett incheckningsintervall. Dokumentera bedömningen med vår <a href="/sv/verktyg/egenkontroll-mall">egenkontroll- och checklistmall</a>, eller utforska fler gratisverktyg i <a href="/sv/verktyg">ByggExp verktygslåda</a>. Vill du se hur rutinerna fungerar samlat i ett system? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi dig.</p>
 
 <p>Relaterat: <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Riskbedömning på byggarbetsplats – mall</a>, <a href="/sv/blog/systematiskt-arbetsmiljoarbete-litet-byggforetag">Systematiskt arbetsmiljöarbete i litet byggföretag</a>, <a href="/sv/blog/skyddsrond-bygg-checklista">Skyddsrond på bygget – checklista</a>.</p>
 `;
@@ -1803,7 +1803,7 @@ const A_MASKINFORARBEVIS_HJULLASTARE_BYGG_HTML = `
 <p>Arbetsgivaren. Det är arbetsgivaren som ska riskbedöma, säkerställa dokumenterad kunskap och utfärda skriftligt körtillstånd – och som kan hållas ansvarig om det brister.</p>
 
 <h2>Kom igång</h2>
-<p>Samla behörigheter, kompetensintyg och körtillstånd på ett ställe och slipp leta i pärmar. Testa <a href="/sv/verktyg">våra gratis verktyg</a> eller <a href="/sv/contact">boka en demo</a> så visar vi hur ni bygger in behörighetskontrollen i era rutiner.</p>
+<p>Samla behörigheter, kompetensintyg och körtillstånd på ett ställe och slipp leta i pärmar. Testa <a href="/sv/verktyg">våra gratis verktyg</a> eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur ni bygger in behörighetskontrollen i era rutiner.</p>
 
 <p>Relaterat: <a href="/sv/blog/byggstallning-regler-krav">Byggställning – regler och krav</a>, <a href="/sv/blog/personlig-skyddsutrustning-krav-bygg">Krav på personlig skyddsutrustning på bygget</a> och <a href="/sv/blog/systematiskt-arbetsmiljoarbete-litet-byggforetag">Systematiskt arbetsmiljöarbete i det lilla byggföretaget</a>.</p>
 `;
@@ -1881,7 +1881,7 @@ const A_LIFTUTBILDNING_KRAV_BYGG_HTML = `
 <p>Ja. Kravet på dokumenterad utbildning gäller alla mobila arbetsplattformar oavsett höjd eller storlek. Det finns inget undantag för små saxliftar eller korta jobb.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att inventera vilka förare, kategorier och maskiner ni har – och stäm av mot checklistan ovan. Bygg sedan en rutin för utbildningsbevis, körtillstånd och egenkontroll i <a href="/sv/verktyg">vår verktygslåda</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du samlar all liftdokumentation per projekt i ByggExp.</p>
+<p>Börja med att inventera vilka förare, kategorier och maskiner ni har – och stäm av mot checklistan ovan. Bygg sedan en rutin för utbildningsbevis, körtillstånd och egenkontroll i <a href="/sv/verktyg">vår verktygslåda</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du samlar all liftdokumentation per projekt i ByggExp.</p>
 
 <p>Relaterat: <a href="/sv/blog/fallskydd-krav-bygg">Fallskydd – krav på bygget</a>, <a href="/sv/blog/byggstallning-regler-krav">Byggställning: regler och krav</a>, <a href="/sv/blog/personlig-skyddsutrustning-krav-bygg">Personlig skyddsutrustning – krav på bygget</a>.</p>
 `;

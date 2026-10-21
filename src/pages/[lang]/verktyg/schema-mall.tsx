@@ -164,8 +164,8 @@ export default function SchemaMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Digital schemaläggning i ByggExp',
-          text: 'Planera personal per projekt, dela schemat till laget i mobilen och koppla det till tiden. Boka en demo och se hur det fungerar.',
-          buttonLabel: 'Boka demo',
+          text: 'Planera personal per projekt, dela schemat till laget i mobilen och koppla det till tiden. Boka en gratis konsultation och se hur det fungerar.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Fler guider och mallar"

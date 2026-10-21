@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-import { PRICE_LINES, REGISTER_URL } from "../HeroV2/HeroV2";
+import { PRICE_LINES } from "../HeroV2/HeroV2";
 import { gaEvent } from "../../lib/analytics";
 
 // Owner 2026-10-20: visitors from Google land on blog/tools and never see the
 // home hero. Show the same hero, small, at the bottom: it can be collapsed to a
 // one-line bar and closed (then hidden for 7 days). Swedish pages only, not on
-// the home page itself.
+// the home page itself. Owner 2026-10-21: we sell through a consultation, so
+// the button goes to the lead form, not to admin registration.
 const CLOSED_KEY = "bx-promo-closed";
 const MIN_KEY = "bx-promo-min";
 const WEEK = 7 * 24 * 3600 * 1000;
@@ -127,11 +128,11 @@ export default function PromoBanner() {
             ))}
           </div>
           <a
-            href={REGISTER_URL}
+            href="/sv#cta"
             className="promo-btn"
             onClick={() => gaEvent("promo_click", { page: path })}
           >
-            Kom igång gratis
+            Boka gratis konsultation
           </a>
           <ul className="promo-meta">
             <li>✓ 14 dagar gratis</li>

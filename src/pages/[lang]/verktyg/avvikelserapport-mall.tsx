@@ -121,8 +121,8 @@ export default function AvvikelserapportMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Egenkontroll och avvikelser i ByggExp',
-          text: 'Koppla egenkontroller, avvikelser och uppgifter till rätt projekt. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Koppla egenkontroller, avvikelser och uppgifter till rätt projekt. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

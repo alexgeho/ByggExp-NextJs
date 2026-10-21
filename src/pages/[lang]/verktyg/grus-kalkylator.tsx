@@ -61,8 +61,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       { question: 'Kostar det något?', answer: 'Nej, kalkylatorn är gratis och kräver inget konto.' },
     ],
     ctaHeading: 'Räkna material och tid i ByggExp',
-    ctaText: 'Håll koll på material, tid och kostnader per projekt. Boka en demo.',
-    ctaButton: 'Boka demo',
+    ctaText: 'Håll koll på material, tid och kostnader per projekt. Boka en gratis konsultation.',
+    ctaButton: 'Boka gratis konsultation',
     relatedHeading: 'Fler byggkalkylatorer',
     related: [
       { slug: 'betong-kalkylator', label: 'Betongberäknare' },
@@ -92,8 +92,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       { question: 'Koster det noe?', answer: 'Nei, kalkulatoren er gratis og krever ingen konto.' },
     ],
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
-    ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en demo.',
-    ctaButton: 'Bestill demo',
+    ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
+    ctaButton: 'Bestill gratis konsultasjon',
     relatedHeading: 'Flere byggkalkulatorer',
     related: [
       { slug: 'betong-kalkylator', label: 'Betongberegner' },
@@ -123,8 +123,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       { question: 'Does it cost anything?', answer: 'No, the calculator is free and requires no account.' },
     ],
     ctaHeading: 'Calculate material and time in ByggExp',
-    ctaText: 'Keep track of material, time and costs per project. Book a demo.',
-    ctaButton: 'Book a demo',
+    ctaText: 'Keep track of material, time and costs per project. Book a free consultation.',
+    ctaButton: 'Book a free consultation',
     relatedHeading: 'More construction calculators',
     related: [
       { slug: 'betong-kalkylator', label: 'Concrete calculator' },

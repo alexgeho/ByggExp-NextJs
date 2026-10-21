@@ -146,8 +146,8 @@ const CONTENT: Record<L, Content> = {
       },
     ],
     ctaHeading: 'Skapa offerter med ROT i ByggExp',
-    ctaText: 'Markera ROT på offert och faktura så räknas kundens del ut automatiskt. Boka en demo.',
-    ctaButton: 'Boka demo',
+    ctaText: 'Markera ROT på offert och faktura så räknas kundens del ut automatiskt. Boka en gratis konsultation.',
+    ctaButton: 'Boka gratis konsultation',
     relatedHeading: 'Fler gratis verktyg',
     related: [
       { href: '/sv/verktyg/tidrapport-mall', label: 'Tidrapport – gratis mall' },
@@ -266,8 +266,8 @@ const CONTENT: Record<L, Content> = {
       },
     ],
     ctaHeading: 'Create quotes with ROT in ByggExp',
-    ctaText: 'Flag ROT on quotes and invoices and the customer’s share is calculated automatically. Book a demo.',
-    ctaButton: 'Book a demo',
+    ctaText: 'Flag ROT on quotes and invoices and the customer’s share is calculated automatically. Book a free consultation.',
+    ctaButton: 'Book a free consultation',
     relatedHeading: 'More free tools',
     related: [
       { href: '/en/verktyg/timpris-kalkylator', label: 'Hourly rate calculator' },

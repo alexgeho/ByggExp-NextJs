@@ -111,8 +111,8 @@ export default function EfterkalkylMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Projektekonomi i ByggExp',
-          text: 'Koppla tid, inköp och ÄTA per projekt så efterkalkylen blir enkel. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Koppla tid, inköp och ÄTA per projekt så efterkalkylen blir enkel. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

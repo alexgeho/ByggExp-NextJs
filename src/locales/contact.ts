@@ -89,10 +89,10 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   en: {
     bookDirectLead: "Rather book right away?",
     bookDirectLink: "Pick a time in the calendar",
-    bookDemoButton: "Pick a time for a demo",
+    bookDemoButton: "Pick a time for a consultation",
     breadcrumbHome: "Home",
     eyebrow: "Contact",
-    title: "Book a demo or ask us anything",
+    title: "Book a free consultation or ask us anything",
     lead: "Fill in the form and we'll find a time that suits you – or just give us a call.",
 
     formName: "Name / company",
@@ -100,9 +100,9 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     contactError: "Enter a phone number or email",
     formCompany: "Company",
     formPhone: "Phone (optional)",
-    formPhoneHint: "So we can book a demo time that suits you. No sales spam.",
+    formPhoneHint: "So we can book a free consultation time that suits you. No sales spam.",
     formTopic: "What can we help with?",
-    topics: ["Book a demo", "Pricing and subscription", "Support for an existing account", "Integration / data import", "Press and partnerships", "Other"],
+    topics: ["Book a free consultation", "Pricing and subscription", "Support for an existing account", "Integration / data import", "Press and partnerships", "Other"],
     formMessage: "Tell us more — how many are you, what kind of projects, and what do you want to solve?",
     formSubmit: "Send request",
 
@@ -113,7 +113,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     mailLabel: "Email us",
     mailText: "We usually reply within one business day.",
     emailSupport: "Support",
-    emailSales: "Sales & demo",
+    emailSales: "Sales & consultation",
     emailPress: "Press",
 
     appsLabel: "Mobile app",
@@ -128,7 +128,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     stepsTitle: "How it works",
     steps: [
       { title: "Reply within a day", text: "We read your request and get back with answers or a time for a demo." },
-      { title: "15-minute demo", text: "A short video call where we show ByggExp based on your projects." },
+      { title: "15-minute consultation", text: "A short video call where we show ByggExp based on your projects." },
       { title: "A setup that fits", text: "We go through which features you need and what it costs for your team." },
       { title: "Get started", text: "We help you set up the company, your staff and the first projects." },
     ],
@@ -164,7 +164,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     faqTitle: "Before you get in touch",
     faq: [
       { q: "How fast do you reply?", a: "On weekdays usually within one business day, often the same day. Urgent? Call us or write on WhatsApp." },
-      { q: "Does a demo cost anything?", a: "No. The demo is free and without obligation — you decide whether ByggExp suits you." },
+      { q: "Does the consultation cost anything?", a: "No. The consultation is free and without obligation — you decide whether ByggExp suits you." },
       { q: "What should I write in my request?", a: "How many you are, what kind of projects you run and what you want to solve — e.g. time reporting, personalliggare or planning." },
       { q: "I'm already a customer and need help", a: "Email support@byggexp.se or call support and we'll help you right away." },
     ],
@@ -173,10 +173,10 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   sv: {
     bookDirectLead: "Hellre boka direkt?",
     bookDirectLink: "Välj en tid i kalendern",
-    bookDemoButton: "Välj tid för demo",
+    bookDemoButton: "Välj tid för konsultation",
     breadcrumbHome: "Hem",
     eyebrow: "Kontakt",
-    title: "Boka demo eller ställ en fråga",
+    title: "Boka gratis konsultation eller ställ en fråga",
     lead: "Fyll i formuläret så hittar vi en tid som passar – eller ring oss direkt.",
 
     formName: "Namn / företag",
@@ -186,7 +186,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     formPhone: "Telefon (valfritt)",
     formPhoneHint: "Så vi kan boka en tid som passar dig. Inga onödiga säljsamtal.",
     formTopic: "Vad gäller det?",
-    topics: ["Boka en demo", "Priser och abonnemang", "Support för befintligt konto", "Integration / import av data", "Press och samarbeten", "Annat"],
+    topics: ["Boka en gratis konsultation", "Priser och abonnemang", "Support för befintligt konto", "Integration / import av data", "Press och samarbeten", "Annat"],
     formMessage: "Berätta mer — hur många är ni, vilka projekt har ni och vad vill ni lösa?",
     formSubmit: "Skicka förfrågan",
 
@@ -197,7 +197,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     mailLabel: "Mejla oss",
     mailText: "Vi svarar vanligtvis inom en arbetsdag.",
     emailSupport: "Support",
-    emailSales: "Försäljning & demo",
+    emailSales: "Försäljning & konsultation",
     emailPress: "Press",
 
     appsLabel: "Mobilappen",
@@ -211,8 +211,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     stepsEyebrow: "Efter din förfrågan",
     stepsTitle: "Så går det till",
     steps: [
-      { title: "Svar inom en arbetsdag", text: "Vi läser din förfrågan och återkommer med svar eller förslag på tid för demo." },
-      { title: "Demo på 15 minuter", text: "Ett kort videomöte där vi visar ByggExp utifrån era projekt och frågor." },
+      { title: "Svar inom en arbetsdag", text: "Vi läser din förfrågan och återkommer med svar eller förslag på tid för konsultation." },
+      { title: "Konsultation på 15 minuter", text: "Ett kort videomöte där vi visar ByggExp utifrån era projekt och frågor." },
       { title: "Upplägg som passar er", text: "Vi går igenom vilka funktioner ni behöver och vad det kostar för ert team." },
       { title: "Kom igång", text: "Vi hjälper er att sätta upp företaget, personalen och de första projekten." },
     ],
@@ -248,7 +248,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     faqTitle: "Innan du hör av dig",
     faq: [
       { q: "Hur snabbt svarar ni?", a: "Vardagar normalt inom en arbetsdag, ofta samma dag. Brådskande? Ring eller skriv på WhatsApp." },
-      { q: "Kostar det något att boka en demo?", a: "Nej. Demon är gratis och utan förpliktelser — du bestämmer själv om ByggExp passar er." },
+      { q: "Kostar konsultationen något?", a: "Nej. Konsultationen är gratis och utan förpliktelser — du bestämmer själv om ByggExp passar er." },
       { q: "Vad ska jag skriva i min förfrågan?", a: "Gärna hur många ni är, vilken typ av projekt ni har och vad ni vill lösa — t.ex. tidrapportering, personalliggare eller planering." },
       { q: "Jag är redan kund och behöver hjälp", a: "Mejla support@byggexp.se eller ring supporten så hjälper vi dig direkt." },
     ],
@@ -257,10 +257,10 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
   nb: {
     bookDirectLead: "Heller booke med en gang?",
     bookDirectLink: "Velg et tidspunkt i kalenderen",
-    bookDemoButton: "Velg tid for demo",
+    bookDemoButton: "Velg tid for konsultasjon",
     breadcrumbHome: "Hjem",
     eyebrow: "Kontakt",
-    title: "Book demo eller still et spørsmål",
+    title: "Bestill gratis konsultasjon eller still et spørsmål",
     lead: "Fyll ut skjemaet, så finner vi et tidspunkt som passer – eller ring oss direkte.",
 
     formName: "Navn / firma",
@@ -270,7 +270,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     formPhone: "Telefon (valgfritt)",
     formPhoneHint: "Så vi kan avtale en tid som passer deg. Ingen unødige salgssamtaler.",
     formTopic: "Hva gjelder det?",
-    topics: ["Bestill en demo", "Priser og abonnement", "Support for eksisterende konto", "Integrasjon / import av data", "Presse og samarbeid", "Annet"],
+    topics: ["Bestill en gratis konsultasjon", "Priser og abonnement", "Support for eksisterende konto", "Integrasjon / import av data", "Presse og samarbeid", "Annet"],
     formMessage: "Fortell mer — hvor mange er dere, hvilke prosjekter har dere og hva vil dere løse?",
     formSubmit: "Send forespørsel",
 
@@ -281,7 +281,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     mailLabel: "Send e-post",
     mailText: "Vi svarer vanligvis innen en virkedag.",
     emailSupport: "Support",
-    emailSales: "Salg & demo",
+    emailSales: "Salg & konsultasjon",
     emailPress: "Presse",
 
     appsLabel: "Mobilappen",
@@ -295,8 +295,8 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     stepsEyebrow: "Etter forespørselen",
     stepsTitle: "Slik går det til",
     steps: [
-      { title: "Svar innen en virkedag", text: "Vi leser forespørselen og kommer tilbake med svar eller forslag til tid for demo." },
-      { title: "Demo på 15 minutter", text: "Et kort videomøte der vi viser ByggExp ut fra prosjektene deres." },
+      { title: "Svar innen en virkedag", text: "Vi leser forespørselen og kommer tilbake med svar eller forslag til tid for konsultasjon." },
+      { title: "Konsultasjon på 15 minutter", text: "Et kort videomøte der vi viser ByggExp ut fra prosjektene deres." },
       { title: "Et oppsett som passer", text: "Vi går gjennom hvilke funksjoner dere trenger og hva det koster for teamet." },
       { title: "Kom i gang", text: "Vi hjelper dere med å sette opp firmaet, de ansatte og de første prosjektene." },
     ],
@@ -332,7 +332,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     faqTitle: "Før du tar kontakt",
     faq: [
       { q: "Hvor raskt svarer dere?", a: "På hverdager normalt innen en virkedag, ofte samme dag. Haster det? Ring eller skriv på WhatsApp." },
-      { q: "Koster en demo noe?", a: "Nei. Demoen er gratis og uforpliktende — du bestemmer selv om ByggExp passer for dere." },
+      { q: "Koster konsultasjonen noe?", a: "Nei. Konsultasjonen er gratis og uforpliktende — du bestemmer selv om ByggExp passer for dere." },
       { q: "Hva skal jeg skrive i forespørselen?", a: "Gjerne hvor mange dere er, hvilke prosjekter dere har og hva dere vil løse — f.eks. timeføring, mannskapsliste eller planlegging." },
       { q: "Jeg er allerede kunde og trenger hjelp", a: "Send e-post til support@byggexp.se eller ring support, så hjelper vi deg med en gang." },
     ],

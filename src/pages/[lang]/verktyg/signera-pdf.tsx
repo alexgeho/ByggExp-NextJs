@@ -108,8 +108,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       },
     ],
     ctaHeading: 'Samla och signera dokument i ByggExp',
-    ctaText: 'Håll offerter, protokoll och egenkontroller samlade per projekt. Boka en demo.',
-    ctaButton: 'Boka demo',
+    ctaText: 'Håll offerter, protokoll och egenkontroller samlade per projekt. Boka en gratis konsultation.',
+    ctaButton: 'Boka gratis konsultation',
     relatedHeading: 'Fler gratis verktyg',
     related: [
       { slug: 'vattenstampel-pdf', label: 'Vattenstämpel i PDF' },
@@ -187,8 +187,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       },
     ],
     ctaHeading: 'Samle og signer dokumenter i ByggExp',
-    ctaText: 'Hold tilbud, protokoller og egenkontroller samlet per prosjekt. Bestill en demo.',
-    ctaButton: 'Bestill demo',
+    ctaText: 'Hold tilbud, protokoller og egenkontroller samlet per prosjekt. Bestill en gratis konsultasjon.',
+    ctaButton: 'Bestill gratis konsultasjon',
     relatedHeading: 'Flere gratis verktøy',
     related: [
       { slug: 'vattenstampel-pdf', label: 'Vannmerke i PDF' },

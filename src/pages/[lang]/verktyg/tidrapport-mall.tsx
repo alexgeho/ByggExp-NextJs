@@ -477,8 +477,8 @@ export default function TidrapportMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Automatisk och manuell tidrapportering i ByggExp',
-          text: 'Låt GPS-incheckningen samla timmarna – eller fyll i dem manuellt i appen – och exportera direkt till lön och faktura. Boka en demo och se hur det fungerar.',
-          buttonLabel: 'Boka demo',
+          text: 'Låt GPS-incheckningen samla timmarna – eller fyll i dem manuellt i appen – och exportera direkt till lön och faktura. Boka en gratis konsultation och se hur det fungerar.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Fler guider och mallar"

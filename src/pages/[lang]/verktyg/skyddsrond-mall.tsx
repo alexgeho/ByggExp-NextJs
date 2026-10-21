@@ -130,8 +130,8 @@ export default function SkyddsrondMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Egenkontroll och arbetsmiljö i ByggExp',
-          text: 'Koppla checklistor och åtgärder till rätt projekt. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Koppla checklistor och åtgärder till rätt projekt. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

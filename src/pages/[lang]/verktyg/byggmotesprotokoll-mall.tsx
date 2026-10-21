@@ -170,8 +170,8 @@ export default function ByggmotesprotokollMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Följ upp mötesbesluten i ByggExp',
-          text: 'Beslut blir uppgifter med ansvarig och påminnelser – samlat per projekt. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Beslut blir uppgifter med ansvarig och påminnelser – samlat per projekt. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

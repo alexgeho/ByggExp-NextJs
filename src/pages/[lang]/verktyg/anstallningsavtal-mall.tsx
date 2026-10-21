@@ -124,8 +124,8 @@ export default function AnstallningsavtalMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Håll koll på personal och tid i ByggExp',
-          text: 'Tidrapportering, frånvaro och personalliggare samlat. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Tidrapportering, frånvaro och personalliggare samlat. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

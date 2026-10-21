@@ -105,8 +105,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       },
     ],
     ctaHeading: 'Se marginalen per projekt i ByggExp',
-    ctaText: 'Följ intäkter, kostnader och marginal per projekt i realtid. Boka en demo.',
-    ctaButton: 'Boka demo',
+    ctaText: 'Följ intäkter, kostnader och marginal per projekt i realtid. Boka en gratis konsultation.',
+    ctaButton: 'Boka gratis konsultation',
     relatedHeading: 'Fler gratis verktyg',
     related: [
       { href: '/blog/paslag-pa-material', label: 'Guide: materialpåslag för hantverkare' },
@@ -180,8 +180,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       },
     ],
     ctaHeading: 'Se marginen per prosjekt i ByggExp',
-    ctaText: 'Følg inntekter, kostnader og margin per prosjekt i sanntid. Bestill en demo.',
-    ctaButton: 'Bestill demo',
+    ctaText: 'Følg inntekter, kostnader og margin per prosjekt i sanntid. Bestill en gratis konsultasjon.',
+    ctaButton: 'Bestill gratis konsultasjon',
     relatedHeading: 'Flere gratis verktøy',
     related: [
       { href: '/blog/paslag-pa-material', label: 'Guide: materialpåslag for håndverkere' },
@@ -255,8 +255,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       },
     ],
     ctaHeading: 'See the margin per project in ByggExp',
-    ctaText: 'Follow revenue, costs and margin per project in real time. Book a demo.',
-    ctaButton: 'Book a demo',
+    ctaText: 'Follow revenue, costs and margin per project in real time. Book a free consultation.',
+    ctaButton: 'Book a free consultation',
     relatedHeading: 'More free tools',
     related: [
       { href: '/verktyg/timpris-kalkylator', label: 'Hourly rate calculator' },

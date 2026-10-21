@@ -93,8 +93,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       },
     ],
     ctaHeading: 'Samla projektdokumenten i ByggExp',
-    ctaText: 'Offerter, fakturor, foton och egenkontroller per projekt. Boka en demo.',
-    ctaButton: 'Boka demo',
+    ctaText: 'Offerter, fakturor, foton och egenkontroller per projekt. Boka en gratis konsultation.',
+    ctaButton: 'Boka gratis konsultation',
     relatedHeading: 'Fler gratis verktyg',
     related: [
       { slug: 'dela-pdf', label: 'Dela PDF – extrahera sidor' },
@@ -157,8 +157,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       },
     ],
     ctaHeading: 'Samle prosjektdokumentene i ByggExp',
-    ctaText: 'Tilbud, fakturaer, bilder og egenkontroller per prosjekt. Bestill en demo.',
-    ctaButton: 'Bestill demo',
+    ctaText: 'Tilbud, fakturaer, bilder og egenkontroller per prosjekt. Bestill en gratis konsultasjon.',
+    ctaButton: 'Bestill gratis konsultasjon',
     relatedHeading: 'Flere gratis verktøy',
     related: [
       { slug: 'dela-pdf', label: 'Dele PDF – hente ut sider' },

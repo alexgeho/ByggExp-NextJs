@@ -10,7 +10,7 @@ import { gaEvent } from '../../lib/analytics';
 // at 1400px viewport a 980px column + 300px rail collide). We therefore render a
 // prominent in-flow dark band directly under the intro — horizontal on desktop,
 // stacked on mobile — which is the standard non-breaking pattern and satisfies
-// the "noticeable but unobtrusive, contextual, Boka demo" goal.
+// the "noticeable but unobtrusive, contextual, Boka gratis konsultation" goal.
 
 const BULLETS = [
   'Projektledning & dagbok',

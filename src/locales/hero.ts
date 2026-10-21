@@ -38,7 +38,7 @@ export const heroTranslations = {
     heroSubtitleBtnMore: "More ▼",
     heroSubtitleBtnLess: "Less ▲",
 
-    heroDemo: "Book a Demo",
+    heroDemo: "Book a free consultation",
     heroHow: "How It Works",
 
     heroFeature1: "2 Weeks Free",
@@ -61,7 +61,7 @@ export const heroTranslations = {
     heroSubtitleBtnMore: "Mer ▼",
     heroSubtitleBtnLess: "Mindre ▲",
 
-    heroDemo: "Boka demo",
+    heroDemo: "Boka gratis konsultation",
     heroHow: "Hur det fungerar",
 
     heroFeature1: "2 veckor gratis",
@@ -84,7 +84,7 @@ export const heroTranslations = {
     heroSubtitleBtnMore: "Mer ▼",
     heroSubtitleBtnLess: "Mindre ▲",
 
-    heroDemo: "Bestill demo",
+    heroDemo: "Bestill gratis konsultasjon",
     heroHow: "Slik fungerer det",
 
     heroFeature1: "2 uker gratis",

@@ -146,8 +146,8 @@ export default function FakturaMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Fakturera proffsigt i ByggExp',
-          text: 'Faktura med logotyp, moms och ROT-avdrag – och godkänd ÄTA blir faktura direkt. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Faktura med logotyp, moms och ROT-avdrag – och godkänd ÄTA blir faktura direkt. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Fler gratis verktyg"

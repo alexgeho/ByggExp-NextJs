@@ -130,8 +130,8 @@ export default function AckordKalkylatorPage() {
         faq={FAQ}
         cta={{
           heading: 'Spårbart ackordsunderlag i ByggExp',
-          text: 'Samla timmar och utförda mängder löpande per projekt, så bygger slutavräkningen på fakta. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Samla timmar och utförda mängder löpande per projekt, så bygger slutavräkningen på fakta. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

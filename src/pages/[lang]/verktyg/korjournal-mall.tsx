@@ -123,8 +123,8 @@ export default function KorjournalMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Håll ordning på bil, tid och kostnader i ByggExp',
-          text: 'Samla underlaget som firmans avdrag vilar på. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Samla underlaget som firmans avdrag vilar på. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

@@ -56,7 +56,7 @@ const PERSONALLIGGARE_HTML = `
 <p>12 500 kr, plus 2 500 kr för varje person som är verksam men inte antecknad. Saknas anmälan om byggstart är avgiften 25 000 kr.</p>
 
 <h2>Kom igång</h2>
-<p>Slipp papperslistor och kontrollavgifter. Registrera närvaron digitalt, kopplad till projektet, och ha allt redo för Skatteverket. Läs om <a href="/sv/blog/personalliggare-bygg-app">personalliggare som app</a>, <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">se hur närvaro fungerar i ByggExp</a> eller <a href="/sv/contact">boka en demo</a>.</p>
+<p>Slipp papperslistor och kontrollavgifter. Registrera närvaron digitalt, kopplad till projektet, och ha allt redo för Skatteverket. Läs om <a href="/sv/blog/personalliggare-bygg-app">personalliggare som app</a>, <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">se hur närvaro fungerar i ByggExp</a> eller <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 `.trim();
 
 const PERSONALLIGGARE: BlogPost = {
@@ -119,7 +119,7 @@ const ID06_HTML = `
 <p>En databas där individens utbildningar och intyg registreras, så att behörigheter enkelt kan verifieras på arbetsplatsen.</p>
 
 <h2>Kom igång</h2>
-<p>Oavsett kortlösning behöver du en elektronisk närvaroregistrering som håller. I ByggExp checkar laget in och ut kopplat till projektet – du ser vilka som är på plats och har liggaren redo. <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">Se hur närvaro fungerar</a> eller <a href="/sv/contact">boka en demo</a>.</p>
+<p>Oavsett kortlösning behöver du en elektronisk närvaroregistrering som håller. I ByggExp checkar laget in och ut kopplat till projektet – du ser vilka som är på plats och har liggaren redo. <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">Se hur närvaro fungerar</a> eller <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/personalliggare">Guide: personalliggare</a> · <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">Närvaro och incheckning</a></p>
 `.trim();
@@ -329,7 +329,7 @@ const A_KONTROLLPLAN_MALL_BYGGLOV_HTML = `
 <p>Slutbesked förutsätter att den fastställda kontrollplanen följts och att dokumenterade, signerade kontroller lämnats in. Att påbörja bygget utan startbesked eller ta byggnaden i bruk utan slutbesked kan utlösa en byggsanktionsavgift.</p>
 
 <h2>Kom igång</h2>
-<p>Skapa en PBL-korrekt kontrollplan direkt: den är anpassad efter 2026 års regler, kräver ingen kontrollansvarig för enkla ärenden och du får en färdig PDF att lämna till kommunen. Testa <a href="/sv/verktyg/egenkontroll-mall">vår mall för egenkontroll och kontrollplan →</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du får med kontrolldokumentationen i hela projektflödet.</p>
+<p>Skapa en PBL-korrekt kontrollplan direkt: den är anpassad efter 2026 års regler, kräver ingen kontrollansvarig för enkla ärenden och du får en färdig PDF att lämna till kommunen. Testa <a href="/sv/verktyg/egenkontroll-mall">vår mall för egenkontroll och kontrollplan →</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du får med kontrolldokumentationen i hela projektflödet.</p>
 
 <p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt – så dokumenterar du rätt</a> och <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – när krävs den och vad ska ingå</a>.</p>
 `;
@@ -586,7 +586,7 @@ const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN_HTML = `
 <p>Då är valfriheten borta. Från 1 juli 2026 gäller Boverkets nya byggregler fullt ut för alla nya ärenden. Har du inte redan gjort det: uppdatera mallar och rutiner nu.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att se över dina egenkontrollrutiner mot funktionskraven med vår gratis <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmall</a>. Vill du se hur ByggExp samlar egenkontroll och verifieringsunderlag i ett flöde? Boka en demo via <a href="/sv/contact">/sv/contact</a>.</p>
+<p>Börja med att se över dina egenkontrollrutiner mot funktionskraven med vår gratis <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmall</a>. Vill du se hur ByggExp samlar egenkontroll och verifieringsunderlag i ett flöde? Boka en gratis konsultation via <a href="/sv/contact">/sv/contact</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/nya-vatrumsregler-2026">Nya våtrumsregler 2026</a>.</p>
 `;
@@ -815,7 +815,7 @@ const A_ID06_BESTALLA_KORT_STEG_FOR_STEG_HTML = `
 <p>De flesta generalentreprenörer kräver det. Utbildningen är gratis, giltig i 5 år och registreras kostnadsfritt i ID06 Kompetensdatabas. Kontrollera alltid GE:ns leverantörskrav i förväg, eftersom även andra behörigheter kan krävas.</p>
 
 <h2>Kom igång</h2>
-<p>Beställ ID06-kort via din kortutgivare, säkerställ att alla har giltigt pass eller nationellt ID och att Safe Construction Training finns registrerad i kompetensdatabasen. När korten är på plats håller du enkelt ordning på tid och närvaro med vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a>. Vill du se hur ByggExp knyter ihop tidrapportering med personalliggaren inför uppdraget? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Beställ ID06-kort via din kortutgivare, säkerställ att alla har giltigt pass eller nationellt ID och att Safe Construction Training finns registrerad i kompetensdatabasen. När korten är på plats håller du enkelt ordning på tid och närvaro med vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a>. Vill du se hur ByggExp knyter ihop tidrapportering med personalliggaren inför uppdraget? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/id06">ID06 – så fungerar systemet</a>, <a href="/sv/blog/personalliggare">Personalliggare i byggbranschen</a> och <a href="/sv/blog/kontrollavgift-personalliggare">Kontrollavgift för personalliggare</a>.</p>
 `;
@@ -909,7 +909,7 @@ const A_STARTBESKED_BYGGLOV_PROCESS_2026_HTML = `
 <p>För ärenden inkomna från 1 december 2025 gäller lovet omedelbart, även utan laga kraft (9 kap. 114 § PBL) – den tidigare fyraveckorsfristen efter kungörelse är borttagen. Har nämnden däremot bedömt att åtgärden kan medföra skador som inte kan återställas på natur-, kultur- eller totalförsvarsvärden, ska den bestämma att lovet gäller först vid laga kraft, och då måste du vänta. Kungörelsen sker numera på kommunens digitala anslagstavla.</p>
 
 <h2>Kom igång</h2>
-<p>Lägg grunden för ett smidigt startbesked genom att ha kontrollplanen klar i god tid inför det tekniska samrådet. Kom i gång direkt med vår <a href="/sv/verktyg/kontrollplan-mall">kontrollplansmall</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller dokumentationen samlad genom hela byggprocessen.</p>
+<p>Lägg grunden för ett smidigt startbesked genom att ha kontrollplanen klar i god tid inför det tekniska samrådet. Kom i gång direkt med vår <a href="/sv/verktyg/kontrollplan-mall">kontrollplansmall</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du håller dokumentationen samlad genom hela byggprocessen.</p>
 
 <p>Relaterat: <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler 2026 och kontrollplanen</a>, <a href="/sv/blog/kontrollplan-mall-bygglov">Kontrollplan och mall för bygglov</a>, <a href="/sv/blog/kontrollansvarig-nar-behovs">Kontrollansvarig – när behövs det?</a></p>
 `;
@@ -978,7 +978,7 @@ const A_UTSTATIONERING_UTLANDSK_ARBETSKRAFT_BYGG_HTML = `
 <p>Nej. Sedan reglerna om ekonomisk arbetsgivare infördes 2021 beskattas uthyrd personal i Sverige från dag ett när den svenska uppdragsgivaren leder arbetet. Undantaget gäller bara arbete på högst 15 sammanhängande dagar och högst 45 dagar totalt per kalenderår.</p>
 
 <h2>Kom igång</h2>
-<p>Att göra rätt skyddar dig mot sanktionsavgifter, löneansvar och att svartlistas i offentlig upphandling. Börja med att strukturera dokumentationen i <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>, och vill du se hur ByggExp samlar projekt, UE-handlingar och kontroller på ett ställe kan du <a href="/sv/contact">boka en demo här</a>. Reglerna ändras – stäm alltid av aktuella krav med Arbetsmiljöverket, Skatteverket och Migrationsverket innan du sätter igång.</p>
+<p>Att göra rätt skyddar dig mot sanktionsavgifter, löneansvar och att svartlistas i offentlig upphandling. Börja med att strukturera dokumentationen i <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>, och vill du se hur ByggExp samlar projekt, UE-handlingar och kontroller på ett ställe kan du <a href="/sv/contact">boka en gratis konsultation här</a>. Reglerna ändras – stäm alltid av aktuella krav med Arbetsmiljöverket, Skatteverket och Migrationsverket innan du sätter igång.</p>
 
 <p>Relaterat: <a href="/sv/blog/inhyrd-personal-regler">Regler för inhyrd personal</a>, <a href="/sv/blog/anlita-underentreprenor">Anlita underentreprenör – så gör du rätt</a>, <a href="/sv/blog/entreprenorsansvar-lon">Entreprenörsansvar för löner</a>.</p>
 `;
@@ -1052,7 +1052,7 @@ const A_KLIMATDEKLARATION_BYGGNAD_KRAV_HTML = `
 <p>Enligt EPBD ska livscykel-GWP redovisas från 1 januari 2028 för byggnader över 1 000 m² och från 1 januari 2030 för alla nya byggnader. Boverket föreslår bindande gränsvärden från 2030. Beloppen är fortfarande förslag.</p>
 
 <h2>Kom igång</h2>
-<p>Kravet på klimatdeklaration gäller redan idag och spärrar slutbeskedet om det missas, samtidigt som skiftet mot livscykel-GWP och gränsvärden 2028–2030 kräver att du börjar planera för låg klimatpåverkan nu. Bygg in rutinen i varje projekt, samla underlagen tidigt och följ remissarbetet genom 2026–2027. Börja med <a href="/sv/verktyg">våra gratis verktyg</a> eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller ordning på kravet från bygglov till slutbesked.</p>
+<p>Kravet på klimatdeklaration gäller redan idag och spärrar slutbeskedet om det missas, samtidigt som skiftet mot livscykel-GWP och gränsvärden 2028–2030 kräver att du börjar planera för låg klimatpåverkan nu. Bygg in rutinen i varje projekt, samla underlagen tidigt och följ remissarbetet genom 2026–2027. Börja med <a href="/sv/verktyg">våra gratis verktyg</a> eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du håller ordning på kravet från bygglov till slutbesked.</p>
 
 <p>Relaterat: <a href="/sv/blog/nya-byggregler-2026-energi-isolering">Nya byggregler 2026 – energi och isolering</a>, <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler 2026 och kontrollplanen</a>, <a href="/sv/blog/startbesked-bygglov-process-2026">Startbesked och bygglovsprocessen 2026</a>.</p>
 `;
@@ -1135,7 +1135,7 @@ const A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG_HTML = `
 <p>Det finns ingen fast miljösanktionsavgift med ett bestämt belopp för själva sorteringsbrottet. Miljönämnden kan i stället utfärda föreläggande förenat med vite, och grova fall kan bli otillåten avfallshantering enligt miljöbalken 29 kap.</p>
 
 <h2>Kom igång</h2>
-<p>Lägg avfallssorteringen i din projektrutin redan idag med vår <a href="/sv/verktyg/egenkontroll-mall">mall för egenkontroll</a>, och stäm alltid av mot avfallsförordningen och din lokala miljöförvaltning. Vill du se hur ByggExp håller ihop egenkontroll och dokumentation i skarpa projekt? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Lägg avfallssorteringen i din projektrutin redan idag med vår <a href="/sv/verktyg/egenkontroll-mall">mall för egenkontroll</a>, och stäm alltid av mot avfallsförordningen och din lokala miljöförvaltning. Vill du se hur ByggExp håller ihop egenkontroll och dokumentation i skarpa projekt? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler 2026 och kontrollplanen</a>, <a href="/sv/blog/kontrollplan-mall-bygglov">Kontrollplan-mall för bygglov</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
 `;
@@ -1211,7 +1211,7 @@ const A_ID06_NYA_KRAV_2026_LEGITIMERING_HTML = `
 <p>Tredjelandsmedborgare, alltså personer från länder utanför EU/EES, ska utöver pass eller nationellt ID även skanna sitt EU-uppehållstillståndskort på samma sätt som tidigare. Både identitet och rätten att arbeta i Sverige verifieras.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att inventera kortens giltighet och trimma rutinen kring personalliggaren. Ladda ner <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapportmall</a> eller utforska <a href="/sv/verktyg">alla verktyg för byggföretag</a>. Vill du se hur ByggExp håller ihop tid, projekt och underlag? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Börja med att inventera kortens giltighet och trimma rutinen kring personalliggaren. Ladda ner <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapportmall</a> eller utforska <a href="/sv/verktyg">alla verktyg för byggföretag</a>. Vill du se hur ByggExp håller ihop tid, projekt och underlag? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/id06">ID06 – vad det är och varför det krävs</a>, <a href="/sv/blog/id06-bestalla-kort-steg-for-steg">Beställa ID06-kort steg för steg</a> och <a href="/sv/blog/personalliggare">Personalliggare på byggarbetsplatsen</a>.</p>
 `;
@@ -1305,7 +1305,7 @@ const A_RIVNINGSLOV_RIVNINGSANMALAN_BYGG_HTML = `
 <p>Från 19 december 2025 är det hygieniska gränsvärdet sänkt till 0,01 fibrer per kubikcentimeter, utbildningskravet omfattar fler yrkesgrupper och undantaget från läkarundersökning har tagits bort. Asbestsanering kräver tillstånd och förhandsanmälan till Arbetsmiljöverket.</p>
 
 <h2>Kom igång</h2>
-<p>Planera lov eller anmälan och inventeringen tidigt – det är där tid och pengar vinns. Sätt upp din dokumentation med <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmallen</a> eller utforska fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur ByggExp fungerar i skarpt läge? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Planera lov eller anmälan och inventeringen tidigt – det är där tid och pengar vinns. Sätt upp din dokumentation med <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmallen</a> eller utforska fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur ByggExp fungerar i skarpt läge? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/rivningsavfall-sorteringskrav-bygg">Sorteringskrav för rivningsavfall</a>, <a href="/sv/blog/nya-asbestregler-2026">Nya asbestregler 2026</a>, <a href="/sv/blog/startbesked-bygglov-process-2026">Startbesked och bygglovsprocessen 2026</a>.</p>
 `;
@@ -1416,7 +1416,7 @@ const A_FARLIGT_AVFALL_ANTECKNINGSSKYLDIGHET_BYGG_HTML = `
 
 <h2>Kom igång</h2>
 
-<p>Börja med att lägga in de farliga fraktionerna i <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> och bygg en rutin som håller hela vägen till avfallsregistret. Vill du se hur det fungerar i ett skarpt projekt? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+<p>Börja med att lägga in de farliga fraktionerna i <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> och bygg en rutin som håller hela vägen till avfallsregistret. Vill du se hur det fungerar i ett skarpt projekt? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi.</p>
 
 <p>Relaterat: <a href="/sv/blog/rivningsavfall-sorteringskrav-bygg">Rivningsavfall och sorteringskrav</a>, <a href="/sv/blog/nya-asbestregler-2026">Nya asbestregler 2026</a>, <a href="/sv/blog/klimatdeklaration-byggnad-krav">Klimatdeklaration för byggnad – krav</a>.</p>
 `;

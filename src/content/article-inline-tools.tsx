@@ -16,6 +16,16 @@ import RestidsersattningKalkylatorTool from '../components/LeadMagnet/Restidsers
 import AckordKalkylatorTool from '../components/LeadMagnet/AckordKalkylatorTool';
 import ForseningsviteKalkylatorTool from '../components/LeadMagnet/ForseningsviteKalkylatorTool';
 import ReglarKalkylatorTool from '../components/LeadMagnet/ReglarKalkylatorTool';
+import EgenkontrollTool from '../components/LeadMagnet/EgenkontrollTool';
+import AnstallningsavtalMallTool from '../components/LeadMagnet/AnstallningsavtalMallTool';
+import AtaMallTool from '../components/LeadMagnet/AtaMallTool';
+import AvvikelserapportMallTool from '../components/LeadMagnet/AvvikelserapportMallTool';
+import ByggmotesprotokollMallTool from '../components/LeadMagnet/ByggmotesprotokollMallTool';
+import GanttSchemaMallTool from '../components/LeadMagnet/GanttSchemaMallTool';
+import KontrollplanMallTool from '../components/LeadMagnet/KontrollplanMallTool';
+import KvalitetsplanMallTool from '../components/LeadMagnet/KvalitetsplanMallTool';
+import RestlistaMallTool from '../components/LeadMagnet/RestlistaMallTool';
+import RiskbedomningMallTool from '../components/LeadMagnet/RiskbedomningMallTool';
 
 // Interactive lead-magnet tools embedded directly inside a blog article (not
 // just linked). Keyed by the shared article slug. sv-only — the tools carry
@@ -124,6 +134,73 @@ export const ARTICLE_INLINE_TOOLS: Record<string, InlineTool> = {
   'reglar-dimensioner-c-avstand-vagg': {
     heading: 'Räkna reglar',
     render: () => <ReglarKalkylatorTool locale="sv" />,
+    position: 'top',
+  },
+  // Owner 2026-10-21: the visitor came for the inspection itself – let them do
+  // it first, the article goes below. Same for every "… mall" article.
+  egenkontroll: {
+    heading: 'Fyll i din egenkontroll',
+    render: () => <EgenkontrollTool defaultPreset="bygg" />,
+    position: 'top',
+  },
+  'egenkontroll-entreprenad': {
+    heading: 'Fyll i din egenkontroll',
+    render: () => <EgenkontrollTool defaultPreset="bygg" />,
+    position: 'top',
+  },
+  egenkontrollprogram: {
+    heading: 'Fyll i din egenkontroll',
+    render: () => <EgenkontrollTool defaultPreset="bygg" />,
+    position: 'top',
+  },
+  'egenkontroll-el-egenkontrollprogram': {
+    heading: 'Fyll i din egenkontroll el',
+    render: () => <EgenkontrollTool defaultPreset="el" />,
+    position: 'top',
+  },
+  'kontrollplan-mall-bygglov': {
+    heading: 'Fyll i din kontrollplan',
+    render: () => <KontrollplanMallTool />,
+    position: 'top',
+  },
+  'kvalitetsplan-bygg': {
+    heading: 'Fyll i din kvalitetsplan',
+    render: () => <KvalitetsplanMallTool />,
+    position: 'top',
+  },
+  'avvikelsehantering-bygg-mall': {
+    heading: 'Fyll i avvikelserapporten',
+    render: () => <AvvikelserapportMallTool />,
+    position: 'top',
+  },
+  'byggmotesprotokoll-mall': {
+    heading: 'Fyll i byggmötesprotokollet',
+    render: () => <ByggmotesprotokollMallTool />,
+    position: 'top',
+  },
+  'ata-hantering-mall': {
+    heading: 'Fyll i ÄTA',
+    render: () => <AtaMallTool />,
+    position: 'top',
+  },
+  'anstallningsavtal-mall-bygg': {
+    heading: 'Fyll i anställningsavtalet',
+    render: () => <AnstallningsavtalMallTool />,
+    position: 'top',
+  },
+  'gantt-schema-mall-bygg': {
+    heading: 'Gör ditt tidsschema',
+    render: () => <GanttSchemaMallTool />,
+    position: 'top',
+  },
+  'restlista-overlamning-bygg-mall': {
+    heading: 'Fyll i restlistan',
+    render: () => <RestlistaMallTool />,
+    position: 'top',
+  },
+  'riskbedomning-byggarbetsplats-mall': {
+    heading: 'Fyll i riskbedömningen',
+    render: () => <RiskbedomningMallTool />,
     position: 'top',
   },
   // ab-u-underentreprenor-avtal: no tool on purpose. Searchers want the AB-U 07 /

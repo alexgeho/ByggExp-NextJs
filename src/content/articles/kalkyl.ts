@@ -78,7 +78,7 @@ const MATERIALKALKYL_HTML = `
 <p>Det styrs av skivbredden: 450 mm c/c för 900 mm breda gipsskivor och 600 mm c/c för 1200 mm breda skivor. 600 mm ger en materialeffektiv vägg, medan 450 mm ger en styvare vägg som lämpar sig för tunga ytskikt som kakel.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att räkna ditt nästa projekt i <a href="/sv/verktyg">våra gratis kalkylatorer</a> – välj verktyget som matchar materialet så får du åtgång och spill direkt. Vill du se hur material, kalkyl och offert hänger ihop i ett flöde? <a href="/sv/contact">Boka en demo</a> så visar vi upplägget.</p>
+<p>Börja med att räkna ditt nästa projekt i <a href="/sv/verktyg">våra gratis kalkylatorer</a> – välj verktyget som matchar materialet så får du åtgång och spill direkt. Vill du se hur material, kalkyl och offert hänger ihop i ett flöde? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi upplägget.</p>
 
 <p>Relaterat: <a href="/sv/blog/timpris-hantverkare">Timpris för hantverkare – så sätter du rätt pris</a>, <a href="/sv/verktyg/gips-kalkylator">Gips- och regelväggskalkylator</a>, <a href="/sv/verktyg/betong-kalkylator">Betongkalkylator</a>.</p>
 `.trim();
@@ -402,7 +402,7 @@ const A_SPILLPROCENT_BYGG_MATERIAL_HTML = `
 <p>Saknar du bättre underlag är 1,12 (12 %) en rimlig generell schablon för ett blandat material. Men gå alltid till materialets specifika intervall när du kan — virke 5–10 %, gips 10–15 %, kakel upp till 15–20 % vid mönster — och justera för rummets geometri och läggningsmönster.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att lägga in dina mått i <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a> och räkna sedan skivmängd i <a href="/sv/verktyg/gips-kalkylator">gips-kalkylatorn</a> eller volym i <a href="/sv/verktyg/betong-kalkylator">betong-kalkylatorn</a> — alla med spillpåslag inbyggt. Vill du se hur ByggExp kan effektivisera hela din kalkyl- och offertprocess? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+<p>Börja med att lägga in dina mått i <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a> och räkna sedan skivmängd i <a href="/sv/verktyg/gips-kalkylator">gips-kalkylatorn</a> eller volym i <a href="/sv/verktyg/betong-kalkylator">betong-kalkylatorn</a> — alla med spillpåslag inbyggt. Vill du se hur ByggExp kan effektivisera hela din kalkyl- och offertprocess? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi.</p>
 
 <p>Relaterat: <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget — så gör du rätt från början</a>.</p>
 `;
@@ -491,7 +491,7 @@ const A_BERAKNA_BETONGATGANG_PLATTA_HTML = `
 <p>Under cirka 0,5–1 m³ är säckblandning oftast praktiskt. Över det blir fabriksbetong per m³ vanligen både billigare och jämnare i kvalitet. En betongbil rymmer normalt 7–8 m³, men små beställningar kan få småmängdstillägg.</p>
 
 <h2>Kom igång</h2>
-<p>Mata in dina mått i <a href="/sv/verktyg/betong-kalkylator">betongkalkylatorn</a> så får du volym, vikt, antal säckar och spill på några sekunder. Vill du se hur materialberäkning och offert hänger ihop i ett flöde kan du <a href="/sv/contact">boka en demo</a>.</p>
+<p>Mata in dina mått i <a href="/sv/verktyg/betong-kalkylator">betongkalkylatorn</a> så får du volym, vikt, antal säckar och spill på några sekunder. Vill du se hur materialberäkning och offert hänger ihop i ett flöde kan du <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget – så undviker du både brist och överbeställning</a>.</p>
 `;
@@ -573,7 +573,7 @@ const A_BERAKNA_MATERIALATGANG_TAK_HTML = `
 <p>På täckbredden, alltså den effektiva bredden efter överlapp. En 1100 mm plåt kan ha ca 1050 mm täckbredd. Räknar du på totalbredden får du för få plåtar, och längdskarvar överlappar dessutom ca 150–200 mm.</p>
 
 <h2>Kom igång</h2>
-<p>Testa <a href="/sv/verktyg/tak-kalkylator">tak-kalkylatorn</a> och räkna kvm, antal pannor och spill på nästa jobb — och komplettera med <a href="/sv/verktyg/takstolar-kalkylator">takstolskalkylatorn</a> när bärverket ska dimensioneras. Vill du se hur materiallistan blir en färdig offert? <a href="/sv/contact">Boka en demo</a> så visar vi flödet från kalkyl till kund.</p>
+<p>Testa <a href="/sv/verktyg/tak-kalkylator">tak-kalkylatorn</a> och räkna kvm, antal pannor och spill på nästa jobb — och komplettera med <a href="/sv/verktyg/takstolar-kalkylator">takstolskalkylatorn</a> när bärverket ska dimensioneras. Vill du se hur materiallistan blir en färdig offert? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi flödet från kalkyl till kund.</p>
 
 <p>Relaterat: <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a> och <a href="/sv/blog/skriva-offert">Skriva offert</a>.</p>
 `;
@@ -684,7 +684,7 @@ const A_ARMERING_BERAKNING_PLATTA_GRUND_HTML = `
 
 <h2>Kom igång</h2>
 
-<p>Räkna betongvolymen i <a href="/sv/verktyg/betong-kalkylator">betongkalkylatorn</a> och lägg armeringen – nät och stång – som materialrader så får du hela grunden i en offert. Vill du se hur mängdning och offert hänger ihop i praktiken, <a href="/sv/contact">boka en demo</a> så visar vi upplägget. Be alltid om aktuell K-ritning innan gjutning.</p>
+<p>Räkna betongvolymen i <a href="/sv/verktyg/betong-kalkylator">betongkalkylatorn</a> och lägg armeringen – nät och stång – som materialrader så får du hela grunden i en offert. Vill du se hur mängdning och offert hänger ihop i praktiken, <a href="/sv/contact">boka en gratis konsultation</a> så visar vi upplägget. Be alltid om aktuell K-ritning innan gjutning.</p>
 
 <p>Relaterat: <a href="/sv/blog/berakna-betongatgang-platta">Beräkna betongåtgång till plattan</a> och <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>.</p>
 `;
@@ -854,7 +854,7 @@ const A_SPACKEL_ATGANG_VAGG_TAK_HTML = `
 <p>Lägg på 10–20 % för spill och svinn, och räkna alltid upp till hela säckar eller hinkar. Öppnad vara torkar och kan inte sparas, så en liten överkapacitet är billigare än att stå utan material mitt i jobbet.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna spackelåtgången för ditt nästa uppdrag direkt i <a href="/sv/verktyg/farg-kalkylator">färg- och spackelkalkylatorn</a> och för siffrorna vidare till offerten. Vill du se hur material- och arbetsuppdelningen fungerar i praktiken kan du <a href="/sv/contact">boka en demo</a> så visar vi hela flödet från kalkyl till faktura.</p>
+<p>Räkna spackelåtgången för ditt nästa uppdrag direkt i <a href="/sv/verktyg/farg-kalkylator">färg- och spackelkalkylatorn</a> och för siffrorna vidare till offerten. Vill du se hur material- och arbetsuppdelningen fungerar i praktiken kan du <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hela flödet från kalkyl till faktura.</p>
 
 <p>Relaterat: <a href="/sv/blog/spillprocent-bygg-material">Spillprocent för byggmaterial</a>, <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>, <a href="/sv/verktyg/kvadratmeter-kalkylator">Kvadratmeterkalkylator</a>.</p>
 `;
@@ -1044,7 +1044,7 @@ const A_DRANERING_GRUS_MATERIAL_BERAKNING_HTML = `
 <p>I kvadratmeter. Räkna bäddbredd plus uppvik på båda sidor, gånger längden, och lägg till skarvöverlapp – minst 30 cm på stabil mark, 40–75 cm på mjuk mark eller vid trafik.</p>
 
 <h2>Kom igång</h2>
-<p>Mät bädden på plats, mata in måtten i <a href="/sv/verktyg/grus-kalkylator">grus-kalkylatorn</a> och få volym, ton och spill på några sekunder. Vill du se hur materiallistor och mallar fungerar i skarpt projekt? <a href="/sv/contact">Boka en demo</a> så visar vi upplägget för din verksamhet.</p>
+<p>Mät bädden på plats, mata in måtten i <a href="/sv/verktyg/grus-kalkylator">grus-kalkylatorn</a> och få volym, ton och spill på några sekunder. Vill du se hur materiallistor och mallar fungerar i skarpt projekt? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi upplägget för din verksamhet.</p>
 
 <p>Relaterat: <a href="/sv/blog/spillprocent-bygg-material">Spillprocent i byggmaterial</a>, <a href="/sv/blog/berakna-betongatgang-platta">Beräkna betongåtgång till platta</a> och <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>.</p>
 `;
@@ -1141,7 +1141,7 @@ const A_MATERIALATGANG_INNERVAGG_REGLAR_GIPS_HTML = `
 <p>För att löpmeter-schablonen bara räknar de stående reglarna i väggens längd. Den missar syll och hammarband, dubbla reglar i hörn och kanter, reglar på var sida om dörrar och kortlingar över öppningar. Lägg alltid till dessa manuellt.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna din nästa innervägg direkt i vår <a href="/sv/verktyg/reglar-kalkylator">reglar-kalkylator</a> och komplettera med <a href="/sv/verktyg/gips-kalkylator">gips-kalkylatorn</a> för skiv- och skruvantal. Vill du se hur mängderna flödar hela vägen till offert och faktura? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+<p>Räkna din nästa innervägg direkt i vår <a href="/sv/verktyg/reglar-kalkylator">reglar-kalkylator</a> och komplettera med <a href="/sv/verktyg/gips-kalkylator">gips-kalkylatorn</a> för skiv- och skruvantal. Vill du se hur mängderna flödar hela vägen till offert och faktura? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi.</p>
 
 <p>Relaterat: <a href="/sv/blog/spackel-atgang-vagg-tak">Spackelåtgång på vägg och tak</a>, <a href="/sv/blog/rakna-material-till-bygget">Så räknar du material till bygget</a> och <a href="/sv/blog/mangdforteckning-bygg">Mängdförteckning i byggprojekt</a>.</p>
 `;
@@ -1255,7 +1255,7 @@ const A_FARGATGANG_MALNING_M2_HTML = `
 
 <h2>Kom igång</h2>
 
-<p>Räkna ut åtgången på nästa jobb med <a href="/sv/verktyg/farg-kalkylator">färgåtgångskalkylatorn</a>, för in resultatet som separat materialpost och håll arbetskostnaden ren för ROT. Vill du se hur offert och faktura hänger ihop i praktiken, <a href="/sv/contact">boka en demo</a> så visar vi.</p>
+<p>Räkna ut åtgången på nästa jobb med <a href="/sv/verktyg/farg-kalkylator">färgåtgångskalkylatorn</a>, för in resultatet som separat materialpost och håll arbetskostnaden ren för ROT. Vill du se hur offert och faktura hänger ihop i praktiken, <a href="/sv/contact">boka en gratis konsultation</a> så visar vi.</p>
 
 <p>Relaterat: <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>, <a href="/sv/blog/spackel-atgang-vagg-tak">Spackelåtgång på vägg och tak</a>, <a href="/sv/blog/spillprocent-bygg-material">Spillprocent på byggmaterial</a>.</p>
 `;
@@ -1337,7 +1337,7 @@ const A_GOLVMATERIAL_ATGANG_SPILL_HTML = `
 <p>Nej. ROT-avdraget 2026 är 30 % av enbart arbetskostnaden, med tak 50 000 kr per person och år. Material och spill är aldrig avdragsgillt, vilket gör en korrekt materialberäkning viktig för kundens totalkostnad.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna fram rätt antal paket direkt med vår <a href="/sv/verktyg/golv-kalkylator">golv-kalkylator</a>, eller summera flera ytor först i <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a>. Vill du se hur beräkningen kopplas ihop med offert och ROT-underlag, <a href="/sv/contact">boka en demo</a>.</p>
+<p>Räkna fram rätt antal paket direkt med vår <a href="/sv/verktyg/golv-kalkylator">golv-kalkylator</a>, eller summera flera ytor först i <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a>. Vill du se hur beräkningen kopplas ihop med offert och ROT-underlag, <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 <p>Relaterat: <a href="/sv/blog/spillprocent-bygg-material">Spillprocent för byggmaterial</a>, <a href="/sv/blog/kakel-klinker-atgang-vatrum">Kakel- och klinkeråtgång i våtrum</a>, <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>.</p>
 `;
 
@@ -1420,7 +1420,7 @@ const A_BETONG_PLINTAR_STOLPFUNDAMENT_HTML = `
 <p>Arbetet med altan eller uteplats på småhus ger normalt ROT på 30 % av arbetskostnaden 2026, men inte på nybygge. Material som betong och plintar ger aldrig avdrag – bara arbetet.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna ut exakt betongåtgång och säckantal för dina plintar i <a href="/sv/verktyg/betong-kalkylator">betongkalkylatorn</a> innan du beställer. Vill du se hur ByggExp kan samla kalkyl, offert och materialunderlag i ett flöde? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+<p>Räkna ut exakt betongåtgång och säckantal för dina plintar i <a href="/sv/verktyg/betong-kalkylator">betongkalkylatorn</a> innan du beställer. Vill du se hur ByggExp kan samla kalkyl, offert och materialunderlag i ett flöde? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi.</p>
 
 <p>Relaterat: <a href="/sv/blog/berakna-betongatgang-platta">Beräkna betongåtgång för platta</a>, <a href="/sv/blog/armering-berakning-platta-grund">Armeringsberäkning för platta på mark</a> och <a href="/sv/blog/spillprocent-bygg-material">Så räknar du spillprocent på byggmaterial</a>.</p>
 `;
@@ -1516,7 +1516,7 @@ const A_STAKET_MATERIAL_STOLPAR_ATGANG_HTML = `
 <p>Lägg på 10–15 % på virke (brädor och reglar) för kap och spill i offertkalkylen. Betong och stolpar räknas exakt per hål, men avrunda alltid antalet säckar uppåt.</p>
 
 <h2>Kom igång</h2>
-<p>Testa vår <a href="/sv/verktyg/staket-kalkylator">staket-kalkylator</a> och kontrollräkna grunden med <a href="/sv/verktyg/betong-kalkylator">betong-kalkylatorn</a> inför nästa offert. Vill du se hur material, offert och faktura hänger ihop i ByggExp? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Testa vår <a href="/sv/verktyg/staket-kalkylator">staket-kalkylator</a> och kontrollräkna grunden med <a href="/sv/verktyg/betong-kalkylator">betong-kalkylatorn</a> inför nästa offert. Vill du se hur material, offert och faktura hänger ihop i ByggExp? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>, <a href="/sv/blog/spillprocent-bygg-material">Spillprocent på byggmaterial</a> och <a href="/sv/blog/mangdforteckning-bygg">Mängdförteckning för bygg</a>.</p>
 `;
@@ -1614,7 +1614,7 @@ const A_GOLVVARME_BERAKNING_EFFEKT_HTML = `
 <p>Slinglängden begränsas av tryckfallet. Som riktvärde anger Uponor högst cirka 100 m för 20 mm rör och 90 m för 17 mm rör med en vanlig villapump; 16 mm rör ger kortare slingor. Följ rörtillverkarens anvisning och gör alltid en tryckfallsberäkning vid dimensioneringen.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna fram slinglängd och antal slingor på minuter med vår <a href="/sv/verktyg/golvvarme-kalkylator">golvvärmekalkylator</a> och för in resultatet i din offert. Vill du se hur ByggExp håller ihop tid och dagbok per projekt? <a href="/sv/contact">Boka en demo</a>.</p>
+<p>Räkna fram slinglängd och antal slingor på minuter med vår <a href="/sv/verktyg/golvvarme-kalkylator">golvvärmekalkylator</a> och för in resultatet i din offert. Vill du se hur ByggExp håller ihop tid och dagbok per projekt? <a href="/sv/contact">Boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/berakna-u-varde-isolering">Beräkna U-värde för isolering</a> · <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a> · <a href="/sv/blog/kakel-klinker-atgang-vatrum">Åtgång av kakel och klinker i våtrum</a></p>
 `;
@@ -1699,7 +1699,7 @@ const A_TAPET_ATGANG_RULLAR_HTML = `
 <p>Tapet i samma mönster men olika färgparti kan skilja sig något i nyans. Beställer du för lite och måste fylla på från ett annat parti kan skarven synas. Köp därför allt på en gång, med 1–2 rullars marginal.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna åtgången på ditt nästa tapetjobb i vår <a href="/sv/verktyg/tapet-kalkylator">tapetkalkylator</a> och bygg vidare till en färdig offert i ByggExp. Vill du se hur kalkyl, ROT och fakturering hänger ihop i praktiken – <a href="/sv/contact">boka en demo</a>.</p>
+<p>Räkna åtgången på ditt nästa tapetjobb i vår <a href="/sv/verktyg/tapet-kalkylator">tapetkalkylator</a> och bygg vidare till en färdig offert i ByggExp. Vill du se hur kalkyl, ROT och fakturering hänger ihop i praktiken – <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/spillprocent-bygg-material">Spillprocent för byggmaterial</a>, <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a> och <a href="/sv/blog/spackel-atgang-vagg-tak">Spackelåtgång på vägg och tak</a>.</p>
 `;
@@ -1790,7 +1790,7 @@ const A_TAKPANNOR_ANTAL_PER_M2_HTML = `
 <p>Ett flackare tak kräver kortare läktavstånd så att pannorna överlappar mer och håller tätt. Kortare läktavstånd betyder fler pannrader, alltså fler pannor per kvadratmeter.</p>
 
 <h2>Kom igång</h2>
-<p>Mata in takfallen och panntypen i <a href="/sv/verktyg/tak-kalkylator">tak-kalkylatorn</a> så får du antal pannor med spill direkt i offerten. Vill du se hur hela kalkyl- och offertflödet fungerar i ByggExp kan du <a href="/sv/contact">boka en demo</a>.</p>
+<p>Mata in takfallen och panntypen i <a href="/sv/verktyg/tak-kalkylator">tak-kalkylatorn</a> så får du antal pannor med spill direkt i offerten. Vill du se hur hela kalkyl- och offertflödet fungerar i ByggExp kan du <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/berakna-materialatgang-tak">Beräkna materialåtgång för tak</a>, <a href="/sv/blog/lakt-avstand-tak-berakning">Läktavstånd på tak – så beräknar du</a>, <a href="/sv/blog/spillprocent-bygg-material">Spillprocent för byggmaterial</a>.</p>
 `;
@@ -2001,7 +2001,7 @@ const A_BERAKNA_TAKSTOLAR_DIMENSIONERING_C_AVSTAND_HTML = `
 </ul>
 
 <h2>Kom igång</h2>
-<p>Räkna ut antal takstolar, nockhöjd och överram i <a href="/sv/verktyg/takstolar-kalkylator">takstolskalkylatorn</a> och skapa en offert direkt från resultatet. Materialet för hela taket får du i <a href="/sv/verktyg/tak-kalkylator">takkalkylatorn</a>. Vill du se hur ByggExp samlar offert, projekt och egenkontroller på ett ställe? <a href="/sv/contact">Boka en demo</a>.</p>
+<p>Räkna ut antal takstolar, nockhöjd och överram i <a href="/sv/verktyg/takstolar-kalkylator">takstolskalkylatorn</a> och skapa en offert direkt från resultatet. Materialet för hela taket får du i <a href="/sv/verktyg/tak-kalkylator">takkalkylatorn</a>. Vill du se hur ByggExp samlar offert, projekt och egenkontroller på ett ställe? <a href="/sv/contact">Boka en gratis konsultation</a>.</p>
 
 <h2>Relaterade guider</h2>
 <ul>

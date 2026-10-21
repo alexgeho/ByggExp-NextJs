@@ -98,8 +98,8 @@ const CONTENT: Record<L, Content> = {
       },
     ],
     ctaHeading: 'Slipp jaga betalningar i ByggExp',
-    ctaText: 'Fakturera med tydliga betalningsvillkor och håll koll på förfallodatum. Boka en demo.',
-    ctaButton: 'Boka demo',
+    ctaText: 'Fakturera med tydliga betalningsvillkor och håll koll på förfallodatum. Boka en gratis konsultation.',
+    ctaButton: 'Boka gratis konsultation',
     relatedHeading: 'Relaterat',
     related: [
       { href: '/sv/blog/drojsmalsranta-2026', label: 'Guide: dröjsmålsränta 2026' },
@@ -170,8 +170,8 @@ const CONTENT: Record<L, Content> = {
       },
     ],
     ctaHeading: 'Stop chasing payments in ByggExp',
-    ctaText: 'Invoice with clear payment terms and keep track of due dates. Book a demo.',
-    ctaButton: 'Book a demo',
+    ctaText: 'Invoice with clear payment terms and keep track of due dates. Book a free consultation.',
+    ctaButton: 'Book a free consultation',
     relatedHeading: 'Related',
     related: [
       { href: '/en/verktyg/moms-kalkylator', label: 'VAT calculator' },

@@ -118,8 +118,8 @@ export default function HindersanmalanMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Hinder, ÄTA och tidplan i ByggExp',
-          text: 'Dokumentera hinder och ÄTA per projekt med datum och spårbar historik. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Dokumentera hinder och ÄTA per projekt med datum och spårbar historik. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

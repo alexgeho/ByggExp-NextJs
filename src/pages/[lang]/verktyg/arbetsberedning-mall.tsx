@@ -226,8 +226,8 @@ export default function ArbetsberedningMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Arbetsmiljö och egenkontroll i ByggExp',
-          text: 'Samla arbetsberedningar, riskbedömningar och egenkontroller per projekt. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Samla arbetsberedningar, riskbedömningar och egenkontroller per projekt. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

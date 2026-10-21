@@ -155,8 +155,8 @@ export default function EgenkontrollVentilationMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Gör egenkontroller för ventilation i ByggExp',
-          text: 'Färdiga mallar för el, VVS, ventilation, bygg och skyddsrond – ifyllda på plats och samlade per projekt. Boka en demo och se hur det fungerar.',
-          buttonLabel: 'Boka demo',
+          text: 'Färdiga mallar för el, VVS, ventilation, bygg och skyddsrond – ifyllda på plats och samlade per projekt. Boka en gratis konsultation och se hur det fungerar.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Fler guider och mallar"

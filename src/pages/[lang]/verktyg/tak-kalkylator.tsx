@@ -114,8 +114,8 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     ctaHeading: 'Skapa takofferter i ByggExp',
     ctaText:
-      'Bygg offerter med material och arbete, och följ projektet från offert till faktura. Boka en demo.',
-    ctaButton: 'Boka demo',
+      'Bygg offerter med material och arbete, och följ projektet från offert till faktura. Boka en gratis konsultation.',
+    ctaButton: 'Boka gratis konsultation',
     relatedHeading: 'Fler byggkalkylatorer',
     related: [
       { slug: 'takstolar-kalkylator', label: 'Beräkna takstolar' },
@@ -199,8 +199,8 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     ctaHeading: 'Lag taktilbud i ByggExp',
     ctaText:
-      'Bygg tilbud med materialer og arbeid, og følg prosjektet fra tilbud til faktura. Bestill en demo.',
-    ctaButton: 'Bestill demo',
+      'Bygg tilbud med materialer og arbeid, og følg prosjektet fra tilbud til faktura. Bestill en gratis konsultasjon.',
+    ctaButton: 'Bestill gratis konsultasjon',
     relatedHeading: 'Flere byggkalkulatorer',
     related: [
       { slug: 'takstolar-kalkylator', label: 'Beregne takstoler' },
@@ -286,8 +286,8 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     ctaHeading: 'Create roofing quotes in ByggExp',
     ctaText:
-      'Build quotes with material and labour, and follow the project from quote to invoice. Book a demo.',
-    ctaButton: 'Book a demo',
+      'Build quotes with material and labour, and follow the project from quote to invoice. Book a free consultation.',
+    ctaButton: 'Book a free consultation',
     relatedHeading: 'More construction calculators',
     related: [
       { slug: 'takstolar-kalkylator', label: 'Roof trusses calculator' },

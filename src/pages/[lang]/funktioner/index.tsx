@@ -236,7 +236,7 @@ const FUNKTIONER_COPY = {
     customTitle: 'Vi bygger funktioner efter era behov',
     customBody:
       'Varje företag har sina egna arbetssätt. ByggExp är inte bara en färdig standardlösning – det är en plattform som vi gärna vidareutvecklar efter era behov. Berätta om era utmaningar och önskemål, så bygger vi lösningen snabbt och ordentligt. Era idéer blir en del av nya funktioner och uppdateringar i ByggExp.',
-    customCta: 'Boka en demo',
+    customCta: 'Boka en gratis konsultation',
     whyTitle: 'Fortfarande osäker?',
     why: [
       {
@@ -270,7 +270,7 @@ const FUNKTIONER_COPY = {
     customTitle: 'We build features around your needs',
     customBody:
       "Every company has its own way of working. ByggExp isn't just an off-the-shelf solution – it's a platform we're happy to extend to fit your needs. Tell us about your challenges and wishes, and we'll build it fast and with quality. Your ideas become part of new features and updates in ByggExp.",
-    customCta: 'Book a demo',
+    customCta: 'Book a free consultation',
     whyTitle: 'Still not sure?',
     why: [
       {
@@ -338,7 +338,7 @@ const FUNKTIONER_COPY = {
     customTitle: 'Vi bygger funksjoner etter deres behov',
     customBody:
       'Hver bedrift har sine egne arbeidsmåter. ByggExp er ikke bare en ferdig standardløsning – det er en plattform vi gjerne videreutvikler etter deres behov. Fortell oss om deres utfordringer og ønsker, så bygger vi det raskt og med kvalitet. Ideene deres blir en del av nye funksjoner og oppdateringer i ByggExp.',
-    customCta: 'Bestill en demo',
+    customCta: 'Bestill en gratis konsultasjon',
     whyTitle: 'Fortsatt usikker?',
     why: [
       {

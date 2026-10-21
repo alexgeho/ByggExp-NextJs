@@ -121,8 +121,8 @@ export default function RestlistaMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Följ upp punkter som uppgifter i ByggExp',
-          text: 'Restpunkter blir uppgifter med ansvarig och påminnelse, och projektets etapper visar procent klart. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Restpunkter blir uppgifter med ansvarig och påminnelse, och projektets etapper visar procent klart. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

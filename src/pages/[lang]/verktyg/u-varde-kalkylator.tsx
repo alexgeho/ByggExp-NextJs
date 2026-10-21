@@ -98,8 +98,8 @@ const CONTENT: Record<L, Content> = {
       },
     ],
     ctaHeading: 'Kalkylera hela bygget i ByggExp',
-    ctaText: 'Samla materialåtgång, offert och projekt på ett ställe. Boka en demo.',
-    ctaButton: 'Boka demo',
+    ctaText: 'Samla materialåtgång, offert och projekt på ett ställe. Boka en gratis konsultation.',
+    ctaButton: 'Boka gratis konsultation',
     relatedHeading: 'Relaterat',
     related: [
       { href: '/sv/blog/berakna-u-varde-isolering', label: 'Guide: beräkna U-värde' },
@@ -171,8 +171,8 @@ const CONTENT: Record<L, Content> = {
       },
     ],
     ctaHeading: 'Estimate the whole build in ByggExp',
-    ctaText: 'Gather material need, quotes and projects in one place. Book a demo.',
-    ctaButton: 'Book a demo',
+    ctaText: 'Gather material need, quotes and projects in one place. Book a free consultation.',
+    ctaButton: 'Book a free consultation',
     relatedHeading: 'Related',
     related: [
       { href: '/en/verktyg/isolering-kalkylator', label: 'Insulation calculator' },

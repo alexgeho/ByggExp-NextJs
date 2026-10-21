@@ -138,8 +138,8 @@ export default function EntreprenadkontraktMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Från offert till signerat avtal i ByggExp',
-          text: 'Bygg kontraktet ur offerten så att omfattning, pris och villkor följer med hela vägen. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Bygg kontraktet ur offerten så att omfattning, pris och villkor följer med hela vägen. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

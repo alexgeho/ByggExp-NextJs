@@ -146,8 +146,8 @@ export default function OffertMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Skapa offerter proffsigt i ByggExp',
-          text: 'Offert med logotyp, ROT och moms – och ett klick till faktura. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Offert med logotyp, ROT och moms – och ett klick till faktura. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Fler gratis verktyg"

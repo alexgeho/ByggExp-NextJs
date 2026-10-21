@@ -112,8 +112,8 @@ export default function BetalningspaminnelseMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Slipp jaga betalningar i ByggExp',
-          text: 'Fakturera med tydliga villkor och håll koll på förfallodatum. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Fakturera med tydliga villkor och håll koll på förfallodatum. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

@@ -92,8 +92,8 @@ const CONTENT: Record<L, Content> = {
       },
     ],
     ctaHeading: 'Håll koll på tid och lönekostnad i ByggExp',
-    ctaText: 'Tidrapportering och personal samlat, så att du ser vad varje timme kostar. Boka en demo.',
-    ctaButton: 'Boka demo',
+    ctaText: 'Tidrapportering och personal samlat, så att du ser vad varje timme kostar. Boka en gratis konsultation.',
+    ctaButton: 'Boka gratis konsultation',
     relatedHeading: 'Relaterat',
     related: [
       { href: '/sv/blog/vad-kostar-en-anstalld-byggforetag', label: 'Guide: vad kostar en anställd' },
@@ -160,8 +160,8 @@ const CONTENT: Record<L, Content> = {
       },
     ],
     ctaHeading: 'Track time and labour cost in ByggExp',
-    ctaText: 'Time reporting and staff in one place, so you see what every hour costs. Book a demo.',
-    ctaButton: 'Book a demo',
+    ctaText: 'Time reporting and staff in one place, so you see what every hour costs. Book a free consultation.',
+    ctaButton: 'Book a free consultation',
     relatedHeading: 'Related',
     related: [
       { href: '/en/verktyg/timpris-kalkylator', label: 'Hourly rate calculator' },

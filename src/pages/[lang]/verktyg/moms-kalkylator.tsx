@@ -127,8 +127,8 @@ const CONTENT: Record<L, Content> = {
       },
     ],
     ctaHeading: 'Fakturera med rätt moms i ByggExp',
-    ctaText: 'Skapa offert och faktura där moms och ROT räknas ut automatiskt. Boka en demo.',
-    ctaButton: 'Boka demo',
+    ctaText: 'Skapa offert och faktura där moms och ROT räknas ut automatiskt. Boka en gratis konsultation.',
+    ctaButton: 'Boka gratis konsultation',
     relatedHeading: 'Fler gratis verktyg',
     related: [
       { href: '/sv/blog/moms-hantverkare', label: 'Guide: moms & omvänd byggmoms' },
@@ -228,8 +228,8 @@ const CONTENT: Record<L, Content> = {
       },
     ],
     ctaHeading: 'Invoice with the right VAT in ByggExp',
-    ctaText: 'Create quotes and invoices where VAT and ROT are calculated automatically. Book a demo.',
-    ctaButton: 'Book a demo',
+    ctaText: 'Create quotes and invoices where VAT and ROT are calculated automatically. Book a free consultation.',
+    ctaButton: 'Book a free consultation',
     relatedHeading: 'More free tools',
     related: [
       { href: '/en/verktyg/rot-avdrag-kalkylator', label: 'ROT deduction calculator' },

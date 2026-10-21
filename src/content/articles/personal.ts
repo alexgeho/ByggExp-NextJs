@@ -47,7 +47,7 @@ const BEMANNING_HTML = `
 <p>Vid ett projekt går det i huvudet – vid flera blir en delad, digital plan snabbt nödvändig för att undvika krockar och spilltid.</p>
 
 <h2>Kom igång</h2>
-<p>Sluta pussla i huvudet. Planera bemanningen i en delad vy, se frånvaro direkt och koppla planen till tid och lön. <a href="/sv/blog/dagsplanering-och-planeringsmoten">Läs om dagsplanering</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Sluta pussla i huvudet. Planera bemanningen i en delad vy, se frånvaro direkt och koppla planen till tid och lön. <a href="/sv/blog/dagsplanering-och-planeringsmoten">Läs om dagsplanering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/dagsplanering-och-planeringsmoten">Dagsplanering och planeringsmöten</a> · <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">Närvaro och incheckning</a> · <a href="/sv/blog/app-for-tidrapportering-bygg">App för tidrapportering</a></p>
 `.trim();
@@ -125,7 +125,7 @@ const FRANVARO_HTML = `
 <p>20 % av en genomsnittlig veckolön, och görs en gång per sjukperiod.</p>
 
 <h2>Kom igång</h2>
-<p>Håll frånvaron samlad, kopplad till plan och lön. <a href="/sv/blog/bemanningssystem-bygg">Läs om bemanningssystem och bemanningsplanering</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Håll frånvaron samlad, kopplad till plan och lön. <a href="/sv/blog/bemanningssystem-bygg">Läs om bemanningssystem och bemanningsplanering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a> · <a href="/sv/blog/loneunderlag-for-byggforetag">Löneunderlag</a> · <a href="/sv/blog/app-for-tidrapportering-bygg">App för tidrapportering</a></p>
 `.trim();
@@ -251,7 +251,7 @@ const ANSTALLA_HTML = `
 
 <h2>Kom igång</h2>
 
-<p>Kostnaden för din första medarbetare är lägre än många tror tack vare Växa-stödet — men formalian måste sitta. Börja med att räkna hem timpriset i <a href="/sv/verktyg/timpris-kalkylator">vår gratis timpris-kalkylator</a>, så vet du vilken lönenivå och beläggning som faktiskt går ihop. Vill du se hur tidrapportering och kostnadskontroll fungerar i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi hur du får ordning från första anställningen.</p>
+<p>Kostnaden för din första medarbetare är lägre än många tror tack vare Växa-stödet — men formalian måste sitta. Börja med att räkna hem timpriset i <a href="/sv/verktyg/timpris-kalkylator">vår gratis timpris-kalkylator</a>, så vet du vilken lönenivå och beläggning som faktiskt går ihop. Vill du se hur tidrapportering och kostnadskontroll fungerar i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi hur du får ordning från första anställningen.</p>
 
 <p>Relaterat: <a href="/sv/blog/timpris-hantverkare">Sätta timpris som hantverkare</a>, <a href="/sv/blog/tidrapportering">Tidrapportering i byggföretag</a>, <a href="/sv/blog/franvaro-i-byggforetag">Hantera frånvaro i byggföretaget</a>.</p>
 `.trim();
@@ -404,7 +404,7 @@ const A_ARBETSTIDSLAGEN_BYGG_HTML = `
 <p>Arbetsgivaren. Skyldigheten att föra journal över jour-, över- och mertid ligger på företaget enligt 11 § arbetstidslagen, med de närmare reglerna i Arbetsmiljöverkets gällande föreskrifter. Anteckningarna ska hållas tillgängliga och bevaras enligt föreskrifterna. Att en anställd själv ville jobba mer ändrar inte ansvaret.</p>
 
 <h2>Kom igång</h2>
-<p>Bygg en rutin där varje timme registreras löpande, så att dygnsvila, veckovila och övertidstak blir synliga innan de bryts. Starta med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, och vill du se hur digital tidregistrering fungerar för ditt byggföretag – <a href="/sv/contact">boka en demo</a> så visar vi upplägget.</p>
+<p>Bygg en rutin där varje timme registreras löpande, så att dygnsvila, veckovila och övertidstak blir synliga innan de bryts. Starta med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, och vill du se hur digital tidregistrering fungerar för ditt byggföretag – <a href="/sv/contact">boka en gratis konsultation</a> så visar vi upplägget.</p>
 
 <p>Relaterat: <a href="/sv/blog/tidrapportering">Tidrapportering i byggföretag</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a> och <a href="/sv/blog/enkelt-tidrapporteringssystem">Enkelt tidrapporteringssystem</a>.</p>
 `;
@@ -501,7 +501,7 @@ const A_ANSTALLNINGSAVTAL_MALL_BYGG_HTML = `
 <p>För byggnadsarbetare är det Byggavtalet mellan Byggföretagen och Byggnads. Avtalet styr lönebestämmelser, arbetstid och avtalsförsäkringar, och ska anges i anställningsavtalet om företaget är bundet av kollektivavtal.</p>
 
 <h2>Kom igång</h2>
-<p>Ladda ner den ifyllbara anställningsavtal-mallen för bygg bland <a href="/sv/verktyg">våra gratis verktyg</a>, anpassa den efter anställningsform och Byggavtalet och spara dokumentationen. Vill du se hur ByggExp samlar avtal, tidrapportering och fakturering på ett ställe kan du <a href="/sv/contact">boka en demo</a>.</p>
+<p>Ladda ner den ifyllbara anställningsavtal-mallen för bygg bland <a href="/sv/verktyg">våra gratis verktyg</a>, anpassa den efter anställningsform och Byggavtalet och spara dokumentationen. Vill du se hur ByggExp samlar avtal, tidrapportering och fakturering på ett ställe kan du <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag</a> och <a href="/sv/blog/vad-kostar-en-anstalld-byggforetag">Vad kostar en anställd i ett byggföretag?</a></p>
 `;
@@ -572,7 +572,7 @@ const A_MASTE_HA_KOLLEKTIVAVTAL_BYGG_HTML = `
 <p>Nej, det finns ingen lagstadgad skyldighet. Du kan frivilligt teckna försäkringsavtal med Fora, men då utan omställningsstöd. Det lagstadgade grundskyddet via Försäkringskassan gäller dina anställda oavsett.</p>
 
 <h2>Kom igång</h2>
-<p>Oavsett om du tecknar kollektivavtal eller inte behöver varje anställning ett tydligt avtal. Börja med <a href="/sv/verktyg/anstallningsavtal-mall">vår gratis anställningsavtal-mall</a> och få villkoren på plats direkt. Vill du se hur ByggExp håller ordning på avtal, tid och personal? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Oavsett om du tecknar kollektivavtal eller inte behöver varje anställning ett tydligt avtal. Börja med <a href="/sv/verktyg/anstallningsavtal-mall">vår gratis anställningsavtal-mall</a> och få villkoren på plats direkt. Vill du se hur ByggExp håller ordning på avtal, tid och personal? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag</a>, <a href="/sv/blog/anstallningsavtal-mall-bygg">Anställningsavtal mall för bygg</a>, <a href="/sv/blog/arbetstidslagen-bygg">Arbetstidslagen i byggbranschen</a>.</p>
 `;
@@ -646,7 +646,7 @@ const A_PROVANSTALLNING_BYGG_REGLER_HTML = `
 <p>Ja. Enligt YUA kan en lärlings provanställning pågå upp till tolv månader. Ska den avbrytas när den pågått mellan sex och tolv månader måste arbetsgivaren skriftligen underrätta lärlingen och informera BYN-regionen två månader i förväg.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att sätta upp ordning på arbetad tid från första dagen med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, och verifiera alltid detaljerna mot den aktuella avtalstexten i Byggavtalet 2025–2027 innan du fattar beslut om avbrytande. Vill du se hur ByggExp håller ihop tidrapporter och underlag för hela laget? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Börja med att sätta upp ordning på arbetad tid från första dagen med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, och verifiera alltid detaljerna mot den aktuella avtalstexten i Byggavtalet 2025–2027 innan du fattar beslut om avbrytande. Vill du se hur ByggExp håller ihop tidrapporter och underlag för hela laget? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/anstallningsavtal-mall-bygg">Anställningsavtal för byggföretag – mall och regler</a> och <a href="/sv/blog/anstalla-personal-byggforetag">Så anställer du personal i ditt byggföretag</a>.</p>
 `;
@@ -723,7 +723,7 @@ const A_VISSTIDSANSTALLNING_SAVA_BYGG_HTML = `
 <p>Kollektivavtal får avvika från LAS om tidsbegränsade anställningar, och byggavtalen gör det. Under Byggnadsämnesförbundets avtal tillåts till exempel upp till 2 år innan omvandling. Kolla alltid vilket avtal ditt företag är bundet av – LAS-siffran är utgångspunkten, inte hela svaret.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att samla anställningsperioderna på ett ställe. Ladda ner <a href="/sv/verktyg/tidrapport-mall">tidrapport-mallen</a> eller titta i vår samling av <a href="/sv/verktyg">gratis verktyg för byggföretag</a>, och <a href="/sv/contact">boka en demo</a> om du vill se hur ByggExp samlar tid och personaluppgifter i ett flöde.</p>
+<p>Börja med att samla anställningsperioderna på ett ställe. Ladda ner <a href="/sv/verktyg/tidrapport-mall">tidrapport-mallen</a> eller titta i vår samling av <a href="/sv/verktyg">gratis verktyg för byggföretag</a>, och <a href="/sv/contact">boka en gratis konsultation</a> om du vill se hur ByggExp samlar tid och personaluppgifter i ett flöde.</p>
 
 <p>Relaterat: <a href="/sv/blog/anstallningsavtal-mall-bygg">Anställningsavtal – mall för byggföretag</a>, <a href="/sv/blog/anstalla-personal-byggforetag">Så anställer du personal i byggföretaget</a> och <a href="/sv/blog/uppsagning-arbetsbrist-bygg">Uppsägning på grund av arbetsbrist i byggbranschen</a>.</p>
 `;
@@ -813,7 +813,7 @@ const A_VADERSTOPP_PERMITTERING_BYGGAVTALET_HTML = `
 <p>Arbetsgivaren ska utan kostnad tillhandahålla varma ytterkläder och isolerade skor som skyddar mot kyla, samt en uppvärmd värmelokal. Underställ och strumpor är i regel den anställdes eget ansvar — men saknar de tillhandahållna skyddskläderna foder kan arbetsgivaren behöva bekosta även understället så att de kan användas utan risk för ohälsa.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att göra dokumentationen enkel och spårbar. Ladda ner vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för att logga avbrott och omfördelad tid, eller <a href="/sv/contact">boka en demo</a> så visar vi hur ByggExp ger dig timunderlagen du behöver när vädret ställer till det.</p>
+<p>Börja med att göra dokumentationen enkel och spårbar. Ladda ner vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för att logga avbrott och omfördelad tid, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur ByggExp ger dig timunderlagen du behöver när vädret ställer till det.</p>
 
 <p><em>Detta är allmän vägledning, inte juridisk rådgivning. Väderstopp regleras i Byggavtalet 5.3.1, men löneutfallet beror på ditt exakta avtal och den konkreta situationen — verifiera alltid aktuell avtalstext och stäm av med Byggföretagen eller facket.</em></p>
 
@@ -863,7 +863,7 @@ const BEMANNINGSSYSTEM_HTML = `
 <p>I ByggExp planerar du bemanningen visuellt: fördela personal på projekt och pass, se frånvaro och beläggning i en delad vy, och låt medarbetarna se sina uppgifter i mobilen. Eftersom bemanning, närvaro, <a href="/sv/blog/app-for-tidrapportering-bygg">tid</a> och ekonomi ligger i samma app hänger planen ihop med verkligheten – planerade timmar följer med hela vägen till <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlaget</a>.</p>
 
 <h2>Kom igång</h2>
-<p>Sluta pussla bemanningsplaneringen i huvudet eller i Excel. <a href="/sv/blog/bemanning-och-personalplanering">Läs mer om bemanning och personalplanering</a>, se <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggningssystem</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Sluta pussla bemanningsplaneringen i huvudet eller i Excel. <a href="/sv/blog/bemanning-och-personalplanering">Läs mer om bemanning och personalplanering</a>, se <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggningssystem</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
 <h2>Relaterade guider</h2>
 <ul>

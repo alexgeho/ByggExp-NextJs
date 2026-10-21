@@ -13,7 +13,7 @@ export default function ToolAppCta({
   heading,
   text,
   bullets,
-  // Primary = "Boka demo" (no self-serve trial; it's granted manually after the
+  // Primary = "Boka gratis konsultation" (no self-serve trial; it's granted manually after the
   // call). Pages can override. Secondary is optional.
   primary = APP_CTA,
   secondary,

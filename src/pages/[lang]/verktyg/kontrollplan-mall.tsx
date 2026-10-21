@@ -131,8 +131,8 @@ export default function KontrollplanMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Egenkontroller och dokumentation i ByggExp',
-          text: 'Koppla egenkontroller och uppgifter till rätt projekt. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Koppla egenkontroller och uppgifter till rätt projekt. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

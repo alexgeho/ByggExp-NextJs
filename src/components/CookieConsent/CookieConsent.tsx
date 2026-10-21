@@ -57,7 +57,7 @@ export default function CookieConsent() {
     }
   }, []);
 
-  // Delegated click tracking — one listener for "Boka demo" and tool downloads,
+  // Delegated click tracking — one listener for "Boka gratis konsultation" and tool downloads,
   // so no per-component wiring. No-ops until consent grants gtag storage.
   useEffect(() => {
     function onClick(e: MouseEvent) {
@@ -67,7 +67,7 @@ export default function CookieConsent() {
       const href = el.getAttribute?.("href") || "";
       const cls = typeof el.className === "string" ? el.className : "";
 
-      if (cls.includes("nav-cta") || href.includes("#cta") || href.includes("/contact") || /boka demo|book a demo|демо/.test(txt)) {
+      if (cls.includes("nav-cta") || href.includes("#cta") || href.includes("/contact") || /demo|демо|konsultation|konsultasjon|consultation/.test(txt)) {
         gaEvent("book_demo", { location: href || cls });
         return;
       }

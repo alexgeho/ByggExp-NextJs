@@ -103,8 +103,8 @@ const CONTENT: Record<L, Content> = {
       },
     ],
     ctaHeading: 'Håll koll på tider och ÄTA i ByggExp',
-    ctaText: 'Dokumentera tidsförlängning, hinder och ÄTA så att vitesdiskussionen blir enkel. Boka en demo.',
-    ctaButton: 'Boka demo',
+    ctaText: 'Dokumentera tidsförlängning, hinder och ÄTA så att vitesdiskussionen blir enkel. Boka en gratis konsultation.',
+    ctaButton: 'Boka gratis konsultation',
     relatedHeading: 'Relaterat',
     related: [
       { href: '/sv/blog/forseningsvite-entreprenad', label: 'Guide: förseningsvite' },
@@ -178,8 +178,8 @@ const CONTENT: Record<L, Content> = {
       },
     ],
     ctaHeading: 'Track schedules and variations in ByggExp',
-    ctaText: 'Document time extensions, hindrances and variations so the penalty discussion is simple. Book a demo.',
-    ctaButton: 'Book a demo',
+    ctaText: 'Document time extensions, hindrances and variations so the penalty discussion is simple. Book a free consultation.',
+    ctaButton: 'Book a free consultation',
     relatedHeading: 'Related',
     related: [
       { href: '/en/verktyg/drojsmalsranta-kalkylator', label: 'Late-payment interest' },

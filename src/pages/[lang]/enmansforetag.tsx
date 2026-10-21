@@ -234,7 +234,7 @@ export default function EnmansforetagPage({
                 telefon. ByggExp tar kvällens pappersarbete.
               </p>
               <a href="#cta" className="btn-primary">
-                Boka demo
+                Boka gratis konsultation
               </a>
               <ul className="em-checks">
                 <li>2 veckor gratis</li>

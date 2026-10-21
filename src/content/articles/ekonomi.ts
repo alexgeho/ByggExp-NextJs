@@ -53,7 +53,7 @@ const ROT_HTML = `
 <p>Nej. ROT gäller inte nybyggnad; för ett nybyggt småhus medges avdrag först efter fem år.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna rätt varje gång och visa kunden vad de sparar. <a href="/sv/verktyg/rot-avdrag-kalkylator">Testa ROT-kalkylatorn</a>, skapa offert och faktura med ROT i ByggExp eller <a href="/sv/contact">boka en demo</a>.</p>
+<p>Räkna rätt varje gång och visa kunden vad de sparar. <a href="/sv/verktyg/rot-avdrag-kalkylator">Testa ROT-kalkylatorn</a>, skapa offert och faktura med ROT i ByggExp eller <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/verktyg/offert-mall">Offert-mall</a> · <a href="/sv/verktyg/faktura-mall">Faktura-mall</a> · <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylator</a></p>
 `.trim();
@@ -122,7 +122,7 @@ const ATTESTERING_HTML = `
 <p>För att få kostnadskontroll och kunna följa lönsamheten per projekt i realtid.</p>
 
 <h2>Kom igång</h2>
-<p>Få kontroll på vad som betalas – och se marginalen medan projektet pågår. <a href="/sv/blog/projektekonomi-och-lonsamhet">Läs om projektekonomi</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Få kontroll på vad som betalas – och se marginalen medan projektet pågår. <a href="/sv/blog/projektekonomi-och-lonsamhet">Läs om projektekonomi</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/projektekonomi-och-lonsamhet">Projektekonomi och lönsamhet</a> · <a href="/sv/blog/fota-kvitton-och-hantera-utlagg">Fota kvitton och hantera utlägg</a> · <a href="/sv/blog/loneunderlag-for-byggforetag">Löneunderlag</a></p>
 `.trim();
@@ -219,7 +219,7 @@ const TIMPRIS_HTML = `
 <p>Restid är en kostnad oavsett om du debiterar den separat eller inte. Antingen fakturerar du restiden explicit, eller så måste den räknas in i timpriset via en lägre debiteringsgrad. Det viktiga är att den inte &quot;försvinner&quot;.</p>
 
 <h2>Kom igång</h2>
-<p>Sätt timpriset utifrån dina egna kostnader – inte grannens. <a href="/sv/verktyg/timpris-kalkylator">Räkna ut ditt timpris gratis</a>, eller <a href="/sv/contact">boka en demo av ByggExp</a> och se hur tidrapporteringen ger dig den debiteringsgrad du behöver för att prissätta rätt.</p>
+<p>Sätt timpriset utifrån dina egna kostnader – inte grannens. <a href="/sv/verktyg/timpris-kalkylator">Räkna ut ditt timpris gratis</a>, eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a> och se hur tidrapporteringen ger dig den debiteringsgrad du behöver för att prissätta rätt.</p>
 
 <p>Relaterade verktyg: <a href="/sv/verktyg/timpris-kalkylator">Timpris-kalkylator</a> · <a href="/sv/verktyg/paslag-marginal-kalkylator">Påslag &amp; marginal</a> · <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdrag</a> · <a href="/sv/verktyg/tidrapport-mall">Tidrapport-mall</a></p>
 `.trim();
@@ -313,7 +313,7 @@ const OFFERT_HTML = `
 <p>Det bestämmer du, men 14–30 dagar är vanligt. Sätt alltid en giltighetstid så att du inte är bunden till ett pris när materialkostnaderna hunnit ändras.</p>
 
 <h2>Kom igång</h2>
-<p>En tydlig offert vinner jobbet och skyddar dig. <a href="/sv/verktyg/offert-mall">Skapa en gratis offert (PDF)</a>, eller <a href="/sv/contact">boka en demo av ByggExp</a> och håll ihop offert, ÄTA och faktura i ett flöde.</p>
+<p>En tydlig offert vinner jobbet och skyddar dig. <a href="/sv/verktyg/offert-mall">Skapa en gratis offert (PDF)</a>, eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a> och håll ihop offert, ÄTA och faktura i ett flöde.</p>
 
 <p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a> · <a href="/sv/blog/timpris-hantverkare">Timpris</a> · <a href="/sv/verktyg/offert-mall">Offertmall</a> · <a href="/sv/verktyg/faktura-mall">Fakturamall</a></p>
 `.trim();
@@ -389,7 +389,7 @@ const MOMS_HTML = `
 <p>Sju år enligt bokföringslagen. Det gäller fakturor, avtal, tidrapporter och ROT-underlag.</p>
 
 <h2>Kom igång</h2>
-<p>Fakturera med rätt moms – varje gång. <a href="/sv/verktyg/moms-kalkylator">Räkna moms gratis</a>, eller <a href="/sv/contact">boka en demo av ByggExp</a> och låt systemet hålla koll på moms, omvänd byggmoms och ROT åt dig.</p>
+<p>Fakturera med rätt moms – varje gång. <a href="/sv/verktyg/moms-kalkylator">Räkna moms gratis</a>, eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a> och låt systemet hålla koll på moms, omvänd byggmoms och ROT åt dig.</p>
 
 <p>Relaterat: <a href="/sv/blog/skriva-offert">Skriva offert</a> · <a href="/sv/verktyg/moms-kalkylator">Moms-kalkylator</a> · <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdrag</a> · <a href="/sv/verktyg/faktura-mall">Fakturamall</a></p>
 `.trim();
@@ -506,7 +506,7 @@ const FAKTURA_HTML = `
 
 <h2>Kom igång</h2>
 
-<p>Skapa din nästa faktura med rätt uppgifter från start i vår <a href="/sv/verktyg/faktura-mall">gratis fakturamall</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du fakturerar hela jobbet – tid, material och ROT – utan att missa en lagkrävd uppgift.</p>
+<p>Skapa din nästa faktura med rätt uppgifter från start i vår <a href="/sv/verktyg/faktura-mall">gratis fakturamall</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du fakturerar hela jobbet – tid, material och ROT – utan att missa en lagkrävd uppgift.</p>
 
 <p>Checklista före varje faktura: fakturanummer i obruten serie, faktura- och leveransdatum, säljarens momsnr, köparens uppgifter, specificerad tjänst, pris ex moms, rätt momssats (eller omvänd byggmoms-märkning), ROT-uppdelning vid privatkund, "Godkänd för F-skatt", samt förfallodatum och villkor.</p>
 
@@ -689,7 +689,7 @@ const EFAKTURA_HTML = `
 <p>Det är inte beslutat. En statlig utredning ska lämna sitt förslag senast 30 november 2027, och först därefter kan ett inhemskt krav bli aktuellt. Räkna med slutet av 2020-talet som tidigast.</p>
 
 <h2>Kom igång</h2>
-<p>Vänta inte tills kravet är skarpt - se till att din fakturering är korrekt och strukturerad redan nu. Skapa en professionell faktura med vår gratis <a href="/sv/verktyg/faktura-mall">fakturamall</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur ByggExp håller ordning på hela fakturaflödet åt dig.</p>
+<p>Vänta inte tills kravet är skarpt - se till att din fakturering är korrekt och strukturerad redan nu. Skapa en professionell faktura med vår gratis <a href="/sv/verktyg/faktura-mall">fakturamall</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur ByggExp håller ordning på hela fakturaflödet åt dig.</p>
 
 <p>Relaterat: <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare - komplett guide</a> och <a href="/sv/blog/moms-hantverkare">Moms för hantverkare: så gör du rätt</a>.</p>
 `.trim();
@@ -766,7 +766,7 @@ const KUNDEN_HTML = `
 <p>Ja. Mot ett annat företag eller en myndighet har du automatisk rätt till 450 kr i förseningsersättning så snart fakturan förfaller, förutsatt att den hade minst 30 dagars betalningsvillkor. Det krävs varken avtal, påminnelse eller separat krav.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med grunden: en korrekt faktura med förfallodag och specifikation. Skapa din med <a href="/sv/verktyg/faktura-mall">vår gratis faktura-mall</a>, och sätt rätt betalvillkor redan i offerten med <a href="/sv/verktyg/offert-mall">offert-mallen</a>. Vill du se hur ByggExp knyter tid, material och ÄTA till ett fakturaunderlag som håller i en tvist? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Börja med grunden: en korrekt faktura med förfallodag och specifikation. Skapa din med <a href="/sv/verktyg/faktura-mall">vår gratis faktura-mall</a>, och sätt rätt betalvillkor redan i offerten med <a href="/sv/verktyg/offert-mall">offert-mallen</a>. Vill du se hur ByggExp knyter tid, material och ÄTA till ett fakturaunderlag som håller i en tvist? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 <p>Relaterat: <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a> och <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a>.</p>
 `.trim();
 
@@ -852,7 +852,7 @@ const BETVILLK_HTML = `
 <p>Inte om ni avtalat ett förfallodatum i förväg — då löper räntan automatiskt från förfallodagen. Har ni inte avtalat något datum får du kräva ränta först 30 dagar efter att fakturan skickats.</p>
 
 <h2>Kom igång</h2>
-<p>Standardisera dina betalningsvillkor en gång så sparar du dagar av kredittid på varje jobb. Bygg din faktura med rätt villkor i <a href="/sv/verktyg/faktura-mall">vår fakturamall</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur automatisk fakturering och påminnelserutin fungerar i praktiken.</p>
+<p>Standardisera dina betalningsvillkor en gång så sparar du dagar av kredittid på varje jobb. Bygg din faktura med rätt villkor i <a href="/sv/verktyg/faktura-mall">vår fakturamall</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur automatisk fakturering och påminnelserutin fungerar i praktiken.</p>
 
 <p>Relaterat: <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a> &middot; <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a></p>
 `.trim();
@@ -947,7 +947,7 @@ const VADKOST_HTML = `
 <p>För att en byggnadsarbetare bara debiterar 60–75 % av sin arbetstid. All icke-fakturerbar tid samt fordon, verktyg, försäkringar och certifikat måste bäras av de timmar du faktiskt tar betalt för, vilket pressar upp anbudspriset rejält.</p>
 
 <h2>Kom igång</h2>
-<p>Sätt rätt siffra för ditt nästa anbud genom att räkna igenom din egen kostnad i vår <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator</a>. Vill du se hur ByggExp hjälper dig fånga verklig debiteringsgrad och kalkylera anbud på riktiga tal? <a href="/sv/contact">Boka en demo &rarr;</a></p>
+<p>Sätt rätt siffra för ditt nästa anbud genom att räkna igenom din egen kostnad i vår <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator</a>. Vill du se hur ByggExp hjälper dig fånga verklig debiteringsgrad och kalkylera anbud på riktiga tal? <a href="/sv/contact">Boka en gratis konsultation &rarr;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/timpris-hantverkare">Så sätter du rätt timpris som hantverkare</a>, <a href="/sv/blog/tidrapportering">Tidrapportering i byggföretaget</a> och <a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a>.</p>
 `.trim();
@@ -1026,7 +1026,7 @@ const LIKVID_HTML = `
 <p>Dröjsmålsränta enligt räntelagen (referensräntan plus 8 procentenheter) från förfallodagen. Är kunden ett företag har du dessutom rätt till 450 kr i förseningsersättning samt skäliga inkassokostnader, utöver räntan.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna ut ROT-delen och kundens faktiska betalning innan du lämnar pris med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>, och skapa en korrekt faktura med rätt villkor i <a href="/sv/verktyg/faktura-mall">vår fakturamall</a>. Vill du se hur offert, ROT och fakturabevakning hänger ihop i ett flöde? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+<p>Räkna ut ROT-delen och kundens faktiska betalning innan du lämnar pris med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>, och skapa en korrekt faktura med rätt villkor i <a href="/sv/verktyg/faktura-mall">vår fakturamall</a>. Vill du se hur offert, ROT och fakturabevakning hänger ihop i ett flöde? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi.</p>
 
 <p>Relaterat: <a href="/sv/blog/rot-avdrag">ROT-avdrag – så fungerar fakturamodellen</a>, <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a> och <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a>.</p>
 `.trim();
@@ -1103,7 +1103,7 @@ const ENSKILD_HTML = `
 <p>Ja, du kan ombilda en enskild firma till aktiebolag när verksamheten växer. Det finns skatteregler för hur tillgångar överförs, så gör bytet tillsammans med revisor för att undvika onödig beskattning.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att räkna hem ekonomin oavsett form: testa vår <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator →</a> och kontrollera momsen med <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn →</a>. Vill du se hur tidrapportering och fakturering hänger ihop i praktiken, <a href="/sv/contact">boka en demo →</a> så visar vi upplägget för just ditt byggföretag.</p>
+<p>Börja med att räkna hem ekonomin oavsett form: testa vår <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator →</a> och kontrollera momsen med <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn →</a>. Vill du se hur tidrapportering och fakturering hänger ihop i praktiken, <a href="/sv/contact">boka en gratis konsultation →</a> så visar vi upplägget för just ditt byggföretag.</p>
 
 <p>Relaterat: <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a> och <a href="/sv/blog/fakturera-som-hantverkare">Så fakturerar du som hantverkare</a>.</p>
 `.trim();
@@ -1194,7 +1194,7 @@ const A_ANLITA_UNDERENTREPRENOR_HTML = `
 <p>En underentreprenör utför ett avgränsat arbete med egen arbetsledning, eget material och egna maskiner. Bemanning är inhyrd arbetskraft per timme där du själv leder arbetet och står för utrustningen. Vid inhyrd personal bär du i princip hela arbetsmiljöansvaret.</p>
 
 <h2>Kom igång</h2>
-<p>Lägg grunden för en trygg UE-affär redan i offertskedet med vår <a href="/sv/verktyg/offert-mall">offertmall &rarr;</a>, och håll ändringar spårbara med <a href="/sv/verktyg/ata-mall">ÄTA-mallen &rarr;</a>. Vill du se hur ByggExp håller ihop offerter, UE-avtal och fakturor per projekt? <a href="/sv/contact">Boka en demo &rarr;</a> så visar vi upplägget.</p>
+<p>Lägg grunden för en trygg UE-affär redan i offertskedet med vår <a href="/sv/verktyg/offert-mall">offertmall &rarr;</a>, och håll ändringar spårbara med <a href="/sv/verktyg/ata-mall">ÄTA-mallen &rarr;</a>. Vill du se hur ByggExp håller ihop offerter, UE-avtal och fakturor per projekt? <a href="/sv/contact">Boka en gratis konsultation &rarr;</a> så visar vi upplägget.</p>
 
 <p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaden mellan utförande- och totalentreprenad</a> och <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag – så gör du</a>.</p>
 `;
@@ -1257,7 +1257,7 @@ const A_A_CONTO_FAKTURERING_BYGG_HTML = `
 <p>Ja. ROT-avdraget kan appliceras på à conto-fakturor till privatpersoner. 2026 är avdraget 30 % av arbetskostnaden, med tak på 50 000 kr per person och år. Ange kundens personnummer på fakturan och begär utbetalningen från Skatteverket, normalt efter att fakturan är betald. Bara arbetskostnaden ger avdrag — inte material.</p>
 
 <h2>Kom igång</h2>
-<p>À conto-fakturering vänder 60 dagars betaltid från en likviditetsrisk till ett förutsägbart kassaflöde — förutsatt att du sätter en genomtänkt betalningsplan och fakturerar löpande. Börja med <a href="/sv/verktyg/faktura-mall">vår fakturamall</a> och sätt upp dina delposter redan i dag. Vill du se hur ByggExp kan effektivisera hela flödet från tidrapport till faktura? <a href="/sv/contact">Boka en demo här.</a></p>
+<p>À conto-fakturering vänder 60 dagars betaltid från en likviditetsrisk till ett förutsägbart kassaflöde — förutsatt att du sätter en genomtänkt betalningsplan och fakturerar löpande. Börja med <a href="/sv/verktyg/faktura-mall">vår fakturamall</a> och sätt upp dina delposter redan i dag. Vill du se hur ByggExp kan effektivisera hela flödet från tidrapport till faktura? <a href="/sv/contact">Boka en gratis konsultation här.</a></p>
 
 <p>Relaterat: <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a>, <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på fakturor i bygg</a> och <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a>.</p>
 `;
@@ -1443,7 +1443,7 @@ const A_FAST_PRIS_ELLER_LOPANDE_RAKNING_HTML = `
 
 <h2>Kom igång</h2>
 
-<p>Sammanfattningen är enkel: välj löpande räkning som default när omfattningen är osäker, dokumentera allt löpande och håll ÄTA separat och skriftligt. Sätt upp rutinen med <a href="/sv/verktyg/offert-mall">offertmallen</a> och <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a>, eller <a href="/sv/contact">boka en demo →</a> så visar vi hur du får hela flödet från offert till ÄTA-faktura på plats.</p>
+<p>Sammanfattningen är enkel: välj löpande räkning som default när omfattningen är osäker, dokumentera allt löpande och håll ÄTA separat och skriftligt. Sätt upp rutinen med <a href="/sv/verktyg/offert-mall">offertmallen</a> och <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a>, eller <a href="/sv/contact">boka en gratis konsultation →</a> så visar vi hur du får hela flödet från offert till ÄTA-faktura på plats.</p>
 
 <p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten – så anmäler och fakturerar du rätt</a> och <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a>.</p>
 `;
@@ -1532,7 +1532,7 @@ const A_TACKNINGSBIDRAG_BYGGFORETAG_HTML = `
 <p>Ett påslag på 10–15 procent på inköpspriset är branschstandard och ska täcka tid för inköp, logistik, lager och garantiansvar. Materialet prissätts alltså mot inköp (påslag), medan arbetet prissätts mot pris (marginal) – två olika baser som inte bör blandas ihop.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att räkna om dina egna påslag till verkliga marginaler i <a href="/sv/verktyg/paslag-marginal-kalkylator">påslag- och marginalkalkylatorn</a>, och bygg nästa jobb i <a href="/sv/verktyg/offert-mall">offertmallen</a> med arbete och material var för sig. Vill du se hur täckningsbidraget räknas ut automatiskt på dina offerter, <a href="/sv/contact">boka en demo</a> så visar vi.</p>
+<p>Börja med att räkna om dina egna påslag till verkliga marginaler i <a href="/sv/verktyg/paslag-marginal-kalkylator">påslag- och marginalkalkylatorn</a>, och bygg nästa jobb i <a href="/sv/verktyg/offert-mall">offertmallen</a> med arbete och material var för sig. Vill du se hur täckningsbidraget räknas ut automatiskt på dina offerter, <a href="/sv/contact">boka en gratis konsultation</a> så visar vi.</p>
 <p>Relaterat: <a href="/sv/blog/timpris-hantverkare">Så sätter du rätt timpris som hantverkare</a> och <a href="/sv/blog/paslag-pa-material">Påslag på material – vad som är rimligt och varför</a>.</p>
 `;
 
@@ -1637,7 +1637,7 @@ const A_DROJSMALSRANTA_2026_HTML = `
 <p>Ja. Vid dröjsmål mellan företag har du automatiskt rätt till 450 kr i förseningsersättning enligt lagen om ersättning för inkassokostnader (1981:739), utan att först behöva skicka en påminnelse.</p>
 
 <h2>Kom igång</h2>
-<p>Skapa fakturor med rätt förfallodag och betalningsvillkor från start med vår <a href="/sv/verktyg/faktura-mall">gratis fakturamall</a>, och utforska fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur ByggExp hjälper dig hålla koll på förfallna fakturor? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Skapa fakturor med rätt förfallodag och betalningsvillkor från start med vår <a href="/sv/verktyg/faktura-mall">gratis fakturamall</a>, och utforska fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur ByggExp hjälper dig hålla koll på förfallna fakturor? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a> och <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturor</a>.</p>
 `;
@@ -1749,7 +1749,7 @@ const A_BOKFORING_ENSKILD_FIRMA_BYGG_HTML = `
 
 <h2>Kom igång</h2>
 
-<p>Bygg in en enkel månadsrutin: fakturera med rätt moms varje gång, spara kvitton digitalt löpande och stäm av ingående mot utgående moms innan deklarationen. Räkna momsen rätt med <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn</a> och sätt upp fakturorna med <a href="/sv/verktyg/faktura-mall">faktura-mallen</a>. Vill du se hur ByggExp håller projekt, timmar och underlag på plats? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Bygg in en enkel månadsrutin: fakturera med rätt moms varje gång, spara kvitton digitalt löpande och stäm av ingående mot utgående moms innan deklarationen. Räkna momsen rätt med <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn</a> och sätt upp fakturorna med <a href="/sv/verktyg/faktura-mall">faktura-mallen</a>. Vill du se hur ByggExp håller projekt, timmar och underlag på plats? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/moms-hantverkare">Moms för hantverkare – så gör du rätt</a> och <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggföretag?</a></p>
 `;
@@ -1913,7 +1913,7 @@ const A_PERIODISERINGSFOND_BYGGBOLAG_HTML = `
 <p>Ja, du kan återföra en fond helt eller delvis tidigare än sexårsgränsen, till exempel för att möta en förlust eller en stor investering. Vid likvidation, konkurs eller att verksamheten upphör sker återföringen dock tvingande och all fond tas upp på en gång.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att skaffa dig en tydlig bild av bolagets resultat i god tid före bokslutet – då blir beslutet om periodiseringsfond en strategi och inte en gissning. Utforska <a href="/sv/verktyg">våra gratis verktyg för byggföretag</a> för att räkna på siffrorna, och <a href="/sv/contact">boka en demo av ByggExp</a> om du vill se hur samlade projekt- och ekonomiunderlag underlättar planeringen.</p>
+<p>Börja med att skaffa dig en tydlig bild av bolagets resultat i god tid före bokslutet – då blir beslutet om periodiseringsfond en strategi och inte en gissning. Utforska <a href="/sv/verktyg">våra gratis verktyg för byggföretag</a> för att räkna på siffrorna, och <a href="/sv/contact">boka en gratis konsultation av ByggExp</a> om du vill se hur samlade projekt- och ekonomiunderlag underlättar planeringen.</p>
 
 <p>Relaterat: <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a> och <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggverksamhet</a>.</p>
 `;
@@ -2003,7 +2003,7 @@ const A_ATA_HANTERING_MALL_HTML = `
 <p>Då styr konsumenttjänstlagen. Enligt 8 § ska du underrätta konsumenten och begära anvisningar innan tilläggsarbete utförs, och enligt 15-procentsregeln i 36 § får en ungefärlig prisuppgift inte överskridas med mer än 15 procent utan att annat avtalats.</p>
 
 <h2>Kom igång</h2>
-<p>Sätt en fast rutin och använd samma blankett i varje projekt. Ladda ner <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall</a> och börja dokumentera redan i nästa avvikelse. Vill du se hur ÄTA-hanteringen fungerar samlat i ett projekt kan du <a href="/sv/contact">boka en demo</a> så visar vi hur rutinen ser ut i praktiken.</p>
+<p>Sätt en fast rutin och använd samma blankett i varje projekt. Ladda ner <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall</a> och börja dokumentera redan i nästa avvikelse. Vill du se hur ÄTA-hanteringen fungerar samlat i ett projekt kan du <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur rutinen ser ut i praktiken.</p>
 
 <p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten – grunderna du behöver kunna</a> och <a href="/sv/blog/kunden-betalar-inte-fakturan">Kunden betalar inte fakturan – så gör du</a>.</p>
 `;
@@ -2074,7 +2074,7 @@ const A_SJUKLON_KARENSAVDRAG_VAB_BYGGFORETAG_HTML = `
 <p>Ja. Via ersättningen för höga sjuklönekostnader betalar Försäkringskassan automatiskt tillbaka den del av din sjuklönekostnad som överstiger en tröskel kopplad till din lönesumma, upp till 250 000 kr per år. Förutsättningen är att du redovisar kostnaden i arbetsgivardeklarationen varje månad.</p>
 
 <h2>Kom igång</h2>
-<p>Rätt sjuklön och karensavdrag börjar med rätt tidunderlag. Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och få ordning på arbetade timmar och frånvaro redan denna vecka. Vill du se hur digital tid- och frånvarohantering ser ut i praktiken? <a href="/sv/contact">Boka en demo →</a> så visar vi upplägget för ditt byggföretag.</p>
+<p>Rätt sjuklön och karensavdrag börjar med rätt tidunderlag. Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och få ordning på arbetade timmar och frånvaro redan denna vecka. Vill du se hur digital tid- och frånvarohantering ser ut i praktiken? <a href="/sv/contact">Boka en gratis konsultation →</a> så visar vi upplägget för ditt byggföretag.</p>
 
 <p>Relaterat: <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag – så håller du koll</a> och vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>.</p>
 `;
@@ -2150,7 +2150,7 @@ const A_STARTA_BYGGFORETAG_2026_HTML = `
 <p>Ingen försäkring är lagstadgad för ett litet byggföretag, men standardavtalen AB 04, ABT 06 och ABS 18 förutsätter att du har en ansvars- och <a href="/sv/blog/entreprenadforsakring-allrisk-vad-tacker">entreprenadförsäkring</a>. Har du anställda tillkommer avtalsförsäkringarna TFA och tjänstepension via Fora.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med det som ger effekt direkt: sätt upp en proffsig offert med vår <a href="/sv/verktyg/offert-mall">offertmall</a> och visa kunden nettopriset med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur ByggExp hänger ihop offert, ROT och fakturering i ett flöde, <a href="/sv/contact">boka en demo</a> så går vi igenom det tillsammans.</p>
+<p>Börja med det som ger effekt direkt: sätt upp en proffsig offert med vår <a href="/sv/verktyg/offert-mall">offertmall</a> och visa kunden nettopriset med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur ByggExp hänger ihop offert, ROT och fakturering i ett flöde, <a href="/sv/contact">boka en gratis konsultation</a> så går vi igenom det tillsammans.</p>
 <p>Relaterat: <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för bygg</a>, <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a> och <a href="/sv/blog/skriva-offert">Så skriver du en offert som vinner jobbet</a>.</p>
 `;
 
@@ -2254,7 +2254,7 @@ const A_FACTORING_BYGGFORETAG_HTML = `
 <p>Det beror på behovet. Factoring passar när kapital fastnar i kundfordringar med långa betaltider. En checkkredit är mer flexibel för oregelbundna svackor. Många byggbolag kombinerar båda.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att strama upp ditt eget fakturaflöde innan du betalar för extern finansiering. Skapa korrekta fakturor med vår <a href="/sv/verktyg/faktura-mall">gratis fakturamall →</a>, eller <a href="/sv/contact">boka en demo →</a> så visar vi hur ByggExp håller koll på förfallodatum och obetalda fakturor. Den här guiden är oberoende vägledning, inte finansiell rådgivning.</p>
+<p>Börja med att strama upp ditt eget fakturaflöde innan du betalar för extern finansiering. Skapa korrekta fakturor med vår <a href="/sv/verktyg/faktura-mall">gratis fakturamall →</a>, eller <a href="/sv/contact">boka en gratis konsultation →</a> så visar vi hur ByggExp håller koll på förfallodatum och obetalda fakturor. Den här guiden är oberoende vägledning, inte finansiell rådgivning.</p>
 
 <p>Relaterat: <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a> och <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a>.</p>
 `;
@@ -2340,7 +2340,7 @@ const A_ROTAVDRAG_2026_NYA_REGLER_FORETAG_HTML = `
 <p>Då riskerar du att stå utan den avdragna delen. Skriv därför in i avtalet att kunden betalar mellanskillnaden om avdraget uteblir, exempelvis på grund av fullt tak eller för låg skatt.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna ut kundens nettopris och företagets utbetalning på sekunder med vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylator</a>. Vill du se hur ByggExp kan effektivisera hela flödet från offert till betald faktura? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Räkna ut kundens nettopris och företagets utbetalning på sekunder med vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylator</a>. Vill du se hur ByggExp kan effektivisera hela flödet från offert till betald faktura? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/rot-avdrag">Rotavdrag – så fungerar det</a>, <a href="/sv/blog/faktura-med-rotavdrag">Faktura med rotavdrag – exempel &amp; mall</a> och <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a>.</p>
 `;
@@ -2429,7 +2429,7 @@ const A_AVDRAG_ENSKILD_FIRMA_BYGG_HTML = `
 <p>Ja, med ett schablonavdrag på 2 000 kr/år om du bor i egen villa/fastighet och 4 000 kr/år i hyres- eller bostadsrätt, förutsatt att du arbetar minst 800 timmar per år i bostaden för verksamheten. Offert-, planerings- och administrationstid räknas in.</p>
 
 <h2>Kom igång</h2>
-<p>Håll ordning på mil, verktyg och offerter redan under året med <a href="/sv/verktyg">våra gratis verktyg för byggföretagare</a>, så är underlaget klart när du ska deklarera. Vill du se hur ByggExp samlar order, tid och fakturaunderlag på ett ställe? <a href="/sv/contact">Boka en demo här</a>. Kom ihåg att beloppen ovan gäller inkomstår 2026 – dubbelkolla alltid aktuella schablonbelopp mot Skatteverket.</p>
+<p>Håll ordning på mil, verktyg och offerter redan under året med <a href="/sv/verktyg">våra gratis verktyg för byggföretagare</a>, så är underlaget klart när du ska deklarera. Vill du se hur ByggExp samlar order, tid och fakturaunderlag på ett ställe? <a href="/sv/contact">Boka en gratis konsultation här</a>. Kom ihåg att beloppen ovan gäller inkomstår 2026 – dubbelkolla alltid aktuella schablonbelopp mot Skatteverket.</p>
 
 <p>Relaterat: <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggföretag</a> och <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a>.</p>
 `;
@@ -2521,7 +2521,7 @@ const A_AVDRAG_ARBETSKLADER_VERKTYG_HTML = `
 <p>Väder- och kylskydd för utomhusarbete räknas som skyddsutrustning och är avdragsgilla när de behövs för arbetet. Regnkläder och funktionsunderställ som är avsedda för och används i utomhusarbetet faller normalt in under skyddskläder, medan plagg som lika gärna kan användas privat bedöms som vanliga kläder.</p>
 
 <h2>Kom igång</h2>
-<p>Samla kvitton, inköp och underlag för dina avdrag på ett ställe med våra <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur ByggExp fungerar i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi hur du håller ordning på dokumentationen.</p>
+<p>Samla kvitton, inköp och underlag för dina avdrag på ett ställe med våra <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur ByggExp fungerar i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi hur du håller ordning på dokumentationen.</p>
 
 <p>Relaterat: <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggverksamhet</a> · <a href="/sv/verktyg">Verktyg för byggföretag</a></p>
 `;
@@ -2606,7 +2606,7 @@ const A_REPRESENTATIONSAVDRAG_2026_HTML = `
 <p>Normalt medges avdrag för högst två personalfester per år, med 180 kr per person i kringkostnader plus momsavdrag på maten.</p>
 
 <h2>Kom igång</h2>
-<p>Samla kvitton, syfte och deltagare löpande så blir representationsavdraget rätt utan stress vid deklarationen. Utforska <a href="/sv/verktyg">våra gratis verktyg</a> eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller ordning på ekonomin i vardagen.</p>
+<p>Samla kvitton, syfte och deltagare löpande så blir representationsavdraget rätt utan stress vid deklarationen. Utforska <a href="/sv/verktyg">våra gratis verktyg</a> eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du håller ordning på ekonomin i vardagen.</p>
 
 <p>Relaterat: <a href="/sv/blog/moms-hantverkare">Moms för hantverkare: så funkar 25 %, omvänd byggmoms och ROT</a></p>
 `;
@@ -2694,7 +2694,7 @@ const A_SERVICEBIL_ELLER_FORMANSBIL_HTML = `
 <p>Ja. Kör du minst 3 000 mil i tjänsten under året sätts förmånsvärdet ned till 75 %. Det gör förmånsbil mer intressant för hantverkare med hög årlig körsträcka.</p>
 
 <h2>Kom igång</h2>
-<p>Bestäm dig utifrån din körning: mycket tjänst och lite privat pekar mot servicebil, blandat mot förmånsbil, sällan mot egen bil och milersättning. Räkna på alternativen med <a href="/sv/verktyg">våra gratis verktyg</a> och stäm av de exakta 2026-talen med Skatteverket eller din redovisningskonsult. Vill du se hur ByggExp håller ordning på tid, uppdrag och resor? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Bestäm dig utifrån din körning: mycket tjänst och lite privat pekar mot servicebil, blandat mot förmånsbil, sällan mot egen bil och milersättning. Räkna på alternativen med <a href="/sv/verktyg">våra gratis verktyg</a> och stäm av de exakta 2026-talen med Skatteverket eller din redovisningskonsult. Vill du se hur ByggExp håller ordning på tid, uppdrag och resor? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggföretag – vad ska du välja?</a></p>
 `;
@@ -2775,7 +2775,7 @@ const A_DEBITERA_SERVICEBIL_ROT_HTML = `
 <p>Nej. Maskinhyra och utrustning är uttryckligen undantaget och ska särredovisas som en egen rad utan avdrag.</p>
 
 <h2>Kom igång</h2>
-<p>Grundprincipen är enkel att följa när du väl har raderna på plats: särredovisa alltid arbete, material, framkörning och maskinhyra – och låt bara arbetet bära ROT. Räkna på ditt nästa uppdrag med vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylator</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du sätter upp korrekta ROT-fakturor från början.</p>
+<p>Grundprincipen är enkel att följa när du väl har raderna på plats: särredovisa alltid arbete, material, framkörning och maskinhyra – och låt bara arbetet bära ROT. Räkna på ditt nästa uppdrag med vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylator</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du sätter upp korrekta ROT-fakturor från början.</p>
 
 <p>Relaterat: <a href="/sv/blog/rot-avdrag">Så fungerar ROT-avdraget för hantverkare</a>, <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare – guide</a> och <a href="/sv/blog/gron-teknik-avdrag">Grön teknik-avdrag (solceller, laddbox, batteri)</a>.</p>
 `;
@@ -2851,7 +2851,7 @@ const A_LEVERANTORSFAKTURA_BYGG_PROJEKT_HTML = `
 <p>Till utgången av det sjunde året efter det kalenderår då räkenskapsåret avslutades. De är verifikationer som ska ingå i en spårbar verifieringskedja enligt bokföringslagen.</p>
 
 <h2>Kom igång</h2>
-<p>Sätt rätt pris på det du vidarefakturerar med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn →</a>, och vill du se hur kontering och attest per projekt fungerar i praktiken kan du <a href="/sv/contact">boka en demo</a> så visar vi flödet på ett riktigt projekt.</p>
+<p>Sätt rätt pris på det du vidarefakturerar med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn →</a>, och vill du se hur kontering och attest per projekt fungerar i praktiken kan du <a href="/sv/contact">boka en gratis konsultation</a> så visar vi flödet på ett riktigt projekt.</p>
 
 <p>Relaterat: <a href="/sv/blog/attestering">Attestering av fakturor i byggföretag</a> och <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a>.</p>
 `;
@@ -2947,7 +2947,7 @@ const A_FONSTER_U_VARDE_2026_HTML = `
 <p>Den gamla energiklassningens gräns på Uw ≤ 1,2 är idag ett golv för dugligt. Moderna energifönster når 0,7–1,0 W/m²K, så vid en ny investering är det rimligt att sikta lägre än 1,2. Väg samtidigt in g-värdet så att du inte tappar för mycket gratis solvärme på vintern.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna på ditt nästa fönsterbyte i <a href="/sv/verktyg/isolering-kalkylator">u-värdeskalkylatorn</a> och skapa ett tydligt underlag i <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur det fungerar i praktiken? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Räkna på ditt nästa fönsterbyte i <a href="/sv/verktyg/isolering-kalkylator">u-värdeskalkylatorn</a> och skapa ett tydligt underlag i <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur det fungerar i praktiken? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/berakna-u-varde-isolering">Beräkna u-värde för isolering</a></p>
 `;
@@ -3035,7 +3035,7 @@ const A_MILERSATTNING_2026_HTML = `
 <p>Ja, men bara 25 kr/mil är skattefritt. De 5 kr/mil som överstiger schablonen blir skattepliktig lön, med inkomstskatt för den anställde och arbetsgivaravgifter för företaget.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att samla resor och underlag på ett ställe med <a href="/sv/verktyg">våra gratis verktyg för byggföretag</a>. Vill du se hur tid, projekt och reseunderlag hänger ihop i praktiken kan du <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Börja med att samla resor och underlag på ett ställe med <a href="/sv/verktyg">våra gratis verktyg för byggföretag</a>. Vill du se hur tid, projekt och reseunderlag hänger ihop i praktiken kan du <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag – så håller du koll på tid och ledighet</a>.</p>
 `;
@@ -3138,7 +3138,7 @@ const A_BYGGFAKTURA_CHECKLISTA_ROT_HTML = `
 <p>Ja, om flera äger bostaden kan avdraget fördelas mellan dem. Ange då varje persons personnummer och hur beloppet fördelas – var och en har sitt eget tak på 50 000 kr per år.</p>
 
 <h2>Kom igång</h2>
-<p>Skapa en korrekt ROT-faktura direkt i <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall &rarr;</a>, eller räkna på avdraget med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur hela flödet från tidrapport till ROT-faktura fungerar i praktiken? <a href="/sv/contact">Boka en demo &rarr;</a></p>
+<p>Skapa en korrekt ROT-faktura direkt i <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall &rarr;</a>, eller räkna på avdraget med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur hela flödet från tidrapport till ROT-faktura fungerar i praktiken? <a href="/sv/contact">Boka en gratis konsultation &rarr;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/faktura-med-rotavdrag">Faktura med rotavdrag – exempel &amp; mall</a>, <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a> och <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a>.</p>
 `;
@@ -3228,7 +3228,7 @@ const A_JUSTERAT_FORMANSVARDE_SERVICEBIL_HTML = `
 <p>Arbetsgivaren ansöker hos Skatteverket så att avgifter och preliminärskatt beräknas på det lägre värdet redan under året. Saknas beslut måste ordinarie schablonvärde rapporteras, och den anställde får i stället begära justeringen i sin inkomstdeklaration.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att föra körjournal och samla underlag redan i dag – det avgör vad du kan få igenom. Använd <a href="/sv/verktyg">våra gratis verktyg för byggföretag</a> för att hålla ordning på tjänstekörning och dokumentation, och kontrollera alltid aktuella siffror och blanketter på skatteverket.se. Vill du se hur ByggExp stöttar hela ekonomiflödet i firman? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Börja med att föra körjournal och samla underlag redan i dag – det avgör vad du kan få igenom. Använd <a href="/sv/verktyg">våra gratis verktyg för byggföretag</a> för att hålla ordning på tjänstekörning och dokumentation, och kontrollera alltid aktuella siffror och blanketter på skatteverket.se. Vill du se hur ByggExp stöttar hela ekonomiflödet i firman? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p><em>Relaterat:</em> <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggföretag?</a></p>
 `;
@@ -3311,7 +3311,7 @@ const A_NYA_3_12_REGLER_2026_HTML = `
 <p>Utdelning inom gränsbeloppet beskattas med 20 procent. Belopp över gränsbeloppet beskattas som tjänst upp till takbeloppet, och däröver med 30 procent i kapital.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att räkna på lön och utdelning i <a href="/sv/verktyg">ByggExps kostnadsfria verktygslåda</a>, och <a href="/sv/contact">boka en demo</a> om du vill se hur du får bättre koll på lönesumma och resultat i ett samlat system. Observera att detta är generell information om de nya 3:12-reglerna och inte skatterådgivning – stäm alltid av dina egna siffror med en redovisningskonsult.</p>
+<p>Börja med att räkna på lön och utdelning i <a href="/sv/verktyg">ByggExps kostnadsfria verktygslåda</a>, och <a href="/sv/contact">boka en gratis konsultation</a> om du vill se hur du får bättre koll på lönesumma och resultat i ett samlat system. Observera att detta är generell information om de nya 3:12-reglerna och inte skatterådgivning – stäm alltid av dina egna siffror med en redovisningskonsult.</p>
 
 <p>Relaterat: <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggföretag – vad lönar sig?</a></p>
 `;
@@ -3404,7 +3404,7 @@ const A_K10_BLANKETT_2026_HTML = `
 <p>Inom gränsbeloppet beskattas utdelningen med 20 %. Belopp däröver beskattas i tjänst upp till takbeloppet på 90 inkomstbasbelopp, och därutöver som kapital med 30 %.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att samla underlaget och räkna igenom reglerna som gäller ditt utdelningsår – och verifiera alltid årets exakta belopp och statslåneränta direkt hos Skatteverket. Håll särskilt koll på de nya 3:12-reglerna (SFS 2025:1361) som trädde i kraft 1 januari 2026 och som slopar uppdelningen i förenklings- och huvudregel till förmån för ett enhetligt grundbelopp på fyra inkomstbasbelopp. De tillämpas första gången för utdelning under inkomstår 2026, som du deklarerar våren 2027. Räkna på lön och marginaler i <a href="/sv/verktyg">vår verktygslåda</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur du håller bolagets siffror i ordning inför deklarationen.</p>
+<p>Börja med att samla underlaget och räkna igenom reglerna som gäller ditt utdelningsår – och verifiera alltid årets exakta belopp och statslåneränta direkt hos Skatteverket. Håll särskilt koll på de nya 3:12-reglerna (SFS 2025:1361) som trädde i kraft 1 januari 2026 och som slopar uppdelningen i förenklings- och huvudregel till förmån för ett enhetligt grundbelopp på fyra inkomstbasbelopp. De tillämpas första gången för utdelning under inkomstår 2026, som du deklarerar våren 2027. Räkna på lön och marginaler i <a href="/sv/verktyg">vår verktygslåda</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du håller bolagets siffror i ordning inför deklarationen.</p>
 <p>Relaterat: <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggföretag?</a></p>
 `;
 
@@ -3487,7 +3487,7 @@ const A_DEBITERINGSGRAD_BYGG_HTML = `
 <p>Nej. Offerter, restid, administration, garantijobb och väntetid är ofrånkomliga och sällan fakturerbara. Ett fullt schema motsvarar därför aldrig fullt fakturerade timmar – därför känns det som att man jobbar jämt utan att tjäna.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att räkna på ditt verkliga timpris i <a href="/sv/verktyg/timpris-kalkylator">vår timpris-kalkylator</a> och sätt ett realistiskt debiteringsgradsmål. Vill du se hur mätbar tidrapportering per projekt fungerar i praktiken kan du <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Börja med att räkna på ditt verkliga timpris i <a href="/sv/verktyg/timpris-kalkylator">vår timpris-kalkylator</a> och sätt ett realistiskt debiteringsgradsmål. Vill du se hur mätbar tidrapportering per projekt fungerar i praktiken kan du <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/tackningsbidrag-byggforetag">Täckningsbidrag för byggföretag</a>, <a href="/sv/blog/timpris-hantverkare">Sätta timpris som hantverkare</a> och <a href="/sv/blog/tidrapportering">Tidrapportering i byggbranschen</a>.</p>
 `;
@@ -3592,7 +3592,7 @@ const A_OMVAND_BYGGMOMS_UNDERENTREPRENOR_HTML = `
 <p>Ja. När en underentreprenör säljer till en huvudentreprenör eller annat byggföretag som i sin tur säljer byggtjänster vidare gäller omvänd betalningsskyldighet i varje led där villkoren är uppfyllda.</p>
 
 <h2>Kom igång</h2>
-<p>Repetera de tre kraven innan du skickar: 0 % moms på alla rader, köparens momsnummer, och hänvisningen "Omvänd betalningsskyldighet". Kom igång direkt med <a href="/sv/verktyg/faktura-mall">vår fakturamall</a>, kontrollera momssatser i <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn</a>, och stäm alltid av mot Skatteverkets vägledning vid tveksamhet. Vill du se hur det fungerar i praktiken? <a href="/sv/contact">Boka en demo</a>.</p>
+<p>Repetera de tre kraven innan du skickar: 0 % moms på alla rader, köparens momsnummer, och hänvisningen "Omvänd betalningsskyldighet". Kom igång direkt med <a href="/sv/verktyg/faktura-mall">vår fakturamall</a>, kontrollera momssatser i <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn</a>, och stäm alltid av mot Skatteverkets vägledning vid tveksamhet. Vill du se hur det fungerar i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a>, <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a> och <a href="/sv/blog/anlita-underentreprenor">Anlita underentreprenör</a>.</p>
 `;
@@ -3666,7 +3666,7 @@ const A_OFFERT_TILL_BETALD_FAKTURA_FLODE_HTML = `
 <p>Referensräntan plus 8 procentenheter, automatiskt enligt räntelagen även utan avtal. För 1 januari–30 juni 2026 är referensräntan 2 %, vilket ger 10 % dröjsmålsränta. Huvudregeln för betalningstid är 30 dagar netto.</p>
 
 <h2>Kom igång</h2>
-<p>Sätt upp flödet en gång så sköter det sig i varje projekt. Börja med <a href="/sv/verktyg/offert-mall">offertmallen</a> och <a href="/sv/verktyg/faktura-mall">fakturamallen</a>, kontrollera avdraget i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylatorn</a>, eller <a href="/sv/contact">boka en demo</a> så visar vi hur hela kedjan hänger ihop i praktiken.</p>
+<p>Sätt upp flödet en gång så sköter det sig i varje projekt. Börja med <a href="/sv/verktyg/offert-mall">offertmallen</a> och <a href="/sv/verktyg/faktura-mall">fakturamallen</a>, kontrollera avdraget i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylatorn</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur hela kedjan hänger ihop i praktiken.</p>
 
 <p>Relaterat: <a href="/sv/blog/skriva-offert">Skriva offert som håller</a>, <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a> och <a href="/sv/blog/a-conto-fakturering-bygg">À conto-fakturering i bygg</a>.</p>
 `;
@@ -3746,7 +3746,7 @@ const A_ANSVARSFORSAKRING_BYGGFORETAG_HTML = `
 <p>Skyddet ska gälla under entreprenadtiden och därtill i minst två år efter godkänd entreprenad, för skador du ansvarar för under garantitiden.</p>
 
 <h2>Kom igång</h2>
-<p>Rätt försäkring är både ett avtalskrav och en konkurrensfördel i anbud. Stäm av din policy mot 2026 års belopp och samla underlaget i <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur ByggExp håller ihop anbud, kalkyl och dokumentation? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Rätt försäkring är både ett avtalskrav och en konkurrensfördel i anbud. Stäm av din policy mot 2026 års belopp och samla underlaget i <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur ByggExp håller ihop anbud, kalkyl och dokumentation? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/starta-byggforetag-2026">Starta byggföretag 2026</a> och <a href="/sv/blog/entreprenorsansvar-lon">Entreprenörsansvar för lön</a>.</p>
 `;
@@ -3826,7 +3826,7 @@ const A_FORSKOTT_HANDPENNING_BYGG_HTML = `
 <p>Betalningsdatumet, inte faktura- eller bokningsdatum. Delbetalningar runt ett årsskifte kan hamna på olika år och därmed olika villkor, så planera betalningsplanen med det i åtanke.</p>
 
 <h2>Kom igång</h2>
-<p>Lägg grunden i avtalet: skapa offert med tydlig betalningsplan i <a href="/sv/verktyg/offert-mall">offert- och avtalsmallen</a>, och för över delbetalningarna till <a href="/sv/verktyg/faktura-mall">fakturamallen</a> när milstolparna nås. Vill du se hur ByggExp knyter ihop offert, betalningsplan och faktura i praktiken? <a href="/sv/contact">Boka en demo →</a></p>
+<p>Lägg grunden i avtalet: skapa offert med tydlig betalningsplan i <a href="/sv/verktyg/offert-mall">offert- och avtalsmallen</a>, och för över delbetalningarna till <a href="/sv/verktyg/faktura-mall">fakturamallen</a> när milstolparna nås. Vill du se hur ByggExp knyter ihop offert, betalningsplan och faktura i praktiken? <a href="/sv/contact">Boka en gratis konsultation →</a></p>
 
 <p>Relaterat: <a href="/sv/blog/a-conto-fakturering-bygg">A conto-fakturering i byggprojekt</a>, <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a> och <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturan</a>.</p>
 `;
@@ -3904,7 +3904,7 @@ const A_F_SKATT_HANTVERKARE_ANSOKAN_HTML = `
 <p>Verksamheten behöver inte läggas ner, men du beskattas som anställd hos dina uppdragsgivare. Det innebär att de måste göra skatteavdrag på 30 % och betala arbetsgivaravgifter, vilket i praktiken gör det svårt att få uppdrag. Åtgärda orsaken och ansök på nytt.</p>
 
 <h2>Kom igång</h2>
-<p>Sätt en realistisk omsättning innan du lämnar din preliminära inkomstdeklaration – räkna på arbetskostnad och ROT med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur offerter, avtal och fakturor kan hänga ihop och stärka din självständighet? <a href="/sv/contact">Boka en demo av ByggExp</a> så visar vi hur du får ordning på underlagen från första uppdraget.</p>
+<p>Sätt en realistisk omsättning innan du lämnar din preliminära inkomstdeklaration – räkna på arbetskostnad och ROT med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur offerter, avtal och fakturor kan hänga ihop och stärka din självständighet? <a href="/sv/contact">Boka en gratis konsultation av ByggExp</a> så visar vi hur du får ordning på underlagen från första uppdraget.</p>
 
 <p>Relaterat: <a href="/sv/blog/starta-byggforetag-2026">Starta byggföretag 2026</a>, <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för bygg</a> och <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a>.</p>
 `;
@@ -3977,7 +3977,7 @@ const A_A_PRISER_BYGG_HTML = `
 <p>Ja. Vid löpande räkning ersätts du enligt självkostnadsprincipen, men en fast á-prislista för vanliga moment gör dina fakturor tydligare och ger dig data att successivt gå över till fast pris.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att räkna fram rätt påslag i <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn</a>, för in enhetspriserna i <a href="/sv/verktyg/offert-mall">offertmallen</a> och bygg ditt första fasta anbud på riktig data. Vill du se hur á-prislista, offert och tidrapport hänger ihop i praktiken – <a href="/sv/contact">boka en demo</a>.</p>
+<p>Börja med att räkna fram rätt påslag i <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn</a>, för in enhetspriserna i <a href="/sv/verktyg/offert-mall">offertmallen</a> och bygg ditt första fasta anbud på riktig data. Vill du se hur á-prislista, offert och tidrapport hänger ihop i praktiken – <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/paslag-pa-material">Påslag på material</a>, <a href="/sv/blog/fast-pris-eller-lopande-rakning">Fast pris eller löpande räkning</a> och <a href="/sv/blog/timpris-hantverkare">Timpris för hantverkare</a>.</p>
 `;
@@ -4134,7 +4134,7 @@ const A_OFFENTLIG_UPPHANDLING_BYGG_LOU_HTML = `
 <p>För byggentreprenader ligger tröskelvärdet 2026 på 61 340 804 kr exklusive moms. Först över det beloppet gäller de EU-direktivstyrda reglerna med ESPD och obligatoriska uteslutningsgrunder. Nästan alla anbud ett litet byggföretag lämnar hamnar i det förenklade spannet under den nivån.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med ett litet, avgränsat anbud, leverera väl, bygg din referensbank och återkom med större jobb. Sätt upp ett tydligt prisunderlag med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>, och vill du se hur ByggExp kan förenkla offerter, projekt och underlag i din firma? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Börja med ett litet, avgränsat anbud, leverera väl, bygg din referensbank och återkom med större jobb. Sätt upp ett tydligt prisunderlag med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>, och vill du se hur ByggExp kan förenkla offerter, projekt och underlag i din firma? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/skriva-offert">Så skriver du en offert som vinner jobbet</a>, <a href="/sv/blog/hitta-kunder-byggfirma">Hitta kunder till din byggfirma</a> och <a href="/sv/blog/starta-byggforetag-2026">Starta byggföretag 2026</a>.</p>
 `;
@@ -4227,7 +4227,7 @@ const A_OMVAND_BYGGMOMS_BOKFORA_HTML = `
 <p>Nej. Vid full avdragsrätt tar utgående moms i ruta 30 och ingående moms i ruta 48 ut varandra, så nettoeffekten blir noll. Momsen måste ändå redovisas i rätt rutor.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna ut moms snabbt och säkert med <a href="/sv/verktyg/moms-kalkylator">vår moms-kalkylator</a>, och skapa korrekta fakturor med rätt hänvisning i <a href="/sv/verktyg/faktura-mall">vår faktura-mall</a>. Vill du se hur ByggExp kan effektivisera fakturering och underlag för hela byggföretaget? <a href="/sv/contact">Boka en demo här -&gt;</a></p>
+<p>Räkna ut moms snabbt och säkert med <a href="/sv/verktyg/moms-kalkylator">vår moms-kalkylator</a>, och skapa korrekta fakturor med rätt hänvisning i <a href="/sv/verktyg/faktura-mall">vår faktura-mall</a>. Vill du se hur ByggExp kan effektivisera fakturering och underlag för hela byggföretaget? <a href="/sv/contact">Boka en gratis konsultation här -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a>, <a href="/sv/blog/bokforing-enskild-firma-bygg">Bokföring för enskild firma inom bygg</a> och <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare</a>.</p>
 `;
@@ -4300,7 +4300,7 @@ const A_VERKTYG_DIREKTAVDRAG_ELLER_AVSKRIVNING_HTML = `
 <p>Huvudregeln (30-regeln) ger avdrag med högst 30 % av avskrivningsunderlaget per år. Kompletteringsregeln (20-regeln) ger 20 % av anskaffningsvärdet per år och full avskrivning på fem år. Du får kombinera dem och välja den som ger störst avdrag.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna rätt på belopp exkl. och inkl. moms innan du avgör hur verktyget ska bokföras med <a href="/sv/verktyg/moms-kalkylator">vår moms-kalkylator</a>. Vill du se hur ByggExp samlar kvitton och projektunderlag åt hela laget? <a href="/sv/contact">Boka en demo -&gt;</a> så visar vi upplägget. Kom ihåg att beloppsgränsen ändras varje år – stäm av mot Skatteverket.</p>
+<p>Räkna rätt på belopp exkl. och inkl. moms innan du avgör hur verktyget ska bokföras med <a href="/sv/verktyg/moms-kalkylator">vår moms-kalkylator</a>. Vill du se hur ByggExp samlar kvitton och projektunderlag åt hela laget? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a> så visar vi upplägget. Kom ihåg att beloppsgränsen ändras varje år – stäm av mot Skatteverket.</p>
 
 <p>Relaterat: <a href="/sv/blog/avdrag-arbetsklader-verktyg">Avdrag för arbetskläder och verktyg</a>, <a href="/sv/blog/avdrag-enskild-firma-bygg">Avdrag i enskild firma för byggföretag</a>, <a href="/sv/blog/periodiseringsfond-byggbolag">Periodiseringsfond för byggbolag</a>.</p>
 `;
@@ -4376,7 +4376,7 @@ const A_KALKYLERA_FONSTERBYTE_OFFERT_HTML = `
 <p>Sikta på högst 1,2 W/m²K vid utbyte. Moderna 3-glasfönster når ofta 0,9–1,0 W/m²K. Kom ansökan eller anmälan in före 1 juli 2026 får gamla BBR/EKS fortfarande tillämpas, annars gäller de nya funktionsbaserade reglerna – blanda dem aldrig.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med en tydlig struktur och räkna arbetet separat från materialet. Skapa din nästa offert med vår <a href="/sv/verktyg/offert-mall">offertmall</a> och kontrollräkna avdraget i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur hela flödet från offert till ROT-rapportering fungerar i praktiken? <a href="/sv/contact">Boka en demo</a>.</p>
+<p>Börja med en tydlig struktur och räkna arbetet separat från materialet. Skapa din nästa offert med vår <a href="/sv/verktyg/offert-mall">offertmall</a> och kontrollräkna avdraget i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>. Vill du se hur hela flödet från offert till ROT-rapportering fungerar i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/fonster-u-varde-2026">Fönster och U-värde 2026</a>, <a href="/sv/blog/rotavdrag-2026-nya-regler-foretag">Rotavdrag 2026 – nya regler för företag</a>, <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a>.</p>
 `;
@@ -4476,7 +4476,7 @@ const A_KREDITFORSAKRING_BYGGFORETAG_HTML = `
 <p>Kreditkoll minskar risken men eliminerar den inte – ett bolag med god rating kan förändras under ett långt entreprenadprojekt. Kreditkoll och kreditförsäkring kompletterar varandra: kollen sållar bort de uppenbara riskerna, försäkringen fångar upp de förluster du inte kunde förutse.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med grunden: sätt tydliga betalningsvillkor och en a-conto-plan redan i anbudet med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>. Vill du se hur ByggExp hjälper dig hålla koll på utestående belopp och kreditrisk per kund? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Börja med grunden: sätt tydliga betalningsvillkor och en a-conto-plan redan i anbudet med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>. Vill du se hur ByggExp hjälper dig hålla koll på utestående belopp och kreditrisk per kund? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a>, <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a> och <a href="/sv/blog/factoring-byggforetag">Factoring för byggföretag</a>.</p>
 `;
@@ -4571,7 +4571,7 @@ const A_VAD_SKA_FAKTURA_INNEHALLA_BYGG_HTML = `
 <p>Kundens personnummer, fastighetsbeteckning för hus eller BRF:ens org.nr plus lägenhetsnummer för bostadsrätt, samt tydligt separerad arbets- och materialkostnad. Avdraget är 30 % av arbetskostnaden, max 50 000 kr per person och år.</p>
 
 <h2>Kom igång</h2>
-<p>Skapa en korrekt faktura direkt med <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall &rarr;</a>, eller <a href="/sv/contact">boka en demo</a> om du vill se hur ByggExp håller ordning på fakturor, ROT-underlag och betalningsvillkor i ett flöde.</p>
+<p>Skapa en korrekt faktura direkt med <a href="/sv/verktyg/faktura-mall">vår gratis fakturamall &rarr;</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> om du vill se hur ByggExp håller ordning på fakturor, ROT-underlag och betalningsvillkor i ett flöde.</p>
 
 <p>Relaterat: <a href="/sv/blog/faktura-med-rotavdrag">Faktura med rotavdrag – exempel &amp; mall</a>, <a href="/sv/blog/fakturera-som-hantverkare">Fakturera som hantverkare – så gör du rätt</a> och <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturor</a>.</p>
 `;
@@ -4775,7 +4775,7 @@ const A_KORJOURNAL_KRAV_SKATTEVERKET_BYGG_HTML = `
 
 <h2>Kom igång</h2>
 
-<p>Börja med att strukturera dina tjänsteresor och arbetstider på ett spårbart sätt med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall</a>. Vill du se hur tidrapport, projekt och fakturaunderlag hänger ihop och stärker din körjournal? <a href="/sv/contact">Boka en demo här -></a></p>
+<p>Börja med att strukturera dina tjänsteresor och arbetstider på ett spårbart sätt med <a href="/sv/verktyg/tidrapport-mall">vår gratis tidrapport-mall</a>. Vill du se hur tidrapport, projekt och fakturaunderlag hänger ihop och stärker din körjournal? <a href="/sv/contact">Boka en gratis konsultation här -></a></p>
 
 <p>Relaterat: <a href="/sv/blog/milersattning-2026">Milersättning 2026</a>, <a href="/sv/blog/servicebil-eller-formansbil">Servicebil eller förmånsbil?</a>, <a href="/sv/blog/justerat-formansvarde-servicebil">Justerat förmånsvärde för servicebil</a>.</p>
 `;
@@ -4862,7 +4862,7 @@ const A_SANK_ARBETSGIVARAVGIFT_UNGA_VAXA_STOD_2026_HTML = `
 <p>Ungdomsnedsättningen är en tidsbegränsad politisk åtgärd, så både sats och slutdatum kan justeras. Kontrollera alltid aktuella satser och villkor hos Skatteverket innan du budgeterar eller lämnar anbud.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att räkna på vad din nästa lärling faktiskt kostar per timme med olika avgiftssatser i <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a>. Vill du se hur ByggExp kan hjälpa hela ditt byggföretag med tid, priser och underlag? <a href="/sv/contact">Boka en demo här</a> så visar vi hur det funkar i praktiken.</p>
+<p>Börja med att räkna på vad din nästa lärling faktiskt kostar per timme med olika avgiftssatser i <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a>. Vill du se hur ByggExp kan hjälpa hela ditt byggföretag med tid, priser och underlag? <a href="/sv/contact">Boka en gratis konsultation här</a> så visar vi hur det funkar i praktiken.</p>
 
 <p>Relaterat: <a href="/sv/blog/vad-kostar-en-anstalld-byggforetag">Vad kostar en anställd i ett byggföretag?</a> och <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag – så gör du steg för steg</a>.</p>
 `;
@@ -4938,7 +4938,7 @@ const A_KOSTNADSKONTROLL_BYGGPROJEKT_MARGINAL_HTML = `
 <p>30 % av arbetskostnaden, med tak på 50 000 kr per person och år. Det gemensamma ROT+RUT-taket är 75 000 kr per år. Den tillfälliga nivån på 50 % gällde endast delar av 2025.</p>
 
 <h2>Kom igång</h2>
-<p>Sätt rätt påslag redan i anbudet med vår <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylator →</a> och fakturera korrekt med rätt momshantering via vår <a href="/sv/verktyg/faktura-mall">fakturamall →</a>. Vill du se hur inköp konteras per projekt och marginalen följs i realtid? <a href="/sv/contact">Boka en demo →</a></p>
+<p>Sätt rätt påslag redan i anbudet med vår <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylator →</a> och fakturera korrekt med rätt momshantering via vår <a href="/sv/verktyg/faktura-mall">fakturamall →</a>. Vill du se hur inköp konteras per projekt och marginalen följs i realtid? <a href="/sv/contact">Boka en gratis konsultation →</a></p>
 
 <p>Relaterat: <a href="/sv/blog/leverantorsfaktura-bygg-projekt">Leverantörsfaktura per projekt i bygg</a>, <a href="/sv/blog/tackningsbidrag-byggforetag">Täckningsbidrag för byggföretag</a> och <a href="/sv/blog/attestering">Attestering av fakturor</a>.</p>
 `;
@@ -5014,7 +5014,7 @@ const A_MOMSAVDRAG_LATT_LASTBIL_PERSONBIL_BYGG_HTML = `
 <p>Nej. Momskategoriseringen styr bara momsen. Förmånsvärde och inkomstbeskattning är ett separat regelverk, och en lätt lastbil som används privat kan förmånsbeskattas även om den ger full moms.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna på momsen innan du binder upp firman i ett bilköp eller leasingavtal med vår <a href="/sv/verktyg/moms-kalkylator">moms-kalkylator -&gt;</a>. Vill du se hur ByggExp hanterar moms, fakturering och kvittohantering i din vardag? <a href="/sv/contact">Boka en demo -&gt;</a> så visar vi upplägget för ditt byggföretag.</p>
+<p>Räkna på momsen innan du binder upp firman i ett bilköp eller leasingavtal med vår <a href="/sv/verktyg/moms-kalkylator">moms-kalkylator -&gt;</a>. Vill du se hur ByggExp hanterar moms, fakturering och kvittohantering i din vardag? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a> så visar vi upplägget för ditt byggföretag.</p>
 
 <p>Relaterat: <a href="/sv/blog/servicebil-eller-formansbil">Servicebil eller förmånsbil</a>, <a href="/sv/blog/moms-hantverkare">Moms för hantverkare</a>, <a href="/sv/blog/debitera-servicebil-rot">Debitera servicebil och ROT</a>.</p>
 `;
@@ -5155,7 +5155,7 @@ const A_SKATTEVERKET_NEKAR_ROTAVDRAG_FORBEHALL_HTML = `
 <p>Du kan inte se det själv, men du bör be kunden kontrollera sitt kvarvarande utrymme och saldo på Mina sidor innan du drar av ROT. Förbehållsklausulen är din försäkring för de fall där utrymmet ändå inte räcker.</p>
 
 <h2>Kom igång</h2>
-<p>Skriv aldrig ett ROT-jobb utan förbehållsklausul. Börja med att räkna rätt i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a> och lägg in förbehållet i din <a href="/sv/verktyg/offert-mall">offertmall</a>. Vill du se hur ByggExp binder ihop offert, avtal och faktura med ROT-underlaget? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Skriv aldrig ett ROT-jobb utan förbehållsklausul. Börja med att räkna rätt i <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a> och lägg in förbehållet i din <a href="/sv/verktyg/offert-mall">offertmall</a>. Vill du se hur ByggExp binder ihop offert, avtal och faktura med ROT-underlaget? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 <p>Relaterat: <a href="/sv/blog/faktura-med-rotavdrag">Faktura med rotavdrag – så gör du</a>, <a href="/sv/blog/rotavdrag-2026-nya-regler-foretag">ROT-avdraget 2026 – nya regler för företag</a>, <a href="/sv/blog/byggfaktura-checklista-rot">Byggfaktura med ROT – checklista</a>.</p>
 `;
 
@@ -5238,7 +5238,7 @@ const A_EFTERKALKYL_BYGG_KALKYLUPPFOLJNING_HTML = `
 <p>Personalliggaren, som är lagkrav över 236 800 kr (4 prisbasbelopp 2026), loggar in- och uttider per person och dag och är en pålitlig källa till verklig arbetstid på plats. Kombinerat med tidsregistrering per moment ger den underlaget du behöver.</p>
 
 <h2>Kom igång</h2>
-<p>Börja enkelt: lås förkalkylen på nästa jobb, registrera timmar per moment och räkna ut din verkliga självkostnad med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn</a>. Vill du se hur för- och efterkalkyl kan följas löpande i ett verktyg, <a href="/sv/contact">boka en demo</a> så visar vi upplägget på ett riktigt projekt.</p>
+<p>Börja enkelt: lås förkalkylen på nästa jobb, registrera timmar per moment och räkna ut din verkliga självkostnad med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn</a>. Vill du se hur för- och efterkalkyl kan följas löpande i ett verktyg, <a href="/sv/contact">boka en gratis konsultation</a> så visar vi upplägget på ett riktigt projekt.</p>
 
 <p>Relaterat: <a href="/sv/blog/tackningsbidrag-byggforetag">Täckningsbidrag för byggföretag</a> och <a href="/sv/blog/leverantorsfaktura-bygg-projekt">Leverantörsfakturor i byggprojekt</a>.</p>
 `;
@@ -5323,7 +5323,7 @@ const A_RANTEFORDELNING_ENSKILD_FIRMA_BYGG_HTML = `
 <p>Beräkningen görs i anslutning till NE-bilagan, och underlaget hanteras på räntefördelningsblanketten. De flesta bokföringsprogram och revisorer räknar fram kapitalunderlaget automatiskt – din uppgift är att kontrollera att det stämmer och att jämföra vinsten mot egenavgifterna.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att få rätt på vinsten – det är den räntefördelningen sedan optimerar. Räkna på dina priser i vår <a href="/sv/verktyg/paslag-marginal-kalkylator">påslag- och marginalkalkylator</a> och stäm av din timdebitering. Vill du se hur ByggExp kan ge dig löpande koll på vinst per projekt så att deklarationen blir enkel? <a href="/sv/contact">Boka en demo -&gt;</a> så visar vi hur det fungerar.</p>
+<p>Börja med att få rätt på vinsten – det är den räntefördelningen sedan optimerar. Räkna på dina priser i vår <a href="/sv/verktyg/paslag-marginal-kalkylator">påslag- och marginalkalkylator</a> och stäm av din timdebitering. Vill du se hur ByggExp kan ge dig löpande koll på vinst per projekt så att deklarationen blir enkel? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a> så visar vi hur det fungerar.</p>
 
 <p>Relaterat: <a href="/sv/blog/egenavgifter-enskild-firma-bygg">Egenavgifter i enskild byggfirma</a>, <a href="/sv/blog/avdrag-enskild-firma-bygg">Avdrag i enskild firma för byggare</a> och <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggverksamhet?</a></p>
 `;
@@ -5396,7 +5396,7 @@ const A_KAKEL_KLINKER_ATGANG_VATRUM_HTML = `
 <p>Fallet på 7–30 mm/m mot brunnen i duschzonen gör att fler golvplattor måste kapas och passas, särskilt med storformat. Planera layout och kap efter fallet och lägg spillpåslaget därefter.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna nettoytan i <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a>, lägg på 10–20 % spill, avrunda till hel kartong och separera material från arbete i anbudet. Vill du se hur materialposten och ROT-underlaget hänger ihop i ett skarpt badrumsanbud? <a href="/sv/contact">Boka en demo</a> så visar vi upplägget.</p>
+<p>Räkna nettoytan i <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a>, lägg på 10–20 % spill, avrunda till hel kartong och separera material från arbete i anbudet. Vill du se hur materialposten och ROT-underlaget hänger ihop i ett skarpt badrumsanbud? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi upplägget.</p>
 
 <p>Relaterat: <a href="/sv/blog/spillprocent-bygg-material">Spillprocent för byggmaterial</a>, <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>, <a href="/sv/blog/bbv-eller-gvk-vatrum">BBV eller GVK i våtrum</a>.</p>
 `;
@@ -5595,7 +5595,7 @@ const A_KOLLEKTIVAVTALADE_FORSAKRINGAR_BYGG_HTML = `
 <p>Ja. Både AGS vid sjukdom och TFA vid arbetsskada kräver att den anställde själv gör en anmälan till AFA Försäkring. Pengarna betalas inte ut automatiskt, så informera dina medarbetare om att anmäla i tid.</p>
 
 <h2>Kom igång</h2>
-<p>Se till att ditt försäkringsavtal med Fora är på plats, att du lönerapporterar varje år och att dina anställda vet att de själva anmäler skada och sjukdom till AFA. Räkna sedan igenom vad påslagen betyder för din prissättning i <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a>. Vill du se hur ByggExp håller ihop löneunderlag, tid och offert? <a href="/sv/contact">Boka en demo -&gt;</a> så visar vi.</p>
+<p>Se till att ditt försäkringsavtal med Fora är på plats, att du lönerapporterar varje år och att dina anställda vet att de själva anmäler skada och sjukdom till AFA. Räkna sedan igenom vad påslagen betyder för din prissättning i <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a>. Vill du se hur ByggExp håller ihop löneunderlag, tid och offert? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a> så visar vi.</p>
 
 <p>Relaterat: <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Måste man ha kollektivavtal i byggbranschen?</a> och <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag – så gör du rätt</a>.</p>
 `;
@@ -5688,7 +5688,7 @@ const A_REPARATION_VS_FORBATTRING_AVDRAG_BYGG_HTML = `
 <p>Byggnadsinventarier skrivs av som inventarier, med huvudregeln 30 procent eller kompletteringsregeln 20 procent linjärt, i stället för byggnadens 2–4 procent. Att identifiera dem i projektet tidigarelägger avdragen rejält.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att specificera nästa renoveringsprojekt per åtgärd och räkna på moms och nettokostnad i <a href="/sv/verktyg">vår verktygslåda</a> och <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn</a>. Vill du se hur ByggExp håller ihop projektunderlag, kostnader och avdrag i praktiken? <a href="/sv/contact">Boka en demo →</a>. Den här artikeln är en översikt och ersätter inte Skatteverkets rättsliga vägledning eller individuell skatterådgivning — stäm alltid av osäkra gränsfall.</p>
+<p>Börja med att specificera nästa renoveringsprojekt per åtgärd och räkna på moms och nettokostnad i <a href="/sv/verktyg">vår verktygslåda</a> och <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn</a>. Vill du se hur ByggExp håller ihop projektunderlag, kostnader och avdrag i praktiken? <a href="/sv/contact">Boka en gratis konsultation →</a>. Den här artikeln är en översikt och ersätter inte Skatteverkets rättsliga vägledning eller individuell skatterådgivning — stäm alltid av osäkra gränsfall.</p>
 
 <p>Relaterat: <a href="/sv/blog/verktyg-direktavdrag-eller-avskrivning">Direktavdrag eller avskrivning på verktyg och inventarier</a>, <a href="/sv/blog/avdrag-enskild-firma-bygg">Avdrag i enskild firma för byggföretag</a> och <a href="/sv/blog/bokforing-enskild-firma-bygg">Bokföring för enskild firma i byggbranschen</a>.</p>
 `;
@@ -5836,7 +5836,7 @@ const A_MOMSREGISTRERING_ARBETSGIVARREGISTRERING_BYGGFORETAG_HTML = `
 <p>När byggverksamhetens totala kostnad överstiger 4 prisbasbelopp, vilket 2026 är 236 800 kr. Då ska liggaren föras elektroniskt från första arbetsdagen. Byggherren anmäler arbetsplatsen och ansvarar för utrustningen; entreprenören för själva liggaren.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att räkna igenom din moms och prissättning i <a href="/sv/verktyg">våra gratis byggverktyg</a> och testa <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn</a> innan du sätter upp fakturarutinerna. Vill du se hur ByggExp kan hålla ihop fakturor, moms och tidrapporter för din firma? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Börja med att räkna igenom din moms och prissättning i <a href="/sv/verktyg">våra gratis byggverktyg</a> och testa <a href="/sv/verktyg/moms-kalkylator">moms-kalkylatorn</a> innan du sätter upp fakturarutinerna. Vill du se hur ByggExp kan hålla ihop fakturor, moms och tidrapporter för din firma? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/starta-byggforetag-2026">Starta byggföretag 2026</a>, <a href="/sv/blog/f-skatt-hantverkare-ansokan">F-skatt för hantverkare – så ansöker du</a>, <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag</a>.</p>
 `;
@@ -5915,7 +5915,7 @@ const A_FARDIGSTALLANDEGRAD_VINSTAVRAKNING_BYGGPROJEKT_HTML = `
 <p>För räkenskapsår som inleds efter den 31 december 2025 får fastprisuppdrag under alternativregeln inte längre nettoredovisas i balansräkningen. Positiva saldon redovisas som tillgång och negativa som skuld var för sig, vilket ofta höjer balansomslutningen och kan påverka nyckeltal.</p>
 
 <h2>Kom igång</h2>
-<p>Successiv vinstavräkning ger en mer rättvisande bild och jämnar ut resultatet mellan åren, men den kräver att du har ordning på kalkyler och projektuppföljning – annars faller kravet på tillförlitligt utfall. Sätt rätt total- och marginaltal per projekt med vår <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylator</a>, utforska fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a> och stäm alltid av metodvalet med din revisor eller redovisningskonsult. Vill du se hur projektuppföljningen fungerar i praktiken, <a href="/sv/contact">boka en demo</a>.</p>
+<p>Successiv vinstavräkning ger en mer rättvisande bild och jämnar ut resultatet mellan åren, men den kräver att du har ordning på kalkyler och projektuppföljning – annars faller kravet på tillförlitligt utfall. Sätt rätt total- och marginaltal per projekt med vår <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylator</a>, utforska fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a> och stäm alltid av metodvalet med din revisor eller redovisningskonsult. Vill du se hur projektuppföljningen fungerar i praktiken, <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/tackningsbidrag-byggforetag">Täckningsbidrag för byggföretag</a>, <a href="/sv/blog/leverantorsfaktura-bygg-projekt">Leverantörsfakturor per byggprojekt</a> och <a href="/sv/blog/bokforing-enskild-firma-bygg">Bokföring för enskild firma i bygg</a>.</p>
 `;
@@ -5979,7 +5979,7 @@ const A_HEMMAKONTOR_AVDRAG_ENSKILD_FIRMA_BYGG_HTML = `
 <p>Sällan. Räntan drar du i kapital och ingår inte i näringsavdraget, så bara en liten andel av driftskostnaderna återstår att proportionera. För de flesta villaägande hantverkare blir schablonens 2 000 kr både enklare och minst lika bra.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att räkna på din tid och ditt pris i <a href="/sv/verktyg/timpris-kalkylator">vår gratis timpris-kalkylator</a>, och för in din administrativa tid löpande så att du vet var du landar mot 800-timmarsregeln. Vill du se hur tidrapportering och kalkyl hänger ihop i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi upplägget för just din firma.</p>
+<p>Börja med att räkna på din tid och ditt pris i <a href="/sv/verktyg/timpris-kalkylator">vår gratis timpris-kalkylator</a>, och för in din administrativa tid löpande så att du vet var du landar mot 800-timmarsregeln. Vill du se hur tidrapportering och kalkyl hänger ihop i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi upplägget för just din firma.</p>
 
 <p>Relaterat: <a href="/sv/blog/avdrag-enskild-firma-bygg">Avdrag i enskild firma för byggföretag</a>, <a href="/sv/blog/egenavgifter-enskild-firma-bygg">Egenavgifter i enskild firma</a> och <a href="/sv/blog/bokforing-enskild-firma-bygg">Bokföring för enskild firma i bygg</a>.</p>
 `;
@@ -6048,7 +6048,7 @@ const A_JAMKA_PRELIMINARSKATT_F_SKATT_BYGGFORETAG_HTML = `
 <p>Är underskottet över 30 000 kr måste en extra inbetalning vara bokförd senast 12 februari 2026 för att undvika kostnadsränta. Låg kostnadsränta är 2,5 % för 2026; ligger skulden kvar längre tillkommer hög kostnadsränta på 17,5 %.</p>
 
 <h2>Kom igång</h2>
-<p>Stäm av prognosen mot den debiterade F-skatten varje kvartal, jämka proaktivt via en ny PID, håll en buffert på högst 30 000 kr och lägg in kalenderpåminnelser för februari- och maj-datumen. Börja med att räkna hem marginalen i dina projekt med <a href="/sv/verktyg/paslag-marginal-kalkylator">kalkylatorn för påslag och marginal</a>, eller utforska hela <a href="/sv/verktyg">verktygslådan för byggföretag</a>. Vill du se hur ByggExp håller din resultatprognos aktuell? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Stäm av prognosen mot den debiterade F-skatten varje kvartal, jämka proaktivt via en ny PID, håll en buffert på högst 30 000 kr och lägg in kalenderpåminnelser för februari- och maj-datumen. Börja med att räkna hem marginalen i dina projekt med <a href="/sv/verktyg/paslag-marginal-kalkylator">kalkylatorn för påslag och marginal</a>, eller utforska hela <a href="/sv/verktyg">verktygslådan för byggföretag</a>. Vill du se hur ByggExp håller din resultatprognos aktuell? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/f-skatt-hantverkare-ansokan">F-skatt för hantverkare — så ansöker du</a>, <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a> och <a href="/sv/blog/periodiseringsfond-byggbolag">Periodiseringsfond för byggbolag</a>.</p>
 `;
@@ -6136,7 +6136,7 @@ const A_KREDITUPPLYSNING_KOLLA_KUND_INNAN_JOBB_BYGG_HTML = `
 <p>Hos UC är 1 högst risk och 5 lägst risk att företaget går i konkurs inom tolv månader. Prognosen bygger på uppgifter från Kronofogden, Bolagsverket och Skatteverket. Ju lägre siffra, desto större skäl att kräva förskott eller avstå.</p>
 
 <h2>Kom igång</h2>
-<p>Gör kreditkollen till ett standardsteg och fånga upp villkoren i underlaget direkt. Börja med <a href="/sv/verktyg">våra gratis byggverktyg</a> och skapa ett korrekt kravunderlag i vår <a href="/sv/verktyg/faktura-mall">fakturamall</a>. Vill du se hur hela flödet — från offert och kreditvillkor till betald faktura — hänger ihop i ett system? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+<p>Gör kreditkollen till ett standardsteg och fånga upp villkoren i underlaget direkt. Börja med <a href="/sv/verktyg">våra gratis byggverktyg</a> och skapa ett korrekt kravunderlag i vår <a href="/sv/verktyg/faktura-mall">fakturamall</a>. Vill du se hur hela flödet — från offert och kreditvillkor till betald faktura — hänger ihop i ett system? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi.</p>
 
 <p>Relaterat: <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a>, <a href="/sv/blog/kreditforsakring-byggforetag">Kreditförsäkring för byggföretag</a> och <a href="/sv/blog/likviditet-byggforetag">Så stärker du likviditeten i byggföretaget</a>.</p>
 `;
@@ -6217,7 +6217,7 @@ const A_OMBILDA_ENSKILD_FIRMA_TILL_AB_BYGG_HTML = `
 <p>Anställningarna övergår enligt reglerna om verksamhetsövergång (LAS 6 b §), men kollektivavtalet gör det inte per automatik. Aktiebolaget är en ny arbetsgivare och kan behöva teckna nytt avtal med Byggnads/Byggföretagen samt flytta över tjänstepension och försäkringar.</p>
 
 <h2>Kom igång</h2>
-<p>Kartlägg dina inventarier, fonder och avtal, bilda bolaget först och flytta sedan över i rätt ordning – och räkna på din vinstnivå med <a href="/sv/verktyg/paslag-marginal-kalkylator">marginalkalkylatorn</a> innan du bestämmer dig. Vill du se hur ByggExp håller ihop offert, tid och fakturering i det nya bolaget? <a href="/sv/contact">Boka en demo</a> så visar vi upplägget.</p>
+<p>Kartlägg dina inventarier, fonder och avtal, bilda bolaget först och flytta sedan över i rätt ordning – och räkna på din vinstnivå med <a href="/sv/verktyg/paslag-marginal-kalkylator">marginalkalkylatorn</a> innan du bestämmer dig. Vill du se hur ByggExp håller ihop offert, tid och fakturering i det nya bolaget? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi upplägget.</p>
 
 <p>Relaterat: <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Enskild firma eller aktiebolag för byggföretag</a>, <a href="/sv/blog/starta-byggforetag-2026">Starta byggföretag 2026</a>, <a href="/sv/blog/f-skatt-hantverkare-ansokan">F-skatt för hantverkare – så ansöker du</a>.</p>
 `;
@@ -6304,7 +6304,7 @@ const A_KORTTIDSARBETE_PERMITTERING_BYGGFORETAG_HTML = `
 <p>Ja. Varsel om permittering ska normalt lämnas i god tid, med riktmärket minst två veckor i förväg enligt kollektivavtalets ordning. Du kan alltså inte permittera med omedelbar verkan.</p>
 
 <h2>Kom igång</h2>
-<p>Bestäm om svackan är tillfällig eller varaktig, kontrollera aktiveringskravet hos Skatteverket, ta stöd av Byggföretagens Arbetsgivarguide och Byggnads – och ta juridisk eller avtalsmässig hjälp innan du fattar beslut. Håll samtidigt underlaget i ordning med <a href="/sv/verktyg/tidrapport-mall">tidrapport-mallen</a>. Vill du se hur ByggExp håller ihop tid, projekt och personal? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Bestäm om svackan är tillfällig eller varaktig, kontrollera aktiveringskravet hos Skatteverket, ta stöd av Byggföretagens Arbetsgivarguide och Byggnads – och ta juridisk eller avtalsmässig hjälp innan du fattar beslut. Håll samtidigt underlaget i ordning med <a href="/sv/verktyg/tidrapport-mall">tidrapport-mallen</a>. Vill du se hur ByggExp håller ihop tid, projekt och personal? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/uppsagning-arbetsbrist-bygg">Uppsägning vid arbetsbrist i bygg</a>, <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Kollektivavtal i byggbranschen</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>.</p>
 `;
@@ -6398,7 +6398,7 @@ const A_FRISKVARDSBIDRAG_BYGGFORETAG_AVDRAG_HTML = `
 <p>Nej, inte skattefritt till dig själv, eftersom du inte räknas som anställd. I aktiebolag räknas ägaren som anställd och kan ta del av bidraget. Anställda i den enskilda firman kan däremot få det skattefritt.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att räkna på vad din personal kostar och vad du behöver ta betalt med vår <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator</a>, och utforska fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur ByggExp håller ihop personal och kostnader i vardagen? <a href="/sv/contact">Boka en demo</a> så visar vi.</p>
+<p>Börja med att räkna på vad din personal kostar och vad du behöver ta betalt med vår <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylator</a>, och utforska fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur ByggExp håller ihop personal och kostnader i vardagen? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi.</p>
 
 <p>Relaterat: <a href="/sv/blog/vad-kostar-en-anstalld-byggforetag">Vad kostar en anställd i byggföretag?</a> och <a href="/sv/blog/avdrag-arbetsklader-verktyg">Avdrag för arbetskläder och verktyg</a>.</p>
 `;
@@ -6615,7 +6615,7 @@ const A_ROT_FORDELA_MAKAR_TAK_2026_HTML = `
 <p>Ja. Makar och sambor med gemensamt hushåll kan omfördela avdraget i deklarationen via <em>Ändra</em> -&gt; <em>Skattereduktioner rotarbete eller rutarbete</em>. Den som tar över måste själv uppfylla villkoren.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna ut avdraget per person innan ni fakturerar med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a> och ställ fakturan i <a href="/sv/verktyg/faktura-mall">fakturamallen</a> med arbetskostnad och andelar rätt uppdelade. Vill ni se hur ByggExp hanterar delade beställningar i praktiken? <a href="/sv/contact">Boka en demo här -&gt;</a></p>
+<p>Räkna ut avdraget per person innan ni fakturerar med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a> och ställ fakturan i <a href="/sv/verktyg/faktura-mall">fakturamallen</a> med arbetskostnad och andelar rätt uppdelade. Vill ni se hur ByggExp hanterar delade beställningar i praktiken? <a href="/sv/contact">Boka en gratis konsultation här -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/faktura-med-rotavdrag">Faktura med rotavdrag – exempel &amp; mall</a>, <a href="/sv/blog/rotavdrag-2026-nya-regler-foretag">ROT-avdrag 2026 – nya regler för företag</a>, <a href="/sv/blog/rot-avdrag">Så fungerar ROT-avdraget för byggföretag</a>.</p>
 `;
@@ -6690,7 +6690,7 @@ const A_PRESKRIPTION_FAKTURA_BYGG_SLUTFAKTURA_HTML = `
 <p>Under AB 04/ABT 06 preskriberas de flesta entreprenadfordringar, inklusive ÄTA, om de inte framställs inom sex månader från godkänd slutbesiktning. Kontraktssumman och momsen har två år. Framställ ÄTA-kraven skriftligt i god tid.</p>
 
 <h2>Kom igång</h2>
-<p>En fast rutin för slutfakturering skyddar kassaflödet bättre än någon påminnelseavgift. Sätt upp din nästa faktura i <a href="/sv/verktyg/faktura-mall">fakturamallen</a> med korrekta datum och dokumenterat underlag. Vill du se hur ByggExp håller ihop offert, ÄTA och slutfaktura i ett flöde? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>En fast rutin för slutfakturering skyddar kassaflödet bättre än någon påminnelseavgift. Sätt upp din nästa faktura i <a href="/sv/verktyg/faktura-mall">fakturamallen</a> med korrekta datum och dokumenterat underlag. Vill du se hur ByggExp håller ihop offert, ÄTA och slutfaktura i ett flöde? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a>, <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturor</a> och <a href="/sv/blog/fakturera-som-hantverkare">Så fakturerar du som hantverkare</a>.</p>
 `;
@@ -6846,7 +6846,7 @@ const A_LEASA_ELLER_KOPA_MASKINER_BYGGFORETAG_HTML = `
 <p>Ja, momsen på maskiner och verktyg (ej personbil) är normalt fullt avdragsgill. Vid köp lyfts hela ingående momsen direkt, och vid leasing dras momsen löpande på varje avgift – vid finansiell leasing faktureras den dock ofta redan vid avtalets start.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna på ditt eget upplägg innan du bestämmer dig – testa <a href="/sv/verktyg">ByggExps gratis kalkylverktyg</a> och se hur maskinkostnaden slår på marginalen med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn</a>. Vill du se hur ByggExp samlar kalkyl och kostnader för hela verksamheten, <a href="/sv/contact">boka en demo</a> så visar vi.</p>
+<p>Räkna på ditt eget upplägg innan du bestämmer dig – testa <a href="/sv/verktyg">ByggExps gratis kalkylverktyg</a> och se hur maskinkostnaden slår på marginalen med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslags- och marginalkalkylatorn</a>. Vill du se hur ByggExp samlar kalkyl och kostnader för hela verksamheten, <a href="/sv/contact">boka en gratis konsultation</a> så visar vi.</p>
 
 <p>Relaterat: <a href="/sv/blog/verktyg-direktavdrag-eller-avskrivning">Verktyg – direktavdrag eller avskrivning?</a>, <a href="/sv/blog/likviditet-byggforetag">Likviditet i byggföretag</a>, <a href="/sv/blog/avdrag-arbetsklader-verktyg">Avdrag för arbetskläder och verktyg</a>.</p>
 `;
@@ -7020,7 +7020,7 @@ const A_KONTROLLERA_KUNDENS_ROTUTRYMME_HTML = `
 <p>Nej. Domstolar har underkänt vaga formuleringar. Skriv uttryckligen att kunden ska betala full arbetskostnad om Skatteverket nekar eller återkräver avdraget, i ett skriftligt avtal.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att räkna avdrag och nettopris redan i offertläget med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>, och bygg fakturan på <a href="/sv/verktyg/faktura-mall">fakturamallen</a> som skiljer arbete från material. Vill du se hur offert, avtal med förbehåll och tidrapport hänger ihop i ett flöde? <a href="/sv/contact">Boka en demo av ByggExp</a>.</p>
+<p>Börja med att räkna avdrag och nettopris redan i offertläget med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdragskalkylatorn</a>, och bygg fakturan på <a href="/sv/verktyg/faktura-mall">fakturamallen</a> som skiljer arbete från material. Vill du se hur offert, avtal med förbehåll och tidrapport hänger ihop i ett flöde? <a href="/sv/contact">Boka en gratis konsultation av ByggExp</a>.</p>
 <p>Relaterat: <a href="/sv/blog/faktura-med-rotavdrag">Faktura med rotavdrag – exempel &amp; mall</a>, <a href="/sv/blog/skatteverket-nekar-rotavdrag-forbehall">Skatteverket nekar ROT – så skyddar förbehållet dig</a>, <a href="/sv/blog/byggfaktura-checklista-rot">Byggfaktura med ROT – checklista</a>.</p>
 `;
 
@@ -7106,7 +7106,7 @@ const A_LON_ELLER_UTDELNING_BYGGBOLAG_2026_HTML = `
 <p>En vanlig tumregel 2026 är lön upp till den statliga brytpunkten, cirka 55 000 kr/mån, och överskottet som lågbeskattad utdelning inom gränsbeloppet. Kontrollera samtidigt att årslönen räcker för att inte kapa det lönebaserade utrymmet via 50x-taket. Exakt nivå beror på din lönesumma – stäm av med din konsult.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att räkna på ditt bolags siffror i <a href="/sv/verktyg">våra gratis verktyg för byggföretag</a>, och sätt rätt timpris för att bära den lön du planerar att ta ut. Vill du se hur ByggExp ger dig underlagen för lön- och utdelningsbeslutet i praktiken? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Börja med att räkna på ditt bolags siffror i <a href="/sv/verktyg">våra gratis verktyg för byggföretag</a>, och sätt rätt timpris för att bära den lön du planerar att ta ut. Vill du se hur ByggExp ger dig underlagen för lön- och utdelningsbeslutet i praktiken? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/nya-3-12-regler-2026">Nya 3:12-reglerna 2026 – så påverkas ditt bygg-AB</a>, <a href="/sv/blog/k10-blankett-2026">K10-blanketten 2026 steg för steg</a> och <a href="/sv/blog/periodiseringsfond-byggbolag">Periodiseringsfond för byggbolag</a>.</p>
 
@@ -7188,7 +7188,7 @@ const A_SERVICEAVTAL_UNDERHALLSAVTAL_BYGGFORETAG_HTML = `
 <p>Kombinera. Lägg det planerbara underhållet och beredskapen som ett fast abonnemang — det ger den återkommande intäkten — och fakturera akuta åtgärder på löpande räkning. Då slipper du ta risken för oförutsägbara insatser samtidigt som kunden får ett förutsägbart baspris.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att bygga ditt serviceavtalsunderlag i <a href="/sv/verktyg/offert-mall">offertmallen</a> och kontrollera att timpriset bär abonnemanget med <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a>. Vill du se hur ByggExp håller ihop återkommande fakturering och tidsuppföljning? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Börja med att bygga ditt serviceavtalsunderlag i <a href="/sv/verktyg/offert-mall">offertmallen</a> och kontrollera att timpriset bär abonnemanget med <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a>. Vill du se hur ByggExp håller ihop återkommande fakturering och tidsuppföljning? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a>, <a href="/sv/blog/timpris-hantverkare">Rätt timpris för hantverkare</a> och <a href="/sv/blog/tackningsbidrag-byggforetag">Täckningsbidrag för byggföretag</a>.</p>
 `;
@@ -7257,7 +7257,7 @@ const A_ARBETSRESA_TJANSTERESA_BYGG_AVDRAG_HTML = `
 <p>Ja, enligt undantagsregeln. Om arbetsplatserna är spridda och den anställda bara besöker arbetsgivarens depå eller kontor 2–3 gånger i månaden blir bostaden tjänsteställe. Då blir resan hemifrån direkt till bygget en tjänsteresa.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att räkna på ett faktiskt jobb i <a href="/sv/verktyg">våra gratis bygg-kalkylatorer</a> och sätt rätt siffror på mil, traktamente och restid. Vill du se hur ByggExp samlar reseunderlaget automatiskt per projekt och anställd? <a href="/sv/contact">Boka en demo -&gt;</a> så visar vi upplägget för din firma.</p>
+<p>Börja med att räkna på ett faktiskt jobb i <a href="/sv/verktyg">våra gratis bygg-kalkylatorer</a> och sätt rätt siffror på mil, traktamente och restid. Vill du se hur ByggExp samlar reseunderlaget automatiskt per projekt och anställd? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a> så visar vi upplägget för din firma.</p>
 
 <p>Relaterat: <a href="/sv/blog/milersattning-2026">Milersättning 2026</a>, <a href="/sv/blog/traktamente-byggnadsarbetare-2026">Traktamente för byggnadsarbetare 2026</a> och <a href="/sv/blog/korjournal-krav-skatteverket-bygg">Körjournal – Skatteverkets krav för bygg</a>.</p>
 `;
@@ -7329,7 +7329,7 @@ const A_ENTREPRENADGARANTI_SAKERHET_AB04_HTML = `
 <p>Beställaren bör verifiera att säkerheten är ställd innan byggstart. Uteblir den kan det beroende på omständigheterna ge grund för att innehålla betalning eller häva avtalet.</p>
 
 <h2>Kom igång</h2>
-<p>Sammanfattat: 10 % under entreprenadtiden, 5 % under garantitiden, 2 år default säkerhetstid – och garantitid respektive ansvarstid som separata klockor. Kom igång med <a href="/sv/verktyg/offert-mall">vår offertmall</a> och räkna in säkerhetskostnaden i ditt nästa anbud. Vill du se hur ByggExp fungerar i din verksamhet? <a href="/sv/contact">Boka en demo här -></a>.</p>
+<p>Sammanfattat: 10 % under entreprenadtiden, 5 % under garantitiden, 2 år default säkerhetstid – och garantitid respektive ansvarstid som separata klockor. Kom igång med <a href="/sv/verktyg/offert-mall">vår offertmall</a> och räkna in säkerhetskostnaden i ditt nästa anbud. Vill du se hur ByggExp fungerar i din verksamhet? <a href="/sv/contact">Boka en gratis konsultation här -></a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a>, <a href="/sv/blog/ab-04-och-abt-06">Skillnaden mellan AB 04 och ABT 06</a> och <a href="/sv/blog/entreprenadforsakring-allrisk-vad-tacker">Entreprenadförsäkring och allrisk – vad täcker den?</a>.</p>
 `;
@@ -7400,7 +7400,7 @@ const A_FAKTURERINGSAVGIFT_HANTVERKARE_TILLATEN_HTML = `
 <p>Nej. Förseningsersättningen på 450 kr gäller bara när kunden är ett företag eller en myndighet. Mot konsument får du använda påminnelseavgift (om avtalad), inkassoavgift, avgift för amorteringsplan och dröjsmålsränta.</p>
 
 <h2>Kom igång</h2>
-<p>Lägg avgifter, förfallodag och dröjsmålsränta på rätt plats direkt i <a href="/sv/verktyg/faktura-mall">faktura-mallen</a>, eller utforska fler underlag bland <a href="/sv/verktyg">våra gratis verktyg</a>. Vill du se hur det fungerar i praktiken, <a href="/sv/contact">boka en demo</a>. Detta är allmän information och inte individuell juridisk rådgivning.</p>
+<p>Lägg avgifter, förfallodag och dröjsmålsränta på rätt plats direkt i <a href="/sv/verktyg/faktura-mall">faktura-mallen</a>, eller utforska fler underlag bland <a href="/sv/verktyg">våra gratis verktyg</a>. Vill du se hur det fungerar i praktiken, <a href="/sv/contact">boka en gratis konsultation</a>. Detta är allmän information och inte individuell juridisk rådgivning.</p>
 
 <p>Relaterat: <a href="/sv/blog/vad-ska-faktura-innehalla-bygg">Vad ska en byggfaktura innehålla?</a>, <a href="/sv/blog/paminnelse-inkasso-avgift-bygg">Påminnelse och inkassoavgift i byggbranschen</a>, <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturan</a>.</p>
 `;
@@ -7548,7 +7548,7 @@ const A_GDPR_KUNDREGISTER_BYGGFORETAG_HTML = `
 <p>Ja. Registerförteckningen är intern dokumentation över vilka personuppgifter du behandlar, för vilket ändamål, hur länge och med vilken rättslig grund. Den gäller oavsett företagsstorlek och är oftast det första dokument IMY begär vid en granskning.</p>
 
 <h2>Kom igång</h2>
-<p>GDPR är fullt hanterbart för ett byggföretag när du bryter ner det i tre delar: rätt grund, rätt lagringstid och rätt dokumentation. Börja med mallar och underlag bland <a href="/sv/verktyg">våra gratis verktyg</a>, och vill du se hur du håller registren ordnade i praktiken kan du <a href="/sv/contact">boka en demo</a>.</p>
+<p>GDPR är fullt hanterbart för ett byggföretag när du bryter ner det i tre delar: rätt grund, rätt lagringstid och rätt dokumentation. Börja med mallar och underlag bland <a href="/sv/verktyg">våra gratis verktyg</a>, och vill du se hur du håller registren ordnade i praktiken kan du <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/digitalisera-byggforetag-projektstyrning">Digitalisera byggföretaget med projektstyrning</a>, <a href="/sv/blog/hitta-kunder-byggfirma">Hitta kunder till byggfirman</a>, <a href="/sv/blog/starta-byggforetag-2026">Starta byggföretag 2026</a>.</p>
 `;
@@ -7640,7 +7640,7 @@ const A_LEADPLATTFORMAR_OFFERTA_SERVICEFINDER_BYGGFIRMA_HTML = `
 <p>30 procent av arbetskostnaden, max 50 000 kr per person och år, med ett nytt gemensamt tak för ROT och RUT på 75 000 kr per person och år. Avdraget gäller bara arbete, kräver att företaget är godkänt för F-skatt och att kunden betalar elektroniskt.</p>
 
 <h2>Kom igång</h2>
-<p>Räkna på din egen kostnad per vunnet jobb innan du köper nästa lead, och se till att svaret går ut snabbt och komplett. Börja med <a href="/sv/verktyg/offert-mall">offertmallen</a> och de övriga <a href="/sv/verktyg">gratisverktygen</a>. Vill du se hur ByggExp knyter ihop offert, ROT och uppföljning i ett flöde? <a href="/sv/contact">Boka en demo</a> så visar vi konkret.</p>
+<p>Räkna på din egen kostnad per vunnet jobb innan du köper nästa lead, och se till att svaret går ut snabbt och komplett. Börja med <a href="/sv/verktyg/offert-mall">offertmallen</a> och de övriga <a href="/sv/verktyg">gratisverktygen</a>. Vill du se hur ByggExp knyter ihop offert, ROT och uppföljning i ett flöde? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi konkret.</p>
 
 <p>Relaterat: <a href="/sv/blog/hitta-kunder-byggfirma">Hitta kunder till byggfirman</a>, <a href="/sv/blog/google-foretagsprofil-lokal-seo-byggfirma">Google-företagsprofil och lokal SEO för byggfirmor</a>, <a href="/sv/blog/skaffa-recensioner-omdomen-byggfirma">Så skaffar du fler recensioner och omdömen</a>.</p>
 `;
@@ -7707,7 +7707,7 @@ const A_OPPEN_BOK_RIKTKOSTNAD_ENTREPRENAD_HTML = `
 <p>Nej. Incitamentsavtal rekommenderas inte gentemot konsument. Konsumentuppdrag regleras av konsumenttjänstlagen, medan öppen bok och riktkostnad hör hemma i B2B-projekt under AB 04 eller ABT 06.</p>
 
 <h2>Kom igång</h2>
-<p>Öppen bok och riktkostnad flyttar fokus från lägsta pris till gemensam kostnadskontroll — men modellen är bara så bra som avtalet och underlaget bakom den. Börja med att räkna och dokumentera i <a href="/sv/verktyg">våra gratis byggverktyg</a> och sätt ord på ersättningsformen med <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur ByggExp kan hålla ihop kalkyl, offert och kostnadsuppföljning i ett flöde? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Öppen bok och riktkostnad flyttar fokus från lägsta pris till gemensam kostnadskontroll — men modellen är bara så bra som avtalet och underlaget bakom den. Börja med att räkna och dokumentera i <a href="/sv/verktyg">våra gratis byggverktyg</a> och sätt ord på ersättningsformen med <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur ByggExp kan hålla ihop kalkyl, offert och kostnadsuppföljning i ett flöde? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/fast-pris-eller-lopande-rakning">Fast pris eller löpande räkning</a>, <a href="/sv/blog/kalkylprogram-bygg">Kalkylprogram för bygg</a>, <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">Kostnadskontroll och marginal i byggprojekt</a>.</p>
 `;
@@ -7828,7 +7828,7 @@ const A_OFFERTPROGRAM_BYGGFORETAG_HTML = `
 <p>Grunden är densamma oavsett verktyg: en genomtänkt kalkyl. Läs mer om att <a href="/sv/blog/skriva-offert">skriva offert</a> som håller.</p>
 
 <h2>Så kommer du igång</h2>
-<p>Du behöver inte köpa ett system för att börja skicka bättre offerter idag. <a href="/sv/verktyg/offert-mall">Offert-mallen</a> ger dig en färdig PDF gratis, och när volymen växer är steget till ett offertprogram – där offert, tid och faktura hänger ihop – litet. <a href="/sv/contact">Boka en demo av ByggExp</a> om du vill se hela flödet från offert till betald faktura.</p>
+<p>Du behöver inte köpa ett system för att börja skicka bättre offerter idag. <a href="/sv/verktyg/offert-mall">Offert-mallen</a> ger dig en färdig PDF gratis, och när volymen växer är steget till ett offertprogram – där offert, tid och faktura hänger ihop – litet. <a href="/sv/contact">Boka en gratis konsultation av ByggExp</a> om du vill se hela flödet från offert till betald faktura.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
@@ -8205,7 +8205,7 @@ const A_OFFERT_VVS_EL_RORMOKARE_HTML = `
 <p>Vid konsumentjobb högst 15 procent enligt 36 § konsumenttjänstlagen, om ni inte avtalat en annan gräns eller det tillkommit tilläggsarbete. Ett fast pris är bindande och får inte överskridas.</p>
 
 <h2>Kom igång</h2>
-<p>Ta fram en offertmall du kan återanvända per yrke, så blir varje ny offert några minuters arbete. Börja med <a href="/sv/verktyg/offert-mall">offertmallen</a> och läs vad du bör titta på i ett <a href="/sv/blog/offertprogram-byggforetag">offertprogram</a>. Vill du se hur offert, ROT och faktura hänger ihop? <a href="/sv/contact">Boka en demo →</a></p>
+<p>Ta fram en offertmall du kan återanvända per yrke, så blir varje ny offert några minuters arbete. Börja med <a href="/sv/verktyg/offert-mall">offertmallen</a> och läs vad du bör titta på i ett <a href="/sv/blog/offertprogram-byggforetag">offertprogram</a>. Vill du se hur offert, ROT och faktura hänger ihop? <a href="/sv/contact">Boka en gratis konsultation →</a></p>
 
 <p>Relaterat: <a href="/sv/blog/skriva-offert">Skriva offert – steg för steg</a>, <a href="/sv/blog/fast-pris-eller-lopande-rakning">Fast pris eller löpande räkning</a>, <a href="/sv/blog/ata-arbeten">ÄTA-arbeten – ändring, tillägg, avgående</a>.</p>
 `;
@@ -8287,7 +8287,7 @@ const A_ANBUD_BYGG_HTML = `
 <p>Ett förbehåll gör anbudet "orent" enligt 6 § och kan leda till att det förkastas, eftersom det inte går att jämföra med de andra på lika villkor. Ange förbehåll uttryckligt och prissätt dem.</p>
 
 <h2>Kom igång</h2>
-<p>Ett räknat och tydligt anbud med satt giltighetstid är skillnaden mellan ett lönsamt jobb och en dyr läxa. Börja med <a href="/sv/verktyg/offert-mall">offertmallen</a> och läs hur du <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">håller marginalen</a> hela vägen till slutfaktura. Vill du se hur anbud, projekt och faktura hänger ihop? <a href="/sv/contact">Boka en demo →</a></p>
+<p>Ett räknat och tydligt anbud med satt giltighetstid är skillnaden mellan ett lönsamt jobb och en dyr läxa. Börja med <a href="/sv/verktyg/offert-mall">offertmallen</a> och läs hur du <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">håller marginalen</a> hela vägen till slutfaktura. Vill du se hur anbud, projekt och faktura hänger ihop? <a href="/sv/contact">Boka en gratis konsultation →</a></p>
 
 <p>Relaterat: <a href="/sv/blog/skriva-offert">Skriva offert – steg för steg</a>, <a href="/sv/blog/offentlig-upphandling-bygg-lou">Offentlig upphandling enligt LOU</a>, <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaden</a>, <a href="/sv/blog/anbud-bygg">Anbud i bygg – så räknar och lämnar du</a>.</p>
 `;
@@ -8378,7 +8378,7 @@ const A_GRON_TEKNIK_AVDRAG_HTML = `
 <p>Ja, men inte för samma kostnad. Olika arbeten i samma projekt kan ge olika avdrag, så länge kostnaderna hålls åtskilda på fakturan.</p>
 
 <h2>Kom igång</h2>
-<p>Sätt rätt procent per kategori, ta med materialet i underlaget och kolla kundens utrymme innan du börjar – då blir grön teknik-avdraget en enkel affär i stället för en nekad utbetalning. Bygg fakturan i <a href="/sv/blog/faktureringsprogram-bygg">ett faktureringsprogram som klarar ROT och särredovisning</a>. Vill du se hur det fungerar i ett riktigt jobb? <a href="/sv/contact">Boka en demo →</a></p>
+<p>Sätt rätt procent per kategori, ta med materialet i underlaget och kolla kundens utrymme innan du börjar – då blir grön teknik-avdraget en enkel affär i stället för en nekad utbetalning. Bygg fakturan i <a href="/sv/blog/faktureringsprogram-bygg">ett faktureringsprogram som klarar ROT och särredovisning</a>. Vill du se hur det fungerar i ett riktigt jobb? <a href="/sv/contact">Boka en gratis konsultation →</a></p>
 
 <p>Relaterat: <a href="/sv/blog/rot-eller-rut">ROT eller RUT – skillnaden</a>, <a href="/sv/blog/kontrollera-kundens-rotutrymme">Kontrollera kundens avdragsutrymme</a>, <a href="/sv/blog/offert-vvs-elektriker-rormokare">Offert för el, VVS och rörmokare</a>.</p>
 `;
@@ -8447,7 +8447,7 @@ const A_BYGGFELSFORSAKRING_HTML = `
 <p>Ansvaret ligger på byggherren, alltså konsumenten, men det ordnas ofta i praktiken via entreprenörens bankgaranti eller en försäkring. Det måste finnas före startbesked.</p>
 
 <h2>Kom igång</h2>
-<p>Bygger du åt konsument? Se till att färdigställandeskyddet är på plats före start, och läs vår guide om <a href="/sv/blog/fardigstallandeskydd-smahus">färdigställandeskydd för småhus</a>. Vill du hålla besiktnings- och egenkontrollunderlaget samlat per projekt? <a href="/sv/contact">Boka en demo →</a></p>
+<p>Bygger du åt konsument? Se till att färdigställandeskyddet är på plats före start, och läs vår guide om <a href="/sv/blog/fardigstallandeskydd-smahus">färdigställandeskydd för småhus</a>. Vill du hålla besiktnings- och egenkontrollunderlaget samlat per projekt? <a href="/sv/contact">Boka en gratis konsultation →</a></p>
 
 <p>Relaterat: <a href="/sv/blog/fardigstallandeskydd-smahus">Färdigställandeskydd för småhus</a>, <a href="/sv/blog/entreprenadforsakring-allrisk-vad-tacker">Entreprenadförsäkring – vad täcker allrisk?</a>, <a href="/sv/blog/vilka-forsakringar-behover-byggforetag">Vilka försäkringar behöver byggföretaget?</a>, <a href="/sv/blog/byggfelsforsakring">Byggfelsförsäkring – vad gäller idag?</a></p>
 `;

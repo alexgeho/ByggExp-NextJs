@@ -135,8 +135,8 @@ export default function RestidsersattningKalkylatorPage() {
         faq={FAQ}
         cta={{
           heading: 'Restid per pass i ByggExp',
-          text: 'Registrera restid i km och minuter direkt på arbetspasset i appen. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Registrera restid i km och minuter direkt på arbetspasset i appen. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

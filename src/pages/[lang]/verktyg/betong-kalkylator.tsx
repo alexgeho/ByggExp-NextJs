@@ -135,8 +135,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       },
     ],
     ctaHeading: 'Håll koll på material och ekonomi i ByggExp',
-    ctaText: 'Följ material, tid och kostnader per projekt. Boka en demo.',
-    ctaButton: 'Boka demo',
+    ctaText: 'Följ material, tid och kostnader per projekt. Boka en gratis konsultation.',
+    ctaButton: 'Boka gratis konsultation',
     relatedHeading: 'Fler byggkalkylatorer',
     related: [
       { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeterberäknare' },
@@ -234,8 +234,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       },
     ],
     ctaHeading: 'Hold styr på materialer og økonomi i ByggExp',
-    ctaText: 'Følg materialer, tid og kostnader per prosjekt. Bestill en demo.',
-    ctaButton: 'Bestill demo',
+    ctaText: 'Følg materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
+    ctaButton: 'Bestill gratis konsultasjon',
     relatedHeading: 'Flere byggkalkulatorer',
     related: [
       { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeterberegner' },
@@ -339,8 +339,8 @@ const CONTENT: Record<Locale, ToolContent> = {
       },
     ],
     ctaHeading: 'Keep track of material and finances in ByggExp',
-    ctaText: 'Follow material, time and costs per project. Book a demo.',
-    ctaButton: 'Book a demo',
+    ctaText: 'Follow material, time and costs per project. Book a free consultation.',
+    ctaButton: 'Book a free consultation',
     relatedHeading: 'More construction calculators',
     related: [
       { slug: 'kvadratmeter-kalkylator', label: 'Square-metre calculator' },

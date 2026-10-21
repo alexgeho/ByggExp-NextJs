@@ -113,8 +113,8 @@ export default function KvalitetsplanMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Egenkontroll och kvalitet i ByggExp',
-          text: 'Koppla egenkontroller, avvikelser och dokument till rätt projekt. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Koppla egenkontroller, avvikelser och dokument till rätt projekt. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

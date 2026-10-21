@@ -75,7 +75,7 @@ const ATA_HTML = `
 <p>Ja. Vid likställd ÄTA kan utebliven underrättelse &quot;utan dröjsmål&quot; leda till att rätten till ersättning går förlorad – även om arbetet utförts.</p>
 
 <h2>Kom igång</h2>
-<p>Sluta jobba gratis. Dokumentera varje ÄTA skriftligt, underrätta i tid och ta med den på fakturan. <a href="/sv/verktyg/ata-mall">Ladda ner gratis ÄTA-mall</a> eller <a href="/sv/contact">boka en demo av ByggExp</a>.</p>
+<p>Sluta jobba gratis. Dokumentera varje ÄTA skriftligt, underrätta i tid och ta med den på fakturan. <a href="/sv/verktyg/ata-mall">Ladda ner gratis ÄTA-mall</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
 <p>Relaterat: <a href="/sv/verktyg/ata-mall">ÄTA-mall</a> · <a href="/sv/blog/byggdagbok">Guide: byggdagbok</a> · <a href="/sv/verktyg/faktura-mall">Faktura-mall</a></p>
 `.trim();
@@ -192,7 +192,7 @@ const AB04_HTML = `
 <p>Välj AB 04 om beställaren projekterar och entreprenören bygger enligt handlingarna. Välj ABT 06 om entreprenören ska ansvara för både projektering och utförande utifrån funktionskrav.</p>
 
 <h2>Kom igång</h2>
-<p>Håll koll på kontrakt, ÄTA, dagbok och ekonomi på ett ställe. Ladda ner en gratis <a href="/sv/verktyg/entreprenadkontrakt-mall">entreprenadkontrakt-mall</a>, <a href="/sv/blog/ata-arbeten">läs om ÄTA</a>, skapa offert och faktura i ByggExp eller <a href="/sv/contact">boka en demo</a>.</p>
+<p>Håll koll på kontrakt, ÄTA, dagbok och ekonomi på ett ställe. Ladda ner en gratis <a href="/sv/verktyg/entreprenadkontrakt-mall">entreprenadkontrakt-mall</a>, <a href="/sv/blog/ata-arbeten">läs om ÄTA</a>, skapa offert och faktura i ByggExp eller <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a> · <a href="/sv/blog/byggdagbok">Byggdagbok</a> · <a href="/sv/blog/egenkontroll">Egenkontroll</a></p>
 `.trim();
@@ -262,7 +262,7 @@ const SLUTBESIKTNING_HTML = `
 <p>När entreprenaden godkänns vid slutbesiktningen. Enligt AB 04 är den fem år för arbetet och två år för material; ansvarstiden är tio år.</p>
 
 <h2>Kom igång</h2>
-<p>Gå in i slutbesiktningen med ordning på dokumentationen. <a href="/sv/blog/egenkontroll">Läs om egenkontroll</a>, för <a href="/sv/blog/byggdagbok">byggdagbok</a> i ByggExp eller <a href="/sv/contact">boka en demo</a>.</p>
+<p>Gå in i slutbesiktningen med ordning på dokumentationen. <a href="/sv/blog/egenkontroll">Läs om egenkontroll</a>, för <a href="/sv/blog/byggdagbok">byggdagbok</a> i ByggExp eller <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06</a> · <a href="/sv/blog/egenkontroll">Egenkontroll</a> · <a href="/sv/blog/byggdagbok">Byggdagbok</a></p>
 `.trim();
@@ -338,7 +338,7 @@ const MUNTLIGT_HTML = `
 <p>En fordran preskriberas normalt tio år efter tillkomsten enligt preskriptionslagen (1981:130) 2 §, men mot en konsument är tiden tre år. Preskriptionen kan avbrytas med ett krav – skicka det skriftligt, eftersom ett muntligt krav är svårt att bevisa.</p>
 
 <h2>Kom igång</h2>
-<p>Sluta lita på minnet och börja bygga bevis. Skapa jobbets grund i <a href="/sv/verktyg/offert-mall">offertmallen</a> och håll ändringar i ordning med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a>. Vill du se hur hela flödet hänger ihop i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi hur du får spårbart bevis på köpet.</p>
+<p>Sluta lita på minnet och börja bygga bevis. Skapa jobbets grund i <a href="/sv/verktyg/offert-mall">offertmallen</a> och håll ändringar i ordning med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a>. Vill du se hur hela flödet hänger ihop i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi hur du får spårbart bevis på köpet.</p>
 
 <p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten – så hanterar du ändringar rätt</a> och <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a>.</p>
 `.trim();
@@ -428,7 +428,7 @@ const GARANTI_HTML = `
 <p>Ja, parterna kan särreglera väsentlighetskravet i kontraktet. Ni kan till exempel avtala att ett fel anses väsentligt först när avhjälpandekostnaden överstiger ett visst belopp, och att flera likartade fel ska räknas som ett. Det ger tydligare spelregler för tiden efter garantin.</p>
 
 <h2>Kom igång</h2>
-<p>Bygg upp dokumentationen som håller hela ansvarstiden ut - börja med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> och komplettera med <a href="/sv/verktyg/byggdagbok-mall">byggdagboks-mallen</a>. Vill du se hur allt hänger ihop projekt för projekt, <a href="/sv/contact">boka en demo</a> så visar vi dig.</p>
+<p>Bygg upp dokumentationen som håller hela ansvarstiden ut - börja med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> och komplettera med <a href="/sv/verktyg/byggdagbok-mall">byggdagboks-mallen</a>. Vill du se hur allt hänger ihop projekt för projekt, <a href="/sv/contact">boka en gratis konsultation</a> så visar vi dig.</p>
 
 <p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 - skillnaderna</a> och <a href="/sv/blog/slutbesiktning">slutbesiktning steg för steg</a>.</p>
 `.trim();
@@ -541,7 +541,7 @@ const ABS18_HTML = `
 <p>Ja, standardblanketterna är framtagna för att användas av näringsidkare mot konsument. Du hämtar dem hos utgivarna och fyller i dem för ditt jobb.</p>
 
 <h2>Kom igång</h2>
-<p>Välj avtal efter arbetets art, hämta rätt standardblankett från Konsumentverket, Byggföretagen eller Villaägarna, och bygg ditt underlag i <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur offert, ÄTA och dokumentation hänger ihop i praktiken? <a href="/sv/contact">Boka en demo här -&gt;</a></p>
+<p>Välj avtal efter arbetets art, hämta rätt standardblankett från Konsumentverket, Byggföretagen eller Villaägarna, och bygg ditt underlag i <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur offert, ÄTA och dokumentation hänger ihop i praktiken? <a href="/sv/contact">Boka en gratis konsultation här -&gt;</a></p>
 <p>Relaterat: <a href="/sv/blog/skriva-offert">Så skriver du en offert som håller</a>, <a href="/sv/blog/muntligt-avtal-sakra-bevis">Muntligt avtal – så säkrar du bevis</a> och <a href="/sv/blog/e-signering-avtal">E-signering av avtal (BankID &amp; eIDAS)</a>.</p>
 `.trim();
 
@@ -628,7 +628,7 @@ const A_REKLAMATION_HANTVERKSTJANST_FRISTER_HTML = `
 <p>För arbete på mark, byggnader eller annan fast egendom gäller en yttersta frist på tio år efter avslutat uppdrag. Samma tioårsfrist gäller alla tjänster om du handlat grovt vårdslöst eller i strid mot tro och heder.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att säkra ditt underlag. Med <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall</a> dokumenterar du vad som beställts och utförts, vilket gör varje framtida reklamation lättare att bemöta. Vill du se hur ByggExp håller ihop avtal, ÄTA och avslut per projekt? <a href="/sv/contact">Boka en demo &rarr;</a> så visar vi upplägget.</p>
+<p>Börja med att säkra ditt underlag. Med <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall</a> dokumenterar du vad som beställts och utförts, vilket gör varje framtida reklamation lättare att bemöta. Vill du se hur ByggExp håller ihop avtal, ÄTA och avslut per projekt? <a href="/sv/contact">Boka en gratis konsultation &rarr;</a> så visar vi upplägget.</p>
 
 <p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så dokumenterar du avslutat uppdrag</a>, <a href="/sv/blog/abs-18-hantverkarformularet-17">ABS 18 och Hantverkarformuläret 17</a>, <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a>.</p>
 `;
@@ -713,7 +713,7 @@ const A_OVERLAMNING_RELATIONSHANDLINGAR_HTML = `
 <p>För att godkänd slutbesiktning startar garantitiden – 5 år för arbete och 2 år för material enligt AB 04 – och en ansvarstid på 10 år. Under garantitiden har du omvänd bevisbörda. Komplett dokumentation är då ditt bästa underlag om ett fel ifrågasätts vid garantibesiktningen.</p>
 
 <h2>Kom igång</h2>
-<p>En strukturerad överlämning betyder betalning i tid, godkänd besiktning och färre garantitvister. Börja med att lägga restpunkterna som uppgifter och följ procent klart via Mål och etapper i <a href="/sv/funktioner">ByggExps funktioner</a>, och komplettera med vår <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a> under projektets gång. Vill du se hur restlista, etappuppföljning och digital dokumentsamling hänger ihop i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi upplägget för din verksamhet.</p>
+<p>En strukturerad överlämning betyder betalning i tid, godkänd besiktning och färre garantitvister. Börja med att lägga restpunkterna som uppgifter och följ procent klart via Mål och etapper i <a href="/sv/funktioner">ByggExps funktioner</a>, och komplettera med vår <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a> under projektets gång. Vill du se hur restlista, etappuppföljning och digital dokumentsamling hänger ihop i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi upplägget för din verksamhet.</p>
 
 <p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så går den till</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
 `;
@@ -782,7 +782,7 @@ const A_ENTREPRENADKONTRAKT_MALL_HTML = `
 <p>Det beror på projektet. Fast pris ger beställaren förutsägbarhet men lägger risken på dig, löpande räkning flyttar risken till beställaren, och takpris är en kompromiss. Oavsett vilket ska modellen framgå uttryckligen i kontraktet.</p>
 
 <h2>Kom igång</h2>
-<p>Skapa ett bindande entreprenadkontrakt på några minuter med <a href="/sv/verktyg/offert-mall">vår gratis offert- och avtalsmall</a>, eller utforska alla <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur kontrakt, offert och fakturering hänger ihop i ett flöde kan du <a href="/sv/contact">boka en demo</a>.</p>
+<p>Skapa ett bindande entreprenadkontrakt på några minuter med <a href="/sv/verktyg/offert-mall">vår gratis offert- och avtalsmall</a>, eller utforska alla <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur kontrakt, offert och fakturering hänger ihop i ett flöde kan du <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06</a>, <a href="/sv/blog/abs-18-hantverkarformularet-17">ABS 18 och Hantverkarformuläret 17</a>, <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a>.</p>
 <p>Relaterat: <a href="/sv/blog/e-signering-avtal">E-signering av avtal</a> · <a href="/sv/verktyg/signera-pdf">Signera PDF gratis</a> · <a href="/sv/blog/anbud-bygg">Anbud i bygg</a> · <a href="/sv/blog/byggfelsforsakring">Byggfelsförsäkring</a></p>
@@ -861,7 +861,7 @@ const A_UPPSAGNING_ARBETSBRIST_BYGG_HTML = `
 <p>Ja, om minst fem arbetstagare berörs av driftsinskränkningen. Tidsfristen är 2, 4 eller 6 månader beroende på antalet berörda. Uteblivet varsel kan ge varselavgift.</p>
 
 <h2>Kom igång</h2>
-<p>Bygg en tydlig tidslinje och samla underlaget innan du fattar beslut. Börja i <a href="/sv/verktyg">våra gratis verktyg</a> och kontrollera alltid det kollektivavtal som gäller för ert företag innan turordningen fastställs. Vill du se hur ByggExp håller ordning på anställningsdata inför en neddragning? <a href="/sv/contact">Boka en demo -&gt;</a>.</p>
+<p>Bygg en tydlig tidslinje och samla underlaget innan du fattar beslut. Börja i <a href="/sv/verktyg">våra gratis verktyg</a> och kontrollera alltid det kollektivavtal som gäller för ert företag innan turordningen fastställs. Vill du se hur ByggExp håller ordning på anställningsdata inför en neddragning? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag — så gör du rätt från start</a>.</p>
 `;
@@ -946,7 +946,7 @@ const A_HAVNING_AV_ENTREPRENAD_HTML = `
 <p>Nej. Mot konsument gäller konsumenttjänstlagen, inte AB 04. Du får inställa (avbryta) arbetet vid utebliven betalning utan något lagstadgat krav på skriftlig förhandsvarning. Vill du däremot häva den återstående delen av tjänsten måste du först påminna kunden och ge skälig tid för rättelse (46 §). Oavsett vilket är du skyldig att utföra arbete som inte kan skjutas upp utan risk för allvarlig skada för kunden.</p>
 
 <h2>Kom igång</h2>
-<p>Bygg ett vattentätt underlag redan från start. Dokumentera tilläggen med <a href="/sv/verktyg/ata-mall">vår ÄTA-mall</a> och håll offerterna spårbara med <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur ByggExp håller ihop beställningar, ÄTA och fakturaunderlag i ett flöde? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Bygg ett vattentätt underlag redan från start. Dokumentera tilläggen med <a href="/sv/verktyg/ata-mall">vår ÄTA-mall</a> och håll offerterna spårbara med <a href="/sv/verktyg/offert-mall">offertmallen</a>. Vill du se hur ByggExp håller ihop beställningar, ÄTA och fakturaunderlag i ett flöde? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaderna förklarade</a> och <a href="/sv/blog/ata-arbeten">ÄTA-arbeten: så dokumenterar du rätt</a>.</p>
 `;
@@ -1023,7 +1023,7 @@ const A_FORSENINGSVITE_ENTREPRENAD_HTML = `
 <p>Vite dras inte av automatiskt. Beställaren måste aktivt göra kravet gällande inom avtalets reklamationsfrist enligt kap 6. Görs det för sent kan rätten till vite förfalla helt, även om förseningen är obestridd.</p>
 
 <h2>Kom igång</h2>
-<p>Se till att sluttid, ÄTA-arbeten och tidsförlängningar är dokumenterade innan förseningen blir en tvist. Börja med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a> och de övriga gratisverktygen på <a href="/sv/verktyg">/sv/verktyg</a>. Vill du se hur ByggExp håller ihop tider, ÄTA och kontraktssummor i skarpa projekt? <a href="/sv/contact">Boka en demo -&gt;</a></p>
+<p>Se till att sluttid, ÄTA-arbeten och tidsförlängningar är dokumenterade innan förseningen blir en tvist. Börja med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a> och de övriga gratisverktygen på <a href="/sv/verktyg">/sv/verktyg</a>. Vill du se hur ByggExp håller ihop tider, ÄTA och kontraktssummor i skarpa projekt? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 <p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 — vad skiljer standardavtalen</a> och <a href="/sv/blog/ata-arbeten">ÄTA-arbeten: så hanterar du ändringar och tillägg</a>.</p>
 `;
 
@@ -1105,7 +1105,7 @@ const A_HINDERSANMALAN_TIDSFORLANGNING_AB04_HTML = `
 <p>Ja. Nekar beställaren felaktigt en tidsförlängning du har rätt till, får du forcera på beställarens bekostnad enligt kap 4 § 2 – men bara om du i förväg lämnat skriftlig underrättelse med kostnadsuppskattning och kostnaden inte är oskälig.</p>
 
 <h2>Kom igång</h2>
-<p>Dokumentera hindret, anmäl utan dröjsmål och hänvisa till rätt kapitel och paragraf – så skyddar du din rätt till tidsförlängning och håller vitet borta. Börja med vår <a href="/sv/verktyg/ata-mall">ÄTA- och hindersanmälningsmall</a>, koppla den till <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mallen</a> för att visa tidpåverkan, och <a href="/sv/contact">boka en demo</a> om du vill se hur ByggExp håller ordning på hinder och ÄTA i skarpa projekt. Observera att kontraktshandlingarna och eventuella avvikelser i ditt kontrakt alltid går före standardtextens huvudregler.</p>
+<p>Dokumentera hindret, anmäl utan dröjsmål och hänvisa till rätt kapitel och paragraf – så skyddar du din rätt till tidsförlängning och håller vitet borta. Börja med vår <a href="/sv/verktyg/ata-mall">ÄTA- och hindersanmälningsmall</a>, koppla den till <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mallen</a> för att visa tidpåverkan, och <a href="/sv/contact">boka en gratis konsultation</a> om du vill se hur ByggExp håller ordning på hinder och ÄTA i skarpa projekt. Observera att kontraktshandlingarna och eventuella avvikelser i ditt kontrakt alltid går före standardtextens huvudregler.</p>
 
 <p>Relaterat: <a href="/sv/blog/forseningsvite-entreprenad">Förseningsvite i entreprenad</a>, <a href="/sv/blog/gantt-schema-mall-bygg">Gantt-schema för byggprojekt</a>, <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a>.</p>
 `;
@@ -1190,7 +1190,7 @@ const A_REKLAMATION_BEMOTA_FELKRAV_ENTREPRENAD_HTML = `
 <p>Då förskjuts bevisbördan till beställaren. Under år sex till tio inom ansvarstiden måste beställaren bevisa både att felet är väsentligt och att det orsakats av din vårdslöshet. Det är en tung börda och ofta din starkaste invändning mot ett sent krav.</p>
 
 <h2>Kom igång</h2>
-<p>Rätt bemött blir ett felkrav sällan en tvist. Nyckeln är att avgöra regelverket, kontrollera fristen och åberopa din avhjälpanderätt – med dokumentationen i ordning. Börja med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> och för löpande anteckningar i <a href="/sv/verktyg/byggdagbok-mall">byggdagbok-mallen</a>. Vill du se hur ByggExp samlar egenkontroll, dagbok och projekthistorik på ett ställe? <a href="/sv/contact">Boka en demo här -&gt;</a></p>
+<p>Rätt bemött blir ett felkrav sällan en tvist. Nyckeln är att avgöra regelverket, kontrollera fristen och åberopa din avhjälpanderätt – med dokumentationen i ordning. Börja med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> och för löpande anteckningar i <a href="/sv/verktyg/byggdagbok-mall">byggdagbok-mallen</a>. Vill du se hur ByggExp samlar egenkontroll, dagbok och projekthistorik på ett ställe? <a href="/sv/contact">Boka en gratis konsultation här -&gt;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/reklamation-hantverkstjanst-frister">Reklamation av hantverkstjänst – frister och regler</a>, <a href="/sv/blog/slutbesiktning">Slutbesiktning steg för steg</a> och <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a>.</p>
 `;
@@ -1276,7 +1276,7 @@ const A_SAGA_UPP_ANSTALLD_PERSONLIGA_SKAL_BYGG_HTML = `
 <p>Nej, inte längre. Efter reformen 2022 upphör anställningen vid uppsägningstidens slut även om uppsägningen bestrids. Tidigare fick den anställde vara kvar med lön tills tvisten var avgjord.</p>
 
 <h2>Kom igång</h2>
-<p>Dokumentera tidigt, kontrollera alltid vad ert kollektivavtal säger och ta juridisk hjälp vid minsta tveksamhet — kostnaden för rådgivning är liten jämfört med ett skadestånd. Börja med att sätta villkoren rätt med vår <a href="/sv/verktyg/anstallningsavtal-mall">anställningsavtal-mall för bygg</a>, och vill du se hur ByggExp samlar tidrapporter och dokumentation per anställd kan du <a href="/sv/contact">boka en demo</a>.</p>
+<p>Dokumentera tidigt, kontrollera alltid vad ert kollektivavtal säger och ta juridisk hjälp vid minsta tveksamhet — kostnaden för rådgivning är liten jämfört med ett skadestånd. Börja med att sätta villkoren rätt med vår <a href="/sv/verktyg/anstallningsavtal-mall">anställningsavtal-mall för bygg</a>, och vill du se hur ByggExp samlar tidrapporter och dokumentation per anställd kan du <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/uppsagning-arbetsbrist-bygg">Uppsägning på grund av arbetsbrist i byggbranschen</a>, <a href="/sv/blog/anstallningsavtal-mall-bygg">Anställningsavtal-mall för byggföretag</a>, <a href="/sv/blog/arbetstidslagen-bygg">Arbetstidslagen i byggbranschen</a>.</p>
 `;
@@ -1377,7 +1377,7 @@ const A_OB_OVERTID_BYGGAVTALET_RAKNA_HTML = `
 <p>Allmän övertid är högst 48 timmar per fyra veckor eller 50 timmar per kalendermånad, dock högst 200 timmar per år. Efter överenskommelse med Byggnads region kan ytterligare högst 150 timmar per år tillkomma, med max 13 timmars dygn och minst 11 timmars dygnsvila.</p>
 
 <h2>Kom igång</h2>
-<p>Bygg rutinen på ett korrekt tidsunderlag. Kom igång med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och boka en demo via <a href="/sv/contact">/sv/contact</a> om du vill se hur ByggExp håller ordning på tid, OB och övertid per projekt. Stäm alltid av satser och gränser mot Byggavtalet § 2 och kontrollera med MB-grupp eller Byggnads region vid minsta tvekan.</p>
+<p>Bygg rutinen på ett korrekt tidsunderlag. Kom igång med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och boka en gratis konsultation via <a href="/sv/contact">/sv/contact</a> om du vill se hur ByggExp håller ordning på tid, OB och övertid per projekt. Stäm alltid av satser och gränser mot Byggavtalet § 2 och kontrollera med MB-grupp eller Byggnads region vid minsta tvekan.</p>
 
 <p>Relaterat: <a href="/sv/blog/arbetstidslagen-bygg">Arbetstidslagen i byggbranschen</a> och <a href="/sv/blog/anstalla-personal-byggforetag">Anställa personal i byggföretag</a>.</p>
 `;
@@ -1458,7 +1458,7 @@ const A_KONSUMENTTJANSTLAGEN_HANTVERKARE_15_PROCENT_HTML = `
 <p>Kunden ska reklamera inom skälig tid, och en reklamation inom två månader räknas alltid som i rätt tid. Yttersta fristen är tre år, men tio år för arbete på byggnader, mark och andra anläggningar samt fasta saker — och alltid tio år vid grov vårdslöshet. Spara därför din dokumentation i minst tio år.</p>
 
 <h2>Kom igång</h2>
-<p>Rätt prishantering börjar i offerten och fortsätter i varje ÄTA. Ange prismodellen tydligt med <a href="/sv/verktyg/offert-mall">offertmallen</a>, dokumentera tilläggsarbeten med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a> och avisera merkostnader skriftligt innan du utför dem. Vill du se hur ByggExp samlar offerter, ÄTA och godkännanden per projekt så att aviseringskedjan finns kvar även efter tio år — <a href="/sv/contact">boka en demo här</a>.</p>
+<p>Rätt prishantering börjar i offerten och fortsätter i varje ÄTA. Ange prismodellen tydligt med <a href="/sv/verktyg/offert-mall">offertmallen</a>, dokumentera tilläggsarbeten med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a> och avisera merkostnader skriftligt innan du utför dem. Vill du se hur ByggExp samlar offerter, ÄTA och godkännanden per projekt så att aviseringskedjan finns kvar även efter tio år — <a href="/sv/contact">boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten — så hanterar du ändringar och tillägg</a>, <a href="/sv/blog/reklamation-hantverkstjanst-frister">Reklamation av hantverkstjänst — frister att hålla koll på</a> och <a href="/sv/blog/muntligt-avtal-sakra-bevis">Muntligt avtal — så säkrar du bevis</a>.</p>
 `;
@@ -1527,7 +1527,7 @@ const A_ENTREPRENADTVIST_UNDVIKA_DOKUMENTATION_HTML = `
 <p>Konsumenttjänstlagen (1985:716) gäller. Reklamation inom 2 månader efter att felet upptäckts anses alltid ha skett i rätt tid. Yttersta frist är 3 år, men 10 år för arbete på byggnader och andra fasta anläggningar.</p>
 
 <h2>Kom igång</h2>
-<p>Bygg upp bevisningen medan projektet pågår. Börja med en samtida byggdagbok via vår <a href="/sv/verktyg/byggdagbok-mall">byggdagboksmall</a>, håll ordning på ändringar med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a> och dokumentera kvaliteten med <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmallen</a>. Vill du se hur allt hänger ihop i praktiken? <a href="/sv/contact">Boka en demo</a> så visar vi hur du får dokumentationen på plats utan extra pappersarbete.</p>
+<p>Bygg upp bevisningen medan projektet pågår. Börja med en samtida byggdagbok via vår <a href="/sv/verktyg/byggdagbok-mall">byggdagboksmall</a>, håll ordning på ändringar med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a> och dokumentera kvaliteten med <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmallen</a>. Vill du se hur allt hänger ihop i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi hur du får dokumentationen på plats utan extra pappersarbete.</p>
 
 <p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten – så hanterar du dem rätt</a>, <a href="/sv/blog/byggdagbok">Byggdagbok: krav, innehåll och rutiner</a>, <a href="/sv/blog/havning-av-entreprenad">Hävning av entreprenad</a>.</p>
 `;
@@ -1680,7 +1680,7 @@ const A_BESIKTNINGSANMARKNING_ATGARDA_BEMOTA_HTML = `
 <p>Inte automatiskt. Ett fel föreligger när resultatet avviker från kontraktshandlingar, fackmässig standard eller avtalad kvalitet. Ren smak är inte ett fel – be besiktningsmannen peka ut avvikelsen mot avtalet.</p>
 
 <h2>Kom igång</h2>
-<p>Bygg upp dokumentationen redan under produktionen med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>, och håll ordning på tillkommande arbeten med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a>. Vill du se hur ByggExp knyter ihop egenkontroll, ÄTA och åtgärder i ett flöde? <a href="/sv/contact">Boka en demo här</a>.</p>
+<p>Bygg upp dokumentationen redan under produktionen med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>, och håll ordning på tillkommande arbeten med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a>. Vill du se hur ByggExp knyter ihop egenkontroll, ÄTA och åtgärder i ett flöde? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så förbereder du dig</a>, <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a> och <a href="/sv/blog/reklamation-bemota-felkrav-entreprenad">Så bemöter du reklamationer och felkrav i entreprenad</a>.</p>
 `;
@@ -1749,7 +1749,7 @@ const A_RETENTIONSRATT_HANTVERKARE_INNEHALLA_ARBETE_HTML = `
 <p>Då är det kunden som begår brott, egenmäktigt förfarande enligt Brottsbalken 8 kap. 8 §, som ger böter eller fängelse i högst ett år. Bestämmelsen skyddar uttryckligen din rätt att kvarhålla saken.</p>
 
 <h2>Kom igång</h2>
-<p>Retentionsrätten är ett verkligt påtryckningsmedel, men bara på lös egendom, bara vid en konnex och förfallen fordran, och aldrig med våld eller egenmäktig försäljning. Se till att grunden är i ordning: skapa tydliga fakturor med <a href="/sv/verktyg/faktura-mall">fakturamallen</a> och trappa upp med <a href="/sv/verktyg/betalningspaminnelse-mall">betalningspåminnelser</a> innan du håller något kvar. Vill du se hur ByggExp samlar avtal, fakturor och påminnelser på ett ställe, <a href="/sv/contact">boka en demo</a>.</p>
+<p>Retentionsrätten är ett verkligt påtryckningsmedel, men bara på lös egendom, bara vid en konnex och förfallen fordran, och aldrig med våld eller egenmäktig försäljning. Se till att grunden är i ordning: skapa tydliga fakturor med <a href="/sv/verktyg/faktura-mall">fakturamallen</a> och trappa upp med <a href="/sv/verktyg/betalningspaminnelse-mall">betalningspåminnelser</a> innan du håller något kvar. Vill du se hur ByggExp samlar avtal, fakturor och påminnelser på ett ställe, <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a>, <a href="/sv/blog/drojsmalsranta-2026">Dröjsmålsränta 2026</a> och <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturor</a>.</p>
 `;
@@ -1837,7 +1837,7 @@ const A_RESTLISTA_OVERLAMNING_BYGG_MALL_HTML = `
 <p>Vid småhusentreprenad får konsumenten enligt konsumenttjänstlagen 52 § andra stycket innehålla 10 % av priset tills entreprenaden godkänts vid slutbesiktning. Det är ett starkt skäl att stänga restlistan snabbt.</p>
 
 <h2>Kom igång</h2>
-<p>Sätt upp restlistan innan besiktningen, inte efter. Börja med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> för att rensa listan i förväg, eller utforska fler verktyg i <a href="/sv/verktyg">ByggExps verktygslåda</a>. Vill du se hur restlista, egenkontroll och överlämning hänger ihop digitalt, <a href="/sv/contact">boka en demo här</a>.</p>
+<p>Sätt upp restlistan innan besiktningen, inte efter. Börja med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> för att rensa listan i förväg, eller utforska fler verktyg i <a href="/sv/verktyg">ByggExps verktygslåda</a>. Vill du se hur restlista, egenkontroll och överlämning hänger ihop digitalt, <a href="/sv/contact">boka en gratis konsultation här</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning steg för steg</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i bygg</a> och <a href="/sv/blog/overlamning-relationshandlingar">Överlämning och relationshandlingar</a>.</p>
 `;
@@ -1918,7 +1918,7 @@ const A_GARANTIBESIKTNING_2_AR_ENTREPRENAD_HTML = `
 <p>Beställaren står för normalt och onormalt slitage, bristande underhåll och skötsel samt fel som beror på felaktig användning eller hantering. Kan entreprenören göra en sådan orsak sannolik bryts presumtionen.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att sätta system på egenkontrollerna så att du har underlag inför garantibesiktningen — utgå från <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>. Vill du se hur dokumentation, protokoll och garantitidsbevakning hänger ihop i ett projekt? <a href="/sv/contact">Boka en demo av ByggExp</a> så visar vi upplägget.</p>
+<p>Börja med att sätta system på egenkontrollerna så att du har underlag inför garantibesiktningen — utgå från <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>. Vill du se hur dokumentation, protokoll och garantitidsbevakning hänger ihop i ett projekt? <a href="/sv/contact">Boka en gratis konsultation av ByggExp</a> så visar vi upplägget.</p>
 
 <p>Relaterat: <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid i AB 04</a>, <a href="/sv/blog/slutbesiktning">Slutbesiktning — så fungerar den</a>, <a href="/sv/blog/reklamation-hantverkstjanst-frister">Reklamation av hantverkstjänst och frister</a>.</p>
 `;
@@ -2008,7 +2008,7 @@ const A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET_HTML = `
 <p>När den anställde under intjänandeåret haft frånvaro som inte är semesterlönegrundande eller ändrat sysselsättningsgrad. Då är procentregeln tvingande. I bygg är detta vanligt vid permittering, sjukfrånvaro och varierande tjänstgöringsgrad.</p>
 
 <h2>Kom igång</h2>
-<p>Rätt semesterlön börjar med rätt underlag. Samla timmar, ob och övertid löpande med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och stäm alltid av procentsats och beräkningsmetod mot gällande Byggavtal 2025–2027 och Byggnads egen semesterbroschyr. Vill du se hur ByggExp kan strukturera tidrapportering och löneunderlag för ditt företag, <a href="/sv/contact">boka en demo</a>.</p>
+<p>Rätt semesterlön börjar med rätt underlag. Samla timmar, ob och övertid löpande med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och stäm alltid av procentsats och beräkningsmetod mot gällande Byggavtal 2025–2027 och Byggnads egen semesterbroschyr. Vill du se hur ByggExp kan strukturera tidrapportering och löneunderlag för ditt företag, <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 <p>Relaterat: <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Kollektivavtal i byggbranschen</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>, <a href="/sv/blog/ob-overtid-byggavtalet-rakna">Räkna ob och övertid i Byggavtalet</a>.</p>
 `;
 
@@ -2094,7 +2094,7 @@ const A_TJANSTEPENSION_BYGGAVTALET_BAO_HTML = `
 <p>Inte för arbetare på Byggavtalet. En egen tjänstepension kan komplettera i andra sammanhang, och avdragsrätten går upp till 35 % av lönen (max 10 PBB = 592 000 kr år 2026), men den ersätter inte SAF-LO för dina kollektivanställda.</p>
 
 <h2>Kom igång</h2>
-<p>Bygg in pensionskostnaden i dina priser innan nästa anbud går ut. Testa <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a> eller bläddra bland alla <a href="/sv/verktyg">gratis byggverktyg</a>. Vill du se hur ByggExp håller ihop tidrapportering, kalkyl och kostnadsuppföljning – <a href="/sv/contact">boka en demo</a>.</p>
+<p>Bygg in pensionskostnaden i dina priser innan nästa anbud går ut. Testa <a href="/sv/verktyg/timpris-kalkylator">timpris-kalkylatorn</a> eller bläddra bland alla <a href="/sv/verktyg">gratis byggverktyg</a>. Vill du se hur ByggExp håller ihop tidrapportering, kalkyl och kostnadsuppföljning – <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 <p>Relaterat: <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Kollektivavtal i byggbranschen</a>, <a href="/sv/blog/vad-kostar-en-anstalld-byggforetag">vad kostar en anställd i ett byggföretag</a>, <a href="/sv/blog/anstalla-personal-byggforetag">anställa personal i byggföretag</a>.</p>
 `;
 
@@ -2179,7 +2179,7 @@ const A_EFTERBESIKTNING_VEM_BETALAR_ENTREPRENAD_HTML = `
 <p>Nej. Efterbesiktning enligt kap 7 § 5 är en uppföljande kontroll av om antecknade fel avhjälpts. Överbesiktning är en omprövning av ett besiktningsutlåtande och har egna kostnadsregler, där den part vars ståndpunkt inte vinner gehör normalt bär kostnaden.</p>
 
 <h2>Kom igång</h2>
-<p>Bygg in kontrollen där felen faktiskt uppstår – på arbetsplatsen. Börja med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och utforska fler kostnadsfria hjälpmedel bland <a href="/sv/verktyg">våra verktyg</a>. Vill du se hur dokumentationen hänger ihop över hela projektet? <a href="/sv/contact">Boka en demo &rarr;</a></p>
+<p>Bygg in kontrollen där felen faktiskt uppstår – på arbetsplatsen. Börja med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och utforska fler kostnadsfria hjälpmedel bland <a href="/sv/verktyg">våra verktyg</a>. Vill du se hur dokumentationen hänger ihop över hela projektet? <a href="/sv/contact">Boka en gratis konsultation &rarr;</a></p>
 <p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så fungerar den</a>, <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a>, <a href="/sv/blog/reklamation-bemota-felkrav-entreprenad">Bemöta reklamation och felkrav i entreprenad</a>.</p>
 `;
 
@@ -2258,7 +2258,7 @@ const A_FARDIGSTALLANDESKYDD_SMAHUS_HTML = `
 <p>Nej. Kravet på obligatorisk byggfelsförsäkring togs bort den 1 juni 2014, samtidigt som färdigställandeskyddet infördes. Skyddet säkrar att bygget blir färdigt och att fel avhjälps om entreprenören inte kan fullfölja. En separat nybyggnads- eller dolda-fel-försäkring är frivillig och något annat.</p>
 
 <h2>Kom igång</h2>
-<p>Bygg in färdigställandeskyddet i affären från början. Sätt upp priset och posten i <a href="/sv/verktyg/offert-mall">vår offertmall</a>, eller bläddra bland fler kalkyler och mallar i <a href="/sv/verktyg">verktygslådan</a>. Vill du se hur ByggExp håller ihop offert, avtal och dokumentation i samma flöde — <a href="/sv/contact">boka en demo</a>.</p>
+<p>Bygg in färdigställandeskyddet i affären från början. Sätt upp priset och posten i <a href="/sv/verktyg/offert-mall">vår offertmall</a>, eller bläddra bland fler kalkyler och mallar i <a href="/sv/verktyg">verktygslådan</a>. Vill du se hur ByggExp håller ihop offert, avtal och dokumentation i samma flöde — <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/startbesked-bygglov-process-2026">Startbesked och bygglovsprocessen 2026</a>, <a href="/sv/blog/abs-18-hantverkarformularet-17">ABS 18 och Hantverkarformuläret 17</a>, <a href="/sv/blog/entreprenadkontrakt-mall">Entreprenadkontrakt — mall och guide</a>.</p>
 `;
@@ -2336,7 +2336,7 @@ const A_OVERBESIKTNING_ENTREPRENAD_HTML = `
 <p>Ja. Utlåtandet är inte slutligt bindande — frågan kan prövas i domstol eller skiljeförfarande. Ett utlåtande från en gemensamt utsedd besiktningsman eller nämnd har dock högre bevisvärde än ett ensidigt.</p>
 
 <h2>Kom igång</h2>
-<p>Bygg dokumentationen som håller i en tvist redan under projektet. Börja med <a href="/sv/verktyg/egenkontroll-mall">mallen för egenkontroll →</a> och utforska fler underlag i <a href="/sv/verktyg">verktygslådan</a>. Vill du se hur ByggExp samlar egenkontroller, besiktningsunderlag och projektdokumentation på ett ställe? <a href="/sv/contact">Boka en demo →</a>. Vid större belopp — ta alltid juridisk hjälp innan du påkallar.</p>
+<p>Bygg dokumentationen som håller i en tvist redan under projektet. Börja med <a href="/sv/verktyg/egenkontroll-mall">mallen för egenkontroll →</a> och utforska fler underlag i <a href="/sv/verktyg">verktygslådan</a>. Vill du se hur ByggExp samlar egenkontroller, besiktningsunderlag och projektdokumentation på ett ställe? <a href="/sv/contact">Boka en gratis konsultation →</a>. Vid större belopp — ta alltid juridisk hjälp innan du påkallar.</p>
 
 <p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning entreprenad — så fungerar den</a>, <a href="/sv/blog/efterbesiktning-vem-betalar-entreprenad">Efterbesiktning — vem betalar?</a> och <a href="/sv/blog/besiktningsanmarkning-atgarda-bemota">Besiktningsanmärkning — åtgärda eller bemöta</a>.</p>
 `;
@@ -2412,7 +2412,7 @@ const A_AB_U_UNDERENTREPRENOR_AVTAL_HTML = `
 <p>Enligt punkt 7 utgår vite med 1 % av kontraktssumman, dock lägst 5 000 kr, för varje påbörjad vecka som kontraktstiden överskrids – om inget annat avtalats. Vill du ha ett annat vite måste du skriva in det i kontraktet eller AF.</p>
 
 <h2>Kom igång</h2>
-<p>Ett korrekt speglat UE-avtal är det som skyddar din marginal när tider och besiktningar väl sätts på prov. Börja med att bygga ett tydligt underlag i <a href="/sv/verktyg/offert-mall">offertmallen</a> och utforska fler verktyg i <a href="/sv/verktyg">verktygssamlingen</a>. Vill du se hur ByggExp håller ihop offert, kalkyl och dokumentation? <a href="/sv/contact">Boka en demo &rarr;</a></p>
+<p>Ett korrekt speglat UE-avtal är det som skyddar din marginal när tider och besiktningar väl sätts på prov. Börja med att bygga ett tydligt underlag i <a href="/sv/verktyg/offert-mall">offertmallen</a> och utforska fler verktyg i <a href="/sv/verktyg">verktygssamlingen</a>. Vill du se hur ByggExp håller ihop offert, kalkyl och dokumentation? <a href="/sv/contact">Boka en gratis konsultation &rarr;</a></p>
 
 <p>Relaterat: <a href="/sv/blog/anlita-underentreprenor">Anlita underentreprenör – vad du måste kontrollera</a>, <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaderna förklarade</a>, <a href="/sv/blog/entreprenadtvist-undvika-dokumentation">Undvik entreprenadtvist med rätt dokumentation</a>.</p>
 `;
@@ -2489,7 +2489,7 @@ const A_NYA_AB_04_ABT_06_REVIDERING_2027_HTML = `
 <p>ABPU 25 är det föreslagna namnet på efterföljaren till ABT 06, det vill säga standardavtalet för projekterings- och utförandeentreprenader (totalentreprenader). Även detta är ett förslag som inte är beslutat.</p>
 
 <h2>Kom igång</h2>
-<p>Revideringen är en process att följa, inte att agera på ännu. Under tiden kan du stärka den struktur och dokumentation som lönar sig oavsett avtal - börja med <a href="/sv/verktyg">våra gratis verktyg</a> eller <a href="/sv/contact">boka en demo</a> så visar vi hur ByggExp håller ordning på offerter, ÄTA och underlag i dina projekt.</p>
+<p>Revideringen är en process att följa, inte att agera på ännu. Under tiden kan du stärka den struktur och dokumentation som lönar sig oavsett avtal - börja med <a href="/sv/verktyg">våra gratis verktyg</a> eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur ByggExp håller ordning på offerter, ÄTA och underlag i dina projekt.</p>
 
 <p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 - skillnaderna</a>, <a href="/sv/blog/ata-arbeten">Så hanterar du ÄTA-arbeten</a>, <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid i AB 04</a>.</p>
 `;
@@ -2563,7 +2563,7 @@ const A_E_SIGNERING_AVTAL_HTML = `
 <p>Är det räkenskapsinformation ska det sparas i minst sju år enligt bokföringslagen. Spara den elektroniska originalfilen med signatur- och loggdata, eftersom det är den som utgör beviset.</p>
 
 <h2>Kom igång</h2>
-<p>Ett tydligt avtal som signeras digitalt är både snabbare och starkare bevismässigt än en påskriven papperslunta. Börja med själva avtalet – utgå från vår <a href="/sv/blog/entreprenadkontrakt-mall">entreprenadkontrakt-mall</a> och läs om hur du <a href="/sv/blog/entreprenadtvist-undvika-dokumentation">undviker tvister med rätt dokumentation</a>. Vill du se hur offert, avtal och projektdokumentation hänger ihop? <a href="/sv/contact">Boka en demo →</a></p>
+<p>Ett tydligt avtal som signeras digitalt är både snabbare och starkare bevismässigt än en påskriven papperslunta. Börja med själva avtalet – utgå från vår <a href="/sv/blog/entreprenadkontrakt-mall">entreprenadkontrakt-mall</a> och läs om hur du <a href="/sv/blog/entreprenadtvist-undvika-dokumentation">undviker tvister med rätt dokumentation</a>. Vill du se hur offert, avtal och projektdokumentation hänger ihop? <a href="/sv/contact">Boka en gratis konsultation →</a></p>
 
 <p>Relaterat: <a href="/sv/blog/muntligt-avtal-sakra-bevis">Muntligt avtal – så säkrar du bevis</a>, <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaden</a>, <a href="/sv/blog/ata-arbeten">ÄTA-arbeten – ändring, tillägg, avgående</a>.</p>
 `;

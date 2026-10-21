@@ -161,13 +161,13 @@ export const pricingTranslations = {
     fakturaLimitNote:
       "* Up to 30 outgoing and 30 incoming invoices and 100 scanned receipts per month. Need more? Let's talk.",
 
-    pricingButton: "Book a demo",
+    pricingButton: "Book a free consultation",
     pricingTrial: "14 days free with all features",
 
     offerBadge: "Special offer",
     offerTitle: "More than 40 users?",
     offerText: "Contact us for a custom price for the whole company.",
-    offerButton: "Book a demo",
+    offerButton: "Book a free consultation",
 
     addonBadge: "Add-on",
     addonTitle: "Integrations",
@@ -255,13 +255,13 @@ export const pricingTranslations = {
     fakturaLimitNote:
       "* Upp till 30 utgående och 30 inkommande fakturor samt 100 skannade kvitton per månad. Behöver ni mer? Vi hittar en lösning.",
 
-    pricingButton: "Boka demo",
+    pricingButton: "Boka gratis konsultation",
     pricingTrial: "14 dagar gratis med alla funktioner",
 
     offerBadge: "Specialerbjudande",
     offerTitle: "Fler än 40 användare?",
     offerText: "Kontakta oss för ett anpassat pris för hela företaget.",
-    offerButton: "Boka demo",
+    offerButton: "Boka gratis konsultation",
 
     addonBadge: "Tillägg",
     addonTitle: "Integrationer",
@@ -349,13 +349,13 @@ export const pricingTranslations = {
     fakturaLimitNote:
       "* Opptil 30 utgående og 30 inngående fakturaer og 100 skannede kvitteringer per måned. Trenger dere mer? Ta kontakt.",
 
-    pricingButton: "Bestill demo",
+    pricingButton: "Bestill gratis konsultasjon",
     pricingTrial: "14 dager gratis med alle funksjoner",
 
     offerBadge: "Spesialtilbud",
     offerTitle: "Flere enn 40 brukere?",
     offerText: "Kontakt oss for en tilpasset pris for hele bedriften.",
-    offerButton: "Bestill demo",
+    offerButton: "Bestill gratis konsultasjon",
 
     addonBadge: "Tillegg",
     addonTitle: "Integrasjoner",

@@ -44,7 +44,7 @@ export const ctaTranslations = {
   en: {
     ctaTitle: "Ready to Try?",
 
-    ctaHeading1: "Book a demo —",
+    ctaHeading1: "Free consultation —",
     ctaAccent: "15 minutes",
     ctaHeading2: "via video call",
 
@@ -55,7 +55,7 @@ export const ctaTranslations = {
     ctaItem2: "Try all features for free",
     ctaItem3: "We'll adapt ByggExp to fit your workflow",
 
-    ctaFormTitle: "Request a Demo",
+    ctaFormTitle: "Book a free consultation",
 
     ctaNameLabel: "Name / company",
     ctaNamePlaceholder: "Your name / company",
@@ -69,7 +69,7 @@ export const ctaTranslations = {
     ctaPhonePlaceholder: "+46 70 123 45 67",
     ctaPhoneOptional: "optional",
 
-    ctaButton: "Book a Demo",
+    ctaButton: "Book a free consultation",
     ctaButtonSending: "Sending...",
     ctaSubmitError: "Couldn't send your request. Please try again.",
 
@@ -86,7 +86,7 @@ export const ctaTranslations = {
   sv: {
     ctaTitle: "Redo att prova?",
 
-    ctaHeading1: "Boka demo –",
+    ctaHeading1: "Gratis konsultation –",
     ctaAccent: "15 min",
     ctaHeading2: "",
 
@@ -97,7 +97,7 @@ export const ctaTranslations = {
     ctaItem2: "Du får prova alla funktioner",
     ctaItem3: "Vi anpassar ByggExp efter ert arbetssätt",
 
-    ctaFormTitle: "Boka en demo",
+    ctaFormTitle: "Boka gratis konsultation",
 
     ctaNameLabel: "Namn / företag",
     ctaNamePlaceholder: "Ditt namn / företag",
@@ -111,7 +111,7 @@ export const ctaTranslations = {
     ctaPhonePlaceholder: "+46 70 123 45 67",
     ctaPhoneOptional: "valfritt",
 
-    ctaButton: "Boka demo",
+    ctaButton: "Boka gratis konsultation",
     ctaButtonSending: "Skickar...",
     ctaSubmitError: "Det gick inte att skicka ansökan. Försök igen.",
 
@@ -120,7 +120,7 @@ export const ctaTranslations = {
 
     ctaSuccessTitle: "Ansökan skickad!",
     ctaSuccessCalendlyHint:
-      "Välj en tid som passar dig nedan – demon tar 15 minuter.",
+      "Välj en tid som passar dig nedan – konsultationen tar 15 minuter.",
     ctaSuccessText: "Passar ingen tid? Då hör vi av oss via e-post.",
     ctaCalendlyButton: "Välj en tid i kalendern",
   },
@@ -128,7 +128,7 @@ export const ctaTranslations = {
   nb: {
     ctaTitle: "Klar til å prøve?",
 
-    ctaHeading1: "Bestill en demo —",
+    ctaHeading1: "Gratis konsultasjon —",
     ctaAccent: "15 minutter",
     ctaHeading2: "via videosamtale",
 
@@ -139,7 +139,7 @@ export const ctaTranslations = {
     ctaItem2: "Du får prøve alle funksjonene",
     ctaItem3: "Vi tilpasser ByggExp etter arbeidsmåten deres",
 
-    ctaFormTitle: "Bestill en demo",
+    ctaFormTitle: "Bestill en gratis konsultasjon",
 
     ctaNameLabel: "Navn / firma",
     ctaNamePlaceholder: "Ditt navn / firma",
@@ -153,7 +153,7 @@ export const ctaTranslations = {
     ctaPhonePlaceholder: "+47 400 00 000",
     ctaPhoneOptional: "valgfritt",
 
-    ctaButton: "Bestill demo",
+    ctaButton: "Bestill gratis konsultasjon",
     ctaButtonSending: "Sender...",
     ctaSubmitError: "Det gikk ikke å sende søknaden. Prøv igjen.",
 

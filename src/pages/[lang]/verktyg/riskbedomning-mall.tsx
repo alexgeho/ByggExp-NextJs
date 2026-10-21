@@ -112,8 +112,8 @@ export default function RiskbedomningMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Arbetsmiljö och egenkontroll i ByggExp',
-          text: 'Koppla riskbedömningar och åtgärder till rätt projekt. Boka en demo.',
-          buttonLabel: 'Boka demo',
+          text: 'Koppla riskbedömningar och åtgärder till rätt projekt. Boka en gratis konsultation.',
+          buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}
         relatedHeading="Relaterat"

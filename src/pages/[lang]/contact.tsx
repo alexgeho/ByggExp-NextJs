@@ -35,7 +35,7 @@ export default function ContactPage({
   const ctaT = ctaTranslations[lang];
   const pageTitle =
     lang === "sv"
-      ? "Kontakta ByggExp – boka gratis demo"
+      ? "Kontakta ByggExp – boka gratis konsultation"
       : `${contactT.title} | ByggExp`;
   const canonicalUrl = `${localeOrigin(lang)}/${lang}/contact`;
   const hreflangAlternates = buildHreflangAlternates(

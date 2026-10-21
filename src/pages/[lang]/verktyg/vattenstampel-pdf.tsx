@@ -94,8 +94,8 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     ctaHeading: 'Skapa proffsiga offerter i ByggExp',
     ctaText:
-      'Bygg offerter, fakturor och dokument med företagets logotyp – samlat per projekt. Boka en demo.',
-    ctaButton: 'Boka demo',
+      'Bygg offerter, fakturor och dokument med företagets logotyp – samlat per projekt. Boka en gratis konsultation.',
+    ctaButton: 'Boka gratis konsultation',
     relatedHeading: 'Fler gratis verktyg',
     related: [
       { slug: 'sla-ihop-pdf', label: 'Slå ihop PDF' },
@@ -159,8 +159,8 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
     ctaHeading: 'Lag profesjonelle tilbud i ByggExp',
     ctaText:
-      'Bygg tilbud, fakturaer og dokumenter med firmaets logo – samlet per prosjekt. Bestill en demo.',
-    ctaButton: 'Bestill demo',
+      'Bygg tilbud, fakturaer og dokumenter med firmaets logo – samlet per prosjekt. Bestill en gratis konsultasjon.',
+    ctaButton: 'Bestill gratis konsultasjon',
     relatedHeading: 'Flere gratis verktøy',
     related: [
       { slug: 'sla-ihop-pdf', label: 'Slå sammen PDF' },

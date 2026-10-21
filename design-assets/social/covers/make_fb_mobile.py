@@ -107,3 +107,40 @@ def phone_preview(img, name):
 if __name__ == "__main__":
     phone_preview(render("fb-site", mc.WHITE, "left", .9), "fb-site")  # k=1 runs into the avatar
     print("ok")
+
+
+def render_li(name, k=1.0):
+    """LinkedIn company banner 2256x382 (uploaded as 1584x268 JPG): same site-style block,
+    vertically centred, starts at x 700 (page logo overlaps bottom-left), photo on the right."""
+    w, h, x0 = 2256, 382, 700
+    img = mc.background(w, h, 48).convert("RGBA")
+    d = ImageDraw.Draw(img)
+    big = mc.font(round(56 * k), "Semibold")
+    fp, fl = mc.font(round(30 * k), "Bold"), mc.font(round(30 * k), "Regular")  # ~15 px at 1128 wide
+    lh1, lh2, gap, blk, bh = 56 * k * 1.05, 30 * k * 1.35, 4 * k, 24 * k, round(56 * k)
+    block = 2 * lh1 + blk + 2 * lh2 + gap + blk + bh
+    y = (h - block) / 2
+    for line in ("Hela byggföretaget", "på ett ställe"):
+        d.text((x0, y + lh1 * .8), line, font=big, fill=mc.WHITE, anchor="ls")
+        y += lh1
+    y += blk
+    text_w = 0
+    for p, l in PRICE:
+        d.text((x0, y + lh2 * .75), p, font=fp, fill=mc.WHITE, anchor="ls")
+        lx = x0 + d.textlength(p, font=fp)
+        d.text((lx, y + lh2 * .75), " – " + l, font=fl, fill=GREY, anchor="ls")
+        text_w = max(text_w, lx + d.textlength(" – " + l, font=fl) - x0)
+        y += lh2 + gap
+    y += blk - gap
+    bs = badges(bh)
+    img.alpha_composite(bs[0], (x0, int(y)))
+    img.alpha_composite(bs[1], (x0 + bs[0].width + round(12 * k), int(y)))
+    hero = Image.open(TILES / "hero-nostores.png").convert("RGBA")
+    hero.thumbnail((w - (x0 + int(text_w) + 80) - 40, h - 48), Image.LANCZOS)
+    paste_shadow(img, hero, x0 + int(text_w) + 80, (h - hero.height) // 2)
+    img.convert("RGB").save(HERE / f"{name}.png", optimize=True)
+    img.convert("RGB").resize((1584, 268), Image.LANCZOS).save(HERE / f"{name}.jpg", quality=92)
+
+
+if __name__ == "__main__":
+    render_li("li-site")

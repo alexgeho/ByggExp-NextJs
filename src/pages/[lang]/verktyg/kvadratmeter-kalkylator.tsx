@@ -40,7 +40,7 @@ type ToolContent = {
 
 const CONTENT: Record<Locale, ToolContent> = {
   sv: {
-    metaTitle: 'Kvadratmeterberäknare – räkna ut m² gratis | ByggExp',
+    metaTitle: 'Räkna ut kvadratmeter (m²) – golv, vägg & rum | ByggExp',
     description:
       'Räkna ut kvadratmeter (m²) för ett eller flera rum utifrån längd och bredd, med spill för material som golv och kakel. Gratis kalkylator, utan konto.',
     badge: 'Gratis kalkylator',

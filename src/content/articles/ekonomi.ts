@@ -7958,7 +7958,7 @@ const R_ROT_FRITIDSHUS: BlogPost = {
   _id: 'code-rotavdrag-fritidshus', title: 'ROT-avdrag på fritidshus – vad gäller?', slug: 'rotavdrag-fritidshus', locale: 'sv',
   excerpt: 'ROT-avdrag på fritidshus: går att använda om du äger huset och har skatt att dra av mot. Vad som gäller och vad du bör tänka på.', tag: 'ROT',
   coverImageUrl: '/landing/features/9ekonomi.webp', contentHtml: R_ROT_FRITIDSHUS_HTML,
-  seoTitle: 'ROT-avdrag på fritidshus 2026 – vad gäller? | ByggExp', seoDescription: 'ROT-avdrag på fritidshus: möjligt om du äger huset och har skatt att dra av mot, räknas som småhus. Så fungerar det – räkna med ROT-kalkylatorn.',
+  seoTitle: 'ROT-avdrag på fritidshus 2026: ja – 30 %, max 50 000 kr | ByggExp', seoDescription: 'Ja, ROT-avdrag gäller fritidshus som du äger och inte hyr ut som näringsverksamhet: 30 % av arbetskostnaden, max 50 000 kr per person och år. Räkna direkt.',
   seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: '', noIndex: false, isPublished: true,
   publishedAt: '2026-08-22T13:10:00.000Z', createdAt: '2026-08-22T13:10:00.000Z', updatedAt: '2026-08-22T13:10:00.000Z',
 };

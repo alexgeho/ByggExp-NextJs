@@ -1298,7 +1298,7 @@ const A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG: BlogPost = {
   title: "APD-plan: så ritar du upp etablering, upplag och transportvägar på bygget", slug: "apd-plan-arbetsplatsdisposition-bygg", locale: "sv",
   excerpt: "En genomtänkt APD-plan avgör om bygget flyter eller kaosar – så ritar du upp etablering, upplag, transportvägar och skyddsavstånd rätt.", tag: "Arbetsmiljö",
   coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG_HTML,
-  seoTitle: "APD-plan för bygget | ByggExp", seoDescription: "APD-plan bygg: så planerar du etablering, upplag, transportvägar, kran och skyddsavstånd. Regelläget 2026 (AFS 2023:3), roller och en färdig checklista.",
+  seoTitle: "Vad är en APD-plan? Innehåll & checklista 2026 | ByggExp", seoDescription: "APD-plan = arbetsplatsdispositionsplan: karta över etablering, upplag, transportvägar, kran och skyddsavstånd. Regler (AFS 2023:3), roller och checklista.",
   seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T13:03:00.000Z", createdAt: "2026-08-19T13:03:00.000Z", updatedAt: "2026-08-19T13:03:00.000Z",
 };

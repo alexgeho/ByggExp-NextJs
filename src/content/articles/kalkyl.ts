@@ -1526,7 +1526,7 @@ const A_STAKET_MATERIAL_STOLPAR_ATGANG: BlogPost = {
   title: "Räkna material för staket och plank per löpmeter — så prissätter du rätt", slug: "staket-material-stolpar-atgang", locale: "sv",
   excerpt: "Så räknar du stolpar, reglar, brädor och betong per löpmeter staket eller plank för en offert som håller marginalen.", tag: "Kalkyl",
   coverImageUrl: "/landing/verktyg/staket-preview.webp", contentHtml: A_STAKET_MATERIAL_STOLPAR_ATGANG_HTML,
-  seoTitle: "Staket materialåtgång stolpar | ByggExp", seoDescription: "Räkna stolpar (c/c), reglar, brädor och betong per löpmeter staket och plank. Formler, räkneexempel och offertchecklista för hantverkare 2026.",
+  seoTitle: "Staket & plank: stolpar, reglar och virke per löpmeter | ByggExp", seoDescription: "Räkna staket per löpmeter (lpm): stolpar = längd ÷ c/c + 1 med c/c 1,5–2 m, två eller tre reglar, brädor och betong. Räkneexempel och gratis kalkylator.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/staket-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T20:21:00.000Z", createdAt: "2026-08-19T20:21:00.000Z", updatedAt: "2026-08-19T20:21:00.000Z",
 };

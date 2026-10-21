@@ -240,6 +240,44 @@ export const ARTICLE_QUICK_ANSWERS: Record<string, QuickAnswer> = {
     source: { label: "Svenskt Trä – Lathunden, utgåva 8:2021", href: "https://www.svenskttra.se/siteassets/5-publikationer/pdfer/st-lathunden-2021-med-utvik.pdf" },
   },
 
+  // Added 2026-10-21 (GSC near-miss, question queries). Facts lifted from the
+  // article body, which was checked earlier against the named sources.
+  'staket-material-stolpar-atgang': {
+    html: `<p><strong>Antal stolpar = staketlängd ÷ c/c + 1</strong>, avrundat uppåt. c/c är normalt 1,5–2,0&nbsp;m. Exempel: 20 löpmeter med c/c 2,0&nbsp;m ger 11 stolpar – plus extra stolpar för hörn och grindar.</p>
+<p>Två spikreglar per sektion, en tredje vid höjd över 1&nbsp;600&nbsp;mm. Löpmeter (lpm) är längden i meter, oavsett virkets bredd.</p>`,
+  },
+
+  'apd-plan-arbetsplatsdisposition-bygg': {
+    html: `<p><strong>APD-plan</strong> = arbetsplatsdispositionsplan: en ritning över byggarbetsplatsen som visar etablering (bodar, containrar, parkering), materialupplag, transportvägar, kran, in- och utfarter, brandredskap och första hjälpen samt el- och VA-ledningar.</p>
+<p>Den är inget eget lagkrav, men fungerar som bilaga till arbetsmiljöplanen (AMP) som Bas-U håller uppdaterad.</p>`,
+    source: { label: "AFS 2023:3", href: "https://www.av.se/globalassets/filer/publikationer/foreskrifter/projektering-och-byggarbetsmiljosamordning-grundlaggande-skyldigheter-afs2023-3.pdf" },
+  },
+
+  'rotavdrag-fritidshus': {
+    html: `<p><strong>Ja.</strong> Ett fritidshus räknas som småhus. Du får ROT-avdrag om du äger huset, har skatt att dra av mot och inte hyr ut det som näringsverksamhet.</p>
+<p>Avdraget är <strong>30&nbsp;% av arbetskostnaden</strong>, max <strong>50&nbsp;000&nbsp;kr per person och år</strong> – samma tak som för din permanentbostad.</p>`,
+    source: { label: "Skatteverket – så fungerar rotavdraget", href: "https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete/safungerarrotavdraget.4.5947400c11f47f7f9dd80004014.html" },
+  },
+
+  'gipsskivor-matt-standardmatt-vikt': {
+    html: `<table>
+<thead><tr><th>Normalgips</th><th>Mått</th></tr></thead>
+<tbody>
+<tr><td>Tjocklek</td><td>13&nbsp;mm</td></tr>
+<tr><td>Bredd</td><td>600, 900 eller 1&nbsp;200&nbsp;mm</td></tr>
+<tr><td>Längd</td><td>2&nbsp;500, 2&nbsp;700 eller 3&nbsp;000&nbsp;mm</td></tr>
+<tr><td>Vikt</td><td>ca 9&nbsp;kg/m² – en skiva 900×2&nbsp;500 väger drygt 20&nbsp;kg</td></tr>
+</tbody>
+</table>
+<p>900&nbsp;mm skiva → reglar c 450&nbsp;mm, 1&nbsp;200&nbsp;mm skiva → c 600&nbsp;mm.</p>`,
+  },
+
+  'id06-bestalla-kort-steg-for-steg': {
+    html: `<p>Ett ID06-kort kostar <strong>280&nbsp;kr</strong> (inkl. anslutning och frakt) och från år två <strong>80&nbsp;kr per år</strong>. Kortet gäller i max 5 år. Både beställning och förnyelse görs via företaget.</p>
+<p>Sedan 28 januari 2026 godkänns beställningen med pass eller nationellt ID-kort – BankID räcker inte.</p>`,
+    source: { label: "ID06", href: "https://id06.se" },
+  },
+
   'yrkesbevis-bygg-larling': {
     html: `<p>Yrkesbevis utfärdas av BYN efter godkänd grundutbildning plus kvalificeringstid: <strong>36 månader</strong> för bland annat träarbetare och murare, <strong>30 månader</strong> för bland annat plattsättare och ställningsbyggare, <strong>24 månader</strong> för maskin- och kranförare.</p><p>Lärlingslönen är 70, 80 och 90 % av yrkesarbetarens grundlön (203 kr/tim från 1 maj 2026).</p>`,
     source: { label: "Byggavtalet 2025–2027, § 3 p. 9.3 och bilaga H § 7 b", href: "https://www.byggnads.se/49ec78/siteassets/kollektivavtal/byggavtalet-2025-digital-utgava-1.pdf" },

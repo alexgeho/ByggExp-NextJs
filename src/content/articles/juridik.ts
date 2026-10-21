@@ -165,7 +165,9 @@ const AB04_HTML = `
 <li><a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid</a> – 5 och 10 år.</li>
 <li><a href="/sv/blog/garantibesiktning-2-ar-entreprenad">Garantibesiktning efter 2 år</a>.</li>
 <li><a href="/sv/blog/hindersanmalan-tidsforlangning-ab04">Hindersanmälan och tidsförlängning</a> – undvik vite.</li>
+<li><a href="/sv/verktyg/hindersanmalan-mall">Hindersanmälan – gratis mall</a> – fyll i och ladda ner som PDF.</li>
 <li><a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">Entreprenadgaranti och säkerhet</a>.</li>
+<li><a href="/sv/blog/byggfelsforsakring">Byggfelsförsäkring</a> – vad som gäller sedan kravet togs bort 2014.</li>
 <li><a href="/sv/blog/nya-ab-04-abt-06-revidering-2027">Kommande revidering av AB 04 och ABT 06</a> – status för de nya bestämmelserna.</li>
 </ul>
 

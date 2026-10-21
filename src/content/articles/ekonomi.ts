@@ -253,7 +253,7 @@ const OFFERT_HTML = `
 <p><a href="/sv/verktyg/offert-mall">Skapa en gratis offert (PDF) direkt i vår offertmall →</a></p>
 
 <h2>Vad en offert ska innehålla</h2>
-<p>En offert är i praktiken ett anbud – accepterar kunden den blir den bindande. Ta därför med allt som behövs för att undvika oklarheter:</p>
+<p>En offert är i praktiken ett anbud – accepterar kunden den blir den bindande (se även <a href="/sv/blog/anbud-bygg">anbud i bygg</a>). Ta därför med allt som behövs för att undvika oklarheter:</p>
 <ul>
 <li><strong>Ditt företag</strong> – namn, org.nr, kontakt och F-skatt</li>
 <li><strong>Kund</strong> – namn och adress där arbetet ska utföras</li>

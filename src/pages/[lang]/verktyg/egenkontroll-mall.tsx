@@ -345,6 +345,10 @@ export default function EgenkontrollMallPage() {
           { href: `/${LOCALE}/verktyg/byggdagbok-mall`, label: 'Byggdagbok – gratis mall' },
           { href: `/${LOCALE}/verktyg/tidrapport-mall`, label: 'Tidrapport – gratis mall' },
           { href: `/${LOCALE}/blog/dokumentera-med-foton-pa-bygget`, label: 'Dokumentera med foton på bygget' },
+          { href: `/${LOCALE}/verktyg/egenkontroll-vatrum-mall`, label: 'Egenkontroll våtrum – mall' },
+          { href: `/${LOCALE}/verktyg/egenkontroll-tak-mall`, label: 'Egenkontroll tak – mall' },
+          { href: `/${LOCALE}/verktyg/egenkontroll-ventilation-mall`, label: 'Egenkontroll ventilation – mall' },
+          { href: `/${LOCALE}/blog/egenkontrollprogram`, label: 'Egenkontrollprogram' },
         ]}
       />
 

@@ -498,6 +498,9 @@ const A_PROJEKTHANTERING_BYGGFORETAG_HTML = `
 
 <figure class="video-embed" style="position:relative;width:100%;aspect-ratio:16/9;margin:24px 0"><iframe src="https://www.youtube-nocookie.com/embed/_hJ0uuLW2H0" title="Skapa ett projekt i ByggExp – kom igång" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px"></iframe></figure>
 
+<h2>Vad är ett projekthanteringssystem för bygg?</h2>
+<p>Ett projekthanteringssystem – eller projektledningssystem – är navet där allt som rör ett projekt möts: bemanning och schema, nedlagd tid, uppgifter och arbetsorder, foton och dokument, offert, utlägg och faktura. Poängen är kopplingen: när timmar och kostnader bokförs på projektet räknas marginalen ihop löpande, i stället för att du sammanställer den i efterhand.</p>
+<p>Projekthanteringssystem och projektledningssystem betyder i praktiken samma sak för ett byggföretag. Det som skiljer ett system byggt för bygg från ett generellt projektverktyg är att det hanterar timmar, ÄTA och marginal per projekt – inte bara uppgifter i en lista.</p>
 <h2>Vad ska ett projektverktyg för bygg klara?</h2>
 <ul>
 <li><strong>Projekt- och personalplanering</strong> – vem gör vad, var och när.</li>
@@ -519,6 +522,30 @@ const A_PROJEKTHANTERING_BYGGFORETAG_HTML = `
 </ul>
 
 <p>Rätt projekthantering gör att du <a href="/sv/blog/app-for-byggprojekt">styr projektet</a> medan det pågår – och slipper överraskningar i efterkalkylen.</p>
+<h2>Spridda verktyg eller ett system</h2>
+<div class="article-table"><table>
+<thead><tr><th>&nbsp;</th><th>Spridda verktyg</th><th>Projekthanteringssystem</th></tr></thead>
+<tbody>
+<tr><td><strong>Var finns data</strong></td><td>I flera program och telefoner</td><td>Samlat per projekt</td></tr>
+<tr><td><strong>Marginal</strong></td><td>Räknas efter projektet</td><td>Syns löpande</td></tr>
+<tr><td><strong>Inmatning</strong></td><td>Tid, faktura och kalkyl var för sig</td><td>En registrering, används överallt</td></tr>
+<tr><td><strong>ÄTA och ändringar</strong></td><td>Tappas lätt bort</td><td>Loggas på projektet</td></tr>
+</tbody>
+</table></div>
+<p>När projektet är klart jämför du utfall mot kalkyl i en <a href="/sv/blog/efterkalkyl-bygg-kalkyluppfoljning">efterkalkyl</a> och prissätter nästa jobb säkrare.</p>
+<h2>Relaterade guider</h2>
+<ul>
+<li><a href="/sv/blog/projektledning-byggforetag">Projektledning för byggföretag</a> – led byggprojekt från anbud till överlämning.</li>
+<li><a href="/sv/blog/projektplanering-bygg">Projektplanering i bygg</a> – från kalkyl och tidplan till bemanning.</li>
+<li><a href="/sv/blog/projektuppfoljning-bygg">Projektuppföljning i bygg</a> – tid, kostnader och lönsamhet.</li>
+<li><a href="/sv/blog/schemalaggningssystem-bygg">Schemaläggningssystem för bygg</a> – planera personal och projekt.</li>
+</ul>
+<h2>Vanliga frågor</h2>
+<h3>Vad är ett projekthanteringssystem för bygg?</h3>
+<p>Ett system som samlar planering, tid, uppgifter, dokumentation och ekonomi per projekt, så att du ser marginalen medan projektet pågår i stället för efteråt.</p>
+<h3>Vad är skillnaden mellan projekthanteringssystem och projektledningssystem?</h3>
+<p>I praktiken ingen för ett byggföretag. Det avgörande är inte namnet, utan att systemet kopplar timmar och kostnader till projektet.</p>
+
 `;
 
 const A_PROJEKTHANTERING_BYGGFORETAG: BlogPost = {
@@ -528,7 +555,7 @@ const A_PROJEKTHANTERING_BYGGFORETAG: BlogPost = {
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_PROJEKTHANTERING_BYGGFORETAG_HTML,
   seoTitle: "Projekthantering för byggföretag – projektverktyg | ByggExp", seoDescription: "Projekthantering / projektverktyg för byggföretag: planering, tid per projekt, uppgifter, foto och ekonomi med marginalen synlig löpande. Så gör ByggExp det.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T18:05:00.000Z", createdAt: "2026-08-20T18:05:00.000Z", updatedAt: "2026-08-20T18:05:00.000Z",
+  publishedAt: "2026-08-20T18:05:00.000Z", createdAt: "2026-08-20T18:05:00.000Z", updatedAt: "2026-10-21T08:00:00.000Z",
 };
 
 const A_ROT_FAKTURERING_PROGRAM_HTML = `

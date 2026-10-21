@@ -57,7 +57,7 @@ def tiles(names, gap=36, r=48):
     return out
 
 
-def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=None, price=None, stores=False, label_w=None, center=False, shot_r=None, label_k=.44):
+def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=None, price=None, stores=False, label_w=None, center=False, shot_r=None, label_k=.44, pill=SKY, pill_text=NAVY):
     sl, st, sw, sh = safe
     img = background(w, h, cell)
     d = ImageDraw.Draw(img)
@@ -99,8 +99,8 @@ def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=N
             if i:
                 y += gap_r
             py = y + (rh - ph) // 2
-            d.rounded_rectangle((sl, py, sl + pw, py + ph), ph // 2, fill=SKY)
-            d.text((sl + (pw - d.textlength(p, font=fp)) / 2, py + ph * .2), p, font=fp, fill=NAVY)
+            d.rounded_rectangle((sl, py, sl + pw, py + ph), ph // 2, fill=pill)
+            d.text((sl + (pw - d.textlength(p, font=fp)) / 2, py + ph * .2), p, font=fp, fill=pill_text)
             rw = pw
             if ls:  # what the price includes, one left line for all labels
                 ink = d.textbbox((0, 0), "Åg", font=fl)
@@ -141,36 +141,37 @@ def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=N
     img.convert("RGB").save(HERE / f"{name}.png", optimize=True)
 
 
-SUB = "Snabbare fakturering och lönehantering, automatiska påminnelser i uppgifter, kontroll av arbetspass i realtid, planering."
-TITLE = [("Automatisk och manuell", WHITE), ("tidrapportering och", WHITE), ("projekthantering", WHITE), ("för byggföretag", SKY)]
-SHORT = [("Tidrapportering och projekthantering", WHITE), ("för byggföretag", SKY)]
+if __name__ == "__main__":
+    SUB = "Snabbare fakturering och lönehantering, automatiska påminnelser i uppgifter, kontroll av arbetspass i realtid, planering."
+    TITLE = [("Automatisk och manuell", WHITE), ("tidrapportering och", WHITE), ("projekthantering", WHITE), ("för byggföretag", SKY)]
+    SHORT = [("Tidrapportering och projekthantering", WHITE), ("för byggföretag", SKY)]
 
-# S13 value covers: what a follower gets, product second
-VALUE = [("60+ gratis verktyg", WHITE), ("för byggare", SKY)]
-VSUB = "Kalkylatorer och mallar för lön, moms, betong, ÄTA och egenkontroll – utan konto."
-OB = Image.open(TILES / "m-ob.png").crop((36, 36, 1076, 948))  # real calculator: input + result (S8)
-cover("facebook-cover-value", 1640, 624, (290, 60, 1060, 504), VALUE, 72, 48, VSUB, 560, OB, "byggexp.se")
-cover("linkedin-cover-value", 2256, 382, (700, 30, 1300, 322), VALUE, 64, 48, "Kalkylatorer och mallar – utan konto", 900, OB, "byggexp.se")
-# YouTube safe area 1546x423 (507, 509), inset 40px so nothing touches the mobile crop
-cover("youtube-banner-value", 2560, 1440, (547, 529, 1466, 383), VALUE, 84, 64, VSUB, 700, OB, "byggexp.se")
+    # S13 value covers: what a follower gets, product second
+    VALUE = [("60+ gratis verktyg", WHITE), ("för byggare", SKY)]
+    VSUB = "Kalkylatorer och mallar för lön, moms, betong, ÄTA och egenkontroll – utan konto."
+    OB = Image.open(TILES / "m-ob.png").crop((36, 36, 1076, 948))  # real calculator: input + result (S8)
+    cover("facebook-cover-value", 1640, 624, (290, 60, 1060, 504), VALUE, 72, 48, VSUB, 560, OB, "byggexp.se")
+    cover("linkedin-cover-value", 2256, 382, (700, 30, 1300, 322), VALUE, 64, 48, "Kalkylatorer och mallar – utan konto", 900, OB, "byggexp.se")
+    # YouTube safe area 1546x423 (507, 509), inset 40px so nothing touches the mobile crop
+    cover("youtube-banner-value", 2560, 1440, (547, 529, 1466, 383), VALUE, 84, 64, VSUB, 700, OB, "byggexp.se")
 
-# S14 LinkedIn = product showcase
-PRODUCT = [("Från incheckning", WHITE), ("till lön och faktura", SKY)]
-cover("linkedin-cover-product", 2256, 382, (700, 30, 1300, 322), PRODUCT, 60, 48, "Ett system för hela byggföretaget", 900, None, "byggexp.se")
+    # S14 LinkedIn = product showcase
+    PRODUCT = [("Från incheckning", WHITE), ("till lön och faktura", SKY)]
+    cover("linkedin-cover-product", 2256, 382, (700, 30, 1300, 322), PRODUCT, 60, 48, "Ett system för hela byggföretaget", 900, None, "byggexp.se")
 
-# Facebook: 1640x624, keep inside centre ~1180px (mobile crops the sides)
-cover("facebook-cover", 1640, 624, (230, 40, 1180, 544), TITLE, 50, 48, SUB, 560)
-# LinkedIn company: 1128x191, logo overlaps bottom-left -> start content at x=300
-cover("linkedin-cover", 1128, 191, (300, 20, 800, 151), SHORT, 26, 24)
-# YouTube: 2560x1440, safe area 1546x423 in the centre
-cover("youtube-banner", 2560, 1440, (507, 509, 1546, 423), TITLE, 62, 64, SUB, 720)
-for n in ("linkedin-cover-value", "linkedin-cover-product"):  # LinkedIn rejects the 2x PNG; upload this JPG
-    Image.open(HERE / f"{n}.png").convert("RGB").resize((1584, 268), Image.LANCZOS).save(HERE / f"{n}.jpg", quality=92)
-# S16/S17: hero collage from the home page + price + store badges
-HERO = Image.open(TILES / "hero-nostores.png")  # badges sit next to the price instead
-HEAD = [("Hela byggföretaget", WHITE), ("på ett ställe", SKY)]
-PRICE = [("299 kr/mån", "offert, faktura, lön, projektekonomi, projektledning, fakturaskanning m.m."), ("+69 kr/arbetare", "tidrapport, närvaro, planering, egenkontroll, kvittoskanning m.m.")]  # S18
-cover("facebook-cover-v4", 1640, 624, (270, 40, 1120, 544), HEAD, 64, 48, shot=HERO, price=PRICE, stores=True, label_w=420, center=True, shot_r=1580)
-cover("linkedin-cover-v4", 2256, 382, (700, 24, 1300, 334), HEAD, 48, 48, shot=HERO, price=PRICE, stores=True, center=True, label_w=560, label_k=.62)  # labels readable at half size
-Image.open(HERE / "linkedin-cover-v4.png").convert("RGB").resize((1584, 268), Image.LANCZOS).save(HERE / "linkedin-cover-v4.jpg", quality=92)
-print("ok")
+    # Facebook: 1640x624, keep inside centre ~1180px (mobile crops the sides)
+    cover("facebook-cover", 1640, 624, (230, 40, 1180, 544), TITLE, 50, 48, SUB, 560)
+    # LinkedIn company: 1128x191, logo overlaps bottom-left -> start content at x=300
+    cover("linkedin-cover", 1128, 191, (300, 20, 800, 151), SHORT, 26, 24)
+    # YouTube: 2560x1440, safe area 1546x423 in the centre
+    cover("youtube-banner", 2560, 1440, (507, 509, 1546, 423), TITLE, 62, 64, SUB, 720)
+    for n in ("linkedin-cover-value", "linkedin-cover-product"):  # LinkedIn rejects the 2x PNG; upload this JPG
+        Image.open(HERE / f"{n}.png").convert("RGB").resize((1584, 268), Image.LANCZOS).save(HERE / f"{n}.jpg", quality=92)
+    # S16/S17: hero collage from the home page + price + store badges
+    HERO = Image.open(TILES / "hero-nostores.png")  # badges sit next to the price instead
+    HEAD = [("Hela byggföretaget", WHITE), ("på ett ställe", SKY)]
+    PRICE = [("299 kr/mån", "offert, faktura, lön, projektekonomi, projektledning, fakturaskanning m.m."), ("+69 kr/arbetare", "tidrapport, närvaro, planering, egenkontroll, kvittoskanning m.m.")]  # S18
+    cover("facebook-cover-v4", 1640, 624, (270, 40, 1120, 544), HEAD, 64, 48, shot=HERO, price=PRICE, stores=True, label_w=420, center=True, shot_r=1580)
+    cover("linkedin-cover-v4", 2256, 382, (700, 24, 1300, 334), HEAD, 48, 48, shot=HERO, price=PRICE, stores=True, center=True, label_w=560, label_k=.62)  # labels readable at half size
+    Image.open(HERE / "linkedin-cover-v4.png").convert("RGB").resize((1584, 268), Image.LANCZOS).save(HERE / "linkedin-cover-v4.jpg", quality=92)
+    print("ok")

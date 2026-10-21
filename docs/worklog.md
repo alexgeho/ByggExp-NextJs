@@ -1,5 +1,18 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-21 (вечер) — HANDOFF: инструмент сверху, hero 10 языков, соло, баннер (live)
+- R10: в статьях, куда приходят за шаблоном/расчётом, инструмент сразу под H1, под ним обложка, потом текст (src/content/article-inline-tools.tsx, `position: 'top'`). Добавлено ~30 статей по GSC (запросы mall/räkna/exempel). Новые шаблоны: ApdPlanMallTool, KmaPlanMallTool. Без инструмента оставлены AB 04/ABT 06, Hantverkarformuläret 17 (авторские тексты), BAS-P/U, schemaläggning (продуктовый интент).
+- Консультация вместо демо: sv/nb/en везде (шапка «Gratis konsultation», CTA, FAQ, контакты); промо-баннер → /sv#cta. Остальные 7 языков всё ещё «демо».
+- HeroV2 на всех 10 языках: `locales/heroV2.ts` (цены не-sv в SEK), `<HeroV2 lang>`; старый hero — `?v=old`.
+- /sv/enmansforetag: ссылка в карточке Faktura (вверху справа, как «Mest valt») + в подвале (только sv).
+- R11: промо-баннер только на /sv/blog/*; в инструментах продаёт ToolAppCta, на продукт/юр./FAQ/контактах — нет.
+NÄSTA:
+1. 7 языков (ru/pl/uk/fi/et/lt/lv): демо → консультация (header.ts, CTA.ts, contact и т.д.) — рекомендовано, ждёт «да».
+2. Hero CTA «Kom igång gratis» (REGISTER_URL) — решение владельца: оставить или → /sv#cta.
+3. Ревью fi/et/lt/lv в heroV2.ts.
+4. ~27.10 GA: promo_* + book_demo; ~04.11 GSC по статьям с инструментом сверху (CTR/время).
+5. Мелочь от критика (не сделано): в шаблонах кнопки «Fyll i exempel»/скачать — в одну строку (~20 инструментов).
+
 ## 2026-10-21 — SEO-проход (ветка seo-2026-10-21, НЕ live)
 - GSC 28 дн (21.09–18.10): .se 1 159 кл / 118,7K пок / CTR 0,98 % / поз. 11,4 (пред. 1 055 / 110,9K / 0,95 / 14,3); .no 69 / 9,4K / 0,73 / 22,6 (26 / 5,0K).
 - Факты: personalliggare-bygg-app — kontrollavgift 12 500 kr (было 2 500), ByggExp = GPS-incheckning + personalliggare-PDF (было «personalliggaren ingår»).

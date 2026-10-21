@@ -1119,7 +1119,7 @@ const A_APP_TIDRAPPORTERING_BYGG_HTML = `
 <p>Vill du jämföra konkreta alternativ med pris? Se <a href="/sv/blog/basta-tidrapporteringssystem-bygg">bästa tidrapporteringssystem för bygg 2026</a>.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du se hur digital tidrapportering fungerar för just ditt byggföretag? <a href="/sv/blog/automatisk-tidrapportering-och-export">Läs om automatisk tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
+<p>Vill du se hur digital tidrapportering fungerar för just ditt byggföretag? <a href="/sv/blog/automatisk-tidrapportering-och-export">Läs om automatisk tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Pris och funktioner för ByggExp:s <a href="/sv/tidrapportering-app">tidrapportering app</a> hittar du på produktsidan.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är en app för tidrapportering?</h3>
@@ -1290,7 +1290,7 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 <p>Jämför 8 system med pris i <a href="/sv/blog/basta-tidrapporteringssystem-bygg">bästa tidrapporteringssystem för bygg 2026</a>.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du se ett enkelt tidrapporteringssystem för bygg i praktiken? <a href="/sv/blog/automatisk-tidrapportering-och-export">Läs om automatisk tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
+<p>Vill du se ett enkelt tidrapporteringssystem för bygg i praktiken? <a href="/sv/blog/automatisk-tidrapportering-och-export">Läs om automatisk tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Vad ByggExp kostar och vad som ingår ser du på sidan om vår <a href="/sv/tidrapportering-app">tidrapportering-app</a>.</p>
 
 <h2>Relaterade guider om tidrapportering</h2>
 <ul>
@@ -1455,7 +1455,7 @@ const A_BASTA_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 <p><a href="https://www.skatteverket.se/foretag/arbetsgivare/personalliggare/personalliggarebyggbranschen.4.7be5268414bea0646949797.html" target="_blank" rel="noopener">Skatteverket – personalliggare i byggbranschen</a> · <a href="https://www.skatteverket.se/foretag/arbetsgivare/personalliggare/personalliggarebyggbranschen/fragorochsvarompersonalliggareibyggbranschen.4.361dc8c15312eff6fd6ba7.html" target="_blank" rel="noopener">Skatteverket – frågor och svar om personalliggare</a> · <a href="https://www.skatteverket.se/foretag/skatterochavdrag/beloppochprocent/2026.106.1522bf3f19aea8075ba3294.html" target="_blank" rel="noopener">Skatteverket – belopp och procent 2026</a></p>
 
 <h2>Testa ByggExp</h2>
-<p>14 dagar gratis med alla funktioner. <a href="/sv/contact">Boka gratis konsultation</a></p>
+<p>14 dagar gratis med alla funktioner – se <a href="/sv/tidrapportering-app">vad som ingår i ByggExp:s tidrapportering</a> eller <a href="/sv/contact">boka gratis konsultation</a>.</p>
 `.trim();
 
 const A_BASTA_TIDRAPPORTERINGSSYSTEM_BYGG: BlogPost = {
@@ -1551,7 +1551,7 @@ const S_TIDRAPPORTERING_HANTVERKARE_HTML = `
 <p>För en liten firma är följsamhet allt. Välj en app där man bara checkar in och ut – ingen utbildning, ingen dator. Fungerar på både iPhone och Android.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du fånga varje debiterbar timme? Läs om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en gratis konsultation</a>.</p>
+<p>Vill du fånga varje debiterbar timme? Läs om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en gratis konsultation</a>. Pris och funktioner finns på sidan om <a href="/sv/tidrapportering-app">ByggExp:s tidrapportering-app</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Hur sköter en enmansföretagare tidrapportering enklast?</h3>
@@ -1661,7 +1661,7 @@ const S_TIDRAPPORTERING_ENTREPRENAD_HTML = `
 <p>Följ måtten per projekt och månad. Jämför nedlagd tid med kalkylen löpande i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a>, inte först vid efterkalkylen.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med ett projekt: lägg upp det, låt laget rapportera i appen i en vecka och attestera i webben. Fungerar flödet tar ni med nästa projekt. ByggExp går att testa gratis i 14 dagar med alla funktioner, utan bindningstid – <a href="/sv/contact">boka en gratis konsultation</a> så visar vi upplägget för entreprenad.</p>
+<p>Börja med ett projekt: lägg upp det, låt laget rapportera i appen i en vecka och attestera i webben. Fungerar flödet tar ni med nästa projekt. <a href="/sv/tidrapportering-app">ByggExp:s tidrapportering-app</a> går att testa gratis i 14 dagar med alla funktioner, utan bindningstid – <a href="/sv/contact">boka en gratis konsultation</a> så visar vi upplägget för entreprenad.</p>
 
 <h2>Relaterade guider</h2>
 <ul>
@@ -1757,7 +1757,7 @@ const S_MOBIL_TIDRAPPORTERING_HTML = `
 <p>Appen laddas ner från <a href="https://apps.apple.com/se/app/id6748280779" target="_blank" rel="noopener">App Store</a> (iPhone) och <a href="https://play.google.com/store/apps/details?id=se.byggexp.app" target="_blank" rel="noopener">Google Play</a> (Android).</p>
 
 <h2>Kom igång</h2>
-<p>Se vad som ingår i ByggExp:s <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering online</a>. Vill du se hur det fungerar med era projekt? <a href="/sv/contact">Boka en gratis konsultation</a>, så visar vi appen och webbadmin med ert eget upplägg. Vill du börja enklare fungerar vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för de första veckorna.</p>
+<p>Se vad som ingår i ByggExp:s <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering online</a>. Vill du se hur det fungerar med era projekt? <a href="/sv/contact">Boka en gratis konsultation</a>, så visar vi appen och webbadmin med ert eget upplägg. Vill du börja enklare fungerar vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för de första veckorna. Pris och innehåll ser du på sidan om vår <a href="/sv/tidrapportering-app">app för tidrapportering</a>.</p>
 
 <h2>Relaterade guider</h2>
 <ul>
@@ -2216,7 +2216,7 @@ const S_TIDRAPPORT_APP_IPHONE_HTML = `
 <p>Poängen med att rapportera tid på iPhone är att samma timme bara matas in en gång. De loggade timmarna blir <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a> och <a href="/sv/blog/fakturera-fran-byggexp">fakturarader</a> och räknas in i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a>. Vill du bara stämpla närvaro? Se <a href="/sv/blog/stampelklocka-app-iphone">stämpelklocka-app för iPhone</a>.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du rapportera tid på iPhone? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, läs om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
+<p>Vill du rapportera tid på iPhone? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, läs om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Pris och funktioner finns på sidan om <a href="/sv/tidrapportering-app">tidrapportering-appen</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Finns det en app för tidrapport på iPhone?</h3>

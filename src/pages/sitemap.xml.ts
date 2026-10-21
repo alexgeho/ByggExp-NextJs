@@ -93,6 +93,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
     });
   } else {
     urls.push({ loc: `${localeOrigin('sv')}/sv/fa-offert` });
+    // Product landing pages (sv only).
+    urls.push({ loc: `${localeOrigin('sv')}/sv/tidrapportering-app` });
     SV_ONLY_PATHS.forEach((path) => {
       urls.push({ loc: `${localeOrigin('sv')}/sv/${path}` });
     });

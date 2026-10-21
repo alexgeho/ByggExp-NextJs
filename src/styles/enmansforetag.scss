@@ -382,3 +382,17 @@
     margin-top: 0;
   }
 }
+
+/* /sv/tidrapportering-app: table + FAQ block reuses the verktyg-page styles
+   (lead-magnet.scss); section air as every other block (R8). */
+.em .tr-app-more {
+  padding: var(--ds-section-pad, 60px) 0;
+  .lead-magnet-related,
+  .lead-magnet-faq:last-child {
+    margin-bottom: 0;
+  }
+  .article-table {
+    margin: 0;
+    background: var(--white);
+  }
+}

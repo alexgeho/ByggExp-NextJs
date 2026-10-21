@@ -173,7 +173,7 @@ const TIDRAPPORTERING_HTML = `
 <p>Ja, om de ska betalas rätt. Notera OB, övertid och mertid separat direkt vid registreringen så att lönen blir korrekt enligt kollektivavtalet.</p>
 
 <h2>Kom igång</h2>
-<p>Gör tidrapporteringen till en vana som betalar sig. <a href="/sv/verktyg/tidrapport-mall">Ladda ner en gratis tidrapport-mall</a>, eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a> och stämpla tid direkt i mobilen – kopplat till projekt, lön och faktura.</p>
+<p>Gör tidrapporteringen till en vana som betalar sig. <a href="/sv/verktyg/tidrapport-mall">Ladda ner en gratis tidrapport-mall</a>, eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a> och stämpla tid direkt i mobilen – kopplat till projekt, lön och faktura. Vill du se vad en app kostar? Här är <a href="/sv/tidrapportering-app">ByggExp:s tidrapportering-app</a> med pris och funktioner.</p>
 
 <p>Relaterat: <a href="/sv/blog/personalliggare">Personalliggare</a> · <a href="/sv/blog/id06">ID06</a> · <a href="/sv/blog/timpris-hantverkare">Timpris</a> · <a href="/sv/verktyg/tidrapport-mall">Tidrapport-mall</a></p>
 `.trim();
@@ -1676,7 +1676,7 @@ const ENKELT_TIDRAPPORTERINGSSYSTEM_HTML = `
 <p>Har ni tung projektstyrning med många delmoment kan ni behöva mer runt omkring tidrapporteringen. Men själva tidregistreringen bör ändå vara enkel – lägg komplexiteten i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a>, inte i mobilen där laget stämplar in. Enkelt i botten, mer avancerat på kontoret.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du testa hur enkelt det kan vara? Ladda ner en <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a> för att komma igång direkt, läs mer om <a href="/sv/blog/app-for-tidrapportering-bygg">appen för tidrapportering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
+<p>Vill du testa hur enkelt det kan vara? Ladda ner en <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a> för att komma igång direkt, läs mer om <a href="/sv/blog/app-for-tidrapportering-bygg">appen för tidrapportering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Pris och funktioner hittar du på sidan om vår <a href="/sv/tidrapportering-app">tidrapportering-app</a>.</p>
 
 <h2>Relaterade guider</h2>
 <ul>

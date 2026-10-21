@@ -183,7 +183,7 @@ export default function HomePage({
       ) : (
         <>
           {/* Hero → services → prices first; pain and benefits further down (owner 2026-10-20) */}
-          {lang === "sv" ? <HeroV2 variant={heroVariant} /> : <Hero heroT={heroT} />}
+          <HeroV2 variant={heroVariant} lang={lang} />
           {features}
           <Pricing pricingT={pricingT} lang={lang} />
           <Pain painT={painT} />

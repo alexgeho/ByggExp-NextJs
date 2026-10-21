@@ -158,7 +158,7 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; // 3 checks: one row, or 2 + 1 centred on phones
+  justify-content: flex-start; // desktop: aligned with the text (longer languages wrap to 2 rows)
   gap: 8px 20px;
   font-size: 15px;
   color: #33475e;
@@ -481,6 +481,7 @@
   }
   .hero-v2 .hero-v2-content .hero-v2-meta {
     align-self: center;
+    justify-content: center; // phones: one row, or 2 + 1 centred
     order: 1; // trust checks go under the photos
   }
   .hero-v2--dark,

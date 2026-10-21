@@ -69,6 +69,9 @@ export type MallConfig = {
   } | null;
 };
 
+// Lower-case the document name for running text but keep acronyms (KMA-plan, ÄTA).
+const docName = (h: string) => (/^\p{Lu}{2}/u.test(h) ? h : h.charAt(0).toLowerCase() + h.slice(1));
+
 export default function MallToPdfTool({ config }: { config: MallConfig }) {
   const empty: Record<string, string> = Object.fromEntries(config.fields.map((f) => [f.name, '']));
   const [values, setValues] = useState<Record<string, string>>(empty);
@@ -302,10 +305,10 @@ export default function MallToPdfTool({ config }: { config: MallConfig }) {
       {config.appCta !== null && (
         <ToolAppCta
           tool={config.filePrefix}
-          heading={config.appCta?.heading ?? `Slipp börja om – gör ${config.pdfHeading.toLowerCase()} i ByggExp`}
+          heading={config.appCta?.heading ?? `Slipp börja om – gör ${docName(config.pdfHeading)} i ByggExp`}
           text={
             config.appCta?.text ??
-            `Mallen ovan är gratis. I ByggExp fyller du i på plats, återanvänder dina mallar och samlar alla dokument per projekt – ${config.pdfHeading.toLowerCase()}, egenkontroll, ÄTA, offert och mer på ett ställe.`
+            `Mallen ovan är gratis. I ByggExp fyller du i på plats, återanvänder dina mallar och samlar alla dokument per projekt – ${docName(config.pdfHeading)}, egenkontroll, ÄTA, offert och mer på ett ställe.`
           }
           bullets={
             config.appCta?.bullets ?? [

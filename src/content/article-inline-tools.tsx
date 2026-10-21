@@ -16,6 +16,8 @@ import RestidsersattningKalkylatorTool from '../components/LeadMagnet/Restidsers
 import AckordKalkylatorTool from '../components/LeadMagnet/AckordKalkylatorTool';
 import ForseningsviteKalkylatorTool from '../components/LeadMagnet/ForseningsviteKalkylatorTool';
 import ReglarKalkylatorTool from '../components/LeadMagnet/ReglarKalkylatorTool';
+import ApdPlanMallTool from '../components/LeadMagnet/ApdPlanMallTool';
+import KmaPlanMallTool from '../components/LeadMagnet/KmaPlanMallTool';
 import UvardeKalkylatorTool from '../components/LeadMagnet/UvardeKalkylatorTool';
 import TrallKalkylatorTool from '../components/LeadMagnet/TrallKalkylatorTool';
 import TidrapportTool from '../components/LeadMagnet/TidrapportTool';
@@ -294,6 +296,16 @@ export const ARTICLE_INLINE_TOOLS: Record<string, InlineTool> = {
   'efterkalkyl-bygg-kalkyluppfoljning': {
     heading: 'Gör din efterkalkyl',
     render: () => <EfterkalkylMallTool />,
+    position: 'top',
+  },
+  'apd-plan-arbetsplatsdisposition-bygg': {
+    heading: 'Fyll i din APD-plan',
+    render: () => <ApdPlanMallTool />,
+    position: 'top',
+  },
+  'kma-plan-mall': {
+    heading: 'Fyll i din KMA-plan',
+    render: () => <KmaPlanMallTool />,
     position: 'top',
   },
   // ab-u-underentreprenor-avtal: no tool on purpose. Searchers want the AB-U 07 /

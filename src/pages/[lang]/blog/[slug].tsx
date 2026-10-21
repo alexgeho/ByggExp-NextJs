@@ -427,7 +427,10 @@ export default function BlogArticlePage({
             <section className="article-tool article-tool--top" aria-label={inlineTool.heading}>
               {inlineTool.render()}
             </section>
-          ) : coverImageUrl ? (
+          ) : null}
+
+          {/* Owner 2026-10-21: keep the cover photo, under the tool when the tool is on top. */}
+          {coverImageUrl ? (
             <img
               src={coverImageUrl}
               alt={post.title}

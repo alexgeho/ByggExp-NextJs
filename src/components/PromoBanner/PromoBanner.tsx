@@ -31,7 +31,8 @@ function write(key: string, value: string) {
 export default function PromoBanner() {
   const { asPath } = useRouter();
   const path = asPath.split(/[?#]/)[0].replace(/\/$/, "");
-  const eligible = path.startsWith("/sv/") && path !== "/sv/ny-startsida";
+  // Owner 2026-10-21: only blog articles and free tools (R11) — not on product, legal or contact pages.
+  const eligible = /^\/sv\/(blog|verktyg)\/./.test(path);
 
   const [show, setShow] = useState(false);
   const [min, setMin] = useState(false);

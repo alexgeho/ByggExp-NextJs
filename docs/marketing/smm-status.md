@@ -138,3 +138,6 @@
 Тексты/картинки: design-assets/social/posts/v6-grupper/ (маркетолог → дизайнер → критик ×3 круга).
 Опубликовано: g04 Reklam Är Tillåtet · g03 Marknadsför ditt Företag · g02 Nya företag! (на модерации; окно «согласен с правилами» не принимал — владелец) · g10 Jag vill hitta en målare, snickare · g06 Bygg och Renovering i Stockholm (на модерации) · g01 Jag vill hitta en plattsättare… 
 Правила групп: Driva Eget — свои посты запрещены, только комментарий в маркетинг-треде по понедельникам (g01/g05 туда). Egenföretagare — реклама только в рекламном треде 1 раз в месяц (дата = номер месяца, напр. 11/11). Bygg och renovering 168K и Bygg och Renovering 13K — реклама запрещена.
+- Также опубликованы: g07 Hantverkare sökes · g09 Hitta Snickare, Målare i Stockholm (текст «vad de tycker»; на картинке часы 18:55 — мелочь, критик просил рабочее время). Итого 8/10.
+- Не выложены (по 1 посту в группу в день, иначе спам): g05 (löner) → завтра в Reklam Är Tillåtet или Marknadsför; g08 (ROT) → завтра в Jag vill hitta en målare, snickare / plattsättare. Driva Eget: g01/g05 комментарием в понедельничном треде.
+- NÄSTA утром: ответить на комментарии в 8 постах; владелец — галочка правил в Nya företag!.

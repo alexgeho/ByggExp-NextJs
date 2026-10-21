@@ -82,7 +82,7 @@ Nu vill jag veta vad som är viktigast för er när ni väljer system: priset, a
 Svara gärna med ett ord eller några rader. Jag läser allt.
 
 ## g07 · Hantverkare sökes · kvitton och fakturaskanning (utan länk)
-Bild: v6-grupper/g07.jpg (11costs, rena leverantörer, varierade projekt, hel kolumn Kvitto, utan prispiller och appbutiker – kundgrupp)
+Bild: v6-grupper/g07.jpg (11costs, rubrik Kvitton från bygghandeln? / Hur gör ni i dag?, luft före Totalt, tabell och Sök slutar före mobilen, rena leverantörer, varierade projekt och belopp, kvitton sep–okt 2026, hel kolumn Kvitto och Totalt fri från mobilen, utan prispiller och appbutiker – kundgrupp)
 
 Till er hantverkare som tar uppdrag via gruppen: hur gör ni med kvitton från bygghandeln i dag?
 
@@ -91,7 +91,7 @@ Jag är grundare av ByggExp. Hos oss fotar arbetaren kvittot i appen och väljer
 Jag vill gärna höra hur ni löser det och vad som skulle göra det enklare. Alla svar hjälper oss att bygga rätt.
 
 ## g08 · Bygg och Renovering (13K) · offert och faktura med ROT (utan länk)
-Bild: v6-grupper/g08.jpg (8fakturor, privatkund Anna Svensson, förfallodatum 20 nov. 2026, à-pris, ROT-avdrag påslaget, utan prispiller – privatpersonsgrupp)
+Bild: v6-grupper/g08.jpg (8fakturor, rubrik Faktura med ROT-avdrag? / Vad är viktigast för er?, privatkund Anna Svensson, förfallodatum 20 nov. 2026, rad Arbete badrum 20 tim à 550 = 11 000,00 kr, ROT-avdrag påslaget, utan prispiller – privatpersonsgrupp)
 
 Fråga till er som skickar offerter och fakturor med ROT-avdrag.
 
@@ -100,15 +100,15 @@ Jag bygger ByggExp. Där ingår offerter och fakturor med ROT-avdrag (30 % av ar
 Vad är viktigast för er i en faktura till en privatkund? Jag tar gärna emot tips, stora som små.
 
 ## g09 · Hitta Snickare Stockholm · planering och närvaro, söker testföretag (utan länk)
-Bild: v6-grupper/g09.jpg (5planering, projekt Takbyte BRF Linden i dator och app, hela etiketter, lugn appskärm Anställda, utan prispiller och appbutiker – privatpersonsgrupp)
+Bild: v6-grupper/g09.jpg (5planering okt 2026, rubrik Byggfirma i Stockholm? / Vi söker testföretag, samma fyra personer på Takbyte BRF Linden i dator och app, hela månaden fri från mobilen, lugn appskärm Anställda, utan prispiller och appbutiker – privatpersonsgrupp)
 
 Till er snickare och byggfirmor i Stockholmsområdet:
 
-Jag är grundare av ByggExp och söker några firmor som vill testa systemet gratis och säga ärligt vad de tycker – jag hjälper er personligen att lägga upp allt. Testperioden är 14 dagar.
+Jag är grundare av ByggExp och söker några firmor som vill testa systemet gratis och säga ärligt vad de tycker. Jag hjälper er personligen att lägga upp allt. Testperioden är 14 dagar, utan bindningstid.
 
 Ni får planering per person eller projekt, ser vem som är på vilket bygge just nu och har tidrapport med GPS i appen m.m.
 
-Vill ni vara med? Skriv en kommentar eller skicka ett meddelande. Ingen bindningstid.
+Vill ni vara med? Skriv en kommentar eller skicka ett meddelande.
 
 ## g10 · Jag vill hitta en målare/snickare · vi bygger funktionen som saknas (utan länk)
 Bild: v6-grupper/g10.jpg (foto: händer med appen, svenska knappar, utan prispiller – privatpersonsgrupp)

@@ -11,7 +11,7 @@ HERE, TILES = mc.HERE, mc.TILES
 W, H = 1640, 624
 MX0, MX1, MY0 = 480, 1225, 88  # x from 480: FB back arrow sits at x 400-475  # mobile-safe zone
 AV = (822, 509, 188)  # avatar circle on mobile
-GREY = (200, 214, 232)  # site hero secondary text
+GREY = (207, 227, 247)  # site hero dark: .hero-v2-price #cfe3f7 (HeroV2.scss)
 SKYB, BLUE, DARK = (35, 148, 255), (30, 111, 217), (11, 61, 145)  # голубой / синий / тёмно-голубой
 PRICE = [("299 kr/mån", "offert, faktura, lön, projektekonomi, projektledning, fakturaskanning m.m."),
          ("+69 kr/arbetare", "tidrapport, närvaro, planering, egenkontroll, kvittoskanning m.m.")]
@@ -34,7 +34,7 @@ def paste_shadow(img, im, x, y, blur=18):
 def render(name, price_col, align):
     img = mc.background(W, H, 48).convert("RGBA")
     d = ImageDraw.Draw(img)
-    big = mc.font(48, "Heavy")
+    big = mc.font(48, "Semibold")  # site h1: weight 600, all white
     fp, fl = mc.font(27, "Bold"), mc.font(24, "Regular")
     ph, lh2, gap = 44, 32, 14
     # headline: one line, white + sky
@@ -56,7 +56,7 @@ def render(name, price_col, align):
     x0 = MX0
     y = MY0
     d.text((x0, y), a, font=big, fill=mc.WHITE)
-    d.text((x0 + d.textlength(a, font=big), y), b, font=big, fill=mc.SKY)
+    d.text((x0 + d.textlength(a, font=big), y), b, font=big, fill=mc.WHITE)
     y += 76
     for p, ls in rows:
         rh = lh2 * len(ls)
@@ -77,7 +77,7 @@ def render(name, price_col, align):
     # photo right of the avatar; desktop shows the rest up to 1600
     hero = Image.open(TILES / "hero-nostores.png").convert("RGBA")
     hero.thumbnail((620, 300), Image.LANCZOS)
-    paste_shadow(img, hero, cx + r + 30, 300)
+    paste_shadow(img, hero, cx + r + 30, 260)  # bottom clear of the mobile white card (y 568)
     img.convert("RGB").save(HERE / f"{name}.png", optimize=True)
     return img
 
@@ -102,6 +102,6 @@ def phone_preview(img, name):
 
 
 if __name__ == "__main__":
-    for n, col in [("fb-s1-white", mc.WHITE), ("fb-s2-sky", mc.SKY)]:
+    for n, col in [("fb-site", mc.WHITE)]:
         phone_preview(render(n, col, "left"), n)
     print("ok")

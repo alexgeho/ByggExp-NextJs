@@ -9,8 +9,9 @@ import make_covers as mc  # noqa: E402
 
 HERE, TILES = mc.HERE, mc.TILES
 W, H = 1640, 624
-MX0, MX1, MY0 = 480, 1225, 100  # x from 480: FB back arrow sits at x 400-475  # mobile-safe zone
+MX0, MX1, MY0 = 480, 1225, 88  # x from 480: FB back arrow sits at x 400-475  # mobile-safe zone
 AV = (822, 509, 188)  # avatar circle on mobile
+GREY = (200, 214, 232)  # site hero secondary text
 SKYB, BLUE, DARK = (35, 148, 255), (30, 111, 217), (11, 61, 145)  # голубой / синий / тёмно-голубой
 PRICE = [("299 kr/mån", "offert, faktura, lön, projektekonomi, projektledning, fakturaskanning m.m."),
          ("+69 kr/arbetare", "tidrapport, närvaro, planering, egenkontroll, kvittoskanning m.m.")]
@@ -33,36 +34,43 @@ def paste_shadow(img, im, x, y, blur=18):
 def render(name, price_col, align):
     img = mc.background(W, H, 48).convert("RGBA")
     d = ImageDraw.Draw(img)
-    big = mc.font(50, "Heavy")
-    fp, fl = mc.font(25, "Bold"), mc.font(22, "Medium")
-    ph, lh2, gap = 44, 27, 10
+    big = mc.font(48, "Heavy")
+    fp, fl = mc.font(27, "Bold"), mc.font(24, "Regular")
+    ph, lh2, gap = 44, 32, 14
     # headline: one line, white + sky
     a, b = "Hela byggföretaget ", "på ett ställe"
     hw = d.textlength(a + b, font=big)
-    pw = max(d.textlength(p, font=fp) for p, _ in PRICE) + ph
-    label_w = 1080 - MX0 - pw - 16  # labels end before the FB share/menu icons
-    rows = [(p, mc.wrap(d, l, fl, label_w)) for p, l in PRICE]
-    rw = pw + 18 + max(d.textlength(t, font=fl) for _, ls in rows for t in ls)
-    bw = max(hw, rw)
-    x0 = (MX0 + MX1 - bw) / 2 if align == "center" else MX0
+    # S21: price as on the site hero: bold price – grey "what's included", no pills
+    dash = d.textlength(" – ", font=fl)
+    rows = []
+    for p, l in PRICE:  # flows like a paragraph: first line after "price – ", the rest from the left edge
+        first = 1080 - MX0 - d.textlength(p, font=fp) - dash  # end before the FB share/menu icons
+        ws, ls = l.split(), [""]
+        for w in ws:
+            t = (ls[-1] + " " + w).strip()
+            if d.textlength(t, font=fl) <= (first if len(ls) == 1 else 1080 - MX0):
+                ls[-1] = t
+            else:
+                ls.append(w)
+        rows.append((p, ls))
+    x0 = MX0
     y = MY0
     d.text((x0, y), a, font=big, fill=mc.WHITE)
     d.text((x0 + d.textlength(a, font=big), y), b, font=big, fill=mc.SKY)
-    y += 78
+    y += 76
     for p, ls in rows:
-        rh = max(ph, lh2 * len(ls))
-        py = y + (rh - ph) // 2
-        d.rounded_rectangle((x0, py, x0 + pw, py + ph), ph // 2, fill=mc.WHITE)
-        d.text((x0 + (pw - d.textlength(p, font=fp)) / 2, py + ph / 2), p, font=fp, fill=price_col, anchor="lm")
-        ty = y + (rh - lh2 * len(ls)) / 2
+        rh = lh2 * len(ls)
+        d.text((x0, y + lh2 * .8), p, font=fp, fill=price_col, anchor="ls")
+        d.text((x0 + d.textlength(p, font=fp), y + lh2 * .8), " – ", font=fl, fill=GREY, anchor="ls")
         for k, t in enumerate(ls):
-            d.text((x0 + pw + 18, ty + k * lh2 + lh2 / 2), t, font=fl, fill=mc.WHITE, anchor="lm")
+            lx = x0 + d.textlength(p, font=fp) + dash if k == 0 else x0
+            d.text((lx, y + k * lh2 + lh2 * .8), t, font=fl, fill=GREY, anchor="ls")
         y += rh + gap
     # store badges left of the avatar, stacked
     bh = 46
     bs = badges(bh)
     cx, cy, r = AV
-    by = 340
+    by = int(y) + 26  # same air above the badges as between headline and prices
     bx = x0  # badges on the same left line as the text
     for i, bd in enumerate(bs):
         img.alpha_composite(bd, (int(bx), by + i * (bh + 16)))
@@ -94,6 +102,6 @@ def phone_preview(img, name):
 
 
 if __name__ == "__main__":
-    for n, col in [("fb-m1-sky", SKYB), ("fb-m2-blue", BLUE), ("fb-m3-dark", DARK)]:
+    for n, col in [("fb-s1-white", mc.WHITE), ("fb-s2-sky", mc.SKY)]:
         phone_preview(render(n, col, "left"), n)
     print("ok")

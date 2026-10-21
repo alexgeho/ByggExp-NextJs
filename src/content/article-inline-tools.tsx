@@ -16,6 +16,18 @@ import RestidsersattningKalkylatorTool from '../components/LeadMagnet/Restidsers
 import AckordKalkylatorTool from '../components/LeadMagnet/AckordKalkylatorTool';
 import ForseningsviteKalkylatorTool from '../components/LeadMagnet/ForseningsviteKalkylatorTool';
 import ReglarKalkylatorTool from '../components/LeadMagnet/ReglarKalkylatorTool';
+import UvardeKalkylatorTool from '../components/LeadMagnet/UvardeKalkylatorTool';
+import TrallKalkylatorTool from '../components/LeadMagnet/TrallKalkylatorTool';
+import TidrapportTool from '../components/LeadMagnet/TidrapportTool';
+import TapetKalkylatorTool from '../components/LeadMagnet/TapetKalkylatorTool';
+import StaketKalkylatorTool from '../components/LeadMagnet/StaketKalkylatorTool';
+import RotKalkylatorTool from '../components/LeadMagnet/RotKalkylatorTool';
+import GrusKalkylatorTool from '../components/LeadMagnet/GrusKalkylatorTool';
+import GolvKalkylatorTool from '../components/LeadMagnet/GolvKalkylatorTool';
+import GipsKalkylatorTool from '../components/LeadMagnet/GipsKalkylatorTool';
+import FargKalkylatorTool from '../components/LeadMagnet/FargKalkylatorTool';
+import FallKalkylatorTool from '../components/LeadMagnet/FallKalkylatorTool';
+import EfterkalkylMallTool from '../components/LeadMagnet/EfterkalkylMallTool';
 import EgenkontrollTool from '../components/LeadMagnet/EgenkontrollTool';
 import AnstallningsavtalMallTool from '../components/LeadMagnet/AnstallningsavtalMallTool';
 import AtaMallTool from '../components/LeadMagnet/AtaMallTool';
@@ -201,6 +213,87 @@ export const ARTICLE_INLINE_TOOLS: Record<string, InlineTool> = {
   'riskbedomning-byggarbetsplats-mall': {
     heading: 'Fyll i riskbedömningen',
     render: () => <RiskbedomningMallTool />,
+    position: 'top',
+  },
+  // GSC 2026-10-21: these rank for "räkna/mall/exempel" queries – tool first (R10).
+  'offertprogram-byggforetag': {
+    heading: 'Gör din offert',
+    render: () => <OffertGeneratorTool />,
+    position: 'top',
+  },
+  'skriva-offert': {
+    heading: 'Gör din offert',
+    render: () => <OffertGeneratorTool />,
+    position: 'top',
+  },
+  'tapet-atgang-rullar': {
+    heading: 'Räkna tapetåtgång',
+    render: () => <TapetKalkylatorTool locale="sv" />,
+    position: 'top',
+  },
+  'berakna-u-varde-isolering': {
+    heading: 'Räkna U-värde',
+    render: () => <UvardeKalkylatorTool locale="sv" />,
+    position: 'top',
+  },
+  'rotavdrag-hur-mycket': {
+    heading: 'Räkna ROT-avdrag',
+    render: () => <RotKalkylatorTool locale="sv" />,
+    position: 'top',
+  },
+  'dranering-grus-material-berakning': {
+    heading: 'Räkna grusåtgång',
+    render: () => <GrusKalkylatorTool locale="sv" />,
+    position: 'top',
+  },
+  'ata-arbeten': {
+    heading: 'Fyll i ÄTA',
+    render: () => <AtaMallTool />,
+    position: 'top',
+  },
+  'startmote-byggprojekt-checklista': {
+    heading: 'Fyll i mötesprotokollet',
+    render: () => <ByggmotesprotokollMallTool />,
+    position: 'top',
+  },
+  'tidredovisning-byggforetag': {
+    heading: 'Fyll i tidrapporten',
+    render: () => <TidrapportTool />,
+    position: 'top',
+  },
+  'fall-lutning-berakna-avlopp-mark-tak': {
+    heading: 'Räkna fall',
+    render: () => <FallKalkylatorTool locale="sv" />,
+    position: 'top',
+  },
+  'fargatgang-malning-m2': {
+    heading: 'Räkna färgåtgång',
+    render: () => <FargKalkylatorTool locale="sv" />,
+    position: 'top',
+  },
+  'golvmaterial-atgang-spill': {
+    heading: 'Räkna golvmaterial',
+    render: () => <GolvKalkylatorTool locale="sv" />,
+    position: 'top',
+  },
+  'materialatgang-innervagg-reglar-gips': {
+    heading: 'Räkna gips',
+    render: () => <GipsKalkylatorTool locale="sv" />,
+    position: 'top',
+  },
+  'staket-material-stolpar-atgang': {
+    heading: 'Räkna staketmaterial',
+    render: () => <StaketKalkylatorTool locale="sv" />,
+    position: 'top',
+  },
+  'virkesatgang-altan-tralldack': {
+    heading: 'Räkna trall och virke',
+    render: () => <TrallKalkylatorTool locale="sv" />,
+    position: 'top',
+  },
+  'efterkalkyl-bygg-kalkyluppfoljning': {
+    heading: 'Gör din efterkalkyl',
+    render: () => <EfterkalkylMallTool />,
     position: 'top',
   },
   // ab-u-underentreprenor-avtal: no tool on purpose. Searchers want the AB-U 07 /

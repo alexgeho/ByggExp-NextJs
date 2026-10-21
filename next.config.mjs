@@ -40,6 +40,9 @@ const nextConfig = {
       // which has never existed → the chain still ended in a 404. Point it at the
       // pillar article that covers the term.
       { source: "/sv/blog/tidrapport", destination: "/sv/blog/tidrapportering", statusCode: 301 },
+      // 2026-10-21: thin duplicates merged into the page Google already ranks for the cluster.
+      { source: "/sv/blog/tidsregistrering-app-bygg", destination: "/sv/blog/app-for-tidrapportering-bygg", statusCode: 301 },
+      { source: "/sv/blog/projekthanteringssystem-bygg", destination: "/sv/blog/projekthantering-byggforetag", statusCode: 301 },
       // Junk URL from an early test post. It has no target, but leaving it 404 would
       // fail the whole "Not found (404)" validation run in GSC — send it to the blog index.
       { source: "/sv/blog/test", destination: "/sv/blog", statusCode: 301 },

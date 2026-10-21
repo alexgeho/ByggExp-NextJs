@@ -22,7 +22,7 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 | /sv/blog/tidrapportering-app-byggforetag | гайд | tidrapportering app bygg | 64 / 17.2 | tidrapportering app (18) |
 | /sv/blog/tidrapport-app-iphone | гайд | tidrapport app iphone | 5 / 28.4 | tidrapport app (31) |
 | /sv/blog/enkelt-tidrapporteringssystem | гайд | enkelt tidrapporteringssystem | — | enkel tidrapportering app (26) |
-| /sv/blog/tidsregistrering-app-bygg | гайд | tidsregistrering bygg | 83 / 18.5 | mobil tidsregistrering (15) |
+| ~~/sv/blog/tidsregistrering-app-bygg~~ → 301 на app-for-tidrapportering-bygg (2026-10-21) | гайд | tidsregistrering bygg | 83 / 18.5 | mobil tidsregistrering (15) |
 | /sv/blog/tidredovisning-byggforetag | гайд | tidredovisning bygg | 95 / 18.1 | tidredovisning (62) |
 | /sv/blog/tidredovisning-app | гайд | tidredovisning app | 22 / 17.4 | — |
 | /sv/blog/stampelklocka-app-gps-bygg | гайд | stämpelklocka app | 117 / 14.1 | stämpelklocka i mobilen (73), digital stämpelklocka (61) |
@@ -64,7 +64,7 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 ## Риски каннибализации (не исправлено, решить отдельно)
 
 1. **personalplanering-bygg ↔ bemanning-och-personalplanering.** Оба title содержат «personalplanering». Рекомендация: убрать «personalplanering» из title personalplanering-bygg и оставить там только «Bemanningsplanering för byggföretag».
-2. **app-for-tidrapportering-bygg ↔ tidrapportering-app-byggforetag ↔ tidsregistrering-app-bygg.** Это три почти одинаковых «app»-гайда. Рекомендация: через 4–6 недель по GSC (связка запрос × страница) объединить слабейший в хаб с 301-редиректом.
+2. **[2026-10-21: tidsregistrering-app-bygg (90 дн. 1 045 показов, поз. 54, 0 кликов) → 301 на хаб; projekthanteringssystem-bygg (не в индексе) → 301 на projekthantering-byggforetag]** **app-for-tidrapportering-bygg ↔ tidrapportering-app-byggforetag ↔ tidsregistrering-app-bygg.** Это три почти одинаковых «app»-гайда. Рекомендация: через 4–6 недель по GSC (связка запрос × страница) объединить слабейший в хаб с 301-редиректом.
 3. **tidredovisning-byggforetag ↔ tidredovisning-app.** Пересечение умеренное. Держать раздельно: «bygg» и «app».
 4. Старые анкоры «automatisk tidrapportering» (~15 ссылок из гайдов) и «dagsplanering» оставлены как есть. Они ведут на правильного владельца, просто без нового ключа.
 

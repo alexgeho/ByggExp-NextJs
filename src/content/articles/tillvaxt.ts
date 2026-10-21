@@ -386,7 +386,7 @@ const A_TIDRAPPORTERING_APP_BYGGFORETAG_HTML = `
 <p>En tidrapporterings-app tjänar in sig snabbt: rätt lön, rätt faktura och koll på lönsamheten – utan papperslappar och utan pusslet vid varje lönekörning.</p>
 
 <h2>Tidrapport, tidsregistrering eller tidredovisning – samma sak?</h2>
-<p>Orden används ofta om vartannat, men beskriver olika steg i samma kedja. <strong>Tidsregistrering</strong> är själva stämplingen (in och ut), <strong>tidrapportering</strong> kopplar timmarna till rätt projekt, och <strong>tidredovisning</strong> är det sammanställda underlaget till lön och faktura. En <strong>digital tidrapport</strong> i mobilen tar dig genom alla tre stegen utan dubbelinmatning. Vill du fördjupa dig i flödet, se guiden om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a> och om <a href="/sv/blog/tidsregistrering-app-bygg">tidsregistrering-app för bygg</a>.</p>
+<p>Orden används ofta om vartannat, men beskriver olika steg i samma kedja. <strong>Tidsregistrering</strong> är själva stämplingen (in och ut), <strong>tidrapportering</strong> kopplar timmarna till rätt projekt, och <strong>tidredovisning</strong> är det sammanställda underlaget till lön och faktura. En <strong>digital tidrapport</strong> i mobilen tar dig genom alla tre stegen utan dubbelinmatning. Vill du fördjupa dig i flödet, se guiden om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a> och om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>.</p>
 
 <h2>Relaterade guider om tidrapportering</h2>
 <ul>
@@ -1269,7 +1269,6 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 <ul>
 <li><a href="/sv/blog/tidrapportering-app-byggforetag">Tidrapportering-app för byggföretag</a> – timmar till lön och faktura.</li>
 <li><a href="/sv/blog/stampelklocka-app-gps-bygg">Stämpelklocka app med GPS</a> – in- och utstämpling med platsbekräftelse.</li>
-<li><a href="/sv/blog/tidsregistrering-app-bygg">Tidsregistrering-app för bygg</a> – korrekt arbetstid i mobilen.</li>
 <li><a href="/sv/blog/mobil-tidrapportering">Mobil tidrapportering</a> – rapportera tid där jobbet görs.</li>
 <li><a href="/sv/blog/personalliggare-bygg-app">Personalliggare app</a> – närvaro i realtid, redo för Skatteverket.</li>
 <li><a href="/sv/blog/tidrapportering-hantverkare">Tidrapportering för hantverkare</a> och <a href="/sv/blog/tidrapportering-entreprenad">för entreprenad</a>.</li>
@@ -1796,7 +1795,7 @@ const S_STAMPELKLOCKA_ANDROID_HTML = `
 <li>Fungerar offline och synkar när täckningen kommer tillbaka.</li>
 <li>Export till lön och faktura.</li>
 </ul>
-<p>Vill du förstå hela flödet? Se guiden om <a href="/sv/blog/stampelklocka-app-gps-bygg">stämpelklocka app med GPS</a> och om <a href="/sv/blog/tidsregistrering-app-bygg">tidsregistrering-app för bygg</a>.</p>
+<p>Vill du förstå hela flödet? Se guiden om <a href="/sv/blog/stampelklocka-app-gps-bygg">stämpelklocka app med GPS</a> och om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>.</p>
 
 <h2>Kom igång</h2>
 <p>Läs mer om <a href="/sv/blog/stampelklocka-app-gps-bygg">stämpelklocka med GPS</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
@@ -1871,58 +1870,6 @@ const S_STAMPELKLOCKA_IPHONE: BlogPost = {
   publishedAt: "2026-08-22T10:20:00.000Z", createdAt: "2026-08-22T10:20:00.000Z", updatedAt: "2026-08-22T10:20:00.000Z",
 };
 
-const S_TIDSREGISTRERING_APP_BYGG_HTML = `
-<p>Tidsregistrering är själva grunden: att fånga när personalen börjar och slutar arbeta. För byggföretag måste det ske i mobilen, ute på arbetsplatsen. En app för tidsregistrering ger korrekta arbetstider utan lappar – underlag som sedan blir lön, faktura och uppföljning. Här går vi igenom vad en tidsregistrering-app för bygg bör klara.</p>
-<p>Se helheten i vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
-
-<figure class="article-diagram"><img src="/landing/diagrams/tidrapporteringssystem.webp" alt="Diagram: tidsregistrering, tidrapportering och tidredovisning i tre steg" width="720" height="380" loading="lazy"><figcaption>Tidsregistrering är första steget: stämpling → rapportering → redovisning.</figcaption></figure>
-<p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
-
-<h2>Vad är tidsregistrering?</h2>
-<p>Tidsregistrering är att registrera arbetstidens början och slut. Det är första steget i kedjan tidsregistrering → tidrapportering → tidredovisning. I en app sker det med in- och utcheckning i mobilen, gärna med GPS.</p>
-
-<h2>Tidsregistrering app för bygg – vad som är viktigt</h2>
-<div class="article-table"><table>
-<thead><tr><th>Funktion</th><th>Varför den behövs på bygg</th></tr></thead>
-<tbody>
-<tr><td><strong>In-/utcheckning i mobilen</strong></td><td>Personalen är på arbetsplatsen, inte vid en dator</td></tr>
-<tr><td><strong>GPS på incheckning</strong></td><td>Bekräftar närvaro där jobbet utförs</td></tr>
-<tr><td><strong>Offline-läge</strong></td><td>Källare och nybyggen saknar ofta täckning</td></tr>
-<tr><td><strong>Projektkoppling</strong></td><td>Timmarna hamnar rätt utan efterarbete</td></tr>
-<tr><td><strong>OB &amp; övertid</strong></td><td>Märks per pass (normal, OB, övertid) och följer med till lön</td></tr>
-<tr><td><strong>Export till lön &amp; faktura</strong></td><td>Registrera en gång, använd överallt</td></tr>
-</tbody>
-</table></div>
-
-<h2>Tidsregistrering och arbetstidslagen</h2>
-<p>Korrekt tidsregistrering är inte bara bra för ekonomin – det gör det också enklare att följa <a href="/sv/blog/arbetstidslagen-bygg">arbetstidslagen</a>. När arbetstid, raster och övertid registreras löpande har du underlag om dygns- eller veckovila ifrågasätts, och du ser tidigt om någon närmar sig gränserna för övertid.</p>
-
-<h2>GPS och integritet – vad gäller?</h2>
-<p>GPS på incheckningen behandlar personuppgifter, så det kräver en laglig grund och att personalen informeras. I praktiken registreras positionen vid stämplingstillfället för att bekräfta närvaro på arbetsplatsen – inte en löpande spårning av var någon befinner sig. Var tydlig med vad som samlas in och varför; det både uppfyller kraven och ökar acceptansen i laget.</p>
-
-<h2>Kom igång</h2>
-<p>Läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en gratis konsultation</a>. Vill du fånga varje debiterbar timme? Se <a href="/sv/blog/tidrapportering-hantverkare">tidrapportering för hantverkare</a>.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Vad är skillnaden mellan tidsregistrering och tidrapportering?</h3>
-<p>Tidsregistrering är själva stämplingen – när man börjar och slutar. Tidrapportering är när timmarna kopplas till projekt och aktivitet. De hänger ihop i ett tidrapporteringssystem.</p>
-<h3>Behöver en app för tidsregistrering GPS?</h3>
-<p>GPS gör registreringen pålitlig genom att bekräfta att incheckningen sker på arbetsplatsen, vilket minskar diskussioner om timmar i efterhand.</p>
-<h3>Är GPS-stämpling tillåtet enligt GDPR?</h3>
-<p>Ja, om du har en laglig grund och informerar personalen. Positionen registreras vid incheckning för att bekräfta närvaro, inte som löpande spårning – var tydlig med vad som samlas in och varför.</p>
-<h3>Fungerar tidsregistreringen utan mobiltäckning?</h3>
-<p>Ja. Stämplingen sparas lokalt och synkas när telefonen får uppkoppling igen, så inga pass tappas i källare eller på nybyggen.</p>
-`.trim();
-
-const S_TIDSREGISTRERING_APP_BYGG: BlogPost = {
-  _id: "code-tidsregistrering-app-bygg",
-  title: "Tidsregistrering app för bygg – korrekt arbetstid i mobilen", slug: "tidsregistrering-app-bygg", locale: "sv",
-  excerpt: "Tidsregistrering-app för bygg: fånga arbetstidens början och slut i mobilen med GPS, kopplat till projekt. Grunden för lön, faktura och uppföljning.", tag: "Digitalisering",
-  coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: S_TIDSREGISTRERING_APP_BYGG_HTML,
-  seoTitle: "Tidsregistrering app för bygg – arbetstid i mobilen | ByggExp", seoDescription: "Tidsregistrering-app för bygg: fånga arbetstidens början och slut i mobilen med GPS. Första steget före tidrapportering och tidredovisning. Fungerar offline.",
-  seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-22T10:25:00.000Z", createdAt: "2026-08-22T10:25:00.000Z", updatedAt: "2026-08-22T10:25:00.000Z",
-};
 
 const S_TIDREDOVISNING_APP_HTML = `
 <p>Tidredovisning är sista steget: att sammanställa de registrerade timmarna till ett underlag som går till lön, faktura och bokföring. En app för tidredovisning gör det automatiskt – du slipper renskriva och summera manuellt. Här går vi igenom vad en tidredovisning-app bör klara.</p>
@@ -2013,7 +1960,7 @@ const S_PERSONALLIGGARE_APP_HTML = `
 <p>På ett bygge jobbar sällan bara ett företag. En bra personalliggare-app låter <strong>underentreprenörer och inhyrda checka in själva</strong> på arbetsplatsen, så att liggaren är komplett utan att du måste jaga varje lag. Eftersom bygglag ofta är flerspråkiga underlättar det när appen fungerar på flera språk – då förstår alla hur de checkar in och liggaren blir korrekt från början.</p>
 
 <h2>En incheckning – både tid och liggare</h2>
-<p>Det stora med en app är att samma incheckning löser två saker: den registrerar <a href="/sv/blog/tidsregistrering-app-bygg">arbetstiden</a> som blir lön och faktura, och den för personalliggaren som klarar en kontroll. Ingen dubbel registrering, inga glömda poster. Läs mer om hur tiden blir underlag i <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a>.</p>
+<p>Det stora med en app är att samma incheckning löser två saker: den registrerar <a href="/sv/blog/app-for-tidrapportering-bygg">arbetstiden</a> som blir lön och faktura, och den för personalliggaren som klarar en kontroll. Ingen dubbel registrering, inga glömda poster. Läs mer om hur tiden blir underlag i <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a>.</p>
 
 <h2>Kom igång</h2>
 <p>Läs om <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning på bygget</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
@@ -2242,7 +2189,7 @@ const S_TIDRAPPORT_APP_IPHONE_HTML = `
 <p>Poängen med att rapportera tid på iPhone är att samma timme bara matas in en gång. De loggade timmarna blir <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a> och <a href="/sv/blog/fakturera-fran-byggexp">fakturarader</a> och räknas in i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a>. Vill du bara stämpla närvaro? Se <a href="/sv/blog/stampelklocka-app-iphone">stämpelklocka-app för iPhone</a>.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du rapportera tid på iPhone? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, läs om <a href="/sv/blog/tidsregistrering-app-bygg">tidsregistrering-app för bygg</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
+<p>Vill du rapportera tid på iPhone? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, läs om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Finns det en app för tidrapport på iPhone?</h3>
@@ -2336,7 +2283,6 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML = `
 <li><a href="/sv/blog/resursplanering-bygg">Resursplanering i bygg</a> – undvik överbeläggning och dubbelbokade lag.</li>
 <li><a href="/sv/blog/arbetstidslagen-bygg">Arbetstidslagen i bygg</a> – dygnsvila, veckovila och övertid.</li>
 <li><a href="/sv/blog/gantt-schema-mall-bygg">Gantt- och schemamall för bygg</a> – planera projektet visuellt.</li>
-<li><a href="/sv/blog/projekthanteringssystem-bygg">Projekthanteringssystem för bygg</a> – planering, tid och marginal i ett.</li>
 </ul>
 
 <h2>Vanliga frågor</h2>
@@ -2365,89 +2311,6 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG: BlogPost = {
   publishedAt: "2026-08-30T10:00:00.000Z", createdAt: "2026-08-30T10:00:00.000Z", updatedAt: "2026-10-06T10:00:00.000Z",
 };
 
-const A_PROJEKTHANTERINGSSYSTEM_BYGG_HTML = `
-<p>När kalkylen ligger i ett program, tiden i ett annat och fotona i telefonen, är det ingen som ser hur projektet faktiskt går förrän slutfakturan. Ett projekthanteringssystem – eller projektledningssystem – samlar planering, tid, uppgifter, dokumentation och ekonomi per projekt, så att du styr marginalen medan bygget pågår. Här går vi igenom vad ett projekthanteringssystem för bygg bör klara och hur du väljer rätt.</p>
-
-<p>Vill du ha grunderna först? Läs om <a href="/sv/blog/projekthantering-byggforetag">projekthantering för byggföretag</a> eller hur du <a href="/sv/blog/digitalisera-byggforetag-projektstyrning">digitaliserar projektstyrningen</a>.</p>
-
-<figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projekthanteringssystem – planering, tid, kostnader och marginal samlat per projekt" width="720" height="380" loading="lazy"><figcaption>Ett nav per projekt: planering, tid, kostnader och fakturerat möts, så marginalen räknas ihop löpande.</figcaption></figure>
-
-<h2>Vad är ett projekthanteringssystem för bygg?</h2>
-<p>Ett projekthanteringssystem är navet där allt som rör ett projekt möts: bemanning och schema, nedlagd tid, uppgifter och arbetsorder, foton och dokument, offert, utlägg och faktura. Poängen är kopplingen – när timmar och kostnader bokförs på projektet räknas marginalen ihop av sig själv, i stället för att du sammanställer den i efterhand.</p>
-
-<h2>Projekthanteringssystem eller projektledningssystem?</h2>
-<p>Begreppen används om vartannat och betyder i praktiken samma sak för ett byggföretag: ett system som håller ihop projektets planering, genomförande och ekonomi. Det som skiljer ett system byggt för bygg från ett generellt projektverktyg är att det förstår timmar, ÄTA, ROT och marginal – inte bara uppgifter i en lista.</p>
-
-<h2>Vad ett projekthanteringssystem bör klara</h2>
-<ul>
-<li><strong>Planering</strong> – <a href="/sv/blog/schemalaggningssystem-bygg">schema och bemanning</a> kopplat till projektet.</li>
-<li><strong>Tid per projekt</strong> – timmar bokförs där jobbet sker, för <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">kostnadskontroll och marginal</a>.</li>
-<li><strong>Uppgifter och arbetsorder</strong> – <a href="/sv/blog/arbetsorder-app-bygg">jobb</a> kopplade till projekt och person.</li>
-<li><strong>Dokumentation</strong> – foto och dokument samlade per projekt.</li>
-<li><strong>Ekonomi</strong> – offert, utlägg, kostnader och faktura på samma projekt.</li>
-<li><strong>Marginal i realtid</strong> – nedlagt mot kalkyl medan projektet pågår.</li>
-</ul>
-
-<figure class="web-shot"><img src="/features-content/projektekonomi-och-lonsamhet-web.webp" alt="Projekthanteringssystem i webbadmin: budget mot utfall, timmar, kostnader och marginal per projekt" width="1000" height="548" loading="lazy"><figcaption>Projektets ekonomi i webbadmin – budget mot utfall, timmar, kostnader och marginal uppdateras löpande.</figcaption></figure>
-
-<h2>Spridda verktyg vs ett system</h2>
-<div class="article-table"><table>
-<thead><tr><th>&nbsp;</th><th>Spridda verktyg</th><th>Projekthanteringssystem</th></tr></thead>
-<tbody>
-<tr><td><strong>Var finns data</strong></td><td>I flera program och telefoner</td><td>Samlat per projekt</td></tr>
-<tr><td><strong>Marginal</strong></td><td>Räknas efter projektet</td><td>Syns löpande</td></tr>
-<tr><td><strong>Inmatning</strong></td><td>Tid, faktura och kalkyl var för sig</td><td>En registrering, används överallt</td></tr>
-<tr><td><strong>Kontor och bygge</strong></td><td>Olika bilder av läget</td><td>Samma bild i realtid</td></tr>
-<tr><td><strong>ÄTA och ändringar</strong></td><td>Tappas lätt bort</td><td>Loggas på projektet</td></tr>
-</tbody>
-</table></div>
-
-<h2>Så väljer du rätt system</h2>
-<ul>
-<li><strong>Ser du marginalen löpande?</strong> Ett system för bygg visar nedlagd tid mot kalkyl i realtid.</li>
-<li><strong>Hänger tid, foto och ekonomi ihop?</strong> Annars blir det öar av data som ingen orkar sammanställa.</li>
-<li><strong>Funkar det i mobilen på bygget?</strong> Det är där projektet händer – verktyg som kräver dator blir liggande och används sällan.</li>
-<li><strong>Är det byggt för bygg?</strong> Timmar, ÄTA, ROT och byggavtalet ska förstås av systemet, inte lösas med lappar vid sidan om.</li>
-</ul>
-
-<h2>Från system till bättre kalkyler</h2>
-<p>Ett projekthanteringssystem betalar sig två gånger: först genom att du agerar på projekt som drar över medan de pågår, sedan genom att utfallet blir underlag för nästa anbud. När projektet är klart jämför du utfall mot kalkyl i en <a href="/sv/blog/efterkalkyl-bygg-kalkyluppfoljning">efterkalkyl</a> och prissätter nästa jobb säkrare.</p>
-
-<h2>Kom igång</h2>
-<p>Vill du styra projekten medan de pågår? Läs om <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljning i realtid</a>, <a href="/sv/funktioner">se alla funktioner</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
-
-<h2>Relaterade guider</h2>
-<ul>
-<li><a href="/sv/blog/projektledning-byggforetag">Projektledning för byggföretag</a> – led byggprojekt från anbud till överlämning.</li>
-<li><a href="/sv/blog/projekthantering-byggforetag">Projekthantering för byggföretag</a> – tid, personal och marginal i ett.</li>
-<li><a href="/sv/blog/projektuppfoljning-bygg">Projektuppföljning i bygg</a> – tid, kostnader och lönsamhet i realtid.</li>
-<li><a href="/sv/blog/schemalaggningssystem-bygg">Schemaläggningssystem för bygg</a> – planera personal, projekt och tid.</li>
-<li><a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">Kostnadskontroll och marginal</a> – håll koll på projektets ekonomi.</li>
-<li><a href="/sv/blog/digitalisera-byggforetag-projektstyrning">Digitalisera projektstyrningen</a> – från lappar och Excel till ett system.</li>
-</ul>
-
-<h2>Vanliga frågor</h2>
-<h3>Vad är ett projekthanteringssystem för bygg?</h3>
-<p>Ett system som samlar planering, tid, uppgifter, dokumentation och ekonomi per projekt, så att du ser marginalen medan projektet pågår i stället för efteråt.</p>
-<h3>Vad är skillnaden mellan projekthanteringssystem och projektledningssystem?</h3>
-<p>I praktiken samma sak för ett byggföretag. Det avgörande är inte namnet, utan att systemet är byggt för bygg.</p>
-<h3>Vad skiljer ett byggsystem från ett generellt projektverktyg?</h3>
-<p>Ett generellt verktyg hanterar uppgifter i en lista. Ett system för bygg kopplar timmar och kostnader till projektet och räknar marginalen automatiskt.</p>
-<h3>Måste hela laget använda det?</h3>
-<p>Nyttan kommer när tid och dokumentation registreras där jobbet sker. Därför ska systemet vara enkelt nog att laget använder det i mobilen utan utbildning – annars stämmer inte siffrorna.</p>
-<h3>Ser jag projektets marginal i realtid?</h3>
-<p>Ja. När timmar, utlägg och kostnader bokförs på projektet uppdateras ekonomin löpande, så du hinner agera innan budgettaket.</p>
-`.trim();
-
-const A_PROJEKTHANTERINGSSYSTEM_BYGG: BlogPost = {
-  _id: "code-projekthanteringssystem-bygg",
-  title: "Projekthanteringssystem för bygg – projektledning, tid och marginal i ett", slug: "projekthanteringssystem-bygg", locale: "sv",
-  excerpt: "Ett projekthanteringssystem (projektledningssystem) samlar planering, tid, uppgifter, dokumentation och ekonomi per projekt – så att du styr marginalen medan bygget pågår. Så väljer du rätt.", tag: "Digitalisering",
-  coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_PROJEKTHANTERINGSSYSTEM_BYGG_HTML,
-  seoTitle: "Projekthanteringssystem för bygg – projektledning | ByggExp", seoDescription: "Projekthanteringssystem / projektledningssystem för byggföretag: planering, tid per projekt, uppgifter, foto och ekonomi med marginalen synlig löpande. Så väljer du rätt.",
-  seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-30T10:10:00.000Z", createdAt: "2026-08-30T10:10:00.000Z", updatedAt: "2026-08-30T10:10:00.000Z",
-};
 
 const A_BYGGDAGBOK_HTML = `
 <p>En byggdagbok är den löpande anteckningen över vad som hände på bygget: vilka som var på plats, vad som utfördes, vädret, leveranser, avvikelser och beslut. Så länge allt går enligt plan känns den som pappersarbete. Men den dag en försening, en ÄTA eller en garantitvist ska redas ut är dagboken ofta det enda som visar förloppet dag för dag. Här går vi igenom vad en byggdagbok ska innehålla, vad AB 04, ABT 06 och AMA AF kräver och vad en digital byggdagbok behöver klara.</p>
@@ -2596,7 +2459,7 @@ const A_BYGGDAGBOK: BlogPost = {
 const A_PROJEKTLEDNING_BYGGFORETAG_HTML = `
 <p>Projektledning i bygg handlar om att ta ett projekt från anbud till godkänd slutbesiktning utan att tappa kontrollen över tid, pengar och kvalitet på vägen. Det är en roll som lika mycket handlar om planering och uppföljning som om folk och kommunikation. Den här guiden går igenom faserna i ett byggprojekt, vad byggprojektledaren ansvarar för i varje steg och vilka verktyg som gör jobbet lättare.</p>
 
-<p>Vill du gå direkt på systemstödet? Läs om <a href="/sv/blog/projekthanteringssystem-bygg">projekthanteringssystem för bygg</a>, eller hur du <a href="/sv/blog/digitalisera-byggforetag-projektstyrning">digitaliserar projektstyrningen</a>.</p>
+<p>Vill du gå direkt på systemstödet? Läs om <a href="/sv/blog/projekthantering-byggforetag">projekthanteringssystem för bygg</a>, eller hur du <a href="/sv/blog/digitalisera-byggforetag-projektstyrning">digitaliserar projektstyrningen</a>.</p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projektledning i bygg – faser från kalkyl och planering till produktion, uppföljning och överlämning" width="720" height="380" loading="lazy"><figcaption>Projektledningens faser: kalkyl och anbud, planering, produktion, löpande uppföljning och överlämning.</figcaption></figure>
 
@@ -2630,14 +2493,13 @@ const A_PROJEKTLEDNING_BYGGFORETAG_HTML = `
 <p>Projektet är inte klart förrän det är godkänt och dokumenterat. Samla besiktningsanmärkningar, åtgärda dem och lämna över <a href="/sv/blog/overlamning-relationshandlingar">relationshandlingar</a> i ordning. Ett projekt med ordning i dokumentationen gör överlämningen till en formsak i stället för en jakt på papper.</p>
 
 <h2>Verktyg för projektledning</h2>
-<p>Manuell projektledning i Excel och mejl fungerar tills projekten blir fler och större. Ett <a href="/sv/blog/projekthanteringssystem-bygg">projekthanteringssystem</a> samlar planering, tid, dokumentation och ekonomi per projekt, så att du styr med data i stället för magkänsla. I ByggExp hänger faserna ihop: planen möter loggad tid, tiden möter ekonomin, och dokumentationen ligger där projektet finns.</p>
+<p>Manuell projektledning i Excel och mejl fungerar tills projekten blir fler och större. Ett <a href="/sv/blog/projekthantering-byggforetag">projekthanteringssystem</a> samlar planering, tid, dokumentation och ekonomi per projekt, så att du styr med data i stället för magkänsla. I ByggExp hänger faserna ihop: planen möter loggad tid, tiden möter ekonomin, och dokumentationen ligger där projektet finns.</p>
 
 <h2>Kom igång</h2>
 <p>Vill du få ordning på projektledningen? Läs om <a href="/sv/blog/projektplanering-bygg">projektplanering för byggprojekt</a> och <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljning i realtid</a>, <a href="/sv/funktioner">se alla funktioner</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
 <h2>Relaterade guider</h2>
 <ul>
-<li><a href="/sv/blog/projekthanteringssystem-bygg">Projekthanteringssystem för bygg</a> – planering, tid och marginal i ett.</li>
 <li><a href="/sv/blog/projektplanering-bygg">Projektplanering för byggprojekt</a> – från kalkyl och tidplan till bemanning.</li>
 <li><a href="/sv/blog/projektuppfoljning-bygg">Projektuppföljning i bygg</a> – tid, kostnader och lönsamhet i realtid.</li>
 <li><a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">Kostnadskontroll och marginal</a> – håll koll på projektets ekonomi.</li>
@@ -2731,7 +2593,7 @@ const A_PROJEKTPLANERING_BYGG: BlogPost = {
 const A_APP_FOR_BYGGPROJEKT_HTML = `
 <p>Det mesta i ett byggprojekt händer på bygget, inte på kontoret – men det är på kontoret som pärmarna och kalkylarken bor. En app för byggprojekt flyttar styrningen dit jobbet sker: tid, uppgifter, foton, dagbok och ekonomi i mobilen, kopplat till rätt projekt. Här går vi igenom vad en app för byggprojekt bör klara och varför den gör mest nytta ute på plats.</p>
 
-<p>Vill du se helheten? Läs om <a href="/sv/blog/projekthanteringssystem-bygg">projekthanteringssystem för bygg</a> eller vad en bredare <a href="/sv/blog/bygg-app">bygg-app</a> bör klara.</p>
+<p>Vill du se helheten? Läs om <a href="/sv/blog/projekthantering-byggforetag">projekthanteringssystem för bygg</a> eller vad en bredare <a href="/sv/blog/bygg-app">bygg-app</a> bör klara.</p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: app för byggprojekt – tid, uppgifter, foto och ekonomi kopplat till projektet i mobilen" width="720" height="380" loading="lazy"><figcaption>Allt kopplat till projektet i mobilen: tid, uppgifter, foto och dagbok – samlat där jobbet sker.</figcaption></figure>
 
@@ -2761,7 +2623,6 @@ const A_APP_FOR_BYGGPROJEKT_HTML = `
 <h2>Relaterade guider</h2>
 <ul>
 <li><a href="/sv/blog/bygg-app">Bygg-app</a> – tid, jobb, offert och faktura i mobilen.</li>
-<li><a href="/sv/blog/projekthanteringssystem-bygg">Projekthanteringssystem för bygg</a> – planering, tid och marginal i ett.</li>
 <li><a href="/sv/blog/arbetsorder-app-bygg">Arbetsorder-app för byggföretag</a> – slut på sms och lappar.</li>
 <li><a href="/sv/blog/byggdagbok">Byggdagbok</a> – daglig dokumentation som håller vid tvist.</li>
 <li><a href="/sv/blog/projektledning-byggforetag">Projektledning för byggföretag</a> – led byggprojekt i mål.</li>
@@ -2793,7 +2654,6 @@ export const TILLVAXT_ARTICLES: BlogPost[] = [
   A_PROJEKTPLANERING_BYGG,
   A_APP_FOR_BYGGPROJEKT,
   A_SCHEMALAGGNINGSSYSTEM_BYGG,
-  A_PROJEKTHANTERINGSSYSTEM_BYGG,
   A_BYGGDAGBOK,
   A_AFFARSSYSTEM_BYGGFORETAG,
   A_CRM_BYGGFORETAG,
@@ -2810,7 +2670,6 @@ export const TILLVAXT_ARTICLES: BlogPost[] = [
   S_STAMPELKLOCKA_ANDROID,
   S_STAMPELKLOCKA_IPHONE,
   S_TIDRAPPORT_APP_IPHONE,
-  S_TIDSREGISTRERING_APP_BYGG,
   S_TIDREDOVISNING_APP,
   S_PERSONALLIGGARE_APP,
   A_PERSONALPLANERING_BYGG,

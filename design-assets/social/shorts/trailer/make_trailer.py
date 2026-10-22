@@ -30,8 +30,14 @@ LEAD, TAIL = 0.25, 0.7  # voice starts 0.25s into a scene; scene lasts ≥ voice
 TAP_LIFE = 0.5
 
 
+SFNS = Path("/System/Library/Fonts/SFNS.ttf")
+WIN_FONTS = {"Heavy": "seguibl.ttf", "Semibold": "seguisb.ttf"}  # Windows drafts only; final render uses SF Pro on a Mac
+
+
 def font(size, weight="Heavy"):
-    f = ImageFont.truetype("/System/Library/Fonts/SFNS.ttf", size)
+    if not SFNS.exists():
+        return ImageFont.truetype(str(Path("C:/Windows/Fonts") / WIN_FONTS.get(weight, "seguibl.ttf")), size)
+    f = ImageFont.truetype(str(SFNS), size)
     try:
         f.set_variation_by_name(weight)
     except Exception:

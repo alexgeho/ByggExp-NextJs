@@ -1,7 +1,38 @@
 # ByggExp SMM — статус и следующий шаг (handoff для агента)
 
-Обновлено: 2026-10-19 (вечер). Копия: OneDrive-Personal/ByggExp-SMM/smm-status.md
+Обновлено: 2026-10-21 (Windows-компьютер, см. раздел ⏳ 21.10). Копия: OneDrive-Personal/ByggExp-SMM/smm-status.md
 Агент: прочитай этот файл целиком и design-assets/social/DESIGN-SYSTEM-SMM.md (правила визуала: правка → правило → дизайн), потом делай «▶ СЛЕДУЮЩИЙ ШАГ».
+
+## ⏳ 21.10 Видео на Windows-компьютере — ждёт ответа владельца
+ТЗ: docs/marketing/video-handoff.md. Первая задача — трейлер с админкой (45–60 с). На этом компьютере (Windows) работа стоит.
+
+**Сделано агентом 21.10:** Python 3.12 (winget, user scope: `%LOCALAPPDATA%\Programs\Python\Python312\python.exe`) + Pillow, numpy, imageio-ffmpeg (ffmpeg 7.1). puppeteer-core установлен во временной папке. `trailer/rec.mjs` выбирает путь к Chrome по ОС. `trailer/make_trailer.py`: если SF Pro нет, берёт Segoe UI Black/Semibold (только для черновиков на Windows). Проверка: клипы записаны, старый трейлер собран (35,5 с, рендер ~3 мин), кадры в порядке.
+
+**Чего не хватает:**
+- **`.env.admin`** с ELEVENLABS_API_KEY в корне репо нет. Ключ стоит перевыпустить: он светился в чате.
+- **Исходники OneDrive ByggExp-SMM/video (src, out):** локальная папка OneDrive пустая (подключён другой аккаунт). Нужна ссылка.
+- **Шрифт SF Pro** (`/System/Library/Fonts/SFNS.ttf` в make_trailer.py и др.) — только для Mac. Ставить на Windows нельзя (лицензия Apple).
+- **Чистая демо-компания** не создана. Создаёт владелец, агент наполняет (S11: timlön ≈230, будни, шведские имена и проекты) и записывает.
+- Запись на Windows возможна через `trailer/rec.mjs` (CDP screencast). Нужно поменять executablePath на Chrome для Windows; в админку в окне записи входит владелец.
+
+**Вопросы владельцу:**
+1. ✅ Python поставлен агентом (21.10).
+2. SF Pro (рендер на Mac) или Inter (тогда новое правило S-N, нужно «да» владельца)?
+3. Ссылка на OneDrive ByggExp-SMM/video и файл `.env.admin` с новым ключом.
+4. Демо-компания: сообщить, когда создана. Наполнение и запись делает агент.
+
+**Черновик текста трейлера с админкой** (голос Malin; факты из product-facts-verified.md; ещё не утверждён):
+| Сцена | Текст |
+|---|---|
+| Обещание | Planera, tidrapportera och fakturera – i ett system byggt för byggföretag. |
+| Översikt | I översikten ser du läget direkt: aktiva projekt, vem som är på jobbet och kommande deadlines. |
+| Planering / Bemanning | Planera personalen per projekt och dag – och se direkt om någon är överbokad. |
+| Arbetspass → attest | Personalen stämplar in med GPS i appen. Du attesterar timmarna och exporterar löneunderlag. |
+| Fakturor | Fakturan får din logotyp, och moms och ROT-avdrag räknas ut automatiskt. |
+| Калькуляторы | På byggexp.se finns också gratis kalkylatorer – utan konto. |
+| CTA | Prenumerera på kanalen för fler guider som sparar tid på pappersjobbet. |
+
+Проверить до записи: маржа на Översikt (в ТЗ «Översikt: ekonomi/marginal») и «faktura → PDF» в product-facts-verified.md не подтверждены. В текст не включены. Маржу можно показать во вкладке Ekonomi у проекта.
 
 ## ▶ СЛЕДУЮЩИЙ ШАГ
 0. 20.10 YouTube-упаковка (docs/marketing/youtube-upakovka.md): трейлер ~/Desktop/SMM/youtube/trailer-16x9.mp4 (генератор shorts/trailer/), баннер covers/youtube-banner-value.png, описание канала, план Home tab. Ждёт «да» владельца → загрузить трейлер, поставить баннер/описание/секции в Studio.

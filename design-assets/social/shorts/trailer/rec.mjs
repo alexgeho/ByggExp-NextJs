@@ -2,7 +2,8 @@
 import puppeteer from 'puppeteer-core';
 import fs from 'fs';
 const OUT = process.argv[2], ONLY = process.argv[3];
-const b = await puppeteer.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless:'new'});
+const CHROME = process.platform === 'win32' ? 'C:/Program Files/Google/Chrome/Application/chrome.exe' : '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const b = await puppeteer.launch({executablePath:CHROME, headless:'new'});
 const CSS='[class*=cookie],[class*=Cookie],[aria-label="Öppna AI-assistenten"],[aria-label="Kopiera länk"],[aria-label="Fler val"],header,nav{display:none!important} html{scroll-behavior:auto!important;zoom:2}';
 const sleep = ms => new Promise(r=>setTimeout(r,ms));
 async function rec(name, url, vw, vh, top, act, tail) {

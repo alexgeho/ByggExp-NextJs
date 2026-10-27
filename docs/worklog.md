@@ -4,7 +4,8 @@
 ### KLART
 - Ключи: ~/OneDrive/byggexp-seo/keyWords for ByggExp.xlsx (вкладки «Страницы для победы», «План в топ», «Анализ ключей» — 95 ключей × GSC).
 - Архитектура: docs/seo/seo-arkitektura-byggexp-2026-10-27.md — 15–24 новых страницы волнами по 5–6, блог 290 → ~180, 100 страниц НЕ делать.
-- Волна 1 в работе: ветка `seo/funktioner-p0-pages` — /sv/funktioner/{tidrapporteringssystem-bygg, tidrapportering-hantverkare, byggdagbok, resursplanering}, хаб, noindex /sv/fa-offert. Критик → правки → деплой.
+- Волна 1 LIVE (fff69f6): 4 страницы /sv/funktioner/*, индексация запрошена 3/4 (resursplanering — квота, 28.10). Каталоги: G2 (+Capterra/GetApp/Software Advice) одобрено, BusinessWith — заявка отправлена.
+- (было) ветка `seo/funktioner-p0-pages` — /sv/funktioner/{tidrapporteringssystem-bygg, tidrapportering-hantverkare, byggdagbok, resursplanering}, хаб, noindex /sv/fa-offert. Критик → правки → деплой.
 ### 🔜 NÄSTA STEG
 1. После деплоя: Request Indexing 4 URL; 301 дублирующих блогов по плану.
 2. /sv/funktioner/stampelklocka (волна 1, №5).

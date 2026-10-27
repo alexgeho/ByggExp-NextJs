@@ -303,7 +303,7 @@ const A_FAKTURERINGSPROGRAM_BYGG_HTML = `
 
 <h2>Så gör ByggExp det</h2>
 <p>I ByggExp hänger offert, tid och faktura ihop: du <strong>skapar offerter</strong>, förvandlar dem till <strong>fakturor</strong>, och de timmar som teamet registrerar i mobilen blir fakturaunderlag automatiskt. ROT hanteras i flödet, och samma timmar används även till <a href="/sv/blog/tidrapportering">tidrapportering</a> och löneunderlag – du registrerar en gång och använder datan flera gånger.</p>
-<p><a href="/sv/contact">Boka en gratis konsultation av ByggExp</a> så visar vi hela kedjan från offert till betald faktura, eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+<p><a href="/sv/contact">Boka en gratis konsultation av ByggExp</a> så visar vi hela kedjan från offert till betald faktura, eller läs mer om <a href="/sv/funktioner/fakturering">fakturaprogrammet för bygg</a>.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
@@ -645,7 +645,7 @@ const A_LONEPROGRAM_BYGG_HTML = `
 <h2>Så gör ByggExp det</h2>
 <p>I ByggExp stämplar medarbetarna in och ut i mobilappen (iPhone och Android) med GPS, och timmarna hamnar på rätt projekt. På varje pass väljer medarbetaren timtyp – normal, övertid eller OB – och registrerar restid (km och minuter) och traktamente. Passen attesteras och exporteras som <strong>löneunderlag (CSV)</strong>, AGI-underlag och tidrapport i PDF eller Excel; med tillägget Integrationer även som SIE4-fil för Fortnox, Visma eller BL. Samma timmar används till <a href="/sv/blog/faktureringsprogram-bygg">fakturering</a> och <a href="/sv/blog/projekthantering-byggforetag">projektuppföljning</a>, så du slipper pussla ihop lönen från lappar och Excel varje månad.</p>
 <p>ByggExp räknar inte ut Byggavtalets regler för OB och övertid automatiskt. Timtypen väljs per pass, och satser och tidsgränser stämmer du av mot avtalet – se <a href="/sv/blog/ob-overtid-byggavtalet-rakna">så räknar du OB och övertid</a>.</p>
-<p><a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Vill du börja enkelt finns en gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>.</p>
+<p><a href="/sv/contact">Boka en gratis konsultation</a> eller se hur <a href="/sv/funktioner/lon">löneunderlaget för bygg</a> fungerar. Vill du börja enkelt finns en gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
@@ -719,7 +719,7 @@ const A_KALKYLPROGRAM_BYGG_HTML = `
 <p>Börja gärna med lösa <a href="/sv/verktyg">gratis kalkylatorer</a> (betong, tak, gips, färg …) och väx in i ett samlat flöde när du offererar ofta. Poängen är att materialkalkylen och offerten hänger ihop – och att offerten sedan blir order och faktura utan dubbelarbete.</p>
 
 <h2>Så gör ByggExp det</h2>
-<p>Från våra materialkalkylatorer kan du <strong>skapa en offert direkt</strong>, och i ByggExp hänger offert, tid och faktura ihop – inklusive ROT. Du räknar en gång och använder underlaget hela vägen. <a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+<p>Från våra materialkalkylatorer kan du <strong>skapa en offert direkt</strong>, och i ByggExp hänger offert, tid och faktura ihop – inklusive ROT. Du räknar en gång och använder underlaget hela vägen. <a href="/sv/contact">Boka en gratis konsultation</a> eller se hur <a href="/sv/funktioner/offert-kalkyl">kalkyl och offert</a> fungerar i ByggExp.</p>
 
 <h2>Finns det gratis kalkylprogram för bygg?</h2>
 <p>Ja – du behöver inte betala för att komma igång. ByggExps <a href="/sv/verktyg">byggkalkylatorer</a> är gratis och täcker de vanligaste momenten: betong, tak, gips, reglar, färg, grus med mera. De räknar materialåtgång direkt i webbläsaren, utan konto. När du väl offererar ofta och vill att kalkyl, offert, tid och faktura ska hänga ihop väljer du ett samlat system – men börja gratis med kalkylatorerna och väx in i det när volymen kräver.</p>

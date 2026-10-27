@@ -9,6 +9,7 @@ import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { FEATURE_NAV } from '../../../components/FeatureNav/FeatureNav';
 import { FUNKTION_PAGES, ILLU_HEIGHT, illuSrc, illuSrcSet } from '../../../content/funktion-pages';
+import { FUNKTION_PAGES_B, FUNKTION_PAGES_B_SLUGS } from '../../../content/funktion-pages-b';
 import { useCenterActiveChip } from '../../../lib/useCenterActiveChip';
 import { buildHreflangAlternates, localeOrigin } from '../../../lib/seo';
 import { featuresTranslations1_3 } from '../../../locales/features1-3';
@@ -929,7 +930,26 @@ export default function FunktionerPage({
           <div className="container">
             <h2 className="funktioner-why-title">Tid, dagbok och planering</h2>
             <div className="funktioner-pages-grid">
-              {FUNKTION_PAGES.map((p) => (
+              {FUNKTION_PAGES.filter((p) => !FUNKTION_PAGES_B_SLUGS.has(p.slug)).map((p) => (
+                <Link key={p.slug} href={`/sv/funktioner/${p.slug}`} className="funktioner-pages-card">
+                  <img
+                    src={illuSrc(p.hero.name, 640)}
+                    srcSet={illuSrcSet(p.hero.name)}
+                    sizes="(max-width: 520px) 100vw, (max-width: 1000px) 50vw, 300px"
+                    width={1200}
+                    height={ILLU_HEIGHT[p.hero.name]}
+                    loading="lazy"
+                    decoding="async"
+                    alt={p.hero.alt}
+                  />
+                  <h3>{p.name}</h3>
+                </Link>
+              ))}
+            </div>
+            {/* Batch B: offert, faktura, lön, ÄTA */}
+            <h2 className="funktioner-why-title funktioner-pages-title-next">Offert, faktura och lön</h2>
+            <div className="funktioner-pages-grid">
+              {FUNKTION_PAGES_B.map((p) => (
                 <Link key={p.slug} href={`/sv/funktioner/${p.slug}`} className="funktioner-pages-card">
                   <img
                     src={illuSrc(p.hero.name, 640)}

@@ -2003,7 +2003,7 @@ const A_ATA_HANTERING_MALL_HTML = `
 <p>Då styr konsumenttjänstlagen. Enligt 8 § ska du underrätta konsumenten och begära anvisningar innan tilläggsarbete utförs, och enligt 15-procentsregeln i 36 § får en ungefärlig prisuppgift inte överskridas med mer än 15 procent utan att annat avtalats.</p>
 
 <h2>Kom igång</h2>
-<p>Sätt en fast rutin och använd samma blankett i varje projekt. Ladda ner <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall</a> och börja dokumentera redan i nästa avvikelse. Vill du se hur ÄTA-hanteringen fungerar samlat i ett projekt kan du <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur rutinen ser ut i praktiken.</p>
+<p>Sätt en fast rutin och använd samma blankett i varje projekt. Ladda ner <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall</a> och börja dokumentera redan i nästa avvikelse. Vill du se hur <a href="/sv/funktioner/ata">ÄTA-hanteringen</a> fungerar samlat i ett projekt kan du <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur rutinen ser ut i praktiken.</p>
 
 <p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten – grunderna du behöver kunna</a> och <a href="/sv/blog/kunden-betalar-inte-fakturan">Kunden betalar inte fakturan – så gör du</a>.</p>
 `;

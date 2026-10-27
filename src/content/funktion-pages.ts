@@ -11,6 +11,7 @@
 // koll). "Gratis" = the 14-day trial. Each page has its own angle.
 
 import { FAKTURA_PRICE, PROJEKT_PRICE } from '../components/Pricing/Pricing';
+import { FUNKTION_PAGES_A, ILLU_HEIGHT_A } from './funktion-pages-a';
 import { FUNKTION_PAGES_B, ILLU_HEIGHT_B } from './funktion-pages-b';
 import { FUNKTION_PAGES_C, ILLU_HEIGHT_C } from './funktion-pages-c';
 
@@ -79,6 +80,7 @@ export const ILLU_HEIGHT: Record<string, number> = {
   'byggdagbok-tillbyggnad': 900,
   'resursplanering-egenkontroll': 926,
   'resursplanering-vinter': 802,
+  ...ILLU_HEIGHT_A,
   ...ILLU_HEIGHT_B,
   ...ILLU_HEIGHT_C,
 };
@@ -756,7 +758,7 @@ ${illu('resursplanering-franvaro', 'Projektledare vid skrivbordet framför en st
 ${illu('resursplanering-egenkontroll', 'Byggarbetare i hjälm håller en surfplatta med bockar framför en öppen regelvägg medan en kollega bär fram en gipsskiva')}
 
 <h2>Frånvaro i samma plan</h2>
-<p>Semester, ATF-dagar och sjukdom avgör hur många som faktiskt finns att planera med. I ByggExp registreras ledighet i Frånvaro. När den är godkänd syns den i Bemanning, så att ingen blir inbokad en dag med ledighet.</p>
+<p>Semester, VAB och sjukdom avgör hur många som faktiskt finns att planera med. I ByggExp registreras ledighet i Frånvaro. När den är godkänd syns den i Bemanning, så att ingen blir inbokad en dag med ledighet.</p>
 <p>Vill du räkna på kapacitet och övertid över längre tid beskriver vi resurshistogram och utjämning i guiden om <a href="/sv/blog/resursplanering-bygg">resursplanering i bygg</a>.</p>
 
 <h2>Planera säsongen, inte bara veckan</h2>
@@ -857,6 +859,7 @@ export const FUNKTION_PAGES: FunktionPage[] = [
   HANTVERKARE,
   BYGGDAGBOK,
   RESURSPLANERING,
+  ...FUNKTION_PAGES_A,
   ...FUNKTION_PAGES_B,
   ...FUNKTION_PAGES_C,
 ].map(

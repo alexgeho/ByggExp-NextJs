@@ -29,6 +29,8 @@ export type InfoPageProps = {
   body: string;
   faq: { question: string; answer: string }[];
   related: { href: string; label: string }[];
+  /** Extra JSON-LD blocks, e.g. SoftwareApplication with offers on /sv/priser. */
+  extraSchema?: Record<string, unknown>[];
 };
 
 const IMG = (name: string, w: 640 | 1200) => `/landing/funktioner/${name}-${w}.webp`;
@@ -38,7 +40,8 @@ export default function InfoPage(p: InfoPageProps) {
   const origin = localeOrigin(lang);
   const canonicalUrl = `${origin}/${lang}/${p.path}`;
 
-  const schema = [
+  const schema: Record<string, unknown>[] = [
+    ...(p.extraSchema ?? []),
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -71,7 +74,7 @@ export default function InfoPage(p: InfoPageProps) {
         <meta property="og:image" content={`${origin}${IMG(p.hero.name, 1200)}`} />
         {schema.map((s) => (
           <script
-            key={s["@type"]}
+            key={String(s["@type"])}
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }}
           />

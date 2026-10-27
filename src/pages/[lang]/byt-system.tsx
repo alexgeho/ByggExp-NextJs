@@ -47,7 +47,7 @@ ${illuC("byt-system-genomgang", "Kvinna vid en stor skärm visar två byggarbeta
 <tr><td><strong>Pågående projekt</strong></td><td data-label="Varför">Laget ska kunna stämpla på rätt projekt från första dagen</td><td data-label="Flytta eller arkivera">Flytta</td></tr>
 <tr><td><strong>Kunder</strong></td><td data-label="Varför">Behövs för offerter och fakturor</td><td data-label="Flytta eller arkivera">Flytta</td></tr>
 <tr><td><strong>Artiklar och prislistor</strong></td><td data-label="Varför">Sparar tid i nästa offert</td><td data-label="Flytta eller arkivera">Flytta det ni använder</td></tr>
-<tr><td><strong>Öppna offerter och obetalda fakturor</strong></td><td data-label="Varför">Ska följas upp till de är klara</td><td data-label="Flytta eller arkivera">Avsluta i det gamla eller flytta</td></tr>
+<tr><td><strong>Öppna offerter och obetalda fakturor</strong></td><td data-label="Varför">Ska följas upp till de är klara</td><td data-label="Flytta eller arkivera">Avsluta i det gamla systemet</td></tr>
 <tr><td><strong>Tidrapporter och lönehistorik</strong></td><td data-label="Varför">Underlag för tidigare löner och eventuella frågor</td><td data-label="Flytta eller arkivera">Arkivera</td></tr>
 <tr><td><strong>Avslutade projekt</strong></td><td data-label="Varför">Bra för efterkalkyl och garantiärenden</td><td data-label="Flytta eller arkivera">Arkivera</td></tr>
 </tbody>
@@ -78,17 +78,17 @@ ${illuC("byt-system-genomgang", "Kvinna vid en stor skärm visar två byggarbeta
 <p>Med svaren på de fyra frågorna vet ni när bytet senast måste vara klart. Hos ByggExp finns ingen bindningstid, så samma fråga behöver ni inte ställa nästa gång.</p>
 
 <h2>Byta affärssystem: tid, faktura och lön i ett</h2>
-<p>Många byggföretag har ett system för tid, ett för fakturor och ett tredje för lön, och samma timmar förs över för hand mellan dem. Byter ni ändå kan det vara läge att samla allt. I paketet Full koll blir arbetade timmar faktura eller lön med några klick, och fotade kvitton, tidrapporter och in- och utgående fakturor räknas in i projektets ekonomi.</p>
+<p>Många byggföretag har ett system för tid, ett för fakturor och ett tredje för lön, och samma timmar förs över för hand mellan dem. Byter ni ändå kan det vara läge att samla allt. I paketet Full koll blir attesterade timmar underlag för lön och faktura, och fotade kvitton, tidrapporter och in- och utgående fakturor räknas in i projektets ekonomi.</p>
 <p>Bokföringen behöver inte flytta. Med tillägget Integrationer skapar ni en SIE4-fil som läses in i bokföringsprogrammet, och löneunderlag och AGI-underlag kan exporteras som CSV. Läs mer om vad ett <a href="/sv/blog/affarssystem-byggforetag">affärssystem för byggföretag</a> ska klara och se vad som ingår på sidan <a href="/sv/priser">priser</a>.</p>
 
-${illuC("byt-system-parallellt", "Kvinna vid ett skrivbord med två skärmar, en grå tabell på den ena och en blå app på den andra, och en stor bock ovanför")}
+${illuC("byt-system-parallellt", "Kvinna vid ett skrivbord med två skärmar, en grå tabell på den ena och en blå app på den andra")}
 
 <h2>Få med laget från första dagen</h2>
 <p>Ett nytt system lyckas när medarbetarna faktiskt använder det. Några saker som brukar göra skillnad:</p>
 <ul>
 <li><strong>Visa appen på ett morgonmöte.</strong> Det tar några minuter att visa hur man stämplar in, väljer projekt och fotar ett kvitto.</li>
 <li><strong>Låt projekten ligga på plats.</strong> När projekten redan finns i appen första dagen behöver ingen skriva in något själv.</li>
-<li><strong>Ge ett val om position.</strong> Incheckningen kan göras med GPS, men den som hellre registrerar tiden manuellt kan göra det per projekt och dag.</li>
+<li><strong>Låt var och en välja GPS eller manuell tid.</strong> Den som inte vill dela sin position registrerar tiden manuellt per projekt och dag.</li>
 <li><strong>Följ upp första veckan.</strong> Arbetsledaren tittar i översikten på vem som är på jobbet och hör av sig till den som inte har kommit igång.</li>
 </ul>
 <p>Vill ni börja med tidrapporteringen och ta faktura och lön senare går det också. Koll på jobbet för ${PROJEKT_PRICE} kr/mån innehåller <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystemet</a>, planering och byggdagbok. De första 14 dagarna är gratis med alla funktioner.</p>

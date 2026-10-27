@@ -307,7 +307,7 @@ export default function BlogArticlePage({
                   name: "Koll på jobbet",
                   price: PROJEKT_PRICE,
                   priceCurrency: "SEK",
-                  url: `${localeOrigin(lang)}/${lang}#pricing`,
+                  url: lang === "sv" ? `${localeOrigin(lang)}/sv/priser` : `${localeOrigin(lang)}/${lang}#pricing`,
                   priceSpecification: {
                     "@type": "UnitPriceSpecification",
                     price: PROJEKT_PRICE,

@@ -1,6 +1,7 @@
 import type { GetStaticPaths, GetStaticProps } from "next";
 
 import InfoPage from "../../components/InfoPage/InfoPage";
+import { localeOrigin } from "../../lib/seo";
 import Pricing, { FAKTURA_PRICE, PROJEKT_PRICE } from "../../components/Pricing/Pricing";
 import { illuC } from "../../content/funktion-pages-c";
 import { pricingTranslations } from "../../locales/pricing";
@@ -28,20 +29,22 @@ const KOMPLETT_EXTRA = 119;
 const ADDON_PRICE = 199;
 const yearly = (n: number) => Math.round(n * 0.85);
 
-const yes = "Ja";
-const no = "–";
+const fmt = new Intl.NumberFormat("sv-SE");
+const kr = (n: number) => `${fmt.format(n)} kr`;
+const yes = '<span aria-label="Ingår">✓</span>';
+const no = '<span aria-label="Ingår inte">–</span>';
 const row = (name: string, a: string, b: string, c: string) =>
-  `<tr><td><strong>${name}</strong></td><td data-label="Koll på pengarna">${a}</td><td data-label="Koll på jobbet">${b}</td><td data-label="Full koll">${c}</td></tr>`;
+  `<tr><td>${name}</td><td>${a}</td><td>${b}</td><td>${c}</td></tr>`;
 
 const BODY = `
-<p>ByggExp har tre paket med fast månadspris per företag. Du väljer efter vad ni behöver mest: koll på pengarna, koll på jobbet eller båda. Alla priser är exklusive moms, det finns ingen startavgift och ingen bindningstid, och de första 14 dagarna är gratis med alla funktioner. Här ser du vad som ingår i varje paket, hur användarna räknas och vad ett byggsystem kostar för ett lag av er storlek.</p>
+<p>ByggExp har tre paket med fast månadspris per företag. Ni väljer efter vad ni behöver mest: koll på pengarna, koll på jobbet eller båda. Alla priser är exklusive moms, det finns ingen startavgift och ingen bindningstid, och de första 14 dagarna är gratis med alla funktioner. Här ser du vad som ingår i varje paket, hur användarna räknas och vad ett byggsystem kostar för ett lag av er storlek.</p>
 
 <h2>Vad ingår i paketen</h2>
-<div class="article-table"><table>
+<div class="article-table article-table--matrix"><table>
 <thead><tr><th>Funktion</th><th>Koll på pengarna</th><th>Koll på jobbet</th><th>Full koll</th></tr></thead>
 <tbody>
-${row("Pris per månad", `${FAKTURA_PRICE} kr`, `${PROJEKT_PRICE} kr`, `${KOMPLETT_PRICE} kr`)}
-${row("Användare", "Max 2", `10 ingår, +${PROJEKT_EXTRA} kr`, `10 ingår, +${KOMPLETT_EXTRA} kr`)}
+${row("Pris per månad", kr(FAKTURA_PRICE), kr(PROJEKT_PRICE), kr(KOMPLETT_PRICE))}
+${row("Användare", "Max 2", "10 ingår", "10 ingår")}
 ${row("Mobilapp och adminpanel", yes, yes, yes)}
 ${row("Tidrapportering med GPS och attest", no, yes, yes)}
 ${row("Uppgifter med påminnelser", no, yes, yes)}
@@ -56,7 +59,7 @@ ${row("Projektekonomi: budget, kalkyl och lönsamhet", yes, no, yes)}
 </table></div>
 <p>I Koll på pengarna ingår upp till 30 utgående och 30 inkommande fakturor samt 100 skannade kvitton per månad. Behöver ni mer hittar vi en lösning.</p>
 
-${illuC("priser-tid", "Person vid en dator, bredvid en rad klockor, tidkort med bockar och ett dokument")}
+${illuC("priser-tid", "Kontorsarbetare vid en dator, bredvid tre tidkort med bockar och en klocka")}
 
 <h2>Vilket paket passar er?</h2>
 <h3>Koll på pengarna – för den som mest fakturerar</h3>
@@ -64,7 +67,7 @@ ${illuC("priser-tid", "Person vid en dator, bredvid en rad klockor, tidkort med 
 <h3>Koll på jobbet – för laget ute på bygget</h3>
 <p>Passar företaget med anställda som ska stämpla in, få sina uppgifter och planeras på rätt projekt, där faktureringen redan sköts någon annanstans. Här ingår <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystemet</a>, <a href="/sv/funktioner/byggdagbok">byggdagboken</a>, <a href="/sv/funktioner/resursplanering">resursplaneringen</a> och <a href="/sv/funktioner/verktygshantering">verktygshanteringen</a>.</p>
 <h3>Full koll – när timmarna ska bli faktura och lön</h3>
-<p>Passar när samma timmar ska bli faktura, lön och projektekonomi utan att någon för över dem för hand. Fotade kvitton, tidrapporter och in- och utgående fakturor räknas in i projektets ekonomi, så att du ser marginalen medan projektet pågår.</p>
+<p>Passar när samma timmar ska användas för faktura, lön och projektekonomi. Attesterade timmar blir underlag för lön och faktura. Fotade kvitton, tidrapporter och in- och utgående fakturor räknas in i projektets ekonomi, så att du ser marginalen medan projektet pågår.</p>
 
 <h2>Så räknas användarna</h2>
 <p>I Koll på jobbet och Full koll ingår 10 användare i grundpriset. Därefter kostar varje extra användare ${PROJEKT_EXTRA} kr respektive ${KOMPLETT_EXTRA} kr i månaden. Koll på pengarna har ett fast pris för upp till 2 användare.</p>
@@ -72,16 +75,16 @@ ${illuC("priser-tid", "Person vid en dator, bredvid en rad klockor, tidkort med 
 <div class="article-table"><table>
 <thead><tr><th>Lagets storlek</th><th>Koll på jobbet</th><th>Full koll</th></tr></thead>
 <tbody>
-<tr><td><strong>5 personer</strong></td><td data-label="Koll på jobbet">${PROJEKT_PRICE} kr/mån</td><td data-label="Full koll">${KOMPLETT_PRICE} kr/mån</td></tr>
-<tr><td><strong>10 personer</strong></td><td data-label="Koll på jobbet">${PROJEKT_PRICE} kr/mån</td><td data-label="Full koll">${KOMPLETT_PRICE} kr/mån</td></tr>
-<tr><td><strong>15 personer</strong></td><td data-label="Koll på jobbet">${PROJEKT_PRICE + 5 * PROJEKT_EXTRA} kr/mån</td><td data-label="Full koll">${KOMPLETT_PRICE + 5 * KOMPLETT_EXTRA} kr/mån</td></tr>
-<tr><td><strong>25 personer</strong></td><td data-label="Koll på jobbet">${PROJEKT_PRICE + 15 * PROJEKT_EXTRA} kr/mån</td><td data-label="Full koll">${KOMPLETT_PRICE + 15 * KOMPLETT_EXTRA} kr/mån</td></tr>
+<tr><td><strong>5 personer</strong></td><td data-label="Koll på jobbet">${kr(PROJEKT_PRICE)}/mån</td><td data-label="Full koll">${kr(KOMPLETT_PRICE)}/mån</td></tr>
+<tr><td><strong>10 personer</strong></td><td data-label="Koll på jobbet">${kr(PROJEKT_PRICE)}/mån</td><td data-label="Full koll">${kr(KOMPLETT_PRICE)}/mån</td></tr>
+<tr><td><strong>15 personer</strong></td><td data-label="Koll på jobbet">${kr(PROJEKT_PRICE + 5 * PROJEKT_EXTRA)}/mån</td><td data-label="Full koll">${kr(KOMPLETT_PRICE + 5 * KOMPLETT_EXTRA)}/mån</td></tr>
+<tr><td><strong>25 personer</strong></td><td data-label="Koll på jobbet">${kr(PROJEKT_PRICE + 15 * PROJEKT_EXTRA)}/mån</td><td data-label="Full koll">${kr(KOMPLETT_PRICE + 15 * KOMPLETT_EXTRA)}/mån</td></tr>
 </tbody>
 </table></div>
 <p>Alla belopp är per företag och månad exklusive moms. Är ni fler än 40 användare tar vi fram ett anpassat pris för hela företaget.</p>
 
 <h2>Årsbetalning ger 15 % rabatt</h2>
-<p>Betalar ni för ett år i taget blir priset 15 % lägre. Räknat per månad blir det cirka ${yearly(FAKTURA_PRICE)} kr för Koll på pengarna, ${yearly(PROJEKT_PRICE)} kr för Koll på jobbet och ${yearly(KOMPLETT_PRICE)} kr för Full koll, med samma tillägg för extra användare. Månadsbetalning har ingen bindningstid, så börja gärna med den och gå över till årsbetalning när ni vet att systemet sitter.</p>
+<p>Betalar ni för ett år i taget blir priset 15 % lägre. Räknat per månad blir det cirka ${yearly(FAKTURA_PRICE)} kr för Koll på pengarna, ${yearly(PROJEKT_PRICE)} kr för Koll på jobbet och ${yearly(KOMPLETT_PRICE)} kr för Full koll. Rabatten gäller även extra användare: cirka ${yearly(PROJEKT_EXTRA)} respektive ${yearly(KOMPLETT_EXTRA)} kr. Månadsbetalning har ingen bindningstid, så börja gärna med den och gå över till årsbetalning när ni vet att systemet sitter.</p>
 
 ${illuC("priser-lonsamhet", "Person vid en dator med ett diagram och en stigande pil")}
 
@@ -104,8 +107,8 @@ ${illuC("priser-lonsamhet", "Person vid en dator med ett diagram och en stigande
 
 const FAQ = [
   {
-    question: "Vad kostar ett tidrapporteringssystem för bygg?",
-    answer: `Tidrapportering ingår i Koll på jobbet för ${PROJEKT_PRICE} kr/mån och i Full koll för ${KOMPLETT_PRICE} kr/mån exkl. moms. Båda inkluderar 10 användare, därefter ${PROJEKT_EXTRA} kr respektive ${KOMPLETT_EXTRA} kr per extra användare och månad.`,
+    question: "Vad kostar ByggExp per månad?",
+    answer: `Koll på pengarna kostar ${FAKTURA_PRICE} kr/mån för upp till 2 användare. Koll på jobbet kostar ${PROJEKT_PRICE} kr/mån och Full koll ${KOMPLETT_PRICE} kr/mån, båda med 10 användare, därefter ${PROJEKT_EXTRA} kr respektive ${KOMPLETT_EXTRA} kr per extra användare. Alla priser är per företag och exkl. moms.`,
   },
   {
     question: "Finns det någon bindningstid?",
@@ -154,7 +157,7 @@ export default function PriserPage({ lang }: Props) {
   return (
     <InfoPage
       path="priser"
-      title="Pris tidrapporteringssystem och byggsystem | ByggExp"
+      title="Priser för ByggExp – tidrapportering och byggsystem"
       description={`Vad kostar ByggExp? Tre paket från ${FAKTURA_PRICE} kr/mån exkl. moms, 10 användare ingår i två av dem. Ingen startavgift, ingen bindningstid. 14 dagar gratis.`}
       name="Priser för ByggExp"
       h1="Priser för ByggExp."
@@ -165,6 +168,23 @@ export default function PriserPage({ lang }: Props) {
         alt: "Person lägger guldmynt i en glasburk full med mynt bredvid ett hus med byggställning",
       }}
       heroCheck="Ingen startavgift"
+      extraSchema={[
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "ByggExp",
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "iOS, Android, Web",
+          url: `${localeOrigin("sv")}/sv/priser`,
+          offers: {
+            "@type": "AggregateOffer",
+            lowPrice: FAKTURA_PRICE,
+            highPrice: KOMPLETT_PRICE,
+            priceCurrency: "SEK",
+            offerCount: 3,
+          },
+        },
+      ]}
       body={BODY}
       faq={FAQ}
       related={RELATED}

@@ -15,6 +15,10 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 | /sv/funktioner/tidrapportering-hantverkare | tidrapportering hantverkare | tidrapport hantverkare, tidrapporteringssystem hantverkare |
 | /sv/funktioner/byggdagbok | digital byggdagbok | byggdagbok app, dagbok bygg (гайд /sv/blog/byggdagbok держит «byggdagbok» как инфо: krav, innehåll, exempel) |
 | /sv/funktioner/resursplanering | resursplanering bygg | resursplaneringsverktyg, resursplan |
+| /sv/funktioner/utlagg | utlägg app bygg (utläggsapp bygg) | kvitton bygg, kvitto app, utlägg anställd (гайд /sv/blog/utlagg-app-bygg переименован в «Så hanterar du utlägg och kvitton i byggföretaget», 2026-10-27) |
+| /sv/funktioner/verktygshantering | verktygshantering app | verktygsregister bygg, verktyg QR-kod (гайд /sv/blog/verktygshantering-app переименован в «Så håller du koll på verktygen – guide för byggföretag», 2026-10-27) |
+| /sv/priser | pris tidrapporteringssystem | vad kostar byggsystem, priser ByggExp (гайд /sv/blog/byggprogram-pris — инфо «vad styr priset») |
+| /sv/byt-system | byta tidrapporteringssystem | byta affärssystem bygg, flytta data |
 
 ## Tidrapportering
 

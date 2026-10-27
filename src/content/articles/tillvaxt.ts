@@ -694,10 +694,10 @@ const A_UTLAGG_APP_BYGG_HTML = `
 
 const A_UTLAGG_APP_BYGG: BlogPost = {
   _id: "code-"+"utlagg-app-bygg",
-  title: "Utläggs-app för bygg – fota kvittot, koppla till projektet", slug: "utlagg-app-bygg", locale: "sv",
+  title: "Så hanterar du utlägg och kvitton i byggföretaget", slug: "utlagg-app-bygg", locale: "sv",
   excerpt: "Vad en utläggs-/kvitto-app för byggföretag bör klara: fota kvittot på plats, koppla till projekt, registrera moms och samla allt för kontoret. Så gör ByggExp det.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/11costs.webp", contentHtml: A_UTLAGG_APP_BYGG_HTML,
-  seoTitle: "Utläggs-app för bygg – kvitton per projekt | ByggExp", seoDescription: "Utläggs-/kvitto-app för byggföretag: fota kvittot på plats, koppla till projekt, registrera moms och samla allt sökbart för kontoret. Så gör ByggExp det.",
+  seoTitle: "Så hanterar du utlägg och kvitton i byggföretaget | ByggExp", seoDescription: "Utläggs-/kvitto-app för byggföretag: fota kvittot på plats, koppla till projekt, registrera moms och samla allt sökbart för kontoret. Så gör ByggExp det.",
   seoImageUrl: `${SITE_URL}/landing/features/11costs.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T19:05:00.000Z", createdAt: "2026-08-20T19:05:00.000Z", updatedAt: "2026-08-20T19:05:00.000Z",
 };
@@ -942,10 +942,10 @@ const A_VERKTYGSHANTERING_APP_HTML = `
 
 const A_VERKTYGSHANTERING_APP: BlogPost = {
   _id: "code-"+"verktygshantering-app",
-  title: "Verktygshantering-app för bygg – koll på maskiner och utrustning", slug: "verktygshantering-app", locale: "sv",
+  title: "Så håller du koll på verktygen – guide för byggföretag", slug: "verktygshantering-app", locale: "sv",
   excerpt: "Vad verktygs- och maskinhantering för byggföretag bör klara: inventarie, var och hos vem utrustningen finns, utkvittering i mobilen och koppling till projekt. Så gör ByggExp det.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/tools.webp", contentHtml: A_VERKTYGSHANTERING_APP_HTML,
-  seoTitle: "Verktygshantering-app för bygg – maskiner & utrustning | ByggExp", seoDescription: "Verktygs- och maskinhantering för byggföretag: inventarie, var och hos vem utrustningen finns, utkvittering i mobilen och koppling till projekt. Så gör ByggExp det.",
+  seoTitle: "Så håller du koll på verktygen – guide för byggföretag | ByggExp", seoDescription: "Verktygs- och maskinhantering för byggföretag: inventarie, var och hos vem utrustningen finns, utkvittering i mobilen och koppling till projekt. Så gör ByggExp det.",
   seoImageUrl: `${SITE_URL}/landing/features/tools.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-21T09:05:00.000Z", createdAt: "2026-08-21T09:05:00.000Z", updatedAt: "2026-08-21T09:05:00.000Z",
 };

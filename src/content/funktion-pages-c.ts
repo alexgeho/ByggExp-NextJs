@@ -8,7 +8,7 @@
 //   originals, per-project summary), scanning.service.ts (supplier, date, total,
 //   VAT, currency), byggexp-admin features/purchases/ExpenseListPage.jsx (drop
 //   one or many receipts, manual entry, approve/reject/mark reimbursed),
-//   approvalsStore.js (submitted expenses in Attestering), mobile
+//   approvalsStore.js (submitted expenses under Mitt arbete), mobile
 //   Camera/ExpenseReviewSheet.jsx (project from the active shift, else picked).
 //   Package: "expenses" is in Koll på pengarna (faktura) and Full koll, NOT in
 //   Koll på jobbet. Shifts are not in Koll på pengarna → "(Full koll)".
@@ -32,17 +32,17 @@ export const ILLU_HEIGHT_C: Record<string, number> = {
   'utlagg-ersattning': 987,
   'utlagg-bygghandel': 1017,
   'verktygshantering-qr': 1190,
-  'verktygshantering-skanna': 1254,
+  'verktygshantering-skanna': 1202,
   'verktygshantering-register': 897,
   'verktygshantering-overlamning': 1083,
   'verktygshantering-service': 1170,
   // Used by /sv/priser and /sv/byt-system (not funktioner pages, same image set).
   'priser-ekonomi': 1030,
   'priser-lonsamhet': 1188,
-  'priser-tid': 1179,
-  'byt-system-flytt': 990,
+  'priser-tid': 951,
+  'byt-system-flytt': 721,
   'byt-system-genomgang': 980,
-  'byt-system-parallellt': 1401,
+  'byt-system-parallellt': 1215,
 };
 
 const IMG_DIR = '/landing/funktioner';
@@ -57,7 +57,8 @@ export const extC = (href: string, text: string) =>
 
 const BOKFORINGSLAGEN =
   'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/bokforingslag-19991078_sfs-1999-1078/';
-const AV = 'https://www.av.se/';
+const AFS_2023_11 =
+  'https://www.av.se/arbetsmiljoarbete-och-inspektioner/publikationer/foreskrifter/afs-202311/';
 
 /* ------------------------------------------------------------------------- */
 /* Utlägg                                                                     */
@@ -68,11 +69,11 @@ const UTLAGG: FunktionPage = {
   plan: 'faktura',
   priceIncluded: 'Utlägg och kvittoskanning ingår',
   heroCheck: 'iPhone och Android',
-  title: 'Utlägg app bygg – kvitton, attest och ersättning | ByggExp',
+  title: 'Utläggsapp för bygg – kvitton, attest och ersättning | ByggExp',
   description:
     'Utlägg i appen för byggföretag: fota kvittot, belopp och moms läses av, utlägget attesteras och betalas tillbaka på rätt projekt. 14 dagar gratis.',
-  name: 'Utlägg och kvitton för bygg',
-  h1: 'Utlägg och kvitton för bygg.',
+  name: 'Utläggsapp för bygg',
+  h1: 'Utläggsapp för bygg.',
   h1Accent: 'Fotat, attesterat, återbetalt.',
   lead: 'Kvittot fotas i kassan och hamnar på rätt projekt.',
   hero: {
@@ -83,7 +84,7 @@ const UTLAGG: FunktionPage = {
   steps: [
     {
       title: 'Fota kvittot',
-      text: 'Leverantör, datum, belopp och moms läses av. Välj kategori och projekt.',
+      text: 'Leverantör, datum, belopp och moms läses av. Skriv kategori och välj projekt.',
       bullets: ['Mobilkameran i appen', 'Flera valutor', 'Projekt förvalt från arbetspasset (Full koll)'],
       img: '/landing/features/11costs-1200.webp',
       alt: 'Utlägg i ByggExp: lista över utlägg i webben och ett nytt utlägg med fotat kvitto i mobilappen',
@@ -93,7 +94,7 @@ const UTLAGG: FunktionPage = {
       text: 'Inskickade utlägg godkänns eller avvisas i webben.',
       bullets: ['Egna pengar eller företagskort', 'Markera som utbetald', 'Ladda ner originalen'],
       img: '/landing/funktioner/screen-utlagg-1200.webp',
-      alt: 'Utlägg i ByggExp: yta för att släppa kvitton och en lista med leverantör, totalt, kategori, projekt, betalat av och status',
+      alt: 'Utlägg i ByggExp: statusflikar och en lista med leverantör, totalt, kategori och projekt',
     },
     {
       title: 'Följ kostnaden',
@@ -109,7 +110,7 @@ const UTLAGG: FunktionPage = {
 <ol>
 <li><strong>Medarbetaren fotar kvittot.</strong> I appen för iPhone eller Android öppnar man kameran och fotar kvittot direkt vid kassan, innan det hamnar i handskfacket.</li>
 <li><strong>Uppgifterna läses av.</strong> Leverantör, datum, totalbelopp, moms och valuta fylls i automatiskt. Medarbetaren kontrollerar uppgifterna, skriver en kategori, till exempel Material eller Drivmedel, och väljer projekt. Har medarbetaren ett pågående arbetspass är projektet redan valt (Full koll).</li>
-<li><strong>Utlägget skickas in.</strong> Det får status Inskickad och syns för kontoret, både under Utlägg och i Attestering.</li>
+<li><strong>Utlägget skickas in.</strong> Det får status Inskickad och syns för kontoret under Utlägg och i Mitt arbete.</li>
 <li><strong>Kontoret attesterar.</strong> Den som ansvarar för ekonomin godkänner eller avvisar utlägget i webben. Originalbilden öppnas med ett klick, så att beloppet kan jämföras med kvittot.</li>
 <li><strong>Pengarna betalas tillbaka.</strong> Är utlägget betalt med egna pengar markerar ni det som utbetalt när ersättningen har gått ut. Är det betalt med företagskort behövs ingen ersättning.</li>
 <li><strong>Kostnaden ligger på projektet.</strong> Utläggen räknas in i projektets kostnader tillsammans med inköpsfakturor och, med Full koll, arbetstiden, så att marginalen stämmer.</li>
@@ -145,14 +146,14 @@ ${illuC('utlagg-mapp', 'Person lägger ett papper i en blå mapp med ett husmär
 <li><strong>Vad som köpts</strong>, så att det går att avgöra om kostnaden hör till verksamheten.</li>
 <li><strong>Totalbelopp och moms.</strong> Momsen behövs för att ni ska kunna dra av den. Vid mindre köp räcker ofta en förenklad faktura, det vanliga kassakvittot, när beloppet inklusive moms är högst 4 000 kronor.</li>
 </ul>
-<p>Enligt ${extC(BOKFORINGSLAGEN, 'bokföringslagen')} ska underlagen sparas i sju år. Sedan den 1 juli 2024 får ett pappersunderlag förstöras när det har förts över till elektronisk form, men kontrollera med er redovisningskonsult hur ni vill arkivera. Det fotograferade originalet sparas på utlägget och kan laddas ner när som helst.</p>
+<p>Enligt ${extC(BOKFORINGSLAGEN, 'bokföringslagen')} ska underlagen sparas till och med sjunde året efter utgången av det kalenderår då räkenskapsåret avslutades. Sedan den 1 juli 2024 får ett pappersunderlag förstöras när det har förts över till elektronisk form, om bilden är fullständig och går att läsa. Kontrollera med er redovisningskonsult hur ni vill arkivera. Det fotograferade originalet sparas på utlägget och kan laddas ner när som helst.</p>
 <p>Köpte medarbetaren något utomlands sparas beloppet i den valuta som står på kvittot, till exempel euro eller norska kronor, så att inget räknas om i fel kurs på vägen. Vill du dubbelkolla momsen på ett kvitto? Använd <a href="/sv/verktyg/moms-kalkylator">momskalkylatorn</a>.</p>
 
 ${illuC('utlagg-bygghandel', 'Byggarbetare i hjälm vid kassan i en bygghandel med betalkort och kvitto i händerna, bredvid en kundvagn med virke och en hink')}
 
 <h2>Tre situationer från vardagen</h2>
 <h3>Skruv på vägen till bygget</h3>
-<p>Klockan sju stannar snickaren vid bygghandeln för en ask fasadskruv. Kvittot fotas i kassakön, projektet är redan valt eftersom arbetspasset har startat, och kvittot kan slängas i papperskorgen vid utgången. När ekonomiansvarig attesterar på eftermiddagen ligger skruven redan som kostnad på rätt projekt.</p>
+<p>Klockan sju stannar snickaren vid bygghandeln för en ask fasadskruv. Kvittot fotas i kassakön, projektet är redan valt eftersom arbetspasset har startat, och kvittot kan slängas när bilden är kontrollerad. När ekonomiansvarig attesterar på eftermiddagen ligger skruven redan som kostnad på rätt projekt.</p>
 <h3>Diesel med företagskortet</h3>
 <p>Servicebilen tankas med företagets kort och kvittot fotas i appen. Vid attesten ändrar kontoret Betalat av till Företagskort. Ingen ska ha ersättning, men kvittot finns som underlag och kostnaden syns på det projekt bilen kördes till.</p>
 <h3>Månadsslut på kontoret</h3>
@@ -175,6 +176,10 @@ ${illuC('utlagg-ersattning', 'Kontorsarbetare vid skrivbordet räcker över en h
 <h2>Utlägg i projektets ekonomi</h2>
 <p>Ett utlägg som bara blir en rad i bokföringen säger ingenting om hur projektet går. I ByggExp räknas utläggen in i projektets kostnader tillsammans med inköpsfakturor och arbetskostnad (Full koll). Under fliken Ekonomi ser du budget, kostnader och marginal, och i Lönsamhet jämför du projekten med varandra.</p>
 <p>Det gör det lättare att se när småköpen börjar äta upp marginalen, till exempel när samma material köps i bygghandeln gång på gång i stället för att beställas till projektet. Läs mer om <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomi och lönsamhet</a> och om <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">kostnadskontroll i byggprojekt</a>, eller jämför kalkyl mot utfall med <a href="/sv/verktyg/efterkalkyl-mall">efterkalkylmallen</a>.</p>
+
+<h2>Få med laget på rutinen</h2>
+<p>Den bästa utläggsrutinen är den som laget följer utan att tänka på den. Visa appen på ett morgonmöte och fota ett riktigt kvitto tillsammans, så att alla ser hur kort steget är. Bestäm sedan tre saker och säg dem högt: att kvittot fotas innan man lämnar kassan, att projektet alltid väljs och att utlägg med egna pengar betalas tillbaka vid en bestämd tidpunkt, till exempel med nästa lön.</p>
+<p>Den sista punkten är viktigast. När medarbetarna märker att pengarna kommer tillbaka i tid blir det självklart att fota kvittot direkt. Följ upp den första månaden genom att titta på fliken Inskickad och påminn den som har kvitton som ännu inte är registrerade.</p>
 
 <h2>Checklista: en rutin för utlägg som håller</h2>
 <div class="article-table"><table>
@@ -221,7 +226,7 @@ ${illuC('utlagg-ersattning', 'Kontorsarbetare vid skrivbordet räcker över en h
     {
       question: 'Behöver jag spara papperskvittot?',
       answer:
-        'Sedan den 1 juli 2024 får pappersunderlag förstöras när de har förts över till elektronisk form enligt bokföringslagen. Underlagen ska sparas i sju år. Fråga er redovisningskonsult om ni har särskilda rutiner.',
+        'Sedan den 1 juli 2024 får pappersunderlag förstöras enligt bokföringslagen när de har förts över till elektronisk form, om bilden är fullständig och går att läsa. Underlagen ska sparas till och med sjunde året efter utgången av det kalenderår då räkenskapsåret avslutades. Fråga er redovisningskonsult om ni har särskilda rutiner.',
     },
     {
       question: 'Kan ett utlägg ha flera bilagor?',
@@ -235,7 +240,7 @@ ${illuC('utlagg-ersattning', 'Kontorsarbetare vid skrivbordet räcker över en h
     },
   ],
   related: [
-    { href: '/sv/blog/utlagg-app-bygg', label: 'Utläggsapp för bygg' },
+    { href: '/sv/blog/utlagg-app-bygg', label: 'Guide: utlägg och kvitton' },
     { href: '/sv/blog/fota-kvitton-och-hantera-utlagg', label: 'Fota kvitton och hantera utlägg' },
     { href: '/sv/blog/projektekonomi-och-lonsamhet', label: 'Projektekonomi och lönsamhet' },
     { href: '/sv/blog/moms-hantverkare', label: 'Moms för hantverkare' },
@@ -254,7 +259,7 @@ const VERKTYG: FunktionPage = {
   plan: 'projekt',
   priceIncluded: 'Verktygsregister med QR-koder ingår',
   heroCheck: 'QR-kod på varje verktyg',
-  title: 'Verktygshantering app för bygg – QR och status | ByggExp',
+  title: 'Verktygshantering för bygg – app med QR-kod | ByggExp',
   description:
     'Verktygshantering i appen: QR-kod på varje verktyg, status, vem som har det och var det finns, överlämning och kontroller med historik. 14 dagar gratis.',
   name: 'Verktygshantering för bygg',
@@ -263,7 +268,7 @@ const VERKTYG: FunktionPage = {
   lead: 'Skanna QR-koden och se vem som har verktyget.',
   hero: {
     name: 'verktygshantering-qr',
-    alt: 'Hantverkare på knä håller en blå skruvdragare med en QR-etikett, en verktygslåda och en cirkelsåg på hyllan bakom',
+    alt: 'Hantverkare på knä håller en blå skruvdragare och en QR-etikett, en verktygslåda och en cirkelsåg på hyllan bakom',
   },
   stepsHeading: ['Register', 'med QR-kod'],
   steps: [
@@ -290,12 +295,12 @@ const VERKTYG: FunktionPage = {
 <li><strong>Verktyget registreras.</strong> I webben eller appen anger du namn, foton, plats och anteckningar, till exempel serienummer eller tillbehör som ska följa med.</li>
 <li><strong>Verktyget får en QR-kod.</strong> Koden skapas med ett klick och skrivs ut som etikett. Har du många verktyg skriver du ut alla etiketter på en gång.</li>
 <li><strong>Verktyget kopplas.</strong> Koppla verktyget till de projekt där det används och till de medarbetare som brukar ha det.</li>
-<li><strong>Medarbetaren skannar koden.</strong> I appen syns direkt om verktyget finns på lager, är utlånat eller redan är ditt.</li>
+<li><strong>Medarbetaren skannar koden.</strong> I appen syns direkt om verktyget finns i förrådet, är utlånat eller redan är ditt.</li>
 <li><strong>Verktyget byter händer.</strong> Med Ta över blir du ansvarig. Med Lämna tillbaka går verktyget tillbaka till förrådet.</li>
 <li><strong>Allt hamnar i historiken.</strong> Registrering, överlämningar, återlämningar, kontroller, reparationer och statusändringar sparas med datum och person.</li>
 </ol>
 
-${illuC('verktygshantering-skanna', 'Byggarbetare i hjälm skannar en QR-kod på en borrmaskin med mobilen')}
+${illuC('verktygshantering-skanna', 'Byggarbetare i hjälm på knä riktar mobilen mot en QR-etikett på en blå cirkelsåg')}
 
 <h2>Fyra statusar som säger allt</h2>
 <p>Varje verktyg har en av fyra statusar. Listan kan filtreras på status och på projekt, och antalet per status syns överst.</p>
@@ -318,7 +323,7 @@ ${illuC('verktygshantering-skanna', 'Byggarbetare i hjälm skannar en QR-kod på
 ${illuC('verktygshantering-overlamning', 'Två byggarbetare i hjälm vid en grå låda på bygget, den ena håller en blå borrmaskin med QR-etikett och den andra skannar med mobilen')}
 
 <h2>Kontroller och service</h2>
-<p>Elverktyg, stegar, lyftredskap och fallskydd behöver ses över regelbundet. Enligt ${extC(AV, 'Arbetsmiljöverkets')} regler ska arbetsgivaren se till att arbetsutrustning är säker att använda, och det kräver att någon faktiskt kontrollerar den och vet när det är dags igen.</p>
+<p>Elverktyg, stegar, lyftredskap och fallskydd behöver ses över regelbundet. Enligt ${extC(AFS_2023_11, 'Arbetsmiljöverkets')} regler ska arbetsgivaren se till att arbetsutrustning är säker att använda, och det kräver att någon faktiskt kontrollerar den och vet när det är dags igen.</p>
 <p>På varje verktyg registrerar du en kontroll med skick (OK, Behöver service eller Trasig) och en anteckning. Datum för senaste och nästa kontroll står på verktyget, så det går att se vilka som snart ska ses över. När ett verktyg skickas på lagning sätter du status På reparation, och när det kommer tillbaka står hela förloppet i historiken.</p>
 <p>Historiken är också ett bra underlag när ni ska bestämma om en maskin ska lagas en gång till eller bytas ut. Läs mer om att <a href="/sv/blog/leasa-eller-kopa-maskiner-byggforetag">leasa eller köpa maskiner</a> och om <a href="/sv/blog/verktyg-direktavdrag-eller-avskrivning">direktavdrag eller avskrivning för verktyg</a>. Kontroller av utrustning passar också in i <a href="/sv/verktyg/skyddsrond-mall">skyddsronden</a>.</p>
 
@@ -347,6 +352,14 @@ ${illuC('verktygshantering-service', 'Tekniker vid en arbetsbänk kontrollerar e
 <p>Den första är projektet: filtrera listan på ett projekt och se vilka maskiner som står där just nu. Det hjälper när ett nytt moment ska börja och du vill veta om rätt utrustning redan finns på plats, eller om något måste hämtas från ett annat bygge.</p>
 <p>Den andra är medarbetaren: i kolumnen Innehas av ser du vem som har vad. Det gör det enklare att fördela utrustning rättvist och att veta vad som ska lämnas tillbaka när någon slutar eller byter lag.</p>
 <p>Fler fält än så behövs sällan. Ett register som är enkelt att hålla aktuellt slår ett detaljerat register som ingen orkar uppdatera.</p>
+
+<h2>Hyrd och lånad utrustning</h2>
+<p>Ställningar, lyftar, byggtorkar och större maskiner hyrs ofta per dag eller vecka. Det är dyr utrustning att tappa bort, och hyran tickar så länge den inte är återlämnad. Registrera den hyrda utrustningen som ett verktyg med QR-etikett precis som er egen, och skriv i anteckningen vem den är hyrd från och när den ska tillbaka.</p>
+<p>Koppla den till projektet där den används. Då ser arbetsledaren i projektets verktygslista vad som står på bygget, och när momentet är klart går det snabbt att se vad som ska skickas tillbaka. Samma sak gäller utrustning som ni lånar ut till eller lånar av en samarbetspartner: en överlämning i appen visar vem som har den.</p>
+
+<h2>Inventering en gång om året</h2>
+<p>Även med ett register som används varje dag är det klokt att stämma av en gång om året, gärna inför bokslutet. Gå igenom förrådet och bilarna och skanna varje verktyg. Det som inte hittas syns direkt i listan, med den senaste personen som hade det i historiken. Verktyg som är trasiga sedan länge kan skrotas och tas bort ur registret, så att listan visar det ni faktiskt har.</p>
+<p>Inventeringen ger också ett bra underlag för nästa års inköp: vilka maskiner används hela tiden, vilka står mest i förrådet och vilka går ofta på reparation.</p>
 
 <h2>Vem gör vad</h2>
 <div class="article-table"><table>
@@ -378,7 +391,7 @@ ${illuC('verktygshantering-register', 'Kvinna vid en bärbar dator bredvid en li
     {
       question: 'Hur fungerar QR-koderna?',
       answer:
-        'Varje verktyg får en egen kod som skrivs ut som etikett. Medarbetaren skannar koden med appen och ser direkt om verktyget finns på lager eller vem som har det, och kan ta över eller lämna tillbaka det.',
+        'Varje verktyg får en egen kod som skrivs ut som etikett. Medarbetaren skannar koden med appen och ser direkt om verktyget finns i förrådet eller vem som har det, och kan ta över eller lämna tillbaka det.',
     },
     {
       question: 'Behöver jag köpa särskilda etiketter eller skannrar?',
@@ -407,7 +420,7 @@ ${illuC('verktygshantering-register', 'Kvinna vid en bärbar dator bredvid en li
     },
   ],
   related: [
-    { href: '/sv/blog/verktygshantering-app', label: 'Guide: verktygshantering-app' },
+    { href: '/sv/blog/verktygshantering-app', label: 'Guide: koll på verktygen' },
     { href: '/sv/blog/hantera-verktyg-och-utrustning', label: 'Hantera verktyg och utrustning' },
     { href: '/sv/blog/leasa-eller-kopa-maskiner-byggforetag', label: 'Leasa eller köpa maskiner' },
     { href: '/sv/blog/verktyg-direktavdrag-eller-avskrivning', label: 'Direktavdrag eller avskrivning' },

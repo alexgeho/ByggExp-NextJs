@@ -20,7 +20,6 @@ const APP_STORE_URL = "https://apps.apple.com/se/app/id6748280779";
 const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=se.byggexp.app";
 const YOUTUBE_URL = "https://www.youtube.com/@byggexp";
 
-const PHONE = "+46 70 757 75 75";
 const PHONE_OFFICE = "+46 8 446 821 58";
 const COMPANY = "Real Marketing s. r. o.";
 const ORG_NR = "53551958 (IČO) · VAT SK2121411820";
@@ -31,7 +30,6 @@ const STREET = "Ekbacksvägen 32";
 const POSTAL = "168 69 Bromma";
 const ADDRESS = `${STREET}, ${POSTAL}`;
 
-const phoneHref = `tel:${PHONE.replace(/\s/g, "")}`;
 const officeHref = `tel:${PHONE_OFFICE.replace(/\s/g, "")}`;
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS)}`;
 
@@ -258,10 +256,6 @@ function Contact({ contactT: t, ctaT, lang }: Props) {
               <li>
                 <span>{t.phoneOffice}</span>
                 <a href={officeHref}>{PHONE_OFFICE}</a>
-              </li>
-              <li>
-                <span>{t.phoneMobile}</span>
-                <a href={phoneHref}>{PHONE}</a>
               </li>
             </ul>
             <p>{t.callText}</p>

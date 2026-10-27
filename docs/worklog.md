@@ -1,5 +1,13 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 2026-10-27 — HANDOFF: мобильный номер убран с сайта (live, `2f36c68`)
+- /contact «Ring oss»: остался только Kontor +46 8 446 821 58; Mobil +46 70 757 75 75 удалён. Из промпта AI-чата (api/chat.ts) тоже. Правило R12 в DESIGN-SYSTEM.md.
+- Номер остался только в запасном WhatsApp-чате (`WHATSAPP_NUMBER`, виден лишь при отключённом AI-чате) — оставлен намеренно.
+NÄSTA:
+1. Решение владельца: WhatsApp-фолбэк — оставить мобильный или заменить/убрать.
+2. Ключ `phoneMobile` в переводах контактов теперь не используется — можно удалить.
+3. Открытые пункты из 21.10 ниже (7 языков → консультация, GA promo_* ~27.10, GSC ~04.11, скрипт звонка — цены).
+
 ## 2026-10-21 (ночь) — HANDOFF: трекер источника лидов (live, `995d479`)
 - `src/lib/leadForm.ts`: `captureVisit()` (в _app) пишет в sessionStorage `byggexp.visit` utm_*, gclid/msclkid → medium cpc, внешний referrer, первую страницу. Все формы (CTA, Kontakt, чат, инструменты, offert) шлют f-utm-medium / f-referrer / f-landing; Calendly получает то же через `calendlyUtm()`.
 - Видно в письме о заявке («Came from») и в admin → Tratt → Demo → «Källa».

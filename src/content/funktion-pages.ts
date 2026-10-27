@@ -11,6 +11,7 @@
 // koll). "Gratis" = the 14-day trial. Each page has its own angle.
 
 import { FAKTURA_PRICE, PROJEKT_PRICE } from '../components/Pricing/Pricing';
+import { FUNKTION_PAGES_A, ILLU_HEIGHT_A } from './funktion-pages-a';
 
 const EXTRA_USER_PRICE = 69;
 const KOMPLETT_PRICE = 990;
@@ -77,6 +78,7 @@ export const ILLU_HEIGHT: Record<string, number> = {
   'byggdagbok-tillbyggnad': 900,
   'resursplanering-egenkontroll': 926,
   'resursplanering-vinter': 802,
+  ...ILLU_HEIGHT_A,
 };
 const IMG_DIR = '/landing/funktioner';
 export const illuSrc = (name: string, w: 640 | 1200 = 1200) => `${IMG_DIR}/${name}-${w}.webp`;
@@ -847,7 +849,13 @@ ${illu('resursplanering-vinter', 'Två byggarbetare i hjälm lägger en isolerin
   ],
 };
 
-export const FUNKTION_PAGES: FunktionPage[] = [TIDSYSTEM, HANTVERKARE, BYGGDAGBOK, RESURSPLANERING].map(
+export const FUNKTION_PAGES: FunktionPage[] = [
+  TIDSYSTEM,
+  HANTVERKARE,
+  BYGGDAGBOK,
+  RESURSPLANERING,
+  ...FUNKTION_PAGES_A,
+].map(
   (page) => ({ ...page, body: labelTables(page.body) }),
 );
 

@@ -521,7 +521,7 @@ const A_PROJEKTHANTERING_BYGGFORETAG_HTML = `
 <li><strong>Funkar det i mobilen på bygget?</strong> Det är där projektet händer.</li>
 </ul>
 
-<p>Rätt projekthantering gör att du <a href="/sv/blog/app-for-byggprojekt">styr projektet</a> medan det pågår – och slipper överraskningar i efterkalkylen.</p>
+<p>Rätt projekthantering gör att du <a href="/sv/blog/app-for-byggprojekt">styr projektet</a> medan det pågår – och slipper överraskningar i efterkalkylen. Hur uppgifter, dagbok, egenkontroller och foton samlas per projekt i ByggExp ser du på sidan om <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>.</p>
 <h2>Spridda verktyg eller ett system</h2>
 <div class="article-table"><table>
 <thead><tr><th>&nbsp;</th><th>Spridda verktyg</th><th>Projekthanteringssystem</th></tr></thead>
@@ -1197,7 +1197,7 @@ const A_STAMPELKLOCKA_APP_GPS_HTML = `
 <p>Bygg innebär källare, nybyggen och platser med dålig mobiltäckning. En stämpelklocka-app för bygg måste därför kunna registrera in- och utcheckning offline och synka när telefonen får uppkoppling igen. Annars tappar du precis de pass som är svårast att rekonstruera i efterhand.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du byta väggklockan mot en app? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Vill du jämföra alternativ först? Se vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
+<p>Vill du byta väggklockan mot en app? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Vill du jämföra alternativ först? Se vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>. Hur incheckningen, personalöversikten och attesten fungerar i ByggExp visar vi på sidan om vår <a href="/sv/funktioner/stampelklocka">stämpelklocka för bygg</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är en stämpelklocka-app?</h3>
@@ -2301,7 +2301,7 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML = `
 <p>Termerna blandas ofta ihop men skiljer sig i tidshorisont. <a href="/sv/blog/bemanning-och-personalplanering">Bemanningsplanering</a> handlar om vilka personer och kompetenser som behövs framåt. <a href="/sv/blog/resursplanering-bygg">Resursplanering i bygg</a> väger kapaciteten mot projektens behov, ofta med maskiner och material. Schemaläggningen är den konkreta fördelningen dag för dag.</p>
 
 <h2>Kom igång</h2>
-<p>Se vad som ingår i ByggExp som <a href="/sv/blog/dagsplanering-och-planeringsmoten">planeringsprogram för bygg</a>. Testa gratis i 14 dagar med alla funktioner, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi planeringen på era egna projekt.</p>
+<p>Se vad som ingår i ByggExp som <a href="/sv/blog/dagsplanering-och-planeringsmoten">planeringsprogram för bygg</a>, eller läs hur schemat läggs dag för dag på sidan om vårt <a href="/sv/funktioner/schemalaggning">schemaläggningssystem för bygg</a>. Testa gratis i 14 dagar med alla funktioner, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi planeringen på era egna projekt.</p>
 
 <h2>Relaterade guider om planering</h2>
 <ul>
@@ -2585,7 +2585,7 @@ const A_PROJEKTPLANERING_BYGG_HTML = `
 <p>Planen är färskvara. Poängen är att jämföra den mot verkligheten: när tiden loggas per projekt ser du planerat mot utfall, och avvikelser dyker upp i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a> medan du fortfarande kan styra. Håll också koll på <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">kostnaderna mot budget</a> så att marginalen inte tickar iväg oförmärkt.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du planera projekten så att de håller? Ladda ner vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>, läs om <a href="/sv/blog/projektledning-byggforetag">projektledning för byggföretag</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
+<p>Vill du planera projekten så att de håller? Ladda ner vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>, läs om <a href="/sv/blog/projektledning-byggforetag">projektledning för byggföretag</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Hur alla projekt läggs i ett Gantt-schema i ByggExp visar vi på sidan om <a href="/sv/funktioner/projektplanering">projektplanering med Gantt-schema</a>.</p>
 
 <h2>Relaterade guider</h2>
 <ul>

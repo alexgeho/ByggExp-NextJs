@@ -1689,7 +1689,7 @@ const ENKELT_TIDRAPPORTERINGSSYSTEM_HTML = `
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är ett enkelt tidrapporteringssystem?</h3>
-<p>Ett system där de anställda stämplar in och ut i mobilen på några sekunder och timmarna automatiskt blir underlag till lön och faktura – utan lappar, manuell inmatning eller upplärning.</p>
+<p>Ett system där de anställda stämplar in och ut i mobilen på några sekunder och de attesterade timmarna blir underlag för lön och faktura – utan lappar, manuell inmatning eller upplärning.</p>
 <h3>Är ett enkelt system sämre än ett avancerat?</h3>
 <p>Nej. Det avgörande är om laget faktiskt använder det. Ett enkelt system som alla fyller i ger mer korrekta siffror än ett avancerat som halva laget hoppar över.</p>
 <h3>Hur snabbt kan vi komma igång?</h3>

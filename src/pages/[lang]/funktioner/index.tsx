@@ -1,7 +1,7 @@
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
@@ -9,7 +9,19 @@ import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { FEATURE_NAV } from '../../../components/FeatureNav/FeatureNav';
 import { FUNKTION_PAGES, ILLU_HEIGHT, illuSrc, illuSrcSet } from '../../../content/funktion-pages';
-import { FUNKTION_PAGES_B, FUNKTION_PAGES_B_SLUGS } from '../../../content/funktion-pages-b';
+import { FUNKTION_PAGES_B_SLUGS } from '../../../content/funktion-pages-b';
+import { FUNKTION_PAGES_C } from '../../../content/funktion-pages-c';
+
+// /sv/funktioner/<slug> cards on the hub, one block per area; every page once.
+const FUNKTION_PAGES_C_SLUGS = new Set(FUNKTION_PAGES_C.map((p) => p.slug));
+const FUNKTION_GROUPS = [
+  {
+    title: 'Tid, dagbok och planering',
+    pages: FUNKTION_PAGES.filter((p) => !FUNKTION_PAGES_B_SLUGS.has(p.slug) && !FUNKTION_PAGES_C_SLUGS.has(p.slug)),
+  },
+  { title: 'Offert, faktura, lön och ÄTA', pages: FUNKTION_PAGES.filter((p) => FUNKTION_PAGES_B_SLUGS.has(p.slug)) },
+  { title: 'Utlägg och verktyg', pages: FUNKTION_PAGES.filter((p) => FUNKTION_PAGES_C_SLUGS.has(p.slug)) },
+];
 import { useCenterActiveChip } from '../../../lib/useCenterActiveChip';
 import { buildHreflangAlternates, localeOrigin } from '../../../lib/seo';
 import { featuresTranslations1_3 } from '../../../locales/features1-3';
@@ -928,43 +940,28 @@ export default function FunktionerPage({
       {lang === 'sv' && (
         <section className="funktioner-pages">
           <div className="container">
-            <h2 className="funktioner-why-title">Tid, dagbok och planering</h2>
-            <div className="funktioner-pages-grid">
-              {FUNKTION_PAGES.filter((p) => !FUNKTION_PAGES_B_SLUGS.has(p.slug)).map((p) => (
-                <Link key={p.slug} href={`/sv/funktioner/${p.slug}`} className="funktioner-pages-card">
-                  <img
-                    src={illuSrc(p.hero.name, 640)}
-                    srcSet={illuSrcSet(p.hero.name)}
-                    sizes="(max-width: 520px) 100vw, (max-width: 1000px) 50vw, 300px"
-                    width={1200}
-                    height={ILLU_HEIGHT[p.hero.name]}
-                    loading="lazy"
-                    decoding="async"
-                    alt={p.hero.alt}
-                  />
-                  <h3>{p.name}</h3>
-                </Link>
-              ))}
-            </div>
-            {/* Batch B: offert, faktura, lön, ÄTA */}
-            <h2 className="funktioner-why-title funktioner-pages-title-next">Offert, faktura, lön och ÄTA</h2>
-            <div className="funktioner-pages-grid">
-              {FUNKTION_PAGES_B.map((p) => (
-                <Link key={p.slug} href={`/sv/funktioner/${p.slug}`} className="funktioner-pages-card">
-                  <img
-                    src={illuSrc(p.hero.name, 640)}
-                    srcSet={illuSrcSet(p.hero.name)}
-                    sizes="(max-width: 520px) 100vw, (max-width: 1000px) 50vw, 300px"
-                    width={1200}
-                    height={ILLU_HEIGHT[p.hero.name]}
-                    loading="lazy"
-                    decoding="async"
-                    alt={p.hero.alt}
-                  />
-                  <h3>{p.name}</h3>
-                </Link>
-              ))}
-            </div>
+            {FUNKTION_GROUPS.map((group, i) => (
+              <Fragment key={group.title}>
+                <h2 className={`funktioner-why-title${i ? ' funktioner-pages-title-next' : ''}`}>{group.title}</h2>
+                <div className="funktioner-pages-grid">
+                  {group.pages.map((p) => (
+                    <Link key={p.slug} href={`/sv/funktioner/${p.slug}`} className="funktioner-pages-card">
+                      <img
+                        src={illuSrc(p.hero.name, 640)}
+                        srcSet={illuSrcSet(p.hero.name)}
+                        sizes="(max-width: 520px) 100vw, (max-width: 1000px) 50vw, 300px"
+                        width={1200}
+                        height={ILLU_HEIGHT[p.hero.name]}
+                        loading="lazy"
+                        decoding="async"
+                        alt={p.hero.alt}
+                      />
+                      <h3>{p.name}</h3>
+                    </Link>
+                  ))}
+                </div>
+              </Fragment>
+            ))}
           </div>
         </section>
       )}

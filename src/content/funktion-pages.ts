@@ -167,7 +167,7 @@ const TIDSYSTEM: FunktionPage = {
     {
       title: 'Attestera och exportera',
       text: 'Godkänn passen och exportera underlaget.',
-      bullets: ['Tidrapport som PDF och Excel', 'Löne-CSV och AGI-underlag', 'Lönekörning ingår i Koll på pengarna och Full koll'],
+      bullets: ['Tidrapport som PDF och Excel', 'Löne-CSV och AGI-underlag', 'Lönekörning ingår i Full koll'],
       img: '/landing/features/12salary-1200.webp',
       alt: 'Löner i ByggExp: timmar och timlön per medarbetare, export av CSV och AGI-underlag',
     },
@@ -208,7 +208,7 @@ ${illu('tidrapporteringssystem-kvallsgjutning', 'Betongbil gjuter en platta i kv
 <p>När perioden är attesterad har du tre vägar vidare, beroende på hur ni sköter lönen i dag:</p>
 <ul>
 <li><strong>Ni har en lönebyrå eller ett eget lönesystem.</strong> Exportera löneunderlaget som CSV och tidrapporten som Excel eller PDF. Byrån får timmar per medarbetare och timtyp i stället för inskannade lappar.</li>
-<li><strong>Ni kör lönen i ByggExp.</strong> I Löner gör du en lönekörning per period med timmar per medarbetare och timtyp, bruttolön, skatteavdrag per rad och lönespecifikation. AGI-underlaget exporteras som CSV. Löner ingår i Koll på pengarna och Full koll.</li>
+<li><strong>Ni kör lönen i ByggExp.</strong> I Löner gör du en lönekörning per period med timmar per medarbetare och timtyp, bruttolön, skatteavdrag per rad och lönespecifikation. AGI-underlaget exporteras som CSV. Lönekörningen startar från tidrapporten och ingår i Full koll.</li>
 <li><strong>Bokföringen ligger i Fortnox, Visma eller BL.</strong> Med tillägget Integrationer (${ADDON_PRICE} kr/mån) skapar du en SIE4-fil som läses in i bokföringsprogrammet.</li>
 </ul>
 
@@ -218,7 +218,7 @@ ${illu('tidrapporteringssystem-lon', 'Attesterade tidkort och klockor flyttas ti
 <h3>Laget byter arbetsplats mitt på dagen</h3>
 <p>Snickarna börjar på ett radhusprojekt och ska efter lunch till en tillbyggnad i grannkommunen. De checkar ut på det första projektet och in på det andra, och restiden läggs på passet. På kvällen ligger förmiddagen och eftermiddagen på var sitt projekt, utan att någon behövt komma ihåg fördelningen.</p>
 <h3>Beordrad kvällsgjutning</h3>
-<p>Betongbilen kommer sent och arbetsledaren beordrar övertid. Medarbetarna väljer övertid på kvällspasset. Vid attesten kontrollerar arbetsledaren att timtypen stämmer med det som beordrades, och i lönekörningen får timmarna den faktor ni har angett för övertid.</p>
+<p>Betongbilen kommer sent och arbetsledaren beordrar övertid. Medarbetarna väljer övertid på kvällspasset. Vid attesten kontrollerar arbetsledaren att timtypen stämmer med det som beordrades, och övertidstillägget enligt avtalet räknar ni själva i lönen.</p>
 <h3>Projektledaren vill veta hur timmarna ligger till</h3>
 <p>Mitt i projektet undrar projektledaren om timbudgeten håller. Under fliken Tid och personal syns timmarna per medarbetare, och med Full koll även budget, kostnader och marginal under Ekonomi. Frågan går att besvara samma dag, inte först när projektet är slutfakturerat.</p>
 
@@ -230,7 +230,7 @@ ${illu('tidrapporteringssystem-lon', 'Attesterade tidkort och klockor flyttas ti
 <tr><td><strong>Yrkesarbetare</strong></td><td>Checkar in och ut, väljer timtyp, lägger restid, traktamente och ÄTA på passet</td><td>Mobilappen</td></tr>
 <tr><td><strong>Arbetsledare</strong></td><td>Ser vem som är på jobbet, går igenom passen och attesterar</td><td>Webben och appen</td></tr>
 <tr><td><strong>Projektledare</strong></td><td>Följer timmarna per projekt, med Full koll även budget och marginal</td><td>Webben</td></tr>
-<tr><td><strong>Lön och ekonomi</strong></td><td>Exporterar löneunderlag, AGI-underlag och SIE4, eller kör lönen i Löner (Koll på pengarna och Full koll)</td><td>Webben</td></tr>
+<tr><td><strong>Lön och ekonomi</strong></td><td>Exporterar löneunderlag, AGI-underlag och SIE4, eller kör lönen i Löner (Full koll)</td><td>Webben</td></tr>
 </tbody>
 </table></div>
 <p>Den som stämplar behöver aldrig öppna webben. I översikten ser kontoret under dagen hur många som är på jobbet och hur många timmar som har registrerats.</p>
@@ -250,7 +250,7 @@ ${illu('tidrapporteringssystem-id06', 'Byggarbetare i hjälm visar sitt ID-kort 
 <tr><td><strong>Restid och traktamente</strong></td><td>Vanliga fel i byggtidrapporter</td><td>Ja, på passet</td></tr>
 <tr><td><strong>ÄTA-märkning</strong></td><td>Extraarbete ska kunna faktureras</td><td>Ja, ÄTA kopplas till passet</td></tr>
 <tr><td><strong>Attest</strong></td><td>Någon ansvarar för att timmarna stämmer</td><td>Admin eller projektadmin godkänner</td></tr>
-<tr><td><strong>Lön</strong></td><td>Underlaget ska gå vidare utan omskrivning</td><td>Löne-CSV, AGI-underlag, lönekörning i Koll på pengarna och Full koll</td></tr>
+<tr><td><strong>Lön</strong></td><td>Underlaget ska gå vidare utan omskrivning</td><td>Löne-CSV, AGI-underlag, lönekörning i Full koll</td></tr>
 <tr><td><strong>Bokföring</strong></td><td>Samma siffror i bokföringen</td><td>SIE4-fil (tillägg ${ADDON_PRICE} kr/mån)</td></tr>
 <tr><td><strong>ID06 och certifikat</strong></td><td>Vet vem som får arbeta var</td><td>Utgångsdatum på varje medarbetare</td></tr>
 </tbody>
@@ -273,7 +273,7 @@ ${illu('tidrapporteringssystem-id06', 'Byggarbetare i hjälm visar sitt ID-kort 
     {
       question: 'Räknar systemet OB och övertid enligt Byggavtalet automatiskt?',
       answer:
-        'Nej. Medarbetaren väljer timtyp per pass – normal, övertid eller OB – och arbetsledaren kontrollerar vid attesten. I lönekörningen räknas bruttolönen med de faktorer ni själva anger för varje timtyp.',
+        'Nej. Medarbetaren väljer timtyp per pass – normal, övertid eller OB – och arbetsledaren kontrollerar vid attesten. I lönekörningen räknas bruttolönen som timmar gånger timlön, och OB- och övertidstillägg enligt avtalet räknar ni själva.',
     },
     {
       question: 'Kan tidrapporten föras över till Fortnox eller Visma?',

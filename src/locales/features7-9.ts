@@ -37,7 +37,7 @@ export const featuresTranslations7_9 = {
     featuresCard8Text:
       "Turn recorded work hours into ready-to-send invoices without manual calculations. Save time and get paid faster.",
     featuresCard8Step1: "Select the project and period",
-    featuresCard8Step2: "Hours are added automatically",
+    featuresCard8Step2: "Approved hours become the basis",
     featuresCard8Step3: "Send the invoice to the customer",
 
     featuresCard9Title: "Project economics & profitability",
@@ -60,7 +60,7 @@ export const featuresTranslations7_9 = {
     featuresCard8Text:
       "Förvandla registrerade arbetstimmar till färdiga fakturor. Spara tid och få betalt snabbare.",
     featuresCard8Step1: "Välj projekt och period",
-    featuresCard8Step2: "Timmarna hämtas automatiskt",
+    featuresCard8Step2: "Attesterade timmar blir underlag",
     featuresCard8Step3: "Skicka fakturan till kunden",
 
     featuresCard9Title: "Projektekonomi och lönsamhet",
@@ -84,7 +84,7 @@ export const featuresTranslations7_9 = {
     featuresCard8Text:
       "Gjør registrerte arbeidstimer om til ferdige fakturaer. Spar tid og få betalt raskere.",
     featuresCard8Step1: "Velg prosjekt og periode",
-    featuresCard8Step2: "Timene hentes automatisk",
+    featuresCard8Step2: "Attesterte timer blir grunnlag",
     featuresCard8Step3: "Send fakturaen til kunden",
 
     featuresCard9Title: "Prosjektøkonomi og lønnsomhet",

@@ -53,7 +53,7 @@ ${row("Planering, bemanning och frånvaro", no, yes, yes)}
 ${row("Verktyg med QR-kod", no, yes, yes)}
 ${row("Offerter och fakturor med ROT", yes, no, yes)}
 ${row("Inköpsfakturor och utlägg med skanning", yes, no, yes)}
-${row("Löner och lönespecifikationer", yes, no, yes)}
+${row("Lönekörning, lönespec och AGI-underlag", no, no, yes)}
 ${row("Projektekonomi: budget, kalkyl och lönsamhet", yes, no, yes)}
 </tbody>
 </table></div>
@@ -63,7 +63,7 @@ ${illuC("priser-tid", "Kontorsarbetare vid en dator, bredvid tre tidkort med boc
 
 <h2>Vilket paket passar er?</h2>
 <h3>Koll på pengarna – för den som mest fakturerar</h3>
-<p>Passar enmansföretaget eller den lilla firman där en eller två personer skriver offerter, fakturerar med ROT, skannar kvitton och betalar lön. Läs mer om ByggExp för <a href="/sv/enmansforetag">enmansföretag</a> och om <a href="/sv/funktioner/utlagg">utlägg och kvitton</a>.</p>
+<p>Passar enmansföretaget eller den lilla firman där en eller två personer skriver offerter, fakturerar med ROT och skannar kvitton. Läs mer om ByggExp för <a href="/sv/enmansforetag">enmansföretag</a> och om <a href="/sv/funktioner/utlagg">utlägg och kvitton</a>.</p>
 <h3>Koll på jobbet – för laget ute på bygget</h3>
 <p>Passar företaget med anställda som ska stämpla in, få sina uppgifter och planeras på rätt projekt, där faktureringen redan sköts någon annanstans. Här ingår <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystemet</a>, <a href="/sv/funktioner/byggdagbok">byggdagboken</a>, <a href="/sv/funktioner/resursplanering">resursplaneringen</a> och <a href="/sv/funktioner/verktygshantering">verktygshanteringen</a>.</p>
 <h3>Full koll – när timmarna ska bli faktura och lön</h3>

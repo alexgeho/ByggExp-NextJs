@@ -180,7 +180,7 @@ ${illu('stampelklocka-attest', 'Platschef i hjälm vid skrivbordet godkänner ar
 </ul>
 
 <h2>Från stämpling till lön</h2>
-<p>När perioden är attesterad exporterar du tidrapporten som PDF eller Excel och löneunderlaget och AGI-underlaget som CSV. Kör ni lönen i ByggExp? Lönekörningen gör du i Löner, som ingår i Koll på pengarna och Full koll. Med tillägget Integrationer (${ADDON_PRICE} kr/mån) skapar du en SIE4-fil för bokföringen. Hela flödet från stämpling till lön och bokföring beskriver vi på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
+<p>När perioden är attesterad exporterar du tidrapporten som PDF eller Excel och löneunderlaget och AGI-underlaget som CSV. Kör ni lönen i ByggExp? Lönekörningen startar du från tidrapporten i Full koll. Med tillägget Integrationer (${ADDON_PRICE} kr/mån) skapar du en SIE4-fil för bokföringen. Hela flödet från stämpling till lön och bokföring beskriver vi på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 ${illu('stampelklocka-kvall', 'Byggarbetare i hjälm går från bygget med en verktygslåda och tittar i mobilen, en månskära på himlen')}
 

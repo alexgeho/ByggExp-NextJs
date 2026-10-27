@@ -11,7 +11,9 @@
 // SIE4 for payroll, no automatic Byggavtalet calculation, no timtyp factors in
 // the payroll run. Packages = ByggExp-BackEnd/src/company/modules.ts: Koll på
 // pengarna has offers, invoices, payroll, budget, profitability, projektkalkyl
-// but NOT shifts; Koll på jobbet has shifts but no economy.
+// but NOT shifts; Koll på jobbet has shifts but no economy. A payroll run can
+// only be created from the hours grid (admin HoursPage "Send to payroll"), so
+// lönekörning/lönespec/AGI = Full koll only.
 
 import type { FunktionPage } from './funktion-pages';
 import { FAKTURA_PRICE, PROJEKT_PRICE } from '../components/Pricing/Pricing';
@@ -579,12 +581,12 @@ ${illu('lon-period', 'Person vid ett skrivbord med laptop, en lista med blå rad
 <p>Oavsett väg är det samma attesterade timmar som går vidare. Det är där de flesta lönefel uppstår – och där ni sparar mest tid. Fler frågor att ställa inför valet finns i guiden om <a href="/sv/blog/loneprogram-bygg">löneprogram för bygg</a>, och tidrapporteringen beskriver vi på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 <h2>Kom igång</h2>
-<p>Lönekörning, lönespec och AGI-underlag ingår i Koll på pengarna (${FAKTURA_PRICE} kr/mån, max 2 användare) och i Full koll. Timmar från appen och attest kräver Koll på jobbet eller Full koll. I Koll på jobbet exporterar du tidrapporten som Excel eller PDF. Hela kedjan från stämpling till lönekörning ingår i Full koll för ${KOMPLETT_PRICE} kr/mån exkl. moms med 10 användare. Testa gratis i 14 dagar. Låt gärna laget stämpla i appen under en löneperiod medan den gamla rutinen finns kvar, och jämför underlagen innan ni byter.</p>
+<p>Lönekörningen startar från timmarna i tidrapporten, så lönekörning, lönespec och AGI-underlag kräver Full koll för ${KOMPLETT_PRICE} kr/mån exkl. moms med 10 användare. Där ingår hela kedjan från stämpling till lönekörning. Timmar från appen och attest finns också i Koll på jobbet (${PROJEKT_PRICE} kr/mån), där du exporterar tidrapporten som Excel eller PDF till lönebyrån. Testa gratis i 14 dagar. Låt gärna laget stämpla i appen under en löneperiod medan den gamla rutinen finns kvar, och jämför underlagen innan ni byter.</p>
 `.trim(),
   faq: [
     {
       question: 'Vad kostar lönehantering i ByggExp?',
-      answer: `Lönekörning, lönespec och AGI-underlag ingår i Koll på pengarna (${FAKTURA_PRICE} kr/mån, max 2 användare) och i Full koll. Timmar från appen och attest kräver Koll på jobbet (${PROJEKT_PRICE} kr/mån) eller Full koll. Hela kedjan ingår i Full koll för ${KOMPLETT_PRICE} kr/mån exkl. moms med 10 användare. Du testar gratis i 14 dagar.`,
+      answer: `Lönekörning, lönespec och AGI-underlag ingår i Full koll för ${KOMPLETT_PRICE} kr/mån exkl. moms med 10 användare, eftersom lönen körs från timmarna i appen. Timmar och attest med export som Excel eller PDF finns i Koll på jobbet (${PROJEKT_PRICE} kr/mån). Du testar gratis i 14 dagar.`,
     },
     {
       question: 'Räknas OB och övertid enligt Byggavtalet automatiskt?',

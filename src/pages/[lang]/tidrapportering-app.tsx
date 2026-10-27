@@ -116,7 +116,7 @@ const FAQ: { question: string; answer: string }[] = [
   {
     question: "Räknar appen OB och övertid enligt Byggavtalet?",
     answer:
-      "Nej, inte automatiskt. Medarbetaren väljer timtyp per pass – normal, övertid eller OB – och i lönekörningen räknas bruttolönen med de faktorer ni själva anger.",
+      "Nej, inte automatiskt. Medarbetaren väljer timtyp per pass – normal, övertid eller OB – och i lönekörningen räknas bruttolönen som timmar gånger timlön. OB- och övertidstillägg enligt avtalet räknar ni själva.",
   },
   {
     question: "Hur kommer vi igång?",

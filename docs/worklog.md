@@ -1,5 +1,17 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 🟡 2026-10-27 — SEO: страницы функций под коммерческие ключи
+### KLART
+- Ключи: ~/OneDrive/byggexp-seo/keyWords for ByggExp.xlsx (вкладки «Страницы для победы», «План в топ», «Анализ ключей» — 95 ключей × GSC).
+- Архитектура: docs/seo/seo-arkitektura-byggexp-2026-10-27.md — 15–24 новых страницы волнами по 5–6, блог 290 → ~180, 100 страниц НЕ делать.
+- Волна 1 в работе: ветка `seo/funktioner-p0-pages` — /sv/funktioner/{tidrapporteringssystem-bygg, tidrapportering-hantverkare, byggdagbok, resursplanering}, хаб, noindex /sv/fa-offert. Критик → правки → деплой.
+### 🔜 NÄSTA STEG
+1. После деплоя: Request Indexing 4 URL; 301 дублирующих блогов по плану.
+2. /sv/funktioner/stampelklocka (волна 1, №5).
+3. Каталоги 10–15 — регистрации делает владелец.
+4. Гейт волны 1 через 4 недели (≥100 показов/страницу, ≥5 новых доменов).
+5. GSC-токен истёк — владелец: `cd .gsc && ~/.gsc-venv/bin/python gen_gsc_token.py` в Terminal.app.
+
 ## 2026-10-27 — HANDOFF: мобильный номер убран с сайта (live, `2f36c68`)
 - /contact «Ring oss»: остался только Kontor +46 8 446 821 58; Mobil +46 70 757 75 75 удалён. Из промпта AI-чата (api/chat.ts) тоже. Правило R12 в DESIGN-SYSTEM.md.
 - Номер остался только в запасном WhatsApp-чате (`WHATSAPP_NUMBER`, виден лишь при отключённом AI-чате) — оставлен намеренно.

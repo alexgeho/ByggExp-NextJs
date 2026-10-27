@@ -679,7 +679,7 @@ const A_UTLAGG_APP_BYGG_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp har <strong>utlägg och kostnader</strong> kopplade till projekt: du fotar kvittot i appen, det bokförs på rätt projekt och syns i kostnadsbilden – samma projekt som håller ihop tid, <a href="/sv/blog/fotodokumentation-app-bygg">foto</a>, offert och faktura.</p>
+<p>ByggExp har <a href="/sv/funktioner/utlagg"><strong>utlägg och kvitton</strong></a> kopplade till projekt: du fotar kvittot i appen, det bokförs på rätt projekt och syns i kostnadsbilden – samma projekt som håller ihop tid, <a href="/sv/blog/fotodokumentation-app-bygg">foto</a>, offert och faktura.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
 
 <h2>Vanliga misstag</h2>
@@ -927,7 +927,7 @@ const A_VERKTYGSHANTERING_APP_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp har <strong>hantering av verktyg och utrustning</strong>: du ser vad du har och var det finns, kopplat till projekt och personal – i samma system som håller ihop <a href="/sv/blog/tidrapportering-app-byggforetag">tid</a>, foto, offert och faktura. Slut på att leta efter maskiner mellan bilar och bodar.</p>
+<p>ByggExp har <a href="/sv/funktioner/verktygshantering"><strong>hantering av verktyg och utrustning</strong></a>: du ser vad du har och var det finns, kopplat till projekt och personal – i samma system som håller ihop <a href="/sv/blog/tidrapportering-app-byggforetag">tid</a>, foto, offert och faktura. Slut på att leta efter maskiner mellan bilar och bodar.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Ska du köpa eller hyra? Se guiden om att <a href="/sv/blog/leasa-eller-kopa-maskiner-byggforetag">leasa eller köpa maskiner</a>.</p>
 
 <h2>Vanliga misstag</h2>
@@ -1001,7 +1001,7 @@ const A_BYGGPROGRAM_PRIS_HTML = `
 <p>Ett byggprogram ska tjäna in sig, inte bara kosta. Väg priset mot vad du sparar: mindre tid på lön och fakturering, färre <a href="/sv/blog/kunden-betalar-inte-fakturan">missade fakturor</a>, rätt <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT</a>, och koll på <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">marginalen per projekt</a>. Ofta räcker några sparade timmar i månaden för att betala abonnemanget.</p>
 
 <h2>Börja gratis</h2>
-<p>Du behöver inte betala för att komma igång. Testa våra <a href="/sv/verktyg">gratis verktyg</a> (kalkyler, offert- och faktura-mallar) och se hur flödet fungerar. Vill du se pris och paket för ByggExp – <a href="/sv#pricing">se priser</a> eller <a href="/sv/contact">boka en gratis konsultation</a> så går vi igenom vad som passar din verksamhet.</p>
+<p>Du behöver inte betala för att komma igång. Testa våra <a href="/sv/verktyg">gratis verktyg</a> (kalkyler, offert- och faktura-mallar) och se hur flödet fungerar. Vill du se pris och paket för ByggExp – <a href="/sv/priser">se priser</a> eller <a href="/sv/contact">boka en gratis konsultation</a> så går vi igenom vad som passar din verksamhet.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
@@ -2043,7 +2043,7 @@ const A_AFFARSSYSTEM_BYGGFORETAG_HTML = `
 <p>Lösa appar verkar billiga var för sig, men dubbelinmatning, exportfiler och fel mellan systemen kostar tid och pengar. Ett samlat affärssystem tar bort skarvarna – och ger en sann bild av ekonomin per projekt.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du se ett samlat affärssystem för byggföretag? <a href="/sv/contact">Boka en gratis konsultation av ByggExp</a>.</p>
+<p>Vill du se ett samlat affärssystem för byggföretag? <a href="/sv/contact">Boka en gratis konsultation av ByggExp</a>. Har ni redan ett system läser du här hur det går att <a href="/sv/byt-system">byta system med gratis flytt av data</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är skillnaden mellan ett affärssystem och en bygg-app?</h3>

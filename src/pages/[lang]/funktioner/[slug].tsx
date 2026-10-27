@@ -57,8 +57,17 @@ export default function FunktionPage({
   const canonicalUrl = `${origin}/${lang}/funktioner/${page.slug}`;
   const heroImage = `${origin}${illuSrc(page.hero.name)}`;
   const isKomplett = page.plan === "komplett";
-  const planName = isKomplett ? pricingT.planKomplett : pricingT.planProjekt;
-  const planSub = isKomplett ? pricingT.planKomplettSub : pricingT.planProjektSub;
+  const isFaktura = page.plan === "faktura";
+  const planName = isKomplett
+    ? pricingT.planKomplett
+    : isFaktura
+      ? pricingT.planFaktura
+      : pricingT.planProjekt;
+  const planSub = isKomplett
+    ? pricingT.planKomplettSub
+    : isFaktura
+      ? pricingT.planFakturaSub
+      : pricingT.planProjektSub;
   const planItems = isKomplett
     ? pricingT.komplettItems
         .slice(0, -1)
@@ -67,8 +76,13 @@ export default function FunktionPage({
             .replace("{projekt}", pricingT.planProjekt)
             .replace("{faktura}", pricingT.planFaktura),
         )
-    : pricingT.projectItems;
-  const accent = isKomplett ? "green" : "purple";
+    : isFaktura
+      ? pricingT.financeItems
+          .filter((item) => !item.includes("(kommer snart)"))
+          .map((item) => item.replace(/\*$/, ""))
+      : pricingT.projectItems;
+  const accent = isKomplett ? "green" : isFaktura ? "blue" : "purple";
+  const usersText = isFaktura ? "max 2 användare" : "inkl. 10 användare";
   const { price } = PLAN_PRICE[page.plan];
 
   const schema = [
@@ -84,7 +98,7 @@ export default function FunktionPage({
         "@type": "Offer",
         price,
         priceCurrency: "SEK",
-        description: `${planName}, per företag och månad exkl. moms, inkl. 10 användare`,
+        description: `${planName}, per företag och månad exkl. moms, ${usersText}`,
       },
     },
     {

@@ -11,6 +11,7 @@
 // koll). "Gratis" = the 14-day trial. Each page has its own angle.
 
 import { FAKTURA_PRICE, PROJEKT_PRICE } from '../components/Pricing/Pricing';
+import { FUNKTION_PAGES_C, ILLU_HEIGHT_C } from './funktion-pages-c';
 
 const EXTRA_USER_PRICE = 69;
 const KOMPLETT_PRICE = 990;
@@ -26,7 +27,7 @@ export type FunktionStep = {
   alt: string;
 };
 
-export type FunktionPlan = 'projekt' | 'komplett';
+export type FunktionPlan = 'faktura' | 'projekt' | 'komplett';
 
 export type FunktionPage = {
   slug: string;
@@ -77,6 +78,7 @@ export const ILLU_HEIGHT: Record<string, number> = {
   'byggdagbok-tillbyggnad': 900,
   'resursplanering-egenkontroll': 926,
   'resursplanering-vinter': 802,
+  ...ILLU_HEIGHT_C,
 };
 const IMG_DIR = '/landing/funktioner';
 export const illuSrc = (name: string, w: 640 | 1200 = 1200) => `${IMG_DIR}/${name}-${w}.webp`;
@@ -98,6 +100,7 @@ const SKV_OMVAND_MOMS =
   'https://www.skatteverket.se/foretag/moms/sarskildamomsregler/byggverksamhet/omvandbetalningsskyldighetinombyggsektorn.4.47eb30f51122b1aaad28000545.html';
 
 export const PLAN_PRICE: Record<FunktionPlan, { price: number; extra: number }> = {
+  faktura: { price: FAKTURA_PRICE, extra: 0 },
   projekt: { price: PROJEKT_PRICE, extra: EXTRA_USER_PRICE },
   komplett: { price: KOMPLETT_PRICE, extra: 119 },
 };
@@ -847,7 +850,7 @@ ${illu('resursplanering-vinter', 'Två byggarbetare i hjälm lägger en isolerin
   ],
 };
 
-export const FUNKTION_PAGES: FunktionPage[] = [TIDSYSTEM, HANTVERKARE, BYGGDAGBOK, RESURSPLANERING].map(
+export const FUNKTION_PAGES: FunktionPage[] = [TIDSYSTEM, HANTVERKARE, BYGGDAGBOK, RESURSPLANERING, ...FUNKTION_PAGES_C].map(
   (page) => ({ ...page, body: labelTables(page.body) }),
 );
 

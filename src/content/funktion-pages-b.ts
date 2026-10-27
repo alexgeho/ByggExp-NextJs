@@ -23,7 +23,7 @@ export const ILLU_HEIGHT_B: Record<string, number> = {
   'offert-kalkyl-hero': 1214,
   'offert-kalkyl-skicka': 856,
   'offert-kalkyl-marginal': 1181,
-  'offert-kalkyl-matning': 1035,
+  'offert-kalkyl-matning': 857,
   'offert-kalkyl-material': 850,
   'fakturering-skicka': 814,
   'fakturering-rot': 836,
@@ -32,8 +32,8 @@ export const ILLU_HEIGHT_B: Record<string, number> = {
   'fakturering-forfallo': 761,
   'lon-lonekorning': 1142,
   'lon-attest': 851,
-  'lon-timlon': 1230,
-  'lon-stampla': 1611,
+  'lon-timlon': 1149,
+  'lon-stampla': 1055,
   'lon-period': 1210,
   'ata-upptackt': 787,
   'ata-dagrapport': 1153,
@@ -133,7 +133,7 @@ ${illu('offert-kalkyl-matning', 'Hantverkare i hjälm mäter ett badrumsgolv med
 <p>Kalkylen kan kopplas till ett projekt, sparas som mall och användas igen nästa gång du räknar på ett liknande jobb. Den kan exporteras som PDF eller Excel, och har du redan räknat i Excel läser du in filen. Behöver en kollega eller revisorn titta på siffrorna skapar du en läslänk som slutar gälla efter en timme, och den som får länken kan lämna kommentarer.</p>
 
 <h3>Räkneexempel: badrumsrenovering</h3>
-<p>Säg att ett badrum på sex kvadratmeter ger följande kostnader i kalkylen: material 38 000 kr, 70 timmar arbete med en lönekostnad på 420 kr per timme (29 400 kr), plattsättare som underentreprenör 18 000 kr och container och frakt 3 500 kr. Summan blir 88 900 kr. Vill du ha 20 % marginal på priset delar du kostnaden med 0,8 och får 111 125 kr exkl. moms. Lägger du bara på 20 % på kostnaden blir priset 106 680 kr, och marginalen bara knappt 17 %. Skillnaden mellan påslag och marginal är ett av de vanligaste räknefelen i byggofferter. Kontrollera dina egna siffror med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslag- och marginalkalkylatorn</a>.</p>
+<p>Säg att ett badrum på sex kvadratmeter ger följande kostnader i kalkylen: material 38 000 kr, 70 timmar arbete med en lönekostnad på 420 kr per timme (29 400 kr), plattsättare som underentreprenör 18 000 kr och container och frakt 3 500 kr. Summan blir 88 900 kr. Vill du ha 20 % marginal på priset delar du kostnaden med 0,8 och får 111 125 kr exkl. moms. Lägger du i stället på 20 % på kostnaden blir priset 106 680 kr och marginalen knappt 17 %. Skillnaden mellan påslag och marginal är ett av de vanligaste räknefelen i byggofferter. Kontrollera dina egna siffror med <a href="/sv/verktyg/paslag-marginal-kalkylator">påslag- och marginalkalkylatorn</a>.</p>
 
 ${illu('offert-kalkyl-material', 'Hantverkare vid ett skrivbord med laptop och en mugg, bredvid en trave skivor och en pall med block')}
 
@@ -141,9 +141,9 @@ ${illu('offert-kalkyl-material', 'Hantverkare vid ett skrivbord med laptop och e
 <p>En offert i ByggExp består av rader med artikelnummer, beskrivning, antal, enhet, à-pris, rabatt och moms. Momsen är 25 % som standard och kan ändras per rad. Summorna räknas ut automatiskt.</p>
 <ul>
 <li><strong>Artikelregistret.</strong> Lägg upp material och arbete du ofta säljer, med inköpspris, försäljningspris, enhet och moms. När du väljer en artikel på offertraden fylls namn, pris och moms i. Prislistor från grossisten kan läsas in, så att du slipper skriva in dem för hand.</li>
-<li><strong>Giltig till.</strong> Ange hur länge offerten gäller. Datumet skrivs ut på PDF:en, och du slipper bli bunden av ett pris som gav dig ett halvår gammalt materialpris.</li>
+<li><strong>Giltig till.</strong> Ange hur länge offerten gäller. Datumet skrivs ut på PDF:en, och du slipper hålla ett pris som bygger på gamla materialpriser.</li>
 <li><strong>Logotyp.</strong> PDF:en får företagets logotyp, så offerten ser likadan ut oavsett vem i firman som skapar den.</li>
-<li><strong>Kopiera en tidigare offert.</strong> Gör du ofta samma typ av jobb kopierar du en gammal offert och justerar antal och priser. Det blir din egen mall offert bygg, med dina egna priser.</li>
+<li><strong>Kopiera en tidigare offert.</strong> Gör du ofta samma typ av jobb kopierar du en gammal offert och justerar antal och priser. Så får du en egen offertmall med dina egna priser.</li>
 </ul>
 <p>Är du inte redo för ett program ännu? Ladda ner vår gratis <a href="/sv/verktyg/offert-mall">offertmall för bygg</a> och läs guiden om hur du <a href="/sv/blog/skriva-offert">skriver en offert</a> som håller.</p>
 
@@ -152,6 +152,15 @@ ${illu('offert-kalkyl-material', 'Hantverkare vid ett skrivbord med laptop och e
 <p>När jobbet är beställt skapar du ett fakturautkast från offerten. Raderna, kundens namn och e-post följer med, och ordreferensen blir offertens nummer. Du justerar det som har ändrats och skickar fakturan. Hur fakturan fungerar, med ROT-avdrag och omvänd byggmoms, beskriver vi på sidan om <a href="/sv/funktioner/fakturering">fakturaprogram för bygg</a>.</p>
 
 ${illu('offert-kalkyl-skicka', 'Ett dokument flyger som ett pappersflygplan från en laptop till en person som står i ett hus och tittar i mobilen')}
+
+<h2>Följ upp offerten innan den blir gammal</h2>
+<p>En offert som skickas och sedan glöms bort vinner sällan jobbet. Gör uppföljningen till en rutin:</p>
+<ul>
+<li><strong>Efter två–tre dagar.</strong> Ring och fråga om offerten kom fram och om något är oklart. Det är ofta här du får veta att kunden jämför med ett annat anbud.</li>
+<li><strong>En vecka före giltig till.</strong> Påminn om att priset gäller till ett visst datum. Det ger kunden ett skäl att bestämma sig.</li>
+<li><strong>När svaret kommer.</strong> Sätt status till accepterad eller avvisad och skriv en kort anteckning om varför. Var priset för högt, tidplanen för sen eller beskrivningen otydlig?</li>
+</ul>
+<p>Efter ett halvår ser du hur många offerter som blir jobb, och för vilka typer av uppdrag ni oftast vinner. Det är värdefullare än att skicka fler offerter.</p>
 
 <h2>Vad offerten bör innehålla</h2>
 <p>En offert som är tydlig från början sparar diskussioner när fakturan kommer. Gå igenom listan innan du skickar:</p>
@@ -189,7 +198,7 @@ ${illu('offert-kalkyl-marginal', 'Person vid ett skrivbord framför en skärm me
 <li>Du skriver om samma rader från offerten till fakturan.</li>
 <li>Du vet inte förrän bokslutet om ett jobb gick med vinst.</li>
 </ul>
-<p>För enskilda mängder är kalkylatorerna snabbast: räkna ut <a href="/sv/verktyg/betong-kalkylator">betong</a>, <a href="/sv/verktyg/gips-kalkylator">gips</a> eller <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter</a> och för in resultatet i kalkylen. Vad timmen behöver kosta räknar du ut med <a href="/sv/verktyg/timpris-kalkylator">timpriskalkylatorn</a>. Fler tips om att välja system finns i guiden om <a href="/sv/blog/kalkylprogram-bygg">kalkylprogram för bygg</a>.</p>
+<p>För enskilda mängder är kalkylatorerna snabbast: räkna ut <a href="/sv/verktyg/betong-kalkylator">betong</a>, <a href="/sv/verktyg/gips-kalkylator">gips</a> eller <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter</a> och för in resultatet i kalkylen. Vad timmen behöver kosta räknar du ut med <a href="/sv/verktyg/timpris-kalkylator">timpriskalkylatorn</a>. Steg för steg finns i guiden om hur du <a href="/sv/blog/kalkylprogram-bygg">kalkylerar ett byggjobb</a>.</p>
 
 <h2>Kom igång</h2>
 <p>Offerter, projektkalkyl och fakturor ingår i Koll på pengarna för ${FAKTURA_PRICE} kr/mån exkl. moms, för upp till två användare. Behöver hela laget tidrapportering och projekt, välj Full koll. De första 14 dagarna är gratis med alla funktioner, utan startavgift och utan bindningstid. Har du dina priser och kunder i ett annat system hjälper vi dig att flytta över dem utan kostnad.</p>
@@ -231,7 +240,7 @@ ${illu('offert-kalkyl-marginal', 'Person vid ett skrivbord framför en skärm me
     },
   ],
   related: [
-    { href: '/sv/blog/kalkylprogram-bygg', label: 'Guide: kalkylprogram för bygg' },
+    { href: '/sv/blog/kalkylprogram-bygg', label: 'Så kalkylerar du ett byggjobb' },
     { href: '/sv/blog/offertprogram-byggforetag', label: 'Offertprogram för byggföretag' },
     { href: '/sv/blog/skriva-offert', label: 'Så skriver du en offert' },
     { href: '/sv/blog/efterkalkyl-bygg-kalkyluppfoljning', label: 'Efterkalkyl och kalkyluppföljning' },
@@ -259,7 +268,7 @@ const FAKTURERING: FunktionPage = {
   lead: 'Fakturor med ROT, omvänd moms och OCR – skickade från samma ställe.',
   hero: {
     name: 'fakturering-skicka',
-    alt: 'Hantverkare i hjälm vid en laptop där ett papper flyger ut mot ett litet hus med blått tak',
+    alt: 'Hantverkare i hjälm står vid en laptop där ett papper med blå linjer kommer ut ur skärmen, bredvid ett litet hus med blått tak',
   },
   stepsHeading: ['Faktura, kvitto', 'och betalning'],
   steps: [
@@ -287,11 +296,11 @@ const FAKTURERING: FunktionPage = {
 <p>Ett fakturaprogram för bygg måste klara det som vanliga fakturaprogram ofta gör krångligt: ROT-avdrag, omvänd byggmoms, delfakturor mot en betalningsplan och tillägg som ska faktureras separat. I ByggExp skapar du fakturan med företagets logotyp, OCR-nummer och rätt moms, och skickar den som PDF direkt till kunden. Fakturan kan utgå från en offert, en godkänd ÄTA eller en rad i projektets betalningsplan. Här är flödet, reglerna du behöver hålla koll på och hur du får betalt i tid.</p>
 
 <h2>Vad en byggfaktura måste innehålla</h2>
-<p>En faktura ska ha vissa uppgifter för att kunden ska kunna dra av momsen och för att Skatteverket ska godta ett ROT-avdrag. Det här ger ByggExp dig på varje faktura:</p>
+<p>En faktura ska ha vissa uppgifter för att kunden ska kunna dra av momsen och för att Skatteverket ska godta ett ROT-avdrag. Det här finns på varje faktura i ByggExp:</p>
 <ul>
 <li><strong>Logotyp.</strong> Företagets logotyp, så att fakturan ser likadan ut oavsett vem som skapar den.</li>
 <li><strong>Löpande fakturanummer och OCR.</strong> OCR-numret räknas fram från fakturanumret med kontrollsiffra, så att betalningen kan matchas.</li>
-<li><strong>Bankgiro eller plusgiro.</strong> När det finns angivet skrivs en betal-QR-kod ut, som kunden kan skanna i bankappen.</li>
+<li><strong>Bankgiro eller plusgiro.</strong> När bankgiro eller plusgiro är angivet får fakturan en QR-kod för betalning, som kunden kan skanna i bankappen.</li>
 <li><strong>Datum och villkor.</strong> Fakturadatum, leveransdatum, förfallodatum, betalningsvillkor och text om dröjsmålsränta.</li>
 <li><strong>Rader med moms.</strong> Antal, enhet, à-pris, rabatt och moms per rad. Textrader för rubriker och förklaringar.</li>
 <li><strong>Referenser.</strong> Er referens, kundens referens och ordernummer, till exempel offertens nummer.</li>
@@ -310,9 +319,12 @@ const FAKTURERING: FunktionPage = {
 
 ${illu('fakturering-rot', 'Ett par står framför ett hus med blått tak och byggställning medan en hantverkare i hjälm räcker över ett papper')}
 
+<h3>Räkneexempel: ROT på en badrumsfaktura</h3>
+<p>Ett badrum faktureras med arbete för 48 000 kr och material för 32 000 kr, båda exkl. moms. Med moms blir arbetet 60 000 kr och materialet 40 000 kr, totalt 100 000 kr. ROT-avdraget räknas på arbetskostnaden inklusive moms: 30 % av 60 000 kr är 18 000 kr. Kunden betalar 82 000 kr, och när betalningen har kommit in begär du 18 000 kr från Skatteverket. Anger du i stället hela beloppet som arbete blir avdraget 30 000 kr, och den skillnaden kan Skatteverket kräva tillbaka.</p>
+
 <h2>Omvänd byggmoms</h2>
 <p>Säljer du byggtjänster till ett företag som själv säljer byggtjänster gäller ${ext(SKV_OMVAND_MOMS, 'omvänd betalningsskyldighet')}. Då ska du inte ta ut moms på fakturan, utan köparen redovisar den. I ByggExp väljer du omvänd moms på fakturan, och PDF:en får texten att omvänd skattskyldighet för byggtjänster gäller. Arbetar du ofta som underentreprenör åt samma byggföretag sparar du omvänd moms som standard på kunden, så att det blir rätt varje gång.</p>
-<p>Vanligast är misstaget åt andra hållet: att omvänd moms används mot en privatperson eller ett företag som inte säljer byggtjänster. Fråga kunden om du är osäker. Mer om reglerna finns i guiden om <a href="/sv/blog/omvand-byggmoms-underentreprenor">omvänd byggmoms för underentreprenörer</a>.</p>
+<p>Det vanligaste misstaget är att använda omvänd moms mot en privatperson eller ett företag som inte säljer byggtjänster. Fråga kunden om du är osäker. Mer om reglerna finns i guiden om <a href="/sv/blog/omvand-byggmoms-underentreprenor">omvänd byggmoms för underentreprenörer</a>.</p>
 
 ${illu('fakturering-omvand', 'Två personer skakar hand framför en byggställning och en lyftkran, den ena i hjälm med en surfplatta')}
 
@@ -320,10 +332,18 @@ ${illu('fakturering-omvand', 'Två personer skakar hand framför en byggställni
 <p>Ett byggprojekt faktureras sällan med en enda faktura. ByggExp har tre vägar till fakturan utöver att skriva den från början:</p>
 <ul>
 <li><strong>Betalningsplanen.</strong> I projektets betalningsplan lägger du in delbetalningar som fasta belopp eller procent av kontraktssumman. När en etapp är klar skapar du ett förifyllt fakturautkast från raden, och raden markeras som fakturerad. Så fungerar <a href="/sv/blog/a-conto-fakturering-bygg">à conto-fakturering</a> utan att du behöver hålla reda på vad som är fakturerat i ett separat ark.</li>
-<li><strong>Godkänd ÄTA.</strong> När en ÄTA är godkänd skapar du en faktura från den. Projekt, ordreferens med ÄTA-numret och en rad med beloppet fylls i. Läs mer om <a href="/sv/funktioner/ata">ÄTA-hantering</a>.</li>
+<li><strong>Godkänd ÄTA.</strong> När en ÄTA är godkänd skapar du en faktura från den. Projekt, ordreferens (ÄTA-nummer och titel) och en rad med beloppet fylls i. Läs mer om <a href="/sv/funktioner/ata">ÄTA-hantering</a>.</li>
 <li><strong>Accepterad offert.</strong> Offertens rader, kund och nummer följer med till fakturautkastet. Se <a href="/sv/funktioner/offert-kalkyl">offert och kalkyl</a>.</li>
 </ul>
 <p>Har du köpt in material eller tjänster som kunden ska betala kan du vidarefakturera leverantörsfakturan med ett påslag i procent. Inkommande fakturor kan skickas till en egen e-postadress och skannas, så att de hamnar på rätt projekt.</p>
+
+<h2>Fakturera i rätt tid</h2>
+<p>Den vanligaste orsaken till dålig likviditet i ett byggföretag är inte kunder som inte betalar, utan fakturor som skickas för sent. Några tumregler:</p>
+<ul>
+<li><strong>Etapper direkt när de är klara.</strong> Skapa delfakturan från betalningsplanen samma dag som etappen är avklarad.</li>
+<li><strong>ÄTA samma vecka.</strong> En godkänd ÄTA är som lättast att få betalt för medan kunden minns varför den behövdes.</li>
+<li><strong>Slutfakturan utan dröjsmål.</strong> Vänta inte veckor efter slutbesiktningen. Kunden är som mest nöjd när jobbet precis är klart.</li>
+</ul>
 
 <h2>Kreditfaktura och ändringar</h2>
 <p>Blev något fel på en skickad faktura ska den inte ändras i efterhand. Skapa i stället en kreditfaktura för hela beloppet eller en del av det, och skicka en ny faktura om det behövs. Då stämmer fakturaserien och bokföringen, och kunden ser tydligt vad som gäller.</p>
@@ -380,9 +400,9 @@ ${illu('fakturering-forfallo', 'Person i keps går förbi en rad mappar med husi
         'När du säljer byggtjänster till ett företag som själv säljer byggtjänster. Då tar du inte ut moms och fakturan ska ange att omvänd betalningsskyldighet gäller. Mot privatpersoner gäller vanlig moms.',
     },
     {
-      question: 'Kan jag fakturera direkt från tidrapporten?',
+      question: 'Kan jag skicka fakturan som PDF?',
       answer:
-        'Timmarna från tidrapporten för du själv in på fakturan, eller fakturerar via betalningsplanen, en offert eller en godkänd ÄTA. Tidrapporten för projektet kan exporteras som PDF och bifogas fakturan.',
+        'Ja. Fakturan skapas som PDF med logotyp, OCR-nummer och betalningsuppgifter och skickas till kunden via e-post direkt från ByggExp.',
     },
     {
       question: 'Kan fakturorna föras över till bokföringen?',
@@ -400,7 +420,7 @@ ${illu('fakturering-forfallo', 'Person i keps går förbi en rad mappar med husi
     },
   ],
   related: [
-    { href: '/sv/blog/faktureringsprogram-bygg', label: 'Guide: faktureringsprogram för bygg' },
+    { href: '/sv/blog/faktureringsprogram-bygg', label: 'Så fakturerar du byggjobb rätt' },
     { href: '/sv/blog/vad-ska-faktura-innehalla-bygg', label: 'Vad ska en faktura innehålla?' },
     { href: '/sv/blog/faktura-med-rotavdrag', label: 'Faktura med ROT-avdrag' },
     { href: '/sv/blog/a-conto-fakturering-bygg', label: 'À conto-fakturering' },
@@ -487,10 +507,17 @@ ${illu('lon-attest', 'Arbetsledare med surfplatta med bockar medan två byggarbe
 <p>Lönespecifikationen skapas per medarbetare och visar period, timmar, brutto, skatt och netto. Den laddas ner som PDF, och medarbetaren får samma siffror som ligger i underlaget.</p>
 <p>Vad en anställd kostar utöver lönen, med arbetsgivaravgifter och semester, räknar du ut med <a href="/sv/verktyg/anstalld-kostnad-kalkylator">kalkylatorn för anställningskostnad</a>.</p>
 
-${illu('lon-timlon', 'Kvinna vid en dator med tre medarbetarprofiler och hjälmikoner bredvid skärmen')}
+${illu('lon-timlon', 'Kvinna vid ett skrivbord skriver på tangentbordet framför en skärm med ett profilkort och blå linjer')}
+
+<h2>Räkneexempel: vad en månadslön kostar</h2>
+<p>En snickare med timlön 210 kr arbetar 168 timmar under en månad. Bruttolönen blir 168 × 210 = 35 280 kr. Skatteavdraget görs enligt medarbetarens skattetabell och dras från bruttolönen. Utöver lönen betalar företaget arbetsgivaravgifter, som med full avgift på 31,42 % blir 11 085 kr. Månadens kostnad för lön och avgifter blir alltså 46 365 kr, och då är semesterlön, försäkringar och pension enligt avtal inte medräknade.</p>
+<p>Exemplet visar varför varje timme i underlaget spelar roll. En timme för mycket i tidrapporten kostar inte 210 kr, utan nästan 280 kr med avgifter, och mer om timmen är övertid. Räkna på era egna siffror med <a href="/sv/verktyg/anstalld-kostnad-kalkylator">kalkylatorn för anställningskostnad</a>.</p>
+
+<h3>Varför attesten kommer före lönekörningen</h3>
+<p>Det är frestande att köra lönen direkt på timmarna som ligger i tidrapporten. Men en lönekörning är svår att ändra när lönen väl är utbetald, medan ett arbetspass är lätt att rätta före attest. Låt därför arbetsledaren gå igenom perioden först: saknade dagar, pass som aldrig checkades ut och timtyper som inte stämmer. Skicka sedan perioden till lön. Ordningen kostar en dag men sparar rättelser i nästa period.</p>
 
 <h2>OB, övertid och Byggavtalet</h2>
-<p>För företag som följer ${ext(BYGGAVTALET, 'Byggavtalet')} styr avtalet vad som räknas som övertid och vilka tillägg som gäller för obekväm arbetstid. I ByggExp väljer medarbetaren timtyp på varje pass och arbetsledaren kontrollerar den vid attesten. Ni avgör alltså själva vad som är övertid utifrån avtalet och det som har beordrats.</p>
+<p>För företag som följer ${ext(BYGGAVTALET, 'Byggavtalet')} styr avtalet vad som räknas som övertid och vilka tillägg som gäller för obekväm arbetstid. I ByggExp väljer medarbetaren timtyp på varje pass och arbetsledaren kontrollerar den vid attesten.</p>
 <p>Hämta satserna ur den aktuella utgåvan av avtalet, eftersom de ändras mellan avtalsperioderna. Räkna på en enskild vecka med <a href="/sv/verktyg/ob-overtid-kalkylator">OB- och övertidskalkylatorn</a>, och läs om <a href="/sv/blog/semesterlon-semesterersattning-byggavtalet">semesterlön enligt Byggavtalet</a> och <a href="/sv/blog/sjuklon-karensavdrag-vab-byggforetag">sjuklön och karensavdrag</a>.</p>
 
 <h2>Restid och traktamente</h2>
@@ -514,7 +541,7 @@ ${illu('lon-period', 'Person vid ett skrivbord med laptop, en lista med blå rad
 <li><strong>Attest två dagar senare.</strong> Arbetsledarna går igenom passen och rättar det som saknas, medan medarbetarna fortfarande minns veckan.</li>
 <li><strong>Lönekörning.</strong> Perioden skickas till lön, raderna kontrolleras och körningen godkänns.</li>
 <li><strong>Utbetalning.</strong> Lönen betalas ut, körningen markeras som betald och lönespecifikationerna finns kvar i ByggExp.</li>
-<li><strong>Arbetsgivardeklarationen.</strong> AGI-underlaget exporteras och deklarationen lämnas till Skatteverket. För de flesta arbetsgivare är sista dagen den 12:e i månaden efter utbetalningen.</li>
+<li><strong>Arbetsgivardeklarationen.</strong> AGI-underlaget exporteras och deklarationen lämnas till Skatteverket. För de flesta arbetsgivare är sista dagen den 12:e i månaden efter utbetalningen (17:e i januari och augusti).</li>
 </ol>
 <p>Blir något fel efter att lönen är betald, rätta det i nästa period och skriv en anteckning om varför. Då går det att följa vad som hände även ett år senare.</p>
 
@@ -549,15 +576,15 @@ ${illu('lon-period', 'Person vid ett skrivbord med laptop, en lista med blå rad
 <tr><td><strong>Ingen lönelösning</strong></td><td>Kör lönen i ByggExp</td><td>Lönespec, skatteavdrag och AGI-underlag på samma ställe</td></tr>
 </tbody>
 </table></div>
-<p>Oavsett väg är det samma attesterade timmar som går vidare. Det är där de flesta lönefel uppstår, och där tid sparas. Fler frågor att ställa inför valet finns i guiden om <a href="/sv/blog/loneprogram-bygg">löneprogram för bygg</a>, och tidrapporteringen beskriver vi på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
+<p>Oavsett väg är det samma attesterade timmar som går vidare. Det är där de flesta lönefel uppstår – och där ni sparar mest tid. Fler frågor att ställa inför valet finns i guiden om <a href="/sv/blog/loneprogram-bygg">löneprogram för bygg</a>, och tidrapporteringen beskriver vi på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 <h2>Kom igång</h2>
-<p>Hela kedjan från stämpling till lönekörning ingår i Full koll för ${KOMPLETT_PRICE} kr/mån exkl. moms med 10 användare. Behöver ni bara tidrapportering och löneunderlag som fil räcker Koll på jobbet för ${PROJEKT_PRICE} kr/mån. Testa gratis i 14 dagar. Låt gärna laget stämpla i appen under en löneperiod medan den gamla rutinen finns kvar, och jämför underlagen innan ni byter.</p>
+<p>Lönekörning, lönespec och AGI-underlag ingår i Koll på pengarna (${FAKTURA_PRICE} kr/mån, max 2 användare) och i Full koll. Timmar från appen och attest kräver Koll på jobbet eller Full koll. I Koll på jobbet exporterar du tidrapporten som Excel eller PDF. Hela kedjan från stämpling till lönekörning ingår i Full koll för ${KOMPLETT_PRICE} kr/mån exkl. moms med 10 användare. Testa gratis i 14 dagar. Låt gärna laget stämpla i appen under en löneperiod medan den gamla rutinen finns kvar, och jämför underlagen innan ni byter.</p>
 `.trim(),
   faq: [
     {
       question: 'Vad kostar lönehantering i ByggExp?',
-      answer: `Tidrapportering, lönekörning och AGI-underlag ingår i Full koll för ${KOMPLETT_PRICE} kr/mån exkl. moms med 10 användare. Tidrapportering med export av löneunderlag ingår i Koll på jobbet för ${PROJEKT_PRICE} kr/mån. Du testar gratis i 14 dagar.`,
+      answer: `Lönekörning, lönespec och AGI-underlag ingår i Koll på pengarna (${FAKTURA_PRICE} kr/mån, max 2 användare) och i Full koll. Timmar från appen och attest kräver Koll på jobbet (${PROJEKT_PRICE} kr/mån) eller Full koll. Hela kedjan ingår i Full koll för ${KOMPLETT_PRICE} kr/mån exkl. moms med 10 användare. Du testar gratis i 14 dagar.`,
     },
     {
       question: 'Räknas OB och övertid enligt Byggavtalet automatiskt?',
@@ -592,7 +619,7 @@ ${illu('lon-period', 'Person vid ett skrivbord med laptop, en lista med blå rad
   ],
   related: [
     { href: '/sv/blog/loneprogram-bygg', label: 'Löneprogram för bygg' },
-    { href: '/sv/blog/loneunderlag-for-byggforetag', label: 'Löneunderlag för byggföretag' },
+    { href: '/sv/blog/loneunderlag-for-byggforetag', label: 'Så tar du fram löneunderlag' },
     { href: '/sv/blog/semesterlon-semesterersattning-byggavtalet', label: 'Semesterlön enligt Byggavtalet' },
     { href: '/sv/blog/ob-overtid-byggavtalet-rakna', label: 'OB och övertid enligt Byggavtalet' },
     { href: '/sv/verktyg/anstalld-kostnad-kalkylator', label: 'Vad kostar en anställd?' },
@@ -661,7 +688,7 @@ ${illu('ata-ritning', 'Projektledare och kund står vid ett bord med en utrullad
 <li><strong>Kunden får beskedet.</strong> Du meddelar kunden ändringen och priset, till exempel via e-post, och sätter status till skickad.</li>
 <li><strong>Kunden svarar.</strong> När kunden har godkänt sätter du status till godkänd, annars avvisad. Godkännandet görs av admin eller projektadmin i ByggExp.</li>
 <li><strong>Laget utför arbetet.</strong> I mobilappen kopplar medarbetaren sin arbetsdag till ÄTA:n, så att det syns vilka dagar som hörde till tillägget.</li>
-<li><strong>ÄTA:n faktureras.</strong> Från en godkänd ÄTA skapar du en faktura. Projektet, ordreferensen med ÄTA-numret och titeln och en rad med beloppet fylls i, och ÄTA:n får status fakturerad.</li>
+<li><strong>ÄTA:n faktureras.</strong> Från en godkänd ÄTA skapar du en faktura. Projekt, ordreferens (ÄTA-nummer och titel) och en rad med beloppet fylls i, och ÄTA:n får status fakturerad.</li>
 </ol>
 <p>Statusen gör att du alltid vet var varje ÄTA står: registrerad, skickad, godkänd, avvisad eller fakturerad.</p>
 
@@ -720,6 +747,14 @@ ${illu('ata-godkand', 'Kund och byggarbetare skakar hand, med ett dokument med e
 
 ${illu('ata-faktura', 'Projektledare vid ett skrivbord lägger ett papper med en bock på laptopen, bredvid en hög guldmynt och en modell av en husutbyggnad med byggställning')}
 
+<h2>Räkneexempel: tilläggs-ÄTA för nya rör</h2>
+<p>Avloppsröret bakom badrumsväggen behöver bytas. Snickaren räknar med 6 timmar à 650 kr, alltså 3 900 kr. Rör och kopplingar kostar 2 400 kr i inköp, och med 15 % påslag blir det 2 760 kr. VVS-firman tar 3 500 kr för sitt besök, och containern behöver stå en dag extra för 400 kr. ÄTA:n blir 10 560 kr exkl. moms. Det beloppet registreras på ÄTA:n och skickas till kunden innan arbetet börjar.</p>
+
+<h2>Dokumentera med foton</h2>
+<p>Ett foto av det som upptäcktes säger mer än en lång beskrivning, särskilt när kunden inte var på plats. Be laget fotografera före och efter med mobilen. Foton som tas i appen kopplas till arbetspasset och hamnar i projektets Foto-flik med datum och person, så att du hittar dem när ÄTA:n ska godkännas eller ifrågasätts. Hänvisa till ÄTA-numret i mejlet till kunden och i byggmötesprotokollet, så hänger dokumentationen ihop.</p>
+
+<p>Spara också kundens skriftliga svar. Ett kort ja i ett mejl, med ÄTA-numret i ämnesraden, räcker långt om slutfakturan ifrågasätts ett halvår senare. Notera i ÄTA:ns anteckningar var godkännandet finns, så hittar en kollega det även när du inte är på plats.</p>
+
 <h2>Vanliga fel i ÄTA-hanteringen</h2>
 <div class="article-table"><table>
 <thead><tr><th>Fel</th><th>Följd</th><th>Så undviker du det</th></tr></thead>
@@ -731,7 +766,7 @@ ${illu('ata-faktura', 'Projektledare vid ett skrivbord lägger ett papper med en
 <tr><td><strong>Ingen koll på väntande</strong></td><td>Tillägg blir liggande utan svar</td><td>Summering per projekt, uppe på byggmötet</td></tr>
 </tbody>
 </table></div>
-<p>Mer om hur du dokumenterar och följer upp finns i guiden om <a href="/sv/blog/ata-hantering-mall">ÄTA-hantering med mall</a>.</p>
+<p>Mer om hur du dokumenterar och följer upp finns i guiden med <a href="/sv/blog/ata-hantering-mall">ÄTA-mall</a>.</p>
 
 <h2>Kom igång</h2>
 <p>Hela flödet, med ÄTA på projektet, arbetsdagar i appen och faktura från godkänd ÄTA, ingår i Full koll för ${KOMPLETT_PRICE} kr/mån exkl. moms med 10 användare. Testa gratis i 14 dagar, utan startavgift och utan bindningstid.</p>
@@ -774,7 +809,7 @@ ${illu('ata-faktura', 'Projektledare vid ett skrivbord lägger ett papper med en
   ],
   related: [
     { href: '/sv/blog/ata-arbeten', label: 'Guide: ÄTA-arbeten' },
-    { href: '/sv/blog/ata-hantering-mall', label: 'ÄTA-hantering med mall' },
+    { href: '/sv/blog/ata-hantering-mall', label: 'ÄTA-mall: dokumentera ändringar' },
     { href: '/sv/verktyg/ata-mall', label: 'Gratis ÄTA-mall' },
     { href: '/sv/verktyg/byggmotesprotokoll-mall', label: 'Byggmötesprotokoll-mall' },
     { href: '/sv/blog/bestriden-faktura-bygg-tvist', label: 'Bestriden faktura' },

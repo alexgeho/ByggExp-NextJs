@@ -15,6 +15,10 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 | /sv/funktioner/tidrapportering-hantverkare | tidrapportering hantverkare | tidrapport hantverkare, tidrapporteringssystem hantverkare |
 | /sv/funktioner/byggdagbok | digital byggdagbok | byggdagbok app, dagbok bygg (гайд /sv/blog/byggdagbok держит «byggdagbok» как инфо: krav, innehåll, exempel) |
 | /sv/funktioner/resursplanering | resursplanering bygg | resursplaneringsverktyg, resursplan |
+| /sv/funktioner/offert-kalkyl | kalkylprogram bygg | offertprogram bygg, skapa offert, mall offert bygg, kalkylprogram bygg gratis (гайд /sv/blog/kalkylprogram-bygg → «Så kalkylerar du ett byggjobb – steg för steg», инфо) |
+| /sv/funktioner/fakturering | fakturaprogram bygg | fakturering bygg, faktureringsprogram bygg (гайд /sv/blog/faktureringsprogram-bygg → «Så fakturerar du byggjobb rätt – ROT, omvänd moms och ÄTA (guide)», инфо) |
+| /sv/funktioner/lon | löneunderlag bygg | lön bygg, lönesystem bygg, lönekörning (гайд /sv/blog/loneunderlag-for-byggforetag → «Så tar du fram löneunderlag i byggföretaget (guide)», инфо) |
+| /sv/funktioner/ata | ÄTA-hantering bygg | ÄTA system, ÄTA app (гайд /sv/blog/ata-hantering-mall держит «ÄTA-mall»; /sv/blog/ata-arbeten — инфо о ÄTA i AB 04/ABT 06) |
 
 ## Tidrapportering
 
@@ -22,7 +26,7 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 |---|---|---|---|---|
 | /sv/blog/automatisk-tidrapportering-och-export | **feature** | **tidrapportering online** | 72 / 21.3 | tidrapport online (41), automatisk tidrapportering |
 | /sv/blog/narvaro-och-incheckning-pa-bygget | **feature** | **närvarosystem bygg** | 10 / 15.4 | närvarokontroll byggarbetsplats (13), digital närvarolista bygg (10) |
-| /sv/blog/loneunderlag-for-byggforetag | feature | löneunderlag bygg | — | löneunderlag byggföretag |
+| /sv/blog/loneunderlag-for-byggforetag | гайд | så tar du fram löneunderlag (инфо) | — | head-ключ «löneunderlag bygg» отдан /sv/funktioner/lon |
 | /sv/blog/tidrapportering | pillar | tidrapportering bygg | 362 / 24.0 | tidrapportering byggföretag (245), tidrapport bygg (258) |
 | /sv/blog/tidrapporteringssystem-bygg | гайд | så väljer du tidrapporteringssystem (инфо) | 312 / 25.1 | checklista tidrapporteringssystem; head-ключ отдан /sv/funktioner/tidrapporteringssystem-bygg |
 | /sv/blog/basta-tidrapporteringssystem-bygg | сравнение | bästa tidrapporteringssystem bygg | — | jämförelse tidrapporteringssystem, tidrapporteringssystem pris, Bygglet/Fieldly/MyGizmo alternativ |

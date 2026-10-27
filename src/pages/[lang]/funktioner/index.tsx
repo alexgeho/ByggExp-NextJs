@@ -947,7 +947,7 @@ export default function FunktionerPage({
               ))}
             </div>
             {/* Batch B: offert, faktura, lön, ÄTA */}
-            <h2 className="funktioner-why-title funktioner-pages-title-next">Offert, faktura och lön</h2>
+            <h2 className="funktioner-why-title funktioner-pages-title-next">Offert, faktura, lön och ÄTA</h2>
             <div className="funktioner-pages-grid">
               {FUNKTION_PAGES_B.map((p) => (
                 <Link key={p.slug} href={`/sv/funktioner/${p.slug}`} className="funktioner-pages-card">

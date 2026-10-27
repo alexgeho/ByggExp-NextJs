@@ -82,6 +82,11 @@ export default function FunktionPage({
           .map((item) => item.replace(/\*$/, ""))
       : pricingT.projectItems;
   const accent = isKomplett ? "green" : isFaktura ? "blue" : "purple";
+  // Fair-use limits of Koll på pengarna, first sentence only (no "*").
+  const fakturaLimit = `${pricingT.fakturaLimitNote
+    .replace(/^\*\s*/, "")
+    .split(". ")[0]
+    .replace(/\.$/, "")}.`;
   const { price } = PLAN_PRICE[page.plan];
 
   const schema = [
@@ -97,7 +102,9 @@ export default function FunktionPage({
         "@type": "Offer",
         price,
         priceCurrency: "SEK",
-        description: `${planName}, per företag och månad exkl. moms, inkl. 10 användare`,
+        description: `${planName}, per företag och månad exkl. moms, ${
+          isFaktura ? "max 2 användare" : "inkl. 10 användare"
+        }`,
       },
     },
     {
@@ -362,6 +369,9 @@ export default function FunktionPage({
                   <span className="num">{price}</span>
                   <span className="per">{pricingT.pricingPer}</span>
                 </div>
+                {isFaktura && (
+                  <p className="pricing-detail">{pricingT.fakturaMaxUsers}</p>
+                )}
                 <div className="pricing-groups">
                   <div className="pricing-group">
                     <h3 className="pricing-group-title">
@@ -398,6 +408,9 @@ export default function FunktionPage({
               <p className="pricing-limit-note">
                 14 dagar gratis · Ingen bindningstid · exkl. moms
               </p>
+              {isFaktura && (
+                <p className="pricing-limit-note">{fakturaLimit}</p>
+              )}
             </div>
           </div>
         </section>

@@ -284,7 +284,7 @@ const A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA: BlogPost = {
 const A_FAKTURERINGSPROGRAM_BYGG_HTML = `
 <p>Ett faktureringsprogram för bygg ska göra mer än att skapa en PDF – det ska ta dig från nedlagda timmar till betald faktura utan dubbelarbete, och hantera ROT-avdraget rätt. Här går vi igenom vad ett faktureringsprogram för byggföretag bör klara, vad du ska titta på när du väljer, och hur ByggExp löser hela kedjan.</p>
 
-<figure class="web-shot"><img src="/features-content/fakturera-fran-byggexp-web.webp" alt="Faktureringsprogram för bygg: skapa faktura i webbadmin från loggade timmar med ROT-avdrag" width="1000" height="548" loading="lazy"><figcaption>Skapa faktura i webbadmin – loggade timmar och material blir fakturarader med ROT uträknat, redo att skicka.</figcaption></figure>
+<figure class="web-shot"><img src="/features-content/fakturera-fran-byggexp-web.webp" alt="Skapa faktura i ByggExps webbadmin med fakturarader och ROT-avdrag" width="1000" height="548" loading="lazy"><figcaption>Skapa faktura i webbadmin – fakturarader med ROT-avdrag, redo att skicka.</figcaption></figure>
 
 <h2>Vad ska ett faktureringsprogram för bygg klara?</h2>
 <ul>
@@ -302,7 +302,7 @@ const A_FAKTURERINGSPROGRAM_BYGG_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>I ByggExp hänger offert, tid och faktura ihop: du <strong>skapar offerter</strong>, förvandlar dem till <strong>fakturor</strong>, och de timmar som teamet registrerar i mobilen blir fakturaunderlag automatiskt. ROT hanteras i flödet, och samma timmar används även till <a href="/sv/blog/tidrapportering">tidrapportering</a> och löneunderlag – du registrerar en gång och använder datan flera gånger.</p>
+<p>I ByggExp hänger offert, tid och faktura ihop: du <strong>skapar offerter</strong>, förvandlar dem till <strong>fakturor</strong> och fakturerar godkända ÄTA och delbetalningar från projektets betalningsplan. ROT-avdrag och omvänd byggmoms väljs på fakturan, och timmarna från <a href="/sv/blog/tidrapportering">tidrapporteringen</a> används till löneunderlag och projektuppföljning.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation av ByggExp</a> så visar vi hela kedjan från offert till betald faktura, eller läs mer om <a href="/sv/funktioner/fakturering">fakturaprogrammet för bygg</a>.</p>
 
 <h2>Vanliga misstag</h2>
@@ -318,27 +318,27 @@ const A_FAKTURERINGSPROGRAM_BYGG_HTML = `
 <ul>
 <li><a href="/sv/blog/offertprogram-byggforetag">Offertprogram för byggföretag</a> – offerten som blir faktura.</li>
 <li><a href="/sv/blog/offert-till-betald-faktura-flode">Från offert till betald faktura</a> – hela flödet utan dubbelarbete.</li>
-<li><a href="/sv/blog/tidrapportering-app-byggforetag">Tidrapportering-app för byggföretag</a> – timmarna som blir fakturarader.</li>
+<li><a href="/sv/blog/tidrapportering-app-byggforetag">Tidrapportering-app för byggföretag</a> – timmarna bakom fakturan.</li>
 <li><a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar</a> – påminnelse, inkasso och dröjsmålsränta.</li>
 </ul>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad ska ett faktureringsprogram för byggföretag klara?</h3>
-<p>ROT-fakturering, koppling offert→faktura, timmar→faktura vid löpande räkning, rätt fakturainnehåll enligt lag med logga och betalningsvillkor, samt automatiska påminnelser vid utebliven betalning.</p>
+<p>ROT-fakturering, omvänd byggmoms, koppling offert→faktura, rätt fakturainnehåll enligt lag med logga och betalningsvillkor, samt påminnelser vid utebliven betalning.</p>
 <h3>Hanterar ett faktureringsprogram ROT-avdrag?</h3>
 <p>Ett bra program för bygg räknar och redovisar ROT-avdraget automatiskt så att kunden ser vad hen betalar och du får rätt underlag till Skatteverket. Du kan räkna det direkt i vår <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylator</a>.</p>
 <h3>Behöver jag ett program eller räcker en fakturamall?</h3>
-<p>Skickar du enstaka fakturor räcker en gratis <a href="/sv/verktyg/faktura-mall">faktura-mall</a>. Fakturerar du varje vecka sparar ett program tid genom ROT-hantering, koppling till offert och timmar och automatiska påminnelser – och minskar fel.</p>
+<p>Skickar du enstaka fakturor räcker en gratis <a href="/sv/verktyg/faktura-mall">faktura-mall</a>. Fakturerar du varje vecka sparar ett program tid genom ROT-hantering, koppling till offerten och påminnelser – och minskar fel.</p>
 <h3>Kan fakturan bygga på timmarna teamet registrerar?</h3>
-<p>Ja. Vid löpande räkning blir registrerade timmar automatiskt fakturarader, så ingen räknar om samma siffror för hand.</p>
+<p>Vid löpande räkning är tidrapporten underlaget. Exportera den för projektet som PDF och bifoga den till fakturan, så ser kunden datum och timmar för varje pass.</p>
 `;
 
 const A_FAKTURERINGSPROGRAM_BYGG: BlogPost = {
   _id: "code-"+"faktureringsprogram-bygg",
-  title: "Faktureringsprogram för bygg – ROT, offert och timmar i ett flöde", slug: "faktureringsprogram-bygg", locale: "sv",
-  excerpt: "Vad ett faktureringsprogram för byggföretag bör klara – ROT-fakturering, offert→faktura, timmar→faktura och påminnelser – och hur ByggExp löser hela kedjan.", tag: "Digitalisering",
+  title: "Så fakturerar du byggjobb rätt – ROT, omvänd moms och ÄTA (guide)", slug: "faktureringsprogram-bygg", locale: "sv",
+  excerpt: "Så fakturerar du byggjobb rätt: ROT-avdrag, omvänd byggmoms, ÄTA, delfakturor och påminnelser – och vad fakturan måste innehålla.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/8fakturor.webp", contentHtml: A_FAKTURERINGSPROGRAM_BYGG_HTML,
-  seoTitle: "Faktureringsprogram för bygg – ROT & offert i ett | ByggExp", seoDescription: "Faktureringsprogram för byggföretag: ROT-fakturering, offert→faktura, timmar→faktura och automatiska påminnelser. Så väljer du – och så gör ByggExp det i ett flöde.",
+  seoTitle: "Så fakturerar du byggjobb rätt – ROT, moms och ÄTA | Guide", seoDescription: "Guide till byggfakturan: ROT-avdrag, omvänd byggmoms, ÄTA, delfakturor och påminnelser. Vad fakturan måste innehålla och vanliga misstag.",
   seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T17:00:00.000Z", createdAt: "2026-08-20T17:00:00.000Z", updatedAt: "2026-08-20T17:00:00.000Z",
 };
@@ -643,7 +643,7 @@ const A_LONEPROGRAM_BYGG_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>I ByggExp stämplar medarbetarna in och ut i mobilappen (iPhone och Android) med GPS, och timmarna hamnar på rätt projekt. På varje pass väljer medarbetaren timtyp – normal, övertid eller OB – och registrerar restid (km och minuter) och traktamente. Passen attesteras och exporteras som <strong>löneunderlag (CSV)</strong>, AGI-underlag och tidrapport i PDF eller Excel; med tillägget Integrationer även som SIE4-fil för Fortnox, Visma eller BL. Samma timmar används till <a href="/sv/blog/faktureringsprogram-bygg">fakturering</a> och <a href="/sv/blog/projekthantering-byggforetag">projektuppföljning</a>, så du slipper pussla ihop lönen från lappar och Excel varje månad.</p>
+<p>I ByggExp stämplar medarbetarna in och ut i mobilappen (iPhone och Android) med GPS, och timmarna hamnar på rätt projekt. På varje pass väljer medarbetaren timtyp – normal, övertid eller OB – och registrerar restid (km och minuter) och traktamente. Passen attesteras och exporteras som <strong>löneunderlag (CSV)</strong>, AGI-underlag och tidrapport i PDF eller Excel. Samma timmar används till <a href="/sv/blog/faktureringsprogram-bygg">fakturering</a> och <a href="/sv/blog/projekthantering-byggforetag">projektuppföljning</a>, så du slipper pussla ihop lönen från lappar och Excel varje månad.</p>
 <p>ByggExp räknar inte ut Byggavtalets regler för OB och övertid automatiskt. Timtypen väljs per pass, och satser och tidsgränser stämmer du av mot avtalet – se <a href="/sv/blog/ob-overtid-byggavtalet-rakna">så räknar du OB och övertid</a>.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation</a> eller se hur <a href="/sv/funktioner/lon">löneunderlaget för bygg</a> fungerar. Vill du börja enkelt finns en gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>.</p>
 
@@ -759,10 +759,10 @@ const A_KALKYLPROGRAM_BYGG_HTML = `
 
 const A_KALKYLPROGRAM_BYGG: BlogPost = {
   _id: "code-"+"kalkylprogram-bygg",
-  title: "Kalkylprogram bygg – gör offerten gratis online", slug: "kalkylprogram-bygg", locale: "sv",
+  title: "Så kalkylerar du ett byggjobb – steg för steg", slug: "kalkylprogram-bygg", locale: "sv",
   excerpt: "Vad ett kalkylprogram för byggföretag bör klara: materialåtgång, rätt påslag/marginal, ROT och vägen från kalkyl till offert och faktura. Kom igång gratis.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_KALKYLPROGRAM_BYGG_HTML,
-  seoTitle: "Kalkylprogram för bygg – gratis kalkyl till offert | ByggExp", seoDescription: "Kalkylprogram för byggföretag: materialåtgång, rätt påslag och marginal, ROT och vägen från kalkyl till offert. Finns det gratis? Så väljer du bästa – kom igång gratis.",
+  seoTitle: "Så kalkylerar du ett byggjobb – steg för steg | ByggExp", seoDescription: "Så kalkylerar du ett byggjobb: materialåtgång med spill, påslag eller marginal, ROT och vägen från kalkyl till offert. Med gratis kalkylatorer.",
   seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T19:10:00.000Z", createdAt: "2026-08-20T19:10:00.000Z", updatedAt: "2026-08-20T19:10:00.000Z",
 };

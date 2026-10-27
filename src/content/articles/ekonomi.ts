@@ -1990,7 +1990,7 @@ const A_ATA_HANTERING_MALL_HTML = `
 </ul>
 
 <h2>Så gör du i ByggExp</h2>
-<p>I ByggExp skapar du en ÄTA direkt i projektet med alla fält ifyllda enligt mallen ovan – nummer, typ, orsak, pris och tidspåverkan. Underlaget samlas på projektet så att du snabbt kan skicka det för beställarens godkännande och sedan koppla tidsedlar och kvitton till just den ÄTA:n. När det är dags att fakturera har du underlaget samlat, vilket gör det lättare att fakturera löpande i stället för att jaga papper vid slutbesiktningen. Systemet ersätter inte det juridiska ansvaret enligt AB 04 eller konsumenttjänstlagen, men det gör rutinen enkel nog att faktiskt följa varje gång.</p>
+<p>I ByggExp registrerar du varje ÄTA direkt på projektet med nummer, typ, titel, beskrivning, datum och belopp, och följer status från registrerad till godkänd och fakturerad. I appen kopplar laget sina arbetsdagar till ÄTA:n, och en godkänd ÄTA blir en förifylld faktura. Tidspåverkan och orsak skriver du i beskrivningen, och beställarens skriftliga godkännande sparar du tillsammans med mallen. Systemet ersätter inte det juridiska ansvaret enligt AB 04 eller konsumenttjänstlagen, men det gör rutinen enkel nog att faktiskt följa varje gång.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Måste en ÄTA vara skriftlig för att gälla?</h3>
@@ -2010,10 +2010,10 @@ const A_ATA_HANTERING_MALL_HTML = `
 
 const A_ATA_HANTERING_MALL: BlogPost = {
   _id: "code-"+"ata-hantering-mall",
-  title: "ÄTA-hantering mall – så dokumenterar och fakturerar du ÄTA utan att förlora ersättningen", slug: "ata-hantering-mall", locale: "sv",
+  title: "ÄTA-mall – så dokumenterar du ändringar och tillägg", slug: "ata-hantering-mall", locale: "sv",
   excerpt: "En konkret rutin och mall för att dokumentera och fakturera ÄTA-arbeten så att du får betalt för allt extra du gör – utan tvist vid slutbesiktningen.", tag: "Ekonomi",
   coverImageUrl: "/landing/verktyg/ata-mall-preview.webp", contentHtml: A_ATA_HANTERING_MALL_HTML,
-  seoTitle: "ÄTA-mall & rutin – dokumentera och fakturera ÄTA | ByggExp", seoDescription: "Så dokumenterar och fakturerar du ÄTA i praktiken: en enkel rutin, en gratis ÄTA-mall och de misstag som gör att hantverkare tappar ersättningen.",
+  seoTitle: "ÄTA-mall – dokumentera ändringar och tillägg | ByggExp", seoDescription: "Så dokumenterar och fakturerar du ÄTA i praktiken: en enkel rutin, en gratis ÄTA-mall och de misstag som gör att hantverkare tappar ersättningen.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/ata-mall-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-18T19:09:00.000Z", createdAt: "2026-08-18T19:09:00.000Z", updatedAt: "2026-08-18T19:09:00.000Z",
 };

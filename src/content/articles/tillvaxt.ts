@@ -1165,7 +1165,7 @@ const A_STAMPELKLOCKA_APP_GPS_HTML = `
 <p>GPS-funktionen bekräftar att incheckningen sker på arbetsplatsen och inte hemifrån soffan. Det ger både arbetsledaren trygghet i att timmarna stämmer och medarbetaren ett enkelt, ärligt sätt att visa närvaro. För byggföretag med personal på flera projekt är GPS-stämpling det som gör mobilstämpling pålitlig.</p>
 <ul>
 <li>Incheckning knyts till plats – du ser var passet startade.</li>
-<li>Närvaron kan användas som underlag för uppföljning och personalliggare.</li>
+<li>Närvaron kan användas som underlag för uppföljning av projektet.</li>
 <li>Mindre diskussion om timmar i efterhand.</li>
 </ul>
 
@@ -1191,13 +1191,13 @@ const A_STAMPELKLOCKA_APP_GPS_HTML = `
 <p>En stämpelklocka är bara halva jobbet – värdet kommer när timmarna används. I ByggExp blir de stämplade timmarna automatiskt underlag för <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a> och <a href="/sv/blog/fakturera-fran-byggexp">fakturering</a>, och räknas in i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektets ekonomi</a>. Registrera en gång, använd överallt.</p>
 
 <h2>Stämpelklocka och personalliggare</h2>
-<p>På bygg- och renoveringsarbetsplatser krävs ofta en <a href="/sv/blog/personalliggare-bygg-app">elektronisk personalliggare</a> där alla som arbetar registreras löpande. En stämpelklocka-app med GPS gör dubbel nytta: samma incheckning som bokför arbetstiden håller också liggaren aktuell i realtid – tillgänglig om Skatteverket gör ett oanmält besök. Kombinerar du det med <a href="/sv/blog/id06-nya-krav-2026-legitimering">ID06</a> har du både korrekt tid och en liggare som klarar en kontroll, utan dubbel administration. Slarv med liggaren är dyrt: läs om <a href="/sv/blog/kontrollavgift-personalliggare">kontrollavgiften för personalliggare</a>.</p>
+<p>På bygg- och renoveringsarbetsplatser krävs ofta en <a href="/sv/blog/personalliggare">elektronisk personalliggare</a> där alla som arbetar registreras löpande. Personalliggaren har egna krav från Skatteverket och är inte samma sak som en stämpelklocka. Kontrollera därför att ni har en lösning för liggaren vid sidan om tidsstämplingen. Slarv med liggaren är dyrt: läs om <a href="/sv/blog/kontrollavgift-personalliggare">kontrollavgiften</a>.</p>
 
-<h2>Fungerar stämplingen utan täckning?</h2>
-<p>Bygg innebär källare, nybyggen och platser med dålig mobiltäckning. En stämpelklocka-app för bygg måste därför kunna registrera in- och utcheckning offline och synka när telefonen får uppkoppling igen. Annars tappar du precis de pass som är svårast att rekonstruera i efterhand.</p>
+<h2>Vad händer på platser utan täckning?</h2>
+<p>Bygg innebär källare, nybyggen och platser med dålig mobiltäckning. Fråga leverantören hur appen beter sig där. I ByggExp behöver appen uppkoppling för att stämpla in; saknas täckning registrerar medarbetaren timmarna manuellt i efterhand, per projekt och dag.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du byta väggklockan mot en app? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Vill du jämföra alternativ först? Se vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>. Hur incheckningen, personalöversikten och attesten fungerar i ByggExp visar vi på sidan om vår <a href="/sv/funktioner/stampelklocka">stämpelklocka för bygg</a>.</p>
+<p>Vill du byta väggklockan mot en app? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Vill du jämföra alternativ först? Se vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>. Hur incheckningen, personalöversikten och attesten fungerar i ByggExp visar vi på sidan om vår <a href="/sv/funktioner/stampelklocka">stämpelklocka-app för bygg</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är en stämpelklocka-app?</h3>
@@ -1209,17 +1209,17 @@ const A_STAMPELKLOCKA_APP_GPS_HTML = `
 <h3>Kan stämplad tid användas till lön och faktura?</h3>
 <p>Ja. De stämplade timmarna blir automatiskt underlag för löneunderlag och fakturarader och räknas in i projektekonomin.</p>
 <h3>Fungerar en stämpelklocka-app som personalliggare?</h3>
-<p>Incheckningen kan hålla den elektroniska personalliggaren aktuell i realtid. Tillsammans med ID06 får du både korrekt arbetstid och en liggare som klarar en kontroll från Skatteverket.</p>
+<p>Nej, inte automatiskt. Personalliggaren i byggbranschen har egna krav från Skatteverket. Se till att ni har en lösning som uppfyller dem vid sidan om stämpelklockan.</p>
 <h3>Går det att stämpla in utan mobiltäckning?</h3>
-<p>Ja. Stämplingen registreras lokalt i appen och synkas automatiskt när telefonen får uppkoppling igen, så inga pass tappas på platser med dålig täckning.</p>
+<p>I ByggExp behöver appen uppkoppling för att stämpla in. På platser utan täckning registreras timmarna manuellt i efterhand, per projekt och dag.</p>
 `.trim();
 
 const A_STAMPELKLOCKA_APP_GPS: BlogPost = {
   _id: "code-stampelklocka-app-gps-bygg",
-  title: "Stämpelklocka app med GPS för byggföretag", slug: "stampelklocka-app-gps-bygg", locale: "sv",
+  title: "Så väljer du stämpelklocka-app för bygget – guide", slug: "stampelklocka-app-gps-bygg", locale: "sv",
   excerpt: "Stämpelklocka som app: personalen checkar in och ut i mobilen och GPS bekräftar närvaron på arbetsplatsen. För både Android och iPhone. Så fungerar det för byggföretag.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_STAMPELKLOCKA_APP_GPS_HTML,
-  seoTitle: "Stämpelklocka app med GPS för bygg – 14 dagar gratis | ByggExp", seoDescription: "Stämpelklocka i mobilen för byggföretag: in- och utcheckning med GPS på arbetsplatsen, timmar per projekt och export till lön. För iPhone och Android.",
+  seoTitle: "Så väljer du stämpelklocka-app för bygget – guide | ByggExp", seoDescription: "Guide: vad en stämpelklocka-app för bygg ska klara – GPS på incheckningen, timmar per projekt, väggterminal mot app och personalliggarens krav.",
   seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T09:10:00.000Z", createdAt: "2026-08-22T09:10:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
@@ -2167,7 +2167,7 @@ const A_SCHEMALAGGNING_BYGG_HTML = `
 <p>Störst nytta gör schemat när det kopplas till verkligheten: planerad tid jämförs med <a href="/sv/blog/automatisk-tidrapportering-och-export">loggad tid</a>, och avvikelser syns i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a>.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du börja enkelt? Ladda ner en gratis <a href="/sv/verktyg/schema-mall">schema-mall (veckoschema) för personal</a> som PDF eller Excel. Vill du sluta pussla i huvudet? <a href="/sv/contact">Boka en gratis konsultation av ByggExp</a>.</p>
+<p>Vill du börja enkelt? Ladda ner en gratis <a href="/sv/verktyg/schema-mall">schema-mall (veckoschema) för personal</a> som PDF eller Excel. Hur schemat läggs per medarbetare och dag, med frånvaro och varning vid överbokning, visar vi på sidan om <a href="/sv/funktioner/schemalaggning">schemaläggning av personal i bygg</a>. Vill du sluta pussla i huvudet? <a href="/sv/contact">Boka en gratis konsultation av ByggExp</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är schemaläggning för byggföretag?</h3>
@@ -2180,10 +2180,10 @@ const A_SCHEMALAGGNING_BYGG_HTML = `
 
 const A_SCHEMALAGGNING_BYGG: BlogPost = {
   _id: "code-schemalaggning-bygg",
-  title: "Schemaläggning för byggföretag – personalplanering i en vy", slug: "schemalaggning-bygg", locale: "sv",
+  title: "Schemaläggning i byggföretaget – regler och tips", slug: "schemalaggning-bygg", locale: "sv",
   excerpt: "Schemaläggning och personalplanering för byggföretag: en delad vy över hela laget, kopplad till projekt, frånvaro och tid. Sluta pussla i huvudet och Excel.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_SCHEMALAGGNING_BYGG_HTML,
-  seoTitle: "Schemaläggning för byggföretag – personalplanering | ByggExp", seoDescription: "Schemaläggning och personalplanering för byggföretag: delad vy över laget per vecka, planera per person eller projekt, se frånvaro och koppla till tid.",
+  seoTitle: "Schemaläggning i byggföretaget – regler och tips | ByggExp", seoDescription: "Schemaläggning och personalplanering för byggföretag: delad vy över laget per vecka, planera per person eller projekt, se frånvaro och koppla till tid.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T11:30:00.000Z", createdAt: "2026-08-22T11:30:00.000Z", updatedAt: "2026-08-22T11:30:00.000Z",
 };
@@ -2330,10 +2330,10 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML = `
 
 const A_SCHEMALAGGNINGSSYSTEM_BYGG: BlogPost = {
   _id: "code-schemalaggningssystem-bygg",
-  title: "Schemaläggningssystem för bygg – så väljer du rätt (2026)", slug: "schemalaggningssystem-bygg", locale: "sv",
+  title: "Så väljer du schemaläggningssystem för bygg – checklista", slug: "schemalaggningssystem-bygg", locale: "sv",
   excerpt: "Så väljer du schemaläggningssystem för bygg: 8 krav att ställa, reglerna om dygns- och veckovila, en gratis Excel-mall och vad det kostar per användare.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML,
-  seoTitle: "Schemaläggningssystem bygg – så väljer du rätt (2026) | ByggExp", seoDescription: "Schemaläggningssystem för bygg: 8 krav att ställa, regler om dygns- och veckovila, gratis Excel-mall och priser per användare. Så väljer du rätt system.",
+  seoTitle: "Så väljer du schemaläggningssystem för bygg – checklista", seoDescription: "Schemaläggningssystem för bygg: 8 krav att ställa, regler om dygns- och veckovila, gratis Excel-mall och priser per användare. Så väljer du rätt system.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-30T10:00:00.000Z", createdAt: "2026-08-30T10:00:00.000Z", updatedAt: "2026-10-06T10:00:00.000Z",
 };

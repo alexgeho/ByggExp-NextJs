@@ -15,6 +15,12 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 | /sv/funktioner/tidrapportering-hantverkare | tidrapportering hantverkare | tidrapport hantverkare, tidrapporteringssystem hantverkare |
 | /sv/funktioner/byggdagbok | digital byggdagbok | byggdagbok app, dagbok bygg (гайд /sv/blog/byggdagbok держит «byggdagbok» как инфо: krav, innehåll, exempel) |
 | /sv/funktioner/resursplanering | resursplanering bygg | resursplaneringsverktyg, resursplan |
+| /sv/funktioner/stampelklocka | stämpelklocka (app) | stämpelklocka app, app stämpelklocka, stämpelklocka app gps, digital stämpelklocka |
+| /sv/funktioner/schemalaggning | schemaläggningssystem | schemaläggning personal, schemaläggningsprogram, gratis schemaläggningsprogram, schema app, system för schemaläggning |
+| /sv/funktioner/projekthantering | projekthantering bygg | projekthanteringssystem bygg, projektledningssystem (bygg), projektverktyg bygg, app för byggprojekt |
+| /sv/funktioner/projektplanering | gantt schema (bygg) | tidplan program bygg, tidplaneringsprogram bygg, bygg planering, planeringsprogram |
+
+Батч A (2026-10-27): гайды переименованы — stampelklocka-app-gps-bygg → «Så väljer du stämpelklocka-app för bygget – guide»; schemalaggningssystem-bygg → «Så väljer du schemaläggningssystem för bygg – checklista»; schemalaggning-bygg → «Schemaläggning i byggföretaget – regler och tips»; gantt-schema-mall-bygg → «Gantt-schema mall för bygg – gratis mall och guide» (держит «gantt schema mall»). Каждый, плюс projekthantering-byggforetag и projektplanering-bygg, ссылается на свою страницу функции анкором с ключом.
 
 ## Tidrapportering
 
@@ -36,7 +42,7 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 | ~~/sv/blog/tidsregistrering-app-bygg~~ → 301 на app-for-tidrapportering-bygg (2026-10-21) | гайд | tidsregistrering bygg | 83 / 18.5 | mobil tidsregistrering (15) |
 | /sv/blog/tidredovisning-byggforetag | гайд | tidredovisning bygg | 95 / 18.1 | tidredovisning (62) |
 | /sv/blog/tidredovisning-app | гайд | tidredovisning app | 22 / 17.4 | — |
-| /sv/blog/stampelklocka-app-gps-bygg | гайд | stämpelklocka app | 117 / 14.1 | stämpelklocka i mobilen (73), digital stämpelklocka (61) |
+| /sv/blog/stampelklocka-app-gps-bygg | гайд | så väljer du stämpelklocka-app (инфо) | 117 / 14.1 | head-ключ отдан /sv/funktioner/stampelklocka |
 | /sv/blog/stampelklocka-app-android | гайд | stämpelklocka app android | 48 / 6.9 | — |
 | /sv/blog/stampelklocka-app-iphone | гайд | stämpelklocka app iphone | — | — |
 | /sv/blog/personalliggare | гайд | personalliggare bygg | 164 / 18.3 | krav personalliggare bygg (60) |
@@ -54,14 +60,14 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 | /sv/blog/dagsplanering-och-planeringsmoten | **feature** | **planeringsprogram bygg** | 14 / 20.4 (+PAA «Var kan jag hitta ett planeringsprogram för byggbranschen?») | dagsplanering (9), planeringsmöte (5), tidplaneringsprogram bygg (4) |
 | /sv/blog/hantera-uppgifter-i-byggprojekt | feature | uppgiftshantering bygg | — | — |
 | /sv/blog/paminnelser-uppgifter-och-deadlines | feature | påminnelser deadlines | — | — |
-| /sv/blog/schemalaggningssystem-bygg | гайд | schemaläggningssystem | 144 / 9.9 | schemaläggningsprogram (127), system för schemaläggning (22) |
-| /sv/blog/schemalaggning-bygg | гайд | schemaläggning bygg | — | schemaläggning personal (53), bemanning och schemaläggning (51) |
+| /sv/blog/schemalaggningssystem-bygg | гайд | så väljer du schemaläggningssystem – checklista (инфо) | 144 / 9.9 | head-ключ отдан /sv/funktioner/schemalaggning |
+| /sv/blog/schemalaggning-bygg | гайд | schemaläggning regler och tips (инфо) | — | «schemaläggning personal» отдан /sv/funktioner/schemalaggning |
 | /sv/blog/resursplanering-bygg | гайд | resurshistogram, resursutjämning (инфо) | 81 / 10.5 | head-ключ отдан /sv/funktioner/resursplanering |
 | /sv/blog/personalplanering-bygg | гайд | bemanningsplanering | 228 / 53.8 | bemanningsplan (35) |
 | /sv/blog/bemanning-och-personalplanering | гайд | personalplanering | 32 / 45.0 | — |
 | /sv/blog/bemanningssystem-bygg | гайд | bemanningssystem bygg | — | schema bemanning (75), bemanningsplanering system (29) |
-| /sv/blog/projektplanering-bygg | гайд | projektplanering bygg | — | — |
-| /sv/blog/gantt-schema-mall-bygg | гайд | gantt schema bygg | — | tidsplanering bygg (64, без владельца — кандидат) |
+| /sv/blog/projektplanering-bygg | гайд | projektplanering bygg (инфо: как планировать) | — | ссылается на /sv/funktioner/projektplanering |
+| /sv/blog/gantt-schema-mall-bygg | гайд | gantt schema mall bygg (инфо + шаблон) | — | «gantt schema» head отдан /sv/funktioner/projektplanering |
 | /sv/verktyg/gantt-schema-mall | tool | gantt schema mall | — | — |
 | /sv/verktyg/schema-mall | tool | schema mall | 30 / 30.1 | tomt schema mall (74), arbetsschema mall (37) |
 

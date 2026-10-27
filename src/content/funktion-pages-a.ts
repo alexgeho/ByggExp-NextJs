@@ -19,7 +19,7 @@ const ADDON_PRICE = 199;
 export const ILLU_HEIGHT_A: Record<string, number> = {
   'stampelklocka-incheckning': 1456,
   'stampelklocka-terminal': 1523,
-  'stampelklocka-projektbyte': 668,
+  'stampelklocka-projektbyte': 1164,
   'stampelklocka-attest': 1146,
   'stampelklocka-kvall': 1083,
   'schemalaggning-klart': 1256,
@@ -31,9 +31,9 @@ export const ILLU_HEIGHT_A: Record<string, number> = {
   'projekthantering-ritning': 1137,
   'projekthantering-uppgifter': 1372,
   'projekthantering-nytt-projekt': 1145,
-  'projekthantering-overlamning': 1098,
-  'projektplanering-gantt': 1094,
-  'projektplanering-moment': 639,
+  'projekthantering-overlamning': 993,
+  'projektplanering-gantt': 1128,
+  'projektplanering-moment': 1165,
   'projektplanering-startmote': 853,
   'projektplanering-app': 1255,
   'projektplanering-leverans': 1176,
@@ -69,7 +69,7 @@ const STAMPELKLOCKA: FunktionPage = {
   plan: 'projekt',
   priceIncluded: 'Stämpelklocka och tidrapport ingår',
   heroCheck: 'iPhone och Android',
-  title: 'Stämpelklocka – app med GPS för byggföretag | ByggExp',
+  title: 'Stämpelklocka app för bygg – GPS-incheckning | ByggExp',
   description:
     'Stämpelklocka i mobilen: laget stämplar in med GPS på bygget, du ser vem som är på jobbet och attesterar timmarna. iPhone och Android. 14 dagar gratis.',
   name: 'Stämpelklocka för bygg',
@@ -83,23 +83,23 @@ const STAMPELKLOCKA: FunktionPage = {
   stepsHeading: ['Stämpla in', 'och se läget'],
   steps: [
     {
+      title: 'Se vem som är på jobbet',
+      text: 'Status, timmar i dag och projekt per medarbetare.',
+      img: '/landing/funktioner/screen-personaloversikt.webp',
+      alt: 'Personalöversikt i ByggExp: varje medarbetare med status På jobbet eller Inte på jobbet, timmar i dag och projekt',
+    },
+    {
       title: 'Stämpla in i appen',
       text: 'GPS-incheckning på projektet. Passet pausas när man lämnar området.',
       bullets: ['Timmar per projekt', 'Normal, övertid eller OB per pass', 'Manuell registrering som alternativ'],
       img: '/landing/features/1arbetspass-1200.webp',
-      alt: 'Arbetspass i ByggExp: timmar per medarbetare och dag i webben och i mobilappen',
-    },
-    {
-      title: 'Se vem som är på jobbet',
-      text: 'Status per medarbetare – i webben och i appen.',
-      img: '/landing/features/3personal-1200.webp',
-      alt: 'Personal i ByggExp: medarbetare med status På jobbet eller Inte på jobbet i webben och i mobilappen',
+      alt: 'Stämplade arbetspass i ByggExp: timmar per medarbetare och dag i webben, och stämpelklockan i mobilappen',
     },
     {
       title: 'Attestera timmarna',
       text: 'Planerat, GPS och manuellt – per medarbetare och dag.',
       img: '/landing/funktioner/screen-tidrapport-1200.webp',
-      alt: 'Tidrapport i ByggExp: timmar per medarbetare och dag för två veckor, filtrerat på planerat, GPS och manuellt',
+      alt: 'Attest av stämplade timmar i ByggExp: timmar per medarbetare och dag för två veckor, med växling mellan planerat, GPS och manuellt',
     },
   ],
   body: `
@@ -111,7 +111,7 @@ const STAMPELKLOCKA: FunktionPage = {
 <li><strong>Medarbetaren stämplar in.</strong> I appen för iPhone eller Android väljer medarbetaren projektet och checkar in. GPS-positionen bekräftar att incheckningen sker på arbetsplatsen.</li>
 <li><strong>Passet följer arbetsplatsen.</strong> Lämnar medarbetaren projektområdet pausas passet automatiskt. Ärendet till bygghandeln eller lunchen hemma räknas alltså inte som tid på projektet.</li>
 <li><strong>Byte av arbetsplats.</strong> Ska laget vidare till nästa projekt checkar man ut på det första och in på det andra. Förmiddag och eftermiddag hamnar på var sitt projekt.</li>
-<li><strong>Passet får rätt timtyp.</strong> Normal tid, övertid eller OB väljs per pass. Restid läggs till i kilometer och minuter och traktamente som helt, halvt eller inget.</li>
+<li><strong>Passet får rätt timtyp.</strong> Normal tid, övertid eller OB väljs per pass. Restid anges i kilometer och minuter, och traktamente som helt, halvt eller inget.</li>
 <li><strong>Arbetsledaren attesterar.</strong> I webben ser admin eller projektadmin passen per medarbetare och dag och godkänner dem.</li>
 </ol>
 <p>Den som hellre vill fylla i timmarna själv kan registrera tiden manuellt per projekt och dag. Båda sätten hamnar i samma tidrapport.</p>
@@ -134,9 +134,9 @@ ${illu('stampelklocka-terminal', 'Byggarbetare i hjälm går förbi en gammal st
 
 <h2>GPS på incheckningen</h2>
 <p>Positionen gör två saker. Vid incheckningen bekräftar den att medarbetaren är på arbetsplatsen. Under passet används den för att se om medarbetaren är kvar inom projektområdet, så att passet kan pausas när man lämnar det. Det betyder färre diskussioner om timmar i efterhand och en tidrapport som går att lita på vid attesten.</p>
-<p>Berätta för laget innan ni börjar vad positionen används till och vem som ser den. Det är god ordning, och enligt dataskyddsreglerna ska medarbetarna få information om hur deras personuppgifter behandlas. Den som inte vill dela sin position kan registrera timmarna manuellt.</p>
+<p>Berätta för laget innan ni börjar vad positionen används till och vem som ser den. Det är god sed, och enligt dataskyddsreglerna ska medarbetarna få information om hur deras personuppgifter behandlas. Den som inte vill dela sin position kan registrera timmarna manuellt.</p>
 
-${illu('stampelklocka-projektbyte', 'Byggarbetare i hjälm står vid en servicebil mellan två byggarbetsplatser med blå platsmarkörer och tittar i mobilen')}
+${illu('stampelklocka-projektbyte', 'Byggarbetare i hjälm kliver ur en servicebil vid ett hus med ställning och tittar i mobilen, med en blå platsmarkör ovanför')}
 
 <h2>Se vem som är på jobbet just nu</h2>
 <p>En stämpelklocka ger inte bara timmar till lönen. Den ger också en bild av läget i dag. På översikten i ByggExp ser du hur många som är på jobbet, hur många projekt som är aktiva och hur många timmar som har arbetats hittills under dagen. Personalöversikten visar varje medarbetare med status, timmar i dag och projekt, och du kan filtrera på ett enskilt projekt.</p>
@@ -158,8 +158,29 @@ ${illu('stampelklocka-attest', 'Platschef i hjälm vid skrivbordet godkänner ar
 <h3>Ny medarbetare första dagen</h3>
 <p>En ny betongarbetare börjar på måndag. Hen laddar ner appen, loggar in och ser de projekt hen är kopplad till. Första incheckningen görs på arbetsplatsen samma morgon, utan utbildning och utan nyckel till någon terminal.</p>
 
+<h2>En vecka med stämpelklockan</h2>
+<p>Så här kan en vanlig vecka se ut för ett lag på åtta personer och tre projekt:</p>
+<div class="article-table"><table>
+<thead><tr><th>Dag</th><th>Vad händer</th><th>Vem</th></tr></thead>
+<tbody>
+<tr><td><strong>Måndag 06.45</strong></td><td>Laget stämplar in på sina projekt. På översikten syns vilka som är på jobbet.</td><td>Medarbetarna, arbetsledaren</td></tr>
+<tr><td><strong>Tisdag</strong></td><td>Två snickare byter projekt efter lunch. De checkar ut och in, och restiden läggs på passet.</td><td>Snickarna</td></tr>
+<tr><td><strong>Onsdag kväll</strong></td><td>Beordrad övertid vid en gjutning. Kvällspasset får timtypen övertid.</td><td>Betonglaget</td></tr>
+<tr><td><strong>Torsdag</strong></td><td>En medarbetare som inte vill dela sin position registrerar timmarna manuellt.</td><td>Medarbetaren</td></tr>
+<tr><td><strong>Fredag</strong></td><td>Arbetsledaren går igenom veckans pass och attesterar dem.</td><td>Arbetsledaren</td></tr>
+</tbody>
+</table></div>
+<p>Arbetet för kontoret begränsas till fredagens attest. Ingen behöver jaga lappar på måndag morgon, och timmarna ligger redan på rätt projekt när löneperioden stängs.</p>
+
+<h2>Vem gör vad med stämpelklockan</h2>
+<ul>
+<li><strong>Medarbetaren</strong> stämplar in och ut i appen, väljer timtyp och lägger till restid och traktamente.</li>
+<li><strong>Arbetsledaren eller projektadmin</strong> ser vem som är på jobbet, stämmer av avvikelser och attesterar passen.</li>
+<li><strong>Den som sköter lönen</strong> exporterar underlaget eller gör lönekörningen när perioden är attesterad.</li>
+</ul>
+
 <h2>Från stämpling till lön</h2>
-<p>När perioden är attesterad exporterar du tidrapporten som PDF eller Excel och löneunderlaget och AGI-underlaget som CSV. Kör ni lönen i ByggExp gör du lönekörningen i Löner, som ingår i Koll på pengarna och Full koll. Med tillägget Integrationer (${ADDON_PRICE} kr/mån) skapar du en SIE4-fil för bokföringen. Hela flödet från stämpling till lön och bokföring beskriver vi på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
+<p>När perioden är attesterad exporterar du tidrapporten som PDF eller Excel och löneunderlaget och AGI-underlaget som CSV. Kör ni lönen i ByggExp? Lönekörningen gör du i Löner, som ingår i Koll på pengarna och Full koll. Med tillägget Integrationer (${ADDON_PRICE} kr/mån) skapar du en SIE4-fil för bokföringen. Hela flödet från stämpling till lön och bokföring beskriver vi på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 ${illu('stampelklocka-kvall', 'Byggarbetare i hjälm går från bygget med en verktygslåda och tittar i mobilen, en månskära på himlen')}
 
@@ -239,7 +260,7 @@ const SCHEMALAGGNING: FunktionPage = {
   name: 'Schemaläggningssystem för bygg',
   h1: 'Schemaläggningssystem för bygg.',
   h1Accent: 'Schemat klart till måndag.',
-  lead: 'Vem som jobbar var, dag för dag – för hela laget.',
+  lead: 'Schemaläggning av personal: vem som jobbar var, dag för dag.',
   hero: {
     name: 'schemalaggning-klart',
     alt: 'Nöjd planerare lutar sig tillbaka i kontorsstolen bredvid en stor kalender med en bock',
@@ -247,23 +268,23 @@ const SCHEMALAGGNING: FunktionPage = {
   stepsHeading: ['Lägg schemat', 'och följ upp'],
   steps: [
     {
+      title: 'Planerade timmar per person',
+      text: 'Schemat i timmar – dag för dag, med summa per period.',
+      img: '/landing/funktioner/screen-planerat-1200.webp',
+      alt: 'Timmar enligt planerat i ByggExp: schemalagda timmar per medarbetare och dag för två veckor, med totalt planerat per person',
+    },
+    {
       title: 'Schema dag för dag',
       text: 'Klicka i rutan och välj projekt.',
       bullets: ['Godkänd frånvaro syns i schemat', 'Varning över 8 timmar per dag'],
       img: '/landing/funktioner/screen-bemanning-1200.webp',
-      alt: 'Bemanning i ByggExp: veckans rutnät med medarbetare, dagar och projekt med 8 timmar per dag',
+      alt: 'Personalschema i ByggExp: veckans rutnät med medarbetare, dagar och projekt med 8 timmar per dag',
     },
     {
       title: 'Uppgifter med tid',
       text: 'Start, deadline och påminnelser till laget.',
       img: '/landing/features/2uppgift-1200.webp',
-      alt: 'Skapa uppgift i ByggExp: projekt, startdatum, förfallodatum och påminnelser i webben, och en påminnelse i mobilen',
-    },
-    {
-      title: 'Följ upp mot stämplad tid',
-      text: 'Planerat, GPS och manuellt – per medarbetare och dag.',
-      img: '/landing/funktioner/screen-tidrapport-1200.webp',
-      alt: 'Tidrapport i ByggExp: timmar per medarbetare och dag för två veckor, filtrerat på planerat, GPS och manuellt',
+      alt: 'Schemalagd uppgift i ByggExp: startdatum, förfallodatum och påminnelser i webben, och påminnelsen i medarbetarens mobil',
     },
   ],
   body: `
@@ -271,7 +292,7 @@ const SCHEMALAGGNING: FunktionPage = {
 
 <h2>Så lägger du schemat i ByggExp</h2>
 <ol>
-<li><strong>Registrera frånvaro först.</strong> Semester, ATF-dagar och sjukdom läggs i Frånvaro. När ledigheten är godkänd syns den i schemat, så att du planerar runt den från början.</li>
+<li><strong>Registrera frånvaro först.</strong> Semester, VAB och sjukdom läggs i Frånvaro. När ledigheten är godkänd syns den i schemat, så att du planerar runt den från början.</li>
 <li><strong>Fördela veckan i Bemanning.</strong> Medarbetarna är rader och dagarna kolumner. Du klickar i en ruta och väljer projekt. Blir någon bokad på mer än åtta timmar samma dag markeras dagen som överbokad.</li>
 <li><strong>Titta längre fram i Planering.</strong> Gantt-schemat visar personalen över två veckor, en månad eller ett eget datumintervall. Där ser du luckor och krockar innan de blir ett problem.</li>
 <li><strong>Ge laget uppgifterna.</strong> I Uppgifter anger du vad som ska göras, med startdatum och starttid, förfallodatum och ansvarig person eller hela projektteamet.</li>
@@ -284,7 +305,7 @@ ${illu('schemalaggning-vecka', 'Planerare vid datorn med ett veckoschema i rutn�
 <h2>Regler som styr byggschemat</h2>
 <p>Ett schema är inte bara logistik. ${ext(ARBETSTIDSLAGEN, 'Arbetstidslagen')} sätter ramarna, och kollektivavtal som ${ext(BYGGAVTALET, 'Byggavtalet')} kan ersätta delar av den med egna regler. Det här är de punkter som oftast påverkar ett byggschema:</p>
 <ul>
-<li><strong>Ordinarie arbetstid.</strong> Högst 40 timmar i veckan enligt lagen, eller i genomsnitt över högst fyra veckor när arbetet kräver det.</li>
+<li><strong>Ordinarie arbetstid.</strong> Högst 40 timmar i veckan, eller 40 timmar i genomsnitt under högst fyra veckor.</li>
 <li><strong>Dygnsvila.</strong> Minst elva timmars sammanhängande ledighet under varje period om 24 timmar.</li>
 <li><strong>Veckovila.</strong> Minst 36 timmars sammanhängande ledighet under varje period om sju dagar.</li>
 <li><strong>Raster.</strong> Ingen ska arbeta mer än fem timmar i följd utan rast.</li>
@@ -307,6 +328,7 @@ ${illu('schemalaggning-sjuk', 'Arbetsledare pratar i telefon framför en tavla m
 
 <h2>Schemat i laget</h2>
 <p>Ett schema gör nytta först när laget följer det. I ByggExp-appen för iPhone och Android ser medarbetarna sina uppgifter och projektens tidplan i en Gantt-vy. De får påminnelser om uppgifterna med det intervall du väljer, och efter ett antal påminnelser kan chefen meddelas automatiskt. När dagen börjar stämplar de in på projektet, och timmarna hamnar där de hör hemma.</p>
+<p>Ett tips är att lägga veckans viktigaste händelser som uppgifter med starttid: leveranser, besiktningar och gjutningar. Då vet laget när något händer, och påminnelsen kommer i telefonen i stället för att någon måste ringa runt kvällen innan.</p>
 <p>Sjukanmälningar och ändringar hanterar du i webben: flytta personen i Bemanning, kontrollera att ingen blir överbokad och ge den som hoppar in en uppgift med starttid. Medarbetaren får uppgiften i appen.</p>
 
 ${illu('schemalaggning-lag', 'Tre leende byggarbetare i hjälm, en med borrmaskin, en med en stor mobil med blå staplar och en med vattenpass')}
@@ -321,6 +343,19 @@ ${illu('schemalaggning-lag', 'Tre leende byggarbetare i hjälm, en med borrmaski
 <li><strong>Övertid som inte var planerad.</strong> Timtypen på passet visar vem som har arbetat över och hur ofta det sker.</li>
 <li><strong>Personer som byter projekt mitt på dagen.</strong> Om det händer ofta kan schemat behöva lägga laget mer sammanhållet.</li>
 </ul>
+
+<h2>Exempel: plan mot utfall för en vecka</h2>
+<p>Ett lag på fyra personer är schemalagt på en villa och ett badrum. Så här kan veckan se ut när planerade timmar jämförs med stämplade:</p>
+<div class="article-table"><table>
+<thead><tr><th>Medarbetare</th><th>Planerat</th><th>Stämplat</th></tr></thead>
+<tbody>
+<tr><td><strong>Snickare 1, villan</strong></td><td>40 h</td><td>40 h</td></tr>
+<tr><td><strong>Snickare 2, villan</strong></td><td>40 h</td><td>44 h, varav 4 h övertid onsdag</td></tr>
+<tr><td><strong>Plattsättare, badrummet</strong></td><td>32 h</td><td>24 h, materialet kom en dag sent</td></tr>
+<tr><td><strong>Lärling, villan och badrummet</strong></td><td>40 h</td><td>38 h, gick tidigare en dag</td></tr>
+</tbody>
+</table></div>
+<p>Av veckan lär du dig två saker. Badrummet behöver en dags marginal för leveranser, och villan behöver en person till under onsdagarna, när gjutningen styr dagen. Nästa schema blir bättre, och övertiden syns innan den blir en vana.</p>
 
 <h2>Så inför du schemaläggningen i företaget</h2>
 <ol>
@@ -378,7 +413,7 @@ ${illu('schemalaggning-lag', 'Tre leende byggarbetare i hjälm, en med borrmaski
     {
       question: 'Hur långt i förväg ska schemat vara klart?',
       answer:
-        'Enligt arbetstidslagen ska besked om ändrad förläggning av den ordinarie arbetstiden lämnas minst två veckor i förväg, om inte oförutsedda händelser gör det omöjligt. Kollektivavtal kan ha egna regler. Många byggföretag lägger veckan senast på torsdagen veckan innan.',
+        'Enligt arbetstidslagen ska besked om ändrad förläggning av den ordinarie arbetstiden lämnas minst två veckor i förväg, om inte oförutsedda händelser gör det omöjligt. Kollektivavtal kan ha egna regler.',
     },
     {
       question: 'Vad är skillnaden mellan schemaläggning och resursplanering?',
@@ -420,11 +455,18 @@ const PROJEKTHANTERING: FunktionPage = {
   stepsHeading: ['Allt om projektet', 'på ett ställe'],
   steps: [
     {
+      title: 'Allt om projektet',
+      text: 'Översikt, uppgifter och arbetspass i projektkortet.',
+      bullets: ['Budget och kostnader i Koll på pengarna och Full koll'],
+      img: '/landing/features/project.webp',
+      alt: 'Projektkort i ByggExp: budget och resurser, betalningsplan, uppgifter och deadlines och arbetspass för ett projekt',
+    },
+    {
       title: 'Uppgifter till laget',
       text: 'Ansvarig, deadline och automatiska påminnelser.',
       bullets: ['Hela projektteamet eller en person', 'Återkommande uppgifter'],
       img: '/landing/features/2uppgift-1200.webp',
-      alt: 'Skapa uppgift i ByggExp: projekt, startdatum, förfallodatum och påminnelser i webben, och en påminnelse i mobilen',
+      alt: 'Uppgift i ett byggprojekt i ByggExp: projekt, ansvarig, startdatum, förfallodatum och påminnelser, och påminnelsen i mobilen',
     },
     {
       title: 'Foton per projekt',
@@ -432,15 +474,9 @@ const PROJEKTHANTERING: FunktionPage = {
       img: '/landing/features/4foto-1200.webp',
       alt: 'Projektets fotoflik i ByggExp med bilder från bygget i webben, och kameran i mobilappen',
     },
-    {
-      title: 'Timmar per projekt',
-      text: 'Laget stämplar in – timmarna hamnar på projektet.',
-      img: '/landing/features/1arbetspass-1200.webp',
-      alt: 'Arbetspass i ByggExp: timmar per medarbetare och dag i webben och i mobilappen',
-    },
   ],
   body: `
-<p>Projekthantering i bygg betyder att hålla ihop allt som händer i ett projekt: vem som gör vad, när det ska vara klart, vad som har dokumenterats och hur många timmar som har gått åt. I många byggföretag ligger det i dag i ett kalkylark, en gruppchatt, en pärm i bilen och projektledarens huvud. Det fungerar tills projekten blir fler än ett par. I ByggExp har varje projekt ett eget kort där uppgifter, dagbok, egenkontroller, foton, dokument och timmar samlas – i webben för kontoret och i appen för laget.</p>
+<p>Projekthantering i bygg betyder att hålla ihop allt som händer i ett projekt: vem som gör vad, när det ska vara klart, vad som har dokumenterats och hur många timmar som har gått åt. I många byggföretag ligger det i dag i ett kalkylark, en gruppchatt, en pärm i bilen och projektledarens huvud. Det fungerar tills projekten blir fler än ett par. I ByggExp har varje projekt ett eget kort där uppgifter, foton, dokument och timmar samlas, och dagbok och egenkontroller kopplas till samma projekt – i webben för kontoret och i appen för laget.</p>
 
 <h2>Det här samlas i projektet</h2>
 <p>När du lägger upp ett projekt anger du projektledare, plats, kund, start- och slutdatum. Projektet har en status – Planering, Pågår, Pausat eller Avslutat – så att listan visar vad som är aktivt. Till projektet hör:</p>
@@ -450,9 +486,9 @@ const PROJEKTHANTERING: FunktionPage = {
 <tr><td><strong>Allmänt</strong></td><td>Projektöversikt, team, uppgifter och deadlines</td></tr>
 <tr><td><strong>Tid och personal</strong></td><td>Timmar per medarbetare från arbetspassen</td></tr>
 <tr><td><strong>Filer</strong></td><td>Dokument, ritningar och foton</td></tr>
-<tr><td><strong>Dagbok</strong></td><td>Anteckningar per dag med väder, bemanning, utfört arbete och avvikelser</td></tr>
-<tr><td><strong>Egenkontroller</strong></td><td>Kontroller med punkter och status, från egna mallar</td></tr>
-<tr><td><strong>Ekonomi (Full koll)</strong></td><td>Budget, betalningsplan, kostnader och marginal</td></tr>
+<tr><td><strong>Dagbok (kopplad till projektet)</strong></td><td>Anteckningar per dag med väder, bemanning, utfört arbete och avvikelser</td></tr>
+<tr><td><strong>Egenkontroller i KMA (kopplade till projektet)</strong></td><td>Kontroller med punkter och status, från egna mallar</td></tr>
+<tr><td><strong>Ekonomi (Koll på pengarna och Full koll)</strong></td><td>Budget, betalningsplan, kostnader och marginal</td></tr>
 </tbody>
 </table></div>
 
@@ -488,16 +524,30 @@ ${illu('projekthantering-uppgifter', 'Byggarbetare i hjälm bockar av en checkli
 
 ${illu('projekthantering-nytt-projekt', 'Kvinna vid skrivbordet lägger till ett nytt projekt på datorskärmen')}
 
+<h2>Från kalkylark och gruppchatt till ett system</h2>
+<p>Flytten behöver inte göras på en gång. Så här brukar det gå bäst:</p>
+<ul>
+<li><strong>Vecka 1.</strong> Lägg upp de pågående projekten med projektledare, kund och datum. Data från ert gamla system flyttar vi över utan kostnad.</li>
+<li><strong>Vecka 2.</strong> Låt laget stämpla in och ta foton i appen. Sluta skicka bilder i gruppchatten – de hamnar i projektet ändå.</li>
+<li><strong>Vecka 3.</strong> Lägg uppgifter med påminnelser i stället för att skriva dem på whiteboarden i boden.</li>
+<li><strong>Vecka 4.</strong> Börja föra dagboken och göra egenkontrollerna i systemet.</li>
+</ul>
+<p>Efter en månad finns allt som rör ett projekt på ett ställe, och kalkylarket behövs bara för det ni själva väljer att ha kvar där.</p>
+
 <h2>Projektet i mobilen</h2>
 <p>Laget behöver inte webben. I appen för iPhone och Android finns det som används ute på bygget: incheckning på projektet, uppgifterna med påminnelser, projektens tidplan och kameran. Ett foto av en färdig håltagning eller en leverans hamnar direkt i projektets fotoflik, kopplat till arbetspasset, datumet och personen som tog det. Projektledaren på kontoret ser bilden i projektet och behöver inte be om den i en gruppchatt.</p>
 <p>För den som leder projektet räcker telefonen långt också: se vem som är på jobbet och gå igenom uppgifterna inför morgondagen.</p>
 
 <h2>Vem gör vad i systemet</h2>
-<ul>
-<li><strong>Administratören</strong> lägger upp projekt och personal och har tillgång till allt.</li>
-<li><strong>Projektledaren</strong> styr sina projekt: team, uppgifter, dagbok, egenkontroller och attest av timmarna.</li>
-<li><strong>Medarbetaren</strong> använder appen: stämplar in, ser uppgifter och projektens tidplan och tar foton som kopplas till passet.</li>
-</ul>
+<div class="article-table"><table>
+<thead><tr><th>Roll</th><th>I webben</th><th>I appen</th></tr></thead>
+<tbody>
+<tr><td><strong>Administratör</strong></td><td>Lägger upp projekt och personal, ser alla projekt och översikten</td><td>Ser vem som är på jobbet</td></tr>
+<tr><td><strong>Projektledare</strong></td><td>Team, uppgifter, dagbok, egenkontroller och attest av timmarna i sina projekt</td><td>Följer uppgifter och tidplan ute på bygget</td></tr>
+<tr><td><strong>Medarbetare</strong></td><td>–</td><td>Stämplar in, ser uppgifter och projektens tidplan, tar foton som kopplas till passet</td></tr>
+</tbody>
+</table></div>
+<p>Rollerna styr vad var och en ser. Medarbetaren får ett enkelt verktyg för dagen, och projektledaren och administratören får helheten.</p>
 <p>Eftersom alla arbetar i samma projekt behöver ingen skicka vidare information via sms eller e-post.</p>
 
 <h2>Projektets gång i fem faser</h2>
@@ -505,7 +555,7 @@ ${illu('projekthantering-nytt-projekt', 'Kvinna vid skrivbordet lägger till ett
 <li><strong>Start.</strong> Lägg upp projektet med status Planering, koppla teamet och skapa de första uppgifterna. En <a href="/sv/blog/startmote-byggprojekt-checklista">checklista för startmötet</a> hjälper dig att inte missa något.</li>
 <li><strong>Produktion.</strong> Laget stämplar in och tar foton, och dagboken förs varje dag. Ändra status till Pågår.</li>
 <li><strong>Kvalitet.</strong> Egenkontrollerna görs i takt med att momenten blir klara, till exempel före igenbyggnad.</li>
-<li><strong>Ändringar.</strong> Timmar för extraarbeten märks med rätt ÄTA på arbetspasset. Dokumentera beställningen med en <a href="/sv/verktyg/ata-mall">ÄTA-mall</a>. Med Full koll skapar du en förifylld faktura från en godkänd ÄTA.</li>
+<li><strong>Ändringar.</strong> Timmar för extraarbeten märks med rätt ÄTA på arbetspasset. Dokumentera beställningen med en <a href="/sv/verktyg/ata-mall">ÄTA-mall</a>. Med Koll på pengarna eller Full koll skapar du en förifylld faktura från en godkänd ÄTA.</li>
 <li><strong>Avslut.</strong> När projektet är klart ligger dagbok, egenkontroller, foton och timmar samlade inför slutbesiktning och överlämning. Sätt status Avslutat.</li>
 </ol>
 
@@ -528,7 +578,7 @@ ${illu('projekthantering-overlamning', 'Projektledare i hjälm lämnar över nyc
 <li>Planering av projekt och personal i samma system.</li>
 <li>En app för iPhone och Android som laget använder utan utbildning.</li>
 </ul>
-<p>Behöver ni också budget, lönsamhet, offerter och fakturor finns de i Full koll. Hur du följer upp marginalen under projektets gång beskriver vi i guiden om <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljning</a>.</p>
+<p>Behöver ni också budget, lönsamhet, offerter och fakturor finns de i Koll på pengarna och Full koll. Hur du följer upp marginalen under projektets gång beskriver vi i guiden om <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljning</a>.</p>
 
 <h2>Kom igång</h2>
 <p>Lägg upp de projekt som pågår nu och börja med uppgifter och stämpling. Dagbok och egenkontroller kan du ta in när rutinen sitter. Data från ert gamla system flyttar vi över utan kostnad. Projekthantering ingår i Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms med 10 användare, och du testar gratis i 14 dagar. Läs också om <a href="/sv/blog/projekthantering-byggforetag">projekthantering för byggföretag</a>, <a href="/sv/blog/projektledning-byggforetag">projektledning</a> och <a href="/sv/blog/app-for-byggprojekt">appen för byggprojekt</a>.</p>
@@ -541,7 +591,7 @@ ${illu('projekthantering-overlamning', 'Projektledare i hjälm lämnar över nyc
     },
     {
       question: 'Vad kostar projekthantering i ByggExp?',
-      answer: `Projekthantering ingår i Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms, inklusive 10 användare. Extra användare kostar ${EXTRA_USER_PRICE} kr/mån. Budget, lönsamhet och fakturor ingår i Full koll. Du testar gratis i 14 dagar.`,
+      answer: `Projekthantering ingår i Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms, inklusive 10 användare. Extra användare kostar ${EXTRA_USER_PRICE} kr/mån. Budget, lönsamhet och fakturor ingår i Koll på pengarna och Full koll. Du testar gratis i 14 dagar.`,
     },
     {
       question: 'Vad är skillnaden mellan projekthantering och projektledning?',
@@ -551,7 +601,7 @@ ${illu('projekthantering-overlamning', 'Projektledare i hjälm lämnar över nyc
     {
       question: 'Ingår budget och lönsamhet per projekt?',
       answer:
-        'Inte i Koll på jobbet. Budget, betalningsplan, kostnader och marginal per projekt ingår i Full koll och Koll på pengarna.',
+        'Inte i Koll på jobbet. Budget, betalningsplan, kostnader och marginal per projekt ingår i Koll på pengarna och Full koll.',
     },
     {
       question: 'Vad kan laget göra i appen?',
@@ -603,32 +653,32 @@ const PROJEKTPLANERING: FunktionPage = {
   lead: 'Start, slut och moment – för varje bygge.',
   hero: {
     name: 'projektplanering-gantt',
-    alt: 'Projektledare pekar på en stor tavla med ett Gantt-schema med trappstegsformade blå staplar, med små husmodeller nedtill',
+    alt: 'Projektledare pekar på en stor tavla med ett Gantt-schema där blå staplar ligger på var sin rad, med en kontorsstol bakom',
   },
   stepsHeading: ['Tidplan', 'från start till slut'],
   steps: [
+    {
+      title: 'Projekten vecka för vecka',
+      text: 'Vilket projekt laget arbetar på, dag för dag.',
+      img: '/landing/funktioner/screen-veckoplan.webp',
+      alt: 'Veckoplan i ByggExp: medarbetare och dagar i vecka 43 med projekten Lgh-renovering Vasastan och Villa Solsidan',
+    },
     {
       title: 'Alla projekt i en tidslinje',
       text: 'Gantt-schema per projekt eller per personal.',
       bullets: ['2 veckor, månad eller eget intervall', 'Status per projekt'],
       img: '/landing/features/5planering-1200.webp',
-      alt: 'Planering i ByggExp: Gantt-schema med staplar över månaden i webben och i mobilen',
+      alt: 'Tidplan i ByggExp: Gantt-schema med staplar över månaden i webben och tidslinjen i mobilappen',
     },
     {
       title: 'Moment som uppgifter',
       text: 'Startdatum, förfallodatum och ansvarig.',
       img: '/landing/features/2uppgift-1200.webp',
-      alt: 'Skapa uppgift i ByggExp: projekt, startdatum, förfallodatum och påminnelser i webben, och en påminnelse i mobilen',
-    },
-    {
-      title: 'Bemanna planen',
-      text: 'Vem som är på bygget, dag för dag.',
-      img: '/landing/funktioner/screen-bemanning-1200.webp',
-      alt: 'Bemanning i ByggExp: veckans rutnät med medarbetare, dagar och projekt med 8 timmar per dag',
+      alt: 'Moment i tidplanen som uppgift i ByggExp: startdatum, förfallodatum och påminnelser, och påminnelsen i mobilen',
     },
   ],
   body: `
-<p>Ett Gantt-schema är det vanligaste sättet att visa en tidplan i bygg: varje moment är en stapel på en tidslinje, och du ser direkt vad som pågår samtidigt och vad som måste vara klart innan nästa steg kan börja. För ett byggföretag med flera projekt finns det två nivåer att planera. Den ena är tidplanen inom ett projekt. Den andra är alla projekt tillsammans – när de startar, när de ska vara klara och om de krockar. I ByggExp planerar du projekten i ett Gantt-schema, bryter ner dem i moment med datum och ger laget tidplanen i appen.</p>
+<p>Ett Gantt-schema är det vanligaste sättet att visa en tidplan i bygg: varje moment är en stapel på en tidslinje, och du ser direkt vad som pågår samtidigt och vad som måste vara klart innan nästa steg kan börja. För ett byggföretag med flera projekt finns det två nivåer att planera. Den ena är tidplanen inom ett projekt. Den andra är alla projekt tillsammans – när de startar, när de ska vara klara och om de krockar. ByggExp fungerar som ett tidplaneringsprogram för bygg: du planerar projekten i ett Gantt-schema, bryter ner dem i moment med datum och ger laget tidplanen i appen. I webben är varje projekt en stapel; momenten läggs som uppgifter och syns i appens tidslinje.</p>
 
 <h2>Vad är ett Gantt-schema?</h2>
 <p>Schemat har tiden på den vågräta axeln och aktiviteterna på den lodräta. Varje aktivitet blir en stapel från startdatum till slutdatum. Läser du schemat uppifrån och ned ser du projektets ordning, och läser du det från vänster till höger ser du vad som händer varje vecka. Vill du veta mer om hur ett Gantt-schema byggs upp, med beroenden och kritisk linje, finns guiden om <a href="/sv/blog/gantt-schema-mall-bygg">Gantt-schema för bygg</a>.</p>
@@ -641,7 +691,7 @@ const PROJEKTPLANERING: FunktionPage = {
 <h3>3. Bemanningen</h3>
 <p>Till sist fördelar du personalen. I vyn <strong>per personal</strong> och i Bemanning ser du vem som är på vilket projekt, dag för dag. Hur du planerar kapaciteten över alla projekt beskriver vi på sidan om <a href="/sv/funktioner/resursplanering">resursplanering för bygg</a>.</p>
 
-${illu('projektplanering-moment', 'Två byggskeden bredvid varandra: en byggarbetare lyfter en skiva in i en väggstomme och en annan står på en stege vid ett hus med tak, med blå tidsstaplar ovanför')}
+${illu('projektplanering-moment', 'Byggarbetare i hjälm lyfter en skiva på plats i en vägg, med en blå tidsstapel ovanför')}
 
 <h2>Så bygger du tidplanen för ett nytt projekt</h2>
 <ol>
@@ -690,12 +740,22 @@ ${illu('projektplanering-leverans', 'Lastbil med kran lastar av takstolar under 
 
 ${illu('projektplanering-app', 'Arbetsledare i hjälm framför en husstomme håller en surfplatta med blå staplar på en tidslinje')}
 
+<h2>Vem äger tidplanen</h2>
+<p>En tidplan som alla får ändra i blir snabbt otydlig. Fördela ansvaret så här:</p>
+<ul>
+<li><strong>Projektledaren</strong> äger projektets start- och slutdatum och bestämmer när ett moment får flyttas. Det är också projektledaren som pratar med beställaren när tidplanen ändras.</li>
+<li><strong>Arbetsledaren</strong> bryter ner veckans moment i uppgifter med ansvarig och datum och säger till i tid när något inte hinns med.</li>
+<li><strong>Planeraren eller arbetschefen</strong> ser alla projekt i Gantt-schemat och ser till att två projekt inte behöver samma lag samma vecka.</li>
+<li><strong>Laget</strong> ser tidplanen och sina uppgifter i appen och bockar av uppgifterna när de är klara.</li>
+</ul>
+<p>När ansvaret är tydligt blir veckomötet en avstämning av avvikelser i stället för en genomgång av hela planen.</p>
+
 <h2>Veckoavstämning på tio minuter</h2>
 <p>En tidplan håller bara om den stäms av. Gör det på samma sätt varje vecka:</p>
 <ol>
 <li><strong>Öppna Planering per projekt.</strong> Kontrollera att varje pågående projekt fortfarande har rätt slutdatum.</li>
 <li><strong>Gå igenom veckans uppgifter.</strong> Vilka moment skulle ha varit klara, och är de det?</li>
-<li><strong>Jämför med timmarna.</strong> Har momentet tagit fler timmar än kalkylen räknade med syns det under Tid och personal i projektet.</li>
+<li><strong>Jämför med timmarna.</strong> Under Tid och personal ser du hur många timmar projektet har tagit hittills, jämfört med kalkylen.</li>
 <li><strong>Justera direkt.</strong> Flytta datum på uppgifter som påverkas och ändra bemanningen för nästa vecka.</li>
 </ol>
 
@@ -707,8 +767,8 @@ ${illu('projektplanering-app', 'Arbetsledare i hjälm framför en husstomme hål
 <h3>Ett extraarbete tillkommer</h3>
 <p>Beställaren vill ha ett extra fönster. Skapa en ny uppgift med datum för momentet, och dokumentera beställningen med en <a href="/sv/verktyg/ata-mall">ÄTA-mall</a>. Timmarna märks med rätt ÄTA på arbetspasset.</p>
 
-<h2>Gantt-mall eller planeringsprogram?</h2>
-<p>För en detaljerad tidplan inom ett enskilt projekt, med beroenden mellan momenten och kritisk linje, fungerar vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a> bra. Den blir svår att hålla aktuell när flera projekt pågår samtidigt och laget behöver se planen i mobilen. Många byggföretag använder därför båda: den detaljerade tidplanen i mallen och projektens datum, moment och bemanning i ByggExp, där laget ser dem varje dag.</p>
+<h2>Gantt-mall eller tidplaneringsprogram för bygg?</h2>
+<p>För en detaljerad tidplan inom ett enskilt projekt, med beroenden mellan momenten och kritisk linje, fungerar vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a> bra. ByggExp passar när flera projekt pågår samtidigt och laget ska se planen i mobilen. Många byggföretag använder båda: den detaljerade tidplanen i mallen och projektens datum, moment och bemanning i ByggExp, där laget ser dem varje dag.</p>
 <p>Planering av projekt och personal ingår i Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms med 10 användare, och du testar gratis i 14 dagar. Läs också guiden om <a href="/sv/blog/projektplanering-bygg">projektplanering för byggprojekt</a>.</p>
 `.trim(),
   faq: [

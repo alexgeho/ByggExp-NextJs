@@ -753,7 +753,7 @@ ${illu('resursplanering-franvaro', 'Projektledare vid skrivbordet framför en st
 ${illu('resursplanering-egenkontroll', 'Byggarbetare i hjälm håller en surfplatta med bockar framför en öppen regelvägg medan en kollega bär fram en gipsskiva')}
 
 <h2>Frånvaro i samma plan</h2>
-<p>Semester, ATF-dagar och sjukdom avgör hur många som faktiskt finns att planera med. I ByggExp registreras ledighet i Frånvaro. När den är godkänd syns den i Bemanning, så att ingen blir inbokad en dag med ledighet.</p>
+<p>Semester, VAB och sjukdom avgör hur många som faktiskt finns att planera med. I ByggExp registreras ledighet i Frånvaro. När den är godkänd syns den i Bemanning, så att ingen blir inbokad en dag med ledighet.</p>
 <p>Vill du räkna på kapacitet och övertid över längre tid beskriver vi resurshistogram och utjämning i guiden om <a href="/sv/blog/resursplanering-bygg">resursplanering i bygg</a>.</p>
 
 <h2>Planera säsongen, inte bara veckan</h2>

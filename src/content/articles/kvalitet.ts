@@ -528,10 +528,10 @@ const A_GANTT_SCHEMA_MALL_BYGG_HTML = `
 
 const A_GANTT_SCHEMA_MALL_BYGG: BlogPost = {
   _id: "code-"+"gantt-schema-mall-bygg",
-  title: "Gantt-schema och tidsplan för byggprojekt: aktiviteter, beroenden och kritisk linje", slug: "gantt-schema-mall-bygg", locale: "sv",
+  title: "Gantt-schema mall för bygg – gratis mall och guide", slug: "gantt-schema-mall-bygg", locale: "sv",
   excerpt: "En genomtänkt tidsplan avgör lönsamheten i entreprenaden – så bryter du ner projektet i aktiviteter, lägger beroenden och följer den kritiska linjen.", tag: "Projektledning",
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_GANTT_SCHEMA_MALL_BYGG_HTML,
-  seoTitle: "Gantt-schema mall bygg | ByggExp", seoDescription: "Så bygger du en tidsplan för byggprojektet: aktiviteter, beroenden, kritisk linje och lagkrav i schemat. Från löst Excel-ark till uppföljning i etapper.",
+  seoTitle: "Gantt-schema mall för bygg – gratis mall och guide | ByggExp", seoDescription: "Så bygger du en tidsplan för byggprojektet: aktiviteter, beroenden, kritisk linje och lagkrav i schemat. Från löst Excel-ark till uppföljning i etapper.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-18T19:06:00.000Z", createdAt: "2026-08-18T19:06:00.000Z", updatedAt: "2026-08-18T19:06:00.000Z",
 };
@@ -928,7 +928,7 @@ const A_RESURSPLANERING_BYGG_HTML = `
 <p>Tidrapporteringen finns i samma system: laget stämplar in och ut i mobilappen med GPS, och timmarna hamnar på projektet. Läs mer i guiden om <a href="/sv/blog/tidrapportering">tidrapportering i byggbranschen</a>. Maskiner och underentreprenörer planeras inte i ByggExp. Håll dem i en separat bokningslista enligt metoden ovan.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med att samla alla projekt i en gemensam vy – i vår <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a> eller i ett system. Vill du se hur Planering och Bemanning fungerar? Läs om vårt <a href="/sv/funktioner/resursplanering">resursplaneringsverktyg för bygg</a>, om ByggExp som <a href="/sv/blog/dagsplanering-och-planeringsmoten">planeringsprogram för bygg</a> eller <a href="/sv/contact">boka en gratis konsultation</a>. Du kan testa alla funktioner gratis i 14 dagar.</p>
+<p>Börja med att samla alla projekt i en gemensam vy – i vår <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a> eller i ett system. Vill du se hur Planering och Bemanning fungerar? Läs om vårt <a href="/sv/funktioner/projektplanering">tidplaneringsprogram för bygg med Gantt-schema</a>, vårt <a href="/sv/funktioner/resursplanering">resursplaneringsverktyg för bygg</a>, om ByggExp som <a href="/sv/blog/dagsplanering-och-planeringsmoten">planeringsprogram för bygg</a> eller <a href="/sv/contact">boka en gratis konsultation</a>. Du kan testa alla funktioner gratis i 14 dagar.</p>
 
 <h2>Relaterade guider</h2>
 <ul>

@@ -494,7 +494,58 @@
       content: attr(data-label) ": ";
       color: var(--muted);
     }
+    /* Package matrix (/sv/priser): stays a compact table with ✓ / – */
+    .article-table--matrix {
+      overflow-x: auto;
+    }
+    .article-table--matrix table {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      font-size: 13px;
+    }
+    .article-table--matrix th {
+      white-space: normal;
+      font-size: 12px;
+      line-height: 1.25;
+      vertical-align: bottom;
+    }
+    .article-table--matrix th:first-child,
+    .article-table--matrix td:first-child {
+      width: 40%;
+    }
+    .article-table--matrix thead {
+      display: table-header-group;
+    }
+    .article-table--matrix tbody {
+      display: table-row-group;
+    }
+    .article-table--matrix tr {
+      display: table-row;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+    }
+    .article-table--matrix th,
+    .article-table--matrix td {
+      display: table-cell;
+      width: auto;
+      padding: 8px 6px;
+      border-bottom: 1px solid var(--line);
+    }
+    .article-table--matrix td:first-child {
+      margin-bottom: 0;
+    }
   }
+}
+
+/* Package matrix: the ✓ / – columns are centred */
+.blog-article-content .article-table--matrix th:not(:first-child),
+.blog-article-content .article-table--matrix td:not(:first-child) {
+  text-align: center;
+}
+.blog-article-content .article-table--matrix td:not(:first-child) {
+  white-space: nowrap;
 }
 
 /* /sv/funktioner hub: cards to the commercial feature pages */

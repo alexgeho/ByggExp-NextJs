@@ -12,6 +12,7 @@
 
 import { FAKTURA_PRICE, PROJEKT_PRICE } from '../components/Pricing/Pricing';
 import { FUNKTION_PAGES_B, ILLU_HEIGHT_B } from './funktion-pages-b';
+import { FUNKTION_PAGES_C, ILLU_HEIGHT_C } from './funktion-pages-c';
 
 const EXTRA_USER_PRICE = 69;
 const KOMPLETT_PRICE = 990;
@@ -79,6 +80,7 @@ export const ILLU_HEIGHT: Record<string, number> = {
   'resursplanering-egenkontroll': 926,
   'resursplanering-vinter': 802,
   ...ILLU_HEIGHT_B,
+  ...ILLU_HEIGHT_C,
 };
 const IMG_DIR = '/landing/funktioner';
 export const illuSrc = (name: string, w: 640 | 1200 = 1200) => `${IMG_DIR}/${name}-${w}.webp`;
@@ -856,6 +858,7 @@ export const FUNKTION_PAGES: FunktionPage[] = [
   BYGGDAGBOK,
   RESURSPLANERING,
   ...FUNKTION_PAGES_B,
+  ...FUNKTION_PAGES_C,
 ].map(
   (page) => ({ ...page, body: labelTables(page.body) }),
 );

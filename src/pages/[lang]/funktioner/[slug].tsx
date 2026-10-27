@@ -78,10 +78,11 @@ export default function FunktionPage({
         )
     : isFaktura
       ? pricingT.financeItems
-          .slice(0, -1)
+          .filter((item) => !item.includes("(kommer snart)"))
           .map((item) => item.replace(/\*$/, ""))
       : pricingT.projectItems;
   const accent = isKomplett ? "green" : isFaktura ? "blue" : "purple";
+  const usersText = isFaktura ? "max 2 användare" : "inkl. 10 användare";
   // Fair-use limits of Koll på pengarna, first sentence only (no "*").
   const fakturaLimit = `${pricingT.fakturaLimitNote
     .replace(/^\*\s*/, "")
@@ -102,9 +103,7 @@ export default function FunktionPage({
         "@type": "Offer",
         price,
         priceCurrency: "SEK",
-        description: `${planName}, per företag och månad exkl. moms, ${
-          isFaktura ? "max 2 användare" : "inkl. 10 användare"
-        }`,
+        description: `${planName}, per företag och månad exkl. moms, ${usersText}`,
       },
     },
     {

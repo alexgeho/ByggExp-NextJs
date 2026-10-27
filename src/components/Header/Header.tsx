@@ -173,7 +173,12 @@ function Header({ headerT }: HeaderProps) {
           {/* NAV LINKS */}
           <div className={isMenuOpen ? "nav-links open" : "nav-links"}>
             <Link href={`/${lang}/funktioner`} onClick={closeMenu}>{headerT.funktioner}</Link>
-            <Link href={`/${lang}#pricing`} onClick={goToPricing}>{headerT.pricing}</Link>
+            {/* Swedish has its own pricing page; other languages jump to the home page block. */}
+            {lang === "sv" ? (
+              <Link href="/sv/priser" onClick={closeMenu}>{headerT.pricing}</Link>
+            ) : (
+              <Link href={`/${lang}#pricing`} onClick={goToPricing}>{headerT.pricing}</Link>
+            )}
 
             {/* RESOURCES — free tools + blog, grouped so visitors don't mistake
                 them for the paid product. Rendered as a mega-menu (icon + title

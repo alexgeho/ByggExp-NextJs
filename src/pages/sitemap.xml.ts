@@ -97,6 +97,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
     // Product landing pages (sv only).
     urls.push({ loc: `${localeOrigin('sv')}/sv/tidrapportering-app` });
     urls.push({ loc: `${localeOrigin('sv')}/sv/enmansforetag` });
+    urls.push({ loc: `${localeOrigin('sv')}/sv/priser` });
+    urls.push({ loc: `${localeOrigin('sv')}/sv/byt-system` });
     // Commercial feature pages (sv only), /sv/funktioner/<slug>.
     FUNKTION_PAGE_SLUGS.forEach((slug) => {
       urls.push({ loc: `${localeOrigin('sv')}/sv/funktioner/${slug}` });

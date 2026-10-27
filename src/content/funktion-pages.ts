@@ -62,13 +62,21 @@ export const ILLU_HEIGHT: Record<string, number> = {
   'tidrapporteringssystem-lon': 1175,
   'hantverkare-servicebil': 927,
   'hantverkare-flera-kunder': 733,
-  'hantverkare-faktura': 1025,
+  'hantverkare-faktura': 1030,
   'byggdagbok-platskontor': 1277,
   'byggdagbok-foto': 1159,
   'byggdagbok-leverans': 924,
   'resursplanering-gantt': 1205,
   'resursplanering-bemanning': 1030,
-  'resursplanering-franvaro': 718
+  'resursplanering-franvaro': 718,
+  'tidrapporteringssystem-kvallsgjutning': 900,
+  'tidrapporteringssystem-id06': 740,
+  'hantverkare-kvitto': 1069,
+  'hantverkare-anstallda': 1007,
+  'byggdagbok-vader': 1179,
+  'byggdagbok-tillbyggnad': 900,
+  'resursplanering-egenkontroll': 926,
+  'resursplanering-vinter': 802,
 };
 const IMG_DIR = '/landing/funktioner';
 export const illuSrc = (name: string, w: 640 | 1200 = 1200) => `${IMG_DIR}/${name}-${w}.webp`;
@@ -179,6 +187,8 @@ ${illu('tidrapporteringssystem-attest', 'Kvinna vid skrivbordet arbetar vid en d
 <p>Övertiden har också ett tak i lag. ${ext(ARBETSTIDSLAGEN, 'Arbetstidslagen')} tillåter högst 200 timmar allmän övertid per anställd och kalenderår, och kollektivavtal kan ha egna regler. När timtypen finns på varje pass ser du snabbt vem som närmar sig gränsen.</p>
 <p>Vill du räkna på en enskild vecka? Använd <a href="/sv/verktyg/ob-overtid-kalkylator">OB- och övertidskalkylatorn</a> eller läs guiden <a href="/sv/blog/ob-overtid-byggavtalet-rakna">så räknar du OB och övertid enligt Byggavtalet</a>.</p>
 
+${illu('tidrapporteringssystem-kvallsgjutning', 'Betongbil gjuter en platta i kvällsljus under en arbetslampa, en byggarbetare drar av betongen och en arbetsledare tittar i mobilen')}
+
 <h2>Restid, traktamente och ÄTA på samma pass</h2>
 <p>Grundtimmarna blir sällan fel i en byggtidrapport. Det som faller bort är allt runt omkring:</p>
 <ul>
@@ -218,6 +228,8 @@ ${illu('tidrapporteringssystem-lon', 'Attesterade tidkort och klockor flyttas ti
 </table></div>
 <p>Den som stämplar behöver aldrig öppna webben. I översikten ser kontoret under dagen hur många som är på jobbet och hur många timmar som har registrerats.</p>
 <p>På varje medarbetare kan du också lägga ID06 och andra certifikat med utgångsdatum. Då ser du i god tid vem som behöver förnya ett kort före nästa jobb på en arbetsplats som kräver det.</p>
+
+${illu('tidrapporteringssystem-id06', 'Byggarbetare i hjälm visar sitt ID-kort för en arbetsledare med surfplatta vid grinden till ett inhägnat bygge med byggställning')}
 
 <h2>Checklista: välj tidrapporteringssystem för bygg</h2>
 <p>Gå igenom listan med era egna rutiner framför dig. Det är sällan antalet funktioner som avgör, utan om systemet täcker det ni faktiskt gör varje vecka.</p>
@@ -369,7 +381,7 @@ ${illu('hantverkare-flera-kunder', 'Hantverkare monterar ett köksskåp och regi
 <p>Fakturerar du på löpande räkning kan du exportera tidrapporten för projektet som PDF och skicka den med fakturan. Kunden ser då datum och timmar för varje pass, och frågor om ”hur kunde det bli så många timmar” blir färre. Samma PDF är ditt underlag om fakturan ifrågasätts.</p>
 <p>Läs mer om hur du <a href="/sv/blog/fakturera-som-hantverkare">fakturerar som hantverkare</a> eller räkna på avdraget med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylatorn</a>.</p>
 
-${illu('hantverkare-faktura', 'Hantverkare med hammare lägger blå mynt i en glasburk bredvid ett hus under byggnad')}
+${illu('hantverkare-faktura', 'Hantverkare med hammare lägger guldmynt i en glasburk bredvid ett hus under byggnad')}
 
 <h2>Löpande räkning eller fast pris</h2>
 <p>Tidrapporten gör olika nytta beroende på hur jobbet är prissatt:</p>
@@ -383,6 +395,8 @@ ${illu('hantverkare-faktura', 'Hantverkare med hammare lägger blå mynt i en gl
 <p>Material som köps på vägen till jobbet är lätt att glömma i fakturan. I ByggExp skannar du kvittot med mobilkameran och kopplar det till projektet direkt i kassakön. Inkommande leverantörsfakturor kan skickas in via e-post och skannas på samma sätt. På så sätt ligger både timmar och material på kundens projekt när du ska fakturera, och projektets ekonomi (Full koll) visar vad jobbet faktiskt kostade.</p>
 <p>Är du ensam i firman och mest behöver fakturor, kvitton och påminnelser? Då kan paketet för <a href="/sv/enmansforetag">enmansföretag</a> räcka.</p>
 
+${illu('hantverkare-kvitto', 'Hantverkare i hjälm fotograferar ett kvitto med mobilen bredvid en vagn med brädor och färghink i en byggvaruhandel')}
+
 <h2>Återbesök och servicejobb som inte glöms</h2>
 <p>En stor del av en hantverkares dag är småjobb som är lätta att lova och lätta att glömma: ett återbesök för att justera en dörr, en kompletterande leverans, en garantifråga. I Uppgifter skapar du en uppgift med datum och tid, tilldelar den dig själv eller en anställd och väljer hur ofta appen ska påminna. Påminnelsen upprepas tills uppgiften är markerad som klar, och återkommande jobb – till exempel en årlig service – skapas på nytt när det förra är avslutat.</p>
 <p>När du sedan kör till kunden checkar du in på projektet som vanligt, och tiden hamnar där den ska.</p>
@@ -390,6 +404,8 @@ ${illu('hantverkare-faktura', 'Hantverkare med hammare lägger blå mynt i en gl
 <h2>När du har anställda</h2>
 <p>Så fort du har en eller två anställda blir tidrapporten också löneunderlag. Varje pass har en timtyp – normal, övertid eller OB – och traktamente kan väljas som helt eller halvt. Passen attesteras och löneunderlaget exporteras som CSV. Är firman ansluten till Byggavtalet behöver timtyperna stämma med avtalets regler. Hur det fungerar för större lag beskriver vi på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 <p>Behöver anställda visa ID06 eller andra behörigheter? Certifikaten läggs på varje medarbetare med utgångsdatum, så att du ser vem som behöver förnya.</p>
+
+${illu('hantverkare-anstallda', 'Hantverkare visar en anställd hur en kakelplatta ska sättas på en delvis kaklad vägg, med en hink fix, en tandspackel och en verktygslåda på golvet')}
 
 <h2>Vad ska ett tidrapporteringssystem för hantverkare klara?</h2>
 <p>Hantverksfirmor behöver något annat än stora entreprenörer. Ställ de här frågorna innan du väljer:</p>
@@ -536,6 +552,8 @@ ${illu('byggdagbok-foto', 'Byggarbetare i hjälm fotograferar en vägg av block 
 <h2>Fem minuter om dagen</h2>
 <p>En byggdagbok behöver inte ta lång tid. Med fasta fält skriver arbetsledaren väder och bemanning på morgonen och utfört arbete, avvikelser och material innan arbetsdagen slutar. Fotona har laget redan tagit under dagen. Det som tar tid är att rekonstruera en vecka i efterhand, och det är just det en daglig rutin undviker.</p>
 
+${illu('byggdagbok-vader', 'Arbetsledare i hjälm skriver i mobilen bredvid en termometer på en stolpe, med sol och moln ovanför och en betongblandare vid en trave skivor')}
+
 <h2>Vem skriver – och när?</h2>
 <p>Den vanligaste orsaken till en tunn byggdagbok är att ingen äger den. Bestäm därför:</p>
 <ul>
@@ -558,6 +576,8 @@ ${illu('byggdagbok-foto', 'Byggarbetare i hjälm fotograferar en vägg av block 
 </tbody>
 </table></div>
 <p>Ingen av raderna tar mer än ett par minuter att skriva. Ändå svarar veckan på de frågor som brukar komma senare: varför väggresningen tog en dag extra, när frågan om fönstret kom upp och hur infästningarna såg ut innan de byggdes in. Frågan om fönstret är ett tillägg som ska hanteras som ÄTA – dagboken visar bara när den kom upp.</p>
+
+${illu('byggdagbok-tillbyggnad', 'Beställare pekar på en öppning i en regelvägg till en tillbyggnad medan en snickare i hjälm antecknar i mobilen')}
 
 <h2>Tre dagar som avgörs av dagboken</h2>
 <h3>Frost före gjutningen</h3>
@@ -728,6 +748,8 @@ ${illu('resursplanering-franvaro', 'Projektledare vid skrivbordet framför en st
 <h2>Uppgifter kompletterar planen</h2>
 <p>Bemanningen säger var folk ska vara. Uppgifterna säger vad som ska göras där. I Uppgifter ger du en person eller hela projektteamet en uppgift med prioritet, start- och förfallodatum. Påminnelser skickas med det intervall du väljer, och efter ett antal påminnelser kan chefen meddelas automatiskt. Så missas inte det som måste vara klart innan nästa lag kan börja, till exempel en egenkontroll före igenbyggnad.</p>
 
+${illu('resursplanering-egenkontroll', 'Byggarbetare i hjälm håller en surfplatta med bockar framför en öppen regelvägg medan en kollega bär fram en gipsskiva')}
+
 <h2>Frånvaro i samma plan</h2>
 <p>Semester, ATF-dagar och sjukdom avgör hur många som faktiskt finns att planera med. I ByggExp registreras ledighet i Frånvaro. När den är godkänd syns den i Bemanning, så att ingen blir inbokad en dag med ledighet.</p>
 <p>Vill du räkna på kapacitet och övertid över längre tid beskriver vi resurshistogram och utjämning i guiden om <a href="/sv/blog/resursplanering-bygg">resursplanering i bygg</a>.</p>
@@ -742,6 +764,8 @@ ${illu('resursplanering-franvaro', 'Projektledare vid skrivbordet framför en st
 <p>Kortsiktigt arbetar du sedan i Bemanning, dag för dag, medan den långa planen ligger kvar som ram.</p>
 
 <p>Ett tips: gå igenom den långa planen en gång i månaden tillsammans med projektledarna. Det tar en halvtimme och fångar de flesta krockar medan de fortfarande går att lösa genom att flytta en start en vecka.</p>
+
+${illu('resursplanering-vinter', 'Två byggarbetare i hjälm lägger en isoleringsmatta över en nygjuten betongplatta i snön, bredvid ett värmeaggregat')}
 
 <h2>Vad du planerar – och vad du inte planerar – i ByggExp</h2>
 <div class="article-table"><table>

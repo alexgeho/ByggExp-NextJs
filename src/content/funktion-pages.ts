@@ -2,12 +2,15 @@
 // Rendered by src/pages/[lang]/funktioner/[slug].tsx with the same template as
 // /sv/tidrapportering-app. Every product claim is backed by
 // docs/seo/product-facts-verified.md and PRODUCT-FEATURES.md — respect the NO
-// lists there (no offline, no Fortnox/Visma API, no automatic Byggavtalet
-// calculation, dagbok is web only with no PDF export / customer access / GPS,
-// planning has no machines, subcontractors or drag-and-drop). "Gratis" = the
-// 14-day trial. Each page has its own angle; keep the text overlap low.
+// lists there (no offline, no automatic Byggavtalet calculation, dagbok is web
+// only with no PDF export / customer access / GPS, planning has no machines,
+// subcontractors or drag-and-drop). Don't claim anything about Fortnox either
+// way. Packages = ByggExp-BackEnd/src/company/modules.ts: Koll på jobbet has
+// projects, tasks, dagbok, kma, shifts, schedule, bemanning, leave, tools — NOT
+// budget, profitability, invoices, expenses or payroll (Koll på pengarna / Full
+// koll). "Gratis" = the 14-day trial. Each page has its own angle.
 
-import { PROJEKT_PRICE } from '../components/Pricing/Pricing';
+import { FAKTURA_PRICE, PROJEKT_PRICE } from '../components/Pricing/Pricing';
 
 const EXTRA_USER_PRICE = 69;
 const KOMPLETT_PRICE = 990;
@@ -23,8 +26,16 @@ export type FunktionStep = {
   alt: string;
 };
 
+export type FunktionPlan = 'projekt' | 'komplett';
+
 export type FunktionPage = {
   slug: string;
+  /** Package shown in the price block + JSON-LD offer. */
+  plan: FunktionPlan;
+  /** Page-specific line in the price block, e.g. "Byggdagbok ingår". */
+  priceIncluded: string;
+  /** Third hero check (after "14 dagar gratis" and "Ingen bindningstid"). */
+  heroCheck: string;
   /** <title> — exact main keyword first. */
   title: string;
   /** Meta description, ≤ 155 characters. */
@@ -44,13 +55,27 @@ export type FunktionPage = {
 };
 
 // 3D illustrations live in /public/landing/funktioner as <name>-1200.webp and
-// <name>-640.webp (4:3, white background).
+// <name>-640.webp (white background, trimmed to the subject). Height at 1200 px:
+export const ILLU_HEIGHT: Record<string, number> = {
+  'tidrapporteringssystem-incheckning': 1175,
+  'tidrapporteringssystem-attest': 1152,
+  'tidrapporteringssystem-lon': 1175,
+  'hantverkare-servicebil': 927,
+  'hantverkare-flera-kunder': 733,
+  'hantverkare-faktura': 1025,
+  'byggdagbok-platskontor': 1277,
+  'byggdagbok-foto': 1159,
+  'byggdagbok-leverans': 924,
+  'resursplanering-gantt': 1205,
+  'resursplanering-bemanning': 1030,
+  'resursplanering-franvaro': 718
+};
 const IMG_DIR = '/landing/funktioner';
 export const illuSrc = (name: string, w: 640 | 1200 = 1200) => `${IMG_DIR}/${name}-${w}.webp`;
 export const illuSrcSet = (name: string) => `${illuSrc(name, 640)} 640w, ${illuSrc(name, 1200)} 1200w`;
 
 function illu(name: string, alt: string): string {
-  return `<figure class="fn-illu"><img src="${illuSrc(name)}" srcset="${illuSrcSet(name)}" sizes="(max-width: 760px) 100vw, 640px" width="1200" height="900" loading="lazy" decoding="async" alt="${alt}"></figure>`;
+  return `<figure class="fn-illu"><img src="${illuSrc(name)}" srcset="${illuSrcSet(name)}" sizes="(max-width: 760px) 100vw, 560px" width="1200" height="${ILLU_HEIGHT[name]}" loading="lazy" decoding="async" alt="${alt}"></figure>`;
 }
 
 const BYGGAVTALET =
@@ -64,6 +89,28 @@ const SKV_ROT =
 const SKV_OMVAND_MOMS =
   'https://www.skatteverket.se/foretag/moms/sarskildamomsregler/byggverksamhet/omvandbetalningsskyldighetinombyggsektorn.4.47eb30f51122b1aaad28000545.html';
 
+export const PLAN_PRICE: Record<FunktionPlan, { price: number; extra: number }> = {
+  projekt: { price: PROJEKT_PRICE, extra: EXTRA_USER_PRICE },
+  komplett: { price: KOMPLETT_PRICE, extra: 119 },
+};
+
+// Mobile: 3-column tables become stacked cards (blog-article-content CSS). Each
+// cell after the first gets its column name as data-label.
+function labelTables(html: string): string {
+  return html.replace(/<table>([\s\S]*?)<\/table>/g, (table, inner: string) => {
+    const heads = [...inner.matchAll(/<th>([\s\S]*?)<\/th>/g)].map((m) => m[1]);
+    if (heads.length < 3) return table;
+    const body = inner.replace(/<tr>([\s\S]*?)<\/tr>/g, (row, cells: string) => {
+      let i = 0;
+      return `<tr>${cells.replace(/<td>/g, () => {
+        const label = heads[i++];
+        return i === 1 ? '<td>' : `<td data-label="${label}">`;
+      })}</tr>`;
+    });
+    return `<table>${body}</table>`;
+  });
+}
+
 const ext = (href: string, text: string) =>
   `<a href="${href}" target="_blank" rel="noopener">${text}</a>`;
 
@@ -73,10 +120,13 @@ const ext = (href: string, text: string) =>
 
 const TIDSYSTEM: FunktionPage = {
   slug: 'tidrapporteringssystem-bygg',
+  plan: 'projekt',
+  priceIncluded: 'Tidrapportering och attest ingår',
+  heroCheck: 'iPhone och Android',
   title: 'Tidrapporteringssystem bygg – tid, attest och lön | ByggExp',
   description:
     'Tidrapporteringssystem för bygg: stämpla in med GPS, timtyp per pass, attest och export till lön och SIE4. iPhone och Android. 14 dagar gratis.',
-  name: 'Tidrapporteringssystem bygg',
+  name: 'Tidrapporteringssystem för bygg',
   h1: 'Tidrapporteringssystem för bygg.',
   h1Accent: 'Från stämpling till lön.',
   lead: 'Timmar per projekt, attesterade och klara för lön.',
@@ -94,15 +144,15 @@ const TIDSYSTEM: FunktionPage = {
       alt: 'Arbetspass i ByggExp: timmar per medarbetare och dag i webben och i mobilappen',
     },
     {
-      title: 'Följ tiden i projektet',
-      text: 'Timmar, budget och marginal per projekt.',
-      img: '/landing/features/9ekonomi-1200.webp',
-      alt: 'Projektets ekonomiflik i ByggExp med timmar, kostnader och marginal mot budget',
+      title: 'Granska timmarna',
+      text: 'Planerat, GPS och manuellt – per medarbetare och dag.',
+      img: '/landing/funktioner/screen-tidrapport-1200.webp',
+      alt: 'Tidrapport i ByggExp: timmar per medarbetare och dag för två veckor, filtrerat på planerat, GPS och manuellt',
     },
     {
-      title: 'Attestera och kör lön',
+      title: 'Attestera och exportera',
       text: 'Godkänn passen och exportera underlaget.',
-      bullets: ['Tidrapport som PDF och Excel', 'Löne-CSV och AGI-underlag', 'SIE4-fil till bokföringen'],
+      bullets: ['Tidrapport som PDF och Excel', 'Löne-CSV och AGI-underlag', 'Lönekörning ingår i Koll på pengarna och Full koll'],
       img: '/landing/features/12salary-1200.webp',
       alt: 'Löner i ByggExp: timmar och timlön per medarbetare, export av CSV och AGI-underlag',
     },
@@ -113,15 +163,15 @@ const TIDSYSTEM: FunktionPage = {
 <h2>Så fungerar tidrapporteringen i ByggExp</h2>
 <ol>
 <li><strong>Du lägger upp projekt och personal.</strong> I webbadmin skapar du projekten med plats och lägger upp medarbetarna. Var och en laddar ner appen till iPhone eller Android.</li>
-<li><strong>Medarbetaren stämplar in på arbetsplatsen.</strong> Incheckningen görs med GPS. Lämnar han projektområdet pausas passet automatiskt, så att ärendet till bygghandeln inte blir arbetstid på fel projekt. Vill någon hellre fylla i timmarna själv går det att registrera tiden manuellt per projekt och dag.</li>
+<li><strong>Medarbetaren stämplar in på arbetsplatsen.</strong> Incheckningen görs med GPS. Lämnar medarbetaren projektområdet pausas passet automatiskt, så att ärendet till bygghandeln inte blir arbetstid på fel projekt. Vill någon hellre fylla i timmarna själv går det att registrera tiden manuellt per projekt och dag.</li>
 <li><strong>Passet får rätt timtyp.</strong> På varje pass väljs normal tid, övertid eller OB. Restid läggs till i kilometer och minuter, och traktamente som helt, halvt eller inget.</li>
 <li><strong>Extraarbeten märks direkt.</strong> Timmar som hör till en ÄTA kopplas till ÄTA:n på passet och kan faktureras separat.</li>
-<li><strong>Arbetsledaren attesterar.</strong> Admin eller projektadmin går igenom passen och godkänner dem. Det är en attestnivå, vilket räcker för de flesta byggföretag med ett par lag.</li>
+<li><strong>Arbetsledaren attesterar.</strong> Admin eller projektadmin går igenom passen och godkänner dem.</li>
 <li><strong>Underlaget går vidare.</strong> Tidrapporten exporteras som PDF eller Excel, löneunderlaget och AGI-underlaget som CSV. Med tillägget Integrationer skapar du dessutom en SIE4-fil för Fortnox, Visma eller BL.</li>
 </ol>
 <p>Medarbetaren behöver alltså bara två saker: checka in när dagen börjar och välja rätt timtyp. Resten sköts i webben av den som har ansvar för lön och projekt.</p>
 
-${illu('tidrapporteringssystem-attest', 'Arbetsledare vid skrivbordet attesterar en rad tidkort med blå bockar, med en klocka på väggen')}
+${illu('tidrapporteringssystem-attest', 'Kvinna vid skrivbordet arbetar vid en dator som visar ett veckoschema och en klocka')}
 
 <h2>OB och övertid enligt Byggavtalet</h2>
 <p>För byggföretag med kollektivavtal styr ${ext(BYGGAVTALET, 'Byggavtalet')} vad som räknas som ordinarie arbetstid, när övertid uppstår och vilka tillägg som gäller för obekväm arbetstid. Satserna ändras mellan avtalsperioderna, så hämta dem ur den aktuella utgåvan i stället för ur en gammal tabell.</p>
@@ -134,15 +184,15 @@ ${illu('tidrapporteringssystem-attest', 'Arbetsledare vid skrivbordet attesterar
 <ul>
 <li><strong>Restid.</strong> Kilometer och minuter registreras på passet och blir underlag för restidsersättning. Räkna på beloppen med <a href="/sv/verktyg/restidsersattning-kalkylator">restidskalkylatorn</a>.</li>
 <li><strong>Traktamente.</strong> Helt eller halvt traktamente väljs per pass. Skatteverket har särskilda regler för ${ext(SKV_TRAKTAMENTE_BYGG, 'traktamenten i byggbranschen')}, så kontrollera att förutsättningarna är uppfyllda innan ni betalar ut skattefritt.</li>
-<li><strong>ÄTA.</strong> Timmarna märks med rätt ÄTA på passet. När ÄTA:n är godkänd kan du skapa en förifylld faktura från den, så att extraarbetet inte glöms bort i slutfakturan.</li>
+<li><strong>ÄTA.</strong> Timmarna märks med rätt ÄTA på passet. När ÄTA:n är godkänd kan du skapa en förifylld faktura från den (Full koll), så att extraarbetet inte glöms bort i slutfakturan.</li>
 </ul>
 
 <h2>Från attest till lön och bokföring</h2>
 <p>När perioden är attesterad har du tre vägar vidare, beroende på hur ni sköter lönen i dag:</p>
 <ul>
 <li><strong>Ni har en lönebyrå eller ett eget lönesystem.</strong> Exportera löneunderlaget som CSV och tidrapporten som Excel eller PDF. Byrån får timmar per medarbetare och timtyp i stället för inskannade lappar.</li>
-<li><strong>Ni kör lönen i ByggExp.</strong> I Löner gör du en lönekörning per period med timmar per medarbetare och timtyp, bruttolön, skatteavdrag per rad och lönespecifikation. AGI-underlaget exporteras som CSV. Löner ingår i paketet Full koll.</li>
-<li><strong>Bokföringen ligger i Fortnox, Visma eller BL.</strong> Med tillägget Integrationer (${ADDON_PRICE} kr/mån) skapar du en SIE4-fil som läses in i bokföringsprogrammet. Det är en filexport, inte en direktkoppling.</li>
+<li><strong>Ni kör lönen i ByggExp.</strong> I Löner gör du en lönekörning per period med timmar per medarbetare och timtyp, bruttolön, skatteavdrag per rad och lönespecifikation. AGI-underlaget exporteras som CSV. Löner ingår i Koll på pengarna och Full koll.</li>
+<li><strong>Bokföringen ligger i Fortnox, Visma eller BL.</strong> Med tillägget Integrationer (${ADDON_PRICE} kr/mån) skapar du en SIE4-fil som läses in i bokföringsprogrammet.</li>
 </ul>
 
 ${illu('tidrapporteringssystem-lon', 'Attesterade tidkort och klockor flyttas till en kontorsarbetare vid datorn som tar fram löneunderlaget')}
@@ -151,9 +201,9 @@ ${illu('tidrapporteringssystem-lon', 'Attesterade tidkort och klockor flyttas ti
 <h3>Laget byter arbetsplats mitt på dagen</h3>
 <p>Snickarna börjar på ett radhusprojekt och ska efter lunch till en tillbyggnad i grannkommunen. De checkar ut på det första projektet och in på det andra, och restiden läggs på passet. På kvällen ligger förmiddagen och eftermiddagen på var sitt projekt, utan att någon behövt komma ihåg fördelningen.</p>
 <h3>Beordrad kvällsgjutning</h3>
-<p>Betongbilen kommer sent och arbetsledaren beordrar övertid. Medarbetarna väljer övertid på kvällspasset. Vid attesten ser arbetsledaren att timtypen stämmer med det han beordrade, och i lönekörningen får timmarna den faktor ni har angett för övertid.</p>
+<p>Betongbilen kommer sent och arbetsledaren beordrar övertid. Medarbetarna väljer övertid på kvällspasset. Vid attesten kontrollerar arbetsledaren att timtypen stämmer med det som beordrades, och i lönekörningen får timmarna den faktor ni har angett för övertid.</p>
 <h3>Projektledaren vill veta hur timmarna ligger till</h3>
-<p>Mitt i projektet undrar projektledaren om timbudgeten håller. Under fliken Tid och personal ser han timmarna per medarbetare, och under Ekonomi budget, kostnader och marginal. Frågan går att besvara samma dag, inte först när projektet är slutfakturerat.</p>
+<p>Mitt i projektet undrar projektledaren om timbudgeten håller. Under fliken Tid och personal syns timmarna per medarbetare, och med Full koll även budget, kostnader och marginal under Ekonomi. Frågan går att besvara samma dag, inte först när projektet är slutfakturerat.</p>
 
 <h2>Vem gör vad i systemet</h2>
 <p>Ett tidrapporteringssystem fungerar när varje roll bara gör sin del, och gör den i rätt verktyg:</p>
@@ -162,12 +212,12 @@ ${illu('tidrapporteringssystem-lon', 'Attesterade tidkort och klockor flyttas ti
 <tbody>
 <tr><td><strong>Yrkesarbetare</strong></td><td>Checkar in och ut, väljer timtyp, lägger restid, traktamente och ÄTA på passet</td><td>Mobilappen</td></tr>
 <tr><td><strong>Arbetsledare</strong></td><td>Ser vem som är på jobbet, går igenom passen och attesterar</td><td>Webben och appen</td></tr>
-<tr><td><strong>Projektledare</strong></td><td>Följer timmar, budget och marginal per projekt</td><td>Webben</td></tr>
-<tr><td><strong>Lön och ekonomi</strong></td><td>Exporterar löneunderlag, AGI-underlag och SIE4, eller kör lönen i Löner</td><td>Webben</td></tr>
+<tr><td><strong>Projektledare</strong></td><td>Följer timmarna per projekt, med Full koll även budget och marginal</td><td>Webben</td></tr>
+<tr><td><strong>Lön och ekonomi</strong></td><td>Exporterar löneunderlag, AGI-underlag och SIE4, eller kör lönen i Löner (Koll på pengarna och Full koll)</td><td>Webben</td></tr>
 </tbody>
 </table></div>
-<p>Den som stämplar behöver aldrig öppna webben, och den som kör lönen behöver aldrig jaga lappar. I översikten ser kontoret under dagen hur många som är på jobbet och hur många timmar som har registrerats.</p>
-<p>På varje medarbetare kan du också lägga ID06 och andra certifikat med utgångsdatum. Då ser du i god tid vem som behöver förnya ett kort innan han ska till en arbetsplats som kräver det.</p>
+<p>Den som stämplar behöver aldrig öppna webben. I översikten ser kontoret under dagen hur många som är på jobbet och hur många timmar som har registrerats.</p>
+<p>På varje medarbetare kan du också lägga ID06 och andra certifikat med utgångsdatum. Då ser du i god tid vem som behöver förnya ett kort före nästa jobb på en arbetsplats som kräver det.</p>
 
 <h2>Checklista: välj tidrapporteringssystem för bygg</h2>
 <p>Gå igenom listan med era egna rutiner framför dig. Det är sällan antalet funktioner som avgör, utan om systemet täcker det ni faktiskt gör varje vecka.</p>
@@ -180,11 +230,10 @@ ${illu('tidrapporteringssystem-lon', 'Attesterade tidkort och klockor flyttas ti
 <tr><td><strong>Timtyp per pass</strong></td><td>Grunden för OB och övertid</td><td>Ja, väljs av medarbetaren</td></tr>
 <tr><td><strong>Restid och traktamente</strong></td><td>Vanliga fel i byggtidrapporter</td><td>Ja, på passet</td></tr>
 <tr><td><strong>ÄTA-märkning</strong></td><td>Extraarbete ska kunna faktureras</td><td>Ja, ÄTA kopplas till passet</td></tr>
-<tr><td><strong>Attest</strong></td><td>Någon ansvarar för att timmarna stämmer</td><td>En nivå: admin eller projektadmin</td></tr>
-<tr><td><strong>Lön</strong></td><td>Underlaget ska gå vidare utan omskrivning</td><td>Löne-CSV, AGI-underlag, lönekörning i Full koll</td></tr>
+<tr><td><strong>Attest</strong></td><td>Någon ansvarar för att timmarna stämmer</td><td>Admin eller projektadmin godkänner</td></tr>
+<tr><td><strong>Lön</strong></td><td>Underlaget ska gå vidare utan omskrivning</td><td>Löne-CSV, AGI-underlag, lönekörning i Koll på pengarna och Full koll</td></tr>
 <tr><td><strong>Bokföring</strong></td><td>Samma siffror i bokföringen</td><td>SIE4-fil (tillägg ${ADDON_PRICE} kr/mån)</td></tr>
 <tr><td><strong>ID06 och certifikat</strong></td><td>Vet vem som får arbeta var</td><td>Utgångsdatum på varje medarbetare</td></tr>
-<tr><td><strong>Offline</strong></td><td>Arbetsplatser utan täckning</td><td>Nej, appen behöver uppkoppling</td></tr>
 </tbody>
 </table></div>
 <p>Fråga också hur priset växer med laget. I ByggExp ingår 10 användare i grundpriset och varje extra användare kostar ${EXTRA_USER_PRICE} kr i månaden. Medarbetare som bara använder mobilappen räknas bara när de har stämplat in de senaste 30 dagarna.</p>
@@ -195,7 +244,7 @@ ${illu('tidrapporteringssystem-lon', 'Attesterade tidkort och klockor flyttas ti
 <li><strong>Vi flyttar över datan.</strong> Projekt och personal från ert gamla system flyttar vi utan kostnad.</li>
 <li><strong>Kör parallellt en löneperiod.</strong> Låt laget stämpla i appen medan den gamla rutinen finns kvar, och jämför underlaget innan ni släpper den.</li>
 </ol>
-<p>De första 14 dagarna är gratis med alla funktioner. Det finns ingen startavgift och ingen bindningstid. Vill du först se själva appen? Läs om <a href="/sv/tidrapportering-app">tidrapportering i mobilen</a>, eller jämför med en enkel <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> om ni är två–tre personer.</p>
+<p>De första 14 dagarna är gratis med alla funktioner. Det finns ingen startavgift och ingen bindningstid. Vill du först se själva appen? Läs om <a href="/sv/tidrapportering-app">tidrapportering i mobilen</a>, eller jämför med en enkel <a href="/sv/verktyg/tidrapport-mall">tidrapportmall</a> om ni är två–tre personer.</p>
 `.trim(),
   faq: [
     {
@@ -209,7 +258,7 @@ ${illu('tidrapporteringssystem-lon', 'Attesterade tidkort och klockor flyttas ti
     },
     {
       question: 'Kan tidrapporten föras över till Fortnox eller Visma?',
-      answer: `Ja, som SIE4-fil med tillägget Integrationer (${ADDON_PRICE} kr/mån). Det är en filexport, inte en direktkoppling. Löneunderlaget går också att exportera som CSV.`,
+      answer: `Ja, som SIE4-fil med tillägget Integrationer (${ADDON_PRICE} kr/mån). Löneunderlaget går också att exportera som CSV.`,
     },
     {
       question: 'Måste medarbetarna dela sin position?',
@@ -224,7 +273,7 @@ ${illu('tidrapporteringssystem-lon', 'Attesterade tidkort och klockor flyttas ti
     {
       question: 'Hur attesterar man tidrapporter i ByggExp?',
       answer:
-        'Admin eller projektadmin går igenom arbetspassen i webben och godkänner dem. Det finns en attestnivå. Efter attesten exporterar du tidrapport, löneunderlag och AGI-underlag.',
+        'Admin eller projektadmin går igenom arbetspassen i webben och godkänner dem. Efter attesten exporterar du tidrapport, löneunderlag och AGI-underlag.',
     },
     {
       question: 'Vilket tidrapporteringssystem passar ett mindre byggföretag?',
@@ -233,12 +282,12 @@ ${illu('tidrapporteringssystem-lon', 'Attesterade tidkort och klockor flyttas ti
     },
   ],
   related: [
-    { href: '/sv/tidrapportering-app', label: 'Tidrapportering-appen' },
+    { href: '/sv/tidrapportering-app', label: 'Tidrapporteringsappen' },
     { href: '/sv/blog/tidrapporteringssystem-bygg', label: 'Guide: tidrapporteringssystem för bygg' },
     { href: '/sv/blog/enkelt-tidrapporteringssystem', label: 'Enkelt tidrapporteringssystem' },
     { href: '/sv/blog/ob-overtid-byggavtalet-rakna', label: 'OB och övertid enligt Byggavtalet' },
     { href: '/sv/blog/loneprogram-bygg', label: 'Löneprogram för bygg' },
-    { href: '/sv/verktyg/tidrapport-mall', label: 'Gratis tidrapport-mall' },
+    { href: '/sv/verktyg/tidrapport-mall', label: 'Gratis tidrapportmall' },
     { href: '/sv/funktioner/tidrapportering-hantverkare', label: 'Tidrapportering för hantverkare' },
   ],
 };
@@ -249,10 +298,13 @@ ${illu('tidrapporteringssystem-lon', 'Attesterade tidkort och klockor flyttas ti
 
 const HANTVERKARE: FunktionPage = {
   slug: 'tidrapportering-hantverkare',
-  title: 'Tidrapportering hantverkare – från jobb till faktura | ByggExp',
+  plan: 'komplett',
+  priceIncluded: 'Tid, ROT-faktura och kvitton ingår',
+  heroCheck: 'iPhone och Android',
+  title: 'Tidrapportering hantverkare – tid till faktura | ByggExp',
   description:
     'Tidrapportering för hantverkare: timmar per kund i mobilen, restid och ÄTA på passet, ROT-faktura och kvitton på rätt jobb. 14 dagar gratis.',
-  name: 'Tidrapportering hantverkare',
+  name: 'Tidrapportering för hantverkare',
   h1: 'Tidrapportering för hantverkare.',
   h1Accent: 'Varje timme till fakturan.',
   lead: 'Timmar per kund i mobilen – klara att fakturera.',
@@ -285,7 +337,7 @@ const HANTVERKARE: FunktionPage = {
 <p>För en hantverkare är timmen varan. Lönen, kundfakturan och ROT-avdraget bygger på den, och varje timme som inte skrivs upp är en timme du har jobbat gratis. Tidrapportering för hantverkare handlar därför om att fånga tiden per kund medan du är kvar på jobbet, och om att få den hela vägen till fakturan utan att skriva av den en gång till. Så här ser flödet ut i ByggExp för en firma med en till tio personer.</p>
 
 <h2>En dag med tre kunder</h2>
-<p>Det är här tidrapporten för hantverkare skiljer sig från ett stort byggprojekt: dagen består av flera korta jobb hos olika kunder. Ett exempel:</p>
+<p>Här skiljer sig en hantverkares vardag från ett stort byggprojekt: dagen består av flera korta jobb hos olika kunder. Ett exempel:</p>
 <ol>
 <li><strong>07.00 – köksrenovering i Hägersten.</strong> Du checkar in på projektet när du kommer. Kunden vill ha en extra hylla i skafferiet, och du märker de timmarna som ÄTA på passet.</li>
 <li><strong>11.30 – droppande blandare hos en återkommande kund.</strong> Du checkar ut från köket och in på servicejobbet. Restiden mellan adresserna läggs på passet i kilometer och minuter.</li>
@@ -312,7 +364,7 @@ ${illu('hantverkare-flera-kunder', 'Hantverkare monterar ett köksskåp och regi
 <ul>
 <li><strong>ROT-avdrag.</strong> Avdraget räknas som 30 % av arbetskostnaden. Lägg därför arbete och material på separata rader. Reglerna för vem som har rätt till avdraget och hur stort det får bli finns hos ${ext(SKV_ROT, 'Skatteverket')}.</li>
 <li><strong>Omvänd byggmoms.</strong> Säljer du byggtjänster till ett företag som själv säljer byggtjänster gäller ${ext(SKV_OMVAND_MOMS, 'omvänd betalningsskyldighet')}. Den kan du välja på fakturan.</li>
-<li><strong>Extraarbeten.</strong> En godkänd ÄTA kan bli en förifylld faktura, så att tillägget faktureras även om huvudjobbet har fast pris.</li>
+<li><strong>Extraarbeten.</strong> En godkänd ÄTA kan bli en förifylld faktura (Full koll), så att tillägget faktureras även om huvudjobbet har fast pris.</li>
 </ul>
 <p>Fakturerar du på löpande räkning kan du exportera tidrapporten för projektet som PDF och skicka den med fakturan. Kunden ser då datum och timmar för varje pass, och frågor om ”hur kunde det bli så många timmar” blir färre. Samma PDF är ditt underlag om fakturan ifrågasätts.</p>
 <p>Läs mer om hur du <a href="/sv/blog/fakturera-som-hantverkare">fakturerar som hantverkare</a> eller räkna på avdraget med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylatorn</a>.</p>
@@ -325,10 +377,10 @@ ${illu('hantverkare-faktura', 'Hantverkare med hammare lägger blå mynt i en gl
 <li><strong>Löpande räkning.</strong> Timmarna är själva fakturaunderlaget. Kunden betalar för det du har rapporterat, så varje missad halvtimme är förlorad intäkt. Här är det viktigast att korta besök och restid kommer med.</li>
 <li><strong>Fast pris.</strong> Kunden betalar samma belopp oavsett tid, men timmarna visar om kalkylen höll. Gick badrummet på 60 timmar i stället för 45 vet du att nästa offert behöver se annorlunda ut. Extraarbeten utanför det avtalade faktureras ändå, och då behövs ÄTA-märkningen.</li>
 </ul>
-<p>Efter några månader har du facit för olika typer av jobb. Under Lönsamhet ser du marginalen per projekt, och med <a href="/sv/verktyg/timpris-kalkylator">timpriskalkylatorn</a> räknar du fram vad timmen behöver kosta för att jobben ska löna sig.</p>
+<p>Efter några månader har du facit för olika typer av jobb. Under Lönsamhet (Full koll) ser du marginalen per projekt, och med <a href="/sv/verktyg/timpris-kalkylator">timpriskalkylatorn</a> räknar du fram vad timmen behöver kosta för att jobben ska löna sig.</p>
 
 <h2>Kvitton och material på rätt jobb</h2>
-<p>Material som köps på vägen till jobbet är lätt att glömma i fakturan. I ByggExp skannar du kvittot med mobilkameran och kopplar det till projektet direkt i kassakön. Inkommande leverantörsfakturor kan skickas in via e-post och skannas på samma sätt. På så sätt ligger både timmar och material på kundens projekt när du ska fakturera, och projektets ekonomi visar vad jobbet faktiskt kostade.</p>
+<p>Material som köps på vägen till jobbet är lätt att glömma i fakturan. I ByggExp skannar du kvittot med mobilkameran och kopplar det till projektet direkt i kassakön. Inkommande leverantörsfakturor kan skickas in via e-post och skannas på samma sätt. På så sätt ligger både timmar och material på kundens projekt när du ska fakturera, och projektets ekonomi (Full koll) visar vad jobbet faktiskt kostade.</p>
 <p>Är du ensam i firman och mest behöver fakturor, kvitton och påminnelser? Då kan paketet för <a href="/sv/enmansforetag">enmansföretag</a> räcka.</p>
 
 <h2>Återbesök och servicejobb som inte glöms</h2>
@@ -363,7 +415,7 @@ ${illu('hantverkare-faktura', 'Hantverkare med hammare lägger blå mynt i en gl
     {
       question: 'Behöver en liten hantverksfirma ett tidrapporteringssystem?',
       answer:
-        'Har du flera jobb per dag eller en anställd lönar det sig ofta snabbt, eftersom korta besök, restid och extraarbeten annars faller bort. Är du ensam räcker ibland en tidrapport-mall.',
+        'Har du flera jobb per dag eller en anställd lönar det sig ofta snabbt, eftersom korta besök, restid och extraarbeten annars faller bort. Är du ensam räcker ibland en tidrapportmall.',
     },
     {
       question: 'Kan jag fakturera med ROT-avdrag i ByggExp?',
@@ -378,7 +430,7 @@ ${illu('hantverkare-faktura', 'Hantverkare med hammare lägger blå mynt i en gl
     {
       question: 'Hur får jag med restiden mellan kunderna?',
       answer:
-        'Restid läggs på arbetspasset i kilometer och minuter. Den blir underlag både för fakturan och för restidsersättning till anställda.',
+        'Restid läggs på arbetspasset i kilometer och minuter. Den blir underlag för restidsersättning och syns i tidrapporten per projekt.',
     },
     {
       question: 'Vad kostar tidrapportering för hantverkare?',
@@ -387,16 +439,16 @@ ${illu('hantverkare-faktura', 'Hantverkare med hammare lägger blå mynt i en gl
     {
       question: 'Finns det en gratis tidrapport för hantverkare?',
       answer:
-        'Ja, vår tidrapport-mall är gratis att fylla i och ladda ner. ByggExp har ingen gratisversion, men du kan testa alla funktioner gratis i 14 dagar.',
+        'Ja, vår tidrapportmall är gratis att fylla i och ladda ner. ByggExp har ingen gratisversion, men du kan testa alla funktioner gratis i 14 dagar.',
     },
   ],
   related: [
     { href: '/sv/blog/tidrapportering-hantverkare', label: 'Guide: tidrapportering för hantverkare' },
     { href: '/sv/blog/fakturera-som-hantverkare', label: 'Fakturera som hantverkare' },
     { href: '/sv/blog/timpris-hantverkare', label: 'Timpris för hantverkare' },
-    { href: '/sv/verktyg/tidrapport-mall', label: 'Gratis tidrapport-mall' },
+    { href: '/sv/verktyg/tidrapport-mall', label: 'Gratis tidrapportmall' },
     { href: '/sv/verktyg/rot-avdrag-kalkylator', label: 'ROT-kalkylator' },
-    { href: '/sv/tidrapportering-app', label: 'Tidrapportering-appen' },
+    { href: '/sv/tidrapportering-app', label: 'Tidrapporteringsappen' },
     { href: '/sv/enmansforetag', label: 'ByggExp för enmansföretag' },
   ],
 };
@@ -407,9 +459,12 @@ ${illu('hantverkare-faktura', 'Hantverkare med hammare lägger blå mynt i en gl
 
 const BYGGDAGBOK: FunktionPage = {
   slug: 'byggdagbok',
+  plan: 'projekt',
+  priceIncluded: 'Byggdagbok ingår',
+  heroCheck: 'Foton från mobilen',
   title: 'Digital byggdagbok – väder, bemanning och foton | ByggExp',
   description:
-    'Digital byggdagbok per projekt och dag: väder, bemanning, utfört arbete, avvikelser, material och foton – i samma system som tid och ÄTA.',
+    'Digital byggdagbok per projekt och dag: väder, bemanning, utfört arbete, avvikelser, material och foton – i samma system som tid. 14 dagar gratis.',
   name: 'Digital byggdagbok',
   h1: 'Digital byggdagbok.',
   h1Accent: 'Varje dag, per projekt.',
@@ -434,7 +489,7 @@ const BYGGDAGBOK: FunktionPage = {
     },
   ],
   body: `
-<p>En digital byggdagbok ska vara så snabb att föra att den faktiskt skrivs samma dag. I ByggExp för du dagboken i webben, en anteckning per projekt och dag, med fasta fält för det som behövs när en försening eller ett fel ska redas ut i efterhand. Foton från mobilappen hamnar i samma projekt, och dagboken ligger bredvid tidrapporterna och ÄTA-underlaget. Här ser du vad du fyller i, hur en rimlig rutin ser ut och vad dagboken inte gör.</p>
+<p>En digital byggdagbok ska vara så snabb att föra att den faktiskt skrivs samma dag. I ByggExp för du dagboken i webben, en anteckning per projekt och dag, med fasta fält för det som behövs när en försening eller ett fel ska redas ut i efterhand. Foton från mobilappen hamnar i samma projekt, och dagboken ligger bredvid tidrapporterna och ÄTA-underlaget. Här ser du vad du fyller i och hur en rimlig rutin ser ut.</p>
 
 <h2>Det här fyller du i varje dag</h2>
 <p>Dagbokens fält följer det som brukar efterfrågas när en byggdagbok ska användas som underlag:</p>
@@ -479,16 +534,30 @@ ${illu('byggdagbok-foto', 'Byggarbetare i hjälm fotograferar en vägg av block 
 <p>Den starka varianten tar en minut längre att skriva. Den är också den enda som går att använda om en försening eller ett ersättningskrav ska bedömas ett halvår senare.</p>
 
 <h2>Fem minuter om dagen</h2>
-<p>En byggdagbok behöver inte ta lång tid. Med fasta fält skriver arbetsledaren väder och bemanning på morgonen och utfört arbete, avvikelser och material innan han går hem. Fotona har laget redan tagit under dagen. Det som tar tid är att rekonstruera en vecka i efterhand, och det är just det en daglig rutin undviker.</p>
+<p>En byggdagbok behöver inte ta lång tid. Med fasta fält skriver arbetsledaren väder och bemanning på morgonen och utfört arbete, avvikelser och material innan arbetsdagen slutar. Fotona har laget redan tagit under dagen. Det som tar tid är att rekonstruera en vecka i efterhand, och det är just det en daglig rutin undviker.</p>
 
 <h2>Vem skriver – och när?</h2>
 <p>Den vanligaste orsaken till en tunn byggdagbok är att ingen äger den. Bestäm därför:</p>
 <ul>
-<li><strong>En ansvarig per projekt.</strong> Oftast arbetsledaren. Är han borta tar någon annan över samma dag, inte i efterhand.</li>
+<li><strong>En ansvarig per projekt.</strong> Oftast arbetsledaren. Är arbetsledaren borta tar någon annan över samma dag, inte i efterhand.</li>
 <li><strong>En fast tidpunkt.</strong> Väder på morgonen, resten innan arbetsdagen slutar. En anteckning som skrivs en vecka senare väger lätt.</li>
 <li><strong>Foton från alla.</strong> Låt hela laget fotografera i appen. Den som skriver dagboken plockar sedan de bilder som ska med.</li>
-<li><strong>Genomgång på byggmötet.</strong> Har ni avtalat om att beställaren ska ta del av dagboken, gå igenom veckans anteckningar på mötet och för in det i <a href="/sv/verktyg/byggmotesprotokoll-mall">protokollet</a>.</li>
+<li><strong>Genomgång på byggmötet.</strong> Enligt AB 04 och ABT 06 ska beställaren löpande ta del av dagboken. Gå igenom veckans anteckningar på byggmötet och för in dem i <a href="/sv/verktyg/byggmotesprotokoll-mall">protokollet</a>.</li>
 </ul>
+
+<h2>Exempel: en vecka på en tillbyggnad</h2>
+<p>Så kan fem dagar se ut i dagboken för ett mindre projekt, kort men konkret. Varje rad är en sammanfattning av dagens anteckning:</p>
+<div class="article-table"><table>
+<thead><tr><th>Dag</th><th>Anteckning</th></tr></thead>
+<tbody>
+<tr><td><strong>Måndag</strong></td><td>Mulet, +6 °C. 3 snickare. Syllar och bjälklag monterade. Leverans av konstruktionsvirke kl 07.30, komplett.</td></tr>
+<tr><td><strong>Tisdag</strong></td><td>Regn från kl 11, +5 °C. 3 snickare. Väggresning påbörjad, avbruten kl 13 på grund av regn. Arbetet täckt med presenning, foto taget.</td></tr>
+<tr><td><strong>Onsdag</strong></td><td>Uppehåll, +7 °C. 3 snickare. Väggar rest och stagade. Beställaren besökte bygget och frågade om ett extra fönster mot trädgården.</td></tr>
+<tr><td><strong>Torsdag</strong></td><td>Sol, +9 °C. 3 snickare, 1 elektriker. Takstolar monterade. Elektrikern drog rör i väggarna innan isoleringen.</td></tr>
+<tr><td><strong>Fredag</strong></td><td>Mulet, +8 °C. 2 snickare. Råspont och underlagspapp på taket. Foton på infästningar innan de byggs in.</td></tr>
+</tbody>
+</table></div>
+<p>Ingen av raderna tar mer än ett par minuter att skriva. Ändå svarar veckan på de frågor som brukar komma senare: varför väggresningen tog en dag extra, när frågan om fönstret kom upp och hur infästningarna såg ut innan de byggdes in. Frågan om fönstret är ett tillägg som ska hanteras som ÄTA – dagboken visar bara när den kom upp.</p>
 
 <h2>Tre dagar som avgörs av dagboken</h2>
 <h3>Frost före gjutningen</h3>
@@ -496,7 +565,7 @@ ${illu('byggdagbok-foto', 'Byggarbetare i hjälm fotograferar en vägg av block 
 <h3>Skadad leverans</h3>
 <p>Två av tjugo gipsskivor är trasiga när bilen lossat. Leveransen skrivs under Material, skadan under Avvikelser och bilderna laddas upp till dagens anteckning. Reklamationen till leverantören bygger på samma underlag.</p>
 <h3>Väntan på en underentreprenör</h3>
-<p>Snickarna kan inte stänga väggarna eftersom elinstallationen inte är klar. Dagboken visar vilka dagar laget fick vänta och vad som gjordes i stället. Är det ett tillägg som beställaren har bett om, dokumentera det dessutom separat med en <a href="/sv/verktyg/ata-mall">ÄTA-mall</a>, eftersom en dagboksanteckning inte är en beställning.</p>
+<p>Snickarna kan inte stänga väggarna eftersom elinstallationen inte är klar. Dagboken visar vilka dagar laget fick vänta och vad som gjordes i stället. Leder väntan till extra kostnader, dokumentera dem separat med en <a href="/sv/verktyg/ata-mall">ÄTA-mall</a> – en dagboksanteckning är ingen beställning.</p>
 
 ${illu('byggdagbok-leverans', 'Lastbil lossar pallar med byggmaterial medan en arbetsledare med surfplatta noterar leveransen och en kollega bär material')}
 
@@ -509,36 +578,6 @@ ${illu('byggdagbok-leverans', 'Lastbil lossar pallar med byggmaterial medan en a
 </ul>
 <p>Oavsett storlek gäller samma princip: skriv samma dag och skriv så att någon annan förstår.</p>
 
-<h2>Vad dagboken i ByggExp inte gör</h2>
-<p>Det är bättre att veta det innan du väljer system:</p>
-<ul>
-<li>Vädret hämtas inte automatiskt. Du skriver in det.</li>
-<li>Foton får datum och person, men ingen GPS-position.</li>
-<li>Dagboken förs i webben. I mobilappen finns en kort dagsanteckning på passet och fotona.</li>
-<li>Det finns ingen PDF-export av dagboken och ingen inloggning för beställaren.</li>
-<li>Dagar går inte att låsa eller signera.</li>
-</ul>
-<p>Behöver du lämna över en dagbok som PDF för ett enskilt uppdrag kan du använda vår gratis <a href="/sv/verktyg/byggdagbok-mall">byggdagbok-mall</a>, som laddas ner som PDF.</p>
-
-<h2>Dagbok, tidrapport och foton i samma projekt</h2>
-<p>I många företag ligger dagboken i en pärm, tidrapporterna i ett annat system och bilderna i någons telefon. När något ska redas ut får man pussla ihop tre källor. I ByggExp hör allt till projektet:</p>
-<ul>
-<li><strong>Tidrapporten</strong> visar vilka som har stämplat in och hur många timmar de arbetat, per dag.</li>
-<li><strong>Fotofliken</strong> visar bilderna från appen med datum och vem som tog dem.</li>
-<li><strong>Dagboken</strong> beskriver vad som hände, med egna foton till dagens anteckning.</li>
-<li><strong>ÄTA-underlaget</strong> ligger i samma projekt, och egenkontrollerna i KMA-modulen.</li>
-</ul>
-<p>Det betyder att du kan gå tillbaka till en viss dag och se både vad som skrevs, vilka som var där och vilka bilder som togs.</p>
-
-<h2>Från pärm till digital byggdagbok</h2>
-<ol>
-<li><strong>Lägg upp pågående projekt.</strong> Har ni ett annat system i dag flyttar vi över data utan kostnad.</li>
-<li><strong>Utse en ansvarig per projekt</strong> och bestäm när på dagen anteckningen skrivs.</li>
-<li><strong>Låt laget installera appen</strong> och ta foton på arbetspasset.</li>
-<li><strong>Gå igenom den första veckan</strong> tillsammans: är anteckningarna tillräckligt konkreta?</li>
-</ol>
-<p>Du testar alla funktioner gratis i 14 dagar, utan startavgift och utan bindningstid.</p>
-
 <h2>Checklista: digital byggdagbok</h2>
 <ul>
 <li>Finns det egna fält för väder, bemanning, utfört arbete, avvikelser och material?</li>
@@ -548,6 +587,7 @@ ${illu('byggdagbok-leverans', 'Lastbil lossar pallar med byggmaterial medan en a
 <li>Kan laget bidra från mobilen även om dagboken skrivs av en person?</li>
 <li>Vad kostar det per projekt eller per användare?</li>
 </ul>
+<p>Behöver du en dagbok som PDF för ett enskilt uppdrag finns vår gratis <a href="/sv/verktyg/byggdagbok-mall">byggdagboksmall</a>.</p>
 <p>Dagboken hänger ihop med resten av kvalitetsarbetet. Egenkontroller gör du i KMA-modulen, och underlag för en <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">fotodokumentation som håller som bevis</a> samlas i projektets fotoflik.</p>
 `.trim(),
   faq: [
@@ -569,12 +609,12 @@ ${illu('byggdagbok-leverans', 'Lastbil lossar pallar med byggmaterial medan en a
     {
       question: 'Kan beställaren läsa dagboken?',
       answer:
-        'Nej, det finns ingen inloggning för beställaren. Kräver kontraktet att innehållet delges, gå igenom dagboken på byggmötet och för in det som behövs i protokollet.',
+        'Det finns ingen inloggning för beställaren. Enligt AB 04 och ABT 06 ska beställaren löpande ta del av dagboken. Gå igenom veckans anteckningar på byggmötet och för in dem i protokollet.',
     },
     {
       question: 'Kan jag exportera byggdagboken som PDF?',
       answer:
-        'Inte i dag. Behöver du en PDF för ett enskilt uppdrag kan du fylla i vår gratis byggdagbok-mall och ladda ner den som PDF.',
+        'Inte i dag. Behöver du en PDF för ett enskilt uppdrag kan du fylla i vår gratis byggdagboksmall och ladda ner den som PDF.',
     },
     {
       question: 'Är byggdagbok ett krav?',
@@ -593,12 +633,12 @@ ${illu('byggdagbok-leverans', 'Lastbil lossar pallar med byggmaterial medan en a
   ],
   related: [
     { href: '/sv/blog/byggdagbok', label: 'Guide: byggdagbok' },
-    { href: '/sv/verktyg/byggdagbok-mall', label: 'Gratis byggdagbok-mall' },
+    { href: '/sv/verktyg/byggdagbok-mall', label: 'Gratis byggdagboksmall' },
     { href: '/sv/blog/fotodokumentation-byggprojekt-bevis', label: 'Fotodokumentation som bevis' },
     { href: '/sv/blog/ata-arbeten', label: 'ÄTA-arbeten' },
     { href: '/sv/verktyg/ata-mall', label: 'ÄTA-mall' },
     { href: '/sv/verktyg/egenkontroll-mall', label: 'Egenkontroll-mall' },
-    { href: '/sv/tidrapportering-app', label: 'Tidrapportering-appen' },
+    { href: '/sv/tidrapportering-app', label: 'Tidrapporteringsappen' },
   ],
 };
 
@@ -608,11 +648,14 @@ ${illu('byggdagbok-leverans', 'Lastbil lossar pallar med byggmaterial medan en a
 
 const RESURSPLANERING: FunktionPage = {
   slug: 'resursplanering',
-  title: 'Resursplaneringsverktyg för bygg – Gantt och bemanning | ByggExp',
+  plan: 'projekt',
+  priceIncluded: 'Planering och bemanning ingår',
+  heroCheck: 'iPhone och Android',
+  title: 'Resursplanering bygg – Gantt och bemanning | ByggExp',
   description:
-    'Resursplaneringsverktyg för bygg: Gantt per personal eller projekt, bemanning per dag, frånvaro i planen och varning vid överbokning. 14 dagar gratis.',
-  name: 'Resursplanering bygg',
-  h1: 'Resursplaneringsverktyg för bygg.',
+    'Resursplanering för bygg: Gantt per personal eller projekt, bemanning per dag, frånvaro i planen och varning vid överbokning. 14 dagar gratis.',
+  name: 'Resursplanering för bygg',
+  h1: 'Resursplanering för bygg.',
   h1Accent: 'Rätt lag på rätt bygge.',
   lead: 'Alla projekt och hela laget i en plan.',
   hero: {
@@ -621,6 +664,12 @@ const RESURSPLANERING: FunktionPage = {
   },
   stepsHeading: ['Planera', 'och följ upp'],
   steps: [
+    {
+      title: 'Bemanning dag för dag',
+      text: 'Medarbetare och dagar i ett rutnät.',
+      img: '/landing/funktioner/screen-bemanning-1200.webp',
+      alt: 'Bemanning i ByggExp: veckans rutnät med medarbetare, dagar och projekt med 8 timmar per dag',
+    },
     {
       title: 'Gantt för alla projekt',
       text: 'Per personal eller per projekt.',
@@ -680,14 +729,14 @@ ${illu('resursplanering-franvaro', 'Projektledare vid skrivbordet framför en st
 <p>Bemanningen säger var folk ska vara. Uppgifterna säger vad som ska göras där. I Uppgifter ger du en person eller hela projektteamet en uppgift med prioritet, start- och förfallodatum. Påminnelser skickas med det intervall du väljer, och efter ett antal påminnelser kan chefen meddelas automatiskt. Så missas inte det som måste vara klart innan nästa lag kan börja, till exempel en egenkontroll före igenbyggnad.</p>
 
 <h2>Frånvaro i samma plan</h2>
-<p>Semester, ATF-dagar och sjukdom avgör hur många som faktiskt finns att planera med. I ByggExp registreras ledighet i Frånvaro. När den är godkänd syns den i Bemanning, så att ingen blir inbokad en dag han är ledig.</p>
+<p>Semester, ATF-dagar och sjukdom avgör hur många som faktiskt finns att planera med. I ByggExp registreras ledighet i Frånvaro. När den är godkänd syns den i Bemanning, så att ingen blir inbokad en dag med ledighet.</p>
 <p>Vill du räkna på kapacitet och övertid över längre tid beskriver vi resurshistogram och utjämning i guiden om <a href="/sv/blog/resursplanering-bygg">resursplanering i bygg</a>.</p>
 
 <h2>Planera säsongen, inte bara veckan</h2>
 <p>Byggåret har toppar och dalar som går att se i förväg. Med det egna datumintervallet i Planering kan du lägga upp en längre period och se hela säsongen i samma schema:</p>
 <ul>
 <li><strong>Sommaren.</strong> Lägg in godkänd semester tidigt och kontrollera vilka projekt som har folk under juli. Det är ofta där en leveransvecka spricker.</li>
-<li><strong>Vintern.</strong> Moment som är känsliga för kyla, som gjutning och utvändig målning, behöver lägen med marginal. Planera inomhusarbete för lagen som annars blir stående.</li>
+<li><strong>Vintern.</strong> Moment som är känsliga för kyla, som gjutning och utvändig målning, behöver planeras med marginal. Planera inomhusarbete för lagen som annars blir stående.</li>
 <li><strong>Projektstarter som krockar.</strong> Två projekt som startar samma vecka behöver var sitt startlag. Planering per projekt visar krocken månader innan den inträffar.</li>
 </ul>
 <p>Kortsiktigt arbetar du sedan i Bemanning, dag för dag, medan den långa planen ligger kvar som ram.</p>
@@ -710,7 +759,7 @@ ${illu('resursplanering-franvaro', 'Projektledare vid skrivbordet framför en st
 <tr><td><strong>Dra och släpp</strong></td><td>Nej, du klickar i rutan och väljer projekt</td></tr>
 </tbody>
 </table></div>
-<p>Planerar ni kranar och grävmaskiner lika noga som folk kan en enkel bokningslista vid sidan om räcka. Lägg den gärna i samma <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a> som tidplanen.</p>
+<p>Planerar ni kranar och grävmaskiner lika noga som folk kan en enkel bokningslista vid sidan om räcka. Lägg den gärna i samma <a href="/sv/verktyg/gantt-schema-mall">Gantt-mall</a> som tidplanen.</p>
 
 <h2>Från Excel till resursplaneringsverktyg</h2>
 <p>Ett kalkylark fungerar så länge en person planerar och laget är litet. Det blir svårt när flera projektledare ändrar i samma fil, när frånvaron ligger i en annan lista och när ingen ser vem som ändrade senast. Så kommer du igång:</p>
@@ -760,21 +809,23 @@ ${illu('resursplanering-franvaro', 'Projektledare vid skrivbordet framför en st
     {
       question: 'Finns det en gratis resursplan i Excel?',
       answer:
-        'Ja, vår Gantt-schema-mall är gratis. Den räcker för ett lag och ett par projekt. Med flera projektledare och roterande lag blir frånvaro och ändringar svåra att hålla aktuella i en fil.',
+        'Ja, vår Gantt-mall är gratis. Den räcker för ett lag och ett par projekt. Med flera projektledare och roterande lag blir frånvaro och ändringar svåra att hålla aktuella i en fil.',
     },
   ],
   related: [
     { href: '/sv/blog/resursplanering-bygg', label: 'Guide: resursplanering i bygg' },
-    { href: '/sv/verktyg/gantt-schema-mall', label: 'Gratis Gantt-schema-mall' },
+    { href: '/sv/verktyg/gantt-schema-mall', label: 'Gratis Gantt-mall' },
     { href: '/sv/verktyg/schema-mall', label: 'Arbetsschema-mall' },
     { href: '/sv/blog/bemanningssystem-bygg', label: 'Bemanningssystem för bygg' },
     { href: '/sv/blog/personalplanering-bygg', label: 'Bemanningsplanering' },
     { href: '/sv/blog/franvaro-i-byggforetag', label: 'Frånvaro i byggföretag' },
-    { href: '/sv/tidrapportering-app', label: 'Tidrapportering-appen' },
+    { href: '/sv/tidrapportering-app', label: 'Tidrapporteringsappen' },
   ],
 };
 
-export const FUNKTION_PAGES: FunktionPage[] = [TIDSYSTEM, HANTVERKARE, BYGGDAGBOK, RESURSPLANERING];
+export const FUNKTION_PAGES: FunktionPage[] = [TIDSYSTEM, HANTVERKARE, BYGGDAGBOK, RESURSPLANERING].map(
+  (page) => ({ ...page, body: labelTables(page.body) }),
+);
 
 export const FUNKTION_PAGE_SLUGS = FUNKTION_PAGES.map((p) => p.slug);
 

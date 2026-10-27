@@ -111,7 +111,7 @@ const FAQ: { question: string; answer: string }[] = [
   },
   {
     question: "Kan jag föra över tidrapporten till lön och Fortnox?",
-    answer: `Ja, som PDF, Excel, löne-CSV och AGI-underlag. Till Fortnox, Visma och BL exporterar du en SIE4-fil med tillägget Integrationer (${ADDON_PRICE} kr/mån). Det är en filexport, inte en direktkoppling.`,
+    answer: `Ja, som PDF, Excel, löne-CSV och AGI-underlag. Till Fortnox, Visma och BL exporterar du en SIE4-fil med tillägget Integrationer (${ADDON_PRICE} kr/mån).`,
   },
   {
     question: "Räknar appen OB och övertid enligt Byggavtalet?",

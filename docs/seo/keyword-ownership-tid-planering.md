@@ -5,6 +5,17 @@
 
 Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`) забирают **продуктовые** ключи («online», «program», «system»), а гайды — информационные. Ключи «app/stämpelklocka» уже заняты гайдами, поэтому feature-страницам их не даём.
 
+## Коммерческие head-ключи → /sv/funktioner (2026-10-27)
+
+Продуктовые страницы функций владеют коммерческими head-ключами. Блог-гайды по этим темам переименованы в информационный угол («Så väljer du…», «guide», «krav och exempel»), слаги не менялись; каждый гайд ссылается на свою страницу функции.
+
+| URL | Основной ключ | Вторичные |
+|---|---|---|
+| /sv/funktioner/tidrapporteringssystem-bygg | tidrapporteringssystem bygg | tidrapportering bygg, tidrapport bygg, tidrapportering byggföretag, tidsregistrering bygg, enkelt tidrapporteringssystem |
+| /sv/funktioner/tidrapportering-hantverkare | tidrapportering hantverkare | tidrapport hantverkare, tidrapporteringssystem hantverkare |
+| /sv/funktioner/byggdagbok | digital byggdagbok | byggdagbok app, dagbok bygg (гайд /sv/blog/byggdagbok держит «byggdagbok» как инфо: krav, innehåll, exempel) |
+| /sv/funktioner/resursplanering | resursplanering bygg | resursplaneringsverktyg, resursplan |
+
 ## Tidrapportering
 
 | URL | Тип | Основной ключ | GSC (показы / поз.) | Вторичные |
@@ -13,11 +24,11 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 | /sv/blog/narvaro-och-incheckning-pa-bygget | **feature** | **närvarosystem bygg** | 10 / 15.4 | närvarokontroll byggarbetsplats (13), digital närvarolista bygg (10) |
 | /sv/blog/loneunderlag-for-byggforetag | feature | löneunderlag bygg | — | löneunderlag byggföretag |
 | /sv/blog/tidrapportering | pillar | tidrapportering bygg | 362 / 24.0 | tidrapportering byggföretag (245), tidrapport bygg (258) |
-| /sv/blog/tidrapporteringssystem-bygg | гайд | tidrapporteringssystem bygg | 312 / 25.1 | tidrapporteringssystem hantverkare (54) |
+| /sv/blog/tidrapporteringssystem-bygg | гайд | så väljer du tidrapporteringssystem (инфо) | 312 / 25.1 | checklista tidrapporteringssystem; head-ключ отдан /sv/funktioner/tidrapporteringssystem-bygg |
 | /sv/blog/basta-tidrapporteringssystem-bygg | сравнение | bästa tidrapporteringssystem bygg | — | jämförelse tidrapporteringssystem, tidrapporteringssystem pris, Bygglet/Fieldly/MyGizmo alternativ |
 | /sv/blog/mobil-tidrapportering | гайд | mobil tidrapportering | 127 / 12.0 | tidrapportering i mobilen (124), tidrapportering mobil (57) |
 | /sv/blog/tidrapportering-entreprenad | гайд | tidrapportering entreprenad | 161 / 14.8 | — |
-| /sv/blog/tidrapportering-hantverkare | гайд | tidrapportering hantverkare | 231 / 30.4 | tidrapport hantverkare (87) |
+| /sv/blog/tidrapportering-hantverkare | гайд | tidrapport för hantverkare – guide (инфо) | 231 / 30.4 | head-ключ отдан /sv/funktioner/tidrapportering-hantverkare |
 | /sv/blog/app-for-tidrapportering-bygg | хаб | app för tidrapportering | — | digital tidrapportering (32) |
 | /sv/blog/tidrapportering-app-byggforetag | гайд | tidrapportering app bygg | 64 / 17.2 | tidrapportering app (18) |
 | /sv/blog/tidrapport-app-iphone | гайд | tidrapport app iphone | 5 / 28.4 | tidrapport app (31) |
@@ -45,7 +56,7 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 | /sv/blog/paminnelser-uppgifter-och-deadlines | feature | påminnelser deadlines | — | — |
 | /sv/blog/schemalaggningssystem-bygg | гайд | schemaläggningssystem | 144 / 9.9 | schemaläggningsprogram (127), system för schemaläggning (22) |
 | /sv/blog/schemalaggning-bygg | гайд | schemaläggning bygg | — | schemaläggning personal (53), bemanning och schemaläggning (51) |
-| /sv/blog/resursplanering-bygg | гайд | resursplanering bygg | 81 / 10.5 | resursplanering byggprojekt system (28) |
+| /sv/blog/resursplanering-bygg | гайд | resurshistogram, resursutjämning (инфо) | 81 / 10.5 | head-ключ отдан /sv/funktioner/resursplanering |
 | /sv/blog/personalplanering-bygg | гайд | bemanningsplanering | 228 / 53.8 | bemanningsplan (35) |
 | /sv/blog/bemanning-och-personalplanering | гайд | personalplanering | 32 / 45.0 | — |
 | /sv/blog/bemanningssystem-bygg | гайд | bemanningssystem bygg | — | schema bemanning (75), bemanningsplanering system (29) |

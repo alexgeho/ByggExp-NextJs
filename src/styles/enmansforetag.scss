@@ -430,12 +430,70 @@
   }
 }
 .blog-article-content .fn-illu {
-  max-width: 640px;
-  margin: 32px auto;
+  max-width: 560px;
+  margin: 24px auto;
   img {
     display: block;
     width: 100%;
     height: auto;
+  }
+}
+
+/* H1: the accent always starts on its own line, on every feature page. */
+.fn .em-hero-content h1 span {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  /* Phones: swipe + dots; the arrows would sit on top of the screenshots. */
+  .fn .features-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Tables become stacked cards: first cell = card title, the other cells
+     below it (3-column tables label them with data-label). */
+  .fn-article .blog-article-content {
+    .article-table {
+      border: 0;
+      overflow: visible;
+    }
+    .article-table table,
+    .article-table tbody,
+    .article-table tr,
+    .article-table td {
+      display: block;
+      width: 100%;
+      min-width: 0;
+    }
+    .article-table thead {
+      display: none;
+    }
+    .article-table tr {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--white);
+    }
+    .article-table tr + tr {
+      margin-top: 10px;
+    }
+    .article-table tbody tr:nth-child(even) {
+      background: var(--white);
+    }
+    .article-table td {
+      padding: 2px 0;
+      border: 0;
+      background: none !important;
+    }
+    .article-table td:first-child {
+      margin-bottom: 4px;
+    }
+    .article-table td[data-label]::before {
+      content: attr(data-label) ": ";
+      color: var(--muted);
+    }
   }
 }
 
@@ -463,6 +521,8 @@
     display: block;
     width: 100%;
     height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
   }
   h3 {
     font-size: 1.15rem;

@@ -9,12 +9,13 @@ import { useEffect, useRef, useState, type MouseEvent } from "react";
 import CTA from "../../../components/CTA/CTA";
 import Footer from "../../../components/Footer/Footer";
 import Header from "../../../components/Header/Header";
-import { PROJEKT_PRICE } from "../../../components/Pricing/Pricing";
 import {
   FUNKTION_PAGE_SLUGS,
   getFunktionPage,
   illuSrc,
   illuSrcSet,
+  ILLU_HEIGHT,
+  PLAN_PRICE,
 } from "../../../content/funktion-pages";
 import { localeOrigin } from "../../../lib/seo";
 import { ctaTranslations } from "../../../locales/CTA";
@@ -41,7 +42,6 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => ({
   },
 });
 
-const EXTRA_USER_PRICE = 69;
 const ZOOMABLE = ".features .step-visual img";
 
 export default function FunktionPage({
@@ -56,6 +56,20 @@ export default function FunktionPage({
   const origin = localeOrigin(lang);
   const canonicalUrl = `${origin}/${lang}/funktioner/${page.slug}`;
   const heroImage = `${origin}${illuSrc(page.hero.name)}`;
+  const isKomplett = page.plan === "komplett";
+  const planName = isKomplett ? pricingT.planKomplett : pricingT.planProjekt;
+  const planSub = isKomplett ? pricingT.planKomplettSub : pricingT.planProjektSub;
+  const planItems = isKomplett
+    ? pricingT.komplettItems
+        .slice(0, -1)
+        .map((item) =>
+          item
+            .replace("{projekt}", pricingT.planProjekt)
+            .replace("{faktura}", pricingT.planFaktura),
+        )
+    : pricingT.projectItems;
+  const accent = isKomplett ? "green" : "purple";
+  const { price } = PLAN_PRICE[page.plan];
 
   const schema = [
     {
@@ -68,9 +82,9 @@ export default function FunktionPage({
       url: canonicalUrl,
       offers: {
         "@type": "Offer",
-        price: PROJEKT_PRICE,
+        price,
         priceCurrency: "SEK",
-        description: "Koll på jobbet, per företag och månad exkl. moms, inkl. 10 användare",
+        description: `${planName}, per företag och månad exkl. moms, inkl. 10 användare`,
       },
     },
     {
@@ -174,7 +188,7 @@ export default function FunktionPage({
               <ul className="em-checks">
                 <li>14 dagar gratis</li>
                 <li>Ingen bindningstid</li>
-                <li>iPhone och Android</li>
+                <li>{page.heroCheck}</li>
               </ul>
             </div>
             <div className="em-hero-visual fn-hero-visual">
@@ -183,7 +197,7 @@ export default function FunktionPage({
                 srcSet={illuSrcSet(page.hero.name)}
                 sizes="(max-width: 900px) 100vw, 560px"
                 width={1200}
-                height={900}
+                height={ILLU_HEIGHT[page.hero.name]}
                 fetchPriority="high"
                 decoding="async"
                 alt={page.hero.alt}
@@ -317,33 +331,33 @@ export default function FunktionPage({
           </div>
         </section>
 
-        {/* PRICE — the "Koll på jobbet" card from the pricing block, as is */}
+        {/* PRICE — the page's package card from the pricing block (page.plan) */}
         <section className="em-price">
           <div className="container em-price-inner">
             <div className="em-price-head">
-              <h2>Paketet {pricingT.planProjekt}</h2>
-              <p className="em-lead">15 % rabatt vid årsbetalning</p>
+              <h2>Paketet {planName}</h2>
+              <p className="em-lead">{page.priceIncluded}</p>
             </div>
             <div className="em-price-card">
               <div className="pricing-card">
                 <div className="pricing-card-top">
-                  <span className="pricing-tag pricing-tag-purple">
-                    {pricingT.planProjekt}
+                  <span className={`pricing-tag pricing-tag-${accent}`}>
+                    {planName}
                   </span>
                 </div>
                 <div className="pricing-price">
-                  <span className="num">{PROJEKT_PRICE}</span>
+                  <span className="num">{price}</span>
                   <span className="per">{pricingT.pricingPer}</span>
                 </div>
                 <div className="pricing-groups">
                   <div className="pricing-group">
                     <h3 className="pricing-group-title">
-                      {pricingT.planProjektSub}
+                      {planSub}
                     </h3>
                     <ul className="pricing-list">
-                      {pricingT.projectItems.map((item) => (
+                      {planItems.map((item) => (
                         <li key={item}>
-                          <span className="check check-purple">
+                          <span className={`check check-${accent}`}>
                             <svg
                               viewBox="0 0 14 10"
                               fill="none"
@@ -367,15 +381,9 @@ export default function FunktionPage({
                 <a href="#cta" className="btn-primary">
                   {pricingT.pricingButton}
                 </a>
-                <span className="pricing-trial">{pricingT.pricingTrial}</span>
               </div>
-              <ul className="em-checks">
-                <li>Ingen startavgift</li>
-                <li>Ingen bindningstid</li>
-              </ul>
               <p className="pricing-limit-note">
-                Inkl. 10 användare, därefter {EXTRA_USER_PRICE} kr per extra
-                användare och månad. Alla priser exkl. moms.
+                14 dagar gratis · Ingen bindningstid · exkl. moms
               </p>
             </div>
           </div>

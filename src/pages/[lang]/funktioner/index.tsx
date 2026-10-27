@@ -8,7 +8,7 @@ import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { FEATURE_NAV } from '../../../components/FeatureNav/FeatureNav';
-import { FUNKTION_PAGES, illuSrc, illuSrcSet } from '../../../content/funktion-pages';
+import { FUNKTION_PAGES, ILLU_HEIGHT, illuSrc, illuSrcSet } from '../../../content/funktion-pages';
 import { useCenterActiveChip } from '../../../lib/useCenterActiveChip';
 import { buildHreflangAlternates, localeOrigin } from '../../../lib/seo';
 import { featuresTranslations1_3 } from '../../../locales/features1-3';
@@ -936,7 +936,7 @@ export default function FunktionerPage({
                     srcSet={illuSrcSet(p.hero.name)}
                     sizes="(max-width: 520px) 100vw, (max-width: 1000px) 50vw, 300px"
                     width={1200}
-                    height={900}
+                    height={ILLU_HEIGHT[p.hero.name]}
                     loading="lazy"
                     decoding="async"
                     alt={p.hero.alt}

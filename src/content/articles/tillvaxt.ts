@@ -1320,10 +1320,10 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 
 const A_TIDRAPPORTERINGSSYSTEM_BYGG: BlogPost = {
   _id: "code-tidrapporteringssystem-bygg",
-  title: "Tidrapporteringssystem för bygg – tidsregistrering och tidredovisning", slug: "tidrapporteringssystem-bygg", locale: "sv",
+  title: "Så väljer du tidrapporteringssystem för bygg – guide och checklista", slug: "tidrapporteringssystem-bygg", locale: "sv",
   excerpt: "Ett tidrapporteringssystem samlar tidsregistrering, tidrapportering och tidredovisning på ett ställe – timmar i mobilen, färdigt underlag för lön och faktura. Så väljer du rätt.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML,
-  seoTitle: "Tidrapporteringssystem för bygg – från tid till lön | ByggExp", seoDescription: "Tidrapporteringssystem för bygg: tidsregistrering i mobilen, tidredovisning per projekt och export till lön och faktura. Så väljer du ett enkelt system.",
+  seoTitle: "Så väljer du tidrapporteringssystem för bygg – guide | ByggExp", seoDescription: "Tidrapporteringssystem för bygg: tidsregistrering i mobilen, tidredovisning per projekt och export till lön och faktura. Så väljer du ett enkelt system.",
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T09:20:00.000Z", createdAt: "2026-08-22T09:20:00.000Z", updatedAt: "2026-08-22T09:20:00.000Z",
 };
@@ -1566,10 +1566,10 @@ const S_TIDRAPPORTERING_HANTVERKARE_HTML = `
 
 const S_TIDRAPPORTERING_HANTVERKARE: BlogPost = {
   _id: "code-tidrapportering-hantverkare",
-  title: "Tidrapportering för hantverkare – fånga varje debiterbar timme", slug: "tidrapportering-hantverkare", locale: "sv",
+  title: "Tidrapport för hantverkare – så fångar du varje timme (guide)", slug: "tidrapportering-hantverkare", locale: "sv",
   excerpt: "Tidrapportering för hantverkare och enmansföretag: registrera timmar i mobilen per kund och jobb, och gör dem till lön och ROT-faktura utan lappar.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: S_TIDRAPPORTERING_HANTVERKARE_HTML,
-  seoTitle: "Tidrapportering för hantverkare – app för timmar & ROT | ByggExp", seoDescription: "Tidrapportering för hantverkare: fånga varje debiterbar timme i mobilen, koppla till kund och jobb och gör den till lön och ROT-faktura. Enkelt för mindre firmor.",
+  seoTitle: "Tidrapport för hantverkare – så fångar du varje timme | ByggExp", seoDescription: "Tidrapportering för hantverkare: fånga varje debiterbar timme i mobilen, koppla till kund och jobb och gör den till lön och ROT-faktura. Enkelt för mindre firmor.",
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T10:00:00.000Z", createdAt: "2026-08-22T10:00:00.000Z", updatedAt: "2026-08-22T10:00:00.000Z",
 };
@@ -1641,7 +1641,7 @@ const S_TIDRAPPORTERING_ENTREPRENAD_HTML = `
 <li><strong>SIE4-fil</strong> – för import i bokföringsprogram som Fortnox, Visma och Björn Lundén. Ingår i integrationstillägget för 199 kr/mån.</li>
 <li><strong>Tidrapport som PDF och Excel</strong> – underlag till beställaren eller för arkivet.</li>
 </ul>
-<p>Det är filexport, inte en direktkoppling via API: du laddar ner filen och läser in den i det andra systemet. Mer om flödet i ByggExp:s <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering online</a> och om valet av <a href="/sv/blog/loneprogram-bygg">löneprogram för bygg</a>.</p>
+<p>Du laddar ner filen och läser in den i det andra systemet. Mer om flödet i ByggExp:s <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering online</a> och om valet av <a href="/sv/blog/loneprogram-bygg">löneprogram för bygg</a>.</p>
 
 <h2>Omvänd byggmoms och ROT – vad tidrapporten ska visa</h2>
 <p>Momsen sätts på fakturan, inte i tidrapporten, men tidrapporten avgör om fakturan blir rätt.</p>
@@ -2478,7 +2478,7 @@ const A_BYGGDAGBOK: BlogPost = {
   title: "Byggdagbok – vad den ska innehålla och hur du för den digitalt", slug: "byggdagbok", locale: "sv",
   excerpt: "Vad en byggdagbok ska innehålla, vad AB 04, ABT 06 och AMA AF (AFC.38) kräver, ett ifyllt exempel och vad en digital byggdagbok behöver klara.", tag: "Digitalisering",
   coverImageUrl: "/landing/blog/byggdagbok.webp", contentHtml: A_BYGGDAGBOK_HTML,
-  seoTitle: "Byggdagbok – innehåll, krav och digital byggdagbok | ByggExp", seoDescription: "Byggdagbok: vad den ska innehålla, vad AB 04, ABT 06 och AMA AF (AFC.38) kräver och vad en digital byggdagbok ska klara. Med exempel och gratis mall.",
+  seoTitle: "Byggdagbok – innehåll, krav och exempel | ByggExp", seoDescription: "Byggdagbok: vad den ska innehålla, vad AB 04, ABT 06 och AMA AF (AFC.38) kräver och hur du för den löpande. Med ifyllt exempel och gratis mall.",
   seoImageUrl: `${SITE_URL}/landing/features/4foto.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-30T11:00:00.000Z", createdAt: "2026-08-30T11:00:00.000Z", updatedAt: "2026-10-06T10:00:00.000Z",
 };

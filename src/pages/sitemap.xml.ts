@@ -86,16 +86,17 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
   // Free tools. byggexp.se lists the full sv inventory; byggexp.no lists the
   // nb tools hub + the calculators that ship nb content (same set as /en).
   if (isNo) {
-    urls.push({ loc: `${localeOrigin('nb')}/nb/fa-offert` });
+    // /nb/fa-offert is noindex (B2C lead page, off-intent) — not listed.
     // CALC_PATHS starts with the 'verktyg' hub itself; tools pending removal
     // are skipped (see PENDING_REMOVAL_CALC_SLUGS).
     CALC_PATHS.filter((path) => path === 'verktyg' || HREFLANG_CALC_SLUGS.has(path.slice('verktyg/'.length))).forEach((path) => {
       urls.push({ loc: `${localeOrigin('nb')}/nb/${path}` });
     });
   } else {
-    urls.push({ loc: `${localeOrigin('sv')}/sv/fa-offert` });
+    // /sv/fa-offert is noindex (B2C lead page, off-intent) — not listed.
     // Product landing pages (sv only).
     urls.push({ loc: `${localeOrigin('sv')}/sv/tidrapportering-app` });
+    urls.push({ loc: `${localeOrigin('sv')}/sv/enmansforetag` });
     // Commercial feature pages (sv only), /sv/funktioner/<slug>.
     FUNKTION_PAGE_SLUGS.forEach((slug) => {
       urls.push({ loc: `${localeOrigin('sv')}/sv/funktioner/${slug}` });

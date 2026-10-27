@@ -131,6 +131,9 @@ export default function FaOffertPage({ lang }: { lang: Locale }) {
         <title>{c.title}</title>
         <meta name="description" content={c.description} />
         <link rel="canonical" href={canonicalUrl} />
+        {/* B2C "få offerter" lead page: off-intent for the B2B site — keep it
+            reachable (calculators funnel here) but out of the index. */}
+        <meta name="robots" content="noindex,follow" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={c.title} />
         <meta property="og:description" content={c.description} />

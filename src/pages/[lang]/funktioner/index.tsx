@@ -8,6 +8,7 @@ import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { FEATURE_NAV } from '../../../components/FeatureNav/FeatureNav';
+import { FUNKTION_PAGES, illuSrc, illuSrcSet } from '../../../content/funktion-pages';
 import { useCenterActiveChip } from '../../../lib/useCenterActiveChip';
 import { buildHreflangAlternates, localeOrigin } from '../../../lib/seo';
 import { featuresTranslations1_3 } from '../../../locales/features1-3';
@@ -921,6 +922,32 @@ export default function FunktionerPage({
           )}
         </div>
       </section>
+
+      {/* Commercial feature pages (sv only) — /sv/funktioner/<slug> */}
+      {lang === 'sv' && (
+        <section className="funktioner-pages">
+          <div className="container">
+            <h2 className="funktioner-why-title">Tid, dagbok och planering</h2>
+            <div className="funktioner-pages-grid">
+              {FUNKTION_PAGES.map((p) => (
+                <Link key={p.slug} href={`/sv/funktioner/${p.slug}`} className="funktioner-pages-card">
+                  <img
+                    src={illuSrc(p.hero.name, 640)}
+                    srcSet={illuSrcSet(p.hero.name)}
+                    sizes="(max-width: 520px) 100vw, (max-width: 1000px) 50vw, 300px"
+                    width={1200}
+                    height={900}
+                    loading="lazy"
+                    decoding="async"
+                    alt={p.hero.alt}
+                  />
+                  <h3>{p.name}</h3>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="funktioner-custom">
         <div className="container container-narrow">

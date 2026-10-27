@@ -1290,7 +1290,7 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 <p>Jämför 8 system med pris i <a href="/sv/blog/basta-tidrapporteringssystem-bygg">bästa tidrapporteringssystem för bygg 2026</a>.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du se ett enkelt tidrapporteringssystem för bygg i praktiken? <a href="/sv/blog/automatisk-tidrapportering-och-export">Läs om automatisk tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Vad ByggExp kostar och vad som ingår ser du på sidan om vår <a href="/sv/tidrapportering-app">tidrapportering-app</a>.</p>
+<p>Vill du se ett enkelt tidrapporteringssystem för bygg i praktiken? <a href="/sv/blog/automatisk-tidrapportering-och-export">Läs om automatisk tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Hur hela flödet från stämpling till attest och lön fungerar i ByggExp ser du på sidan om vårt <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>, och pris för appen på sidan om vår <a href="/sv/tidrapportering-app">tidrapportering-app</a>.</p>
 
 <h2>Relaterade guider om tidrapportering</h2>
 <ul>
@@ -1551,7 +1551,7 @@ const S_TIDRAPPORTERING_HANTVERKARE_HTML = `
 <p>För en liten firma är följsamhet allt. Välj en app där man bara checkar in och ut – ingen utbildning, ingen dator. Fungerar på både iPhone och Android.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du fånga varje debiterbar timme? Läs om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en gratis konsultation</a>. Pris och funktioner finns på sidan om <a href="/sv/tidrapportering-app">ByggExp:s tidrapportering-app</a>.</p>
+<p>Vill du fånga varje debiterbar timme? Läs om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en gratis konsultation</a>. Hur en dag med flera kunder blir en ROT-faktura i ByggExp ser du på sidan om <a href="/sv/funktioner/tidrapportering-hantverkare">tidrapportering för hantverkare</a>. Pris och funktioner finns på sidan om <a href="/sv/tidrapportering-app">ByggExp:s tidrapportering-app</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Hur sköter en enmansföretagare tidrapportering enklast?</h3>
@@ -2444,7 +2444,7 @@ const A_BYGGDAGBOK_HTML = `
 <p>I ByggExp för du dagboken i webbversionen, per projekt och dag. Du fyller i väder och temperatur, bemanning, utfört arbete, avvikelser, material och övriga anteckningar. Foton laddar du upp till dagens inlägg. Dagboken ligger i samma projekt som tidrapporter och ÄTA, så du slipper leta i flera system.</p>
 
 <h2>Kom igång</h2>
-<p>Börja med vår <a href="/sv/verktyg/byggdagbok-mall">gratis byggdagbok-mall</a>, komplettera med en <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a> för kontrollerna eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
+<p>Börja med vår <a href="/sv/verktyg/byggdagbok-mall">gratis byggdagbok-mall</a>, komplettera med en <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a> för kontrollerna eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Hur dagboken förs per projekt och dag i ByggExp visar vi på sidan om vår <a href="/sv/funktioner/byggdagbok">digitala byggdagbok</a>.</p>
 
 <h2>Relaterade guider</h2>
 <ul>

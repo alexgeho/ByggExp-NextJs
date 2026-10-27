@@ -3,6 +3,7 @@ import type { GetServerSideProps } from 'next';
 import { fetchPublishedBlogPosts } from '../lib/blog-api';
 import { getCodeArticles } from '../content/code-articles';
 import { VERKTYG_GROUPS } from '../content/verktyg-list';
+import { FUNKTION_PAGE_SLUGS } from '../content/funktion-pages';
 import { landingLanguageCodes, svEnLocales } from '../locales/languages';
 import { EN_CALC_SLUGS, HREFLANG_CALC_SLUGS } from '../lib/locale';
 import { localeOrigin } from '../lib/seo';
@@ -95,6 +96,10 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
     urls.push({ loc: `${localeOrigin('sv')}/sv/fa-offert` });
     // Product landing pages (sv only).
     urls.push({ loc: `${localeOrigin('sv')}/sv/tidrapportering-app` });
+    // Commercial feature pages (sv only), /sv/funktioner/<slug>.
+    FUNKTION_PAGE_SLUGS.forEach((slug) => {
+      urls.push({ loc: `${localeOrigin('sv')}/sv/funktioner/${slug}` });
+    });
     SV_ONLY_PATHS.forEach((path) => {
       urls.push({ loc: `${localeOrigin('sv')}/sv/${path}` });
     });

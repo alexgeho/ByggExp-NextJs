@@ -581,12 +581,12 @@ ${illu('lon-period', 'Person vid ett skrivbord med laptop, en lista med blå rad
 <p>Oavsett väg är det samma attesterade timmar som går vidare. Det är där de flesta lönefel uppstår – och där ni sparar mest tid. Fler frågor att ställa inför valet finns i guiden om <a href="/sv/blog/loneprogram-bygg">löneprogram för bygg</a>, och tidrapporteringen beskriver vi på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 <h2>Kom igång</h2>
-<p>Lönekörningen startar från timmarna i tidrapporten, så lönekörning, lönespec och AGI-underlag kräver Full koll för ${KOMPLETT_PRICE} kr/mån exkl. moms med 10 användare. Där ingår hela kedjan från stämpling till lönekörning. Timmar från appen och attest finns också i Koll på jobbet (${PROJEKT_PRICE} kr/mån), där du exporterar tidrapporten som Excel eller PDF till lönebyrån. Testa gratis i 14 dagar. Låt gärna laget stämpla i appen under en löneperiod medan den gamla rutinen finns kvar, och jämför underlagen innan ni byter.</p>
+<p>Lönekörningen startar från timmarna i tidrapporten. Hela kedjan från stämpling till lönekörning, lönespec och AGI-underlag ingår i Full koll för ${KOMPLETT_PRICE} kr/mån exkl. moms med 10 användare. Timmar från appen och attest finns också i Koll på jobbet (${PROJEKT_PRICE} kr/mån), där du exporterar tidrapporten som Excel eller PDF till lönebyrån. Testa gratis i 14 dagar. Låt gärna laget stämpla i appen under en löneperiod medan den gamla rutinen finns kvar, och jämför underlagen innan ni byter.</p>
 `.trim(),
   faq: [
     {
       question: 'Vad kostar lönehantering i ByggExp?',
-      answer: `Lönekörning, lönespec och AGI-underlag ingår i Full koll för ${KOMPLETT_PRICE} kr/mån exkl. moms med 10 användare, eftersom lönen körs från timmarna i appen. Timmar och attest med export som Excel eller PDF finns i Koll på jobbet (${PROJEKT_PRICE} kr/mån). Du testar gratis i 14 dagar.`,
+      answer: `Hela kedjan från timmar i appen till lönekörning, lönespec och AGI-underlag ingår i Full koll för ${KOMPLETT_PRICE} kr/mån exkl. moms med 10 användare. Timmar och attest med export som Excel eller PDF finns i Koll på jobbet (${PROJEKT_PRICE} kr/mån). Du testar gratis i 14 dagar.`,
     },
     {
       question: 'Räknas OB och övertid enligt Byggavtalet automatiskt?',

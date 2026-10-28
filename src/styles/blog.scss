@@ -989,10 +989,10 @@
   color: var(--muted, #5b6b80);
 }
 
-// Cover: decorative — never push the content people came for below the fold.
+// Cover: whole screenshot, its own aspect ratio — never cropped (R18).
 .blog-article-cover {
-  max-height: 340px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 700px) {
@@ -1006,7 +1006,4 @@
     overflow-x: auto;
   }
 
-  .blog-article-cover {
-    max-height: 220px;
-  }
 }

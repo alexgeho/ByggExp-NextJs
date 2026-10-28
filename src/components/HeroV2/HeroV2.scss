@@ -387,7 +387,7 @@
   right: 0;
   top: 0;
   width: 84%;
-  aspect-ratio: 1216 / 832;
+  aspect-ratio: 2628 / 1867; // image's own ratio: nothing cut from the top (R18)
 }
 
 .hero-v2-scene--site {
@@ -395,7 +395,7 @@
   bottom: 0;
   width: 36%;
   aspect-ratio: 4 / 5;
-  object-position: 40% center; // keep the face and the phone in frame
+  object-position: 40% top; // keep the head and the phone in frame, never cut the top (R18)
   border: 1px solid rgba(255, 255, 255, 0.9);
 }
 

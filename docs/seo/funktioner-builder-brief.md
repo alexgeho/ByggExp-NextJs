@@ -1,0 +1,20 @@
+# Brief: new /sv/funktioner/<slug> pages (waves 2–3), owner approved 27.10.2026 «делай все волны»
+
+Template: copy the pattern of the 4 live pages — content in src/content/funktion-pages.ts (types FunktionPage, illu(), ILLU_HEIGHT, PLAN_PRICE), route src/pages/[lang]/funktioner/[slug].tsx, hub src/pages/[lang]/funktioner/index.tsx, sitemap src/pages/sitemap.xml.ts. Read the live pages' content first.
+To avoid merge conflicts with parallel builders: put YOUR pages in a NEW file src/content/funktion-pages-<batch>.ts exporting an array, and register it with ONE line in FUNKTION_PAGES (spread) in funktion-pages.ts; your ILLU_HEIGHT entries go in your file and get merged with one spread line. Hub: add your cards in one block. Keep each change minimal.
+
+Content (strict):
+- Swedish, natural, grammatical, no Cyrillic, neutral gender (medarbetaren/man/hen, never generic "han"). 1500–2200 words of real substance per page, own angle, no overlap with the other funktioner pages or blog. FAQ 6–8 real search questions. Title starts with exact main keyword (≤60 chars), description ≤155 with "14 dagar gratis.", H1 contains the keyword with the accent on its own line, breadcrumbs = H1 wording.
+- Claims ONLY from docs/seo/product-facts-verified.md, PRODUCT-FEATURES.md and the package matrix ~/Bygg-exp-dev/ByggExp-BackEnd/src/company/modules.ts (Koll på pengarna 299 = faktura plan: offers, invoices, payroll, project economy, expenses; Koll på jobbet 690 = projects, tasks, dagbok, kma, shifts, planering, bemanning, leave, tools; Full koll 990 = everything). Set the page's plan/price card to the cheapest package that contains the feature (add a 'faktura' plan to FunktionPlan if needed, using pricing values from src/locales/pricing.ts). Mark features outside that package with "(Full koll)" etc. If a module is NOT live in the product, do not build the page — report it instead.
+- Don't claim: Fortnox/Visma integration (either way), offline, ID06 integration, Personalliggare, auto Byggavtalet calc, invoices "direct from logged time", reviews/customer counts. "Gratis" = 14-day trial only.
+- No competitor names. External links only authoritative (Skatteverket, Arbetsmiljöverket, Boverket, riksdagen, Byggnads); no Wikipedia.
+- Negatives only in FAQ, never in hero/sections/checklists.
+- Minimal UI text: one line under the price card; no micro-captions.
+- Internal links: to relevant /sv/blog articles and /sv/verktyg templates/calculators (verify they exist in the live sitemap), to related funktioner pages; add ONE contextual link from the best-matching blog article (src/content/articles/*.ts) to the new page.
+
+Images: 5 per page = real app screenshot(s) in the step carousel (reuse /public/landing/features/* or ~/Bygg-exp-dev/byggexp-admin/docs/presentations/**) + 5 in-article 3D illustrations. Reuse approved 3D from ~/Bygg-exp-dev/byggexp-admin/docs/presentations/design-system/assets/3d/ first (use ekonomi-1-gold.png, never blue-coin ekonomi-1), generate the rest via Replicate google/nano-banana with an approved PNG as style reference and README §7 prompt (soft 3D clay, white bg, navy #0A1828, blue #2394FF, ~10% amber #FFA62B, people smile, heads on necks, NO text/letters/numbers/logos). R13: coins/money always gold amber #FFA62B. REPLICATE_API_TOKEN in env, never print; one request at a time, retry on errors. View every image; reject text, wrong colors, odd objects, tiny figures, wood colours, style drift. Trim like existing (44px pad at 1200), WebP 1200+640, alt = what is visible.
+
+Verify: yarn build + eslint pass; screenshots desktop 1440 + mobile 390 to ~/Desktop/byggexp-seo/screens/fn-<slug>-{desktop,mobile}.png; no horizontal scroll. Commit (not push) with trailer:
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_0111Fs7yWaqQazNsNBy46isk
+Don't touch unrelated files (main may have uncommitted SMM files from another session). Report: branch, commit, per page title/H1/words/plan, images (reused/new/rejected), unsure claims.

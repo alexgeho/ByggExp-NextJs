@@ -12,9 +12,9 @@ const ENOUGH_TEXT = 520; // chars of text that roughly match the image height
 const MIN_TEXT = 260; // a short line next to a large image looks empty → figure goes wide instead
 const MAX_TEXT = 900; // a longer block stays full width (row would be mostly empty image side)
 
-type Block = { start: number; end: number; tag: string };
+export type Block = { start: number; end: number; tag: string };
 
-function topLevelBlocks(html: string): Block[] {
+export function topLevelBlocks(html: string): Block[] {
   const blocks: Block[] = [];
   const re = /<(\/?)([a-zA-Z][a-zA-Z0-9]*)\b[^>]*?(\/?)>/g;
   let depth = 0;

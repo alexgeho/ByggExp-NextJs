@@ -2273,9 +2273,9 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML = `
 <li><strong>Pris per användare – räknat på hela laget.</strong> Jämför vad 5, 10 och 20 användare kostar, om det finns startavgift och bindningstid, och vilka funktioner som kräver tillägg.</li>
 </ol>
 
-<figure class="web-shot"><img src="/features-content/dagsplanering-och-planeringsmoten-web.webp" alt="Schemaläggningssystem för bygg i webbadmin: personal planerad per projekt över en månad" width="1568" height="764" loading="lazy"><figcaption>Planeringen i ByggExp – personal per projekt över två veckor, en månad eller valfri period, med ändringslogg.</figcaption></figure>
+<figure class="web-shot"><img src="/features-content/dagsplanering-och-planeringsmoten-web.webp" alt="Schemaläggningssystem för bygg i webbadmin: personal planerad per projekt över en månad" width="1568" height="764" loading="lazy"><figcaption>Planeringen i webbadmin och i appen – personal per projekt över valfri period, uppgifter i Gantt-vy.</figcaption></figure>
 
-<figure class="app-shots"><img src="/features-content/dagsplanering-och-planeringsmoten-1.webp" alt="ByggExp-appen: Gantt-vy med uppgifter per medarbetare och projekt" width="520" height="1070" loading="lazy"><figcaption>I appen ser medarbetaren sina uppgifter per projekt i en Gantt-vy.</figcaption></figure>
+<figure class="app-shots"><img src="/features-content/dagsplanering-och-planeringsmoten-1.webp" alt="ByggExp-appen: Gantt-vy med uppgifter per medarbetare och projekt" width="520" height="1070" loading="lazy"></figure>
 
 <h2>Regler att tänka på</h2>
 <p>Arbetsgivaren ansvarar för att schemat följer arbetstidslagen – även om medarbetaren själv ville jobba. Det här gäller enligt <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/arbetstidslag-1982673_sfs-1982-673/" target="_blank" rel="noopener">arbetstidslagen (1982:673)</a>:</p>

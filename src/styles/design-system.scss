@@ -248,3 +248,60 @@
     order: 0;
   }
 }
+
+/* R16 · Phone + desktop screenshot in one row (lib/shot-rows.ts): phone ~30 %,
+   desktop ~70 %, bottom-aligned, one shared caption. ≤700px: phone above
+   desktop, both centered. */
+.blog-article-content .shot-row {
+  margin: 28px 0;
+}
+.blog-article-content .shot-row__imgs {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+.blog-article-content .shot-row__phone {
+  flex: 0 0 calc(30% - 12px);
+  min-width: 0;
+}
+.blog-article-content .shot-row__web {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.blog-article-content .shot-row img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+}
+.blog-article-content .shot-row__phone img {
+  border-radius: 0;
+}
+.blog-article-content .shot-row__web img {
+  border-radius: 12px;
+  border: 1px solid rgba(10, 40, 90, 0.12);
+  box-shadow: 0 10px 30px rgba(6, 18, 40, 0.1);
+}
+.blog-article-content .shot-row figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted, #6b7a90);
+  margin-top: 16px;
+}
+@media (max-width: 700px) {
+  .blog-article-content .shot-row__imgs {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .blog-article-content .shot-row__phone {
+    flex: none;
+    width: 60%;
+    max-width: 240px;
+  }
+  .blog-article-content .shot-row__web {
+    flex: none;
+    width: 100%;
+  }
+}

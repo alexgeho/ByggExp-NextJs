@@ -680,20 +680,22 @@
   border: 1px solid rgba(10, 40, 90, 0.08);
 }
 
-// Two app screenshots (phone frames baked in) shown side by side; stacks on
-// narrow screens.
+// R16: two app screenshots (phone frames baked in) side by side — same width,
+// centered, bottom-aligned, one shared caption. Never paired with a desktop
+// shot. On phones they stay side by side while each is >= 150px, else stack.
 .blog-article-content .app-shots {
   display: flex;
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: flex-end;
   margin: 28px 0;
 }
 
 .blog-article-content .app-shots img {
   width: 230px;
-  max-width: 46%;
+  max-width: calc(50% - 10px);
+  min-width: 150px;
   height: auto;
   margin: 0;
   border-radius: 0;
@@ -707,10 +709,12 @@
   margin-top: 2px;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 700px) {
+  .blog-article-content .app-shots {
+    gap: 12px;
+  }
   .blog-article-content .app-shots img {
-    width: 60%;
-    max-width: 240px;
+    max-width: calc(50% - 6px);
   }
 }
 

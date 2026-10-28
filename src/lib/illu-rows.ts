@@ -9,6 +9,7 @@ const VOID = new Set(['img', 'br', 'hr', 'input', 'source', 'meta', 'link', 'wbr
 const TEXT_BLOCKS = new Set(['p', 'ul', 'ol']);
 const MAX_BLOCKS = 3;
 const ENOUGH_TEXT = 520; // chars of text that roughly match the image height
+const MIN_TEXT = 260; // a short line next to a large image looks empty → figure goes wide instead
 const MAX_TEXT = 900; // a longer block stays full width (row would be mostly empty image side)
 
 type Block = { start: number; end: number; tag: string };
@@ -66,7 +67,7 @@ export function illuRows(html: string): string {
       if (chars >= ENOUGH_TEXT) break;
     }
     consumedUpTo = i;
-    if (!take.length) {
+    if (!take.length || chars < MIN_TEXT) {
       edits.push({ start: b.start, end: b.end, text: figure.replace('class="fn-illu', 'class="fn-illu fn-illu--wide') });
       return;
     }

@@ -44,12 +44,12 @@ export const CONTRACT_PARTNER_SERVICES: PartnerService[] = [
 export const INVOICE_PARTNER_SERVICES: PartnerService[] = [
   {
     label: 'Kunden betalar inte fakturan – vad gör du?',
-    href: '/sv/blog/kunden-betalar-inte-fakturan',
+    href: '/sv/blog/faktureringsavgift-hantverkare-tillaten',
     description: 'Steg för steg från påminnelse till inkasso och betalningsföreläggande.',
   },
   {
     label: 'Påminnelse, inkasso och avgifter',
-    href: '/sv/blog/paminnelse-inkasso-avgift-bygg',
+    href: '/sv/blog/faktureringsavgift-hantverkare-tillaten',
     description: 'Vilka avgifter du får ta ut och i vilken ordning – utan att göra fel.',
   },
   {
@@ -59,7 +59,7 @@ export const INVOICE_PARTNER_SERVICES: PartnerService[] = [
   },
   {
     label: 'Kreditförsäkring för byggföretag',
-    href: '/sv/blog/kreditforsakring-byggforetag',
+    href: '/sv/blog/kreditupplysning-kolla-kund-innan-jobb-bygg',
     description: 'Skydda dig mot kundförluster när fakturan inte betalas.',
   },
   // Affiliate/partner slot (t.ex. factoring / kreditförsäkring), external: true.
@@ -79,12 +79,12 @@ export const QUOTE_PARTNER_SERVICES: PartnerService[] = [
   },
   {
     label: 'ROT-avdrag 2026 – nya regler',
-    href: '/sv/blog/rotavdrag-2026-nya-regler-foretag',
+    href: '/sv/blog/faktura-med-rotavdrag',
     description: 'Vad som gäller för ROT 2026 och hur du fakturerar rätt.',
   },
   {
     label: 'Kreditförsäkring för byggföretag',
-    href: '/sv/blog/kreditforsakring-byggforetag',
+    href: '/sv/blog/kreditupplysning-kolla-kund-innan-jobb-bygg',
     description: 'Skydda marginalen mot kundförluster på större jobb.',
   },
   // Affiliate/partner slot, external: true.

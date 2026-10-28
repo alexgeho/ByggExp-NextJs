@@ -152,9 +152,9 @@ export default function FakturaMallPage() {
         }}
         relatedHeading="Fler gratis verktyg"
         related={[
-          { href: `/${LOCALE}/blog/fakturera-som-hantverkare`, label: 'Guide: fakturera som hantverkare' },
+          { href: `/${LOCALE}/blog/faktureringsprogram-bygg`, label: 'Guide: så fakturerar du byggjobb rätt' },
           { href: `/${LOCALE}/blog/e-faktura-obligatorisk-byggforetag`, label: 'E-faktura – blir det obligatoriskt?' },
-          { href: `/${LOCALE}/blog/kunden-betalar-inte-fakturan`, label: 'Kunden betalar inte – så driver du in' },
+          { href: `/${LOCALE}/blog/faktureringsavgift-hantverkare-tillaten`, label: 'Kunden betalar inte – så driver du in' },
           { href: `/${LOCALE}/verktyg/offert-mall`, label: 'Offertmall' },
           { href: `/${LOCALE}/verktyg/rot-avdrag-kalkylator`, label: 'ROT-avdrag kalkylator' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },

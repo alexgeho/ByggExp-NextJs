@@ -152,7 +152,7 @@ const AB04_HTML = `
 <li><strong>ABT 06 (kap 4 § 7):</strong> garantitid 5 år för entreprenaden – även för material entreprenören valt. 2 år gäller bara för särskilt material eller särskild vara (fabrikat) som beställaren föreskrivit (<a href="https://www.byggindustrin.se/arbetsliv/expertsvar-entreprenadjuridik/garantitid-for-sarskild-vara-vem-har-ratt/" target="_blank" rel="noopener noreferrer">Byggindustrin</a>).</li>
 <li><strong>Ansvarstid:</strong> 10 år från det att entreprenaden godkänts, och inleds med garantitiden. Under ansvarstiden kan entreprenören bli ansvarig för väsentliga fel som beror på vårdslöshet.</li>
 </ul>
-<p>Vill du gå djupare? Läs <a href="/sv/blog/garantitid-ansvarstid-ab-04">garantitid och ansvarstid i AB 04</a>.</p>
+<p>Vill du gå djupare? Läs <a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">garantitid och ansvarstid i AB 04</a>.</p>
 
 <h2>Var får du tag på AB 04 och ABT 06?</h2>
 <p>Till skillnad från konsumentavtalen (som Hantverkarformuläret 17) är AB 04 och ABT 06 inte gratis blanketter. De ges ut av Byggandets Kontraktskommitté (BKK) och säljs som tryck och PDF via Svensk Byggtjänst. Du "laddar alltså inte ner" dem fritt – du hänvisar till dem i ditt entreprenadkontrakt och tillämpar villkoren. Själva kontraktet och underlaget bygger du enkelt med en gratis <a href="/sv/verktyg/entreprenadkontrakt-mall">entreprenadkontrakt-mall</a>, där du väljer om AB 04 eller ABT 06 ska gälla.</p>
@@ -162,12 +162,11 @@ const AB04_HTML = `
 <ul>
 <li><a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a> – ändringar och tillägg, och hur du får betalt.</li>
 <li><a href="/sv/blog/slutbesiktning">Slutbesiktning enligt AB 04</a> – när ansvaret går över.</li>
-<li><a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid</a> – 5 och 10 år.</li>
 <li><a href="/sv/blog/garantibesiktning-2-ar-entreprenad">Garantibesiktning efter 2 år</a>.</li>
 <li><a href="/sv/blog/hindersanmalan-tidsforlangning-ab04">Hindersanmälan och tidsförlängning</a> – undvik vite.</li>
 <li><a href="/sv/verktyg/hindersanmalan-mall">Hindersanmälan – gratis mall</a> – fyll i och ladda ner som PDF.</li>
-<li><a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">Entreprenadgaranti och säkerhet</a>.</li>
-<li><a href="/sv/blog/byggfelsforsakring">Byggfelsförsäkring</a> – vad som gäller sedan kravet togs bort 2014.</li>
+<li><a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">Entreprenadgaranti och säkerhet</a> – inklusive garantitid och ansvarstid (5 och 10 år).</li>
+<li><a href="/sv/blog/fardigstallandeskydd-smahus">Byggfelsförsäkring</a> – vad som gäller sedan kravet togs bort 2014.</li>
 <li><a href="/sv/blog/nya-ab-04-abt-06-revidering-2027">Kommande revidering av AB 04 och ABT 06</a> – status för de nya bestämmelserna.</li>
 </ul>
 
@@ -196,7 +195,7 @@ const AB04_HTML = `
 <h2>Kom igång</h2>
 <p>Håll koll på kontrakt, ÄTA, dagbok och ekonomi på ett ställe. Ladda ner en gratis <a href="/sv/verktyg/entreprenadkontrakt-mall">entreprenadkontrakt-mall</a>, <a href="/sv/blog/ata-arbeten">läs om ÄTA</a>, skapa offert och faktura i ByggExp eller <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a> · <a href="/sv/blog/byggdagbok">Byggdagbok</a> · <a href="/sv/blog/egenkontroll">Egenkontroll</a></p>
+<p>Relaterat: <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a> · <a href="/sv/blog/byggdagbok">Byggdagbok</a> · <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll</a></p>
 `.trim();
 
 const AB04: BlogPost = {
@@ -241,7 +240,7 @@ const SLUTBESIKTNING_HTML = `
 
 <h2>Så förbereder du dig inför slutbesiktningen</h2>
 <ol>
-<li>Se till att egenkontroller är gjorda och dokumenterade – <a href="/sv/blog/egenkontroll">egenkontroll</a> är ofta det som styrker kvaliteten.</li>
+<li>Se till att egenkontroller är gjorda och dokumenterade – <a href="/sv/blog/egenkontroll-entreprenad">egenkontroll</a> är ofta det som styrker kvaliteten.</li>
 <li>Ha <a href="/sv/blog/byggdagbok">byggdagboken</a> och ÄTA-underlag i ordning.</li>
 <li>Åtgärda kända brister innan besiktningen.</li>
 <li>Samla ritningar, intyg och provningsprotokoll som ska visas.</li>
@@ -264,9 +263,9 @@ const SLUTBESIKTNING_HTML = `
 <p>När entreprenaden godkänns vid slutbesiktningen. Enligt AB 04 är den fem år för arbetet och två år för material; ansvarstiden är tio år.</p>
 
 <h2>Kom igång</h2>
-<p>Gå in i slutbesiktningen med ordning på dokumentationen. <a href="/sv/blog/egenkontroll">Läs om egenkontroll</a>, för <a href="/sv/blog/byggdagbok">byggdagbok</a> i ByggExp eller <a href="/sv/contact">boka en gratis konsultation</a>.</p>
+<p>Gå in i slutbesiktningen med ordning på dokumentationen. <a href="/sv/blog/egenkontroll-entreprenad">Läs om egenkontroll</a>, för <a href="/sv/blog/byggdagbok">byggdagbok</a> i ByggExp eller <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06</a> · <a href="/sv/blog/egenkontroll">Egenkontroll</a> · <a href="/sv/blog/byggdagbok">Byggdagbok</a></p>
+<p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06</a> · <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll</a> · <a href="/sv/blog/byggdagbok">Byggdagbok</a></p>
 `.trim();
 
 const SLUTBESIKTNING: BlogPost = {
@@ -363,93 +362,6 @@ const MUNTLIGT: BlogPost = {
   publishedAt: "2026-08-18T12:00:00.000Z",
   createdAt: "2026-08-18T12:00:00.000Z",
   updatedAt: "2026-08-18T12:00:00.000Z",
-};
-
-const GARANTI_HTML = `
-<p>Många entreprenörer tror att ansvaret tar slut när garantitiden gått ut. Det är fel. AB 04 binder dig i tio år räknat från godkänd slutbesiktning, och det som ändras efter garantin är inte om du ansvarar - utan vad du ansvarar för och vem som ska bevisa vad. Här reder vi ut skillnaden mellan garantitid och ansvarstid, och vad väsentlighets- och vårdslöshetskravet betyder när garantin väl har löpt ut.</p>
-
-<p>Ordning och dokumentation är din bästa försäkring hela vägen - använd <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall -&gt;</a> för att visa att arbetet utförts fackmässigt om ett fel skulle dyka upp flera år senare.</p>
-
-<h2>Två tidsbegrepp som blandas ihop - garantitid ligger inuti ansvarstiden</h2>
-<p>Det första du behöver ha klart för dig är att garantitid och ansvarstid inte är två alternativ. Garantitiden är den första delen av ansvarstiden.</p>
-<p>Ansvarstiden enligt AB 04 är tio år, räknat från entreprenadens godkännande vid slutbesiktningen. De tio åren motsvarar den allmänna preskriptionstiden. Ansvarstiden inleds med garantitiden och löper sedan vidare fram till år tio. När de tio åren har gått är du helt fri från ansvar - även för väsentliga fel som orsakats av vårdslöshet.</p>
-
-<h2>Garantitiden: 5 år för arbetet, 2 år för material</h2>
-<p>Som huvudregel är garantitiden i AB 04 fem år för entreprenörens arbetsprestation och två år för material och varor (kap. 4 § 7). Att materialet har kortare garanti beror på att leverantörernas garantier ofta är kortare - det är alltså en medveten uppdelning.</p>
-<p>Under garantitiden gäller ett så kallat presumtionsansvar med omvänd bevisbörda (kap. 5 § 5). Framträder ett fel förutsätts det bero på dig. Vill du slippa avhjälpa måste du bevisa att felet inte har orsakats av dig - exempelvis genom beställarens felaktiga skötsel, normalt slitage eller olyckshändelse. Det är en tung börda, och det är därför garantitiden är den period då du oftast får stå för avhjälpandet.</p>
-
-<h2>Efter garantin - men inom ansvarstiden</h2>
-<p>När garantitiden löpt ut vänder allt. Nu ansvarar du enligt kap. 5 § 6 bara för fel som är <strong>väsentliga</strong> och som dessutom visas ha sin grund i din <strong>vårdslöshet</strong>. Bevisbördan flyttas dessutom över till beställaren - det är alltså beställaren som måste visa både att felet är väsentligt och att det beror på att du varit vårdslös.</p>
-<p>Den kvarvarande ansvarstiden är resten av tioårsperioden: ytterligare fem år för arbetsprestationen (5 + 5 = 10) och ytterligare åtta år för material och varor (2 + 8 = 10). Ett materialfel som visar sig år sju kan alltså fortfarande vara ditt ansvar - men bara om det är väsentligt och beror på vårdslöshet.</p>
-
-<h2>När är felet "väsentligt"?</h2>
-<p>Begreppet väsentligt fel är inte definierat i själva kontraktstexten, men kommentaren till kap. 5 § 6 ger vägledning. Ett fel kan bedömas som väsentligt om det:</p>
-<ul>
-<li>medför stora kostnader att avhjälpa,</li>
-<li>hindrar den avsedda användningen av byggnaden,</li>
-<li>påverkar byggnadens goda bestånd,</li>
-<li>innebär avbrott i tekniska system - dock inte kortvariga eller återkommande avbrott,</li>
-<li>är av stor omfattning,</li>
-<li>utgörs av återkommande likartade smärre fel, eller</li>
-<li>medför fara för hälsa eller säkerhet.</li>
-</ul>
-<p>Motsatsvis faller smärre fel och rena utseendefel normalt utanför ansvaret efter garantitiden - särskilt sådant som kan åtgärdas med relativt enkla medel och utan att din fackkunskap krävs.</p>
-
-<h2>När är du "vårdslös"?</h2>
-<p>Vårdslöshet bedöms mot kravet på fackmässighet. Har du frångått beställarens anvisningar eller avvikit från vad som är fackmässigt utförande? Då måste du kunna visa godtagbara skäl för avvikelsen för att undgå ansvar. Kan du inte det, riskerar avvikelsen att bedömas som vårdslös.</p>
-<p>Vägledande praxis från Högsta domstolen är NJA 1992 s. 130 (ett nedrasat innertak) samt de uppmärksammade fallen om enstegstätade fasader, NJA 2015 s. 110 och NJA 2015 s. 1040. Fasadfallen visar hur en metod som var vanlig i branschen ändå kunde bedömas som ett fel när den ledde till fuktskador - en påminnelse om att "alla gjorde så" inte automatiskt friar dig.</p>
-
-<h2>AB 04 vs ABT 06 - kort jämförelse</h2>
-<p>Vid totalentreprenad enligt ABT 06 gäller samma tioåriga ansvarstid och samma väsentlighets- och vårdslöshetskrav i kap. 5 § 6. Skillnaden ligger i materialgarantin: här är garantitiden fem år för entreprenaden och två år för material eller vara som beställaren särskilt har föreskrivit, alltså ett bestämt fabrikat. Vill du gå djupare i skillnaderna mellan avtalen, läs <a href="/sv/blog/ab-04-och-abt-06">vår genomgång av AB 04 och ABT 06</a>.</p>
-
-<h2>Praktiska råd</h2>
-<ul>
-<li>Genomför garantibesiktningen i tid - det är där fel enklast fångas medan omvänd bevisbörda fortfarande gäller till beställarens fördel.</li>
-<li>Vid fel som beställaren påtalar efter garantitiden bör en särskild besiktning begäras, och du som entreprenör ska kallas så att du kan delta.</li>
-<li>Dokumentera fackmässighet och de anvisningar du fått löpande under projektet. Det är detta underlag som avgör vårdslöshetsfrågan år senare.</li>
-<li>Överväg att särreglera väsentlighetskravet i kontraktet - till exempel att ett fel anses väsentligt först om avhjälpandekostnaden överstiger ett bestämt belopp, och att flera likartade fel räknas som ett.</li>
-<li>Notera att beställaren i vissa fall kan hålla inne del av entreprenadsumman som säkerhet enligt kap. 6 § 16, med skriftligt redovisade skäl.</li>
-</ul>
-<p>Förväxla inte heller AB 04 med konsumentreglerna. Arbetar du mot en privatperson gäller konsumenttjänstlagen, inte den här ansvarstrappan.</p>
-
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp löser inte juridiken åt dig, men det ger dig underlaget du behöver den dag ett fel ifrågasätts. I plattformen samlar du egenkontroller och byggdagbok knutna till rätt projekt, så att dokumentationen finns kvar långt efter slutbesiktningen - hela ansvarstiden ut.</p>
-<p>Med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> visar du att arbetet utförts fackmässigt, och med <a href="/sv/verktyg/byggdagbok-mall">byggdagboks-mallen</a> fångar du löpande vilka anvisningar du fått och vilka val som gjordes på plats. Just den kombinationen - fackmässighet plus dokumenterade anvisningar - är avgörande om beställaren efter garantin försöker visa att ett fel beror på din vårdslöshet.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Slutar mitt ansvar när garantitiden gått ut?</h3>
-<p>Nej. Garantitiden är bara den första delen av ansvarstiden. Efter garantin ansvarar du fortfarande fram till år tio, men enbart för väsentliga fel som beror på din vårdslöshet - och då är det beställaren som har bevisbördan.</p>
-
-<h3>Vad är skillnaden i bevisbörda före och efter garantitiden?</h3>
-<p>Under garantitiden gäller omvänd bevisbörda: felet förutsätts bero på dig och du måste bevisa motsatsen för att slippa avhjälpa. Efter garantitiden vänder det - beställaren måste bevisa både att felet är väsentligt och att det orsakats av din vårdslöshet.</p>
-
-<h3>Varför har material bara två års garanti men arbetet fem?</h3>
-<p>Uppdelningen följer AB 04 kap. 4 § 7 och speglar att leverantörernas materialgarantier ofta är kortare. Men ansvarstiden är densamma - tio år totalt. Efter garantin kvarstår ansvaret i åtta år för material och fem år för arbetsprestationen, om felet är väsentligt och vårdslöst.</p>
-
-<h3>Kan vi bestämma själva vad som räknas som väsentligt fel?</h3>
-<p>Ja, parterna kan särreglera väsentlighetskravet i kontraktet. Ni kan till exempel avtala att ett fel anses väsentligt först när avhjälpandekostnaden överstiger ett visst belopp, och att flera likartade fel ska räknas som ett. Det ger tydligare spelregler för tiden efter garantin.</p>
-
-<h2>Kom igång</h2>
-<p>Bygg upp dokumentationen som håller hela ansvarstiden ut - börja med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> och komplettera med <a href="/sv/verktyg/byggdagbok-mall">byggdagboks-mallen</a>. Vill du se hur allt hänger ihop projekt för projekt, <a href="/sv/contact">boka en gratis konsultation</a> så visar vi dig.</p>
-
-<p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 - skillnaderna</a> och <a href="/sv/blog/slutbesiktning">slutbesiktning steg för steg</a>.</p>
-`.trim();
-
-const GARANTI: BlogPost = {
-  _id: "code-"+"garantitid-ansvarstid-ab-04",
-  title: "Garantitid och ansvarstid i AB 04 - vad du ansvarar för i 5 och 10 år",
-  slug: "garantitid-ansvarstid-ab-04",
-  locale: "sv",
-  excerpt: "Många tror att ansvaret slutar när garantin gått ut - men AB 04 binder dig i tio år. Så skiljer sig garantitid och ansvarstid i praktiken.",
-  tag: "Entreprenadjuridik",
-  coverImageUrl: "/landing/verktyg/byggdagbok-preview.webp",
-  contentHtml: GARANTI_HTML,
-  seoTitle: "Garantitid & ansvarstid AB 04 | ByggExp",
-  seoDescription: "Skillnaden mellan garantitid och ansvarstid i AB 04: 5 år arbete, 2 år material och 10 års ansvar. Så funkar väsentlighets- och vårdslöshetskravet.",
-  seoImageUrl: `${SITE_URL}/landing/verktyg/byggdagbok-preview.webp`,
-  canonicalUrl: "",
-  noIndex: false, isPublished: true,
-  publishedAt: "2026-08-18T14:30:00.000Z", createdAt: "2026-08-18T14:30:00.000Z", updatedAt: "2026-08-18T14:30:00.000Z",
 };
 
 const ABS18_HTML = `
@@ -632,7 +544,7 @@ const A_REKLAMATION_HANTVERKSTJANST_FRISTER_HTML = `
 <h2>Kom igång</h2>
 <p>Börja med att säkra ditt underlag. Med <a href="/sv/verktyg/ata-mall">vår gratis ÄTA-mall</a> dokumenterar du vad som beställts och utförts, vilket gör varje framtida reklamation lättare att bemöta. Vill du se hur ByggExp håller ihop avtal, ÄTA och avslut per projekt? <a href="/sv/contact">Boka en gratis konsultation &rarr;</a> så visar vi upplägget.</p>
 
-<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så dokumenterar du avslutat uppdrag</a>, <a href="/sv/blog/abs-18-hantverkarformularet-17">ABS 18 och Hantverkarformuläret 17</a>, <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a>.</p>
+<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så dokumenterar du avslutat uppdrag</a>, <a href="/sv/blog/abs-18-hantverkarformularet-17">ABS 18 och Hantverkarformuläret 17</a>, <a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">Garantitid och ansvarstid enligt AB 04</a>.</p>
 `;
 
 const A_REKLAMATION_HANTVERKSTJANST_FRISTER: BlogPost = {
@@ -643,91 +555,6 @@ const A_REKLAMATION_HANTVERKSTJANST_FRISTER: BlogPost = {
   seoTitle: "Reklamation hantverkstjänst | ByggExp", seoDescription: "Lär dig de tre reklamationsfristerna (2 mån/3 år/10 år) enligt konsumenttjänstlagen och hur du behåller rätten att själv avhjälpa felet.",
   seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-18T18:15:00.000Z", createdAt: "2026-08-18T18:15:00.000Z", updatedAt: "2026-08-18T18:15:00.000Z",
-};
-
-const A_OVERLAMNING_RELATIONSHANDLINGAR_HTML = `
-<p>Projektet är i mål. Sista skruven är dragen, slutbesiktningen är avklarad och slutfakturan ligger klar. Men är projektet verkligen avslutat? Alltför ofta godkänns slutbesiktningen samtidigt som relationshandlingarna saknas, restpunkterna hänger löst i en oläslig anteckning och drift- och underhållsinstruktionerna aldrig blir levererade. Det är då problemen börjar – för det är just överlämningen som avgör om du får betalt i tid och hur du står dig under de tio år av ansvar som följer. En strukturerad överlämning med en tydlig <strong>överlämning relationshandlingar checklista</strong> är inte pappersexercis, utan ett affärsskydd. Här går vi igenom vad som gäller enligt AB 04 och ABT 06, och hur du håller ordning på restpunkter och procent klart genom hela slutfasen.</p>
-<p><a href="/sv/verktyg/restlista-mall">Skapa en restlista/punchlista med vår gratis mall (PDF & Excel) -&gt;</a></p>
-
-<p>Vill du samla handlingar, restpunkter och etappuppföljning på ett ställe? Se hur du strukturerar slutfasen med <a href="/sv/funktioner">funktionerna i ByggExp -&gt;</a>.</p>
-
-<h2>Vad är relationshandlingar – och varför är de din skyldighet?</h2>
-<p>Relationshandlingar är den dokumentation som beskriver byggnadsverket <em>som det faktiskt blev byggt</em> – inte som det ritades. Begreppet omfattar flera delar som byggherren och den framtida förvaltningen behöver:</p>
-<ul>
-<li><strong>Relationsritningar och relationsunderlag</strong> – uppdaterade ritningar som visar utfört arbete. Underlag som entreprenören lämnar märks "Relationsunderlag".</li>
-<li><strong>Drift- och underhållsinstruktioner (DoU)</strong> – hur installationer och byggdelar ska skötas.</li>
-<li><strong>Produkt- och materialdatablad</strong> för inbyggda produkter.</li>
-<li><strong>Egenkontroller och provningsprotokoll</strong> som styrker att arbetet utförts enligt kontrakt.</li>
-<li><strong>Utbildningsprotokoll</strong> när förvaltningen ska utbildas i systemen.</li>
-</ul>
-<p>Enligt AB 04 och ABT 06 ingår relationshandlingar, DoU-instruktioner och utbildning i kontraktsarbetena <strong>när de är föreskrivna</strong> – och de ska levereras till byggherren senast vid slutbesiktningen. Det är alltså inget frivilligt extra du gör om du hinner, utan en del av det du har åtagit dig att prestera.</p>
-
-<h2>AB 04 vs ABT 06 – vem ansvarar för handlingarna?</h2>
-<p>Ansvarsfördelningen skiljer sig beroende på entreprenadform, och det påverkar vem som tar fram vad:</p>
-<ul>
-<li><strong>ABT 06 (totalentreprenad):</strong> Entreprenören ansvarar för projekteringen och därmed ofta för att ta fram fullständiga relationshandlingar. Du äger både lösningen och dokumentationen av den.</li>
-<li><strong>AB 04 (utförandeentreprenad):</strong> Byggherren tillhandahåller projekteringen. Entreprenören levererar relationsunderlag för det arbete som faktiskt utförts – alltså avvikelser och justeringar jämfört med de ritningar du fick.</li>
-</ul>
-<p>Oavsett form är principen densamma: det du byggt ska gå att förstå, drifta och underhålla utifrån de handlingar du lämnar. Läs i kontraktshandlingarna exakt vad som är föreskrivet – där avgörs omfattningen.</p>
-
-<h2>Restlista och slutbesiktning – vad händer med restpunkterna?</h2>
-<p>Grundregeln i AB 04 och ABT 06 är att entreprenaden ska godkännas vid slutbesiktningen om den inte har väsentliga fel. Fel av mindre betydelse eller begränsad omfattning får inte hindra godkännande – de noteras i stället på en <strong>restlista</strong> i besiktningsutlåtandet och ska avhjälpas därefter.</p>
-<p>Saknade relationshandlingar hindrar därför normalt inte godkännandet i sig – de behandlas oftast som en restpunkt. Men det finns ett viktigt undantag: om de saknade handlingarna gör att byggherren inte kan få slutbesked från kommunen – till exempel handlingar som krävs enligt kontrollplanen och PBL – då kan besiktningsmannen vägra godkännande. Att slarva med dokumentationen kan alltså i värsta fall stoppa hela övertagandet.</p>
-<p>Godkänd slutbesiktning är den avgörande juridiska händelsen. Den markerar övertagandet, då byggherren tar över entreprenaden. Från den punkten startar garantitiden och ansvarstiden, din rätt till indexreglering och löpande ersättning upphör, och risken går över på byggherren. Ett godkännandeintyg med bifogad restpunktslista utfärdas.</p>
-
-<h2>Garantitid, ansvarstid och garantibesiktning – därför påverkar överlämningen tio år framåt</h2>
-<p>Överlämningen är inte slutet på ditt ansvar – den är starten på det. Med utgångspunkt från godkänd slutbesiktning gäller enligt AB 04 som standard:</p>
-<ul>
-<li><strong>Garantitid 5 år</strong> för entreprenörens arbetsprestation.</li>
-<li><strong>Garantitid 2 år</strong> för material och varor som entreprenören tillhandahållit. (I ABT 06 gäller som standard 5 år för hela entreprenaden inklusive material.)</li>
-<li><strong>Ansvarstid 10 år</strong> från godkänd slutbesiktning.</li>
-</ul>
-<p>Under garantitiden ansvarar du för fel som framträder, med omvänd bevisbörda – det är du som ska visa att felet inte är ditt. Efter garantitiden men inom ansvarstiden ansvarar du bara för väsentliga fel som beror på vårdslöshet, och då är det byggherren som ska bevisa det. En garantibesiktning ska verkställas före garantitidens utgång, alltså strax innan 2 respektive 5 år passerat, och begärs normalt av byggherren. Fel som noteras där ska du avhjälpa utan kostnad. Ordning i handlingarna vid överlämningen är din bästa försäkring i just dessa lägen.</p>
-
-<h2>Kopplingen till PBL och slutbesked</h2>
-<p>Byggherren får normalt inte ta byggnadsverket i bruk förrän byggnadsnämnden gett slutbesked. Slutbesked kräver att kontrollplanen följts och redovisats, och den kontrollansvarige (KA) lämnar ett utlåtande som underlag. Relationshandlingar och intyg efterfrågas ofta som del av detta underlag. Din leverans av dokumentation är därför inte bara en fråga mellan dig och byggherren – den är en förutsättning för att byggnaden lagligt ska kunna tas i bruk.</p>
-
-<h2>Checklista för överlämning av relationshandlingar</h2>
-<p>Gå igenom listan innan du kallar överlämningen klar. Komplettera den med de handlingar som är föreskrivna i just ditt kontrakt:</p>
-<ol>
-<li><strong>Relationsritningar / relationsunderlag</strong> – uppdaterade och märkta.</li>
-<li><strong>Drift- och underhållsinstruktioner (DoU)</strong> för installationer och byggdelar.</li>
-<li><strong>Produkt- och materialdatablad</strong> för inbyggda produkter.</li>
-<li><strong>Egenkontroller</strong> – ifyllda och signerade för respektive moment.</li>
-<li><strong>Provningsprotokoll</strong> – täthet, el, ventilation, tryck m.m.</li>
-<li><strong>Garantisedlar</strong> för material och produkter med separata garantier.</li>
-<li><strong>Utbildning av förvaltningen</strong> med utbildningsprotokoll.</li>
-<li><strong>Digital leverans</strong> – samlat i ett system som stöttar framtida förvaltning.</li>
-</ol>
-<p>Behöver du en mall för egenkontrollerna som ska ingå? Använd vår <a href="/sv/verktyg/egenkontroll-mall">gratis egenkontroll-mall</a> och bocka av momenten löpande under projektet i stället för i slutrusningen.</p>
-
-<h2>Så håller du ordning på restpunkter och % klart i ByggExp</h2>
-<p>Slutfasen faller ofta på att restpunkterna lever i mejl och lösa anteckningar. I ByggExp lägger du i stället upp varje restpunkt som en uppgift med ansvarig och status, så att inget faller mellan stolarna fram till avhjälpandet. Projektets Mål och etapper visar procent klart, vilket ger dig och byggherren en gemensam bild av vad som återstår inför övertagandet. Relationshandlingar, egenkontroller och protokoll kan samlas digitalt kopplat till projektet, så att hela överlämningspaketet finns på ett ställe när slutbesiktningen närmar sig. Målet är enkelt: färre lösa trådar, snabbare godkännande och en dokumentation som håller även vid garantibesiktningen om flera år.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Kan slutbesiktningen underkännas om relationshandlingarna saknas?</h3>
-<p>Oftast inte – saknade handlingar behandlas normalt som en restpunkt. Men om de saknade handlingarna gör att byggherren inte kan få slutbesked från kommunen kan besiktningsmannen vägra godkännande. Då blir dokumentationen ett hinder för hela övertagandet.</p>
-<h3>När ska relationshandlingarna senast levereras?</h3>
-<p>Enligt AB 04 och ABT 06 ska de levereras till byggherren senast vid slutbesiktningen, när de är föreskrivna i kontraktshandlingarna. Planera leveransen i god tid – inte som en sista åtgärd samma dag som besiktningen.</p>
-<h3>Vem tar fram relationshandlingarna – vi eller byggherren?</h3>
-<p>Det beror på entreprenadform. I ABT 06 (totalentreprenad) ansvarar entreprenören för projekteringen och tar därmed ofta fram handlingarna. I AB 04 (utförandeentreprenad) projekterar byggherren, och entreprenören levererar relationsunderlag för det arbete som faktiskt utförts.</p>
-<h3>Varför spelar överlämningen roll så långt efter avslutat projekt?</h3>
-<p>För att godkänd slutbesiktning startar garantitiden – 5 år för arbete och 2 år för material enligt AB 04 – och en ansvarstid på 10 år. Under garantitiden har du omvänd bevisbörda. Komplett dokumentation är då ditt bästa underlag om ett fel ifrågasätts vid garantibesiktningen.</p>
-
-<h2>Kom igång</h2>
-<p>En strukturerad överlämning betyder betalning i tid, godkänd besiktning och färre garantitvister. Börja med att lägga restpunkterna som uppgifter och följ procent klart via Mål och etapper i <a href="/sv/funktioner">ByggExps funktioner</a>, och komplettera med vår <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a> under projektets gång. Vill du se hur restlista, etappuppföljning och digital dokumentsamling hänger ihop i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi upplägget för din verksamhet.</p>
-
-<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så går den till</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
-`;
-
-const A_OVERLAMNING_RELATIONSHANDLINGAR: BlogPost = {
-  _id: "code-"+"overlamning-relationshandlingar",
-  title: "Överlämning och relationshandlingar – checklista för avslutade byggprojekt", slug: "overlamning-relationshandlingar", locale: "sv",
-  excerpt: "En strukturerad överlämning av relationshandlingar skyddar både din slutbetalning och de tio åren av ansvar som följer efter godkänd slutbesiktning.", tag: "Entreprenadjuridik",
-  coverImageUrl: "/landing/features/project.webp", contentHtml: A_OVERLAMNING_RELATIONSHANDLINGAR_HTML,
-  seoTitle: "Relationshandlingar checklista | ByggExp", seoDescription: "Checklista för överlämning av relationshandlingar vid avslutade byggprojekt. Restlista, slutbesiktning, garantitid och 10 års ansvar – enligt AB 04 och ABT 06.",
-  seoImageUrl: `${SITE_URL}/landing/features/project.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-18T18:24:00.000Z", createdAt: "2026-08-18T18:24:00.000Z", updatedAt: "2026-08-18T18:24:00.000Z",
 };
 
 const A_ENTREPRENADKONTRAKT_MALL_HTML = `
@@ -787,7 +614,7 @@ const A_ENTREPRENADKONTRAKT_MALL_HTML = `
 <p>Skapa ett bindande entreprenadkontrakt på några minuter med <a href="/sv/verktyg/offert-mall">vår gratis offert- och avtalsmall</a>, eller utforska alla <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur kontrakt, offert och fakturering hänger ihop i ett flöde kan du <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
 <p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06</a>, <a href="/sv/blog/abs-18-hantverkarformularet-17">ABS 18 och Hantverkarformuläret 17</a>, <a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a>.</p>
-<p>Relaterat: <a href="/sv/blog/e-signering-avtal">E-signering av avtal</a> · <a href="/sv/verktyg/signera-pdf">Signera PDF gratis</a> · <a href="/sv/blog/anbud-bygg">Anbud i bygg</a> · <a href="/sv/blog/byggfelsforsakring">Byggfelsförsäkring</a></p>
+<p>Relaterat: <a href="/sv/blog/e-signering-avtal">E-signering av avtal</a> · <a href="/sv/verktyg/signera-pdf">Signera PDF gratis</a> · <a href="/sv/blog/anbud-bygg">Anbud i bygg</a> · <a href="/sv/blog/fardigstallandeskydd-smahus">Byggfelsförsäkring</a></p>
 `;
 
 const A_ENTREPRENADKONTRAKT_MALL: BlogPost = {
@@ -845,6 +672,17 @@ const A_UPPSAGNING_ARBETSBRIST_BYGG_HTML = `
 
 <h2>Omställningsstöd och trygghet</h2>
 <p>Många kollektivavtal ger omställningsstöd via omställningsorganisationer, och sedan 2022 års omställningsreform finns även offentligt omställningsstudiestöd. Det är inte din uppgift att administrera det, men hänvisa gärna den uppsagde vidare — det underlättar processen och relationen, inte minst om ni senare vill återanställa via företrädesrätten.</p>
+
+<h2>Uppsägning av personliga skäl – processen i korthet</h2>
+<p>Personliga skäl är en helt annan grund än arbetsbrist – där gäller ingen turordning, men processen måste vara rätt:</p>
+<ol>
+<li><strong>Dokumentera misskötsamheten.</strong> Datum, händelse, konsekvens.</li>
+<li><strong>Ge en skriftlig erinran.</strong> Som huvudregel krävs att du först tydliggjort att beteendet inte accepteras.</li>
+<li><strong>Gör en omplaceringsutredning.</strong> Finns annat ledigt arbete?</li>
+<li><strong>Underrätta den anställde och varsla facket</strong> minst två veckor i förväg (30 § LAS).</li>
+<li><strong>Ge rätt till överläggning</strong> innan beskedet lämnas.</li>
+<li><strong>Lämna en skriftlig uppsägning</strong> med besvärshänvisning, personligen.</li>
+</ol>
 
 <h2>Så gör du i ByggExp</h2>
 <p>ByggExp ersätter inte juridisk rådgivning, men verktygen hjälper dig att hålla ordning på det som avgör en arbetsbristprocess: dokumentation och tidslinjer. I <a href="/sv/verktyg">våra verktyg</a> samlar du underlag som anställningstider och projektstatus på ett ställe, så att du har fakta till hands inför MBL-förhandling, omplaceringsutredning och turordningslista. Ju bättre din dokumentation är innan besluten fattas, desto mindre är risken att en uppsägning kan angripas i efterhand.</p>
@@ -1109,7 +947,7 @@ const A_HINDERSANMALAN_TIDSFORLANGNING_AB04_HTML = `
 <h2>Kom igång</h2>
 <p>Dokumentera hindret, anmäl utan dröjsmål och hänvisa till rätt kapitel och paragraf – så skyddar du din rätt till tidsförlängning och håller vitet borta. Börja med vår <a href="/sv/verktyg/ata-mall">ÄTA- och hindersanmälningsmall</a>, koppla den till <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mallen</a> för att visa tidpåverkan, och <a href="/sv/contact">boka en gratis konsultation</a> om du vill se hur ByggExp håller ordning på hinder och ÄTA i skarpa projekt. Observera att kontraktshandlingarna och eventuella avvikelser i ditt kontrakt alltid går före standardtextens huvudregler.</p>
 
-<p>Relaterat: <a href="/sv/blog/forseningsvite-entreprenad">Förseningsvite i entreprenad</a>, <a href="/sv/blog/gantt-schema-mall-bygg">Gantt-schema för byggprojekt</a>, <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a>.</p>
+<p>Relaterat: <a href="/sv/blog/forseningsvite-entreprenad">Förseningsvite i entreprenad</a>, <a href="/sv/blog/gantt-schema-mall-bygg">Gantt-schema för byggprojekt</a>, <a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">Garantitid och ansvarstid enligt AB 04</a>.</p>
 `;
 
 const A_HINDERSANMALAN_TIDSFORLANGNING_AB04: BlogPost = {
@@ -1194,7 +1032,7 @@ const A_REKLAMATION_BEMOTA_FELKRAV_ENTREPRENAD_HTML = `
 <h2>Kom igång</h2>
 <p>Rätt bemött blir ett felkrav sällan en tvist. Nyckeln är att avgöra regelverket, kontrollera fristen och åberopa din avhjälpanderätt – med dokumentationen i ordning. Börja med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> och för löpande anteckningar i <a href="/sv/verktyg/byggdagbok-mall">byggdagbok-mallen</a>. Vill du se hur ByggExp samlar egenkontroll, dagbok och projekthistorik på ett ställe? <a href="/sv/contact">Boka en gratis konsultation här -&gt;</a></p>
 
-<p>Relaterat: <a href="/sv/blog/reklamation-hantverkstjanst-frister">Reklamation av hantverkstjänst – frister och regler</a>, <a href="/sv/blog/slutbesiktning">Slutbesiktning steg för steg</a> och <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a>.</p>
+<p>Relaterat: <a href="/sv/blog/reklamation-hantverkstjanst-frister">Reklamation av hantverkstjänst – frister och regler</a>, <a href="/sv/blog/slutbesiktning">Slutbesiktning steg för steg</a> och <a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">Garantitid och ansvarstid enligt AB 04</a>.</p>
 `;
 
 const A_REKLAMATION_BEMOTA_FELKRAV_ENTREPRENAD: BlogPost = {
@@ -1205,92 +1043,6 @@ const A_REKLAMATION_BEMOTA_FELKRAV_ENTREPRENAD: BlogPost = {
   seoTitle: "Bemöta felkrav i entreprenad | ByggExp", seoDescription: "Så svarar byggföretaget rätt på ett felkrav: vilket regelverk gäller, reklamationsfristen, bevisbördan och din rätt att åtgärda felet själv.",
   seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T08:06:00.000Z", createdAt: "2026-08-19T08:06:00.000Z", updatedAt: "2026-08-19T08:06:00.000Z",
-};
-
-const A_SAGA_UPP_ANSTALLD_PERSONLIGA_SKAL_BYGG_HTML = `
-<p>Att säga upp en anställd är en av de vanligaste juridiska fallgroparna för mindre byggföretag. Gör du fel — dokumenterar för dåligt, missar ett varsel eller kallar en person för arbetsbrist när det egentligen handlar om misskötsamhet — kan en enda felaktig uppsägning sluta i skadestånd på hundratusentals kronor. Sedan LAS ändrades den 1 oktober 2022 har dessutom flera av spelreglerna skrivits om, och det är lätt att gå på gammal information. Den här guiden går igenom vad som gäller 2026 för dig som driver byggverksamhet.</p>
-
-<p>Ett korrekt och tydligt anställningsavtal är grunden i varje uppsägningsärende. Börja med att skapa ett med vår gratis <a href="/sv/verktyg/anstallningsavtal-mall">anställningsavtal-mall för bygg -&gt;</a>.</p>
-
-<h2>Två skilda grunder — arbetsbrist och personliga skäl</h2>
-<p>LAS känner två lagliga grunder för att säga upp en tillsvidareanställd. <strong>Arbetsbrist</strong> är verksamhetsskäl: order minskar, ett projekt tar slut, företaget omorganiserar. Det har ingenting med individen att göra och är den vanligaste grunden. <strong>Personliga skäl</strong> är kopplat till den enskilde arbetstagaren — misskötsamhet, samarbetsproblem, olovlig frånvaro eller upprepad arbetsvägran.</p>
-<p>Utöver dessa finns <strong>avsked</strong> enligt 18 § LAS, en tredje och betydligt striktare väg som kräver att den anställde grovt åsidosatt sina skyldigheter, till exempel stöld eller allvarlig arbetsmiljöfara. Ett avsked ger ingen uppsägningstid och anställningen upphör omedelbart.</p>
-<p>En avgörande princip: du får aldrig maskera personliga skäl som arbetsbrist för att slippa den strängare processen. Det kallas <em>fingerad arbetsbrist</em>, och om en domstol ser igenom det blir uppsägningen ogiltig. Vill du fördjupa dig i den andra grunden, läs vår guide om <a href="/sv/blog/uppsagning-arbetsbrist-bygg">uppsägning på grund av arbetsbrist</a>.</p>
-
-<h2>Vad reformen 2022 ändrade — "saklig grund" blev "sakliga skäl"</h2>
-<p>Den 1 oktober 2022 byttes begreppet i 7 § LAS från "saklig grund" till <strong>"sakliga skäl"</strong>. Det är mer än en språklig detalj. Reglerna gäller uppsägningsärenden som inletts från detta datum och innebär i praktiken:</p>
-<ul>
-<li>Arbetsgivaren ska <strong>inte längre göra en framtidsprognos</strong> om den anställdes beteende. Bedömningen fokuserar på om skälen i sig är sakliga.</li>
-<li>Ingen <strong>intresseavvägning</strong> mot den anställdes intresse av att behålla jobbet ska göras.</li>
-<li>Omplaceringsskyldigheten är begränsad — som huvudregel räcker <strong>en</strong> omplaceringsutredning per process, inte upprepade erbjudanden.</li>
-<li>Under en pågående tvist om uppsägningens giltighet <strong>kvarstår anställningen inte längre</strong>. Den upphör vid uppsägningstidens slut även om beslutet bestrids. Tidigare fick den anställde vara kvar med lön tills tvisten var avgjord.</li>
-</ul>
-<p>Syftet var ökad förutsägbarhet för arbetsgivaren. Notera samtidigt att 7 § numera är semidispositiv på central nivå — parterna kan i centrala kollektivavtal, som Byggavtalet, komma överens om vad som utgör sakliga skäl på ett sätt som avviker från lagens huvudregler.</p>
-
-<h2>Uppsägningstid enligt 11 § LAS</h2>
-<p>Grundregeln i 11 § LAS är att den minsta uppsägningstiden är <strong>en månad</strong> för både arbetsgivare och arbetstagare. När det är <strong>arbetsgivaren som säger upp</strong> förlängs tiden efter sammanlagd anställningstid enligt en trappa:</p>
-<ul>
-<li>Mindre än 2 år: <strong>1 månad</strong></li>
-<li>2 till under 4 år: <strong>2 månader</strong></li>
-<li>4 till under 6 år: <strong>3 månader</strong></li>
-<li>6 till under 8 år: <strong>4 månader</strong></li>
-<li>8 till under 10 år: <strong>5 månader</strong></li>
-<li>Minst 10 år: <strong>6 månader</strong></li>
-</ul>
-<p>Byggavtalet kan ge längre eller andra uppsägningstider, men ett kollektivavtal får aldrig inskränka de rättigheter LAS ger den anställde. Kontrollera alltid vad ert avtal säger innan du lämnar besked.</p>
-
-<h2>Rätt process vid personliga skäl — steg för steg</h2>
-<p>Det är processen, inte känslan av att någon "borde sluta", som avgör om uppsägningen håller. Följ ordningen:</p>
-<ol>
-<li><strong>Dokumentera misskötsamheten.</strong> Datum, händelse, konsekvens. Utan dokumentation står ord mot ord.</li>
-<li><strong>Ge en skriftlig erinran (varning).</strong> Detta är inte en disciplinär bestraffning utan en påpekan om att beteendet inte accepteras och vad som händer om det upprepas. Som huvudregel krävs att du först tydliggjort misskötsamheten innan uppsägning blir aktuell.</li>
-<li><strong>Gör en omplaceringsutredning.</strong> Finns annat ledigt arbete den anställde kan omplaceras till? En utredning räcker efter reformen.</li>
-<li><strong>Underrätta den anställde och varsla facket.</strong> Enligt 30 § LAS ska skriftlig underrättelse lämnas till arbetstagaren minst två veckor i förväg, och samtidigt ska den lokala fackliga organisationen varslas om den anställde är organiserad.</li>
-<li><strong>Ge rätt till överläggning.</strong> Den anställde eller facket kan begära överläggning inom en vecka. Uppsägningsbeskedet får inte lämnas förrän överläggningen är avslutad.</li>
-<li><strong>Lämna en skriftlig uppsägning.</strong> Den ska innehålla besvärshänvisning — information om hur den anställde bestrider eller väcker talan — och överlämnas personligen.</li>
-</ol>
-
-<h2>Turordning vid arbetsbrist — och byggbranschens särregel</h2>
-<p>Handlar det om arbetsbrist styr turordningen vem som får gå. Huvudprincipen i 22 § LAS är "sist in, först ut" inom turordningskretsen, baserat på sammanlagd anställningstid hos arbetsgivaren. Vid lika anställningstid går den yngre först.</p>
-<p>Sedan 1 oktober 2022 får <strong>alla</strong> arbetsgivare, oavsett storlek, undanta upp till <strong>tre</strong> anställda från turordningen om de har särskild betydelse för verksamheten. Undantaget får bara göras en gång var sjätte månad.</p>
-<p>Men här kommer den viktigaste bygg-specifika poängen: <strong>företag som är bundna av Byggavtalet får inte använda LAS tre-undantag.</strong> Arbetsdomstolen har slagit fast att undantagsrätten i stället följer en bilaga i kollektivavtalet — endast arbetsgivare med högst tio anställda får undanta högst två personer. Använder du fel regel riskerar hela turordningen att kullkastas. Byggavtalet, som gäller mellan Byggföretagen och Byggnads, löper i avtalsperioden 2025-05-01 till 2027-04-30 och är alltså i kraft under hela 2026.</p>
-
-<h2>Vanliga misstag som kostar pengar</h2>
-<ul>
-<li>Att kalla personliga skäl för arbetsbrist (fingerad arbetsbrist).</li>
-<li>Att säga upp utan att först ha gett en skriftlig erinran och dokumenterat misskötsamheten.</li>
-<li>Att glömma varsla facket eller att lämna beskedet innan överläggningen avslutats.</li>
-<li>En uppsägning utan besvärshänvisning eller som inte överlämnats skriftligt och personligen.</li>
-<li>Att som byggföretag använda LAS tre-undantag i stället för Byggavtalets två-regel.</li>
-</ul>
-
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp ersätter inte juridisk rådgivning, men ger dig strukturen som gör att en uppsägning håller. Med vår <a href="/sv/verktyg/anstallningsavtal-mall">anställningsavtal-mall</a> lägger du grunden med tydliga villkor från dag ett — vilket underlättar hela vägen om ett ärende senare uppstår. I plattformen samlar du tidrapporter, närvaro och avvikelser per anställd, vilket ger dig den löpande dokumentation som en erinran och en eventuell uppsägning måste vila på. När allt finns samlat på ett ställe slipper du leta i mejl och sms den dag det verkligen gäller.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Vad är skillnaden mellan sakliga skäl och saklig grund?</h3>
-<p>"Saklig grund" var det gamla begreppet i 7 § LAS. Sedan 1 oktober 2022 heter det "sakliga skäl". Skillnaden är inte bara språklig: arbetsgivaren gör inte längre någon framtidsprognos eller intresseavvägning, och bedömningen fokuserar på om själva skälen är sakliga.</p>
-<h3>Hur lång uppsägningstid har en anställd i byggbranschen?</h3>
-<p>Minst en månad enligt 11 § LAS. När arbetsgivaren säger upp förlängs tiden stegvis efter anställningstid upp till sex månader vid minst tio års anställning. Byggavtalet kan ge längre tider — kontrollera ert kollektivavtal.</p>
-<h3>Kan jag som byggföretag undanta tre personer från turordningen?</h3>
-<p>Nej, inte om ni är bundna av Byggavtalet. Då gäller kollektivavtalets bilaga i stället för LAS tre-undantag: endast arbetsgivare med högst tio anställda får undanta högst två personer.</p>
-<h3>Måste den anställde vara kvar med lön under en tvist?</h3>
-<p>Nej, inte längre. Efter reformen 2022 upphör anställningen vid uppsägningstidens slut även om uppsägningen bestrids. Tidigare fick den anställde vara kvar med lön tills tvisten var avgjord.</p>
-
-<h2>Kom igång</h2>
-<p>Dokumentera tidigt, kontrollera alltid vad ert kollektivavtal säger och ta juridisk hjälp vid minsta tveksamhet — kostnaden för rådgivning är liten jämfört med ett skadestånd. Börja med att sätta villkoren rätt med vår <a href="/sv/verktyg/anstallningsavtal-mall">anställningsavtal-mall för bygg</a>, och vill du se hur ByggExp samlar tidrapporter och dokumentation per anställd kan du <a href="/sv/contact">boka en gratis konsultation</a>.</p>
-
-<p>Relaterat: <a href="/sv/blog/uppsagning-arbetsbrist-bygg">Uppsägning på grund av arbetsbrist i byggbranschen</a>, <a href="/sv/blog/anstallningsavtal-mall-bygg">Anställningsavtal-mall för byggföretag</a>, <a href="/sv/blog/arbetstidslagen-bygg">Arbetstidslagen i byggbranschen</a>.</p>
-`;
-
-const A_SAGA_UPP_ANSTALLD_PERSONLIGA_SKAL_BYGG: BlogPost = {
-  _id: "code-"+"saga-upp-anstalld-personliga-skal-bygg",
-  title: "Säga upp en anställd av personliga skäl i byggbranschen — så gör du rätt enligt LAS (2026)", slug: "saga-upp-anstalld-personliga-skal-bygg", locale: "sv",
-  excerpt: "Så säger du upp en anställd av personliga skäl korrekt enligt LAS — uppsägningstid, rätt process steg för steg och byggbranschens särregel vid turordning.", tag: "Juridik",
-  coverImageUrl: "/landing/features/3personal.webp", contentHtml: A_SAGA_UPP_ANSTALLD_PERSONLIGA_SKAL_BYGG_HTML,
-  seoTitle: "Säga upp anställd personliga skäl | ByggExp", seoDescription: "Uppsägningstid, sakliga skäl och skillnaden mot arbetsbrist enligt LAS efter reformen 2022 — plus byggbranschens egen turordningsregel. Guide för byggföretag.",
-  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T08:12:00.000Z", createdAt: "2026-08-19T08:12:00.000Z", updatedAt: "2026-08-19T08:12:00.000Z",
 };
 
 const A_OB_OVERTID_BYGGAVTALET_RAKNA_HTML = `
@@ -1655,7 +1407,7 @@ const A_BESIKTNINGSANMARKNING_ATGARDA_BEMOTA_HTML = `
 <h2>Garantitid och felansvar – tidslinjen du måste hålla koll på</h2>
 <p>Efter godkänd slutbesiktning löper garantitiden. Enligt AB 04 kap 4 § 7 är den som huvudregel fem år för din arbetsprestation och två år för material och varor. Får du längre garanti av din leverantör gäller den längre tiden även mot beställaren.</p>
 <p>Mot slutet av garantitiden ska beställaren påkalla garantibesiktning – i praktiken senast omkring tre månader före garantitidens utgång. Under garantitiden gäller omvänd bevisbörda: fel som antecknas presumeras vara ditt ansvar, och det är du som får visa att felet beror på något annat. Efter garantitidens utgång vänder det – då bär beställaren bevisbördan, och du ansvarar bara för väsentliga fel som visas ha sin grund i din vårdslöshet. Den totala ansvarstiden är tio år från godkännandet.</p>
-<p>Kom också ihåg reklamationsfristerna: beställaren får som huvudregel bara åberopa fel som antecknats i utlåtandet, men kan skriftligen påtala fel inom sex månader efter entreprenadtidens utgång – eller inom arton månader för väsentliga fel. Läs mer i vår artikel om <a href="/sv/blog/garantitid-ansvarstid-ab-04">garantitid och ansvarstid enligt AB 04</a>.</p>
+<p>Kom också ihåg reklamationsfristerna: beställaren får som huvudregel bara åberopa fel som antecknats i utlåtandet, men kan skriftligen påtala fel inom sex månader efter entreprenadtidens utgång – eller inom arton månader för väsentliga fel. Läs mer i vår artikel om <a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">garantitid och ansvarstid enligt AB 04</a>.</p>
 
 <h2>Checklista: från anmärkning till stängt ärende</h2>
 <ol>
@@ -1684,7 +1436,7 @@ const A_BESIKTNINGSANMARKNING_ATGARDA_BEMOTA_HTML = `
 <h2>Kom igång</h2>
 <p>Bygg upp dokumentationen redan under produktionen med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>, och håll ordning på tillkommande arbeten med <a href="/sv/verktyg/ata-mall">ÄTA-mallen</a>. Vill du se hur ByggExp knyter ihop egenkontroll, ÄTA och åtgärder i ett flöde? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så förbereder du dig</a>, <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a> och <a href="/sv/blog/reklamation-bemota-felkrav-entreprenad">Så bemöter du reklamationer och felkrav i entreprenad</a>.</p>
+<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så förbereder du dig</a>, <a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">Garantitid och ansvarstid enligt AB 04</a> och <a href="/sv/blog/reklamation-bemota-felkrav-entreprenad">Så bemöter du reklamationer och felkrav i entreprenad</a>.</p>
 `;
 
 const A_BESIKTNINGSANMARKNING_ATGARDA_BEMOTA: BlogPost = {
@@ -1753,7 +1505,7 @@ const A_RETENTIONSRATT_HANTVERKARE_INNEHALLA_ARBETE_HTML = `
 <h2>Kom igång</h2>
 <p>Retentionsrätten är ett verkligt påtryckningsmedel, men bara på lös egendom, bara vid en konnex och förfallen fordran, och aldrig med våld eller egenmäktig försäljning. Se till att grunden är i ordning: skapa tydliga fakturor med <a href="/sv/verktyg/faktura-mall">fakturamallen</a> och trappa upp med <a href="/sv/verktyg/betalningspaminnelse-mall">betalningspåminnelser</a> innan du håller något kvar. Vill du se hur ByggExp samlar avtal, fakturor och påminnelser på ett ställe, <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar fakturan</a>, <a href="/sv/blog/drojsmalsranta-2026">Dröjsmålsränta 2026</a> och <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturor</a>.</p>
+<p>Relaterat: <a href="/sv/blog/faktureringsavgift-hantverkare-tillaten">När kunden inte betalar fakturan</a>, <a href="/sv/blog/drojsmalsranta-2026">Dröjsmålsränta 2026</a> och <a href="/sv/blog/betalningsvillkor-faktura-bygg">Betalningsvillkor på byggfakturor</a>.</p>
 `;
 
 const A_RETENTIONSRATT_HANTVERKARE_INNEHALLA_ARBETE: BlogPost = {
@@ -1841,7 +1593,7 @@ const A_RESTLISTA_OVERLAMNING_BYGG_MALL_HTML = `
 <h2>Kom igång</h2>
 <p>Sätt upp restlistan innan besiktningen, inte efter. Börja med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> för att rensa listan i förväg, eller utforska fler verktyg i <a href="/sv/verktyg">ByggExps verktygslåda</a>. Vill du se hur restlista, egenkontroll och överlämning hänger ihop digitalt, <a href="/sv/contact">boka en gratis konsultation här</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning steg för steg</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i bygg</a> och <a href="/sv/blog/overlamning-relationshandlingar">Överlämning och relationshandlingar</a>.</p>
+<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning steg för steg</a>, <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll i bygg</a> och <a href="/sv/blog/dou-parm-drift-underhall-bygg">Överlämning och relationshandlingar</a>.</p>
 `;
 
 const A_RESTLISTA_OVERLAMNING_BYGG_MALL: BlogPost = {
@@ -1922,7 +1674,7 @@ const A_GARANTIBESIKTNING_2_AR_ENTREPRENAD_HTML = `
 <h2>Kom igång</h2>
 <p>Börja med att sätta system på egenkontrollerna så att du har underlag inför garantibesiktningen — utgå från <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>. Vill du se hur dokumentation, protokoll och garantitidsbevakning hänger ihop i ett projekt? <a href="/sv/contact">Boka en gratis konsultation av ByggExp</a> så visar vi upplägget.</p>
 
-<p>Relaterat: <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid i AB 04</a>, <a href="/sv/blog/slutbesiktning">Slutbesiktning — så fungerar den</a>, <a href="/sv/blog/reklamation-hantverkstjanst-frister">Reklamation av hantverkstjänst och frister</a>.</p>
+<p>Relaterat: <a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">Garantitid och ansvarstid i AB 04</a>, <a href="/sv/blog/slutbesiktning">Slutbesiktning — så fungerar den</a>, <a href="/sv/blog/reklamation-hantverkstjanst-frister">Reklamation av hantverkstjänst och frister</a>.</p>
 `;
 
 const A_GARANTIBESIKTNING_2_AR_ENTREPRENAD: BlogPost = {
@@ -2011,7 +1763,7 @@ const A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET_HTML = `
 
 <h2>Kom igång</h2>
 <p>Rätt semesterlön börjar med rätt underlag. Samla timmar, ob och övertid löpande med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> och stäm alltid av procentsats och beräkningsmetod mot gällande Byggavtal 2025–2027 och Byggnads egen semesterbroschyr. Vill du se hur ByggExp kan strukturera tidrapportering och löneunderlag för ditt företag, <a href="/sv/contact">boka en gratis konsultation</a>.</p>
-<p>Relaterat: <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Kollektivavtal i byggbranschen</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>, <a href="/sv/blog/ob-overtid-byggavtalet-rakna">Räkna ob och övertid i Byggavtalet</a>.</p>
+<p>Relaterat: <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Kollektivavtal i byggbranschen</a>, <a href="/sv/blog/sjuklon-karensavdrag-vab-byggforetag">Frånvaro i byggföretag</a>, <a href="/sv/blog/ob-overtid-byggavtalet-rakna">Räkna ob och övertid i Byggavtalet</a>.</p>
 `;
 
 const A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET: BlogPost = {
@@ -2124,7 +1876,7 @@ const A_EFTERBESIKTNING_VEM_BETALAR_ENTREPRENAD_HTML = `
 <li><strong>Garantibesiktning</strong> – utförs mot slutet av garantitiden för att fånga fel som visat sig under tiden.</li>
 <li><strong>Överbesiktning</strong> – en omprövning av ett besiktningsutlåtande, med egna kostnadsregler. Här bärs kostnaden normalt av den part vars ståndpunkt inte vinner gehör. Detta är inte samma sak som efterbesiktning.</li>
 </ul>
-<p>Vill du fördjupa dig i slutbesiktningens roll och vad som gäller kring garanti- och ansvarstider, se våra artiklar om <a href="/sv/blog/slutbesiktning">slutbesiktning</a> och <a href="/sv/blog/garantitid-ansvarstid-ab-04">garantitid och ansvarstid enligt AB 04</a>.</p>
+<p>Vill du fördjupa dig i slutbesiktningens roll och vad som gäller kring garanti- och ansvarstider, se våra artiklar om <a href="/sv/blog/slutbesiktning">slutbesiktning</a> och <a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">garantitid och ansvarstid enligt AB 04</a>.</p>
 
 <h2>När krävs efterbesiktning?</h2>
 <p>Efterbesiktning är inte obligatorisk, men blir i praktiken vanlig så snart fel antecknats vid slutbesiktningen. Behovet uppstår typiskt när:</p>
@@ -2182,7 +1934,7 @@ const A_EFTERBESIKTNING_VEM_BETALAR_ENTREPRENAD_HTML = `
 
 <h2>Kom igång</h2>
 <p>Bygg in kontrollen där felen faktiskt uppstår – på arbetsplatsen. Börja med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och utforska fler kostnadsfria hjälpmedel bland <a href="/sv/verktyg">våra verktyg</a>. Vill du se hur dokumentationen hänger ihop över hela projektet? <a href="/sv/contact">Boka en gratis konsultation &rarr;</a></p>
-<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så fungerar den</a>, <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid enligt AB 04</a>, <a href="/sv/blog/reklamation-bemota-felkrav-entreprenad">Bemöta reklamation och felkrav i entreprenad</a>.</p>
+<p>Relaterat: <a href="/sv/blog/slutbesiktning">Slutbesiktning – så fungerar den</a>, <a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">Garantitid och ansvarstid enligt AB 04</a>, <a href="/sv/blog/reklamation-bemota-felkrav-entreprenad">Bemöta reklamation och felkrav i entreprenad</a>.</p>
 `;
 
 const A_EFTERBESIKTNING_VEM_BETALAR_ENTREPRENAD: BlogPost = {
@@ -2245,6 +1997,9 @@ const A_FARDIGSTALLANDESKYDD_SMAHUS_HTML = `
 
 <h2>Nyheter från 1 juli 2026</h2>
 <p>Den 1 juli 2026 träder en större PBL-reform i kraft (prop. 2025/26:172, "Effektiv och säker byggprocess"). Reformen inför bland annat rollen byggbedömare och ändrar byggnadsnämndens prövning i lov, startbesked och slutbesked. För dig som bygger småhus är huvudbudskapet lugnande: reglerna om färdigställandeskydd och behovsprövningen finns kvar. Däremot går det inte att tillämpa äldre regler efter den 1 juli 2026, så håll koll på hur din kommun hanterar övergången i pågående ärenden.</p>
+
+<h2>Är byggfelsförsäkring fortfarande ett krav?</h2>
+<p>Nej. Den obligatoriska byggfelsförsäkringen avskaffades den 1 juni 2014, då lagen om byggfelsförsäkring (1993:320) upphävdes. Samma dag trädde lagen om färdigställandeskydd (2014:227) i kraft och tog över. Det som är obligatoriskt idag – för en konsument som låter bygga småhus – är <strong>färdigställandeskydd</strong>.</p>
 
 <h2>Så gör du i ByggExp</h2>
 <p>ByggExp tecknar inte färdigställandeskyddet åt dig — det är alltid försäkringsgivaren eller banken som prövar din ekonomi. Men verktygen hjälper dig att få in kostnaden och kravet på rätt ställe i affären. I offertmallen lägger du in färdigställandeskyddet som en tydlig post, kopplar den till entreprenadkontraktet och håller ihop underlaget så att du snabbt kan visa vad som ingår. Då blir det enkelt att förklara för kunden varför posten finns, och du har dokumentationen samlad när startbeskedet ska sökas och när bevaringstiden på sju år räknas.</p>
@@ -2493,7 +2248,7 @@ const A_NYA_AB_04_ABT_06_REVIDERING_2027_HTML = `
 <h2>Kom igång</h2>
 <p>Revideringen är en process att följa, inte att agera på ännu. Under tiden kan du stärka den struktur och dokumentation som lönar sig oavsett avtal - börja med <a href="/sv/verktyg">våra gratis verktyg</a> eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur ByggExp håller ordning på offerter, ÄTA och underlag i dina projekt.</p>
 
-<p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 - skillnaderna</a>, <a href="/sv/blog/ata-arbeten">Så hanterar du ÄTA-arbeten</a>, <a href="/sv/blog/garantitid-ansvarstid-ab-04">Garantitid och ansvarstid i AB 04</a>.</p>
+<p>Relaterat: <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 - skillnaderna</a>, <a href="/sv/blog/ata-arbeten">Så hanterar du ÄTA-arbeten</a>, <a href="/sv/blog/entreprenadgaranti-sakerhet-ab04">Garantitid och ansvarstid i AB 04</a>.</p>
 `;
 
 const A_NYA_AB_04_ABT_06_REVIDERING_2027: BlogPost = {
@@ -2586,17 +2341,14 @@ export const JURIDIK_ARTICLES: BlogPost[] = [
   AB04,
   SLUTBESIKTNING,
   MUNTLIGT,
-  GARANTI,
   ABS18,
   A_REKLAMATION_HANTVERKSTJANST_FRISTER,
-  A_OVERLAMNING_RELATIONSHANDLINGAR,
   A_ENTREPRENADKONTRAKT_MALL,
   A_UPPSAGNING_ARBETSBRIST_BYGG,
   A_HAVNING_AV_ENTREPRENAD,
   A_FORSENINGSVITE_ENTREPRENAD,
   A_HINDERSANMALAN_TIDSFORLANGNING_AB04,
   A_REKLAMATION_BEMOTA_FELKRAV_ENTREPRENAD,
-  A_SAGA_UPP_ANSTALLD_PERSONLIGA_SKAL_BYGG,
   A_OB_OVERTID_BYGGAVTALET_RAKNA,
   A_KONSUMENTTJANSTLAGEN_HANTVERKARE_15_PROCENT,
   A_ENTREPRENADTVIST_UNDVIKA_DOKUMENTATION,

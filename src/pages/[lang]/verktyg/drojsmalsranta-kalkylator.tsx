@@ -103,7 +103,7 @@ const CONTENT: Record<L, Content> = {
     relatedHeading: 'Relaterat',
     related: [
       { href: '/sv/blog/drojsmalsranta-2026', label: 'Guide: dröjsmålsränta 2026' },
-      { href: '/sv/blog/kunden-betalar-inte-fakturan', label: 'När kunden inte betalar' },
+      { href: '/sv/blog/faktureringsavgift-hantverkare-tillaten', label: 'När kunden inte betalar' },
       { href: '/sv/verktyg/faktura-mall', label: 'Faktura-mall (PDF)' },
       { href: '/sv/verktyg', label: 'Alla gratis verktyg' },
     ],

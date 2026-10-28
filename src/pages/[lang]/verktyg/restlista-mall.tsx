@@ -128,7 +128,7 @@ export default function RestlistaMallPage() {
         relatedHeading="Relaterat"
         related={[
           { href: `/${LOCALE}/blog/slutbesiktning`, label: 'Guide: slutbesiktning' },
-          { href: `/${LOCALE}/blog/overlamning-relationshandlingar`, label: 'Överlämning och relationshandlingar' },
+          { href: `/${LOCALE}/blog/dou-parm-drift-underhall-bygg`, label: 'DoU-pärm och överlämning' },
           { href: `/${LOCALE}/verktyg/egenkontroll-mall`, label: 'Egenkontroll-mall (PDF)' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },
         ]}

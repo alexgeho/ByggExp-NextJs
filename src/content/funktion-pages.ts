@@ -386,7 +386,7 @@ ${illu('hantverkare-flera-kunder', 'Hantverkare monterar ett köksskåp och regi
 <li><strong>Extraarbeten.</strong> En godkänd ÄTA kan bli en förifylld faktura (Full koll), så att tillägget faktureras även om huvudjobbet har fast pris.</li>
 </ul>
 <p>Fakturerar du på löpande räkning kan du exportera tidrapporten för projektet som PDF och skicka den med fakturan. Kunden ser då datum och timmar för varje pass, och frågor om ”hur kunde det bli så många timmar” blir färre. Samma PDF är ditt underlag om fakturan ifrågasätts.</p>
-<p>Läs mer om hur du <a href="/sv/blog/fakturera-som-hantverkare">fakturerar som hantverkare</a> eller räkna på avdraget med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylatorn</a>.</p>
+<p>Läs mer om hur du <a href="/sv/blog/faktureringsprogram-bygg">fakturerar som hantverkare</a> eller räkna på avdraget med <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-kalkylatorn</a>.</p>
 
 ${illu('hantverkare-faktura', 'Hantverkare med hammare lägger guldmynt i en glasburk bredvid ett hus under byggnad')}
 
@@ -467,7 +467,7 @@ ${illu('hantverkare-anstallda', 'Hantverkare visar en anställd hur en kakelplat
   ],
   related: [
     { href: '/sv/blog/tidrapportering-hantverkare', label: 'Guide: tidrapportering för hantverkare' },
-    { href: '/sv/blog/fakturera-som-hantverkare', label: 'Fakturera som hantverkare' },
+    { href: '/sv/blog/faktureringsprogram-bygg', label: 'Fakturera som hantverkare' },
     { href: '/sv/blog/timpris-hantverkare', label: 'Timpris för hantverkare' },
     { href: '/sv/verktyg/tidrapport-mall', label: 'Gratis tidrapportmall' },
     { href: '/sv/verktyg/rot-avdrag-kalkylator', label: 'ROT-kalkylator' },
@@ -800,7 +800,7 @@ ${illu('resursplanering-vinter', 'Två byggarbetare i hjälm lägger en isolerin
 <li><strong>Registrera frånvaro i Frånvaro</strong> i stället för i en separat lista.</li>
 <li><strong>Låt laget stämpla in.</strong> Först när timmarna kommer in ser du om planen stämmer med verkligheten.</li>
 </ul>
-<p>Planering av projekt och personal ingår i paketet Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms med 10 användare, och du testar gratis i 14 dagar. Läs också om <a href="/sv/blog/bemanningssystem-bygg">bemanningssystem för bygg</a> och <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggning</a>.</p>
+<p>Planering av projekt och personal ingår i paketet Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms med 10 användare, och du testar gratis i 14 dagar. Läs också om <a href="/sv/blog/personalplanering-bygg">bemanningsplanering</a> och <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggning</a>.</p>
 `.trim(),
   faq: [
     {
@@ -847,9 +847,8 @@ ${illu('resursplanering-vinter', 'Två byggarbetare i hjälm lägger en isolerin
     { href: '/sv/blog/resursplanering-bygg', label: 'Guide: resursplanering i bygg' },
     { href: '/sv/verktyg/gantt-schema-mall', label: 'Gratis Gantt-mall' },
     { href: '/sv/verktyg/schema-mall', label: 'Arbetsschema-mall' },
-    { href: '/sv/blog/bemanningssystem-bygg', label: 'Bemanningssystem för bygg' },
     { href: '/sv/blog/personalplanering-bygg', label: 'Bemanningsplanering' },
-    { href: '/sv/blog/franvaro-i-byggforetag', label: 'Frånvaro i byggföretag' },
+    { href: '/sv/blog/sjuklon-karensavdrag-vab-byggforetag', label: 'Sjuklön, karens och VAB' },
     { href: '/sv/tidrapportering-app', label: 'Tidrapporteringsappen' },
   ],
 };

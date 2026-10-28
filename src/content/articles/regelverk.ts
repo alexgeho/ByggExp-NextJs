@@ -211,7 +211,7 @@ const A_KONTROLLANSVARIG_NAR_BEHOVS_HTML = `
 <li>Lämna ett utlåtande, med eventuella sakkunnigutlåtanden, till byggherren och nämnden som underlag för slutbesked.</li>
 <li>Meddela nämnden om uppdraget lämnas.</li>
 </ol>
-<p>KA behöver alltså inte själv utföra kontrollerna. Egenkontrollerna görs av er som utför arbetet (se <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a>) och redovisas mot kontrollplanen – den <a href="/sv/verktyg/kontrollplan-mall">kontrollplan-mallen</a> visar hur punkterna brukar ställas upp, och <a href="/sv/blog/kontrollplan-mall-bygglov">guiden om kontrollplan för bygglov</a> går igenom innehållet.</p>
+<p>KA behöver alltså inte själv utföra kontrollerna. Egenkontrollerna görs av er som utför arbetet (se <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a>) och redovisas mot kontrollplanen – den <a href="/sv/verktyg/kontrollplan-mall">kontrollplan-mallen</a> visar hur punkterna brukar ställas upp, och <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">guiden om kontrollplan för bygglov</a> går igenom innehållet.</p>
 
 <h2>Vad kostar en kontrollansvarig?</h2>
 <p>Det finns inget reglerat pris – KA är ett civilrättsligt uppdrag mellan byggherren och KA. Offerten styrs av hur många av momenten ovan som ingår och hur långt bort bygget ligger. Be om ett pris per moment, så går offerter att jämföra:</p>
@@ -257,174 +257,6 @@ const A_KONTROLLANSVARIG_NAR_BEHOVS: BlogPost = {
   seoTitle: "Kontrollansvarig – när krävs KA och vad kostar det? | ByggExp", seoDescription: "Tabell över vilka åtgärder som kräver KA enligt PBL 10 kap. 9 § och PBF 7 kap. 5 §, vem som får vara KA, N/K-behörighet, uppgifter och offert.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-18T18:18:00.000Z", createdAt: "2026-08-18T18:18:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
-};
-
-const A_KONTROLLPLAN_MALL_BYGGLOV_HTML = `
-<p>De flesta åtgärder som kräver bygglov eller anmälan kräver också en kontrollplan – nybyggnad, tillbyggnad, fasadändring, rivning och installation av eldstad, för att nämna några. Det är byggherren (fastighetsägaren) som enligt lag ansvarar för att en kontrollplan finns, inte kommunen. Den goda nyheten för dig som hantverkare: för enkla ärenden krävs ingen kontrollansvarig, och då kan du skriva kontrollplanen själv åt kunden. Det sparar KA-arvode och gör dig till en mer komplett leverantör. Utmaningen är att många mallar på nätet är gamla och vaga – och en generisk plan blir underkänd av byggnadsnämnden.</p>
-
-<p>Med <a href="/sv/verktyg/egenkontroll-mall">vår gratis mall för egenkontroll och kontrollplan →</a> fyller du i uppgifterna och får en PBL-korrekt kontrollplan som PDF på minuter – klar att lämna in med bygglovsansökan.</p>
-<p><a href="/sv/verktyg/kontrollplan-mall">Skapa en kontrollplan enligt PBL med vår gratis mall (PDF & Excel) -&gt;</a></p>
-
-<h2>Vad är en kontrollplan – och vad kräver PBL?</h2>
-<p>En kontrollplan är en kvalitetssäkrings-checklista för bygget. Den beskriver vad som ska kontrolleras, hur det ska ske och vem som ansvarar. Enligt plan- och bygglagen (PBL 10 kap.) ska en kontrollplan innehålla fyra saker:</p>
-<ul>
-<li><strong>Vilka kontroller som ska göras</strong> och mot vilka krav de kontrolleras (till exempel Boverkets byggregler, Eurokoderna, det beviljade bygglovet och ritningarna).</li>
-<li><strong>Vem som utför varje kontroll och hur</strong> den genomförs.</li>
-<li><strong>Vilka anmälningar</strong> som ska göras till byggnadsnämnden under arbetets gång.</li>
-<li><strong>Vilka arbetsplatsbesök</strong> byggnadsnämnden bör göra och när.</li>
-</ul>
-<p>Varje kontroll ska dessutom dokumenteras och signeras. Godtagbar dokumentation är till exempel besiktningsprotokoll, kontrollintyg, provningsintyg, mätprotokoll och foton – och den ska verifieras med en signatur av den person som kontrollerat att kravet är uppfyllt. Kontrollplanen ska också ange i vilken omfattning varje kontroll görs som byggherrens dokumenterade egenkontroll eller av en sakkunnig.</p>
-
-<h2>När behöver du INTE en kontrollansvarig?</h2>
-<p>En kontrollansvarig (KA) krävs inte för enklare åtgärder. Det gäller exempelvis anmälningspliktiga åtgärder (som VA eller eldstad), komplementbyggnader och komplementbostadshus (tidigare attefallshus) samt små ändringar av småhus (PBF 7 kap. 5 §). I dessa enkla ärenden skriver byggherren – eller den anlitade hantverkaren – kontrollplanen själv. Kommunerna kallar det ofta en <strong>enkel kontrollplan enligt PBL 10 kap. 6–8 §§</strong>.</p>
-<p>För dig som hantverkare betyder det en konkret möjlighet. I stället för att kunden ska anlita en KA för ett enkelt jobb kan du leverera en korrekt kontrollplan som en del av uppdraget. Det höjer värdet på din offert och gör hela processen smidigare mot kommunen. Kravet är att planen faktiskt är anpassad till projektet – inte en tom standardmall. Fyll i <a href="/sv/verktyg/egenkontroll-mall">mallen och ladda ner planen som PDF →</a> med kontrollpunkter som passar just den åtgärd du utför.</p>
-
-<h2>Nytt 2026: kontrollplan och avfallshanteringsplan är nu två dokument</h2>
-<p>Från och med 1 juli 2026 har reglerna ändrats på en viktig punkt. Den gamla kontrollplanen har delats upp i två separata dokument: en <strong>kontrollplan</strong> och en fristående <strong>avfallshanteringsplan</strong>. Avfallshantering är alltså inte längre en sektion inuti kontrollplanen, utan ett eget dokument.</p>
-<p>Reformen 2026 innebär också att vissa åtgärder får <strong>obligatorisk sakkunnigkontroll</strong>, och att byggnadsnämnden får ett nytt verktyg – <strong>kontrollföreläggande</strong> – för att kunna förelägga att kontroller genomförs. Det här är själva anledningen till att äldre mallar på nätet är föråldrade: de har fortfarande avfallshanteringen inbakad i kontrollplanen. Använd en uppdaterad mall så att du inte lämnar in en plan enligt gammalt regelverk.</p>
-
-<h2>Så fyller du i kontrollplanen steg för steg</h2>
-<p>En bra kontrollplan är byggd som en tabell med tydliga kolumner. För varje rad anger du:</p>
-<ol>
-<li><strong>Kontrollpunkt</strong> – vad som kontrolleras (till exempel grundläggning, fuktskydd, bärande konstruktion, brandskydd).</li>
-<li><strong>Hur kontrolleras</strong> – metod, exempelvis okulär kontroll, mätning eller provning.</li>
-<li><strong>Mot vilket krav</strong> – Boverkets byggregler (t.ex. BFS 2024:7 om brand och BFS 2024:8 om fukt och hygien, som ersatte BBR 1 juli 2025), Boverkets konstruktionsregler BFS 2024:6 (som ersatte EKS)/Eurokod, energikraven i BBR, bygglovet eller ritningen.</li>
-<li><strong>Vem</strong> – egenkontroll av byggherren/entreprenören eller sakkunnigkontroll.</li>
-<li><strong>Resultat och signatur</strong> – utfallet och underskrift av den som kontrollerat.</li>
-</ol>
-<p>Så här kan några rader se ut för en typisk tillbyggnad:</p>
-<ul>
-<li><strong>Grundläggning</strong> – okulär kontroll och mätning mot konstruktionsritning (BFS 2024:6) – egenkontroll – signatur.</li>
-<li><strong>Fuktskydd mot mark</strong> – okulär kontroll mot BFS 2024:8 (fuktsäkerhet) och ritning – egenkontroll – signatur.</li>
-<li><strong>Bärande stomme</strong> – kontroll mot konstruktionsritning och BFS 2024:6 – egenkontroll eller sakkunnig beroende på risk – signatur.</li>
-<li><strong>Lufttäthet och isolering</strong> – kontroll mot energikraven i BBR avsnitt 9 (ersätts 1 oktober 2026 av BFS 2026:9) och ritning – egenkontroll – signatur.</li>
-</ul>
-<p>Har bygglovsansökan eller anmälan kommit in före 1 juli 2026 får de äldre reglerna (BBR/EKS) fortfarande tillämpas – men gamla och nya regler får inte blandas i samma projekt, så hänvisa konsekvent till ett regelverk i kontrollplanen.</p>
-<p>Riskbedömningen avgör om en punkt kräver sakkunnigkontroll i stället för egenkontroll. Särskild hänsyn tas till risken för allvarlig personskada eller störning för samhälle och miljö om kravet inte uppfylls. Ta bara med kontrollpunkter som är relevanta för det aktuella projektet – vaga och generiska planer är den vanligaste orsaken till kompletteringskrav.</p>
-
-<h2>Från ansökan till slutbesked – processen</h2>
-<p>Ett förslag till kontrollplan ska lämnas in redan tillsammans med bygglovsansökan eller anmälan. Byggnadsnämnden fastställer sedan kontrollplanen i startbeskedet. Arbetet får inte påbörjas innan startbesked har utfärdats – att börja bygga för tidigt kan utlösa en byggsanktionsavgift.</p>
-<p>När bygget är klart lämnar du in de dokumenterade och signerade kontrollerna till byggnadsnämnden. Slutbesked – tillståndet att ta byggnaden i bruk – förutsätter att den fastställda kontrollplanen har följts och att dokumentationen är komplett. Att flytta in eller ta byggnaden i bruk utan slutbesked kan också leda till sanktionsavgift.</p>
-
-<h2>Vanliga misstag hantverkare gör</h2>
-<ul>
-<li>Använder en generisk mall med kontrollpunkter som inte passar projektet.</li>
-<li>Skriver vaga punkter där det inte framgår vad, hur eller mot vilket krav.</li>
-<li>Glömmer att signera och dokumentera varje utförd kontroll.</li>
-<li>Lägger avfallshanteringen i kontrollplanen i stället för i den separata avfallshanteringsplanen (nytt krav 2026).</li>
-<li>Påbörjar arbetet innan startbesked – och riskerar byggsanktionsavgift.</li>
-</ul>
-
-<h2>Så gör du i ByggExp</h2>
-<p>I ByggExp fyller du i uppgifterna om åtgärden och får en strukturerad kontrollplan med rätt kolumner – kontrollpunkt, metod, krav, ansvarig och signatur. Mallen är uppdaterad efter 2026 års regler, så avfallshanteringen hålls som ett eget dokument och du slipper föråldrade nätmallar. Resultatet blir en färdig PDF som du kan lämna till kunden eller kommunen. Verktyget ersätter inte en kontrollansvarig där en KA krävs, men för enkla ärenden ger det dig en korrekt grund att utgå från. Du hittar det tillsammans med våra övriga <a href="/sv/verktyg">gratis verktyg för hantverkare</a>.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Måste jag anlita en kontrollansvarig?</h3>
-<p>Nej, inte för enkla åtgärder som anmälningspliktiga installationer, komplementbyggnader och komplementbostadshus (tidigare attefallshus) och små ändringar av småhus. Då kan byggherren eller den anlitade hantverkaren skriva en enkel kontrollplan själv enligt PBL 10 kap. 6–8 §§. För större och mer komplexa projekt krävs en KA.</p>
-<h3>När ska kontrollplanen lämnas in?</h3>
-<p>Ett förslag till kontrollplan ska lämnas in redan med bygglovsansökan eller anmälan. Byggnadsnämnden fastställer planen i startbeskedet, och arbetet får inte påbörjas innan startbesked har utfärdats.</p>
-<h3>Vad är skillnaden efter regeländringen 2026?</h3>
-<p>Sedan 1 juli 2026 delas den gamla kontrollplanen upp i två dokument: en kontrollplan och en separat avfallshanteringsplan. Dessutom införs obligatorisk sakkunnigkontroll för vissa åtgärder och ett nytt kontrollföreläggande för byggnadsnämnden.</p>
-<h3>Vad händer om jag saknar kontrollplan eller startbesked?</h3>
-<p>Slutbesked förutsätter att den fastställda kontrollplanen följts och att dokumenterade, signerade kontroller lämnats in. Att påbörja bygget utan startbesked eller ta byggnaden i bruk utan slutbesked kan utlösa en byggsanktionsavgift.</p>
-
-<h2>Kom igång</h2>
-<p>Skapa en PBL-korrekt kontrollplan direkt: den är anpassad efter 2026 års regler, kräver ingen kontrollansvarig för enkla ärenden och du får en färdig PDF att lämna till kommunen. Testa <a href="/sv/verktyg/egenkontroll-mall">vår mall för egenkontroll och kontrollplan →</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du får med kontrolldokumentationen i hela projektflödet.</p>
-
-<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt – så dokumenterar du rätt</a> och <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – när krävs den och vad ska ingå</a>.</p>
-`;
-
-const A_KONTROLLPLAN_MALL_BYGGLOV: BlogPost = {
-  _id: "code-"+"kontrollplan-mall-bygglov",
-  title: "Kontrollplan för bygglov – så gör du den själv (mall + PDF)", slug: "kontrollplan-mall-bygglov", locale: "sv",
-  excerpt: "De flesta bygglov och anmälningar kräver en kontrollplan enligt PBL – för enkla ärenden kan du som hantverkare skriva den själv och lämna en färdig PDF till kommunen.", tag: "Bygglov",
-  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_KONTROLLPLAN_MALL_BYGGLOV_HTML,
-  seoTitle: "Kontrollplan mall bygglov | ByggExp", seoDescription: "De flesta bygglov kräver en kontrollplan enligt PBL. För enkla ärenden skriver du den själv – utan kontrollansvarig. Mall som ger en klar PDF till kommunen.",
-  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-18T18:33:00.000Z", createdAt: "2026-08-18T18:33:00.000Z", updatedAt: '2026-10-08T09:00:00.000Z',
-};
-
-const A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK_HTML = `
-<p>Inget våtrumscertifikat är lagkrav. Boverkets fuktregler – i dag <a href="https://rinfo.boverket.se/BFS2024-8/pdf/BFS2024-8.pdf" target="_blank" rel="noopener noreferrer">BFS 2024:8, 7 kap. 7–8 §§</a>, som ersatte BBR avsnitt 6:5 när övergångstiden gick ut 30 juni 2026 – ställer funktionskrav på tätskiktet: det ska vara vattentätt, tätt i skarvar och genomföringar, ha rätt ånggenomgångsmotstånd och vara åldersbeständigt. Vem som utför arbetet säger föreskrifterna ingenting om. Kravet på behörighet kommer i stället från försäkringsbolagen, beställarna och branschorganisationerna – och där är det i praktiken svårt att klara sig utan.</p>
-
-<h2>Varför försäkringen styr</h2>
-<p>Försäkringsvillkoren kräver ofta att de branschregler som gällde när våtrummet byggdes eller renoverades har följts för att en vattenskada ska ersättas – så har Allmänna reklamationsnämnden bedömt i flera ärenden, enligt <a href="https://www.konsumenternas.se/konsumentstod/lag-ratt/rattsfall-och-beslut/sakforsakringar/villa--och-bostadsrattsforsakringar/vattenskada/" target="_blank" rel="noopener noreferrer">Konsumenternas</a>. Ett våtrumsintyg från ett behörigt företag är det enklaste sättet att visa det. Villkoren skiljer sig mellan bolagen – vissa ersätter ändå, men ofta med högre självrisk. För dig som hantverkare betyder det att kunden i praktiken köper dokumentationen lika mycket som arbetet.</p>
-
-<h2>Tre system för tre moment</h2>
-<p>Ett badrum består av rörinstallation, tätskikt och ytskikt, och varje del har sitt eget branschsystem. Gemensamt för alla tre är att det är <strong>företaget</strong> som auktoriseras eller blir behörigt, medan personerna har behörighetsbevis eller legitimation som är knutna till ett sådant företag.</p>
-
-<div class="article-table"><table>
-<thead><tr><th></th><th>GVK</th><th>BKR</th><th>Säker Vatten</th></tr></thead>
-<tbody>
-<tr><td>Område</td><td>Tätskikt: plastmatta och tätskikt under keramik</td><td>Plattsättning med tätskikt (kakel och klinker)</td><td>Rör- och VVS-installationer</td></tr>
-<tr><td>Branschregler</td><td>Säkra Våtrum 2026:1, från 1 jan 2026</td><td>Byggkeramikrådets branschregler för våtrum (BBV)</td><td>Säker Vatteninstallation 2026:1, från 1 jan 2026</td></tr>
-<tr><td>Krav på personal</td><td>Montörer: behörighet Plast eller Tätskikt under keramik. Minst en arbetsledare per 10 anställda med behörighet</td><td>Minst en behörig arbetsledare och en behörig plattsättare</td><td>Alla montörer, arbetsledare och lärlingar ska ha branschlegitimation</td></tr>
-<tr><td>Giltighet</td><td>5 år, sedan fortbildningskurs</td><td>Tills vidare, förnyas per kalenderår. Återkurs vart femte år</td><td>Legitimationen gäller 5 år efter godkänd utbildning</td></tr>
-<tr><td>Dokument till kunden</td><td>Kopia av våtrumsanmälan, våtrumsintyg (obligatoriskt mot konsument)</td><td>Kvalitetsdokument</td><td>Digitalt intyg inom fyra veckor</td></tr>
-<tr><td>Avgifter 2026 (exkl. moms)</td><td>8 400 kr (Plast eller Keramik), 9 400 kr (båda) + 0,27 promille av omsättningen</td><td>5 100–16 500 kr per år efter antal plattsättare (BKR anger inte om moms ingår)</td><td>Serviceavgift 5 600 kr + 170 kr per montör, arbetsledare och lärling (lägre för medlemmar i Installatörsföretagen), plus medlemsavgift. Inträde 7 500 kr</td></tr>
-</tbody>
-</table></div>
-
-<h2>GVK-behörighet – krav och kostnad</h2>
-<p>För att <a href="https://www.gvk.se/kvalitetsarbete/bli-auktoriserad/" target="_blank" rel="noopener noreferrer">bli GVK-auktoriserat</a> ska företaget huvudsakligen arbeta med våtrum, ha F-skatt och vara momsregistrerat i Sverige, och bifoga kopia av yrkesbevis med ansökan. Efter godkännande ska minst en arbetsledare per tio anställda klara GVK:s arbetsledarkurs med prov, och montörerna ska ha giltig behörighet för plastmatta respektive tätskikt under keramik. Behörighetskurserna är bara öppna för anställda i ett auktoriserat företag, eller ett som håller på att auktoriseras, och montören behöver ett <a href="/sv/blog/yrkesbevis-bygg-larling">yrkesbevis</a> som plattsättare eller golvläggare, eller en godkänd validering. Var femte år krävs fortbildning för att behörigheten ska gälla fem år till.</p>
-<p>Enligt <a href="https://www.gvk.se/siteassets/gvk/dokument/sakra-vatrum-2026.pdf" target="_blank" rel="noopener noreferrer">Säkra Våtrum 2026</a> är det bara GVK-auktoriserade företag som får utfärda våtrumsintyg och kvalitetsdokument enligt GVK. Varje jobb ska anmälas till GVK med en våtrumsanmälan, som kan leda till stickprovskontroll, och kunden ska få en kopia.</p>
-<p><strong>Räkneexempel (hypotetiskt, priser exkl. moms 2026):</strong> ett plattsättningsföretag med 6 anställda, varav 4 montörer, söker GVK-auktorisation för keramik. Omsättningen förra året var 8 miljoner kr.</p>
-<div class="article-table"><table>
-<thead><tr><th>Post</th><th>Belopp</th></tr></thead>
-<tbody>
-<tr><td>Registreringsavgift (engång)</td><td>12 490 kr</td></tr>
-<tr><td>Årsavgift Keramik</td><td>8 400 kr</td></tr>
-<tr><td>Rörlig avgift: 8 000 000 × 0,27 ‰</td><td>2 160 kr</td></tr>
-<tr><td>Behörighetskurs Keramik, 4 × 3 800 kr</td><td>15 200 kr</td></tr>
-<tr><td>Arbetsledarkurs, 1 person</td><td>4 000 kr</td></tr>
-<tr><td><strong>Första året</strong></td><td><strong>42 250 kr</strong></td></tr>
-</tbody>
-</table></div>
-<p>Året därpå återstår årsavgiften plus den rörliga delen – i exemplet 10 560 kr – tills fortbildningen blir aktuell efter fem år. Första årets årsavgift räknas per auktoriserad månad, så blir företaget auktoriserat mitt i året blir summan lägre. Lägg till lönekostnaden för kursdagarna, och kontrollera aktuella priser hos GVK innan ni budgeterar.</p>
-
-<h2>BKR-behörighet för plattsättare</h2>
-<p>Enligt <a href="https://www.bkr.se/om-behorighet/bli-behorig-guide" target="_blank" rel="noopener noreferrer">Byggkeramikrådets guide</a> ska plattsättning vara en etablerad verksamhet med egna anställda plattsättare. Minst en ska ha yrkesbevis eller motsvarande erfarenhet, vilket BKR anger som tre år med heltid i plattsättning – saknas yrkesbevis görs ett kunskapstest. Företaget kreditupplyses, och den som fått behörighet återkallad i ett tidigare bolag får inte sitta i ledningen.</p>
-<ul>
-<li><strong>Kurs 1</strong>, grundkurs i tätskikt och material: två dagar teori.</li>
-<li><strong>Kurs 2</strong>, arbetsledarkurs med entreprenadjuridik: en dag.</li>
-<li><strong>Kurs 3</strong>, praktisk tätskiktskurs: tre timmar.</li>
-</ul>
-<p>Arbetsledaren går kurs 1 och 2, plattsättaren kurs 1 och 3. En enmansföretagare går alla tre. Årsavgiften inkluderar medlemskap i PER och är 5 100 kr för 1–2 plattsättare, 6 700 kr för 3–5, 10 000 kr för 6–10, 13 200 kr för 11–20 och 16 500 kr för 21 eller fler. Skillnaderna mot GVK i själva utförandet går vi igenom i <a href="/sv/blog/bbv-eller-gvk-vatrum">BBV eller GVK i våtrum</a>.</p>
-
-<h2>Säker Vatten för VVS-företag</h2>
-<p>För att ett VVS-företag ska <a href="https://sakervatten.se/auktorisation/krav-for-auktorisation/vvs-foretag/" target="_blank" rel="noopener noreferrer">auktoriseras</a> krävs bland annat ansvarsförsäkring med en ansvarsdel på minst 10 miljoner kronor, F-skatt och momsregistrering, minst en heltidsanställd VVS-montör med branschcertifikat eller godkänd validering, och att minst hälften av VVS-montörerna uppfyller utbildningskraven. All personal ska ha <a href="https://sakervatten.se/auktorisation/branschlegitimation/" target="_blank" rel="noopener noreferrer">branschlegitimation</a> inom sex månader från att auktorisationen godkänts. Legitimationen kräver utbildningen Säker Vatteninstallation för VVS-företag, gäller fem år och är digital via BankID i Säker Vattens app.</p>
-<p><a href="https://sakervatten.se/branschregler/branschregler-saker-vatteninstallation-20261/" target="_blank" rel="noopener noreferrer">Branschregler Säker Vatteninstallation 2026:1</a> gäller sedan 1 januari 2026, med en övergångsregel för rör-i-rörsystem och fördelarskåp fram till 1 januari 2027. Efter avslutat arbete ska beställaren få ett digitalt intyg inom fyra veckor.</p>
-
-<h2>Måste man ha certifierad plattsättare?</h2>
-<p>Inte enligt lag. En privatperson eller en snickare utan behörighet får bygga ett badrum, så länge det uppfyller Boverkets krav. Men utan intyg från ett behörigt företag är det svårare att visa att branschreglerna följts om något läcker, och det kan påverka försäkringsersättningen. GVK kallar själva våtrumsanmälan för en värdehandling.</p>
-<p>Oavsett behörighet behöver du dokumentera förkontroll av underlaget och egenkontroll av tätskiktet. Vår <a href="/sv/verktyg/egenkontroll-vatrum-mall">egenkontroll för våtrum</a> täcker de vanligaste kontrollpunkterna, och vad som ändrades i branschreglerna inför 2026 står i <a href="/sv/blog/nya-vatrumsregler-2026">nya våtrumsregler 2026</a>.</p>
-
-<h2>Våtrumscertifikat som privatperson</h2>
-<p>Det går inte. Alla tre systemen certifierar företag, och personliga behörigheter kräver anställning i ett auktoriserat eller behörigt företag – hos GVK är det ett uttryckligt villkor för att få gå behörighetskursen. GVK erbjuder en webbutbildning, Säkra Våtrum för beställare, men den ger ingen behörighet. Det en privatperson kan göra är att anlita ett auktoriserat företag, kräva rätt intyg efter jobbet och, för GVK-jobb, själv beställa en särskild kontroll av det utförda arbetet.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Är våtrumscertifikat ett lagkrav?</h3>
-<p>Nej. Boverkets föreskrifter ställer funktionskrav på tätskiktet men inga krav på att den som utför arbetet ska vara certifierad. Kravet kommer från försäkringsvillkor, beställare och branschregler.</p>
-<h3>Kan en privatperson ta våtrumscertifikat?</h3>
-<p>Nej. GVK, BKR och Säker Vatten auktoriserar företag, och personliga behörigheter är knutna till anställning i ett sådant företag. En privatperson kan däremot gå GVK:s webbutbildning för beställare, som inte ger behörighet.</p>
-<h3>Hur länge gäller GVK-behörighet?</h3>
-<p>Fem år. Därefter krävs en fortbildningskurs för att behörigheten ska gälla i fem år till. Säker Vattens branschlegitimation gäller också fem år, medan BKR-behörigheten förnyas varje kalenderår med återkurs vart femte år.</p>
-<h3>Vad kostar det att bli GVK-auktoriserad?</h3>
-<p>Registreringsavgiften är 12 490 kr och årsavgiften 8 400 kr för plast eller keramik (9 400 kr för båda) plus 0,27 promille av förra årets omsättning, minst 1 500 kr. Behörighetskurserna kostar 3 800 kr och arbetsledarkursen 4 000 kr, allt exklusive moms enligt GVK:s prislista 2026 – kontrollera aktuellt pris.</p>
-<h3>Vilken behörighet behövs för en hel badrumsrenovering?</h3>
-<p>Rördragningen görs av ett Säker Vatten-auktoriserat VVS-företag och tätskikt och plattsättning av ett GVK-auktoriserat eller BKR-behörigt företag. Kunden bör få ett intyg från varje företag.</p>
-<h3>Påverkar behörigheten försäkringen?</h3>
-<p>Ofta. De flesta försäkringsbolag kräver att gällande branschregler följts för att ersätta en vattenskada i våtrum, och ett våtrumsintyg från behörig hantverkare är det enklaste beviset. Villkoren varierar mellan bolagen.</p>
-`;
-
-const A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK: BlogPost = {
-  _id: "code-"+"vatrumscertifikat-behorighet-gvk",
-  title: "Våtrumscertifikat och behörighet: GVK, BKR eller Säker Vatten?", slug: "vatrumscertifikat-behorighet-gvk", locale: "sv",
-  excerpt: "Inget våtrumscertifikat är lagkrav – men försäkringen styr. Så fungerar GVK, BKR och Säker Vatten, vad behörigheten kostar och varför en privatperson inte kan certifiera sig.", tag: "Behörighet",
-  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK_HTML,
-  seoTitle: "Våtrumscertifikat: GVK, BKR eller Säker Vatten? | ByggExp", seoDescription: "Våtrumscertifikat är inget lagkrav, men försäkringen kräver branschregler. Jämför GVK, BKR och Säker Vatten: krav, giltighet, avgifter 2026.",
-  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-18T19:30:00.000Z", createdAt: "2026-08-18T19:30:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
 const A_YRKESBEVIS_BYGG_LARLING_HTML = `
@@ -588,7 +420,7 @@ const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN_HTML = `
 <h2>Kom igång</h2>
 <p>Börja med att se över dina egenkontrollrutiner mot funktionskraven med vår gratis <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmall</a>. Vill du se hur ByggExp samlar egenkontroll och verifieringsunderlag i ett flöde? Boka en gratis konsultation via <a href="/sv/contact">/sv/contact</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/nya-vatrumsregler-2026">Nya våtrumsregler 2026</a>.</p>
+<p>Relaterat: <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/nya-vatrumsregler-2026">Nya våtrumsregler 2026</a>.</p>
 `;
 
 const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN: BlogPost = {
@@ -734,7 +566,7 @@ const A_BEHORIGHETER_CERTIFIERINGAR_LONAR_SIG_HTML = `
 
 <h2>Kom igång</h2>
 <p>Behörighet är både en konkurrensfördel och en förutsättning för att försäkringen ska betala. Håll koll på 5-årscyklerna och se till att dokumentationen finns när den efterfrågas. Börja med att strukturera din egenkontroll i <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a>, eller boka en <a href="/sv/contact">demo</a> så visar vi hur du kopplar behörighet och dokumentation till varje uppdrag.</p>
-<p>Relaterat: <a href="/sv/blog/vatrumscertifikat-behorighet-gvk">Våtrumscertifikat och GVK-behörighet</a>, <a href="/sv/blog/heta-arbeten">Heta Arbeten – så funkar det</a>, <a href="/sv/blog/kontrollansvarig-nar-behovs">Kontrollansvarig – när behövs det?</a></p>
+<p>Relaterat: <a href="/sv/blog/bbv-eller-gvk-vatrum">Våtrumscertifikat och GVK-behörighet</a>, <a href="/sv/blog/heta-arbeten">Heta Arbeten – så funkar det</a>, <a href="/sv/blog/kontrollansvarig-nar-behovs">Kontrollansvarig – när behövs det?</a></p>
 `;
 
 const A_BEHORIGHETER_CERTIFIERINGAR_LONAR_SIG: BlogPost = {
@@ -911,7 +743,7 @@ const A_STARTBESKED_BYGGLOV_PROCESS_2026_HTML = `
 <h2>Kom igång</h2>
 <p>Lägg grunden för ett smidigt startbesked genom att ha kontrollplanen klar i god tid inför det tekniska samrådet. Kom i gång direkt med vår <a href="/sv/verktyg/kontrollplan-mall">kontrollplansmall</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du håller dokumentationen samlad genom hela byggprocessen.</p>
 
-<p>Relaterat: <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler 2026 och kontrollplanen</a>, <a href="/sv/blog/kontrollplan-mall-bygglov">Kontrollplan och mall för bygglov</a>, <a href="/sv/blog/kontrollansvarig-nar-behovs">Kontrollansvarig – när behövs det?</a></p>
+<p>Relaterat: <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler 2026 och kontrollplanen</a> och <a href="/sv/blog/kontrollansvarig-nar-behovs">Kontrollansvarig – när behövs det?</a></p>
 `;
 
 const A_STARTBESKED_BYGGLOV_PROCESS_2026: BlogPost = {
@@ -1137,7 +969,7 @@ const A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Lägg avfallssorteringen i din projektrutin redan idag med vår <a href="/sv/verktyg/egenkontroll-mall">mall för egenkontroll</a>, och stäm alltid av mot avfallsförordningen och din lokala miljöförvaltning. Vill du se hur ByggExp håller ihop egenkontroll och dokumentation i skarpa projekt? <a href="/sv/contact">Boka en gratis konsultation -&gt;</a></p>
 
-<p>Relaterat: <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler 2026 och kontrollplanen</a>, <a href="/sv/blog/kontrollplan-mall-bygglov">Kontrollplan-mall för bygglov</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
+<p>Relaterat: <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Boverkets nya byggregler 2026 och kontrollplanen</a> och <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll i byggprojekt</a>.</p>
 `;
 
 const A_RIVNINGSAVFALL_SORTERINGSKRAV_BYGG: BlogPost = {
@@ -1658,8 +1490,6 @@ export const REGELVERK_ARTICLES: BlogPost[] = [
   PERSONALLIGGARE,
   ID06,
   A_KONTROLLANSVARIG_NAR_BEHOVS,
-  A_KONTROLLPLAN_MALL_BYGGLOV,
-  A_VATRUMSCERTIFIKAT_BEHORIGHET_GVK,
   A_YRKESBEVIS_BYGG_LARLING,
   A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN,
   A_NYA_BYGGREGLER_2026_ENTREPRENAD,

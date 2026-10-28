@@ -119,8 +119,8 @@ export default function KvalitetsplanMallPage() {
         }}
         relatedHeading="Relaterat"
         related={[
-          { href: `/${LOCALE}/blog/kma-plan-mall`, label: 'KMA-plan' },
-          { href: `/${LOCALE}/blog/egenkontroll`, label: 'Egenkontroll' },
+          { href: `/${LOCALE}/blog/kvalitetsplan-bygg`, label: 'Guide: kvalitetsplan och KMA' },
+          { href: `/${LOCALE}/blog/egenkontroll-entreprenad`, label: 'Egenkontroll' },
           { href: `/${LOCALE}/verktyg/egenkontroll-mall`, label: 'Egenkontroll-mall' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },
         ]}

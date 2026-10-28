@@ -230,7 +230,7 @@ export const ARTICLE_QUICK_ANSWERS: Record<string, QuickAnswer> = {
     source: { label: "Byggavtalet 2025–2027 § 6 och Skatteverket SKV 353", href: "https://www.skatteverket.se/download/18.1522bf3f19aea8075ba3da6/1768986614741/traktamenten-mm-i-byggbranschen-skv353-utgava15.pdf" },
   },
 
-  'vatrumscertifikat-behorighet-gvk': {
+  'bbv-eller-gvk-vatrum': {
     html: `<p>Det finns inget lagstadgat våtrumscertifikat. Boverket ställer bara krav på att tätskiktet fungerar.</p><p>Behörighet ges till <strong>företag</strong> av tre branschorgan: <strong>GVK</strong> (tätskikt och plastmatta), <strong>BKR</strong> (plattsättning) och <strong>Säker Vatten</strong> (rör och VVS). Personliga behörigheter gäller bara i ett sådant företag.</p>`,
     source: { label: "Boverket BFS 2024:8, 7 kap.", href: "https://rinfo.boverket.se/BFS2024-8/pdf/BFS2024-8.pdf" },
   },

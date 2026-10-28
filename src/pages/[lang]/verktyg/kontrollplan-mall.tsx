@@ -137,8 +137,8 @@ export default function KontrollplanMallPage() {
         }}
         relatedHeading="Relaterat"
         related={[
-          { href: `/${LOCALE}/blog/kontrollplan-mall-bygglov`, label: 'Guide: kontrollplan för bygglov' },
-          { href: `/${LOCALE}/blog/egenkontroll`, label: 'Egenkontroll' },
+          { href: `/${LOCALE}/blog/boverkets-nya-byggregler-2026-kontrollplan`, label: 'Guide: kontrollplan för bygglov' },
+          { href: `/${LOCALE}/blog/egenkontroll-entreprenad`, label: 'Egenkontroll' },
           { href: `/${LOCALE}/verktyg/egenkontroll-mall`, label: 'Egenkontroll-mall (PDF)' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },
         ]}

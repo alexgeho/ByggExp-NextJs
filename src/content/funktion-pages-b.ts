@@ -245,7 +245,7 @@ ${illu('offert-kalkyl-marginal', 'Person vid ett skrivbord framför en skärm me
     { href: '/sv/blog/kalkylprogram-bygg', label: 'Så kalkylerar du ett byggjobb' },
     { href: '/sv/blog/offertprogram-byggforetag', label: 'Offertprogram för byggföretag' },
     { href: '/sv/blog/skriva-offert', label: 'Så skriver du en offert' },
-    { href: '/sv/blog/efterkalkyl-bygg-kalkyluppfoljning', label: 'Efterkalkyl och kalkyluppföljning' },
+    { href: '/sv/blog/kostnadskontroll-byggprojekt-marginal', label: 'Kostnadskontroll och efterkalkyl' },
     { href: '/sv/verktyg/offert-mall', label: 'Gratis offertmall' },
     { href: '/sv/verktyg/paslag-marginal-kalkylator', label: 'Påslag- och marginalkalkylator' },
     { href: '/sv/funktioner/fakturering', label: 'Fakturaprogram för bygg' },
@@ -307,7 +307,7 @@ const FAKTURERING: FunktionPage = {
 <li><strong>Rader med moms.</strong> Antal, enhet, à-pris, rabatt och moms per rad. Textrader för rubriker och förklaringar.</li>
 <li><strong>Referenser.</strong> Er referens, kundens referens och ordernummer, till exempel offertens nummer.</li>
 </ul>
-<p>En genomgång av alla krav finns i guiden <a href="/sv/blog/vad-ska-faktura-innehalla-bygg">vad en faktura ska innehålla</a>, och vill du börja med en enkel fil finns vår <a href="/sv/verktyg/faktura-mall">fakturamall</a>.</p>
+<p>En genomgång av alla krav finns i guiden <a href="/sv/blog/faktureringsprogram-bygg">vad en faktura ska innehålla</a>, och vill du börja med en enkel fil finns vår <a href="/sv/verktyg/faktura-mall">fakturamall</a>.</p>
 
 <h2>ROT-avdrag på fakturan</h2>
 <p>När kunden är en privatperson som har rätt till ROT-avdrag drar du av avdraget direkt på fakturan och begär resten från Skatteverket. I ByggExp slår du på ROT-avdrag på fakturan och anger arbetskostnaden. Avdraget räknas som 30 % av arbetskostnaden, och ByggExp håller det inom taket på 50 000 kr. Fakturan har fält för kundens personnummer och fastighetsbeteckning eller bostadsrättsförening.</p>
@@ -326,7 +326,7 @@ ${illu('fakturering-rot', 'Ett par står framför ett hus med blått tak och byg
 
 <h2>Omvänd byggmoms</h2>
 <p>Säljer du byggtjänster till ett företag som själv säljer byggtjänster gäller ${ext(SKV_OMVAND_MOMS, 'omvänd betalningsskyldighet')}. Då ska du inte ta ut moms på fakturan, utan köparen redovisar den. I ByggExp väljer du omvänd moms på fakturan, och PDF:en får texten att omvänd skattskyldighet för byggtjänster gäller. Arbetar du ofta som underentreprenör åt samma byggföretag sparar du omvänd moms som standard på kunden, så att det blir rätt varje gång.</p>
-<p>Det vanligaste misstaget är att använda omvänd moms mot en privatperson eller ett företag som inte säljer byggtjänster. Fråga kunden om du är osäker. Mer om reglerna finns i guiden om <a href="/sv/blog/omvand-byggmoms-underentreprenor">omvänd byggmoms för underentreprenörer</a>.</p>
+<p>Det vanligaste misstaget är att använda omvänd moms mot en privatperson eller ett företag som inte säljer byggtjänster. Fråga kunden om du är osäker. Mer om reglerna finns i guiden om <a href="/sv/blog/omvand-byggmoms-bokfora">omvänd byggmoms för underentreprenörer</a>.</p>
 
 ${illu('fakturering-omvand', 'Två personer skakar hand framför en byggställning och en lyftkran, den ena i hjälm med en surfplatta')}
 
@@ -354,7 +354,7 @@ ${illu('fakturering-arkiv', 'Person i hjälm lägger ett papper i en stor blå m
 
 <h2>Få betalt i tid</h2>
 <p>Varje faktura har en status: utkast, skickad, betald, förfallen eller makulerad. När förfallodatum har passerat markeras fakturan som förfallen, och du markerar den som betald när pengarna har kommit in. Betalningsvillkoren hämtas från kunden när du skapar fakturan.</p>
-<p>När en kund inte betalar skickar du en betalningspåminnelse via e-post med PDF. Påminnelsen räknar fram dröjsmålsränta och lägger på en påminnelseavgift. Enligt ${ext(RANTELAGEN, 'räntelagen')} är dröjsmålsräntan referensräntan plus åtta procentenheter om ni inte har avtalat något annat, och en påminnelseavgift får bara tas ut om den är avtalad i förväg. Skriv därför in den i offerten eller avtalet. Räkna på räntan med <a href="/sv/verktyg/drojsmalsranta-kalkylator">dröjsmålsräntekalkylatorn</a>, och läs vad du gör när <a href="/sv/blog/kunden-betalar-inte-fakturan">kunden inte betalar fakturan</a>.</p>
+<p>När en kund inte betalar skickar du en betalningspåminnelse via e-post med PDF. Påminnelsen räknar fram dröjsmålsränta och lägger på en påminnelseavgift. Enligt ${ext(RANTELAGEN, 'räntelagen')} är dröjsmålsräntan referensräntan plus åtta procentenheter om ni inte har avtalat något annat, och en påminnelseavgift får bara tas ut om den är avtalad i förväg. Skriv därför in den i offerten eller avtalet. Räkna på räntan med <a href="/sv/verktyg/drojsmalsranta-kalkylator">dröjsmålsräntekalkylatorn</a>, och läs vad du gör när <a href="/sv/blog/faktureringsavgift-hantverkare-tillaten">kunden inte betalar fakturan</a>.</p>
 <p>Under Ekonomi ser du också påminnelser om dina egna kommande betalningar, så att leverantörsfakturorna inte förfaller.</p>
 
 ${illu('fakturering-forfallo', 'Person i keps går förbi en rad mappar med husikoner mot en stor blå kalender')}
@@ -423,7 +423,6 @@ ${illu('fakturering-forfallo', 'Person i keps går förbi en rad mappar med husi
   ],
   related: [
     { href: '/sv/blog/faktureringsprogram-bygg', label: 'Så fakturerar du byggjobb rätt' },
-    { href: '/sv/blog/vad-ska-faktura-innehalla-bygg', label: 'Vad ska en faktura innehålla?' },
     { href: '/sv/blog/faktura-med-rotavdrag', label: 'Faktura med ROT-avdrag' },
     { href: '/sv/blog/a-conto-fakturering-bygg', label: 'À conto-fakturering' },
     { href: '/sv/verktyg/faktura-mall', label: 'Gratis fakturamall' },

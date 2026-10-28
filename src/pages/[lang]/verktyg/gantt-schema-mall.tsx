@@ -129,7 +129,7 @@ export default function GanttSchemaMallPage() {
         relatedHeading="Relaterat"
         related={[
           { href: `/${LOCALE}/blog/gantt-schema-mall-bygg`, label: 'Guide: Gantt-schema för bygg' },
-          { href: `/${LOCALE}/blog/bemanning-och-personalplanering`, label: 'Bemanning och personalplanering' },
+          { href: `/${LOCALE}/funktioner/resursplanering`, label: 'Resursplanering för bygg' },
           { href: `/${LOCALE}/funktioner`, label: 'Funktioner i ByggExp' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },
         ]}

@@ -10,7 +10,7 @@ import BenefitSlider, {
   type SliderCard,
 } from "../../components/Benefits/BenefitSlider";
 import CTA from "../../components/CTA/CTA";
-import { FAKTURA_PRICE } from "../../components/Pricing/Pricing";
+import { FAKTURA_PRICE, PlanUsers } from "../../components/Pricing/Pricing";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import { localeOrigin } from "../../lib/seo";
@@ -363,6 +363,7 @@ export default function EnmansforetagPage({
                   <span className="num">{FAKTURA_PRICE}</span>
                   <span className="per">{pricingT.pricingPer}</span>
                 </div>
+                <PlanUsers pricingT={pricingT} plan="faktura" lang={lang} />
                 <div className="pricing-groups">
                   <div className="pricing-group">
                     <h3 className="pricing-group-title">

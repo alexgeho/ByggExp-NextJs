@@ -11,6 +11,7 @@ import { useEffect, useRef, useState, type MouseEvent } from "react";
 import CTA from "../../../components/CTA/CTA";
 import Footer from "../../../components/Footer/Footer";
 import Header from "../../../components/Header/Header";
+import { PlanUsers } from "../../../components/Pricing/Pricing";
 import {
   FUNKTION_PAGE_SLUGS,
   getFunktionPage,
@@ -370,9 +371,7 @@ export default function FunktionPage({
                   <span className="num">{price}</span>
                   <span className="per">{pricingT.pricingPer}</span>
                 </div>
-                {isFaktura && (
-                  <p className="pricing-detail">{pricingT.fakturaMaxUsers}</p>
-                )}
+                <PlanUsers pricingT={pricingT} plan={page.plan} lang={lang} />
                 <div className="pricing-groups">
                   <div className="pricing-group">
                     <h3 className="pricing-group-title">

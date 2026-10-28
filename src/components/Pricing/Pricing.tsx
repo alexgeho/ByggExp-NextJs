@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
-import type { PluralForms, PricingProps } from "../../types/pricing";
+import type { PluralForms, PricingProps, PricingT } from "../../types/pricing";
 
 /* Price model (SEK excl. VAT). Yearly = 12 months minus YEARLY_DISCOUNT. */
 // Exported: the home page's SoftwareApplication schema quotes it as the entry price.
@@ -12,6 +12,57 @@ const PROJEKT = { base: PROJEKT_PRICE, extra: 69 };
 const KOMPLETT = { base: 990, extra: 119 };
 const ADDON_PRICE = 199;
 const YEARLY_DISCOUNT = 0.15;
+
+/* R17: every price card says how many users the price covers, one line
+   under the price. Shared by the home/priser block and the landing cards. */
+export type PlanKey = "faktura" | "projekt" | "komplett";
+const PLAN_EXTRA: Record<PlanKey, number> = {
+  faktura: 0,
+  projekt: PROJEKT.extra,
+  komplett: KOMPLETT.extra,
+};
+
+export function planUsersLine(
+  pricingT: PricingT,
+  plan: PlanKey,
+  lang: string,
+  extra: number = PLAN_EXTRA[plan],
+): string {
+  if (plan === "faktura") return pricingT.fakturaMaxUsers;
+  const forms = pricingT.usersCount;
+  const included = (
+    forms[new Intl.PluralRules(lang).select(INCLUDED_USERS)] ?? forms.other
+  ).replace("{n}", String(INCLUDED_USERS));
+  const line = pricingT.includedDetail
+    .replace("{included}", included)
+    .replace("{extra}", new Intl.NumberFormat(lang).format(Math.round(extra)));
+  return line.charAt(0).toUpperCase() + line.slice(1);
+}
+
+/** The R17 line as a card element; on narrow cards it wraps at the "·". */
+export function PlanUsers(props: {
+  pricingT: PricingT;
+  plan: PlanKey;
+  lang: string;
+  extra?: number;
+}) {
+  const parts = planUsersLine(
+    props.pricingT,
+    props.plan,
+    props.lang,
+    props.extra,
+  ).split(" · ");
+  return (
+    <p className="pricing-detail">
+      {parts.map((part, i) => (
+        <Fragment key={part}>
+          {i > 0 ? " · " : null}
+          <span className="pricing-detail-part">{part}</span>
+        </Fragment>
+      ))}
+    </p>
+  );
+}
 
 const MIN_USERS = 1;
 const MAX_USERS = 40;
@@ -414,6 +465,13 @@ function Pricing({ pricingT, lang }: PricingProps) {
 
                   <span className="per">{pricingT.pricingPer}</span>
                 </div>
+
+                <PlanUsers
+                  pricingT={pricingT}
+                  plan={plan.key as PlanKey}
+                  lang={lang}
+                  extra={perMonth(PLAN_EXTRA[plan.key as PlanKey])}
+                />
 
                 <div
                   className={`pricing-groups${plan.highlight ? " pricing-groups-fit" : ""}`}

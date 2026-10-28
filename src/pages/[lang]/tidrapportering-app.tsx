@@ -9,7 +9,7 @@ import { useEffect, useRef, useState, type MouseEvent } from "react";
 import CTA from "../../components/CTA/CTA";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import { PROJEKT_PRICE } from "../../components/Pricing/Pricing";
+import { PROJEKT_PRICE, PlanUsers } from "../../components/Pricing/Pricing";
 import { localeOrigin } from "../../lib/seo";
 import { ctaTranslations } from "../../locales/CTA";
 import { footerTranslations } from "../../locales/footer";
@@ -380,6 +380,7 @@ export default function TidrapporteringAppPage({
                   <span className="num">{PROJEKT_PRICE}</span>
                   <span className="per">{pricingT.pricingPer}</span>
                 </div>
+                <PlanUsers pricingT={pricingT} plan="projekt" lang={lang} />
                 <div className="pricing-groups">
                   <div className="pricing-group">
                     <h3 className="pricing-group-title">
@@ -419,8 +420,7 @@ export default function TidrapporteringAppPage({
                 <li>Ingen bindningstid</li>
               </ul>
               <p className="pricing-limit-note">
-                Inkl. 10 användare, därefter {EXTRA_USER_PRICE} kr per extra
-                användare och månad. Alla priser exkl. moms.
+                Alla priser exkl. moms.
               </p>
             </div>
           </div>

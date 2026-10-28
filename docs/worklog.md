@@ -1,5 +1,15 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 🟡 2026-10-28 — SMM: 3D-посты по функциям
+### KLART
+- `design-assets/social/posts/make_3d.py` → `posts/out-3d/` 10 постов (3D из byggexp-admin/docs/presentations/design-system/assets/3d), копия ~/Desktop/SMM/posts-3d.
+- Правила DESIGN-SYSTEM-SMM.md: S23 (3D-стиль постов), S24 (без экранов без пользы); чек-лист 10–12. Старые калькуляторные картинки → `design-assets/social/_arkiv-ej-anvand/`.
+- Цена на постах: «299 kr/mån + 69 kr/mån per arbetare»; только-офисные (ekonomi, offerter) — «299 kr/mån». Строка «ingår» называет функцию поста.
+### NÄSTA
+1. planering-пост: вернуть «planering» в «ingår»? (решение владельца) → критик по uppgifter/verktyg/planering.
+2. FB: отложенные посты 1/день 07:00, 2-й слайд — реальный экран функции (S23).
+3. По желанию: Recraft-перегенерация fakturor/planering-арта (лысый персонаж, пустые ячейки).
+
 ## 🟡 2026-10-27 — SEO: страницы функций под коммерческие ключи
 ### KLART
 - Ключи: ~/OneDrive/byggexp-seo/keyWords for ByggExp.xlsx (вкладки «Страницы для победы», «План в топ», «Анализ ключей» — 95 ключей × GSC).

@@ -499,6 +499,12 @@ const BYGGDAGBOK: FunktionPage = {
   stepsHeading: ['Dagboken', 'i projektet'],
   steps: [
     {
+      title: 'Dagens anteckning',
+      text: 'Väder, bemanning, utfört arbete och avvikelser i fasta fält.',
+      img: '/landing/funktioner/screen-dagbok-1200.webp',
+      alt: 'Dagboksanteckning i ByggExp med väder, temperatur, bemanning, personal, utfört arbete, avvikelser, leveranser och foton',
+    },
+    {
       title: 'Foton från bygget',
       text: 'Bilderna från appen hamnar i projektet med datum och person.',
       img: '/landing/features/4foto-1200.webp',

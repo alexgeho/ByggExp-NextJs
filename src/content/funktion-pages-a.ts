@@ -274,6 +274,12 @@ const SCHEMALAGGNING: FunktionPage = {
       alt: 'Timmar enligt planerat i ByggExp: schemalagda timmar per medarbetare och dag för två veckor, med totalt planerat per person',
     },
     {
+      title: 'Frånvaro först',
+      text: 'Semester, VAB och sjukdom – godkänd frånvaro syns i schemat.',
+      img: '/landing/funktioner/screen-franvaro-1200.webp',
+      alt: 'Frånvaro i ByggExp: lista med medarbetare, typ av frånvaro, datum, anledning och status godkänd eller inskickad',
+    },
+    {
       title: 'Schema dag för dag',
       text: 'Klicka i rutan och välj projekt.',
       bullets: ['Godkänd frånvaro syns i schemat', 'Varning över 8 timmar per dag'],

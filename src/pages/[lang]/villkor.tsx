@@ -17,7 +17,7 @@ export default function TermsPage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   if (lang === "sv") {
     return (
-      <LegalDocument title="Användarvillkor" updated="2026-09-26" lang="sv" contentLocales={svEnLocales}>
+      <LegalDocument title="Användarvillkor" updated="2026-10-28" lang="sv" contentLocales={svEnLocales}>
         <p className="legal-page__note">
           Standardvillkor — justera pris och villkor efter behov. Granskas av
           jurist innan publicering.
@@ -42,8 +42,9 @@ export default function TermsPage({
         <p>
           Tjänsten tillhandahålls mot löpande abonnemangsavgift enligt gällande
           prislista. Avgiften faktureras i förskott per månad eller år.
-          Abonnemanget löper tills vidare och kan sägas upp med en (1) månads
-          uppsägningstid till utgången av innevarande betalperiod. Redan betalda
+          Abonnemanget löper tills vidare och kan sägas upp när som helst.
+          Uppsägningen gäller till slutet av den betalperiod som redan är betald.
+          Redan betalda
           avgifter återbetalas inte. Prisändringar meddelas minst 30 dagar i
           förväg.
         </p>
@@ -99,7 +100,7 @@ export default function TermsPage({
   }
 
   return (
-    <LegalDocument title="Terms of Service" updated="2026-09-26" lang="en" contentLocales={svEnLocales}>
+    <LegalDocument title="Terms of Service" updated="2026-10-28" lang="en" contentLocales={svEnLocales}>
       <p className="legal-page__note">
         Standard terms — adjust pricing and conditions as needed. Have them
         reviewed by a lawyer before publishing.
@@ -124,8 +125,9 @@ export default function TermsPage({
       <p>
         The service is provided against a recurring subscription fee per the
         applicable price list. The fee is invoiced in advance monthly or yearly.
-        The subscription runs until further notice and can be terminated with one
-        (1) month’s notice to the end of the current billing period. Fees already
+        The subscription runs until further notice and can be cancelled at any
+        time. The cancellation takes effect at the end of the billing period
+        already paid for. Fees already
         paid are non-refundable. Price changes are announced at least 30 days in
         advance.
       </p>

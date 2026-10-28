@@ -1,4 +1,5 @@
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { illuRows } from '../../../lib/illu-rows';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
@@ -197,6 +198,9 @@ export default function BlogArticlePage({
       '',
     );
   }
+
+  // R15: 3D illustrations in a row with the text.
+  contentHtml = illuRows(contentHtml);
 
   // Interactive lead-magnet tool embedded in this article, if any (sv-only).
   const inlineTool = getArticleInlineTool(post.slug);

@@ -15,7 +15,7 @@ const FAQ_SV: Qa[] = [
   {
     question: "Kan jag prova gratis?",
     answer:
-      "Ja – de första 2 veckorna är gratis, med alla funktioner och utan att du behöver ange kort. Du kan koppla in hela teamet och se hur det fungerar på riktiga uppdrag, och bestämmer först därefter om du vill fortsätta.",
+      "Ja – de första 14 dagarna är gratis, med alla funktioner och utan att du behöver ange kort. Du kan koppla in hela teamet och se hur det fungerar på riktiga uppdrag, och bestämmer först därefter om du vill fortsätta.",
   },
   {
     question: "Är det svårt att komma igång?",
@@ -70,7 +70,7 @@ const FAQ_SV: Qa[] = [
   {
     question: "Kan jag säga upp abonnemanget?",
     answer:
-      "Ja. Abonnemanget löper tills vidare och kan sägas upp med en (1) månads uppsägningstid till utgången av innevarande betalperiod.",
+      "Ja. Abonnemanget löper tills vidare och kan sägas upp när som helst. Uppsägningen gäller till slutet av den betalperiod som redan är betald.",
   },
   {
     question: "Hur får jag hjälp om jag kör fast?",
@@ -88,7 +88,7 @@ const FAQ_EN: Qa[] = [
   {
     question: "Can I try it for free?",
     answer:
-      "Yes – the first 2 weeks are free, with all features and without entering a card. You can add your whole team and see how it works on real jobs, and only decide afterwards whether to continue.",
+      "Yes – the first 14 days are free, with all features and without entering a card. You can add your whole team and see how it works on real jobs, and only decide afterwards whether to continue.",
   },
   {
     question: "Is it hard to get started?",
@@ -143,7 +143,7 @@ const FAQ_EN: Qa[] = [
   {
     question: "Can I cancel the subscription?",
     answer:
-      "Yes. The subscription runs until further notice and can be terminated with one (1) month's notice to the end of the current billing period.",
+      "Yes. The subscription runs until further notice and can be cancelled at any time. The cancellation takes effect at the end of the billing period already paid for.",
   },
   {
     question: "How do I get help if I get stuck?",

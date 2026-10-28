@@ -65,7 +65,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     payment: "Картой через Stripe",
     payTitle: "Оплата и подписка",
     paySteps: [
-      { title: "Выберите тариф", text: "В админке ByggExp в разделе «Подписка» — помесячно или за год (скидка 15 %). 2 недели бесплатно со всеми функциями." },
+      { title: "Выберите тариф", text: "В админке ByggExp в разделе «Подписка» — помесячно или за год (скидка 15 %). 14 дней бесплатно со всеми функциями." },
       { title: "Оплата картой", text: "Безопасная оплата через Stripe — мы не видим данные вашей карты. Все цены без НДС." },
       { title: "Изменить или отменить", text: "Сменить карту, скачать счета и чеки или отменить подписку — в «Управление подпиской». Без обязательного срока." },
     ],
@@ -149,7 +149,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     payment: "Card via Stripe",
     payTitle: "Payment & subscription",
     paySteps: [
-      { title: "Choose a plan", text: "In the ByggExp admin under Subscription – monthly or yearly (15% off). 2 weeks free with all features." },
+      { title: "Choose a plan", text: "In the ByggExp admin under Subscription – monthly or yearly (15% off). 14 days free with all features." },
       { title: "Pay by card", text: "Secure payment via Stripe – we never see your card. All prices excl. VAT." },
       { title: "Change or cancel", text: "Change card, download invoices and receipts or cancel under Manage subscription. No lock-in period." },
     ],
@@ -233,7 +233,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     payment: "Kort via Stripe",
     payTitle: "Betalning & abonnemang",
     paySteps: [
-      { title: "Välj paket", text: "I ByggExp-admin under Prenumeration – per månad eller per år (15 % rabatt). 2 veckor gratis med alla funktioner." },
+      { title: "Välj paket", text: "I ByggExp-admin under Prenumeration – per månad eller per år (15 % rabatt). 14 dagar gratis med alla funktioner." },
       { title: "Betala med kort", text: "Säker betalning via Stripe – vi ser aldrig ditt kort. Alla priser exkl. moms." },
       { title: "Ändra eller avsluta", text: "Byt kort, ladda ner fakturor och kvitton eller avsluta under Hantera prenumeration. Ingen bindningstid." },
     ],
@@ -317,7 +317,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     payment: "Kort via Stripe",
     payTitle: "Betaling og abonnement",
     paySteps: [
-      { title: "Velg pakke", text: "I ByggExp-admin under Abonnement – per måned eller per år (15 % rabatt). 2 uker gratis med alle funksjoner." },
+      { title: "Velg pakke", text: "I ByggExp-admin under Abonnement – per måned eller per år (15 % rabatt). 14 dager gratis med alle funksjoner." },
       { title: "Betal med kort", text: "Sikker betaling via Stripe – vi ser aldri kortet ditt. Alle priser eks. mva." },
       { title: "Endre eller avslutt", text: "Bytt kort, last ned fakturaer og kvitteringer eller avslutt under Administrer abonnement. Ingen bindingstid." },
     ],
@@ -401,7 +401,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     payment: "Kartą przez Stripe",
     payTitle: "Płatność i subskrypcja",
     paySteps: [
-      { title: "Wybierz pakiet", text: "W panelu ByggExp w sekcji Subskrypcja – miesięcznie lub rocznie (15% rabatu). 2 tygodnie za darmo ze wszystkimi funkcjami." },
+      { title: "Wybierz pakiet", text: "W panelu ByggExp w sekcji Subskrypcja – miesięcznie lub rocznie (15% rabatu). 14 dni za darmo ze wszystkimi funkcjami." },
       { title: "Zapłać kartą", text: "Bezpieczna płatność przez Stripe – nie widzimy danych Twojej karty. Wszystkie ceny netto (bez VAT)." },
       { title: "Zmień lub anuluj", text: "Zmień kartę, pobierz faktury i potwierdzenia lub anuluj w sekcji Zarządzaj subskrypcją. Bez okresu zobowiązania." },
     ],
@@ -485,7 +485,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     payment: "Карткою через Stripe",
     payTitle: "Оплата і підписка",
     paySteps: [
-      { title: "Оберіть тариф", text: "В адмінці ByggExp у розділі «Підписка» — щомісяця або за рік (знижка 15 %). 2 тижні безкоштовно з усіма функціями." },
+      { title: "Оберіть тариф", text: "В адмінці ByggExp у розділі «Підписка» — щомісяця або за рік (знижка 15 %). 14 днів безкоштовно з усіма функціями." },
       { title: "Оплата карткою", text: "Безпечна оплата через Stripe — ми не бачимо даних вашої картки. Усі ціни без ПДВ." },
       { title: "Змінити або скасувати", text: "Змінити картку, завантажити рахунки й чеки або скасувати — у «Керувати підпискою». Без обов’язкового терміну." },
     ],
@@ -569,7 +569,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     payment: "Kortilla Stripen kautta",
     payTitle: "Maksu ja tilaus",
     paySteps: [
-      { title: "Valitse paketti", text: "ByggExp-hallinnassa kohdassa Tilaus – kuukausittain tai vuosittain (15 % alennus). 2 viikkoa ilmaiseksi kaikilla toiminnoilla." },
+      { title: "Valitse paketti", text: "ByggExp-hallinnassa kohdassa Tilaus – kuukausittain tai vuosittain (15 % alennus). 14 päivää ilmaiseksi kaikilla toiminnoilla." },
       { title: "Maksa kortilla", text: "Turvallinen maksu Stripen kautta – emme näe korttisi tietoja. Hinnat ilman arvonlisäveroa." },
       { title: "Muuta tai peru", text: "Vaihda kortti, lataa laskut ja kuitit tai peru tilaus kohdassa Hallitse tilausta. Ei määräaikaa." },
     ],
@@ -653,7 +653,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     payment: "Kaardiga Stripe’i kaudu",
     payTitle: "Makse ja tellimus",
     paySteps: [
-      { title: "Vali pakett", text: "ByggExpi halduses jaotises Tellimus – kuu või aasta kaupa (15% soodustust). 2 nädalat tasuta kõigi funktsioonidega." },
+      { title: "Vali pakett", text: "ByggExpi halduses jaotises Tellimus – kuu või aasta kaupa (15% soodustust). 14 päeva tasuta kõigi funktsioonidega." },
       { title: "Maksa kaardiga", text: "Turvaline makse Stripe’i kaudu – me ei näe sinu kaardiandmeid. Kõik hinnad ilma käibemaksuta." },
       { title: "Muuda või lõpeta", text: "Vaheta kaarti, laadi alla arved ja kviitungid või lõpeta tellimus jaotises Halda tellimust. Siduvusperioodi pole." },
     ],
@@ -737,7 +737,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     payment: "Kortele per Stripe",
     payTitle: "Mokėjimas ir prenumerata",
     paySteps: [
-      { title: "Pasirinkite planą", text: "ByggExp administravimo skiltyje „Prenumerata“ – kas mėnesį arba metams (15 % nuolaida). 2 savaitės nemokamai su visomis funkcijomis." },
+      { title: "Pasirinkite planą", text: "ByggExp administravimo skiltyje „Prenumerata“ – kas mėnesį arba metams (15 % nuolaida). 14 dienų nemokamai su visomis funkcijomis." },
       { title: "Mokėkite kortele", text: "Saugus mokėjimas per „Stripe“ – mes nematome jūsų kortelės duomenų. Visos kainos be PVM." },
       { title: "Keisti arba atšaukti", text: "Pakeiskite kortelę, atsisiųskite sąskaitas ir kvitus arba atšaukite skiltyje „Tvarkyti prenumeratą“. Jokio įsipareigojimo laikotarpio." },
     ],
@@ -821,7 +821,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     payment: "Ar karti caur Stripe",
     payTitle: "Maksājumi un abonements",
     paySteps: [
-      { title: "Izvēlieties plānu", text: "ByggExp administrācijā sadaļā “Abonements” – par mēnesi vai gadu (15 % atlaide). 2 nedēļas bez maksas ar visām funkcijām." },
+      { title: "Izvēlieties plānu", text: "ByggExp administrācijā sadaļā “Abonements” – par mēnesi vai gadu (15 % atlaide). 14 dienas bez maksas ar visām funkcijām." },
       { title: "Maksājiet ar karti", text: "Droši maksājumi caur Stripe – mēs neredzam jūsu kartes datus. Visas cenas bez PVN." },
       { title: "Mainīt vai atcelt", text: "Nomainiet karti, lejupielādējiet rēķinus un čekus vai atceliet sadaļā “Pārvaldīt abonementu”. Bez saistību perioda." },
     ],

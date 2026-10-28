@@ -162,7 +162,7 @@ export default function EnmansforetagPage({
   const pricingT = pricingTranslations[lang];
   const title = "ByggExp för enmansföretag – appen tar pappersarbetet";
   const description =
-    "Driver du byggfirman själv? ByggExp samlar offerter, fakturor, kvitton och deadlines i telefonen – från 299 SEK/månad, 2 veckor gratis.";
+    "Driver du byggfirman själv? ByggExp samlar offerter, fakturor, kvitton och deadlines i telefonen – från 299 SEK/månad, 14 dagar gratis.";
   const canonicalUrl = `${localeOrigin(lang)}/${lang}/enmansforetag`;
 
   // Every screenshot on the page opens full-size on click (same lightbox as the
@@ -237,7 +237,7 @@ export default function EnmansforetagPage({
                 Boka gratis konsultation
               </a>
               <ul className="em-checks">
-                <li>2 veckor gratis</li>
+                <li>14 dagar gratis</li>
                 <li>Kom igång på 15 minuter</li>
                 <li>Ingen bindningstid</li>
               </ul>

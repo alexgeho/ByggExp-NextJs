@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 
 import { PRICE_LINES } from "../HeroV2/HeroV2";
 import { gaEvent } from "../../lib/analytics";
+import { isFeatureArticle } from "../../content/feature-articles";
 
 // Owner 2026-10-20: visitors from Google land on blog/tools and never see the
 // home hero. Show the same hero, small, at the bottom: it can be collapsed to a
@@ -32,7 +33,9 @@ export default function PromoBanner() {
   const { asPath } = useRouter();
   const path = asPath.split(/[?#]/)[0].replace(/\/$/, "");
   // Owner 2026-10-21: only SEO blog articles (R11); tools sell via their own card (ToolAppCta).
-  const eligible = /^\/sv\/blog\/./.test(path);
+  // R14 (owner 2026-10-28): never on pages about the service itself — feature articles included.
+  const blogSlug = path.match(/^\/sv\/blog\/([^/]+)$/)?.[1];
+  const eligible = !!blogSlug && !isFeatureArticle(blogSlug);
 
   const [show, setShow] = useState(false);
   const [min, setMin] = useState(false);

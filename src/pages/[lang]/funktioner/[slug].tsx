@@ -1,3 +1,4 @@
+import { illuRows } from "../../../lib/illu-rows";
 import type {
   GetStaticPaths,
   GetStaticProps,
@@ -312,7 +313,7 @@ export default function FunktionPage({
           <div className="container container-narrow">
             <div
               className="blog-article-content"
-              dangerouslySetInnerHTML={{ __html: page.body }}
+              dangerouslySetInnerHTML={{ __html: illuRows(page.body) }}
             />
           </div>
         </section>

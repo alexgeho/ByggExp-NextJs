@@ -103,7 +103,7 @@ export const pricingTranslations = {
     usersNote: "«{projekt}» и «{komplett}» включают {included} пользователей, дальше {p} и {k} кр за каждого следующего в месяц. «{faktura}»: максимум 2 пользователя.",
 
     footnote:
-      "Все цены без НДС. 2 недели бесплатно со всеми функциями, без платы за подключение, без обязательного срока. Сотрудники, которые пользуются только мобильным приложением, учитываются, только если отмечались за последние 30 дней.",
+      "Все цены без НДС. 14 дней бесплатно со всеми функциями, без платы за подключение, без обязательного срока. Сотрудники, которые пользуются только мобильным приложением, учитываются, только если отмечались за последние 30 дней.",
   },
 
   en: {
@@ -196,7 +196,7 @@ export const pricingTranslations = {
     usersNote: "\"{projekt}\" and \"{komplett}\" include {included} users, then {p} and {k} kr per extra user per month. \"{faktura}\": max 2 users.",
 
     footnote:
-      "All prices excl. VAT. 2 weeks free with all features, no setup fee, no lock-in. Staff who only use the mobile app are only counted if they have clocked in during the last 30 days.",
+      "All prices excl. VAT. 14 days free with all features, no setup fee, no lock-in. Staff who only use the mobile app are only counted if they have clocked in during the last 30 days.",
   },
 
   sv: {
@@ -290,7 +290,7 @@ export const pricingTranslations = {
     usersNote: "{projekt} och {komplett} inkluderar {included} användare, därefter {p} resp. {k} kr per extra användare och månad. {faktura}: max 2 användare.",
 
     footnote:
-      "Alla priser exkl. moms. 2 veckor gratis med alla funktioner, ingen startavgift, ingen bindningstid. Medarbetare som bara använder mobilappen räknas bara när de har stämplat in de senaste 30 dagarna.",
+      "Alla priser exkl. moms. 14 dagar gratis med alla funktioner, ingen startavgift, ingen bindningstid. Medarbetare som bara använder mobilappen räknas bara när de har stämplat in de senaste 30 dagarna.",
   },
 
   nb: {
@@ -384,7 +384,7 @@ export const pricingTranslations = {
     usersNote: "{projekt} og {komplett} inkluderer {included} brukere, deretter {p} og {k} kr per ekstra bruker per måned. {faktura}: maks 2 brukere.",
 
     footnote:
-      "Alle priser eks. mva. 2 uker gratis med alle funksjoner, ingen oppstartsavgift, ingen bindingstid. Ansatte som bare bruker mobilappen, telles bare hvis de har stemplet inn de siste 30 dagene.",
+      "Alle priser eks. mva. 14 dager gratis med alle funksjoner, ingen oppstartsavgift, ingen bindingstid. Ansatte som bare bruker mobilappen, telles bare hvis de har stemplet inn de siste 30 dagene.",
   },
 
   pl: {
@@ -483,7 +483,7 @@ export const pricingTranslations = {
     usersNote: "„{projekt}” i „{komplett}” obejmują {included} użytkowników, potem {p} i {k} kr za każdego dodatkowego miesięcznie. „{faktura}”: maks. 2 użytkowników.",
 
     footnote:
-      "Wszystkie ceny bez VAT. 2 tygodnie za darmo ze wszystkimi funkcjami, bez opłaty wstępnej, bez zobowiązań. Pracownicy, którzy korzystają tylko z aplikacji mobilnej, są liczeni tylko wtedy, gdy rejestrowali czas w ciągu ostatnich 30 dni.",
+      "Wszystkie ceny bez VAT. 14 dni za darmo ze wszystkimi funkcjami, bez opłaty wstępnej, bez zobowiązań. Pracownicy, którzy korzystają tylko z aplikacji mobilnej, są liczeni tylko wtedy, gdy rejestrowali czas w ciągu ostatnich 30 dni.",
   },
 
   uk: {
@@ -582,7 +582,7 @@ export const pricingTranslations = {
     usersNote: "«{projekt}» і «{komplett}» включають {included} користувачів, далі {p} і {k} кр за кожного наступного на місяць. «{faktura}»: максимум 2 користувачі.",
 
     footnote:
-      "Усі ціни без ПДВ. 2 тижні безкоштовно з усіма функціями, без плати за підключення, без зобов’язань. Працівники, які користуються лише мобільним застосунком, враховуються, тільки якщо відмічалися протягом останніх 30 днів.",
+      "Усі ціни без ПДВ. 14 днів безкоштовно з усіма функціями, без плати за підключення, без зобов’язань. Працівники, які користуються лише мобільним застосунком, враховуються, тільки якщо відмічалися протягом останніх 30 днів.",
   },
 
   fi: {
@@ -676,7 +676,7 @@ export const pricingTranslations = {
     usersNote: "{projekt} ja {komplett} sisältävät {included} käyttäjää, sen jälkeen {p} ja {k} kr lisäkäyttäjältä kuukaudessa. {faktura}: enintään 2 käyttäjää.",
 
     footnote:
-      "Hinnat ilman arvonlisäveroa. 2 viikkoa ilmaiseksi kaikilla toiminnoilla, ei aloitusmaksua, ei sitoutumista. Vain mobiilisovellusta käyttävät työntekijät lasketaan mukaan vain, jos he ovat leimanneet viimeisen 30 päivän aikana.",
+      "Hinnat ilman arvonlisäveroa. 14 päivää ilmaiseksi kaikilla toiminnoilla, ei aloitusmaksua, ei sitoutumista. Vain mobiilisovellusta käyttävät työntekijät lasketaan mukaan vain, jos he ovat leimanneet viimeisen 30 päivän aikana.",
   },
 
   et: {
@@ -770,7 +770,7 @@ export const pricingTranslations = {
     usersNote: "{projekt} ja {komplett} sisaldavad {included} kasutajat, edasi {p} ja {k} kr iga lisakasutaja kohta kuus. {faktura}: kuni 2 kasutajat.",
 
     footnote:
-      "Kõik hinnad ilma käibemaksuta. 2 nädalat tasuta kõigi funktsioonidega, liitumistasu pole, kohustusi pole. Töötajaid, kes kasutavad ainult mobiilirakendust, arvestatakse ainult siis, kui nad on viimase 30 päeva jooksul aega märkinud.",
+      "Kõik hinnad ilma käibemaksuta. 14 päeva tasuta kõigi funktsioonidega, liitumistasu pole, kohustusi pole. Töötajaid, kes kasutavad ainult mobiilirakendust, arvestatakse ainult siis, kui nad on viimase 30 päeva jooksul aega märkinud.",
   },
 
   lt: {
@@ -869,7 +869,7 @@ export const pricingTranslations = {
     usersNote: "„{projekt}“ ir „{komplett}“ apima {included} naudotojų, toliau {p} ir {k} kr už kiekvieną papildomą naudotoją per mėnesį. „{faktura}“: daugiausia 2 naudotojai.",
 
     footnote:
-      "Visos kainos nurodytos be PVM. 2 savaitės nemokamai su visomis funkcijomis, be prijungimo mokesčio, be įsipareigojimų. Darbuotojai, kurie naudoja tik mobiliąją programėlę, skaičiuojami tik tada, jei per paskutines 30 dienų žymėjo laiką.",
+      "Visos kainos nurodytos be PVM. 14 dienų nemokamai su visomis funkcijomis, be prijungimo mokesčio, be įsipareigojimų. Darbuotojai, kurie naudoja tik mobiliąją programėlę, skaičiuojami tik tada, jei per paskutines 30 dienų žymėjo laiką.",
   },
 
   lv: {
@@ -967,6 +967,6 @@ export const pricingTranslations = {
     usersNote: "“{projekt}” un “{komplett}” ietver {included} lietotājus, tālāk {p} un {k} kr par katru papildu lietotāju mēnesī. “{faktura}”: ne vairāk kā 2 lietotāji.",
 
     footnote:
-      "Visas cenas norādītas bez PVN. 2 nedēļas bez maksas ar visām funkcijām, bez pieslēgšanas maksas, bez saistībām. Darbinieki, kuri izmanto tikai mobilo lietotni, tiek skaitīti tikai tad, ja pēdējo 30 dienu laikā ir reģistrējuši laiku.",
+      "Visas cenas norādītas bez PVN. 14 dienas bez maksas ar visām funkcijām, bez pieslēgšanas maksas, bez saistībām. Darbinieki, kuri izmanto tikai mobilo lietotni, tiek skaitīti tikai tad, ja pēdējo 30 dienu laikā ir reģistrējuši laiku.",
   },
 } satisfies Record<string, PricingT>;

@@ -189,3 +189,62 @@
   text-box-trim: trim-start;
   text-box-edge: cap alphabetic;
 }
+
+/* R15 · 3D illustrations: large, in a row with the text (lib/illu-rows.ts), no card.
+   Images are drawn on pure white → multiply lets the page background (white or
+   #F1F6FB) show through, so there is no box. Phones: image full width above text. */
+.blog-article-content .fn-row {
+  display: grid;
+  grid-template-columns: minmax(0, 45fr) minmax(0, 55fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+}
+.blog-article-content .fn-row--right {
+  grid-template-columns: minmax(0, 55fr) minmax(0, 45fr);
+  .fn-illu {
+    order: 2;
+  }
+}
+.blog-article-content .fn-row-text > * + * {
+  margin-top: 1.1em;
+}
+.blog-article-content .fn-row-text > :first-child {
+  margin-top: 0;
+}
+.blog-article-content .fn-row-text > :last-child {
+  margin-bottom: 0;
+}
+.blog-article-content .fn-row .fn-illu,
+.blog-article-content .fn-illu--wide {
+  margin: 0;
+  max-width: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    mix-blend-mode: multiply;
+  }
+}
+.blog-article-content .fn-illu--wide {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 700px) {
+  .blog-article-content .fn-row,
+  .blog-article-content .fn-row--right {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .blog-article-content .fn-row--right .fn-illu {
+    order: 0;
+  }
+}

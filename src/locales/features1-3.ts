@@ -2,9 +2,9 @@ export const featuresTranslations1_3 = {
   ru: {
     featuresTitle: "Как это работает",
 
-    featuresHeading1: "{n} инструментов, которые",
-    featuresHeadingAccent: "закрывают 60%",
-    featuresHeading2: "работы администрации",
+    featuresHeading1: "{n} инструментов",
+    featuresHeadingAccent: "в одном приложении",
+    featuresHeading2: "",
 
     featuresSub:
       "Можно без ноутбука, можно без секретарши. Нужен только смартфон, который и так лежит в кармане.",
@@ -40,9 +40,9 @@ export const featuresTranslations1_3 = {
   en: {
     featuresTitle: "How It Works",
 
-    featuresHeading1: "{n} tools that",
-    featuresHeadingAccent: "eliminate 60%",
-    featuresHeading2: "of administrative work",
+    featuresHeading1: "{n} tools",
+    featuresHeadingAccent: "in one app",
+    featuresHeading2: "",
 
     featuresSub:
       "No laptop required. No secretary required. Just a smartphone already in your pocket.",
@@ -77,8 +77,8 @@ export const featuresTranslations1_3 = {
   sv: {
     featuresTitle: "Så fungerar det",
 
-    featuresHeading1: "{n} verktyg –",
-    featuresHeadingAccent: "60 % mindre admin",
+    featuresHeading1: "{n} verktyg",
+    featuresHeadingAccent: "i en app",
     featuresHeading2: "",
 
     featuresSub:
@@ -116,9 +116,9 @@ export const featuresTranslations1_3 = {
   nb: {
     featuresTitle: "Slik fungerer det",
 
-    featuresHeading1: "{n} verktøy som",
-    featuresHeadingAccent: "eliminerer 60 %",
-    featuresHeading2: "av administrasjonens arbeid",
+    featuresHeading1: "{n} verktøy",
+    featuresHeadingAccent: "i én app",
+    featuresHeading2: "",
 
     featuresSub:
       "Ingen datamaskin trengs. Ingen sekretær trengs. Bare en smarttelefon som allerede ligger i lomma.",
@@ -155,9 +155,9 @@ export const featuresTranslations1_3 = {
   pl: {
     featuresTitle: "Jak to działa",
 
-    featuresHeading1: "{n} narzędzi, które",
-    featuresHeadingAccent: "przejmują 60 %",
-    featuresHeading2: "pracy biura",
+    featuresHeading1: "{n} narzędzi",
+    featuresHeadingAccent: "w jednej aplikacji",
+    featuresHeading2: "",
 
     featuresSub:
       "Bez laptopa, bez sekretarki. Wystarczy smartfon, który i tak masz w kieszeni.",
@@ -189,9 +189,9 @@ export const featuresTranslations1_3 = {
 
   uk: {
     featuresTitle: "Як це працює",
-    featuresHeading1: "{n} інструментів, які",
-    featuresHeadingAccent: "закривають 60 %",
-    featuresHeading2: "роботи адміністрації",
+    featuresHeading1: "{n} інструментів",
+    featuresHeadingAccent: "в одному застосунку",
+    featuresHeading2: "",
     featuresSub:
       "Можна без ноутбука, можна без секретарки. Потрібен лише смартфон, який і так у кишені.",
     featuresCard1Title: "Автоматичний і ручний облік часу",
@@ -216,9 +216,9 @@ export const featuresTranslations1_3 = {
 
   fi: {
     featuresTitle: "Näin se toimii",
-    featuresHeading1: "{n} työkalua, jotka",
-    featuresHeadingAccent: "hoitavat 60 %",
-    featuresHeading2: "hallinnon työstä",
+    featuresHeading1: "{n} työkalua",
+    featuresHeadingAccent: "yhdessä sovelluksessa",
+    featuresHeading2: "",
     featuresSub:
       "Ei tarvita kannettavaa eikä sihteeriä. Riittää älypuhelin, joka on jo taskussa.",
     featuresCard1Title: "Automaattinen ja manuaalinen tuntikirjaus",
@@ -243,9 +243,9 @@ export const featuresTranslations1_3 = {
 
   et: {
     featuresTitle: "Kuidas see töötab",
-    featuresHeading1: "{n} tööriista, mis",
-    featuresHeadingAccent: "katavad 60 %",
-    featuresHeading2: "administratsiooni tööst",
+    featuresHeading1: "{n} tööriista",
+    featuresHeadingAccent: "ühes rakenduses",
+    featuresHeading2: "",
     featuresSub:
       "Ei ole vaja sülearvutit ega sekretäri. Piisab nutitelefonist, mis on niigi taskus.",
     featuresCard1Title: "Automaatne ja käsitsi tööaja arvestus",
@@ -270,9 +270,9 @@ export const featuresTranslations1_3 = {
 
   lt: {
     featuresTitle: "Kaip tai veikia",
-    featuresHeading1: "{n} įrankių, kurie",
-    featuresHeadingAccent: "atlieka 60 %",
-    featuresHeading2: "administracijos darbo",
+    featuresHeading1: "{n} įrankių",
+    featuresHeadingAccent: "vienoje programėlėje",
+    featuresHeading2: "",
     featuresSub:
       "Nereikia nešiojamojo kompiuterio, nereikia sekretorės. Užtenka išmaniojo telefono, kuris ir taip kišenėje.",
     featuresCard1Title: "Automatinė ir rankinė laiko apskaita",
@@ -297,9 +297,9 @@ export const featuresTranslations1_3 = {
 
   lv: {
     featuresTitle: "Kā tas darbojas",
-    featuresHeading1: "{n} rīki, kas",
-    featuresHeadingAccent: "paveic 60 %",
-    featuresHeading2: "administrācijas darba",
+    featuresHeading1: "{n} rīki",
+    featuresHeadingAccent: "vienā lietotnē",
+    featuresHeading2: "",
     featuresSub:
       "Var bez klēpjdatora, var bez sekretāres. Vajag tikai viedtālruni, kas jau tāpat ir kabatā.",
     featuresCard1Title: "Automātiska un manuāla laika uzskaite",

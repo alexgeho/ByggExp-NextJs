@@ -80,6 +80,7 @@
   img {
     position: absolute;
     object-fit: cover;
+    object-position: top; // screen header always visible, crop only the bottom (R18)
     border-radius: 10px;
   }
 }

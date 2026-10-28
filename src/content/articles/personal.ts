@@ -1,157 +1,6 @@
 import type { BlogPost } from '../../types/blog';
 import { SITE_URL } from './site-url';
 
-const BEMANNING_HTML = `
-<p>Rätt person, på rätt plats, vid rätt tid – låter enkelt, men bemanning är ofta det som gör eller stjälper marginalen i ett byggföretag. En sjukanmälan på fel dag eller en dubbelbokad snickare kan välta hela veckans plan. Här går vi igenom hur du planerar bemanningen så att projekten flyter.</p>
-
-<h2>Vad är bemanning och personalplanering i bygg?</h2>
-<p>Bemanning handlar om att fördela rätt personal och kompetens över projekt och dagar. Personalplanering är det löpande pusslet: vem jobbar var, vilka pass gäller, vem är ledig eller sjuk, och räcker kompetensen för det som ska göras. Målet är hög beläggning utan att någon blir överbelastad – och utan luckor som kostar tid.</p>
-
-<h2>Varför bemanning är svårt</h2>
-<ul>
-<li><strong>Flera projekt samtidigt.</strong> Personal ska delas mellan arbetsplatser utan krockar.</li>
-<li><strong>Frånvaro dyker upp.</strong> Sjukdom, VAB och semester rubbar planen med kort varsel.</li>
-<li><strong>Rätt kompetens.</strong> Vissa moment kräver behörighet – fel person på plats stoppar jobbet.</li>
-<li><strong>Överblick saknas.</strong> Planeras det i huvudet eller i spridda kalkylark blir det lätt fel.</li>
-</ul>
-
-<h2>Så planerar du bemanningen steg för steg</h2>
-<ol>
-<li>Lägg in alla projekt och deras behov – antal personer och kompetens per period.</li>
-<li>Fördela personalen på pass och projekt med en tydlig, delad översikt.</li>
-<li>Markera frånvaro (sjuk, VAB, semester) så att luckor syns direkt.</li>
-<li>Justera löpande när något ändras – och låt laget se sitt schema.</li>
-<li>Följ upp beläggning mot plan för att hitta över- och underbeläggning.</li>
-</ol>
-<p>Hur du räknar kapacitet mot behov över flera projekt går vi igenom i guiden om <a href="/sv/blog/resursplanering-bygg">resursplanering i bygg</a>.</p>
-
-<h2>Vanliga misstag</h2>
-<ul>
-<li><strong>Planera i huvudet.</strong> Utan en delad plan uppstår dubbelbokningar och luckor.</li>
-<li><strong>Glömma kompetenskravet.</strong> Rätt antal personer räcker inte om behörigheten saknas.</li>
-<li><strong>Ingen frånvaroöversikt.</strong> Frånvaro som inte syns i planen ställer till det på plats.</li>
-<li><strong>Sena besked till laget.</strong> Oklara scheman skapar spilltid och irritation.</li>
-</ul>
-
-<h2>Så gör du i ByggExp</h2>
-<p>I ByggExp planerar du bemanningen visuellt: fördela personal på projekt och pass, se frånvaro och beläggning i en delad vy, och låt medarbetarna se sina uppgifter i mobilen. Eftersom bemanning, närvaro, tid och ekonomi ligger i samma app hänger planen ihop med verkligheten – planerade timmar följer med hela vägen till <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlaget</a>.</p>
-
-<p>Vill du ersätta Excel med ett digitalt verktyg? Läs om <a href="/sv/blog/bemanningssystem-bygg">bemanningssystem för bygg och digital bemanningsplanering</a>.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Vad är skillnaden mellan bemanning och schemaläggning?</h3>
-<p>Bemanning handlar om att fördela rätt personal och kompetens över projekt; <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggning</a> är att lägga de konkreta passen. I praktiken hänger de ihop.</p>
-<h3>Hur hanterar jag frånvaro i planeringen?</h3>
-<p>Markera sjuk, VAB och semester i planen så att luckor syns direkt och kan täckas i tid. Se även <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning</a>.</p>
-<h3>Behöver jag ett verktyg för bemanning?</h3>
-<p>Vid ett projekt går det i huvudet – vid flera blir en delad, digital plan snabbt nödvändig för att undvika krockar och spilltid.</p>
-
-<h2>Kom igång</h2>
-<p>Sluta pussla i huvudet. Planera bemanningen i en delad vy, se frånvaro direkt och koppla planen till tid och lön. <a href="/sv/blog/dagsplanering-och-planeringsmoten">Läs om dagsplanering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
-
-<p>Relaterat: <a href="/sv/blog/dagsplanering-och-planeringsmoten">Dagsplanering och planeringsmöten</a> · <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">Närvaro och incheckning</a> · <a href="/sv/blog/app-for-tidrapportering-bygg">App för tidrapportering</a></p>
-`.trim();
-
-const BEMANNING: BlogPost = {
-  _id: 'code-bemanning',
-  title: 'Bemanning och personalplanering i bygg – så gör du rätt',
-  slug: 'bemanning-och-personalplanering',
-  locale: 'sv',
-  excerpt:
-    'Rätt person på rätt plats vid rätt tid. Så planerar du bemanning över flera projekt, hanterar frånvaro och kompetens – steg för steg, med vanliga misstag att undvika.',
-  tag: 'Bemanning',
-  coverImageUrl: '/landing/features/5planering.webp',
-  contentHtml: BEMANNING_HTML,
-  seoTitle: 'Bemanning & personalplanering i bygg – guide | ByggExp',
-  seoDescription:
-    'Så planerar du bemanning och personal i byggföretag: fördela rätt kompetens över flera projekt, hantera frånvaro och undvik dubbelbokningar. Steg för steg.',
-  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`,
-  canonicalUrl: '',
-  noIndex: false,
-  isPublished: true,
-  publishedAt: '2026-08-12T14:00:00.000Z',
-  createdAt: '2026-08-12T14:00:00.000Z',
-  updatedAt: '2026-08-12T14:00:00.000Z',
-};
-
-const FRANVARO_HTML = `
-<p>Frånvaro är oundvikligt – sjukdom, vård av barn och semester kommer alltid. Det som skiljer är hur snabbt du ser det och hur rätt det landar i planeringen och lönen. Här går vi igenom de vanligaste frånvarotyperna, vad som gäller kring sjuklön och karensavdrag, och hur du håller ordning på frånvaron i ett byggföretag.</p>
-
-<h2>Vanliga typer av frånvaro</h2>
-<ul>
-<li><strong>Sjukfrånvaro</strong> – den anställde är sjuk och kan inte arbeta.</li>
-<li><strong>VAB</strong> – vård av sjukt barn (tillfällig föräldrapenning).</li>
-<li><strong>Semester</strong> – betald ledighet enligt semesterlagen.</li>
-<li><strong>Föräldraledighet</strong> och annan lagstadgad ledighet.</li>
-</ul>
-
-<h2>Sjuklön och karensavdrag – så funkar det</h2>
-<ul>
-<li>Arbetsgivaren betalar <strong>sjuklön under de första 14 dagarna</strong> (sjuklöneperioden). Sjuklönen är 80 % av lönen.</li>
-<li>Ett <strong>karensavdrag</strong> görs – 20 % av en genomsnittlig veckolön – en gång per sjukperiod.</li>
-<li>Insjuknar den anställde igen inom <strong>fem kalenderdagar</strong> räknas det som samma sjukperiod, så inget nytt karensavdrag görs.</li>
-<li>Genom det allmänna högriskskyddet kan karensavdrag göras högst tio gånger under en tolvmånadersperiod.</li>
-<li><strong>Från dag 15</strong> anmäler arbetsgivaren sjukfallet till Försäkringskassan, som betalar sjukpenning.</li>
-</ul>
-
-<h2>VAB och semester</h2>
-<p>Vid <strong>VAB</strong> betalar Försäkringskassan tillfällig föräldrapenning efter anmälan från den anställde – det är alltså inte arbetsgivaren som betalar. <strong>Semester</strong> regleras av semesterlagen; det viktiga för dig som arbetsgivare är att planera uttaget så att det inte krockar med bemanningen i projekten.</p>
-
-<h2>Varför frånvaro måste synas direkt</h2>
-<p>På ett bygge får frånvaro omedelbara konsekvenser: en lucka i <a href="/sv/blog/bemanning-och-personalplanering">bemanningen</a> måste täckas, och timmarna ska bli rätt i <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlaget</a>. Om frånvaron rapporteras sent eller på lappar blir både planen och lönen fel.</p>
-
-<h2>Så håller du ordning på frånvaron i ByggExp</h2>
-<ol>
-<li>Medarbetaren anmäler frånvaro direkt i appen – sjuk, VAB eller ledig.</li>
-<li>Frånvaron syns direkt i planeringen så luckor kan täckas i tid.</li>
-<li>Rätt avdrag och ersättning följer med till löneunderlaget – utan handpåläggning.</li>
-<li>Du får överblick över frånvaro per person och projekt.</li>
-</ol>
-
-<h2>Vanliga misstag</h2>
-<ul>
-<li><strong>Frånvaro på lappar och sms.</strong> Det försvinner och blir fel i lön och plan.</li>
-<li><strong>Fel karensavdrag.</strong> Missa inte femdagarsregeln vid återinsjuknande.</li>
-<li><strong>Ingen koppling till bemanning.</strong> Frånvaro som inte syns i planen ställer till det på plats.</li>
-<li><strong>Sen anmälan till Försäkringskassan.</strong> Håll koll på dag 15-gränsen vid längre sjukdom.</li>
-</ul>
-
-<h2>Vanliga frågor</h2>
-<h3>Hur länge betalar arbetsgivaren sjuklön?</h3>
-<p>Under de första 14 dagarna av sjukperioden (sjuklöneperioden), med 80 % av lönen efter ett karensavdrag. Från dag 15 tar Försäkringskassan över med sjukpenning.</p>
-<h3>Vem betalar vid VAB?</h3>
-<p>Försäkringskassan betalar tillfällig föräldrapenning vid VAB, efter anmälan från den anställde.</p>
-<h3>Hur stort är karensavdraget?</h3>
-<p>20 % av en genomsnittlig veckolön, och görs en gång per sjukperiod.</p>
-
-<h2>Kom igång</h2>
-<p>Håll frånvaron samlad, kopplad till plan och lön. <a href="/sv/blog/bemanningssystem-bygg">Läs om bemanningssystem och bemanningsplanering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
-
-<p>Relaterat: <a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a> · <a href="/sv/blog/loneunderlag-for-byggforetag">Löneunderlag</a> · <a href="/sv/blog/app-for-tidrapportering-bygg">App för tidrapportering</a></p>
-`.trim();
-
-const FRANVARO: BlogPost = {
-  _id: 'code-franvaro',
-  title: 'Frånvaro i byggföretag – sjuk, VAB, semester och sjuklön',
-  slug: 'franvaro-i-byggforetag',
-  locale: 'sv',
-  excerpt:
-    'Frånvarotyper, sjuklön och karensavdrag, VAB via Försäkringskassan och hur du håller ordning på frånvaron så att bemanning och löneunderlag blir rätt.',
-  tag: 'Personal',
-  coverImageUrl: '/landing/features/12salary.webp',
-  contentHtml: FRANVARO_HTML,
-  seoTitle: 'Frånvaro i byggföretag – sjuklön, karensavdrag & VAB | ByggExp',
-  seoDescription:
-    'Sjuklön dag 1–14, karensavdrag 20 %, femdagarsregeln, VAB via Försäkringskassan och semester. Så håller du ordning på frånvaron i ett byggföretag.',
-  seoImageUrl: `${SITE_URL}/landing/features/12salary.webp`,
-  canonicalUrl: '',
-  noIndex: false,
-  isPublished: true,
-  publishedAt: '2026-08-12T17:00:00.000Z',
-  createdAt: '2026-08-12T17:00:00.000Z',
-  updatedAt: '2026-08-12T17:00:00.000Z',
-};
-
 const ANSTALLA_HTML = `
 <p>Orderböckerna är fulla men du hinner inte med själv. Att gå från ensam hantverkare till arbetsgivare är ett av de största stegen du tar som byggföretagare — men det är fullt hanterbart om du vet vad som gäller. Många drar sig för det första anställningssteget för att det känns dyrt och byråkratiskt. Kostnaden är ofta lägre än du tror tack vare Växa-stödet, förutsatt att formalian sitter rätt.</p>
 
@@ -253,7 +102,7 @@ const ANSTALLA_HTML = `
 
 <p>Kostnaden för din första medarbetare är lägre än många tror tack vare Växa-stödet — men formalian måste sitta. Börja med att räkna hem timpriset i <a href="/sv/verktyg/timpris-kalkylator">vår gratis timpris-kalkylator</a>, så vet du vilken lönenivå och beläggning som faktiskt går ihop. Vill du se hur tidrapportering och kostnadskontroll fungerar i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi hur du får ordning från första anställningen.</p>
 
-<p>Relaterat: <a href="/sv/blog/timpris-hantverkare">Sätta timpris som hantverkare</a>, <a href="/sv/blog/tidrapportering">Tidrapportering i byggföretag</a>, <a href="/sv/blog/franvaro-i-byggforetag">Hantera frånvaro i byggföretaget</a>.</p>
+<p>Relaterat: <a href="/sv/blog/timpris-hantverkare">Sätta timpris som hantverkare</a>, <a href="/sv/funktioner/tidrapporteringssystem-bygg">Tidrapportering i byggföretag</a>, <a href="/sv/blog/sjuklon-karensavdrag-vab-byggforetag">Hantera frånvaro i byggföretaget</a>.</p>
 `.trim();
 
 const ANSTALLA: BlogPost = {
@@ -324,7 +173,7 @@ const A_INHYRD_PERSONAL_REGLER_HTML = `
 <p>På byggarbetsplatser där kostnaden överstiger fyra prisbasbelopp – 236 800 kr med 2026 års prisbasbelopp på 59 200 kr – ska alla som är verksamma registreras i personalliggaren. Skatteverket svarar att personal från bemanningsföretag <a href="https://www.skatteverket.se/foretag/arbetsgivare/personalliggare/personalliggarebyggbranschen/fragorochsvarompersonalliggareibyggbranschen.4.361dc8c15312eff6fd6ba7.html" target="_blank" rel="noopener noreferrer">ska registrera sig på samma sätt som om de arbetat direkt för dig</a>. Byggherren ska hålla med utrustningen, men varje entreprenör ansvarar för sin egen personal och sina inhyrda. Vad en missad registrering kostar går vi igenom i <a href="/sv/blog/kontrollavgift-personalliggare">kontrollavgift för personalliggare</a>. De flesta byggarbetsplatser kräver också ID06-kort för passage och registrering, se <a href="/sv/blog/id06-nya-krav-2026-legitimering">nya ID06-krav 2026</a>.</p>
 
 <h2>Faktura, F-skatt och moms</h2>
-<p>Kontrollera F-skatten innan första betalningen, till exempel via <a href="https://www.skatteverket.se/hamtaforetagsinformation" target="_blank" rel="noopener noreferrer">Skatteverkets tjänst för företagsinformation</a>. Saknar bemanningsföretaget F-skatt ska du göra skatteavdrag med 30 % på ersättningen för arbetet. <a href="https://www.skatteverket.se/foretag/moms/sarskildamomsregler/byggverksamhet/omvandbetalningsskyldighetinombyggsektorn" target="_blank" rel="noopener noreferrer">Omvänd betalningsskyldighet</a> gäller även när ett företag hyr ut arbetskraft för byggtjänster till en köpare som säljer sådana tjänster mer än tillfälligt. Bemanningsfakturan ska då vara utan moms, och du redovisar momsen själv – på samma sätt som beskrivs i <a href="/sv/blog/omvand-byggmoms-underentreprenor">omvänd byggmoms för underentreprenörer</a>. I bokföringen är inhyrd personal en köpt tjänst, inte lön – har bemanningsföretaget F-skatt hamnar den inte i er arbetsgivardeklaration.</p>
+<p>Kontrollera F-skatten innan första betalningen, till exempel via <a href="https://www.skatteverket.se/hamtaforetagsinformation" target="_blank" rel="noopener noreferrer">Skatteverkets tjänst för företagsinformation</a>. Saknar bemanningsföretaget F-skatt ska du göra skatteavdrag med 30 % på ersättningen för arbetet. <a href="https://www.skatteverket.se/foretag/moms/sarskildamomsregler/byggverksamhet/omvandbetalningsskyldighetinombyggsektorn" target="_blank" rel="noopener noreferrer">Omvänd betalningsskyldighet</a> gäller även när ett företag hyr ut arbetskraft för byggtjänster till en köpare som säljer sådana tjänster mer än tillfälligt. Bemanningsfakturan ska då vara utan moms, och du redovisar momsen själv – på samma sätt som beskrivs i <a href="/sv/blog/omvand-byggmoms-bokfora">omvänd byggmoms för underentreprenörer</a>. I bokföringen är inhyrd personal en köpt tjänst, inte lön – har bemanningsföretaget F-skatt hamnar den inte i er arbetsgivardeklaration.</p>
 
 <h2>Om ni själva hyr ut personal</h2>
 <p>Lånar ni ut egna snickare till ett annat byggföretag gäller momsregeln åt andra hållet: är det arbetskraft för byggtjänster och köparen säljer byggtjänster mer än tillfälligt ska fakturan vara utan moms med hänvisning till omvänd betalningsskyldighet. Är ert företag ett bemanningsföretag i lagens mening – det vill säga har anställda i syfte att hyra ut dem – och bundet av Byggavtalet gäller Bilaga A4 om anställningsformer, lön och arbetstid för de uthyrda.</p>
@@ -406,7 +255,7 @@ const A_ARBETSTIDSLAGEN_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Bygg en rutin där varje timme registreras löpande, så att dygnsvila, veckovila och övertidstak blir synliga innan de bryts. Starta med vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, och vill du se hur digital tidregistrering fungerar för ditt byggföretag – <a href="/sv/contact">boka en gratis konsultation</a> så visar vi upplägget.</p>
 
-<p>Relaterat: <a href="/sv/blog/tidrapportering">Tidrapportering i byggföretag</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a> och <a href="/sv/blog/enkelt-tidrapporteringssystem">Enkelt tidrapporteringssystem</a>.</p>
+<p>Relaterat: <a href="/sv/funktioner/tidrapporteringssystem-bygg">Tidrapportering i byggföretag</a>, <a href="/sv/blog/sjuklon-karensavdrag-vab-byggforetag">Frånvaro i byggföretag</a> och <a href="/sv/blog/enkelt-tidrapporteringssystem">Enkelt tidrapporteringssystem</a>.</p>
 `;
 
 const A_ARBETSTIDSLAGEN_BYGG: BlogPost = {
@@ -817,7 +666,7 @@ const A_VADERSTOPP_PERMITTERING_BYGGAVTALET_HTML = `
 
 <p><em>Detta är allmän vägledning, inte juridisk rådgivning. Väderstopp regleras i Byggavtalet 5.3.1, men löneutfallet beror på ditt exakta avtal och den konkreta situationen — verifiera alltid aktuell avtalstext och stäm av med Byggföretagen eller facket.</em></p>
 
-<p>Relaterat: <a href="/sv/blog/korttidsarbete-permittering-byggforetag">Korttidsarbete och permittering i byggföretag</a>, <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Kollektivavtal i byggbranschen</a>, <a href="/sv/blog/franvaro-i-byggforetag">Frånvaro i byggföretag</a>.</p>
+<p>Relaterat: <a href="/sv/blog/korttidsarbete-permittering-byggforetag">Korttidsarbete och permittering i byggföretag</a>, <a href="/sv/blog/maste-ha-kollektivavtal-bygg">Kollektivavtal i byggbranschen</a>, <a href="/sv/blog/sjuklon-karensavdrag-vab-byggforetag">Frånvaro i byggföretag</a>.</p>
 `;
 
 const A_VADERSTOPP_PERMITTERING_BYGGAVTALET: BlogPost = {
@@ -830,94 +679,7 @@ const A_VADERSTOPP_PERMITTERING_BYGGAVTALET: BlogPost = {
   publishedAt: "2026-08-20T10:03:00.000Z", createdAt: "2026-08-20T10:03:00.000Z", updatedAt: "2026-08-20T10:03:00.000Z",
 };
 
-const BEMANNINGSSYSTEM_HTML = `
-<p>Ett bemanningssystem för bygg är programvaran där du sköter bemanningsplaneringen digitalt – fördelar rätt personal och kompetens över projekt och pass, ser frånvaro och beläggning i en delad vy, och kopplar planen till tid och lön. Här går vi igenom vad ett bemanningssystem är, varför bemanningsplanering i Excel snabbt blir ohållbar, och hur du planerar bemanningen steg för steg.</p>
-
-<h2>Vad är ett bemanningssystem?</h2>
-<p>Ett bemanningssystem är ett verktyg för bemanningsplanering: du ser alla projekt, alla medarbetare och deras kompetens på ett ställe, och fördelar personalen dag för dag. Till skillnad från ett kalkylark uppdateras planen i realtid, syns för hela laget och hänger ihop med frånvaro, tid och lön.</p>
-
-<h2>Från Excel till bemanningssystem</h2>
-<p>Många börjar med bemanningsplanering i Excel eller på en whiteboard. Det fungerar för ett projekt, men med flera projekt och skiftande frånvaro blir det snabbt oöverskådligt: dubbelbokningar, luckor och sena besked till laget. Ett bemanningssystem samlar bemanningsplaneringen digitalt och tar bort dubbelarbetet – ändrar du planen uppdateras allt automatiskt.</p>
-
-<div class="article-table"><table>
-<thead><tr><th></th><th>Bemanningsplanering i Excel</th><th>Bemanningssystem</th></tr></thead>
-<tbody>
-<tr><td>Överblick</td><td>Ett ark per vecka/projekt</td><td>Alla projekt i en delad vy</td></tr>
-<tr><td>Frånvaro</td><td>Manuell, lätt att missa</td><td>Syns direkt i planen</td></tr>
-<tr><td>Dubbelbokning</td><td>Upptäcks ofta för sent</td><td>Överbokning flaggas (rött)</td></tr>
-<tr><td>Laget ser schemat</td><td>Nej – skickas separat</td><td>Ja, i mobilen</td></tr>
-<tr><td>Koppling till tid & lön</td><td>Ingen</td><td>Planerade timmar följer med</td></tr>
-</tbody>
-</table></div>
-
-<h2>Så planerar du bemanningen steg för steg</h2>
-<ol>
-<li>Lägg in projekten och deras behov – antal personer och kompetens per period.</li>
-<li>Fördela personalen på projekt och pass i en delad vy.</li>
-<li>Markera frånvaro (sjuk, VAB, semester) så att luckor och överbokning syns direkt.</li>
-<li>Justera löpande när något ändras – och låt laget se sina uppgifter i mobilen.</li>
-<li>Följ upp beläggning mot plan för att hitta över- och underbeläggning.</li>
-</ol>
-
-<h2>Bemanningssystem i ByggExp</h2>
-<p>I ByggExp planerar du bemanningen visuellt: fördela personal på projekt och pass, se frånvaro och beläggning i en delad vy, och låt medarbetarna se sina uppgifter i mobilen. Eftersom bemanning, närvaro, <a href="/sv/blog/app-for-tidrapportering-bygg">tid</a> och ekonomi ligger i samma app hänger planen ihop med verkligheten – planerade timmar följer med hela vägen till <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlaget</a>.</p>
-
-<h2>Kom igång</h2>
-<p>Sluta pussla bemanningsplaneringen i huvudet eller i Excel. <a href="/sv/blog/bemanning-och-personalplanering">Läs mer om bemanning och personalplanering</a>, se <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggningssystem</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
-
-<h2>Relaterade guider</h2>
-<ul>
-<li><a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a></li>
-<li><a href="/sv/blog/schemalaggningssystem-bygg">Schemaläggningssystem för bygg</a></li>
-<li><a href="/sv/blog/resursplanering-bygg">Resursplanering i bygg</a></li>
-<li><a href="/sv/blog/dagsplanering-och-planeringsmoten">Dagsplanering och planeringsmöten</a></li>
-</ul>
-
-<h2>Vanliga frågor</h2>
-<h3>Vad är ett bemanningssystem?</h3>
-<p>Ett bemanningssystem är programvaran där du sköter bemanningsplaneringen digitalt – fördelar personal på projekt och pass, ser frånvaro och beläggning, och kopplar planen till tid och lön. Det ersätter bemanningsplanering i Excel med en delad, alltid uppdaterad vy.</p>
-<h3>Vad är skillnaden mellan bemanningsplanering och schemaläggning?</h3>
-<p>Bemanningsplanering handlar om att fördela rätt personal och kompetens över projekt; <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggning</a> är att lägga de konkreta passen. Ett bemanningssystem gör ofta båda delarna.</p>
-<h3>Behöver ett litet byggföretag ett bemanningssystem?</h3>
-<p>Vid ett projekt går det i huvudet – vid flera projekt blir en delad, digital bemanningsplanering snabbt nödvändig för att undvika dubbelbokningar och spilltid.</p>
-`.trim();
-
-const BEMANNINGSSYSTEM: BlogPost = {
-  _id: 'code-bemanningssystem-bygg',
-  title: 'Bemanningssystem för bygg – digital bemanningsplanering',
-  slug: 'bemanningssystem-bygg',
-  locale: 'sv',
-  excerpt:
-    'Bemanningssystem för bygg: sköt bemanningsplaneringen digitalt istället för i Excel. Fördela personal och kompetens över projekt, se frånvaro och beläggning – steg för steg.',
-  tag: 'Bemanning',
-  coverImageUrl: '/landing/features/5planering.webp',
-  contentHtml: BEMANNINGSSYSTEM_HTML,
-  seoTitle: 'Bemanningssystem för bygg – bemanningsplanering | ByggExp',
-  seoDescription:
-    'Bemanningssystem för bygg: digital bemanningsplanering istället för Excel. Fördela personal och kompetens över projekt och pass, se frånvaro och beläggning. Steg för steg.',
-  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`,
-  canonicalUrl: '',
-  noIndex: false,
-  isPublished: true,
-  howTo: {
-    name: 'Så gör du bemanningsplaneringen',
-    steps: [
-      'Lägg in projekten och deras behov – antal personer och kompetens per period.',
-      'Fördela personalen på projekt och pass i en delad vy.',
-      'Markera frånvaro så att luckor och överbokning syns direkt.',
-      'Justera löpande och låt laget se sina uppgifter i mobilen.',
-      'Följ upp beläggning mot plan för att hitta över- och underbeläggning.',
-    ],
-  },
-  publishedAt: '2026-09-08T10:00:00.000Z',
-  createdAt: '2026-09-08T10:00:00.000Z',
-  updatedAt: '2026-09-08T10:00:00.000Z',
-};
-
 export const PERSONAL_ARTICLES: BlogPost[] = [
-  BEMANNINGSSYSTEM,
-  BEMANNING,
-  FRANVARO,
   ANSTALLA,
   A_INHYRD_PERSONAL_REGLER,
   A_ARBETSTIDSLAGEN_BYGG,

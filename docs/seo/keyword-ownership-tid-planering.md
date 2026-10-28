@@ -37,14 +37,14 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 | /sv/blog/automatisk-tidrapportering-och-export | **feature** | **tidrapportering online** | 72 / 21.3 | tidrapport online (41), automatisk tidrapportering |
 | /sv/blog/narvaro-och-incheckning-pa-bygget | **feature** | **närvarosystem bygg** | 10 / 15.4 | närvarokontroll byggarbetsplats (13), digital närvarolista bygg (10) |
 | /sv/blog/loneunderlag-for-byggforetag | гайд | så tar du fram löneunderlag (инфо) | — | head-ключ «löneunderlag bygg» отдан /sv/funktioner/lon |
-| /sv/blog/tidrapportering | pillar | tidrapportering bygg | 362 / 24.0 | tidrapportering byggföretag (245), tidrapport bygg (258) |
+| ~~/sv/blog/tidrapportering~~ → 301 /sv/funktioner/tidrapporteringssystem-bygg (2026-10-28) | pillar | tidrapportering bygg | 362 / 24.0 | tidrapportering byggföretag (245), tidrapport bygg (258) |
 | /sv/blog/tidrapporteringssystem-bygg | гайд | så väljer du tidrapporteringssystem (инфо) | 312 / 25.1 | checklista tidrapporteringssystem; head-ключ отдан /sv/funktioner/tidrapporteringssystem-bygg |
 | /sv/blog/basta-tidrapporteringssystem-bygg | сравнение | bästa tidrapporteringssystem bygg | — | jämförelse tidrapporteringssystem, tidrapporteringssystem pris, Bygglet/Fieldly/MyGizmo alternativ |
 | /sv/blog/mobil-tidrapportering | гайд | mobil tidrapportering | 127 / 12.0 | tidrapportering i mobilen (124), tidrapportering mobil (57) |
 | /sv/blog/tidrapportering-entreprenad | гайд | tidrapportering entreprenad | 161 / 14.8 | — |
 | /sv/blog/tidrapportering-hantverkare | гайд | tidrapport för hantverkare – guide (инфо) | 231 / 30.4 | head-ключ отдан /sv/funktioner/tidrapportering-hantverkare |
 | /sv/blog/app-for-tidrapportering-bygg | хаб | app för tidrapportering | — | digital tidrapportering (32) |
-| /sv/blog/tidrapportering-app-byggforetag | гайд | tidrapportering app bygg | 64 / 17.2 | tidrapportering app (18) |
+| ~~/sv/blog/tidrapportering-app-byggforetag~~ → 301 /sv/funktioner/tidrapporteringssystem-bygg (2026-10-28) | гайд | tidrapportering app bygg | 64 / 17.2 | tidrapportering app (18) |
 | /sv/blog/tidrapport-app-iphone | гайд | tidrapport app iphone | 5 / 28.4 | tidrapport app (31) |
 | /sv/blog/enkelt-tidrapporteringssystem | гайд | enkelt tidrapporteringssystem | — | enkel tidrapportering app (26) |
 | ~~/sv/blog/tidsregistrering-app-bygg~~ → 301 на app-for-tidrapportering-bygg (2026-10-21) | гайд | tidsregistrering bygg | 83 / 18.5 | mobil tidsregistrering (15) |
@@ -72,8 +72,8 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 | /sv/blog/schemalaggning-bygg | гайд | schemaläggning regler och tips (инфо) | — | «schemaläggning personal» отдан /sv/funktioner/schemalaggning |
 | /sv/blog/resursplanering-bygg | гайд | resurshistogram, resursutjämning (инфо) | 81 / 10.5 | head-ключ отдан /sv/funktioner/resursplanering |
 | /sv/blog/personalplanering-bygg | гайд | bemanningsplanering | 228 / 53.8 | bemanningsplan (35) |
-| /sv/blog/bemanning-och-personalplanering | гайд | personalplanering | 32 / 45.0 | — |
-| /sv/blog/bemanningssystem-bygg | гайд | bemanningssystem bygg | — | schema bemanning (75), bemanningsplanering system (29) |
+| ~~/sv/blog/bemanning-och-personalplanering~~ → 301 /sv/funktioner/resursplanering (2026-10-28) | гайд | personalplanering | 32 / 45.0 | — |
+| ~~/sv/blog/bemanningssystem-bygg~~ → 301 /sv/funktioner/resursplanering (2026-10-28) | гайд | bemanningssystem bygg | — | schema bemanning (75), bemanningsplanering system (29) |
 | /sv/blog/projektplanering-bygg | гайд | projektplanering bygg (инфо: как планировать) | — | ссылается на /sv/funktioner/projektplanering |
 | /sv/blog/gantt-schema-mall-bygg | гайд | gantt schema mall bygg (инфо + шаблон) | — | «gantt schema» head отдан /sv/funktioner/projektplanering |
 | /sv/verktyg/gantt-schema-mall | tool | gantt schema mall | — | — |
@@ -88,9 +88,11 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 
 ## Риски каннибализации (не исправлено, решить отдельно)
 
-1. **personalplanering-bygg ↔ bemanning-och-personalplanering.** Оба title содержат «personalplanering». Рекомендация: убрать «personalplanering» из title personalplanering-bygg и оставить там только «Bemanningsplanering för byggföretag».
+1. **[2026-10-28: решено — bemanning-och-personalplanering → 301 на /sv/funktioner/resursplanering]** **personalplanering-bygg ↔ bemanning-och-personalplanering.** Оба title содержат «personalplanering». Рекомендация: убрать «personalplanering» из title personalplanering-bygg и оставить там только «Bemanningsplanering för byggföretag».
 2. **[2026-10-21: tidsregistrering-app-bygg (90 дн. 1 045 показов, поз. 54, 0 кликов) → 301 на хаб; projekthanteringssystem-bygg (не в индексе) → 301 на projekthantering-byggforetag]** **app-for-tidrapportering-bygg ↔ tidrapportering-app-byggforetag ↔ tidsregistrering-app-bygg.** Это три почти одинаковых «app»-гайда. Рекомендация: через 4–6 недель по GSC (связка запрос × страница) объединить слабейший в хаб с 301-редиректом.
 3. **tidredovisning-byggforetag ↔ tidredovisning-app.** Пересечение умеренное. Держать раздельно: «bygg» и «app».
 4. Старые анкоры «automatisk tidrapportering» (~15 ссылок из гайдов) и «dagsplanering» оставлены как есть. Они ведут на правильного владельца, просто без нового ключа.
 
 - tidrapporteringssystem-bygg (гайд, владеет «tidrapporteringssystem bygg») → basta-tidrapporteringssystem-bygg одной фразой; сравнение ссылается обратно на гайд. Title/H1 сравнения начинаются с «Bästa …», чтобы не каннибализировать гайд (2026-10-06).
+
+- 2026-10-28: чистка блога — 46 sv-статей → 301 (в т.ч. projekthantering-byggforetag, projektledning-byggforetag, app-for-byggprojekt → /sv/funktioner/projekthantering; старый 301 projekthanteringssystem-bygg перенаправлен туда же). Полная карта: docs/seo/blog-301-map-2026-10-28.md.

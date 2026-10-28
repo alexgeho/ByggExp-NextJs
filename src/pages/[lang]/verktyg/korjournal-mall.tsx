@@ -129,9 +129,8 @@ export default function KorjournalMallPage() {
         }}
         relatedHeading="Relaterat"
         related={[
-          { href: `/${LOCALE}/blog/korjournal-krav-skatteverket-bygg`, label: 'Guide: körjournal-krav' },
+          { href: `/${LOCALE}/blog/servicebil-eller-formansbil`, label: 'Guide: servicebil, förmånsbil och körjournal' },
           { href: `/${LOCALE}/blog/milersattning-2026`, label: 'Milersättning' },
-          { href: `/${LOCALE}/blog/servicebil-eller-formansbil`, label: 'Servicebil eller förmånsbil' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },
         ]}
       />

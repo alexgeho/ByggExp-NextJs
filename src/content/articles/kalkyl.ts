@@ -1059,103 +1059,6 @@ const A_DRANERING_GRUS_MATERIAL_BERAKNING: BlogPost = {
   publishedAt: "2026-08-19T18:00:00.000Z", createdAt: "2026-08-19T18:00:00.000Z", updatedAt: "2026-08-19T18:00:00.000Z",
 };
 
-const A_MATERIALATGANG_INNERVAGG_REGLAR_GIPS_HTML = `
-<p>Slarviga schabloner på innerväggar äter marginal. En regel för lite här, en halv gipspall för mycket där – och plötsligt skiljer inköpet flera hundralappar från det du prissatte i offerten. Materialåtgång på innervägg är inte svårt att räkna, men det kräver att du börjar i rätt ände: c/c-måttet på reglarna styr allt annat, och det är där de flesta felkalkyler börjar.</p>
-
-<p>Vill du hoppa direkt till räkningen? Testa vår gratis <a href="/sv/verktyg/reglar-kalkylator">reglar-kalkylator</a> – ange vägglängd och c/c så får du antal stående reglar plus syll och hammarband på sekunder.</p>
-
-<h2>Börja med c/c-måttet – det styr allt</h2>
-<p>Centrumavståndet mellan reglarna bestäms inte av tycke och smak, utan av gipsskivans bredd. Skivkanten ska alltid landa mitt på en regel, annars går det inte att skruva fast kanten ordentligt.</p>
-<ul>
-<li><strong>900 mm breda skivor</strong> kräver c/c 450 mm.</li>
-<li><strong>1200 mm breda skivor</strong> kräver c/c 600 mm.</li>
-</ul>
-<p>Regeldimensionen hänger ihop med isoleringen. Standard för en icke bärande innervägg är trä 45x70 eller 45x95 mm (ibland 45x45). Regeltjockleken bestämmer isoleringstjockleken – en 70 mm regel tar 70 mm mineralull, en 95 mm regel tar 95 mm. Bestäm dimensionen först, så följer isoleringsvalet automatiskt.</p>
-
-<h2>Räkna reglarna rätt</h2>
-<p>Grundformeln för antal stående reglar är enkel:</p>
-<p><strong>Antal reglar ≈ (vägglängd / c/c) + 1</strong></p>
-<p>Som löpmeter-schablon ger det ca 1,67 reglar per meter vid c/c 600 och ca 2,22 reglar per meter vid c/c 450. Utöver de stående reglarna tillkommer <strong>alltid</strong> syll och hammarband – bottenregel och toppregel som löper hela väggens längd.</p>
-<p>Här ligger den vanligaste underskattningen: extrareglarna. En ren löpmeter-schablon missar dem varje gång. Du behöver extra reglar vid:</p>
-<ul>
-<li>varje ytterkant och innerhörn (dubbla reglar för att kunna skruva gips på båda anslutande väggar),</li>
-<li>var sida om varje dörröppning,</li>
-<li>kortlingar (kortstycken) som monteras vågrätt över dörröppningar.</li>
-</ul>
-<p>Räknar du bara löpmeter och glömmer hörn och dörrar hamnar du systematiskt för lågt – och det är dyra minuter att åka och komplettera mitt i jobbet.</p>
-
-<h2>Gipsåtgång utan svinn</h2>
-<p>Gips räknas på väggytan, inte på reglarna. Normalgips (standardgips) är 12,5–13 mm tjockt och finns i två vanliga format:</p>
-<ul>
-<li><strong>900 x 2500 mm</strong> = 2,25 m² per skiva,</li>
-<li><strong>1200 x 2600 mm</strong> = 3,12 m² per skiva.</li>
-</ul>
-<p>Åtgången är väggytan delat med skivarean, plus spill. Tänk på tre saker som lätt dubblar din siffra:</p>
-<ol>
-<li><strong>Enkel- eller dubbelsidig vägg</strong> – en dubbelsidig vägg beklär du på båda sidor, alltså dubbla gipsytan.</li>
-<li><strong>Enkel- eller dubbellag</strong> – dubbla lag (för ljud eller brand) fördubblar gipset på den sidan. Vid dubbla lag förskjuts skivorna en halv skivbredd så att skarvarna inte hamnar över varandra.</li>
-<li><strong>Skruvåtgång</strong> – skruv c/c ca 200 mm längs skivkanter och ca 300 mm mot mellanreglar vid enkellag. Första skruven max 100 mm från hörn eller kant. Det blir snabbt flera hundra skruv per vägg – räkna in dem, de nollställer inte kalkylen men de tar slut.</li>
-</ol>
-<p>Behöver du hjälp med skiv- och skruvantalet, kör siffrorna i vår <a href="/sv/verktyg/gips-kalkylator">gips-kalkylator</a>.</p>
-
-<h2>Isolering per fack</h2>
-<p>Isoleringen ska fylla facket utan att komprimeras – den ska inte bukta ut eller pressas ihop, för då tappar den både ljud- och värmefunktion. Matcha tjockleken mot regeln (45/70/95 mm) och räkna åtgången i m² väggyta.</p>
-<p>Materialvalet i innervägg styrs primärt av <strong>ljudkrav</strong>, inte U-värde. Stenull har högre densitet än glasull och ger bättre ljud- och brandprestanda – välj efter vad väggen ska klara, inte bara efter pris per m². Snabb siffra på behovet får du i <a href="/sv/verktyg/isolering-kalkylator">isolerings-kalkylatorn</a>.</p>
-
-<h2>När kraven höjer åtgången</h2>
-<p>Två situationer spränger schablonen och måste synas i offerten:</p>
-<ul>
-<li><strong>Lägenhetsskiljande vägg (ljudklass C):</strong> kravet R'w + C50-3150 ≥ 53 dB löses normalt med dubbel stomme (två skilda regelrader) och minst ca 120 mm mineralull. Det är väsentligt mer material än en enkel innervägg – räkna aldrig en sådan vägg med löpmeter-schablonen för en vanlig rumsavdelare.</li>
-<li><strong>Brandcellsgräns eller utrymningsväg:</strong> icke bärande innerväggar i bostad är normalt inte brandklassade, men vid brandcellsgräns eller i utrymningsväg krävs ofta EI 30 eller högre. Det påverkar gipsvalet (t.ex. brandgips) och kan innebära extra lag – både på gips och på arbetstid.</li>
-</ul>
-
-<h2>Från åtgång till offert</h2>
-<p>När mängderna är räknade återstår tre saker innan de blir en offert som håller:</p>
-<ul>
-<li><strong>Lägg på realistiskt spill</strong> – ca 10 % på gips och isolering täcker kap, kanter och det som blir fel. Räkna hellre in det än att stå utan.</li>
-<li><strong>Särredovisa material och arbete</strong> – material har 25 % moms och ingår aldrig i ROT-underlaget. ROT gäller enbart arbete.</li>
-<li><strong>Räkna ROT rätt för 2026</strong> – ROT-avdraget är 30 % av arbetskostnaden, max 50 000 kr per person och år. Den tillfälliga höjningen till 50 % gällde bara 12 maj–31 december 2025 och förlängdes inte. Prissätter du fortfarande med 50 % lovar du kunden fel.</li>
-</ul>
-<p>När inköpslistan bygger på samma mängder som offerten slipper du glappet mellan kalkyl och verklighet.</p>
-
-<h2>Räkneexempel: en 4 m enkelsidig innervägg, c/c 600</h2>
-<p>Vägg 4,0 m lång, 2,5 m hög, enkelsidig, c/c 600, 1200 mm gips:</p>
-<ul>
-<li><strong>Reglar:</strong> (4,0 / 0,6) + 1 ≈ 7,7 → 8 stående reglar. Plus syll och hammarband (2 x 4,0 m). Tillkommer extrareglar vid hörn – lägg till 2–4 st beroende på anslutningar.</li>
-<li><strong>Gips:</strong> väggyta 4,0 x 2,5 = 10 m² på en sida. 10 / 3,12 ≈ 3,2 skivor → 4 skivor med spill.</li>
-<li><strong>Isolering:</strong> 10 m² i tjocklek som matchar regeln (t.ex. 70 mm), plus ca 10 % spill.</li>
-<li><strong>Skruv:</strong> räkna c/c 200 kant / 300 mitt – i storleksordningen 100–150 skruv för denna vägg.</li>
-</ul>
-
-<h2>Så gör du i ByggExp</h2>
-<p>I ByggExp lägger du in väggens mått och c/c en gång, och samma mängder följer med från kalkyl till inköpslista och offert. Reglar, gips, isolering och spillpålägg räknas ihop, och material särredovisas från arbete så att ROT-underlaget blir rätt direkt. Du slipper föra över siffror manuellt mellan kalkylatorn, inköpet och fakturan – där felen annars smyger sig in. Verktyget räknar mängder och pris; hur många extrareglar just din vägg kräver vid hörn och dörrar avgör du fortfarande som byggare, men underlaget finns på ett ställe.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Vilket c/c ska jag använda – 450 eller 600?</h3>
-<p>Det avgörs av gipsbredden. 900 mm breda skivor kräver c/c 450 mm, 1200 mm breda kräver c/c 600 mm. Skivkanten måste landa mitt på en regel. c/c 600 ger färre reglar och mindre material; c/c 450 ger en styvare vägg men mer virke.</p>
-<h3>Hur mycket spill ska jag räkna på gips och isolering?</h3>
-<p>Ca 10 % är en realistisk schablon för kap, kanter och fel. På komplicerade väggar med många öppningar kan det bli mer. Bättre att räkna in spillet i offerten än att stå utan material mitt i jobbet.</p>
-<h3>Räknas isolering och gips in i ROT-avdraget?</h3>
-<p>Nej. ROT-avdraget 2026 gäller enbart arbetskostnaden – 30 % av arbetet, max 50 000 kr per person och år. Allt material har 25 % moms och måste särredovisas i offert och faktura.</p>
-<h3>Varför blir mina reglar alltid för få?</h3>
-<p>För att löpmeter-schablonen bara räknar de stående reglarna i väggens längd. Den missar syll och hammarband, dubbla reglar i hörn och kanter, reglar på var sida om dörrar och kortlingar över öppningar. Lägg alltid till dessa manuellt.</p>
-
-<h2>Kom igång</h2>
-<p>Räkna din nästa innervägg direkt i vår <a href="/sv/verktyg/reglar-kalkylator">reglar-kalkylator</a> och komplettera med <a href="/sv/verktyg/gips-kalkylator">gips-kalkylatorn</a> för skiv- och skruvantal. Vill du se hur mängderna flödar hela vägen till offert och faktura? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi.</p>
-
-<p>Relaterat: <a href="/sv/blog/spackel-atgang-vagg-tak">Spackelåtgång på vägg och tak</a>, <a href="/sv/blog/rakna-material-till-bygget">Så räknar du material till bygget</a> och <a href="/sv/blog/mangdforteckning-bygg">Mängdförteckning i byggprojekt</a>.</p>
-`;
-
-const A_MATERIALATGANG_INNERVAGG_REGLAR_GIPS: BlogPost = {
-  _id: "code-"+"materialatgang-innervagg-reglar-gips",
-  title: "Materialåtgång innervägg – så räknar byggaren reglar, gips och isolering", slug: "materialatgang-innervagg-reglar-gips", locale: "sv",
-  excerpt: "Så räknar du reglar, gips och isolering per innervägg med rätt c/c-mått och realistiskt spill – så att inköpslistan matchar det du prissatt i offerten.", tag: "Kalkyl",
-  coverImageUrl: "/landing/verktyg/reglar-preview.webp", contentHtml: A_MATERIALATGANG_INNERVAGG_REGLAR_GIPS_HTML,
-  seoTitle: "Materialåtgång innervägg | ByggExp", seoDescription: "Räkna reglar (c/c 450/600), gips och isolering per innervägg så inköpet matchar offerten. Formler, spill 10 % och räkneexempel för hantverkare.",
-  seoImageUrl: `${SITE_URL}/landing/verktyg/reglar-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T20:00:00.000Z", createdAt: "2026-08-19T20:00:00.000Z", updatedAt: "2026-08-19T20:00:00.000Z",
-};
-
 const A_FARGATGANG_MALNING_M2_HTML = `
 <p>Färgåtgången avgör din marginal på varje målningsjobb. Räknar du för snålt står du med tomma burkar mitt i andra strykningen och kör en extra vända till färghandeln – räknar du för brett bjuder du kunden på färg du redan har betalat 25 % moms på. Skillnaden mellan en hållbar offert och ett förlustjobb är ofta bara ett par liter, och de literna går att räkna ut innan du sätter foten på arbetsplatsen.</p>
 
@@ -1268,87 +1171,6 @@ const A_FARGATGANG_MALNING_M2: BlogPost = {
   seoTitle: "Färgåtgång per m² – räkna rätt | ByggExp", seoDescription: "Så räknar målaren färgåtgång per m²: täckförmåga, antal strykningar och spill. Verifierade åtgångstal och räkneexempel för att offerera rätt.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/farg-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T20:03:00.000Z", createdAt: "2026-08-19T20:03:00.000Z", updatedAt: "2026-08-19T20:03:00.000Z",
-};
-
-const A_GOLVMATERIAL_ATGANG_SPILL_HTML = `
-<p>Beställer du för lite golv får du vänta på ett nytt parti – ofta med en avvikande nyans som syns tvärs över rummet. Beställer du för mycket binder du kapital i paket som blir liggande. För dig som lägger klick-, laminat- eller parkettgolv i yrket är marginalen mellan rätt och fel några procent spillpåslag och en genomtänkt startförskjutning. Här går vi igenom hur du kommer från uppmätt yta till rätt antal paket, från rätt batchnummer.</p>
-
-<p>Vill du snabbt få fram antal paket utifrån yta, mönster och paketstorlek? Använd vår gratis <a href="/sv/verktyg/golv-kalkylator">golv-kalkylator &rarr;</a> så slipper du räkna för hand på plats hos kund.</p>
-
-<h2>Börja med nettoytan – mät rätt</h2>
-<p>All beräkning utgår från nettoytan, det vill säga den yta golvet faktiskt ska täcka. Mät varje rum för sig, längd gånger bredd, och dra av fasta ytor som inte ska golvläggas – köksö med sockel, murad öppen spis, inbyggda garderober som står på undergolvet. Addera sedan rummen till en total. Ett vanligt fel är att mäta hela stommen eller ta ytan från ritningens bruttoarea, vilket ger en yta som är för stor. Runda aldrig av förrän spillet är pålagt – avrundning innan påslaget äter upp den marginal du behöver. Behöver du hjälp att summera flera rum eller ytor med udda form, ta vår <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylator</a>.</p>
-
-<h2>Så mycket spill ska du lägga på</h2>
-<p>Spill uppstår när plankor kapas mot väggar, dörrar och fasta föremål, och när radbredder inte går jämnt upp. Lägg alltid spillet ovanpå den uppmätta nettoytan innan du räknar paket. Som grund gäller:</p>
-<ul>
-<li><strong>Raka rum, enkelt mönster:</strong> 5–8 %. Kährs rekommenderar cirka 5 % vid enkla rum.</li>
-<li><strong>Rum med vinklar, burspråk, trappa eller flera dörrar:</strong> 8–10 %. Bauhaus anger cirka 10 % som tumregel.</li>
-<li><strong>Fiskben, chevron eller diagonalläggning:</strong> 10–15 %, och i praktiken 15–25 % beroende på rummets form. Ett rum på 60 m&sup2; i fiskben kan kräva material för 70–75 m&sup2;.</li>
-</ul>
-<p>Ju mer diagonala kap och mönsteranpassning, desto mer material blir restbitar. Bestäm mönstret innan du väljer spillprocent – det är den enskilt största faktorn.</p>
-
-<h2>Startförskjutning och radbredd – varför de påverkar åtgången</h2>
-<p>Kortändsfogarna, alltså skarvarna mellan plankor, ska förskjutas mellan raderna. De flesta anvisningar anger minst 300 mm, gärna cirka en tredjedel av plankans längd; Kährs anger minst 500 mm för ökad stabilitet. Denna startförskjutning styr hur mycket avkap som blir och kan återanvändas.</p>
-<p>Sista radens bräddbredd bör vara minst 50 mm. Blir sista raden smalare kapas första raden så att bredden fördelas jämnt över rummet – det påverkar hur många plankor och därmed paket som verkligen går åt. Det goda med genomtänkt förskjutning: från och med tredje raden kan du starta raden med avkapet från föregående rad om biten är minst cirka 300 mm. Smart förskjutningsplanering sänker alltså det faktiska spillet, medan slarv driver upp det.</p>
-
-<h2>Rörelsefog och stora ytor</h2>
-<p>Flytande golv rör sig med fukt och temperatur och behöver plats. Lägg en rörelsefog på minst 8–12 mm mot väggar och fasta föremål – Kährs anger minst 10 mm – räknat på ungefär 1,5 mm rörelse per breddmeter golv. En obruten flytande yta får inte vara hur stor som helst: tumregeln är cirka 8 m bredd och 12 m längd för lås- och flytande golv innan rörelsefog krävs. Expansionsfog läggs alltid i dörröppningar och täcks av tröskel eller nivålist. Måste du dela upp en stor yta ökar antalet kap och därmed spillet – planera in det i påslaget i stället för att upptäcka det halvvägs.</p>
-
-<h2>Från m&sup2; till antal paket – räkneexempel</h2>
-<p>Golv säljs i hela paket, vanligen cirka 1,5–3,5 m&sup2; per paket. Formeln är enkel:</p>
-<p><strong>Antal paket = tak( nettoyta &times; (1 + spill%) &divide; paketets m&sup2; )</strong></p>
-<p>Exempel: ett raklagt rum med 24 m&sup2; nettoyta, enkelt mönster, 8 % spill.</p>
-<ol>
-<li>24 m&sup2; &times; 1,08 = 25,9 m&sup2;</li>
-<li>25,9 &divide; 2,4 m&sup2;/paket = 10,8 paket</li>
-<li>Avrunda alltid uppåt: <strong>11 paket</strong></li>
-</ol>
-<p>Beställ samtliga paket från samma parti- och batchnummer så att kulören stämmer, och lägg gärna till 1 extra paket i reserv för framtida reparationer. Runda alltid uppåt – ett halvt paket för lite betyder ett stopp mitt i jobbet.</p>
-
-<h2>Acklimatisering och leverans</h2>
-<p>Golvet ska acklimatiseras i oöppnad förpackning i rumsmiljö i minst 24 timmar, ofta 48 timmar, före läggning. Det betyder att du måste beställa i tid – materialet ska hinna stå på plats innan första raden läggs. Kontrollera parti och kulör innan läggningen börjar, inte efter att halva golvet ligger. En felaktig batch upptäckt sent innebär rivning och ombeställning.</p>
-
-<h2>ROT och offert 2026 – materialberäkningens affärsvärde</h2>
-<p>ROT-avdraget är 30 % av arbetskostnaden 2026, med tak 50 000 kr per person och år. De tillfälliga 50 % gällde bara slutet av 2025. Endast arbetskostnaden är avdragsgill – material och spill ger aldrig ROT. Det gör materialberäkningen direkt kopplad till kundens totalkostnad: felräknat spill hamnar helt på kundens faktura utan avdrag. En tydlig, separat spillpost i offerten gör kalkylen transparent och förebygger tvist om slutsumman.</p>
-
-<h2>Checklista före beställning</h2>
-<ol>
-<li>Nettoyta uppmätt per rum, fasta ytor avdragna.</li>
-<li>Spillprocent vald efter mönster (5–8 / 8–10 / 10–15+ %).</li>
-<li>Läggningsmönster bestämt (rakt, diagonal, fiskben).</li>
-<li>Startförskjutning planerad (minst 300 mm, Kährs 500 mm).</li>
-<li>Rörelsefog och eventuell ytuppdelning inräknad.</li>
-<li>Paketstorlek i m&sup2; kontrollerad.</li>
-<li>Samma batchnummer på hela beställningen.</li>
-<li>Ett reservpaket tillagt.</li>
-</ol>
-
-<h2>Så gör du i ByggExp</h2>
-<p>I ByggExp lägger du in rummens mått, väljer spillpåslag efter mönster och paketstorlek, och får antal paket uträknat med avrundning uppåt. Beräkningen kan följa med in i offerten till kunden, där arbetskostnad och material hålls isär så att ROT-underlaget blir tydligt. Verktyget ersätter inte golvläggarens omdöme om förskjutning och radbredd på plats – men det tar bort handräkningen och risken för avrundningsfel innan beställning läggs.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Hur mycket spill ska jag lägga på golv?</h3>
-<p>För raklagt klick-, laminat- eller parkettgolv i enkla rum räcker 5–8 %. I rum med vinklar och flera dörrar räkna 8–10 %. Vid fiskben, chevron eller diagonalläggning gäller 10–15 %, och upp till 15–25 % beroende på rummets form. Lägg alltid spillet ovanpå nettoytan innan du räknar paket.</p>
-<h3>Hur räknar jag om från kvadratmeter till antal paket?</h3>
-<p>Multiplicera nettoytan med spillpåslaget, dela med paketets m&sup2; och avrunda alltid uppåt: antal paket = tak(nettoyta &times; (1 + spill%) &divide; paket-m&sup2;). Beställ dessutom gärna 1 extra paket i reserv från samma batch.</p>
-<h3>Varför ska allt golv komma från samma batchnummer?</h3>
-<p>Nyansen kan skilja mellan olika tillverkningspartier. Beställer du för lite och kompletterar senare riskerar du ett synligt färghopp mitt i golvet. Beställ hela mängden inklusive spill och reserv från samma parti på en gång.</p>
-<h3>Ger material och spill ROT-avdrag?</h3>
-<p>Nej. ROT-avdraget 2026 är 30 % av enbart arbetskostnaden, med tak 50 000 kr per person och år. Material och spill är aldrig avdragsgillt, vilket gör en korrekt materialberäkning viktig för kundens totalkostnad.</p>
-
-<h2>Kom igång</h2>
-<p>Räkna fram rätt antal paket direkt med vår <a href="/sv/verktyg/golv-kalkylator">golv-kalkylator</a>, eller summera flera ytor först i <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a>. Vill du se hur beräkningen kopplas ihop med offert och ROT-underlag, <a href="/sv/contact">boka en gratis konsultation</a>.</p>
-<p>Relaterat: <a href="/sv/blog/spillprocent-bygg-material">Spillprocent för byggmaterial</a>, <a href="/sv/blog/kakel-klinker-atgang-vatrum">Kakel- och klinkeråtgång i våtrum</a>, <a href="/sv/blog/rakna-material-till-bygget">Räkna material till bygget</a>.</p>
-`;
-
-const A_GOLVMATERIAL_ATGANG_SPILL: BlogPost = {
-  _id: "code-"+"golvmaterial-atgang-spill",
-  title: "Golv – materialåtgång och spill: så beställer du rätt antal paket", slug: "golvmaterial-atgang-spill", locale: "sv",
-  excerpt: "Räkna ut nettoyta, spillpåslag och startförskjutning så golvläggaren beställer rätt antal paket – från samma parti och utan bundet kapital.", tag: "Kalkyl",
-  coverImageUrl: "/landing/verktyg/golv-preview.webp", contentHtml: A_GOLVMATERIAL_ATGANG_SPILL_HTML,
-  seoTitle: "Golv materialåtgång & spill | ByggExp", seoDescription: "Så räknar du klick-, laminat- och parkettgolv inkl. spill (5–10 %) och startförskjutning – och beställer rätt antal paket från rätt batch.",
-  seoImageUrl: `${SITE_URL}/landing/verktyg/golv-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T20:06:00.000Z", createdAt: "2026-08-19T20:06:00.000Z", updatedAt: "2026-08-19T20:06:00.000Z",
 };
 
 const A_BETONG_PLINTAR_STOLPFUNDAMENT_HTML = `
@@ -2066,7 +1888,7 @@ const A_REGLAR_DIMENSIONER_C_AVSTAND_VAGG_HTML = `
 <p>En 4,8 meter lång vägg med c 450 mm ger 4 800 / 450 = 10,7 → 11, plus 1 = <strong>12 reglar</strong>. Till det kommer syll och hammarband (topp- och bottenregel) samt extra reglar vid dörr- och fönsteröppningar. <a href="/sv/verktyg/reglar-kalkylator">Reglar-kalkylatorn</a> räknar antalet åt dig när du fyller i längden och c-avståndet.</p>
 
 <h2>Reglar och gips hänger ihop</h2>
-<p>Väljer du regeldimension och c-avstånd bör du samtidigt tänka på gipsskivans mått, eftersom de två ska matcha. Läs vidare om <a href="/sv/blog/gipsskivor-matt-standardmatt-vikt">gipsskivors standardmått och vikt</a> och om <a href="/sv/blog/materialatgang-innervagg-reglar-gips">materialåtgång för en innervägg med reglar och gips</a> för att få ihop hela väggen.</p>
+<p>Väljer du regeldimension och c-avstånd bör du samtidigt tänka på gipsskivans mått, eftersom de två ska matcha. Läs vidare om <a href="/sv/blog/gipsskivor-matt-standardmatt-vikt">gipsskivors standardmått och vikt</a> och om materialåtgång för en innervägg med reglar och gips för att få ihop hela väggen.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
@@ -2116,7 +1938,7 @@ const A_GIPSSKIVOR_MATT_STANDARDMATT_VIKT_HTML = `
 <h2>Så räknar du åtgången</h2>
 <p>Grundprincipen är väggens yta delat med skivans yta, plus spill:</p>
 <p><strong>Antal skivor = väggyta / skivyta × (1 + spill)</strong></p>
-<p>En vägg på 12 m² med skivor på 2,25 m² (900 × 2 500) ger 12 / 2,25 = 5,3 skivor, plus spill. Räkna med några procents spill för kap runt öppningar. <a href="/sv/verktyg/gips-kalkylator">Gips-kalkylatorn</a> gör uträkningen åt dig, och ska du klä hela innerväggen hjälper guiden om <a href="/sv/blog/materialatgang-innervagg-reglar-gips">materialåtgång för innervägg</a> med resten. Behöver du spackla skarvarna finns en guide om <a href="/sv/blog/spackel-atgang-vagg-tak">spackelåtgång</a> också.</p>
+<p>En vägg på 12 m² med skivor på 2,25 m² (900 × 2 500) ger 12 / 2,25 = 5,3 skivor, plus spill. Räkna med några procents spill för kap runt öppningar. <a href="/sv/verktyg/gips-kalkylator">Gips-kalkylatorn</a> gör uträkningen åt dig, och ska du klä hela innerväggen hjälper guiden om <a href="/sv/blog/reglar-dimensioner-c-avstand-vagg">materialåtgång för innervägg</a> med resten. Behöver du spackla skarvarna finns en guide om <a href="/sv/blog/spackel-atgang-vagg-tak">spackelåtgång</a> också.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
@@ -2150,9 +1972,7 @@ export const KALKYL_ARTICLES: BlogPost[] = [
   A_SPACKEL_ATGANG_VAGG_TAK,
   A_LAKT_AVSTAND_TAK_BERAKNING,
   A_DRANERING_GRUS_MATERIAL_BERAKNING,
-  A_MATERIALATGANG_INNERVAGG_REGLAR_GIPS,
   A_FARGATGANG_MALNING_M2,
-  A_GOLVMATERIAL_ATGANG_SPILL,
   A_BETONG_PLINTAR_STOLPFUNDAMENT,
   A_STAKET_MATERIAL_STOLPAR_ATGANG,
   A_GOLVVARME_BERAKNING_EFFEKT,

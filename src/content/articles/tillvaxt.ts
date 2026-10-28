@@ -140,7 +140,7 @@ const A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING_HTML = `
 <h2>Kom igång</h2>
 <p>Börja med det som blöder mest – oftast fakturering eller tidrapportering – och digitalisera ett flöde i taget. Testa vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för att se hur digital tid blir underlag för både lön och faktura. Vill du se hela kedjan samlad kan du boka en visning via <a href="/sv/contact">/sv/contact</a>. Regelverket 2026 belönar redan digitala firmor; den som fortfarande kör papper och Excel betalar med sin egen tid.</p>
 
-<p>Relaterat: <a href="/sv/blog/tidrapportering">Tidrapportering i byggbranschen</a>, <a href="/sv/blog/resursplanering-bygg">Resursplanering för byggföretag</a> och <a href="/sv/blog/offert-till-betald-faktura-flode">Från offert till betald faktura</a>.</p>
+<p>Relaterat: <a href="/sv/funktioner/tidrapporteringssystem-bygg">Tidrapportering i byggbranschen</a>, <a href="/sv/blog/resursplanering-bygg">Resursplanering för byggföretag</a> och <a href="/sv/blog/offert-till-betald-faktura-flode">Från offert till betald faktura</a>.</p>
 `;
 
 const A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING: BlogPost = {
@@ -151,72 +151,6 @@ const A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING: BlogPost = {
   seoTitle: "Digitalisera byggföretag | ByggExp", seoDescription: "Tidrapport, offert och faktura i ett flöde. Så digitaliserar en liten byggfirma projektledningen och sparar timmar admin varje vecka – och möter 2026 års krav.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T10:15:00.000Z", createdAt: "2026-08-19T10:15:00.000Z", updatedAt: "2026-08-19T10:15:00.000Z",
-};
-
-const A_SKAFFA_RECENSIONER_OMDOMEN_BYGGFIRMA_HTML = `
-<p>Ett bra omdöme från en nöjd kund är en av de billigaste marknadsföringskanaler en byggfirma har. När nästa kund söker efter en hantverkare i området är det stjärnorna på Google och de verifierade recensionerna på Reco som avgör om de hör av sig till dig eller till konkurrenten. Men 2026 räcker det inte att bara be alla kunder om en femma – både marknadsföringslagen och Google har skärpt reglerna, och ett felsteg kan i värsta fall kosta dig hela profilen eller en dyr avgift.</p>
-
-<p>Ett proffsigt intryck börjar redan i offertskedet – kunder som får en tydlig och förtroendeingivande offert är också de som gärna lämnar ett gott omdöme efteråt. Använd gärna <a href="/sv/verktyg/offert-mall">vår gratis offertmall -&gt;</a> för att lägga grunden till ett projekt som slutar med en nöjd kund.</p>
-
-<h2>Vad lagen faktiskt kräver av dig</h2>
-<p>Sedan Omnibus-direktivet införlivades i marknadsföringslagen (i kraft sedan 1 september 2022) är det uttryckligen förbjudet att lägga ut falska eller manipulerade konsumentrecensioner. Om du visar omdömen på din egen hemsida måste du dessutom informera om, och hur, du kontrollerar att recensionerna kommer från verkliga kunder – samt upplysa om enbart positiva omdömen publiceras eller om någon recension är sponsrad.</p>
-<p>Kravet på dig som företag är att vidta "rimliga och proportionerliga åtgärder" för att säkerställa att omdömena är äkta, till exempel genom att verifiera att personen faktiskt varit kund. Du ansvarar däremot inte för äktheten hos recensioner på tredjepartsplattformar som du inte kontrollerar, som Google eller Reco. Men bevisbördan för dina egna kontrollrutiner ligger på dig.</p>
-<p>Ta det här på allvar. Sanktionen skärptes samtidigt: marknadsstörningsavgiften kan numera bestämmas till upp till 4 % av företagets globala årsomsättning – det tidigare taket på 10 miljoner kronor är borttaget. Redan oaktsamhet räcker för avgift, det behövs alltså inget uppsåt, och det är Patent- och marknadsdomstolen som beslutar på talan av Konsumentombudsmannen.</p>
-
-<h2>Google 2026: det här får du inte göra längre</h2>
-<p>Googles reviewpolicy uppdaterades den 16–17 april 2026 och förbjuder nu uttryckligen flera saker som många byggfirmor tidigare tog för givna. Se det som en checklista över vad du ska sluta med direkt:</p>
-<ul>
-<li><strong>Inga incitament.</strong> Du får inte erbjuda rabatt, gratistjänst, present eller lotteri i utbyte mot en recension – oavsett om omdömet blir positivt eller negativt.</li>
-<li><strong>Ingen "review gating".</strong> Du får inte selektivt be bara nöjda kunder om ett Google-omdöme. Frågan måste ställas likadant till alla.</li>
-<li><strong>Fråga inte på plats.</strong> Att be om ett omdöme medan kunden står framför dig – muntligt, via surfplatta eller kiosk – är inte längre tillåtet.</li>
-<li><strong>Inga kvoter eller namn.</strong> Du får inte sätta recensionskvoter för personalen eller uppmana kunder att nämna en specifik anställd vid namn.</li>
-</ul>
-<p>Underskatta inte efterlevnaden. Enforcement är automatiserad och AI-baserad: Google blockerade eller tog bort 292 miljoner policybrytande recensioner under 2025, och de nya klausulerna tillämpas retroaktivt på befintliga profiler. Det kan innebära borttagna omdömen, nollställt stjärnbetyg eller begränsningar på din profil – även för sådant du gjorde innan reglerna ändrades.</p>
-
-<h2>Så ber du ändå – utan att verka påträngande</h2>
-<p>Det finns fortfarande gott om utrymme att be om omdömen, så länge du gör det systematiskt och neutralt. Nyckeln är timing och enkelhet:</p>
-<ol>
-<li><strong>Fråga vid rätt tillfälle.</strong> Skicka förfrågan efter godkänd slutbesiktning eller när projektet är avslutat och kunden är nöjd – inte mitt i jobbet när det fortfarande kan gå snett.</li>
-<li><strong>Fråga alla likadant.</strong> Använd samma formulering till varje kund, oavsett hur du tror att omdömet blir. Det håller dig inom Googles regler och ger en mer rättvisande bild.</li>
-<li><strong>Gör länken enkel.</strong> Lägg en kort direktlänk eller QR-kod i ett uppföljande mejl eller sms – aldrig på plats. Ju färre klick, desto fler svar.</li>
-<li><strong>En vänlig påminnelse.</strong> Skicka på sin höjd en enda neutral påminnelse. Mer än så blir påträngande.</li>
-</ol>
-<p>En enkel formulering som fungerar: "Hej [namn], tack för att vi fick utföra [projekt] åt dig. Om du är nöjd med resultatet uppskattar vi om du vill dela din upplevelse – det hjälper oss och andra som letar hantverkare. Här är länken: [länk]. Tack på förhand!"</p>
-
-<h2>Reco vs Google: bygg på båda, men olika</h2>
-<p>De två plattformarna fyller olika funktioner. Reco.se bygger sin verifiering på integration med företagets ekonomi- och faktureringssystem: förfrågningar skickas bara till personer som faktiskt är kunder, vilket gör att omdömena kan äkthetsmärkas som "verifierat företag". Det ger tyngre bevisvärde än fritt inkomna omdömen – något som väger extra tungt i byggbranschen. Google, å andra sidan, syns i lokalt sök och på Maps där kunderna faktiskt letar.</p>
-<p>Ett bra upplägg är att välja en primär plattform per kund så att du inte splittrar omdömena för tunt, och samtidigt bygga upp egna case och referenser på din hemsida. Tänk på att om du använder en kunds namn, foto eller projekt i din egen marknadsföring kräver GDPR ett dokumenterat, aktivt och frivilligt samtycke – till exempel en signering eller en ibockad ruta – och du måste kunna visa att samtycket finns.</p>
-
-<h2>Hantera negativa omdömen rätt</h2>
-<p>Ett negativt omdöme är inte världens undergång – hur du svarar säger ofta mer om ditt företag än själva klagomålet. Svara alltid sakligt och snabbt, håll det professionellt offentligt och ta detaljerna i dialogen privat. Erbjud aldrig pengar eller rabatt för att få kunden att ändra eller ta bort ett omdöme; det bryter mot Googles regler och riskerar att räknas som otillbörlig marknadsföring enligt MFL. Är ett omdöme uppenbart falskt eller regelstridigt – till exempel från någon som aldrig varit kund – kan du flagga det för granskning i stället för att ge dig in i en offentlig strid.</p>
-
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp hjälper dig att bygga den rutin som gör recensioner till en naturlig del av varje projektavslut i stället för något du glömmer bort. Med en tydlig offert- och projektstruktur vet du exakt när ett jobb är godkänt och avslutat – rätt tillfälle att skicka din förfrågan. Du samlar kunduppgifter på ett ställe, vilket gör det enkelt att skicka samma neutrala förfrågan till alla och att hålla ordning på vilka referenser du har dokumenterat samtycke för. ByggExp skickar inte omdömena åt dig och kan inte garantera att kunder svarar, men verktyget ger dig den ordning och de mallar som krävs för att göra det rätt, konsekvent och inom reglerna.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Får jag ge rabatt till kunder som lämnar en recension?</h3>
-<p>Nej. Googles policy från april 2026 förbjuder uttryckligen alla former av incitament – rabatt, gratistjänst, present eller lotteri – i utbyte mot en recension, oavsett om omdömet blir positivt eller negativt. Det kan leda till att omdömen tas bort och att din profil begränsas.</p>
-<h3>Får jag bara be nöjda kunder om ett Google-omdöme?</h3>
-<p>Nej. Så kallad "review gating", där du selektivt frågar bara nöjda kunder, är förbjudet enligt Googles uppdaterade policy. Ställ samma fråga till alla kunder på samma sätt.</p>
-<h3>Ansvarar jag för att recensionerna på min Google-profil är äkta?</h3>
-<p>Du ansvarar inte för äktheten hos omdömen på plattformar du inte kontrollerar, som Google och Reco. Men om du visar omdömen på din egen hemsida måste du kunna redogöra för hur du kontrollerar att de kommer från verkliga kunder, och bevisbördan för dina rutiner ligger på dig.</p>
-<h3>Måste jag ha tillstånd för att använda en kund som referens på min hemsida?</h3>
-<p>Ja. Att använda en kunds namn, foto eller projekt i din egen marknadsföring kräver enligt GDPR ett dokumenterat, aktivt och frivilligt samtycke, och du måste kunna visa att samtycket finns.</p>
-
-<h2>Kom igång</h2>
-<p>Ärlighet och rutin slår genvägar varje gång. Börja med att lägga grunden för ett proffsigt projekt med <a href="/sv/verktyg/offert-mall">vår gratis offertmall</a>, och utforska fler verktyg för din byggfirma bland <a href="/sv/verktyg">alla våra gratisverktyg</a>. Vill du se hur ByggExp kan bygga in recensionsrutinen i ditt arbetsflöde? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi hur det fungerar.</p>
-
-<p>Relaterat: <a href="/sv/blog/hitta-kunder-byggfirma">Så hittar du fler kunder till din byggfirma</a></p>
-`;
-
-const A_SKAFFA_RECENSIONER_OMDOMEN_BYGGFIRMA: BlogPost = {
-  _id: "code-"+"skaffa-recensioner-omdomen-byggfirma",
-  title: "Så får din byggfirma fler recensioner på Google och Reco – utan att bryta reglerna", slug: "skaffa-recensioner-omdomen-byggfirma", locale: "sv",
-  excerpt: "Referenser vinner nästa jobb – men att be om recensioner 2026 kräver mer eftertanke än förr, efter att både lagen och Google skärpt reglerna.", tag: "Marknadsföring",
-  coverImageUrl: "/landing/features/7offerter.webp", contentHtml: A_SKAFFA_RECENSIONER_OMDOMEN_BYGGFIRMA_HTML,
-  seoTitle: "Få recensioner byggfirma | ByggExp", seoDescription: "Så ber du kunder om omdömen på Google och Reco utan att verka påträngande – och håller dig inom lagen efter Googles skärpta regler 2026.",
-  seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T15:06:00.000Z", createdAt: "2026-08-19T15:06:00.000Z", updatedAt: "2026-08-19T15:06:00.000Z",
 };
 
 const A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA_HTML = `
@@ -268,7 +202,7 @@ const A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA_HTML = `
 <h2>Kom igång</h2>
 <p>Sätt av en timme den här veckan: verifiera profilen, sätt rätt primär kategori, lägg in serviceområdet och skicka recensionslänken till dina tre senaste kunder. Bygg sedan en fast veckorutin. Börja med en proffsig kundkontakt via <a href="/sv/verktyg">våra gratis byggverktyg</a>, och vill du se hur ByggExp kan avlasta administrationen så du hinner sköta synligheten — <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/hitta-kunder-byggfirma">Hitta kunder till byggfirman</a> och <a href="/sv/blog/starta-byggforetag-2026">Starta byggföretag 2026</a>.</p>
+<p>Relaterat: <a href="/sv/blog/hitta-kunder-byggfirma">Hitta kunder till byggfirman</a> och <a href="/sv/blog/enskild-firma-eller-aktiebolag-bygg">Starta byggföretag 2026</a>.</p>
 `;
 
 const A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA: BlogPost = {
@@ -291,7 +225,7 @@ const A_FAKTURERINGSPROGRAM_BYGG_HTML = `
 <li><strong>ROT-fakturering</strong> – räkna och redovisa <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdraget</a> automatiskt så att kunden ser vad hen betalar och du får rätt underlag till Skatteverket.</li>
 <li><strong>Från offert till faktura</strong> – en accepterad offert ska bli faktura med ett klick, inte skrivas om. Se <a href="/sv/blog/offert-till-betald-faktura-flode">hela flödet offert → faktura</a>.</li>
 <li><strong>Timmar → faktura</strong> – vid löpande räkning ska registrerade timmar bli fakturarader utan att någon räknar för hand.</li>
-<li><strong>Rätt fakturainnehåll</strong> – allt som en <a href="/sv/blog/vad-ska-faktura-innehalla-bygg">byggfaktura ska innehålla</a> enligt lag, med logga och betalningsvillkor.</li>
+<li><strong>Rätt fakturainnehåll</strong> – allt som en byggfaktura ska innehålla enligt lag, med logga och betalningsvillkor.</li>
 <li><strong>Påminnelser</strong> – automatisk påminnelse när kunden inte betalar i tid.</li>
 </ul>
 
@@ -302,14 +236,14 @@ const A_FAKTURERINGSPROGRAM_BYGG_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>I ByggExp hänger offert, tid och faktura ihop: du <strong>skapar offerter</strong>, förvandlar dem till <strong>fakturor</strong> och fakturerar godkända ÄTA och delbetalningar från projektets betalningsplan. ROT-avdrag och omvänd byggmoms väljs på fakturan, och timmarna från <a href="/sv/blog/tidrapportering">tidrapporteringen</a> används till löneunderlag och projektuppföljning.</p>
+<p>I ByggExp hänger offert, tid och faktura ihop: du <strong>skapar offerter</strong>, förvandlar dem till <strong>fakturor</strong> och fakturerar godkända ÄTA och delbetalningar från projektets betalningsplan. ROT-avdrag och omvänd byggmoms väljs på fakturan, och timmarna från <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringen</a> används till löneunderlag och projektuppföljning.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation av ByggExp</a> så visar vi hela kedjan från offert till betald faktura, eller läs mer om <a href="/sv/funktioner/fakturering">fakturaprogrammet för bygg</a>.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
 <li><strong>Fint fakturaprogram, men frånkopplat.</strong> Om fakturan inte hämtar offert och timmar skriver du allt två gånger.</li>
 <li><strong>ROT för hand.</strong> Manuell ROT-beräkning ger fel och nekade avdrag – låt systemet räkna.</li>
-<li><strong>Ingen påminnelserutin.</strong> Obetalda fakturor som ingen bevakar blir dyra – se <a href="/sv/blog/kunden-betalar-inte-fakturan">vad du gör när kunden inte betalar</a>.</li>
+<li><strong>Ingen påminnelserutin.</strong> Obetalda fakturor som ingen bevakar blir dyra – se <a href="/sv/blog/faktureringsavgift-hantverkare-tillaten">vad du gör när kunden inte betalar</a>.</li>
 </ul>
 
 <p>Rätt faktureringsprogram sparar tid och pengar – men värdet ligger i att offert, tid och faktura sitter ihop och att ROT sköts automatiskt. Testa gratis med mallen, väx in i ett system när volymen kräver det.</p>
@@ -318,8 +252,8 @@ const A_FAKTURERINGSPROGRAM_BYGG_HTML = `
 <ul>
 <li><a href="/sv/blog/offertprogram-byggforetag">Offertprogram för byggföretag</a> – offerten som blir faktura.</li>
 <li><a href="/sv/blog/offert-till-betald-faktura-flode">Från offert till betald faktura</a> – hela flödet utan dubbelarbete.</li>
-<li><a href="/sv/blog/tidrapportering-app-byggforetag">Tidrapportering-app för byggföretag</a> – timmarna bakom fakturan.</li>
-<li><a href="/sv/blog/kunden-betalar-inte-fakturan">När kunden inte betalar</a> – påminnelse, inkasso och dröjsmålsränta.</li>
+<li><a href="/sv/funktioner/tidrapporteringssystem-bygg">Tidrapportering-app för byggföretag</a> – timmarna bakom fakturan.</li>
+<li><a href="/sv/blog/faktureringsavgift-hantverkare-tillaten">När kunden inte betalar</a> – påminnelse, inkasso och dröjsmålsränta.</li>
 </ul>
 
 <h2>Vanliga frågor</h2>
@@ -341,120 +275,6 @@ const A_FAKTURERINGSPROGRAM_BYGG: BlogPost = {
   seoTitle: "Så fakturerar du byggjobb rätt – ROT, moms och ÄTA | Guide", seoDescription: "Guide till byggfakturan: ROT-avdrag, omvänd byggmoms, ÄTA, delfakturor och påminnelser. Vad fakturan måste innehålla och vanliga misstag.",
   seoImageUrl: `${SITE_URL}/landing/features/8fakturor.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T17:00:00.000Z", createdAt: "2026-08-20T17:00:00.000Z", updatedAt: "2026-08-20T17:00:00.000Z",
-};
-
-const A_TIDRAPPORTERING_APP_BYGGFORETAG_HTML = `
-<p>Det här är guiden för dig som har <strong>anställda</strong> och ska välja tidrapportering för hela laget – inte bara för egen del. Vill du först förstå grunderna i hur en app fungerar, läs <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>; här fokuserar vi på företagsperspektivet: flera medarbetare, roller, attestering och vägen till lön och faktura.</p>
-<p>En tidrapporterings-app för byggföretag ska ta bort papperslapparna och Excel-krånglet: teamet stämplar tid i mobilen där jobbet sker, arbetsledaren attesterar, och timmarna blir direkt underlag för lön och faktura. Här går vi igenom vad en bra tidrapporterings-app ska klara för ett företag med anställda och hur ByggExp gör det.</p>
-
-<figure class="web-shot"><img src="/features-content/automatisk-tidrapportering-och-export-web.webp" alt="Tidrapportering-app för byggföretag: tider i webbadmin med planerade, GPS- och manuella timmar per medarbetare och dag" width="1000" height="548" loading="lazy"><figcaption>Tider i webbadmin – planerade, GPS- och manuella timmar per medarbetare, redo att exportera till lön och faktura.</figcaption></figure>
-
-<p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
-
-<h2>Vad ska en tidrapporterings-app för bygg klara?</h2>
-<ul>
-<li><strong>Registrering i mobilen</strong> – på plats, i realtid, kopplat till rätt projekt – inte i efterhand.</li>
-<li><strong>Projektkoppling</strong> – varje timme bokförs på rätt projekt så du kan följa marginalen och fakturera rätt.</li>
-<li><strong>OB, övertid och restid</strong> – <a href="/sv/blog/ob-overtid-byggavtalet-rakna">OB och övertid</a> och <a href="/sv/blog/restidsersattning-byggavtalet">restid</a> ska hanteras enligt Byggavtalet.</li>
-<li><strong>Export till lön</strong> – timmarna ska bli löneunderlag och kunna exporteras (t.ex. Excel) utan handpåläggning.</li>
-<li><strong>Underlag för faktura</strong> – vid löpande räkning blir samma timmar fakturarader.</li>
-</ul>
-<p>Läs mer om grunderna i guiden om <a href="/sv/blog/tidredovisning-byggforetag">tidredovisning i byggföretag</a> (och skillnaden mot <a href="/sv/blog/personalliggare">personalliggare</a>, som är ett separat lagkrav).</p>
-
-<h2>Så gör ByggExp det</h2>
-<p>ByggExp samlar in arbetstid automatiskt i mobilen och exporterar timmarna till Excel – och samma timmar blir både <strong>löneunderlag</strong> och <strong>fakturaunderlag</strong>. Du ser dessutom arbetslagen i en live-översikt och kan koppla foto och uppgifter till arbetspasset. Registrera en gång, använd datan till lön, faktura och uppföljning.</p>
-<p><a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Vill du börja enkelt finns en gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>.</p>
-
-<h2>Vad byggföretaget vinner</h2>
-<div class="article-table"><table>
-<thead><tr><th>Område</th><th>Före (papper/Excel)</th><th>Med app</th></tr></thead>
-<tbody>
-<tr><td><strong>Lönekörning</strong></td><td>Pussel med lappar varje månad</td><td>Löneunderlag klart, export med ett klick</td></tr>
-<tr><td><strong>Fakturering</strong></td><td>Timmar renskrivs för hand</td><td>Loggad tid blir fakturarader</td></tr>
-<tr><td><strong>Marginal</strong></td><td>Syns först efteråt</td><td>Följs mot budget i realtid</td></tr>
-<tr><td><strong>Fel &amp; tvister</strong></td><td>Vanliga – ord mot ord</td><td>Färre – spårbart underlag</td></tr>
-</tbody>
-</table></div>
-
-<h2>Vanliga misstag</h2>
-<ul>
-<li><strong>Rapportering i efterhand.</strong> Tid som fylls i en vecka senare blir gissningar.</li>
-<li><strong>Ingen projektkod.</strong> Utan koppling till projekt går det inte att följa marginal eller fakturera rätt.</li>
-<li><strong>Dubbelarbete mot lönen.</strong> Om timmarna inte blir löneunderlag räknar någon om allt manuellt.</li>
-</ul>
-
-<p>En tidrapporterings-app tjänar in sig snabbt: rätt lön, rätt faktura och koll på lönsamheten – utan papperslappar och utan pusslet vid varje lönekörning.</p>
-
-<h2>Tidrapport, tidsregistrering eller tidredovisning – samma sak?</h2>
-<p>Orden används ofta om vartannat, men beskriver olika steg i samma kedja. <strong>Tidsregistrering</strong> är själva stämplingen (in och ut), <strong>tidrapportering</strong> kopplar timmarna till rätt projekt, och <strong>tidredovisning</strong> är det sammanställda underlaget till lön och faktura. En <strong>digital tidrapport</strong> i mobilen tar dig genom alla tre stegen utan dubbelinmatning. Vill du fördjupa dig i flödet, se guiden om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a> och om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>.</p>
-
-<h2>Relaterade guider om tidrapportering</h2>
-<ul>
-<li><a href="/sv/blog/tidrapporteringssystem-bygg">Tidrapporteringssystem för bygg</a> – tidsregistrering, tidrapportering och tidredovisning i ett.</li>
-<li><a href="/sv/blog/stampelklocka-app-gps-bygg">Stämpelklocka app med GPS</a> – in- och utstämpling med platsbekräftelse.</li>
-<li><a href="/sv/blog/automatisk-tidrapportering-och-export">Automatisk tidrapportering och export</a> – tid som rapporterar sig själv.</li>
-<li><a href="/sv/blog/mobil-tidrapportering">Mobil tidrapportering</a> – rapportera tid där jobbet görs.</li>
-<li><a href="/sv/blog/personalliggare-bygg-app">Personalliggare app</a> – närvaro i realtid, redo för Skatteverket.</li>
-<li><a href="/sv/blog/tidrapportering-hantverkare">Tidrapportering för hantverkare</a> och <a href="/sv/blog/tidrapportering-entreprenad">för entreprenad</a>.</li>
-</ul>
-
-<h2>Vanliga frågor</h2>
-<h3>Vad ska en tidrapporterings-app för byggföretag klara?</h3>
-<p>Registrering i mobilen kopplad till projekt, hantering av OB, övertid och restid enligt byggavtalet, samt export av timmarna till både löneunderlag och fakturaunderlag – utan att mata in samma siffror flera gånger.</p>
-<h3>Kan timmarna bli både lön och faktura?</h3>
-<p>Ja. Samma registrerade timmar blir löneunderlag och fakturarader, och räknas in i projektets marginal – du registrerar en gång och använder datan överallt.</p>
-<h3>Är en tidrapporterings-app samma sak som personalliggare?</h3>
-<p>Nej. Tidrapportering handlar om arbetstid för lön och faktura. Personalliggare är ett separat lagkrav om närvaro på arbetsplatsen – men samma incheckning kan mata båda.</p>
-`;
-
-const A_TIDRAPPORTERING_APP_BYGGFORETAG: BlogPost = {
-  _id: "code-"+"tidrapportering-app-byggforetag",
-  title: "Tidrapportering för byggföretag med anställda – attest, roller och lön", slug: "tidrapportering-app-byggforetag", locale: "sv",
-  excerpt: "Vad en tidrapporterings-app för bygg bör klara: registrering i mobilen, projektkoppling, OB/övertid/restid och export till lön och faktura. Så gör ByggExp det.", tag: "Digitalisering",
-  coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: A_TIDRAPPORTERING_APP_BYGGFORETAG_HTML,
-  seoTitle: "Tidrapport för anställda i bygg – attest & lön | ByggExp", seoDescription: "Tidrapport för hela laget: medarbetarna stämplar i mobilen, arbetsledaren attesterar och timmarna blir löneunderlag och fakturarader. Så gör ByggExp.",
-  seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T17:05:00.000Z", createdAt: "2026-08-20T17:05:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
-};
-
-const A_BYGGPROGRAM_FOR_BYGGFORETAG_HTML = `
-<p>Ett byggprogram (program för byggföretag) ska samla det som annars ligger utspritt i papper, Excel och sms: tid, projekt, offert, faktura, foto och dokument – på ett ställe. Här går vi igenom vad ett bra byggprogram ska klara och hur ByggExp täcker hela kedjan.</p>
-
-<h2>Vad ska ett byggprogram klara?</h2>
-<ul>
-<li><strong>Tid och lön</strong> – <a href="/sv/blog/tidrapportering-app-byggforetag">tidrapportering i mobilen</a> där attesterade timmar blir underlag för lön.</li>
-<li><strong>Offert och faktura</strong> – <a href="/sv/blog/offertprogram-byggforetag">offerter</a> och <a href="/sv/blog/faktureringsprogram-bygg">fakturor med ROT</a> i samma flöde.</li>
-<li><strong>Projekt- och personalplanering</strong> – vem gör vad, var och när.</li>
-<li><strong>Fotodokumentation</strong> kopplad till arbetspass och projekt – bevis om något ifrågasätts.</li>
-<li><strong>Dokument och kostnader</strong> – alla projektdokument, utlägg och kostnader samlade.</li>
-<li><strong>Verktyg och utrustning</strong> – koll på var maskinerna är.</li>
-</ul>
-
-<h2>Byggprogram, appar eller lösa verktyg?</h2>
-<p>Många börjar med lösa <a href="/sv/verktyg">gratis verktyg</a> (kalkyler, mallar) och växer in i ett samlat system när flera personer och projekt ska hänga ihop. Poängen med ett byggprogram är att du <strong>registrerar en gång</strong> – tid, foto, kostnad – och använder samma data till lön, faktura och uppföljning, i stället för att mata in allt flera gånger.</p>
-
-<h2>Så gör ByggExp det</h2>
-<p>ByggExp är byggt för byggföretag och hantverkare: automatisk arbetstid, uppgifter med uppföljning, live-översikt över arbetslagen, fotodokumentation per arbetspass, projekt- och <a href="/sv/blog/personalplanering-bygg">personalplanering</a>, verktygshantering, offert, faktura, projektdokument, utlägg och löner – ur samma timmar. Allt hänger ihop så att kontoret och bygget jobbar mot samma bild.</p>
-<p><a href="/sv/contact">Boka en gratis konsultation av ByggExp</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
-
-<h2>Vad du ska titta på när du väljer</h2>
-<ul>
-<li><strong>Hänger delarna ihop?</strong> Tid, offert, faktura och lön ska dela data – annars blir det öar.</li>
-<li><strong>Funkar det i mobilen på bygget?</strong> Om det bara funkar på kontoret används det inte.</li>
-<li><strong>ROT och svenska regler.</strong> Ett byggprogram ska hantera ROT och svensk fakturastandard.</li>
-</ul>
-
-<p>Rätt byggprogram gör att en registrering räcker – och att kontoret slipper jaga papper. Börja med gratis verktyg, väx in i ett samlat system när volymen kräver det.</p>
-`;
-
-const A_BYGGPROGRAM_FOR_BYGGFORETAG: BlogPost = {
-  _id: "code-"+"byggprogram-for-byggforetag",
-  title: "Byggprogram för byggföretag – allt från tid till faktura i ett", slug: "byggprogram-for-byggforetag", locale: "sv",
-  excerpt: "Vad ett byggprogram (program för byggföretag) bör klara: tid, lön, offert, faktura med ROT, projekt- och personalplanering, foto och dokument – i ett system. Så gör ByggExp det.", tag: "Digitalisering",
-  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_BYGGPROGRAM_FOR_BYGGFORETAG_HTML,
-  seoTitle: "Byggprogram för byggföretag – tid, offert & faktura | ByggExp", seoDescription: "Byggprogram för byggföretag: samla tid, lön, offert, faktura med ROT, projekt- och personalplanering, fotodokumentation och dokument i ett system. Så gör ByggExp det.",
-  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T17:10:00.000Z", createdAt: "2026-08-20T17:10:00.000Z", updatedAt: "2026-08-20T17:10:00.000Z",
 };
 
 const A_ARBETSORDER_APP_BYGG_HTML = `
@@ -491,71 +311,6 @@ const A_ARBETSORDER_APP_BYGG: BlogPost = {
   seoTitle: "Arbetsorder-app för byggföretag – jobb & uppföljning | ByggExp", seoDescription: "Arbetsorder-app för bygg: skapa och tilldela jobb, automatisk uppföljning, projektkoppling och foto – i mobilen. Så slutar jobb falla mellan stolarna med ByggExp.",
   seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T18:00:00.000Z", createdAt: "2026-08-20T18:00:00.000Z", updatedAt: "2026-08-20T18:00:00.000Z",
-};
-
-const A_PROJEKTHANTERING_BYGGFORETAG_HTML = `
-<p>Projekthantering för byggföretag handlar om att hålla ihop tid, personal, uppgifter, foto och ekonomi per projekt – så att du ser marginalen medan projektet pågår, inte efteråt. Här går vi igenom vad ett projektverktyg för bygg bör klara och hur ByggExp gör det.</p>
-
-<figure class="video-embed" style="position:relative;width:100%;aspect-ratio:16/9;margin:24px 0"><iframe src="https://www.youtube-nocookie.com/embed/_hJ0uuLW2H0" title="Skapa ett projekt i ByggExp – kom igång" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px"></iframe></figure>
-
-<h2>Vad är ett projekthanteringssystem för bygg?</h2>
-<p>Ett projekthanteringssystem – eller projektledningssystem – är navet där allt som rör ett projekt möts: bemanning och schema, nedlagd tid, uppgifter och arbetsorder, foton och dokument, offert, utlägg och faktura. Poängen är kopplingen: när timmar och kostnader bokförs på projektet räknas marginalen ihop löpande, i stället för att du sammanställer den i efterhand.</p>
-<p>Projekthanteringssystem och projektledningssystem betyder i praktiken samma sak för ett byggföretag. Det som skiljer ett system byggt för bygg från ett generellt projektverktyg är att det hanterar timmar, ÄTA och marginal per projekt – inte bara uppgifter i en lista.</p>
-<h2>Vad ska ett projektverktyg för bygg klara?</h2>
-<ul>
-<li><strong>Projekt- och personalplanering</strong> – vem gör vad, var och när.</li>
-<li><strong>Tid per projekt</strong> – timmar bokförs på rätt projekt för <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">kostnadskontroll och marginal</a>.</li>
-<li><strong>Uppgifter och uppföljning</strong> – <a href="/sv/blog/arbetsorder-app-bygg">arbetsorder</a> kopplade till projektet.</li>
-<li><strong>Foto och dokument</strong> – all dokumentation samlad per projekt.</li>
-<li><strong>Ekonomi</strong> – offert, faktura, utlägg och kostnader på projektet.</li>
-</ul>
-
-<h2>Så gör ByggExp det</h2>
-<p>ByggExp samlar <strong>projekt- och <a href="/sv/blog/personalplanering-bygg">personalplanering</a></strong>, tid, uppgifter, <strong>fotodokumentation</strong>, dokument, utlägg och fakturering per projekt. Eftersom timmar och kostnader bokförs på projektet ser du lönsamheten löpande – och kontoret och bygget jobbar mot samma bild. Se även guiden om att <a href="/sv/blog/digitalisera-byggforetag-projektstyrning">digitalisera projektstyrningen</a>.</p>
-<p><a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
-
-<h2>Vad du ska titta på</h2>
-<ul>
-<li><strong>Ser du marginalen löpande?</strong> Ett projektverktyg ska visa nedlagd tid mot kalkyl i realtid.</li>
-<li><strong>Hänger tid, foto och ekonomi ihop?</strong> Annars blir det öar av data.</li>
-<li><strong>Funkar det i mobilen på bygget?</strong> Det är där projektet händer.</li>
-</ul>
-
-<p>Rätt projekthantering gör att du <a href="/sv/blog/app-for-byggprojekt">styr projektet</a> medan det pågår – och slipper överraskningar i efterkalkylen. Hur uppgifter, dagbok, egenkontroller och foton samlas per projekt i ByggExp ser du på sidan om <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>.</p>
-<h2>Spridda verktyg eller ett system</h2>
-<div class="article-table"><table>
-<thead><tr><th>&nbsp;</th><th>Spridda verktyg</th><th>Projekthanteringssystem</th></tr></thead>
-<tbody>
-<tr><td><strong>Var finns data</strong></td><td>I flera program och telefoner</td><td>Samlat per projekt</td></tr>
-<tr><td><strong>Marginal</strong></td><td>Räknas efter projektet</td><td>Syns löpande</td></tr>
-<tr><td><strong>Inmatning</strong></td><td>Tid, faktura och kalkyl var för sig</td><td>En registrering, används överallt</td></tr>
-<tr><td><strong>ÄTA och ändringar</strong></td><td>Tappas lätt bort</td><td>Loggas på projektet</td></tr>
-</tbody>
-</table></div>
-<p>När projektet är klart jämför du utfall mot kalkyl i en <a href="/sv/blog/efterkalkyl-bygg-kalkyluppfoljning">efterkalkyl</a> och prissätter nästa jobb säkrare.</p>
-<h2>Relaterade guider</h2>
-<ul>
-<li><a href="/sv/blog/projektledning-byggforetag">Projektledning för byggföretag</a> – led byggprojekt från anbud till överlämning.</li>
-<li><a href="/sv/blog/projektplanering-bygg">Projektplanering i bygg</a> – från kalkyl och tidplan till bemanning.</li>
-<li><a href="/sv/blog/projektuppfoljning-bygg">Projektuppföljning i bygg</a> – tid, kostnader och lönsamhet.</li>
-<li><a href="/sv/blog/schemalaggningssystem-bygg">Schemaläggningssystem för bygg</a> – planera personal och projekt.</li>
-</ul>
-<h2>Vanliga frågor</h2>
-<h3>Vad är ett projekthanteringssystem för bygg?</h3>
-<p>Ett system som samlar planering, tid, uppgifter, dokumentation och ekonomi per projekt, så att du ser marginalen medan projektet pågår i stället för efteråt.</p>
-<h3>Vad är skillnaden mellan projekthanteringssystem och projektledningssystem?</h3>
-<p>I praktiken ingen för ett byggföretag. Det avgörande är inte namnet, utan att systemet kopplar timmar och kostnader till projektet.</p>
-
-`;
-
-const A_PROJEKTHANTERING_BYGGFORETAG: BlogPost = {
-  _id: "code-"+"projekthantering-byggforetag",
-  title: "Projekthantering för byggföretag – tid, personal och marginal i ett", slug: "projekthantering-byggforetag", locale: "sv",
-  excerpt: "Vad ett projektverktyg för bygg bör klara: projekt- och personalplanering, tid per projekt, uppgifter, foto och ekonomi – med marginalen synlig löpande. Så gör ByggExp det.", tag: "Digitalisering",
-  coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_PROJEKTHANTERING_BYGGFORETAG_HTML,
-  seoTitle: "Projekthantering för byggföretag – projektverktyg | ByggExp", seoDescription: "Projekthantering / projektverktyg för byggföretag: planering, tid per projekt, uppgifter, foto och ekonomi med marginalen synlig löpande. Så gör ByggExp det.",
-  seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T18:05:00.000Z", createdAt: "2026-08-20T18:05:00.000Z", updatedAt: "2026-10-21T08:00:00.000Z",
 };
 
 const A_ROT_FAKTURERING_PROGRAM_HTML = `
@@ -643,7 +398,7 @@ const A_LONEPROGRAM_BYGG_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>I ByggExp stämplar medarbetarna in och ut i mobilappen (iPhone och Android) med GPS, och timmarna hamnar på rätt projekt. På varje pass väljer medarbetaren timtyp – normal, övertid eller OB – och registrerar restid (km och minuter) och traktamente. Passen attesteras och exporteras som <strong>löneunderlag (CSV)</strong>, AGI-underlag och tidrapport i PDF eller Excel. Samma timmar används till <a href="/sv/blog/faktureringsprogram-bygg">fakturering</a> och <a href="/sv/blog/projekthantering-byggforetag">projektuppföljning</a>, så du slipper pussla ihop lönen från lappar och Excel varje månad.</p>
+<p>I ByggExp stämplar medarbetarna in och ut i mobilappen (iPhone och Android) med GPS, och timmarna hamnar på rätt projekt. På varje pass väljer medarbetaren timtyp – normal, övertid eller OB – och registrerar restid (km och minuter) och traktamente. Passen attesteras och exporteras som <strong>löneunderlag (CSV)</strong>, AGI-underlag och tidrapport i PDF eller Excel. Samma timmar används till <a href="/sv/blog/faktureringsprogram-bygg">fakturering</a> och <a href="/sv/funktioner/projekthantering">projektuppföljning</a>, så du slipper pussla ihop lönen från lappar och Excel varje månad.</p>
 <p>ByggExp räknar inte ut Byggavtalets regler för OB och övertid automatiskt. Timtypen väljs per pass, och satser och tidsgränser stämmer du av mot avtalet – se <a href="/sv/blog/ob-overtid-byggavtalet-rakna">så räknar du OB och övertid</a>.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation</a> eller se hur <a href="/sv/funktioner/lon">löneunderlaget för bygg</a> fungerar. Vill du börja enkelt finns en gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>.</p>
 
@@ -712,7 +467,7 @@ const A_KALKYLPROGRAM_BYGG_HTML = `
 <li><strong>Rätt påslag och marginal</strong> – <a href="/sv/blog/paslag-pa-material">påslag vs marginal</a> så att kalkylen faktiskt är lönsam.</li>
 <li><strong>ROT</strong> – visa <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT-avdraget</a> för kunden.</li>
 <li><strong>Från kalkyl till offert</strong> – en materialkalkyl ska bli en färdig <a href="/sv/blog/offertprogram-byggforetag">offert</a> med ett klick.</li>
-<li><strong>Uppföljning</strong> – jämför kalkyl mot utfall i <a href="/sv/blog/efterkalkyl-bygg-kalkyluppfoljning">efterkalkylen</a>.</li>
+<li><strong>Uppföljning</strong> – jämför kalkyl mot utfall i <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">efterkalkylen</a>.</li>
 </ul>
 
 <h2>Kalkylprogram, kalkylatorer eller Excel?</h2>
@@ -772,7 +527,7 @@ const A_HANTVERKARAPP_HTML = `
 
 <h2>Vad ska en app för hantverkare klara?</h2>
 <ul>
-<li><strong>Tidrapportering i mobilen</strong> – <a href="/sv/blog/tidrapportering-app-byggforetag">stämpla tid</a> på plats, kopplat till projekt.</li>
+<li><strong>Tidrapportering i mobilen</strong> – <a href="/sv/funktioner/tidrapporteringssystem-bygg">stämpla tid</a> på plats, kopplat till projekt.</li>
 <li><strong>Jobb och uppföljning</strong> – <a href="/sv/blog/arbetsorder-app-bygg">arbetsorder</a> med status, slut på sms.</li>
 <li><strong>Foto och utlägg</strong> – <a href="/sv/blog/fotodokumentation-app-bygg">fota</a> och <a href="/sv/blog/utlagg-app-bygg">registrera kvitton</a> direkt.</li>
 <li><strong>Offert och faktura</strong> – <a href="/sv/blog/faktureringsprogram-bygg">offert och faktura med ROT</a> i samma flöde.</li>
@@ -780,7 +535,7 @@ const A_HANTVERKARAPP_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp är byggt för hantverkare och byggföretag: automatisk arbetstid, uppgifter med uppföljning, foto per arbetspass, utlägg, offert, faktura och löner – ur samma timmar. Du registrerar en gång och kontoret ser samma bild som bygget. Se hela paketet i guiden om <a href="/sv/blog/byggprogram-for-byggforetag">byggprogram</a>.</p>
+<p>ByggExp är byggt för hantverkare och byggföretag: automatisk arbetstid, uppgifter med uppföljning, foto per arbetspass, utlägg, offert, faktura och löner – ur samma timmar. Du registrerar en gång och kontoret ser samma bild som bygget. Se hela paketet i guiden om <a href="/sv/blog/basta-byggprogram-2026">byggprogram</a>.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Börja gärna med våra <a href="/sv/verktyg">gratis verktyg</a>.</p>
 
 <h2>Vad du ska titta på</h2>
@@ -809,7 +564,7 @@ const A_DOKUMENTHANTERING_BYGG_HTML = `
 <h2>Vad ska dokumenthantering för bygg klara?</h2>
 <ul>
 <li><strong>Samlat per projekt</strong> – alla dokument på rätt projekt, inte spridda i mejl och telefoner.</li>
-<li><strong>Rätt sorters underlag</strong> – ritningar, avtal, <a href="/sv/blog/egenkontroll">egenkontroller</a>, <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">foton</a> och protokoll.</li>
+<li><strong>Rätt sorters underlag</strong> – ritningar, avtal, <a href="/sv/blog/egenkontroll-entreprenad">egenkontroller</a>, <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">foton</a> och protokoll.</li>
 <li><strong>Åtkomst för både bygge och kontor</strong> – i mobilen på plats, samlat på kontoret.</li>
 <li><strong>Sökbart</strong> – hitta rätt dokument snabbt när det behövs, t.ex. vid <a href="/sv/blog/slutbesiktning">besiktning</a> eller tvist.</li>
 </ul>
@@ -849,11 +604,11 @@ const A_PERSONALPLANERING_BYGG_HTML = `
 <h2>Vad ska bemanningsplanering för bygg klara?</h2>
 <ul>
 <li><strong>Vem, var och när</strong> – <a href="/sv/blog/schemalaggningssystem-bygg">planera personal</a> och lag på projekt, utan dubbelbokning.</li>
-<li><strong>Koppling till projekt och tid</strong> – planerad tid hänger ihop med <a href="/sv/blog/tidrapportering-app-byggforetag">registrerad tid</a> och projektets marginal.</li>
+<li><strong>Koppling till projekt och tid</strong> – planerad tid hänger ihop med <a href="/sv/funktioner/tidrapporteringssystem-bygg">registrerad tid</a> och projektets marginal.</li>
 <li><strong>Live-läge</strong> – se var lagen är just nu, inte bara i ett schema på papper.</li>
 <li><strong>Enkelt att ändra</strong> – flytta personal när något ändras och alla ser det direkt.</li>
 </ul>
-<p>Se även guiden om <a href="/sv/blog/resursplanering-bygg">resursplanering</a> och om att <a href="/sv/blog/bemanning-och-personalplanering">bemanna och planera personal rätt</a>.</p>
+<p>Se även guiden om <a href="/sv/blog/resursplanering-bygg">resursplanering</a> och om att <a href="/sv/funktioner/resursplanering">bemanna och planera personal rätt</a>.</p>
 
 <h2>Så gör ByggExp det</h2>
 <p>ByggExp har <strong>projekt- och personalplanering</strong> plus en <strong>live-översikt över arbetslagen</strong>: du planerar vem som jobbar var, ser läget i realtid och kopplar det till tid och projekt. Samma data blir sedan underlag för <a href="/sv/blog/loneprogram-bygg">lön</a> och <a href="/sv/blog/faktureringsprogram-bygg">faktura</a>.</p>
@@ -874,7 +629,7 @@ const A_PERSONALPLANERING_BYGG_HTML = `
 <li>Fördela personal och lag på projekten utifrån kompetens och var de behövs.</li>
 <li>Kontrollera att ingen är dubbelbokad och att inga projekt står obemannade.</li>
 <li>Dela planen med laget – uppgifterna syns i mobilen.</li>
-<li>Justera löpande när något ändras; koppla planen till <a href="/sv/blog/tidrapportering-app-byggforetag">registrerad tid</a> för att se plan mot verklighet.</li>
+<li>Justera löpande när något ändras; koppla planen till <a href="/sv/funktioner/tidrapporteringssystem-bygg">registrerad tid</a> för att se plan mot verklighet.</li>
 </ol>
 
 <h2>Whiteboard vs bemanningssystem</h2>
@@ -892,8 +647,8 @@ const A_PERSONALPLANERING_BYGG_HTML = `
 <ul>
 <li><a href="/sv/blog/resursplanering-bygg">Resursplanering för bygg</a> – personal, maskiner och material på rätt plats.</li>
 <li><a href="/sv/blog/schemalaggning-bygg">Schemaläggning för bygg</a> – lägg scheman som når laget.</li>
-<li><a href="/sv/blog/tidrapportering-app-byggforetag">Tidrapportering-app för byggföretag</a> – planerad tid mot verklig.</li>
-<li><a href="/sv/blog/projekthantering-byggforetag">Projekthantering för byggföretag</a> – tid, personal och marginal i ett.</li>
+<li><a href="/sv/funktioner/tidrapporteringssystem-bygg">Tidrapportering-app för byggföretag</a> – planerad tid mot verklig.</li>
+<li><a href="/sv/funktioner/projekthantering">Projekthantering för byggföretag</a> – tid, personal och marginal i ett.</li>
 </ul>
 
 <h2>Vanliga frågor</h2>
@@ -927,7 +682,7 @@ const A_VERKTYGSHANTERING_APP_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp har <a href="/sv/funktioner/verktygshantering"><strong>hantering av verktyg och utrustning</strong></a>: du ser vad du har och var det finns, kopplat till projekt och personal – i samma system som håller ihop <a href="/sv/blog/tidrapportering-app-byggforetag">tid</a>, foto, offert och faktura. Slut på att leta efter maskiner mellan bilar och bodar.</p>
+<p>ByggExp har <a href="/sv/funktioner/verktygshantering"><strong>hantering av verktyg och utrustning</strong></a>: du ser vad du har och var det finns, kopplat till projekt och personal – i samma system som håller ihop <a href="/sv/funktioner/tidrapporteringssystem-bygg">tid</a>, foto, offert och faktura. Slut på att leta efter maskiner mellan bilar och bodar.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Ska du köpa eller hyra? Se guiden om att <a href="/sv/blog/leasa-eller-kopa-maskiner-byggforetag">leasa eller köpa maskiner</a>.</p>
 
 <h2>Vanliga misstag</h2>
@@ -955,7 +710,7 @@ const A_BYGG_APP_HTML = `
 
 <h2>Vad ska en bygg-app klara?</h2>
 <ul>
-<li><strong>Tid i mobilen</strong> – <a href="/sv/blog/tidrapportering-app-byggforetag">stämpla tid</a> på plats, kopplat till projekt.</li>
+<li><strong>Tid i mobilen</strong> – <a href="/sv/funktioner/tidrapporteringssystem-bygg">stämpla tid</a> på plats, kopplat till projekt.</li>
 <li><strong>Jobb och uppföljning</strong> – <a href="/sv/blog/arbetsorder-app-bygg">arbetsorder</a> med status.</li>
 <li><strong>Foto och utlägg</strong> – <a href="/sv/blog/fotodokumentation-app-bygg">fota</a> och <a href="/sv/blog/utlagg-app-bygg">registrera kvitton</a> direkt.</li>
 <li><strong>Offert och faktura</strong> – <a href="/sv/blog/faktureringsprogram-bygg">med ROT</a>, i samma flöde.</li>
@@ -963,7 +718,7 @@ const A_BYGG_APP_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp är en bygg-app byggd för byggföretag och hantverkare: automatisk arbetstid, uppgifter, foto per arbetspass, utlägg, planering, offert, faktura och löner – ur samma timmar. Du registrerar en gång och använder datan hela vägen. Se hela paketet i guiden om <a href="/sv/blog/byggprogram-for-byggforetag">byggprogram</a> eller <a href="/sv/blog/hantverkarapp">app för hantverkare</a>.</p>
+<p>ByggExp är en bygg-app byggd för byggföretag och hantverkare: automatisk arbetstid, uppgifter, foto per arbetspass, utlägg, planering, offert, faktura och löner – ur samma timmar. Du registrerar en gång och använder datan hela vägen. Se hela paketet i guiden om <a href="/sv/blog/basta-byggprogram-2026">byggprogram</a> eller <a href="/sv/blog/hantverkarapp">app för hantverkare</a>.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Testa gärna våra <a href="/sv/verktyg">gratis verktyg</a> först.</p>
 
 <h2>Vad du ska titta på</h2>
@@ -998,7 +753,7 @@ const A_BYGGPROGRAM_PRIS_HTML = `
 </ul>
 
 <h2>Räkna hem det – inte bara priset</h2>
-<p>Ett byggprogram ska tjäna in sig, inte bara kosta. Väg priset mot vad du sparar: mindre tid på lön och fakturering, färre <a href="/sv/blog/kunden-betalar-inte-fakturan">missade fakturor</a>, rätt <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT</a>, och koll på <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">marginalen per projekt</a>. Ofta räcker några sparade timmar i månaden för att betala abonnemanget.</p>
+<p>Ett byggprogram ska tjäna in sig, inte bara kosta. Väg priset mot vad du sparar: mindre tid på lön och fakturering, färre <a href="/sv/blog/faktureringsavgift-hantverkare-tillaten">missade fakturor</a>, rätt <a href="/sv/verktyg/rot-avdrag-kalkylator">ROT</a>, och koll på <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">marginalen per projekt</a>. Ofta räcker några sparade timmar i månaden för att betala abonnemanget.</p>
 
 <h2>Börja gratis</h2>
 <p>Du behöver inte betala för att komma igång. Testa våra <a href="/sv/verktyg">gratis verktyg</a> (kalkyler, offert- och faktura-mallar) och se hur flödet fungerar. Vill du se pris och paket för ByggExp – <a href="/sv/priser">se priser</a> eller <a href="/sv/contact">boka en gratis konsultation</a> så går vi igenom vad som passar din verksamhet.</p>
@@ -1038,7 +793,7 @@ const A_BASTA_BYGGPROGRAM_HTML = `
 </ul>
 
 <h2>Så testar du</h2>
-<p>Börja med det du känner mest smärta i – ofta tid, offert eller faktura – och prova det i praktiken innan du bestämmer dig. Testa gärna våra <a href="/sv/verktyg">gratis verktyg</a> för att se hur flödet fungerar, och läs guiden om <a href="/sv/blog/byggprogram-for-byggforetag">byggprogram för byggföretag</a> för vad ett samlat system ska klara.</p>
+<p>Börja med det du känner mest smärta i – ofta tid, offert eller faktura – och prova det i praktiken innan du bestämmer dig. Testa gärna våra <a href="/sv/verktyg">gratis verktyg</a> för att se hur flödet fungerar, och läs guiden om byggprogram för byggföretag för vad ett samlat system ska klara.</p>
 
 <h2>Så gör ByggExp det</h2>
 <p>ByggExp är byggt för svenska byggföretag och hantverkare och täcker hela kedjan: tid, uppgifter, foto, planering, utlägg, offert, faktura (med ROT) och löner – ur samma timmar. <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi om det passar din verksamhet, eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
@@ -1294,7 +1049,7 @@ const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 
 <h2>Relaterade guider om tidrapportering</h2>
 <ul>
-<li><a href="/sv/blog/tidrapportering-app-byggforetag">Tidrapportering-app för byggföretag</a> – timmar till lön och faktura.</li>
+<li><a href="/sv/funktioner/tidrapporteringssystem-bygg">Tidrapportering-app för byggföretag</a> – timmar till lön och faktura.</li>
 <li><a href="/sv/blog/stampelklocka-app-gps-bygg">Stämpelklocka app med GPS</a> – in- och utstämpling med platsbekräftelse.</li>
 <li><a href="/sv/blog/mobil-tidrapportering">Mobil tidrapportering</a> – rapportera tid där jobbet görs.</li>
 <li><a href="/sv/blog/personalliggare-bygg-app">Personalliggare app</a> – närvaro i realtid, redo för Skatteverket.</li>
@@ -1449,7 +1204,7 @@ const A_BASTA_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 <h3>Kan man exportera tidrapporten till Fortnox?</h3>
 <p>Ja, men på olika sätt. ByggExp exporterar löneunderlag som CSV (Full koll) och en SIE4-fil (tillägget Integrationer, 199 kr/mån), utan direktkoppling via API. Fieldly har integration till ekonomisystem utan extra kostnad, och hos Bygglet och MyGizmo är Fortnox-kopplingen ett tillval.</p>
 <h3>Är personalliggare och tidrapportering samma sak?</h3>
-<p>Nej. Personalliggaren är ett krav från Skatteverket som visar vilka som är på arbetsplatsen. Tidrapporten är underlaget för lön och faktura. Läs mer i guiden om <a href="/sv/blog/tidrapportering">tidrapportering i byggföretag</a>.</p>
+<p>Nej. Personalliggaren är ett krav från Skatteverket som visar vilka som är på arbetsplatsen. Tidrapporten är underlaget för lön och faktura. Läs mer i guiden om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapportering i byggföretag</a>.</p>
 
 <h2>Källor</h2>
 <p><a href="https://www.skatteverket.se/foretag/arbetsgivare/personalliggare/personalliggarebyggbranschen.4.7be5268414bea0646949797.html" target="_blank" rel="noopener">Skatteverket – personalliggare i byggbranschen</a> · <a href="https://www.skatteverket.se/foretag/arbetsgivare/personalliggare/personalliggarebyggbranschen/fragorochsvarompersonalliggareibyggbranschen.4.361dc8c15312eff6fd6ba7.html" target="_blank" rel="noopener">Skatteverket – frågor och svar om personalliggare</a> · <a href="https://www.skatteverket.se/foretag/skatterochavdrag/beloppochprocent/2026.106.1522bf3f19aea8075ba3294.html" target="_blank" rel="noopener">Skatteverket – belopp och procent 2026</a></p>
@@ -1494,7 +1249,7 @@ const A_PROJEKTUPPFOLJNING_BYGG_HTML = `
 <p>Poängen med digital projektuppföljning är att siffrorna uppdateras av det laget redan gör. När tid, material och kvitton registreras löpande i mobilen ser du <a href="/sv/blog/projektekonomi-och-lonsamhet">projektets ekonomi</a> mot budget i realtid – utan att sammanställa något manuellt. Då hinner du agera på projekt som närmar sig budgettaket: justera bemanning, ÄTA-fakturera eller stämma av med kunden. I entreprenader är det ofta ÄTA-timmarna som faller mellan stolarna – guiden om <a href="/sv/blog/tidrapportering-entreprenad">tidrapportering för entreprenad</a> visar hur du håller isär dem.</p>
 
 <h2>Från uppföljning till bättre kalkyler</h2>
-<p>Uppföljningen är också din bästa lärdom inför nästa anbud. När projektet är klart jämför du utfallet mot kalkylen i en <a href="/sv/blog/efterkalkyl-bygg-kalkyluppfoljning">efterkalkyl</a> – då ser du vilka moment som konsekvent kostar mer än planerat och kan prisa nästa jobb rätt. Bra tidrapportering är förutsättningen: utan korrekta timmar blir efterkalkylen en gissning.</p>
+<p>Uppföljningen är också din bästa lärdom inför nästa anbud. När projektet är klart jämför du utfallet mot kalkylen i en <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">efterkalkyl</a> – då ser du vilka moment som konsekvent kostar mer än planerat och kan prisa nästa jobb rätt. Bra tidrapportering är förutsättningen: utan korrekta timmar blir efterkalkylen en gissning.</p>
 
 <h2>Kom igång</h2>
 <p>Vill du följa dina byggprojekt i realtid? Läs om <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomi och lönsamhet</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
@@ -1545,7 +1300,7 @@ const S_TIDRAPPORTERING_HANTVERKARE_HTML = `
 <p>Med incheckning per jobb i mobilen fångas varje timme där den sker – och blir fakturerbar.</p>
 
 <h2>Från timme till ROT-faktura</h2>
-<p>När tiden är kopplad till kund och jobb kan den bli fakturarad direkt – inklusive underlag för <a href="/sv/blog/rot-avdrag">ROT-avdrag</a>. Du slipper räkna ihop lappar på kvällen och kan skicka fakturan samma vecka som jobbet är klart. Läs mer om <a href="/sv/blog/fakturera-fran-byggexp">fakturering från loggad tid</a>.</p>
+<p>När tiden är kopplad till kund och jobb kan den bli fakturarad direkt – inklusive underlag för <a href="/sv/blog/faktura-med-rotavdrag">ROT-avdrag</a>. Du slipper räkna ihop lappar på kvällen och kan skicka fakturan samma vecka som jobbet är klart. Läs mer om <a href="/sv/blog/fakturera-fran-byggexp">fakturering från loggad tid</a>.</p>
 
 <h2>Enkelt nog att laget faktiskt använder det</h2>
 <p>För en liten firma är följsamhet allt. Välj en app där man bara checkar in och ut – ingen utbildning, ingen dator. Fungerar på både iPhone och Android.</p>
@@ -1576,7 +1331,7 @@ const S_TIDRAPPORTERING_HANTVERKARE: BlogPost = {
 
 const S_TIDRAPPORTERING_ENTREPRENAD_HTML = `
 <p>I en entreprenad ska samma timmar räcka till tre saker: lön till den egna personalen, faktura eller avstämning mot beställaren och uppföljning mot kalkylen. Tidrapportering för entreprenad handlar därför om att varje timme har en person, ett datum, ett projekt och en attest – och om att ÄTA-arbete och underentreprenörernas tid hålls isär från kontraktsarbetet.</p>
-<p>Saknar ni system i dag kan ni börja med vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a>. Grunderna finns i guiden om <a href="/sv/blog/tidrapportering">tidrapportering i byggföretag</a>.</p>
+<p>Saknar ni system i dag kan ni börja med vår <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a>. Grunderna finns i guiden om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapportering i byggföretag</a>.</p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projektuppföljning – följ timmar, kostnader, fakturerat och marginal mot budget" width="720" height="380" loading="lazy"><figcaption>Timmar per projekt – grunden för lön, faktura och uppföljning mot kalkylen.</figcaption></figure>
 <p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
@@ -1598,7 +1353,7 @@ const S_TIDRAPPORTERING_ENTREPRENAD_HTML = `
 <li>Stäm av mot er egen bild av arbetsplatsen – bemanningen i byggdagboken, personalliggaren och arbetsledarens anteckningar.</li>
 <li>Godkänn UE:s faktura först när underlaget är avstämt.</li>
 </ul>
-<p>ByggExp har ingen särskild roll för underentreprenörer – systemet är byggt för er egen personal. UE:s tidsunderlag hanterar du som bilaga till deras faktura. Läs mer om att <a href="/sv/blog/anlita-underentreprenor">anlita underentreprenör</a> och om <a href="/sv/blog/omvand-byggmoms-underentreprenor">omvänd byggmoms mellan UE och huvudentreprenör</a>.</p>
+<p>ByggExp har ingen särskild roll för underentreprenörer – systemet är byggt för er egen personal. UE:s tidsunderlag hanterar du som bilaga till deras faktura. Läs mer om att <a href="/sv/blog/anlita-underentreprenor">anlita underentreprenör</a> och om <a href="/sv/blog/omvand-byggmoms-bokfora">omvänd byggmoms mellan UE och huvudentreprenör</a>.</p>
 
 <h2>Månadsunderlag till beställaren vid löpande räkning</h2>
 <p>På löpande räkning är tidsunderlaget grunden för fakturan. Beställaren har rätt att granska det, och timmar som inte går att härleda riskerar att strykas. Ett månadsunderlag som klarar granskningen innehåller:</p>
@@ -1646,7 +1401,7 @@ const S_TIDRAPPORTERING_ENTREPRENAD_HTML = `
 <h2>Omvänd byggmoms och ROT – vad tidrapporten ska visa</h2>
 <p>Momsen sätts på fakturan, inte i tidrapporten, men tidrapporten avgör om fakturan blir rätt.</p>
 <p><strong>Omvänd byggmoms</strong> gäller när du säljer byggtjänster till ett företag som självt säljer byggtjänster mer än tillfälligt – typiskt när du är UE åt en huvudentreprenör. Du fakturerar utan moms och anger köparens momsregistreringsnummer samt texten ”omvänd betalningsskyldighet”, enligt <a href="https://www.skatteverket.se/foretag/moms/sarskildamomsregler/byggverksamhet/omvandbetalningsskyldighetinombyggsektorn.4.47eb30f51122b1aaad28000545.html" target="_blank" rel="noopener">Skatteverkets regler för byggsektorn</a>. Timmarna måste därför ligga på rätt projekt: blandas ett B2B-uppdrag ihop med ett privatjobb i samma rapport, hamnar de på fel faktura.</p>
-<p><strong>ROT</strong> gäller arbete åt privatpersoner och bara arbetskostnaden – inte material, maskiner eller resor. Tidrapporten är underlaget för arbetskostnaden, så restid och arbetad tid ska stå på separata rader. Checklistan för en korrekt <a href="/sv/blog/byggfaktura-checklista-rot">byggfaktura med ROT</a> visar vad fakturan ska innehålla.</p>
+<p><strong>ROT</strong> gäller arbete åt privatpersoner och bara arbetskostnaden – inte material, maskiner eller resor. Tidrapporten är underlaget för arbetskostnaden, så restid och arbetad tid ska stå på separata rader. Checklistan för en korrekt <a href="/sv/blog/faktura-med-rotavdrag">byggfaktura med ROT</a> visar vad fakturan ska innehålla.</p>
 
 <h2>Nyckeltal som visar om tidrapporteringen fungerar</h2>
 <p>Tre mått visar om rapporteringen håller:</p>
@@ -1761,7 +1516,7 @@ const S_MOBIL_TIDRAPPORTERING_HTML = `
 
 <h2>Relaterade guider</h2>
 <ul>
-<li><a href="/sv/blog/tidrapportering">Tidrapportering i byggföretag</a> – grunderna</li>
+<li><a href="/sv/funktioner/tidrapporteringssystem-bygg">Tidrapportering i byggföretag</a> – grunderna</li>
 <li><a href="/sv/blog/tidrapportering-entreprenad">Tidrapportering för entreprenad</a> – spårbara timmar och attest</li>
 <li><a href="/sv/blog/app-for-tidrapportering-bygg">App för tidrapportering i bygg</a> – vad du ska jämföra</li>
 <li><a href="/sv/blog/loneunderlag-for-byggforetag">Löneunderlag för byggföretag</a></li>
@@ -1897,7 +1652,6 @@ const S_STAMPELKLOCKA_IPHONE: BlogPost = {
   publishedAt: "2026-08-22T10:20:00.000Z", createdAt: "2026-08-22T10:20:00.000Z", updatedAt: "2026-08-22T10:20:00.000Z",
 };
 
-
 const S_TIDREDOVISNING_APP_HTML = `
 <p>Tidredovisning är sista steget: att sammanställa de registrerade timmarna till ett underlag som går till lön, faktura och bokföring. En app för tidredovisning gör det automatiskt – du slipper renskriva och summera manuellt. Här går vi igenom vad en tidredovisning-app bör klara.</p>
 <p>Se helheten i vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
@@ -2028,7 +1782,7 @@ const A_AFFARSSYSTEM_BYGGFORETAG_HTML = `
 <p>Ett affärssystem är den gemensamma plattform där hela verksamheten körs: projekt, personal, tid, material, offert, faktura och ekonomi. Skillnaden mot enskilda appar är att allt delar samma data – attesterade timmar blir underlag för lön och faktura och räknas in i projektets resultat.</p>
 
 <h2>Molnbaserat – tillgängligt på bygget och kontoret</h2>
-<p>Ett molnbaserat byggprogram körs i webbläsaren och i appen, utan installation eller egen server. Snickaren <a href="/sv/blog/app-for-byggprojekt">rapporterar i mobilen på bygget</a>, kontoret ser samma siffror i realtid. Det är förutsättningen för att data ska vara aktuell och samlad.</p>
+<p>Ett molnbaserat byggprogram körs i webbläsaren och i appen, utan installation eller egen server. Snickaren <a href="/sv/funktioner/projekthantering">rapporterar i mobilen på bygget</a>, kontoret ser samma siffror i realtid. Det är förutsättningen för att data ska vara aktuell och samlad.</p>
 
 <h2>Vad ett affärssystem för bygg bör täcka</h2>
 <ul>
@@ -2103,47 +1857,6 @@ const A_CRM_BYGGFORETAG: BlogPost = {
   seoTitle: "CRM för byggföretag – kundhantering & offert | ByggExp", seoDescription: "CRM för byggföretag: samla kunder, förfrågningar och offerter, följ upp med påminnelser och gör fler förfrågningar till vunna projekt. Kopplat till offert och faktura.",
   seoImageUrl: `${SITE_URL}/landing/features/7offerter.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T11:10:00.000Z", createdAt: "2026-08-22T11:10:00.000Z", updatedAt: "2026-08-22T11:10:00.000Z",
-};
-
-const A_SERVICEHANTERING_BYGG_HTML = `
-<p>Serviceuppdrag och mindre jobb är annorlunda än stora projekt: många korta besök, olika adresser, snabb fakturering. Utan system tappas timmar och material, och faktureringen släpar. Ett system för servicehantering (serviceorder) håller ordning på uppdragen från beställning till betald faktura. Här går vi igenom vad en serviceorder-app för bygg bör klara.</p>
-<p>Grunden är att fånga tid och material på plats – se <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering</a> och <a href="/sv/blog/fota-kvitton-och-hantera-utlagg">kvitton och utlägg</a>.</p>
-<figure class="article-diagram"><img src="/landing/diagrams/servicehantering.webp" alt="Diagram: servicehantering – arbetsorder, tid och material på plats, foto, snabb faktura" width="720" height="380" loading="lazy"><figcaption>Serviceflödet: skapa arbetsorder, registrera tid och material på plats, dokumentera med foto och fakturera snabbt.</figcaption></figure>
-
-<h2>Vad är servicehantering?</h2>
-<p>Servicehantering är att styra serviceuppdrag och arbetsorder: vem gör vad, var, med vilken tid och vilket material – och hur det blir faktura. För service- och underhållsjobb med hög volym är det avgörande att inget uppdrag glöms eller faktureras för lågt.</p>
-
-<h2>Från serviceorder till faktura</h2>
-<ul>
-<li>Skapa en arbetsorder med kund, adress och vad som ska göras.</li>
-<li>Teknikern ser uppdraget i appen och registrerar tid och material på plats.</li>
-<li>Foton och noteringar dokumenterar utfört arbete.</li>
-<li>Uppdraget blir faktureringsunderlag – fakturera snabbt, medan jobbet är färskt.</li>
-</ul>
-
-<h2>Serviceavtal och återkommande jobb</h2>
-<p>För återkommande underhåll är det värdefullt att koppla uppdrag till <a href="/sv/blog/serviceavtal-underhallsavtal-byggforetag">serviceavtal</a>, så att planering och fakturering sköts löpande.</p>
-
-<h2>Kom igång</h2>
-<p>Vill du få ordning på serviceuppdragen från order till faktura? <a href="/sv/contact">Boka en gratis konsultation av ByggExp</a>.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Vad är servicehantering i bygg?</h3>
-<p>Att styra serviceuppdrag och arbetsorder – vem, var, tid och material – och göra dem till faktureringsunderlag, så att inget uppdrag glöms eller faktureras för lågt.</p>
-<h3>Vad är skillnaden mot vanlig projekthantering?</h3>
-<p>Service handlar om många korta uppdrag på olika adresser med snabb fakturering, till skillnad från stora, långa projekt. Flödet order → utförande → faktura måste vara snabbt.</p>
-<h3>Kan tekniker registrera tid och material på plats?</h3>
-<p>Ja. I appen ser teknikern uppdraget och registrerar tid, material och foton direkt, vilket blir underlag för fakturan.</p>
-`.trim();
-
-const A_SERVICEHANTERING_BYGG: BlogPost = {
-  _id: "code-servicehantering-bygg",
-  title: "Servicehantering för bygg – från serviceorder till faktura", slug: "servicehantering-bygg", locale: "sv",
-  excerpt: "Servicehantering (serviceorder) för byggföretag: styr serviceuppdrag från beställning till betald faktura, med tid, material och foto på plats i appen.", tag: "Digitalisering",
-  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_SERVICEHANTERING_BYGG_HTML,
-  seoTitle: "Servicehantering bygg – serviceorder-app till faktura | ByggExp", seoDescription: "Servicehantering för byggföretag: serviceorder från beställning till faktura, med tid, material och foto på plats. Håll ordning på service- och underhållsjobb.",
-  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-22T11:20:00.000Z", createdAt: "2026-08-22T11:20:00.000Z", updatedAt: "2026-08-22T11:20:00.000Z",
 };
 
 const A_SCHEMALAGGNING_BYGG_HTML = `
@@ -2298,7 +2011,7 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML = `
 <p>Allmänna schemasystem tar oftast betalt per användare och månad. I ByggExp ingår planering av projekt och personal i paketet Koll på jobbet: 690 kr/mån inklusive 10 användare, därefter 69 kr per extra användare. Med 15 användare blir det 690 + 5 × 69 = 1 035 kr/mån. Full koll, med lön, faktura och projektekonomi, kostar 990 kr/mån inklusive 10 användare (+119 kr per extra). Priserna är exklusive moms, utan startavgift och bindningstid. Medarbetare som bara använder appen räknas endast om de stämplat in de senaste 30 dagarna. <a href="/sv#pricing">Se alla priser</a>.</p>
 
 <h2>Schemaläggning, bemanning och resursplanering – vad är vad?</h2>
-<p>Termerna blandas ofta ihop men skiljer sig i tidshorisont. <a href="/sv/blog/bemanning-och-personalplanering">Bemanningsplanering</a> handlar om vilka personer och kompetenser som behövs framåt. <a href="/sv/blog/resursplanering-bygg">Resursplanering i bygg</a> väger kapaciteten mot projektens behov, ofta med maskiner och material. Schemaläggningen är den konkreta fördelningen dag för dag.</p>
+<p>Termerna blandas ofta ihop men skiljer sig i tidshorisont. <a href="/sv/funktioner/resursplanering">Bemanningsplanering</a> handlar om vilka personer och kompetenser som behövs framåt. <a href="/sv/blog/resursplanering-bygg">Resursplanering i bygg</a> väger kapaciteten mot projektens behov, ofta med maskiner och material. Schemaläggningen är den konkreta fördelningen dag för dag.</p>
 
 <h2>Kom igång</h2>
 <p>Se vad som ingår i ByggExp som <a href="/sv/blog/dagsplanering-och-planeringsmoten">planeringsprogram för bygg</a>, eller läs hur schemat läggs dag för dag på sidan om vårt <a href="/sv/funktioner/schemalaggning">schemaläggningssystem för bygg</a>. Testa gratis i 14 dagar med alla funktioner, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi planeringen på era egna projekt.</p>
@@ -2306,7 +2019,7 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML = `
 <h2>Relaterade guider om planering</h2>
 <ul>
 <li><a href="/sv/blog/schemalaggning-bygg">Schemaläggning för byggföretag</a> – så lägger du schemat steg för steg.</li>
-<li><a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering i bygg</a> – rätt person på rätt plats.</li>
+<li><a href="/sv/funktioner/resursplanering">Bemanning och personalplanering i bygg</a> – rätt person på rätt plats.</li>
 <li><a href="/sv/blog/resursplanering-bygg">Resursplanering i bygg</a> – undvik överbeläggning och dubbelbokade lag.</li>
 <li><a href="/sv/blog/arbetstidslagen-bygg">Arbetstidslagen i bygg</a> – dygnsvila, veckovila och övertid.</li>
 <li><a href="/sv/blog/gantt-schema-mall-bygg">Gantt- och schemamall för bygg</a> – planera projektet visuellt.</li>
@@ -2325,7 +2038,7 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG_HTML = `
 <p>Lönen bygger på de faktiska timmarna, inte på schemat. I ByggExp exporterar du timmarna som lönefil (CSV) och AGI-underlag. För bokföringen i t.ex. Fortnox eller Visma finns SIE4-export i integrationstillägget (199 kr/mån). Direktkoppling via API finns inte.</p>
 <h3>Hur schemalägger man underentreprenörer?</h3>
 <p>Underentreprenörer styr du via avtal och tidplan, inte via ert personalschema. Lägg in deras insatser i projektets tidplan, till exempel med en <a href="/sv/verktyg/gantt-schema-mall">Gantt-mall</a>, och bekräfta datumen skriftligt. I ByggExp planerar du den egna personalen – UE ingår inte i bemanningsvyn.</p>
-<p>Relaterat: <a href="/sv/blog/bemanningssystem-bygg">Bemanningssystem för bygg</a></p>
+<p>Relaterat: <a href="/sv/funktioner/resursplanering">Bemanningssystem för bygg</a></p>
 `.trim();
 
 const A_SCHEMALAGGNINGSSYSTEM_BYGG: BlogPost = {
@@ -2337,7 +2050,6 @@ const A_SCHEMALAGGNINGSSYSTEM_BYGG: BlogPost = {
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-30T10:00:00.000Z", createdAt: "2026-08-30T10:00:00.000Z", updatedAt: "2026-10-06T10:00:00.000Z",
 };
-
 
 const A_BYGGDAGBOK_HTML = `
 <p>En byggdagbok är den löpande anteckningen över vad som hände på bygget: vilka som var på plats, vad som utfördes, vädret, leveranser, avvikelser och beslut. Så länge allt går enligt plan känns den som pappersarbete. Men den dag en försening, en ÄTA eller en garantitvist ska redas ut är dagboken ofta det enda som visar förloppet dag för dag. Här går vi igenom vad en byggdagbok ska innehålla, vad AB 04, ABT 06 och AMA AF kräver och vad en digital byggdagbok behöver klara.</p>
@@ -2451,7 +2163,7 @@ const A_BYGGDAGBOK_HTML = `
 <li><a href="/sv/blog/fotodokumentation-byggprojekt-bevis">Fotodokumentation i byggprojekt</a> – bevis som håller vid ÄTA och tvist.</li>
 <li><a href="/sv/blog/ata-arbeten">ÄTA-arbeten</a> – så beställer, dokumenterar och fakturerar du dem.</li>
 <li><a href="/sv/blog/startmote-byggprojekt-checklista">Startmöte i byggprojekt</a> – sätt projektet rätt från dag ett.</li>
-<li><a href="/sv/blog/overlamning-relationshandlingar">Överlämning och relationshandlingar</a> – checklista för avslutade projekt.</li>
+<li><a href="/sv/blog/dou-parm-drift-underhall-bygg">Överlämning och relationshandlingar</a> – checklista för avslutade projekt.</li>
 <li><a href="/sv/blog/personalliggare">Personalliggare</a> – vem som ska registreras och när.</li>
 </ul>
 
@@ -2483,81 +2195,10 @@ const A_BYGGDAGBOK: BlogPost = {
   publishedAt: "2026-08-30T11:00:00.000Z", createdAt: "2026-08-30T11:00:00.000Z", updatedAt: "2026-10-06T10:00:00.000Z",
 };
 
-const A_PROJEKTLEDNING_BYGGFORETAG_HTML = `
-<p>Projektledning i bygg handlar om att ta ett projekt från anbud till godkänd slutbesiktning utan att tappa kontrollen över tid, pengar och kvalitet på vägen. Det är en roll som lika mycket handlar om planering och uppföljning som om folk och kommunikation. Den här guiden går igenom faserna i ett byggprojekt, vad byggprojektledaren ansvarar för i varje steg och vilka verktyg som gör jobbet lättare.</p>
-
-<p>Vill du gå direkt på systemstödet? Läs om <a href="/sv/blog/projekthantering-byggforetag">projekthanteringssystem för bygg</a>, eller hur du <a href="/sv/blog/digitalisera-byggforetag-projektstyrning">digitaliserar projektstyrningen</a>.</p>
-
-<figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projektledning i bygg – faser från kalkyl och planering till produktion, uppföljning och överlämning" width="720" height="380" loading="lazy"><figcaption>Projektledningens faser: kalkyl och anbud, planering, produktion, löpande uppföljning och överlämning.</figcaption></figure>
-
-<h2>Vad är projektledning i bygg?</h2>
-<p>Projektledning är ansvaret för att ett byggprojekt når sina mål inom ramarna för tid, budget och kvalitet. Byggprojektledaren håller ihop kalkyl, planering, <a href="/sv/blog/personalplanering-bygg">bemanning</a>, ekonomi och dokumentation – och är den som ser till att kontoret och bygget har samma bild av läget. Skillnaden mot ren arbetsledning är horisonten: arbetsledaren styr dagens jobb, projektledaren <a href="/sv/blog/app-for-byggprojekt">styr hela projektet</a> mot slutmålet.</p>
-
-<h2>Faserna i ett byggprojekt</h2>
-<div class="article-table"><table>
-<thead><tr><th>Fas</th><th>Vad som händer</th><th>Projektledarens fokus</th></tr></thead>
-<tbody>
-<tr><td><strong>Kalkyl och anbud</strong></td><td>Räkna på jobbet, lämna offert</td><td>Rätt pris med marginal, tydliga förbehåll</td></tr>
-<tr><td><strong>Planering</strong></td><td>Tidplan, bemanning, inköp</td><td>Realistisk <a href="/sv/blog/projektplanering-bygg">projektplanering</a> och resurser på plats</td></tr>
-<tr><td><strong>Produktion</strong></td><td>Bygget pågår</td><td>Löpande uppföljning, ÄTA, avvikelser</td></tr>
-<tr><td><strong>Uppföljning</strong></td><td>Tid och kostnad mot budget</td><td>Agera på avvikelser innan budgettaket</td></tr>
-<tr><td><strong>Överlämning</strong></td><td>Besiktning, relationshandlingar</td><td>Godkänd slutbesiktning, rätt underlag</td></tr>
-</tbody>
-</table></div>
-
-<h2>Planering: lägg grunden innan spaden i marken</h2>
-<p>De flesta projekt vinns eller förloras i planeringen. Här sätter du <a href="/sv/blog/projektplanering-bygg">tidplanen</a>, fördelar laget med <a href="/sv/blog/schemalaggningssystem-bygg">schemaläggning</a> och stämmer av kapaciteten med <a href="/sv/blog/resursplanering-bygg">resursplanering</a>. En genomarbetad plan gör produktionen lugnare – och ett <a href="/sv/blog/startmote-byggprojekt-checklista">startmöte</a> förankrar den i laget.</p>
-
-<h2>Produktion: styr medan projektet pågår</h2>
-<p>När bygget rullar är projektledarens viktigaste jobb att se läget i tid. Med tid som bokförs per projekt ser du nedlagda timmar mot budget, och avvikelser dyker upp i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a> medan de fortfarande går att åtgärda. ÄTA-arbeten och beslut fångas löpande i <a href="/sv/blog/byggdagbok">byggdagboken</a>, så att inget extra arbete utförs ofakturerat.</p>
-
-<figure class="web-shot"><img src="/features-content/projektekonomi-och-lonsamhet-web.webp" alt="Projektledning i webbadmin: budget mot utfall, timmar, kostnader och marginal per projekt" width="1000" height="548" loading="lazy"><figcaption>Projektets ekonomi i webbadmin – budget mot utfall och marginal löpande, så projektledaren hinner agera.</figcaption></figure>
-
-<h2>Ekonomi: håll marginalen hela vägen</h2>
-<p>Ett projekt kan se lönsamt ut ända till slutfakturan och ändå ha ätit upp marginalen i övertid och extra material. Därför följer en bra projektledare <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">kostnaderna mot budget</a> löpande i stället för i efterhand. När timmar, utlägg och fakturor bokförs på projektet räknas marginalen ihop automatiskt.</p>
-
-<h2>Överlämning: avsluta så att det håller</h2>
-<p>Projektet är inte klart förrän det är godkänt och dokumenterat. Samla besiktningsanmärkningar, åtgärda dem och lämna över <a href="/sv/blog/overlamning-relationshandlingar">relationshandlingar</a> i ordning. Ett projekt med ordning i dokumentationen gör överlämningen till en formsak i stället för en jakt på papper.</p>
-
-<h2>Verktyg för projektledning</h2>
-<p>Manuell projektledning i Excel och mejl fungerar tills projekten blir fler och större. Ett <a href="/sv/blog/projekthantering-byggforetag">projekthanteringssystem</a> samlar planering, tid, dokumentation och ekonomi per projekt, så att du styr med data i stället för magkänsla. I ByggExp hänger faserna ihop: planen möter loggad tid, tiden möter ekonomin, och dokumentationen ligger där projektet finns.</p>
-
-<h2>Kom igång</h2>
-<p>Vill du få ordning på projektledningen? Läs om <a href="/sv/blog/projektplanering-bygg">projektplanering för byggprojekt</a> och <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljning i realtid</a>, <a href="/sv/funktioner">se alla funktioner</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
-
-<h2>Relaterade guider</h2>
-<ul>
-<li><a href="/sv/blog/projektplanering-bygg">Projektplanering för byggprojekt</a> – från kalkyl och tidplan till bemanning.</li>
-<li><a href="/sv/blog/projektuppfoljning-bygg">Projektuppföljning i bygg</a> – tid, kostnader och lönsamhet i realtid.</li>
-<li><a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">Kostnadskontroll och marginal</a> – håll koll på projektets ekonomi.</li>
-<li><a href="/sv/blog/startmote-byggprojekt-checklista">Startmöte i byggprojekt</a> – sätt projektet rätt från dag ett.</li>
-</ul>
-
-<h2>Vanliga frågor</h2>
-<h3>Vad gör en byggprojektledare?</h3>
-<p>Byggprojektledaren för projektet från anbud till godkänd slutbesiktning: sätter tidplan och budget, styr inköp och bemanning, följer ekonomin löpande och ser till att avvikelser och ÄTA fångas i tid. Till skillnad från arbetsledaren, som styr dagens jobb, håller projektledaren ihop helheten över projektets hela längd.</p>
-<h3>Vad är skillnaden mellan projektledning och arbetsledning?</h3>
-<p>Arbetsledaren ansvarar för dagens jobb på plats – bemanning, moment, säkerhet. Projektledaren äger hela projektet över tid: tidplan, ekonomi och överlämning. I mindre byggföretag är det ofta samma person som bär båda rollerna, men det är två olika uppgifter.</p>
-<h3>Vilka faser har ett byggprojekt?</h3>
-<p>Vanligen kalkyl och anbud, planering, produktion, löpande uppföljning och överlämning med besiktning. Projektledaren har olika fokus i varje fas men följer ekonomin genom hela.</p>
-<h3>Behöver ett litet byggföretag ett system för projektledning?</h3>
-<p>Ofta redan vid några samtidiga projekt. Ett system samlar planering, tid och ekonomi per projekt så att marginalen syns löpande – i stället för att spåras i Excel och mejl.</p>
-`.trim();
-
-const A_PROJEKTLEDNING_BYGGFORETAG: BlogPost = {
-  _id: "code-projektledning-byggforetag",
-  title: "Projektledning för byggföretag – så leder du byggprojekt i mål", slug: "projektledning-byggforetag", locale: "sv",
-  excerpt: "Projektledning för byggföretag: faserna i ett byggprojekt, vad byggprojektledaren ansvarar för i varje steg – från kalkyl och planering till uppföljning och godkänd överlämning.", tag: "Digitalisering",
-  coverImageUrl: "/landing/features/project.webp", contentHtml: A_PROJEKTLEDNING_BYGGFORETAG_HTML,
-  seoTitle: "Projektledning för byggföretag – led byggprojekt i mål | ByggExp", seoDescription: "Projektledning för byggföretag: byggprojektets faser, byggprojektledarens ansvar och verktygen som håller ihop planering, tid, ekonomi och överlämning.",
-  seoImageUrl: `${SITE_URL}/landing/features/project.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-30T11:20:00.000Z", createdAt: "2026-08-30T11:20:00.000Z", updatedAt: "2026-08-30T11:20:00.000Z",
-};
-
 const A_PROJEKTPLANERING_BYGG_HTML = `
 <p>Ett byggprojekt som planeras dåligt blir dyrt oavsett hur skickligt laget är. Projektplanering handlar om att lägga ordningen rätt innan spaden sätts i marken: vad som ska göras, i vilken följd, av vem och när – och vad det får kosta. Här går vi igenom hur du planerar ett byggprojekt steg för steg, från kalkyl till en tidplan som håller.</p>
 
-<p>Vill du börja i det konkreta? Lägg upp aktiviteterna i vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>, eller se helheten i guiden om <a href="/sv/blog/projektledning-byggforetag">projektledning för byggföretag</a>.</p>
+<p>Vill du börja i det konkreta? Lägg upp aktiviteterna i vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>, eller se helheten i guiden om <a href="/sv/funktioner/projekthantering">projektledning för byggföretag</a>.</p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/schemalaggning.webp" alt="Diagram: projektplanering – aktiviteter, tidplan, bemanning och budget i följd" width="720" height="380" loading="lazy"><figcaption>Projektplanering i följd: bryt ner arbetet, lägg tidplanen, bemanna och stäm av mot budget.</figcaption></figure>
 
@@ -2585,11 +2226,11 @@ const A_PROJEKTPLANERING_BYGG_HTML = `
 <p>Planen är färskvara. Poängen är att jämföra den mot verkligheten: när tiden loggas per projekt ser du planerat mot utfall, och avvikelser dyker upp i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a> medan du fortfarande kan styra. Håll också koll på <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">kostnaderna mot budget</a> så att marginalen inte tickar iväg oförmärkt.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du planera projekten så att de håller? Ladda ner vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>, läs om <a href="/sv/blog/projektledning-byggforetag">projektledning för byggföretag</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Hur alla projekt läggs i ett Gantt-schema i ByggExp visar vi på sidan om <a href="/sv/funktioner/projektplanering">projektplanering med Gantt-schema</a>.</p>
+<p>Vill du planera projekten så att de håller? Ladda ner vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>, läs om <a href="/sv/funktioner/projekthantering">projektledning för byggföretag</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Hur alla projekt läggs i ett Gantt-schema i ByggExp visar vi på sidan om <a href="/sv/funktioner/projektplanering">projektplanering med Gantt-schema</a>.</p>
 
 <h2>Relaterade guider</h2>
 <ul>
-<li><a href="/sv/blog/projektledning-byggforetag">Projektledning för byggföretag</a> – led byggprojekt från anbud till överlämning.</li>
+<li><a href="/sv/funktioner/projekthantering">Projektledning för byggföretag</a> – led byggprojekt från anbud till överlämning.</li>
 <li><a href="/sv/blog/gantt-schema-mall-bygg">Gantt-schema och tidsplan för byggprojekt</a> – aktiviteter, beroenden och kritisk linje.</li>
 <li><a href="/sv/blog/resursplanering-bygg">Resursplanering i bygg</a> – undvik överbeläggning och dubbelbokning.</li>
 <li><a href="/sv/blog/schemalaggningssystem-bygg">Schemaläggningssystem för bygg</a> – planera personal, projekt och tid.</li>
@@ -2617,74 +2258,12 @@ const A_PROJEKTPLANERING_BYGG: BlogPost = {
   publishedAt: "2026-08-30T11:30:00.000Z", createdAt: "2026-08-30T11:30:00.000Z", updatedAt: "2026-08-30T11:30:00.000Z",
 };
 
-const A_APP_FOR_BYGGPROJEKT_HTML = `
-<p>Det mesta i ett byggprojekt händer på bygget, inte på kontoret – men det är på kontoret som pärmarna och kalkylarken bor. En app för byggprojekt flyttar styrningen dit jobbet sker: tid, uppgifter, foton, dagbok och ekonomi i mobilen, kopplat till rätt projekt. Här går vi igenom vad en app för byggprojekt bör klara och varför den gör mest nytta ute på plats.</p>
-
-<p>Vill du se helheten? Läs om <a href="/sv/blog/projekthantering-byggforetag">projekthanteringssystem för bygg</a> eller vad en bredare <a href="/sv/blog/bygg-app">bygg-app</a> bör klara.</p>
-
-<figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: app för byggprojekt – tid, uppgifter, foto och ekonomi kopplat till projektet i mobilen" width="720" height="380" loading="lazy"><figcaption>Allt kopplat till projektet i mobilen: tid, uppgifter, foto och dagbok – samlat där jobbet sker.</figcaption></figure>
-
-<h2>Vad är en app för byggprojekt?</h2>
-<p>En app för byggprojekt är mobilen som nav för allt som rör ett projekt: laget checkar in på rätt projekt, får sina uppgifter, fotar och för dagbok, och du som styr ser läget utan att ringa runt.</p>
-
-<h2>Vad en app för byggprojekt bör klara</h2>
-<ul>
-<li><strong>Tid per projekt</strong> – <a href="/sv/blog/app-for-tidrapportering-bygg">incheckning i mobilen</a>, gärna med GPS, kopplad till rätt projekt.</li>
-<li><strong>Uppgifter och arbetsorder</strong> – <a href="/sv/blog/arbetsorder-app-bygg">jobb som tilldelas</a> och följs upp direkt i appen.</li>
-<li><strong>Foto och byggdagbok</strong> – <a href="/sv/blog/byggdagbok">dokumentation</a> kopplad till projektet och dagen.</li>
-<li><strong>Ekonomi i fickan</strong> – utlägg, material och en snabb överblick av projektets läge.</li>
-<li><strong>Fungerar offline</strong> – synkar när täckningen kommer tillbaka, så att arbetet inte stannar när mobilnätet är svagt.</li>
-</ul>
-
-<figure class="web-shot"><img src="/features-content/hantera-uppgifter-i-byggprojekt-web.webp" alt="App för byggprojekt: uppgifter och arbetsorder kopplade till projekt och person" width="1000" height="548" loading="lazy"><figcaption>Uppgifter kopplade till projekt och person – tilldelade, följda och avbockade direkt i mobilen.</figcaption></figure>
-
-<h2>Därför gör appen mest nytta på plats</h2>
-<p>En pärm på kontoret uppdateras i efterhand, ofta av minnet. En app uppdateras i stunden: timmen loggas när passet sker, fotot tas när avvikelsen upptäcks, uppgiften bockas av när den är klar. Det gör att siffrorna stämmer och att du som leder projektet ser samma bild som laget – utan fördröjning och utan dubbelinmatning.</p>
-
-<h2>Från app till styrning på kontoret</h2>
-<p>Poängen är att appen och webbadmin är samma system. Det som registreras i mobilen blir underlag i webben: timmarna blir löneunderlag och fakturarader, och allt räknas in i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a> så att du ser marginalen i realtid. Bygget rapporterar, kontoret styr – på samma data.</p>
-
-<h2>Kom igång</h2>
-<p>Vill du flytta projektstyrningen ut på bygget? Läs om <a href="/sv/blog/projekthantering-byggforetag">projekthantering för byggföretag</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
-
-<h2>Relaterade guider</h2>
-<ul>
-<li><a href="/sv/blog/bygg-app">Bygg-app</a> – tid, jobb, offert och faktura i mobilen.</li>
-<li><a href="/sv/blog/arbetsorder-app-bygg">Arbetsorder-app för byggföretag</a> – slut på sms och lappar.</li>
-<li><a href="/sv/blog/byggdagbok">Byggdagbok</a> – daglig dokumentation som håller vid tvist.</li>
-<li><a href="/sv/blog/projektledning-byggforetag">Projektledning för byggföretag</a> – led byggprojekt i mål.</li>
-</ul>
-
-<h2>Vanliga frågor</h2>
-<h3>Vad är en app för byggprojekt?</h3>
-<p>Till skillnad från lösa appar för bara tid eller foto samlar den allt som rör projektet på ett ställe – tid, uppgifter, foto, dagbok och ekonomi. Så slipper laget hoppa mellan appar och du slipper leta efter uppgifter i mejl och sms.</p>
-<h3>Vad är skillnaden mot en vanlig bygg-app?</h3>
-<p>En bygg-app täcker hela företaget – offert, faktura och kontorets flöden. En app för byggprojekt sätter det enskilda projektet i centrum: tid, uppgifter och dokumentation kopplade till bygget. I ByggExp är de samma system.</p>
-<h3>Fungerar appen utan täckning på bygget?</h3>
-<p>Inte i dag. ByggExp behöver mobilnät eller wifi för att registrera tid och foto.</p>
-<h3>Ser kontoret det som registreras i appen?</h3>
-<p>Ja. Appen och webbadmin är samma system, så tid, foto och utlägg som registreras i mobilen syns direkt på kontoret och räknas in i projektets ekonomi.</p>
-`.trim();
-
-const A_APP_FOR_BYGGPROJEKT: BlogPost = {
-  _id: "code-app-for-byggprojekt",
-  title: "App för byggprojekt – styr hela bygget från mobilen", slug: "app-for-byggprojekt", locale: "sv",
-  excerpt: "Vad en app för byggprojekt bör klara: tid, uppgifter, foto, byggdagbok och ekonomi i mobilen, kopplat till rätt projekt – så att bygget rapporterar och kontoret styr på samma data.", tag: "Digitalisering",
-  coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_APP_FOR_BYGGPROJEKT_HTML,
-  seoTitle: "App för byggprojekt – styr bygget från mobilen | ByggExp", seoDescription: "App för byggprojekt: tid, uppgifter, foto, byggdagbok och ekonomi i mobilen kopplat till rätt projekt. Bygget rapporterar på plats, kontoret styr på samma data.",
-  seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-30T11:40:00.000Z", createdAt: "2026-08-30T11:40:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
-};
-
 export const TILLVAXT_ARTICLES: BlogPost[] = [
-  A_PROJEKTLEDNING_BYGGFORETAG,
   A_PROJEKTPLANERING_BYGG,
-  A_APP_FOR_BYGGPROJEKT,
   A_SCHEMALAGGNINGSSYSTEM_BYGG,
   A_BYGGDAGBOK,
   A_AFFARSSYSTEM_BYGGFORETAG,
   A_CRM_BYGGFORETAG,
-  A_SERVICEHANTERING_BYGG,
   A_SCHEMALAGGNING_BYGG,
   A_APP_TIDRAPPORTERING_BYGG,
   A_STAMPELKLOCKA_APP_GPS,
@@ -2711,13 +2290,9 @@ export const TILLVAXT_ARTICLES: BlogPost[] = [
   A_DOKUMENTHANTERING_BYGG,
   A_HITTA_KUNDER_BYGGFIRMA,
   A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING,
-  A_SKAFFA_RECENSIONER_OMDOMEN_BYGGFIRMA,
   A_GOOGLE_FORETAGSPROFIL_LOKAL_SEO_BYGGFIRMA,
   A_FAKTURERINGSPROGRAM_BYGG,
-  A_TIDRAPPORTERING_APP_BYGGFORETAG,
-  A_BYGGPROGRAM_FOR_BYGGFORETAG,
   A_ARBETSORDER_APP_BYGG,
-  A_PROJEKTHANTERING_BYGGFORETAG,
   A_ROT_FAKTURERING_PROGRAM,
   A_FOTODOKUMENTATION_APP_BYGG,
 ];

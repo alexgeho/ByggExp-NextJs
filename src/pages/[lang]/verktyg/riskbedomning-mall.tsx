@@ -118,7 +118,7 @@ export default function RiskbedomningMallPage() {
         }}
         relatedHeading="Relaterat"
         related={[
-          { href: `/${LOCALE}/blog/arbetsmiljoplan`, label: 'Arbetsmiljöplan (AMP)' },
+          { href: `/${LOCALE}/blog/riskbedomning-byggarbetsplats-mall`, label: 'Riskbedömning och arbetsmiljöplan' },
           { href: `/${LOCALE}/blog/fallskydd-krav-bygg`, label: 'Fallskydd på bygget' },
           { href: `/${LOCALE}/verktyg/skyddsrond-mall`, label: 'Skyddsrond-mall' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },

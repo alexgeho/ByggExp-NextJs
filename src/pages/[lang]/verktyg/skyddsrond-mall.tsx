@@ -136,7 +136,7 @@ export default function SkyddsrondMallPage() {
         }}
         relatedHeading="Relaterat"
         related={[
-          { href: `/${LOCALE}/blog/arbetsmiljoplan`, label: 'Arbetsmiljöplan (AMP)' },
+          { href: `/${LOCALE}/blog/riskbedomning-byggarbetsplats-mall`, label: 'Riskbedömning och arbetsmiljöplan' },
           { href: `/${LOCALE}/blog/bas-p-bas-u`, label: 'BAS-P och BAS-U' },
           { href: `/${LOCALE}/blog/fallskydd-krav-bygg`, label: 'Fallskydd på bygget' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },

@@ -127,9 +127,9 @@ export default function AvvikelserapportMallPage() {
         }}
         relatedHeading="Relaterat"
         related={[
-          { href: `/${LOCALE}/blog/egenkontroll`, label: 'Egenkontroll' },
-          { href: `/${LOCALE}/blog/kontrollplan-mall-bygglov`, label: 'Kontrollplan för bygglov' },
-          { href: `/${LOCALE}/blog/kma-plan-mall`, label: 'KMA-plan' },
+          { href: `/${LOCALE}/blog/egenkontroll-entreprenad`, label: 'Egenkontroll' },
+          { href: `/${LOCALE}/blog/boverkets-nya-byggregler-2026-kontrollplan`, label: 'Kontrollplan för bygglov' },
+          { href: `/${LOCALE}/blog/kvalitetsplan-bygg`, label: 'Kvalitetsplan och KMA' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },
         ]}
       />

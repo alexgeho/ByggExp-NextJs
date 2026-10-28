@@ -118,7 +118,7 @@ export default function BetalningspaminnelseMallPage() {
         }}
         relatedHeading="Relaterat"
         related={[
-          { href: `/${LOCALE}/blog/kunden-betalar-inte-fakturan`, label: 'När kunden inte betalar' },
+          { href: `/${LOCALE}/blog/faktureringsavgift-hantverkare-tillaten`, label: 'När kunden inte betalar' },
           { href: `/${LOCALE}/blog/drojsmalsranta-2026`, label: 'Dröjsmålsränta 2026' },
           { href: `/${LOCALE}/verktyg/drojsmalsranta-kalkylator`, label: 'Dröjsmålsränta-kalkylator' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },

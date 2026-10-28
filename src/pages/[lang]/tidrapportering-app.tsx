@@ -126,7 +126,7 @@ const FAQ: { question: string; answer: string }[] = [
 ];
 
 const RELATED: { href: string; label: string }[] = [
-  { href: "/sv/blog/tidrapportering", label: "Tidrapportering i byggföretag – guide" },
+  { href: "/sv/funktioner/tidrapporteringssystem-bygg", label: "Tidrapporteringssystem för bygg" },
   { href: "/sv/blog/app-for-tidrapportering-bygg", label: "Så funkar en tidrapport-app" },
   { href: "/sv/blog/basta-tidrapporteringssystem-bygg", label: "Tidrapporteringssystem jämförda" },
   { href: "/sv/verktyg/tidrapport-mall", label: "Gratis tidrapport-mall" },

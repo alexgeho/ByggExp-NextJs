@@ -1,81 +1,6 @@
 import type { BlogPost } from '../../types/blog';
 import { SITE_URL } from './site-url';
 
-const AMP_HTML = `
-<p>En arbetsmiljöplan (AMP) är inte bara en pärm som ska finnas – den är ofta ett lagkrav, och saknas den när Arbetsmiljöverket kommer på besök kan det bli sanktionsavgift. Här är när en AMP krävs, vad den ska innehålla och vem som ansvarar (byggherre, BAS-P och BAS-U).</p>
-<p><a href="/sv/verktyg/skyddsrond-mall">Skapa ett skyddsrondsprotokoll med vår gratis mall (PDF & Excel) -&gt;</a></p>
-
-<h2>Vad är en arbetsmiljöplan (AMP)?</h2>
-<p>En arbetsmiljöplan är ett dokument som beskriver hur arbetsmiljön ska hanteras på en byggarbetsplats: vilka risker som finns, vilka regler som gäller och vilka åtgärder som ska vidtas. Reglerna finns i Arbetsmiljöverkets föreskrifter <strong>AFS 2023:3</strong> (som ersatt den tidigare strukturen).</p>
-
-<h2>När krävs en arbetsmiljöplan?</h2>
-<p>En AMP krävs i två situationer:</p>
-<ul>
-<li><strong>Arbete med särskild risk</strong> enligt kap 11 §12 i AFS 2023:3 – till exempel risk för fall från höjd, arbete i schakt, rivning av bärande konstruktioner eller arbete med asbest. Då krävs en AMP <strong>från dag ett</strong>, oavsett projektets storlek.</li>
-<li><strong>När förhandsanmälan krävs</strong> – arbete som pågår längre än 30 arbetsdagar med fler än 20 personer samtidigt, eller mer än 500 persondagar totalt.</li>
-</ul>
-<p>Som tumregel bör en arbetsmiljöplan finnas på plats innan bygget startar.</p>
-
-<h2>Vem ansvarar – byggherre, BAS-P och BAS-U?</h2>
-<ul>
-<li><strong>Byggherren</strong> har det övergripande ansvaret och utser byggarbetsmiljösamordnare.</li>
-<li><strong>BAS-P</strong> (samordnare för planering och projektering) ansvarar för att upprätta arbetsmiljöplanen.</li>
-<li><strong>BAS-U</strong> (samordnare för utförande) ansvarar för att AMP:n hålls aktuell och uppdateras under byggets gång.</li>
-</ul>
-
-<h2>Vad ska en arbetsmiljöplan innehålla?</h2>
-<ul>
-<li>De regler som ska tillämpas på arbetsplatsen</li>
-<li>Beskrivning av arbeten med särskild risk och åtgärder för dem</li>
-<li>Hur arbetsmiljöarbetet organiseras (ansvar, rutiner)</li>
-<li>Gemensamma skyddsåtgärder, ordning och tillträde</li>
-<li>Uppdateras löpande när nya risker eller moment tillkommer</li>
-</ul>
-
-<h2>Vanliga misstag</h2>
-<ul>
-<li><strong>Skapa AMP:n och glömma den.</strong> Den ska hållas aktuell under hela projektet – det är BAS-U:s ansvar.</li>
-<li><strong>Generisk mall utan projektets risker.</strong> Planen ska spegla de faktiska riskerna på just den arbetsplatsen.</li>
-<li><strong>Otydliga roller.</strong> BAS-P och BAS-U ska vara utsedda och kända.</li>
-<li><strong>Ingen koppling till egenkontroll.</strong> Kontroller och åtgärder bör dokumenteras löpande – se <a href="/sv/blog/egenkontroll">egenkontroll</a>.</li>
-</ul>
-
-<h2>Vanliga frågor</h2>
-<h3>När måste man ha en arbetsmiljöplan?</h3>
-<p>Vid arbete med särskild risk (kap 11 §12 AFS 2023:3) krävs den från dag ett, och när förhandsanmälan krävs (över 30 dagar med fler än 20 personer, eller över 500 persondagar).</p>
-<h3>Vem upprättar arbetsmiljöplanen?</h3>
-<p>BAS-P upprättar planen; BAS-U håller den aktuell under utförandet. Byggherren har det övergripande ansvaret.</p>
-<h3>Vad är skillnaden mellan BAS-P och BAS-U?</h3>
-<p>BAS-P samordnar arbetsmiljön i planering och projektering; BAS-U samordnar under utförandet på plats.</p>
-
-<h2>Kom igång</h2>
-<p>Håll arbetsmiljön, kontroller och dokumentation samlat och aktuellt. <a href="/sv/blog/egenkontroll">Läs om egenkontroll och KMA</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
-
-<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll och KMA</a> · <a href="/sv/blog/personalliggare">Personalliggare</a></p>
-`.trim();
-
-const AMP: BlogPost = {
-  _id: 'code-arbetsmiljoplan',
-  title: 'Arbetsmiljöplan (AMP) – när krävs den och vem ansvarar',
-  slug: 'arbetsmiljoplan',
-  locale: 'sv',
-  excerpt:
-    'När krävs en arbetsmiljöplan, vad ska den innehålla och vem ansvarar (byggherre, BAS-P, BAS-U)? Guide enligt AFS 2023:3 – med särskild risk och förhandsanmälan.',
-  tag: 'Arbetsmiljö',
-  coverImageUrl: '/landing/features/3personal.webp',
-  contentHtml: AMP_HTML,
-  seoTitle: 'Arbetsmiljöplan (AMP) – krav, BAS-P & BAS-U | ByggExp',
-  seoDescription:
-    'När krävs en arbetsmiljöplan (AMP) enligt AFS 2023:3? Särskild risk, förhandsanmälan, vad den ska innehålla och ansvar för byggherre, BAS-P och BAS-U.',
-  seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`,
-  canonicalUrl: '',
-  noIndex: false,
-  isPublished: true,
-  publishedAt: '2026-08-12T15:30:00.000Z',
-  createdAt: '2026-08-12T15:30:00.000Z',
-  updatedAt: '2026-08-12T15:30:00.000Z',
-};
-
 const HETA_ARBETEN_HTML = `
 <p>Heta arbeten är en av de vanligaste orsakerna till bränder på arbetsplatser – och ett moment där försäkringsbolagen ställer hårda krav. Saknas rätt certifikat eller brandvakt kan försäkringen sättas ur spel. Här är vad heta arbeten är, vilka roller som krävs och vad som gäller kring certifikat och tillstånd.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/heta-arbeten.webp" alt="Diagram: heta arbeten – rollerna tillståndsansvarig, hetarbetare och brandvakt" width="720" height="380" loading="lazy"><figcaption>Tre roller med giltig behörighet: tillståndsansvarig utfärdar tillstånd, hetarbetaren utför och brandvakten bevakar – även efter avslutat arbete.</figcaption></figure>
@@ -123,9 +48,9 @@ const HETA_ARBETEN_HTML = `
 <p>Ja. Tillståndsansvarig utfärdar ett skriftligt tillstånd med villkor och skyddsåtgärder.</p>
 
 <h2>Kom igång</h2>
-<p>Håll koll på behörigheter, tillstånd och arbetsmiljö på ett ställe. Använd vår gratis <a href="/sv/verktyg/riskbedomning-mall">mall för riskbedömning</a>, <a href="/sv/blog/arbetsmiljoplan">läs om arbetsmiljöplan</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
+<p>Håll koll på behörigheter, tillstånd och arbetsmiljö på ett ställe. Använd vår gratis <a href="/sv/verktyg/riskbedomning-mall">mall för riskbedömning</a>, <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">läs om arbetsmiljöplan</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan (AMP)</a> · <a href="/sv/blog/egenkontroll">Egenkontroll och KMA</a></p>
+<p>Relaterat: <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Arbetsmiljöplan (AMP)</a> · <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll och KMA</a></p>
 `.trim();
 
 const HETA_ARBETEN: BlogPost = {
@@ -220,7 +145,7 @@ const ARBMILJO_HTML = `
 <h2>Kom igång</h2>
 <p>Du har fullt arbetsmiljöansvar även som soloföretagare – och rätt dokumentation skyddar dig både vid en olycka och vid en kontroll. Kom igång med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och bygg en riskbedömning för ditt nästa uppdrag. Vill du se hur du samlar all arbetsmiljödokumentation i ett system? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi hur det fungerar i praktiken.</p>
 
-<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Så upprättar du en arbetsmiljöplan</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt – så gör du</a>.</p>
+<p>Relaterat: <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Så upprättar du en arbetsmiljöplan</a> och <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll i byggprojekt – så gör du</a>.</p>
 `.trim();
 
 const ARBMILJO: BlogPost = {
@@ -293,7 +218,7 @@ const BASPBASU_HTML = `
 <li>arbetet beräknas pågå längre än 30 arbetsdagar <strong>och</strong> fler än 20 personer sysselsätts samtidigt vid något tillfälle, eller</li>
 <li>det totala antalet persondagar beräknas bli fler än 500.</li>
 </ul>
-<p>En kopia av anmälan ska sitta väl synlig på arbetsplatsen (2 kap. 26 §). Hur planen byggs upp och vad den ska innehålla beskriver vi i guiden om <a href="/sv/blog/kma-plan-mall">KMA-plan</a>, och planeringen av etablering och trafik hör hemma i <a href="/sv/blog/apd-plan-arbetsplatsdisposition-bygg">APD-planen</a>.</p>
+<p>En kopia av anmälan ska sitta väl synlig på arbetsplatsen (2 kap. 26 §). Hur planen byggs upp och vad den ska innehålla beskriver vi i guiden om <a href="/sv/blog/kvalitetsplan-bygg">KMA-plan</a>, och planeringen av etablering och trafik hör hemma i <a href="/sv/blog/apd-plan-arbetsplatsdisposition-bygg">APD-planen</a>.</p>
 
 <h2>Sanktionsavgifter – räkneexempel</h2>
 <p>Avgifterna är fasta belopp och kan tas ut från flera parter i samma projekt. Ingen avgift tas ut för saknad plan om hela arbetet pågår högst två dagar i följd.</p>
@@ -429,7 +354,7 @@ const A_KVARTSDAMM_REGLER_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Börja med att systematisera riskbedömning och funktionskontroller i <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>, så har ni dokumentationen på plats innan nästa dammande jobb. Vill ni se hur det fungerar för hela firman kan ni <a href="/sv/contact">boka en gratis konsultation</a>. Detta är förenklad vägledning och inte juridisk rådgivning – kontrollera alltid gällande AFS för ert specifika arbete.</p>
 
-<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i bygg</a>.</p>
+<p>Relaterat: <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Arbetsmiljöplan</a> och <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll i bygg</a>.</p>
 `;
 
 const A_KVARTSDAMM_REGLER_BYGG: BlogPost = {
@@ -521,7 +446,7 @@ const A_BYGGSTALLNING_REGLER_KRAV_HTML = `
 <h2>Kom igång</h2>
 <p>Sätt rutinen på plats innan nästa ställning reses: strukturera kontrollen med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen &rarr;</a> så att dokumentationen finns signerad och sökbar när den behövs. Vill du se hur det fungerar i ett skarpt arbetsflöde? <a href="/sv/contact">Boka en gratis konsultation &rarr;</a> så visar vi upplägget.</p>
 
-<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – när krävs den och vad ska ingå</a> och <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>.</p>
+<p>Relaterat: <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Arbetsmiljöplan – när krävs den och vad ska ingå</a> och <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>.</p>
 `;
 
 const A_BYGGSTALLNING_REGLER_KRAV: BlogPost = {
@@ -532,87 +457,6 @@ const A_BYGGSTALLNING_REGLER_KRAV: BlogPost = {
   seoTitle: "Byggställning regler & krav 2026 | ByggExp", seoDescription: "AFS 2023:11, utbildningsnivåer efter höjd, sanktionsavgifter, skyddsräcke och besiktning. Så klarar du inspektionen innan du klättrar upp på ställningen.",
   seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-18T18:45:00.000Z", createdAt: "2026-08-18T18:45:00.000Z", updatedAt: "2026-08-18T18:45:00.000Z",
-};
-
-const A_ARBETSMILJOVERKET_NYA_REGLER_2026_BYGG_HTML = `
-<p>Sedan den 1 januari 2025 gäller Arbetsmiljöverkets omstrukturerade regelverk fullt ut. För byggföretag betyder det att i stort sett varje AFS-nummer du har hänvisat till i arbetsmiljöplaner, SAM-rutiner och egenkontroller är gammalt. Skyddskraven är desamma – men dokumenten pekar på föreskrifter som inte längre finns. Inför 2026 är det dags att städa i KMA-pärmen på riktigt.</p>
-
-<p>Ett strukturerat sätt att fånga upp vilka dokument som behöver uppdateras är att gå igenom dina rutiner med en checklista – använd gärna <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> som utgångspunkt för inventeringen.</p>
-
-<h2>Vad hände 1 januari 2025?</h2>
-<p>Arbetsmiljöverket samlade hela den tidigare spridda regelmassan i 15 nya föreskriftshäften med beteckningarna AFS 2023:1 till och med AFS 2023:15. Samtidigt upphörde de gamla föreskrifterna att gälla – bland annat AFS 2001:1 om systematiskt arbetsmiljöarbete och AFS 1999:3 om byggnads- och anläggningsarbete, som varit centrala för byggbranschen i decennier.</p>
-<p>Det är viktigt att förstå vad omstruktureringen <em>inte</em> var: den var inte en skärpning eller uppluckring av skyddsnivån. Syftet var att göra regelverket mer överskådligt. De materiella skyddskraven är i huvudsak oförändrade. Det som ändras för dig som byggföretag är hänvisningar, AFS-nummer och paragrafstruktur i dina egna dokument, mallar och rutiner. Innehållet i ryggmärgen sitter kvar – etiketterna på det gör inte det.</p>
-
-<h2>De AFS byggföretag måste kunna 2026</h2>
-<p>Det som förr rymdes i en enda föreskrift ligger nu fördelat på flera häften. Det innebär att du behöver läsa fler AFS för att täcka samma område. De centrala för bygg- och anläggningsföretag är:</p>
-<ul>
-<li><strong>AFS 2023:1</strong> – Systematiskt arbetsmiljöarbete, grundläggande skyldigheter för dig med arbetsgivaransvar. Ersätter gamla AFS 2001:1 (SAM) och styr grundstrukturen i din arbetsmiljödokumentation.</li>
-<li><strong>AFS 2023:2</strong> – Planering och organisering av arbetsmiljöarbete. Kompletterar 2023:1 och reglerar hur arbetet ska planeras och fördelas.</li>
-<li><strong>AFS 2023:3</strong> – Projektering och byggarbetsmiljösamordning, grundläggande skyldigheter. Här ligger byggherrens ansvar, projektörernas ansvar, rollerna Bas-P och Bas-U samt kraven på arbetsmiljöplan och förhandsanmälan.</li>
-<li><strong>AFS 2023:10</strong> – Risker i arbetsmiljön.</li>
-<li><strong>AFS 2023:11</strong> – Arbetsutrustning och personlig skyddsutrustning, säker användning.</li>
-<li><strong>AFS 2023:12</strong> – Utformning av arbetsplatser.</li>
-<li><strong>AFS 2023:13</strong> – Risker vid vissa typer av arbeten.</li>
-</ul>
-<p>Mycket av det som tidigare låg samlat i AFS 1999:3 hittar du numera i 2023:10–13. Den exakta paragrafmappningen bör du alltid dubbelkolla mot gällande AFS-text på av.se innan du skriver in nya hänvisningar i dina dokument.</p>
-
-<h2>Bas-P, Bas-U och arbetsmiljöplan i nya AFS 2023:3</h2>
-<p>För den som driver byggprojekt är AFS 2023:3 den viktigaste att ha koll på. Observera att den redan har ändrats en gång, genom AFS 2024:1 – hänvisar dina mallar till 2023:3 måste du alltså kontrollera att formuleringarna stämmer med den senaste lydelsen.</p>
-<p>Rollerna är oförändrade i sak:</p>
-<ul>
-<li><strong>Byggherren</strong> har det övergripande ansvaret och ska utse byggarbetsmiljösamordnare.</li>
-<li><strong>Bas-P</strong> (för planering och projektering) samordnar arbetsmiljöfrågor under projekteringen och ansvarar för att arbetsmiljöplanen upprättas.</li>
-<li><strong>Bas-U</strong> (för utförande) samordnar arbetsmiljöarbetet på byggarbetsplatsen och håller arbetsmiljöplanen aktuell under hela byggskedet.</li>
-</ul>
-<p>Formellt ska en arbetsmiljöplan finnas innan arbetet påbörjas när något av lagens kriterier är uppfyllt, och förhandsanmälan ska skickas till Arbetsmiljöverket för större eller längre projekt. Kraven på när planen behövs har inte ändrats av omstruktureringen – bara var i regelverket de står.</p>
-
-<h2>Checklista: så uppdaterar du KMA-dokumenten</h2>
-<p>Gå igenom dokumenten systematiskt istället för att skriva om allt på en gång. En rimlig arbetsordning:</p>
-<ol>
-<li><strong>Arbetsmiljöplanens mall</strong> – byt hänvisningar från AFS 1999:3 till AFS 2023:3 (med ändringen i AFS 2024:1) och kontrollera att rollbeskrivningarna för Bas-P och Bas-U stämmer.</li>
-<li><strong>SAM-rutiner och arbetsmiljöpolicy</strong> – ersätt AFS 2001:1 med AFS 2023:1 och 2023:2.</li>
-<li><strong>Riskbedömningsmallar</strong> – uppdatera hänvisningar till 2023:10 och 2023:13 för risker vid arbetet.</li>
-<li><strong>Egenkontroller och skyddsronder</strong> – kontrollera referenser till utrustning och skyddsutrustning (2023:11) och arbetsplatsens utformning (2023:12).</li>
-<li><strong>Underentreprenörsavtal och beställningsvillkor</strong> – där ni hänvisar till gällande arbetsmiljöföreskrifter, se till att texten pekar på rätt AFS.</li>
-<li><strong>Introduktions- och utbildningsmaterial</strong> – platschefer och skyddsombud behöver känna igen de nya numren.</li>
-</ol>
-
-<h2>Vanliga misstag och fallgropar</h2>
-<p>De vanligaste felen vi ser handlar mer om slarv än om okunskap:</p>
-<ul>
-<li><strong>Att tro att kraven ändrats.</strong> Många lägger tid på att tolka om skyddsnivåer som i praktiken är desamma. Fokusera på hänvisningarna, inte på att uppfinna nya rutiner.</li>
-<li><strong>Fel AFS-nummer i dokument.</strong> En arbetsmiljöplan som hänvisar till en upphävd föreskrift ser oseriös ut vid en inspektion – även om innehållet är korrekt.</li>
-<li><strong>Att glömma Bas-U och arbetsmiljöplan på mindre projekt.</strong> Kraven gäller även för mindre arbeten som uppfyller kriterierna; de försvinner inte för att projektet är litet.</li>
-<li><strong>Att uppdatera huvudmallen men missa kopior.</strong> Gamla versioner lever ofta kvar i pärmar och delade mappar. Ha en enda källa som är den gällande.</li>
-</ul>
-
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp ersätter inte det juridiska ansvaret – du måste fortfarande läsa gällande AFS-text – men verktygen hjälper dig hålla dokumentationen samlad och aktuell. Med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> får du en struktur som är enkel att uppdatera med rätt AFS-hänvisningar, och du slipper leta i lösa Word-filer. Med <a href="/sv/verktyg/byggdagbok-mall">byggdagboks-mallen</a> dokumenterar du löpande vad som skett på arbetsplatsen, vilket är underlag både för egenkontrollen och vid en eventuell inspektion. Poängen är att ha en gällande version på ett ställe – inte tio kopior med olika AFS-nummer.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Har skyddskraven skärpts i de nya reglerna?</h3>
-<p>Nej. Omstruktureringen som trädde i kraft 1 januari 2025 syftade till att göra regelverket mer överskådligt, inte att ändra skyddsnivån. De materiella kraven är i huvudsak oförändrade – det är AFS-numren och paragrafstrukturen som är nya.</p>
-<h3>Vilken föreskrift ersätter gamla AFS 1999:3 om byggnadsarbete?</h3>
-<p>Det finns inte längre en enda motsvarighet. Byggarbetsmiljösamordning och arbetsmiljöplan regleras i AFS 2023:3, medan de specifika reglerna om själva arbetet är fördelade på bland annat AFS 2023:10–13. Du behöver alltså läsa flera häften.</p>
-<h3>Måste jag skriva om hela KMA-pärmen?</h3>
-<p>Nej, men du behöver uppdatera hänvisningarna. Eftersom kraven i sak är desamma räcker det oftast att byta AFS-nummer och kontrollera rollbeskrivningarna, inte att bygga om rutinerna från grunden.</p>
-<h3>Gäller de nya reglerna även små byggprojekt?</h3>
-<p>Ja. Kraven på arbetsmiljöplan, Bas-P och Bas-U utgår från projektets art, inte enbart storleken. Uppfylls kriterierna gäller reglerna oavsett om projektet är stort eller litet.</p>
-
-<h2>Kom igång</h2>
-<p>Börja med att inventera dina dokument, byt ut AFS-hänvisningarna mot de nya numren och se till att platsledningen känner igen dem. Ladda ner <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> för att strukturera arbetet, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du håller arbetsmiljödokumentationen samlad. Läs alltid gällande AFS-text på Arbetsmiljöverket (av.se) innan du fastställer hänvisningar.</p>
-
-<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – krav och innehåll</a>, <a href="/sv/blog/bas-p-bas-u">Bas-P och Bas-U – roller och ansvar</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
-`;
-
-const A_ARBETSMILJOVERKET_NYA_REGLER_2026_BYGG: BlogPost = {
-  _id: "code-"+"arbetsmiljoverket-nya-regler-2026-bygg",
-  title: "Arbetsmiljöverkets nya regler 2026 för bygg – så uppdaterar du KMA-pärmen", slug: "arbetsmiljoverket-nya-regler-2026-bygg", locale: "sv",
-  excerpt: "Arbetsmiljöverket har samlat regelmassan i 15 nya föreskrifter – här är AFS-numren byggföretag måste byta ut i arbetsmiljöplan, SAM-rutiner och egenkontroller inför 2026.", tag: "Arbetsmiljö",
-  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_ARBETSMILJOVERKET_NYA_REGLER_2026_BYGG_HTML,
-  seoTitle: "Nya AFS-regler 2026 bygg | ByggExp", seoDescription: "Arbetsmiljöverkets omstrukturerade regelverk gäller sedan 2025. Se vilka AFS byggföretag måste kunna 2026 och hur du uppdaterar KMA-dokumenten rätt.",
-  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-18T20:06:00.000Z", createdAt: "2026-08-18T20:06:00.000Z", updatedAt: "2026-08-18T20:06:00.000Z",
 };
 
 const A_NYA_ASBESTREGLER_2026_HTML = `
@@ -762,7 +606,7 @@ const A_FALLSKYDD_KRAV_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Kollektivt fallskydd är nästan alltid både billigare och juridiskt säkrare än att chansa på selen – ett räcke kostar timmar, en sanktionsavgift kostar tiotusentals kronor. Sätt upp en fallskyddskontroll som rutin med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a>, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du kopplar kontrollen till arbetsmiljöplanen för hela projektet.</p>
 
-<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – krav och innehåll</a> och <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>.</p>
+<p>Relaterat: <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Arbetsmiljöplan – krav och innehåll</a> och <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>.</p>
 `;
 
 const A_FALLSKYDD_KRAV_BYGG: BlogPost = {
@@ -773,90 +617,6 @@ const A_FALLSKYDD_KRAV_BYGG: BlogPost = {
   seoTitle: "Fallskydd på bygget 2026 – krav | ByggExp", seoDescription: "Fallskyddskrav på bygget 2026: 2-metersregeln, kollektivt fallskydd före sele och sanktionsavgift 40 000–400 000 kr enligt AFS 2023:13. Så undviker du boten.",
   seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T05:12:00.000Z", createdAt: "2026-08-19T05:12:00.000Z", updatedAt: "2026-08-19T05:12:00.000Z",
-};
-
-const A_KMA_PLAN_MALL_HTML = `
-<p>KMA står för <strong>Kvalitet, Miljö och Arbetsmiljö</strong> – de tre områden en KMA-plan (ibland kallad kvalitetsplan) binder ihop till ett dokument. För många mindre byggföretag dyker kravet upp först när en beställare begär en KMA-plan i upphandlingen, och då gäller det att ha något att visa. Den goda nyheten: planen behöver inte vara tjock. Den ska vara konkret, spegla hur ni faktiskt jobbar och gå att uppdatera per projekt. Här går vi igenom vad den måste innehålla enligt PBL, Miljöbalken och Arbetsmiljölagen – och hur du bygger en nedbantad variant som håller.</p>
-<p><a href="/sv/verktyg/kvalitetsplan-mall">Ladda ner en färdig kvalitetsplan-mall (PDF & Excel) -&gt;</a></p>
-<p><a href="/sv/verktyg/avvikelserapport-mall">Dokumentera avvikelser med vår gratis avvikelserapport-mall (PDF & Excel) -&gt;</a></p>
-
-<p>Grunden i kvalitetsbenet är egenkontrollen. Börja med att ladda ner <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a> och bygg vidare därifrån.</p>
-
-<h2>Vad är en KMA-plan – och måste du ha en?</h2>
-<p>KMA är inget eget lagbegrepp. Det finns ingen paragraf som säger att du ska ha ett dokument som heter "KMA-plan". Kravet uppstår i stället när du lägger ihop tre regelverk: <strong>PBL</strong> (Plan- och bygglagen) för kvalitet och kontroll, <strong>Miljöbalken</strong> för miljö och avfall, och <strong>Arbetsmiljölagen med tillhörande AFS-föreskrifter</strong> för arbetsmiljön. En KMA-plan är helt enkelt ett samlat sätt att visa att du har koll på alla tre.</p>
-<p>Det innebär två sorters krav. Vissa delar är <strong>lagkrav</strong> oavsett vad kunden tycker – till exempel dokumenterade riskbedömningar och en arbetsmiljöplan när ett projekt är tillräckligt stort eller innehåller riskfyllt arbete. Andra delar är <strong>beställarkrav</strong>: byggherren eller huvudentreprenören kräver en samlad KMA-plan som villkor för att anlita dig. Skilj på de två så vet du vad som är förhandlingsbart och vad som inte är det.</p>
-
-<h2>De tre benen din KMA-plan måste täcka</h2>
-
-<h3>Kvalitet</h3>
-<p>Kvalitetsbenet vilar på PBL (2010:900, 10 kap.) och kontrollplanen. Byggherren ansvarar för att alla krav uppfylls, och i lov- och anmälningspliktiga projekt krävs normalt en <strong>kontrollansvarig (KA)</strong>. Den kontrollmetod som anges i kontrollplanen är oftast <strong>egenkontroll</strong> – att du som entreprenör kontrollerar och dokumenterar att arbetet uppfyller kraven. Egenkontrollen är därför det naturliga kvalitetsbenet i din KMA-plan.</p>
-
-<h3>Miljö</h3>
-<p>Miljöbenet styrs av Miljöbalken (1998:808) och Avfallsförordningen (2020:614). Sedan <strong>1 augusti 2020</strong> gäller skärpta krav på utsortering av bygg- och rivningsavfall: minst fraktionerna <strong>trä, mineral (betong, tegel, klinker, keramik, sten), metall, glas, plast och gips</strong> ska sorteras var för sig direkt vid källan. Till miljödelen hör också hantering av farligt avfall och kemikalier. En kort avfalls- och miljöplan per projekt räcker långt.</p>
-
-<h3>Arbetsmiljö</h3>
-<p>Arbetsmiljöbenet har två delar. Det löpande <strong>systematiska arbetsmiljöarbetet (SAM)</strong> – att undersöka, riskbedöma, åtgärda och följa upp – regleras sedan 1 januari 2025 i AFS 2023:1. Riskbedömningar, handlingsplaner och den årliga uppföljningen ska dokumenteras skriftligt oavsett företagets storlek; en skriftlig arbetsmiljöpolicy och skriftliga rutiner krävs vid 10 eller fler arbetstagare.</p>
-<p>Den projektspecifika delen är <strong>arbetsmiljöplanen</strong>, som numera regleras av AFS 2023:3 (ersatte AFS 1999:3). En arbetsmiljöplan är obligatorisk i förväg om arbetet pågår mer än <strong>30 arbetsdagar med fler än 20 personer</strong> samtidigt vid något tillfälle, eller om det totalt överstiger <strong>500 persondagar</strong>. Den krävs dessutom <strong>alltid</strong> – oavsett storlek, även för en ensam hantverkare – om något av de 13 särskilt riskfyllda arbetena förekommer, till exempel fallrisk på två meter eller mer, risk att begravas i schakt eller arbete med tunga byggelement. Byggherren ansvarar för att planen finns; BAS-P upprättar den under projekteringen och BAS-U håller den uppdaterad på plats.</p>
-
-<h2>Vad en nedbantad KMA-plan ska innehålla</h2>
-<p>För ett mindre företag räcker en checklista som denna, uppdelad i företagsnivå och projektnivå:</p>
-<ul>
-<li><strong>Policyer</strong> – korta kvalitets-, miljö- och arbetsmiljöpolicyer på företagsnivå.</li>
-<li><strong>Ansvarsfördelning</strong> – vem som är BAS-U, kontrollansvarig, miljöansvarig och vem som beslutar om åtgärder.</li>
-<li><strong>Rutiner</strong> – hur ni gör riskbedömning, egenkontroll, avvikelsehantering och avfallssortering.</li>
-<li><strong>Projektspecifik arbetsmiljöplan</strong> – ordnings- och skyddsregler, organisation och åtgärder för de riskfyllda arbeten som förekommer.</li>
-<li><strong>Egenkontrollmallar</strong> – kontrollpunkter kopplade till kontrollplanen.</li>
-<li><strong>Avfalls- och miljöplan</strong> – fraktioner, hämtning och hantering av farligt avfall.</li>
-</ul>
-
-<h2>Så bygger du KMA-planen steg för steg</h2>
-<ol>
-<li><strong>Företagsövergripande ledningssystem.</strong> Samla policyer och rutiner på ett ställe. För byggbranschen finns <strong>BF9K</strong> från Byggföretagen, ett certifierbart ledningssystem som integrerar kvalitet, miljö och arbetsmiljö och som kartlägger mot PBL – ett lättare alternativ än att köra separata ISO 9001, ISO 14001 och ISO 45001.</li>
-<li><strong>Ta fram mallar.</strong> Skapa återanvändbara mallar för egenkontroll, riskbedömning och avfallsplan så du slipper börja om vid varje projekt.</li>
-<li><strong>Bygg den projektspecifika delen.</strong> Fyll i arbetsmiljöplan och kontrollpunkter utifrån det aktuella projektets risker.</li>
-<li><strong>Genomför egenkontrollerna.</strong> Dokumentera löpande under produktionen, inte i efterhand.</li>
-<li><strong>Följ upp och revidera.</strong> Gör den årliga uppföljningen av SAM och uppdatera mallarna med det ni lärt er.</li>
-</ol>
-
-<h2>Företagsnivå vs projektnivå</h2>
-<p>Nyckeln till en KMA-plan som faktiskt används är att skilja på det som gäller hela företaget och det som är unikt för varje projekt. Policyer och rutiner skriver du en gång. Arbetsmiljöplan, egenkontroller och avfallsplan skapas per projekt utifrån de gemensamma mallarna. Då blir varje ny plan en ifyllnadsövning i stället för ett skrivarbete från noll – och du kan bevisa spårbarhet mot beställaren.</p>
-
-<h2>Vanliga misstag att undvika</h2>
-<ul>
-<li>Skriva en tjock plan som ingen läser i stället för korta, konkreta rutiner.</li>
-<li>Tro att en liten firma slipper arbetsmiljöplan – de 13 riskfyllda arbetena gäller även soloföretagare.</li>
-<li>Dokumentera egenkontroller i efterhand i stället för löpande.</li>
-<li>Glömma avfallssorteringens sex fraktioner och farligt avfall i miljödelen.</li>
-<li>Blanda ihop företagsnivå och projektnivå så planen måste skrivas om varje gång.</li>
-</ul>
-
-<h2>Så gör du i ByggExp</h2>
-<p>I ByggExp lägger du upp dina egenkontroller som mallar en gång och kopplar dem sedan till varje projekt. Uppgifter och kontrollpunkter fördelas per projekt så att rätt person ansvarar för rätt kontroll, och dokumentationen samlas där arbetet utförs i stället för i lösa pappersblanketter. Det gör att kvalitetsbenet i din KMA-plan blir spårbart och lätt att visa upp för beställaren. ByggExp ersätter inte det juridiska ansvaret enligt PBL, Miljöbalken eller Arbetsmiljölagen – men det gör det enklare att hålla ordning på egenkontroller och uppgifter projekt för projekt.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Är en KMA-plan ett lagkrav?</h3>
-<p>Nej, KMA-plan är inget eget lagbegrepp och ingen enskild lag kräver just det dokumentet. Kravet uppstår genom att kombinera PBL, Miljöbalken och Arbetsmiljölagen, och en samlad KMA-plan begärs ofta av beställaren i upphandlingen snarare än direkt av lagstiftaren.</p>
-<h3>Måste ett litet företag ha en arbetsmiljöplan?</h3>
-<p>Ja, i vissa fall. Arbetsmiljöplan krävs alltid – oavsett storlek, även för en ensam hantverkare – om något av de 13 särskilt riskfyllda arbetena förekommer, till exempel fallrisk på två meter eller mer. Annars krävs den när arbetet överstiger 30 arbetsdagar med fler än 20 personer samtidigt, eller totalt 500 persondagar.</p>
-<h3>Vad är skillnaden mellan egenkontroll och kontrollplan?</h3>
-<p>Kontrollplanen enligt PBL beskriver vilka kontroller som ska göras i projektet och beslutas i bygglovsprocessen. Egenkontrollen är den metod du som entreprenör använder för att kontrollera och dokumentera att arbetet uppfyller de kraven. Egenkontrollen är därmed kvalitetsbenet i KMA-planen.</p>
-<h3>Räcker det med mallar, eller behöver jag ett ledningssystem?</h3>
-<p>Mallar räcker för att komma igång, men ett företagsövergripande ledningssystem gör arbetet mer hållbart. För mindre byggföretag är Byggföretagens BF9K ett smidigt alternativ som integrerar kvalitet, miljö och arbetsmiljö utan att du behöver tre separata ISO-system.</p>
-
-<h2>Kom igång</h2>
-<p>Börja med <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och bygg vidare med fler mallar i vår <a href="/sv/verktyg">verktygssamling</a>. Vill du se hur egenkontroller och uppgifter kopplas per projekt i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi hur du får KMA-planen att leva i vardagen i stället för i en pärm.</p>
-
-<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan – när krävs den och vad ska den innehålla</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/bas-p-bas-u">BAS-P och BAS-U – roller och ansvar</a>.</p>
-`;
-
-const A_KMA_PLAN_MALL: BlogPost = {
-  _id: "code-"+"kma-plan-mall",
-  title: "KMA-plan mall: så bygger du en nedbantad plan som håller", slug: "kma-plan-mall", locale: "sv",
-  excerpt: "KMA-plan behöver inte vara tjock. Så täcker du kvalitet, miljö och arbetsmiljö med korta rutiner och återanvändbara mallar per projekt.", tag: "Kvalitet & arbetsmiljö",
-  coverImageUrl: "/landing/verktyg/egenkontroll-preview.webp", contentHtml: A_KMA_PLAN_MALL_HTML,
-  seoTitle: "KMA-plan mall för byggföretag | ByggExp", seoDescription: "Så bygger du en nedbantad KMA-plan som täcker kvalitet, miljö och arbetsmiljö enligt PBL, Miljöbalken och Arbetsmiljölagen – med mallar per projekt.",
-  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T05:33:00.000Z", createdAt: "2026-08-19T05:33:00.000Z", updatedAt: "2026-08-19T05:33:00.000Z",
 };
 
 const A_NYA_GRANSVARDEN_2026_DIISOCYANATER_HTML = `
@@ -932,7 +692,7 @@ const A_NYA_GRANSVARDEN_2026_DIISOCYANATER_HTML = `
 <h2>Kom igång</h2>
 <p>Börja med att inventera dina produkter och samla utbildningsbevisen – och lägg in kemikalie- och skyddskontrollerna i <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall</a>. Vill du se hur riskbedömning och dokumentation kan hänga ihop i ett flöde är du välkommen att <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a> och <a href="/sv/blog/arbetsmiljoplan">Så skriver du en arbetsmiljöplan</a>.</p>
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a> och <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Så skriver du en arbetsmiljöplan</a>.</p>
 `;
 
 const A_NYA_GRANSVARDEN_2026_DIISOCYANATER: BlogPost = {
@@ -1019,7 +779,7 @@ const A_SKYDDSROND_BYGG_CHECKLISTA_HTML = `
 <h2>Kom igång</h2>
 <p>Ladda ner <a href="/sv/verktyg/skyddsrond-mall">vår mall för skyddsrondsprotokoll</a> och ta med den på nästa rond, eller boka en <a href="/sv/contact">demo</a> så visar vi hur ni får handlingsplanen och uppföljningen på plats digitalt.</p>
 
-<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan på bygget</a>, <a href="/sv/blog/bas-p-bas-u">Bas-P och Bas-U – roller och ansvar</a>, <a href="/sv/blog/fallskydd-krav-bygg">Fallskydd – krav på bygget</a>.</p>
+<p>Relaterat: <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Arbetsmiljöplan på bygget</a>, <a href="/sv/blog/bas-p-bas-u">Bas-P och Bas-U – roller och ansvar</a>, <a href="/sv/blog/fallskydd-krav-bygg">Fallskydd – krav på bygget</a>.</p>
 `;
 
 const A_SKYDDSROND_BYGG_CHECKLISTA: BlogPost = {
@@ -1112,7 +872,7 @@ const A_RISKBEDOMNING_BYGGARBETSPLATS_MALL_HTML = `
 <h2>Kom igång</h2>
 <p>Ladda ner och anpassa vår <a href="/sv/verktyg/riskbedomning-mall">gratis riskbedömningsmall</a> och koppla den till din <a href="/sv/verktyg/egenkontroll-mall">egenkontrollmall</a> för en komplett rutin. Vill du se hur riskbedömning, egenkontroll och dokumentation hänger ihop i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi.</p>
 
-<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan (AMP) – krav och innehåll</a>, <a href="/sv/blog/fallskydd-krav-bygg">Fallskydd – krav på bygget</a>, <a href="/sv/blog/heta-arbeten">Heta arbeten – regler och tillstånd</a>.</p>
+<p>Relaterat: Arbetsmiljöplan (AMP) – krav och innehåll, <a href="/sv/blog/fallskydd-krav-bygg">Fallskydd – krav på bygget</a>, <a href="/sv/blog/heta-arbeten">Heta arbeten – regler och tillstånd</a>.</p>
 `;
 
 const A_RISKBEDOMNING_BYGGARBETSPLATS_MALL: BlogPost = {
@@ -1123,106 +883,6 @@ const A_RISKBEDOMNING_BYGGARBETSPLATS_MALL: BlogPost = {
   seoTitle: "Riskbedömning byggarbetsplats mall | ByggExp", seoDescription: "Skriftlig riskbedömning innan varje riskfyllt moment är lagkrav – även för småfirmor. Så gör du enligt AFS 2023:1 och 2023:3. Ladda ner gratis mall.",
   seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T11:24:00.000Z", createdAt: "2026-08-19T11:24:00.000Z", updatedAt: "2026-08-19T11:24:00.000Z",
-};
-
-const A_SYSTEMATISKT_ARBETSMILJOARBETE_LITET_BYGGFORETAG_HTML = `
-<p>Många små byggföretag tror att systematiskt arbetsmiljöarbete (SAM) är något för de stora aktörerna med HR-avdelning och pärmar i hyllmeter. Det stämmer inte. SAM gäller <strong>alla</strong> arbetsgivare enligt AFS 2023:1 – även enmansföretag med en enda anställd. Den goda nyheten är att kraven på hur mycket ni faktiskt måste skriva ner skiljer sig beroende på hur många ni är. Under tio anställda slipper ni en hel del papper, om ni bara vet var gränsen går.</p>
-
-<p>Den här artikeln reder ut exakt vad ett byggföretag med två, tre eller fem anställda måste dokumentera – och vad som räcker att ha muntligt. Ett effektivt sätt att komma igång med den skriftliga delen är att utgå från en färdig struktur: testa <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll- och riskbedömningsmall &rarr;</a> och slipp bygga allt från noll.</p>
-
-<h2>Vad är SAM och vad ändrades 2025?</h2>
-<p>Den 1 januari 2025 trädde AFS 2023:1 – &quot;Systematiskt arbetsmiljöarbete – grundläggande skyldigheter för dig med arbetsgivaransvar&quot; – i kraft och ersatte den gamla AFS 2001:1. Samtidigt sorterade Arbetsmiljöverket om cirka 2 300 paragrafer i de tidigare föreskrifterna till 15 nya, tydligare strukturerade regelverk (AFS 2023:1–15).</p>
-<p>Det viktiga att förstå: <strong>grundkraven är i sak oförändrade</strong>. Det har alltså inte tillkommit någon ny administrativ börda – det är främst paragrafnumrering och struktur som är ny. SAM-metoden är densamma cykliska som tidigare:</p>
-<ul>
-<li><strong>Undersöka</strong> arbetsmiljön löpande</li>
-<li><strong>Riskbedöma</strong> det ni hittar</li>
-<li><strong>Åtgärda</strong> riskerna – omgående eller via en handlingsplan</li>
-<li><strong>Kontrollera och följa upp</strong> att åtgärderna fungerar, minst en gång per år</li>
-</ul>
-<p>Kärnan är att arbetsmiljöarbetet ska vara en naturlig del av den dagliga driften, inte en engångsövning inför en inspektion.</p>
-
-<h2>10-anställdagränsen: vad måste vara skriftligt – och vad räcker muntligt?</h2>
-<p>Här ligger själva poängen för det lilla byggföretaget. Fyra saker behöver bara dokumenteras <strong>skriftligt om ni har tio eller fler anställda</strong>:</p>
-<ul>
-<li><strong>Arbetsmiljöpolicy</strong> (7 §)</li>
-<li><strong>Rutiner</strong> för arbetsmiljöarbetet (8 §)</li>
-<li><strong>Fördelning av arbetsmiljöuppgifter</strong> – vem som ansvarar för vad (9 §)</li>
-<li><strong>Resultatet av den årliga uppföljningen</strong> (14 §)</li>
-</ul>
-<p>Har ni färre än tio anställda får dessa fyra vara muntliga. Men läs den här meningen en gång till: undantaget gäller <strong>formen</strong>, inte skyldigheten. Ni måste fortfarande <em>ha</em> en arbetsmiljöpolicy, <em>ha</em> rutiner, faktiskt <em>fördela</em> arbetsmiljöuppgifterna och <em>göra</em> en årlig uppföljning – det behöver bara inte vara nedskrivet. I praktiken är det ofta ändå enklast att skriva några rader, eftersom en muntlig uppgiftsfördelning är svår att bevisa om Arbetsmiljöverket eller en skadad medarbetare frågar.</p>
-
-<h2>Detta måste ALLTID dokumenteras – även med 2–3 anställda</h2>
-<p>Oavsett hur få ni är finns det tre saker som alltid måste finnas skriftligt:</p>
-<ul>
-<li><strong>Riskbedömningar</strong> (11 §) – det ni kommer fram till när ni undersöker arbetsmiljön</li>
-<li><strong>Handlingsplan</strong> (13 §) för åtgärder som inte genomförs omgående, med <strong>vad</strong> som ska göras, <strong>vem</strong> som ansvarar och <strong>när</strong> det ska vara klart</li>
-<li><strong>Instruktioner</strong> (10 §) för arbete med allvarliga risker</li>
-</ul>
-<p>Det här gäller alltså även ett byggföretag med två eller tre anställda. Några konkreta byggexempel:</p>
-<ul>
-<li><strong>Takarbete:</strong> skriftlig riskbedömning av fallrisk, plus en instruktion för hur fallskydd och förankring ska användas.</li>
-<li><strong>Rivning:</strong> riskbedömning av damm, asbestmisstanke och rasrisk, med instruktion om andningsskydd och avspärrning.</li>
-<li><strong>Ställningsmontage:</strong> riskbedömning och instruktion om vem som får montera, kontrollera och märka ställningen.</li>
-</ul>
-<p>Kan ni fixa risken direkt? Gör det och notera att den är åtgärdad. Kan ni inte det – till exempel för att ni väntar på material eller utbildning – då ska det in i handlingsplanen med datum och ansvarig.</p>
-
-<h2>Byggspecifika krav ovanpå SAM: arbetsmiljöplan, BAS-P/BAS-U och förhandsanmälan</h2>
-<p>SAM enligt AFS 2023:1 är basen, men på en byggarbetsplats tillkommer AFS 2023:3 (Projektering och byggarbetsmiljösamordning), som från 1 januari 2025 ersatte AFS 1999:3. Den kräver att ni utser <strong>byggarbetsmiljösamordnare</strong> – BAS-P för planering och projektering och BAS-U för utförandet – och att det finns en <strong>arbetsmiljöplan (AMP)</strong>.</p>
-<p>Arbetsmiljöplanen ska vara framtagen <strong>innan</strong> byggarbetsplatsen etableras och hållas uppdaterad under hela byggtiden. Den krävs bland annat när arbete med särskild risk förekommer – till exempel fallrisk över två meter, arbete nära högspänning eller rasrisk – eller när förhandsanmälan behövs.</p>
-<p><strong>Förhandsanmälan</strong> till Arbetsmiljöverket krävs innan byggstart när arbetet beräknas pågå längre än 30 arbetsdagar och mer än 20 personer sysselsätts samtidigt, <strong>eller</strong> när det totala antalet persondagar överstiger 500.</p>
-<p>Ta det här på allvar: sanktionsavgiften för en saknad arbetsmiljöplan är <strong>50 000 kr</strong> vid projekt som kräver förhandsanmälan och <strong>10 000 kr</strong> vid övriga projekt som omfattas av kravet. Avgiften tas ut vid tillsyn oavsett om en olycka har skett. Det enda undantaget är om hela bygg- eller anläggningsarbetet pågår i högst två dagar i följd.</p>
-
-<h2>Glöm inte OSA och arbetsanpassning (AFS 2023:2)</h2>
-<p>Många missar att den organisatoriska och sociala arbetsmiljön (OSA) numera ligger i AFS 2023:2 (Planering och organisering av arbetsmiljöarbete), som också gäller från 1 januari 2025 och ska integreras i ert SAM. Där hamnade även arbetsanpassning, första hjälpen, våld och hot samt ensamarbete.</p>
-<p>OSA – stress, arbetsbelastning, arbetstid och kränkande särbehandling – är alltså en <strong>obligatorisk</strong> del även för små byggföretag. Ensamarbete är särskilt relevant i branschen: en snickare som ensam gör ett takjobb eller en servicetekniker ute på uppdrag omfattas. Ta med det när ni riskbedömer.</p>
-
-<h2>Så bygger ni ett SAM utan pappersberg – 6 steg</h2>
-<ol>
-<li><strong>Skriv en enkel policy.</strong> Några meningar om att ni prioriterar en säker arbetsplats räcker långt – även om ni formellt slipper skriva den under tio anställda.</li>
-<li><strong>Fördela uppgifterna.</strong> Bestäm vem som ansvarar för vad och skriv ner det på en halv sida.</li>
-<li><strong>Gör en skriftlig riskbedömning per projekt eller riskfyllt moment.</strong> Detta är obligatoriskt oavsett storlek – återanvänd en mall.</li>
-<li><strong>Upprätta en handlingsplan</strong> för det som inte fixas direkt, med vad, vem och när.</li>
-<li><strong>Ha en rutin för tillbud och olyckor</strong> så alla vet hur de rapporterar och vad som händer sen.</li>
-<li><strong>Boka in den årliga uppföljningen i kalendern.</strong> En timme en gång om året där ni går igenom vad som hänt och vad som ska förbättras.</li>
-</ol>
-<p>Tricket är att återanvända samma mallar projekt efter projekt och samla allt digitalt i stället för i lösa papper.</p>
-
-<h2>Vanliga misstag och hur ni undviker dem</h2>
-<ul>
-<li><strong>Att tro att SAM inte gäller små företag.</strong> Det gör det – från första anställd.</li>
-<li><strong>Att strunta i skriftlig riskbedömning</strong> med argumentet &quot;vi är för få&quot;. Den är alltid obligatorisk.</li>
-<li><strong>Att sakna arbetsmiljöplan på bygget.</strong> Sanktionsavgiften kommer oavsett om något gått fel.</li>
-<li><strong>Att glömma OSA och ensamarbete.</strong> Stress och ensamjobb ska riskbedömas som vilken risk som helst.</li>
-<li><strong>Att göra allt en gång och sedan lägga det i byrålådan.</strong> SAM är cykliskt – uppföljningen varje år är själva poängen.</li>
-</ul>
-
-<h2>Så gör du i ByggExp</h2>
-<p>ByggExp hjälper er att hålla ordning på den dokumentation som faktiskt är obligatorisk – riskbedömningar, handlingsplaner och instruktioner – utan att bygga ett eget system från grunden. Med färdiga mallar för egenkontroll och riskbedömning fyller ni i vad, vem och när, sparar dokumentet digitalt per projekt och återanvänder samma struktur nästa gång i stället för att börja om. Ni får ett samlat ställe att lägga arbetsmiljöplanen och de skriftliga riskbedömningarna, så att allt finns framme om Arbetsmiljöverket frågar. ByggExp fattar inga beslut åt er om vilka risker som gäller på just ert bygge – men verktyget gör det enkelt att dokumentera det ni kommer fram till och att spara det digitalt så länge ni behöver ha det tillgängligt.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Måste ett byggföretag med bara två anställda ha systematiskt arbetsmiljöarbete?</h3>
-<p>Ja. SAM enligt AFS 2023:1 gäller alla arbetsgivare oavsett storlek, även ett företag med en enda anställd. Skillnaden för små företag är att fyra saker – policy, rutiner, uppgiftsfördelning och resultatet av den årliga uppföljningen – får vara muntliga under tio anställda. Riskbedömningar, handlingsplan och instruktioner för allvarliga risker måste dock alltid vara skriftliga.</p>
-<h3>Vad måste alltid dokumenteras skriftligt även under 10 anställda?</h3>
-<p>Tre saker: riskbedömningar (11 §), handlingsplan för åtgärder som inte genomförs omgående med vad, vem och när (13 §), samt instruktioner för arbete med allvarliga risker (10 §). Detta gäller oavsett hur få ni är.</p>
-<h3>När krävs en arbetsmiljöplan och vad kostar det att sakna den?</h3>
-<p>En arbetsmiljöplan krävs bland annat när arbete med särskild risk förekommer eller när förhandsanmälan behövs. Saknas den blir sanktionsavgiften 50 000 kr vid projekt som kräver förhandsanmälan och 10 000 kr vid övriga projekt som omfattas av kravet. Undantag gäller bara om hela arbetet pågår i högst två dagar i följd.</p>
-<h3>Behöver små byggföretag jobba med OSA och stress?</h3>
-<p>Ja. Organisatorisk och social arbetsmiljö ligger i AFS 2023:2 och ska integreras i ert SAM. Stress, arbetsbelastning, kränkande särbehandling och ensamarbete ska hanteras även i det lilla byggföretaget.</p>
-
-<h2>Kom igång</h2>
-<p>Börja med det som alltid är obligatoriskt: en skriftlig riskbedömning per projekt. Utgå från <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll- och riskbedömningsmall &rarr;</a> så har ni en struktur att fylla i direkt. Vill ni se hur ni samlar arbetsmiljödokumentationen digitalt per projekt, <a href="/sv/contact">boka en gratis konsultation av ByggExp här</a>.</p>
-
-<p>Relaterat: <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>, <a href="/sv/blog/arbetsmiljoplan">Så skriver du en arbetsmiljöplan</a> och <a href="/sv/blog/arbetsmiljoverket-nya-regler-2026-bygg">Arbetsmiljöverkets nya regler 2026 för bygg</a>.</p>
-`;
-
-const A_SYSTEMATISKT_ARBETSMILJOARBETE_LITET_BYGGFORETAG: BlogPost = {
-  _id: "code-"+"systematiskt-arbetsmiljoarbete-litet-byggforetag",
-  title: "Systematiskt arbetsmiljöarbete för litet byggföretag – så mycket måste du dokumentera", slug: "systematiskt-arbetsmiljoarbete-litet-byggforetag", locale: "sv",
-  excerpt: "SAM gäller alla arbetsgivare enligt AFS 2023:1 – även enmansföretag. Så vet ett litet byggföretag vad som måste dokumenteras skriftligt och vad som får vara muntligt.", tag: "Arbetsmiljö",
-  coverImageUrl: "/landing/features/6verktyg.webp", contentHtml: A_SYSTEMATISKT_ARBETSMILJOARBETE_LITET_BYGGFORETAG_HTML,
-  seoTitle: "SAM för litet byggföretag – vad måste dokumenteras | ByggExp", seoDescription: "SAM enligt AFS 2023:1 gäller alla byggföretag – även med två anställda. Så vet du vad som måste vara skriftligt och vad som räcker muntligt under tio anställda.",
-  seoImageUrl: `${SITE_URL}/landing/features/6verktyg.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T12:30:00.000Z", createdAt: "2026-08-19T12:30:00.000Z", updatedAt: "2026-08-19T12:30:00.000Z",
 };
 
 const A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG_HTML = `
@@ -1290,7 +950,7 @@ const A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Börja med en tydlig APD-plan och håll den uppdaterad genom hela bygget. Minimikraven att bocka av: AMP klar före byggstart, förhandsanmälan gjord vid trösklarna, och en aktuell APD-plan synlig på plats. Använd <a href="/sv/verktyg">våra gratis byggverktyg</a> som stomme, eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur du kopplar plan, arbetsmiljö och egenkontroll i ett flöde.</p>
 
-<p>Relaterat: <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan (AMP) – så gör du</a>, <a href="/sv/blog/startmote-byggprojekt-checklista">Startmöte i byggprojekt: checklista</a>, <a href="/sv/blog/bas-p-bas-u">Bas-P och Bas-U: roller och ansvar</a>.</p>
+<p>Relaterat: <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Arbetsmiljöplan (AMP) – så gör du</a>, <a href="/sv/blog/startmote-byggprojekt-checklista">Startmöte i byggprojekt: checklista</a>, <a href="/sv/blog/bas-p-bas-u">Bas-P och Bas-U: roller och ansvar</a>.</p>
 `;
 
 const A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG: BlogPost = {
@@ -1374,7 +1034,7 @@ const A_ARBETSBEREDNING_MALL_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Börja med att fylla i <a href="/sv/verktyg/arbetsberedning-mall">vår kostnadsfria arbetsberedning-mall</a>, eller bläddra bland fler <a href="/sv/verktyg">gratis verktyg för byggföretag</a>. Vill du se hur beredning, egenkontroll och projektdokumentation hänger ihop i ett flöde? <a href="/sv/contact">Boka en gratis konsultation →</a></p>
 
-<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>, <a href="/sv/blog/kma-plan-mall">KMA-plan mall</a> och <a href="/sv/blog/startmote-byggprojekt-checklista">Checklista för startmöte i byggprojekt</a>.</p>
+<p>Relaterat: <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll i byggprojekt</a>, <a href="/sv/blog/kvalitetsplan-bygg">KMA-plan mall</a> och <a href="/sv/blog/startmote-byggprojekt-checklista">Checklista för startmöte i byggprojekt</a>.</p>
 `;
 
 const A_ARBETSBEREDNING_MALL_BYGG: BlogPost = {
@@ -1470,7 +1130,7 @@ const A_PERSONLIG_SKYDDSUTRUSTNING_KRAV_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Se över att din PPE-rutin och dina arbetsmiljödokument pekar mot de nya AFS-numren, och lägg in kontrollpunkterna i den löpande egenkontrollen. Börja med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> eller bläddra bland <a href="/sv/verktyg">alla gratis verktyg för byggföretag</a>. Vill du se hur dokumentationen fungerar i praktiken för dina projekt kan du <a href="/sv/contact">boka en gratis konsultation</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/fallskydd-krav-bygg">Fallskydd på bygget — krav och regler</a>, <a href="/sv/blog/kvartsdamm-regler-bygg">Kvartsdamm — regler och gränsvärden</a>, <a href="/sv/blog/arbetsmiljoplan">Arbetsmiljöplan — så gör du</a>.</p>
+<p>Relaterat: <a href="/sv/blog/fallskydd-krav-bygg">Fallskydd på bygget — krav och regler</a>, <a href="/sv/blog/kvartsdamm-regler-bygg">Kvartsdamm — regler och gränsvärden</a>, <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Arbetsmiljöplan — så gör du</a>.</p>
 `;
 
 const A_PERSONLIG_SKYDDSUTRUSTNING_KRAV_BYGG: BlogPost = {
@@ -1561,7 +1221,7 @@ const A_TILLBUD_ARBETSSKADA_ANMALAN_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Börja med att strukturera hur ni fångar tillbud och gör egenkontroller på arbetsplatsen med <a href="/sv/verktyg/egenkontroll-mall">vår kostnadsfria egenkontroll-mall</a>, och se fler verktyg i <a href="/sv/verktyg">verktygslådan</a>. Vill du se hur dokumentation och uppföljning fungerar i praktiken? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>, <a href="/sv/blog/arbetsmiljoplan">Så skriver du en arbetsmiljöplan</a> och <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
+<p>Relaterat: <a href="/sv/blog/arbetsmiljoansvar-egenforetagare">Arbetsmiljöansvar för egenföretagare</a>, <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Så skriver du en arbetsmiljöplan</a> och <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll i byggprojekt</a>.</p>
 `;
 
 const A_TILLBUD_ARBETSSKADA_ANMALAN_BYGG: BlogPost = {
@@ -1640,7 +1300,7 @@ const A_ARBETSMILJOVERKET_INSPEKTION_BYGG_2026_HTML = `
 <h2>Kom igång</h2>
 <p>Börja med att gå igenom era projekt mot checklistan ovan och säkra att arbetsmiljöplanen är ett levande dokument. Utgå från <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> eller bläddra bland fler <a href="/sv/verktyg">gratis byggverktyg</a>. Vill ni se hur ByggExp håller dokumentationen samlad inför en inspektion, <a href="/sv/contact">boka en kort demo</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/skyddsrond-bygg-checklista">Skyddsrond på bygget – checklista</a>, <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Riskbedömning på byggarbetsplats – mall</a> och <a href="/sv/blog/systematiskt-arbetsmiljoarbete-litet-byggforetag">Systematiskt arbetsmiljöarbete för det lilla byggföretaget</a>.</p>
+<p>Relaterat: <a href="/sv/blog/skyddsrond-bygg-checklista">Skyddsrond på bygget – checklista</a> och <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Riskbedömning på byggarbetsplats – mall</a>.</p>
 `;
 
 const A_ARBETSMILJOVERKET_INSPEKTION_BYGG_2026: BlogPost = {
@@ -1721,7 +1381,7 @@ const A_ENSAMARBETE_BYGG_REGLER_HTML = `
 <h2>Kom igång</h2>
 <p>Börja med att lista vilka moment som får respektive inte får utföras ensam, utse en kontaktperson och sätt ett incheckningsintervall. Dokumentera bedömningen med vår <a href="/sv/verktyg/egenkontroll-mall">egenkontroll- och checklistmall</a>, eller utforska fler gratisverktyg i <a href="/sv/verktyg">ByggExp verktygslåda</a>. Vill du se hur rutinerna fungerar samlat i ett system? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi dig.</p>
 
-<p>Relaterat: <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Riskbedömning på byggarbetsplats – mall</a>, <a href="/sv/blog/systematiskt-arbetsmiljoarbete-litet-byggforetag">Systematiskt arbetsmiljöarbete i litet byggföretag</a>, <a href="/sv/blog/skyddsrond-bygg-checklista">Skyddsrond på bygget – checklista</a>.</p>
+<p>Relaterat: <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Riskbedömning på byggarbetsplats – mall</a> och <a href="/sv/blog/skyddsrond-bygg-checklista">Skyddsrond på bygget – checklista</a>.</p>
 `;
 
 const A_ENSAMARBETE_BYGG_REGLER: BlogPost = {
@@ -1805,7 +1465,7 @@ const A_MASKINFORARBEVIS_HJULLASTARE_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Samla behörigheter, kompetensintyg och körtillstånd på ett ställe och slipp leta i pärmar. Testa <a href="/sv/verktyg">våra gratis verktyg</a> eller <a href="/sv/contact">boka en gratis konsultation</a> så visar vi hur ni bygger in behörighetskontrollen i era rutiner.</p>
 
-<p>Relaterat: <a href="/sv/blog/byggstallning-regler-krav">Byggställning – regler och krav</a>, <a href="/sv/blog/personlig-skyddsutrustning-krav-bygg">Krav på personlig skyddsutrustning på bygget</a> och <a href="/sv/blog/systematiskt-arbetsmiljoarbete-litet-byggforetag">Systematiskt arbetsmiljöarbete i det lilla byggföretaget</a>.</p>
+<p>Relaterat: <a href="/sv/blog/byggstallning-regler-krav">Byggställning – regler och krav</a>, <a href="/sv/blog/personlig-skyddsutrustning-krav-bygg">Krav på personlig skyddsutrustning på bygget</a> och <a href="/sv/blog/riskbedomning-byggarbetsplats-mall">Systematiskt arbetsmiljöarbete i det lilla byggföretaget</a>.</p>
 `;
 
 const A_MASKINFORARBEVIS_HJULLASTARE_BYGG: BlogPost = {
@@ -1993,20 +1653,16 @@ const A_BULLER_VIBRATIONER_BYGG_GRANSVARDE: BlogPost = {
 };
 
 export const ARBETSMILJO_ARTICLES: BlogPost[] = [
-  AMP,
   HETA_ARBETEN,
   ARBMILJO,
   BASPBASU,
   A_KVARTSDAMM_REGLER_BYGG,
   A_BYGGSTALLNING_REGLER_KRAV,
-  A_ARBETSMILJOVERKET_NYA_REGLER_2026_BYGG,
   A_NYA_ASBESTREGLER_2026,
   A_FALLSKYDD_KRAV_BYGG,
-  A_KMA_PLAN_MALL,
   A_NYA_GRANSVARDEN_2026_DIISOCYANATER,
   A_SKYDDSROND_BYGG_CHECKLISTA,
   A_RISKBEDOMNING_BYGGARBETSPLATS_MALL,
-  A_SYSTEMATISKT_ARBETSMILJOARBETE_LITET_BYGGFORETAG,
   A_APD_PLAN_ARBETSPLATSDISPOSITION_BYGG,
   A_ARBETSBEREDNING_MALL_BYGG,
   A_PERSONLIG_SKYDDSUTRUSTNING_KRAV_BYGG,

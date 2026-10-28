@@ -1,205 +1,6 @@
 import type { BlogPost } from '../../types/blog';
 import { SITE_URL } from './site-url';
 
-
-const EGENKONTROLL_HTML = `
-<p>Egenkontroll är det som styrker att jobbet är gjort rätt – och det som räddar dig när någon i efterhand ifrågasätter kvaliteten. Men ordet betyder faktiskt två olika saker, och det är här många går vilse. Här reder vi ut vad en egenkontroll är, vad den ska innehålla, hur den hänger ihop med KMA – och hur du gör den utan pappersstrul.</p>
-<figure class="article-diagram"><img src="/landing/diagrams/egenkontroll-cykel.webp" alt="Diagram: egenkontrollens cykel – planera, kontrollera, dokumentera, åtgärda avvikelse" width="720" height="380" loading="lazy"><figcaption>Egenkontrollen är en cykel: planera kontrollpunkterna, kontrollera, dokumentera med signatur och datum, åtgärda avvikelser.</figcaption></figure>
-
-<p><a href="/sv/verktyg/egenkontroll-mall">Skapa en egenkontroll med AI för ditt moment – eller ladda ner en gratis mall (PDF) →</a></p>
-
-<h2>Vad är en egenkontroll?</h2>
-<p>En egenkontroll är din egen dokumenterade kontroll av att arbetet uppfyller kraven – ritningar, Boverkets byggregler (bl.a. BFS 2024:6–2024:13, som ersatte BBR 1 juli 2025) och gällande branschregler. Har ansökan om bygglov eller anmälan kommit in före 1 juli 2026 får BBR fortfarande tillämpas – ange då det i kravkolumnen. Den ska innehålla tillräckligt för att någon annan ska kunna följa <em>vad</em> som kontrollerades, <em>mot vilket krav</em> och <em>med vilket resultat</em>. Egenkontrollen är ofta det enda beviset på att ett dolt moment – till exempel tätskikt eller infästning – faktiskt utfördes korrekt.</p>
-
-<h2>Två olika &quot;egenkontroll&quot; – blanda inte ihop dem</h2>
-<p>Detta är den vanligaste förvirringen, och Boverket varnar själva för den:</p>
-<ul>
-<li><strong>Entreprenörens egenkontroll (avtalsrätt).</strong> Din kontroll av att det du bygger uppfyller kontraktshandlingar och regler. Det är den här du gör dagligen på bygget.</li>
-<li><strong>Byggherrens egenkontroll enligt PBL (offentlig rätt).</strong> En del av <strong>kontrollplanen enligt plan- och bygglagen (PBL) 10 kap</strong>. Ansvaret ligger på byggherren, med stöd av en <strong>kontrollansvarig (KA)</strong>, och handlar om att styrka kraven mot samhället i bygglovsprocessen.</li>
-</ul>
-<p>Samma ord, olika syfte. I praktiken används ofta entreprenörens egenkontroller som den metod som anges i kontrollplanen för att styrka att kraven är uppfyllda.</p>
-
-<h2>Vad ska en egenkontroll innehålla?</h2>
-<p>En användbar egenkontroll har alltid dessa delar per kontrollpunkt:</p>
-<ul>
-<li><strong>Kontrollpunkt</strong> – vad som kontrolleras (t.ex. infästning, fall mot brunn, fuktkvot)</li>
-<li><strong>Krav / mot vad</strong> – ritning, Boverkets byggregler, monteringsanvisning eller branschregel</li>
-<li><strong>Kontrollmetod</strong> – mätning, okulär kontroll, protokoll</li>
-<li><strong>Resultat</strong> – godkänd / ej godkänd (gärna med värde, t.ex. &quot;fuktkvot 8 %&quot;)</li>
-<li><strong>Avvikelse och åtgärd</strong> – om något inte höll måttet, vad gjordes</li>
-<li><strong>Datum och signatur</strong> – vem kontrollerade och när</li>
-<li><strong>Foto</strong> – särskilt viktigt för moment som byggs in och inte syns sedan</li>
-</ul>
-
-<h2>Exempel: en ifylld egenkontroll</h2>
-<p>Så här kan en rad i en egenkontroll se ut:</p>
-<ul>
-<li><strong>Kontrollpunkt:</strong> Tätskikt i våtrum, golv</li>
-<li><strong>Krav:</strong> BFS 2024:8 (fuktsäkerhet) + tillverkarens monteringsanvisning, GVK</li>
-<li><strong>Metod:</strong> Okulär + kontroll av skikttjocklek och uppvik</li>
-<li><strong>Resultat:</strong> Godkänd – uppvik 150 mm, inga blåsor</li>
-<li><strong>Avvikelse:</strong> Ingen</li>
-<li><strong>Datum / sign:</strong> 2026-05-14 / A. Nilsson</li>
-<li><strong>Foto:</strong> 2 bilder på färdigt tätskikt före plattsättning</li>
-</ul>
-
-<h2>Egenkontroll och KMA</h2>
-<p><strong>KMA</strong> står för <strong>Kvalitet, Miljö och Arbetsmiljö</strong>. Egenkontrollen är kvalitetsdelen i praktiken – det är så du visar att arbetet håller måttet. Skilj på nivåerna: en <strong>KMA-handbok</strong> beskriver hur företaget arbetar med KMA övergripande, medan en <strong>KMA-plan</strong> beskriver hur KMA hanteras i ett specifikt projekt. Egenkontroller, riskbedömningar och avvikelsehantering är verktygen som fyller planen med innehåll.</p>
-
-<h2>Vanliga misstag</h2>
-<ul>
-<li><strong>Kryssa &quot;godkänd&quot; utan krav.</strong> En bock utan referens till ritning eller byggregel bevisar ingenting.</li>
-<li><strong>Fylla i i efterhand.</strong> Egenkontroll som skrivs vid slutbesiktning tappar sitt värde – gör den när momentet utförs.</li>
-<li><strong>Inga foton på dolda moment.</strong> Tätskikt, armering och infästningar byggs in – utan bild finns inget bevis.</li>
-<li><strong>Blanda ihop med kontrollplanen enligt PBL.</strong> De hänger ihop men har olika ansvar och syfte.</li>
-<li><strong>Samma mall till allt.</strong> Kontrollpunkterna ska matcha det aktuella momentet, inte en generisk lista.</li>
-</ul>
-
-<h2>Så gör du egenkontroll i ByggExp</h2>
-<ol>
-<li>Välj projekt och lägg till en egenkontroll för aktuellt moment.</li>
-<li>Använd färdiga kontrollpunkter eller lägg till egna med krav och metod.</li>
-<li>Markera resultat, notera eventuell avvikelse och åtgärd.</li>
-<li>Lägg till foton direkt – särskilt på det som byggs in.</li>
-<li>Signera och spara – allt ligger tidsstämplat i projektet och kan exporteras som underlag.</li>
-</ol>
-<p>Vill du börja enkelt? <a href="/sv/verktyg/egenkontroll-mall">Ladda ner vår gratis egenkontroll-mall</a> och fyll i den online – du får en färdig PDF.</p>
-
-<h2>Egenkontroll per yrke – färdiga mallar</h2>
-<p>Kontrollpunkterna skiljer sig mellan yrken. Välj en färdig mall som öppnar ifylld med rätt punkter för ditt moment:</p>
-<ul>
-<li><strong><a href="/sv/verktyg/egenkontroll-el-mall">Egenkontroll el</a></strong> – jordfelsbrytare, isolationsmätning (SS 436 40 00), märkning och skyddsledare.</li>
-<li><strong><a href="/sv/verktyg/egenkontroll-bygg-mall">Egenkontroll bygg / stomme</a></strong> – måttkontroll mot ritning, infästningar, fuktkontroll och brandtätning (BFS 2024:7).</li>
-<li><strong><a href="/sv/verktyg/egenkontroll-vvs-mall">Egenkontroll VVS</a></strong> – täthetsprovning, avstängningsventiler, rörisolering och fall på avlopp.</li>
-<li><strong><a href="/sv/verktyg/egenkontroll-vatrum-mall">Egenkontroll våtrum</a></strong> – tätskikt, genomföringar och fall mot golvbrunn enligt BBV/GVK.</li>
-<li><strong><a href="/sv/verktyg/egenkontroll-tak-mall">Egenkontroll tak</a></strong> – underlagstäckning, infästning, läktavstånd och taksäkerhet.</li>
-<li><strong><a href="/sv/verktyg/egenkontroll-ventilation-mall">Egenkontroll ventilation</a></strong> – luftflöden, injustering, kanaltäthet och OVK-underlag.</li>
-</ul>
-<p>Behöver du planera själva momentet först? Se även <a href="/sv/verktyg/arbetsberedning-mall">arbetsberedning-mallen</a> och <a href="/sv/verktyg/riskbedomning-mall">riskbedömning-mallen</a>.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Är egenkontroll ett lagkrav?</h3>
-<p>För åtgärder som kräver en kontrollplan enligt PBL är egenkontroll normalt den metod som anges för att styrka kraven. I entreprenader regleras egenkontroll dessutom ofta i kontraktshandlingarna. Oavsett är den din bästa försäkring om kvaliteten ifrågasätts.</p>
-<h3>Vad är skillnaden mellan egenkontroll och kontrollplan?</h3>
-<p>Kontrollplanen enligt PBL är byggherrens övergripande plan för vilka kontroller som ska göras i projektet. Egenkontrollerna är de faktiska, dokumenterade kontrollerna som ofta utförs av entreprenören och som styrker punkterna i planen.</p>
-<h3>Vem ska skriva egenkontrollen?</h3>
-<p>Den som utför arbetet ansvarar för sin egenkontroll. På bygget är det oftast hantverkaren eller arbetsledaren för respektive moment.</p>
-<h3>Vad är skillnaden mellan egenkontroll och KMA?</h3>
-<p>KMA är helheten – kvalitet, miljö och arbetsmiljö. Egenkontrollen är ett av verktygen inom kvalitetsdelen, det du använder för att dokumentera att kraven är uppfyllda.</p>
-
-<h2>Kom igång</h2>
-<p>Gör egenkontrollen där arbetet sker, med foto och signatur, kopplad till projektet. <a href="/sv/verktyg/egenkontroll-mall">Ladda ner gratis egenkontroll-mall (PDF)</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
-
-<p>Relaterade mallar: <a href="/sv/verktyg/byggdagbok-mall">Byggdagbok-mall</a> · <a href="/sv/blog/byggdagbok">Guide: byggdagbok</a></p>
-`.trim();
-
-const EGENKONTROLL: BlogPost = {
-  _id: 'code-egenkontroll',
-  title: 'Egenkontroll i bygg – vad den ska innehålla, mall och exempel',
-  slug: 'egenkontroll',
-  locale: 'sv',
-  excerpt:
-    'Vad en egenkontroll ska innehålla, de två betydelserna av ordet, kopplingen till KMA och kontrollplan enligt PBL – plus ifyllt exempel och gratis mall.',
-  tag: 'Egenkontroll',
-  coverImageUrl: '/landing/verktyg/egenkontroll-preview.webp',
-  contentHtml: EGENKONTROLL_HTML,
-  seoTitle: 'Egenkontroll bygg – gratis mall, exempel & PDF | ByggExp',
-  seoDescription:
-    'Vad ska en egenkontroll innehålla? Skillnaden mot kontrollplan enligt PBL och KMA, ett ifyllt exempel och en gratis egenkontroll-mall (PDF).',
-  seoImageUrl: `${SITE_URL}/landing/verktyg/egenkontroll-preview.webp`,
-  canonicalUrl: '',
-  noIndex: false,
-  isPublished: true,
-  publishedAt: '2026-08-12T10:00:00.000Z',
-  createdAt: '2026-08-12T10:00:00.000Z',
-  updatedAt: '2026-08-12T10:00:00.000Z',
-};
-
-const TIDRAPPORTERING_HTML = `
-<p><a href="/sv/blog/tidrapportering-hantverkare">Tidrapportering</a> känns som en administrativ börda – men det är faktiskt en av de mest lönsamma vanorna ett byggföretag kan ha. Rätt förd tid ger korrekt lön, säkrare fakturor, färre tvister och svaret på den viktigaste frågan av alla: hur stor andel av arbetstiden kan du egentligen fakturera? Här går vi igenom vad en tidrapport ska innehålla, skillnaden mot personalliggare, och hur du för tid utan pappersstrul.</p>
-
-<p><a href="/sv/verktyg/tidrapport-mall">Ladda ner en gratis tidrapport-mall (PDF/Excel) →</a></p>
-
-<h2>Varför tidrapportera?</h2>
-<p>Tidrapporten är underlag för flera saker på en gång:</p>
-<ul>
-<li><strong>Lön</strong> – rätt timmar, OB, övertid och mertid till rätt person.</li>
-<li><strong>Fakturering</strong> – vid löpande räkning är tiden det du tar betalt för; oregistrerad tid är förlorad intäkt.</li>
-<li><strong>Debiteringsgrad</strong> – hur stor andel av tiden som faktiskt gick att fakturera. Nyckeltalet som avgör om ditt timpris håller (se <a href="/sv/blog/timpris-hantverkare">guiden om timpris</a>).</li>
-<li><strong>Projektuppföljning</strong> – lade ni fler timmar än ni tog betalt för? Då blödde projektet.</li>
-</ul>
-
-<h2>Vad en tidrapport ska innehålla</h2>
-<ul>
-<li><strong>Datum</strong> och vem tiden gäller</li>
-<li><strong>Projekt/arbetsplats</strong> – gärna även moment eller kostnadsställe</li>
-<li><strong>Start- och sluttid</strong> eller antal timmar</li>
-<li><strong>Rast</strong> som dras av</li>
-<li><strong>OB, övertid och mertid</strong> noterat separat så lönen blir rätt</li>
-<li><strong>Restid och ställtid</strong> – även om den inte debiteras påverkar den debiteringsgraden</li>
-</ul>
-<p>Registrera gärna varje pass för sig när samma person jobbar på flera projekt eller moment samma dag.</p>
-<p>Jobbar ni under AB 04 eller ABT 06 tillkommer attest och ÄTA-timmar som ska kunna redovisas separat – se guiden om <a href="/sv/blog/tidrapportering-entreprenad">tidrapportering för entreprenad</a>.</p>
-
-<h2>Tidrapport vs personalliggare – inte samma sak</h2>
-<p>Många blandar ihop dem, men de har olika syften:</p>
-<ul>
-<li><strong>Tidrapport</strong> är ditt <em>interna</em> underlag för lön och fakturering. Formen bestämmer du själv.</li>
-<li><strong>Personalliggare</strong> är ett <em>lagkrav</em> från Skatteverket på de flesta byggarbetsplatser: en löpande förteckning över vilka som är på plats, kopplad till ID06. Den handlar om närvaro för Skatteverkets kontroll – inte om hur många timmar du fakturerar.</li>
-</ul>
-<p>Du behöver alltså oftast <strong>båda</strong>. Läs mer om <a href="/sv/blog/personalliggare">personalliggare</a> och <a href="/sv/blog/id06">ID06</a>.</p>
-
-<h2>OB, övertid och mertid</h2>
-<p>För att lönen ska bli rätt behöver tidrapporten skilja på vanlig tid och tillägg. OB (obekväm arbetstid), övertid (utöver ordinarie tid för heltid) och mertid (för deltidsanställda) styrs av kollektivavtal – notera dem separat direkt när tiden registreras, annars blir det gissningar vid lönekörningen.</p>
-
-<h2>Så för du tid i ByggExp</h2>
-<p>Med <a href="/sv/blog/mobil-tidrapportering">mobil tidrapportering</a> i ByggExp stämplar teamet tid direkt i telefonen, kopplat till rätt projekt – så att inget skrivs av på lappar i efterhand:</p>
-<ol>
-<li>Varje medarbetare startar och stoppar tid per projekt och moment.</li>
-<li>OB, övertid och restid registreras med tiden – klart för lön.</li>
-<li>Du ser nedlagd tid per projekt och din verkliga debiteringsgrad.</li>
-<li>Tiden blir direkt underlag för fakturan, med ROT och moms uträknat.</li>
-</ol>
-<p>Vill du börja på papper eller i Excel? <a href="/sv/verktyg/tidrapport-mall">Ladda ner tidrapport-mallen</a> – den finns för dag, vecka och månad, med PDF- och Excel-export. Ska ni välja system? Se <a href="/sv/blog/basta-tidrapporteringssystem-bygg">bästa tidrapporteringssystem för bygg</a> – 8 system jämförda med pris.</p>
-
-<h2>Vanliga frågor</h2>
-<h3>Vad är skillnaden mellan tidrapport och personalliggare?</h3>
-<p>Tidrapporten är ditt interna underlag för lön och fakturering och formen bestämmer du själv. Personalliggaren är ett lagkrav från Skatteverket – en närvaroförteckning kopplad till ID06 på byggarbetsplatsen. Du behöver oftast båda.</p>
-<h3>Är tidrapportering ett lagkrav?</h3>
-<p>Själva tidrapporten är inget uttryckligt lagkrav, men du behöver den för korrekt lön, fakturering och som underlag i bokföringen (sparas i sju år). Personalliggare är däremot lagkrav på de flesta byggarbetsplatser.</p>
-<h3>Hur räknar jag ut debiteringsgraden?</h3>
-<p>Dela de fakturerbara timmarna med de totalt arbetade. Registrerar du all tid – även restid och admin – ser du hur stor andel som faktiskt gick att debitera, vilket är avgörande för att sätta rätt timpris.</p>
-<h3>Måste OB och övertid stå med?</h3>
-<p>Ja, om de ska betalas rätt. Notera OB, övertid och mertid separat direkt vid registreringen så att lönen blir korrekt enligt kollektivavtalet.</p>
-
-<h2>Kom igång</h2>
-<p>Gör tidrapporteringen till en vana som betalar sig. <a href="/sv/verktyg/tidrapport-mall">Ladda ner en gratis tidrapport-mall</a>, eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a> och stämpla tid direkt i mobilen – kopplat till projekt, lön och faktura. Vill du se vad en app kostar? Här är <a href="/sv/tidrapportering-app">ByggExp:s tidrapportering-app</a> med pris och funktioner.</p>
-
-<p>Relaterat: <a href="/sv/blog/personalliggare">Personalliggare</a> · <a href="/sv/blog/id06">ID06</a> · <a href="/sv/blog/timpris-hantverkare">Timpris</a> · <a href="/sv/verktyg/tidrapport-mall">Tidrapport-mall</a></p>
-`.trim();
-
-const TIDRAPPORTERING: BlogPost = {
-  _id: 'code-tidrapportering',
-  title: 'Tidrapportering i byggföretag – så gör du rätt (och varför det lönar sig)',
-  slug: 'tidrapportering',
-  locale: 'sv',
-  excerpt:
-    'Vad en tidrapport ska innehålla, skillnaden mot personalliggare, OB/övertid och hur tiden ger dig debiteringsgraden – plus en gratis tidrapport-mall.',
-  tag: 'Tidrapportering',
-  coverImageUrl: '/landing/verktyg/tidrapport-preview.webp',
-  contentHtml: TIDRAPPORTERING_HTML,
-  seoTitle: 'Tidrapportering i byggföretag – guide & mall | ByggExp',
-  seoDescription:
-    'Vad ska en tidrapport innehålla, hur skiljer den sig från personalliggare och hur ger tiden dig debiteringsgraden? Guide för byggföretag + gratis tidrapport-mall.',
-  seoImageUrl: `${SITE_URL}/landing/verktyg/tidrapport-preview.webp`,
-  canonicalUrl: '',
-  noIndex: false,
-  isPublished: true,
-  publishedAt: '2026-08-17T12:00:00.000Z',
-  createdAt: '2026-08-17T12:00:00.000Z',
-  updatedAt: '2026-08-17T12:00:00.000Z',
-};
-
 const VATRUM_HTML = `
 <p>Vid årsskiftet 2025/2026 uppdaterades tre samordnade regelverk för våtrum samtidigt: BBV 26:1 från Byggkeramikrådet, Säkra Våtrum 2026 från GVK och Säker Vatteninstallation 2026:1. Det är ingen revolution – men rörmått, falltoleranser och våtzoner har ändrats, och för dig som utför jobbet är detaljerna det som räknas. Vid en framtida vattenskada är det sällan själva plattsättningen som fäller entreprenören, utan avsaknaden av dokumentation som visar att arbetet gjorts enligt gällande branschregler. Här går vi igenom förändringarna ur utförarperspektiv och hur du säkrar bevisningen.</p>
 
@@ -278,7 +79,7 @@ const VATRUM_HTML = `
 <h2>Kom igång</h2>
 <p>Sätt upp dokumentationen innan spadtaget: börja i <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a> och räkna material med <a href="/sv/verktyg/kvadratmeter-kalkylator">kvadratmeter-kalkylatorn</a>. Vill du se hur egenkontroll, foton och kvalitetsdokument hänger ihop i praktiken? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi flödet. Ladda även ner de fullständiga regelverken hos BKR, GVK och Säker Vatten – den här artikeln ersätter inte källtexterna.</p>
 
-<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/byggdagbok">Byggdagbok – så för du den rätt</a>.</p>
+<p>Relaterat: <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/byggdagbok">Byggdagbok – så för du den rätt</a>.</p>
 `.trim();
 
 const VATRUM: BlogPost = {
@@ -523,7 +324,7 @@ const A_GANTT_SCHEMA_MALL_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Bryt ner ditt nästa projekt i etapper och uppgifter i <a href="/sv/funktioner">ByggExps projektfunktioner</a> och lämna det lösa kalkylarket bakom dig. Vill du se hur planering, uppföljning och fakturering hänger ihop i praktiken? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a> och <a href="/sv/verktyg/offert-mall">gratis offertmall</a>.</p>
+<p>Relaterat: <a href="/sv/funktioner/resursplanering">Bemanning och personalplanering</a> och <a href="/sv/verktyg/offert-mall">gratis offertmall</a>.</p>
 `;
 
 const A_GANTT_SCHEMA_MALL_BYGG: BlogPost = {
@@ -608,7 +409,7 @@ const A_BBV_ELLER_GVK_VATRUM_HTML = `
 <h2>Kom igång</h2>
 <p>Bygg upp bevisningen redan under jobbet med <a href="/sv/verktyg/egenkontroll-mall">vår gratis egenkontroll-mall &rarr;</a>, så att egenkontroller, foton och regeluppgifter finns dokumenterade när ersättningsfrågan ställs. Vill du se hur ByggExp samlar allt underlag per projekt? <a href="/sv/contact">Boka en gratis konsultation &rarr;</a> så visar vi upplägget.</p>
 
-<p>Relaterat: <a href="/sv/blog/vatrumscertifikat-behorighet-gvk">Våtrumscertifikat och behörighet – GVK</a>, <a href="/sv/blog/nya-vatrumsregler-2026">Nya våtrumsregler 2026</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a>.</p>
+<p>Relaterat: Våtrumscertifikat och behörighet – GVK, <a href="/sv/blog/nya-vatrumsregler-2026">Nya våtrumsregler 2026</a>, <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll i byggprojekt</a>.</p>
 `;
 
 const A_BBV_ELLER_GVK_VATRUM: BlogPost = {
@@ -715,7 +516,7 @@ const A_MOTTAGNINGSKONTROLL_MATERIAL_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Bygg in mottagningskontrollen i din kvalitetsrutin med vår <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mall</a> och gör kontrollen till en fast del av varje leverans. Vill du se hur det fungerar i praktiken för ditt företag? <a href="/sv/contact">Boka en gratis konsultation här</a>.</p>
 
-<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/leverantorsfaktura-bygg-projekt">Leverantörsfakturor i byggprojekt</a>.</p>
+<p>Relaterat: <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll i byggprojekt</a> och <a href="/sv/blog/kostnadskontroll-byggprojekt-marginal">Leverantörsfakturor i byggprojekt</a>.</p>
 `;
 
 const A_MOTTAGNINGSKONTROLL_MATERIAL_BYGG: BlogPost = {
@@ -925,7 +726,7 @@ const A_RESURSPLANERING_BYGG_HTML = `
 <h2>Så gör du i ByggExp</h2>
 <p>ByggExp planerar personal. I <strong>Planering</strong> lägger du upp planen per personal eller per projekt i ett Gantt-schema, med vyerna 2 veckor, månad eller ett eget datumintervall. I <strong>Bemanning</strong> klickar du i en ruta för att sätta personer på ett projekt en viss dag. Godkänd frånvaro syns i planen, och har någon mer än 8 timmar inplanerade samma dag får du en varning om överbokning. Ändringsloggen visar vem som ändrade vad.</p>
 <figure class="web-shot"><img src="/features-content/dagsplanering-och-planeringsmoten-web.webp" alt="Resursplanering bygg i ByggExp: Gantt-schema per personal med projekt bokade över månaden" width="1000" height="548" loading="lazy"><figcaption>Planeringen i webbadmin – personalen per rad, projekten som staplar över veckorna.</figcaption></figure>
-<p>Tidrapporteringen finns i samma system: laget stämplar in och ut i mobilappen med GPS, och timmarna hamnar på projektet. Läs mer i guiden om <a href="/sv/blog/tidrapportering">tidrapportering i byggbranschen</a>. Maskiner och underentreprenörer planeras inte i ByggExp. Håll dem i en separat bokningslista enligt metoden ovan.</p>
+<p>Tidrapporteringen finns i samma system: laget stämplar in och ut i mobilappen med GPS, och timmarna hamnar på projektet. Läs mer i guiden om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapportering i byggbranschen</a>. Maskiner och underentreprenörer planeras inte i ByggExp. Håll dem i en separat bokningslista enligt metoden ovan.</p>
 
 <h2>Kom igång</h2>
 <p>Börja med att samla alla projekt i en gemensam vy – i vår <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a> eller i ett system. Vill du se hur Planering och Bemanning fungerar? Läs om vårt <a href="/sv/funktioner/projektplanering">tidplaneringsprogram för bygg med Gantt-schema</a>, vårt <a href="/sv/funktioner/resursplanering">resursplaneringsverktyg för bygg</a>, om ByggExp som <a href="/sv/blog/dagsplanering-och-planeringsmoten">planeringsprogram för bygg</a> eller <a href="/sv/contact">boka en gratis konsultation</a>. Du kan testa alla funktioner gratis i 14 dagar.</p>
@@ -933,10 +734,10 @@ const A_RESURSPLANERING_BYGG_HTML = `
 <h2>Relaterade guider</h2>
 <ul>
 <li><a href="/sv/blog/schemalaggningssystem-bygg">Schemaläggningssystem för bygg</a> – välj system för det dagliga schemat.</li>
-<li><a href="/sv/blog/bemanning-och-personalplanering">Bemanning och personalplanering</a> – vilka personer som behövs framåt.</li>
+<li><a href="/sv/funktioner/resursplanering">Bemanning och personalplanering</a> – vilka personer som behövs framåt.</li>
 <li><a href="/sv/blog/personalplanering-bygg">Bemanningsplanering för byggföretag</a> – rätt person på rätt plats.</li>
 <li><a href="/sv/blog/projektplanering-bygg">Projektplanering i bygg</a> – tidplanen som resursplanen bygger på.</li>
-<li><a href="/sv/blog/tidrapportering">Tidrapportering i byggbranschen</a> – följ upp planen med faktiska timmar.</li>
+<li><a href="/sv/funktioner/tidrapporteringssystem-bygg">Tidrapportering i byggbranschen</a> – följ upp planen med faktiska timmar.</li>
 </ul>
 
 <h2>Vanliga frågor</h2>
@@ -956,7 +757,7 @@ const A_RESURSPLANERING_BYGG_HTML = `
 <p>Bara tillfälligt. Arbetstidslagen begränsar den allmänna övertiden till 200 timmar per år och 48 timmar per fyraveckorsperiod, och vilotiderna gäller ändå. Kollektivavtal kan ha egna regler.</p>
 <h3>Räcker personalliggaren för att undvika dubbelbokning?</h3>
 <p>Nej. Den registrerar närvaro men planerar ingenting. Dubbelbokningar stoppas bara av en gemensam plan över alla projekt.</p>
-<p>Relaterat: <a href="/sv/blog/bemanningssystem-bygg">Bemanningssystem för bygg</a> · <a href="/sv/verktyg/byggmotesprotokoll-mall">Byggmötesprotokoll – mall</a></p>
+<p>Relaterat: <a href="/sv/funktioner/resursplanering">Bemanningssystem för bygg</a> · <a href="/sv/verktyg/byggmotesprotokoll-mall">Byggmötesprotokoll – mall</a></p>
 `;
 
 const A_RESURSPLANERING_BYGG: BlogPost = {
@@ -1033,7 +834,7 @@ const A_FUKTSAKERHETSPLAN_BYGGAF_HTML = `
 <h2>Kom igång</h2>
 <p>Börja med att utse rollerna tidigt, skriv in ByggaF i avtalet, boka in fuktronder i tidplanen, säkra betonguttorkning innan tätskikt och golv, och arkivera dokumentationen. Ett enkelt första steg är att sätta upp en löpande kontroll med <a href="/sv/verktyg/egenkontroll-mall">vår egenkontroll-mall</a>. Vill du se hur ByggExp samlar fuktronder och avvikelser i ett flöde? <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi.</p>
 
-<p>Relaterat: <a href="/sv/blog/nya-vatrumsregler-2026">Nya våtrumsregler 2026</a>, <a href="/sv/blog/egenkontroll">Egenkontroll i bygg</a>, <a href="/sv/blog/kontrollplan-mall-bygglov">Kontrollplan och mall för bygglov</a>.</p>
+<p>Relaterat: <a href="/sv/blog/nya-vatrumsregler-2026">Nya våtrumsregler 2026</a>, <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll i bygg</a>, <a href="/sv/blog/boverkets-nya-byggregler-2026-kontrollplan">Kontrollplan och mall för bygglov</a>.</p>
 `;
 
 const A_FUKTSAKERHETSPLAN_BYGGAF: BlogPost = {
@@ -1215,7 +1016,7 @@ const A_AVVIKELSEHANTERING_BYGG_MALL_HTML = `
 <h2>Kom igång</h2>
 <p>Inför rutinen i tre steg: (1) ladda ner och anpassa <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> med ett avsnitt för avvikelser, (2) bestäm vem som äger avvikelsemötet och hur ofta det hålls, (3) börja rapportera varje avvikelse med nummer, ansvarig och deadline. Vill du se hur kontrollplan, egenkontroll och avvikelser hänger ihop digitalt? <a href="/sv/contact">Boka en gratis konsultation av ByggExp -&gt;</a> så visar vi flödet på ett verkligt projekt.</p>
 
-<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll enligt PBL</a>, <a href="/sv/blog/kma-plan-mall">KMA-plan mall</a> och <a href="/sv/blog/mottagningskontroll-material-bygg">Mottagningskontroll av material</a>.</p>
+<p>Relaterat: <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll enligt PBL</a>, <a href="/sv/blog/kvalitetsplan-bygg">KMA-plan mall</a> och <a href="/sv/blog/mottagningskontroll-material-bygg">Mottagningskontroll av material</a>.</p>
 `;
 
 const A_AVVIKELSEHANTERING_BYGG_MALL: BlogPost = {
@@ -1349,7 +1150,7 @@ const A_DOU_PARM_DRIFT_UNDERHALL_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Bygg din DoU-pärm på en struktur du kan återanvända. Börja med <a href="/sv/verktyg">våra gratis byggverktyg →</a> och <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen →</a>, eller <a href="/sv/contact">boka en gratis konsultation →</a> så visar vi hur du samlar underlaget löpande fram till överlämningen.</p>
 
-<p>Relaterat: <a href="/sv/blog/overlamning-relationshandlingar">Relationshandlingar vid överlämning</a>, <a href="/sv/blog/restlista-overlamning-bygg-mall">Restlista och mall för överlämning</a>, <a href="/sv/blog/slutbesiktning">Slutbesiktning steg för steg</a>.</p>
+<p>Relaterat: Relationshandlingar vid överlämning, <a href="/sv/blog/restlista-overlamning-bygg-mall">Restlista och mall för överlämning</a>, <a href="/sv/blog/slutbesiktning">Slutbesiktning steg för steg</a>.</p>
 `;
 
 const A_DOU_PARM_DRIFT_UNDERHALL_BYGG: BlogPost = {
@@ -1393,7 +1194,7 @@ const A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM_HTML = `
 <p>Det är den här kontrollen du samlar i ett protokoll. En <a href="/sv/verktyg/egenkontroll-el-mall">egenkontroll-mall för el</a> gör att du får med rätt uppgifter, kan lägga till foto och signatur och får ut en färdig PDF att arkivera.</p>
 
 <h2>Skillnaden mot bygg-egenkontroll</h2>
-<p>Egenkontroll inom el styrs av elsäkerhetslagstiftningen och Elsäkerhetsverket. Den allmänna <a href="/sv/blog/egenkontroll">egenkontrollen i bygg</a> handlar i stället om att styrka att bygg­åtgärder uppfyller kraven, ofta kopplat till en <a href="/sv/verktyg/kontrollplan-mall">kontrollplan</a> enligt PBL. Principen är densamma – dokumentera att arbetet är rätt utfört – men regelverket och kraven skiljer sig åt.</p>
+<p>Egenkontroll inom el styrs av elsäkerhetslagstiftningen och Elsäkerhetsverket. Den allmänna <a href="/sv/blog/egenkontroll-entreprenad">egenkontrollen i bygg</a> handlar i stället om att styrka att bygg­åtgärder uppfyller kraven, ofta kopplat till en <a href="/sv/verktyg/kontrollplan-mall">kontrollplan</a> enligt PBL. Principen är densamma – dokumentera att arbetet är rätt utfört – men regelverket och kraven skiljer sig åt.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
@@ -1517,7 +1318,7 @@ const A_EGENKONTROLL_ENTREPRENAD_HTML = `
 <p>Avvikelser är inget att dölja – tvärtom visar en hanterad avvikelse att systemet fungerar. Läs mer om <a href="/sv/blog/avvikelsehantering-bygg-mall">avvikelsehantering</a>.</p>
 
 <h2>Egenkontroll, KMA och kvalitetsplan</h2>
-<p>I större entreprenader ingår egenkontrollen i ett bredare kvalitets-, miljö- och arbetsmiljöarbete (KMA). Kvalitetsplanen beskriver vilka kontroller som ska göras, och egenkontrollerna är beviset på att de gjorts. En generell <a href="/sv/blog/egenkontroll">egenkontroll i bygg</a> förklarar grunderna, medan den här guiden fokuserar på entreprenadsammanhanget. Se även <a href="/sv/verktyg/kvalitetsplan-mall">kvalitetsplan-mallen</a>.</p>
+<p>I större entreprenader ingår egenkontrollen i ett bredare kvalitets-, miljö- och arbetsmiljöarbete (KMA). Kvalitetsplanen beskriver vilka kontroller som ska göras, och egenkontrollerna är beviset på att de gjorts. En generell egenkontroll i bygg förklarar grunderna, medan den här guiden fokuserar på entreprenadsammanhanget. Se även <a href="/sv/verktyg/kvalitetsplan-mall">kvalitetsplan-mallen</a>.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
@@ -1598,7 +1399,7 @@ const A_TIDREDOVISNING_BYGGFORETAG_HTML = `
 </ul>
 
 <h2>Så gör du det enkelt</h2>
-<p>Papperslappar och lösa Excel-filer skapar merjobb och fel vid lönekörningen. Poängen är att registrera tiden <strong>där arbetet sker</strong> – helst digitalt i mobilen – och att den direkt kan bli både löneunderlag och fakturaunderlag. Vill du börja enkelt kan du <a href="/sv/verktyg/tidrapport-mall">ladda ner vår gratis tidrapport-mall</a> och fylla i den online. Se även den mer grundläggande guiden om <a href="/sv/blog/tidrapportering">tidrapportering</a>.</p>
+<p>Papperslappar och lösa Excel-filer skapar merjobb och fel vid lönekörningen. Poängen är att registrera tiden <strong>där arbetet sker</strong> – helst digitalt i mobilen – och att den direkt kan bli både löneunderlag och fakturaunderlag. Vill du börja enkelt kan du <a href="/sv/verktyg/tidrapport-mall">ladda ner vår gratis tidrapport-mall</a> och fylla i den online. Se även den mer grundläggande guiden om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapportering</a>.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
@@ -1800,7 +1601,7 @@ const A_KVALITETSPLAN_BYGG_HTML = `
 <h2>Kom igång</h2>
 <p>Börja med kontrollprogrammet – det är kärnan i planen. Bygg dina egenkontroller från <a href="/sv/verktyg/egenkontroll-mall">egenkontroll-mallen</a> och koppla in en rutin för <a href="/sv/blog/avvikelsehantering-bygg-mall">avvikelser</a>. Vill du se hur egenkontroller, avvikelser och dokumentation hänger ihop i ett projekt? <a href="/sv/contact">Boka en gratis konsultation →</a> så visar vi.</p>
 
-<p>Relaterat: <a href="/sv/blog/egenkontroll">Egenkontroll – så gör du</a>, <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaden</a>, <a href="/sv/blog/fuktsakerhetsplan-byggaf">Fuktsäkerhetsplan enligt ByggaF</a>, <a href="/sv/blog/kvalitetsplan-bygg">Kvalitetsplan för bygget</a>.</p>
+<p>Relaterat: <a href="/sv/blog/egenkontroll-entreprenad">Egenkontroll – så gör du</a>, <a href="/sv/blog/ab-04-och-abt-06">AB 04 och ABT 06 – skillnaden</a>, <a href="/sv/blog/fuktsakerhetsplan-byggaf">Fuktsäkerhetsplan enligt ByggaF</a>, Kvalitetsplan för bygget.</p>
 `;
 
 const A_KVALITETSPLAN_BYGG: BlogPost = {
@@ -1816,8 +1617,6 @@ const A_KVALITETSPLAN_BYGG: BlogPost = {
 export const KVALITET_ARTICLES: BlogPost[] = [
   A_KVALITETSPLAN_BYGG,
   ENKELT_TIDRAPPORTERINGSSYSTEM,
-  EGENKONTROLL,
-  TIDRAPPORTERING,
   VATRUM,
   KONTRAVG,
   A_BYGGMOTESPROTOKOLL_MALL,

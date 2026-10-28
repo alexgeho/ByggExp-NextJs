@@ -257,7 +257,7 @@ export default function FakturaGeneratorTool() {
           'Fakturera utifrån loggad tid, material och ÄTA',
           'Se snabbt vilka fakturor som är obetalda',
         ]}
-        secondary={{ href: '/sv/blog/kunden-betalar-inte-fakturan', label: 'Om kunden inte betalar' }}
+        secondary={{ href: '/sv/blog/faktureringsavgift-hantverkare-tillaten', label: 'Om kunden inte betalar' }}
       />
     </div>
   );

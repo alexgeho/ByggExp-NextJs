@@ -117,7 +117,7 @@ export default function EfterkalkylMallPage() {
         }}
         relatedHeading="Relaterat"
         related={[
-          { href: `/${LOCALE}/blog/efterkalkyl-bygg-kalkyluppfoljning`, label: 'Guide: efterkalkyl' },
+          { href: `/${LOCALE}/blog/kostnadskontroll-byggprojekt-marginal`, label: 'Guide: kostnadskontroll och efterkalkyl' },
           { href: `/${LOCALE}/blog/tackningsbidrag-byggforetag`, label: 'Täckningsbidrag' },
           { href: `/${LOCALE}/verktyg/paslag-marginal-kalkylator`, label: 'Påslag & marginal-kalkylator' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },

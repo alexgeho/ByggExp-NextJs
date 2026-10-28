@@ -426,7 +426,7 @@ ${illu('schemalaggning-lag', 'Tre leende byggarbetare i hjälm, en med borrmaski
     { href: '/sv/blog/schemalaggning-bygg', label: 'Schemaläggning för byggföretag' },
     { href: '/sv/blog/personalplanering-bygg', label: 'Bemanningsplanering' },
     { href: '/sv/verktyg/schema-mall', label: 'Gratis schemamall' },
-    { href: '/sv/blog/franvaro-i-byggforetag', label: 'Frånvaro i byggföretag' },
+    { href: '/sv/blog/sjuklon-karensavdrag-vab-byggforetag', label: 'Sjuklön, karens och VAB' },
     { href: '/sv/funktioner/resursplanering', label: 'Resursplanering för bygg' },
     { href: '/sv/funktioner/stampelklocka', label: 'Stämpelklocka för bygg' },
   ],
@@ -581,7 +581,7 @@ ${illu('projekthantering-overlamning', 'Projektledare i hjälm lämnar över nyc
 <p>Behöver ni också budget, lönsamhet, offerter och fakturor finns de i Koll på pengarna och Full koll. Hur du följer upp marginalen under projektets gång beskriver vi i guiden om <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljning</a>.</p>
 
 <h2>Kom igång</h2>
-<p>Lägg upp de projekt som pågår nu och börja med uppgifter och stämpling. Dagbok och egenkontroller kan du ta in när rutinen sitter. Data från ert gamla system flyttar vi över utan kostnad. Projekthantering ingår i Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms med 10 användare, och du testar gratis i 14 dagar. Läs också om <a href="/sv/blog/projekthantering-byggforetag">projekthantering för byggföretag</a>, <a href="/sv/blog/projektledning-byggforetag">projektledning</a> och <a href="/sv/blog/app-for-byggprojekt">appen för byggprojekt</a>.</p>
+<p>Lägg upp de projekt som pågår nu och börja med uppgifter och stämpling. Dagbok och egenkontroller kan du ta in när rutinen sitter. Data från ert gamla system flyttar vi över utan kostnad. Projekthantering ingår i Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms med 10 användare, och du testar gratis i 14 dagar. Läs också om <a href="/sv/blog/projektplanering-bygg">projektplanering för byggprojekt</a> och <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljning</a>.</p>
 `.trim(),
   faq: [
     {
@@ -625,9 +625,7 @@ ${illu('projekthantering-overlamning', 'Projektledare i hjälm lämnar över nyc
     },
   ],
   related: [
-    { href: '/sv/blog/projekthantering-byggforetag', label: 'Guide: projekthantering för byggföretag' },
-    { href: '/sv/blog/projektledning-byggforetag', label: 'Projektledning i byggföretag' },
-    { href: '/sv/blog/app-for-byggprojekt', label: 'App för byggprojekt' },
+    { href: '/sv/blog/projektplanering-bygg', label: 'Guide: projektplanering för byggprojekt' },
     { href: '/sv/blog/hantera-uppgifter-i-byggprojekt', label: 'Uppgifter i byggprojekt' },
     { href: '/sv/blog/projektuppfoljning-bygg', label: 'Projektuppföljning' },
     { href: '/sv/funktioner/byggdagbok', label: 'Digital byggdagbok' },

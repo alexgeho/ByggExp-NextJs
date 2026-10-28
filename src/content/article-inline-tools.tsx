@@ -17,7 +17,6 @@ import AckordKalkylatorTool from '../components/LeadMagnet/AckordKalkylatorTool'
 import ForseningsviteKalkylatorTool from '../components/LeadMagnet/ForseningsviteKalkylatorTool';
 import ReglarKalkylatorTool from '../components/LeadMagnet/ReglarKalkylatorTool';
 import ApdPlanMallTool from '../components/LeadMagnet/ApdPlanMallTool';
-import KmaPlanMallTool from '../components/LeadMagnet/KmaPlanMallTool';
 import UvardeKalkylatorTool from '../components/LeadMagnet/UvardeKalkylatorTool';
 import TrallKalkylatorTool from '../components/LeadMagnet/TrallKalkylatorTool';
 import TidrapportTool from '../components/LeadMagnet/TidrapportTool';
@@ -25,8 +24,6 @@ import TapetKalkylatorTool from '../components/LeadMagnet/TapetKalkylatorTool';
 import StaketKalkylatorTool from '../components/LeadMagnet/StaketKalkylatorTool';
 import RotKalkylatorTool from '../components/LeadMagnet/RotKalkylatorTool';
 import GrusKalkylatorTool from '../components/LeadMagnet/GrusKalkylatorTool';
-import GolvKalkylatorTool from '../components/LeadMagnet/GolvKalkylatorTool';
-import GipsKalkylatorTool from '../components/LeadMagnet/GipsKalkylatorTool';
 import FargKalkylatorTool from '../components/LeadMagnet/FargKalkylatorTool';
 import FallKalkylatorTool from '../components/LeadMagnet/FallKalkylatorTool';
 import EfterkalkylMallTool from '../components/LeadMagnet/EfterkalkylMallTool';
@@ -172,7 +169,7 @@ export const ARTICLE_INLINE_TOOLS: Record<string, InlineTool> = {
     render: () => <EgenkontrollTool defaultPreset="el" />,
     position: 'top',
   },
-  'kontrollplan-mall-bygglov': {
+  'boverkets-nya-byggregler-2026-kontrollplan': {
     heading: 'Fyll i din kontrollplan',
     render: () => <KontrollplanMallTool />,
     position: 'top',
@@ -238,7 +235,7 @@ export const ARTICLE_INLINE_TOOLS: Record<string, InlineTool> = {
     render: () => <UvardeKalkylatorTool locale="sv" />,
     position: 'top',
   },
-  'rotavdrag-hur-mycket': {
+  'kontrollera-kundens-rotutrymme': {
     heading: 'Räkna ROT-avdrag',
     render: () => <RotKalkylatorTool locale="sv" />,
     position: 'top',
@@ -273,16 +270,6 @@ export const ARTICLE_INLINE_TOOLS: Record<string, InlineTool> = {
     render: () => <FargKalkylatorTool locale="sv" />,
     position: 'top',
   },
-  'golvmaterial-atgang-spill': {
-    heading: 'Räkna golvmaterial',
-    render: () => <GolvKalkylatorTool locale="sv" />,
-    position: 'top',
-  },
-  'materialatgang-innervagg-reglar-gips': {
-    heading: 'Räkna gips',
-    render: () => <GipsKalkylatorTool locale="sv" />,
-    position: 'top',
-  },
   'staket-material-stolpar-atgang': {
     heading: 'Räkna staketmaterial',
     render: () => <StaketKalkylatorTool locale="sv" />,
@@ -293,7 +280,7 @@ export const ARTICLE_INLINE_TOOLS: Record<string, InlineTool> = {
     render: () => <TrallKalkylatorTool locale="sv" />,
     position: 'top',
   },
-  'efterkalkyl-bygg-kalkyluppfoljning': {
+  'kostnadskontroll-byggprojekt-marginal': {
     heading: 'Gör din efterkalkyl',
     render: () => <EfterkalkylMallTool />,
     position: 'top',
@@ -301,11 +288,6 @@ export const ARTICLE_INLINE_TOOLS: Record<string, InlineTool> = {
   'apd-plan-arbetsplatsdisposition-bygg': {
     heading: 'Fyll i din APD-plan',
     render: () => <ApdPlanMallTool />,
-    position: 'top',
-  },
-  'kma-plan-mall': {
-    heading: 'Fyll i din KMA-plan',
-    render: () => <KmaPlanMallTool />,
     position: 'top',
   },
   // ab-u-underentreprenor-avtal: no tool on purpose. Searchers want the AB-U 07 /

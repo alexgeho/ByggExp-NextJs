@@ -23,7 +23,7 @@ import type { FunktionPage } from './funktion-pages';
 
 const EXTRA_USER_PRICE = 69;
 const KOMPLETT_PRICE = 990;
-const KOMPLETT_EXTRA = 119;
+const KOMPLETT_EXTRA = 69;
 
 export const ILLU_HEIGHT_C: Record<string, number> = {
   'utlagg-kvitto': 1249,

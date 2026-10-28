@@ -106,7 +106,7 @@ const SKV_OMVAND_MOMS =
 export const PLAN_PRICE: Record<FunktionPlan, { price: number; extra: number }> = {
   faktura: { price: FAKTURA_PRICE, extra: 0 },
   projekt: { price: PROJEKT_PRICE, extra: EXTRA_USER_PRICE },
-  komplett: { price: KOMPLETT_PRICE, extra: 119 },
+  komplett: { price: KOMPLETT_PRICE, extra: 69 },
 };
 
 // Mobile: 3-column tables become stacked cards (blog-article-content CSS). Each

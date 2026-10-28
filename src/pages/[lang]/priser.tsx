@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => ({
 
 const PROJEKT_EXTRA = 69;
 const KOMPLETT_PRICE = 990;
-const KOMPLETT_EXTRA = 119;
+const KOMPLETT_EXTRA = 69;
 const ADDON_PRICE = 199;
 const yearly = (n: number) => Math.round(n * 0.85);
 
@@ -70,7 +70,7 @@ ${illuC("priser-tid", "Kontorsarbetare vid en dator, bredvid tre tidkort med boc
 <p>Passar när samma timmar ska användas för faktura, lön och projektekonomi. Attesterade timmar blir underlag för lön och faktura. Fotade kvitton, tidrapporter och in- och utgående fakturor räknas in i projektets ekonomi, så att du ser marginalen medan projektet pågår.</p>
 
 <h2>Så räknas användarna</h2>
-<p>I Koll på jobbet och Full koll ingår 10 användare i grundpriset. Därefter kostar varje extra användare ${PROJEKT_EXTRA} kr respektive ${KOMPLETT_EXTRA} kr i månaden. Koll på pengarna har ett fast pris för upp till 2 användare.</p>
+<p>I Koll på jobbet och Full koll ingår 10 användare i grundpriset. Därefter kostar varje extra användare ${PROJEKT_EXTRA} kr i månaden i båda paketen. Koll på pengarna har ett fast pris för upp till 2 användare.</p>
 <p>Medarbetare som bara använder mobilappen räknas bara när de har stämplat in de senaste 30 dagarna. Har ni säsongsanställda eller timanställda som bara jobbar vissa perioder betalar ni alltså inte för dem de månader de inte arbetar.</p>
 <div class="article-table"><table>
 <thead><tr><th>Lagets storlek</th><th>Koll på jobbet</th><th>Full koll</th></tr></thead>
@@ -84,7 +84,7 @@ ${illuC("priser-tid", "Kontorsarbetare vid en dator, bredvid tre tidkort med boc
 <p>Alla belopp är per företag och månad exklusive moms. Är ni fler än 40 användare tar vi fram ett anpassat pris för hela företaget.</p>
 
 <h2>Årsbetalning ger 15 % rabatt</h2>
-<p>Betalar ni för ett år i taget blir priset 15 % lägre. Räknat per månad blir det cirka ${yearly(FAKTURA_PRICE)} kr för Koll på pengarna, ${yearly(PROJEKT_PRICE)} kr för Koll på jobbet och ${yearly(KOMPLETT_PRICE)} kr för Full koll. Rabatten gäller även extra användare: cirka ${yearly(PROJEKT_EXTRA)} respektive ${yearly(KOMPLETT_EXTRA)} kr. Månadsbetalning har ingen bindningstid, så börja gärna med den och gå över till årsbetalning när ni vet att systemet sitter.</p>
+<p>Betalar ni för ett år i taget blir priset 15 % lägre. Räknat per månad blir det cirka ${yearly(FAKTURA_PRICE)} kr för Koll på pengarna, ${yearly(PROJEKT_PRICE)} kr för Koll på jobbet och ${yearly(KOMPLETT_PRICE)} kr för Full koll. Rabatten gäller även extra användare: cirka ${yearly(PROJEKT_EXTRA)} kr. Månadsbetalning har ingen bindningstid, så börja gärna med den och gå över till årsbetalning när ni vet att systemet sitter.</p>
 
 ${illuC("priser-lonsamhet", "Person vid en dator med ett diagram och en stigande pil")}
 
@@ -108,7 +108,7 @@ ${illuC("priser-lonsamhet", "Person vid en dator med ett diagram och en stigande
 const FAQ = [
   {
     question: "Vad kostar ByggExp per månad?",
-    answer: `Koll på pengarna kostar ${FAKTURA_PRICE} kr/mån för upp till 2 användare. Koll på jobbet kostar ${PROJEKT_PRICE} kr/mån och Full koll ${KOMPLETT_PRICE} kr/mån, båda med 10 användare, därefter ${PROJEKT_EXTRA} kr respektive ${KOMPLETT_EXTRA} kr per extra användare. Alla priser är per företag och exkl. moms.`,
+    answer: `Koll på pengarna kostar ${FAKTURA_PRICE} kr/mån för upp till 2 användare. Koll på jobbet kostar ${PROJEKT_PRICE} kr/mån och Full koll ${KOMPLETT_PRICE} kr/mån, båda med 10 användare, därefter ${PROJEKT_EXTRA} kr per extra användare. Alla priser är per företag och exkl. moms.`,
   },
   {
     question: "Finns det någon bindningstid?",
@@ -122,7 +122,7 @@ const FAQ = [
   },
   {
     question: "Vad kostar extra användare?",
-    answer: `I Koll på jobbet kostar varje användare utöver de 10 som ingår ${PROJEKT_EXTRA} kr/mån, i Full koll ${KOMPLETT_EXTRA} kr/mån. Koll på pengarna har max 2 användare. Medarbetare som bara använder appen räknas bara om de har stämplat in de senaste 30 dagarna.`,
+    answer: `I Koll på jobbet kostar varje användare utöver de 10 som ingår ${PROJEKT_EXTRA} kr/mån, i Full koll också ${KOMPLETT_EXTRA} kr/mån. Koll på pengarna har max 2 användare. Medarbetare som bara använder appen räknas bara om de har stämplat in de senaste 30 dagarna.`,
   },
   {
     question: "Hur mycket sparar jag med årsbetalning?",

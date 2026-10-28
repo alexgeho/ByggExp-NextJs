@@ -9,7 +9,7 @@ const INCLUDED_USERS = 10;
 // Exported: feature pages' SoftwareApplication schema quotes "Koll på jobbet".
 export const PROJEKT_PRICE = 690;
 const PROJEKT = { base: PROJEKT_PRICE, extra: 69 };
-const KOMPLETT = { base: 990, extra: 119 };
+const KOMPLETT = { base: 990, extra: 69 };
 const ADDON_PRICE = 199;
 const YEARLY_DISCOUNT = 0.15;
 

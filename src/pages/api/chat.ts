@@ -53,7 +53,7 @@ OM BYGGEXP (använd för frågor om produkten, priser och demo):
 - Priser (SEK/månad exkl. moms, obegränsat antal projekt), tre paket:
   - Faktura: 299 kr/mån fast pris, 1–2 användare. Ingår: offerter och fakturor, påminnelser för obetalda fakturor, löner/lönespecifikationer/AGI, projektekonomi (budget, kalkyl, lönsamhet), skanna kvitton och fakturor (bokförs automatiskt på projektet), inköpsfakturor och utlägg. Personlig ekonomi kommer snart.
   - Projekt: 690 kr/mån inkl. 10 användare, +69 kr per extra användare. Ingår: projekt, uppgifter och foton, stämpling med GPS eller manuell tidrapportering, dagbok och egenkontroller, planering och bemanning, frånvaro, verktyg med QR-kod, mobilapp + adminpanel.
-  - Komplett (mest valt): 990 kr/mån inkl. 10 användare, +119 kr per extra användare. Allt i Projekt + allt i Faktura.
+  - Komplett (mest valt): 990 kr/mån inkl. 10 användare, +69 kr per extra användare. Allt i Projekt + allt i Faktura.
   - Fler än 40 användare: anpassat pris, kontakta oss.
   - Tillägg Integrationer: 199 kr per företag och månad, kan läggas till i alla paket (SIE4-export till Fortnox, Visma och BL, inköpsfakturor direkt via e-post; anpassade integrationer mot tilläggsavgift).
   - Årsbetalning: 15 % rabatt jämfört med månadsbetalning. 14 dagars gratis provperiod med alla funktioner, ingen startavgift, ingen bindningstid. Medarbetare som bara använder mobilappen räknas bara när de har stämplat in de senaste 30 dagarna.

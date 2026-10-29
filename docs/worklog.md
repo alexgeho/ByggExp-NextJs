@@ -1,5 +1,21 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 🟢 2026-10-29 — Шведские скриншоты, 7 багов продукта, Upwork
+### KLART
+- Сайт: 19 экранов приложения пересняты на шведском с демо-компанией «Exempelbygg AB» (локальный бэкенд + локальная MongoDB 127.0.0.1:27018, прод не трогали) — 7135d5a; шаг «Dagens anteckning» (screen-dagbok-1200) на /sv/funktioner/byggdagbok и «Frånvaro först» (screen-franvaro-1200) на /sv/funktioner/schemalaggning — ad55dbf, live. Правило R19.
+- Мобильное приложение (main f7acec08, НЕ выпущено): падение главного экрана в вебе (TDZ в HomeVariant2), Planering на переходе DST (addDays через setDate), «Ingen kund» у частных клиентов (utils/clientName.js).
+- Админка (main 8b87846, live): клиент подставляется при редактировании счёта; ÄTA помечается фактурированной только после сохранения счёта; сводка ведомости показывает % только при единой ставке.
+- Бэкенд (main 595abbf, live): payslip печатает реальный налог (tabell/kolumn или %); arbetsgivaravgift по возрасту из personnummer и дате выплаты (src/payroll/employer-fee.ts: 31,42 / 10,21 для 67+ / 0 до 1937 / ungdom 20,81 до 25 000 kr в месяц 2026-04-01–2027-09-30), лимит за месяц по всем ведомостям, AGI пересчитывает по человеку; ataIds валидируются, ошибка пометки ÄTA не ломает сохранённый счёт.
+### NÄSTA
+1. GSC Request Indexing (квота ~5–10/день): offert-kalkyl, fakturering, lon, ata, utlagg, verktygshantering, priser, byt-system.
+2. Проверить на первой реальной ведомости, отмеченной «betald», пересчёт arbetsgivaravgift (на реальной БД не тестировали; фильтр «_id $lt runId»).
+3. Следующий релиз приложения в сторы включает f7acec08 (не OTA).
+4. ~11.11 — замер августовского пакета (~55 статей) для 2-й волны 301; гейт волн через 4 недели.
+5. Лиды: отзывы клиентов на G2/Capterra, подборки «bästa tidrapportering bygg», Clarity-воронка регистрации; холодные письма — владелец сказал «подожди».
+### ЖДЁМ
+- Владелец: Stripe Komplett extra user → 69 kr (и годовая цена); письмо Programguiden; подтверждение G2/Capterra e-mail; GSC-токен.
+- Не моделировано: Växa-stöd и региональные скидки arbetsgivaravgift.
+
 ## 🟡 2026-10-28 — SMM: 3D-посты по функциям
 ### KLART
 - `design-assets/social/posts/make_3d.py` → `posts/out-3d/` 10 постов (3D из byggexp-admin/docs/presentations/design-system/assets/3d), копия ~/Desktop/SMM/posts-3d.

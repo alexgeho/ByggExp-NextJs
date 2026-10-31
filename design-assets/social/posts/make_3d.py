@@ -287,7 +287,7 @@ FLOW = {  # slide 2: left 3D → right 3D, with labels; direction follows the fe
     "s07-offerter": ("offerter-1.png", "offerter-2.png", "På kontoret", "Hos kunden"),
     "s08-fakturor": ("tid-3.png", "fakturor-3.png", "På kontoret", "Hos kunden"),
     "s09-ekonomi": ("tid-2.png", "ekonomi-3.png", "På bygget", "På kontoret"),
-    "s10-utlagg": ("utlagg-2.png", "utlagg-3.png", "På bygget", "På kontoret"),
+    "s10-utlagg": ("utlagg-4.png", "utlagg-3.png", "På bygget", "På kontoret"),  # receipt from the phone into the folder
     "s11-loner": ("tid-2.png", "tid-3.png", "På bygget", "På kontoret"),
 }
 

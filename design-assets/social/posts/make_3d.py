@@ -169,7 +169,7 @@ if __name__ == "__main__":
 
 
 # ---- Carousel (owner 2026-10-31: one post, 3 pictures) ----
-APP_SHOTS = Path.home() / "Desktop/SMM/app-shots"  # fresh simulator screenshots, full height
+APP_SHOTS = HERE / "src/app-shots"  # fresh simulator screenshots, full height (in git, works on any computer)
 SHOTS = {  # one or two phones; label under each when two
     "01-tid": [("GPS", APP_SHOTS / "01-arbetspass-gps-incheckad.png"),
                ("Manuellt", APP_SHOTS / "03-arbetspass-manuell-topp.png")],

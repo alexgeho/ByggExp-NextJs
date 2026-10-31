@@ -388,14 +388,15 @@ FEATURE = {  # last slide: the site's laptop + phone picture; the old phone is c
     # id: (site picture, new screen, phone box on the site picture: x, y_top, height)
     "01-tid": (ROOT / "public/landing/features/1arbetspass.webp",
                APP_SHOTS / "03-arbetspass-manuell-topp.png", (1893, 268, 1044)),
-    "s02-uppgifter": (ROOT / "public/landing/features/2uppgift.webp", None, None),  # S30: the site mockup as is
+    "s02-uppgifter": (ROOT / "public/landing/features/2uppgift.webp",
+                      APP_SHOTS / "07-paminnelse-lasskarm.png", (1893, 268, 1044)),  # owner: Swedish push
     "s03-live": (ROOT / "public/landing/features/3personal.webp", None, None),
     "s04-foto": (ROOT / "public/landing/features/4foto.webp", None, None),
     "s05-planering": (ROOT / "public/landing/features/5planering.webp", None, None),
     "s06-verktyg": (ROOT / "public/landing/features/6verktyg.webp", None, None),
     "s07-offerter": (ROOT / "public/landing/features/7offerter.webp", None, None),
     "s08-fakturor": (ROOT / "public/landing/features/8fakturor.webp", None, None),
-    "s09-ekonomi": (ROOT / "public/landing/features/9ekonomi.webp", None, None),
+    "s09-ekonomi": (HERE / "src/9ekonomi-sv.png", None, None),  # site mockup, English task rows → Swedish
     "s10-utlagg": (ROOT / "public/landing/features/11costs.webp", None, None),
     "s11-loner": (ROOT / "public/landing/features/12salary.webp", None, None),
 }

@@ -24,7 +24,7 @@ GREEN, GREEN_BG = (0x45, 0xB3, 0x6B), (0xE5, 0xF6, 0xE8)  # --green, --green-1
 POSTS = [  # first 10, benefit first; no price on the picture (S26)
     ("01-tid", ("Tid med *GPS* eller *manuellt*", "*lön och faktura* utan lappar"), "tid-1.png",
      ("Stämpla in med GPS eller skriv in timmarna", "Timmarna hamnar på projektet", "Lön och faktura direkt från timmarna"), True),
-    ("s02-uppgifter", ("Inga *glömda* uppgifter", "*påminnelser* tills det är klart"), "uppgifter-3.png",
+    ("s02-uppgifter", ("Inga *glömda* uppgifter", "*påminner* tills de *bekräftas*"), "uppgifter-3.png",
      ("Klicka på Skapa uppgift", "Lägg till mottagare", "Sätt deadline och påminnelse"), True),
     ("s03-live", ("Vem är på *bygget nu*?", "se det *utan att ringa runt*"), "live-3.png",
      ("Arbetaren stämplar in i appen", "Statusen syns direkt på kontoret", "Frånvarande syns direkt"), True),

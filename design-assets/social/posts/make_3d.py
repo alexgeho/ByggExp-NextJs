@@ -30,6 +30,20 @@ POSTS = [  # first 10, benefit first; no price on the picture (S26)
      ("Arbetaren stämplar in i appen", "Statusen syns direkt på kontoret", "Frånvarande syns direkt"), True),
     ("s04-foto", ("Bilderna på *rätt projekt*", "per *dag och person*"), "foto-1.png",
      ("Ta bilder direkt i appen", "Bilderna kopplas till arbetspasset", "Hela historiken finns alltid tillgänglig"), True),
+    ("s05-planering", ("Hela *veckan* bemannad", "varnar vid *överbokning*"), "planering-2.png",
+     ("Skapa ett projekt och ange tidsplan", "Tilldela medarbetare till projektet", "Få kontroll över beläggningen"), True),
+    ("s06-verktyg", ("Vem har *borrmaskinen*?", "skanna *QR* och se direkt"), "verktyg-1.png",
+     ("Lägg till verktyg och utrustning", "Koppla till projekt eller arbetare", "Följ plats och ansvar"), True),
+    ("s07-offerter", ("*Offerten* klar", "på *några klick*"), "offerter-3.png",
+     ("Skapa en offert från projektet", "Projektdata fylls i automatiskt", "Skicka offerten med några klick"), False),
+    ("s08-fakturor", ("*Timmarna* blir faktura", "*ROT och moms* uträknade"), "fakturor-2.png",
+     ("Välj projekt och period", "Timmarna blir underlag", "Skicka fakturan till kunden"), False),
+    ("s09-ekonomi", ("Se *vinsten* per projekt", "*medan* jobbet pågår"), "ekonomi-1-gold.png",
+     ("Sätt en budget på projektet", "Timmar och kostnader räknas automatiskt", "Se marginalen i realtid"), False),
+    ("s10-utlagg", ("Inga *tappade kvitton*", "fota det *direkt i appen*"), "utlagg-1.png",
+     ("Fota kvittot i appen", "Koppla till rätt projekt", "Se kostnaderna i realtid"), True),
+    ("s11-loner", ("Timmarna blir *lön*", "timmar och *OB* per person"), "ekonomi-2.png",
+     ("Timmarna registreras automatiskt", "Underlaget skapas för varje anställd", "Exportera löneunderlaget med ett klick"), False),
     ("02-offert", ("*Offert* med din logga", "klar att skicka *samma dag*"), "offerter-3.png",
      ("Välj artiklar ur katalogen", "Summor och moms räknas ut", "Skicka PDF med din logga"), False),
     ("03-lon", ("Timmarna blir *lön*", "timmar och *OB* per person"), "ekonomi-2.png",
@@ -163,6 +177,20 @@ SHOTS = {  # one or two phones; label under each when two
 
 # Slides 2 and 3: two-line headlines like the cover (navy + blue), per post
 HEADS = {
+    "s05-planering": (("Så fungerar det", "från *kontoret* till *bygget*"),
+                      ("I *mobilen* och i *datorn*", "*samma plan* för alla")),
+    "s06-verktyg": (("Så fungerar det", "från *bygget* till *kontoret*"),
+                    ("I *mobilen* och i *datorn*", "*varje verktyg* spårat")),
+    "s07-offerter": (("Så fungerar det", "från *kontoret* till *kunden*"),
+                     ("I *mobilen* och i *datorn*", "*offerten* med några klick")),
+    "s08-fakturor": (("Så fungerar det", "från *kontoret* till *kunden*"),
+                     ("I *mobilen* och i *datorn*", "*fakturan* från timmarna")),
+    "s09-ekonomi": (("Så fungerar det", "från *bygget* till *kontoret*"),
+                    ("Allt i *adminpanelen*", "*marginalen* i realtid")),
+    "s10-utlagg": (("Så fungerar det", "från *bygget* till *kontoret*"),
+                   ("I *mobilen* och i *datorn*", "*kostnaderna* i realtid")),
+    "s11-loner": (("Så fungerar det", "från *bygget* till *kontoret*"),
+                  ("Allt i *adminpanelen*", "*löneunderlaget* på ett klick")),
     "s04-foto": (("Så fungerar det", "från *bygget* till *kontoret*"),
                  ("I *mobilen* och i *datorn*", "*hela historiken* sparad")),
     "s03-live": (("Så fungerar det", "från *bygget* till *kontoret*"),
@@ -248,6 +276,13 @@ FLOW = {  # slide 2: left 3D → right 3D, with labels; direction follows the fe
     "s02-uppgifter": ("uppgifter-1.png", "uppgifter-2.png", "På kontoret", "På bygget"),
     "s03-live": ("tid-2.png", "live-2.png", "På bygget", "På kontoret"),
     "s04-foto": ("foto-2.png", "foto-3.png", "På bygget", "På kontoret"),
+    "s05-planering": ("planering-1.png", "tid-2.png", "På kontoret", "På bygget"),
+    "s06-verktyg": ("verktyg-2.png", "verktyg-3.png", "På bygget", "På kontoret"),
+    "s07-offerter": ("offerter-1.png", "offerter-2.png", "På kontoret", "Hos kunden"),
+    "s08-fakturor": ("tid-3.png", "fakturor-3.png", "På kontoret", "Hos kunden"),
+    "s09-ekonomi": ("tid-2.png", "ekonomi-3.png", "På bygget", "På kontoret"),
+    "s10-utlagg": ("utlagg-2.png", "utlagg-3.png", "På bygget", "På kontoret"),
+    "s11-loner": ("tid-2.png", "tid-3.png", "På bygget", "På kontoret"),
 }
 
 
@@ -350,6 +385,13 @@ FEATURE = {  # last slide: the site's laptop + phone picture; the old phone is c
     "s02-uppgifter": (ROOT / "public/landing/features/2uppgift.webp", None, None),  # S30: the site mockup as is
     "s03-live": (ROOT / "public/landing/features/3personal.webp", None, None),
     "s04-foto": (ROOT / "public/landing/features/4foto.webp", None, None),
+    "s05-planering": (ROOT / "public/landing/features/5planering.webp", None, None),
+    "s06-verktyg": (ROOT / "public/landing/features/6verktyg.webp", None, None),
+    "s07-offerter": (ROOT / "public/landing/features/7offerter.webp", None, None),
+    "s08-fakturor": (ROOT / "public/landing/features/8fakturor.webp", None, None),
+    "s09-ekonomi": (ROOT / "public/landing/features/9ekonomi.webp", None, None),
+    "s10-utlagg": (ROOT / "public/landing/features/11costs.webp", None, None),
+    "s11-loner": (ROOT / "public/landing/features/12salary.webp", None, None),
 }
 
 

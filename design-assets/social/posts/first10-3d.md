@@ -250,3 +250,136 @@ Varje bild från appen kopplas automatiskt till arbetspasset, projektet, datumet
 
 14 dagar gratis, ingen bindningstid.
 https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
+
+---
+
+## Karusell 05 · Projekt- och personalplanering
+
+FB:
+Hela veckan bemannad – varnar vid överbokning.
+
+Skapa projektet med tidsplan, tilldela medarbetare och se hela företagets beläggning i en gemensam kalender. Blir någon överbokad får du en varning.
+
+14 dagar gratis, ingen bindningstid 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
+
+LinkedIn:
+Planera projekt och personal på ett ställe.
+
+Alla projekt i en gemensam kalender, medarbetare tilldelas per projekt och dag, och systemet varnar vid överbokning.
+
+14 dagar gratis, ingen bindningstid.
+https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
+
+---
+
+## Karusell 06 · Hantering av verktyg och utrustning
+
+FB:
+Vem har borrmaskinen? Skanna QR och se direkt.
+
+Varje verktyg får en QR-kod och kopplas till ett projekt eller en arbetare. Du ser alltid var utrustningen finns och vem som ansvarar för den.
+
+14 dagar gratis, ingen bindningstid 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
+
+LinkedIn:
+Koll på verktyg och utrustning.
+
+Koppla verktyg till projekt eller medarbetare med QR-kod. Se var utrustningen finns och vem som ansvarar för den.
+
+14 dagar gratis, ingen bindningstid.
+https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
+
+---
+
+## Karusell 07 · Skapa offerter
+
+FB:
+Offerten klar på några klick.
+
+Skapa offerten från projektet – projekt- och företagsinformation fylls i automatiskt. Tidigare offerter sparas, så nästa går ännu snabbare.
+
+14 dagar gratis, ingen bindningstid 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
+
+LinkedIn:
+Offerter direkt från projektet.
+
+Företagsinformation och projektdata fylls i automatiskt, och tidigare offerter sparas som grund för nya. Skicka med några klick.
+
+14 dagar gratis, ingen bindningstid.
+https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
+
+---
+
+## Karusell 08 · Skapa fakturor
+
+FB:
+Timmarna blir faktura – ROT och moms uträknade.
+
+Välj projekt och period, så blir de registrerade timmarna underlag för fakturan. ROT-avdrag och moms räknas ut, och fakturan går till kunden.
+
+14 dagar gratis, ingen bindningstid 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
+
+LinkedIn:
+Från registrerade timmar till färdig faktura.
+
+Välj projekt och period – timmarna blir underlag, ROT-avdrag och moms räknas ut. Spara tid och få betalt snabbare.
+
+14 dagar gratis, ingen bindningstid.
+https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
+
+---
+
+## Karusell 09 · Projektekonomi och lönsamhet
+
+FB:
+Se vinsten per projekt – medan jobbet pågår.
+
+Sätt en budget på projektet. Loggade timmar och material räknas om till kostnad och ställs mot budgeten, så du ser marginalen i realtid.
+
+14 dagar gratis, ingen bindningstid 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
+
+LinkedIn:
+Marginalen per projekt i realtid.
+
+Timmar och material räknas automatiskt om till kostnad och ställs mot budgeten – du ser lönsamheten medan projektet pågår, inte efteråt.
+
+14 dagar gratis, ingen bindningstid.
+https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
+
+---
+
+## Karusell 10 · Utlägg och kostnader
+
+FB:
+Inga tappade kvitton – fota det direkt i appen.
+
+Fota kvittot i appen så hamnar det på rätt projekt, och du ser kostnaderna i realtid.
+
+14 dagar gratis, ingen bindningstid 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
+
+LinkedIn:
+Alla utlägg på rätt projekt.
+
+Medarbetaren fotar kvittot i appen, det kopplas till projektet och kostnaderna syns direkt hos kontoret.
+
+14 dagar gratis, ingen bindningstid.
+https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
+
+---
+
+## Karusell 11 · Löner från samma timmar
+
+FB:
+Timmarna blir lön – timmar och OB per person.
+
+De registrerade timmarna blir automatiskt underlag för lön, per anställd. Exportera löneunderlaget med ett klick.
+
+14 dagar gratis, ingen bindningstid 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
+
+LinkedIn:
+Löner från samma timmar.
+
+Registrerade timmar blir underlag för lön – per anställd och timtyp, med minimala manuella justeringar. Export med ett klick.
+
+14 dagar gratis, ingen bindningstid.
+https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10

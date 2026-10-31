@@ -28,6 +28,8 @@ POSTS = [  # first 10, benefit first; no price on the picture (S26)
      ("Klicka på Skapa uppgift", "Lägg till mottagare", "Sätt deadline och påminnelse"), True),
     ("s03-live", ("Vem är på *bygget nu*?", "se det *utan att ringa runt*"), "live-3.png",
      ("Arbetaren stämplar in i appen", "Statusen syns direkt på kontoret", "Frånvarande syns direkt"), True),
+    ("s04-foto", ("Bilderna på *rätt projekt*", "per *dag och person*"), "foto-1.png",
+     ("Ta bilder direkt i appen", "Bilderna kopplas till arbetspasset", "Hela historiken finns alltid tillgänglig"), True),
     ("02-offert", ("*Offert* med din logga", "klar att skicka *samma dag*"), "offerter-3.png",
      ("Välj artiklar ur katalogen", "Summor och moms räknas ut", "Skicka PDF med din logga"), False),
     ("03-lon", ("Timmarna blir *lön*", "timmar och *OB* per person"), "ekonomi-2.png",
@@ -161,6 +163,8 @@ SHOTS = {  # one or two phones; label under each when two
 
 # Slides 2 and 3: two-line headlines like the cover (navy + blue), per post
 HEADS = {
+    "s04-foto": (("Så fungerar det", "från *bygget* till *kontoret*"),
+                 ("I *mobilen* och i *datorn*", "*hela historiken* sparad")),
     "s03-live": (("Så fungerar det", "från *bygget* till *kontoret*"),
                  ("I *mobilen* och i *datorn*", "*hela laget* i realtid")),
     "s02-uppgifter": (("Så fungerar det", "från *kontoret* till *bygget*"),
@@ -243,6 +247,7 @@ FLOW = {  # slide 2: left 3D → right 3D, with labels; direction follows the fe
     "01-tid": ("tid-2.png", "tid-3.png", "På bygget", "På kontoret"),
     "s02-uppgifter": ("uppgifter-1.png", "uppgifter-2.png", "På kontoret", "På bygget"),
     "s03-live": ("tid-2.png", "live-2.png", "På bygget", "På kontoret"),
+    "s04-foto": ("foto-2.png", "foto-3.png", "På bygget", "På kontoret"),
 }
 
 
@@ -344,6 +349,7 @@ FEATURE = {  # last slide: the site's laptop + phone picture; the old phone is c
                APP_SHOTS / "03-arbetspass-manuell-topp.png", (1893, 268, 1044)),
     "s02-uppgifter": (ROOT / "public/landing/features/2uppgift.webp", None, None),  # S30: the site mockup as is
     "s03-live": (ROOT / "public/landing/features/3personal.webp", None, None),
+    "s04-foto": (ROOT / "public/landing/features/4foto.webp", None, None),
 }
 
 

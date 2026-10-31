@@ -231,3 +231,22 @@ När arbetaren stämplar in i appen syns statusen direkt i adminpanelen. Frånva
 
 14 dagar gratis, ingen bindningstid.
 https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
+
+---
+
+## Karusell 04 · Fotodokumentation kopplad till arbetspass
+
+FB:
+Bilderna på rätt projekt – per dag och person.
+
+Ta bilder direkt i appen. Varje bild kopplas automatiskt till arbetspasset, projektet, datumet och personen – och hela historiken finns alltid kvar.
+
+14 dagar gratis, ingen bindningstid 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
+
+LinkedIn:
+Fotodokumentation som sorterar sig själv.
+
+Varje bild från appen kopplas automatiskt till arbetspasset, projektet, datumet och personen. Kontoret ser allt under projektets Foto-flik.
+
+14 dagar gratis, ingen bindningstid.
+https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10

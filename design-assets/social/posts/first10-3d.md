@@ -6,19 +6,19 @@ Länkar: FB `utm_source=facebook`, LinkedIn `utm_source=linkedin`; `utm_medium=s
 
 ---
 
-## 01 · Timmarna in med GPS
+## 01 · Tid med GPS eller manuellt
 
 FB:
-Timmarna in med GPS – löneunderlaget utan lappar.
+Tid med GPS eller manuellt – löneunderlaget utan lappar.
 
-Personalen stämplar in och ut i appen (iPhone och Android). Timmarna hamnar på rätt projekt, och du exporterar löneunderlaget när månaden är slut.
+Personalen stämplar in och ut med GPS i appen (iPhone och Android) – eller skriver in timmarna manuellt. Timmarna hamnar på rätt projekt, och du exporterar löneunderlaget när månaden är slut.
 
 14 dagar gratis, ingen bindningstid 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
 
 LinkedIn:
-Timmarna in med GPS – löneunderlaget utan lappar.
+Tid med GPS eller manuellt – löneunderlaget utan lappar.
 
-Personalen stämplar in och ut i appen. Timmarna hamnar per projekt och timtyp (normal, övertid, OB), och du exporterar löneunderlaget som CSV eller SIE4.
+Personalen stämplar in och ut med GPS i appen eller skriver in timmarna manuellt. Timmarna hamnar per projekt och timtyp (normal, övertid, OB), och du exporterar löneunderlaget som CSV eller SIE4.
 
 14 dagar gratis, ingen bindningstid.
 https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10

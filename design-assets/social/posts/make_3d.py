@@ -17,8 +17,8 @@ NAVY, BLUE, GREY = (10, 24, 40), (35, 148, 255), (91, 117, 145)
 
 # id, headline (2 lines), 3D file, how it works in 3 steps (S26), store badges (S16)
 POSTS = [  # first 10, benefit first; no price on the picture (S26)
-    ("01-tid", ("Timmarna in med GPS", "löneunderlaget utan lappar"), "tid-1.png",
-     ("Stämpla in i appen", "Timmarna hamnar på projektet", "Exportera löneunderlaget"), True),
+    ("01-tid", ("Tid med GPS eller manuellt", "löneunderlaget utan lappar"), "tid-1.png",
+     ("Stämpla in med GPS eller skriv in timmarna", "Timmarna hamnar på projektet", "Exportera löneunderlaget"), True),
     ("02-ata", ("Varje ÄTA blir en faktura", "ett klick från godkänd ÄTA"), "fakturor-3.png",
      ("Skriv ÄTA:n i projektet", "ÄTA:n godkänns", "Fakturan fylls i åt dig"), False),
     ("03-lon", ("Timmarna blir lön", "timmar och OB per person"), "ekonomi-2.png",
@@ -119,3 +119,101 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# ---- Carousel (owner 2026-10-31: one post, 3 pictures) ----
+APP_SHOTS = Path.home() / "Desktop/SMM/app-shots"  # fresh simulator screenshots, full height
+SHOTS = {  # one or two phones; label under each when two
+    "01-tid": [("GPS", APP_SHOTS / "01-arbetspass-gps-incheckad.png"),
+               ("Manuellt", APP_SHOTS / "02-arbetspass-dagkort-restid-bil-traktamente.png")],
+}
+
+
+TOP = 90  # carousel: headline higher (owner 2026-10-31)
+
+
+def slide_cover(lines, art, size):
+    f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
+    d = ImageDraw.Draw(f)
+    for i, t in enumerate(lines):
+        d.text(((W - d.textlength(t, font=font(size))) / 2, TOP + i * 92), t, font=font(size), fill=NAVY if i == 0 else BLUE)
+    im = Image.open(ART / art).convert("RGBA").resize((820, 820), Image.LANCZOS)
+    f.alpha_composite(im, ((W - 820) // 2, 300))
+    return f, d
+
+
+def slide_steps(items, art):
+    f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
+    d = ImageDraw.Draw(f)
+    t = "Så fungerar det"
+    d.text(((W - d.textlength(t, font=font(72))) / 2, TOP), t, font=font(72), fill=NAVY)
+    ft, fn = font(52, "Medium"), font(40, "Bold")
+    for i, text in enumerate(items):
+        y = 360 + i * 300
+        d.ellipse((96, y, 176, y + 80), fill=(218, 240, 225))
+        n = str(i + 1)
+        d.text((136 - d.textlength(n, font=fn) / 2, y + 14), n, font=fn, fill=(69, 179, 107))
+        d.text((216, y + 8), text, font=ft, fill=NAVY)
+        if i < 2:
+            d.line((136, y + 100, 136, y + 280), fill=(225, 234, 243), width=4)
+    return f, d
+
+
+PHONE = ART.parent / "screens/foto-phone.png"  # real iPhone frame from the decks (phone-frame.py)
+SCREEN, ISLAND, R_SCREEN = (46, 36, 874, 1836), (333, 66, 588, 138), 112
+
+
+def phone(path):
+    # The app screenshot inside the real iPhone frame; a short screenshot gets the app background below.
+    frame = Image.open(PHONE).convert("RGBA")
+    x0, y0, x1, y1 = SCREEN
+    sw, sh = x1 - x0, y1 - y0
+    shot = Image.open(path).convert("RGBA")
+    shot = shot.resize((sw, round(shot.height * sw / shot.width)), Image.LANCZOS)
+    scr = Image.new("RGBA", (sw, sh), shot.getpixel((4, shot.height - 4)))
+    scr.paste(shot.crop((0, 0, sw, min(sh, shot.height))), (0, 0))
+    k = 4
+    m = Image.new("L", (sw * k, sh * k), 0)
+    ImageDraw.Draw(m).rounded_rectangle((0, 0, sw * k - 1, sh * k - 1), R_SCREEN * k, fill=255)
+    frame.paste(scr, (x0, y0), m.resize((sw, sh), Image.LANCZOS))
+    i = ISLAND
+    ImageDraw.Draw(frame).rounded_rectangle(i, (i[3] - i[1]) // 2, fill=(0, 0, 0, 255))
+    return frame
+
+
+def slide_shot(shots, caption):
+    f = Image.new("RGBA", (W, H), (241, 246, 251, 255))
+    d = ImageDraw.Draw(f)
+    d.text(((W - d.textlength(caption, font=font(72))) / 2, TOP), caption, font=font(72), fill=NAVY)
+    from PIL import ImageFilter
+    h = 1090 if len(shots) == 1 else 960
+    phones = [phone(path) for _, path in shots]
+    phones = [ph.resize((round(ph.width * h / ph.height), h), Image.LANCZOS) for ph in phones]
+    gap = 40
+    x = (W - sum(ph.width for ph in phones) - gap * (len(phones) - 1)) // 2
+    y = 230
+    for (label, _), ph in zip(shots, phones):
+        sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        ImageDraw.Draw(sh).rounded_rectangle((x + 10, y + 30, x + ph.width - 10, y + h), 60, fill=(10, 24, 40, 55))
+        f.alpha_composite(sh.filter(ImageFilter.GaussianBlur(30)))
+        f.alpha_composite(ph, (x, y))
+        if len(shots) > 1:
+            fl = font(44, "Bold")
+            d.text((x + (ph.width - d.textlength(label, font=fl)) / 2, y + h + 24), label, font=fl, fill=BLUE)
+        x += ph.width + gap
+    return f, d
+
+
+def carousel(pid):
+    p = next(p for p in POSTS if p[0] == pid)
+    _, lines, art, items, badges = p
+    size = headline_size()
+    out = []
+    slides = (slide_cover(lines, art, size), slide_steps(items, art), slide_shot(SHOTS[pid], "Så ser det ut i appen"))
+    for i, (f, d) in enumerate(slides):
+        if i == 0:  # footer only on the first picture (owner 2026-10-31)
+            footer(f, d, badges)
+        out.append(f.convert("RGB"))
+    for i, im in enumerate(out, 1):
+        im.save(OUT / f"{pid}-k{i}.jpg", quality=92)
+    return out

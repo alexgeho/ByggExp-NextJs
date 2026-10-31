@@ -15,29 +15,28 @@ OUT = HERE / "out-3d-first10"
 W, H = 1080, 1350
 NAVY, BLUE, GREY = (10, 24, 40), (35, 148, 255), (91, 117, 145)
 
-# id, headline (2 lines), 3D file, what is included — S18 wording, rubric badges (S16)
-FULL, BASE = "299 kr/mån + 69 kr/arbetare", "299 kr/mån"
-POSTS = [  # id, headline, 3D, what is included, store badges, price — first 10, benefit first
+# id, headline (2 lines), 3D file, how it works in 3 steps (S26), store badges (S16)
+POSTS = [  # first 10, benefit first; no price on the picture (S26)
     ("01-tid", ("Timmarna in med GPS", "löneunderlaget utan lappar"), "tid-1.png",
-     "tidrapport, närvaro och planering", True, FULL),
+     ("Stämpla in i appen", "Timmarna hamnar på projektet", "Exportera löneunderlaget"), True),
     ("02-ata", ("Varje ÄTA blir en faktura", "ett klick från godkänd ÄTA"), "fakturor-3.png",
-     "offert, faktura, lön och projektekonomi", False, BASE),
+     ("Skriv ÄTA:n i projektet", "ÄTA:n godkänns", "Fakturan fylls i åt dig"), False),
     ("03-lon", ("Timmarna blir lön", "timmar och OB per person"), "ekonomi-2.png",
-     "offert, faktura, lön och projektekonomi", False, BASE),
+     ("Laget rapporterar tid i appen", "Timmar och OB summeras", "Brutto och skatt räknas"), False),
     ("04-ekonomi", ("Se vinsten per projekt", "medan jobbet pågår"), "ekonomi-1-gold.png",
-     "offert, faktura, lön och projektekonomi", False, BASE),
+     ("Lägg budget för projektet", "Kostnader bokförs på projektet", "Se lönsamheten direkt"), False),
     ("05-utlagg", ("Inga tappade kvitton", "fota det direkt i appen"), "utlagg-1.png",
-     "kvittoskanning, tidrapport och närvaro", True, FULL),
+     ("Fota kvittot i butiken", "Det skannas automatiskt", "Hamnar på projektet"), True),
     ("06-planering", ("Hela veckan bemannad", "varnar vid överbokning"), "planering-2.png",
-     "tidrapport, närvaro och planering", True, FULL),
+     ("Klicka på en dag", "Välj vem som jobbar var", "Varning vid över 8 h"), True),
     ("07-faktura", ("ROT och moms uträknade", "fakturan klar med din logga"), "offerter-1.png",
-     "offert, faktura, lön och projektekonomi", False, BASE),
+     ("Lägg in raderna", "ROT och moms räknas ut", "Skicka PDF med din logga"), False),
     ("08-foto", ("Bilderna på rätt projekt", "per dag och person"), "foto-1.png",
-     "foton, tidrapport och närvaro", True, FULL),
+     ("Fota i appen", "Kopplas till arbetspasset", "Sorteras per dag och person"), True),
     ("09-live", ("Vem är på bygget nu?", "se det utan att ringa runt"), "live-3.png",
-     "närvaro i realtid och tidrapport", True, FULL),
+     ("Arbetaren stämplar in", "Syns direkt hos kontoret", "Hela laget i en lista"), True),
     ("10-verktyg", ("Vem har borrmaskinen?", "skanna QR och se direkt"), "verktyg-1.png",
-     "verktyg via QR, tidrapport och närvaro", True, FULL),
+     ("QR-kod på verktyget", "Skanna när du tar det", "Alla ser vem som har det"), True),
 ]
 
 
@@ -57,22 +56,39 @@ def headline_size():
     return min(fit(d, t, 76, W - 128).size for p in POSTS for t in p[1])
 
 
-def post(lines, art, price, badges, total, size=76):
+def wrap(d, text, ft, maxw):
+    # One line if it fits, else two balanced lines (no lone last word).
+    if d.textlength(text, font=ft) <= maxw:
+        return [text]
+    w = text.split()
+    cuts = [(" ".join(w[:i]), " ".join(w[i:])) for i in range(1, len(w))]
+    return list(min(cuts, key=lambda c: max(d.textlength(x, font=ft) for x in c)))
+
+
+def steps(f, d, items):
+    # S26: how it works, 3 steps with green number balls (as in the feature decks)
+    col, top = (W - 128) // 3, 985
+    ft, fn = font(30, "Medium"), font(28, "Bold")
+    for i, text in enumerate(items):
+        cx = 64 + col * i + col // 2
+        d.ellipse((cx - 24, top, cx + 24, top + 48), fill=(218, 240, 225))
+        n = str(i + 1)
+        d.text((cx - d.textlength(n, font=fn) / 2, top + 7), n, font=fn, fill=(69, 179, 107))
+        for j, line in enumerate(wrap(d, text, ft, col - 24)):
+            d.text((cx - d.textlength(line, font=ft) / 2, top + 66 + j * 40), line, font=ft, fill=NAVY)
+
+
+def post(lines, art, items, badges, size=76):
     f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
     d = ImageDraw.Draw(f)
     for i, t in enumerate(lines):  # S15: headline inside the 1080 square (y 135-1215)
         ft = font(size)
         d.text(((W - d.textlength(t, font=ft)) / 2, 160 + i * 92), t, font=ft, fill=NAVY if i == 0 else BLUE)
     im = Image.open(ART / art).convert("RGBA")
-    side = 700
+    side = 620
     im = im.resize((side, side), Image.LANCZOS)
-    f.alpha_composite(im, ((W - side) // 2, 360))
-    p = total  # S17/S18: price, then what is included; Kontoret-only posts show just 299
-    fp = fit(d, p, 40, W - 128)
-    d.text(((W - d.textlength(p, font=fp)) / 2, 1078), p, font=fp, fill=NAVY)
-    sub = price + " · exkl. moms"
-    fi = fit(d, sub, 36, W - 128, "Regular")
-    d.text(((W - d.textlength(sub, font=fi)) / 2, 1134), sub, font=fi, fill=GREY)
+    f.alpha_composite(im, ((W - side) // 2, 345))
+    steps(f, d, items)
     footer(f, d, badges)
     return f
 
@@ -96,8 +112,8 @@ def footer(f, d, badges):
 def main():
     OUT.mkdir(exist_ok=True)
     size = headline_size()
-    for pid, lines, art, price, badges, total in POSTS:
-        post(lines, art, price, badges, total, size).convert("RGB").save(OUT / f"{pid}.jpg", quality=92)
+    for pid, lines, art, items, badges in POSTS:
+        post(lines, art, items, badges, size).convert("RGB").save(OUT / f"{pid}.jpg", quality=92)
         print(pid)
 
 

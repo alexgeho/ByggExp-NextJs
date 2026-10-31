@@ -18,7 +18,7 @@ Personalen stämplar in och ut med GPS i appen (iPhone och Android) – eller sk
 LinkedIn:
 Tid med GPS eller manuellt – lön och faktura utan lappar.
 
-Personalen stämplar in och ut med GPS i appen eller skriver in timmarna manuellt. Timmarna hamnar per projekt och timtyp (normal, övertid, OB), och blir både löneunderlag (CSV/SIE4) och faktura till kunden direkt från timmarna.
+Personalen stämplar in och ut med GPS i appen eller skriver in timmarna manuellt. Timmarna hamnar per projekt och timtyp (normal, övertid, OB), och blir både löneunderlag (CSV) och faktura till kunden direkt från timmarna.
 
 14 dagar gratis, ingen bindningstid.
 https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
@@ -227,7 +227,7 @@ Arbetaren stämplar in i appen och statusen syns direkt på kontoret: på jobbet
 LinkedIn:
 Vem är på bygget just nu?
 
-När arbetaren stämplar in i appen syns statusen direkt i adminpanelen. Frånvarande syns direkt – utan samtal för att stämma av.
+När arbetaren stämplar in i appen syns statusen direkt i adminpanelen. Frånvarande syns också – utan att ringa runt.
 
 14 dagar gratis, ingen bindningstid.
 https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
@@ -322,7 +322,7 @@ Välj projekt och period, så blir de registrerade timmarna underlag för faktur
 LinkedIn:
 Från registrerade timmar till färdig faktura.
 
-Välj projekt och period – timmarna blir underlag, ROT-avdrag och moms räknas ut. Spara tid och få betalt snabbare.
+Välj projekt och period – timmarna blir underlag, ROT-avdrag och moms räknas ut. Spara tid.
 
 14 dagar gratis, ingen bindningstid.
 https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
@@ -351,7 +351,7 @@ https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
 ## Karusell 10 · Utlägg och kostnader
 
 FB:
-Inga tappade kvitton – fota det direkt i appen.
+Inga tappade kvitton – fota kvittot direkt i appen.
 
 Fota kvittot i appen så hamnar det på rätt projekt, och du ser kostnaderna i realtid.
 
@@ -379,7 +379,7 @@ De registrerade timmarna blir automatiskt underlag för lön, per anställd. Exp
 LinkedIn:
 Löner från samma timmar.
 
-Registrerade timmar blir underlag för lön – per anställd och timtyp, med minimala manuella justeringar. Export med ett klick.
+Registrerade timmar blir underlag för lön – per anställd och timtyp, Export med ett klick.
 
 14 dagar gratis, ingen bindningstid.
 https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10

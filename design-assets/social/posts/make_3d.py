@@ -238,12 +238,19 @@ def slide_steps(items, pid, lines, size):
     left, right, l_label, r_label = FLOW[pid]
     side = 380
     il, ild = layer(side + 80)
+    edges = []
     for art, x in ((left, 64), (right, W - 64 - side)):
-        il.alpha_composite(Image.open(ART / art).convert("RGBA").resize((side, side), Image.LANCZOS), (x, 0))
+        im = Image.open(ART / art).convert("RGBA").resize((side, side), Image.LANCZOS)
+        il.alpha_composite(im, (x, 0))
+        b = ink(im)
+        edges.append((x + b[0], x + b[2]))
     fl = font(34, "Bold")
-    for label, x in ((l_label, 64), (r_label, W - 64 - side)):
-        ild.text((x + (side - ild.textlength(label, font=fl)) / 2, side + 10), label, font=fl, fill=GREY)
-    arrow(ild, 64 + side - 10, W - 64 - side + 10, side // 2)
+    for label, (e0, e1) in ((l_label, edges[0]), (r_label, edges[1])):  # label centred under the figure itself
+        ild.text(((e0 + e1) / 2 - ild.textlength(label, font=fl) / 2, side + 10), label, font=fl, fill=GREY)
+    # Arrow exactly in the middle between the visible figures: equal air left and right (owner 2026-10-31)
+    l_edge, r_edge = edges[0][1], edges[1][0]
+    m = max(24, (r_edge - l_edge) // 5)
+    arrow(ild, l_edge + m, r_edge - m, side // 2)
     tl, td = layer(700)
     ft, fn = font(44, "Medium"), font(34, "Bold")
     y = 0

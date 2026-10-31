@@ -2,6 +2,7 @@
 
 python3 make_3d.py            -> out-3d/<id>.jpg
 """
+from functools import lru_cache
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -17,8 +18,8 @@ NAVY, BLUE, GREY = (10, 24, 40), (35, 148, 255), (91, 117, 145)
 
 # id, headline (2 lines), 3D file, how it works in 3 steps (S26), store badges (S16)
 POSTS = [  # first 10, benefit first; no price on the picture (S26)
-    ("01-tid", ("Tid med GPS eller manuellt", "löneunderlaget utan lappar"), "tid-1.png",
-     ("Stämpla in med GPS eller skriv in timmarna", "Timmarna hamnar på projektet", "Exportera löneunderlaget"), True),
+    ("01-tid", ("Tid med GPS eller manuellt", "lön och faktura utan lappar"), "tid-1.png",
+     ("Stämpla in med GPS eller skriv in timmarna", "Timmarna hamnar på projektet", "Lön och faktura direkt från timmarna"), True),
     ("02-ata", ("Varje ÄTA blir en faktura", "ett klick från godkänd ÄTA"), "fakturor-3.png",
      ("Skriv ÄTA:n i projektet", "ÄTA:n godkänns", "Fakturan fylls i åt dig"), False),
     ("03-lon", ("Timmarna blir lön", "timmar och OB per person"), "ekonomi-2.png",
@@ -40,8 +41,16 @@ POSTS = [  # first 10, benefit first; no price on the picture (S26)
 ]
 
 
+SF = "/System/Library/Fonts/SFNS.ttf"  # the site sets DM Sans but never loads it -> visitors see SF Pro
+WEIGHTS = {"Bold": 600, "Medium": 500, "Regular": 400}  # site: headings 600, text 400/500
+
+
+@lru_cache(maxsize=None)
 def font(size, weight="Bold"):
-    return ImageFont.truetype(str(FONTS / f"DMSans-{weight}.ttf"), size)
+    f = ImageFont.truetype(SF, size)
+    # axes: Width, Optical Size, GRAD, Weight; large text uses the Display optical size
+    f.set_variation_by_axes([100, 96 if size >= 40 else 28, 400, WEIGHTS[weight]])
+    return f
 
 
 def fit(d, text, size, maxw, weight="Bold"):

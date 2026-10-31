@@ -14,7 +14,7 @@
 
 ## Fakturering (webbadmin) — code-checked 2026-10-14
 - YES: faktura med företagets logotyp (invoices.service.ts), moms per rad (default 25 %) och omvänd byggmoms, ROT-avdrag 30 % av arbetskostnaden (invoice-math.ts ROT_RATE/ROT_MAX), faktura förifylld från godkänd ÄTA (byggexp-admin ProjectAtaTab.jsx createInvoiceFromAta).
-- NOT VERIFIED: faktura "direkt från loggad tid och material" — don't claim.
+- YES (owner + code 2026-10-31): faktura från timmarna — Timmar-tabellen (byggexp-admin HoursPage.jsx) lämnar över timmar per projekt/period till en faktura. Material på fakturan automatiskt: fortfarande ej verifierat.
 
 ## Foto — code-checked 2026-10-14
 - YES: foton i mobilappen kopplade till arbetspasset → projekt, datum (shiftDate), person; visas i projektets Foto-flik (ShiftPhotoFile: url, uploadedAt; admin ProjectPhotosTab.jsx). Dagbok-foton: photoUrls på dagens anteckning.

@@ -9,16 +9,16 @@ Länkar: FB `utm_source=facebook`, LinkedIn `utm_source=linkedin`; `utm_medium=s
 ## 01 · Tid med GPS eller manuellt
 
 FB:
-Tid med GPS eller manuellt – löneunderlaget utan lappar.
+Tid med GPS eller manuellt – lön och faktura utan lappar.
 
-Personalen stämplar in och ut med GPS i appen (iPhone och Android) – eller skriver in timmarna manuellt. Timmarna hamnar på rätt projekt, och du exporterar löneunderlaget när månaden är slut.
+Personalen stämplar in och ut med GPS i appen (iPhone och Android) – eller skriver in timmarna manuellt. Timmarna hamnar på rätt projekt. Därifrån gör du löneunderlaget och fakturan till kunden – utan att skriva av något.
 
 14 dagar gratis, ingen bindningstid 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
 
 LinkedIn:
-Tid med GPS eller manuellt – löneunderlaget utan lappar.
+Tid med GPS eller manuellt – lön och faktura utan lappar.
 
-Personalen stämplar in och ut med GPS i appen eller skriver in timmarna manuellt. Timmarna hamnar per projekt och timtyp (normal, övertid, OB), och du exporterar löneunderlaget som CSV eller SIE4.
+Personalen stämplar in och ut med GPS i appen eller skriver in timmarna manuellt. Timmarna hamnar per projekt och timtyp (normal, övertid, OB), och blir både löneunderlag (CSV/SIE4) och faktura till kunden direkt från timmarna.
 
 14 dagar gratis, ingen bindningstid.
 https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10

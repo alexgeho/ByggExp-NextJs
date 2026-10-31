@@ -177,11 +177,12 @@ def art(name, side):
     a = np.asarray(im).astype(float)
     lum = a.mean(2)
     sat = a.max(2) - a.min(2)
-    pale = np.clip((lum - 200) / 40, 0, 1) * (sat < 18)  # light, colourless = shadow / floor
-    f = side / 8
+    pale = np.clip((lum - 150) / 50, 0, 1) * (sat < 22)  # light-to-mid grey, colourless = floor shadow
+    f = side / 6  # soft fade, narrow enough to stay off the figures
     yy, xx = np.mgrid[0:side, 0:side]
     d = np.minimum.reduce([xx, side - 1 - xx, side - 1 - yy]).astype(float)
-    edge = np.clip(1 - d / f, 0, 1) * (yy > side * 0.5)  # bottom half: where floor shadows are
+    t = np.clip(1 - d / f, 0, 1)
+    edge = t * t * (3 - 2 * t) * (yy > side * 0.6)  # smoothstep; lower part, where floor shadows are
     k = (pale * edge)[..., None]
     out = a * (1 - k) + 255 * k
     return Image.fromarray(out.astype("uint8")).convert("RGBA")

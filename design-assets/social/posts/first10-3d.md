@@ -193,3 +193,22 @@ Varje verktyg får en QR-kod. Den som tar verktyget skannar koden i appen, och n
 
 14 dagar gratis, ingen bindningstid.
 https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
+
+---
+
+## Karusell 02 · Uppgifter med automatisk uppföljning (serie enligt sajtens block «Så fungerar det»)
+
+FB:
+Inga glömda uppgifter – påminnelser tills det är klart.
+
+Skapa uppgiften på kontoret, välj vem som ska göra den och sätt deadline. Appen påminner tills uppgiften är markerad som klar.
+
+14 dagar gratis, ingen bindningstid 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
+
+LinkedIn:
+Inga glömda uppgifter.
+
+Uppgifter kan tilldelas hela projektet eller utvalda medarbetare. Om uppgiften inte slutförs skickar appen påminnelser – tills den är klar.
+
+14 dagar gratis, ingen bindningstid.
+https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10

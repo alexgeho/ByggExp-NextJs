@@ -22,6 +22,8 @@ NAVY, BLUE, GREY = (10, 24, 40), (35, 148, 255), (91, 117, 145)
 POSTS = [  # first 10, benefit first; no price on the picture (S26)
     ("01-tid", ("Tid med *GPS* eller *manuellt*", "*lön och faktura* utan lappar"), "tid-1.png",
      ("Stämpla in med GPS eller skriv in timmarna", "Timmarna hamnar på projektet", "Lön och faktura direkt från timmarna"), True),
+    ("s02-uppgifter", ("Inga *glömda* uppgifter", "*påminnelser* tills det är klart"), "uppgifter-3.png",
+     ("Klicka på Skapa uppgift", "Lägg till mottagare", "Sätt deadline och påminnelse"), True),
     ("02-offert", ("*Offert* med din logga", "klar att skicka *samma dag*"), "offerter-3.png",
      ("Välj artiklar ur katalogen", "Summor och moms räknas ut", "Skicka PDF med din logga"), False),
     ("03-lon", ("Timmarna blir *lön*", "timmar och *OB* per person"), "ekonomi-2.png",
@@ -155,6 +157,8 @@ SHOTS = {  # one or two phones; label under each when two
 
 # Slides 2 and 3: two-line headlines like the cover (navy + blue), per post
 HEADS = {
+    "s02-uppgifter": (("Så fungerar det", "från *kontoret* till *bygget*"),
+                      ("I *mobilen* och i *datorn*", "*alla* ser samma uppgifter")),
     "01-tid": (("Så fungerar det", "från *bygget* till *kontoret*"),
                ("I *mobilen* och i *datorn*", "*samma timmar* överallt")),
 }
@@ -209,8 +213,9 @@ def slide_cover(lines, art, size):
     return f, d
 
 
-FLOW = {  # slide 2: who enters it on site → where it shows up in the office
-    "01-tid": ("tid-2.png", "tid-3.png"),
+FLOW = {  # slide 2: left 3D → right 3D, with labels; direction follows the feature
+    "01-tid": ("tid-2.png", "tid-3.png", "På bygget", "På kontoret"),
+    "s02-uppgifter": ("uppgifter-1.png", "uppgifter-2.png", "På kontoret", "På bygget"),
 }
 
 
@@ -225,13 +230,13 @@ def slide_steps(items, pid, lines, size):
     f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
     d = ImageDraw.Draw(f)
     headline(d, lines, size)
-    site, office = FLOW[pid]
+    left, right, l_label, r_label = FLOW[pid]
     side = 380
     il, ild = layer(side + 80)
-    for art, x in ((site, 64), (office, W - 64 - side)):
+    for art, x in ((left, 64), (right, W - 64 - side)):
         il.alpha_composite(Image.open(ART / art).convert("RGBA").resize((side, side), Image.LANCZOS), (x, 0))
     fl = font(34, "Bold")
-    for label, x in (("På bygget", 64), ("På kontoret", W - 64 - side)):
+    for label, x in ((l_label, 64), (r_label, W - 64 - side)):
         ild.text((x + (side - ild.textlength(label, font=fl)) / 2, side + 10), label, font=fl, fill=GREY)
     arrow(ild, 64 + side - 10, W - 64 - side + 10, side // 2)
     tl, td = layer(700)
@@ -298,18 +303,21 @@ FEATURE = {  # last slide: the site's laptop + phone picture; the old phone is c
     # id: (site picture, new screen, phone box on the site picture: x, y_top, height)
     "01-tid": (ROOT / "public/landing/features/1arbetspass.webp",
                APP_SHOTS / "03-arbetspass-manuell-topp.png", (1893, 268, 1044)),
+    "s02-uppgifter": (ROOT / "public/landing/features/2uppgift.webp", None, None),  # site phone is current
 }
 
 
 def slide_feature(spec, lines, size):
     # Laptop from the site + our real iPhone with the current week screen on top of the old phone.
-    path, screen, (px, py, ph) = spec
+    path, screen, box = spec
     f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
     d = ImageDraw.Draw(f)
     im = Image.open(path).convert("RGBA")
-    p = phone(screen)
-    p = p.resize((round(p.width * ph / p.height), ph), Image.LANCZOS)
-    im.alpha_composite(p.crop((0, 0, min(p.width, im.width - px), min(p.height, im.height - py))), (px, py))
+    if screen:
+        px, py, ph = box
+        p = phone(screen)
+        p = p.resize((round(p.width * ph / p.height), ph), Image.LANCZOS)
+        im.alpha_composite(p.crop((0, 0, min(p.width, im.width - px), min(p.height, im.height - py))), (px, py))
     im = im.crop(im.getbbox())
     w = W - 40
     im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)

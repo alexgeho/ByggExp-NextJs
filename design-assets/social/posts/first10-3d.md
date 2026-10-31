@@ -85,7 +85,7 @@ https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
 ## 05 · Inga tappade kvitton
 
 FB:
-Inga tappade kvitton – fota det direkt i appen.
+Inga tappade kvitton – fota kvittot direkt i appen.
 
 Arbetaren fotar kvittot i butiken med mobilen. Det skannas och hamnar hos kontoret direkt, inte i jackfickan.
 

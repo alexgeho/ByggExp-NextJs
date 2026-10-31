@@ -235,16 +235,22 @@ def slide_shot(shots, caption):
     return f, d
 
 
-FEATURE = {  # slide 4: the site's feature picture, laptop + phone (public/landing/features)
-    "01-tid": ROOT / "public/landing/features/1arbetspass.webp",
+FEATURE = {  # last slide: the site's laptop + phone picture; the old phone is covered by the new app screen
+    # id: (site picture, new screen, phone box on the site picture: x, y_top, height)
+    "01-tid": (ROOT / "public/landing/features/1arbetspass.webp",
+               APP_SHOTS / "03-arbetspass-manuell-topp.png", (1893, 268, 1044)),
 }
 
 
-def slide_feature(path, caption):
-    # Headline + picture centred as one group (the picture is wide, so a top headline leaves a hole).
+def slide_feature(spec, caption):
+    # Laptop from the site + our real iPhone with the current week screen on top of the old phone.
+    path, screen, (px, py, ph) = spec
     f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
     d = ImageDraw.Draw(f)
     im = Image.open(path).convert("RGBA")
+    p = phone(screen)
+    p = p.resize((round(p.width * ph / p.height), ph), Image.LANCZOS)
+    im.alpha_composite(p.crop((0, 0, min(p.width, im.width - px), min(p.height, im.height - py))), (px, py))
     im = im.crop(im.getbbox())
     w = W - 40
     im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
@@ -259,9 +265,9 @@ def carousel(pid):
     _, lines, art, items, badges = p
     size = headline_size()
     out = []
-    slides = [slide_cover(lines, art, size), slide_steps(items, pid), slide_shot(SHOTS[pid], "Så ser det ut i appen")]
-    if pid in FEATURE:
-        slides.append(slide_feature(FEATURE[pid], "I mobilen och i datorn"))
+    # 3 pictures (owner 2026-10-31): the site's laptop + new phone replaces the separate phone slide
+    last = slide_feature(FEATURE[pid], "I mobilen och i datorn") if pid in FEATURE else slide_shot(SHOTS[pid], "Så ser det ut i appen")
+    slides = [slide_cover(lines, art, size), slide_steps(items, pid), last]
     for i, (f, d) in enumerate(slides):
         if i == 0:  # footer only on the first picture (owner 2026-10-31)
             footer(f, d, badges)

@@ -17,6 +17,8 @@ W, H = 1080, 1350
 TOP = 90  # carousel: headline higher (owner 2026-10-31)
 CONTENT = 400  # first content line under the headline, same air as under the cover headline
 NAVY, BLUE, GREY = (10, 24, 40), (35, 148, 255), (91, 117, 145)
+# Colours only from the site tokens (src/styles/globals.scss) — never typed by eye (owner 2026-10-31)
+GREEN, GREEN_BG = (0x45, 0xB3, 0x6B), (0xE5, 0xF6, 0xE8)  # --green, --green-1
 
 # id, headline (2 lines), 3D file, how it works in 3 steps (S26), store badges (S16)
 POSTS = [  # first 10, benefit first; no price on the picture (S26)
@@ -100,9 +102,9 @@ def steps(f, d, items):
     ft, fn = font(30, "Medium"), font(28, "Bold")
     for i, text in enumerate(items):
         cx = 64 + col * i + col // 2
-        d.ellipse((cx - 24, top, cx + 24, top + 48), fill=(218, 240, 225))
+        d.ellipse((cx - 24, top, cx + 24, top + 48), fill=GREEN_BG)
         n = str(i + 1)
-        d.text((cx - d.textlength(n, font=fn) / 2, top + 7), n, font=fn, fill=(69, 179, 107))
+        d.text((cx - d.textlength(n, font=fn) / 2, top + 7), n, font=fn, fill=GREEN)
         for j, line in enumerate(wrap(d, text, ft, col - 24)):
             d.text((cx - d.textlength(line, font=ft) / 2, top + 66 + j * 40), line, font=ft, fill=NAVY)
 
@@ -140,7 +142,7 @@ def main():
     OUT.mkdir(exist_ok=True)
     size = headline_size()
     for pid, lines, art, items, badges in POSTS:
-        post(lines, art, items, badges, size).convert("RGB").save(OUT / f"{pid}.jpg", quality=92)
+        post(lines, art, items, badges, size).convert("RGB").save(OUT / f"{pid}.jpg", quality=95, subsampling=0)
         print(pid)
 
 
@@ -280,9 +282,9 @@ def slide_steps(items, pid, lines, size):
     ft, fn = font(44, "Medium"), font(34, "Bold")
     y = 0
     for i, text in enumerate(items):
-        td.ellipse((96, y, 164, y + 68), fill=(218, 240, 225))
+        td.ellipse((96, y, 164, y + 68), fill=GREEN_BG)
         n = str(i + 1)
-        td.text((130 - td.textlength(n, font=fn) / 2, y + 12), n, font=fn, fill=(69, 179, 107))
+        td.text((130 - td.textlength(n, font=fn) / 2, y + 12), n, font=fn, fill=GREEN)
         rows = wrap(td, text, ft, W - 200 - 96)
         for j, line in enumerate(rows):
             td.text((200, y + 8 + j * 56), line, font=ft, fill=NAVY)
@@ -377,9 +379,9 @@ def checks(d, y):
     x = (W - w) / 2
     for i, t in enumerate(MEETS):
         yy = y + i * 76
-        d.ellipse((x, yy + 4, x + 48, yy + 52), fill=(218, 240, 225))
-        d.line((x + 13, yy + 29, x + 21, yy + 37), fill=(69, 179, 107), width=6)
-        d.line((x + 21, yy + 37, x + 36, yy + 19), fill=(69, 179, 107), width=6)
+        d.ellipse((x, yy + 4, x + 48, yy + 52), fill=GREEN_BG)
+        d.line((x + 13, yy + 29, x + 21, yy + 37), fill=GREEN, width=6)
+        d.line((x + 21, yy + 37, x + 36, yy + 19), fill=GREEN, width=6)
         d.text((x + 76, yy), t, font=ft, fill=NAVY)
 
 
@@ -397,5 +399,5 @@ def carousel(pid):
             footer(f, d, badges)
         out.append(f.convert("RGB"))
     for i, im in enumerate(out, 1):
-        im.save(OUT / f"{pid}-k{i}.jpg", quality=92)
+        im.save(OUT / f"{pid}-k{i}.jpg", quality=95, subsampling=0)
     return out

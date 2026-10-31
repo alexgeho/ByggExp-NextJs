@@ -140,12 +140,23 @@ SHOTS = {  # one or two phones; label under each when two
 
 TOP = 90  # carousel: headline higher (owner 2026-10-31)
 
+# Slides 2 and 3: two-line headlines like the cover (navy + blue), per post
+HEADS = {
+    "01-tid": (("Så fungerar det", "från bygget till kontoret"),
+               ("I mobilen och i datorn", "samma timmar överallt")),
+}
+
+
+def headline(d, lines, size):
+    # Every slide: line 1 navy, line 2 blue, same size and height (owner 2026-10-31)
+    for i, t in enumerate(lines):
+        d.text(((W - d.textlength(t, font=font(size))) / 2, TOP + i * 92), t, font=font(size), fill=NAVY if i == 0 else BLUE)
+
 
 def slide_cover(lines, art, size):
     f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
     d = ImageDraw.Draw(f)
-    for i, t in enumerate(lines):
-        d.text(((W - d.textlength(t, font=font(size))) / 2, TOP + i * 92), t, font=font(size), fill=NAVY if i == 0 else BLUE)
+    headline(d, lines, size)
     im = Image.open(ART / art).convert("RGBA").resize((820, 820), Image.LANCZOS)
     f.alpha_composite(im, ((W - 820) // 2, 300))
     return f, d
@@ -163,30 +174,29 @@ def arrow(d, x0, x1, y):
     d.polygon([(x1, y), (x1 - 30, y - 18), (x1 - 30, y + 18)], fill=BLUE)
 
 
-def slide_steps(items, pid):
+def slide_steps(items, pid, lines, size):
     f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
     d = ImageDraw.Draw(f)
-    t = "Så fungerar det"
-    d.text(((W - d.textlength(t, font=font(72))) / 2, TOP), t, font=font(72), fill=NAVY)
+    headline(d, lines, size)
     site, office = FLOW[pid]
-    side = 450
+    side = 420
     for art, x in ((site, 64), (office, W - 64 - side)):
         im = Image.open(ART / art).convert("RGBA").resize((side, side), Image.LANCZOS)
-        f.alpha_composite(im, (x, 210))
+        f.alpha_composite(im, (x, 290))
     fl = font(34, "Bold")
     for label, x in (("På bygget", 64), ("På kontoret", W - 64 - side)):
-        d.text((x + (side - d.textlength(label, font=fl)) / 2, 670), label, font=fl, fill=GREY)
-    arrow(d, 64 + side - 10, W - 64 - side + 10, 440)
+        d.text((x + (side - d.textlength(label, font=fl)) / 2, 715), label, font=fl, fill=GREY)
+    arrow(d, 64 + side - 10, W - 64 - side + 10, 500)
     ft, fn = font(44, "Medium"), font(34, "Bold")
-    y = 790
+    y = 830
     for i, text in enumerate(items):
         d.ellipse((96, y, 164, y + 68), fill=(218, 240, 225))
         n = str(i + 1)
         d.text((130 - d.textlength(n, font=fn) / 2, y + 12), n, font=fn, fill=(69, 179, 107))
-        lines = wrap(d, text, ft, W - 200 - 96)
-        for j, line in enumerate(lines):
+        rows = wrap(d, text, ft, W - 200 - 96)
+        for j, line in enumerate(rows):
             d.text((200, y + 8 + j * 56), line, font=ft, fill=NAVY)
-        y += max(68, 56 * len(lines)) + 60
+        y += max(68, 56 * len(rows)) + 56
     return f, d
 
 
@@ -242,7 +252,7 @@ FEATURE = {  # last slide: the site's laptop + phone picture; the old phone is c
 }
 
 
-def slide_feature(spec, caption):
+def slide_feature(spec, lines, size):
     # Laptop from the site + our real iPhone with the current week screen on top of the old phone.
     path, screen, (px, py, ph) = spec
     f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
@@ -255,8 +265,8 @@ def slide_feature(spec, caption):
     w = W - 40
     im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
     # Headline at the same height as on the other slides; under the picture the site's hero promises.
-    d.text(((W - d.textlength(caption, font=font(72))) / 2, TOP), caption, font=font(72), fill=NAVY)
-    y = 250
+    headline(d, lines, size)
+    y = 300
     f.alpha_composite(im, (20, y))
     checks(d, y + im.height + 70)
     return f, d
@@ -283,8 +293,9 @@ def carousel(pid):
     size = headline_size()
     out = []
     # 3 pictures (owner 2026-10-31): the site's laptop + new phone replaces the separate phone slide
-    last = slide_feature(FEATURE[pid], "I mobilen och i datorn") if pid in FEATURE else slide_shot(SHOTS[pid], "Så ser det ut i appen")
-    slides = [slide_cover(lines, art, size), slide_steps(items, pid), last]
+    h2, h3 = HEADS[pid]
+    last = slide_feature(FEATURE[pid], h3, size) if pid in FEATURE else slide_shot(SHOTS[pid], "Så ser det ut i appen")
+    slides = [slide_cover(lines, art, size), slide_steps(items, pid, h2, size), last]
     for i, (f, d) in enumerate(slides):
         if i == 0:  # footer only on the first picture (owner 2026-10-31)
             footer(f, d, badges)

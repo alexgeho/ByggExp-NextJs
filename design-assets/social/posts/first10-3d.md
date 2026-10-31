@@ -383,3 +383,41 @@ Registrerade timmar blir underlag för lön – per anställd och timtyp, Export
 
 14 dagar gratis, ingen bindningstid.
 https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
+
+---
+
+## Karusell 12 · Integrationer
+
+FB:
+Fungerar med Fortnox, Visma och grossisterna.
+
+Fakturor och leverantörsfakturor går mellan ByggExp och Fortnox. Till Visma skickar du SIE4-fil och löneunderlag till Visma Lön. Material beställer du från Ahlsell, Beijer, Dahl, Optimera och Lundagrossisten direkt i appen.
+
+14 dagar gratis, ingen bindningstid 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
+
+LinkedIn:
+Ett system – kopplat till resten.
+
+Fortnox: fakturor och leverantörsfakturor. Visma: SIE4-fil och löneunderlag till Visma Lön. Grossister: materialbeställning till Ahlsell, Beijer, Dahl, Optimera och Lundagrossisten i appen.
+
+14 dagar gratis, ingen bindningstid.
+https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
+
+---
+
+## Översikt (fäst överst) · Allt i ByggExp
+
+FB:
+Hela byggföretaget på ett ställe. 👇 Bläddra igenom alla funktioner.
+
+Tidrapport med GPS eller manuellt · uppgifter med påminnelser · närvaro i realtid · foto per arbetspass · planering · verktyg med QR · offerter · fakturor med ROT · projektekonomi · utlägg · löner · Fortnox, Visma och grossisterna.
+
+14 dagar gratis, ingen bindningstid, gratis flytt av data 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=oversikt
+
+LinkedIn:
+Hela byggföretaget på ett ställe – alla funktioner i ett dokument.
+
+Från tidrapport på bygget till faktura, lön och projektekonomi på kontoret, kopplat till Fortnox, Visma och grossisterna.
+
+14 dagar gratis, ingen bindningstid, gratis flytt av data.
+https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=oversikt

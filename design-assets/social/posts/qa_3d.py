@@ -26,8 +26,13 @@ def colours(a, name, out):
 
 
 def headline_top(a):
-    ink = (a.mean(2) < 200).any(1)
-    return int(np.argmax(ink))
+    # baseline of the first headline line: last dense row in the first text band
+    # (descenders, Å-rings and i-dots are sparse, so they don't move it)
+    cnt = (a[40:260].mean(2) < 200).sum(1)
+    start = int(np.argmax(cnt > 0))
+    band = cnt[start:start + 95]
+    dense = np.where(band > 0.3 * band.max())[0]
+    return 40 + start + int(dense.max())
 
 
 def gaps(a):

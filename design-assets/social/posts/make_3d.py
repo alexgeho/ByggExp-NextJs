@@ -44,6 +44,8 @@ POSTS = [  # first 10, benefit first; no price on the picture (S26)
      ("Fota kvittot i appen", "Koppla till rätt projekt", "Se kostnaderna i realtid"), True),
     ("s11-loner", ("Timmarna blir *lön*", "timmar och *OB* per person"), "ekonomi-2.png",
      ("Personalen registrerar timmarna i appen", "Underlaget skapas för varje anställd", "Exportera löneunderlaget med ett klick"), False),
+    ("s12-integrationer", ("Fungerar med *Fortnox*", "*Visma* och *grossisterna*"), "ekonomi-3.png",
+     ("Fortnox: fakturor och leverantörsfakturor", "Visma: SIE4-fil och löneunderlag till Visma Lön", "Grossister: beställ material i appen"), True),
     ("02-offert", ("*Offert* med din logga", "klar att skicka *samma dag*"), "offerter-3.png",
      ("Välj artiklar ur katalogen", "Summor och moms räknas ut", "Skicka PDF med din logga"), False),
     ("03-lon", ("Timmarna blir *lön*", "timmar och *OB* per person"), "ekonomi-2.png",
@@ -177,6 +179,8 @@ SHOTS = {  # one or two phones; label under each when two
 
 # Slides 2 and 3: two-line headlines like the cover (navy + blue), per post
 HEADS = {
+    "s12-integrationer": (("Så fungerar det", "från *appen* till *bokföringen*"),
+                          ("Ett system", "*kopplat* till resten")),
     "s05-planering": (("Så fungerar det", "från *kontoret* till *bygget*"),
                       ("I *mobilen* och i *datorn*", "*samma plan* för alla")),
     "s06-verktyg": (("Så fungerar det", "från *bygget* till *kontoret*"),
@@ -289,6 +293,7 @@ FLOW = {  # slide 2: left 3D → right 3D, with labels; direction follows the fe
     "s09-ekonomi": ("tid-2.png", "ekonomi-3.png", "På bygget", "På kontoret"),
     "s10-utlagg": ("utlagg-4.png", "utlagg-3.png", "På bygget", "På kontoret"),  # receipt from the phone into the folder
     "s11-loner": ("tid-2.png", "tid-3.png", "På bygget", "På kontoret"),
+    "s12-integrationer": ("tid-3.png", "ekonomi-3.png", "ByggExp", "Bokföringen"),
 }
 
 
@@ -440,6 +445,35 @@ def checks(d, y):
         d.text((x + 76, yy), t, font=ft, fill=NAVY)
 
 
+PARTNERS = {  # last slide without a site mockup: who ByggExp works with (names, not logos)
+    "s12-integrationer": ["Fortnox", "Visma", "Ahlsell", "Beijer", "Dahl", "Optimera", "Lundagrossisten", "SIE4"],
+}
+
+
+def cards(names):
+    # white cards r32, line #E1EAF3 (deck/site cards), name in navy; 2 columns
+    cw, ch, gap = 440, 120, 28
+    rows = (len(names) + 1) // 2
+    l, d = layer(rows * (ch + gap))
+    x0 = (W - 2 * cw - gap) // 2
+    ft = font(46)
+    for i, n in enumerate(names):
+        x, y = x0 + (i % 2) * (cw + gap), (i // 2) * (ch + gap)
+        d.rounded_rectangle((x, y, x + cw, y + ch), 32, fill=(255, 255, 255, 255), outline=(0xE1, 0xEA, 0xF3), width=3)
+        d.text((x + (cw - d.textlength(n, font=ft)) / 2, y + (ch - 46) / 2 - 6), n, font=ft, fill=NAVY)
+    return l
+
+
+def slide_partners(names, lines, size):
+    f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
+    d = ImageDraw.Draw(f)
+    headline(d, lines, size)
+    tl, td = layer(300)
+    checks(td, 0)
+    place(f, d, size, lines, cards(names), tl)
+    return f, d
+
+
 def carousel(pid):
     p = next(p for p in POSTS if p[0] == pid)
     _, lines, art, items, badges = p
@@ -447,7 +481,12 @@ def carousel(pid):
     out = []
     # 3 pictures (owner 2026-10-31): the site's laptop + new phone replaces the separate phone slide
     h2, h3 = HEADS[pid]
-    last = slide_feature(FEATURE[pid], h3, size) if pid in FEATURE else slide_shot(SHOTS[pid], "Så ser det ut i appen")
+    if pid in FEATURE:
+        last = slide_feature(FEATURE[pid], h3, size)
+    elif pid in PARTNERS:
+        last = slide_partners(PARTNERS[pid], h3, size)
+    else:
+        last = slide_shot(SHOTS[pid], "Så ser det ut i appen")
     slides = [slide_cover(lines, art, size), slide_steps(items, pid, h2, size), last]
     for i, (f, d) in enumerate(slides):
         if i == 0:  # footer only on the first picture; store badges on every post (owner 2026-10-31)

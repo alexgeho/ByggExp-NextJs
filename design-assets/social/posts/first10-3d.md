@@ -212,3 +212,22 @@ Uppgifter kan tilldelas hela projektet eller utvalda medarbetare. Om uppgiften i
 
 14 dagar gratis, ingen bindningstid.
 https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
+
+---
+
+## Karusell 03 · Live-översikt över arbetslagen
+
+FB:
+Vem är på bygget nu? Se det utan att ringa runt.
+
+Arbetaren stämplar in i appen och statusen syns direkt på kontoret: på jobbet, inte på jobbet, frånvarande.
+
+14 dagar gratis, ingen bindningstid 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
+
+LinkedIn:
+Vem är på bygget just nu?
+
+När arbetaren stämplar in i appen syns statusen direkt i adminpanelen. Frånvarande syns direkt – utan samtal för att stämma av.
+
+14 dagar gratis, ingen bindningstid.
+https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10

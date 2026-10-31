@@ -24,6 +24,8 @@ POSTS = [  # first 10, benefit first; no price on the picture (S26)
      ("Stämpla in med GPS eller skriv in timmarna", "Timmarna hamnar på projektet", "Lön och faktura direkt från timmarna"), True),
     ("s02-uppgifter", ("Inga *glömda* uppgifter", "*påminnelser* tills det är klart"), "uppgifter-3.png",
      ("Klicka på Skapa uppgift", "Lägg till mottagare", "Sätt deadline och påminnelse"), True),
+    ("s03-live", ("Vem är på *bygget nu*?", "se det *utan att ringa runt*"), "live-3.png",
+     ("Arbetaren stämplar in i appen", "Statusen syns direkt på kontoret", "Frånvarande syns direkt"), True),
     ("02-offert", ("*Offert* med din logga", "klar att skicka *samma dag*"), "offerter-3.png",
      ("Välj artiklar ur katalogen", "Summor och moms räknas ut", "Skicka PDF med din logga"), False),
     ("03-lon", ("Timmarna blir *lön*", "timmar och *OB* per person"), "ekonomi-2.png",
@@ -157,6 +159,8 @@ SHOTS = {  # one or two phones; label under each when two
 
 # Slides 2 and 3: two-line headlines like the cover (navy + blue), per post
 HEADS = {
+    "s03-live": (("Så fungerar det", "från *bygget* till *kontoret*"),
+                 ("I *mobilen* och i *datorn*", "*hela laget* i realtid")),
     "s02-uppgifter": (("Så fungerar det", "från *kontoret* till *bygget*"),
                       ("I *mobilen* och i *datorn*", "*alla* ser samma uppgifter")),
     "01-tid": (("Så fungerar det", "från *bygget* till *kontoret*"),
@@ -216,6 +220,7 @@ def slide_cover(lines, art, size):
 FLOW = {  # slide 2: left 3D → right 3D, with labels; direction follows the feature
     "01-tid": ("tid-2.png", "tid-3.png", "På bygget", "På kontoret"),
     "s02-uppgifter": ("uppgifter-1.png", "uppgifter-2.png", "På kontoret", "På bygget"),
+    "s03-live": ("tid-2.png", "live-2.png", "På bygget", "På kontoret"),
 }
 
 
@@ -304,6 +309,7 @@ FEATURE = {  # last slide: the site's laptop + phone picture; the old phone is c
     "01-tid": (ROOT / "public/landing/features/1arbetspass.webp",
                APP_SHOTS / "03-arbetspass-manuell-topp.png", (1893, 268, 1044)),
     "s02-uppgifter": (ROOT / "public/landing/features/2uppgift.webp", None, None),  # site phone is current
+    "s03-live": (ROOT / "public/landing/features/3personal.webp", None, None),
 }
 
 

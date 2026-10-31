@@ -14,29 +14,31 @@ FONTS = HERE / "src/fonts"
 OUT = HERE / "out-3d-first10"
 
 W, H = 1080, 1350
+TOP = 90  # carousel: headline higher (owner 2026-10-31)
+CONTENT = 400  # first content line under the headline, same air as under the cover headline
 NAVY, BLUE, GREY = (10, 24, 40), (35, 148, 255), (91, 117, 145)
 
 # id, headline (2 lines), 3D file, how it works in 3 steps (S26), store badges (S16)
 POSTS = [  # first 10, benefit first; no price on the picture (S26)
-    ("01-tid", ("Tid med GPS eller manuellt", "lön och faktura utan lappar"), "tid-1.png",
+    ("01-tid", ("Tid med *GPS* eller *manuellt*", "*lön och faktura* utan lappar"), "tid-1.png",
      ("Stämpla in med GPS eller skriv in timmarna", "Timmarna hamnar på projektet", "Lön och faktura direkt från timmarna"), True),
-    ("02-offert", ("Offert med din logga", "klar att skicka samma dag"), "offerter-3.png",
+    ("02-offert", ("*Offert* med din logga", "klar att skicka *samma dag*"), "offerter-3.png",
      ("Välj artiklar ur katalogen", "Summor och moms räknas ut", "Skicka PDF med din logga"), False),
-    ("03-lon", ("Timmarna blir lön", "timmar och OB per person"), "ekonomi-2.png",
+    ("03-lon", ("Timmarna blir *lön*", "timmar och *OB* per person"), "ekonomi-2.png",
      ("Laget rapporterar tid i appen", "Timmar och OB summeras", "Brutto och skatt räknas"), False),
-    ("04-ekonomi", ("Se vinsten per projekt", "medan jobbet pågår"), "ekonomi-1-gold.png",
+    ("04-ekonomi", ("Se *vinsten* per projekt", "*medan* jobbet pågår"), "ekonomi-1-gold.png",
      ("Lägg budget för projektet", "Kostnader bokförs på projektet", "Se lönsamheten direkt"), False),
-    ("05-utlagg", ("Inga tappade kvitton", "fota det direkt i appen"), "utlagg-1.png",
+    ("05-utlagg", ("Inga *tappade kvitton*", "fota det *direkt i appen*"), "utlagg-1.png",
      ("Fota kvittot i butiken", "Det skannas automatiskt", "Hamnar på projektet"), True),
-    ("06-planering", ("Hela veckan bemannad", "varnar vid överbokning"), "planering-2.png",
+    ("06-planering", ("Hela *veckan* bemannad", "varnar vid *överbokning*"), "planering-2.png",
      ("Klicka på en dag", "Välj vem som jobbar var", "Varning vid över 8 h"), True),
-    ("07-faktura", ("ROT och moms uträknade", "fakturan klar med din logga"), "offerter-1.png",
+    ("07-faktura", ("*ROT och moms* uträknade", "fakturan klar med *din logga*"), "offerter-1.png",
      ("Lägg in raderna", "ROT och moms räknas ut", "Skicka PDF med din logga"), False),
-    ("08-foto", ("Bilderna på rätt projekt", "per dag och person"), "foto-1.png",
+    ("08-foto", ("Bilderna på *rätt projekt*", "per *dag och person*"), "foto-1.png",
      ("Fota i appen", "Kopplas till arbetspasset", "Sorteras per dag och person"), True),
-    ("09-live", ("Vem är på bygget nu?", "se det utan att ringa runt"), "live-3.png",
+    ("09-live", ("Vem är på bygget *nu*?", "se det *utan att ringa runt*"), "live-3.png",
      ("Arbetaren stämplar in", "Syns direkt hos kontoret", "Hela laget i en lista"), True),
-    ("10-verktyg", ("Vem har borrmaskinen?", "skanna QR och se direkt"), "verktyg-1.png",
+    ("10-verktyg", ("Vem har *borrmaskinen*?", "skanna *QR* och se direkt"), "verktyg-1.png",
      ("QR-kod på verktyget", "Skanna när du tar det", "Alla ser vem som har det"), True),
 ]
 
@@ -53,6 +55,20 @@ def font(size, weight="Bold"):
     return f
 
 
+def plain(t):
+    return t.replace("*", "")
+
+
+def headline(d, lines, size, top=TOP):
+    # Every slide: 2 lines, navy; the words that carry the meaning in *stars* are blue (owner 2026-10-31)
+    ft = font(size)
+    for i, t in enumerate(lines):
+        x = (W - d.textlength(plain(t), font=ft)) / 2
+        for j, part in enumerate(t.split("*")):
+            d.text((x, top + i * 92), part, font=ft, fill=BLUE if j % 2 else NAVY)
+            x += d.textlength(part, font=ft)
+
+
 def fit(d, text, size, maxw, weight="Bold"):
     while d.textlength(text, font=font(size, weight)) > maxw:
         size -= 2
@@ -62,7 +78,7 @@ def fit(d, text, size, maxw, weight="Bold"):
 def headline_size():
     # One size for every headline line in the series, so posts look alike in the feed.
     d = ImageDraw.Draw(Image.new("RGB", (1, 1)))
-    return min(fit(d, t, 76, W - 128).size for p in POSTS for t in p[1])
+    return min(fit(d, plain(t), 76, W - 128).size for p in POSTS for t in p[1])
 
 
 def wrap(d, text, ft, maxw):
@@ -90,9 +106,7 @@ def steps(f, d, items):
 def post(lines, art, items, badges, size=76):
     f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
     d = ImageDraw.Draw(f)
-    for i, t in enumerate(lines):  # S15: headline inside the 1080 square (y 135-1215)
-        ft = font(size)
-        d.text(((W - d.textlength(t, font=ft)) / 2, 160 + i * 92), t, font=ft, fill=NAVY if i == 0 else BLUE)
+    headline(d, lines, size, 160)  # S15: headline inside the 1080 square (y 135-1215)
     im = Image.open(ART / art).convert("RGBA")
     side = 620
     im = im.resize((side, side), Image.LANCZOS)
@@ -138,19 +152,12 @@ SHOTS = {  # one or two phones; label under each when two
 }
 
 
-TOP = 90  # carousel: headline higher (owner 2026-10-31)
 
 # Slides 2 and 3: two-line headlines like the cover (navy + blue), per post
 HEADS = {
-    "01-tid": (("Så fungerar det", "från bygget till kontoret"),
-               ("I mobilen och i datorn", "samma timmar överallt")),
+    "01-tid": (("Så fungerar det", "från *bygget* till *kontoret*"),
+               ("I *mobilen* och i *datorn*", "*samma timmar* överallt")),
 }
-
-
-def headline(d, lines, size):
-    # Every slide: line 1 navy, line 2 blue, same size and height (owner 2026-10-31)
-    for i, t in enumerate(lines):
-        d.text(((W - d.textlength(t, font=font(size))) / 2, TOP + i * 92), t, font=font(size), fill=NAVY if i == 0 else BLUE)
 
 
 def slide_cover(lines, art, size):
@@ -179,16 +186,16 @@ def slide_steps(items, pid, lines, size):
     d = ImageDraw.Draw(f)
     headline(d, lines, size)
     site, office = FLOW[pid]
-    side = 420
+    side = 380
     for art, x in ((site, 64), (office, W - 64 - side)):
         im = Image.open(ART / art).convert("RGBA").resize((side, side), Image.LANCZOS)
-        f.alpha_composite(im, (x, 290))
+        f.alpha_composite(im, (x, CONTENT))
     fl = font(34, "Bold")
     for label, x in (("På bygget", 64), ("På kontoret", W - 64 - side)):
-        d.text((x + (side - d.textlength(label, font=fl)) / 2, 715), label, font=fl, fill=GREY)
-    arrow(d, 64 + side - 10, W - 64 - side + 10, 500)
+        d.text((x + (side - d.textlength(label, font=fl)) / 2, CONTENT + side + 10), label, font=fl, fill=GREY)
+    arrow(d, 64 + side - 10, W - 64 - side + 10, CONTENT + side // 2)
     ft, fn = font(44, "Medium"), font(34, "Bold")
-    y = 830
+    y = CONTENT + side + 90
     for i, text in enumerate(items):
         d.ellipse((96, y, 164, y + 68), fill=(218, 240, 225))
         n = str(i + 1)
@@ -266,7 +273,7 @@ def slide_feature(spec, lines, size):
     im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
     # Headline at the same height as on the other slides; under the picture the site's hero promises.
     headline(d, lines, size)
-    y = 300
+    y = CONTENT
     f.alpha_composite(im, (20, y))
     checks(d, y + im.height + 70)
     return f, d

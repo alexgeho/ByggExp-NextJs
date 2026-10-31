@@ -25,19 +25,19 @@ https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10
 
 ---
 
-## 02 · Varje ÄTA blir en faktura
+## 02 · Offert med din logga
 
 FB:
-Varje ÄTA blir en faktura – ett klick från godkänd ÄTA.
+Offert med din logga – klar att skicka samma dag.
 
-När ÄTA:n är godkänd fylls fakturan i med samma rader och belopp. Inget extrajobb glöms bort.
+Välj artiklar ur din katalog, summor och moms räknas ut, och kunden får en snygg PDF med din logga.
 
-14 dagar gratis 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
+14 dagar gratis, ingen bindningstid 👉 https://byggexp.se/sv?utm_source=facebook&utm_medium=social&utm_campaign=first10
 
 LinkedIn:
-Varje ÄTA blir en faktura.
+Offert med din logotyp – klar att skicka samma dag.
 
-En godkänd ÄTA blir en förifylld faktura med ett klick – samma rader, samma belopp. Extrajobben landar på fakturan i stället för att glömmas bort.
+Artiklar ur företagets katalog (art.nr), summor och moms räknas ut, och offerten går som PDF med er logotyp.
 
 14 dagar gratis, ingen bindningstid.
 https://byggexp.se/sv?utm_source=linkedin&utm_medium=social&utm_campaign=first10

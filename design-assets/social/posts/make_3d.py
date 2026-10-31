@@ -20,8 +20,8 @@ NAVY, BLUE, GREY = (10, 24, 40), (35, 148, 255), (91, 117, 145)
 POSTS = [  # first 10, benefit first; no price on the picture (S26)
     ("01-tid", ("Tid med GPS eller manuellt", "lön och faktura utan lappar"), "tid-1.png",
      ("Stämpla in med GPS eller skriv in timmarna", "Timmarna hamnar på projektet", "Lön och faktura direkt från timmarna"), True),
-    ("02-ata", ("Varje ÄTA blir en faktura", "ett klick från godkänd ÄTA"), "fakturor-3.png",
-     ("Skriv ÄTA:n i projektet", "ÄTA:n godkänns", "Fakturan fylls i åt dig"), False),
+    ("02-offert", ("Offert med din logga", "klar att skicka samma dag"), "offerter-3.png",
+     ("Välj artiklar ur katalogen", "Summor och moms räknas ut", "Skicka PDF med din logga"), False),
     ("03-lon", ("Timmarna blir lön", "timmar och OB per person"), "ekonomi-2.png",
      ("Laget rapporterar tid i appen", "Timmar och OB summeras", "Brutto och skatt räknas"), False),
     ("04-ekonomi", ("Se vinsten per projekt", "medan jobbet pågår"), "ekonomi-1-gold.png",

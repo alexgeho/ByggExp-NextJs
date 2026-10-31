@@ -160,12 +160,52 @@ HEADS = {
 }
 
 
+def ink(layer):
+    # Visible box of a layer (ignores pure white and near-white soft shadows)
+    a = layer.split()[3].point(lambda v: 255 if v > 24 else 0)
+    g = layer.convert("L").point(lambda v: 255 if v < 246 else 0)
+    from PIL import ImageChops
+    return ImageChops.multiply(a, g).getbbox()
+
+
+def headline_bottom(d, size, lines):
+    # real ink bottom of the last headline line (with or without descenders)
+    return TOP + 92 * (len(lines) - 1) + d.textbbox((0, 0), plain(lines[-1]), font=font(size))[3]
+
+
+BOTTOM = 1297  # lowest ink on the cover (footer); slides 2-3 end on the same line
+FOOTER_TOP = 1234
+
+
+def place(f, d, size, lines, illus, text=None):
+    # Equal air above and below the illustration (owner 2026-10-31):
+    # headline -> g -> illustration -> g -> text (or the footer on the cover)
+    ib = ink(illus)
+    illus = illus.crop(ib)
+    hb = headline_bottom(d, size, lines)
+    if text is None:
+        g = (FOOTER_TOP - hb - illus.height) / 2
+    else:
+        text = text.crop(ink(text))
+        g = (BOTTOM - hb - illus.height - text.height) / 2
+    y = round(hb + g)
+    f.alpha_composite(illus, ((W - illus.width) // 2, y))
+    if text is not None:
+        f.alpha_composite(text, ((W - text.width) // 2, round(y + illus.height + g)))
+
+
+def layer(h=H):
+    l = Image.new("RGBA", (W, h), (255, 255, 255, 0))
+    return l, ImageDraw.Draw(l)
+
+
 def slide_cover(lines, art, size):
     f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
     d = ImageDraw.Draw(f)
     headline(d, lines, size)
-    im = Image.open(ART / art).convert("RGBA").resize((820, 820), Image.LANCZOS)
-    f.alpha_composite(im, ((W - 820) // 2, 300))
+    l, _ = layer(900)
+    l.alpha_composite(Image.open(ART / art).convert("RGBA").resize((820, 820), Image.LANCZOS), ((W - 820) // 2, 0))
+    place(f, d, size, lines, l)
     return f, d
 
 
@@ -187,23 +227,25 @@ def slide_steps(items, pid, lines, size):
     headline(d, lines, size)
     site, office = FLOW[pid]
     side = 380
+    il, ild = layer(side + 80)
     for art, x in ((site, 64), (office, W - 64 - side)):
-        im = Image.open(ART / art).convert("RGBA").resize((side, side), Image.LANCZOS)
-        f.alpha_composite(im, (x, CONTENT))
+        il.alpha_composite(Image.open(ART / art).convert("RGBA").resize((side, side), Image.LANCZOS), (x, 0))
     fl = font(34, "Bold")
     for label, x in (("På bygget", 64), ("På kontoret", W - 64 - side)):
-        d.text((x + (side - d.textlength(label, font=fl)) / 2, CONTENT + side + 10), label, font=fl, fill=GREY)
-    arrow(d, 64 + side - 10, W - 64 - side + 10, CONTENT + side // 2)
+        ild.text((x + (side - ild.textlength(label, font=fl)) / 2, side + 10), label, font=fl, fill=GREY)
+    arrow(ild, 64 + side - 10, W - 64 - side + 10, side // 2)
+    tl, td = layer(700)
     ft, fn = font(44, "Medium"), font(34, "Bold")
-    y = CONTENT + side + 140  # more air under the pictures, text sits low like the cover footer
+    y = 0
     for i, text in enumerate(items):
-        d.ellipse((96, y, 164, y + 68), fill=(218, 240, 225))
+        td.ellipse((96, y, 164, y + 68), fill=(218, 240, 225))
         n = str(i + 1)
-        d.text((130 - d.textlength(n, font=fn) / 2, y + 12), n, font=fn, fill=(69, 179, 107))
-        rows = wrap(d, text, ft, W - 200 - 96)
+        td.text((130 - td.textlength(n, font=fn) / 2, y + 12), n, font=fn, fill=(69, 179, 107))
+        rows = wrap(td, text, ft, W - 200 - 96)
         for j, line in enumerate(rows):
-            d.text((200, y + 8 + j * 56), line, font=ft, fill=NAVY)
+            td.text((200, y + 8 + j * 56), line, font=ft, fill=NAVY)
         y += max(68, 56 * len(rows)) + 56
+    place(f, d, size, lines, il, tl)
     return f, d
 
 
@@ -271,11 +313,12 @@ def slide_feature(spec, lines, size):
     im = im.crop(im.getbbox())
     w = W - 40
     im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
-    # Headline at the same height as on the other slides; under the picture the site's hero promises.
     headline(d, lines, size)
-    y = CONTENT
-    f.alpha_composite(im, (20, y))
-    checks(d, y + im.height + 120)
+    il, _ = layer(im.height + 4)
+    il.alpha_composite(im, (20, 0))
+    tl, td = layer(300)
+    checks(td, 0)
+    place(f, d, size, lines, il, tl)
     return f, d
 
 

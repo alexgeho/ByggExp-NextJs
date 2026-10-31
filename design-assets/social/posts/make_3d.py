@@ -204,7 +204,7 @@ def phone(path):
 
 
 def slide_shot(shots, caption):
-    f = Image.new("RGBA", (W, H), (241, 246, 251, 255))
+    f = Image.new("RGBA", (W, H), (255, 255, 255, 255))  # all slides white (owner 2026-10-31)
     d = ImageDraw.Draw(f)
     d.text(((W - d.textlength(caption, font=font(72))) / 2, TOP), caption, font=font(72), fill=NAVY)
     from PIL import ImageFilter

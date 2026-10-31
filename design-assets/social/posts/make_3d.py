@@ -460,7 +460,13 @@ def cards(names):
     for i, n in enumerate(names):
         x, y = x0 + (i % 2) * (cw + gap), (i // 2) * (ch + gap)
         d.rounded_rectangle((x, y, x + cw, y + ch), 32, fill=(255, 255, 255, 255), outline=(0xE1, 0xEA, 0xF3), width=3)
-        d.text((x + (cw - d.textlength(n, font=ft)) / 2, y + (ch - 46) / 2 - 6), n, font=ft, fill=NAVY)
+        logo = HERE / "src/logos" / f"{n.lower()}.png"  # the partner's real logo (from its own site)
+        if logo.exists():
+            lg = Image.open(logo).convert("RGBA")
+            lg.thumbnail((cw - 120, ch - 56), Image.LANCZOS)
+            l.alpha_composite(lg, (x + (cw - lg.width) // 2, y + (ch - lg.height) // 2))
+        else:
+            d.text((x + (cw - d.textlength(n, font=ft)) / 2, y + (ch - 46) / 2 - 6), n, font=ft, fill=NAVY)
     return l
 
 

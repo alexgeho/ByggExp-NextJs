@@ -125,7 +125,7 @@ if __name__ == "__main__":
 APP_SHOTS = Path.home() / "Desktop/SMM/app-shots"  # fresh simulator screenshots, full height
 SHOTS = {  # one or two phones; label under each when two
     "01-tid": [("GPS", APP_SHOTS / "01-arbetspass-gps-incheckad.png"),
-               ("Manuellt", APP_SHOTS / "02-arbetspass-dagkort-restid-bil-traktamente.png")],
+               ("Manuellt", APP_SHOTS / "03-arbetspass-manuell-topp.png")],
 }
 
 

@@ -142,20 +142,42 @@ def slide_cover(lines, art, size):
     return f, d
 
 
-def slide_steps(items, art):
+FLOW = {  # slide 2: who enters it on site → where it shows up in the office
+    "01-tid": ("tid-2.png", "tid-3.png"),
+}
+
+
+def arrow(d, x0, x1, y):
+    # dashed blue arrow, site → office
+    for x in range(x0, x1 - 30, 26):
+        d.line((x, y, min(x + 14, x1 - 30), y), fill=BLUE, width=6)
+    d.polygon([(x1, y), (x1 - 30, y - 18), (x1 - 30, y + 18)], fill=BLUE)
+
+
+def slide_steps(items, pid):
     f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
     d = ImageDraw.Draw(f)
     t = "Så fungerar det"
     d.text(((W - d.textlength(t, font=font(72))) / 2, TOP), t, font=font(72), fill=NAVY)
-    ft, fn = font(52, "Medium"), font(40, "Bold")
+    site, office = FLOW[pid]
+    side = 450
+    for art, x in ((site, 64), (office, W - 64 - side)):
+        im = Image.open(ART / art).convert("RGBA").resize((side, side), Image.LANCZOS)
+        f.alpha_composite(im, (x, 210))
+    fl = font(34, "Bold")
+    for label, x in (("På bygget", 64), ("På kontoret", W - 64 - side)):
+        d.text((x + (side - d.textlength(label, font=fl)) / 2, 670), label, font=fl, fill=GREY)
+    arrow(d, 64 + side - 10, W - 64 - side + 10, 440)
+    ft, fn = font(44, "Medium"), font(34, "Bold")
+    y = 790
     for i, text in enumerate(items):
-        y = 360 + i * 300
-        d.ellipse((96, y, 176, y + 80), fill=(218, 240, 225))
+        d.ellipse((96, y, 164, y + 68), fill=(218, 240, 225))
         n = str(i + 1)
-        d.text((136 - d.textlength(n, font=fn) / 2, y + 14), n, font=fn, fill=(69, 179, 107))
-        d.text((216, y + 8), text, font=ft, fill=NAVY)
-        if i < 2:
-            d.line((136, y + 100, 136, y + 280), fill=(225, 234, 243), width=4)
+        d.text((130 - d.textlength(n, font=fn) / 2, y + 12), n, font=fn, fill=(69, 179, 107))
+        lines = wrap(d, text, ft, W - 200 - 96)
+        for j, line in enumerate(lines):
+            d.text((200, y + 8 + j * 56), line, font=ft, fill=NAVY)
+        y += max(68, 56 * len(lines)) + 60
     return f, d
 
 
@@ -209,7 +231,7 @@ def carousel(pid):
     _, lines, art, items, badges = p
     size = headline_size()
     out = []
-    slides = (slide_cover(lines, art, size), slide_steps(items, art), slide_shot(SHOTS[pid], "Så ser det ut i appen"))
+    slides = (slide_cover(lines, art, size), slide_steps(items, pid), slide_shot(SHOTS[pid], "Så ser det ut i appen"))
     for i, (f, d) in enumerate(slides):
         if i == 0:  # footer only on the first picture (owner 2026-10-31)
             footer(f, d, badges)

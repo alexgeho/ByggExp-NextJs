@@ -1,5 +1,18 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 🟢 2026-10-31 (вечер) — SMM: пост 02 «Uppgifter» + закреп-карусель карточек
+### KLART
+- Пост 02: заголовок «Inga *glömda* uppgifter / *påminner* tills de *bekräftas*» (напоминания до подтверждения сотрудником), тексты FB/LinkedIn, 1.jpg и «02-uppgifter – alla 3» пересобраны (0b63a9c, 09587f9).
+- Закреп: вместо мозаики 4×3 — 13 карточек «N / 13 · Функция» + выгода + 3D + 2 галочки ценности + футер; 13-я — Testa gratis. `design-assets/social/posts/overview_cards.py` → ~/Desktop/SMM/poster/00-oversikt-kort/. Старый обзор и черновики A/B → poster/_gamla.
+- Правила S33–S35 в design-assets/social/DESIGN-SYSTEM-SMM.md.
+### NÄSTA
+1. Владелец сверяет тексты галочек (особенно «Betalt snabbare», «Lönen klar på minuter») → правка VAL в overview_cards.py → пересобрать.
+2. Текст закрепа в first10-3d.md («Översikt») переписать под карточки «bläddra 13 kort», LinkedIn — PDF из 13 карточек.
+3. Опубликовать закреп (FB + LinkedIn), закрепить; дальше посты функций по графику.
+4. qa_3d.py не умеет формат карточек (ждёт 1..3.jpg) — добавить проверку для 00-oversikt-kort.
+### ЖДЁМ
+- «Ок» владельца на карточки как закреп.
+
 ## 🟢 2026-10-29 — Шведские скриншоты, 7 багов продукта, Upwork
 ### KLART
 - Сайт: 19 экранов приложения пересняты на шведском с демо-компанией «Exempelbygg AB» (локальный бэкенд + локальная MongoDB 127.0.0.1:27018, прод не трогали) — 7135d5a; шаг «Dagens anteckning» (screen-dagbok-1200) на /sv/funktioner/byggdagbok и «Frånvaro först» (screen-franvaro-1200) на /sv/funktioner/schemalaggning — ad55dbf, live. Правило R19.

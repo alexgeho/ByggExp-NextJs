@@ -254,10 +254,27 @@ def slide_feature(spec, caption):
     im = im.crop(im.getbbox())
     w = W - 40
     im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
-    top = (H - (90 + 70 + im.height)) // 2
-    d.text(((W - d.textlength(caption, font=font(72))) / 2, top), caption, font=font(72), fill=NAVY)
-    f.alpha_composite(im, (20, top + 160))
+    # Headline at the same height as on the other slides; under the picture the site's hero promises.
+    d.text(((W - d.textlength(caption, font=font(72))) / 2, TOP), caption, font=font(72), fill=NAVY)
+    y = 250
+    f.alpha_composite(im, (20, y))
+    checks(d, y + im.height + 70)
     return f, d
+
+
+MEETS = ("14 dagar gratis", "Ingen bindningstid", "Gratis flytt av data")  # src/locales/heroV2.ts meta
+
+
+def checks(d, y):
+    ft = font(44, "Medium")
+    w = max(d.textlength(t, font=ft) for t in MEETS) + 76
+    x = (W - w) / 2
+    for i, t in enumerate(MEETS):
+        yy = y + i * 76
+        d.ellipse((x, yy + 4, x + 48, yy + 52), fill=(218, 240, 225))
+        d.line((x + 13, yy + 29, x + 21, yy + 37), fill=(69, 179, 107), width=6)
+        d.line((x + 21, yy + 37, x + 36, yy + 19), fill=(69, 179, 107), width=6)
+        d.text((x + 76, yy), t, font=ft, fill=NAVY)
 
 
 def carousel(pid):

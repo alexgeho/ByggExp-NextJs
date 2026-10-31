@@ -449,8 +449,8 @@ def carousel(pid):
     last = slide_feature(FEATURE[pid], h3, size) if pid in FEATURE else slide_shot(SHOTS[pid], "Så ser det ut i appen")
     slides = [slide_cover(lines, art, size), slide_steps(items, pid, h2, size), last]
     for i, (f, d) in enumerate(slides):
-        if i == 0:  # footer only on the first picture (owner 2026-10-31)
-            footer(f, d, badges)
+        if i == 0:  # footer only on the first picture; store badges on every post (owner 2026-10-31)
+            footer(f, d, True)
         out.append(f.convert("RGB"))
     for i, im in enumerate(out, 1):
         im.save(OUT / f"{pid}-k{i}.jpg", quality=95, subsampling=0)

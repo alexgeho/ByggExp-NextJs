@@ -195,7 +195,7 @@ def slide_steps(items, pid, lines, size):
         d.text((x + (side - d.textlength(label, font=fl)) / 2, CONTENT + side + 10), label, font=fl, fill=GREY)
     arrow(d, 64 + side - 10, W - 64 - side + 10, CONTENT + side // 2)
     ft, fn = font(44, "Medium"), font(34, "Bold")
-    y = CONTENT + side + 90
+    y = CONTENT + side + 140  # more air under the pictures, text sits low like the cover footer
     for i, text in enumerate(items):
         d.ellipse((96, y, 164, y + 68), fill=(218, 240, 225))
         n = str(i + 1)
@@ -275,7 +275,7 @@ def slide_feature(spec, lines, size):
     headline(d, lines, size)
     y = CONTENT
     f.alpha_composite(im, (20, y))
-    checks(d, y + im.height + 70)
+    checks(d, y + im.height + 120)
     return f, d
 
 

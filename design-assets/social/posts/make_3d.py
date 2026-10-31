@@ -340,8 +340,7 @@ FEATURE = {  # last slide: the site's laptop + phone picture; the old phone is c
     # id: (site picture, new screen, phone box on the site picture: x, y_top, height)
     "01-tid": (ROOT / "public/landing/features/1arbetspass.webp",
                APP_SHOTS / "03-arbetspass-manuell-topp.png", (1893, 268, 1044)),
-    "s02-uppgifter": (ROOT / "public/landing/features/2uppgift.webp",
-                      APP_SHOTS / "07-paminnelse-lasskarm.png", (1893, 268, 1044)),  # Swedish push
+    "s02-uppgifter": (ROOT / "public/landing/features/2uppgift.webp", None, None),  # S30: the site mockup as is
     "s03-live": (ROOT / "public/landing/features/3personal.webp", None, None),
 }
 

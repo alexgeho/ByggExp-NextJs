@@ -88,6 +88,8 @@ def main(folders):
             gp = gaps(a)
             if len(gp) >= 2 and abs(gp[0] - gp[1]) > TOL:
                 out.append(f"{nm}: air above/below illustration differs {gp[:2]}")
+            if gp and min(gp[:2]) < 115:
+                out.append(f"{nm}: too little air around the illustration {gp[:2]} (min 120)")
         arrow(slides[1], f"{f.name}/2", out)
     shadow_edges(out)
     print("\n".join(out) if out else "QA ok")

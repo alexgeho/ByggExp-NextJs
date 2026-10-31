@@ -149,7 +149,7 @@ def footer(f, d, badges):
         s = s.resize((round(s.width * 56 / s.height), 56), Image.LANCZOS)
         f.alpha_composite(s, (W - 64 - s.width, 1238))
     else:
-        lx = (W - (64 + 18 + uw)) / 2
+        lx = 64  # footer always on the same place (left), with or without store badges
     f.alpha_composite(logo, (int(lx), 1234))
     d.text((lx + 82, 1240), u, font=fu, fill=NAVY)
 
@@ -235,6 +235,7 @@ def headline_bottom(d, size, lines):
     return TOP + 92 * (len(lines) - 1) + d.textbbox((0, 0), plain(lines[-1]), font=font(size))[3]
 
 
+G_MIN = 120  # minimum air above/below an illustration
 BOTTOM = 1297  # lowest ink on the cover (footer); slides 2-3 end on the same line
 FOOTER_TOP = 1234
 
@@ -245,11 +246,16 @@ def place(f, d, size, lines, illus, text=None):
     ib = ink(illus)
     illus = illus.crop(ib)
     hb = headline_bottom(d, size, lines)
-    if text is None:
-        g = (FOOTER_TOP - hb - illus.height) / 2
-    else:
+    bottom = FOOTER_TOP if text is None else BOTTOM
+    if text is not None:
         text = text.crop(ink(text))
-        g = (BOTTOM - hb - illus.height - text.height) / 2
+    th = 0 if text is None else text.height
+    # never less air than on the approved post 1 (owner 2026-10-31): shrink a tall picture instead
+    room = bottom - hb - th - 2 * G_MIN
+    if illus.height > room:
+        k = room / illus.height
+        illus = illus.resize((round(illus.width * k), round(illus.height * k)), Image.LANCZOS)
+    g = (bottom - hb - illus.height - th) / 2
     y = round(hb + g)
     f.alpha_composite(illus, ((W - illus.width) // 2, y))
     if text is not None:

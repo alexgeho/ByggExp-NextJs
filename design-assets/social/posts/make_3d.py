@@ -235,12 +235,33 @@ def slide_shot(shots, caption):
     return f, d
 
 
+FEATURE = {  # slide 4: the site's feature picture, laptop + phone (public/landing/features)
+    "01-tid": ROOT / "public/landing/features/1arbetspass.webp",
+}
+
+
+def slide_feature(path, caption):
+    # Headline + picture centred as one group (the picture is wide, so a top headline leaves a hole).
+    f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
+    d = ImageDraw.Draw(f)
+    im = Image.open(path).convert("RGBA")
+    im = im.crop(im.getbbox())
+    w = W - 40
+    im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
+    top = (H - (90 + 70 + im.height)) // 2
+    d.text(((W - d.textlength(caption, font=font(72))) / 2, top), caption, font=font(72), fill=NAVY)
+    f.alpha_composite(im, (20, top + 160))
+    return f, d
+
+
 def carousel(pid):
     p = next(p for p in POSTS if p[0] == pid)
     _, lines, art, items, badges = p
     size = headline_size()
     out = []
-    slides = (slide_cover(lines, art, size), slide_steps(items, pid), slide_shot(SHOTS[pid], "Så ser det ut i appen"))
+    slides = [slide_cover(lines, art, size), slide_steps(items, pid), slide_shot(SHOTS[pid], "Så ser det ut i appen")]
+    if pid in FEATURE:
+        slides.append(slide_feature(FEATURE[pid], "I mobilen och i datorn"))
     for i, (f, d) in enumerate(slides):
         if i == 0:  # footer only on the first picture (owner 2026-10-31)
             footer(f, d, badges)

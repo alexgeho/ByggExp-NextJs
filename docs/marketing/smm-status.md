@@ -1,7 +1,20 @@
 # ByggExp SMM — статус и следующий шаг (handoff для агента)
 
-Обновлено: 2026-10-21 (Windows-компьютер, см. раздел ⏳ 21.10). Копия: OneDrive-Personal/ByggExp-SMM/smm-status.md
+Обновлено: 2026-10-31 (выше — HANDOFF каруселей); ранее 2026-10-21 (Windows-компьютер, см. раздел ⏳ 21.10). Копия: OneDrive-Personal/ByggExp-SMM/smm-status.md
 Агент: прочитай этот файл целиком и design-assets/social/DESIGN-SYSTEM-SMM.md (правила визуала: правка → правило → дизайн), потом делай «▶ СЛЕДУЮЩИЙ ШАГ».
+
+## ▶ 2026-10-31 HANDOFF — карусели 3D (12 постов + обзор) ГОТОВЫ, не опубликованы
+Готово (всё в git, `design-assets/social/posts/`):
+- `poster/` — 12 каруселей (01-tid … 12-integrationer: 1.jpg 2.jpg 3.jpg + text.txt FB/LinkedIn) + `00-oversikt` (14 слайдов, закреп) + склейки «– alla 3.jpg».
+- Генератор `make_3d.py` (`carousel(pid)`), обзор `overview_3d.py`, проверка `qa_3d.py <папки постов>` → только при «QA ok» показывать владельцу.
+- Правила: `design-assets/social/DESIGN-SYSTEM-SMM.md` S26–S32 (эталон — пост 1; заголовки 2 строки с подсветкой слов; воздух ≥120 и равный; стрелка по центру; тени без «коробки»; цвета = токены сайта; сторы на 1-м слайде всех; мокапы с главной сайта; ÄTA нигде; логотипы партнёров — настоящие).
+- Скриншоты приложения: `posts/src/app-shots/`. Логотипы: `posts/src/logos/`. 3D: `byggexp-admin/docs/presentations/design-system/assets/3d/` (новый utlagg-4).
+- Шрифт картинок: SF Pro `/System/Library/Fonts/SFNS.ttf` — только Mac (на Windows генератор не запустится без замены).
+Исследование SMM (31.10): старт 3 поста (1 Tid, 8 Fakturor, 11 Löner) + закреп обзора; дальше 1 пост через день; LinkedIn — PDF-документ; личный профиль Александра ≈2× охват страницы.
+NÄSTA:
+1. Сделать PDF каждой карусели и обзора для LinkedIn.
+2. После «да» владельца: FB + LinkedIn — опубликовать обзор и закрепить, стартовые 1/8/11, остальные через день (отложенные).
+3. Каждая правка владельца → правило в DESIGN-SYSTEM-SMM.md + проверка в qa_3d.py.
 
 ## ⏳ 21.10 Видео на Windows-компьютере — ждёт ответа владельца
 ТЗ: docs/marketing/video-handoff.md. Первая задача — трейлер с админкой (45–60 с). На этом компьютере (Windows) работа стоит.
@@ -141,3 +154,7 @@
 - Также опубликованы: g07 Hantverkare sökes · g09 Hitta Snickare, Målare i Stockholm (текст «vad de tycker»; на картинке часы 18:55 — мелочь, критик просил рабочее время). Итого 8/10.
 - Не выложены (по 1 посту в группу в день, иначе спам): g05 (löner) → завтра в Reklam Är Tillåtet или Marknadsför; g08 (ROT) → завтра в Jag vill hitta en målare, snickare / plattsättare. Driva Eget: g01/g05 комментарием в понедельничном треде.
 - NÄSTA утром: ответить на комментарии в 8 постах; владелец — галочка правил в Nya företag!.
+
+## 2026-10-22 07:20 — владелец: «убирай» посты в чужих FB-группах
+- Публикации в группах остановлены, g05/g08 не постим.
+- Удаляет владелец (агенту удалять нельзя): Reklam Är Tillåtet, Marknadsför ditt Företag, Hantverkare sökes, Hitta Snickare, Jag vill hitta en målare, Bygg och Renovering i Stockholm + pending в Nya företag! и плattsättare.

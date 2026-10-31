@@ -168,6 +168,25 @@ HEADS = {
 }
 
 
+def art(name, side):
+    # 3D picture whose pale floor shadow is faded out at the file edges: a shadow cut by the edge
+    # shows as a straight "box" line on the white slide (owner 2026-10-31). Only pale grey pixels
+    # in the lower part near the edges are touched, never the figure itself.
+    import numpy as np
+    im = Image.open(ART / name).convert("RGB").resize((side, side), Image.LANCZOS)
+    a = np.asarray(im).astype(float)
+    lum = a.mean(2)
+    sat = a.max(2) - a.min(2)
+    pale = np.clip((lum - 200) / 40, 0, 1) * (sat < 18)  # light, colourless = shadow / floor
+    f = side / 8
+    yy, xx = np.mgrid[0:side, 0:side]
+    d = np.minimum.reduce([xx, side - 1 - xx, side - 1 - yy]).astype(float)
+    edge = np.clip(1 - d / f, 0, 1) * (yy > side * 0.5)  # bottom half: where floor shadows are
+    k = (pale * edge)[..., None]
+    out = a * (1 - k) + 255 * k
+    return Image.fromarray(out.astype("uint8")).convert("RGBA")
+
+
 def ink(layer):
     # Visible box of a layer (ignores pure white and near-white soft shadows)
     a = layer.split()[3].point(lambda v: 255 if v > 24 else 0)
@@ -207,12 +226,12 @@ def layer(h=H):
     return l, ImageDraw.Draw(l)
 
 
-def slide_cover(lines, art, size):
+def slide_cover(lines, art_name, size):
     f = Image.new("RGBA", (W, H), (255, 255, 255, 255))
     d = ImageDraw.Draw(f)
     headline(d, lines, size)
     l, _ = layer(900)
-    l.alpha_composite(Image.open(ART / art).convert("RGBA").resize((820, 820), Image.LANCZOS), ((W - 820) // 2, 0))
+    l.alpha_composite(art(art_name, 820), ((W - 820) // 2, 0))
     place(f, d, size, lines, l)
     return f, d
 
@@ -239,16 +258,21 @@ def slide_steps(items, pid, lines, size):
     side = 380
     il, ild = layer(side + 80)
     edges = []
-    for art, x in ((left, 64), (right, W - 64 - side)):
-        im = Image.open(ART / art).convert("RGBA").resize((side, side), Image.LANCZOS)
+    for name, x in ((left, 64), (right, W - 64 - side)):
+        im = art(name, side)
         il.alpha_composite(im, (x, 0))
-        b = ink(im)
-        edges.append((x + b[0], x + b[2]))
+        b = ink(im)  # whole figure, for centring the label
+        band = im.crop((0, side // 2 - 120, side, side // 2 + 120))  # what the eye compares: the figure at arrow height
+        g = band.convert("L").point(lambda v: 255 if v < 225 else 0)  # real figure, not the pale floor shadow
+        a = band.split()[3].point(lambda v: 255 if v > 24 else 0)
+        from PIL import ImageChops
+        nb = ImageChops.multiply(g, a).getbbox() or b
+        edges.append((x + b[0], x + b[2], x + nb[0], x + nb[2]))
     fl = font(34, "Bold")
-    for label, (e0, e1) in ((l_label, edges[0]), (r_label, edges[1])):  # label centred under the figure itself
+    for label, (e0, e1, _, _) in ((l_label, edges[0]), (r_label, edges[1])):  # label centred under the figure itself
         ild.text(((e0 + e1) / 2 - ild.textlength(label, font=fl) / 2, side + 10), label, font=fl, fill=GREY)
     # Arrow exactly in the middle between the visible figures: equal air left and right (owner 2026-10-31)
-    l_edge, r_edge = edges[0][1], edges[1][0]
+    l_edge, r_edge = edges[0][3], edges[1][2]
     m = max(24, (r_edge - l_edge) // 5)
     arrow(ild, l_edge + m, r_edge - m, side // 2)
     tl, td = layer(700)

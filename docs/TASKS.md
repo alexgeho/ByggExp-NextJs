@@ -21,5 +21,5 @@
 - [x] Расхождение Komplett +119 vs +69 — владелец: как на сайте, 69
 - [x] Komplett в Stripe: +69 (год 704) — новые цены SEK+NOK: месяц price_1UX1aHAzcJ4f5bxIvIBzBPBu, год price_1UX1bnAzcJ4f5bxIy63qTivQ
 - [x] GH secrets STRIPE_PRICE_KOMPLETT_MONTHLY/YEARLY → новые цены + redeploy API (команда владельцу)
-- [ ] .no: замер Keyword Planner (Norway, nb) по функциям продукта: tilbud/faktura, egenkontroll/KS/avvik, byggedagbok, ressursplanlegging/bemanning, prosjektstyring/økonomi, lønn → docs/seo/keywords-norway-funksjoner-2026-11.md
+- [x] .no: замер Keyword Planner (Norway, nb) по функциям продукта: tilbud/faktura, egenkontroll/KS/avvik, byggedagbok, ressursplanlegging/bemanning, prosjektstyring/økonomi, lønn → docs/seo/keywords-norway-funksjoner-2026-11.md
 - [ ] .no: волна страниц функций (5–6) + /nb/priser по замеру → критик → деплой

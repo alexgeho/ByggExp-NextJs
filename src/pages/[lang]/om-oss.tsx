@@ -103,7 +103,7 @@ export default function AboutPage({
         <p>
           Vi samler det som ellers håndteres i Excel, på papir og i spredte apper, i{" "}
           <strong>én tjeneste</strong>: timeregistrering og stemplingsur med
-          GPS eller manuell timeføring, timeplaner og ressursplanlegging,
+          GPS eller manuell timeføring, arbeidsplaner og ressursplanlegging,
           prosjekt- og oppgavestyring, egenkontroller samt tilbud og faktura.
           Alt fungerer både på nett og i mobilappen, slik at kontoret og de
           som er ute på byggeplassen jobber med den samme informasjonen.

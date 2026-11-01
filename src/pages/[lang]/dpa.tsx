@@ -138,7 +138,7 @@ export default function DpaPage({
         <p>
           Den Behandlingsansvarliges ansatte, underentreprenører,
           kontaktpersoner og kunder. Identitet/kontakt, ansettelsesdata,
-          personnummer (fakturering/lønn), tid/oppmøte, posisjonsdata (GPS),
+          fødselsnummer (fakturering/lønn), tid/oppmøte, posisjonsdata (GPS),
           økonomi- og prosjektdata.
         </p>
 
@@ -170,14 +170,17 @@ export default function DpaPage({
         <h2>7. Brudd på personopplysningssikkerheten</h2>
         <p>
           Databehandleren varsler den Behandlingsansvarlige uten ugrunnet
-          opphold med informasjon til melding til IMY (innen 72 timer).
+          opphold med informasjon til melding til tilsynsmyndigheten (i Norge:
+          Datatilsynet) innen 72 timer.
         </p>
 
         <h2>8. Sletting/tilbakelevering</h2>
+        {/* Norway: bokføringsloven § 13 annet ledd – regnskapsmateriale nr. 1–4 oppbevares i fem år
+              etter regnskapsårets slutt. https://lovdata.no/dokument/NL/lov/2004-11-19-73/§13 */}
         <p>
           Ved avslutning slettes eller eksporteres opplysningene etter den
           Behandlingsansvarliges valg, med unntak av det loven krever at vi
-          oppbevarer (f.eks. regnskap i 7 år).
+          oppbevarer (f.eks. regnskap i fem år etter regnskapsårets slutt).
         </p>
 
         <h2>Kontakt</h2>

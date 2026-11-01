@@ -159,7 +159,7 @@ const FAQ_NB: Qa[] = [
   {
     question: "Hva er ByggExp?",
     answer:
-      "ByggExp er en alt-i-ett-tjeneste for byggefirma som samler timeregistrering, timeplaner, prosjekt- og oppgavestyring, egenkontroller samt tilbud og faktura – både på nett og i mobilappen.",
+      "ByggExp er en alt-i-ett-tjeneste for byggefirma som samler timeregistrering, arbeidsplaner, prosjekt- og oppgavestyring, egenkontroller samt tilbud og faktura – både på nett og i mobilappen.",
   },
   {
     question: "Kan jeg prøve gratis?",

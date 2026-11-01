@@ -171,7 +171,7 @@ export default function TermsPage({
         <h2>9. Lovvalg</h2>
         <p>
           Svensk rett gjelder. Tvister avgjøres av svenske domstoler med
-          Stockholms tingsrätt som første instans.
+          Stockholms tingsrett som første instans.
         </p>
 
         <h2>Kontakt</h2>

@@ -126,12 +126,12 @@ export default function PrivacyPolicyPage({
         <ul>
           <li>Kontoopplysninger: navn, e-post, telefon, rolle, profilbilde.</li>
           <li>
-            Ansettelsesrelatert: yrke, timepris, personnummer (for fakturering
+            Ansettelsesrelatert: yrke, timepris, fødselsnummer (for fakturering
             og lønn), sertifikater.
           </li>
           <li>
             Tid og oppmøte: arbeidsøkter, inn-/utsjekking, timer,
-            personalliste.
+            mannskapsliste.
           </li>
           <li>
             Posisjonsdata (GPS): posisjonen din leses midlertidig når du starter
@@ -159,7 +159,7 @@ export default function PrivacyPolicyPage({
               <td>Avtale</td>
             </tr>
             <tr>
-              <td>Tid/oppmøte, personalliste</td>
+              <td>Tid/oppmøte, mannskapsliste</td>
               <td>Rettslig forpliktelse + berettiget interesse</td>
             </tr>
             <tr>
@@ -174,12 +174,15 @@ export default function PrivacyPolicyPage({
         </table>
 
         <h2>Lagringstid</h2>
+        {/* Norway: bokføringsloven § 13 annet ledd – regnskapsmateriale nr. 1–4 oppbevares i fem år
+              etter regnskapsårets slutt. https://lovdata.no/dokument/NL/lov/2004-11-19-73/§13 */}
         <p>
           GPS-posisjon brukes bare midlertidig (When-In-Use) ved arbeidsøkter
           for oppmøtekontroll og lagres ikke som koordinater hos oss – bare
-          prosjektets adresse lagres. Personallisten lagres i minst 2 år,
-          regnskap/fakturaer i 7 år. Øvrige opplysninger lagres så lenge
-          kunde-/arbeidsforholdet varer, og slettes deretter.
+          prosjektets adresse lagres. Mannskapslisten lagres så lenge
+          regelverket krever, regnskap/fakturaer i fem år etter regnskapsårets
+          slutt. Øvrige opplysninger lagres så lenge kunde-/arbeidsforholdet
+          varer, og slettes deretter.
         </p>
 
         <h2>Mottakere og overføringer</h2>
@@ -195,8 +198,8 @@ export default function PrivacyPolicyPage({
           Du har rett til innsyn, retting, sletting, begrensning,
           dataportabilitet og til å protestere. I plattformen kan den
           behandlingsansvarlige eksportere og slette en brukers opplysninger.
-          Kontakt support@byggexp.se eller arbeidsgiveren din. Klager kan rettes
-          til den svenske tilsynsmyndigheten Integritetsskyddsmyndigheten (IMY).
+          Kontakt support@byggexp.se eller arbeidsgiveren din. Du kan også klage
+          til tilsynsmyndigheten i landet der du bor (i Norge: Datatilsynet).
         </p>
 
         <h2>Kontakt</h2>

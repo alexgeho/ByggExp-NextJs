@@ -1135,7 +1135,7 @@ const HMS_SYSTEM: FunksjonPageNb = {
 
 <h2>Hva er et HMS-system?</h2>
 <p>HMS står for helse, miljø og sikkerhet. Etter ${ext(LOV_AML, 'arbeidsmiljøloven')} § 3-1 skal arbeidsgiver sørge for at det utføres systematisk helse-, miljø- og sikkerhetsarbeid på alle plan i virksomheten, i samarbeid med arbeidstakerne og deres tillitsvalgte. Hvordan arbeidet skal gjøres, står i ${ext(LOV_IK, 'internkontrollforskriften')} § 5. Der heter det blant annet at virksomheten skal «iverksette rutiner for å avdekke, rette opp og forebygge overtredelser av krav fastsatt i eller i medhold av helse-, miljø- og sikkerhetslovgivningen».</p>
-<p>Forskriften krever også at deler av arbeidet dokumenteres skriftlig: mål for HMS, hvordan ansvaret er fordelt, kartlegging av farer og risiko, rutinene for avvik og den årlige gjennomgangen. Et HMS-system, eller internkontrollsystem, er verktøyet som holder dette samlet. For et byggefirma består det typisk av:</p>
+<p>Forskriften krever også at deler av arbeidet dokumenteres skriftlig: mål for HMS, hvordan ansvaret er fordelt, kartlegging av farer og risiko, rutinene for avvik og den systematiske gjennomgangen av internkontrollen. Et HMS-system, eller internkontrollsystem, er verktøyet som holder dette samlet. For et byggefirma består det typisk av:</p>
 <ul>
 <li><strong>Avvikssystem</strong> – avvik og uønskede forhold blir meldt, får en ansvarlig og følges opp til de er lukket.</li>
 <li><strong>Sjekklister</strong> – egenkontroll og faste runder på byggeplassen.</li>
@@ -1158,7 +1158,7 @@ ${illu('ata-upptackt', 'Håndverker med hjelm løfter opp en gulvplate og viser 
 <p>Alle endringer logges med hvem, når og hva, så historikken følger avviket. Webadmin finnes på norsk. Avvik registreres foreløpig i webadmin, ikke i mobilappen.</p>
 
 <h2>Avviksmelding: hva bør den inneholde?</h2>
-<p>En god avviksmelding er rask å skrive og umulig å misforstå. Bruker dere i dag et avviksmelding-skjema på papir eller en mal i Word, kan dere sammenligne med feltene her:</p>
+<p>En god avviksmelding er rask å skrive og umulig å misforstå. Bruker dere i dag et skjema for avviksmelding på papir eller en mal i Word, kan dere sammenligne med feltene her:</p>
 <div class="article-table"><table>
 <thead><tr><th>Felt</th><th>Hvorfor</th><th>I ByggExp</th></tr></thead>
 <tbody>
@@ -1199,7 +1199,7 @@ ${illu('feat-foto-ror-i-vagg', 'Bygningsarbeider med hjelm fotograferer rør og 
 <li><strong>PDF</strong> på bokmål, med prosjekt, dato og antall åpne, under arbeid, lukkede og forfalte avvik.</li>
 <li><strong>CSV</strong> med de samme avvikene, til Excel eller videre behandling.</li>
 </ul>
-<p>Rapporten følger filteret du har valgt, for eksempel bare HMS-avvik eller bare åpne saker. Hvert avvik viser ansvarlig, frist, årsak, tiltak og hvem som lukket det. Det er dokumentasjonen internkontrollforskriften ber om for rutinene for avvik.</p>
+<p>Rapporten følger prosjektet og kategorien du har valgt, for eksempel bare HMS-avvik. Hvert avvik viser ansvarlig, frist, årsak, tiltak og hvem som lukket det. Det er dokumentasjonen internkontrollforskriften ber om for rutinene for avvik.</p>
 
 <h2>Hvem gjør hva</h2>
 <ul>

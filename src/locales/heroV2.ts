@@ -72,7 +72,7 @@ export const heroV2Translations: Record<string, HeroV2Copy> = {
       {
         price: "299 NOK/mnd",
         items:
-          "tilbud og fakturaer, skanning av kvitteringer og fakturaer, innkommende fakturaer via e‑post, betalingspåminnelser, lønn, lønnsslipper, prosjektøkonomi med budsjett, kalkyle og lønnsomhet, kvitteringer ført på prosjektet",
+          "tilbud og fakturaer, skanning av kvitteringer og fakturaer, innkommende fakturaer via e‑post, lønn, lønnsslipper, prosjektøkonomi med budsjett, kalkyle og lønnsomhet, kvitteringer ført på prosjektet",
       },
       {
         price: "+69 NOK/arbeider",

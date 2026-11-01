@@ -108,9 +108,6 @@ export default function FunktionPageView({ lang, slug }: Props) {
     : isFaktura
       ? pricingT.financeItems
           .filter((item) => !item.includes("(kommer snart)"))
-          // Payment reminders are off for Norwegian companies (backend
-          // invoices.service sendReminder) — never list them on byggexp.no.
-          .filter((item) => !(isNb && item.startsWith("Påminnelser")))
           .map((item) => item.replace(/\*$/, ""))
       : pricingT.projectItems;
   const accent = isKomplett ? "green" : isFaktura ? "blue" : "purple";

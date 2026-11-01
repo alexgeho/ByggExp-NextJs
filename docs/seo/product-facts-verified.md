@@ -86,7 +86,7 @@ Code-checked read-only for /nb/funksjoner/* (BE = ByggExp-BackEnd, AD = byggexp-
 - YES: offer statuses draft/sent/accepted/rejected set manually — AD OfferForm.jsx:15-20; offer valid-until + clarifications — OfferForm.jsx:299,408-409.
 - YES: PDF preview + download of offer and invoice — AD src/features/offers/offerPdf.js:17,35; src/features/invoicing/invoicePdf.js:17,35.
 - Package: offers, invoices, clients, articles in Kontroll på pengene — BE modules.ts:50-64; Full kontroll = all :87.
-- NO: payment reminders/purring for NO — BE invoices.service.ts:140-142; AD src/config/markets.js isPaymentReminderAvailable (commit 020c685). Also filtered «Påminnelser om kommende betalinger» from the nb price card on feature pages.
+- NO: payment reminders/purring for NO — BE invoices.service.ts:140-142; AD src/config/markets.js isPaymentReminderAvailable (commit 020c685). «Påminnelser om kommende betalinger» removed from the nb pricing locale (and «betalingspåminnelser» from nb heroV2).
 - NO: Norwegian accounting integration or export file (only SIE = Swedish, BE src/accounting); EHF/Peppol (no match in BE/AD invoices); digital offer acceptance; mobile-app invoicing adapted for NO (docs/TASKS.md open item).
 
 ### Planlegging (re-confirmed)

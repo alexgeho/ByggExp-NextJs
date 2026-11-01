@@ -302,7 +302,13 @@ function Pricing({ pricingT, lang }: PricingProps) {
       groups: [
         {
           title: pricingT.planFakturaSub,
-          items: toItems(pricingT.financeItems, lang, FINANCE_LINKS),
+          // nb has no payment-reminder line (reminders are off for Norwegian
+          // companies), so its links skip that slot to stay index-aligned.
+          items: toItems(
+            pricingT.financeItems,
+            lang,
+            lang === "nb" ? FINANCE_LINKS.filter((_, i) => i !== 3) : FINANCE_LINKS,
+          ),
         },
       ],
       popular: false,

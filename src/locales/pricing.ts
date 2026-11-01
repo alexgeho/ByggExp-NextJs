@@ -340,7 +340,6 @@ export const pricingTranslations = {
       "Mobilapp + adminpanel",
       "Tilbud og fakturaer*",
       "E-postadresse for skanning av inngående fakturaer*",
-      "Påminnelser om kommende betalinger",
       "Lønn og lønnsslipper",
       "Prosjektøkonomi: budsjett, kalkyle og lønnsomhet",
       "Skann kvitteringer og fakturaer – føres automatisk på prosjektet*",

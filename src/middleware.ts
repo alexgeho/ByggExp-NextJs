@@ -87,10 +87,15 @@ export function middleware(req: NextRequest) {
       to.port = '';
       return NextResponse.redirect(to, 301);
     }
-    // Locale-less path (or root) → serve the nb version.
+    // Locale-less path (or root) → 301 to the nb URL. Mirrors byggexp.se, where
+    // `/` 301s to `/sv` (pages/index.tsx). A rewrite served the same page on
+    // both `/` and `/nb`, and Google rejected the /nb canonical as a duplicate.
     const to = new URL(url);
+    to.protocol = 'https:';
+    to.host = NO_HOST;
+    to.port = '';
     to.pathname = pathname === '/' ? '/nb' : `/nb${pathname}`;
-    return NextResponse.rewrite(to);
+    return NextResponse.redirect(to, 301);
   }
 
   // --- byggexp.se: nb belongs on byggexp.no --------------------------------

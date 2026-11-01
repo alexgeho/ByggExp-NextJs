@@ -141,6 +141,16 @@ const F_FAKTURERINGSPROGRAM_BYGG: BlogPost = {
 // from the sv personalliggare article. Honest product framing: ByggExp documents
 // attendance (GPS innsjekk), it is not marketed as a certified HMS-kort reader.
 
+// Sources (checked 2026-11-01):
+// - Byggherreforskriften (FOR-2009-08-03-1028) § 15: list over everyone who will work on the
+//   site, kept electronically, checked and updated daily, contents, shown on request, kept six
+//   months. https://lovdata.no/forskrift/2009-08-03-1028/§15
+// - § 2: applies to every workplace with temporary or changing construction work.
+//   https://lovdata.no/forskrift/2009-08-03-1028/§2
+// - § 3 second ledd: if the byggherre is a forbruker only § 10 (forhåndsmelding) applies.
+//   https://lovdata.no/forskrift/2009-08-03-1028/§3
+// - The task can be handed by written agreement to a firm on site, usually the main contractor:
+//   https://www.arbeidstilsynet.no/hms/hms-i-bygg-og-anlegg/byggherreforskriften/elektroniske-oversiktslister/
 const M_MANNSKAPSLISTE_BYGGEPLASS_HTML = `
 <p>På norske bygge- og anleggsplasser er det krav om en <strong>elektronisk oversiktsliste</strong> over alle som utfører arbeid – i praksis kalt en mannskapsliste. Kravet følger av byggherreforskriften, og ansvaret ligger hos byggherren. Her går vi gjennom hva en mannskapsliste er, hva den skal inneholde, når kravet gjelder og hvordan digital oppmøteregistrering hjelper deg å holde oversikt.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-mannskapsliste-krav.webp" alt="Diagram: elektronisk oversiktsliste – hva som registreres (navn, fødselsdato, arbeidsgiver, HMS-kort-nummer) og krav etter § 15" width="720" height="380" loading="lazy"><figcaption>Elektronisk oversiktsliste etter byggherreforskriften § 15: hva som registreres og hvilke krav som gjelder.</figcaption></figure>
@@ -153,7 +163,7 @@ const M_MANNSKAPSLISTE_BYGGEPLASS_HTML = `
 <ul>
 <li><strong>Elektronisk</strong> – listen skal føres elektronisk.</li>
 <li><strong>Oppdateres daglig</strong> – kontrolleres og holdes à jour hver dag.</li>
-<li><strong>Byggherrens ansvar</strong> – byggherren skal sørge for at listen føres (oppgaven kan settes bort, men ansvaret består).</li>
+<li><strong>Byggherrens ansvar</strong> – byggherren skal sørge for at listen føres. Oppgaven kan ved skriftlig avtale overlates til en virksomhet på plassen, oftest hovedentreprenøren.</li>
 <li><strong>Alle på plassen</strong> – også underentreprenører og innleide.</li>
 </ul>
 <p>Sjekk alltid gjeldende ordlyd og krav hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>, siden regelverket kan endres.</p>
@@ -164,12 +174,12 @@ const M_MANNSKAPSLISTE_BYGGEPLASS_HTML = `
 <li>Navn og fødselsdato.</li>
 <li>Arbeidsgiver (virksomheten personen jobber for).</li>
 <li><strong>HMS-kort-nummer</strong> – knytter personen til riktig virksomhet.</li>
-<li>Opplysninger om selve bygge- eller anleggsplassen og byggherren.</li>
+<li>Navn og adresse på bygge- eller anleggsplassen, navn på byggherren og organisasjonsnummer for virksomhetene.</li>
 </ul>
-<p>For å bli registrert kreves et gyldig HMS-kort, som utstedes på grunnlag av en arbeidskontrakt. Les mer i vår guide om <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a>.</p>
+<p>For å bli registrert kreves et gyldig HMS-kort. Les mer i vår guide om <a href="/nb/blog/hms-kort-bygg">HMS-kort</a>.</p>
 
 <h2>Når gjelder kravet?</h2>
-<p>Kravet om elektronisk oversiktsliste gjelder på bygge- og anleggsplasser der det utføres arbeid som krever byggetillatelse eller sentral godkjenning, og hvor minst én virksomhet utfører arbeid som næring. Er du i tvil om et konkret prosjekt omfattes, sjekk kravene hos Arbeidstilsynet.</p>
+<p>Byggherreforskriften gjelder for alle arbeidsplasser med midlertidig eller skiftende bygge- eller anleggsarbeid. Unntaket er når byggherren er en privatperson (forbruker): da gjelder bare kravet om forhåndsmelding, ikke kravet om oversiktsliste. Listen skal oppbevares i seks måneder etter at arbeidet er avsluttet.</p>
 
 <h2>Digital oppmøteregistrering gir deg oversikt</h2>
 <p>Uansett hvordan den formelle oversiktslisten føres, trenger du å vite hvem som faktisk er på plassen og når. Med ByggExp sjekker de ansatte inn og ut på bygget i mobilen, og GPS bekrefter oppmøtet. Da får du en digital, tidsstemplet oversikt over hvem som var på jobb og hvor – god dokumentasjon å ha i bunn.</p>
@@ -185,8 +195,14 @@ const M_MANNSKAPSLISTE_BYGGEPLASS_HTML = `
 <p>Byggherren skal sørge for at listen føres elektronisk, kontrolleres og oppdateres daglig. Selve føringen kan settes bort til andre, men ansvaret ligger hos byggherren.</p>
 <h3>Hva må registreres i mannskapslisten?</h3>
 <p>Blant annet navn, fødselsdato, arbeidsgiver og HMS-kort-nummer for alle som utfører arbeid på plassen – også underentreprenører og innleide.</p>
+<h3>Er elektronisk mannskapsliste påbudt?</h3>
+<p>Ja. Etter byggherreforskriften § 15 skal byggherren føre en oversiktsliste over alle som skal arbeide på bygge- eller anleggsplassen, og listen skal føres elektronisk, kontrolleres og oppdateres daglig. Er byggherren en privatperson (forbruker), gjelder ikke kravet.</p>
+<h3>Hva er en elektronisk oversiktsliste?</h3>
+<p>Byggherreforskriftens navn på mannskapslisten: en elektronisk liste over byggeplassen, byggherren, arbeidsgiverne og alle som arbeider der, med navn, fødselsdato og HMS-kortnummer.</p>
+<h3>Hvor lenge skal oversiktslisten oppbevares?</h3>
+<p>I seks måneder etter at bygge- eller anleggsarbeidet er avsluttet. Listen skal også kunne vises til arbeidsgiveren, verneombudet, Arbeidstilsynet og skattemyndighetene.</p>
 <h3>Gjelder kravet for små byggeplasser?</h3>
-<p>Kravet gjelder bygge- og anleggsplasser der det utføres arbeid som krever byggetillatelse eller sentral godkjenning, og hvor minst én virksomhet arbeider som næring. Sjekk det konkrete prosjektet mot kravene hos Arbeidstilsynet.</p>
+<p>Forskriften gjelder for enhver arbeidsplass med midlertidig eller skiftende bygge- eller anleggsarbeid. Unntaket er når byggherren er en privatperson (forbruker).</p>
 `.trim();
 
 const M_MANNSKAPSLISTE_BYGGEPLASS: BlogPost = {
@@ -208,7 +224,7 @@ const M_MANNSKAPSLISTE_BYGGEPLASS: BlogPost = {
   isPublished: true,
   publishedAt: '2026-09-07T12:00:00.000Z',
   createdAt: '2026-09-07T12:00:00.000Z',
-  updatedAt: '2026-09-07T12:00:00.000Z',
+  updatedAt: '2026-11-01T12:00:00.000Z',
 };
 
 // HMS-kort pillar (wave 2, 2026-11-01): hms-kort-pris, bestille-hms-kort and byggekort

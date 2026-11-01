@@ -66,8 +66,28 @@ Code-checked read-only for /nb/funksjoner/* (BE = ByggExp-BackEnd, AD = byggexp-
 - Packages — BE src/company/modules.ts: Kontroll på pengene :50-64 (offers, invoices, budget, profitability, projektkalkyl, expenses, payroll — no shifts/schedule); Kontroll på jobben :68-81 (tasks, dagbok, kma, shifts, schedule, bemanning, leave, tools — no economy); Full kontroll :87 (all).
 
 ### Tilbud / faktura on nb
-- NO (blocks the nb page): offer PDF Swedish-only with "kr" — BE src/offers/templates/offer-pdf.template.ts:217-219,262-282; invoice PDF Swedish labels, Bankgiro, currency defaults to SEK because toPdfData sets none — BE src/invoices/templates/invoice-pdf.template.ts:333,540,684; BE invoices.service.ts:716. → /nb/funksjoner/tilbudsprogram NOT built until PDFs are localised (nb labels, NOK, Norwegian account/KID).
+- SUPERSEDED 2026-11-01 (see next section): offer/invoice PDFs were Swedish-only; Norwegian PDFs are now live.
 - NO: customer accepts the offer online; offer → project. Offer statuses set manually — BE src/offers/schemas/offer.schema.ts:6-11.
+
+### Tilbud / faktura on nb (live) — code-checked 2026-11-01 (BE 4e2b56f, AD 2fd7f7b)
+- YES: Norwegian quote PDF (bokmål: Tilbud, Tilbudsnr., Gyldig til, Forbehold og avklaringer, Kontaktpersoner, Sum eks. mva / Mva / Totalt inkl. mva, kr in nb-NO) — BE src/offers/templates/offer-pdf.template.ts:189-208,263-265,338.
+- YES: Norwegian invoice PDF (bokmål labels, Kreditnota, Fakturadato, Forfallsdato, Forsinkelsesrente), legal basis bokføringsforskriften kap. 5-1 cited in code — BE src/invoices/templates/invoice-pdf.template.ts:362-410; ROT/omvänd/QR stripped for NO :965-973.
+- YES: NOK always for NO — BE src/invoices/invoices.service.ts:391-410; ROT/omvänd forced off :393-397.
+- YES: mva 25/15/12/0 (6 % never) — BE src/invoices/norway.ts:12-17; AD src/config/markets.js:23-28; per-rate VAT line «Mva 25 % …» summed per rate — BE invoice-pdf.template.ts:739-750.
+- YES: org.nr with «MVA» suffix when VAT-registered — BE norway.ts:120-135; footer with «Foretaksregisteret» when set — BE invoice-pdf.template.ts:933-955; settings checkboxes — AD src/features/profile/CompanyDetailsForm.jsx:79-82.
+- YES: kontonummer 11 digits with MOD11 check — BE norway.ts:60-68; validated in settings — AD CompanyDetailsForm.jsx:265-268; printed «Kontonr.» — BE invoice-pdf.template.ts:755-763.
+- YES: KID from invoice number, MOD10 (default) or MOD11, or none — BE norway.ts:5-10,77-92; invoices.service.ts:322; no KID on credit notes :637,693-694.
+- YES: Leveringssted (invoice → project → buyer) + Leveringsdato — BE invoices.service.ts:274-275,695; template :464-477,581; AD src/features/invoicing/components/InvoiceForm.jsx:449,596-597.
+- YES: credit note (Kreditnota), whole or partial amount excl. VAT, never above what is left — BE invoices.service.ts:566-657; AD src/features/invoicing/InvoiceListPage.jsx:242-248,350-369.
+- YES: e-mail with PDF attached, bokmål e-mail for NO; draft → sent — invoice BE invoices.service.ts:95-119, offer BE src/offers/offers.service.ts:178-205; attachment BE src/mail/mail.service.ts:695-755 (subject «Faktura/Tilbud <nr>»).
+- YES: offer → invoice draft with the same rows, customer and offer number as order reference — AD src/features/offers/offerToInvoice.js:17-37; button AD OfferEditPage.jsx:57-58,93; list AD OfferListPage.jsx:39-40,163. (Product nit: reference text is «Offert <nr>» also for NO.)
+- YES (Full kontroll only — hours module «shifts» is not in Kontroll på pengene, BE src/company/modules.ts:50-64 vs :68-81,87): invoice from hours — selected hours summed to one line (project + period), unit h, rate typed on the invoice, project's client prefilled when one project, «Intern tid» excluded — AD src/features/shifts/HoursPage.jsx:606-675.
+- YES: customer register (company/private, customer no., address, e-mail, phone, org.nr) — BE src/clients/schemas/client.schema.ts:19-59; picker on invoice AD InvoiceForm.jsx:27,83-96,533 and offer AD src/features/offers/components/OfferForm.jsx:96-117; articles fill text/price/unit/VAT — OfferForm.jsx:85-91,142-150.
+- YES: offer statuses draft/sent/accepted/rejected set manually — AD OfferForm.jsx:15-20; offer valid-until + clarifications — OfferForm.jsx:299,408-409.
+- YES: PDF preview + download of offer and invoice — AD src/features/offers/offerPdf.js:17,35; src/features/invoicing/invoicePdf.js:17,35.
+- Package: offers, invoices, clients, articles in Kontroll på pengene — BE modules.ts:50-64; Full kontroll = all :87.
+- NO: payment reminders/purring for NO — BE invoices.service.ts:140-142; AD src/config/markets.js isPaymentReminderAvailable (commit 020c685). Also filtered «Påminnelser om kommende betalinger» from the nb price card on feature pages.
+- NO: Norwegian accounting integration or export file (only SIE = Swedish, BE src/accounting); EHF/Peppol (no match in BE/AD invoices); digital offer acceptance; mobile-app invoicing adapted for NO (docs/TASKS.md open item).
 
 ### Planlegging (re-confirmed)
 - Planering Gantt — AD src/features/schedule/SchedulePage.jsx:51,486,501-503, endringslogg :475; Bemanning click-to-assign :285, approved leave :109,165, >8 h red :421 (AD src/features/bemanning/BemanningPage.jsx). Worker does NOT see Bemanning in the app — MO hooks/useScheduleData.js:16-20.

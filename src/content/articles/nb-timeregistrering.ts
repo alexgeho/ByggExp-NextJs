@@ -574,7 +574,7 @@ const TP_TIMEPRIS_SNEKKER_HTML = `
 <p>Setter du en timepris, må timene også fanges opp riktig – ellers lekker det penger. Med <a href="/nb/funksjoner/timeregistrering-app">timeregistrering i mobilen</a> knyttes timene til riktig prosjekt og blir grunnlag for fakturaen, slik at du fakturerer alle timene til avtalt pris uten å regne for hånd. Se også <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram for bygg</a>, <a href="/nb/blog/timepris-rorlegger">timepris for rørlegger</a> og <a href="/nb/blog/timepris-elektriker">timepris for elektriker</a>.</p>
 
 <h2>Kom i gang</h2>
-<p>Vil du sikre at alle timene blir fakturert til riktig pris? Les om <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
+<p>Vil du sikre at alle timene blir fakturert til riktig pris? Les om <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-app for bygg</a>, <a href="/nb/funksjoner/tilbudsprogram">tilbudsprogram med faktura</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva koster en snekker per time?</h3>
@@ -646,7 +646,7 @@ const FM_FAKTURAMAL_HTML = `
 <p>En mal funker for de aller minste, men blir fort tungvint. Med et <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram for bygg</a> lages fakturaen fra de loggede timene og materiellet på prosjektet, med riktig mva og forfallsdato – uten å taste inn alt på nytt. Grunnlaget er <a href="/nb/funksjoner/timeregistrering-app">registrert tid</a>.</p>
 
 <h2>Kom i gang</h2>
-<p>Bruk malen over, eller se hvordan faktura lages fra timene i <a href="/nb/blog/faktureringsprogram-bygg">ByggExp</a>. Les også om <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
+<p>Bruk malen over, eller lag tilbud og faktura i et <a href="/nb/funksjoner/tilbudsprogram">tilbudsprogram</a> – på norsk, med mva per sats, KID og kontonummer. Se også hvordan faktura lages fra timene i <a href="/nb/blog/faktureringsprogram-bygg">ByggExp</a>. Les også om <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva må en faktura inneholde?</h3>

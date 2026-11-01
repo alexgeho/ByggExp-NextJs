@@ -33,6 +33,10 @@
   - [ ] Критик → проверка владельца → деплой; Request Indexing 4 новых URL
 - [x] Норвежские PDF tilbud/faktura — live 01.11 (backend+admin, критик ✓): nb-тексты, NOK, mva 25/15/12/0, org.nr MVA, Foretaksregisteret, kontonummer MOD11, KID MOD10/MOD11, Leveringssted, напоминания выкл. для NO
 - [ ] Мобильное приложение: для NO скрыть ROT/omvänd moms/округление, суммы в NOK — через стор
-- [ ] Страница /nb/funksjoner/tilbudsprogram
+- [ ] Страница /nb/funksjoner/tilbudsprogram (готово в seo/no-wave4; осталось: критик → владелец → деплой → Request Indexing)
+  - [x] Волна 4 (ветка seo/no-wave4, не задеплоено): факты по коду BE/AD → product-facts-verified.md
+  - [x] Страница tilbudsprogram (plan Kontroll på pengene, faktura fra timer = Full kontroll), без purring/ROT/интеграций
+  - [x] Ссылки: карточки /nb главной, хаб /nb/funktioner, blog fakturamal + timepris-snekker
+  - [x] Проверки: build, Host byggexp.no 200, sitemap, JSON-LD, ссылки, sv без изменений, скриншоты 1440/390
 - [ ] Модуль avvik для HMS — владелец «да» 01.11, после PDF → потом страница hms-system
 - [ ] nb-скриншоты приложения для страниц функций (сейчас шведский UI)

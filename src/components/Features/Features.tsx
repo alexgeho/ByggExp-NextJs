@@ -47,6 +47,8 @@ const NB_FUNKSJON_LINKS: Record<number, string> = {
   0: "timeregistrering-app", // 1 Automatisk timeføring
   3: "ks-system", // 4 Fotodokumentasjon (egenkontroll med bilder)
   4: "bemanningsplan", // 5 Planlegging av prosjekter og ansatte
+  6: "tilbudsprogram", // 7 Tilbud
+  7: "tilbudsprogram", // 8 Fakturaer
   8: "prosjektstyringsverktoy", // 9 Prosjektoversikt / økonomi
 };
 

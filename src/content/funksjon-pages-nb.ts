@@ -21,9 +21,13 @@
 //   https://lovdata.no/forskrift/2010-03-26-488
 // - TEK17 (tekniske krav som egenkontrollen dokumenterer):
 //   https://lovdata.no/forskrift/2017-06-19-840
+// - Bokføringsforskriften kap. 5-1 (salgsdokument: § 5-1-1 innhold, § 5-1-2
+//   org.nr + «MVA» / «Foretaksregisteret», § 5-1-5 mva summert per sats):
+//   https://lovdata.no/forskrift/2004-12-01-1558
 
 import {
   EXTRA_USER_PRICE,
+  FAKTURA_PRICE,
   KOMPLETT_PRICE,
   PROJEKT_PRICE,
 } from '../components/Pricing/Pricing';
@@ -34,6 +38,7 @@ import { ext, illu, labelTables, type FunktionPage } from './funktion-pages';
 const LOV_AML = 'https://lovdata.no/lov/2005-06-17-62';
 const LOV_IK = 'https://lovdata.no/forskrift/1996-12-06-1127';
 const LOV_SAK10 = 'https://lovdata.no/forskrift/2010-03-26-488';
+const LOV_BF = 'https://lovdata.no/forskrift/2004-12-01-1558';
 
 export type FunksjonPageNb = FunktionPage & {
   /** sv feature page with the same intent → reciprocal hreflang sv ↔ nb. */
@@ -832,10 +837,245 @@ ${illu('schemalaggning-lag', 'Tre smilende bygningsarbeidere med hjelm, en med d
   ],
 };
 
+/* ------------------------------------------------------------------------- */
+/* 5. Tilbudsprogram (tilbud, faktura, kunderegister)                         */
+/* ------------------------------------------------------------------------- */
+// Claims code-checked 2026-11-01 after the Norwegian PDFs went live, see
+// product-facts-verified.md "Tilbud / faktura on nb (live)": bokmål tilbud and
+// faktura PDF with logo, NOK, mva 25/15/12/0 summed per rate, org.nr + MVA,
+// «Foretaksregisteret», kontonummer (MOD11-checked), KID MOD10/MOD11,
+// Leveringssted, kreditnota (whole or partial), PDF on e-mail, offer → invoice
+// draft with the same rows, invoice from hours (Full kontroll: hours module is
+// not in Kontroll på pengene), customer + article register, PDF download.
+// NOT claimed: purring/payment reminders (off for NO), any accounting
+// integration or file export (SIE is Swedish), EHF/e-faktura, digital offer
+// acceptance, offer → project, invoicing in the mobile app for NO companies
+// (app not yet adapted), ROT/omvendt avgiftsplikt.
+// Regulation: bokføringsforskriften kap. 5-1 (salgsdokument) –
+// https://lovdata.no/forskrift/2004-12-01-1558 (§ 5-1-1, § 5-1-2, § 5-1-5).
+
+const TILBUDSPROGRAM: FunksjonPageNb = {
+  slug: 'tilbudsprogram',
+  plan: 'faktura',
+  priceIncluded: 'Tilbud, faktura og kunderegister er inkludert',
+  heroCheck: 'Tilbud og faktura på norsk',
+  title: 'Tilbudsprogram – fra tilbud til faktura | ByggExp',
+  description:
+    'Tilbudsprogram for håndverkere og små bedrifter: tilbud og faktura som PDF på norsk med mva, KID og kontonummer, sendt på e-post. Prøv gratis i 14 dager.',
+  name: 'Tilbudsprogram',
+  h1: 'Tilbudsprogram for håndverkere.',
+  h1Accent: 'Fra tilbud til faktura i samme system.',
+  lead: 'Tilbud og faktura på norsk, med riktig mva, KID og kontonummer.',
+  hero: {
+    name: 'offert-kalkyl-hero',
+    alt: 'Håndverker med caps sitter ved en bærbar PC og skriver, ved siden av et ark med et hus bak et stillas og en penn',
+  },
+  stepsHeading: ['Tilbud, faktura', 'og oppfølging'],
+  steps: [
+    {
+      title: 'Lag tilbudet',
+      text: 'Rader med antall, enhet og enhetspris. Gyldig til-dato og forbehold.',
+      bullets: ['PDF med logo, på norsk', 'Sendes til kunden på e-post', 'Blir faktura med de samme radene'],
+      img: '/landing/features/7offerter-1200.webp',
+      alt: 'Nytt tilbud i ByggExp med tilbudsnummer, status, gyldig til-dato og kunde i webadmin og i mobilappen',
+    },
+    {
+      title: 'Fakturer timene',
+      text: 'Timene for et prosjekt og en periode blir en fakturalinje. Med i Full kontroll.',
+      img: '/landing/funktioner/screen-tidrapport-1200.webp',
+      alt: 'Timeoversikt i ByggExp: timer per ansatt og dag for to uker, filtrert på planlagt, GPS og manuelt',
+    },
+    {
+      title: 'Følg pengene',
+      text: 'Fakturert, kostnader og margin per prosjekt.',
+      img: '/landing/features/9ekonomi-1200.webp',
+      alt: 'Prosjektøkonomi i ByggExp: timer, kostnader, materiell, fakturert og margin mot budsjett',
+    },
+  ],
+  body: `
+<p>Et tilbudsprogram skal gjøre det raskt å sende et ryddig tilbud, og enda raskere å fakturere når kunden har sagt ja. I ByggExp lager du tilbudet med rader fra artikkelregisteret ditt, sender det som PDF på e-post og gjør det om til en faktura med de samme radene. Fakturaen skrives ut på norsk, i kroner, med mva per sats, kontonummer og KID. Her går vi gjennom flyten, hva et tilbud og en faktura bør inneholde, og hva programmet ikke gjør.</p>
+
+<h2>Hva er et tilbudsprogram?</h2>
+<p>Et tilbudsprogram er et verktøy for å lage, sende og følge opp tilbud. De fleste programmene for små bedrifter er egentlig fakturaprogram der tilbudet er et ekstra skjema. For en håndverker eller et byggefirma henger tingene tettere sammen: tilbudet blir til en jobb, jobben gir timer, og timene skal bli en faktura. Da sparer du mest når alt ligger i samme system:</p>
+<ul>
+<li><strong>Kunderegister</strong> – kunden legges inn én gang og hentes inn på tilbud og faktura.</li>
+<li><strong>Artikler</strong> – faste priser og enheter, så radene blir like hver gang.</li>
+<li><strong>Tilbud</strong> – beskrivelse, rader, gyldighet og forbehold, som PDF.</li>
+<li><strong>Faktura</strong> – fra tilbudet, fra timene eller fra bunnen av, med det loven krever.</li>
+<li><strong>Oversikt</strong> – hva som er sendt, akseptert, fakturert og betalt.</li>
+</ul>
+
+${illu('offert-kalkyl-matning', 'Håndverker med hjelm måler et baderomsgulv med målebånd mens kunden står ved siden av med et nettbrett, med fliser og en bøtte på gulvet')}
+
+<h2>Slik fungerer det i ByggExp</h2>
+<ol>
+<li><strong>Legg inn kunden.</strong> I kunderegisteret lagrer du bedrifter og privatpersoner med kundenummer, adresse, e-post, telefon og org.nr.</li>
+<li><strong>Lag tilbudet.</strong> Velg kunden, skriv en beskrivelse og legg inn rader med antall, enhet og enhetspris. Velger du en artikkel, fylles tekst, pris, enhet og mva-sats inn. Sett en gyldig til-dato og skriv forbehold og avklaringer.</li>
+<li><strong>Send det på e-post.</strong> Tilbudet går som PDF med logoen din, og et utkast får status sendt. Du kan også forhåndsvise og laste ned PDF-en.</li>
+<li><strong>Merk utfallet.</strong> Når kunden svarer, setter du status akseptert eller avvist.</li>
+<li><strong>Gjør tilbudet om til faktura.</strong> Ett klikk gir et fakturautkast med kunden, radene og tilbudsnummeret som referanse.</li>
+<li><strong>Send fakturaen.</strong> Fakturaen går som PDF på e-post, og utkastet får status sendt. Når pengene er kommet, merker du den som betalt.</li>
+</ol>
+<p>Tilbud og faktura lages i webadmin, som finnes på norsk.</p>
+
+<h2>Tilbudsmal: hva et tilbud bør inneholde</h2>
+<p>Et godt tilbud er lett å si ja til og vanskelig å misforstå. Bruk gjerne denne strukturen, enten du skriver i en tilbudsmal i Word eller Excel eller i et program:</p>
+<div class="article-table"><table>
+<thead><tr><th>Felt</th><th>Hvorfor</th><th>I ByggExp</th></tr></thead>
+<tbody>
+<tr><td><strong>Tilbudsnummer og dato</strong></td><td>Så begge parter vet hvilket tilbud det gjelder</td><td>Fortløpende nummer og dato</td></tr>
+<tr><td><strong>Kunde og kontaktperson</strong></td><td>Hvem tilbudet er til, og hvem som svarer</td><td>Fra kunderegisteret, med kontaktpersoner</td></tr>
+<tr><td><strong>Beskrivelse</strong></td><td>Hva som skal gjøres, med ord kunden forstår</td><td>Fritekst</td></tr>
+<tr><td><strong>Rader</strong></td><td>Hva prisen består av</td><td>Antall, enhet, enhetspris og beløp</td></tr>
+<tr><td><strong>Mva og totalpris</strong></td><td>Privatkunder vil se hva de faktisk skal betale</td><td>Sum eks. mva, mva og totalt inkl. mva</td></tr>
+<tr><td><strong>Gyldig til</strong></td><td>Materialpriser endrer seg</td><td>Egen dato på tilbudet</td></tr>
+<tr><td><strong>Forbehold og avklaringer</strong></td><td>Hva som ikke er med, og hva prisen forutsetter</td><td>Eget felt i PDF-en</td></tr>
+</tbody>
+</table></div>
+<p>Skriv forbeholdene konkret: «rivning av eksisterende flis er ikke med», ikke «forbehold om uforutsette forhold». Det er forbeholdene som sparer deg for diskusjonen når fakturaen kommer.</p>
+
+<h2>Hva en faktura må inneholde i Norge</h2>
+<p>Kravene til en faktura står i ${ext(LOV_BF, 'bokføringsforskriften')} kapittel 5-1 om salgsdokument. Kort fortalt skal fakturaen ha:</p>
+<ul>
+<li><strong>Nummer og dato</strong> – fakturanummer i fortløpende serie og fakturadato.</li>
+<li><strong>Partene</strong> – selgers navn, adresse og org.nr., med «MVA» etter nummeret når selger er mva-registrert. Aksjeselskap og NUF skal også ha ordet «Foretaksregisteret». Kjøpers navn og adresse.</li>
+<li><strong>Hva som er levert</strong> – ytelsens art og omfang.</li>
+<li><strong>Når og hvor</strong> – tidspunkt og sted for leveringen.</li>
+<li><strong>Pris og forfall</strong> – vederlaget og når det skal betales.</li>
+<li><strong>Merverdiavgift</strong> – oppgitt i norske kroner, og salg med ulike satser summert hver for seg.</li>
+</ul>
+<p>I ByggExp fyller du inn org.nr., kontonummer og om foretaket er mva-registrert og i Foretaksregisteret én gang i firmainnstillingene. Deretter kommer det riktig på hver faktura. Leveringsstedet hentes fra fakturaen, prosjektet eller kundens adresse.</p>
+
+${illu('offert-kalkyl-skicka', 'Et dokument flyr som et papirfly fra en bærbar PC til en person som står i et hus og ser på mobilen')}
+
+<h2>Norske detaljer som er på plass</h2>
+<div class="article-table"><table>
+<thead><tr><th>Behov</th><th>I ByggExp</th></tr></thead>
+<tbody>
+<tr><td><strong>Språk og valuta</strong></td><td>Tilbud og faktura på bokmål, beløp i NOK</td></tr>
+<tr><td><strong>Mva-satser</strong></td><td>25, 15, 12 og 0 % per rad, summert per sats</td></tr>
+<tr><td><strong>Org.nr.</strong></td><td>Med «MVA» når foretaket er mva-registrert</td></tr>
+<tr><td><strong>Kontonummer</strong></td><td>Kontrolleres ved registrering, så et feiltastet nummer stoppes</td></tr>
+<tr><td><strong>KID</strong></td><td>Lages fra fakturanummeret med MOD10 eller MOD11, eller slås av</td></tr>
+<tr><td><strong>Leveringssted og -dato</strong></td><td>På hver faktura</td></tr>
+<tr><td><strong>Kreditnota</strong></td><td>For hele fakturaen eller et beløp, med henvisning til fakturaen</td></tr>
+</tbody>
+</table></div>
+<p>En sendt faktura endres ikke. Er noe feil, lager du en kreditnota. Lar du beløpet stå tomt, krediteres hele fakturaen; skriver du et beløp eks. mva, krediteres bare den delen.</p>
+
+<h2>Fra timer til faktura</h2>
+<p>For et byggefirma er timene ofte den største delen av fakturaen. Med pakken Full kontroll velger du prosjekt og periode i timeoversikten og sender timene rett til et fakturautkast. Timene summeres til én linje med prosjektnavn og periode, og du skriver timeprisen. Gjelder timene ett prosjekt, fylles prosjektets kunde inn. Interne timer blir ikke med. Timene kommer fra <a href="/nb/funksjoner/timeregistrering-app">timeregistreringsappen</a>, der de ansatte stempler inn på prosjektet. Lurer du på hva timen bør koste, se guiden om <a href="/nb/blog/timepris-snekker">timepris for snekker</a>.</p>
+
+<h2>Tilbudsmal i Word eller tilbudsprogram?</h2>
+<p>Mange starter med en tilbudsmal og en fakturamal i Word eller Excel, og for noen få jobber i måneden kan det holde. Forskjellen merkes når volumet øker:</p>
+<div class="article-table"><table>
+<thead><tr><th>Behov</th><th>Mal i Word eller Excel</th><th>Tilbudsprogram</th></tr></thead>
+<tbody>
+<tr><td><strong>Nummerering</strong></td><td>Holdes styr på manuelt</td><td>Fortløpende nummer</td></tr>
+<tr><td><strong>Mva per sats</strong></td><td>Formler som kan bli feil</td><td>Regnes ut per rad og sats</td></tr>
+<tr><td><strong>Fra tilbud til faktura</strong></td><td>Kopier og lim inn</td><td>Ett klikk, samme rader</td></tr>
+<tr><td><strong>KID</strong></td><td>Regnes ut for hånd</td><td>Lages automatisk</td></tr>
+<tr><td><strong>Oversikt</strong></td><td>Filer i mapper</td><td>Status per tilbud og faktura</td></tr>
+</tbody>
+</table></div>
+<p>Vil du heller starte enkelt, har vi en gratis <a href="/nb/blog/fakturamal">fakturamal</a> med alle feltene en faktura skal ha.</p>
+
+<h2>Fakturaprogram for små bedrifter</h2>
+<p>Driver du alene eller med en partner, er det gjerne du som både jobber, skriver tilbud og fakturerer om kvelden. Pakken Kontroll på pengene er laget for dette: tilbud, faktura, kunderegister og prosjektøkonomi for opptil 2 brukere. Den dekker opptil 30 utgående fakturaer i måneden. Har dere ansatte som fører timer, gir Full kontroll både timeregistrering og faktura fra timene.</p>
+
+${illu('fakturering-arkiv', 'Person med hjelm legger et ark i en stor blå mappe med et husikon')}
+
+<h2>Hva som er med – og ikke med</h2>
+<p>Det er bedre å vite det før dere starter:</p>
+<div class="article-table"><table>
+<thead><tr><th>Behov</th><th>I ByggExp</th></tr></thead>
+<tbody>
+<tr><td><strong>Tilbud og faktura som PDF på norsk</strong></td><td>Ja, med logo, sendt på e-post</td></tr>
+<tr><td><strong>Tilbud til faktura</strong></td><td>Ja, med de samme radene</td></tr>
+<tr><td><strong>Faktura fra timene</strong></td><td>Ja, i Full kontroll</td></tr>
+<tr><td><strong>Kunde- og artikkelregister</strong></td><td>Ja</td></tr>
+<tr><td><strong>Kunden aksepterer tilbudet digitalt</strong></td><td>Nei. Du setter status akseptert eller avvist selv</td></tr>
+<tr><td><strong>Purring og betalingspåminnelse</strong></td><td>Nei, ikke for norske firma</td></tr>
+<tr><td><strong>Integrasjon med regnskapsprogram</strong></td><td>Nei. Fakturaene lastes ned som PDF til regnskapsføreren</td></tr>
+<tr><td><strong>EHF og e-faktura</strong></td><td>Nei</td></tr>
+<tr><td><strong>Tilbud og faktura i mobilappen</strong></td><td>Ikke tilpasset norske firma ennå. Bruk webadmin</td></tr>
+</tbody>
+</table></div>
+
+<h2>Kom i gang</h2>
+<ol>
+<li><strong>Fyll inn firmaopplysningene</strong> – logo, org.nr., kontonummer og KID.</li>
+<li><strong>Legg inn de faste kundene og artiklene.</strong> Vi hjelper dere gratis å flytte dem over fra systemet dere bruker i dag.</li>
+<li><strong>Send neste tilbud fra ByggExp</strong> og gjør det om til faktura når kunden sier ja.</li>
+</ol>
+<p>Tilbud og faktura er med i Kontroll på pengene for ${FAKTURA_PRICE} NOK per måned eks. mva. Med timeregistrering og faktura fra timene velger du Full kontroll for ${KOMPLETT_PRICE} NOK med 10 brukere. Du prøver alle funksjoner gratis i 14 dager, uten oppstartsavgift og uten bindingstid.</p>
+`.trim(),
+  faq: [
+    {
+      question: 'Hva er et tilbudsprogram?',
+      answer:
+        'Et program for å lage, sende og følge opp tilbud. I ByggExp blir tilbudet en PDF med logo som sendes på e-post, og et akseptert tilbud blir faktura med ett klikk.',
+    },
+    {
+      question: 'Kommer tilbud og faktura på norsk?',
+      answer:
+        'Ja. For norske firma skrives tilbud og faktura på bokmål, med beløp i NOK, mva per sats, org.nr. med MVA, kontonummer og KID.',
+    },
+    {
+      question: 'Hvilke mva-satser kan jeg bruke?',
+      answer:
+        'Du velger 25, 15, 12 eller 0 % per rad. På fakturaen summeres mva og grunnlag for hver sats for seg.',
+    },
+    {
+      question: 'Lager programmet KID?',
+      answer:
+        'Ja. KID lages fra fakturanummeret med kontrollsiffer etter MOD10 eller MOD11. Du kan også slå KID av.',
+    },
+    {
+      question: 'Kan jeg fakturere timene de ansatte har ført?',
+      answer:
+        'Ja, i pakken Full kontroll. I timeoversikten sender du timene for et prosjekt og en periode til et fakturautkast, og skriver timeprisen.',
+    },
+    {
+      question: 'Hvordan retter jeg en sendt faktura?',
+      answer:
+        'Med en kreditnota. Du krediterer hele fakturaen eller et beløp eks. mva, og kreditnotaen viser hvilken faktura den gjelder.',
+    },
+    {
+      question: 'Sender ByggExp purring?',
+      answer:
+        'Nei. Betalingspåminnelser er ikke tilgjengelige for norske firma. Du ser hvilke fakturaer som er forfalt, og merker dem som betalt.',
+    },
+    {
+      question: 'Kan ByggExp kobles til regnskapsprogrammet?',
+      answer:
+        'Nei, det finnes ingen integrasjon med norske regnskapsprogram. Fakturaene lastes ned som PDF og sendes til regnskapsføreren.',
+    },
+    {
+      question: 'Hva koster tilbudsprogrammet?',
+      answer: `Tilbud og faktura er med i Kontroll på pengene for ${FAKTURA_PRICE} NOK per måned eks. mva., for opptil 2 brukere. Full kontroll med timeregistrering og faktura fra timene koster ${KOMPLETT_PRICE} NOK med 10 brukere. Du prøver gratis i 14 dager.`,
+    },
+  ],
+  related: [
+    { href: '/nb/blog/fakturamal', label: 'Gratis fakturamal' },
+    { href: '/nb/blog/faktureringsprogram-bygg', label: 'Faktureringsprogram for bygg' },
+    { href: '/nb/blog/timepris-snekker', label: 'Timepris for snekker' },
+    { href: '/nb/blog/byggekontrakt', label: 'Byggekontrakt' },
+    { href: '/nb/funksjoner/timeregistrering-app', label: 'Timeregistreringsapp' },
+    { href: '/nb/funksjoner/prosjektstyringsverktoy', label: 'Prosjektstyringsverktøy for bygg' },
+  ],
+};
+
 // Wave 3 (2026-11-01). Skipped, see docs/TASKS.md: hms-system (no avvik module
-// with saksgang/risk analysis in the product) and tilbudsprogram (offer and
-// invoice PDFs are Swedish-only, invoice PDF prints SEK/Bankgiro).
-const PAGES: FunksjonPageNb[] = [KS_SYSTEM, TIMEREGISTRERING, PROSJEKTSTYRING, BEMANNINGSPLAN];
+// with saksgang/risk analysis in the product). Wave 4: tilbudsprogram, built
+// once the Norwegian offer/invoice PDFs went live.
+const PAGES: FunksjonPageNb[] = [
+  KS_SYSTEM,
+  TIMEREGISTRERING,
+  PROSJEKTSTYRING,
+  BEMANNINGSPLAN,
+  TILBUDSPROGRAM,
+];
 
 export const FUNKSJON_PAGES_NB: FunksjonPageNb[] = PAGES.map((page) => ({
   ...page,

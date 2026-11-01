@@ -38,7 +38,16 @@ function ErrorPage({ statusCode, lang }: ErrorProps) {
         <meta name="robots" content="noindex" />
       </Head>
       <Header headerT={headerTranslations[lang]} lang={lang} />
-      <section className="blog-hero">
+      {/* Fill the viewport so the footer sits at the bottom, not mid-screen. */}
+      <section
+        className="blog-hero"
+        style={{
+          minHeight: 'calc(100vh - 200px)',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+        }}
+      >
         <div className="container container-narrow">
           <span className="blog-badge">{statusCode}</span>
           <h1>{title}</h1>

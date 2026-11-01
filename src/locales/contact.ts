@@ -263,7 +263,7 @@ export const contactTranslations: Record<LandingLanguageCode, ContactT> = {
     title: "Bestill gratis konsultasjon eller still et spørsmål",
     lead: "Fyll ut skjemaet, så finner vi et tidspunkt som passer – eller ring oss direkte.",
 
-    formName: "Navn / firma",
+    formName: "Navn / firma *",
     formEmail: "Telefon / e-post *",
     contactError: "Oppgi telefonnummer eller e-post",
     formCompany: "Firma",

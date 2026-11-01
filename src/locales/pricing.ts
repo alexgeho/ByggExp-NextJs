@@ -341,7 +341,7 @@ export const pricingTranslations = {
       "Tilbud og fakturaer*",
       "E-postadresse for skanning av inngående fakturaer*",
       "Påminnelser om kommende betalinger",
-      "Lønn, lønnsslipper og AGI",
+      "Lønn og lønnsslipper",
       "Prosjektøkonomi: budsjett, kalkyle og lønnsomhet",
       "Skann kvitteringer og fakturaer – føres automatisk på prosjektet*",
       "Personlig økonomi (kommer snart)",
@@ -362,7 +362,6 @@ export const pricingTranslations = {
     addonPer: "SEK / bedrift / måned",
     addonNote: "Kan legges til i alle pakker.",
     addonItems: [
-      "SIE4-eksport til Fortnox, Visma og BL",
       "Inngående fakturaer rett via e-post",
       "Tilpassede integrasjoner mot tilleggsavgift",
     ],

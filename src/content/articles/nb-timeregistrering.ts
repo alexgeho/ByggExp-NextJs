@@ -59,7 +59,7 @@ const P_TIMEREGISTRERING_APP_BYGG_HTML = `
 <h3>Kan timeregistreringen kobles til lønn og faktura?</h3>
 <p>Ja. I ByggExp blir attesterte timer grunnlag for lønn og faktura, så du slipper å taste inn de samme tallene flere ganger.</p>
 <h3>Finnes det en gratis timeregistrering-app?</h3>
-<p>Du kan komme i gang uten kostnad og bestille en gratis demo. Les mer på siden om <a href="/nb/blog/gratis-timeregistrering-app">gratis timeregistrering-app</a>.</p>
+<p>Du kan komme i gang uten kostnad og bestille en gratis konsultasjon. Les mer på siden om <a href="/nb/blog/gratis-timeregistrering-app">gratis timeregistrering-app</a>.</p>
 `.trim();
 
 const P_TIMEREGISTRERING_APP_BYGG: BlogPost = {
@@ -103,14 +103,14 @@ const S_GRATIS_TIMEREGISTRERING_APP_HTML = `
 </ul>
 
 <h2>Gratis å teste</h2>
-<p>Med ByggExp kan du komme i gang og bestille en gratis demo for å se hvordan timeregistreringen fungerer for firmaet ditt, før du bestemmer deg.</p>
+<p>Med ByggExp kan du komme i gang og bestille en gratis konsultasjon for å se hvordan timeregistreringen fungerer for firmaet ditt, før du bestemmer deg.</p>
 
 <h2>Kom i gang</h2>
-<p>Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en gratis demo</a>.</p>
+<p>Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Finnes det en helt gratis timeregistrering-app for bygg?</h3>
-<p>Noen løsninger er gratis for få brukere eller i en prøveperiode. Det viktigste er at appen gir ferdig underlag til lønn og faktura – test gjerne med en gratis demo først.</p>
+<p>Noen løsninger er gratis for få brukere eller i en prøveperiode. Det viktigste er at appen gir ferdig underlag til lønn og faktura – bestill gjerne en gratis konsultasjon først.</p>
 <h3>Hva bør en gratis timeregistrering-app minst klare?</h3>
 <p>Enkel inn- og utstempling i mobilen, GPS, kobling til prosjekt og eksport til lønn og faktura.</p>
 `.trim();
@@ -121,13 +121,13 @@ const S_GRATIS_TIMEREGISTRERING_APP: BlogPost = {
   slug: 'gratis-timeregistrering-app',
   locale: 'nb',
   excerpt:
-    'Gratis timeregistrering-app for bygg: hva "gratis" betyr, hva du bør se etter, og hvordan du tester med en gratis demo før du bestemmer deg.',
+    'Gratis timeregistrering-app for bygg: hva "gratis" betyr, hva du bør se etter, og hvordan du kommer i gang med en gratis konsultasjon før du bestemmer deg.',
   tag: 'Digitalisering',
   coverImageUrl: '/landing/features/1arbetspass.webp',
   contentHtml: S_GRATIS_TIMEREGISTRERING_APP_HTML,
   seoTitle: 'Gratis timeregistrering app for bygg | ByggExp',
   seoDescription:
-    'Gratis timeregistrering-app for byggefirmaer: hva du får, hva du bør se etter (GPS, prosjekt, eksport til lønn og faktura) og hvordan du tester med en gratis demo.',
+    'Gratis timeregistrering-app for byggefirmaer: hva du får, hva du bør se etter (GPS, prosjekt, eksport til lønn og faktura) og hvordan du kommer i gang med en gratis konsultasjon.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/1arbetspass.webp`,
   canonicalUrl: '',
   noIndex: false,
@@ -406,7 +406,7 @@ const T_TIMELISTE_APP_BYGG_HTML = `
 <p>Verdien kommer når timene brukes: i ByggExp blir den attesterte timelisten grunnlag for lønn og faktura, og regnes inn i prosjektets økonomi. Registrer én gang, bruk overalt.</p>
 
 <h2>Kom i gang</h2>
-<p>Vil du bytte papirtimelisten med en app? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/stemplingsur-app">stemplingsur-app med GPS</a> eller <a href="/nb/contact">bestill en gratis demo av ByggExp</a>.</p>
+<p>Vil du bytte papirtimelisten med en app? Les om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a>, <a href="/nb/blog/stemplingsur-app">stemplingsur-app med GPS</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva er en timeliste-app?</h3>

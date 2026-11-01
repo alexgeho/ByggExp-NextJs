@@ -183,7 +183,7 @@ export default function Page({ lang }: { lang: Locale }) {
         intro={c.intro}
         locale={lang}
         tool={<StaketKalkylatorTool locale={lang} />}
-        leadForm={<OffertLeadForm source="staket-kalkylator" />}
+        leadForm={<OffertLeadForm lang={lang === 'nb' ? 'nb' : 'sv'} source="staket-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/staket-preview.webp"

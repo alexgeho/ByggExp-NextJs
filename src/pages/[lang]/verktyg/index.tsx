@@ -145,11 +145,11 @@ const CONTENT: Record<CalcLocale, Content> = {
     ],
   },
   nb: {
-    seoTitle: 'Byggkalkulatorer & gratis verktøy for byggefirmaer | ByggExp',
+    seoTitle: 'Byggekalkulatorer og gratis verktøy for byggefirma | ByggExp',
     seoDescription:
-      'Gratis byggkalkulatorer og verktøy: timepris, materialkalkulatorer (gips, betong, tak, gulv) og PDF-verktøy. Rett i nettleseren, uten konto.',
+      'Gratis byggekalkulatorer og verktøy: timepris, materialkalkulatorer (gips, betong, tak, gulv) og PDF-verktøy. Rett i nettleseren, uten konto.',
     badge: 'Gratis verktøy',
-    h1: 'Gratis byggkalkulatorer og verktøy for byggefirmaer',
+    h1: 'Gratis byggekalkulatorer og verktøy for byggefirmaer',
     intro:
       'Regn ut material og priser på sekunder – helt gratis og uten konto. Materialkalkulatorene hjelper deg å bestille riktig mengde, og PDF-verktøyene kjører i nettleseren din, så filene lastes aldri opp.',
     groups: [

@@ -183,7 +183,7 @@ export default function Page({ lang }: { lang: Locale }) {
         intro={c.intro}
         locale={lang}
         tool={<TrallKalkylatorTool locale={lang} />}
-        leadForm={<OffertLeadForm source="trall-kalkylator" />}
+        leadForm={<OffertLeadForm lang={lang === 'nb' ? 'nb' : 'sv'} source="trall-kalkylator" />}
         preview={
           <PreviewImage
             src="/landing/verktyg/trall-preview.webp"

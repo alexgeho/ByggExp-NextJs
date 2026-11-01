@@ -218,7 +218,7 @@ const M_MANNSKAPSLISTE_BYGGEPLASS: BlogPost = {
   contentHtml: M_MANNSKAPSLISTE_BYGGEPLASS_HTML,
   seoTitle: 'Mannskapsliste på byggeplass – oversiktsliste | ByggExp',
   seoDescription:
-    'Mannskapsliste / elektronisk oversiktsliste på byggeplass: krav etter byggherreforskriften § 15, innhold (navn, fødselsdato, arbeidsgiver, HMS-kort), ansvar og når kravet gjelder.',
+    'Mannskapsliste (elektronisk oversiktsliste) på byggeplass: krav i byggherreforskriften § 15, hva listen skal inneholde, hvem som har ansvaret.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
@@ -234,7 +234,7 @@ const M_MANNSKAPSLISTE_BYGGEPLASS: BlogPost = {
 //   Enhetsregisteret, lost card → tell employer: https://www.arbeidstilsynet.no/hms/hms-kort/
 // - Who must have a card (§ 4), registers (§ 3), card contents (§ 7), two-year validity and
 //   employment-bound (§ 8), makulering (§ 8a), lost card (§ 9): forskrift om HMS-kort på
-//   bygge- og anleggsplasser, FOR-2023-12-18-2278,
+//   bygge- og anleggsplasser, FOR-2007-03-30-367 (sist endret FOR-2023-12-18-2278),
 //   https://www.arbeidstilsynet.no/regelverk/forskrifter/forskrift-om-hms-kort-pa-bygge--og-anleggsplasser/
 // - HMS-kortnummer on the oversiktsliste: byggherreforskriften § 15,
 //   https://lovdata.no/forskrift/2009-08-03-1028/§15
@@ -308,7 +308,7 @@ const H_HMS_KORT_BYGG: BlogPost = {
   contentHtml: H_HMS_KORT_BYGG_HTML,
   seoTitle: 'HMS-kort – bestille, pris og gyldighet | ByggExp',
   seoDescription:
-    'HMS-kort: arbeidsgiveren bestiller på hmskort.no, prisen er 139,10 kr + mva, og kortet gjelder i inntil to år. Slik bestiller, sjekker og fornyer du – og byggekort er samme kort.',
+    'HMS-kort: arbeidsgiveren bestiller på hmskort.no, 139,10 kr + mva, gyldig i inntil to år. Slik bestiller, sjekker og fornyer du kortet.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
@@ -600,7 +600,7 @@ const PR_PROSJEKTSTYRING_BYGG: BlogPost = {
 };
 
 // Price 139,10 kr + mva and lost-card steps: https://www.arbeidstilsynet.no/hms/hms-kort/
-// (lost card § 9, FOR-2023-12-18-2278).
+// (lost card § 9, FOR-2007-03-30-367 (sist endret FOR-2023-12-18-2278)).
 const M_MISTET_HMS_KORT_HTML = `
 <p>Har du mistet HMS-kortet, eller er det blitt stjålet? Da må du handle raskt: uten gyldig kort kan du ikke stå på oversiktslisten på bygge- eller anleggsplassen. Her går vi gjennom hva du gjør hvis du mister HMS-kortet, hvem som bestiller nytt, og hva det koster.</p>
 

@@ -15,3 +15,4 @@
 - [ ] Решение владельца: цены на .no в SEK или NOK; телефон/офис на контактах .no
 - [ ] Через 4 недели (≈29.11): GSC .no — позиции pillar HMS-kort / timeregistrering / mannskapsliste; затем продуктовые лендинги nb
 - [x] Request Indexing в GSC (01.11, Chrome): /nb, hms-kort-bygg, timeregistrering-app-bygg, mannskapsliste-byggeplass, prosjektstyring-bygg, timeliste-mal
+- [x] Цены на .no в NOK (владелец 01.11): те же цифры 299/690/990, +69, 199; schema NOK на nb

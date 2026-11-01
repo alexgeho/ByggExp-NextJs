@@ -56,9 +56,9 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async ({ pa
 };
 
 // Product entity for the home page. Entry price comes from components/Pricing
-// so it can't drift from the visible plans (prices are SEK excl. VAT). No
+// so it can't drift from the visible plans (SEK excl. VAT; same numbers in NOK on nb). No
 // aggregateRating until there are real, verifiable reviews.
-function homeAppSchema(url: string, description?: string) {
+function homeAppSchema(url: string, description?: string, lang?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -70,7 +70,7 @@ function homeAppSchema(url: string, description?: string) {
     publisher: { "@type": "Organization", name: "ByggExp", url: "https://byggexp.se" },
     offers: {
       "@type": "AggregateOffer",
-      priceCurrency: "SEK",
+      priceCurrency: lang === "nb" ? "NOK" : "SEK",
       lowPrice: FAKTURA_PRICE,
       offerCount: 3,
     },
@@ -167,7 +167,7 @@ export default function HomePage({
         {seo?.imageUrl ? <meta property="og:image" content={seo.imageUrl} /> : null}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(homeAppSchema(canonicalUrl, description)) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(homeAppSchema(canonicalUrl, description, lang)) }}
         />
       </Head>
       <Header headerT={headerT} />

@@ -105,7 +105,7 @@ export default function FunktionPage({
       offers: {
         "@type": "Offer",
         price,
-        priceCurrency: "SEK",
+        priceCurrency: lang === "nb" ? "NOK" : "SEK",
         description: `${planName}, per företag och månad exkl. moms, ${usersText}`,
       },
     },

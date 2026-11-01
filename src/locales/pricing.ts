@@ -3,7 +3,7 @@ import type { PricingT } from "../types/pricing";
 /*
  * Pricing section copy. Swedish (sv) is the master text – translate from it.
  * Plan names (Faktura / Projekt / Komplett) are product names and stay the
- * same in every language. Prices are always SEK (numbers live in
+ * same in every language. Prices: SEK, on nb the same numbers in NOK (numbers live in
  * components/Pricing/Pricing.tsx).
  */
 export const pricingTranslations = {
@@ -308,7 +308,7 @@ export const pricingTranslations = {
     usersIncrease: "Flere brukere",
     usersCount: { one: "{n} bruker", other: "{n} brukere" },
 
-    pricingPer: "SEK / bedrift / måned",
+    pricingPer: "NOK / bedrift / måned",
     popular: "Mest valgt",
 
     planFaktura: "Kontroll på pengene",
@@ -321,7 +321,7 @@ export const pricingTranslations = {
     fakturaUsers: "1–2 brukere",
     fakturaMaxUsers: "Maks 2 brukere",
     fixedPrice: "Fast pris",
-    includedDetail: "inkl. {included} · +{extra} SEK per ekstra bruker",
+    includedDetail: "inkl. {included} · +{extra} NOK per ekstra bruker",
     yearlyNote: "ved årlig betaling",
 
     groupProject: "Administrer prosjekter eller arbeidslag",
@@ -359,7 +359,7 @@ export const pricingTranslations = {
 
     addonBadge: "Tillegg",
     addonTitle: "Integrasjoner",
-    addonPer: "SEK / bedrift / måned",
+    addonPer: "NOK / bedrift / måned",
     addonNote: "Kan legges til i alle pakker.",
     addonItems: [
       "Inngående fakturaer rett via e-post",

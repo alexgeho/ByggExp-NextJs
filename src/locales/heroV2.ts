@@ -70,12 +70,12 @@ export const heroV2Translations: Record<string, HeroV2Copy> = {
     title: "Hele byggefirmaet på ett sted",
     prices: [
       {
-        price: "299 SEK/mnd",
+        price: "299 NOK/mnd",
         items:
           "tilbud og fakturaer, skanning av kvitteringer og fakturaer, innkommende fakturaer via e‑post, betalingspåminnelser, lønn, lønnsslipper, prosjektøkonomi med budsjett, kalkyle og lønnsomhet, kvitteringer ført på prosjektet",
       },
       {
-        price: "+69 SEK/arbeider",
+        price: "+69 NOK/arbeider",
         items:
           "timeføring automatisk og manuelt, tilstedeværelse i sanntid, planlegging av prosjekter og personell, egenkontroll, oppgaver med påminnelser, dokumenter, bilder og tegninger, fotorapporter fra arbeidsøkten, skanning av kvitteringer med mobilkameraet, verktøy via QR-kode",
       },

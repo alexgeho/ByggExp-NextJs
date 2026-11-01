@@ -184,9 +184,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaButton: 'Bestill gratis konsultasjon',
     relatedHeading: 'Flere gratis verktøy',
     related: [
-      { href: '/blog/paslag-pa-material', label: 'Guide: materialpåslag for håndverkere' },
       { href: '/verktyg/timpris-kalkylator', label: 'Timepris-kalkulator' },
-      { href: '/verktyg/moms-kalkylator', label: 'Mva-kalkulator' },
       { href: '/verktyg', label: 'Alle gratis verktøy' },
     ],
   },

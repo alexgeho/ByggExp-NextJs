@@ -14,7 +14,7 @@ import CopyLinkButton from './CopyLinkButton';
 // staying free. Sources: TräGuiden/Boverket build-up; rebar tie wire ~10 kg/ton
 // and place+tie ~12 h/ton (industry norms); platta på mark ~1100–1800 kr/m² incl.
 // labour (2026). All prices/norms are editable riktvärden. UI is bilingual
-// (sv default, en for /en/verktyg); nb falls back to sv text.
+// (sv default, en for /en/verktyg, nb for byggexp.no).
 
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
@@ -35,7 +35,9 @@ const EPS_PRICE: Record<string, number> = { S80: 1200, S100: 1400, S150: 1800, S
 export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale | 'ru' }) {
   const en = locale === 'en';
   const ru = locale === 'ru';
-  const loc = en ? 'en-GB' : ru ? 'ru-RU' : 'sv-SE';
+  const nb = locale === 'nb';
+  const loc = en ? 'en-GB' : ru ? 'ru-RU' : nb ? 'nb-NO' : 'sv-SE';
+  const ph = (v: string) => (en ? `e.g. ${v}` : ru ? `напр. ${v}` : nb ? `f.eks. ${v}` : `t.ex. ${v}`);
   const nf = (v: number, d = 0) => v.toLocaleString(loc, { maximumFractionDigits: d });
   const kr = (v: number) => `${Math.round(v).toLocaleString(loc)} kr`;
   const t = ru
@@ -111,6 +113,45 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         pdfTitle: 'Concrete – estimate', pdfNote: 'Guide values incl. waste. Prices and labour times are editable estimates – check against drawings, the engineer’s dimensioning and current prices.',
         costHdr: '— Cost (guide price) —',
         soConcrete: 'Concrete, bag 25 kg', soReadymix: 'Ready-mix concrete (m³)', soMesh: 'Reinforcement mesh (pcs)', soIso: 'EPS insulation (boards)', soLabour: 'Labour casting/reinforcement',
+      }
+    : nb
+    ? {
+        // No ROT in Norway: the ROT question and rows are hidden for nb, and the
+        // Swedish m² guide price is left out of the fine print.
+        title: 'Betongkalkulator – plate på mark, armering og kostnad',
+        sub: 'Regner ut betong, EPS-isolasjon, armering (nett + kantjern + najetråd) og bærelag for en plate på mark – med kantbjelke og støtte for L-formede plater. Slå på kostnad for et prisoverslag (materialer + arbeid). Eksporter til Excel eller PDF.',
+        shapeQ: 'Hva støper du?',
+        oPlatta: 'Plate på mark', oBalk: 'Grunnmur / bjelke / fundament', oPlint: 'Punktfundamenter / stolpehull (runde)',
+        formL: 'Form', oRekt: 'Rektangulær (lengde × bredde)', oEgen: 'Egen form / L-form (areal + omkrets)',
+        length: 'Lengde (m)', width: 'Bredde (m)', area: 'Areal (m²)', perim: 'Omkrets (m)',
+        thickness: 'Betongtykkelse (cm)', more: 'Flere valg',
+        edgeQ: 'Kantbjelke?', yes: 'Ja', no: 'Nei',
+        edgeW: 'Kantbjelke bredde (cm)', edgeH: 'Kantbjelke dybde (cm)', edgeBars: 'Kamstål i kant (antall)', barDiaL: 'Kamstål diameter',
+        meshQ: 'Armeringsnett?', meshTypeL: 'Nettype',
+        isoThick: 'EPS-isolasjon – tykkelse (mm)', isoGrade: 'EPS – kvalitet (bæreevne)',
+        oS80: 'EPS S80 (lett last)', oS100: 'EPS S100 (vanlig bolig)', oS150: 'EPS S150 (tyngre last)', oS200: 'EPS S200 (industri)',
+        baseThick: 'Pukk / bærelag (mm)',
+        bLen: 'Lengde (m)', bWidth: 'Bredde (cm)', bHeight: 'Høyde (cm)',
+        diam: 'Diameter (cm)', depth: 'Dybde (cm)', count: 'Antall (stk)',
+        concreteL: 'Betong', oFabrik: 'Ferdigbetong (m³)', oSack: 'Sekk 25 kg', litersPerBag: 'Liter per sekk', spill: 'Svinn (%)',
+        rVolume: 'Betongvolum inkl. svinn', rVolumeEdge: 'Betong inkl. kantbjelke og svinn', rBags: 'Sekker tørrbetong (25 kg)', rBigBag: 'Tilsvarer storsekk (1000 kg)', rWater: 'Blandevann (ca.)',
+        rMesh: 'Armeringsnett', rEdge: 'Kantjern', rBind: 'Najetråd', rIso: 'EPS-isolasjon', rBase: 'Pukk / bærelag',
+        showCostQ: 'Vis kostnad (prisoverslag)?', costNo: 'Nei', costYes: 'Ja – materialer + arbeid',
+        pSackL: 'Betong (kr/sekk)', pBetongL: 'Ferdigbetong (kr/m³)', pMeshL: 'Armeringsnett (kr/stk)', pSteelL: 'Kamstål (kr/kg)', pBindL: 'Najetråd (kr/kg)',
+        pIsoL: 'EPS (kr/m³)', pBaseL: 'Pukk (kr/m³)', timprisL: 'Timepris arbeid (kr/t)', hRebarL: 'Armering: timer/tonn', hM2L: 'Øvrig arbeid: timer/m²',
+        walkL: 'Gangtid / forflytning (%)', bindTonL: 'Najetråd (kg/tonn)', rotQ: '',
+        cMaterial: 'Materialer', cLabour: (h: string) => `Arbeid (${h} t)`, cSum: 'Sum eks. mva', cRot: '', cAfter: '', cPerM2: 'Prisoverslag per m²',
+        fine: 'Overslag inkl. svinn etter vanlig oppbygging (pukk → EPS 200–300 mm → armeringsnett + kantjern → betong + kantbjelke). En L-formet plate har større omkrets og dermed mer kantbjelke, kantisolasjon og kantjern. Kostnaden er et overslag. Priser og arbeidstider kan endres. Kontroller alltid mot tegninger og konstruktørens dimensjonering.',
+        offert: 'Lag tilbud av dette', faktura: 'Lag faktura', excel: 'Eksporter Excel', pdf: 'Eksporter PDF',
+        pcs: 'stk', litre: 'liter', boards: 'plater',
+        slPlatta: 'Plate på mark', slBalk: 'Grunnmur / bjelke', slPlint: 'Punktfundamenter / stolpehull',
+        mConcrete: 'Betong inkl. svinn', mBagsDry: 'Sekker tørrbetong (25 kg)', mReadymix: 'Ferdigbetong', mWater: 'Blandevann (ca.)',
+        mMesh: (k: string) => `Armeringsnett K${k} (5,0×2,3 m)`, mEdge: (d: string) => `Kantjern Ø${d} mm`, mBind: 'Najetråd',
+        mIso: (g: string) => `EPS-isolasjon ${g}`, mBase: 'Pukk / bærelag',
+        csvTitle: 'Betong – kalkyle', csvArea: 'Areal', csvPerim: 'Omkrets', csvMaterial: 'Materiale', csvQty: 'Mengde', csvCost: 'Kostnad (overslag)',
+        pdfTitle: 'Betong – kalkyle', pdfNote: 'Veiledende verdier inkl. svinn. Priser og arbeidstider er overslag som kan endres – kontroller mot tegninger, konstruktørens dimensjonering og aktuelle priser.',
+        costHdr: '— Kostnad (overslag) —',
+        soConcrete: 'Betong, sekk 25 kg', soReadymix: 'Ferdigbetong (m³)', soMesh: 'Armeringsnett (stk)', soIso: 'EPS-isolasjon (plater)', soLabour: 'Arbeid støping/armering',
       }
     : {
         title: 'Betongkalkylator – platta på mark, armering & kostnad',
@@ -255,12 +296,12 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
     const cMaterial = cConcrete + cMesh + cSteel + cBind + cIso + cBase;
     const cLabour = totalHours * num(timpris);
     const cTotal = cMaterial + cLabour;
-    const rotAvdrag = rot === 'ja' ? cLabour * 0.30 : 0; // ROT: 30 % av arbetskostnaden
+    const rotAvdrag = rot === 'ja' && !nb ? cLabour * 0.30 : 0; // ROT: 30 % av arbetskostnaden (Sweden only)
     const cAfterRot = cTotal - rotAvdrag;
     const perM2 = A > 0 ? cTotal / A : 0;
 
     return { volume, liters, bags, bigBags, water, A, P, meshArea, meshSheets, meshKg, isoVol, isoBoards, baseVol, edgeBarsLen, edgeBarKg, steelKg, bindKg, rebarHours, otherHours, totalHours, cConcrete, cMesh, cSteel, cBind, cIso, cBase, cMaterial, cLabour, cTotal, rotAvdrag, cAfterRot, perM2 };
-  }, [shape, form, length, width, area, perim, thickness, edge, edgeW, edgeH, edgeBars, barDia, isoThick, baseThick, mesh, meshType, bindPerTon, bLen, bWidth, bHeight, diam, depth, count, bagYield, spill, concreteMode, pBetong, pSack, pMesh, pSteel, pBind, pIso, pBase, timpris, hRebarTon, hPerM2, walkPct, rot]);
+  }, [shape, form, length, width, area, perim, thickness, edge, edgeW, edgeH, edgeBars, barDia, isoThick, baseThick, mesh, meshType, bindPerTon, bLen, bWidth, bHeight, diam, depth, count, bagYield, spill, concreteMode, pBetong, pSack, pMesh, pSteel, pBind, pIso, pBase, timpris, hRebarTon, hPerM2, walkPct, rot, nb]);
 
   const shapeLabel = shape === 'platta' ? t.slPlatta : shape === 'balk' ? t.slBalk : t.slPlint;
 
@@ -303,6 +344,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
     downloadCsvRows(rows, 'betong-kalkyl.csv');
   };
   const exportPdf = () => void downloadMaterialPdf({
+    locale,
     title: t.pdfTitle,
     meta: `${shapeLabel}${shape === 'platta' ? ` · ${nf(r.A, 1)} m² · ${t.csvPerim} ${nf(r.P, 1)} m` : ''}`,
     rows: showCost ? [...materialRows, { desc: t.costHdr, qty: '' }, ...costRows] : materialRows,
@@ -335,13 +377,13 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
           <>
             {form === 'rekt' ? (
               <>
-                <label className={fld}><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 10' : ru ? 'напр. 10' : 't.ex. 10'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
-                <label className={fld}><span>{t.width}</span><input type="number" min="0" inputMode="decimal" value={width} placeholder={en ? 'e.g. 8' : ru ? 'напр. 8' : 't.ex. 8'} onChange={(e) => setWidth(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={ph('10')} onChange={(e) => setLength(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.width}</span><input type="number" min="0" inputMode="decimal" value={width} placeholder={ph('8')} onChange={(e) => setWidth(e.currentTarget.value)} /></label>
               </>
             ) : (
               <>
-                <label className={fld}><span>{t.area}</span><input type="number" min="0" inputMode="decimal" value={area} placeholder={en ? 'e.g. 92' : ru ? 'напр. 92' : 't.ex. 92'} onChange={(e) => setArea(e.currentTarget.value)} /></label>
-                <label className={fld}><span>{t.perim}</span><input type="number" min="0" inputMode="decimal" value={perim} placeholder={en ? 'e.g. 46' : ru ? 'напр. 46' : 't.ex. 46'} onChange={(e) => setPerim(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.area}</span><input type="number" min="0" inputMode="decimal" value={area} placeholder={ph('92')} onChange={(e) => setArea(e.currentTarget.value)} /></label>
+                <label className={fld}><span>{t.perim}</span><input type="number" min="0" inputMode="decimal" value={perim} placeholder={ph('46')} onChange={(e) => setPerim(e.currentTarget.value)} /></label>
               </>
             )}
             <label className={fld}><span>{t.thickness}</span><input type="number" min="0" inputMode="decimal" value={thickness} onChange={(e) => setThickness(e.currentTarget.value)} /></label>
@@ -349,7 +391,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         ) : null}
         {shape === 'balk' ? (
           <>
-            <label className={fld}><span>{t.bLen}</span><input type="number" min="0" inputMode="decimal" value={bLen} placeholder={en ? 'e.g. 12' : ru ? 'напр. 12' : 't.ex. 12'} onChange={(e) => setBLen(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.bLen}</span><input type="number" min="0" inputMode="decimal" value={bLen} placeholder={ph('12')} onChange={(e) => setBLen(e.currentTarget.value)} /></label>
             <label className={fld}><span>{t.bWidth}</span><input type="number" min="0" inputMode="decimal" value={bWidth} onChange={(e) => setBWidth(e.currentTarget.value)} /></label>
             <label className={fld}><span>{t.bHeight}</span><input type="number" min="0" inputMode="decimal" value={bHeight} onChange={(e) => setBHeight(e.currentTarget.value)} /></label>
           </>
@@ -393,7 +435,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
                   <option value="5">K5 (Ø5)</option><option value="6">K6 (Ø6)</option><option value="7">K7 (Ø7)</option><option value="8">K8 (Ø8)</option>
                 </select></label>
             ) : null}
-            <label className={fld}><span>{t.isoThick}</span><input type="number" min="0" inputMode="decimal" value={isoThick} placeholder={en ? 'e.g. 300' : ru ? 'напр. 300' : 't.ex. 300'} onChange={(e) => setIsoThick(e.currentTarget.value)} /></label>
+            <label className={fld}><span>{t.isoThick}</span><input type="number" min="0" inputMode="decimal" value={isoThick} placeholder={ph('300')} onChange={(e) => setIsoThick(e.currentTarget.value)} /></label>
             <label className={fld}><span>{t.isoGrade}</span>
               <select value={epsGrade} onChange={(e) => { const g = e.currentTarget.value; setEpsGrade(g); setPIso(String(EPS_PRICE[g] || 1400)); }}>
                 <option value="S80">{t.oS80}</option>
@@ -412,7 +454,7 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
       </details>
 
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{shape === 'platta' && edge === 'ja' ? t.rVolumeEdge : t.rVolume}</span><strong>{nf(r.volume, 2)} m³<CopyLinkButton scope={u} tool="betong-kalkylator" en={en} /></strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{shape === 'platta' && edge === 'ja' ? t.rVolumeEdge : t.rVolume}</span><strong>{nf(r.volume, 2)} m³<CopyLinkButton scope={u} tool="betong-kalkylator" en={en} nb={nb} /></strong></div>
         {concreteMode === 'sack'
           ? <div className="lm-result-row lm-result-total"><span>{t.rBags}</span><strong>{nf(r.bags)} {t.pcs}</strong></div>
           : <div className="lm-result-row"><span>{t.rBigBag}</span><span>{nf(r.bigBags, 1)} {t.pcs}</span></div>}
@@ -453,8 +495,10 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
                 <label className={fld}><span>{t.hM2L}</span><input type="number" min="0" inputMode="decimal" value={hPerM2} onChange={(e) => setHPerM2(e.currentTarget.value)} /></label>
                 <label className={fld}><span>{t.walkL}</span><input type="number" min="0" inputMode="decimal" value={walkPct} onChange={(e) => setWalkPct(e.currentTarget.value)} /></label>
                 <label className={fld}><span>{t.bindTonL}</span><input type="number" min="0" inputMode="decimal" value={bindPerTon} onChange={(e) => setBindPerTon(e.currentTarget.value)} /></label>
+                {nb ? null : (
                 <label className={fld}><span>{t.rotQ}</span>
                   <select value={rot} onChange={(e) => setRot(e.currentTarget.value)}><option value="nej">{t.no}</option><option value="ja">{t.yes}</option></select></label>
+                )}
               </div>
 
               <div className="lm-result" style={{ marginTop: 12 }}>

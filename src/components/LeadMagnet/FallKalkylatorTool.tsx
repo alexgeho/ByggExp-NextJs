@@ -5,14 +5,15 @@ import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Free slope (fall) calculator: height difference, percentage and ratio from
-// length and fall in mm per metre. Bilingual: sv default, en for /en/verktyg.
+// length and fall in mm per metre. sv default, en for /en/verktyg, nb for byggexp.no.
 function num(v: string): number { return Math.max(parseFloat(v.replace(',', '.')) || 0, 0); }
 
 type Unit = 'mmpm' | 'procent' | 'ratio';
 
 export default function FallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const loc = en ? 'en-GB' : 'sv-SE';
+  const nb = locale === 'nb';
+  const loc = en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE';
   const t = en
     ? {
         title: 'Slope & fall – work out the height difference',
@@ -22,6 +23,18 @@ export default function FallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         rDrop: 'Height difference', rFall: 'Fall', rSlope: 'Slope', rRatio: 'Ratio',
         fine: 'Guide values: drain pipes often 10–20 mm/m, ground away from the foundation at least 15 mm/m (1:50) for the first few metres, fall to a floor drain in a shower 1:150 (7 mm/m) to 1:50 (20 mm/m). Follow the applicable industry rules for your application.',
         hMm: 'e.g. 15', hPct: 'e.g. 2', hRatio: 'e.g. 50', hLen: 'e.g. 6',
+      }
+    : nb
+    ? {
+        // Swedish rule-of-thumb values (Säker Vatten etc.) are not repeated for
+        // Norway; the fine print stays neutral.
+        title: 'Fall og helning – regn ut høydeforskjell',
+        sub: 'Fyll inn lengden og fallet i mm per meter, så regner vi ut total høydeforskjell, helning i prosent og som forhold (1:X). Nyttig for avløp, terreng og tak.',
+        length: 'Lengde (m)', fallAs: 'Fall angitt som', uMm: 'mm per meter', uPct: 'Prosent (%)', uRatio: 'Forhold (1:X)',
+        labMm: 'Fall (mm per meter)', labPct: 'Fall (%)', labRatio: 'Fall (1:X – angi X)',
+        rDrop: 'Høydeforskjell', rFall: 'Fall', rSlope: 'Helning', rRatio: 'Forhold',
+        fine: 'Veiledende beregning. Følg gjeldende regler og bransjeanbefalinger for fall på avløp, terreng og våtrom.',
+        hMm: 'f.eks. 15', hPct: 'f.eks. 2', hRatio: 'f.eks. 50', hLen: 'f.eks. 6',
       }
     : {
         title: 'Fall & lutning – räkna ut höjdskillnad',
@@ -63,7 +76,7 @@ export default function FallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         <label className="lm-tool-field"><span>{valLabel}</span><input type="number" min="0" inputMode="decimal" value={val} placeholder={unitHint} onChange={(e) => setVal(e.currentTarget.value)} /></label>
       </div>
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{t.rDrop}</span><strong>{result.drop.toLocaleString(loc, { maximumFractionDigits: 0 })} mm<CopyLinkButton scope={u} tool="fall-kalkylator" en={en} /></strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rDrop}</span><strong>{result.drop.toLocaleString(loc, { maximumFractionDigits: 0 })} mm<CopyLinkButton scope={u} tool="fall-kalkylator" en={en} nb={nb} /></strong></div>
         <div className="lm-result-row"><span>{t.rFall}</span><span>{result.f.toLocaleString(loc, { maximumFractionDigits: 1 })} mm/m</span></div>
         <div className="lm-result-row"><span>{t.rSlope}</span><span>{result.pct.toLocaleString(loc, { maximumFractionDigits: 2 })} %</span></div>
         <div className="lm-result-row lm-result-total"><span>{t.rRatio}</span><strong>{result.ratio > 0 ? `1:${result.ratio.toLocaleString(loc, { maximumFractionDigits: 0 })}` : '—'}</strong></div>

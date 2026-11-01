@@ -6,11 +6,13 @@ import CopyLinkButton from './CopyLinkButton';
 
 // Free "what should I charge per hour" calculator. Works backwards from a
 // desired salary + employer costs + overhead + profit to the hourly rate you
-// need to charge, given your billable hours. Bilingual: sv default, en for /en.
+// need to charge, given your billable hours. sv default, en for /en, nb for
+// byggexp.no (Norwegian rates as defaults, sources below).
 
 export default function TimprisKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const loc = en ? 'en-GB' : 'sv-SE';
+  const nb = locale === 'nb';
+  const loc = en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE';
   const kr = (value: number) => `${Math.round(value).toLocaleString(loc)} kr`;
   const t = en
     ? {
@@ -23,6 +25,19 @@ export default function TimprisKalkylatorTool({ locale = 'sv' }: { locale?: Calc
         rExcl: 'Hourly rate excl. VAT', rIncl: 'Hourly rate incl. VAT (25%)',
         rLabour: 'Labour cost incl. contributions / month', rTotal: 'Total monthly cost + profit',
         fine: 'An estimate. Employer contributions are prefilled at 31.42% (normal Swedish rate) and holiday pay at 12%. Adjust overhead (tools, vehicle, insurance, admin) and profit margin to your business. If you calculate on your own gross salary in a sole trader, you can set holiday pay to 0.',
+      }
+    : nb
+    ? {
+        title: 'Regn ut timeprisen din',
+        sub: 'Ta utgangspunkt i hva du vil tjene, så regner vi ut hvilken timepris du må ta betalt. Vi legger til arbeidsgiveravgift, feriepenger, driftskostnadene dine og en fortjenestemargin.',
+        salary: 'Ønsket bruttolønn per måned (kr)', salaryPh: 'f.eks. 45000',
+        hours: 'Fakturerbare timer per måned', hoursPh: 'f.eks. 120',
+        social: 'Arbeidsgiveravgift (%)', semester: 'Feriepenger (%)',
+        overhead: 'Driftskostnader per måned (kr)', overheadPh: 'f.eks. 10000', profit: 'Fortjenestemargin (%)',
+        // Norwegian general VAT rate 25 % – https://www.skatteetaten.no/satser/merverdiavgift/
+        rExcl: 'Timepris eks. mva', rIncl: 'Timepris inkl. mva (25 %)',
+        rLabour: 'Lønnskostnad inkl. avgifter / mnd', rTotal: 'Total månedskostnad + fortjeneste',
+        fine: 'Et overslag. Arbeidsgiveravgift er forhåndsutfylt med 14,1 % (sone I) og feriepenger med 10,2 % (ferieloven). Juster satsene etter sone og avtale, og driftskostnader (verktøy, bil, forsikring, administrasjon) og fortjenestemargin etter virksomheten din.',
       }
     : {
         title: 'Räkna ut ditt timpris',
@@ -39,8 +54,11 @@ export default function TimprisKalkylatorTool({ locale = 'sv' }: { locale?: Calc
   const u = useUrlScope();
   const [salary, setSalary] = useUrlParam(u, 'lon', '');
   const [hours, setHours] = useUrlParam(u, 'h', '');
-  const [social, setSocial] = useUrlParam(u, 'soc', '31.42');
-  const [semester, setSemester] = useUrlParam(u, 'sem', '12');
+  // nb defaults (verified 2026-11-01):
+  // arbeidsgiveravgift sone I 14,1 % – https://www.skatteetaten.no/satser/arbeidsgiveravgift/
+  // feriepenger 10,2 % – ferieloven § 10 nr. 2, https://lovdata.no/dokument/NL/lov/1988-04-29-21/§10
+  const [social, setSocial] = useUrlParam(u, 'soc', nb ? '14.1' : '31.42');
+  const [semester, setSemester] = useUrlParam(u, 'sem', nb ? '10.2' : '12');
   const [overhead, setOverhead] = useUrlParam(u, 'oh', '');
   const [profit, setProfit] = useUrlParam(u, 'vin', '10');
 
@@ -93,7 +111,7 @@ export default function TimprisKalkylatorTool({ locale = 'sv' }: { locale?: Calc
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rExcl}</span>
-          <strong>{result.billable > 0 ? kr(result.hourlyExcl) : '—'}<CopyLinkButton scope={u} tool="timpris-kalkylator" en={en} /></strong>
+          <strong>{result.billable > 0 ? kr(result.hourlyExcl) : '—'}<CopyLinkButton scope={u} tool="timpris-kalkylator" en={en} nb={nb} /></strong>
         </div>
         <div className="lm-result-row">
           <span>{t.rIncl}</span>

@@ -104,7 +104,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
     ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'tak-kalkylator', label: 'Takberegner' },
       { slug: 'reglar-kalkylator', label: 'Stendere & trelast' },
@@ -220,6 +220,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'The tool calculates the number of trusses needed.',
                   'Adjust the spacing if the load requires it.',
                   'Use the result as a basis for ordering.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi takets lengde og valgt c/c-avstand mellom takstolene.',
+                  'Verktøyet regner ut antall takstoler som trengs.',
+                  'Juster c/c-avstanden hvis lasten krever det.',
+                  'Bruk resultatet som grunnlag for bestilling.',
                 ]
               : [
                   'Ange takets längd och valt c/c-avstånd mellan takstolarna.',

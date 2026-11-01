@@ -2,6 +2,8 @@ import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import type { ComponentType } from 'react';
 
+import { NB_LIVE, type CalcLocale } from '../../../lib/locale';
+
 import AnstalldKostnadKalkylatorTool from '../../../components/LeadMagnet/AnstalldKostnadKalkylatorTool';
 import BetongKalkylatorTool from '../../../components/LeadMagnet/BetongKalkylatorTool';
 import DrojsmalsrantaKalkylatorTool from '../../../components/LeadMagnet/DrojsmalsrantaKalkylatorTool';
@@ -35,8 +37,9 @@ import TrappaKalkylatorTool from '../../../components/LeadMagnet/TrappaKalkylato
 
 const LOCALE = 'sv';
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
+const NO_SITE = 'https://byggexp.no';
 
-const TOOLS: Record<string, { Tool: ComponentType; title: string }> = {
+const TOOLS: Record<string, { Tool: ComponentType<{ locale?: CalcLocale }>; title: string }> = {
   'rot-avdrag-kalkylator': { Tool: RotKalkylatorTool, title: 'ROT-avdrag kalkylator' },
   'moms-kalkylator': { Tool: MomsKalkylatorTool, title: 'Momskalkylator' },
   'takstolar-kalkylator': { Tool: TakstolarKalkylatorTool, title: 'Beräkna takstolar' },
@@ -64,17 +67,45 @@ const TOOLS: Record<string, { Tool: ComponentType; title: string }> = {
   'u-varde-kalkylator': { Tool: UvardeKalkylatorTool, title: 'U-värde-kalkylator' },
 };
 
+// Norwegian widgets (byggexp.no): only the calculators that ship nb UI text.
+const NB_TITLES: Record<string, string> = {
+  'takstolar-kalkylator': 'Beregne takstoler',
+  'betong-kalkylator': 'Betongkalkulator',
+  'tak-kalkylator': 'Takberegner',
+  'farg-kalkylator': 'Malingforbruk',
+  'kvadratmeter-kalkylator': 'Kvadratmeter',
+  'reglar-kalkylator': 'Stendere og trelast',
+  'grus-kalkylator': 'Grus og pukk',
+  'gips-kalkylator': 'Gips',
+  'trappa-kalkylator': 'Trapp',
+  'fall-kalkylator': 'Fall og helning',
+  'golvvarme-kalkylator': 'Gulvvarme',
+  'trall-kalkylator': 'Terrasse og platting',
+  'staket-kalkylator': 'Gjerde',
+  'timpris-kalkylator': 'Timepris-kalkulator',
+  'paslag-marginal-kalkylator': 'Påslag og margin',
+};
+
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const slug = params?.slug;
-  if (params?.lang !== LOCALE || typeof slug !== 'string' || !(slug in TOOLS)) {
+  const lang = params?.lang;
+  if (typeof slug !== 'string' || !(slug in TOOLS)) {
+    return { notFound: true };
+  }
+  if (lang === 'nb' && NB_LIVE && slug in NB_TITLES) {
+    return { props: { slug, lang } };
+  }
+  if (lang !== LOCALE) {
     return { notFound: true };
   }
   return { props: { slug } };
 };
 
-export default function EmbedPage({ slug }: { slug: string }) {
-  const { Tool, title } = TOOLS[slug];
-  const href = `${SITE}/${LOCALE}/verktyg/${slug}`;
+export default function EmbedPage({ slug, lang }: { slug: string; lang?: 'nb' }) {
+  const nb = lang === 'nb';
+  const { Tool } = TOOLS[slug];
+  const title = nb ? NB_TITLES[slug] : TOOLS[slug].title;
+  const href = nb ? `${NO_SITE}/nb/verktyg/${slug}` : `${SITE}/${LOCALE}/verktyg/${slug}`;
 
   return (
     <>
@@ -85,10 +116,10 @@ export default function EmbedPage({ slug }: { slug: string }) {
       </Head>
 
       <div className="lead-magnet embed-page">
-        <Tool />
+        {nb ? <Tool locale="nb" /> : <Tool />}
         <p className="embed-credit">
           <a href={href} target="_blank" rel="noopener">
-            Kalkylator av ByggExp →
+            {nb ? 'Kalkulator fra ByggExp →' : 'Kalkylator av ByggExp →'}
           </a>
         </p>
       </div>

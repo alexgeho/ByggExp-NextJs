@@ -13,7 +13,9 @@ export async function downloadMaterialPdf(opts: {
   filename: string; // e.g. "betong-materiallista.pdf"
   tool: string; // for analytics
   note?: string; // disclaimer line
+  locale?: string; // 'nb' → Norwegian chrome (byggexp.no); anything else Swedish
 }) {
+  const nb = opts.locale === 'nb';
   const { jsPDF } = await import('jspdf');
   const doc = new jsPDF({ unit: 'pt', format: 'a4' });
   const mx = 48;
@@ -28,7 +30,7 @@ export async function downloadMaterialPdf(opts: {
   doc.setFontSize(10);
   doc.setTextColor(120);
   y += 18;
-  doc.text('Skapad med ByggExp – byggexp.se', mx, y);
+  doc.text(nb ? 'Laget med ByggExp – byggexp.no' : 'Skapad med ByggExp – byggexp.se', mx, y);
   doc.setTextColor(20);
   if (opts.meta) {
     y += 20;
@@ -41,7 +43,7 @@ export async function downloadMaterialPdf(opts: {
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(11);
   doc.text('Post', mx, y + 14);
-  doc.text('Mängd', pw - mx, y + 14, { align: 'right' });
+  doc.text(nb ? 'Mengde' : 'Mängd', pw - mx, y + 14, { align: 'right' });
   doc.setFont('helvetica', 'normal');
   y += 30;
 
@@ -60,7 +62,9 @@ export async function downloadMaterialPdf(opts: {
   doc.setTextColor(120);
   doc.text(
     opts.note ||
-      'Uppskattning inkl. spill. Kontrollera mot ritning, tillverkarens anvisning och gällande regler.',
+      (nb
+        ? 'Overslag inkl. svinn. Kontroller mot tegning, produsentens anvisning og gjeldende regler.'
+        : 'Uppskattning inkl. spill. Kontrollera mot ritning, tillverkarens anvisning och gällande regler.'),
     mx,
     y,
     { maxWidth: pw - 2 * mx },

@@ -150,7 +150,7 @@ const CONTENT: Record<Locale, ToolContent> = {
         body: (
           <ul>
             <li><strong>Innervegg / tak:</strong> ca. 6–8 m² per liter og strøk.</li>
-            <li><strong>Trefasade:</strong> ca. 5 m² per liter – grovere, sugende underlag.</li>
+            <li><strong>Trefasade:</strong> ca. 5 m² per liter – grovere, sugende flater.</li>
             <li><strong>Pusset fasade:</strong> ca. 4 m² per liter.</li>
             <li>Kalkulatoren foreslår en verdi per type; eksakt tall står på spannet.</li>
           </ul>
@@ -161,7 +161,7 @@ const CONTENT: Record<Locale, ToolContent> = {
         heading: 'Tips for riktig mengde',
         body: (
           <p>
-            Grunning kan trengs på nye eller sugende underlag, og et tredje strøk kreves
+            Grunning kan trengs på nye eller sugende flater, og et tredje strøk kreves
             iblant ved store fargeforskjeller. Litt ekstra maling er billigere enn et ekstra innkjøp midt
             i jobben – og samme base/farge kan variere litt mellom batcher.
           </p>
@@ -178,7 +178,7 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'Hvor mange strøk trenger jeg?',
         answer:
-          'Som oftest to strøk for et jevnt resultat, iblant tre på sugende eller kraftig farget underlag. Kalkulatoren regner med det antallet du angir.',
+          'Som oftest to strøk for et jevnt resultat, iblant tre på sugende eller kraftig fargede flater. Kalkulatoren regner med det antallet du angir.',
       },
       {
         question: 'Skal jeg trekke fra vinduer og dører?',
@@ -188,7 +188,7 @@ const CONTENT: Record<Locale, ToolContent> = {
       {
         question: 'Hvorfor går det med mer maling enn beregnet?',
         answer:
-          'Sugende, grove eller ubehandlede underlag drar mer, og et mørkt-til-lyst fargeskifte kan kreve et ekstra strøk eller grunning. Regn gjerne med litt margin.',
+          'Sugende, grove eller ubehandlede flater trekker mer, og et mørkt-til-lyst fargeskifte kan kreve et ekstra strøk eller grunning. Regn gjerne med litt margin.',
       },
       {
         question: 'Koster det noe?',
@@ -198,7 +198,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
     ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeterberegner' },
       { slug: 'betong-kalkylator', label: 'Betongberegner' },
@@ -362,6 +362,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'Enter the paint coverage (m² per litre).',
                   'The tool calculates the number of litres needed.',
                   'Add a small margin and buy the paint.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi flatens areal og antall strøk.',
+                  'Angi malingens dekkevne (m² per liter).',
+                  'Verktøyet regner ut hvor mange liter maling som trengs.',
+                  'Legg til litt margin og kjøp malingen.',
                 ]
               : [
                   'Ange ytans area och antal strykningar.',

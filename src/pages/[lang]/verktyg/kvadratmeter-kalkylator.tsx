@@ -182,7 +182,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaHeading: 'Prissett og følg prosjekter i ByggExp',
     ctaText: 'Fra flater og materialer til tilbud, faktura og lønnsomhet per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'farg-kalkylator', label: 'Malingsforbruk' },
       { slug: 'betong-kalkylator', label: 'Betongberegner' },
@@ -341,6 +341,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'The tool calculates the area in square metres.',
                   'Add waste (e.g. 5–10 %) if needed.',
                   'Use the figure for material and your quote.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi lengde og bredde på flaten i meter.',
+                  'Verktøyet regner ut arealet i kvadratmeter.',
+                  'Legg til svinn (f.eks. 5–10 %) ved behov.',
+                  'Bruk tallet til materialer og tilbud.',
                 ]
               : [
                   'Ange ytans längd och bredd i meter.',

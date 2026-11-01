@@ -94,7 +94,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
     ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'reglar-kalkylator', label: 'Stendere & trelast' },
       { slug: 'grus-kalkylator', label: 'Grus & pukk' },
@@ -206,6 +206,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'The tool calculates the number of posts and rails/boards.',
                   'Add gates and waste.',
                   'Order the material.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi gjerdets lengde og stolpeavstand.',
+                  'Verktøyet regner ut antall stolper og seksjoner.',
+                  'Legg til porter og svinn.',
+                  'Bestill materialene.',
                 ]
               : [
                   'Ange staketets längd och stolpavstånd.',

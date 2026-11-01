@@ -94,7 +94,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
     ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'fall-kalkylator', label: 'Fall & helling' },
       { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeterberegner' },
@@ -206,6 +206,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'The tool calculates the number of steps, riser and tread.',
                   'Check it against the comfort formula (2×riser + tread).',
                   'Use the measurements when building.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi total høyde og ønsket opptrinn.',
+                  'Verktøyet regner ut antall trinn, opptrinn og inntrinn.',
+                  'Kontroller mot bekvemmelighetsregelen (2 × opptrinn + inntrinn).',
+                  'Bruk målene når du bygger.',
                 ]
               : [
                   'Ange total höjd och tillgängligt djup.',

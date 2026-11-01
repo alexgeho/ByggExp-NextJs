@@ -174,9 +174,8 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaButton: 'Bestill gratis konsultasjon',
     relatedHeading: 'Flere gratis verktøy',
     related: [
-      { href: '/blog/timpris-hantverkare', label: 'Guide: hva skal du ta betalt per time?' },
+      { href: '/blog/timepris-snekker', label: 'Guide: timepris for snekker' },
       { href: '/verktyg/paslag-marginal-kalkylator', label: 'Påslag & margin' },
-      { href: '/verktyg/rot-avdrag-kalkylator', label: 'ROT-fradrag kalkulator' },
       { href: '/verktyg', label: 'Alle gratis verktøy' },
     ],
   },

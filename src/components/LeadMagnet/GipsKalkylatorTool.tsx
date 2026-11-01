@@ -14,7 +14,7 @@ import CopyLinkButton from './CopyLinkButton';
 // sides, and screws run ~20 st/m² per board layer. It returns not just the
 // sheet count but the whole bill of material: sheets, studs (löpmeter virke),
 // syll/hammarband (or skena for steel), insulation and screws.
-// Bilingual: sv default, en for /en/verktyg; nb falls back to sv text.
+// sv default, en for /en/verktyg, nb for byggexp.no.
 
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
@@ -23,7 +23,8 @@ function num(v: string): number {
 export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale | 'ru' }) {
   const en = locale === 'en';
   const ru = locale === 'ru';
-  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : ru ? 'ru-RU' : 'sv-SE', { maximumFractionDigits: d });
+  const nb = locale === 'nb';
+  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : ru ? 'ru-RU' : nb ? 'nb-NO' : 'sv-SE', { maximumFractionDigits: d });
   const t = ru
     ? {
         title: 'Калькулятор гипсокартона — полный список материалов',
@@ -67,6 +68,28 @@ export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         mSheets: 'Plasterboard', mClad: 'Clad area', mGips: 'Board incl. waste', mScrews: 'Plasterboard screws',
         pdfTitle: 'Plasterboard – material list', pdfMeta: (l: string, h: string, s: string, lay: string) => `Wall ${l} × ${h} m · ${s} · ${lay} layer(s)/side`,
         soLabour: 'Installation labour',
+      }
+    : nb
+    ? {
+        title: 'Gipskalkulator – hele materiallisten',
+        sub: 'Fyll inn veggen, så regner vi ut gipsplater, stendere, svill, isolasjon og skruer. Platebredden styrer stenderavstanden (c/c) etter Gyprocs monteringsanvisning.',
+        length: 'Vegglengde (m)', height: 'Vegghøyde (m)',
+        cladL: 'Kledning', cladBoth: 'Dobbeltsidig (begge sider)', cladOne: 'Enkeltsidig (én side)',
+        layersL: 'Lag per side', l1: '1 lag', l2: '2 lag',
+        boardWidthL: 'Platebredde', boardLenL: 'Platelengde (m)',
+        frameL: 'Bindingsverk', frameWood: 'Trestendere', frameSteel: 'Stålstendere',
+        insulL: 'Isolasjon i veggen', yes: 'Ja', no: 'Nei',
+        openings: 'Fradrag åpninger (m²)', spill: 'Svinn (%)',
+        rSheets: 'Gipsplater', rClad: 'Kledd flate / gips inkl. svinn', rStuds: (cc: number) => `Stendere (c/c ${cc} mm)`, rRail: '', rInsul: 'Isolasjon', rScrews: 'Gipsskruer',
+        railWood: 'Bunnsvill + toppsvill', railSteel: 'Skinne (topp + bunn)',
+        fine: 'Et overslag etter Gyprocs monteringsanvisning. Bindingsverket regnes én gang også ved dobbeltsidig kledning; skruer ca. 20 stk/m² per lag (kant c200, felt c300). Kontroller alltid platemål, stendertype og innfesting mot leverandørens anvisning for din veggtype.',
+        offert: 'Lag tilbud av dette', faktura: 'Lag faktura', excel: 'Eksporter Excel', pdf: 'Eksporter PDF',
+        pcs: 'stk', lm: 'lm',
+        csvTitle: 'Gipskalkulator', csvWall: 'Vegg', wallDesc: (l: string, h: string, s: string, lay: string) => `${l} × ${h} m, ${s}, ${lay} lag/side`, both: 'dobbeltsidig', one: 'enkeltsidig',
+        post: 'Post', qty: 'Mengde',
+        mSheets: 'Gipsplater', mClad: 'Kledd flate', mGips: 'Gips inkl. svinn', mScrews: 'Gipsskruer',
+        pdfTitle: 'Gips – materialliste', pdfMeta: (l: string, h: string, s: string, lay: string) => `Vegg ${l} × ${h} m · ${s} · ${lay} lag/side`,
+        soLabour: 'Arbeid montering',
       }
     : {
         title: 'Gipskalkylator – hela materiallistan',
@@ -133,7 +156,7 @@ export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
 
   const exportCsv = () => {
     const rows: (string | number)[][] = [
-      [t.csvTitle, 'byggexp.se'],
+      [t.csvTitle, nb ? 'byggexp.no' : 'byggexp.se'],
       [],
       [t.csvWall, t.wallDesc(length || '0', height || '0', sidesLabel, layers)],
       [],
@@ -151,6 +174,7 @@ export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
   };
 
   const exportPdf = () => void downloadMaterialPdf({
+    locale,
     title: t.pdfTitle,
     meta: t.pdfMeta(length || '0', height || '0', sidesLabel, layers),
     rows: [
@@ -182,7 +206,7 @@ export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
       <div className="lm-tool-grid">
         <label className="lm-tool-field">
           <span>{t.length}</span>
-          <input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 6' : ru ? 'напр. 6' : 't.ex. 6'} onChange={(e) => setLength(e.currentTarget.value)} />
+          <input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 6' : ru ? 'напр. 6' : nb ? 'f.eks. 6' : 't.ex. 6'} onChange={(e) => setLength(e.currentTarget.value)} />
         </label>
         <label className="lm-tool-field">
           <span>{t.height}</span>
@@ -246,7 +270,7 @@ export default function GipsKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rSheets}</span>
-          <strong>{nf(r.sheets)} {t.pcs}<CopyLinkButton scope={u} tool="gips-kalkylator" en={en} /></strong>
+          <strong>{nf(r.sheets)} {t.pcs}<CopyLinkButton scope={u} tool="gips-kalkylator" en={en} nb={nb} /></strong>
         </div>
         <div className="lm-result-row">
           <span>{t.rClad}</span>

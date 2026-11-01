@@ -9,14 +9,16 @@ import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Fence calculator: number of posts and sections from length and post spacing.
-// Bilingual: sv default, en for /en/verktyg; nb falls back to sv text.
+// sv default, en for /en/verktyg, nb for byggexp.no.
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
 }
 
 export default function StaketKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const nf = (v: number) => v.toLocaleString(en ? 'en-GB' : 'sv-SE');
+  const nb = locale === 'nb';
+  const nf = (v: number) => v.toLocaleString(en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE');
+  const eg = en ? 'e.g.' : nb ? 'f.eks.' : 't.ex.';
   const t = en
     ? {
         title: 'Fence calculator – posts and sections',
@@ -28,6 +30,18 @@ export default function StaketKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         csvTitle: 'Fence calculator', post: 'Item', qty: 'Quantity',
         mPosts: 'Number of posts', mSections: 'Number of sections', pdfTitle: 'Fence – material list',
         soPosts: 'Posts', soSections: 'Sections', soLabour: 'Fence assembly labour',
+      }
+    : nb
+    ? {
+        title: 'Gjerdekalkulator – stolper og seksjoner',
+        sub: 'Fyll inn gjerdets lengde og avstanden mellom stolpene (c/c), så regner vi ut antall stolper og seksjoner.',
+        length: 'Lengde (m)', cc: 'Stolpeavstand c/c (m)',
+        rPosts: 'Antall stolper', rSections: 'Antall seksjoner', pcs: 'stk',
+        fine: 'Et overslag (antall stolper = seksjoner + 1). Regn med port separat, og tilpass c/c etter gjerdetype og vindlast.',
+        offert: 'Lag tilbud av dette', faktura: 'Lag faktura', excel: 'Eksporter Excel', pdf: 'Eksporter PDF',
+        csvTitle: 'Gjerdekalkulator', post: 'Post', qty: 'Mengde',
+        mPosts: 'Antall stolper', mSections: 'Antall seksjoner', pdfTitle: 'Gjerde – materialliste',
+        soPosts: 'Stolper', soSections: 'Seksjoner', soLabour: 'Arbeid montering av gjerde',
       }
     : {
         title: 'Staketkalkylator – stolpar och sektioner',
@@ -66,7 +80,7 @@ export default function StaketKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
     gaEvent('export_excel', { tool: 'staket-kalkylator' });
     downloadCsvRows(
       [
-        [t.csvTitle, 'byggexp.se'],
+        [t.csvTitle, nb ? 'byggexp.no' : 'byggexp.se'],
         [],
         [t.post, t.qty],
         [t.mPosts, `${nf(r.posts)} ${t.pcs}`],
@@ -77,6 +91,7 @@ export default function StaketKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
   };
 
   const exportPdf = () => void downloadMaterialPdf({
+    locale,
     title: t.pdfTitle,
     rows: [
       { desc: t.mPosts, qty: `${nf(r.posts)} ${t.pcs}` },
@@ -89,11 +104,11 @@ export default function StaketKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
   return (
     <div className="lm-tool lm-tool--split">
       <div className="lm-tool-grid">
-        <label className="lm-tool-field"><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 20' : 't.ex. 20'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
+        <label className="lm-tool-field"><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={`${eg} 20`} onChange={(e) => setLength(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.cc}</span><input type="number" min="0" inputMode="decimal" value={cc} onChange={(e) => setCc(e.currentTarget.value)} /></label>
       </div>
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{t.rPosts}</span><strong>{nf(r.posts)} {t.pcs}<CopyLinkButton scope={u} tool="staket-kalkylator" en={en} /></strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rPosts}</span><strong>{nf(r.posts)} {t.pcs}<CopyLinkButton scope={u} tool="staket-kalkylator" en={en} nb={nb} /></strong></div>
         <div className="lm-result-row lm-result-total"><span>{t.rSections}</span><strong>{nf(r.sections)} {t.pcs}</strong></div>
         <p className="lm-result-fine">{t.fine}</p>
       </div>

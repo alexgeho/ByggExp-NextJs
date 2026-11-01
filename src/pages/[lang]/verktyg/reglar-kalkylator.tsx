@@ -95,7 +95,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
     ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'takstolar-kalkylator', label: 'Beregne takstoler' },
       { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeterberegner' },
@@ -209,6 +209,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'Choose the spacing (c/c) between the studs.',
                   'The tool calculates the number of studs and metres.',
                   'Add waste and order the timber.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi veggens lengde og høyde.',
+                  'Velg c/c-avstand mellom stenderne.',
+                  'Verktøyet regner ut antall stendere og løpemeter.',
+                  'Legg til svinn og bestill trelasten.',
                 ]
               : [
                   'Ange väggens längd och höjd.',

@@ -37,15 +37,37 @@ export function productBannerHeadline(slug: string): string {
   return 'Allt för bygget i ett system';
 }
 
-export default function ProductBanner({ tool }: { tool: string }) {
-  const headline = productBannerHeadline(tool);
+// Norwegian copy for byggexp.no (nb calculators). sv output is unchanged.
+const NB_BULLETS = [
+  'Prosjektstyring og dagbok',
+  'Timeregistrering og lønn',
+  'Tilbud og fakturering',
+  'Egenkontroller og HMS',
+] as const;
+
+const NB_HEADLINES: Record<string, string> = {
+  'Egenkontroller ingår i ByggExp': 'Egenkontroller er inkludert i ByggExp',
+  'Offert & fakturering i ByggExp': 'Tilbud og fakturering i ByggExp',
+  'Tidrapportering & lön i ByggExp': 'Timeregistrering og lønn i ByggExp',
+  'Planering & bemanning i ByggExp': 'Planlegging og bemanning i ByggExp',
+  'Projektledning & dagbok i ByggExp': 'Prosjektstyring og dagbok i ByggExp',
+  'Ekonomi & kalkyl i ByggExp': 'Økonomi og kalkyle i ByggExp',
+  'Allt för bygget i ett system': 'Alt for byggeprosjektet i ett system',
+};
+
+export default function ProductBanner({ tool, locale = 'sv' }: { tool: string; locale?: string }) {
+  const nb = locale === 'nb';
+  const svHeadline = productBannerHeadline(tool);
+  const headline = nb ? NB_HEADLINES[svHeadline] || svHeadline : svHeadline;
+  const bullets: readonly string[] = nb ? NB_BULLETS : BULLETS;
+  const cta = nb ? { href: '/nb/contact', label: 'Bestill gratis konsultasjon' } : APP_CTA;
   return (
-    <aside className="lm-product-banner" aria-label="ByggExp – boka demo">
+    <aside className="lm-product-banner" aria-label={nb ? 'ByggExp – bestill konsultasjon' : 'ByggExp – boka demo'}>
       <div className="lm-pb-body">
         <p className="lm-pb-eyebrow">ByggExp</p>
         <h2 className="lm-pb-headline">{headline}</h2>
         <ul className="lm-pb-list">
-          {BULLETS.map((b) => (
+          {bullets.map((b) => (
             <li key={b}>{b}</li>
           ))}
         </ul>
@@ -53,7 +75,7 @@ export default function ProductBanner({ tool }: { tool: string }) {
       <div className="lm-pb-action">
         <a
           className="lm-pb-button"
-          href={APP_CTA.href}
+          href={cta.href}
           onClick={() => {
             // Dedicated, directly-countable GA4 event (visible in GA4 → Events as
             // "product_banner_click" without needing a custom dimension) + the
@@ -62,9 +84,9 @@ export default function ProductBanner({ tool }: { tool: string }) {
             gaEvent('cta_click', { tool, action: 'demo', placement: 'product_banner' });
           }}
         >
-          {APP_CTA.label}
+          {cta.label}
         </a>
-        <p className="lm-pb-micro">Sedan 14 dagar gratis</p>
+        <p className="lm-pb-micro">{nb ? 'Deretter 14 dager gratis' : 'Sedan 14 dagar gratis'}</p>
       </div>
     </aside>
   );

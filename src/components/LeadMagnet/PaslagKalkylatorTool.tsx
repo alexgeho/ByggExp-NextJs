@@ -6,12 +6,13 @@ import CopyLinkButton from './CopyLinkButton';
 
 // Free markup/margin calculator (påslag vs marginal). Converts a cost into a
 // selling price using either a markup % or a target margin %, and shows both so
-// the common mix-up between markup and margin becomes clear. Bilingual: sv
-// default, en for /en/verktyg; nb falls back to sv text.
+// the common mix-up between markup and margin becomes clear. sv default,
+// en for /en/verktyg, nb for byggexp.no.
 
 export default function PaslagKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const loc = en ? 'en-GB' : 'sv-SE';
+  const nb = locale === 'nb';
+  const loc = en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE';
   const kr = (v: number) => `${v.toLocaleString(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kr`;
   const pct = (v: number) => `${v.toLocaleString(loc, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} %`;
   const t = en
@@ -23,6 +24,16 @@ export default function PaslagKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         percentPh: 'e.g. 30',
         rPrice: 'Selling price (excl. VAT)', rProfit: 'Profit', rMarkup: 'Markup', rMargin: 'Margin',
         fine: 'Markup is calculated on the cost price, margin on the selling price – that’s why the percentages differ. A 30% markup gives, for example, a margin of about 23%.',
+      }
+    : nb
+    ? {
+        title: 'Regn ut påslag og margin',
+        sub: 'Fyll inn selvkosten og enten et påslag eller en ønsket margin – se salgsprisen, fortjenesten og både påslag og margin.',
+        cost: 'Selvkost (kr)', costPh: 'f.eks. 1000',
+        calcWith: 'Regn med', markup: 'Påslag (%)', margin: 'Margin (%)',
+        percentPh: 'f.eks. 30',
+        rPrice: 'Salgspris (eks. mva)', rProfit: 'Fortjeneste', rMarkup: 'Påslag', rMargin: 'Margin',
+        fine: 'Påslag regnes på selvkosten, margin regnes på salgsprisen – derfor er prosenttallene forskjellige. Et påslag på 30 % gir f.eks. en margin på cirka 23 %.',
       }
     : {
         title: 'Räkna ut påslag och marginal',
@@ -78,7 +89,7 @@ export default function PaslagKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rPrice}</span>
-          <strong>{kr(result.price)}<CopyLinkButton scope={u} tool="paslag-kalkylator" en={en} /></strong>
+          <strong>{kr(result.price)}<CopyLinkButton scope={u} tool="paslag-kalkylator" en={en} nb={nb} /></strong>
         </div>
         <div className="lm-result-row">
           <span>{t.rProfit}</span>

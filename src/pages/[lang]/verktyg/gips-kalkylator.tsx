@@ -192,7 +192,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
     ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'reglar-kalkylator', label: 'Stendere & trelast' },
       { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeterberegner' },
@@ -435,6 +435,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'Enter the board dimensions.',
                   'The tool calculates the number of plasterboards.',
                   'Add waste and order.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi arealet på veggen eller taket.',
+                  'Angi gipsplatens mål.',
+                  'Verktøyet regner ut antall gipsplater.',
+                  'Legg til svinn og bestill.',
                 ]
               : [
                   'Ange väggens eller takets area.',

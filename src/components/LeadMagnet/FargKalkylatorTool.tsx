@@ -12,7 +12,7 @@ import CopyLinkButton from './CopyLinkButton';
 // plus waste. Coverage (m²/litre) is preset per surface type (interior wall/
 // ceiling, wood façade, rendered façade) but editable, and door/window openings
 // can be deducted. Also suggests a practical can size to buy. Bilingual: sv
-// default, en for /en/verktyg; nb falls back to sv text.
+// default, en for /en/verktyg, nb for byggexp.no.
 
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
@@ -25,7 +25,8 @@ const COVERAGE: Record<Surface, number> = { vagg: 8, tak: 8, fasadtra: 5, fasadp
 
 export default function FargKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : 'sv-SE', { maximumFractionDigits: d });
+  const nb = locale === 'nb';
+  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE', { maximumFractionDigits: d });
   const t = en
     ? {
         title: 'Paint calculator – how much paint?',
@@ -42,6 +43,23 @@ export default function FargKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         pdfTitle: 'Paint – consumption', pdfMeta: (s: string, c: string, cov: string) => `${s} · ${c} coats · ${cov} m²/l`,
         pdfNote: 'Estimate. Consumption is affected by the substrate. Coverage is on the can.',
         soPaint: (s: string) => `Paint – ${s} (litres)`, soLabour: 'Painting labour',
+      }
+    : nb
+    ? {
+        title: 'Malingkalkulator – hvor mye maling?',
+        sub: 'Velg flate, fyll inn kvadratmeter og antall strøk, så regner vi ut hvor mange liter maling du trenger – med fradrag for vinduer og dører. Dekkevnen settes etter malingstype, men kan justeres etter spannet.',
+        surfaceL: 'Flate / malingstype', sVagg: 'Innervegg', sTak: 'Innertak', sFasadtra: 'Fasade – tre', sFasadputs: 'Fasade – puss',
+        area: 'Flate som skal males (m²)', openings: 'Fradrag vinduer/dører (m²)', coats: 'Antall strøk',
+        coverageL: (d: string) => `Dekkevne m²/l (standard ${d})`, spill: 'Svinn (%)',
+        rArea: 'Flate som skal males totalt', rLiters: 'Maling som trengs', rBuy: 'Kjøp minst (avrundet)',
+        litres: 'liter',
+        fine: 'Et overslag. Forbruket påvirkes av flaten – sugende, grove eller mørke flater som males lyse krever mer og kan trenge et ekstra strøk eller grunning. Dekkevnen står på spannet.',
+        offert: 'Lag tilbud av dette', faktura: 'Lag faktura', excel: 'Eksporter Excel', pdf: 'Eksporter PDF',
+        csvTitle: 'Malingkalkulator', csvSurface: 'Flate / malingstype', csvCoats: 'Strøk', csvCoverage: 'Dekkevne', post: 'Post', qty: 'Mengde',
+        mArea: 'Flate som skal males totalt', mLiters: 'Maling som trengs', mBuy: 'Kjøp minst (avrundet)',
+        pdfTitle: 'Maling – forbruk', pdfMeta: (s: string, c: string, cov: string) => `${s} · ${c} strøk · ${cov} m²/l`,
+        pdfNote: 'Overslag. Forbruket påvirkes av flaten. Dekkevnen står på spannet.',
+        soPaint: (s: string) => `Maling – ${s} (liter)`, soLabour: 'Arbeid maling',
       }
     : {
         title: 'Färgkalkylator – hur mycket färg?',
@@ -86,7 +104,7 @@ export default function FargKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
 
   const exportCsv = () => {
     const rows: (string | number)[][] = [
-      [t.csvTitle, 'byggexp.se'],
+      [t.csvTitle, nb ? 'byggexp.no' : 'byggexp.se'],
       [t.csvSurface, sLabel],
       [t.csvCoats, coats],
       [t.csvCoverage, `${num(coverage) || defCov} m²/l`],
@@ -101,6 +119,7 @@ export default function FargKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
   };
 
   const exportPdf = () => void downloadMaterialPdf({
+    locale,
     title: t.pdfTitle,
     meta: t.pdfMeta(sLabel, coats, String(num(coverage) || defCov)),
     rows: [
@@ -135,7 +154,7 @@ export default function FargKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         </label>
         <label className="lm-tool-field">
           <span>{t.area}</span>
-          <input type="number" min="0" inputMode="decimal" value={area} placeholder={en ? 'e.g. 40' : 't.ex. 40'} onChange={(e) => setArea(e.currentTarget.value)} />
+          <input type="number" min="0" inputMode="decimal" value={area} placeholder={en ? 'e.g. 40' : nb ? 'f.eks. 40' : 't.ex. 40'} onChange={(e) => setArea(e.currentTarget.value)} />
         </label>
         <label className="lm-tool-field">
           <span>{t.openings}</span>
@@ -162,7 +181,7 @@ export default function FargKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         </div>
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rLiters}</span>
-          <strong>{nf(r.liters, 1)} {t.litres}<CopyLinkButton scope={u} tool="farg-kalkylator" en={en} /></strong>
+          <strong>{nf(r.liters, 1)} {t.litres}<CopyLinkButton scope={u} tool="farg-kalkylator" en={en} nb={nb} /></strong>
         </div>
         <div className="lm-result-row lm-result-total">
           <span>{t.rBuy}</span>

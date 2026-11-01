@@ -82,7 +82,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     previewCaption: 'Slik ser terrassebordberegneren ut',
     sections: [
       { id: 'sa-raknar-du', heading: 'Slik regner du ut terrassebordene', body: (<><ol><li>Regn ut terrassens areal i m².</li><li>Angi bordets bredde og spalten.</li><li>Angi bordets lengde og svinn.</li><li>Se løpemeter og antall bord.</li></ol></>) },
-      { id: 'info', heading: 'Ikke glem underlaget', body: (<><p>I tillegg til terrassebordene trenger du bjelkelag, plinter eller fundament og innfesting. Kjøp gjerne et bord ekstra til kapp og fremtidige utskiftninger.</p></>) },
+      { id: 'info', heading: 'Ikke glem bjelkelaget', body: (<><p>I tillegg til terrassebordene trenger du bjelkelag, plinter eller fundament og innfesting. Kjøp gjerne et bord ekstra til kapp og fremtidige utskiftninger.</p></>) },
     ],
     faqHeading: 'Vanlige spørsmål',
     faq: [
@@ -94,7 +94,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
     ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'reglar-kalkylator', label: 'Stendere & trelast' },
       { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeterberegner' },
@@ -206,6 +206,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'Enter the board width and the gap between boards.',
                   'The tool calculates the number of boards and total metres.',
                   'Add waste and order the timber.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi terrassens areal.',
+                  'Angi bordbredde og fugen mellom bordene.',
+                  'Verktøyet regner ut antall terrassebord og løpemeter.',
+                  'Legg til svinn og bestill trelasten.',
                 ]
               : [
                   'Ange altanens längd och bredd.',

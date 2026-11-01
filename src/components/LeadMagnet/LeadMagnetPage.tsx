@@ -128,6 +128,8 @@ export default function LeadMagnetPage({
       ? 'Это оценка, а не готовый расчёт – сверяйте с чертежами, нормами и данными поставщика перед ценой или заказом.'
       : locale === 'en'
       ? 'An estimate, not a finished calculation – check against drawings, regulations and supplier data before pricing or ordering.'
+      : locale === 'nb'
+      ? 'Et overslag, ikke en ferdig kalkyle – kontroller mot tegninger, regler og leverandørens opplysninger før du gir pris eller bestiller.'
       : 'En uppskattning, inte en färdig kalkyl – kontrollera mot ritning, regler och leverantörens uppgifter innan du lämnar pris eller beställer.';
   // BreadcrumbList schema (Hem › Verktyg › <tool>) for a breadcrumb rich result in
   // SERP. Derived from locale + title — no per-page wiring needed.
@@ -203,7 +205,7 @@ export default function LeadMagnetPage({
 
         {/* Value first: only pitch the product AFTER the visitor has used the free
             tool / downloaded the template. */}
-        {productBanner ? null : <ProductBanner tool={toolId} />}
+        {productBanner ? null : <ProductBanner tool={toolId} locale={locale} />}
 
         {sections.map((section) => (
           <section
@@ -219,10 +221,16 @@ export default function LeadMagnetPage({
         {embedSlug ? (
           <section id="badda-in" className="lead-magnet-section">
             <h2 className="lead-magnet-section-heading">
-              Bädda in kalkylatorn gratis på din sajt
+              {locale === 'nb'
+                ? 'Bygg inn kalkulatoren gratis på nettstedet ditt'
+                : 'Bädda in kalkylatorn gratis på din sajt'}
             </h2>
             <div className="lead-magnet-section-body">
-              <EmbedSnippet slug={embedSlug} title={embedTitle || title} />
+              <EmbedSnippet
+                slug={embedSlug}
+                title={embedTitle || title}
+                locale={locale === 'nb' ? 'nb' : 'sv'}
+              />
             </div>
           </section>
         ) : null}

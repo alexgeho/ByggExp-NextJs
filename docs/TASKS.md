@@ -14,4 +14,4 @@
   - [x] timeliste-mal: настоящий .xlsx (формулы, пример) + инструкция; .csv → 301
 - [ ] Решение владельца: цены на .no в SEK или NOK; телефон/офис на контактах .no
 - [ ] Через 4 недели (≈29.11): GSC .no — позиции pillar HMS-kort / timeregistrering / mannskapsliste; затем продуктовые лендинги nb
-- [ ] Request Indexing в GSC: /nb, hms-kort-bygg, timeregistrering-app-bygg, mannskapsliste-byggeplass, prosjektstyring-bygg, timeliste-mal
+- [x] Request Indexing в GSC (01.11, Chrome): /nb, hms-kort-bygg, timeregistrering-app-bygg, mannskapsliste-byggeplass, prosjektstyring-bygg, timeliste-mal

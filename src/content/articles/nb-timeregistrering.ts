@@ -514,21 +514,25 @@ const T_TIMELISTE_MAL: BlogPost = {
   updatedAt: '2026-09-07T14:30:00.000Z',
 };
 
+// Planner/Bemanning claims from docs/seo/product-facts-verified.md (Planering / Bemanning).
+// Not claimed: drag-and-drop, machines, subcontractors.
 const PR_PROSJEKTSTYRING_BYGG_HTML = `
-<p>Prosjektstyring for bygg handler om å holde planen, oppgavene, timene og økonomien samlet – slik at du vet hvor prosjektet står før det skjærer seg. Her går vi gjennom hva et prosjektstyringsverktøy for byggefirmaer bør klare, og hvordan timene teamet fører henger direkte sammen med marginen på prosjektet.</p>
+<p>Et prosjektstyringssystem for bygg samler planen, bemanningen, timene og økonomien – slik at du vet hvor prosjektet står før det skjærer seg. Her går vi gjennom hva et prosjektstyringsverktøy for byggefirmaer bør ha, og hvordan timene teamet fører henger direkte sammen med marginen på prosjektet.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-prosjektstyring.webp" alt="Diagram: prosjektstyring – planlegg i Gantt, følg opp oppgaver og frister, timer på prosjektet, margin per prosjekt" width="720" height="380" loading="lazy"><figcaption>Prosjektstyring: planen, oppgavene, timene og økonomien på ett sted – timene går rett inn i marginen.</figcaption></figure>
 
 <h2>Hva er prosjektstyring for bygg?</h2>
 <p>Prosjektstyring er å planlegge arbeidet, fordele oppgaver, følge fremdriften og holde kontroll på økonomien – fra oppstart til ferdig prosjekt. For et byggefirma betyr det å vite hvem som gjør hva, når det skal være ferdig, og om prosjektet går med overskudd underveis.</p>
 
-<h2>Hva et prosjektstyringsverktøy bør klare</h2>
+<h2>Hva bør et prosjektstyringssystem for bygg ha?</h2>
 <ul>
 <li><strong>Planlegging</strong> – legg opp prosjektet i en tidsplan (Gantt), på personer eller prosjekter.</li>
+<li><strong>Bemanning</strong> – hvem er på hvilket prosjekt hver dag, med fravær synlig og varsel ved overbooking.</li>
 <li><strong>Oppgaver og frister</strong> – tildel oppgaver til personer eller hele teamet, med påminnelser.</li>
 <li><strong>Timer på prosjektet</strong> – timene teamet fører knyttes til riktig prosjekt.</li>
 <li><strong>Dokumentasjon</strong> – foto og filer samlet på prosjektet.</li>
 <li><strong>Økonomi</strong> – budsjett, betalingsplan og margin per prosjekt.</li>
 </ul>
+<p>I ByggExp planlegger du i Gantt per person eller prosjekt (2 uker, måned eller egendefinert periode), med endringslogg. I bemanningsoversikten klikker du i en celle for å sette folk på et prosjekt for en dag, godkjent fravær vises, og du får varsel når noen er booket over 8 timer på en dag. Timene fra <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-appen</a> havner på prosjektet, så du ser hva arbeidet koster mens prosjektet pågår.</p>
 
 <h2>Planlegging som teamet forstår</h2>
 <p>En tidsplan er bare nyttig hvis den brukes. En enkel Gantt-visning – der du planlegger etter personer eller prosjekter – gjør det lett å se hvem som er ledig, hva som henger etter, og når neste fase kan starte. Endrer noe seg på bygget, justerer du planen uten å begynne på nytt.</p>
@@ -557,7 +561,7 @@ const PR_PROSJEKTSTYRING_BYGG_HTML = `
 <h3>Hva er prosjektstyring for bygg?</h3>
 <p>Å planlegge arbeidet, fordele oppgaver, følge fremdriften og holde kontroll på økonomien fra oppstart til ferdig prosjekt – slik at du vet hvor prosjektet står underveis.</p>
 <h3>Hva bør et prosjektstyringsverktøy for byggefirma klare?</h3>
-<p>Planlegging (Gantt), oppgaver og frister, timer knyttet til prosjektet, dokumentasjon (foto/filer) og økonomi med budsjett og margin per prosjekt.</p>
+<p>Planlegging (Gantt), bemanning med varsel ved overbooking, oppgaver og frister, timer knyttet til prosjektet, dokumentasjon (foto/filer) og økonomi med budsjett og margin per prosjekt.</p>
 <h3>Hvordan henger timer og prosjektøkonomi sammen?</h3>
 <p>Timene teamet fører knyttes til prosjektet og regnes mot budsjettet, så du ser marginen mens arbeidet pågår – ikke først når fakturaen er sendt.</p>
 <h3>Passer prosjektstyring for mindre byggefirmaer?</h3>
@@ -566,7 +570,7 @@ const PR_PROSJEKTSTYRING_BYGG_HTML = `
 
 const PR_PROSJEKTSTYRING_BYGG: BlogPost = {
   _id: 'code-nb-prosjektstyring-bygg',
-  title: 'Prosjektstyring for bygg – plan, timer og margin på ett sted',
+  title: 'Prosjektstyring bygg – system og verktøy for plan, timer og margin',
   slug: 'prosjektstyring-bygg',
   locale: 'nb',
   excerpt:
@@ -574,16 +578,16 @@ const PR_PROSJEKTSTYRING_BYGG: BlogPost = {
   tag: 'Digitalisering',
   coverImageUrl: '/landing/features/5planering.webp',
   contentHtml: PR_PROSJEKTSTYRING_BYGG_HTML,
-  seoTitle: 'Prosjektstyring bygg – system for plan og margin | ByggExp',
+  seoTitle: 'Prosjektstyring system for bygg – plan og margin | ByggExp',
   seoDescription:
-    'Prosjektstyring for bygg: samle plan (Gantt), oppgaver, timer og økonomi på ett sted. Hva et prosjektstyringsverktøy bør klare, og hvordan timene styrer marginen.',
+    'Prosjektstyring system for bygg: Gantt per person eller prosjekt, bemanning med varsel ved overbooking, timer på prosjektet og margin. Hva et prosjektstyringsverktøy bør ha.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/5planering.webp`,
   canonicalUrl: '',
   noIndex: false,
   isPublished: true,
   publishedAt: '2026-09-07T14:40:00.000Z',
   createdAt: '2026-09-07T14:40:00.000Z',
-  updatedAt: '2026-09-07T14:40:00.000Z',
+  updatedAt: '2026-11-01T12:00:00.000Z',
 };
 
 // Price 139,10 kr + mva and lost-card steps: https://www.arbeidstilsynet.no/hms/hms-kort/

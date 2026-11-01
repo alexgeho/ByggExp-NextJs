@@ -40,7 +40,8 @@
   - [x] Проверки: build, Host byggexp.no 200, sitemap, JSON-LD, ссылки, sv без изменений, скриншоты 1440/390
 - [x] Модуль avvik — live 01.11 (backend+admin, критик ✓): /deviations, вкладка проекта, история, закрытие с комментарием, PDF/CSV, напоминания 07:00; пакеты Kontroll på jobben + Full
 - [ ] Мобильное: «Meld avvik» + вкладка Avvik + выключатель в Aviseringar (спек byggexp-admin/docs/avvik-mobile-spec.md) → стор; после релиза DEVIATION_NEW_REPORT_PUSH=true
-- [ ] Страница /nb/funksjoner/hms-system (ветка seo/no-wave5; осталось: критик → владелец → деплой → Request Indexing)
+- [x] Страница /nb/funksjoner/hms-system — live 01.11, критик ✓; ks-system обновлена (avvik есть)
+- [ ] Request Indexing hms-system — квота GSC исчерпана 01.11, сделать 02.11 (ветка seo/no-wave5; осталось: критик → владелец → деплой → Request Indexing)
   - [x] Факты avvik по коду BE/AD (+ «нет»: SJA, HMS-kort, mannskapsliste, stoffkartotek, HMS-håndbok, vernerunde) → product-facts-verified.md
   - [x] Страница hms-system (Kontroll på jobben + Full; avvik в webadmin, не в мобильном)
   - [x] ks-system: убрать «нет avviksmodul» → ссылка на hms-system

@@ -22,7 +22,7 @@
 - [x] Komplett в Stripe: +69 (год 704) — новые цены SEK+NOK: месяц price_1UX1aHAzcJ4f5bxIvIBzBPBu, год price_1UX1bnAzcJ4f5bxIy63qTivQ
 - [x] GH secrets STRIPE_PRICE_KOMPLETT_MONTHLY/YEARLY → новые цены + redeploy API (команда владельцу)
 - [x] .no: замер Keyword Planner (Norway, nb) по функциям продукта: tilbud/faktura, egenkontroll/KS/avvik, byggedagbok, ressursplanlegging/bemanning, prosjektstyring/økonomi, lønn → docs/seo/keywords-norway-funksjoner-2026-11.md
-- [ ] .no: волна страниц функций (5–6) + /nb/priser по замеру → критик → деплой
+- [x] .no: волна страниц функций — live 01.11: /nb/funksjoner/ks-system, timeregistrering-app, prosjektstyringsverktoy, bemanningsplan (критик ✓, Request Indexing ✓); hms-system и tilbudsprogram пропущены (нет функций)
   - [x] Волна 3 (ветка seo/no-wave3, не задеплоено): общий шаблон FunktionPageView (sv HTML без изменений), маршрут /nb/funksjoner/<slug>, хаб остаётся /nb/funktioner (/nb/funksjoner → 301 на хаб)
   - [x] ks-system (egenkontroll, sjekklister, dagbok) — факты по коду, честная таблица «нет»
   - [x] timeregistrering-app; blog/timeregistrering-app-bygg → 301; 301 волны 2 перенаправлены сразу на новую страницу; hreflang ↔ sv tidrapporteringssystem-bygg
@@ -31,3 +31,6 @@
   - [ ] hms-system — НЕ сделано: в продукте нет avviksmelding с ответственным/статусом, нет risikovurdering/SJA → вернуться, когда появится модуль avvik
   - [ ] tilbudsprogram — НЕ сделано: PDF оффера и счёта только по-шведски, счёт печатает SEK/Bankgiro → сначала локализовать PDF (nb, NOK, kontonummer/KID)
   - [ ] Критик → проверка владельца → деплой; Request Indexing 4 новых URL
+- [ ] Решение владельца: норвежские PDF tilbud/faktura (NOK, kontonummer, KID) → открывает страницу tilbudsprogram
+- [ ] Решение владельца: модуль avvik для HMS → открывает страницу hms-system
+- [ ] nb-скриншоты приложения для страниц функций (сейчас шведский UI)

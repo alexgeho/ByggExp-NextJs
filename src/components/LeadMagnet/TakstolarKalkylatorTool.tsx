@@ -102,8 +102,8 @@ export default function TakstolarKalkylatorTool({ locale = 'sv' }: { locale?: Ca
         pdfTitle: 'Takstoler', pdfNote: 'Antall, ikke dimensjonering. Dimensjonering gjøres av konstruktør etter snø- og vindlast.',
         soTrusses: (cc: string) => `Takstoler (c/c ${cc})`, soLabour: 'Arbeid reising av takstoler',
         geoHead: 'Takstolens mål (valgfritt)', span: 'Spennvidde / husbredde (m)', pitch: 'Takvinkel (°)', overhang: 'Takutstikk (mm)',
-        rHeight: 'Mønehøyde over underramme', rTop: 'Overrammens lengde per side (inkl. utstikk)', rArea: 'Takflate, begge sider',
-        geoFine: 'Ren geometri for en symmetrisk saltakstol, målt til rammenes senterlinjer. Trelastdimensjoner, diagonaler og innfesting bestemmes av takstolprodusentens konstruktør.',
+        rHeight: 'Mønehøyde over undergurt', rTop: 'Overgurtens lengde per side (inkl. utstikk)', rArea: 'Takflate, begge sider',
+        geoFine: 'Ren geometri for en symmetrisk saltakstol, målt til gurtenes senterlinjer. Trelastdimensjoner, diagonaler og innfesting bestemmes av takstolprodusentens konstruktør.',
         drawCap: 'Prinsippskisse W-takstol – ikke en konstruksjonstegning', m: 'm', m2: 'm²',
       }
     : {

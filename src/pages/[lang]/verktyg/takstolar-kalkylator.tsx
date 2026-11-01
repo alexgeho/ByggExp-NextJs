@@ -85,7 +85,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     intro:
       'Beregn antall takstoler raskt: fyll inn takets lengde og senteravstand (c/c), så gjør kalkulatoren takstolberegningen for deg – gratis og uten konto.',
     previewAlt: 'Forhåndsvisning av takstoler',
-    previewCaption: 'Slik ser takstoler ut',
+    previewCaption: 'Slik ser kalkulatoren ut',
     sections: [
       { id: 'sa-raknar-du', heading: 'Slik beregner du antall takstoler', body: (<><p>Beregningen av takstoler bygger på en enkel formel: <strong>antall = takets lengde / c/c + 1</strong>. Den ekstra takstolen er for at begge gavlene også skal få en takstol.</p><ol><li>Mål takets lengde i meter.</li><li>Angi senteravstand (c/c) i mm.</li><li>Se antall takstoler med en gang.</li></ol></>) },
       { id: 'exempel', heading: 'Eksempel på takstolberegning', body: (<><p>Et tak som er 10 meter langt med c/c 1200 mm: 10 000 / 1200 = 8,33, rundet opp til 9, pluss 1 = <strong>10 takstoler</strong>. Med tettere c/c 600 mm blir det i stedet cirka 18 takstoler for samme tak – senteravstanden styrer altså både antall og materialforbruk.</p></>) },

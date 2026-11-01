@@ -89,7 +89,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     faq: [
       { question: 'Hvordan regner jeg antall stendere?', answer: 'Antall stående stendere = lengde ÷ senteravstand (c/c) + 1. En 6 m vegg med c/c 600 mm gir 6000 ÷ 600 + 1 = 11 stendere.' },
       { question: 'Hvilken c/c-avstand skal jeg ha?', answer: 'Vanlige avstander er 450 eller 600 mm avhengig av plate- og isolasjonsmål samt krav. 600 mm er vanligst for innervegger.' },
-      { question: 'Er svill og toppsvill inkludert?', answer: 'Nei, kalkulatoren regner de stående stenderne. Legg til trelast for svill (nederst) og toppsvill (øverst) separat.' },
+      { question: 'Er svill og toppsvill inkludert?', answer: 'Ja – kalkulatoren regner også svill og toppsvill (2 × veggens lengde).' },
       { question: 'Koster det noe?', answer: 'Nei, kalkulatoren er gratis og krever ingen konto.' },
     ],
     ctaHeading: 'Regn ut materialer og tid i ByggExp',

@@ -8,7 +8,7 @@ import { NO_SITE_URL } from './site-url';
 // Note: Norwegians search "timeregistrering", NOT "timeføring" (no data).
 
 const P_TIMEREGISTRERING_APP_BYGG_HTML = `
-<p>Papirlapper, timer som skrives ned fredag ettermiddag og en administrasjon som jager grunnlag – manuell timeregistrering koster byggefirmaer både penger og tid. En timeregistrering-app løser det: de ansatte stempler inn og ut på mobilen, timene havner automatisk på riktig prosjekt, og de attesterte timene blir grunnlag for lønn og faktura. Her går vi gjennom hva en timeregistrering-app for bygg bør klare – og hvorfor de fleste velger en enkel løsning i mobilen.</p>
+<p>Papirlapper, timer som skrives ned fredag ettermiddag og en administrasjon som jager etter timelister – manuell timeregistrering koster byggefirmaer både penger og tid. En timeregistrering-app løser det: de ansatte stempler inn og ut på mobilen, timene havner automatisk på riktig prosjekt, og de attesterte timene blir grunnlag for lønn og faktura. Her går vi gjennom hva en timeregistrering-app for bygg bør klare – og hvorfor de fleste velger en enkel løsning i mobilen.</p>
 <p>Vil du se hvordan det fungerer? <a href="/nb/blog/gratis-timeregistrering-app">Les om gratis timeregistrering-app</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: digital timeregistrering – stemple inn, timer på prosjekt, gjennomgå, eksport til lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Flyten: stemple inn på bygget, timene havner på riktig prosjekt, gjennomgå i webadmin og eksporter til lønn og faktura.</figcaption></figure>
 

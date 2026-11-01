@@ -98,10 +98,14 @@ const nextConfig = {
       { source: "/nb/blog/hms-kort-pris", destination: "https://byggexp.no/nb/blog/hms-kort-bygg", statusCode: 301 },
       { source: "/nb/blog/bestille-hms-kort", destination: "https://byggexp.no/nb/blog/hms-kort-bygg", statusCode: 301 },
       { source: "/nb/blog/byggekort", destination: "https://byggexp.no/nb/blog/hms-kort-bygg", statusCode: 301 },
-      // Thin timeregistrering pages merged into the product pillar.
-      { source: "/nb/blog/gratis-timeregistrering-app", destination: "https://byggexp.no/nb/blog/timeregistrering-app-bygg", statusCode: 301 },
-      { source: "/nb/blog/stemplingsur-app", destination: "https://byggexp.no/nb/blog/timeregistrering-app-bygg", statusCode: 301 },
-      { source: "/nb/blog/timeregistreringssystem-bygg", destination: "https://byggexp.no/nb/blog/timeregistrering-app-bygg", statusCode: 301 },
+      // Thin timeregistrering pages merged into the product pillar. Wave 3 (2026-11-01):
+      // the pillar itself moved to the feature page, so these point straight there (no chain).
+      { source: "/nb/blog/gratis-timeregistrering-app", destination: "https://byggexp.no/nb/funksjoner/timeregistrering-app", statusCode: 301 },
+      { source: "/nb/blog/stemplingsur-app", destination: "https://byggexp.no/nb/funksjoner/timeregistrering-app", statusCode: 301 },
+      { source: "/nb/blog/timeregistreringssystem-bygg", destination: "https://byggexp.no/nb/funksjoner/timeregistrering-app", statusCode: 301 },
+      // byggexp.no wave 3 (2026-11-01): blog posts with the same commercial intent as a
+      // new feature page (architecture rule A) → 301 to it on launch day.
+      { source: "/nb/blog/timeregistrering-app-bygg", destination: "https://byggexp.no/nb/funksjoner/timeregistrering-app", statusCode: 301 },
       // The CSV template was replaced by a real Excel file (scripts/gen-timeliste-mal.py).
       { source: "/nb/maler/timeliste-mal.csv", destination: "https://byggexp.no/nb/maler/timeliste-mal.xlsx", statusCode: 301 },
       // Junk URL from an early test post. It has no target, but leaving it 404 would

@@ -22,12 +22,14 @@
 // - TEK17 (tekniske krav som egenkontrollen dokumenterer):
 //   https://lovdata.no/forskrift/2017-06-19-840
 
-import { PROJEKT_PRICE } from '../components/Pricing/Pricing';
+import {
+  EXTRA_USER_PRICE,
+  KOMPLETT_PRICE,
+  PROJEKT_PRICE,
+} from '../components/Pricing/Pricing';
 import { localeOrigin } from '../lib/seo';
 import { ext, illu, labelTables, type FunktionPage } from './funktion-pages';
 
-const KOMPLETT_PRICE = 990;
-const EXTRA_USER_PRICE = 69;
 
 const LOV_AML = 'https://lovdata.no/lov/2005-06-17-62';
 const LOV_IK = 'https://lovdata.no/forskrift/1996-12-06-1127';
@@ -103,7 +105,7 @@ const KS_SYSTEM: FunksjonPageNb = {
 <li><strong>Egenkontroll</strong> underveis: punktene sjekkes av, med dato, navn og gjerne bilde.</li>
 <li><strong>Avvik</strong> som blir registrert og fulgt opp til de er lukket.</li>
 </ul>
-<p>KS er ikke det samme som HMS. HMS handler om helse, miljø og sikkerhet for de som jobber, og følger av arbeidsmiljøloven og ${ext(LOV_IK, 'internkontrollforskriften')}. Mange firma kaller det samlet for et HMS- og KS-system, og vernerunden kan fint gjennomføres som en egen sjekkliste.</p>
+<p>KS er ikke det samme som HMS. HMS handler om helse, miljø og sikkerhet for dem som jobber, og følger av arbeidsmiljøloven og ${ext(LOV_IK, 'internkontrollforskriften')}. Mange firma kaller det samlet for et HMS- og KS-system, og vernerunden kan fint gjennomføres som en egen sjekkliste.</p>
 
 ${illu('feat-uppgifter-morgonmote', 'Tre bygningsarbeidere med hjelm står ved en stor sjekkliste med haker mens en av dem peker på listen')}
 
@@ -245,7 +247,7 @@ ${illu('projekthantering-overlamning', 'Prosjektleder med hjelm gir nøklene til
     {
       question: 'Er KS og HMS det samme?',
       answer:
-        'Nei. KS handler om at bygget blir riktig, HMS om sikkerheten og helsen til de som jobber. Mange firma samler dem i ett system. I ByggExp kan for eksempel en vernerunde kjøres som en egen sjekkliste.',
+        'Nei. KS handler om at bygget blir riktig, HMS om sikkerheten og helsen til dem som jobber. Mange firma samler dem i ett system. I ByggExp kan for eksempel en vernerunde kjøres som en egen sjekkliste.',
     },
     {
       question: 'Hva koster KS-systemet i ByggExp?',
@@ -278,8 +280,8 @@ const TIMEREGISTRERING: FunksjonPageNb = {
   heroCheck: 'iPhone og Android',
   title: 'Timeregistrering app for bygg – GPS og attest | ByggExp',
   description:
-    'Timeregistrering-app for byggefirma: stemple inn med GPS, timer per prosjekt, attest og eksport til PDF, Excel og lønn. Alle funksjoner gratis i 14 dager.',
-  name: 'Timeregistrering-app',
+    'Timeregistreringsapp for byggefirma: stemple inn med GPS, timer per prosjekt, attest og eksport til PDF, Excel og lønn. Alle funksjoner gratis i 14 dager.',
+  name: 'Timeregistreringsapp',
   h1: 'Timeregistrering app for bygg.',
   h1Accent: 'Fra stempling til lønn.',
   lead: 'Riktige timer på riktig prosjekt, attestert og klare for lønn og faktura.',
@@ -305,13 +307,13 @@ const TIMEREGISTRERING: FunksjonPageNb = {
     {
       title: 'Attester og eksporter',
       text: 'Godkjenn øktene og ta ut grunnlaget.',
-      bullets: ['Timeliste som PDF og Excel', 'Lønnsgrunnlag som CSV', 'Faktura fra timene'],
+      bullets: ['Timeliste som PDF og Excel', 'Lønnsgrunnlag som CSV', 'Faktura fra timene (Full kontroll)'],
       img: '/landing/features/3personal-1200.webp',
       alt: 'Oversikt i ByggExp over hvem som er på jobb nå, per prosjekt',
     },
   ],
   body: `
-<p>En timeregistrering-app for bygg skal få riktige timer inn på riktig prosjekt, uten at noen sitter og fører over lapper på fredag. I ByggExp stempler de ansatte inn og ut i mobilen, timetypen velges på økten, og arbeidslederen attesterer i webadmin. Etterpå går grunnlaget videre til lønn, faktura og prosjektøkonomi. Her ser du hvordan flyten fungerer, hva loven krever av timeføringen, og hva du bør sjekke før du velger app.</p>
+<p>En timeregistreringsapp for bygg skal få riktige timer inn på riktig prosjekt, uten at noen sitter og fører over lapper på fredag. I ByggExp stempler de ansatte inn og ut i mobilen, timetypen velges på økten, og arbeidslederen attesterer i webadmin. Etterpå går grunnlaget videre til lønn, faktura og prosjektøkonomi. Her ser du hvordan flyten fungerer, hva loven krever av timeføringen, og hva du bør sjekke før du velger app.</p>
 
 <h2>Slik fungerer timeregistreringen i ByggExp</h2>
 <ol>
@@ -327,14 +329,14 @@ const TIMEREGISTRERING: FunksjonPageNb = {
 ${illu('stampelklocka-projektbyte', 'Bygningsarbeider med hjelm går ut av en servicebil ved et hus med stillas og ser på mobilen, med en blå kartmarkør over')}
 
 <h2>Hva loven krever av timeføringen</h2>
-<p>${ext(LOV_AML, 'Arbeidsmiljøloven')} § 10-7 krever at det finnes en oversikt over hvor mye den enkelte arbeidstaker har arbeidet. Oversikten skal være tilgjengelig for arbeidstakeren, verneombudet og Arbeidstilsynet. En timeliste på papir oppfyller kravet i teorien, men bare hvis den faktisk blir fylt ut, samlet inn og tatt vare på.</p>
-<p>Overtid har egne grenser. Etter § 10-6 kan overtid som hovedregel ikke overstige 10 timer per uke, 25 timer over fire uker og 200 timer i løpet av et år, og det skal betales et tillegg på minst 40 prosent. Tariffavtalen dere følger kan ha egne regler for overtid og ubekvem arbeidstid, så sjekk alltid den gjeldende avtalen.</p>
+<p>${ext(LOV_AML, 'Arbeidsmiljøloven')} § 10-7 krever at det finnes en oversikt over hvor mye den enkelte arbeidstaker har arbeidet. Oversikten skal være tilgjengelig for Arbeidstilsynet og arbeidstakernes tillitsvalgte. En timeliste på papir oppfyller kravet i teorien, men bare hvis den faktisk blir fylt ut, samlet inn og tatt vare på.</p>
+<p>Overtid har egne grenser. Etter § 10-6 kan overtid som hovedregel ikke overstige ti timer i løpet av sju dager, 25 timer i fire sammenhengende uker og 200 timer innenfor en periode på 52 uker, og det skal betales et tillegg på minst 40 prosent. Tariffavtalen dere følger kan ha egne regler for overtid og ubekvem arbeidstid, så sjekk alltid den gjeldende avtalen.</p>
 <p>I ByggExp velger den ansatte timetype for hver økt. Systemet regner ikke ut tariffavtalens regler automatisk. Det betyr at dere selv avgjør hva som er overtid, for eksempel når arbeidslederen har pålagt den, og at attesten blir kontrollpunktet. Når timetypen ligger på hver økt, ser du raskt hvem som nærmer seg grensene.</p>
 
 ${illu('tidrapporteringssystem-kvallsgjutning', 'Betongbil støper en plate i kveldslys under en arbeidslampe, en bygningsarbeider trekker av betongen og en arbeidsleder ser på mobilen')}
 
 <h2>GPS eller manuelt – dere velger</h2>
-<p>GPS gir arbeidslederen trygghet for at innstemplingen skjer på bygget og ikke hjemme. Samtidig er posisjon en personopplysning, og de ansatte skal vite hva som registreres og hvorfor. I ByggExp brukes posisjonen ved inn- og utstempling og for å sette økten på pause når noen forlater prosjektområdet. Vil en ansatt ikke dele posisjon, fører han timene manuelt i appen.</p>
+<p>GPS gir arbeidslederen trygghet for at innstemplingen skjer på bygget og ikke hjemme. Samtidig er posisjon en personopplysning, og de ansatte skal vite hva som registreres og hvorfor. I ByggExp brukes posisjonen ved inn- og utstempling og for å sette økten på pause når noen forlater prosjektområdet. Vil en ansatt ikke dele posisjon, fører vedkommende timene manuelt i appen.</p>
 <p>I timeoversikten ser du planlagte timer, GPS-timer og manuelle timer side om side for hver ansatt og dag. Avvik mellom plan og faktisk tid blir tydelige før du attesterer, ikke når lønnen allerede er utbetalt.</p>
 
 ${illu('tidrapporteringssystem-attest', 'Kvinne ved skrivebordet arbeider på en datamaskin som viser en ukeplan og en klokke')}
@@ -350,7 +352,7 @@ ${illu('tidrapporteringssystem-attest', 'Kvinne ved skrivebordet arbeider på en
 <h2>Timeliste i Excel eller app?</h2>
 <p>Mange starter med en timeliste i Excel, og for to–tre personer på ett prosjekt kan det holde. Det blir tungt når flere lag jobber på flere bygg samtidig:</p>
 <div class="article-table"><table>
-<thead><tr><th>Behov</th><th>Timeliste i Excel</th><th>Timeregistrering-app</th></tr></thead>
+<thead><tr><th>Behov</th><th>Timeliste i Excel</th><th>Timeregistreringsapp</th></tr></thead>
 <tbody>
 <tr><td><strong>Timer på riktig prosjekt</strong></td><td>Fylles ut i etterkant, ofte etter hukommelsen</td><td>Registreres når økten starter</td></tr>
 <tr><td><strong>Innsamling</strong></td><td>Ark og bilder i SMS hver uke</td><td>Timene ligger i systemet med en gang</td></tr>
@@ -389,17 +391,17 @@ ${illu('tidrapporteringssystem-attest', 'Kvinne ved skrivebordet arbeider på en
 <h2>Timeregistrering for små bedrifter</h2>
 <p>For et firma med tre–fem ansatte er gevinsten ofte størst. Det er gjerne daglig leder som både jobber på bygget, samler inn timelister og lager lønn og faktura. Når timene ligger i systemet med en gang, blir fredagen kortere: du går gjennom uken, attesterer og tar ut grunnlaget. Kontroll på jobben dekker 10 brukere, så de fleste små firma betaler bare grunnprisen.</p>
 
-<h2>Hva koster en timeregistrering-app?</h2>
+<h2>Hva koster en timeregistreringsapp?</h2>
 <p>Timeregistrering, attest og eksport er med i pakken Kontroll på jobben for ${PROJEKT_PRICE} NOK per måned eks. mva., med 10 brukere inkludert. Ekstra brukere koster ${EXTRA_USER_PRICE} NOK per måned. Vil du også fakturere timene og se prosjektøkonomien, velger du Full kontroll for ${KOMPLETT_PRICE} NOK. Du prøver alle funksjoner gratis i 14 dager, uten oppstartsavgift og uten bindingstid.</p>
 `.trim(),
   faq: [
     {
-      question: 'Hva er en timeregistrering-app?',
+      question: 'Hva er en timeregistreringsapp?',
       answer:
         'En app der de ansatte registrerer arbeidstid i mobilen ved å sjekke inn og ut på bygget. Timene havner på riktig prosjekt og blir, når de er attestert, grunnlag for lønn og faktura.',
     },
     {
-      question: 'Finnes det en gratis timeregistrering-app?',
+      question: 'Finnes det en gratis timeregistreringsapp?',
       answer:
         'Du kan prøve ByggExp med alle funksjoner gratis i 14 dager, uten startavgift og uten bindingstid. Vil du heller bruke papir eller Excel, er timeliste-malen vår gratis.',
     },
@@ -515,7 +517,7 @@ ${illu('projekthantering-ritning', 'Prosjektleder og bygningsarbeider med hjelm 
 <p>Oppgaver opprettes per prosjekt med ansvarlig, frist og prioritet. Oppgaven kan gjentas, for eksempel hver dag eller hver ukedag, og appen minner den ansvarlige på til den er gjort. Forfalte oppgaver kan sendes videre til sjefen. De ansatte ser oppgavene sine og prosjektets tidsplan i appen, og legger bilder og dokumenter rett på prosjektet.</p>
 
 <h2>Fra timer til prosjektøkonomi</h2>
-<p>Det er her prosjektstyringen blir konkret. Timene de ansatte fører i <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-appen</a> havner på prosjektet. På prosjektets økonomiside angir du kostpris og utfakturert pris per time, og ByggExp regner ut:</p>
+<p>Det er her prosjektstyringen blir konkret. Timene de ansatte fører i <a href="/nb/funksjoner/timeregistrering-app">timeregistreringsappen</a> havner på prosjektet. På prosjektets økonomiside angir du kostpris og timepris til kunden, og ByggExp regner ut:</p>
 <ul>
 <li><strong>Arbeid</strong> – førte timer × kostpris, timer × fakturert pris og margin på arbeidet.</li>
 <li><strong>Kostnader</strong> – materiell, bestilt materiell, leverandørfakturaer, utlegg og godkjente tillegg.</li>
@@ -528,7 +530,7 @@ ${illu('feat-ekonomi-veckoavstamning', 'Bygningsarbeider med hjelm står foran e
 <h2>Kalkyleprogram for bygg: prosjektkalkylen</h2>
 <p>Prosjektkalkylen er et regneark laget for byggefirma. Du setter inntekter mot kostnader og ser med en gang hva som blir igjen:</p>
 <ol>
-<li><strong>Inntektssiden.</strong> Tabeller for inntekter, med MVA per tabell eller rad.</li>
+<li><strong>Inntektssiden.</strong> Tabeller for inntekter.</li>
 <li><strong>Kostnadssiden.</strong> Tabeller for materiell, lønn og andre kostnader, med de kolonnene du selv vil ha.</li>
 <li><strong>Sammendraget.</strong> Kostnader mot fortjeneste og margin i prosent.</li>
 </ol>
@@ -556,7 +558,7 @@ ${illu('offert-kalkyl-marginal', 'Person ved et skrivebord foran en skjerm med e
 <ol>
 <li><strong>Lag prosjektkalkylen.</strong> Regn på inntekter og kostnader, og lagre den som mal hvis jobben ligner på tidligere jobber.</li>
 <li><strong>Opprett prosjektet</strong> med kunde og adresse, og knytt kalkylen til det.</li>
-<li><strong>Sett timepriser</strong> på prosjektets økonomiside: kostpris og utfakturert pris per time.</li>
+<li><strong>Sett timepriser</strong> på prosjektets økonomiside: kostpris og timepris til kunden.</li>
 <li><strong>Planlegg i Gantt</strong> og fordel laget i Bemanning.</li>
 <li><strong>Opprett oppgavene</strong> med ansvarlig og frist, og last opp tegninger og dokumenter.</li>
 <li><strong>La laget føre timer og ta bilder</strong> i appen fra første dag.</li>
@@ -707,7 +709,7 @@ ${illu('resursplanering-gantt', 'Planlegger peker på en stor tavle med et Gantt
 <li><strong>Fordel dag for dag i Bemanning.</strong> Du klikker i ruten for en ansatt og en dag og velger prosjekt. Er noen booket over 8 timer på en dag, vises et varsel.</li>
 <li><strong>Registrer fravær.</strong> Ferie, sykdom og fri legges inn som fravær. Når det er godkjent, vises det i bemanningen, så du ikke planlegger med folk som ikke er der.</li>
 <li><strong>Se hva som er endret.</strong> Endringsloggen viser hva som ble flyttet og når.</li>
-<li><strong>Sammenlign med faktiske timer.</strong> Timene laget fører i <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-appen</a> ligger i samme system, så du ser om planen holdt.</li>
+<li><strong>Sammenlign med faktiske timer.</strong> Timene laget fører i <a href="/nb/funksjoner/timeregistrering-app">timeregistreringsappen</a> ligger i samme system, så du ser om planen holdt.</li>
 </ol>
 
 ${illu('resursplanering-franvaro', 'Prosjektleder ved skrivebordet foran en stor kalender, en kollega går på ferie med koffert og en annen med hjelm kommer inn')}
@@ -745,7 +747,7 @@ ${illu('resursplanering-franvaro', 'Prosjektleder ved skrivebordet foran en stor
 ${illu('schemalaggning-lag', 'Tre smilende bygningsarbeidere med hjelm, en med drill, en med en stor mobil med blå søyler og en med vater')}
 
 <h2>Eksempel: bemanningsplan for tre prosjekter</h2>
-<p>Si at firmaet har åtte tømrere og tre prosjekter de neste fire ukene: et tilbygg som skal tettes, et bad som skal rehabiliteres og en garasje som skal starte i uke tre. Slik kan planen bygges opp:</p>
+<p>La oss si at firmaet har åtte tømrere og tre prosjekter de neste fire ukene: et tilbygg som skal tettes, et bad som skal rehabiliteres og en garasje som skal starte i uke tre. Slik kan planen bygges opp:</p>
 <ol>
 <li><strong>Tilbygget</strong> trenger fire mann i to uker til tett bygg, deretter to mann til innvendig arbeid.</li>
 <li><strong>Badet</strong> trenger to mann i tre uker, med pause de dagene rørleggeren og flisleggeren er der.</li>
@@ -825,7 +827,7 @@ ${illu('schemalaggning-lag', 'Tre smilende bygningsarbeidere med hjelm, en med d
     { href: '/nb/blog/timeliste-mal', label: 'Gratis timeliste-mal i Excel' },
     { href: '/nb/blog/dagsplanering-och-planeringsmoten', label: 'Dagsplanlegging og planleggingsmøter' },
     { href: '/nb/blog/hantera-uppgifter-i-byggprojekt', label: 'Oppgaver i byggeprosjekter' },
-    { href: '/nb/funksjoner/timeregistrering-app', label: 'Timeregistrering-app' },
+    { href: '/nb/funksjoner/timeregistrering-app', label: 'Timeregistreringsapp' },
     { href: '/nb/funksjoner/prosjektstyringsverktoy', label: 'Prosjektstyringsverktøy for bygg' },
   ],
 };

@@ -8,8 +8,11 @@ export const FAKTURA_PRICE = 299;
 const INCLUDED_USERS = 10;
 // Exported: feature pages' SoftwareApplication schema quotes "Koll på jobbet".
 export const PROJEKT_PRICE = 690;
-const PROJEKT = { base: PROJEKT_PRICE, extra: 69 };
-const KOMPLETT = { base: 990, extra: 69 };
+// Exported: nb feature pages quote these in their copy (content/funksjon-pages-nb.ts).
+export const KOMPLETT_PRICE = 990;
+export const EXTRA_USER_PRICE = 69;
+const PROJEKT = { base: PROJEKT_PRICE, extra: EXTRA_USER_PRICE };
+const KOMPLETT = { base: KOMPLETT_PRICE, extra: EXTRA_USER_PRICE };
 const ADDON_PRICE = 199;
 const YEARLY_DISCOUNT = 0.15;
 

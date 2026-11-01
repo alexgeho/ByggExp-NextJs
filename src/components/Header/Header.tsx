@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { languages, selectableLanguages } from "../../locales/languages";
-import { BLOG_CATEGORIES } from "../../lib/blog-categories";
+import { BLOG_CATEGORIES, categoryLabel } from "../../lib/blog-categories";
 import { flushUrlState } from "../../lib/useUrlState";
 import type { HeaderProps } from "../../types/header";
 
@@ -270,7 +270,7 @@ function Header({ headerT }: HeaderProps) {
                             className="nav-dropdown-cat-dot"
                             style={{ background: cat.color }}
                           />
-                          {cat.label}
+                          {categoryLabel(cat, lang)}
                         </Link>
                       ))}
                     </div>

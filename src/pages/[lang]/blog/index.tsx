@@ -14,6 +14,8 @@ import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { VERKTYG_GROUPS } from '../../../content/verktyg-list';
 import {
   BLOG_CATEGORIES,
+  allCategoriesLabel,
+  categoryLabel,
   categoryForTag,
   type BlogCategoryKey,
 } from '../../../lib/blog-categories';
@@ -216,7 +218,7 @@ export default function BlogIndexPage({
                 aria-pressed={activeCategory === 'alla'}
                 onClick={() => setActiveCategory('alla')}
               >
-                Alla
+                {allCategoriesLabel(lang)}
               </button>
               {presentCategories.map((cat) => (
                 <button
@@ -227,7 +229,7 @@ export default function BlogIndexPage({
                   style={{ '--chip-color': cat.color } as CSSProperties}
                   onClick={() => setActiveCategory(cat.key)}
                 >
-                  {cat.label}
+                  {categoryLabel(cat, lang)}
                 </button>
               ))}
             </div>

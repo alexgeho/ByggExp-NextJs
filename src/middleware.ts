@@ -62,8 +62,11 @@ export function middleware(req: NextRequest) {
     // `/[lang]/embed/[slug]` strips down to `/sv/embed`, which has no index page
     // — point it at the tools hub the widgets belong to instead.
     if (rest.length === 1 && rest[0] === 'embed') rest[0] = 'verktyg';
+    // On byggexp.no the target is the nb page (a /sv target would bounce again
+    // to byggexp.se).
+    const locale = bare(req.headers.get('host') || '') === NO_HOST && NB_LIVE ? 'nb' : 'sv';
     const to = new URL(url);
-    to.pathname = `/sv${rest.length ? `/${rest.join('/')}` : ''}`;
+    to.pathname = `/${locale}${rest.length ? `/${rest.join('/')}` : ''}`;
     return NextResponse.redirect(to, 301);
   }
 

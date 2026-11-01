@@ -74,9 +74,9 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
     LOCALE_STATIC_PATHS.forEach((path) => {
       urls.push({ loc: `${origin}/${lang}/${path}` });
     });
-    // Legal pages: only the locales that have real content (sv + en). On
-    // byggexp.no the nb legal pages are separate, so skip legal there entirely.
-    if (svEnLocales.includes(lang as (typeof svEnLocales)[number])) {
+    // Legal pages: only the locales that have real content (sv + en + nb). nb
+    // has its own translated, self-canonical legal/trust pages on byggexp.no.
+    if (lang === 'nb' || svEnLocales.includes(lang as (typeof svEnLocales)[number])) {
       LEGAL_STATIC_PATHS.forEach((path) => {
         urls.push({ loc: `${origin}/${lang}/${path}` });
       });

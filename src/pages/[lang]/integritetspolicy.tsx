@@ -112,6 +112,102 @@ export default function PrivacyPolicyPage({
     );
   }
 
+  if (lang === "nb") {
+    return (
+      <LegalDocument title="Personvernerklæring" updated="2026-09-26" lang="nb" contentLocales={svEnLocales}>
+        <p>
+          Denne erklæringen beskriver hvordan Real Marketing s. r. o. («vi»), IČO 53551958,
+          behandler personopplysninger i ByggExp-plattformen. For ansattes
+          opplysninger opptrer vi normalt som databehandler for kundeforetaket
+          (arbeidsgiveren), som er behandlingsansvarlig.
+        </p>
+
+        <h2>Hvilke opplysninger vi behandler</h2>
+        <ul>
+          <li>Kontoopplysninger: navn, e-post, telefon, rolle, profilbilde.</li>
+          <li>
+            Ansettelsesrelatert: yrke, timepris, personnummer (for fakturering
+            og lønn), sertifikater.
+          </li>
+          <li>
+            Tid og oppmøte: arbeidsøkter, inn-/utsjekking, timer,
+            personalliste.
+          </li>
+          <li>
+            Posisjonsdata (GPS): posisjonen din leses midlertidig når du starter
+            en arbeidsøkt, for å kontrollere at du er på arbeidsplassen.
+            Posisjonen lagres ikke som koordinater hos oss – bare prosjektets
+            adresse lagres.
+          </li>
+          <li>
+            Prosjekter: oppgaver, dagbok, bilder, dokumenter. Økonomi: fakturaer,
+            utlegg, lønn.
+          </li>
+        </ul>
+
+        <h2>Formål og rettslig grunnlag</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Formål</th>
+              <th>Rettslig grunnlag</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Levere tjenesten</td>
+              <td>Avtale</td>
+            </tr>
+            <tr>
+              <td>Tid/oppmøte, personalliste</td>
+              <td>Rettslig forpliktelse + berettiget interesse</td>
+            </tr>
+            <tr>
+              <td>GPS ved arbeidsøkt</td>
+              <td>Berettiget interesse (etter interesseavveining)</td>
+            </tr>
+            <tr>
+              <td>Fakturering, lønn, regnskap</td>
+              <td>Rettslig forpliktelse</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Lagringstid</h2>
+        <p>
+          GPS-posisjon brukes bare midlertidig (When-In-Use) ved arbeidsøkter
+          for oppmøtekontroll og lagres ikke som koordinater hos oss – bare
+          prosjektets adresse lagres. Personallisten lagres i minst 2 år,
+          regnskap/fakturaer i 7 år. Øvrige opplysninger lagres så lenge
+          kunde-/arbeidsforholdet varer, og slettes deretter.
+        </p>
+
+        <h2>Mottakere og overføringer</h2>
+        <p>
+          Vi bruker underleverandører (underdatabehandlere) til drift, betaling,
+          e-post og AI-funksjoner. Overføring til tredjeland skjer bare med et
+          gyldig overføringsgrunnlag (EUs standardkontraktsbestemmelser /
+          EU-US Data Privacy Framework).
+        </p>
+
+        <h2>Dine rettigheter</h2>
+        <p>
+          Du har rett til innsyn, retting, sletting, begrensning,
+          dataportabilitet og til å protestere. I plattformen kan den
+          behandlingsansvarlige eksportere og slette en brukers opplysninger.
+          Kontakt support@byggexp.se eller arbeidsgiveren din. Klager kan rettes
+          til den svenske tilsynsmyndigheten Integritetsskyddsmyndigheten (IMY).
+        </p>
+
+        <h2>Kontakt</h2>
+        <p>
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Kontaktadresse i Sverige: c/o Alexander Gerhard, Ekbacksvägen 32, 168 69 Bromma, Sverige.
+          E-post: support@byggexp.se.
+        </p>
+      </LegalDocument>
+    );
+  }
+
   return (
     <LegalDocument title="Privacy Policy" updated="2026-09-26" lang="en" contentLocales={svEnLocales}>
       <p>

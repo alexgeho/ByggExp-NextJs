@@ -16,3 +16,6 @@
 - [ ] Через 4 недели (≈29.11): GSC .no — позиции pillar HMS-kort / timeregistrering / mannskapsliste; затем продуктовые лендинги nb
 - [x] Request Indexing в GSC (01.11, Chrome): /nb, hms-kort-bygg, timeregistrering-app-bygg, mannskapsliste-byggeplass, prosjektstyring-bygg, timeliste-mal
 - [x] Цены на .no в NOK (владелец 01.11): те же цифры 299/690/990, +69, 199; schema NOK на nb
+- [x] Stripe NOK (01.11): Faktura мес/год, Komplett мес/год, Projekt год, Integrationer мес/год — добавлен NOK (те же цифры); Projekt мес — новый price_1UWzTHAzcJ4f5bxIpGqcufEE (SEK+NOK), старый заблокирован Stripe
+- [ ] GH secret STRIPE_PRICE_PROJEKT_MONTHLY → price_1UWzTHAzcJ4f5bxIpGqcufEE + redeploy API (auto mode блокирует — команда владельцу)
+- [ ] Расхождение: Komplett в Stripe +119 kr/польз. (год 1214), на сайте и в product-facts +69 — решение владельца

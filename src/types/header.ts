@@ -18,4 +18,6 @@ export type HeaderProps = {
     searchHint: string;
     searchNoResults: string;
   };
+  /** Overrides the /[lang]/ route segment (pages without it, e.g. _error). */
+  lang?: string;
 };

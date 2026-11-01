@@ -11,7 +11,7 @@ const burger = "/landing/header/burger.svg";
 const close = "/landing/header/close.svg";
 const down = "/landing/header/down.svg";
 
-function Header({ headerT }: HeaderProps) {
+function Header({ headerT, lang: langProp }: HeaderProps) {
   /* BURGER NAV */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -29,7 +29,9 @@ function Header({ headerT }: HeaderProps) {
   const router = useRouter();
   const langParam = router.query.lang;
   const lang =
-    typeof langParam === "string" && langParam in languages ? langParam : "sv";
+    langProp && langProp in languages
+      ? langProp
+      : typeof langParam === "string" && langParam in languages ? langParam : "sv";
   const currentLanguage = languages[lang as keyof typeof languages];
 
   const [isOpen, setIsOpen] = useState(false);

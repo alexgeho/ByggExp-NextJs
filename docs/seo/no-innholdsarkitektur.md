@@ -16,6 +16,8 @@
 
 ## 2. Хабы (pillar'ы) → споки
 
+> **2026-11-01 волна 3:** коммерческий слой A вынесен на страницы функций /nb/funksjoner/* (ks-system, timeregistrering-app, prosjektstyringsverktoy, bemanningsplan; хаб /nb/funktioner). blog/timeregistrering-app-bygg и blog/prosjektstyring-bygg → 301 на них; споки блога линкуют вверх на функции. hms-system и tilbudsprogram отложены (нет функций в продукте, см. docs/TASKS.md).
+
 ```mermaid
 graph TD
   %% 2026-11-01 wave 2: 6 thin pages merged into the two pillars (301, next.config.mjs)

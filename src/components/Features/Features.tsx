@@ -41,6 +41,15 @@ const FEATURE_LINKS = [
   "loneunderlag-for-byggforetag", // 11 Löner från samma timmar
 ];
 
+// byggexp.no: cards with a commercial feature page link there instead of the
+// feature article (index → /nb/funksjoner/<slug>).
+const NB_FUNKSJON_LINKS: Record<number, string> = {
+  0: "timeregistrering-app", // 1 Automatisk timeføring
+  3: "ks-system", // 4 Fotodokumentasjon (egenkontroll med bilder)
+  4: "bemanningsplan", // 5 Planlegging av prosjekter og ansatte
+  8: "prosjektstyringsverktoy", // 9 Prosjektoversikt / økonomi
+};
+
 function Features({
   lang,
   featuresT1_3,
@@ -283,7 +292,11 @@ function Features({
                   ) && FEATURE_LINKS[index] ? (
                     <a
                       className="step-link"
-                      href={`/${lang}/blog/${FEATURE_LINKS[index]}`}
+                      href={
+                        lang === "nb" && NB_FUNKSJON_LINKS[index]
+                          ? `/nb/funksjoner/${NB_FUNKSJON_LINKS[index]}`
+                          : `/${lang}/blog/${FEATURE_LINKS[index]}`
+                      }
                     >
                       {LEARN_MORE_LABEL[lang] ?? LEARN_MORE_LABEL.en}
                     </a>

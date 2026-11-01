@@ -107,6 +107,9 @@ const nextConfig = {
       // new feature page (architecture rule A) → 301 to it on launch day.
       { source: "/nb/blog/timeregistrering-app-bygg", destination: "https://byggexp.no/nb/funksjoner/timeregistrering-app", statusCode: 301 },
       { source: "/nb/blog/prosjektstyring-bygg", destination: "https://byggexp.no/nb/funksjoner/prosjektstyringsverktoy", statusCode: 301 },
+      // The nb feature hub stays /nb/funktioner (shared route + hreflang with sv/en);
+      // the bare /nb/funksjoner folder lands there instead of 404.
+      { source: "/nb/funksjoner", destination: "https://byggexp.no/nb/funktioner", statusCode: 301 },
       // The CSV template was replaced by a real Excel file (scripts/gen-timeliste-mal.py).
       { source: "/nb/maler/timeliste-mal.csv", destination: "https://byggexp.no/nb/maler/timeliste-mal.xlsx", statusCode: 301 },
       // Junk URL from an early test post. It has no target, but leaving it 404 would

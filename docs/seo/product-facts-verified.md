@@ -37,3 +37,37 @@
 
 ## Flytt (ägaren bekräftat 2026-10-20)
 - YES: vi hjälper kunden att flytta över (data från gamla systemet) gratis.
+
+## Verified for NO feature pages (2026-11-01)
+Code-checked read-only for /nb/funksjoner/* (BE = ByggExp-BackEnd, AD = byggexp-admin, MO = tot-bygghub-mobile-app-ios). Claims beyond the sections above:
+
+### Egenkontroll / sjekklister (KMA module, in Kontroll på jobben + Full kontroll)
+- YES: own checklist templates with control points (text + reference) — AD src/features/kma/components/TemplateForm.jsx:58-77; category kvalitet/miljø/arbeidsmiljø/annet — AD src/features/kma/categories.js:1-28.
+- YES: per-point result Godkjent / Anmerkning / Ikke aktuelt / Ikke besvart — BE src/checklists/schemas/checklist.enums.ts:16-21; web picker AD src/features/kma/components/ChecklistFillForm.jsx:11; app MO src/screens/Egenkontroll/EgenkontrollScreen.jsx:68 (nb labels MO src/i18n/locales/no.json "egenkontroll.result").
+- YES: photos per point — app capture MO EgenkontrollScreen.jsx:83-100, shown MO :528-530 and AD ChecklistFillForm.jsx:212-214.
+- YES (app): method, requirement, measured value + unit, checked by + date, anmerkning → tiltak with done date; anmerkning without done date = open — MO EgenkontrollScreen.jsx:348-404; BE src/checklists/schemas/checklist.schema.ts:93-114.
+- YES (web): date + comment per point — AD ChecklistFillForm.jsx:205,209.
+- YES: signing with typed name + date (admin/company admin/project admin), only when every point is answered — AD src/features/kma/KmaPage.jsx:26-31,160-168; BE checklist.schema.ts:190-197; signed = locked — BE src/checklists/checklists.service.ts:181-183,230-231,313-314,387-390; app sign MO EgenkontrollScreen.jsx:262.
+- YES: Norwegian UI — AD src/i18n/LanguageProvider.jsx:25,35 + messages/nb.js; MO src/i18n/index.js:39 + locales/no.json.
+- YES: project documents upload (web + app) — AD src/features/projects/components/tabs/ProjectDocumentsTab.jsx:26-28; BE src/projects/projects.controller.ts:290; MO Main/Project/ProjectScreen.jsx:186.
+- NO (don't claim on nb): checklist PDF in Norwegian (template is Swedish, BE src/checklists/templates/checklist-pdf.template.ts:124,166); sending a checklist to the customer (no send/public endpoint); EXIF time/GPS shown in UI; starter templates (Swedish texts, AD kma/starterTemplates.js); AI draft from contract on nb (Swedish rules, BE checklists/egenkontroll-ai.logic.ts:40-55).
+
+### HMS / avvik
+- PARTIAL: avvik only as (a) anmerkning + tiltak in egenkontroll (above), (b) free-text deviations field in dagbok — BE src/dagbok/schemas/dagbok.schema.ts:38-40.
+- NO: standalone avviksmelding/avvikssystem with assignee/status/closure, tillbud/incident reporting, risikovurdering/SJA module, KMA plan, HMS-kort reader, mannskapsliste (searched avvik|tillbud|incident|deviation|risk|hms-kort|nfc in all three repos). → /nb/funksjoner/hms-system NOT built.
+
+### Oppgaver
+- YES: due date, priority, recurrence (daily/weekdays/…), reminders until done, overdue reminders escalate to the boss — BE src/tasks/schemas/task.schema.ts:17,70-99; AD src/features/tasks/components/TaskCreateForm.jsx:18-26,105-118; app MO Main/TasksScreen.jsx.
+
+### Prosjektøkonomi / kalkyle (Kontroll på pengene + Full kontroll)
+- YES: project finance tab — cost and bill rate per hour, hours × rate, labour margin, materials, ordered material, purchase invoices, expenses, ÄTA, total cost, invoiced, margin % — AD src/features/projects/components/tabs/ProjectFinanceTab.jsx:126-186; money in company currency (NOK possible) — AD utils/formatCurrency.js:2,48, BE company/schemas/company.schema.ts:112-115.
+- YES: Lønnsomhet per project — AD src/features/reports/ProfitabilityPage.jsx:20-22,119-183; Budsjett plan vs actual per month — AD src/features/budget/BudgetPage.jsx:28-43.
+- YES: prosjektkalkyle linked to a project pulls the project's real invoices (sent/overdue/paid), supplier invoices, expenses and payroll = etterkalkyle — AD src/features/projektkalkyl/ProjektkalkylDetailPage.jsx:107-125; save as template :485; Excel export :490; Excel import :275; read-only share link :170-175; currency per kalkyle :485.
+- Packages — BE src/company/modules.ts: Kontroll på pengene :50-64 (offers, invoices, budget, profitability, projektkalkyl, expenses, payroll — no shifts/schedule); Kontroll på jobben :68-81 (tasks, dagbok, kma, shifts, schedule, bemanning, leave, tools — no economy); Full kontroll :87 (all).
+
+### Tilbud / faktura on nb
+- NO (blocks the nb page): offer PDF Swedish-only with "kr" — BE src/offers/templates/offer-pdf.template.ts:217-219,262-282; invoice PDF Swedish labels, Bankgiro, currency defaults to SEK because toPdfData sets none — BE src/invoices/templates/invoice-pdf.template.ts:333,540,684; BE invoices.service.ts:716. → /nb/funksjoner/tilbudsprogram NOT built until PDFs are localised (nb labels, NOK, Norwegian account/KID).
+- NO: customer accepts the offer online; offer → project. Offer statuses set manually — BE src/offers/schemas/offer.schema.ts:6-11.
+
+### Planlegging (re-confirmed)
+- Planering Gantt — AD src/features/schedule/SchedulePage.jsx:51,486,501-503, endringslogg :475; Bemanning click-to-assign :285, approved leave :109,165, >8 h red :421 (AD src/features/bemanning/BemanningPage.jsx). Worker does NOT see Bemanning in the app — MO hooks/useScheduleData.js:16-20.

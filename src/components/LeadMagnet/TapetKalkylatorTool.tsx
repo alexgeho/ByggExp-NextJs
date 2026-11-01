@@ -4,21 +4,22 @@ import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
-import { fakturaHref, offertHref } from '../../lib/offert';
+import { fakturaHref, offertEnabled, offertHref } from '../../lib/offert';
 import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Wallpaper calculator using the correct strip (våder) method: wallpaper is hung
 // in full-height drops, so the real driver is how many drops fit in a roll —
 // floor(roll length / (wall height + pattern repeat)) — not raw area ÷ roll area.
-// Bilingual: sv default, en for /en/verktyg; nb falls back to sv text.
+// sv default, en for /en/verktyg, nb for byggexp.no.
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
 }
 
 export default function TapetKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : 'sv-SE', { maximumFractionDigits: d });
+  const nb = locale === 'nb';
+  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE', { maximumFractionDigits: d });
   const t = en
     ? {
         title: 'Wallpaper calculator – how many rolls?',
@@ -33,6 +34,21 @@ export default function TapetKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
         mPerRoll: 'Drops per roll', mNeeded: 'Drops needed', mRolls: 'Number of rolls',
         pdfTitle: 'Wallpaper – material list', pdfNote: 'Estimate. Buy an extra roll from the same batch as a reserve.',
         soRolls: 'Wallpaper (rolls)', soLabour: 'Wallpapering labour',
+      }
+    : nb
+    ? {
+        title: 'Tapetkalkulator – hvor mange ruller?',
+        sub: 'Tapet henges i hele baner, så vi regner ut hvor mange baner som får plass på en rull (rullengde ÷ takhøyde + mønsterrapport) og hvor mange baner veggene krever – det gir riktig antall ruller også for høye vegger og store mønstre.',
+        wallWidth: 'Total veggbredde (m)', height: 'Takhøyde (m)', repeat: 'Mønsterrapport (cm)',
+        rollLen: 'Rullengde (m)', rollWidth: 'Rullbredde (cm)', extra: 'Ekstra for kapp/feil (%)',
+        rPerRoll: 'Baner per rull', rNeeded: 'Antall baner som trengs', rRolls: 'Antall ruller',
+        pcs: 'stk',
+        fine: 'Et overslag. En standardrull er ofte 10,05 × 0,53 m. Mønsterrapporten står på tapeten – store mønstre gir færre baner per rull. Kjøp gjerne en ekstra rull fra samme parti (batch) som reserve.',
+        offert: 'Lag tilbud av dette', faktura: 'Lag faktura', excel: 'Eksporter Excel', pdf: 'Eksporter PDF',
+        csvTitle: 'Tapetkalkulator', post: 'Post', qty: 'Mengde',
+        mPerRoll: 'Baner per rull', mNeeded: 'Antall baner som trengs', mRolls: 'Antall ruller',
+        pdfTitle: 'Tapet – materialliste', pdfNote: 'Overslag. Kjøp gjerne en ekstra rull fra samme parti (batch) som reserve.',
+        soRolls: 'Tapet (ruller)', soLabour: 'Arbeid tapetsering',
       }
     : {
         title: 'Tapetkalkylator – hur många rullar?',
@@ -83,7 +99,7 @@ export default function TapetKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
     gaEvent('export_excel', { tool: 'tapet-kalkylator' });
     downloadCsvRows(
       [
-        [t.csvTitle, 'byggexp.se'],
+        [t.csvTitle, nb ? 'byggexp.no' : 'byggexp.se'],
         [],
         [t.post, t.qty],
         [t.mPerRoll, `${nf(r.stripsPerRoll)} ${t.pcs}`],
@@ -95,6 +111,7 @@ export default function TapetKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
   };
 
   const exportPdf = () => void downloadMaterialPdf({
+    locale,
     title: t.pdfTitle,
     rows: [
       { desc: t.mPerRoll, qty: `${nf(r.stripsPerRoll)} ${t.pcs}` },
@@ -109,7 +126,7 @@ export default function TapetKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
   return (
     <div className="lm-tool lm-tool--split">
       <div className="lm-tool-grid">
-        <label className="lm-tool-field"><span>{t.wallWidth}</span><input type="number" min="0" inputMode="decimal" value={wallWidth} placeholder={en ? 'e.g. 12' : 't.ex. 12'} onChange={(e) => setWallWidth(e.currentTarget.value)} /></label>
+        <label className="lm-tool-field"><span>{t.wallWidth}</span><input type="number" min="0" inputMode="decimal" value={wallWidth} placeholder={en ? 'e.g. 12' : nb ? 'f.eks. 12' : 't.ex. 12'} onChange={(e) => setWallWidth(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.height}</span><input type="number" min="0" inputMode="decimal" value={height} onChange={(e) => setHeight(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.repeat}</span><input type="number" min="0" inputMode="decimal" value={repeat} onChange={(e) => setRepeat(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.rollLen}</span><input type="number" min="0" inputMode="decimal" value={rollLen} onChange={(e) => setRollLen(e.currentTarget.value)} /></label>
@@ -119,16 +136,20 @@ export default function TapetKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
       <div className="lm-result">
         <div className="lm-result-row"><span>{t.rPerRoll}</span><span>{nf(r.stripsPerRoll)} {t.pcs}</span></div>
         <div className="lm-result-row"><span>{t.rNeeded}</span><span>{nf(r.stripsNeeded)} {t.pcs}</span></div>
-        <div className="lm-result-row lm-result-highlight lm-result-total"><span>{t.rRolls}</span><strong>{nf(r.rolls)} {t.pcs}<CopyLinkButton scope={u} tool="tapet-kalkylator" en={en} /></strong></div>
+        <div className="lm-result-row lm-result-highlight lm-result-total"><span>{t.rRolls}</span><strong>{nf(r.rolls)} {t.pcs}<CopyLinkButton scope={u} tool="tapet-kalkylator" en={en} nb={nb} /></strong></div>
         <p className="lm-result-fine">{t.fine}</p>
       </div>
       <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-        <a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'tapet-kalkylator' })}>
-          {t.offert}
-        </a>
-        <a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'tapet-kalkylator' })}>
-          {t.faktura}
-        </a>
+        {offertEnabled(locale) ? (
+          <a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'tapet-kalkylator' })}>
+            {t.offert}
+          </a>
+        ) : null}
+        {offertEnabled(locale) ? (
+          <a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'tapet-kalkylator' })}>
+            {t.faktura}
+          </a>
+        ) : null}
         <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>
           {t.excel}
         </button>

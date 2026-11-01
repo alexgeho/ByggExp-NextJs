@@ -94,7 +94,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
     ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'farg-kalkylator', label: 'Malingsforbruk' },
       { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeterberegner' },
@@ -206,6 +206,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'The tool calculates the number of wallpaper rolls.',
                   'Add extra for pattern matching.',
                   'Buy the right number of rolls.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi veggenes mål og rullens bredde og lengde.',
+                  'Verktøyet regner ut antall tapetruller.',
+                  'Legg til ekstra for mønstertilpasning.',
+                  'Kjøp riktig antall ruller.',
                 ]
               : [
                   'Ange väggarnas mått och rullens bredd och längd.',

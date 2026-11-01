@@ -158,7 +158,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
     ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeterberegner' },
       { slug: 'farg-kalkylator', label: 'Malingsforbruk' },
@@ -302,6 +302,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'The tool calculates the floor area in m².',
                   'Add waste (5–10 %).',
                   'Buy the right amount of flooring.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi rommets lengde og bredde.',
+                  'Verktøyet regner ut gulvarealet i m².',
+                  'Legg til svinn (5–10 %).',
+                  'Kjøp riktig mengde gulv.',
                 ]
               : [
                   'Ange rummets längd och bredd.',

@@ -18,22 +18,17 @@
 
 ```mermaid
 graph TD
+  %% 2026-11-01 wave 2: 6 thin pages merged into the two pillars (301, next.config.mjs)
   subgraph A["🟦 Сегмент A — Продукт (verktøy)"]
-    A1[timeregistrering-app-bygg ⭐pillar]
-    A1 --> A2[gratis-timeregistrering-app]
+    A1[timeregistrering-app-bygg ⭐pillar: +gratis, stemplingsur, system]
     A1 --> A3[timeliste-app-bygg]
-    A1 --> A4[timeregistreringssystem-bygg]
-    A1 --> A5[stemplingsur-app]
     A1 --> A6[faktureringsprogram-bygg]
   end
   subgraph B["🟥 Сегмент B — Регуляторика (макс трафик)"]
-    B1[hms-kort-bygg ⭐pillar 1K-10K]
-    B1 --> B2[bestille-hms-kort]
-    B1 --> B3[hms-kort-pris]
+    B1[hms-kort-bygg ⭐pillar 1K-10K: +bestille, pris, byggekort]
     B1 --> B4[sjekke-hms-kort]
     B1 --> B5[mistet-hms-kort]
     B1 --> B6[hms-kort-gyldighet]
-    B1 --> B7[byggekort]
     B8[mannskapsliste-byggeplass ⭐pillar]
     B8 --> B1
     B9[sha-plan]

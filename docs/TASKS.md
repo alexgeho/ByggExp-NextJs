@@ -5,5 +5,11 @@
 - [x] Волна правок билдером в worktree → критик → деплой
 - [x] Формы заявок с byggexp.no не отправлялись (CORS API) → добавлены byggexp.no в API, задеплоено, preflight 204
 - [x] Волна 1 (тех.) — live 5dfc4ca 01.11, критик ✓: / ↔ /nb дубль главной, cookie-баннер nb, 15 калькуляторов на nb (+ норвежские ставки), /nb/funktioner пустая, категории блога nb, 404, om-oss/faq/villkor/integritetspolicy/dpa на nb, ROT/AGI/SIE4 убрать с nb, meta главной без mannskapsliste, LCP hero, hms-kort-gyldighet answer-first, kvitteringshåndtering H1
-- [ ] Волна 2 (SEO): склейка HMS-kort и timeregistrering 301, prosjektstyring, timeliste-mal xlsx — после волны 1
+- [ ] Волна 2 (SEO) — ветка seo/no-wave2, ждёт проверки/деплоя
+  - [x] HMS-kort pillar: hms-kort-pris, bestille-hms-kort, byggekort → 301 в hms-kort-bygg (цена 139,10 kr + mva по arbeidstilsynet.no)
+  - [x] timeregistrering-app-bygg pillar: gratis-…, stemplingsur-app, timeregistreringssystem-bygg → 301; экспорт-гайд переименован
+  - [x] mannskapsliste: FAQ «Er elektronisk mannskapsliste påbudt?» (§ 15, исключение forbruker § 3) + FAQPage
+  - [x] prosjektstyring-bygg: title/H1 «prosjektstyring system», секция «Hva bør et prosjektstyringssystem for bygg ha?»
+  - [x] kvitteringshåndtering: +2 внутренние ссылки
+  - [x] timeliste-mal: настоящий .xlsx (формулы, пример) + инструкция; .csv → 301
 - [ ] Решение владельца: цены на .no в SEK или NOK; телефон/офис на контактах .no

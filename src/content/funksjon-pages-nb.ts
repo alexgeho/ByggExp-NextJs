@@ -877,7 +877,7 @@ const TILBUDSPROGRAM: FunksjonPageNb = {
       text: 'Rader med antall, enhet og enhetspris. Gyldig til-dato og forbehold.',
       bullets: ['PDF med logo, på norsk', 'Sendes til kunden på e-post', 'Blir faktura med de samme radene'],
       img: '/landing/features/7offerter-1200.webp',
-      alt: 'Nytt tilbud i ByggExp med tilbudsnummer, status, gyldig til-dato og kunde i webadmin og i mobilappen',
+      alt: 'Nytt tilbud i ByggExp med tilbudsnummer, status, gyldig til-dato og kunde',
     },
     {
       title: 'Fakturer timene',
@@ -924,7 +924,7 @@ ${illu('offert-kalkyl-matning', 'Håndverker med hjelm måler et baderomsgulv me
 <thead><tr><th>Felt</th><th>Hvorfor</th><th>I ByggExp</th></tr></thead>
 <tbody>
 <tr><td><strong>Tilbudsnummer og dato</strong></td><td>Så begge parter vet hvilket tilbud det gjelder</td><td>Fortløpende nummer og dato</td></tr>
-<tr><td><strong>Kunde og kontaktperson</strong></td><td>Hvem tilbudet er til, og hvem som svarer</td><td>Fra kunderegisteret, med kontaktpersoner</td></tr>
+<tr><td><strong>Kunde og kontaktperson</strong></td><td>Hvem tilbudet er til, og hvem som svarer</td><td>Kunde fra kunderegisteret, kontaktpersoner på tilbudet</td></tr>
 <tr><td><strong>Beskrivelse</strong></td><td>Hva som skal gjøres, med ord kunden forstår</td><td>Fritekst</td></tr>
 <tr><td><strong>Rader</strong></td><td>Hva prisen består av</td><td>Antall, enhet, enhetspris og beløp</td></tr>
 <tr><td><strong>Mva og totalpris</strong></td><td>Privatkunder vil se hva de faktisk skal betale</td><td>Sum eks. mva, mva og totalt inkl. mva</td></tr>
@@ -1005,7 +1005,7 @@ ${illu('fakturering-arkiv', 'Person med hjelm legger et ark i en stor blå mappe
 <h2>Kom i gang</h2>
 <ol>
 <li><strong>Fyll inn firmaopplysningene</strong> – logo, org.nr., kontonummer og KID.</li>
-<li><strong>Legg inn de faste kundene og artiklene.</strong> Vi hjelper dere gratis å flytte dem over fra systemet dere bruker i dag.</li>
+<li><strong>Legg inn de faste kundene og artiklene.</strong> Vi hjelper dere gratis med å flytte dem over fra systemet dere bruker i dag.</li>
 <li><strong>Send neste tilbud fra ByggExp</strong> og gjør det om til faktura når kunden sier ja.</li>
 </ol>
 <p>Tilbud og faktura er med i Kontroll på pengene for ${FAKTURA_PRICE} NOK per måned eks. mva. Med timeregistrering og faktura fra timene velger du Full kontroll for ${KOMPLETT_PRICE} NOK med 10 brukere. Du prøver alle funksjoner gratis i 14 dager, uten oppstartsavgift og uten bindingstid.</p>

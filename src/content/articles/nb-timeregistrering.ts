@@ -100,6 +100,7 @@ const F_FAKTURERINGSPROGRAM_BYGG_HTML = `
 
 <h2>Fra time til faktura</h2>
 <p>Poenget er å slippe dobbeltarbeid: de attesterte timene blir grunnlag for fakturaen, og fakturaen henger sammen med prosjektets økonomi. Registrer én gang, bruk overalt.</p>
+<p>Utlegg hører med i samme flyt – se <a href="/nb/blog/fota-kvitton-och-hantera-utlagg">kvitteringshåndtering for byggefirma</a>.</p>
 
 <h2>Kom i gang</h2>
 <p>Vil du se hvordan tid blir faktura i ByggExp? <a href="/nb/blog/timeregistrering-app-bygg">Les om timeregistrering</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
@@ -555,6 +556,7 @@ const PR_PROSJEKTSTYRING_BYGG_HTML = `
 <li><a href="/nb/blog/framdriftsplan">Framdriftsplan for byggeprosjekt</a></li>
 <li><a href="/nb/blog/mannskapsliste-byggeplass">Mannskapsliste og oversiktsliste</a></li>
 <li><a href="/nb/blog/faktureringsprogram-bygg">Faktureringsprogram for bygg</a></li>
+<li><a href="/nb/blog/fota-kvitton-och-hantera-utlagg">Kvitteringshåndtering for byggefirma</a></li>
 </ul>
 
 <h2>Vanlige spørsmål</h2>

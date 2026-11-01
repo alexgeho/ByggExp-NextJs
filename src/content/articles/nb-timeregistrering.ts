@@ -72,7 +72,7 @@ const P_TIMEREGISTRERING_APP_BYGG: BlogPost = {
   tag: 'Digitalisering',
   coverImageUrl: '/landing/features/1arbetspass.webp',
   contentHtml: P_TIMEREGISTRERING_APP_BYGG_HTML,
-  seoTitle: 'Timeregistrering app for bygg – GPS, mobil & eksport | ByggExp',
+  seoTitle: 'Timeregistrering app for bygg – GPS og eksport | ByggExp',
   seoDescription:
     'Timeregistrering-app for byggefirmaer: inn- og utstempling i mobilen med GPS, timer på riktig prosjekt, eksport til lønn og faktura. Enkelt for håndverkere og entreprenører.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/1arbetspass.webp`,
@@ -178,7 +178,7 @@ const S_STEMPLINGSUR_APP: BlogPost = {
   tag: 'Digitalisering',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: S_STEMPLINGSUR_APP_HTML,
-  seoTitle: 'Stemplingsur app med GPS for bygg (Android & iPhone) | ByggExp',
+  seoTitle: 'Stemplingsur app med GPS for bygg | ByggExp',
   seoDescription:
     'Stemplingsur som app med GPS for byggefirmaer: inn- og utstempling i mobilen, oppmøte bekreftet på arbeidsplassen, for Android og iPhone. Timene blir lønn og faktura.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
@@ -228,7 +228,7 @@ const F_FAKTURERINGSPROGRAM_BYGG: BlogPost = {
   tag: 'Digitalisering',
   coverImageUrl: '/landing/features/8fakturor.webp',
   contentHtml: F_FAKTURERINGSPROGRAM_BYGG_HTML,
-  seoTitle: 'Faktureringsprogram for bygg – faktura fra timer & MVA | ByggExp',
+  seoTitle: 'Faktureringsprogram for bygg – faktura fra timer | ByggExp',
   seoDescription:
     'Faktureringsprogram for byggefirmaer: fakturer loggede timer og materiell direkte fra prosjektet, med riktig MVA (25 %), KID og forfallsdato. Fra time til faktura.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/8fakturor.webp`,
@@ -304,7 +304,7 @@ const M_MANNSKAPSLISTE_BYGGEPLASS: BlogPost = {
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: M_MANNSKAPSLISTE_BYGGEPLASS_HTML,
-  seoTitle: 'Mannskapsliste på byggeplass – oversiktsliste (§ 15) | ByggExp',
+  seoTitle: 'Mannskapsliste på byggeplass – oversiktsliste | ByggExp',
   seoDescription:
     'Mannskapsliste / elektronisk oversiktsliste på byggeplass: krav etter byggherreforskriften § 15, innhold (navn, fødselsdato, arbeidsgiver, HMS-kort), ansvar og når kravet gjelder.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
@@ -429,7 +429,7 @@ const T_TIMELISTE_APP_BYGG: BlogPost = {
   tag: 'Digitalisering',
   coverImageUrl: '/landing/features/1arbetspass.webp',
   contentHtml: T_TIMELISTE_APP_BYGG_HTML,
-  seoTitle: 'Timeliste app for bygg – digital timeliste i mobilen | ByggExp',
+  seoTitle: 'Timeliste app for bygg – digital timeliste | ByggExp',
   seoDescription:
     'Timeliste-app for byggefirmaer: før timene i mobilen på riktig prosjekt, med GPS, og få ferdig underlag til lønn og faktura. Timeliste-app vs. gratis timeliste-mal.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/1arbetspass.webp`,
@@ -740,7 +740,7 @@ const PR_PROSJEKTSTYRING_BYGG: BlogPost = {
   tag: 'Digitalisering',
   coverImageUrl: '/landing/features/5planering.webp',
   contentHtml: PR_PROSJEKTSTYRING_BYGG_HTML,
-  seoTitle: 'Prosjektstyring for bygg – verktøy for plan & margin | ByggExp',
+  seoTitle: 'Prosjektstyring bygg – system for plan og margin | ByggExp',
   seoDescription:
     'Prosjektstyring for bygg: samle plan (Gantt), oppgaver, timer og økonomi på ett sted. Hva et prosjektstyringsverktøy bør klare, og hvordan timene styrer marginen.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/5planering.webp`,
@@ -804,7 +804,7 @@ const M_MISTET_HMS_KORT: BlogPost = {
 };
 
 const G_HMS_KORT_GYLDIGHET_HTML = `
-<p>Hvor lenge er et HMS-kort gyldig? Kortet har en tidsbegrenset gyldighet, og det slutter dessuten å gjelde hvis arbeidsforholdet opphører. Her forklarer vi hvor lenge HMS-kortet varer, når du må fornye det, og hva som gjør at et kort blir ugyldig.</p>
+<p>HMS-kortet gjelder i inntil to år, og bare så lenge du er ansatt hos arbeidsgiveren som bestilte det (<a href="https://www.arbeidstilsynet.no/regelverk/forskrifter/forskrift-om-hms-kort-pa-bygge--og-anleggsplasser/" rel="nofollow noopener" target="_blank">forskrift om HMS-kort § 8</a>). Her forklarer vi når kortet må fornyes, og hva som gjør at det blir ugyldig før tiden.</p>
 
 <h2>Hvor lenge varer HMS-kortet?</h2>
 <p>HMS-kortet utstedes for <strong>inntil to år</strong>. I tillegg er kortet bare gyldig så lenge <strong>ansettelsesforholdet består</strong> – slutter du i jobben, gjelder ikke kortet lenger, selv om datoen ikke er passert. Sjekk alltid gjeldende regler hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
@@ -826,8 +826,10 @@ const G_HMS_KORT_GYLDIGHET_HTML = `
 <h2>Vanlige spørsmål</h2>
 <h3>Hvor lenge er et HMS-kort gyldig?</h3>
 <p>Inntil to år – og bare så lenge ansettelsesforholdet består. Slutter du i jobben, gjelder ikke kortet lenger.</p>
-<h3>Når må HMS-kortet fornyes?</h3>
-<p>Før gyldighetstiden går ut. Arbeidsgiveren bestiller et nytt kort så den ansatte fortsatt kan stå på oversiktslisten.</p>
+<h3>Hvor ofte må HMS-kortet fornyes?</h3>
+<p>Kortet utstedes for to år, så det må fornyes senest hvert annet år. Arbeidsgiveren bestiller et nytt kort før gyldighetstiden går ut, så den ansatte fortsatt kan stå på oversiktslisten.</p>
+<h3>Gjelder HMS-kortet hvis jeg bytter jobb?</h3>
+<p>Nei. Kortet er bare gyldig så lenge ansettelsesforholdet består. Den nye arbeidsgiveren må bestille et nytt kort.</p>
 <h3>Kan et HMS-kort bli ugyldig før utløpsdatoen?</h3>
 <p>Ja – hvis arbeidsforholdet opphører, virksomheten ikke oppfyller kravene, eller kortet meldes mistet.</p>
 `.trim();
@@ -842,7 +844,7 @@ const G_HMS_KORT_GYLDIGHET: BlogPost = {
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: G_HMS_KORT_GYLDIGHET_HTML,
-  seoTitle: 'Hvor lenge er HMS-kort gyldig? Gyldighet og fornyelse | ByggExp',
+  seoTitle: 'HMS-kort gyldighet: hvor lenge varer kortet? | ByggExp',
   seoDescription:
     'Hvor lenge er HMS-kortet gyldig? Inntil to år, og bare så lenge arbeidsforholdet varer. Når arbeidsgiveren må fornye, og hva som gjør kortet ugyldig.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
@@ -851,7 +853,7 @@ const G_HMS_KORT_GYLDIGHET: BlogPost = {
   isPublished: true,
   publishedAt: '2026-09-07T15:00:00.000Z',
   createdAt: '2026-09-07T15:00:00.000Z',
-  updatedAt: '2026-10-14T12:00:00.000Z',
+  updatedAt: '2026-11-01T12:00:00.000Z',
 };
 
 const BK_BYGGEKORT_HTML = `
@@ -1248,7 +1250,7 @@ const BF_BYGGHERREFORSKRIFTEN: BlogPost = {
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: BF_BYGGHERREFORSKRIFTEN_HTML,
-  seoTitle: 'Byggherreforskriften – ansvar, SHA-plan & koordinator | ByggExp',
+  seoTitle: 'Byggherreforskriften – ansvar og SHA-plan | ByggExp',
   seoDescription:
     'Byggherreforskriften forklart: byggherrens ansvar for SHA, krav til SHA-plan, koordinator (KP/KU), forhåndsmelding til Arbeidstilsynet og elektronisk oversiktsliste (§ 15).',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
@@ -1499,7 +1501,7 @@ const FR_FRAMDRIFTSPLAN: BlogPost = {
   tag: 'Prosjekt',
   coverImageUrl: '/landing/features/5planering.webp',
   contentHtml: FR_FRAMDRIFTSPLAN_HTML,
-  seoTitle: 'Framdriftsplan for byggeprosjekt – slik lager du en | ByggExp',
+  seoTitle: 'Framdriftsplan for byggeprosjekt – slik gjør du | ByggExp',
   seoDescription:
     'Framdriftsplan for bygg: hva den skal inneholde (aktiviteter, avhengigheter, milepæler), hvordan du lager en steg for steg, og hvordan du følger opp framdriften.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/5planering.webp`,

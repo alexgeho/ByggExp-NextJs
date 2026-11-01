@@ -44,7 +44,7 @@ export const defaultHomeMeta: Record<
   },
   nb: {
     title:
-      'ByggExp – timeføring, planlegging og prosjektstyring for byggefirma',
+      'ByggExp – timeføring og prosjektstyring for byggefirma',
     description:
       'Alt-i-ett for byggefirma: timeføring, innsjekking med GPS, planlegging, tilbud og fakturaer, lønn og prosjektøkonomi – på mobil og web. Prøv gratis.',
   },

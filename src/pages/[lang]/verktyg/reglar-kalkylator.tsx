@@ -72,7 +72,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
   },
   nb: {
-    metaTitle: 'Stendere & trelast kalkulator – antall stendere (c/c) | ByggExp',
+    metaTitle: 'Stenderkalkulator – antall stendere og trelast | ByggExp',
     description:
       'Regn ut antall stendere og løpemeter trelast ut fra veggens lengde og senteravstand (c/c). Gratis kalkulator for bindingsverk og reisverk, uten konto.',
     badge: 'Gratis kalkulator',

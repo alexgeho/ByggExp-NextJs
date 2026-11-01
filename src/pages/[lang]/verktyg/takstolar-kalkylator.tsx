@@ -77,7 +77,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
   },
   nb: {
-    metaTitle: 'Beregne takstoler – kalkulator for antall ut fra c/c | ByggExp',
+    metaTitle: 'Beregne takstoler – kalkulator for antall (c/c) | ByggExp',
     description:
       'Beregn takstoler gratis: regn ut antall takstoler ut fra takets lengde og senteravstand (c/c). Enkel kalkulator for takstolberegning, uten konto.',
     badge: 'Gratis kalkulator',

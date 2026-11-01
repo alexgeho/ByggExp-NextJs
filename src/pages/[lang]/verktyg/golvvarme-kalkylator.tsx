@@ -71,7 +71,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
   },
   nb: {
-    metaTitle: 'Gulvvarme kalkulator – sløyfelengde og antall sløyfer | ByggExp',
+    metaTitle: 'Gulvvarme kalkulator – lengde og antall sløyfer | ByggExp',
     description:
       'Regn ut sløyfelengde og antall sløyfer for vannbåren gulvvarme ut fra areal og senteravstand (c/c). Gratis kalkulator, uten konto.',
     badge: 'Gratis kalkulator',

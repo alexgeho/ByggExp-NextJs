@@ -92,6 +92,10 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
     CALC_PATHS.filter((path) => path === 'verktyg' || HREFLANG_CALC_SLUGS.has(path.slice('verktyg/'.length))).forEach((path) => {
       urls.push({ loc: `${localeOrigin('nb')}/nb/${path}` });
     });
+    // farg-kalkylator is live on nb (200, Norwegian content) but still in
+    // PENDING_REMOVAL_CALC_SLUGS, which keeps it out of hreflang. List it in the
+    // nb sitemap anyway so the page is discovered; hreflang stays unchanged.
+    urls.push({ loc: `${localeOrigin('nb')}/nb/verktyg/farg-kalkylator` });
   } else {
     // /sv/fa-offert is noindex (B2C lead page, off-intent) — not listed.
     // Product landing pages (sv only).

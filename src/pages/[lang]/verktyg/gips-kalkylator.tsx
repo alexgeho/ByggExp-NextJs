@@ -120,7 +120,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
   },
   nb: {
-    metaTitle: 'Gipskalkulator – gipsplater, stendere & skruer 2026 | ByggExp',
+    metaTitle: 'Gipskalkulator – gipsplater, stendere og skruer | ByggExp',
     description:
       'Regn ut hele materiallisten for en gipsvegg: antall gipsplater, stendere (riktig c/c), svill/toppsvill, isolasjon og skruer – ut fra veggens mål. Gratis, uten konto.',
     badge: 'Gratis kalkulator',

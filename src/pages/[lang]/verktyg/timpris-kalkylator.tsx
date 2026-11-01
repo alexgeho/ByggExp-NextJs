@@ -111,7 +111,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
   },
   nb: {
-    metaTitle: 'Timepris-kalkulator – hva skal du ta betalt per time | ByggExp',
+    metaTitle: 'Timepris-kalkulator – hva bør du ta betalt? | ByggExp',
     description:
       'Regn ut hvilken timepris du må ta betalt som håndverker. Ta utgangspunkt i ønsket lønn, arbeidsgiveravgift, omkostninger og fortjeneste – gratis kalkulator, uten konto.',
     badge: 'Gratis kalkulator',

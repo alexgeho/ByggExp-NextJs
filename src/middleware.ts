@@ -44,6 +44,17 @@ export function middleware(req: NextRequest) {
     to.protocol = 'https:';
     to.host = bare(rawHost);
     to.port = '';
+    // www.byggexp.no: go straight to the final nb URL in one hop
+    // (www.byggexp.no/ → https://byggexp.no/nb, not via byggexp.no/).
+    const isFile =
+      pathname.startsWith('/_next') || pathname.startsWith('/api') || pathname.includes('.');
+    if (rawHost === `www.${NO_HOST}` && NB_LIVE && !isFile && firstSeg !== 'nb') {
+      if (NON_NB_LOCALES.has(firstSeg)) {
+        to.host = SE_HOST;
+      } else {
+        to.pathname = pathname === '/' ? '/nb' : `/nb${pathname}`;
+      }
+    }
     return NextResponse.redirect(to, 301);
   }
 

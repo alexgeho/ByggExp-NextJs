@@ -102,6 +102,8 @@ const nextConfig = {
       { source: "/nb/blog/gratis-timeregistrering-app", destination: "https://byggexp.no/nb/blog/timeregistrering-app-bygg", statusCode: 301 },
       { source: "/nb/blog/stemplingsur-app", destination: "https://byggexp.no/nb/blog/timeregistrering-app-bygg", statusCode: 301 },
       { source: "/nb/blog/timeregistreringssystem-bygg", destination: "https://byggexp.no/nb/blog/timeregistrering-app-bygg", statusCode: 301 },
+      // The CSV template was replaced by a real Excel file (scripts/gen-timeliste-mal.py).
+      { source: "/nb/maler/timeliste-mal.csv", destination: "https://byggexp.no/nb/maler/timeliste-mal.xlsx", statusCode: 301 },
       // Junk URL from an early test post. It has no target, but leaving it 404 would
       // fail the whole "Not found (404)" validation run in GSC — send it to the blog index.
       { source: "/sv/blog/test", destination: "/sv/blog", statusCode: 301 },

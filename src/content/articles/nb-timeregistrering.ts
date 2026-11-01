@@ -443,7 +443,7 @@ const S_SJEKKE_HMS_KORT: BlogPost = {
 };
 
 const T_TIMELISTE_MAL_HTML = `
-<p>Trenger du en enkel timeliste-mal til byggefirmaet? Nedenfor finner du en gratis mal du kan kopiere, skrive ut eller sette opp i Excel – pluss en oversikt over hva en god timeliste bør inneholde. Og når papirmalen begynner å bli tungvint, viser vi hvordan du bytter den ut med en app som fyller ut timelisten automatisk.</p>
+<p>Her er en gratis timeliste-mal i Excel for byggefirmaer: én uke per ark, med et utfylt eksempel og formler som regner ut timer, overtid og sum per prosjekt. <a href="/nb/maler/timeliste-mal.xlsx" download>Last ned timeliste-mal (Excel)</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: fra timeliste til lønn og faktura – før timene, på riktig prosjekt, eksport til lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Enten du bruker mal eller app: verdien kommer når timene blir ferdig grunnlag for lønn og faktura.</figcaption></figure>
 
 <p class="eco-note"><strong>GPS eller manuelt – dere velger:</strong> ikke alle vil dele posisjonen sin, og det trenger de ikke. I ByggExp kan medarbeideren i stedet fylle inn timene sine manuelt i appen – per prosjekt og dag. De manuelle timene havner i samme timeoversikt og eksport til lønn og faktura som GPS-timene, og i nettadmin ser du planlagte, GPS- og manuelle timer side om side.</p>
@@ -459,21 +459,26 @@ const T_TIMELISTE_MAL_HTML = `
 <li><strong>Signatur</strong> (eller godkjenning) fra ansatt og arbeidsleder.</li>
 </ul>
 
-<h2>Gratis timeliste-mal</h2>
-<p>Kopier tabellen under rett inn i Excel eller Google Sheets, eller skriv den ut og fyll ut for hånd:</p>
+<h2>Gratis timeliste-mal i Excel</h2>
+<p>Slik ser malen ut, med eksempelraden fylt ut:</p>
 <div class="article-table"><table>
-<thead><tr><th>Dato</th><th>Prosjekt</th><th>Start</th><th>Slutt</th><th>Pause</th><th>Sum timer</th><th>Overtid</th></tr></thead>
+<thead><tr><th>Dato</th><th>Prosjekt</th><th>Start</th><th>Slutt</th><th>Pause (min)</th><th>Timer</th><th>Overtid</th></tr></thead>
 <tbody>
+<tr><td>02.11.2026</td><td>Bad Storgata 12</td><td>07:00</td><td>16:00</td><td>30</td><td>8,50</td><td>1,00</td></tr>
 <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td><strong>Sum</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td><strong>Sum uke</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><strong>8,50</strong></td><td><strong>1,00</strong></td></tr>
 </tbody>
 </table></div>
-<p>Legg til en rad per arbeidsdag, og summer timene nederst. Ett ark per ansatt per uke er en vanlig oppsett.</p>
-<p><a href="/nb/maler/timeliste-mal.csv" download>Last ned timeliste-mal</a> (åpnes i Excel) – ferdig oppsett du bare fyller ut.</p>
+<p><a href="/nb/maler/timeliste-mal.xlsx" download>Last ned timeliste-mal (Excel)</a> – åpnes i Excel, Google Sheets og Numbers.</p>
+
+<h2>Slik bruker du malen</h2>
+<ol>
+<li>Fyll inn navn, arbeidsgiver og uke øverst. Normal arbeidsdag står på 7,5 timer – endre den hvis dere har en annen avtale.</li>
+<li>Skriv over eksempelraden og før én rad per arbeidsdag: dato, prosjekt, start, slutt og pause i minutter.</li>
+<li>Timer og overtid regnes ut automatisk, og ukesummen nederst.</li>
+<li>Skriv prosjektnavnene i «Sum per prosjekt», så får du timene per prosjekt til faktura.</li>
+<li>Ansatt og arbeidsleder signerer, og arket går til lønn.</li>
+</ol>
 
 <h2>Mal i Excel eller på papir?</h2>
 <p>En Excel-mal regner ut summene for deg, mens en utskrift er grei å ha i bilen eller på brakka. Begge deler funker for de aller minste firmaene. Ulempen er den samme: noen må samle inn arkene og taste tallene inn på nytt til lønn og faktura.</p>
@@ -482,37 +487,39 @@ const T_TIMELISTE_MAL_HTML = `
 <p>Vokser firmaet, blir malen fort en flaskehals. Med en <a href="/nb/blog/timeliste-app-bygg">timeliste-app</a> fører de ansatte timene i mobilen på riktig prosjekt, og du slipper å samle inn ark og taste på nytt. I ByggExp blir de attesterte timene grunnlag for lønn og faktura – samme informasjon som i malen, bare uten etterarbeidet.</p>
 
 <h2>Kom i gang</h2>
-<p>Bruk malen over i dag, eller se hvordan en <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> fungerer. Les også om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
+<p><a href="/nb/maler/timeliste-mal.xlsx" download>Last ned malen</a> og bruk den i dag, eller se hvordan en <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> fungerer. Les også om <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva bør en timeliste-mal inneholde?</h3>
 <p>Navn, dato, prosjekt, start/slutt, pause, sum timer, eventuell overtid og signatur – nok til å lage grunnlag for lønn og faktura.</p>
 <h3>Kan jeg bruke malen i Excel?</h3>
-<p>Ja. Kopier tabellen inn i Excel eller Google Sheets og legg inn formler for å summere timene, eller skriv den ut og fyll ut for hånd.</p>
+<p>Ja. Malen er en Excel-fil med ferdige formler for timer, overtid og sum per prosjekt. Den kan også åpnes i Google Sheets og Numbers, eller skrives ut og fylles ut for hånd.</p>
+<h3>Hvordan regner malen ut overtid?</h3>
+<p>Overtid er timene utover normal arbeidsdag, som står på 7,5 timer i malen. Endre tallet hvis dere har en annen avtale.</p>
 <h3>Når bør jeg bytte fra mal til app?</h3>
 <p>Når innsamling og inntasting av ark begynner å ta tid. En app fjerner dobbeltarbeidet og gir ferdig grunnlag til lønn og faktura.</p>
 `.trim();
 
 const T_TIMELISTE_MAL: BlogPost = {
   _id: 'code-nb-timeliste-mal',
-  title: 'Timeliste-mal (gratis) – kopier, skriv ut eller bruk i Excel',
+  title: 'Timeliste-mal i Excel (gratis) – last ned med eksempel',
   slug: 'timeliste-mal',
   locale: 'nb',
   excerpt:
-    'Gratis timeliste-mal for bygg: kopier tabellen til Excel, skriv den ut eller fyll ut for hånd. Hva en timeliste bør inneholde – og når du bør bytte til app.',
+    'Gratis timeliste-mal i Excel for bygg: utfylt eksempel og formler for timer, overtid og sum per prosjekt. Last ned, slik bruker du den, og når du bør bytte til app.',
   tag: 'Digitalisering',
   coverImageUrl: '/landing/features/1arbetspass.webp',
   contentHtml: T_TIMELISTE_MAL_HTML,
-  seoTitle: 'Timeliste-mal (gratis) for bygg – Excel & utskrift | ByggExp',
+  seoTitle: 'Timeliste mal i Excel (gratis) – med eksempel | ByggExp',
   seoDescription:
-    'Gratis timeliste-mal for byggefirmaer: kopier tabellen til Excel, skriv ut eller fyll ut for hånd. Hva en timeliste bør inneholde, og når du bør bytte til en app.',
+    'Last ned gratis timeliste-mal i Excel: utfylt eksempel og formler for timer, overtid og sum per prosjekt. For byggefirmaer – og når det lønner seg å bytte til app.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/1arbetspass.webp`,
   canonicalUrl: '',
   noIndex: false,
   isPublished: true,
   publishedAt: '2026-09-07T14:30:00.000Z',
   createdAt: '2026-09-07T14:30:00.000Z',
-  updatedAt: '2026-09-07T14:30:00.000Z',
+  updatedAt: '2026-11-01T12:00:00.000Z',
 };
 
 // Planner/Bemanning claims from docs/seo/product-facts-verified.md (Planering / Bemanning).

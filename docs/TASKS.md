@@ -31,6 +31,8 @@
   - [ ] hms-system — НЕ сделано: в продукте нет avviksmelding с ответственным/статусом, нет risikovurdering/SJA → вернуться, когда появится модуль avvik
   - [ ] tilbudsprogram — НЕ сделано: PDF оффера и счёта только по-шведски, счёт печатает SEK/Bankgiro → сначала локализовать PDF (nb, NOK, kontonummer/KID)
   - [ ] Критик → проверка владельца → деплой; Request Indexing 4 новых URL
-- [ ] Норвежские PDF tilbud/faktura (NOK, kontonummer, KID) — владелец «да» 01.11 → потом страница tilbudsprogram
+- [x] Норвежские PDF tilbud/faktura — live 01.11 (backend+admin, критик ✓): nb-тексты, NOK, mva 25/15/12/0, org.nr MVA, Foretaksregisteret, kontonummer MOD11, KID MOD10/MOD11, Leveringssted, напоминания выкл. для NO
+- [ ] Мобильное приложение: для NO скрыть ROT/omvänd moms/округление, суммы в NOK — через стор
+- [ ] Страница /nb/funksjoner/tilbudsprogram
 - [ ] Модуль avvik для HMS — владелец «да» 01.11, после PDF → потом страница hms-system
 - [ ] nb-скриншоты приложения для страниц функций (сейчас шведский UI)

@@ -38,6 +38,8 @@
   - [x] Страница tilbudsprogram (plan Kontroll på pengene, faktura fra timer = Full kontroll), без purring/ROT/интеграций
   - [x] Ссылки: карточки /nb главной, хаб /nb/funktioner, blog fakturamal + timepris-snekker
   - [x] Проверки: build, Host byggexp.no 200, sitemap, JSON-LD, ссылки, sv без изменений, скриншоты 1440/390
-- [ ] Модуль avvik для HMS — владелец «да» 01.11, после PDF → потом страница hms-system
+- [x] Модуль avvik — live 01.11 (backend+admin, критик ✓): /deviations, вкладка проекта, история, закрытие с комментарием, PDF/CSV, напоминания 07:00; пакеты Kontroll på jobben + Full
+- [ ] Мобильное: «Meld avvik» + вкладка Avvik + выключатель в Aviseringar (спек byggexp-admin/docs/avvik-mobile-spec.md) → стор; после релиза DEVIATION_NEW_REPORT_PUSH=true
+- [ ] Страница /nb/funksjoner/hms-system
 - [ ] nb-скриншоты приложения для страниц функций (сейчас шведский UI)
 - [ ] admin offerStore.js:97 тост «Offert skickad till…» — на nb для NO

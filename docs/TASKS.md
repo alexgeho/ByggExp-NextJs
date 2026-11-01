@@ -28,7 +28,7 @@
   - [x] timeregistrering-app; blog/timeregistrering-app-bygg → 301; 301 волны 2 перенаправлены сразу на новую страницу; hreflang ↔ sv tidrapporteringssystem-bygg
   - [x] prosjektstyringsverktoy; blog/prosjektstyring-bygg → 301 (тот же коммерческий интент: title уже «prosjektstyring system»)
   - [x] bemanningsplan; hreflang ↔ sv resursplanering
-  - [ ] hms-system — НЕ сделано: в продукте нет avviksmelding с ответственным/статусом, нет risikovurdering/SJA → вернуться, когда появится модуль avvik
+  - [x] hms-system — сделано в волне 5 (seo/no-wave5) после запуска модуля avvik
   - [ ] tilbudsprogram — НЕ сделано: PDF оффера и счёта только по-шведски, счёт печатает SEK/Bankgiro → сначала локализовать PDF (nb, NOK, kontonummer/KID)
   - [ ] Критик → проверка владельца → деплой; Request Indexing 4 новых URL
 - [x] Норвежские PDF tilbud/faktura — live 01.11 (backend+admin, критик ✓): nb-тексты, NOK, mva 25/15/12/0, org.nr MVA, Foretaksregisteret, kontonummer MOD11, KID MOD10/MOD11, Leveringssted, напоминания выкл. для NO
@@ -40,6 +40,11 @@
   - [x] Проверки: build, Host byggexp.no 200, sitemap, JSON-LD, ссылки, sv без изменений, скриншоты 1440/390
 - [x] Модуль avvik — live 01.11 (backend+admin, критик ✓): /deviations, вкладка проекта, история, закрытие с комментарием, PDF/CSV, напоминания 07:00; пакеты Kontroll på jobben + Full
 - [ ] Мобильное: «Meld avvik» + вкладка Avvik + выключатель в Aviseringar (спек byggexp-admin/docs/avvik-mobile-spec.md) → стор; после релиза DEVIATION_NEW_REPORT_PUSH=true
-- [ ] Страница /nb/funksjoner/hms-system
+- [ ] Страница /nb/funksjoner/hms-system (ветка seo/no-wave5; осталось: критик → владелец → деплой → Request Indexing)
+  - [x] Факты avvik по коду BE/AD (+ «нет»: SJA, HMS-kort, mannskapsliste, stoffkartotek, HMS-håndbok, vernerunde) → product-facts-verified.md
+  - [x] Страница hms-system (Kontroll på jobben + Full; avvik в webadmin, не в мобильном)
+  - [x] ks-system: убрать «нет avviksmodul» → ссылка на hms-system
+  - [x] Ссылки: карточка /nb главной, хаб /nb/funktioner, ks-system, blog sha-plan, byggherreforskriften, hms-kort-bygg
+  - [x] Проверки: build, Host byggexp.no 200, sitemap, JSON-LD, ссылки, sv без изменений, скриншоты 1440/390
 - [ ] nb-скриншоты приложения для страниц функций (сейчас шведский UI)
 - [ ] admin offerStore.js:97 тост «Offert skickad till…» — на nb для NO

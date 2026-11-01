@@ -45,6 +45,7 @@ const FEATURE_LINKS = [
 // feature article (index → /nb/funksjoner/<slug>).
 const NB_FUNKSJON_LINKS: Record<number, string> = {
   0: "timeregistrering-app", // 1 Automatisk timeføring
+  1: "hms-system", // 2 Oppgaver med automatisk oppfølging (avvik med frist og varsel)
   3: "ks-system", // 4 Fotodokumentasjon (egenkontroll med bilder)
   4: "bemanningsplan", // 5 Planlegging av prosjekter og ansatte
   6: "tilbudsprogram", // 7 Tilbud

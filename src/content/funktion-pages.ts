@@ -84,6 +84,8 @@ export const ILLU_HEIGHT: Record<string, number> = {
   'feat-uppgifter-morgonmote': 911,
   'feat-ekonomi-veckoavstamning': 1033,
   'feat-tid-restid': 911,
+  'feat-foto-ror-i-vagg': 1147,
+  'feat-narvaro-samling': 916,
   ...ILLU_HEIGHT_A,
   ...ILLU_HEIGHT_B,
   ...ILLU_HEIGHT_C,

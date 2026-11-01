@@ -53,9 +53,10 @@ export type FunksjonPageNb = FunktionPage & {
 // per-point result Godkjent/Anmerkning/Ikke aktuelt, photos per point, method/
 // requirement/measured value, anmerkning → tiltak with done date (app), comment
 // + date per point (web), signing with name + date only when every point is
-// answered, signed = locked; dagbok with avvik field (web); project documents.
+// answered, signed = locked; dagbok with avvik field (web); project documents;
+// avvik module (wave 5, see HMS_SYSTEM) — remark/dagbok → avvik in webadmin.
 // NOT claimed: Norwegian PDF/print (checklist PDF is Swedish-only), sending to
-// customer, standalone avvik module with assignee/status, risk analysis/SJA,
+// customer, reporting avvik in the mobile app, risk analysis/SJA,
 // HMS-kort reader, mannskapsliste, AI drafting from contract, starter templates
 // (their texts are Swedish), GPS/EXIF on photos.
 // Regulation: SAK10 § 10-1 (rutiner for kvalitetssikring, inkl. avvik) and
@@ -173,7 +174,7 @@ ${illu('byggdagbok-foto', 'Bygningsarbeider med hjelm fotograferer en vegg av bl
 
 <h2>Byggedagbok som en del av KS</h2>
 <p>Sjekklisten viser at et bestemt arbeid er kontrollert. Dagboken viser hva som skjedde på bygget hver dag. I ByggExp fører du dagboken per prosjekt og dag i webadmin, med vær og temperatur, antall på jobb, utført arbeid, avvik, materiell, notater og bilder. Feltet for avvik er fritekst: skriv hva som ble oppdaget, og opprett en oppgave med ansvarlig og frist for tiltaket.</p>
-<p>Oppgavene får påminnelser til de er gjort, og forfalte oppgaver kan sendes videre til sjefen. Slik blir avviket fulgt opp i stedet for å bli liggende i en notatbok.</p>
+<p>Oppgavene får påminnelser til de er gjort, og forfalte oppgaver kan sendes videre til sjefen. Fra dagboken kan teksten også bli et avvik med ansvarlig, frist og varsel. Les mer om avvikshåndteringen i <a href="/nb/funksjoner/hms-system">HMS-system for bygg</a>.</p>
 
 <h2>Dokumentasjon på ett sted</h2>
 <p>Når kunden, byggherren eller kommunen spør, skal dokumentasjonen være lett å finne. I ByggExp ligger dette på prosjektet:</p>
@@ -194,7 +195,7 @@ ${illu('byggdagbok-foto', 'Bygningsarbeider med hjelm fotograferer en vegg av bl
 <tr><td><strong>Anmerkning med tiltak og dato</strong></td><td>Ja</td></tr>
 <tr><td><strong>Signering og låsing</strong></td><td>Ja, med navn og dato</td></tr>
 <tr><td><strong>Byggedagbok med avvik</strong></td><td>Ja, i webadmin</td></tr>
-<tr><td><strong>Egen avviksmodul med saksgang</strong></td><td>Nei. Avvik følges opp som anmerkning, i dagboken og som oppgaver</td></tr>
+<tr><td><strong>Avvik med ansvarlig, frist og varsel</strong></td><td>Ja, i webadmin. Se <a href="/nb/funksjoner/hms-system">HMS-system</a></td></tr>
 <tr><td><strong>Risikovurdering og SJA</strong></td><td>Nei. Bruk vår gratis <a href="/nb/blog/sikker-jobb-analyse">mal for sikker jobb-analyse</a></td></tr>
 <tr><td><strong>Utskrift av kontrollen på norsk</strong></td><td>Ikke ennå. PDF-utskriften er foreløpig ikke oversatt</td></tr>
 <tr><td><strong>HMS-kortleser og mannskapsliste</strong></td><td>Nei. Les om kravene i guiden om <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a></td></tr>
@@ -237,7 +238,7 @@ ${illu('projekthantering-overlamning', 'Prosjektleder med hjelm gir nøklene til
     {
       question: 'Hvordan håndteres avvik?',
       answer:
-        'Et punkt med anmerkning får et tiltak og en utført-dato. Uten utført tiltak står anmerkningen som åpen. Avvik kan også føres i dagboken og følges opp som oppgaver med frist. Det finnes ingen egen avviksmodul med saksgang.',
+        'Et punkt med anmerkning får et tiltak og en utført-dato. Uten utført tiltak står anmerkningen som åpen. Fra anmerkningen eller dagboken kan du opprette et avvik i webadmin, med ansvarlig, frist og varsel, som lukkes med en kommentar.',
     },
     {
       question: 'Kan egenkontrollen endres etter at den er signert?',
@@ -1066,15 +1067,248 @@ ${illu('fakturering-arkiv', 'Person med hjelm legger et ark i en stor blå mappe
   ],
 };
 
-// Wave 3 (2026-11-01). Skipped, see docs/TASKS.md: hms-system (no avvik module
-// with saksgang/risk analysis in the product). Wave 4: tilbudsprogram, built
-// once the Norwegian offer/invoice PDFs went live.
+/* ------------------------------------------------------------------------- */
+/* 6. HMS-system (avvik, internkontroll)                                      */
+/* ------------------------------------------------------------------------- */
+// Claims code-checked 2026-11-01 (BE aed1724, AD 5c83e96), see
+// product-facts-verified.md "Avvik (live)": avvik per project with running
+// number, category HMS/Kvalitet/Miljø, severity, place, photos, responsible,
+// frist, årsak, tiltak, status Åpen/Under arbeid/Lukket, closing with required
+// comment, reopen, change log; created in WEBADMIN (also from an egenkontroll
+// remark or a dagbok entry); push to the responsible on assignment, due soon
+// (due today/tomorrow) and overdue (07:00), overdue without responsible → the
+// project's managers; Avviksrapport PDF + CSV in bokmål for NO companies.
+// Packages: Kontroll på jobben + Full kontroll (BE company/modules.ts:68-76,90).
+// NOT claimed: reporting avvik in the mobile app («Meld avvik» comes with an
+// app update), switching avvik notifications off in the app, risk assessment/
+// SJA, HMS-kort reader, mannskapsliste, stoffkartotek, HMS-håndbok generator,
+// vernerunde module (none exist in BE/AD/MO), Norwegian checklist PDF.
+// Regulation (opened and checked 2026-11-01):
+// - Arbeidsmiljøloven § 3-1 (1) systematisk HMS-arbeid på alle plan, i
+//   samarbeid med arbeidstakerne; (2) e: «iverksette rutiner for å avdekke,
+//   rette opp og forebygge overtredelser av krav fastsatt i eller i medhold av
+//   denne lov» – https://lovdata.no/lov/2005-06-17-62
+// - Internkontrollforskriften § 5 annet ledd nr. 7: «iverksette rutiner for å
+//   avdekke, rette opp og forebygge overtredelser av krav fastsatt i eller i
+//   medhold av helse-, miljø- og sikkerhetslovgivningen»; nr. 4–8 skal
+//   dokumenteres skriftlig – https://lovdata.no/forskrift/1996-12-06-1127
+
+const HMS_SYSTEM: FunksjonPageNb = {
+  slug: 'hms-system',
+  plan: 'projekt',
+  priceIncluded: 'Avvik, egenkontroll og dagbok er inkludert',
+  heroCheck: 'Avvik med ansvarlig og frist',
+  title: 'HMS-system for bygg – avvik og internkontroll | ByggExp',
+  description:
+    'HMS-system for byggefirma: avvik med ansvarlig, frist og varsel, egenkontroll, sjekklister og dagbok på ett sted, og avviksrapport som PDF. Prøv gratis.',
+  name: 'HMS-system',
+  h1: 'HMS-system for bygg.',
+  h1Accent: 'Hvert avvik fulgt opp til det er lukket.',
+  lead: 'Avvik med ansvarlig, frist og varsel, samlet per prosjekt.',
+  hero: {
+    name: 'projekthantering-uppgifter',
+    alt: 'Bygningsarbeider med hjelm krysser av på en stor sjekkliste, med en ringende bjelle og en klokke ved siden av',
+  },
+  stepsHeading: ['Fra avvik', 'til lukket sak'],
+  steps: [
+    {
+      title: 'Avvik fra dagboken',
+      text: 'Avviket som er skrevet i dagboken, blir en sak med ansvarlig og frist.',
+      img: '/landing/funktioner/screen-dagbok-1200.webp',
+      alt: 'Dagbok i ByggExp: dagens notat med vær, mannskap, utført arbeid og avvik',
+    },
+    {
+      title: 'Tiltak med frist',
+      text: 'Større tiltak kan deles opp i oppgaver med påminnelser.',
+      img: '/landing/features/2uppgift-1200.webp',
+      alt: 'Ny oppgave i ByggExp med ansvarlig, frist og påminnelse i webadmin og i mobilappen',
+    },
+    {
+      title: 'Bilder fra bygget',
+      text: 'Bildene ligger på prosjektet med dato og person.',
+      img: '/landing/features/4foto-1200.webp',
+      alt: 'Bilder i ByggExp: bilder fra byggeplassen samlet per prosjekt i webadmin og i mobilappen',
+    },
+  ],
+  body: `
+<p>Et HMS-system skal gjøre to ting: vise hvordan dere jobber trygt, og sørge for at det som går galt blir rettet. Det siste er der de fleste systemer svikter. Et avvik blir skrevet ned, men ingen eier det, fristen glipper, og ingen kan senere vise hva som ble gjort. I ByggExp registrerer du avviket på prosjektet, gir det en ansvarlig og en frist, og lukker det med en kommentar når tiltaket er gjort. Egenkontroll, sjekklister og byggedagbok ligger i samme system. Her går vi gjennom hva regelverket krever, hvordan avvikshåndteringen fungerer, og hva systemet ikke gjør.</p>
+
+<h2>Hva er et HMS-system?</h2>
+<p>HMS står for helse, miljø og sikkerhet. Etter ${ext(LOV_AML, 'arbeidsmiljøloven')} § 3-1 skal arbeidsgiver sørge for at det utføres systematisk helse-, miljø- og sikkerhetsarbeid på alle plan i virksomheten, i samarbeid med arbeidstakerne og deres tillitsvalgte. Hvordan arbeidet skal gjøres, står i ${ext(LOV_IK, 'internkontrollforskriften')} § 5. Der heter det blant annet at virksomheten skal «iverksette rutiner for å avdekke, rette opp og forebygge overtredelser av krav fastsatt i eller i medhold av helse-, miljø- og sikkerhetslovgivningen».</p>
+<p>Forskriften krever også at deler av arbeidet dokumenteres skriftlig: mål for HMS, hvordan ansvaret er fordelt, kartlegging av farer og risiko, rutinene for avvik og den årlige gjennomgangen. Et HMS-system, eller internkontrollsystem, er verktøyet som holder dette samlet. For et byggefirma består det typisk av:</p>
+<ul>
+<li><strong>Avvikssystem</strong> – avvik og uønskede forhold blir meldt, får en ansvarlig og følges opp til de er lukket.</li>
+<li><strong>Sjekklister</strong> – egenkontroll og faste runder på byggeplassen.</li>
+<li><strong>Dagbok</strong> – hva som skjedde på bygget hver dag.</li>
+<li><strong>Dokumentasjon</strong> – rapporter og bilder som viser hva som ble gjort.</li>
+</ul>
+<p>KS og HMS overlapper. KS handler om at bygget blir riktig, HMS om dem som bygger det. Les mer om kvalitetssikringen på siden om <a href="/nb/funksjoner/ks-system">KS-system for bygg</a>.</p>
+
+${illu('ata-upptackt', 'Håndverker med hjelm løfter opp en gulvplate og viser rørene under til en kunde som bøyer seg fram')}
+
+<h2>Slik fungerer avvikssystemet i ByggExp</h2>
+<ol>
+<li><strong>Registrer avviket.</strong> I webadmin oppretter du avviket på prosjektet med tittel, beskrivelse og hvor på bygget det gjelder. Hvert avvik får et løpende nummer, for eksempel avvik #12.</li>
+<li><strong>Velg kategori og alvorlighetsgrad.</strong> Kategorien er HMS, kvalitet eller miljø. Alvorlighetsgraden er lav, middels eller høy.</li>
+<li><strong>Legg ved bilder.</strong> Bilder av forholdet legges på avviket.</li>
+<li><strong>Sett ansvarlig og frist.</strong> Den ansvarlige velges blant prosjektets medlemmer og firmaets administratorer, og får varsel om at avviket er tildelt.</li>
+<li><strong>Skriv årsak og tiltak.</strong> Mens tiltaket pågår, settes status til under arbeid.</li>
+<li><strong>Lukk avviket.</strong> Administrator eller prosjektleder lukker avviket med en kommentar. Kommentaren er påkrevd. Viser det seg at saken ikke var løst, kan avviket åpnes igjen.</li>
+</ol>
+<p>Alle endringer logges med hvem, når og hva, så historikken følger avviket. Webadmin finnes på norsk. Avvik registreres foreløpig i webadmin, ikke i mobilappen.</p>
+
+<h2>Avviksmelding: hva bør den inneholde?</h2>
+<p>En god avviksmelding er rask å skrive og umulig å misforstå. Bruker dere i dag et avviksmelding-skjema på papir eller en mal i Word, kan dere sammenligne med feltene her:</p>
+<div class="article-table"><table>
+<thead><tr><th>Felt</th><th>Hvorfor</th><th>I ByggExp</th></tr></thead>
+<tbody>
+<tr><td><strong>Hva skjedde</strong></td><td>Kort tittel og beskrivelse</td><td>Tittel og beskrivelse</td></tr>
+<tr><td><strong>Hvor</strong></td><td>Så den ansvarlige finner stedet</td><td>Prosjekt og sted på bygget</td></tr>
+<tr><td><strong>Type</strong></td><td>Skiller sikkerhet fra kvalitet</td><td>HMS, kvalitet eller miljø</td></tr>
+<tr><td><strong>Alvorlighet</strong></td><td>Hva som må tas først</td><td>Lav, middels eller høy</td></tr>
+<tr><td><strong>Bilder</strong></td><td>Viser forholdet bedre enn ord</td><td>Bilder på avviket</td></tr>
+<tr><td><strong>Ansvarlig og frist</strong></td><td>Uten eier blir ingenting gjort</td><td>Ansvarlig person og frist</td></tr>
+<tr><td><strong>Årsak og tiltak</strong></td><td>Hindrer at det skjer igjen</td><td>Egne felt for årsak og tiltak</td></tr>
+<tr><td><strong>Lukking</strong></td><td>Viser at saken er ferdig</td><td>Hvem, når og kommentar</td></tr>
+</tbody>
+</table></div>
+<p>Skriv avviket mens du står der. «Rekkverk mangler på plan 3, trapp B» er en avviksmelding. «Sikring må sjekkes» er det ikke.</p>
+
+<h2>Fra egenkontroll og dagbok til avvik</h2>
+<p>De fleste avvik oppdages mens noen gjør noe annet: under en egenkontroll eller når dagboken skrives. Derfor kan avviket opprettes rett derfra:</p>
+<ul>
+<li><strong>Fra en sjekkliste.</strong> Får et kontrollpunkt anmerkning, oppretter du et avvik fra punktet. Teksten fra kontrollpunktet, kategorien og tiltaket fylles inn.</li>
+<li><strong>Fra dagboken.</strong> Er feltet for avvik fylt ut i dagens notat, blir teksten et avvik på samme prosjekt.</li>
+</ul>
+<p>Avviket husker hvor det kom fra, så sammenhengen med kontrollen eller dagen er bevart. Sjekklister og egenkontroll fylles ut i appen på byggeplassen eller i webadmin. Les mer i <a href="/nb/funksjoner/ks-system">KS-system for bygg</a>.</p>
+
+<h2>Varsler og frister</h2>
+<p>Et avvik med frist er bare nyttig hvis noen merker at fristen nærmer seg. I ByggExp får den ansvarlige varsel på mobilen:</p>
+<ul>
+<li><strong>Når avviket tildeles</strong> – med nummer, tittel og prosjekt.</li>
+<li><strong>Når fristen nærmer seg</strong> – klokka sju om morgenen, dagen før fristen.</li>
+<li><strong>Når fristen er passert</strong> – klokka sju dagen etter fristen. Har avviket ingen ansvarlig, går varselet til prosjektets ledere.</li>
+</ul>
+<p>Hvert varsel sendes én gang per frist. Flyttes fristen, gjelder varslene den nye datoen. I listen ser du åpne, under arbeid, forfalte og lukkede avvik for hvert prosjekt eller for hele firmaet.</p>
+
+${illu('feat-foto-ror-i-vagg', 'Bygningsarbeider med hjelm fotograferer rør og kabler i en åpen vegg med mobilen, med en gipsplate lent mot veggen')}
+
+<h2>Avviksrapport som PDF og CSV</h2>
+<p>Når byggherren, verneombudet eller Arbeidstilsynet spør, skal svaret ligge klart. Fra avvikslisten laster du ned en avviksrapport for prosjektet:</p>
+<ul>
+<li><strong>PDF</strong> på bokmål, med prosjekt, dato og antall åpne, under arbeid, lukkede og forfalte avvik.</li>
+<li><strong>CSV</strong> med de samme avvikene, til Excel eller videre behandling.</li>
+</ul>
+<p>Rapporten følger filteret du har valgt, for eksempel bare HMS-avvik eller bare åpne saker. Hvert avvik viser ansvarlig, frist, årsak, tiltak og hvem som lukket det. Det er dokumentasjonen internkontrollforskriften ber om for rutinene for avvik.</p>
+
+<h2>Hvem gjør hva</h2>
+<ul>
+<li><strong>Arbeidslederen</strong> registrerer avviket i webadmin, eller oppretter det fra egenkontrollen eller dagboken.</li>
+<li><strong>Prosjektlederen</strong> setter ansvarlig og frist, og lukker avviket med kommentar når tiltaket er på plass.</li>
+<li><strong>Den ansvarlige</strong> får varsel, skriver årsak og tiltak og setter avviket under arbeid.</li>
+<li><strong>Daglig leder</strong> går gjennom avviksrapporten jevnlig og ser hvilke avvik som går igjen.</li>
+</ul>
+<p>Avvik som går igjen på flere prosjekter, er et signal. Legg inn et nytt kontrollpunkt i sjekklisten, så fanges feilen tidligere neste gang.</p>
+
+${illu('feat-narvaro-samling', 'Arbeidsleder med nettbrett står ved et hus med stillas og snakker med to bygningsarbeidere med hjelm')}
+
+<h2>HMS-system for små bedrifter</h2>
+<p>Et enkelt HMS-system trenger ikke være en tykk perm. For et lite byggefirma holder det ofte med faste sjekklister, en dagbok og et sted der avvikene blir fulgt opp. Med ByggExp har dere det i samme system som timeregistrering, oppgaver og planlegging, så HMS-arbeidet ikke blir enda et program å logge inn i. Pakken Kontroll på jobben har 10 brukere inkludert.</p>
+
+<h2>Hva som er med – og ikke med</h2>
+<p>Et internkontrollsystem dekker mer enn avvik. Det er bedre å vite det før dere starter:</p>
+<div class="article-table"><table>
+<thead><tr><th>Behov</th><th>I ByggExp</th></tr></thead>
+<tbody>
+<tr><td><strong>Avvik med ansvarlig, frist og status</strong></td><td>Ja, i webadmin</td></tr>
+<tr><td><strong>Varsel om tildeling og frist</strong></td><td>Ja, på mobilen til den ansvarlige</td></tr>
+<tr><td><strong>Avviksrapport som PDF og CSV</strong></td><td>Ja, på bokmål</td></tr>
+<tr><td><strong>Egenkontroll og sjekklister</strong></td><td>Ja, i appen og webadmin</td></tr>
+<tr><td><strong>Byggedagbok</strong></td><td>Ja, i webadmin</td></tr>
+<tr><td><strong>Melde avvik i mobilappen</strong></td><td>Ikke ennå. Avvik registreres i webadmin</td></tr>
+<tr><td><strong>Risikovurdering og SJA</strong></td><td>Nei. Bruk vår gratis <a href="/nb/blog/sikker-jobb-analyse">mal for sikker jobb-analyse</a></td></tr>
+<tr><td><strong>Vernerunde</strong></td><td>Nei, ingen egen modul. Kan gjøres som en egen sjekkliste</td></tr>
+<tr><td><strong>HMS-kortleser og mannskapsliste</strong></td><td>Nei. Les om kravene i guiden om <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a></td></tr>
+<tr><td><strong>Stoffkartotek</strong></td><td>Nei</td></tr>
+<tr><td><strong>HMS-håndbok</strong></td><td>Nei</td></tr>
+</tbody>
+</table></div>
+
+<h2>Kom i gang</h2>
+<ol>
+<li><strong>Legg inn prosjektene og de ansatte</strong>, så avvikene får riktig prosjekt og ansvarlig.</li>
+<li><strong>Registrer neste avvik i ByggExp</strong> i stedet for i en notatbok, med ansvarlig og frist.</li>
+<li><strong>Gå gjennom de åpne avvikene hver uke</strong> og lukk dem med kommentar.</li>
+<li><strong>Ta ut avviksrapporten</strong> når prosjektet er ferdig, og bruk den i den årlige gjennomgangen.</li>
+</ol>
+<p>Avvik, egenkontroll, sjekklister og dagbok er med i pakken Kontroll på jobben for ${PROJEKT_PRICE} NOK per måned eks. mva. med 10 brukere, sammen med timeregistrering og planlegging. Med økonomi og faktura i tillegg velger du Full kontroll for ${KOMPLETT_PRICE} NOK. Du prøver alle funksjoner gratis i 14 dager. Les også om <a href="/nb/blog/sha-plan">SHA-plan</a> og <a href="/nb/blog/byggherreforskriften">byggherreforskriften</a>.</p>
+`.trim(),
+  faq: [
+    {
+      question: 'Hva er et HMS-system?',
+      answer:
+        'Rutinene og verktøyet en virksomhet bruker for systematisk arbeid med helse, miljø og sikkerhet: mål, ansvar, risiko, avvik og gjennomgang. Kravet følger av arbeidsmiljøloven § 3-1 og internkontrollforskriften § 5.',
+    },
+    {
+      question: 'Hva er forskjellen på HMS-system og internkontrollsystem?',
+      answer:
+        'I praksis lite. Internkontroll er forskriftens ord for det systematiske HMS-arbeidet, og et internkontrollsystem er verktøyet som holder det samlet.',
+    },
+    {
+      question: 'Hvordan fungerer avviksmeldingen i ByggExp?',
+      answer:
+        'Du registrerer avviket på prosjektet i webadmin med beskrivelse, sted, kategori, alvorlighetsgrad og bilder. Det får en ansvarlig og en frist, og lukkes med en kommentar når tiltaket er gjort.',
+    },
+    {
+      question: 'Kan ansatte melde avvik fra mobilen?',
+      answer:
+        'Ikke ennå. Avvik registreres i webadmin, også fra en anmerkning i egenkontrollen eller fra dagboken. Egenkontrollen fylles ut i appen, og varslene om avvik kommer på mobilen.',
+    },
+    {
+      question: 'Får den ansvarlige beskjed om avviket?',
+      answer:
+        'Ja. Den ansvarlige får varsel når avviket tildeles, når fristen nærmer seg og når den er passert. Har avviket ingen ansvarlig, går varselet om passert frist til prosjektets ledere.',
+    },
+    {
+      question: 'Kan jeg ta ut en avviksrapport?',
+      answer:
+        'Ja. Avviksrapporten lastes ned som PDF eller CSV for et prosjekt eller hele firmaet, på bokmål, og følger filteret du har valgt.',
+    },
+    {
+      question: 'Har ByggExp risikovurdering og SJA?',
+      answer:
+        'Nei, det finnes ingen egen modul for risikovurdering eller sikker jobb-analyse. Vi har en gratis SJA-mal på bloggen.',
+    },
+    {
+      question: 'Er ByggExp en HMS-app?',
+      answer:
+        'Delvis. Egenkontroll og sjekklister fylles ut i appen på iPhone og Android, og varslene om avvik kommer på mobilen. Selve avvikene registreres og lukkes i webadmin.',
+    },
+    {
+      question: 'Hva koster HMS-systemet i ByggExp?',
+      answer: `Avvik, egenkontroll, sjekklister og dagbok er med i Kontroll på jobben for ${PROJEKT_PRICE} NOK per måned eks. mva. med 10 brukere. Ekstra brukere koster ${EXTRA_USER_PRICE} NOK per måned. Du prøver gratis i 14 dager.`,
+    },
+  ],
+  related: [
+    { href: '/nb/funksjoner/ks-system', label: 'KS-system for bygg' },
+    { href: '/nb/blog/sha-plan', label: 'SHA-plan' },
+    { href: '/nb/blog/sikker-jobb-analyse', label: 'Sikker jobb-analyse (SJA)' },
+    { href: '/nb/blog/byggherreforskriften', label: 'Byggherreforskriften' },
+    { href: '/nb/blog/hms-kort-bygg', label: 'HMS-kort' },
+    { href: '/nb/blog/mannskapsliste-byggeplass', label: 'Mannskapsliste' },
+  ],
+};
+
+// Wave 3 (2026-11-01). Wave 4: tilbudsprogram, built once the Norwegian
+// offer/invoice PDFs went live. Wave 5: hms-system, built once the avvik
+// module went live.
 const PAGES: FunksjonPageNb[] = [
   KS_SYSTEM,
   TIMEREGISTRERING,
   PROSJEKTSTYRING,
   BEMANNINGSPLAN,
   TILBUDSPROGRAM,
+  HMS_SYSTEM,
 ];
 
 export const FUNKSJON_PAGES_NB: FunksjonPageNb[] = PAGES.map((page) => ({

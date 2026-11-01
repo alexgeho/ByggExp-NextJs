@@ -208,7 +208,7 @@ const H_HMS_KORT_BYGG_HTML = `
 <p>HMS-kortnummeret er en av opplysningene som skal stå i den elektroniske oversiktslisten etter byggherreforskriften § 15. Les mer om <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og elektronisk oversiktsliste</a>.</p>
 
 <h2>Digital oversikt på plassen</h2>
-<p>HMS-kortet dokumenterer identitet og arbeidsgiver. Hvem som faktisk er på jobb, og hvor lenge, ser du i ByggExp: de ansatte sjekker inn og ut i mobilen med GPS, og timene blir grunnlag for lønn og faktura. ByggExp utsteder ikke HMS-kort. Se <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
+<p>HMS-kortet dokumenterer identitet og arbeidsgiver. Hvem som faktisk er på jobb, og hvor lenge, ser du i ByggExp: de ansatte sjekker inn og ut i mobilen med GPS, og timene blir grunnlag for lønn og faktura. ByggExp utsteder ikke HMS-kort. Se <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-app for bygg</a>, <a href="/nb/funksjoner/hms-system">HMS-system med avvik</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hvem må ha HMS-kort?</h3>
@@ -692,7 +692,7 @@ const SH_SHA_PLAN_HTML = `
 <li><strong>Organisasjonskart</strong> som viser roller og ansvar.</li>
 <li><strong><a href="/nb/blog/framdriftsplan">Framdriftsplan</a></strong> for når og hvor arbeidsoperasjonene skal utføres.</li>
 <li><strong>Spesifikke tiltak</strong> for arbeid som kan medføre fare for liv og helse – gjerne med <a href="/nb/blog/sikker-jobb-analyse">sikker jobb-analyse (SJA)</a>.</li>
-<li><strong>Rutiner for avviksmelding</strong>.</li>
+<li><strong>Rutiner for avviksmelding</strong> – for eksempel i et <a href="/nb/funksjoner/hms-system">HMS-system med avvik</a>.</li>
 </ul>
 <p><a href="/nb/maler/sha-plan-sjekkliste.html" target="_blank" rel="noopener">Last ned SHA-plan sjekkliste</a> (skriv ut eller lagre som PDF) – en gratis sjekkliste over innhold, krav og ansvar.</p>
 
@@ -821,7 +821,7 @@ const BF_BYGGHERREFORSKRIFTEN_HTML = `
 <p>Koordinatoren skal samordne SHA-arbeidet. I prosjekteringsfasen har <strong>KP</strong> (koordinator prosjektering) ansvaret, i utførelsesfasen <strong>KU</strong> (koordinator utførelse). Byggherren kan ta rollen selv eller engasjere noen eksternt – men ansvaret for at koordineringen utføres forsvarlig blir hos byggherren.</p>
 
 <h2>Slik henger kravene sammen</h2>
-<p>Byggherreforskriften er «paraplyen» over flere krav du kanskje kjenner hver for seg: <a href="/nb/blog/sha-plan">SHA-planen</a> beskriver hvordan sikkerheten ivaretas, <a href="/nb/blog/sikker-jobb-analyse">sikker jobb-analyse (SJA)</a> brukes på risikofylt arbeid, <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten</a> viser hvem som er på plassen, og hver person må ha gyldig <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> for å stå på listen. Digital oppmøteregistrering gir deg dokumentasjonen – i ByggExp sjekker de ansatte inn med GPS, så du har oversikt over mannskapet. ByggExp er ikke et SHA-planverktøy, men gir den løpende oversikten.</p>
+<p>Byggherreforskriften er «paraplyen» over flere krav du kanskje kjenner hver for seg: <a href="/nb/blog/sha-plan">SHA-planen</a> beskriver hvordan sikkerheten ivaretas, <a href="/nb/blog/sikker-jobb-analyse">sikker jobb-analyse (SJA)</a> brukes på risikofylt arbeid, <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten</a> viser hvem som er på plassen, og hver person må ha gyldig <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> for å stå på listen. Digital oppmøteregistrering gir deg dokumentasjonen – i ByggExp sjekker de ansatte inn med GPS, så du har oversikt over mannskapet. ByggExp er ikke et SHA-planverktøy, men gir den løpende oversikten. Avvik på byggeplassen følger du opp i et <a href="/nb/funksjoner/hms-system">HMS-system</a> med ansvarlig og frist.</p>
 
 <h2>Kom i gang</h2>
 <p>Les mer om <a href="/nb/blog/sha-plan">SHA-plan</a>, <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>. Sjekk alltid gjeldende krav hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>

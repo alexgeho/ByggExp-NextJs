@@ -7,9 +7,10 @@ import { NO_SITE_URL } from './site-url';
 // All self-canonical on .no. Product intent lives on /nb/funksjoner/* (wave 3).
 // Note: Norwegians search "timeregistrering", NOT "timeføring" (no data).
 
-// Wave 3 (2026-11-01): the product pillar timeregistrering-app-bygg moved to
-// /nb/funksjoner/timeregistrering-app (content/funksjon-pages-nb.ts); the blog URL
-// 301s there (next.config.mjs).
+// Wave 3 (2026-11-01): the product pillar timeregistrering-app-bygg and
+// prosjektstyring-bygg moved to /nb/funksjoner/timeregistrering-app and
+// /nb/funksjoner/prosjektstyringsverktoy (content/funksjon-pages-nb.ts); the blog
+// URLs 301 there (next.config.mjs).
 
 const F_FAKTURERINGSPROGRAM_BYGG_HTML = `
 <p>For et byggefirma henger fakturering tett sammen med timene og prosjektet: du vil fakturere loggede timer, materiell og tillegg – med riktig MVA og forfallsdato – uten å taste inn alt på nytt. Et faktureringsprogram for bygg gjør nettopp det. Her går vi gjennom hva et faktureringsprogram for byggefirmaer bør klare.</p>
@@ -448,83 +449,6 @@ const T_TIMELISTE_MAL: BlogPost = {
   updatedAt: '2026-11-01T12:00:00.000Z',
 };
 
-// Planner/Bemanning claims from docs/seo/product-facts-verified.md (Planering / Bemanning).
-// Not claimed: drag-and-drop, machines, subcontractors.
-const PR_PROSJEKTSTYRING_BYGG_HTML = `
-<p>Et prosjektstyringssystem for bygg samler planen, bemanningen, timene og økonomien – slik at du vet hvor prosjektet står før det skjærer seg. Her går vi gjennom hva et prosjektstyringsverktøy for byggefirmaer bør ha, og hvordan timene teamet fører henger direkte sammen med marginen på prosjektet.</p>
-<figure class="article-diagram"><img src="/landing/diagrams/nb-prosjektstyring.webp" alt="Diagram: prosjektstyring – planlegg i Gantt, følg opp oppgaver og frister, timer på prosjektet, margin per prosjekt" width="720" height="380" loading="lazy"><figcaption>Prosjektstyring: planen, oppgavene, timene og økonomien på ett sted – timene går rett inn i marginen.</figcaption></figure>
-
-<h2>Hva er prosjektstyring for bygg?</h2>
-<p>Prosjektstyring er å planlegge arbeidet, fordele oppgaver, følge fremdriften og holde kontroll på økonomien – fra oppstart til ferdig prosjekt. For et byggefirma betyr det å vite hvem som gjør hva, når det skal være ferdig, og om prosjektet går med overskudd underveis.</p>
-
-<h2>Hva bør et prosjektstyringssystem for bygg ha?</h2>
-<ul>
-<li><strong>Planlegging</strong> – legg opp prosjektet i en tidsplan (Gantt), på personer eller prosjekter.</li>
-<li><strong>Bemanning</strong> – hvem er på hvilket prosjekt hver dag, med fravær synlig og varsel ved overbooking.</li>
-<li><strong>Oppgaver og frister</strong> – tildel oppgaver til personer eller hele teamet, med påminnelser.</li>
-<li><strong>Timer på prosjektet</strong> – timene teamet fører knyttes til riktig prosjekt.</li>
-<li><strong>Dokumentasjon</strong> – foto og filer samlet på prosjektet.</li>
-<li><strong>Økonomi</strong> – budsjett, betalingsplan og margin per prosjekt.</li>
-</ul>
-<p>I ByggExp planlegger du i Gantt per person eller prosjekt (2 uker, måned eller egendefinert periode), med endringslogg. I bemanningsoversikten klikker du i en celle for å sette folk på et prosjekt for en dag, godkjent fravær vises, og du får varsel når noen er booket over 8 timer på en dag. Timene fra <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-appen</a> havner på prosjektet, så du ser hva arbeidet koster mens prosjektet pågår.</p>
-
-<h2>Planlegging som teamet forstår</h2>
-<p>En tidsplan er bare nyttig hvis den brukes. En enkel Gantt-visning – der du planlegger etter personer eller prosjekter – gjør det lett å se hvem som er ledig, hva som henger etter, og når neste fase kan starte. Endrer noe seg på bygget, justerer du planen uten å begynne på nytt.</p>
-
-<h2>Fra timer til prosjektøkonomi</h2>
-<p>Det er her prosjektstyringen blir konkret: timene de ansatte fører via <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-appen</a> knyttes til prosjektet og regnes inn mot budsjettet. Da ser du marginen mens prosjektet pågår – ikke først når fakturaen er sendt. Registrer timene én gang, og bruk dem både til lønn, faktura og prosjektøkonomi.</p>
-
-<h2>Prosjektstyring og byggeledelse</h2>
-<p>Byggeledelse handler om å lede selve utførelsen på plassen – koordinere fagene, holde <a href="/nb/blog/framdriftsplan">framdriftsplanen</a>, følge opp HMS og sørge for at arbeidet blir gjort i riktig rekkefølge. Prosjektstyring er verktøyet som gir byggelederen oversikten: plan, oppgaver, timer og økonomi samlet, så avvik oppdages tidlig. Se hvordan du lager en <a href="/nb/blog/framdriftsplan">framdriftsplan</a> for prosjektet.</p>
-
-<h2>Enkelt nok for håndverkere og mindre firmaer</h2>
-<p>Mindre byggefirmaer trenger sjelden tunge systemer. Poenget er å samle det viktigste – plan, oppgaver, timer og økonomi – på ett sted, uten at det blir en jobb i seg selv å holde det oppdatert. Da bruker teamet det faktisk, og tallene stemmer.</p>
-
-<h2>Kom i gang</h2>
-<p>Vil du se hvordan prosjekt, timer og økonomi henger sammen i ByggExp? Les om <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-app for bygg</a>, <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
-
-<h2>Relaterte guider</h2>
-<ul>
-<li><a href="/nb/funksjoner/timeregistrering-app">Timeregistrering-app for bygg</a></li>
-<li><a href="/nb/blog/framdriftsplan">Framdriftsplan for byggeprosjekt</a></li>
-<li><a href="/nb/blog/mannskapsliste-byggeplass">Mannskapsliste og oversiktsliste</a></li>
-<li><a href="/nb/blog/faktureringsprogram-bygg">Faktureringsprogram for bygg</a></li>
-<li><a href="/nb/blog/fota-kvitton-och-hantera-utlagg">Kvitteringshåndtering for byggefirma</a></li>
-</ul>
-
-<h2>Vanlige spørsmål</h2>
-<h3>Hva er prosjektstyring for bygg?</h3>
-<p>Å planlegge arbeidet, fordele oppgaver, følge fremdriften og holde kontroll på økonomien fra oppstart til ferdig prosjekt – slik at du vet hvor prosjektet står underveis.</p>
-<h3>Hva bør et prosjektstyringsverktøy for byggefirma klare?</h3>
-<p>Planlegging (Gantt), bemanning med varsel ved overbooking, oppgaver og frister, timer knyttet til prosjektet, dokumentasjon (foto/filer) og økonomi med budsjett og margin per prosjekt.</p>
-<h3>Hvordan henger timer og prosjektøkonomi sammen?</h3>
-<p>Timene teamet fører knyttes til prosjektet og regnes mot budsjettet, så du ser marginen mens arbeidet pågår – ikke først når fakturaen er sendt.</p>
-<h3>Passer prosjektstyring for mindre byggefirmaer?</h3>
-<p>Ja. Det viktigste er å samle plan, oppgaver, timer og økonomi på ett sted, enkelt nok til at teamet faktisk bruker det.</p>
-`.trim();
-
-const PR_PROSJEKTSTYRING_BYGG: BlogPost = {
-  _id: 'code-nb-prosjektstyring-bygg',
-  title: 'Prosjektstyring bygg – system og verktøy for plan, timer og margin',
-  slug: 'prosjektstyring-bygg',
-  locale: 'nb',
-  excerpt:
-    'Prosjektstyring for bygg: hold plan, oppgaver, timer og økonomi samlet. Hva et prosjektstyringsverktøy bør klare, og hvordan timene henger sammen med marginen.',
-  tag: 'Digitalisering',
-  coverImageUrl: '/landing/features/5planering.webp',
-  contentHtml: PR_PROSJEKTSTYRING_BYGG_HTML,
-  seoTitle: 'Prosjektstyring system for bygg – plan og margin | ByggExp',
-  seoDescription:
-    'Prosjektstyring system for bygg: Gantt per person eller prosjekt, bemanning med varsel ved overbooking, timer på prosjektet og margin. Hva et prosjektstyringsverktøy bør ha.',
-  seoImageUrl: `${NO_SITE_URL}/landing/features/5planering.webp`,
-  canonicalUrl: '',
-  noIndex: false,
-  isPublished: true,
-  publishedAt: '2026-09-07T14:40:00.000Z',
-  createdAt: '2026-09-07T14:40:00.000Z',
-  updatedAt: '2026-11-01T12:00:00.000Z',
-};
-
 // Price 139,10 kr + mva and lost-card steps: https://www.arbeidstilsynet.no/hms/hms-kort/
 // (lost card § 9, FOR-2007-03-30-367 (sist endret FOR-2023-12-18-2278)).
 const M_MISTET_HMS_KORT_HTML = `
@@ -841,7 +765,7 @@ const BY_BYGGEKONTRAKT_HTML = `
 </table></div>
 
 <h2>Kom i gang</h2>
-<p>Når kontrakten er på plass, henger fremdrift, timer og økonomi sammen. Les om <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring for bygg</a>, <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
+<p>Når kontrakten er på plass, henger fremdrift, timer og økonomi sammen. Les om <a href="/nb/funksjoner/prosjektstyringsverktoy">prosjektstyring for bygg</a>, <a href="/nb/blog/faktureringsprogram-bygg">faktureringsprogram</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva er forskjellen på NS 8405 og NS 8407?</h3>
@@ -1125,7 +1049,7 @@ const SJ_SIKKER_JOBB_ANALYSE: BlogPost = {
 };
 
 const FR_FRAMDRIFTSPLAN_HTML = `
-<p>En framdriftsplan viser når og i hvilken rekkefølge arbeidsoppgavene på et byggeprosjekt skal utføres. Den er navet i <a href="/nb/blog/prosjektstyring-bygg">byggeledelse og prosjektstyring</a>: uten en plan sklir oppgaver ut, fag venter på hverandre, og prosjektet blir forsinket. Her går vi gjennom hva en framdriftsplan skal inneholde, hvordan du lager en, og hvordan du følger den opp underveis.</p>
+<p>En framdriftsplan viser når og i hvilken rekkefølge arbeidsoppgavene på et byggeprosjekt skal utføres. Den er navet i <a href="/nb/funksjoner/prosjektstyringsverktoy">byggeledelse og prosjektstyring</a>: uten en plan sklir oppgaver ut, fag venter på hverandre, og prosjektet blir forsinket. Her går vi gjennom hva en framdriftsplan skal inneholde, hvordan du lager en, og hvordan du følger den opp underveis.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-framdriftsplan.webp" alt="Diagram: framdriftsplan – aktiviteter på en tidslinje med avhengigheter, milepæler og ansvar per fag" width="720" height="380" loading="lazy"><figcaption>Framdriftsplanen legger aktivitetene på en tidslinje med avhengigheter, milepæler og ansvar per fag.</figcaption></figure>
 
 <h2>Hva er en framdriftsplan?</h2>
@@ -1150,10 +1074,10 @@ const FR_FRAMDRIFTSPLAN_HTML = `
 </ol>
 
 <h2>Følg opp planen underveis</h2>
-<p>En framdriftsplan er ferskvare – den må oppdateres når virkeligheten endrer seg. Da hjelper det å se planlagt arbeid mot faktisk <a href="/nb/funksjoner/timeregistrering-app">registrert tid</a> og status på prosjektet. Med <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring for bygg</a> samler du framdrift, timer og dokumentasjon på ett sted, så du oppdager avvik før de blir forsinkelser. Framdriftsplanen inngår også i <a href="/nb/blog/sha-plan">SHA-planen</a> for prosjektet.</p>
+<p>En framdriftsplan er ferskvare – den må oppdateres når virkeligheten endrer seg. Da hjelper det å se planlagt arbeid mot faktisk <a href="/nb/funksjoner/timeregistrering-app">registrert tid</a> og status på prosjektet. Med <a href="/nb/funksjoner/prosjektstyringsverktoy">prosjektstyring for bygg</a> samler du framdrift, timer og dokumentasjon på ett sted, så du oppdager avvik før de blir forsinkelser. Framdriftsplanen inngår også i <a href="/nb/blog/sha-plan">SHA-planen</a> for prosjektet.</p>
 
 <h2>Kom i gang</h2>
-<p>Les mer om <a href="/nb/blog/prosjektstyring-bygg">prosjektstyring og byggeledelse</a>, <a href="/nb/funksjoner/timeregistrering-app">timeregistrering</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
+<p>Les mer om <a href="/nb/funksjoner/prosjektstyringsverktoy">prosjektstyring og byggeledelse</a>, <a href="/nb/funksjoner/timeregistrering-app">timeregistrering</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva er en framdriftsplan?</h3>
@@ -1208,7 +1132,6 @@ export const NB_ARTICLES: BlogPost[] = [
   T_TIMELISTE_APP_BYGG,
   S_SJEKKE_HMS_KORT,
   T_TIMELISTE_MAL,
-  PR_PROSJEKTSTYRING_BYGG,
   M_MISTET_HMS_KORT,
   G_HMS_KORT_GYLDIGHET,
   TP_TIMEPRIS_SNEKKER,

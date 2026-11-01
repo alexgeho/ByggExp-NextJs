@@ -443,10 +443,202 @@ ${illu('tidrapporteringssystem-attest', 'Kvinne ved skrivebordet arbeider på en
   ],
 };
 
+/* ------------------------------------------------------------------------- */
+/* 3. Prosjektstyringsverktøy                                                 */
+/* ------------------------------------------------------------------------- */
+// Replaces /nb/blog/prosjektstyring-bygg (301): that post's title/meta already
+// targeted "prosjektstyring system / prosjektstyringsverktøy" (commercial intent),
+// so keeping both would split the same query (architecture rule A).
+// Economy (budget, prosjektøkonomi, prosjektkalkyle, lønnsomhet) is in Kontroll
+// på pengene / Full kontroll; Gantt + Bemanning in Kontroll på jobben / Full
+// kontroll → plan 'komplett'. Not claimed: Norwegian PDFs, offer → project,
+// integrations, machines in the plan.
+
+const PROSJEKTSTYRING: FunksjonPageNb = {
+  slug: 'prosjektstyringsverktoy',
+  plan: 'komplett',
+  priceIncluded: 'Plan, timer, kalkyle og prosjektøkonomi i én pakke',
+  heroCheck: 'Margin per prosjekt',
+  title: 'Prosjektstyringsverktøy for bygg – plan og margin | ByggExp',
+  description:
+    'Prosjektstyringsverktøy for bygg: Gantt, oppgaver med frister, timer på prosjektet, prosjektkalkyle og etterkalkyle med margin. Prøv gratis i 14 dager.',
+  name: 'Prosjektstyringsverktøy',
+  h1: 'Prosjektstyringsverktøy for bygg.',
+  h1Accent: 'Plan, timer og margin samlet.',
+  lead: 'Se hvor prosjektet står – og om det tjener penger – mens det pågår.',
+  hero: {
+    name: 'projekthantering-oversikt',
+    alt: 'Prosjektleder står ved en stor oversiktstavle med kort og diagrammer foran et hus under oppføring med stillas',
+  },
+  stepsHeading: ['Plan, oppgaver', 'og økonomi'],
+  steps: [
+    {
+      title: 'Planlegg prosjektet',
+      text: 'Gantt per prosjekt eller per ansatt, med endringslogg.',
+      bullets: ['To uker, måned eller egen periode', 'Bemanning dag for dag', 'Varsel ved overbooking'],
+      img: '/landing/features/5planering-1200.webp',
+      alt: 'Planlegging i ByggExp: Gantt-skjema med prosjekter og ansatte over flere uker',
+    },
+    {
+      title: 'Følg opp oppgavene',
+      text: 'Oppgaver med ansvarlig, frist og påminnelser.',
+      bullets: ['Prioritet og gjentakelse', 'Påminnelse til det er gjort', 'Bilder og dokumenter på prosjektet'],
+      img: '/landing/features/2uppgift-1200.webp',
+      alt: 'Ny oppgave i ByggExp med ansvarlig, frist og påminnelse i webadmin og i mobilappen',
+    },
+    {
+      title: 'Se marginen',
+      text: 'Timer, materiell, kostnader og fakturert per prosjekt.',
+      img: '/landing/features/9ekonomi-1200.webp',
+      alt: 'Prosjektøkonomi i ByggExp: timer, kostnader, materiell, fakturert og margin mot budsjett',
+    },
+  ],
+  body: `
+<p>Et prosjektstyringsverktøy for bygg samler planen, oppgavene, timene og økonomien i ett system, slik at du vet hvor prosjektet står før det skjærer seg. I ByggExp planlegger du i Gantt, fordeler laget dag for dag, følger opp oppgaver med frister og ser timer, materiell og fakturert mot budsjettet per prosjekt. Prosjektkalkylen lager du før jobben, og samme kalkyle viser de faktiske tallene etterpå. Her går vi gjennom hva et prosjektstyringssystem for byggefirma bør klare, og hvordan du bruker det fra kalkyle til etterkalkyle.</p>
+
+<h2>Hva bør et prosjektstyringsverktøy for bygg klare?</h2>
+<p>Generelle prosjektverktøy er laget for kontorprosjekter med oppgaver og frister. Et byggeprosjekt har i tillegg folk på flere arbeidsplasser, timer som skal på riktig prosjekt, materiell, tillegg og en margin som kan forsvinne underveis. Se etter dette:</p>
+<ul>
+<li><strong>Planlegging</strong> – tidsplan i Gantt, per prosjekt og per ansatt.</li>
+<li><strong>Bemanning</strong> – hvem er på hvilket bygg hver dag, med fravær og varsel ved overbooking.</li>
+<li><strong>Oppgaver og frister</strong> – ansvarlig, frist og påminnelser til oppgaven er gjort.</li>
+<li><strong>Timer på prosjektet</strong> – timene laget fører i mobilen havner på riktig prosjekt.</li>
+<li><strong>Dokumentasjon</strong> – bilder, tegninger og dokumenter samlet på prosjektet.</li>
+<li><strong>Økonomi</strong> – kalkyle, budsjett, kostnader og margin per prosjekt, mens det pågår.</li>
+</ul>
+<p>Mangler én av disse, ender det ofte med et regneark ved siden av, og da er det regnearket som blir sannheten.</p>
+
+${illu('projekthantering-ritning', 'Prosjektleder og bygningsarbeider med hjelm ser sammen på en blå tegning på et arbeidsbord på byggeplassen')}
+
+<h2>Plan og oppgaver</h2>
+<p>I Planlegging legger du opp prosjektene i Gantt, med visning per prosjekt eller per ansatt og periode på to uker, en måned eller egendefinert. Endringsloggen viser hva som er flyttet. I Bemanning fordeler du laget dag for dag; godkjent fravær vises, og du får varsel når noen har mer enn 8 timer på en dag. Mer om dette på siden om <a href="/nb/funksjoner/bemanningsplan">bemanningsplan</a>, og om hvordan du setter opp <a href="/nb/blog/framdriftsplan">en fremdriftsplan</a>.</p>
+<p>Oppgaver opprettes per prosjekt med ansvarlig, frist og prioritet. Oppgaven kan gjentas, for eksempel hver dag eller hver ukedag, og appen minner den ansvarlige på til den er gjort. Forfalte oppgaver kan sendes videre til sjefen. De ansatte ser oppgavene sine og prosjektets tidsplan i appen, og legger bilder og dokumenter rett på prosjektet.</p>
+
+<h2>Fra timer til prosjektøkonomi</h2>
+<p>Det er her prosjektstyringen blir konkret. Timene de ansatte fører i <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-appen</a> havner på prosjektet. På prosjektets økonomiside angir du kostpris og utfakturert pris per time, og ByggExp regner ut:</p>
+<ul>
+<li><strong>Arbeid</strong> – førte timer × kostpris, timer × fakturert pris og margin på arbeidet.</li>
+<li><strong>Kostnader</strong> – materiell, bestilt materiell, leverandørfakturaer, utlegg og godkjente tillegg.</li>
+<li><strong>Resultat</strong> – fakturert minus total kostnad, i kroner og prosent.</li>
+</ul>
+<p>Kvitteringer som de ansatte skanner med mobilkameraet, og inngående fakturaer, havner på prosjektet. Les mer om <a href="/nb/blog/fota-kvitton-och-hantera-utlagg">kvitteringshåndtering for byggefirma</a>.</p>
+
+${illu('feat-ekonomi-veckoavstamning', 'Bygningsarbeider med hjelm står foran et husskjelett med et nettbrett med søylediagram, ved siden av en kasse med gullmynter')}
+
+<h2>Kalkyleprogram for bygg: prosjektkalkylen</h2>
+<p>Prosjektkalkylen er et regneark laget for byggefirma. Du setter inntekter mot kostnader og ser med en gang hva som blir igjen:</p>
+<ol>
+<li><strong>Inntektssiden.</strong> Tabeller for inntekter, med MVA per tabell eller rad.</li>
+<li><strong>Kostnadssiden.</strong> Tabeller for materiell, lønn og andre kostnader, med de kolonnene du selv vil ha.</li>
+<li><strong>Sammendraget.</strong> Kostnader mot fortjeneste og margin i prosent.</li>
+</ol>
+<p>Kalkylen kan knyttes til et prosjekt, lagres som mal og brukes igjen neste gang du regner på en lignende jobb. Den eksporteres til Excel, og har du allerede regnet i Excel, leser du inn filen. Skal en kollega eller regnskapsføreren se tallene, lager du en lenke som bare kan leses. Vil du sjekke timeprisen eller påslaget, bruk <a href="/nb/verktyg/timpris-kalkylator">timepriskalkulatoren</a> og <a href="/nb/verktyg/paslag-marginal-kalkylator">påslag- og marginkalkulatoren</a>.</p>
+
+<h3>Regneeksempel: påslag eller margin?</h3>
+<p>Et bad koster 88 900 kroner i materiell, arbeid og underentreprenør. Vil du ha 20 % margin på prisen, deler du kostnaden på 0,8 og får 111 125 kroner eks. mva. Legger du i stedet 20 % påslag på kostnaden, blir prisen 106 680 kroner og marginen knapt 17 %. Forskjellen mellom påslag og margin er en av de vanligste regnefeilene i byggkalkyler.</p>
+
+<h2>Etterkalkyle: lær av hvert prosjekt</h2>
+<p>Kalkylen er en prognose. Først når jobben er ferdig vet du om den holdt. Når prosjektkalkylen er knyttet til et prosjekt, henter den inn prosjektets faktiske inntekter (sendte og betalte fakturaer) og kostnader (leverandørfakturaer, godkjente utlegg og lønn) og viser dem ved siden av det du kalkulerte. Det er etterkalkylen, uten at noen må lage den i et eget ark.</p>
+<p>Still tre spørsmål etter hvert større prosjekt:</p>
+<ol>
+<li><strong>Holdt timene?</strong> Regnet dere med 70 timer og brukte 90, trenger neste kalkyle et annet timeantall for samme jobb.</li>
+<li><strong>Holdt materiellet?</strong> Svinn, prisøkninger og ekstra innkjøp vises først i etterkant.</li>
+<li><strong>Hva ble ikke fakturert?</strong> Tilleggsarbeid som aldri ble registrert, er tapte penger.</li>
+</ol>
+<p>Lagre så den oppdaterte kalkylen som mal. I Lønnsomhet sammenligner du fakturert, materiell, arbeid og margin mellom prosjektene, og i Budsjett følger du plan mot faktisk resultat måned for måned.</p>
+
+${illu('offert-kalkyl-marginal', 'Person ved et skrivebord foran en skjerm med et sektordiagram og en stigende pil')}
+
+<h2>Prosjektregnskap uten dobbeltarbeid</h2>
+<p>Prosjektregnskap betyr at inntekter og kostnader føres per prosjekt, slik at du ser resultatet for hver jobb og ikke bare for firmaet. ByggExp er ikke et regnskapsprogram, men samler grunnlaget per prosjekt: timer, kvitteringer, leverandørfakturaer, fakturaer og lønn. Regnskapsføreren fører regnskapet som før, og du får et prosjektregnskap å styre etter mens jobben pågår.</p>
+
+<h2>Slik setter du opp et prosjekt</h2>
+<ol>
+<li><strong>Lag prosjektkalkylen.</strong> Regn på inntekter og kostnader, og lagre den som mal hvis jobben ligner på tidligere jobber.</li>
+<li><strong>Opprett prosjektet</strong> med kunde og adresse, og knytt kalkylen til det.</li>
+<li><strong>Sett timepriser</strong> på prosjektets økonomiside: kostpris og utfakturert pris per time.</li>
+<li><strong>Planlegg i Gantt</strong> og fordel laget i Bemanning.</li>
+<li><strong>Opprett oppgavene</strong> med ansvarlig og frist, og last opp tegninger og dokumenter.</li>
+<li><strong>La laget føre timer og ta bilder</strong> i appen fra første dag.</li>
+<li><strong>Følg opp hver uke:</strong> timer mot plan, kostnader mot kalkyle og åpne oppgaver.</li>
+</ol>
+
+<h2>Dette bør du sjekke før du velger verktøy</h2>
+<ul>
+<li><strong>Bruker laget det?</strong> Et verktøy som bare prosjektlederen bruker, gir planer uten timer og økonomi uten fakta.</li>
+<li><strong>Ser du marginen underveis?</strong> Får du bare tallene når regnskapet er ført, er det for sent å gjøre noe med dem.</li>
+<li><strong>Går timene rett inn?</strong> Timer som tastes inn på nytt fra timelister, blir feil og kommer sent.</li>
+<li><strong>Hva koster det per bruker?</strong> Sjekk hvor mange brukere som er inkludert før du sammenligner priser.</li>
+</ul>
+
+<h2>Tegn på at prosjektet går mot tap</h2>
+<p>Marginen forsvinner sjelden på én dag. Den lekker gjennom små ting som først blir synlige når de summeres. Se etter disse tegnene i prosjektøkonomien:</p>
+<ul>
+<li><strong>Timene løper fra kalkylen.</strong> Er halve kalkulerte timer brukt før halve jobben er gjort, er det nå du må gjøre noe.</li>
+<li><strong>Materiell utenom bestillingen.</strong> Mange små kjøp i byggevarehuset tyder på dårlig planlegging eller endringer som ikke er avtalt.</li>
+<li><strong>Tilleggsarbeid som ikke er registrert.</strong> Det kunden ba om på stedet, må føres og faktureres – ellers blir det gratis.</li>
+<li><strong>Fakturering som henger etter.</strong> Store kostnader og lite fakturert gir dårlig likviditet, selv om prosjektet til slutt går i pluss.</li>
+</ul>
+
+<h2>Passer for mindre byggefirma</h2>
+<p>Mindre byggefirma trenger sjelden tunge systemer. Poenget er å samle det viktigste – plan, oppgaver, timer og økonomi – på ett sted, uten at det blir en jobb i seg selv å holde det oppdatert. Laget fører timer og tar bilder i appen; prosjektlederen planlegger og følger opp i webadmin.</p>
+<p>Plan, timer, prosjektkalkyle og prosjektøkonomi er samlet i Full kontroll for ${KOMPLETT_PRICE} NOK per måned eks. mva. med 10 brukere. Trenger dere bare plan, timer og oppgaver, holder Kontroll på jobben for ${PROJEKT_PRICE} NOK. Du prøver alle funksjoner gratis i 14 dager, og vi flytter over dataene fra det gamle systemet uten kostnad.</p>
+`.trim(),
+  faq: [
+    {
+      question: 'Hva er et prosjektstyringsverktøy for bygg?',
+      answer:
+        'Et system der du planlegger arbeidet, fordeler folk og oppgaver, fører timer på prosjektet og følger økonomien, fra kalkyle til ferdig prosjekt. I ByggExp ligger plan, timer og margin i samme løsning.',
+    },
+    {
+      question: 'Hva er forskjellen på prosjektstyring og prosjektregnskap?',
+      answer:
+        'Prosjektstyring er å planlegge og følge opp arbeidet. Prosjektregnskap er inntekter og kostnader ført per prosjekt. I ByggExp ser du begge deler: planen og oppgavene, og timer, kostnader, fakturert og margin per prosjekt.',
+    },
+    {
+      question: 'Kan jeg lage kalkyle og etterkalkyle i ByggExp?',
+      answer:
+        'Ja. Prosjektkalkylen setter inntekter mot kostnader og viser marginen. Knyttet til et prosjekt viser den også faktiske inntekter og kostnader, slik at du ser om kalkylen holdt.',
+    },
+    {
+      question: 'Erstatter ByggExp regnskapsprogrammet?',
+      answer:
+        'Nei. ByggExp samler grunnlaget per prosjekt – timer, kvitteringer, fakturaer og lønn – mens regnskapet føres som før.',
+    },
+    {
+      question: 'Hvordan lager jeg en etterkalkyle?',
+      answer:
+        'Knytt prosjektkalkylen til prosjektet. Da vises de faktiske inntektene og kostnadene ved siden av det du kalkulerte, og du ser hvor avviket oppstod: timer, materiell eller tillegg som ikke ble fakturert.',
+    },
+    {
+      question: 'Kan de ansatte se planen i mobilen?',
+      answer:
+        'De ansatte ser oppgavene sine og prosjektets tidsplan i appen, og legger inn timer, bilder og dokumenter der. Bemanningsrutenettet brukes i webadmin.',
+    },
+    {
+      question: 'Passer det for små byggefirma?',
+      answer:
+        'Ja. Laget trenger bare appen for timer, oppgaver og bilder. Plan og økonomi følges opp i webadmin av den som har ansvaret.',
+    },
+    {
+      question: 'Hva koster prosjektstyring i ByggExp?',
+      answer: `Full kontroll med plan, timer, prosjektkalkyle og prosjektøkonomi koster ${KOMPLETT_PRICE} NOK per måned eks. mva. med 10 brukere. Ekstra brukere koster ${EXTRA_USER_PRICE} NOK per måned. Du prøver gratis i 14 dager.`,
+    },
+  ],
+  related: [
+    { href: '/nb/blog/framdriftsplan', label: 'Slik lager du en fremdriftsplan' },
+    { href: '/nb/blog/projektekonomi-och-lonsamhet', label: 'Prosjektøkonomi og lønnsomhet' },
+    { href: '/nb/blog/fota-kvitton-och-hantera-utlagg', label: 'Kvitteringshåndtering' },
+    { href: '/nb/blog/byggekontrakt', label: 'Byggekontrakt' },
+    { href: '/nb/verktyg/paslag-marginal-kalkylator', label: 'Påslag- og marginkalkulator' },
+    { href: '/nb/funksjoner/bemanningsplan', label: 'Bemanningsplan' },
+  ],
+};
+
 // Wave 3 (2026-11-01). Skipped, see docs/TASKS.md: hms-system (no avvik module
 // with saksgang/risk analysis in the product) and tilbudsprogram (offer and
 // invoice PDFs are Swedish-only, invoice PDF prints SEK/Bankgiro).
-const PAGES: FunksjonPageNb[] = [KS_SYSTEM, TIMEREGISTRERING];
+const PAGES: FunksjonPageNb[] = [KS_SYSTEM, TIMEREGISTRERING, PROSJEKTSTYRING];
 
 export const FUNKSJON_PAGES_NB: FunksjonPageNb[] = PAGES.map((page) => ({
   ...page,

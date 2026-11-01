@@ -25,6 +25,17 @@ const ROWS_EN: [string, string, string, string][] = [
   ["Apple APNs / Google FCM", "Push delivery", "USA", "SCC / EU-US DPF"],
 ];
 
+const ROWS_NB: [string, string, string, string][] = [
+  ["MongoDB Atlas", "Database / hosting", "EU – AWS Stockholm", "Innenfor EØS"],
+  ["Yelles AB", "Appdrift (VPS)", "Sverige (EU)", "Innenfor EØS"],
+  ["Inleed", "Utgående e-post", "Sverige (EU)", "Innenfor EØS"],
+  ["Anthropic", "AI – skanning av kvitteringer/sertifikater", "USA", "DPA + SCC"],
+  ["DeepL", "Maskinoversettelse", "Tyskland (EU)", "Innenfor EØS"],
+  ["Stripe", "Betaling / abonnement", "EU + USA", "DPA + SCC + EU-US DPF"],
+  ["Expo", "Push-varsler", "USA", "DPA / SCC"],
+  ["Apple APNs / Google FCM", "Levering av push-varsler", "USA", "SCC / EU-US DPF"],
+];
+
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: landingLanguageCodes.map((lang) => ({ params: { lang } })),
   fallback: false,
@@ -75,6 +86,50 @@ export default function SubprocessorsPage({
         <h2>Kontakt</h2>
         <p>
           Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakien. Kontaktadress i Sverige: c/o Alexander Gerhard, Ekbacksvägen 32, 168 69 Bromma.
+          E-post: support@byggexp.se.
+        </p>
+      </LegalDocument>
+    );
+  }
+
+  if (lang === "nb") {
+    return (
+      <LegalDocument title="Underdatabehandlere" updated="2026-09-26" lang="nb" contentLocales={svEnLocales}>
+        <p>
+          Real Marketing s. r. o. (IČO 53551958) bruker følgende
+          underdatabehandlere for å levere ByggExp. Overføring til tredjeland
+          skjer bare med et gyldig overføringsgrunnlag (EUs
+          standardkontraktsbestemmelser og/eller EU-US Data Privacy Framework).
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Underdatabehandler</th>
+              <th>Tjeneste</th>
+              <th>Sted</th>
+              <th>Overføringsgrunnlag</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ROWS_NB.map((r) => (
+              <tr key={r[0]}>
+                <td>{r[0]}</td>
+                <td>{r[1]}</td>
+                <td>{r[2]}</td>
+                <td>{r[3]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p>
+          Noen tjenester (f.eks. betaling og AI) aktiveres først ved behov. Vi
+          oppdaterer listen når underdatabehandlere kommer til eller fjernes, og
+          informerer behandlingsansvarlige kunder i henhold til
+          databehandleravtalen.
+        </p>
+        <h2>Kontakt</h2>
+        <p>
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Kontaktadresse i Sverige: c/o Alexander Gerhard, Ekbacksvägen 32, 168 69 Bromma, Sverige.
           E-post: support@byggexp.se.
         </p>
       </LegalDocument>

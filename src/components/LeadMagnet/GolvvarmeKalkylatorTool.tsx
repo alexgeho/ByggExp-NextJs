@@ -4,20 +4,21 @@ import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
-import { fakturaHref, offertHref } from '../../lib/offert';
+import { fakturaHref, offertEnabled, offertHref } from '../../lib/offert';
 import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Underfloor-heating calculator: pipe/loop length from area and pipe spacing
 // (c/c), plus number of loops given a max loop length. Bilingual: sv default,
-// en for /en/verktyg; nb falls back to sv text.
+// en for /en/verktyg, nb for byggexp.no.
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
 }
 
 export default function GolvvarmeKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const nf = (v: number) => v.toLocaleString(en ? 'en-GB' : 'sv-SE', { maximumFractionDigits: 0 });
+  const nb = locale === 'nb';
+  const nf = (v: number) => v.toLocaleString(en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE', { maximumFractionDigits: 0 });
   const t = en
     ? {
         title: 'Underfloor heating – loop length and number of loops',
@@ -30,6 +31,19 @@ export default function GolvvarmeKalkylatorTool({ locale = 'sv' }: { locale?: Ca
         csvTitle: 'Underfloor heating', post: 'Item', qty: 'Quantity',
         mTotal: 'Approx. loop length', mLoops: 'Number of loops',
         soPipe: (cc: string) => `Underfloor pipe c/c ${cc} (m)`, soLoops: 'Loops / manifold ports', soLabour: 'Installation labour',
+      }
+    : nb
+    ? {
+        title: 'Gulvvarme – sløyfelengde og antall sløyfer',
+        sub: 'Fyll inn arealet og senteravstanden (c/c) mellom rørene, så regner vi ut omtrentlig sløyfelengde og antall sløyfer. Legg til tur/retur separat.',
+        area: 'Areal (m²)', cc: 'Senteravstand c/c (mm)', maxLoop: 'Maks sløyfelengde (m)',
+        rTotal: 'Omtrentlig sløyfelengde', rLoops: 'Antall sløyfer',
+        m: 'm', pcs: 'stk',
+        fine: 'Et overslag (sløyfelengde ≈ areal ÷ c/c). Regn med ekstra rør for tur og retur til fordeleren, og hold deg innenfor maks sløyfelengde per sløyfe.',
+        offert: 'Lag tilbud av dette', faktura: 'Lag faktura', excel: 'Eksporter Excel', pdf: 'Eksporter PDF',
+        csvTitle: 'Gulvvarme', post: 'Post', qty: 'Mengde',
+        mTotal: 'Omtrentlig sløyfelengde', mLoops: 'Antall sløyfer',
+        soPipe: (cc: string) => `Gulvvarmerør c/c ${cc} (m)`, soLoops: 'Sløyfer / fordeleruttak', soLabour: 'Arbeid installasjon',
       }
     : {
         title: 'Golvvärme – slinglängd och antal slingor',
@@ -69,7 +83,7 @@ export default function GolvvarmeKalkylatorTool({ locale = 'sv' }: { locale?: Ca
     gaEvent('export_excel', { tool: 'golvvarme-kalkylator' });
     downloadCsvRows(
       [
-        [t.csvTitle, 'byggexp.se'],
+        [t.csvTitle, nb ? 'byggexp.no' : 'byggexp.se'],
         [],
         [t.post, t.qty],
         [t.mTotal, `${nf(r.total)} ${t.m}`],
@@ -80,6 +94,7 @@ export default function GolvvarmeKalkylatorTool({ locale = 'sv' }: { locale?: Ca
   };
 
   const exportPdf = () => void downloadMaterialPdf({
+    locale,
     title: t.csvTitle,
     rows: [
       { desc: t.mTotal, qty: `${nf(r.total)} ${t.m}` },
@@ -92,22 +107,22 @@ export default function GolvvarmeKalkylatorTool({ locale = 'sv' }: { locale?: Ca
   return (
     <div className="lm-tool lm-tool--split">
       <div className="lm-tool-grid lm-tool-grid--pair">
-        <label className="lm-tool-field"><span>{t.area}</span><input type="number" min="0" inputMode="decimal" value={area} placeholder={en ? 'e.g. 20' : 't.ex. 20'} onChange={(e) => setArea(e.currentTarget.value)} /></label>
+        <label className="lm-tool-field"><span>{t.area}</span><input type="number" min="0" inputMode="decimal" value={area} placeholder={en ? 'e.g. 20' : nb ? 'f.eks. 20' : 't.ex. 20'} onChange={(e) => setArea(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.cc}</span><input type="number" min="0" inputMode="numeric" value={cc} onChange={(e) => setCc(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.maxLoop}</span><input type="number" min="0" inputMode="numeric" value={maxLoop} onChange={(e) => setMaxLoop(e.currentTarget.value)} /></label>
       </div>
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight"><span>{t.rTotal}</span><strong>{nf(r.total)} {t.m}</strong></div>
-        <div className="lm-result-row lm-result-total"><span>{t.rLoops}</span><strong>{nf(r.loops)} {t.pcs}<CopyLinkButton scope={u} tool="golvvarme-kalkylator" en={en} /></strong></div>
+        <div className="lm-result-row lm-result-total"><span>{t.rLoops}</span><strong>{nf(r.loops)} {t.pcs}<CopyLinkButton scope={u} tool="golvvarme-kalkylator" en={en} nb={nb} /></strong></div>
         <p className="lm-result-fine">{t.fine}</p>
       </div>
       <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-        <a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'golvvarme-kalkylator' })}>
+        {offertEnabled(locale) ? (<a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'golvvarme-kalkylator' })}>
           {t.offert}
-        </a>
-        <a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'golvvarme-kalkylator' })}>
+        </a>) : null}
+        {offertEnabled(locale) ? (<a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'golvvarme-kalkylator' })}>
           {t.faktura}
-        </a>
+        </a>) : null}
         <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>
           {t.excel}
         </button>

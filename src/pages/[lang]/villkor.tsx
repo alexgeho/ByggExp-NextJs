@@ -99,6 +99,90 @@ export default function TermsPage({
     );
   }
 
+  if (lang === "nb") {
+    return (
+      <LegalDocument title="Brukervilkår" updated="2026-10-28" lang="nb" contentLocales={svEnLocales}>
+        <p className="legal-page__note">
+          Standardvilkår — juster pris og vilkår etter behov. Gjennomgås av
+          jurist før publisering.
+        </p>
+
+        <h2>1. Tjenesten</h2>
+        <p>
+          ByggExp leveres av Real Marketing s. r. o. (IČO 53551958, mva-nr. SK2121411820) («vi»).
+          Vilkårene gjelder mellom oss og det foretaket som oppretter en konto
+          («Kunden»).
+        </p>
+
+        <h2>2. Kontoer og bruk</h2>
+        <p>
+          Kunden er ansvarlig for brukernes kontoer, for at opplysninger som
+          legges inn er riktige, og for at behandlingen av ansattes
+          personopplysninger (inkl. GPS) har et lovlig grunnlag og blir
+          kommunisert til de ansatte. Se personvernerklæringen og
+          databehandleravtalen.
+        </p>
+
+        <h2>3. Abonnement og betaling</h2>
+        <p>
+          Tjenesten leveres mot en løpende abonnementsavgift etter gjeldende
+          prisliste. Avgiften faktureres forskuddsvis per måned eller år.
+          Abonnementet løper til det sies opp, og kan sies opp når som helst.
+          Oppsigelsen gjelder fra slutten av betalingsperioden som allerede er
+          betalt. Allerede betalte avgifter refunderes ikke. Prisendringer
+          varsles minst 30 dager i forveien.
+        </p>
+
+        <h2>4. Tilgjengelighet og ansvar</h2>
+        <p>
+          Vi tilstreber høy tilgjengelighet, men gir ingen garanti for
+          uavbrutt drift og kan gjennomføre planlagt vedlikehold. Vårt samlede
+          ansvar er begrenset til avgiftene Kunden har betalt for Tjenesten de
+          siste tolv (12) månedene. Vi er ikke ansvarlige for indirekte tap,
+          som tapt fortjeneste eller datatap som Kunden selv kunne ha unngått.
+          Ingenting i vilkårene begrenser ansvar som etter ufravikelig lov ikke
+          kan begrenses.
+        </p>
+
+        <h2>5. Immaterielle rettigheter</h2>
+        <p>
+          Vi beholder alle rettigheter til plattformen. Kunden får en
+          ikke-eksklusiv, ikke-overdragbar rett til å bruke Tjenesten i
+          avtaleperioden.
+        </p>
+
+        <h2>6. Kundens data</h2>
+        <p>
+          Kunden eier sine data. Vi behandler personopplysninger i henhold til
+          databehandleravtalen. Ved avslutning kan data eksporteres eller
+          slettes, med unntak av det loven krever at vi oppbevarer.
+        </p>
+
+        <h2>7. Force majeure</h2>
+        <p>
+          Ingen av partene er ansvarlige for forsinkelse eller feil som skyldes
+          forhold utenfor partens rimelige kontroll (f.eks. avbrudd hos
+          underleverandør, strømbrudd, myndighetsvedtak).
+        </p>
+
+        <h2>8. Endringer</h2>
+        <p>Vi kan oppdatere vilkårene; vesentlige endringer varsles i forveien.</p>
+
+        <h2>9. Lovvalg</h2>
+        <p>
+          Svensk rett gjelder. Tvister avgjøres av svenske domstoler med
+          Stockholms tingsrett som første instans.
+        </p>
+
+        <h2>Kontakt</h2>
+        <p>
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Kontaktadresse i Sverige: c/o Alexander Gerhard, Ekbacksvägen 32, 168 69 Bromma, Sverige.
+          E-post: support@byggexp.se.
+        </p>
+      </LegalDocument>
+    );
+  }
+
   return (
     <LegalDocument title="Terms of Service" updated="2026-10-28" lang="en" contentLocales={svEnLocales}>
       <p className="legal-page__note">

@@ -23,10 +23,10 @@ const SOCIALS = [
 ];
 
 
-function Footer({ footerT }: FooterProps) {
+function Footer({ footerT, lang: langProp }: FooterProps) {
   const router = useRouter();
   const langParam = router.query.lang;
-  const lang = typeof langParam === "string" ? langParam : "sv";
+  const lang = langProp || (typeof langParam === "string" ? langParam : "sv");
 
   return (
     <footer className="footer">

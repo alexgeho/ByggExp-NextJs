@@ -201,7 +201,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaText:
       'Bygg tilbud med materialer og arbeid, og følg prosjektet fra tilbud til faktura. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'takstolar-kalkylator', label: 'Beregne takstoler' },
       { slug: 'betong-kalkylator', label: 'Betongberegner' },
@@ -370,6 +370,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'The tool calculates the roof area.',
                   'Choose the roofing material for coverage.',
                   'Order the right amount.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi takets mål og takvinkel.',
+                  'Verktøyet regner ut takflaten.',
+                  'Velg taktekking for å se materialforbruket.',
+                  'Bestill riktig mengde.',
                 ]
               : [
                   'Ange takets mått och taklutning.',

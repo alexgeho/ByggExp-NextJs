@@ -44,6 +44,17 @@ export function middleware(req: NextRequest) {
     to.protocol = 'https:';
     to.host = bare(rawHost);
     to.port = '';
+    // www.byggexp.no: go straight to the final nb URL in one hop
+    // (www.byggexp.no/ → https://byggexp.no/nb, not via byggexp.no/).
+    const isFile =
+      pathname.startsWith('/_next') || pathname.startsWith('/api') || pathname.includes('.');
+    if (rawHost === `www.${NO_HOST}` && NB_LIVE && !isFile && firstSeg !== 'nb') {
+      if (NON_NB_LOCALES.has(firstSeg)) {
+        to.host = SE_HOST;
+      } else {
+        to.pathname = pathname === '/' ? '/nb' : `/nb${pathname}`;
+      }
+    }
     return NextResponse.redirect(to, 301);
   }
 
@@ -62,8 +73,11 @@ export function middleware(req: NextRequest) {
     // `/[lang]/embed/[slug]` strips down to `/sv/embed`, which has no index page
     // — point it at the tools hub the widgets belong to instead.
     if (rest.length === 1 && rest[0] === 'embed') rest[0] = 'verktyg';
+    // On byggexp.no the target is the nb page (a /sv target would bounce again
+    // to byggexp.se).
+    const locale = bare(req.headers.get('host') || '') === NO_HOST && NB_LIVE ? 'nb' : 'sv';
     const to = new URL(url);
-    to.pathname = `/sv${rest.length ? `/${rest.join('/')}` : ''}`;
+    to.pathname = `/${locale}${rest.length ? `/${rest.join('/')}` : ''}`;
     return NextResponse.redirect(to, 301);
   }
 
@@ -87,10 +101,15 @@ export function middleware(req: NextRequest) {
       to.port = '';
       return NextResponse.redirect(to, 301);
     }
-    // Locale-less path (or root) → serve the nb version.
+    // Locale-less path (or root) → 301 to the nb URL. Mirrors byggexp.se, where
+    // `/` 301s to `/sv` (pages/index.tsx). A rewrite served the same page on
+    // both `/` and `/nb`, and Google rejected the /nb canonical as a duplicate.
     const to = new URL(url);
+    to.protocol = 'https:';
+    to.host = NO_HOST;
+    to.port = '';
     to.pathname = pathname === '/' ? '/nb' : `/nb${pathname}`;
-    return NextResponse.rewrite(to);
+    return NextResponse.redirect(to, 301);
   }
 
   // --- byggexp.se: nb belongs on byggexp.no --------------------------------

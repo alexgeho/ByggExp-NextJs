@@ -1,7 +1,7 @@
 // Blog categories. The ~40 raw article tags collapse into a small set of
 // top-level categories used for the blog filter bar and the generated cover
-// cards (keep this mapping in sync with scripts/gen-blog-covers.js). Labels are
-// Swedish since the code-published articles are the Swedish market's.
+// cards (keep this mapping in sync with scripts/gen-blog-covers.js). `label` is
+// Swedish (byggexp.se); `labelNb` is shown on byggexp.no — use categoryLabel().
 
 export type BlogCategoryKey =
   | 'ekonomi'
@@ -16,20 +16,31 @@ export type BlogCategoryKey =
 export type BlogCategory = {
   key: BlogCategoryKey;
   label: string;
+  labelNb: string;
   color: string;
 };
 
 // Fixed display order for the filter bar.
 export const BLOG_CATEGORIES: BlogCategory[] = [
-  { key: 'ekonomi', label: 'Ekonomi & skatt', color: '#1f9d6b' },
-  { key: 'kalkyl', label: 'Kalkyl & material', color: '#2563c9' },
-  { key: 'juridik', label: 'Juridik & avtal', color: '#5a52d9' },
-  { key: 'arbetsmiljo', label: 'Arbetsmiljö', color: '#e08512' },
-  { key: 'regelverk', label: 'Regelverk', color: '#8a3afd' },
-  { key: 'personal', label: 'Personal & lön', color: '#c8447a' },
-  { key: 'kvalitet', label: 'Kvalitet & projekt', color: '#0e9bb0' },
-  { key: 'tillvaxt', label: 'Marknad & tillväxt', color: '#d09a1a' },
+  { key: 'ekonomi', label: 'Ekonomi & skatt', labelNb: 'Økonomi og skatt', color: '#1f9d6b' },
+  { key: 'kalkyl', label: 'Kalkyl & material', labelNb: 'Kalkyle og materialer', color: '#2563c9' },
+  { key: 'juridik', label: 'Juridik & avtal', labelNb: 'Juss og kontrakter', color: '#5a52d9' },
+  { key: 'arbetsmiljo', label: 'Arbetsmiljö', labelNb: 'Arbeidsmiljø', color: '#e08512' },
+  { key: 'regelverk', label: 'Regelverk', labelNb: 'Regelverk', color: '#8a3afd' },
+  { key: 'personal', label: 'Personal & lön', labelNb: 'Personal og lønn', color: '#c8447a' },
+  { key: 'kvalitet', label: 'Kvalitet & projekt', labelNb: 'Kvalitet og prosjekt', color: '#0e9bb0' },
+  { key: 'tillvaxt', label: 'Marknad & tillväxt', labelNb: 'Marked og vekst', color: '#d09a1a' },
 ];
+
+// Display label per site language: nb on byggexp.no, Swedish everywhere else.
+export function categoryLabel(cat: BlogCategory, lang: string): string {
+  return lang === 'nb' ? cat.labelNb : cat.label;
+}
+
+// "All" chip of the blog filter.
+export function allCategoriesLabel(lang: string): string {
+  return lang === 'nb' ? 'Alle' : 'Alla';
+}
 
 const BY_KEY = new Map(BLOG_CATEGORIES.map((c) => [c.key, c]));
 
@@ -41,12 +52,13 @@ export function blogCategory(key: BlogCategoryKey): BlogCategory {
 // (egenkontroll, dokumentation, projektledning, byggdagbok, tidrapport …).
 export function categoryForTag(tag: string | null | undefined): BlogCategoryKey {
   const t = (tag || '').toLowerCase();
-  if (/(ekonomi|skatt|rot|avdrag|företagande|likvid|moms|faktur)/.test(t)) return 'ekonomi';
+  // økonomi / lønn: Norwegian tags of the nb articles (Swedish tags never contain ø).
+  if (/(ekonomi|økonomi|skatt|rot|avdrag|företagande|likvid|moms|faktur)/.test(t)) return 'ekonomi';
   if (/(kalkyl|beräkn|material)/.test(t)) return 'kalkyl';
   if (/(arbetsmilj)/.test(t)) return 'arbetsmiljo';
   if (/(juridik|entreprenad|avtal|äta|besiktning|tvist)/.test(t)) return 'juridik';
   if (/(regel|bygglov|id06|personalliggare|behörighet|kompetens)/.test(t)) return 'regelverk';
-  if (/(personal|anställ|lön|arbetsrätt|bemanning|arbetsgivare)/.test(t)) return 'personal';
+  if (/(personal|anställ|lön|lønn|arbetsrätt|bemanning|arbetsgivare)/.test(t)) return 'personal';
   if (/(marknad|seo|digitali)/.test(t)) return 'tillvaxt';
   return 'kvalitet';
 }

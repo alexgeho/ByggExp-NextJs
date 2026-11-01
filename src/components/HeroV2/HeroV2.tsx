@@ -48,6 +48,10 @@ const peopleLeft = "/landing/hero/bygget.webp";
 const peopleRight = "/landing/hero/kontor.webp";
 // dark: site photo behind the text; real ByggExp screens inside the photos (R6)
 const darkBg = "/landing/hero/bg-bygge.webp";
+const OFFICE_SRCSET =
+  "/landing/hero/kontor-720.webp 720w, /landing/hero/kontor-1440.webp 1440w, /landing/hero/kontor.webp 2628w";
+const SITE_SRCSET =
+  "/landing/hero/bygget-400.webp 400w, /landing/hero/bygget-800.webp 800w, /landing/hero/bygget.webp 1527w";
 
 // full package contents (src/locales/pricing.ts: financeItems / projectItems), one line until "Läs mer"
 export const PRICE_LINES = heroV2Translations.sv.prices;
@@ -67,7 +71,15 @@ function HeroV2({ variant = "center", lang = "sv" }: HeroV2Props) {
     <section className={`hero-v2 hero-v2--${variant}`}>
       {isDark && (
         <>
-          <img src={darkBg} alt="" className="hero-v2-bg" aria-hidden="true" />
+          {/* Mobile LCP element: fetch it first (it is tiny, 17 KB). */}
+          <img
+            src={darkBg}
+            alt=""
+            className="hero-v2-bg"
+            aria-hidden="true"
+            fetchPriority="high"
+            decoding="async"
+          />
           <span className="hero-v2-scrim" aria-hidden="true" />
         </>
       )}
@@ -117,8 +129,12 @@ function HeroV2({ variant = "center", lang = "sv" }: HeroV2Props) {
         <div className="hero-v2-visual">
           {showScenes ? (
             <>
+              {/* Responsive variants (same photos, resized): the 2628 px
+                  original was sent to phones that show it ~300 px wide. */}
               <img
                 src={peopleRight}
+                srcSet={OFFICE_SRCSET}
+                sizes="(min-width: 1440px) 720px, (min-width: 901px) 50vw, 84vw"
                 alt={t.altOffice}
                 className="hero-v2-scene hero-v2-scene--office"
                 width={2628}
@@ -127,6 +143,8 @@ function HeroV2({ variant = "center", lang = "sv" }: HeroV2Props) {
               />
               <img
                 src={peopleLeft}
+                srcSet={SITE_SRCSET}
+                sizes="(min-width: 1440px) 270px, (min-width: 901px) 19vw, 36vw"
                 alt={t.altSite}
                 className="hero-v2-scene hero-v2-scene--site"
                 width={1527}

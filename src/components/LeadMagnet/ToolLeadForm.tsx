@@ -10,7 +10,7 @@ import { leadVisitFields } from '../../lib/leadForm';
 // contact field (e-post OR phone in one cell) is required; name and message are
 // optional. Posts to the same demo-request endpoint the contact form uses;
 // `tool` and the message ride along so sales sees which calculator the lead came
-// from. Bilingual: sv default, en for /en/verktyg; nb falls back to sv text.
+// from. sv default, en for /en/verktyg, nb for byggexp.no.
 export default function ToolLeadForm({
   tool,
   summary,
@@ -22,7 +22,24 @@ export default function ToolLeadForm({
 }) {
   const en = locale === 'en';
   const ru = locale === 'ru';
-  const t = ru
+  const nb = locale === 'nb';
+  const t = nb
+    ? {
+        heading: 'Vil du ha hjelp videre?',
+        sub: 'Beskriv kort hva du trenger, så hjelper vi deg med tilbud, materialer og neste steg – uten kostnad. Bare kontaktfeltet er obligatorisk.',
+        message: 'Melding',
+        messagePh: 'Beskriv kort prosjektet ditt eller spørsmålet ditt …',
+        contact: 'E-post eller telefon',
+        contactPh: 'navn@eksempel.no eller +47…',
+        name: 'Navn',
+        send: 'Send',
+        sending: 'Sender…',
+        error: 'Noe gikk galt – prøv igjen eller send e-post til info@byggexp.se.',
+        privacy: 'Vi bruker opplysningene bare til å kontakte deg om henvendelsen din.',
+        thanks: 'Takk! Vi tar kontakt.',
+        thanksSub: 'Vi svarer på e-post eller telefon og hjelper deg videre med beregningen.',
+      }
+    : ru
     ? {
         heading: 'Нужна помощь дальше?',
         sub: 'Коротко опишите, что нужно, и мы поможем со сметой, материалом и следующими шагами — бесплатно. Обязательно только поле контакта.',

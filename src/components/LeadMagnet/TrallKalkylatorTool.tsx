@@ -4,20 +4,22 @@ import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
-import { fakturaHref, offertHref } from '../../lib/offert';
+import { fakturaHref, offertEnabled, offertHref } from '../../lib/offert';
 import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Decking calculator: lineal metres and boards from area, board width, gap and
 // waste — plus the joists (reglar/bärlina) underneath at a chosen c/c.
-// Bilingual: sv default, en for /en/verktyg; nb falls back to sv text.
+// sv default, en for /en/verktyg, nb for byggexp.no.
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
 }
 
 export default function TrallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : 'sv-SE', { maximumFractionDigits: d });
+  const nb = locale === 'nb';
+  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE', { maximumFractionDigits: d });
+  const eg = en ? 'e.g.' : nb ? 'f.eks.' : 't.ex.';
   const t = en
     ? {
         title: 'Decking calculator – boards and joists',
@@ -31,6 +33,20 @@ export default function TrallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
         mMeters: 'Linear metres of decking', mBoards: 'Decking boards', mJoist: (cc: string) => `Joists/bearers c/c ${cc}`,
         pdfTitle: 'Decking – material list',
         soMeters: 'Decking (linear metres)', soBoards: 'Decking boards', soJoist: (cc: string) => `Joists/bearers c/c ${cc} (lm)`, soLabour: 'Decking labour',
+      }
+    : nb
+    ? {
+        title: 'Terrassekalkulator – terrassebord og bjelker',
+        sub: 'Fyll inn terrassens areal, bordbredde og fuge, så regner vi ut løpemeter terrassebord, antall bord og bjelker/dragere under terrassen – inkl. svinn.',
+        area: 'Areal (m²)', board: 'Bordbredde (mm)', gap: 'Fuge (mm)', len: 'Bordlengde (m)', cc: 'Bjelker c/c (mm)', spill: 'Svinn (%)',
+        rMeters: 'Løpemeter terrassebord', rBoards: 'Antall bord', rJoist: (cc: string) => `Bjelker/dragere (c/c ${cc})`,
+        lm: 'lm', pcs: 'stk',
+        fine: 'Et overslag. Fugen påvirker forbruket. Bjelker regnes som total lengde ved valgt c/c – legg til stolper/fundamenter og innfesting separat.',
+        offert: 'Lag tilbud av dette', faktura: 'Lag faktura', excel: 'Eksporter Excel', pdf: 'Eksporter PDF',
+        csvTitle: 'Terrassekalkulator', post: 'Post', qty: 'Mengde',
+        mMeters: 'Løpemeter terrassebord', mBoards: 'Terrassebord', mJoist: (cc: string) => `Bjelker/dragere c/c ${cc}`,
+        pdfTitle: 'Terrasse – materialliste',
+        soMeters: 'Terrassebord (løpemeter)', soBoards: 'Terrassebord', soJoist: (cc: string) => `Bjelker/dragere c/c ${cc} (lm)`, soLabour: 'Arbeid legging av terrassebord',
       }
     : {
         title: 'Trallkalkylator – brädor och reglar',
@@ -79,7 +95,7 @@ export default function TrallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
     gaEvent('export_excel', { tool: 'trall-kalkylator' });
     downloadCsvRows(
       [
-        [t.csvTitle, 'byggexp.se'],
+        [t.csvTitle, nb ? 'byggexp.no' : 'byggexp.se'],
         [],
         [t.post, t.qty],
         [t.mMeters, `${nf(r.meters)} ${t.lm}`],
@@ -91,6 +107,7 @@ export default function TrallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
   };
 
   const exportPdf = () => void downloadMaterialPdf({
+    locale,
     title: t.pdfTitle,
     rows: [
       { desc: t.mMeters, qty: `${nf(r.meters)} ${t.lm}` },
@@ -104,7 +121,7 @@ export default function TrallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
   return (
     <div className="lm-tool lm-tool--split">
       <div className="lm-tool-grid">
-        <label className="lm-tool-field"><span>{t.area}</span><input type="number" min="0" inputMode="decimal" value={area} placeholder={en ? 'e.g. 20' : 't.ex. 20'} onChange={(e) => setArea(e.currentTarget.value)} /></label>
+        <label className="lm-tool-field"><span>{t.area}</span><input type="number" min="0" inputMode="decimal" value={area} placeholder={`${eg} 20`} onChange={(e) => setArea(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.board}</span><input type="number" min="0" inputMode="decimal" value={board} onChange={(e) => setBoard(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.gap}</span><input type="number" min="0" inputMode="decimal" value={gap} onChange={(e) => setGap(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.len}</span><input type="number" min="0" inputMode="decimal" value={len} onChange={(e) => setLen(e.currentTarget.value)} /></label>
@@ -112,18 +129,18 @@ export default function TrallKalkylatorTool({ locale = 'sv' }: { locale?: CalcLo
         <label className="lm-tool-field"><span>{t.spill}</span><input type="number" min="0" inputMode="decimal" value={spill} onChange={(e) => setSpill(e.currentTarget.value)} /></label>
       </div>
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{t.rMeters}</span><strong>{nf(r.meters)} {t.lm}<CopyLinkButton scope={u} tool="trall-kalkylator" en={en} /></strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rMeters}</span><strong>{nf(r.meters)} {t.lm}<CopyLinkButton scope={u} tool="trall-kalkylator" en={en} nb={nb} /></strong></div>
         <div className="lm-result-row lm-result-total"><span>{t.rBoards}</span><strong>{nf(r.boards)} {t.pcs}</strong></div>
         <div className="lm-result-row"><span>{t.rJoist(cc)}</span><span>{nf(r.joistM)} {t.lm}</span></div>
         <p className="lm-result-fine">{t.fine}</p>
       </div>
       <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-        <a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'trall-kalkylator' })}>
+        {offertEnabled(locale) ? (<a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'trall-kalkylator' })}>
           {t.offert}
-        </a>
-        <a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'trall-kalkylator' })}>
+        </a>) : null}
+        {offertEnabled(locale) ? (<a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'trall-kalkylator' })}>
           {t.faktura}
-        </a>
+        </a>) : null}
         <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>
           {t.excel}
         </button>

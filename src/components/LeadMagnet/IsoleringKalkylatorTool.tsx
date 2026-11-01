@@ -4,14 +4,14 @@ import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
-import { fakturaHref, offertHref } from '../../lib/offert';
+import { fakturaHref, offertEnabled, offertHref } from '../../lib/offert';
 import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Professional insulation calculator. From area and thickness it returns the
 // insulated area, the volume (m³), the number of packs and an approximate
-// U-value for the insulation layer (U ≈ lambda / thickness). Bilingual: sv
-// default, en for /en/verktyg; nb falls back to sv text.
+// U-value for the insulation layer (U ≈ lambda / thickness). sv default, en
+// for /en/verktyg, nb for byggexp.no.
 
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
@@ -21,7 +21,8 @@ const THICKNESSES = ['45', '70', '95', '120', '145', '170', '195', '220', '245']
 
 export default function IsoleringKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : 'sv-SE', { maximumFractionDigits: d });
+  const nb = locale === 'nb';
+  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE', { maximumFractionDigits: d });
   const t = en
     ? {
         title: 'Insulation calculator – quantity & U-value',
@@ -36,6 +37,21 @@ export default function IsoleringKalkylatorTool({ locale = 'sv' }: { locale?: Ca
         pdfTitle: 'Insulation – material list', pdfMeta: (th: string, l: string) => `${th} mm · lambda ${l} W/mK`,
         pdfNote: 'The U-value applies only to the insulation layer. A correct whole-wall U-value accounts for studs, boards and thermal bridges.',
         soIso: (th: string) => `Insulation ${th} mm (packs)`, soLabour: 'Insulation labour',
+      }
+    : nb
+    ? {
+        title: 'Isolasjonskalkulator – mengde og U-verdi',
+        sub: 'Angi areal og isolasjonstykkelse, så regner vi ut antall pakker, volum og en omtrentlig U-verdi for isolasjonssjiktet. Standard er mineralull med lambda 0,036 W/mK.',
+        area: 'Areal som skal isoleres (m²)', thickness: 'Tykkelse (mm)', lambda: 'Lambda (W/mK)', perPack: 'm² per pakke', spill: 'Svinn (%)',
+        rNeed: 'Behov inkl. svinn', rPacks: 'Antall pakker', rVolume: 'Volum isolasjon', rU: 'U-verdi, isolasjonssjiktet (ca.)',
+        pcs: 'stk',
+        fine: 'Et overslag. Hvor mange m² en pakke dekker, avhenger av tykkelsen – verdien står på pakken. U-verdien gjelder bare isolasjonssjiktet; en korrekt U-verdi for hele veggen tar også hensyn til stendere, plater og kuldebroer. Plater 560 mm brede passer stendere c/c 600 mm.',
+        offert: 'Lag tilbud av dette', faktura: 'Lag faktura', excel: 'Eksporter Excel', pdf: 'Eksporter PDF',
+        csvTitle: 'Isolasjonskalkulator', csvThick: 'Tykkelse', post: 'Post', qty: 'Mengde',
+        mNeed: 'Behov inkl. svinn', mPacks: 'Antall pakker', mVolume: 'Volum isolasjon', mU: 'U-verdi, isolasjonssjiktet (ca.)',
+        pdfTitle: 'Isolasjon – materialliste', pdfMeta: (th: string, l: string) => `${th} mm · lambda ${l} W/mK`,
+        pdfNote: 'U-verdien gjelder bare isolasjonssjiktet. En korrekt U-verdi for hele veggen tar hensyn til stendere, plater og kuldebroer.',
+        soIso: (th: string) => `Isolasjon ${th} mm (pakker)`, soLabour: 'Arbeid isolering',
       }
     : {
         title: 'Isoleringskalkylator – mängd & U-värde',
@@ -72,7 +88,7 @@ export default function IsoleringKalkylatorTool({ locale = 'sv' }: { locale?: Ca
 
   const exportCsv = () => {
     const rows: (string | number)[][] = [
-      [t.csvTitle, 'byggexp.se'],
+      [t.csvTitle, nb ? 'byggexp.no' : 'byggexp.se'],
       [t.csvThick, `${thickness} mm`],
       [t.lambda, `${lambda} W/mK`],
       [],
@@ -87,6 +103,7 @@ export default function IsoleringKalkylatorTool({ locale = 'sv' }: { locale?: Ca
   };
 
   const exportPdf = () => void downloadMaterialPdf({
+    locale,
     title: t.pdfTitle,
     meta: t.pdfMeta(thickness, lambda),
     rows: [
@@ -113,7 +130,7 @@ export default function IsoleringKalkylatorTool({ locale = 'sv' }: { locale?: Ca
       <div className="lm-tool-grid">
         <label className="lm-tool-field">
           <span>{t.area}</span>
-          <input type="number" min="0" inputMode="decimal" value={area} placeholder={en ? 'e.g. 50' : 't.ex. 50'} onChange={(e) => setArea(e.currentTarget.value)} />
+          <input type="number" min="0" inputMode="decimal" value={area} placeholder={en ? 'e.g. 50' : nb ? 'f.eks. 50' : 't.ex. 50'} onChange={(e) => setArea(e.currentTarget.value)} />
         </label>
         <label className="lm-tool-field">
           <span>{t.thickness}</span>
@@ -140,7 +157,7 @@ export default function IsoleringKalkylatorTool({ locale = 'sv' }: { locale?: Ca
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rNeed}</span>
-          <strong>{nf(r.need, 1)} m²<CopyLinkButton scope={u} tool="isolering-kalkylator" en={en} /></strong>
+          <strong>{nf(r.need, 1)} m²<CopyLinkButton scope={u} tool="isolering-kalkylator" en={en} nb={nb} /></strong>
         </div>
         <div className="lm-result-row lm-result-total">
           <span>{t.rPacks}</span>
@@ -156,12 +173,16 @@ export default function IsoleringKalkylatorTool({ locale = 'sv' }: { locale?: Ca
         </div>
         <p className="lm-result-fine">{t.fine}</p>
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-          <a className="lm-tool-button" href={r.packs > 0 ? offertUrl : undefined} aria-disabled={r.packs <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'isolering-kalkylator' })}>
-            {t.offert}
-          </a>
-          <a className="lm-tool-secondary" href={r.packs > 0 ? fakturaUrl : undefined} aria-disabled={r.packs <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'isolering-kalkylator' })}>
-            {t.faktura}
-          </a>
+          {offertEnabled(locale) ? (
+            <a className="lm-tool-button" href={r.packs > 0 ? offertUrl : undefined} aria-disabled={r.packs <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'isolering-kalkylator' })}>
+              {t.offert}
+            </a>
+          ) : null}
+          {offertEnabled(locale) ? (
+            <a className="lm-tool-secondary" href={r.packs > 0 ? fakturaUrl : undefined} aria-disabled={r.packs <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'isolering-kalkylator' })}>
+              {t.faktura}
+            </a>
+          ) : null}
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.packs <= 0}>
             {t.excel}
           </button>

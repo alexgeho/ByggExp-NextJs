@@ -100,6 +100,98 @@ export default function DpaPage({
     );
   }
 
+  if (lang === "nb") {
+    return (
+      <LegalDocument
+        title="Databehandleravtale (DPA)"
+        updated="2026-09-26"
+        lang="nb"
+        contentLocales={svEnLocales}
+      >
+        <p className="legal-page__note">
+          Denne databehandleravtalen gjelder mellom Real Marketing s. r. o. og det
+          kundeforetaket som oppretter en konto. Den er et vedlegg til
+          abonnementet/hovedavtalen. Gjennomgås av jurist før signering.
+        </p>
+
+        <p>
+          Real Marketing s. r. o. (IČO 53551958), «Databehandleren», behandler
+          personopplysninger på vegne av kundeforetaket («den
+          Behandlingsansvarlige») i henhold til art. 28 GDPR.
+        </p>
+
+        <h2>1. Formål og varighet</h2>
+        <p>
+          Databehandleren behandler opplysninger bare for å levere plattformen,
+          så lenge hovedavtalen gjelder. Ved opphør slettes eller tilbakeleveres
+          opplysningene i henhold til punkt 8.
+        </p>
+
+        <h2>2. Behandlingens art og formål</h2>
+        <p>
+          Drift av en plattform for bygg- og prosjektstyring: kontoer, prosjekter,
+          oppgaver, registrering av tid og oppmøte, GPS ved arbeidsøkter,
+          fakturering, lønn og dokumenthåndtering.
+        </p>
+
+        <h2>3. Registrerte og opplysninger</h2>
+        <p>
+          Den Behandlingsansvarliges ansatte, underentreprenører,
+          kontaktpersoner og kunder. Identitet/kontakt, ansettelsesdata,
+          fødselsnummer (fakturering/lønn), tid/oppmøte, posisjonsdata (GPS),
+          økonomi- og prosjektdata.
+        </p>
+
+        <h2>4. Databehandlerens plikter</h2>
+        <p>
+          Behandle bare etter den Behandlingsansvarliges dokumenterte
+          instrukser; sikre taushetsplikt; iverksette sikkerhetstiltak etter
+          art. 32; bistå med de registrertes rettigheter, sikkerhet,
+          avviksmelding og DPIA; slette/tilbakelevere ved avslutning; muliggjøre
+          revisjon.
+        </p>
+
+        <h2>5. Underdatabehandlere</h2>
+        <p>
+          Den Behandlingsansvarlige gir generell forhåndsgodkjenning til
+          underdatabehandlerne som er oppført på siden{" "}
+          <Link href="/nb/underbitraden">Underdatabehandlere</Link>.
+          Databehandleren informerer om planlagte bytter, og den
+          Behandlingsansvarlige kan protestere. Underdatabehandlere er bundet av
+          tilsvarende plikter.
+        </p>
+
+        <h2>6. Overføring til tredjeland</h2>
+        <p>
+          Skjer bare med et gyldig overføringsgrunnlag (SCC / EU-US DPF). Se
+          listen over underdatabehandlere.
+        </p>
+
+        <h2>7. Brudd på personopplysningssikkerheten</h2>
+        <p>
+          Databehandleren varsler den Behandlingsansvarlige uten ugrunnet
+          opphold med informasjon til melding til tilsynsmyndigheten (i Norge:
+          Datatilsynet) innen 72 timer.
+        </p>
+
+        <h2>8. Sletting/tilbakelevering</h2>
+        {/* Norway: bokføringsloven § 13 annet ledd – regnskapsmateriale nr. 1–4 oppbevares i fem år
+              etter regnskapsårets slutt. https://lovdata.no/dokument/NL/lov/2004-11-19-73/§13 */}
+        <p>
+          Ved avslutning slettes eller eksporteres opplysningene etter den
+          Behandlingsansvarliges valg, med unntak av det loven krever at vi
+          oppbevarer (f.eks. regnskap i fem år etter regnskapsårets slutt).
+        </p>
+
+        <h2>Kontakt</h2>
+        <p>
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Kontaktadresse i Sverige: c/o Alexander Gerhard, Ekbacksvägen 32, 168 69 Bromma, Sverige.
+          E-post: support@byggexp.se.
+        </p>
+      </LegalDocument>
+    );
+  }
+
   return (
     <LegalDocument
       title="Data Processing Agreement (DPA)"

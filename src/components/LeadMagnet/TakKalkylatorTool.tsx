@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
-import { fakturaHref, offertHref } from '../../lib/offert';
+import { fakturaHref, offertEnabled, offertHref } from '../../lib/offert';
 import { useUrlParam, useUrlScope, YES_NO } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
@@ -13,7 +13,7 @@ import CopyLinkButton from './CopyLinkButton';
 // takavvattning (hängrännor by eaves length, stuprör by count × building height,
 // rännkrokar), snörasskydd, and byggnadsställning (perimeter × work height) for
 // roof work. Optional items default to sensible values and can be turned off.
-// Bilingual: sv default, en for /en/verktyg; nb falls back to sv text.
+// sv default, en for /en/verktyg, nb for byggexp.no.
 
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
@@ -30,7 +30,9 @@ const DEFAULTS: Record<Covering, { tiles: number; gauge: number }> = {
 
 export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : 'sv-SE', { maximumFractionDigits: d });
+  const nb = locale === 'nb';
+  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE', { maximumFractionDigits: d });
+  const eg = en ? 'e.g.' : nb ? 'f.eks.' : 't.ex.';
   const t = en
     ? {
         title: 'Roof calculator – area, tiles, drainage & scaffolding',
@@ -52,6 +54,28 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
         csvTitle: 'Roof calculator', csvForm: 'Roof type', csvCov: 'Roof covering', csvPost: 'Item', csvQty: 'Quantity',
         pdfTitle: 'Roof – material list', pdfBy: 'Created with ByggExp – byggexp.se', pdfNote: 'Estimate. Check against the manufacturer’s laying instructions.',
         soCover: (c: string) => `Roof covering ${c} (m²)`, soBatten: 'Tiling battens (lm)', soFelt: 'Underlay felt (m²)', soGutter: 'Gutters (m)', soStupror: 'Downpipes (m)', soScaffold: 'Scaffolding (m²)', soLabour: 'Roofing labour',
+      }
+    : nb
+    ? {
+        title: 'Takkalkulator – areal, takstein, takrenner og stillas',
+        sub: 'Angi husets mål og takvinkel, så regner vi ut takflaten og materialene: takstein, lekter og undertakspapp – pluss (valgfritt) takrenner, nedløpsrør, snøfangere og stillas for takarbeidet. Eksporter til Excel eller PDF.',
+        formL: 'Takform', oSadel: 'Saltak (to takflater)', oPulpet: 'Pulttak (én takflate)',
+        length: 'Lengde (m)', width: 'Bredde (m)', pitch: 'Takvinkel (°)', overhang: 'Utstikk (m)', height: 'Byggehøyde til takfot (m)',
+        coveringL: 'Taktekking', tilesPerM2: (d: string) => `Takstein per m² (standard ${d})`, spill: 'Svinn / overlapp (%)',
+        guttersQ: 'Takrenner og nedløpsrør?', yes: 'Ja', no: 'Nei', downpipes: 'Antall nedløpsrør', krokCC: 'Rennekrok c/c (m)',
+        snowQ: 'Snøfangere?', scaffoldQ: 'Stillas?', scaffoldYes: 'Ja (fasadeareal)',
+        rFootprint: 'Byggets grunnflate', rRoof: (f: string) => `Takflate (${f})`, rTiles: 'Antall takstein (ca.)', rCover: 'Taktekking inkl. overlapp',
+        rBatten: 'Taklekter', rStrolakt: 'Sløyfer', rFelt: 'Undertakspapp (ca.)', rNock: 'Møne (lengde)',
+        rGutter: 'Takrenner', rKrok: 'Rennekroker', rStupror: (n: string) => `Nedløpsrør (${n} stk)`, rSnow: 'Snøfangere', rScaffold: 'Stillas (fasadeareal)',
+        fine: 'Takflate = grunnflate (inkl. utstikk) ÷ cos(takvinkel). Takrenner regnes på takfotlengden, nedløpsrør på antall × byggehøyde, og stillas som fasadeareal (omkrets × arbeidshøyde). Antall takstein og lekteavstand avhenger av modell – følg produsentens leggeanvisning.',
+        offert: 'Lag tilbud av dette', faktura: 'Lag faktura', excel: 'Eksporter Excel', pdf: 'Eksporter PDF',
+        pcs: 'stk', lm: 'lm', more: 'Flere valg',
+        sadelShort: 'saltak', pulpetShort: 'pulttak',
+        cov: { betongpanna: 'Betongtakstein', tegelpanna: 'Teglstein', plat: 'Plate (profilert)', papp: 'Papp / duk' } as Record<Covering, string>,
+        mRoof: 'Takflate', mTiles: (c: string) => `Takstein (${c})`, mCover: (c: string) => `Taktekking ${c}`, mBatten: 'Taklekter', mStrolakt: 'Sløyfer', mFelt: 'Undertakspapp', mNock: 'Møne (lengde)', mGutter: 'Takrenner', mKrok: 'Rennekroker', mStupror: (n: string) => `Nedløpsrør (${n} stk)`, mSnow: 'Snøfangere', mScaffold: 'Stillas',
+        csvTitle: 'Takkalkulator', csvForm: 'Takform', csvCov: 'Taktekking', csvPost: 'Post', csvQty: 'Mengde',
+        pdfTitle: 'Tak – materialliste', pdfBy: 'Laget med ByggExp – byggexp.no', pdfNote: 'Overslag. Kontroller mot produsentens leggeanvisning.',
+        soCover: (c: string) => `Taktekking ${c} (m²)`, soBatten: 'Taklekter (lm)', soFelt: 'Undertakspapp (m²)', soGutter: 'Takrenner (m)', soStupror: 'Nedløpsrør (m)', soScaffold: 'Stillas (m²)', soLabour: 'Arbeid taktekking',
       }
     : {
         title: 'Takkalkylator – yta, pannor, avvattning & ställning',
@@ -157,7 +181,7 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
 
   const exportCsv = () => {
     const rows: (string | number)[][] = [
-      [t.csvTitle, 'byggexp.se'],
+      [t.csvTitle, nb ? 'byggexp.no' : 'byggexp.se'],
       [t.csvForm, form === 'sadel' ? t.oSadel : t.oPulpet],
       [t.csvCov, cov],
       [], [t.csvPost, t.csvQty],
@@ -210,9 +234,9 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
             <option value="pulpet">{t.oPulpet}</option>
           </select></label>
         <label className={fld}><span>{t.length}</span>
-          <input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 10' : 't.ex. 10'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
+          <input type="number" min="0" inputMode="decimal" value={length} placeholder={`${eg} 10`} onChange={(e) => setLength(e.currentTarget.value)} /></label>
         <label className={fld}><span>{t.width}</span>
-          <input type="number" min="0" inputMode="decimal" value={width} placeholder={en ? 'e.g. 8' : 't.ex. 8'} onChange={(e) => setWidth(e.currentTarget.value)} /></label>
+          <input type="number" min="0" inputMode="decimal" value={width} placeholder={`${eg} 8`} onChange={(e) => setWidth(e.currentTarget.value)} /></label>
         <label className={fld}><span>{t.pitch}</span>
           <input type="number" min="0" max="80" inputMode="decimal" value={pitch} onChange={(e) => setPitch(e.currentTarget.value)} /></label>
         <label className={fld}><span>{t.overhang}</span>
@@ -267,9 +291,9 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
           <strong>{nf(r.roofArea, 1)} m²</strong>
         </div>
         {r.hasTiles ? (
-          <div className="lm-result-row lm-result-total"><span>{t.rTiles}</span><strong>{nf(r.tileCount)} {t.pcs}<CopyLinkButton scope={u} tool="tak-kalkylator" en={en} /></strong></div>
+          <div className="lm-result-row lm-result-total"><span>{t.rTiles}</span><strong>{nf(r.tileCount)} {t.pcs}<CopyLinkButton scope={u} tool="tak-kalkylator" en={en} nb={nb} /></strong></div>
         ) : (
-          <div className="lm-result-row lm-result-total"><span>{t.rCover}</span><strong>{nf(r.feltM2, 1)} m²<CopyLinkButton scope={u} tool="tak-kalkylator" en={en} /></strong></div>
+          <div className="lm-result-row lm-result-total"><span>{t.rCover}</span><strong>{nf(r.feltM2, 1)} m²<CopyLinkButton scope={u} tool="tak-kalkylator" en={en} nb={nb} /></strong></div>
         )}
         <div className="lm-result-row"><span>{t.rFootprint}</span><span>{nf(r.footprint, 1)} m²</span></div>
         {r.hasBatten ? <div className="lm-result-row"><span>{t.rBatten}</span><span>{nf(r.battenM)} {t.lm}</span></div> : null}
@@ -287,12 +311,12 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
         {r.scaffoldM2 > 0 ? <div className="lm-result-row"><span>{t.rScaffold}</span><span>{nf(r.scaffoldM2, 1)} m²</span></div> : null}
         <p className="lm-result-fine">{t.fine}</p>
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-          <a className="lm-tool-button" href={r.roofArea > 0 ? offertUrl : undefined} aria-disabled={r.roofArea <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'tak-kalkylator' })}>
+          {offertEnabled(locale) ? (<a className="lm-tool-button" href={r.roofArea > 0 ? offertUrl : undefined} aria-disabled={r.roofArea <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'tak-kalkylator' })}>
             {t.offert}
-          </a>
-          <a className="lm-tool-secondary" href={r.roofArea > 0 ? fakturaUrl : undefined} aria-disabled={r.roofArea <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'tak-kalkylator' })}>
+          </a>) : null}
+          {offertEnabled(locale) ? (<a className="lm-tool-secondary" href={r.roofArea > 0 ? fakturaUrl : undefined} aria-disabled={r.roofArea <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'tak-kalkylator' })}>
             {t.faktura}
-          </a>
+          </a>) : null}
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.roofArea <= 0}>{t.excel}</button>
           <button type="button" className="lm-tool-secondary" onClick={() => void exportPdf()} disabled={r.roofArea <= 0}>{t.pdf}</button>
         </div>

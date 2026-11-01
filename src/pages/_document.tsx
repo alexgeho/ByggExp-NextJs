@@ -61,7 +61,12 @@ const WEBSITE_SCHEMA = JSON.stringify({
 // <html lang> follows the /[lang]/ route segment so en/ru/pl… pages aren't
 // declared Swedish; anything without a locale segment falls back to sv.
 function htmlLang(props: DocumentProps): LandingLanguageCode {
-  const lang = props.__NEXT_DATA__?.query?.lang;
+  // The error page has no route segment; it picks its language from the host
+  // and passes it as a prop (see pages/_error.tsx).
+  const lang =
+    props.__NEXT_DATA__?.page === "/_error"
+      ? props.__NEXT_DATA__?.props?.pageProps?.lang
+      : props.__NEXT_DATA__?.query?.lang;
   return typeof lang === "string" && landingLanguageCodes.includes(lang as LandingLanguageCode)
     ? (lang as LandingLanguageCode)
     : "sv";

@@ -4,19 +4,20 @@ import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
-import { fakturaHref, offertHref } from '../../lib/offert';
+import { fakturaHref, offertEnabled, offertHref } from '../../lib/offert';
 import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Gravel/soil calculator: volume from area × depth, plus weight in tonnes.
-// Bilingual: sv default, en for /en/verktyg; nb falls back to sv text.
+// sv default, en for /en/verktyg, nb for byggexp.no.
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
 }
 
 export default function GrusKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const nf = (v: number, d = 1) => v.toLocaleString(en ? 'en-GB' : 'sv-SE', { maximumFractionDigits: d });
+  const nb = locale === 'nb';
+  const nf = (v: number, d = 1) => v.toLocaleString(en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE', { maximumFractionDigits: d });
   const t = en
     ? {
         title: 'Gravel & crushed stone – volume and tonnes',
@@ -30,6 +31,20 @@ export default function GrusKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         mPacked: 'Volume (finished/compacted)', mOrder: 'To order (loose, incl. compaction)', mTons: 'Weight (approx.)',
         pdfTitle: 'Gravel & crushed stone',
         soGravel: 'Gravel/crushed stone (tonnes)', soLabour: 'Labour/transport',
+      }
+    : nb
+    ? {
+        title: 'Grus og pukk – volum og tonn',
+        sub: 'Fyll inn areal og dybde, så regner vi ut volumet i kubikkmeter og vekten i tonn. Fungerer for grus, pukk, matjord og sand – juster densiteten etter materialet.',
+        length: 'Lengde (m)', width: 'Bredde (m)', depth: 'Dybde (cm)', density: 'Densitet (tonn/m³)', packning: 'Komprimering (%)',
+        rPacked: 'Volum (ferdig, komprimert)', rOrder: 'Å bestille (løst, inkl. komprimering)', rTons: 'Vekt (ca.)',
+        tons: 'tonn',
+        fine: 'Grus og bærelag leveres løst og komprimeres ~15–25 % – derfor bestiller du mer enn det ferdige (komprimerte) volumet. Densiteten varierer: grus/pukk ca. 1,5–1,8 tonn/m³, matjord ca. 1,2–1,5. Sjekk med leverandøren.',
+        offert: 'Lag tilbud av dette', faktura: 'Lag faktura', excel: 'Eksporter Excel', pdf: 'Eksporter PDF',
+        csvTitle: 'Grus og pukk', post: 'Post', qty: 'Mengde',
+        mPacked: 'Volum (ferdig/komprimert)', mOrder: 'Å bestille (løst, inkl. komprimering)', mTons: 'Vekt (ca.)',
+        pdfTitle: 'Grus og pukk',
+        soGravel: 'Grus/pukk (tonn)', soLabour: 'Arbeid/transport',
       }
     : {
         title: 'Grus & makadam – volym och ton',
@@ -70,7 +85,7 @@ export default function GrusKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
     gaEvent('export_excel', { tool: 'grus-kalkylator' });
     downloadCsvRows(
       [
-        [t.csvTitle, 'byggexp.se'],
+        [t.csvTitle, nb ? 'byggexp.no' : 'byggexp.se'],
         [],
         [t.post, t.qty],
         [t.mPacked, `${nf(r.packed, 2)} m³`],
@@ -82,6 +97,7 @@ export default function GrusKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
   };
 
   const exportPdf = () => void downloadMaterialPdf({
+    locale,
     title: t.pdfTitle,
     rows: [
       { desc: t.rPacked, qty: `${nf(r.packed, 2)} m³` },
@@ -95,25 +111,25 @@ export default function GrusKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
   return (
     <div className="lm-tool lm-tool--split">
       <div className="lm-tool-grid">
-        <label className="lm-tool-field"><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 10' : 't.ex. 10'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
-        <label className="lm-tool-field"><span>{t.width}</span><input type="number" min="0" inputMode="decimal" value={width} placeholder={en ? 'e.g. 3' : 't.ex. 3'} onChange={(e) => setWidth(e.currentTarget.value)} /></label>
+        <label className="lm-tool-field"><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 10' : nb ? 'f.eks. 10' : 't.ex. 10'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
+        <label className="lm-tool-field"><span>{t.width}</span><input type="number" min="0" inputMode="decimal" value={width} placeholder={en ? 'e.g. 3' : nb ? 'f.eks. 3' : 't.ex. 3'} onChange={(e) => setWidth(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.depth}</span><input type="number" min="0" inputMode="decimal" value={depth} onChange={(e) => setDepth(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.density}</span><input type="number" min="0" inputMode="decimal" value={density} onChange={(e) => setDensity(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.packning}</span><input type="number" min="0" inputMode="decimal" value={packning} onChange={(e) => setPackning(e.currentTarget.value)} /></label>
       </div>
       <div className="lm-result">
         <div className="lm-result-row"><span>{t.rPacked}</span><span>{nf(r.packed, 2)} m³</span></div>
-        <div className="lm-result-row lm-result-highlight"><span>{t.rOrder}</span><strong>{nf(r.order, 2)} m³<CopyLinkButton scope={u} tool="grus-kalkylator" en={en} /></strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rOrder}</span><strong>{nf(r.order, 2)} m³<CopyLinkButton scope={u} tool="grus-kalkylator" en={en} nb={nb} /></strong></div>
         <div className="lm-result-row lm-result-total"><span>{t.rTons}</span><strong>{nf(r.tons)} {t.tons}</strong></div>
         <p className="lm-result-fine">{t.fine}</p>
       </div>
       <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-        <a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'grus-kalkylator' })}>
+        {offertEnabled(locale) ? (<a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'grus-kalkylator' })}>
           {t.offert}
-        </a>
-        <a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'grus-kalkylator' })}>
+        </a>) : null}
+        {offertEnabled(locale) ? (<a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'grus-kalkylator' })}>
           {t.faktura}
-        </a>
+        </a>) : null}
         <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>
           {t.excel}
         </button>

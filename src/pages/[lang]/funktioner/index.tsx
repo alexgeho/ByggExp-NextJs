@@ -6,6 +6,7 @@ import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'rea
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
+import { getCodeArticles } from '../../../content/code-articles';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
 import { FEATURE_NAV } from '../../../components/FeatureNav/FeatureNav';
 import { FUNKTION_PAGES, ILLU_HEIGHT, illuSrc, illuSrcSet } from '../../../content/funktion-pages';
@@ -517,8 +518,18 @@ export const getServerSideProps: GetServerSideProps<FunktionerPageProps> = async
     return { notFound: true };
   }
 
+  // nb has no feature posts in the CMS; its 12 translated feature articles are
+  // served from code (content/articles/features-nb.ts, live at /nb/blog/<slug>).
+  // Fill in any feature slug the CMS lacks from those, so /nb/funktioner is not
+  // empty. Limited to nb so the sv/en/ru hubs stay CMS-only as before.
+  const withCodeFeatures = (cms: BlogPost[]): BlogPost[] => {
+    if (lang !== 'nb') return cms;
+    const have = new Set(cms.map((post) => post.slug));
+    return [...cms, ...getCodeArticles(lang).filter((post) => !have.has(post.slug))];
+  };
+
   try {
-    const posts = await fetchPublishedBlogPosts(lang);
+    const posts = withCodeFeatures(await fetchPublishedBlogPosts(lang));
     // Order is CMS-driven and can vary per language/fetch. Pin it to the
     // canonical FEATURE_NAV order so the carousel is consistent everywhere.
     const order = new Map(FEATURE_NAV.map((f, i) => [f.slug, i]));
@@ -530,7 +541,14 @@ export const getServerSideProps: GetServerSideProps<FunktionerPageProps> = async
       .sort((a, b) => (order.get(a.slug) ?? 999) - (order.get(b.slug) ?? 999));
     return { props: { lang, posts: ordered } };
   } catch {
-    return { props: { lang, posts: [] } };
+    const order = new Map(FEATURE_NAV.map((f, i) => [f.slug, i]));
+    const fallback = withCodeFeatures([])
+      .filter(
+        (post) =>
+          FEATURE_ARTICLE_SLUGS.has(post.slug) && !HIDDEN_FEATURE_SLUGS.has(post.slug),
+      )
+      .sort((a, b) => (order.get(a.slug) ?? 999) - (order.get(b.slug) ?? 999));
+    return { props: { lang, posts: fallback } };
   }
 };
 

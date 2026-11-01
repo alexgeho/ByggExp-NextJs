@@ -4,14 +4,15 @@ import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
-import { fakturaHref, offertHref } from '../../lib/offert';
+import { fakturaHref, offertEnabled, offertHref } from '../../lib/offert';
 import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Professional flooring / tiling calculator. Area + waste -> needed m² and
 // packs; laying pattern presets the waste (straight vs diagonal). For tiles it
 // also estimates tile adhesive (fästmassa) in kg and 20 kg bags — the job the
-// retired kakelfix tool used to do. Bilingual: sv default, en for /en/verktyg.
+// retired kakelfix tool used to do. sv default, en for /en/verktyg, nb for
+// byggexp.no.
 
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
@@ -21,7 +22,8 @@ type Material = 'klickgolv' | 'kakel';
 
 export default function GolvKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : 'sv-SE', { maximumFractionDigits: d });
+  const nb = locale === 'nb';
+  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE', { maximumFractionDigits: d });
   const t = en
     ? {
         title: 'Flooring & tile calculator',
@@ -39,6 +41,24 @@ export default function GolvKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         mNeed: 'Need incl. waste', mPacks: 'Number of packs', mFix: 'Tile adhesive', mFog: 'Grout (approx.)',
         pdfTitle: 'Flooring & tiles – material list',
         soPacks: (m: string) => `${m} (packs)`, soFix: 'Tile adhesive (20 kg bag)', soLabour: 'Laying labour',
+      }
+    : nb
+    ? {
+        title: 'Gulv- og flisekalkulator',
+        sub: 'Fyll inn arealet og leggemønster, så regner vi ut antall pakker – for gulv, laminat, gulvfliser og veggfliser. For fliser får du også forbruket av flislim.',
+        materialL: 'Materiale', mFloor: 'Gulv / laminat / parkett', mTile: 'Fliser (vegg / gulv)',
+        area: 'Areal (m²)', patternL: 'Legging', pStraight: 'Rett (mindre svinn)', pDiagonal: 'Diagonalt (mer svinn)',
+        spill: 'Svinn (%)', perPack: 'm² per pakke', fixPerM2: 'Flislim (kg/m²)', fogPerM2: 'Fugemasse (kg/m²)',
+        rNeed: 'Behov inkl. svinn', rPacks: 'Antall pakker', rFix: 'Flislim', rFog: 'Fugemasse (ca.)',
+        bag: 'sekk', bags: 'sekker',
+        fine: 'Et overslag. Diagonal legging og mange vinkler øker svinnet. Forbruket av flislim avhenger av tannstørrelse og flisstørrelse (ofte 3–6 kg/m²). Fugemasse avhenger mye av flisstørrelse og fugebredde (ofte ca. 0,3–1 kg/m²) – juster verdien. m² per pakke står på produktet.',
+        offert: 'Lag tilbud av dette', faktura: 'Lag faktura', excel: 'Eksporter Excel', pdf: 'Eksporter PDF',
+        pcs: 'stk',
+        matFloor: 'Gulv/laminat', matTile: 'Fliser',
+        csvTitle: 'Gulv- og flisekalkulator', post: 'Post', qty: 'Mengde',
+        mNeed: 'Behov inkl. svinn', mPacks: 'Antall pakker', mFix: 'Flislim', mFog: 'Fugemasse (ca.)',
+        pdfTitle: 'Gulv og fliser – materialliste',
+        soPacks: (m: string) => `${m} (pakker)`, soFix: 'Flislim (sekk 20 kg)', soLabour: 'Arbeid legging',
       }
     : {
         title: 'Golv- och kakelkalkylator',
@@ -98,7 +118,7 @@ export default function GolvKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
     gaEvent('export_excel', { tool: 'golv-kalkylator' });
     downloadCsvRows(
       [
-        [t.csvTitle, 'byggexp.se'],
+        [t.csvTitle, nb ? 'byggexp.no' : 'byggexp.se'],
         [t.materialL, matLabel],
         [],
         [t.post, t.qty],
@@ -112,6 +132,7 @@ export default function GolvKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
   };
 
   const exportPdf = () => void downloadMaterialPdf({
+    locale,
     title: t.pdfTitle,
     meta: matLabel,
     rows: [
@@ -139,7 +160,7 @@ export default function GolvKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
         </label>
         <label className="lm-tool-field">
           <span>{t.area}</span>
-          <input type="number" min="0" inputMode="decimal" value={area} placeholder={en ? 'e.g. 25' : 't.ex. 25'} onChange={(e) => setArea(e.currentTarget.value)} />
+          <input type="number" min="0" inputMode="decimal" value={area} placeholder={en ? 'e.g. 25' : nb ? 'f.eks. 25' : 't.ex. 25'} onChange={(e) => setArea(e.currentTarget.value)} />
         </label>
         <label className="lm-tool-field">
           <span>{t.patternL}</span>
@@ -173,7 +194,7 @@ export default function GolvKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
           <span>{t.rNeed}</span>
-          <strong>{nf(r.need, 1)} m²<CopyLinkButton scope={u} tool="golv-kalkylator" en={en} /></strong>
+          <strong>{nf(r.need, 1)} m²<CopyLinkButton scope={u} tool="golv-kalkylator" en={en} nb={nb} /></strong>
         </div>
         <div className="lm-result-row lm-result-total">
           <span>{t.rPacks}</span>
@@ -195,12 +216,16 @@ export default function GolvKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoc
       </div>
 
       <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-        <a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'golv-kalkylator' })}>
-          {t.offert}
-        </a>
-        <a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'golv-kalkylator' })}>
-          {t.faktura}
-        </a>
+        {offertEnabled(locale) ? (
+          <a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'golv-kalkylator' })}>
+            {t.offert}
+          </a>
+        ) : null}
+        {offertEnabled(locale) ? (
+          <a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'golv-kalkylator' })}>
+            {t.faktura}
+          </a>
+        ) : null}
         <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>
           {t.excel}
         </button>

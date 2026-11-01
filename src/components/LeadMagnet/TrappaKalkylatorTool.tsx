@@ -6,12 +6,13 @@ import CopyLinkButton from './CopyLinkButton';
 
 // Free stair calculator: number of steps, step height and recommended going
 // (tread depth) from total height. Uses the comfort rule 2·rise + going ≈ 630.
-// Bilingual: sv default, en for /en/verktyg; nb falls back to sv text.
+// sv default, en for /en/verktyg, nb for byggexp.no.
 function num(v: string): number { return Math.max(parseFloat(v.replace(',', '.')) || 0, 0); }
 
 export default function TrappaKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const loc = en ? 'en-GB' : 'sv-SE';
+  const nb = locale === 'nb';
+  const loc = en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE';
   const t = en
     ? {
         title: 'Stair calculator – number of steps and step dimensions',
@@ -22,6 +23,19 @@ export default function TrappaKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         warnRise: 'The rise exceeds the common guide value of ~180 mm – the stair becomes steep. Add more steps (lower the desired rise).',
         warnGoing: 'The going is below the common guide value of 250 mm (indoors) – reduce the rise for a deeper tread.',
         fine: 'Rise 150–200 mm per Svensk Byggtjänst; most comfortable about 150–180 mm. Going at least 250 mm (indoors), 2 × rise + going ≈ 630 mm. Boverket’s rules (BFS 2024:9) require safe stairs but give no exact figures.',
+      }
+    : nb
+    ? {
+        title: 'Trappberegner – antall trinn og trinnmål',
+        sub: 'Fyll inn den totale høyden, så regner vi ut antall trinn, opptrinn og et anbefalt inntrinn etter bekvemmelighetsregelen 2 × opptrinn + inntrinn ≈ 630 mm.',
+        height: 'Total høyde (mm)', targetRise: 'Ønsket opptrinn (mm)', heightPh: 'f.eks. 2700',
+        rSteps: 'Antall trinn', rRise: 'Opptrinn', rGoing: 'Anbefalt inntrinn',
+        pcs: 'stk',
+        warnRise: 'Opptrinnet er over ca. 180 mm – trappen blir bratt. Legg til flere trinn (lavere ønsket opptrinn).',
+        warnGoing: 'Inntrinnet er under 250 mm – reduser opptrinnet for et dypere trinn.',
+        // No Norwegian regulation figures are cited here (none verified) — only the
+        // comfort rule the tool uses; the user is pointed to the building rules.
+        fine: 'Et bekvemt opptrinn er ofte ca. 150–180 mm, og 2 × opptrinn + inntrinn ≈ 630 mm. Byggereglene stiller krav til trapper – kontroller kravene for din type trapp.',
       }
     : {
         title: 'Trappberäknare – antal steg och stegmått',
@@ -57,7 +71,7 @@ export default function TrappaKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         <label className="lm-tool-field"><span>{t.targetRise}</span><input type="number" min="0" inputMode="numeric" value={targetRise} onChange={(e) => setTargetRise(e.currentTarget.value)} /></label>
       </div>
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{t.rSteps}</span><strong>{result.steps.toLocaleString(loc)} {t.pcs}<CopyLinkButton scope={u} tool="trappa-kalkylator" en={en} /></strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rSteps}</span><strong>{result.steps.toLocaleString(loc)} {t.pcs}<CopyLinkButton scope={u} tool="trappa-kalkylator" en={en} nb={nb} /></strong></div>
         <div className="lm-result-row"><span>{t.rRise}</span><span>{result.rise.toLocaleString(loc, { maximumFractionDigits: 0 })} mm</span></div>
         <div className="lm-result-row lm-result-total"><span>{t.rGoing}</span><strong>{result.going.toLocaleString(loc, { maximumFractionDigits: 0 })} mm</strong></div>
         {result.warnings.map((w) => (

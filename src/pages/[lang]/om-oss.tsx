@@ -84,6 +84,74 @@ export default function AboutPage({
     );
   }
 
+  if (lang === "nb") {
+    return (
+      <LegalDocument
+        title="Om oss"
+        lang="nb"
+        contentLocales={svEnLocales}
+        description="ByggExp utvikles av Real Marketing s. r. o. – et team i Stockholm som gjør hverdagsadministrasjonen enklere for byggefirma: timeregistrering, planlegging, tilbud og faktura i én tjeneste."
+      >
+        <h2>Hvem vi er</h2>
+        <p>
+          ByggExp utvikles og drives av <strong>Real Marketing s. r. o.</strong> (IČO 53551958), et EU-selskap registrert i Slovakia som drives fra Stockholm. Vi lager
+          programvare for bygg- og håndverksbedrifter – fra enkeltpersonforetaket
+          til den voksende bedriften med flere arbeidslag ute i felt.
+        </p>
+
+        <h2>Hva vi gjør</h2>
+        <p>
+          Vi samler det som ellers håndteres i Excel, på papir og i spredte apper, i{" "}
+          <strong>én tjeneste</strong>: timeregistrering og stemplingsur med
+          GPS eller manuell timeføring, arbeidsplaner og ressursplanlegging,
+          prosjekt- og oppgavestyring, egenkontroller samt tilbud og faktura.
+          Alt fungerer både på nett og i mobilappen, slik at kontoret og de
+          som er ute på byggeplassen jobber med den samme informasjonen.
+        </p>
+
+        <h2>Hvorfor vi finnes</h2>
+        <p>
+          Byggebransjen taper urimelig mye tid på manuell administrasjon –
+          tid som burde gått til selve jobben. Ideen vår er enkel: gjør det
+          kjedelige papirarbeidet raskt og forståelig, og gi små og mellomstore
+          byggefirma de samme digitale verktøyene som de store aktørene, uten
+          styr og til en rimelig pris.
+        </p>
+
+        <h2>Slik jobber vi</h2>
+        <p>
+          Vi er et lite, produktdrevet team som utvikler tjenesten tett på
+          brukerne. Vi lytter til håndverkere og arbeidsledere, slipper
+          forbedringer fortløpende og gjør tjenesten enkel å komme i gang med –
+          du kan teste alt gratis før du bestemmer deg.
+        </p>
+
+        <h2>Vi bygger funksjoner etter deres behov</h2>
+        <p>
+          Hver bedrift har sine egne arbeidsmåter. ByggExp er ikke bare en ferdig
+          standardløsning – det er en plattform vi gjerne videreutvikler etter
+          deres behov. Fortell oss om utfordringene og ønskene deres, så bygger
+          vi løsningen raskt og grundig. Ideene deres blir en del av nye
+          funksjoner og oppdateringer i ByggExp.
+        </p>
+
+        <h2>Kontakt og firmaopplysninger</h2>
+        <p>
+          Real Marketing s. r. o., Gessayova 2616/14, 851 03 Bratislava, Slovakia. Kontaktadresse i Sverige: c/o Alexander Gerhard, Ekbacksvägen 32, 168 69 Bromma, Sverige.
+          <br />
+          IČO: 53551958 · Mva-nr.: SK2121411820
+          <br />
+          E-post: <a href="mailto:support@byggexp.se">support@byggexp.se</a>
+        </p>
+        <p>
+          Vil du nå oss? Gå til <Link href="/nb/contact">kontaktsiden</Link>.
+          Les også <Link href="/nb/villkor">brukervilkårene</Link> og{" "}
+          <Link href="/nb/integritetspolicy">personvernerklæringen</Link> vår.
+        </p>
+      </LegalDocument>
+    );
+  }
+
   return (
     <LegalDocument
       title="About us"

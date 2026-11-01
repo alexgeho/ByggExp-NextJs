@@ -72,7 +72,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
   },
   nb: {
-    metaTitle: 'Stendere & trelast kalkulator – antall stendere (c/c) | ByggExp',
+    metaTitle: 'Stenderkalkulator – antall stendere og trelast | ByggExp',
     description:
       'Regn ut antall stendere og løpemeter trelast ut fra veggens lengde og senteravstand (c/c). Gratis kalkulator for bindingsverk og reisverk, uten konto.',
     badge: 'Gratis kalkulator',
@@ -89,13 +89,13 @@ const CONTENT: Record<Locale, ToolContent> = {
     faq: [
       { question: 'Hvordan regner jeg antall stendere?', answer: 'Antall stående stendere = lengde ÷ senteravstand (c/c) + 1. En 6 m vegg med c/c 600 mm gir 6000 ÷ 600 + 1 = 11 stendere.' },
       { question: 'Hvilken c/c-avstand skal jeg ha?', answer: 'Vanlige avstander er 450 eller 600 mm avhengig av plate- og isolasjonsmål samt krav. 600 mm er vanligst for innervegger.' },
-      { question: 'Er svill og toppsvill inkludert?', answer: 'Nei, kalkulatoren regner de stående stenderne. Legg til trelast for svill (nederst) og toppsvill (øverst) separat.' },
+      { question: 'Er svill og toppsvill inkludert?', answer: 'Ja – kalkulatoren regner også svill og toppsvill (2 × veggens lengde).' },
       { question: 'Koster det noe?', answer: 'Nei, kalkulatoren er gratis og krever ingen konto.' },
     ],
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
     ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'takstolar-kalkylator', label: 'Beregne takstoler' },
       { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeterberegner' },
@@ -209,6 +209,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'Choose the spacing (c/c) between the studs.',
                   'The tool calculates the number of studs and metres.',
                   'Add waste and order the timber.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi veggens lengde og høyde.',
+                  'Velg c/c-avstand mellom stenderne.',
+                  'Verktøyet regner ut antall stendere og løpemeter.',
+                  'Legg til svinn og bestill trelasten.',
                 ]
               : [
                   'Ange väggens längd och höjd.',

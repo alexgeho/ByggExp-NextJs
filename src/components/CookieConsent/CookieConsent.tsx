@@ -12,7 +12,7 @@ import {
 
 const KEY = "byggexp-consent";
 
-type Lang = "sv" | "en" | "ru";
+type Lang = "sv" | "en" | "ru" | "nb";
 
 const COPY: Record<Lang, { text: string; accept: string; decline: string; policy: string }> = {
   sv: {
@@ -33,12 +33,20 @@ const COPY: Record<Lang, { text: string; accept: string; decline: string; policy
     decline: "Отклонить",
     policy: "Политика конфиденциальности",
   },
+  // byggexp.no loads only Google Analytics (Clarity, Meta Pixel and GTM are
+  // gated to byggexp.se in lib/analytics), so the nb copy names only GA.
+  nb: {
+    text: "Vi bruker informasjonskapsler til nettstedsanalyse (Google Analytics) for å forbedre nettstedet. Du velger selv.",
+    accept: "Godta",
+    decline: "Avslå",
+    policy: "Personvernerklæring",
+  },
 };
 
 export default function CookieConsent() {
   const router = useRouter();
   const seg = router.asPath.split("/")[1];
-  const lang: Lang = seg === "en" || seg === "ru" ? seg : "sv";
+  const lang: Lang = seg === "en" || seg === "ru" || seg === "nb" ? seg : "sv";
   const copy = COPY[lang];
 
   const [open, setOpen] = useState(false);

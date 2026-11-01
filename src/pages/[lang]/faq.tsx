@@ -152,6 +152,77 @@ const FAQ_EN: Qa[] = [
   },
 ];
 
+// nb (byggexp.no). The sv "digital personalliggare" items are left out: the
+// module is not fully shipped (docs/seo/product-facts-verified.md) and the
+// Swedish register rules don't apply in Norway.
+const FAQ_NB: Qa[] = [
+  {
+    question: "Hva er ByggExp?",
+    answer:
+      "ByggExp er en alt-i-ett-tjeneste for byggefirma som samler timeregistrering, arbeidsplaner, prosjekt- og oppgavestyring, egenkontroller samt tilbud og faktura – både på nett og i mobilappen.",
+  },
+  {
+    question: "Kan jeg prøve gratis?",
+    answer:
+      "Ja – de første 14 dagene er gratis, med alle funksjoner og uten at du trenger å oppgi kort. Du kan koble på hele teamet og se hvordan det fungerer på ekte oppdrag, og bestemmer først deretter om du vil fortsette.",
+  },
+  {
+    question: "Er det vanskelig å komme i gang?",
+    answer:
+      "Nei. De fleste er i gang på cirka 5 minutter – åpne appen, velg prosjekt og start tidtakingen på stedet. Kontoret legger inn prosjekter og oppgaver på nett, og de på byggeplassen bruker mobilappen.",
+  },
+  {
+    question: "Hva om noen i teamet ikke er så vant med teknologi?",
+    answer:
+      "ByggExp er laget for å være enkelt og selvforklarende, også for den som ikke har brukt lignende apper før. Vi hjelper dere i gang og er tilgjengelige for spørsmål – de fleste håndverkere synes det er enklere enn de trodde.",
+  },
+  {
+    question: "Hva koster ByggExp?",
+    answer:
+      "Tjenesten leveres mot en løpende abonnementsavgift etter gjeldende prisliste og faktureres forskuddsvis per måned eller år. Aktuelle priser finner du på forsiden.",
+  },
+  {
+    question: "Fungerer ByggExp både på nett og på mobil?",
+    answer:
+      "Ja. Kontoret jobber på nett, og de som er ute på byggeplassen bruker mobilappen. Alt synkroniseres mot den samme informasjonen i sanntid.",
+  },
+  {
+    question: "Hvordan fungerer timeregistrering og stemplingsur med GPS?",
+    answer:
+      "De ansatte sjekker inn og ut i appen, og tiden kan registreres automatisk med GPS-basert inn- og utstempling per arbeidsplass – eller fylles inn manuelt i appen per prosjekt og dag, for den som ikke vil dele posisjonen sin. Timene kan deretter eksporteres, for eksempel til Excel, for lønn og fakturering.",
+  },
+  {
+    question: "Er GPS-registrering av ansatte tillatt?",
+    answer:
+      "GPS kan brukes til timeregistrering når det finnes et lovlig grunnlag og de ansatte er informert. Som arbeidsgiver er du ansvarlig for at behandlingen kommuniseres til de ansatte. GPS er ikke et krav: ansatte som ikke vil dele posisjonen sin, kan registrere timene manuelt i appen. Se personvernerklæringen vår for mer informasjon.",
+  },
+  {
+    question: "Er dataene mine trygge?",
+    answer:
+      "All informasjon krypteres og lagres på sikre servere. Du styrer selv tilgangen, kan når som helst eksportere dataene dine eller slette kontoen, og vi gir ikke ut opplysninger til tredjepart.",
+  },
+  {
+    question: "Eier jeg dataene mine, og kan jeg eksportere dem?",
+    answer:
+      "Ja. Du eier dataene dine og kan eksportere dem til Excel med noen få klikk, eller slette dem. Ved avslutning kan opplysningene eksporteres, med unntak av det loven krever at vi oppbevarer.",
+  },
+  {
+    question: "Hva om det mangler en funksjon vi trenger?",
+    answer:
+      "ByggExp er et levende produkt, og vi legger fortløpende til nye funksjoner etter kundenes ønsker. Fortell oss hva bedriften deres trenger, så bygger vi det – ideene deres blir en del av kommende oppdateringer.",
+  },
+  {
+    question: "Kan jeg si opp abonnementet?",
+    answer:
+      "Ja. Abonnementet løper til det sies opp, og kan sies opp når som helst. Oppsigelsen gjelder fra slutten av betalingsperioden som allerede er betalt.",
+  },
+  {
+    question: "Hvordan får jeg hjelp hvis jeg står fast?",
+    answer:
+      "Kontakt oss på support@byggexp.se, så hjelper vi deg. Du finner flere måter å nå oss på på kontaktsiden vår.",
+  },
+];
+
 function faqSchema(items: Qa[]) {
   return {
     "@context": "https://schema.org",
@@ -180,6 +251,7 @@ export default function FaqPage({
   lang,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const isSv = lang === "sv";
+  if (lang === "nb") return <FaqNb />;
   const items = isSv ? FAQ_SV : FAQ_EN;
   const title = isSv ? "Vanliga frågor" : "Frequently asked questions";
   const description = isSv
@@ -217,6 +289,37 @@ export default function FaqPage({
         <a href="mailto:support@byggexp.se">support@byggexp.se</a>
         {isSv ? " eller via " : " or via "}
         <Link href={contactHref}>{contactLink}</Link>.
+      </p>
+    </LegalDocument>
+  );
+}
+
+// Norwegian FAQ for byggexp.no: own text, self-canonical on .no (LegalDocument).
+function FaqNb() {
+  return (
+    <LegalDocument
+      title="Vanlige spørsmål"
+      lang="nb"
+      contentLocales={svEnLocales}
+      description="Vanlige spørsmål om ByggExp – timeregistrering, priser, gratis prøveperiode, GPS og support for byggefirma."
+      head={
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(FAQ_NB)) }}
+        />
+      }
+    >
+      {FAQ_NB.map((item) => (
+        <div key={item.question}>
+          <h2>{item.question}</h2>
+          <p>{item.answer}</p>
+        </div>
+      ))}
+
+      <p>
+        Finner du ikke svaret? Kontakt oss på{" "}
+        <a href="mailto:support@byggexp.se">support@byggexp.se</a> eller via{" "}
+        <Link href="/nb/contact">kontaktsiden</Link>.
       </p>
     </LegalDocument>
   );

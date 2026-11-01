@@ -94,7 +94,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
     ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'trappa-kalkylator', label: 'Trappeberegner' },
       { slug: 'grus-kalkylator', label: 'Grus & pukk' },
@@ -206,6 +206,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'The tool calculates the height difference.',
                   'Check it against the applicable requirement.',
                   'Use the value when laying.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi lengden og ønsket fall (f.eks. 1:100).',
+                  'Verktøyet regner ut høydeforskjellen.',
+                  'Kontroller mot gjeldende krav.',
+                  'Bruk verdien ved leggingen.',
                 ]
               : [
                   'Ange längden och önskat fall (t.ex. 1:100).',

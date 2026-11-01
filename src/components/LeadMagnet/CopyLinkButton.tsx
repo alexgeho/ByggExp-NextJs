@@ -31,7 +31,7 @@ async function copyText(text: string): Promise<boolean> {
   }
 }
 
-export default function CopyLinkButton({ scope, tool, en = false }: { scope: UrlScope; tool: string; en?: boolean }) {
+export default function CopyLinkButton({ scope, tool, en = false, nb = false }: { scope: UrlScope; tool: string; en?: boolean; nb?: boolean }) {
   const [done, setDone] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => () => {
@@ -39,8 +39,8 @@ export default function CopyLinkButton({ scope, tool, en = false }: { scope: Url
   }, []);
   if (scope.off) return null;
 
-  const label = en ? 'Copy link' : 'Kopiera länk';
-  const doneLabel = en ? 'Link copied' : 'Länk kopierad';
+  const label = en ? 'Copy link' : nb ? 'Kopier lenke' : 'Kopiera länk';
+  const doneLabel = en ? 'Link copied' : nb ? 'Lenke kopiert' : 'Länk kopierad';
 
   const onClick = async () => {
     flushUrlState();

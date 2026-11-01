@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import { buildHreflangAlternates } from "../../lib/seo";
+import { buildHreflangAlternates, localeOrigin } from "../../lib/seo";
 import { footerTranslations } from "../../locales/footer";
 import { headerTranslations } from "../../locales/header";
 import {
@@ -44,8 +44,9 @@ export default function LegalDocument({
   )
     ? (lang as LandingLanguageCode)
     : "sv";
-  const updatedLabel = safeLang === "sv" ? "Senast uppdaterad" : "Last updated";
-  const homeLabel = safeLang === "sv" ? "Hem" : "Home";
+  const updatedLabel =
+    safeLang === "sv" ? "Senast uppdaterad" : safeLang === "nb" ? "Sist oppdatert" : "Last updated";
+  const homeLabel = safeLang === "sv" ? "Hem" : safeLang === "nb" ? "Hjem" : "Home";
 
   // Self-referencing canonical + reciprocal hreflang so Google doesn't treat the
   // per-locale copies as "Duplicate without user-selected canonical". The route
@@ -58,8 +59,13 @@ export default function LegalDocument({
   // only has en content points at /en), so Google folds it instead of flagging a
   // duplicate.
   const canonicalLang = contentLocales.includes(safeLang) ? safeLang : "en";
-  const canonicalUrl = urlFor(canonicalLang);
-  const hreflangAlternates = buildHreflangAlternates(urlFor, contentLocales);
+  // nb pages live on byggexp.no with their own Norwegian text: self-canonical on
+  // the .no host and no hreflang (the .se sv/en copies don't list nb either).
+  const isNb = safeLang === "nb";
+  const canonicalUrl = isNb
+    ? `${localeOrigin("nb")}${router.pathname.replace("[lang]", "nb")}`
+    : urlFor(canonicalLang);
+  const hreflangAlternates = isNb ? [] : buildHreflangAlternates(urlFor, contentLocales);
 
   return (
     <>

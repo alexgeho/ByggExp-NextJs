@@ -164,7 +164,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
     ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: '', label: 'Guide: beregne U-verdi', path: 'blog/berakna-u-varde-isolering' },
       { slug: 'reglar-kalkylator', label: 'Stendere & trelast' },
@@ -311,6 +311,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'The tool calculates the amount of insulation needed.',
                   'Check it against the U-value requirement.',
                   'Order the right amount.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi arealet og ønsket isolasjonstykkelse.',
+                  'Verktøyet regner ut mengden isolasjon som trengs.',
+                  'Kontroller mot kravet til U-verdi.',
+                  'Bestill riktig mengde.',
                 ]
               : [
                   'Ange ytans area och önskad isolertjocklek.',

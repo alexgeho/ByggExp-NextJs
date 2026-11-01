@@ -4,15 +4,15 @@ import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf, type MaterialRow } from '../../lib/materialPdf';
-import { fakturaHref, offertHref } from '../../lib/offert';
+import { fakturaHref, offertEnabled, offertHref } from '../../lib/offert';
 import { useUrlParam, useUrlScope, YES_NO } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Regelvägg (stud wall) calculator: studs from length/c/c, syll + hammarband,
 // plus the full wall build-up — gips (one or two sides, single/double layer),
 // mineralull, skruv and ångspärr — with a deduction for openings (m²). A real
-// material list for an inner wall, not just stud count. Bilingual: sv default,
-// en for /en/verktyg; nb falls back to sv text.
+// material list for an inner wall, not just stud count. sv default,
+// en for /en/verktyg, nb for byggexp.no.
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
 }
@@ -22,7 +22,9 @@ const SCREWS_PER_M2 = 20;
 
 export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : 'sv-SE', { maximumFractionDigits: d });
+  const nb = locale === 'nb';
+  const nf = (v: number, d = 0) => v.toLocaleString(en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE', { maximumFractionDigits: d });
+  const eg = en ? 'e.g.' : nb ? 'f.eks.' : 't.ex.';
   const t = en
     ? {
         title: 'Stud wall – studs, plasterboard & insulation',
@@ -40,6 +42,24 @@ export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         mGips: 'Plasterboard (2400×1200)', mScrew: 'Plasterboard screws', mInsul: 'Mineral wool / insulation', mVapour: 'Vapour barrier / film',
         csvTitle: 'Stud wall – material list', post: 'Item', qty: 'Quantity', pdfTitle: 'Stud wall – material list',
         soGips: 'Plasterboard (pcs)', soInsul: 'Mineral wool (m²)', soLabour: 'Frame assembly labour',
+      }
+    : nb
+    ? {
+        title: 'Bindingsverksvegg – stendere, gips og isolasjon',
+        sub: 'Fyll inn veggens mål og oppbygging, så regner vi ut stendere, svill/toppsvill, gipsplater, skruer, isolasjon og dampsperre – med fradrag for åpninger. Eksporter materiallisten til Excel eller PDF.',
+        length: 'Veggens lengde (m)', more: 'Flere valg', height: 'Veggens høyde (m)', cc: 'Senteravstand c/c (mm)', openings: 'Fradrag åpninger (m²)',
+        sidesL: 'Gips – sider', sBoth: 'Begge sider', sOne: 'Én side', sNone: 'Ingen gips',
+        layersL: 'Gips – lag per side', l1: '1 lag', l2: '2 lag',
+        insulQ: 'Isolasjon (mineralull)?', vapourQ: 'Dampsperre / plastfolie?', yes: 'Ja', no: 'Nei', spill: 'Svinn (%)',
+        rCount: 'Antall stendere', rStud: 'Stendere, trelast', rPlate: 'Svill + toppsvill', rTotal: 'Totalt trelast',
+        rGips: 'Gipsplater (2400×1200)', rScrew: 'Gipsskruer', rInsul: 'Mineralull / isolasjon', rVapour: 'Dampsperre / plastfolie',
+        fine: 'Antall stendere = lengde ÷ c/c + 1 (vanlig c/c 450 eller 600 mm). Gips regnes på nettoarealet etter fradrag for åpninger, per side og lag. Gipsplate 2400×1200 mm = 2,88 m². Kontroller mot tegning og konstruksjon.',
+        offert: 'Lag tilbud av dette', faktura: 'Lag faktura', excel: 'Eksporter Excel', pdf: 'Eksporter PDF',
+        pcs: 'stk', lm: 'lm',
+        mCount: (cc: string) => `Stendere (c/c ${cc})`, mStud: 'Stendere, trelast', mPlate: 'Svill + toppsvill', mTotal: 'Totalt trelast',
+        mGips: 'Gipsplater (2400×1200)', mScrew: 'Gipsskruer', mInsul: 'Mineralull / isolasjon', mVapour: 'Dampsperre / plastfolie',
+        csvTitle: 'Bindingsverksvegg – materialliste', post: 'Post', qty: 'Mengde', pdfTitle: 'Bindingsverksvegg – materialliste',
+        soGips: 'Gipsplater (stk)', soInsul: 'Mineralull (m²)', soLabour: 'Arbeid montering av bindingsverk',
       }
     : {
         title: 'Regelvägg – reglar, gips & isolering',
@@ -117,15 +137,15 @@ export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
 
   const exportCsv = () => {
     gaEvent('export_excel', { tool: 'reglar-kalkylator' });
-    downloadCsvRows([[t.csvTitle, 'byggexp.se'], [], [t.post, t.qty], ...materialRows.map((m) => [m.desc, m.qty])], 'regelvagg-materiallista.csv');
+    downloadCsvRows([[t.csvTitle, nb ? 'byggexp.no' : 'byggexp.se'], [], [t.post, t.qty], ...materialRows.map((m) => [m.desc, m.qty])], 'regelvagg-materiallista.csv');
   };
-  const exportPdf = () => void downloadMaterialPdf({ title: t.pdfTitle, rows: materialRows, filename: 'regelvagg-materiallista.pdf', tool: 'reglar-kalkylator' });
+  const exportPdf = () => void downloadMaterialPdf({ locale, title: t.pdfTitle, rows: materialRows, filename: 'regelvagg-materiallista.pdf', tool: 'reglar-kalkylator' });
 
   const fld = 'lm-tool-field';
   return (
     <div className="lm-tool lm-tool--split">
       <div className="lm-tool-grid lm-tool-grid--pair">
-        <label className={fld}><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 6' : 't.ex. 6'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
+        <label className={fld}><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={`${eg} 6`} onChange={(e) => setLength(e.currentTarget.value)} /></label>
         <label className={fld}><span>{t.height}</span><input type="number" min="0" inputMode="decimal" value={height} onChange={(e) => setHeight(e.currentTarget.value)} /></label>
         <label className={fld}><span>{t.cc}</span><input type="number" min="0" inputMode="numeric" value={cc} onChange={(e) => setCc(e.currentTarget.value)} /></label>
         <label className={fld}><span>{t.openings}</span><input type="number" min="0" inputMode="decimal" value={openings} onChange={(e) => setOpenings(e.currentTarget.value)} /></label>
@@ -154,7 +174,7 @@ export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         </div>
       </details>
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{t.rCount}</span><strong>{nf(r.count)} {t.pcs}<CopyLinkButton scope={u} tool="reglar-kalkylator" en={en} /></strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rCount}</span><strong>{nf(r.count)} {t.pcs}<CopyLinkButton scope={u} tool="reglar-kalkylator" en={en} nb={nb} /></strong></div>
         <div className="lm-result-row"><span>{t.rStud}</span><span>{nf(r.studMeters, 1)} {t.lm}</span></div>
         <div className="lm-result-row"><span>{t.rPlate}</span><span>{nf(r.plateMeters, 1)} {t.lm}</span></div>
         <div className="lm-result-row lm-result-total"><span>{t.rTotal}</span><strong>{nf(r.totalTimber, 1)} {t.lm}</strong></div>
@@ -164,8 +184,8 @@ export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         {r.vapourM2 > 0 ? <div className="lm-result-row"><span>{t.rVapour}</span><span>{nf(r.vapourM2, 1)} m²</span></div> : null}
         <p className="lm-result-fine">{t.fine}</p>
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-          <a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'reglar-kalkylator' })}>{t.offert}</a>
-          <a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'reglar-kalkylator' })}>{t.faktura}</a>
+          {offertEnabled(locale) ? (<a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'reglar-kalkylator' })}>{t.offert}</a>) : null}
+          {offertEnabled(locale) ? (<a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'reglar-kalkylator' })}>{t.faktura}</a>) : null}
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>{t.excel}</button>
           <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={disabled}>{t.pdf}</button>
         </div>

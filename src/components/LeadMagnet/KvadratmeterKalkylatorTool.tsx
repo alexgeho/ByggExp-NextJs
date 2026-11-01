@@ -4,13 +4,13 @@ import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
-import { fakturaHref, offertHref } from '../../lib/offert';
+import { fakturaHref, offertEnabled, offertHref } from '../../lib/offert';
 import { isNumericText, jsonCodec, useUrlParam, useUrlScope } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Free area calculator: sum the area (length × width) of one or more rectangles
 // (rooms/sections), with an optional waste margin for material planning.
-// Bilingual: sv default, en for /en/verktyg; nb falls back to sv text.
+// sv default, en for /en/verktyg, nb for byggexp.no.
 
 type Row = { l: string; w: string };
 const emptyRow = (): Row => ({ l: '', w: '' });
@@ -25,7 +25,8 @@ function num(v: string): number {
 
 export default function KvadratmeterKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const loc = en ? 'en-GB' : 'sv-SE';
+  const nb = locale === 'nb';
+  const loc = en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE';
   const nf = (v: number, d = 2) => v.toLocaleString(loc, { maximumFractionDigits: d });
   const kr = (v: number) => `${Math.round(v).toLocaleString(loc)} kr`;
   const t = en
@@ -39,6 +40,18 @@ export default function KvadratmeterKalkylatorTool({ locale = 'sv' }: { locale?:
         csvTitle: 'Square-metre calculator', csvSpace: 'Space', csvArea: 'Area (m²)',
         pdfTitle: 'Areas – square metres', pArea: (i: number, l: string, w: string) => `Area ${i} (${l} × ${w} m)`,
         soArea: 'Area (m²)', soLabour: 'Labour',
+      }
+    : nb
+    ? {
+        title: 'Kvadratmeterkalkulator – regn ut arealet',
+        sub: 'Fyll inn lengde og bredde for ett eller flere rom, så summeres arealet i kvadratmeter. Legg til svinn hvis du skal bestille materialer som gulv, fliser eller maling.',
+        length: 'Lengde (m)', width: 'Bredde (m)', area: 'Areal', removeLabel: 'Fjern rad',
+        addRow: '+ Legg til rom', spill: 'Svinn (%)', price: 'Pris per m² (valgfritt)', pricePh: 'kr/m²',
+        total: 'Totalt areal', withSpill: 'Inkl. svinn – bestill minst', cost: 'Anslått materialkostnad',
+        offert: 'Lag tilbud av dette', faktura: 'Lag faktura', excel: 'Eksporter Excel', pdf: 'Eksporter PDF',
+        csvTitle: 'Kvadratmeterkalkulator', csvSpace: 'Rom', csvArea: 'Areal (m²)',
+        pdfTitle: 'Arealer – kvadratmeter', pArea: (i: number, l: string, w: string) => `Areal ${i} (${l} × ${w} m)`,
+        soArea: 'Areal (m²)', soLabour: 'Arbeid',
       }
     : {
         title: 'Kvadratmeterberäknare – räkna ut ytan',
@@ -72,7 +85,7 @@ export default function KvadratmeterKalkylatorTool({ locale = 'sv' }: { locale?:
 
   const exportCsv = () => {
     const csvRows: (string | number)[][] = [
-      [t.csvTitle, 'byggexp.se'],
+      [t.csvTitle, nb ? 'byggexp.no' : 'byggexp.se'],
       [],
       [t.csvSpace, t.length, t.width, t.csvArea],
       ...rows.map((row, i) => [`${t.area} ${i + 1}`, row.l || 0, row.w || 0, nf(num(row.l) * num(row.w))]),
@@ -86,6 +99,7 @@ export default function KvadratmeterKalkylatorTool({ locale = 'sv' }: { locale?:
   };
 
   const exportPdf = () => void downloadMaterialPdf({
+    locale,
     title: t.pdfTitle,
     rows: [
       ...rows.map((row, i) => ({ desc: t.pArea(i + 1, row.l || '0', row.w || '0'), qty: `${nf(num(row.l) * num(row.w))} m²` })),
@@ -139,7 +153,7 @@ export default function KvadratmeterKalkylatorTool({ locale = 'sv' }: { locale?:
       <div className="lm-result">
         <div className="lm-result-row lm-result-highlight">
           <span>{t.total}</span>
-          <strong>{nf(result.base)} m²<CopyLinkButton scope={u} tool="kvadratmeter-kalkylator" en={en} /></strong>
+          <strong>{nf(result.base)} m²<CopyLinkButton scope={u} tool="kvadratmeter-kalkylator" en={en} nb={nb} /></strong>
         </div>
         <div className="lm-result-row lm-result-total">
           <span>{t.withSpill}</span>
@@ -152,12 +166,12 @@ export default function KvadratmeterKalkylatorTool({ locale = 'sv' }: { locale?:
           </div>
         ) : null}
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-          <a className="lm-tool-button" href={result.base > 0 ? offertUrl : undefined} aria-disabled={result.base <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'kvadratmeter-kalkylator' })}>
+          {offertEnabled(locale) ? (<a className="lm-tool-button" href={result.base > 0 ? offertUrl : undefined} aria-disabled={result.base <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'kvadratmeter-kalkylator' })}>
             {t.offert}
-          </a>
-          <a className="lm-tool-secondary" href={result.base > 0 ? fakturaUrl : undefined} aria-disabled={result.base <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'kvadratmeter-kalkylator' })}>
+          </a>) : null}
+          {offertEnabled(locale) ? (<a className="lm-tool-secondary" href={result.base > 0 ? fakturaUrl : undefined} aria-disabled={result.base <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'kvadratmeter-kalkylator' })}>
             {t.faktura}
-          </a>
+          </a>) : null}
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={result.base <= 0}>
             {t.excel}
           </button>

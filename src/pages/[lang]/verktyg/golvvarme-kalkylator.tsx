@@ -71,7 +71,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ],
   },
   nb: {
-    metaTitle: 'Gulvvarme kalkulator – sløyfelengde og antall sløyfer | ByggExp',
+    metaTitle: 'Gulvvarme kalkulator – lengde og antall sløyfer | ByggExp',
     description:
       'Regn ut sløyfelengde og antall sløyfer for vannbåren gulvvarme ut fra areal og senteravstand (c/c). Gratis kalkulator, uten konto.',
     badge: 'Gratis kalkulator',
@@ -94,7 +94,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
     ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeterberegner' },
       { slug: 'reglar-kalkylator', label: 'Stendere & trelast' },
@@ -206,6 +206,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'Enter the pipe spacing (c/c) for the loop.',
                   'The tool calculates the loop length and output.',
                   'Use it as a basis for ordering.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi arealet i rommet.',
+                  'Angi senteravstand (c/c) for sløyfen.',
+                  'Verktøyet regner ut sløyfelengde og antall sløyfer.',
+                  'Bruk resultatet som grunnlag for bestilling.',
                 ]
               : [
                   'Ange rummets yta.',

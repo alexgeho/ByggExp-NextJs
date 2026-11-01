@@ -94,7 +94,7 @@ const CONTENT: Record<Locale, ToolContent> = {
     ctaHeading: 'Regn ut materialer og tid i ByggExp',
     ctaText: 'Hold styr på materialer, tid og kostnader per prosjekt. Bestill en gratis konsultasjon.',
     ctaButton: 'Bestill gratis konsultasjon',
-    relatedHeading: 'Flere byggkalkulatorer',
+    relatedHeading: 'Flere byggekalkulatorer',
     related: [
       { slug: 'betong-kalkylator', label: 'Betongberegner' },
       { slug: 'kvadratmeter-kalkylator', label: 'Kvadratmeterberegner' },
@@ -206,6 +206,13 @@ export default function Page({ lang }: { lang: Locale }) {
                   'The tool calculates the volume in m³ (and tonnes).',
                   'Add a margin for compaction.',
                   'Order the right amount of gravel.',
+                ]
+              : lang === 'nb'
+              ? [
+                  'Angi flatens mål og ønsket dybde.',
+                  'Verktøyet regner ut volumet i m³ (og tonn).',
+                  'Legg til margin for komprimering.',
+                  'Bestill riktig mengde grus.',
                 ]
               : [
                   'Ange ytans mått och önskat grusdjup.',

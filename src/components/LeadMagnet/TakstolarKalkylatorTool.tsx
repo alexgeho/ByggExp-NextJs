@@ -4,14 +4,14 @@ import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
-import { fakturaHref, offertHref } from '../../lib/offert';
+import { fakturaHref, offertEnabled, offertHref } from '../../lib/offert';
 import { useUrlParam, useUrlScope } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
 // Roof-truss calculator: number of trusses from roof length and spacing, plus
 // optional truss geometry from span and pitch (ridge height, top-chord length,
 // roof area) with a schematic drawing. Geometry only — not dimensioning.
-// Bilingual: sv default, en for /en/verktyg; nb falls back to sv text.
+// sv default, en for /en/verktyg, nb for byggexp.no.
 function num(v: string): number {
   return Math.max(parseFloat(v.replace(',', '.')) || 0, 0);
 }
@@ -68,7 +68,10 @@ function TrussDrawing({
 
 export default function TakstolarKalkylatorTool({ locale = 'sv' }: { locale?: CalcLocale }) {
   const en = locale === 'en';
-  const nf = (v: number) => v.toLocaleString(en ? 'en-GB' : 'sv-SE');
+  const nb = locale === 'nb';
+  const numLoc = en ? 'en-GB' : nb ? 'nb-NO' : 'sv-SE';
+  const nf = (v: number) => v.toLocaleString(numLoc);
+  const eg = en ? 'e.g.' : nb ? 'f.eks.' : 't.ex.';
   const t = en
     ? {
         title: 'Roof trusses – number from c/c',
@@ -85,6 +88,23 @@ export default function TakstolarKalkylatorTool({ locale = 'sv' }: { locale?: Ca
         rHeight: 'Ridge height above bottom chord', rTop: 'Top chord length per side (incl. overhang)', rArea: 'Roof area, both slopes',
         geoFine: 'Pure geometry for a symmetric gable truss, measured to the chord centre lines. Timber sizes, webs and fixings come from the truss manufacturer’s engineer.',
         drawCap: 'Schematic W truss – not a construction drawing', m: 'm', m2: 'm²',
+      }
+    : nb
+    ? {
+        title: 'Takstoler – antall ut fra c/c',
+        sub: 'Fyll inn takets lengde og senteravstand (c/c), så regner vi ut antall takstoler.',
+        length: 'Takets lengde (m)', cc: 'Senteravstand c/c (mm)',
+        rCount: 'Antall takstoler', pcs: 'stk',
+        fine: 'Et overslag (antall = lengde ÷ c/c + 1). Vanlig c/c er 1200 mm, men følg konstruktørens dimensjonering for din takstol og snølast.',
+        offert: 'Lag tilbud av dette', faktura: 'Lag faktura', excel: 'Eksporter Excel', pdf: 'Eksporter PDF',
+        csvTitle: 'Takstoler', post: 'Post', qty: 'Mengde',
+        mCount: (cc: string) => `Antall takstoler (c/c ${cc})`,
+        pdfTitle: 'Takstoler', pdfNote: 'Antall, ikke dimensjonering. Dimensjonering gjøres av konstruktør etter snø- og vindlast.',
+        soTrusses: (cc: string) => `Takstoler (c/c ${cc})`, soLabour: 'Arbeid reising av takstoler',
+        geoHead: 'Takstolens mål (valgfritt)', span: 'Spennvidde / husbredde (m)', pitch: 'Takvinkel (°)', overhang: 'Takutstikk (mm)',
+        rHeight: 'Mønehøyde over undergurt', rTop: 'Overgurtens lengde per side (inkl. utstikk)', rArea: 'Takflate, begge sider',
+        geoFine: 'Ren geometri for en symmetrisk saltakstol, målt til gurtenes senterlinjer. Trelastdimensjoner, diagonaler og innfesting bestemmes av takstolprodusentens konstruktør.',
+        drawCap: 'Prinsippskisse W-takstol – ikke en konstruksjonstegning', m: 'm', m2: 'm²',
       }
     : {
         title: 'Takstolar – antal utifrån c/c',
@@ -131,7 +151,7 @@ export default function TakstolarKalkylatorTool({ locale = 'sv' }: { locale?: Ca
     const area = l > 0 ? 2 * top * (l + 2 * ov) : 0;
     return { b, deg, ov, height, top, area };
   }, [span, pitch, overhang, length]);
-  const f2 = (v: number) => v.toLocaleString(en ? 'en-GB' : 'sv-SE', { maximumFractionDigits: 2 });
+  const f2 = (v: number) => v.toLocaleString(numLoc, { maximumFractionDigits: 2 });
 
   const seedRows = [
     { desc: t.soTrusses(cc), qty: r.count },
@@ -145,7 +165,7 @@ export default function TakstolarKalkylatorTool({ locale = 'sv' }: { locale?: Ca
     gaEvent('export_excel', { tool: 'takstolar-kalkylator' });
     downloadCsvRows(
       [
-        [t.csvTitle, 'byggexp.se'],
+        [t.csvTitle, nb ? 'byggexp.no' : 'byggexp.se'],
         [],
         [t.post, t.qty],
         [t.mCount(cc), `${nf(r.count)} ${t.pcs}`],
@@ -164,6 +184,7 @@ export default function TakstolarKalkylatorTool({ locale = 'sv' }: { locale?: Ca
   };
 
   const exportPdf = () => void downloadMaterialPdf({
+    locale,
     title: t.pdfTitle,
     rows: [
       { desc: t.mCount(cc), qty: `${nf(r.count)} ${t.pcs}` },
@@ -184,17 +205,17 @@ export default function TakstolarKalkylatorTool({ locale = 'sv' }: { locale?: Ca
   return (
     <div className="lm-tool lm-tool--split lm-tool--truss">
       <div className="lm-tool-grid lm-tool-grid--pair">
-        <label className="lm-tool-field"><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={en ? 'e.g. 10' : 't.ex. 10'} onChange={(e) => setLength(e.currentTarget.value)} /></label>
+        <label className="lm-tool-field"><span>{t.length}</span><input type="number" min="0" inputMode="decimal" value={length} placeholder={`${eg} 10`} onChange={(e) => setLength(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.cc}</span><input type="number" min="0" inputMode="numeric" value={cc} onChange={(e) => setCc(e.currentTarget.value)} /></label>
       </div>
       <div className="lm-tool-grid lm-tool-grid--pair">
         <p className="lm-tool-subhead lm-tool-field-wide">{t.geoHead}</p>
-        <label className="lm-tool-field"><span>{t.span}</span><input type="number" min="0" inputMode="decimal" value={span} placeholder={en ? 'e.g. 8' : 't.ex. 8'} onChange={(e) => setSpan(e.currentTarget.value)} /></label>
-        <label className="lm-tool-field"><span>{t.pitch}</span><input type="number" min="0" max="75" inputMode="decimal" value={pitch} placeholder={en ? 'e.g. 27' : 't.ex. 27'} onChange={(e) => setPitch(e.currentTarget.value)} /></label>
+        <label className="lm-tool-field"><span>{t.span}</span><input type="number" min="0" inputMode="decimal" value={span} placeholder={`${eg} 8`} onChange={(e) => setSpan(e.currentTarget.value)} /></label>
+        <label className="lm-tool-field"><span>{t.pitch}</span><input type="number" min="0" max="75" inputMode="decimal" value={pitch} placeholder={`${eg} 27`} onChange={(e) => setPitch(e.currentTarget.value)} /></label>
         <label className="lm-tool-field"><span>{t.overhang}</span><input type="number" min="0" inputMode="numeric" value={overhang} onChange={(e) => setOverhang(e.currentTarget.value)} /></label>
       </div>
       <div className="lm-result">
-        <div className="lm-result-row lm-result-highlight"><span>{t.rCount}</span><strong>{nf(r.count)} {t.pcs}<CopyLinkButton scope={u} tool="takstolar-kalkylator" en={en} /></strong></div>
+        <div className="lm-result-row lm-result-highlight"><span>{t.rCount}</span><strong>{nf(r.count)} {t.pcs}<CopyLinkButton scope={u} tool="takstolar-kalkylator" en={en} nb={nb} /></strong></div>
         {geo ? (
           <>
             <div className="lm-result-row"><span>{t.rHeight}</span><strong>{f2(geo.height)} {t.m}</strong></div>
@@ -207,12 +228,12 @@ export default function TakstolarKalkylatorTool({ locale = 'sv' }: { locale?: Ca
       </div>
       {geo ? <TrussDrawing b={geo.b} deg={geo.deg} ov={geo.ov} height={geo.height} caption={t.drawCap} f2={f2} unit={t.m} /> : null}
       <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-        <a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'takstolar-kalkylator' })}>
+        {offertEnabled(locale) ? (<a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'takstolar-kalkylator' })}>
           {t.offert}
-        </a>
-        <a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'takstolar-kalkylator' })}>
+        </a>) : null}
+        {offertEnabled(locale) ? (<a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'takstolar-kalkylator' })}>
           {t.faktura}
-        </a>
+        </a>) : null}
         <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>
           {t.excel}
         </button>

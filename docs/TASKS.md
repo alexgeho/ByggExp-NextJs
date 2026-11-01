@@ -20,4 +20,4 @@
 - [x] GH secret STRIPE_PRICE_PROJEKT_MONTHLY → price_1UWzTHAzcJ4f5bxIpGqcufEE + redeploy API (auto mode блокирует — команда владельцу)
 - [x] Расхождение Komplett +119 vs +69 — владелец: как на сайте, 69
 - [x] Komplett в Stripe: +69 (год 704) — новые цены SEK+NOK: месяц price_1UX1aHAzcJ4f5bxIvIBzBPBu, год price_1UX1bnAzcJ4f5bxIy63qTivQ
-- [ ] GH secrets STRIPE_PRICE_KOMPLETT_MONTHLY/YEARLY → новые цены + redeploy API (команда владельцу)
+- [x] GH secrets STRIPE_PRICE_KOMPLETT_MONTHLY/YEARLY → новые цены + redeploy API (команда владельцу)

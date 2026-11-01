@@ -31,6 +31,6 @@
   - [ ] hms-system — НЕ сделано: в продукте нет avviksmelding с ответственным/статусом, нет risikovurdering/SJA → вернуться, когда появится модуль avvik
   - [ ] tilbudsprogram — НЕ сделано: PDF оффера и счёта только по-шведски, счёт печатает SEK/Bankgiro → сначала локализовать PDF (nb, NOK, kontonummer/KID)
   - [ ] Критик → проверка владельца → деплой; Request Indexing 4 новых URL
-- [ ] Решение владельца: норвежские PDF tilbud/faktura (NOK, kontonummer, KID) → открывает страницу tilbudsprogram
-- [ ] Решение владельца: модуль avvik для HMS → открывает страницу hms-system
+- [ ] Норвежские PDF tilbud/faktura (NOK, kontonummer, KID) — владелец «да» 01.11 → потом страница tilbudsprogram
+- [ ] Модуль avvik для HMS — владелец «да» 01.11, после PDF → потом страница hms-system
 - [ ] nb-скриншоты приложения для страниц функций (сейчас шведский UI)

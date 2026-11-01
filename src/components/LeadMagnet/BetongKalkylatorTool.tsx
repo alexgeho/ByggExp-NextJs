@@ -4,7 +4,7 @@ import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf, type MaterialRow } from '../../lib/materialPdf';
-import { fakturaHref, offertHref } from '../../lib/offert';
+import { fakturaHref, offertEnabled, offertHref } from '../../lib/offert';
 import { useUrlParam, useUrlScope, YES_NO } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
@@ -516,8 +516,8 @@ export default function BetongKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
 
       <p className="lm-result-fine">{t.fine}</p>
       <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-        <a className="lm-tool-button" href={r.volume > 0 ? offertUrl : undefined} aria-disabled={r.volume <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'betong-kalkylator' })}>{t.offert}</a>
-        <a className="lm-tool-secondary" href={r.volume > 0 ? fakturaUrl : undefined} aria-disabled={r.volume <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'betong-kalkylator' })}>{t.faktura}</a>
+        {offertEnabled(locale) ? (<a className="lm-tool-button" href={r.volume > 0 ? offertUrl : undefined} aria-disabled={r.volume <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'betong-kalkylator' })}>{t.offert}</a>) : null}
+        {offertEnabled(locale) ? (<a className="lm-tool-secondary" href={r.volume > 0 ? fakturaUrl : undefined} aria-disabled={r.volume <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'betong-kalkylator' })}>{t.faktura}</a>) : null}
         <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.volume <= 0}>{t.excel}</button>
         <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={r.volume <= 0}>{t.pdf}</button>
       </div>

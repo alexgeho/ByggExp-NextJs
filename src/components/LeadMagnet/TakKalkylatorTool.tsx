@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
-import { fakturaHref, offertHref } from '../../lib/offert';
+import { fakturaHref, offertEnabled, offertHref } from '../../lib/offert';
 import { useUrlParam, useUrlScope, YES_NO } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
@@ -311,12 +311,12 @@ export default function TakKalkylatorTool({ locale = 'sv' }: { locale?: CalcLoca
         {r.scaffoldM2 > 0 ? <div className="lm-result-row"><span>{t.rScaffold}</span><span>{nf(r.scaffoldM2, 1)} m²</span></div> : null}
         <p className="lm-result-fine">{t.fine}</p>
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-          <a className="lm-tool-button" href={r.roofArea > 0 ? offertUrl : undefined} aria-disabled={r.roofArea <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'tak-kalkylator' })}>
+          {offertEnabled(locale) ? (<a className="lm-tool-button" href={r.roofArea > 0 ? offertUrl : undefined} aria-disabled={r.roofArea <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'tak-kalkylator' })}>
             {t.offert}
-          </a>
-          <a className="lm-tool-secondary" href={r.roofArea > 0 ? fakturaUrl : undefined} aria-disabled={r.roofArea <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'tak-kalkylator' })}>
+          </a>) : null}
+          {offertEnabled(locale) ? (<a className="lm-tool-secondary" href={r.roofArea > 0 ? fakturaUrl : undefined} aria-disabled={r.roofArea <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'tak-kalkylator' })}>
             {t.faktura}
-          </a>
+          </a>) : null}
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={r.roofArea <= 0}>{t.excel}</button>
           <button type="button" className="lm-tool-secondary" onClick={() => void exportPdf()} disabled={r.roofArea <= 0}>{t.pdf}</button>
         </div>

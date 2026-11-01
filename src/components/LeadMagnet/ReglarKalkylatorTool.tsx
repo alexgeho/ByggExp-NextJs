@@ -4,7 +4,7 @@ import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf, type MaterialRow } from '../../lib/materialPdf';
-import { fakturaHref, offertHref } from '../../lib/offert';
+import { fakturaHref, offertEnabled, offertHref } from '../../lib/offert';
 import { useUrlParam, useUrlScope, YES_NO } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
@@ -184,8 +184,8 @@ export default function ReglarKalkylatorTool({ locale = 'sv' }: { locale?: CalcL
         {r.vapourM2 > 0 ? <div className="lm-result-row"><span>{t.rVapour}</span><span>{nf(r.vapourM2, 1)} m²</span></div> : null}
         <p className="lm-result-fine">{t.fine}</p>
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-          <a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'reglar-kalkylator' })}>{t.offert}</a>
-          <a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'reglar-kalkylator' })}>{t.faktura}</a>
+          {offertEnabled(locale) ? (<a className="lm-tool-button" href={disabled ? undefined : offertUrl} aria-disabled={disabled} onClick={() => gaEvent('offert_from_calculator', { tool: 'reglar-kalkylator' })}>{t.offert}</a>) : null}
+          {offertEnabled(locale) ? (<a className="lm-tool-secondary" href={disabled ? undefined : fakturaUrl} aria-disabled={disabled} onClick={() => gaEvent('faktura_from_calculator', { tool: 'reglar-kalkylator' })}>{t.faktura}</a>) : null}
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={disabled}>{t.excel}</button>
           <button type="button" className="lm-tool-secondary" onClick={exportPdf} disabled={disabled}>{t.pdf}</button>
         </div>

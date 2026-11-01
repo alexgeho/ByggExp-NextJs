@@ -4,7 +4,7 @@ import { gaEvent } from '../../lib/analytics';
 import { downloadCsvRows } from '../../lib/download';
 import type { CalcLocale } from '../../lib/locale';
 import { downloadMaterialPdf } from '../../lib/materialPdf';
-import { fakturaHref, offertHref } from '../../lib/offert';
+import { fakturaHref, offertEnabled, offertHref } from '../../lib/offert';
 import { isNumericText, jsonCodec, useUrlParam, useUrlScope } from '../../lib/useUrlState';
 import CopyLinkButton from './CopyLinkButton';
 
@@ -166,12 +166,12 @@ export default function KvadratmeterKalkylatorTool({ locale = 'sv' }: { locale?:
           </div>
         ) : null}
         <div className="lm-tool-actions" style={{ marginTop: 16 }}>
-          <a className="lm-tool-button" href={result.base > 0 ? offertUrl : undefined} aria-disabled={result.base <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'kvadratmeter-kalkylator' })}>
+          {offertEnabled(locale) ? (<a className="lm-tool-button" href={result.base > 0 ? offertUrl : undefined} aria-disabled={result.base <= 0} onClick={() => gaEvent('offert_from_calculator', { tool: 'kvadratmeter-kalkylator' })}>
             {t.offert}
-          </a>
-          <a className="lm-tool-secondary" href={result.base > 0 ? fakturaUrl : undefined} aria-disabled={result.base <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'kvadratmeter-kalkylator' })}>
+          </a>) : null}
+          {offertEnabled(locale) ? (<a className="lm-tool-secondary" href={result.base > 0 ? fakturaUrl : undefined} aria-disabled={result.base <= 0} onClick={() => gaEvent('faktura_from_calculator', { tool: 'kvadratmeter-kalkylator' })}>
             {t.faktura}
-          </a>
+          </a>) : null}
           <button type="button" className="lm-tool-secondary" onClick={exportCsv} disabled={result.base <= 0}>
             {t.excel}
           </button>

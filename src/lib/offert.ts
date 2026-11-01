@@ -16,6 +16,12 @@ function seedQuery(rows: OffertSeedRow[]): string {
   return encodeURIComponent(JSON.stringify(packed));
 }
 
+// The quote/invoice generators exist only in Swedish (/sv/verktyg/…, byggexp.se),
+// so the "create quote / invoice from this" buttons are hidden on nb pages.
+export function offertEnabled(locale?: string): boolean {
+  return locale !== 'nb';
+}
+
 export function offertHref(rows: OffertSeedRow[]): string {
   return `/sv/verktyg/offert-mall?rows=${seedQuery(rows)}`;
 }

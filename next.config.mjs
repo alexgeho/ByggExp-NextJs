@@ -93,6 +93,11 @@ const nextConfig = {
       { source: "/sv/blog/rot-eller-rut", destination: "/sv/blog/faktura-med-rotavdrag", statusCode: 301 },
       { source: "/sv/blog/rot-avdrag", destination: "/sv/blog/faktura-med-rotavdrag", statusCode: 301 },
       { source: "/sv/blog/rotavdrag-pensionar", destination: "/sv/blog/kontrollera-kundens-rotutrymme", statusCode: 301 },
+      // byggexp.no wave 2 (docs/seo/no-audit-2026-11-01-seo.md P1): thin HMS-kort spokes
+      // merged into the pillar. Absolute target so byggexp.se/nb/... also lands in one hop.
+      { source: "/nb/blog/hms-kort-pris", destination: "https://byggexp.no/nb/blog/hms-kort-bygg", statusCode: 301 },
+      { source: "/nb/blog/bestille-hms-kort", destination: "https://byggexp.no/nb/blog/hms-kort-bygg", statusCode: 301 },
+      { source: "/nb/blog/byggekort", destination: "https://byggexp.no/nb/blog/hms-kort-bygg", statusCode: 301 },
       // Junk URL from an early test post. It has no target, but leaving it 404 would
       // fail the whole "Not found (404)" validation run in GSC — send it to the blog index.
       { source: "/sv/blog/test", destination: "/sv/blog", statusCode: 301 },

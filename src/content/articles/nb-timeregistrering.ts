@@ -316,62 +316,94 @@ const M_MANNSKAPSLISTE_BYGGEPLASS: BlogPost = {
   updatedAt: '2026-09-07T12:00:00.000Z',
 };
 
+// HMS-kort pillar (wave 2, 2026-11-01): hms-kort-pris, bestille-hms-kort and byggekort
+// were merged in here and 301 to this URL (next.config.mjs). Sources:
+// - Price 139,10 kr + mva, order on hmskort.no by a person with a formal role in
+//   Enhetsregisteret, lost card → tell employer: https://www.arbeidstilsynet.no/hms/hms-kort/
+// - Who must have a card (§ 4), registers (§ 3), card contents (§ 7), two-year validity and
+//   employment-bound (§ 8), makulering (§ 8a), lost card (§ 9): forskrift om HMS-kort på
+//   bygge- og anleggsplasser, FOR-2023-12-18-2278,
+//   https://www.arbeidstilsynet.no/regelverk/forskrifter/forskrift-om-hms-kort-pa-bygge--og-anleggsplasser/
+// - HMS-kortnummer on the oversiktsliste: byggherreforskriften § 15,
+//   https://lovdata.no/forskrift/2009-08-03-1028/§15
 const H_HMS_KORT_BYGG_HTML = `
-<p>Et HMS-kort er det personlige ID-kortet alle som jobber på norske bygge- og anleggsplasser skal ha. Kortet viser hvem du er og hvilken virksomhet du jobber for, og kreves blant annet for å bli registrert i mannskapslisten (oversiktslisten). Her forklarer vi hva et HMS-kort er, hvordan du får det, og hvordan det henger sammen med oversiktslisten på plassen.</p>
-<figure class="article-diagram"><img src="/landing/diagrams/nb-hms-kort.webp" alt="Diagram: HMS-kort – fra arbeidskontrakt til utstedt kort, registrering i oversiktslisten og adgang til byggeplassen" width="720" height="380" loading="lazy"><figcaption>HMS-kortet utstedes på grunnlag av en arbeidskontrakt og kreves for å stå på oversiktslisten.</figcaption></figure>
+<p>HMS-kort er det personlige ID-kortet alle som jobber på bygge- og anleggsplasser i Norge skal ha. Arbeidsgiveren bestiller kortet på hmskort.no, det koster 139,10 kroner + mva og gjelder i inntil to år. Her finner du alt om bestilling, pris, gyldighet og kontroll samlet.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/nb-hms-kort.webp" alt="Diagram: HMS-kort – fra arbeidskontrakt til utstedt kort, registrering i oversiktslisten og adgang til byggeplassen" width="720" height="380" loading="lazy"><figcaption>HMS-kortet utstedes på grunnlag av et arbeidsforhold og kreves for å stå på oversiktslisten.</figcaption></figure>
 
 <h2>Hva er et HMS-kort?</h2>
-<p>HMS-kortet (tidligere kalt byggekort/ID-kort) er et personlig kort som identifiserer arbeidstakeren og arbeidsgiveren på bygge- og anleggsplasser. Formålet er å gjøre det enkelt å se hvem som er på plassen og for hvem de jobber – både av hensyn til sikkerhet og for å motvirke useriøse aktører.</p>
+<p>HMS-kortet identifiserer arbeidstakeren og arbeidsgiveren på bygge- og anleggsplassen. Kortet viser blant annet navn, bilde, fødselsdato, arbeidsgiver, kortnummer og utstedelsesdato, på norsk og engelsk. Formålet er å gjøre det enkelt å se hvem som er på plassen og for hvem de jobber.</p>
+<p>Arbeidsgiveren skal sørge for at alle som utfører arbeid på bygge- og anleggsplasser har HMS-kort. Kravet gjelder både norske og utenlandske arbeidstakere. Kortet er personlig og skal bæres synlig på plassen.</p>
 
-<h2>Hvordan får du HMS-kort?</h2>
-<p>HMS-kort bestilles av arbeidsgiveren og utstedes på grunnlag av et gyldig ansettelsesforhold. Kort forklart:</p>
+<h2>Byggekort er det samme som HMS-kort</h2>
+<p>«Byggekort» er et vanlig navn på HMS-kortet i bygg og anlegg. Det finnes ikke et eget byggekort ved siden av – det offisielle navnet er HMS-kort, og det er det samme kortet du bestiller på hmskort.no.</p>
+
+<h2 id="bestille-hms-kort">Bestille HMS-kort</h2>
+<p>Det er arbeidsgiveren som bestiller – den ansatte kan ikke bestille kortet selv.</p>
 <ol>
-<li>Arbeidstakeren har en <strong>arbeidskontrakt</strong> hos en registrert virksomhet.</li>
-<li>Arbeidsgiveren bestiller HMS-kortet gjennom den offisielle ordningen.</li>
-<li>Kortet <strong>utstedes</strong> til den ansatte og er personlig.</li>
-<li>Med gyldig kort kan personen <strong>registreres i oversiktslisten</strong> og få adgang til plassen.</li>
+<li><strong>Virksomheten er registrert</strong> i de pålagte registrene, for eksempel Enhetsregisteret.</li>
+<li><strong>Arbeidsgiveren kontrollerer identiteten</strong> til den ansatte før bestilling.</li>
+<li><strong>En person med formell rolle i Enhetsregisteret</strong> logger inn på <a href="https://hmskort.no" rel="nofollow noopener" target="_blank">hmskort.no</a> med elektronisk ID og bestiller (eller delegerer tilgangen til en annen ansatt).</li>
+<li><strong>Kortet utstedes.</strong> Da kan personen føres på oversiktslisten.</li>
 </ol>
-<p>Sjekk den offisielle søknadsprosessen og gjeldende krav hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
 
-<h2>HMS-kort og mannskapsliste henger sammen</h2>
-<p>HMS-kort-nummeret er en av opplysningene som skal registreres i den elektroniske oversiktslisten. Uten gyldig HMS-kort kan ikke personen føres på listen – derfor er kortet en forutsetning for lovlig arbeid på plassen. Les mer om <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og elektronisk oversiktsliste</a>.</p>
+<h2 id="hms-kort-pris">HMS-kort pris</h2>
+<div class="article-table"><table>
+<thead><tr><th>Hva</th><th>Pris</th></tr></thead>
+<tbody>
+<tr><td>Nytt HMS-kort</td><td>139,10 kr + mva</td></tr>
+<tr><td>Nytt kort etter to år</td><td>139,10 kr + mva</td></tr>
+<tr><td>Erstatning for mistet kort</td><td>139,10 kr + mva</td></tr>
+</tbody>
+</table></div>
+<p>Prisen gjelder bestilling på hmskort.no, som er den offisielle kanalen. Sjekk gjeldende pris hos <a href="https://www.arbeidstilsynet.no/hms/hms-kort/" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a> før du bestiller.</p>
+
+<h2>Gyldighet, kontroll og mistet kort</h2>
+<ul>
+<li><strong>Gyldighet:</strong> kortet utstedes for to år og gjelder bare så lenge arbeidsforholdet består. Les mer om <a href="/nb/blog/hms-kort-gyldighet">hvor lenge HMS-kortet er gyldig</a>.</li>
+<li><strong>Kontroll:</strong> slå opp kortnummeret eller skann QR-koden. Se <a href="/nb/blog/sjekke-hms-kort">slik sjekker du et HMS-kort</a>.</li>
+<li><strong>Mistet kort:</strong> meld fra til arbeidsgiveren med en gang. Se <a href="/nb/blog/mistet-hms-kort">mistet HMS-kort</a>.</li>
+<li><strong>Slutter du:</strong> kortet er arbeidsgiverens eiendom og skal makuleres.</li>
+</ul>
+
+<h2>HMS-kort og mannskapslisten</h2>
+<p>HMS-kortnummeret er en av opplysningene som skal stå i den elektroniske oversiktslisten etter byggherreforskriften § 15. Les mer om <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og elektronisk oversiktsliste</a>.</p>
 
 <h2>Digital oversikt på plassen</h2>
-<p>Selve HMS-kortet dokumenterer identitet og arbeidsgiver, mens du fortsatt trenger å vite hvem som faktisk er på jobb og hvor lenge. Med ByggExp sjekker de ansatte inn og ut i mobilen, med GPS-bekreftelse, slik at du får en tidsstemplet oversikt over oppmøtet – og timene blir samtidig grunnlag for lønn og faktura. ByggExp erstatter ikke selve HMS-kortet, men gir deg den daglige oversikten over mannskapet.</p>
-
-<h2>Kom i gang</h2>
-<p>Vil du ha digital oppmøte- og timeoversikt på bygget? Les om <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste</a>, <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
-<p>Mer om HMS-kort: <a href="/nb/blog/bestille-hms-kort">bestille HMS-kort</a>, <a href="/nb/blog/hms-kort-pris">hva et HMS-kort koster</a>, <a href="/nb/blog/sjekke-hms-kort">sjekke om et kort er gyldig</a>, <a href="/nb/blog/hms-kort-gyldighet">hvor lenge kortet varer</a>, <a href="/nb/blog/mistet-hms-kort">mistet kort</a> og <a href="/nb/blog/byggekort">byggekort (samme kort)</a>.</p>
+<p>HMS-kortet dokumenterer identitet og arbeidsgiver. Hvem som faktisk er på jobb, og hvor lenge, ser du i ByggExp: de ansatte sjekker inn og ut i mobilen med GPS, og timene blir grunnlag for lønn og faktura. ByggExp utsteder ikke HMS-kort. Se <a href="/nb/blog/timeregistrering-app-bygg">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hvem må ha HMS-kort?</h3>
-<p>Alle som utfører arbeid på bygge- og anleggsplasser skal ha personlig HMS-kort som viser identitet og arbeidsgiver.</p>
-<h3>Hvordan søker man om HMS-kort?</h3>
-<p>Arbeidsgiveren bestiller kortet gjennom den offisielle ordningen, basert på et gyldig ansettelsesforhold. Se Arbeidstilsynet for oppdatert søknadsprosess.</p>
-<h3>Hva har HMS-kort med mannskapslisten å gjøre?</h3>
-<p>HMS-kort-nummeret registreres i den elektroniske oversiktslisten (mannskapslisten). Uten gyldig kort kan ikke personen føres på listen.</p>
+<p>Alle som utfører arbeid på bygge- og anleggsplasser – norske og utenlandske arbeidstakere. Arbeidsgiveren skal sørge for at de har kort.</p>
+<h3>Hvordan bestiller man HMS-kort?</h3>
+<p>Arbeidsgiveren bestiller på hmskort.no. En person med formell rolle i Enhetsregisteret logger inn med elektronisk ID, eller delegerer tilgangen til en annen ansatt.</p>
+<h3>Hva koster et HMS-kort?</h3>
+<p>139,10 kroner + mva per kort via hmskort.no. Nytt kort ved tap eller etter to år koster det samme.</p>
+<h3>Er byggekort og HMS-kort det samme?</h3>
+<p>Ja. Byggekort er et vanlig navn på HMS-kortet i bygg og anlegg.</p>
+<h3>Hvor lenge er HMS-kortet gyldig?</h3>
+<p>Inntil to år, og bare så lenge du er ansatt hos arbeidsgiveren som bestilte det.</p>
 `.trim();
 
 const H_HMS_KORT_BYGG: BlogPost = {
   _id: 'code-nb-hms-kort-bygg',
-  title: 'HMS-kort for byggeplass – hva det er og hvordan du får det',
+  title: 'HMS-kort – bestille, pris, gyldighet og byggekort',
   slug: 'hms-kort-bygg',
   locale: 'nb',
   excerpt:
-    'HMS-kort for byggeplass: hva kortet er, hvordan du får det, og hvordan det henger sammen med mannskapslisten (den elektroniske oversiktslisten).',
+    'HMS-kort for bygg og anlegg: arbeidsgiveren bestiller på hmskort.no, kortet koster 139,10 kr + mva og gjelder i inntil to år. Bestilling, pris, gyldighet og byggekort samlet.',
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: H_HMS_KORT_BYGG_HTML,
-  seoTitle: 'HMS-kort for bygg – krav, søknad og oversiktsliste | ByggExp',
+  seoTitle: 'HMS-kort – bestille, pris og gyldighet | ByggExp',
   seoDescription:
-    'HMS-kort for byggeplass: hva det er, hvordan arbeidsgiveren søker, og hvordan HMS-kort-nummeret henger sammen med mannskapslisten / elektronisk oversiktsliste (§ 15).',
+    'HMS-kort: arbeidsgiveren bestiller på hmskort.no, prisen er 139,10 kr + mva, og kortet gjelder i inntil to år. Slik bestiller, sjekker og fornyer du – og byggekort er samme kort.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
   isPublished: true,
   publishedAt: '2026-09-07T12:10:00.000Z',
   createdAt: '2026-09-07T12:10:00.000Z',
-  updatedAt: '2026-09-07T12:10:00.000Z',
+  updatedAt: '2026-11-01T12:00:00.000Z',
 };
 
 const T_TIMELISTE_APP_BYGG_HTML = `
@@ -448,115 +480,6 @@ const T_TIMELISTE_APP_BYGG: BlogPost = {
 // ByggExp for the mannskapsliste/oppmøte side. Facts from Arbeidstilsynet /
 // hmskort.no (the official channel). ByggExp does NOT issue HMS-kort.
 
-const B_BESTILLE_HMS_KORT_HTML = `
-<p>Skal du skaffe HMS-kort til de ansatte? Bestillingen gjøres av arbeidsgiveren gjennom den offisielle ordningen, og kortet utstedes av en kortutsteder utpekt av Arbeidstilsynet. Her går vi gjennom hvordan du bestiller HMS-kort steg for steg, hva det koster, og hva du gjør hvis et kort blir mistet.</p>
-<figure class="article-diagram"><img src="/landing/diagrams/nb-bestille-hms-kort.webp" alt="Diagram: bestille HMS-kort i fire steg – registrer virksomheten, meld inn ansatte (A-melding), bestill på hmskort.no, kort utstedes" width="720" height="380" loading="lazy"><figcaption>Bestille HMS-kort: registrer virksomheten, meld inn de ansatte, bestill via hmskort.no – så utstedes kortet.</figcaption></figure>
-
-<h2>Slik bestiller du HMS-kort</h2>
-<ol>
-<li><strong>Registrer virksomheten</strong> i de påkrevde registrene (blant annet Enhetsregisteret/Foretaksregisteret).</li>
-<li><strong>Meld inn de ansatte</strong> – arbeidsforholdet må være rapportert (A-melding), ellers kan kortet ikke utstedes.</li>
-<li><strong>Bestill på <a href="https://www.hmskort.no" rel="nofollow noopener" target="_blank">hmskort.no</a></strong> – den offisielle kanalen.</li>
-<li><strong>Kortet utstedes</strong> og sendes til den ansatte. Da kan personen registreres i oversiktslisten på plassen.</li>
-</ol>
-
-<h2>Hvem bestiller – og hvem betaler?</h2>
-<p>Det er arbeidsgiveren som bestiller og betaler for HMS-kortet. Den ansatte kan altså ikke bestille kortet selv. Kortet er personlig og knytter arbeidstakeren til riktig virksomhet.</p>
-
-<h2>Bruk den offisielle kanalen</h2>
-<p>Bestill via hmskort.no. Arbeidstilsynet har advart mot enkelte tredjepartsleverandører som tar langt høyere priser for det samme kortet. Se <a href="/nb/blog/hms-kort-pris">hva et HMS-kort koster</a> for en oversikt.</p>
-
-<h2>Hva gjør du hvis kortet blir mistet?</h2>
-<p>Mister den ansatte kortet, eller blir det stjålet, skal det meldes til arbeidsgiveren med en gang. Arbeidsgiveren registrerer kortet som mistet og bestiller et nytt. Prisen for erstatningskort er den samme som for et nytt kort.</p>
-
-<h2>Fra kort til oversikt på plassen</h2>
-<p>HMS-kortet dokumenterer identitet og arbeidsgiver, men du trenger fortsatt å vite hvem som faktisk er på jobb. Med ByggExp sjekker de ansatte inn og ut i mobilen med GPS, så du får en tidsstemplet oversikt over oppmøtet – et godt grunnlag for <a href="/nb/blog/mannskapsliste-byggeplass">mannskapslisten</a>. ByggExp utsteder ikke selve HMS-kortet.</p>
-
-<h2>Kom i gang</h2>
-<p>Les mer om <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a>, <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>. Sjekk alltid gjeldende krav og priser hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
-
-<h2>Vanlige spørsmål</h2>
-<h3>Hvor bestiller man HMS-kort?</h3>
-<p>På den offisielle siden hmskort.no. Arbeidsgiveren bestiller på vegne av den ansatte, etter at virksomheten er registrert og arbeidsforholdet er meldt inn.</p>
-<h3>Kan den ansatte bestille HMS-kort selv?</h3>
-<p>Nei. Det er arbeidsgiveren som bestiller og betaler. Kortet er personlig og knyttes til den virksomheten personen jobber for.</p>
-<h3>Hva koster et HMS-kort?</h3>
-<p>Via den offisielle kanalen koster kortet rundt 135 kroner + mva. Enkelte tredjeparter tar mye mer. Se <a href="/nb/blog/hms-kort-pris">HMS-kort pris</a>.</p>
-<h3>Hva gjør jeg hvis jeg mister HMS-kortet?</h3>
-<p>Meld fra til arbeidsgiveren med en gang. De registrerer kortet som mistet og bestiller et nytt til samme pris som et nytt kort.</p>
-`.trim();
-
-const B_BESTILLE_HMS_KORT: BlogPost = {
-  _id: 'code-nb-bestille-hms-kort',
-  title: 'Bestille HMS-kort – slik gjør arbeidsgiveren det',
-  slug: 'bestille-hms-kort',
-  locale: 'nb',
-  excerpt:
-    'Bestille HMS-kort: arbeidsgiveren bestiller via den offisielle kanalen hmskort.no. Slik gjør du det steg for steg, hva det koster og hva du gjør ved mistet kort.',
-  tag: 'Regelverk',
-  coverImageUrl: '/landing/features/3personal.webp',
-  contentHtml: B_BESTILLE_HMS_KORT_HTML,
-  seoTitle: 'Bestille HMS-kort – steg for steg og pris | ByggExp',
-  seoDescription:
-    'Bestille HMS-kort: arbeidsgiveren bestiller via hmskort.no. Steg for steg, hvem som betaler, pris (ca. 135 kr + mva) og hva du gjør hvis kortet blir mistet.',
-  seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
-  canonicalUrl: '',
-  noIndex: false,
-  isPublished: true,
-  publishedAt: '2026-09-07T14:00:00.000Z',
-  createdAt: '2026-09-07T14:00:00.000Z',
-  updatedAt: '2026-09-07T14:00:00.000Z',
-};
-
-const P_HMS_KORT_PRIS_HTML = `
-<p>Hva koster et HMS-kort? Prisen er lav hvis du bruker den offisielle kanalen – og betydelig høyere hos enkelte tredjeparter. Her går vi gjennom hva et HMS-kort koster, hvem som betaler, og hvordan du unngår å betale for mye.</p>
-
-<h2>Pris via den offisielle kanalen</h2>
-<p>Bestiller du via <a href="https://www.hmskort.no" rel="nofollow noopener" target="_blank">hmskort.no</a>, koster HMS-kortet rundt <strong>135 kroner + mva</strong> per kort. Dette er den offisielle ordningen som er utpekt av Arbeidstilsynet. Prisen kan justeres, så sjekk alltid gjeldende pris på hmskort.no før du bestiller.</p>
-
-<h2>Pass deg for dyre tredjeparter</h2>
-<p>Arbeidstilsynet har advart mot enkelte tredjepartsleverandører som selger «det samme» HMS-kortet til langt høyere pris – i noen tilfeller flere hundre kroner ekstra per kort. Kortet blir ikke bedre av å koste mer. Bruk den offisielle kanalen.</p>
-
-<h2>Hvem betaler for HMS-kortet?</h2>
-<p>Det er arbeidsgiveren som bestiller og betaler. Den ansatte skal ikke betale for sitt eget HMS-kort. Se hvordan bestillingen foregår i vår guide om <a href="/nb/blog/bestille-hms-kort">å bestille HMS-kort</a>.</p>
-
-<h2>Hva koster et nytt kort ved mistet kort?</h2>
-<p>Blir kortet mistet eller stjålet, bestilles et nytt til samme pris som et ordinært kort. Meld fra til arbeidsgiveren, som registrerer kortet som mistet og bestiller på nytt.</p>
-
-<h2>Kom i gang</h2>
-<p>Les mer om <a href="/nb/blog/bestille-hms-kort">å bestille HMS-kort</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a> eller <a href="/nb/blog/sjekke-hms-kort">sjekke om et HMS-kort er gyldig</a>. Sjekk alltid gjeldende pris hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a> / hmskort.no.</p>
-
-<h2>Vanlige spørsmål</h2>
-<h3>Hva koster et HMS-kort?</h3>
-<p>Via den offisielle kanalen hmskort.no koster kortet rundt 135 kroner + mva per kort. Sjekk gjeldende pris før bestilling.</p>
-<h3>Hvorfor er HMS-kort dyrere hos noen leverandører?</h3>
-<p>Enkelte tredjeparter tar et påslag for det samme kortet. Arbeidstilsynet har advart mot dette – bruk hmskort.no for å unngå å betale for mye.</p>
-<h3>Må den ansatte betale for HMS-kortet selv?</h3>
-<p>Nei. Arbeidsgiveren bestiller og betaler for kortet.</p>
-`.trim();
-
-const P_HMS_KORT_PRIS: BlogPost = {
-  _id: 'code-nb-hms-kort-pris',
-  title: 'HMS-kort pris – hva koster det?',
-  slug: 'hms-kort-pris',
-  locale: 'nb',
-  excerpt:
-    'Hva koster et HMS-kort? Via den offisielle kanalen hmskort.no ca. 135 kr + mva per kort. Slik unngår du dyre tredjeparter, og hvem som betaler.',
-  tag: 'Regelverk',
-  coverImageUrl: '/landing/features/8fakturor.webp',
-  contentHtml: P_HMS_KORT_PRIS_HTML,
-  seoTitle: 'HMS-kort pris – hva koster et HMS-kort? | ByggExp',
-  seoDescription:
-    'HMS-kort pris: via den offisielle kanalen hmskort.no koster kortet ca. 135 kr + mva. Slik unngår du dyre tredjeparter, og hvem som betaler for kortet.',
-  seoImageUrl: `${NO_SITE_URL}/landing/features/8fakturor.webp`,
-  canonicalUrl: '',
-  noIndex: false,
-  isPublished: true,
-  publishedAt: '2026-09-07T14:10:00.000Z',
-  createdAt: '2026-09-07T14:10:00.000Z',
-  updatedAt: '2026-09-07T14:10:00.000Z',
-};
-
 const S_SJEKKE_HMS_KORT_HTML = `
 <p>Hvordan sjekker du om et HMS-kort er gyldig? Enten du er arbeidsleder som kontrollerer hvem som er på plassen, eller ansatt som vil bekrefte ditt eget kort – gyldigheten kan slås opp raskt. Her forklarer vi hvordan du sjekker et HMS-kort, og hvorfor det er viktig på bygge- og anleggsplasser.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-hms-kort.webp" alt="Diagram: HMS-kort – fra arbeidskontrakt til utstedt kort, registrering i oversiktslisten og adgang til byggeplassen" width="720" height="380" loading="lazy"><figcaption>Et gyldig HMS-kort knytter personen til riktig arbeidsgiver og gir adgang til plassen.</figcaption></figure>
@@ -568,7 +491,7 @@ const S_SJEKKE_HMS_KORT_HTML = `
 <p>På bygge- og anleggsplasser skal alle som utfører arbeid ha gyldig HMS-kort, og kortet er en forutsetning for å stå på den elektroniske <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten (mannskapslisten)</a>. Å kontrollere kortene gjør det enklere å se at alle på plassen er registrert hos en seriøs arbeidsgiver.</p>
 
 <h2>Hva betyr et sperret eller utløpt kort?</h2>
-<p>Et kort kan bli sperret hvis virksomheten ikke lenger oppfyller kravene, eller løpe ut på gyldighetstiden. Da må arbeidsgiveren ordne opp og eventuelt <a href="/nb/blog/bestille-hms-kort">bestille nytt kort</a>. En person uten gyldig kort skal ikke føres på oversiktslisten. Hvor lenge et kort varer, leser du i <a href="/nb/blog/hms-kort-gyldighet">HMS-kort gyldighet</a>.</p>
+<p>Et kort kan bli sperret hvis virksomheten ikke lenger oppfyller kravene, eller løpe ut på gyldighetstiden. Da må arbeidsgiveren ordne opp og eventuelt <a href="/nb/blog/hms-kort-bygg#bestille-hms-kort">bestille nytt kort</a>. En person uten gyldig kort skal ikke føres på oversiktslisten. Hvor lenge et kort varer, leser du i <a href="/nb/blog/hms-kort-gyldighet">HMS-kort gyldighet</a>.</p>
 
 <h2>Digital oversikt på plassen</h2>
 <p>Selve kortkontrollen bekrefter identitet og arbeidsgiver. For å vite hvem som faktisk er på jobb og når, bruker mange en app: i ByggExp sjekker de ansatte inn og ut med GPS, så du får en tidsstemplet oppmøteoversikt i tillegg til kortkontrollen. ByggExp erstatter ikke selve HMS-kortet.</p>
@@ -752,6 +675,8 @@ const PR_PROSJEKTSTYRING_BYGG: BlogPost = {
   updatedAt: '2026-09-07T14:40:00.000Z',
 };
 
+// Price 139,10 kr + mva and lost-card steps: https://www.arbeidstilsynet.no/hms/hms-kort/
+// (lost card § 9, FOR-2023-12-18-2278).
 const M_MISTET_HMS_KORT_HTML = `
 <p>Har du mistet HMS-kortet, eller er det blitt stjålet? Da må du handle raskt: uten gyldig kort kan du ikke stå på oversiktslisten på bygge- eller anleggsplassen. Her går vi gjennom hva du gjør hvis du mister HMS-kortet, hvem som bestiller nytt, og hva det koster.</p>
 
@@ -764,19 +689,19 @@ const M_MISTET_HMS_KORT_HTML = `
 </ol>
 
 <h2>Hva koster et nytt kort?</h2>
-<p>Erstatningskortet koster det samme som et ordinært kort – rundt 135 kroner + mva via den offisielle kanalen. Se <a href="/nb/blog/hms-kort-pris">HMS-kort pris</a> for detaljer.</p>
+<p>Erstatningskortet koster det samme som et ordinært kort – 139,10 kroner + mva via den offisielle kanalen hmskort.no. Se <a href="/nb/blog/hms-kort-bygg#hms-kort-pris">HMS-kort pris</a> for detaljer.</p>
 
 <h2>Kan du jobbe uten kortet mens du venter?</h2>
 <p>Uten gyldig HMS-kort skal du ikke føres på oversiktslisten. Sjekk med arbeidsleder hva som gjelder på din plass mens det nye kortet er på vei, og se hvordan du <a href="/nb/blog/sjekke-hms-kort">sjekker om et HMS-kort er gyldig</a>. Følg alltid reglene hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
 
 <h2>Kom i gang</h2>
-<p>Les mer om <a href="/nb/blog/bestille-hms-kort">å bestille HMS-kort</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a> eller <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a>.</p>
+<p>Les mer om <a href="/nb/blog/hms-kort-bygg#bestille-hms-kort">å bestille HMS-kort</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a> eller <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva gjør jeg hvis jeg mister HMS-kortet?</h3>
 <p>Meld fra til arbeidsgiveren med en gang. De registrerer kortet som mistet og bestiller et nytt via hmskort.no. Det gamle kortet bør sperres.</p>
 <h3>Hva koster et nytt HMS-kort ved tap?</h3>
-<p>Det samme som et ordinært kort – rundt 135 kroner + mva via den offisielle kanalen.</p>
+<p>Det samme som et ordinært kort – 139,10 kroner + mva via den offisielle kanalen hmskort.no.</p>
 <h3>Kan jeg jobbe uten HMS-kort mens jeg venter på nytt?</h3>
 <p>Uten gyldig kort skal du ikke føres på oversiktslisten. Avklar med arbeidsleder og følg reglene hos Arbeidstilsynet.</p>
 `.trim();
@@ -793,7 +718,7 @@ const M_MISTET_HMS_KORT: BlogPost = {
   contentHtml: M_MISTET_HMS_KORT_HTML,
   seoTitle: 'Mistet HMS-kort – slik bestiller du nytt | ByggExp',
   seoDescription:
-    'Mistet HMS-kort: meld fra til arbeidsgiveren, som registrerer det som mistet og bestiller nytt via hmskort.no. Pris ca. 135 kr + mva og hva som gjelder mens du venter.',
+    'Mistet HMS-kort: meld fra til arbeidsgiveren, som registrerer det som mistet og bestiller nytt via hmskort.no. Pris 139,10 kr + mva og hva som gjelder mens du venter.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
@@ -821,7 +746,7 @@ const G_HMS_KORT_GYLDIGHET_HTML = `
 <p>Du kan når som helst <a href="/nb/blog/sjekke-hms-kort">sjekke om et HMS-kort er gyldig</a> ved å slå opp kortnummeret.</p>
 
 <h2>Kom i gang</h2>
-<p>Les mer om <a href="/nb/blog/bestille-hms-kort">å bestille og fornye HMS-kort</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a> eller <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste</a>.</p>
+<p>Les mer om <a href="/nb/blog/hms-kort-bygg#bestille-hms-kort">å bestille og fornye HMS-kort</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a> eller <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hvor lenge er et HMS-kort gyldig?</h3>
@@ -854,53 +779,6 @@ const G_HMS_KORT_GYLDIGHET: BlogPost = {
   publishedAt: '2026-09-07T15:00:00.000Z',
   createdAt: '2026-09-07T15:00:00.000Z',
   updatedAt: '2026-11-01T12:00:00.000Z',
-};
-
-const BK_BYGGEKORT_HTML = `
-<p>Byggekort, HMS-kort, grøntkort – det er alle navn på det samme kortet. På bygge- og anleggsplasser kalles HMS-kortet ofte «byggekort». Her forklarer vi hva byggekortet er, hvem som må ha det, og hvordan du skaffer det.</p>
-<figure class="article-diagram"><img src="/landing/diagrams/nb-hms-kort.webp" alt="Diagram: byggekort/HMS-kort – fra arbeidskontrakt til utstedt kort, registrering i oversiktslisten og adgang til byggeplassen" width="720" height="380" loading="lazy"><figcaption>Byggekortet (HMS-kortet) knytter personen til riktig arbeidsgiver og gir adgang til plassen.</figcaption></figure>
-
-<h2>Er byggekort og HMS-kort det samme?</h2>
-<p>Ja. «Byggekort» er dagligtale for HMS-kortet på bygge- og anleggsplasser. Det offisielle navnet er HMS-kort, men i praksis brukes byggekort, HMS-kort og grøntkort om hverandre – det er samme personlige kort.</p>
-
-<h2>Hvem må ha byggekort?</h2>
-<p>Alle som utfører arbeid på en bygge- eller anleggsplass skal ha et personlig HMS-kort (byggekort) som viser hvem de er og hvilken virksomhet de jobber for. Kortet er en forutsetning for å stå på den elektroniske <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten</a> på plassen.</p>
-
-<h2>Hvordan skaffer du byggekort?</h2>
-<p>Arbeidsgiveren bestiller kortet via den offisielle kanalen <a href="https://www.hmskort.no" rel="nofollow noopener" target="_blank">hmskort.no</a>, etter at virksomheten er registrert og arbeidsforholdet er meldt inn. Se hele fremgangsmåten i vår guide om <a href="/nb/blog/bestille-hms-kort">å bestille HMS-kort</a>, og hva det koster i <a href="/nb/blog/hms-kort-pris">HMS-kort pris</a>.</p>
-
-<h2>Kom i gang</h2>
-<p>Les mer om <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a>, <a href="/nb/blog/sjekke-hms-kort">å sjekke om et kort er gyldig</a> eller <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a>.</p>
-
-<h2>Vanlige spørsmål</h2>
-<h3>Er byggekort og HMS-kort det samme?</h3>
-<p>Ja. Byggekort, HMS-kort og grøntkort er ulike navn på det samme personlige kortet på bygge- og anleggsplasser.</p>
-<h3>Hvem må ha byggekort?</h3>
-<p>Alle som utfører arbeid på en bygge- eller anleggsplass. Kortet kreves for å stå på oversiktslisten.</p>
-<h3>Hvordan får jeg byggekort?</h3>
-<p>Arbeidsgiveren bestiller det via hmskort.no etter at virksomheten er registrert og arbeidsforholdet er meldt inn.</p>
-`.trim();
-
-const BK_BYGGEKORT: BlogPost = {
-  _id: 'code-nb-byggekort',
-  title: 'Byggekort – hva det er (og at det er samme som HMS-kort)',
-  slug: 'byggekort',
-  locale: 'nb',
-  excerpt:
-    'Byggekort, HMS-kort og grøntkort er samme kort. Hva byggekortet er, hvem som må ha det på bygge- og anleggsplasser, og hvordan arbeidsgiveren skaffer det.',
-  tag: 'Regelverk',
-  coverImageUrl: '/landing/features/3personal.webp',
-  contentHtml: BK_BYGGEKORT_HTML,
-  seoTitle: 'Byggekort – samme som HMS-kort | ByggExp',
-  seoDescription:
-    'Byggekort = HMS-kort (og grøntkort) – samme personlige kort på byggeplass. Hvem må ha det, hva det er, og hvordan arbeidsgiveren bestiller det via hmskort.no.',
-  seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
-  canonicalUrl: '',
-  noIndex: false,
-  isPublished: true,
-  publishedAt: '2026-09-07T15:10:00.000Z',
-  createdAt: '2026-09-07T15:10:00.000Z',
-  updatedAt: '2026-09-07T15:10:00.000Z',
 };
 
 const TP_TIMEPRIS_SNEKKER_HTML = `
@@ -1537,14 +1415,11 @@ export const NB_ARTICLES: BlogPost[] = [
   M_MANNSKAPSLISTE_BYGGEPLASS,
   H_HMS_KORT_BYGG,
   T_TIMELISTE_APP_BYGG,
-  B_BESTILLE_HMS_KORT,
-  P_HMS_KORT_PRIS,
   S_SJEKKE_HMS_KORT,
   T_TIMELISTE_MAL,
   PR_PROSJEKTSTYRING_BYGG,
   M_MISTET_HMS_KORT,
   G_HMS_KORT_GYLDIGHET,
-  BK_BYGGEKORT,
   TP_TIMEPRIS_SNEKKER,
   FM_FAKTURAMAL,
   SH_SHA_PLAN,

@@ -18,4 +18,6 @@
 - [x] Цены на .no в NOK (владелец 01.11): те же цифры 299/690/990, +69, 199; schema NOK на nb
 - [x] Stripe NOK (01.11): Faktura мес/год, Komplett мес/год, Projekt год, Integrationer мес/год — добавлен NOK (те же цифры); Projekt мес — новый price_1UWzTHAzcJ4f5bxIpGqcufEE (SEK+NOK), старый заблокирован Stripe
 - [x] GH secret STRIPE_PRICE_PROJEKT_MONTHLY → price_1UWzTHAzcJ4f5bxIpGqcufEE + redeploy API (auto mode блокирует — команда владельцу)
-- [ ] Расхождение: Komplett в Stripe +119 kr/польз. (год 1214), на сайте и в product-facts +69 — решение владельца
+- [x] Расхождение Komplett +119 vs +69 — владелец: как на сайте, 69
+- [x] Komplett в Stripe: +69 (год 704) — новые цены SEK+NOK: месяц price_1UX1aHAzcJ4f5bxIvIBzBPBu, год price_1UX1bnAzcJ4f5bxIy63qTivQ
+- [ ] GH secrets STRIPE_PRICE_KOMPLETT_MONTHLY/YEARLY → новые цены + redeploy API (команда владельцу)

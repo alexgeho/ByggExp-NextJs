@@ -4,6 +4,7 @@ import { fetchPublishedBlogPosts } from '../lib/blog-api';
 import { getCodeArticles } from '../content/code-articles';
 import { VERKTYG_GROUPS } from '../content/verktyg-list';
 import { FUNKTION_PAGE_SLUGS } from '../content/funktion-pages';
+import { FUNKSJON_PAGE_SLUGS_NB } from '../content/funksjon-pages-nb';
 import { landingLanguageCodes, svEnLocales } from '../locales/languages';
 import { EN_CALC_SLUGS, HREFLANG_CALC_SLUGS } from '../lib/locale';
 import { localeOrigin } from '../lib/seo';
@@ -96,6 +97,11 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
     // PENDING_REMOVAL_CALC_SLUGS, which keeps it out of hreflang. List it in the
     // nb sitemap anyway so the page is discovered; hreflang stays unchanged.
     urls.push({ loc: `${localeOrigin('nb')}/nb/verktyg/farg-kalkylator` });
+    // Commercial feature pages (nb only), /nb/funksjoner/<slug>. The blog posts they
+    // replaced are 301s and no longer in NB_ARTICLES, so they drop out below.
+    FUNKSJON_PAGE_SLUGS_NB.forEach((slug) => {
+      urls.push({ loc: `${localeOrigin('nb')}/nb/funksjoner/${slug}` });
+    });
   } else {
     // /sv/fa-offert is noindex (B2C lead page, off-intent) — not listed.
     // Product landing pages (sv only).

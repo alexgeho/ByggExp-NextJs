@@ -12,6 +12,7 @@ import { FEATURE_NAV } from '../../../components/FeatureNav/FeatureNav';
 import { FUNKTION_PAGES, ILLU_HEIGHT, illuSrc, illuSrcSet } from '../../../content/funktion-pages';
 import { FUNKTION_PAGES_B_SLUGS } from '../../../content/funktion-pages-b';
 import { FUNKTION_PAGES_C } from '../../../content/funktion-pages-c';
+import { FUNKSJON_PAGES_NB } from '../../../content/funksjon-pages-nb';
 
 // /sv/funktioner/<slug> cards on the hub, one block per area; every page once.
 const FUNKTION_PAGES_C_SLUGS = new Set(FUNKTION_PAGES_C.map((p) => p.slug));
@@ -980,6 +981,32 @@ export default function FunktionerPage({
                 </div>
               </Fragment>
             ))}
+          </div>
+        </section>
+      )}
+
+      {/* Commercial feature pages (nb only) — /nb/funksjoner/<slug> on byggexp.no */}
+      {lang === 'nb' && (
+        <section className="funktioner-pages">
+          <div className="container">
+            <h2 className="funktioner-why-title">Programvare for byggefirma</h2>
+            <div className="funktioner-pages-grid">
+              {FUNKSJON_PAGES_NB.map((p) => (
+                <Link key={p.slug} href={`/nb/funksjoner/${p.slug}`} className="funktioner-pages-card">
+                  <img
+                    src={illuSrc(p.hero.name, 640)}
+                    srcSet={illuSrcSet(p.hero.name)}
+                    sizes="(max-width: 520px) 100vw, (max-width: 1000px) 50vw, 300px"
+                    width={1200}
+                    height={ILLU_HEIGHT[p.hero.name]}
+                    loading="lazy"
+                    decoding="async"
+                    alt={p.hero.alt}
+                  />
+                  <h3>{p.name}</h3>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
       )}

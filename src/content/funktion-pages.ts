@@ -80,6 +80,10 @@ export const ILLU_HEIGHT: Record<string, number> = {
   'byggdagbok-tillbyggnad': 900,
   'resursplanering-egenkontroll': 926,
   'resursplanering-vinter': 802,
+  // feat-* (feature-article 3D images) used on the nb feature pages.
+  'feat-uppgifter-morgonmote': 911,
+  'feat-ekonomi-veckoavstamning': 1033,
+  'feat-tid-restid': 911,
   ...ILLU_HEIGHT_A,
   ...ILLU_HEIGHT_B,
   ...ILLU_HEIGHT_C,
@@ -88,7 +92,7 @@ const IMG_DIR = '/landing/funktioner';
 export const illuSrc = (name: string, w: 640 | 1200 = 1200) => `${IMG_DIR}/${name}-${w}.webp`;
 export const illuSrcSet = (name: string) => `${illuSrc(name, 640)} 640w, ${illuSrc(name, 1200)} 1200w`;
 
-function illu(name: string, alt: string): string {
+export function illu(name: string, alt: string): string {
   return `<figure class="fn-illu"><img src="${illuSrc(name)}" srcset="${illuSrcSet(name)}" sizes="(max-width: 760px) 100vw, 560px" width="1200" height="${ILLU_HEIGHT[name]}" loading="lazy" decoding="async" alt="${alt}"></figure>`;
 }
 
@@ -111,7 +115,7 @@ export const PLAN_PRICE: Record<FunktionPlan, { price: number; extra: number }> 
 
 // Mobile: 3-column tables become stacked cards (blog-article-content CSS). Each
 // cell after the first gets its column name as data-label.
-function labelTables(html: string): string {
+export function labelTables(html: string): string {
   return html.replace(/<table>([\s\S]*?)<\/table>/g, (table, inner: string) => {
     const heads = [...inner.matchAll(/<th>([\s\S]*?)<\/th>/g)].map((m) => m[1]);
     if (heads.length < 3) return table;
@@ -126,7 +130,7 @@ function labelTables(html: string): string {
   });
 }
 
-const ext = (href: string, text: string) =>
+export const ext = (href: string, text: string) =>
   `<a href="${href}" target="_blank" rel="noopener">${text}</a>`;
 
 /* ------------------------------------------------------------------------- */

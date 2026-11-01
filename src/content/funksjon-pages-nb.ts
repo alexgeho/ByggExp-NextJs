@@ -635,10 +635,205 @@ ${illu('offert-kalkyl-marginal', 'Person ved et skrivebord foran en skjerm med e
   ],
 };
 
+/* ------------------------------------------------------------------------- */
+/* 2. Bemanningsplan                                                          */
+/* ------------------------------------------------------------------------- */
+// Claims: product-facts "Planering / Bemanning" + NO section (Gantt by person or
+// project, 2 uker/måned/egendefinert, endringslogg; Bemanning grid click-to-assign,
+// approved leave shown, >8 h/day warning). NOT: machines, subcontractors,
+// drag-and-drop, worker seeing the Bemanning plan in the app.
+
+const BEMANNINGSPLAN: FunksjonPageNb = {
+  slug: 'bemanningsplan',
+  svPair: 'resursplanering',
+  plan: 'projekt',
+  priceIncluded: 'Planlegging og bemanning er inkludert',
+  heroCheck: 'Fravær rett i planen',
+  title: 'Bemanningsplan for bygg – Gantt og ressurser | ByggExp',
+  description:
+    'Bemanningsplan for byggefirma: Gantt per ansatt eller prosjekt, bemanning dag for dag, fravær i planen og varsel ved overbooking. Prøv gratis i 14 dager.',
+  name: 'Bemanningsplan',
+  h1: 'Bemanningsplan for bygg.',
+  h1Accent: 'Riktig lag på riktig bygg.',
+  lead: 'Alle prosjekter og hele laget i én plan.',
+  hero: {
+    name: 'resursplanering-bemanning',
+    alt: 'Planlegger plasserer en arbeider med hjelm i en rute på en stor bemanningstavle med ansatte og dager',
+  },
+  stepsHeading: ['Planlegg', 'og følg opp'],
+  steps: [
+    {
+      title: 'Bemanning dag for dag',
+      text: 'Klikk i en rute og sett folk på et prosjekt.',
+      bullets: ['Ansatte mot dager', 'Godkjent fravær vises', 'Varsel over 8 timer per dag'],
+      img: '/landing/funktioner/screen-bemanning-1200.webp',
+      alt: 'Bemanning i ByggExp: ansatte mot dager med prosjekt i hver rute og fravær markert',
+    },
+    {
+      title: 'Planlegging i Gantt',
+      text: 'Per ansatt eller per prosjekt, to uker, en måned eller egen periode.',
+      img: '/landing/features/5planering-1200.webp',
+      alt: 'Planlegging i ByggExp: Gantt-skjema med prosjekter og ansatte over flere uker',
+    },
+    {
+      title: 'Fravær i samme plan',
+      text: 'Ferie og sykdom registreres som fravær og vises når det er godkjent.',
+      img: '/landing/funktioner/screen-franvaro-1200.webp',
+      alt: 'Fravær i ByggExp: søknader om ferie og fri med status',
+    },
+  ],
+  body: `
+<p>En bemanningsplan viser hvem som skal jobbe på hvilket prosjekt, hvilke dager. For et byggefirma er det planen som avgjør om laget står klart når betongen kommer, og om du har folk nok til å si ja til neste jobb. I ByggExp planlegger du alle prosjekter og alle ansatte i ett Gantt-skjema og fordeler laget dag for dag i Bemanning. Godkjent fravær ligger i samme plan, og du får varsel når noen er booket for mye. Her går vi gjennom hvordan du lager en bemanningsplan, hvordan den henger sammen med fremdriftsplanen, og når Excel ikke lenger holder.</p>
+
+<h2>Hva er en bemanningsplan?</h2>
+<p>En bemanningsplan er fordelingen av personell på arbeidsoppgaver over tid. Den svarer på tre spørsmål:</p>
+<ul>
+<li><strong>Hvem</strong> er på hvilket bygg i morgen og neste uke?</li>
+<li><strong>Har vi nok folk</strong> til prosjektene vi allerede har sagt ja til?</li>
+<li><strong>Hvor er det hull</strong> – og hvor er noen booket dobbelt?</li>
+</ul>
+<p>Ressursplanlegging er det samme sett lenger frem: uker og måneder i stedet for dager. I ByggExp tilsvarer det Planlegging (Gantt over tid) og Bemanning (dag for dag).</p>
+
+<h2>Bemanningsplan og fremdriftsplan</h2>
+<p>Fremdriftsplanen viser aktivitetene i prosjektet, rekkefølgen og når de skal være ferdige. Bemanningsplanen viser hvem som skal gjøre dem. De to må henge sammen: flytter støpingen seg en uke, flytter laget seg også. Les hvordan du setter opp <a href="/nb/blog/framdriftsplan">en fremdriftsplan for byggeprosjekt</a>, og bruk den som utgangspunkt for bemanningen.</p>
+<p>Start med aktivitetene som krever flest folk eller bestemte fag, for eksempel forskaling, støp og tett bygg. Regn ut hvor mange personer hver aktivitet trenger per dag, trekk fra kjent fravær, og fordel laget uke for uke. Følg opp hver uke mot timene som faktisk er ført.</p>
+
+${illu('resursplanering-gantt', 'Planlegger peker på en stor tavle med et Gantt-skjema med blå søyler, en hjelm på gulvet')}
+
+<h2>Slik lager du bemanningsplanen i ByggExp</h2>
+<ol>
+<li><strong>Legg inn prosjekter og ansatte.</strong> Pågående prosjekter og hele laget inn i webadmin. Vi hjelper dere gratis med å flytte over data fra det gamle systemet.</li>
+<li><strong>Planlegg i Gantt.</strong> Velg visning per ansatt eller per prosjekt, og periode: to uker, måned eller egendefinert.</li>
+<li><strong>Fordel dag for dag i Bemanning.</strong> Du klikker i ruten for en ansatt og en dag og velger prosjekt. Er noen booket over 8 timer på en dag, vises et varsel.</li>
+<li><strong>Registrer fravær.</strong> Ferie, sykdom og fri legges inn som fravær. Når det er godkjent, vises det i bemanningen, så du ikke planlegger med folk som ikke er der.</li>
+<li><strong>Se hva som er endret.</strong> Endringsloggen viser hva som ble flyttet og når.</li>
+<li><strong>Sammenlign med faktiske timer.</strong> Timene laget fører i <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-appen</a> ligger i samme system, så du ser om planen holdt.</li>
+</ol>
+
+${illu('resursplanering-franvaro', 'Prosjektleder ved skrivebordet foran en stor kalender, en kollega går på ferie med koffert og en annen med hjelm kommer inn')}
+
+<h2>Fravær, overbooking og endringer</h2>
+<p>De fleste bemanningsplaner sprekker på tre ting: noen er borte, noen er booket to steder, eller planen er endret uten at noen vet det.</p>
+<ul>
+<li><strong>Fravær.</strong> Når ferie og sykdom ligger i et eget ark, blir det glemt i planen. I ByggExp vises godkjent fravær direkte i bemanningsvisningen.</li>
+<li><strong>Overbooking.</strong> Ruten markeres når en ansatt har mer enn 8 timer på en dag, så du ser dobbeltbooking før laget gjør det.</li>
+<li><strong>Endringer.</strong> Endringsloggen viser hva som er endret, så flere prosjektledere kan planlegge i samme plan uten å overskrive hverandre i blinde.</li>
+</ul>
+<p>Planen er et verktøy for den som planlegger, i webadmin. De ansatte ser oppgavene sine og prosjektets tidsplan i appen, men selve bemanningsrutenettet brukes på kontoret.</p>
+
+<h2>Bemanningsplan som mal eller i system?</h2>
+<p>En bemanningsplan i Excel er et greit sted å starte: én rad per ansatt, én kolonne per dag og prosjektnavnet i rutene. Malen svikter når den skal deles. Fraværet må føres to steder, ingen ser hvem som endret sist, og planen stemmer sjelden med timene som faktisk ble ført. Bruker du allerede vår <a href="/nb/blog/timeliste-mal">timeliste-mal</a>, er det samme poeng: når planen og timene ligger i samme system, ser du avviket uten å sammenligne to filer.</p>
+
+<h2>Hva du planlegger – og ikke planlegger – i ByggExp</h2>
+<div class="article-table"><table>
+<thead><tr><th>Behov</th><th>I ByggExp</th></tr></thead>
+<tbody>
+<tr><td><strong>Personell på tvers av alle prosjekter</strong></td><td>Ja, i Planlegging og Bemanning</td></tr>
+<tr><td><strong>Visning per ansatt og per prosjekt</strong></td><td>Ja</td></tr>
+<tr><td><strong>Dag for dag</strong></td><td>Ja, i Bemanning</td></tr>
+<tr><td><strong>Godkjent fravær i planen</strong></td><td>Ja</td></tr>
+<tr><td><strong>Varsel ved overbooking</strong></td><td>Ja, over 8 timer per dag</td></tr>
+<tr><td><strong>Endringslogg</strong></td><td>Ja</td></tr>
+<tr><td><strong>Oppfølging mot førte timer</strong></td><td>Ja, timeregistreringen ligger i samme system</td></tr>
+<tr><td><strong>Maskiner og utstyr i planen</strong></td><td>Nei. Verktøy og utstyr registreres i Verktøy med status, hvem som har det og prosjekt</td></tr>
+<tr><td><strong>Underentreprenører i planen</strong></td><td>Nei</td></tr>
+<tr><td><strong>Dra og slipp</strong></td><td>Nei, du klikker i ruten og velger prosjekt</td></tr>
+</tbody>
+</table></div>
+<p>Planlegger dere kraner og gravemaskiner like nøye som folk, kan en enkel bookingliste ved siden av være nok.</p>
+
+${illu('schemalaggning-lag', 'Tre smilende bygningsarbeidere med hjelm, en med drill, en med en stor mobil med blå søyler og en med vater')}
+
+<h2>Eksempel: bemanningsplan for tre prosjekter</h2>
+<p>Si at firmaet har åtte tømrere og tre prosjekter de neste fire ukene: et tilbygg som skal tettes, et bad som skal rehabiliteres og en garasje som skal starte i uke tre. Slik kan planen bygges opp:</p>
+<ol>
+<li><strong>Tilbygget</strong> trenger fire mann i to uker til tett bygg, deretter to mann til innvendig arbeid.</li>
+<li><strong>Badet</strong> trenger to mann i tre uker, med pause de dagene rørleggeren og flisleggeren er der.</li>
+<li><strong>Garasjen</strong> trenger tre mann fra uke tre, når tilbygget er tett og folk blir ledige.</li>
+<li><strong>Fraværet</strong> trekkes fra: én har ferie i uke to, og en annen har fri en fredag.</li>
+</ol>
+<p>Lagt inn i Gantt ser du at uke to er trang: fire på tilbygget, to på badet og én på ferie gir ingen buffer. I Bemanning ser du dag for dag hvem som står hvor, og flytter én fra badet de dagene underentreprenørene jobber der. Når uke tre starter, er garasjelaget allerede klart fra tilbygget, og ingen er booket to steder.</p>
+<p>Etter fire uker sammenligner du planen med førte timer. Brukte tilbygget flere timer enn planlagt, tar du det med i neste kalkyle og neste plan.</p>
+
+<h2>Fem tips for en bemanningsplan som holder</h2>
+<ol>
+<li><strong>Planlegg med buffer.</strong> En plan der alle er booket hver dag sprekker ved første sykdom.</li>
+<li><strong>Legg inn fravær tidlig.</strong> Ferie som er kjent i mars, hører hjemme i planen i mars.</li>
+<li><strong>Én som eier planen.</strong> Flere kan endre, men én person har ansvaret for at den er oppdatert.</li>
+<li><strong>Del den på morgenmøtet.</strong> Laget skal vite hvor de skal i morgen uten å ringe rundt.</li>
+<li><strong>Sammenlign med timene.</strong> Planlagte timer mot førte timer viser om dere planlegger realistisk.</li>
+</ol>
+
+<h2>Fra Excel til bemanningsplan i system</h2>
+<p>En bemanningsplan i Excel fungerer så lenge én person planlegger og laget er lite. Det blir vanskelig når flere prosjektledere endrer i samme fil, når fraværet ligger et annet sted, og når ingen ser hvem som endret sist. Slik kommer du i gang:</p>
+<ul>
+<li><strong>Begynn med to uker.</strong> Planlegg bare den nærmeste perioden i Bemanning, og bygg ut Gantt-planen når rutinen sitter.</li>
+<li><strong>Flytt fraværet inn.</strong> Registrer ferie og fri som fravær i stedet for i en egen liste.</li>
+<li><strong>La laget stemple inn.</strong> Først når timene kommer inn, ser du om planen stemmer med virkeligheten.</li>
+<li><strong>Gå gjennom planen på det ukentlige møtet.</strong> Da blir den et felles verktøy og ikke bare prosjektlederens ark.</li>
+</ul>
+<p>Planlegging av prosjekter og ansatte er med i pakken Kontroll på jobben for ${PROJEKT_PRICE} NOK per måned eks. mva. med 10 brukere, og du prøver gratis i 14 dager.</p>
+`.trim(),
+  faq: [
+    {
+      question: 'Hva er en bemanningsplan?',
+      answer:
+        'En oversikt over hvilke ansatte som skal jobbe på hvilke prosjekter, hvilke dager. Den viser om dere har folk nok, og hvor noen er booket dobbelt.',
+    },
+    {
+      question: 'Hvordan lager man en bemanningsplan for et byggeprosjekt?',
+      answer:
+        'Ta utgangspunkt i fremdriftsplanen, regn ut hvor mange personer hver aktivitet trenger, trekk fra kjent fravær og fordel laget uke for uke. Følg opp planen hver uke mot førte timer.',
+    },
+    {
+      question: 'Hva er forskjellen på ressursplanlegging og bemanningsplan?',
+      answer:
+        'Ressursplanleggingen ser uker og måneder frem og svarer på om dere har kapasitet til prosjektene. Bemanningsplanen er den daglige fordelingen: hvem som er på hvilket bygg i morgen. I ByggExp tilsvarer det Planlegging og Bemanning.',
+    },
+    {
+      question: 'Finnes det en mal for bemanningsplan i Excel?',
+      answer:
+        'En enkel bemanningsplan i Excel er én rad per ansatt og én kolonne per dag. Den fungerer for ett lag, men fravær og endringer blir vanskelige å holde oppdatert når flere planlegger i samme fil.',
+    },
+    {
+      question: 'Vises ferie og sykdom i planen?',
+      answer:
+        'Ja. Fravær registreres i Fravær, og når det er godkjent, vises det i bemanningsvisningen.',
+    },
+    {
+      question: 'Kan flere prosjektledere planlegge i samme plan?',
+      answer:
+        'Ja. Alle med tilgang planlegger i samme Gantt og samme bemanning, og endringsloggen viser hva som er endret og når.',
+    },
+    {
+      question: 'Kan jeg planlegge maskiner og underentreprenører?',
+      answer:
+        'Nei, planleggingen gjelder egne ansatte. Verktøy og utstyr registreres i Verktøy med status, hvem som har det og prosjekt.',
+    },
+    {
+      question: 'Ser de ansatte bemanningsplanen i mobilen?',
+      answer:
+        'I appen ser de ansatte oppgavene sine og prosjektets tidsplan. Bemanningsrutenettet brukes i webadmin av den som planlegger.',
+    },
+    {
+      question: 'Hva koster bemanningsplanlegging i ByggExp?',
+      answer: `Planlegging og bemanning er med i Kontroll på jobben for ${PROJEKT_PRICE} NOK per måned eks. mva., med 10 brukere og timeregistrering. Ekstra brukere koster ${EXTRA_USER_PRICE} NOK per måned. Du prøver gratis i 14 dager.`,
+    },
+  ],
+  related: [
+    { href: '/nb/blog/framdriftsplan', label: 'Slik lager du en fremdriftsplan' },
+    { href: '/nb/blog/timeliste-mal', label: 'Gratis timeliste-mal i Excel' },
+    { href: '/nb/blog/dagsplanering-och-planeringsmoten', label: 'Dagsplanlegging og planleggingsmøter' },
+    { href: '/nb/blog/hantera-uppgifter-i-byggprojekt', label: 'Oppgaver i byggeprosjekter' },
+    { href: '/nb/funksjoner/timeregistrering-app', label: 'Timeregistrering-app' },
+    { href: '/nb/funksjoner/prosjektstyringsverktoy', label: 'Prosjektstyringsverktøy for bygg' },
+  ],
+};
+
 // Wave 3 (2026-11-01). Skipped, see docs/TASKS.md: hms-system (no avvik module
 // with saksgang/risk analysis in the product) and tilbudsprogram (offer and
 // invoice PDFs are Swedish-only, invoice PDF prints SEK/Bankgiro).
-const PAGES: FunksjonPageNb[] = [KS_SYSTEM, TIMEREGISTRERING, PROSJEKTSTYRING];
+const PAGES: FunksjonPageNb[] = [KS_SYSTEM, TIMEREGISTRERING, PROSJEKTSTYRING, BEMANNINGSPLAN];
 
 export const FUNKSJON_PAGES_NB: FunksjonPageNb[] = PAGES.map((page) => ({
   ...page,

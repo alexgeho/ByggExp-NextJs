@@ -1,3 +1,6 @@
+## 05.11 — бэклинк на byggtorg.se
+- [x] /sv/blog/hitta-kunder-byggfirma: dofollow-ссылка «få förfrågningar från villaägare via Byggtorg» → byggtorg.se/partners/
+
 
 ## 01.11 — byggexp.no: аудит и развитие
 - [x] SEO-инженер: аудит byggexp.no (GSC, индекс, ключи NO, контент-архитектура) → docs/seo/no-audit-2026-11-01.md

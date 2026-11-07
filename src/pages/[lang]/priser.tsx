@@ -67,7 +67,7 @@ ${illuC("priser-tid", "Kontorsarbetare vid en dator, bredvid tre tidkort med boc
 <h3>Koll på jobbet – för laget ute på bygget</h3>
 <p>Passar företaget med anställda som ska stämpla in, få sina uppgifter och planeras på rätt projekt, där faktureringen redan sköts någon annanstans. Här ingår <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystemet</a>, <a href="/sv/funktioner/byggdagbok">byggdagboken</a>, <a href="/sv/funktioner/resursplanering">resursplaneringen</a> och <a href="/sv/funktioner/verktygshantering">verktygshanteringen</a>.</p>
 <h3>Full koll – när timmarna ska bli faktura och lön</h3>
-<p>Passar när samma timmar ska användas för faktura, lön och projektekonomi. Attesterade timmar blir underlag för lön och faktura. Fotade kvitton, tidrapporter och in- och utgående fakturor räknas in i projektets ekonomi, så att du ser marginalen medan projektet pågår.</p>
+<p>Passar när samma timmar ska användas för faktura, lön och projektekonomi. Attesterade timmar blir underlag för lön och faktura. Fotade kvitton, tidrapporter och in- och utgående fakturor räknas in i projektets ekonomi, så att du ser marginalen medan projektet pågår. Det är ett samlat <a href="/sv/blog/affarssystem-byggforetag">affärssystem för bygg</a>.</p>
 
 <h2>Så räknas användarna</h2>
 <p>I Koll på jobbet och Full koll ingår 10 användare i grundpriset. Därefter kostar varje extra användare ${PROJEKT_EXTRA} kr i månaden i båda paketen. Koll på pengarna har ett fast pris för upp till 2 användare.</p>

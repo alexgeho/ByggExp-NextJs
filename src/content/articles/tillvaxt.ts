@@ -1774,6 +1774,7 @@ const S_PERSONALLIGGARE_APP: BlogPost = {
 // --- Software-intent cluster 2: system/CRM/service/schema -------------------
 
 const A_AFFARSSYSTEM_BYGGFORETAG_HTML = `
+<p><strong>Ett affärssystem för bygg samlar tid, projekt, offert, faktura, lön och projektekonomi i ett system, där en registrering räcker.</strong> I ByggExp ingår allt det i paketet Full koll för 990 kr/mån inklusive 10 användare (exkl. moms, ingen bindningstid). Bokföringen ligger kvar i ert bokföringsprogram och tar emot en SIE4-fil.</p>
 <p>Många byggföretag kör tid i en app, fakturor i en annan och lönen i ett tredje system – och lägger timmar varje vecka på att flytta siffror mellan dem. Ett affärssystem för byggföretag samlar allt i ett: tid, projekt, offert, faktura, lön och ekonomi hänger ihop, så att en registrering räcker. Här går vi igenom vad ett affärssystem (ibland kallat ERP) för bygg bör klara och varför ett molnbaserat, samlat system slår lösa öar.</p>
 <p>Vill du se hur delarna hänger ihop? Läs om <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomi</a> och <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/affarssystem.webp" alt="Diagram: affärssystem – tid, projekt, offert, faktura, lön och ekonomi i en plattform" width="720" height="380" loading="lazy"><figcaption>Allt i en plattform: tid, projekt, offert, faktura, lön och ekonomi delar samma data – en registrering räcker.</figcaption></figure>
@@ -1793,6 +1794,20 @@ const A_AFFARSSYSTEM_BYGGFORETAG_HTML = `
 <li><a href="/sv/blog/projektekonomi-och-lonsamhet">Projektekonomi och uppföljning</a></li>
 </ul>
 
+<h2>Vad ingår i ByggExp?</h2>
+<table>
+<thead><tr><th>Del</th><th>I ByggExp</th></tr></thead>
+<tbody>
+<tr><td>Tid och närvaro</td><td>Stämpling i mobilappen, automatisk och manuell tidrapportering, närvaro i realtid</td></tr>
+<tr><td>Projekt och planering</td><td>Uppgifter med påminnelser, dokument och ritningar, planering av projekt och personal</td></tr>
+<tr><td>Offert och faktura</td><td>Offerter och fakturor, skanning av inkommande fakturor</td></tr>
+<tr><td>Lön</td><td>Löner, lönespecifikationer och AGI</td></tr>
+<tr><td>Projektekonomi</td><td>Budget, kalkyl och lönsamhet; kvitton, tid och fakturor räknas in i projektet</td></tr>
+<tr><td>Bokföring</td><td>SIE4-export till Fortnox, Visma och BL (tillägget Integrationer, 199 kr/mån)</td></tr>
+</tbody>
+</table>
+<p>Alla paket och vad som skiljer dem åt finns på sidan <a href="/sv/priser">priser</a>.</p>
+
 <h2>Ett samlat system vs flera lösa appar</h2>
 <p>Lösa appar verkar billiga var för sig, men dubbelinmatning, exportfiler och fel mellan systemen kostar tid och pengar. Ett samlat affärssystem tar bort skarvarna – och ger en sann bild av ekonomin per projekt.</p>
 
@@ -1800,6 +1815,8 @@ const A_AFFARSSYSTEM_BYGGFORETAG_HTML = `
 <p>Vill du se ett samlat affärssystem för byggföretag? <a href="/sv/contact">Boka en gratis konsultation av ByggExp</a>. Har ni redan ett system läser du här hur det går att <a href="/sv/byt-system">byta system med gratis flytt av data</a>.</p>
 
 <h2>Vanliga frågor</h2>
+<h3>Vad kostar ett affärssystem för byggföretag?</h3>
+<p>I ByggExp kostar Full koll – tid, projekt, offert, faktura, lön och projektekonomi – 990 kr/mån inklusive 10 användare, därefter 69 kr per extra användare och månad. Priserna är exkl. moms, utan startavgift och bindningstid, och de första 14 dagarna är gratis.</p>
 <h3>Vad är skillnaden mellan ett affärssystem och en bygg-app?</h3>
 <p>En bygg-app löser ofta ett moment (t.ex. tid). Ett affärssystem samlar hela verksamheten – tid, projekt, offert, faktura, lön och ekonomi – i en gemensam plattform där data delas, så att en registrering räcker.</p>
 <h3>Behöver ett litet byggföretag ett affärssystem?</h3>
@@ -1810,12 +1827,12 @@ const A_AFFARSSYSTEM_BYGGFORETAG_HTML = `
 
 const A_AFFARSSYSTEM_BYGGFORETAG: BlogPost = {
   _id: "code-affarssystem-byggforetag",
-  title: "Affärssystem för byggföretag – allt i ett, molnbaserat", slug: "affarssystem-byggforetag", locale: "sv",
-  excerpt: "Ett affärssystem för byggföretag samlar tid, projekt, offert, faktura, lön och ekonomi i en molnbaserad plattform – en registrering räcker. Så väljer du rätt.", tag: "Digitalisering",
+  title: "Affärssystem för bygg – allt i ett för byggföretag", slug: "affarssystem-byggforetag", locale: "sv",
+  excerpt: "Ett affärssystem för bygg samlar tid, projekt, offert, faktura, lön och projektekonomi i ett system – en registrering räcker. Vad som ingår och vad det kostar.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/9ekonomi.webp", contentHtml: A_AFFARSSYSTEM_BYGGFORETAG_HTML,
-  seoTitle: "Affärssystem för byggföretag – allt i ett, molnbaserat | ByggExp", seoDescription: "Affärssystem för byggföretag: samla tid, projekt, offert, faktura, lön och ekonomi i en molnbaserad plattform. Slipp dubbelinmatning mellan lösa appar.",
+  seoTitle: "Affärssystem för bygg och byggföretag – allt i ett | ByggExp", seoDescription: "Affärssystem för bygg: tid, projekt, offert, faktura, lön och projektekonomi i ett system. 990 kr/mån inkl. 10 användare, SIE4 till bokföringen.",
   seoImageUrl: `${SITE_URL}/landing/features/9ekonomi.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-22T11:00:00.000Z", createdAt: "2026-08-22T11:00:00.000Z", updatedAt: "2026-08-22T11:00:00.000Z",
+  publishedAt: "2026-08-22T11:00:00.000Z", createdAt: "2026-08-22T11:00:00.000Z", updatedAt: "2026-11-07T12:00:00.000Z",
 };
 
 const A_CRM_BYGGFORETAG_HTML = `

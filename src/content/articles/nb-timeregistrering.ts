@@ -166,7 +166,7 @@ const M_MANNSKAPSLISTE_BYGGEPLASS: BlogPost = {
 // - HMS-kortnummer on the oversiktsliste: byggherreforskriften § 15,
 //   https://lovdata.no/forskrift/2009-08-03-1028/§15
 const H_HMS_KORT_BYGG_HTML = `
-<p>HMS-kort er det personlige ID-kortet alle som jobber på bygge- og anleggsplasser i Norge skal ha. Arbeidsgiveren bestiller kortet på hmskort.no, det koster 139,10 kroner + mva og gjelder i inntil to år. Her finner du alt om bestilling, pris, gyldighet og kontroll samlet.</p>
+<p>HMS-kort er det personlige ID-kortet alle som jobber på bygge- og anleggsplasser i Norge skal ha. Arbeidsgiveren bestiller kortet på hmskort.no, det koster 139,10 kroner + mva og utstedes for to år. Her finner du alt om bestilling, pris, gyldighet og kontroll samlet.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-hms-kort.webp" alt="Diagram: HMS-kort – fra arbeidskontrakt til utstedt kort, registrering i oversiktslisten og adgang til byggeplassen" width="720" height="380" loading="lazy"><figcaption>HMS-kortet utstedes på grunnlag av et arbeidsforhold og kreves for å stå på oversiktslisten.</figcaption></figure>
 
 <h2>Hva er et HMS-kort?</h2>
@@ -220,7 +220,7 @@ const H_HMS_KORT_BYGG_HTML = `
 <h3>Er byggekort og HMS-kort det samme?</h3>
 <p>Ja. Byggekort er et vanlig navn på HMS-kortet i bygg og anlegg.</p>
 <h3>Hvor lenge er HMS-kortet gyldig?</h3>
-<p>Inntil to år, og bare så lenge du er ansatt hos arbeidsgiveren som bestilte det.</p>
+<p>To år, og bare så lenge du er ansatt hos arbeidsgiveren som bestilte det. Se <a href="/nb/blog/hms-kort-gyldighet">hvor lenge HMS-kort er gyldig</a>.</p>
 `.trim();
 
 const H_HMS_KORT_BYGG: BlogPost = {
@@ -229,13 +229,13 @@ const H_HMS_KORT_BYGG: BlogPost = {
   slug: 'hms-kort-bygg',
   locale: 'nb',
   excerpt:
-    'HMS-kort for bygg og anlegg: arbeidsgiveren bestiller på hmskort.no, kortet koster 139,10 kr + mva og gjelder i inntil to år. Bestilling, pris, gyldighet og byggekort samlet.',
+    'HMS-kort for bygg og anlegg: arbeidsgiveren bestiller på hmskort.no, kortet koster 139,10 kr + mva og gjelder i to år. Bestilling, pris, gyldighet og byggekort samlet.',
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: H_HMS_KORT_BYGG_HTML,
   seoTitle: 'HMS-kort – bestille, pris og gyldighet | ByggExp',
   seoDescription:
-    'HMS-kort: arbeidsgiveren bestiller på hmskort.no, 139,10 kr + mva, gyldig i inntil to år. Slik bestiller, sjekker og fornyer du kortet.',
+    'HMS-kort: arbeidsgiveren bestiller på hmskort.no, 139,10 kr + mva, gyldig i to år. Slik bestiller, sjekker og fornyer du kortet.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
@@ -320,7 +320,7 @@ const T_TIMELISTE_APP_BYGG: BlogPost = {
 // hmskort.no (the official channel). ByggExp does NOT issue HMS-kort.
 
 const S_SJEKKE_HMS_KORT_HTML = `
-<p>Hvordan sjekker du om et HMS-kort er gyldig? Enten du er arbeidsleder som kontrollerer hvem som er på plassen, eller ansatt som vil bekrefte ditt eget kort – gyldigheten kan slås opp raskt. Her forklarer vi hvordan du sjekker et HMS-kort, og hvorfor det er viktig på bygge- og anleggsplasser.</p>
+<p>Hvordan sjekker du om et HMS-kort er gyldig? Enten du er arbeidsleder som kontrollerer hvem som er på plassen, eller ansatt som vil bekrefte ditt eget kort – gyldigheten kan slås opp raskt. Her forklarer vi hvordan du sjekker et HMS-kort, og hvorfor det er viktig på bygge- og anleggsplasser. Lurer du på <a href="/nb/blog/hms-kort-gyldighet">hvor lenge et HMS-kort er gyldig</a>? Svaret er to år, og bare mens personen er ansatt hos arbeidsgiveren som bestilte kortet.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-hms-kort.webp" alt="Diagram: HMS-kort – fra arbeidskontrakt til utstedt kort, registrering i oversiktslisten og adgang til byggeplassen" width="720" height="380" loading="lazy"><figcaption>Et gyldig HMS-kort knytter personen til riktig arbeidsgiver og gir adgang til plassen.</figcaption></figure>
 
 <h2>Slik sjekker du om et HMS-kort er gyldig</h2>
@@ -503,19 +503,29 @@ const M_MISTET_HMS_KORT: BlogPost = {
 };
 
 const G_HMS_KORT_GYLDIGHET_HTML = `
-<p>HMS-kortet gjelder i inntil to år, og bare så lenge du er ansatt hos arbeidsgiveren som bestilte det (<a href="https://www.arbeidstilsynet.no/regelverk/forskrifter/forskrift-om-hms-kort-pa-bygge--og-anleggsplasser/" rel="nofollow noopener" target="_blank">forskrift om HMS-kort § 8</a>). Her forklarer vi når kortet må fornyes, og hva som gjør at det blir ugyldig før tiden.</p>
+<p><strong>Et HMS-kort er gyldig i to år</strong>, og bare så lenge du er ansatt hos arbeidsgiveren som bestilte det (<a href="https://www.arbeidstilsynet.no/regelverk/forskrifter/forskrift-om-hms-kort-pa-bygge--og-anleggsplasser/" rel="nofollow noopener" target="_blank">forskrift om HMS-kort § 8</a>). Kortet må derfor fornyes minst hvert annet år, og et nytt kort trengs hver gang du bytter arbeidsgiver. Her forklarer vi når kortet må fornyes, og hva som gjør at det blir ugyldig før tiden.</p>
+
+<table>
+<thead><tr><th>Situasjon</th><th>Er kortet gyldig?</th></tr></thead>
+<tbody>
+<tr><td>Mindre enn to år gammelt, og du er fortsatt ansatt</td><td>Ja</td></tr>
+<tr><td>Mer enn to år gammelt</td><td>Nei – arbeidsgiveren bestiller nytt kort</td></tr>
+<tr><td>Du har sluttet eller byttet jobb</td><td>Nei – den nye arbeidsgiveren bestiller nytt kort</td></tr>
+<tr><td>Kortet er mistet eller stjålet</td><td>Nei – gjøres ugyldig, og nytt kort utstedes</td></tr>
+</tbody>
+</table>
 
 <h2>Hvor lenge varer HMS-kortet?</h2>
-<p>HMS-kortet utstedes for <strong>inntil to år</strong>. I tillegg er kortet bare gyldig så lenge <strong>ansettelsesforholdet består</strong> – slutter du i jobben, gjelder ikke kortet lenger, selv om datoen ikke er passert. Sjekk alltid gjeldende regler hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
+<p>HMS-kortet utstedes for <strong>to år</strong>. I tillegg er kortet bare gyldig så lenge <strong>ansettelsesforholdet består</strong> – slutter du i jobben, gjelder ikke kortet lenger, selv om datoen ikke er passert. Sjekk alltid gjeldende regler hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
 
 <h2>Fornye før kortet utløper</h2>
-<p>Før gyldigheten går ut, må arbeidsgiveren bestille et nytt kort for at den ansatte fortsatt skal kunne stå på oversiktslisten. Det er lurt å følge med på utløpsdatoen i god tid, så ingen blir stående uten gyldig kort på plassen.</p>
+<p>Før gyldigheten går ut, må arbeidsgiveren bestille et nytt kort for at den ansatte fortsatt skal kunne stå på oversiktslisten. Det er lurt å følge med på utløpsdatoen i god tid, så ingen blir stående uten gyldig kort på plassen. Når gyldighetstiden er ute eller arbeidsforholdet opphører, skal arbeidsgiveren makulere kortet straks (§ 8a).</p>
 
 <h2>Når blir et kort ugyldig før tiden?</h2>
 <ul>
 <li>Arbeidsforholdet opphører.</li>
 <li>Virksomheten oppfyller ikke lenger kravene (kortet kan bli sperret).</li>
-<li>Kortet meldes <a href="/nb/blog/mistet-hms-kort">mistet eller stjålet</a>.</li>
+<li>Kortet meldes <a href="/nb/blog/mistet-hms-kort">mistet eller stjålet</a> – arbeidsgiveren melder fra til kortutstederen, som gjør kortet ugyldig og utsteder nytt (§ 9).</li>
 </ul>
 <p>Du kan når som helst <a href="/nb/blog/sjekke-hms-kort">sjekke om et HMS-kort er gyldig</a> ved å slå opp kortnummeret.</p>
 
@@ -524,7 +534,7 @@ const G_HMS_KORT_GYLDIGHET_HTML = `
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hvor lenge er et HMS-kort gyldig?</h3>
-<p>Inntil to år – og bare så lenge ansettelsesforholdet består. Slutter du i jobben, gjelder ikke kortet lenger.</p>
+<p>To år – og bare så lenge ansettelsesforholdet består. Slutter du i jobben, gjelder ikke kortet lenger.</p>
 <h3>Hvor ofte må HMS-kortet fornyes?</h3>
 <p>Kortet utstedes for to år, så det må fornyes senest hvert annet år. Arbeidsgiveren bestiller et nytt kort før gyldighetstiden går ut, så den ansatte fortsatt kan stå på oversiktslisten.</p>
 <h3>Gjelder HMS-kortet hvis jeg bytter jobb?</h3>
@@ -539,20 +549,20 @@ const G_HMS_KORT_GYLDIGHET: BlogPost = {
   slug: 'hms-kort-gyldighet',
   locale: 'nb',
   excerpt:
-    'Hvor lenge er et HMS-kort gyldig? Inntil to år – og bare så lenge ansettelsesforholdet består. Når du må fornye, og hva som gjør et kort ugyldig før tiden.',
+    'Hvor lenge er et HMS-kort gyldig? To år – og bare så lenge ansettelsesforholdet består. Når du må fornye, og hva som gjør et kort ugyldig før tiden.',
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: G_HMS_KORT_GYLDIGHET_HTML,
-  seoTitle: 'HMS-kort gyldighet: hvor lenge varer kortet? | ByggExp',
+  seoTitle: 'Hvor lenge er HMS-kort gyldig? To år – gyldighet | ByggExp',
   seoDescription:
-    'Hvor lenge er HMS-kortet gyldig? Inntil to år, og bare så lenge arbeidsforholdet varer. Når arbeidsgiveren må fornye, og hva som gjør kortet ugyldig.',
+    'HMS-kort gyldighet: kortet gjelder i to år, og bare så lenge du er ansatt. Når det må fornyes, og hva som gjør kortet ugyldig (forskrift § 8).',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
   isPublished: true,
   publishedAt: '2026-09-07T15:00:00.000Z',
   createdAt: '2026-09-07T15:00:00.000Z',
-  updatedAt: '2026-11-01T12:00:00.000Z',
+  updatedAt: '2026-11-07T12:00:00.000Z',
 };
 
 const TP_TIMEPRIS_SNEKKER_HTML = `

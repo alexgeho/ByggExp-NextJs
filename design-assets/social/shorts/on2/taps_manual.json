@@ -1,0 +1,194 @@
+[
+ {
+  "t": 10.6,
+  "x": 920,
+  "y": 492,
+  "what": "Send an invoice or offer"
+ },
+ {
+  "t": 13.1,
+  "x": 940,
+  "y": 395,
+  "what": "Fill in company details"
+ },
+ {
+  "t": 14.95,
+  "x": 960,
+  "y": 247,
+  "what": "Company name field"
+ },
+ {
+  "t": 22.4,
+  "x": 960,
+  "y": 317,
+  "what": "Org. number field"
+ },
+ {
+  "t": 35.4,
+  "x": 1140,
+  "y": 160,
+  "what": "Save (check mark)"
+ },
+ {
+  "t": 36.7,
+  "x": 959,
+  "y": 375,
+  "what": "OK Saved",
+  "life": 0.3
+ },
+ {
+  "t": 38.3,
+  "x": 900,
+  "y": 447,
+  "what": "Add a client"
+ },
+ {
+  "t": 40.15,
+  "x": 930,
+  "y": 367,
+  "what": "Company name field",
+  "at_cut": true
+ },
+ {
+  "t": 50.4,
+  "x": 930,
+  "y": 504,
+  "what": "Org. no. field"
+ },
+ {
+  "t": 59.0,
+  "x": 900,
+  "y": 643,
+  "what": "Contact person field"
+ },
+ {
+  "t": 76.9,
+  "x": 960,
+  "y": 421,
+  "what": "Email field"
+ },
+ {
+  "t": 78.1,
+  "x": 832,
+  "y": 362,
+  "what": "Paste/AutoFill",
+  "show": false
+ },
+ {
+  "t": 87.7,
+  "x": 900,
+  "y": 630,
+  "what": "Hourly rate field"
+ },
+ {
+  "t": 97.67,
+  "x": 959,
+  "y": 950,
+  "what": "Add client"
+ },
+ {
+  "t": 99.0,
+  "x": 959,
+  "y": 375,
+  "what": "OK Client saved",
+  "life": 0.3
+ },
+ {
+  "t": 100.6,
+  "x": 955,
+  "y": 512,
+  "what": "Add your articles"
+ },
+ {
+  "t": 102.3,
+  "x": 900,
+  "y": 247,
+  "what": "Article name field"
+ },
+ {
+  "t": 107.23,
+  "x": 1033,
+  "y": 410,
+  "what": "VAT 0%"
+ },
+ {
+  "t": 114.53,
+  "x": 959,
+  "y": 950,
+  "what": "Add article"
+ },
+ {
+  "t": 116.07,
+  "x": 959,
+  "y": 375,
+  "what": "OK Article saved",
+  "life": 0.3
+ },
+ {
+  "t": 117.73,
+  "x": 955,
+  "y": 566,
+  "what": "Create an offer or invoice"
+ },
+ {
+  "t": 120.0,
+  "x": 900,
+  "y": 247,
+  "what": "Select customer"
+ },
+ {
+  "t": 121.53,
+  "x": 846,
+  "y": 906,
+  "what": "Bolaget AB"
+ },
+ {
+  "t": 125.0,
+  "x": 900,
+  "y": 454,
+  "what": "Project"
+ },
+ {
+  "t": 125.93,
+  "x": 952,
+  "y": 858,
+  "what": "BRF Hamngatan 74"
+ },
+ {
+  "t": 132.5,
+  "x": 880,
+  "y": 454,
+  "what": "Select article"
+ },
+ {
+  "t": 133.87,
+  "x": 955,
+  "y": 955,
+  "what": "Betongarbeten"
+ },
+ {
+  "t": 139.73,
+  "x": 860,
+  "y": 666,
+  "what": "Qty field"
+ },
+ {
+  "t": 141.48,
+  "x": 984,
+  "y": 649,
+  "what": "Unit field"
+ },
+ {
+  "t": 161.4,
+  "x": 1065,
+  "y": 950,
+  "what": "Create & send"
+ },
+ {
+  "t": 167.67,
+  "x": 959,
+  "y": 375,
+  "what": "OK Invoice sent",
+  "life": 0.3
+ }
+]

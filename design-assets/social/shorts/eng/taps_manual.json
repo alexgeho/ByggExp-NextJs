@@ -1,0 +1,255 @@
+[
+ {
+  "t": 12.45,
+  "x": 957,
+  "y": 181,
+  "what": "Select or create project"
+ },
+ {
+  "t": 14.75,
+  "x": 957,
+  "y": 242,
+  "what": "project row"
+ },
+ {
+  "t": 18.0,
+  "x": 957,
+  "y": 530,
+  "what": "Report your time"
+ },
+ {
+  "t": 33.35,
+  "x": 955,
+  "y": 951,
+  "what": "In Shifts"
+ },
+ {
+  "t": 35.45,
+  "x": 959,
+  "y": 958,
+  "what": "Open Shifts"
+ },
+ {
+  "t": 41.45,
+  "x": 959,
+  "y": 585,
+  "what": "Add hours"
+ },
+ {
+  "t": 44.13,
+  "x": 957,
+  "y": 858,
+  "what": "keypad 8 (one circle per typing run, S21)"
+ },
+ {
+  "t": 49.2,
+  "x": 1124,
+  "y": 618,
+  "what": "Overtime + (4 quick taps = one circle)"
+ },
+ {
+  "t": 50.07,
+  "x": 1124,
+  "y": 618,
+  "what": "Overtime + 2",
+  "life": 0.45
+ },
+ {
+  "t": 50.53,
+  "x": 1124,
+  "y": 618,
+  "what": "Overtime + 3",
+  "life": 0.45
+ },
+ {
+  "t": 51.0,
+  "x": 1124,
+  "y": 618,
+  "what": "Overtime + 4",
+  "life": 0.45
+ },
+ {
+  "t": 55.3,
+  "x": 1124,
+  "y": 685,
+  "what": "OB + (2 taps)"
+ },
+ {
+  "t": 56.12,
+  "x": 1124,
+  "y": 685,
+  "what": "OB + 2",
+  "life": 0.45
+ },
+ {
+  "t": 60.1,
+  "x": 1007,
+  "y": 643,
+  "what": "Travel time pencil"
+ },
+ {
+  "t": 60.93,
+  "x": 811,
+  "y": 739,
+  "what": "keypad 1"
+ },
+ {
+  "t": 62.45,
+  "x": 1007,
+  "y": 708,
+  "what": "Car km pencil"
+ },
+ {
+  "t": 63.27,
+  "x": 957,
+  "y": 798,
+  "what": "keypad 5 of 50 (typing run)"
+ },
+ {
+  "t": 78.1,
+  "x": 777,
+  "y": 154,
+  "what": "back from Work shifts"
+ },
+ {
+  "t": 80.85,
+  "x": 957,
+  "y": 571,
+  "what": "Fill in your profile"
+ },
+ {
+  "t": 83.0,
+  "x": 957,
+  "y": 415,
+  "what": "Your name field"
+ },
+ {
+  "t": 93.92,
+  "x": 957,
+  "y": 609,
+  "what": "Profession field (real tap 92.95 is in an idle cut)",
+  "at_cut": true,
+  "life": 0.5
+ },
+ {
+  "t": 119.27,
+  "x": 1140,
+  "y": 154,
+  "what": "save check"
+ },
+ {
+  "t": 120.87,
+  "x": 959,
+  "y": 368,
+  "what": "OK on Profile updated",
+  "life": 0.25
+ },
+ {
+  "t": 122.75,
+  "x": 777,
+  "y": 154,
+  "what": "back from My account"
+ },
+ {
+  "t": 124.8,
+  "x": 957,
+  "y": 627,
+  "what": "Customise your home screen"
+ },
+ {
+  "t": 127.7,
+  "x": 836,
+  "y": 262,
+  "what": "dark theme"
+ },
+ {
+  "t": 128.95,
+  "x": 836,
+  "y": 321,
+  "what": "two-colour theme"
+ },
+ {
+  "t": 129.95,
+  "x": 780,
+  "y": 262,
+  "what": "blue theme"
+ },
+ {
+  "t": 132.95,
+  "x": 846,
+  "y": 427,
+  "what": "Project off"
+ },
+ {
+  "t": 133.65,
+  "x": 846,
+  "y": 487,
+  "what": "Clock off"
+ },
+ {
+  "t": 134.05,
+  "x": 846,
+  "y": 547,
+  "what": "Round buttons off"
+ },
+ {
+  "t": 135.6,
+  "x": 846,
+  "y": 487,
+  "what": "Clock on"
+ },
+ {
+  "t": 136.8,
+  "x": 846,
+  "y": 427,
+  "what": "Project on"
+ },
+ {
+  "t": 141.2,
+  "x": 846,
+  "y": 573,
+  "what": "Shifts off"
+ },
+ {
+  "t": 141.45,
+  "x": 846,
+  "y": 633,
+  "what": "Projects off"
+ },
+ {
+  "t": 141.78,
+  "x": 846,
+  "y": 694,
+  "what": "Tasks off"
+ },
+ {
+  "t": 144.07,
+  "x": 846,
+  "y": 573,
+  "what": "Shifts on"
+ },
+ {
+  "t": 145.75,
+  "x": 846,
+  "y": 514,
+  "what": "Chats on"
+ },
+ {
+  "t": 146.4,
+  "x": 846,
+  "y": 393,
+  "what": "Tools on"
+ },
+ {
+  "t": 148.55,
+  "x": 846,
+  "y": 633,
+  "what": "Projects on"
+ },
+ {
+  "t": 161.7,
+  "x": 777,
+  "y": 154,
+  "what": "back from Customize (after the menu detour cut)"
+ }
+]

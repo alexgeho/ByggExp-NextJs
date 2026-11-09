@@ -1,0 +1,241 @@
+[
+ {
+  "t": 18.06,
+  "x": 945,
+  "y": 566,
+  "what": "Skicka faktura eller offert",
+  "life": 0.2
+ },
+ {
+  "t": 21.07,
+  "x": 935,
+  "y": 457,
+  "what": "Fyll i fÃ¶retagsuppgifter"
+ },
+ {
+  "t": 22.933,
+  "x": 935,
+  "y": 297,
+  "what": "Org.nummer field"
+ },
+ {
+  "t": 39.471,
+  "x": 1125,
+  "y": 142,
+  "what": "Save checkmark"
+ },
+ {
+  "t": 40.731,
+  "x": 960,
+  "y": 371,
+  "what": "OK in Sparat dialog"
+ },
+ {
+  "t": 44.135,
+  "x": 935,
+  "y": 503,
+  "what": "LÃ¤gg till en klient"
+ },
+ {
+  "t": 45.995,
+  "x": 855,
+  "y": 347,
+  "what": "FÃ¶retagsnamn field"
+ },
+ {
+  "t": 51.065,
+  "x": 960,
+  "y": 687,
+  "what": "Bolaget suggestion"
+ },
+ {
+  "t": 56.136,
+  "x": 880,
+  "y": 498,
+  "what": "Org.nr field"
+ },
+ {
+  "t": 67.199,
+  "x": 880,
+  "y": 385,
+  "what": "Kontaktperson field"
+ },
+ {
+  "t": 70.536,
+  "x": 795,
+  "y": 674,
+  "what": "Eriksson suggestion"
+ },
+ {
+  "t": 71.129,
+  "x": 901,
+  "y": 647,
+  "what": "tap outside, dismiss keyboard",
+  "show": false
+ },
+ {
+  "t": 78.201,
+  "x": 883,
+  "y": 491,
+  "what": "E-post field"
+ },
+ {
+  "t": 79.204,
+  "x": 811,
+  "y": 439,
+  "what": "E-post field, paste menu"
+ },
+ {
+  "t": 79.734,
+  "x": 781,
+  "y": 438,
+  "what": "Paste"
+ },
+ {
+  "t": 95.738,
+  "x": 883,
+  "y": 660,
+  "what": "Timpris field"
+ },
+ {
+  "t": 99.001,
+  "x": 943,
+  "y": 834,
+  "what": "tap outside, dismiss keyboard",
+  "show": false
+ },
+ {
+  "t": 110.338,
+  "x": 960,
+  "y": 945,
+  "what": "LÃ¤gg till klient"
+ },
+ {
+  "t": 112.268,
+  "x": 960,
+  "y": 338,
+  "what": "OK dialog"
+ },
+ {
+  "t": 114.198,
+  "x": 960,
+  "y": 575,
+  "what": "LÃ¤gg till artiklar"
+ },
+ {
+  "t": 119.068,
+  "x": 960,
+  "y": 240,
+  "what": "Artikelnamn field"
+ },
+ {
+  "t": 123.934,
+  "x": 1108,
+  "y": 687,
+  "what": "Betongarbeten suggestion"
+ },
+ {
+  "t": 124.868,
+  "x": 983,
+  "y": 470,
+  "what": "dismiss keyboard",
+  "show": false
+ },
+ {
+  "t": 126.805,
+  "x": 1034,
+  "y": 403,
+  "what": "Moms 0%"
+ },
+ {
+  "t": 133.405,
+  "x": 960,
+  "y": 945,
+  "what": "LÃ¤gg till artikel"
+ },
+ {
+  "t": 134.735,
+  "x": 960,
+  "y": 338,
+  "what": "OK dialog"
+ },
+ {
+  "t": 137.469,
+  "x": 960,
+  "y": 640,
+  "what": "Skapa offert/faktura"
+ },
+ {
+  "t": 140.967,
+  "x": 960,
+  "y": 240,
+  "what": "VÃ¤lj kund"
+ },
+ {
+  "t": 142.333,
+  "x": 960,
+  "y": 905,
+  "what": "Bolaget AB"
+ },
+ {
+  "t": 150.198,
+  "x": 960,
+  "y": 448,
+  "what": "Projekt valfritt"
+ },
+ {
+  "t": 151.531,
+  "x": 900,
+  "y": 843,
+  "what": "BRF Hamngatan project"
+ },
+ {
+  "t": 165.071,
+  "x": 830,
+  "y": 344,
+  "what": "VÃ¤lj artikel"
+ },
+ {
+  "t": 166.471,
+  "x": 885,
+  "y": 942,
+  "what": "Betongarbeten article"
+ },
+ {
+  "t": 172.931,
+  "x": 815,
+  "y": 556,
+  "what": "Antal field"
+ },
+ {
+  "t": 176.738,
+  "x": 945,
+  "y": 556,
+  "what": "Enhet field"
+ },
+ {
+  "t": 179.998,
+  "x": 945,
+  "y": 674,
+  "what": "Tim suggestion"
+ },
+ {
+  "t": 202.271,
+  "x": 1050,
+  "y": 932,
+  "what": "Skapa & skicka"
+ },
+ {
+  "t": 209.064,
+  "x": 945,
+  "y": 325,
+  "what": "OK button"
+ },
+ {
+  "t": 213.396,
+  "x": 945,
+  "y": 831,
+  "what": "Byt fokus",
+  "show": false
+ }
+]

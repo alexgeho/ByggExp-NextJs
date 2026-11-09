@@ -1,0 +1,25 @@
+# renders, recordings and work frames stay local / in OneDrive
+*.mp4
+*.wav
+*.log
+__pycache__/
+check/
+sheet/
+z/
+st/
+fr/
+tapz/
+samples/
+samples2/
+# licensed background track (Epidemic Sound) — not ours to publish
+music.mp3
+# work frames, owner's spoken-note transcripts and per-recording analysis (useless without the recording)
+*.png
+*.txt
+!fonts/OFL.txt
+transcript.json
+analysis.json
+motion.json
+still.json
+flash.json
+check_en/

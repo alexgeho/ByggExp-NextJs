@@ -1,0 +1,427 @@
+[
+ {
+  "t": 17.45,
+  "x": 959,
+  "y": 495,
+  "what": "Manage projects or crews"
+ },
+ {
+  "t": 20.15,
+  "x": 900,
+  "y": 460,
+  "what": "Create your first project"
+ },
+ {
+  "t": 21.72,
+  "x": 957,
+  "y": 238,
+  "what": "Location"
+ },
+ {
+  "t": 23.73,
+  "x": 959,
+  "y": 762,
+  "what": "address typing run"
+ },
+ {
+  "t": 29.3,
+  "x": 900,
+  "y": 450,
+  "what": "address suggestion"
+ },
+ {
+  "t": 32.6,
+  "x": 972,
+  "y": 595,
+  "what": "activation slider"
+ },
+ {
+  "t": 41.07,
+  "x": 1141,
+  "y": 168,
+  "what": "check"
+ },
+ {
+  "t": 42.95,
+  "x": 1112,
+  "y": 308,
+  "what": "Use location as a name off"
+ },
+ {
+  "t": 69.3,
+  "x": 957,
+  "y": 679,
+  "what": "Start date"
+ },
+ {
+  "t": 71.15,
+  "x": 1127,
+  "y": 385,
+  "what": "next month"
+ },
+ {
+  "t": 73.03,
+  "x": 804,
+  "y": 505,
+  "what": "day 2 (moved -0.04 off an idle cut)"
+ },
+ {
+  "t": 75.53,
+  "x": 959,
+  "y": 743,
+  "what": "Done"
+ },
+ {
+  "t": 78.07,
+  "x": 957,
+  "y": 748,
+  "what": "End date"
+ },
+ {
+  "t": 79.2,
+  "x": 1127,
+  "y": 385,
+  "what": "next month"
+ },
+ {
+  "t": 80.67,
+  "x": 1127,
+  "y": 385,
+  "what": "next month"
+ },
+ {
+  "t": 81.87,
+  "x": 803,
+  "y": 620,
+  "what": "day 21"
+ },
+ {
+  "t": 82.4,
+  "x": 959,
+  "y": 743,
+  "what": "Done"
+ },
+ {
+  "t": 90.3,
+  "x": 900,
+  "y": 843,
+  "what": "Economy"
+ },
+ {
+  "t": 98.75,
+  "x": 777,
+  "y": 154,
+  "what": "back from Economy"
+ },
+ {
+  "t": 105.87,
+  "x": 1141,
+  "y": 153,
+  "what": "save check"
+ },
+ {
+  "t": 107.4,
+  "x": 959,
+  "y": 370,
+  "what": "OK Project created"
+ },
+ {
+  "t": 109.3,
+  "x": 900,
+  "y": 515,
+  "what": "Invite your team"
+ },
+ {
+  "t": 112.3,
+  "x": 900,
+  "y": 236,
+  "what": "Email field"
+ },
+ {
+  "t": 119.49,
+  "x": 900,
+  "y": 366,
+  "what": "name field (moved -0.01 off an idle cut)",
+  "life": 0.4
+ },
+ {
+  "t": 126.3,
+  "x": 900,
+  "y": 475,
+  "what": "Add project",
+  "life": 0.35
+ },
+ {
+  "t": 127.4,
+  "x": 950,
+  "y": 264,
+  "what": "project card"
+ },
+ {
+  "t": 131.0,
+  "x": 900,
+  "y": 666,
+  "what": "Role",
+  "life": 0.25
+ },
+ {
+  "t": 133.5,
+  "x": 824,
+  "y": 303,
+  "what": "Project Admin"
+ },
+ {
+  "t": 139.9,
+  "x": 900,
+  "y": 666,
+  "what": "Role",
+  "life": 0.35
+ },
+ {
+  "t": 140.65,
+  "x": 953,
+  "y": 269,
+  "what": "Worker",
+  "life": 0.3
+ },
+ {
+  "t": 143.43,
+  "x": 1141,
+  "y": 153,
+  "what": "save check (moved -0.04 off an idle cut)"
+ },
+ {
+  "t": 146.35,
+  "x": 959,
+  "y": 394,
+  "what": "OK Invitation sent"
+ },
+ {
+  "t": 148.6,
+  "x": 900,
+  "y": 575,
+  "what": "Assign a task"
+ },
+ {
+  "t": 150.25,
+  "x": 900,
+  "y": 237,
+  "what": "Project row"
+ },
+ {
+  "t": 151.13,
+  "x": 874,
+  "y": 557,
+  "what": "project card"
+ },
+ {
+  "t": 152.3,
+  "x": 900,
+  "y": 310,
+  "what": "Personal task user"
+ },
+ {
+  "t": 153.2,
+  "x": 900,
+  "y": 555,
+  "what": "user"
+ },
+ {
+  "t": 154.6,
+  "x": 1122,
+  "y": 500,
+  "what": "confirm user"
+ },
+ {
+  "t": 155.6,
+  "x": 900,
+  "y": 378,
+  "what": "Task title field"
+ },
+ {
+  "t": 157.15,
+  "x": 805,
+  "y": 428,
+  "what": "Paste",
+  "at_cut": true,
+  "life": 0.35
+ },
+ {
+  "t": 165.1,
+  "x": 900,
+  "y": 533,
+  "what": "Notifications"
+ },
+ {
+  "t": 174.53,
+  "x": 959,
+  "y": 971,
+  "what": "Done"
+ },
+ {
+  "t": 185.07,
+  "x": 1141,
+  "y": 153,
+  "what": "save check"
+ },
+ {
+  "t": 186.5,
+  "x": 959,
+  "y": 369,
+  "what": "OK Task created",
+  "at_cut": true,
+  "life": 0.45
+ },
+ {
+  "t": 196.47,
+  "x": 900,
+  "y": 625,
+  "what": "Add your tools"
+ },
+ {
+  "t": 199.6,
+  "x": 900,
+  "y": 231,
+  "what": "Name field"
+ },
+ {
+  "t": 207.55,
+  "x": 900,
+  "y": 477,
+  "what": "Attach to workers"
+ },
+ {
+  "t": 208.56,
+  "x": 959,
+  "y": 266,
+  "what": "employee (moved -0.04 off an idle cut)"
+ },
+ {
+  "t": 212.6,
+  "x": 900,
+  "y": 540,
+  "what": "Attach to projects"
+ },
+ {
+  "t": 213.4,
+  "x": 925,
+  "y": 264,
+  "what": "project card"
+ },
+ {
+  "t": 221.13,
+  "x": 1141,
+  "y": 153,
+  "what": "save check"
+ },
+ {
+  "t": 222.53,
+  "x": 959,
+  "y": 369,
+  "what": "OK Tool created"
+ },
+ {
+  "t": 223.93,
+  "x": 900,
+  "y": 678,
+  "what": "Customise your home screen"
+ },
+ {
+  "t": 228.67,
+  "x": 836,
+  "y": 262,
+  "what": "dark theme"
+ },
+ {
+  "t": 229.67,
+  "x": 837,
+  "y": 320,
+  "what": "two-colour theme"
+ },
+ {
+  "t": 230.53,
+  "x": 780,
+  "y": 320,
+  "what": "half theme"
+ },
+ {
+  "t": 231.47,
+  "x": 778,
+  "y": 262,
+  "what": "blue theme"
+ },
+ {
+  "t": 232.8,
+  "x": 847,
+  "y": 427,
+  "what": "Project off"
+ },
+ {
+  "t": 233.2,
+  "x": 847,
+  "y": 487,
+  "what": "Clock off"
+ },
+ {
+  "t": 234.45,
+  "x": 847,
+  "y": 487,
+  "what": "Clock on"
+ },
+ {
+  "t": 235.4,
+  "x": 847,
+  "y": 427,
+  "what": "Project on"
+ },
+ {
+  "t": 237.47,
+  "x": 847,
+  "y": 633,
+  "what": "Shifts off"
+ },
+ {
+  "t": 238.13,
+  "x": 847,
+  "y": 693,
+  "what": "Projects off"
+ },
+ {
+  "t": 238.43,
+  "x": 847,
+  "y": 752,
+  "what": "Tasks off (moved -0.04 off an idle cut)"
+ },
+ {
+  "t": 239.23,
+  "x": 847,
+  "y": 693,
+  "what": "Projects on (moved -0.04 off an idle cut)"
+ },
+ {
+  "t": 240.09,
+  "x": 847,
+  "y": 633,
+  "what": "Shifts on (moved -0.04 off an idle cut)"
+ },
+ {
+  "t": 240.93,
+  "x": 847,
+  "y": 512,
+  "what": "Camera on"
+ },
+ {
+  "t": 241.49,
+  "x": 847,
+  "y": 453,
+  "what": "Tools on (moved -0.04 off an idle cut)"
+ },
+ {
+  "t": 247.2,
+  "x": 777,
+  "y": 154,
+  "what": "back from Customize",
+  "at_cut": true,
+  "life": 0.35
+ }
+]

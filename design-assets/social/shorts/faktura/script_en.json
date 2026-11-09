@@ -1,0 +1,146 @@
+[
+ {
+  "id": "i1",
+  "orig": [
+   0.0,
+   17.4
+  ],
+  "text": "Let's go through every step of creating your first invoice in the ByggExp app."
+ },
+ {
+  "id": "i2",
+  "orig": [
+   17.4,
+   21.0
+  ],
+  "text": "Choose Skicka faktura eller offert – the app guides you step by step."
+ },
+ {
+  "id": "f1",
+  "orig": [
+   21.0,
+   39.0
+  ],
+  "text": "First, we fill in the company details. They are added to every invoice, quote and self-inspection, so you only enter them once."
+ },
+ {
+  "id": "f2",
+  "orig": [
+   39.0,
+   41.4
+  ],
+  "text": "Save – and the first step is done."
+ },
+ {
+  "id": "k1",
+  "orig": [
+   41.4,
+   53.0
+  ],
+  "text": "Next, we add a customer. You choose a private person or a company – we pick a company."
+ },
+ {
+  "id": "k2",
+  "orig": [
+   53.0,
+   66.0
+  ],
+  "text": "The company name is enough, but everything you fill in appears neatly on the invoice."
+ },
+ {
+  "id": "k3",
+  "orig": [
+   66.0,
+   78.0
+  ],
+  "text": "The customer is saved in the system. Next time you just pick it – the address and all details are filled in on the invoice automatically."
+ },
+ {
+  "id": "k4",
+  "orig": [
+   78.0,
+   112.6
+  ],
+  "text": "Here you choose payment terms and other settings that apply to every invoice for this customer."
+ },
+ {
+  "id": "a1",
+  "orig": [
+   112.6,
+   125.0
+  ],
+  "text": "In the next step, we create an item – what you sell, for example concrete work."
+ },
+ {
+  "id": "a2",
+  "orig": [
+   125.0,
+   135.2
+  ],
+  "text": "You choose the VAT rate, and the item is saved so you can use it on all future invoices."
+ },
+ {
+  "id": "u1",
+  "orig": [
+   135.2,
+   140.6
+  ],
+  "text": "Now we create the invoice."
+ },
+ {
+  "id": "u2",
+  "orig": [
+   140.6,
+   150.0
+  ],
+  "text": "We pick the customer we created earlier. Payment terms, due date and your reference are filled in automatically."
+ },
+ {
+  "id": "u3",
+  "orig": [
+   150.0,
+   163.0
+  ],
+  "text": "Then we choose the project. The order reference comes from the project, and the project name goes into the description."
+ },
+ {
+  "id": "u4",
+  "orig": [
+   163.0,
+   181.0
+  ],
+  "text": "We pick the item and enter, for example, 58 hours at 595 kronor."
+ },
+ {
+  "id": "u5",
+  "orig": [
+   181.0,
+   201.9
+  ],
+  "text": "The system calculates everything automatically."
+ },
+ {
+  "id": "u6",
+  "orig": [
+   201.9,
+   207.0
+  ],
+  "text": "Tap Skapa och skicka."
+ },
+ {
+  "id": "d1",
+  "orig": [
+   207.0,
+   209.5
+  ],
+  "text": "Done – your first invoice is sent!"
+ },
+ {
+  "id": "d2",
+  "orig": [
+   209.5,
+   213.3
+  ],
+  "text": "The next invoice is even faster – the customer and the item are already there."
+ }
+]

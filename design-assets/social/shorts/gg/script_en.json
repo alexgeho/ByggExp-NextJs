@@ -1,0 +1,265 @@
+[
+ {
+  "id": "i1",
+  "orig": [
+   0,
+   14.8
+  ],
+  "text": "Here's how to get started with the ByggExp app. The first time you open it, the home screen shows four simple steps."
+ },
+ {
+  "id": "p1",
+  "orig": [
+   14.8,
+   21.0
+  ],
+  "text": "First, choose the project you'll be working on. The first step is checked off."
+ },
+ {
+  "id": "t1",
+  "orig": [
+   21.0,
+   28.5
+  ],
+  "text": "Next, report your time. Automatic GPS counts your time while you're on site. With Enter hours, you type in the number of hours. In Shifts, you enter or adjust the time of your work shifts."
+ },
+ {
+  "id": "t2a",
+  "orig": [
+   28.5,
+   29.4
+  ],
+  "text": "Let's choose In Shifts. A short guide shows how it works."
+ },
+ {
+  "id": "t2b",
+  "orig": [
+   29.4,
+   35.2
+  ],
+  "text": "Tap Open Shifts. Today is already selected in the calendar."
+ },
+ {
+  "id": "t3",
+  "orig": [
+   35.2,
+   41.2
+  ],
+  "text": "Tap Add hours and enter your working hours – here, eight. They're saved automatically."
+ },
+ {
+  "id": "t4",
+  "orig": [
+   41.2,
+   47.0
+  ],
+  "text": "Overtime is added with the plus button – here, two hours."
+ },
+ {
+  "id": "t5",
+  "orig": [
+   47.0,
+   52.5
+  ],
+  "text": "OB – pay for inconvenient working hours – works the same way."
+ },
+ {
+  "id": "t6",
+  "orig": [
+   [
+    52.5,
+    53.45
+   ],
+   [
+    57.3,
+    58.35
+   ],
+   [
+    59.0,
+    61.6
+   ]
+  ],
+  "text": "Under Travel, enter your travel time and how many kilometres you drove."
+ },
+ {
+  "id": "t6b",
+  "orig": [
+   [
+    61.6,
+    62.1
+   ],
+   [
+    63.6,
+    64.2
+   ],
+   [
+    64.8,
+    65.5
+   ]
+  ],
+  "text": "Choose a daily allowance – half or full.",
+  "raw": true
+ },
+ {
+  "id": "t7a",
+  "orig": [
+   66.3,
+   75.2
+  ],
+  "text": "Further down, you can add absence, photos, receipts or a comment, and see your total for the week."
+ },
+ {
+  "id": "t7b",
+  "orig": [
+   75.2,
+   85.9
+  ],
+  "text": "At the top, you can switch between a week, a month or a custom period."
+ },
+ {
+  "id": "t8",
+  "orig": [
+   85.9,
+   88.1
+  ],
+  "text": "Go back – the second step is done."
+ },
+ {
+  "id": "f1",
+  "orig": [
+   [
+    88.1,
+    88.38
+   ],
+   [
+    92.35,
+    104.4
+   ]
+  ],
+  "text": "Now fill in your profile. Enter your name – your email is already there.",
+  "speed": 1.5
+ },
+ {
+  "id": "f2",
+  "orig": [
+   104.4,
+   115.6
+  ],
+  "text": "Then add your profession.",
+  "speed": 1.7
+ },
+ {
+  "id": "f3",
+  "orig": [
+   115.6,
+   124.8
+  ],
+  "text": "You can also add a phone number and documents, such as your certificates."
+ },
+ {
+  "id": "f4",
+  "orig": [
+   124.8,
+   127.6
+  ],
+  "text": "Save with the check mark – your profile is updated."
+ },
+ {
+  "id": "c1",
+  "orig": [
+   127.6,
+   131.5
+  ],
+  "text": "Three steps are done. Finally, customise your home screen."
+ },
+ {
+  "id": "c2",
+  "orig": [
+   131.5,
+   136.0
+  ],
+  "text": "Pick a theme in the colours you like."
+ },
+ {
+  "id": "c3",
+  "orig": [
+   136.0,
+   142.8
+  ],
+  "text": "Under Show, turn the project, the clock or the round buttons on or off."
+ },
+ {
+  "id": "c4a",
+  "orig": [
+   [
+    142.8,
+    147.25
+   ],
+   [
+    147.65,
+    148.5
+   ]
+  ],
+  "text": "Under Round buttons, choose what the big button does: the camera…"
+ },
+ {
+  "id": "c4b",
+  "orig": [
+   148.5,
+   148.9
+  ],
+  "text": "…a play button for the timer…"
+ },
+ {
+  "id": "c4c",
+  "orig": [
+   148.9,
+   150.3
+  ],
+  "text": "…or a pencil, so you register your hours manually."
+ },
+ {
+  "id": "c4d",
+  "orig": [
+   [
+    150.3,
+    153.2
+   ],
+   [
+    156.5,
+    157.5
+   ]
+  ],
+  "text": "You can switch at any time."
+ },
+ {
+  "id": "c5",
+  "orig": [
+   157.5,
+   165.3
+  ],
+  "text": "Under Buttons, choose your shortcuts – for example Camera, Shifts and Projects."
+ },
+ {
+  "id": "c6",
+  "orig": [
+   165.3,
+   168.7
+  ],
+  "text": "Under Blocks, choose which lists you see."
+ },
+ {
+  "id": "d1",
+  "orig": [
+   [
+    168.7,
+    169.7
+   ],
+   [
+    180.3,
+    185.7
+   ]
+  ],
+  "text": "Done – your home screen shows only what you need. Now you're ready to get to work."
+ }
+]

@@ -1,0 +1,297 @@
+[
+ {
+  "id": "i1",
+  "orig": [
+   0.0,
+   8.1
+  ],
+  "text": "Welcome! In this video, we'll show you step by step everything you need to get started with the app. First, choose what matters most to you right now: sending an invoice or offer to a customer, or getting started with your team."
+ },
+ {
+  "id": "i2",
+  "orig": [
+   8.1,
+   17.35
+  ],
+  "text": "The buttons and blocks below show live information. You can remove them, rearrange them and even change the colour theme – more on that later. We'll start with projects and staff: tap Manage projects or crews."
+ },
+ {
+  "id": "i3",
+  "orig": [
+   17.35,
+   20.1
+  ],
+  "text": "A checklist with five steps appears."
+ },
+ {
+  "id": "p1",
+  "orig": [
+   20.1,
+   21.6
+  ],
+  "text": "First, we create our first project."
+ },
+ {
+  "id": "p2",
+  "orig": [
+   21.6,
+   29.2
+  ],
+  "speed": 1.3,
+  "text": "Tap Location and choose the project's address. You can type it in or use your current location."
+ },
+ {
+  "id": "p3",
+  "orig": [
+   29.2,
+   40.9
+  ],
+  "text": "Here you set the GPS radius – the area where the work shift starts or ends automatically, if the employee has agreed to GPS time tracking. Employees can also register their hours manually."
+ },
+ {
+  "id": "p4",
+  "orig": [
+   40.9,
+   52.8
+  ],
+  "speed": 1.5,
+  "text": "By default, the project name comes from the address – and you can always change it."
+ },
+ {
+  "id": "p5",
+  "orig": [
+   52.8,
+   69.2
+  ],
+  "text": "When you create a project, you can add members of your team right away – they get notifications about the project. You can also attach tools and project documents, visible to everyone on the project. The default work shift is seven to four, and one hour of lunch is deducted automatically."
+ },
+ {
+  "id": "p6",
+  "orig": [
+   69.2,
+   83.0
+  ],
+  "speed": 1.5,
+  "text": "If you set a start and end date, the project appears as a bar in the scheduling view."
+ },
+ {
+  "id": "p7a",
+  "orig": [
+   83.0,
+   90.2
+  ],
+  "text": "Next, Economy."
+ },
+ {
+  "id": "p7b",
+  "orig": [
+   90.2,
+   94.5
+  ],
+  "text": "Here you plan the project's finances. Enter the total budget and the planned hours. Add planned materials – spent materials are filled in as you buy."
+ },
+ {
+  "id": "p7c",
+  "orig": [
+   94.5,
+   98.6
+  ],
+  "text": "Set the cost rate per hour – what an hour costs you – and the bill rate – what you charge the customer. The difference is your margin."
+ },
+ {
+  "id": "p7d",
+  "orig": [
+   98.6,
+   105.8
+  ],
+  "text": "Everything you fill in here also appears in the admin panel. Worked and planned hours are counted automatically – just like incoming and outgoing invoices, and photographed or scanned receipts. So you always see whether the project is on budget."
+ },
+ {
+  "id": "p8",
+  "orig": [
+   105.8,
+   109.2
+  ],
+  "text": "Save with the check mark – the project is created."
+ },
+ {
+  "id": "e1",
+  "orig": [
+   109.2,
+   119.4
+  ],
+  "speed": 1.5,
+  "text": "The next step is adding employees. They automatically get an email invitation, in the language you choose for them."
+ },
+ {
+  "id": "e2",
+  "orig": [
+   119.4,
+   131.0
+  ],
+  "text": "When you add an employee, you can link them to one or more projects right away."
+ },
+ {
+  "id": "e3",
+  "orig": [
+   131.0,
+   139.8
+  ],
+  "text": "Here you also choose the person's role. A project admin can create projects and add employees – and you can give them access to financial data, like outgoing invoices and hourly rates."
+ },
+ {
+  "id": "e4",
+  "orig": [
+   139.8,
+   146.4
+  ],
+  "text": "Here, we choose Worker. Save – done, the email is sent."
+ },
+ {
+  "id": "e5",
+  "orig": [
+   146.4,
+   148.6
+  ],
+  "text": "The second step is done."
+ },
+ {
+  "id": "t1a",
+  "orig": [
+   148.6,
+   152.2
+  ],
+  "text": "Now let's create a task. We start by choosing the project. By default, everyone on the project gets the task and a notification…"
+ },
+ {
+  "id": "t1b",
+  "orig": [
+   152.2,
+   155.5
+  ],
+  "text": "…or you can choose one or more people."
+ },
+ {
+  "id": "t2",
+  "orig": [
+   [
+    155.5,
+    157.3
+   ],
+   [
+    160.4,
+    165.0
+   ]
+  ],
+  "text": "Write the task. Today's date is preset – of course, you can change it and set the deadline."
+ },
+ {
+  "id": "t3",
+  "orig": [
+   165.0,
+   174.5
+  ],
+  "text": "Under Notifications, choose how often reminders are sent – once, every 15 minutes, hourly, daily or weekly – until the task is done."
+ },
+ {
+  "id": "t4",
+  "orig": [
+   174.5,
+   184.0
+  ],
+  "text": "You can also set the priority, make the task repeat and attach documents."
+ },
+ {
+  "id": "t5",
+  "orig": [
+   [
+    184.0,
+    186.8
+   ],
+   [
+    193.8,
+    196.4
+   ]
+  ],
+  "text": "Save – the task is created."
+ },
+ {
+  "id": "w1",
+  "orig": [
+   196.4,
+   206.2
+  ],
+  "speed": 1.5,
+  "text": "Then we add tools. Every tool gets its own unique QR code when it's created."
+ },
+ {
+  "id": "w2",
+  "orig": [
+   206.2,
+   221.0
+  ],
+  "text": "You can link a tool to a person or a project manually. Employees can also link a tool to themselves by scanning its QR code in the app."
+ },
+ {
+  "id": "w3",
+  "orig": [
+   221.0,
+   223.9
+  ],
+  "text": "Save – the tool is added."
+ },
+ {
+  "id": "c0",
+  "orig": [
+   223.9,
+   228.5
+  ],
+  "text": "Next, let's change how the app looks. Normally you reach this screen from the menu at the bottom: Settings, then Customise Home Screen."
+ },
+ {
+  "id": "c1",
+  "orig": [
+   228.5,
+   232.7
+  ],
+  "text": "The circles at the top choose the colour theme."
+ },
+ {
+  "id": "c2",
+  "orig": [
+   232.7,
+   236.5
+  ],
+  "text": "Under Show, choose what appears at the top."
+ },
+ {
+  "id": "c3",
+  "orig": [
+   236.5,
+   242.7
+  ],
+  "text": "Depending on your needs, add or remove the square buttons."
+ },
+ {
+  "id": "c4",
+  "orig": [
+   242.7,
+   247.1
+  ],
+  "text": "In the same way, you manage the blocks at the bottom."
+ },
+ {
+  "id": "d1",
+  "orig": [
+   [
+    247.1,
+    247.45
+   ],
+   [
+    256.45,
+    262.4
+   ]
+  ],
+  "text": "Done – all five steps are complete. Your company is set up and ready to work in ByggExp."
+ }
+]

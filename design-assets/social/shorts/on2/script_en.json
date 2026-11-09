@@ -1,0 +1,179 @@
+[
+ {
+  "id": "i1",
+  "orig": [
+   0.0,
+   8.5
+  ],
+  "text": "Now let's go through every step of creating your first invoice in the ByggExp app."
+ },
+ {
+  "id": "i2",
+  "orig": [
+   8.5,
+   13.0
+  ],
+  "text": "Choose Send an invoice or offer – the app guides you step by step.",
+  "raw": true
+ },
+ {
+  "id": "f1",
+  "orig": [
+   13.0,
+   35.3
+  ],
+  "text": "First, fill in your company details. They then appear on every invoice and offer, so you only enter them once.",
+  "speed": 1.5
+ },
+ {
+  "id": "f2",
+  "orig": [
+   35.3,
+   38.2
+  ],
+  "text": "Save – and the first step is done."
+ },
+ {
+  "id": "k1",
+  "orig": [
+   38.2,
+   50.3
+  ],
+  "text": "Next, we add a client. It can be a private person or a business – here it's a business.",
+  "speed": 1.5
+ },
+ {
+  "id": "k2",
+  "orig": [
+   [
+    50.3,
+    60.3
+   ],
+   [
+    64.6,
+    71.0
+   ]
+  ],
+  "text": "Only the company name is required, but everything you fill in appears neatly on the invoice.",
+  "speed": 1.5
+ },
+ {
+  "id": "k3",
+  "orig": [
+   71.0,
+   86.0
+  ],
+  "text": "You can also add the address, email and phone."
+ },
+ {
+  "id": "k4",
+  "orig": [
+   86.0,
+   97.6
+  ],
+  "text": "Then set the payment terms, currency and hourly rate – they apply to every invoice for this client."
+ },
+ {
+  "id": "k5",
+  "orig": [
+   97.6,
+   99.5
+  ],
+  "text": "The client is saved and stays in the system. Next time, you just select it – and all details are filled in on the invoice automatically."
+ },
+ {
+  "id": "a1",
+  "orig": [
+   99.5,
+   106.9
+  ],
+  "text": "In the next step, we create an article – what you sell, for example concrete work.",
+  "speed": 1.5
+ },
+ {
+  "id": "a2",
+  "orig": [
+   106.9,
+   117.6
+  ],
+  "text": "Choose the VAT rate, and the article is saved so you can use it on all future invoices."
+ },
+ {
+  "id": "u1",
+  "orig": [
+   117.6,
+   119.9
+  ],
+  "text": "Now we create the invoice."
+ },
+ {
+  "id": "u2",
+  "orig": [
+   119.9,
+   124.9
+  ],
+  "text": "Select the client we created earlier. Payment terms, due date and your reference are filled in automatically."
+ },
+ {
+  "id": "u3",
+  "orig": [
+   124.9,
+   132.4
+  ],
+  "text": "Then select the project. The order reference comes from the project, and the project name goes into the description."
+ },
+ {
+  "id": "u4a",
+  "orig": [
+   132.4,
+   143.9
+  ],
+  "text": "Select the article and enter the quantity."
+ },
+ {
+  "id": "u4b",
+  "orig": [
+   143.9,
+   145.0
+  ],
+  "text": "The unit price comes from the client's hourly rate."
+ },
+ {
+  "id": "u5",
+  "orig": [
+   145.0,
+   161.3
+  ],
+  "text": "The system calculates everything automatically."
+ },
+ {
+  "id": "u6",
+  "orig": [
+   [
+    161.3,
+    162.4
+   ],
+   [
+    166.0,
+    166.6
+   ]
+  ],
+  "text": "Tap Create and send."
+ },
+ {
+  "id": "d1",
+  "orig": [
+   166.6,
+   168.5
+  ],
+  "text": "Done – your first invoice has been sent!"
+ },
+ {
+  "id": "d2",
+  "orig": [
+   168.5,
+   173.2
+  ],
+  "text": "The next invoice is even quicker – the client and the article are already there."
+ }
+]

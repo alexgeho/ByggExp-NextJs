@@ -1,0 +1,165 @@
+[
+ {
+  "id": "c0",
+  "orig": [
+   5.0,
+   12.95
+  ],
+  "text": "Now let's move on to the next step and go through every step of creating your first invoice."
+ },
+ {
+  "id": "c1",
+  "orig": [
+   12.95,
+   21.5
+  ],
+  "text": "First, we fill in our company details. They then follow along on every invoice, so you don't have to enter them each time.",
+  "speed": 1.8
+ },
+ {
+  "id": "c2",
+  "orig": [
+   21.5,
+   35.45
+  ],
+  "text": "Here you can also add your logo, address, phone number, organisation number and the other details."
+ },
+ {
+  "id": "c3",
+  "orig": [
+   35.45,
+   40.8
+  ],
+  "text": "Save – and the first step is done.",
+  "delay": 0.75
+ },
+ {
+  "id": "k1",
+  "orig": [
+   40.8,
+   48.5
+  ],
+  "text": "Next, we add a client. You can choose between a private person and a business – here we take a business."
+ },
+ {
+  "id": "k2",
+  "orig": [
+   48.5,
+   80.0
+  ],
+  "text": "To create a client, the company name is enough – but in general, everything you fill in, like the organisation number and contact person, appears neatly on the invoice.",
+  "speed": 2.2
+ },
+ {
+  "id": "k3",
+  "orig": [
+   80.0,
+   95.6
+  ],
+  "text": "The client's details are saved in the system and always stay available. The address, email and phone number you enter here are also included in the invoice."
+ },
+ {
+  "id": "k4",
+  "orig": [
+   95.6,
+   115.9
+  ],
+  "text": "Here you choose the payment terms, the currency and other details that are linked to every invoice we send to this client."
+ },
+ {
+  "id": "k5",
+  "orig": [
+   115.9,
+   118.6
+  ],
+  "text": "Save – the client is created."
+ },
+ {
+  "id": "a1",
+  "orig": [
+   118.6,
+   135.0
+  ],
+  "text": "In this step, you create articles that you'll later use when invoicing. An article contains the VAT rate and the unit.",
+  "speed": 1.8
+ },
+ {
+  "id": "a2",
+  "orig": [
+   135.0,
+   147.35
+  ],
+  "text": "For example materials, or services for private persons or businesses. Since this is construction work for a company, we choose zero percent VAT."
+ },
+ {
+  "id": "a3",
+  "orig": [
+   147.35,
+   154.0
+  ],
+  "text": "Save – the article is saved.",
+  "delay": 1.2
+ },
+ {
+  "id": "u1",
+  "orig": [
+   154.0,
+   157.4
+  ],
+  "text": "Now let's create the invoice."
+ },
+ {
+  "id": "u2",
+  "orig": [
+   157.4,
+   166.6
+  ],
+  "text": "Here we choose the client we created earlier and the project. Your reference and the order reference are filled in automatically."
+ },
+ {
+  "id": "u3",
+  "orig": [
+   166.6,
+   172.0
+  ],
+  "text": "We choose the article – and the project name ends up in the description."
+ },
+ {
+  "id": "u4",
+  "orig": [
+   [
+    172.0,
+    181.9
+   ],
+   [
+    184.5,
+    187.0
+   ]
+  ],
+  "text": "Then we set, for example, a price of 595 and a quantity of 50 hours.",
+  "speed": 2.0
+ },
+ {
+  "id": "u5",
+  "orig": [
+   187.0,
+   196.5
+  ],
+  "text": "The system calculates everything automatically."
+ },
+ {
+  "id": "f1",
+  "orig": [
+   [
+    196.5,
+    198.35
+   ],
+   [
+    234.6,
+    242.0
+   ]
+  ],
+  "text": "Tap Create invoice – and your first invoice is ready. This is how it will look once all your company details and the client's details are filled in.",
+  "raw": true
+ }
+]

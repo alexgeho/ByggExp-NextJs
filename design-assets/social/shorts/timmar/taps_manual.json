@@ -1,0 +1,248 @@
+[
+ {
+  "t": 14.6,
+  "x": 957,
+  "y": 461,
+  "what": "Välj ett projekt"
+ },
+ {
+  "t": 18.48,
+  "x": 957,
+  "y": 239,
+  "what": "project row"
+ },
+ {
+  "t": 22.45,
+  "x": 957,
+  "y": 515,
+  "what": "Rapportera din tid"
+ },
+ {
+  "t": 33.35,
+  "x": 955,
+  "y": 951,
+  "what": "I Arbetspass"
+ },
+ {
+  "t": 35.5,
+  "x": 959,
+  "y": 959,
+  "what": "Öppna Arbetspass"
+ },
+ {
+  "t": 40.4,
+  "x": 957,
+  "y": 583,
+  "what": "Lägg till timmar",
+  "life": 0.45
+ },
+ {
+  "t": 42.75,
+  "x": 957,
+  "y": 863,
+  "what": "keypad 8 (one circle per typing run, S21)"
+ },
+ {
+  "t": 44.95,
+  "x": 1123,
+  "y": 583,
+  "what": "check Arbetstimmar",
+  "life": 0.4
+ },
+ {
+  "t": 48.42,
+  "x": 1123,
+  "y": 557,
+  "what": "Övertid +"
+ },
+ {
+  "t": 49.28,
+  "x": 1123,
+  "y": 557,
+  "what": "Övertid +"
+ },
+ {
+  "t": 50.68,
+  "x": 1123,
+  "y": 557,
+  "what": "Övertid +"
+ },
+ {
+  "t": 51.28,
+  "x": 1123,
+  "y": 557,
+  "what": "Övertid +"
+ },
+ {
+  "t": 55.75,
+  "x": 1123,
+  "y": 435,
+  "what": "OB +"
+ },
+ {
+  "t": 56.68,
+  "x": 1123,
+  "y": 435,
+  "what": "OB +"
+ },
+ {
+  "t": 60.95,
+  "x": 1007,
+  "y": 483,
+  "what": "Restid pencil"
+ },
+ {
+  "t": 62.6,
+  "x": 957,
+  "y": 917,
+  "what": "keypad 0 of 0,5 (typing run)"
+ },
+ {
+  "t": 68.1,
+  "x": 1007,
+  "y": 549,
+  "what": "Bil pencil"
+ },
+ {
+  "t": 72.48,
+  "x": 957,
+  "y": 799,
+  "what": "keypad 5 of 50 (typing run)"
+ },
+ {
+  "t": 106.35,
+  "x": 957,
+  "y": 571,
+  "what": "Fyll i din profil"
+ },
+ {
+  "t": 109.68,
+  "x": 937,
+  "y": 413,
+  "what": "Ditt namn"
+ },
+ {
+  "t": 120.75,
+  "x": 937,
+  "y": 593,
+  "what": "Yrkesroll",
+  "life": 0.3
+ },
+ {
+  "t": 136.5,
+  "x": 937,
+  "y": 503,
+  "what": "Telefon"
+ },
+ {
+  "t": 150.3,
+  "x": 1139,
+  "y": 153,
+  "what": "check save"
+ },
+ {
+  "t": 151.95,
+  "x": 959,
+  "y": 369,
+  "what": "OK",
+  "life": 0.4
+ },
+ {
+  "t": 155.2,
+  "x": 917,
+  "y": 943,
+  "what": "home tab",
+  "show": false
+ },
+ {
+  "t": 160.1,
+  "x": 957,
+  "y": 643,
+  "what": "Anpassa startsidan"
+ },
+ {
+  "t": 162.1,
+  "x": 833,
+  "y": 261,
+  "what": "theme dark"
+ },
+ {
+  "t": 165.0,
+  "x": 893,
+  "y": 261,
+  "what": "theme light"
+ },
+ {
+  "t": 166.0,
+  "x": 835,
+  "y": 319,
+  "what": "theme red-blue"
+ },
+ {
+  "t": 167.4,
+  "x": 777,
+  "y": 261,
+  "what": "theme blue"
+ },
+ {
+  "t": 170.1,
+  "x": 847,
+  "y": 425,
+  "what": "Visa Projekt off"
+ },
+ {
+  "t": 171.1,
+  "x": 847,
+  "y": 487,
+  "what": "Klocka off"
+ },
+ {
+  "t": 175.25,
+  "x": 847,
+  "y": 487,
+  "what": "Klocka on"
+ },
+ {
+  "t": 178.45,
+  "x": 847,
+  "y": 617,
+  "what": "Chattar off",
+  "life": 0.45
+ },
+ {
+  "t": 178.9,
+  "x": 847,
+  "y": 677,
+  "what": "Arbetspass off"
+ },
+ {
+  "t": 179.7,
+  "x": 847,
+  "y": 799,
+  "what": "Uppgifter off"
+ },
+ {
+  "t": 181.65,
+  "x": 847,
+  "y": 677,
+  "what": "Arbetspass on"
+ },
+ {
+  "t": 182.8,
+  "x": 847,
+  "y": 737,
+  "what": "Projekt on"
+ },
+ {
+  "t": 183.9,
+  "x": 847,
+  "y": 497,
+  "what": "Verktyg on"
+ },
+ {
+  "t": 185.6,
+  "x": 847,
+  "y": 799,
+  "what": "Uppgifter on"
+ }
+]

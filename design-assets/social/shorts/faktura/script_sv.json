@@ -93,7 +93,7 @@
    141.0,
    150.0
   ],
-  "text": "Vi väljer kunden vi skapade tidigare – betalningsvillkor, förfallodatum och er referens fylls i automatiskt."
+  "text": "Vi väljer kunden vi skapade tidigare. Betalningsvillkor, förfallodatum och er referens fylls i automatiskt."
  },
  {
   "id": "u3",
@@ -115,14 +115,14 @@
   "id": "u5",
   "orig": [
    181.0,
-   204.5
+   201.9
   ],
   "text": "Systemet räknar ut allt automatiskt."
  },
  {
   "id": "u6",
   "orig": [
-   204.5,
+   201.9,
    207.0
   ],
   "text": "Tryck på Skapa och skicka."
@@ -139,8 +139,8 @@
   "id": "d2",
   "orig": [
    209.5,
-   215.9
+   213.3
   ],
-  "text": "Testa ByggExp gratis i fjorton dagar på byggexp.se."
+  "text": "Nästa faktura går ännu snabbare – kunden och artikeln finns redan."
  }
 ]

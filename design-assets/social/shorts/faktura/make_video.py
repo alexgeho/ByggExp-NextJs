@@ -9,12 +9,13 @@ import imageio_ffmpeg
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
+import taps as tap_markers
+
 HERE = Path(__file__).resolve().parent
 SRC, LANG, OUT = sys.argv[1], sys.argv[2], sys.argv[3]
 W, H, FPS = 1920, 1080, 30
 IDLE_MIN, IDLE_KEEP = 0.5, 0.3       # idle longer than this is cut down to IDLE_KEEP
 VOICE_LEAD, VOICE_TAIL = 0.15, 0.45  # voice starts 0.15s into a step; step lasts ≥ voice + tail
-TAP_LIFE = 0.5
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 
 ana = json.load(open(HERE / "analysis.json"))
@@ -66,74 +67,91 @@ for sg in segs:
     out_t += L + max(0, need)
 total = out_t
 
-# map original time -> output time (for taps)
-def to_out(t):
-    o = 0.0
-    for kind, a, b in timeline:
-        if kind == "play":
-            if a <= t < b:
-                return o + (t - a)
-            o += b - a
-        else:
-            o += b
-    return None
-
-taps = [(to_out(tp["t"]), tp["x"], tp["y"]) for tp in ana["taps"]]
-taps = [t for t in taps if t[0] is not None]
+taps = tap_markers.out_taps(timeline)  # S39: hand-checked list (taps_manual.json) or the detector
 
 # captions: sentence chunks with output times from the TTS alignment
 def font(size):
-    return ImageFont.truetype("/System/Library/Fonts/Avenir Next.ttc", size, index=5)
+    """S51: one caption font in every video, the same on Mac and Windows: Nunito Sans SemiBold (free Avenir Next look-alike, as in del 1)"""
+    f = ImageFont.truetype(str(HERE.parent / "fonts" / "NunitoSans.ttf"), size)
+    axes = [a["default"] for a in f.get_variation_axes()]
+    axes[0] = 600  # weight: SemiBold
+    f.set_variation_by_axes(axes)
+    return f
 
-FONT = font(50)
+FONT, LINE = font(47), 51
+CAP_X0, CAP_X1 = 1330, 1860  # S46/S48/S51: caption zone ~140 px off the phone (right edge x 1187), 60 px off the frame edge, lines left-aligned
 caps = []
 for v in voice:
     ch, st, en = v["al"]["characters"], v["al"]["character_start_times_seconds"], v["al"]["character_end_times_seconds"]
     buf, t0 = "", None
-    for c, a, b in zip(ch, st, en):
+    for j, (c, a, b) in enumerate(zip(ch, st, en)):
         if t0 is None and not c.isspace():
             t0 = a
         buf += c
-        if c in ".!?" and buf.strip():
+        # a dot inside a word (byggexp.se) is not a sentence end
+        end = j + 1 == len(ch) or ch[j + 1].isspace()
+        # a long sentence is shown in phrases: also break after a dash once the chunk is long (never inside a list)
+        if buf.strip() and end and (c in ".!?" or (c == "–" and len(buf.strip()) > 40 and len(ch) - j > 20)):
             caps.append([v["t"] + t0, v["t"] + b, buf.strip()])
             buf, t0 = "", None
     if buf.strip():
         caps.append([v["t"] + t0, v["t"] + en[-1], buf.strip()])
-for i in range(len(caps)):  # caption stays 1.2s after its sentence, never past the next one
-    nxt = caps[i + 1][0] - 0.01 if i + 1 < len(caps) else total
-    caps[i][1] = min(caps[i][1] + 1.2, nxt) if i + 1 < len(caps) else total
-
-
 def wrap(d, text):
-    lines, cur = [], ""
-    for w in text.split():
-        t = (cur + " " + w).strip()
-        if d.textlength(t, font=FONT) <= 590:
-            cur = t
-        else:
-            lines.append(cur)
-            cur = w
-    return lines + [cur]
+    """fewest lines that fit the zone, split as evenly as possible; a one-word line is avoided"""
+    # split on plain spaces only: a no-break space in the script keeps a pair together ("obekväm tid");
+    # a dash stays at the end of its line, never starts one
+    words, width = [], CAP_X1 - CAP_X0
+    for t in text.split(" "):
+        if t == "–" and words:
+            words[-1] += " –"
+        elif t:
+            words.append(t)
+    w = lambda i, j: d.textlength(" ".join(words[i:j]), font=FONT)
+    best = {len(words): (0, 0, [])}  # i -> (lines, cost, breaks) for words[i:]
+    for i in range(len(words) - 1, -1, -1):
+        opts = []
+        for j in range(i + 1, len(words) + 1):
+            if w(i, j) > width and j > i + 1:
+                break
+            n, cost, rest = best[j]
+            opts.append((n + 1, cost + (width - w(i, j)) ** 2 + (10 ** 7 if j == i + 1 and len(words) > 1 else 0), [j] + rest))
+        best[i] = min(opts)
+    lines, i = [], 0
+    for j in best[0][2]:
+        lines.append(" ".join(words[i:j])); i = j
+    return lines
+
+
+def split_long(c0, c1, text, max_lines=3):
+    """a sentence longer than max_lines is shown as two cards, split at the comma/colon/dash nearest the middle"""
+    d = ImageDraw.Draw(Image.new("RGB", (1, 1)))
+    cuts = [i + 1 for i, c in enumerate(text) if c in ",:–" and i + 1 < len(text) and text[i + 1] == " "]
+    if not cuts and len(wrap(d, text)) > max_lines + 1:  # no punctuation but 5+ lines: split at the space nearest the middle
+        cuts = [i for i, c in enumerate(text) if c == " "]
+    if len(wrap(d, text)) <= max_lines or not cuts:
+        return [[c0, c1, text]]
+    k = min(cuts, key=lambda i: abs(i - len(text) / 2))
+    tm = c0 + (c1 - c0) * k / len(text)
+    return [[c0, tm, text[:k].strip()], [tm, c1, text[k:].strip()]]
+
+
+caps = [part for c in caps for part in split_long(*c)]
+for i in range(len(caps)):  # caption stays up to 2.5 s after its sentence, never past the next one
+    nxt = caps[i + 1][0] - 0.01 if i + 1 < len(caps) else total
+    caps[i][1] = min(caps[i][1] + 2.5, nxt) if i + 1 < len(caps) else total  # no blank gap while the next line comes
 
 
 def overlay(frame, t):
     img = Image.fromarray(frame).convert("RGBA")
     layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)
-    for tt, x, y in taps:  # white tap ripple: grows and fades
-        k = (t - tt) / TAP_LIFE
-        if 0 <= k <= 1:
-            r = 11 + 11 * k
-            a = int(225 * (1 - k))
-            # soft dark halo + grey ring so the white dot also reads on white UI
-            d.ellipse((x - r - 3, y - r - 3, x + r + 3, y + r + 3), fill=(10, 30, 60, a // 4))
-            d.ellipse((x - r, y - r, x + r, y + r), fill=(255, 255, 255, a), outline=(120, 130, 145, a), width=2)
+    tap_markers.draw(layer, taps, t)
     for c0, c1, text in caps:
         if c0 <= t < c1:
             lines = wrap(d, text)
-            y = 1019 - len(lines) * 53
+            y = 1019 - len(lines) * LINE
             for i, l in enumerate(lines):
-                d.text((1231, y + i * 53), l, font=FONT, fill=(255, 255, 255, 255))
+                d.text((CAP_X0, y + i * LINE), l, font=FONT, fill=(255, 255, 255, 255))
             break
     return np.asarray(Image.alpha_composite(img, layer).convert("RGB"))
 
@@ -146,6 +164,16 @@ for i, v in enumerate(voice):
 mix = ";".join(filt) + ";" + "".join(f"[a{i}]" for i in range(len(voice))) + f"amix=inputs={len(voice)}:normalize=0,apad,atrim=0:{total:.2f}[a]"
 voice_wav = HERE / f"voice_{LANG}.wav"
 subprocess.run([FF, "-y", "-loglevel", "error", *amix_in, "-filter_complex", mix, "-map", "[a]", str(voice_wav)], check=True)
+
+# background music (music.mp3 next to this script, if present): quiet bed, ducked further under the voice, faded at both ends
+MUSIC, MUSIC_VOL = HERE / "music.mp3", 0.025  # S49
+if MUSIC.exists():
+    mixed = HERE / f"voice_music_{LANG}.wav"
+    subprocess.run([FF, "-y", "-loglevel", "error", "-i", str(voice_wav), "-stream_loop", "-1", "-i", str(MUSIC), "-filter_complex",
+                    f"[1:a]atrim=0:{total:.2f},volume={MUSIC_VOL},afade=t=in:d=1,afade=t=out:st={total - 3:.2f}:d=3[m];"
+                    "[0:a]asplit[v][key];[m][key]sidechaincompress=threshold=0.02:ratio=4:attack=80:release=600[duck];"
+                    "[v][duck]amix=inputs=2:normalize=0[a]", "-map", "[a]", "-ac", "2", str(mixed)], check=True)
+    voice_wav = mixed
 
 dec = subprocess.Popen([FF, "-loglevel", "error", "-i", SRC, "-vf", f"fps={FPS},scale={W}:{H}:flags=lanczos",
                         "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
@@ -163,21 +191,15 @@ def read():
     return None if len(b) < fsize else np.frombuffer(b, np.uint8).reshape(H, W, 3)
 
 
-for kind, a, b in timeline:
-    if kind == "play":
-        while (src_i) / FPS < a:  # skip cut frames
-            last = read()
-        while src_i / FPS < b:
-            fr = read()
-            if fr is None:
-                break
-            last = fr
-            enc.stdin.write(overlay(fr, out_i / FPS).tobytes())
-            out_i += 1
-    else:
-        for _ in range(int(round(b * FPS))):
-            enc.stdin.write(overlay(last, out_i / FPS).tobytes())
-            out_i += 1
+# every output frame takes the source frame at its own recording time: no rounding drift across cuts and holds
+for out_i in range(int(round(total * FPS))):
+    want = int(tap_markers.to_orig(timeline, min((out_i + 0.5) / FPS, total - 1e-6)) * FPS)
+    while src_i <= want:
+        fr = read()
+        if fr is None:
+            break
+        last = fr
+    enc.stdin.write(overlay(last, out_i / FPS).tobytes())
 enc.stdin.close()
 enc.wait()
 dec.kill()

@@ -1,0 +1,160 @@
+[
+ {
+  "id": "i1",
+  "orig": [
+   0.0,
+   18.6
+  ],
+  "text": "The first time you open the ByggExp app, the home screen shows four steps to get started. Let's go through them together."
+ },
+ {
+  "id": "p1",
+  "orig": [
+   [
+    18.6,
+    28.72
+   ],
+   [
+    29.15,
+    33.05
+   ]
+  ],
+  "text": "First, choose the project you'll be working on. The first step is done."
+ },
+ {
+  "id": "t1",
+  "orig": [
+   33.05,
+   43.45
+  ],
+  "text": "Next, report your time. You choose how: automatically with GPS on site, enter hours directly, or in Arbetspass."
+ },
+ {
+  "id": "t2",
+  "orig": [
+   43.45,
+   46.0
+  ],
+  "text": "We choose Arbetspass. The app briefly shows how it works."
+ },
+ {
+  "id": "t3",
+  "orig": [
+   [
+    46.0,
+    46.55
+   ],
+   [
+    47.2,
+    59.33
+   ]
+  ],
+  "text": "Under the Manuell tab, tap the day in the calendar and enter your hours – eight hours, Monday to Friday."
+ },
+ {
+  "id": "t3b",
+  "orig": [
+   59.33,
+   63.25
+  ],
+  "text": "Save – and the month shows forty hours."
+ },
+ {
+  "id": "r1",
+  "orig": [
+   [
+    63.25,
+    63.75
+   ],
+   [
+    64.2,
+    69.1
+   ]
+  ],
+  "text": "Two of four done."
+ },
+ {
+  "id": "r1b",
+  "orig": [
+   69.1,
+   76.4
+  ],
+  "text": "The next step is your profile – your name and email are already there."
+ },
+ {
+  "id": "r2",
+  "orig": [
+   76.4,
+   97.7
+  ],
+  "text": "Fill in your trade, for example concrete worker. You can also add a phone number and documents, such as certificates."
+ },
+ {
+  "id": "r3",
+  "orig": [
+   [
+    97.7,
+    102.6
+   ],
+   [
+    103.1,
+    104.25
+   ]
+  ],
+  "text": "Tap the check mark to save – your profile is updated."
+ },
+ {
+  "id": "a1",
+  "orig": [
+   104.25,
+   110.6
+  ],
+  "text": "Last step: customise the home screen."
+ },
+ {
+  "id": "a1b",
+  "orig": [
+   110.6,
+   116.3
+  ],
+  "text": "First, pick the theme you like."
+ },
+ {
+  "id": "a2",
+  "orig": [
+   116.3,
+   122.9
+  ],
+  "text": "Under Runda knappar, choose what the second big button does: camera, hours or play."
+ },
+ {
+  "id": "a3",
+  "orig": [
+   [
+    122.9,
+    126.5
+   ],
+   [
+    128.3,
+    134.7
+   ]
+  ],
+  "text": "Under Knappar, turn on what you use every day, for example chats and Arbetspass, and turn off what you don't need."
+ },
+ {
+  "id": "a4",
+  "orig": [
+   134.7,
+   142.2
+  ],
+  "text": "Now the home screen has a camera button – perfect for taking photos on site."
+ },
+ {
+  "id": "d1",
+  "orig": [
+   150.95,
+   158.74
+  ],
+  "text": "Done – the home screen shows only what you need. The app is ready for work."
+ }
+]

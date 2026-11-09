@@ -1,0 +1,283 @@
+[
+ {
+  "t": 14.95,
+  "x": 957,
+  "y": 465,
+  "what": "Choose a project"
+ },
+ {
+  "t": 16.85,
+  "x": 957,
+  "y": 245,
+  "what": "project row"
+ },
+ {
+  "t": 22.3,
+  "x": 957,
+  "y": 519,
+  "what": "Report your time",
+  "life": 0.3
+ },
+ {
+  "t": 28.6,
+  "x": 957,
+  "y": 948,
+  "what": "In Shifts",
+  "life": 0.3
+ },
+ {
+  "t": 29.5,
+  "x": 959,
+  "y": 958,
+  "what": "Open Shifts"
+ },
+ {
+  "t": 35.3,
+  "x": 959,
+  "y": 585,
+  "what": "Add hours"
+ },
+ {
+  "t": 37.0,
+  "x": 957,
+  "y": 858,
+  "what": "keypad 8 (one circle per typing run)",
+  "life": 0.35
+ },
+ {
+  "t": 41.28,
+  "x": 1124,
+  "y": 618,
+  "what": "Overtime +",
+  "life": 0.35
+ },
+ {
+  "t": 41.88,
+  "x": 1124,
+  "y": 618,
+  "what": "Overtime +",
+  "life": 0.35
+ },
+ {
+  "t": 42.42,
+  "x": 1124,
+  "y": 618,
+  "what": "Overtime +",
+  "life": 0.35
+ },
+ {
+  "t": 42.91,
+  "x": 1124,
+  "y": 618,
+  "what": "Overtime +",
+  "life": 0.35
+ },
+ {
+  "t": 49.58,
+  "x": 1124,
+  "y": 683,
+  "what": "OB +",
+  "life": 0.35
+ },
+ {
+  "t": 50.38,
+  "x": 1124,
+  "y": 683,
+  "what": "OB +",
+  "life": 0.35
+ },
+ {
+  "t": 52.6,
+  "x": 1007,
+  "y": 750,
+  "what": "Travel time pencil"
+ },
+ {
+  "t": 57.4,
+  "x": 811,
+  "y": 739,
+  "what": "keypad 1",
+  "life": 0.35
+ },
+ {
+  "t": 58.09,
+  "x": 1007,
+  "y": 663,
+  "what": "Car km pencil",
+  "life": 0.3
+ },
+ {
+  "t": 59.87,
+  "x": 957,
+  "y": 798,
+  "what": "keypad 5 of 50 (typing run)",
+  "life": 0.35
+ },
+ {
+  "t": 63.8,
+  "x": 1120,
+  "y": 663,
+  "what": "Daily allowance + (half)",
+  "life": 0.35
+ },
+ {
+  "t": 65.0,
+  "x": 1120,
+  "y": 663,
+  "what": "Daily allowance + (full)",
+  "life": 0.35
+ },
+ {
+  "t": 86.05,
+  "x": 777,
+  "y": 153,
+  "what": "back from Work shifts"
+ },
+ {
+  "t": 88.2,
+  "x": 957,
+  "y": 569,
+  "what": "Fill in your profile",
+  "life": 0.25,
+  "at_cut": true
+ },
+ {
+  "t": 90.1,
+  "x": 957,
+  "y": 412,
+  "what": "Your name field"
+ },
+ {
+  "t": 104.6,
+  "x": 957,
+  "y": 606,
+  "what": "Profession field"
+ },
+ {
+  "t": 124.9,
+  "x": 1141,
+  "y": 154,
+  "what": "save check"
+ },
+ {
+  "t": 126.55,
+  "x": 959,
+  "y": 369,
+  "what": "OK Profile updated"
+ },
+ {
+  "t": 129.55,
+  "x": 957,
+  "y": 625,
+  "what": "Customise your home screen"
+ },
+ {
+  "t": 132.3,
+  "x": 836,
+  "y": 319,
+  "what": "red-blue theme"
+ },
+ {
+  "t": 133.2,
+  "x": 831,
+  "y": 262,
+  "what": "dark theme",
+  "life": 0.3
+ },
+ {
+  "t": 134.25,
+  "x": 779,
+  "y": 320,
+  "what": "half theme"
+ },
+ {
+  "t": 135.45,
+  "x": 779,
+  "y": 262,
+  "what": "blue theme"
+ },
+ {
+  "t": 138.07,
+  "x": 848,
+  "y": 427,
+  "what": "Project off"
+ },
+ {
+  "t": 138.49,
+  "x": 848,
+  "y": 488,
+  "what": "Clock off"
+ },
+ {
+  "t": 139.62,
+  "x": 848,
+  "y": 488,
+  "what": "Clock on"
+ },
+ {
+  "t": 139.85,
+  "x": 848,
+  "y": 547,
+  "what": "Round buttons on"
+ },
+ {
+  "t": 148.55,
+  "x": 848,
+  "y": 603,
+  "what": "Play"
+ },
+ {
+  "t": 148.95,
+  "x": 848,
+  "y": 541,
+  "what": "Hours (pencil)"
+ },
+ {
+  "t": 150.35,
+  "x": 848,
+  "y": 483,
+  "what": "Camera"
+ },
+ {
+  "t": 159.9,
+  "x": 848,
+  "y": 501,
+  "what": "Shifts off"
+ },
+ {
+  "t": 160.2,
+  "x": 848,
+  "y": 561,
+  "what": "Projects off"
+ },
+ {
+  "t": 160.6,
+  "x": 848,
+  "y": 620,
+  "what": "Tasks off"
+ },
+ {
+  "t": 162.35,
+  "x": 848,
+  "y": 380,
+  "what": "Camera on"
+ },
+ {
+  "t": 163.5,
+  "x": 848,
+  "y": 499,
+  "what": "Shifts on"
+ },
+ {
+  "t": 163.89,
+  "x": 848,
+  "y": 561,
+  "what": "Projects on"
+ },
+ {
+  "t": 168.8,
+  "x": 777,
+  "y": 154,
+  "what": "back from Customize"
+ }
+]

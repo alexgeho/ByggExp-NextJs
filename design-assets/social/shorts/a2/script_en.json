@@ -1,0 +1,323 @@
+[
+ {
+  "id": "i1",
+  "orig": [
+   6.0,
+   18.0
+  ],
+  "text": "In this step, you choose based on what matters most to you right now: either creating an invoice or offer and sending it to your client – or getting your crew started in the app first."
+ },
+ {
+  "id": "i2",
+  "orig": [
+   18.0,
+   21.0
+  ],
+  "text": "They can register their hours manually or clock in automatically with GPS. We'll start with that step."
+ },
+ {
+  "id": "p1",
+  "orig": [
+   21.0,
+   25.8
+  ],
+  "text": "First, we create our first project."
+ },
+ {
+  "id": "p2",
+  "orig": [
+   [
+    25.8,
+    28.5
+   ],
+   [
+    49.0,
+    56.4
+   ]
+  ],
+  "text": "Choose Location and search for the project address.",
+  "speed": 2.2
+ },
+ {
+  "id": "p3",
+  "orig": [
+   56.4,
+   64.0
+  ],
+  "text": "Here you set the GPS radius – here we reduce it to 200 metres. It's the area where the work shift starts or ends automatically, if the employee has chosen to clock in that way."
+ },
+ {
+  "id": "p4",
+  "orig": [
+   69.5,
+   76.8
+  ],
+  "text": "By default, the project name comes from the address – and you can always change it."
+ },
+ {
+  "id": "p5",
+  "orig": [
+   79.3,
+   91.0
+  ],
+  "text": "Here we enter the project name and the order reference.",
+  "speed": 2.2
+ },
+ {
+  "id": "p6",
+  "orig": [
+   91.0,
+   94.0
+  ],
+  "text": "Both follow the project all the way and end up on the invoice – and you can change them later."
+ },
+ {
+  "id": "e1",
+  "orig": [
+   101.7,
+   108.5
+  ],
+  "text": "Next, we add an employee to the project team.",
+  "speed": 1.4
+ },
+ {
+  "id": "e2",
+  "orig": [
+   [
+    108.5,
+    114.0
+   ],
+   [
+    124.5,
+    131.0
+   ]
+  ],
+  "text": "Enter their email address – the invitation is sent there.",
+  "speed": 2.2
+ },
+ {
+  "id": "e3",
+  "orig": [
+   [
+    131.0,
+    142.4
+   ],
+   [
+    146.4,
+    147.0
+   ]
+  ],
+  "text": "You can choose which language the email is sent in and which language the app will be in, as well as the person's role. You can also add the employee's name and phone number."
+ },
+ {
+  "id": "e4",
+  "orig": [
+   [
+    147.0,
+    151.0
+   ],
+   [
+    181.5,
+    185.5
+   ]
+  ],
+  "text": "Done – the invitation has been sent.",
+  "speed": 1.4
+ },
+ {
+  "id": "s1",
+  "orig": [
+   185.5,
+   191.2
+  ],
+  "text": "Here you set the start and end of the work shift. Based on these times, the planned hours are filled in automatically in the shift schedule."
+ },
+ {
+  "id": "sg",
+  "orig": [
+   191.2,
+   193.4
+  ],
+  "text": "Start grace is how many minutes before the start time the shift can already be started – and end grace is how long after the end time it can still be finished."
+ },
+ {
+  "id": "s2",
+  "orig": [
+   193.4,
+   195.9
+  ],
+  "text": "The start and end dates are also shown in the planning view."
+ },
+ {
+  "id": "s3",
+  "orig": [
+   195.9,
+   199.45
+  ],
+  "text": "Under Budget & resources, you enter the total budget, the planned hours and materials, and the cost and bill rate per hour. All of it appears in the project's budget card, so you always see whether the project is on budget.",
+  "raw": true,
+  "delay": 1.9,
+  "speed": 1.5
+ },
+ {
+  "id": "s4",
+  "orig": [
+   222.8,
+   226.0
+  ],
+  "text": "Done – the project is created.",
+  "delay": 1.1
+ },
+ {
+  "id": "t1",
+  "orig": [
+   [
+    234.3,
+    235.95
+   ],
+   [
+    239.7,
+    240.4
+   ],
+   [
+    244.3,
+    245.6
+   ]
+  ],
+  "text": "Now let's move on and create a task.",
+  "raw": true
+ },
+ {
+  "id": "t2",
+  "orig": [
+   [
+    245.6,
+    248.6
+   ],
+   [
+    251.2,
+    252.5
+   ]
+  ],
+  "text": "We start with a description of the task itself."
+ },
+ {
+  "id": "t3",
+  "orig": [
+   252.5,
+   256.0
+  ],
+  "text": "Here we choose the project we just created."
+ },
+ {
+  "id": "t4",
+  "orig": [
+   256.0,
+   260.8
+  ],
+  "text": "By default, everyone on the project is notified – but you can limit the push notifications to specific team members."
+ },
+ {
+  "id": "t5",
+  "orig": [
+   260.8,
+   264.0
+  ],
+  "text": "Today's date is preset – of course, you can change it. You can also set an exact deadline time."
+ },
+ {
+  "id": "t7",
+  "orig": [
+   264.0,
+   270.0
+  ],
+  "text": "Until the person marks the task as done, a reminder is sent every 15 minutes – you can change that, of course.",
+  "cap": "top"
+ },
+ {
+  "id": "t8",
+  "orig": [
+   270.0,
+   279.6
+  ],
+  "text": "And after a certain number of reminders – in this case three – the manager gets a message."
+ },
+ {
+  "id": "t9",
+  "orig": [
+   279.6,
+   281.0
+  ],
+  "text": "Save – the task is created."
+ },
+ {
+  "id": "w1",
+  "orig": [
+   281.0,
+   285.6
+  ],
+  "text": "Then we move on to adding tools."
+ },
+ {
+  "id": "w2",
+  "orig": [
+   285.6,
+   292.0
+  ],
+  "text": "An admin can assign a tool manually, as we do here – or a worker can scan the tool's QR code in the app to register it to themselves."
+ },
+ {
+  "id": "w3",
+  "orig": [
+   292.0,
+   295.2
+  ],
+  "text": "We can assign the tool to an employee…"
+ },
+ {
+  "id": "w4",
+  "orig": [
+   [
+    295.2,
+    296.0
+   ],
+   [
+    299.0,
+    302.5
+   ]
+  ],
+  "text": "You can also add a note.",
+  "speed": 1.8
+ },
+ {
+  "id": "w5",
+  "orig": [
+   [
+    302.5,
+    305.0
+   ],
+   [
+    307.8,
+    309.0
+   ]
+  ],
+  "text": "…or link it to a project.",
+  "speed": 1.5
+ },
+ {
+  "id": "w6",
+  "orig": [
+   309.0,
+   312.0
+  ],
+  "text": "Save – now you always know where the tool is and who is responsible for it."
+ },
+ {
+  "id": "d1",
+  "orig": [
+   312.0,
+   317.5
+  ],
+  "text": "Your crew is up and running!"
+ }
+]

@@ -1,0 +1,160 @@
+[
+ {
+  "id": "i1",
+  "orig": [
+   0.0,
+   18.6
+  ],
+  "text": "Första gången du öppnar ByggExp-appen visar startsidan fyra steg för att komma igång. Vi går igenom dem tillsammans."
+ },
+ {
+  "id": "p1",
+  "orig": [
+   [
+    18.6,
+    28.72
+   ],
+   [
+    29.15,
+    33.05
+   ]
+  ],
+  "text": "Först väljer du projektet du ska jobba på. Första steget är klart."
+ },
+ {
+  "id": "t1",
+  "orig": [
+   33.05,
+   43.45
+  ],
+  "text": "Sedan rapporterar du din tid. Du väljer själv hur: automatiskt med GPS på plats, fyll i timmar direkt eller i Arbetspass."
+ },
+ {
+  "id": "t2",
+  "orig": [
+   43.45,
+   46.0
+  ],
+  "text": "Vi väljer Arbetspass. Appen visar kort hur det går till."
+ },
+ {
+  "id": "t3",
+  "orig": [
+   [
+    46.0,
+    46.55
+   ],
+   [
+    47.2,
+    59.33
+   ]
+  ],
+  "text": "Under fliken Manuell trycker du på dagen i kalendern och skriver in timmarna – åtta timmar, måndag till fredag."
+ },
+ {
+  "id": "t3b",
+  "orig": [
+   59.33,
+   63.25
+  ],
+  "text": "Spara – och månaden visar fyrtio timmar."
+ },
+ {
+  "id": "r1",
+  "orig": [
+   [
+    63.25,
+    63.75
+   ],
+   [
+    64.2,
+    69.1
+   ]
+  ],
+  "text": "Två av fyra klara."
+ },
+ {
+  "id": "r1b",
+  "orig": [
+   69.1,
+   76.4
+  ],
+  "text": "Nästa steg är din profil – namn och e-post finns redan."
+ },
+ {
+  "id": "r2",
+  "orig": [
+   76.4,
+   97.7
+  ],
+  "text": "Fyll i din yrkesroll, till exempel betongarbetare. Här kan du också lägga till telefonnummer och dokument, som certifikat."
+ },
+ {
+  "id": "r3",
+  "orig": [
+   [
+    97.7,
+    102.6
+   ],
+   [
+    103.1,
+    104.25
+   ]
+  ],
+  "text": "Tryck på bocken för att spara – profilen är uppdaterad."
+ },
+ {
+  "id": "a1",
+  "orig": [
+   104.25,
+   110.6
+  ],
+  "text": "Sista steget: anpassa startsidan."
+ },
+ {
+  "id": "a1b",
+  "orig": [
+   110.6,
+   116.3
+  ],
+  "text": "Först väljer du det tema du gillar."
+ },
+ {
+  "id": "a2",
+  "orig": [
+   116.3,
+   122.9
+  ],
+  "text": "Under Runda knappar väljer du vad den andra stora knappen gör: Kamera, Timmar eller Spela."
+ },
+ {
+  "id": "a3",
+  "orig": [
+   [
+    122.9,
+    126.5
+   ],
+   [
+    128.3,
+    134.7
+   ]
+  ],
+  "text": "Under Knappar slår du på det du använder varje dag, till exempel Chattar och Arbetspass, och stänger av det du inte behöver."
+ },
+ {
+  "id": "a4",
+  "orig": [
+   134.7,
+   142.2
+  ],
+  "text": "Nu har startsidan en kameraknapp – perfekt för att fota på bygget."
+ },
+ {
+  "id": "d1",
+  "orig": [
+   150.95,
+   158.74
+  ],
+  "text": "Klart – startsidan visar bara det du behöver. Nu är appen redo för jobbet."
+ }
+]

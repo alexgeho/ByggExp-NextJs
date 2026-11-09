@@ -1,0 +1,212 @@
+[
+ {
+  "id": "i1",
+  "orig": [
+   0.0,
+   14.2
+  ],
+  "text": "Here's how to get started with ByggExp. The first time you open the app, the home screen shows four steps."
+ },
+ {
+  "id": "p1",
+  "orig": [
+   [
+    14.2,
+    18.8
+   ],
+   [
+    19.7,
+    22.05
+   ]
+  ],
+  "text": "First, choose your project – and the first step is checked off."
+ },
+ {
+  "id": "t1",
+  "orig": [
+   22.05,
+   32.8
+  ],
+  "text": "Next, report your time. With GPS, time is counted automatically while you're on site. You can also enter hours directly – or use Arbetspass."
+ },
+ {
+  "id": "t2a",
+  "orig": [
+   32.8,
+   34.3
+  ],
+  "text": "Let's choose Arbetspass."
+ },
+ {
+  "id": "t2b",
+  "orig": [
+   34.3,
+   35.15
+  ],
+  "text": "The app briefly shows how it works."
+ },
+ {
+  "id": "t2c",
+  "orig": [
+   [
+    35.15,
+    35.76
+   ],
+   [
+    36.4,
+    37.0
+   ]
+  ],
+  "text": "Tap Öppna Arbetspass."
+ },
+ {
+  "id": "t3a",
+  "orig": [
+   37.0,
+   41.3
+  ],
+  "text": "Under Manuell, tap Lägg till timmar."
+ },
+ {
+  "id": "t3b",
+  "orig": [
+   41.3,
+   48.0
+  ],
+  "text": "Enter your working hours, here eight, and confirm with the check mark."
+ },
+ {
+  "id": "t4",
+  "orig": [
+   48.0,
+   53.6
+  ],
+  "text": "Add overtime with plus – here two hours."
+ },
+ {
+  "id": "t5",
+  "orig": [
+   53.6,
+   60.5
+  ],
+  "text": "OB – pay for inconvenient working hours – works the same way."
+ },
+ {
+  "id": "t6",
+  "orig": [
+   60.5,
+   76.5
+  ],
+  "text": "Under Resa, enter your travel time and how many kilometres you drove."
+ },
+ {
+  "id": "t7",
+  "orig": [
+   76.5,
+   85.0
+  ],
+  "text": "Further down are allowance, absence, photos, receipts and a comment. The total: eleven hours, including two hours of overtime."
+ },
+ {
+  "id": "t8",
+  "orig": [
+   85.0,
+   103.1
+  ],
+  "text": "The week shows your hours day by day. Fill in the rest of the week the same way."
+ },
+ {
+  "id": "r1",
+  "orig": [
+   104.05,
+   106.0
+  ],
+  "text": "Two of four done. The next step is your profile."
+ },
+ {
+  "id": "r2",
+  "orig": [
+   106.0,
+   120.4
+  ],
+  "text": "Enter your name – your email is already there.",
+  "speed": 2
+ },
+ {
+  "id": "r3",
+  "orig": [
+   120.4,
+   136.2
+  ],
+  "text": "Fill in your trade, for example concrete worker.",
+  "speed": 2.5
+ },
+ {
+  "id": "r4",
+  "orig": [
+   136.2,
+   149.95
+  ],
+  "text": "You can also add a phone number and documents, for example certificates. Change your profile photo with the pen."
+ },
+ {
+  "id": "r5",
+  "orig": [
+   149.95,
+   151.6
+  ],
+  "text": "Tap the check mark to save – your profile is updated."
+ },
+ {
+  "id": "a1",
+  "orig": [
+   [
+    151.6,
+    155.15
+   ],
+   [
+    157.3,
+    159.75
+   ]
+  ],
+  "text": "Three of four done. Last step: customise the home screen."
+ },
+ {
+  "id": "a2",
+  "orig": [
+   159.75,
+   169.7
+  ],
+  "text": "First, pick a theme you like."
+ },
+ {
+  "id": "a3",
+  "orig": [
+   [
+    169.7,
+    171.85
+   ],
+   [
+    175.0,
+    176.8
+   ]
+  ],
+  "text": "Under Visa, you decide what is shown: project, clock and round buttons."
+ },
+ {
+  "id": "a4",
+  "orig": [
+   176.8,
+   186.4
+  ],
+  "text": "Under Knappar, turn shortcuts on and off with one tap."
+ },
+ {
+  "id": "d1",
+  "orig": [
+   196.75,
+   210.8
+  ],
+  "text": "Done – the home screen shows only what you need. Now you're ready to report your time."
+ }
+]

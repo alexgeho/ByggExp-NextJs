@@ -1,0 +1,217 @@
+[
+ {
+  "t": 18.75,
+  "x": 880,
+  "y": 462,
+  "what": "Välj ett projekt",
+  "life": 0.35
+ },
+ {
+  "t": 28.41,
+  "x": 870,
+  "y": 245,
+  "what": "BRF Hamngatan 74"
+ },
+ {
+  "t": 33.21,
+  "x": 895,
+  "y": 516,
+  "what": "Rapportera din tid"
+ },
+ {
+  "t": 43.61,
+  "x": 850,
+  "y": 941,
+  "what": "I Arbetspass",
+  "life": 0.5
+ },
+ {
+  "t": 46.15,
+  "x": 960,
+  "y": 958,
+  "what": "Öppna Arbetspass"
+ },
+ {
+  "t": 51.08,
+  "x": 817,
+  "y": 634,
+  "what": "day 12"
+ },
+ {
+  "t": 52.95,
+  "x": 871,
+  "y": 534,
+  "what": "day 13"
+ },
+ {
+  "t": 54.55,
+  "x": 925,
+  "y": 534,
+  "what": "day 14"
+ },
+ {
+  "t": 56.15,
+  "x": 979,
+  "y": 534,
+  "what": "day 15"
+ },
+ {
+  "t": 57.88,
+  "x": 1033,
+  "y": 534,
+  "what": "day 16"
+ },
+ {
+  "t": 59.68,
+  "x": 1138,
+  "y": 157,
+  "what": "Save checkmark"
+ },
+ {
+  "t": 63.41,
+  "x": 778,
+  "y": 157,
+  "what": "Back"
+ },
+ {
+  "t": 69.28,
+  "x": 880,
+  "y": 570,
+  "what": "Fyll i din profil"
+ },
+ {
+  "t": 76.55,
+  "x": 900,
+  "y": 604,
+  "what": "Yrkesroll field"
+ },
+ {
+  "t": 85.61,
+  "x": 998,
+  "y": 807,
+  "what": "dismiss keyboard",
+  "show": false
+ },
+ {
+  "t": 97.88,
+  "x": 1140,
+  "y": 154,
+  "what": "Save checkmark"
+ },
+ {
+  "t": 99.41,
+  "x": 960,
+  "y": 371,
+  "what": "OK Profil uppdaterad"
+ },
+ {
+  "t": 102.28,
+  "x": 779,
+  "y": 154,
+  "what": "Back"
+ },
+ {
+  "t": 104.43,
+  "x": 900,
+  "y": 624,
+  "what": "Anpassa startsidan"
+ },
+ {
+  "t": 110.75,
+  "x": 835,
+  "y": 264,
+  "what": "Theme dark"
+ },
+ {
+  "t": 113.28,
+  "x": 780,
+  "y": 321,
+  "what": "Theme half"
+ },
+ {
+  "t": 114.68,
+  "x": 780,
+  "y": 264,
+  "what": "Theme blue"
+ },
+ {
+  "t": 116.48,
+  "x": 865,
+  "y": 653,
+  "what": "Runda: Kamera"
+ },
+ {
+  "t": 119.15,
+  "x": 865,
+  "y": 774,
+  "what": "Runda: Spela"
+ },
+ {
+  "t": 120.08,
+  "x": 865,
+  "y": 714,
+  "what": "Runda: Timmar"
+ },
+ {
+  "t": 121.48,
+  "x": 865,
+  "y": 653,
+  "what": "Runda: Kamera"
+ },
+ {
+  "t": 125.35,
+  "x": 848,
+  "y": 530,
+  "what": "Knappar: Chattar"
+ },
+ {
+  "t": 128.31,
+  "x": 848,
+  "y": 650,
+  "what": "Knappar: Projekt (shown at the cut, the real tap was inside it)",
+  "life": 0.5,
+  "at_cut": true
+ },
+ {
+  "t": 134.88,
+  "x": 779,
+  "y": 155,
+  "what": "Back (close Anpassa)"
+ },
+ {
+  "t": 142.35,
+  "x": 1018,
+  "y": 944,
+  "what": "Menu"
+ },
+ {
+  "t": 144.28,
+  "x": 930,
+  "y": 510,
+  "what": "Anpassa startskärmen"
+ },
+ {
+  "t": 146.55,
+  "x": 864,
+  "y": 714,
+  "what": "Runda: Timmar"
+ },
+ {
+  "t": 148.35,
+  "x": 864,
+  "y": 774,
+  "what": "Runda: Spela"
+ },
+ {
+  "t": 149.01,
+  "x": 864,
+  "y": 653,
+  "what": "Runda: Kamera"
+ },
+ {
+  "t": 150.41,
+  "x": 779,
+  "y": 155,
+  "what": "Back (close Anpassa)"
+ }
+]

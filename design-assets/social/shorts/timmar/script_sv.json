@@ -1,0 +1,212 @@
+[
+ {
+  "id": "i1",
+  "orig": [
+   0.0,
+   14.2
+  ],
+  "text": "Så kommer du igång med ByggExp. Första gången du öppnar appen visar startsidan fyra steg."
+ },
+ {
+  "id": "p1",
+  "orig": [
+   [
+    14.2,
+    18.8
+   ],
+   [
+    19.7,
+    22.05
+   ]
+  ],
+  "text": "Först väljer du ditt projekt – och första steget bockas av."
+ },
+ {
+  "id": "t1",
+  "orig": [
+   22.05,
+   32.8
+  ],
+  "text": "Sedan rapporterar du din tid. Med GPS räknas tiden automatiskt när du är på plats. Du kan också fylla i timmar direkt – eller använda Arbetspass."
+ },
+ {
+  "id": "t2a",
+  "orig": [
+   32.8,
+   34.3
+  ],
+  "text": "Vi väljer Arbetspass."
+ },
+ {
+  "id": "t2b",
+  "orig": [
+   34.3,
+   35.15
+  ],
+  "text": "Appen visar kort hur det går till."
+ },
+ {
+  "id": "t2c",
+  "orig": [
+   [
+    35.15,
+    35.76
+   ],
+   [
+    36.4,
+    37.0
+   ]
+  ],
+  "text": "Tryck på Öppna Arbetspass."
+ },
+ {
+  "id": "t3a",
+  "orig": [
+   37.0,
+   41.3
+  ],
+  "text": "Under Manuell trycker du på Lägg till timmar."
+ },
+ {
+  "id": "t3b",
+  "orig": [
+   41.3,
+   48.0
+  ],
+  "text": "Skriv in arbetstimmarna – här åtta – och bekräfta med bocken."
+ },
+ {
+  "id": "t4",
+  "orig": [
+   48.0,
+   53.6
+  ],
+  "text": "Övertid lägger du till med plus – här två timmar."
+ },
+ {
+  "id": "t5",
+  "orig": [
+   53.6,
+   60.5
+  ],
+  "text": "OB, obekväm tid, fungerar på samma sätt."
+ },
+ {
+  "id": "t6",
+  "orig": [
+   60.5,
+   76.5
+  ],
+  "text": "Under Resa skriver du in restiden och hur många kilometer du kört med bilen."
+ },
+ {
+  "id": "t7",
+  "orig": [
+   76.5,
+   85.0
+  ],
+  "text": "Längre ner finns traktamente, frånvaro, foton, kvitton och kommentar. Summan: elva timmar, varav två övertid."
+ },
+ {
+  "id": "t8",
+  "orig": [
+   85.0,
+   103.1
+  ],
+  "text": "Veckan visar timmarna dag för dag. Resten av veckan fyller du i på samma sätt."
+ },
+ {
+  "id": "r1",
+  "orig": [
+   104.05,
+   106.0
+  ],
+  "text": "Två av fyra klara. Nästa steg är din profil."
+ },
+ {
+  "id": "r2",
+  "orig": [
+   106.0,
+   120.4
+  ],
+  "text": "Skriv in ditt namn – e-posten finns redan.",
+  "speed": 2
+ },
+ {
+  "id": "r3",
+  "orig": [
+   120.4,
+   136.2
+  ],
+  "text": "Fyll i din yrkesroll, till exempel betongarbetare.",
+  "speed": 2.5
+ },
+ {
+  "id": "r4",
+  "orig": [
+   136.2,
+   149.95
+  ],
+  "text": "Lägg också till telefon och dokument, till exempel certifikat. Profilbilden byter du med pennan."
+ },
+ {
+  "id": "r5",
+  "orig": [
+   149.95,
+   151.6
+  ],
+  "text": "Tryck på bocken för att spara – profilen är uppdaterad."
+ },
+ {
+  "id": "a1",
+  "orig": [
+   [
+    151.6,
+    155.15
+   ],
+   [
+    157.3,
+    159.75
+   ]
+  ],
+  "text": "Tre av fyra klara. Sista steget: anpassa startsidan."
+ },
+ {
+  "id": "a2",
+  "orig": [
+   159.75,
+   169.7
+  ],
+  "text": "Först väljer du ett tema som du gillar."
+ },
+ {
+  "id": "a3",
+  "orig": [
+   [
+    169.7,
+    171.85
+   ],
+   [
+    175.0,
+    176.8
+   ]
+  ],
+  "text": "Under Visa bestämmer du vad som syns: projekt, klocka och runda knappar."
+ },
+ {
+  "id": "a4",
+  "orig": [
+   176.8,
+   186.4
+  ],
+  "text": "Under Knappar slår du på och stänger av genvägar med ett tryck."
+ },
+ {
+  "id": "d1",
+  "orig": [
+   196.75,
+   210.8
+  ],
+  "text": "Klart – startsidan visar bara det du behöver. Nu är du redo att rapportera din tid."
+ }
+]

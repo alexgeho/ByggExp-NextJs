@@ -1,0 +1,183 @@
+[
+ {
+  "id": "i1",
+  "orig": [
+   0.0,
+   12.3
+  ],
+  "text": "Here's how to get started with the ByggExp app. The first time you open it, the home screen shows four simple steps."
+ },
+ {
+  "id": "p1",
+  "orig": [
+   12.3,
+   17.8
+  ],
+  "text": "First, choose the project you'll be working on. The first step is checked off."
+ },
+ {
+  "id": "t1",
+  "orig": [
+   17.8,
+   33.2
+  ],
+  "text": "Next, report your time. Automatic GPS counts your time while you're on site. With Enter hours, you simply type in the number of hours. In Shifts, you enter or adjust the time of your work shifts."
+ },
+ {
+  "id": "t2a",
+  "orig": [
+   33.2,
+   35.3
+  ],
+  "text": "Let's choose In Shifts. A short guide shows how it works."
+ },
+ {
+  "id": "t2b",
+  "orig": [
+   35.3,
+   41.3
+  ],
+  "text": "Tap Open Shifts. Today is already selected in the calendar."
+ },
+ {
+  "id": "t3",
+  "orig": [
+   41.3,
+   48.6
+  ],
+  "text": "Tap Add hours and enter your working hours – here, eight. They're saved automatically."
+ },
+ {
+  "id": "t4",
+  "orig": [
+   48.6,
+   54.8
+  ],
+  "text": "Overtime is added with the plus button – here, two hours."
+ },
+ {
+  "id": "t5",
+  "orig": [
+   54.8,
+   59.6
+  ],
+  "text": "OB – pay for inconvenient working hours – works the same way."
+ },
+ {
+  "id": "t6",
+  "orig": [
+   59.6,
+   66.0
+  ],
+  "text": "Under Travel, enter your travel time and how many kilometres you drove."
+ },
+ {
+  "id": "t7",
+  "orig": [
+   66.0,
+   75.1
+  ],
+  "text": "Further down, you can choose a per diem and add absence, photos, receipts or a comment. At the bottom, you see your total for the week."
+ },
+ {
+  "id": "t8",
+  "orig": [
+   75.1,
+   80.7
+  ],
+  "text": "Go back – the second step is done."
+ },
+ {
+  "id": "f1",
+  "orig": [
+   80.7,
+   92.8
+  ],
+  "text": "Now fill in your profile. Enter your name – your email is already there."
+ },
+ {
+  "id": "f2",
+  "orig": [
+   [
+    92.8,
+    98.35
+   ],
+   [
+    99.8,
+    106.5
+   ]
+  ],
+  "text": "Then add your profession.",
+  "speed": 1.7
+ },
+ {
+  "id": "f3",
+  "orig": [
+   106.5,
+   119.1
+  ],
+  "text": "You can also add a phone number and documents, such as your certificates."
+ },
+ {
+  "id": "f4",
+  "orig": [
+   119.1,
+   122.6
+  ],
+  "text": "Save with the check mark – your profile is updated."
+ },
+ {
+  "id": "c1",
+  "orig": [
+   122.6,
+   127.5
+  ],
+  "text": "Three steps are done. Finally, customise your home screen."
+ },
+ {
+  "id": "c2",
+  "orig": [
+   127.5,
+   132.8
+  ],
+  "text": "Pick a theme in the colours you like."
+ },
+ {
+  "id": "c3",
+  "orig": [
+   132.8,
+   139.5
+  ],
+  "text": "Under Show, choose what appears at the top: the project, the clock and the round buttons."
+ },
+ {
+  "id": "c4",
+  "orig": [
+   139.5,
+   150.0
+  ],
+  "text": "Under Buttons, choose your shortcuts – for example Shifts, Chats, Tools and Projects."
+ },
+ {
+  "id": "c5",
+  "orig": [
+   150.0,
+   150.9
+  ],
+  "text": "Under Blocks, choose which lists you see."
+ },
+ {
+  "id": "d1",
+  "orig": [
+   [
+    150.9,
+    153.7
+   ],
+   [
+    161.55,
+    169.8
+   ]
+  ],
+  "text": "Done – your home screen shows only what you need. Now you're ready to get to work."
+ }
+]

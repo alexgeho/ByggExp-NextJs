@@ -2,6 +2,18 @@
 
 Читать вместе с: design-assets/social/DESIGN-SYSTEM-SMM.md (правила S1–S14, обязательны), docs/marketing/smm-status.md, docs/marketing/youtube-upakovka.md, docs/seo/product-facts-verified.md.
 
+## 2026-11-09 — сессия: папка YouTube + промт на 11 видео
+KLART:
+- Папка ~/Desktop/byggexp-youtube: video/ (trailer, faktura-sv, ad 15s, mockup, GPS 16:9), баннер, youtube-upakovka.md, этот файл.
+- Промт агенту PROMPT-11-video.md (рядом): 11 продающих роликов по платным инструментам, 15–25 с, в текущем стиле, пилот = «Skapa fakturor».
+- Текст для клиентов про обратную связь (RU+SV, «så fixar vi det»).
+- Правила S36–S38 в DESIGN-SYSTEM-SMM.md.
+NÄSTA:
+1. Владелец создаёт чистую демо-компанию (Roger грязный) → агент наполняет данными.
+2. Запустить агента с PROMPT-11-video.md → пилот «Skapa fakturor» → «ок» владельца → остальные 10.
+3. После «да»: загрузить на @ByggExp трейлер, баннер, описание (youtube-upakovka.md).
+ЖДЁМ: демо-аккаунт и «да» на загрузку канала.
+
 ## Цель
 Видео для YouTube @ByggExp и соцсетей: подписчики → пользователи → клиенты. Сначала польза для зрителя (S13), продукт вторым.
 

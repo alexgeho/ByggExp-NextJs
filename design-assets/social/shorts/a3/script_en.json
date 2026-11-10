@@ -14,7 +14,8 @@
    21.5
   ],
   "text": "First, we fill in our company details. They then follow along on every invoice, so you don't have to enter them each time.",
-  "speed": 1.8
+  "speed": 1.8,
+  "typing": true
  },
  {
   "id": "c2",
@@ -48,7 +49,8 @@
    80.0
   ],
   "text": "To create a client, the company name is enough – but in general, everything you fill in, like the organisation number and contact person, appears neatly on the invoice.",
-  "speed": 2.2
+  "speed": 2.2,
+  "typing": true
  },
  {
   "id": "k3",
@@ -81,7 +83,8 @@
    135.0
   ],
   "text": "In this step, you create articles that you'll later use when invoicing. An article contains the VAT rate and the unit.",
-  "speed": 1.8
+  "speed": 1.8,
+  "typing": true
  },
  {
   "id": "a2",
@@ -133,19 +136,14 @@
    ],
    [
     184.5,
-    187.0
+    196.5
    ]
   ],
-  "text": "Then we set, for example, a price of 595 and a quantity of 50 hours.",
-  "speed": 2.0
- },
- {
-  "id": "u5",
-  "orig": [
-   187.0,
-   196.5
-  ],
-  "text": "The system calculates everything automatically."
+  "text": "Then we set, for example, a price of 595 and a quantity of 50 hours – the system calculates everything automatically.",
+  "speed": 2.8,
+  "cap": "top",
+  "delay": 4.24,
+  "typing": true
  },
  {
   "id": "f1",

@@ -31,22 +31,28 @@ def timeline(lang, fps=30):
     mfps, motion = ana["fps"], ana["motion"]
     if STILL and IDLE_FROM_STILL:  # cut only frames where nothing moves, the cursor included: cursor moves stay whole and smooth
         mfps, motion = STILL_FPS, [0.0 if v <= CARET else 1.0 for v in STILL]  # a blinking text caret (~25 px) is idle too
-    idle, s = [], None
-    for i, v in enumerate(motion + [1]):
-        if v <= IDLE_MOTION:
-            s = i if s is None else s
-        else:
-            if s is not None and (i - s) / mfps > IDLE_MIN:
-                idle.append((s / mfps, i / mfps))
-            s = None
+    def idle_spans(min_len):
+        out, s = [], None
+        for i, v in enumerate(motion + [1]):
+            if v <= IDLE_MOTION:
+                s = i if s is None else s
+            else:
+                if s is not None and (i - s) / mfps > min_len:
+                    out.append((s / mfps, i / mfps))
+                s = None
+        return out
+    idle = idle_spans(IDLE_MIN)
+    # "typing": true — pauses between keystrokes are cut almost whole, so text types evenly (owner: «зависает печать»)
+    idle_t = idle_spans(0.15)
 
-    def kept(a, b):
+    def kept(a, b, typing=False):
         out, cur = [], a
-        for i0, i1 in idle:
+        keep, before = (0.04, 0.06) if typing else (IDLE_KEEP, KEEP_BEFORE)
+        for i0, i1 in (idle_t if typing else idle):
             if i1 <= a or i0 >= b:
                 continue
             i0, i1 = max(i0, a), min(i1, b)
-            cut0, cut1 = i0 + IDLE_KEEP / 2, i1 - KEEP_BEFORE
+            cut0, cut1 = i0 + keep / 2, i1 - before
             if cut1 > cut0:
                 if cut0 > cur:
                     out.append((cur, cut0))
@@ -55,27 +61,48 @@ def timeline(lang, fps=30):
             out.append((cur, b))
         return out
 
-    tl, voice, out_t, carry = [], [], 0.0, None
+    SETTLE = 4  # 0.4 s with nothing moving (a caret blink allowed) = the action is finished (0.7 s missed «Peter Eriksson» → Next)
+    settled = lambda i: i >= 0 and all(j < len(STILL) and STILL[j] <= CARET for j in range(i, i + SETTLE))
+    tl, voice, out_t, carry, skip_to = [], [], 0.0, None, None
     for sg in segs:
         al = json.load(open(HERE / f"voice_{lang}" / f"{sg['id']}.json"))
         vdur = al["character_end_times_seconds"][-1]
         # "orig": [a, b] or [[a, b], [c, d]] (a jump inside one step); "speed": play faster (long typing)
         parts = sg["orig"] if isinstance(sg["orig"][0], list) else [sg["orig"]]
         sp = sg.get("speed", 1)
-        rng = parts if sg.get("raw") else [r for a, b in parts for r in kept(a, b)]  # "raw": keep every frame (tiny value changes look idle)
+        rng = parts if sg.get("raw") else [r for a, b in parts for r in kept(a, b, sg.get("typing", False))]  # "raw": keep every frame (tiny value changes look idle)
+        if skip_to:  # the previous segment already played this far to finish its action
+            rng = [(max(a, skip_to), b) for a, b in rng if b > skip_to + 0.05] or [(skip_to - 0.05, skip_to)]  # all of it already played: its voice runs over that last frame
+            skip_to = None
         if carry:  # the tail cut off the previous segment for its hold (cursor travel, a click) plays here — never lost (owner: «курсор прям прыгает»)
             rng = [carry] + rng
             carry = None
         need0 = sg.get("delay", 0) + VOICE_LEAD + vdur + VOICE_TAIL - sum(b - a for a, b in rng) / sp
-        if need0 > 0 and STILL:  # the hold freezes a frame: end the segment on a still one, not on a smeared moving cursor
+        if need0 > 0 and STILL and rng:
+            # the hold freezes a frame: only once the action is finished (owner: «при наборе текста картинка замирает»)
             a, b = rng[-1]
-            for i in range(int(b * STILL_FPS) - 1, max(int((b - 1.5) * STILL_FPS), int(a * STILL_FPS)), -1):
-                if i + 1 < len(STILL) and STILL[i] <= CARET and STILL[i + 1] <= CARET:
-                    cut = (i + 0.5) / STILL_FPS
-                    rng = rng[:-1] + [(a, cut)]
-                    if b - cut > 0.05:
-                        carry = (cut, b)
-                    break
+            ib = int(b * STILL_FPS)
+            if not settled(ib - SETTLE + 1):
+                fwd = next((i for i in range(ib - SETTLE + 1, ib + 40) if settled(i)), None)
+                if fwd is not None and fwd > ib - SETTLE + 1:  # still typing / moving at the end: play on until it settles
+                    end = (fwd + 1.5) / STILL_FPS
+                    rng = rng[:-1] + [(a, end)]
+                    skip_to = end
+                else:  # nothing settles ahead: freeze at the last settled moment before, the rest plays in the next segment
+                    for i in range(ib - SETTLE, max(int((b - 3.0) * STILL_FPS), int(a * STILL_FPS)) - 1, -1):
+                        if settled(i):
+                            cut = (i + 1.5) / STILL_FPS
+                            rng = rng[:-1] + [(a, cut)]
+                            carry = (cut, b)
+                            break
+                    else:  # the cursor never rests here: at least freeze on a sharp (unmoving) frame
+                        for i in range(ib - 1, max(int((b - 1.5) * STILL_FPS), int(a * STILL_FPS)), -1):
+                            if i + 1 < len(STILL) and STILL[i] <= CARET and STILL[i + 1] <= CARET:
+                                cut = (i + 0.5) / STILL_FPS
+                                rng = rng[:-1] + [(a, cut)]
+                                if b - cut > 0.05:
+                                    carry = (cut, b)
+                                break
         length = sum(b - a for a, b in rng) / sp
         delay = sg.get("delay", 0)  # voice starts later inside the segment (e.g. at the click, after the cursor travels there)
         voice.append({"id": sg["id"], "t": out_t + VOICE_LEAD + delay, "al": al, "text": sg["text"]})

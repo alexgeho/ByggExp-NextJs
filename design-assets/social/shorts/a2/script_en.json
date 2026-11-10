@@ -36,7 +36,8 @@
    ]
   ],
   "text": "Choose Location and search for the project address.",
-  "speed": 2.2
+  "speed": 2.2,
+  "typing": true
  },
  {
   "id": "p3",
@@ -52,7 +53,8 @@
    69.5,
    76.8
   ],
-  "text": "By default, the project name comes from the address – and you can always change it."
+  "text": "By default, the project name comes from the address – and you can always change it.",
+  "typing": true
  },
  {
   "id": "p5",
@@ -61,7 +63,8 @@
    91.0
   ],
   "text": "Here we enter the project name and the order reference.",
-  "speed": 2.2
+  "speed": 2.2,
+  "typing": true
  },
  {
   "id": "p6",
@@ -93,7 +96,8 @@
    ]
   ],
   "text": "Enter their email address – the invitation is sent there.",
-  "speed": 2.2
+  "speed": 2.2,
+  "typing": true
  },
  {
   "id": "e3",
@@ -264,7 +268,8 @@
    285.6,
    292.0
   ],
-  "text": "An admin can assign a tool manually, as we do here – or a worker can scan the tool's QR code in the app to register it to themselves."
+  "text": "An admin can assign a tool manually, as we do here – or a worker can scan the tool's QR code in the app to register it to themselves.",
+  "typing": true
  },
  {
   "id": "w3",
@@ -287,7 +292,8 @@
    ]
   ],
   "text": "You can also add a note.",
-  "speed": 1.8
+  "speed": 1.8,
+  "typing": true
  },
  {
   "id": "w5",

@@ -470,7 +470,7 @@ export default function BlogArticlePage({
 
           {/* Contextual product banner — sv only (Swedish copy). Value first:
               placed AFTER the article so the reader gets the guide before the pitch. */}
-          {lang === 'sv' ? <ProductBanner tool={post.slug} /> : null}
+          {lang === 'sv' || lang === 'nb' ? <ProductBanner tool={post.slug} locale={lang} /> : null}
 
           {lang === 'sv' ? (
             <aside className="blog-tools" aria-label="Gratis verktyg">

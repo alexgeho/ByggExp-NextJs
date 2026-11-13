@@ -12,12 +12,18 @@ import { gaEvent } from '../../lib/analytics';
 // stacked on mobile — which is the standard non-breaking pattern and satisfies
 // the "noticeable but unobtrusive, contextual, Boka gratis konsultation" goal.
 
-const BULLETS = [
-  'Projektledning & dagbok',
-  'Tidrapportering & lön',
-  'Offert & fakturering',
-  'Egenkontroller & KMA',
-] as const;
+// Each bullet links to the commercial feature page that owns the topic. The
+// banner sits on every sv article and tool page, so this is where the feature
+// pages get their internal links (SEO 2026-11-13). No sv feature page for
+// egenkontroll yet → that bullet stays plain text.
+type Bullet = { label: string; href?: string };
+
+const BULLETS: readonly Bullet[] = [
+  { label: 'Projektledning & dagbok', href: '/sv/funktioner/projekthantering' },
+  { label: 'Tidrapportering & lön', href: '/sv/funktioner/tidrapporteringssystem-bygg' },
+  { label: 'Offert & fakturering', href: '/sv/funktioner/offert-kalkyl' },
+  { label: 'Egenkontroller & KMA' },
+];
 
 // Map the tool slug (embedSlug) to a contextual headline.
 export function productBannerHeadline(slug: string): string {
@@ -38,12 +44,12 @@ export function productBannerHeadline(slug: string): string {
 }
 
 // Norwegian copy for byggexp.no (nb calculators). sv output is unchanged.
-const NB_BULLETS = [
-  'Prosjektstyring og dagbok',
-  'Timeregistrering og lønn',
-  'Tilbud og fakturering',
-  'Egenkontroller og HMS',
-] as const;
+const NB_BULLETS: readonly Bullet[] = [
+  { label: 'Prosjektstyring og dagbok', href: '/nb/funksjoner/prosjektstyringsverktoy' },
+  { label: 'Timeregistrering og lønn', href: '/nb/funksjoner/timeregistrering-app' },
+  { label: 'Tilbud og fakturering', href: '/nb/funksjoner/tilbudsprogram' },
+  { label: 'Egenkontroller og HMS', href: '/nb/funksjoner/ks-system' },
+];
 
 const NB_HEADLINES: Record<string, string> = {
   'Egenkontroller ingår i ByggExp': 'Egenkontroller er inkludert i ByggExp',
@@ -59,7 +65,7 @@ export default function ProductBanner({ tool, locale = 'sv' }: { tool: string; l
   const nb = locale === 'nb';
   const svHeadline = productBannerHeadline(tool);
   const headline = nb ? NB_HEADLINES[svHeadline] || svHeadline : svHeadline;
-  const bullets: readonly string[] = nb ? NB_BULLETS : BULLETS;
+  const bullets = nb ? NB_BULLETS : BULLETS;
   const cta = nb ? { href: '/nb/contact', label: 'Bestill gratis konsultasjon' } : APP_CTA;
   return (
     <aside className="lm-product-banner" aria-label={nb ? 'ByggExp – bestill konsultasjon' : 'ByggExp – boka demo'}>
@@ -68,7 +74,7 @@ export default function ProductBanner({ tool, locale = 'sv' }: { tool: string; l
         <h2 className="lm-pb-headline">{headline}</h2>
         <ul className="lm-pb-list">
           {bullets.map((b) => (
-            <li key={b}>{b}</li>
+            <li key={b.label}>{b.href ? <a href={b.href}>{b.label}</a> : b.label}</li>
           ))}
         </ul>
       </div>

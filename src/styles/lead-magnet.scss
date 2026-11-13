@@ -227,6 +227,17 @@
   color: #e6edfb;
 }
 
+// Bullets that link to a feature page look like the plain bullets (no visual change).
+.lm-pb-list li a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}
+
 .lm-pb-list li::before {
   content: '✓';
   position: absolute;

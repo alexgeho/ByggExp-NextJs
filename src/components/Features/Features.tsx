@@ -52,6 +52,22 @@ const NB_FUNKSJON_LINKS: Record<number, string> = {
   8: "prosjektstyringsverktoy", // 9 Prosjektoversikt / økonomi
 };
 
+// byggexp.se: same rule for sv — the home page is the strongest internal donor,
+// so cards with a commercial feature page link to /sv/funktioner/<slug>
+// (docs/seo/seo-arkitektura-byggexp-2026-10-27.md, linking rules 1 and 5).
+// Cards without a matching feature page keep their feature article.
+const SV_FUNKTION_LINKS: Record<number, string> = {
+  0: "tidrapporteringssystem-bygg", // 1 Automatisk och manuell tidrapportering
+  1: "projekthantering", // 2 Uppgifter med automatisk uppföljning
+  2: "stampelklocka", // 3 Live-översikt över arbetslagen
+  4: "resursplanering", // 5 Projekt- och personalplanering
+  5: "verktygshantering", // 6 Hantering av verktyg och utrustning
+  6: "offert-kalkyl", // 7 Skapa offerter
+  7: "fakturering", // 8 Skapa fakturor
+  9: "utlagg", // 10 Utlägg och kostnader
+  10: "lon", // 11 Löner från samma timmar
+};
+
 function Features({
   lang,
   featuresT1_3,
@@ -297,7 +313,9 @@ function Features({
                       href={
                         lang === "nb" && NB_FUNKSJON_LINKS[index]
                           ? `/nb/funksjoner/${NB_FUNKSJON_LINKS[index]}`
-                          : `/${lang}/blog/${FEATURE_LINKS[index]}`
+                          : lang === "sv" && SV_FUNKTION_LINKS[index]
+                            ? `/sv/funktioner/${SV_FUNKTION_LINKS[index]}`
+                            : `/${lang}/blog/${FEATURE_LINKS[index]}`
                       }
                     >
                       {LEARN_MORE_LABEL[lang] ?? LEARN_MORE_LABEL.en}

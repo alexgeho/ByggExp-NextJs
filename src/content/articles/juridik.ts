@@ -1117,7 +1117,7 @@ const A_OB_OVERTID_BYGGAVTALET_RAKNA_HTML = `
 </ul>
 
 <h2>Så gör du i ByggExp</h2>
-<p>ByggExp hjälper dig att fånga rätt underlag från början. I tidrapporten loggar den anställde faktiska start- och sluttider, vilket gör att OB-läge och övertid går att härleda till klockslag och veckodag i efterhand – inte gissas fram vid lönekörningen. Du får ett spårbart tidsunderlag per person och projekt som förenklar avstämning mot övertidsjournalen och underlättar dialogen med MB-grupp och lönekontor.</p>
+<p>ByggExp hjälper dig att fånga rätt underlag från början. I tidrapporten loggar den anställde faktiska start- och sluttider, vilket gör att OB-läge och övertid går att härleda till klockslag och veckodag i efterhand – inte gissas fram vid lönekörningen. Du får ett spårbart tidsunderlag per person och projekt som förenklar avstämning mot övertidsjournalen och underlättar dialogen med MB-grupp och lönekontor. Flödet från stämpling till attest och lön visar vi på sidan om vårt <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 <p>ByggExp räknar inte automatiskt ut kollektivavtalets exakta OB- och övertidsprocent åt dig – de satserna och tidsgränserna måste alltid verifieras mot Byggavtalet § 2 (och definitionen av utgående lön i § 3 p6.2). Verktyget ser till att grunddatat är korrekt och komplett, så att själva beräkningen vilar på rätt siffror.</p>
 
 <h2>Vanliga frågor</h2>
@@ -1748,7 +1748,7 @@ const A_SEMESTERLON_SEMESTERERSATTNING_BYGGAVTALET_HTML = `
 </ul>
 
 <h2>Så gör du i ByggExp</h2>
-<p>ByggExp hjälper dig att få ordning på underlaget som semesterlönen vilar på. Tidrapporteringen samlar timmar, ob och övertid per anställd och projekt, så att du har ett komplett och kontrollerbart underlag när det är dags för löne- och semesterkörning. Det gör det enklare att se hela den intjänade bruttolönen i stället för att jaga siffror i efterhand.</p>
+<p>ByggExp hjälper dig att få ordning på underlaget som semesterlönen vilar på. Tidrapporteringen samlar timmar, ob och övertid per anställd och projekt, så att du har ett komplett och kontrollerbart underlag när det är dags för löne- och semesterkörning. Det gör det enklare att se hela den intjänade bruttolönen i stället för att jaga siffror i efterhand. Hur attesterade timmar blir lönekörning och lönespecifikation ser du på sidan om <a href="/sv/funktioner/lon">löneunderlag för bygg</a>.</p>
 <p>ByggExp räknar inte automatiskt ut din semesterlön eller ersätter ditt lönesystem – men ett städat, spårbart tidsunderlag är förutsättningen för att procentregeln ska bli rätt. Du hittar tidrapporteringen och våra övriga <a href="/sv/verktyg">gratis verktyg för byggföretag</a> samlade på ett ställe.</p>
 
 <h2>Vanliga frågor</h2>

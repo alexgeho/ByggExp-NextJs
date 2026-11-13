@@ -130,7 +130,7 @@ export default function GanttSchemaMallPage() {
         related={[
           { href: `/${LOCALE}/blog/gantt-schema-mall-bygg`, label: 'Guide: Gantt-schema för bygg' },
           { href: `/${LOCALE}/funktioner/resursplanering`, label: 'Resursplanering för bygg' },
-          { href: `/${LOCALE}/funktioner`, label: 'Funktioner i ByggExp' },
+          { href: `/${LOCALE}/funktioner/projektplanering`, label: 'Projektplanering med Gantt-schema' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },
         ]}
       />

@@ -308,7 +308,6 @@ ${illu('tidrapporteringssystem-id06', 'Byggarbetare i hjälm visar sitt ID-kort 
   ],
   related: [
     { href: '/sv/tidrapportering-app', label: 'Tidrapporteringsappen' },
-    { href: '/sv/blog/tidrapporteringssystem-bygg', label: 'Guide: tidrapporteringssystem för bygg' },
     { href: '/sv/blog/enkelt-tidrapporteringssystem', label: 'Enkelt tidrapporteringssystem' },
     { href: '/sv/blog/ob-overtid-byggavtalet-rakna', label: 'OB och övertid enligt Byggavtalet' },
     { href: '/sv/blog/loneprogram-bygg', label: 'Löneprogram för bygg' },

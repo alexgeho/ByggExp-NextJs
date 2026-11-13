@@ -733,7 +733,7 @@ const A_RESURSPLANERING_BYGG_HTML = `
 
 <h2>Relaterade guider</h2>
 <ul>
-<li><a href="/sv/blog/schemalaggningssystem-bygg">Schemaläggningssystem för bygg</a> – välj system för det dagliga schemat.</li>
+<li><a href="/sv/funktioner/schemalaggning">Schemaläggningssystem för bygg</a> – vem som jobbar var, dag för dag.</li>
 <li><a href="/sv/funktioner/resursplanering">Bemanning och personalplanering</a> – vilka personer som behövs framåt.</li>
 <li><a href="/sv/blog/personalplanering-bygg">Bemanningsplanering för byggföretag</a> – rätt person på rätt plats.</li>
 <li><a href="/sv/blog/projektplanering-bygg">Projektplanering i bygg</a> – tidplanen som resursplanen bygger på.</li>
@@ -1433,7 +1433,7 @@ const A_TIDREDOVISNING_BYGGFORETAG: BlogPost = {
 };
 
 const ENKELT_TIDRAPPORTERINGSSYSTEM_HTML = `
-<p>De flesta byggföretag behöver inte ett avancerat tidrapporteringssystem – de behöver ett <strong>enkelt</strong> som laget faktiskt fyller i. Ett system med hundra fält och en veckas upplärning ser bra ut i en demo, men på bygget blir det tomma rader och gissade timmar. Här går vi igenom vad ett enkelt tidrapporteringssystem är, varför enkelheten avgör om siffrorna stämmer, och hur du känner igen ett – utan att tappa det som verkligen behövs. Vill du förstå kategorin i stort, läs först guiden om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
+<p>De flesta byggföretag behöver inte ett avancerat tidrapporteringssystem – de behöver ett <strong>enkelt</strong> som laget faktiskt fyller i. Ett system med hundra fält och en veckas upplärning ser bra ut i en demo, men på bygget blir det tomma rader och gissade timmar. Här går vi igenom vad ett enkelt tidrapporteringssystem är, varför enkelheten avgör om siffrorna stämmer, och hur du känner igen ett – utan att tappa det som verkligen behövs. Vill du se hur ett sådant system fungerar från stämpling till lön, se vårt <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/enkelt-tidrapporteringssystem.webp" alt="Diagram: krångligt system (många fält, kräver utbildning, låg användning) vs enkelt system (stämpla in/ut i mobilen, igång på en dag, hela laget fyller i)" width="720" height="380" loading="lazy"><figcaption>Systemet som laget faktiskt använder ger rätt siffror – enkelheten avgör.</figcaption></figure>
 
 <h2>Vad menas med ett enkelt tidrapporteringssystem?</h2>
@@ -1481,7 +1481,7 @@ const ENKELT_TIDRAPPORTERINGSSYSTEM_HTML = `
 
 <h2>Relaterade guider</h2>
 <ul>
-<li><a href="/sv/blog/tidrapporteringssystem-bygg">Tidrapporteringssystem för bygg – hela guiden</a></li>
+<li><a href="/sv/funktioner/tidrapporteringssystem-bygg">Tidrapporteringssystem för bygg</a></li>
 <li><a href="/sv/blog/app-for-tidrapportering-bygg">App för tidrapportering i bygg</a></li>
 <li><a href="/sv/blog/stampelklocka-app-gps-bygg">Stämpelklocka-app med GPS</a></li>
 <li><a href="/sv/blog/tidrapportering-hantverkare">Tidrapportering för hantverkare</a></li>

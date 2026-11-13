@@ -214,7 +214,7 @@ const OFFERT_HTML = `
 <p>Med vår <a href="/sv/verktyg/offert-mall">offertmall</a> fyller du i rader, moms och ROT och laddar ner en färdig offert som PDF – direkt i webbläsaren, utan konto. Har du redan räknat material i någon av våra kalkylatorer kan du föra över raderna till offerten med ett klick.</p>
 
 <h2>Från offert till faktura i ByggExp</h2>
-<p>I ByggExp håller du ihop hela kedjan: offert, ÄTA, tidrapportering och faktura i samma system, kopplat till projektet.</p>
+<p>I ByggExp håller du ihop hela kedjan: offert, ÄTA, tidrapportering och faktura i samma system, kopplat till projektet. Se hur det fungerar i vårt <a href="/sv/funktioner/offert-kalkyl">kalkylprogram för bygg</a>.</p>
 <ol>
 <li>Skapa offerten med specificerat arbete och material, ROT uträknat automatiskt.</li>
 <li>Bekräftade ändringar läggs till som ÄTA – inget faller mellan stolarna.</li>
@@ -3169,7 +3169,7 @@ const A_ACKORDSLON_BYGG_HTML = `
 </ul>
 
 <h2>Så gör du i ByggExp</h2>
-<p>ByggExp ersätter inte ackordsberäkning eller fackets mätningskontor, men vi hjälper dig med underlaget som allt ackord vilar på. Med strukturerad tidrapportering och mängddokumentation samlar du timmar och utförda moment löpande, så att slutsedeln och fördelningslistan bygger på spårbara siffror. Det gör det enklare att lämna korrekt ackordsunderlag i tid och att undvika efterhandsdiskussioner om vad som faktiskt utförts. Sätt ackordsvillkoren i överenskommelsen som vanligt – använd ByggExp för att hålla ordning på det som ligger till grund för avräkningen.</p>
+<p>ByggExp ersätter inte ackordsberäkning eller fackets mätningskontor, men vi hjälper dig med underlaget som allt ackord vilar på. Med strukturerad tidrapportering och mängddokumentation samlar du timmar och utförda moment löpande, så att slutsedeln och fördelningslistan bygger på spårbara siffror. Det gör det enklare att lämna korrekt ackordsunderlag i tid och att undvika efterhandsdiskussioner om vad som faktiskt utförts. Sätt ackordsvillkoren i överenskommelsen som vanligt – använd ByggExp för att hålla ordning på det som ligger till grund för avräkningen. Hur attesterade timmar blir lönekörning och lönespecifikation ser du på sidan om <a href="/sv/funktioner/lon">löneunderlag för bygg</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Får ackordslönen bli lägre än avtalad lägstalön?</h3>
@@ -5261,7 +5261,7 @@ const A_RESTIDSERSATTNING_BYGGAVTALET_HTML = `
 
 <h2>Traktamente tillkommer vid övernattning</h2>
 <p>Övernattar arbetstagaren på förrättningsorten betalas traktamente med 450 kr per dag från 1 januari 2026 (435 kr under 2025), plus ett skattepliktigt förrättningstillägg om hen själv ordnar boendet. Avdrag för kost och logi, skattegränserna och ett veckoexempel finns i <a href="/sv/blog/traktamente-byggnadsarbetare-2026">traktamente för byggnadsarbetare 2026</a>.</p>
-<p>I ByggExp-appen registrerar den anställda restid i kilometer och minuter direkt på arbetspasset, så att underlaget till lönen följer med projektet.</p>
+<p>I ByggExp-appen registrerar den anställda restid i kilometer och minuter direkt på arbetspasset, så att underlaget till lönen följer med projektet. Se hur restid, timtyp och attest hänger ihop i vårt <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Får man betalt för restiden till jobbet varje dag enligt Byggavtalet?</h3>
@@ -6174,7 +6174,7 @@ const A_OFFERTPROGRAM_BYGGFORETAG_HTML = `
 <p>Grunden är densamma oavsett verktyg: en genomtänkt kalkyl. Läs mer om att <a href="/sv/blog/skriva-offert">skriva offert</a> som håller.</p>
 
 <h2>Så kommer du igång</h2>
-<p>Du behöver inte köpa ett system för att börja skicka bättre offerter idag. <a href="/sv/verktyg/offert-mall">Offert-mallen</a> ger dig en färdig PDF gratis, och när volymen växer är steget till ett offertprogram – där offert, tid och faktura hänger ihop – litet. <a href="/sv/contact">Boka en gratis konsultation av ByggExp</a> om du vill se hela flödet från offert till betald faktura.</p>
+<p>Du behöver inte köpa ett system för att börja skicka bättre offerter idag. <a href="/sv/verktyg/offert-mall">Offert-mallen</a> ger dig en färdig PDF gratis, och när volymen växer är steget till ett offertprogram – där offert, tid och faktura hänger ihop – litet. <a href="/sv/contact">Boka en gratis konsultation av ByggExp</a> om du vill se hela flödet från offert till betald faktura, eller se först hur offert och kalkyl hänger ihop i vårt <a href="/sv/funktioner/offert-kalkyl">kalkylprogram för bygg</a>. Offerter, projektkalkyl och fakturor ingår i Koll på pengarna för 299 kr/mån exkl. moms, för upp till två användare.</p>
 
 <h2>Vanliga misstag</h2>
 <ul>
@@ -6209,7 +6209,7 @@ const A_OFFERTPROGRAM_BYGGFORETAG: BlogPost = {
   title: "Offertprogram för byggföretag – vad du ska titta på (2026)", slug: "offertprogram-byggforetag", locale: "sv",
   excerpt: "Vad ett offertprogram för bygg bör klara – mallar, kalkyl, ROT, PDF, uppföljning och koppling till faktura – och när mall räcker vs. system. Kom igång gratis.", tag: "Ekonomi",
   coverImageUrl: "/landing/verktyg/offert-preview.webp", contentHtml: A_OFFERTPROGRAM_BYGGFORETAG_HTML,
-  seoTitle: "Offertprogram för byggföretag – så väljer du 2026 | ByggExp", seoDescription: "Vad ett offertprogram för bygg ska klara: mallar, kalkyl med rätt påslag, ROT, proffsig PDF och koppling till faktura. När mall räcker vs. system – gratis.",
+  seoTitle: "Offertprogram för byggföretag – så väljer du 2026 | ByggExp", seoDescription: "Offertprogram för bygg: mallar, kalkyl med påslag, ROT, PDF och offert som blir faktura. När en gratis mall räcker – och system från 299 kr/mån.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/offert-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T16:05:00.000Z", createdAt: "2026-08-20T16:05:00.000Z", updatedAt: "2026-08-20T16:05:00.000Z",
 };

@@ -93,6 +93,10 @@ const nextConfig = {
       { source: "/sv/blog/rot-eller-rut", destination: "/sv/blog/faktura-med-rotavdrag", statusCode: 301 },
       { source: "/sv/blog/rot-avdrag", destination: "/sv/blog/faktura-med-rotavdrag", statusCode: 301 },
       { source: "/sv/blog/rotavdrag-pensionar", destination: "/sv/blog/kontrollera-kundens-rotutrymme", statusCode: 301 },
+      // 2026-11-13: the blog guide shared its slug and its head key ("tidrapporteringssystem
+      // bygg") with the feature page; GSC 28 d: 103 impressions, position 46, 0 clicks, while
+      // six articles sent the exact anchor to it instead of the feature page.
+      { source: "/sv/blog/tidrapporteringssystem-bygg", destination: "/sv/funktioner/tidrapporteringssystem-bygg", statusCode: 301 },
       // byggexp.no wave 2 (docs/seo/no-audit-2026-11-01-seo.md P1): thin HMS-kort spokes
       // merged into the pillar. Absolute target so byggexp.se/nb/... also lands in one hop.
       { source: "/nb/blog/hms-kort-pris", destination: "https://byggexp.no/nb/blog/hms-kort-bygg", statusCode: 301 },

@@ -136,7 +136,6 @@ const RELATED = [
   { href: "/sv/priser", label: "Priser och paket" },
   { href: "/sv/blog/affarssystem-byggforetag", label: "Affärssystem för byggföretag" },
   { href: "/sv/blog/digitalisera-byggforetag-projektstyrning", label: "Från Excel till ett system" },
-  { href: "/sv/blog/tidrapporteringssystem-bygg", label: "Välj tidrapporteringssystem" },
   { href: "/sv/funktioner/tidrapporteringssystem-bygg", label: "Tidrapporteringssystem för bygg" },
   { href: "/sv/verktyg/tidrapport-mall", label: "Gratis tidrapportmall" },
 ];

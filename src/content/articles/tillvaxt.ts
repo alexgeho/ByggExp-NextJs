@@ -119,7 +119,7 @@ const A_DIGITALISERA_BYGGFORETAG_PROJEKTSTYRNING_HTML = `
 <p>ROT-avdraget är från 1 januari 2026 tillbaka på 30 procent av arbetskostnaden, med tak på 50 000 kr per person och år (ROT och RUT tillsammans högst 75 000 kr). Företaget måste vara godkänt för F-skatt och begär avdraget via fakturamodellen hos Skatteverket. När fakturan hanteras digitalt blir uppdelningen av arbetskostnad och material – och ansökan mot Skatteverket – betydligt enklare att få rätt.</p>
 
 <h2>Allt i ett vs. lösa appar</h2>
-<p>Man kan digitalisera med en app för tid, en för offert och en för faktura. Vinsten blir dock större när de delar data. När tidrapport, offert och faktura bygger på samma kund, samma projekt och samma timmar minskar dubbelinmatningen, färre fakturor missas och spårbarheten blir sammanhängande – vilket är precis vad du behöver vid en tvist eller en kontroll. Frågan är alltså inte antalet verktyg, utan om de hänger ihop.</p>
+<p>Man kan digitalisera med en app för tid, en för offert och en för faktura. Vinsten blir dock större när de delar data. När tidrapport, offert och faktura bygger på samma kund, samma projekt och samma timmar minskar dubbelinmatningen, färre fakturor missas och spårbarheten blir sammanhängande – vilket är precis vad du behöver vid en tvist eller en kontroll. Frågan är alltså inte antalet verktyg, utan om de hänger ihop. Så ser det ut när projektet är navet: <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>.</p>
 
 <h2>Så mycket admin kan en liten firma spara</h2>
 <p>Exakt hur mycket beror på hur firman jobbar idag, men storleksordningen är tydlig. Digitala flöden ger färre kvällar med pappersarbete, snabbare betalt eftersom fakturan kan gå iväg samma dag som jobbet är klart, och mindre risk för både räknefel och sanktionsavgifter. Vinsten är konkret: timmar per vecka i sparad admin, plus kortare tid från utfört arbete till pengar på kontot – två effekter som märks direkt i en fåmansfirma där ägaren är sin egen ekonomiavdelning.</p>
@@ -290,7 +290,7 @@ const A_ARBETSORDER_APP_BYGG_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp har <strong>uppgifter med automatisk uppföljning</strong> och en <strong>live-översikt över arbetslagen</strong>: du delar ut jobb, ser vad som pågår och vad som är klart, och kopplar tid och foto till rätt projekt. Samma data blir sedan underlag för <a href="/sv/blog/faktureringsprogram-bygg">faktura</a> och lön.</p>
+<p>ByggExp har <strong>uppgifter med automatisk uppföljning</strong> och en <strong>live-översikt över arbetslagen</strong>: du delar ut jobb, ser vad som pågår och vad som är klart, och kopplar tid och foto till rätt projekt. Samma data blir sedan underlag för <a href="/sv/blog/faktureringsprogram-bygg">faktura</a> och lön. Se hur uppgifter och foton samlas per projekt i <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
 
 <h2>Vanliga misstag</h2>
@@ -535,7 +535,7 @@ const A_HANTVERKARAPP_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp är byggt för hantverkare och byggföretag: automatisk arbetstid, uppgifter med uppföljning, foto per arbetspass, utlägg, offert, faktura och löner – ur samma timmar. Du registrerar en gång och kontoret ser samma bild som bygget. Se hela paketet i guiden om <a href="/sv/blog/basta-byggprogram-2026">byggprogram</a>.</p>
+<p>ByggExp är byggt för hantverkare och byggföretag: automatisk arbetstid, uppgifter med uppföljning, foto per arbetspass, utlägg, offert, faktura och löner – ur samma timmar. Du registrerar en gång och kontoret ser samma bild som bygget. Se hela paketet i guiden om <a href="/sv/blog/basta-byggprogram-2026">byggprogram</a>. Se också sidan om <a href="/sv/funktioner/tidrapportering-hantverkare">tidrapportering för hantverkare</a> – timmar per kund, klara att fakturera.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Börja gärna med våra <a href="/sv/verktyg">gratis verktyg</a>.</p>
 
 <h2>Vad du ska titta på</h2>
@@ -570,7 +570,7 @@ const A_DOKUMENTHANTERING_BYGG_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp samlar <strong>alla projektdokument på ett ställe</strong> – kopplat till samma projekt som håller ihop tid, foto, offert och faktura. Bygget lägger till foto och underlag på plats, kontoret hittar allt samlat. Bra dokumentation är dessutom din bästa försäkring om något ifrågasätts – se guiden om <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">fotodokumentation som bevis</a>.</p>
+<p>ByggExp samlar <strong>alla projektdokument på ett ställe</strong> – kopplat till samma projekt som håller ihop tid, foto, offert och faktura. Bygget lägger till foto och underlag på plats, kontoret hittar allt samlat. Bra dokumentation är dessutom din bästa försäkring om något ifrågasätts – se guiden om <a href="/sv/blog/fotodokumentation-byggprojekt-bevis">fotodokumentation som bevis</a>. Hur uppgifter, foton och dokument samlas per projekt visar vi på sidan om <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
 
 <h2>Vanliga misstag</h2>
@@ -718,7 +718,7 @@ const A_BYGG_APP_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp är en bygg-app byggd för byggföretag och hantverkare: automatisk arbetstid, uppgifter, foto per arbetspass, utlägg, planering, offert, faktura och löner – ur samma timmar. Du registrerar en gång och använder datan hela vägen. Se hela paketet i guiden om <a href="/sv/blog/basta-byggprogram-2026">byggprogram</a> eller <a href="/sv/blog/hantverkarapp">app för hantverkare</a>.</p>
+<p>ByggExp är en bygg-app byggd för byggföretag och hantverkare: automatisk arbetstid, uppgifter, foto per arbetspass, utlägg, planering, offert, faktura och löner – ur samma timmar. Du registrerar en gång och använder datan hela vägen. Se hela paketet i guiden om <a href="/sv/blog/basta-byggprogram-2026">byggprogram</a> eller <a href="/sv/blog/hantverkarapp">app för hantverkare</a>. Hur projekten hålls ihop ser du på sidan om <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>. Testa gärna våra <a href="/sv/verktyg">gratis verktyg</a> först.</p>
 
 <h2>Vad du ska titta på</h2>
@@ -858,7 +858,7 @@ const A_APP_TIDRAPPORTERING_BYGG_HTML = `
 <p>I byggbranschen är det sällan bara ”åtta timmar” som ska rapporteras. Byggavtalet har regler för OB-tillägg, övertid och restidsersättning, och räknar man dem för hand smyger felen in – oftast till företagets nackdel. I ByggExp väljer medarbetaren timtyp (normal, övertid eller OB) för varje pass och registrerar restid separat, så att löneunderlaget visar timmarna per timtyp. Satserna hämtar du ur Byggavtalet – appen räknar inte ut dem automatiskt. Det ger ett underlag för lön och faktura som håller om beställaren ifrågasätter timmarna.</p>
 
 <h2>Från tid till lön och faktura – ett flöde</h2>
-<p>Poängen med digital tidrapportering är att samma timme bara matas in en gång och sedan används överallt. De granskade och attesterade passen blir <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a>, <a href="/sv/blog/fakturera-fran-byggexp">fakturarader</a> och en post i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektuppföljningen</a> samtidigt. Ska du välja verktyg för hela kedjan? Läs vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
+<p>Poängen med digital tidrapportering är att samma timme bara matas in en gång och sedan används överallt. De granskade och attesterade passen blir <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag</a>, <a href="/sv/blog/fakturera-fran-byggexp">fakturarader</a> och en post i <a href="/sv/blog/projektekonomi-och-lonsamhet">projektuppföljningen</a> samtidigt. Ska du välja verktyg för hela kedjan? Se vårt <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 <h2>Hantverkare eller entreprenad?</h2>
 <p>För <a href="/sv/blog/tidrapportering-hantverkare">hantverkare</a> är loggad tid oftast direkt underlag för kundfakturan. I entreprenader enligt AB 04 och ABT 06 tillkommer attest och ÄTA-timmar som ska hållas isär – det går vi igenom i guiden om <a href="/sv/blog/tidrapportering-entreprenad">tidrapportering för entreprenad</a>.</p>
@@ -952,7 +952,7 @@ const A_STAMPELKLOCKA_APP_GPS_HTML = `
 <p>Bygg innebär källare, nybyggen och platser med dålig mobiltäckning. Fråga leverantören hur appen beter sig där. I ByggExp behöver appen uppkoppling för att stämpla in; saknas täckning registrerar medarbetaren timmarna manuellt i efterhand, per projekt och dag.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du byta väggklockan mot en app? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Vill du jämföra alternativ först? Se vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>. Hur incheckningen, personalöversikten och attesten fungerar i ByggExp visar vi på sidan om vår <a href="/sv/funktioner/stampelklocka">stämpelklocka-app för bygg</a>.</p>
+<p>Vill du byta väggklockan mot en app? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Vill du se hela flödet från stämpling till lön? Se vårt <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>. Hur incheckningen, personalöversikten och attesten fungerar i ByggExp visar vi på sidan om vår <a href="/sv/funktioner/stampelklocka">stämpelklocka-app för bygg</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är en stämpelklocka-app?</h3>
@@ -979,113 +979,9 @@ const A_STAMPELKLOCKA_APP_GPS: BlogPost = {
   publishedAt: "2026-08-22T09:10:00.000Z", createdAt: "2026-08-22T09:10:00.000Z", updatedAt: "2026-10-14T12:00:00.000Z",
 };
 
-const A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
-<p>När företaget växer räcker det inte längre med lappar och Excel. Ett tidrapporteringssystem samlar all tidsregistrering på ett ställe: timmarna registreras i mobilen, samlas per projekt och medarbetare, och blir färdig <a href="/sv/blog/tidredovisning-app">tidredovisning</a> för lön, faktura och uppföljning. Här går vi igenom vad ett tidrapporteringssystem för bygg bör klara – och varför "enkelt" ofta slår "avancerat".</p>
-
-<p>Vill du komma igång snabbt? Ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering och export</a>.</p>
-<figure class="article-diagram"><img src="/landing/diagrams/tidrapporteringssystem.webp" alt="Diagram: tidsregistrering, tidrapportering och tidredovisning i tre steg" width="720" height="380" loading="lazy"><figcaption>Tre steg i ett system: tidsregistrering (stämpling), tidrapportering (koppling till projekt) och tidredovisning (underlag för lön och faktura).</figcaption></figure>
-
-<p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
-
-<h2>Vad är ett tidrapporteringssystem?</h2>
-<p>Ett tidrapporteringssystem är verktyget som hanterar hela flödet från registrerad tid till färdigt underlag. Skillnaden mot en enskild stämpelklocka är att systemet också strukturerar, summerar och exporterar tiden – tidsregistrering, tidrapportering och tidredovisning i samma kedja.</p>
-
-<h2>Tidsregistrering, tidrapportering och tidredovisning – vad är skillnaden?</h2>
-<ul>
-<li><strong>Tidsregistrering</strong> – själva stämplingen: när någon börjar och slutar arbeta.</li>
-<li><strong>Tidrapportering</strong> – timmarna kopplas till projekt och aktivitet.</li>
-<li><strong>Tidredovisning</strong> – det sammanställda underlaget som går till lön, faktura och uppföljning.</li>
-</ul>
-<p>Ett bra system tar dig genom alla tre stegen utan att du matar in samma siffra två gånger.</p>
-
-<h2>Varför ett enkelt tidrapporteringssystem oftast vinner</h2>
-<p>Det mest avancerade systemet är värdelöst om laget inte orkar använda det. Ett enkelt tidrapporteringssystem – där man bara checkar in och ut i mobilen – får hög följsamhet, och det är följsamheten som avgör om siffrorna stämmer. Leta efter appar som personalen kan börja använda samma dag, utan utbildning.</p>
-
-<h2>Tecken på att du vuxit ur Excel</h2>
-<p>En <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> räcker långt för den minsta firman. Men flera av de här signalerna betyder att det är dags för ett riktigt system:</p>
-<ul>
-<li>Du lägger timmar varje vecka på att renskriva och räkna ihop tid.</li>
-<li>Timmar hamnar på fel projekt – eller glöms bort helt.</li>
-<li>Du kan inte se nedlagd tid mot budget förrän projektet är klart.</li>
-<li>Löne- och fakturaunderlaget bygger på minne i stället för data.</li>
-<li>Fler än ett par personer ska rapportera, på olika arbetsplatser.</li>
-</ul>
-
-<h2>Kalkylark vs tidrapporteringssystem</h2>
-<div class="article-table"><table>
-<thead><tr><th>&nbsp;</th><th>Excel / mall</th><th>Tidrapporteringssystem</th></tr></thead>
-<tbody>
-<tr><td><strong>Registrering</strong></td><td>Manuell, i efterhand</td><td>I mobilen, när passet sker</td></tr>
-<tr><td><strong>Projektkoppling</strong></td><td>Skrivs in för hand</td><td>Automatisk</td></tr>
-<tr><td><strong>Sammanställning</strong></td><td>Formler du underhåller</td><td>Klar per medarbetare och period</td></tr>
-<tr><td><strong>Lön &amp; faktura</strong></td><td>Kopiera och klistra</td><td>Export med ett klick</td></tr>
-<tr><td><strong>Tid mot budget</strong></td><td>Svår att få fram</td><td>I realtid</td></tr>
-<tr><td><strong>Skalar med teamet</strong></td><td>Nej</td><td>Ja</td></tr>
-</tbody>
-</table></div>
-
-<h2>Så byter du från Excel till ett system</h2>
-<p>Bytet behöver inte vara dramatiskt. Lägg upp pågående projekt och medarbetare i webbadmin, låt laget ladda ner appen och börja checka in – och kör mallen parallellt någon vecka tills alla är trygga. Eftersom ett enkelt system inte kräver utbildning är övergången oftast klar på dagar, inte månader.</p>
-
-<figure class="app-shots"><img src="/features-content/automatisk-tidrapportering-och-export-1.webp" alt="Tidrapporteringssystem i mobilen: arbetspass med planerade, manuella och GPS-timmar i en månadskalender" width="1000" height="548" loading="lazy"><figcaption>Tidrapporteringssystemet i appen – planerade, manuella och GPS-timmar samlade per medarbetare, klara att summera och exportera.</figcaption></figure>
-
-<h2>Exportera tidredovisning till Excel, lön och faktura</h2>
-<p>Nyttan med systemet ligger i sista steget: att den samlade tiden blir ett färdigt underlag utan handpåläggning. I tabellen ser du tre typer av timmar per medarbetare och dag – <strong>planerade</strong> timmar (satta utifrån arbetstiden när projektet skapades, och redigerbara direkt i tabellen), <strong>GPS-timmar</strong> (registrerade via platsdata) och <strong>manuellt inmatade</strong> timmar. Är någon frånvarande tas timmarna bort automatiskt, och vill du låta den manuella tiden ersätta den planerade räcker det att klicka på den.</p>
-<p>När perioden stämmer exporterar du den till <strong>Excel, CSV eller PDF</strong> med ett klick – ett rent ark med varje medarbetare, varje dag och summorna redan uträknade. Samma underlag kan du <strong>förbereda som faktura</strong> eller <strong>skicka till lön</strong> genom att bocka i de medarbetare du vill ha med.</p>
-<figure class="video-embed" style="position:relative;width:100%;aspect-ratio:16/9;margin:24px 0"><iframe src="https://www.youtube-nocookie.com/embed/eJg6SQWo9iY" title="Exportera tidrapporter till Excel, lön och faktura i ByggExp" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px"></iframe></figure>
-
-<h2>Vad ett tidrapporteringssystem för bygg bör klara</h2>
-<ul>
-<li>Enkel tidsregistrering i mobilen (iPhone och Android), gärna med GPS.</li>
-<li>Automatisk koppling till rätt projekt.</li>
-<li>Sammanställd tidredovisning per medarbetare och period.</li>
-<li>Export till lön och faktura.</li>
-<li>Koppling till <a href="/sv/blog/projektekonomi-och-lonsamhet">projektekonomin</a> så du ser tid mot budget.</li>
-</ul>
-<p>Jämför 8 system med pris i <a href="/sv/blog/basta-tidrapporteringssystem-bygg">bästa tidrapporteringssystem för bygg 2026</a>.</p>
-
-<h2>Kom igång</h2>
-<p>Vill du se ett enkelt tidrapporteringssystem för bygg i praktiken? <a href="/sv/blog/automatisk-tidrapportering-och-export">Läs om automatisk tidrapportering</a>, ladda ner vår gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Hur hela flödet från stämpling till attest och lön fungerar i ByggExp ser du på sidan om vårt <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>, och pris för appen på sidan om vår <a href="/sv/tidrapportering-app">tidrapportering-app</a>.</p>
-
-<h2>Relaterade guider om tidrapportering</h2>
-<ul>
-<li><a href="/sv/funktioner/tidrapporteringssystem-bygg">Tidrapportering-app för byggföretag</a> – timmar till lön och faktura.</li>
-<li><a href="/sv/blog/stampelklocka-app-gps-bygg">Stämpelklocka app med GPS</a> – in- och utstämpling med platsbekräftelse.</li>
-<li><a href="/sv/blog/mobil-tidrapportering">Mobil tidrapportering</a> – rapportera tid där jobbet görs.</li>
-<li><a href="/sv/blog/personalliggare-bygg-app">Personalliggare app</a> – närvaro i realtid, redo för Skatteverket.</li>
-<li><a href="/sv/blog/tidrapportering-hantverkare">Tidrapportering för hantverkare</a> och <a href="/sv/blog/tidrapportering-entreprenad">för entreprenad</a>.</li>
-</ul>
-
-<h2>Vanliga frågor</h2>
-<h3>Vad är ett tidrapporteringssystem?</h3>
-<p>Ett verktyg som hanterar hela flödet från registrerad tid till färdigt underlag – tidsregistrering, tidrapportering och tidredovisning på ett ställe, med export till lön och faktura.</p>
-<h3>Vad är skillnaden mellan tidsregistrering och tidredovisning?</h3>
-<p>Tidsregistrering är själva stämplingen (när man börjar och slutar). Tidredovisning är det sammanställda underlaget som går till lön, faktura och uppföljning. Ett tidrapporteringssystem kopplar ihop dem.</p>
-<h3>Behöver ett litet byggföretag ett tidrapporteringssystem?</h3>
-<p>Ja, ofta redan från ett par anställda. Ett enkelt system minskar administration och fel, och ger korrekt underlag för lön och faktura direkt.</p>
-<h3>Vad kännetecknar ett enkelt tidrapporteringssystem?</h3>
-<p>Att personalen bara checkar in och ut i mobilen utan utbildning. Hög följsamhet är viktigare än många funktioner – det är det som gör att siffrorna stämmer.</p>
-<h3>När ska man byta från Excel till ett tidrapporteringssystem?</h3>
-<p>När du lägger tid varje vecka på att renskriva timmar, när timmar hamnar fel eller glöms, eller när fler än ett par personer ska rapportera från olika arbetsplatser. Då tjänar ett system snabbt in sig.</p>
-<h3>Hur lång tid tar det att komma igång?</h3>
-<p>Ett enkelt system kräver ingen utbildning – lägg upp projekt och medarbetare, låt laget ladda ner appen och börja checka in. Övergången är oftast klar på dagar.</p>
-<h3>Kan jag exportera tidrapporten till Excel eller PDF?</h3>
-<p>Ja. Du exporterar den valda perioden till Excel, CSV eller PDF med ett klick – ett färdigt ark per medarbetare och dag med summorna uträknade. Samma underlag kan förberedas som faktura eller skickas till lön.</p>
-`.trim();
-
-const A_TIDRAPPORTERINGSSYSTEM_BYGG: BlogPost = {
-  _id: "code-tidrapporteringssystem-bygg",
-  title: "Så väljer du tidrapporteringssystem för bygg – guide och checklista", slug: "tidrapporteringssystem-bygg", locale: "sv",
-  excerpt: "Ett tidrapporteringssystem samlar tidsregistrering, tidrapportering och tidredovisning på ett ställe – timmar i mobilen, färdigt underlag för lön och faktura. Så väljer du rätt.", tag: "Digitalisering",
-  coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: A_TIDRAPPORTERINGSSYSTEM_BYGG_HTML,
-  seoTitle: "Så väljer du tidrapporteringssystem för bygg – guide | ByggExp", seoDescription: "Tidrapporteringssystem för bygg: tidsregistrering i mobilen, tidredovisning per projekt och export till lön och faktura. Så väljer du ett enkelt system.",
-  seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-22T09:20:00.000Z", createdAt: "2026-08-22T09:20:00.000Z", updatedAt: "2026-08-22T09:20:00.000Z",
-};
-
 const A_BASTA_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 <p>Vilket är det bästa tidrapporteringssystemet för bygg? Det beror på hur stort laget är, om ni behöver lön och faktura i samma system och hur mycket ni vill betala per person. Här jämför vi 8 system som svenska byggföretag och hantverkare använder: pris, gratis test, mobilapp, GPS-stämpling och export till lön.</p>
-<p>ByggExp är vårt eget system och står därför först. Uppgifterna om de andra systemen kommer från leverantörernas egna webbplatser i oktober 2026, och varje system får både en styrka och en svaghet. Vill du först förstå vad ett system ska klara, läs guiden om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
+<p>ByggExp är vårt eget system och står därför först. Uppgifterna om de andra systemen kommer från leverantörernas egna webbplatser i oktober 2026, och varje system får både en styrka och en svaghet. Vill du först se vad ett system ska klara, se vårt <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 <h2>Jämförelse: 8 tidrapporteringssystem för bygg</h2>
 <div class="article-table article-table--compare"><table>
@@ -1230,7 +1126,7 @@ const A_PROJEKTUPPFOLJNING_BYGG_HTML = `
 <figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projektuppföljning – följ timmar, kostnader, fakturerat och marginal mot budget i realtid" width="720" height="380" loading="lazy"><figcaption>Följ timmar, kostnader, fakturerat och marginal mot budget löpande – så hinner du agera innan budgettaket.</figcaption></figure>
 
 <h2>Vad är projektuppföljning i bygg?</h2>
-<p>Projektuppföljning betyder att du löpande jämför utfall mot plan: nedlagda timmar mot budgeterade, kostnader mot budget och fakturerat mot kontrakt. Målet är att upptäcka avvikelser medan du fortfarande kan agera – inte när projektet är klart.</p>
+<p>Projektuppföljning betyder att du löpande jämför utfall mot plan: nedlagda timmar mot budgeterade, kostnader mot budget och fakturerat mot kontrakt. Målet är att upptäcka avvikelser medan du fortfarande kan agera – inte när projektet är klart. Uppföljningen förutsätter att projektets uppgifter, timmar och foton finns samlade – se <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>.</p>
 
 <h2>Siffrorna du bör följa</h2>
 <div class="article-table"><table>
@@ -1396,7 +1292,7 @@ const S_TIDRAPPORTERING_ENTREPRENAD_HTML = `
 <li><strong>SIE4-fil</strong> – för import i bokföringsprogram som Fortnox, Visma och Björn Lundén. Ingår i integrationstillägget för 199 kr/mån.</li>
 <li><strong>Tidrapport som PDF och Excel</strong> – underlag till beställaren eller för arkivet.</li>
 </ul>
-<p>Du laddar ner filen och läser in den i det andra systemet. Mer om flödet i ByggExp:s <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering online</a> och om valet av <a href="/sv/blog/loneprogram-bygg">löneprogram för bygg</a>.</p>
+<p>Du laddar ner filen och läser in den i det andra systemet. Tidrapportering och attest ingår i paketet Koll på jobbet för 690 kr/mån exkl. moms med 10 användare, och du testar gratis i 14 dagar – se <a href="/sv/priser">priser</a>. Mer om flödet i ByggExp:s <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering online</a> och om valet av <a href="/sv/blog/loneprogram-bygg">löneprogram för bygg</a>.</p>
 
 <h2>Omvänd byggmoms och ROT – vad tidrapporten ska visa</h2>
 <p>Momsen sätts på fakturan, inte i tidrapporten, men tidrapporten avgör om fakturan blir rätt.</p>
@@ -1448,7 +1344,7 @@ const S_TIDRAPPORTERING_ENTREPRENAD: BlogPost = {
   title: "Tidrapportering för entreprenad – attest, ÄTA och underentreprenörer", slug: "tidrapportering-entreprenad", locale: "sv",
   excerpt: "Tidrapportering i entreprenader: timmar per projekt, ÄTA separat, attest före lön och faktura, månadsunderlag till beställaren och kontroll av UE:s timmar.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/3personal.webp", contentHtml: S_TIDRAPPORTERING_ENTREPRENAD_HTML,
-  seoTitle: "Tidrapportering entreprenad – attest, ÄTA och UE | ByggExp", seoDescription: "Tidrapportering för entreprenad: timmar per projekt, ÄTA separat, attest före lön och faktura, kontroll av UE-timmar och export via CSV och SIE4.",
+  seoTitle: "Tidrapportering entreprenad – attest, ÄTA och UE | ByggExp", seoDescription: "Tidrapportering för entreprenad i mobilen: timmar per projekt, ÄTA separat och attest före lön och faktura. 690 kr/mån för 10 användare, 14 dagar gratis.",
   seoImageUrl: `${SITE_URL}/landing/features/3personal.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T10:05:00.000Z", createdAt: "2026-08-22T10:05:00.000Z", updatedAt: "2026-10-06T10:00:00.000Z",
 };
@@ -1584,7 +1480,7 @@ const S_STAMPELKLOCKA_ANDROID_HTML = `
 
 <h2>Vanliga frågor</h2>
 <h3>Finns det en stämpelklocka-app för Android?</h3>
-<p>Ja. ByggExp-appen finns för Android och låter medarbetaren checka in och ut med GPS, med timmarna kopplade till rätt projekt.</p>
+<p>Ja. ByggExp-appen finns för Android och låter medarbetaren checka in och ut med GPS, med timmarna kopplade till rätt projekt. Se hur incheckning, personalöversikt och attest fungerar i vår <a href="/sv/funktioner/stampelklocka">stämpelklocka för bygg</a>.</p>
 <h3>Fungerar samma app om någon i laget har iPhone?</h3>
 <p>Ja. Appen finns för både Android och iPhone med samma funktion, så hela laget kan stämpla in oavsett telefon.</p>
 <h3>Varför ska jag tillåta platsåtkomst på Android?</h3>
@@ -1635,7 +1531,7 @@ const S_STAMPELKLOCKA_IPHONE_HTML = `
 
 <h2>Vanliga frågor</h2>
 <h3>Finns det en stämpelklocka-app för iPhone?</h3>
-<p>Ja. ByggExp-appen finns för iPhone och låter medarbetaren checka in och ut med GPS, med timmarna kopplade till rätt projekt.</p>
+<p>Ja. ByggExp-appen finns för iPhone och låter medarbetaren checka in och ut med GPS, med timmarna kopplade till rätt projekt. Se hur incheckning, personalöversikt och attest fungerar i vår <a href="/sv/funktioner/stampelklocka">stämpelklocka för bygg</a>.</p>
 <h3>Fungerar samma app på Android?</h3>
 <p>Ja. Appen finns för både iPhone och Android med samma funktion, så hela laget kan stämpla in oavsett telefon.</p>
 <h3>Vilken platsbehörighet behöver appen på iPhone?</h3>
@@ -1654,7 +1550,7 @@ const S_STAMPELKLOCKA_IPHONE: BlogPost = {
 
 const S_TIDREDOVISNING_APP_HTML = `
 <p>Tidredovisning är sista steget: att sammanställa de registrerade timmarna till ett underlag som går till lön, faktura och bokföring. En app för tidredovisning gör det automatiskt – du slipper renskriva och summera manuellt. Här går vi igenom vad en tidredovisning-app bör klara.</p>
-<p>Se helheten i vår guide om <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
+<p>Se helheten i vårt <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/tidrapporteringssystem.webp" alt="Diagram: tidsregistrering, tidrapportering och tidredovisning i tre steg" width="720" height="380" loading="lazy"><figcaption>Tidredovisning är sista steget: det sammanställda underlaget för lön, faktura och uppföljning.</figcaption></figure>
 <p class="eco-note"><strong>GPS eller manuellt – ni väljer:</strong> alla vill inte dela sin position, och det behöver de inte. I ByggExp kan medarbetaren i stället fylla i sina timmar manuellt i appen – per projekt och dag. De manuella timmarna hamnar i samma tidrapport och export till lön och faktura som GPS-tiderna, och i webbadmin ser du planerade, GPS- och manuella timmar sida vid sida.</p>
@@ -1686,7 +1582,7 @@ const S_TIDREDOVISNING_APP_HTML = `
 <p>Innan redovisningen går vidare bör passen granskas och attesteras av arbetsledaren. Då fångas felstämplingar och glömda utcheckningar innan de blir fel i lön eller faktura – och underlaget blir något du kan stå för om det ifrågasätts.</p>
 
 <h2>Kom igång</h2>
-<p>Läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering och export</a> eller <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag för byggföretag</a>. Vill du se hela kedjan? Se <a href="/sv/blog/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
+<p>Läs om <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering och export</a> eller <a href="/sv/blog/loneunderlag-for-byggforetag">löneunderlag för byggföretag</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är tidredovisning?</h3>
@@ -1732,7 +1628,7 @@ const S_PERSONALLIGGARE_APP_HTML = `
 <p>En vanlig missuppfattning är att du måste ha <a href="/sv/blog/id06">ID06</a>-kort och kortläsare för att uppfylla lagen. Det stämmer inte. Lagen kräver en <strong>elektronisk personalliggare</strong> – inte en viss teknik eller ett visst kort. Med en personalliggare-app registrerar var och en sin närvaro i mobilen, helt utan kortläsare eller dyr hårdvara. ID06 kan användas där en beställare kräver det, men det är inte ett lagkrav för själva liggaren.</p>
 
 <h2>Koppling till närvaro och tid</h2>
-<p>Personalliggare-appen hänger ihop med <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning</a> – samma incheckning som registrerar arbetstid kan föra personalliggaren. I ByggExp checkar personalen in och ut med GPS i samma app som tid, projekt och foto, och ur passen kan du ta ut en personalliggare som PDF. Stäm av med Skatteverkets krav vilken lösning ni behöver för den elektroniska personalliggaren.</p>
+<p>Personalliggare-appen hänger ihop med <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning</a> – samma incheckning som registrerar arbetstid kan föra personalliggaren. I ByggExp checkar personalen in och ut med GPS i samma app som tid, projekt och foto, och ur passen kan du ta ut en personalliggare som PDF. Incheckningen beskriver vi på sidan om vår <a href="/sv/funktioner/stampelklocka">stämpelklocka för bygg</a>. Stäm av med Skatteverkets krav vilken lösning ni behöver för den elektroniska personalliggaren.</p>
 
 <h2>Skatteverkets kontroll och kontrollavgift</h2>
 <p>Skatteverket får göra oanmälda besök på arbetsplatsen och begära att liggaren visas direkt. Saknas den, eller är den bristfällig, utgår en kontrollavgift på <strong>12 500 kr per kontrolltillfälle om liggaren inte förs eller inte kan visas, plus 2 500 kr för varje verksam person som saknas i liggaren</strong>. På ett bygge med flera lag och underentreprenörer blir det snabbt dyrt – och det är hela poängen med att låta en app hålla liggaren korrekt automatiskt. Aktuella belopp och undantag går vi igenom i guiden om <a href="/sv/blog/kontrollavgift-personalliggare">kontrollavgift för personalliggare</a>, och hela regelverket i <a href="/sv/blog/personalliggare">personalliggare i byggbranschen</a>.</p>
@@ -2250,7 +2146,7 @@ const A_PROJEKTPLANERING_BYGG_HTML = `
 <li><a href="/sv/funktioner/projekthantering">Projektledning för byggföretag</a> – led byggprojekt från anbud till överlämning.</li>
 <li><a href="/sv/blog/gantt-schema-mall-bygg">Gantt-schema och tidsplan för byggprojekt</a> – aktiviteter, beroenden och kritisk linje.</li>
 <li><a href="/sv/blog/resursplanering-bygg">Resursplanering i bygg</a> – undvik överbeläggning och dubbelbokning.</li>
-<li><a href="/sv/blog/schemalaggningssystem-bygg">Schemaläggningssystem för bygg</a> – planera personal, projekt och tid.</li>
+<li><a href="/sv/funktioner/schemalaggning">Schemaläggningssystem för bygg</a> – planera personal, projekt och tid.</li>
 <li><a href="/sv/blog/projektuppfoljning-bygg">Projektuppföljning i bygg</a> – följ plan mot utfall i realtid.</li>
 </ul>
 
@@ -2284,7 +2180,6 @@ export const TILLVAXT_ARTICLES: BlogPost[] = [
   A_SCHEMALAGGNING_BYGG,
   A_APP_TIDRAPPORTERING_BYGG,
   A_STAMPELKLOCKA_APP_GPS,
-  A_TIDRAPPORTERINGSSYSTEM_BYGG,
   A_BASTA_TIDRAPPORTERINGSSYSTEM_BYGG,
   A_PROJEKTUPPFOLJNING_BYGG,
   S_TIDRAPPORTERING_HANTVERKARE,

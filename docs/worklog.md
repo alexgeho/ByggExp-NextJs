@@ -1,5 +1,17 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 🟡 2026-11-13 — SEO: внутренний вес на страницы функций (ветка `seo-2026-11-13`, НЕ live)
+- GSC 15.10–11.11: .se 1 222 кл / 168,2K пок / поз. 13,6; .no 69 / 10,0K / 27,7. Кластер «tidrapport*» — 26 218 показов, 0 кликов, 52 URL.
+- Узкое место: страницы /sv/funktioner/* (владельцы коммерческих ключей) получали 4–25 внутренних ссылок из 337 sv-страниц; главная и /sv/verktyg — 0. Точные анкоры («tidrapporteringssystem för bygg», «Schemaläggningssystem för bygg») вели на статьи блога.
+- Сделано: карточки главной sv → /sv/funktioner/* (как на nb, `SV_FUNKTION_LINKS` в Features.tsx); пункты ProductBanner — ссылки на страницы функций (sv 3 из 4, nb 4 из 4; вид не меняется); 301 /sv/blog/tidrapporteringssystem-bygg → /sv/funktioner/tidrapporteringssystem-bygg (тёзка страницы функции: 103 показа, поз. 46, 0 кликов); 18 ссылок «вверх» из статей и шаблонов кластеров; description с ценой у tidrapportering-entreprenad и offertprogram-byggforetag (+ цена пакета в тексте).
+- Счётчик ссылок (обход сборки, 337 sv URL): tidrapporteringssystem-bygg 25 → 309, projekthantering 7 → 304, offert-kalkyl 6 → 305, stampelklocka 4 → 8, schemalaggning 5 → 8, lon 3 → 6.
+- build ок, tsc ок, eslint по изменённым файлам чисто. Отчёт: ~/sites-hub/audits/2026-11-13/byggexp.md.
+### NÄSTA
+1. Главный агент: проверка → merge → деплой; GSC Sitemaps переотправить.
+2. Сверка 27.11 и 11.12: позиция страниц функций по своим ключам (сейчас 22–23), доля показов «запрос × страница функции».
+3. Если страница функции обгонит статью-дубль по её запросу — 301 статьи (правило B архитектуры): app-for-tidrapportering-bygg, enkelt-tidrapporteringssystem, tidredovisning-app, tidredovisning-byggforetag, schemalaggning(-ssystem)-bygg.
+4. /sv/tidrapportering-app (4 875 показов, поз. 22,6) — всего 12 внутренних ссылок; следующий кандидат на ссылки.
+
 ## 🟢 2026-10-31 (вечер) — SMM: пост 02 «Uppgifter» + закреп-карусель карточек
 ### KLART
 - Пост 02: заголовок «Inga *glömda* uppgifter / *påminner* tills de *bekräftas*» (напоминания до подтверждения сотрудником), тексты FB/LinkedIn, 1.jpg и «02-uppgifter – alla 3» пересобраны (0b63a9c, 09587f9).

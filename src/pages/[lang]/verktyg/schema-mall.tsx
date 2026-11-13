@@ -150,7 +150,7 @@ export default function SchemaMallPage() {
               <p>
                 Mallen ovan är gratis att använda. När laget växer blir pappersschemat snabbt rörigt – då
                 är ett{' '}
-                <a href={`/${LOCALE}/blog/schemalaggningssystem-bygg`}>schemaläggningssystem</a> smidigare:
+                <a href={`/${LOCALE}/funktioner/schemalaggning`}>schemaläggningssystem</a> smidigare:
                 du planerar{' '}
                 <a href={`/${LOCALE}/blog/personalplanering-bygg`}>bemanningen</a> per projekt, ser{' '}
                 <a href={`/${LOCALE}/blog/resursplanering-bygg`}>beläggningen</a> tvärs över byggena och
@@ -170,7 +170,7 @@ export default function SchemaMallPage() {
         }}
         relatedHeading="Fler guider och mallar"
         related={[
-          { href: `/${LOCALE}/blog/schemalaggningssystem-bygg`, label: 'Schemaläggningssystem för bygg' },
+          { href: `/${LOCALE}/funktioner/schemalaggning`, label: 'Schemaläggningssystem för bygg' },
           { href: `/${LOCALE}/blog/personalplanering-bygg`, label: 'Bemanning & personalplanering' },
           { href: `/${LOCALE}/verktyg/gantt-schema-mall`, label: 'Gantt-schema / tidsplan – mall' },
           { href: `/${LOCALE}/verktyg/tidrapport-mall`, label: 'Tidrapport – gratis mall' },

@@ -439,6 +439,38 @@
   }
 }
 
+/* R20: package price right under the H1 — same look as the home hero price
+   lines (muted text, price in ink). */
+.fn .em-hero-content {
+  h1 {
+    margin-bottom: var(--ds-space-2, 16px);
+  }
+  .fn-hero-price {
+    margin: 0 0 var(--ds-space-2, 16px);
+    font-size: clamp(16px, 2vw, 24px);
+    line-height: 1.45;
+    color: var(--muted);
+    strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+  }
+}
+/* R20: the page's CTA button repeated inside the long text — same size as
+   the hero button of the page on every width. */
+.blog-article-content .fn-inline-cta {
+  margin-top: var(--ds-space-4, 32px);
+  .btn-primary {
+    padding: 16px 28px;
+    border: 1px solid transparent;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--white);
+    text-decoration: none;
+  }
+}
+
 /* H1: the accent always starts on its own line, on every feature page. */
 .fn .em-hero-content h1 span {
   display: block;

@@ -14,6 +14,7 @@ import {
 } from "../../content/funktion-pages";
 import { funksjonHreflang, getFunksjonPageNb } from "../../content/funksjon-pages-nb";
 import { illuRows } from "../../lib/illu-rows";
+import { inlineCtas } from "../../lib/inline-cta";
 import { localeOrigin } from "../../lib/seo";
 import { shotRows } from "../../lib/shot-rows";
 import { ctaTranslations } from "../../locales/CTA";
@@ -47,6 +48,8 @@ const UI = {
     usersFaktura: "max 2 användare",
     usersIncluded: "inkl. 10 användare",
     offerPer: "per företag och månad exkl. moms",
+    perMonth: "kr/mån",
+    exVat: "exkl. moms",
   },
   nb: {
     folder: "funksjoner",
@@ -65,6 +68,8 @@ const UI = {
     usersFaktura: "maks 2 brukere",
     usersIncluded: "inkl. 10 brukere",
     offerPer: "per bedrift og måned eks. mva.",
+    perMonth: "NOK/mnd",
+    exVat: "eks. mva.",
   },
 } as const;
 
@@ -118,6 +123,11 @@ export default function FunktionPageView({ lang, slug }: Props) {
     .split(". ")[0]
     .replace(/\.$/, "")}.`;
   const { price } = PLAN_PRICE[page.plan];
+  // R20: the long text repeats the page's own CTA after every third section.
+  const bodyHtml = inlineCtas(
+    shotRows(illuRows(page.body)),
+    `<div class="fn-inline-cta"><a href="#cta" class="btn-primary">${ui.cta}</a></div>`,
+  );
 
   const schema = [
     {
@@ -232,6 +242,13 @@ export default function FunktionPageView({ lang, slug }: Props) {
               <h1>
                 {page.h1} <span>{page.h1Accent}</span>
               </h1>
+              {/* R20: package price right under the H1 (numbers: Pricing.tsx). */}
+              <p className="fn-hero-price">
+                <strong>
+                  {price} {ui.perMonth}
+                </strong>{" "}
+                {ui.exVat} · {usersText}
+              </p>
               <p className="em-lead">{page.lead}</p>
               <a href="#cta" className="btn-primary">
                 {ui.cta}
@@ -344,7 +361,7 @@ export default function FunktionPageView({ lang, slug }: Props) {
           <div className="container container-narrow">
             <div
               className="blog-article-content"
-              dangerouslySetInnerHTML={{ __html: shotRows(illuRows(page.body)) }}
+              dangerouslySetInnerHTML={{ __html: bodyHtml }}
             />
           </div>
         </section>

@@ -1,3 +1,6 @@
+## 13.11 — заявки (leads-2026-11-13)
+- [x] Страницы функций (FunktionPageView, sv + nb): строка цены пакета под H1 (цифры из Pricing.tsx) + кнопка «Boka gratis konsultation» / «Bestill gratis konsultasjon» после каждых 3 разделов текста (сейчас кнопка только в начале и в конце). Тип кнопки не менять (cta.ts — только консультация). Ветка leads-2026-11-13, без деплоя.
+
 ## 07.11 — SEO-уровни
 - [x] SEO-уровень 07.11 (byggexp.se): /sv/blog/affarssystem-byggforetag под «affärssystem bygg» (347 пок., поз. 18,6): title/H1, ответ вверху, таблица «Vad ingår», FAQ «Vad kostar», ссылка с /sv/priser
 - [x] SEO-уровень 07.11 (byggexp.no): hms-kort-gyldighet — title с ответом «To år», таблица ситуаций, § 8/8a/9 по forskrift (arbeidstilsynet.no); «inntil to år» → «to år» во всём HMS-кластере; ссылка с sjekke-hms-kort вверху (каннибализация «hms kort gyldighet»)

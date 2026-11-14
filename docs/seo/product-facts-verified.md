@@ -6,7 +6,7 @@
 
 ## Tidrapportering / Arbetspass
 - YES: mobile app (iPhone + Android) check-in/out with GPS; geofence auto-pause when leaving project area; hours per project; hour type normal/övertid/OB chosen per pass; restid (km + minutes); traktamente (none/half/full); ÄTA tagged on the shift (ataId) → billable later; attest/approval (one level, by admin/project admin); exports: time report PDF + Excel (xlsx), payroll CSV, AGI-underlag CSV, SIE4 export (for Fortnox/Visma/BL; integrations add-on 199 kr/mån); personalliggare PDF; certificates incl. ID06 with expiry date on the user.
-- NO: Fortnox/Visma API integration (say "SIE4-fil / CSV-export"), offline mode, multi-level or UE attest, OB/övertid auto-calculated per Byggavtalet (worker picks hour type; don't claim automatic Byggavtalet calc), ID06 card/register integration, subcontractor role.
+- NO: offline mode, multi-level or UE attest, OB/övertid auto-calculated per Byggavtalet (worker picks hour type; don't claim automatic Byggavtalet calc), ID06 card/register integration, subcontractor role.
 
 ## Lön (Löner, webbadmin) — code-checked 2026-10-14
 - YES: lönekörning per period; timmar per medarbetare och timtyp (normal/övertid/OB enligt passets timtyp); bruttolön = timmar × timlön × faktor för OB/övertid som ni själva anger (1 = normal); skatteavdrag per rad. Source: ByggExp-BackEnd/src/payroll/payroll-math.ts (computeLineAmounts), payroll/schemas/payroll-run.schema.ts (multiplier).
@@ -106,3 +106,10 @@ Code-checked read-only for /nb/funksjoner/* (BE = ByggExp-BackEnd, AD = byggexp-
 
 ### Planlegging (re-confirmed)
 - Planering Gantt — AD src/features/schedule/SchedulePage.jsx:51,486,501-503, endringslogg :475; Bemanning click-to-assign :285, approved leave :109,165, >8 h red :421 (AD src/features/bemanning/BemanningPage.jsx). Worker does NOT see Bemanning in the app — MO hooks/useScheduleData.js:16-20.
+
+## Integrationer — bekräftat av ägaren 2026-11-14 (ersätter tidigare «NO: Fortnox/Visma API integration»)
+- YES: Fortnox – integration (API): fakturor och leverantörsfakturor går mellan ByggExp och Fortnox.
+- YES: Visma – SIE4-fil och löneunderlag till Visma Lön (export, inte API).
+- YES: Grossister – materialbeställning i appen till Ahlsell, Beijer, Dahl, Optimera och Lundagrossisten (beställning, inte EDI).
+- Formulering i text: «Fungerar med Fortnox, Visma och grossisterna» (SMM-regel S32). Källa: ägaren («Fortnox, Visma och grossister – integration finns») + karusell 12; inte kodgranskat i denna omgång.
+- NO: påstå inte «Visma API» eller «EDI med grossister».

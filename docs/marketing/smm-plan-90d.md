@@ -1,5 +1,7 @@
 # ByggExp — SMM-план на 90 дней
 
+> ⚠️ УСТАРЕЛ (14.11.2026). Действующий план: `docs/marketing/smm-plan-2026-11-14.md` — продающая упаковка. Этот файл оставлен как история.
+
 Дата: 2026-10-19. Основа: Svenskarna och internet 2025, Nordicom 2025, бенчмарки Metadata/WordStream/Buffer.
 
 ## 1. Куда и зачем

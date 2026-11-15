@@ -120,7 +120,7 @@
 **R38 · 2026-11-15 · Общие компоненты.** Одна сущность = один компонент («Единый компонент»). Новая страница собирается из них; вставленная копия их разметки (свой `features-slider`, `image-lightbox`, `lead-magnet-faq`, `em-price` + `pricing-card`, свой hero с `em-hero`) — дефект, а не вариант. Различия между страницами — пропсы компонента, а не вторая копия.
 | Компонент | Файл | Что это |
 |---|---|---|
-| `FunktionHero` | `src/components/FunktionPage/FunktionHero.tsx` | первый экран: крошки, H1, цена пакета, лид, кнопка, галочки, иллюстрация (R20, R32, R33) |
+| `FunktionHero` | `src/components/FunktionPage/FunktionHero.tsx` | первый экран: крошки, H1, цена пакета, лид, кнопка, галочки, иллюстрация (R20, R32, R33); страницы функций, статьи-функции, `/sv/priser` и `/sv/byt-system` (через `InfoPage`: без строки цены, первая крошка «Hem») |
 | `PillNav` | `src/components/FeatureNav/FeatureNav.tsx` | ряд пилюль функций (R35, R37) |
 | `StepsCarousel` | `src/components/StepsCarousel/StepsCarousel.tsx` | карусель шагов: текст + пункты + скриншот, стрелки, точки (главная, страницы функций, tidrapportering-app, enmansforetag) |
 | `Lightbox` | `src/components/Lightbox/Lightbox.tsx` | картинка на весь экран по клику (Esc / клик закрывает) |

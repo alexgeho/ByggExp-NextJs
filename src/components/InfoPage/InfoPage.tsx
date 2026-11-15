@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 import CTA from "../CTA/CTA";
 import FaqList from "../FaqList/FaqList";
 import Footer from "../Footer/Footer";
+import FunktionHero from "../FunktionPage/FunktionHero";
 import Header from "../Header/Header";
-import { ILLU_HEIGHT_C } from "../../content/funktion-pages-c";
 import { localeOrigin } from "../../lib/seo";
 import { ctaTranslations } from "../../locales/CTA";
 import { footerTranslations } from "../../locales/footer";
@@ -84,41 +84,17 @@ export default function InfoPage(p: InfoPageProps) {
       <Header headerT={headerTranslations[lang]} />
 
       <main className="em fn">
-        <section className="em-hero">
-          <div className="container em-hero-inner">
-            <div className="em-hero-content">
-              <nav className="fn-crumbs" aria-label="Brödsmulor">
-                <a href={`/${lang}`}>Hem</a>
-                <span aria-hidden="true">/</span>
-                <span>{p.name}</span>
-              </nav>
-              <h1>
-                {p.h1} <span>{p.h1Accent}</span>
-              </h1>
-              <p className="em-lead">{p.lead}</p>
-              <a href="#cta" className="btn-primary">
-                Boka gratis konsultation
-              </a>
-              <ul className="em-checks">
-                <li>14 dagar gratis</li>
-                <li>Ingen bindningstid</li>
-                <li>{p.heroCheck}</li>
-              </ul>
-            </div>
-            <div className="em-hero-visual fn-hero-visual">
-              <img
-                src={IMG(p.hero.name, 1200)}
-                srcSet={`${IMG(p.hero.name, 640)} 640w, ${IMG(p.hero.name, 1200)} 1200w`}
-                sizes="(max-width: 900px) 100vw, 560px"
-                width={1200}
-                height={ILLU_HEIGHT_C[p.hero.name]}
-                fetchPriority="high"
-                decoding="async"
-                alt={p.hero.alt}
-              />
-            </div>
-          </div>
-        </section>
+        {/* Shared hero (R38); R32 indent from the real illustration. */}
+        <FunktionHero
+          lang={lang}
+          name={p.name}
+          h1={p.h1}
+          h1Accent={p.h1Accent}
+          crumb={{ href: `/${lang}`, label: "Hem" }}
+          lead={p.lead}
+          heroCheck={p.heroCheck}
+          hero={p.hero}
+        />
 
         {p.children}
 

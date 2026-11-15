@@ -10,9 +10,11 @@ import {
 } from "../../content/funktion-pages";
 import type { LandingLanguageCode } from "../../locales/languages";
 
-// The first screen of a feature page — ONE component for both page types:
+// The first screen of a feature page — ONE component for every page type:
 //   /sv/funktioner/<slug>, /nb/funksjoner/<slug>  (FunktionPageView)
 //   /<lang>/blog/<feature-slug>                   (feature articles, R33)
+//   /sv/priser, /sv/byt-system                    (InfoPage: no price line,
+//                                                  first crumb "Hem")
 // crumbs → H1 (ink + blue accent line) → package price (R20) → lead →
 // consultation button → checks; 3D illustration on the right (R26, R27, R32).
 // Styles: `.em-hero*` / `.fn-*` in styles/enmansforetag.scss and
@@ -57,8 +59,11 @@ export type FunktionHeroProps = {
   name: string;
   h1: string;
   h1Accent: string;
-  /** Package the feature belongs to — the price line comes from PLAN_PRICE. */
-  plan: FunktionPlan;
+  /** Package the feature belongs to — the price line comes from PLAN_PRICE.
+   *  Omitted: no price line (pages that are not about one package). */
+  plan?: FunktionPlan;
+  /** First breadcrumb. Default: the features hub of the language. */
+  crumb?: { href: string; label: string };
   lead: string;
   /** Third check mark (the first two are shared per language). */
   heroCheck: string;
@@ -75,13 +80,13 @@ export default function FunktionHero({
   h1,
   h1Accent,
   plan,
+  crumb,
   lead,
   heroCheck,
   hero,
   ctaHref = "#cta",
 }: FunktionHeroProps) {
   const ui = FUNKTION_HERO_UI[lang];
-  const { price } = PLAN_PRICE[plan];
   const usersText = plan === "faktura" ? ui.usersFaktura : ui.usersIncluded;
 
   return (
@@ -93,7 +98,9 @@ export default function FunktionHero({
       >
         <div className="em-hero-content">
           <nav className="fn-crumbs" aria-label={ui.crumbs}>
-            <a href={`/${lang}/funktioner`}>{ui.hub}</a>
+            <a href={crumb?.href ?? `/${lang}/funktioner`}>
+              {crumb?.label ?? ui.hub}
+            </a>
             <span aria-hidden="true">/</span>
             <span>{name}</span>
           </nav>
@@ -101,12 +108,14 @@ export default function FunktionHero({
             {h1} <span>{h1Accent}</span>
           </h1>
           {/* R20: package price right under the H1 (numbers: Pricing.tsx). */}
-          <p className="fn-hero-price">
-            <strong>
-              {price} {ui.perMonth}
-            </strong>{" "}
-            {ui.exVat} · {usersText}
-          </p>
+          {plan ? (
+            <p className="fn-hero-price">
+              <strong>
+                {PLAN_PRICE[plan].price} {ui.perMonth}
+              </strong>{" "}
+              {ui.exVat} · {usersText}
+            </p>
+          ) : null}
           <p className="em-lead">{lead}</p>
           <a href={ctaHref} className="btn-primary">
             {ui.cta}

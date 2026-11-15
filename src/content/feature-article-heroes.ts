@@ -68,7 +68,7 @@ export const FEATURE_ARTICLE_HEROES: Record<
   'loneunderlag-for-byggforetag': {
     sv: {
       h1: 'Löneunderlag.',
-      h1Accent: 'Timmar blir lönekörning.',
+      h1Accent: 'Från timmar till lön.',
       plan: 'komplett',
       lead: 'Lönekörning per period med timmar per medarbetare och timtyp.',
       heroCheck: 'Lönefil i CSV',
@@ -84,7 +84,7 @@ export const FEATURE_ARTICLE_HEROES: Record<
       h1Accent: 'Marginalen per projekt.',
       plan: 'faktura',
       lead: 'Se kostnad, fakturerat och marginal i procent för varje projekt.',
-      heroCheck: 'Budget mot utfall',
+      heroCheck: 'Marginal i procent',
       hero: {
         name: 'feat-ekonomi-veckoavstamning',
         alt: 'Byggledare i hjälm håller en surfplatta framför en husstomme, med en stapel guldmynt bredvid',
@@ -96,7 +96,7 @@ export const FEATURE_ARTICLE_HEROES: Record<
       h1: 'Tidrapportering.',
       h1Accent: 'Attesterad tid per projekt.',
       plan: 'projekt',
-      lead: 'Laget stämplar in i appen med GPS, du attesterar och exporterar till lön.',
+      lead: 'Laget stämplar in i appen med GPS, du attesterar och exporterar timmarna till Excel eller PDF.',
       heroCheck: 'iPhone och Android',
       hero: {
         name: 'feat-tid-restid',
@@ -135,7 +135,7 @@ export const FEATURE_ARTICLE_HEROES: Record<
       h1: 'Påminnelser.',
       h1Accent: 'Tills jobbet är klart.',
       plan: 'projekt',
-      lead: 'Välj hur ofta appen påminner efter deadline och när chefen får veta.',
+      lead: 'Välj hur ofta appen påminner efter deadline och när chefen får besked.',
       heroCheck: 'Notis i mobilen',
       hero: {
         name: 'projekthantering-uppgifter',

@@ -352,3 +352,14 @@
 .blog-article--fn-hero {
   padding-top: var(--ds-section-pad);
 }
+
+/* R33: the hero keeps one height whatever the illustration, so the block
+   below starts at the same place on every feature page and feature article. */
+@media (min-width: 901px) {
+  .fn .fn-hero-visual {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -173,6 +173,37 @@ const FEATURE_SHORT_TITLE: Record<string, Partial<Record<LandingLanguageCode, st
   'hantera-verktyg-och-utrustning': { sv: 'Verktyg och utrustning', en: 'Tools and equipment', nb: 'Verktøy og utstyr', pl: 'Narzędzia i sprzęt', ru: 'Инструменты и техника' },
 };
 
+// R30: a commercial feature page without a feature article still gets its own
+// carousel card (sv only). The card links to the feature page, not to /blog.
+const FUNKTION_CARD_LINK: Record<string, string> = {
+  arbetsorder: '/sv/funktioner/arbetsorder',
+};
+const ARBETSORDER_CARD = {
+  _id: 'funktion-arbetsorder',
+  slug: 'arbetsorder',
+  locale: 'sv',
+  title: 'Arbetsorder i kalendern',
+  tag: 'Arbetsorder',
+  excerpt:
+    'Boka jobbet direkt i kalendern: beskrivning, kund och adress, dokument och foton, tid och personal i ett fönster. Ordern sparas med allt underlag på ett ställe.',
+  coverImageUrl: '/landing/features/13arbetsorder.webp',
+  contentHtml: '',
+  isPublished: true,
+} as unknown as BlogPost;
+const ARBETSORDER_STEPS = [
+  'Boka jobbet i kalendern',
+  'Kund, adress och underlag på ordern',
+  'Uppgift med påminnelser till de bokade',
+];
+// Insert the card right after the planning card.
+function withFunktionCards(posts: BlogPost[], lang: LandingLanguageCode): BlogPost[] {
+  if (lang !== 'sv' || posts.length === 0) return posts;
+  const at = posts.findIndex((p) => p.slug === 'dagsplanering-och-planeringsmoten');
+  const out = [...posts];
+  out.splice(at >= 0 ? at + 1 : out.length, 0, ARBETSORDER_CARD);
+  return out;
+}
+
 function featureTitle(post: BlogPost, lang: LandingLanguageCode): string {
   return (
     FEATURE_SHORT_TITLE[post.slug]?.[lang] ||
@@ -259,6 +290,7 @@ function featureSteps(slug: string, lang: LandingLanguageCode): string[] {
     'loneunderlag-for-byggforetag': [t4.featuresCard11Step1, t4.featuresCard11Step2, t4.featuresCard11Step3],
     'paminnelser-uppgifter-och-deadlines': PAMINNELSER_STEPS[lang],
   };
+  if (slug === 'arbetsorder') return ARBETSORDER_STEPS;
   return map[slug] ?? [];
 }
 
@@ -560,7 +592,7 @@ export const getServerSideProps: GetServerSideProps<FunktionerPageProps> = async
           FEATURE_ARTICLE_SLUGS.has(post.slug) && !HIDDEN_FEATURE_SLUGS.has(post.slug),
       )
       .sort((a, b) => (order.get(a.slug) ?? 999) - (order.get(b.slug) ?? 999));
-    return { props: { lang, posts: ordered } };
+    return { props: { lang, posts: withFunktionCards(ordered, lang) } };
   } catch {
     const order = new Map(FEATURE_NAV.map((f, i) => [f.slug, i]));
     const fallback = withCodeFeatures([])
@@ -569,7 +601,7 @@ export const getServerSideProps: GetServerSideProps<FunktionerPageProps> = async
           FEATURE_ARTICLE_SLUGS.has(post.slug) && !HIDDEN_FEATURE_SLUGS.has(post.slug),
       )
       .sort((a, b) => (order.get(a.slug) ?? 999) - (order.get(b.slug) ?? 999));
-    return { props: { lang, posts: fallback } };
+    return { props: { lang, posts: withFunktionCards(fallback, lang) } };
   }
 };
 
@@ -833,7 +865,7 @@ function FeatureCarousel({
                   ) : null}
                   <Link
                     className="fk-link"
-                    href={`/${lang}/blog/${encodeURIComponent(post.slug)}`}
+                    href={FUNKTION_CARD_LINK[post.slug] ?? `/${lang}/blog/${encodeURIComponent(post.slug)}`}
                     onClick={(e) => e.stopPropagation()}
                     tabIndex={isActive ? undefined : -1}
                   >

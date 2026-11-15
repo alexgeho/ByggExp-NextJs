@@ -4,17 +4,19 @@
 // page bundle. `name` must equal the page's `name` in the page data —
 // funktion-pages.ts and funksjon-pages-nb.ts check that at build time.
 
-export type FunktionLink = { slug: string; name: string };
+// `short` = short product name for the footer row (R21), where the full page
+// names wrapped to 7 lines at 375 px; cards on /sv/verktyg keep `name`.
+export type FunktionLink = { slug: string; name: string; short?: string };
 
 export const FUNKTION_LINKS_SV: FunktionLink[] = [
-  { slug: 'tidrapporteringssystem-bygg', name: 'Tidrapporteringssystem för bygg' },
-  { slug: 'projekthantering', name: 'Projekthantering för bygg' },
-  { slug: 'schemalaggning', name: 'Schemaläggningssystem för bygg' },
-  { slug: 'offert-kalkyl', name: 'Kalkylprogram för bygg' },
-  { slug: 'fakturering', name: 'Fakturaprogram för bygg' },
-  { slug: 'lon', name: 'Löneunderlag för bygg' },
-  { slug: 'byggdagbok', name: 'Digital byggdagbok' },
-  { slug: 'egenkontroll', name: 'Egenkontroll för bygg' },
+  { slug: 'tidrapporteringssystem-bygg', name: 'Tidrapporteringssystem för bygg', short: 'Tidrapportering' },
+  { slug: 'projekthantering', name: 'Projekthantering för bygg', short: 'Projekthantering' },
+  { slug: 'schemalaggning', name: 'Schemaläggningssystem för bygg', short: 'Schemaläggning' },
+  { slug: 'offert-kalkyl', name: 'Kalkylprogram för bygg', short: 'Offert och kalkyl' },
+  { slug: 'fakturering', name: 'Fakturaprogram för bygg', short: 'Fakturering' },
+  { slug: 'lon', name: 'Löneunderlag för bygg', short: 'Lön' },
+  { slug: 'byggdagbok', name: 'Digital byggdagbok', short: 'Byggdagbok' },
+  { slug: 'egenkontroll', name: 'Egenkontroll för bygg', short: 'Egenkontroll' },
 ];
 
 export const FUNKSJON_LINKS_NB: FunktionLink[] = [

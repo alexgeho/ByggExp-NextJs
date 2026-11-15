@@ -873,7 +873,9 @@ ${illu('resursplanering-vinter', 'Två byggarbetare i hjälm lägger en isolerin
 // Claims: docs/seo/product-facts-verified.md «Egenkontroll / sjekklister» (YES
 // lines, not the nb-only ones). Checked in byggexp-admin 2026-11-15 for the
 // Swedish product: PDF export (features/kma/KmaPage.jsx «Exportera PDF») and
-// the four standard templates (features/kma/starterTemplates.js). NOT claimed:
+// the four standard templates (features/kma/starterTemplates.js). Starting
+// without a template and typing the points works in the APP only (web needs a
+// template: NewChecklistForm.jsx canSave) — keep step 2 worded that way. NOT claimed:
 // sending a checklist to the customer, EXIF time/GPS on photos, AI draft from a
 // contract, deviations (avvik) created from a remark, ÄTA link.
 const BOVERKET_KONTROLLPLAN_PBL =
@@ -917,16 +919,16 @@ const EGENKONTROLL: FunktionPage = {
     },
   ],
   body: `
-<p>En egenkontroll i bygg ska göras när momentet är klart och väggen fortfarande står öppen, inte rekonstrueras kvällen före slutbesiktningen. I ByggExp bygger du egna mallar med kontrollpunkter, fyller i egenkontrollen på plats i appen med foto per punkt och signerar när alla punkter är besvarade. Kontrollen ligger sedan på projektet, tillsammans med dagbok, foton och dokument. Här ser du hur den digitala egenkontrollen fungerar, vad som sparas på varje punkt och hur den hänger ihop med kontrollplan och egenkontrollprogram.</p>
+<p>En egenkontroll inom bygg ska göras när momentet är klart och väggen fortfarande står öppen, inte rekonstrueras kvällen före slutbesiktningen. I ByggExp bygger du egna mallar med kontrollpunkter och fyller i egenkontrollen på plats i appen, med foto per punkt. När alla punkter är besvarade signeras kontrollen. Kontrollen ligger sedan på projektet, tillsammans med dagbok, foton och dokument. Här ser du hur den digitala egenkontrollen fungerar, vad som sparas på varje punkt och hur den hänger ihop med kontrollplan och egenkontrollprogram.</p>
 
-<h2>Vad är en egenkontroll i bygg?</h2>
+<h2>Vad är en egenkontroll inom bygg?</h2>
 <p>En egenkontroll är entreprenörens egen, dokumenterade kontroll av att ett arbete är utfört enligt handlingar och gällande krav. Den görs av den som utför eller leder arbetet, och den ska kunna visas för beställaren, kontrollansvarig eller besiktningsmannen.</p>
-<p>Plan- och bygglagen kräver ingen särskild blankett av byggföretaget. Det är byggherren som ansvarar för att kraven uppfylls, och projektets ${ext(BOVERKET_KONTROLLPLAN_PBL, 'kontrollplan')} anger vilka kontroller som ska göras – ofta med egenkontroll som metod. I praktiken betyder det att du som entreprenör behöver tre saker för varje kontroll: vad som kontrollerades, vad resultatet blev och vem som stod för det.</p>
+<p>Plan- och bygglagen kräver ingen särskild blankett av byggföretaget. Det är byggherren som ansvarar för att kraven uppfylls, och projektets ${ext(BOVERKET_KONTROLLPLAN_PBL, 'kontrollplan')} anger vilka kontroller som ska göras – ofta med egenkontroll som metod. I praktiken behöver du som entreprenör tre saker för varje kontroll: vad som kontrollerades, vad resultatet blev och vem som stod för det.</p>
 
 <h2>Så gör du en egenkontroll i ByggExp</h2>
 <ol>
 <li><strong>Skapa mallen.</strong> I webben lägger du upp en mall med kontrollpunkter. Varje punkt har en text och en referens, till exempel en ritning, en standard eller ett avsnitt i BBR.</li>
-<li><strong>Starta egenkontrollen på projektet.</strong> Välj projekt och mall, eller börja med en tom kontroll och skriv punkterna direkt. Datum och ansvarig anges på kontrollen.</li>
+<li><strong>Starta egenkontrollen på projektet.</strong> I webben väljer du projekt och mall och anger datum och ansvarig. I appen kan du i stället skriva kontrollpunkterna direkt när du startar kontrollen.</li>
 <li><strong>Fyll i på plats.</strong> I appen går du igenom punkterna och sätter resultat: godkänd, anmärkning eller ej aktuellt.</li>
 <li><strong>Fota punkten.</strong> Bilden tas i appen och sparas på just den kontrollpunkten, så att det syns vad som kontrollerades.</li>
 <li><strong>Åtgärda anmärkningarna.</strong> Skriv vilken åtgärd som krävs och ange datum när den är utförd.</li>
@@ -962,7 +964,7 @@ ${illu('projekthantering-ritning', 'Projektledare och byggarbetare i hjälm titt
 
 <h2>Anmärkning, åtgärd och uppföljning</h2>
 <p>En egenkontroll där allt är godkänt varje gång väcker frågor. Värdet ligger i att felen syns medan de är billiga att rätta till. När en punkt får resultatet anmärkning skriver du vad som avvek och vilken åtgärd som krävs. När åtgärden är utförd anger du datumet. En anmärkning utan klardatum räknas som öppen, så det syns vad som återstår innan nästa lag går in.</p>
-<p>Ska någon annan än du rätta till felet gör du åtgärden till en uppgift i projektet, med ansvarig, förfallodatum och påminnelser tills den är klar. Större avvikelser – sådant som påverkar tid, kostnad eller beställarens handlingar – hör dessutom hemma i byggdagboken samma dag.</p>
+<p>Ska någon annan rätta till felet lägger du upp åtgärden som en uppgift i projektet, med ansvarig, förfallodatum och påminnelser tills den är klar. Större avvikelser – sådant som påverkar tid, kostnad eller beställarens handlingar – hör dessutom hemma i byggdagboken samma dag.</p>
 
 <h2>Signering låser egenkontrollen</h2>
 <p>En kontroll som går att ändra i efterhand är svag som underlag. I ByggExp signeras egenkontrollen med namn och datum av admin eller projektadmin, och det går först när varje punkt har ett resultat. Efter signeringen är kontrollen låst och kan bara läsas.</p>
@@ -982,7 +984,7 @@ ${illu('byggdagbok-foto', 'Byggarbetare i hjälm fotograferar en vägg av block 
 <tr><td><strong>Brandtätning i genomföringar</strong></td><td>Enligt brandskyddsbeskrivningen</td><td>Ej aktuellt i den här väggen</td></tr>
 </tbody>
 </table></div>
-<p>Fem punkter, några foton och en signatur tar ungefär tio minuter. När väggen är stängd finns inget annat sätt att visa hur det såg ut bakom gipsen.</p>
+<p>Fem punkter, några foton och en signatur tar några minuter. När väggen är stängd finns inget annat sätt att visa hur det såg ut bakom gipsen.</p>
 
 <h2>Egenkontrollprogram, kontrollplan och egenkontroll</h2>
 <p>Tre begrepp blandas ofta ihop:</p>
@@ -1006,8 +1008,6 @@ ${illu('byggdagbok-foto', 'Byggarbetare i hjälm fotograferar en vägg av block 
 </table></div>
 <p>Papper fungerar för enstaka uppdrag. Gör ni egenkontroller varje vecka blir det snabbt dyrare att leta än att dokumentera. För ett enskilt jobb kan du fylla i vår gratis <a href="/sv/verktyg/egenkontroll-bygg-mall">mall för egenkontroll bygg</a> och spara den som PDF.</p>
 
-${illu('projekthantering-overlamning', 'Projektledare i hjälm lämnar över nycklarna till ett glatt par framför ett nybyggt vitt hus')}
-
 <h2>Checklista: välja egenkontroll-app</h2>
 <ul>
 <li>Kan ni bygga egna mallar, eller är ni låsta till leverantörens punkter?</li>
@@ -1022,13 +1022,16 @@ ${illu('projekthantering-overlamning', 'Projektledare i hjälm lämnar över nyc
 
 <h2>Kom igång med digital egenkontroll</h2>
 <p>Börja med en mall för det moment ni gör oftast och låt ett lag använda den i ett pågående projekt. Efter ett par veckor vet ni vilka punkter som behövs och vilka som kan strykas. De signerade egenkontrollerna exporterar du som PDF från webben när de ska lämnas över.</p>
+
+${illu('projekthantering-overlamning', 'Projektledare i hjälm lämnar över nycklarna till ett glatt par framför ett nybyggt vitt hus')}
+
 <p>Egenkontroller ingår i paketet Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms med 10 användare, tillsammans med <a href="/sv/funktioner/byggdagbok">digital byggdagbok</a>, <a href="/sv/funktioner/projekthantering">projekthantering</a> och tidrapportering. Du testar gratis i 14 dagar, utan bindningstid.</p>
 `.trim(),
   faq: [
     {
       question: 'Vad är en digital egenkontroll?',
       answer:
-        'En egenkontroll som fylls i i en app eller i webben i stället för på papper: kontrollpunkter med resultat, foto, kommentar och signatur, sparade på projektet.',
+        'En egenkontroll som du fyller i via app eller webb i stället för på papper: kontrollpunkter med resultat, foto, kommentar och signatur, sparade på projektet.',
     },
     {
       question: 'Kan jag göra egenkontrollen i mobilen?',
@@ -1051,7 +1054,7 @@ ${illu('projekthantering-overlamning', 'Projektledare i hjälm lämnar över nyc
         'Det finns ingen inloggning för beställaren och kontrollen skickas inte från systemet. Du exporterar den signerade egenkontrollen som PDF och lämnar över den själv.',
     },
     {
-      question: 'Är egenkontroll ett lagkrav i bygg?',
+      question: 'Är egenkontroll ett lagkrav inom bygg?',
       answer:
         'Plan- och bygglagen kräver inget egenkontrollprogram av byggföretaget, men kontrollplanen anger ofta egenkontroll som metod. Elinstallationsföretag måste ha ett egenkontrollprogram enligt elsäkerhetslagen.',
     },

@@ -100,7 +100,7 @@ function Footer({ footerT, lang: langProp }: FooterProps) {
             <span>{funktionRow.heading}</span>
             {funktionRow.links.map((link) => (
               <Link key={link.slug} href={`/${lang}/${funktionRow.folder}/${link.slug}`}>
-                {link.name}
+                {link.short ?? link.name}
               </Link>
             ))}
           </nav>

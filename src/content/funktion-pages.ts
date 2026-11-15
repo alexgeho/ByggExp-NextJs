@@ -1102,7 +1102,7 @@ const ARBETSORDER: FunktionPage = {
   plan: 'projekt',
   priceIncluded: 'Kalender, projekt och uppgifter ingår',
   heroCheck: 'Påminnelser tills det är klart',
-  title: 'Arbetsorder bygg – digital arbetsorder i appen | ByggExp',
+  title: 'Arbetsorder bygg – digital arbetsorder för hantverkare | ByggExp',
   description:
     'Arbetsorder för bygg och hantverkare: boka jobbet i kalendern med kund, adress, underlag, tid och personal. Följ upp med påminnelser. 14 dagar gratis.',
   name: 'Arbetsorder för bygg',
@@ -1124,7 +1124,7 @@ const ARBETSORDER: FunktionPage = {
     },
     {
       title: 'Ordern blir ett projekt',
-      text: 'Uppgifter, dokument, foton och arbetspass på samma ställe.',
+      text: 'Dokument, foton och arbetspass på samma ställe.',
       bullets: ['Budget och kostnader i Koll på pengarna och Full koll'],
       img: '/landing/features/project.webp',
       alt: 'Projektkort i ByggExp: budget och resurser, betalningsplan, uppgifter och deadlines och arbetspass för ett projekt',
@@ -1180,11 +1180,11 @@ ${illu('feat-uppgifter-morgonmote', 'Tre byggarbetare i hjälm står vid en stor
 <p>Den som bokas på en ny arbetsorder läggs in i orderns projekt. I appen ligger ordern under Projekt, som ett kort med namn, status, startdatum och plats, märkt Service.</p>
 <p>I projektet finns flikarna Uppgifter, Dokument och Foton. Under Dokument öppnar hantverkaren ritningen eller bilderna som kontoret bifogade. Hen kan också själv lägga till dokument och foton från jobbet.</p>
 <p>Tiden stämplas på projektet, så timmarna hamnar på rätt arbetsorder. Appen finns för iPhone och Android, se <a href="/sv/funktioner/tidrapportering-hantverkare">tidrapportering för hantverkare</a>.</p>
-<p>Kalendern med klockslagen är en vy för den som planerar. Medarbetaren ser inte bokningen i appen, och kundens telefonnummer och orderreferensen visas i webben. Vill du att hantverkaren får tiden och en påminnelse i mobilen lägger du en uppgift på ordern.</p>
+<p>Kalendern med klockslagen är en vy för den som planerar. Medarbetaren ser inte bokningen i appen, och kundens telefonnummer och orderreferensen visas i webben. Vill du att hantverkaren ser tiden i mobilen lägger du en uppgift till de bokade: tiden står som deadline, och appen påminner när den har passerat.</p>
 
 ${illu('hantverkare-servicebil', 'Hantverkare med verktygsbälte och hjälm tittar i mobilen bredvid sin servicebil med öppna bakdörrar')}
 
-<h2>Uppgift med påminnelser på arbetsordern</h2>
+<h2>Uppgift med påminnelser till de bokade</h2>
 <p>I bokningsfönstret finns knappen Uppgift med påminnelser. Skriv vad som ska göras, välj om uppgiften gäller alla i ordern eller en person och sätt en deadline. Den är förifylld med bokningens starttid.</p>
 <p>Sedan väljer du hur uppgiften ska påminna: var 15:e minut, var 30:e minut, varje timme eller varje dag. Påminnelserna börjar när deadline har passerat och fortsätter tills uppgiften är markerad som klar. De kommer som en avisering i mobilen, och ett tryck öppnar uppgiften.</p>
 <p>Hantverkaren ser uppgiften under Uppgifter i appen och markerar den som klar när jobbet är gjort. En uppgift är öppen, försenad eller klar, och filtren i appen visar läget med ett tryck.</p>
@@ -1198,7 +1198,7 @@ ${illu('projekthantering-uppgifter', 'Byggarbetare i hjälm bockar av en checkli
 <h2>Exempel: en tisdag med servicejobb</h2>
 <p>Så kan arbetsorder se ut i en firma med två montörer:</p>
 <div class="article-table"><table>
-<thead><tr><th>Arbetsorder</th><th>Kund och adress</th><th>Tid och personal</th><th>Uppgift</th></tr></thead>
+<thead><tr><th>Arbetsorder</th><th>Kund och adress</th><th>Tid och personal</th><th>Uppgiftens status</th></tr></thead>
 <tbody>
 <tr><td><strong>Byta jordfelsbrytare</strong></td><td>Privatperson, villa i Täby</td><td>Tisdag 08.00–10.00, Tomas</td><td>Klar</td></tr>
 <tr><td><strong>Montera laddbox</strong></td><td>Bostadsrättsförening, garaget</td><td>Tisdag 10.30–15.00, Tomas och Anna</td><td>Öppen</td></tr>
@@ -1255,7 +1255,7 @@ ${illu('hantverkare-anstallda', 'Hantverkare visar en anställd hur en kakelplat
     {
       question: 'Finns det en arbetsorder-app för hantverkare?',
       answer:
-        'Ja. I ByggExp-appen för iPhone och Android ser den som är bokad ordern som ett projekt med adress, bifogade dokument och uppgifter, och stämplar sin tid på det.',
+        'Ja. I ByggExp-appen för iPhone och Android ser den som bokas på en ny order den som ett projekt med adress och bifogade dokument, och stämplar sin tid på det.',
     },
     {
       question: 'Var skapar jag en arbetsorder?',
@@ -1275,7 +1275,7 @@ ${illu('hantverkare-anstallda', 'Hantverkare visar en anställd hur en kakelplat
     {
       question: 'Ser hantverkaren bokningen i en kalender i appen?',
       answer:
-        'Nej. Kalendern är en vy för den som planerar. Medarbetaren ser ordern som ett projekt i appen. Vill du ge klockslaget och en påminnelse i mobilen lägger du en uppgift med påminnelser på ordern.',
+        'Nej. Kalendern är en vy för den som planerar. Medarbetaren ser ordern som ett projekt i appen. Vill du ge klockslaget i mobilen lägger du en uppgift med påminnelser till de bokade – de hittar den under Uppgifter i appen.',
     },
     {
       question: 'Rapporteras tiden på arbetsordern?',

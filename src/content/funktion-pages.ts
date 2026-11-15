@@ -83,6 +83,7 @@ export const ILLU_HEIGHT: Record<string, number> = {
   'resursplanering-vinter': 802,
   // feat-* (feature-article 3D images) used on the nb feature pages.
   'feat-uppgifter-morgonmote': 911,
+  'feat-uppgifter-klar': 1424,
   'feat-ekonomi-veckoavstamning': 1033,
   'feat-tid-restid': 911,
   'feat-foto-ror-i-vagg': 1147,
@@ -1079,12 +1080,220 @@ ${illu('projekthantering-overlamning', 'Projektledare i hjälm lämnar över nyc
   ],
 };
 
+/* ------------------------------------------------------------------------- */
+/* 6. Arbetsorder                                                             */
+/* ------------------------------------------------------------------------- */
+
+// Claims: docs/seo/product-facts-verified.md «Arbetsorder / Uppgifter (verified
+// 2026-11-15, sv)», YES lines only. In the product an arbetsorder is an
+// «uppgift» on a project — say so early. Files on a task are added in the APP
+// only (when the task is created there, or later by admin / project admin); the
+// person doing the job does not attach photos to the task — photos go on the
+// arbetspass and land on the project. NOT claimed: comments, checklist inside a
+// task, customer signature, customer / address / order number on the task
+// itself, time per task, PDF of a task, ÄTA link, a push the moment a task is
+// created, and the «Ny bokning → Arbetsorder» window in the web calendar (see
+// the NOT CLAIMED line in the facts file).
+const ARBETSORDER: FunktionPage = {
+  slug: 'arbetsorder',
+  plan: 'projekt',
+  priceIncluded: 'Uppgifter och projekt ingår',
+  heroCheck: 'Påminnelser tills det är klart',
+  title: 'Arbetsorder bygg – digital arbetsorder i appen | ByggExp',
+  description:
+    'Arbetsorder för bygg och hantverkare: jobbet som uppgift på projektet, med ansvarig, deadline och påminnelser tills det är klart. 14 dagar gratis.',
+  name: 'Arbetsorder för bygg',
+  h1: 'Arbetsorder för bygg.',
+  h1Accent: 'Rätt jobb till rätt person.',
+  lead: 'Jobbet som uppgift på projektet, med ansvarig, deadline och påminnelser.',
+  hero: {
+    name: 'feat-uppgifter-klar',
+    alt: 'Hantverkare i hjälm och förkläde trycker på mobilen bredvid en blå ruta med en vit bock',
+  },
+  stepsHeading: ['Dela ut', 'jobben'],
+  steps: [
+    {
+      title: 'Arbetsordern som uppgift',
+      text: 'Projekt, ansvarig, start, deadline och påminnelser.',
+      bullets: ['En person, flera eller hela projektteamet', 'Återkommande jobb'],
+      img: '/landing/features/2uppgift-1200.webp',
+      alt: 'Uppgift i ett byggprojekt i ByggExp: projekt, ansvarig, startdatum, förfallodatum och påminnelser, och påminnelsen i mobilen',
+    },
+    {
+      title: 'Allt om jobbet',
+      text: 'Uppgifter, deadlines och arbetspass i projektkortet.',
+      bullets: ['Budget och kostnader i Koll på pengarna och Full koll'],
+      img: '/landing/features/project.webp',
+      alt: 'Projektkort i ByggExp: budget och resurser, betalningsplan, uppgifter och deadlines och arbetspass för ett projekt',
+    },
+    {
+      title: 'Foton från jobbet',
+      text: 'Bilder från appen hamnar i projektets fotoflik.',
+      img: '/landing/features/4foto-1200.webp',
+      alt: 'Projektets fotoflik i ByggExp med bilder från arbetsplatsen i webben och i mobilappen',
+    },
+  ],
+  body: `
+<p>En arbetsorder inom bygg ska svara på fyra frågor: vad som ska göras, var, av vem och till när. I ByggExp skapar du arbetsordern som en uppgift kopplad till ett projekt. Projektet håller kunden och adressen, uppgiften säger vad som ska göras, vem som ansvarar och när det ska vara klart. Den som ska göra jobbet ser uppgiften i appen och markerar den som klar. Här ser du hur en digital arbetsorder fungerar i ByggExp, vad hantverkaren ser i mobilen och hur kontoret håller koll på vad som är öppet, försenat och klart.</p>
+
+<h2>Vad är en arbetsorder inom bygg?</h2>
+<p>En arbetsorder är beskedet till den som ska utföra ett jobb: byt blandaren hos kunden på tisdag, dra fram el till laddboxen, laga fuktskadan i trapphuset. I små byggföretag går beskedet ofta via sms, ett samtal i bilen eller en lapp på instrumentbrädan. Det fungerar tills två jobb krockar, eller tills någon frågar vad som egentligen blev gjort.</p>
+<p>En digital arbetsorder är samma besked på en plats där alla ser det: kontoret som lägger ut jobbet, den som utför det och arbetsledaren som följer upp. Varje jobb får en ansvarig och en deadline, och det syns när det är klart.</p>
+
+<h2>Så skapar du en arbetsorder i ByggExp</h2>
+<ol>
+<li><strong>Välj projekt.</strong> Arbetsordern läggs på det projekt som jobbet hör till. Ett servicejobb hos en ny kund blir ett eget, litet projekt med kund och adress.</li>
+<li><strong>Skriv vad som ska göras.</strong> Titeln är det hantverkaren ser först, till exempel ”Byta jordfelsbrytare, Villa Ek”. I beskrivningen står detaljerna: portkod, vad kunden har beställt, vad som ska tas med.</li>
+<li><strong>Tilldela.</strong> Välj en eller flera personer i projektet. Lämnar du fältet tomt går uppgiften till hela projektteamet.</li>
+<li><strong>Sätt start och deadline.</strong> Datum och klockslag för när jobbet börjar och när det ska vara klart.</li>
+<li><strong>Välj påminnelser och prioritet.</strong> Påminnelserna utgår från deadline och upprepas tills uppgiften är klar. Prioriteten är låg, normal eller hög.</li>
+<li><strong>Följ upp.</strong> När jobbet är gjort markeras uppgiften som klar, i appen eller i webben.</li>
+</ol>
+<p>Du skapar arbetsordern i webben eller i appen. Admin och projektadmin lägger ut jobb till andra. En medarbetare kan lägga upp uppgifter åt sig själv i appen.</p>
+
+${illu('feat-uppgifter-morgonmote', 'Tre byggarbetare i hjälm står vid en stor checklista med bockar medan en av dem pekar på listan')}
+
+<h2>Det här står på arbetsordern</h2>
+<p>Allt behöver inte skrivas om för varje jobb. Det som gäller hela uppdraget ligger på projektet, och det som gäller just det här jobbet ligger på uppgiften:</p>
+<div class="article-table"><table>
+<thead><tr><th>Uppgift på arbetsordern</th><th>Var den finns i ByggExp</th></tr></thead>
+<tbody>
+<tr><td><strong>Vad som ska göras</strong></td><td>Uppgiftens titel och beskrivning.</td></tr>
+<tr><td><strong>Kund och adress</strong></td><td>Projektet som uppgiften hör till.</td></tr>
+<tr><td><strong>Vem som utför</strong></td><td>En eller flera personer, eller hela projektteamet.</td></tr>
+<tr><td><strong>När</strong></td><td>Startdatum och deadline, med klockslag.</td></tr>
+<tr><td><strong>Hur bråttom</strong></td><td>Prioritet: låg, normal eller hög.</td></tr>
+<tr><td><strong>Underlag</strong></td><td>Foton och filer på uppgiften, tillagda i appen, och projektets dokument.</td></tr>
+<tr><td><strong>Interna anteckningar</strong></td><td>Ett eget fält på uppgiften.</td></tr>
+<tr><td><strong>Status</strong></td><td>Öppen, försenad eller klar.</td></tr>
+</tbody>
+</table></div>
+<p>Timmarna rapporteras på projektet, och bilderna från utfört arbete tas på arbetspasset i appen. Då hamnar tid, foton och arbetsorder på samma projekt.</p>
+
+<h2>Arbetsorder i appen för hantverkare</h2>
+<p>Den som står hos kunden ska inte behöva leta. I appen ligger uppgifterna under Uppgifter, grupperade per projekt och sorterade efter deadline, så att det som ska vara klart först hamnar överst. Filtren Öppna, Försenade, Klara och Alla visar läget med ett tryck, och listan går att begränsa till ett projekt.</p>
+<p>Hantverkaren öppnar uppgiften, läser titel och beskrivning, ser start och deadline och tittar på bifogade foton och filer under fliken Dokument. När jobbet är gjort markerar hen uppgiften som klar. Blev det inte klart ändå kan admin eller projektadmin öppna uppgiften igen.</p>
+<p>Appen finns för iPhone och Android. Tiden stämplas i samma app, se <a href="/sv/funktioner/tidrapportering-hantverkare">tidrapportering för hantverkare</a>.</p>
+
+${illu('hantverkare-servicebil', 'Hantverkare med verktygsbälte och hjälm tittar i mobilen bredvid sin servicebil med öppna bakdörrar')}
+
+<h2>Påminnelser tills jobbet är klart</h2>
+<p>En arbetsorder som ingen följer upp är bara en lapp till. Därför väljer du på varje uppgift hur den ska påminna: var 15:e minut, var 30:e minut, varje timme eller varje dag. Påminnelserna börjar när deadline har passerat och fortsätter tills uppgiften är markerad som klar. De kommer som en avisering i mobilen, och ett tryck öppnar uppgiften.</p>
+<p>För jobb som inte får bli liggande finns fältet Meddela chefen efter. Där anger du efter hur många påminnelser chefen ska få besked. Chefen är projektledaren eller ägaren. Sätter du noll fortsätter påminnelserna bara till den som har uppgiften.</p>
+
+<h2>Återkommande arbetsorder för service, el och VVS</h2>
+<p>Många jobb kommer tillbaka: filterbyte i ventilationen varje månad, veckostädning av etableringen, rondering i fastigheten varje vardag. En uppgift kan upprepas varje dag, varje vardag, varje vecka, varannan vecka eller varje månad. När den markeras som klar skapas nästa tillfälle automatiskt, med datumen flyttade framåt.</p>
+<p>För elfirman, VVS-firman och servicesnickaren betyder det att avtalsjobben inte behöver läggas upp för hand varje gång. Det enda som ändras från gång till gång är bocken för att jobbet är gjort.</p>
+
+${illu('projekthantering-uppgifter', 'Byggarbetare i hjälm bockar av en checklista på en stor skrivplatta, med en ringande klocka och en väggklocka bredvid')}
+
+<h2>Exempel: en dag med servicejobb</h2>
+<p>Så kan arbetsordrarna se ut en tisdag i en firma med tre montörer:</p>
+<div class="article-table"><table>
+<thead><tr><th>Arbetsorder</th><th>Projekt</th><th>Ansvarig och deadline</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td><strong>Byta jordfelsbrytare</strong></td><td>Villa Ek, Täby</td><td>Tomas, tisdag 10.00</td><td>Klar</td></tr>
+<tr><td><strong>Montera laddbox, dra matning från central</strong></td><td>BRF Lönnen, garage</td><td>Tomas och Anna, tisdag 15.00</td><td>Öppen</td></tr>
+<tr><td><strong>Felsöka golvvärme i badrum</strong></td><td>Lgh-renovering Vasastan</td><td>Anna, måndag 16.00</td><td>Försenad, påminnelse varje timme</td></tr>
+<tr><td><strong>Filterbyte ventilation</strong></td><td>BRF Lönnen, serviceavtal</td><td>Hela teamet, upprepas varje månad</td><td>Öppen</td></tr>
+</tbody>
+</table></div>
+<p>Kontoret ser direkt att golvvärmen blev kvar från i går, utan att ringa någon.</p>
+
+<h2>Arbetsordersystem för bygg: överblick på kontoret</h2>
+<p>I webben finns alla uppgifter i en lista med projekt, ansvarig, start, deadline och status. Du filtrerar på projekt och på status, och ser hur många uppgifter som är öppna, försenade och klara. Samma uppgifter finns under fliken Uppgifter i varje projekt, så att arbetsledaren ser allt som hör till jobbet på ett ställe. Försenade uppgifter dyker dessutom upp bland aviseringarna i webben.</p>
+<p>Under Mina uppgifter ser du det som är tilldelat dig själv, uppdelat på försenat, att göra och klart. Där lägger du också snabbt till egna saker som inte får glömmas, som att ringa tillbaka en kund. Mer om hur projekten hålls ihop finns på sidan om <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>.</p>
+
+<h2>Papper, sms eller digital arbetsorder?</h2>
+<div class="article-table"><table>
+<thead><tr><th>Fråga</th><th>Sms eller papper</th><th>Digital arbetsorder</th></tr></thead>
+<tbody>
+<tr><td><strong>Vem har jobbet?</strong></td><td>Den som svarade sist i tråden</td><td>Namngiven ansvarig på uppgiften</td></tr>
+<tr><td><strong>När ska det vara klart?</strong></td><td>”I veckan”</td><td>Datum och klockslag</td></tr>
+<tr><td><strong>Vad är försenat?</strong></td><td>Märks när kunden ringer</td><td>Status Försenad och påminnelser</td></tr>
+<tr><td><strong>Var finns underlaget?</strong></td><td>I olika telefoner</td><td>På uppgiften och på projektet</td></tr>
+<tr><td><strong>Vad blev gjort förra månaden?</strong></td><td>Svårt att få fram</td><td>Klara uppgifter per projekt</td></tr>
+</tbody>
+</table></div>
+<p>Hur du inför rutinen steg för steg, och vilka misstag som är vanligast, går vi igenom i guiden <a href="/sv/blog/arbetsorder-app-bygg">så inför du digitala arbetsorder</a>.</p>
+
+<h2>Checklista: välja arbetsorder-app</h2>
+<ul>
+<li>Hör varje arbetsorder till ett projekt, så att tid och foton hamnar rätt?</li>
+<li>Kan jobbet gå till en person, flera personer eller hela laget?</li>
+<li>Påminner systemet av sig självt när deadline har passerat?</li>
+<li>Får arbetsledaren besked när ett jobb blir liggande?</li>
+<li>Går återkommande jobb att lägga upp en gång?</li>
+<li>Ser hantverkaren sina jobb i mobilen utan att logga in på en dator?</li>
+<li>Ser kontoret vad som är öppet, försenat och klart utan att ringa runt?</li>
+<li>Vad kostar det per användare när hela laget ska med?</li>
+</ul>
+
+<h2>Kom igång med digitala arbetsorder</h2>
+<p>Börja med veckans jobb i ett projekt. Lägg upp dem som uppgifter med ansvarig och deadline och låt laget bocka av i appen. Efter en vecka ser ni vilka jobb som brukar bli försenade och vilka som bör läggas upp som återkommande.</p>
+
+${illu('hantverkare-anstallda', 'Hantverkare visar en anställd hur en kakelplatta ska sättas på en delvis kaklad vägg, med en hink fix, en tandspackel och en verktygslåda på golvet')}
+
+<p>Uppgifter ingår i paketet Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms med 10 användare, tillsammans med <a href="/sv/funktioner/projekthantering">projekthantering</a>, <a href="/sv/funktioner/schemalaggning">schemaläggning</a> och tidrapportering. Du testar gratis i 14 dagar, utan bindningstid.</p>
+`.trim(),
+  faq: [
+    {
+      question: 'Vad är en digital arbetsorder?',
+      answer:
+        'Ett jobb som läggs ut i ett system i stället för via sms eller papper: vad som ska göras, vem som ansvarar och när det ska vara klart. I ByggExp är arbetsordern en uppgift på ett projekt.',
+    },
+    {
+      question: 'Finns det en arbetsorder-app för hantverkare?',
+      answer:
+        'Ja. I ByggExp-appen för iPhone och Android ser hantverkaren sina uppgifter per projekt, med beskrivning, deadline och bifogade filer, och markerar jobbet som klart.',
+    },
+    {
+      question: 'Vem kan skapa en arbetsorder?',
+      answer:
+        'Admin och projektadmin skapar uppgifter till andra, i webben eller i appen. En medarbetare kan lägga upp uppgifter åt sig själv i appen.',
+    },
+    {
+      question: 'Kan jag bifoga foton och ritningar till arbetsordern?',
+      answer:
+        'Ja, i appen. Foton från mobilens bildbibliotek och filer läggs till när uppgiften skapas i appen, eller i efterhand av admin eller projektadmin. I webbformuläret bifogas inga filer. Bilder från utfört arbete tas på arbetspasset och hamnar i projektets fotoflik.',
+    },
+    {
+      question: 'Rapporteras tiden på arbetsordern?',
+      answer:
+        'Tiden rapporteras på projektet, inte på den enskilda uppgiften. Behöver du timmar per jobb lägger du upp jobbet som ett eget projekt.',
+    },
+    {
+      question: 'Kan kunden signera arbetsordern?',
+      answer:
+        'Nej. Det finns ingen kundsignatur och ingen inloggning för kunden. Arbetsordern är ett internt verktyg för att dela ut och följa upp jobb.',
+    },
+    {
+      question: 'Passar ByggExp som arbetsordersystem för el och VVS?',
+      answer:
+        'Ja, för firmor som vill dela ut servicejobb och följa upp dem per projekt. Återkommande jobb läggs upp en gång och upprepas varje dag, vecka eller månad.',
+    },
+    {
+      question: 'Vad kostar arbetsorder i ByggExp?',
+      answer: `Uppgifter ingår i paketet Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms, med 10 användare. Varje extra användare kostar ${EXTRA_USER_PRICE} kr. Du testar gratis i 14 dagar, utan bindningstid.`,
+    },
+  ],
+  related: [
+    { href: '/sv/blog/arbetsorder-app-bygg', label: 'Guide: inför digitala arbetsorder' },
+    { href: '/sv/funktioner/projekthantering', label: 'Projekthantering för bygg' },
+    { href: '/sv/blog/hantera-uppgifter-i-byggprojekt', label: 'Uppgifter i byggprojekt' },
+    { href: '/sv/funktioner/tidrapportering-hantverkare', label: 'Tidrapportering för hantverkare' },
+    { href: '/sv/funktioner/schemalaggning', label: 'Schemaläggningssystem för bygg' },
+    { href: '/sv/blog/hantverkarapp', label: 'App för hantverkare' },
+  ],
+};
+
 export const FUNKTION_PAGES: FunktionPage[] = [
   TIDSYSTEM,
   HANTVERKARE,
   BYGGDAGBOK,
   RESURSPLANERING,
   EGENKONTROLL,
+  ARBETSORDER,
   ...FUNKTION_PAGES_A,
   ...FUNKTION_PAGES_B,
   ...FUNKTION_PAGES_C,

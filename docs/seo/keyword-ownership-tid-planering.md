@@ -21,6 +21,7 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 | /sv/funktioner/ata | ÄTA-hantering bygg | ÄTA system, ÄTA app (гайд /sv/blog/ata-hantering-mall держит «ÄTA-mall»; /sv/blog/ata-arbeten — инфо о ÄTA i AB 04/ABT 06) |
 | /sv/funktioner/utlagg | utlägg app bygg (utläggsapp bygg) | kvitton bygg, kvitto app, utlägg anställd (гайд /sv/blog/utlagg-app-bygg переименован в «Så hanterar du utlägg och kvitton i byggföretaget», 2026-10-27) |
 | /sv/funktioner/verktygshantering | verktygshantering app | verktygsregister bygg, verktyg QR-kod (гайд /sv/blog/verktygshantering-app переименован в «Så håller du koll på verktygen – guide för byggföretag», 2026-10-27) |
+| /sv/funktioner/arbetsorder | arbetsorder bygg | arbetsordersystem bygg, arbetsorder app, arbetsorder hantverkare, digital arbetsorder, arbetsorder el (гайд /sv/blog/arbetsorder-app-bygg переименован в «Så inför du digitala arbetsorder i byggföretaget – guide», инфо, 2026-11-15; в продукте arbetsorder = uppgift на проекте, факты в product-facts-verified.md) |
 | /sv/priser | pris tidrapporteringssystem | vad kostar byggsystem, priser ByggExp (гайд /sv/blog/byggprogram-pris — инфо «vad styr priset») |
 | /sv/byt-system | byta tidrapporteringssystem | byta affärssystem bygg, flytta data |
 | /sv/funktioner/stampelklocka | stämpelklocka (app) | stämpelklocka app, app stämpelklocka, stämpelklocka app gps, digital stämpelklocka |
@@ -101,6 +102,7 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 
 Правило владельца: страница платной функции = центр группы; каждая статья и шаблон группы, которые Google показывает по коммерческому запросу, держат в тексте одну ссылку на свою страницу функции. Новые статьи — только если по группе нет ни одной страницы.
 Доставлено (2bd436a): egenkontroll-el-egenkontrollprogram и egenkontroll-entreprenad → /funktioner/egenkontroll; /verktyg/byggdagbok-mall → /funktioner/byggdagbok; basta-byggprogram-2026 → tidrapporteringssystem-bygg + projekthantering; tidredovisning-app и tidredovisning-byggforetag → /blog/loneprogram-bygg (по «löneprogram byggföretag» Google показывал случайные страницы).
-Без центра (решение владельца): arbetsorder (467 показов/2 нед., статья arbetsorder-app-bygg), affärssystem bygg (477, статья), personalliggare (858, модуля нет).
+Arbetsorder — центр создан 2026-11-15: /sv/funktioner/arbetsorder; ссылки с arbetsorder-app-bygg, hantverkarapp, bygg-app, hantera-uppgifter-i-byggprojekt.
+Без центра (решение владельца): affärssystem bygg (477, статья), personalliggare (858, модуля нет).
 Исправлено 15.11: абзац про ByggExp в /verktyg/byggdagbok-mall переписан по product-facts (без ÄTA→счёт и без «foton från mobilen»: дневник только в вебе).
 Keyword Planner не выгружали: данных GSC хватило, новых статей не потребовалось.

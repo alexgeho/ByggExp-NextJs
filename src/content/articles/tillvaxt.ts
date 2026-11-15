@@ -278,7 +278,16 @@ const A_FAKTURERINGSPROGRAM_BYGG: BlogPost = {
 };
 
 const A_ARBETSORDER_APP_BYGG_HTML = `
-<p>En arbetsorder-app ska ta bort sms:en och lapparna: rätt person får rätt jobb med all info, och du ser vad som är gjort – i realtid. Här går vi igenom vad en arbetsorder-app för byggföretag bör klara och hur ByggExp löser det.</p>
+<p>Digitala arbetsorder ska ta bort sms:en och lapparna: rätt person får rätt jobb med all info, och du ser vad som är gjort. Här går vi igenom hur du inför dem i byggföretaget steg för steg, vad en arbetsorder-app bör klara och vilka misstag du ska undvika.</p>
+
+<h2>Så inför du digitala arbetsorder – steg för steg</h2>
+<ol>
+<li><strong>Bestäm vad som är en arbetsorder.</strong> Allt som någon annan ska utföra och som har en tidpunkt: servicejobb, restpunkter, beställningar.</li>
+<li><strong>Utse en som lägger ut jobben.</strong> Ofta arbetsledaren eller den som svarar i telefon. Jobb som kommer in på annat håll skickas dit.</li>
+<li><strong>Kräv ansvarig och deadline på varje jobb.</strong> Ett jobb utan namn och datum blir inte gjort i tid.</li>
+<li><strong>Börja med ett lag eller ett projekt.</strong> Kör en vecka och rätta till det som skaver innan resten av firman går över.</li>
+<li><strong>Sluta skicka jobb via sms.</strong> Så länge båda kanalerna finns vet ingen var det senaste beskedet står.</li>
+</ol>
 
 <h2>Vad ska en arbetsorder-app för bygg klara?</h2>
 <ul>
@@ -290,7 +299,7 @@ const A_ARBETSORDER_APP_BYGG_HTML = `
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp har <strong>uppgifter med automatisk uppföljning</strong> och en <strong>live-översikt över arbetslagen</strong>: du delar ut jobb, ser vad som pågår och vad som är klart, och kopplar tid och foto till rätt projekt. Samma data blir sedan underlag för <a href="/sv/blog/faktureringsprogram-bygg">faktura</a> och lön. Se hur uppgifter och foton samlas per projekt i <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>.</p>
+<p>ByggExp har <strong>uppgifter med automatisk uppföljning</strong> och en <strong>live-översikt över arbetslagen</strong>: du delar ut jobb, ser vad som pågår och vad som är klart, och kopplar tid och foto till rätt projekt. Samma data blir sedan underlag för <a href="/sv/blog/faktureringsprogram-bygg">faktura</a> och lön. Se hur uppgifter och foton samlas per projekt i <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>. Hur själva arbetsordern ser ut i systemet visar vi på sidan om <a href="/sv/funktioner/arbetsorder">arbetsorder för bygg i ByggExp</a>.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
 
 <h2>Vanliga misstag</h2>
@@ -305,10 +314,10 @@ const A_ARBETSORDER_APP_BYGG_HTML = `
 
 const A_ARBETSORDER_APP_BYGG: BlogPost = {
   _id: "code-"+"arbetsorder-app-bygg",
-  title: "Arbetsorder-app för byggföretag – slut på sms och lappar", slug: "arbetsorder-app-bygg", locale: "sv",
-  excerpt: "Vad en arbetsorder-app för bygg bör klara: skapa och tilldela jobb, automatisk uppföljning, projektkoppling och foto – i mobilen. Så gör ByggExp det.", tag: "Digitalisering",
+  title: "Så inför du digitala arbetsorder i byggföretaget – guide", slug: "arbetsorder-app-bygg", locale: "sv",
+  excerpt: "Så inför du digitala arbetsorder i byggföretaget: steg för steg, vad appen bör klara och vanliga misstag – slut på sms och lappar.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/2uppgift.webp", contentHtml: A_ARBETSORDER_APP_BYGG_HTML,
-  seoTitle: "Arbetsorder-app för byggföretag – jobb & uppföljning | ByggExp", seoDescription: "Arbetsorder-app för bygg: skapa och tilldela jobb, automatisk uppföljning, projektkoppling och foto – i mobilen. Så slutar jobb falla mellan stolarna med ByggExp.",
+  seoTitle: "Så inför du digitala arbetsorder i byggföretaget | Guide", seoDescription: "Guide: så inför du digitala arbetsorder i byggföretaget. Steg för steg, vad appen bör klara och vanliga misstag – så slutar jobb falla mellan stolarna.",
   seoImageUrl: `${SITE_URL}/landing/features/2uppgift.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-20T18:00:00.000Z", createdAt: "2026-08-20T18:00:00.000Z", updatedAt: "2026-08-20T18:00:00.000Z",
 };
@@ -528,7 +537,7 @@ const A_HANTVERKARAPP_HTML = `
 <h2>Vad ska en app för hantverkare klara?</h2>
 <ul>
 <li><strong>Tidrapportering i mobilen</strong> – <a href="/sv/funktioner/tidrapporteringssystem-bygg">stämpla tid</a> på plats, kopplat till projekt.</li>
-<li><strong>Jobb och uppföljning</strong> – <a href="/sv/blog/arbetsorder-app-bygg">arbetsorder</a> med status, slut på sms.</li>
+<li><strong>Jobb och uppföljning</strong> – <a href="/sv/funktioner/arbetsorder">arbetsorder</a> med status, slut på sms.</li>
 <li><strong>Foto och utlägg</strong> – <a href="/sv/blog/fotodokumentation-app-bygg">fota</a> och <a href="/sv/blog/utlagg-app-bygg">registrera kvitton</a> direkt.</li>
 <li><strong>Offert och faktura</strong> – <a href="/sv/blog/faktureringsprogram-bygg">offert och faktura med ROT</a> i samma flöde.</li>
 <li><strong>Funkar på bygget</strong> – enkelt i mobilen, inte bara på kontoret.</li>
@@ -711,7 +720,7 @@ const A_BYGG_APP_HTML = `
 <h2>Vad ska en bygg-app klara?</h2>
 <ul>
 <li><strong>Tid i mobilen</strong> – <a href="/sv/funktioner/tidrapporteringssystem-bygg">stämpla tid</a> på plats, kopplat till projekt.</li>
-<li><strong>Jobb och uppföljning</strong> – <a href="/sv/blog/arbetsorder-app-bygg">arbetsorder</a> med status.</li>
+<li><strong>Jobb och uppföljning</strong> – <a href="/sv/funktioner/arbetsorder">arbetsorder</a> med status.</li>
 <li><strong>Foto och utlägg</strong> – <a href="/sv/blog/fotodokumentation-app-bygg">fota</a> och <a href="/sv/blog/utlagg-app-bygg">registrera kvitton</a> direkt.</li>
 <li><strong>Offert och faktura</strong> – <a href="/sv/blog/faktureringsprogram-bygg">med ROT</a>, i samma flöde.</li>
 <li><strong>Ett läge för alla</strong> – kontoret och bygget ser samma bild.</li>

@@ -635,6 +635,7 @@ ${illu('projekthantering-overlamning', 'Projektledare i hjälm lämnar över nyc
     { href: '/sv/blog/hantera-uppgifter-i-byggprojekt', label: 'Uppgifter i byggprojekt' },
     { href: '/sv/blog/projektuppfoljning-bygg', label: 'Projektuppföljning' },
     { href: '/sv/funktioner/byggdagbok', label: 'Digital byggdagbok' },
+    { href: '/sv/funktioner/egenkontroll', label: 'Egenkontroll för bygg' },
     { href: '/sv/funktioner/projektplanering', label: 'Projektplanering med Gantt-schema' },
   ],
 };

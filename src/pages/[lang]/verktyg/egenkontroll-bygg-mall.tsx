@@ -241,7 +241,9 @@ export default function EgenkontrollByggMallPage() {
                 kontroller per projekt. Du kan skapa egna mallar för återkommande kontroller, se vilka
                 moment som är godkända och vilka som har anmärkning, och ha hela dokumentationen redo när
                 beställaren eller besiktningsmannen frågar. Eftersom egenkontrollerna ligger tillsammans
-                med byggdagbok, foton och tid får du en samlad bild av kvaliteten i projektet.
+                med byggdagbok, foton och tid får du en samlad bild av kvaliteten i projektet.{' '}
+                Läs mer om{' '}
+                <a href={`/${LOCALE}/funktioner/egenkontroll`}>digital egenkontroll i ByggExp</a>.
               </p>
             ),
           },

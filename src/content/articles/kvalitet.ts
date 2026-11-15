@@ -1276,7 +1276,7 @@ const A_EGENKONTROLLPROGRAM_HTML = `
 </ul>
 
 <h2>Egenkontroller i ByggExp</h2>
-<p>I ByggExp fyller arbetslaget i egenkontrollerna direkt i appen, med foto och signatur, och protokollen hamnar på rätt projekt. Vill du börja enkelt kan du <a href="/sv/verktyg/egenkontroll-mall">ladda ner en gratis egenkontroll-mall</a> och fylla i den online.</p>
+<p>I ByggExp fyller arbetslaget i egenkontrollerna direkt i appen, med foto och signatur, och protokollen hamnar på rätt projekt. Läs mer om <a href="/sv/funktioner/egenkontroll">digital egenkontroll för bygg i ByggExp</a>. Vill du börja enkelt kan du <a href="/sv/verktyg/egenkontroll-mall">ladda ner en gratis egenkontroll-mall</a> och fylla i den online.</p>
 `;
 
 const A_EGENKONTROLLPROGRAM: BlogPost = {

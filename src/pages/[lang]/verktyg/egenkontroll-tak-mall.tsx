@@ -145,7 +145,9 @@ export default function EgenkontrollTakMallPage() {
               <p>
                 Mallen ovan är gratis att använda. I ByggExp finns färdiga egenkontroll-mallar för tak,
                 el, VVS, bygg och skyddsrond – du fyller i på plats, markerar resultat och samlar alla
-                kontroller per projekt tillsammans med byggdagbok, foton och tid.
+                kontroller per projekt tillsammans med byggdagbok, foton och tid.{' '}
+                Läs mer om{' '}
+                <a href={`/${LOCALE}/funktioner/egenkontroll`}>digital egenkontroll i ByggExp</a>.
               </p>
             ),
           },

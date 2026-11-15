@@ -146,7 +146,9 @@ export default function EgenkontrollVentilationMallPage() {
               <p>
                 Mallen ovan är gratis att använda. I ByggExp finns färdiga egenkontroll-mallar för el,
                 VVS, ventilation, bygg och skyddsrond – du fyller i på plats, markerar resultat och samlar
-                alla kontroller per projekt tillsammans med byggdagbok, foton och tid.
+                alla kontroller per projekt tillsammans med byggdagbok, foton och tid.{' '}
+                Läs mer om{' '}
+                <a href={`/${LOCALE}/funktioner/egenkontroll`}>digital egenkontroll i ByggExp</a>.
               </p>
             ),
           },

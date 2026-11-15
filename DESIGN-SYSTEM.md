@@ -73,6 +73,14 @@
 Код: `src/lib/inline-cta.ts` (`inlineCtas`, шаг 3), `FunktionPageView.tsx`, стили `.fn-hero-price` и `.fn-inline-cta` в `src/styles/enmansforetag.scss`.
 Проверено 2026-11-13 (20 страниц × 390/768/1440): горизонтальной прокрутки 0; строка цены в 1 строку; кнопок в тексте 2–4 на страницу; кнопка первого экрана на 390×844 кончается на 408–489px.
 
+**R21 · 2026-11-15 · В подвале — строка «Funktioner» со ссылками на страницы функций.** В подвале (sv) под строкой ссылок — отдельная строка: слово «Funktioner» и 8 ссылок на `/sv/funktioner/<slug>`: tidrapporteringssystem-bygg, projekthantering, schemalaggning, offert-kalkyl, fakturering, lon, byggdagbok, egenkontroll. Якорь = `name` страницы. На nb (подвал общий, страницы `/nb/funksjoner/*` есть) — «Funksjoner» и 6 норвежских страниц; в остальных языках подвал без изменений. Вид тот же, что у существующих ссылок подвала (`.footer-meta`: 13px, цвет подвала, шаг 32px, белый при наведении) — у подвала нет колонок, поэтому это строка того же вида, а не новая колонка; подвал тёмный в обеих темах. Почему: страницы функций получали мало внутренних ссылок; план 11.11 P2.
+Код: `src/components/Footer/Footer.tsx` (`FUNKTION_ROW`), список `src/content/funktion-links.ts` (имена сверяются с данными страниц при сборке — `assertFunktionLinks`), стиль `.footer-funktioner` в `src/styles/design-system.scss`.
+Проверено 2026-11-15 (375/768/1440, /sv, /sv/verktyg, /sv/funktioner/egenkontroll, /nb): горизонтальной прокрутки 0; строка sv в 7/3/2 линии, nb в 3/2/1; шрифт 13px и цвет = ссылкам подвала; /en и /ru — подвал совпадает с боевым.
+
+**R22 · 2026-11-15 · На `/sv/verktyg` — блок «Funktioner i ByggExp» со ссылками на страницы функций.** После списка инструментов, перед подвалом: заголовок H2 «Funktioner i ByggExp», одна строка лида и те же 8 страниц функций, что в R21, карточками. Вид — существующая группа инструментов (`.verktyg-hub-group` + `.verktyg-hub-grid` + `.verktyg-hub-card`): название страницы (`name`) и её лид. Только sv; остальное на странице не меняем. Почему: страницы функций получали мало внутренних ссылок; план 11.11 P2.
+Код: `src/pages/[lang]/verktyg/index.tsx` (`FUNKTIONER_BLOCK`, данные в `getServerSideProps`), список `src/content/funktion-links.ts`, стиль строки лида `.verktyg-hub-group-lead` в `src/styles/design-system.scss`.
+Проверено 2026-11-15 (375/768/1440): 8 карточек в 1/2/3 колонки, горизонтальной прокрутки 0; H2 → 8px → лид → 14px → карточки; на /nb/verktyg и /en/verktyg блока нет.
+
 ## Чек-лист перед показом
 1. Соседние панели/кнопки одной высоты и радиуса (R1).
 2. Ряд кнопок и полей — на одной линии, одной высоты (R3).

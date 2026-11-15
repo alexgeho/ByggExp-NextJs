@@ -33,6 +33,7 @@ import {
 } from '../components/Pricing/Pricing';
 import { localeOrigin } from '../lib/seo';
 import { ext, illu, labelTables, type FunktionPage } from './funktion-pages';
+import { assertFunktionLinks, FUNKSJON_LINKS_NB } from './funktion-links';
 
 
 const LOV_AML = 'https://lovdata.no/lov/2005-06-17-62';
@@ -1315,6 +1316,9 @@ export const FUNKSJON_PAGES_NB: FunksjonPageNb[] = PAGES.map((page) => ({
   ...page,
   body: labelTables(page.body),
 }));
+
+// Footer row on nb (R21) uses the same names as the pages.
+assertFunktionLinks(FUNKSJON_LINKS_NB, FUNKSJON_PAGES_NB);
 
 export const FUNKSJON_PAGE_SLUGS_NB = FUNKSJON_PAGES_NB.map((p) => p.slug);
 

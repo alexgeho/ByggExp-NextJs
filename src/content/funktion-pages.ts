@@ -14,6 +14,7 @@ import { FAKTURA_PRICE, PROJEKT_PRICE } from '../components/Pricing/Pricing';
 import { FUNKTION_PAGES_A, ILLU_HEIGHT_A } from './funktion-pages-a';
 import { FUNKTION_PAGES_B, ILLU_HEIGHT_B } from './funktion-pages-b';
 import { FUNKTION_PAGES_C, ILLU_HEIGHT_C } from './funktion-pages-c';
+import { assertFunktionLinks, FUNKTION_LINKS_SV } from './funktion-links';
 
 const EXTRA_USER_PRICE = 69;
 const KOMPLETT_PRICE = 990;
@@ -1087,6 +1088,9 @@ export const FUNKTION_PAGES: FunktionPage[] = [
 ].map(
   (page) => ({ ...page, body: labelTables(page.body) }),
 );
+
+// Footer row and /sv/verktyg block (R21, R22) use the same names as the pages.
+assertFunktionLinks(FUNKTION_LINKS_SV, FUNKTION_PAGES);
 
 export const FUNKTION_PAGE_SLUGS = FUNKTION_PAGES.map((p) => p.slug);
 

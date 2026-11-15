@@ -2,7 +2,15 @@ import type { FooterProps } from "../../types/footer";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+import { FUNKSJON_LINKS_NB, FUNKTION_LINKS_SV } from "../../content/funktion-links";
+
 const logo = "/landing/header/logo.svg";
+
+// R21: row of links to the feature pages, only where they exist (sv, nb).
+const FUNKTION_ROW: Record<string, { heading: string; folder: string; links: typeof FUNKTION_LINKS_SV }> = {
+  sv: { heading: "Funktioner", folder: "funktioner", links: FUNKTION_LINKS_SV },
+  nb: { heading: "Funksjoner", folder: "funksjoner", links: FUNKSJON_LINKS_NB },
+};
 
 const SOCIALS = [
   {
@@ -27,6 +35,7 @@ function Footer({ footerT, lang: langProp }: FooterProps) {
   const router = useRouter();
   const langParam = router.query.lang;
   const lang = langProp || (typeof langParam === "string" ? langParam : "sv");
+  const funktionRow = FUNKTION_ROW[lang];
 
   return (
     <footer className="footer">
@@ -85,6 +94,17 @@ function Footer({ footerT, lang: langProp }: FooterProps) {
             </a>
           ))}
         </div>
+
+        {funktionRow ? (
+          <nav className="footer-meta footer-funktioner" aria-label={funktionRow.heading}>
+            <span>{funktionRow.heading}</span>
+            {funktionRow.links.map((link) => (
+              <Link key={link.slug} href={`/${lang}/${funktionRow.folder}/${link.slug}`}>
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+        ) : null}
       </div>
     </footer>
   );

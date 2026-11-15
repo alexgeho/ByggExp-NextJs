@@ -4,6 +4,8 @@ import Link from 'next/link';
 
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
+import { FUNKTION_LINKS_SV } from '../../../content/funktion-links';
+import { getFunktionPage } from '../../../content/funktion-pages';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
 import { calcLocaleEnabled, NO_DOMAIN_LIVE, type CalcLocale } from '../../../lib/locale';
@@ -244,16 +246,29 @@ const CONTENT: Record<CalcLocale, Content> = {
   },
 };
 
-type VerktygHubProps = { lang: CalcLocale };
+// R22: block with links to the feature pages, sv only. Card text = the page's
+// own lead, read on the server so the page texts stay out of the client bundle.
+type FunktionCard = { slug: string; name: string; lead: string };
+const FUNKTIONER_BLOCK = {
+  heading: 'Funktioner i ByggExp',
+  lead: 'Samma arbete i ett system – med tid, projekt och ekonomi på ett ställe.',
+};
+
+type VerktygHubProps = { lang: CalcLocale; funktioner: FunktionCard[] };
 
 export const getServerSideProps: GetServerSideProps<VerktygHubProps> = async ({ params }) => {
   const lang = params?.lang;
   if (!calcLocaleEnabled(lang)) return { notFound: true };
-  return { props: { lang } };
+  const funktioner: FunktionCard[] =
+    lang === 'sv'
+      ? FUNKTION_LINKS_SV.map(({ slug, name }) => ({ slug, name, lead: getFunktionPage(slug)?.lead ?? '' }))
+      : [];
+  return { props: { lang, funktioner } };
 };
 
 export default function VerktygHubPage({
   lang,
+  funktioner,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const c = CONTENT[lang];
   const headerT = headerTranslations[lang];
@@ -306,6 +321,21 @@ export default function VerktygHubPage({
               </div>
             </section>
           ))}
+
+          {funktioner.length > 0 ? (
+            <section className="verktyg-hub-group">
+              <h2>{FUNKTIONER_BLOCK.heading}</h2>
+              <p className="verktyg-hub-group-lead">{FUNKTIONER_BLOCK.lead}</p>
+              <div className="verktyg-hub-grid">
+                {funktioner.map((f) => (
+                  <Link key={f.slug} href={`/sv/funktioner/${f.slug}`} className="verktyg-hub-card">
+                    <h3>{f.name}</h3>
+                    <p>{f.lead}</p>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ) : null}
         </div>
       </main>
 

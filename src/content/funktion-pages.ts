@@ -1125,10 +1125,14 @@ const ARBETSORDER: FunktionPage = {
   steps: [
     {
       title: 'Boka i kalendern',
-      text: 'Beskrivning, kund, adress, tid och personal i ett fönster.',
-      bullets: ['Dokument och foton som underlag', 'Orderreferens på ordern'],
-      img: '/landing/features/5planering-1200.webp',
-      alt: 'Planering i ByggExp: Gantt-schema per personal med projekt över månaden i webben och i mobilen',
+      text: 'Markera tiden med musen, fyll i ordern i fönstret och välj personal.',
+      bullets: [
+        'Dokument och foton som underlag',
+        'Orderreferens på ordern',
+        'Uppgift med påminnelse till de bokade',
+      ],
+      img: '/landing/features/13arbetsorder-1200.webp',
+      alt: 'Planering i ByggExp: kalender över två veckor med bokningar per person och klockslag',
     },
     {
       title: 'Ordern sparas med allt på ett ställe',

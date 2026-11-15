@@ -42,7 +42,9 @@ const UI = {
     prev: "Föregående",
     next: "Nästa",
     faq: "Vanliga frågor",
+    faqSub: "Korta svar på det byggföretag brukar fråga om.",
     guides: "Guider",
+    guidesSub: "Läs vidare om samma ämne.",
     priceNote: "14 dagar gratis · Ingen bindningstid · exkl. moms",
     close: "Stäng",
     usersFaktura: "max 2 användare",
@@ -62,7 +64,9 @@ const UI = {
     prev: "Forrige",
     next: "Neste",
     faq: "Vanlige spørsmål",
+    faqSub: "Korte svar på det byggefirmaer pleier å spørre om.",
     guides: "Guider",
+    guidesSub: "Les videre om samme tema.",
     priceNote: "14 dager gratis · Ingen bindingstid · eks. mva.",
     close: "Lukk",
     usersFaktura: "maks 2 brukere",
@@ -281,6 +285,7 @@ export default function FunktionPageView({ lang, slug }: Props) {
               <h2>
                 {page.stepsHeading[0]} <em>{page.stepsHeading[1]}</em>
               </h2>
+              <p className="fn-section-sub">{page.stepsLead}</p>
             </div>
             <div className="features-slider">
               {multiStep && (
@@ -376,6 +381,7 @@ export default function FunktionPageView({ lang, slug }: Props) {
               <h2 id="fn-faq-heading" className="lead-magnet-section-heading">
                 {ui.faq}
               </h2>
+              <p className="fn-section-sub">{ui.faqSub}</p>
               <dl className="lead-magnet-faq-list">
                 {page.faq.map((item) => (
                   <div key={item.question} className="lead-magnet-faq-item">
@@ -388,6 +394,7 @@ export default function FunktionPageView({ lang, slug }: Props) {
 
             <nav className="lead-magnet-related" aria-label={ui.guides}>
               <h2 className="lead-magnet-section-heading">{ui.guides}</h2>
+              <p className="fn-section-sub">{ui.guidesSub}</p>
               <ul className="lead-magnet-related-list">
                 {page.related.map((link) => (
                   <li key={link.href}>

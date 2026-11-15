@@ -91,6 +91,7 @@ const OFFERT_KALKYL: FunktionPage = {
     alt: 'Hantverkare i keps sitter vid en laptop och skriver, bredvid ett papper med en bild av ett hus bakom en byggställning och en penna',
   },
   stepsHeading: ['Kalkyl, offert', 'och faktura'],
+  stepsLead: 'Skapa offerten, gör om den till faktura och följ marginalen.',
   steps: [
     {
       title: 'Skapa offerten',
@@ -273,6 +274,7 @@ const FAKTURERING: FunktionPage = {
     alt: 'Hantverkare i hjälm står vid en laptop där ett papper med blå linjer kommer ut ur skärmen, bredvid ett litet hus med blått tak',
   },
   stepsHeading: ['Faktura, kvitto', 'och betalning'],
+  stepsLead: 'Skapa fakturan, lägg kostnaderna på projektet och följ betalningarna.',
   steps: [
     {
       title: 'Skapa fakturan',
@@ -452,6 +454,7 @@ const LON: FunktionPage = {
     alt: 'Kvinna vid ett skrivbord framför en skärm med stapeldiagram och en klocka, med en hög guldmynt bredvid tangentbordet',
   },
   stepsHeading: ['Från timmar', 'till lön'],
+  stepsLead: 'Timmar från appen, attest och lönekörning.',
   steps: [
     {
       title: 'Timmar från appen',
@@ -650,6 +653,7 @@ const ATA: FunktionPage = {
     alt: 'Snickare i hjälm har lyft upp en golvskiva i ett badrum och visar rören under för en kund som böjer sig fram',
   },
   stepsHeading: ['Registrera, godkänn', 'och fakturera'],
+  stepsLead: 'Märk dagen med ÄTA, följ beloppen och fakturera.',
   steps: [
     {
       title: 'Märk dagen med ÄTA',

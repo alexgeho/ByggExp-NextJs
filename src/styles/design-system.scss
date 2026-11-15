@@ -263,3 +263,55 @@
   color: var(--muted);
   line-height: 1.5;
 }
+
+/* R26: feature pages — hero text starts right under the header: smaller top
+   padding, columns aligned to the top, illustration height capped so a tall
+   image cannot push the heading down. */
+.fn .em-hero {
+  padding-top: 48px;
+}
+.fn .em-hero-inner {
+  align-items: start;
+}
+.fn-hero-visual img {
+  width: auto;
+  max-width: 100%;
+  max-height: 520px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .fn .em-hero {
+    padding-top: 32px;
+  }
+}
+
+/* R27: a baked shadow or floor must never end in a hard cut — every feature
+   page illustration fades out towards its edges. */
+.fn-hero-visual img,
+.blog-article-content .fn-illu img {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 10%, #000 90%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 6%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 10%, #000 90%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 6%, #000 94%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+/* R28: feature pages — every section heading gets one line of subheading
+   (muted, same look as the R22 lead line). Replaces the "no subtitle" part of
+   R5 on these pages. */
+.fn .fn-section-sub {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+.fn .lead-magnet-section-heading {
+  margin-bottom: 0;
+}
+.fn .lead-magnet-section-heading + .fn-section-sub {
+  margin: 6px 0 16px;
+}
+.fn .section-head h2 {
+  margin-bottom: 0;
+}

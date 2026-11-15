@@ -31,6 +31,7 @@ import { featuresTranslations7_9 } from '../../../locales/features7-9';
 import { featuresTranslations10_11 } from '../../../locales/features10-11';
 import { footerTranslations } from '../../../locales/footer';
 import { headerTranslations } from '../../../locales/header';
+import { heroTranslations } from '../../../locales/hero';
 import {
   landingLanguageCodes,
   type LandingLanguageCode,
@@ -872,14 +873,24 @@ function FeatureCarousel({
                       ))}
                     </ul>
                   ) : null}
-                  <Link
-                    className="fk-link"
-                    href={FUNKTION_CARD_LINK[post.slug] ?? `/${lang}/blog/${encodeURIComponent(post.slug)}`}
-                    onClick={(e) => e.stopPropagation()}
-                    tabIndex={isActive ? undefined : -1}
-                  >
-                    {READ_MORE[lang] ?? READ_MORE.sv}
-                  </Link>
+                  <div className="fk-actions">
+                    <a
+                      className="btn-primary"
+                      href={`/${lang}#cta`}
+                      onClick={(e) => e.stopPropagation()}
+                      tabIndex={isActive ? undefined : -1}
+                    >
+                      {heroTranslations[lang]?.heroDemo ?? heroTranslations.sv.heroDemo}
+                    </a>
+                    <Link
+                      className="fk-link"
+                      href={FUNKTION_CARD_LINK[post.slug] ?? `/${lang}/blog/${encodeURIComponent(post.slug)}`}
+                      onClick={(e) => e.stopPropagation()}
+                      tabIndex={isActive ? undefined : -1}
+                    >
+                      {READ_MORE[lang] ?? READ_MORE.sv}
+                    </Link>
+                  </div>
                 </div>
               </div>
             );

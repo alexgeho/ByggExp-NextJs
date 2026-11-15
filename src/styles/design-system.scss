@@ -464,3 +464,15 @@ button.feature-nav-chip {
     right: 5px;
   }
 }
+
+/* R40: a feature card ends with the site's main button and a plain text link. */
+.fk-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 20px;
+  margin-top: 20px;
+}
+.funktioner-slide .fk-link {
+  font-weight: 400;
+}

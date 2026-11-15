@@ -82,6 +82,9 @@ def cover(name, w, h, safe, lines, fs, cell, sub=None, tw=None, shot=None, url=N
     bt = d.textbbox((0, 0), lines[0][0], font=big)[1]  # empty space above the headline ink
     # S19: equal space above the headline ink and below the last row
     y = (h - block_h + bt) // 2 - bt if center else st + (sh - block_h) // 2
+    if center == "ink" and sub_lines:  # S56: equal space above the headline ink and below the last text line ink
+        last = lh * len(lines) + int(fs * .4) + slh * (len(sub_lines) - 1) + d.textbbox((0, 0), sub_lines[-1], font=small)[3]
+        y = st + (sh - last - bt) // 2
     text_w = 0
     for text, color in lines:
         d.text((sl, y), text, font=big, fill=color)
@@ -163,8 +166,8 @@ if __name__ == "__main__":
     cover("facebook-cover", 1640, 624, (230, 40, 1180, 544), TITLE, 50, 48, SUB, 560)
     # LinkedIn company: 1128x191, logo overlaps bottom-left -> start content at x=300
     cover("linkedin-cover", 1128, 191, (300, 20, 800, 151), SHORT, 26, 24)
-    # YouTube: 2560x1440, safe area 1546x423 in the centre
-    cover("youtube-banner", 2560, 1440, (507, 509, 1546, 423), TITLE, 62, 64, SUB, 720)
+    # YouTube: 2560x1440, safe area 1546x423 in the centre; S56: inset on all four sides, left = top = bottom by ink
+    cover("youtube-banner", 2560, 1440, (569, 549, 1422, 343), TITLE, 54, 64, SUB, 720, center="ink")
     for n in ("linkedin-cover-value", "linkedin-cover-product"):  # LinkedIn rejects the 2x PNG; upload this JPG
         Image.open(HERE / f"{n}.png").convert("RGB").resize((1584, 268), Image.LANCZOS).save(HERE / f"{n}.jpg", quality=92)
     # S16/S17: hero collage from the home page + price + store badges

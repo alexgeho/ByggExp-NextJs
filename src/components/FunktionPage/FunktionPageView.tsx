@@ -236,7 +236,10 @@ export default function FunktionPageView({ lang, slug }: Props) {
       <main className="em fn" onClick={openImage}>
         {/* HERO — white, 3D illustration on the right */}
         <section className="em-hero">
-          <div className="container em-hero-inner">
+          <div
+            className="container em-hero-inner"
+            style={{ '--fn-hero-ar': 1200 / ILLU_HEIGHT[page.hero.name] } as React.CSSProperties}
+          >
             <div className="em-hero-content">
               <nav className="fn-crumbs" aria-label={ui.crumbs}>
                 <a href={`/${lang}/funktioner`}>{ui.hub}</a>

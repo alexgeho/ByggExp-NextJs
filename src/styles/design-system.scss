@@ -277,13 +277,19 @@
   width: auto;
   max-width: 100%;
   max-height: 520px;
-  /* R32: the figure sits at the right edge of the container, so its gap to the
-     right edge equals the text's gap to the left edge. */
-  margin: 0 0 0 auto;
+  margin: 0 auto;
 }
-@media (max-width: 900px) {
-  .fn-hero-visual img {
-    margin: 0 auto;
+/* R32: the figure stays centred in its column; the text is indented from the
+   left by the same distance as the figure stands from the right edge.
+   Column width = (container - 40px gap) * 1.1 / 2.1; figure width = 520px *
+   aspect ratio (--fn-hero-ar, set inline from the image size). */
+.fn .em-hero-inner {
+  container-type: inline-size;
+}
+@media (min-width: 901px) {
+  .fn .em-hero-content {
+    /* + 4% of the figure width: the white margin inside the image itself */
+    padding-left: max(0px, calc(((100cqw - 40px) * 0.5238 - 520px * var(--fn-hero-ar, 1)) / 2 + 520px * var(--fn-hero-ar, 1) * 0.04));
   }
 }
 @media (max-width: 900px) {

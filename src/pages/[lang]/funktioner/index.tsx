@@ -157,8 +157,28 @@ function featureImage(post: BlogPost): string | undefined {
   return FEATURE_IMAGE_OVERRIDE[post.slug] || post.coverImageUrl;
 }
 
+// R29: a card title is short enough to stay on one line (max 25 characters),
+// in every language. These win over the CMS title and the overrides above.
+const FEATURE_SHORT_TITLE: Record<string, Partial<Record<LandingLanguageCode, string>>> = {
+  'skapa-offert-i-byggexp': { sv: 'Skapa offert', en: 'Create quotes', nb: 'Lag tilbud', pl: 'Tworzenie ofert', ru: 'Создание предложения' },
+  'fakturera-fran-byggexp': { sv: 'Fakturera loggad tid', en: 'Invoice logged time', nb: 'Fakturer logget tid', pl: 'Fakturuj zapisany czas', ru: 'Счёт по учтённым часам' },
+  'loneunderlag-for-byggforetag': { sv: 'Från timmar till lön', en: 'From hours to payroll', nb: 'Fra timer til lønn', pl: 'Od godzin do wypłaty', ru: 'От часов к зарплате' },
+  'projektekonomi-och-lonsamhet': { sv: 'Projektekonomi i realtid', en: 'Live project economy', nb: 'Prosjektøkonomi i sanntid', pl: 'Ekonomia projektu na żywo', ru: 'Экономика проекта онлайн' },
+  'automatisk-tidrapportering-och-export': { sv: 'Tidrapportering i appen', en: 'Time tracking in the app', nb: 'Timeregistrering i appen', pl: 'Czas pracy w aplikacji', ru: 'Учёт времени в приложении' },
+  'narvaro-och-incheckning-pa-bygget': { sv: 'Närvaro i realtid', en: 'Attendance in real time', nb: 'Nærvær i sanntid', pl: 'Obecność na żywo', ru: 'Присутствие онлайн' },
+  'hantera-uppgifter-i-byggprojekt': { sv: 'Uppgifter med påminnelser', en: 'Tasks with reminders', nb: 'Oppgaver med påminnelser', pl: 'Zadania z przypomnieniami', ru: 'Задачи с напоминаниями' },
+  'dagsplanering-och-planeringsmoten': { sv: 'Planering i en vy', en: 'Planning in one view', nb: 'Planlegging i én visning', pl: 'Planowanie pracy', ru: 'Планирование работ' },
+  'dokumentera-med-foton-pa-bygget': { sv: 'Foton från bygget', en: 'Photos from the site', nb: 'Bilder fra byggeplassen', pl: 'Zdjęcia z budowy', ru: 'Фото со стройки' },
+  'fota-kvitton-och-hantera-utlagg': { sv: 'Kvitton och utlägg', en: 'Receipts and expenses', nb: 'Kvitteringer og utlegg', pl: 'Paragony i wydatki', ru: 'Чеки и расходы' },
+  'hantera-verktyg-och-utrustning': { sv: 'Verktyg och utrustning', en: 'Tools and equipment', nb: 'Verktøy og utstyr', pl: 'Narzędzia i sprzęt', ru: 'Инструменты и техника' },
+};
+
 function featureTitle(post: BlogPost, lang: LandingLanguageCode): string {
-  return FEATURE_CONTENT_OVERRIDE[post.slug]?.[lang]?.title || post.title;
+  return (
+    FEATURE_SHORT_TITLE[post.slug]?.[lang] ||
+    FEATURE_CONTENT_OVERRIDE[post.slug]?.[lang]?.title ||
+    post.title
+  );
 }
 
 function featureExcerpt(post: BlogPost, lang: LandingLanguageCode): string {

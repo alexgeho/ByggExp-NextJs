@@ -1123,7 +1123,7 @@ const ARBETSORDER: FunktionPage = {
       alt: 'Planering i ByggExp: Gantt-schema per personal med projekt över månaden i webben och i mobilen',
     },
     {
-      title: 'Ordern blir ett projekt',
+      title: 'Ordern sparas med allt på ett ställe',
       text: 'Dokument, foton och arbetspass på samma ställe.',
       bullets: ['Budget och kostnader i Koll på pengarna och Full koll'],
       img: '/landing/features/project.webp',
@@ -1139,7 +1139,7 @@ const ARBETSORDER: FunktionPage = {
   ],
   body: `
 <p>En arbetsorder för bygg ska svara på fyra frågor: vad som ska göras, var, av vem och när. I ByggExp skapar du arbetsordern som en bokning i kalendern. Beskrivning, kund och adress, orderreferens, underlag, tid och personal fylls i på ett ställe.</p>
-<p>När du sparar blir ordern ett eget projekt. De som är bokade hittar det i appen, med adress och bifogade dokument, och stämplar sin tid på det. Här ser du hur du skapar en arbetsorder, vad hantverkaren ser i mobilen och hur du följer upp med uppgifter och påminnelser.</p>
+<p>När du sparar finns ordern som en egen order i ByggExp. De som är bokade hittar det i appen, med adress och bifogade dokument, och stämplar sin tid på det. Här ser du hur du skapar en arbetsorder, vad hantverkaren ser i mobilen och hur du följer upp med uppgifter och påminnelser.</p>
 
 <h2>Vad är en arbetsorder inom bygg?</h2>
 <p>En arbetsorder är beskedet till den som ska utföra ett jobb: byt blandaren hos kunden på tisdag, dra fram el till laddboxen, laga fuktskadan i trapphuset. I små byggföretag går beskedet ofta via sms, ett samtal i bilen eller en lapp på instrumentbrädan. Det fungerar tills två jobb krockar, eller tills någon frågar vad som egentligen blev gjort.</p>
@@ -1155,7 +1155,7 @@ const ARBETSORDER: FunktionPage = {
 <li><strong>Sätt tiden.</strong> Från och till, med datum och klockslag. Sträcker sig jobbet över flera dagar kan du välja att bara boka vardagar.</li>
 <li><strong>Välj personal.</strong> En eller flera personer. Saknas någon skriver du in namn och e-post i fönstret, och personen får en inbjudan.</li>
 </ol>
-<p>När du trycker på Skapa blir arbetsordern ett projekt med ordertypen Service. Kund, adress och orderreferens sparas på projektet, filerna hamnar bland projektets dokument och varje person får en bokning per dag i kalendern.</p>
+<p>När du trycker på Skapa sparas arbetsordern som en egen order med ordertypen Service. Kund, adress och orderreferens sparas på ordern, filerna hamnar bland orderns dokument och varje person får en bokning per dag i kalendern.</p>
 <p>Hör jobbet till en order som redan finns väljer du den under Lägg till i befintlig order. Har ni artiklar upplagda kan du också välja en artikel, och då fylls beskrivningen i med artikelns namn.</p>
 
 ${illu('feat-uppgifter-morgonmote', 'Tre byggarbetare i hjälm står vid en stor checklista med bockar medan en av dem pekar på listan')}
@@ -1168,7 +1168,7 @@ ${illu('feat-uppgifter-morgonmote', 'Tre byggarbetare i hjälm står vid en stor
 <tr><td><strong>Kund</strong></td><td>Privatperson eller företag, med telefon och e-post. För företag även kontaktperson.</td></tr>
 <tr><td><strong>Adress</strong></td><td>Kundens adress, som blir orderns adress.</td></tr>
 <tr><td><strong>Orderreferens</strong></td><td>Fritext som sparas på ordern.</td></tr>
-<tr><td><strong>Underlag</strong></td><td>Dokument och foton, sparade bland projektets dokument.</td></tr>
+<tr><td><strong>Underlag</strong></td><td>Dokument och foton, sparade bland orderns dokument.</td></tr>
 <tr><td><strong>När</strong></td><td>Från och till, med datum och klockslag.</td></tr>
 <tr><td><strong>Vem som utför</strong></td><td>En eller flera personer, en bokning per person och dag.</td></tr>
 <tr><td><strong>Status</strong></td><td>Planering, pågår, avslutat eller pausat.</td></tr>
@@ -1177,9 +1177,9 @@ ${illu('feat-uppgifter-morgonmote', 'Tre byggarbetare i hjälm står vid en stor
 </table></div>
 
 <h2>Arbetsorder i appen för hantverkare</h2>
-<p>Den som bokas på en ny arbetsorder läggs in i orderns projekt. I appen ligger ordern under Projekt, som ett kort med namn, status, startdatum och plats, märkt Service.</p>
-<p>I projektet finns flikarna Uppgifter, Dokument och Foton. Under Dokument öppnar hantverkaren ritningen eller bilderna som kontoret bifogade. Hen kan också själv lägga till dokument och foton från jobbet.</p>
-<p>Tiden stämplas på projektet, så timmarna hamnar på rätt arbetsorder. Appen finns för iPhone och Android, se <a href="/sv/funktioner/tidrapportering-hantverkare">tidrapportering för hantverkare</a>.</p>
+<p>Den som bokas på en ny arbetsorder läggs in på ordern. I appen ligger ordern under Projekt, som ett kort med namn, status, startdatum och plats, märkt Service.</p>
+<p>I ordern finns flikarna Uppgifter, Dokument och Foton. Under Dokument öppnar hantverkaren ritningen eller bilderna som kontoret bifogade. Hen kan också själv lägga till dokument och foton från jobbet.</p>
+<p>Tiden stämplas på ordern, så timmarna hamnar på rätt jobb. Appen finns för iPhone och Android, se <a href="/sv/funktioner/tidrapportering-hantverkare">tidrapportering för hantverkare</a>.</p>
 <p>Kalendern med klockslagen är en vy för den som planerar. Medarbetaren ser inte bokningen i appen, och kundens telefonnummer och orderreferensen visas i webben. Vill du att hantverkaren ser tiden i mobilen lägger du en uppgift till de bokade: tiden står som deadline, och appen påminner när den har passerat.</p>
 
 ${illu('hantverkare-servicebil', 'Hantverkare med verktygsbälte och hjälm tittar i mobilen bredvid sin servicebil med öppna bakdörrar')}
@@ -1212,7 +1212,7 @@ ${illu('projekthantering-uppgifter', 'Byggarbetare i hjälm bockar av en checkli
 <p>Med Ta bort ordern försvinner ordern och alla dess bokningar. Blev det fel trycker du på Ångra i raden som visas direkt efteråt.</p>
 
 <h2>Arbetsordersystem för bygg: överblick på kontoret</h2>
-<p>I kalendern är varje bokning ett block med person, order och klockslag. I projektlistan syns ordern med ordertyp och kund. Öppnar du projektet ligger uppgifter, dokument, foton och arbetspass på samma ställe. Mer om det finns på sidan om <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>.</p>
+<p>I kalendern är varje bokning ett block med person, order och klockslag. I listan under Projekt syns ordern med ordertyp och kund. Öppnar du ordern ligger uppgifter, dokument, foton och arbetspass på samma ställe. Mer om det finns på sidan om <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>.</p>
 <p>Alla uppgifter finns dessutom i en egen lista som du filtrerar på projekt och status. Under Mina uppgifter ser du det som är tilldelat dig själv, uppdelat på försenat, att göra och klart.</p>
 
 <h2>Papper, sms eller digital arbetsorder?</h2>
@@ -1250,12 +1250,12 @@ ${illu('hantverkare-anstallda', 'Hantverkare visar en anställd hur en kakelplat
     {
       question: 'Vad är en digital arbetsorder?',
       answer:
-        'Ett jobb som läggs ut i ett system i stället för via sms eller papper: vad som ska göras, hos vem, när och av vem. I ByggExp skapar du arbetsordern som en bokning i kalendern, och den blir ett eget projekt.',
+        'Ett jobb som läggs ut i ett system i stället för via sms eller papper: vad som ska göras, hos vem, när och av vem. I ByggExp skapar du arbetsordern som en bokning i kalendern, och den sparas som en egen order.',
     },
     {
       question: 'Finns det en arbetsorder-app för hantverkare?',
       answer:
-        'Ja. I ByggExp-appen för iPhone och Android ser den som bokas på en ny order den som ett projekt med adress och bifogade dokument, och stämplar sin tid på det.',
+        'Ja. I ByggExp-appen för iPhone och Android ser den som bokas på en ny order den under Projekt, med adress och bifogade dokument, och stämplar sin tid på den.',
     },
     {
       question: 'Var skapar jag en arbetsorder?',
@@ -1270,17 +1270,17 @@ ${illu('hantverkare-anstallda', 'Hantverkare visar en anställd hur en kakelplat
     {
       question: 'Kan jag bifoga foton och ritningar till arbetsordern?',
       answer:
-        'Ja. I bokningsfönstret bifogar du bilder, pdf, Word- och Excel-filer. De sparas bland projektets dokument, och hantverkaren öppnar dem under Dokument i appen.',
+        'Ja. I bokningsfönstret bifogar du bilder, pdf, Word- och Excel-filer. De sparas bland orderns dokument, och hantverkaren öppnar dem under Dokument i appen.',
     },
     {
       question: 'Ser hantverkaren bokningen i en kalender i appen?',
       answer:
-        'Nej. Kalendern är en vy för den som planerar. Medarbetaren ser ordern som ett projekt i appen. Vill du ge klockslaget i mobilen lägger du en uppgift med påminnelser till de bokade – de hittar den under Uppgifter i appen.',
+        'Nej. Kalendern är en vy för den som planerar. Medarbetaren ser ordern under Projekt i appen. Vill du ge klockslaget i mobilen lägger du en uppgift med påminnelser till de bokade – de hittar den under Uppgifter i appen.',
     },
     {
       question: 'Rapporteras tiden på arbetsordern?',
       answer:
-        'Ja. Varje arbetsorder är ett eget projekt, och tiden stämplas på projektet. Tid rapporteras inte per enskild uppgift.',
+        'Ja. Varje arbetsorder är en egen order, och tiden stämplas på den. Tid rapporteras inte per enskild uppgift.',
     },
     {
       question: 'Kan kunden signera arbetsordern?',

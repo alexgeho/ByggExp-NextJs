@@ -163,3 +163,4 @@ Code-checked read-only: AD = byggexp-admin e7dc1b0, MO = byggexp-app 87221db4. B
 - NO: `articles` in «Koll på jobbet» (only FAKTURA/KOMPLETT, modules.ts:50-64) — keep the article sentence conditional.
 - Server-side module enforcement exists only for `avvik` (deviations.service.ts:122) and `payroll` (payroll.service.ts:454); other modules are gated in the frontend menu.
 - NO: push/notification when a person is booked (no notification call in BE src/assignments).
+- TERMINOLOGY (owner 2026-11-15): what «Ny bokning → Arbetsorder» creates is an **order** (same entity that used to be called project; the menu/list is still labelled «Projekt» in admin e7dc1b0 and the app). On the site write «order/arbetsorder», never «ordern blir ett projekt»; refer to «Projekt» only as the name of the list where it is found.

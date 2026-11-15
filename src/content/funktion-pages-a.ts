@@ -81,7 +81,7 @@ const STAMPELKLOCKA: FunktionPage = {
     alt: 'Byggarbetare i hjälm och overall stämplar in med mobilen framför en byggnad med ställning, med en blå platsmarkör ovanför',
   },
   stepsHeading: ['Stämpla in', 'och se läget'],
-  stepsLead: 'Stämpling i appen, läget i realtid och attest av timmarna.',
+  stepsLead: 'Stämpla, se läget, attestera.',
   steps: [
     {
       title: 'Se vem som är på jobbet',
@@ -267,7 +267,7 @@ const SCHEMALAGGNING: FunktionPage = {
     alt: 'Nöjd planerare lutar sig tillbaka i kontorsstolen bredvid en stor kalender med en bock',
   },
   stepsHeading: ['Lägg schemat', 'och följ upp'],
-  stepsLead: 'Planerade timmar, frånvaro och schema dag för dag.',
+  stepsLead: 'Timmar, frånvaro och schema.',
   steps: [
     {
       title: 'Planerade timmar per person',
@@ -461,7 +461,7 @@ const PROJEKTHANTERING: FunktionPage = {
     alt: 'Projektledare står vid en stor översiktspanel med kort och diagram framför ett hus under uppbyggnad med ställning',
   },
   stepsHeading: ['Allt om projektet', 'på ett ställe'],
-  stepsLead: 'Projektet, uppgifterna och fotona samlade för hela laget.',
+  stepsLead: 'Projekt, uppgifter och foton.',
   steps: [
     {
       title: 'Allt om projektet',
@@ -665,7 +665,7 @@ const PROJEKTPLANERING: FunktionPage = {
     alt: 'Projektledare pekar på en stor tavla med ett Gantt-schema där blå staplar ligger på var sin rad, med en kontorsstol bakom',
   },
   stepsHeading: ['Tidplan', 'från start till slut'],
-  stepsLead: 'Alla projekt i en tidslinje, vecka för vecka.',
+  stepsLead: 'Alla projekt i en tidslinje.',
   steps: [
     {
       title: 'Projekten vecka för vecka',

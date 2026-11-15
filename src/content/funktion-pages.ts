@@ -160,7 +160,7 @@ const TIDSYSTEM: FunktionPage = {
     alt: 'Byggarbetare i hjälm checkar in med mobilen vid en byggarbetsplats med ställning och en platsmarkör',
   },
   stepsHeading: ['Tre steg', 'till lön'],
-  stepsLead: 'Stämpla in på bygget, granska timmarna och exportera.',
+  stepsLead: 'Stämpla, granska, exportera.',
   steps: [
     {
       title: 'Stämpla in på bygget',
@@ -342,7 +342,7 @@ const HANTVERKARE: FunktionPage = {
     alt: 'Hantverkare med verktygsbälte och hjälm tittar i mobilen bredvid sin servicebil med öppna bakdörrar',
   },
   stepsHeading: ['Jobb, kvitto', 'och faktura'],
-  stepsLead: 'Tid per kund, kvitton på rätt jobb och faktura med ROT.',
+  stepsLead: 'Tid per kund, kvitton, ROT.',
   steps: [
     {
       title: 'Tid per kund',
@@ -508,7 +508,7 @@ const BYGGDAGBOK: FunktionPage = {
     alt: 'Arbetsledare i platskontoret skriver dagens anteckning vid datorn, med en byggkran och ett väderikon utanför fönstret',
   },
   stepsHeading: ['Dagboken', 'i projektet'],
-  stepsLead: 'Dagens anteckning, foton från bygget och vilka som var på plats.',
+  stepsLead: 'Anteckning, foton och närvaro.',
   steps: [
     {
       title: 'Dagens anteckning',
@@ -709,7 +709,7 @@ const RESURSPLANERING: FunktionPage = {
     alt: 'Planerare pekar på en stor tavla med ett Gantt-schema med blå staplar, en bygghjälm på golvet',
   },
   stepsHeading: ['Planera', 'och följ upp'],
-  stepsLead: 'Bemanning dag för dag, Gantt för alla projekt och uppföljning med timmar.',
+  stepsLead: 'Bemanning, Gantt och timmar.',
   steps: [
     {
       title: 'Bemanning dag för dag',
@@ -905,7 +905,7 @@ const EGENKONTROLL: FunktionPage = {
     alt: 'Byggarbetare i hjälm håller en surfplatta med bockar framför en öppen regelvägg medan en kollega bär fram en gipsskiva',
   },
   stepsHeading: ['Dokumentera', 'kvaliteten'],
-  stepsLead: 'Foton från bygget, byggdagbok och uppgifter med deadline.',
+  stepsLead: 'Foton, dagbok och uppgifter.',
   steps: [
     {
       title: 'Foton från bygget',
@@ -1121,7 +1121,7 @@ const ARBETSORDER: FunktionPage = {
     alt: 'Hantverkare i hjälm och förkläde trycker på mobilen bredvid en blå ruta med en vit bock',
   },
   stepsHeading: ['Boka', 'jobben'],
-  stepsLead: 'Boka i kalendern, samla underlaget på ordern och påminn tills det är klart.',
+  stepsLead: 'Kund, underlag, tid och personal.',
   steps: [
     {
       title: 'Boka i kalendern',

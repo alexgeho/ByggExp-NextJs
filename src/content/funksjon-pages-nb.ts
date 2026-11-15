@@ -81,7 +81,7 @@ const KS_SYSTEM: FunksjonPageNb = {
     alt: 'Bygningsarbeider med hjelm holder et nettbrett med haker foran en åpen bindingsverksvegg mens en kollega bærer frem en gipsplate',
   },
   stepsHeading: ['Dokumenter', 'kvaliteten'],
-  stepsLead: 'Bilder fra bygget, byggedagbok og tiltak med frist.',
+  stepsLead: 'Bilder, dagbok og tiltak.',
   steps: [
     {
       title: 'Bilder fra bygget',
@@ -298,7 +298,7 @@ const TIMEREGISTRERING: FunksjonPageNb = {
     alt: 'Bygningsarbeider med hjelm sjekker inn med mobilen ved en byggeplass med stillas og en kartmarkør',
   },
   stepsHeading: ['Tre steg', 'til lønn'],
-  stepsLead: 'Stemple inn på bygget, gå gjennom timene og eksporter.',
+  stepsLead: 'Stemple, gå gjennom, eksporter.',
   steps: [
     {
       title: 'Stemple inn på bygget',
@@ -482,7 +482,7 @@ const PROSJEKTSTYRING: FunksjonPageNb = {
     alt: 'Prosjektleder står ved en stor oversiktstavle med kort og diagrammer foran et hus under oppføring med stillas',
   },
   stepsHeading: ['Plan, oppgaver', 'og økonomi'],
-  stepsLead: 'Planlegg prosjektet, følg opp oppgavene og se marginen.',
+  stepsLead: 'Plan, oppgaver og margin.',
   steps: [
     {
       title: 'Planlegg prosjektet',
@@ -673,7 +673,7 @@ const BEMANNINGSPLAN: FunksjonPageNb = {
     alt: 'Planlegger plasserer en arbeider med hjelm i en rute på en stor bemanningstavle med ansatte og dager',
   },
   stepsHeading: ['Planlegg', 'og følg opp'],
-  stepsLead: 'Bemanning dag for dag, Gantt og fravær i samme plan.',
+  stepsLead: 'Bemanning, Gantt og fravær.',
   steps: [
     {
       title: 'Bemanning dag for dag',
@@ -877,7 +877,7 @@ const TILBUDSPROGRAM: FunksjonPageNb = {
     alt: 'Håndverker med caps sitter ved en bærbar PC og skriver, ved siden av et ark med et hus bak et stillas og en penn',
   },
   stepsHeading: ['Tilbud, faktura', 'og oppfølging'],
-  stepsLead: 'Lag tilbudet, fakturer timene og følg pengene.',
+  stepsLead: 'Lag tilbudet, fakturer, følg pengene.',
   steps: [
     {
       title: 'Lag tilbudet',
@@ -1116,7 +1116,7 @@ const HMS_SYSTEM: FunksjonPageNb = {
     alt: 'Bygningsarbeider med hjelm krysser av på en stor sjekkliste, med en ringende bjelle og en klokke ved siden av',
   },
   stepsHeading: ['Fra avvik', 'til lukket sak'],
-  stepsLead: 'Avvik fra dagboken, tiltak med frist og bilder fra bygget.',
+  stepsLead: 'Avvik, tiltak og bilder.',
   steps: [
     {
       title: 'Avvik fra dagboken',

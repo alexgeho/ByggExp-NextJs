@@ -81,7 +81,7 @@ const UTLAGG: FunktionPage = {
     alt: 'Byggarbetare i hjälm fotar ett kvitto med mobilen utanför en butik',
   },
   stepsHeading: ['Från kvitto', 'till projekt'],
-  stepsLead: 'Fota kvittot, attestera och följ kostnaden på projektet.',
+  stepsLead: 'Fota kvittot, attestera, följ.',
   steps: [
     {
       title: 'Fota kvittot',
@@ -272,7 +272,7 @@ const VERKTYG: FunktionPage = {
     alt: 'Hantverkare på knä håller en blå skruvdragare och en QR-etikett, en verktygslåda och en cirkelsåg på hyllan bakom',
   },
   stepsHeading: ['Register', 'med QR-kod'],
-  stepsLead: 'Registrera verktygen och se vem som har vad.',
+  stepsLead: 'Se vem som har vad.',
   steps: [
     {
       title: 'Registrera verktygen',

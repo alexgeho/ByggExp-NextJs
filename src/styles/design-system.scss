@@ -300,17 +300,20 @@
 /* R28: feature pages — every section heading gets one line of subheading
    (muted, same look as the R22 lead line). Replaces the "no subtitle" part of
    R5 on these pages. */
+.fn .section-head {
+  gap: 0;
+}
 .fn .fn-section-sub {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.5;
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
+  line-height: 1.4;
 }
 .fn .lead-magnet-section-heading {
   margin-bottom: 0;
 }
 .fn .lead-magnet-section-heading + .fn-section-sub {
-  margin: 6px 0 16px;
+  margin: 4px 0 16px;
 }
 .fn .section-head h2 {
   margin-bottom: 0;

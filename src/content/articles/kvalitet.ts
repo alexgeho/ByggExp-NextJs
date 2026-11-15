@@ -1204,6 +1204,8 @@ const A_EGENKONTROLL_EL_EGENKONTROLLPROGRAM_HTML = `
 </ul>
 
 <p>Har du koll på både delarna – ett aktuellt egenkontrollprogram och en dokumenterad kontroll av varje installation – uppfyller du både lagkravet och kundens förväntan på ett spårbart, säkert elarbete.</p>
+<h2>Egenkontroll el i ByggExp</h2>
+<p>I ByggExp fyller montören i egenkontrollen i appen, punkt för punkt och med foto per kontrollpunkt, och den signerade kontrollen sparas på rätt projekt. Det finns en färdig standardmall för el, och protokollet exporterar du som PDF från webben. Läs mer om <a href="/sv/funktioner/egenkontroll">digital egenkontroll i ByggExp</a>.</p>
 <p>Relaterat: <a href="/sv/blog/offert-vvs-elektriker-rormokare">Offert för elektriker och VVS</a></p>
 `;
 
@@ -1344,6 +1346,8 @@ const A_EGENKONTROLL_ENTREPRENAD_HTML = `
 <p>Egenkontrollerna är en del av underlaget som visar att entreprenaden är utförd enligt handlingarna. Saknas de blir det svårare att få arbetet godkänt utan anmärkning vid <a href="/sv/blog/slutbesiktning">slutbesiktningen</a>.</p>
 <h3>Vem ansvarar för egenkontrollen i en entreprenad?</h3>
 <p>Den som utför arbetet ansvarar för sin egenkontroll, och en ansvarig signerar. Egenkontrollerna styrker ofta punkterna i byggherrens kontrollplan.</p>
+<h2>Egenkontroller i ByggExp</h2>
+<p>I ByggExp fyller arbetslaget i egenkontrollerna i appen, med foto per kontrollpunkt, och varje signerad kontroll finns kvar på projektet när beställaren eller besiktningsmannen frågar efter den. Det finns standardmallar för el, VVS och bygg/stomme, och du kan lägga upp egna mallar. Läs mer om <a href="/sv/funktioner/egenkontroll">digital egenkontroll för bygg i ByggExp</a>.</p>
 <p>Relaterat: <a href="/sv/blog/egenkontrollprogram">Egenkontrollprogram</a> · <a href="/sv/blog/kvalitetsplan-bygg">Kvalitetsplan i bygg</a> · <a href="/sv/verktyg/egenkontroll-vatrum-mall">Egenkontroll våtrum – mall</a> · <a href="/sv/verktyg/egenkontroll-tak-mall">Egenkontroll tak – mall</a> · <a href="/sv/verktyg/egenkontroll-ventilation-mall">Egenkontroll ventilation – mall</a></p>
 `;
 
@@ -1409,7 +1413,7 @@ const A_TIDREDOVISNING_BYGGFORETAG_HTML = `
 <li><strong>Blanda ihop med personalliggaren.</strong> Personalliggaren uppfyller inte kravet på löneunderlag, och tidredovisningen uppfyller inte lagkravet på närvaroregistrering.</li>
 </ul>
 
-<p>Med en löpande, projektkopplad <a href="/sv/blog/tidredovisning-app">tidredovisning</a> får du rätt lön, rätt faktura och koll på lönsamheten – och slipper pusslet vid varje lönekörning.</p>
+<p>Med en löpande, projektkopplad <a href="/sv/blog/tidredovisning-app">tidredovisning</a> får du rätt lön, rätt faktura och koll på lönsamheten – och slipper pusslet vid varje lönekörning. Hur timmarna går vidare till lönen beskriver vi i guiden om <a href="/sv/blog/loneprogram-bygg">löneprogram för byggföretag</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Vad är skillnaden mellan tidredovisning och personalliggare?</h3>

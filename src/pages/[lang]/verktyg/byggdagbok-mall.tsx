@@ -313,7 +313,9 @@ export default function ByggdagbokMallPage() {
                 dagboken ligger i samma app som tid, uppgifter och ekonomi hänger allt ihop: en
                 avvikelse eller ett ÄTA du noterar kan följas hela vägen till fakturan. Och när ett
                 projekt är klart finns hela historiken kvar, redo att tas fram om en fråga dyker upp
-                flera år senare.
+                flera år senare.{' '}
+                Läs mer om{' '}
+                <Link href={`/${LOCALE}/funktioner/byggdagbok`}>byggdagboken i ByggExp</Link>.
               </p>
             ),
           },

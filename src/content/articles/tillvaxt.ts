@@ -796,7 +796,7 @@ const A_BASTA_BYGGPROGRAM_HTML = `
 <p>Börja med det du känner mest smärta i – ofta tid, offert eller faktura – och prova det i praktiken innan du bestämmer dig. Testa gärna våra <a href="/sv/verktyg">gratis verktyg</a> för att se hur flödet fungerar, och läs guiden om byggprogram för byggföretag för vad ett samlat system ska klara.</p>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp är byggt för svenska byggföretag och hantverkare och täcker hela kedjan: tid, uppgifter, foto, planering, utlägg, offert, faktura (med ROT) och löner – ur samma timmar. <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi om det passar din verksamhet, eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
+<p>ByggExp är byggt för svenska byggföretag och hantverkare och täcker hela kedjan: tid, uppgifter, foto, planering, utlägg, offert, faktura (med ROT) och löner – ur samma timmar. Läs mer om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a> och <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>. <a href="/sv/contact">Boka en gratis konsultation</a> så visar vi om det passar din verksamhet, eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
 
 <p>Det &quot;bästa&quot; byggprogrammet är det som hänger ihop, funkar på bygget och räknar hem sig. Utgå från din vardag, testa i praktiken och välj därefter.</p>
 `;
@@ -1562,7 +1562,7 @@ const S_TIDREDOVISNING_APP_HTML = `
 <ul>
 <li>Sammanställa timmar per medarbetare och period automatiskt.</li>
 <li>Räkna OB och övertid enligt era regler.</li>
-<li>Exportera till lönesystem eller lönebyrå.</li>
+<li>Exportera till lönesystem eller lönebyrå – se guiden om <a href="/sv/blog/loneprogram-bygg">löneprogram för byggföretag</a>.</li>
 <li>Ge underlag för fakturering på loggad tid.</li>
 </ul>
 

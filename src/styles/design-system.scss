@@ -364,11 +364,11 @@
   }
 }
 
-/* R35: feature pills row — more air between the header and the pills than
-   under them (the sticky header overlaps the row by a few px). */
+/* R35: feature pills row — the same air above the pills (to the header) and
+   below them (to the line): 24px each. */
 .feature-nav-inner {
   padding-top: 24px;
-  padding-bottom: 14px;
+  padding-bottom: 24px;
 }
 
 /* R36: text kept for search engines and screen readers, not shown. */

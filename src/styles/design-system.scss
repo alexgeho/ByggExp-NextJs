@@ -471,8 +471,37 @@ button.feature-nav-chip {
   flex-wrap: wrap;
   align-items: center;
   gap: 16px 20px;
-  margin-top: 20px;
+  margin-top: 28px;
+}
+/* R40: vertical air inside the card — text → steps → button are 28px apart,
+   steps 16px apart, 44px under the button. */
+.funktioner-slide {
+  padding-bottom: 44px;
+}
+.funktioner-slide .fk-text > p {
+  margin-bottom: 28px;
+}
+.funktioner-slide .fk-steps {
+  gap: 16px;
+  margin-bottom: 0;
+}
+/* R35: the sticky pill row starts exactly under the sticky header (80px on
+   desktop, 61px on phones), so the header never eats the air above the pills. */
+@media (min-width: 841px) {
+  .feature-nav {
+    top: 79px;
+  }
 }
 .funktioner-slide .fk-link {
   font-weight: 400;
+}
+/* R40: the button inside a card is one step smaller than the hero button. */
+.fk-actions .btn-primary {
+  padding: 12px 22px;
+  font-size: 1.05rem;
+}
+@media (max-width: 900px) {
+  .funktioner-slide {
+    padding-bottom: 32px;
+  }
 }

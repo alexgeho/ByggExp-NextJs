@@ -96,3 +96,11 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 - tidrapporteringssystem-bygg (гайд, владеет «tidrapporteringssystem bygg») → basta-tidrapporteringssystem-bygg одной фразой; сравнение ссылается обратно на гайд. Title/H1 сравнения начинаются с «Bästa …», чтобы не каннибализировать гайд (2026-10-06).
 
 - 2026-10-28: чистка блога — 46 sv-статей → 301 (в т.ч. projekthantering-byggforetag, projektledning-byggforetag, app-for-byggprojekt → /sv/funktioner/projekthantering; старый 301 projekthanteringssystem-bygg перенаправлен туда же). Полная карта: docs/seo/blog-301-map-2026-10-28.md.
+
+## Сверка кластеров 2026-11-15 (GSC 01–13.11)
+
+Правило владельца: страница платной функции = центр группы; каждая статья и шаблон группы, которые Google показывает по коммерческому запросу, держат в тексте одну ссылку на свою страницу функции. Новые статьи — только если по группе нет ни одной страницы.
+Доставлено (2bd436a): egenkontroll-el-egenkontrollprogram и egenkontroll-entreprenad → /funktioner/egenkontroll; /verktyg/byggdagbok-mall → /funktioner/byggdagbok; basta-byggprogram-2026 → tidrapporteringssystem-bygg + projekthantering; tidredovisning-app и tidredovisning-byggforetag → /blog/loneprogram-bygg (по «löneprogram byggföretag» Google показывал случайные страницы).
+Без центра (решение владельца): arbetsorder (467 показов/2 нед., статья arbetsorder-app-bygg), affärssystem bygg (477, статья), personalliggare (858, модуля нет).
+Открыто: в /verktyg/byggdagbok-mall старая фраза «ett ÄTA du noterar kan följas hela vägen till fakturan» спорит с product-facts (нет связи ÄTA в dagbok).
+Keyword Planner не выгружали: данных GSC хватило, новых статей не потребовалось.

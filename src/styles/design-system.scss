@@ -363,3 +363,23 @@
     justify-content: center;
   }
 }
+
+/* R35: feature pills row — more air between the header and the pills than
+   under them (the sticky header overlaps the row by a few px). */
+.feature-nav-inner {
+  padding-top: 24px;
+  padding-bottom: 14px;
+}
+
+/* R36: text kept for search engines and screen readers, not shown. */
+.ds-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1008,13 +1008,9 @@ export default function FunktionerPage({
       </Head>
       <Header headerT={headerT} />
 
-      <section className="blog-hero">
-        <div className="container container-narrow">
-          <span className="blog-badge">{copy.badge}</span>
-          <h1>{copy.title}</h1>
-          <p className="blog-hero-subtitle">{copy.subtitle}</p>
-        </div>
-      </section>
+      {/* R36: no hero on the hub — the page opens with the feature pills and the
+          carousel. The h1 stays for search engines and screen readers. */}
+      <h1 className="ds-visually-hidden">{copy.title}</h1>
 
       <section className="blog-list-section funktioner-list-section">
         <div className="container">

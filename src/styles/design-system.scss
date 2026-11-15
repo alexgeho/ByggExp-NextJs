@@ -318,3 +318,18 @@
 .fn .section-head h2 {
   margin-bottom: 0;
 }
+
+/* R31: one muted line right under the feature card title. */
+.funktioner-slide .fk-sub {
+  /* the slide is a flex column with a 26px gap (20px on phones): pull the line
+     up so it sits 6px under the title */
+  margin: -20px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1rem + 0.4vw, 1.25rem);
+  line-height: 1.4;
+}
+@media (max-width: 900px) {
+  .funktioner-slide .fk-sub {
+    margin-top: -14px;
+  }
+}

@@ -1134,7 +1134,8 @@ const ARBETSORDER: FunktionPage = {
     },
   ],
   body: `
-<p>En arbetsorder inom bygg ska svara på fyra frågor: vad som ska göras, var, av vem och till när. I ByggExp skapar du arbetsordern som en uppgift kopplad till ett projekt. Projektet håller kunden och adressen, uppgiften säger vad som ska göras, vem som ansvarar och när det ska vara klart. Den som ska göra jobbet ser uppgiften i appen och markerar den som klar. Här ser du hur en digital arbetsorder fungerar i ByggExp, vad hantverkaren ser i mobilen och hur kontoret håller koll på vad som är öppet, försenat och klart.</p>
+<p>En arbetsorder inom bygg ska svara på fyra frågor: vad som ska göras, var, av vem och till när. I ByggExp skapar du arbetsordern som en uppgift kopplad till ett projekt. Projektet håller adressen, uppgiften säger vad som ska göras, vem som ansvarar och när det ska vara klart.</p>
+<p>Den som ska göra jobbet ser uppgiften i appen och markerar den som klar. Här ser du hur en digital arbetsorder fungerar i ByggExp, vad hantverkaren ser i mobilen och hur kontoret håller koll på vad som är öppet, försenat och klart.</p>
 
 <h2>Vad är en arbetsorder inom bygg?</h2>
 <p>En arbetsorder är beskedet till den som ska utföra ett jobb: byt blandaren hos kunden på tisdag, dra fram el till laddboxen, laga fuktskadan i trapphuset. I små byggföretag går beskedet ofta via sms, ett samtal i bilen eller en lapp på instrumentbrädan. Det fungerar tills två jobb krockar, eller tills någon frågar vad som egentligen blev gjort.</p>
@@ -1142,7 +1143,7 @@ const ARBETSORDER: FunktionPage = {
 
 <h2>Så skapar du en arbetsorder i ByggExp</h2>
 <ol>
-<li><strong>Välj projekt.</strong> Arbetsordern läggs på det projekt som jobbet hör till. Ett servicejobb hos en ny kund blir ett eget, litet projekt med kund och adress.</li>
+<li><strong>Välj projekt.</strong> Arbetsordern läggs på det projekt som jobbet hör till. Ett servicejobb hos en ny kund blir ett eget, litet projekt med adress.</li>
 <li><strong>Skriv vad som ska göras.</strong> Titeln är det hantverkaren ser först, till exempel ”Byta jordfelsbrytare, Villa Ek”. I beskrivningen står detaljerna: portkod, vad kunden har beställt, vad som ska tas med.</li>
 <li><strong>Tilldela.</strong> Välj en eller flera personer i projektet. Lämnar du fältet tomt går uppgiften till hela projektteamet.</li>
 <li><strong>Sätt start och deadline.</strong> Datum och klockslag för när jobbet börjar och när det ska vara klart.</li>
@@ -1156,7 +1157,7 @@ ${illu('feat-uppgifter-morgonmote', 'Tre byggarbetare i hjälm står vid en stor
 <h2>Det här står på arbetsordern</h2>
 <p>Allt behöver inte skrivas om för varje jobb. Det som gäller hela uppdraget ligger på projektet, och det som gäller just det här jobbet ligger på uppgiften:</p>
 <div class="article-table"><table>
-<thead><tr><th>Uppgift på arbetsordern</th><th>Var den finns i ByggExp</th></tr></thead>
+<thead><tr><th>Det här står på ordern</th><th>Var den finns i ByggExp</th></tr></thead>
 <tbody>
 <tr><td><strong>Vad som ska göras</strong></td><td>Uppgiftens titel och beskrivning.</td></tr>
 <tr><td><strong>Kund och adress</strong></td><td>Projektet som uppgiften hör till.</td></tr>
@@ -1188,7 +1189,7 @@ ${illu('hantverkare-servicebil', 'Hantverkare med verktygsbälte och hjälm titt
 ${illu('projekthantering-uppgifter', 'Byggarbetare i hjälm bockar av en checklista på en stor skrivplatta, med en ringande klocka och en väggklocka bredvid')}
 
 <h2>Exempel: en dag med servicejobb</h2>
-<p>Så kan arbetsordrarna se ut en tisdag i en firma med tre montörer:</p>
+<p>Så kan dagens arbetsorder se ut en tisdag i en firma med tre montörer:</p>
 <div class="article-table"><table>
 <thead><tr><th>Arbetsorder</th><th>Projekt</th><th>Ansvarig och deadline</th><th>Status</th></tr></thead>
 <tbody>

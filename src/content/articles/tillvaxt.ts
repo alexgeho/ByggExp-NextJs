@@ -294,12 +294,12 @@ const A_ARBETSORDER_APP_BYGG_HTML = `
 <li><strong>Skapa och tilldela</strong> – lägg ut jobb på rätt person eller lag, med adress, beskrivning och deadline.</li>
 <li><strong>Automatisk uppföljning</strong> – se status utan att ringa runt; påminnelser när något inte är klart.</li>
 <li><strong>Kopplat till projekt</strong> – varje order hör till ett projekt så tid, foto och kostnad hamnar rätt.</li>
-<li><strong>Foto och noteringar</strong> – <a href="/sv/blog/fotodokumentation-app-bygg">bevis och anteckningar</a> direkt på ordern.</li>
+<li><strong>Foto och noteringar</strong> – <a href="/sv/blog/fotodokumentation-app-bygg">bevis och anteckningar</a> kopplade till rätt jobb.</li>
 <li><strong>Fungerar i mobilen</strong> – på bygget, inte bara på kontoret.</li>
 </ul>
 
 <h2>Så gör ByggExp det</h2>
-<p>ByggExp har <strong>uppgifter med automatisk uppföljning</strong> och en <strong>live-översikt över arbetslagen</strong>: du delar ut jobb, ser vad som pågår och vad som är klart, och kopplar tid och foto till rätt projekt. Samma data blir sedan underlag för <a href="/sv/blog/faktureringsprogram-bygg">faktura</a> och lön. Se hur uppgifter och foton samlas per projekt i <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>. Hur själva arbetsordern ser ut i systemet visar vi på sidan om <a href="/sv/funktioner/arbetsorder">arbetsorder för bygg i ByggExp</a>.</p>
+<p>ByggExp har <strong>uppgifter med automatisk uppföljning</strong> och en <strong>live-översikt över arbetslagen</strong>: du delar ut jobb, ser vad som är öppet, försenat och klart, och kopplar tid och foto till rätt projekt. Samma data blir sedan underlag för <a href="/sv/blog/faktureringsprogram-bygg">faktura</a> och lön. Se hur uppgifter och foton samlas per projekt i <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>. Hur själva arbetsordern ser ut i systemet visar vi på sidan om <a href="/sv/funktioner/arbetsorder">arbetsorder för bygg i ByggExp</a>.</p>
 <p><a href="/sv/contact">Boka en gratis konsultation</a> eller <a href="/sv/funktioner">se alla funktioner</a>.</p>
 
 <h2>Vanliga misstag</h2>

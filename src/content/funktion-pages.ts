@@ -90,6 +90,12 @@ export const ILLU_HEIGHT: Record<string, number> = {
   'feat-tid-restid': 911,
   'feat-foto-ror-i-vagg': 1147,
   'feat-narvaro-samling': 916,
+  // feat-* heroes of the feature articles (content/feature-article-heroes).
+  'feat-offert-uppfoljning': 1030,
+  'feat-narvaro-oversikt': 1228,
+  'feat-planering-vecka': 1171,
+  'feat-kvitto-material': 1141,
+  'feat-verktyg-forrad': 1295,
   ...ILLU_HEIGHT_A,
   ...ILLU_HEIGHT_B,
   ...ILLU_HEIGHT_C,

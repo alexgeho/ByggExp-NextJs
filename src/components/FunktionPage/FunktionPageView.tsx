@@ -3,13 +3,12 @@ import Head from "next/head";
 
 import CTA from "../CTA/CTA";
 import Footer from "../Footer/Footer";
+import FunktionHero, { FUNKTION_HERO_UI } from "./FunktionHero";
 import Header from "../Header/Header";
 import { PlanUsers } from "../Pricing/Pricing";
 import {
   getFunktionPage,
   illuSrc,
-  illuSrcSet,
-  ILLU_HEIGHT,
   PLAN_PRICE,
 } from "../../content/funktion-pages";
 import { funksjonHreflang, getFunksjonPageNb } from "../../content/funksjon-pages-nb";
@@ -26,6 +25,7 @@ import type { LandingLanguageCode } from "../../locales/languages";
 // Commercial feature page template, shared by /sv/funktioner/<slug> and
 // /nb/funksjoner/<slug> (byggexp.no). Same layout as /sv/tidrapportering-app:
 // hero → feature steps (real screenshots) → long content → FAQ → price → CTA.
+// The hero is the shared FunktionHero (its UI strings: FUNKTION_HERO_UI).
 // Content + claims live in content/funktion-pages*.ts (sv) and
 // content/funksjon-pages-nb.ts (nb). UI strings per language below; sv output
 // is unchanged by the nb support.
@@ -33,12 +33,8 @@ import type { LandingLanguageCode } from "../../locales/languages";
 const UI = {
   sv: {
     folder: "funktioner",
-    crumbs: "Brödsmulor",
+    ...FUNKTION_HERO_UI.sv,
     home: "Hem",
-    hub: "Funktioner",
-    cta: "Boka gratis konsultation",
-    trial: "14 dagar gratis",
-    noLockIn: "Ingen bindningstid",
     prev: "Föregående",
     next: "Nästa",
     faq: "Vanliga frågor",
@@ -47,20 +43,12 @@ const UI = {
     guidesSub: "Mer om samma ämne.",
     priceNote: "14 dagar gratis · Ingen bindningstid · exkl. moms",
     close: "Stäng",
-    usersFaktura: "max 2 användare",
-    usersIncluded: "inkl. 10 användare",
     offerPer: "per företag och månad exkl. moms",
-    perMonth: "kr/mån",
-    exVat: "exkl. moms",
   },
   nb: {
     folder: "funksjoner",
-    crumbs: "Brødsmuler",
+    ...FUNKTION_HERO_UI.nb,
     home: "Hjem",
-    hub: "Funksjoner",
-    cta: "Bestill gratis konsultasjon",
-    trial: "14 dager gratis",
-    noLockIn: "Ingen bindingstid",
     prev: "Forrige",
     next: "Neste",
     faq: "Vanlige spørsmål",
@@ -69,11 +57,7 @@ const UI = {
     guidesSub: "Mer om samme tema.",
     priceNote: "14 dager gratis · Ingen bindingstid · eks. mva.",
     close: "Lukk",
-    usersFaktura: "maks 2 brukere",
-    usersIncluded: "inkl. 10 brukere",
     offerPer: "per bedrift og måned eks. mva.",
-    perMonth: "NOK/mnd",
-    exVat: "eks. mva.",
   },
 } as const;
 
@@ -234,49 +218,18 @@ export default function FunktionPageView({ lang, slug }: Props) {
       <Header headerT={headerT} />
 
       <main className="em fn" onClick={openImage}>
-        {/* HERO — white, 3D illustration on the right */}
-        <section className="em-hero">
-          <div className="container em-hero-inner">
-            <div className="em-hero-content">
-              <nav className="fn-crumbs" aria-label={ui.crumbs}>
-                <a href={`/${lang}/funktioner`}>{ui.hub}</a>
-                <span aria-hidden="true">/</span>
-                <span>{page.name}</span>
-              </nav>
-              <h1>
-                {page.h1} <span>{page.h1Accent}</span>
-              </h1>
-              {/* R20: package price right under the H1 (numbers: Pricing.tsx). */}
-              <p className="fn-hero-price">
-                <strong>
-                  {price} {ui.perMonth}
-                </strong>{" "}
-                {ui.exVat} · {usersText}
-              </p>
-              <p className="em-lead">{page.lead}</p>
-              <a href="#cta" className="btn-primary">
-                {ui.cta}
-              </a>
-              <ul className="em-checks">
-                <li>{ui.trial}</li>
-                <li>{ui.noLockIn}</li>
-                <li>{page.heroCheck}</li>
-              </ul>
-            </div>
-            <div className="em-hero-visual fn-hero-visual">
-              <img
-                src={illuSrc(page.hero.name)}
-                srcSet={illuSrcSet(page.hero.name)}
-                sizes="(max-width: 900px) 100vw, 560px"
-                width={1200}
-                height={ILLU_HEIGHT[page.hero.name]}
-                fetchPriority="high"
-                decoding="async"
-                alt={page.hero.alt}
-              />
-            </div>
-          </div>
-        </section>
+        {/* HERO — white, 3D illustration on the right (shared with the
+            feature articles, R33) */}
+        <FunktionHero
+          lang={isNb ? "nb" : "sv"}
+          name={page.name}
+          h1={page.h1}
+          h1Accent={page.h1Accent}
+          plan={page.plan}
+          lead={page.lead}
+          heroCheck={page.heroCheck}
+          hero={page.hero}
+        />
 
         {/* FEATURE STEPS — same carousel as the home page "features" block */}
         <section className="features">

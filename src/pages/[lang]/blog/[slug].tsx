@@ -5,8 +5,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
-import FeatureNav from '../../../components/FeatureNav/FeatureNav';
+import FeatureNav, { featureNavLabel } from '../../../components/FeatureNav/FeatureNav';
 import Footer from '../../../components/Footer/Footer';
+import FunktionHero, { hasFunktionHeroUi } from '../../../components/FunktionPage/FunktionHero';
 import Header from '../../../components/Header/Header';
 import ProductBanner from '../../../components/LeadMagnet/ProductBanner';
 import { PROJEKT_PRICE } from '../../../components/Pricing/Pricing';
@@ -16,6 +17,7 @@ import { getBlogTools } from '../../../content/blog-tools';
 import { getArticleInlineTool } from '../../../content/article-inline-tools';
 import { getArticleQuickAnswer } from '../../../content/article-quick-answers';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
+import { getFeatureArticleHero } from '../../../content/feature-article-heroes';
 import { resolveFaq } from '../../../lib/faq';
 import { getMockBlogPost } from '../../../lib/blog-mock';
 import {
@@ -251,6 +253,13 @@ export default function BlogArticlePage({
     };
   }, [lightboxImage]);
   const faq = resolveFaq(post, lang);
+  // R33: feature articles enabled in content/feature-article-heroes get the
+  // first screen of the commercial feature pages (the same FunktionHero).
+  const fnHero =
+    FEATURE_ARTICLE_SLUGS.has(post.slug) && hasFunktionHeroUi(lang)
+      ? getFeatureArticleHero(lang, post.slug)
+      : null;
+  const fnHeroLang = hasFunktionHeroUi(lang) ? lang : 'sv';
 
   return (
     <>
@@ -383,7 +392,7 @@ export default function BlogArticlePage({
             }}
           />
         ) : null}
-        {coverImageUrl && !toolOnTop ? <link rel="preload" as="image" href={coverImageUrl} fetchPriority="high" /> : null}
+        {coverImageUrl && !toolOnTop && !fnHero ? <link rel="preload" as="image" href={coverImageUrl} fetchPriority="high" /> : null}
       </Head>
 
       <Header headerT={headerT} />
@@ -392,8 +401,32 @@ export default function BlogArticlePage({
         <FeatureNav lang={lang} activeSlug={post.slug} />
       ) : null}
 
-      <article className={`blog-article${toolOnTop ? ' blog-article--tool-first' : ''}`}>
+      {/* R33: same hero component and classes as /sv/funktioner/<slug>; the
+          wrapper carries the "em fn" scope the hero styles are written for.
+          The article has no request form of its own, so the button goes to
+          the form on the start page (R10). */}
+      {fnHero ? (
+        <div className="em fn">
+          <FunktionHero
+            lang={fnHeroLang}
+            name={featureNavLabel(post.slug, lang)}
+            h1={fnHero.h1}
+            h1Accent={fnHero.h1Accent}
+            plan={fnHero.plan}
+            lead={fnHero.lead}
+            heroCheck={fnHero.heroCheck}
+            hero={fnHero.hero}
+            ctaHref={`/${lang}#cta`}
+          />
+        </div>
+      ) : null}
+
+      <article
+        className={`blog-article${toolOnTop ? ' blog-article--tool-first' : ''}${fnHero ? ' blog-article--fn-hero' : ''}`}
+      >
         <div className="container container-narrow">
+          {fnHero ? null : (
+          <>
           <nav className="blog-breadcrumbs" aria-label="Breadcrumb">
             <Link href={`/${lang}`}>{copy.home}</Link>
             <span>/</span>
@@ -414,6 +447,8 @@ export default function BlogArticlePage({
               {formatDate(post.publishedAt || post.createdAt, lang)}
             </p>
           </div>
+          </>
+          )}
 
           {/* The answer people searched for, before anything else. */}
           {quickAnswer ? (
@@ -442,8 +477,10 @@ export default function BlogArticlePage({
               src={coverImageUrl}
               alt={post.title}
               className="blog-article-cover"
-              // LCP element on article pages — fetch it before other images.
-              fetchPriority="high"
+              // LCP element on article pages — fetch it before other images
+              // (with the R33 hero it is the first image of the body instead).
+              fetchPriority={fnHero ? undefined : 'high'}
+              loading={fnHero ? 'lazy' : undefined}
               decoding="async"
               onClick={() => setLightboxImage(coverImageUrl)}
             />

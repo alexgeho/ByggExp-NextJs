@@ -340,3 +340,9 @@
     margin-top: -14px;
   }
 }
+
+/* R33: feature article with the feature-page hero (FunktionHero) as its first
+   screen — the article body under it starts with the section padding (R8). */
+.blog-article--fn-hero {
+  padding-top: var(--ds-section-pad);
+}

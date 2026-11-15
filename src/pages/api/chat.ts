@@ -145,6 +145,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await stream.finalMessage();
     res.end();
   } catch (err) {
+    // Log why the model call failed and expose only the HTTP status and error
+    // type (no message, no key) in a header, so a failure can be diagnosed
+    // without server access.
+    const status = err instanceof Anthropic.APIError ? err.status : undefined;
+    const type =
+      err instanceof Anthropic.APIError
+        ? ((err.error as { error?: { type?: string } } | undefined)?.error?.type ?? err.name)
+        : err instanceof Error
+          ? err.name
+          : 'unknown';
+    console.error('[chat] model call failed', status, type, err instanceof Error ? err.message : err);
+    if (!res.headersSent) {
+      res.setHeader('X-Chat-Error', `${status ?? 'no-status'} ${type}`);
+    }
     // If the stream hasn't written yet we can still send a clean error.
     if (!res.headersSent || !res.writableEnded) {
       try {

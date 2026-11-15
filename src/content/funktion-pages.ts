@@ -170,21 +170,30 @@ const TIDSYSTEM: FunktionPage = {
   steps: [
     {
       title: 'Stämpla in på bygget',
-      text: 'GPS-incheckning i appen. Passet pausas när man lämnar arbetsplatsen.',
-      bullets: ['Timmar per projekt', 'Normal, övertid eller OB per pass', 'Restid och traktamente'],
+      text: 'Laget checkar in med GPS i appen och passet pausas utanför arbetsplatsen.',
+      bullets: [
+        'Timmar per projekt och dag',
+        'Normal, övertid eller OB per pass',
+        'Restid och traktamente på passet',
+      ],
       img: '/landing/features/1arbetspass-1200.webp',
       alt: 'Arbetspass i ByggExp: timmar per medarbetare och dag i webben och i mobilappen',
     },
     {
       title: 'Granska timmarna',
-      text: 'Planerat, GPS och manuellt – per medarbetare och dag.',
+      text: 'Gå igenom perioden per medarbetare och dag innan något går vidare till lön.',
+      bullets: [
+        'Växla mellan planerat, GPS och manuellt',
+        'Totalt per medarbetare för perioden',
+        'Rätta ett pass innan det attesteras',
+      ],
       img: '/landing/funktioner/screen-tidrapport-1200.webp',
       alt: 'Tidrapport i ByggExp: timmar per medarbetare och dag för två veckor, filtrerat på planerat, GPS och manuellt',
     },
     {
       title: 'Attestera och exportera',
-      text: 'Godkänn passen och exportera underlaget.',
-      bullets: ['Tidrapport som PDF och Excel', 'Löne-CSV och AGI-underlag', 'Lönekörning direkt från tidrapporten'],
+      text: 'Godkänn periodens pass i webben och exportera underlaget till lönen.',
+      bullets: ['Tidrapport som PDF och Excel', 'Löne-CSV och AGI-underlag', 'Lönekörning med Full koll'],
       img: '/landing/features/12salary-1200.webp',
       alt: 'Löner i ByggExp: timmar och timlön per medarbetare, export av CSV och AGI-underlag',
     },
@@ -352,19 +361,30 @@ const HANTVERKARE: FunktionPage = {
   steps: [
     {
       title: 'Tid per kund',
-      text: 'Ett pass per jobb. Restid och ÄTA på samma pass.',
+      text: 'Stämpla in på kundens projekt, så hamnar timmarna på rätt jobb direkt.',
+      bullets: ['Ett arbetspass per jobb och dag', 'Restid i kilometer och minuter', 'ÄTA märks på samma pass'],
       img: '/landing/features/1arbetspass-1200.webp',
       alt: 'Arbetspass i ByggExp: timmar per medarbetare och projekt i webben och i mobilen',
     },
     {
       title: 'Kvitton på rätt jobb',
-      text: 'Skanna kvittot med mobilen och välj projekt.',
+      text: 'Skanna kvittot med mobilkameran i kassan och koppla det till projektet.',
+      bullets: [
+        'Leverantör, belopp och moms läses av',
+        'Material och timmar på samma projekt',
+        'Originalbilden sparas på utlägget',
+      ],
       img: '/landing/features/11costs-1200.webp',
       alt: 'Utlägg i ByggExp: skannat kvitto med leverantör, belopp, moms och projekt i mobilen och i webben',
     },
     {
       title: 'Faktura med ROT',
-      text: 'Logotyp, moms och ROT-avdrag på fakturan.',
+      text: 'Skapa fakturan med företagets logotyp, moms per rad och ROT-avdrag.',
+      bullets: [
+        'ROT-avdrag 30 % av arbetskostnaden',
+        'Timmar per projekt som underlag',
+        'Skickas som PDF via e-post',
+      ],
       img: '/landing/features/8fakturor-1200.webp',
       alt: 'Ny faktura i ByggExp med fakturarader och val för ROT-avdrag i mobilen och i webben',
     },
@@ -518,19 +538,30 @@ const BYGGDAGBOK: FunktionPage = {
   steps: [
     {
       title: 'Dagens anteckning',
-      text: 'Väder, bemanning, utfört arbete och avvikelser i fasta fält.',
+      text: 'Skriv dagens anteckning i webben med fasta fält för det som hände.',
+      bullets: ['Väder och temperatur för dagen', 'Bemanning och utfört arbete', 'Avvikelser, material och foton'],
       img: '/landing/funktioner/screen-dagbok-1200.webp',
       alt: 'Dagboksanteckning i ByggExp med väder, temperatur, bemanning, personal, utfört arbete, avvikelser, leveranser och foton',
     },
     {
       title: 'Foton från bygget',
-      text: 'Bilderna från appen hamnar i projektet med datum och person.',
+      text: 'Laget fotar i appen under passet och bilderna hamnar på projektet.',
+      bullets: [
+        'Datum och person på varje bild',
+        'Samlade i projektets fotoflik',
+        'Syns i webben och i mobilappen',
+      ],
       img: '/landing/features/4foto-1200.webp',
       alt: 'Projektets fotoflik i ByggExp med bilder från arbetsplatsen i webben och i mobilappen',
     },
     {
       title: 'Vilka var på plats',
-      text: 'Vem som är på jobbet, per projekt.',
+      text: 'Under Personal ser du vilka som är på jobbet och på vilket projekt.',
+      bullets: [
+        'Status På jobbet eller Inte på jobbet',
+        'Timmar i dag per medarbetare',
+        'Filtrera på ett enskilt projekt',
+      ],
       img: '/landing/features/3personal-1200.webp',
       alt: 'Personal i ByggExp: vilka medarbetare som är på jobbet och på vilket projekt',
     },
@@ -719,20 +750,30 @@ const RESURSPLANERING: FunktionPage = {
   steps: [
     {
       title: 'Bemanning dag för dag',
-      text: 'Medarbetare och dagar i ett rutnät.',
+      text: 'Klicka i en ruta i rutnätet och lägg medarbetaren på ett projekt den dagen.',
+      bullets: [
+        'Medarbetare mot veckans dagar',
+        'Godkänd frånvaro syns i rutnätet',
+        'Varning över 8 timmar per dag',
+      ],
       img: '/landing/funktioner/screen-bemanning-1200.webp',
       alt: 'Bemanning i ByggExp: veckans rutnät med medarbetare, dagar och projekt med 8 timmar per dag',
     },
     {
       title: 'Gantt för alla projekt',
-      text: 'Per personal eller per projekt.',
-      bullets: ['2 veckor, månad eller eget intervall', 'Ändringslogg'],
+      text: 'Se alla projekt på en gemensam tidslinje, per personal eller per projekt.',
+      bullets: ['2 veckor, månad eller eget intervall', 'Ändringslogg över planen', 'Laget ser tidplanen i appen'],
       img: '/landing/features/5planering-1200.webp',
       alt: 'Planering i ByggExp: Gantt-schema per personal med projekt över månaden i webben och i mobilen',
     },
     {
       title: 'Följ upp med timmar',
-      text: 'Laget stämplar in – du ser timmarna per projekt.',
+      text: 'Laget stämplar in i appen och du ser de rapporterade timmarna per projekt.',
+      bullets: [
+        'Timmar per medarbetare och dag',
+        'Jämför planerat med GPS-timmar',
+        'Attest innan timmarna går vidare',
+      ],
       img: '/landing/features/1arbetspass-1200.webp',
       alt: 'Arbetspass i ByggExp: rapporterade timmar per medarbetare och dag',
     },
@@ -915,19 +956,30 @@ const EGENKONTROLL: FunktionPage = {
   steps: [
     {
       title: 'Foton från bygget',
-      text: 'Bilderna tas i appen och hamnar i projektet med datum och person.',
+      text: 'Bilderna tas i appen under arbetspasset och hamnar på projektet.',
+      bullets: [
+        'Datum och person på varje bild',
+        'Samlade i projektets fotoflik',
+        'Foto per kontrollpunkt i appen',
+      ],
       img: '/landing/features/4foto-1200.webp',
       alt: 'Projektets fotoflik i ByggExp med bilder från arbetsplatsen i webben och i mobilappen',
     },
     {
       title: 'Byggdagbok',
-      text: 'Utfört arbete, bemanning, väder och avvikelser per dag.',
+      text: 'Anteckna dagen per projekt i webben: utfört arbete, bemanning och väder.',
+      bullets: ['Avvikelser i ett eget fält', 'Foton på dagens anteckning', 'Material och övriga anteckningar'],
       img: '/landing/funktioner/screen-dagbok-1200.webp',
       alt: 'Dagboksanteckning i ByggExp med väder, temperatur, bemanning, personal, utfört arbete, avvikelser, leveranser och foton',
     },
     {
       title: 'Uppgifter med deadline',
-      text: 'Ansvarig, förfallodatum och påminnelser tills det är klart.',
+      text: 'Ge en person eller hela teamet en uppgift med förfallodatum och påminnelser.',
+      bullets: [
+        'Prioritet låg, normal eller hög',
+        'Påminnelser tills uppgiften är klar',
+        'Status öppen, försenad eller klar',
+      ],
       img: '/landing/features/2uppgift-1200.webp',
       alt: 'Uppgift i ett byggprojekt i ByggExp: projekt, ansvarig, startdatum, förfallodatum och påminnelser, och påminnelsen i mobilen',
     },
@@ -1142,15 +1194,23 @@ const ARBETSORDER: FunktionPage = {
     },
     {
       title: 'Ordern sparas med allt på ett ställe',
-      text: 'Dokument, foton och arbetspass på samma ställe.',
-      bullets: ['Budget och kostnader i Koll på pengarna och Full koll'],
+      text: 'Öppna ordern och hitta uppgifter, dokument, foton och arbetspass samlade.',
+      bullets: [
+        'Adress och dokument syns i appen',
+        'De bokade stämplar tid på ordern',
+        'Budget och kostnader i Full koll',
+      ],
       img: '/landing/features/project.webp',
       alt: 'Projektkort i ByggExp: budget och resurser, betalningsplan, uppgifter och deadlines och arbetspass för ett projekt',
     },
     {
       title: 'Uppgift med påminnelser',
-      text: 'Deadline och påminnelser tills jobbet är klart.',
-      bullets: ['Till alla i ordern eller en person'],
+      text: 'Ge de bokade en uppgift med deadline och påminnelser tills den är klar.',
+      bullets: [
+        'Till alla i ordern eller en person',
+        'Prioritet låg, normal eller hög',
+        'Påminnelsen kommer som push i appen',
+      ],
       img: '/landing/features/2uppgift-1200.webp',
       alt: 'Uppgift i ett byggprojekt i ByggExp: projekt, ansvarig, startdatum, förfallodatum och påminnelser, och påminnelsen i mobilen',
     },

@@ -85,21 +85,30 @@ const UTLAGG: FunktionPage = {
   steps: [
     {
       title: 'Fota kvittot',
-      text: 'Leverantör, datum, belopp och moms läses av. Skriv kategori och välj projekt.',
-      bullets: ['Mobilkameran i appen', 'Flera valutor', 'Projekt förvalt från arbetspasset (Full koll)'],
+      text: 'Fota kvittot i appen, så läses leverantör, datum, belopp och moms av.',
+      bullets: [
+        'Skriv kategori och välj projekt',
+        'Beloppet sparas i kvittots valuta',
+        'Projekt förvalt från passet (Full koll)',
+      ],
       img: '/landing/features/11costs-1200.webp',
       alt: 'Utlägg i ByggExp: lista över utlägg i webben och ett nytt utlägg med fotat kvitto i mobilappen',
     },
     {
       title: 'Attestera',
-      text: 'Inskickade utlägg godkänns eller avvisas i webben.',
-      bullets: ['Egna pengar eller företagskort', 'Markera som utbetald', 'Ladda ner originalen'],
+      text: 'Inskickade utlägg godkänns eller avvisas i webben av ekonomiansvarig.',
+      bullets: ['Egna pengar eller företagskort', 'Markera utlägget som utbetalt', 'Ladda ner originalen i en fil'],
       img: '/landing/funktioner/screen-utlagg-1200.webp',
       alt: 'Utlägg i ByggExp: statusflikar och en lista med leverantör, totalt, kategori och projekt',
     },
     {
       title: 'Följ kostnaden',
-      text: 'Utläggen räknas in i projektets kostnader och marginal.',
+      text: 'Utläggen räknas in i projektets kostnader och marginal under Ekonomi.',
+      bullets: [
+        'Tillsammans med inköpsfakturor',
+        'Arbetskostnad räknas med i Full koll',
+        'Jämför projekten i Lönsamhet',
+      ],
       img: '/landing/features/9ekonomi-1200.webp',
       alt: 'Projektekonomi i ByggExp: budget, kostnader och marginal för ett projekt',
     },
@@ -276,15 +285,23 @@ const VERKTYG: FunktionPage = {
   steps: [
     {
       title: 'Registrera verktygen',
-      text: 'Namn, foto, plats och anteckningar. Koppla till projekt och medarbetare.',
-      bullets: ['I webben eller appen', 'QR-etikett per verktyg', 'Skriv ut flera etiketter på en gång'],
+      text: 'Lägg upp verktyget med namn, foto, plats och anteckningar i webben eller appen.',
+      bullets: [
+        'QR-etikett per verktyg',
+        'Skriv ut flera etiketter på en gång',
+        'Koppla till projekt och medarbetare',
+      ],
       img: '/landing/features/6verktyg-1200.webp',
       alt: 'Verktyg i ByggExp: verktygslista med status, QR-kod, innehavare och projekt i webben och verktygslistan i mobilappen',
     },
     {
       title: 'Se vem som har vad',
-      text: 'Status, QR-kod, innehavare och projekt i en lista.',
-      bullets: ['Tillgänglig, Används, På reparation, Trasig', 'Filtrera per projekt', 'Historik per verktyg'],
+      text: 'Listan visar status, QR-kod, innehavare och projekt för varje verktyg.',
+      bullets: [
+        'Antal per status överst i listan',
+        'Filtrera per status och projekt',
+        'Historik med datum och person',
+      ],
       img: '/landing/funktioner/screen-verktyg-1200.webp',
       alt: 'Verktygslista i ByggExp med statusflikar, QR-kod, vem som har verktyget och projekt',
     },

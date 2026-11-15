@@ -109,6 +109,8 @@
 Код: `src/components/FunktionPage/FunktionHero.tsx` (общий hero и его строки `FUNKTION_HERO_UI`, sv/nb), `src/components/FunktionPage/FunktionPageView.tsx` (страницы функций), `src/pages/[lang]/blog/[slug].tsx` (`fnHero`, обёртка `.em.fn`), данные `src/content/feature-article-heroes.ts`, короткое имя для крошек — `featureNavLabel` (`FeatureNav.tsx`), стиль `.blog-article--fn-hero` в `src/styles/design-system.scss`.
 Проверено 2026-11-15 на пилоте (390/768/1440): горизонтальной прокрутки 0; H1 один; строка цены в 1 строку; отступ сверху hero 48/32px; HTML `/sv/funktioner/arbetsorder` и `/sv/blog/fakturera-fran-byggexp` после правки совпадает с прежним.
 
+**R34 · 2026-11-15 · Карточка шага на странице функции — один объём.** У каждой карточки шага (карусель под hero на `/sv/funktioner/<slug>` и `/nb/funksjoner/<slug>`) одинаковый состав: заголовок + подзаголовок одним предложением в 60–80 знаков (две строки на десктопе) + ровно 3 пункта по 20–40 знаков, без точки в конце, без повтора заголовка и подзаголовка. Эталон — шаг «Boka i kalendern» на `/sv/funktioner/arbetsorder`. Карточка с меньшим числом пунктов или с подзаголовком в одну строку — дефект: пустое место заполняется релевантным текстом по фактам продукта (R24). Код: массивы `steps` в `src/content/funktion-pages.ts`, `funktion-pages-a.ts`, `funktion-pages-b.ts`, `funktion-pages-c.ts`, `funksjon-pages-nb.ts`.
+
 ## Чек-лист перед показом
 1. Соседние панели/кнопки одной высоты и радиуса (R1).
 2. Ряд кнопок и полей — на одной линии, одной высоты (R3).

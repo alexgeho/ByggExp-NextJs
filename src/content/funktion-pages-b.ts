@@ -95,20 +95,30 @@ const OFFERT_KALKYL: FunktionPage = {
   steps: [
     {
       title: 'Skapa offerten',
-      text: 'Rader med artiklar, antal, à-pris och moms. Giltig till-datum.',
-      bullets: ['PDF med logotyp', 'Skickas till kunden via e-post', 'Status: skickad, accepterad eller avvisad'],
+      text: 'Bygg offerten av rader med artikel, antal, à-pris, rabatt och moms.',
+      bullets: [
+        'PDF med logotyp och giltig till-datum',
+        'Skickas till kunden via e-post',
+        'Status skickad, accepterad, avvisad',
+      ],
       img: '/landing/features/7offerter-1200.webp',
       alt: 'Ny offert i ByggExp med kund, giltig till-datum och offertrader i webben och i mobilen',
     },
     {
       title: 'Gör om till faktura',
-      text: 'Den accepterade offerten blir ett fakturautkast med samma rader.',
+      text: 'Den accepterade offerten blir ett fakturautkast med samma rader och kund.',
+      bullets: [
+        'Offertens nummer som ordreferens',
+        'Justera det som har ändrats',
+        'ROT eller omvänd moms på fakturan',
+      ],
       img: '/landing/features/8fakturor-1200.webp',
       alt: 'Ny faktura i ByggExp med kund, datum och fakturarader i webben och i mobilen',
     },
     {
       title: 'Följ marginalen',
-      text: 'Budget, kostnader och marginal per projekt.',
+      text: 'Under projektets ekonomi ser du budget, kostnader och marginal.',
+      bullets: ['Fakturor och kvitton på projektet', 'Jämför projekten i Lönsamhet', 'Kalkylen sparas som mall'],
       img: '/landing/features/9ekonomi-1200.webp',
       alt: 'Projektets ekonomi i ByggExp: timmar, kostnader, material, fakturerat och marginal mot budget',
     },
@@ -278,7 +288,7 @@ const FAKTURERING: FunktionPage = {
   steps: [
     {
       title: 'Skapa fakturan',
-      text: 'Rader med moms, ROT-avdrag eller omvänd byggmoms.',
+      text: 'Lägg in rader med moms och välj ROT-avdrag eller omvänd byggmoms.',
       bullets: ['Logotyp, OCR och bankgiro', 'Skickas som PDF via e-post', 'Från offert, ÄTA eller betalningsplan'],
       img: '/landing/features/8fakturor-1200.webp',
       alt: 'Ny faktura i ByggExp med fakturarader och val för ROT-avdrag i webben och i mobilen',
@@ -286,12 +296,22 @@ const FAKTURERING: FunktionPage = {
     {
       title: 'Kostnader på projektet',
       text: 'Kvitton och leverantörsfakturor skannas och hamnar på rätt projekt.',
+      bullets: [
+        'Kvitton fotas i mobilappen',
+        'Inköpsfakturor via egen e-postadress',
+        'Vidarefakturera med påslag i procent',
+      ],
       img: '/landing/features/11costs-1200.webp',
       alt: 'Utlägg i ByggExp: skannat kvitto med leverantör, belopp, moms och projekt i mobilen och i webben',
     },
     {
       title: 'Följ betalningarna',
-      text: 'Betalningsplan, fakturerat och marginal per projekt.',
+      text: 'Se betalningsplan, fakturerat och marginal för varje projekt.',
+      bullets: [
+        'Förifyllt utkast från planens rad',
+        'Status betald eller förfallen',
+        'Påminnelse med dröjsmålsränta',
+      ],
       img: '/landing/features/9ekonomi-1200.webp',
       alt: 'Projektets ekonomi i ByggExp: budget, fakturerat, kostnader och betalningsplan',
     },
@@ -458,19 +478,29 @@ const LON: FunktionPage = {
   steps: [
     {
       title: 'Timmar från appen',
-      text: 'Laget stämplar in. Timtyp, restid och traktamente på passet.',
+      text: 'Laget stämplar in i appen och väljer timtyp, restid och traktamente.',
+      bullets: [
+        'GPS eller manuellt per projekt',
+        'Normal tid, övertid eller OB',
+        'Semester och sjukdom i Frånvaro',
+      ],
       img: '/landing/features/1arbetspass-1200.webp',
       alt: 'Arbetspass i ByggExp: timmar per medarbetare och dag i webben och i mobilappen',
     },
     {
       title: 'Granska och attestera',
-      text: 'Planerat, GPS och manuellt – per medarbetare och dag.',
+      text: 'Admin eller projektadmin går igenom passen och godkänner perioden.',
+      bullets: [
+        'Växla mellan planerat, GPS och manuellt',
+        'Rätta ett pass innan det attesteras',
+        'Skicka perioden till lönekörning',
+      ],
       img: '/landing/funktioner/screen-tidrapport-1200.webp',
       alt: 'Tidrapport i ByggExp: timmar per medarbetare och dag för två veckor, filtrerat på planerat, GPS och manuellt',
     },
     {
       title: 'Lönekörning',
-      text: 'Brutto, skatt och netto per medarbetare.',
+      text: 'Varje medarbetare får en rad med timmar, timlön, brutto, skatt och netto.',
       bullets: ['Lönespecifikation per medarbetare', 'Godkänn och markera som betald', 'Löne-CSV och AGI-underlag'],
       img: '/landing/features/12salary-1200.webp',
       alt: 'Löner i ByggExp: timmar, timlön, brutto, skatt och netto per medarbetare med export av CSV och AGI-underlag',
@@ -657,19 +687,34 @@ const ATA: FunktionPage = {
   steps: [
     {
       title: 'Märk dagen med ÄTA',
-      text: 'I appen kopplas arbetsdagen till rätt ÄTA på projektet.',
+      text: 'I appen kopplar medarbetaren sin arbetsdag till rätt ÄTA på projektet.',
+      bullets: [
+        'ÄTA väljs på arbetspasset',
+        'Syns vilka dagar som var tillägg',
+        'Foton hamnar i projektets fotoflik',
+      ],
       img: '/landing/features/1arbetspass-1200.webp',
       alt: 'Arbetspass i ByggExp: timmar per medarbetare och dag i webben och i mobilappen',
     },
     {
       title: 'Följ ÄTA-beloppen',
-      text: 'Godkänt, fakturerat och väntande per projekt.',
+      text: 'ÄTA-fliken summerar godkänt, fakturerat och väntande för projektet.',
+      bullets: [
+        'Löpnummer, typ och belopp per ÄTA',
+        'Status från registrerad till fakturerad',
+        'Avgående arbete med negativt belopp',
+      ],
       img: '/landing/features/9ekonomi-1200.webp',
       alt: 'Projektets ekonomi i ByggExp: budget, kostnader, fakturerat och marginal',
     },
     {
       title: 'Fakturera ÄTA:n',
-      text: 'Godkänd ÄTA blir en förifylld faktura.',
+      text: 'Från en godkänd ÄTA skapar du en faktura där projekt och belopp är ifyllda.',
+      bullets: [
+        'ÄTA-nummer och titel som ordreferens',
+        'Raden får 25 % moms som standard',
+        'ÄTA:n får status fakturerad',
+      ],
       img: '/landing/features/8fakturor-1200.webp',
       alt: 'Ny faktura i ByggExp med kund, datum och fakturarader i webben och i mobilen',
     },

@@ -107,7 +107,7 @@ const STAMPELKLOCKA: FunktionPage = {
       bullets: [
         'Växla mellan planerat, GPS och manuellt',
         'Attest av admin eller projektadmin',
-        'Export som PDF, Excel och löne-CSV',
+        'Export som PDF, Excel och CSV',
       ],
       img: '/landing/funktioner/screen-tidrapport-1200.webp',
       alt: 'Attest av stämplade timmar i ByggExp: timmar per medarbetare och dag för två veckor, med växling mellan planerat, GPS och manuellt',
@@ -705,7 +705,7 @@ const PROJEKTPLANERING: FunktionPage = {
       text: 'Planera projekten i ett Gantt-schema, per projekt eller per personal.',
       bullets: [
         '2 veckor, månad eller eget intervall',
-        'Pausade projekt syns i tidslinjen',
+        'Status per projekt i tidslinjen',
         'Ändringslogg över planen',
       ],
       img: '/landing/features/5planering-1200.webp',

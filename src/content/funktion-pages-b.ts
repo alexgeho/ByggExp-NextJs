@@ -108,7 +108,7 @@ const OFFERT_KALKYL: FunktionPage = {
       title: 'Gör om till faktura',
       text: 'Den accepterade offerten blir ett fakturautkast med samma rader och kund.',
       bullets: [
-        'Offertens nummer som ordreferens',
+        'Offertens nummer som orderreferens',
         'Justera det som har ändrats',
         'ROT eller omvänd moms på fakturan',
       ],
@@ -162,7 +162,7 @@ ${illu('offert-kalkyl-material', 'Hantverkare vid ett skrivbord med laptop och e
 
 <h2>Skicka, följ upp och fakturera</h2>
 <p>När offerten är klar skickar du den till kunden via e-post direkt från ByggExp, med PDF:en bifogad. Offerten får status skickad. När kunden svarar ändrar du status till accepterad eller avvisad. I listan filtrerar du på status och ser vilka offerter som väntar på svar, så att ingen förfrågan blir liggande utan uppföljning.</p>
-<p>När jobbet är beställt skapar du ett fakturautkast från offerten. Raderna, kundens namn och e-post följer med, och ordreferensen blir offertens nummer. Du justerar det som har ändrats och skickar fakturan. Hur fakturan fungerar, med ROT-avdrag och omvänd byggmoms, beskriver vi på sidan om <a href="/sv/funktioner/fakturering">fakturaprogram för bygg</a>.</p>
+<p>När jobbet är beställt skapar du ett fakturautkast från offerten. Raderna, kundens namn och e-post följer med, och orderreferensen blir offertens nummer. Du justerar det som har ändrats och skickar fakturan. Hur fakturan fungerar, med ROT-avdrag och omvänd byggmoms, beskriver vi på sidan om <a href="/sv/funktioner/fakturering">fakturaprogram för bygg</a>.</p>
 
 ${illu('offert-kalkyl-skicka', 'Ett dokument flyger som ett pappersflygplan från en laptop till en person som står i ett hus och tittar i mobilen')}
 
@@ -356,7 +356,7 @@ ${illu('fakturering-omvand', 'Två personer skakar hand framför en byggställni
 <p>Ett byggprojekt faktureras sällan med en enda faktura. ByggExp har tre vägar till fakturan utöver att skriva den från början:</p>
 <ul>
 <li><strong>Betalningsplanen.</strong> I projektets betalningsplan lägger du in delbetalningar som fasta belopp eller procent av kontraktssumman. När en etapp är klar skapar du ett förifyllt fakturautkast från raden, och raden markeras som fakturerad. Så fungerar <a href="/sv/blog/a-conto-fakturering-bygg">à conto-fakturering</a> utan att du behöver hålla reda på vad som är fakturerat i ett separat ark.</li>
-<li><strong>Godkänd ÄTA.</strong> När en ÄTA är godkänd skapar du en faktura från den. Projekt, ordreferens (ÄTA-nummer och titel) och en rad med beloppet fylls i. Läs mer om <a href="/sv/funktioner/ata">ÄTA-hantering</a>.</li>
+<li><strong>Godkänd ÄTA.</strong> När en ÄTA är godkänd skapar du en faktura från den. Projekt, orderreferens (ÄTA-nummer och titel) och en rad med beloppet fylls i. Läs mer om <a href="/sv/funktioner/ata">ÄTA-hantering</a>.</li>
 <li><strong>Accepterad offert.</strong> Offertens rader, kund och nummer följer med till fakturautkastet. Se <a href="/sv/funktioner/offert-kalkyl">offert och kalkyl</a>.</li>
 </ul>
 <p>Har du köpt in material eller tjänster som kunden ska betala kan du vidarefakturera leverantörsfakturan med ett påslag i procent. Inkommande fakturor kan skickas till en egen e-postadress och skannas, så att de hamnar på rätt projekt.</p>
@@ -690,15 +690,15 @@ const ATA: FunktionPage = {
       text: 'I appen kopplar medarbetaren sin arbetsdag till rätt ÄTA på projektet.',
       bullets: [
         'ÄTA väljs på arbetspasset',
-        'Syns vilka dagar som var tillägg',
-        'Foton hamnar i projektets fotoflik',
+        'Du ser vilka dagar som var ÄTA',
+        'Timmar och ÄTA på samma pass',
       ],
       img: '/landing/features/1arbetspass-1200.webp',
       alt: 'Arbetspass i ByggExp: timmar per medarbetare och dag i webben och i mobilappen',
     },
     {
       title: 'Följ ÄTA-beloppen',
-      text: 'ÄTA-fliken summerar godkänt, fakturerat och väntande för projektet.',
+      text: 'ÄTA-fliken summerar godkända och väntande belopp för hela projektet.',
       bullets: [
         'Löpnummer, typ och belopp per ÄTA',
         'Status från registrerad till fakturerad',
@@ -711,7 +711,7 @@ const ATA: FunktionPage = {
       title: 'Fakturera ÄTA:n',
       text: 'Från en godkänd ÄTA skapar du en faktura där projekt och belopp är ifyllda.',
       bullets: [
-        'ÄTA-nummer och titel som ordreferens',
+        'ÄTA-nummer och titel som orderreferens',
         'Raden får 25 % moms som standard',
         'ÄTA:n får status fakturerad',
       ],
@@ -738,7 +738,7 @@ ${illu('ata-ritning', 'Projektledare och kund står vid ett bord med en utrullad
 <li><strong>Kunden får beskedet.</strong> Du meddelar kunden ändringen och priset, till exempel via e-post, och sätter status till skickad.</li>
 <li><strong>Kunden svarar.</strong> När kunden har godkänt sätter du status till godkänd, annars avvisad. Godkännandet görs av admin eller projektadmin i ByggExp.</li>
 <li><strong>Laget utför arbetet.</strong> I mobilappen kopplar medarbetaren sin arbetsdag till ÄTA:n, så att det syns vilka dagar som hörde till tillägget.</li>
-<li><strong>ÄTA:n faktureras.</strong> Från en godkänd ÄTA skapar du en faktura. Projekt, ordreferens (ÄTA-nummer och titel) och en rad med beloppet fylls i, och ÄTA:n får status fakturerad.</li>
+<li><strong>ÄTA:n faktureras.</strong> Från en godkänd ÄTA skapar du en faktura. Projekt, orderreferens (ÄTA-nummer och titel) och en rad med beloppet fylls i, och ÄTA:n får status fakturerad.</li>
 </ol>
 <p>Statusen gör att du alltid vet var varje ÄTA står: registrerad, skickad, godkänd, avvisad eller fakturerad.</p>
 

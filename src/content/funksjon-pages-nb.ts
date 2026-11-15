@@ -509,7 +509,7 @@ const PROSJEKTSTYRING: FunksjonPageNb = {
     },
     {
       title: 'Følg opp oppgavene',
-      text: 'Gi oppgaven en ansvarlig og en frist, så minner appen på til den er gjort.',
+      text: 'Gi oppgaven ansvarlig og frist, så sender appen påminnelser til den er gjort.',
       bullets: [
         'Prioritet og gjentakelse',
         'De ansatte ser oppgavene i appen',

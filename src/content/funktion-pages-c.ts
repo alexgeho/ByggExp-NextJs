@@ -96,7 +96,7 @@ const UTLAGG: FunktionPage = {
     },
     {
       title: 'Attestera',
-      text: 'Inskickade utlägg godkänns eller avvisas i webben av ekonomiansvarig.',
+      text: 'Inskickade utlägg godkänns eller avvisas i webben av admin eller projektadmin.',
       bullets: ['Egna pengar eller företagskort', 'Markera utlägget som utbetalt', 'Ladda ner originalen i en fil'],
       img: '/landing/funktioner/screen-utlagg-1200.webp',
       alt: 'Utlägg i ByggExp: statusflikar och en lista med leverantör, totalt, kategori och projekt',

@@ -193,7 +193,7 @@ const TIDSYSTEM: FunktionPage = {
     {
       title: 'Attestera och exportera',
       text: 'Godkänn periodens pass i webben och exportera underlaget till lönen.',
-      bullets: ['Tidrapport som PDF och Excel', 'Löne-CSV och AGI-underlag', 'Lönekörning med Full koll'],
+      bullets: ['Tidrapport som PDF och Excel', 'Timmar som CSV för lönen', 'Lönekörning och AGI i Full koll'],
       img: '/landing/features/12salary-1200.webp',
       alt: 'Löner i ByggExp: timmar och timlön per medarbetare, export av CSV och AGI-underlag',
     },
@@ -762,7 +762,7 @@ const RESURSPLANERING: FunktionPage = {
     {
       title: 'Gantt för alla projekt',
       text: 'Se alla projekt på en gemensam tidslinje, per personal eller per projekt.',
-      bullets: ['2 veckor, månad eller eget intervall', 'Ändringslogg över planen', 'Laget ser tidplanen i appen'],
+      bullets: ['2 veckor, månad eller eget intervall', 'Ändringslogg över planen', 'Laget ser sina uppgifter i appen'],
       img: '/landing/features/5planering-1200.webp',
       alt: 'Planering i ByggExp: Gantt-schema per personal med projekt över månaden i webben och i mobilen',
     },

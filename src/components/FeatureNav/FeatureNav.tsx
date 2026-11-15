@@ -110,28 +110,35 @@ export function featureNavLabel(slug: string, lang: LandingLanguageCode): string
   return item?.label[lang] ?? item?.label.sv ?? '';
 }
 
+export type PillNavItem = { key: string; label: string; href?: string };
+
 /**
- * Horizontal, scrollable pill nav linking to every feature article. Rendered at
- * the top of a feature page so visitors can jump between features without going
- * back. The active feature is highlighted and scrolled into view.
+ * The one pill row of the site's feature pages (R37): a white bar under the
+ * header with one scrollable line of pills. An item with `href` is a link
+ * (feature articles); without it the pill is a button and `onSelect` is called
+ * (the carousel on /funktioner). The active pill is highlighted and kept
+ * centred; chips fade at an edge only while there is more to scroll.
  */
-export default function FeatureNav({
-  lang,
-  activeSlug,
+export function PillNav({
+  items,
+  activeKey,
+  onSelect,
+  ariaLabel = 'Funktioner',
 }: {
-  lang: LandingLanguageCode;
-  activeSlug: string;
+  items: PillNavItem[];
+  activeKey: string;
+  onSelect?: (key: string, index: number) => void;
+  ariaLabel?: string;
 }) {
   const trackRef = useRef<HTMLDivElement | null>(null);
-  const activeRef = useRef<HTMLAnchorElement | null>(null);
 
   useEffect(() => {
-    const el = activeRef.current;
     const track = trackRef.current;
+    const el = track?.querySelector<HTMLElement>('.is-active');
     if (!el || !track) return;
     // Center the active pill within the scroller without scrolling the page.
     track.scrollLeft = el.offsetLeft - track.clientWidth / 2 + el.clientWidth / 2;
-  }, [activeSlug]);
+  }, [activeKey]);
 
   useEffect(() => {
     const track = trackRef.current;
@@ -149,28 +156,54 @@ export default function FeatureNav({
       track.removeEventListener('scroll', update);
       window.removeEventListener('resize', update);
     };
-  }, [activeSlug]);
+  }, [activeKey, items.length]);
 
   return (
-    <nav className="feature-nav" aria-label="Funktioner">
+    <nav className="feature-nav" aria-label={ariaLabel}>
       <div className="feature-nav-inner">
         <div className="feature-nav-track" ref={trackRef}>
-          {FEATURE_NAV.map((f) => {
-            const isActive = f.slug === activeSlug;
-            return (
+          {items.map((item, i) => {
+            const isActive = item.key === activeKey;
+            const className = `feature-nav-chip${isActive ? ' is-active' : ''}`;
+            return item.href ? (
               <Link
-                key={f.slug}
-                href={`/${lang}/blog/${f.slug}`}
-                ref={isActive ? activeRef : undefined}
-                className={`feature-nav-chip${isActive ? ' is-active' : ''}`}
+                key={item.key}
+                href={item.href}
+                className={className}
                 aria-current={isActive ? 'page' : undefined}
               >
-                {f.label[lang] ?? f.label.sv}
+                {item.label}
               </Link>
+            ) : (
+              <button
+                key={item.key}
+                type="button"
+                className={className}
+                aria-pressed={isActive}
+                onClick={() => onSelect?.(item.key, i)}
+              >
+                {item.label}
+              </button>
             );
           })}
         </div>
       </div>
     </nav>
   );
+}
+
+/** Pill nav linking to every feature article, shown at the top of each one. */
+export default function FeatureNav({
+  lang,
+  activeSlug,
+}: {
+  lang: LandingLanguageCode;
+  activeSlug: string;
+}) {
+  const items = FEATURE_NAV.map((f) => ({
+    key: f.slug,
+    label: f.label[lang] ?? f.label.sv ?? '',
+    href: `/${lang}/blog/${f.slug}`,
+  }));
+  return <PillNav items={items} activeKey={activeSlug} />;
 }

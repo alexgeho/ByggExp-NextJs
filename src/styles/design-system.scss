@@ -383,3 +383,16 @@
   white-space: nowrap;
   border: 0;
 }
+
+/* R37: /funktioner uses the same pill row as the feature articles (PillNav):
+   the bar sits right under the header, the carousel starts below it. */
+.funktioner-list-section {
+  padding-top: 0;
+}
+.funktioner-carousel-wrap {
+  padding-top: 40px;
+}
+button.feature-nav-chip {
+  font-family: inherit;
+  cursor: pointer;
+}

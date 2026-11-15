@@ -8,7 +8,7 @@ import Header from '../../../components/Header/Header';
 import { fetchPublishedBlogPosts } from '../../../lib/blog-api';
 import { getCodeArticles } from '../../../content/code-articles';
 import { FEATURE_ARTICLE_SLUGS } from '../../../content/feature-articles';
-import { FEATURE_NAV } from '../../../components/FeatureNav/FeatureNav';
+import { FEATURE_NAV, PillNav } from '../../../components/FeatureNav/FeatureNav';
 import { FUNKTION_PAGES, ILLU_HEIGHT, illuSrc, illuSrcSet } from '../../../content/funktion-pages';
 import { FUNKTION_PAGES_B_SLUGS } from '../../../content/funktion-pages-b';
 import { FUNKTION_PAGES_C } from '../../../content/funktion-pages-c';
@@ -24,7 +24,6 @@ const FUNKTION_GROUPS = [
   { title: 'Offert, faktura, lön och ÄTA', pages: FUNKTION_PAGES.filter((p) => FUNKTION_PAGES_B_SLUGS.has(p.slug)) },
   { title: 'Utlägg och verktyg', pages: FUNKTION_PAGES.filter((p) => FUNKTION_PAGES_C_SLUGS.has(p.slug)) },
 ];
-import { useCenterActiveChip } from '../../../lib/useCenterActiveChip';
 import { buildHreflangAlternates, localeOrigin } from '../../../lib/seo';
 import { featuresTranslations1_3 } from '../../../locales/features1-3';
 import { featuresTranslations4_6 } from '../../../locales/features4-6';
@@ -655,8 +654,6 @@ function FeatureCarousel({
     [loop, N],
   );
   const activeReal = extToReal(activeExt);
-  const pillsRef = useRef<HTMLDivElement>(null);
-  useCenterActiveChip(pillsRef, activeReal);
 
   const [lightbox, setLightbox] = useState<{ url: string; alt: string } | null>(null);
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
@@ -799,21 +796,14 @@ function FeatureCarousel({
   return (
     <>
       {pills.length > 0 ? (
-        <div className="blog-filter funktioner-filter" ref={pillsRef} role="group" aria-label="Funktioner">
-          {pills.map((pill, i) => (
-            <button
-              key={pill.slug}
-              type="button"
-              className={`blog-filter-chip${activeReal === i ? ' is-active' : ''}`}
-              aria-pressed={activeReal === i}
-              onClick={() => goToReal(i)}
-            >
-              {pill.label}
-            </button>
-          ))}
-        </div>
+        <PillNav
+          items={pills.map((pill) => ({ key: pill.slug, label: pill.label }))}
+          activeKey={pills[activeReal]?.slug ?? ''}
+          onSelect={(_key, index) => goToReal(index)}
+        />
       ) : null}
 
+      <div className="container funktioner-carousel-wrap">
       <div className="funktioner-carousel">
         <button
           type="button"
@@ -923,6 +913,7 @@ function FeatureCarousel({
           ))}
         </div>
       ) : null}
+      </div>
 
       {lightbox ? (
         <div
@@ -1013,13 +1004,13 @@ export default function FunktionerPage({
       <h1 className="ds-visually-hidden">{copy.title}</h1>
 
       <section className="blog-list-section funktioner-list-section">
-        <div className="container">
-          {posts.length === 0 ? (
+        {posts.length === 0 ? (
+          <div className="container">
             <div className="blog-empty-state">{copy.empty}</div>
-          ) : (
-            <FeatureCarousel lang={lang} posts={posts} badge={copy.badge} />
-          )}
-        </div>
+          </div>
+        ) : (
+          <FeatureCarousel lang={lang} posts={posts} badge={copy.badge} />
+        )}
       </section>
 
       {/* Commercial feature pages (sv only) — /sv/funktioner/<slug> */}

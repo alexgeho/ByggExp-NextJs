@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 import {
   illuSrc,
   illuSrcSet,
@@ -84,7 +86,11 @@ export default function FunktionHero({
 
   return (
     <section className="em-hero">
-      <div className="container em-hero-inner">
+      {/* R32: the text indent is computed in CSS from the figure's aspect ratio. */}
+      <div
+        className="container em-hero-inner"
+        style={{ "--fn-hero-ar": 1200 / ILLU_HEIGHT[hero.name] } as CSSProperties}
+      >
         <div className="em-hero-content">
           <nav className="fn-crumbs" aria-label={ui.crumbs}>
             <a href={`/${lang}/funktioner`}>{ui.hub}</a>

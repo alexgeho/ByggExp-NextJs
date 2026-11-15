@@ -102,5 +102,5 @@ Feature-страницы (/sv/blog/<slug> из `src/content/feature-articles.ts`
 Правило владельца: страница платной функции = центр группы; каждая статья и шаблон группы, которые Google показывает по коммерческому запросу, держат в тексте одну ссылку на свою страницу функции. Новые статьи — только если по группе нет ни одной страницы.
 Доставлено (2bd436a): egenkontroll-el-egenkontrollprogram и egenkontroll-entreprenad → /funktioner/egenkontroll; /verktyg/byggdagbok-mall → /funktioner/byggdagbok; basta-byggprogram-2026 → tidrapporteringssystem-bygg + projekthantering; tidredovisning-app и tidredovisning-byggforetag → /blog/loneprogram-bygg (по «löneprogram byggföretag» Google показывал случайные страницы).
 Без центра (решение владельца): arbetsorder (467 показов/2 нед., статья arbetsorder-app-bygg), affärssystem bygg (477, статья), personalliggare (858, модуля нет).
-Открыто: в /verktyg/byggdagbok-mall старая фраза «ett ÄTA du noterar kan följas hela vägen till fakturan» спорит с product-facts (нет связи ÄTA в dagbok).
+Исправлено 15.11: абзац про ByggExp в /verktyg/byggdagbok-mall переписан по product-facts (без ÄTA→счёт и без «foton från mobilen»: дневник только в вебе).
 Keyword Planner не выгружали: данных GSC хватило, новых статей не потребовалось.

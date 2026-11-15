@@ -308,10 +308,10 @@ export default function ByggdagbokMallPage() {
             body: (
               <p>
                 Mallen ovan är gratis att använda. Vill du slippa lösa PDF:er kan du föra byggdagbok
-                löpande i ByggExp: varje inlägg kopplas till rätt projekt, du bifogar foton direkt
-                från mobilen och bygger en komplett historik dag för dag – utan papper. Eftersom
-                dagboken ligger i samma app som tid, uppgifter och ekonomi hänger allt ihop: en
-                avvikelse eller ett ÄTA du noterar kan följas hela vägen till fakturan. Och när ett
+                löpande i ByggExp: varje inlägg kopplas till rätt projekt och dag, med foton, väder,
+                bemanning, utfört arbete, avvikelser och material – utan papper. Dagboken ligger i
+                samma system som tid, uppgifter och ekonomi, så allt om projektet finns på ett
+                ställe. Och när ett
                 projekt är klart finns hela historiken kvar, redo att tas fram om en fråga dyker upp
                 flera år senare.{' '}
                 Läs mer om{' '}

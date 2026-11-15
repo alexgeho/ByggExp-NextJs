@@ -9,6 +9,7 @@ import FeatureNav, { featureNavLabel } from '../../../components/FeatureNav/Feat
 import Footer from '../../../components/Footer/Footer';
 import FunktionHero, { hasFunktionHeroUi } from '../../../components/FunktionPage/FunktionHero';
 import Header from '../../../components/Header/Header';
+import Lightbox from '../../../components/Lightbox/Lightbox';
 import ProductBanner from '../../../components/LeadMagnet/ProductBanner';
 import { PROJEKT_PRICE } from '../../../components/Pricing/Pricing';
 import { fetchPublishedBlogPost } from '../../../lib/blog-api';
@@ -240,18 +241,6 @@ export default function BlogArticlePage({
 
   // Click the hero to open it in a full-screen lightbox (Esc or click to close).
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
-  useEffect(() => {
-    if (!lightboxImage) return;
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setLightboxImage(null);
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = '';
-    };
-  }, [lightboxImage]);
   const faq = resolveFaq(post, lang);
   // R33: feature articles enabled in content/feature-article-heroes get the
   // first screen of the commercial feature pages (the same FunktionHero).
@@ -580,31 +569,7 @@ export default function BlogArticlePage({
 
       <Footer footerT={footerT} />
 
-      {lightboxImage && (
-        <div className="image-lightbox" onClick={() => setLightboxImage(null)}>
-          <button
-            type="button"
-            className="image-lightbox-close"
-            onClick={() => setLightboxImage(null)}
-            aria-label="Stäng"
-          >
-            <svg viewBox="0 0 24 24" fill="none">
-              <path
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                d="m5 5 14 14M19 5 5 19"
-              />
-            </svg>
-          </button>
-          <img
-            src={lightboxImage}
-            alt=""
-            className="image-lightbox-img"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
+      <Lightbox src={lightboxImage} onClose={() => setLightboxImage(null)} />
     </>
   );
 }

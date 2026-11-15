@@ -4,12 +4,16 @@ import type {
   InferGetStaticPropsType,
 } from "next";
 import Head from "next/head";
-import { useEffect, useRef, useState, type MouseEvent } from "react";
+import { useState, type MouseEvent } from "react";
 
 import CTA from "../../components/CTA/CTA";
+import FaqList from "../../components/FaqList/FaqList";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import { PROJEKT_PRICE, PlanUsers } from "../../components/Pricing/Pricing";
+import Lightbox from "../../components/Lightbox/Lightbox";
+import PlanPriceSection from "../../components/Pricing/PlanPriceSection";
+import { PROJEKT_PRICE } from "../../components/Pricing/Pricing";
+import StepsCarousel from "../../components/StepsCarousel/StepsCarousel";
 import { localeOrigin } from "../../lib/seo";
 import { ctaTranslations } from "../../locales/CTA";
 import { footerTranslations } from "../../locales/footer";
@@ -184,40 +188,10 @@ export default function TidrapporteringAppPage({
   // Screenshots open full-size on click (same lightbox as /sv/enmansforetag).
   const [lightbox, setLightbox] = useState<string | null>(null);
 
-  // Features carousel — same scrolling as components/Features (gap 24px there).
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const [activeSlide, setActiveSlide] = useState(0);
-  const cardStep = () => {
-    const card = sliderRef.current?.querySelector<HTMLElement>(".step");
-    return card ? card.offsetWidth + 24 : 0;
-  };
-  const scrollToSlide = (n: number) => {
-    const step = cardStep();
-    if (!step || n < 0 || n >= FEATURES.length) return;
-    sliderRef.current?.scrollTo({ left: n * step, behavior: "smooth" });
-    setActiveSlide(n);
-  };
-  const handleSliderScroll = () => {
-    const step = cardStep();
-    if (step && sliderRef.current)
-      setActiveSlide(Math.round(sliderRef.current.scrollLeft / step));
-  };
   const openImage = (e: MouseEvent<HTMLElement>) => {
     const img = (e.target as HTMLElement).closest<HTMLImageElement>(ZOOMABLE);
     if (img) setLightbox(img.currentSrc || img.src);
   };
-  useEffect(() => {
-    if (!lightbox) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setLightbox(null);
-    };
-    document.addEventListener("keydown", onKey);
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
-    };
-  }, [lightbox]);
 
   return (
     <>
@@ -287,144 +261,30 @@ export default function TidrapporteringAppPage({
         </section>
 
         {/* FEATURES — same carousel as the home page "features" block */}
-        <section className="features">
-          <div className="container">
-            <div className="section-head">
-              <h2>
-                Från stämpling <em>till lön</em>
-              </h2>
-            </div>
-            <div className="features-slider">
-              <button
-                type="button"
-                className="features-arrow features-arrow-left"
-                onClick={() => scrollToSlide(activeSlide - 1)}
-                disabled={activeSlide === 0}
-                aria-label="Föregående"
-              >
-                ‹
-              </button>
-              <div
-                className="featuresOptions"
-                ref={sliderRef}
-                onScroll={handleSliderScroll}
-              >
-                {FEATURES.map((f) => (
-                  <div className="step" key={f.title}>
-                    <div className="step-text-block">
-                      <h3>{f.title}</h3>
-                      <p className="step-text">{f.text}</p>
-                      {f.bullets ? (
-                        <ul className="step-bullets">
-                          {f.bullets.map((b, n) => (
-                            <li key={b}>
-                              <span className="number">{n + 1}</span>
-                              {b}
-                            </li>
-                          ))}
-                        </ul>
-                      ) : null}
-                    </div>
-                    <div className="step-visual">
-                      <div className="phone-shell">
-                        <img
-                          src={f.img}
-                          alt={f.alt}
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <button
-                type="button"
-                className="features-arrow features-arrow-right"
-                onClick={() => scrollToSlide(activeSlide + 1)}
-                disabled={activeSlide === FEATURES.length - 1}
-                aria-label="Nästa"
-              >
-                ›
-              </button>
-            </div>
-            <div className="features-controls">
-              <div className="features-dots">
-                {FEATURES.map((f, n) => (
-                  <span
-                    key={f.title}
-                    className={activeSlide === n ? "active" : ""}
-                    onClick={() => scrollToSlide(n)}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        <StepsCarousel
+          heading={
+            <>
+              Från stämpling <em>till lön</em>
+            </>
+          }
+          steps={FEATURES}
+          prevLabel="Föregående"
+          nextLabel="Nästa"
+        />
 
         {/* PRICE — the "Koll på jobbet" card from the pricing block, as is */}
-        <section className="em-price">
-          <div className="container em-price-inner">
-            <div className="em-price-head">
-              <h2>Paketet {pricingT.planProjekt}</h2>
-              <p className="em-lead">15 % rabatt vid årsbetalning</p>
-            </div>
-            <div className="em-price-card">
-              <div className="pricing-card">
-                <div className="pricing-card-top">
-                  <span className="pricing-tag pricing-tag-purple">
-                    {pricingT.planProjekt}
-                  </span>
-                </div>
-                <div className="pricing-price">
-                  <span className="num">{PROJEKT_PRICE}</span>
-                  <span className="per">{pricingT.pricingPer}</span>
-                </div>
-                <PlanUsers pricingT={pricingT} plan="projekt" lang={lang} />
-                <div className="pricing-groups">
-                  <div className="pricing-group">
-                    <h3 className="pricing-group-title">
-                      {pricingT.planProjektSub}
-                    </h3>
-                    <ul className="pricing-list">
-                      {pricingT.projectItems.map((item) => (
-                        <li key={item}>
-                          <span className="check check-purple">
-                            <svg
-                              viewBox="0 0 14 10"
-                              fill="none"
-                              aria-hidden="true"
-                            >
-                              <path
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="m1 5 4 4 8-8"
-                              />
-                            </svg>
-                          </span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <a href="#cta" className="btn-primary">
-                  {pricingT.pricingButton}
-                </a>
-                <span className="pricing-trial">{pricingT.pricingTrial}</span>
-              </div>
-              <ul className="em-checks">
-                <li>Ingen startavgift</li>
-                <li>Ingen bindningstid</li>
-              </ul>
-              <p className="pricing-limit-note">
-                Alla priser exkl. moms.
-              </p>
-            </div>
-          </div>
-        </section>
+        <PlanPriceSection
+          plan="projekt"
+          lang={lang}
+          pricingT={pricingT}
+          heading={<>Paketet {pricingT.planProjekt}</>}
+          lead="15 % rabatt vid årsbetalning"
+          price={PROJEKT_PRICE}
+          items={pricingT.projectItems}
+          trial
+          checks={["Ingen startavgift", "Ingen bindningstid"]}
+          notes={["Alla priser exkl. moms."]}
+        />
 
         {/* WHAT'S INCLUDED + FAQ — verktyg-page blocks (lead-magnet.scss) */}
         <section className="lead-magnet tr-app-more">
@@ -449,25 +309,11 @@ export default function TidrapporteringAppPage({
               </div>
             </section>
 
-            <section
-              className="lead-magnet-faq"
-              aria-labelledby="tr-app-faq-heading"
-            >
-              <h2
-                id="tr-app-faq-heading"
-                className="lead-magnet-section-heading"
-              >
-                Vanliga frågor
-              </h2>
-              <dl className="lead-magnet-faq-list">
-                {FAQ.map((item) => (
-                  <div key={item.question} className="lead-magnet-faq-item">
-                    <dt>{item.question}</dt>
-                    <dd>{item.answer}</dd>
-                  </div>
-                ))}
-              </dl>
-            </section>
+            <FaqList
+              headingId="tr-app-faq-heading"
+              heading="Vanliga frågor"
+              items={FAQ}
+            />
 
             <nav className="lead-magnet-related" aria-label="Guider">
               <h2 className="lead-magnet-section-heading">Guider</h2>
@@ -483,31 +329,7 @@ export default function TidrapporteringAppPage({
         </section>
       </main>
 
-      {lightbox && (
-        <div className="image-lightbox" onClick={() => setLightbox(null)}>
-          <button
-            type="button"
-            className="image-lightbox-close"
-            onClick={() => setLightbox(null)}
-            aria-label="Stäng"
-          >
-            <svg viewBox="0 0 24 24" fill="none">
-              <path
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                d="m5 5 14 14M19 5 5 19"
-              />
-            </svg>
-          </button>
-          <img
-            src={lightbox}
-            alt=""
-            className="image-lightbox-img"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
+      <Lightbox src={lightbox} onClose={() => setLightbox(null)} />
 
       <CTA ctaT={ctaT} />
       <Footer footerT={footerT} />

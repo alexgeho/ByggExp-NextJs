@@ -86,29 +86,7 @@
   gap: 14px;
   flex-wrap: wrap;
 }
-.btn-primary {
-  background: var(--blue);
-  color: var(--white);
-  padding: 16px 28px;
-  border-radius: 999px;
-  font-size: 1.3rem;
-  font-weight: 400;
-  transition:
-    background 0.2s,
-    transform 0.15s,
-    box-shadow 0.2s;
-  box-shadow: 0 8px 32px rgba(35, 148, 255, 0.35);
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-.btn-primary:hover {
-  background: var(--blue-2);
-  box-shadow: 0 12px 40px rgba(35, 148, 255, 0.5);
-}
-.btn-primary:active {
-  transform: scale(0.98);
-}
+/* .btn-primary lives in styles/design-system.scss (R38). */
 .btn-ghost {
   color: var(--white);
   padding: 16px 24px;
@@ -327,19 +305,7 @@
 
   /* BTN */
 
-  .btn-primary {
-    background: var(--blue);
-    color: var(--white);
-    padding: 10px 14px;
-    border-radius: 999px;
-    font-size: 1rem;
-    font-weight: 400;
-    transition:
-      background 0.2s,
-      transform 0.15s,
-      box-shadow 0.2s;
-    box-shadow: 0 8px 32px rgba(35, 148, 255, 0.35);
-  }
+  /* .btn-primary (mobile) lives in styles/design-system.scss (R38). */
 
   .btn-ghost {
     color: var(--white);

@@ -71,9 +71,9 @@ const MIN_USERS = 1;
 const MAX_USERS = 40;
 const DEFAULT_USERS = 10;
 
-type Accent = "green" | "purple" | "blue";
+export type Accent = "green" | "purple" | "blue";
 
-function CheckIcon() {
+export function CheckIcon() {
   return (
     <svg viewBox="0 0 14 10" fill="none" aria-hidden="true">
       <path
@@ -223,6 +223,79 @@ function CheckList({
         );
       })}
     </ul>
+  );
+}
+
+/* The package card — ONE component (R38) for the three cards of the pricing
+   block and for the single-plan block on feature/landing pages
+   (PlanPriceSection). `children` are the `.pricing-group` blocks. */
+export function PlanCard(props: {
+  name: string;
+  accent: Accent;
+  /** The highlighted card: frame + badge with `popularLabel`. */
+  popular?: boolean;
+  popularLabel?: string;
+  /** Extra element in the top row, after the tag. */
+  top?: ReactNode;
+  price: ReactNode;
+  per: string;
+  /** The R17 users line (<PlanUsers />). */
+  users: ReactNode;
+  children: ReactNode;
+  /** "Title – note" box under the lists. */
+  highlight?: string;
+  buttonLabel: string;
+  /** Line under the button ("14 dagar gratis"). */
+  trial?: string;
+}) {
+  const { highlight } = props;
+  return (
+    <div
+      className={`pricing-card${props.popular ? " pricing-card-popular" : ""}`}
+    >
+      <div className="pricing-card-top">
+        <span className={`pricing-tag pricing-tag-${props.accent}`}>
+          {props.name}
+        </span>
+        {props.popular ? (
+          <span className="pricing-popular">{props.popularLabel}</span>
+        ) : null}
+        {props.top}
+      </div>
+
+      <div className="pricing-price">
+        <span className="num">{props.price}</span>
+
+        <span className="per">{props.per}</span>
+      </div>
+
+      {props.users}
+
+      <div className={`pricing-groups${highlight ? " pricing-groups-fit" : ""}`}>
+        {props.children}
+      </div>
+
+      {highlight ? (
+        <div className="pricing-highlight-wrap">
+          <div className="pricing-highlight">
+            <div className="pricing-highlight-title">
+              {highlight.split(" – ")[0]}
+            </div>
+            <div className="pricing-highlight-note">
+              {highlight.split(" – ")[1]}
+            </div>
+          </div>
+        </div>
+      ) : null}
+
+      <a href="#cta" className="btn-primary">
+        {props.buttonLabel}
+      </a>
+
+      {props.trial !== undefined ? (
+        <span className="pricing-trial">{props.trial}</span>
+      ) : null}
+    </div>
   );
 }
 
@@ -450,75 +523,48 @@ function Pricing({ pricingT, lang }: PricingProps) {
             onScroll={handleSliderScroll}
           >
             {plans.map((plan) => (
-              <div
+              <PlanCard
                 key={plan.key}
-                className={`pricing-card${plan.popular ? " pricing-card-popular" : ""}`}
-              >
-                <div className="pricing-card-top">
-                  <span className={`pricing-tag pricing-tag-${plan.accent}`}>
-                    {plan.name}
-                  </span>
-                  {plan.popular ? (
-                    <span className="pricing-popular">{pricingT.popular}</span>
-                  ) : null}
-                  {/* Sole traders: the Faktura plan is the one for them (sv-only page). */}
-                  {plan.key === "faktura" && lang === "sv" ? (
+                name={plan.name}
+                accent={plan.accent}
+                popular={plan.popular}
+                popularLabel={pricingT.popular}
+                top={
+                  /* Sole traders: the Faktura plan is the one for them (sv-only page). */
+                  plan.key === "faktura" && lang === "sv" ? (
                     <a className="pricing-solo" href="/sv/enmansforetag">
                       För enmansföretag →
                     </a>
-                  ) : null}
-                </div>
-
-                <div className="pricing-price">
-                  <span className="num">{plan.price}</span>
-
-                  <span className="per">{pricingT.pricingPer}</span>
-                </div>
-
-                <PlanUsers
-                  pricingT={pricingT}
-                  plan={plan.key as PlanKey}
-                  lang={lang}
-                  extra={perMonth(PLAN_EXTRA[plan.key as PlanKey])}
-                />
-
-                <div
-                  className={`pricing-groups${plan.highlight ? " pricing-groups-fit" : ""}`}
-                >
-                  {plan.groups.map((group) => (
-                    <div className="pricing-group" key={group.title}>
-                      <h3 className="pricing-group-title">{group.title}</h3>
-                      <CheckList
-                        items={group.items}
-                        accent={plan.accent}
-                        idPrefix={`pricing-${plan.key}`}
-                        note={noteText}
-                        openNote={openNote}
-                        onToggleNote={toggleNote}
-                      />
-                    </div>
-                  ))}
-                </div>
-
-                {plan.highlight ? (
-                  <div className="pricing-highlight-wrap">
-                    <div className="pricing-highlight">
-                      <div className="pricing-highlight-title">
-                        {plan.highlight.split(" – ")[0]}
-                      </div>
-                      <div className="pricing-highlight-note">
-                        {plan.highlight.split(" – ")[1]}
-                      </div>
-                    </div>
+                  ) : null
+                }
+                price={plan.price}
+                per={pricingT.pricingPer}
+                users={
+                  <PlanUsers
+                    pricingT={pricingT}
+                    plan={plan.key as PlanKey}
+                    lang={lang}
+                    extra={perMonth(PLAN_EXTRA[plan.key as PlanKey])}
+                  />
+                }
+                highlight={plan.highlight}
+                buttonLabel={pricingT.pricingButton}
+                trial={pricingT.pricingTrial}
+              >
+                {plan.groups.map((group) => (
+                  <div className="pricing-group" key={group.title}>
+                    <h3 className="pricing-group-title">{group.title}</h3>
+                    <CheckList
+                      items={group.items}
+                      accent={plan.accent}
+                      idPrefix={`pricing-${plan.key}`}
+                      note={noteText}
+                      openNote={openNote}
+                      onToggleNote={toggleNote}
+                    />
                   </div>
-                ) : null}
-
-                <a href="#cta" className="btn-primary">
-                  {pricingT.pricingButton}
-                </a>
-
-                <span className="pricing-trial">{pricingT.pricingTrial}</span>
-              </div>
+                ))}
+              </PlanCard>
             ))}
           </div>
 

@@ -26,6 +26,50 @@
   }
 }
 
+/* R38. Primary button — ONE definition for the whole site (moved here from
+   components/Hero/Hero.scss, declarations unchanged). Kept at the top of this
+   file so every later rule keeps winning exactly as before. Context overrides:
+   `.em-hero .btn-primary`, `.fn-inline-cta .btn-primary` (enmansforetag.scss),
+   `.pricing-card .btn-primary` (Pricing.scss). */
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  transition:
+    background 0.2s,
+    transform 0.15s,
+    box-shadow 0.2s;
+  box-shadow: 0 8px 32px rgba(35, 148, 255, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-primary:hover {
+  background: var(--blue-2);
+  box-shadow: 0 12px 40px rgba(35, 148, 255, 0.5);
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+@media (max-width: 560px) {
+  .btn-primary {
+    background: var(--blue);
+    color: var(--white);
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 400;
+    transition:
+      background 0.2s,
+      transform 0.15s,
+      box-shadow 0.2s;
+    box-shadow: 0 8px 32px rgba(35, 148, 255, 0.35);
+  }
+}
+
 /* R1. Side-by-side panels are always the same height (inputs | result). */
 .lm-tool-split {
   align-items: stretch;

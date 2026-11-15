@@ -1,4 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+
+import Lightbox from "../Lightbox/Lightbox";
+import StepsCarousel, { type CarouselStep } from "../StepsCarousel/StepsCarousel";
 const shiftsExport = "/landing/features/1arbetspass.webp";
 const tasks = "/landing/features/2uppgift.webp";
 const live = "/landing/features/3personal.webp";
@@ -192,217 +195,53 @@ function Features({
     },
   ];
 
-  // --- Carousel (same scroll-snap slider pattern as the Pricing section) ---
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const [activeSlide, setActiveSlide] = useState(0);
-  const lastIndex = featureCards.length - 1;
-  const gap = 24; // keep in sync with .featuresOptions gap in Features.scss
+  const linked =
+    FEATURE_LINK_LANGS.includes(lang as (typeof FEATURE_LINK_LANGS)[number]);
 
-  function scrollToSlide(index: number) {
-    if (!sliderRef.current) return;
-
-    const firstCard = sliderRef.current.querySelector<HTMLElement>(".step");
-
-    if (!firstCard) return;
-
-    const cardWidth = firstCard.offsetWidth + gap;
-
-    // Scroll the track directly (scrollIntoView is unreliable on a nested
-    // horizontal scroller and can also nudge the page's vertical scroll).
-    sliderRef.current.scrollTo({ left: index * cardWidth, behavior: "smooth" });
-
-    setActiveSlide(index);
-  }
-
-  function showPreviousSlide() {
-    if (activeSlide === 0) return;
-    scrollToSlide(activeSlide - 1);
-  }
-
-  function showNextSlide() {
-    if (activeSlide === lastIndex) return;
-    scrollToSlide(activeSlide + 1);
-  }
-
-  function handleSliderScroll() {
-    if (!sliderRef.current) return;
-
-    const firstCard = sliderRef.current.querySelector<HTMLElement>(".step");
-
-    if (!firstCard) return;
-
-    const cardWidth = firstCard.offsetWidth + gap;
-
-    const index = Math.round(sliderRef.current.scrollLeft / cardWidth);
-
-    setActiveSlide(index);
-  }
-
-  useEffect(() => {
-    if (!lightboxImage) return;
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setLightboxImage(null);
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "";
-    };
-  }, [lightboxImage]);
+  const steps: CarouselStep[] = featureCards.map((card, index) => ({
+    title: card.title,
+    text: card.text,
+    bullets: card.steps,
+    link:
+      linked && FEATURE_LINKS[index]
+        ? {
+            href:
+              lang === "nb" && NB_FUNKSJON_LINKS[index]
+                ? `/nb/funksjoner/${NB_FUNKSJON_LINKS[index]}`
+                : lang === "sv" && SV_FUNKTION_LINKS[index]
+                  ? `/sv/funktioner/${SV_FUNKTION_LINKS[index]}`
+                  : `/${lang}/blog/${FEATURE_LINKS[index]}`,
+            label: LEARN_MORE_LABEL[lang] ?? LEARN_MORE_LABEL.en,
+          }
+        : undefined,
+    // 1200w copy for the card; the 2400w original opens in the lightbox.
+    img: card.image.replace(/\.webp$/, "-1200.webp"),
+    alt: card.title,
+    width: 1200,
+    height: 656,
+    zoomSrc: card.image,
+  }));
 
   return (
-    <section className="features" id="features">
-      <div className="container">
-        {/* HEADER */}
-        <div className="section-head">
-          <span className="eyebrow">{featuresT1_3.featuresTitle}</span>
-
-          <h2>
-            {featuresT1_3.featuresHeading1.replace("{n}", String(featureCards.length))}{" "}
-            <em>{featuresT1_3.featuresHeadingAccent}</em>{" "}
-            {featuresT1_3.featuresHeading2}
-          </h2>
-
-          <p className="section-sub">{featuresT1_3.featuresSub}</p>
-        </div>
-
-        {/* CAROUSEL */}
-        <div className="features-slider">
-          {/* ARROW LEFT */}
-          <button
-            type="button"
-            className="features-arrow features-arrow-left"
-            onClick={showPreviousSlide}
-            disabled={activeSlide === 0}
-            aria-label="Previous"
-          >
-            ‹
-          </button>
-
-          {/* TRACK */}
-          <div
-            className="featuresOptions"
-            ref={sliderRef}
-            onScroll={handleSliderScroll}
-          >
-            {featureCards.map((card, index) => (
-              <div className="step" key={index}>
-                <div className="step-text-block">
-                  <h3>{card.title}</h3>
-
-                  <p className="step-text">{card.text}</p>
-
-                  <ul className="step-bullets">
-                    {card.steps.map((step, stepIndex) => (
-                      <li key={stepIndex}>
-                        <span className="number">{stepIndex + 1}</span>
-                        {step}
-                      </li>
-                    ))}
-                  </ul>
-
-                  {FEATURE_LINK_LANGS.includes(
-                    lang as (typeof FEATURE_LINK_LANGS)[number],
-                  ) && FEATURE_LINKS[index] ? (
-                    <a
-                      className="step-link"
-                      href={
-                        lang === "nb" && NB_FUNKSJON_LINKS[index]
-                          ? `/nb/funksjoner/${NB_FUNKSJON_LINKS[index]}`
-                          : lang === "sv" && SV_FUNKTION_LINKS[index]
-                            ? `/sv/funktioner/${SV_FUNKTION_LINKS[index]}`
-                            : `/${lang}/blog/${FEATURE_LINKS[index]}`
-                      }
-                    >
-                      {LEARN_MORE_LABEL[lang] ?? LEARN_MORE_LABEL.en}
-                    </a>
-                  ) : null}
-                </div>
-
-                <div className="step-visual">
-                  <div className="phone-shell">
-                    <button
-                      type="button"
-                      className="image-zoom-trigger"
-                      onClick={() => setLightboxImage(card.image)}
-                      aria-label="Enlarge image"
-                    >
-                      {/* 1200w copy for the card; the 2400w original opens in the lightbox. */}
-                      <img
-                        src={card.image.replace(/\.webp$/, "-1200.webp")}
-                        alt={card.title}
-                        width={1200}
-                        height={656}
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* ARROW RIGHT */}
-          <button
-            type="button"
-            className="features-arrow features-arrow-right"
-            onClick={showNextSlide}
-            disabled={activeSlide === lastIndex}
-            aria-label="Next"
-          >
-            ›
-          </button>
-        </div>
-
-        {/* DOTS */}
-        <div className="features-controls">
-          <div className="features-dots">
-            {featureCards.map((_, index) => (
-              <span
-                key={index}
-                className={activeSlide === index ? "active" : ""}
-                onClick={() => scrollToSlide(index)}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {lightboxImage && (
-        <div
-          className="image-lightbox"
-          onClick={() => setLightboxImage(null)}
-        >
-          <button
-            type="button"
-            className="image-lightbox-close"
-            onClick={() => setLightboxImage(null)}
-            aria-label="Stäng"
-          >
-            <svg viewBox="0 0 24 24" fill="none">
-              <path
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                d="m5 5 14 14M19 5 5 19"
-              />
-            </svg>
-          </button>
-
-          <img
-            src={lightboxImage}
-            alt=""
-            className="image-lightbox-img"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
-    </section>
+    <StepsCarousel
+      id="features"
+      eyebrow={featuresT1_3.featuresTitle}
+      heading={
+        <>
+          {featuresT1_3.featuresHeading1.replace("{n}", String(featureCards.length))}{" "}
+          <em>{featuresT1_3.featuresHeadingAccent}</em>{" "}
+          {featuresT1_3.featuresHeading2}
+        </>
+      }
+      sub={featuresT1_3.featuresSub}
+      subClassName="section-sub"
+      steps={steps}
+      prevLabel="Previous"
+      nextLabel="Next"
+      onZoom={setLightboxImage}
+    >
+      <Lightbox src={lightboxImage} onClose={() => setLightboxImage(null)} />
+    </StepsCarousel>
   );
 }
 

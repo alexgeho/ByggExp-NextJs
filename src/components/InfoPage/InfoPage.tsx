@@ -2,6 +2,7 @@ import Head from "next/head";
 import type { ReactNode } from "react";
 
 import CTA from "../CTA/CTA";
+import FaqList from "../FaqList/FaqList";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import { ILLU_HEIGHT_C } from "../../content/funktion-pages-c";
@@ -132,19 +133,11 @@ export default function InfoPage(p: InfoPageProps) {
 
         <section className="lead-magnet tr-app-more">
           <div className="container container-narrow">
-            <section className="lead-magnet-faq" aria-labelledby="info-faq-heading">
-              <h2 id="info-faq-heading" className="lead-magnet-section-heading">
-                Vanliga frågor
-              </h2>
-              <dl className="lead-magnet-faq-list">
-                {p.faq.map((item) => (
-                  <div key={item.question} className="lead-magnet-faq-item">
-                    <dt>{item.question}</dt>
-                    <dd>{item.answer}</dd>
-                  </div>
-                ))}
-              </dl>
-            </section>
+            <FaqList
+              headingId="info-faq-heading"
+              heading="Vanliga frågor"
+              items={p.faq}
+            />
 
             <nav className="lead-magnet-related" aria-label="Guider">
               <h2 className="lead-magnet-section-heading">Guider</h2>

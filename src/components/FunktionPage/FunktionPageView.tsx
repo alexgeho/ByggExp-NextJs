@@ -1,11 +1,14 @@
-import { useEffect, useRef, useState, type MouseEvent } from "react";
+import { useState, type MouseEvent } from "react";
 import Head from "next/head";
 
 import CTA from "../CTA/CTA";
+import FaqList from "../FaqList/FaqList";
 import Footer from "../Footer/Footer";
 import FunktionHero, { FUNKTION_HERO_UI } from "./FunktionHero";
 import Header from "../Header/Header";
-import { PlanUsers } from "../Pricing/Pricing";
+import Lightbox from "../Lightbox/Lightbox";
+import PlanPriceSection from "../Pricing/PlanPriceSection";
+import StepsCarousel from "../StepsCarousel/StepsCarousel";
 import {
   getFunktionPage,
   illuSrc,
@@ -85,11 +88,6 @@ export default function FunktionPageView({ lang, slug }: Props) {
     : isFaktura
       ? pricingT.planFaktura
       : pricingT.planProjekt;
-  const planSub = isKomplett
-    ? pricingT.planKomplettSub
-    : isFaktura
-      ? pricingT.planFakturaSub
-      : pricingT.planProjektSub;
   const planItems = isKomplett
     ? pricingT.komplettItems
         .slice(0, -1)
@@ -103,7 +101,6 @@ export default function FunktionPageView({ lang, slug }: Props) {
           .filter((item) => !item.includes("(kommer snart)"))
           .map((item) => item.replace(/\*$/, ""))
       : pricingT.projectItems;
-  const accent = isKomplett ? "green" : isFaktura ? "blue" : "purple";
   const usersText = isFaktura ? ui.usersFaktura : ui.usersIncluded;
   // Fair-use limits of Koll på pengarna, first sentence only (no "*").
   const fakturaLimit = `${pricingT.fakturaLimitNote
@@ -156,42 +153,10 @@ export default function FunktionPageView({ lang, slug }: Props) {
   // Screenshots open full-size on click (same lightbox as /sv/tidrapportering-app).
   const [lightbox, setLightbox] = useState<string | null>(null);
 
-  // Features carousel — same scrolling as components/Features (gap 24px there).
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const [activeSlide, setActiveSlide] = useState(0);
-  const cardStep = () => {
-    const card = sliderRef.current?.querySelector<HTMLElement>(".step");
-    return card ? card.offsetWidth + 24 : 0;
-  };
-  const scrollToSlide = (n: number) => {
-    const step = cardStep();
-    if (!step || n < 0 || n >= page.steps.length) return;
-    sliderRef.current?.scrollTo({ left: n * step, behavior: "smooth" });
-    setActiveSlide(n);
-  };
-  const handleSliderScroll = () => {
-    const step = cardStep();
-    if (step && sliderRef.current)
-      setActiveSlide(Math.round(sliderRef.current.scrollLeft / step));
-  };
   const openImage = (e: MouseEvent<HTMLElement>) => {
     const img = (e.target as HTMLElement).closest<HTMLImageElement>(ZOOMABLE);
     if (img) setLightbox(img.currentSrc || img.src);
   };
-  useEffect(() => {
-    if (!lightbox) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setLightbox(null);
-    };
-    document.addEventListener("keydown", onKey);
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
-    };
-  }, [lightbox]);
-
-  const multiStep = page.steps.length > 1;
 
   return (
     <>
@@ -232,87 +197,17 @@ export default function FunktionPageView({ lang, slug }: Props) {
         />
 
         {/* FEATURE STEPS — same carousel as the home page "features" block */}
-        <section className="features">
-          <div className="container">
-            <div className="section-head">
-              <h2>
-                {page.stepsHeading[0]} <em>{page.stepsHeading[1]}</em>
-              </h2>
-              <p className="fn-section-sub">{page.stepsLead}</p>
-            </div>
-            <div className="features-slider">
-              {multiStep && (
-                <button
-                  type="button"
-                  className="features-arrow features-arrow-left"
-                  onClick={() => scrollToSlide(activeSlide - 1)}
-                  disabled={activeSlide === 0}
-                  aria-label={ui.prev}
-                >
-                  ‹
-                </button>
-              )}
-              <div
-                className="featuresOptions"
-                ref={sliderRef}
-                onScroll={handleSliderScroll}
-              >
-                {page.steps.map((f) => (
-                  <div className="step" key={f.title}>
-                    <div className="step-text-block">
-                      <h3>{f.title}</h3>
-                      <p className="step-text">{f.text}</p>
-                      {f.bullets ? (
-                        <ul className="step-bullets">
-                          {f.bullets.map((b, n) => (
-                            <li key={b}>
-                              <span className="number">{n + 1}</span>
-                              {b}
-                            </li>
-                          ))}
-                        </ul>
-                      ) : null}
-                    </div>
-                    <div className="step-visual">
-                      <div className="phone-shell">
-                        <img
-                          src={f.img}
-                          alt={f.alt}
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {multiStep && (
-                <button
-                  type="button"
-                  className="features-arrow features-arrow-right"
-                  onClick={() => scrollToSlide(activeSlide + 1)}
-                  disabled={activeSlide === page.steps.length - 1}
-                  aria-label={ui.next}
-                >
-                  ›
-                </button>
-              )}
-            </div>
-            {multiStep && (
-              <div className="features-controls">
-                <div className="features-dots">
-                  {page.steps.map((f, n) => (
-                    <span
-                      key={f.title}
-                      className={activeSlide === n ? "active" : ""}
-                      onClick={() => scrollToSlide(n)}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        </section>
+        <StepsCarousel
+          heading={
+            <>
+              {page.stepsHeading[0]} <em>{page.stepsHeading[1]}</em>
+            </>
+          }
+          sub={page.stepsLead}
+          steps={page.steps}
+          prevLabel={ui.prev}
+          nextLabel={ui.next}
+        />
 
         {/* LONG CONTENT — white, blog article typography */}
         <section className="fn-article">
@@ -327,23 +222,12 @@ export default function FunktionPageView({ lang, slug }: Props) {
         {/* FAQ + GUIDES — verktyg-page blocks (lead-magnet.scss) */}
         <section className="lead-magnet tr-app-more">
           <div className="container container-narrow">
-            <section
-              className="lead-magnet-faq"
-              aria-labelledby="fn-faq-heading"
-            >
-              <h2 id="fn-faq-heading" className="lead-magnet-section-heading">
-                {ui.faq}
-              </h2>
-              <p className="fn-section-sub">{ui.faqSub}</p>
-              <dl className="lead-magnet-faq-list">
-                {page.faq.map((item) => (
-                  <div key={item.question} className="lead-magnet-faq-item">
-                    <dt>{item.question}</dt>
-                    <dd>{item.answer}</dd>
-                  </div>
-                ))}
-              </dl>
-            </section>
+            <FaqList
+              headingId="fn-faq-heading"
+              heading={ui.faq}
+              sub={ui.faqSub}
+              items={page.faq}
+            />
 
             <nav className="lead-magnet-related" aria-label={ui.guides}>
               <h2 className="lead-magnet-section-heading">{ui.guides}</h2>
@@ -360,94 +244,26 @@ export default function FunktionPageView({ lang, slug }: Props) {
         </section>
 
         {/* PRICE — the page's package card from the pricing block (page.plan) */}
-        <section className="em-price">
-          <div className="container em-price-inner">
-            <div className="em-price-head">
-              {/* Separate literals keep the sv HTML byte-identical. */}
-              {isNb ? <h2>Pakken {planName}</h2> : <h2>Paketet {planName}</h2>}
-              <p className="em-lead">{page.priceIncluded}</p>
-            </div>
-            <div className="em-price-card">
-              <div className="pricing-card">
-                <div className="pricing-card-top">
-                  <span className={`pricing-tag pricing-tag-${accent}`}>
-                    {planName}
-                  </span>
-                </div>
-                <div className="pricing-price">
-                  <span className="num">{price}</span>
-                  <span className="per">{pricingT.pricingPer}</span>
-                </div>
-                <PlanUsers pricingT={pricingT} plan={page.plan} lang={lang} />
-                <div className="pricing-groups">
-                  <div className="pricing-group">
-                    <h3 className="pricing-group-title">
-                      {planSub}
-                    </h3>
-                    <ul className="pricing-list">
-                      {planItems.map((item) => (
-                        <li key={item}>
-                          <span className={`check check-${accent}`}>
-                            <svg
-                              viewBox="0 0 14 10"
-                              fill="none"
-                              aria-hidden="true"
-                            >
-                              <path
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="m1 5 4 4 8-8"
-                              />
-                            </svg>
-                          </span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <a href="#cta" className="btn-primary">
-                  {pricingT.pricingButton}
-                </a>
-              </div>
-              <p className="pricing-limit-note">
-                {ui.priceNote}
-              </p>
-              {isFaktura && (
-                <p className="pricing-limit-note">{fakturaLimit}</p>
-              )}
-            </div>
-          </div>
-        </section>
+        <PlanPriceSection
+          plan={page.plan}
+          lang={lang}
+          pricingT={pricingT}
+          heading={
+            /* Separate literals keep the sv HTML byte-identical. */
+            isNb ? <>Pakken {planName}</> : <>Paketet {planName}</>
+          }
+          lead={page.priceIncluded}
+          price={price}
+          items={planItems}
+          notes={isFaktura ? [ui.priceNote, fakturaLimit] : [ui.priceNote]}
+        />
       </main>
 
-      {lightbox && (
-        <div className="image-lightbox" onClick={() => setLightbox(null)}>
-          <button
-            type="button"
-            className="image-lightbox-close"
-            onClick={() => setLightbox(null)}
-            aria-label={ui.close}
-          >
-            <svg viewBox="0 0 24 24" fill="none">
-              <path
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                d="m5 5 14 14M19 5 5 19"
-              />
-            </svg>
-          </button>
-          <img
-            src={lightbox}
-            alt=""
-            className="image-lightbox-img"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
+      <Lightbox
+        src={lightbox}
+        onClose={() => setLightbox(null)}
+        closeLabel={ui.close}
+      />
 
       <CTA ctaT={ctaT} />
       <Footer footerT={footerT} />

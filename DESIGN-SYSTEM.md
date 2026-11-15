@@ -117,6 +117,19 @@
 
 **R37 · 2026-11-15 · Ряд пилюль функций — один компонент.** На `/funktioner` и на страницах услуг (`/blog/<feature-slug>`) ряд пилюль рисует один компонент `PillNav` (`src/components/FeatureNav/FeatureNav.tsx`): белая полоса под шапкой, одна прокручиваемая строка, активная пилюля синяя, отступы по R35. На услугах пилюля — ссылка, на `/funktioner` — кнопка, листающая карусель; вид одинаковый. Второго варианта разметки или стилей для пилюль функций быть не должно.
 
+**R38 · 2026-11-15 · Общие компоненты.** Одна сущность = один компонент («Единый компонент»). Новая страница собирается из них; вставленная копия их разметки (свой `features-slider`, `image-lightbox`, `lead-magnet-faq`, `em-price` + `pricing-card`, свой hero с `em-hero`) — дефект, а не вариант. Различия между страницами — пропсы компонента, а не вторая копия.
+| Компонент | Файл | Что это |
+|---|---|---|
+| `FunktionHero` | `src/components/FunktionPage/FunktionHero.tsx` | первый экран: крошки, H1, цена пакета, лид, кнопка, галочки, иллюстрация (R20, R32, R33) |
+| `PillNav` | `src/components/FeatureNav/FeatureNav.tsx` | ряд пилюль функций (R35, R37) |
+| `StepsCarousel` | `src/components/StepsCarousel/StepsCarousel.tsx` | карусель шагов: текст + пункты + скриншот, стрелки, точки (главная, страницы функций, tidrapportering-app, enmansforetag) |
+| `Lightbox` | `src/components/Lightbox/Lightbox.tsx` | картинка на весь экран по клику (Esc / клик закрывает) |
+| `FaqList` | `src/components/FaqList/FaqList.tsx` | блок «Vanliga frågor» (калькуляторы, страницы функций, priser, byt-system); JSON-LD остаётся на странице |
+| `PlanPriceSection` + `PlanCard` | `src/components/Pricing/PlanPriceSection.tsx`, `PlanCard` в `src/components/Pricing/Pricing.tsx` | блок цены одного пакета; карточка та же, что в блоке цен главной и `/sv/priser` |
+| `.btn-primary` | `src/styles/design-system.scss` (в начале файла) | главная кнопка; контекстные размеры — `.em-hero`, `.fn-inline-cta`, `.pricing-card` |
+
+Пока вне правила (этапы плана `docs/design-system-refactor-plan-2026-11-15.md`): `fk-lightbox` на `/funktioner` (этап 4), hero на `/sv/tidrapportering-app` и `/sv/enmansforetag` (этап 3).
+
 ## Чек-лист перед показом
 1. Соседние панели/кнопки одной высоты и радиуса (R1).
 2. Ряд кнопок и полей — на одной линии, одной высоты (R3).

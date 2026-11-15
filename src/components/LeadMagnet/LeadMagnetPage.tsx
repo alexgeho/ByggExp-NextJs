@@ -6,6 +6,7 @@ import type { ReactNode } from 'react';
 import { HREFLANG_CALC_SLUGS, NB_LIVE, NO_DOMAIN_LIVE, type CalcLocale } from '../../lib/locale';
 import { localeOrigin } from '../../lib/seo';
 import { gaEvent } from '../../lib/analytics';
+import FaqList from '../FaqList/FaqList';
 import EmbedSnippet from './EmbedSnippet';
 import ProductBanner from './ProductBanner';
 
@@ -236,19 +237,11 @@ export default function LeadMagnetPage({
         ) : null}
 
         {faq.length > 0 ? (
-          <section className="lead-magnet-faq" aria-labelledby="lead-magnet-faq-heading">
-            <h2 id="lead-magnet-faq-heading" className="lead-magnet-section-heading">
-              {faqHeading}
-            </h2>
-            <dl className="lead-magnet-faq-list">
-              {faq.map((item) => (
-                <div key={item.question} className="lead-magnet-faq-item">
-                  <dt>{item.question}</dt>
-                  <dd>{item.answer}</dd>
-                </div>
-              ))}
-            </dl>
-          </section>
+          <FaqList
+            headingId="lead-magnet-faq-heading"
+            heading={faqHeading}
+            items={faq}
+          />
         ) : null}
 
         {cta ? (

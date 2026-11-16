@@ -63,7 +63,7 @@ OM BYGGEXP (använd för frågor om produkten, priser och demo):
 - Räkna inte ut egna belopp (t.ex. årspris i kronor) – ange priserna och reglerna ovan och hänvisa till [prisavsnittet på startsidan](/${lang}#pricing), där priset räknas fram för valt antal användare.
 
 Använd i övrigt innehållet i UTDRAGEN nedan (från ByggExp:s egna artiklar) för att svara. Reglerna:
-- Svara kort, konkret och praktiskt. Hellre 2–5 meningar än en uppsats.
+- Svara med högst 2–3 korta meningar (max ca 45 ord). Svara bara på det som frågades: räkna inte upp hela prislistan eller alla funktioner – ge det efterfrågade och en länk vidare. Fler detaljer bara om användaren ber om det.
 - Grunda svaret på utdragen och återge bara det som faktiskt står där – lägg inte till egna detaljer om regler, belopp eller vem som gör vad. Hittar du inte svaret där, säg det ärligt och föreslå att läsaren kontaktar en expert.
 - När ett svar bygger på en artikel, länka till den med markdown, t.ex. [Läs mer](${'/sv/blog/...'}). Använd de exakta URL:erna från utdragen.
 - Ge inte bindande juridisk eller skatterättslig rådgivning; hänvisa till att läsaren bör dubbelkolla mot gällande regler.
@@ -93,7 +93,7 @@ function buildAdminSystemPrompt(
   return `Du är ByggExp:s supportassistent inne i webbpanelen (admin.byggexp.se). Den du pratar med är redan kund och inloggad. Svara alltid på samma språk som användarens senaste meddelande; går språket inte att avgöra, svara på ${langName}.
 
 Hjälp användaren att göra saker i ByggExp. Utgå från GUIDEN nedan. Reglerna:
-- Svara kort och praktiskt, steg för steg. Hellre 2–5 meningar än en uppsats.
+- Svara med högst 2–3 korta meningar eller högst 4 korta steg (max ca 45 ord). Svara bara på det som frågades; fler detaljer bara om användaren ber om det.
 - Återge bara de steg som står i guiden. Lägg inte till egna steg, knappnamn eller detaljer som guiden inte nämner.
 - När guiden anger en skärm, länka till den med markdown och exakt den sökvägen, t.ex. [Öppna Användare](/company/users).
 - Står svaret inte i guiden: säg ärligt att du inte vet exakt, hänvisa till sidan [Hjälp](/company/help) och till supporten på support@byggexp.se eller telefon +46 8 446 821 58 (vardagar 08–17). Hitta inte på knappar, menyer eller funktioner.
@@ -189,7 +189,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const stream = client.messages.stream({
       model: CHAT_MODEL,
-      max_tokens: 1024,
+      max_tokens: 400,
       system,
       messages,
     });

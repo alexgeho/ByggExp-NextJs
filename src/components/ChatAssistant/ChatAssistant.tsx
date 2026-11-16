@@ -17,7 +17,7 @@ const COPY: Record<string, {
 }> = {
   sv: {
     title: 'Fråga ByggExp',
-    placeholder: 'Ställ en fråga om bygg, ekonomi, regler …',
+    placeholder: 'Ställ en fråga',
     greeting: 'Hej! Jag hjälper dig att hitta det du kom hit för.',
     teaser: 'Behöver du hjälp? Fråga oss om ByggExp.',
     open: 'Öppna AI-assistenten',
@@ -26,7 +26,7 @@ const COPY: Record<string, {
   },
   nb: {
     title: 'Spør ByggExp',
-    placeholder: 'Still et spørsmål om bygg, økonomi, regler …',
+    placeholder: 'Still et spørsmål',
     greeting: 'Hei! Jeg hjelper deg å finne det du kom hit for.',
     teaser: 'Trenger du hjelp? Spør oss om ByggExp.',
     open: 'Åpne AI-assistenten',
@@ -35,7 +35,7 @@ const COPY: Record<string, {
   },
   en: {
     title: 'Ask ByggExp',
-    placeholder: 'Ask about construction, finance, rules …',
+    placeholder: 'Ask a question',
     greeting: 'Hi! I’ll help you find what you came here for.',
     teaser: 'Need help? Ask us about ByggExp.',
     open: 'Open the AI assistant',
@@ -44,7 +44,7 @@ const COPY: Record<string, {
   },
   ru: {
     title: 'Спросить ByggExp',
-    placeholder: 'Задайте вопрос о стройке, финансах, правилах …',
+    placeholder: 'Задайте вопрос',
     greeting: 'Здравствуйте! Помогу найти то, зачем вы пришли.',
     teaser: 'Нужна помощь? Спросите нас о ByggExp.',
     open: 'Открыть AI-ассистента',

@@ -1,6 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+import { ADMIN_HELP_GUIDE } from '../../content/admin-help-guide';
 import { retrieveArticles } from '../../lib/blog-retrieval';
 import { landingLanguageCodes, type LandingLanguageCode } from '../../locales/languages';
 
@@ -73,9 +74,60 @@ UTDRAG:
 ${context}`;
 }
 
+// Support assistant inside the admin panel (owner, 2026-11-16): the same chat,
+// opened from admin.byggexp.se. The reader is already a customer, so the prompt
+// is how-to help grounded in the panel's own help guide — no demo/sales talk.
+function buildAdminSystemPrompt(
+  articles: { title: string; url: string; text: string }[],
+  lang: string,
+): string {
+  const langName =
+    { sv: 'svenska', nb: 'norsk', en: 'English', ru: 'русском' }[lang] || 'svenska';
+  const context =
+    articles.length > 0
+      ? articles
+          .map((a, i) => `[${i + 1}] ${a.title} (https://byggexp.se${a.url})\n${a.text}`)
+          .join('\n\n')
+      : '(inga relevanta artiklar hittades)';
+
+  return `Du är ByggExp:s supportassistent inne i webbpanelen (admin.byggexp.se). Den du pratar med är redan kund och inloggad. Svara alltid på samma språk som användarens senaste meddelande; går språket inte att avgöra, svara på ${langName}.
+
+Hjälp användaren att göra saker i ByggExp. Utgå från GUIDEN nedan. Reglerna:
+- Svara kort och praktiskt, steg för steg. Hellre 2–5 meningar än en uppsats.
+- När guiden anger en skärm, länka till den med markdown och exakt den sökvägen, t.ex. [Öppna Användare](/company/users).
+- Står svaret inte i guiden: säg ärligt att du inte vet exakt, hänvisa till sidan [Hjälp](/company/help) och till supporten på support@byggexp.se eller telefon +46 8 446 821 58 (vardagar 08–17). Hitta inte på knappar, menyer eller funktioner.
+- Du ser inte användarens data (projekt, timmar, fakturor) och kan inte ändra något åt hen – säg det om hen ber om det.
+- Frågor om byggregler (ROT, personalliggare, ÄTA m.m.): använd UTDRAGEN nedan och återge bara det som står där; länka till artikeln med den exakta URL:en. Ge inte bindande juridisk eller skatterättslig rådgivning.
+- Frågor om pris, paket eller byte av paket: hänvisa till supporten.
+- Svara bara med det slutliga svaret, utan att beskriva din egen process.
+- Skriv vanlig text: ingen fetstil, inga rubriker eller tabeller. Enda tillåtna markdown är länkar [text](url) och enkla listor med "- ".
+
+GUIDEN:
+${ADMIN_HELP_GUIDE}
+
+UTDRAG:
+${context}`;
+}
+
+// The admin panel calls this endpoint cross-origin.
+const CORS_ORIGINS = ['https://admin.byggexp.se'];
+
 export const config = { api: { responseLimit: false } };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const origin = req.headers.origin;
+  if (origin && CORS_ORIGINS.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Vary', 'Origin');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.setHeader('Access-Control-Max-Age', '86400');
+  }
+  if (req.method === 'OPTIONS') {
+    res.status(204).end();
+    return;
+  }
+
   // Lets the site widget pick AI chat vs. the WhatsApp fallback without
   // spending a model call: the AI bubble only shows once the key is live.
   if (req.method === 'GET') {
@@ -105,7 +157,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return;
   }
 
-  const body = req.body as { messages?: ChatMessage[]; lang?: string };
+  const body = req.body as { messages?: ChatMessage[]; lang?: string; context?: string };
   const rawMessages = Array.isArray(body?.messages) ? body.messages : [];
   const lang = (landingLanguageCodes.includes(body?.lang as LandingLanguageCode)
     ? body?.lang
@@ -123,7 +175,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const articles = await retrieveArticles(lang, lastUser.content, 4);
-  const system = buildSystemPrompt(articles, lang);
+  const system =
+    body?.context === 'admin'
+      ? buildAdminSystemPrompt(articles, lang)
+      : buildSystemPrompt(articles, lang);
 
   const client = new Anthropic();
 

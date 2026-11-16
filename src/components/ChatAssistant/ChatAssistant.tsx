@@ -13,6 +13,7 @@ const COPY: Record<string, {
   greeting: string;
   disclaimer: string;
   open: string;
+  teaser: string;
   send: string;
   error: string;
 }> = {
@@ -20,7 +21,8 @@ const COPY: Record<string, {
     title: 'Fråga ByggExp',
     subtitle: 'AI-assistent',
     placeholder: 'Ställ en fråga om bygg, ekonomi, regler …',
-    greeting: 'Hej! Fråga mig om ROT, ÄTA, kalkyler, regler eller något annat – jag svarar utifrån ByggExp:s artiklar.',
+    greeting: 'Hej! Behöver du hjälp? Fråga mig om ByggExp – funktioner, priser och hur du kommer igång – eller om ROT, ÄTA och regler.',
+    teaser: 'Behöver du hjälp? Fråga oss om ByggExp.',
     disclaimer: 'Svar genereras av AI utifrån våra artiklar och kan innehålla fel. Dubbelkolla mot gällande regler.',
     open: 'Öppna AI-assistenten',
     send: 'Skicka',
@@ -30,7 +32,8 @@ const COPY: Record<string, {
     title: 'Spør ByggExp',
     subtitle: 'AI-assistent',
     placeholder: 'Still et spørsmål om bygg, økonomi, regler …',
-    greeting: 'Hei! Spør meg om kalkyler, regler eller noe annet – jeg svarer ut fra ByggExp sine artikler.',
+    greeting: 'Hei! Trenger du hjelp? Spør meg om ByggExp – funksjoner, priser og hvordan du kommer i gang – eller om kalkyler og regler.',
+    teaser: 'Trenger du hjelp? Spør oss om ByggExp.',
     disclaimer: 'Svar genereres av AI ut fra artiklene våre og kan inneholde feil. Dobbeltsjekk mot gjeldende regler.',
     open: 'Åpne AI-assistenten',
     send: 'Send',
@@ -40,7 +43,8 @@ const COPY: Record<string, {
     title: 'Ask ByggExp',
     subtitle: 'AI assistant',
     placeholder: 'Ask about construction, finance, rules …',
-    greeting: 'Hi! Ask me anything — I answer based on ByggExp’s articles.',
+    greeting: 'Hi! Need help? Ask me about ByggExp — features, pricing and how to get started — or about construction rules.',
+    teaser: 'Need help? Ask us about ByggExp.',
     disclaimer: 'Answers are AI-generated from our articles and may be wrong. Verify against current rules.',
     open: 'Open the AI assistant',
     send: 'Send',
@@ -50,7 +54,8 @@ const COPY: Record<string, {
     title: 'Спросить ByggExp',
     subtitle: 'AI-ассистент',
     placeholder: 'Задайте вопрос о стройке, финансах, правилах …',
-    greeting: 'Привет! Спрашивайте — я отвечаю на основе статей ByggExp.',
+    greeting: 'Здравствуйте! Нужна помощь? Спросите меня о ByggExp — функции, цены, с чего начать — или о правилах и расчётах.',
+    teaser: 'Нужна помощь? Спросите нас о ByggExp.',
     disclaimer: 'Ответы генерируются ИИ на основе наших статей и могут содержать ошибки. Проверяйте по актуальным правилам.',
     open: 'Открыть AI-ассистента',
     send: 'Отправить',
@@ -108,6 +113,35 @@ export default function ChatAssistant() {
   const [messages, setMessages] = useState<Msg[]>([]);
   const [streaming, setStreaming] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [teaser, setTeaser] = useState(false);
+
+  // Proactive help offer (owner, 2026-11-16): after 15 s the chat opens by
+  // itself on desktop; on phones, where the panel would cover the page, a
+  // small bubble by the button offers help instead. Once per 24 h per visitor,
+  // never on the contact page (the form is the point there), and never again
+  // after the visitor closed it in this session. Opening costs nothing — the
+  // model is called only when a question is sent.
+  useEffect(() => {
+    if (router.pathname.includes('/contact')) return;
+    const KEY = 'byggexp.chat.offer';
+    let last = 0;
+    try {
+      last = Number(window.localStorage.getItem(KEY) || 0);
+    } catch {
+      /* storage blocked */
+    }
+    if (Date.now() - last < 24 * 3600_000) return;
+    const timer = window.setTimeout(() => {
+      try {
+        window.localStorage.setItem(KEY, String(Date.now()));
+      } catch {
+        /* storage blocked */
+      }
+      if (window.matchMedia('(max-width: 840px)').matches) setTeaser(true);
+      else setOpen(true);
+    }, 15_000);
+    return () => window.clearTimeout(timer);
+  }, [router.pathname]);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
@@ -155,11 +189,22 @@ export default function ChatAssistant() {
 
   return (
     <>
+      {!open && teaser ? (
+        <div className="chat-teaser">
+          <button type="button" className="chat-teaser-text" onClick={() => { setTeaser(false); setOpen(true); }}>
+            {copy.teaser}
+          </button>
+          <button type="button" className="chat-teaser-close" aria-label="Stäng" onClick={() => setTeaser(false)}>
+            ✕
+          </button>
+        </div>
+      ) : null}
+
       {!open ? (
         <button
           type="button"
           className="chat-fab"
-          onClick={() => setOpen(true)}
+          onClick={() => { setTeaser(false); setOpen(true); }}
           aria-label={copy.open}
         >
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">

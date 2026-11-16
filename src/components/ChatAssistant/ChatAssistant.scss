@@ -148,7 +148,7 @@
   bottom: 22px;
   z-index: 901;
   width: min(400px, calc(100vw - 32px));
-  height: min(600px, calc(100vh - 100px));
+  max-height: min(600px, calc(100vh - 100px));
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -193,7 +193,8 @@
 }
 
 .chat-messages {
-  flex: 1;
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
   padding: 16px;
   display: flex;

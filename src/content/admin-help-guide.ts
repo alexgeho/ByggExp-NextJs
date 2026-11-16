@@ -26,7 +26,7 @@ Uppgifter & påminnelser (skärm: /company/my-work)
 - Ställ in en påminnelse så att mottagaren puffas — upprepa tills den bekräftas klar.
 - Använd Upprepa för återkommande jobb (veckostädning, månadskontroller). Mitt arbete är din dagliga att-göra-vy.
 
-Offerter & fakturor (skärm: /company/invoicing/offers)
+Offerter & fakturor (skärmar: Offerter /company/invoicing/offers, Fakturor /company/invoicing/invoices)
 - Lägg till en kund och skapa sedan en offert — AI:n kan skapa prissatta rader från en kort beskrivning.
 - Omvandla en accepterad offert till en faktura. Tillämpa ROT-avdrag för privatkunder.
 - Skicka som PDF via e-post. Rättelser görs som kreditfaktura — skickade fakturor ändras inte.
@@ -55,4 +55,50 @@ Dina uppgifter
 
 Ansök om frånvaro
 - Skicka en frånvaroansökan (semester, sjuk) från appen — din admin godkänner den.
+`;
+
+// Screen map of the admin panel (menu label → path). Source of truth:
+// byggexp-admin src/shared/layouts/DashboardSidebar.jsx — update when the menu changes.
+export const ADMIN_SCREENS = `KONTORET (menyn i webbpanelen):
+- Översikt: /company
+- Mitt arbete (att göra, godkännanden): /company/my-work
+- Projekt: /company/projects
+- Objektskarta: /company/map
+- Uppgifter: /company/tasks
+- Dagbok (byggdagbok): /company/dagbok
+- KMA / Egenkontroll: /company/kma
+- Avvikelser: /company/avvik
+- Verktyg: /company/tools
+- Personal (användare, bjud in, roller): /company/users
+- Arbetspass (tid, timmar, stämplingar): /company/shifts
+- Planering (schema, bokningar, bemanning): /company/schedule
+- Frånvaro (semester, sjuk): /company/leave
+- Offerter: /company/invoicing/offers
+- Fakturor (kundfakturor, skapa/skicka/kreditera faktura): /company/invoicing/invoices
+- Ekonomiplanering: /company/invoicing/planning
+- Budget: /company/invoicing/budget
+- Inköpsfakturor (leverantörsfakturor): /company/invoicing/supplier-invoices
+- Utlägg (kvitton): /company/invoicing/expenses
+- Löner (lönekörning, lönespecifikationer, AGI): /company/invoicing/payroll
+- Bokföring: /company/invoicing/ledger
+- Lönsamhet: /company/profitability
+- Projektkalkyl: /company/projektkalkyl
+- Kunder: /company/invoicing/clients
+- Artiklar: /company/invoicing/articles
+- Leverantörer: /company/invoicing/suppliers
+- Händelselogg: /company/audit
+- Prenumeration (paket, betalning): /company/billing
+- Anpassa meny: /company/modules
+- Profil (företagsuppgifter, logotyp): /company/profile
+- Hjälp: /company/help
+
+HANTVERKARE (webb):
+- Översikt: /worker
+- Projekt: /worker/my
+- Verktyg: /worker/tools
+- Uppgifter: /worker/tasks
+- Arbetspass: /worker/shifts
+- Planering: /worker/schedule
+- Registrera tid: /worker/time-report
+- Ladda upp foton: /worker/upload
 `;

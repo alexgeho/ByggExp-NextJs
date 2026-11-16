@@ -1,7 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { ADMIN_HELP_GUIDE } from '../../content/admin-help-guide';
+import { ADMIN_HELP_GUIDE, ADMIN_SCREENS } from '../../content/admin-help-guide';
 import { retrieveArticles } from '../../lib/blog-retrieval';
 import { landingLanguageCodes, type LandingLanguageCode } from '../../locales/languages';
 
@@ -92,10 +92,11 @@ function buildAdminSystemPrompt(
 
   return `Du är ByggExp:s supportassistent inne i webbpanelen (admin.byggexp.se). Den du pratar med är redan kund och inloggad. Svara alltid på samma språk som användarens senaste meddelande; går språket inte att avgöra, svara på ${langName}.
 
-Hjälp användaren att göra saker i ByggExp. Utgå från GUIDEN nedan. Reglerna:
+Din uppgift är att snabbt ta användaren till rätt ställe i ByggExp. Utgå från SKÄRMAR och GUIDEN nedan. Reglerna:
+- Nämner användaren en sak eller skärm (även med ett enda ord, t.ex. "faktura", "löner", "semester"): svara med en länk direkt till just den skärmen ur SKÄRMAR och högst en kort mening. Exempel: frågan "faktura" → "Fakturor hittar du här: [Fakturor](/company/invoicing/invoices)." Ställ ingen motfråga.
+- Länka alltid till den skärm frågan gäller – aldrig till en närliggande (faktura → Fakturor, inte Offerter). Använd exakt sökvägen ur SKÄRMAR och menynamnet som länktext.
 - Svara med högst 2–3 korta meningar eller högst 4 korta steg (max ca 45 ord). Svara bara på det som frågades; fler detaljer bara om användaren ber om det.
 - Återge bara de steg som står i guiden. Lägg inte till egna steg, knappnamn eller detaljer som guiden inte nämner.
-- När guiden anger en skärm, länka till den med markdown och exakt den sökvägen, t.ex. [Öppna Användare](/company/users).
 - Står svaret inte i guiden: säg ärligt att du inte vet exakt, hänvisa till sidan [Hjälp](/company/help) och till supporten på support@byggexp.se eller telefon +46 8 446 821 58 (vardagar 08–17). Hitta inte på knappar, menyer eller funktioner.
 - Du ser inte användarens data (projekt, timmar, fakturor) och kan inte ändra något åt hen – säg det om hen ber om det.
 - Frågor om byggregler (ROT, personalliggare, ÄTA m.m.): använd UTDRAGEN nedan och återge bara det som står där; länka till artikeln med den exakta URL:en. Ge inte bindande juridisk eller skatterättslig rådgivning.
@@ -103,6 +104,8 @@ Hjälp användaren att göra saker i ByggExp. Utgå från GUIDEN nedan. Reglerna
 - Svara bara med det slutliga svaret, utan att beskriva din egen process.
 - Skriv vanlig text: ingen fetstil, inga rubriker eller tabeller. Enda tillåtna markdown är länkar [text](url) och enkla listor med "- ".
 
+SKÄRMAR:
+${ADMIN_SCREENS}
 GUIDEN:
 ${ADMIN_HELP_GUIDE}
 

@@ -11,7 +11,6 @@ const COPY: Record<string, {
   subtitle: string;
   placeholder: string;
   greeting: string;
-  disclaimer: string;
   open: string;
   teaser: string;
   send: string;
@@ -19,44 +18,40 @@ const COPY: Record<string, {
 }> = {
   sv: {
     title: 'Fråga ByggExp',
-    subtitle: 'AI-assistent',
+    subtitle: 'AI-assistent · svar kan innehålla fel',
     placeholder: 'Ställ en fråga om bygg, ekonomi, regler …',
     greeting: 'Hej! Jag hjälper dig att hitta det du kom hit för.',
     teaser: 'Behöver du hjälp? Fråga oss om ByggExp.',
-    disclaimer: 'Svar genereras av AI utifrån våra artiklar och kan innehålla fel. Dubbelkolla mot gällande regler.',
     open: 'Öppna AI-assistenten',
     send: 'Skicka',
     error: 'Något gick fel. Försök igen om en stund.',
   },
   nb: {
     title: 'Spør ByggExp',
-    subtitle: 'AI-assistent',
+    subtitle: 'AI-assistent · svar kan inneholde feil',
     placeholder: 'Still et spørsmål om bygg, økonomi, regler …',
     greeting: 'Hei! Jeg hjelper deg å finne det du kom hit for.',
     teaser: 'Trenger du hjelp? Spør oss om ByggExp.',
-    disclaimer: 'Svar genereres av AI ut fra artiklene våre og kan inneholde feil. Dobbeltsjekk mot gjeldende regler.',
     open: 'Åpne AI-assistenten',
     send: 'Send',
     error: 'Noe gikk galt. Prøv igjen om litt.',
   },
   en: {
     title: 'Ask ByggExp',
-    subtitle: 'AI assistant',
+    subtitle: 'AI assistant · answers may contain mistakes',
     placeholder: 'Ask about construction, finance, rules …',
     greeting: 'Hi! I’ll help you find what you came here for.',
     teaser: 'Need help? Ask us about ByggExp.',
-    disclaimer: 'Answers are AI-generated from our articles and may be wrong. Verify against current rules.',
     open: 'Open the AI assistant',
     send: 'Send',
     error: 'Something went wrong. Please try again shortly.',
   },
   ru: {
     title: 'Спросить ByggExp',
-    subtitle: 'AI-ассистент',
+    subtitle: 'AI-ассистент · возможны ошибки',
     placeholder: 'Задайте вопрос о стройке, финансах, правилах …',
     greeting: 'Здравствуйте! Помогу найти то, зачем вы пришли.',
     teaser: 'Нужна помощь? Спросите нас о ByggExp.',
-    disclaimer: 'Ответы генерируются ИИ на основе наших статей и могут содержать ошибки. Проверяйте по актуальным правилам.',
     open: 'Открыть AI-ассистента',
     send: 'Отправить',
     error: 'Что-то пошло не так. Попробуйте позже.',
@@ -266,11 +261,10 @@ export default function ChatAssistant() {
               placeholder={copy.placeholder}
               aria-label={copy.placeholder}
             />
-            <button type="submit" disabled={streaming || input.trim() === ''}>
-              {copy.send}
+            <button type="submit" disabled={streaming || input.trim() === ''} aria-label={copy.send}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </button>
           </form>
-          <p className="chat-disclaimer">{copy.disclaimer}</p>
         </div>
       ) : null}
     </>

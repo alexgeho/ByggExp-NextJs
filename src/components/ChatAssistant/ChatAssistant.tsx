@@ -223,7 +223,7 @@ export default function ChatAssistant() {
 
           <div className="chat-messages" ref={scrollRef}>
             <div className="chat-msg chat-msg--assistant chat-msg--greeting">
-              <img className="chat-helper" src="/landing/chat/chat-helper.webp" alt="" width={64} height={65} />
+              <img className="chat-helper" src="/landing/chat/chat-viking.webp" alt="" width={64} height={66} />
               <span>{copy.greeting}</span>
             </div>
             {messages.map((m, i) => (

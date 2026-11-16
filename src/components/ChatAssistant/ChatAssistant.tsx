@@ -222,7 +222,10 @@ export default function ChatAssistant() {
           </div>
 
           <div className="chat-messages" ref={scrollRef}>
-            <div className="chat-msg chat-msg--assistant chat-msg--greeting">{copy.greeting}</div>
+            <div className="chat-msg chat-msg--assistant chat-msg--greeting">
+              <img className="chat-helper" src="/landing/chat/chat-helper.webp" alt="" width={64} height={65} />
+              <span>{copy.greeting}</span>
+            </div>
             {messages.map((m, i) => (
               <div key={i} className={`chat-msg chat-msg--${m.role}`}>
                 {m.role === 'assistant' ? (

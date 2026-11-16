@@ -344,3 +344,18 @@
   font-size: 18px;
   line-height: 1.4;
 }
+
+// R48: a friendly helper (Recraft) greets the visitor, left of the greeting.
+.chat-msg--greeting {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: normal;
+}
+.chat-helper {
+  flex: 0 0 64px;
+  width: 64px;
+  height: 65px;
+  -webkit-mask-image: linear-gradient(#000 78%, transparent);
+  mask-image: linear-gradient(#000 78%, transparent);
+}

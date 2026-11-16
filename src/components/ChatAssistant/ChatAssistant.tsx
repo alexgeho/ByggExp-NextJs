@@ -8,7 +8,6 @@ type Msg = { role: 'user' | 'assistant'; content: string };
 
 const COPY: Record<string, {
   title: string;
-  subtitle: string;
   placeholder: string;
   greeting: string;
   open: string;
@@ -18,7 +17,6 @@ const COPY: Record<string, {
 }> = {
   sv: {
     title: 'Fråga ByggExp',
-    subtitle: 'AI-assistent · svar kan innehålla fel',
     placeholder: 'Ställ en fråga om bygg, ekonomi, regler …',
     greeting: 'Hej! Jag hjälper dig att hitta det du kom hit för.',
     teaser: 'Behöver du hjälp? Fråga oss om ByggExp.',
@@ -28,7 +26,6 @@ const COPY: Record<string, {
   },
   nb: {
     title: 'Spør ByggExp',
-    subtitle: 'AI-assistent · svar kan inneholde feil',
     placeholder: 'Still et spørsmål om bygg, økonomi, regler …',
     greeting: 'Hei! Jeg hjelper deg å finne det du kom hit for.',
     teaser: 'Trenger du hjelp? Spør oss om ByggExp.',
@@ -38,7 +35,6 @@ const COPY: Record<string, {
   },
   en: {
     title: 'Ask ByggExp',
-    subtitle: 'AI assistant · answers may contain mistakes',
     placeholder: 'Ask about construction, finance, rules …',
     greeting: 'Hi! I’ll help you find what you came here for.',
     teaser: 'Need help? Ask us about ByggExp.',
@@ -48,7 +44,6 @@ const COPY: Record<string, {
   },
   ru: {
     title: 'Спросить ByggExp',
-    subtitle: 'AI-ассистент · возможны ошибки',
     placeholder: 'Задайте вопрос о стройке, финансах, правилах …',
     greeting: 'Здравствуйте! Помогу найти то, зачем вы пришли.',
     teaser: 'Нужна помощь? Спросите нас о ByggExp.',
@@ -216,10 +211,6 @@ export default function ChatAssistant() {
       {open ? (
         <div className="chat-panel" role="dialog" aria-label={copy.title}>
           <div className="chat-header">
-            <div>
-              <strong>{copy.title}</strong>
-              <span className="chat-header-sub">{copy.subtitle}</span>
-            </div>
             <button
               type="button"
               className="chat-close"

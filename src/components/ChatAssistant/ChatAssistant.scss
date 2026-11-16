@@ -338,3 +338,9 @@
 .chat-messages > :first-child {
   padding-right: 32px;
 }
+
+// R47: the greeting is the window's headline — larger than the answers.
+.chat-msg--greeting {
+  font-size: 18px;
+  line-height: 1.4;
+}

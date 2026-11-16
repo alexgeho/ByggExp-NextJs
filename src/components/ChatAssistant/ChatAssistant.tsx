@@ -222,7 +222,7 @@ export default function ChatAssistant() {
           </div>
 
           <div className="chat-messages" ref={scrollRef}>
-            <div className="chat-msg chat-msg--assistant">{copy.greeting}</div>
+            <div className="chat-msg chat-msg--assistant chat-msg--greeting">{copy.greeting}</div>
             {messages.map((m, i) => (
               <div key={i} className={`chat-msg chat-msg--${m.role}`}>
                 {m.role === 'assistant' ? (

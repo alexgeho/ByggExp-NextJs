@@ -8,6 +8,8 @@ import { useRef, useState, type ReactNode } from "react";
 
 export type CarouselStep = {
   title: string;
+  /** One short muted line right under the title (R52). */
+  sub?: string;
   text: string;
   /** Numbered points under the text. */
   bullets?: readonly string[];
@@ -129,6 +131,7 @@ export default function StepsCarousel({
                 <div className="step" key={index}>
                   <div className="step-text-block">
                     <h3>{step.title}</h3>
+                    {step.sub ? <p className="step-sub">{step.sub}</p> : null}
                     <p className="step-text">{step.text}</p>
                     {step.bullets ? (
                       <ul className="step-bullets">

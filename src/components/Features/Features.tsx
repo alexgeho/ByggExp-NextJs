@@ -15,6 +15,8 @@ const costs = "/landing/features/11costs.webp";
 const salary = "/landing/features/12salary.webp";
 
 import type { FeaturesProps } from "../../types/features";
+import { FEATURE_SUB } from "../../content/feature-sub";
+import type { LandingLanguageCode } from "../../locales/languages";
 
 // Each homepage feature card links to its dedicated feature landing page.
 // Order matches featureCards below. The feature pages exist in the main
@@ -200,6 +202,8 @@ function Features({
 
   const steps: CarouselStep[] = featureCards.map((card, index) => ({
     title: card.title,
+    // R52: the same short line as on the /funktioner card of this feature.
+    sub: FEATURE_SUB[FEATURE_LINKS[index]]?.[lang as LandingLanguageCode],
     text: card.text,
     bullets: card.steps,
     link:

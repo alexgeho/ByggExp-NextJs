@@ -14,7 +14,7 @@ import { CalendlyInlineWidget } from "../CalendlyInlineWidget";
 
 const CALENDLY_URL = "https://calendly.com/870717ag/30min";
 
-function CTA({ ctaT }: CTAProps) {
+function CTA({ ctaT, lead }: CTAProps) {
   /* ON SUBMIT/SUCCCES OPENS */
   const [isSuccess, setIsSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -95,6 +95,7 @@ function CTA({ ctaT }: CTAProps) {
             <h2>
               {ctaT.ctaHeading1} <em>{ctaT.ctaAccent}</em> {ctaT.ctaHeading2}
             </h2>
+            {lead ? <p className="section-lead">{lead}</p> : null}
           </div>
 
           <ul className="cta-list">

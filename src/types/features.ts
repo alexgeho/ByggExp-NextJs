@@ -1,4 +1,6 @@
 export type FeaturesProps = {
+  /** One short line under the section heading (home page, R53). */
+  lead?: string;
   /** Current locale — feature cards only link to the (sv-only) feature pages on sv. */
   lang?: string;
   featuresT1_3: {

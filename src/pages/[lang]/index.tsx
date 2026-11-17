@@ -1,5 +1,6 @@
 import type { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { useEffect } from "react";
+import { homeSectionLead } from '../../content/home-section-leads';
 import Head from "next/head";
 import { useRouter } from "next/router";
 
@@ -147,6 +148,7 @@ export default function HomePage({
       featuresT4_6={featuresT4_6}
       featuresT7_9={featuresT7_9}
       featuresT10_11={featuresT10_11}
+      lead={homeSectionLead(lang, 'features')}
     />
   );
 
@@ -185,12 +187,12 @@ export default function HomePage({
           {/* Hero → services → prices first; pain and benefits further down (owner 2026-10-20) */}
           <HeroV2 variant={heroVariant} lang={lang} />
           {features}
-          <Pricing pricingT={pricingT} lang={lang} />
-          <Pain painT={painT} />
-          <Benefits benefitsT={benefitsT} finalBenefitsT={finalBenefitsT} />
+          <Pricing pricingT={pricingT} lang={lang} lead={homeSectionLead(lang, 'pricing')} />
+          <Pain painT={painT} lead={homeSectionLead(lang, 'pain')} />
+          <Benefits benefitsT={benefitsT} finalBenefitsT={finalBenefitsT} lead={homeSectionLead(lang, 'benefits')} />
         </>
       )}
-      <CTA ctaT={ctaT} />
+      <CTA ctaT={ctaT} lead={homeSectionLead(lang, 'cta')} />
       <Footer footerT={footerT} />
     </>
   );

@@ -392,15 +392,31 @@
 }
 
 /* R52: the same line on the home page feature cards (StepsCarousel `sub`),
-   6px under the title (the h3 margin), 12px above the description. The grey
-   description follows straight after it here, so the line is dark and medium
-   weight — otherwise it reads as the first line of the description. */
+   6px under the title (the h3 margin), 12px above the description. Muted grey,
+   like every subtitle on the site (owner, 17.11). */
 .step .step-sub {
   margin: 0 0 12px;
-  color: var(--ink);
+  color: var(--muted);
   font-size: clamp(1.05rem, 1rem + 0.4vw, 1.25rem);
-  font-weight: 500;
   line-height: 1.4;
+}
+
+/* R53: home page — one short muted line under every section heading, 8px
+   below it (same look as R28 on the feature pages). */
+.section-lead {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
+  line-height: 1.4;
+}
+.section-head:has(.section-lead) {
+  gap: 0;
+}
+.section-head:has(.section-lead) h2 {
+  margin-bottom: 0;
+}
+.section-head--dark .section-lead {
+  color: rgba(255, 255, 255, 0.72);
 }
 
 /* R33: feature article with the feature-page hero (FunktionHero) as its first

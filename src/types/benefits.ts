@@ -37,6 +37,8 @@ export type BenefitsSiteT = {
 };
 
 export type BenefitsProps = {
+  /** One short line under the heading (home page, R53). */
+  lead?: string;
   benefitsT: {
     office: BenefitsOfficeT;
     site: BenefitsSiteT;

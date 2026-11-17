@@ -79,6 +79,7 @@ function Features({
   featuresT4_6,
   featuresT7_9,
   featuresT10_11,
+  lead,
 }: FeaturesProps) {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
@@ -237,8 +238,8 @@ function Features({
           {featuresT1_3.featuresHeading2}
         </>
       }
-      sub={featuresT1_3.featuresSub}
-      subClassName="section-sub"
+      sub={lead || featuresT1_3.featuresSub}
+      subClassName={lead ? "section-lead" : "section-sub"}
       steps={steps}
       prevLabel="Previous"
       nextLabel="Next"

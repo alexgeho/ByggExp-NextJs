@@ -1,6 +1,6 @@
 import type { PainProps } from "../../types/pain";
 
-function Pain({ painT }: PainProps) {
+function Pain({ painT, lead }: PainProps) {
   return (
     <section className="pain">
       <div className="container">
@@ -18,6 +18,7 @@ function Pain({ painT }: PainProps) {
               {painT.painHeading2}
               <em>{painT.painTitleAccent2}</em>
             </h2>
+            {lead ? <p className="section-lead">{lead}</p> : null}
           </div>
         </div>
 

@@ -2,7 +2,7 @@ import type { BenefitsProps } from "../../types/benefits";
 
 import BenefitSlider, { type SliderCard } from "./BenefitSlider";
 
-function Benefits({ benefitsT, finalBenefitsT }: BenefitsProps) {
+function Benefits({ benefitsT, finalBenefitsT, lead }: BenefitsProps) {
   const office = benefitsT.office;
   const site = benefitsT.site;
 
@@ -42,6 +42,7 @@ function Benefits({ benefitsT, finalBenefitsT }: BenefitsProps) {
             <em>{office.benefitsOfficeAccent}</em>
             {office.benefitsOfficeHeading2}
           </h2>
+          {lead ? <p className="section-lead">{lead}</p> : null}
         </div>
 
         {/* OFFICE + SITE TEAM, ONE SLIDER */}

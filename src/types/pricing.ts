@@ -65,4 +65,6 @@ export type PricingT = {
 export type PricingProps = {
   pricingT: PricingT;
   lang: string;
+  /** One short line under the heading (home page, R53). */
+  lead?: string;
 };

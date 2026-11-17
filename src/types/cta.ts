@@ -1,4 +1,6 @@
 export type CTAProps = {
+  /** One short line under the heading (home page, R53). */
+  lead?: string;
   ctaT: {
     ctaTitle: string;
 

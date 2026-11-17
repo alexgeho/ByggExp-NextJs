@@ -299,7 +299,7 @@ export function PlanCard(props: {
   );
 }
 
-function Pricing({ pricingT, lang }: PricingProps) {
+function Pricing({ pricingT, lang, lead }: PricingProps) {
   const [isYearly, setYearly] = useState(false);
   const [users, setUsers] = useState(DEFAULT_USERS);
 
@@ -443,6 +443,7 @@ function Pricing({ pricingT, lang }: PricingProps) {
           </h2>
 
           <p className="section-sub">{pricingT.pricingSub}</p>
+          {lead ? <p className="section-lead">{lead}</p> : null}
         </div>
 
         {/* CONTROLS: billing period + number of users. The #pricing anchor

@@ -1,4 +1,6 @@
 export type PainProps = {
+  /** One short line under the heading (home page, R53). */
+  lead?: string;
   painT: {
     painTitle: string;
     painLead?: string;

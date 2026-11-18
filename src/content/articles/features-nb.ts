@@ -196,22 +196,22 @@ export const FEATURE_ARTICLES_NB: BlogPost[] = [
   },
   {
     "_id": "code-fota-kvitton-och-hantera-utlagg-nb",
-    "title": "Kvitteringshåndtering for byggefirma",
+    "title": "Kvitteringshåndtering for byggefirma: ta bilde av kvitteringen i appen",
     "slug": "fota-kvitton-och-hantera-utlagg",
     "locale": "nb",
-    "excerpt": "Slutt å samle krøllete kvitteringer i hanskerommet. Ta bilde av kvitteringen direkte i appen, knytt den til riktig prosjekt og lever et komplett grunnlag til regnskapet.",
+    "excerpt": "Kvitteringshåndtering for byggefirma: ta bilde av kvitteringen i appen, knytt utlegget til riktig prosjekt og gi regnskapet et komplett grunnlag.",
     "tag": "Kvitteringer og utlegg",
     "coverImageUrl": "/landing/features/photo.webp",
     "contentHtml": "<p>Kvitteringshåndtering i ByggExp: arbeideren skanner kvitteringen med mobilkameraet i appen med en gang innkjøpet er betalt, og kontoret skanner kvitteringer og inngående fakturaer i nettversjonen eller via e-post. Utlegget havner på riktig prosjekt, og ingen må lete etter krøllete kvitteringer i etterkant.</p><h2>Hva er kvitterings- og utleggshåndtering?</h2><p>Det betyr at hvert innkjøp — materialer, drivstoff, forbruk eller et lite utlegg — registreres digitalt med et bilde av kvitteringen og knyttes til et prosjekt. Regnskapet får et komplett, søkbart grunnlag i stedet for en pose med kvitteringer på slutten av måneden.</p><h2>Slik gjør du det i nettversjonen</h2>\n<ol>\n<li>Gå gjennom samlede utlegg per prosjekt eller periode.</li>\n<li>Utleggene føres som kostnad på prosjektet og følger med i prosjektøkonomien.</li>\n</ol>\n<h2>Slik gjør du det i appen</h2>\n<ol>\n<li>Åpne appen og gå til <strong>Kvitteringer</strong> eller <strong>Utlegg</strong>, trykk på <strong>Ny kvittering</strong> og ta bilde av kvitteringen slik at beløp og dato vises tydelig.</li>\n<li>Velg hvilket prosjekt utlegget gjelder og en kategori (materialer, drivstoff, verktøy osv.).</li>\n<li>Fyll inn beløp og mva og legg til en kort merknad om hva innkjøpet gjelder.</li>\n<li>Lagre – kvitteringen lastes opp og blir synlig for administratoren i nettversjonen.</li>\n</ol>\n<figure class=\"app-shots\"><img src=\"/features-content/fota-kvitton-och-hantera-utlagg-1.webp\" alt=\"ByggExp-appen: kvitteringer og utlegg – ta bilde av kvitteringen og knytt den til prosjekt\" loading=\"lazy\"><figcaption>Kvitteringer i appen – ta bilde av kvitteringen direkte ved kassen og knytt den til riktig prosjekt.</figcaption></figure>\n<p class=\"eco-note\"><strong>Alt henger sammen:</strong> utlegget knyttes til prosjektet, vises i <a href=\"/nb/blog/projektekonomi-och-lonsamhet\">prosjektøkonomien</a> og kan tas med på <a href=\"/nb/blog/fakturera-fran-byggexp\">fakturaen</a> – ingen dobbeltregistrering.</p>\n<h2>Fordeler</h2><ul><li>Ingen tapte kvitteringer — bildet blir liggende selv om papiret blekner.</li><li>Hvert utlegg knyttes til riktig prosjekt, noe som gir korrekt prosjektøkonomi.</li><li>Raskere månedsavslutning for deg og regnskapsføreren.</li><li>Full sporbarhet ved revisjon eller spørsmål fra kunder.</li></ul><h2>Tips</h2><p>Ta bilde av kvitteringen med en gang ved kassen før den havner i lomma — da glemmer du den aldri. Legg til en tydelig merknad («sparkel til kjøkken, leil. 3») så vet både du og regnskapet nøyaktig hva innkjøpet gjaldt. Bruk de samme kategoriene konsekvent, så blir rapportene sammenlignbare mellom prosjekter.</p><h2>Vanlige spørsmål</h2><h3>Må jeg ta vare på papirkvitteringen?</h3><p>Følg gjeldende regnskapsregler for arkivering, men det digitale bildet gjør at du alltid har grunnlaget tilgjengelig og slipper å lete blant løse lapper.</p><h3>Kan flere i teamet legge inn utlegg?</h3><p>Ja. Hver medarbeider tar bilde av sine egne kvitteringer i appen, og administratoren ser alt samlet i nettversjonen.</p><p>Vil du slippe kvitteringsjaget ved hvert månedsskifte? Begynn å ta bilde av kvitteringer i ByggExp og hold utleggene i orden fra første innkjøp.</p>",
-    "seoTitle": "Kvitteringshåndtering for byggefirma | ByggExp",
-    "seoDescription": "Slik tar du bilde av kvitteringer i ByggExp, knytter utlegg til riktig prosjekt og lager et sporbart grunnlag for regnskapet. Steg for steg.",
+    "seoTitle": "Kvitteringshåndtering for bygg: ta bilde i appen | ByggExp",
+    "seoDescription": "Kvitteringshåndtering for byggefirma: ta bilde av kvitteringen i appen, velg prosjekt, og utlegget havner i prosjektøkonomien. Steg for steg.",
     "seoImageUrl": "https://byggexp.se/landing/features/photo.webp",
     "canonicalUrl": "",
     "noIndex": false,
     "isPublished": true,
     "publishedAt": "2026-08-06T13:13:47.842Z",
     "createdAt": "2026-08-06T13:13:47.843Z",
-    "updatedAt": "2026-08-06T13:13:47.843Z"
+    "updatedAt": "2026-11-18T12:00:00.000Z"
   },
   {
     "_id": "code-hantera-verktyg-och-utrustning-nb",

@@ -69,7 +69,8 @@ const F_FAKTURERINGSPROGRAM_BYGG: BlogPost = {
 // from the sv personalliggare article. Honest product framing: ByggExp documents
 // attendance (GPS innsjekk), it is not marketed as a certified HMS-kort reader.
 
-// Sources (checked 2026-11-01):
+// Sources (checked 2026-11-01; re-read 2026-11-18 on arbeidstilsynet.no/regelverk/forskrifter/byggherreforskriften/ —
+// § 2, § 3 annet ledd, § 4 d, § 15 incl. comments: PC/nettbrett on site, føres opp før arbeid):
 // - Byggherreforskriften (FOR-2009-08-03-1028) § 15: list over everyone who will work on the
 //   site, kept electronically, checked and updated daily, contents, shown on request, kept six
 //   months. https://lovdata.no/forskrift/2009-08-03-1028/§15
@@ -80,79 +81,75 @@ const F_FAKTURERINGSPROGRAM_BYGG: BlogPost = {
 // - The task can be handed by written agreement to a firm on site, usually the main contractor:
 //   https://www.arbeidstilsynet.no/hms/hms-i-bygg-og-anlegg/byggherreforskriften/elektroniske-oversiktslister/
 const M_MANNSKAPSLISTE_BYGGEPLASS_HTML = `
-<p>På norske bygge- og anleggsplasser er det krav om en <strong>elektronisk oversiktsliste</strong> over alle som utfører arbeid – i praksis kalt en mannskapsliste. Kravet følger av byggherreforskriften, og ansvaret ligger hos byggherren. Her går vi gjennom hva en mannskapsliste er, hva den skal inneholde, når kravet gjelder og hvordan digital oppmøteregistrering hjelper deg å holde oversikt.</p>
+<p>En <strong>elektronisk oversiktsliste</strong> – i bransjen kalt mannskapsliste – er byggherrens liste over alle som skal arbeide på bygge- eller anleggsplassen. Etter <a href="https://www.arbeidstilsynet.no/regelverk/forskrifter/byggherreforskriften/" rel="nofollow noopener" target="_blank">byggherreforskriften § 15</a> skal den «føres elektronisk, kontrolleres og oppdateres daglig», og den skal blant annet vise navn, fødselsdato, arbeidsgiver og HMS-kortnummer for hver person. Listen oppbevares i seks måneder etter at arbeidet er avsluttet.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-mannskapsliste-krav.webp" alt="Diagram: elektronisk oversiktsliste – hva som registreres (navn, fødselsdato, arbeidsgiver, HMS-kort-nummer) og krav etter § 15" width="720" height="380" loading="lazy"><figcaption>Elektronisk oversiktsliste etter byggherreforskriften § 15: hva som registreres og hvilke krav som gjelder.</figcaption></figure>
 
-<h2>Hva er en mannskapsliste?</h2>
-<p>En mannskapsliste er en oversikt over hvem som utfører arbeid på en bygge- eller anleggsplass. Mange i bransjen sier «mannskapsliste» eller «elektronisk mannskapsliste», mens byggherreforskriften bruker begrepet <strong>oversiktsliste</strong>. Det er samme sak: en løpende oversikt over personene på plassen.</p>
+<h2>Hva skal stå i oversiktslisten?</h2>
+<div class="article-table"><table>
+<thead><tr><th>Del av listen</th><th>Opplysninger etter § 15</th></tr></thead>
+<tbody>
+<tr><td>Plassen</td><td>Navn og adresse på bygge- eller anleggsplassen</td></tr>
+<tr><td>Byggherren</td><td>Navn på byggherren</td></tr>
+<tr><td>Virksomhetene</td><td>Navn på hver arbeidsgiver og enkeltpersonforetak, organisasjonsnummer for registreringspliktige virksomheter, og for innleide navnet på innleievirksomheten</td></tr>
+<tr><td>Hver person</td><td>Navn, fødselsdato, arbeidsgiver og HMS-kortnummer</td></tr>
+</tbody>
+</table></div>
+<p>Alle som arbeider på plassen skal ha HMS-kort (forskrift om HMS-kort § 4). Hvor lenge kortet gjelder, står i <a href="/nb/blog/hms-kort-gyldighet">hvor lenge er HMS-kortet gyldig</a>, og hvordan du kontrollerer det, i <a href="/nb/blog/sjekke-hms-kort">sjekk HMS-kort</a>.</p>
 
-<h2>Kravet i byggherreforskriften § 15</h2>
-<p>Etter <a href="/nb/blog/byggherreforskriften">byggherreforskriften</a> § 15 skal byggherren sørge for at det føres en oversiktsliste over alle som utfører arbeid på bygge- eller anleggsplassen. Kravene i korte trekk:</p>
+<h2>Kravene i byggherreforskriften – kort fortalt</h2>
 <ul>
-<li><strong>Elektronisk</strong> – listen skal føres elektronisk.</li>
-<li><strong>Oppdateres daglig</strong> – kontrolleres og holdes à jour hver dag.</li>
-<li><strong>Byggherrens ansvar</strong> – byggherren skal sørge for at listen føres. Oppgaven kan ved skriftlig avtale overlates til en virksomhet på plassen, oftest hovedentreprenøren.</li>
-<li><strong>Alle på plassen</strong> – også underentreprenører og innleide.</li>
+<li><strong>Byggherren har ansvaret.</strong> Oppgaven med å føre listen kan overlates til en virksomhet som har oppdrag på plassen, men bare ved skriftlig avtale – oftest hovedentreprenøren.</li>
+<li><strong>Før arbeidet starter.</strong> Nye personer føres opp før de begynner å arbeide, ikke i etterkant.</li>
+<li><strong>Utstyr på plassen.</strong> Arbeidstilsynet skriver at byggherren må ha PC, nettbrett eller lignende på bygge- eller anleggsplassen.</li>
+<li><strong>Innsyn.</strong> Listen skal være tilgjengelig for arbeidsgiveren, verneombudet, Arbeidstilsynet og skattemyndighetene.</li>
 </ul>
-<p>Sjekk alltid gjeldende ordlyd og krav hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>, siden regelverket kan endres.</p>
-
-<h2>Hva skal oversiktslisten inneholde?</h2>
-<p>Listen skal identifisere hvem som er på plassen og for hvem de jobber. Typisk registreres:</p>
-<ul>
-<li>Navn og fødselsdato.</li>
-<li>Arbeidsgiver (virksomheten personen jobber for).</li>
-<li><strong>HMS-kort-nummer</strong> – knytter personen til riktig virksomhet.</li>
-<li>Navn og adresse på bygge- eller anleggsplassen, navn på byggherren og organisasjonsnummer for virksomhetene.</li>
-</ul>
-<p>For å bli registrert kreves et gyldig HMS-kort. Les mer i vår guide om <a href="/nb/blog/hms-kort-bygg">HMS-kort</a>.</p>
+<p>Hele forskriften med SHA-plan, koordinatorer og forhåndsmelding er forklart i <a href="/nb/blog/byggherreforskriften">byggherreforskriften</a>.</p>
 
 <h2>Når gjelder kravet?</h2>
-<p>Byggherreforskriften gjelder for alle arbeidsplasser med midlertidig eller skiftende bygge- eller anleggsarbeid. Unntaket er når byggherren er en privatperson (forbruker): da gjelder bare kravet om forhåndsmelding, ikke kravet om oversiktsliste. Listen skal oppbevares i seks måneder etter at arbeidet er avsluttet.</p>
+<p>Byggherreforskriften gjelder for «enhver arbeidsplass hvor det utføres midlertidig eller skiftende bygge- eller anleggsarbeid» (§ 2). Er byggherren en forbruker – en privatperson som ikke handler som ledd i næringsvirksomhet – gjelder bare § 10 om forhåndsmelding (§ 3). Da gjelder ikke kravet om oversiktsliste.</p>
 
-<h2>Digital oppmøteregistrering gir deg oversikt</h2>
-<p>Uansett hvordan den formelle oversiktslisten føres, trenger du å vite hvem som faktisk er på plassen og når. Med ByggExp sjekker de ansatte inn og ut på bygget i mobilen, og GPS bekrefter oppmøtet. Da får du en digital, tidsstemplet oversikt over hvem som var på jobb og hvor – god dokumentasjon å ha i bunn.</p>
-<p>Merk: ByggExp er et verktøy for timeregistrering og oppmøte, ikke en sertifisert HMS-kort-leser. For den lovpålagte elektroniske oversiktslisten etter § 15 – med HMS-kort-registrering – må du kontrollere kravene hos Arbeidstilsynet og velge en løsning som oppfyller dem.</p>
+<h2>Oppmøte og timer i ByggExp</h2>
+<p>I ByggExp sjekker de ansatte inn og ut i mobilen med GPS, og ut fra inn- og utsjekkene kan en liste per prosjekt lastes ned som PDF eller CSV. Den listen har ikke HMS-kortnummer, og ByggExp er ingen HMS-kortleser. Kontroller derfor selv at løsningen dere bruker for oversiktslisten oppfyller § 15.</p>
+
+<h2>Kilder</h2>
+<p>Byggherreforskriften (FOR-2009-08-03-1028) §§ 2, 3, 4 og 15 med Arbeidstilsynets kommentarer, og Arbeidstilsynets side om <a href="https://www.arbeidstilsynet.no/hms/hms-i-bygg-og-anlegg/byggherreforskriften/elektroniske-oversiktslister/" rel="nofollow noopener" target="_blank">elektroniske oversiktslister</a>. Kontrollert i november 2026.</p>
 
 <h2>Kom i gang</h2>
-<p>Vil du ha digital oversikt over oppmøte og timer på bygget? Les om <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-app for bygg</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
+<p>Les om <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-app for bygg</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
-<h3>Hva er forskjellen på mannskapsliste og oversiktsliste?</h3>
-<p>Det er samme sak. «Mannskapsliste» er bransjens dagligtale, mens byggherreforskriften bruker begrepet «oversiktsliste» om den lovpålagte oversikten over alle som arbeider på plassen.</p>
-<h3>Hvem har ansvaret for oversiktslisten?</h3>
-<p>Byggherren skal sørge for at listen føres elektronisk, kontrolleres og oppdateres daglig. Selve føringen kan settes bort til andre, men ansvaret ligger hos byggherren.</p>
-<h3>Hva må registreres i mannskapslisten?</h3>
-<p>Blant annet navn, fødselsdato, arbeidsgiver og HMS-kort-nummer for alle som utfører arbeid på plassen – også underentreprenører og innleide.</p>
-<h3>Er elektronisk mannskapsliste påbudt?</h3>
-<p>Ja. Etter byggherreforskriften § 15 skal byggherren føre en oversiktsliste over alle som skal arbeide på bygge- eller anleggsplassen, og listen skal føres elektronisk, kontrolleres og oppdateres daglig. Er byggherren en privatperson (forbruker), gjelder ikke kravet.</p>
 <h3>Hva er en elektronisk oversiktsliste?</h3>
-<p>Byggherreforskriftens navn på mannskapslisten: en elektronisk liste over byggeplassen, byggherren, arbeidsgiverne og alle som arbeider der, med navn, fødselsdato og HMS-kortnummer.</p>
+<p>Byggherreforskriftens navn på mannskapslisten: en elektronisk liste over plassen, byggherren, virksomhetene og alle som arbeider der.</p>
+<h3>Er elektronisk mannskapsliste påbudt?</h3>
+<p>Ja, på bygge- og anleggsplasser der byggherreforskriften gjelder fullt ut (§ 15). Er byggherren en forbruker, gjelder ikke kravet.</p>
+<h3>Hvem har ansvaret for oversiktslisten?</h3>
+<p>Byggherren. Føringen kan overlates til en virksomhet på plassen ved skriftlig avtale.</p>
 <h3>Hvor lenge skal oversiktslisten oppbevares?</h3>
-<p>I seks måneder etter at bygge- eller anleggsarbeidet er avsluttet. Listen skal også kunne vises til arbeidsgiveren, verneombudet, Arbeidstilsynet og skattemyndighetene.</p>
-<h3>Gjelder kravet for små byggeplasser?</h3>
-<p>Forskriften gjelder for enhver arbeidsplass med midlertidig eller skiftende bygge- eller anleggsarbeid. Unntaket er når byggherren er en privatperson (forbruker).</p>
+<p>I seks måneder etter at bygge- eller anleggsarbeidet er avsluttet.</p>
+<h3>Hva er forskjellen på mannskapsliste og oversiktsliste?</h3>
+<p>Ingen. «Mannskapsliste» er ordet de fleste bruker på byggeplassen, mens forskriften sier «oversiktsliste».</p>
 `.trim();
 
 const M_MANNSKAPSLISTE_BYGGEPLASS: BlogPost = {
   _id: 'code-nb-mannskapsliste-byggeplass',
-  title: 'Mannskapsliste på byggeplass – krav og elektronisk oversiktsliste',
+  title: 'Mannskapsliste på byggeplass: elektronisk oversiktsliste etter § 15',
   slug: 'mannskapsliste-byggeplass',
   locale: 'nb',
   excerpt:
-    'Mannskapsliste (elektronisk oversiktsliste) på byggeplass: krav etter byggherreforskriften § 15, hva den skal inneholde, HMS-kort og hvem som har ansvaret.',
+    'Mannskapslisten er byggherrens elektroniske oversiktsliste over alle på plassen: hva den skal inneholde etter byggherreforskriften § 15, og hvem som fører den.',
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: M_MANNSKAPSLISTE_BYGGEPLASS_HTML,
-  seoTitle: 'Mannskapsliste på byggeplass – oversiktsliste | ByggExp',
+  seoTitle: 'Mannskapsliste byggeplass: krav etter § 15 | ByggExp',
   seoDescription:
-    'Mannskapsliste (elektronisk oversiktsliste) på byggeplass: krav i byggherreforskriften § 15, hva listen skal inneholde, hvem som har ansvaret.',
+    'Elektronisk oversiktsliste (mannskapsliste): føres elektronisk og oppdateres daglig, med navn, fødselsdato, arbeidsgiver og HMS-kortnummer. Krav i § 15.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
   isPublished: true,
   publishedAt: '2026-09-07T12:00:00.000Z',
   createdAt: '2026-09-07T12:00:00.000Z',
-  updatedAt: '2026-11-01T12:00:00.000Z',
+  updatedAt: '2026-11-18T12:00:00.000Z',
 };
 
 // HMS-kort pillar (wave 2, 2026-11-01): hms-kort-pris, bestille-hms-kort and byggekort
@@ -246,8 +243,7 @@ const H_HMS_KORT_BYGG: BlogPost = {
 };
 
 const T_TIMELISTE_APP_BYGG_HTML = `
-<p>Timeliste på papir – utfylt på slutten av uka etter hukommelsen – gir upresise timer og mye etterarbeid. En timeliste-app løser det: de ansatte fører timene direkte i mobilen mens de er på bygget, og du får ferdig grunnlag til lønn og faktura. Her går vi gjennom hva en god timeliste-app for bygg bør klare.</p>
-<p>Timeliste og timeregistrering er to ord for det samme – se også vår guide om <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-app for bygg</a>.</p>
+<p>En timeliste-app er en digital timeliste i mobilen: de ansatte fører timene på riktig prosjekt mens de er på bygget, i stedet for å fylle ut et ark på slutten av uka etter hukommelsen. Her ser du hva appen bør klare, hvordan timelisten skiller seg fra en vaktliste, og når en mal holder. Hvordan stempling, attest og eksport fungerer i ByggExp, står på siden om <a href="/nb/funksjoner/timeregistrering-app">timeregistrering app for bygg</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: digital timeliste – stemple inn, timer på prosjekt, gjennomgå, eksport til lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Digital timeliste: timene føres i mobilen, havner på riktig prosjekt og blir grunnlag for lønn og faktura.</figcaption></figure>
 
 <p class="eco-note"><strong>GPS eller manuelt – dere velger:</strong> ikke alle vil dele posisjonen sin, og det trenger de ikke. I ByggExp kan medarbeideren i stedet fylle inn timene sine manuelt i appen – per prosjekt og dag. De manuelle timene havner i samme timeoversikt og eksport til lønn og faktura som GPS-timene, og i nettadmin ser du planlagte, GPS- og manuelle timer side om side.</p>
@@ -260,6 +256,18 @@ const T_TIMELISTE_APP_BYGG_HTML = `
 <li><strong>Raskere lønn og fakturering</strong> – timene er allerede strukturert.</li>
 <li><strong>Kontroll på prosjektøkonomien</strong> – timer mot budsjett i sanntid.</li>
 </ul>
+
+<h2>Timeliste eller vaktliste?</h2>
+<p>En vaktliste viser hvem som skal jobbe hvor og når – det er planen. Timelisten viser hva som faktisk ble jobbet. Du trenger begge, men de løser ulike ting:</p>
+<div class="article-table"><table>
+<thead><tr><th></th><th>Vaktliste</th><th>Timeliste</th></tr></thead>
+<tbody>
+<tr><td><strong>Svarer på</strong></td><td>Hvem skal være på hvilket bygg i morgen?</td><td>Hvor mange timer jobbet hver person, på hvilket prosjekt?</td></tr>
+<tr><td><strong>Lages av</strong></td><td>Den som planlegger</td><td>De ansatte, og attesteres av arbeidslederen</td></tr>
+<tr><td><strong>Brukes til</strong></td><td>Planlegging og bemanning</td><td>Lønn, faktura og etterkalkyle</td></tr>
+</tbody>
+</table></div>
+<p>I ByggExp lager du planen i webadmin under Bemanning: du klikker i en rute for å sette folk på et prosjekt for en dag, godkjent fravær vises i samme bilde, og du får varsel når noen er satt opp med mer enn 8 timer på en dag. Planen vises bare i webadmin, ikke i de ansattes app. Mer om dette på siden om <a href="/nb/funksjoner/bemanningsplan">bemanningsplan</a>.</p>
 
 <h2>Timeliste-app vs. timeliste-mal (PDF)</h2>
 <p>En <a href="/nb/blog/timeliste-mal">gratis timeliste-mal</a> i PDF eller Excel er et greit utgangspunkt for helt små firmaer, men den må fylles ut manuelt, samles inn og tastes videre til lønn. En app fjerner det dobbeltarbeidet: timene registreres én gang og brukes overalt. Vokser firmaet, blir appen fort mer lønnsom enn malen.</p>
@@ -296,20 +304,20 @@ const T_TIMELISTE_APP_BYGG: BlogPost = {
   slug: 'timeliste-app-bygg',
   locale: 'nb',
   excerpt:
-    'Timeliste-app for bygg: de ansatte fører timene i mobilen på riktig prosjekt, og du får ferdig grunnlag til lønn og faktura. Timeliste-app vs. gratis mal.',
+    'Timeliste-app for bygg: de ansatte fører timene i mobilen på riktig prosjekt. Forskjellen på timeliste og vaktliste, og når en gratis mal holder.',
   tag: 'Digitalisering',
   coverImageUrl: '/landing/features/1arbetspass.webp',
   contentHtml: T_TIMELISTE_APP_BYGG_HTML,
-  seoTitle: 'Timeliste app for bygg – digital timeliste | ByggExp',
+  seoTitle: 'Timeliste app for bygg – timeliste og vaktliste | ByggExp',
   seoDescription:
-    'Timeliste-app for byggefirmaer: før timene i mobilen på riktig prosjekt, med GPS, og få ferdig grunnlag til lønn og faktura. Timeliste-app vs. gratis timeliste-mal.',
+    'Timeliste-app for byggefirmaer: timene føres i mobilen på riktig prosjekt og attesteres før lønn og faktura. Slik skiller timelisten seg fra en vaktliste.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/1arbetspass.webp`,
   canonicalUrl: '',
   noIndex: false,
   isPublished: true,
   publishedAt: '2026-09-07T12:20:00.000Z',
   createdAt: '2026-09-07T12:20:00.000Z',
-  updatedAt: '2026-09-07T12:20:00.000Z',
+  updatedAt: '2026-11-18T12:00:00.000Z',
 };
 
 // --- HMS-kort cluster spokes (byggexp.no) --------------------------------------
@@ -320,53 +328,62 @@ const T_TIMELISTE_APP_BYGG: BlogPost = {
 // hmskort.no (the official channel). ByggExp does NOT issue HMS-kort.
 
 const S_SJEKKE_HMS_KORT_HTML = `
-<p>Hvordan sjekker du om et HMS-kort er gyldig? Enten du er arbeidsleder som kontrollerer hvem som er på plassen, eller ansatt som vil bekrefte ditt eget kort – gyldigheten kan slås opp raskt. Her forklarer vi hvordan du sjekker et HMS-kort, og hvorfor det er viktig på bygge- og anleggsplasser. Lurer du på <a href="/nb/blog/hms-kort-gyldighet">hvor lenge et HMS-kort er gyldig</a>? Svaret er to år, og bare mens personen er ansatt hos arbeidsgiveren som bestilte kortet.</p>
-<figure class="article-diagram"><img src="/landing/diagrams/nb-hms-kort.webp" alt="Diagram: HMS-kort – fra arbeidskontrakt til utstedt kort, registrering i oversiktslisten og adgang til byggeplassen" width="720" height="380" loading="lazy"><figcaption>Et gyldig HMS-kort knytter personen til riktig arbeidsgiver og gir adgang til plassen.</figcaption></figure>
+<p>Du sjekker et HMS-kort på to måter: skann QR-koden på kortet, eller søk på kortnummeret på hmskort.no. QR-koden viser statusen som er registrert i de offentlige registrene i det øyeblikket den skannes, og arbeidsgiveren kan selv søke opp kortnummeret (<a href="https://www.arbeidstilsynet.no/hms/hms-kort/" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>). Lurer du på hvor lenge kortet gjelder, står svaret i <a href="/nb/blog/hms-kort-gyldighet">hvor lenge er HMS-kortet gyldig</a>.</p>
+<figure class="article-diagram"><img src="/landing/diagrams/nb-hms-kort.webp" alt="Diagram: HMS-kort – fra arbeidskontrakt til utstedt kort, registrering i oversiktslisten og adgang til byggeplassen" width="720" height="380" loading="lazy"><figcaption>Et kort i orden knytter personen til riktig arbeidsgiver og gir adgang til plassen.</figcaption></figure>
 
-<h2>Slik sjekker du om et HMS-kort er gyldig</h2>
-<p>Du kan kontrollere et HMS-kort ved å slå opp kortnummeret hos kortutstederen, eller ved å skanne QR-koden på kortet. Da ser du om kortet er aktivt, hvem det tilhører og hvilken virksomhet personen er knyttet til. Er kortet sperret eller utløpt, kommer det fram i oppslaget.</p>
+<h2>Slik kontrollerer du HMS-kortet på plassen</h2>
+<ol>
+<li><strong>Se på kortet.</strong> Bildet skal stemme med personen. Kortet viser blant annet navn, fødselsdato, arbeidsgiver, kortnummer og utstedelsesdato (forskrift om HMS-kort § 7).</li>
+<li><strong>Skann QR-koden</strong> med mobilen. Da ser du statusen kortet har i registrene akkurat nå.</li>
+<li><strong>Sammenlign med oversiktslisten.</strong> Arbeidsgiveren og HMS-kortnummeret skal stemme med det som står på listen over hvem som jobber på plassen.</li>
+<li><strong>Avklar avvik med en gang.</strong> Stemmer noe ikke, tar du det med arbeidslederen og arbeidsgiveren til personen før arbeidet fortsetter.</li>
+</ol>
 
 <h2>Hvorfor kontrollere HMS-kort?</h2>
-<p>På bygge- og anleggsplasser skal alle som utfører arbeid ha gyldig HMS-kort, og kortet er en forutsetning for å stå på den elektroniske <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten (mannskapslisten)</a>. Å kontrollere kortene gjør det enklere å se at alle på plassen er registrert hos en seriøs arbeidsgiver.</p>
+<p>Arbeidsgiveren skal sørge for at alle som arbeider på bygge- og anleggsplasser har HMS-kort (forskrift om HMS-kort § 4), og HMS-kortnummeret skal føres i den elektroniske <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten (mannskapslisten)</a> etter byggherreforskriften § 15. Kontrollen viser at personen på plassen er den som står på listen, og at arbeidsgiveren er registrert.</p>
 
-<h2>Hva betyr et sperret eller utløpt kort?</h2>
-<p>Et kort kan bli sperret hvis virksomheten ikke lenger oppfyller kravene, eller løpe ut på gyldighetstiden. Da må arbeidsgiveren ordne opp og eventuelt <a href="/nb/blog/hms-kort-bygg#bestille-hms-kort">bestille nytt kort</a>. En person uten gyldig kort skal ikke føres på oversiktslisten. Hvor lenge et kort varer, leser du i <a href="/nb/blog/hms-kort-gyldighet">HMS-kort gyldighet</a>.</p>
+<h2>Når viser kontrollen at noe er galt?</h2>
+<ul>
+<li><strong>Virksomheten eller personen mangler i registrene.</strong> Kortet gjelder bare når både den ansatte og virksomheten er registrert i de pålagte offentlige registrene. Noen registre kan ha forsinkelser, så ta en ny sjekk før du konkluderer.</li>
+<li><strong>Personen jobber ikke lenger for arbeidsgiveren på kortet.</strong> Da gjelder ikke kortet, og den nye arbeidsgiveren må <a href="/nb/blog/hms-kort-bygg#bestille-hms-kort">bestille nytt kort</a>.</li>
+<li><strong>Kortet er meldt mistet.</strong> Det gamle kortet er gjort ugyldig, og arbeidsgiveren bestiller nytt (§ 9), se <a href="/nb/blog/mistet-hms-kort">mistet HMS-kort</a>.</li>
+</ul>
 
-<h2>Digital oversikt på plassen</h2>
-<p>Selve kortkontrollen bekrefter identitet og arbeidsgiver. For å vite hvem som faktisk er på jobb og når, bruker mange en app: i ByggExp sjekker de ansatte inn og ut med GPS, så du får en tidsstemplet oppmøteoversikt i tillegg til kortkontrollen. ByggExp erstatter ikke selve HMS-kortet.</p>
+<h2>Oppmøte i tillegg til kortet</h2>
+<p>Kortkontrollen bekrefter identitet og arbeidsgiver. Hvem som faktisk er på jobb og når, ser du i ByggExp: de ansatte sjekker inn og ut i mobilen med GPS. ByggExp utsteder ikke HMS-kort og er ingen kortleser.</p>
 
 <h2>Kom i gang</h2>
-<p>Les mer om <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a>, <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>. Sjekk gjeldende regler hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
+<p>Les mer om <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a>, <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
-<h3>Hvordan sjekker jeg om et HMS-kort er gyldig?</h3>
-<p>Slå opp kortnummeret hos kortutstederen eller skann QR-koden på kortet. Da ser du om kortet er aktivt, hvem det tilhører og om det er sperret eller utløpt.</p>
-<h3>Hva betyr det at et HMS-kort er sperret?</h3>
-<p>At kortet ikke lenger er gyldig – for eksempel fordi virksomheten ikke oppfyller kravene. Personen skal da ikke føres på oversiktslisten før forholdet er ordnet.</p>
+<h3>Hvordan sjekker jeg et HMS-kort?</h3>
+<p>Skann QR-koden på kortet, eller søk på kortnummeret på hmskort.no. Begge viser statusen som er registrert i de offentlige registrene.</p>
+<h3>Hvem kan søke på kortnummeret?</h3>
+<p>Arbeidstilsynet skriver at arbeidsgiveren selv kan kontrollere statusen med et søk på kortnummeret på hmskort.no.</p>
 <h3>Hvem har ansvar for å kontrollere HMS-kort?</h3>
-<p>Byggherren skal sørge for at oversiktslisten føres, og HMS-kort er en forutsetning for å stå på listen. I praksis kontrolleres kortene av arbeidsleder på plassen.</p>
+<p>Arbeidsgiveren skal sørge for at de ansatte har HMS-kort, og byggherren skal sørge for at oversiktslisten med HMS-kortnummer føres. Selve kontrollen på plassen gjøres ofte av arbeidslederen.</p>
 `.trim();
 
 const S_SJEKKE_HMS_KORT: BlogPost = {
   _id: 'code-nb-sjekke-hms-kort',
-  title: 'Sjekke HMS-kort – slik kontrollerer du kortet',
+  title: 'Sjekk HMS-kort: slik kontrollerer du kortet',
   slug: 'sjekke-hms-kort',
   locale: 'nb',
   excerpt:
-    'Slik sjekker du om et HMS-kort er gyldig: slå opp kortnummeret eller skann QR-koden. Hvorfor kontroll er viktig, og hva sperret/utløpt kort betyr.',
+    'Sjekk HMS-kort: skann QR-koden eller søk på kortnummeret på hmskort.no. Fire steg for kontrollen på plassen, og hva du gjør når noe ikke stemmer.',
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: S_SJEKKE_HMS_KORT_HTML,
-  seoTitle: 'Sjekk HMS-kort – slå opp kortnummer eller QR-kode | ByggExp',
+  seoTitle: 'Sjekk HMS-kort: QR-kode eller kortnummer | ByggExp',
   seoDescription:
-    'Sjekk HMS-kort: slå opp kortnummeret eller skann QR-koden og se om kortet er aktivt, sperret eller utløpt – og hvem som skal kontrollere kortene.',
+    'Sjekk HMS-kort: skann QR-koden eller søk på kortnummeret på hmskort.no. Slik kontrollerer du kortet på byggeplassen i fire steg, og hvem som har ansvaret.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
   isPublished: true,
   publishedAt: '2026-09-07T14:20:00.000Z',
   createdAt: '2026-09-07T14:20:00.000Z',
-  updatedAt: '2026-10-14T12:00:00.000Z',
+  updatedAt: '2026-11-18T12:00:00.000Z',
 };
 
 const T_TIMELISTE_MAL_HTML = `
@@ -451,118 +468,118 @@ const T_TIMELISTE_MAL: BlogPost = {
 
 // Price 139,10 kr + mva and lost-card steps: https://www.arbeidstilsynet.no/hms/hms-kort/
 // (lost card § 9, FOR-2007-03-30-367 (sist endret FOR-2023-12-18-2278)).
+// Re-read 2026-11-18 (SEO NO 19.11): § 9 — tell employer at once; employer tells the issuer,
+// card made invalid + new card; found card → employer for makulering. Arbeidstilsynet: employer
+// registers the card as lost and orders a new one; QR shows registry status; employer can search
+// the card number on hmskort.no.
 const M_MISTET_HMS_KORT_HTML = `
-<p>Har du mistet HMS-kortet, eller er det blitt stjålet? Da må du handle raskt: uten gyldig kort kan du ikke stå på oversiktslisten på bygge- eller anleggsplassen. Her går vi gjennom hva du gjør hvis du mister HMS-kortet, hvem som bestiller nytt, og hva det koster.</p>
+<p>Har du mistet HMS-kortet, eller er det stjålet, skal du straks si fra til arbeidsgiveren din. Det er arbeidsgiveren som melder kortet mistet og bestiller nytt på hmskort.no, og det gamle kortet gjøres ugyldig (<a href="https://www.arbeidstilsynet.no/hms/hms-kort/" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a> og <a href="https://www.arbeidstilsynet.no/regelverk/forskrifter/forskrift-om-hms-kort-pa-bygge--og-anleggsplasser/" rel="nofollow noopener" target="_blank">forskrift om HMS-kort § 9</a>). Det nye kortet koster 139,10 kroner + mva.</p>
 
-<h2>Hva gjør du hvis du mister HMS-kortet?</h2>
+<h2>Slik får du nytt HMS-kort – steg for steg</h2>
 <ol>
-<li><strong>Meld fra til arbeidsgiveren med en gang.</strong> Det er arbeidsgiveren som håndterer kortene.</li>
-<li><strong>Arbeidsgiveren registrerer kortet som mistet</strong> og bestiller et nytt via den offisielle kanalen <a href="https://www.hmskort.no" rel="nofollow noopener" target="_blank">hmskort.no</a>.</li>
-<li><strong>Det gamle kortet bør sperres</strong>, slik at det ikke kan misbrukes.</li>
-<li><strong>Du får et nytt kort</strong> og kan igjen registreres i oversiktslisten.</li>
+<li><strong>Arbeidsgiveren logger inn på <a href="https://www.hmskort.no" rel="nofollow noopener" target="_blank">hmskort.no</a></strong> med elektronisk ID. Det må være en person med formell rolle i Enhetsregisteret, for eksempel daglig leder, eller en ansatt med delegert tilgang.</li>
+<li><strong>Kortutstederen gjør det gamle kortet ugyldig</strong> og utsteder et nytt til deg (§ 9).</li>
+<li><strong>Finner du det gamle kortet igjen</strong>, leverer du det til arbeidsgiveren, som sørger for at det makuleres.</li>
 </ol>
 
-<h2>Hva koster et nytt kort?</h2>
-<p>Erstatningskortet koster det samme som et ordinært kort – 139,10 kroner + mva via den offisielle kanalen hmskort.no. Se <a href="/nb/blog/hms-kort-bygg#hms-kort-pris">HMS-kort pris</a> for detaljer.</p>
+<h2>Mens du venter på nytt kort</h2>
+<p>Alle som arbeider på bygge- og anleggsplasser skal ha HMS-kort, og kortnummeret skal stå på <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten (mannskapslisten)</a>. Avklar derfor med arbeidslederen hva som gjelder på din plass til det nye kortet er kommet. Når det er på plass, kan det kontrolleres som vanlig – se <a href="/nb/blog/sjekke-hms-kort">sjekk HMS-kort</a>.</p>
 
-<h2>Kan du jobbe uten kortet mens du venter?</h2>
-<p>Uten gyldig HMS-kort skal du ikke føres på oversiktslisten. Sjekk med arbeidsleder hva som gjelder på din plass mens det nye kortet er på vei, og se hvordan du <a href="/nb/blog/sjekke-hms-kort">sjekker om et HMS-kort er gyldig</a>. Følg alltid reglene hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
+<h2>Gjelder det nye kortet like lenge?</h2>
+<p>Et HMS-kort utstedes for to år og gjelder bare så lenge du er ansatt hos arbeidsgiveren som bestilte det. Mer om dette i <a href="/nb/blog/hms-kort-gyldighet">hvor lenge er HMS-kortet gyldig</a>.</p>
 
 <h2>Kom i gang</h2>
-<p>Les mer om <a href="/nb/blog/hms-kort-bygg#bestille-hms-kort">å bestille HMS-kort</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a> eller <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a>.</p>
+<p>Les mer om <a href="/nb/blog/hms-kort-bygg#bestille-hms-kort">å bestille HMS-kort</a> eller <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva gjør jeg hvis jeg mister HMS-kortet?</h3>
-<p>Meld fra til arbeidsgiveren med en gang. De registrerer kortet som mistet og bestiller et nytt via hmskort.no. Det gamle kortet bør sperres.</p>
-<h3>Hva koster et nytt HMS-kort ved tap?</h3>
-<p>Det samme som et ordinært kort – 139,10 kroner + mva via den offisielle kanalen hmskort.no.</p>
-<h3>Kan jeg jobbe uten HMS-kort mens jeg venter på nytt?</h3>
-<p>Uten gyldig kort skal du ikke føres på oversiktslisten. Avklar med arbeidsleder og følg reglene hos Arbeidstilsynet.</p>
+<p>Si fra til arbeidsgiveren med en gang. Arbeidsgiveren registrerer kortet som mistet og bestiller nytt på hmskort.no.</p>
+<h3>Hva koster et nytt HMS-kort når det gamle er mistet?</h3>
+<p>Det samme som et vanlig kort: 139,10 kroner + mva.</p>
+<h3>Kan jeg bestille nytt HMS-kort selv?</h3>
+<p>Nei. Det er arbeidsgiveren som bestiller, ved en person med formell rolle i Enhetsregisteret eller en ansatt med delegert tilgang.</p>
 `.trim();
 
 const M_MISTET_HMS_KORT: BlogPost = {
   _id: 'code-nb-mistet-hms-kort',
-  title: 'Mistet HMS-kort – slik får du nytt',
+  title: 'Mistet HMS-kort? Si fra til arbeidsgiveren – slik får du nytt',
   slug: 'mistet-hms-kort',
   locale: 'nb',
   excerpt:
-    'Mistet HMS-kortet? Meld fra til arbeidsgiveren, som registrerer kortet som mistet og bestiller nytt via hmskort.no. Hva det koster og hva som gjelder mens du venter.',
+    'Mistet HMS-kortet? Si fra til arbeidsgiveren med en gang. Arbeidsgiveren melder kortet mistet og bestiller nytt på hmskort.no for 139,10 kr + mva.',
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: M_MISTET_HMS_KORT_HTML,
-  seoTitle: 'Mistet HMS-kort – slik bestiller du nytt | ByggExp',
+  seoTitle: 'Mistet HMS-kort? Slik får du nytt kort | ByggExp',
   seoDescription:
-    'Mistet HMS-kort: meld fra til arbeidsgiveren, som registrerer det som mistet og bestiller nytt via hmskort.no. Pris 139,10 kr + mva og hva som gjelder mens du venter.',
+    'Mistet HMS-kort: si fra til arbeidsgiveren straks. Arbeidsgiveren melder kortet mistet og bestiller nytt på hmskort.no for 139,10 kr + mva (§ 9).',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
   isPublished: true,
   publishedAt: '2026-09-07T14:50:00.000Z',
   createdAt: '2026-09-07T14:50:00.000Z',
-  updatedAt: '2026-09-07T14:50:00.000Z',
+  updatedAt: '2026-11-18T12:00:00.000Z',
 };
 
 const G_HMS_KORT_GYLDIGHET_HTML = `
-<p><strong>Et HMS-kort er gyldig i to år</strong>, og bare så lenge du er ansatt hos arbeidsgiveren som bestilte det (<a href="https://www.arbeidstilsynet.no/regelverk/forskrifter/forskrift-om-hms-kort-pa-bygge--og-anleggsplasser/" rel="nofollow noopener" target="_blank">forskrift om HMS-kort § 8</a>). Kortet må derfor fornyes minst hvert annet år, og et nytt kort trengs hver gang du bytter arbeidsgiver. Her forklarer vi når kortet må fornyes, og hva som gjør at det blir ugyldig før tiden.</p>
+<p><strong>HMS-kortet er gyldig i to år</strong>, og bare så lenge du er ansatt hos arbeidsgiveren som bestilte det (<a href="https://www.arbeidstilsynet.no/regelverk/forskrifter/forskrift-om-hms-kort-pa-bygge--og-anleggsplasser/" rel="nofollow noopener" target="_blank">forskrift om HMS-kort på bygge- og anleggsplasser § 8</a>). Kortet må altså fornyes senest hvert annet år, og du trenger nytt kort når du begynner hos en ny arbeidsgiver.</p>
 
-<table>
-<thead><tr><th>Situasjon</th><th>Er kortet gyldig?</th></tr></thead>
+<h2>Når gjelder kortet – og når gjelder det ikke?</h2>
+<div class="article-table"><table>
+<thead><tr><th>Situasjon</th><th>Gyldig?</th><th>Hva skjer</th></tr></thead>
 <tbody>
-<tr><td>Mindre enn to år gammelt, og du er fortsatt ansatt</td><td>Ja</td></tr>
-<tr><td>Mer enn to år gammelt</td><td>Nei – arbeidsgiveren bestiller nytt kort</td></tr>
-<tr><td>Du har sluttet eller byttet jobb</td><td>Nei – den nye arbeidsgiveren bestiller nytt kort</td></tr>
-<tr><td>Kortet er mistet eller stjålet</td><td>Nei – gjøres ugyldig, og nytt kort utstedes</td></tr>
+<tr><td>Innenfor gyldighetsperioden, og du er fortsatt ansatt</td><td>Ja</td><td>Ingenting – kortet brukes som vanlig</td></tr>
+<tr><td>Gyldighetsperioden er ute</td><td>Nei</td><td>Virksomheten sørger straks for at kortet makuleres (§ 8a), og arbeidsgiveren bestiller nytt</td></tr>
+<tr><td>Du slutter eller bytter arbeidsgiver</td><td>Nei</td><td>Det gamle kortet makuleres (§ 8a), og den nye arbeidsgiveren bestiller nytt kort</td></tr>
+<tr><td>Kortet er mistet eller stjålet</td><td>Nei</td><td>Arbeidsgiveren melder fra til kortutstederen, som gjør kortet ugyldig og utsteder nytt (§ 9)</td></tr>
+<tr><td>Du eller virksomheten mangler i de pålagte offentlige registrene</td><td>Nei</td><td>Kortet gjelder bare når registreringene er i orden, og myndighetene kan trekke det tilbake</td></tr>
 </tbody>
-</table>
+</table></div>
 
-<h2>Hvor lenge varer HMS-kortet?</h2>
-<p>HMS-kortet utstedes for <strong>to år</strong>. I tillegg er kortet bare gyldig så lenge <strong>ansettelsesforholdet består</strong> – slutter du i jobben, gjelder ikke kortet lenger, selv om datoen ikke er passert. Sjekk alltid gjeldende regler hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>
+<h2>Slik fornyer arbeidsgiveren HMS-kortet</h2>
+<ol>
+<li><strong>Logg inn på <a href="https://www.hmskort.no" rel="nofollow noopener" target="_blank">hmskort.no</a></strong> med elektronisk ID. Det må være en person med formell rolle i Enhetsregisteret, for eksempel daglig leder, eller en ansatt som har fått tilgangen delegert.</li>
+<li><strong>Bestill nytt kort</strong> til den ansatte. Prisen er 139,10 kroner + mva per kort.</li>
+<li><strong>Gi den ansatte det nye kortet</strong> før det gamle slutter å gjelde.</li>
+</ol>
+<p>Den ansatte kan ikke bestille kortet selv. Utstedelsesdatoen står på kortet (§ 7), så før en enkel liste over når hvert kort ble utstedt, slik at ingen blir stående uten gyldig kort når de skal føres på <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten (mannskapslisten)</a>. Hele bestillingen er forklart i <a href="/nb/blog/hms-kort-bygg#bestille-hms-kort">bestille HMS-kort</a>.</p>
 
-<h2>Fornye før kortet utløper</h2>
-<p>Før gyldigheten går ut, må arbeidsgiveren bestille et nytt kort for at den ansatte fortsatt skal kunne stå på oversiktslisten. Det er lurt å følge med på utløpsdatoen i god tid, så ingen blir stående uten gyldig kort på plassen. Når gyldighetstiden er ute eller arbeidsforholdet opphører, skal arbeidsgiveren makulere kortet straks (§ 8a).</p>
+<h2>Se om et kort fortsatt gjelder</h2>
+<p>QR-koden på kortet viser statusen som er registrert i de offentlige registrene i det øyeblikket koden skannes. Arbeidsgiveren kan også søke på kortnummeret på hmskort.no. Slik gjør du det i praksis: <a href="/nb/blog/sjekke-hms-kort">sjekk HMS-kort</a>.</p>
 
-<h2>Når blir et kort ugyldig før tiden?</h2>
-<ul>
-<li>Arbeidsforholdet opphører.</li>
-<li>Virksomheten oppfyller ikke lenger kravene (kortet kan bli sperret).</li>
-<li>Kortet meldes <a href="/nb/blog/mistet-hms-kort">mistet eller stjålet</a> – arbeidsgiveren melder fra til kortutstederen, som gjør kortet ugyldig og utsteder nytt (§ 9).</li>
-</ul>
-<p>Du kan når som helst <a href="/nb/blog/sjekke-hms-kort">sjekke om et HMS-kort er gyldig</a> ved å slå opp kortnummeret.</p>
-
-<h2>Kom i gang</h2>
-<p>Les mer om <a href="/nb/blog/hms-kort-bygg#bestille-hms-kort">å bestille og fornye HMS-kort</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort for byggeplass</a> eller <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste</a>.</p>
+<h2>Kilder</h2>
+<p>Forskrift om HMS-kort på bygge- og anleggsplasser §§ 8, 8a og 9 (FOR-2007-03-30-367, sist endret ved FOR-2023-12-18-2278) og Arbeidstilsynets side om <a href="https://www.arbeidstilsynet.no/hms/hms-kort/" rel="nofollow noopener" target="_blank">HMS-kort</a> (pris, bestilling, mistet kort og kontroll). Begge kontrollert i november 2026.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hvor lenge er et HMS-kort gyldig?</h3>
-<p>To år – og bare så lenge ansettelsesforholdet består. Slutter du i jobben, gjelder ikke kortet lenger.</p>
+<p>To år fra kortet utstedes (forskrift om HMS-kort § 8).</p>
 <h3>Hvor ofte må HMS-kortet fornyes?</h3>
-<p>Kortet utstedes for to år, så det må fornyes senest hvert annet år. Arbeidsgiveren bestiller et nytt kort før gyldighetstiden går ut, så den ansatte fortsatt kan stå på oversiktslisten.</p>
-<h3>Gjelder HMS-kortet hvis jeg bytter jobb?</h3>
-<p>Nei. Kortet er bare gyldig så lenge ansettelsesforholdet består. Den nye arbeidsgiveren må bestille et nytt kort.</p>
-<h3>Kan et HMS-kort bli ugyldig før utløpsdatoen?</h3>
-<p>Ja – hvis arbeidsforholdet opphører, virksomheten ikke oppfyller kravene, eller kortet meldes mistet.</p>
+<p>Arbeidsgiveren bestiller nytt kort på hmskort.no før gyldighetsperioden går ut. Det nye kortet koster 139,10 kroner + mva.</p>
+<h3>Hvem fornyer HMS-kortet?</h3>
+<p>Arbeidsgiveren. En person med formell rolle i Enhetsregisteret, eller en ansatt med delegert tilgang, bestiller på hmskort.no. Den ansatte kan ikke bestille selv.</p>
 `.trim();
 
 const G_HMS_KORT_GYLDIGHET: BlogPost = {
   _id: 'code-nb-hms-kort-gyldighet',
-  title: 'HMS-kort gyldighet – hvor lenge varer kortet?',
+  title: 'Hvor lenge er HMS-kortet gyldig? To år – slik fornyer du det',
   slug: 'hms-kort-gyldighet',
   locale: 'nb',
   excerpt:
-    'Hvor lenge er et HMS-kort gyldig? To år – og bare så lenge ansettelsesforholdet består. Når du må fornye, og hva som gjør et kort ugyldig før tiden.',
+    'HMS-kortet er gyldig i to år og bare mens du er ansatt hos arbeidsgiveren som bestilte det. Når kortet slutter å gjelde, og hvordan det fornyes.',
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: G_HMS_KORT_GYLDIGHET_HTML,
-  seoTitle: 'Hvor lenge er HMS-kort gyldig? To år – gyldighet | ByggExp',
+  seoTitle: 'Hvor lenge er HMS-kortet gyldig? To år | ByggExp',
   seoDescription:
-    'HMS-kort gyldighet: kortet gjelder i to år, og bare så lenge du er ansatt. Når det må fornyes, og hva som gjør kortet ugyldig (forskrift § 8).',
+    'HMS-kortet er gyldig i to år og bare mens du er ansatt hos arbeidsgiveren som bestilte det (forskrift § 8). Slik fornyes kortet, og når det slutter å gjelde.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
   isPublished: true,
   publishedAt: '2026-09-07T15:00:00.000Z',
   createdAt: '2026-09-07T15:00:00.000Z',
-  updatedAt: '2026-11-07T12:00:00.000Z',
+  updatedAt: '2026-11-18T12:00:00.000Z',
 };
 
 const TP_TIMEPRIS_SNEKKER_HTML = `

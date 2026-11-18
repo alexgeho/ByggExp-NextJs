@@ -293,13 +293,13 @@ const TIMEREGISTRERING: FunksjonPageNb = {
   plan: 'projekt',
   priceIncluded: 'Timeregistrering og attest er inkludert',
   heroCheck: 'iPhone og Android',
-  title: 'Timeregistrering app for bygg – GPS og attest | ByggExp',
+  title: `Timeregistrering app for bygg – ${PROJEKT_PRICE} NOK/mnd | ByggExp`,
   description:
-    'Timeregistreringsapp for byggefirma: stemple inn med GPS, timer per prosjekt, attest og eksport til PDF, Excel og lønn. Alle funksjoner gratis i 14 dager.',
+    'Timeregistrering og timeføring i appen: stemple inn med GPS eller før timene manuelt, attester i webadmin og eksporter til lønn. Gratis i 14 dager.',
   name: 'Timeregistreringsapp',
   h1: 'Timeregistrering app for bygg.',
   h1Accent: 'Fra stempling til lønn.',
-  lead: 'Riktige timer på riktig prosjekt, attestert og klare for lønn og faktura.',
+  lead: 'De ansatte stempler inn i mobilen, du attesterer timene og tar ut lønnsgrunnlaget.',
   hero: {
     name: 'tidrapporteringssystem-incheckning',
     alt: 'Bygningsarbeider med hjelm sjekker inn med mobilen ved en byggeplass med stillas og en kartmarkør',
@@ -338,7 +338,7 @@ const TIMEREGISTRERING: FunksjonPageNb = {
     },
   ],
   body: `
-<p>En timeregistreringsapp for bygg skal få riktige timer inn på riktig prosjekt, uten at noen sitter og fører over lapper på fredag. I ByggExp stempler de ansatte inn og ut i mobilen, timetypen velges på økten, og arbeidslederen attesterer i webadmin. Etterpå går grunnlaget videre til lønn, faktura og prosjektøkonomi. Her ser du hvordan flyten fungerer, hva loven krever av timeføringen, og hva du bør sjekke før du velger app.</p>
+<p>En app for timeregistrering – eller timeføring – på bygg skal få riktige timer inn på riktig prosjekt, uten at noen sitter og fører over lapper på fredag. I ByggExp stempler de ansatte inn og ut i mobilen, timetypen velges på økten, og arbeidslederen attesterer i webadmin. Etterpå går grunnlaget videre til lønn, faktura og prosjektøkonomi. Her ser du hvordan flyten fungerer, hva loven krever av timeføringen, og hva du bør sjekke før du velger app.</p>
 
 <h2>Slik fungerer timeregistreringen i ByggExp</h2>
 <ol>

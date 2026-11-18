@@ -291,15 +291,15 @@ const TIMEREGISTRERING: FunksjonPageNb = {
   slug: 'timeregistrering-app',
   svPair: 'tidrapporteringssystem-bygg',
   plan: 'projekt',
-  priceIncluded: 'Timeregistrering og attest er inkludert',
+  priceIncluded: 'Timeregistrering og godkjenning er inkludert',
   heroCheck: 'iPhone og Android',
   title: `Timeregistrering app for bygg – ${PROJEKT_PRICE} NOK/mnd | ByggExp`,
   description:
-    'Timeregistrering og timeføring i appen: stemple inn med GPS eller før timene manuelt, attester i webadmin og eksporter til lønn. Gratis i 14 dager.',
+    'Timeregistrering og timeføring i appen: stemple inn med GPS eller før timene manuelt, godkjenn timene i webadmin og eksporter til lønn. Gratis i 14 dager.',
   name: 'Timeregistreringsapp',
   h1: 'Timeregistrering app for bygg.',
   h1Accent: 'Fra stempling til lønn.',
-  lead: 'De ansatte stempler inn i mobilen, du attesterer timene og tar ut lønnsgrunnlaget.',
+  lead: 'De ansatte stempler inn i mobilen, du godkjenner timene og tar ut lønnsgrunnlaget.',
   hero: {
     name: 'tidrapporteringssystem-incheckning',
     alt: 'Bygningsarbeider med hjelm sjekker inn med mobilen ved en byggeplass med stillas og en kartmarkør',
@@ -323,14 +323,14 @@ const TIMEREGISTRERING: FunksjonPageNb = {
       text: 'Se timene per ansatt og dag, og sammenlign plan med faktisk tid.',
       bullets: [
         'Bytt mellom planlagt, GPS og manuelt',
-        'Rett en økt før du attesterer',
+        'Rett en økt før du godkjenner',
         'Avvik fra planen blir tydelige',
       ],
       img: '/landing/funktioner/screen-tidrapport-1200.webp',
       alt: 'Timeoversikt i ByggExp: timer per ansatt og dag for to uker, filtrert på planlagt, GPS og manuelt',
     },
     {
-      title: 'Attester og eksporter',
+      title: 'Godkjenn og eksporter',
       text: 'Godkjenn øktene i webadmin og ta ut grunnlaget for lønn og faktura.',
       bullets: ['Timeliste som PDF og Excel', 'Lønnsgrunnlag som CSV-fil', 'Faktura fra timene (Full kontroll)'],
       img: '/landing/features/3personal-1200.webp',
@@ -338,7 +338,7 @@ const TIMEREGISTRERING: FunksjonPageNb = {
     },
   ],
   body: `
-<p>En app for timeregistrering – eller timeføring – på bygg skal få riktige timer inn på riktig prosjekt, uten at noen sitter og fører over lapper på fredag. I ByggExp stempler de ansatte inn og ut i mobilen, timetypen velges på økten, og arbeidslederen attesterer i webadmin. Etterpå går grunnlaget videre til lønn, faktura og prosjektøkonomi. Her ser du hvordan flyten fungerer, hva loven krever av timeføringen, og hva du bør sjekke før du velger app.</p>
+<p>En app for timeregistrering – eller timeføring – på bygg skal få riktige timer inn på riktig prosjekt, uten at noen sitter og fører over lapper på fredag. I ByggExp stempler de ansatte inn og ut i mobilen, timetypen velges på økten, og arbeidslederen godkjenner timene i webadmin. Etterpå går grunnlaget videre til lønn, faktura og prosjektøkonomi. Her ser du hvordan flyten fungerer, hva loven krever av timeføringen, og hva du bør sjekke før du velger app.</p>
 
 <h2>Slik fungerer timeregistreringen i ByggExp</h2>
 <ol>
@@ -346,7 +346,7 @@ const TIMEREGISTRERING: FunksjonPageNb = {
 <li><strong>Den ansatte stempler inn på arbeidsplassen.</strong> Innsjekken skjer med GPS. Forlater den ansatte prosjektområdet, settes økten automatisk på pause, slik at turen til byggevarehuset ikke blir arbeidstid på feil prosjekt.</li>
 <li><strong>Eller fører timene manuelt.</strong> Ikke alle vil dele posisjonen sin, og det trenger de ikke. Timene kan føres manuelt per prosjekt og dag, og havner i samme oversikt som GPS-timene.</li>
 <li><strong>Økten får riktig timetype.</strong> På hver økt velges normal tid, overtid eller ubekvem arbeidstid. Reisetid legges til i kilometer og minutter.</li>
-<li><strong>Arbeidslederen attesterer.</strong> Administrator eller prosjektadministrator går gjennom øktene og godkjenner dem.</li>
+<li><strong>Arbeidslederen godkjenner timene.</strong> Administrator eller prosjektadministrator går gjennom øktene i webadmin.</li>
 <li><strong>Grunnlaget går videre.</strong> Timelisten eksporteres som PDF eller Excel, og lønnsgrunnlaget som CSV til lønnssystemet dere bruker.</li>
 </ol>
 <p>Den ansatte trenger altså bare å gjøre to ting: sjekke inn når dagen starter og velge riktig timetype. Resten skjer i webadmin hos den som har ansvar for lønn og prosjekter.</p>
@@ -356,20 +356,20 @@ ${illu('stampelklocka-projektbyte', 'Bygningsarbeider med hjelm går ut av en se
 <h2>Hva loven krever av timeføringen</h2>
 <p>${ext(LOV_AML, 'Arbeidsmiljøloven')} § 10-7 krever at det finnes en oversikt over hvor mye den enkelte arbeidstaker har arbeidet. Oversikten skal være tilgjengelig for Arbeidstilsynet og arbeidstakernes tillitsvalgte. En timeliste på papir oppfyller kravet i teorien, men bare hvis den faktisk blir fylt ut, samlet inn og tatt vare på.</p>
 <p>Overtid har egne grenser. Etter § 10-6 kan overtid som hovedregel ikke overstige ti timer i løpet av sju dager, 25 timer i fire sammenhengende uker og 200 timer innenfor en periode på 52 uker, og det skal betales et tillegg på minst 40 prosent. Tariffavtalen dere følger kan ha egne regler for overtid og ubekvem arbeidstid, så sjekk alltid den gjeldende avtalen.</p>
-<p>I ByggExp velger den ansatte timetype for hver økt. Systemet regner ikke ut tariffavtalens regler automatisk. Det betyr at dere selv avgjør hva som er overtid, for eksempel når arbeidslederen har pålagt den, og at attesten blir kontrollpunktet. Når timetypen ligger på hver økt, ser du raskt hvem som nærmer seg grensene.</p>
+<p>I ByggExp velger den ansatte timetype for hver økt. Systemet regner ikke ut tariffavtalens regler automatisk. Det betyr at dere selv avgjør hva som er overtid, for eksempel når arbeidslederen har pålagt den, og at godkjenningen blir kontrollpunktet. Når timetypen ligger på hver økt, ser du raskt hvem som nærmer seg grensene.</p>
 
 ${illu('tidrapporteringssystem-kvallsgjutning', 'Betongbil støper en plate i kveldslys under en arbeidslampe, en bygningsarbeider trekker av betongen og en arbeidsleder ser på mobilen')}
 
 <h2>GPS eller manuelt – dere velger</h2>
 <p>GPS gir arbeidslederen trygghet for at innstemplingen skjer på bygget og ikke hjemme. Samtidig er posisjon en personopplysning, og de ansatte skal vite hva som registreres og hvorfor. I ByggExp brukes posisjonen ved inn- og utstempling og for å sette økten på pause når noen forlater prosjektområdet. Vil en ansatt ikke dele posisjon, fører vedkommende timene manuelt i appen.</p>
-<p>I timeoversikten ser du planlagte timer, GPS-timer og manuelle timer side om side for hver ansatt og dag. Avvik mellom plan og faktisk tid blir tydelige før du attesterer, ikke når lønnen allerede er utbetalt.</p>
+<p>I timeoversikten ser du planlagte timer, GPS-timer og manuelle timer side om side for hver ansatt og dag. Avvik mellom plan og faktisk tid blir tydelige før du godkjenner timene, ikke når lønnen allerede er utbetalt.</p>
 
 ${illu('tidrapporteringssystem-attest', 'Kvinne ved skrivebordet arbeider på en datamaskin som viser en ukeplan og en klokke')}
 
 <h2>Fra timer til lønn, faktura og prosjektøkonomi</h2>
 <p>Verdien av timeregistreringen kommer når timene brukes. I ByggExp registreres hver time én gang og brukes videre tre steder:</p>
 <ul>
-<li><strong>Lønn.</strong> De attesterte timene per ansatt og timetype eksporteres som CSV, klare for lønnssystemet.</li>
+<li><strong>Lønn.</strong> De godkjente timene per ansatt og timetype eksporteres som CSV, klare for lønnssystemet.</li>
 <li><strong>Faktura.</strong> I timeoversikten sender du timene for et prosjekt og en periode rett over til en faktura, så du slipper å taste dem inn på nytt. Fakturering er med i pakken Full kontroll.</li>
 <li><strong>Prosjektøkonomi.</strong> Timene havner på prosjektet, og i Full kontroll ser du hva arbeidet koster mot budsjettet mens prosjektet pågår. Les mer om <a href="/nb/funksjoner/prosjektstyringsverktoy">prosjektstyringsverktøyet</a>.</li>
 </ul>
@@ -382,7 +382,7 @@ ${illu('tidrapporteringssystem-attest', 'Kvinne ved skrivebordet arbeider på en
 <tr><td><strong>Timer på riktig prosjekt</strong></td><td>Fylles ut i etterkant, ofte etter hukommelsen</td><td>Registreres når økten starter</td></tr>
 <tr><td><strong>Innsamling</strong></td><td>Ark og bilder i SMS hver uke</td><td>Timene ligger i systemet med en gang</td></tr>
 <tr><td><strong>Overtid og ubekvem tid</strong></td><td>Egen kolonne som ofte glemmes</td><td>Timetype på hver økt</td></tr>
-<tr><td><strong>Godkjenning</strong></td><td>Signatur på papir eller ingen</td><td>Attest i webadmin</td></tr>
+<tr><td><strong>Godkjenning</strong></td><td>Signatur på papir eller ingen</td><td>Godkjenning i webadmin</td></tr>
 <tr><td><strong>Lønn og faktura</strong></td><td>Tastes inn på nytt</td><td>Eksport og faktura fra timene</td></tr>
 </tbody>
 </table></div>
@@ -393,13 +393,13 @@ ${illu('tidrapporteringssystem-attest', 'Kvinne ved skrivebordet arbeider på en
 <ul>
 <li><strong>Start med ett prosjekt.</strong> La ett lag bruke appen i to uker før resten følger etter.</li>
 <li><strong>Forklar GPS-en.</strong> Fortell hva som registreres, når, og at manuell føring er et alternativ.</li>
-<li><strong>Attester hver uke.</strong> Når arbeidslederen går gjennom timene fast, blir feil rettet mens alle husker hva som skjedde.</li>
+<li><strong>Godkjenn hver uke.</strong> Når arbeidslederen går gjennom timene fast, blir feil rettet mens alle husker hva som skjedde.</li>
 <li><strong>Bruk timetypen fra dag én.</strong> Da slipper du å rekonstruere overtid ved månedsslutt.</li>
 </ul>
 <p>Vi hjelper dere gratis med å flytte over prosjekter og ansatte fra systemet dere bruker i dag.</p>
 
 <h2>Slik ser uken ut for arbeidslederen</h2>
-<p>Med timene i appen blir oppfølgingen en fast rutine i stedet for en jakt på lapper. Mandag ser arbeidslederen hvem som er sjekket inn på hvilket prosjekt. I løpet av uken dukker avvikene opp i timeoversikten: en som har glemt å stemple ut, en dag med uvanlig mange timer, overtid som ikke var avtalt. De rettes mens folk husker hva som skjedde. Fredag går arbeidslederen gjennom uken per ansatt og dag og attesterer. Ved månedsslutt er timene allerede godkjent, og lønnsgrunnlaget kan tas ut med en gang.</p>
+<p>Med timene i appen blir oppfølgingen en fast rutine i stedet for en jakt på lapper. Mandag ser arbeidslederen hvem som er sjekket inn på hvilket prosjekt. I løpet av uken dukker avvikene opp i timeoversikten: en som har glemt å stemple ut, en dag med uvanlig mange timer, overtid som ikke var avtalt. De rettes mens folk husker hva som skjedde. Fredag går arbeidslederen gjennom uken per ansatt og dag og godkjenner timene. Ved månedsslutt er alt klart, og lønnsgrunnlaget kan tas ut med en gang.</p>
 
 <h2>Dette bør du sjekke før du velger app</h2>
 <p>Det finnes mange apper for timeregistrering, og de fleste kan registrere en time. Forskjellen ligger i hva som skjer før og etter. Gå gjennom disse punktene, gjerne med en av dem som skal bruke appen hver dag:</p>
@@ -407,23 +407,23 @@ ${illu('tidrapporteringssystem-attest', 'Kvinne ved skrivebordet arbeider på en
 <li><strong>Hvor raskt går inn- og utstemplingen?</strong> Tar det mer enn noen sekunder, blir det gjort i etterkant – og da er du tilbake til hukommelsen.</li>
 <li><strong>Kan timene føres uten GPS?</strong> Noen ansatte vil ikke dele posisjon. Da må det finnes en manuell vei som havner i samme oversikt.</li>
 <li><strong>Hvordan håndteres overtid og ubekvem tid?</strong> Timetypen bør ligge på økten, ikke i en kommentar.</li>
-<li><strong>Hvem godkjenner, og hvor?</strong> Attesten bør skje på ett sted, med oversikt per ansatt og dag.</li>
+<li><strong>Hvem godkjenner, og hvor?</strong> Godkjenningen bør skje på ett sted, med oversikt per ansatt og dag.</li>
 <li><strong>Hva kan du ta ut?</strong> Timeliste som PDF eller Excel og lønnsgrunnlag som fil er et minimum.</li>
 <li><strong>Henger timene sammen med resten?</strong> Planlegging, faktura og prosjektøkonomi i samme system sparer deg for dobbeltføring.</li>
 </ol>
 <p>Test appen på et ekte prosjekt i prøveperioden, ikke på et demoprosjekt. Først da ser du om laget faktisk bruker den.</p>
 
 <h2>Timeregistrering for små bedrifter</h2>
-<p>For et firma med tre–fem ansatte er gevinsten ofte størst. Det er gjerne daglig leder som både jobber på bygget, samler inn timelister og lager lønn og faktura. Når timene ligger i systemet med en gang, blir fredagen kortere: du går gjennom uken, attesterer og tar ut grunnlaget. Kontroll på jobben dekker 10 brukere, så de fleste små firma betaler bare grunnprisen.</p>
+<p>For et firma med tre–fem ansatte er gevinsten ofte størst. Det er gjerne daglig leder som både jobber på bygget, samler inn timelister og lager lønn og faktura. Når timene ligger i systemet med en gang, blir fredagen kortere: du går gjennom uken, godkjenner og tar ut grunnlaget. Kontroll på jobben dekker 10 brukere, så de fleste små firma betaler bare grunnprisen.</p>
 
 <h2>Hva koster en timeregistreringsapp?</h2>
-<p>Timeregistrering, attest og eksport er med i pakken Kontroll på jobben for ${PROJEKT_PRICE} NOK per måned eks. mva., med 10 brukere inkludert. Ekstra brukere koster ${EXTRA_USER_PRICE} NOK per måned. Vil du også fakturere timene og se prosjektøkonomien, velger du Full kontroll for ${KOMPLETT_PRICE} NOK. Du prøver alle funksjoner gratis i 14 dager, uten oppstartsavgift og uten bindingstid.</p>
+<p>Timeregistrering, godkjenning og eksport er med i pakken Kontroll på jobben for ${PROJEKT_PRICE} NOK per måned eks. mva., med 10 brukere inkludert. Ekstra brukere koster ${EXTRA_USER_PRICE} NOK per måned. Vil du også fakturere timene og se prosjektøkonomien, velger du Full kontroll for ${KOMPLETT_PRICE} NOK. Du prøver alle funksjoner gratis i 14 dager, uten oppstartsavgift og uten bindingstid.</p>
 `.trim(),
   faq: [
     {
       question: 'Hva er en timeregistreringsapp?',
       answer:
-        'En app der de ansatte registrerer arbeidstid i mobilen ved å sjekke inn og ut på bygget. Timene havner på riktig prosjekt og blir, når de er attestert, grunnlag for lønn og faktura.',
+        'En app der de ansatte registrerer arbeidstid i mobilen ved å sjekke inn og ut på bygget. Timene havner på riktig prosjekt og blir, når de er godkjent, grunnlag for lønn og faktura.',
     },
     {
       question: 'Finnes det en gratis timeregistreringsapp?',
@@ -438,7 +438,7 @@ ${illu('tidrapporteringssystem-attest', 'Kvinne ved skrivebordet arbeider på en
     {
       question: 'Regner appen ut overtid automatisk?',
       answer:
-        'Nei. Den ansatte velger timetype for hver økt: normal, overtid eller ubekvem arbeidstid. Arbeidslederen kontrollerer valget når timene attesteres.',
+        'Nei. Den ansatte velger timetype for hver økt: normal, overtid eller ubekvem arbeidstid. Arbeidslederen kontrollerer valget når timene godkjennes.',
     },
     {
       question: 'Kan timene eksporteres til lønn?',
@@ -457,7 +457,7 @@ ${illu('tidrapporteringssystem-attest', 'Kvinne ved skrivebordet arbeider på en
     },
     {
       question: 'Hva koster timeregistrering i ByggExp?',
-      answer: `Kontroll på jobben koster ${PROJEKT_PRICE} NOK per måned eks. mva. med 10 brukere og timeregistrering, attest og planlegging. Ekstra brukere koster ${EXTRA_USER_PRICE} NOK per måned. De første 14 dagene er gratis.`,
+      answer: `Kontroll på jobben koster ${PROJEKT_PRICE} NOK per måned eks. mva. med 10 brukere og timeregistrering, godkjenning og planlegging. Ekstra brukere koster ${EXTRA_USER_PRICE} NOK per måned. De første 14 dagene er gratis.`,
     },
   ],
   related: [

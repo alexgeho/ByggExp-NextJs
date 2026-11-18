@@ -81,12 +81,12 @@ const F_FAKTURERINGSPROGRAM_BYGG: BlogPost = {
 // - The task can be handed by written agreement to a firm on site, usually the main contractor:
 //   https://www.arbeidstilsynet.no/hms/hms-i-bygg-og-anlegg/byggherreforskriften/elektroniske-oversiktslister/
 const M_MANNSKAPSLISTE_BYGGEPLASS_HTML = `
-<p>En <strong>elektronisk oversiktsliste</strong> – i bransjen kalt mannskapsliste – er byggherrens liste over alle som skal arbeide på bygge- eller anleggsplassen. Etter <a href="https://www.arbeidstilsynet.no/regelverk/forskrifter/byggherreforskriften/" rel="nofollow noopener" target="_blank">byggherreforskriften § 15</a> skal den «føres elektronisk, kontrolleres og oppdateres daglig», og den skal blant annet vise navn, fødselsdato, arbeidsgiver og HMS-kortnummer for hver person. Listen oppbevares i seks måneder etter at arbeidet er avsluttet.</p>
+<p>En <strong>elektronisk oversiktsliste</strong> – i bransjen kalt mannskapsliste – er byggherrens liste over alle som skal utføre arbeid på bygge- eller anleggsplassen. Etter <a href="https://www.arbeidstilsynet.no/regelverk/forskrifter/byggherreforskriften/" rel="nofollow noopener" target="_blank">byggherreforskriften § 15</a> skal den «føres elektronisk, kontrolleres og oppdateres daglig», og den skal blant annet vise navn, fødselsdato, arbeidsgiver og HMS-kortnummer for hver person. Listen oppbevares i seks måneder etter at arbeidet er avsluttet.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-mannskapsliste-krav.webp" alt="Diagram: elektronisk oversiktsliste – hva som registreres (navn, fødselsdato, arbeidsgiver, HMS-kort-nummer) og krav etter § 15" width="720" height="380" loading="lazy"><figcaption>Elektronisk oversiktsliste etter byggherreforskriften § 15: hva som registreres og hvilke krav som gjelder.</figcaption></figure>
 
 <h2>Hva skal stå i oversiktslisten?</h2>
-<div class="article-table"><table>
-<thead><tr><th>Del av listen</th><th>Opplysninger etter § 15</th></tr></thead>
+<div class="article-table article-table--narrow"><table>
+<thead><tr><th>Del av listen</th><th>Opplysninger</th></tr></thead>
 <tbody>
 <tr><td>Plassen</td><td>Navn og adresse på bygge- eller anleggsplassen</td></tr>
 <tr><td>Byggherren</td><td>Navn på byggherren</td></tr>
@@ -99,14 +99,13 @@ const M_MANNSKAPSLISTE_BYGGEPLASS_HTML = `
 <h2>Kravene i byggherreforskriften – kort fortalt</h2>
 <ul>
 <li><strong>Byggherren har ansvaret.</strong> Oppgaven med å føre listen kan overlates til en virksomhet som har oppdrag på plassen, men bare ved skriftlig avtale – oftest hovedentreprenøren.</li>
-<li><strong>Før arbeidet starter.</strong> Nye personer føres opp før de begynner å arbeide, ikke i etterkant.</li>
-<li><strong>Utstyr på plassen.</strong> Arbeidstilsynet skriver at byggherren må ha PC, nettbrett eller lignende på bygge- eller anleggsplassen.</li>
+<li><strong>Utstyr på plassen.</strong> Byggherren, eller den som har fått oppgaven, må ha PC, nettbrett eller lignende på plassen, slik at nye personer kan føres opp før de starter å arbeide.</li>
 <li><strong>Innsyn.</strong> Listen skal være tilgjengelig for arbeidsgiveren, verneombudet, Arbeidstilsynet og skattemyndighetene.</li>
 </ul>
 <p>Hele forskriften med SHA-plan, koordinatorer og forhåndsmelding er forklart i <a href="/nb/blog/byggherreforskriften">byggherreforskriften</a>.</p>
 
 <h2>Når gjelder kravet?</h2>
-<p>Byggherreforskriften gjelder for «enhver arbeidsplass hvor det utføres midlertidig eller skiftende bygge- eller anleggsarbeid» (§ 2). Er byggherren en forbruker – en privatperson som ikke handler som ledd i næringsvirksomhet – gjelder bare § 10 om forhåndsmelding (§ 3). Da gjelder ikke kravet om oversiktsliste.</p>
+<p>Byggherreforskriften gjelder for «enhver arbeidsplass hvor det utføres midlertidig eller skiftende bygge- eller anleggsarbeid» (§ 2). Er byggherren en forbruker – en privatperson som ikke hovedsakelig handler som ledd i næringsvirksomhet – gjelder bare § 10 om forhåndsmelding (§ 3). Da gjelder ikke kravet om oversiktsliste.</p>
 
 <h2>Oppmøte og timer i ByggExp</h2>
 <p>I ByggExp sjekker de ansatte inn og ut i mobilen med GPS, og ut fra inn- og utsjekkene kan en liste per prosjekt lastes ned som PDF eller CSV. Den listen har ikke HMS-kortnummer, og ByggExp er ingen HMS-kortleser. Kontroller derfor selv at løsningen dere bruker for oversiktslisten oppfyller § 15.</p>
@@ -140,7 +139,7 @@ const M_MANNSKAPSLISTE_BYGGEPLASS: BlogPost = {
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: M_MANNSKAPSLISTE_BYGGEPLASS_HTML,
-  seoTitle: 'Mannskapsliste byggeplass: krav etter § 15 | ByggExp',
+  seoTitle: 'Mannskapsliste byggeplass: dette må stå på listen | ByggExp',
   seoDescription:
     'Elektronisk oversiktsliste (mannskapsliste): føres elektronisk og oppdateres daglig, med navn, fødselsdato, arbeidsgiver og HMS-kortnummer. Krav i § 15.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
@@ -217,7 +216,7 @@ const H_HMS_KORT_BYGG_HTML = `
 <h3>Er byggekort og HMS-kort det samme?</h3>
 <p>Ja. Byggekort er et vanlig navn på HMS-kortet i bygg og anlegg.</p>
 <h3>Hvor lenge er HMS-kortet gyldig?</h3>
-<p>To år, og bare så lenge du er ansatt hos arbeidsgiveren som bestilte det. Se <a href="/nb/blog/hms-kort-gyldighet">hvor lenge HMS-kort er gyldig</a>.</p>
+<p>To år – se <a href="/nb/blog/hms-kort-gyldighet">hvor lenge er HMS-kortet gyldig</a>.</p>
 `.trim();
 
 const H_HMS_KORT_BYGG: BlogPost = {
@@ -230,9 +229,9 @@ const H_HMS_KORT_BYGG: BlogPost = {
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: H_HMS_KORT_BYGG_HTML,
-  seoTitle: 'HMS-kort – bestille, pris og gyldighet | ByggExp',
+  seoTitle: 'HMS-kort – bestille, pris og byggekort | ByggExp',
   seoDescription:
-    'HMS-kort: arbeidsgiveren bestiller på hmskort.no, 139,10 kr + mva, gyldig i to år. Slik bestiller, sjekker og fornyer du kortet.',
+    'HMS-kort for bygg og anlegg: arbeidsgiveren bestiller på hmskort.no, og kortet koster 139,10 kr + mva. Slik bestiller du kortet, og hva byggekort er.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
@@ -243,7 +242,7 @@ const H_HMS_KORT_BYGG: BlogPost = {
 };
 
 const T_TIMELISTE_APP_BYGG_HTML = `
-<p>En timeliste-app er en digital timeliste i mobilen: de ansatte fører timene på riktig prosjekt mens de er på bygget, i stedet for å fylle ut et ark på slutten av uka etter hukommelsen. Her ser du hva appen bør klare, hvordan timelisten skiller seg fra en vaktliste, og når en mal holder. Hvordan stempling, attest og eksport fungerer i ByggExp, står på siden om <a href="/nb/funksjoner/timeregistrering-app">timeregistrering app for bygg</a>.</p>
+<p>En timeliste-app er en digital timeliste i mobilen: de ansatte fører timene på riktig prosjekt mens de er på bygget, i stedet for å fylle ut et ark på slutten av uka etter hukommelsen. Her ser du hva appen bør klare, hvordan timelisten skiller seg fra en vaktliste, og når en mal holder. Hvordan stempling, godkjenning og eksport fungerer i ByggExp, står på siden om <a href="/nb/funksjoner/timeregistrering-app">timeregistrering app for bygg</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-timeregistrering-flyt.webp" alt="Diagram: digital timeliste – stemple inn, timer på prosjekt, gjennomgå, eksport til lønn og faktura" width="720" height="380" loading="lazy"><figcaption>Digital timeliste: timene føres i mobilen, havner på riktig prosjekt og blir grunnlag for lønn og faktura.</figcaption></figure>
 
 <p class="eco-note"><strong>GPS eller manuelt – dere velger:</strong> ikke alle vil dele posisjonen sin, og det trenger de ikke. I ByggExp kan medarbeideren i stedet fylle inn timene sine manuelt i appen – per prosjekt og dag. De manuelle timene havner i samme timeoversikt og eksport til lønn og faktura som GPS-timene, og i nettadmin ser du planlagte, GPS- og manuelle timer side om side.</p>
@@ -259,15 +258,15 @@ const T_TIMELISTE_APP_BYGG_HTML = `
 
 <h2>Timeliste eller vaktliste?</h2>
 <p>En vaktliste viser hvem som skal jobbe hvor og når – det er planen. Timelisten viser hva som faktisk ble jobbet. Du trenger begge, men de løser ulike ting:</p>
-<div class="article-table"><table>
+<div class="article-table article-table--compare"><table>
 <thead><tr><th></th><th>Vaktliste</th><th>Timeliste</th></tr></thead>
 <tbody>
 <tr><td><strong>Svarer på</strong></td><td>Hvem skal være på hvilket bygg i morgen?</td><td>Hvor mange timer jobbet hver person, på hvilket prosjekt?</td></tr>
-<tr><td><strong>Lages av</strong></td><td>Den som planlegger</td><td>De ansatte, og attesteres av arbeidslederen</td></tr>
+<tr><td><strong>Lages av</strong></td><td>Den som planlegger</td><td>Føres av de ansatte, godkjennes av arbeidslederen</td></tr>
 <tr><td><strong>Brukes til</strong></td><td>Planlegging og bemanning</td><td>Lønn, faktura og etterkalkyle</td></tr>
 </tbody>
 </table></div>
-<p>I ByggExp lager du planen i webadmin under Bemanning: du klikker i en rute for å sette folk på et prosjekt for en dag, godkjent fravær vises i samme bilde, og du får varsel når noen er satt opp med mer enn 8 timer på en dag. Planen vises bare i webadmin, ikke i de ansattes app. Mer om dette på siden om <a href="/nb/funksjoner/bemanningsplan">bemanningsplan</a>.</p>
+<p>I ByggExp lager du planen i webadmin under Bemanning: du klikker i en rute for å sette folk på et prosjekt for en dag, godkjent fravær vises i samme bilde, og ruten blir rød når noen er satt opp med mer enn 8 timer på en dag. Planen vises bare i webadmin, ikke i de ansattes app. Mer om dette på siden om <a href="/nb/funksjoner/bemanningsplan">bemanningsplan</a>.</p>
 
 <h2>Timeliste-app vs. timeliste-mal (PDF)</h2>
 <p>En <a href="/nb/blog/timeliste-mal">gratis timeliste-mal</a> i PDF eller Excel er et greit utgangspunkt for helt små firmaer, men den må fylles ut manuelt, samles inn og tastes videre til lønn. En app fjerner det dobbeltarbeidet: timene registreres én gang og brukes overalt. Vokser firmaet, blir appen fort mer lønnsom enn malen.</p>
@@ -282,14 +281,14 @@ const T_TIMELISTE_APP_BYGG_HTML = `
 <p>Samme app fungerer på både iPhone og Android.</p>
 
 <h2>Fra timeliste til lønn og faktura</h2>
-<p>Verdien kommer når timene brukes: i ByggExp blir den attesterte timelisten grunnlag for lønn og faktura, og regnes inn i prosjektets økonomi. Registrer én gang, bruk overalt.</p>
+<p>Verdien kommer når timene brukes: i ByggExp blir den godkjente timelisten grunnlag for lønn og faktura, og regnes inn i prosjektets økonomi. Registrer én gang, bruk overalt.</p>
 
 <h2>Kom i gang</h2>
 <p>Vil du bytte papirtimelisten med en app? Les om <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-app med GPS</a>, <a href="/nb/blog/timeliste-mal">timeliste-mal</a> eller <a href="/nb/contact">bestill en gratis konsultasjon</a>.</p>
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hva er en timeliste-app?</h3>
-<p>En app der de ansatte fører arbeidstimene sine direkte i mobilen mens de er på bygget, slik at timene havner på riktig prosjekt og, når de er attestert, blir grunnlag for lønn og faktura – uten papirtimelister.</p>
+<p>En app der de ansatte fører arbeidstimene sine direkte i mobilen mens de er på bygget, slik at timene havner på riktig prosjekt og, når de er godkjent, blir grunnlag for lønn og faktura – uten papirtimelister.</p>
 <h3>Er timeliste og timeregistrering det samme?</h3>
 <p>Ja, i praksis. «Timeliste» er den daglige oversikten over timene, mens «timeregistrering» beskriver selve det å registrere dem. En timeliste-app gjør begge deler.</p>
 <h3>Bør jeg bruke en gratis timeliste-mal eller en app?</h3>
@@ -310,7 +309,7 @@ const T_TIMELISTE_APP_BYGG: BlogPost = {
   contentHtml: T_TIMELISTE_APP_BYGG_HTML,
   seoTitle: 'Timeliste app for bygg – timeliste og vaktliste | ByggExp',
   seoDescription:
-    'Timeliste-app for byggefirmaer: timene føres i mobilen på riktig prosjekt og attesteres før lønn og faktura. Slik skiller timelisten seg fra en vaktliste.',
+    'Timeliste-app for byggefirmaer: timene føres i mobilen på riktig prosjekt og godkjennes før lønn og faktura. Slik skiller timelisten seg fra en vaktliste.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/1arbetspass.webp`,
   canonicalUrl: '',
   noIndex: false,
@@ -328,7 +327,7 @@ const T_TIMELISTE_APP_BYGG: BlogPost = {
 // hmskort.no (the official channel). ByggExp does NOT issue HMS-kort.
 
 const S_SJEKKE_HMS_KORT_HTML = `
-<p>Du sjekker et HMS-kort på to måter: skann QR-koden på kortet, eller søk på kortnummeret på hmskort.no. QR-koden viser statusen som er registrert i de offentlige registrene i det øyeblikket den skannes, og arbeidsgiveren kan selv søke opp kortnummeret (<a href="https://www.arbeidstilsynet.no/hms/hms-kort/" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>). Lurer du på hvor lenge kortet gjelder, står svaret i <a href="/nb/blog/hms-kort-gyldighet">hvor lenge er HMS-kortet gyldig</a>.</p>
+<p>Du sjekker et HMS-kort ved å skanne QR-koden på kortet. Arbeidsgiveren til personen kan i tillegg søke på kortnummeret på hmskort.no (<a href="https://www.arbeidstilsynet.no/hms/hms-kort/" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>). Lurer du på hvor lenge kortet gjelder, står svaret i <a href="/nb/blog/hms-kort-gyldighet">hvor lenge er HMS-kortet gyldig</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/nb-hms-kort.webp" alt="Diagram: HMS-kort – fra arbeidskontrakt til utstedt kort, registrering i oversiktslisten og adgang til byggeplassen" width="720" height="380" loading="lazy"><figcaption>Et kort i orden knytter personen til riktig arbeidsgiver og gir adgang til plassen.</figcaption></figure>
 
 <h2>Slik kontrollerer du HMS-kortet på plassen</h2>
@@ -357,9 +356,7 @@ const S_SJEKKE_HMS_KORT_HTML = `
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hvordan sjekker jeg et HMS-kort?</h3>
-<p>Skann QR-koden på kortet, eller søk på kortnummeret på hmskort.no. Begge viser statusen som er registrert i de offentlige registrene.</p>
-<h3>Hvem kan søke på kortnummeret?</h3>
-<p>Arbeidstilsynet skriver at arbeidsgiveren selv kan kontrollere statusen med et søk på kortnummeret på hmskort.no.</p>
+<p>Skann QR-koden på kortet. Den viser statusen som er registrert i de offentlige registrene akkurat nå. Arbeidsgiveren kan også søke på kortnummeret på hmskort.no.</p>
 <h3>Hvem har ansvar for å kontrollere HMS-kort?</h3>
 <p>Arbeidsgiveren skal sørge for at de ansatte har HMS-kort, og byggherren skal sørge for at oversiktslisten med HMS-kortnummer føres. Selve kontrollen på plassen gjøres ofte av arbeidslederen.</p>
 `.trim();
@@ -370,13 +367,13 @@ const S_SJEKKE_HMS_KORT: BlogPost = {
   slug: 'sjekke-hms-kort',
   locale: 'nb',
   excerpt:
-    'Sjekk HMS-kort: skann QR-koden eller søk på kortnummeret på hmskort.no. Fire steg for kontrollen på plassen, og hva du gjør når noe ikke stemmer.',
+    'Sjekk HMS-kort: skann QR-koden på kortet. Arbeidsgiveren kan også søke på kortnummeret på hmskort.no. Fire steg for kontrollen på plassen.',
   tag: 'Regelverk',
   coverImageUrl: '/landing/features/3personal.webp',
   contentHtml: S_SJEKKE_HMS_KORT_HTML,
   seoTitle: 'Sjekk HMS-kort: QR-kode eller kortnummer | ByggExp',
   seoDescription:
-    'Sjekk HMS-kort: skann QR-koden eller søk på kortnummeret på hmskort.no. Slik kontrollerer du kortet på byggeplassen i fire steg, og hvem som har ansvaret.',
+    'Sjekk HMS-kort: skann QR-koden på kortet – arbeidsgiveren kan også søke på kortnummeret på hmskort.no. Slik kontrollerer du kortet på plassen i fire steg.',
   seoImageUrl: `${NO_SITE_URL}/landing/features/3personal.webp`,
   canonicalUrl: '',
   noIndex: false,
@@ -483,7 +480,7 @@ const M_MISTET_HMS_KORT_HTML = `
 </ol>
 
 <h2>Mens du venter på nytt kort</h2>
-<p>Alle som arbeider på bygge- og anleggsplasser skal ha HMS-kort, og kortnummeret skal stå på <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten (mannskapslisten)</a>. Avklar derfor med arbeidslederen hva som gjelder på din plass til det nye kortet er kommet. Når det er på plass, kan det kontrolleres som vanlig – se <a href="/nb/blog/sjekke-hms-kort">sjekk HMS-kort</a>.</p>
+<p>Mens arbeidsgiveren har bestilt nytt kort, kan du føres på <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten (mannskapslisten)</a> uten HMS-kortnummer – de andre opplysningene føres som vanlig. Avklar med arbeidslederen hva som gjelder på din plass. Når det nye kortet er kommet, kan det kontrolleres som vanlig – se <a href="/nb/blog/sjekke-hms-kort">sjekk HMS-kort</a>.</p>
 
 <h2>Gjelder det nye kortet like lenge?</h2>
 <p>Et HMS-kort utstedes for to år og gjelder bare så lenge du er ansatt hos arbeidsgiveren som bestilte det. Mer om dette i <a href="/nb/blog/hms-kort-gyldighet">hvor lenge er HMS-kortet gyldig</a>.</p>
@@ -526,7 +523,7 @@ const G_HMS_KORT_GYLDIGHET_HTML = `
 <p><strong>HMS-kortet er gyldig i to år</strong>, og bare så lenge du er ansatt hos arbeidsgiveren som bestilte det (<a href="https://www.arbeidstilsynet.no/regelverk/forskrifter/forskrift-om-hms-kort-pa-bygge--og-anleggsplasser/" rel="nofollow noopener" target="_blank">forskrift om HMS-kort på bygge- og anleggsplasser § 8</a>). Kortet må altså fornyes senest hvert annet år, og du trenger nytt kort når du begynner hos en ny arbeidsgiver.</p>
 
 <h2>Når gjelder kortet – og når gjelder det ikke?</h2>
-<div class="article-table"><table>
+<div class="article-table article-table--compare"><table>
 <thead><tr><th>Situasjon</th><th>Gyldig?</th><th>Hva skjer</th></tr></thead>
 <tbody>
 <tr><td>Innenfor gyldighetsperioden, og du er fortsatt ansatt</td><td>Ja</td><td>Ingenting – kortet brukes som vanlig</td></tr>
@@ -543,7 +540,7 @@ const G_HMS_KORT_GYLDIGHET_HTML = `
 <li><strong>Bestill nytt kort</strong> til den ansatte. Prisen er 139,10 kroner + mva per kort.</li>
 <li><strong>Gi den ansatte det nye kortet</strong> før det gamle slutter å gjelde.</li>
 </ol>
-<p>Den ansatte kan ikke bestille kortet selv. Utstedelsesdatoen står på kortet (§ 7), så før en enkel liste over når hvert kort ble utstedt, slik at ingen blir stående uten gyldig kort når de skal føres på <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten (mannskapslisten)</a>. Hele bestillingen er forklart i <a href="/nb/blog/hms-kort-bygg#bestille-hms-kort">bestille HMS-kort</a>.</p>
+<p>Den ansatte kan ikke bestille kortet selv. Utstedelsesdatoen står på kortet (§ 7), så hold en enkel oversikt over når hvert kort ble utstedt, slik at ingen blir stående uten gyldig kort når de skal føres på <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten (mannskapslisten)</a>. Hele bestillingen er forklart i <a href="/nb/blog/hms-kort-bygg#bestille-hms-kort">bestille HMS-kort</a>.</p>
 
 <h2>Se om et kort fortsatt gjelder</h2>
 <p>QR-koden på kortet viser statusen som er registrert i de offentlige registrene i det øyeblikket koden skannes. Arbeidsgiveren kan også søke på kortnummeret på hmskort.no. Slik gjør du det i praksis: <a href="/nb/blog/sjekke-hms-kort">sjekk HMS-kort</a>.</p>
@@ -553,7 +550,7 @@ const G_HMS_KORT_GYLDIGHET_HTML = `
 
 <h2>Vanlige spørsmål</h2>
 <h3>Hvor lenge er et HMS-kort gyldig?</h3>
-<p>To år fra kortet utstedes (forskrift om HMS-kort § 8).</p>
+<p>To år fra kortet utstedes, og bare så lenge du er ansatt hos arbeidsgiveren som bestilte det (§ 8).</p>
 <h3>Hvor ofte må HMS-kortet fornyes?</h3>
 <p>Arbeidsgiveren bestiller nytt kort på hmskort.no før gyldighetsperioden går ut. Det nye kortet koster 139,10 kroner + mva.</p>
 <h3>Hvem fornyer HMS-kortet?</h3>
@@ -562,7 +559,7 @@ const G_HMS_KORT_GYLDIGHET_HTML = `
 
 const G_HMS_KORT_GYLDIGHET: BlogPost = {
   _id: 'code-nb-hms-kort-gyldighet',
-  title: 'Hvor lenge er HMS-kortet gyldig? To år – slik fornyer du det',
+  title: 'Hvor lenge er HMS-kortet gyldig? To år – slik fornyes det',
   slug: 'hms-kort-gyldighet',
   locale: 'nb',
   excerpt:
@@ -848,7 +845,7 @@ const BF_BYGGHERREFORSKRIFTEN_HTML = `
 <p>Koordinatoren skal samordne SHA-arbeidet. I prosjekteringsfasen har <strong>KP</strong> (koordinator prosjektering) ansvaret, i utførelsesfasen <strong>KU</strong> (koordinator utførelse). Byggherren kan ta rollen selv eller engasjere noen eksternt – men ansvaret for at koordineringen utføres forsvarlig blir hos byggherren.</p>
 
 <h2>Slik henger kravene sammen</h2>
-<p>Byggherreforskriften er «paraplyen» over flere krav du kanskje kjenner hver for seg: <a href="/nb/blog/sha-plan">SHA-planen</a> beskriver hvordan sikkerheten ivaretas, <a href="/nb/blog/sikker-jobb-analyse">sikker jobb-analyse (SJA)</a> brukes på risikofylt arbeid, <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten</a> viser hvem som er på plassen, og hver person må ha gyldig <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> for å stå på listen. Digital oppmøteregistrering gir deg dokumentasjonen – i ByggExp sjekker de ansatte inn med GPS, så du har oversikt over mannskapet. ByggExp er ikke et SHA-planverktøy, men gir den løpende oversikten. Avvik på byggeplassen følger du opp i et <a href="/nb/funksjoner/hms-system">HMS-system</a> med ansvarlig og frist.</p>
+<p>Byggherreforskriften er «paraplyen» over flere krav du kanskje kjenner hver for seg: <a href="/nb/blog/sha-plan">SHA-planen</a> beskriver hvordan sikkerheten ivaretas, <a href="/nb/blog/sikker-jobb-analyse">sikker jobb-analyse (SJA)</a> brukes på risikofylt arbeid, <a href="/nb/blog/mannskapsliste-byggeplass">oversiktslisten</a> viser hvem som er på plassen, og <a href="/nb/blog/hms-kort-bygg">HMS-kortnummeret</a> til hver person skal stå på listen (har noen ikke fått kortet ennå, føres de uten nummer). I ByggExp sjekker de ansatte inn og ut med GPS, så du ser hvem som har jobbet på hvilket prosjekt. ByggExp er verken et SHA-planverktøy eller en oversiktsliste etter § 15. Avvik på byggeplassen følger du opp i et <a href="/nb/funksjoner/hms-system">HMS-system</a> med ansvarlig og frist.</p>
 
 <h2>Kom i gang</h2>
 <p>Les mer om <a href="/nb/blog/sha-plan">SHA-plan</a>, <a href="/nb/blog/mannskapsliste-byggeplass">mannskapsliste og oversiktsliste</a>, <a href="/nb/blog/hms-kort-bygg">HMS-kort</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>. Sjekk alltid gjeldende krav hos <a href="https://www.arbeidstilsynet.no" rel="nofollow noopener" target="_blank">Arbeidstilsynet</a>.</p>

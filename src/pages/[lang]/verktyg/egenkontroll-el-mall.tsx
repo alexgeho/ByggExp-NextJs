@@ -61,7 +61,7 @@ export default function EgenkontrollElMallPage() {
 
   const title = 'Egenkontroll el – gratis mall (PDF) | ByggExp';
   const description =
-    'Gratis egenkontroll el med mätprotokoll: 22 kontrollpunkter före ibruktagning och vid överlämning, isolationsresistans, jordfelsbrytare (ms), kontinuitet. PDF/Excel, utan konto.';
+    'Egenkontroll el med mätprotokoll: 22 kontrollpunkter före ibruktagning och vid överlämning – isolationsresistans, jordfelsbrytare, kontinuitet. Gratis PDF.';
 
   return (
     <>
@@ -117,7 +117,10 @@ export default function EgenkontrollElMallPage() {
                   Mallen ovan är en färdig egenkontroll med mätprotokoll för elinstallation – 22
                   kontrollpunkter i fyra steg, från kontroll före ibruktagning till överlämning. Skriv in
                   mätvärden (Ω, MΩ, ms), sätt resultat och ladda ner som PDF eller Excel med två
-                  signeringssteg. Gratis och utan konto.
+                  signeringssteg. Gratis och utan konto. Mallar för andra moment finns för{' '}
+                  <a href={`/${LOCALE}/verktyg/egenkontroll-vvs-mall`}>VVS</a>, för{' '}
+                  <a href={`/${LOCALE}/verktyg/egenkontroll-bygg-mall`}>bygg och stomme</a> och samlade
+                  under <a href={`/${LOCALE}/verktyg/egenkontroll-mall`}>egenkontroll mall för bygg</a>.
                 </p>
                 <p>
                   En egenkontroll för el är elektrikerns egen dokumenterade kontroll av att
@@ -286,6 +289,8 @@ export default function EgenkontrollElMallPage() {
         relatedHeading="Fler guider och mallar"
         related={[
           { href: `/${LOCALE}/verktyg/egenkontroll-mall`, label: 'Egenkontroll – mall för alla yrken' },
+          { href: `/${LOCALE}/verktyg/egenkontroll-vvs-mall`, label: 'Egenkontroll VVS – gratis mall' },
+          { href: `/${LOCALE}/verktyg/egenkontroll-bygg-mall`, label: 'Egenkontroll stomme – gratis mall' },
           { href: `/${LOCALE}/verktyg/byggdagbok-mall`, label: 'Byggdagbok – gratis mall' },
           { href: `/${LOCALE}/verktyg/tidrapport-mall`, label: 'Tidrapport – gratis mall' },
           { href: `/${LOCALE}/blog/dokumentera-med-foton-pa-bygget`, label: 'Dokumentera med foton på bygget' },

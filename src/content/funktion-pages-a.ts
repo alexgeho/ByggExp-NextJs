@@ -466,13 +466,12 @@ const PROJEKTHANTERING: FunktionPage = {
   plan: 'projekt',
   priceIncluded: 'Projekt, uppgifter och dagbok ingår',
   heroCheck: 'iPhone och Android',
-  title: 'Projekthantering bygg – alla projekt i ett system | ByggExp',
-  description:
-    'Projekthantering för bygg: projekt, uppgifter med påminnelser, dagbok, egenkontroller, foton och timmar på ett ställe, i webben och appen. 14 dagar gratis.',
+  title: `Projekthantering bygg – system och app, ${PROJEKT_PRICE} kr/mån | ByggExp`,
+  description: `Projekthantering för bygg: projekt, uppgifter med påminnelser, dagbok, egenkontroller, foton och tid i webb och app. ${PROJEKT_PRICE} kr/mån inkl. 10 användare.`,
   name: 'Projekthantering för bygg',
-  h1: 'Projekthantering för bygg.',
+  h1: 'Projekthanteringssystem för bygg.',
   h1Accent: 'Hela projektet på ett ställe.',
-  lead: 'Från första uppgiften till överlämningen.',
+  lead: 'Uppgifter, dagbok, egenkontroller, foton och timmar samlade per projekt.',
   hero: {
     name: 'projekthantering-oversikt',
     alt: 'Projektledare står vid en stor översiktspanel med kort och diagram framför ett hus under uppbyggnad med ställning',
@@ -507,7 +506,8 @@ const PROJEKTHANTERING: FunktionPage = {
     },
   ],
   body: `
-<p>Projekthantering i bygg betyder att hålla ihop allt som händer i ett projekt: vem som gör vad, när det ska vara klart, vad som har dokumenterats och hur många timmar som har gått åt. I många byggföretag ligger det i dag i ett kalkylark, en gruppchatt, en pärm i bilen och projektledarens huvud. Det fungerar tills projekten blir fler än ett par. I ByggExp har varje projekt ett eget kort där uppgifter, foton, dokument och timmar samlas, och dagbok och egenkontroller kopplas till samma projekt – i webben för kontoret och i appen för laget.</p>
+<p>Projekthantering i bygg betyder att hålla ihop allt som händer i ett projekt: vem som gör vad, när det ska vara klart, vad som har dokumenterats och hur många timmar som har gått åt. I ByggExp har varje projekt ett eget kort där uppgifter, foton, dokument och timmar samlas, och dagbok och egenkontroller kopplas till samma projekt – i webben för kontoret och i appen för laget.</p>
+<p>Projekthanteringen ingår i paketet Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms med 10 användare. Budget, kostnader och marginal per projekt finns i Koll på pengarna och Full koll.</p>
 
 <h2>Det här samlas i projektet</h2>
 <p>När du lägger upp ett projekt anger du projektledare, plats, kund, start- och slutdatum. Projektet har en status – Planering, Pågår, Pausat eller Avslutat – så att listan visar vad som är aktivt. Till projektet hör:</p>
@@ -663,6 +663,9 @@ ${illu('projekthantering-overlamning', 'Projektledare i hjälm lämnar över nyc
     { href: '/sv/funktioner/egenkontroll', label: 'Egenkontroll för bygg' },
     { href: '/sv/funktioner/arbetsorder', label: 'Arbetsorder för bygg' },
     { href: '/sv/funktioner/projektplanering', label: 'Projektplanering med Gantt-schema' },
+    { href: '/sv/funktioner/resursplanering', label: 'Resursplanering för bygg' },
+    { href: '/sv/blog/affarssystem-byggforetag', label: 'Affärssystem för byggföretag' },
+    { href: '/sv/blog/digitalisera-byggforetag-projektstyrning', label: 'Från Excel till ett system' },
   ],
 };
 

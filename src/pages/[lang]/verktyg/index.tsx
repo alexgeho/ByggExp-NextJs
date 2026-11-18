@@ -38,7 +38,7 @@ const CONTENT: Record<CalcLocale, Content> = {
   sv: {
     seoTitle: 'Byggkalkylatorer & gratis verktyg för byggföretag | ByggExp',
     seoDescription:
-      'Gratis byggkalkylatorer och verktyg: ROT, moms och timpris, materialkalkylatorer (gips, betong, tak, golv), mallar (offert, tidrapport) och PDF-verktyg. Utan konto.',
+      'Gratis byggkalkylatorer och verktyg: ROT, moms och timpris, material (gips, betong, tak, golv), mallar för offert och tidrapport samt PDF-verktyg. Utan konto.',
     badge: 'Gratis verktyg',
     h1: 'Gratis byggkalkylatorer och verktyg för byggföretag',
     intro:
@@ -93,7 +93,7 @@ const CONTENT: Record<CalcLocale, Content> = {
           { slug: 'tidrapport-mall', title: 'Tidrapport', description: 'Timmar per dag, vecka eller månad – PDF eller Excel.' },
           { slug: 'egenkontroll-mall', title: 'Egenkontroll', description: 'Färdiga checklistor för el, VVS, bygg och skyddsrond – PDF eller Excel.' },
           { slug: 'egenkontroll-el-mall', title: 'Egenkontroll el', description: 'Färdig el-checklista: jordfelsbrytare, isolationsmätning, märkning – PDF.' },
-          { slug: 'egenkontroll-bygg-mall', title: 'Egenkontroll bygg', description: 'Bygg/stomme med metod och krav per punkt: fuktkvot, mått, infästningar, brand (BBR) – PDF.' },
+          { slug: 'egenkontroll-bygg-mall', title: 'Egenkontroll stomme', description: 'Bygg/stomme med metod och krav per punkt: fuktkvot, mått, infästningar, brand (BBR) – PDF.' },
           { slug: 'egenkontroll-vvs-mall', title: 'Egenkontroll VVS', description: 'Provningsprotokoll enligt Säker Vatten 2026:1: täthetsprovning, fall, varmvatten, intyg – PDF.' },
           { slug: 'egenkontroll-vatrum-mall', title: 'Egenkontroll våtrum', description: 'Fuktmätning, tätskikt (BBV/GVK), fall mot golvbrunn och genomföringar – PDF.' },
           { slug: 'egenkontroll-tak-mall', title: 'Egenkontroll tak', description: 'Underlagstäckning, infästning, genomföringar, fall och taksäkerhet – PDF.' },

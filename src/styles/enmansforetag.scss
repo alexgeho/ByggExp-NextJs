@@ -32,6 +32,14 @@
   line-height: 1.55;
   color: var(--muted);
   margin-bottom: 20px;
+
+  // A text link inside the lead (e.g. /sv/tidrapportering-app → the owner
+  // page of the time-reporting queries) must look like a link.
+  a {
+    color: var(--blue);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
 }
 
 .em-bullets {

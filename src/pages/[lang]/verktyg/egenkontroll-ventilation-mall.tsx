@@ -144,8 +144,8 @@ export default function EgenkontrollVentilationMallPage() {
             heading: 'Så gör du egenkontroller för ventilation i ByggExp',
             body: (
               <p>
-                Mallen ovan är gratis att använda. I ByggExp finns färdiga egenkontroll-mallar för el,
-                VVS, ventilation, bygg och skyddsrond – du fyller i på plats, markerar resultat och samlar
+                Mallen ovan är gratis att använda. I ByggExp finns standardmallar för el, VVS,
+                bygg/stomme och skyddsrond, och kontrollpunkterna för ventilation lägger du upp som en egen mall – du fyller i på plats, markerar resultat och samlar
                 alla kontroller per projekt tillsammans med byggdagbok, foton och tid.{' '}
                 Läs mer om{' '}
                 <a href={`/${LOCALE}/funktioner/egenkontroll`}>digital egenkontroll i ByggExp</a>.
@@ -157,7 +157,7 @@ export default function EgenkontrollVentilationMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Gör egenkontroller för ventilation i ByggExp',
-          text: 'Färdiga mallar för el, VVS, ventilation, bygg och skyddsrond – ifyllda på plats och samlade per projekt. Boka en gratis konsultation och se hur det fungerar.',
+          text: 'Färdiga mallar för el, VVS, bygg och skyddsrond plus egna mallar – ifyllda på plats och samlade per projekt. Boka en gratis konsultation och se hur det fungerar.',
           buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}

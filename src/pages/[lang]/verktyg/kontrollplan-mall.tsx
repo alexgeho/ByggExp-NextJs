@@ -53,7 +53,7 @@ export default function KontrollplanMallPage() {
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/kontrollplan-mall`;
   const title = 'Kontrollplan mall (PBL) gratis PDF & Excel | ByggExp';
   const description =
-    'Ladda ner en gratis kontrollplan-mall enligt PBL för bygglov och anmälan. Tabell med vad, hur, mot vilket underlag, vem och egenkontroll eller sakkunnig – plus anmälningar och arbetsplatsbesök. Ladda ner som PDF.';
+    'Kontrollplan mall enligt PBL för bygglov och anmälan: vad, hur, mot vilket underlag, vem och egenkontroll eller sakkunnig. Fyll i online, gratis PDF.';
 
   return (
     <>
@@ -86,7 +86,7 @@ export default function KontrollplanMallPage() {
       <LeadMagnetPage
         disclaimer={false}
         badge="Gratis mall"
-        title="Kontrollplan enligt PBL – gratis mall"
+        title="Kontrollplan mall enligt PBL – gratis att fylla i"
         intro="Fyll i projektuppgifter och en rad per kontroll – vad, hur, mot vilket underlag, vem och om det är egenkontroll eller certifierad sakkunnig – och ladda ner en färdig kontrollplan som PDF eller Excel. Passar enklare bygglov och anmälningsärenden – för större projekt krävs en kontrollansvarig."
         tool={<KontrollplanMallTool />}
         leadForm={<ToolLeadForm tool="kontrollplan-mall" />}

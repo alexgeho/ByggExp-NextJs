@@ -106,3 +106,12 @@ Arbetsorder — центр создан 2026-11-15: /sv/funktioner/arbetsorder; 
 Без центра (решение владельца): affärssystem bygg (477, статья), personalliggare (858, модуля нет).
 Исправлено 15.11: абзац про ByggExp в /verktyg/byggdagbok-mall переписан по product-facts (без ÄTA→счёт и без «foton från mobilen»: дневник только в вебе).
 Keyword Planner не выгружали: данных GSC хватило, новых статей не потребовалось.
+
+## Сетки 2026-11-19 (GSC 15.10–11.11)
+| Сетка | Хозяин | Ссылаются из 1–2 абзаца |
+|---|---|---|
+| tidrapportering bygg, tidrapporteringssystem (bygg), tidrapport bygg, tidrapportering app (bygg), tidrapporteringssystem app | /sv/funktioner/tidrapporteringssystem-bygg | /sv/tidrapportering-app (угол «testa gratis»), blog mobil-tidrapportering (гайд «få laget att rapportera»), app-for-tidrapportering-bygg (гайд «krav att ställa»), tidrapport-app-iphone, tidredovisning-byggforetag, enkelt-tidrapporteringssystem, tidrapportering-entreprenad, personalliggare-bygg-app, automatisk-tidrapportering-och-export, /sv/verktyg/tidrapport-mall |
+| projekthantering (bygg), projekthanteringssystem bygg, projektverktyg | /sv/funktioner/projekthantering | affarssystem-byggforetag, projektuppfoljning-bygg, projektplanering-bygg |
+| resursplanering bygg, resursplaneringsverktyg | /sv/funktioner/resursplanering | blog resursplanering-bygg (инфо: metod, histogram, mall) |
+| egenkontroll mall, egenkontroll bygg (mall), egenkontroll mall gratis | /sv/verktyg/egenkontroll-mall | el-, vvs-, bygg-mall (bygg-mall = «stomme»), egenkontroll-entreprenad, egenkontrollprogram |
+| kontrollplan mall (gratis) | /sv/verktyg/kontrollplan-mall | хаб egenkontroll-mall, boverkets-nya-byggregler-2026-kontrollplan |

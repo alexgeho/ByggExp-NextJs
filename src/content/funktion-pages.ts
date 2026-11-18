@@ -154,13 +154,12 @@ const TIDSYSTEM: FunktionPage = {
   plan: 'projekt',
   priceIncluded: 'Tidrapportering och attest ingår',
   heroCheck: 'iPhone och Android',
-  title: 'Tidrapporteringssystem bygg – tid, attest och lön | ByggExp',
-  description:
-    'Tidrapporteringssystem för bygg: stämpla in med GPS, timtyp per pass, attest och export till lön och SIE4. iPhone och Android. 14 dagar gratis.',
+  title: `Tidrapporteringssystem bygg med app – ${PROJEKT_PRICE} kr/mån | ByggExp`,
+  description: `Tidrapportering för bygg i app och webb: GPS eller manuell tid, attest, export till lön och personalliggare. ${PROJEKT_PRICE} kr/mån för 10 användare, 14 dagar gratis.`,
   name: 'Tidrapporteringssystem för bygg',
-  h1: 'Tidrapporteringssystem för bygg.',
+  h1: 'Tidrapportering bygg – system och app.',
   h1Accent: 'Från stämpling till lön.',
-  lead: 'Timmar per projekt, attesterade och klara för lön.',
+  lead: 'Stämpla in med GPS eller skriv tiden manuellt, attestera i webben och exportera till lön.',
   hero: {
     name: 'tidrapporteringssystem-incheckning',
     alt: 'Byggarbetare i hjälm checkar in med mobilen vid en byggarbetsplats med ställning och en platsmarkör',
@@ -199,7 +198,8 @@ const TIDSYSTEM: FunktionPage = {
     },
   ],
   body: `
-<p>Ett tidrapporteringssystem för bygg ska få in rätt timmar på rätt projekt, utan att någon renskriver lappar på fredagen. I ByggExp stämplar medarbetarna in och ut i mobilen, timtypen väljs på passet och arbetsledaren attesterar i webben. Därefter går underlaget vidare till lön och bokföring. Här ser du hur flödet fungerar steg för steg, hur OB och övertid hanteras och vad du bör kontrollera innan du väljer system.</p>
+<p>ByggExp är ett tidrapporteringssystem för bygg med en app för iPhone och Android och en webb för kontoret. Tidrapporteringen ingår i paketet Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms med 10 användare, och de första 14 dagarna är gratis.</p>
+<p>Medarbetarna stämplar in och ut i mobilen, timtypen väljs på passet och arbetsledaren attesterar i webben. Därefter går underlaget vidare till lön och bokföring.</p>
 
 <h2>Så fungerar tidrapporteringen i ByggExp</h2>
 <ol>
@@ -208,7 +208,7 @@ const TIDSYSTEM: FunktionPage = {
 <li><strong>Passet får rätt timtyp.</strong> På varje pass väljs normal tid, övertid eller OB. Restid läggs till i kilometer och minuter, och traktamente som helt, halvt eller inget.</li>
 <li><strong>Extraarbeten märks direkt.</strong> Timmar som hör till en ÄTA kopplas till ÄTA:n på passet och kan faktureras separat.</li>
 <li><strong>Arbetsledaren attesterar.</strong> Admin eller projektadmin går igenom passen och godkänner dem.</li>
-<li><strong>Underlaget går vidare.</strong> Tidrapporten exporteras som PDF eller Excel, löneunderlaget och AGI-underlaget som CSV. Med tillägget Integrationer skapar du dessutom en SIE4-fil för Fortnox, Visma eller BL.</li>
+<li><strong>Underlaget går vidare.</strong> Timmarna exporteras som PDF, Excel eller CSV. Med Full koll gör du lönekörningen och AGI-underlaget i ByggExp, och med tillägget Integrationer skapar du en SIE4-fil för Fortnox, Visma eller BL.</li>
 </ol>
 <p>Medarbetaren behöver alltså bara två saker: checka in när dagen börjar och välja rätt timtyp. Resten sköts i webben av den som har ansvar för lön och projekt.</p>
 
@@ -230,11 +230,15 @@ ${illu('tidrapporteringssystem-kvallsgjutning', 'Betongbil gjuter en platta i kv
 <li><strong>ÄTA.</strong> Timmarna märks med rätt ÄTA på passet. När ÄTA:n är godkänd kan du skapa en förifylld faktura från den (Full koll), så att extraarbetet inte glöms bort i slutfakturan.</li>
 </ul>
 
+<h2>Personalliggare från samma incheckningar</h2>
+<p>Incheckningarna i appen blir också en personalliggare per projekt. I projektet, under Tid &amp; personal, väljer du period i fliken Personalliggare och ser datum, namn, personnummer (om det finns på medarbetaren), företag med organisationsnummer och tid för in- och utcheckning. Listan laddas ner som PDF eller CSV.</p>
+<p>Vem som ska föra liggaren och vad Skatteverket kontrollerar går vi igenom i guiden om <a href="/sv/blog/personalliggare">personalliggare i byggbranschen</a>.</p>
+
 <h2>Från attest till lön och bokföring</h2>
 <p>När perioden är attesterad har du tre vägar vidare, beroende på hur ni sköter lönen i dag:</p>
 <ul>
 <li><strong>Ni har en lönebyrå eller ett eget lönesystem.</strong> Exportera löneunderlaget som CSV och tidrapporten som Excel eller PDF. Byrån får timmar per medarbetare och timtyp i stället för inskannade lappar.</li>
-<li><strong>Ni kör lönen i ByggExp.</strong> I Löner gör du en lönekörning per period med timmar per medarbetare och timtyp, bruttolön, skatteavdrag per rad och lönespecifikation. AGI-underlaget exporteras som CSV. Lönekörningen startar från tidrapporten.</li>
+<li><strong>Ni kör lönen i ByggExp (Full koll).</strong> I Löner gör du en lönekörning per period med timmar per medarbetare och timtyp, bruttolön, skatteavdrag per rad och lönespecifikation. AGI-underlaget exporteras som CSV. Lönekörningen startar från tidrapporten.</li>
 <li><strong>Bokföringen ligger i Fortnox, Visma eller BL.</strong> Med tillägget Integrationer (${ADDON_PRICE} kr/mån) skapar du en SIE4-fil som läses in i bokföringsprogrammet.</li>
 </ul>
 
@@ -276,7 +280,8 @@ ${illu('tidrapporteringssystem-id06', 'Byggarbetare i hjälm visar sitt ID-kort 
 <tr><td><strong>Restid och traktamente</strong></td><td>Vanliga fel i byggtidrapporter</td><td>Ja, på passet</td></tr>
 <tr><td><strong>ÄTA-märkning</strong></td><td>Extraarbete ska kunna faktureras</td><td>Ja, ÄTA kopplas till passet</td></tr>
 <tr><td><strong>Attest</strong></td><td>Någon ansvarar för att timmarna stämmer</td><td>Admin eller projektadmin godkänner</td></tr>
-<tr><td><strong>Lön</strong></td><td>Underlaget ska gå vidare utan omskrivning</td><td>Löne-CSV, AGI-underlag, lönekörning från tidrapporten</td></tr>
+<tr><td><strong>Lön</strong></td><td>Underlaget ska gå vidare utan omskrivning</td><td>Timmar som CSV, Excel och PDF; lönekörning och AGI-underlag i Full koll</td></tr>
+<tr><td><strong>Personalliggare</strong></td><td>Närvaron ska kunna visas per arbetsplats</td><td>Per projekt och period ur in- och utcheckningarna, PDF eller CSV</td></tr>
 <tr><td><strong>Bokföring</strong></td><td>Samma siffror i bokföringen</td><td>SIE4-fil (tillägg ${ADDON_PRICE} kr/mån)</td></tr>
 <tr><td><strong>ID06 och certifikat</strong></td><td>Vet vem som får arbeta var</td><td>Utgångsdatum på varje medarbetare</td></tr>
 </tbody>
@@ -289,7 +294,7 @@ ${illu('tidrapporteringssystem-id06', 'Byggarbetare i hjälm visar sitt ID-kort 
 <li><strong>Vi flyttar över datan.</strong> Projekt och personal från ert gamla system flyttar vi utan kostnad.</li>
 <li><strong>Kör parallellt en löneperiod.</strong> Låt laget stämpla i appen medan den gamla rutinen finns kvar, och jämför underlaget innan ni släpper den.</li>
 </ol>
-<p>De första 14 dagarna är gratis med alla funktioner. Det finns ingen startavgift och ingen bindningstid. Vill du först se själva appen? Läs om <a href="/sv/tidrapportering-app">tidrapportering i mobilen</a>, eller jämför med en enkel <a href="/sv/verktyg/tidrapport-mall">tidrapportmall</a> om ni är två–tre personer.</p>
+<p>De första 14 dagarna är gratis med alla funktioner. Det finns ingen startavgift och ingen bindningstid. Vill du först se själva appen? Läs om hur du <a href="/sv/tidrapportering-app">testar tidrapport-appen gratis</a>, eller jämför med en enkel <a href="/sv/verktyg/tidrapport-mall">tidrapportmall</a> om ni är två–tre personer.</p>
 `.trim(),
   faq: [
     {
@@ -300,6 +305,16 @@ ${illu('tidrapporteringssystem-id06', 'Byggarbetare i hjälm visar sitt ID-kort 
       question: 'Räknar systemet OB och övertid enligt Byggavtalet automatiskt?',
       answer:
         'Nej. Medarbetaren väljer timtyp per pass – normal, övertid eller OB – och arbetsledaren kontrollerar vid attesten. I lönekörningen räknas bruttolönen som timmar gånger timlön, och OB- och övertidstillägg enligt avtalet räknar ni själva.',
+    },
+    {
+      question: 'Finns tidrapporteringsappen för iPhone och Android?',
+      answer:
+        'Ja. Medarbetarna laddar ner ByggExp från App Store eller Google Play och stämplar in där. Attest, export och lön sköts i webben.',
+    },
+    {
+      question: 'Kan jag ta fram en personalliggare ur tidrapporteringen?',
+      answer:
+        'Ja. I projektet finns fliken Personalliggare, som visar in- och utcheckningarna per person för vald period. Den laddas ner som PDF eller CSV.',
     },
     {
       question: 'Kan tidrapporten föras över till Fortnox eller Visma?',
@@ -327,9 +342,15 @@ ${illu('tidrapporteringssystem-id06', 'Byggarbetare i hjälm visar sitt ID-kort 
     },
   ],
   related: [
-    { href: '/sv/tidrapportering-app', label: 'Tidrapporteringsappen' },
+    { href: '/sv/tidrapportering-app', label: 'Testa appen gratis' },
+    { href: '/sv/blog/mobil-tidrapportering', label: 'Få laget att rapportera i mobilen' },
+    { href: '/sv/blog/tidrapportering-entreprenad', label: 'Tidrapportering i entreprenad' },
+    { href: '/sv/blog/app-for-tidrapportering-bygg', label: 'Krav på en tidrapport-app' },
+    { href: '/sv/blog/tidrapport-app-iphone', label: 'Tidrapport på iPhone' },
+    { href: '/sv/blog/tidredovisning-byggforetag', label: 'Tidredovisning i byggföretag' },
     { href: '/sv/blog/enkelt-tidrapporteringssystem', label: 'Enkelt tidrapporteringssystem' },
     { href: '/sv/blog/ob-overtid-byggavtalet-rakna', label: 'OB och övertid enligt Byggavtalet' },
+    { href: '/sv/blog/personalliggare', label: 'Personalliggare i byggbranschen' },
     { href: '/sv/blog/loneprogram-bygg', label: 'Löneprogram för bygg' },
     { href: '/sv/verktyg/tidrapport-mall', label: 'Gratis tidrapportmall' },
     { href: '/sv/funktioner/tidrapportering-hantverkare', label: 'Tidrapportering för hantverkare' },
@@ -734,13 +755,12 @@ const RESURSPLANERING: FunktionPage = {
   plan: 'projekt',
   priceIncluded: 'Planering och bemanning ingår',
   heroCheck: 'iPhone och Android',
-  title: 'Resursplanering bygg – Gantt och bemanning | ByggExp',
-  description:
-    'Resursplanering för bygg: Gantt per personal eller projekt, bemanning per dag, frånvaro i planen och varning vid överbokning. 14 dagar gratis.',
+  title: `Resursplanering bygg – verktyg från ${PROJEKT_PRICE} kr/mån | ByggExp`,
+  description: `Resursplanering för bygg: Gantt per personal eller projekt, bemanning dag för dag, frånvaro i planen och varning vid överbokning. ${PROJEKT_PRICE} kr/mån, 14 dagar gratis.`,
   name: 'Resursplanering för bygg',
-  h1: 'Resursplanering för bygg.',
+  h1: 'Resursplaneringsverktyg för bygg.',
   h1Accent: 'Rätt lag på rätt bygge.',
-  lead: 'Alla projekt och hela laget i en plan.',
+  lead: 'Gantt för veckorna framåt och bemanning dag för dag, för alla projekt.',
   hero: {
     name: 'resursplanering-gantt',
     alt: 'Planerare pekar på en stor tavla med ett Gantt-schema med blå staplar, en bygghjälm på golvet',
@@ -779,7 +799,7 @@ const RESURSPLANERING: FunktionPage = {
     },
   ],
   body: `
-<p>Ett resursplaneringsverktyg för bygg ska svara på en fråga varje morgon: vem är var, och räcker folket till? När flera projekt pågår samtidigt räcker det inte att varje projektledare har koll på sitt. Samma snickarlag blir lovat till två arbetsplatser, och semestern som godkändes i våras syns först när någon saknas. I ByggExp planerar du personalen över alla projekt i samma vy: ett Gantt-schema för veckorna framåt och en bemanningsvy för de enskilda dagarna. Här ser du hur verktygen fungerar, hur en planeringsvecka kan se ut och var gränserna går.</p>
+<p>Ett resursplaneringsverktyg för bygg ska svara på en fråga varje morgon: vem är var, och räcker folket till? När flera projekt pågår samtidigt räcker det inte att varje projektledare har koll på sitt. Samma snickarlag blir lovat till två arbetsplatser, och semestern som godkändes i våras syns först när någon saknas. I ByggExp planerar du personalen över alla projekt i samma vy: ett Gantt-schema för veckorna framåt och en bemanningsvy för de enskilda dagarna. Planering och bemanning ingår i Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms med 10 användare.</p>
 
 <h2>Två vyer: Planering och Bemanning</h2>
 <p>Resursplanen i ByggExp består av två delar som kompletterar varandra.</p>
@@ -916,6 +936,8 @@ ${illu('resursplanering-vinter', 'Två byggarbetare i hjälm lägger en isolerin
     { href: '/sv/verktyg/schema-mall', label: 'Arbetsschema-mall' },
     { href: '/sv/blog/personalplanering-bygg', label: 'Bemanningsplanering' },
     { href: '/sv/blog/sjuklon-karensavdrag-vab-byggforetag', label: 'Sjuklön, karens och VAB' },
+    { href: '/sv/funktioner/projekthantering', label: 'Projekthantering för bygg' },
+    { href: '/sv/funktioner/schemalaggning', label: 'Schemaläggningssystem för bygg' },
     { href: '/sv/tidrapportering-app', label: 'Tidrapporteringsappen' },
   ],
 };
@@ -1137,7 +1159,7 @@ ${illu('projekthantering-overlamning', 'Projektledare i hjälm lämnar över nyc
   related: [
     { href: '/sv/blog/egenkontrollprogram', label: 'Guide: egenkontrollprogram' },
     { href: '/sv/verktyg/egenkontroll-mall', label: 'Gratis egenkontrollmall' },
-    { href: '/sv/verktyg/egenkontroll-bygg-mall', label: 'Egenkontroll bygg – mall' },
+    { href: '/sv/verktyg/egenkontroll-bygg-mall', label: 'Egenkontroll stomme – mall' },
     { href: '/sv/verktyg/kontrollplan-mall', label: 'Kontrollplan-mall' },
     { href: '/sv/blog/fotodokumentation-byggprojekt-bevis', label: 'Fotodokumentation som bevis' },
     { href: '/sv/funktioner/byggdagbok', label: 'Digital byggdagbok' },

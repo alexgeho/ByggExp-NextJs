@@ -628,7 +628,7 @@ const A_STARTMOTE_BYGGPROJEKT_CHECKLISTA: BlogPost = {
 const A_RESURSPLANERING_BYGG_HTML = `
 <p>Resursplanering i bygg handlar om att rätt lag och rätt maskin finns på rätt arbetsplats – utan att samma resurs lovas bort två gånger. Med fem samtidiga projekt blir det manuella schemat en vanlig orsak till dubbelbokning: samma lag utlovas till två projektledare, eller grävmaskinen står inbokad på två adresser samma morgon.</p>
 
-<p>Här får du en checklista för att välja verktyg, en jämförelse mellan Excel och system, och metoden för att se och jämna ut överbeläggning. Vill du börja direkt kan du lägga upp projektens moment i vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>.</p>
+<p>Här får du en checklista för att välja verktyg, en jämförelse mellan Excel och system, och metoden för att se och jämna ut överbeläggning. Vill du börja direkt kan du lägga upp projektens moment i vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>. Hur planering och bemanning fungerar i ByggExp visar vi på sidan om <a href="/sv/funktioner/resursplanering">resursplanering bygg</a>.</p>
 
 <h2>Vad innebär resursplanering i bygg?</h2>
 <p><a href="/sv/blog/projektplanering-bygg">Projektplanering</a> svarar på <em>vad</em> som ska göras och <em>när</em>: moment, beroenden och slutdatum. Resursplanering svarar på <em>vem eller vilken maskin</em> som utför varje moment, och om kapaciteten räcker. Det är i glappet mellan de två som dubbelbokningarna uppstår.</p>
@@ -765,9 +765,9 @@ const A_RESURSPLANERING_BYGG: BlogPost = {
   title: "Resursplanering i bygg – undvik dubbelbokning av lag och maskiner", slug: "resursplanering-bygg", locale: "sv",
   excerpt: "Checklista för resursplaneringsverktyg, Excel jämfört med system, gratis mall och metoden för att planera lag, maskiner och underentreprenörer utan dubbelbokning.", tag: "Planering",
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_RESURSPLANERING_BYGG_HTML,
-  seoTitle: "Resursplanering bygg – verktyg, metod och mall | ByggExp", seoDescription: "Resursplanering i bygg: checklista för verktyg, Excel jämfört med system, gratis mall och metoden för att undvika dubbelbokade lag och maskiner.",
+  seoTitle: "Resursplanering i bygg: metod, histogram och mall | ByggExp", seoDescription: "Resursplanering i bygg: checklista för verktyg, Excel jämfört med system, gratis mall och metoden för att undvika dubbelbokade lag och maskiner.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-19T08:18:00.000Z", createdAt: "2026-08-19T08:18:00.000Z", updatedAt: "2026-10-06T08:00:00.000Z",
+  publishedAt: "2026-08-19T08:18:00.000Z", createdAt: "2026-08-19T08:18:00.000Z", updatedAt: "2026-11-19T08:00:00.000Z",
 };
 
 const A_FUKTSAKERHETSPLAN_BYGGAF_HTML = `
@@ -1294,7 +1294,7 @@ const A_EGENKONTROLLPROGRAM: BlogPost = {
 const A_EGENKONTROLL_ENTREPRENAD_HTML = `
 <p>I en entreprenad är egenkontrollen både ett kvalitetsverktyg och ett bevis. Den visar att du har byggt enligt handlingar och gällande krav – och blir din bästa försäkring om beställaren eller besiktningsmannen ifrågasätter kvaliteten. Här går vi igenom hur egenkontroll fungerar i entreprenadsammanhang, hur den kopplas till kontrollplan och besiktning, och vad den ska innehålla.</p>
 
-<p><a href="/sv/verktyg/egenkontroll-bygg-mall">Egenkontroll bygg – gratis mall att fylla i (PDF) →</a> · <a href="/sv/verktyg/egenkontroll-mall">alla egenkontroll-mallar</a></p>
+<p><a href="/sv/verktyg/egenkontroll-mall">Egenkontroll bygg – gratis mallar att fylla i (PDF) →</a> · <a href="/sv/verktyg/egenkontroll-bygg-mall">mall för stomme</a></p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/egenkontroll-cykel.webp" alt="Egenkontroll i entreprenad – planera, kontrollera, dokumentera och åtgärda avvikelse" width="720" height="380" loading="lazy"><figcaption>Egenkontrollen i entreprenaden är en cykel: planera kontrollpunkterna, kontrollera, dokumentera med foto och signatur, åtgärda avvikelser.</figcaption></figure>
 
@@ -1356,13 +1356,13 @@ const A_EGENKONTROLL_ENTREPRENAD: BlogPost = {
   title: "Egenkontroll i entreprenad – kontrollplan, besiktning och innehåll", slug: "egenkontroll-entreprenad", locale: "sv",
   excerpt: "Hur egenkontroll fungerar i entreprenad: kopplingen till kontraktshandlingar, kontrollplan enligt PBL och slutbesiktning – och vad den ska innehålla. Med gratis mall.", tag: "Egenkontroll",
   coverImageUrl: "/landing/blog/egenkontroll-entreprenad.webp", contentHtml: A_EGENKONTROLL_ENTREPRENAD_HTML,
-  seoTitle: "Egenkontroll i entreprenad – kontrollplan & besiktning | ByggExp", seoDescription: "Egenkontroll i entreprenad: koppling till kontraktshandlingar, kontrollplan enligt PBL och slutbesiktning, plus vad kontrollen ska innehålla. Gratis egenkontroll-mall.",
+  seoTitle: "Egenkontroll i entreprenad och besiktning | ByggExp", seoDescription: "Egenkontroll i entreprenad: koppling till kontraktshandlingar, kontrollplan enligt PBL och slutbesiktning, och vad kontrollen ska innehålla. Gratis mall.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/kontrollplan-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T15:05:00.000Z", createdAt: "2026-08-20T15:05:00.000Z", updatedAt: "2026-08-20T15:05:00.000Z",
+  publishedAt: "2026-08-20T15:05:00.000Z", createdAt: "2026-08-20T15:05:00.000Z", updatedAt: "2026-11-19T08:00:00.000Z",
 };
 
 const A_TIDREDOVISNING_BYGGFORETAG_HTML = `
-<p>Tidredovisning – att löpande registrera vem som jobbat, när och på vilket projekt – är grunden för både korrekt lön, rätt fakturering och kontroll på lönsamheten. I byggbranschen hänger det dessutom ihop med lagkrav på personalliggare. Här går vi igenom vad tidredovisning omfattar, vad som är lagkrav och hur du gör det enkelt i praktiken.</p>
+<p>Tidredovisning – att löpande registrera vem som jobbat, när och på vilket projekt – är grunden för både korrekt lön, rätt fakturering och kontroll på lönsamheten. I byggbranschen hänger det dessutom ihop med lagkrav på personalliggare. Här går vi igenom vad tidredovisning omfattar och vad som är lagkrav. Hur registreringen, attesten och exporten går till i ByggExp visar vi på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 <p><a href="/sv/verktyg/tidrapport-mall">Ladda ner en gratis tidrapport-mall (PDF) →</a></p>
 
@@ -1431,9 +1431,9 @@ const A_TIDREDOVISNING_BYGGFORETAG: BlogPost = {
   title: "Tidredovisning i byggföretag – lön, fakturering och personalliggare", slug: "tidredovisning-byggforetag", locale: "sv",
   excerpt: "Vad tidredovisning omfattar (löneunderlag, fakturering, projektuppföljning, ROT), hur den skiljer sig från personalliggaren och vad den ska innehålla. Med gratis tidrapport-mall.", tag: "Tidrapportering",
   coverImageUrl: "/landing/blog/tidredovisning-byggforetag.webp", contentHtml: A_TIDREDOVISNING_BYGGFORETAG_HTML,
-  seoTitle: "Tidredovisning i byggföretag – lön, faktura & liggare | ByggExp", seoDescription: "Tidredovisning för byggföretag: löneunderlag, fakturering vid löpande räkning, projektuppföljning och ROT – och hur den skiljer sig från personalliggaren. Gratis mall.",
+  seoTitle: "Tidredovisning bygg: lön, faktura och liggare | ByggExp", seoDescription: "Tidredovisning i byggföretag: löneunderlag, faktura vid löpande räkning, projektuppföljning och ROT – och skillnaden mot personalliggaren. Med gratis mall.",
   seoImageUrl: `${SITE_URL}/landing/verktyg/tidrapport-preview.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-08-20T16:00:00.000Z", createdAt: "2026-08-20T16:00:00.000Z", updatedAt: "2026-08-20T16:00:00.000Z",
+  publishedAt: "2026-08-20T16:00:00.000Z", createdAt: "2026-08-20T16:00:00.000Z", updatedAt: "2026-11-19T08:00:00.000Z",
 };
 
 const ENKELT_TIDRAPPORTERINGSSYSTEM_HTML = `
@@ -1481,7 +1481,7 @@ const ENKELT_TIDRAPPORTERINGSSYSTEM_HTML = `
 <p>Har ni tung projektstyrning med många delmoment kan ni behöva mer runt omkring tidrapporteringen. Men själva tidregistreringen bör ändå vara enkel – lägg komplexiteten i <a href="/sv/blog/projektuppfoljning-bygg">projektuppföljningen</a>, inte i mobilen där laget stämplar in. Enkelt i botten, mer avancerat på kontoret.</p>
 
 <h2>Kom igång</h2>
-<p>Vill du testa hur enkelt det kan vara? Ladda ner en <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a> för att komma igång direkt, läs mer om <a href="/sv/blog/app-for-tidrapportering-bygg">appen för tidrapportering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Pris och funktioner hittar du på sidan om vår <a href="/sv/tidrapportering-app">tidrapportering-app</a>.</p>
+<p>Vill du testa hur enkelt det kan vara? Ladda ner en <a href="/sv/verktyg/tidrapport-mall">gratis tidrapport-mall</a> för att komma igång direkt, läs mer om <a href="/sv/blog/app-for-tidrapportering-bygg">appen för tidrapportering</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>. Pris och funktioner hittar du på sidan om vårt <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
 <h2>Relaterade guider</h2>
 <ul>
@@ -1515,16 +1515,16 @@ const ENKELT_TIDRAPPORTERINGSSYSTEM: BlogPost = {
   tag: 'Tidrapportering',
   coverImageUrl: '/landing/blog/enkelt-tidrapporteringssystem.webp',
   contentHtml: ENKELT_TIDRAPPORTERINGSSYSTEM_HTML,
-  seoTitle: 'Enkelt tidrapporteringssystem för bygg | ByggExp',
+  seoTitle: 'Enkelt tidrapporteringssystem – så väljer du rätt | ByggExp',
   seoDescription:
-    'Enkelt tidrapporteringssystem för bygg: laget stämplar in/ut i mobilen med GPS, timmarna märks som normaltid, OB eller övertid och blir underlag till lön och faktura.',
+    'Enkelt tidrapporteringssystem för bygg: så känner du igen ett som laget faktiskt fyller i – utan att tappa timtyp, ÄTA, attest och export till lön.',
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`,
   canonicalUrl: '',
   noIndex: false,
   isPublished: true,
   publishedAt: '2026-09-07T13:00:00.000Z',
   createdAt: '2026-09-07T13:00:00.000Z',
-  updatedAt: '2026-10-14T12:00:00.000Z',
+  updatedAt: '2026-11-19T08:00:00.000Z',
 };
 
 const A_KVALITETSPLAN_BYGG_HTML = `

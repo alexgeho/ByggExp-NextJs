@@ -61,9 +61,9 @@ export default function EgenkontrollMallPage() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/egenkontroll-mall`;
 
-  const title = 'Egenkontroll mall – gratis PDF & Excel | ByggExp';
+  const title = 'Egenkontroll mall för bygg – 8 gratis mallar, PDF | ByggExp';
   const description =
-    'Ladda ner en gratis egenkontroll-mall för kvalitet, miljö och arbetsmiljö som PDF eller Excel – eller fyll i online. Guide till egenkontroll enligt PBL och BBR.';
+    'Egenkontroll mall för bygg: 8 färdiga mallar – el, VVS, bygg, våtrum, betong, tak, ventilation, skyddsrond. Fyll i online, gratis PDF eller Excel utan konto.';
 
   return (
     <>
@@ -96,8 +96,8 @@ export default function EgenkontrollMallPage() {
       <LeadMagnetPage
         productBanner={<AiEgenkontrollBanner tool="egenkontroll-mall" />}
         badge="Gratis egenkontroll-mall"
-        title="Egenkontroll – gratis mall att fylla i online"
-        intro="Ladda ner en färdig egenkontroll-mall – eller skapa din egen och ladda ner den. Gratis, som PDF eller Excel, utan konto."
+        title="Egenkontroll bygg – 8 gratis mallar att fylla i online"
+        intro="Välj en färdig mall – el, VVS, bygg/stomme, våtrum, betong, tak, ventilation eller skyddsrond – eller skriv egna kontrollpunkter och ladda ner som PDF eller Excel. Gratis och utan konto."
         tool={<EgenkontrollTool />}
         disclaimer={false}
         preview={
@@ -240,6 +240,24 @@ export default function EgenkontrollMallPage() {
                     – måttkontroll mot ritning, infästningar, fuktkontroll och brandtätning enligt BBR.
                   </li>
                   <li>
+                    <strong>
+                      <a href={`/${LOCALE}/verktyg/egenkontroll-vatrum-mall`}>Egenkontroll våtrum – mall</a>
+                    </strong>{' '}
+                    – fuktmätning, tätskikt enligt branschregler, fall mot golvbrunn och genomföringar.
+                  </li>
+                  <li>
+                    <strong>
+                      <a href={`/${LOCALE}/verktyg/egenkontroll-tak-mall`}>Egenkontroll tak – mall</a>
+                    </strong>{' '}
+                    – underlagstäckning, infästning, genomföringar, fall och taksäkerhet.
+                  </li>
+                  <li>
+                    <strong>
+                      <a href={`/${LOCALE}/verktyg/egenkontroll-ventilation-mall`}>Egenkontroll ventilation – mall</a>
+                    </strong>{' '}
+                    – täta kanaler, injustering av don, brandspjäll och isolering.
+                  </li>
+                  <li>
                     <strong>Skyddsrond (arbetsmiljö)</strong> – fallskydd, ordning och reda, skyddsutrustning
                     och besiktigade ställningar.
                   </li>
@@ -272,7 +290,9 @@ export default function EgenkontrollMallPage() {
                 att se till att kontrollplanen följs. <strong>Egenkontrollen</strong> är det praktiska
                 verktyget – den enskilda hantverkarens eller entreprenörens dokumenterade kontroll av
                 att ett moment är rätt utfört. Egenkontrollerna blir ofta det underlag som visar att
-                punkterna i kontrollplanen faktiskt uppfyllts.
+                punkterna i kontrollplanen faktiskt uppfyllts. Ska du upprätta själva kontrollplanen
+                finns en gratis <a href={`/${LOCALE}/verktyg/kontrollplan-mall`}>kontrollplan mall</a>{' '}
+                enligt PBL.
               </p>
             ),
           },
@@ -320,11 +340,13 @@ export default function EgenkontrollMallPage() {
             heading: 'Så gör du egenkontroller i ByggExp',
             body: (
               <p>
-                Mallen ovan är gratis att använda. I ByggExp finns färdiga egenkontroll-mallar för el,
-                VVS, bygg/stomme, våtrum, betong, tak, ventilation och skyddsrond – du fyller i på plats, markerar resultat och samlar
-                alla kontroller per projekt. Du kan skapa egna mallar för återkommande kontroller, se
-                vilka som är godkända och vilka som har anmärkning, och ha hela dokumentationen redo
-                när beställaren eller besiktningsmannen frågar. Eftersom egenkontrollerna ligger
+                Mallen ovan är gratis att använda. I ByggExp finns fyra standardmallar – el, VVS,
+                bygg/stomme och skyddsrond – och du skapar egna mallar för återkommande kontroller,
+                till exempel våtrum eller tak. Du fyller i på plats, markerar resultat och samlar alla
+                kontroller per projekt; i appen tar du foto per kontrollpunkt, och den färdiga
+                kontrollen signeras och kan exporteras som PDF. Du ser vilka som är godkända och vilka
+                som har anmärkning, och har hela dokumentationen redo när beställaren eller
+                besiktningsmannen frågar. Eftersom egenkontrollerna ligger
                 tillsammans med byggdagbok, foton och tid får du en samlad bild av kvaliteten i
                 projektet – inte spridda listor i olika pärmar.{' '}
                 Läs mer om{' '}

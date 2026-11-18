@@ -1,5 +1,18 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 🟡 2026-11-19 — SEO: сетки tid / projekt / egenkontroll (ветка `seo-2026-11-19`, НЕ live)
+- Основание: ~/sites-hub/seo-strategiya-2026-11-18.md (разд. 4, 4а), GSC 15.10–11.11 (кластер tidrapport* ~5 000 показов на поз. 9–20, 0 кликов, каннибализация).
+- Tid: хозяин «tidrapportering bygg / tidrapporteringssystem bygg / tidrapportering app» = /sv/funktioner/tidrapporteringssystem-bygg (title «Tidrapporteringssystem bygg med app – 690 kr/mån», H1 «Tidrapportering bygg – system och app.», лид + цена в первом экране, разделы «Personalliggare från samma incheckningar», FAQ про iPhone/Android и personalliggare, AGI/lönekörning помечены Full koll, related → все гайды сетки). /sv/tidrapportering-app → угол «testa appen gratis i 14 dagar» + ссылка на хозяина в лиде. Гайды mobil-tidrapportering и app-for-tidrapportering-bygg переименованы в инфо-угол; ссылка на хозяина в 1–2 абзаце у mobil, app-for, tidrapport-app-iphone, tidredovisning-byggforetag, personalliggare-bygg-app, tidrapport-mall; 5 ссылок «Pris och funktioner → app-страница» перенаправлены на хозяина.
+- Projekt: /sv/funktioner/projekthantering (title с ценой, H1 «Projekthanteringssystem för bygg.»), /sv/funktioner/resursplanering (H1 «Resursplaneringsverktyg för bygg.»); ссылки из affarssystem-byggforetag, projektuppfoljning-bygg, resursplanering-bygg (seoTitle гайда → «metod, histogram och mall»).
+- Egenkontroll: хаб /sv/verktyg/egenkontroll-mall (title «Egenkontroll mall för bygg – 8 gratis mallar, PDF», H1 «Egenkontroll bygg – 8 gratis mallar att fylla i online»), egenkontroll-bygg-mall → угол «stomme»; el/vvs/bygg ссылаются друг на друга и на хаб в первом абзаце; хаб → kontrollplan-mall; blog boverkets… → kontrollplan-mall.
+- Факты исправлены (R24): в ByggExp 4 стандартных шаблона egenkontroll (el, VVS, bygg/stomme, skyddsrond), не 8 (хаб, tak, våtrum, ventilation); AGI-underlag/lönekörning = Full koll; «fungerar offline» убрано из 3 гайдов (tidrapport-app-iphone, stampelklocka-app-android/iphone). Personalliggare проверен по коду → product-facts-verified.md.
+- Стиль: ссылка в `.em-lead` синяя с подчёркиванием (enmansforetag.scss), иначе её не видно.
+- Проверки: tsc, eslint (изменённые файлы), next build ок; 25 URL — 1 H1, внутренние ссылки 200, кириллицы 0, title ≤ 60 и description 130–158 на изменённых страницах; прокрутки вбок 0 на 390/1440 (headless Chrome, 11 страниц). updatedAt 2026-11-19 у 14 статей (lastmod в sitemap).
+### NÄSTA
+1. Ревьюер: проверка → merge → деплой → GSC: Request Indexing хозяев (tidrapporteringssystem-bygg, projekthantering, resursplanering, egenkontroll-mall).
+2. Сверка 27.11 / 11.12: доля показов «запрос × хозяин» по сеткам.
+3. Решение владельца: /sv/blog/basta-tidrapporteringssystem-bygg называет и сравнивает 8 чужих систем (правило «без конкурентов»).
+
 ## 🟡 2026-11-13 — Заявки: цена под H1 и кнопки по тексту на страницах функций (ветка `leads-2026-11-13`, НЕ live)
 - Основание: ~/sites-hub/audits/2026-11-13/leads-byggexp.md, правка 4 (кнопка была на 1 % и 92 % длины, цена впервые на 22–72 %).
 - Шаблон FunktionPageView (14 sv + 6 nb страниц): под H1 строка цены пакета из `PLAN_PRICE` — sv «690 kr/mån exkl. moms · inkl. 10 användare», nb «690 NOK/mnd eks. mva. · inkl. 10 brukere» (299 — «max 2 användare» / «maks 2 brukere», 990 — как 690). В тексте существующая кнопка консультации (`#cta`) после каждого третьего H2: 2–4 кнопки на страницу. Тип кнопки не менялся. Правило R20 в DESIGN-SYSTEM.md.

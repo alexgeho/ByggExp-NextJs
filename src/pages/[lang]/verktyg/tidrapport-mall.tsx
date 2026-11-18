@@ -78,7 +78,7 @@ export default function TidrapportMallPage() {
 
   const title = 'Tidrapport mall – gratis i PDF & Excel | ByggExp';
   const description =
-    'Gratis tidrapport-mall för bygg – dag, vecka eller månad. Fyll i online och ladda ner som PDF eller Excel. Summera timmar per projekt automatiskt, underlag för lön och faktura.';
+    'Gratis tidrapport-mall för bygg per dag, vecka eller månad. Fyll i online, summera timmar per projekt och ladda ner som PDF eller Excel – underlag för lön.';
 
   return (
     <>
@@ -150,7 +150,9 @@ export default function TidrapportMallPage() {
                   styr hur mycket personalen får i lön, hur mycket kunden faktureras och hur du ser om
                   ett projekt faktiskt går med vinst. Är tiden fel eller ofullständig följer felen med
                   hela vägen till lön och faktura – därför lönar det sig att rapportera löpande och
-                  korrekt.
+                  korrekt. Vill laget stämpla i mobilen i stället för att fylla i mallen, läs om{' '}
+                  <a href={`/${LOCALE}/funktioner/tidrapporteringssystem-bygg`}>tidrapportering bygg</a>{' '}
+                  i ByggExp.
                 </p>
               </>
             ),

@@ -60,7 +60,7 @@ export default function EgenkontrollVvsMallPage() {
 
   const title = 'Egenkontroll VVS – gratis mall (PDF) | ByggExp';
   const description =
-    'Gratis egenkontroll-mall för VVS. Provningsprotokoll enligt Säker Vatten 2026:1: täthetsprovning med provtryck och provtid, fall på avlopp, varmvattentemperatur och intyg. Fyll i online, ladda ner som PDF – utan konto.';
+    'Egenkontroll VVS enligt Säker Vatten 2026:1: täthetsprovning med provtryck och provtid, fall på avlopp och varmvattentemperatur. Fyll i online, gratis PDF.';
 
   return (
     <>
@@ -116,7 +116,10 @@ export default function EgenkontrollVvsMallPage() {
                   Mallen ovan är en färdig egenkontroll för VVS-installation – kontroller före inbyggnad,
                   täthetsprovning med provtryck och provtid, fall på avlopp, varmvattentemperatur och
                   överlämning enligt Säker Vatten 2026:1 ligger redan ifyllda. Fyll i mätvärden, sätt
-                  resultat och ladda ner som PDF. Gratis och utan konto.
+                  resultat och ladda ner som PDF. Gratis och utan konto. Mallar för andra moment finns
+                  för <a href={`/${LOCALE}/verktyg/egenkontroll-el-mall`}>el</a>, för{' '}
+                  <a href={`/${LOCALE}/verktyg/egenkontroll-bygg-mall`}>bygg och stomme</a> och samlade
+                  under <a href={`/${LOCALE}/verktyg/egenkontroll-mall`}>egenkontroll mall för bygg</a>.
                 </p>
                 <p>
                   En egenkontroll för VVS är montörens egen dokumenterade kontroll av att
@@ -268,7 +271,7 @@ export default function EgenkontrollVvsMallPage() {
         related={[
           { href: `/${LOCALE}/verktyg/egenkontroll-mall`, label: 'Egenkontroll – mall för alla yrken' },
           { href: `/${LOCALE}/verktyg/egenkontroll-el-mall`, label: 'Egenkontroll el – gratis mall' },
-          { href: `/${LOCALE}/verktyg/egenkontroll-bygg-mall`, label: 'Egenkontroll bygg – gratis mall' },
+          { href: `/${LOCALE}/verktyg/egenkontroll-bygg-mall`, label: 'Egenkontroll stomme – gratis mall' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },
         ]}
       />

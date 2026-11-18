@@ -50,7 +50,7 @@ export default function EgenkontrollVatrumMallPage() {
 
   const title = 'Egenkontroll våtrum – gratis mall (PDF) | ByggExp';
   const description =
-    'Gratis egenkontroll-mall för våtrum och tätskikt. Fyll i fuktmätning, tätskikt (BBV/GVK), fall mot golvbrunn och genomföringar online och ladda ner som PDF – utan konto.';
+    'Egenkontroll för våtrum och tätskikt: fuktmätning, tätskikt enligt BBV/GVK, fall mot golvbrunn och genomföringar. Fyll i online, gratis PDF utan konto.';
 
   return (
     <>
@@ -144,8 +144,8 @@ export default function EgenkontrollVatrumMallPage() {
             heading: 'Så gör du egenkontroller för våtrum i ByggExp',
             body: (
               <p>
-                Mallen ovan är gratis att använda. I ByggExp finns färdiga egenkontroll-mallar för
-                våtrum, el, VVS, bygg och skyddsrond – du fyller i på plats, markerar resultat och samlar
+                Mallen ovan är gratis att använda. I ByggExp finns standardmallar för el, VVS,
+                bygg/stomme och skyddsrond, och kontrollpunkterna för våtrum lägger du upp som en egen mall – du fyller i på plats, markerar resultat och samlar
                 alla kontroller per projekt tillsammans med byggdagbok, foton och tid.{' '}
                 Läs mer om{' '}
                 <a href={`/${LOCALE}/funktioner/egenkontroll`}>digital egenkontroll i ByggExp</a>.
@@ -157,7 +157,7 @@ export default function EgenkontrollVatrumMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Gör egenkontroller för våtrum i ByggExp',
-          text: 'Färdiga mallar för våtrum, el, VVS, bygg och skyddsrond – ifyllda på plats och samlade per projekt. Boka en gratis konsultation och se hur det fungerar.',
+          text: 'Färdiga mallar för el, VVS, bygg och skyddsrond plus egna mallar – ifyllda på plats och samlade per projekt. Boka en gratis konsultation och se hur det fungerar.',
           buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}

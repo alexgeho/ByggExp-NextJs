@@ -59,9 +59,9 @@ export default function EgenkontrollByggMallPage() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/egenkontroll-bygg-mall`;
 
-  const title = 'Egenkontroll bygg – gratis mall (PDF) | ByggExp';
+  const title = 'Egenkontroll stomme och bygg – gratis mall (PDF) | ByggExp';
   const description =
-    'Gratis egenkontroll-mall för bygg och stomme. Kontrollpunkter med metod och krav: fuktkvot, mått och lod, infästningar, fuktspärr och brandtätning. Fyll i online och ladda ner som PDF – utan konto.';
+    'Egenkontroll för stomme och bygg: fuktkvot, mått och lod, infästningar, fuktspärr och brandtätning med metod och krav. Fyll i online, gratis PDF utan konto.';
 
   return (
     <>
@@ -94,7 +94,7 @@ export default function EgenkontrollByggMallPage() {
       <LeadMagnetPage
         productBanner={<AiEgenkontrollBanner tool="egenkontroll-bygg-mall" />}
         badge="Gratis mall"
-        title="Egenkontroll bygg – gratis mall att fylla i online"
+        title="Egenkontroll stomme och bygg – gratis mall att fylla i"
         intro="Färdig egenkontroll för bygg och stomme – fuktkvot före inbyggnad, mått och lod mot ritning, infästningar, stomstabilisering, fuktspärr och brandtätning ligger redan ifyllda, med metod och krav per punkt. Sätt resultat, signera och ladda ner som PDF. Gratis och utan konto."
         tool={<EgenkontrollTool defaultPreset="bygg" />}
         disclaimer={false}
@@ -117,7 +117,11 @@ export default function EgenkontrollByggMallPage() {
                   En egenkontroll för bygg är entreprenörens egen dokumenterade kontroll av att
                   byggkonstruktionen är rätt utförd – att måtten stämmer mot ritning, att infästningar
                   och förankringar sitter som de ska och att fukt och brand hanterats enligt kraven. Den
-                  blir beviset på att momentet är rätt utfört innan det byggs in.
+                  blir beviset på att momentet är rätt utfört innan det byggs in. Den här mallen gäller
+                  stomme och byggdelar; mallar för{' '}
+                  <a href={`/${LOCALE}/verktyg/egenkontroll-el-mall`}>el</a>,{' '}
+                  <a href={`/${LOCALE}/verktyg/egenkontroll-vvs-mall`}>VVS</a> och fler moment finns under{' '}
+                  <a href={`/${LOCALE}/verktyg/egenkontroll-mall`}>egenkontroll mall för bygg</a>.
                 </p>
                 <p>
                   Poängen är enkel: den som utför arbetet intygar själv, punkt för punkt, att det är rätt
@@ -260,6 +264,7 @@ export default function EgenkontrollByggMallPage() {
         related={[
           { href: `/${LOCALE}/verktyg/egenkontroll-mall`, label: 'Egenkontroll – mall för alla yrken' },
           { href: `/${LOCALE}/verktyg/egenkontroll-el-mall`, label: 'Egenkontroll el – gratis mall' },
+          { href: `/${LOCALE}/verktyg/egenkontroll-vvs-mall`, label: 'Egenkontroll VVS – gratis mall' },
           { href: `/${LOCALE}/verktyg/arbetsberedning-mall`, label: 'Arbetsberedning – gratis mall' },
           { href: `/${LOCALE}/verktyg`, label: 'Alla gratis verktyg' },
         ]}

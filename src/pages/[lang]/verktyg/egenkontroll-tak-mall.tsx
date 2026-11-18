@@ -49,7 +49,7 @@ export default function EgenkontrollTakMallPage() {
 
   const title = 'Egenkontroll tak – gratis mall (PDF) | ByggExp';
   const description =
-    'Gratis egenkontroll-mall för takarbete. Fyll i underlagstäckning, infästning (vindlast), täta genomföringar, fall och taksäkerhet online och ladda ner som PDF – utan konto.';
+    'Egenkontroll för takarbete: underlagstäckning, infästning efter vindlast, täta genomföringar, fall och taksäkerhet. Fyll i online, gratis PDF utan konto.';
 
   return (
     <>
@@ -143,8 +143,8 @@ export default function EgenkontrollTakMallPage() {
             heading: 'Så gör du egenkontroller för tak i ByggExp',
             body: (
               <p>
-                Mallen ovan är gratis att använda. I ByggExp finns färdiga egenkontroll-mallar för tak,
-                el, VVS, bygg och skyddsrond – du fyller i på plats, markerar resultat och samlar alla
+                Mallen ovan är gratis att använda. I ByggExp finns standardmallar för el, VVS,
+                bygg/stomme och skyddsrond, och kontrollpunkterna för tak lägger du upp som en egen mall – du fyller i på plats, markerar resultat och samlar alla
                 kontroller per projekt tillsammans med byggdagbok, foton och tid.{' '}
                 Läs mer om{' '}
                 <a href={`/${LOCALE}/funktioner/egenkontroll`}>digital egenkontroll i ByggExp</a>.
@@ -156,7 +156,7 @@ export default function EgenkontrollTakMallPage() {
         faq={FAQ}
         cta={{
           heading: 'Gör egenkontroller för tak i ByggExp',
-          text: 'Färdiga mallar för tak, el, VVS, bygg och skyddsrond – ifyllda på plats och samlade per projekt. Boka en gratis konsultation och se hur det fungerar.',
+          text: 'Färdiga mallar för el, VVS, bygg och skyddsrond plus egna mallar – ifyllda på plats och samlade per projekt. Boka en gratis konsultation och se hur det fungerar.',
           buttonLabel: 'Boka gratis konsultation',
           href: `/${LOCALE}/contact`,
         }}

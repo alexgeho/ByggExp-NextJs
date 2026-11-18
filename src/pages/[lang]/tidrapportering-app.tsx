@@ -4,6 +4,7 @@ import type {
   InferGetStaticPropsType,
 } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import { useState, type MouseEvent } from "react";
 
 import CTA from "../../components/CTA/CTA";
@@ -21,9 +22,12 @@ import { headerTranslations } from "../../locales/header";
 import { pricingTranslations } from "../../locales/pricing";
 import type { LandingLanguageCode } from "../../locales/languages";
 
-// Product landing page for "tidrapportering app" / "tidrapportering app gratis".
-// Commercial intent; the blog cluster (tidrapportering, app-for-tidrapportering-bygg …)
-// stays informational and links here. Same template as /sv/enmansforetag.
+// Landing page for trying the app for free ("tidrapportering app gratis",
+// "testa tidrapport-app"). The head queries "tidrapportering bygg /
+// tidrapporteringssystem bygg / tidrapportering app" belong to
+// /sv/funktioner/tidrapporteringssystem-bygg (SEO 2026-11-19); this page links
+// there in the lead and keeps its own angle: download the app, 14 days free.
+// Same template as /sv/enmansforetag.
 // Every claim comes from docs/seo/product-facts-verified.md — "gratis" means the
 // 14-day trial only (there is no free plan). Swedish only.
 
@@ -79,7 +83,7 @@ const FEATURES: Feature[] = [
     text: "Arbetsledaren eller admin godkänner timmarna – sedan exporterar du underlaget.",
     bullets: [
       "Tidrapport som PDF och Excel",
-      "Löneunderlag och AGI-underlag som CSV",
+      "Timmar som CSV, lönekörning och AGI i Full koll",
       "ÄTA-timmar märks separat på passet",
     ],
     img: "/landing/features/12salary-1200.webp",
@@ -94,7 +98,8 @@ const TABLE: [string, string][] = [
   ["Restid och traktamente", "Km, minuter och hel eller halv traktamente"],
   ["ÄTA", "Timmarna märks med ÄTA på passet"],
   ["Attest", "Arbetsledare eller admin godkänner"],
-  ["Export", "PDF, Excel, löne-CSV och AGI-underlag"],
+  ["Export", "PDF, Excel och CSV; lönekörning och AGI-underlag i Full koll"],
+  ["Personalliggare", "Per projekt ur in- och utcheckningarna, PDF eller CSV"],
   ["Bokföring", `SIE4-fil till Fortnox, Visma och BL (tillägg ${ADDON_PRICE} kr/mån)`],
   ["Gratis", "14 dagar med alla funktioner"],
 ];
@@ -115,7 +120,7 @@ const FAQ: { question: string; answer: string }[] = [
   },
   {
     question: "Kan jag föra över tidrapporten till lön och Fortnox?",
-    answer: `Ja, som PDF, Excel, löne-CSV och AGI-underlag. Till Fortnox, Visma och BL exporterar du en SIE4-fil med tillägget Integrationer (${ADDON_PRICE} kr/mån).`,
+    answer: `Ja. Timmarna exporteras som PDF, Excel eller CSV, och med Full koll gör du lönekörningen och AGI-underlaget i ByggExp. Till Fortnox, Visma och BL exporterar du en SIE4-fil med tillägget Integrationer (${ADDON_PRICE} kr/mån).`,
   },
   {
     question: "Räknar appen OB och övertid enligt Byggavtalet?",
@@ -130,7 +135,7 @@ const FAQ: { question: string; answer: string }[] = [
 ];
 
 const RELATED: { href: string; label: string }[] = [
-  { href: "/sv/funktioner/tidrapporteringssystem-bygg", label: "Tidrapporteringssystem för bygg" },
+  { href: "/sv/funktioner/tidrapporteringssystem-bygg", label: "Tidrapportering bygg: hela systemet" },
   { href: "/sv/blog/app-for-tidrapportering-bygg", label: "Så funkar en tidrapport-app" },
   { href: "/sv/blog/basta-tidrapporteringssystem-bygg", label: "Tidrapporteringssystem jämförda" },
   { href: "/sv/verktyg/tidrapport-mall", label: "Gratis tidrapport-mall" },
@@ -144,8 +149,8 @@ export default function TidrapporteringAppPage({
   const ctaT = ctaTranslations[lang];
   const footerT = footerTranslations[lang];
   const pricingT = pricingTranslations[lang];
-  const title = "Tidrapportering app för bygg – 14 dagar gratis | ByggExp";
-  const description = `Tidrapportering i mobilen: stämpla in med GPS, timmar per projekt, attest och export till lön. iPhone och Android. 14 dagar gratis, sedan ${PROJEKT_PRICE} kr/mån.`;
+  const title = "Testa tidrapport-appen gratis i 14 dagar | ByggExp";
+  const description = `Ladda ner ByggExp till iPhone eller Android och testa tidrapporteringen gratis i 14 dagar. Sedan ${PROJEKT_PRICE} kr/mån för 10 användare, ingen bindningstid.`;
   const origin = localeOrigin(lang);
   const canonicalUrl = `${origin}/${lang}/${SLUG}`;
 
@@ -180,7 +185,7 @@ export default function TidrapporteringAppPage({
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Hem", item: `${origin}/${lang}` },
         { "@type": "ListItem", position: 2, name: "Funktioner", item: `${origin}/${lang}/funktioner` },
-        { "@type": "ListItem", position: 3, name: "Tidrapportering app", item: canonicalUrl },
+        { "@type": "ListItem", position: 3, name: "Testa tidrapport-appen", item: canonicalUrl },
       ],
     },
   ];
@@ -227,11 +232,16 @@ export default function TidrapporteringAppPage({
                 För byggföretag
               </span>
               <h1>
-                Tidrapportering app för bygget. <span>Testa 14 dagar gratis.</span>
+                Testa tidrapport-appen. <span>Gratis i 14 dagar.</span>
               </h1>
               <p className="em-lead">
-                Medarbetarna stämplar in med GPS och timmarna hamnar på rätt
-                projekt – klara för attest och lön.
+                Ladda ner appen, stämpla in med GPS och se timmarna på rätt
+                projekt redan första dagen. Hela flödet från stämpling till lön
+                beskriver vi under{" "}
+                <Link href="/sv/funktioner/tidrapporteringssystem-bygg">
+                  tidrapportering bygg
+                </Link>
+                .
               </p>
               <a href="#cta" className="btn-primary">
                 Boka gratis konsultation

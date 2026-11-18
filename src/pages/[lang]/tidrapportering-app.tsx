@@ -99,7 +99,6 @@ const TABLE: [string, string][] = [
   ["ÄTA", "Timmarna märks med ÄTA på passet"],
   ["Attest", "Arbetsledare eller admin godkänner"],
   ["Export", "PDF, Excel och CSV; lönekörning och AGI-underlag i Full koll"],
-  ["Personalliggare", "Per projekt ur in- och utcheckningarna, PDF eller CSV"],
   ["Bokföring", `SIE4-fil till Fortnox, Visma och BL (tillägg ${ADDON_PRICE} kr/mån)`],
   ["Gratis", "14 dagar med alla funktioner"],
 ];
@@ -137,7 +136,7 @@ const FAQ: { question: string; answer: string }[] = [
 const RELATED: { href: string; label: string }[] = [
   { href: "/sv/funktioner/tidrapporteringssystem-bygg", label: "Tidrapportering bygg: hela systemet" },
   { href: "/sv/blog/app-for-tidrapportering-bygg", label: "Så funkar en tidrapport-app" },
-  { href: "/sv/blog/basta-tidrapporteringssystem-bygg", label: "Tidrapporteringssystem jämförda" },
+  { href: "/sv/blog/basta-tidrapporteringssystem-bygg", label: "Tidrapporteringssystem: 8 krav att jämföra" },
   { href: "/sv/verktyg/tidrapport-mall", label: "Gratis tidrapport-mall" },
   { href: "/sv/verktyg/ob-overtid-kalkylator", label: "OB- och övertidskalkylator" },
 ];
@@ -149,8 +148,8 @@ export default function TidrapporteringAppPage({
   const ctaT = ctaTranslations[lang];
   const footerT = footerTranslations[lang];
   const pricingT = pricingTranslations[lang];
-  const title = "Testa tidrapport-appen gratis i 14 dagar | ByggExp";
-  const description = `Ladda ner ByggExp till iPhone eller Android och testa tidrapporteringen gratis i 14 dagar. Sedan ${PROJEKT_PRICE} kr/mån för 10 användare, ingen bindningstid.`;
+  const title = "Tidrapportering app – testa gratis i 14 dagar | ByggExp";
+  const description = `Ladda ner ByggExp till iPhone eller Android och testa tidrapporteringen gratis i 14 dagar. Sedan ${PROJEKT_PRICE} kr/mån exkl. moms för 10 användare, ingen bindningstid.`;
   const origin = localeOrigin(lang);
   const canonicalUrl = `${origin}/${lang}/${SLUG}`;
 
@@ -234,12 +233,12 @@ export default function TidrapporteringAppPage({
               <h1>
                 Testa tidrapport-appen. <span>Gratis i 14 dagar.</span>
               </h1>
-              <p className="em-lead">
+              <p className="em-lead em-lead--links">
                 Ladda ner appen, stämpla in med GPS och se timmarna på rätt
                 projekt redan första dagen. Hela flödet från stämpling till lön
-                beskriver vi under{" "}
+                beskriver vi på sidan om{" "}
                 <Link href="/sv/funktioner/tidrapporteringssystem-bygg">
-                  tidrapportering bygg
+                  tidrapportering för bygg
                 </Link>
                 .
               </p>

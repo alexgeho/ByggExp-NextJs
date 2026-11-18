@@ -150,9 +150,8 @@ export default function EgenkontrollMallPage() {
             body: (
               <ol>
                 <li>
-                  Välj en färdig mall ovan (el, VVS, bygg/stomme, våtrum/tätskikt, betong,
-                  tak, ventilation eller skyddsrond) så fylls kontrollpunkterna i automatiskt –
-                  eller skriv egna punkter.
+                  Välj en färdig mall ovan så fylls kontrollpunkterna i automatiskt – eller skriv
+                  egna punkter.
                 </li>
                 <li>Fyll i titel, projekt, ansvarig och datum.</li>
                 <li>Gå igenom varje kontrollpunkt och sätt resultat: godkänd, anmärkning eller ej aktuellt.</li>
@@ -291,7 +290,7 @@ export default function EgenkontrollMallPage() {
                 verktyget – den enskilda hantverkarens eller entreprenörens dokumenterade kontroll av
                 att ett moment är rätt utfört. Egenkontrollerna blir ofta det underlag som visar att
                 punkterna i kontrollplanen faktiskt uppfyllts. Ska du upprätta själva kontrollplanen
-                finns en gratis <a href={`/${LOCALE}/verktyg/kontrollplan-mall`}>kontrollplan mall</a>{' '}
+                finns en gratis <a href={`/${LOCALE}/verktyg/kontrollplan-mall`}>mall för kontrollplan</a>{' '}
                 enligt PBL.
               </p>
             ),
@@ -340,8 +339,7 @@ export default function EgenkontrollMallPage() {
             heading: 'Så gör du egenkontroller i ByggExp',
             body: (
               <p>
-                Mallen ovan är gratis att använda. I ByggExp finns fyra standardmallar – el, VVS,
-                bygg/stomme och skyddsrond – och du skapar egna mallar för återkommande kontroller,
+                Mallen ovan är gratis att använda. I ByggExp finns fyra färdiga standardmallar, och du skapar egna mallar för återkommande kontroller,
                 till exempel våtrum eller tak. Du fyller i på plats, markerar resultat och samlar alla
                 kontroller per projekt; i appen tar du foto per kontrollpunkt, och den färdiga
                 kontrollen signeras och kan exporteras som PDF. Du ser vilka som är godkända och vilka

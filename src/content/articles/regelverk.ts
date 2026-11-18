@@ -367,7 +367,7 @@ const A_YRKESBEVIS_BYGG_LARLING: BlogPost = {
 const A_BOVERKETS_NYA_BYGGREGLER_2026_KONTROLLPLAN_HTML = `
 <p>Den 1 juli 2025 ersatte Boverkets nya bygg- och konstruktionsregler de gamla byggreglerna (BBR) och konstruktionsreglerna (EKS, ersatt av BFS 2024:6). Reformen beskrivs ofta som den största förändringen av regelverket på 30 år. För dig som är entreprenör eller driver byggföretag är det inte bara ett nytt regelverk att läsa – det är en övergångsperiod som stängdes 30 juni 2026, och en förskjutning av ansvar som direkt träffar hur du dokumenterar din egenkontroll.</p>
 
-<p>Ska kontrollplanen uppdateras mot funktionskraven finns en gratis <a href="/sv/verktyg/kontrollplan-mall">kontrollplan mall</a> enligt PBL, och för de enskilda kontrollerna vår <a href="/sv/verktyg/egenkontroll-mall">egenkontroll mall</a>.</p>
+<p>Behöver kontrollplanen uppdateras efter funktionskraven finns en gratis <a href="/sv/verktyg/kontrollplan-mall">mall för kontrollplan</a> enligt PBL, och för de enskilda kontrollerna vår <a href="/sv/verktyg/egenkontroll-mall">mall för egenkontroll</a>.</p>
 
 <h2>Vad har egentligen ändrats?</h2>
 <p>De gamla reglerna var detaljstyrda: BBR angav ofta konkreta värden och hänvisade till standarder som du kunde följa rakt av. De nya reglerna är i stället funktions- och kravbaserade. Boverket anger vilka funktioner och egenskaper en byggnad ska uppnå – men inte längre hur du ska uppfylla dem. Stora delar av de allmänna råden och hänvisningarna till standarder har tagits bort.</p>

@@ -120,7 +120,7 @@ export default function EgenkontrollElMallPage() {
                   signeringssteg. Gratis och utan konto. Mallar för andra moment finns för{' '}
                   <a href={`/${LOCALE}/verktyg/egenkontroll-vvs-mall`}>VVS</a>, för{' '}
                   <a href={`/${LOCALE}/verktyg/egenkontroll-bygg-mall`}>bygg och stomme</a> och samlade
-                  under <a href={`/${LOCALE}/verktyg/egenkontroll-mall`}>egenkontroll mall för bygg</a>.
+                  bland <a href={`/${LOCALE}/verktyg/egenkontroll-mall`}>alla egenkontrollmallar för bygg</a>.
                 </p>
                 <p>
                   En egenkontroll för el är elektrikerns egen dokumenterade kontroll av att

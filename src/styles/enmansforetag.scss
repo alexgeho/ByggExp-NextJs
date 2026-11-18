@@ -32,14 +32,15 @@
   line-height: 1.55;
   color: var(--muted);
   margin-bottom: 20px;
+}
 
-  // A text link inside the lead (e.g. /sv/tidrapportering-app → the owner
-  // page of the time-reporting queries) must look like a link.
-  a {
-    color: var(--blue);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
+// R55: a text link inside a landing-page lead (only leads marked
+// .em-lead--links, e.g. /sv/tidrapportering-app) – accessible link blue,
+// underlined. FunktionHero / PlanPriceSection leads are not affected.
+.em-lead--links a {
+  color: var(--blue-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .em-bullets {

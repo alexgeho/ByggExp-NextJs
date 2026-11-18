@@ -59,7 +59,7 @@ export default function EgenkontrollByggMallPage() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://byggexp.se';
   const canonicalUrl = `${siteUrl}/${LOCALE}/verktyg/egenkontroll-bygg-mall`;
 
-  const title = 'Egenkontroll stomme och bygg – gratis mall (PDF) | ByggExp';
+  const title = 'Egenkontroll stomme – gratis mall, metod och krav | ByggExp';
   const description =
     'Egenkontroll för stomme och bygg: fuktkvot, mått och lod, infästningar, fuktspärr och brandtätning med metod och krav. Fyll i online, gratis PDF utan konto.';
 
@@ -94,7 +94,7 @@ export default function EgenkontrollByggMallPage() {
       <LeadMagnetPage
         productBanner={<AiEgenkontrollBanner tool="egenkontroll-bygg-mall" />}
         badge="Gratis mall"
-        title="Egenkontroll stomme och bygg – gratis mall att fylla i"
+        title="Egenkontroll stomme – gratis mall att fylla i"
         intro="Färdig egenkontroll för bygg och stomme – fuktkvot före inbyggnad, mått och lod mot ritning, infästningar, stomstabilisering, fuktspärr och brandtätning ligger redan ifyllda, med metod och krav per punkt. Sätt resultat, signera och ladda ner som PDF. Gratis och utan konto."
         tool={<EgenkontrollTool defaultPreset="bygg" />}
         disclaimer={false}
@@ -120,8 +120,8 @@ export default function EgenkontrollByggMallPage() {
                   blir beviset på att momentet är rätt utfört innan det byggs in. Den här mallen gäller
                   stomme och byggdelar; mallar för{' '}
                   <a href={`/${LOCALE}/verktyg/egenkontroll-el-mall`}>el</a>,{' '}
-                  <a href={`/${LOCALE}/verktyg/egenkontroll-vvs-mall`}>VVS</a> och fler moment finns under{' '}
-                  <a href={`/${LOCALE}/verktyg/egenkontroll-mall`}>egenkontroll mall för bygg</a>.
+                  <a href={`/${LOCALE}/verktyg/egenkontroll-vvs-mall`}>VVS</a> och fler moment finns{' '}
+                  bland <a href={`/${LOCALE}/verktyg/egenkontroll-mall`}>alla egenkontrollmallar för bygg</a>.
                 </p>
                 <p>
                   Poängen är enkel: den som utför arbetet intygar själv, punkt för punkt, att det är rätt

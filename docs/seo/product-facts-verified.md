@@ -29,7 +29,7 @@
 - "Koll på pengarna" 299 kr (max 2 users) · "Koll på jobbet" 690 kr incl. 10 users (+69/extra) · "Full koll" 990 kr incl. 10 users (+69/extra) · integrations add-on 199 kr · yearly −15% · >40 users custom.
 - 14 dagar gratis med alla funktioner, ingen startavgift, ingen bindningstid. Site CTA = "Boka demo" (/sv/contact). Don't link self-serve register.
 - Apps: https://apps.apple.com/se/app/id6748280779 · https://play.google.com/store/apps/details?id=se.byggexp.app
-- Personalliggare: module not fully shipped — don't present as live feature beyond "personalliggare-PDF".
+- Personalliggare: module not fully shipped — don't present as live feature beyond "personalliggare-PDF". ⚠️ UTC-fel i exporten (getPersonalliggare) och ingen UE-roll på main – visa inte som färdig funktion förrän ägaren bekräftat (granskning 2026-11-19).
 - No customer reviews/quotes/customer counts available — never invent.
 
 ## Skanning (ägaren bekräftat 2026-10-20)
@@ -166,6 +166,7 @@ Code-checked read-only: AD = byggexp-admin e7dc1b0, MO = byggexp-app 87221db4. B
 - TERMINOLOGY (owner 2026-11-15): what «Ny bokning → Arbetsorder» creates is an **order** (same entity that used to be called project; the menu/list is still labelled «Projekt» in admin e7dc1b0 and the app). On the site write «order/arbetsorder», never «ordern blir ett projekt»; refer to «Projekt» only as the name of the list where it is found.
 
 ### Personalliggare (verified 2026-11-19, sv; BE 7b3a39e, AD 3fff3edc, both main)
+- ⚠️ UTC-fel i exporten (getPersonalliggare) och ingen UE-roll på main – visa inte som färdig funktion förrän ägaren bekräftat (granskning 2026-11-19). Exporttider formateras med toISOString().slice(11,16) i BE src/shifts/shifts.service.ts → PDF/CSV visar 1–2 h för tidigt. På sajten högst: «Personalliggare per projekt kan laddas ner som PDF eller CSV.»
 - YES: per project, tab «Personalliggare» under «Tid & personal» in the project (AD src/features/projects/ProjectDetailPage.jsx:38,177-179; sv labels AD src/i18n/messages/sv.js:269,1206). Period picker (default current month); rows built from the workers' shift check-in/out: datum, namn, personnummer (from the user, «—» if empty), företag + org.nr, in, ut — AD src/features/projects/components/tabs/ProjectPersonalliggareTab.jsx; BE src/shifts/shifts.service.ts:162-226 (getPersonalliggare), GET /shifts/personalliggare/:projectId — BE src/shifts/shifts.controller.ts:89-97.
 - YES: download as PDF (BE src/shifts/templates/personalliggare-pdf.template.ts, controller :100-117) and CSV (built in the browser, same tab). Module: «shifts» = Koll på jobbet + Full koll (BE src/company/modules.ts PROJEKT list).
 - NOT CLAIMED: that this meets every Skatteverket requirement (byggherre notification, ID06 register, real-time access for a visiting inspector, UE/inhyrda checking in themselves — subcontractor role is NO above). Say «personalliggare per projekt ur in- och utcheckningarna, PDF eller CSV», nothing more.

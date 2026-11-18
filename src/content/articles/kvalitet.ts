@@ -143,7 +143,7 @@ const KONTRAVG_HTML = `
 </ul>
 
 <h2>Så undviker digital personalliggare avgiften</h2>
-<p>En digital liggare tar bort de vanligaste orsakerna till avgift. In- och utcheckning sker i realtid direkt i mobilen, ofta med samma disciplin som ett ID06-kort ger. Lösningen fungerar även offline på platser med dålig täckning och synkar när uppkopplingen är tillbaka. Alla underentreprenörer samlas i en och samma liggare, så att ingen faller mellan stolarna.</p>
+<p>En digital liggare tar bort de vanligaste orsakerna till avgift. In- och utcheckning sker direkt i mobilen. Kontrollera att även underentreprenörer och inhyrda kommer med i liggaren med sitt eget företag och organisationsnummer.</p>
 <p>Vid ett kontrollbesök kan liggaren visas direkt på Skatteverkets läsplatta eller mobil – ingen letande efter en pärm på fel plats. Och eftersom varje in- och utcheckning tidsstämplas finns en spårbar logg som styrker att liggaren förts korrekt. Det är precis den bevisning som gör skillnaden när inspektören står på plats.</p>
 
 <h2>Så gör du i ByggExp</h2>
@@ -179,7 +179,7 @@ const KONTRAVG: BlogPost = {
   seoImageUrl: `${SITE_URL}/landing/verktyg/tidrapport-preview.webp`,
   canonicalUrl: "",
   noIndex: false, isPublished: true,
-  publishedAt: "2026-08-18T13:30:00.000Z", createdAt: "2026-08-18T13:30:00.000Z", updatedAt: "2026-08-18T13:30:00.000Z",
+  publishedAt: "2026-08-18T13:30:00.000Z", createdAt: "2026-08-18T13:30:00.000Z", updatedAt: "2026-11-19T08:00:00.000Z",
 };
 
 const A_BYGGMOTESPROTOKOLL_MALL_HTML = `
@@ -628,7 +628,7 @@ const A_STARTMOTE_BYGGPROJEKT_CHECKLISTA: BlogPost = {
 const A_RESURSPLANERING_BYGG_HTML = `
 <p>Resursplanering i bygg handlar om att rätt lag och rätt maskin finns på rätt arbetsplats – utan att samma resurs lovas bort två gånger. Med fem samtidiga projekt blir det manuella schemat en vanlig orsak till dubbelbokning: samma lag utlovas till två projektledare, eller grävmaskinen står inbokad på två adresser samma morgon.</p>
 
-<p>Här får du en checklista för att välja verktyg, en jämförelse mellan Excel och system, och metoden för att se och jämna ut överbeläggning. Vill du börja direkt kan du lägga upp projektens moment i vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>. Hur planering och bemanning fungerar i ByggExp visar vi på sidan om <a href="/sv/funktioner/resursplanering">resursplanering bygg</a>.</p>
+<p>Här får du en checklista för att välja verktyg, en jämförelse mellan Excel och system, och metoden för att se och jämna ut överbeläggning. Vill du börja direkt kan du lägga upp projektens moment i vår gratis <a href="/sv/verktyg/gantt-schema-mall">Gantt-schema-mall</a>. Hur planering och bemanning fungerar i ByggExp visar vi på sidan om <a href="/sv/funktioner/resursplanering">resursplanering för bygg</a>.</p>
 
 <h2>Vad innebär resursplanering i bygg?</h2>
 <p><a href="/sv/blog/projektplanering-bygg">Projektplanering</a> svarar på <em>vad</em> som ska göras och <em>när</em>: moment, beroenden och slutdatum. Resursplanering svarar på <em>vem eller vilken maskin</em> som utför varje moment, och om kapaciteten räcker. Det är i glappet mellan de två som dubbelbokningarna uppstår.</p>
@@ -765,7 +765,7 @@ const A_RESURSPLANERING_BYGG: BlogPost = {
   title: "Resursplanering i bygg – undvik dubbelbokning av lag och maskiner", slug: "resursplanering-bygg", locale: "sv",
   excerpt: "Checklista för resursplaneringsverktyg, Excel jämfört med system, gratis mall och metoden för att planera lag, maskiner och underentreprenörer utan dubbelbokning.", tag: "Planering",
   coverImageUrl: "/landing/features/5planering.webp", contentHtml: A_RESURSPLANERING_BYGG_HTML,
-  seoTitle: "Resursplanering i bygg: metod, histogram och mall | ByggExp", seoDescription: "Resursplanering i bygg: checklista för verktyg, Excel jämfört med system, gratis mall och metoden för att undvika dubbelbokade lag och maskiner.",
+  seoTitle: "Resursplanering i bygg: metod, histogram och mall | ByggExp", seoDescription: "Resursplanering i bygg: metoden för att se och jämna ut överbeläggning, resurshistogram, gratis mall och hur du undviker dubbelbokade lag.",
   seoImageUrl: `${SITE_URL}/landing/features/5planering.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-19T08:18:00.000Z", createdAt: "2026-08-19T08:18:00.000Z", updatedAt: "2026-11-19T08:00:00.000Z",
 };
@@ -1517,7 +1517,7 @@ const ENKELT_TIDRAPPORTERINGSSYSTEM: BlogPost = {
   contentHtml: ENKELT_TIDRAPPORTERINGSSYSTEM_HTML,
   seoTitle: 'Enkelt tidrapporteringssystem – så väljer du rätt | ByggExp',
   seoDescription:
-    'Enkelt tidrapporteringssystem för bygg: så känner du igen ett som laget faktiskt fyller i – utan att tappa timtyp, ÄTA, attest och export till lön.',
+    'Enkelt tidrapporteringssystem för bygg: så känner du igen ett system som laget faktiskt använder – med timtyp, ÄTA, attest och export till lön.',
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`,
   canonicalUrl: '',
   noIndex: false,

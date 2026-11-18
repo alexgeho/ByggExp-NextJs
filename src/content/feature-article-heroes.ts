@@ -93,7 +93,7 @@ export const FEATURE_ARTICLE_HEROES: Record<
   },
   'automatisk-tidrapportering-och-export': {
     sv: {
-      h1: 'Tidrapportering.',
+      h1: 'Tidrapportering online.',
       h1Accent: 'Attesterad tid per projekt.',
       plan: 'projekt',
       lead: 'Laget stämplar in i appen med GPS, du attesterar och exporterar timmarna till Excel eller PDF.',

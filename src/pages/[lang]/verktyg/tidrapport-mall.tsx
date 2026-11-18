@@ -151,7 +151,7 @@ export default function TidrapportMallPage() {
                   ett projekt faktiskt går med vinst. Är tiden fel eller ofullständig följer felen med
                   hela vägen till lön och faktura – därför lönar det sig att rapportera löpande och
                   korrekt. Vill laget stämpla i mobilen i stället för att fylla i mallen, läs om{' '}
-                  <a href={`/${LOCALE}/funktioner/tidrapporteringssystem-bygg`}>tidrapportering bygg</a>{' '}
+                  <a href={`/${LOCALE}/funktioner/tidrapporteringssystem-bygg`}>tidrapportering för bygg</a>{' '}
                   i ByggExp.
                 </p>
               </>

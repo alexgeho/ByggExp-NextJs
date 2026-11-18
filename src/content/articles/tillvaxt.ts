@@ -841,7 +841,7 @@ const A_APP_TIDRAPPORTERING_BYGG_HTML = `
 <li><strong>Export till lön och faktura</strong> – annars flyttar du bara pappersarbetet.</li>
 <li><strong>Fungerar på iPhone och Android.</strong></li>
 </ul>
-<p>Vill du jämföra konkreta alternativ med pris? Se <a href="/sv/blog/basta-tidrapporteringssystem-bygg">bästa tidrapporteringssystem för bygg 2026</a>.</p>
+<p>Ska du jämföra flera system? Använd våra <a href="/sv/blog/basta-tidrapporteringssystem-bygg">8 krav att jämföra för bästa tidrapporteringssystem för bygg 2026</a>.</p>
 
 <h2>Varför tidrapporteringen hör hemma i mobilen</h2>
 <p>Tidrapportering i bygg skiljer sig från ett vanligt kontorsjobb: personalen är utspridd på olika arbetsplatser, byter projekt under dagen och sitter sällan vid en dator. Därför måste tidrapporteringen ske i mobilen – där jobbet utförs.</p>
@@ -902,7 +902,7 @@ const A_APP_TIDRAPPORTERING_BYGG: BlogPost = {
   title: "App för tidrapportering i byggföretag – krav att ställa innan du väljer", slug: "app-for-tidrapportering-bygg", locale: "sv",
   excerpt: "Krav att ställa på en app för tidrapportering i bygg: GPS och manuell tid, projekt, timtyp, ÄTA, attest och export till lön och faktura.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: A_APP_TIDRAPPORTERING_BYGG_HTML,
-  seoTitle: "App för tidrapportering: 8 krav innan du väljer | ByggExp", seoDescription: "App för tidrapportering i bygg: 8 krav att ställa innan du väljer – GPS eller manuell tid, projekt, timtyp, ÄTA, attest och export till lön och faktura.",
+  seoTitle: "Krav på en tidrapport-app för bygg: 8 punkter | ByggExp", seoDescription: "App för tidrapportering i bygg: 8 krav att ställa innan du väljer – GPS eller manuell tid, projekt, timtyp, ÄTA, attest och export till lön och faktura.",
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
   publishedAt: "2026-08-22T09:00:00.000Z", createdAt: "2026-08-22T09:00:00.000Z", updatedAt: "2026-11-19T08:00:00.000Z",
 };
@@ -984,106 +984,45 @@ const A_STAMPELKLOCKA_APP_GPS: BlogPost = {
 };
 
 const A_BASTA_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
-<p>Vilket är det bästa tidrapporteringssystemet för bygg? Det beror på hur stort laget är, om ni behöver lön och faktura i samma system och hur mycket ni vill betala per person. Här jämför vi 8 system som svenska byggföretag och hantverkare använder: pris, gratis test, mobilapp, GPS-stämpling och export till lön.</p>
-<p>ByggExp är vårt eget system och står därför först. Uppgifterna om de andra systemen kommer från leverantörernas egna webbplatser i oktober 2026, och varje system får både en styrka och en svaghet. Vill du först se vad ett system ska klara, se vårt <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
+<p>Vilket tidrapporteringssystem som är bäst för ett byggföretag beror på lagets storlek, om lön och faktura ska ligga i samma system och hur priset räknas. Här är de åtta kriterier vi skulle jämföra, med frågorna du ska ställa till varje leverantör.</p>
+<p>Vill du se hur ett system ser ut som uppfyller kriterierna, se vårt <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapporteringssystem för bygg</a>.</p>
 
-<h2>Jämförelse: 8 tidrapporteringssystem för bygg</h2>
-<div class="article-table article-table--compare"><table>
-<thead><tr><th>System</th><th>Pris från</th><th>Gratis test</th><th>Mobilapp</th><th>GPS-stämpling</th><th>Export till lön</th><th>Passar för</th></tr></thead>
-<tbody>
-<tr><td><strong>ByggExp</strong></td><td>690&nbsp;kr/mån inkl. 10 anv.</td><td>14 dagar</td><td>Ja</td><td>Ja</td><td>I Full koll (CSV)</td><td>Små och medelstora lag</td></tr>
-<tr><td><strong>Bygglet</strong></td><td>719&nbsp;kr/mån inkl. 6 anv.</td><td>Testkonto</td><td>Ja</td><td>–</td><td>Ja</td><td>Tid och personalliggare</td></tr>
-<tr><td><strong>Fieldly</strong></td><td>219&nbsp;kr/anv./mån</td><td>Ja</td><td>Ja</td><td>–</td><td>Från Pro</td><td>Bygg och installation</td></tr>
-<tr><td><strong>Blikk</strong></td><td>319&nbsp;kr/mån + licenser</td><td>14 dagar</td><td>Ja</td><td>–</td><td>Ja</td><td>Licens per roll</td></tr>
-<tr><td><strong>Byggdagboken</strong></td><td>199&nbsp;kr/anv./mån</td><td>–</td><td>Ja</td><td>–</td><td>I Rubbet</td><td>Tid, dagbok och ÄTA</td></tr>
-<tr><td><strong>MyGizmo</strong></td><td>122&nbsp;kr/anv./mån + 499&nbsp;kr</td><td>14 dagar</td><td>Ja</td><td>–</td><td>Ja</td><td>Hantverksföretag</td></tr>
-<tr><td><strong>SmartDok</strong></td><td>På förfrågan</td><td>–</td><td>Ja</td><td>–</td><td>Ja</td><td>Anläggning och maskiner</td></tr>
-<tr><td><strong>Next</strong></td><td>2&nbsp;100&nbsp;kr/mån</td><td>–</td><td>Ja</td><td>Tillval</td><td>Ja</td><td>Större entreprenad</td></tr>
-</tbody>
-</table></div>
-<p>Priser enligt respektive leverantörs webbplats, oktober 2026, exkl. moms. Lägsta listpris, ofta vid årsbetalning. – betyder att uppgiften inte framgår av leverantörens webbplats.</p>
-
-<h2>Vad kostar det för ett lag på 10 personer?</h2>
-<p>Listpris per månad utan årsrabatt och utan tillval. Funktionerna skiljer sig åt, så jämför inte bara priset.</p>
+<h2>8 krav att jämföra</h2>
 <div class="article-table"><table>
-<thead><tr><th>System</th><th>Så räknas det</th><th>Lön ingår</th><th>10 personer/mån</th></tr></thead>
+<thead><tr><th>Kriterium</th><th>Fråga att ställa</th><th>Varför</th></tr></thead>
 <tbody>
-<tr><td><strong>ByggExp</strong> (Koll på jobbet)</td><td>Fast pris inkl. 10 användare</td><td>Nej</td><td>690 kr</td></tr>
-<tr><td><strong>ByggExp</strong> (Full koll)</td><td>Fast pris inkl. 10 användare</td><td>Ja</td><td>990 kr</td></tr>
-<tr><td><strong>Bygglet Tid</strong></td><td>719 kr (1 admin + 5 app) + 4 × 269 kr</td><td>–</td><td>1 795 kr</td></tr>
-<tr><td><strong>MyGizmo</strong> (Bas)</td><td>10 × 153 kr + 624 kr grundavgift (kvartalsfaktura)</td><td>Ja</td><td>2 154 kr</td></tr>
-<tr><td><strong>Byggdagboken</strong> (Bas)</td><td>10 × 219 kr (månads- eller kvartalsfaktura)</td><td>Nej</td><td>2 190 kr</td></tr>
-<tr><td><strong>Fieldly</strong> (Go)</td><td>10 × 274 kr (kvartalsbetalning)</td><td>Nej</td><td>2 740 kr</td></tr>
+<tr><td><strong>Pris för hela laget</strong></td><td>Vad kostar det per månad för vårt lag i dag – och med fem personer till?</td><td>Pris per användare växer med laget; fast pris gör det inte</td></tr>
+<tr><td><strong>App för iPhone och Android</strong></td><td>Fungerar appen likadant på båda?</td><td>Byggteam blandar telefonmodeller</td></tr>
+<tr><td><strong>GPS och manuell tid</strong></td><td>Kan den som inte vill dela position rapportera manuellt?</td><td>Alla vill inte dela sin position</td></tr>
+<tr><td><strong>Timtyp, restid, traktamente och ÄTA på passet</strong></td><td>Registreras de på passet eller i efterhand?</td><td>Det är där byggtidrapporter oftast blir fel</td></tr>
+<tr><td><strong>Attest</strong></td><td>Vem godkänner timmarna innan de går till lön och faktura?</td><td>Någon ska ansvara för att timmarna stämmer</td></tr>
+<tr><td><strong>Export till lön och bokföring</strong></td><td>Fil eller API – och vad kostar det?</td><td>Annars flyttar du bara pappersarbetet</td></tr>
+<tr><td><strong>Personalliggare</strong></td><td>Per projekt? Kommer UE och inhyrda med, med eget org.nr? Kan den visas vid kontroll?</td><td>Skatteverket kontrollerar på plats</td></tr>
+<tr><td><strong>Villkor och gratis test</strong></td><td>Bindningstid, startavgift, tillval – och kan laget testa alla funktioner innan vi betalar?</td><td>Där avgörs totalpriset, och systemet fungerar bara om alla stämplar varje dag</td></tr>
 </tbody>
 </table></div>
-<p>Blikk (pris per roll), SmartDok (pris på förfrågan) och Next (antal användare framgår inte) är inte med. Bygglet anger inte om priset gäller månads- eller årsfaktura.</p>
 
-<h2>De 8 systemen – styrkor och svagheter</h2>
+<h2>Räkneexempel: 10 personer</h2>
+<p>Pris per användare räknas som antal personer × pris per person, ofta plus en grundavgift eller ett minsta antal användare. Fast pris med ett antal användare inkluderade ändras inte förrän laget blir större än det som ingår.</p>
+<div class="article-table"><table>
+<thead><tr><th>Prismodell</th><th>Så räknas det</th><th>10 personer/mån</th></tr></thead>
+<tbody>
+<tr><td><strong>Pris per användare</strong></td><td>10 × pris per person + eventuell grundavgift</td><td>Räkna med leverantörens egna siffror</td></tr>
+<tr><td><strong>ByggExp Koll på jobbet</strong></td><td>Fast pris inkl. 10 användare, tidrapport och projekt</td><td>690 kr</td></tr>
+<tr><td><strong>ByggExp Full koll</strong></td><td>Fast pris inkl. 10 användare, även lön och faktura</td><td>990 kr</td></tr>
+</tbody>
+</table></div>
+<p>Priser exkl. moms. I ByggExp kostar varje användare utöver 10 69 kr/mån.</p>
 
-<h3>1. ByggExp – fast pris för hela laget</h3>
+<h2>Så uppfyller ByggExp kriterierna</h2>
 <p>Laget stämplar in och ut i appen för iPhone och Android, och GPS bekräftar platsen. Lämnar någon projektområdet pausas passet automatiskt. Den som inte vill dela sin position skriver in timmarna manuellt. Varje pass får timtyp (normal, övertid eller OB), restid och traktamente, och kan märkas med en ÄTA. Du attesterar på webben och exporterar tidrapporten som PDF eller Excel. I Full koll blir timmarna lön: löneunderlag som CSV och AGI-underlag.</p>
 <ul>
-<li><strong>Pris:</strong> Koll på jobbet (tidrapport och projekt) 690 kr/mån inkl. 10 användare, sedan 69 kr per extra användare. Full koll med lön och faktura 990 kr/mån inkl. 10 användare, sedan 69 kr per extra användare. SIE4-export till Fortnox, Visma och BL ingår i tillägget Integrationer för 199 kr/mån. Ingen startavgift eller bindningstid. <a href="/sv#pricing">Se alla priser</a>.</li>
-<li><strong>Passar bäst för:</strong> små och medelstora byggföretag som vill ha fast pris för hela laget.</li>
-<li><strong>Nackdel:</strong> ingen direktkoppling via API till Fortnox eller Visma (export via fil), inget offlineläge och attest i ett led. OB och övertid räknas inte automatiskt enligt Byggavtalet, och en fullständig elektronisk personalliggare ingår inte i dag.</li>
+<li><strong>Pris:</strong> Koll på jobbet (tidrapport och projekt) 690 kr/mån inkl. 10 användare, sedan 69 kr per extra användare. Full koll med lön och faktura 990 kr/mån inkl. 10 användare, sedan 69 kr per extra användare. SIE4-export ingår i tillägget Integrationer för 199 kr/mån. Ingen startavgift eller bindningstid, 14 dagar gratis. <a href="/sv#pricing">Se alla priser</a>.</li>
+<li><strong>Export:</strong> Fortnox är kopplat via API för fakturor och leverantörsfakturor; tidrapport och lön går till Fortnox och Visma som fil (SIE4 eller CSV).</li>
+<li><strong>Personalliggare:</strong> personalliggaren tas fram per projekt ur incheckningarna som PDF eller CSV, men ersätter inte alla Skatteverkets krav på en elektronisk personalliggare.</li>
+<li><strong>Begränsningar:</strong> inget offlineläge och attest i ett led. OB och övertid räknas inte automatiskt enligt Byggavtalet – medarbetaren väljer timtyp per pass.</li>
 </ul>
 <p>Läs mer om <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering online i ByggExp</a>.</p>
-
-<h3>2. Bygglet</h3>
-<p>Bygglet är ett projektverktyg för bygg och hantverkare med tidrapportering, projekt, offert och elektronisk personalliggare. Bygglet Tid (projekt, tidrapport och personalregister) kostar 719 kr/mån med 1 admin och 5 appanvändare, och fler appanvändare kostar 269 kr/mån styck. Hela paketen kostar Mini 1 049 kr/mån, Bas från 1 479 kr/mån och Total från 2 289 kr/mån. Uppstart, support och utbildning ingår.</p>
-<ul>
-<li><strong>Passar bäst för:</strong> företag som vill ha tidrapport och personalliggare i samma system (personalliggaren finns i Mini, Bas och Total).</li>
-<li><strong>Nackdel:</strong> bindningstiden är ett år, och koppling till bokföringssystem som Fortnox kostar 139 kr/mån extra.</li>
-</ul>
-<p>Källa: <a href="https://bygglet.com/paket-och-priser/" target="_blank" rel="noopener">Bygglets paket och priser</a> och <a href="https://bygglet.com/bygglets-paket-och-priser-2026/" target="_blank" rel="noopener">Bygglets priser 2026</a>, okt 2026.</p>
-
-<h3>3. Fieldly</h3>
-<p>Fieldly riktar sig till bygg och installation. Paketet Go innehåller arbetsorder och tid-, rese- och utgiftsrapporter och kostar 219 kr per användare och månad vid årsbetalning (274 kr vid kvartalsbetalning), minst 2 användare. Pro kostar 439 kr (549 kr), minst 3 användare, och lägger till bland annat löneunderlag, offert och byggdagbok. Personalliggare ingår i Unlimited. Integration till ekonomisystem som Fortnox, Visma, Spiris, Hogia och Björn Lundén ingår utan extra kostnad.</p>
-<ul>
-<li><strong>Passar bäst för:</strong> installations- och byggföretag med många arbetsorder och servicejobb.</li>
-<li><strong>Nackdel:</strong> pris per användare med minsta antal, och löneunderlag kräver Pro.</li>
-</ul>
-<p>Källa: <a href="https://sv.fieldly.com/priser" target="_blank" rel="noopener">Fieldlys priser</a>, okt 2026.</p>
-
-<h3>4. Blikk</h3>
-<p>Blikk är ett system för tid, projekt och utlägg. Blikk Business kostar 319 kr/mån (269 kr vid årsfaktura), och varje ytterligare användare får en licens för 59–319 kr/mån beroende på roll. Business har mobilapp, löneunderlag och integration med ekonomi- och lönesystem. Blikk har inga bindningstider och 14 dagars gratis test.</p>
-<ul>
-<li><strong>Passar bäst för:</strong> företag med blandade roller, där bara en del av personalen behöver fulla rättigheter.</li>
-<li><strong>Nackdel:</strong> byggt för flera branscher, inte bara bygg, och priset beror på licensmixen. Räkna i Blikks priskalkylator.</li>
-</ul>
-<p>Källa: <a href="https://www.blikk.se/priser/foretag" target="_blank" rel="noopener">Blikks priser för företag</a>, okt 2026.</p>
-
-<h3>5. Byggdagboken</h3>
-<p>Byggdagboken samlar tidrapport, dagbok, maskinrapport och ÄTA. Bas kostar 199 kr per användare och månad, Plus 299 kr och Rubbet 399 kr vid årsfakturering. Vid månads- eller kvartalsfakturering tillkommer 10 procent (219, 329 och 439 kr). Alla paket har obegränsat antal administratörer och fri digital uppstart.</p>
-<ul>
-<li><strong>Passar bäst för:</strong> bygg- och anläggningsföretag som vill ha tidrapport och byggdagbok i samma app.</li>
-<li><strong>Nackdel:</strong> export till lönesystem finns först i Rubbet, 399–439 kr per användare, vilket blir dyrt för större lag.</li>
-</ul>
-<p>Källa: <a href="https://www.byggdagboken.se/shop/" target="_blank" rel="noopener">Byggdagbokens paket och priser</a>, okt 2026.</p>
-
-<h3>6. MyGizmo</h3>
-<p>MyGizmo är ett projektverktyg för hantverksföretag. Bas kostar 122 kr per användare och månad vid årsfakturering (153 kr vid kvartalsfakturering), plus en grundavgift på 499 kr/mån (624 kr) som bland annat täcker löneunderlag, fakturaunderlag, ÄTA och byggdagbok. Integration med lönesystem som Visma Lön, Fortnox Lön och Crona Lön kostar 122 kr/mån per integration. Du kan testa gratis i 14 dagar.</p>
-<ul>
-<li><strong>Passar bäst för:</strong> små och medelstora hantverksföretag som vill ha hela flödet från tid till löneunderlag.</li>
-<li><strong>Nackdel:</strong> bindningstiden är tolv månader som standard, och integrationerna är tillval.</li>
-</ul>
-<p>Källa: <a href="https://mygizmo.se/priser/" target="_blank" rel="noopener">MyGizmos priser</a>, okt 2026.</p>
-
-<h3>7. SmartDok</h3>
-<p>SmartDok är en del av Visma och byggt för bygg och anläggning. Systemet har moduler för tid och lön, personalliggare, KMA och maskiner. Arbets- och maskintimmar rapporteras i samma tidrapport, och löneunderlaget kan exporteras till bland annat Visma och Fortnox.</p>
-<ul>
-<li><strong>Passar bäst för:</strong> anläggnings- och byggföretag med maskinpark och höga krav på KMA-dokumentation.</li>
-<li><strong>Nackdel:</strong> pris på förfrågan, och ingen gratisperiod anges på webbplatsen.</li>
-</ul>
-<p>Källa: <a href="https://smartdok.se/priser/" target="_blank" rel="noopener">SmartDoks priser</a> och <a href="https://smartdok.se/tidrapportering/" target="_blank" rel="noopener">SmartDok tidrapportering</a>, okt 2026.</p>
-
-<h3>8. Next</h3>
-<p>Next Project är ett affärssystem för byggbranschen. Foundation kostar från 2 100 kr/mån och innehåller projektledning, arbetsorder, fakturering och tidsregistrering. Core från 4 195 kr/mån lägger till ÄTA, dagbok och resursplanering. Löneexport ingår i alla paket, och GPS Tracker finns som tillval.</p>
-<ul>
-<li><strong>Passar bäst för:</strong> större bygg- och entreprenadföretag som vill ha hela projektekonomin i ett system.</li>
-<li><strong>Nackdel:</strong> mer system, och högre pris, än ett litet lag behöver för att bara rapportera tid.</li>
-</ul>
-<p>Källa: <a href="https://next-tech.com/sv/priser/" target="_blank" rel="noopener">Next priser</a> och <a href="https://next-tech.com/losningar/tidrapportering-bygg/" target="_blank" rel="noopener">Next tidrapportering inom bygg</a>, okt 2026.</p>
 
 <h2>Så väljer du rätt</h2>
 <ul>
@@ -1096,37 +1035,37 @@ const A_BASTA_TIDRAPPORTERINGSSYSTEM_BYGG_HTML = `
 
 <h2>Vanliga frågor</h2>
 <h3>Vad kostar ett tidrapporteringssystem för bygg?</h3>
-<p>System med pris per användare kostar från 122 kr per person och månad, ofta plus en grundavgift eller ett minsta antal användare. ByggExp kostar 690 kr/mån inklusive 10 användare och Bygglet Tid 719 kr/mån inklusive 6 användare. Större affärssystem som Next börjar på 2 100 kr/mån. Alla priser exkl. moms, enligt leverantörernas webbplatser i oktober 2026.</p>
+<p>Det beror på prismodellen: pris per användare, ofta med grundavgift eller minsta antal användare, eller fast pris för ett antal användare. ByggExp kostar 690 kr/mån inklusive 10 användare (Koll på jobbet) och 990 kr/mån med lön och faktura (Full koll), exkl. moms.</p>
 <h3>Vilket tidrapporteringssystem är bäst för små byggföretag?</h3>
 <p>Ett system med lågt pris för hela laget, ingen bindningstid och en app som alla klarar utan utbildning. Testa gärna två system parallellt i två veckor. Är du ensam och behöver mest faktura och kvitton, se <a href="/sv/enmansforetag">ByggExp för enmansföretag</a>.</p>
 <h3>Måste byggföretag ha digital tidrapportering?</h3>
 <p>Nej, det finns inget lagkrav på digital tidrapport. Däremot ska den som bedriver byggverksamhet föra en elektronisk personalliggare på byggarbetsplatser där kostnaden överstiger fyra prisbasbelopp exkl. moms, 236 800 kr 2026. Personalliggaren visar vem som är på plats, inte lönetimmar. Saknas den kan Skatteverket ta ut en kontrollavgift på 12 500 kr plus 2 500 kr per person.</p>
 <h3>Kan man exportera tidrapporten till Fortnox?</h3>
-<p>Ja, men på olika sätt. ByggExp exporterar löneunderlag som CSV (Full koll) och en SIE4-fil (tillägget Integrationer, 199 kr/mån), utan direktkoppling via API. Fieldly har integration till ekonomisystem utan extra kostnad, och hos Bygglet och MyGizmo är Fortnox-kopplingen ett tillval.</p>
+<p>Ja. I ByggExp exporteras löneunderlaget som CSV (Full koll) och bokföringen som SIE4-fil (tillägget Integrationer, 199 kr/mån). Fakturor och leverantörsfakturor går till Fortnox via API.</p>
 <h3>Är personalliggare och tidrapportering samma sak?</h3>
-<p>Nej. Personalliggaren är ett krav från Skatteverket som visar vilka som är på arbetsplatsen. Tidrapporten är underlaget för lön och faktura. Läs mer i guiden om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapportering i byggföretag</a>.</p>
+<p>Nej. Personalliggaren är ett krav från Skatteverket som visar vilka som är på arbetsplatsen. Tidrapporten är underlaget för lön och faktura. Läs mer i guiden om <a href="/sv/blog/personalliggare">personalliggare i byggbranschen</a>.</p>
 
 <h2>Källor</h2>
 <p><a href="https://www.skatteverket.se/foretag/arbetsgivare/personalliggare/personalliggarebyggbranschen.4.7be5268414bea0646949797.html" target="_blank" rel="noopener">Skatteverket – personalliggare i byggbranschen</a> · <a href="https://www.skatteverket.se/foretag/arbetsgivare/personalliggare/personalliggarebyggbranschen/fragorochsvarompersonalliggareibyggbranschen.4.361dc8c15312eff6fd6ba7.html" target="_blank" rel="noopener">Skatteverket – frågor och svar om personalliggare</a> · <a href="https://www.skatteverket.se/foretag/skatterochavdrag/beloppochprocent/2026.106.1522bf3f19aea8075ba3294.html" target="_blank" rel="noopener">Skatteverket – belopp och procent 2026</a></p>
 
 <h2>Testa ByggExp</h2>
-<p>14 dagar gratis med alla funktioner – se <a href="/sv/tidrapportering-app">vad som ingår i ByggExp:s tidrapportering</a> eller <a href="/sv/contact">boka gratis konsultation</a>.</p>
+<p>14 dagar gratis med alla funktioner – se <a href="/sv/funktioner/tidrapporteringssystem-bygg">vad som ingår i ByggExp:s tidrapportering</a> eller <a href="/sv/contact">boka gratis konsultation</a>.</p>
 `.trim();
 
 const A_BASTA_TIDRAPPORTERINGSSYSTEM_BYGG: BlogPost = {
   _id: "code-basta-tidrapporteringssystem-bygg",
-  title: "Bästa tidrapporteringssystem för bygg 2026 – 8 system jämförda", slug: "basta-tidrapporteringssystem-bygg", locale: "sv",
-  excerpt: "Jämförelse av 8 tidrapporteringssystem för bygg 2026: ByggExp, Bygglet, Fieldly, Blikk, Byggdagboken, MyGizmo, SmartDok och Next – pris, gratis test, app, GPS och export till lön.", tag: "Digitalisering",
+  title: "Bästa tidrapporteringssystem för bygg 2026 – 8 krav att jämföra", slug: "basta-tidrapporteringssystem-bygg", locale: "sv",
+  excerpt: "8 krav att jämföra när du väljer tidrapporteringssystem för bygg 2026: pris för hela laget, app, GPS, attest, export till lön, personalliggare och villkor.", tag: "Digitalisering",
   coverImageUrl: "/landing/features/1arbetspass.webp", contentHtml: A_BASTA_TIDRAPPORTERINGSSYSTEM_BYGG_HTML,
-  seoTitle: "Bästa tidrapporteringssystem bygg 2026: 8 jämförda | ByggExp", seoDescription: "Jämförelse av 8 tidrapporteringssystem för bygg 2026: pris, gratis test, app, GPS och export till lön. Se vad det kostar för ett lag på 10 personer.",
+  seoTitle: "Bästa tidrapporteringssystem bygg 2026 – 8 krav | ByggExp", seoDescription: "Jämför tidrapporteringssystem för bygg 2026 med 8 kriterier: pris för hela laget, app, GPS, attest, export till lön, personalliggare och villkor.",
   seoImageUrl: `${SITE_URL}/landing/features/1arbetspass.webp`, canonicalUrl: "", noIndex: false, isPublished: true,
-  publishedAt: "2026-10-06T09:00:00.000Z", createdAt: "2026-10-06T09:00:00.000Z", updatedAt: "2026-10-06T09:00:00.000Z",
+  publishedAt: "2026-10-06T09:00:00.000Z", createdAt: "2026-10-06T09:00:00.000Z", updatedAt: "2026-11-19T08:00:00.000Z",
 };
 
 const A_PROJEKTUPPFOLJNING_BYGG_HTML = `
 <p>Ett byggprojekt kan se lönsamt ut ända till slutfakturan – och sedan visa sig ha ätit upp marginalen i övertid och extra material. Projektuppföljning handlar om att se det i tid: följa tid, kostnader och lönsamhet löpande i stället för i efterhand. Här går vi igenom hur du följer upp byggprojekt i praktiken och vilka siffror du bör hålla koll på.</p>
 
-<p>Grunden för bra uppföljning är korrekt indata. Se till att laget loggar tid via <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a> och registrerar <a href="/sv/blog/fota-kvitton-och-hantera-utlagg">kvitton och utlägg</a> löpande. Hur tid, uppgifter och dokumentation samlas per projekt visar vi under <a href="/sv/funktioner/projekthantering">projekthantering bygg</a>.</p>
+<p>Grunden för bra uppföljning är korrekt indata. Se till att laget loggar tid via <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a> och registrerar <a href="/sv/blog/fota-kvitton-och-hantera-utlagg">kvitton och utlägg</a> löpande. Hur tid, uppgifter och dokumentation samlas per projekt visar vi på sidan om <a href="/sv/funktioner/projekthantering">projekthantering för bygg</a>.</p>
 <figure class="article-diagram"><img src="/landing/diagrams/projektuppfoljning.webp" alt="Diagram: projektuppföljning – följ timmar, kostnader, fakturerat och marginal mot budget i realtid" width="720" height="380" loading="lazy"><figcaption>Följ timmar, kostnader, fakturerat och marginal mot budget löpande – så hinner du agera innan budgettaket.</figcaption></figure>
 
 <h2>Vad är projektuppföljning i bygg?</h2>
@@ -1355,7 +1294,7 @@ const S_TIDRAPPORTERING_ENTREPRENAD: BlogPost = {
 
 const S_MOBIL_TIDRAPPORTERING_HTML = `
 <p>Hantverkarna sitter inte vid en dator. De står på taket, i schaktet eller kör mellan två jobb. Mobil tidrapportering betyder att arbetstiden registreras i telefonen där och när jobbet görs, i stället för att skrivas ner ur minnet på fredag eftermiddag. Den här guiden handlar om hur du får hela laget att rapportera i mobilen.</p>
-<p>Själva systemet – attest, export till lön och personalliggare – beskriver vi på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapportering bygg</a>. Vill du testa upplägget först finns en gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, och vad du ska jämföra mellan appar står i guiden om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>.</p>
+<p>Själva systemet – attest och export till lön – beskriver vi på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapportering för bygg</a>. Vill du testa upplägget först finns en gratis <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a>, och vad du ska jämföra mellan appar står i guiden om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>.</p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/tidrapportering-flode.webp" alt="Diagram: mobil tidrapportering – checka in, timmar på projekt, granska, export" width="720" height="380" loading="lazy"><figcaption>Flödet: checka in på bygget, timmarna hamnar på projektet, arbetsledaren attesterar och tiden exporteras till lön och faktura.</figcaption></figure>
 
@@ -1412,7 +1351,7 @@ const S_MOBIL_TIDRAPPORTERING_HTML = `
 <p>Appen laddas ner från <a href="https://apps.apple.com/se/app/id6748280779" target="_blank" rel="noopener">App Store</a> (iPhone) och <a href="https://play.google.com/store/apps/details?id=se.byggexp.app" target="_blank" rel="noopener">Google Play</a> (Android).</p>
 
 <h2>Kom igång</h2>
-<p>Se vad som ingår i ByggExp:s <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering online</a>. Vill du se hur det fungerar med era projekt? <a href="/sv/contact">Boka en gratis konsultation</a>, så visar vi appen och webbadmin med ert eget upplägg. Vill du börja enklare fungerar vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för de första veckorna. Pris och innehåll ser du på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapportering bygg</a>.</p>
+<p>Se vad som ingår i ByggExp:s <a href="/sv/blog/automatisk-tidrapportering-och-export">tidrapportering online</a>. Vill du se hur det fungerar med era projekt? <a href="/sv/contact">Boka en gratis konsultation</a>, så visar vi appen och webbadmin med ert eget upplägg. Vill du börja enklare fungerar vår <a href="/sv/verktyg/tidrapport-mall">tidrapport-mall</a> för de första veckorna. Pris och innehåll ser du på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapportering för bygg</a>.</p>
 
 <h2>Relaterade guider</h2>
 <ul>
@@ -1608,12 +1547,12 @@ const S_TIDREDOVISNING_APP: BlogPost = {
 };
 
 const S_PERSONALLIGGARE_APP_HTML = `
-<p>Elektronisk personalliggare är ett lagkrav på de flesta byggarbetsplatser, och en app gör kravet enkelt att uppfylla: personalen registrerar närvaro i mobilen, och liggaren finns alltid tillgänglig för Skatteverket. Här går vi igenom hur en personalliggare-app fungerar för byggföretag.</p>
-<p>Vill du ha hela regelverket? Läs vår guide om <a href="/sv/blog/personalliggare">personalliggare i byggbranschen</a>. Hur liggaren tas fram ur samma incheckningar som arbetstiden visar vi på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapportering bygg</a>.</p>
+<p>Elektronisk personalliggare är ett lagkrav på de flesta byggarbetsplatser, och en app gör registreringen enkel: personalen registrerar närvaro i mobilen. Här går vi igenom hur en personalliggare-app fungerar för byggföretag.</p>
+<p>Vill du ha hela regelverket? Läs vår guide om <a href="/sv/blog/personalliggare">personalliggare i byggbranschen</a>. Hur in- och utcheckningen fungerar i ByggExp visar vi på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapportering för bygg</a>.</p>
 
-<figure class="article-diagram"><img src="/landing/diagrams/personalliggare.webp" alt="Diagram: personalliggare – vilka som registreras och Skatteverkets kontrollavgifter" width="720" height="380" loading="lazy"><figcaption>Alla som arbetar registreras – även UE och inhyrda. Appen håller liggaren korrekt i realtid.</figcaption></figure>
+<figure class="article-diagram"><img src="/landing/diagrams/personalliggare.webp" alt="Diagram: personalliggare – vilka som registreras och Skatteverkets kontrollavgifter" width="720" height="380" loading="lazy"><figcaption>Alla som arbetar registreras – även UE och inhyrda.</figcaption></figure>
 <h2>Personalliggare som app</h2>
-<p>I stället för en pärm eller terminal registrerar varje person närvaro i mobilen – ofta kopplat till incheckning på bygget. Alla som arbetar registreras, även underentreprenörer och inhyrda. Liggaren uppdateras i realtid och kan visas direkt vid en kontroll.</p>
+<p>I stället för en pärm eller terminal registrerar varje person närvaro i mobilen – ofta kopplat till incheckning på bygget. Alla som arbetar ska registreras, även underentreprenörer och inhyrda.</p>
 
 <h2>Vad personalliggaren ska innehålla</h2>
 <div class="article-table"><table>
@@ -1635,20 +1574,20 @@ const S_PERSONALLIGGARE_APP_HTML = `
 <p>Personalliggare-appen hänger ihop med <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning</a> – samma incheckning som registrerar arbetstid kan föra personalliggaren. I ByggExp checkar personalen in och ut med GPS i samma app som tid, projekt och foto, och ur passen kan du ta ut en personalliggare som PDF. Incheckningen beskriver vi på sidan om vår <a href="/sv/funktioner/stampelklocka">stämpelklocka för bygg</a>. Stäm av med Skatteverkets krav vilken lösning ni behöver för den elektroniska personalliggaren.</p>
 
 <h2>Skatteverkets kontroll och kontrollavgift</h2>
-<p>Skatteverket får göra oanmälda besök på arbetsplatsen och begära att liggaren visas direkt. Saknas den, eller är den bristfällig, utgår en kontrollavgift på <strong>12 500 kr per kontrolltillfälle om liggaren inte förs eller inte kan visas, plus 2 500 kr för varje verksam person som saknas i liggaren</strong>. På ett bygge med flera lag och underentreprenörer blir det snabbt dyrt – och det är hela poängen med att låta en app hålla liggaren korrekt automatiskt. Aktuella belopp och undantag går vi igenom i guiden om <a href="/sv/blog/kontrollavgift-personalliggare">kontrollavgift för personalliggare</a>, och hela regelverket i <a href="/sv/blog/personalliggare">personalliggare i byggbranschen</a>.</p>
+<p>Skatteverket får göra oanmälda besök på arbetsplatsen och begära att liggaren visas direkt. Saknas den, eller är den bristfällig, utgår en kontrollavgift på <strong>12 500 kr per kontrolltillfälle om liggaren inte förs eller inte kan visas, plus 2 500 kr för varje verksam person som saknas i liggaren</strong>. På ett bygge med flera lag och underentreprenörer blir det snabbt dyrt – och därför lönar det sig att registrera närvaron löpande. Aktuella belopp och undantag går vi igenom i guiden om <a href="/sv/blog/kontrollavgift-personalliggare">kontrollavgift för personalliggare</a>, och hela regelverket i <a href="/sv/blog/personalliggare">personalliggare i byggbranschen</a>.</p>
 
-<h2>Underentreprenörer checkar in – på sitt eget språk</h2>
-<p>På ett bygge jobbar sällan bara ett företag. En bra personalliggare-app låter <strong>underentreprenörer och inhyrda checka in själva</strong> på arbetsplatsen, så att liggaren är komplett utan att du måste jaga varje lag. Eftersom bygglag ofta är flerspråkiga underlättar det när appen fungerar på flera språk – då förstår alla hur de checkar in och liggaren blir korrekt från början.</p>
+<h2>Underentreprenörer och inhyrda i liggaren</h2>
+<p>Alla som arbetar på arbetsplatsen ska finnas i personalliggaren, även underentreprenörer och inhyrda – med sitt eget företag och organisationsnummer. Kontrollera därför hur systemet hanterar personal från andra företag innan du väljer. I ByggExp tas liggaren fram per projekt ur de egna medarbetarnas in- och utcheckningar och laddas ner som PDF eller CSV. Appen finns på flera språk, bland annat svenska, engelska, polska och ukrainska.</p>
 
 <h2>En incheckning – både tid och liggare</h2>
-<p>Det stora med en app är att samma incheckning löser två saker: den registrerar <a href="/sv/blog/app-for-tidrapportering-bygg">arbetstiden</a> som blir lön och faktura, och den för personalliggaren som klarar en kontroll. Ingen dubbel registrering, inga glömda poster. Läs mer om hur tiden blir underlag i <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a>.</p>
+<p>Det stora med en app är att samma incheckning löser två saker: den registrerar <a href="/sv/blog/app-for-tidrapportering-bygg">arbetstiden</a> som blir lön och faktura, och den blir underlag för personalliggaren. Ingen dubbel registrering. Läs mer om hur tiden blir underlag i <a href="/sv/blog/automatisk-tidrapportering-och-export">automatisk tidrapportering</a>.</p>
 
 <h2>Kom igång</h2>
 <p>Läs om <a href="/sv/blog/narvaro-och-incheckning-pa-bygget">närvaro och incheckning på bygget</a> eller <a href="/sv/contact">boka en gratis konsultation av ByggExp</a>.</p>
 
 <h2>Vanliga frågor</h2>
 <h3>Kan man föra personalliggare i en app?</h3>
-<p>Ja. Personalen registrerar närvaro i mobilen och liggaren uppdateras i realtid och finns tillgänglig för Skatteverket vid kontroll.</p>
+<p>Ja. Personalen registrerar närvaro i mobilen. Kontrollera att lösningen uppfyller Skatteverkets krav på elektronisk personalliggare, bland annat att liggaren kan visas vid ett kontrollbesök.</p>
 <h3>Måste underentreprenörer registreras i personalliggaren?</h3>
 <p>Ja. Alla som arbetar på arbetsplatsen ska registreras, även underentreprenörer och inhyrd personal.</p>
 <h3>Hänger personalliggare-appen ihop med tidrapporteringen?</h3>
@@ -1658,7 +1597,7 @@ const S_PERSONALLIGGARE_APP_HTML = `
 <h3>Måste man ha ID06 för att föra personalliggare?</h3>
 <p>Nej. Lagen kräver en elektronisk personalliggare, inte ID06-kort eller kortläsare. Med en app registrerar var och en sin närvaro i mobilen utan hårdvara. ID06 kan krävas av en beställare, men är inte ett lagkrav för själva liggaren.</p>
 <h3>Vad ger ByggExp för personalliggaren?</h3>
-<p>In- och utcheckning med GPS i appen, kopplad till rätt projekt, och en personalliggare som PDF ur passen – i samma app som tid, projekt och foto.</p>
+<p>In- och utcheckning med GPS i appen, kopplad till rätt projekt. Ur incheckningarna tar du fram en personalliggare per projekt och period som PDF eller CSV.</p>
 `.trim();
 
 const S_PERSONALLIGGARE_APP: BlogPost = {
@@ -1820,7 +1759,7 @@ const A_SCHEMALAGGNING_BYGG: BlogPost = {
 
 const S_TIDRAPPORT_APP_IPHONE_HTML = `
 <p>Har du eller laget iPhone och vill rapportera tid direkt i mobilen? En tidrapport-app för iPhone låter dig checka in och ut på jobbet, koppla timmarna till rätt kund eller projekt och göra dem till underlag för lön och faktura – utan papperslappar. Här går vi igenom hur tidrapportering på iPhone fungerar och vad du ska tänka på.</p>
-<p>Attest, export till lön och pris finns på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapportering bygg</a>. Vad du ska jämföra mellan appar står i guiden om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>.</p>
+<p>Attest, export till lön och pris finns på sidan om <a href="/sv/funktioner/tidrapporteringssystem-bygg">tidrapportering för bygg</a>. Vad du ska jämföra mellan appar står i guiden om <a href="/sv/blog/app-for-tidrapportering-bygg">app för tidrapportering i bygg</a>.</p>
 
 <figure class="article-diagram"><img src="/landing/diagrams/tidrapportering-flode.webp" alt="Diagram: tidrapport app på iPhone – checka in, timmar på projekt, granska, export till lön och faktura" width="720" height="380" loading="lazy"><figcaption>Från incheckning på iPhone till färdigt underlag: timmarna kopplas till projektet och exporteras till lön och faktura.</figcaption></figure>
 

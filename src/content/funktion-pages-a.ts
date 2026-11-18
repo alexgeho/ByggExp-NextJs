@@ -507,7 +507,7 @@ const PROJEKTHANTERING: FunktionPage = {
   ],
   body: `
 <p>Projekthantering i bygg betyder att hålla ihop allt som händer i ett projekt: vem som gör vad, när det ska vara klart, vad som har dokumenterats och hur många timmar som har gått åt. I ByggExp har varje projekt ett eget kort där uppgifter, foton, dokument och timmar samlas, och dagbok och egenkontroller kopplas till samma projekt – i webben för kontoret och i appen för laget.</p>
-<p>Projekthanteringen ingår i paketet Koll på jobbet för ${PROJEKT_PRICE} kr/mån exkl. moms med 10 användare. Budget, kostnader och marginal per projekt finns i Koll på pengarna och Full koll.</p>
+<p>Projekthanteringen ingår i paketet Koll på jobbet. Budget, kostnader och marginal per projekt finns i Koll på pengarna och Full koll.</p>
 
 <h2>Det här samlas i projektet</h2>
 <p>När du lägger upp ett projekt anger du projektledare, plats, kund, start- och slutdatum. Projektet har en status – Planering, Pågår, Pausat eller Avslutat – så att listan visar vad som är aktivt. Till projektet hör:</p>

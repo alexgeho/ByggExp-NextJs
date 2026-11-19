@@ -26,7 +26,7 @@ const F_FAKTURERINGSPROGRAM_BYGG_HTML = `
 <p>Sjekk alltid aktuelle MVA-satser og fakturakrav hos Skatteetaten.</p>
 
 <h2>Fra time til faktura</h2>
-<p>Poenget er å slippe dobbeltarbeid: de attesterte timene blir grunnlag for fakturaen, og fakturaen henger sammen med prosjektets økonomi. Registrer én gang, bruk overalt.</p>
+<p>Poenget er å slippe dobbeltarbeid: de godkjente timene blir grunnlag for fakturaen, og fakturaen henger sammen med prosjektets økonomi. Registrer én gang, bruk overalt.</p>
 <p>Utlegg hører med i samme flyt – se <a href="/nb/blog/fota-kvitton-och-hantera-utlagg">kvitteringshåndtering for byggefirma</a>.</p>
 
 <h2>Kom i gang</h2>
@@ -38,7 +38,7 @@ const F_FAKTURERINGSPROGRAM_BYGG_HTML = `
 <h3>Hvilken MVA-sats gjelder for byggetjenester i Norge?</h3>
 <p>Standard MVA-sats er 25 %. Sjekk alltid aktuelle satser og regler hos Skatteetaten.</p>
 <h3>Kan fakturaen bygge på timene teamet registrerer?</h3>
-<p>Ja. I ByggExp blir attesterte timer grunnlag for fakturaen, så du slipper å taste inn tallene på nytt.</p>
+<p>Ja. I ByggExp blir godkjente timer grunnlag for fakturaen, så du slipper å taste inn tallene på nytt.</p>
 `.trim();
 
 const F_FAKTURERINGSPROGRAM_BYGG: BlogPost = {
@@ -425,7 +425,7 @@ const T_TIMELISTE_MAL_HTML = `
 <p>En Excel-mal regner ut summene for deg, mens en utskrift er grei å ha i bilen eller på brakka. Begge deler funker for de aller minste firmaene. Ulempen er den samme: noen må samle inn arkene og taste tallene inn på nytt til lønn og faktura.</p>
 
 <h2>Fra mal til app – uten dobbeltarbeid</h2>
-<p>Vokser firmaet, blir malen fort en flaskehals. Med en <a href="/nb/blog/timeliste-app-bygg">timeliste-app</a> fører de ansatte timene i mobilen på riktig prosjekt, og du slipper å samle inn ark og taste på nytt. I ByggExp blir de attesterte timene grunnlag for lønn og faktura – samme informasjon som i malen, bare uten etterarbeidet.</p>
+<p>Vokser firmaet, blir malen fort en flaskehals. Med en <a href="/nb/blog/timeliste-app-bygg">timeliste-app</a> fører de ansatte timene i mobilen på riktig prosjekt, og du slipper å samle inn ark og taste på nytt. I ByggExp blir de godkjente timene grunnlag for lønn og faktura – samme informasjon som i malen, bare uten etterarbeidet.</p>
 
 <h2>Kom i gang</h2>
 <p><a href="/nb/maler/timeliste-mal.xlsx" download>Last ned malen</a> og bruk den i dag, eller se hvordan en <a href="/nb/blog/timeliste-app-bygg">digital timeliste</a> fungerer. Les også om <a href="/nb/funksjoner/timeregistrering-app">timeregistrering-app for bygg</a> eller <a href="/nb/contact">bestill en gratis konsultasjon av ByggExp</a>.</p>
@@ -606,7 +606,7 @@ const TP_TIMEPRIS_SNEKKER_HTML = `
 <h3>Kommer mva i tillegg til timeprisen?</h3>
 <p>For forbrukere legges 25 % mva på. Bedrifter som er mva-registrert trekker fra inngående mva.</p>
 <h3>Hvordan sikrer jeg at alle timene blir fakturert?</h3>
-<p>Registrer timene digitalt på riktig prosjekt, så blir de attesterte timene grunnlag for fakturaen – ingen glemte timer.</p>
+<p>Registrer timene digitalt på riktig prosjekt, så blir de godkjente timene grunnlag for fakturaen – ingen glemte timer.</p>
 `.trim();
 
 const TP_TIMEPRIS_SNEKKER: BlogPost = {
@@ -678,7 +678,7 @@ const FM_FAKTURAMAL_HTML = `
 <h3>Hvilken mva-sats gjelder?</h3>
 <p>Standard mva-sats er 25 %. Enkelte tjenester har andre satser – sjekk hos Skatteetaten.</p>
 <h3>Kan fakturaen lages fra timene?</h3>
-<p>Ja. I ByggExp blir attesterte timer grunnlag for fakturaen, så du slipper å taste dem inn på nytt.</p>
+<p>Ja. I ByggExp blir godkjente timer grunnlag for fakturaen, så du slipper å taste dem inn på nytt.</p>
 `.trim();
 
 const FM_FAKTURAMAL: BlogPost = {
@@ -920,7 +920,7 @@ const TP_TIMEPRIS_RORLEGGER_HTML = `
 <h3>Kommer mva i tillegg til timeprisen?</h3>
 <p>For forbrukere legges 25 % mva på. Bedrifter som er mva-registrert trekker fra inngående mva.</p>
 <h3>Hvordan sikrer jeg at alle timene blir fakturert?</h3>
-<p>Registrer timene digitalt på riktig prosjekt, så blir de attesterte timene grunnlag for fakturaen – ingen glemte timer.</p>
+<p>Registrer timene digitalt på riktig prosjekt, så blir de godkjente timene grunnlag for fakturaen – ingen glemte timer.</p>
 `.trim();
 
 const TP_TIMEPRIS_RORLEGGER: BlogPost = {
@@ -972,7 +972,7 @@ const TP_TIMEPRIS_ELEKTRIKER_HTML = `
 <h3>Kommer mva i tillegg til timeprisen?</h3>
 <p>For forbrukere legges 25 % mva på. Bedrifter som er mva-registrert trekker fra inngående mva.</p>
 <h3>Hvordan sikrer jeg at alle timene blir fakturert?</h3>
-<p>Registrer timene digitalt på riktig prosjekt, så blir de attesterte timene grunnlag for fakturaen – ingen glemte timer.</p>
+<p>Registrer timene digitalt på riktig prosjekt, så blir de godkjente timene grunnlag for fakturaen – ingen glemte timer.</p>
 `.trim();
 
 const TP_TIMEPRIS_ELEKTRIKER: BlogPost = {

@@ -8,6 +8,8 @@ import { FUNKSJON_PAGE_SLUGS_NB } from '../content/funksjon-pages-nb';
 import { landingLanguageCodes, svEnLocales } from '../locales/languages';
 import { EN_CALC_SLUGS, HREFLANG_CALC_SLUGS } from '../lib/locale';
 import { localeOrigin } from '../lib/seo';
+// Generated before every build from git history (scripts/gen-sitemap-lastmod.mjs).
+import { BLOG_LASTMOD, PAGE_LASTMOD, ROUTE_LASTMOD } from '../content/sitemap-lastmod.generated';
 
 // Static routes that exist under every landing locale (besides the home page).
 const LOCALE_STATIC_PATHS = [
@@ -57,6 +59,32 @@ const CALC_PATHS = [
 ];
 
 type SitemapUrl = { loc: string; lastmod?: string };
+
+// Latest of several ISO dates (undefined entries ignored).
+function latest(...dates: (string | undefined | null)[]): string | undefined {
+  let best: string | undefined;
+  let bestTime = -Infinity;
+  for (const d of dates) {
+    if (!d) continue;
+    const t = new Date(d).getTime();
+    if (!Number.isNaN(t) && t > bestTime) {
+      bestTime = t;
+      best = d;
+    }
+  }
+  return best;
+}
+
+// lastmod for a URL: its path after /<lang>/ maps to the route file in
+// src/pages/[lang]/ ('' = home), or to a feature page's content block.
+function lastmodFor(loc: string): string | undefined {
+  const m = loc.match(/^https?:\/\/[^/]+\/([a-z]{2})(?:\/(.*))?$/);
+  if (!m) return undefined;
+  const [, lang, rest = ''] = m;
+  const page = rest.match(/^(?:funktioner|funksjoner)\/([^/]+)$/);
+  if (page) return PAGE_LASTMOD[`${lang}:${page[1]}`];
+  return ROUTE_LASTMOD[rest]?.[lang];
+}
 
 export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
   // ccTLD split: byggexp.no lists only nb URLs, byggexp.se lists sv/en/ru. This
@@ -140,7 +168,12 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
     }
     urls.push({
       loc: `${localeOrigin(post.locale)}/${post.locale}/blog/${encodeURIComponent(post.slug)}`,
-      lastmod: post.updatedAt || post.publishedAt || post.createdAt || undefined,
+      // Code articles: also the last git change of the article's own source
+      // (an edit without a bumped updatedAt still shows up).
+      lastmod: latest(
+        post.updatedAt || post.publishedAt || post.createdAt,
+        BLOG_LASTMOD[`${post.locale}:${post.slug}`],
+      ),
     });
   });
 
@@ -151,6 +184,10 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
     if (seen.has(url.loc)) return false;
     seen.add(url.loc);
     return true;
+  });
+
+  uniqueUrls.forEach((url) => {
+    if (!url.lastmod) url.lastmod = lastmodFor(url.loc);
   });
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${uniqueUrls

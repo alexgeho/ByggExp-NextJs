@@ -1,5 +1,9 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 🟢 2026-11-19 — Sitemap: lastmod на всех URL + nb «attest» → «godkjent»
+- scripts/gen-sitemap-lastmod.mjs (перед `next build`/`next dev`) пишет src/content/sitemap-lastmod.generated.ts (gitignore): дата = последний git-коммит строк самой страницы (blame: блок slug в src/content, его *_HTML; для маршрутов — файл страницы + прямые импорты без Header/Footer/lib, локали — только блок языка). Блог из кода = max(updatedAt, git). CI: checkout fetch-depth 0. Локально: .se 432/432, .no 61/61 с lastmod.
+- nb: «attesterte timer/timene» → «godkjente timer/timene» (features-nb, nb-timeregistrering, главная features7-9 nb). Осталось только имя картинки tidrapporteringssystem-attest-*.webp (общая с sv, текстом не видно).
+
 ## 🟡 2026-11-19 — SEO byggexp.no: HMS-kort, timeregistrering, mannskapsliste, kvittering (ветка `seo-no-2026-11-19`, НЕ live)
 - Основание: GSC .no 15.10–11.11 (~/sites-hub/audits/2026-11-13/gsc/byggexp.no.md), исследование 18.11 (title = точный вопрос + выгода, ответ первым, без воды).
 - HMS-kort: хозяин вопросов о сроке = /nb/blog/hms-kort-gyldighet (H1 «Hvor lenge er HMS-kortet gyldig? To år – slik fornyer du det», title «Hvor lenge er HMS-kortet gyldig? To år»; первая фраза = ответ + § 8; таблица ситуаций § 8/8a/9 + реестры; шаги продления на hmskort.no; блок «Kilder»). sjekke-hms-kort → «Sjekk HMS-kort: slik kontrollerer du kortet» (QR / номер на hmskort.no, 4 шага на площадке, § 4/§ 7), слово «gyldig» убрано из title/H1/H2/FAQ, ссылка на gyldighet в первом абзаце. mistet-hms-kort → «Mistet HMS-kort? Si fra til arbeidsgiveren – slik får du nytt», ответ первым по § 9 + Arbeidstilsynet.

@@ -84,7 +84,7 @@ export const featuresTranslations7_9 = {
     featuresCard8Text:
       "Gjør registrerte arbeidstimer om til ferdige fakturaer. Spar tid og få betalt raskere.",
     featuresCard8Step1: "Velg prosjekt og periode",
-    featuresCard8Step2: "Attesterte timer blir grunnlag",
+    featuresCard8Step2: "Godkjente timer blir grunnlag",
     featuresCard8Step3: "Send fakturaen til kunden",
 
     featuresCard9Title: "Prosjektøkonomi og lønnsomhet",

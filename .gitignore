@@ -59,3 +59,4 @@ byggexp-emails*.csv
 .data/
 research_notes/
 reports/
+/src/content/sitemap-lastmod.generated.ts

@@ -1,5 +1,8 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+## 🟢 2026-11-19 — GSC «Not found (404)»: 301 для оставшихся (.se 27, .no 10)
+- Живые 404 были: /about, 3 URL вида `/"/sv/blog/x/"` (Googlebot из __NEXT_DATA__), 9 nb-адресов sv-страниц на byggexp.no. Добавлены 301 в next.config.mjs (+ /blog/test и /blog/bygg-appar-i-sverige в один шаг), middleware чистит кавычки/обратные слэши в пути → 301. Внутренних ссылок и записей в sitemap на эти URL нет. Валидация в GSC перезапущена на обоих ресурсах.
+
 ## 🟢 2026-11-19 — Sitemap: lastmod на всех URL + nb «attest» → «godkjent»
 - scripts/gen-sitemap-lastmod.mjs (перед `next build`/`next dev`) пишет src/content/sitemap-lastmod.generated.ts (gitignore): дата = последний git-коммит строк самой страницы (blame: блок slug в src/content, его *_HTML; для маршрутов — файл страницы + прямые импорты без Header/Footer/lib, локали — только блок языка). Блог из кода = max(updatedAt, git). CI: checkout fetch-depth 0. Локально: .se 432/432, .no 61/61 с lastmod.
 - nb: «attesterte timer/timene» → «godkjente timer/timene» (features-nb, nb-timeregistrering, главная features7-9 nb). Осталось только имя картинки tidrapporteringssystem-attest-*.webp (общая с sv, текстом не видно).

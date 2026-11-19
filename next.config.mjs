@@ -144,6 +144,23 @@ const nextConfig = {
       { source: "/faq", destination: "/sv", statusCode: 301 },
       { source: "/login", destination: "/sv", statusCode: 301 },
 
+      // GSC "Not found (404)" round 4 (2026-11-19): validation failed on these.
+      { source: "/about", destination: "/sv/om-oss", statusCode: 301 },
+      // Locale-less blog URLs used to 308 → /sv/blog/... → 301 (two hops); one hop now.
+      { source: "/blog/test", destination: "/sv/blog", statusCode: 301 },
+      { source: "/blog/bygg-appar-i-sverige", destination: "/sv/blog/bygg-app", statusCode: 301 },
+      // byggexp.no: sv-only pages Google found under /nb (old hreflang). Closest nb page;
+      // ROT/U-värde/moms/byggdagbok have no Norwegian equivalent → hub.
+      { source: "/nb/blog/tidrapport-app-iphone", destination: "https://byggexp.no/nb/funksjoner/timeregistrering-app", statusCode: 301 },
+      { source: "/nb/verktyg/tidrapport-mall", destination: "https://byggexp.no/nb/blog/timeliste-mal", statusCode: 301 },
+      { source: "/nb/blog/timpris-hantverkare", destination: "https://byggexp.no/nb/verktyg/timpris-kalkylator", statusCode: 301 },
+      { source: "/nb/verktyg/egenkontroll-mall", destination: "https://byggexp.no/nb/funksjoner/ks-system", statusCode: 301 },
+      { source: "/nb/blog/faktura-med-rotavdrag", destination: "https://byggexp.no/nb/blog/fakturamal", statusCode: 301 },
+      { source: "/nb/verktyg/moms-kalkylator", destination: "https://byggexp.no/nb/verktyg", statusCode: 301 },
+      { source: "/nb/verktyg/rot-avdrag-kalkylator", destination: "https://byggexp.no/nb/verktyg", statusCode: 301 },
+      { source: "/nb/verktyg/byggdagbok-mall", destination: "https://byggexp.no/nb/verktyg", statusCode: 301 },
+      { source: "/nb/blog/berakna-u-varde-isolering", destination: "https://byggexp.no/nb/blog", statusCode: 301 },
+
       // Clean vanity short links for marketing (YouTube, ads, print). The user
       // shares the pretty /go/... URL; the redirect appends UTM so GA4 attributes
       // the visit. Temporary (307) so a link can be re-pointed later without a

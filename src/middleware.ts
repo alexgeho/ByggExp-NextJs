@@ -58,6 +58,16 @@ export function middleware(req: NextRequest) {
     return NextResponse.redirect(to, 301);
   }
 
+  // Googlebot also lifts JSON-escaped hrefs (`\"/sv/blog/x\"`) out of __NEXT_DATA__
+  // and crawls them as `/"/sv/blog/x/"` → 404. Strip the quotes/backslashes and
+  // 301 to the clean path (2026-11-19, GSC "Not found (404)").
+  if (/["\\]/.test(decodedPath)) {
+    const clean = decodedPath.replace(/["\\]/g, '').replace(/\/{2,}/g, '/').replace(/(.)\/$/, '$1');
+    const to = new URL(url);
+    to.pathname = clean || '/';
+    return NextResponse.redirect(to, 301);
+  }
+
   // Googlebot scraped the literal Next.js route id `/[lang]/...` out of the
   // __NEXT_DATA__ blob and crawled it, producing a batch of bogus 404s in Search
   // Console. Those paths are never real links; 301 them onto the sv equivalent so

@@ -117,9 +117,9 @@ function HeroV2({ variant = "center", lang = "sv" }: HeroV2Props) {
             </a>
           </div>
 
-          <ul className="hero-v2-meta">
+          <ul className="hero-v2-meta trust-stars">
             {t.meta.map((m) => (
-              <li key={m}>✓ {m}</li>
+              <li key={m}>{m}</li>
             ))}
           </ul>
 

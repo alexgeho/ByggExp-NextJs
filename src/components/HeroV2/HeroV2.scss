@@ -598,3 +598,12 @@
     gap: 12px;
   }
 }
+
+// R57: six benefits — two even columns on desktop (phones keep the centred wrap).
+@media (min-width: 901px) {
+  .hero-v2 .hero-v2-content .hero-v2-meta {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 10px 28px;
+  }
+}

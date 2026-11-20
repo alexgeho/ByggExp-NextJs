@@ -291,3 +291,8 @@
     box-shadow: 0 10px 24px rgba(35, 148, 255, 0.25);
   }
 }
+
+// R58: hero «Kom igång gratis» jumps here — keep the card clear of the sticky header.
+#form-card {
+  scroll-margin-top: 96px;
+}

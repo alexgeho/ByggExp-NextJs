@@ -111,8 +111,9 @@ function HeroV2({ variant = "center", lang = "sv" }: HeroV2Props) {
             ))}
           </div>
 
+          {/* R58: the main button leads to the consultation form at the bottom */}
           <div className="hero-v2-ctas">
-            <a href={REGISTER_URL} className="hero-v2-btn hero-v2-btn--primary">
+            <a href="#form-card" className="hero-v2-btn hero-v2-btn--primary">
               {t.cta}
             </a>
           </div>

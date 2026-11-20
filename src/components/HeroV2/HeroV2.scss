@@ -608,3 +608,11 @@
     gap: 10px 28px;
   }
 }
+
+// R58: phones — more air around the main button, equal above and below
+// (32px column gap + 16 above = 48; 32 + 16 below = 48).
+@media (max-width: 900px) {
+  .hero-v2 .hero-v2-content .hero-v2-ctas {
+    margin: 16px 0;
+  }
+}

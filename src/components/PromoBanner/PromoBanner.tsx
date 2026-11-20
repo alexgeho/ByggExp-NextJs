@@ -143,7 +143,7 @@ export default function PromoBanner() {
             <li>Ingen bindningstid</li>
             <li>Vi hjälper er flytta data gratis</li>
             <li>Täcker hela verksamheten</li>
-            <li>Anpassas efter era arbetssätt</li>
+            <li>Funktioner anpassas för era arbetssätt</li>
             <li>Personlig uppstart på plats</li>
           </ul>
         </div>

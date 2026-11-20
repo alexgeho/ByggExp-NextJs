@@ -1,5 +1,16 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
+
+## 🟢 2026-11-20 — Главная и подвал по замечаниям владельца (R56–R59, всё live)
+- R56 подвал: колонки с заголовками — логотип + support@ + соцсети | Funktioner (sv, nb) | Företaget (Om oss, Blogg, Enmansföretag, Vanliga frågor) | Juridiskt (Integritetspolicy, Användarvillkor, Radera konto); «© 2026 ByggExp» внизу. Телефон: логотип слева, контакты справа; Funktioner слева, Företaget и под ней Juridiskt справа. Заголовки колонок — `footerCompany`/`footerLegal` в src/locales/footer.ts (10 языков).
+- R57 первый экран: преимущества со звёздочкой цвета текста (не ✓), 6 пунктов: 14 dagar gratis · Ingen bindningstid · Vi hjälper er flytta data gratis · Täcker hela verksamheten · Funktioner efter era behov · Personlig uppstart på plats (все языки, тот же набор в PromoBanner; звёздочка и в `.em-checks` лендингов). Компьютер — 2 колонки (текстовая колонка 480px, заголовок 440px), телефон — один столбик по центру, строки по левому краю. Строки цен без повторов: 299 kr — контора (offerter, fakturor, inkommande fakturor via e‑post, löner/AGI, orderekonomi), +69 kr — объект (tid, närvaro, planering av order och personal, egenkontroll, foton, kvitton med mobilkameran som bokförs på ordern, verktyg).
+- R58 «Kom igång gratis» → якорь `#form-card` (форма «Boka gratis konsultation» внизу), на телефоне 48px над и под кнопкой.
+- R59 фото рабочего на компьютере — `left: 4%`.
+### NÄSTA
+1. Слово «projekt» вместо «order» ещё в статьях блога (src/content/articles/kvalitet.ts:753, tillvaxt.ts:1641, 1867) — спросил владельца, ответа нет; без «ок» не менять.
+2. `REGISTER_URL` в HeroV2.tsx больше не используется кнопкой (экспорт оставлен) — регистрация теперь только из шапки/других мест; если владелец захочет вернуть прямую регистрацию — вторая кнопка.
+3. PromoBanner.tsx: 5 старых ошибок eslint (`<a href="/sv/">` вместо Link) — не мои, не трогал.
+
 ## 🟢 2026-11-19 — GSC «Not found (404)»: 301 для оставшихся (.se 27, .no 10)
 - Живые 404 были: /about, 3 URL вида `/"/sv/blog/x/"` (Googlebot из __NEXT_DATA__), 9 nb-адресов sv-страниц на byggexp.no. Добавлены 301 в next.config.mjs (+ /blog/test и /blog/bygg-appar-i-sverige в один шаг), middleware чистит кавычки/обратные слэши в пути → 301. Внутренних ссылок и записей в sitemap на эти URL нет. Валидация в GSC перезапущена на обоих ресурсах.
 

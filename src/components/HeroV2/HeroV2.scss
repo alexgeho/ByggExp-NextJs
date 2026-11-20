@@ -427,7 +427,10 @@
       padding-bottom: var(--ds-section-pad);
     }
     .hero-v2-content {
-      flex: 0 1 440px;
+      flex: 0 1 480px; // R57: room for two benefit columns without wrapping
+    }
+    .hero-v2-content h1 {
+      max-width: 440px; // title keeps its old line break («Hela byggföretaget / på ett ställe»)
     }
     .hero-v2-visual {
       flex: 1 1 0;
@@ -441,6 +444,7 @@
     aspect-ratio: 1711 / 1216;
   }
   .hero-v2-scene--site {
+    left: 4%; // R59: a bit to the right (owner 20.11)
     width: 30%;
     aspect-ratio: 1018 / 1402;
     object-position: center;
@@ -604,8 +608,9 @@
 @media (min-width: 901px) {
   .hero-v2 .hero-v2-content .hero-v2-meta {
     display: grid;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(2, minmax(0, max-content)); // never wider than the text column
     gap: 10px 28px;
+    max-width: 100%;
   }
 }
 

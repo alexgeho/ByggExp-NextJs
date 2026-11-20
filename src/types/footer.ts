@@ -1,5 +1,7 @@
 export type FooterProps = {
   footerT: {
+    footerCompany: string;
+    footerLegal: string;
     footerBlog: string;
     footerAbout: string;
     footerFaq: string;

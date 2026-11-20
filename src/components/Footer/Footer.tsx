@@ -37,67 +37,37 @@ function Footer({ footerT, lang: langProp }: FooterProps) {
   const lang = langProp || (typeof langParam === "string" ? langParam : "sv");
   const funktionRow = FUNKTION_ROW[lang];
 
+  // R56: columns with a heading each — brand + contacts, Funktioner (sv, nb),
+  // company pages, legal pages.
   return (
     <footer className="footer">
       <div className="container footer-inner">
-        <div className="footer-logo">
-          <img src={logo} alt="Byggexp" />
-        </div>
-
-        <div className="footer-meta">
-          <span>
-            © 2026 ByggExp
-          </span>
-
-          <Link href={`/${lang}/blog`}>
-            {footerT.footerBlog}
-          </Link>
-
-          {lang === "sv" ? <Link href="/sv/enmansforetag">Enmansföretag</Link> : null}
-
-          <Link href={`/${lang}/om-oss`}>
-            {footerT.footerAbout}
-          </Link>
-
-          <Link href={`/${lang}/faq`}>
-            {footerT.footerFaq}
-          </Link>
-
-          <Link href={`/${lang}/integritetspolicy`}>
-            {footerT.footerPrivacy}
-          </Link>
-
-          <Link href={`/${lang}/villkor`}>
-            {footerT.footerTerms}
-          </Link>
-
-          <Link href={`/${lang}/radera-konto`}>
-            {footerT.footerDeleteAccount}
-          </Link>
-
-          <a href="mailto:support@byggexp.se">
-            support@byggexp.se
-          </a>
-
-          {SOCIALS.map((s) => (
-            <a
-              key={s.href}
-              className="footer-social"
-              href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={s.label}
-            >
-              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
-                <path fill="currentColor" d={s.path} />
-              </svg>
-            </a>
-          ))}
+        <div className="footer-col footer-brand">
+          <div className="footer-logo">
+            <img src={logo} alt="Byggexp" />
+          </div>
+          <a href="mailto:support@byggexp.se">support@byggexp.se</a>
+          <div className="footer-socials">
+            {SOCIALS.map((s) => (
+              <a
+                key={s.href}
+                className="footer-social"
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+              >
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+                  <path fill="currentColor" d={s.path} />
+                </svg>
+              </a>
+            ))}
+          </div>
         </div>
 
         {funktionRow ? (
-          <nav className="footer-meta footer-funktioner" aria-label={funktionRow.heading}>
-            <span>{funktionRow.heading}</span>
+          <nav className="footer-col footer-funktioner" aria-label={funktionRow.heading}>
+            <span className="footer-heading">{funktionRow.heading}</span>
             {funktionRow.links.map((link) => (
               <Link key={link.slug} href={`/${lang}/${funktionRow.folder}/${link.slug}`}>
                 {link.short ?? link.name}
@@ -105,6 +75,23 @@ function Footer({ footerT, lang: langProp }: FooterProps) {
             ))}
           </nav>
         ) : null}
+
+        <nav className="footer-col" aria-label={footerT.footerCompany}>
+          <span className="footer-heading">{footerT.footerCompany}</span>
+          <Link href={`/${lang}/om-oss`}>{footerT.footerAbout}</Link>
+          <Link href={`/${lang}/blog`}>{footerT.footerBlog}</Link>
+          {lang === "sv" ? <Link href="/sv/enmansforetag">Enmansföretag</Link> : null}
+          <Link href={`/${lang}/faq`}>{footerT.footerFaq}</Link>
+        </nav>
+
+        <nav className="footer-col" aria-label={footerT.footerLegal}>
+          <span className="footer-heading">{footerT.footerLegal}</span>
+          <Link href={`/${lang}/integritetspolicy`}>{footerT.footerPrivacy}</Link>
+          <Link href={`/${lang}/villkor`}>{footerT.footerTerms}</Link>
+          <Link href={`/${lang}/radera-konto`}>{footerT.footerDeleteAccount}</Link>
+        </nav>
+
+        <div className="footer-copy">© 2026 ByggExp</div>
       </div>
     </footer>
   );

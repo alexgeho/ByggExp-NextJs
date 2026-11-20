@@ -293,12 +293,8 @@
   }
 }
 
-// R21 (2026-11-15): footer row «Funktioner» — links to the feature pages (sv, nb).
-// Same look as the existing footer links (.footer-meta); the row only takes its
-// own line under them.
-.footer-funktioner {
-  flex-basis: 100%;
-}
+// R21 → R56 (2026-11-20): «Funktioner» is a footer column (sv, nb); the footer
+// grid itself lives in src/components/Footer/Footer.scss.
 
 // R22 (2026-11-15): «Funktioner i ByggExp» on /sv/verktyg reuses the tool group
 // + cards (.verktyg-hub-group, .verktyg-hub-card); only the lead line is new.

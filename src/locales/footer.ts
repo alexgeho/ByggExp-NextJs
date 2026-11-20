@@ -1,5 +1,7 @@
 export const footerTranslations = {
   ru: {
+    footerCompany: "Компания",
+    footerLegal: "Документы",
     footerBlog: "Блог",
     footerAbout: "О нас",
     footerFaq: "Вопросы и ответы",
@@ -10,6 +12,8 @@ export const footerTranslations = {
   },
 
   en: {
+    footerCompany: "Company",
+    footerLegal: "Legal",
     footerBlog: "Blog",
     footerAbout: "About us",
     footerFaq: "FAQ",
@@ -20,6 +24,8 @@ export const footerTranslations = {
   },
 
   sv: {
+    footerCompany: "Företaget",
+    footerLegal: "Juridiskt",
     footerBlog: "Blogg",
     footerAbout: "Om oss",
     footerFaq: "Vanliga frågor",
@@ -30,6 +36,8 @@ export const footerTranslations = {
   },
 
   nb: {
+    footerCompany: "Selskapet",
+    footerLegal: "Juridisk",
     footerBlog: "Blogg",
     footerAbout: "Om oss",
     footerFaq: "Vanlige spørsmål",
@@ -40,6 +48,8 @@ export const footerTranslations = {
   },
 
   pl: {
+    footerCompany: "Firma",
+    footerLegal: "Informacje prawne",
     footerBlog: "Blog",
     footerAbout: "O nas",
     footerFaq: "Najczęstsze pytania",
@@ -50,6 +60,8 @@ export const footerTranslations = {
   },
 
   uk: {
+    footerCompany: "Компанія",
+    footerLegal: "Документи",
     footerBlog: "Блог",
     footerAbout: "Про нас",
     footerFaq: "Часті питання",
@@ -60,6 +72,8 @@ export const footerTranslations = {
   },
 
   fi: {
+    footerCompany: "Yritys",
+    footerLegal: "Lakiasiat",
     footerBlog: "Blogi",
     footerAbout: "Tietoa meistä",
     footerFaq: "UKK",
@@ -70,6 +84,8 @@ export const footerTranslations = {
   },
 
   et: {
+    footerCompany: "Ettevõte",
+    footerLegal: "Õiguslik teave",
     footerBlog: "Blogi",
     footerAbout: "Meist",
     footerFaq: "KKK",
@@ -80,6 +96,8 @@ export const footerTranslations = {
   },
 
   lt: {
+    footerCompany: "Įmonė",
+    footerLegal: "Teisinė informacija",
     footerBlog: "Tinklaraštis",
     footerAbout: "Apie mus",
     footerFaq: "DUK",
@@ -90,6 +108,8 @@ export const footerTranslations = {
   },
 
   lv: {
+    footerCompany: "Uzņēmums",
+    footerLegal: "Juridiskā informācija",
     footerBlog: "Blogs",
     footerAbout: "Par mums",
     footerFaq: "BUJ",

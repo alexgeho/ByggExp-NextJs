@@ -24,12 +24,12 @@ export const heroV2Translations: Record<string, HeroV2Copy> = {
       {
         price: "299 kr/mån",
         items:
-          "offerter och fakturor, skanning av kvitton och fakturor, inkommande fakturor via e‑post, betalningspåminnelser, löner, lönespecifikationer och AGI, projektekonomi med budget, kalkyl och lönsamhet, kvitton som bokförs på projektet",
+          "offerter och fakturor, inkommande fakturor via e‑post som läses av automatiskt, betalningspåminnelser, löner, lönespecifikationer och AGI, orderekonomi med budget, kalkyl och lönsamhet",
       },
       {
         price: "+69 kr/arbetare",
         items:
-          "tidrapport automatiskt och manuellt, närvaro i realtid, planering av order och personal, egenkontroll, uppgifter med påminnelser, dokument, foton och ritningar, fotorapporter från arbetspasset, skanning av kvitton med mobilkameran, verktyg via QR-kod",
+          "tidrapport automatiskt och manuellt, närvaro i realtid, planering av order och personal, egenkontroll, uppgifter med påminnelser, dokument, foton och ritningar, fotorapporter från arbetspasset, kvitton med mobilkameran som bokförs på ordern, verktyg via QR-kod",
       },
     ],
     more: "läs mer",
@@ -48,12 +48,12 @@ export const heroV2Translations: Record<string, HeroV2Copy> = {
       {
         price: "299 SEK/month",
         items:
-          "quotes and invoices, scanning of receipts and invoices, incoming invoices by email, payment reminders, payroll, payslips and AGI, project finances with budget, estimate and profitability, receipts booked to the project",
+          "quotes and invoices, incoming invoices by email read automatically, payment reminders, payroll, payslips and AGI, order finances with budget, estimate and profitability",
       },
       {
         price: "+69 SEK/worker",
         items:
-          "automatic and manual time reporting, real-time attendance, order and staff planning, self-inspections, tasks with reminders, documents, photos and drawings, photo reports from the shift, receipt scanning with the phone camera, tools via QR code",
+          "automatic and manual time reporting, real-time attendance, order and staff planning, self-inspections, tasks with reminders, documents, photos and drawings, photo reports from the shift, receipts from the phone camera booked to the order, tools via QR code",
       },
     ],
     more: "read more",
@@ -72,12 +72,12 @@ export const heroV2Translations: Record<string, HeroV2Copy> = {
       {
         price: "299 NOK/mnd",
         items:
-          "tilbud og fakturaer, skanning av kvitteringer og fakturaer, innkommende fakturaer via e‑post, lønn, lønnsslipper, prosjektøkonomi med budsjett, kalkyle og lønnsomhet, kvitteringer ført på prosjektet",
+          "tilbud og fakturaer, innkommende fakturaer via e‑post som leses automatisk, lønn, lønnsslipper, ordreøkonomi med budsjett, kalkyle og lønnsomhet",
       },
       {
         price: "+69 NOK/arbeider",
         items:
-          "timeføring automatisk og manuelt, tilstedeværelse i sanntid, planlegging av ordrer og personell, egenkontroll, oppgaver med påminnelser, dokumenter, bilder og tegninger, fotorapporter fra arbeidsøkten, skanning av kvitteringer med mobilkameraet, verktøy via QR-kode",
+          "timeføring automatisk og manuelt, tilstedeværelse i sanntid, planlegging av ordrer og personell, egenkontroll, oppgaver med påminnelser, dokumenter, bilder og tegninger, fotorapporter fra arbeidsøkten, kvitteringer med mobilkameraet ført på ordren, verktøy via QR-kode",
       },
     ],
     more: "les mer",
@@ -96,12 +96,12 @@ export const heroV2Translations: Record<string, HeroV2Copy> = {
       {
         price: "299 SEK/мес",
         items:
-          "коммерческие предложения и счета, сканирование чеков и счетов, входящие счета по e‑mail, напоминания об оплате, зарплата, расчётные листы и AGI, экономика проекта с бюджетом, калькуляцией и прибыльностью, чеки с учётом на проект",
+          "коммерческие предложения и счета, входящие счета по e‑mail с автоматическим распознаванием, напоминания об оплате, зарплата, расчётные листы и AGI, экономика заказа с бюджетом, калькуляцией и прибыльностью",
       },
       {
         price: "+69 SEK/работник",
         items:
-          "учёт рабочего времени автоматически и вручную, присутствие в реальном времени, планирование заказов и персонала, самоконтроль, задачи с напоминаниями, документы, фото и чертежи, фотоотчёты со смены, сканирование чеков камерой телефона, инструменты по QR-коду",
+          "учёт рабочего времени автоматически и вручную, присутствие в реальном времени, планирование заказов и персонала, самоконтроль, задачи с напоминаниями, документы, фото и чертежи, фотоотчёты со смены, чеки камерой телефона с учётом на заказ, инструменты по QR-коду",
       },
     ],
     more: "подробнее",
@@ -120,12 +120,12 @@ export const heroV2Translations: Record<string, HeroV2Copy> = {
       {
         price: "299 SEK/mies.",
         items:
-          "oferty i faktury, skanowanie paragonów i faktur, faktury przychodzące e‑mailem, przypomnienia o płatności, wynagrodzenia, paski płacowe i AGI, finanse projektu z budżetem, kosztorysem i rentownością, paragony księgowane na projekt",
+          "oferty i faktury, faktury przychodzące e‑mailem odczytywane automatycznie, przypomnienia o płatności, wynagrodzenia, paski płacowe i AGI, finanse zlecenia z budżetem, kosztorysem i rentownością",
       },
       {
         price: "+69 SEK/pracownik",
         items:
-          "ewidencja czasu automatycznie i ręcznie, obecność w czasie rzeczywistym, planowanie zleceń i personelu, kontrola własna, zadania z przypomnieniami, dokumenty, zdjęcia i rysunki, raporty zdjęciowe ze zmiany, skanowanie paragonów aparatem telefonu, narzędzia przez kod QR",
+          "ewidencja czasu automatycznie i ręcznie, obecność w czasie rzeczywistym, planowanie zleceń i personelu, kontrola własna, zadania z przypomnieniami, dokumenty, zdjęcia i rysunki, raporty zdjęciowe ze zmiany, paragony z aparatu telefonu księgowane na zlecenie, narzędzia przez kod QR",
       },
     ],
     more: "więcej",
@@ -144,12 +144,12 @@ export const heroV2Translations: Record<string, HeroV2Copy> = {
       {
         price: "299 SEK/міс",
         items:
-          "комерційні пропозиції та рахунки, сканування чеків і рахунків, вхідні рахунки через e‑mail, нагадування про оплату, зарплата, розрахункові листи та AGI, економіка проєкту з бюджетом, калькуляцією та прибутковістю, чеки з обліком на проєкт",
+          "комерційні пропозиції та рахунки, вхідні рахунки через e‑mail з автоматичним розпізнаванням, нагадування про оплату, зарплата, розрахункові листи та AGI, економіка замовлення з бюджетом, калькуляцією та прибутковістю",
       },
       {
         price: "+69 SEK/працівник",
         items:
-          "облік робочого часу автоматично і вручну, присутність у реальному часі, планування замовлень і персоналу, самоконтроль, завдання з нагадуваннями, документи, фото та креслення, фотозвіти зі зміни, сканування чеків камерою телефона, інструменти за QR-кодом",
+          "облік робочого часу автоматично і вручну, присутність у реальному часі, планування замовлень і персоналу, самоконтроль, завдання з нагадуваннями, документи, фото та креслення, фотозвіти зі зміни, чеки камерою телефона з обліком на замовлення, інструменти за QR-кодом",
       },
     ],
     more: "детальніше",
@@ -168,12 +168,12 @@ export const heroV2Translations: Record<string, HeroV2Copy> = {
       {
         price: "299 SEK/kk",
         items:
-          "tarjoukset ja laskut, kuittien ja laskujen skannaus, saapuvat laskut sähköpostilla, maksumuistutukset, palkat, palkkalaskelmat ja AGI, projektitalous budjetilla, laskelmalla ja kannattavuudella, projektille kirjatut kuitit",
+          "tarjoukset ja laskut, sähköpostilla saapuvat laskut luetaan automaattisesti, maksumuistutukset, palkat, palkkalaskelmat ja AGI, tilauksen talous budjetilla, laskelmalla ja kannattavuudella",
       },
       {
         price: "+69 SEK/työntekijä",
         items:
-          "työaikaraportointi automaattisesti ja käsin, läsnäolo reaaliajassa, tilausten ja henkilöstön suunnittelu, omavalvonta, tehtävät muistutuksilla, asiakirjat, valokuvat ja piirustukset, valokuvaraportit työvuorosta, kuittien skannaus puhelimen kameralla, työkalut QR-koodilla",
+          "työaikaraportointi automaattisesti ja käsin, läsnäolo reaaliajassa, tilausten ja henkilöstön suunnittelu, omavalvonta, tehtävät muistutuksilla, asiakirjat, valokuvat ja piirustukset, valokuvaraportit työvuorosta, kuitit puhelimen kameralla tilaukselle kirjattuina, työkalut QR-koodilla",
       },
     ],
     more: "lue lisää",
@@ -192,12 +192,12 @@ export const heroV2Translations: Record<string, HeroV2Copy> = {
       {
         price: "299 SEK/kuus",
         items:
-          "pakkumised ja arved, tšekkide ja arvete skannimine, sissetulevad arved e‑postiga, maksemeeldetuletused, palgad, palgalehed ja AGI, projekti majandus eelarve, kalkulatsiooni ja kasumlikkusega, projektile kirjendatud tšekid",
+          "pakkumised ja arved, e‑postiga saabuvad arved loetakse automaatselt, maksemeeldetuletused, palgad, palgalehed ja AGI, tellimuse majandus eelarve, kalkulatsiooni ja kasumlikkusega",
       },
       {
         price: "+69 SEK/töötaja",
         items:
-          "tööaja arvestus automaatselt ja käsitsi, kohalolek reaalajas, tellimuste ja personali planeerimine, omakontroll, meeldetuletustega ülesanded, dokumendid, fotod ja joonised, fotoaruanded vahetusest, tšekkide skannimine telefoni kaameraga, tööriistad QR-koodiga",
+          "tööaja arvestus automaatselt ja käsitsi, kohalolek reaalajas, tellimuste ja personali planeerimine, omakontroll, meeldetuletustega ülesanded, dokumendid, fotod ja joonised, fotoaruanded vahetusest, tšekid telefoni kaameraga tellimusele kirjendatult, tööriistad QR-koodiga",
       },
     ],
     more: "loe edasi",
@@ -216,12 +216,12 @@ export const heroV2Translations: Record<string, HeroV2Copy> = {
       {
         price: "299 SEK/mėn.",
         items:
-          "pasiūlymai ir sąskaitos, kvitų ir sąskaitų skenavimas, gaunamos sąskaitos el. paštu, mokėjimo priminimai, atlyginimai, algalapiai ir AGI, projekto finansai su biudžetu, sąmata ir pelningumu, kvitai, priskirti projektui",
+          "pasiūlymai ir sąskaitos, gaunamos sąskaitos el. paštu nuskaitomos automatiškai, mokėjimo priminimai, atlyginimai, algalapiai ir AGI, užsakymo finansai su biudžetu, sąmata ir pelningumu",
       },
       {
         price: "+69 SEK/darbuotojas",
         items:
-          "darbo laiko apskaita automatiškai ir rankiniu būdu, buvimas realiu laiku, užsakymų ir personalo planavimas, savikontrolė, užduotys su priminimais, dokumentai, nuotraukos ir brėžiniai, nuotraukų ataskaitos iš pamainos, kvitų skenavimas telefono kamera, įrankiai per QR kodą",
+          "darbo laiko apskaita automatiškai ir rankiniu būdu, buvimas realiu laiku, užsakymų ir personalo planavimas, savikontrolė, užduotys su priminimais, dokumentai, nuotraukos ir brėžiniai, nuotraukų ataskaitos iš pamainos, kvitai telefono kamera, priskirti užsakymui, įrankiai per QR kodą",
       },
     ],
     more: "skaityti daugiau",
@@ -240,12 +240,12 @@ export const heroV2Translations: Record<string, HeroV2Copy> = {
       {
         price: "299 SEK/mēn.",
         items:
-          "piedāvājumi un rēķini, čeku un rēķinu skenēšana, ienākošie rēķini pa e‑pastu, maksājumu atgādinājumi, algas, algas lapiņas un AGI, projekta finanses ar budžetu, tāmi un rentabilitāti, projektam piesaistīti čeki",
+          "piedāvājumi un rēķini, pa e‑pastu ienākošie rēķini tiek nolasīti automātiski, maksājumu atgādinājumi, algas, algas lapiņas un AGI, pasūtījuma finanses ar budžetu, tāmi un rentabilitāti",
       },
       {
         price: "+69 SEK/darbinieks",
         items:
-          "darba laika uzskaite automātiski un manuāli, klātbūtne reāllaikā, pasūtījumu un personāla plānošana, paškontrole, uzdevumi ar atgādinājumiem, dokumenti, foto un rasējumi, foto atskaites no maiņas, čeku skenēšana ar tālruņa kameru, instrumenti ar QR kodu",
+          "darba laika uzskaite automātiski un manuāli, klātbūtne reāllaikā, pasūtījumu un personāla plānošana, paškontrole, uzdevumi ar atgādinājumiem, dokumenti, foto un rasējumi, foto atskaites no maiņas, čeki ar tālruņa kameru, piesaistīti pasūtījumam, instrumenti ar QR kodu",
       },
     ],
     more: "lasīt vairāk",

@@ -480,7 +480,7 @@
     max-width: 480px;
   }
   .hero-v2 .hero-v2-content .hero-v2-meta {
-    align-self: flex-start; // R57: phones — one column, left edge (owner 20.11)
+    align-self: center; // R57: phones — one left-aligned column, centred as a block (owner 20.11)
     flex-direction: column;
     align-items: flex-start;
     order: 1; // trust checks go under the photos

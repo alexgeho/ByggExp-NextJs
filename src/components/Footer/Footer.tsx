@@ -41,11 +41,12 @@ function Footer({ footerT, lang: langProp }: FooterProps) {
   // company pages, legal pages.
   return (
     <footer className="footer">
-      <div className="container footer-inner">
+      <div className={`container footer-inner${funktionRow ? "" : " footer-inner--no-funk"}`}>
         <div className="footer-col footer-brand">
           <div className="footer-logo">
             <img src={logo} alt="Byggexp" />
           </div>
+          <div className="footer-col footer-contacts">
           <a href="mailto:support@byggexp.se">support@byggexp.se</a>
           <div className="footer-socials">
             {SOCIALS.map((s) => (
@@ -63,6 +64,7 @@ function Footer({ footerT, lang: langProp }: FooterProps) {
               </a>
             ))}
           </div>
+          </div>
         </div>
 
         {funktionRow ? (
@@ -76,7 +78,7 @@ function Footer({ footerT, lang: langProp }: FooterProps) {
           </nav>
         ) : null}
 
-        <nav className="footer-col" aria-label={footerT.footerCompany}>
+        <nav className="footer-col footer-company" aria-label={footerT.footerCompany}>
           <span className="footer-heading">{footerT.footerCompany}</span>
           <Link href={`/${lang}/om-oss`}>{footerT.footerAbout}</Link>
           <Link href={`/${lang}/blog`}>{footerT.footerBlog}</Link>
@@ -84,7 +86,7 @@ function Footer({ footerT, lang: langProp }: FooterProps) {
           <Link href={`/${lang}/faq`}>{footerT.footerFaq}</Link>
         </nav>
 
-        <nav className="footer-col" aria-label={footerT.footerLegal}>
+        <nav className="footer-col footer-legal" aria-label={footerT.footerLegal}>
           <span className="footer-heading">{footerT.footerLegal}</span>
           <Link href={`/${lang}/integritetspolicy`}>{footerT.footerPrivacy}</Link>
           <Link href={`/${lang}/villkor`}>{footerT.footerTerms}</Link>

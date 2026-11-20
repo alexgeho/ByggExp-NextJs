@@ -42,12 +42,46 @@
         padding-top: 24px;
         border-top: 1px solid rgba(255, 255, 255, 0.06);
       }
+      /* R56 (owner 20.11): phones — logo left, contacts in the right column;
+         Juridiskt under Företaget, so the right column has no empty gap. */
       @media (max-width: 900px) {
         .footer-inner {
           grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-areas:
+            "logo contacts"
+            "funk company"
+            "funk legal"
+            "copy copy";
+          grid-template-rows: auto auto 1fr auto;
+        }
+        .footer-inner--no-funk {
+          grid-template-areas:
+            "logo contacts"
+            "company legal"
+            "copy copy";
+          grid-template-rows: auto;
         }
         .footer-brand {
-          grid-column: 1 / -1;
+          display: contents;
+        }
+        .footer-brand .footer-logo {
+          grid-area: logo;
+          margin-bottom: 0;
+        }
+        .footer-contacts {
+          grid-area: contacts;
+        }
+        .footer-funktioner {
+          grid-area: funk;
+        }
+        .footer-company {
+          grid-area: company;
+        }
+        .footer-legal {
+          grid-area: legal;
+        }
+        .footer-copy {
+          grid-area: copy;
         }
       }
       .footer-social {

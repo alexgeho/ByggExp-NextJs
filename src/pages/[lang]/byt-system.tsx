@@ -154,7 +154,7 @@ export default function BytSystemPage() {
         name: "byt-system-flytt",
         alt: "Kontorsarbetare bär en låda med pärmar från ett arkivskåp till en dator med blå mappar på skärmen",
       }}
-      heroCheck="Gratis flytt av data"
+      heroCheck="Vi hjälper er flytta data gratis"
       body={BODY}
       faq={FAQ}
       related={RELATED}

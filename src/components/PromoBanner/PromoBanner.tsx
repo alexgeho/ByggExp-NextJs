@@ -141,7 +141,7 @@ export default function PromoBanner() {
           <ul className="promo-meta trust-stars">
             <li>14 dagar gratis</li>
             <li>Ingen bindningstid</li>
-            <li>Gratis flytt av data</li>
+            <li>Vi hjälper er flytta data gratis</li>
             <li>Täcker hela verksamheten</li>
             <li>Anpassas efter era arbetssätt</li>
             <li>Personlig uppstart på plats</li>

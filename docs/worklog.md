@@ -1,6 +1,15 @@
 # ByggExp — рабочий лог (продолжать отсюда)
 
 
+## 🟢 2026-11-21 — Превью ссылки (og): секундомер → три монеты kr · $ · € (R60, live)
+- Картинка превью ссылки (Telegram/WhatsApp/FB/LinkedIn; на страницах сайта её нет) — `public/og-cover-v6.jpg`, мета-теги в `src/pages/_document.tsx` (og:image, twitter:image). Первая иконка — лёгкие стеклянные монеты kr (первая), $, € в стиле календаря и колокольчика; исходник `design-assets/og/icon-ekonomi-kr-usd-eur.png`. Коммиты 5ec77f7, f85685b. Проверено: /sv /ru /en ссылаются на v6, файл 200.
+- Отклонено владельцем: галочка/бумажный счёт («может быть что угодно»), один евро, столбики монет на подставке (v5 — «тяжело»), стрелки.
+- Как делаю иконки: Replicate (токен в `.env.admin`, в gitignore), `recraft-ai/recraft-v4.1` по рецепту из docs/worklog-archive.md («Single chunky 3D object … frosted translucent glass … no reflection, no floor, no shadow, solid navy background»), лёгкий вариант — «very light frosted translucent pale blue glass, thin glowing edges»; фон — `bria/remove-background`; цвет — `ImageOps.colorize(black=(10,40,110), mid=(70,150,255), white=(210,235,255))`; в og: секундомер стирается градиентом по колонкам x 50–200, y 300–472 (маска GaussianBlur 8), иконка в рамку ~124×114, центр x=121, низ y≈447. Python urllib к Replicate — только с `User-Agent: curl/8.7.1` (иначе Cloudflare 403/1010). Node 22 стоит в ~/.local/node.
+### NÄSTA
+1. Telegram держит старое превью у уже отправленных ссылок; обновить сразу — отправить https://byggexp.se/ru (и /sv) боту @WebpageBot.
+2. Владельцу: перевыпустить токен Replicate (был виден в чате) и заменить в `.env.admin`.
+3. Меняем og снова — новое имя файла (v7…), иначе мессенджеры берут кэш; правило R60 обновить.
+
 ## 🟢 2026-11-20 — Главная и подвал по замечаниям владельца (R56–R59, всё live)
 - R56 подвал: колонки с заголовками — логотип + support@ + соцсети | Funktioner (sv, nb) | Företaget (Om oss, Blogg, Enmansföretag, Vanliga frågor) | Juridiskt (Integritetspolicy, Användarvillkor, Radera konto); «© 2026 ByggExp» внизу. Телефон: логотип слева, контакты справа; Funktioner слева, Företaget и под ней Juridiskt справа. Заголовки колонок — `footerCompany`/`footerLegal` в src/locales/footer.ts (10 языков).
 - R57 первый экран: преимущества со звёздочкой цвета текста (не ✓), 6 пунктов: 14 dagar gratis · Ingen bindningstid · Vi hjälper er flytta data gratis · Täcker hela verksamheten · Funktioner efter era behov · Personlig uppstart på plats (все языки, тот же набор в PromoBanner; звёздочка и в `.em-checks` лендингов). Компьютер — 2 колонки (текстовая колонка 480px, заголовок 440px), телефон — один столбик по центру, строки по левому краю. Строки цен без повторов: 299 kr — контора (offerter, fakturor, inkommande fakturor via e‑post, löner/AGI, orderekonomi), +69 kr — объект (tid, närvaro, planering av order och personal, egenkontroll, foton, kvitton med mobilkameran som bokförs på ordern, verktyg).
